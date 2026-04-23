@@ -28,10 +28,11 @@ pub fn capture_baseline(claude_dir: &Path, ccpm_dir: &Path) -> Result<(), AppErr
             captured.push(dir_name.to_string());
         }
     }
+    let empty = captured.is_empty();
     let manifest = BaselineManifest {
         captured_at: Utc::now().to_rfc3339(),
-        files: captured.clone(),
-        empty: captured.is_empty(),
+        files: captured,
+        empty,
     };
     atomic_write(&manifest_path, &serde_json::to_string_pretty(&manifest)?)?;
     Ok(())
@@ -54,12 +55,17 @@ pub fn restore_baseline(claude_dir: &Path, ccpm_dir: &Path) -> Result<(), AppErr
                 copy_dir_shallow(&src, &claude_dir.join(filename))?;
             }
         } else if src.exists() {
-            atomic_write(&claude_dir.join(filename), &std::fs::read_to_string(&src)?)?;
+            let dst = claude_dir.join(filename);
+            if dst.is_symlink() {
+                std::fs::remove_file(&dst)?;
+            }
+            atomic_write(&dst, &std::fs::read_to_string(&src)?)?;
         }
     }
     Ok(())
 }
 
+/// Shallow copy: copies only direct file children of src into dst. Subdirectories are skipped.
 fn copy_dir_shallow(src: &Path, dst: &Path) -> Result<(), AppError> {
     std::fs::create_dir_all(dst)?;
     for entry in std::fs::read_dir(src)? {
