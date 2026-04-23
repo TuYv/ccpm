@@ -1,5 +1,7 @@
-use crate::{error::AppError, fs::atomic_write, types::AppConfig};
+use crate::{error::AppError, fs::atomic_write, types::{AppConfig, Source}};
 use std::path::Path;
+
+const BUILTIN_SOURCE_NAME: &str = "official";
 
 pub fn load_config(ccpm_dir: &Path) -> Result<AppConfig, AppError> {
     let path = ccpm_dir.join("config.json");
@@ -7,7 +9,8 @@ pub fn load_config(ccpm_dir: &Path) -> Result<AppConfig, AppError> {
         return Ok(AppConfig::default());
     }
     let content = std::fs::read_to_string(&path)?;
-    Ok(serde_json::from_str(&content)?)
+    serde_json::from_str(&content)
+        .map_err(|e| AppError::Parse(format!("config.json 解析失败：{}", e)))
 }
 
 pub fn save_config(ccpm_dir: &Path, config: &AppConfig) -> Result<(), AppError> {
@@ -24,9 +27,9 @@ pub fn add_source(
 ) -> Result<(), AppError> {
     let mut cfg = load_config(ccpm_dir)?;
     if cfg.sources.iter().any(|s| s.name == name) {
-        return Err(AppError::Io(format!("源 '{}' 已存在", name)));
+        return Err(AppError::SourceAlreadyExists(name.to_string()));
     }
-    cfg.sources.push(crate::types::Source {
+    cfg.sources.push(Source {
         name: name.to_string(),
         url: url.to_string(),
         token,
@@ -35,7 +38,7 @@ pub fn add_source(
 }
 
 pub fn remove_source(ccpm_dir: &Path, name: &str) -> Result<(), AppError> {
-    if name == "official" {
+    if name == BUILTIN_SOURCE_NAME {
         return Err(AppError::Io("不能删除内置的 'official' 源".to_string()));
     }
     let mut cfg = load_config(ccpm_dir)?;
@@ -50,7 +53,6 @@ pub fn remove_source(ccpm_dir: &Path, name: &str) -> Result<(), AppError> {
 #[cfg(test)]
 mod tests {
     use super::*;
-    use crate::types::Source;
     use tempfile::tempdir;
 
     #[test]
@@ -99,6 +101,21 @@ mod tests {
     fn test_remove_official_source_fails() {
         let dir = tempdir().unwrap();
         let result = remove_source(dir.path(), "official");
+        assert!(result.is_err());
+    }
+
+    #[test]
+    fn test_add_duplicate_source_fails() {
+        let dir = tempdir().unwrap();
+        add_source(dir.path(), "dup", "https://example.com", None).unwrap();
+        let result = add_source(dir.path(), "dup", "https://example.com", None);
+        assert!(result.is_err());
+    }
+
+    #[test]
+    fn test_remove_nonexistent_source_fails() {
+        let dir = tempdir().unwrap();
+        let result = remove_source(dir.path(), "nonexistent");
         assert!(result.is_err());
     }
 }

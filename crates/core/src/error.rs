@@ -20,6 +20,8 @@ pub enum AppError {
     PackNotFound(String),
     #[error("源不存在：{0}")]
     SourceNotFound(String),
+    #[error("源 '{0}' 已存在")]
+    SourceAlreadyExists(String),
     #[error("集合不存在：{0}")]
     CollectionNotFound(String),
     #[error("备份失败：{0}")]
