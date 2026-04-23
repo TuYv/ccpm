@@ -8,6 +8,17 @@ use crate::{
 use chrono::Utc;
 use std::{collections::HashMap, path::Path};
 
+fn safe_filename(filename: &str) -> Result<&std::ffi::OsStr, AppError> {
+    let p = std::path::Path::new(filename);
+    if p.components().count() != 1
+        || p.components()
+            .any(|c| c == std::path::Component::ParentDir || c == std::path::Component::RootDir)
+    {
+        return Err(AppError::InvalidInput(format!("unsafe filename in pack: '{}'", filename)));
+    }
+    p.file_name().ok_or_else(|| AppError::InvalidInput("empty filename in pack".to_string()))
+}
+
 // ── CLAUDE.md install ────────────────────────────────────────────────────────
 
 /// Install a claude-md pack: symlinks CLAUDE.md into claude_dir.
@@ -70,9 +81,12 @@ pub fn install_skill_pack(
     let skills_dir = claude_dir.join("skills");
     let mut linked = vec![];
 
+    // Note: if symlink creation fails mid-loop, already-created symlinks are not rolled back.
+    // The repair module (repair.rs) will clean up dangling symlinks on next startup.
     for filename in &manifest.files {
         let target = pack_dir.join(filename);
-        let link = skills_dir.join(filename);
+        let safe = safe_filename(filename)?;
+        let link = skills_dir.join(safe);
         if link.is_symlink() {
             remove_symlink(&link)?;
         }
@@ -130,9 +144,12 @@ pub fn install_rule_pack(
     let rules_dir = claude_dir.join("rules");
     let mut linked = vec![];
 
+    // Note: if symlink creation fails mid-loop, already-created symlinks are not rolled back.
+    // The repair module (repair.rs) will clean up dangling symlinks on next startup.
     for filename in &manifest.files {
         let target = pack_dir.join(filename);
-        let link = rules_dir.join(filename);
+        let safe = safe_filename(filename)?;
+        let link = rules_dir.join(safe);
         if link.is_symlink() {
             remove_symlink(&link)?;
         }
@@ -216,12 +233,22 @@ pub fn rebuild_settings_json(
     state: &InstalledState,
 ) -> Result<(), AppError> {
     let settings_path = claude_dir.join("settings.json");
-    let mut settings: serde_json::Value = if settings_path.exists() && !settings_path.is_symlink() {
-        let content = std::fs::read_to_string(&settings_path)?;
-        serde_json::from_str(&content).unwrap_or(serde_json::json!({}))
+    let mut settings: serde_json::Value = if settings_path.exists() {
+        // follows symlinks automatically
+        match std::fs::read_to_string(&settings_path) {
+            Ok(content) => serde_json::from_str(&content).unwrap_or_else(|e| {
+                eprintln!("warn: settings.json parse failed ({}), using empty", e);
+                serde_json::json!({})
+            }),
+            Err(_) => serde_json::json!({}),
+        }
     } else {
         serde_json::json!({})
     };
+    // After rebuilding, ensure settings.json is a real file (remove symlink if present)
+    if settings_path.is_symlink() {
+        std::fs::remove_file(&settings_path)?;
+    }
 
     let mut mcp_servers: HashMap<String, McpServerDef> = HashMap::new();
     for active in &state.global.active_mcps {
