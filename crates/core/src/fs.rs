@@ -11,7 +11,10 @@ pub fn atomic_write(path: &Path, content: &str) -> Result<(), AppError> {
             std::fs::create_dir_all(parent)?;
         }
     }
-    let tmp = path.with_extension("tmp");
+    let tmp = path.with_file_name(format!(
+        ".{}.tmp",
+        path.file_name().unwrap_or_default().to_string_lossy()
+    ));
     {
         let mut file = std::fs::File::create(&tmp)?;
         file.write_all(content.as_bytes())?;
@@ -89,7 +92,8 @@ mod tests {
         let dir = tempdir().unwrap();
         let path = dir.path().join("out.md");
         atomic_write(&path, "content").unwrap();
-        assert!(!path.with_extension("tmp").exists());
+        let tmp = path.with_file_name(".out.md.tmp");
+        assert!(!tmp.exists());
     }
 
     #[test]
