@@ -237,7 +237,7 @@ pub fn rebuild_settings_json(
         // follows symlinks automatically
         match std::fs::read_to_string(&settings_path) {
             Ok(content) => serde_json::from_str(&content).unwrap_or_else(|e| {
-                eprintln!("warn: settings.json parse failed ({}), using empty", e);
+                tracing::warn!("settings.json parse failed ({}), using empty object", e);
                 serde_json::json!({})
             }),
             Err(_) => serde_json::json!({}),
@@ -264,6 +264,36 @@ pub fn rebuild_settings_json(
 
     settings["mcpServers"] = serde_json::to_value(&mcp_servers)?;
     atomic_write(&settings_path, &serde_json::to_string_pretty(&settings)?)
+}
+
+/// Dispatch install to the appropriate function based on pack type.
+pub fn install_pack(
+    claude_dir: &Path,
+    ccpm_dir: &Path,
+    manifest: &PackManifest,
+    source_name: &str,
+) -> Result<(), AppError> {
+    match manifest.pack_type {
+        PackType::ClaudeMd => install_claude_md(claude_dir, ccpm_dir, manifest, source_name),
+        PackType::Skill => install_skill_pack(claude_dir, ccpm_dir, manifest, source_name),
+        PackType::Rule => install_rule_pack(claude_dir, ccpm_dir, manifest, source_name),
+        PackType::Mcp => install_mcp_pack(claude_dir, ccpm_dir, manifest, source_name),
+    }
+}
+
+/// Dispatch uninstall to the appropriate function based on pack type.
+pub fn uninstall_pack(
+    claude_dir: &Path,
+    ccpm_dir: &Path,
+    pack_type: &PackType,
+    pack_id: &str,
+) -> Result<(), AppError> {
+    match pack_type {
+        PackType::ClaudeMd => uninstall_claude_md(claude_dir, ccpm_dir),
+        PackType::Skill => uninstall_skill_pack(claude_dir, ccpm_dir, pack_id),
+        PackType::Rule => uninstall_rule_pack(claude_dir, ccpm_dir, pack_id),
+        PackType::Mcp => uninstall_mcp_pack(claude_dir, ccpm_dir, pack_id),
+    }
 }
 
 // ── Tests ────────────────────────────────────────────────────────────────────

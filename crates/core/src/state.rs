@@ -63,7 +63,7 @@ pub fn list_collections(ccpm_dir: &Path) -> Result<Vec<Collection>, AppError> {
             let content = std::fs::read_to_string(entry.path())?;
             match serde_json::from_str::<Collection>(&content) {
                 Ok(col) => cols.push(col),
-                Err(e) => eprintln!("warn: skipping corrupt collection {:?}: {}", entry.path(), e),
+                Err(e) => tracing::warn!("skipping corrupt collection {:?}: {}", entry.path(), e),
             }
         }
     }

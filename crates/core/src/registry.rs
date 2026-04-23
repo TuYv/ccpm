@@ -185,6 +185,45 @@ pub fn build_client(token: Option<&str>) -> Result<reqwest::Client, AppError> {
         .map_err(|e| AppError::Network(e.to_string()))
 }
 
+/// List all pack manifests installed in the library.
+/// If pack_type is Some, only returns packs of that type.
+pub fn list_library_packs(
+    library_dir: &Path,
+    pack_type: Option<&PackType>,
+) -> Result<Vec<PackManifest>, AppError> {
+    let subdirs: &[(&str, PackType)] = &[
+        ("claude-mds", PackType::ClaudeMd),
+        ("skills", PackType::Skill),
+        ("mcps", PackType::Mcp),
+        ("rules", PackType::Rule),
+    ];
+    let mut result = vec![];
+    for (subdir, pt) in subdirs {
+        if let Some(filter) = pack_type {
+            if filter != pt {
+                continue;
+            }
+        }
+        let dir = library_dir.join(subdir);
+        if !dir.exists() {
+            continue;
+        }
+        for entry in std::fs::read_dir(&dir)? {
+            let entry = entry?;
+            let pack_json = entry.path().join("pack.json");
+            if pack_json.exists() {
+                let content = std::fs::read_to_string(&pack_json)?;
+                match serde_json::from_str::<PackManifest>(&content) {
+                    Ok(m) => result.push(m),
+                    Err(e) => tracing::warn!("skipping corrupt pack {:?}: {}", entry.path(), e),
+                }
+            }
+        }
+    }
+    result.sort_by(|a, b| a.id.cmp(&b.id));
+    Ok(result)
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
