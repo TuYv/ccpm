@@ -71,13 +71,19 @@ pub fn check_symlink_health(
 /// Only repairs links whose library target still exists.
 pub fn repair_symlinks(claude_dir: &Path, ccpm_dir: &Path) -> Result<usize, AppError> {
     let broken = check_symlink_health(claude_dir, ccpm_dir)?;
-    let count = broken.len();
+    let mut repaired = 0;
     for status in broken {
         if status.target_path.exists() {
+            // Remove any existing file/symlink at the link path before recreating
+            if status.link_path.exists() || status.link_path.is_symlink() {
+                std::fs::remove_file(&status.link_path)?;
+            }
             create_symlink(&status.target_path, &status.link_path)?;
+            repaired += 1;
         }
+        // else: library target missing — link cannot be repaired
     }
-    Ok(count)
+    Ok(repaired)
 }
 
 #[cfg(test)]
