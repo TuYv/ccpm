@@ -5,6 +5,24 @@ use crate::{
 };
 use std::path::Path;
 
+fn validate_filename(name: &str) -> Result<(), AppError> {
+    let p = std::path::Path::new(name);
+    if p.is_absolute()
+        || p.components()
+            .any(|c| c == std::path::Component::ParentDir)
+    {
+        return Err(AppError::InvalidInput(format!("unsafe filename: {}", name)));
+    }
+    Ok(())
+}
+
+fn validate_pack_id(id: &str) -> Result<(), AppError> {
+    if id.is_empty() || id.contains(['/', '\\', '\0', '.']) || id.starts_with('-') {
+        return Err(AppError::InvalidInput(format!("invalid pack id: '{}'", id)));
+    }
+    Ok(())
+}
+
 /// Reads source's pack list from local cache; returns None if expired or missing.
 pub fn load_from_cache(
     source_cache_dir: &Path,
@@ -21,6 +39,8 @@ pub fn load_from_cache(
     let age = std::time::SystemTime::now()
         .duration_since(modified)
         .unwrap_or_default();
+    // unwrap_or_default returns Duration::ZERO on clock skew (mtime in future),
+    // causing the cache to appear expired — safe fallback behavior.
     if age.as_secs() >= ttl_minutes * 60 {
         return Ok(None);
     }
@@ -32,11 +52,11 @@ pub fn load_from_cache(
 
 /// Fetches index.json from remote source URL, writes to cache.
 pub async fn fetch_index(
+    client: &reqwest::Client,
     source: &Source,
     source_cache_dir: &Path,
 ) -> Result<Vec<PackManifest>, AppError> {
     let url = format!("{}/index.json", source.url.trim_end_matches('/'));
-    let client = build_client(source.token.as_deref())?;
     let resp = client.get(&url).send().await?;
     if !resp.status().is_success() {
         return Err(AppError::Network(format!(
@@ -55,11 +75,12 @@ pub async fn fetch_index(
 
 /// Downloads a pack from remote source into the library.
 pub async fn fetch_pack(
+    client: &reqwest::Client,
     source: &Source,
     library_dir: &Path,
     manifest: &PackManifest,
 ) -> Result<(), AppError> {
-    let client = build_client(source.token.as_deref())?;
+    validate_pack_id(&manifest.id)?;
     let type_subdir = pack_type_subdir(&manifest.pack_type);
     let pack_url_base = format!(
         "{}/packs/{}/{}",
@@ -68,11 +89,12 @@ pub async fn fetch_pack(
         manifest.id
     );
 
-    let pack_json = fetch_text(&client, &format!("{}/pack.json", pack_url_base)).await?;
+    let pack_json = fetch_text(client, &format!("{}/pack.json", pack_url_base)).await?;
 
     let mut file_contents: Vec<(String, String)> = vec![];
     for filename in &manifest.files {
-        let content = fetch_text(&client, &format!("{}/{}", pack_url_base, filename)).await?;
+        validate_filename(filename)?;
+        let content = fetch_text(client, &format!("{}/{}", pack_url_base, filename)).await?;
         file_contents.push((filename.clone(), content));
     }
 
@@ -92,12 +114,14 @@ pub fn save_pack_to_library(
     manifest: &PackManifest,
     files: &[(&str, &str)],
 ) -> Result<(), AppError> {
+    validate_pack_id(&manifest.id)?;
     let type_subdir = pack_type_subdir(&manifest.pack_type);
     let pack_dir = library_dir.join(type_subdir).join(&manifest.id);
     std::fs::create_dir_all(&pack_dir)?;
     let pack_json = serde_json::to_string_pretty(manifest)?;
     atomic_write(&pack_dir.join("pack.json"), &pack_json)?;
     for (filename, content) in files {
+        validate_filename(filename)?;
         atomic_write(&pack_dir.join(filename), content)?;
     }
     Ok(())
@@ -109,6 +133,7 @@ pub fn load_pack_manifest(
     pack_type: PackType,
     pack_id: &str,
 ) -> Result<PackManifest, AppError> {
+    validate_pack_id(pack_id)?;
     let type_subdir = pack_type_subdir(&pack_type);
     let path = library_dir.join(type_subdir).join(pack_id).join("pack.json");
     let content = std::fs::read_to_string(&path).map_err(|e| {
@@ -143,7 +168,7 @@ async fn fetch_text(client: &reqwest::Client, url: &str) -> Result<String, AppEr
     Ok(resp.text().await?)
 }
 
-fn build_client(token: Option<&str>) -> Result<reqwest::Client, AppError> {
+pub fn build_client(token: Option<&str>) -> Result<reqwest::Client, AppError> {
     let mut headers = reqwest::header::HeaderMap::new();
     if let Some(t) = token {
         headers.insert(
