@@ -26,6 +26,8 @@ pub enum AppError {
     CollectionNotFound(String),
     #[error("备份失败：{0}")]
     BackupFailed(String),
+    #[error("无效输入：{0}")]
+    InvalidInput(String),
 }
 
 impl From<std::io::Error> for AppError {

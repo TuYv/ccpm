@@ -5,6 +5,13 @@ use crate::{
 };
 use std::path::Path;
 
+fn validate_id(id: &str) -> Result<(), AppError> {
+    if id.is_empty() || id.contains(['/', '\\', '\0', '.']) || id.starts_with('-') {
+        return Err(AppError::InvalidInput(format!("无效的集合 ID：'{}'", id)));
+    }
+    Ok(())
+}
+
 pub fn read_installed(ccpm_dir: &Path) -> Result<InstalledState, AppError> {
     let path = ccpm_dir.join("installed.json");
     if !path.exists() {
@@ -23,6 +30,7 @@ pub fn write_installed(ccpm_dir: &Path, state: &InstalledState) -> Result<(), Ap
 
 /// Each collection is stored as <id>.json under collections/ subdir.
 pub fn save_collection(ccpm_dir: &Path, col: &Collection) -> Result<(), AppError> {
+    validate_id(&col.id)?;
     let dir = ccpm_dir.join("collections");
     std::fs::create_dir_all(&dir)?;
     let content = serde_json::to_string_pretty(col)?;
@@ -30,11 +38,15 @@ pub fn save_collection(ccpm_dir: &Path, col: &Collection) -> Result<(), AppError
 }
 
 pub fn load_collection(ccpm_dir: &Path, id: &str) -> Result<Collection, AppError> {
+    validate_id(id)?;
     let path = ccpm_dir.join("collections").join(format!("{}.json", id));
-    if !path.exists() {
-        return Err(AppError::CollectionNotFound(id.to_string()));
-    }
-    let content = std::fs::read_to_string(&path)?;
+    let content = std::fs::read_to_string(&path).map_err(|e| {
+        if e.kind() == std::io::ErrorKind::NotFound {
+            AppError::CollectionNotFound(id.to_string())
+        } else {
+            AppError::from(e)
+        }
+    })?;
     serde_json::from_str(&content)
         .map_err(|e| AppError::Parse(format!("collection '{}' 解析失败：{}", id, e)))
 }
@@ -49,7 +61,10 @@ pub fn list_collections(ccpm_dir: &Path) -> Result<Vec<Collection>, AppError> {
         let entry = entry?;
         if entry.path().extension().and_then(|e| e.to_str()) == Some("json") {
             let content = std::fs::read_to_string(entry.path())?;
-            cols.push(serde_json::from_str::<Collection>(&content)?);
+            match serde_json::from_str::<Collection>(&content) {
+                Ok(col) => cols.push(col),
+                Err(e) => eprintln!("warn: skipping corrupt collection {:?}: {}", entry.path(), e),
+            }
         }
     }
     cols.sort_by(|a, b| a.id.cmp(&b.id));
@@ -57,12 +72,15 @@ pub fn list_collections(ccpm_dir: &Path) -> Result<Vec<Collection>, AppError> {
 }
 
 pub fn delete_collection(ccpm_dir: &Path, id: &str) -> Result<(), AppError> {
+    validate_id(id)?;
     let path = ccpm_dir.join("collections").join(format!("{}.json", id));
-    if !path.exists() {
-        return Err(AppError::CollectionNotFound(id.to_string()));
-    }
-    std::fs::remove_file(&path)?;
-    Ok(())
+    std::fs::remove_file(&path).map_err(|e| {
+        if e.kind() == std::io::ErrorKind::NotFound {
+            AppError::CollectionNotFound(id.to_string())
+        } else {
+            AppError::from(e)
+        }
+    })
 }
 
 #[cfg(test)]
@@ -139,6 +157,23 @@ mod tests {
         }
         let cols = list_collections(dir.path()).unwrap();
         assert_eq!(cols.len(), 3);
+    }
+
+    #[test]
+    fn test_save_collection_rejects_invalid_id() {
+        let dir = tempdir().unwrap();
+        let col = Collection {
+            id: "../escape".to_string(),
+            name: "Bad".to_string(),
+            description: None,
+            claude_md: None,
+            skills: vec![],
+            mcps: vec![],
+            rules: vec![],
+            created_at: "2026-04-23T10:00:00Z".to_string(),
+        };
+        let result = save_collection(dir.path(), &col);
+        assert!(result.is_err());
     }
 
     #[test]
