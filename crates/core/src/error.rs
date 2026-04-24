@@ -16,14 +16,12 @@ pub enum AppError {
     ClaudeNotInitialized,
     #[error("基线不存在：请先运行 `ccpm status` 以捕获基线")]
     BaselineNotFound,
-    #[error("Pack 不存在：{0}")]
-    PackNotFound(String),
+    #[error("Preset 不存在：{0}")]
+    PresetNotFound(String),
     #[error("源不存在：{0}")]
     SourceNotFound(String),
     #[error("源 '{0}' 已存在")]
     SourceAlreadyExists(String),
-    #[error("集合不存在：{0}")]
-    CollectionNotFound(String),
     #[error("备份失败：{0}")]
     BackupFailed(String),
     #[error("无效输入：{0}")]
@@ -77,8 +75,8 @@ mod tests {
     }
 
     #[test]
-    fn test_pack_not_found_message() {
-        let e = AppError::PackNotFound("tdd-pack".to_string());
-        assert!(e.to_string().contains("tdd-pack"));
+    fn test_preset_not_found_message() {
+        let e = AppError::PresetNotFound("python-solo".to_string());
+        assert!(e.to_string().contains("python-solo"));
     }
 }

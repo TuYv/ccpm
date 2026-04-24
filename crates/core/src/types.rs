@@ -1,110 +1,117 @@
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
 
-#[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
-#[serde(rename_all = "snake_case")]
-pub enum PackType {
-    ClaudeMd,
-    Skill,
-    Mcp,
-    Rule,
-}
+// ── Registry types ────────────────────────────────────────────────────────────
 
+/// Lightweight entry from index.json (no file contents).
 #[derive(Debug, Clone, Serialize, Deserialize)]
-pub struct McpServerDef {
-    pub command: String,
-    #[serde(default)]
-    pub args: Vec<String>,
-    #[serde(default)]
-    pub env: HashMap<String, String>,
-}
-
-/// 每个 pack.json 的内容
-#[derive(Debug, Clone, Serialize, Deserialize)]
-pub struct PackManifest {
+pub struct PresetMeta {
     pub id: String,
     pub name: String,
-    pub version: String,
-    #[serde(rename = "type")]
-    pub pack_type: PackType,
     pub description: String,
+    #[serde(default)]
+    pub tags: Vec<String>,
+    #[serde(default)]
+    pub components: Vec<String>,
+    pub version: String,
+    pub tested_on: String,
     pub author: String,
-    #[serde(default)]
-    pub files: Vec<String>,
-    #[serde(default)]
-    pub servers: HashMap<String, McpServerDef>,
 }
 
+/// Root of index.json.
 #[derive(Debug, Clone, Serialize, Deserialize)]
-pub struct Source {
-    pub name: String,
-    pub url: String,
-    pub token: Option<String>,
+pub struct PresetIndex {
+    pub version: String,
+    pub updated_at: String,
+    pub presets: Vec<PresetMeta>,
 }
+
+/// Full preset manifest from preset.json.
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct PresetManifest {
+    pub id: String,
+    pub name: String,
+    pub description: String,
+    #[serde(default)]
+    pub tags: Vec<String>,
+    #[serde(default)]
+    pub components: Vec<String>,
+    pub version: String,
+    #[serde(default)]
+    pub min_claude_code_version: Option<String>,
+    pub tested_on: String,
+    pub author: String,
+    /// source_filename → target_rel_path (relative to scope root)
+    #[serde(default)]
+    pub files: HashMap<String, String>,
+}
+
+// ── Installed state ───────────────────────────────────────────────────────────
+
+/// Per-scope activation record stored in installed.json.
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct ActivePresetInfo {
+    pub active_preset_id: String,
+    pub activated_at: String,
+    pub preset_version: String,
+    /// Target paths that were written (relative to scope root).
+    pub files: Vec<String>,
+    /// Backup timestamp ID created when this preset was activated.
+    pub backup_ref: String,
+}
+
+/// Root of installed.json.
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
+pub struct InstalledState {
+    #[serde(default)]
+    pub global: Option<ActivePresetInfo>,
+    #[serde(default)]
+    pub projects: HashMap<String, ActivePresetInfo>,
+}
+
+// ── Backup ────────────────────────────────────────────────────────────────────
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct BackupEntry {
+    pub id: String,
+    pub scope: String,
+    pub previous_preset: Option<String>,
+    pub created_at: String,
+    pub files: Vec<String>,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
+pub struct BackupIndex {
+    #[serde(default)]
+    pub backups: Vec<BackupEntry>,
+}
+
+// ── App config ────────────────────────────────────────────────────────────────
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct AppConfig {
-    pub sources: Vec<Source>,
+    pub preset_source_url: String,
+    pub claude_config_path: Option<String>,
+    pub github_token: Option<String>,
     pub cache_ttl_minutes: u64,
+    pub app_version: String,
 }
 
 impl Default for AppConfig {
     fn default() -> Self {
         AppConfig {
-            sources: vec![Source {
-                name: "official".to_string(),
-                url: "https://raw.githubusercontent.com/owner/ccpm-registry/main".to_string(),
-                token: None,
-            }],
+            preset_source_url:
+                "https://raw.githubusercontent.com/owner/claude-preset-registry/main".to_string(),
+            claude_config_path: None,
+            github_token: None,
             cache_ttl_minutes: 60,
+            app_version: "0.1.0".to_string(),
         }
     }
 }
 
-/// 单个激活的组件包记录
-#[derive(Debug, Clone, Serialize, Deserialize)]
-pub struct ActivePackInfo {
-    pub pack_id: String,
-    pub source_name: String,
-    pub version: String,
-    /// 该包在目标目录创建的符号链接文件名列表（相对路径）
-    pub linked_files: Vec<String>,
-    pub activated_at: String,
-}
+// ── Baseline manifest ─────────────────────────────────────────────────────────
 
-/// 单个作用域（全局或某个项目）的激活状态
-#[derive(Debug, Clone, Serialize, Deserialize, Default)]
-pub struct ScopeState {
-    pub active_claude_md: Option<ActivePackInfo>,
-    pub active_skills: Vec<ActivePackInfo>,
-    pub active_mcps: Vec<ActivePackInfo>,
-    pub active_rules: Vec<ActivePackInfo>,
-}
-
-/// ~/.ccpm/installed.json 的完整状态
-/// 支持多作用域：全局 + 各项目路径
-#[derive(Debug, Clone, Serialize, Deserialize, Default)]
-pub struct InstalledState {
-    /// 全局配置（~/.claude/）
-    pub global: ScopeState,
-    /// 各项目配置，key = 项目绝对路径
-    pub projects: HashMap<String, ScopeState>,
-}
-
-/// 用户保存的集合（多组件的命名组合）
-#[derive(Debug, Clone, Serialize, Deserialize)]
-pub struct Collection {
-    pub id: String,
-    pub name: String,
-    pub description: Option<String>,
-    pub claude_md: Option<String>,
-    pub skills: Vec<String>,
-    pub mcps: Vec<String>,
-    pub rules: Vec<String>,
-    pub created_at: String,
-}
-
-/// 基线快照的 manifest
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct BaselineManifest {
     pub captured_at: String,
@@ -112,13 +119,34 @@ pub struct BaselineManifest {
     pub empty: bool,
 }
 
-/// 符号链接健康检查结果
-#[derive(Debug, Clone)]
-pub struct SymlinkStatus {
-    pub link_path: std::path::PathBuf,
-    pub target_path: std::path::PathBuf,
-    pub is_valid: bool,
-    pub pack_id: String,
+// ── Scope / strategy enums ────────────────────────────────────────────────────
+
+#[derive(Debug, Clone, PartialEq)]
+pub enum Scope {
+    Global,
+    Project(String),
+}
+
+impl Scope {
+    pub fn key(&self) -> &str {
+        match self {
+            Scope::Global => "global",
+            Scope::Project(path) => path.as_str(),
+        }
+    }
+}
+
+#[derive(Debug, Clone, Copy)]
+pub enum ConflictStrategy {
+    Overwrite,
+    Cancel,
+}
+
+#[derive(Debug, Clone, Copy)]
+pub enum RestoreOption {
+    Baseline,
+    LastBackup,
+    KeepFiles,
 }
 
 #[cfg(test)]
@@ -126,82 +154,94 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_pack_manifest_skill_deserializes() {
+    fn test_preset_meta_deserializes() {
         let json = r#"{
-            "id": "tdd-pack",
-            "name": "TDD Pack",
-            "version": "1.0.0",
-            "type": "skill",
-            "description": "TDD skills",
-            "author": "rick",
-            "files": ["tdd-red.md", "tdd-green.md"],
-            "servers": {}
+            "id": "python-solo",
+            "name": "Python 独立开发者",
+            "description": "适合单人 Python 项目",
+            "tags": ["python", "solo"],
+            "components": ["CLAUDE.md", "settings.json"],
+            "version": "1.2.0",
+            "tested_on": "2025-04-01",
+            "author": "rick"
         }"#;
-        let pack: PackManifest = serde_json::from_str(json).unwrap();
-        assert_eq!(pack.id, "tdd-pack");
-        assert!(matches!(pack.pack_type, PackType::Skill));
-        assert_eq!(pack.files, vec!["tdd-red.md", "tdd-green.md"]);
+        let meta: PresetMeta = serde_json::from_str(json).unwrap();
+        assert_eq!(meta.id, "python-solo");
+        assert_eq!(meta.tags.len(), 2);
     }
 
     #[test]
-    fn test_pack_manifest_mcp_deserializes() {
+    fn test_preset_index_deserializes() {
         let json = r#"{
-            "id": "git-pack",
-            "name": "Git MCP",
-            "version": "1.0.0",
-            "type": "mcp",
-            "description": "Git MCP server",
-            "author": "rick",
-            "files": [],
-            "servers": {
-                "git": {"command": "uvx", "args": ["mcp-server-git"], "env": {}}
-            }
+            "version": "1",
+            "updated_at": "2025-04-23T10:00:00Z",
+            "presets": [
+                {
+                    "id": "python-solo",
+                    "name": "Python Solo",
+                    "description": "d",
+                    "version": "1.0.0",
+                    "tested_on": "2025-04-01",
+                    "author": "a"
+                }
+            ]
         }"#;
-        let pack: PackManifest = serde_json::from_str(json).unwrap();
-        assert!(matches!(pack.pack_type, PackType::Mcp));
-        assert!(pack.servers.contains_key("git"));
+        let index: PresetIndex = serde_json::from_str(json).unwrap();
+        assert_eq!(index.version, "1");
+        assert_eq!(index.presets.len(), 1);
     }
 
     #[test]
-    fn test_installed_state_default_has_empty_global_and_no_projects() {
+    fn test_preset_manifest_files_map() {
+        let json = r#"{
+            "id": "python-solo",
+            "name": "Python Solo",
+            "description": "d",
+            "version": "1.0.0",
+            "tested_on": "2025-04-01",
+            "author": "a",
+            "files": {"CLAUDE.md": "CLAUDE.md", "settings.json": "settings.json"}
+        }"#;
+        let manifest: PresetManifest = serde_json::from_str(json).unwrap();
+        assert_eq!(manifest.files.get("CLAUDE.md").unwrap(), "CLAUDE.md");
+        assert_eq!(manifest.files.len(), 2);
+    }
+
+    #[test]
+    fn test_installed_state_default_is_empty() {
         let state = InstalledState::default();
-        assert!(state.global.active_claude_md.is_none());
-        assert!(state.global.active_skills.is_empty());
+        assert!(state.global.is_none());
         assert!(state.projects.is_empty());
     }
 
     #[test]
-    fn test_scope_state_default_is_empty() {
-        let s = ScopeState::default();
-        assert!(s.active_claude_md.is_none());
-        assert!(s.active_skills.is_empty());
-        assert!(s.active_mcps.is_empty());
-        assert!(s.active_rules.is_empty());
-    }
-
-    #[test]
-    fn test_app_config_default_has_official_source() {
-        let cfg = AppConfig::default();
-        assert_eq!(cfg.sources.len(), 1);
-        assert_eq!(cfg.sources[0].name, "official");
-        assert_eq!(cfg.cache_ttl_minutes, 60);
-    }
-
-    #[test]
-    fn test_collection_roundtrip() {
-        let col = Collection {
-            id: "my-python".to_string(),
-            name: "My Python".to_string(),
-            description: None,
-            claude_md: Some("python-solo".to_string()),
-            skills: vec!["tdd-pack".to_string()],
-            mcps: vec![],
-            rules: vec!["no-comments-pack".to_string()],
-            created_at: "2026-04-23T10:00:00Z".to_string(),
+    fn test_installed_state_roundtrip() {
+        let state = InstalledState {
+            global: Some(ActivePresetInfo {
+                active_preset_id: "python-solo".to_string(),
+                activated_at: "2025-04-23T10:00:00Z".to_string(),
+                preset_version: "1.0.0".to_string(),
+                files: vec!["CLAUDE.md".to_string()],
+                backup_ref: "2025-04-23T10-00-00-000000Z".to_string(),
+            }),
+            projects: HashMap::new(),
         };
-        let json = serde_json::to_string(&col).unwrap();
-        let back: Collection = serde_json::from_str(&json).unwrap();
-        assert_eq!(back.id, "my-python");
-        assert_eq!(back.skills.len(), 1);
+        let json = serde_json::to_string(&state).unwrap();
+        let back: InstalledState = serde_json::from_str(&json).unwrap();
+        assert_eq!(back.global.unwrap().active_preset_id, "python-solo");
+    }
+
+    #[test]
+    fn test_app_config_default() {
+        let cfg = AppConfig::default();
+        assert_eq!(cfg.cache_ttl_minutes, 60);
+        assert!(cfg.preset_source_url.contains("github"));
+        assert!(cfg.github_token.is_none());
+    }
+
+    #[test]
+    fn test_scope_key() {
+        assert_eq!(Scope::Global.key(), "global");
+        assert_eq!(Scope::Project("/foo".to_string()).key(), "/foo");
     }
 }

@@ -1,34 +1,34 @@
 use crate::{
     error::AppError,
     fs::atomic_write,
-    types::{PackManifest, PackType, Source},
+    types::{AppConfig, PresetIndex, PresetManifest},
 };
 use std::path::Path;
 
+fn validate_preset_id(id: &str) -> Result<(), AppError> {
+    if id.is_empty()
+        || id.contains(['/', '\\', '\0'])
+        || id.contains("..")
+        || id.starts_with('-')
+    {
+        return Err(AppError::InvalidInput(format!("无效的 preset ID：'{}'", id)));
+    }
+    Ok(())
+}
+
 fn validate_filename(name: &str) -> Result<(), AppError> {
     let p = std::path::Path::new(name);
-    if p.is_absolute()
-        || p.components()
-            .any(|c| c == std::path::Component::ParentDir)
-    {
-        return Err(AppError::InvalidInput(format!("unsafe filename: {}", name)));
+    if p.is_absolute() || p.components().any(|c| c == std::path::Component::ParentDir) {
+        return Err(AppError::InvalidInput(format!("unsafe filename: '{}'", name)));
     }
     Ok(())
 }
 
-fn validate_pack_id(id: &str) -> Result<(), AppError> {
-    if id.is_empty() || id.contains(['/', '\\', '\0', '.']) || id.starts_with('-') {
-        return Err(AppError::InvalidInput(format!("invalid pack id: '{}'", id)));
-    }
-    Ok(())
-}
+// ── Cache ─────────────────────────────────────────────────────────────────────
 
-/// Reads source's pack list from local cache; returns None if expired or missing.
-pub fn load_from_cache(
-    source_cache_dir: &Path,
-    ttl_minutes: u64,
-) -> Result<Option<Vec<PackManifest>>, AppError> {
-    let path = source_cache_dir.join("index.json");
+/// Loads the preset index from local cache. Returns None if missing or expired.
+pub fn load_from_cache(cache_dir: &Path, ttl_minutes: u64) -> Result<Option<PresetIndex>, AppError> {
+    let path = cache_dir.join("index.json");
     if !path.exists() {
         return Ok(None);
     }
@@ -39,122 +39,21 @@ pub fn load_from_cache(
     let age = std::time::SystemTime::now()
         .duration_since(modified)
         .unwrap_or_default();
-    // unwrap_or_default returns Duration::ZERO on clock skew (mtime in future),
-    // causing the cache to appear expired — safe fallback behavior.
     if age.as_secs() >= ttl_minutes * 60 {
         return Ok(None);
     }
     let content = std::fs::read_to_string(&path)?;
-    let packs: Vec<PackManifest> = serde_json::from_str(&content)
+    let index: PresetIndex = serde_json::from_str(&content)
         .map_err(|e| AppError::Parse(format!("cache index 解析失败：{}", e)))?;
-    Ok(Some(packs))
+    Ok(Some(index))
 }
 
-/// Fetches index.json from remote source URL, writes to cache.
-pub async fn fetch_index(
-    client: &reqwest::Client,
-    source: &Source,
-    source_cache_dir: &Path,
-) -> Result<Vec<PackManifest>, AppError> {
-    let url = format!("{}/index.json", source.url.trim_end_matches('/'));
-    let resp = client.get(&url).send().await?;
-    if !resp.status().is_success() {
-        return Err(AppError::Network(format!(
-            "HTTP {} fetching index from '{}'",
-            resp.status(),
-            source.name
-        )));
-    }
-    let content = resp.text().await?;
-    let packs: Vec<PackManifest> = serde_json::from_str(&content)
-        .map_err(|e| AppError::Parse(format!("remote index 解析失败：{}", e)))?;
-    std::fs::create_dir_all(source_cache_dir)?;
-    atomic_write(&source_cache_dir.join("index.json"), &content)?;
-    Ok(packs)
+fn write_to_cache(cache_dir: &Path, filename: &str, content: &str) -> Result<(), AppError> {
+    std::fs::create_dir_all(cache_dir)?;
+    atomic_write(&cache_dir.join(filename), content)
 }
 
-/// Downloads a pack from remote source into the library.
-pub async fn fetch_pack(
-    client: &reqwest::Client,
-    source: &Source,
-    library_dir: &Path,
-    manifest: &PackManifest,
-) -> Result<(), AppError> {
-    validate_pack_id(&manifest.id)?;
-    let type_subdir = pack_type_subdir(&manifest.pack_type);
-    let pack_url_base = format!(
-        "{}/packs/{}/{}",
-        source.url.trim_end_matches('/'),
-        type_subdir,
-        manifest.id
-    );
-
-    let pack_json = fetch_text(client, &format!("{}/pack.json", pack_url_base)).await?;
-
-    let mut file_contents: Vec<(String, String)> = vec![];
-    for filename in &manifest.files {
-        validate_filename(filename)?;
-        let content = fetch_text(client, &format!("{}/{}", pack_url_base, filename)).await?;
-        file_contents.push((filename.clone(), content));
-    }
-
-    let pack_dir = library_dir.join(type_subdir).join(&manifest.id);
-    std::fs::create_dir_all(&pack_dir)?;
-    atomic_write(&pack_dir.join("pack.json"), &pack_json)?;
-    for (filename, content) in &file_contents {
-        atomic_write(&pack_dir.join(filename), content)?;
-    }
-    Ok(())
-}
-
-/// Saves a pack (with already-fetched file contents) into the library.
-/// Used for testing and offline scenarios.
-pub fn save_pack_to_library(
-    library_dir: &Path,
-    manifest: &PackManifest,
-    files: &[(&str, &str)],
-) -> Result<(), AppError> {
-    validate_pack_id(&manifest.id)?;
-    let type_subdir = pack_type_subdir(&manifest.pack_type);
-    let pack_dir = library_dir.join(type_subdir).join(&manifest.id);
-    std::fs::create_dir_all(&pack_dir)?;
-    let pack_json = serde_json::to_string_pretty(manifest)?;
-    atomic_write(&pack_dir.join("pack.json"), &pack_json)?;
-    for (filename, content) in files {
-        validate_filename(filename)?;
-        atomic_write(&pack_dir.join(filename), content)?;
-    }
-    Ok(())
-}
-
-/// Reads a pack's manifest from the library.
-pub fn load_pack_manifest(
-    library_dir: &Path,
-    pack_type: PackType,
-    pack_id: &str,
-) -> Result<PackManifest, AppError> {
-    validate_pack_id(pack_id)?;
-    let type_subdir = pack_type_subdir(&pack_type);
-    let path = library_dir.join(type_subdir).join(pack_id).join("pack.json");
-    let content = std::fs::read_to_string(&path).map_err(|e| {
-        if e.kind() == std::io::ErrorKind::NotFound {
-            AppError::PackNotFound(pack_id.to_string())
-        } else {
-            AppError::from(e)
-        }
-    })?;
-    serde_json::from_str(&content)
-        .map_err(|e| AppError::Parse(format!("pack manifest 解析失败：{}", e)))
-}
-
-pub fn pack_type_subdir(pack_type: &PackType) -> &'static str {
-    match pack_type {
-        PackType::ClaudeMd => "claude-mds",
-        PackType::Skill => "skills",
-        PackType::Mcp => "mcps",
-        PackType::Rule => "rules",
-    }
-}
+// ── HTTP fetch ────────────────────────────────────────────────────────────────
 
 async fn fetch_text(client: &reqwest::Client, url: &str) -> Result<String, AppError> {
     let resp = client.get(url).send().await?;
@@ -168,12 +67,75 @@ async fn fetch_text(client: &reqwest::Client, url: &str) -> Result<String, AppEr
     Ok(resp.text().await?)
 }
 
-pub fn build_client(token: Option<&str>) -> Result<reqwest::Client, AppError> {
+/// Fetches index.json from remote, writes to cache, returns parsed index.
+pub async fn fetch_index(
+    client: &reqwest::Client,
+    source_url: &str,
+    cache_dir: &Path,
+) -> Result<PresetIndex, AppError> {
+    let url = format!("{}/index.json", source_url.trim_end_matches('/'));
+    let content = fetch_text(client, &url).await?;
+    let index: PresetIndex = serde_json::from_str(&content)
+        .map_err(|e| AppError::Parse(format!("remote index 解析失败：{}", e)))?;
+    write_to_cache(cache_dir, "index.json", &content)?;
+    Ok(index)
+}
+
+/// Fetches full preset manifest (preset.json) from remote.
+pub async fn fetch_preset_manifest(
+    client: &reqwest::Client,
+    source_url: &str,
+    preset_id: &str,
+) -> Result<PresetManifest, AppError> {
+    validate_preset_id(preset_id)?;
+    let url = format!(
+        "{}/presets/{}/preset.json",
+        source_url.trim_end_matches('/'),
+        preset_id
+    );
+    let content = fetch_text(client, &url).await?;
+    serde_json::from_str(&content)
+        .map_err(|e| AppError::Parse(format!("preset manifest 解析失败：{}", e)))
+}
+
+/// Fetches a single file from a preset's directory.
+pub async fn fetch_preset_file(
+    client: &reqwest::Client,
+    source_url: &str,
+    preset_id: &str,
+    filename: &str,
+) -> Result<String, AppError> {
+    validate_preset_id(preset_id)?;
+    validate_filename(filename)?;
+    let url = format!(
+        "{}/presets/{}/{}",
+        source_url.trim_end_matches('/'),
+        preset_id,
+        filename
+    );
+    fetch_text(client, &url).await
+}
+
+/// Fetches all files declared in a preset manifest. Returns source_name -> content map.
+pub async fn fetch_all_preset_files(
+    client: &reqwest::Client,
+    source_url: &str,
+    manifest: &PresetManifest,
+) -> Result<std::collections::HashMap<String, String>, AppError> {
+    let mut contents = std::collections::HashMap::new();
+    for src_name in manifest.files.keys() {
+        let content = fetch_preset_file(client, source_url, &manifest.id, src_name).await?;
+        contents.insert(src_name.clone(), content);
+    }
+    Ok(contents)
+}
+
+pub fn build_client(config: &AppConfig) -> Result<reqwest::Client, AppError> {
     let mut headers = reqwest::header::HeaderMap::new();
-    if let Some(t) = token {
+    if let Some(token) = &config.github_token {
         headers.insert(
             reqwest::header::AUTHORIZATION,
-            format!("Bearer {}", t)
+            format!("Bearer {}", token)
                 .parse()
                 .map_err(|_| AppError::Network("invalid token format".to_string()))?,
         );
@@ -185,111 +147,70 @@ pub fn build_client(token: Option<&str>) -> Result<reqwest::Client, AppError> {
         .map_err(|e| AppError::Network(e.to_string()))
 }
 
-/// List all pack manifests installed in the library.
-/// If pack_type is Some, only returns packs of that type.
-pub fn list_library_packs(
-    library_dir: &Path,
-    pack_type: Option<&PackType>,
-) -> Result<Vec<PackManifest>, AppError> {
-    let subdirs: &[(&str, PackType)] = &[
-        ("claude-mds", PackType::ClaudeMd),
-        ("skills", PackType::Skill),
-        ("mcps", PackType::Mcp),
-        ("rules", PackType::Rule),
-    ];
-    let mut result = vec![];
-    for (subdir, pt) in subdirs {
-        if let Some(filter) = pack_type {
-            if filter != pt {
-                continue;
-            }
-        }
-        let dir = library_dir.join(subdir);
-        if !dir.exists() {
-            continue;
-        }
-        for entry in std::fs::read_dir(&dir)? {
-            let entry = entry?;
-            let pack_json = entry.path().join("pack.json");
-            if pack_json.exists() {
-                let content = std::fs::read_to_string(&pack_json)?;
-                match serde_json::from_str::<PackManifest>(&content) {
-                    Ok(m) => result.push(m),
-                    Err(e) => tracing::warn!("skipping corrupt pack {:?}: {}", entry.path(), e),
-                }
-            }
-        }
-    }
-    result.sort_by(|a, b| a.id.cmp(&b.id));
-    Ok(result)
-}
-
 #[cfg(test)]
 mod tests {
     use super::*;
     use tempfile::tempdir;
 
     fn make_index_json() -> String {
-        r#"[
-            {"id":"python-solo","name":"Python Solo","version":"1.0.0","type":"claude_md","description":"d","author":"a","files":["CLAUDE.md"],"servers":{}},
-            {"id":"tdd-pack","name":"TDD Pack","version":"1.0.0","type":"skill","description":"d","author":"a","files":["tdd-red.md"],"servers":{}}
-        ]"#.to_string()
+        r#"{
+            "version": "1",
+            "updated_at": "2025-04-23T10:00:00Z",
+            "presets": [
+                {
+                    "id": "python-solo",
+                    "name": "Python Solo",
+                    "description": "d",
+                    "version": "1.0.0",
+                    "tested_on": "2025-04-01",
+                    "author": "a"
+                }
+            ]
+        }"#.to_string()
     }
 
     #[test]
     fn test_load_from_cache_fresh() {
         let dir = tempdir().unwrap();
-        let cache_dir = dir.path().join("cache").join("official");
+        let cache_dir = dir.path().join("cache");
         std::fs::create_dir_all(&cache_dir).unwrap();
         std::fs::write(cache_dir.join("index.json"), make_index_json()).unwrap();
-        let packs = load_from_cache(&cache_dir, 60).unwrap();
-        assert!(packs.is_some());
-        assert_eq!(packs.unwrap().len(), 2);
+        let result = load_from_cache(&cache_dir, 60).unwrap();
+        assert!(result.is_some());
+        let index = result.unwrap();
+        assert_eq!(index.presets.len(), 1);
+        assert_eq!(index.presets[0].id, "python-solo");
     }
 
     #[test]
     fn test_load_from_cache_expired_returns_none() {
         let dir = tempdir().unwrap();
-        let cache_dir = dir.path().join("cache").join("official");
+        let cache_dir = dir.path().join("cache");
         std::fs::create_dir_all(&cache_dir).unwrap();
         let path = cache_dir.join("index.json");
         std::fs::write(&path, make_index_json()).unwrap();
         // Set mtime to 2 hours ago
-        let two_hours_ago =
-            std::time::SystemTime::now() - std::time::Duration::from_secs(7200);
+        let two_hours_ago = std::time::SystemTime::now() - std::time::Duration::from_secs(7200);
         let mtime = filetime::FileTime::from_system_time(two_hours_ago);
         filetime::set_file_mtime(&path, mtime).unwrap();
-        let packs = load_from_cache(&cache_dir, 60).unwrap();
-        assert!(packs.is_none(), "expired cache should return None");
+        let result = load_from_cache(&cache_dir, 60).unwrap();
+        assert!(result.is_none(), "expired cache must return None");
     }
 
     #[test]
-    fn test_save_and_load_pack_manifest() {
+    fn test_load_from_cache_missing_returns_none() {
         let dir = tempdir().unwrap();
-        let library_dir = dir.path().join("library");
-        let manifest = crate::types::PackManifest {
-            id: "tdd-pack".to_string(),
-            name: "TDD".to_string(),
-            version: "1.0.0".to_string(),
-            pack_type: crate::types::PackType::Skill,
-            description: "d".to_string(),
-            author: "a".to_string(),
-            files: vec!["tdd-red.md".to_string()],
-            servers: Default::default(),
-        };
-        save_pack_to_library(&library_dir, &manifest, &[("tdd-red.md", "# Red phase")])
-            .unwrap();
-        let loaded = load_pack_manifest(
-            &library_dir,
-            crate::types::PackType::Skill,
-            "tdd-pack",
-        )
-        .unwrap();
-        assert_eq!(loaded.id, "tdd-pack");
-        let file = library_dir
-            .join("skills")
-            .join("tdd-pack")
-            .join("tdd-red.md");
-        assert!(file.exists());
+        let result = load_from_cache(dir.path(), 60).unwrap();
+        assert!(result.is_none());
+    }
+
+    #[test]
+    fn test_validate_preset_id_rejects_traversal() {
+        assert!(validate_preset_id("../escape").is_err());
+        assert!(validate_preset_id("/abs/path").is_err());
+        assert!(validate_preset_id("").is_err());
+        assert!(validate_preset_id("-bad").is_err());
+        assert!(validate_preset_id("python-solo").is_ok());
+        assert!(validate_preset_id("my_preset_123").is_ok());
     }
 }

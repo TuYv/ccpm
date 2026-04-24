@@ -1,133 +1,148 @@
 use ccpm_core::{
-    baseline::capture_baseline,
-    installer::{
-        install_claude_md, install_mcp_pack, install_skill_pack,
-        uninstall_skill_pack,
-    },
-    registry::save_pack_to_library,
-    repair::{check_symlink_health, repair_symlinks},
+    activator::{activate_preset, deactivate_preset},
+    baseline::{capture_baseline, restore_baseline},
     state::read_installed,
-    types::{McpServerDef, PackManifest, PackType},
+    types::{PresetManifest, RestoreOption, Scope},
 };
 use std::collections::HashMap;
 use tempfile::tempdir;
 
-fn make_skill_manifest() -> PackManifest {
-    PackManifest {
-        id: "tdd-pack".to_string(),
-        name: "TDD Pack".to_string(),
+fn make_manifest(id: &str, files: &[(&str, &str)]) -> PresetManifest {
+    PresetManifest {
+        id: id.to_string(),
+        name: id.to_string(),
+        description: "test preset".to_string(),
+        tags: vec!["test".to_string()],
+        components: files.iter().map(|(k, _)| k.to_string()).collect(),
         version: "1.0.0".to_string(),
-        pack_type: PackType::Skill,
-        description: "d".to_string(),
-        author: "a".to_string(),
-        files: vec!["tdd-red.md".to_string(), "tdd-green.md".to_string()],
-        servers: HashMap::new(),
+        min_claude_code_version: None,
+        tested_on: "2025-04-01".to_string(),
+        author: "test".to_string(),
+        files: files.iter().map(|(k, v)| (k.to_string(), v.to_string())).collect(),
     }
 }
 
-fn make_claude_md_manifest() -> PackManifest {
-    PackManifest {
-        id: "python-solo".to_string(),
-        name: "Python Solo".to_string(),
-        version: "1.0.0".to_string(),
-        pack_type: PackType::ClaudeMd,
-        description: "d".to_string(),
-        author: "a".to_string(),
-        files: vec!["CLAUDE.md".to_string()],
-        servers: HashMap::new(),
-    }
-}
-
-fn make_mcp_manifest() -> PackManifest {
-    let mut servers = HashMap::new();
-    servers.insert(
-        "git".to_string(),
-        McpServerDef {
-            command: "uvx".to_string(),
-            args: vec!["mcp-server-git".to_string()],
-            env: HashMap::new(),
-        },
-    );
-    PackManifest {
-        id: "git-pack".to_string(),
-        name: "Git MCP".to_string(),
-        version: "1.0.0".to_string(),
-        pack_type: PackType::Mcp,
-        description: "d".to_string(),
-        author: "a".to_string(),
-        files: vec![],
-        servers,
-    }
+fn file_contents(pairs: &[(&str, &str)]) -> HashMap<String, String> {
+    pairs.iter().map(|(k, v)| (k.to_string(), v.to_string())).collect()
 }
 
 #[test]
-fn test_full_install_flow() {
+fn test_full_activate_restore_flow() {
     let dir = tempdir().unwrap();
     let claude = dir.path().join(".claude");
-    let ccpm = dir.path().join(".ccpm");
+    let pm = dir.path().join(".preset-manager");
     std::fs::create_dir_all(&claude).unwrap();
-    std::fs::create_dir_all(ccpm.join("library")).unwrap();
+    std::fs::create_dir_all(&pm).unwrap();
 
-    // User has existing CLAUDE.md
+    // User has existing CLAUDE.md and settings.json
     std::fs::write(claude.join("CLAUDE.md"), "# 用户原始配置").unwrap();
+    std::fs::write(claude.join("settings.json"), r#"{"theme":"dark"}"#).unwrap();
 
-    // Capture baseline
-    capture_baseline(&claude, &ccpm).unwrap();
+    // Capture baseline first
+    capture_baseline(&claude, &pm).unwrap();
+    assert!(pm.join("baseline").join("CLAUDE.md").exists());
 
-    // Install claude-md pack
-    let cm_manifest = make_claude_md_manifest();
-    save_pack_to_library(
-        &ccpm.join("library"),
-        &cm_manifest,
-        &[("CLAUDE.md", "# Python Solo")],
-    )
-    .unwrap();
-    install_claude_md(&claude, &ccpm, &cm_manifest, "official").unwrap();
-    assert!(claude.join("CLAUDE.md").is_symlink());
+    // Activate python-solo preset
+    let manifest = make_manifest(
+        "python-solo",
+        &[("CLAUDE.md", "CLAUDE.md"), ("settings.json", "settings.json")],
+    );
+    let contents = file_contents(&[
+        ("CLAUDE.md", "# Python 独立开发者"),
+        ("settings.json", r#"{"mcpServers":{}}"#),
+    ]);
+    let result = activate_preset(&claude, &pm, &manifest, &contents, &Scope::Global).unwrap();
+
+    // Files written correctly
     assert_eq!(
         std::fs::read_to_string(claude.join("CLAUDE.md")).unwrap(),
-        "# Python Solo"
+        "# Python 独立开发者"
     );
+    assert!(!result.written_files.is_empty());
 
-    // Install skill pack
-    let skill_manifest = make_skill_manifest();
-    save_pack_to_library(
-        &ccpm.join("library"),
-        &skill_manifest,
-        &[("tdd-red.md", "# Red"), ("tdd-green.md", "# Green")],
-    )
-    .unwrap();
-    install_skill_pack(&claude, &ccpm, &skill_manifest, "official").unwrap();
-    assert!(claude.join("skills").join("tdd-red.md").is_symlink());
-
-    // Install MCP pack
-    let mcp_manifest = make_mcp_manifest();
-    save_pack_to_library(&ccpm.join("library"), &mcp_manifest, &[]).unwrap();
-    install_mcp_pack(&claude, &ccpm, &mcp_manifest, "official").unwrap();
-    let settings: serde_json::Value = serde_json::from_str(
-        &std::fs::read_to_string(claude.join("settings.json")).unwrap(),
-    )
-    .unwrap();
-    assert_eq!(settings["mcpServers"]["git"]["command"], "uvx");
-
-    // Verify installed.json state — uses multi-scope state.global.*
-    let state = read_installed(&ccpm).unwrap();
+    // Backup created before write
+    let backup_dir = pm.join("backups").join(&result.backup_ref);
+    assert!(backup_dir.join("CLAUDE.md").exists());
     assert_eq!(
-        state.global.active_claude_md.as_ref().unwrap().pack_id,
-        "python-solo"
+        std::fs::read_to_string(backup_dir.join("CLAUDE.md")).unwrap(),
+        "# 用户原始配置"
     );
-    assert_eq!(state.global.active_skills.len(), 1);
-    assert_eq!(state.global.active_mcps.len(), 1);
 
-    // Uninstall skill pack
-    uninstall_skill_pack(&claude, &ccpm, "tdd-pack").unwrap();
-    assert!(!claude.join("skills").join("tdd-red.md").exists());
+    // installed.json updated
+    let state = read_installed(&pm).unwrap();
+    let active = state.global.as_ref().unwrap();
+    assert_eq!(active.active_preset_id, "python-solo");
+    assert_eq!(active.preset_version, "1.0.0");
+    assert_eq!(active.backup_ref, result.backup_ref);
 
-    // Simulate reinstall: delete CLAUDE.md symlink
-    std::fs::remove_file(claude.join("CLAUDE.md")).unwrap();
-    let broken = check_symlink_health(&claude, &ccpm).unwrap();
-    assert_eq!(broken.len(), 1);
-    let repaired = repair_symlinks(&claude, &ccpm).unwrap();
-    assert_eq!(repaired, 1);
-    assert!(claude.join("CLAUDE.md").is_symlink());
+    // Restore baseline — installed.json global cleared, files back to original
+    restore_baseline(&claude, &pm).unwrap();
+    assert_eq!(
+        std::fs::read_to_string(claude.join("CLAUDE.md")).unwrap(),
+        "# 用户原始配置"
+    );
+    assert!(read_installed(&pm).unwrap().global.is_none());
+}
+
+#[test]
+fn test_switch_presets_creates_backup_chain() {
+    let dir = tempdir().unwrap();
+    let claude = dir.path().join(".claude");
+    let pm = dir.path().join(".preset-manager");
+    std::fs::create_dir_all(&claude).unwrap();
+    std::fs::create_dir_all(&pm).unwrap();
+    capture_baseline(&claude, &pm).unwrap();
+
+    let m1 = make_manifest("python-solo", &[("CLAUDE.md", "CLAUDE.md")]);
+    let m2 = make_manifest("frontend-team", &[("CLAUDE.md", "CLAUDE.md")]);
+
+    activate_preset(
+        &claude, &pm, &m1,
+        &file_contents(&[("CLAUDE.md", "# Python")]),
+        &Scope::Global,
+    ).unwrap();
+
+    activate_preset(
+        &claude, &pm, &m2,
+        &file_contents(&[("CLAUDE.md", "# Frontend")]),
+        &Scope::Global,
+    ).unwrap();
+
+    assert_eq!(
+        std::fs::read_to_string(claude.join("CLAUDE.md")).unwrap(),
+        "# Frontend"
+    );
+
+    // Restore last backup — goes back to python
+    deactivate_preset(&claude, &pm, &Scope::Global, RestoreOption::LastBackup).unwrap();
+    assert_eq!(
+        std::fs::read_to_string(claude.join("CLAUDE.md")).unwrap(),
+        "# Python"
+    );
+    assert!(read_installed(&pm).unwrap().global.is_none());
+}
+
+#[test]
+fn test_project_scope_activation() {
+    let dir = tempdir().unwrap();
+    let project = dir.path().join("myproject");
+    let pm = dir.path().join(".preset-manager");
+    std::fs::create_dir_all(&project).unwrap();
+    std::fs::create_dir_all(&pm).unwrap();
+
+    let manifest = make_manifest("frontend-team", &[("CLAUDE.md", "CLAUDE.md")]);
+    let scope = Scope::Project(project.to_string_lossy().to_string());
+    activate_preset(
+        &project, &pm, &manifest,
+        &file_contents(&[("CLAUDE.md", "# Frontend Team")]),
+        &scope,
+    ).unwrap();
+
+    assert_eq!(
+        std::fs::read_to_string(project.join("CLAUDE.md")).unwrap(),
+        "# Frontend Team"
+    );
+    let state = read_installed(&pm).unwrap();
+    assert!(state.global.is_none(), "project activation must not affect global");
+    assert!(state.projects.contains_key(project.to_string_lossy().as_ref()));
 }
