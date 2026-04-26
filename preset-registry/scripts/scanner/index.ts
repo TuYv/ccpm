@@ -28,7 +28,7 @@ async function main() {
     accepted.push(entry);
 
     // Write the CLAUDE.md content next to the preset entry.
-    const presetDir = join(REGISTRY_DIR, "presets", entry.id);
+    const presetDir = join(REGISTRY_DIR, "presets", "auto-discovered", entry.id);
     await mkdir(presetDir, { recursive: true });
     await writeFile(join(presetDir, "CLAUDE.md"), content);
     await writeFile(

@@ -156,7 +156,7 @@ export default function PresetsPage() {
                 <div className="flex-1 min-w-0">
                   <div className="text-sm font-semibold text-app-text truncate">
                     {p.name}
-                    {p.tags?.includes("auto-discovered") && (
+                    {p.source && (
                       <span className="ml-2 px-1.5 py-0.5 text-[10px] rounded bg-orange-900/30 text-orange-300 border border-orange-700/40">
                         🔥 热门发现
                       </span>

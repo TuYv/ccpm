@@ -1,7 +1,7 @@
 import { Octokit } from "@octokit/rest";
 
 export interface SearchHit {
-  repo: string; // "owner/name"
+  repo: string;
   default_branch: string;
   stars: number;
   path: string;
@@ -10,20 +10,34 @@ export interface SearchHit {
 }
 
 export async function searchClaudeMd(octokit: Octokit, minStars = 500): Promise<SearchHit[]> {
-  const q = `filename:CLAUDE.md stars:>${minStars}`;
+  const q = `filename:CLAUDE.md`;
   const out: SearchHit[] = [];
+  const seen = new Set<string>();
+
   for (let page = 1; page <= 5; page++) {
     const { data } = await octokit.search.code({ q, per_page: 100, page });
     for (const item of data.items) {
-      const repo = item.repository;
-      out.push({
-        repo: repo.full_name,
-        default_branch: (repo as any).default_branch ?? "main",
-        stars: (repo as any).stargazers_count ?? 0,
-        path: item.path,
-        pushed_at: (repo as any).pushed_at ?? "",
-        description: repo.description,
-      });
+      const fullName = item.repository.full_name;
+      if (seen.has(fullName)) continue;
+      seen.add(fullName);
+
+      // Enrich with real repo metadata (stars, pushed_at, default_branch).
+      try {
+        const [owner, repo] = fullName.split("/");
+        const { data: repoData } = await octokit.repos.get({ owner, repo });
+        if ((repoData.stargazers_count ?? 0) < minStars) continue;
+        out.push({
+          repo: fullName,
+          default_branch: repoData.default_branch ?? "main",
+          stars: repoData.stargazers_count ?? 0,
+          path: item.path,
+          pushed_at: repoData.pushed_at ?? "",
+          description: repoData.description,
+        });
+      } catch (e) {
+        // Skip private/deleted/rate-limited repos silently.
+        continue;
+      }
     }
     if (data.items.length < 100) break;
   }
