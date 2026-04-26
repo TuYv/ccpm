@@ -1,0 +1,262 @@
+import { create } from "zustand";
+import { SEED_INDEX, api, getSeedFiles, getSeedManifest } from "../api/claudePreset";
+import type {
+  AppConfig,
+  BackupEntry,
+  InstalledState,
+  McpIndex,
+  PresetIndex,
+  PresetManifest,
+  ScopeArg,
+  SkillIndex,
+} from "../types/core";
+
+interface Toast {
+  id: number;
+  message: string;
+  kind: "success" | "error";
+}
+
+interface PresetsStore {
+  index: PresetIndex | null;
+  loading: boolean;
+  error: string | null;
+  detailError: string | null;
+  sourceMode: "remote" | "seed";
+  lastUpdated: string | null;
+  selectedId: string | null;
+  manifest: PresetManifest | null;
+  files: Record<string, string>;
+  fetchIndex: (force?: boolean) => Promise<void>;
+  selectPreset: (id: string) => Promise<void>;
+}
+
+interface InstalledStore {
+  state: InstalledState | null;
+  load: () => Promise<void>;
+}
+
+interface ConfigStore {
+  config: AppConfig | null;
+  baselineExists: boolean;
+  load: () => Promise<void>;
+  save: (c: AppConfig) => Promise<void>;
+  captureBaseline: () => Promise<void>;
+  restoreBaseline: () => Promise<void>;
+  checkBaseline: () => Promise<void>;
+}
+
+interface BackupsStore {
+  entries: BackupEntry[];
+  load: () => Promise<void>;
+}
+
+interface SkillsStore {
+  index: SkillIndex | null;
+  loading: boolean;
+  error: string | null;
+  installed: Record<string, string[]>; // scope key → installed skill ids
+  fetchIndex: (force?: boolean) => Promise<void>;
+  loadInstalled: (scope: ScopeArg) => Promise<void>;
+  install: (skillId: string, scope: ScopeArg) => Promise<void>;
+  uninstall: (skillId: string, scope: ScopeArg) => Promise<void>;
+}
+
+interface McpsStore {
+  index: McpIndex | null;
+  loading: boolean;
+  error: string | null;
+  installed: Record<string, string[]>;
+  fetchIndex: (force?: boolean) => Promise<void>;
+  loadInstalled: (scope: ScopeArg) => Promise<void>;
+  install: (
+    mcpId: string,
+    scope: ScopeArg,
+    env: Record<string, string>,
+  ) => Promise<void>;
+  uninstall: (mcpId: string, scope: ScopeArg) => Promise<void>;
+}
+
+interface UiStore {
+  toasts: Toast[];
+  nextId: number;
+  addToast: (message: string, kind: "success" | "error") => void;
+  removeToast: (id: number) => void;
+}
+
+export const usePresetsStore = create<PresetsStore>((set, get) => ({
+  index: null,
+  loading: false,
+  error: null,
+  detailError: null,
+  sourceMode: "remote",
+  lastUpdated: null,
+  selectedId: null,
+  manifest: null,
+  files: {},
+  fetchIndex: async (force = false) => {
+    set({ loading: true, error: null });
+    try {
+      const index = await api.fetchIndex(force);
+      set({ index, sourceMode: "remote", lastUpdated: new Date().toISOString() });
+      if (!get().selectedId && index.presets[0]) {
+        get().selectPreset(index.presets[0].id);
+      }
+    } catch (e) {
+      set({ index: SEED_INDEX, sourceMode: "seed", error: String(e) });
+      if (!get().selectedId && SEED_INDEX.presets[0]) {
+        get().selectPreset(SEED_INDEX.presets[0].id);
+      }
+    } finally {
+      set({ loading: false });
+    }
+  },
+  selectPreset: async (id: string) => {
+    set({ selectedId: id, manifest: null, files: {}, detailError: null });
+    try {
+      if (get().sourceMode === "seed") {
+        const manifest = getSeedManifest(id);
+        const files = getSeedFiles(id);
+        set({ manifest, files });
+      } else {
+        const [manifest, files] = await Promise.all([
+          api.getManifest(id),
+          api.getPresetFiles(id),
+        ]);
+        set({ manifest, files });
+      }
+    } catch (e) {
+      set({ detailError: String(e) });
+    }
+  },
+}));
+
+export const useInstalledStore = create<InstalledStore>((set) => ({
+  state: null,
+  load: async () => {
+    const state = await api.getInstalled();
+    set({ state });
+  },
+}));
+
+export const useConfigStore = create<ConfigStore>((set) => ({
+  config: null,
+  baselineExists: false,
+  load: async () => {
+    const [config, baselineExists] = await Promise.all([
+      api.getConfig(),
+      api.baselineStatus(),
+    ]);
+    set({ config, baselineExists });
+  },
+  save: async (config) => {
+    await api.setConfig(config);
+    set({ config });
+  },
+  captureBaseline: async () => {
+    await api.captureBaseline();
+    set({ baselineExists: true });
+  },
+  restoreBaseline: async () => {
+    await api.restoreBaseline();
+  },
+  checkBaseline: async () => {
+    const baselineExists = await api.baselineStatus();
+    set({ baselineExists });
+  },
+}));
+
+export const useBackupsStore = create<BackupsStore>((set) => ({
+  entries: [],
+  load: async () => {
+    const entries = await api.listBackups();
+    set({ entries });
+  },
+}));
+
+const MAX_TOASTS = 10;
+
+export const useUiStore = create<UiStore>((set, get) => ({
+  toasts: [],
+  nextId: 0,
+  addToast: (message, kind) => {
+    const id = get().nextId;
+    set((s) => ({
+      toasts: [...s.toasts.slice(-(MAX_TOASTS - 1)), { id, message, kind }],
+      nextId: id + 1,
+    }));
+    setTimeout(() => get().removeToast(id), 4000);
+  },
+  removeToast: (id) =>
+    set((s) => ({ toasts: s.toasts.filter((t) => t.id !== id) })),
+}));
+
+function scopeKey(scope: ScopeArg): string {
+  return scope.kind === "global" ? "global" : scope.path;
+}
+
+export const useSkillsStore = create<SkillsStore>((set, get) => ({
+  index: null,
+  loading: false,
+  error: null,
+  installed: {},
+  fetchIndex: async (force = false) => {
+    set({ loading: true, error: null });
+    try {
+      const index = await api.fetchSkillsIndex(force);
+      set({ index });
+    } catch (e) {
+      set({ error: String(e) });
+    } finally {
+      set({ loading: false });
+    }
+  },
+  loadInstalled: async (scope) => {
+    const ids = await api.listInstalledSkills(scope);
+    set((s) => ({ installed: { ...s.installed, [scopeKey(scope)]: ids } }));
+  },
+  install: async (skillId, scope) => {
+    const meta = get().index?.skills.find((s) => s.id === skillId);
+    if (!meta) throw new Error(`skill not found: ${skillId}`);
+    await api.installSkill(meta, scope);
+    await get().loadInstalled(scope);
+  },
+  uninstall: async (skillId, scope) => {
+    const meta = get().index?.skills.find((s) => s.id === skillId);
+    if (!meta) throw new Error(`skill not found: ${skillId}`);
+    await api.uninstallSkill(meta, scope);
+    await get().loadInstalled(scope);
+  },
+}));
+
+export const useMcpsStore = create<McpsStore>((set, get) => ({
+  index: null,
+  loading: false,
+  error: null,
+  installed: {},
+  fetchIndex: async (force = false) => {
+    set({ loading: true, error: null });
+    try {
+      const index = await api.fetchMcpsIndex(force);
+      set({ index });
+    } catch (e) {
+      set({ error: String(e) });
+    } finally {
+      set({ loading: false });
+    }
+  },
+  loadInstalled: async (scope) => {
+    const ids = await api.listInstalledMcps(scope);
+    set((s) => ({ installed: { ...s.installed, [scopeKey(scope)]: ids } }));
+  },
+  install: async (mcpId, scope, env) => {
+    const meta = get().index?.mcps.find((m) => m.id === mcpId);
+    if (!meta) throw new Error(`mcp not found: ${mcpId}`);
+    await api.installMcp(meta, scope, env);
+    await get().loadInstalled(scope);
+  },
+  uninstall: async (mcpId, scope) => {
+    await api.uninstallMcp(mcpId, scope);
+    await get().loadInstalled(scope);
+  },
+}));
