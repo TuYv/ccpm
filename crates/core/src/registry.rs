@@ -6,12 +6,11 @@ use crate::{
 use std::path::Path;
 
 fn validate_preset_id(id: &str) -> Result<(), AppError> {
-    if id.is_empty()
-        || id.contains(['/', '\\', '\0'])
-        || id.contains("..")
-        || id.starts_with('-')
-    {
-        return Err(AppError::InvalidInput(format!("无效的 preset ID：'{}'", id)));
+    if id.is_empty() || id.contains(['/', '\\', '\0']) || id.contains("..") || id.starts_with('-') {
+        return Err(AppError::InvalidInput(format!(
+            "无效的 preset ID：'{}'",
+            id
+        )));
     }
     Ok(())
 }
@@ -19,7 +18,10 @@ fn validate_preset_id(id: &str) -> Result<(), AppError> {
 fn validate_filename(name: &str) -> Result<(), AppError> {
     let p = std::path::Path::new(name);
     if p.is_absolute() || p.components().any(|c| c == std::path::Component::ParentDir) {
-        return Err(AppError::InvalidInput(format!("unsafe filename: '{}'", name)));
+        return Err(AppError::InvalidInput(format!(
+            "unsafe filename: '{}'",
+            name
+        )));
     }
     Ok(())
 }
@@ -27,7 +29,10 @@ fn validate_filename(name: &str) -> Result<(), AppError> {
 // ── Cache ─────────────────────────────────────────────────────────────────────
 
 /// Loads the preset index from local cache. Returns None if missing or expired.
-pub fn load_from_cache(cache_dir: &Path, ttl_minutes: u64) -> Result<Option<PresetIndex>, AppError> {
+pub fn load_from_cache(
+    cache_dir: &Path,
+    ttl_minutes: u64,
+) -> Result<Option<PresetIndex>, AppError> {
     let path = cache_dir.join("index.json");
     if !path.exists() {
         return Ok(None);
@@ -147,6 +152,104 @@ pub fn build_client(config: &AppConfig) -> Result<reqwest::Client, AppError> {
         .map_err(|e| AppError::Network(e.to_string()))
 }
 
+// ── Skills namespace ──────────────────────────────────────────────────────────
+
+pub fn load_skills_from_cache(
+    cache_dir: &Path,
+    ttl_minutes: u64,
+) -> Result<Option<crate::types::SkillIndex>, AppError> {
+    load_namespace_cache(cache_dir, "skills-index.json", ttl_minutes)
+}
+
+pub async fn fetch_skills_index(
+    client: &reqwest::Client,
+    source_url: &str,
+    cache_dir: &Path,
+) -> Result<crate::types::SkillIndex, AppError> {
+    let url = format!("{}/skills/index.json", source_url.trim_end_matches('/'));
+    let content = fetch_text(client, &url).await?;
+    let index: crate::types::SkillIndex = serde_json::from_str(&content)
+        .map_err(|e| AppError::Parse(format!("remote skills index 解析失败：{}", e)))?;
+    write_to_cache(cache_dir, "skills-index.json", &content)?;
+    Ok(index)
+}
+
+pub async fn fetch_skill_content(
+    client: &reqwest::Client,
+    source_url: &str,
+    skill_id: &str,
+) -> Result<String, AppError> {
+    validate_preset_id(skill_id)?;
+    let url = format!(
+        "{}/skills/{}/skill.md",
+        source_url.trim_end_matches('/'),
+        skill_id
+    );
+    fetch_text(client, &url).await
+}
+
+// ── MCPs namespace ────────────────────────────────────────────────────────────
+
+pub fn load_mcps_from_cache(
+    cache_dir: &Path,
+    ttl_minutes: u64,
+) -> Result<Option<crate::types::McpIndex>, AppError> {
+    load_namespace_cache(cache_dir, "mcps-index.json", ttl_minutes)
+}
+
+pub async fn fetch_mcps_index(
+    client: &reqwest::Client,
+    source_url: &str,
+    cache_dir: &Path,
+) -> Result<crate::types::McpIndex, AppError> {
+    let url = format!("{}/mcps/index.json", source_url.trim_end_matches('/'));
+    let content = fetch_text(client, &url).await?;
+    let index: crate::types::McpIndex = serde_json::from_str(&content)
+        .map_err(|e| AppError::Parse(format!("remote mcps index 解析失败：{}", e)))?;
+    write_to_cache(cache_dir, "mcps-index.json", &content)?;
+    Ok(index)
+}
+
+pub async fn fetch_mcp_meta(
+    client: &reqwest::Client,
+    source_url: &str,
+    mcp_id: &str,
+) -> Result<crate::types::McpMeta, AppError> {
+    validate_preset_id(mcp_id)?;
+    let url = format!(
+        "{}/mcps/{}/mcp.json",
+        source_url.trim_end_matches('/'),
+        mcp_id
+    );
+    let content = fetch_text(client, &url).await?;
+    serde_json::from_str(&content)
+        .map_err(|e| AppError::Parse(format!("mcp meta 解析失败：{}", e)))
+}
+
+// Generic cache loader for namespaced index files (skills-index.json, mcps-index.json).
+fn load_namespace_cache<T: for<'de> serde::Deserialize<'de>>(
+    cache_dir: &Path,
+    filename: &str,
+    ttl_minutes: u64,
+) -> Result<Option<T>, AppError> {
+    let path = cache_dir.join(filename);
+    if !path.exists() {
+        return Ok(None);
+    }
+    let metadata = std::fs::metadata(&path)?;
+    let modified = metadata.modified().map_err(|e| AppError::Io(e.to_string()))?;
+    let age = std::time::SystemTime::now()
+        .duration_since(modified)
+        .unwrap_or_default();
+    if age.as_secs() >= ttl_minutes * 60 {
+        return Ok(None);
+    }
+    let content = std::fs::read_to_string(&path)?;
+    let index: T = serde_json::from_str(&content)
+        .map_err(|e| AppError::Parse(format!("cache {} 解析失败：{}", filename, e)))?;
+    Ok(Some(index))
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -166,7 +269,8 @@ mod tests {
                     "author": "a"
                 }
             ]
-        }"#.to_string()
+        }"#
+        .to_string()
     }
 
     #[test]
@@ -212,5 +316,27 @@ mod tests {
         assert!(validate_preset_id("-bad").is_err());
         assert!(validate_preset_id("python-solo").is_ok());
         assert!(validate_preset_id("my_preset_123").is_ok());
+    }
+
+    #[test]
+    fn test_load_skills_from_cache_fresh() {
+        let dir = tempdir().unwrap();
+        let cache_dir = dir.path().join("cache");
+        std::fs::create_dir_all(&cache_dir).unwrap();
+        let json = r#"{"version":"1","updated_at":"2025-04-23T10:00:00Z","skills":[]}"#;
+        std::fs::write(cache_dir.join("skills-index.json"), json).unwrap();
+        let result = load_skills_from_cache(&cache_dir, 60).unwrap();
+        assert!(result.is_some());
+    }
+
+    #[test]
+    fn test_load_mcps_from_cache_fresh() {
+        let dir = tempdir().unwrap();
+        let cache_dir = dir.path().join("cache");
+        std::fs::create_dir_all(&cache_dir).unwrap();
+        let json = r#"{"version":"1","updated_at":"2025-04-23T10:00:00Z","mcps":[]}"#;
+        std::fs::write(cache_dir.join("mcps-index.json"), json).unwrap();
+        let result = load_mcps_from_cache(&cache_dir, 60).unwrap();
+        assert!(result.is_some());
     }
 }
