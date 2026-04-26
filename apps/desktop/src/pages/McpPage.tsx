@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { useMcpsStore, useUiStore } from "../stores";
+import { useInstalledStore, useMcpsStore, useUiStore } from "../stores";
 import type { McpMeta, ScopeArg } from "../types/core";
 import ScopeSelector from "../components/ScopeSelector";
 
@@ -39,6 +39,7 @@ function McpRow({
     <div className="px-4 py-3">
       <button
         onClick={() => setOpen(!open)}
+        aria-expanded={open}
         className="w-full flex items-start justify-between gap-4 text-left"
       >
         <div className="min-w-0 flex-1">
@@ -142,6 +143,7 @@ export default function McpPage() {
   const { index, loading, error, installed, fetchIndex, loadInstalled, install, uninstall } =
     useMcpsStore();
   const { addToast } = useUiStore();
+  const installedLoad = useInstalledStore((s) => s.load);
   const [scope, setScope] = useState<ScopeArg>({ kind: "global" });
   const [search, setSearch] = useState("");
 
@@ -176,6 +178,7 @@ export default function McpPage() {
     );
     try {
       await install(mcp.id, scope, cleaned);
+      await installedLoad();
       addToast(`✓ 已安装 ${mcp.name}`, "success");
     } catch (e) {
       addToast(`安装失败：${String(e)}`, "error");
@@ -185,6 +188,7 @@ export default function McpPage() {
   async function handleUninstall(mcp: McpMeta) {
     try {
       await uninstall(mcp.id, scope);
+      await installedLoad();
       addToast(`✓ 已卸载 ${mcp.name}`, "success");
     } catch (e) {
       addToast(`卸载失败：${String(e)}`, "error");

@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { useSkillsStore, useUiStore } from "../stores";
+import { useInstalledStore, useSkillsStore, useUiStore } from "../stores";
 import type { ScopeArg, SkillMeta } from "../types/core";
 import ScopeSelector from "../components/ScopeSelector";
 
@@ -40,6 +40,7 @@ export default function SkillsPage() {
   const { index, loading, error, installed, fetchIndex, loadInstalled, install, uninstall } =
     useSkillsStore();
   const { addToast } = useUiStore();
+  const installedLoad = useInstalledStore((s) => s.load);
   const [scope, setScope] = useState<ScopeArg>({ kind: "global" });
   const [search, setSearch] = useState("");
   const [openId, setOpenId] = useState<string | null>(null);
@@ -72,6 +73,7 @@ export default function SkillsPage() {
   async function handleInstall(skill: SkillMeta) {
     try {
       await install(skill.id, scope);
+      await installedLoad();
       addToast(`✓ 已安装 ${skill.name}`, "success");
     } catch (e) {
       addToast(`安装失败：${String(e)}`, "error");
@@ -81,6 +83,7 @@ export default function SkillsPage() {
   async function handleUninstall(skill: SkillMeta) {
     try {
       await uninstall(skill.id, scope);
+      await installedLoad();
       addToast(`✓ 已卸载 ${skill.name}`, "success");
     } catch (e) {
       addToast(`卸载失败：${String(e)}`, "error");
