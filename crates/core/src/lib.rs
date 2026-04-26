@@ -3,6 +3,7 @@ pub mod baseline;
 pub mod config;
 pub mod error;
 pub mod fs;
+pub mod importer;
 pub mod mcp;
 pub mod registry;
 pub mod skills;
