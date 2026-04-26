@@ -55,7 +55,10 @@ pub fn activate_preset(
     let state = read_installed(pm_dir)?;
     let previous_preset = match scope {
         Scope::Global => state.global.as_ref().map(|a| a.active_preset_id.clone()),
-        Scope::Project(path) => state.projects.get(path.as_str()).map(|a| a.active_preset_id.clone()),
+        Scope::Project(path) => state
+            .projects
+            .get(path.as_str())
+            .map(|a| a.active_preset_id.clone()),
     };
 
     // 3. Create backup dir
@@ -72,8 +75,9 @@ pub fn activate_preset(
             if let Some(parent) = backup_file.parent() {
                 std::fs::create_dir_all(parent)?;
             }
-            let content = std::fs::read_to_string(&target)
-                .map_err(|e| AppError::BackupFailed(format!("读取 {} 失败：{}", target.display(), e)))?;
+            let content = std::fs::read_to_string(&target).map_err(|e| {
+                AppError::BackupFailed(format!("读取 {} 失败：{}", target.display(), e))
+            })?;
             atomic_write(&backup_file, &content)
                 .map_err(|e| AppError::BackupFailed(format!("备份 {} 失败：{}", target_rel, e)))?;
             backed_up.push(target_rel.clone());
@@ -92,9 +96,9 @@ pub fn activate_preset(
     // 6. Write new files atomically
     let mut written_files = vec![];
     for (src_name, target_rel) in &manifest.files {
-        let content = file_contents.get(src_name).ok_or_else(|| {
-            AppError::InvalidInput(format!("缺少文件内容：'{}'", src_name))
-        })?;
+        let content = file_contents
+            .get(src_name)
+            .ok_or_else(|| AppError::InvalidInput(format!("缺少文件内容：'{}'", src_name)))?;
         let target = scope_dir.join(target_rel);
         // Follow symlink so we write to the real file, not replace the link.
         let write_path = if target.is_symlink() {
@@ -107,13 +111,16 @@ pub fn activate_preset(
     }
 
     // 7. Record backup entry
-    add_backup_entry(pm_dir, BackupEntry {
-        id: backup_id.clone(),
-        scope: scope.key().to_string(),
-        previous_preset,
-        created_at: Utc::now().to_rfc3339(),
-        files: backed_up,
-    })?;
+    add_backup_entry(
+        pm_dir,
+        BackupEntry {
+            id: backup_id.clone(),
+            scope: scope.key().to_string(),
+            previous_preset,
+            created_at: Utc::now().to_rfc3339(),
+            files: backed_up,
+        },
+    )?;
 
     // 8. Update installed.json
     let mut state = read_installed(pm_dir)?;
@@ -126,11 +133,16 @@ pub fn activate_preset(
     };
     match scope {
         Scope::Global => state.global = Some(active_info),
-        Scope::Project(path) => { state.projects.insert(path.clone(), active_info); }
+        Scope::Project(path) => {
+            state.projects.insert(path.clone(), active_info);
+        }
     }
     write_installed(pm_dir, &state)?;
 
-    Ok(ActivateResult { written_files, backup_ref: backup_id })
+    Ok(ActivateResult {
+        written_files,
+        backup_ref: backup_id,
+    })
 }
 
 /// Deactivate the current preset for a scope.
@@ -151,6 +163,11 @@ pub fn deactivate_preset(
 
     match restore {
         RestoreOption::Baseline => {
+            if !matches!(scope, Scope::Global) {
+                return Err(AppError::InvalidInput(
+                    "项目级 scope 不支持恢复全局基线，请使用 LastBackup 或 KeepFiles".to_string(),
+                ));
+            }
             // restore_baseline also clears installed.json global — return early.
             crate::baseline::restore_baseline(scope_dir, pm_dir)?;
             return Ok(());
@@ -180,7 +197,9 @@ pub fn deactivate_preset(
     let mut state = read_installed(pm_dir)?;
     match scope {
         Scope::Global => state.global = None,
-        Scope::Project(path) => { state.projects.remove(path.as_str()); }
+        Scope::Project(path) => {
+            state.projects.remove(path.as_str());
+        }
     }
     write_installed(pm_dir, &state)
 }
@@ -201,7 +220,12 @@ mod tests {
             min_claude_code_version: None,
             tested_on: "2025-04-01".to_string(),
             author: "a".to_string(),
-            files: files.iter().map(|(k, v)| (k.to_string(), v.to_string())).collect(),
+            files: files
+                .iter()
+                .map(|(k, v)| (k.to_string(), v.to_string()))
+                .collect(),
+            skills: vec![],
+            mcps: vec![],
         }
     }
 
@@ -218,10 +242,14 @@ mod tests {
         let dir = tempdir().unwrap();
         let (scope, pm) = setup(dir.path());
         let manifest = make_manifest("python-solo", &[("CLAUDE.md", "CLAUDE.md")]);
-        let contents: HashMap<String, String> = [("CLAUDE.md".to_string(), "# Python".to_string())].into();
+        let contents: HashMap<String, String> =
+            [("CLAUDE.md".to_string(), "# Python".to_string())].into();
         let result = activate_preset(&scope, &pm, &manifest, &contents, &Scope::Global).unwrap();
         assert_eq!(result.written_files, vec!["CLAUDE.md"]);
-        assert_eq!(std::fs::read_to_string(scope.join("CLAUDE.md")).unwrap(), "# Python");
+        assert_eq!(
+            std::fs::read_to_string(scope.join("CLAUDE.md")).unwrap(),
+            "# Python"
+        );
     }
 
     #[test]
@@ -230,13 +258,20 @@ mod tests {
         let (scope, pm) = setup(dir.path());
         std::fs::write(scope.join("CLAUDE.md"), "# original").unwrap();
         let manifest = make_manifest("python-solo", &[("CLAUDE.md", "CLAUDE.md")]);
-        let contents: HashMap<String, String> = [("CLAUDE.md".to_string(), "# new".to_string())].into();
+        let contents: HashMap<String, String> =
+            [("CLAUDE.md".to_string(), "# new".to_string())].into();
         let result = activate_preset(&scope, &pm, &manifest, &contents, &Scope::Global).unwrap();
         // Backup must exist and contain original content
-        let backup = pm.join("backups").join(&result.backup_ref).join("CLAUDE.md");
+        let backup = pm
+            .join("backups")
+            .join(&result.backup_ref)
+            .join("CLAUDE.md");
         assert!(backup.exists(), "backup must be created before writing");
         assert_eq!(std::fs::read_to_string(&backup).unwrap(), "# original");
-        assert_eq!(std::fs::read_to_string(scope.join("CLAUDE.md")).unwrap(), "# new");
+        assert_eq!(
+            std::fs::read_to_string(scope.join("CLAUDE.md")).unwrap(),
+            "# new"
+        );
     }
 
     #[test]
@@ -244,7 +279,8 @@ mod tests {
         let dir = tempdir().unwrap();
         let (scope, pm) = setup(dir.path());
         let manifest = make_manifest("python-solo", &[("CLAUDE.md", "CLAUDE.md")]);
-        let contents: HashMap<String, String> = [("CLAUDE.md".to_string(), "# p".to_string())].into();
+        let contents: HashMap<String, String> =
+            [("CLAUDE.md".to_string(), "# p".to_string())].into();
         activate_preset(&scope, &pm, &manifest, &contents, &Scope::Global).unwrap();
         let state = read_installed(&pm).unwrap();
         let active = state.global.unwrap();
@@ -268,11 +304,18 @@ mod tests {
         let (scope, pm) = setup(dir.path());
         std::fs::write(scope.join("CLAUDE.md"), "# original").unwrap();
         let manifest = make_manifest("python-solo", &[("CLAUDE.md", "CLAUDE.md")]);
-        let contents: HashMap<String, String> = [("CLAUDE.md".to_string(), "# new".to_string())].into();
+        let contents: HashMap<String, String> =
+            [("CLAUDE.md".to_string(), "# new".to_string())].into();
         activate_preset(&scope, &pm, &manifest, &contents, &Scope::Global).unwrap();
-        assert_eq!(std::fs::read_to_string(scope.join("CLAUDE.md")).unwrap(), "# new");
+        assert_eq!(
+            std::fs::read_to_string(scope.join("CLAUDE.md")).unwrap(),
+            "# new"
+        );
         deactivate_preset(&scope, &pm, &Scope::Global, RestoreOption::LastBackup).unwrap();
-        assert_eq!(std::fs::read_to_string(scope.join("CLAUDE.md")).unwrap(), "# original");
+        assert_eq!(
+            std::fs::read_to_string(scope.join("CLAUDE.md")).unwrap(),
+            "# original"
+        );
         let state = read_installed(&pm).unwrap();
         assert!(state.global.is_none());
     }
@@ -282,11 +325,15 @@ mod tests {
         let dir = tempdir().unwrap();
         let (scope, pm) = setup(dir.path());
         let manifest = make_manifest("python-solo", &[("CLAUDE.md", "CLAUDE.md")]);
-        let contents: HashMap<String, String> = [("CLAUDE.md".to_string(), "# new".to_string())].into();
+        let contents: HashMap<String, String> =
+            [("CLAUDE.md".to_string(), "# new".to_string())].into();
         activate_preset(&scope, &pm, &manifest, &contents, &Scope::Global).unwrap();
         deactivate_preset(&scope, &pm, &Scope::Global, RestoreOption::KeepFiles).unwrap();
         // File stays
-        assert_eq!(std::fs::read_to_string(scope.join("CLAUDE.md")).unwrap(), "# new");
+        assert_eq!(
+            std::fs::read_to_string(scope.join("CLAUDE.md")).unwrap(),
+            "# new"
+        );
         // State is cleared
         assert!(read_installed(&pm).unwrap().global.is_none());
     }
@@ -299,11 +346,17 @@ mod tests {
         std::fs::create_dir_all(&project_dir).unwrap();
         std::fs::create_dir_all(&pm_dir).unwrap();
         let manifest = make_manifest("frontend", &[("CLAUDE.md", "CLAUDE.md")]);
-        let contents: HashMap<String, String> = [("CLAUDE.md".to_string(), "# fe".to_string())].into();
+        let contents: HashMap<String, String> =
+            [("CLAUDE.md".to_string(), "# fe".to_string())].into();
         let scope = Scope::Project(project_dir.to_string_lossy().to_string());
         activate_preset(&project_dir, &pm_dir, &manifest, &contents, &scope).unwrap();
-        assert_eq!(std::fs::read_to_string(project_dir.join("CLAUDE.md")).unwrap(), "# fe");
+        assert_eq!(
+            std::fs::read_to_string(project_dir.join("CLAUDE.md")).unwrap(),
+            "# fe"
+        );
         let state = read_installed(&pm_dir).unwrap();
-        assert!(state.projects.contains_key(project_dir.to_string_lossy().as_ref()));
+        assert!(state
+            .projects
+            .contains_key(project_dir.to_string_lossy().as_ref()));
     }
 }

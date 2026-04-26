@@ -19,7 +19,10 @@ pub fn read_installed(pm_dir: &Path) -> Result<InstalledState, AppError> {
 
 pub fn write_installed(pm_dir: &Path, state: &InstalledState) -> Result<(), AppError> {
     std::fs::create_dir_all(pm_dir)?;
-    atomic_write(&pm_dir.join("installed.json"), &serde_json::to_string_pretty(state)?)
+    atomic_write(
+        &pm_dir.join("installed.json"),
+        &serde_json::to_string_pretty(state)?,
+    )
 }
 
 pub fn read_backup_index(pm_dir: &Path) -> Result<BackupIndex, AppError> {
@@ -76,9 +79,13 @@ mod tests {
     #[test]
     fn test_installed_roundtrip() {
         let dir = tempdir().unwrap();
-        let mut state = InstalledState::default();
-        state.global = Some(make_active("python-solo"));
-        state.projects.insert("/myproject".to_string(), make_active("frontend-team"));
+        let state = InstalledState {
+            global: Some(make_active("python-solo")),
+            projects: [("/myproject".to_string(), make_active("frontend-team"))]
+                .into_iter()
+                .collect(),
+            ..Default::default()
+        };
         write_installed(dir.path(), &state).unwrap();
         let loaded = read_installed(dir.path()).unwrap();
         assert_eq!(loaded.global.unwrap().active_preset_id, "python-solo");
@@ -95,30 +102,66 @@ mod tests {
     #[test]
     fn test_add_backup_entry_roundtrip() {
         let dir = tempdir().unwrap();
-        add_backup_entry(dir.path(), BackupEntry {
-            id: "ts1".to_string(),
-            scope: "global".to_string(),
-            previous_preset: Some("old-preset".to_string()),
-            created_at: "2025-04-23T10:00:00Z".to_string(),
-            files: vec!["CLAUDE.md".to_string()],
-        }).unwrap();
+        add_backup_entry(
+            dir.path(),
+            BackupEntry {
+                id: "ts1".to_string(),
+                scope: "global".to_string(),
+                previous_preset: Some("old-preset".to_string()),
+                created_at: "2025-04-23T10:00:00Z".to_string(),
+                files: vec!["CLAUDE.md".to_string()],
+            },
+        )
+        .unwrap();
         let index = read_backup_index(dir.path()).unwrap();
         assert_eq!(index.backups.len(), 1);
         assert_eq!(index.backups[0].id, "ts1");
-        assert_eq!(index.backups[0].previous_preset.as_deref(), Some("old-preset"));
+        assert_eq!(
+            index.backups[0].previous_preset.as_deref(),
+            Some("old-preset")
+        );
+    }
+
+    #[test]
+    fn test_read_installed_corrupt_json_returns_parse_error() {
+        let dir = tempdir().unwrap();
+        let path = dir.path().join("installed.json");
+        std::fs::write(&path, "not valid json {{{{").unwrap();
+        let result = read_installed(dir.path());
+        assert!(
+            matches!(result, Err(AppError::Parse(_))),
+            "corrupt installed.json must return Parse error"
+        );
+    }
+
+    #[test]
+    fn test_read_backup_index_corrupt_json_returns_parse_error() {
+        let dir = tempdir().unwrap();
+        let backups_dir = dir.path().join("backups");
+        std::fs::create_dir_all(&backups_dir).unwrap();
+        std::fs::write(backups_dir.join("index.json"), "{corrupt}").unwrap();
+        let result = read_backup_index(dir.path());
+        assert!(
+            matches!(result, Err(AppError::Parse(_))),
+            "corrupt backup index must return Parse error"
+        );
     }
 
     #[test]
     fn test_backup_index_prunes_to_max_20() {
         let dir = tempdir().unwrap();
         for i in 0..25usize {
-            add_backup_entry(dir.path(), BackupEntry {
-                id: format!("ts{:02}", i),
-                scope: "global".to_string(),
-                previous_preset: None,
-                created_at: "2025-04-23T10:00:00Z".to_string(),
-                files: vec![],
-            }).unwrap();
+            add_backup_entry(
+                dir.path(),
+                BackupEntry {
+                    id: format!("ts{:02}", i),
+                    scope: "global".to_string(),
+                    previous_preset: None,
+                    created_at: "2025-04-23T10:00:00Z".to_string(),
+                    files: vec![],
+                },
+            )
+            .unwrap();
         }
         let index = read_backup_index(dir.path()).unwrap();
         assert_eq!(index.backups.len(), 20, "must prune to MAX_BACKUPS");

@@ -1,6 +1,72 @@
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
 
+// ── Skill registry types ──────────────────────────────────────────────────────
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct SkillMeta {
+    pub id: String,
+    pub name: String,
+    pub description: String,
+    pub category: String,
+    #[serde(default)]
+    pub compatible_tools: Vec<String>,
+    pub version: String,
+    pub author: String,
+    /// Relative install path under scope_dir. e.g. ".claude/skills/<id>/SKILL.md"
+    pub install_path: String,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct SkillIndex {
+    pub version: String,
+    pub updated_at: String,
+    pub skills: Vec<SkillMeta>,
+}
+
+// ── MCP registry types ────────────────────────────────────────────────────────
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct McpRequiredEnv {
+    pub key: String,
+    #[serde(default)]
+    pub hint: String,
+    #[serde(default)]
+    pub description: String,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct McpMeta {
+    pub id: String,
+    pub name: String,
+    pub description: String,
+    pub category: String,
+    pub command: String,
+    #[serde(default)]
+    pub args: Vec<String>,
+    #[serde(default)]
+    pub required_env: Vec<McpRequiredEnv>,
+    #[serde(default)]
+    pub optional_env: Vec<McpRequiredEnv>,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct McpIndex {
+    pub version: String,
+    pub updated_at: String,
+    pub mcps: Vec<McpMeta>,
+}
+
+// ── Preset manifest extensions ────────────────────────────────────────────────
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct PresetMcpRef {
+    #[serde(rename = "ref")]
+    pub r#ref: String,
+    #[serde(default)]
+    pub required_env: Vec<String>,
+}
+
 // ── Registry types ────────────────────────────────────────────────────────────
 
 /// Lightweight entry from index.json (no file contents).
@@ -39,11 +105,18 @@ pub struct PresetManifest {
     pub version: String,
     #[serde(default)]
     pub min_claude_code_version: Option<String>,
+    #[serde(default)]
     pub tested_on: String,
     pub author: String,
     /// source_filename → target_rel_path (relative to scope root)
     #[serde(default)]
     pub files: HashMap<String, String>,
+    /// IDs of skills bundled with this preset (resolved from skills catalog).
+    #[serde(default)]
+    pub skills: Vec<String>,
+    /// MCP refs bundled with this preset.
+    #[serde(default)]
+    pub mcps: Vec<PresetMcpRef>,
 }
 
 // ── Installed state ───────────────────────────────────────────────────────────
@@ -67,6 +140,14 @@ pub struct InstalledState {
     pub global: Option<ActivePresetInfo>,
     #[serde(default)]
     pub projects: HashMap<String, ActivePresetInfo>,
+    #[serde(default)]
+    pub global_skills: Vec<String>,
+    #[serde(default)]
+    pub project_skills: HashMap<String, Vec<String>>,
+    #[serde(default)]
+    pub global_mcps: Vec<String>,
+    #[serde(default)]
+    pub project_mcps: HashMap<String, Vec<String>>,
 }
 
 // ── Backup ────────────────────────────────────────────────────────────────────
@@ -88,9 +169,20 @@ pub struct BackupIndex {
 
 // ── App config ────────────────────────────────────────────────────────────────
 
+/// A named preset source entry in config.sources.
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
+pub struct SourceEntry {
+    pub name: String,
+    pub url: String,
+}
+
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct AppConfig {
+    /// Active default source URL (used for all fetch operations).
     pub preset_source_url: String,
+    /// All configured sources (name → url). `preset_source_url` is the active default.
+    #[serde(default)]
+    pub sources: Vec<SourceEntry>,
     pub claude_config_path: Option<String>,
     pub github_token: Option<String>,
     pub cache_ttl_minutes: u64,
@@ -99,9 +191,14 @@ pub struct AppConfig {
 
 impl Default for AppConfig {
     fn default() -> Self {
+        let default_url =
+            "https://raw.githubusercontent.com/TuYv/ccpm/main/preset-registry".to_string();
         AppConfig {
-            preset_source_url:
-                "https://raw.githubusercontent.com/owner/claude-preset-registry/main".to_string(),
+            sources: vec![SourceEntry {
+                name: "default".to_string(),
+                url: default_url.clone(),
+            }],
+            preset_source_url: default_url,
             claude_config_path: None,
             github_token: None,
             cache_ttl_minutes: 60,
@@ -225,6 +322,7 @@ mod tests {
                 backup_ref: "2025-04-23T10-00-00-000000Z".to_string(),
             }),
             projects: HashMap::new(),
+            ..Default::default()
         };
         let json = serde_json::to_string(&state).unwrap();
         let back: InstalledState = serde_json::from_str(&json).unwrap();
@@ -235,7 +333,8 @@ mod tests {
     fn test_app_config_default() {
         let cfg = AppConfig::default();
         assert_eq!(cfg.cache_ttl_minutes, 60);
-        assert!(cfg.preset_source_url.contains("github"));
+        assert!(cfg.preset_source_url.contains("TuYv/ccpm"));
+        assert!(cfg.preset_source_url.ends_with("/preset-registry"));
         assert!(cfg.github_token.is_none());
     }
 
@@ -243,5 +342,79 @@ mod tests {
     fn test_scope_key() {
         assert_eq!(Scope::Global.key(), "global");
         assert_eq!(Scope::Project("/foo".to_string()).key(), "/foo");
+    }
+
+    #[test]
+    fn test_skill_meta_deserializes() {
+        let json = r#"{
+            "id": "systematic-debugging",
+            "name": "系统性调试",
+            "description": "结构化 bug 定位与修复",
+            "category": "调试与测试",
+            "compatible_tools": ["claude", "codex"],
+            "version": "1.0.0",
+            "author": "ccpm",
+            "install_path": ".claude/skills/systematic-debugging/SKILL.md"
+        }"#;
+        let s: SkillMeta = serde_json::from_str(json).unwrap();
+        assert_eq!(s.id, "systematic-debugging");
+        assert_eq!(s.compatible_tools.len(), 2);
+    }
+
+    #[test]
+    fn test_mcp_meta_deserializes() {
+        let json = r#"{
+            "id": "github",
+            "name": "GitHub",
+            "description": "读写 GitHub",
+            "category": "官方 Anthropic",
+            "command": "npx",
+            "args": ["-y", "@modelcontextprotocol/server-github"],
+            "required_env": [{"key": "GITHUB_TOKEN", "hint": "ghp_xxx", "description": "PAT"}]
+        }"#;
+        let m: McpMeta = serde_json::from_str(json).unwrap();
+        assert_eq!(m.id, "github");
+        assert_eq!(m.required_env[0].key, "GITHUB_TOKEN");
+    }
+
+    #[test]
+    fn test_preset_manifest_with_skills_and_mcps() {
+        let json = r#"{
+            "id": "rust-cli",
+            "name": "Rust CLI",
+            "description": "d",
+            "version": "1.0.0",
+            "tested_on": "2025-04-01",
+            "author": "a",
+            "skills": ["tdd", "systematic-debugging"],
+            "mcps": [{"ref": "github", "required_env": ["GITHUB_TOKEN"]}]
+        }"#;
+        let m: PresetManifest = serde_json::from_str(json).unwrap();
+        assert_eq!(m.skills, vec!["tdd", "systematic-debugging"]);
+        assert_eq!(m.mcps[0].r#ref, "github");
+    }
+
+    #[test]
+    fn test_installed_state_with_components() {
+        let state = InstalledState {
+            global: None,
+            projects: HashMap::new(),
+            global_skills: vec!["tdd".to_string()],
+            project_skills: HashMap::new(),
+            global_mcps: vec!["github".to_string()],
+            project_mcps: HashMap::new(),
+        };
+        let json = serde_json::to_string(&state).unwrap();
+        let back: InstalledState = serde_json::from_str(&json).unwrap();
+        assert_eq!(back.global_skills, vec!["tdd"]);
+        assert_eq!(back.global_mcps, vec!["github"]);
+    }
+
+    #[test]
+    fn test_installed_state_backward_compatible() {
+        let json = r#"{"global":null,"projects":{}}"#;
+        let state: InstalledState = serde_json::from_str(json).unwrap();
+        assert!(state.global_skills.is_empty());
+        assert!(state.global_mcps.is_empty());
     }
 }
