@@ -57,6 +57,8 @@ pub fn parse_github_repo_url(url: &str) -> Result<(String, String, Option<String
         .or_else(|| url.strip_prefix("http://github.com/"))
         .or_else(|| url.strip_prefix("github.com/"))
         .ok_or_else(|| AppError::InvalidInput(format!("不是 github.com URL：{}", url)))?;
+    // Strip query string and anchor before splitting.
+    let stripped = stripped.split(['?', '#']).next().unwrap_or("");
     let parts: Vec<&str> = stripped.trim_end_matches('/').split('/').collect();
     if parts.len() < 2 {
         return Err(AppError::InvalidInput(format!(
@@ -65,7 +67,7 @@ pub fn parse_github_repo_url(url: &str) -> Result<(String, String, Option<String
         )));
     }
     let owner = parts[0].to_string();
-    let repo = parts[1].to_string();
+    let repo = parts[1].trim_end_matches(".git").to_string();
     let r#ref = if parts.len() >= 4 && parts[2] == "tree" {
         Some(parts[3].to_string())
     } else {
@@ -202,6 +204,27 @@ mod tests {
             build_raw_base("anthropics", "claude-code", "main"),
             "https://raw.githubusercontent.com/anthropics/claude-code/main"
         );
+    }
+
+    #[test]
+    fn test_parse_github_repo_url_strips_query() {
+        let (o, r, b) = parse_github_repo_url("https://github.com/anthropics/claude-code?tab=readme").unwrap();
+        assert_eq!(o, "anthropics");
+        assert_eq!(r, "claude-code");
+        assert!(b.is_none());
+    }
+
+    #[test]
+    fn test_parse_github_repo_url_strips_anchor() {
+        let (o, r, _) = parse_github_repo_url("https://github.com/anthropics/claude-code#readme").unwrap();
+        assert_eq!(o, "anthropics");
+        assert_eq!(r, "claude-code");
+    }
+
+    #[test]
+    fn test_parse_github_repo_url_strips_dot_git() {
+        let (_, r, _) = parse_github_repo_url("https://github.com/anthropics/claude-code.git").unwrap();
+        assert_eq!(r, "claude-code");
     }
 
     #[test]

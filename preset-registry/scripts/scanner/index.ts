@@ -15,40 +15,51 @@ if (!TOKEN) {
 async function main() {
   const octokit = new Octokit({ auth: TOKEN });
   console.log("Searching CLAUDE.md (stars>500)…");
-  const hits = await searchClaudeMd(octokit, 500);
+  let hits;
+  try {
+    hits = await searchClaudeMd(octokit, 500);
+  } catch (e) {
+    console.error(`Search failed: ${e}. Aborting this run; no changes committed.`);
+    return;
+  }
   console.log(`Found ${hits.length} candidates`);
 
   const accepted: PresetEntry[] = [];
   for (const hit of hits) {
-    const content = await fetchFile(octokit, hit.repo, hit.default_branch, hit.path);
-    if (!content) continue;
-    const score = scoreHit(hit, content);
-    if (score < 0.4) continue;
-    const entry = normalizeToPreset(hit, score);
-    accepted.push(entry);
+    try {
+      const content = await fetchFile(octokit, hit.repo, hit.default_branch, hit.path);
+      if (!content) continue;
+      const score = scoreHit(hit, content);
+      if (score < 0.4) continue;
+      const entry = normalizeToPreset(hit, score);
+      accepted.push(entry);
 
-    // Write the CLAUDE.md content next to the preset entry.
-    const presetDir = join(REGISTRY_DIR, "presets", "auto-discovered", entry.id);
-    await mkdir(presetDir, { recursive: true });
-    await writeFile(join(presetDir, "CLAUDE.md"), content);
-    await writeFile(
-      join(presetDir, "preset.json"),
-      JSON.stringify(
-        {
-          id: entry.id,
-          name: entry.name,
-          description: entry.description,
-          tags: entry.tags,
-          version: entry.version,
-          tested_on: entry.tested_on,
-          author: entry.author,
-          files: { "CLAUDE.md": "CLAUDE.md" },
-          source: entry.source,
-        },
-        null,
-        2,
-      ),
-    );
+      // Write the CLAUDE.md content next to the preset entry.
+      const presetDir = join(REGISTRY_DIR, "presets", "auto-discovered", entry.id);
+      await mkdir(presetDir, { recursive: true });
+      await writeFile(join(presetDir, "CLAUDE.md"), content);
+      await writeFile(
+        join(presetDir, "preset.json"),
+        JSON.stringify(
+          {
+            id: entry.id,
+            name: entry.name,
+            description: entry.description,
+            tags: entry.tags,
+            version: entry.version,
+            tested_on: entry.tested_on,
+            author: entry.author,
+            files: { "CLAUDE.md": "CLAUDE.md" },
+            source: entry.source,
+          },
+          null,
+          2,
+        ),
+      );
+    } catch (e) {
+      console.warn(`Skipping ${hit.repo}: ${e}`);
+      // Continue with others; don't abort.
+    }
   }
 
   // Update auto-discovered/index.json (separate from main index.json so curated entries are not overwritten)

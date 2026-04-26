@@ -72,7 +72,17 @@ pub fn install_mcp(
         .ok_or_else(|| AppError::Parse("mcpServers 字段不是对象".to_string()))?
         .insert(meta.id.clone(), server_entry);
     if !root.is_object() {
-        root = json!({});
+        return Err(AppError::Parse(format!(
+            "MCP config 根节点必须是对象，但实际是 {}",
+            match &root {
+                Value::Null => "null",
+                Value::Bool(_) => "boolean",
+                Value::Number(_) => "number",
+                Value::String(_) => "string",
+                Value::Array(_) => "array",
+                Value::Object(_) => "object",
+            }
+        )));
     }
     root["mcpServers"] = servers;
     let pretty = serde_json::to_string_pretty(&root)
@@ -270,6 +280,22 @@ mod tests {
         )
         .unwrap();
         assert_eq!(v["mcpServers"]["github"]["env"]["GITHUB_TOKEN"], "ghp_xx");
+    }
+
+    #[test]
+    fn test_install_mcp_rejects_non_object_root() {
+        let dir = tempdir().unwrap();
+        let claude = dir.path().join("claude");
+        let pm = dir.path().join("pm");
+        std::fs::create_dir_all(&claude).unwrap();
+        std::fs::create_dir_all(&pm).unwrap();
+        // Pre-populate settings.json with a non-object (array)
+        std::fs::write(claude.join("settings.json"), "[]").unwrap();
+
+        let result = install_mcp(&claude, &pm, &meta("fs"), &HashMap::new(), &Scope::Global);
+        assert!(matches!(result, Err(AppError::Parse(_))));
+        // Original content preserved
+        assert_eq!(std::fs::read_to_string(claude.join("settings.json")).unwrap(), "[]");
     }
 
     #[test]
