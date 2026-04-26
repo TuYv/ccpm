@@ -2,7 +2,7 @@ import { useState } from "react";
 import type { PresetManifest, ScopeArg } from "../types/core";
 
 interface Selection {
-  files: Record<string, boolean>;
+  files: { includeAll: boolean };
   skills: Record<string, boolean>;
   mcps: Record<string, { selected: boolean; env: Record<string, string> }>;
 }
@@ -20,9 +20,7 @@ export default function SelectiveInstallModal({
   onCancel,
   onConfirm,
 }: SelectiveInstallProps) {
-  const [files, setFiles] = useState<Record<string, boolean>>(
-    Object.fromEntries(Object.keys(manifest.files).map((k) => [k, true])),
-  );
+  const [files, setFiles] = useState<{ includeAll: boolean }>({ includeAll: true });
   const [skills, setSkills] = useState<Record<string, boolean>>(
     Object.fromEntries((manifest.skills ?? []).map((id) => [id, true])),
   );
@@ -35,6 +33,11 @@ export default function SelectiveInstallModal({
     ),
   );
 
+  const isEmpty =
+    Object.keys(manifest.files).length === 0 &&
+    (manifest.skills?.length ?? 0) === 0 &&
+    (manifest.mcps?.length ?? 0) === 0;
+
   return (
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
       <div className="bg-app-bg border border-app-border rounded-xl w-full max-w-md max-h-[80vh] overflow-hidden flex flex-col">
@@ -46,92 +49,101 @@ export default function SelectiveInstallModal({
         </div>
 
         <div className="flex-1 overflow-y-auto p-5 space-y-5">
-          {Object.keys(manifest.files).length > 0 && (
-            <div>
-              <div className="text-xs text-app-secondary mb-2">文件</div>
-              <div className="space-y-1.5">
-                {Object.keys(manifest.files).map((name) => (
-                  <label key={name} className="flex items-center gap-2 cursor-pointer">
+          {isEmpty ? (
+            <div className="text-center text-app-muted text-sm py-8">
+              此预设无可选内容
+            </div>
+          ) : (
+            <>
+              {Object.keys(manifest.files).length > 0 && (
+                <div>
+                  <div className="text-xs text-app-secondary mb-2">文件</div>
+                  <label className="flex items-center gap-2 cursor-pointer">
                     <input
                       type="checkbox"
-                      checked={files[name] ?? false}
-                      onChange={(e) => setFiles((p) => ({ ...p, [name]: e.target.checked }))}
+                      checked={files.includeAll}
+                      onChange={(e) => setFiles({ includeAll: e.target.checked })}
                       className="accent-app-accent"
                     />
-                    <span className="text-xs text-app-text">{name}</span>
+                    <span className="text-xs text-app-text">
+                      包含全部文件 ({Object.keys(manifest.files).length})
+                    </span>
                   </label>
-                ))}
-              </div>
-            </div>
-          )}
+                  <div className="text-[10px] text-app-muted mt-1 ml-6">
+                    v1 仅支持「全部」或「不安装」文件；选择性按 skill / MCP 进行
+                  </div>
+                </div>
+              )}
 
-          {(manifest.skills ?? []).length > 0 && (
-            <div>
-              <div className="text-xs text-app-secondary mb-2">Skills</div>
-              <div className="space-y-1.5">
-                {(manifest.skills ?? []).map((id) => (
-                  <label key={id} className="flex items-center gap-2 cursor-pointer">
-                    <input
-                      type="checkbox"
-                      checked={skills[id] ?? false}
-                      onChange={(e) => setSkills((p) => ({ ...p, [id]: e.target.checked }))}
-                      className="accent-app-accent"
-                    />
-                    <span className="text-xs text-app-text">{id}</span>
-                  </label>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {(manifest.mcps ?? []).length > 0 && (
-            <div>
-              <div className="text-xs text-app-secondary mb-2">MCPs</div>
-              <div className="space-y-3">
-                {(manifest.mcps ?? []).map((m) => {
-                  const state = mcps[m.ref];
-                  return (
-                    <div key={m.ref} className="space-y-2">
-                      <label className="flex items-center gap-2 cursor-pointer">
+              {(manifest.skills ?? []).length > 0 && (
+                <div>
+                  <div className="text-xs text-app-secondary mb-2">Skills</div>
+                  <div className="space-y-1.5">
+                    {(manifest.skills ?? []).map((id) => (
+                      <label key={id} className="flex items-center gap-2 cursor-pointer">
                         <input
                           type="checkbox"
-                          checked={state.selected}
-                          onChange={(e) =>
-                            setMcps((p) => ({
-                              ...p,
-                              [m.ref]: { ...p[m.ref], selected: e.target.checked },
-                            }))
-                          }
+                          checked={skills[id] ?? false}
+                          onChange={(e) => setSkills((p) => ({ ...p, [id]: e.target.checked }))}
                           className="accent-app-accent"
                         />
-                        <span className="text-xs text-app-text">{m.ref}</span>
+                        <span className="text-xs text-app-text">{id}</span>
                       </label>
-                      {state.selected &&
-                        (m.required_env ?? []).map((k) => (
-                          <div key={k} className="flex gap-2 ml-6">
-                            <span className="text-[10px] font-mono text-app-muted w-28 shrink-0 self-center">
-                              {k}
-                            </span>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {(manifest.mcps ?? []).length > 0 && (
+                <div>
+                  <div className="text-xs text-app-secondary mb-2">MCPs</div>
+                  <div className="space-y-3">
+                    {(manifest.mcps ?? []).map((m) => {
+                      const state = mcps[m.ref];
+                      return (
+                        <div key={m.ref} className="space-y-2">
+                          <label className="flex items-center gap-2 cursor-pointer">
                             <input
-                              value={state.env[k] ?? ""}
+                              type="checkbox"
+                              checked={state.selected}
                               onChange={(e) =>
                                 setMcps((p) => ({
                                   ...p,
-                                  [m.ref]: {
-                                    ...p[m.ref],
-                                    env: { ...p[m.ref].env, [k]: e.target.value },
-                                  },
+                                  [m.ref]: { ...p[m.ref], selected: e.target.checked },
                                 }))
                               }
-                              className="flex-1 bg-app-surface text-[11px] text-app-text px-2 py-1 rounded border border-app-border focus:border-app-accent outline-none font-mono"
+                              className="accent-app-accent"
                             />
-                          </div>
-                        ))}
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
+                            <span className="text-xs text-app-text">{m.ref}</span>
+                          </label>
+                          {state.selected &&
+                            (m.required_env ?? []).map((k) => (
+                              <div key={k} className="flex gap-2 ml-6">
+                                <span className="text-[10px] font-mono text-app-muted w-28 shrink-0 self-center">
+                                  {k}
+                                </span>
+                                <input
+                                  value={state.env[k] ?? ""}
+                                  onChange={(e) =>
+                                    setMcps((p) => ({
+                                      ...p,
+                                      [m.ref]: {
+                                        ...p[m.ref],
+                                        env: { ...p[m.ref].env, [k]: e.target.value },
+                                      },
+                                    }))
+                                  }
+                                  className="flex-1 bg-app-surface text-[11px] text-app-text px-2 py-1 rounded border border-app-border focus:border-app-accent outline-none font-mono"
+                                />
+                              </div>
+                            ))}
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+            </>
           )}
         </div>
 
@@ -144,7 +156,8 @@ export default function SelectiveInstallModal({
           </button>
           <button
             onClick={() => onConfirm({ files, skills, mcps })}
-            className="px-4 py-1.5 text-xs bg-app-accent rounded-lg text-white hover:bg-app-accentHover transition-colors"
+            disabled={isEmpty}
+            className="px-4 py-1.5 text-xs bg-app-accent rounded-lg text-white hover:bg-app-accentHover disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
           >
             确认安装
           </button>

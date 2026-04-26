@@ -355,30 +355,40 @@ export default function PresetsPage() {
         onConfirm={async (sel) => {
           setSelective(false);
           try {
-            const allFilesSelected =
-              Object.keys(manifest.files).length > 0 &&
-              Object.keys(manifest.files).every((k) => sel.files[k]);
-            const noFilesSelected = Object.values(sel.files).every((v) => !v);
-
-            if (!allFilesSelected && !noFilesSelected) {
-              addToast(
-                "v1 仅支持「全部文件」或「无文件」；请勾选所有文件或全部取消",
-                "error",
-              );
-              return;
-            }
-            if (allFilesSelected) {
+            if (sel.files.includeAll && Object.keys(manifest.files).length > 0) {
               await api.activatePreset(manifest.id, scope);
             }
+
             await skillsStore.fetchIndex();
-            for (const [skillId, on] of Object.entries(sel.skills)) {
-              if (on) await skillsStore.install(skillId, scope);
-            }
+            const selectedSkills = Object.entries(sel.skills).filter(([_, on]) => on);
+            const skillResults = await Promise.allSettled(
+              selectedSkills.map(([id]) => skillsStore.install(id, scope)),
+            );
+            skillResults.forEach((r, i) => {
+              if (r.status === "rejected") {
+                const id = selectedSkills[i][0];
+                addToast(`✗ skill ${id}: ${r.reason}`, "error");
+              }
+            });
+
             await mcpsStore.fetchIndex();
-            for (const [mcpId, st] of Object.entries(sel.mcps)) {
-              if (st.selected) await mcpsStore.install(mcpId, scope, st.env);
+            const selectedMcps = Object.entries(sel.mcps).filter(([_, st]) => st.selected);
+            const mcpResults = await Promise.allSettled(
+              selectedMcps.map(([id, st]) => mcpsStore.install(id, scope, st.env)),
+            );
+            mcpResults.forEach((r, i) => {
+              if (r.status === "rejected") {
+                const id = selectedMcps[i][0];
+                addToast(`✗ MCP ${id}: ${r.reason}`, "error");
+              }
+            });
+
+            const totalFailures =
+              skillResults.filter((r) => r.status === "rejected").length +
+              mcpResults.filter((r) => r.status === "rejected").length;
+            if (totalFailures === 0) {
+              addToast("✓ 选择性安装完成", "success");
             }
-            addToast("✓ 选择性安装完成", "success");
           } catch (e) {
             addToast(String(e), "error");
           }
