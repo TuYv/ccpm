@@ -1,6 +1,6 @@
 mod commands;
 
-use commands::{claude_settings, config, presets, skills, state};
+use commands::{claude_settings, config, mcps, presets, skills, state};
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
@@ -28,6 +28,10 @@ pub fn run() {
             skills::install_skill_cmd,
             skills::uninstall_skill_cmd,
             skills::list_installed_skills_cmd,
+            mcps::fetch_mcps_index_cmd,
+            mcps::install_mcp_cmd,
+            mcps::uninstall_mcp_cmd,
+            mcps::list_installed_mcps_cmd,
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
