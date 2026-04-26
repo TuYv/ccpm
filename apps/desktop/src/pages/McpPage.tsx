@@ -13,6 +13,10 @@ function groupByCategory(mcps: McpMeta[]): Map<string, McpMeta[]> {
   return m;
 }
 
+function isSecretEnvKey(key: string): boolean {
+  return /TOKEN|KEY|SECRET|PASSWORD|API/i.test(key);
+}
+
 function McpRow({
   mcp,
   isInstalled,
@@ -23,13 +27,13 @@ function McpRow({
   mcp: McpMeta;
   isInstalled: boolean;
   scope: ScopeArg;
-  onInstall: (env: Record<string, string>) => void;
+  onInstall: (env: Record<string, string>) => Promise<void>;
   onUninstall: () => void;
 }) {
   const [open, setOpen] = useState(false);
   const [env, setEnv] = useState<Record<string, string>>({});
 
-  const requiredFilled = mcp.required_env.every((r) => (env[r.key] ?? "").length > 0);
+  const requiredFilled = mcp.required_env.every((r) => (env[r.key] ?? "").trim().length > 0);
 
   return (
     <div className="px-4 py-3">
@@ -60,12 +64,36 @@ function McpRow({
 
           {mcp.required_env.length > 0 && (
             <div className="space-y-2 mb-3">
+              <div className="text-[10px] uppercase text-app-muted">必填</div>
               {mcp.required_env.map((r) => (
                 <div key={r.key} className="flex items-center gap-2">
                   <label className="text-xs text-app-secondary w-32 shrink-0 font-mono">
                     {r.key}
                   </label>
                   <input
+                    type={isSecretEnvKey(r.key) ? "password" : "text"}
+                    value={env[r.key] ?? ""}
+                    onChange={(e) =>
+                      setEnv((prev) => ({ ...prev, [r.key]: e.target.value }))
+                    }
+                    placeholder={r.hint || r.description}
+                    className="flex-1 bg-app-surface text-xs text-app-text px-2 py-1 rounded border border-app-border focus:border-app-accent outline-none font-mono"
+                  />
+                </div>
+              ))}
+            </div>
+          )}
+
+          {mcp.optional_env.length > 0 && (
+            <div className="space-y-2 mb-3">
+              <div className="text-[10px] uppercase text-app-muted">选填</div>
+              {mcp.optional_env.map((r) => (
+                <div key={r.key} className="flex items-center gap-2">
+                  <label className="text-xs text-app-secondary w-32 shrink-0 font-mono">
+                    {r.key}
+                  </label>
+                  <input
+                    type={isSecretEnvKey(r.key) ? "password" : "text"}
                     value={env[r.key] ?? ""}
                     onChange={(e) =>
                       setEnv((prev) => ({ ...prev, [r.key]: e.target.value }))
@@ -88,7 +116,15 @@ function McpRow({
               </button>
             ) : (
               <button
-                onClick={() => onInstall(env)}
+                onClick={async () => {
+                  try {
+                    await onInstall(env);
+                    setEnv({});
+                    setOpen(false);
+                  } catch {
+                    // error already toasted by parent
+                  }
+                }}
                 disabled={!requiredFilled}
                 className="px-3 py-1 text-xs bg-app-accent rounded-lg text-white hover:bg-app-accentHover transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
               >
