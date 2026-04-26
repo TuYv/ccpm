@@ -4,5 +4,6 @@ pub mod config;
 pub mod error;
 pub mod fs;
 pub mod registry;
+pub mod skills;
 pub mod state;
 pub mod types;
