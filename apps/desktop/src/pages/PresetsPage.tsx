@@ -312,10 +312,29 @@ export default function PresetsPage() {
       <ImportPreviewModal
         bundle={importPreview}
         onCancel={() => setImportPreview(null)}
-        onConfirm={async (_name) => {
+        onConfirm={async (name) => {
+          const fileContents: Record<string, string> = {};
+          const fileMap: Record<string, string> = {};
+          if (importPreview.claude_md) {
+            fileContents["CLAUDE.md"] = importPreview.claude_md;
+            fileMap["CLAUDE.md"] = "CLAUDE.md";
+          }
+          if (importPreview.settings_json) {
+            fileContents["settings.json"] = importPreview.settings_json;
+            fileMap["settings.json"] = "settings.json";
+          }
+          const manifest = {
+            id: importPreview.suggested_id,
+            name,
+            version: "1.0.0",
+            description: `从 ${importPreview.source_repo} 导入`,
+            author: importPreview.source_repo,
+            tags: ["imported"],
+            files: fileMap,
+          };
           try {
-            await api.activateSeedPreset(importPreview.suggested_id, scope);
-            addToast(`✓ 已导入 ${_name}`, "success");
+            await api.activateAdHoc(manifest, fileContents, scope);
+            addToast(`✓ 已导入 ${name}`, "success");
             setImportPreview(null);
           } catch (e) {
             addToast(String(e), "error");

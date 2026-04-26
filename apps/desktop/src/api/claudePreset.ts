@@ -249,6 +249,11 @@ export const api = {
       : previewApi.activatePreset(presetId, scope);
   },
 
+  activateAdHoc: (manifest: PresetManifest, fileContents: Record<string, string>, scope: ScopeArg) =>
+    tauriAvailable()
+      ? call<string>("activate_seed_preset_cmd", { scope, manifest, fileContents })
+      : Promise.reject(new ClaudePresetError("Tauri only")),
+
   deactivatePreset: (scope: ScopeArg, restore: RestoreArg) =>
     tauriAvailable()
       ? call<void>("deactivate_preset_cmd", { scope, restore })
