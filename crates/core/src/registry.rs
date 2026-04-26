@@ -237,7 +237,7 @@ fn load_namespace_cache<T: for<'de> serde::Deserialize<'de>>(
         return Ok(None);
     }
     let metadata = std::fs::metadata(&path)?;
-    let modified = metadata.modified().map_err(|e| AppError::Io(e.to_string()))?;
+    let modified = metadata.modified()?;
     let age = std::time::SystemTime::now()
         .duration_since(modified)
         .unwrap_or_default();

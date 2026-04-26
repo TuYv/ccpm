@@ -118,6 +118,7 @@ async fn detect_default_branch(
         )));
     }
     let v: serde_json::Value = resp.json().await?;
+    // "main" fallback handles both new repos and rare API responses missing the field.
     Ok(v["default_branch"].as_str().unwrap_or("main").to_string())
 }
 

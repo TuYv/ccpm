@@ -211,6 +211,25 @@ mod tests {
     }
 
     #[test]
+    fn test_install_mcp_missing_required_env_returns_invalid_input() {
+        let dir = tempfile::tempdir().unwrap();
+        let claude = dir.path().join("claude");
+        let pm = dir.path().join("pm");
+        std::fs::create_dir_all(&claude).unwrap();
+        std::fs::create_dir_all(&pm).unwrap();
+
+        let result = install_mcp(
+            &claude,
+            &pm,
+            &meta_with_env("github", "GITHUB_TOKEN"),
+            &HashMap::new(), // empty env, missing required token
+            &Scope::Global,
+        );
+        assert!(matches!(result, Err(AppError::InvalidInput(_))));
+        assert!(!claude.join("settings.json").exists(), "config file must not be written when validation fails");
+    }
+
+    #[test]
     fn test_install_mcp_rejects_missing_required_env() {
         let dir = tempdir().unwrap();
         let claude = dir.path().join("claude");
