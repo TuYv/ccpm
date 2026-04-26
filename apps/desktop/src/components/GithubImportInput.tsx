@@ -77,6 +77,7 @@ export function ImportPreviewModal({ bundle, onCancel, onConfirm }: ImportPrevie
 
   const skillCount = Object.keys(bundle.skills).length;
   const mcpCount = Object.keys(bundle.mcps).length;
+  const isEmpty = !bundle.claude_md && !bundle.settings_json;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-6">
@@ -148,21 +149,26 @@ export function ImportPreviewModal({ bundle, onCancel, onConfirm }: ImportPrevie
           </div>
         </div>
 
-        <div className="px-5 py-4 border-t border-app-border flex items-center justify-end gap-2">
-          <button
-            onClick={onCancel}
-            disabled={saving}
-            className="px-4 py-1.5 text-sm bg-app-surface border border-app-border rounded-lg text-app-secondary hover:bg-app-cardHover disabled:opacity-50 transition-colors"
-          >
-            取消
-          </button>
-          <button
-            onClick={handleSave}
-            disabled={saving || !name.trim()}
-            className="px-5 py-1.5 text-sm bg-app-accent hover:bg-app-accentHover disabled:opacity-50 text-white rounded-lg transition-colors"
-          >
-            {saving ? "保存中…" : "保存"}
-          </button>
+        <div className="px-5 py-4 border-t border-app-border flex flex-col gap-2">
+          {isEmpty && (
+            <div className="text-xs text-app-red">未发现可导入的 CLAUDE.md 或 settings.json</div>
+          )}
+          <div className="flex items-center justify-end gap-2">
+            <button
+              onClick={onCancel}
+              disabled={saving}
+              className="px-4 py-1.5 text-sm bg-app-surface border border-app-border rounded-lg text-app-secondary hover:bg-app-cardHover disabled:opacity-50 transition-colors"
+            >
+              取消
+            </button>
+            <button
+              onClick={handleSave}
+              disabled={saving || !name.trim() || isEmpty}
+              className="px-5 py-1.5 text-sm bg-app-accent hover:bg-app-accentHover disabled:opacity-40 text-white rounded-lg transition-colors"
+            >
+              {saving ? "保存中…" : "保存"}
+            </button>
+          </div>
         </div>
       </div>
     </div>

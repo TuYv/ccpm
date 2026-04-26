@@ -339,6 +339,7 @@ export default function PresetsPage() {
           };
           try {
             await api.activateAdHoc(manifest, fileContents, scope);
+            await loadInstalled();
             addToast(`✓ 已导入 ${name}`, "success");
             setImportPreview(null);
           } catch (e) {
