@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { api } from "../api/claudePreset";
+import GithubImportInput, { ImportPreviewModal } from "../components/GithubImportInput";
 import ScopeSelector from "../components/ScopeSelector";
 import SelectiveInstallModal from "../components/SelectiveInstallModal";
 import { Avatar, Card } from "../components/ui";
@@ -10,7 +11,7 @@ import {
   useSkillsStore,
   useUiStore,
 } from "../stores";
-import type { PresetManifest, ScopeArg } from "../types/core";
+import type { ImportedBundle, PresetManifest, ScopeArg } from "../types/core";
 
 function SearchIcon() {
   return (
@@ -59,6 +60,7 @@ export default function PresetsPage() {
   const [scope, setScope] = useState<ScopeArg>({ kind: "global" });
   const [activating, setActivating] = useState(false);
   const [selective, setSelective] = useState(false);
+  const [importPreview, setImportPreview] = useState<ImportedBundle | null>(null);
   const skillsStore = useSkillsStore();
   const mcpsStore = useMcpsStore();
 
@@ -116,8 +118,8 @@ export default function PresetsPage() {
     <div className="flex h-full">
       {/* ── Left: Preset List ── */}
       <div className="w-72 bg-app-surface border-r border-app-border flex flex-col shrink-0">
-        {/* Search */}
-        <div className="p-3 border-b border-app-border">
+        {/* Search + Import */}
+        <div className="p-3 border-b border-app-border space-y-2">
           <div className="flex items-center gap-2 bg-app-card rounded-lg px-3 py-2 border border-app-border focus-within:border-app-accent transition-colors">
             <span className="text-app-muted"><SearchIcon /></span>
             <input
@@ -127,6 +129,7 @@ export default function PresetsPage() {
               className="flex-1 bg-transparent text-sm text-app-text outline-none placeholder:text-app-muted"
             />
           </div>
+          <GithubImportInput onImported={setImportPreview} />
         </div>
 
         {/* Offline badge */}
@@ -305,6 +308,21 @@ export default function PresetsPage() {
         )}
       </div>
     </div>
+    {importPreview && (
+      <ImportPreviewModal
+        bundle={importPreview}
+        onCancel={() => setImportPreview(null)}
+        onConfirm={async (_name) => {
+          try {
+            await api.activateSeedPreset(importPreview.suggested_id, scope);
+            addToast(`✓ 已导入 ${_name}`, "success");
+            setImportPreview(null);
+          } catch (e) {
+            addToast(String(e), "error");
+          }
+        }}
+      />
+    )}
     {selective && manifest && (
       <SelectiveInstallModal
         manifest={manifest}
