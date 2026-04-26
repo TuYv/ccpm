@@ -1,0 +1,36 @@
+name: scanner
+on:
+  schedule:
+    - cron: "0 * * * *"   # hourly
+  workflow_dispatch:
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Install scanner deps
+        working-directory: scripts/scanner
+        run: npm ci || npm install
+      - name: Run scanner
+        working-directory: scripts/scanner
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REGISTRY_DIR: ${{ github.workspace }}
+        run: npm run scan
+      - name: Commit changes
+        run: |
+          git config user.name "ccpm-scanner-bot"
+          git config user.email "scanner@ccpm.local"
+          git add presets/
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: auto-discover update $(date -u +%FT%TZ)"
+            git push
+          else
+            echo "No changes"
+          fi
