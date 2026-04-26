@@ -1,4 +1,5 @@
 use crate::{error::AppError, types::PresetManifest};
+use reqwest::StatusCode;
 use std::collections::HashMap;
 
 /// A bundle parsed from a GitHub URL — the result of import_from_github.
@@ -84,14 +85,21 @@ pub fn build_raw_base(owner: &str, repo: &str, branch: &str) -> String {
 /// Fetch a single file; returns Ok(None) if 404.
 async fn fetch_optional(client: &reqwest::Client, url: &str) -> Result<Option<String>, AppError> {
     let resp = client.get(url).send().await?;
-    if resp.status() == reqwest::StatusCode::NOT_FOUND {
+    if resp.status() == StatusCode::NOT_FOUND {
         return Ok(None);
     }
     if !resp.status().is_success() {
+        let status = resp.status();
+        let hint = if status == StatusCode::FORBIDDEN {
+            "（可能是 GitHub API 限流，建议在设置中配置 token）"
+        } else if status == StatusCode::NOT_FOUND {
+            "（文件不存在）"
+        } else {
+            ""
+        };
         return Err(AppError::Network(format!(
-            "HTTP {} fetching {}",
-            resp.status(),
-            url
+            "HTTP {} fetching {}{}",
+            status, url, hint
         )));
     }
     Ok(Some(resp.text().await?))
@@ -111,10 +119,17 @@ async fn detect_default_branch(
         .send()
         .await?;
     if !resp.status().is_success() {
+        let status = resp.status();
+        let hint = if status == StatusCode::FORBIDDEN {
+            "（可能是 GitHub API 限流或仓库私有，建议在设置中配置 token）"
+        } else if status == StatusCode::NOT_FOUND {
+            "（仓库不存在或为私有）"
+        } else {
+            ""
+        };
         return Err(AppError::Network(format!(
-            "HTTP {} fetching {}",
-            resp.status(),
-            url
+            "HTTP {} fetching {}{}",
+            status, url, hint
         )));
     }
     let v: serde_json::Value = resp.json().await?;
