@@ -1,0 +1,34 @@
+mod commands;
+
+use commands::{claude_settings, config, presets, skills, state};
+
+#[cfg_attr(mobile, tauri::mobile_entry_point)]
+pub fn run() {
+    tauri::Builder::default()
+        .plugin(tauri_plugin_dialog::init())
+        .plugin(tauri_plugin_shell::init())
+        .invoke_handler(tauri::generate_handler![
+            config::get_config,
+            config::set_config,
+            config::capture_baseline_cmd,
+            config::restore_baseline_cmd,
+            config::baseline_status,
+            presets::fetch_index_cmd,
+            presets::get_manifest,
+            presets::get_preset_files,
+            presets::activate_preset_cmd,
+            presets::activate_seed_preset_cmd,
+            presets::deactivate_preset_cmd,
+            presets::list_backups,
+            presets::restore_backup,
+            state::get_installed,
+            claude_settings::read_claude_settings,
+            claude_settings::write_claude_settings,
+            skills::fetch_skills_index_cmd,
+            skills::install_skill_cmd,
+            skills::uninstall_skill_cmd,
+            skills::list_installed_skills_cmd,
+        ])
+        .run(tauri::generate_context!())
+        .expect("error while running tauri application");
+}
