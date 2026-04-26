@@ -1,6 +1,6 @@
 mod commands;
 
-use commands::{claude_settings, config, mcps, presets, skills, state};
+use commands::{claude_settings, config, importer, mcps, presets, skills, state};
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
@@ -32,6 +32,7 @@ pub fn run() {
             mcps::install_mcp_cmd,
             mcps::uninstall_mcp_cmd,
             mcps::list_installed_mcps_cmd,
+            importer::import_from_github_cmd,
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
