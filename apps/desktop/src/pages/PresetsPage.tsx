@@ -1,8 +1,15 @@
 import { useEffect, useState } from "react";
 import { api } from "../api/claudePreset";
 import ScopeSelector from "../components/ScopeSelector";
+import SelectiveInstallModal from "../components/SelectiveInstallModal";
 import { Avatar, Card } from "../components/ui";
-import { useInstalledStore, usePresetsStore, useUiStore } from "../stores";
+import {
+  useInstalledStore,
+  useMcpsStore,
+  usePresetsStore,
+  useSkillsStore,
+  useUiStore,
+} from "../stores";
 import type { PresetManifest, ScopeArg } from "../types/core";
 
 function SearchIcon() {
@@ -51,6 +58,9 @@ export default function PresetsPage() {
   const [query, setQuery] = useState("");
   const [scope, setScope] = useState<ScopeArg>({ kind: "global" });
   const [activating, setActivating] = useState(false);
+  const [selective, setSelective] = useState(false);
+  const skillsStore = useSkillsStore();
+  const mcpsStore = useMcpsStore();
 
   useEffect(() => {
     fetchIndex();
@@ -102,6 +112,7 @@ export default function PresetsPage() {
   }
 
   return (
+    <>
     <div className="flex h-full">
       {/* ── Left: Preset List ── */}
       <div className="w-72 bg-app-surface border-r border-app-border flex flex-col shrink-0">
@@ -270,9 +281,15 @@ export default function PresetsPage() {
             <div className="px-5 py-4 bg-app-surface border-t border-app-border flex items-center gap-4 shrink-0">
               <ScopeSelector scope={scope} onChange={setScope} />
               <button
+                onClick={() => setSelective(true)}
+                className="ml-auto px-3 py-1.5 text-xs bg-app-surface border border-app-border rounded-lg text-app-secondary hover:bg-app-cardHover transition-colors"
+              >
+                选择性安装
+              </button>
+              <button
                 onClick={handleActivate}
                 disabled={activating}
-                className="ml-auto px-6 py-2 bg-app-accent hover:bg-app-accentHover disabled:opacity-50 text-white rounded-full text-sm font-medium transition-colors"
+                className="px-6 py-2 bg-app-accent hover:bg-app-accentHover disabled:opacity-50 text-white rounded-full text-sm font-medium transition-colors"
               >
                 {installLabel}
               </button>
@@ -288,5 +305,44 @@ export default function PresetsPage() {
         )}
       </div>
     </div>
+    {selective && manifest && (
+      <SelectiveInstallModal
+        manifest={manifest}
+        scope={scope}
+        onCancel={() => setSelective(false)}
+        onConfirm={async (sel) => {
+          setSelective(false);
+          try {
+            const allFilesSelected =
+              Object.keys(manifest.files).length > 0 &&
+              Object.keys(manifest.files).every((k) => sel.files[k]);
+            const noFilesSelected = Object.values(sel.files).every((v) => !v);
+
+            if (!allFilesSelected && !noFilesSelected) {
+              addToast(
+                "v1 仅支持「全部文件」或「无文件」；请勾选所有文件或全部取消",
+                "error",
+              );
+              return;
+            }
+            if (allFilesSelected) {
+              await api.activatePreset(manifest.id, scope);
+            }
+            await skillsStore.fetchIndex();
+            for (const [skillId, on] of Object.entries(sel.skills)) {
+              if (on) await skillsStore.install(skillId, scope);
+            }
+            await mcpsStore.fetchIndex();
+            for (const [mcpId, st] of Object.entries(sel.mcps)) {
+              if (st.selected) await mcpsStore.install(mcpId, scope, st.env);
+            }
+            addToast("✓ 选择性安装完成", "success");
+          } catch (e) {
+            addToast(String(e), "error");
+          }
+        }}
+      />
+    )}
+    </>
   );
 }
