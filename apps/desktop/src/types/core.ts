@@ -17,6 +17,7 @@ export interface PresetMeta {
   description: string;
   author: string;
   tags: string[];
+  source?: { repo: string; stars: number; discovered_at: string };
 }
 
 export interface PresetIndex {
