@@ -81,9 +81,16 @@ function BaselineBanner() {
 export default function Layout() {
   const navigate = useNavigate();
   const location = useLocation();
-  const { fetchIndex, loading } = usePresetsStore();
+  const { fetchIndex } = usePresetsStore();
   const { fetchIndex: fetchSkills } = useSkillsStore();
   const { fetchIndex: fetchMcps } = useMcpsStore();
+  const presetsLoading = usePresetsStore((s) => s.loading);
+  const skillsLoading = useSkillsStore((s) => s.loading);
+  const mcpsLoading = useMcpsStore((s) => s.loading);
+  const loading =
+    location.pathname === "/skills" ? skillsLoading
+    : location.pathname === "/mcp" ? mcpsLoading
+    : presetsLoading;
   const isPreview = !isTauriApp();
   const isSettings = location.pathname === "/settings";
   const isClaudeSettings = location.pathname === "/claude-settings";

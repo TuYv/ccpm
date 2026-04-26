@@ -74,7 +74,7 @@ export default function SkillsPage() {
       await install(skill.id, scope);
       addToast(`✓ 已安装 ${skill.name}`, "success");
     } catch (e) {
-      addToast(String(e), "error");
+      addToast(`安装失败：${String(e)}`, "error");
     }
   }
 
@@ -83,7 +83,7 @@ export default function SkillsPage() {
       await uninstall(skill.id, scope);
       addToast(`✓ 已卸载 ${skill.name}`, "success");
     } catch (e) {
-      addToast(String(e), "error");
+      addToast(`卸载失败：${String(e)}`, "error");
     }
   }
 

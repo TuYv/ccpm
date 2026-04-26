@@ -171,11 +171,14 @@ export default function McpPage() {
   const grouped = useMemo(() => groupByCategory(filtered), [filtered]);
 
   async function handleInstall(mcp: McpMeta, env: Record<string, string>) {
+    const cleaned = Object.fromEntries(
+      Object.entries(env).filter(([_, v]) => v.trim() !== ""),
+    );
     try {
-      await install(mcp.id, scope, env);
+      await install(mcp.id, scope, cleaned);
       addToast(`✓ 已安装 ${mcp.name}`, "success");
     } catch (e) {
-      addToast(String(e), "error");
+      addToast(`安装失败：${String(e)}`, "error");
     }
   }
 
@@ -184,7 +187,7 @@ export default function McpPage() {
       await uninstall(mcp.id, scope);
       addToast(`✓ 已卸载 ${mcp.name}`, "success");
     } catch (e) {
-      addToast(String(e), "error");
+      addToast(`卸载失败：${String(e)}`, "error");
     }
   }
 

@@ -107,7 +107,7 @@ export default function PresetsPage() {
       addToast(`✓ 已安装 ${selectedId}`, "success");
       await loadInstalled();
     } catch (e) {
-      addToast(String(e), "error");
+      addToast(`安装失败：${String(e)}`, "error");
     } finally {
       setActivating(false);
     }
@@ -343,7 +343,7 @@ export default function PresetsPage() {
             addToast(`✓ 已导入 ${name}`, "success");
             setImportPreview(null);
           } catch (e) {
-            addToast(String(e), "error");
+            addToast(`导入失败：${String(e)}`, "error");
           }
         }}
       />

@@ -24,7 +24,7 @@ export default function GithubImportInput({ onImported }: GithubImportInputProps
       onImported(bundle);
       setUrl("");
     } catch (e) {
-      addToast(String(e), "error");
+      addToast(`抓取失败：${String(e)}`, "error");
     } finally {
       setLoading(false);
     }
