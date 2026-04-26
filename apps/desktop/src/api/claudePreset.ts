@@ -278,6 +278,9 @@ export const api = {
     tauriAvailable()
       ? call<void>("install_skill_cmd", { meta, scope })
       : Promise.resolve(),
+  // Note: uninstall_skill_cmd takes full meta (Rust uses files list to clean up),
+  // while uninstall_mcp_cmd takes only the id (Rust looks up by id in install record).
+  // Store-level `uninstall(id, scope)` is symmetric; this layer mirrors the Rust signatures.
   uninstallSkill: (meta: SkillMeta, scope: ScopeArg) =>
     tauriAvailable()
       ? call<void>("uninstall_skill_cmd", { meta, scope })

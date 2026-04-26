@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import { isTauriApp } from "../api/claudePreset";
-import { useConfigStore, usePresetsStore, useUiStore } from "../stores";
+import { useConfigStore, useMcpsStore, usePresetsStore, useSkillsStore, useUiStore } from "../stores";
 import { IconButton, SegmentedTabs } from "./ui";
 
 const MAIN_TABS = [
@@ -82,9 +82,17 @@ export default function Layout() {
   const navigate = useNavigate();
   const location = useLocation();
   const { fetchIndex, loading } = usePresetsStore();
+  const { fetchIndex: fetchSkills } = useSkillsStore();
+  const { fetchIndex: fetchMcps } = useMcpsStore();
   const isPreview = !isTauriApp();
   const isSettings = location.pathname === "/settings";
   const isClaudeSettings = location.pathname === "/claude-settings";
+
+  const refresh = () => {
+    if (location.pathname === "/skills") fetchSkills(true);
+    else if (location.pathname === "/mcp") fetchMcps(true);
+    else fetchIndex(true);
+  };
 
   return (
     <div className="flex flex-col h-screen overflow-hidden bg-app-bg text-app-text">
@@ -122,7 +130,7 @@ export default function Layout() {
             <IconButton
               icon={<RefreshIcon />}
               title="刷新数据源"
-              onClick={() => fetchIndex(true)}
+              onClick={refresh}
               disabled={loading}
             />
           </>

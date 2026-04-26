@@ -120,6 +120,7 @@ export default function SkillsPage() {
                   <div key={skill.id} className="px-4 py-3">
                     <button
                       onClick={() => setOpenId(isOpen ? null : skill.id)}
+                      aria-expanded={isOpen}
                       className="w-full flex items-start justify-between gap-4 text-left"
                     >
                       <div className="min-w-0 flex-1">
@@ -173,7 +174,9 @@ export default function SkillsPage() {
         ))}
 
         {filtered.length === 0 && !loading && (
-          <div className="text-center text-app-muted text-sm py-12">暂无 skill</div>
+          <div className="text-center text-app-muted text-sm py-12">
+            {search ? `没有匹配 "${search}" 的 skill` : "暂无 skill"}
+          </div>
         )}
       </div>
     </div>
