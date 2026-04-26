@@ -7,6 +7,7 @@ import { IconButton, SegmentedTabs } from "./ui";
 const MAIN_TABS = [
   { to: "/", label: "预设", end: true },
   { to: "/skills", label: "Skills" },
+  { to: "/mcp", label: "MCP" },
   { to: "/installed", label: "已安装" },
   { to: "/backups", label: "备份" },
   { to: "/claude-settings", label: "Claude 配置" },

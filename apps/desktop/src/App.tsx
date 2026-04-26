@@ -5,6 +5,7 @@ import Toast from "./components/Toast";
 import BackupsPage from "./pages/BackupsPage";
 import ClaudeSettingsPage from "./pages/ClaudeSettingsPage";
 import InstalledPage from "./pages/InstalledPage";
+import McpPage from "./pages/McpPage";
 import PresetsPage from "./pages/PresetsPage";
 import SettingsPage from "./pages/SettingsPage";
 import SkillsPage from "./pages/SkillsPage";
@@ -23,6 +24,7 @@ export default function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<PresetsPage />} />
           <Route path="skills" element={<SkillsPage />} />
+          <Route path="mcp" element={<McpPage />} />
           <Route path="installed" element={<InstalledPage />} />
           <Route path="backups" element={<BackupsPage />} />
           <Route path="settings" element={<SettingsPage />} />
