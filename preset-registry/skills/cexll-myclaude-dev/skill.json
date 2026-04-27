@@ -1,0 +1,21 @@
+{
+  "id": "cexll-myclaude-dev",
+  "name": "dev",
+  "description": "Extreme lightweight end-to-end development workflow with requirements clarification, intelligent backend selection, parallel codeagent execution, and mandatory 90% test coverage",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "cexll",
+  "install_path": ".claude/skills/dev/SKILL.md",
+  "source": {
+    "repo": "cexll/myclaude",
+    "url": "https://github.com/cexll/myclaude/blob/master/skills/dev/SKILL.md",
+    "path": "skills/dev/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-04-27T09:24:45.762Z"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "id": "cexll-myclaude-browser",
+  "name": "browser",
+  "description": "This skill should be used for browser automation tasks using Chrome DevTools Protocol (CDP). Triggers when users need to launch Chrome with remote debugging, navigate pages, execute JavaScript in browser context, capture screenshots, or interactively select DOM elements. No MCP server required.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "cexll",
+  "install_path": ".claude/skills/browser/SKILL.md",
+  "source": {
+    "repo": "cexll/myclaude",
+    "url": "https://github.com/cexll/myclaude/blob/master/skills/browser/SKILL.md",
+    "path": "skills/browser/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-04-27T09:24:44.179Z"
+  }
+}

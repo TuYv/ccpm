@@ -1,0 +1,21 @@
+{
+  "id": "cexll-myclaude-codeagent",
+  "name": "codeagent",
+  "description": "Execute codeagent-wrapper for multi-backend AI code tasks. Supports Codex, Claude, Gemini, and OpenCode backends with agent presets, skill injection, file references (@syntax), worktree isolation, parallel execution, and structured output.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "cexll",
+  "install_path": ".claude/skills/codeagent/SKILL.md",
+  "source": {
+    "repo": "cexll/myclaude",
+    "url": "https://github.com/cexll/myclaude/blob/master/skills/codeagent/SKILL.md",
+    "path": "skills/codeagent/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-04-27T09:24:44.947Z"
+  }
+}

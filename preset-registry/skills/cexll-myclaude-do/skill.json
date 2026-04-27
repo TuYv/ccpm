@@ -1,0 +1,21 @@
+{
+  "id": "cexll-myclaude-do",
+  "name": "do",
+  "description": "This skill should be used for structured feature development with codebase understanding. Triggers on /do command. Provides a 5-phase workflow (Understand, Clarify, Design, Implement, Complete) using codeagent-wrapper to orchestrate code-explorer, code-architect, code-reviewer, and develop agents in parallel.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "cexll",
+  "install_path": ".claude/skills/do/SKILL.md",
+  "source": {
+    "repo": "cexll/myclaude",
+    "url": "https://github.com/cexll/myclaude/blob/master/skills/do/SKILL.md",
+    "path": "skills/do/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-04-27T09:24:46.990Z"
+  }
+}

@@ -1,5 +1,321 @@
 {
   "version": "1",
-  "updated_at": "2026-04-27T00:00:00Z",
-  "mcps": []
+  "updated_at": "2026-04-27T09:25:06.797Z",
+  "mcps": [
+    {
+      "id": "google-drive",
+      "name": "Google Drive",
+      "description": "Search and read files in Google Drive (Docs, Sheets, Slides) via OAuth.",
+      "category": "云存储",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-gdrive"
+      ],
+      "required_env": [
+        {
+          "key": "GDRIVE_CLIENT_ID",
+          "description": "Google OAuth client ID"
+        },
+        {
+          "key": "GDRIVE_CLIENT_SECRET",
+          "description": "Google OAuth client secret"
+        }
+      ],
+      "optional_env": [],
+      "source": {
+        "repo": "modelcontextprotocol/servers-archived",
+        "url": "https://github.com/modelcontextprotocol/servers-archived/tree/main/src/gdrive",
+        "path": "src/gdrive",
+        "branch": "main",
+        "discovered_at": "2026-04-27T09:19:59.218Z"
+      }
+    },
+    {
+      "id": "everything",
+      "name": "everything",
+      "description": "This MCP server attempts to exercise all the features of the MCP protocol.",
+      "category": "官方 Anthropic",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-everything"
+      ],
+      "required_env": [],
+      "optional_env": [],
+      "source": {
+        "repo": "modelcontextprotocol/servers",
+        "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/everything",
+        "path": "src/everything",
+        "branch": "main",
+        "discovered_at": "2026-04-27T09:25:03.890Z"
+      }
+    },
+    {
+      "id": "filesystem",
+      "name": "filesystem",
+      "description": "Node.js server implementing Model Context Protocol (MCP) for filesystem operations.",
+      "category": "官方 Anthropic",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem"
+      ],
+      "required_env": [],
+      "optional_env": [],
+      "source": {
+        "repo": "modelcontextprotocol/servers",
+        "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem",
+        "path": "src/filesystem",
+        "branch": "main",
+        "discovered_at": "2026-04-27T09:25:04.862Z"
+      }
+    },
+    {
+      "id": "memory",
+      "name": "memory",
+      "description": "A basic implementation of persistent memory using a local knowledge graph.",
+      "category": "官方 Anthropic",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-memory"
+      ],
+      "required_env": [],
+      "optional_env": [],
+      "source": {
+        "repo": "modelcontextprotocol/servers",
+        "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/memory",
+        "path": "src/memory",
+        "branch": "main",
+        "discovered_at": "2026-04-27T09:25:06.009Z"
+      }
+    },
+    {
+      "id": "sequentialthinking",
+      "name": "sequentialthinking",
+      "description": "An MCP server implementation that provides a tool for dynamic and reflective problem-solving through a structured thinking process.",
+      "category": "官方 Anthropic",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking"
+      ],
+      "required_env": [],
+      "optional_env": [],
+      "source": {
+        "repo": "modelcontextprotocol/servers",
+        "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking",
+        "path": "src/sequentialthinking",
+        "branch": "main",
+        "discovered_at": "2026-04-27T09:25:06.789Z"
+      }
+    },
+    {
+      "id": "time",
+      "name": "Time",
+      "description": "Time and timezone utilities (current time, conversions, business-hours math).",
+      "category": "工具",
+      "command": "uvx",
+      "args": [
+        "mcp-server-time"
+      ],
+      "required_env": [],
+      "optional_env": [],
+      "source": {
+        "repo": "modelcontextprotocol/servers-archived",
+        "url": "https://github.com/modelcontextprotocol/servers-archived/tree/main/src/time",
+        "path": "src/time",
+        "branch": "main",
+        "discovered_at": "2026-04-27T09:19:59.218Z"
+      }
+    },
+    {
+      "id": "git",
+      "name": "Git",
+      "description": "Read, search, and manipulate local Git repositories.",
+      "category": "开发工具",
+      "command": "uvx",
+      "args": [
+        "mcp-server-git",
+        "--repository",
+        "."
+      ],
+      "required_env": [],
+      "optional_env": [],
+      "source": {
+        "repo": "modelcontextprotocol/servers-archived",
+        "url": "https://github.com/modelcontextprotocol/servers-archived/tree/main/src/git",
+        "path": "src/git",
+        "branch": "main",
+        "discovered_at": "2026-04-27T09:19:59.218Z"
+      }
+    },
+    {
+      "id": "github",
+      "name": "GitHub",
+      "description": "Read/write GitHub issues, PRs, code, and repos via the GitHub REST API.",
+      "category": "开发工具",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-github"
+      ],
+      "required_env": [
+        {
+          "key": "GITHUB_PERSONAL_ACCESS_TOKEN",
+          "hint": "ghp_xxx",
+          "description": "GitHub Personal Access Token"
+        }
+      ],
+      "optional_env": [],
+      "source": {
+        "repo": "github/github-mcp-server",
+        "url": "https://github.com/github/github-mcp-server",
+        "path": "",
+        "branch": "main",
+        "discovered_at": "2026-04-27T09:19:59.217Z"
+      }
+    },
+    {
+      "id": "postgres",
+      "name": "PostgreSQL",
+      "description": "Read-only database access for PostgreSQL with schema inspection.",
+      "category": "数据库",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-postgres"
+      ],
+      "required_env": [
+        {
+          "key": "POSTGRES_CONNECTION_STRING",
+          "hint": "postgresql://user:pass@host/db"
+        }
+      ],
+      "optional_env": [],
+      "source": {
+        "repo": "modelcontextprotocol/servers-archived",
+        "url": "https://github.com/modelcontextprotocol/servers-archived/tree/main/src/postgres",
+        "path": "src/postgres",
+        "branch": "main",
+        "discovered_at": "2026-04-27T09:19:59.218Z"
+      }
+    },
+    {
+      "id": "sqlite",
+      "name": "SQLite",
+      "description": "Local SQLite database access with schema inspection and query execution.",
+      "category": "数据库",
+      "command": "uvx",
+      "args": [
+        "mcp-server-sqlite",
+        "--db-path",
+        "./local.db"
+      ],
+      "required_env": [],
+      "optional_env": [],
+      "source": {
+        "repo": "modelcontextprotocol/servers-archived",
+        "url": "https://github.com/modelcontextprotocol/servers-archived/tree/main/src/sqlite",
+        "path": "src/sqlite",
+        "branch": "main",
+        "discovered_at": "2026-04-27T09:19:59.218Z"
+      }
+    },
+    {
+      "id": "brave-search",
+      "name": "Brave Search",
+      "description": "Web and local search via the Brave Search API.",
+      "category": "网络",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-brave-search"
+      ],
+      "required_env": [
+        {
+          "key": "BRAVE_API_KEY",
+          "description": "Brave Search API key"
+        }
+      ],
+      "optional_env": [],
+      "source": {
+        "repo": "modelcontextprotocol/servers-archived",
+        "url": "https://github.com/modelcontextprotocol/servers-archived/tree/main/src/brave-search",
+        "path": "src/brave-search",
+        "branch": "main",
+        "discovered_at": "2026-04-27T09:19:59.218Z"
+      }
+    },
+    {
+      "id": "fetch",
+      "name": "Fetch",
+      "description": "Retrieve URL contents with HTML-to-Markdown conversion for use as context.",
+      "category": "网络",
+      "command": "uvx",
+      "args": [
+        "mcp-server-fetch"
+      ],
+      "required_env": [],
+      "optional_env": [],
+      "source": {
+        "repo": "modelcontextprotocol/servers-archived",
+        "url": "https://github.com/modelcontextprotocol/servers-archived/tree/main/src/fetch",
+        "path": "src/fetch",
+        "branch": "main",
+        "discovered_at": "2026-04-27T09:19:59.218Z"
+      }
+    },
+    {
+      "id": "puppeteer",
+      "name": "Puppeteer",
+      "description": "Browser automation: navigate pages, take screenshots, click elements, run JS.",
+      "category": "网络",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-puppeteer"
+      ],
+      "required_env": [],
+      "optional_env": [],
+      "source": {
+        "repo": "modelcontextprotocol/servers-archived",
+        "url": "https://github.com/modelcontextprotocol/servers-archived/tree/main/src/puppeteer",
+        "path": "src/puppeteer",
+        "branch": "main",
+        "discovered_at": "2026-04-27T09:19:59.218Z"
+      }
+    },
+    {
+      "id": "slack",
+      "name": "Slack",
+      "description": "Read channels, post messages, and manage Slack workspace via the Slack API.",
+      "category": "通讯",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-slack"
+      ],
+      "required_env": [
+        {
+          "key": "SLACK_BOT_TOKEN",
+          "hint": "xoxb-...",
+          "description": "Slack Bot User OAuth Token"
+        },
+        {
+          "key": "SLACK_TEAM_ID",
+          "description": "Slack workspace team ID"
+        }
+      ],
+      "optional_env": [],
+      "source": {
+        "repo": "modelcontextprotocol/servers-archived",
+        "url": "https://github.com/modelcontextprotocol/servers-archived/tree/main/src/slack",
+        "path": "src/slack",
+        "branch": "main",
+        "discovered_at": "2026-04-27T09:19:59.218Z"
+      }
+    }
+  ]
 }

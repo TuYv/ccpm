@@ -1,5 +1,2316 @@
 {
   "version": "1",
-  "updated_at": "2026-04-27T00:00:00Z",
-  "skills": []
+  "updated_at": "2026-04-27T09:25:02.585Z",
+  "skills": [
+    {
+      "id": "anthropics-skills-algorithmic-art",
+      "name": "algorithmic-art",
+      "description": "Creating algorithmic art using p5.js with seeded randomness and interactive parameter exploration. Use this when users request creating art using code, generative art, algorithmic art, flow fields, or particle systems. Create original algorithmic art rather than copying existing artists' work to avoid copyright violations.",
+      "category": "Anthropic 官方",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "anthropics",
+      "install_path": ".claude/skills/algorithmic-art/SKILL.md",
+      "source": {
+        "repo": "anthropics/skills",
+        "url": "https://github.com/anthropics/skills/blob/main/skills/algorithmic-art/SKILL.md",
+        "path": "skills/algorithmic-art/SKILL.md",
+        "branch": "main",
+        "discovered_at": "2026-04-27T09:24:07.332Z"
+      }
+    },
+    {
+      "id": "anthropics-skills-brand-guidelines",
+      "name": "brand-guidelines",
+      "description": "Applies Anthropic's official brand colors and typography to any sort of artifact that may benefit from having Anthropic's look-and-feel. Use it when brand colors or style guidelines, visual formatting, or company design standards apply.",
+      "category": "Anthropic 官方",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "anthropics",
+      "install_path": ".claude/skills/brand-guidelines/SKILL.md",
+      "source": {
+        "repo": "anthropics/skills",
+        "url": "https://github.com/anthropics/skills/blob/main/skills/brand-guidelines/SKILL.md",
+        "path": "skills/brand-guidelines/SKILL.md",
+        "branch": "main",
+        "discovered_at": "2026-04-27T09:24:07.735Z"
+      }
+    },
+    {
+      "id": "anthropics-skills-canvas-design",
+      "name": "canvas-design",
+      "description": "Create beautiful visual art in .png and .pdf documents using design philosophy. You should use this skill when the user asks to create a poster, piece of art, design, or other static piece. Create original visual designs, never copying existing artists' work to avoid copyright violations.",
+      "category": "Anthropic 官方",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "anthropics",
+      "install_path": ".claude/skills/canvas-design/SKILL.md",
+      "source": {
+        "repo": "anthropics/skills",
+        "url": "https://github.com/anthropics/skills/blob/main/skills/canvas-design/SKILL.md",
+        "path": "skills/canvas-design/SKILL.md",
+        "branch": "main",
+        "discovered_at": "2026-04-27T09:24:08.137Z"
+      }
+    },
+    {
+      "id": "anthropics-skills-claude-api",
+      "name": "claude-api",
+      "description": "Build, debug, and optimize Claude API / Anthropic SDK apps. Apps built with this skill should include prompt caching. Also handles migrating existing Claude API code between Claude model versions (4.5 → 4.6, 4.6 → 4.7, retired-model replacements). TRIGGER when: code imports `anthropic`/`@anthropic-ai/sdk`; user asks for the Claude API, Anthropic SDK, or Managed Agents; user adds/modifies/tunes a Claude feature (caching, thinking, compaction, tool use, batch, files, citations, memory) or model (O",
+      "category": "Anthropic 官方",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "anthropics",
+      "install_path": ".claude/skills/claude-api/SKILL.md",
+      "source": {
+        "repo": "anthropics/skills",
+        "url": "https://github.com/anthropics/skills/blob/main/skills/claude-api/SKILL.md",
+        "path": "skills/claude-api/SKILL.md",
+        "branch": "main",
+        "discovered_at": "2026-04-27T09:24:08.551Z"
+      }
+    },
+    {
+      "id": "anthropics-skills-doc-coauthoring",
+      "name": "doc-coauthoring",
+      "description": "Guide users through a structured workflow for co-authoring documentation. Use when user wants to write documentation, proposals, technical specs, decision docs, or similar structured content. This workflow helps users efficiently transfer context, refine content through iteration, and verify the doc works for readers. Trigger when user mentions writing docs, creating proposals, drafting specs, or similar documentation tasks.",
+      "category": "Anthropic 官方",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "anthropics",
+      "install_path": ".claude/skills/doc-coauthoring/SKILL.md",
+      "source": {
+        "repo": "anthropics/skills",
+        "url": "https://github.com/anthropics/skills/blob/main/skills/doc-coauthoring/SKILL.md",
+        "path": "skills/doc-coauthoring/SKILL.md",
+        "branch": "main",
+        "discovered_at": "2026-04-27T09:24:09.089Z"
+      }
+    },
+    {
+      "id": "anthropics-skills-docx",
+      "name": "docx",
+      "description": "Use this skill whenever the user wants to create, read, edit, or manipulate Word documents (.docx files). Triggers include: any mention of 'Word doc', 'word document', '.docx', or requests to produce professional documents with formatting like tables of contents, headings, page numbers, or letterheads. Also use when extracting or reorganizing content from .docx files, inserting or replacing images in documents, performing find-and-replace in Word files, working with tracked changes or comments, ",
+      "category": "Anthropic 官方",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "anthropics",
+      "install_path": ".claude/skills/docx/SKILL.md",
+      "source": {
+        "repo": "anthropics/skills",
+        "url": "https://github.com/anthropics/skills/blob/main/skills/docx/SKILL.md",
+        "path": "skills/docx/SKILL.md",
+        "branch": "main",
+        "discovered_at": "2026-04-27T09:24:09.639Z"
+      }
+    },
+    {
+      "id": "anthropics-skills-frontend-design",
+      "name": "frontend-design",
+      "description": "Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, artifacts, posters, or applications (examples include websites, landing pages, dashboards, React components, HTML/CSS layouts, or when styling/beautifying any web UI). Generates creative, polished code and UI design that avoids generic AI aesthetics.",
+      "category": "Anthropic 官方",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "anthropics",
+      "install_path": ".claude/skills/frontend-design/SKILL.md",
+      "source": {
+        "repo": "anthropics/skills",
+        "url": "https://github.com/anthropics/skills/blob/main/skills/frontend-design/SKILL.md",
+        "path": "skills/frontend-design/SKILL.md",
+        "branch": "main",
+        "discovered_at": "2026-04-27T09:24:10.057Z"
+      }
+    },
+    {
+      "id": "anthropics-skills-internal-comms",
+      "name": "internal-comms",
+      "description": "A set of resources to help me write all kinds of internal communications, using the formats that my company likes to use. Claude should use this skill whenever asked to write some sort of internal communications (status reports, leadership updates, 3P updates, company newsletters, FAQs, incident reports, project updates, etc.).",
+      "category": "Anthropic 官方",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "anthropics",
+      "install_path": ".claude/skills/internal-comms/SKILL.md",
+      "source": {
+        "repo": "anthropics/skills",
+        "url": "https://github.com/anthropics/skills/blob/main/skills/internal-comms/SKILL.md",
+        "path": "skills/internal-comms/SKILL.md",
+        "branch": "main",
+        "discovered_at": "2026-04-27T09:24:10.526Z"
+      }
+    },
+    {
+      "id": "anthropics-skills-mcp-builder",
+      "name": "mcp-builder",
+      "description": "Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools. Use when building MCP servers to integrate external APIs or services, whether in Python (FastMCP) or Node/TypeScript (MCP SDK).",
+      "category": "Anthropic 官方",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "anthropics",
+      "install_path": ".claude/skills/mcp-builder/SKILL.md",
+      "source": {
+        "repo": "anthropics/skills",
+        "url": "https://github.com/anthropics/skills/blob/main/skills/mcp-builder/SKILL.md",
+        "path": "skills/mcp-builder/SKILL.md",
+        "branch": "main",
+        "discovered_at": "2026-04-27T09:24:10.952Z"
+      }
+    },
+    {
+      "id": "anthropics-skills-pdf",
+      "name": "pdf",
+      "description": "Use this skill whenever the user wants to do anything with PDF files. This includes reading or extracting text/tables from PDFs, combining or merging multiple PDFs into one, splitting PDFs apart, rotating pages, adding watermarks, creating new PDFs, filling PDF forms, encrypting/decrypting PDFs, extracting images, and OCR on scanned PDFs to make them searchable. If the user mentions a .pdf file or asks to produce one, use this skill.",
+      "category": "Anthropic 官方",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "anthropics",
+      "install_path": ".claude/skills/pdf/SKILL.md",
+      "source": {
+        "repo": "anthropics/skills",
+        "url": "https://github.com/anthropics/skills/blob/main/skills/pdf/SKILL.md",
+        "path": "skills/pdf/SKILL.md",
+        "branch": "main",
+        "discovered_at": "2026-04-27T09:24:11.344Z"
+      }
+    },
+    {
+      "id": "anthropics-skills-pptx",
+      "name": "pptx",
+      "description": "Use this skill any time a .pptx file is involved in any way — as input, output, or both. This includes: creating slide decks, pitch decks, or presentations; reading, parsing, or extracting text from any .pptx file (even if the extracted content will be used elsewhere, like in an email or summary); editing, modifying, or updating existing presentations; combining or splitting slide files; working with templates, layouts, speaker notes, or comments. Trigger whenever the user mentions \\\"deck,\\\" \\\"s",
+      "category": "Anthropic 官方",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "anthropics",
+      "install_path": ".claude/skills/pptx/SKILL.md",
+      "source": {
+        "repo": "anthropics/skills",
+        "url": "https://github.com/anthropics/skills/blob/main/skills/pptx/SKILL.md",
+        "path": "skills/pptx/SKILL.md",
+        "branch": "main",
+        "discovered_at": "2026-04-27T09:24:12.135Z"
+      }
+    },
+    {
+      "id": "anthropics-skills-skill-creator",
+      "name": "skill-creator",
+      "description": "Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, edit, or optimize an existing skill, run evals to test a skill, benchmark skill performance with variance analysis, or optimize a skill's description for better triggering accuracy.",
+      "category": "Anthropic 官方",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "anthropics",
+      "install_path": ".claude/skills/skill-creator/SKILL.md",
+      "source": {
+        "repo": "anthropics/skills",
+        "url": "https://github.com/anthropics/skills/blob/main/skills/skill-creator/SKILL.md",
+        "path": "skills/skill-creator/SKILL.md",
+        "branch": "main",
+        "discovered_at": "2026-04-27T09:24:12.728Z"
+      }
+    },
+    {
+      "id": "anthropics-skills-slack-gif-creator",
+      "name": "slack-gif-creator",
+      "description": "Knowledge and utilities for creating animated GIFs optimized for Slack. Provides constraints, validation tools, and animation concepts. Use when users request animated GIFs for Slack like \"make me a GIF of X doing Y for Slack.\"",
+      "category": "Anthropic 官方",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "anthropics",
+      "install_path": ".claude/skills/slack-gif-creator/SKILL.md",
+      "source": {
+        "repo": "anthropics/skills",
+        "url": "https://github.com/anthropics/skills/blob/main/skills/slack-gif-creator/SKILL.md",
+        "path": "skills/slack-gif-creator/SKILL.md",
+        "branch": "main",
+        "discovered_at": "2026-04-27T09:24:13.221Z"
+      }
+    },
+    {
+      "id": "anthropics-skills-template",
+      "name": "template-skill",
+      "description": "Replace with description of the skill and when Claude should use it.",
+      "category": "Anthropic 官方",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "anthropics",
+      "install_path": ".claude/skills/template/SKILL.md",
+      "source": {
+        "repo": "anthropics/skills",
+        "url": "https://github.com/anthropics/skills/blob/main/template/SKILL.md",
+        "path": "template/SKILL.md",
+        "branch": "main",
+        "discovered_at": "2026-04-27T09:24:15.287Z"
+      }
+    },
+    {
+      "id": "anthropics-skills-theme-factory",
+      "name": "theme-factory",
+      "description": "Toolkit for styling artifacts with a theme. These artifacts can be slides, docs, reportings, HTML landing pages, etc. There are 10 pre-set themes with colors/fonts that you can apply to any artifact that has been creating, or can generate a new theme on-the-fly.",
+      "category": "Anthropic 官方",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "anthropics",
+      "install_path": ".claude/skills/theme-factory/SKILL.md",
+      "source": {
+        "repo": "anthropics/skills",
+        "url": "https://github.com/anthropics/skills/blob/main/skills/theme-factory/SKILL.md",
+        "path": "skills/theme-factory/SKILL.md",
+        "branch": "main",
+        "discovered_at": "2026-04-27T09:24:13.616Z"
+      }
+    },
+    {
+      "id": "anthropics-skills-web-artifacts-builder",
+      "name": "web-artifacts-builder",
+      "description": "Suite of tools for creating elaborate, multi-component claude.ai HTML artifacts using modern frontend web technologies (React, Tailwind CSS, shadcn/ui). Use for complex artifacts requiring state management, routing, or shadcn/ui components - not for simple single-file HTML/JSX artifacts.",
+      "category": "Anthropic 官方",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "anthropics",
+      "install_path": ".claude/skills/web-artifacts-builder/SKILL.md",
+      "source": {
+        "repo": "anthropics/skills",
+        "url": "https://github.com/anthropics/skills/blob/main/skills/web-artifacts-builder/SKILL.md",
+        "path": "skills/web-artifacts-builder/SKILL.md",
+        "branch": "main",
+        "discovered_at": "2026-04-27T09:24:14.019Z"
+      }
+    },
+    {
+      "id": "anthropics-skills-webapp-testing",
+      "name": "webapp-testing",
+      "description": "Toolkit for interacting with and testing local web applications using Playwright. Supports verifying frontend functionality, debugging UI behavior, capturing browser screenshots, and viewing browser logs.",
+      "category": "Anthropic 官方",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "anthropics",
+      "install_path": ".claude/skills/webapp-testing/SKILL.md",
+      "source": {
+        "repo": "anthropics/skills",
+        "url": "https://github.com/anthropics/skills/blob/main/skills/webapp-testing/SKILL.md",
+        "path": "skills/webapp-testing/SKILL.md",
+        "branch": "main",
+        "discovered_at": "2026-04-27T09:24:14.516Z"
+      }
+    },
+    {
+      "id": "anthropics-skills-xlsx",
+      "name": "xlsx",
+      "description": "Use this skill any time a spreadsheet file is the primary input or output. This means any task where the user wants to: open, read, edit, or fix an existing .xlsx, .xlsm, .csv, or .tsv file (e.g., adding columns, computing formulas, formatting, charting, cleaning messy data); create a new spreadsheet from scratch or from other data sources; or convert between tabular file formats. Trigger especially when the user references a spreadsheet file by name or path — even casually (like \\\"the xlsx in m",
+      "category": "Anthropic 官方",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "anthropics",
+      "install_path": ".claude/skills/xlsx/SKILL.md",
+      "source": {
+        "repo": "anthropics/skills",
+        "url": "https://github.com/anthropics/skills/blob/main/skills/xlsx/SKILL.md",
+        "path": "skills/xlsx/SKILL.md",
+        "branch": "main",
+        "discovered_at": "2026-04-27T09:24:14.928Z"
+      }
+    },
+    {
+      "id": "composiohq-awesome-claude-skills-21risk-automation",
+      "name": "-21risk-automation",
+      "description": "Automate 21risk tasks via Rube MCP (Composio). Always search tools first for current schemas.",
+      "category": "Composio 社区",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "ComposioHQ",
+      "install_path": ".claude/skills/-21risk-automation/SKILL.md",
+      "source": {
+        "repo": "ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/-21risk-automation/SKILL.md",
+        "path": "composio-skills/-21risk-automation/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:18.728Z"
+      }
+    },
+    {
+      "id": "composiohq-awesome-claude-skills-2chat-automation",
+      "name": "-2chat-automation",
+      "description": "Automate 2chat tasks via Rube MCP (Composio). Always search tools first for current schemas.",
+      "category": "Composio 社区",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "ComposioHQ",
+      "install_path": ".claude/skills/-2chat-automation/SKILL.md",
+      "source": {
+        "repo": "ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/-2chat-automation/SKILL.md",
+        "path": "composio-skills/-2chat-automation/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:19.126Z"
+      }
+    },
+    {
+      "id": "composiohq-awesome-claude-skills-ably-automation",
+      "name": "ably-automation",
+      "description": "Automate Ably tasks via Rube MCP (Composio). Always search tools first for current schemas.",
+      "category": "Composio 社区",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "ComposioHQ",
+      "install_path": ".claude/skills/ably-automation/SKILL.md",
+      "source": {
+        "repo": "ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/ably-automation/SKILL.md",
+        "path": "composio-skills/ably-automation/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:19.514Z"
+      }
+    },
+    {
+      "id": "composiohq-awesome-claude-skills-abstract-automation",
+      "name": "abstract-automation",
+      "description": "Automate Abstract tasks via Rube MCP (Composio). Always search tools first for current schemas.",
+      "category": "Composio 社区",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "ComposioHQ",
+      "install_path": ".claude/skills/abstract-automation/SKILL.md",
+      "source": {
+        "repo": "ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/abstract-automation/SKILL.md",
+        "path": "composio-skills/abstract-automation/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:20.250Z"
+      }
+    },
+    {
+      "id": "composiohq-awesome-claude-skills-abuselpdb-automation",
+      "name": "abuselpdb-automation",
+      "description": "Automate Abuselpdb tasks via Rube MCP (Composio). Always search tools first for current schemas.",
+      "category": "Composio 社区",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "ComposioHQ",
+      "install_path": ".claude/skills/abuselpdb-automation/SKILL.md",
+      "source": {
+        "repo": "ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/abuselpdb-automation/SKILL.md",
+        "path": "composio-skills/abuselpdb-automation/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:20.654Z"
+      }
+    },
+    {
+      "id": "composiohq-awesome-claude-skills-abyssale-automation",
+      "name": "abyssale-automation",
+      "description": "Automate Abyssale tasks via Rube MCP (Composio). Always search tools first for current schemas.",
+      "category": "Composio 社区",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "ComposioHQ",
+      "install_path": ".claude/skills/abyssale-automation/SKILL.md",
+      "source": {
+        "repo": "ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/abyssale-automation/SKILL.md",
+        "path": "composio-skills/abyssale-automation/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:21.037Z"
+      }
+    },
+    {
+      "id": "composiohq-awesome-claude-skills-accelo-automation",
+      "name": "accelo-automation",
+      "description": "Automate Accelo tasks via Rube MCP (Composio). Always search tools first for current schemas.",
+      "category": "Composio 社区",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "ComposioHQ",
+      "install_path": ".claude/skills/accelo-automation/SKILL.md",
+      "source": {
+        "repo": "ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/accelo-automation/SKILL.md",
+        "path": "composio-skills/accelo-automation/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:21.723Z"
+      }
+    },
+    {
+      "id": "composiohq-awesome-claude-skills-accredible-certificates-automation",
+      "name": "accredible-certificates-automation",
+      "description": "Automate Accredible Certificates tasks via Rube MCP (Composio). Always search tools first for current schemas.",
+      "category": "Composio 社区",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "ComposioHQ",
+      "install_path": ".claude/skills/accredible-certificates-automation/SKILL.md",
+      "source": {
+        "repo": "ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/accredible-certificates-automation/SKILL.md",
+        "path": "composio-skills/accredible-certificates-automation/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:22.202Z"
+      }
+    },
+    {
+      "id": "composiohq-awesome-claude-skills-acculynx-automation",
+      "name": "acculynx-automation",
+      "description": "Automate Acculynx tasks via Rube MCP (Composio). Always search tools first for current schemas.",
+      "category": "Composio 社区",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "ComposioHQ",
+      "install_path": ".claude/skills/acculynx-automation/SKILL.md",
+      "source": {
+        "repo": "ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/acculynx-automation/SKILL.md",
+        "path": "composio-skills/acculynx-automation/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:22.613Z"
+      }
+    },
+    {
+      "id": "composiohq-awesome-claude-skills-active-campaign-automation",
+      "name": "active-campaign-automation",
+      "description": "Automate ActiveCampaign tasks via Rube MCP (Composio). Always search tools first for current schemas.",
+      "category": "Composio 社区",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "ComposioHQ",
+      "install_path": ".claude/skills/active-campaign-automation/SKILL.md",
+      "source": {
+        "repo": "ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/active-campaign-automation/SKILL.md",
+        "path": "composio-skills/active-campaign-automation/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:23.118Z"
+      }
+    },
+    {
+      "id": "composiohq-awesome-claude-skills-addresszen-automation",
+      "name": "addresszen-automation",
+      "description": "Automate Addresszen tasks via Rube MCP (Composio). Always search tools first for current schemas.",
+      "category": "Composio 社区",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "ComposioHQ",
+      "install_path": ".claude/skills/addresszen-automation/SKILL.md",
+      "source": {
+        "repo": "ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/addresszen-automation/SKILL.md",
+        "path": "composio-skills/addresszen-automation/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:23.493Z"
+      }
+    },
+    {
+      "id": "composiohq-awesome-claude-skills-adobe-automation",
+      "name": "adobe-automation",
+      "description": "Automate Adobe tasks via Rube MCP (Composio). Always search tools first for current schemas.",
+      "category": "Composio 社区",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "ComposioHQ",
+      "install_path": ".claude/skills/adobe-automation/SKILL.md",
+      "source": {
+        "repo": "ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/adobe-automation/SKILL.md",
+        "path": "composio-skills/adobe-automation/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:23.882Z"
+      }
+    },
+    {
+      "id": "composiohq-awesome-claude-skills-adrapid-automation",
+      "name": "adrapid-automation",
+      "description": "Automate Adrapid tasks via Rube MCP (Composio). Always search tools first for current schemas.",
+      "category": "Composio 社区",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "ComposioHQ",
+      "install_path": ".claude/skills/adrapid-automation/SKILL.md",
+      "source": {
+        "repo": "ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/adrapid-automation/SKILL.md",
+        "path": "composio-skills/adrapid-automation/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:24.345Z"
+      }
+    },
+    {
+      "id": "composiohq-awesome-claude-skills-adyntel-automation",
+      "name": "adyntel-automation",
+      "description": "Automate Adyntel tasks via Rube MCP (Composio). Always search tools first for current schemas.",
+      "category": "Composio 社区",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "ComposioHQ",
+      "install_path": ".claude/skills/adyntel-automation/SKILL.md",
+      "source": {
+        "repo": "ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/adyntel-automation/SKILL.md",
+        "path": "composio-skills/adyntel-automation/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:24.783Z"
+      }
+    },
+    {
+      "id": "composiohq-awesome-claude-skills-aero-workflow-automation",
+      "name": "aero-workflow-automation",
+      "description": "Automate Aero Workflow tasks via Rube MCP (Composio). Always search tools first for current schemas.",
+      "category": "Composio 社区",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "ComposioHQ",
+      "install_path": ".claude/skills/aero-workflow-automation/SKILL.md",
+      "source": {
+        "repo": "ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/aero-workflow-automation/SKILL.md",
+        "path": "composio-skills/aero-workflow-automation/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:25.172Z"
+      }
+    },
+    {
+      "id": "composiohq-awesome-claude-skills-aeroleads-automation",
+      "name": "aeroleads-automation",
+      "description": "Automate Aeroleads tasks via Rube MCP (Composio). Always search tools first for current schemas.",
+      "category": "Composio 社区",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "ComposioHQ",
+      "install_path": ".claude/skills/aeroleads-automation/SKILL.md",
+      "source": {
+        "repo": "ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/aeroleads-automation/SKILL.md",
+        "path": "composio-skills/aeroleads-automation/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:25.565Z"
+      }
+    },
+    {
+      "id": "composiohq-awesome-claude-skills-affinda-automation",
+      "name": "affinda-automation",
+      "description": "Automate Affinda tasks via Rube MCP (Composio). Always search tools first for current schemas.",
+      "category": "Composio 社区",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "ComposioHQ",
+      "install_path": ".claude/skills/affinda-automation/SKILL.md",
+      "source": {
+        "repo": "ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/affinda-automation/SKILL.md",
+        "path": "composio-skills/affinda-automation/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:26.001Z"
+      }
+    },
+    {
+      "id": "composiohq-awesome-claude-skills-affinity-automation",
+      "name": "affinity-automation",
+      "description": "Automate Affinity tasks via Rube MCP (Composio). Always search tools first for current schemas.",
+      "category": "Composio 社区",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "ComposioHQ",
+      "install_path": ".claude/skills/affinity-automation/SKILL.md",
+      "source": {
+        "repo": "ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/affinity-automation/SKILL.md",
+        "path": "composio-skills/affinity-automation/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:26.391Z"
+      }
+    },
+    {
+      "id": "composiohq-awesome-claude-skills-agencyzoom-automation",
+      "name": "agencyzoom-automation",
+      "description": "Automate Agencyzoom tasks via Rube MCP (Composio). Always search tools first for current schemas.",
+      "category": "Composio 社区",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "ComposioHQ",
+      "install_path": ".claude/skills/agencyzoom-automation/SKILL.md",
+      "source": {
+        "repo": "ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/agencyzoom-automation/SKILL.md",
+        "path": "composio-skills/agencyzoom-automation/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:26.806Z"
+      }
+    },
+    {
+      "id": "composiohq-awesome-claude-skills-agent-mail-automation",
+      "name": "agent-mail-automation",
+      "description": "Automate Agent Mail tasks via Rube MCP (Composio). Always search tools first for current schemas.",
+      "category": "Composio 社区",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "ComposioHQ",
+      "install_path": ".claude/skills/agent-mail-automation/SKILL.md",
+      "source": {
+        "repo": "ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/agent-mail-automation/SKILL.md",
+        "path": "composio-skills/agent-mail-automation/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:27.189Z"
+      }
+    },
+    {
+      "id": "composiohq-awesome-claude-skills-agentql-automation",
+      "name": "agentql-automation",
+      "description": "Automate Agentql tasks via Rube MCP (Composio). Always search tools first for current schemas.",
+      "category": "Composio 社区",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "ComposioHQ",
+      "install_path": ".claude/skills/agentql-automation/SKILL.md",
+      "source": {
+        "repo": "ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/agentql-automation/SKILL.md",
+        "path": "composio-skills/agentql-automation/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:27.576Z"
+      }
+    },
+    {
+      "id": "composiohq-awesome-claude-skills-agenty-automation",
+      "name": "agenty-automation",
+      "description": "Automate Agenty tasks via Rube MCP (Composio). Always search tools first for current schemas.",
+      "category": "Composio 社区",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "ComposioHQ",
+      "install_path": ".claude/skills/agenty-automation/SKILL.md",
+      "source": {
+        "repo": "ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/agenty-automation/SKILL.md",
+        "path": "composio-skills/agenty-automation/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:28.035Z"
+      }
+    },
+    {
+      "id": "composiohq-awesome-claude-skills-agiled-automation",
+      "name": "agiled-automation",
+      "description": "Automate Agiled tasks via Rube MCP (Composio). Always search tools first for current schemas.",
+      "category": "Composio 社区",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "ComposioHQ",
+      "install_path": ".claude/skills/agiled-automation/SKILL.md",
+      "source": {
+        "repo": "ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/agiled-automation/SKILL.md",
+        "path": "composio-skills/agiled-automation/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:28.545Z"
+      }
+    },
+    {
+      "id": "composiohq-awesome-claude-skills-agility-cms-automation",
+      "name": "agility-cms-automation",
+      "description": "Automate Agility CMS tasks via Rube MCP (Composio). Always search tools first for current schemas.",
+      "category": "Composio 社区",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "ComposioHQ",
+      "install_path": ".claude/skills/agility-cms-automation/SKILL.md",
+      "source": {
+        "repo": "ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/agility-cms-automation/SKILL.md",
+        "path": "composio-skills/agility-cms-automation/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:28.912Z"
+      }
+    },
+    {
+      "id": "composiohq-awesome-claude-skills-ahrefs-automation",
+      "name": "Ahrefs Automation",
+      "description": "Automate SEO research with Ahrefs -- analyze backlink profiles, research keywords, track domain metrics history, audit organic rankings, and perform batch URL analysis through the Composio Ahrefs integration.",
+      "category": "Composio 社区",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "ComposioHQ",
+      "install_path": ".claude/skills/ahrefs-automation/SKILL.md",
+      "source": {
+        "repo": "ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/ahrefs-automation/SKILL.md",
+        "path": "composio-skills/ahrefs-automation/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:29.359Z"
+      }
+    },
+    {
+      "id": "composiohq-awesome-claude-skills-ai-ml-api-automation",
+      "name": "ai-ml-api-automation",
+      "description": "Automate AI ML API tasks via Rube MCP (Composio). Always search tools first for current schemas.",
+      "category": "Composio 社区",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "ComposioHQ",
+      "install_path": ".claude/skills/ai-ml-api-automation/SKILL.md",
+      "source": {
+        "repo": "ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/ai-ml-api-automation/SKILL.md",
+        "path": "composio-skills/ai-ml-api-automation/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:29.780Z"
+      }
+    },
+    {
+      "id": "composiohq-awesome-claude-skills-aivoov-automation",
+      "name": "aivoov-automation",
+      "description": "Automate Aivoov tasks via Rube MCP (Composio). Always search tools first for current schemas.",
+      "category": "Composio 社区",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "ComposioHQ",
+      "install_path": ".claude/skills/aivoov-automation/SKILL.md",
+      "source": {
+        "repo": "ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/aivoov-automation/SKILL.md",
+        "path": "composio-skills/aivoov-automation/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:30.595Z"
+      }
+    },
+    {
+      "id": "composiohq-awesome-claude-skills-alchemy-automation",
+      "name": "alchemy-automation",
+      "description": "Automate Alchemy tasks via Rube MCP (Composio). Always search tools first for current schemas.",
+      "category": "Composio 社区",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "ComposioHQ",
+      "install_path": ".claude/skills/alchemy-automation/SKILL.md",
+      "source": {
+        "repo": "ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/alchemy-automation/SKILL.md",
+        "path": "composio-skills/alchemy-automation/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:30.969Z"
+      }
+    },
+    {
+      "id": "composiohq-awesome-claude-skills-algodocs-automation",
+      "name": "algodocs-automation",
+      "description": "Automate Algodocs tasks via Rube MCP (Composio). Always search tools first for current schemas.",
+      "category": "Composio 社区",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "ComposioHQ",
+      "install_path": ".claude/skills/algodocs-automation/SKILL.md",
+      "source": {
+        "repo": "ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/algodocs-automation/SKILL.md",
+        "path": "composio-skills/algodocs-automation/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:31.365Z"
+      }
+    },
+    {
+      "id": "composiohq-awesome-claude-skills-algolia-automation",
+      "name": "algolia-automation",
+      "description": "Automate Algolia tasks via Rube MCP (Composio). Always search tools first for current schemas.",
+      "category": "Composio 社区",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "ComposioHQ",
+      "install_path": ".claude/skills/algolia-automation/SKILL.md",
+      "source": {
+        "repo": "ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/algolia-automation/SKILL.md",
+        "path": "composio-skills/algolia-automation/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:31.806Z"
+      }
+    },
+    {
+      "id": "composiohq-awesome-claude-skills-all-images-ai-automation",
+      "name": "all-images-ai-automation",
+      "description": "Automate All Images AI tasks via Rube MCP (Composio). Always search tools first for current schemas.",
+      "category": "Composio 社区",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "ComposioHQ",
+      "install_path": ".claude/skills/all-images-ai-automation/SKILL.md",
+      "source": {
+        "repo": "ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/all-images-ai-automation/SKILL.md",
+        "path": "composio-skills/all-images-ai-automation/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:32.183Z"
+      }
+    },
+    {
+      "id": "composiohq-awesome-claude-skills-alpha-vantage-automation",
+      "name": "alpha-vantage-automation",
+      "description": "Automate Alpha Vantage tasks via Rube MCP (Composio). Always search tools first for current schemas.",
+      "category": "Composio 社区",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "ComposioHQ",
+      "install_path": ".claude/skills/alpha-vantage-automation/SKILL.md",
+      "source": {
+        "repo": "ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/alpha-vantage-automation/SKILL.md",
+        "path": "composio-skills/alpha-vantage-automation/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:32.645Z"
+      }
+    },
+    {
+      "id": "composiohq-awesome-claude-skills-altoviz-automation",
+      "name": "altoviz-automation",
+      "description": "Automate Altoviz tasks via Rube MCP (Composio). Always search tools first for current schemas.",
+      "category": "Composio 社区",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "ComposioHQ",
+      "install_path": ".claude/skills/altoviz-automation/SKILL.md",
+      "source": {
+        "repo": "ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/altoviz-automation/SKILL.md",
+        "path": "composio-skills/altoviz-automation/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:33.027Z"
+      }
+    },
+    {
+      "id": "composiohq-awesome-claude-skills-alttext-ai-automation",
+      "name": "alttext-ai-automation",
+      "description": "Automate Alttext AI tasks via Rube MCP (Composio). Always search tools first for current schemas.",
+      "category": "Composio 社区",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "ComposioHQ",
+      "install_path": ".claude/skills/alttext-ai-automation/SKILL.md",
+      "source": {
+        "repo": "ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/alttext-ai-automation/SKILL.md",
+        "path": "composio-skills/alttext-ai-automation/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:33.463Z"
+      }
+    },
+    {
+      "id": "composiohq-awesome-claude-skills-amara-automation",
+      "name": "amara-automation",
+      "description": "Automate Amara tasks via Rube MCP (Composio). Always search tools first for current schemas.",
+      "category": "Composio 社区",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "ComposioHQ",
+      "install_path": ".claude/skills/amara-automation/SKILL.md",
+      "source": {
+        "repo": "ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/amara-automation/SKILL.md",
+        "path": "composio-skills/amara-automation/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:33.897Z"
+      }
+    },
+    {
+      "id": "composiohq-awesome-claude-skills-amazon-automation",
+      "name": "amazon-automation",
+      "description": "Automate Amazon tasks via Rube MCP (Composio). Always search tools first for current schemas.",
+      "category": "Composio 社区",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "ComposioHQ",
+      "install_path": ".claude/skills/amazon-automation/SKILL.md",
+      "source": {
+        "repo": "ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/amazon-automation/SKILL.md",
+        "path": "composio-skills/amazon-automation/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:34.302Z"
+      }
+    },
+    {
+      "id": "composiohq-awesome-claude-skills-ambee-automation",
+      "name": "ambee-automation",
+      "description": "Automate Ambee tasks via Rube MCP (Composio). Always search tools first for current schemas.",
+      "category": "Composio 社区",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "ComposioHQ",
+      "install_path": ".claude/skills/ambee-automation/SKILL.md",
+      "source": {
+        "repo": "ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/ambee-automation/SKILL.md",
+        "path": "composio-skills/ambee-automation/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:34.696Z"
+      }
+    },
+    {
+      "id": "composiohq-awesome-claude-skills-ambient-weather-automation",
+      "name": "ambient-weather-automation",
+      "description": "Automate Ambient Weather tasks via Rube MCP (Composio). Always search tools first for current schemas.",
+      "category": "Composio 社区",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "ComposioHQ",
+      "install_path": ".claude/skills/ambient-weather-automation/SKILL.md",
+      "source": {
+        "repo": "ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/ambient-weather-automation/SKILL.md",
+        "path": "composio-skills/ambient-weather-automation/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:35.063Z"
+      }
+    },
+    {
+      "id": "composiohq-awesome-claude-skills-amcards-automation",
+      "name": "amcards-automation",
+      "description": "Automate Amcards tasks via Rube MCP (Composio). Always search tools first for current schemas.",
+      "category": "Composio 社区",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "ComposioHQ",
+      "install_path": ".claude/skills/amcards-automation/SKILL.md",
+      "source": {
+        "repo": "ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/amcards-automation/SKILL.md",
+        "path": "composio-skills/amcards-automation/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:35.431Z"
+      }
+    },
+    {
+      "id": "composiohq-awesome-claude-skills-anchor-browser-automation",
+      "name": "anchor-browser-automation",
+      "description": "Automate Anchor Browser tasks via Rube MCP (Composio). Always search tools first for current schemas.",
+      "category": "Composio 社区",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "ComposioHQ",
+      "install_path": ".claude/skills/anchor-browser-automation/SKILL.md",
+      "source": {
+        "repo": "ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/anchor-browser-automation/SKILL.md",
+        "path": "composio-skills/anchor-browser-automation/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:35.835Z"
+      }
+    },
+    {
+      "id": "composiohq-awesome-claude-skills-anonyflow-automation",
+      "name": "anonyflow-automation",
+      "description": "Automate Anonyflow tasks via Rube MCP (Composio). Always search tools first for current schemas.",
+      "category": "Composio 社区",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "ComposioHQ",
+      "install_path": ".claude/skills/anonyflow-automation/SKILL.md",
+      "source": {
+        "repo": "ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/anonyflow-automation/SKILL.md",
+        "path": "composio-skills/anonyflow-automation/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:36.211Z"
+      }
+    },
+    {
+      "id": "composiohq-awesome-claude-skills-anthropic-administrator-automation",
+      "name": "anthropic_administrator-automation",
+      "description": "Automate Anthropic Admin tasks via Rube MCP (Composio): API keys, usage, workspaces, and organization management. Always search tools first for current schemas.",
+      "category": "Composio 社区",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "ComposioHQ",
+      "install_path": ".claude/skills/anthropic_administrator-automation/SKILL.md",
+      "source": {
+        "repo": "ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/anthropic_administrator-automation/SKILL.md",
+        "path": "composio-skills/anthropic_administrator-automation/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:37.023Z"
+      }
+    },
+    {
+      "id": "composiohq-awesome-claude-skills-apaleo-automation",
+      "name": "apaleo-automation",
+      "description": "Automate Apaleo tasks via Rube MCP (Composio). Always search tools first for current schemas.",
+      "category": "Composio 社区",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "ComposioHQ",
+      "install_path": ".claude/skills/apaleo-automation/SKILL.md",
+      "source": {
+        "repo": "ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/apaleo-automation/SKILL.md",
+        "path": "composio-skills/apaleo-automation/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:37.468Z"
+      }
+    },
+    {
+      "id": "composiohq-awesome-claude-skills-apex27-automation",
+      "name": "apex27-automation",
+      "description": "Automate Apex27 tasks via Rube MCP (Composio). Always search tools first for current schemas.",
+      "category": "Composio 社区",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "ComposioHQ",
+      "install_path": ".claude/skills/apex27-automation/SKILL.md",
+      "source": {
+        "repo": "ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/apex27-automation/SKILL.md",
+        "path": "composio-skills/apex27-automation/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:37.902Z"
+      }
+    },
+    {
+      "id": "composiohq-awesome-claude-skills-api-bible-automation",
+      "name": "api-bible-automation",
+      "description": "Automate API Bible tasks via Rube MCP (Composio). Always search tools first for current schemas.",
+      "category": "Composio 社区",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "ComposioHQ",
+      "install_path": ".claude/skills/api-bible-automation/SKILL.md",
+      "source": {
+        "repo": "ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/api-bible-automation/SKILL.md",
+        "path": "composio-skills/api-bible-automation/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:38.354Z"
+      }
+    },
+    {
+      "id": "composiohq-awesome-claude-skills-api-labz-automation",
+      "name": "api-labz-automation",
+      "description": "Automate API Labz tasks via Rube MCP (Composio). Always search tools first for current schemas.",
+      "category": "Composio 社区",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "ComposioHQ",
+      "install_path": ".claude/skills/api-labz-automation/SKILL.md",
+      "source": {
+        "repo": "ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/api-labz-automation/SKILL.md",
+        "path": "composio-skills/api-labz-automation/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:38.748Z"
+      }
+    },
+    {
+      "id": "composiohq-awesome-claude-skills-api-ninjas-automation",
+      "name": "api-ninjas-automation",
+      "description": "Automate API Ninjas tasks via Rube MCP (Composio). Always search tools first for current schemas.",
+      "category": "Composio 社区",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "ComposioHQ",
+      "install_path": ".claude/skills/api-ninjas-automation/SKILL.md",
+      "source": {
+        "repo": "ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/api-ninjas-automation/SKILL.md",
+        "path": "composio-skills/api-ninjas-automation/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:39.151Z"
+      }
+    },
+    {
+      "id": "composiohq-awesome-claude-skills-api-sports-automation",
+      "name": "api-sports-automation",
+      "description": "Automate API Sports tasks via Rube MCP (Composio). Always search tools first for current schemas.",
+      "category": "Composio 社区",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "ComposioHQ",
+      "install_path": ".claude/skills/api-sports-automation/SKILL.md",
+      "source": {
+        "repo": "ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/api-sports-automation/SKILL.md",
+        "path": "composio-skills/api-sports-automation/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:39.615Z"
+      }
+    },
+    {
+      "id": "composiohq-awesome-claude-skills-api2pdf-automation",
+      "name": "api2pdf-automation",
+      "description": "Automate Api2pdf tasks via Rube MCP (Composio). Always search tools first for current schemas.",
+      "category": "Composio 社区",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "ComposioHQ",
+      "install_path": ".claude/skills/api2pdf-automation/SKILL.md",
+      "source": {
+        "repo": "ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/api2pdf-automation/SKILL.md",
+        "path": "composio-skills/api2pdf-automation/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:40.039Z"
+      }
+    },
+    {
+      "id": "composiohq-awesome-claude-skills-apiflash-automation",
+      "name": "apiflash-automation",
+      "description": "Automate Apiflash tasks via Rube MCP (Composio). Always search tools first for current schemas.",
+      "category": "Composio 社区",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "ComposioHQ",
+      "install_path": ".claude/skills/apiflash-automation/SKILL.md",
+      "source": {
+        "repo": "ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/apiflash-automation/SKILL.md",
+        "path": "composio-skills/apiflash-automation/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:40.537Z"
+      }
+    },
+    {
+      "id": "composiohq-awesome-claude-skills-apify-automation",
+      "name": "Apify Automation",
+      "description": "Automate web scraping and data extraction with Apify -- run Actors, manage datasets, create reusable tasks, and retrieve crawl results through the Composio Apify integration.",
+      "category": "Composio 社区",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "ComposioHQ",
+      "install_path": ".claude/skills/apify-automation/SKILL.md",
+      "source": {
+        "repo": "ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/apify-automation/SKILL.md",
+        "path": "composio-skills/apify-automation/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:41.025Z"
+      }
+    },
+    {
+      "id": "composiohq-awesome-claude-skills-apilio-automation",
+      "name": "apilio-automation",
+      "description": "Automate Apilio tasks via Rube MCP (Composio). Always search tools first for current schemas.",
+      "category": "Composio 社区",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "ComposioHQ",
+      "install_path": ".claude/skills/apilio-automation/SKILL.md",
+      "source": {
+        "repo": "ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/apilio-automation/SKILL.md",
+        "path": "composio-skills/apilio-automation/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:41.433Z"
+      }
+    },
+    {
+      "id": "composiohq-awesome-claude-skills-apipie-ai-automation",
+      "name": "apipie-ai-automation",
+      "description": "Automate Apipie AI tasks via Rube MCP (Composio). Always search tools first for current schemas.",
+      "category": "Composio 社区",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "ComposioHQ",
+      "install_path": ".claude/skills/apipie-ai-automation/SKILL.md",
+      "source": {
+        "repo": "ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/apipie-ai-automation/SKILL.md",
+        "path": "composio-skills/apipie-ai-automation/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:41.968Z"
+      }
+    },
+    {
+      "id": "composiohq-awesome-claude-skills-apitemplate-io-automation",
+      "name": "apitemplate-io-automation",
+      "description": "Automate Apitemplate IO tasks via Rube MCP (Composio). Always search tools first for current schemas.",
+      "category": "Composio 社区",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "ComposioHQ",
+      "install_path": ".claude/skills/apitemplate-io-automation/SKILL.md",
+      "source": {
+        "repo": "ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/apitemplate-io-automation/SKILL.md",
+        "path": "composio-skills/apitemplate-io-automation/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:42.402Z"
+      }
+    },
+    {
+      "id": "composiohq-awesome-claude-skills-artifacts-builder",
+      "name": "artifacts-builder",
+      "description": "Suite of tools for creating elaborate, multi-component claude.ai HTML artifacts using modern frontend web technologies (React, Tailwind CSS, shadcn/ui). Use for complex artifacts requiring state management, routing, or shadcn/ui components - not for simple single-file HTML/JSX artifacts.",
+      "category": "Composio 社区",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "ComposioHQ",
+      "install_path": ".claude/skills/artifacts-builder/SKILL.md",
+      "source": {
+        "repo": "ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/artifacts-builder/SKILL.md",
+        "path": "artifacts-builder/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:16.506Z"
+      }
+    },
+    {
+      "id": "composiohq-awesome-claude-skills-brand-guidelines",
+      "name": "brand-guidelines",
+      "description": "Applies Anthropic's official brand colors and typography to any sort of artifact that may benefit from having Anthropic's look-and-feel. Use it when brand colors or style guidelines, visual formatting, or company design standards apply.",
+      "category": "Composio 社区",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "ComposioHQ",
+      "install_path": ".claude/skills/brand-guidelines/SKILL.md",
+      "source": {
+        "repo": "ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/brand-guidelines/SKILL.md",
+        "path": "brand-guidelines/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:16.975Z"
+      }
+    },
+    {
+      "id": "composiohq-awesome-claude-skills-canvas-design",
+      "name": "canvas-design",
+      "description": "Create beautiful visual art in .png and .pdf documents using design philosophy. You should use this skill when the user asks to create a poster, piece of art, design, or other static piece. Create original visual designs, never copying existing artists' work to avoid copyright violations.",
+      "category": "Composio 社区",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "ComposioHQ",
+      "install_path": ".claude/skills/canvas-design/SKILL.md",
+      "source": {
+        "repo": "ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/canvas-design/SKILL.md",
+        "path": "canvas-design/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:17.392Z"
+      }
+    },
+    {
+      "id": "composiohq-awesome-claude-skills-changelog-generator",
+      "name": "changelog-generator",
+      "description": "Automatically creates user-facing changelogs from git commits by analyzing commit history, categorizing changes, and transforming technical commits into clear, customer-friendly release notes. Turns hours of manual changelog writing into minutes of automated generation.",
+      "category": "Composio 社区",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "ComposioHQ",
+      "install_path": ".claude/skills/changelog-generator/SKILL.md",
+      "source": {
+        "repo": "ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/changelog-generator/SKILL.md",
+        "path": "changelog-generator/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:17.839Z"
+      }
+    },
+    {
+      "id": "composiohq-awesome-claude-skills-competitive-ads-extractor",
+      "name": "competitive-ads-extractor",
+      "description": "Extracts and analyzes competitors' ads from ad libraries (Facebook, LinkedIn, etc.) to understand what messaging, problems, and creative approaches are working. Helps inspire and improve your own ad campaigns.",
+      "category": "Composio 社区",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "ComposioHQ",
+      "install_path": ".claude/skills/competitive-ads-extractor/SKILL.md",
+      "source": {
+        "repo": "ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/competitive-ads-extractor/SKILL.md",
+        "path": "competitive-ads-extractor/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:18.276Z"
+      }
+    },
+    {
+      "id": "jimliu-baoyu-skills-baoyu-article-illustrator",
+      "name": "baoyu-article-illustrator",
+      "description": "Analyzes article structure, identifies positions requiring visual aids, generates illustrations with Type × Style × Palette three-dimension approach. Use when user asks to \"illustrate article\", \"add images\", \"generate images for article\", or \"为文章配图\".",
+      "category": "社区精选",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "JimLiu",
+      "install_path": ".claude/skills/baoyu-article-illustrator/SKILL.md",
+      "source": {
+        "repo": "JimLiu/baoyu-skills",
+        "url": "https://github.com/JimLiu/baoyu-skills/blob/main/skills/baoyu-article-illustrator/SKILL.md",
+        "path": "skills/baoyu-article-illustrator/SKILL.md",
+        "branch": "main",
+        "discovered_at": "2026-04-27T09:24:54.359Z"
+      }
+    },
+    {
+      "id": "jimliu-baoyu-skills-baoyu-comic",
+      "name": "baoyu-comic",
+      "description": "Knowledge comic creator supporting multiple art styles and tones. Creates original educational comics with detailed panel layouts and sequential image generation. Use when user asks to create \"知识漫画\", \"教育漫画\", \"biography comic\", \"tutorial comic\", or \"Logicomix-style comic\".",
+      "category": "社区精选",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "JimLiu",
+      "install_path": ".claude/skills/baoyu-comic/SKILL.md",
+      "source": {
+        "repo": "JimLiu/baoyu-skills",
+        "url": "https://github.com/JimLiu/baoyu-skills/blob/main/skills/baoyu-comic/SKILL.md",
+        "path": "skills/baoyu-comic/SKILL.md",
+        "branch": "main",
+        "discovered_at": "2026-04-27T09:24:54.825Z"
+      }
+    },
+    {
+      "id": "jimliu-baoyu-skills-baoyu-compress-image",
+      "name": "baoyu-compress-image",
+      "description": "Compresses images to WebP (default) or PNG with automatic tool selection. Use when user asks to \"compress image\", \"optimize image\", \"convert to webp\", or reduce image file size.",
+      "category": "社区精选",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "JimLiu",
+      "install_path": ".claude/skills/baoyu-compress-image/SKILL.md",
+      "source": {
+        "repo": "JimLiu/baoyu-skills",
+        "url": "https://github.com/JimLiu/baoyu-skills/blob/main/skills/baoyu-compress-image/SKILL.md",
+        "path": "skills/baoyu-compress-image/SKILL.md",
+        "branch": "main",
+        "discovered_at": "2026-04-27T09:24:55.244Z"
+      }
+    },
+    {
+      "id": "jimliu-baoyu-skills-baoyu-cover-image",
+      "name": "baoyu-cover-image",
+      "description": "Generates article cover images with 5 dimensions (type, palette, rendering, text, mood) combining 11 color palettes and 7 rendering styles. Supports cinematic (2.35:1), widescreen (16:9), and square (1:1) aspects. Use when user asks to \"generate cover image\", \"create article cover\", or \"make cover\".",
+      "category": "社区精选",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "JimLiu",
+      "install_path": ".claude/skills/baoyu-cover-image/SKILL.md",
+      "source": {
+        "repo": "JimLiu/baoyu-skills",
+        "url": "https://github.com/JimLiu/baoyu-skills/blob/main/skills/baoyu-cover-image/SKILL.md",
+        "path": "skills/baoyu-cover-image/SKILL.md",
+        "branch": "main",
+        "discovered_at": "2026-04-27T09:24:55.600Z"
+      }
+    },
+    {
+      "id": "jimliu-baoyu-skills-baoyu-danger-gemini-web",
+      "name": "baoyu-danger-gemini-web",
+      "description": "Generates images and text via reverse-engineered Gemini Web API. Supports text generation, image generation from prompts, reference images for vision input, and multi-turn conversations. Use when other skills need image generation backend, or when user requests \"generate image with Gemini\", \"Gemini text generation\", or needs vision-capable AI generation.",
+      "category": "社区精选",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "JimLiu",
+      "install_path": ".claude/skills/baoyu-danger-gemini-web/SKILL.md",
+      "source": {
+        "repo": "JimLiu/baoyu-skills",
+        "url": "https://github.com/JimLiu/baoyu-skills/blob/main/skills/baoyu-danger-gemini-web/SKILL.md",
+        "path": "skills/baoyu-danger-gemini-web/SKILL.md",
+        "branch": "main",
+        "discovered_at": "2026-04-27T09:24:55.980Z"
+      }
+    },
+    {
+      "id": "jimliu-baoyu-skills-baoyu-danger-x-to-markdown",
+      "name": "baoyu-danger-x-to-markdown",
+      "description": "Converts X (Twitter) tweets and articles to markdown with YAML front matter. Uses reverse-engineered API requiring user consent. Use when user mentions \"X to markdown\", \"tweet to markdown\", \"save tweet\", or provides x.com/twitter.com URLs for conversion.",
+      "category": "社区精选",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "JimLiu",
+      "install_path": ".claude/skills/baoyu-danger-x-to-markdown/SKILL.md",
+      "source": {
+        "repo": "JimLiu/baoyu-skills",
+        "url": "https://github.com/JimLiu/baoyu-skills/blob/main/skills/baoyu-danger-x-to-markdown/SKILL.md",
+        "path": "skills/baoyu-danger-x-to-markdown/SKILL.md",
+        "branch": "main",
+        "discovered_at": "2026-04-27T09:24:56.414Z"
+      }
+    },
+    {
+      "id": "jimliu-baoyu-skills-baoyu-diagram",
+      "name": "baoyu-diagram",
+      "description": "Create professional, dark-themed SVG diagrams of any type — architecture diagrams, flowcharts, sequence diagrams, structural diagrams, mind maps, timelines, illustrative/conceptual diagrams, and more. Use this skill whenever the user asks for any kind of technical or conceptual diagram, visualization of a system, process flow, data flow, component relationship, network topology, decision tree, org chart, state machine, or any visual representation of structure/logic/process. Also trigger when th",
+      "category": "社区精选",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "JimLiu",
+      "install_path": ".claude/skills/baoyu-diagram/SKILL.md",
+      "source": {
+        "repo": "JimLiu/baoyu-skills",
+        "url": "https://github.com/JimLiu/baoyu-skills/blob/main/skills/baoyu-diagram/SKILL.md",
+        "path": "skills/baoyu-diagram/SKILL.md",
+        "branch": "main",
+        "discovered_at": "2026-04-27T09:24:56.797Z"
+      }
+    },
+    {
+      "id": "jimliu-baoyu-skills-baoyu-format-markdown",
+      "name": "baoyu-format-markdown",
+      "description": "Formats plain text or markdown files with frontmatter, titles, summaries, headings, bold, lists, and code blocks. Use when user asks to \"format markdown\", \"beautify article\", \"add formatting\", or improve article layout. Outputs to {filename}-formatted.md.",
+      "category": "社区精选",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "JimLiu",
+      "install_path": ".claude/skills/baoyu-format-markdown/SKILL.md",
+      "source": {
+        "repo": "JimLiu/baoyu-skills",
+        "url": "https://github.com/JimLiu/baoyu-skills/blob/main/skills/baoyu-format-markdown/SKILL.md",
+        "path": "skills/baoyu-format-markdown/SKILL.md",
+        "branch": "main",
+        "discovered_at": "2026-04-27T09:24:57.154Z"
+      }
+    },
+    {
+      "id": "jimliu-baoyu-skills-baoyu-image-cards",
+      "name": "baoyu-image-cards",
+      "description": "Generates infographic image card series with 12 visual styles, 8 layouts, and 3 color palettes. Breaks content into 1-10 cartoon-style image cards optimized for social media engagement. Use when user mentions \"小红书图片\", \"小红书种草\", \"小绿书\", \"微信图文\", \"微信贴图\", \"image cards\", \"图片卡片\", or wants social media infographic series.",
+      "category": "社区精选",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "JimLiu",
+      "install_path": ".claude/skills/baoyu-image-cards/SKILL.md",
+      "source": {
+        "repo": "JimLiu/baoyu-skills",
+        "url": "https://github.com/JimLiu/baoyu-skills/blob/main/skills/baoyu-image-cards/SKILL.md",
+        "path": "skills/baoyu-image-cards/SKILL.md",
+        "branch": "main",
+        "discovered_at": "2026-04-27T09:24:57.542Z"
+      }
+    },
+    {
+      "id": "jimliu-baoyu-skills-baoyu-image-gen",
+      "name": "baoyu-image-gen",
+      "description": "[Deprecated: use baoyu-imagine] AI image generation with OpenAI, Azure OpenAI, Google, OpenRouter, DashScope, Z.AI GLM-Image, MiniMax, Jimeng, Seedream and Replicate APIs. Supports text-to-image, reference images, aspect ratios, and batch generation from saved prompt files. Sequential by default; use batch parallel generation when the user already has multiple prompts or wants stable multi-image throughput. Use when user asks to generate, create, or draw images.",
+      "category": "社区精选",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "JimLiu",
+      "install_path": ".claude/skills/baoyu-image-gen/SKILL.md",
+      "source": {
+        "repo": "JimLiu/baoyu-skills",
+        "url": "https://github.com/JimLiu/baoyu-skills/blob/main/skills/baoyu-image-gen/SKILL.md",
+        "path": "skills/baoyu-image-gen/SKILL.md",
+        "branch": "main",
+        "discovered_at": "2026-04-27T09:24:58.052Z"
+      }
+    },
+    {
+      "id": "jimliu-baoyu-skills-baoyu-imagine",
+      "name": "baoyu-imagine",
+      "description": "AI image generation with OpenAI GPT Image 2, Azure OpenAI, Google, OpenRouter, DashScope, Z.AI GLM-Image, MiniMax, Jimeng, Seedream and Replicate APIs. Supports text-to-image, reference images, aspect ratios, and batch generation from saved prompt files. Sequential by default; use batch parallel generation when the user already has multiple prompts or wants stable multi-image throughput. Use when user asks to generate, create, or draw images.",
+      "category": "社区精选",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "JimLiu",
+      "install_path": ".claude/skills/baoyu-imagine/SKILL.md",
+      "source": {
+        "repo": "JimLiu/baoyu-skills",
+        "url": "https://github.com/JimLiu/baoyu-skills/blob/main/skills/baoyu-imagine/SKILL.md",
+        "path": "skills/baoyu-imagine/SKILL.md",
+        "branch": "main",
+        "discovered_at": "2026-04-27T09:24:58.430Z"
+      }
+    },
+    {
+      "id": "jimliu-baoyu-skills-baoyu-infographic",
+      "name": "baoyu-infographic",
+      "description": "Generate professional infographics with 21 layout types and 21 visual styles. Analyzes content, recommends layout×style combinations, and generates publication-ready infographics. Use when user asks to create \"infographic\", \"信息图\", \"visual summary\", \"可视化\", or \"高密度信息大图\".",
+      "category": "社区精选",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "JimLiu",
+      "install_path": ".claude/skills/baoyu-infographic/SKILL.md",
+      "source": {
+        "repo": "JimLiu/baoyu-skills",
+        "url": "https://github.com/JimLiu/baoyu-skills/blob/main/skills/baoyu-infographic/SKILL.md",
+        "path": "skills/baoyu-infographic/SKILL.md",
+        "branch": "main",
+        "discovered_at": "2026-04-27T09:24:58.828Z"
+      }
+    },
+    {
+      "id": "jimliu-baoyu-skills-baoyu-markdown-to-html",
+      "name": "baoyu-markdown-to-html",
+      "description": "Converts Markdown to styled HTML with WeChat-compatible themes. Supports code highlighting, math, PlantUML, footnotes, alerts, infographics, and optional bottom citations for external links. Use when user asks for \"markdown to html\", \"convert md to html\", \"md 转 html\", \"微信外链转底部引用\", or needs styled HTML output from markdown.",
+      "category": "社区精选",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "JimLiu",
+      "install_path": ".claude/skills/baoyu-markdown-to-html/SKILL.md",
+      "source": {
+        "repo": "JimLiu/baoyu-skills",
+        "url": "https://github.com/JimLiu/baoyu-skills/blob/main/skills/baoyu-markdown-to-html/SKILL.md",
+        "path": "skills/baoyu-markdown-to-html/SKILL.md",
+        "branch": "main",
+        "discovered_at": "2026-04-27T09:24:59.292Z"
+      }
+    },
+    {
+      "id": "jimliu-baoyu-skills-baoyu-post-to-wechat",
+      "name": "baoyu-post-to-wechat",
+      "description": "Posts content to WeChat Official Account (微信公众号) via API or Chrome CDP. Supports article posting (文章) with HTML, markdown, or plain text input, and image-text posting (贴图, formerly 图文) with multiple images. Markdown article workflows default to converting ordinary external links into bottom citations for WeChat-friendly output. Use when user mentions \"发布公众号\", \"post to wechat\", \"微信公众号\", or \"贴图/图文/文章\".",
+      "category": "社区精选",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "JimLiu",
+      "install_path": ".claude/skills/baoyu-post-to-wechat/SKILL.md",
+      "source": {
+        "repo": "JimLiu/baoyu-skills",
+        "url": "https://github.com/JimLiu/baoyu-skills/blob/main/skills/baoyu-post-to-wechat/SKILL.md",
+        "path": "skills/baoyu-post-to-wechat/SKILL.md",
+        "branch": "main",
+        "discovered_at": "2026-04-27T09:24:59.663Z"
+      }
+    },
+    {
+      "id": "jimliu-baoyu-skills-baoyu-post-to-weibo",
+      "name": "baoyu-post-to-weibo",
+      "description": "Posts content to Weibo (微博). Supports regular posts with text, images, and videos, and headline articles (头条文章) with Markdown input via Chrome CDP. Use when user asks to \"post to Weibo\", \"发微博\", \"发布微博\", \"publish to Weibo\", \"share on Weibo\", \"写微博\", or \"微博头条文章\".",
+      "category": "社区精选",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "JimLiu",
+      "install_path": ".claude/skills/baoyu-post-to-weibo/SKILL.md",
+      "source": {
+        "repo": "JimLiu/baoyu-skills",
+        "url": "https://github.com/JimLiu/baoyu-skills/blob/main/skills/baoyu-post-to-weibo/SKILL.md",
+        "path": "skills/baoyu-post-to-weibo/SKILL.md",
+        "branch": "main",
+        "discovered_at": "2026-04-27T09:25:00.029Z"
+      }
+    },
+    {
+      "id": "jimliu-baoyu-skills-baoyu-post-to-x",
+      "name": "baoyu-post-to-x",
+      "description": "Posts content and articles to X (Twitter). Supports regular posts with images/videos and X Articles (long-form Markdown). Uses real Chrome with CDP to bypass anti-automation. Use when user asks to \"post to X\", \"tweet\", \"publish to Twitter\", or \"share on X\".",
+      "category": "社区精选",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "JimLiu",
+      "install_path": ".claude/skills/baoyu-post-to-x/SKILL.md",
+      "source": {
+        "repo": "JimLiu/baoyu-skills",
+        "url": "https://github.com/JimLiu/baoyu-skills/blob/main/skills/baoyu-post-to-x/SKILL.md",
+        "path": "skills/baoyu-post-to-x/SKILL.md",
+        "branch": "main",
+        "discovered_at": "2026-04-27T09:25:00.424Z"
+      }
+    },
+    {
+      "id": "jimliu-baoyu-skills-baoyu-slide-deck",
+      "name": "baoyu-slide-deck",
+      "description": "Generates professional slide deck images from content. Creates outlines with style instructions, then generates individual slide images. Use when user asks to \"create slides\", \"make a presentation\", \"generate deck\", \"slide deck\", or \"PPT\".",
+      "category": "社区精选",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "JimLiu",
+      "install_path": ".claude/skills/baoyu-slide-deck/SKILL.md",
+      "source": {
+        "repo": "JimLiu/baoyu-skills",
+        "url": "https://github.com/JimLiu/baoyu-skills/blob/main/skills/baoyu-slide-deck/SKILL.md",
+        "path": "skills/baoyu-slide-deck/SKILL.md",
+        "branch": "main",
+        "discovered_at": "2026-04-27T09:25:00.952Z"
+      }
+    },
+    {
+      "id": "jimliu-baoyu-skills-baoyu-translate",
+      "name": "baoyu-translate",
+      "description": "Translates articles and documents between languages with three modes - quick (direct), normal (analyze then translate), and refined (analyze, translate, review, polish). Supports custom glossaries and terminology consistency via EXTEND.md. Use when user asks to \"translate\", \"翻译\", \"精翻\", \"translate article\", \"translate to Chinese/English\", \"改成中文\", \"改成英文\", \"convert to Chinese\", \"localize\", \"本地化\", or needs any document translation. Also triggers for \"refined translation\", \"精细翻译\", \"proofread translat",
+      "category": "社区精选",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "JimLiu",
+      "install_path": ".claude/skills/baoyu-translate/SKILL.md",
+      "source": {
+        "repo": "JimLiu/baoyu-skills",
+        "url": "https://github.com/JimLiu/baoyu-skills/blob/main/skills/baoyu-translate/SKILL.md",
+        "path": "skills/baoyu-translate/SKILL.md",
+        "branch": "main",
+        "discovered_at": "2026-04-27T09:25:01.350Z"
+      }
+    },
+    {
+      "id": "jimliu-baoyu-skills-baoyu-url-to-markdown",
+      "name": "baoyu-url-to-markdown",
+      "description": "Fetch any URL and convert to markdown using baoyu-fetch CLI (Chrome CDP with site-specific adapters). Built-in adapters for X/Twitter, YouTube transcripts, Hacker News threads, and generic pages via Defuddle. Handles login/CAPTCHA via interaction wait modes. Use when user wants to save a webpage as markdown.",
+      "category": "社区精选",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "JimLiu",
+      "install_path": ".claude/skills/baoyu-url-to-markdown/SKILL.md",
+      "source": {
+        "repo": "JimLiu/baoyu-skills",
+        "url": "https://github.com/JimLiu/baoyu-skills/blob/main/skills/baoyu-url-to-markdown/SKILL.md",
+        "path": "skills/baoyu-url-to-markdown/SKILL.md",
+        "branch": "main",
+        "discovered_at": "2026-04-27T09:25:01.795Z"
+      }
+    },
+    {
+      "id": "jimliu-baoyu-skills-baoyu-xhs-images",
+      "name": "baoyu-xhs-images",
+      "description": "[Deprecated: use baoyu-image-cards] Generates Xiaohongshu (Little Red Book) image card series with 12 visual styles, 8 layouts, and 3 color palettes. Breaks content into 1-10 cartoon-style image cards optimized for XHS engagement. Use when user mentions \\\"小红书图片\\\", \\\"XHS images\\\", \\\"RedNote infographics\\\", \\\"小红书种草\\\", \\\"小绿书\\\", \\\"微信图文\\\", \\\"微信贴图\\\", or wants social media infographic series for Chinese platforms.",
+      "category": "社区精选",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "JimLiu",
+      "install_path": ".claude/skills/baoyu-xhs-images/SKILL.md",
+      "source": {
+        "repo": "JimLiu/baoyu-skills",
+        "url": "https://github.com/JimLiu/baoyu-skills/blob/main/skills/baoyu-xhs-images/SKILL.md",
+        "path": "skills/baoyu-xhs-images/SKILL.md",
+        "branch": "main",
+        "discovered_at": "2026-04-27T09:25:02.182Z"
+      }
+    },
+    {
+      "id": "jimliu-baoyu-skills-baoyu-youtube-transcript",
+      "name": "baoyu-youtube-transcript",
+      "description": "Downloads YouTube video transcripts/subtitles and cover images by URL or video ID. Supports multiple languages, translation, chapters, and speaker identification. Caches raw data for fast re-formatting. Use when user asks to \"get YouTube transcript\", \"download subtitles\", \"get captions\", \"YouTube字幕\", \"YouTube封面\", \"视频封面\", \"video thumbnail\", \"video cover image\", or provides a YouTube URL and wants the transcript/subtitle text or cover image extracted.",
+      "category": "社区精选",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "JimLiu",
+      "install_path": ".claude/skills/baoyu-youtube-transcript/SKILL.md",
+      "source": {
+        "repo": "JimLiu/baoyu-skills",
+        "url": "https://github.com/JimLiu/baoyu-skills/blob/main/skills/baoyu-youtube-transcript/SKILL.md",
+        "path": "skills/baoyu-youtube-transcript/SKILL.md",
+        "branch": "main",
+        "discovered_at": "2026-04-27T09:25:02.562Z"
+      }
+    },
+    {
+      "id": "cexll-myclaude-browser",
+      "name": "browser",
+      "description": "This skill should be used for browser automation tasks using Chrome DevTools Protocol (CDP). Triggers when users need to launch Chrome with remote debugging, navigate pages, execute JavaScript in browser context, capture screenshots, or interactively select DOM elements. No MCP server required.",
+      "category": "社区精选",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "cexll",
+      "install_path": ".claude/skills/browser/SKILL.md",
+      "source": {
+        "repo": "cexll/myclaude",
+        "url": "https://github.com/cexll/myclaude/blob/master/skills/browser/SKILL.md",
+        "path": "skills/browser/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:44.179Z"
+      }
+    },
+    {
+      "id": "cexll-myclaude-codeagent",
+      "name": "codeagent",
+      "description": "Execute codeagent-wrapper for multi-backend AI code tasks. Supports Codex, Claude, Gemini, and OpenCode backends with agent presets, skill injection, file references (@syntax), worktree isolation, parallel execution, and structured output.",
+      "category": "社区精选",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "cexll",
+      "install_path": ".claude/skills/codeagent/SKILL.md",
+      "source": {
+        "repo": "cexll/myclaude",
+        "url": "https://github.com/cexll/myclaude/blob/master/skills/codeagent/SKILL.md",
+        "path": "skills/codeagent/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:44.947Z"
+      }
+    },
+    {
+      "id": "cexll-myclaude-dev",
+      "name": "dev",
+      "description": "Extreme lightweight end-to-end development workflow with requirements clarification, intelligent backend selection, parallel codeagent execution, and mandatory 90% test coverage",
+      "category": "社区精选",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "cexll",
+      "install_path": ".claude/skills/dev/SKILL.md",
+      "source": {
+        "repo": "cexll/myclaude",
+        "url": "https://github.com/cexll/myclaude/blob/master/skills/dev/SKILL.md",
+        "path": "skills/dev/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:45.762Z"
+      }
+    },
+    {
+      "id": "cexll-myclaude-do",
+      "name": "do",
+      "description": "This skill should be used for structured feature development with codebase understanding. Triggers on /do command. Provides a 5-phase workflow (Understand, Clarify, Design, Implement, Complete) using codeagent-wrapper to orchestrate code-explorer, code-architect, code-reviewer, and develop agents in parallel.",
+      "category": "社区精选",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "cexll",
+      "install_path": ".claude/skills/do/SKILL.md",
+      "source": {
+        "repo": "cexll/myclaude",
+        "url": "https://github.com/cexll/myclaude/blob/master/skills/do/SKILL.md",
+        "path": "skills/do/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:46.990Z"
+      }
+    },
+    {
+      "id": "cexll-myclaude-harness",
+      "name": "harness",
+      "description": "This skill should be used for multi-session autonomous agent work requiring progress checkpointing, failure recovery, and task dependency management. Triggers on '/harness' command, or when a task involves many subtasks needing progress persistence, sleep/resume cycles across context windows, recovery from mid-task failures with partial state, or distributed work across multiple agent sessions. Synthesized from Anthropic and OpenAI engineering practices for long-running agents.",
+      "category": "社区精选",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "cexll",
+      "install_path": ".claude/skills/harness/SKILL.md",
+      "source": {
+        "repo": "cexll/myclaude",
+        "url": "https://github.com/cexll/myclaude/blob/master/skills/harness/SKILL.md",
+        "path": "skills/harness/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:48.058Z"
+      }
+    },
+    {
+      "id": "cexll-myclaude-omo",
+      "name": "omo",
+      "description": "Use this skill when you see `/omo`. Multi-agent orchestration for \"code analysis / bug investigation / fix planning / implementation\". Choose the minimal agent set and order based on task type + risk; recipes below show common patterns.",
+      "category": "社区精选",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "cexll",
+      "install_path": ".claude/skills/omo/SKILL.md",
+      "source": {
+        "repo": "cexll/myclaude",
+        "url": "https://github.com/cexll/myclaude/blob/master/skills/omo/SKILL.md",
+        "path": "skills/omo/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:49.039Z"
+      }
+    },
+    {
+      "id": "cexll-myclaude-product-requirements",
+      "name": "product-requirements",
+      "description": "Interactive Product Owner skill for requirements gathering, analysis, and PRD generation. Triggers when users request product requirements, feature specification, PRD creation, or need help understanding and documenting project requirements. Uses quality scoring and iterative dialogue to ensure comprehensive requirements before generating professional PRD documents.",
+      "category": "社区精选",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "cexll",
+      "install_path": ".claude/skills/product-requirements/SKILL.md",
+      "source": {
+        "repo": "cexll/myclaude",
+        "url": "https://github.com/cexll/myclaude/blob/master/skills/product-requirements/SKILL.md",
+        "path": "skills/product-requirements/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:49.779Z"
+      }
+    },
+    {
+      "id": "cexll-myclaude-prototype-prompt-generator",
+      "name": "prototype-prompt-generator",
+      "description": "This skill should be used when users need to generate detailed, structured prompts for creating UI/UX prototypes. Trigger when users request help with \"create a prototype prompt\", \"design a mobile app\", \"generate UI specifications\", or need comprehensive design documentation for web/mobile applications. Works with multiple design systems including WeChat Work, iOS Native, Material Design, and Ant Design Mobile.",
+      "category": "社区精选",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "cexll",
+      "install_path": ".claude/skills/prototype-prompt-generator/SKILL.md",
+      "source": {
+        "repo": "cexll/myclaude",
+        "url": "https://github.com/cexll/myclaude/blob/master/skills/prototype-prompt-generator/SKILL.md",
+        "path": "skills/prototype-prompt-generator/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:50.677Z"
+      }
+    },
+    {
+      "id": "jimliu-baoyu-skills-release-skills",
+      "name": "release-skills",
+      "description": "Universal release workflow. Auto-detects version files and changelogs. Supports Node.js, Python, Rust, Claude Plugin, and generic projects. Use when user says \"release\", \"发布\", \"new version\", \"bump version\", \"push\", \"推送\".",
+      "category": "社区精选",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "JimLiu",
+      "install_path": ".claude/skills/release-skills/SKILL.md",
+      "source": {
+        "repo": "JimLiu/baoyu-skills",
+        "url": "https://github.com/JimLiu/baoyu-skills/blob/main/.claude/skills/release-skills/SKILL.md",
+        "path": ".claude/skills/release-skills/SKILL.md",
+        "branch": "main",
+        "discovered_at": "2026-04-27T09:24:53.955Z"
+      }
+    },
+    {
+      "id": "cexll-myclaude-skill-install",
+      "name": "skill-install",
+      "description": "Install Claude skills from GitHub repositories with automated security scanning. Triggers when users want to install skills from a GitHub URL, need to browse available skills in a repository, or want to safely add new skills to their Claude environment.",
+      "category": "社区精选",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "cexll",
+      "install_path": ".claude/skills/skill-install/SKILL.md",
+      "source": {
+        "repo": "cexll/myclaude",
+        "url": "https://github.com/cexll/myclaude/blob/master/skills/skill-install/SKILL.md",
+        "path": "skills/skill-install/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:51.429Z"
+      }
+    },
+    {
+      "id": "cexll-myclaude-sparv",
+      "name": "sparv",
+      "description": "Minimal SPARV workflow (Specify→Plan→Act→Review→Vault) with 10-point spec gate, unified journal, 2-action saves, 3-failure protocol, and EHRB risk detection.",
+      "category": "社区精选",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "cexll",
+      "install_path": ".claude/skills/sparv/SKILL.md",
+      "source": {
+        "repo": "cexll/myclaude",
+        "url": "https://github.com/cexll/myclaude/blob/master/skills/sparv/SKILL.md",
+        "path": "skills/sparv/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:52.163Z"
+      }
+    },
+    {
+      "id": "cexll-myclaude-test-cases",
+      "name": "test-cases",
+      "description": "This skill should be used when generating comprehensive test cases from PRD documents or user requirements. Triggers when users request test case generation, QA planning, test scenario creation, or need structured test documentation. Produces detailed test cases covering functional, edge case, error handling, and state transition scenarios.",
+      "category": "社区精选",
+      "compatible_tools": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "version": "1.0.0",
+      "author": "cexll",
+      "install_path": ".claude/skills/test-cases/SKILL.md",
+      "source": {
+        "repo": "cexll/myclaude",
+        "url": "https://github.com/cexll/myclaude/blob/master/skills/test-cases/SKILL.md",
+        "path": "skills/test-cases/SKILL.md",
+        "branch": "master",
+        "discovered_at": "2026-04-27T09:24:52.931Z"
+      }
+    }
+  ]
 }

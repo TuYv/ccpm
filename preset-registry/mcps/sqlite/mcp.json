@@ -1,0 +1,21 @@
+{
+  "id": "sqlite",
+  "name": "SQLite",
+  "description": "Local SQLite database access with schema inspection and query execution.",
+  "category": "数据库",
+  "command": "uvx",
+  "args": [
+    "mcp-server-sqlite",
+    "--db-path",
+    "./local.db"
+  ],
+  "required_env": [],
+  "optional_env": [],
+  "source": {
+    "repo": "modelcontextprotocol/servers-archived",
+    "url": "https://github.com/modelcontextprotocol/servers-archived/tree/main/src/sqlite",
+    "path": "src/sqlite",
+    "branch": "main",
+    "discovered_at": "2026-04-27T09:19:59.218Z"
+  }
+}

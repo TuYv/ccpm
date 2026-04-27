@@ -1,0 +1,20 @@
+{
+  "id": "everything",
+  "name": "everything",
+  "description": "This MCP server attempts to exercise all the features of the MCP protocol.",
+  "category": "官方 Anthropic",
+  "command": "npx",
+  "args": [
+    "-y",
+    "@modelcontextprotocol/server-everything"
+  ],
+  "required_env": [],
+  "optional_env": [],
+  "source": {
+    "repo": "modelcontextprotocol/servers",
+    "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/everything",
+    "path": "src/everything",
+    "branch": "main",
+    "discovered_at": "2026-04-27T09:25:03.890Z"
+  }
+}

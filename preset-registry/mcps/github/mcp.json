@@ -1,0 +1,26 @@
+{
+  "id": "github",
+  "name": "GitHub",
+  "description": "Read/write GitHub issues, PRs, code, and repos via the GitHub REST API.",
+  "category": "开发工具",
+  "command": "npx",
+  "args": [
+    "-y",
+    "@modelcontextprotocol/server-github"
+  ],
+  "required_env": [
+    {
+      "key": "GITHUB_PERSONAL_ACCESS_TOKEN",
+      "hint": "ghp_xxx",
+      "description": "GitHub Personal Access Token"
+    }
+  ],
+  "optional_env": [],
+  "source": {
+    "repo": "github/github-mcp-server",
+    "url": "https://github.com/github/github-mcp-server",
+    "path": "",
+    "branch": "main",
+    "discovered_at": "2026-04-27T09:19:59.217Z"
+  }
+}

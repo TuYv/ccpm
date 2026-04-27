@@ -1,0 +1,21 @@
+{
+  "id": "cexll-myclaude-test-cases",
+  "name": "test-cases",
+  "description": "This skill should be used when generating comprehensive test cases from PRD documents or user requirements. Triggers when users request test case generation, QA planning, test scenario creation, or need structured test documentation. Produces detailed test cases covering functional, edge case, error handling, and state transition scenarios.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "cexll",
+  "install_path": ".claude/skills/test-cases/SKILL.md",
+  "source": {
+    "repo": "cexll/myclaude",
+    "url": "https://github.com/cexll/myclaude/blob/master/skills/test-cases/SKILL.md",
+    "path": "skills/test-cases/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-04-27T09:24:52.931Z"
+  }
+}

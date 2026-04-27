@@ -1,0 +1,21 @@
+{
+  "id": "cexll-myclaude-omo",
+  "name": "omo",
+  "description": "Use this skill when you see `/omo`. Multi-agent orchestration for \"code analysis / bug investigation / fix planning / implementation\". Choose the minimal agent set and order based on task type + risk; recipes below show common patterns.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "cexll",
+  "install_path": ".claude/skills/omo/SKILL.md",
+  "source": {
+    "repo": "cexll/myclaude",
+    "url": "https://github.com/cexll/myclaude/blob/master/skills/omo/SKILL.md",
+    "path": "skills/omo/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-04-27T09:24:49.039Z"
+  }
+}

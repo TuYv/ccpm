@@ -1,0 +1,21 @@
+{
+  "id": "jimliu-baoyu-skills-baoyu-youtube-transcript",
+  "name": "baoyu-youtube-transcript",
+  "description": "Downloads YouTube video transcripts/subtitles and cover images by URL or video ID. Supports multiple languages, translation, chapters, and speaker identification. Caches raw data for fast re-formatting. Use when user asks to \"get YouTube transcript\", \"download subtitles\", \"get captions\", \"YouTube字幕\", \"YouTube封面\", \"视频封面\", \"video thumbnail\", \"video cover image\", or provides a YouTube URL and wants the transcript/subtitle text or cover image extracted.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "JimLiu",
+  "install_path": ".claude/skills/baoyu-youtube-transcript/SKILL.md",
+  "source": {
+    "repo": "JimLiu/baoyu-skills",
+    "url": "https://github.com/JimLiu/baoyu-skills/blob/main/skills/baoyu-youtube-transcript/SKILL.md",
+    "path": "skills/baoyu-youtube-transcript/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-04-27T09:25:02.562Z"
+  }
+}

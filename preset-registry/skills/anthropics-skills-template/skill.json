@@ -1,0 +1,21 @@
+{
+  "id": "anthropics-skills-template",
+  "name": "template-skill",
+  "description": "Replace with description of the skill and when Claude should use it.",
+  "category": "Anthropic 官方",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "anthropics",
+  "install_path": ".claude/skills/template/SKILL.md",
+  "source": {
+    "repo": "anthropics/skills",
+    "url": "https://github.com/anthropics/skills/blob/main/template/SKILL.md",
+    "path": "template/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-04-27T09:24:15.287Z"
+  }
+}

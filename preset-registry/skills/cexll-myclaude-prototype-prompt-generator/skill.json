@@ -1,0 +1,21 @@
+{
+  "id": "cexll-myclaude-prototype-prompt-generator",
+  "name": "prototype-prompt-generator",
+  "description": "This skill should be used when users need to generate detailed, structured prompts for creating UI/UX prototypes. Trigger when users request help with \"create a prototype prompt\", \"design a mobile app\", \"generate UI specifications\", or need comprehensive design documentation for web/mobile applications. Works with multiple design systems including WeChat Work, iOS Native, Material Design, and Ant Design Mobile.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "cexll",
+  "install_path": ".claude/skills/prototype-prompt-generator/SKILL.md",
+  "source": {
+    "repo": "cexll/myclaude",
+    "url": "https://github.com/cexll/myclaude/blob/master/skills/prototype-prompt-generator/SKILL.md",
+    "path": "skills/prototype-prompt-generator/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-04-27T09:24:50.677Z"
+  }
+}

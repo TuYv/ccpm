@@ -1,0 +1,21 @@
+{
+  "id": "jimliu-baoyu-skills-baoyu-comic",
+  "name": "baoyu-comic",
+  "description": "Knowledge comic creator supporting multiple art styles and tones. Creates original educational comics with detailed panel layouts and sequential image generation. Use when user asks to create \"知识漫画\", \"教育漫画\", \"biography comic\", \"tutorial comic\", or \"Logicomix-style comic\".",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "JimLiu",
+  "install_path": ".claude/skills/baoyu-comic/SKILL.md",
+  "source": {
+    "repo": "JimLiu/baoyu-skills",
+    "url": "https://github.com/JimLiu/baoyu-skills/blob/main/skills/baoyu-comic/SKILL.md",
+    "path": "skills/baoyu-comic/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-04-27T09:24:54.825Z"
+  }
+}

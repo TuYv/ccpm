@@ -1,0 +1,21 @@
+{
+  "id": "jimliu-baoyu-skills-baoyu-compress-image",
+  "name": "baoyu-compress-image",
+  "description": "Compresses images to WebP (default) or PNG with automatic tool selection. Use when user asks to \"compress image\", \"optimize image\", \"convert to webp\", or reduce image file size.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "JimLiu",
+  "install_path": ".claude/skills/baoyu-compress-image/SKILL.md",
+  "source": {
+    "repo": "JimLiu/baoyu-skills",
+    "url": "https://github.com/JimLiu/baoyu-skills/blob/main/skills/baoyu-compress-image/SKILL.md",
+    "path": "skills/baoyu-compress-image/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-04-27T09:24:55.244Z"
+  }
+}

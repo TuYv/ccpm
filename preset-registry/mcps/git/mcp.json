@@ -1,0 +1,21 @@
+{
+  "id": "git",
+  "name": "Git",
+  "description": "Read, search, and manipulate local Git repositories.",
+  "category": "开发工具",
+  "command": "uvx",
+  "args": [
+    "mcp-server-git",
+    "--repository",
+    "."
+  ],
+  "required_env": [],
+  "optional_env": [],
+  "source": {
+    "repo": "modelcontextprotocol/servers-archived",
+    "url": "https://github.com/modelcontextprotocol/servers-archived/tree/main/src/git",
+    "path": "src/git",
+    "branch": "main",
+    "discovered_at": "2026-04-27T09:19:59.218Z"
+  }
+}

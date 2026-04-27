@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-04-27T09:05:28.122Z",
+  "updated_at": "2026-04-27T09:24:05.949Z",
   "presets": [
     {
       "id": "code-review",
@@ -110,7 +110,7 @@
         "stars": 49620,
         "language": "TypeScript",
         "pushed_at": "2026-04-27T02:54:41Z",
-        "discovered_at": "2026-04-27T09:05:26.669Z",
+        "discovered_at": "2026-04-27T09:24:03.454Z",
         "score": 0.93696
       }
     },
@@ -140,7 +140,7 @@
         "stars": 36070,
         "language": "TypeScript",
         "pushed_at": "2026-04-15T18:50:11Z",
-        "discovered_at": "2026-04-27T09:05:27.185Z",
+        "discovered_at": "2026-04-27T09:24:03.866Z",
         "score": 0.82856
       }
     },
@@ -178,6 +178,36 @@
       }
     },
     {
+      "id": "qwibitai-nanoclaw",
+      "name": "qwibitai/nanoclaw",
+      "description": "A lightweight alternative to OpenClaw that runs in containers for security. Connects to WhatsApp, Telegram, Slack, Discord, Gmail and other messaging apps,, has memory, scheduled jobs, and runs directly on Anthropic's Agents SDK",
+      "tags": [
+        "ai-agents",
+        "ai-assistant",
+        "claude-code",
+        "claude-skills",
+        "openclaw"
+      ],
+      "components": [
+        "CLAUDE.md"
+      ],
+      "version": "1.0.0",
+      "tested_on": "2026-04-27",
+      "author": "qwibitai",
+      "source": {
+        "repo": "qwibitai/nanoclaw",
+        "url": "https://github.com/qwibitai/nanoclaw/blob/main/groups/main/CLAUDE.md",
+        "homepage": "https://nanoclaw.dev",
+        "path": "groups/main/CLAUDE.md",
+        "branch": "main",
+        "stars": 28186,
+        "language": "TypeScript",
+        "pushed_at": "2026-04-26T21:39:26Z",
+        "discovered_at": "2026-04-27T09:24:04.233Z",
+        "score": 0.765488
+      }
+    },
+    {
       "id": "javascript-obfuscator-javascript-obfuscator",
       "name": "javascript-obfuscator/javascript-obfuscator",
       "description": "A powerful obfuscator for JavaScript and Node.js",
@@ -206,7 +236,7 @@
         "stars": 15997,
         "language": "TypeScript",
         "pushed_at": "2026-04-27T08:18:30Z",
-        "discovered_at": "2026-04-27T09:05:24.116Z",
+        "discovered_at": "2026-04-27T09:24:00.048Z",
         "score": 0.667976
       }
     },
@@ -234,7 +264,7 @@
         "stars": 13913,
         "language": "C",
         "pushed_at": "2026-04-26T18:28:28Z",
-        "discovered_at": "2026-04-27T09:05:23.504Z",
+        "discovered_at": "2026-04-27T09:23:59.505Z",
         "score": 0.651304
       }
     },
@@ -267,7 +297,7 @@
         "stars": 5452,
         "language": "TypeScript",
         "pushed_at": "2026-04-25T14:09:23Z",
-        "discovered_at": "2026-04-27T09:05:24.622Z",
+        "discovered_at": "2026-04-27T09:24:00.462Z",
         "score": 0.5836159999999999
       }
     },
@@ -294,8 +324,102 @@
         "stars": 4392,
         "language": "TypeScript",
         "pushed_at": "2026-04-24T18:15:26Z",
-        "discovered_at": "2026-04-27T09:05:24.992Z",
+        "discovered_at": "2026-04-27T09:24:02.145Z",
         "score": 0.6351359999999999
+      }
+    },
+    {
+      "id": "modelengine-group-nexent",
+      "name": "ModelEngine-Group/nexent",
+      "description": "Nexent is a zero-code platform for auto-generating production-grade AI agents using Harness Engineering principles — unified tools, skills, memory, and orchestration with built-in constraints, feedback loops, and control planes.",
+      "tags": [
+        "agent",
+        "agentic-ai",
+        "agentic-framework",
+        "agentic-rag",
+        "agentic-workflow",
+        "ai",
+        "harness",
+        "harness-engineering"
+      ],
+      "components": [
+        "CLAUDE.md"
+      ],
+      "version": "1.0.0",
+      "tested_on": "2026-04-27",
+      "author": "ModelEngine-Group",
+      "source": {
+        "repo": "ModelEngine-Group/nexent",
+        "url": "https://github.com/ModelEngine-Group/nexent/blob/main/CLAUDE.md",
+        "homepage": "https://nexent.tech",
+        "path": "CLAUDE.md",
+        "branch": "main",
+        "stars": 4360,
+        "language": "Python",
+        "pushed_at": "2026-04-27T09:21:14Z",
+        "discovered_at": "2026-04-27T09:24:04.687Z",
+        "score": 0.5748800000000001
+      }
+    },
+    {
+      "id": "oldwinter-knowledge-garden",
+      "name": "oldwinter/knowledge-garden",
+      "description": "我的第二大脑 second brain，我的数字花园 digital garden，用obsidian双链笔记软件写作而成",
+      "tags": [
+        "anki-cards",
+        "base",
+        "canvas",
+        "digital-garden",
+        "evergreen-notes",
+        "knowledge-base",
+        "local-first",
+        "logseq"
+      ],
+      "components": [
+        "CLAUDE.md"
+      ],
+      "version": "1.0.0",
+      "tested_on": "2026-04-27",
+      "author": "oldwinter",
+      "source": {
+        "repo": "oldwinter/knowledge-garden",
+        "url": "https://github.com/oldwinter/knowledge-garden/blob/main/CLAUDE.md",
+        "homepage": "https://oldwinter.top",
+        "path": "CLAUDE.md",
+        "branch": "main",
+        "stars": 2427,
+        "language": "TypeScript",
+        "pushed_at": "2025-09-05T14:03:08Z",
+        "discovered_at": "2026-04-27T09:24:05.930Z",
+        "score": 0.5520068315429687
+      }
+    },
+    {
+      "id": "harbor-framework-harbor",
+      "name": "harbor-framework/harbor",
+      "description": "Harbor is a framework for running agent evaluations and creating and using RL environments.",
+      "tags": [
+        "evals",
+        "rl-environments",
+        "terminal-bench"
+      ],
+      "components": [
+        "CLAUDE.md"
+      ],
+      "version": "1.0.0",
+      "tested_on": "2026-04-27",
+      "author": "harbor-framework",
+      "source": {
+        "repo": "harbor-framework/harbor",
+        "url": "https://github.com/harbor-framework/harbor/blob/main/apps/viewer/CLAUDE.md",
+        "homepage": "https://harborframework.com/",
+        "path": "apps/viewer/CLAUDE.md",
+        "branch": "main",
+        "stars": 1663,
+        "language": "Python",
+        "pushed_at": "2026-04-27T02:52:30Z",
+        "discovered_at": "2026-04-27T09:24:05.536Z",
+        "score": 0.613304
       }
     },
     {
@@ -325,6 +449,37 @@
       }
     },
     {
+      "id": "hook0-hook0",
+      "name": "hook0/hook0",
+      "description": "Open-source webhook server that helps you provide webhooks to your users. It handles for you a great amount of features that are usually tedious to (re)implement.",
+      "tags": [
+        "webhook",
+        "webhook-api",
+        "webhook-events",
+        "webhook-server",
+        "webhook-service",
+        "webhooks"
+      ],
+      "components": [
+        "CLAUDE.md"
+      ],
+      "version": "1.0.0",
+      "tested_on": "2026-04-27",
+      "author": "hook0",
+      "source": {
+        "repo": "hook0/hook0",
+        "url": "https://github.com/hook0/hook0/blob/master/frontend/CLAUDE.md",
+        "homepage": "https://www.hook0.com",
+        "path": "frontend/CLAUDE.md",
+        "branch": "master",
+        "stars": 1407,
+        "language": "Rust",
+        "pushed_at": "2026-04-27T09:09:12Z",
+        "discovered_at": "2026-04-27T09:24:01.737Z",
+        "score": 0.551256
+      }
+    },
+    {
       "id": "debugtheworldbot-keystats",
       "name": "debugtheworldbot/keyStats",
       "description": "Keyboard & Mouse Stats for macOS/Windows",
@@ -351,6 +506,65 @@
       }
     },
     {
+      "id": "adamlyttleapps-claude-skill-aso-appstore-screenshots",
+      "name": "adamlyttleapps/claude-skill-aso-appstore-screenshots",
+      "description": "Discovered from adamlyttleapps/claude-skill-aso-appstore-screenshots",
+      "tags": [
+        "python"
+      ],
+      "components": [
+        "CLAUDE.md"
+      ],
+      "version": "1.0.0",
+      "tested_on": "2026-04-27",
+      "author": "adamlyttleapps",
+      "source": {
+        "repo": "adamlyttleapps/claude-skill-aso-appstore-screenshots",
+        "url": "https://github.com/adamlyttleapps/claude-skill-aso-appstore-screenshots/blob/main/CLAUDE.md",
+        "homepage": null,
+        "path": "CLAUDE.md",
+        "branch": "main",
+        "stars": 1211,
+        "language": "Python",
+        "pushed_at": "2026-03-30T12:15:10Z",
+        "discovered_at": "2026-04-27T09:24:00.868Z",
+        "score": 0.549688
+      }
+    },
+    {
+      "id": "giuseppe99barchetta-suggestarr",
+      "name": "giuseppe99barchetta/SuggestArr",
+      "description": "Effortlessly request recommended movies, TV shows and anime to Jellyseer/Overseer based on your recently watched content on Jellyfin, Plex or Emby—let SuggestArr handle it all automatically, keeping your library fresh with new and exciting content!",
+      "tags": [
+        "automation",
+        "docker",
+        "emby",
+        "jellyfin",
+        "jellyseerr",
+        "llm",
+        "media-automation",
+        "ombi"
+      ],
+      "components": [
+        "CLAUDE.md"
+      ],
+      "version": "1.0.0",
+      "tested_on": "2026-04-27",
+      "author": "giuseppe99barchetta",
+      "source": {
+        "repo": "giuseppe99barchetta/SuggestArr",
+        "url": "https://github.com/giuseppe99barchetta/SuggestArr/blob/main/CLAUDE.md",
+        "homepage": "https://giuseppe99barchetta.github.io/SuggestArr/",
+        "path": "CLAUDE.md",
+        "branch": "main",
+        "stars": 1122,
+        "language": "Python",
+        "pushed_at": "2026-04-20T12:10:38Z",
+        "discovered_at": "2026-04-27T09:23:59.078Z",
+        "score": 0.608976
+      }
+    },
+    {
       "id": "sugyan-claude-code-webui",
       "name": "sugyan/claude-code-webui",
       "description": "Web-based interface for Claude CLI with streaming chat responses",
@@ -374,8 +588,8 @@
         "stars": 1055,
         "language": "TypeScript",
         "pushed_at": "2025-11-03T04:49:28Z",
-        "discovered_at": "2026-04-27T09:05:25.437Z",
-        "score": 0.5085129305718317
+        "discovered_at": "2026-04-27T09:24:02.550Z",
+        "score": 0.5085068698459201
       }
     },
     {
@@ -406,8 +620,70 @@
         "stars": 908,
         "language": "PHP",
         "pushed_at": "2026-04-18T10:49:16Z",
-        "discovered_at": "2026-04-27T09:05:26.212Z",
+        "discovered_at": "2026-04-27T09:24:01.311Z",
         "score": 0.547264
+      }
+    },
+    {
+      "id": "smi2-phpclickhouse",
+      "name": "smi2/phpClickHouse",
+      "description": "php ClickHouse wrapper",
+      "tags": [
+        "clickhouse",
+        "php",
+        "php-clickhouse",
+        "php-clickhouse-wrapper"
+      ],
+      "components": [
+        "CLAUDE.md"
+      ],
+      "version": "1.0.0",
+      "tested_on": "2026-04-27",
+      "author": "smi2",
+      "source": {
+        "repo": "smi2/phpClickHouse",
+        "url": "https://github.com/smi2/phpClickHouse/blob/master/CLAUDE.md",
+        "homepage": null,
+        "path": "CLAUDE.md",
+        "branch": "master",
+        "stars": 837,
+        "language": "PHP",
+        "pushed_at": "2026-04-23T18:03:07Z",
+        "discovered_at": "2026-04-27T09:24:05.096Z",
+        "score": 0.546696
+      }
+    },
+    {
+      "id": "ruzin-stenoai",
+      "name": "ruzin/stenoai",
+      "description": "Privacy focused AI notepad using locally hosted Small Language Models. Capture beautiful notes whilst keeping your data confidential. Pefect for government, finance and legal professionals.",
+      "tags": [
+        "agentic-ai",
+        "ai",
+        "apple-silicon",
+        "clinical",
+        "deepseek",
+        "healthcare-ai",
+        "llama3",
+        "localllm"
+      ],
+      "components": [
+        "CLAUDE.md"
+      ],
+      "version": "1.0.0",
+      "tested_on": "2026-04-27",
+      "author": "ruzin",
+      "source": {
+        "repo": "ruzin/stenoai",
+        "url": "https://github.com/ruzin/stenoai/blob/main/CLAUDE.md",
+        "homepage": "https://stenoai.co/",
+        "path": "CLAUDE.md",
+        "branch": "main",
+        "stars": 692,
+        "language": "HTML",
+        "pushed_at": "2026-04-26T21:43:39Z",
+        "discovered_at": "2026-04-27T09:24:02.954Z",
+        "score": 0.545536
       }
     }
   ]

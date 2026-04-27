@@ -1,0 +1,21 @@
+{
+  "id": "anthropics-skills-theme-factory",
+  "name": "theme-factory",
+  "description": "Toolkit for styling artifacts with a theme. These artifacts can be slides, docs, reportings, HTML landing pages, etc. There are 10 pre-set themes with colors/fonts that you can apply to any artifact that has been creating, or can generate a new theme on-the-fly.",
+  "category": "Anthropic 官方",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "anthropics",
+  "install_path": ".claude/skills/theme-factory/SKILL.md",
+  "source": {
+    "repo": "anthropics/skills",
+    "url": "https://github.com/anthropics/skills/blob/main/skills/theme-factory/SKILL.md",
+    "path": "skills/theme-factory/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-04-27T09:24:13.616Z"
+  }
+}

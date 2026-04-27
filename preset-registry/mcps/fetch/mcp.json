@@ -1,0 +1,19 @@
+{
+  "id": "fetch",
+  "name": "Fetch",
+  "description": "Retrieve URL contents with HTML-to-Markdown conversion for use as context.",
+  "category": "网络",
+  "command": "uvx",
+  "args": [
+    "mcp-server-fetch"
+  ],
+  "required_env": [],
+  "optional_env": [],
+  "source": {
+    "repo": "modelcontextprotocol/servers-archived",
+    "url": "https://github.com/modelcontextprotocol/servers-archived/tree/main/src/fetch",
+    "path": "src/fetch",
+    "branch": "main",
+    "discovered_at": "2026-04-27T09:19:59.218Z"
+  }
+}

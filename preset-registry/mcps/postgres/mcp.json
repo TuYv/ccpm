@@ -1,0 +1,25 @@
+{
+  "id": "postgres",
+  "name": "PostgreSQL",
+  "description": "Read-only database access for PostgreSQL with schema inspection.",
+  "category": "数据库",
+  "command": "npx",
+  "args": [
+    "-y",
+    "@modelcontextprotocol/server-postgres"
+  ],
+  "required_env": [
+    {
+      "key": "POSTGRES_CONNECTION_STRING",
+      "hint": "postgresql://user:pass@host/db"
+    }
+  ],
+  "optional_env": [],
+  "source": {
+    "repo": "modelcontextprotocol/servers-archived",
+    "url": "https://github.com/modelcontextprotocol/servers-archived/tree/main/src/postgres",
+    "path": "src/postgres",
+    "branch": "main",
+    "discovered_at": "2026-04-27T09:19:59.218Z"
+  }
+}

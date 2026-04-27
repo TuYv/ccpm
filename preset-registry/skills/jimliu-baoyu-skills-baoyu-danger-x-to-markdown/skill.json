@@ -1,0 +1,21 @@
+{
+  "id": "jimliu-baoyu-skills-baoyu-danger-x-to-markdown",
+  "name": "baoyu-danger-x-to-markdown",
+  "description": "Converts X (Twitter) tweets and articles to markdown with YAML front matter. Uses reverse-engineered API requiring user consent. Use when user mentions \"X to markdown\", \"tweet to markdown\", \"save tweet\", or provides x.com/twitter.com URLs for conversion.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "JimLiu",
+  "install_path": ".claude/skills/baoyu-danger-x-to-markdown/SKILL.md",
+  "source": {
+    "repo": "JimLiu/baoyu-skills",
+    "url": "https://github.com/JimLiu/baoyu-skills/blob/main/skills/baoyu-danger-x-to-markdown/SKILL.md",
+    "path": "skills/baoyu-danger-x-to-markdown/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-04-27T09:24:56.414Z"
+  }
+}

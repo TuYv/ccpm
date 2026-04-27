@@ -1,0 +1,21 @@
+{
+  "id": "anthropics-skills-web-artifacts-builder",
+  "name": "web-artifacts-builder",
+  "description": "Suite of tools for creating elaborate, multi-component claude.ai HTML artifacts using modern frontend web technologies (React, Tailwind CSS, shadcn/ui). Use for complex artifacts requiring state management, routing, or shadcn/ui components - not for simple single-file HTML/JSX artifacts.",
+  "category": "Anthropic 官方",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "anthropics",
+  "install_path": ".claude/skills/web-artifacts-builder/SKILL.md",
+  "source": {
+    "repo": "anthropics/skills",
+    "url": "https://github.com/anthropics/skills/blob/main/skills/web-artifacts-builder/SKILL.md",
+    "path": "skills/web-artifacts-builder/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-04-27T09:24:14.019Z"
+  }
+}

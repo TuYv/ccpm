@@ -1,0 +1,20 @@
+{
+  "id": "memory",
+  "name": "memory",
+  "description": "A basic implementation of persistent memory using a local knowledge graph.",
+  "category": "官方 Anthropic",
+  "command": "npx",
+  "args": [
+    "-y",
+    "@modelcontextprotocol/server-memory"
+  ],
+  "required_env": [],
+  "optional_env": [],
+  "source": {
+    "repo": "modelcontextprotocol/servers",
+    "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/memory",
+    "path": "src/memory",
+    "branch": "main",
+    "discovered_at": "2026-04-27T09:25:06.009Z"
+  }
+}

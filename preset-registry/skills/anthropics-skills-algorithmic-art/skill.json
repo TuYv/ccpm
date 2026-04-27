@@ -1,0 +1,21 @@
+{
+  "id": "anthropics-skills-algorithmic-art",
+  "name": "algorithmic-art",
+  "description": "Creating algorithmic art using p5.js with seeded randomness and interactive parameter exploration. Use this when users request creating art using code, generative art, algorithmic art, flow fields, or particle systems. Create original algorithmic art rather than copying existing artists' work to avoid copyright violations.",
+  "category": "Anthropic 官方",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "anthropics",
+  "install_path": ".claude/skills/algorithmic-art/SKILL.md",
+  "source": {
+    "repo": "anthropics/skills",
+    "url": "https://github.com/anthropics/skills/blob/main/skills/algorithmic-art/SKILL.md",
+    "path": "skills/algorithmic-art/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-04-27T09:24:07.332Z"
+  }
+}

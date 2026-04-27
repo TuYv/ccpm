@@ -1,0 +1,21 @@
+{
+  "id": "jimliu-baoyu-skills-baoyu-post-to-x",
+  "name": "baoyu-post-to-x",
+  "description": "Posts content and articles to X (Twitter). Supports regular posts with images/videos and X Articles (long-form Markdown). Uses real Chrome with CDP to bypass anti-automation. Use when user asks to \"post to X\", \"tweet\", \"publish to Twitter\", or \"share on X\".",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "JimLiu",
+  "install_path": ".claude/skills/baoyu-post-to-x/SKILL.md",
+  "source": {
+    "repo": "JimLiu/baoyu-skills",
+    "url": "https://github.com/JimLiu/baoyu-skills/blob/main/skills/baoyu-post-to-x/SKILL.md",
+    "path": "skills/baoyu-post-to-x/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-04-27T09:25:00.424Z"
+  }
+}

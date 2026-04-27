@@ -1,0 +1,21 @@
+{
+  "id": "jimliu-baoyu-skills-baoyu-imagine",
+  "name": "baoyu-imagine",
+  "description": "AI image generation with OpenAI GPT Image 2, Azure OpenAI, Google, OpenRouter, DashScope, Z.AI GLM-Image, MiniMax, Jimeng, Seedream and Replicate APIs. Supports text-to-image, reference images, aspect ratios, and batch generation from saved prompt files. Sequential by default; use batch parallel generation when the user already has multiple prompts or wants stable multi-image throughput. Use when user asks to generate, create, or draw images.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "JimLiu",
+  "install_path": ".claude/skills/baoyu-imagine/SKILL.md",
+  "source": {
+    "repo": "JimLiu/baoyu-skills",
+    "url": "https://github.com/JimLiu/baoyu-skills/blob/main/skills/baoyu-imagine/SKILL.md",
+    "path": "skills/baoyu-imagine/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-04-27T09:24:58.430Z"
+  }
+}

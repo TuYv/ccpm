@@ -1,0 +1,21 @@
+{
+  "id": "composiohq-awesome-claude-skills-changelog-generator",
+  "name": "changelog-generator",
+  "description": "Automatically creates user-facing changelogs from git commits by analyzing commit history, categorizing changes, and transforming technical commits into clear, customer-friendly release notes. Turns hours of manual changelog writing into minutes of automated generation.",
+  "category": "Composio 社区",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "ComposioHQ",
+  "install_path": ".claude/skills/changelog-generator/SKILL.md",
+  "source": {
+    "repo": "ComposioHQ/awesome-claude-skills",
+    "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/changelog-generator/SKILL.md",
+    "path": "changelog-generator/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-04-27T09:24:17.839Z"
+  }
+}

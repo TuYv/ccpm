@@ -1,0 +1,29 @@
+{
+  "id": "google-drive",
+  "name": "Google Drive",
+  "description": "Search and read files in Google Drive (Docs, Sheets, Slides) via OAuth.",
+  "category": "云存储",
+  "command": "npx",
+  "args": [
+    "-y",
+    "@modelcontextprotocol/server-gdrive"
+  ],
+  "required_env": [
+    {
+      "key": "GDRIVE_CLIENT_ID",
+      "description": "Google OAuth client ID"
+    },
+    {
+      "key": "GDRIVE_CLIENT_SECRET",
+      "description": "Google OAuth client secret"
+    }
+  ],
+  "optional_env": [],
+  "source": {
+    "repo": "modelcontextprotocol/servers-archived",
+    "url": "https://github.com/modelcontextprotocol/servers-archived/tree/main/src/gdrive",
+    "path": "src/gdrive",
+    "branch": "main",
+    "discovered_at": "2026-04-27T09:19:59.218Z"
+  }
+}

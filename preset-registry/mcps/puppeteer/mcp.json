@@ -1,0 +1,20 @@
+{
+  "id": "puppeteer",
+  "name": "Puppeteer",
+  "description": "Browser automation: navigate pages, take screenshots, click elements, run JS.",
+  "category": "网络",
+  "command": "npx",
+  "args": [
+    "-y",
+    "@modelcontextprotocol/server-puppeteer"
+  ],
+  "required_env": [],
+  "optional_env": [],
+  "source": {
+    "repo": "modelcontextprotocol/servers-archived",
+    "url": "https://github.com/modelcontextprotocol/servers-archived/tree/main/src/puppeteer",
+    "path": "src/puppeteer",
+    "branch": "main",
+    "discovered_at": "2026-04-27T09:19:59.218Z"
+  }
+}

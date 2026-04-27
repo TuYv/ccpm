@@ -1,0 +1,19 @@
+{
+  "id": "time",
+  "name": "Time",
+  "description": "Time and timezone utilities (current time, conversions, business-hours math).",
+  "category": "工具",
+  "command": "uvx",
+  "args": [
+    "mcp-server-time"
+  ],
+  "required_env": [],
+  "optional_env": [],
+  "source": {
+    "repo": "modelcontextprotocol/servers-archived",
+    "url": "https://github.com/modelcontextprotocol/servers-archived/tree/main/src/time",
+    "path": "src/time",
+    "branch": "main",
+    "discovered_at": "2026-04-27T09:19:59.218Z"
+  }
+}

@@ -5,6 +5,8 @@ import { join } from "node:path";
 import { fetchFile, searchClaudeMd } from "./searcher.js";
 import { scoreHit } from "./scorer.js";
 import { normalizeToPreset, type PresetEntry } from "./normalizer.js";
+import { discoverSkills } from "./skills-scanner.js";
+import { discoverMcps } from "./mcps-scanner.js";
 
 const REGISTRY_DIR = process.env.REGISTRY_DIR ?? join(process.cwd(), "..", "..");
 const TOKEN = process.env.GITHUB_TOKEN;
@@ -131,8 +133,22 @@ async function main() {
   const auto = rootEntries.filter((e) => e.source).length;
   const curatedN = rootEntries.length - auto;
   console.log(
-    `This run accepted ${accepted.length} new entries; index now has ${rootEntries.length} (${curatedN} curated + ${auto} auto-discovered)`,
+    `[presets] this run accepted ${accepted.length} new entries; index now has ${rootEntries.length} (${curatedN} curated + ${auto} auto-discovered)`,
   );
+
+  // ── Skills namespace ────────────────────────────────────────────────────────
+  try {
+    await discoverSkills(octokit, REGISTRY_DIR);
+  } catch (e) {
+    console.error(`[skills] discovery failed: ${e}`);
+  }
+
+  // ── MCPs namespace ──────────────────────────────────────────────────────────
+  try {
+    await discoverMcps(octokit, REGISTRY_DIR);
+  } catch (e) {
+    console.error(`[mcps] discovery failed: ${e}`);
+  }
 }
 
 main().catch((e) => {

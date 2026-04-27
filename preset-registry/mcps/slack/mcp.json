@@ -1,0 +1,30 @@
+{
+  "id": "slack",
+  "name": "Slack",
+  "description": "Read channels, post messages, and manage Slack workspace via the Slack API.",
+  "category": "通讯",
+  "command": "npx",
+  "args": [
+    "-y",
+    "@modelcontextprotocol/server-slack"
+  ],
+  "required_env": [
+    {
+      "key": "SLACK_BOT_TOKEN",
+      "hint": "xoxb-...",
+      "description": "Slack Bot User OAuth Token"
+    },
+    {
+      "key": "SLACK_TEAM_ID",
+      "description": "Slack workspace team ID"
+    }
+  ],
+  "optional_env": [],
+  "source": {
+    "repo": "modelcontextprotocol/servers-archived",
+    "url": "https://github.com/modelcontextprotocol/servers-archived/tree/main/src/slack",
+    "path": "src/slack",
+    "branch": "main",
+    "discovered_at": "2026-04-27T09:19:59.218Z"
+  }
+}

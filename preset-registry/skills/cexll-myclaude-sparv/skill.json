@@ -1,0 +1,21 @@
+{
+  "id": "cexll-myclaude-sparv",
+  "name": "sparv",
+  "description": "Minimal SPARV workflow (Specify→Plan→Act→Review→Vault) with 10-point spec gate, unified journal, 2-action saves, 3-failure protocol, and EHRB risk detection.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "cexll",
+  "install_path": ".claude/skills/sparv/SKILL.md",
+  "source": {
+    "repo": "cexll/myclaude",
+    "url": "https://github.com/cexll/myclaude/blob/master/skills/sparv/SKILL.md",
+    "path": "skills/sparv/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-04-27T09:24:52.163Z"
+  }
+}
