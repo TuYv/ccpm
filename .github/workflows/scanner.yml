@@ -1,0 +1,47 @@
+name: scanner
+
+on:
+  schedule:
+    - cron: "17 * * * *"   # hourly at :17 (off the :00 spike)
+  workflow_dispatch:
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "pnpm"
+          cache-dependency-path: preset-registry/scripts/scanner/pnpm-lock.yaml
+
+      - name: Install scanner deps
+        working-directory: preset-registry/scripts/scanner
+        run: pnpm install --frozen-lockfile || pnpm install
+
+      - name: Run scanner
+        working-directory: preset-registry/scripts/scanner
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REGISTRY_DIR: ${{ github.workspace }}/preset-registry
+        run: pnpm run scan
+
+      - name: Commit changes
+        run: |
+          git config user.name "ccpm-scanner-bot"
+          git config user.email "scanner@ccpm.local"
+          git add preset-registry/index.json preset-registry/presets/
+          if ! git diff --cached --quiet; then
+            git commit -m "chore(registry): auto-discover update $(date -u +%FT%TZ)"
+            git push
+          else
+            echo "No changes"
+          fi

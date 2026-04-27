@@ -1,0 +1,14 @@
+{
+  "id": "docs-writer",
+  "name": "Documentation Writer",
+  "description": "Documentation preset for clear README, guides, changelogs, and examples that stay close to verified behavior.",
+  "tags": ["docs", "writing"],
+  "components": ["CLAUDE.md"],
+  "version": "1.0.0",
+  "min_claude_code_version": "1.0.0",
+  "tested_on": "2026-04-26",
+  "author": "claude-preset",
+  "files": {
+    "CLAUDE.md": "CLAUDE.md"
+  }
+}

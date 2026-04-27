@@ -1,0 +1,14 @@
+{
+  "id": "rust-cli",
+  "name": "Rust CLI Maintainer",
+  "description": "Rust CLI workflow preset focused on small modules, clear errors, integration tests, clippy, and release checks.",
+  "tags": ["rust", "cli", "testing"],
+  "components": ["CLAUDE.md"],
+  "version": "1.0.0",
+  "min_claude_code_version": "1.0.0",
+  "tested_on": "2026-04-26",
+  "author": "claude-preset",
+  "files": {
+    "CLAUDE.md": "CLAUDE.md"
+  }
+}

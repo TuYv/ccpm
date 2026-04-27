@@ -1,0 +1,15 @@
+{
+  "id": "safe-solo",
+  "name": "Safe Solo Developer",
+  "description": "A conservative baseline for individual developers: read the repo first, protect secrets, test before claiming completion.",
+  "tags": ["general", "solo", "safe"],
+  "components": ["CLAUDE.md", "settings.json"],
+  "version": "1.0.0",
+  "min_claude_code_version": "1.0.0",
+  "tested_on": "2026-04-26",
+  "author": "claude-preset",
+  "files": {
+    "CLAUDE.md": "CLAUDE.md",
+    "settings.json": "settings.json"
+  }
+}

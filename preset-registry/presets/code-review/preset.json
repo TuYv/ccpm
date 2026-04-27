@@ -1,0 +1,14 @@
+{
+  "id": "code-review",
+  "name": "Code Review",
+  "description": "Review-focused instructions that prioritize regressions, risks, missing tests, and line-specific findings.",
+  "tags": ["review", "quality"],
+  "components": ["CLAUDE.md"],
+  "version": "1.0.0",
+  "min_claude_code_version": "1.0.0",
+  "tested_on": "2026-04-26",
+  "author": "claude-preset",
+  "files": {
+    "CLAUDE.md": "CLAUDE.md"
+  }
+}

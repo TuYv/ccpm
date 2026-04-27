@@ -1,5 +1,6 @@
 import { Octokit } from "@octokit/rest";
-import { mkdir, writeFile } from "node:fs/promises";
+import { mkdir, readFile, rm, writeFile } from "node:fs/promises";
+import { existsSync } from "node:fs";
 import { join } from "node:path";
 import { fetchFile, searchClaudeMd } from "./searcher.js";
 import { scoreHit } from "./scorer.js";
@@ -10,6 +11,18 @@ const TOKEN = process.env.GITHUB_TOKEN;
 if (!TOKEN) {
   console.error("GITHUB_TOKEN required");
   process.exit(1);
+}
+
+interface RootIndexEntry {
+  id: string;
+  name: string;
+  description: string;
+  tags?: string[];
+  components?: string[];
+  version: string;
+  tested_on: string;
+  author: string;
+  source?: PresetEntry["source"];
 }
 
 async function main() {
@@ -34,8 +47,9 @@ async function main() {
       const entry = normalizeToPreset(hit, score);
       accepted.push(entry);
 
-      // Write the CLAUDE.md content next to the preset entry.
-      const presetDir = join(REGISTRY_DIR, "presets", "auto-discovered", entry.id);
+      // Write under presets/<id>/ directly so the existing activation flow finds it.
+      // owner-repo prefix in the id avoids collisions with curated short slugs.
+      const presetDir = join(REGISTRY_DIR, "presets", entry.id);
       await mkdir(presetDir, { recursive: true });
       await writeFile(join(presetDir, "CLAUDE.md"), content);
       await writeFile(
@@ -58,26 +72,53 @@ async function main() {
       );
     } catch (e) {
       console.warn(`Skipping ${hit.repo}: ${e}`);
-      // Continue with others; don't abort.
     }
   }
 
-  // Update auto-discovered/index.json (separate from main index.json so curated entries are not overwritten)
-  const autoDir = join(REGISTRY_DIR, "presets", "auto-discovered");
-  await mkdir(autoDir, { recursive: true });
+  // Merge into root presets/index.json: keep all CURATED entries (no source field),
+  // replace any prior auto-discovered (has source field) with this run's results.
+  const rootIndexPath = join(REGISTRY_DIR, "index.json");
+  let curated: RootIndexEntry[] = [];
+  if (existsSync(rootIndexPath)) {
+    const root = JSON.parse(await readFile(rootIndexPath, "utf8"));
+    curated = (root.presets ?? []).filter((p: RootIndexEntry) => !p.source);
+  }
+  const newRootPresets: RootIndexEntry[] = [
+    ...curated,
+    ...accepted.map((e) => ({
+      id: e.id,
+      name: e.name,
+      description: e.description,
+      tags: e.tags,
+      components: ["CLAUDE.md"],
+      version: e.version,
+      tested_on: e.tested_on,
+      author: e.author,
+      source: e.source,
+    })),
+  ];
   await writeFile(
-    join(autoDir, "index.json"),
+    rootIndexPath,
     JSON.stringify(
       {
         version: "1",
         updated_at: new Date().toISOString(),
-        presets: accepted,
+        presets: newRootPresets,
       },
       null,
       2,
     ),
   );
-  console.log(`Wrote ${accepted.length} auto-discovered presets`);
+
+  // Clean up old auto-discovered/ subdirectory if it exists (legacy from earlier scanner version).
+  const legacyDir = join(REGISTRY_DIR, "presets", "auto-discovered");
+  if (existsSync(legacyDir)) {
+    await rm(legacyDir, { recursive: true, force: true });
+  }
+
+  console.log(
+    `Wrote ${accepted.length} auto-discovered presets (curated kept: ${curated.length})`,
+  );
 }
 
 main().catch((e) => {
