@@ -1,8 +1,8 @@
 mod commands;
 
 use commands::{
-    claude_settings, config, importer, library, mcps, presets, recent_projects, recipes, skills,
-    state,
+    claude_settings, config, importer, library, mcps, presets, recent_projects, recipes,
+    scan_existing, skills, state,
 };
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
@@ -53,6 +53,8 @@ pub fn run() {
             recipes::deactivate_recipe_cmd,
             recipes::get_active_state_cmd,
             recipes::get_active_recipe_id_cmd,
+            scan_existing::is_first_launch_cmd,
+            scan_existing::scan_and_seed_cmd,
             recent_projects::list_recent_projects,
         ])
         .run(tauri::generate_context!())

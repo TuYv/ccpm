@@ -6,5 +6,6 @@ pub mod mcps;
 pub mod presets;
 pub mod recipes;
 pub mod recent_projects;
+pub mod scan_existing;
 pub mod skills;
 pub mod state;
