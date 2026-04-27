@@ -246,6 +246,60 @@ pub enum RestoreOption {
     KeepFiles,
 }
 
+// ── Library + Recipe types ────────────────────────────────────────────────────
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+#[serde(tag = "kind", rename_all = "lowercase")]
+pub enum ItemSource {
+    Remote { repo: String, url: String },
+    Imported { from: String },
+    UserCreated,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct LibraryItemMeta {
+    pub id: String,
+    pub name: String,
+    pub description: String,
+    #[serde(default)]
+    pub tags: Vec<String>,
+    pub source: ItemSource,
+    pub downloaded_at: String,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct RecipeMcpEntry {
+    pub library_id: String,
+    #[serde(default)]
+    pub env: HashMap<String, String>,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct Recipe {
+    pub id: String,
+    pub name: String,
+    #[serde(default)]
+    pub description: String,
+    #[serde(default)]
+    pub claude_md: Option<String>,
+    #[serde(default)]
+    pub skills: Vec<String>,
+    #[serde(default)]
+    pub mcps: Vec<RecipeMcpEntry>,
+    #[serde(default)]
+    pub settings_override: serde_json::Value,
+    pub created_at: String,
+    pub updated_at: String,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
+pub struct ActiveState {
+    #[serde(default)]
+    pub global: Option<String>,
+    #[serde(default)]
+    pub projects: HashMap<String, String>,
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -416,5 +470,44 @@ mod tests {
         let state: InstalledState = serde_json::from_str(json).unwrap();
         assert!(state.global_skills.is_empty());
         assert!(state.global_mcps.is_empty());
+    }
+
+    #[test]
+    fn test_recipe_deserializes() {
+        let json = r#"{
+            "id": "rust-dev",
+            "name": "Rust 开发",
+            "description": "Rust CLI 项目",
+            "claude_md": "rust-cli",
+            "skills": ["tdd", "systematic-debugging"],
+            "mcps": [{"library_id": "github", "env": {"GITHUB_TOKEN": "ghp_x"}}],
+            "settings_override": {"model": "claude-sonnet-4-6"},
+            "created_at": "2026-04-27T00:00:00Z",
+            "updated_at": "2026-04-27T00:00:00Z"
+        }"#;
+        let r: Recipe = serde_json::from_str(json).unwrap();
+        assert_eq!(r.id, "rust-dev");
+        assert_eq!(r.skills.len(), 2);
+        assert_eq!(r.mcps[0].library_id, "github");
+    }
+
+    #[test]
+    fn test_library_item_meta_with_source() {
+        let json = r#"{
+            "id": "rust-cli",
+            "name": "Rust CLI",
+            "description": "d",
+            "source": {"kind": "remote", "repo": "TuYv/ccpm", "url": "..."},
+            "downloaded_at": "2026-04-27T00:00:00Z"
+        }"#;
+        let m: LibraryItemMeta = serde_json::from_str(json).unwrap();
+        matches!(m.source, ItemSource::Remote { .. });
+    }
+
+    #[test]
+    fn test_active_state_default_empty() {
+        let s = ActiveState::default();
+        assert!(s.global.is_none());
+        assert!(s.projects.is_empty());
     }
 }
