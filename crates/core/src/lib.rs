@@ -4,6 +4,7 @@ pub mod config;
 pub mod error;
 pub mod fs;
 pub mod importer;
+pub mod library;
 pub mod mcp;
 pub mod registry;
 pub mod skills;
