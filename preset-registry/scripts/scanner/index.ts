@@ -1,5 +1,5 @@
 import { Octokit } from "@octokit/rest";
-import { mkdir, readFile, rm, writeFile } from "node:fs/promises";
+import { mkdir, readFile, readdir, rm, writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import { join } from "node:path";
 import { fetchFile, searchClaudeMd } from "./searcher.js";
@@ -13,6 +13,7 @@ if (!TOKEN) {
   process.exit(1);
 }
 
+type PresetSource = PresetEntry["source"];
 interface RootIndexEntry {
   id: string;
   name: string;
@@ -22,7 +23,7 @@ interface RootIndexEntry {
   version: string;
   tested_on: string;
   author: string;
-  source?: PresetEntry["source"];
+  source?: PresetSource;
 }
 
 async function main() {
@@ -75,36 +76,47 @@ async function main() {
     }
   }
 
-  // Merge into root presets/index.json: keep all CURATED entries (no source field),
-  // replace any prior auto-discovered (has source field) with this run's results.
-  const rootIndexPath = join(REGISTRY_DIR, "index.json");
-  let curated: RootIndexEntry[] = [];
-  if (existsSync(rootIndexPath)) {
-    const root = JSON.parse(await readFile(rootIndexPath, "utf8"));
-    curated = (root.presets ?? []).filter((p: RootIndexEntry) => !p.source);
+  // Build root index by walking presets/*/preset.json — this way the index always
+  // reflects on-disk state, and a partial/rate-limited scan never shrinks it.
+  const presetsDir = join(REGISTRY_DIR, "presets");
+  const rootEntries: RootIndexEntry[] = [];
+  if (existsSync(presetsDir)) {
+    for (const dirent of await readdir(presetsDir, { withFileTypes: true })) {
+      if (!dirent.isDirectory()) continue;
+      const presetJsonPath = join(presetsDir, dirent.name, "preset.json");
+      if (!existsSync(presetJsonPath)) continue;
+      try {
+        const m = JSON.parse(await readFile(presetJsonPath, "utf8"));
+        rootEntries.push({
+          id: m.id,
+          name: m.name,
+          description: m.description,
+          tags: m.tags ?? [],
+          components: m.components ?? Object.keys(m.files ?? {}),
+          version: m.version,
+          tested_on: m.tested_on,
+          author: m.author,
+          ...(m.source ? { source: m.source } : {}),
+        });
+      } catch {
+        // Skip unparseable preset.json
+      }
+    }
   }
-  const newRootPresets: RootIndexEntry[] = [
-    ...curated,
-    ...accepted.map((e) => ({
-      id: e.id,
-      name: e.name,
-      description: e.description,
-      tags: e.tags,
-      components: ["CLAUDE.md"],
-      version: e.version,
-      tested_on: e.tested_on,
-      author: e.author,
-      source: e.source,
-    })),
-  ];
+  // Stable order: curated alphabetical first, then auto-discovered by stars desc.
+  rootEntries.sort((a, b) => {
+    const aAuto = !!a.source;
+    const bAuto = !!b.source;
+    if (aAuto !== bAuto) return aAuto ? 1 : -1;
+    if (aAuto && bAuto) return (b.source!.stars ?? 0) - (a.source!.stars ?? 0);
+    return a.id.localeCompare(b.id);
+  });
+
+  const rootIndexPath = join(REGISTRY_DIR, "index.json");
   await writeFile(
     rootIndexPath,
     JSON.stringify(
-      {
-        version: "1",
-        updated_at: new Date().toISOString(),
-        presets: newRootPresets,
-      },
+      { version: "1", updated_at: new Date().toISOString(), presets: rootEntries },
       null,
       2,
     ),
@@ -116,8 +128,10 @@ async function main() {
     await rm(legacyDir, { recursive: true, force: true });
   }
 
+  const auto = rootEntries.filter((e) => e.source).length;
+  const curatedN = rootEntries.length - auto;
   console.log(
-    `Wrote ${accepted.length} auto-discovered presets (curated kept: ${curated.length})`,
+    `This run accepted ${accepted.length} new entries; index now has ${rootEntries.length} (${curatedN} curated + ${auto} auto-discovered)`,
   );
 }
 

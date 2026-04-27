@@ -10,6 +10,19 @@ export interface SourceEntry {
   url: string;
 }
 
+export interface PresetSource {
+  repo: string;            // "owner/name"
+  url: string;             // GitHub blob URL to the CLAUDE.md file
+  homepage?: string | null;
+  path: string;            // file path within the repo
+  branch: string;
+  stars: number;
+  language?: string | null;
+  pushed_at?: string;
+  discovered_at: string;
+  score?: number;
+}
+
 export interface PresetMeta {
   id: string;
   name: string;
@@ -17,7 +30,7 @@ export interface PresetMeta {
   description: string;
   author: string;
   tags: string[];
-  source?: { repo: string; stars: number; discovered_at: string };
+  source?: PresetSource;
 }
 
 export interface PresetIndex {
@@ -34,6 +47,7 @@ export interface PresetManifest {
   files: Record<string, string>;
   skills?: string[];
   mcps?: { ref: string; required_env?: string[] }[];
+  source?: PresetSource;
 }
 
 export interface ActivePresetInfo {

@@ -154,16 +154,20 @@ export default function PresetsPage() {
               <div className="flex items-center gap-3 px-4 py-3">
                 <Avatar name={p.name} size={36} />
                 <div className="flex-1 min-w-0">
-                  <div className="text-sm font-semibold text-app-text truncate">
-                    {p.name}
+                  <div className="text-sm font-semibold text-app-text truncate flex items-center gap-2">
+                    <span className="truncate">{p.name}</span>
                     {p.source && (
-                      <span className="ml-2 px-1.5 py-0.5 text-[10px] rounded bg-orange-900/30 text-orange-300 border border-orange-700/40">
-                        🔥 热门发现
+                      <span className="px-1.5 py-0.5 text-[10px] rounded bg-orange-900/30 text-orange-300 border border-orange-700/40 shrink-0">
+                        🔥 热门
                       </span>
                     )}
                   </div>
                   <div className="text-xs text-app-muted mt-0.5 truncate">
-                    {p.tags?.slice(0, 2).join(" · ")}
+                    {p.source ? (
+                      <>★ {p.source.stars.toLocaleString()} · {p.tags?.slice(0, 2).join(" · ") || "auto-discovered"}</>
+                    ) : (
+                      p.tags?.slice(0, 2).join(" · ")
+                    )}
                   </div>
                 </div>
                 <span className="text-xs text-app-muted shrink-0">v{p.version}</span>
@@ -243,6 +247,69 @@ export default function PresetsPage() {
                   )}
                 </div>
               </div>
+
+              {/* Source card (auto-discovered presets only) */}
+              {manifest.source && (
+                <div className="bg-app-card border border-app-border rounded-xl p-5">
+                  <div className="text-xs font-semibold text-app-muted uppercase tracking-wider mb-3 flex items-center gap-2">
+                    <span>📦 来源</span>
+                    <span className="px-1.5 py-0.5 text-[10px] rounded bg-orange-900/30 text-orange-300 border border-orange-700/40 normal-case tracking-normal">
+                      自动发现
+                    </span>
+                  </div>
+                  <div className="space-y-2 text-sm">
+                    <div className="flex items-center gap-2">
+                      <span className="text-app-muted w-16 shrink-0 text-xs">仓库</span>
+                      <a
+                        href={`https://github.com/${manifest.source.repo}`}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-app-accent hover:underline truncate font-mono text-xs"
+                      >
+                        {manifest.source.repo}
+                      </a>
+                      <span className="text-app-muted text-xs">★ {manifest.source.stars.toLocaleString()}</span>
+                      {manifest.source.language && (
+                        <span className="px-1.5 py-0.5 text-[10px] rounded bg-app-surface text-app-secondary border border-app-border">
+                          {manifest.source.language}
+                        </span>
+                      )}
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <span className="text-app-muted w-16 shrink-0 text-xs pt-0.5">原始文件</span>
+                      <a
+                        href={manifest.source.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-app-accent hover:underline font-mono text-xs break-all"
+                      >
+                        {manifest.source.path}
+                      </a>
+                    </div>
+                    {manifest.source.homepage && (
+                      <div className="flex items-center gap-2">
+                        <span className="text-app-muted w-16 shrink-0 text-xs">主页</span>
+                        <a
+                          href={manifest.source.homepage}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="text-app-accent hover:underline truncate text-xs"
+                        >
+                          {manifest.source.homepage}
+                        </a>
+                      </div>
+                    )}
+                    {manifest.source.pushed_at && (
+                      <div className="flex items-center gap-2">
+                        <span className="text-app-muted w-16 shrink-0 text-xs">最后提交</span>
+                        <span className="text-app-secondary text-xs">
+                          {new Date(manifest.source.pushed_at).toISOString().slice(0, 10)}
+                        </span>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              )}
 
               {/* Files card */}
               <div className="bg-app-card border border-app-border rounded-xl p-5">

@@ -7,6 +7,9 @@ export interface SearchHit {
   path: string;
   pushed_at: string;
   description: string | null;
+  topics: string[];
+  language: string | null;
+  homepage: string | null;
 }
 
 export async function searchClaudeMd(octokit: Octokit, minStars = 500): Promise<SearchHit[]> {
@@ -21,7 +24,7 @@ export async function searchClaudeMd(octokit: Octokit, minStars = 500): Promise<
       if (seen.has(fullName)) continue;
       seen.add(fullName);
 
-      // Enrich with real repo metadata (stars, pushed_at, default_branch).
+      // Enrich with real repo metadata (stars, pushed_at, default_branch, topics, language).
       try {
         const [owner, repo] = fullName.split("/");
         const { data: repoData } = await octokit.repos.get({ owner, repo });
@@ -33,6 +36,9 @@ export async function searchClaudeMd(octokit: Octokit, minStars = 500): Promise<
           path: item.path,
           pushed_at: repoData.pushed_at ?? "",
           description: repoData.description,
+          topics: repoData.topics ?? [],
+          language: repoData.language ?? null,
+          homepage: repoData.homepage ?? null,
         });
       } catch (e) {
         // Skip private/deleted/rate-limited repos silently.

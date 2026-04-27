@@ -3,8 +3,8 @@
   "name": "stripe/stripe-node",
   "description": "Node.js library for the Stripe API.    ",
   "tags": [
-    "auto-discovered",
-    "score-64"
+    "stripe",
+    "stripe-sdk"
   ],
   "version": "1.0.0",
   "tested_on": "2026-04-27",
@@ -13,8 +13,15 @@
     "CLAUDE.md": "CLAUDE.md"
   },
   "source": {
-    "repo": "https://github.com/stripe/stripe-node",
+    "repo": "stripe/stripe-node",
+    "url": "https://github.com/stripe/stripe-node/blob/master/.claude/CLAUDE.md",
+    "homepage": "https://stripe.com",
+    "path": ".claude/CLAUDE.md",
+    "branch": "master",
     "stars": 4392,
-    "discovered_at": "2026-04-27T08:03:13.655Z"
+    "language": "TypeScript",
+    "pushed_at": "2026-04-24T18:15:26Z",
+    "discovered_at": "2026-04-27T09:05:24.992Z",
+    "score": 0.6351359999999999
   }
 }

@@ -1,24 +1,7 @@
 {
   "version": "1",
-  "updated_at": "2026-04-27T08:03:16.395Z",
+  "updated_at": "2026-04-27T09:05:28.122Z",
   "presets": [
-    {
-      "id": "safe-solo",
-      "name": "Safe Solo Developer",
-      "description": "A conservative baseline for individual developers: read the repo first, protect secrets, test before claiming completion.",
-      "tags": [
-        "general",
-        "solo",
-        "safe"
-      ],
-      "components": [
-        "CLAUDE.md",
-        "settings.json"
-      ],
-      "version": "1.0.0",
-      "tested_on": "2026-04-26",
-      "author": "claude-preset"
-    },
     {
       "id": "code-review",
       "name": "Code Review",
@@ -26,6 +9,21 @@
       "tags": [
         "review",
         "quality"
+      ],
+      "components": [
+        "CLAUDE.md"
+      ],
+      "version": "1.0.0",
+      "tested_on": "2026-04-26",
+      "author": "claude-preset"
+    },
+    {
+      "id": "docs-writer",
+      "name": "Documentation Writer",
+      "description": "Documentation preset for clear README, guides, changelogs, and examples that stay close to verified behavior.",
+      "tags": [
+        "docs",
+        "writing"
       ],
       "components": [
         "CLAUDE.md"
@@ -67,187 +65,35 @@
       "author": "claude-preset"
     },
     {
-      "id": "docs-writer",
-      "name": "Documentation Writer",
-      "description": "Documentation preset for clear README, guides, changelogs, and examples that stay close to verified behavior.",
+      "id": "safe-solo",
+      "name": "Safe Solo Developer",
+      "description": "A conservative baseline for individual developers: read the repo first, protect secrets, test before claiming completion.",
       "tags": [
-        "docs",
-        "writing"
+        "general",
+        "solo",
+        "safe"
       ],
       "components": [
-        "CLAUDE.md"
+        "CLAUDE.md",
+        "settings.json"
       ],
       "version": "1.0.0",
       "tested_on": "2026-04-26",
       "author": "claude-preset"
     },
     {
-      "id": "giuseppe99barchetta-suggestarr",
-      "name": "giuseppe99barchetta/SuggestArr",
-      "description": "Effortlessly request recommended movies, TV shows and anime to Jellyseer/Overseer based on your recently watched content on Jellyfin, Plex or Emby—let SuggestArr handle it all automatically, keeping your library fresh with new and exciting content!",
-      "tags": [
-        "auto-discovered",
-        "score-61"
-      ],
-      "components": [
-        "CLAUDE.md"
-      ],
-      "version": "1.0.0",
-      "tested_on": "2026-04-27",
-      "author": "giuseppe99barchetta",
-      "source": {
-        "repo": "https://github.com/giuseppe99barchetta/SuggestArr",
-        "stars": 1121,
-        "discovered_at": "2026-04-27T08:03:11.376Z"
-      }
-    },
-    {
-      "id": "coturn-coturn",
-      "name": "coturn/coturn",
-      "description": "coturn TURN server project",
-      "tags": [
-        "auto-discovered",
-        "score-65"
-      ],
-      "components": [
-        "CLAUDE.md"
-      ],
-      "version": "1.0.0",
-      "tested_on": "2026-04-27",
-      "author": "coturn",
-      "source": {
-        "repo": "https://github.com/coturn/coturn",
-        "stars": 13913,
-        "discovered_at": "2026-04-27T08:03:11.795Z"
-      }
-    },
-    {
-      "id": "javascript-obfuscator-javascript-obfuscator",
-      "name": "javascript-obfuscator/javascript-obfuscator",
-      "description": "A powerful obfuscator for JavaScript and Node.js",
-      "tags": [
-        "auto-discovered",
-        "score-67"
-      ],
-      "components": [
-        "CLAUDE.md"
-      ],
-      "version": "1.0.0",
-      "tested_on": "2026-04-27",
-      "author": "javascript-obfuscator",
-      "source": {
-        "repo": "https://github.com/javascript-obfuscator/javascript-obfuscator",
-        "stars": 15996,
-        "discovered_at": "2026-04-27T08:03:12.381Z"
-      }
-    },
-    {
-      "id": "kimlimjustin-xplorer",
-      "name": "kimlimjustin/xplorer",
-      "description": "Xplorer, a customizable, modern file manager",
-      "tags": [
-        "auto-discovered",
-        "score-58"
-      ],
-      "components": [
-        "CLAUDE.md"
-      ],
-      "version": "1.0.0",
-      "tested_on": "2026-04-27",
-      "author": "kimlimjustin",
-      "source": {
-        "repo": "https://github.com/kimlimjustin/xplorer",
-        "stars": 5452,
-        "discovered_at": "2026-04-27T08:03:12.771Z"
-      }
-    },
-    {
-      "id": "openclaw-skills",
-      "name": "openclaw/skills",
-      "description": "All versions of all skills that are on clawhub.com archived",
-      "tags": [
-        "auto-discovered",
-        "score-58"
-      ],
-      "components": [
-        "CLAUDE.md"
-      ],
-      "version": "1.0.0",
-      "tested_on": "2026-04-27",
-      "author": "openclaw",
-      "source": {
-        "repo": "https://github.com/openclaw/skills",
-        "stars": 4378,
-        "discovered_at": "2026-04-27T08:03:13.224Z"
-      }
-    },
-    {
-      "id": "stripe-stripe-node",
-      "name": "stripe/stripe-node",
-      "description": "Node.js library for the Stripe API.    ",
-      "tags": [
-        "auto-discovered",
-        "score-64"
-      ],
-      "components": [
-        "CLAUDE.md"
-      ],
-      "version": "1.0.0",
-      "tested_on": "2026-04-27",
-      "author": "stripe",
-      "source": {
-        "repo": "https://github.com/stripe/stripe-node",
-        "stars": 4392,
-        "discovered_at": "2026-04-27T08:03:13.655Z"
-      }
-    },
-    {
-      "id": "sugyan-claude-code-webui",
-      "name": "sugyan/claude-code-webui",
-      "description": "Web-based interface for Claude CLI with streaming chat responses",
-      "tags": [
-        "auto-discovered",
-        "score-51"
-      ],
-      "components": [
-        "CLAUDE.md"
-      ],
-      "version": "1.0.0",
-      "tested_on": "2026-04-27",
-      "author": "sugyan",
-      "source": {
-        "repo": "https://github.com/sugyan/claude-code-webui",
-        "stars": 1055,
-        "discovered_at": "2026-04-27T08:03:14.061Z"
-      }
-    },
-    {
-      "id": "debugtheworldbot-keystats",
-      "name": "debugtheworldbot/keyStats",
-      "description": "Keyboard & Mouse Stats for macOS/Windows",
-      "tags": [
-        "auto-discovered",
-        "score-55"
-      ],
-      "components": [
-        "CLAUDE.md"
-      ],
-      "version": "1.0.0",
-      "tested_on": "2026-04-27",
-      "author": "debugtheworldbot",
-      "source": {
-        "repo": "https://github.com/debugtheworldbot/keyStats",
-        "stars": 1267,
-        "discovered_at": "2026-04-27T08:03:14.431Z"
-      }
-    },
-    {
       "id": "cypress-io-cypress",
       "name": "cypress-io/cypress",
       "description": "Fast, easy and reliable testing for anything that runs in a browser.",
       "tags": [
-        "auto-discovered",
-        "score-94"
+        "angular-testing-library",
+        "component-testing",
+        "cypress",
+        "cypress-cloud",
+        "cypress-schematic",
+        "end-to-end-testing",
+        "react-testing-library",
+        "svelte-testing-library"
       ],
       "components": [
         "CLAUDE.md"
@@ -256,9 +102,16 @@
       "tested_on": "2026-04-27",
       "author": "cypress-io",
       "source": {
-        "repo": "https://github.com/cypress-io/cypress",
+        "repo": "cypress-io/cypress",
+        "url": "https://github.com/cypress-io/cypress/blob/develop/packages/ts/CLAUDE.md",
+        "homepage": "https://cypress.io",
+        "path": "packages/ts/CLAUDE.md",
+        "branch": "develop",
         "stars": 49620,
-        "discovered_at": "2026-04-27T08:03:14.858Z"
+        "language": "TypeScript",
+        "pushed_at": "2026-04-27T02:54:41Z",
+        "discovered_at": "2026-04-27T09:05:26.669Z",
+        "score": 0.93696
       }
     },
     {
@@ -266,8 +119,11 @@
       "name": "lerna/lerna",
       "description": "Lerna is a fast, modern build system for managing and publishing multiple JavaScript/TypeScript packages from the same repository.",
       "tags": [
-        "auto-discovered",
-        "score-83"
+        "lerna",
+        "monorepo",
+        "npm",
+        "package",
+        "publishing"
       ],
       "components": [
         "CLAUDE.md"
@@ -276,69 +132,282 @@
       "tested_on": "2026-04-27",
       "author": "lerna",
       "source": {
-        "repo": "https://github.com/lerna/lerna",
+        "repo": "lerna/lerna",
+        "url": "https://github.com/lerna/lerna/blob/main/CLAUDE.md",
+        "homepage": "https://lerna.js.org",
+        "path": "CLAUDE.md",
+        "branch": "main",
         "stars": 36070,
-        "discovered_at": "2026-04-27T08:03:15.272Z"
+        "language": "TypeScript",
+        "pushed_at": "2026-04-15T18:50:11Z",
+        "discovered_at": "2026-04-27T09:05:27.185Z",
+        "score": 0.82856
       }
     },
     {
-      "id": "qwibitai-nanoclaw",
-      "name": "qwibitai/nanoclaw",
-      "description": "A lightweight alternative to OpenClaw that runs in containers for security. Connects to WhatsApp, Telegram, Slack, Discord, Gmail and other messaging apps,, has memory, scheduled jobs, and runs directly on Anthropic's Agents SDK",
+      "id": "surrealdb-surrealdb",
+      "name": "surrealdb/surrealdb",
+      "description": "A scalable, distributed, collaborative, document-graph database, for the realtime web",
       "tags": [
-        "auto-discovered",
-        "score-77"
+        "backend-as-a-service",
+        "cloud-database",
+        "database",
+        "database-as-a-service",
+        "developer-tools",
+        "devtools",
+        "distributed",
+        "distributed-database"
       ],
       "components": [
         "CLAUDE.md"
       ],
       "version": "1.0.0",
       "tested_on": "2026-04-27",
-      "author": "qwibitai",
+      "author": "surrealdb",
       "source": {
-        "repo": "https://github.com/qwibitai/nanoclaw",
-        "stars": 28176,
-        "discovered_at": "2026-04-27T08:03:15.638Z"
+        "repo": "surrealdb/surrealdb",
+        "url": "https://github.com/surrealdb/surrealdb/blob/main/surrealism/runtime/CLAUDE.md",
+        "homepage": "https://surrealdb.com",
+        "path": "surrealism/runtime/CLAUDE.md",
+        "branch": "main",
+        "stars": 31957,
+        "language": "Rust",
+        "pushed_at": "2026-04-27T08:54:40Z",
+        "discovered_at": "2026-04-27T09:05:27.658Z",
+        "score": 0.795656
       }
     },
     {
-      "id": "modelengine-group-nexent",
-      "name": "ModelEngine-Group/nexent",
-      "description": "Nexent is a zero-code platform for auto-generating production-grade AI agents using Harness Engineering principles — unified tools, skills, memory, and orchestration with built-in constraints, feedback loops, and control planes.",
+      "id": "javascript-obfuscator-javascript-obfuscator",
+      "name": "javascript-obfuscator/javascript-obfuscator",
+      "description": "A powerful obfuscator for JavaScript and Node.js",
       "tags": [
-        "auto-discovered",
-        "score-57"
+        "browser",
+        "control-flow",
+        "cryptography",
+        "encoding",
+        "flattening",
+        "flow",
+        "javascript",
+        "javascript-obfuscator"
       ],
       "components": [
         "CLAUDE.md"
       ],
       "version": "1.0.0",
       "tested_on": "2026-04-27",
-      "author": "ModelEngine-Group",
+      "author": "javascript-obfuscator",
       "source": {
-        "repo": "https://github.com/ModelEngine-Group/nexent",
-        "stars": 4360,
-        "discovered_at": "2026-04-27T08:03:16.024Z"
+        "repo": "javascript-obfuscator/javascript-obfuscator",
+        "url": "https://github.com/javascript-obfuscator/javascript-obfuscator/blob/master/CLAUDE.md",
+        "homepage": "https://obfuscator.io",
+        "path": "CLAUDE.md",
+        "branch": "master",
+        "stars": 15997,
+        "language": "TypeScript",
+        "pushed_at": "2026-04-27T08:18:30Z",
+        "discovered_at": "2026-04-27T09:05:24.116Z",
+        "score": 0.667976
       }
     },
     {
-      "id": "oldwinter-knowledge-garden",
-      "name": "oldwinter/knowledge-garden",
-      "description": "我的第二大脑 second brain，我的数字花园 digital garden，用obsidian双链笔记软件写作而成",
+      "id": "coturn-coturn",
+      "name": "coturn/coturn",
+      "description": "coturn TURN server project",
       "tags": [
-        "auto-discovered",
-        "score-55"
+        "networking",
+        "server",
+        "turn"
       ],
       "components": [
         "CLAUDE.md"
       ],
       "version": "1.0.0",
       "tested_on": "2026-04-27",
-      "author": "oldwinter",
+      "author": "coturn",
       "source": {
-        "repo": "https://github.com/oldwinter/knowledge-garden",
-        "stars": 2427,
-        "discovered_at": "2026-04-27T08:03:16.393Z"
+        "repo": "coturn/coturn",
+        "url": "https://github.com/coturn/coturn/blob/master/CLAUDE.md",
+        "homepage": "",
+        "path": "CLAUDE.md",
+        "branch": "master",
+        "stars": 13913,
+        "language": "C",
+        "pushed_at": "2026-04-26T18:28:28Z",
+        "discovered_at": "2026-04-27T09:05:23.504Z",
+        "score": 0.651304
+      }
+    },
+    {
+      "id": "kimlimjustin-xplorer",
+      "name": "kimlimjustin/xplorer",
+      "description": "Xplorer, a customizable, modern file manager",
+      "tags": [
+        "cross-platform",
+        "file",
+        "file-manager",
+        "file-xplorer",
+        "files",
+        "fluent-design",
+        "hacktoberfest",
+        "tauri"
+      ],
+      "components": [
+        "CLAUDE.md"
+      ],
+      "version": "1.0.0",
+      "tested_on": "2026-04-27",
+      "author": "kimlimjustin",
+      "source": {
+        "repo": "kimlimjustin/xplorer",
+        "url": "https://github.com/kimlimjustin/xplorer/blob/next/CLAUDE.md",
+        "homepage": "https://xplorer.space/",
+        "path": "CLAUDE.md",
+        "branch": "next",
+        "stars": 5452,
+        "language": "TypeScript",
+        "pushed_at": "2026-04-25T14:09:23Z",
+        "discovered_at": "2026-04-27T09:05:24.622Z",
+        "score": 0.5836159999999999
+      }
+    },
+    {
+      "id": "stripe-stripe-node",
+      "name": "stripe/stripe-node",
+      "description": "Node.js library for the Stripe API.    ",
+      "tags": [
+        "stripe",
+        "stripe-sdk"
+      ],
+      "components": [
+        "CLAUDE.md"
+      ],
+      "version": "1.0.0",
+      "tested_on": "2026-04-27",
+      "author": "stripe",
+      "source": {
+        "repo": "stripe/stripe-node",
+        "url": "https://github.com/stripe/stripe-node/blob/master/.claude/CLAUDE.md",
+        "homepage": "https://stripe.com",
+        "path": ".claude/CLAUDE.md",
+        "branch": "master",
+        "stars": 4392,
+        "language": "TypeScript",
+        "pushed_at": "2026-04-24T18:15:26Z",
+        "discovered_at": "2026-04-27T09:05:24.992Z",
+        "score": 0.6351359999999999
+      }
+    },
+    {
+      "id": "kostub-iosmath",
+      "name": "kostub/iosMath",
+      "description": "Beautiful math equation rendering on iOS and MacOS",
+      "tags": [
+        "objective-c"
+      ],
+      "components": [
+        "CLAUDE.md"
+      ],
+      "version": "1.0.0",
+      "tested_on": "2026-04-27",
+      "author": "kostub",
+      "source": {
+        "repo": "kostub/iosMath",
+        "url": "https://github.com/kostub/iosMath/blob/master/CLAUDE.md",
+        "homepage": "",
+        "path": "CLAUDE.md",
+        "branch": "master",
+        "stars": 1458,
+        "language": "Objective-C",
+        "pushed_at": "2026-04-23T06:43:23Z",
+        "discovered_at": "2026-04-27T09:05:28.103Z",
+        "score": 0.5516639999999999
+      }
+    },
+    {
+      "id": "debugtheworldbot-keystats",
+      "name": "debugtheworldbot/keyStats",
+      "description": "Keyboard & Mouse Stats for macOS/Windows",
+      "tags": [
+        "swift"
+      ],
+      "components": [
+        "CLAUDE.md"
+      ],
+      "version": "1.0.0",
+      "tested_on": "2026-04-27",
+      "author": "debugtheworldbot",
+      "source": {
+        "repo": "debugtheworldbot/keyStats",
+        "url": "https://github.com/debugtheworldbot/keyStats/blob/main/CLAUDE.md",
+        "homepage": "https://keystats.vercel.app",
+        "path": "CLAUDE.md",
+        "branch": "main",
+        "stars": 1268,
+        "language": "Swift",
+        "pushed_at": "2026-04-24T14:52:49Z",
+        "discovered_at": "2026-04-27T09:05:25.815Z",
+        "score": 0.550144
+      }
+    },
+    {
+      "id": "sugyan-claude-code-webui",
+      "name": "sugyan/claude-code-webui",
+      "description": "Web-based interface for Claude CLI with streaming chat responses",
+      "tags": [
+        "claude",
+        "claude-cli",
+        "web-ui"
+      ],
+      "components": [
+        "CLAUDE.md"
+      ],
+      "version": "1.0.0",
+      "tested_on": "2026-04-27",
+      "author": "sugyan",
+      "source": {
+        "repo": "sugyan/claude-code-webui",
+        "url": "https://github.com/sugyan/claude-code-webui/blob/main/CLAUDE.md",
+        "homepage": null,
+        "path": "CLAUDE.md",
+        "branch": "main",
+        "stars": 1055,
+        "language": "TypeScript",
+        "pushed_at": "2025-11-03T04:49:28Z",
+        "discovered_at": "2026-04-27T09:05:25.437Z",
+        "score": 0.5085129305718317
+      }
+    },
+    {
+      "id": "hascheksolutions-pictshare",
+      "name": "HaschekSolutions/pictshare",
+      "description": ":camera: PictShare is an open source image, mp4, pastebin hosting service with a simple resizing and upload API that you can host yourself. :rice_scene:",
+      "tags": [
+        "docker",
+        "encryption",
+        "image-uploader",
+        "images",
+        "mp4-uploads",
+        "picture",
+        "selfhosted"
+      ],
+      "components": [
+        "CLAUDE.md"
+      ],
+      "version": "1.0.0",
+      "tested_on": "2026-04-27",
+      "author": "HaschekSolutions",
+      "source": {
+        "repo": "HaschekSolutions/pictshare",
+        "url": "https://github.com/HaschekSolutions/pictshare/blob/master/CLAUDE.md",
+        "homepage": "https://www.pictshare.net",
+        "path": "CLAUDE.md",
+        "branch": "master",
+        "stars": 908,
+        "language": "PHP",
+        "pushed_at": "2026-04-18T10:49:16Z",
+        "discovered_at": "2026-04-27T09:05:26.212Z",
+        "score": 0.547264
       }
     }
   ]

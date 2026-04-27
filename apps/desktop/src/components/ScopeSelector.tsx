@@ -27,13 +27,19 @@ function formatRelative(iso: string | null): string {
   return new Date(iso).toISOString().slice(0, 10);
 }
 
+const DROPDOWN_MAX_HEIGHT = 384; // matches max-h-96
+const DROPDOWN_WIDTH = 420;
+
 export default function ScopeSelector({ scope, onChange }: Props) {
   const isGlobal = scope.kind === "global";
   const canPickDir = isTauriApp();
   const [open_, setOpen] = useState(false);
   const [recents, setRecents] = useState<RecentProject[]>([]);
   const [loading, setLoading] = useState(false);
+  const [coords, setCoords] = useState<{ top: number; left: number; placement: "down" | "up" }>({ top: 0, left: 0, placement: "down" });
   const ref = useRef<HTMLDivElement>(null);
+  const triggerRef = useRef<HTMLButtonElement>(null);
+  const popoverRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (!canPickDir) return;
@@ -44,13 +50,44 @@ export default function ScopeSelector({ scope, onChange }: Props) {
       .finally(() => setLoading(false));
   }, [canPickDir]);
 
+  function recalcPosition() {
+    const btn = triggerRef.current;
+    if (!btn) return;
+    const r = btn.getBoundingClientRect();
+    const spaceBelow = window.innerHeight - r.bottom - 8;
+    const spaceAbove = r.top - 8;
+    const placement: "down" | "up" =
+      spaceBelow >= DROPDOWN_MAX_HEIGHT || spaceBelow >= spaceAbove ? "down" : "up";
+    let left = r.left;
+    if (left + DROPDOWN_WIDTH > window.innerWidth - 8) {
+      left = window.innerWidth - DROPDOWN_WIDTH - 8;
+    }
+    if (left < 8) left = 8;
+    const top = placement === "down" ? r.bottom + 6 : r.top - 6;
+    setCoords({ top, left, placement });
+  }
+
   useEffect(() => {
     if (!open_) return;
+    recalcPosition();
+    const onResize = () => recalcPosition();
     const handler = (e: MouseEvent) => {
-      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false);
+      const target = e.target as Node;
+      if (
+        ref.current && !ref.current.contains(target) &&
+        popoverRef.current && !popoverRef.current.contains(target)
+      ) {
+        setOpen(false);
+      }
     };
     document.addEventListener("mousedown", handler);
-    return () => document.removeEventListener("mousedown", handler);
+    window.addEventListener("resize", onResize);
+    window.addEventListener("scroll", onResize, true);
+    return () => {
+      document.removeEventListener("mousedown", handler);
+      window.removeEventListener("resize", onResize);
+      window.removeEventListener("scroll", onResize, true);
+    };
   }, [open_]);
 
   async function pickDir() {
@@ -99,6 +136,7 @@ export default function ScopeSelector({ scope, onChange }: Props) {
         <div ref={ref} className="relative">
           {canPickDir ? (
             <button
+              ref={triggerRef}
               onClick={() => setOpen((v) => !v)}
               className="px-3 py-1.5 text-xs bg-app-card hover:bg-app-cardHover text-app-secondary hover:text-app-text border border-app-border rounded-lg transition-colors max-w-72 truncate flex items-center gap-1.5"
               title={scope.kind === "project" ? scope.path : ""}
@@ -113,7 +151,15 @@ export default function ScopeSelector({ scope, onChange }: Props) {
           )}
 
           {open_ && canPickDir && (
-            <div className="absolute top-full left-0 mt-1.5 w-[420px] max-h-96 overflow-y-auto bg-app-card border border-app-border rounded-xl shadow-2xl z-30">
+            <div
+              ref={popoverRef}
+              className="fixed w-[420px] max-h-96 overflow-y-auto bg-app-card border border-app-border rounded-xl shadow-2xl z-50"
+              style={{
+                top: coords.placement === "down" ? coords.top : undefined,
+                bottom: coords.placement === "up" ? window.innerHeight - coords.top : undefined,
+                left: coords.left,
+              }}
+            >
               <div className="px-4 py-2.5 border-b border-app-border flex items-center justify-between">
                 <span className="text-[10px] uppercase text-app-muted tracking-wide">
                   Claude Code 最近项目
