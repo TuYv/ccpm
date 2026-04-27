@@ -1,17 +1,22 @@
 import { invoke } from "@tauri-apps/api/core";
 import type {
   ActivePresetInfo,
+  ActiveState,
   AppConfig,
   BackupEntry,
   ClaudeSettings,
   ImportedBundle,
   InstalledState,
+  ItemKindArg,
+  LibraryItemMeta,
   McpIndex,
   McpMeta,
   PresetMeta,
   PresetIndex,
   PresetManifest,
+  Recipe,
   RestoreArg,
+  ScanResult,
   ScopeArg,
   SkillIndex,
   SkillMeta,
@@ -321,6 +326,80 @@ export const api = {
           "list_recent_projects",
         )
       : Promise.resolve([]),
+
+  // Library
+  listLibraryItems: (kind: ItemKindArg) =>
+    tauriAvailable() ? call<string[]>("list_library_items", { kind }) : Promise.resolve([]),
+  getLibraryMeta: (kind: ItemKindArg, id: string) =>
+    tauriAvailable()
+      ? call<LibraryItemMeta>("get_library_meta", { kind, id })
+      : Promise.reject(new ClaudePresetError("Tauri only")),
+  getLibraryClaudeMd: (id: string) =>
+    tauriAvailable()
+      ? call<[string, string | null]>("get_library_claude_md", { id })
+      : Promise.reject(new ClaudePresetError("Tauri only")),
+  getLibrarySkillMd: (id: string) =>
+    tauriAvailable()
+      ? call<string>("get_library_skill_md", { id })
+      : Promise.reject(new ClaudePresetError("Tauri only")),
+  getLibraryMcpJson: (id: string) =>
+    tauriAvailable()
+      ? call<string>("get_library_mcp_json", { id })
+      : Promise.reject(new ClaudePresetError("Tauri only")),
+  addLibraryClaudeMd: (
+    meta: LibraryItemMeta,
+    claudeMd: string,
+    settingsJson?: string,
+  ) =>
+    tauriAvailable()
+      ? call<void>("add_library_claude_md", { meta, claudeMd, settingsJson })
+      : Promise.resolve(),
+  addLibrarySkill: (meta: LibraryItemMeta, skillMd: string) =>
+    tauriAvailable()
+      ? call<void>("add_library_skill", { meta, skillMd })
+      : Promise.resolve(),
+  addLibraryMcp: (id: string, mcpJson: string) =>
+    tauriAvailable()
+      ? call<void>("add_library_mcp", { id, mcpJson })
+      : Promise.resolve(),
+  removeLibraryItem: (kind: ItemKindArg, id: string) =>
+    tauriAvailable()
+      ? call<void>("remove_library_item", { kind, id })
+      : Promise.resolve(),
+
+  // Recipes
+  listRecipes: () =>
+    tauriAvailable() ? call<Recipe[]>("list_recipes_cmd") : Promise.resolve([]),
+  getRecipe: (id: string) =>
+    tauriAvailable()
+      ? call<Recipe>("get_recipe_cmd", { id })
+      : Promise.reject(new ClaudePresetError("Tauri only")),
+  saveRecipe: (recipe: Recipe) =>
+    tauriAvailable() ? call<void>("save_recipe_cmd", { recipe }) : Promise.resolve(),
+  deleteRecipe: (id: string) =>
+    tauriAvailable() ? call<void>("delete_recipe_cmd", { id }) : Promise.resolve(),
+  activateRecipe: (id: string, scope: ScopeArg) =>
+    tauriAvailable()
+      ? call<string>("activate_recipe_cmd", { id, scope })
+      : Promise.reject(new ClaudePresetError("Tauri only")),
+  deactivateRecipe: (scope: ScopeArg) =>
+    tauriAvailable() ? call<void>("deactivate_recipe_cmd", { scope }) : Promise.resolve(),
+  getActiveState: () =>
+    tauriAvailable()
+      ? call<ActiveState>("get_active_state_cmd")
+      : Promise.resolve({ global: null, projects: {} }),
+  getActiveRecipeId: (scope: ScopeArg) =>
+    tauriAvailable()
+      ? call<string | null>("get_active_recipe_id_cmd", { scope })
+      : Promise.resolve(null),
+
+  // First launch
+  isFirstLaunch: () =>
+    tauriAvailable() ? call<boolean>("is_first_launch_cmd") : Promise.resolve(false),
+  scanAndSeed: () =>
+    tauriAvailable()
+      ? call<ScanResult>("scan_and_seed_cmd")
+      : Promise.resolve({ claude_md_imported: null, skills_imported: [], mcps_imported: [], recipe_id: "current" }),
 
   readClaudeSettings: (): Promise<ClaudeSettings> =>
     tauriAvailable()

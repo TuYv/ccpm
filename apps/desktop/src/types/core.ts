@@ -185,3 +185,50 @@ export interface ImportedBundle {
   skills: Record<string, string>;
   mcps: Record<string, string>;
 }
+
+// ── Library + Recipe ──────────────────────────────────────────────────────────
+
+export type ItemKindArg = "claude-md" | "skill" | "mcp";
+
+export type ItemSource =
+  | { kind: "remote"; repo: string; url: string }
+  | { kind: "imported"; from: string }
+  | { kind: "user-created" };
+
+export interface LibraryItemMeta {
+  id: string;
+  name: string;
+  description: string;
+  tags?: string[];
+  source: ItemSource;
+  downloaded_at: string;
+}
+
+export interface RecipeMcpEntry {
+  library_id: string;
+  env?: Record<string, string>;
+}
+
+export interface Recipe {
+  id: string;
+  name: string;
+  description?: string;
+  claude_md?: string | null;
+  skills?: string[];
+  mcps?: RecipeMcpEntry[];
+  settings_override?: Record<string, unknown>;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface ActiveState {
+  global?: string | null;
+  projects?: Record<string, string>;
+}
+
+export interface ScanResult {
+  claude_md_imported: string | null;
+  skills_imported: string[];
+  mcps_imported: string[];
+  recipe_id: string;
+}
