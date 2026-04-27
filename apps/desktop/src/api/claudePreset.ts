@@ -314,6 +314,14 @@ export const api = {
       ? call<ImportedBundle>("import_from_github_cmd", { url })
       : Promise.reject(new ClaudePresetError("Tauri only")),
 
+  // Recent projects from Claude Code history
+  listRecentProjects: () =>
+    tauriAvailable()
+      ? call<{ path: string; name: string; last_used: string | null }[]>(
+          "list_recent_projects",
+        )
+      : Promise.resolve([]),
+
   readClaudeSettings: (): Promise<ClaudeSettings> =>
     tauriAvailable()
       ? call<ClaudeSettings>("read_claude_settings")
