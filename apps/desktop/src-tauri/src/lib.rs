@@ -1,6 +1,8 @@
 mod commands;
 
-use commands::{claude_settings, config, importer, mcps, presets, recent_projects, skills, state};
+use commands::{
+    claude_settings, config, importer, library, mcps, presets, recent_projects, skills, state,
+};
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
@@ -33,6 +35,15 @@ pub fn run() {
             mcps::uninstall_mcp_cmd,
             mcps::list_installed_mcps_cmd,
             importer::import_from_github_cmd,
+            library::list_library_items,
+            library::get_library_meta,
+            library::get_library_claude_md,
+            library::get_library_skill_md,
+            library::get_library_mcp_json,
+            library::add_library_claude_md,
+            library::add_library_skill,
+            library::add_library_mcp,
+            library::remove_library_item,
             recent_projects::list_recent_projects,
         ])
         .run(tauri::generate_context!())

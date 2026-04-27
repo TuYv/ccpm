@@ -1,6 +1,7 @@
 pub mod claude_settings;
 pub mod config;
 pub mod importer;
+pub mod library;
 pub mod mcps;
 pub mod presets;
 pub mod recent_projects;
