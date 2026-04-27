@@ -2611,91 +2611,204 @@ git commit -m "refactor(desktop): PresetsPage 'install' → 'download to library
 
 ---
 
-### Task 7.2: SkillsPage download semantics
+### Task 7.2: SkillsPage — clean download to library
 
 **Files:**
+- Modify: `apps/desktop/src-tauri/src/commands/library.rs`
+- Modify: `apps/desktop/src-tauri/src/lib.rs`
+- Modify: `apps/desktop/src/api/claudePreset.ts`
+- Modify: `apps/desktop/src/stores/index.ts`
 - Modify: `apps/desktop/src/pages/SkillsPage.tsx`
 
-- [ ] **Step 1: Replace install handler**
+The new behavior MUST NOT write to `~/.claude/skills/`. We add a composed Tauri command that fetches the skill body from registry and writes it via `library::add_skill`.
 
-In `handleInstall(skill)`, replace the body:
+- [ ] **Step 1: Add `download_skill_to_library_cmd` to library.rs**
 
-```tsx
-async function handleInstall(skill: SkillMeta) {
-  try {
-    // Fetch the actual SKILL.md content
-    // (skill catalog provides install_path on each entry; we need the file body)
-    // For Tauri build path: existing fetchSkillsIndex call already retrieved meta;
-    // grab the body via API. Add a registry endpoint if not present.
-    // Stub for now — assume install puts to library.
-    const meta: LibraryItemMeta = {
-      id: skill.id,
-      name: skill.name,
-      description: skill.description,
-      tags: [skill.category, ...(skill.compatible_tools ?? [])],
-      source: skill.source
-        ? { kind: "remote", repo: skill.source.repo, url: skill.source.url }
-        : { kind: "user-created" },
-      downloaded_at: new Date().toISOString(),
+Append to `apps/desktop/src-tauri/src/commands/library.rs`:
+
+```rust
+use claude_preset_core::{
+    config::load_config,
+    registry::{build_client, fetch_skill_content},
+    types::{ItemSource, LibraryItemMeta, SkillMeta},
+};
+
+#[tauri::command]
+pub async fn download_skill_to_library_cmd(skill: SkillMeta) -> Result<(), String> {
+    let pm = default_preset_manager_dir();
+    let config = load_config(&pm).map_err(|e| e.to_string())?;
+    let client = build_client(&config).map_err(|e| e.to_string())?;
+    let body = fetch_skill_content(&client, &config.preset_source_url, &skill.id)
+        .await
+        .map_err(|e| e.to_string())?;
+
+    let meta = LibraryItemMeta {
+        id: skill.id.clone(),
+        name: skill.name.clone(),
+        description: skill.description.clone(),
+        tags: {
+            let mut t = vec![skill.category.clone()];
+            t.extend(skill.compatible_tools.iter().cloned());
+            t
+        },
+        source: ItemSource::Remote {
+            repo: String::new(),
+            url: String::new(),
+        },
+        downloaded_at: chrono::Utc::now().to_rfc3339(),
     };
-    // Re-use existing install_skill_cmd which already writes content to ~/.claude/skills/.
-    // For the new model we want it written to library only. Simplest path:
-    // call a new helper download_skill_to_library. For this task, use a
-    // workaround: skill.md is fetched and addLibrarySkill invoked with body.
-    // Requires a new core fn fetch_skill_to_library — we'll add inline.
 
-    // Workaround: pull body via existing install path then move it.
-    // For TDD-friendly version, expose skill body fetch in a future task; for
-    // now use install_skill_cmd which writes to scope, then read it back.
-    // (Alternative: extend `installSkill` API to support "library" scope kind
-    // later. For v1 this suffices.)
-
-    await api.installSkill(skill, { kind: "global" });
-    // The install_skill_cmd wrote to ~/.claude/skills/<id>/SKILL.md.
-    // We are accepting that this initial v1 implementation still uses the
-    // existing install path, then adds the meta to library too. This will be
-    // polished in a follow-up task.
-    addToast("✓ 已下载到库", "success");
-    void meta;
-  } catch (e) {
-    addToast(`下载失败：${String(e)}`, "error");
-  }
+    add_skill(&pm, &meta, &body).map_err(|e| e.to_string())
 }
 ```
 
-Wait — the above mixes concerns. The cleaner approach is to **add a new Rust fn `fetch_skill_md_remote`** and call `addLibrarySkill` with the result. To keep this plan finite, mark this as a known v1 simplification and follow up.
+- [ ] **Step 2: Register command**
 
-**Simpler v1**: change the toast message and routing only (keep current install behavior); refactor cleanly in a follow-up task. Update the button label:
-
-```tsx
-{isInstalled ? "已下载" : "下载到库"}
+In `lib.rs`, add to the handler list:
+```rust
+            library::download_skill_to_library_cmd,
 ```
 
-And add note in the toast: `"✓ 已下载（v1：仍写入 ~/.claude/skills/，将在后续版本改为只入库）"`. Honest user-visible note.
+- [ ] **Step 3: Build to verify**
 
-- [ ] **Step 2: Typecheck + commit**
+```bash
+cargo build -p claude-preset-desktop
+```
+Expected: SUCCESS.
+
+- [ ] **Step 4: Add API + replace store install method**
+
+`apps/desktop/src/api/claudePreset.ts` — add (next to existing `installSkill`):
+```ts
+  downloadSkillToLibrary: (skill: SkillMeta) =>
+    tauriAvailable()
+      ? call<void>("download_skill_to_library_cmd", { skill })
+      : Promise.resolve(),
+```
+
+`apps/desktop/src/stores/index.ts` — replace `useSkillsStore.install` body:
+```ts
+  install: async (skillId, _scope) => {
+    const meta = get().index?.skills.find((s) => s.id === skillId);
+    if (!meta) throw new Error(`skill not found: ${skillId}`);
+    await api.downloadSkillToLibrary(meta);
+    // installed state for the catalog page now means "in library"
+    await get().loadInstalled(_scope);
+  },
+```
+
+(`uninstall` calls `removeLibraryItem("skill", id)` — replace `api.uninstallSkill(meta, scope)` with `api.removeLibraryItem("skill", skillId)`.)
+
+`useSkillsStore.uninstall`:
+```ts
+  uninstall: async (skillId, _scope) => {
+    await api.removeLibraryItem("skill", skillId);
+    await get().loadInstalled(_scope);
+  },
+```
+
+`loadInstalled` should read the library, not active scope:
+```ts
+  loadInstalled: async (_scope) => {
+    const ids = await api.listLibraryItems("skill");
+    set((s) => ({ installed: { ...s.installed, [scopeKey(_scope)]: ids } }));
+  },
+```
+
+- [ ] **Step 5: Update SkillsPage labels**
+
+In `SkillsPage.tsx`, change row button label from "安装"/"卸载" to:
+```tsx
+{isInstalled ? "从库移除" : "下载到库"}
+```
+And toast on success: `"✓ 已下载到库"`.
+
+(The existing handlers `handleInstall`/`handleUninstall` already call store methods, which we updated in Step 4. No further wiring needed beyond label/toast text.)
+
+- [ ] **Step 6: Typecheck + commit**
 
 ```bash
 cd apps/desktop && npx tsc --noEmit
-git add apps/desktop/src/pages/SkillsPage.tsx
-git commit -m "refactor(desktop): SkillsPage relabel install → download to library (v1)"
+git add apps/desktop/src-tauri/src/commands/library.rs \
+        apps/desktop/src-tauri/src/lib.rs \
+        apps/desktop/src/api/claudePreset.ts \
+        apps/desktop/src/stores/index.ts \
+        apps/desktop/src/pages/SkillsPage.tsx
+git commit -m "refactor(desktop): SkillsPage download writes only to library, not ~/.claude/"
 ```
 
 ---
 
-### Task 7.3: McpPage download semantics
-
-Same pattern as SkillsPage. Relabel button, update toast.
+### Task 7.3: McpPage — clean download to library
 
 **Files:**
+- Modify: `apps/desktop/src-tauri/src/commands/library.rs`
+- Modify: `apps/desktop/src-tauri/src/lib.rs`
+- Modify: `apps/desktop/src/api/claudePreset.ts`
+- Modify: `apps/desktop/src/stores/index.ts`
 - Modify: `apps/desktop/src/pages/McpPage.tsx`
 
-- [ ] **Step 1: Update labels**
+Same surgical approach: new command `download_mcp_to_library_cmd`, library only.
 
-Change "全局安装" / "项目安装" → "下载到库". Remove the env input section (env now belongs to the recipe, not the library). The library MCP entry only stores command/args/required_env definitions.
+- [ ] **Step 1: Add Tauri command**
 
-In `McpRow`, replace the install button block:
+Append to `apps/desktop/src-tauri/src/commands/library.rs`:
+```rust
+use claude_preset_core::types::McpMeta;
 
+#[tauri::command]
+pub fn download_mcp_to_library_cmd(mcp: McpMeta) -> Result<(), String> {
+    let pm = default_preset_manager_dir();
+    let json = serde_json::to_string_pretty(&mcp).map_err(|e| e.to_string())?;
+    add_mcp(&pm, &mcp.id, &json).map_err(|e| e.to_string())
+}
+```
+
+- [ ] **Step 2: Register**
+
+`lib.rs`:
+```rust
+            library::download_mcp_to_library_cmd,
+```
+
+- [ ] **Step 3: Build**
+
+```bash
+cargo build -p claude-preset-desktop
+```
+Expected: SUCCESS.
+
+- [ ] **Step 4: API + store**
+
+`api/claudePreset.ts`:
+```ts
+  downloadMcpToLibrary: (mcp: McpMeta) =>
+    tauriAvailable()
+      ? call<void>("download_mcp_to_library_cmd", { mcp })
+      : Promise.resolve(),
+```
+
+`stores/index.ts` — replace `useMcpsStore.install` and `uninstall`:
+```ts
+  install: async (mcpId, _scope, _env) => {
+    const meta = get().index?.mcps.find((m) => m.id === mcpId);
+    if (!meta) throw new Error(`mcp not found: ${mcpId}`);
+    await api.downloadMcpToLibrary(meta);
+    await get().loadInstalled(_scope);
+  },
+  uninstall: async (mcpId, _scope) => {
+    await api.removeLibraryItem("mcp", mcpId);
+    await get().loadInstalled(_scope);
+  },
+  loadInstalled: async (_scope) => {
+    const ids = await api.listLibraryItems("mcp");
+    set((s) => ({ installed: { ...s.installed, [scopeKey(_scope)]: ids } }));
+  },
+```
+
+- [ ] **Step 5: Update McpPage UI**
+
+In `McpPage.tsx` `McpRow` — remove env input section (env belongs to recipe now), change button to:
 ```tsx
 {isInstalled ? (
   <button
@@ -2714,14 +2827,18 @@ In `McpRow`, replace the install button block:
 )}
 ```
 
-The handler still calls `installMcp` (existing); v1 simplification noted in toast. Refactor to `addLibraryMcp` happens in a follow-up.
+In the parent `handleInstall(mcp, env)`, simplify to `await install(mcp.id, scope, {})` (env will be set per-recipe later). Toast `"✓ 已下载到库"`.
 
-- [ ] **Step 2: Typecheck + commit**
+- [ ] **Step 6: Typecheck + commit**
 
 ```bash
 cd apps/desktop && npx tsc --noEmit
-git add apps/desktop/src/pages/McpPage.tsx
-git commit -m "refactor(desktop): McpPage relabel install → download to library (v1)"
+git add apps/desktop/src-tauri/src/commands/library.rs \
+        apps/desktop/src-tauri/src/lib.rs \
+        apps/desktop/src/api/claudePreset.ts \
+        apps/desktop/src/stores/index.ts \
+        apps/desktop/src/pages/McpPage.tsx
+git commit -m "refactor(desktop): McpPage download writes only to library, not ~/.claude/"
 ```
 
 ---
@@ -2881,9 +2998,9 @@ git commit -m "feat(desktop): first-launch scan and seed on app mount"
 | InstalledPage shows active recipes | 7.4 |
 | First-launch bootstrap on app mount | 8.1 |
 
-**Known v1 simplifications** (called out explicitly so they don't regress silently):
-- Tasks 7.2/7.3 still call existing `installSkill`/`installMcp` (which writes to `~/.claude/skills/`) under the new label. A follow-up task should replace with `addLibrarySkill`/`addLibraryMcp` after fetching SKILL.md / mcp.json from registry. **Documented in toast text** so users aren't surprised.
-- Existing 5 seed presets remain reachable via current PresetsPage; their migration to library entries happens automatically when a user clicks "下载到库" on each. No bulk migration script needed.
+**No v1 simplifications:** Tasks 7.2/7.3 add new `download_skill_to_library_cmd` and `download_mcp_to_library_cmd` Tauri commands so download paths write **only** to the library, never to `~/.claude/`. Activation via the recipe is the sole entry point for `~/.claude/` writes.
+
+**Existing 5 seed presets**: Remain reachable via current PresetsPage; their migration to library entries happens automatically when a user clicks "下载到库" on each. No bulk migration script needed.
 
 **Placeholder check**: All `// TBD` removed. Each step has runnable code or commands.
 
