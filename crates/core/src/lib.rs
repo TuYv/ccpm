@@ -8,6 +8,7 @@ pub mod library;
 pub mod mcp;
 pub mod recipes;
 pub mod registry;
+pub mod scan_existing;
 pub mod skills;
 pub mod state;
 pub mod types;
