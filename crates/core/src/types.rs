@@ -249,7 +249,7 @@ pub enum RestoreOption {
 // ── Library + Recipe types ────────────────────────────────────────────────────
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
-#[serde(tag = "kind", rename_all = "lowercase")]
+#[serde(tag = "kind", rename_all = "kebab-case")]
 pub enum ItemSource {
     Remote { repo: String, url: String },
     Imported { from: String },
@@ -501,7 +501,16 @@ mod tests {
             "downloaded_at": "2026-04-27T00:00:00Z"
         }"#;
         let m: LibraryItemMeta = serde_json::from_str(json).unwrap();
-        matches!(m.source, ItemSource::Remote { .. });
+        assert!(matches!(m.source, ItemSource::Remote { .. }));
+    }
+
+    #[test]
+    fn test_item_source_user_created_is_kebab_case() {
+        let s = ItemSource::UserCreated;
+        let json = serde_json::to_string(&s).unwrap();
+        assert_eq!(json, r#"{"kind":"user-created"}"#);
+        let back: ItemSource = serde_json::from_str(&json).unwrap();
+        assert!(matches!(back, ItemSource::UserCreated));
     }
 
     #[test]
