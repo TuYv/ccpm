@@ -6,6 +6,7 @@ pub mod fs;
 pub mod importer;
 pub mod library;
 pub mod mcp;
+pub mod recipes;
 pub mod registry;
 pub mod skills;
 pub mod state;
