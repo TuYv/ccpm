@@ -72,6 +72,25 @@ async fn fetch_text(client: &reqwest::Client, url: &str) -> Result<String, AppEr
     Ok(resp.text().await?)
 }
 
+/// Like fetch_text but returns Ok(None) on 404 (used for optional namespaces).
+async fn fetch_text_optional(
+    client: &reqwest::Client,
+    url: &str,
+) -> Result<Option<String>, AppError> {
+    let resp = client.get(url).send().await?;
+    if resp.status() == reqwest::StatusCode::NOT_FOUND {
+        return Ok(None);
+    }
+    if !resp.status().is_success() {
+        return Err(AppError::Network(format!(
+            "HTTP {} fetching {}",
+            resp.status(),
+            url
+        )));
+    }
+    Ok(Some(resp.text().await?))
+}
+
 /// Fetches index.json from remote, writes to cache, returns parsed index.
 pub async fn fetch_index(
     client: &reqwest::Client,
@@ -167,7 +186,14 @@ pub async fn fetch_skills_index(
     cache_dir: &Path,
 ) -> Result<crate::types::SkillIndex, AppError> {
     let url = format!("{}/skills/index.json", source_url.trim_end_matches('/'));
-    let content = fetch_text(client, &url).await?;
+    // Skills namespace is optional — a registry without it returns an empty index.
+    let Some(content) = fetch_text_optional(client, &url).await? else {
+        return Ok(crate::types::SkillIndex {
+            version: "1".to_string(),
+            updated_at: String::new(),
+            skills: vec![],
+        });
+    };
     let index: crate::types::SkillIndex = serde_json::from_str(&content)
         .map_err(|e| AppError::Parse(format!("remote skills index 解析失败：{}", e)))?;
     write_to_cache(cache_dir, "skills-index.json", &content)?;
@@ -203,7 +229,14 @@ pub async fn fetch_mcps_index(
     cache_dir: &Path,
 ) -> Result<crate::types::McpIndex, AppError> {
     let url = format!("{}/mcps/index.json", source_url.trim_end_matches('/'));
-    let content = fetch_text(client, &url).await?;
+    // MCPs namespace is optional — a registry without it returns an empty index.
+    let Some(content) = fetch_text_optional(client, &url).await? else {
+        return Ok(crate::types::McpIndex {
+            version: "1".to_string(),
+            updated_at: String::new(),
+            mcps: vec![],
+        });
+    };
     let index: crate::types::McpIndex = serde_json::from_str(&content)
         .map_err(|e| AppError::Parse(format!("remote mcps index 解析失败：{}", e)))?;
     write_to_cache(cache_dir, "mcps-index.json", &content)?;
