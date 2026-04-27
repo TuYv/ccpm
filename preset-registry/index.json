@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-04-27T09:24:05.949Z",
+  "updated_at": "2026-04-27T10:34:42.494Z",
   "presets": [
     {
       "id": "code-review",
@@ -110,7 +110,7 @@
         "stars": 49620,
         "language": "TypeScript",
         "pushed_at": "2026-04-27T02:54:41Z",
-        "discovered_at": "2026-04-27T09:24:03.454Z",
+        "discovered_at": "2026-04-27T10:34:41.802Z",
         "score": 0.93696
       }
     },
@@ -140,7 +140,7 @@
         "stars": 36070,
         "language": "TypeScript",
         "pushed_at": "2026-04-15T18:50:11Z",
-        "discovered_at": "2026-04-27T09:24:03.866Z",
+        "discovered_at": "2026-04-27T10:34:41.146Z",
         "score": 0.82856
       }
     },
@@ -170,11 +170,11 @@
         "homepage": "https://surrealdb.com",
         "path": "surrealism/runtime/CLAUDE.md",
         "branch": "main",
-        "stars": 31957,
+        "stars": 31958,
         "language": "Rust",
         "pushed_at": "2026-04-27T08:54:40Z",
-        "discovered_at": "2026-04-27T09:05:27.658Z",
-        "score": 0.795656
+        "discovered_at": "2026-04-27T10:34:42.036Z",
+        "score": 0.7956639999999999
       }
     },
     {
@@ -200,11 +200,11 @@
         "homepage": "https://nanoclaw.dev",
         "path": "groups/main/CLAUDE.md",
         "branch": "main",
-        "stars": 28186,
+        "stars": 28191,
         "language": "TypeScript",
         "pushed_at": "2026-04-26T21:39:26Z",
-        "discovered_at": "2026-04-27T09:24:04.233Z",
-        "score": 0.765488
+        "discovered_at": "2026-04-27T10:34:41.931Z",
+        "score": 0.765528
       }
     },
     {
@@ -236,7 +236,7 @@
         "stars": 15997,
         "language": "TypeScript",
         "pushed_at": "2026-04-27T08:18:30Z",
-        "discovered_at": "2026-04-27T09:24:00.048Z",
+        "discovered_at": "2026-04-27T10:34:41.453Z",
         "score": 0.667976
       }
     },
@@ -261,11 +261,11 @@
         "homepage": "",
         "path": "CLAUDE.md",
         "branch": "master",
-        "stars": 13913,
+        "stars": 13914,
         "language": "C",
         "pushed_at": "2026-04-26T18:28:28Z",
-        "discovered_at": "2026-04-27T09:23:59.505Z",
-        "score": 0.651304
+        "discovered_at": "2026-04-27T10:34:41.263Z",
+        "score": 0.651312
       }
     },
     {
@@ -297,7 +297,7 @@
         "stars": 5452,
         "language": "TypeScript",
         "pushed_at": "2026-04-25T14:09:23Z",
-        "discovered_at": "2026-04-27T09:24:00.462Z",
+        "discovered_at": "2026-04-27T10:34:41.566Z",
         "score": 0.5836159999999999
       }
     },
@@ -354,11 +354,38 @@
         "homepage": "https://nexent.tech",
         "path": "CLAUDE.md",
         "branch": "main",
-        "stars": 4360,
+        "stars": 4359,
         "language": "Python",
-        "pushed_at": "2026-04-27T09:21:14Z",
-        "discovered_at": "2026-04-27T09:24:04.687Z",
-        "score": 0.5748800000000001
+        "pushed_at": "2026-04-27T10:20:44Z",
+        "discovered_at": "2026-04-27T10:34:42.479Z",
+        "score": 0.574872
+      }
+    },
+    {
+      "id": "mattermost-mattermost-mobile",
+      "name": "mattermost/mattermost-mobile",
+      "description": "Next generation iOS and Android apps for Mattermost in React Native",
+      "tags": [
+        "hacktoberfest",
+        "mattermost-mobile"
+      ],
+      "components": [
+        "CLAUDE.md"
+      ],
+      "version": "1.0.0",
+      "tested_on": "2026-04-27",
+      "author": "mattermost",
+      "source": {
+        "repo": "mattermost/mattermost-mobile",
+        "url": "https://github.com/mattermost/mattermost-mobile/blob/main/CLAUDE.md",
+        "homepage": "https://about.mattermost.com/",
+        "path": "CLAUDE.md",
+        "branch": "main",
+        "stars": 2648,
+        "language": "TypeScript",
+        "pushed_at": "2026-04-27T08:59:56Z",
+        "discovered_at": "2026-04-27T10:34:42.283Z",
+        "score": 0.5611839999999999
       }
     },
     {
@@ -501,7 +528,7 @@
         "stars": 1268,
         "language": "Swift",
         "pushed_at": "2026-04-24T14:52:49Z",
-        "discovered_at": "2026-04-27T09:05:25.815Z",
+        "discovered_at": "2026-04-27T10:34:41.691Z",
         "score": 0.550144
       }
     },
@@ -560,7 +587,7 @@
         "stars": 1122,
         "language": "Python",
         "pushed_at": "2026-04-20T12:10:38Z",
-        "discovered_at": "2026-04-27T09:23:59.078Z",
+        "discovered_at": "2026-04-27T10:34:41.030Z",
         "score": 0.608976
       }
     },
@@ -625,6 +652,35 @@
       }
     },
     {
+      "id": "lich0821-ccnexus",
+      "name": "lich0821/ccNexus",
+      "description": "Intelligent API gateway for Claude Code and Codex CLI - rotate endpoints, monitor usage, and seamlessly integrate OpenAI, Gemini, and other platforms.",
+      "tags": [
+        "ai-coding",
+        "claude-code",
+        "claude-code-proxy",
+        "claude-code-router"
+      ],
+      "components": [
+        "CLAUDE.md"
+      ],
+      "version": "1.0.0",
+      "tested_on": "2026-04-27",
+      "author": "lich0821",
+      "source": {
+        "repo": "lich0821/ccNexus",
+        "url": "https://github.com/lich0821/ccNexus/blob/master/CLAUDE.md",
+        "homepage": "",
+        "path": "CLAUDE.md",
+        "branch": "master",
+        "stars": 838,
+        "language": "Go",
+        "pushed_at": "2026-04-21T05:34:36Z",
+        "discovered_at": "2026-04-27T10:34:42.380Z",
+        "score": 0.546704
+      }
+    },
+    {
       "id": "smi2-phpclickhouse",
       "name": "smi2/phpClickHouse",
       "description": "php ClickHouse wrapper",
@@ -649,7 +705,7 @@
         "stars": 837,
         "language": "PHP",
         "pushed_at": "2026-04-23T18:03:07Z",
-        "discovered_at": "2026-04-27T09:24:05.096Z",
+        "discovered_at": "2026-04-27T10:34:42.159Z",
         "score": 0.546696
       }
     },
