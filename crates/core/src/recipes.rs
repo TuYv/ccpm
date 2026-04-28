@@ -535,6 +535,79 @@ mod tests {
     }
 
     #[test]
+    fn test_activate_rejects_traversal_in_skill_id() {
+        use crate::library;
+        use crate::types::{ItemSource, LibraryItemMeta};
+        let dir = tempdir().unwrap();
+        let claude = dir.path().join("claude");
+        let pm = dir.path().join("pm");
+        std::fs::create_dir_all(&claude).unwrap();
+        std::fs::create_dir_all(&pm).unwrap();
+
+        let m = LibraryItemMeta {
+            id: "cm".into(),
+            name: "cm".into(),
+            description: "".into(),
+            tags: vec![],
+            source: ItemSource::UserCreated,
+            downloaded_at: "2026-04-27T00:00:00Z".into(),
+        };
+        library::add_claude_md(&pm, &m, "# x", None).unwrap();
+
+        let mut rec = r("rtraversal");
+        rec.claude_md = Some("cm".into());
+        rec.skills = vec!["../etc".into()];
+        save_recipe(&pm, &rec).unwrap();
+
+        let result = activate_recipe(&claude, &pm, "rtraversal", &Scope::Global);
+        assert!(matches!(result, Err(AppError::InvalidInput(_))));
+        // CLAUDE.md should not have been written either
+        assert!(!claude.join("CLAUDE.md").exists());
+    }
+
+    #[test]
+    fn test_settings_override_non_object_is_skipped() {
+        use crate::library;
+        use crate::types::{ItemSource, LibraryItemMeta};
+        let dir = tempdir().unwrap();
+        let claude = dir.path().join("claude");
+        let pm = dir.path().join("pm");
+        std::fs::create_dir_all(&claude).unwrap();
+        std::fs::create_dir_all(&pm).unwrap();
+        std::fs::write(
+            claude.join("settings.json"),
+            r#"{"model":"sonnet","keep":true}"#,
+        )
+        .unwrap();
+
+        let m = LibraryItemMeta {
+            id: "cm".into(),
+            name: "cm".into(),
+            description: "".into(),
+            tags: vec![],
+            source: ItemSource::UserCreated,
+            downloaded_at: "2026-04-27T00:00:00Z".into(),
+        };
+        library::add_claude_md(&pm, &m, "# x", None).unwrap();
+
+        let mut rec = r("rarr");
+        rec.claude_md = Some("cm".into());
+        rec.settings_override = serde_json::json!([1, 2, 3]); // array root — bug bait
+        save_recipe(&pm, &rec).unwrap();
+
+        activate_recipe(&claude, &pm, "rarr", &Scope::Global).unwrap();
+
+        // Existing settings.json must NOT be turned into an array
+        let v: serde_json::Value = serde_json::from_str(
+            &std::fs::read_to_string(claude.join("settings.json")).unwrap(),
+        )
+        .unwrap();
+        assert!(v.is_object(), "settings.json must remain an object after non-object override");
+        // Original keys must survive
+        assert_eq!(v["keep"], true);
+    }
+
+    #[test]
     fn test_deactivate_clears_active() {
         use crate::library;
         use crate::types::{ItemSource, LibraryItemMeta};

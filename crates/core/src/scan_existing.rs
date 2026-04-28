@@ -265,6 +265,52 @@ mod tests {
     }
 
     #[test]
+    fn test_scan_is_idempotent() {
+        let dir = tempdir().unwrap();
+        let claude = dir.path().join("claude");
+        let pm = dir.path().join("pm");
+        std::fs::create_dir_all(&claude).unwrap();
+        std::fs::write(claude.join("CLAUDE.md"), "# v1").unwrap();
+        std::fs::create_dir_all(claude.join("skills/tdd")).unwrap();
+        std::fs::write(claude.join("skills/tdd/SKILL.md"), "# tdd").unwrap();
+
+        let r1 = scan_and_seed(&claude, &pm).unwrap();
+        let r2 = scan_and_seed(&claude, &pm).unwrap();
+
+        // Library item count and ids must be identical (no duplicates)
+        assert_eq!(r1.skills_imported, r2.skills_imported);
+        assert_eq!(r1.claude_md_imported, r2.claude_md_imported);
+
+        // Recipe id stable
+        let recipe = crate::recipes::get_recipe(&pm, "current").unwrap();
+        assert_eq!(recipe.id, "current");
+    }
+
+    #[test]
+    fn test_scan_preserves_user_renamed_recipe_metadata() {
+        let dir = tempdir().unwrap();
+        let claude = dir.path().join("claude");
+        let pm = dir.path().join("pm");
+        std::fs::create_dir_all(&claude).unwrap();
+        std::fs::write(claude.join("CLAUDE.md"), "# x").unwrap();
+
+        scan_and_seed(&claude, &pm).unwrap();
+        let mut recipe = crate::recipes::get_recipe(&pm, "current").unwrap();
+        let original_created = recipe.created_at.clone();
+        recipe.name = "我的自定义".into();
+        recipe.description = "我编辑过".into();
+        crate::recipes::save_recipe(&pm, &recipe).unwrap();
+
+        // Re-scan
+        scan_and_seed(&claude, &pm).unwrap();
+
+        let after = crate::recipes::get_recipe(&pm, "current").unwrap();
+        assert_eq!(after.name, "我的自定义");
+        assert_eq!(after.description, "我编辑过");
+        assert_eq!(after.created_at, original_created);
+    }
+
+    #[test]
     fn test_scan_marks_active_global() {
         let dir = tempdir().unwrap();
         let claude = dir.path().join("claude");
