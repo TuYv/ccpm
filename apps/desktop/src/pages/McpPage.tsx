@@ -13,14 +13,9 @@ function groupByCategory(mcps: McpMeta[]): Map<string, McpMeta[]> {
   return m;
 }
 
-function isSecretEnvKey(key: string): boolean {
-  return /TOKEN|KEY|SECRET|PASSWORD|API/i.test(key);
-}
-
 function McpRow({
   mcp,
   isInstalled,
-  scope,
   onInstall,
   onUninstall,
 }: {
@@ -31,9 +26,6 @@ function McpRow({
   onUninstall: () => void;
 }) {
   const [open, setOpen] = useState(false);
-  const [env, setEnv] = useState<Record<string, string>>({});
-
-  const requiredFilled = mcp.required_env.every((r) => (env[r.key] ?? "").trim().length > 0);
 
   return (
     <div className="px-4 py-3">
@@ -63,73 +55,20 @@ function McpRow({
             {mcp.command} {mcp.args.join(" ")}
           </div>
 
-          {mcp.required_env.length > 0 && (
-            <div className="space-y-2 mb-3">
-              <div className="text-[10px] uppercase text-app-muted">必填</div>
-              {mcp.required_env.map((r) => (
-                <div key={r.key} className="flex items-center gap-2">
-                  <label className="text-xs text-app-secondary w-32 shrink-0 font-mono">
-                    {r.key}
-                  </label>
-                  <input
-                    type={isSecretEnvKey(r.key) ? "password" : "text"}
-                    value={env[r.key] ?? ""}
-                    onChange={(e) =>
-                      setEnv((prev) => ({ ...prev, [r.key]: e.target.value }))
-                    }
-                    placeholder={r.hint || r.description}
-                    className="flex-1 bg-app-surface text-xs text-app-text px-2 py-1 rounded border border-app-border focus:border-app-accent outline-none font-mono"
-                  />
-                </div>
-              ))}
-            </div>
-          )}
-
-          {mcp.optional_env.length > 0 && (
-            <div className="space-y-2 mb-3">
-              <div className="text-[10px] uppercase text-app-muted">选填</div>
-              {mcp.optional_env.map((r) => (
-                <div key={r.key} className="flex items-center gap-2">
-                  <label className="text-xs text-app-secondary w-32 shrink-0 font-mono">
-                    {r.key}
-                  </label>
-                  <input
-                    type={isSecretEnvKey(r.key) ? "password" : "text"}
-                    value={env[r.key] ?? ""}
-                    onChange={(e) =>
-                      setEnv((prev) => ({ ...prev, [r.key]: e.target.value }))
-                    }
-                    placeholder={r.hint || r.description}
-                    className="flex-1 bg-app-surface text-xs text-app-text px-2 py-1 rounded border border-app-border focus:border-app-accent outline-none font-mono"
-                  />
-                </div>
-              ))}
-            </div>
-          )}
-
           <div className="flex justify-end gap-2">
             {isInstalled ? (
               <button
                 onClick={onUninstall}
-                className="px-3 py-1 text-xs bg-app-surface border border-app-border rounded-lg text-app-red hover:bg-app-red/10 transition-colors"
+                className="px-3 py-1 text-xs bg-app-surface border border-app-border rounded-lg text-app-red hover:bg-app-red/10"
               >
-                卸载
+                从库移除
               </button>
             ) : (
               <button
-                onClick={async () => {
-                  try {
-                    await onInstall(env);
-                    setEnv({});
-                    setOpen(false);
-                  } catch {
-                    // error already toasted by parent
-                  }
-                }}
-                disabled={!requiredFilled}
-                className="px-3 py-1 text-xs bg-app-accent rounded-lg text-white hover:bg-app-accentHover transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+                onClick={() => onInstall({})}
+                className="px-3 py-1 text-xs bg-app-accent rounded-lg text-white hover:bg-app-accentHover"
               >
-                {scope.kind === "global" ? "全局安装" : "项目安装"}
+                下载到库
               </button>
             )}
           </div>
@@ -172,16 +111,13 @@ export default function McpPage() {
 
   const grouped = useMemo(() => groupByCategory(filtered), [filtered]);
 
-  async function handleInstall(mcp: McpMeta, env: Record<string, string>) {
-    const cleaned = Object.fromEntries(
-      Object.entries(env).filter(([_, v]) => v.trim() !== ""),
-    );
+  async function handleInstall(mcp: McpMeta) {
     try {
-      await install(mcp.id, scope, cleaned);
+      await install(mcp.id, scope, {});
       await installedLoad();
-      addToast(`✓ 已安装 ${mcp.name}`, "success");
+      addToast(`✓ 已下载到库`, "success");
     } catch (e) {
-      addToast(`安装失败：${String(e)}`, "error");
+      addToast(`下载失败：${String(e)}`, "error");
     }
   }
 
@@ -227,7 +163,7 @@ export default function McpPage() {
                   mcp={mcp}
                   isInstalled={installedIds.includes(mcp.id)}
                   scope={scope}
-                  onInstall={(env) => handleInstall(mcp, env)}
+                  onInstall={() => handleInstall(mcp)}
                   onUninstall={() => handleUninstall(mcp)}
                 />
               ))}

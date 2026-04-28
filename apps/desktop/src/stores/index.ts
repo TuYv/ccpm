@@ -245,19 +245,19 @@ export const useMcpsStore = create<McpsStore>((set, get) => ({
       set({ loading: false });
     }
   },
-  loadInstalled: async (scope) => {
-    const ids = await api.listInstalledMcps(scope);
-    set((s) => ({ installed: { ...s.installed, [scopeKey(scope)]: ids } }));
+  loadInstalled: async (_scope) => {
+    const ids = await api.listLibraryItems("mcp");
+    set((s) => ({ installed: { ...s.installed, [scopeKey(_scope)]: ids } }));
   },
-  install: async (mcpId, scope, env) => {
+  install: async (mcpId, _scope, _env) => {
     const meta = get().index?.mcps.find((m) => m.id === mcpId);
     if (!meta) throw new Error(`mcp not found: ${mcpId}`);
-    await api.installMcp(meta, scope, env);
-    await get().loadInstalled(scope);
+    await api.downloadMcpToLibrary(meta);
+    await get().loadInstalled(_scope);
   },
-  uninstall: async (mcpId, scope) => {
-    await api.uninstallMcp(mcpId, scope);
-    await get().loadInstalled(scope);
+  uninstall: async (mcpId, _scope) => {
+    await api.removeLibraryItem("mcp", mcpId);
+    await get().loadInstalled(_scope);
   },
 }));
 

@@ -46,6 +46,7 @@ pub fn run() {
             library::add_library_mcp,
             library::remove_library_item,
             library::download_skill_to_library_cmd,
+            library::download_mcp_to_library_cmd,
             recipes::list_recipes_cmd,
             recipes::get_recipe_cmd,
             recipes::save_recipe_cmd,

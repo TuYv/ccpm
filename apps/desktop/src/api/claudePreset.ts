@@ -308,6 +308,10 @@ export const api = {
     tauriAvailable()
       ? call<void>("install_mcp_cmd", { meta, scope, env })
       : Promise.resolve(),
+  downloadMcpToLibrary: (mcp: McpMeta) =>
+    tauriAvailable()
+      ? call<void>("download_mcp_to_library_cmd", { mcp })
+      : Promise.resolve(),
   uninstallMcp: (mcpId: string, scope: ScopeArg) =>
     tauriAvailable()
       ? call<void>("uninstall_mcp_cmd", { mcpId, scope })

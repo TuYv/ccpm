@@ -6,7 +6,7 @@ use claude_preset_core::{
         get_skill_md, list_items, remove_item, ItemKind,
     },
     registry::{build_client, fetch_skill_content},
-    types::{ItemSource, LibraryItemMeta, SkillMeta},
+    types::{ItemSource, LibraryItemMeta, McpMeta, SkillMeta},
 };
 use serde::{Deserialize, Serialize};
 
@@ -116,4 +116,11 @@ pub async fn download_skill_to_library_cmd(skill: SkillMeta) -> Result<(), Strin
     };
 
     add_skill(&pm, &meta, &body).map_err(|e| e.to_string())
+}
+
+#[tauri::command]
+pub fn download_mcp_to_library_cmd(mcp: McpMeta) -> Result<(), String> {
+    let pm = default_preset_manager_dir();
+    let json = serde_json::to_string_pretty(&mcp).map_err(|e| e.to_string())?;
+    add_mcp(&pm, &mcp.id, &json).map_err(|e| e.to_string())
 }
