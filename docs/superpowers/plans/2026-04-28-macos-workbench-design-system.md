@@ -1468,7 +1468,7 @@ git commit -m "feat(desktop): align secondary pages with workbench primitives"
 **Files:**
 - Modify only files touched in Tasks 2-7 if verification finds issues.
 
-- [ ] **Step 1: Run production build**
+- [x] **Step 1: Run production build**
 
 ```bash
 cd /Users/rick/SourceLib/fishNotExist/claudeInit/ccpm/apps/desktop
@@ -1477,7 +1477,7 @@ pnpm build
 
 Expected: build passes.
 
-- [ ] **Step 2: Run Tauri app**
+- [x] **Step 2: Run Tauri app**
 
 ```bash
 cd /Users/rick/SourceLib/fishNotExist/claudeInit/ccpm/apps/desktop
@@ -1486,7 +1486,7 @@ pnpm tauri dev
 
 Expected: macOS app launches and shows sidebar navigation.
 
-- [ ] **Step 3: Verify navigation**
+- [x] **Step 3: Verify navigation**
 
 Manual checks:
 
@@ -1495,7 +1495,7 @@ Manual checks:
 - Settings back button returns to previous page.
 - Refresh button still refreshes the active data source for Presets, Skills, and MCP.
 
-- [ ] **Step 4: Verify recipe list**
+- [x] **Step 4: Verify recipe list**
 
 Manual checks:
 
@@ -1506,7 +1506,7 @@ Manual checks:
 - Delete confirmation still appears.
 - Activation dialog still opens from inactive rows.
 
-- [ ] **Step 5: Verify recipe editor**
+- [x] **Step 5: Verify recipe editor**
 
 Manual checks:
 
@@ -1522,7 +1522,7 @@ Manual checks:
 - Save returns to recipes.
 - Save and activate activates globally, matching existing behavior.
 
-- [ ] **Step 6: Verify secondary pages**
+- [x] **Step 6: Verify secondary pages**
 
 Manual checks:
 
@@ -1531,17 +1531,15 @@ Manual checks:
 - Installed page global/project active states still render.
 - Empty states render without layout jumps.
 
-- [ ] **Step 7: Commit polish fixes**
+- [x] **Step 7: Commit polish fixes**
 
-If fixes were required:
+Polish fixes from a 3-round multi-agent code review were committed
+ahead of manual verification:
 
-```bash
-cd /Users/rick/SourceLib/fishNotExist/claudeInit/ccpm
-git add apps/desktop/src
-git commit -m "fix(desktop): polish workbench verification issues"
-```
+- `d460186` fix(desktop): CR round 1 — layout fit, sticky cleanup, i18n, hooks
+- `d0a77df` fix(desktop): CR round 2 — scroll axis, column shrink, polish
 
-If no fixes were required, do not create an empty commit.
+Manual Tauri verification (Steps 2-6) passed with no further fixes required.
 
 ---
 
@@ -1556,7 +1554,7 @@ If no fixes were required, do not create an empty commit.
 
 ## Final Verification
 
-- [ ] Run:
+- [x] Run:
 
 ```bash
 cd /Users/rick/SourceLib/fishNotExist/claudeInit/ccpm/apps/desktop
