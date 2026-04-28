@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { api } from "../api/claudePreset";
 import { useRecipesStore, useUiStore } from "../stores";
-import type { Recipe, RecipeMcpEntry } from "../types/core";
+import type { McpMeta, Recipe, RecipeMcpEntry, SkillMeta } from "../types/core";
 import { isSecretEnvKey } from "../utils/env";
 
 const NEW_ID_SENTINEL = "new";
@@ -25,24 +25,36 @@ export default function RecipeEditor() {
   const [settingsOverride, setSettingsOverride] = useState("{}");
 
   const [availableClaudeMds, setAvailableClaudeMds] = useState<string[]>([]);
-  const [availableSkills, setAvailableSkills] = useState<string[]>([]);
-  const [availableMcps, setAvailableMcps] = useState<string[]>([]);
+  const [librarySkills, setLibrarySkills] = useState<Set<string>>(new Set());
+  const [libraryMcps, setLibraryMcps] = useState<Set<string>>(new Set());
+  const [remoteSkills, setRemoteSkills] = useState<SkillMeta[]>([]);
+  const [remoteMcps, setRemoteMcps] = useState<McpMeta[]>([]);
+  const [downloadingSkill, setDownloadingSkill] = useState<string | null>(null);
+  const [downloadingMcp, setDownloadingMcp] = useState<string | null>(null);
   const [refreshing, setRefreshing] = useState(false);
 
   const isNew = !id || id === NEW_ID_SENTINEL;
+
+  async function loadAll() {
+    const [cmLib, skLib, mcLib, skIndex, mcIndex] = await Promise.all([
+      api.listLibraryItems("claude-md"),
+      api.listLibraryItems("skill"),
+      api.listLibraryItems("mcp"),
+      api.fetchSkillsIndex(false).catch(() => ({ skills: [] as SkillMeta[] })),
+      api.fetchMcpsIndex(false).catch(() => ({ mcps: [] as McpMeta[] })),
+    ]);
+    setAvailableClaudeMds(cmLib);
+    setLibrarySkills(new Set(skLib));
+    setLibraryMcps(new Set(mcLib));
+    setRemoteSkills(skIndex.skills ?? []);
+    setRemoteMcps(mcIndex.mcps ?? []);
+  }
 
   async function refreshLibrary() {
     if (refreshing) return;
     setRefreshing(true);
     try {
-      const [cm, sk, mc] = await Promise.all([
-        api.listLibraryItems("claude-md"),
-        api.listLibraryItems("skill"),
-        api.listLibraryItems("mcp"),
-      ]);
-      setAvailableClaudeMds(cm);
-      setAvailableSkills(sk);
-      setAvailableMcps(mc);
+      await loadAll();
       addToast("✓ 已刷新库", "success");
     } finally {
       setRefreshing(false);
@@ -50,15 +62,7 @@ export default function RecipeEditor() {
   }
 
   useEffect(() => {
-    Promise.all([
-      api.listLibraryItems("claude-md"),
-      api.listLibraryItems("skill"),
-      api.listLibraryItems("mcp"),
-    ]).then(([cm, sk, mc]) => {
-      setAvailableClaudeMds(cm);
-      setAvailableSkills(sk);
-      setAvailableMcps(mc);
-    });
+    void loadAll();
   }, []);
 
   useEffect(() => {
@@ -72,6 +76,29 @@ export default function RecipeEditor() {
       setSettingsOverride(JSON.stringify(r.settings_override ?? {}, null, 2));
     });
   }, [id, isNew]);
+
+  // Sort: in-library first, then alphabetical
+  const sortedSkills = useMemo(() => {
+    const arr = [...remoteSkills];
+    arr.sort((a, b) => {
+      const aIn = librarySkills.has(a.id) ? 0 : 1;
+      const bIn = librarySkills.has(b.id) ? 0 : 1;
+      if (aIn !== bIn) return aIn - bIn;
+      return a.name.localeCompare(b.name);
+    });
+    return arr;
+  }, [remoteSkills, librarySkills]);
+
+  const sortedMcps = useMemo(() => {
+    const arr = [...remoteMcps];
+    arr.sort((a, b) => {
+      const aIn = libraryMcps.has(a.id) ? 0 : 1;
+      const bIn = libraryMcps.has(b.id) ? 0 : 1;
+      if (aIn !== bIn) return aIn - bIn;
+      return a.name.localeCompare(b.name);
+    });
+    return arr;
+  }, [remoteMcps, libraryMcps]);
 
   async function handleSave(activateAfter: boolean) {
     let parsedOverride: Record<string, unknown> = {};
@@ -126,6 +153,42 @@ export default function RecipeEditor() {
         m.library_id === mcpId ? { ...m, env: { ...m.env, [key]: val } } : m,
       ),
     );
+  }
+
+  async function handleDownloadSkill(skill: SkillMeta) {
+    if (downloadingSkill) return;
+    setDownloadingSkill(skill.id);
+    try {
+      await api.downloadSkillToLibrary(skill);
+      setLibrarySkills((s) => new Set(s).add(skill.id));
+      // auto-tick
+      setSkillIds((prev) => (prev.includes(skill.id) ? prev : [...prev, skill.id]));
+      addToast(`✓ 已下载 ${skill.name}`, "success");
+    } catch (e) {
+      addToast(`下载失败：${String(e)}`, "error");
+    } finally {
+      setDownloadingSkill(null);
+    }
+  }
+
+  async function handleDownloadMcp(mcp: McpMeta) {
+    if (downloadingMcp) return;
+    setDownloadingMcp(mcp.id);
+    try {
+      await api.downloadMcpToLibrary(mcp);
+      setLibraryMcps((s) => new Set(s).add(mcp.id));
+      // auto-add to mcpEntries with empty env
+      setMcpEntries((prev) =>
+        prev.find((m) => m.library_id === mcp.id)
+          ? prev
+          : [...prev, { library_id: mcp.id, env: {} }],
+      );
+      addToast(`✓ 已下载 ${mcp.name}`, "success");
+    } catch (e) {
+      addToast(`下载失败：${String(e)}`, "error");
+    } finally {
+      setDownloadingMcp(null);
+    }
   }
 
   return (
@@ -191,30 +254,57 @@ export default function RecipeEditor() {
           <div className="text-xs uppercase tracking-wider text-app-muted mb-2">
             ⚡ Skills <span className="text-app-secondary">({skillIds.length} 已选)</span>
           </div>
-          <div className="grid grid-cols-2 gap-2">
-            {availableSkills.map((sId) => (
-              <label
-                key={sId}
-                className="flex items-center gap-2 px-3 py-2 bg-app-surface rounded-lg border border-app-border cursor-pointer hover:bg-app-cardHover"
-              >
-                <input
-                  type="checkbox"
-                  checked={skillIds.includes(sId)}
-                  onChange={() => toggleSkill(sId)}
-                  className="accent-app-accent"
-                />
-                <span className="text-xs text-app-text truncate">{sId}</span>
-              </label>
-            ))}
+          <div className="grid grid-cols-1 gap-2">
+            {sortedSkills.map((skill) => {
+              const inLib = librarySkills.has(skill.id);
+              const ticked = skillIds.includes(skill.id);
+              const downloading = downloadingSkill === skill.id;
+              return (
+                <div
+                  key={skill.id}
+                  className="flex items-center gap-2 px-3 py-2 bg-app-surface rounded-lg border border-app-border"
+                >
+                  {inLib ? (
+                    <input
+                      type="checkbox"
+                      checked={ticked}
+                      onChange={() => toggleSkill(skill.id)}
+                      className="accent-app-accent"
+                    />
+                  ) : (
+                    <span className="w-4 h-4 inline-block" />
+                  )}
+                  <div className="flex-1 min-w-0">
+                    <div className="text-xs text-app-text truncate">{skill.name}</div>
+                    <div className="text-[10px] text-app-muted truncate">
+                      {skill.description}
+                    </div>
+                  </div>
+                  {!inLib ? (
+                    <button
+                      onClick={() => handleDownloadSkill(skill)}
+                      disabled={downloading}
+                      className="px-2 py-1 text-[10px] bg-app-accent text-white rounded hover:bg-app-accentHover disabled:opacity-50 shrink-0"
+                    >
+                      {downloading ? "下载中…" : "下载到库"}
+                    </button>
+                  ) : ticked ? (
+                    <span className="text-[10px] text-app-green shrink-0">✓ 已选</span>
+                  ) : (
+                    <span className="text-[10px] text-app-muted shrink-0">已下载</span>
+                  )}
+                </div>
+              );
+            })}
           </div>
-          {availableSkills.length === 0 && (
+          {sortedSkills.length === 0 && (
             <div className="text-[11px] text-app-muted">
-              库里还没有 skill。
+              远程暂无 skill 索引，
               <button
-                onClick={() => navigate("/skills")}
+                onClick={refreshLibrary}
                 className="ml-1 text-app-accent hover:underline"
               >
-                去 Skills tab 下载 →
+                试试刷新 →
               </button>
             </div>
           )}
@@ -225,35 +315,48 @@ export default function RecipeEditor() {
           <div className="text-xs uppercase tracking-wider text-app-muted mb-2">
             🔌 MCPs
           </div>
-          {availableMcps.length === 0 && (
-            <div className="text-[11px] text-app-muted mb-2">
-              库里还没有 MCP。
-              <button
-                onClick={() => navigate("/mcp")}
-                className="ml-1 text-app-accent hover:underline"
-              >
-                去 MCP tab 下载 →
-              </button>
-            </div>
-          )}
           <div className="space-y-2">
-            {availableMcps.map((mId) => {
-              const entry = mcpEntries.find((m) => m.library_id === mId);
+            {sortedMcps.map((mcp) => {
+              const inLib = libraryMcps.has(mcp.id);
+              const entry = mcpEntries.find((m) => m.library_id === mcp.id);
               const checked = !!entry;
+              const downloading = downloadingMcp === mcp.id;
               return (
                 <div
-                  key={mId}
+                  key={mcp.id}
                   className="bg-app-surface rounded-lg border border-app-border px-3 py-2"
                 >
-                  <label className="flex items-center gap-2 cursor-pointer">
-                    <input
-                      type="checkbox"
-                      checked={checked}
-                      onChange={() => toggleMcp(mId)}
-                      className="accent-app-accent"
-                    />
-                    <span className="text-xs text-app-text">{mId}</span>
-                  </label>
+                  <div className="flex items-center gap-2">
+                    {inLib ? (
+                      <input
+                        type="checkbox"
+                        checked={checked}
+                        onChange={() => toggleMcp(mcp.id)}
+                        className="accent-app-accent"
+                      />
+                    ) : (
+                      <span className="w-4 h-4 inline-block" />
+                    )}
+                    <div className="flex-1 min-w-0">
+                      <div className="text-xs text-app-text truncate">{mcp.name}</div>
+                      <div className="text-[10px] text-app-muted truncate">
+                        {mcp.description}
+                      </div>
+                    </div>
+                    {!inLib ? (
+                      <button
+                        onClick={() => handleDownloadMcp(mcp)}
+                        disabled={downloading}
+                        className="px-2 py-1 text-[10px] bg-app-accent text-white rounded hover:bg-app-accentHover disabled:opacity-50 shrink-0"
+                      >
+                        {downloading ? "下载中…" : "下载到库"}
+                      </button>
+                    ) : checked ? (
+                      <span className="text-[10px] text-app-green shrink-0">✓ 已选</span>
+                    ) : (
+                      <span className="text-[10px] text-app-muted shrink-0">已下载</span>
+                    )}
+                  </div>
                   {checked && (
                     <div className="mt-2 ml-5 space-y-1">
                       {Object.entries(entry?.env ?? {}).map(([k, v]) => (
@@ -264,7 +367,7 @@ export default function RecipeEditor() {
                           <input
                             type={isSecretEnvKey(k) ? "password" : "text"}
                             value={v}
-                            onChange={(e) => setMcpEnv(mId, k, e.target.value)}
+                            onChange={(e) => setMcpEnv(mcp.id, k, e.target.value)}
                             className="flex-1 bg-app-bg text-[11px] text-app-text px-2 py-1 rounded border border-app-border font-mono"
                           />
                         </div>
@@ -272,7 +375,7 @@ export default function RecipeEditor() {
                       <button
                         onClick={() => {
                           const k = prompt("env key");
-                          if (k) setMcpEnv(mId, k, "");
+                          if (k) setMcpEnv(mcp.id, k, "");
                         }}
                         className="text-[10px] text-app-accent hover:underline"
                       >
@@ -284,6 +387,17 @@ export default function RecipeEditor() {
               );
             })}
           </div>
+          {sortedMcps.length === 0 && (
+            <div className="text-[11px] text-app-muted">
+              远程暂无 MCP 索引，
+              <button
+                onClick={refreshLibrary}
+                className="ml-1 text-app-accent hover:underline"
+              >
+                试试刷新 →
+              </button>
+            </div>
+          )}
         </section>
 
         {/* settings override */}
