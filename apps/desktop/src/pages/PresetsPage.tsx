@@ -11,7 +11,7 @@ import {
   useSkillsStore,
   useUiStore,
 } from "../stores";
-import type { ImportedBundle, PresetManifest, ScopeArg } from "../types/core";
+import type { ImportedBundle, LibraryItemMeta, PresetManifest, ScopeArg } from "../types/core";
 
 function SearchIcon() {
   return (
@@ -83,31 +83,35 @@ export default function PresetsPage() {
       ? installed?.projects?.[scope.path]?.active_preset_id === selectedId
       : false;
 
-  const installLabel = activating
-    ? "安装中…"
-    : isInstalled
-    ? "重新安装"
-    : scope.kind === "project"
-    ? "安装到项目"
-    : "安装到全局";
+  const installLabel = activating ? "下载中…" : "下载到库";
 
-  async function handleActivate() {
-    if (!selectedId) return;
-    if (scope.kind === "project" && !scope.path) {
-      addToast("请先选择项目目录", "error");
-      return;
-    }
+  async function handleDownload(presetId: string) {
+    if (!manifest) return;
     setActivating(true);
     try {
-      if (sourceMode === "seed") {
-        await api.activateSeedPreset(selectedId, scope);
-      } else {
-        await api.activatePreset(selectedId, scope);
+      const files = await api.getPresetFiles(presetId);
+      const claudeMd = files["CLAUDE.md"];
+      const settingsJson = files["settings.json"];
+      if (!claudeMd) {
+        addToast("此预设没有 CLAUDE.md，无法下载", "error");
+        return;
       }
-      addToast(`✓ 已安装 ${selectedId}`, "success");
-      await loadInstalled();
+      const meta: LibraryItemMeta = {
+        id: presetId,
+        name: manifest.name,
+        description: manifest.description,
+        tags: manifest.tags,
+        source: {
+          kind: "remote",
+          repo: manifest.source?.repo ?? "",
+          url: manifest.source?.url ?? "",
+        },
+        downloaded_at: new Date().toISOString(),
+      };
+      await api.addLibraryClaudeMd(meta, claudeMd, settingsJson);
+      addToast("✓ 已下载到库（去「配方」tab 拼装并激活）", "success");
     } catch (e) {
-      addToast(`安装失败：${String(e)}`, "error");
+      addToast(`下载失败：${String(e)}`, "error");
     } finally {
       setActivating(false);
     }
@@ -362,8 +366,8 @@ export default function PresetsPage() {
                 选择性安装
               </button>
               <button
-                onClick={handleActivate}
-                disabled={activating}
+                onClick={() => selectedId && handleDownload(selectedId)}
+                disabled={activating || !selectedId}
                 className="px-6 py-2 bg-app-accent hover:bg-app-accentHover disabled:opacity-50 text-white rounded-full text-sm font-medium transition-colors"
               >
                 {installLabel}
