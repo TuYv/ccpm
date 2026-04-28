@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { useInstalledStore, useSkillsStore, useUiStore } from "../stores";
 import type { ScopeArg, SkillMeta } from "../types/core";
 import ScopeSelector from "../components/ScopeSelector";
+import { Badge, Button, EmptyState, Panel, TextInput } from "../components/ui";
 
 const TOOL_LABEL: Record<string, string> = {
   claude: "Claude",
@@ -100,11 +101,11 @@ export default function SkillsPage() {
   return (
     <div className="flex flex-col h-full">
       <div className="px-6 py-4 border-b border-app-border flex items-center gap-3 shrink-0">
-        <input
+        <TextInput
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           placeholder="搜索 skills…"
-          className="flex-1 max-w-md bg-app-surface text-sm text-app-text px-3 py-1.5 rounded-lg border border-app-border focus:border-app-accent outline-none transition-colors"
+          className="max-w-md"
         />
         <ScopeSelector scope={scope} onChange={setScope} />
       </div>
@@ -115,7 +116,7 @@ export default function SkillsPage() {
             <div className="text-xs font-semibold text-app-secondary mb-2 uppercase tracking-wide">
               {category} <span className="text-app-muted">({list.length})</span>
             </div>
-            <div className="bg-app-card rounded-xl overflow-hidden divide-y divide-app-border/40">
+            <Panel className="overflow-hidden divide-y divide-app-borderSubtle">
               {list.map((skill) => {
                 const isInstalled = installedIds.includes(skill.id);
                 const isOpen = openId === skill.id;
@@ -133,38 +134,24 @@ export default function SkillsPage() {
                         </div>
                         <div className="text-xs text-app-muted mt-1">{skill.description}</div>
                       </div>
-                      <span
-                        className={`shrink-0 px-2 py-0.5 text-xs rounded-full border ${
-                          isInstalled
-                            ? "border-app-green/30 bg-app-green/10 text-app-green"
-                            : "border-app-border text-app-muted"
-                        }`}
-                      >
-                        {isInstalled ? "已下载" : "未下载"}
-                      </span>
+                      {isInstalled ? <Badge tone="success">已下载</Badge> : <Badge>未下载</Badge>}
                     </button>
 
                     {isOpen && (
-                      <div className="mt-3 pt-3 border-t border-app-border/40 flex flex-wrap items-center gap-2">
+                      <div className="mt-3 pt-3 border-t border-app-borderSubtle flex flex-wrap items-center gap-2">
                         <code className="text-[10px] font-mono text-app-muted bg-app-surface px-2 py-0.5 rounded">
                           {skill.install_path}
                         </code>
                         <span className="text-[10px] text-app-muted">v{skill.version} · {skill.author}</span>
                         <div className="ml-auto flex gap-2">
                           {isInstalled ? (
-                            <button
-                              onClick={() => handleUninstall(skill)}
-                              className="px-3 py-1 text-xs bg-app-surface border border-app-border rounded-lg text-app-red hover:bg-app-red/10 transition-colors"
-                            >
+                            <Button variant="danger" size="sm" onClick={() => handleUninstall(skill)}>
                               从库移除
-                            </button>
+                            </Button>
                           ) : (
-                            <button
-                              onClick={() => handleInstall(skill)}
-                              className="px-3 py-1 text-xs bg-app-accent rounded-lg text-white hover:bg-app-accentHover transition-colors"
-                            >
+                            <Button variant="primary" size="sm" onClick={() => handleInstall(skill)}>
                               下载到库
-                            </button>
+                            </Button>
                           )}
                         </div>
                       </div>
@@ -172,14 +159,15 @@ export default function SkillsPage() {
                   </div>
                 );
               })}
-            </div>
+            </Panel>
           </div>
         ))}
 
         {filtered.length === 0 && !loading && (
-          <div className="text-center text-app-muted text-sm py-12">
-            {search ? `没有匹配 "${search}" 的 skill` : "暂无 skill"}
-          </div>
+          <EmptyState
+            title={search ? `没有匹配 "${search}" 的 skill` : "暂无 skill"}
+            description="调整搜索条件或刷新数据源。"
+          />
         )}
       </div>
     </div>

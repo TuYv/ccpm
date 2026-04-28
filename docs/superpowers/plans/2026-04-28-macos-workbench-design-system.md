@@ -1352,7 +1352,7 @@ git commit -m "feat(desktop): migrate recipe editor to builder layout"
 - Use: `apps/desktop/src/components/ui/EmptyState.tsx`
 - Use: `apps/desktop/src/components/ui/TextInput.tsx` through `Field.tsx` export
 
-- [ ] **Step 1: Update SkillsPage imports**
+- [x] **Step 1: Update SkillsPage imports**
 
 Add:
 
@@ -1368,7 +1368,7 @@ Replace inline status spans with:
 
 Replace install/uninstall buttons with `Button`.
 
-- [ ] **Step 2: Update SkillsPage search and group panels**
+- [x] **Step 2: Update SkillsPage search and group panels**
 
 Replace search input class with:
 
@@ -1398,7 +1398,7 @@ Replace empty state with:
 />
 ```
 
-- [ ] **Step 3: Update McpPage the same way**
+- [x] **Step 3: Update McpPage the same way**
 
 Add:
 
@@ -1417,7 +1417,7 @@ Use this empty state:
 />
 ```
 
-- [ ] **Step 4: Update InstalledPage**
+- [x] **Step 4: Update InstalledPage**
 
 Add:
 
@@ -1444,7 +1444,7 @@ Use `Panel` for global and project sections:
 
 Use `EmptyState` for no active global/project state.
 
-- [ ] **Step 5: Run build**
+- [x] **Step 5: Run build**
 
 ```bash
 cd /Users/rick/SourceLib/fishNotExist/claudeInit/ccpm/apps/desktop
@@ -1453,7 +1453,7 @@ pnpm build
 
 Expected: build passes.
 
-- [ ] **Step 6: Commit**
+- [x] **Step 6: Commit**
 
 ```bash
 cd /Users/rick/SourceLib/fishNotExist/claudeInit/ccpm

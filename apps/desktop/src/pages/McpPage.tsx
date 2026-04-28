@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { useInstalledStore, useMcpsStore, useUiStore } from "../stores";
 import type { McpMeta, ScopeArg } from "../types/core";
 import ScopeSelector from "../components/ScopeSelector";
+import { Badge, Button, EmptyState, Panel, TextInput } from "../components/ui";
 
 function groupByCategory(mcps: McpMeta[]): Map<string, McpMeta[]> {
   const m = new Map<string, McpMeta[]>();
@@ -38,38 +39,24 @@ function McpRow({
           <div className="text-sm text-app-text font-medium">{mcp.name}</div>
           <div className="text-xs text-app-muted mt-1">{mcp.description}</div>
         </div>
-        <span
-          className={`shrink-0 px-2 py-0.5 text-xs rounded-full border ${
-            isInstalled
-              ? "border-app-green/30 bg-app-green/10 text-app-green"
-              : "border-app-border text-app-muted"
-          }`}
-        >
-          {isInstalled ? "已安装" : "未安装"}
-        </span>
+        {isInstalled ? <Badge tone="success">已安装</Badge> : <Badge>未安装</Badge>}
       </button>
 
       {open && (
-        <div className="mt-3 pt-3 border-t border-app-border/40">
+        <div className="mt-3 pt-3 border-t border-app-borderSubtle">
           <div className="text-[10px] text-app-muted font-mono mb-2">
             {mcp.command} {mcp.args.join(" ")}
           </div>
 
           <div className="flex justify-end gap-2">
             {isInstalled ? (
-              <button
-                onClick={onUninstall}
-                className="px-3 py-1 text-xs bg-app-surface border border-app-border rounded-lg text-app-red hover:bg-app-red/10"
-              >
+              <Button variant="danger" size="sm" onClick={onUninstall}>
                 从库移除
-              </button>
+              </Button>
             ) : (
-              <button
-                onClick={() => onInstall({})}
-                className="px-3 py-1 text-xs bg-app-accent rounded-lg text-white hover:bg-app-accentHover"
-              >
+              <Button variant="primary" size="sm" onClick={() => onInstall({})}>
                 下载到库
-              </button>
+              </Button>
             )}
           </div>
         </div>
@@ -141,11 +128,11 @@ export default function McpPage() {
   return (
     <div className="flex flex-col h-full">
       <div className="px-6 py-4 border-b border-app-border flex items-center gap-3 shrink-0">
-        <input
+        <TextInput
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           placeholder="搜索 MCP…"
-          className="flex-1 max-w-md bg-app-surface text-sm text-app-text px-3 py-1.5 rounded-lg border border-app-border focus:border-app-accent outline-none transition-colors"
+          className="max-w-md"
         />
         <ScopeSelector scope={scope} onChange={setScope} />
       </div>
@@ -156,7 +143,7 @@ export default function McpPage() {
             <div className="text-xs font-semibold text-app-secondary mb-2 uppercase tracking-wide">
               {category} <span className="text-app-muted">({list.length})</span>
             </div>
-            <div className="bg-app-card rounded-xl overflow-hidden divide-y divide-app-border/40">
+            <Panel className="overflow-hidden divide-y divide-app-borderSubtle">
               {list.map((mcp) => (
                 <McpRow
                   key={mcp.id}
@@ -167,12 +154,15 @@ export default function McpPage() {
                   onUninstall={() => handleUninstall(mcp)}
                 />
               ))}
-            </div>
+            </Panel>
           </div>
         ))}
 
         {filtered.length === 0 && !loading && (
-          <div className="text-center text-app-muted text-sm py-12">暂无 MCP</div>
+          <EmptyState
+            title={search ? `没有匹配 "${search}" 的 MCP` : "暂无 MCP"}
+            description="调整搜索条件或刷新数据源。"
+          />
         )}
       </div>
     </div>
