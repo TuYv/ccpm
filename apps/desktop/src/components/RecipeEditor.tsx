@@ -216,7 +216,7 @@ export default function RecipeEditor() {
   }
 
   return (
-    <div className="grid h-full min-h-0 grid-cols-[260px_minmax(340px,1fr)_300px] overflow-auto">
+    <div className="grid h-full min-h-0 grid-cols-[260px_minmax(0,1fr)_300px] overflow-x-auto overflow-y-hidden">
       <aside className="flex min-h-0 flex-col gap-4 border-r border-app-border bg-app-bg p-4">
         <button
           onClick={() => navigate("/recipes")}

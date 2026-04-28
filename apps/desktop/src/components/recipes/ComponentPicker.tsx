@@ -4,7 +4,6 @@ import { Badge, Button, Card, TextInput } from "../ui";
 import { EditorSection } from "./EditorSection";
 
 type PickerTab = "claude" | "skills" | "mcps";
-type LibraryIds = ReadonlySet<string> | readonly string[];
 
 interface ComponentPickerProps {
   claudeMds: string[];
@@ -13,8 +12,8 @@ interface ComponentPickerProps {
   selectedClaudeMd: string | null;
   selectedSkills: string[];
   selectedMcps: RecipeMcpEntry[];
-  librarySkills: LibraryIds;
-  libraryMcps: LibraryIds;
+  librarySkills: ReadonlySet<string>;
+  libraryMcps: ReadonlySet<string>;
   downloadingSkill: string | null;
   downloadingMcp: string | null;
   onSelectClaudeMd: (id: string | null) => void;
@@ -29,10 +28,6 @@ const tabs: { id: PickerTab; label: string }[] = [
   { id: "skills", label: "Skills" },
   { id: "mcps", label: "MCPs" },
 ];
-
-function hasId(ids: LibraryIds, id: string): boolean {
-  return "has" in ids ? ids.has(id) : ids.includes(id);
-}
 
 function matchesQuery(query: string, values: Array<string | undefined>): boolean {
   const q = query.trim().toLowerCase();
@@ -166,7 +161,7 @@ export function ComponentPicker({
         {activeTab === "skills" && (
           <div className="grid grid-cols-1 gap-2">
             {filteredSkills.map((skill) => {
-              const inLibrary = hasId(librarySkills, skill.id);
+              const inLibrary = librarySkills.has(skill.id);
               const selected = selectedSkills.includes(skill.id);
               const downloading = downloadingSkill === skill.id;
 
@@ -227,7 +222,7 @@ export function ComponentPicker({
         {activeTab === "mcps" && (
           <div className="grid grid-cols-1 gap-2">
             {filteredMcps.map((mcp) => {
-              const inLibrary = hasId(libraryMcps, mcp.id);
+              const inLibrary = libraryMcps.has(mcp.id);
               const selected = selectedMcpIds.has(mcp.id);
               const downloading = downloadingMcp === mcp.id;
 

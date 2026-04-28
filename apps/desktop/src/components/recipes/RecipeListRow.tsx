@@ -15,8 +15,8 @@ function getComponentSummary(recipe: Recipe) {
   const mcpsCount = recipe.mcps?.length ?? 0;
 
   if (recipe.claude_md) parts.push("CLAUDE.md");
-  if (skillsCount > 0) parts.push(`${skillsCount} skills`);
-  if (mcpsCount > 0) parts.push(`${mcpsCount} MCP`);
+  if (skillsCount > 0) parts.push(`${skillsCount} 个 Skill`);
+  if (mcpsCount > 0) parts.push(`${mcpsCount} 个 MCP`);
 
   return parts.length > 0 ? parts.join(" / ") : "空配方";
 }
