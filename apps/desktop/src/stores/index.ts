@@ -1,12 +1,14 @@
 import { create } from "zustand";
 import { SEED_INDEX, api, getSeedFiles, getSeedManifest } from "../api/claudePreset";
 import type {
+  ActiveState,
   AppConfig,
   BackupEntry,
   InstalledState,
   McpIndex,
   PresetIndex,
   PresetManifest,
+  Recipe,
   ScopeArg,
   SkillIndex,
 } from "../types/core";
@@ -258,5 +260,54 @@ export const useMcpsStore = create<McpsStore>((set, get) => ({
   uninstall: async (mcpId, scope) => {
     await api.uninstallMcp(mcpId, scope);
     await get().loadInstalled(scope);
+  },
+}));
+
+interface RecipesStore {
+  recipes: Recipe[];
+  active: ActiveState | null;
+  loading: boolean;
+  error: string | null;
+  load: () => Promise<void>;
+  save: (recipe: Recipe) => Promise<void>;
+  delete: (id: string) => Promise<void>;
+  activate: (id: string, scope: ScopeArg) => Promise<void>;
+  deactivate: (scope: ScopeArg) => Promise<void>;
+}
+
+export const useRecipesStore = create<RecipesStore>((set, get) => ({
+  recipes: [],
+  active: null,
+  loading: false,
+  error: null,
+  load: async () => {
+    set({ loading: true, error: null });
+    try {
+      const [recipes, active] = await Promise.all([
+        api.listRecipes(),
+        api.getActiveState(),
+      ]);
+      set({ recipes, active });
+    } catch (e) {
+      set({ error: String(e) });
+    } finally {
+      set({ loading: false });
+    }
+  },
+  save: async (recipe) => {
+    await api.saveRecipe(recipe);
+    await get().load();
+  },
+  delete: async (id) => {
+    await api.deleteRecipe(id);
+    await get().load();
+  },
+  activate: async (id, scope) => {
+    await api.activateRecipe(id, scope);
+    await get().load();
+  },
+  deactivate: async (scope) => {
+    await api.deactivateRecipe(scope);
+    await get().load();
   },
 }));
