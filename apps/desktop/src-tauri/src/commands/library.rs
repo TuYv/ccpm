@@ -1,10 +1,12 @@
 use claude_preset_core::{
+    config::load_config,
     fs::default_preset_manager_dir,
     library::{
         self, add_claude_md, add_mcp, add_skill, get_claude_md_files, get_meta, get_mcp_json,
         get_skill_md, list_items, remove_item, ItemKind,
     },
-    types::LibraryItemMeta,
+    registry::{build_client, fetch_skill_content},
+    types::{ItemSource, LibraryItemMeta, SkillMeta},
 };
 use serde::{Deserialize, Serialize};
 
@@ -86,4 +88,32 @@ pub fn add_library_mcp(id: String, mcp_json: String) -> Result<(), String> {
 pub fn remove_library_item(kind: ItemKindArg, id: String) -> Result<(), String> {
     let pm = default_preset_manager_dir();
     remove_item(&pm, kind.into(), &id).map_err(|e| e.to_string())
+}
+
+#[tauri::command]
+pub async fn download_skill_to_library_cmd(skill: SkillMeta) -> Result<(), String> {
+    let pm = default_preset_manager_dir();
+    let config = load_config(&pm).map_err(|e| e.to_string())?;
+    let client = build_client(&config).map_err(|e| e.to_string())?;
+    let body = fetch_skill_content(&client, &config.preset_source_url, &skill.id)
+        .await
+        .map_err(|e| e.to_string())?;
+
+    let meta = LibraryItemMeta {
+        id: skill.id.clone(),
+        name: skill.name.clone(),
+        description: skill.description.clone(),
+        tags: {
+            let mut t = vec![skill.category.clone()];
+            t.extend(skill.compatible_tools.iter().cloned());
+            t
+        },
+        source: ItemSource::Remote {
+            repo: String::new(),
+            url: String::new(),
+        },
+        downloaded_at: chrono::Utc::now().to_rfc3339(),
+    };
+
+    add_skill(&pm, &meta, &body).map_err(|e| e.to_string())
 }

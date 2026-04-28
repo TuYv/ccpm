@@ -213,21 +213,19 @@ export const useSkillsStore = create<SkillsStore>((set, get) => ({
       set({ loading: false });
     }
   },
-  loadInstalled: async (scope) => {
-    const ids = await api.listInstalledSkills(scope);
-    set((s) => ({ installed: { ...s.installed, [scopeKey(scope)]: ids } }));
+  loadInstalled: async (_scope) => {
+    const ids = await api.listLibraryItems("skill");
+    set((s) => ({ installed: { ...s.installed, [scopeKey(_scope)]: ids } }));
   },
-  install: async (skillId, scope) => {
+  install: async (skillId, _scope) => {
     const meta = get().index?.skills.find((s) => s.id === skillId);
     if (!meta) throw new Error(`skill not found: ${skillId}`);
-    await api.installSkill(meta, scope);
-    await get().loadInstalled(scope);
+    await api.downloadSkillToLibrary(meta);
+    await get().loadInstalled(_scope);
   },
-  uninstall: async (skillId, scope) => {
-    const meta = get().index?.skills.find((s) => s.id === skillId);
-    if (!meta) throw new Error(`skill not found: ${skillId}`);
-    await api.uninstallSkill(meta, scope);
-    await get().loadInstalled(scope);
+  uninstall: async (skillId, _scope) => {
+    await api.removeLibraryItem("skill", skillId);
+    await get().loadInstalled(_scope);
   },
 }));
 

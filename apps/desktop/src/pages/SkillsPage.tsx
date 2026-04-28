@@ -74,9 +74,9 @@ export default function SkillsPage() {
     try {
       await install(skill.id, scope);
       await installedLoad();
-      addToast(`✓ 已安装 ${skill.name}`, "success");
+      addToast(`✓ 已下载到库 ${skill.name}`, "success");
     } catch (e) {
-      addToast(`安装失败：${String(e)}`, "error");
+      addToast(`下载失败：${String(e)}`, "error");
     }
   }
 
@@ -84,9 +84,9 @@ export default function SkillsPage() {
     try {
       await uninstall(skill.id, scope);
       await installedLoad();
-      addToast(`✓ 已卸载 ${skill.name}`, "success");
+      addToast(`✓ 已从库移除 ${skill.name}`, "success");
     } catch (e) {
-      addToast(`卸载失败：${String(e)}`, "error");
+      addToast(`移除失败：${String(e)}`, "error");
     }
   }
 
@@ -140,7 +140,7 @@ export default function SkillsPage() {
                             : "border-app-border text-app-muted"
                         }`}
                       >
-                        {isInstalled ? "已安装" : "未安装"}
+                        {isInstalled ? "已下载" : "未下载"}
                       </span>
                     </button>
 
@@ -156,14 +156,14 @@ export default function SkillsPage() {
                               onClick={() => handleUninstall(skill)}
                               className="px-3 py-1 text-xs bg-app-surface border border-app-border rounded-lg text-app-red hover:bg-app-red/10 transition-colors"
                             >
-                              卸载
+                              从库移除
                             </button>
                           ) : (
                             <button
                               onClick={() => handleInstall(skill)}
                               className="px-3 py-1 text-xs bg-app-accent rounded-lg text-white hover:bg-app-accentHover transition-colors"
                             >
-                              安装
+                              下载到库
                             </button>
                           )}
                         </div>
