@@ -1,4 +1,4 @@
-use claude_preset_core::{
+use ccpm_core::{
     activator::{activate_preset, deactivate_preset},
     baseline::{capture_baseline, restore_baseline},
     fs::restore_backup_by_id,
