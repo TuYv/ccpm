@@ -1,12 +1,14 @@
 import { useEffect } from "react";
 import { HashRouter, Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout";
+import RecipeEditor from "./components/RecipeEditor";
 import Toast from "./components/Toast";
 import BackupsPage from "./pages/BackupsPage";
 import ClaudeSettingsPage from "./pages/ClaudeSettingsPage";
 import InstalledPage from "./pages/InstalledPage";
 import McpPage from "./pages/McpPage";
 import PresetsPage from "./pages/PresetsPage";
+import RecipesPage from "./pages/RecipesPage";
 import SettingsPage from "./pages/SettingsPage";
 import SkillsPage from "./pages/SkillsPage";
 import { useConfigStore } from "./stores";
@@ -23,6 +25,9 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<PresetsPage />} />
+          <Route path="recipes" element={<RecipesPage />} />
+          <Route path="recipes/:id" element={<RecipeEditor />} />
+          <Route path="recipes/new" element={<RecipeEditor />} />
           <Route path="skills" element={<SkillsPage />} />
           <Route path="mcp" element={<McpPage />} />
           <Route path="installed" element={<InstalledPage />} />
