@@ -88,8 +88,8 @@ export function ComponentPicker({
 
   return (
     <EditorSection
-      title="Components"
-      description="Choose the CLAUDE.md, skills, and MCP servers this recipe should include."
+      title="组件"
+      description="选择此配方包含的 CLAUDE.md、Skills 和 MCP。"
     >
       <div className="flex flex-col gap-3">
         <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
@@ -112,7 +112,7 @@ export function ComponentPicker({
           <TextInput
             value={query}
             onChange={(event) => setQuery(event.target.value)}
-            placeholder="Search by name, description, or id..."
+            placeholder="按名称、描述或 ID 搜索…"
             className="sm:max-w-xs"
           />
         </div>
@@ -126,10 +126,10 @@ export function ComponentPicker({
             >
               <div className="flex items-center justify-between gap-3">
                 <div className="min-w-0">
-                  <div className="text-sm font-medium text-app-text">No CLAUDE.md</div>
-                  <div className="text-xs text-app-muted">Use no prompt file in this recipe.</div>
+                  <div className="text-sm font-medium text-app-text">不使用 CLAUDE.md</div>
+                  <div className="text-xs text-app-muted">此配方不附带 prompt 文件。</div>
                 </div>
-                {!selectedClaudeMd && <Badge tone="active">Selected</Badge>}
+                {!selectedClaudeMd && <Badge tone="active">已选</Badge>}
               </div>
             </Card>
 
@@ -145,10 +145,10 @@ export function ComponentPicker({
                   <div className="flex items-center justify-between gap-3">
                     <div className="min-w-0">
                       <div className="truncate text-sm font-medium text-app-text">{id}</div>
-                      <div className="text-xs text-app-muted">Library CLAUDE.md</div>
+                      <div className="text-xs text-app-muted">库内 CLAUDE.md</div>
                     </div>
                     <Badge tone={selected ? "active" : "success"}>
-                      {selected ? "Selected" : "In Library"}
+                      {selected ? "已选" : "已下载"}
                     </Badge>
                   </div>
                 </Card>
@@ -157,7 +157,7 @@ export function ComponentPicker({
 
             {filteredClaudeMds.length === 0 && (
               <div className="rounded-control border border-app-border bg-app-surface px-3 py-6 text-center text-sm text-app-muted">
-                No CLAUDE.md files match this search.
+                没有匹配的 CLAUDE.md。
               </div>
             )}
           </div>
@@ -184,7 +184,7 @@ export function ComponentPicker({
                       <div className="flex flex-wrap items-center gap-2">
                         <span className="text-sm font-medium text-app-text">{skill.name}</span>
                         <Badge tone={selected ? "active" : inLibrary ? "success" : "neutral"}>
-                          {selected ? "Selected" : inLibrary ? "In Library" : "Remote"}
+                          {selected ? "已选" : inLibrary ? "已下载" : "远程"}
                         </Badge>
                       </div>
                       <p className="mt-1 text-xs text-app-muted">{skill.description}</p>
@@ -198,7 +198,7 @@ export function ComponentPicker({
                     <div className="shrink-0">
                       {inLibrary ? (
                         <Button size="sm" variant={selected ? "subtle" : "secondary"} onClick={() => onToggleSkill(skill.id)}>
-                          {selected ? "Remove" : "Select"}
+                          {selected ? "移除" : "选择"}
                         </Button>
                       ) : (
                         <Button
@@ -207,7 +207,7 @@ export function ComponentPicker({
                           disabled={downloading}
                           onClick={() => onDownloadSkill(skill)}
                         >
-                          {downloading ? "Downloading..." : "Download"}
+                          {downloading ? "下载中…" : "下载"}
                         </Button>
                       )}
                     </div>
@@ -218,7 +218,7 @@ export function ComponentPicker({
 
             {filteredSkills.length === 0 && (
               <div className="rounded-control border border-app-border bg-app-surface px-3 py-6 text-center text-sm text-app-muted">
-                No skills match this search.
+                没有匹配的 Skill。
               </div>
             )}
           </div>
@@ -245,7 +245,7 @@ export function ComponentPicker({
                       <div className="flex flex-wrap items-center gap-2">
                         <span className="text-sm font-medium text-app-text">{mcp.name}</span>
                         <Badge tone={selected ? "active" : inLibrary ? "success" : "neutral"}>
-                          {selected ? "Selected" : inLibrary ? "In Library" : "Remote"}
+                          {selected ? "已选" : inLibrary ? "已下载" : "远程"}
                         </Badge>
                       </div>
                       <p className="mt-1 text-xs text-app-muted">{mcp.description}</p>
@@ -255,14 +255,14 @@ export function ComponentPicker({
                         </code>
                         <span>{mcp.category}</span>
                         {mcp.required_env.length > 0 && (
-                          <span>{mcp.required_env.length} required env</span>
+                          <span>{mcp.required_env.length} 个必填 env</span>
                         )}
                       </div>
                     </div>
                     <div className="shrink-0">
                       {inLibrary ? (
                         <Button size="sm" variant={selected ? "subtle" : "secondary"} onClick={() => onToggleMcp(mcp.id)}>
-                          {selected ? "Remove" : "Select"}
+                          {selected ? "移除" : "选择"}
                         </Button>
                       ) : (
                         <Button
@@ -271,7 +271,7 @@ export function ComponentPicker({
                           disabled={downloading}
                           onClick={() => onDownloadMcp(mcp)}
                         >
-                          {downloading ? "Downloading..." : "Download"}
+                          {downloading ? "下载中…" : "下载"}
                         </Button>
                       )}
                     </div>
@@ -282,7 +282,7 @@ export function ComponentPicker({
 
             {filteredMcps.length === 0 && (
               <div className="rounded-control border border-app-border bg-app-surface px-3 py-6 text-center text-sm text-app-muted">
-                No MCPs match this search.
+                没有匹配的 MCP。
               </div>
             )}
           </div>

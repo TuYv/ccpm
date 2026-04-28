@@ -71,16 +71,19 @@ export default function RecipeEditor() {
   }, []);
 
   useEffect(() => {
-    if (isNew) return;
-    api.getRecipe(id!).then((r) => {
-      setName(r.name);
-      setDescription(r.description ?? "");
-      setClaudeMdId(r.claude_md ?? null);
-      setSkillIds(r.skills ?? []);
-      setMcpEntries(r.mcps ?? []);
-      setSettingsOverride(JSON.stringify(r.settings_override ?? {}, null, 2));
-    });
-  }, [id, isNew]);
+    if (isNew || !id) return;
+    api
+      .getRecipe(id)
+      .then((r) => {
+        setName(r.name);
+        setDescription(r.description ?? "");
+        setClaudeMdId(r.claude_md ?? null);
+        setSkillIds(r.skills ?? []);
+        setMcpEntries(r.mcps ?? []);
+        setSettingsOverride(JSON.stringify(r.settings_override ?? {}, null, 2));
+      })
+      .catch((e) => addToast(`加载配方失败：${String(e)}`, "error"));
+  }, [id, isNew, addToast]);
 
   // Sort: in-library first, then alphabetical
   const sortedSkills = useMemo(() => {
@@ -116,7 +119,7 @@ export default function RecipeEditor() {
       settingsCount = 0;
     }
     return (claudeMdId ? 1 : 0) + skillIds.length + mcpEntries.length + settingsCount;
-  }, [claudeMdId, skillIds.length, mcpEntries.length, settingsOverride]);
+  }, [claudeMdId, skillIds, mcpEntries, settingsOverride]);
 
   async function handleSave(activateAfter: boolean) {
     let parsedOverride: Record<string, unknown> = {};
@@ -213,7 +216,7 @@ export default function RecipeEditor() {
   }
 
   return (
-    <div className="grid h-full min-h-0 grid-cols-[280px_minmax(360px,1fr)_320px] overflow-hidden">
+    <div className="grid h-full min-h-0 grid-cols-[260px_minmax(340px,1fr)_300px] overflow-auto">
       <aside className="flex min-h-0 flex-col gap-4 border-r border-app-border bg-app-bg p-4">
         <button
           onClick={() => navigate("/recipes")}

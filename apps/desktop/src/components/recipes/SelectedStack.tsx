@@ -24,22 +24,22 @@ export function SelectedStack({
 
   return (
     <EditorSection
-      title="Selected Stack"
-      description="Review the selected components, configure MCP environment values, and edit settings overrides."
+      title="已选组件"
+      description="查看已选组件、配置 MCP 环境变量并编辑 settings 覆盖。"
     >
       <div className="space-y-3">
         <div className="rounded-control border border-app-border bg-app-card px-3 py-3">
           <div className="flex flex-wrap items-center gap-2">
             <Badge tone={claudeMdId ? "success" : "neutral"}>
-              {claudeMdId ? `CLAUDE.md: ${claudeMdId}` : "No CLAUDE.md"}
+              {claudeMdId ? `CLAUDE.md：${claudeMdId}` : "不使用 CLAUDE.md"}
             </Badge>
             <Badge tone={skillIds.length > 0 ? "success" : "neutral"}>
-              {skillIds.length} skills
+              {skillIds.length} 个 skill
             </Badge>
             <Badge tone={mcpEntries.length > 0 ? "success" : "neutral"}>
-              {mcpEntries.length} MCPs
+              {mcpEntries.length} 个 MCP
             </Badge>
-            <span className="text-xs text-app-muted">{selectedCount} total components</span>
+            <span className="text-xs text-app-muted">共 {selectedCount} 项</span>
           </div>
 
           {skillIds.length > 0 && (
@@ -57,10 +57,10 @@ export function SelectedStack({
         </div>
 
         <div className="space-y-2">
-          <div className="text-xs font-medium text-app-secondary">MCP environment</div>
+          <div className="text-xs font-medium text-app-secondary">MCP 环境变量</div>
           {mcpEntries.length === 0 ? (
             <div className="rounded-control border border-app-border bg-app-surface px-3 py-6 text-center text-sm text-app-muted">
-              No MCP servers selected.
+              未选择 MCP。
             </div>
           ) : (
             mcpEntries.map((entry) => {
@@ -77,7 +77,7 @@ export function SelectedStack({
                       <div className="truncate text-sm font-medium text-app-text">
                         {entry.library_id}
                       </div>
-                      <div className="text-xs text-app-muted">{keys.length} env values</div>
+                      <div className="text-xs text-app-muted">{keys.length} 个变量</div>
                     </div>
                     <Button
                       size="sm"
@@ -87,7 +87,7 @@ export function SelectedStack({
                         if (key?.trim()) onSetMcpEnv(entry.library_id, key.trim(), "");
                       }}
                     >
-                      Add env
+                      添加变量
                     </Button>
                   </div>
 
@@ -116,7 +116,7 @@ export function SelectedStack({
           )}
         </div>
 
-        <Field label="Settings override" helper="JSON merged into Claude settings when the recipe is activated.">
+        <Field label="Settings 覆盖" helper="激活配方时合并入 Claude settings 的 JSON。">
           <TextArea
             value={settingsOverride}
             onChange={(event) => onSettingsOverrideChange(event.target.value)}
