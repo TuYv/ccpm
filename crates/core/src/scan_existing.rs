@@ -210,7 +210,7 @@ mod tests {
         assert!(r.claude_md_imported.is_none());
         assert!(r.skills_imported.is_empty());
         // Recipe still created (empty)
-        let recipe = crate::recipes::get_recipe(&pm, "current").unwrap();
+        let recipe = crate::recipes::get_recipe(&pm, CURRENT_RECIPE_ID).unwrap();
         assert!(recipe.claude_md.is_none());
     }
 
@@ -224,8 +224,8 @@ mod tests {
         std::fs::write(claude.join("settings.json"), r#"{"model":"sonnet"}"#).unwrap();
 
         let r = scan_and_seed(&claude, &pm).unwrap();
-        assert_eq!(r.claude_md_imported.as_deref(), Some("imported-current"));
-        let (md, settings) = library::get_claude_md_files(&pm, "imported-current").unwrap();
+        assert_eq!(r.claude_md_imported.as_deref(), Some(IMPORTED_CURRENT_ID));
+        let (md, settings) = library::get_claude_md_files(&pm, IMPORTED_CURRENT_ID).unwrap();
         assert_eq!(md, "# Hello");
         assert_eq!(settings.unwrap(), r#"{"model":"sonnet"}"#);
     }
@@ -256,7 +256,7 @@ mod tests {
 
         let r = scan_and_seed(&claude, &pm).unwrap();
         assert_eq!(r.mcps_imported, vec!["imported-github"]);
-        let recipe = crate::recipes::get_recipe(&pm, "current").unwrap();
+        let recipe = crate::recipes::get_recipe(&pm, CURRENT_RECIPE_ID).unwrap();
         assert_eq!(recipe.mcps.len(), 1);
         assert_eq!(
             recipe.mcps[0].env.get("GITHUB_TOKEN").unwrap(),
@@ -282,8 +282,8 @@ mod tests {
         assert_eq!(r1.claude_md_imported, r2.claude_md_imported);
 
         // Recipe id stable
-        let recipe = crate::recipes::get_recipe(&pm, "current").unwrap();
-        assert_eq!(recipe.id, "current");
+        let recipe = crate::recipes::get_recipe(&pm, CURRENT_RECIPE_ID).unwrap();
+        assert_eq!(recipe.id, CURRENT_RECIPE_ID);
     }
 
     #[test]
@@ -295,7 +295,7 @@ mod tests {
         std::fs::write(claude.join("CLAUDE.md"), "# x").unwrap();
 
         scan_and_seed(&claude, &pm).unwrap();
-        let mut recipe = crate::recipes::get_recipe(&pm, "current").unwrap();
+        let mut recipe = crate::recipes::get_recipe(&pm, CURRENT_RECIPE_ID).unwrap();
         let original_created = recipe.created_at.clone();
         recipe.name = "我的自定义".into();
         recipe.description = "我编辑过".into();
@@ -304,7 +304,7 @@ mod tests {
         // Re-scan
         scan_and_seed(&claude, &pm).unwrap();
 
-        let after = crate::recipes::get_recipe(&pm, "current").unwrap();
+        let after = crate::recipes::get_recipe(&pm, CURRENT_RECIPE_ID).unwrap();
         assert_eq!(after.name, "我的自定义");
         assert_eq!(after.description, "我编辑过");
         assert_eq!(after.created_at, original_created);
@@ -318,6 +318,6 @@ mod tests {
         std::fs::create_dir_all(&claude).unwrap();
         scan_and_seed(&claude, &pm).unwrap();
         let active = crate::recipes::read_active(&pm).unwrap();
-        assert_eq!(active.global.unwrap(), "current");
+        assert_eq!(active.global.unwrap(), CURRENT_RECIPE_ID);
     }
 }

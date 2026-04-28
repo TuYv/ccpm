@@ -119,6 +119,7 @@ pub fn activate_preset(
             previous_preset,
             created_at: Utc::now().to_rfc3339(),
             files: backed_up,
+            created_files: vec![],
         },
     )?;
 

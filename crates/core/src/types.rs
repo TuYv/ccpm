@@ -159,6 +159,10 @@ pub struct BackupEntry {
     pub previous_preset: Option<String>,
     pub created_at: String,
     pub files: Vec<String>,
+    /// Files that activation created from scratch (no prior content backed up).
+    /// Restoring this backup deletes them to fully revert the activation.
+    #[serde(default)]
+    pub created_files: Vec<String>,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]

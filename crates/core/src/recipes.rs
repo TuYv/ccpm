@@ -191,7 +191,8 @@ pub fn activate_recipe(
             scope: scope.key().to_string(),
             previous_preset: None,
             created_at: Utc::now().to_rfc3339(),
-            files: backed_up.iter().chain(created.iter()).cloned().collect(),
+            files: backed_up.clone(),
+            created_files: created.clone(),
         },
     )?;
 
@@ -605,6 +606,89 @@ mod tests {
         assert!(v.is_object(), "settings.json must remain an object after non-object override");
         // Original keys must survive
         assert_eq!(v["keep"], true);
+    }
+
+    #[test]
+    fn test_restore_after_activate_removes_created_files() {
+        use crate::library;
+        use crate::types::{ItemSource, LibraryItemMeta};
+        let dir = tempdir().unwrap();
+        let claude = dir.path().join("claude");
+        let pm = dir.path().join("pm");
+        std::fs::create_dir_all(&claude).unwrap();
+        std::fs::create_dir_all(&pm).unwrap();
+        // No pre-existing CLAUDE.md → it'll be CREATED by activation
+
+        let m = LibraryItemMeta {
+            id: "cm".into(),
+            name: "cm".into(),
+            description: "".into(),
+            tags: vec![],
+            source: ItemSource::UserCreated,
+            downloaded_at: "2026-04-27T00:00:00Z".into(),
+        };
+        library::add_claude_md(&pm, &m, "# new", None).unwrap();
+
+        let mut rec = r("rcreate");
+        rec.claude_md = Some("cm".into());
+        save_recipe(&pm, &rec).unwrap();
+
+        let backup_id = activate_recipe(&claude, &pm, "rcreate", &Scope::Global).unwrap();
+        assert!(claude.join("CLAUDE.md").exists());
+
+        // Restore: should DELETE the created CLAUDE.md (since it didn't exist before)
+        crate::fs::restore_backup_by_id(&pm, &claude, &backup_id).unwrap();
+        assert!(
+            !claude.join("CLAUDE.md").exists(),
+            "CLAUDE.md should be removed since it was created by activation"
+        );
+    }
+
+    #[test]
+    fn test_activate_fails_when_claude_md_library_item_missing() {
+        let dir = tempdir().unwrap();
+        let claude = dir.path().join("claude");
+        let pm = dir.path().join("pm");
+        std::fs::create_dir_all(&claude).unwrap();
+        std::fs::create_dir_all(&pm).unwrap();
+        std::fs::write(claude.join("CLAUDE.md"), "# original").unwrap();
+
+        let mut rec = r("rmissing");
+        rec.claude_md = Some("does-not-exist".into()); // never added to library
+        save_recipe(&pm, &rec).unwrap();
+
+        let result = activate_recipe(&claude, &pm, "rmissing", &Scope::Global);
+        assert!(result.is_err(), "must fail when claude_md library item missing");
+        // Original file restored
+        assert_eq!(
+            std::fs::read_to_string(claude.join("CLAUDE.md")).unwrap(),
+            "# original",
+            "CLAUDE.md must be restored after activation failed"
+        );
+        // active.json not updated
+        assert!(read_active(&pm).unwrap().global.is_none());
+    }
+
+    #[test]
+    fn test_activate_empty_recipe_does_nothing_to_files_but_updates_active() {
+        let dir = tempdir().unwrap();
+        let claude = dir.path().join("claude");
+        let pm = dir.path().join("pm");
+        std::fs::create_dir_all(&claude).unwrap();
+        std::fs::create_dir_all(&pm).unwrap();
+        std::fs::write(claude.join("CLAUDE.md"), "# untouched").unwrap();
+
+        let rec = r("rempty");
+        save_recipe(&pm, &rec).unwrap();
+
+        activate_recipe(&claude, &pm, "rempty", &Scope::Global).unwrap();
+        // CLAUDE.md untouched (recipe doesn't reference it)
+        assert_eq!(
+            std::fs::read_to_string(claude.join("CLAUDE.md")).unwrap(),
+            "# untouched"
+        );
+        // active.json reflects the empty recipe is "active"
+        assert_eq!(read_active(&pm).unwrap().global.as_deref(), Some("rempty"));
     }
 
     #[test]

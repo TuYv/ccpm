@@ -1,4 +1,4 @@
-use crate::error::AppError;
+use crate::{error::AppError, state::read_backup_index};
 use std::{
     io::Write,
     path::{Path, PathBuf},
@@ -83,16 +83,111 @@ pub fn is_symlink_to(link: &Path, target: &Path) -> bool {
     }
 }
 
-/// Returns ~/.claude/
+/// Copies all files from `backup_dir` into `target_dir` using atomic writes.
+/// Only direct children that are files are copied (non-recursive).
+pub fn restore_backup_to_dir(backup_dir: &Path, target_dir: &Path) -> Result<(), AppError> {
+    for entry in std::fs::read_dir(backup_dir)?.flatten() {
+        let path = entry.path();
+        if path.is_file() {
+            let rel = path.file_name().unwrap().to_string_lossy();
+            let content = std::fs::read_to_string(&path)?;
+            atomic_write(&target_dir.join(rel.as_ref()), &content)?;
+        }
+    }
+    Ok(())
+}
+
+/// Restores a backup to the scope recorded in backups/index.json.
+/// Restoring re-copies files that existed before activation AND deletes any
+/// files that activation created from scratch — fully reverting to pre-activation state.
+pub fn restore_backup_by_id(
+    pm_dir: &Path,
+    global_claude_dir: &Path,
+    backup_id: &str,
+) -> Result<(), AppError> {
+    let index = read_backup_index(pm_dir)?;
+    let entry = index
+        .backups
+        .iter()
+        .find(|entry| entry.id == backup_id)
+        .ok_or_else(|| AppError::InvalidInput(format!("备份不存在：{}", backup_id)))?
+        .clone();
+    let target_dir = if entry.scope == "global" {
+        global_claude_dir.to_path_buf()
+    } else {
+        PathBuf::from(&entry.scope)
+    };
+    restore_backup_to_dir(&pm_dir.join("backups").join(backup_id), &target_dir)?;
+    // Also delete files that activation created from scratch (revert to non-existence).
+    for rel in &entry.created_files {
+        let target = target_dir.join(rel);
+        if target.exists() {
+            let _ = std::fs::remove_file(&target);
+        }
+    }
+    Ok(())
+}
+
+/// Returns ~/.claude/ (or $CLAUDE_PRESET_CLAUDE_DIR if set — used by tests).
 pub fn default_claude_dir() -> PathBuf {
+    if let Ok(d) = std::env::var("CLAUDE_PRESET_CLAUDE_DIR") {
+        return PathBuf::from(d);
+    }
+    if let Ok(d) = std::env::var("CCPM_CLAUDE_DIR") {
+        return PathBuf::from(d);
+    }
     dirs::home_dir()
         .unwrap_or_else(|| PathBuf::from("/tmp"))
         .join(".claude")
 }
 
-/// Returns ~/.claude/.preset-manager/ (all app state lives here).
+fn copy_dir_all(from: &Path, to: &Path) -> Result<(), AppError> {
+    std::fs::create_dir_all(to)?;
+    for entry in std::fs::read_dir(from)? {
+        let entry = entry?;
+        let src = entry.path();
+        let dst = to.join(entry.file_name());
+        if src.is_dir() {
+            copy_dir_all(&src, &dst)?;
+        } else if src.is_file() {
+            std::fs::copy(&src, &dst)?;
+        }
+    }
+    Ok(())
+}
+
+/// Migrates legacy ~/.ccpm data to the new ~/.claude-presets directory.
+/// If the new directory already exists, it is returned untouched.
+pub fn migrate_legacy_preset_manager_dir(legacy: &Path, new: &Path) -> Result<PathBuf, AppError> {
+    if new.exists() || !legacy.exists() {
+        return Ok(new.to_path_buf());
+    }
+    if let Some(parent) = new.parent() {
+        std::fs::create_dir_all(parent)?;
+    }
+    copy_dir_all(legacy, new)?;
+    Ok(new.to_path_buf())
+}
+
+/// Returns ~/.claude-presets/ (or $CLAUDE_PRESET_DIR if set — used by tests).
+/// Legacy $CCPM_DIR remains supported for isolated tests and older automation.
 pub fn default_preset_manager_dir() -> PathBuf {
-    default_claude_dir().join(".preset-manager")
+    if let Ok(d) = std::env::var("CLAUDE_PRESET_DIR") {
+        return PathBuf::from(d);
+    }
+    if let Ok(d) = std::env::var("CCPM_DIR") {
+        return PathBuf::from(d);
+    }
+    let home = dirs::home_dir().unwrap_or_else(|| PathBuf::from("/tmp"));
+    let legacy = home.join(".ccpm");
+    let new = home.join(".claude-presets");
+    migrate_legacy_preset_manager_dir(&legacy, &new).unwrap_or(new)
+}
+
+pub fn legacy_preset_manager_dir() -> PathBuf {
+    dirs::home_dir()
+        .unwrap_or_else(|| PathBuf::from("/tmp"))
+        .join(".ccpm")
 }
 
 #[cfg(test)]
@@ -170,10 +265,50 @@ mod tests {
     }
 
     #[test]
-    fn test_preset_manager_dir_under_claude() {
+    fn test_preset_manager_dir_is_dot_claude_presets() {
         let pm = default_preset_manager_dir();
-        assert!(pm.to_string_lossy().contains(".claude"));
-        assert!(pm.to_string_lossy().contains(".preset-manager"));
+        assert!(
+            pm.to_string_lossy().ends_with(".claude-presets"),
+            "expected ~/.claude-presets, got {}",
+            pm.display()
+        );
+    }
+
+    #[test]
+    fn test_migrate_legacy_preset_manager_dir_to_new_dir() {
+        let dir = tempdir().unwrap();
+        let legacy = dir.path().join(".ccpm");
+        let new = dir.path().join(".claude-presets");
+        std::fs::create_dir_all(&legacy).unwrap();
+        std::fs::write(legacy.join("config.json"), "{}").unwrap();
+
+        let migrated = migrate_legacy_preset_manager_dir(&legacy, &new).unwrap();
+
+        assert_eq!(migrated, new);
+        assert!(new.join("config.json").exists());
+        assert!(
+            legacy.join("config.json").exists(),
+            "legacy directory must be kept for conservative migration"
+        );
+    }
+
+    #[test]
+    fn test_migrate_legacy_keeps_existing_new_dir() {
+        let dir = tempdir().unwrap();
+        let legacy = dir.path().join(".ccpm");
+        let new = dir.path().join(".claude-presets");
+        std::fs::create_dir_all(&legacy).unwrap();
+        std::fs::create_dir_all(&new).unwrap();
+        std::fs::write(legacy.join("config.json"), r#"{"legacy":true}"#).unwrap();
+        std::fs::write(new.join("config.json"), r#"{"new":true}"#).unwrap();
+
+        let migrated = migrate_legacy_preset_manager_dir(&legacy, &new).unwrap();
+
+        assert_eq!(migrated, new);
+        assert_eq!(
+            std::fs::read_to_string(new.join("config.json")).unwrap(),
+            r#"{"new":true}"#
+        );
     }
 
     #[test]
@@ -203,7 +338,10 @@ mod tests {
         create_symlink(&target, &link).unwrap();
         // Delete the target — now the symlink is dangling
         std::fs::remove_file(&target).unwrap();
-        assert!(!is_symlink_to(&link, &target), "dangling symlink must not be valid");
+        assert!(
+            !is_symlink_to(&link, &target),
+            "dangling symlink must not be valid"
+        );
     }
 
     #[test]

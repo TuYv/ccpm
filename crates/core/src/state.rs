@@ -110,6 +110,7 @@ mod tests {
                 previous_preset: Some("old-preset".to_string()),
                 created_at: "2025-04-23T10:00:00Z".to_string(),
                 files: vec!["CLAUDE.md".to_string()],
+                created_files: vec![],
             },
         )
         .unwrap();
@@ -159,6 +160,7 @@ mod tests {
                     previous_preset: None,
                     created_at: "2025-04-23T10:00:00Z".to_string(),
                     files: vec![],
+                    created_files: vec![],
                 },
             )
             .unwrap();
