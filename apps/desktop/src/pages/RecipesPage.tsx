@@ -2,18 +2,8 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useRecipesStore, useUiStore } from "../stores";
 import type { Recipe, ScopeArg } from "../types/core";
+import ActivationDialog from "../components/ActivationDialog";
 import ScopeSelector from "../components/ScopeSelector";
-
-// Temporary stub until Task 6.3
-const ActivationDialog = ({ onConfirm, onCancel }: any) => (
-  <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-    <div className="bg-app-card p-6 rounded-xl">
-      <p className="text-app-text mb-4">激活配方？</p>
-      <button onClick={onConfirm} className="mr-2 px-4 py-2 bg-app-accent text-white rounded">确认</button>
-      <button onClick={onCancel} className="px-4 py-2 bg-app-surface text-app-secondary rounded">取消</button>
-    </div>
-  </div>
-);
 
 function RecipeRow({
   recipe,
