@@ -1,4 +1,5 @@
 import { invoke } from "@tauri-apps/api/core";
+import { CURRENT_RECIPE_ID } from "../utils/constants";
 import type {
   ActivePresetInfo,
   ActiveState,
@@ -407,7 +408,7 @@ export const api = {
   scanAndSeed: () =>
     tauriAvailable()
       ? call<ScanResult>("scan_and_seed_cmd")
-      : Promise.resolve({ claude_md_imported: null, skills_imported: [], mcps_imported: [], recipe_id: "current" }),
+      : Promise.resolve({ claude_md_imported: null, skills_imported: [], mcps_imported: [], recipe_id: CURRENT_RECIPE_ID }),
 
   readClaudeSettings: (): Promise<ClaudeSettings> =>
     tauriAvailable()

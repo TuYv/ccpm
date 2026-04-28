@@ -3,15 +3,12 @@ import { useNavigate, useParams } from "react-router-dom";
 import { api } from "../api/claudePreset";
 import { useRecipesStore, useUiStore } from "../stores";
 import type { Recipe, RecipeMcpEntry } from "../types/core";
+import { isSecretEnvKey } from "../utils/env";
 
 const NEW_ID_SENTINEL = "new";
 
 function newId(): string {
   return Math.random().toString(36).slice(2, 10);
-}
-
-function isSecretEnvKey(key: string): boolean {
-  return /TOKEN|KEY|SECRET|PASSWORD|API/i.test(key);
 }
 
 export default function RecipeEditor() {
@@ -30,8 +27,27 @@ export default function RecipeEditor() {
   const [availableClaudeMds, setAvailableClaudeMds] = useState<string[]>([]);
   const [availableSkills, setAvailableSkills] = useState<string[]>([]);
   const [availableMcps, setAvailableMcps] = useState<string[]>([]);
+  const [refreshing, setRefreshing] = useState(false);
 
   const isNew = !id || id === NEW_ID_SENTINEL;
+
+  async function refreshLibrary() {
+    if (refreshing) return;
+    setRefreshing(true);
+    try {
+      const [cm, sk, mc] = await Promise.all([
+        api.listLibraryItems("claude-md"),
+        api.listLibraryItems("skill"),
+        api.listLibraryItems("mcp"),
+      ]);
+      setAvailableClaudeMds(cm);
+      setAvailableSkills(sk);
+      setAvailableMcps(mc);
+      addToast("✓ 已刷新库", "success");
+    } finally {
+      setRefreshing(false);
+    }
+  }
 
   useEffect(() => {
     Promise.all([
@@ -138,20 +154,11 @@ export default function RecipeEditor() {
 
         <div>
           <button
-            onClick={async () => {
-              const [cm, sk, mc] = await Promise.all([
-                api.listLibraryItems("claude-md"),
-                api.listLibraryItems("skill"),
-                api.listLibraryItems("mcp"),
-              ]);
-              setAvailableClaudeMds(cm);
-              setAvailableSkills(sk);
-              setAvailableMcps(mc);
-              addToast("✓ 已刷新库", "success");
-            }}
-            className="text-[11px] text-app-accent hover:underline"
+            onClick={refreshLibrary}
+            disabled={refreshing}
+            className="text-[11px] text-app-accent hover:underline mb-2 disabled:opacity-50"
           >
-            ↻ 刷新库
+            {refreshing ? "刷新中…" : "↻ 刷新库"}
           </button>
         </div>
 
