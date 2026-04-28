@@ -1,4 +1,4 @@
-use claude_preset_core::{
+use ccpm_core::{
     config::load_config,
     fs::{default_claude_dir, default_preset_manager_dir},
     mcp::{install_mcp, list_installed_mcps, uninstall_mcp},

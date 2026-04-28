@@ -1,4 +1,4 @@
-use claude_preset_core::{
+use ccpm_core::{
     fs::{default_claude_dir, default_preset_manager_dir},
     scan_existing::{is_first_launch, scan_and_seed, ScanResult},
 };

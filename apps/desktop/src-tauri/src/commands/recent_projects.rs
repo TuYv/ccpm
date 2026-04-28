@@ -1,4 +1,4 @@
-use claude_preset_core::fs::default_claude_dir;
+use ccpm_core::fs::default_claude_dir;
 use serde::Serialize;
 use std::{fs, path::PathBuf};
 

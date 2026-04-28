@@ -1,4 +1,4 @@
-use claude_preset_core::{
+use ccpm_core::{
     fs::{default_claude_dir, default_preset_manager_dir},
     recipes::{
         activate_recipe, deactivate_recipe, delete_recipe, get_active_for, get_recipe,
