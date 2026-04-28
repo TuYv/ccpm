@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-04-28T09:35:34.501Z",
+  "updated_at": "2026-04-28T12:03:32.299Z",
   "presets": [
     {
       "id": "code-review",
@@ -109,8 +109,8 @@
         "branch": "develop",
         "stars": 49623,
         "language": "TypeScript",
-        "pushed_at": "2026-04-28T01:02:49Z",
-        "discovered_at": "2026-04-28T09:35:34.092Z",
+        "pushed_at": "2026-04-28T11:42:13Z",
+        "discovered_at": "2026-04-28T12:03:31.301Z",
         "score": 0.936984
       }
     },
@@ -140,7 +140,7 @@
         "stars": 36071,
         "language": "TypeScript",
         "pushed_at": "2026-04-15T18:50:11Z",
-        "discovered_at": "2026-04-28T09:35:34.193Z",
+        "discovered_at": "2026-04-28T12:03:31.376Z",
         "score": 0.828568
       }
     },
@@ -162,7 +162,7 @@
         "CLAUDE.md"
       ],
       "version": "1.0.0",
-      "tested_on": "2026-04-27",
+      "tested_on": "2026-04-28",
       "author": "surrealdb",
       "source": {
         "repo": "surrealdb/surrealdb",
@@ -170,11 +170,11 @@
         "homepage": "https://surrealdb.com",
         "path": "surrealism/runtime/CLAUDE.md",
         "branch": "main",
-        "stars": 31958,
+        "stars": 31962,
         "language": "Rust",
-        "pushed_at": "2026-04-27T16:42:14Z",
-        "discovered_at": "2026-04-27T22:10:23.267Z",
-        "score": 0.7956639999999999
+        "pushed_at": "2026-04-28T10:40:50Z",
+        "discovered_at": "2026-04-28T12:03:32.031Z",
+        "score": 0.795696
       }
     },
     {
@@ -200,11 +200,11 @@
         "homepage": "https://nanoclaw.dev",
         "path": "groups/main/CLAUDE.md",
         "branch": "main",
-        "stars": 28272,
+        "stars": 28277,
         "language": "TypeScript",
-        "pushed_at": "2026-04-26T21:39:26Z",
-        "discovered_at": "2026-04-28T09:35:34.313Z",
-        "score": 0.766176
+        "pushed_at": "2026-04-28T11:41:57Z",
+        "discovered_at": "2026-04-28T12:03:31.924Z",
+        "score": 0.766216
       }
     },
     {
@@ -233,11 +233,11 @@
         "homepage": "https://obfuscator.io",
         "path": "CLAUDE.md",
         "branch": "master",
-        "stars": 16001,
+        "stars": 16002,
         "language": "TypeScript",
         "pushed_at": "2026-04-27T08:18:30Z",
-        "discovered_at": "2026-04-28T09:35:33.271Z",
-        "score": 0.6680079999999999
+        "discovered_at": "2026-04-28T12:03:31.506Z",
+        "score": 0.6680159999999999
       }
     },
     {
@@ -266,6 +266,39 @@
         "pushed_at": "2026-04-26T18:28:28Z",
         "discovered_at": "2026-04-27T15:20:11.492Z",
         "score": 0.65132
+      }
+    },
+    {
+      "id": "enso-org-enso",
+      "name": "enso-org/enso",
+      "description": "Enso Analytics is a self-service data prep and analysis platform designed for data teams.",
+      "tags": [
+        "compiler",
+        "enso",
+        "functional",
+        "graalvm",
+        "hybrid",
+        "interpreter",
+        "jit",
+        "language"
+      ],
+      "components": [
+        "CLAUDE.md"
+      ],
+      "version": "1.0.0",
+      "tested_on": "2026-04-28",
+      "author": "enso-org",
+      "source": {
+        "repo": "enso-org/enso",
+        "url": "https://github.com/enso-org/enso/blob/develop/CLAUDE.md",
+        "homepage": "https://ensoanalytics.com",
+        "path": "CLAUDE.md",
+        "branch": "develop",
+        "stars": 7434,
+        "language": "Java",
+        "pushed_at": "2026-04-28T11:59:55Z",
+        "discovered_at": "2026-04-28T12:03:31.703Z",
+        "score": 0.599472
       }
     },
     {
@@ -389,8 +422,8 @@
         "branch": "main",
         "stars": 4361,
         "language": "Python",
-        "pushed_at": "2026-04-28T09:30:03Z",
-        "discovered_at": "2026-04-28T09:35:34.485Z",
+        "pushed_at": "2026-04-28T12:01:37Z",
+        "discovered_at": "2026-04-28T12:03:32.144Z",
         "score": 0.574888
       }
     },
@@ -686,6 +719,36 @@
       }
     },
     {
+      "id": "bayramannakov-claude-reflect",
+      "name": "BayramAnnakov/claude-reflect",
+      "description": "A self-learning system for Claude Code that captures corrections, positive feedback, and preferences — then syncs them to CLAUDE.md and AGENTS.md.",
+      "tags": [
+        "claude-code",
+        "claude-skills",
+        "memory",
+        "productivity",
+        "self-learning"
+      ],
+      "components": [
+        "CLAUDE.md"
+      ],
+      "version": "1.0.0",
+      "tested_on": "2026-04-28",
+      "author": "BayramAnnakov",
+      "source": {
+        "repo": "BayramAnnakov/claude-reflect",
+        "url": "https://github.com/BayramAnnakov/claude-reflect/blob/main/CLAUDE.md",
+        "homepage": "",
+        "path": "CLAUDE.md",
+        "branch": "main",
+        "stars": 1005,
+        "language": "Python",
+        "pushed_at": "2026-03-16T19:41:15Z",
+        "discovered_at": "2026-04-28T12:03:32.284Z",
+        "score": 0.54804
+      }
+    },
+    {
       "id": "hascheksolutions-pictshare",
       "name": "HaschekSolutions/pictshare",
       "description": ":camera: PictShare is an open source image, mp4, pastebin hosting service with a simple resizing and upload API that you can host yourself. :rice_scene:",
@@ -803,8 +866,8 @@
         "branch": "master",
         "stars": 751,
         "language": "Java",
-        "pushed_at": "2026-04-28T07:36:00Z",
-        "discovered_at": "2026-04-28T09:35:33.823Z",
+        "pushed_at": "2026-04-28T11:57:44Z",
+        "discovered_at": "2026-04-28T12:03:31.595Z",
         "score": 0.546008
       }
     },
@@ -826,7 +889,7 @@
         "CLAUDE.md"
       ],
       "version": "1.0.0",
-      "tested_on": "2026-04-27",
+      "tested_on": "2026-04-28",
       "author": "ruzin",
       "source": {
         "repo": "ruzin/stenoai",
@@ -837,7 +900,7 @@
         "stars": 692,
         "language": "HTML",
         "pushed_at": "2026-04-26T21:43:39Z",
-        "discovered_at": "2026-04-27T19:49:15.105Z",
+        "discovered_at": "2026-04-28T12:03:31.803Z",
         "score": 0.545536
       }
     }
