@@ -1162,7 +1162,7 @@ git commit -m "feat(desktop): add recipe editor workflow components"
 - Use: `apps/desktop/src/components/ui/Button.tsx`
 - Use: `apps/desktop/src/components/ui/Field.tsx`
 
-- [ ] **Step 1: Add saving state**
+- [x] **Step 1: Add saving state**
 
 In `RecipeEditor.tsx`, add:
 
@@ -1210,7 +1210,7 @@ async function handleSave(activateAfter: boolean) {
 }
 ```
 
-- [ ] **Step 2: Add component count**
+- [x] **Step 2: Add component count**
 
 Add a safe memoized component count. It must tolerate invalid JSON while the user is editing the settings override:
 
@@ -1226,7 +1226,7 @@ const componentCount = useMemo(() => {
 }, [claudeMdId, skillIds.length, mcpEntries.length, settingsOverride]);
 ```
 
-- [ ] **Step 3: Replace returned JSX**
+- [x] **Step 3: Replace returned JSX**
 
 Replace the current single-column JSX body with:
 
@@ -1321,7 +1321,7 @@ If the Tauri window at 1100px clips the three-column layout, change the grid to:
 
 Expected: the layout remains usable at the configured 1100px window width.
 
-- [ ] **Step 5: Run build**
+- [x] **Step 5: Run build**
 
 ```bash
 cd /Users/rick/SourceLib/fishNotExist/claudeInit/ccpm/apps/desktop
@@ -1330,7 +1330,7 @@ pnpm build
 
 Expected: build passes.
 
-- [ ] **Step 6: Commit**
+- [x] **Step 6: Commit**
 
 ```bash
 cd /Users/rick/SourceLib/fishNotExist/claudeInit/ccpm
