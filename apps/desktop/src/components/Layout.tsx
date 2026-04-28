@@ -2,17 +2,29 @@ import { useState } from "react";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import { isTauriApp } from "../api/claudePreset";
 import { useConfigStore, useMcpsStore, usePresetsStore, useSkillsStore, useUiStore } from "../stores";
-import { IconButton, SegmentedTabs } from "./ui";
+import { IconButton, SidebarItem, Toolbar } from "./ui";
 
-const MAIN_TABS = [
+const NAV_ITEMS = [
   { to: "/", label: "配方", end: true },
-  { to: "/presets", label: "预设", end: true },
+  { to: "/presets", label: "预设" },
   { to: "/skills", label: "Skills" },
   { to: "/mcp", label: "MCP" },
   { to: "/installed", label: "已安装" },
   { to: "/backups", label: "备份" },
   { to: "/claude-settings", label: "Claude 配置" },
 ];
+
+function pageTitle(pathname: string) {
+  if (pathname === "/" || pathname.startsWith("/recipes")) return "配方";
+  if (pathname.startsWith("/presets")) return "预设";
+  if (pathname.startsWith("/skills")) return "Skills";
+  if (pathname.startsWith("/mcp")) return "MCP";
+  if (pathname.startsWith("/installed")) return "已安装";
+  if (pathname.startsWith("/backups")) return "备份";
+  if (pathname.startsWith("/claude-settings")) return "Claude 配置";
+  if (pathname.startsWith("/settings")) return "设置";
+  return "Claude Preset";
+}
 
 function GearIcon() {
   return (
@@ -94,7 +106,6 @@ export default function Layout() {
     : presetsLoading;
   const isPreview = !isTauriApp();
   const isSettings = location.pathname === "/settings";
-  const isClaudeSettings = location.pathname === "/claude-settings";
 
   const refresh = () => {
     if (location.pathname === "/skills") fetchSkills(true);
@@ -103,51 +114,57 @@ export default function Layout() {
   };
 
   return (
-    <div className="flex flex-col h-screen overflow-hidden bg-app-bg text-app-text">
-      {isPreview && (
-        <div className="flex items-center justify-center px-4 py-1 bg-orange-900/30 border-b border-orange-800/40 text-xs text-orange-300 shrink-0">
-          预览模式 · 浏览器预览，不会写入真实文件
-        </div>
-      )}
-      <BaselineBanner />
-
-      {/* Toolbar */}
-      <header className="flex items-center gap-2 px-4 h-[52px] bg-app-surface border-b border-app-border shrink-0 select-none">
-        {isSettings ? (
-          <>
-            <IconButton icon={<BackIcon />} title="返回" onClick={() => navigate(-1)} />
-            <span className="text-base font-semibold text-app-text ml-1">设置</span>
-          </>
-        ) : isClaudeSettings ? (
-          <>
-            <div className="flex-1 flex justify-center">
-              <SegmentedTabs tabs={MAIN_TABS} />
-            </div>
-            <IconButton icon={<GearIcon />} title="设置" onClick={() => navigate("/settings")} />
-          </>
-        ) : (
-          /* Main toolbar */
-          <>
-            <span className="text-[15px] font-bold text-app-accent tracking-tight mr-1">
+    <div className="flex h-screen overflow-hidden bg-app-bg text-app-text">
+      <aside className="flex w-[216px] shrink-0 flex-col border-r border-app-border bg-app-sidebar">
+        <div className="flex h-14 items-center px-4">
+          <div className="min-w-0">
+            <div className="truncate text-[15px] font-bold text-app-accent">
               Claude Preset
-            </span>
-            <IconButton icon={<GearIcon />} title="设置" onClick={() => navigate("/settings")} />
-            <div className="flex-1 flex justify-center">
-              <SegmentedTabs tabs={MAIN_TABS} />
             </div>
-            <IconButton
-              icon={<RefreshIcon />}
-              title="刷新数据源"
-              onClick={refresh}
-              disabled={loading}
-            />
-          </>
-        )}
-      </header>
+            <div className="truncate text-[11px] text-app-muted">Workbench</div>
+          </div>
+        </div>
+        <nav className="flex-1 space-y-1 px-3 py-2">
+          {NAV_ITEMS.map((item) => (
+            <SidebarItem key={item.to} {...item} />
+          ))}
+        </nav>
+        <div className="border-t border-app-border px-3 py-3">
+          <SidebarItem to="/settings" label="设置" icon={<GearIcon />} />
+        </div>
+      </aside>
 
-      <main className="flex-1 overflow-auto">
-        <Outlet />
-      </main>
+      <div className="flex min-w-0 flex-1 flex-col overflow-hidden">
+        {isPreview && (
+          <div className="flex items-center justify-center px-4 py-1 bg-orange-900/30 border-b border-orange-800/40 text-xs text-orange-300 shrink-0">
+            预览模式 · 浏览器预览，不会写入真实文件
+          </div>
+        )}
+        <BaselineBanner />
+
+        <Toolbar
+          title={pageTitle(location.pathname)}
+          left={
+            isSettings ? (
+              <IconButton icon={<BackIcon />} title="返回" onClick={() => navigate(-1)} />
+            ) : undefined
+          }
+          right={
+            !isSettings ? (
+              <IconButton
+                icon={<RefreshIcon />}
+                title="刷新数据源"
+                onClick={refresh}
+                disabled={loading}
+              />
+            ) : undefined
+          }
+        />
+
+        <main className="flex-1 overflow-auto">
+          <Outlet />
+        </main>
+      </div>
     </div>
   );
 }
