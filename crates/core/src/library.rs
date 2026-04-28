@@ -1,7 +1,7 @@
 use crate::{
     error::AppError,
     fs::atomic_write,
-    types::{ItemSource, LibraryItemMeta},
+    types::LibraryItemMeta,
 };
 use std::{
     fs,
@@ -153,6 +153,7 @@ pub fn get_skill_md(pm_dir: &Path, id: &str) -> Result<String, AppError> {
 #[cfg(test)]
 mod tests {
     use super::*;
+    use crate::types::ItemSource;
     use tempfile::tempdir;
 
     fn meta(id: &str) -> LibraryItemMeta {

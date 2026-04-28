@@ -4,7 +4,7 @@
 
 use crate::{
     error::AppError,
-    library::{self, ItemKind},
+    library,
     recipes::{now_rfc3339, save_recipe, write_active},
     types::{ActiveState, ItemSource, LibraryItemMeta, McpMeta, Recipe, RecipeMcpEntry},
 };
@@ -125,7 +125,7 @@ pub fn scan_and_seed(claude_dir: &Path, pm_dir: &Path) -> Result<ScanResult, App
                 let mcp = McpMeta {
                     id: id.clone(),
                     name: name.clone(),
-                    description: format!("Imported from ~/.claude/settings.json"),
+                    description: "Imported from ~/.claude/settings.json".to_string(),
                     category: "我的现有".into(),
                     command,
                     args,
