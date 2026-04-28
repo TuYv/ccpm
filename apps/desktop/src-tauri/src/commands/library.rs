@@ -11,7 +11,7 @@ use claude_preset_core::{
 use serde::{Deserialize, Serialize};
 
 #[derive(Debug, Serialize, Deserialize)]
-#[serde(rename_all = "lowercase")]
+#[serde(rename_all = "kebab-case")]
 pub enum ItemKindArg {
     ClaudeMd,
     Skill,
@@ -39,7 +39,7 @@ pub fn get_library_meta(kind: ItemKindArg, id: String) -> Result<LibraryItemMeta
     let pm = default_preset_manager_dir();
     let kind: ItemKind = kind.into();
     if kind == ItemKind::Mcp {
-        return Err("use get_library_mcp_json for MCPs".into());
+        return Err("MCP items must be fetched via get_library_mcp_json".to_string());
     }
     get_meta(&pm, kind, &id).map_err(|e| e.to_string())
 }

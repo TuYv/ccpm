@@ -11,6 +11,8 @@ use crate::{
 use std::{collections::HashMap, fs, path::Path};
 
 const CURRENT_RECIPE_ID: &str = "current";
+const IMPORTED_CURRENT_ID: &str = "imported-current";
+const IMPORTED_PREFIX: &str = "imported-";
 
 #[derive(Debug, Clone, Default, serde::Serialize)]
 pub struct ScanResult {
@@ -33,7 +35,7 @@ pub fn scan_and_seed(claude_dir: &Path, pm_dir: &Path) -> Result<ScanResult, App
     let claude_md_path = claude_dir.join("CLAUDE.md");
     if claude_md_path.exists() {
         let body = fs::read_to_string(&claude_md_path)?;
-        let id = "imported-current";
+        let id = IMPORTED_CURRENT_ID;
         let settings_path = claude_dir.join("settings.json");
         let settings = if settings_path.exists() {
             Some(fs::read_to_string(&settings_path)?)
@@ -68,7 +70,7 @@ pub fn scan_and_seed(claude_dir: &Path, pm_dir: &Path) -> Result<ScanResult, App
                 continue;
             }
             let body = fs::read_to_string(&skill_md_path)?;
-            let id = format!("imported-{name}");
+            let id = format!("{IMPORTED_PREFIX}{name}");
             let meta = LibraryItemMeta {
                 id: id.clone(),
                 name: name.clone(),
@@ -89,10 +91,18 @@ pub fn scan_and_seed(claude_dir: &Path, pm_dir: &Path) -> Result<ScanResult, App
     let settings_path = claude_dir.join("settings.json");
     if settings_path.exists() {
         let s = fs::read_to_string(&settings_path)?;
-        let v: serde_json::Value = serde_json::from_str(&s).unwrap_or(serde_json::json!({}));
+        let v: serde_json::Value = match serde_json::from_str(&s) {
+            Ok(v) => v,
+            Err(e) => {
+                eprintln!(
+                    "warning: ~/.claude/settings.json malformed, skipping mcpServers import: {e}"
+                );
+                serde_json::json!({})
+            }
+        };
         if let Some(servers) = v.get("mcpServers").and_then(|x| x.as_object()) {
             for (name, server) in servers {
-                let id = format!("imported-{name}");
+                let id = format!("{IMPORTED_PREFIX}{name}");
                 let command = server
                     .get("command")
                     .and_then(|x| x.as_str())
@@ -130,11 +140,23 @@ pub fn scan_and_seed(claude_dir: &Path, pm_dir: &Path) -> Result<ScanResult, App
         }
     }
 
-    // 4. Build "current" recipe referencing all imports
+    // 4. Build "current" recipe referencing all imports.
+    // Preserve user-editable metadata (name/description/created_at) if a
+    // current recipe already exists from a prior scan.
+    let existing_current = crate::recipes::get_recipe(pm_dir, CURRENT_RECIPE_ID).ok();
+    let (created_at, name, description) = match &existing_current {
+        Some(r) => (r.created_at.clone(), r.name.clone(), r.description.clone()),
+        None => (
+            now_rfc3339(),
+            "我的当前配置".to_string(),
+            "首次启动时从 ~/.claude/ 自动导入".to_string(),
+        ),
+    };
+
     let recipe = Recipe {
         id: CURRENT_RECIPE_ID.into(),
-        name: "我的当前配置".into(),
-        description: "首次启动时从 ~/.claude/ 自动导入".into(),
+        name,
+        description,
         claude_md: result.claude_md_imported.clone(),
         skills: result.skills_imported.clone(),
         mcps: result
@@ -146,7 +168,7 @@ pub fn scan_and_seed(claude_dir: &Path, pm_dir: &Path) -> Result<ScanResult, App
             })
             .collect(),
         settings_override: serde_json::json!({}),
-        created_at: now_rfc3339(),
+        created_at,
         updated_at: now_rfc3339(),
     };
     save_recipe(pm_dir, &recipe)?;

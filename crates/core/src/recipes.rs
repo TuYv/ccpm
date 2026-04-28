@@ -117,6 +117,7 @@ fn backup_id_now() -> String {
 fn safe_target_rel(rel: &str) -> bool {
     let p = std::path::Path::new(rel);
     !rel.is_empty()
+        && !rel.contains('\0')
         && !p.is_absolute()
         && !p.components().any(|c| c == std::path::Component::ParentDir)
 }
@@ -173,60 +174,16 @@ pub fn activate_recipe(
         }
     }
 
-    // 3. Write CLAUDE.md
-    if let Some(claude_id) = &recipe.claude_md {
-        let (md, _settings) = library::get_claude_md_files(pm_dir, claude_id)?;
-        atomic_write(&scope_dir.join("CLAUDE.md"), &md)?;
-    }
+    // Files we'll create (didn't exist before) — tracked so a partial-write
+    // rollback can clean them up.
+    let created: Vec<String> = target_rels
+        .iter()
+        .filter(|rel| !backed_up.contains(rel))
+        .cloned()
+        .collect();
 
-    // 4. Write skills
-    for skill_id in &recipe.skills {
-        let body = library::get_skill_md(pm_dir, skill_id)?;
-        let target = scope_dir.join(format!("skills/{skill_id}/SKILL.md"));
-        atomic_write(&target, &body)?;
-    }
-
-    // 5. Write settings.json (merge: existing → mcpServers from recipe → settings_override)
-    if needs_settings {
-        let settings_path = scope_dir.join("settings.json");
-        let mut root: serde_json::Value = if settings_path.exists() {
-            serde_json::from_str(&fs::read_to_string(&settings_path)?)
-                .unwrap_or_else(|_| serde_json::json!({}))
-        } else {
-            serde_json::json!({})
-        };
-        if !root.is_object() {
-            root = serde_json::json!({});
-        }
-
-        // Inject MCPs
-        if !recipe.mcps.is_empty() {
-            let mcp_servers = root["mcpServers"].as_object().cloned().unwrap_or_default();
-            let mut servers = serde_json::Map::from_iter(mcp_servers);
-            for entry in &recipe.mcps {
-                let mcp_json = library::get_mcp_json(pm_dir, &entry.library_id)?;
-                let m: McpMeta = serde_json::from_str(&mcp_json)?;
-                let mut server = serde_json::json!({
-                    "command": m.command,
-                    "args": m.args,
-                });
-                if !entry.env.is_empty() {
-                    server["env"] = serde_json::to_value(&entry.env)?;
-                }
-                servers.insert(entry.library_id.clone(), server);
-            }
-            root["mcpServers"] = serde_json::Value::Object(servers);
-        }
-
-        // Apply settings_override
-        if let serde_json::Value::Object(_) = &recipe.settings_override {
-            json_deep_merge(&mut root, &recipe.settings_override);
-        }
-
-        atomic_write(&settings_path, &serde_json::to_string_pretty(&root)?)?;
-    }
-
-    // 6. Record backup
+    // Persist the BackupEntry BEFORE any writes to scope_dir, so a crash
+    // mid-write is still discoverable for manual recovery.
     add_backup_entry(
         pm_dir,
         BackupEntry {
@@ -234,11 +191,88 @@ pub fn activate_recipe(
             scope: scope.key().to_string(),
             previous_preset: None,
             created_at: Utc::now().to_rfc3339(),
-            files: backed_up,
+            files: backed_up.iter().chain(created.iter()).cloned().collect(),
         },
     )?;
 
-    // 7. Update active.json
+    // 3-5. Wrap writes in a closure so we can rollback atomically on failure.
+    let write_result: Result<(), AppError> = (|| {
+        // 3. Write CLAUDE.md
+        if let Some(claude_id) = &recipe.claude_md {
+            let (md, _settings) = library::get_claude_md_files(pm_dir, claude_id)?;
+            atomic_write(&scope_dir.join("CLAUDE.md"), &md)?;
+        }
+
+        // 4. Write skills
+        for skill_id in &recipe.skills {
+            let body = library::get_skill_md(pm_dir, skill_id)?;
+            let target = scope_dir.join(format!("skills/{skill_id}/SKILL.md"));
+            atomic_write(&target, &body)?;
+        }
+
+        // 5. Write settings.json (merge: existing → mcpServers from recipe → settings_override)
+        if needs_settings {
+            let settings_path = scope_dir.join("settings.json");
+            let mut root: serde_json::Value = if settings_path.exists() {
+                serde_json::from_str(&fs::read_to_string(&settings_path)?)
+                    .unwrap_or_else(|_| serde_json::json!({}))
+            } else {
+                serde_json::json!({})
+            };
+            if !root.is_object() {
+                root = serde_json::json!({});
+            }
+
+            // Inject MCPs
+            if !recipe.mcps.is_empty() {
+                let mcp_servers = root["mcpServers"].as_object().cloned().unwrap_or_default();
+                let mut servers = serde_json::Map::from_iter(mcp_servers);
+                for entry in &recipe.mcps {
+                    let mcp_json = library::get_mcp_json(pm_dir, &entry.library_id)?;
+                    let m: McpMeta = serde_json::from_str(&mcp_json)?;
+                    let mut server = serde_json::json!({
+                        "command": m.command,
+                        "args": m.args,
+                    });
+                    if !entry.env.is_empty() {
+                        server["env"] = serde_json::to_value(&entry.env)?;
+                    }
+                    servers.insert(entry.library_id.clone(), server);
+                }
+                root["mcpServers"] = serde_json::Value::Object(servers);
+            }
+
+            // Apply settings_override
+            if let serde_json::Value::Object(_) = &recipe.settings_override {
+                json_deep_merge(&mut root, &recipe.settings_override);
+            }
+
+            atomic_write(&settings_path, &serde_json::to_string_pretty(&root)?)?;
+        }
+        Ok(())
+    })();
+
+    // On any write error, attempt rollback: restore backed_up files and
+    // delete created files. active.json is NOT updated, so the activation
+    // is not visible to the user.
+    if let Err(e) = write_result {
+        for rel in &backed_up {
+            let backup_file = pm_dir.join("backups").join(&backup_id).join(rel);
+            let target = scope_dir.join(rel);
+            if let Ok(content) = std::fs::read_to_string(&backup_file) {
+                let _ = atomic_write(&target, &content);
+            }
+        }
+        for rel in &created {
+            let target = scope_dir.join(rel);
+            if target.exists() {
+                let _ = std::fs::remove_file(&target);
+            }
+        }
+        return Err(e);
+    }
+
+    // 7. Update active.json (only after successful writes)
     let mut state = read_active(pm_dir)?;
     match scope {
         Scope::Global => state.global = Some(recipe_id.to_string()),
@@ -460,6 +494,44 @@ mod tests {
             std::fs::read_to_string(claude.join("skills/tdd/SKILL.md")).unwrap(),
             "# TDD body"
         );
+    }
+
+    #[test]
+    fn test_activate_rolls_back_on_missing_skill() {
+        use crate::library;
+        use crate::types::{ItemSource, LibraryItemMeta};
+        let dir = tempdir().unwrap();
+        let claude = dir.path().join("claude");
+        let pm = dir.path().join("pm");
+        std::fs::create_dir_all(&claude).unwrap();
+        std::fs::create_dir_all(&pm).unwrap();
+        std::fs::write(claude.join("CLAUDE.md"), "# original").unwrap();
+
+        let m = LibraryItemMeta {
+            id: "cm".into(),
+            name: "cm".into(),
+            description: "".into(),
+            tags: vec![],
+            source: ItemSource::UserCreated,
+            downloaded_at: "2026-04-27T00:00:00Z".into(),
+        };
+        library::add_claude_md(&pm, &m, "# new", None).unwrap();
+
+        let mut rec = r("rfail");
+        rec.claude_md = Some("cm".into());
+        rec.skills = vec!["does-not-exist".into()]; // missing library item
+        save_recipe(&pm, &rec).unwrap();
+
+        let result = activate_recipe(&claude, &pm, "rfail", &Scope::Global);
+        assert!(result.is_err());
+        // Original CLAUDE.md restored
+        assert_eq!(
+            std::fs::read_to_string(claude.join("CLAUDE.md")).unwrap(),
+            "# original",
+            "CLAUDE.md should be restored after partial-write rollback"
+        );
+        // active.json should not reflect a successful activate
+        assert!(read_active(&pm).unwrap().global.is_none());
     }
 
     #[test]
