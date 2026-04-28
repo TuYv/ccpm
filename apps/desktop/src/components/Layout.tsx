@@ -5,8 +5,8 @@ import { useConfigStore, useMcpsStore, usePresetsStore, useSkillsStore, useUiSto
 import { IconButton, SegmentedTabs } from "./ui";
 
 const MAIN_TABS = [
-  { to: "/recipes", label: "配方", end: true },
-  { to: "/", label: "预设", end: true },
+  { to: "/", label: "配方", end: true },
+  { to: "/presets", label: "预设", end: true },
   { to: "/skills", label: "Skills" },
   { to: "/mcp", label: "MCP" },
   { to: "/installed", label: "已安装" },

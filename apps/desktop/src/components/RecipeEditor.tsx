@@ -10,6 +10,10 @@ function newId(): string {
   return Math.random().toString(36).slice(2, 10);
 }
 
+function isSecretEnvKey(key: string): boolean {
+  return /TOKEN|KEY|SECRET|PASSWORD|API/i.test(key);
+}
+
 export default function RecipeEditor() {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -132,6 +136,25 @@ export default function RecipeEditor() {
           />
         </div>
 
+        <div>
+          <button
+            onClick={async () => {
+              const [cm, sk, mc] = await Promise.all([
+                api.listLibraryItems("claude-md"),
+                api.listLibraryItems("skill"),
+                api.listLibraryItems("mcp"),
+              ]);
+              setAvailableClaudeMds(cm);
+              setAvailableSkills(sk);
+              setAvailableMcps(mc);
+              addToast("✓ 已刷新库", "success");
+            }}
+            className="text-[11px] text-app-accent hover:underline"
+          >
+            ↻ 刷新库
+          </button>
+        </div>
+
         {/* CLAUDE.md */}
         <section>
           <div className="text-xs uppercase tracking-wider text-app-muted mb-2">
@@ -179,7 +202,13 @@ export default function RecipeEditor() {
           </div>
           {availableSkills.length === 0 && (
             <div className="text-[11px] text-app-muted">
-              库里还没有 skill，去「Skills」tab 下载一些
+              库里还没有 skill。
+              <button
+                onClick={() => navigate("/skills")}
+                className="ml-1 text-app-accent hover:underline"
+              >
+                去 Skills tab 下载 →
+              </button>
             </div>
           )}
         </section>
@@ -189,6 +218,17 @@ export default function RecipeEditor() {
           <div className="text-xs uppercase tracking-wider text-app-muted mb-2">
             🔌 MCPs
           </div>
+          {availableMcps.length === 0 && (
+            <div className="text-[11px] text-app-muted mb-2">
+              库里还没有 MCP。
+              <button
+                onClick={() => navigate("/mcp")}
+                className="ml-1 text-app-accent hover:underline"
+              >
+                去 MCP tab 下载 →
+              </button>
+            </div>
+          )}
           <div className="space-y-2">
             {availableMcps.map((mId) => {
               const entry = mcpEntries.find((m) => m.library_id === mId);
@@ -215,6 +255,7 @@ export default function RecipeEditor() {
                             {k}
                           </span>
                           <input
+                            type={isSecretEnvKey(k) ? "password" : "text"}
                             value={v}
                             onChange={(e) => setMcpEnv(mId, k, e.target.value)}
                             className="flex-1 bg-app-bg text-[11px] text-app-text px-2 py-1 rounded border border-app-border font-mono"

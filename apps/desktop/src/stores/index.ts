@@ -268,7 +268,7 @@ interface RecipesStore {
   error: string | null;
   load: () => Promise<void>;
   save: (recipe: Recipe) => Promise<void>;
-  delete: (id: string) => Promise<void>;
+  remove: (id: string) => Promise<void>;
   activate: (id: string, scope: ScopeArg) => Promise<void>;
   deactivate: (scope: ScopeArg) => Promise<void>;
 }
@@ -296,7 +296,7 @@ export const useRecipesStore = create<RecipesStore>((set, get) => ({
     await api.saveRecipe(recipe);
     await get().load();
   },
-  delete: async (id) => {
+  remove: async (id) => {
     await api.deleteRecipe(id);
     await get().load();
   },

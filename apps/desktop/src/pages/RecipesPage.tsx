@@ -70,7 +70,7 @@ function RecipeRow({
 }
 
 export default function RecipesPage() {
-  const { recipes, active, loading, load, delete: deleteRecipe, activate } =
+  const { recipes, active, loading, load, remove, activate } =
     useRecipesStore();
   const { addToast } = useUiStore();
   const navigate = useNavigate();
@@ -86,7 +86,7 @@ export default function RecipesPage() {
   async function handleDelete(id: string) {
     if (!confirm("删除该配方？")) return;
     try {
-      await deleteRecipe(id);
+      await remove(id);
       addToast("✓ 已删除", "success");
     } catch (e) {
       addToast(`删除失败：${String(e)}`, "error");

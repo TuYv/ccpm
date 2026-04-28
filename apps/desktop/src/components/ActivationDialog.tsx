@@ -1,4 +1,10 @@
+import { useEffect, useState } from "react";
+import { api } from "../api/claudePreset";
 import type { Recipe, ScopeArg } from "../types/core";
+
+type WriteEntry = { path: string; preview?: string };
+
+const SKILL_PREVIEW_LIMIT = 3;
 
 export default function ActivationDialog({
   recipe,
@@ -12,18 +18,54 @@ export default function ActivationDialog({
   onConfirm: () => void;
 }) {
   const targetDir = scope.kind === "global" ? "~/.claude/" : scope.path;
-  const writes: string[] = [];
-  if (recipe.claude_md) writes.push(`${targetDir}/CLAUDE.md`);
-  for (const s of recipe.skills ?? []) writes.push(`${targetDir}/skills/${s}/SKILL.md`);
-  if ((recipe.mcps?.length ?? 0) > 0)
-    writes.push(`${targetDir}/settings.json (mcpServers 字段合并)`);
-  const overrideKeys = Object.keys(recipe.settings_override ?? {});
-  if (overrideKeys.length > 0)
-    writes.push(`${targetDir}/settings.json (覆盖字段：${overrideKeys.join(", ")})`);
+  const [writes, setWrites] = useState<WriteEntry[]>([]);
+
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      const list: WriteEntry[] = [];
+      if (recipe.claude_md) {
+        try {
+          const [md] = await api.getLibraryClaudeMd(recipe.claude_md);
+          list.push({ path: `${targetDir}/CLAUDE.md`, preview: md });
+        } catch {
+          list.push({ path: `${targetDir}/CLAUDE.md` });
+        }
+      }
+      const skills = recipe.skills ?? [];
+      const previewSkills = skills.slice(0, SKILL_PREVIEW_LIMIT);
+      for (const s of previewSkills) {
+        try {
+          const md = await api.getLibrarySkillMd(s);
+          list.push({ path: `${targetDir}/skills/${s}/SKILL.md`, preview: md });
+        } catch {
+          list.push({ path: `${targetDir}/skills/${s}/SKILL.md` });
+        }
+      }
+      if (skills.length > SKILL_PREVIEW_LIMIT) {
+        list.push({
+          path: `${targetDir}/skills/… (+${skills.length - SKILL_PREVIEW_LIMIT} more)`,
+        });
+      }
+      if ((recipe.mcps?.length ?? 0) > 0) {
+        list.push({ path: `${targetDir}/settings.json (mcpServers 字段合并)` });
+      }
+      const overrideKeys = Object.keys(recipe.settings_override ?? {});
+      if (overrideKeys.length > 0) {
+        list.push({
+          path: `${targetDir}/settings.json (覆盖字段：${overrideKeys.join(", ")})`,
+        });
+      }
+      if (!cancelled) setWrites(list);
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [recipe, targetDir]);
 
   return (
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-      <div className="bg-app-card border border-app-border rounded-xl w-full max-w-md p-6">
+      <div className="bg-app-card border border-app-border rounded-xl w-full max-w-md p-6 max-h-[85vh] overflow-y-auto">
         <h2 className="text-base font-semibold text-app-text mb-1">
           激活「{recipe.name}」
         </h2>
@@ -31,23 +73,31 @@ export default function ActivationDialog({
           目标 scope：{scope.kind === "global" ? "全局" : scope.path}
         </div>
 
-        <div className="bg-app-surface rounded-lg border border-app-border p-3 mb-4">
-          <div className="text-[10px] uppercase text-app-muted mb-2">将写入</div>
-          <ul className="text-xs text-app-secondary space-y-1 font-mono">
-            {writes.length === 0 ? (
-              <li className="text-app-muted italic">空配方，无写入</li>
-            ) : (
-              writes.map((w) => (
-                <li key={w} className="truncate">
-                  → {w}
-                </li>
-              ))
-            )}
-          </ul>
+        <div className="bg-app-green/10 border border-app-green/30 rounded-lg px-3 py-2 mb-4 text-xs text-app-green">
+          ✓ 激活前自动备份当前 ~/.claude/，可在「备份」tab 一键回滚
         </div>
 
-        <div className="text-[11px] text-yellow-400 mb-4">
-          ⚠ 激活前会自动备份当前文件，可在「备份」tab 一键回滚。
+        <div className="bg-app-surface rounded-lg border border-app-border p-3 mb-4 space-y-2">
+          <div className="text-[10px] uppercase text-app-muted">
+            将写入 {writes.length} 个文件
+          </div>
+          {writes.length === 0 ? (
+            <div className="text-xs text-app-muted italic">空配方，无写入</div>
+          ) : (
+            writes.map((w) => (
+              <div key={w.path}>
+                <div className="text-xs font-mono text-app-secondary truncate">
+                  → {w.path}
+                </div>
+                {w.preview && (
+                  <pre className="text-[10px] font-mono text-app-muted bg-app-bg rounded p-2 mt-1 max-h-24 overflow-hidden whitespace-pre-wrap">
+                    {w.preview.slice(0, 200)}
+                    {w.preview.length > 200 ? "…" : ""}
+                  </pre>
+                )}
+              </div>
+            ))
+          )}
         </div>
 
         <div className="flex justify-end gap-2">

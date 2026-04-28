@@ -48,10 +48,11 @@ export default function App() {
     <HashRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<PresetsPage />} />
+          <Route index element={<RecipesPage />} />
           <Route path="recipes" element={<RecipesPage />} />
           <Route path="recipes/:id" element={<RecipeEditor />} />
           <Route path="recipes/new" element={<RecipeEditor />} />
+          <Route path="presets" element={<PresetsPage />} />
           <Route path="skills" element={<SkillsPage />} />
           <Route path="mcp" element={<McpPage />} />
           <Route path="installed" element={<InstalledPage />} />
