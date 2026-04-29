@@ -2,6 +2,7 @@ import { useState } from "react";
 import { api } from "../api/claudePreset";
 import { useUiStore } from "../stores";
 import type { ImportedBundle } from "../types/core";
+import { Button, SectionLabel, TextInput } from "./ui";
 
 interface GithubImportInputProps {
   onImported: (bundle: ImportedBundle) => void;
@@ -31,8 +32,8 @@ export default function GithubImportInput({ onImported }: GithubImportInputProps
   }
 
   return (
-    <div className="flex items-center gap-2 bg-app-card rounded-lg px-3 py-2 border border-app-border focus-within:border-app-accent transition-colors">
-      <span className="text-app-muted text-xs">🐙</span>
+    <div className="flex items-center gap-2 bg-card border border-hairline rounded-control px-3 py-2 focus-within:border-accent transition-colors">
+      <span className="text-ink-3 text-xs">GH</span>
       <input
         value={url}
         onChange={(e) => setUrl(e.target.value)}
@@ -40,16 +41,12 @@ export default function GithubImportInput({ onImported }: GithubImportInputProps
           if (e.key === "Enter" && !loading) handleImport();
         }}
         placeholder="GitHub URL（如 https://github.com/owner/repo）"
-        className="flex-1 bg-transparent text-sm text-app-text outline-none placeholder:text-app-muted"
+        className="flex-1 bg-transparent text-sm text-ink outline-none placeholder:text-ink-3"
         disabled={loading}
       />
-      <button
-        onClick={handleImport}
-        disabled={loading}
-        className="px-3 py-1 text-xs bg-app-accent hover:bg-app-accentHover disabled:opacity-50 text-white rounded-md transition-colors"
-      >
+      <Button variant="primary" size="sm" onClick={handleImport} disabled={loading}>
         {loading ? "导入中…" : "导入"}
-      </button>
+      </Button>
     </div>
   );
 }
@@ -80,95 +77,98 @@ export function ImportPreviewModal({ bundle, onCancel, onConfirm }: ImportPrevie
   const isEmpty = !bundle.claude_md && !bundle.settings_json;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-6">
-      <div className="bg-app-card border border-app-border rounded-xl w-full max-w-lg max-h-[80vh] flex flex-col overflow-hidden shadow-2xl">
-        <div className="px-5 py-4 border-b border-app-border">
-          <h2 className="text-base font-semibold text-app-text">从 GitHub 导入预设</h2>
-          <div className="text-xs text-app-muted mt-1 truncate">{bundle.source_repo}</div>
+    <div className="modal-shell" style={{ position: "fixed", inset: 0, zIndex: 50 }}>
+      <div
+        className="modal"
+        style={{ width: 560, maxHeight: "90vh", display: "flex", flexDirection: "column" }}
+      >
+        <div className="modal-head">
+          <SectionLabel style={{ display: "block", marginBottom: 6 }}>Import preset</SectionLabel>
+          <h3 style={{ margin: 0, fontSize: 18, fontWeight: 600 }}>从 GitHub 导入</h3>
+          <div
+            className="text-xs text-ink-3"
+            style={{ marginTop: 6, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}
+          >
+            {bundle.source_repo}
+          </div>
         </div>
 
-        <div className="flex-1 overflow-auto p-5 space-y-4">
-          <div>
-            <label className="block text-xs font-semibold text-app-muted uppercase tracking-wider mb-2">
-              名称
-            </label>
-            <input
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              placeholder="预设名称"
-              className="w-full bg-app-surface border border-app-border focus:border-app-accent rounded-lg px-3 py-2 text-sm text-app-text outline-none transition-colors"
-            />
-            <div className="text-xs text-app-muted mt-1">ID: {bundle.suggested_id}</div>
-          </div>
-
-          <div>
-            <div className="text-xs font-semibold text-app-muted uppercase tracking-wider mb-2">
-              将导入内容
+        <div className="modal-body" style={{ flex: 1, overflow: "auto" }}>
+          <div className="space-y-4">
+            <div>
+              <SectionLabel style={{ display: "block", marginBottom: 8 }}>名称</SectionLabel>
+              <TextInput
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                placeholder="预设名称"
+              />
+              <div className="text-xs text-ink-3" style={{ marginTop: 6 }}>
+                ID: <span className="font-mono">{bundle.suggested_id}</span>
+              </div>
             </div>
-            <ul className="space-y-1.5 text-sm">
-              {bundle.claude_md && (
-                <li className="flex items-center gap-2 text-app-text">
-                  <span>📄</span>
-                  <span className="font-mono text-xs">CLAUDE.md</span>
-                </li>
-              )}
-              {bundle.settings_json && (
-                <li className="flex items-center gap-2 text-app-text">
-                  <span>⚙️</span>
-                  <span className="font-mono text-xs">settings.json</span>
-                </li>
-              )}
-              {skillCount > 0 && (
-                <li className="flex items-center gap-2 text-app-text">
-                  <span>⚡</span>
-                  <span className="text-xs">{skillCount} skill{skillCount > 1 ? "s" : ""}</span>
-                </li>
-              )}
-              {mcpCount > 0 && (
-                <li className="flex items-center gap-2 text-app-text">
-                  <span>🔌</span>
-                  <span className="text-xs">{mcpCount} MCP{mcpCount > 1 ? "s" : ""}</span>
-                </li>
-              )}
-              {!bundle.claude_md && !bundle.settings_json && skillCount === 0 && mcpCount === 0 && (
-                <li className="text-xs text-app-muted">仓库中未发现可导入的内容</li>
-              )}
-            </ul>
-          </div>
 
-          <div className="text-xs text-app-muted">
-            来源：
-            <a
-              href={bundle.source_url}
-              target="_blank"
-              rel="noreferrer"
-              className="text-app-accent hover:underline ml-1 break-all"
-            >
-              {bundle.source_url}
-            </a>
+            <div>
+              <SectionLabel style={{ display: "block", marginBottom: 8 }}>将导入内容</SectionLabel>
+              <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+                {bundle.claude_md && (
+                  <div className="bg-card-2 rounded-control" style={{ padding: "8px 12px" }}>
+                    <span className="font-mono text-xs text-ink">CLAUDE.md</span>
+                  </div>
+                )}
+                {bundle.settings_json && (
+                  <div className="bg-card-2 rounded-control" style={{ padding: "8px 12px" }}>
+                    <span className="font-mono text-xs text-ink">settings.json</span>
+                  </div>
+                )}
+                {skillCount > 0 && (
+                  <div className="bg-card-2 rounded-control" style={{ padding: "8px 12px" }}>
+                    <span className="text-xs text-ink">
+                      {skillCount} skill{skillCount > 1 ? "s" : ""}
+                    </span>
+                  </div>
+                )}
+                {mcpCount > 0 && (
+                  <div className="bg-card-2 rounded-control" style={{ padding: "8px 12px" }}>
+                    <span className="text-xs text-ink">
+                      {mcpCount} MCP{mcpCount > 1 ? "s" : ""}
+                    </span>
+                  </div>
+                )}
+                {!bundle.claude_md && !bundle.settings_json && skillCount === 0 && mcpCount === 0 && (
+                  <div className="text-xs text-ink-3">仓库中未发现可导入的内容</div>
+                )}
+              </div>
+            </div>
+
+            <div className="text-xs text-ink-3">
+              来源：
+              <a
+                href={bundle.source_url}
+                target="_blank"
+                rel="noreferrer"
+                className="text-accent hover:underline ml-1 break-all"
+              >
+                {bundle.source_url}
+              </a>
+            </div>
+
+            {isEmpty && (
+              <div className="text-xs text-red">未发现可导入的 CLAUDE.md 或 settings.json</div>
+            )}
           </div>
         </div>
 
-        <div className="px-5 py-4 border-t border-app-border flex flex-col gap-2">
-          {isEmpty && (
-            <div className="text-xs text-app-red">未发现可导入的 CLAUDE.md 或 settings.json</div>
-          )}
-          <div className="flex items-center justify-end gap-2">
-            <button
-              onClick={onCancel}
-              disabled={saving}
-              className="px-4 py-1.5 text-sm bg-app-surface border border-app-border rounded-lg text-app-secondary hover:bg-app-cardHover disabled:opacity-50 transition-colors"
-            >
-              取消
-            </button>
-            <button
-              onClick={handleSave}
-              disabled={saving || !name.trim() || isEmpty}
-              className="px-5 py-1.5 text-sm bg-app-accent hover:bg-app-accentHover disabled:opacity-40 text-white rounded-lg transition-colors"
-            >
-              {saving ? "保存中…" : "保存"}
-            </button>
-          </div>
+        <div className="modal-foot">
+          <Button variant="subtle" onClick={onCancel} disabled={saving}>
+            取消
+          </Button>
+          <Button
+            variant="primary"
+            onClick={handleSave}
+            disabled={saving || !name.trim() || isEmpty}
+          >
+            {saving ? "保存中…" : "保存"}
+          </Button>
         </div>
       </div>
     </div>
