@@ -4,6 +4,7 @@ import { useConfigStore, usePresetsStore, useUiStore } from "../stores";
 import type { AppConfig, SourceEntry } from "../types/core";
 import Topbar from "../components/Topbar";
 import { useTheme } from "../hooks/useTheme";
+import { useScrollSpy } from "../hooks/useScrollSpy";
 import {
   Button,
   Field,
@@ -473,8 +474,12 @@ export default function SettingsPage() {
 
   const [draft, setDraft] = useState<AppConfig | null>(null);
   const [saving, setSaving] = useState(false);
-  const [activeSection, setActiveSection] = useState<string>("appearance");
   const isPreview = !isTauriApp();
+  const activeSection = useScrollSpy(
+    SECTIONS.map(([id]) => id),
+    "appearance",
+    !!draft,
+  );
 
   useEffect(() => {
     load();
@@ -489,23 +494,6 @@ export default function SettingsPage() {
       !!config && !!draft && JSON.stringify(config) !== JSON.stringify(draft),
     [config, draft],
   );
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries
-          .filter((e) => e.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
-        if (visible[0]) setActiveSection(visible[0].target.id);
-      },
-      { threshold: [0.4], rootMargin: "-100px 0px -50% 0px" },
-    );
-    SECTIONS.forEach(([id]) => {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
-    });
-    return () => observer.disconnect();
-  }, []);
 
   async function save() {
     if (!draft) return;

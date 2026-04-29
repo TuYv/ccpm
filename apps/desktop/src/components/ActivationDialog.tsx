@@ -1,7 +1,26 @@
 import { useNavigate } from "react-router-dom";
 import { useInstalledStore, useMcpsStore } from "../stores";
-import type { Recipe, ScopeArg } from "../types/core";
+import type { InstalledState, Recipe, ScopeArg } from "../types/core";
 import { Banner, Button, SectionLabel } from "./ui";
+
+function getScopeView(installed: InstalledState | null, scope: ScopeArg) {
+  const isProject = scope.kind === "project";
+  const path = isProject ? scope.path : null;
+  return {
+    installedSkills: path
+      ? installed?.project_skills?.[path] ?? []
+      : installed?.global_skills ?? [],
+    installedMcps: path
+      ? installed?.project_mcps?.[path] ?? []
+      : installed?.global_mcps ?? [],
+    activeFiles: path
+      ? installed?.projects?.[path]?.files ?? []
+      : installed?.global?.files ?? [],
+    hasActive: path
+      ? !!installed?.projects?.[path]
+      : !!installed?.global,
+  };
+}
 
 export default function ActivationDialog({
   recipe,
@@ -20,16 +39,8 @@ export default function ActivationDialog({
   const installed = useInstalledStore((s) => s.state);
   const mcpsIndex = useMcpsStore((s) => s.index?.mcps ?? []);
 
-  const scopeKey = scope.kind === "global" ? null : scope.path;
-  const installedSkills: string[] = scopeKey
-    ? installed?.project_skills?.[scopeKey] ?? []
-    : installed?.global_skills ?? [];
-  const installedMcps: string[] = scopeKey
-    ? installed?.project_mcps?.[scopeKey] ?? []
-    : installed?.global_mcps ?? [];
-  const activeFiles: string[] = scopeKey
-    ? installed?.projects?.[scopeKey]?.files ?? []
-    : installed?.global?.files ?? [];
+  const { installedSkills, installedMcps, activeFiles, hasActive } =
+    getScopeView(installed, scope);
 
   const recipeSkillIds = recipe.skills ?? [];
   const recipeMcpIds = (recipe.mcps ?? []).map((m) => m.library_id);
@@ -42,7 +53,6 @@ export default function ActivationDialog({
   for (const id of recipeMcpIds.filter((id) => !installedMcps.includes(id))) {
     diffLines.push({ kind: "+", path: `~/.claude/mcps/${id}` });
   }
-  const hasActive = scopeKey ? !!installed?.projects?.[scopeKey] : !!installed?.global;
   if (recipe.claude_md && hasActive) {
     diffLines.push({ kind: "~", path: "~/.claude/CLAUDE.md" });
     diffLines.push({ kind: "~", path: "~/.claude/settings.json" });
@@ -151,7 +161,6 @@ export default function ActivationDialog({
                   navigate("/mcp");
                   onCancel();
                 }}
-                actions={null}
               >
                 {envWarningCount} 个 MCP 需要环境变量，激活前请先在 MCP 页配置
               </Banner>

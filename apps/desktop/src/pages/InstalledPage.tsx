@@ -1,7 +1,5 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { formatDistanceToNow, parseISO } from "date-fns";
-import { zhCN } from "date-fns/locale";
 import {
   useConfigStore,
   useInstalledStore,
@@ -19,6 +17,7 @@ import {
   SectionLabel,
   Tag,
 } from "../components/ui";
+import { relativeTime } from "../utils/time";
 
 // ── icons ──────────────────────────────────────────────────────────────────
 const GlobeIcon = (
@@ -53,16 +52,6 @@ const FolderIcon = (
     <path d="M2 4.5A1.5 1.5 0 0 1 3.5 3h2.4l1.3 1.5h5.3A1.5 1.5 0 0 1 14 6v5.5A1.5 1.5 0 0 1 12.5 13h-9A1.5 1.5 0 0 1 2 11.5v-7Z" />
   </svg>
 );
-
-// ── helpers ────────────────────────────────────────────────────────────────
-function relativeTime(iso?: string | null): string | null {
-  if (!iso) return null;
-  try {
-    return formatDistanceToNow(parseISO(iso), { addSuffix: true, locale: zhCN });
-  } catch {
-    return null;
-  }
-}
 
 interface ScopeSection {
   key: string;
@@ -333,7 +322,7 @@ export default function InstalledPage() {
     try {
       await restoreBaseline();
       addToast("已恢复基线", "success");
-      await loadInstalled();
+      await loadInstalled(true);
     } catch (e) {
       addToast(String(e), "error");
     }
@@ -347,7 +336,7 @@ export default function InstalledPage() {
     try {
       await deactivate(scopeArg);
       addToast("已停用", "success");
-      await loadInstalled();
+      await loadInstalled(true);
     } catch (e) {
       addToast(`停用失败：${String(e)}`, "error");
     }

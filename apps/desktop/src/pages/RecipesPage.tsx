@@ -1,7 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { formatDistanceToNow, parseISO } from "date-fns";
-import { zhCN } from "date-fns/locale";
 import { useInstalledStore, useRecipesStore, useUiStore } from "../stores";
 import { useScopeStore } from "../stores/scope";
 import type { Recipe } from "../types/core";
@@ -17,19 +15,11 @@ import {
   Tag,
   TextInput,
 } from "../components/ui";
+import { relativeTime } from "../utils/time";
 
 // ── helpers ────────────────────────────────────────────────────────────────
 function recipeTags(r: Recipe): string[] {
   return ((r as unknown as { tags?: string[] }).tags ?? []).filter(Boolean);
-}
-
-function relativeTime(iso?: string | null): string | null {
-  if (!iso) return null;
-  try {
-    return formatDistanceToNow(parseISO(iso), { addSuffix: true, locale: zhCN });
-  } catch {
-    return null;
-  }
 }
 
 function scopeLabel(scope: { kind: "global" } | { kind: "project"; path: string }): string {
@@ -362,7 +352,7 @@ export default function RecipesPage() {
         crumb={`recipes / ${scopeLabel(scope)}`}
         actions={
           <>
-            <Button size="sm" variant="subtle" onClick={() => load()} title="刷新">
+            <Button size="sm" variant="subtle" onClick={() => load(true)} title="刷新">
               {RefreshIcon}
             </Button>
             <Button

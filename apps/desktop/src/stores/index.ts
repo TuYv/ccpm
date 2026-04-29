@@ -35,13 +35,13 @@ interface PresetsStore {
 
 interface InstalledStore {
   state: InstalledState | null;
-  load: () => Promise<void>;
+  load: (force?: boolean) => Promise<void>;
 }
 
 interface ConfigStore {
   config: AppConfig | null;
   baselineExists: boolean;
-  load: () => Promise<void>;
+  load: (force?: boolean) => Promise<void>;
   save: (c: AppConfig) => Promise<void>;
   captureBaseline: () => Promise<void>;
   restoreBaseline: () => Promise<void>;
@@ -50,7 +50,7 @@ interface ConfigStore {
 
 interface BackupsStore {
   entries: BackupEntry[];
-  load: () => Promise<void>;
+  load: (force?: boolean) => Promise<void>;
 }
 
 interface SkillsStore {
@@ -101,6 +101,7 @@ export const usePresetsStore = create<PresetsStore>((set, get) => ({
   manifest: null,
   files: {},
   fetchIndex: async (force = false) => {
+    if (!force && get().index) return;
     set({ loading: true, error: null });
     try {
       const index = await api.fetchIndex(force);
@@ -137,18 +138,20 @@ export const usePresetsStore = create<PresetsStore>((set, get) => ({
   },
 }));
 
-export const useInstalledStore = create<InstalledStore>((set) => ({
+export const useInstalledStore = create<InstalledStore>((set, get) => ({
   state: null,
-  load: async () => {
+  load: async (force = false) => {
+    if (!force && get().state) return;
     const state = await api.getInstalled();
     set({ state });
   },
 }));
 
-export const useConfigStore = create<ConfigStore>((set) => ({
+export const useConfigStore = create<ConfigStore>((set, get) => ({
   config: null,
   baselineExists: false,
-  load: async () => {
+  load: async (force = false) => {
+    if (!force && get().config) return;
     const [config, baselineExists] = await Promise.all([
       api.getConfig(),
       api.baselineStatus(),
@@ -172,9 +175,10 @@ export const useConfigStore = create<ConfigStore>((set) => ({
   },
 }));
 
-export const useBackupsStore = create<BackupsStore>((set) => ({
+export const useBackupsStore = create<BackupsStore>((set, get) => ({
   entries: [],
-  load: async () => {
+  load: async (force = false) => {
+    if (!force && get().entries.length > 0) return;
     const entries = await api.listBackups();
     set({ entries });
   },
@@ -209,6 +213,7 @@ export const useSkillsStore = create<SkillsStore>((set, get) => ({
   focusId: null,
   setFocusId: (id) => set({ focusId: id }),
   fetchIndex: async (force = false) => {
+    if (!force && get().index) return;
     set({ loading: true, error: null });
     try {
       const index = await api.fetchSkillsIndex(force);
@@ -243,6 +248,7 @@ export const useMcpsStore = create<McpsStore>((set, get) => ({
   focusId: null,
   setFocusId: (id) => set({ focusId: id }),
   fetchIndex: async (force = false) => {
+    if (!force && get().index) return;
     set({ loading: true, error: null });
     try {
       const index = await api.fetchMcpsIndex(force);
@@ -274,7 +280,7 @@ interface RecipesStore {
   active: ActiveState | null;
   loading: boolean;
   error: string | null;
-  load: () => Promise<void>;
+  load: (force?: boolean) => Promise<void>;
   save: (recipe: Recipe) => Promise<void>;
   remove: (id: string) => Promise<void>;
   activate: (id: string, scope: ScopeArg) => Promise<void>;
@@ -286,7 +292,8 @@ export const useRecipesStore = create<RecipesStore>((set, get) => ({
   active: null,
   loading: false,
   error: null,
-  load: async () => {
+  load: async (force = false) => {
+    if (!force && get().recipes.length > 0) return;
     set({ loading: true, error: null });
     try {
       const [recipes, active] = await Promise.all([
@@ -302,18 +309,18 @@ export const useRecipesStore = create<RecipesStore>((set, get) => ({
   },
   save: async (recipe) => {
     await api.saveRecipe(recipe);
-    await get().load();
+    await get().load(true);
   },
   remove: async (id) => {
     await api.deleteRecipe(id);
-    await get().load();
+    await get().load(true);
   },
   activate: async (id, scope) => {
     await api.activateRecipe(id, scope);
-    await get().load();
+    await get().load(true);
   },
   deactivate: async (scope) => {
     await api.deactivateRecipe(scope);
-    await get().load();
+    await get().load(true);
   },
 }));

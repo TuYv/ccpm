@@ -1,22 +1,13 @@
 import { useEffect, useMemo, useState } from "react";
-import { formatDistanceToNow, parseISO } from "date-fns";
-import { zhCN } from "date-fns/locale";
 import { api } from "../api/claudePreset";
 import Topbar from "../components/Topbar";
 import { Button, Chip, EmptyState, SectionLabel } from "../components/ui";
 import { useBackupsStore, useUiStore } from "../stores";
 import type { BackupEntry } from "../types/core";
+import { relativeTime } from "../utils/time";
 
 function scopeLabel(scope: string): string {
   return scope === "global" ? "全局" : "项目";
-}
-
-function relativeTime(iso: string): string {
-  try {
-    return formatDistanceToNow(parseISO(iso), { addSuffix: true, locale: zhCN });
-  } catch {
-    return iso;
-  }
 }
 
 function groupByScope(entries: BackupEntry[]): { scope: string; items: BackupEntry[] }[] {
@@ -57,7 +48,7 @@ export default function BackupsPage() {
     try {
       await api.restoreBackup(id);
       addToast(`已从备份 ${id.slice(0, 8)}… 恢复`, "success");
-      await load();
+      await load(true);
     } catch (e) {
       addToast(String(e), "error");
     } finally {

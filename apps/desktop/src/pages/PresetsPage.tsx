@@ -93,7 +93,6 @@ function kindBadge(p: PresetMeta, m?: PresetManifest): string {
   if (m?.skills?.length) parts.push("skill");
   if (m?.mcps?.length) parts.push("mcp");
   if (parts.length === 0) {
-    // Fallback: use tags or "preset"
     if (p.tags?.length) return p.tags[0];
     return "preset";
   }
@@ -137,7 +136,6 @@ export default function PresetsPage() {
     loadInstalled();
   }, [fetchIndex, loadInstalled]);
 
-  // Cache the currently-selected manifest so kind badges in the list update.
   useEffect(() => {
     if (manifest && manifest.id) {
       setManifestCache((prev) =>
@@ -244,7 +242,6 @@ export default function PresetsPage() {
   }
 
   async function pickProjectScope() {
-    // If a project is already known, just switch to it; otherwise prompt for a directory.
     if (globalScope.kind === "project" && globalScope.path) {
       setTargetScope({ kind: "project", path: globalScope.path });
       return;
@@ -915,7 +912,7 @@ export default function PresetsPage() {
             };
             try {
               await api.activateAdHoc(adHocManifest, fileContents, targetScope);
-              await loadInstalled();
+              await loadInstalled(true);
               addToast(`已导入 ${name}`, "success");
               setImportPreview(null);
             } catch (e) {
@@ -966,7 +963,7 @@ export default function PresetsPage() {
                 }
               });
 
-              await loadInstalled();
+              await loadInstalled(true);
 
               const failures =
                 skillResults.filter((r) => r.status === "rejected").length +
