@@ -91,7 +91,7 @@ function LibraryPicker({
         background: "var(--card)",
         border: "1px solid var(--hairline)",
         borderRadius: 10,
-        boxShadow: "0 8px 24px rgba(0,0,0,0.18)",
+        boxShadow: "var(--shadow-md)",
         display: "flex",
         flexDirection: "column",
       }}

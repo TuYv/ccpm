@@ -75,12 +75,12 @@ function highlightJson(json: string): string {
     /("(?:\\u[a-fA-F0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|true|false|null|-?\d+(?:\.\d*)?(?:[eE][+-]?\d+)?)/g,
     (match) => {
       if (/^"/.test(match)) {
-        if (/:$/.test(match)) return `<span style="color:#4ea1ff">${match}</span>`; // key
-        return `<span style="color:#34c759">${match}</span>`;                        // string
+        if (/:$/.test(match)) return `<span style="color:var(--accent)">${match}</span>`; // key
+        return `<span style="color:var(--green)">${match}</span>`;                         // string
       }
-      if (match === "true" || match === "false") return `<span style="color:#ff9500">${match}</span>`;
-      if (match === "null") return `<span style="color:#ff453a">${match}</span>`;
-      return `<span style="color:#ff9500">${match}</span>`; // number
+      if (match === "true" || match === "false") return `<span style="color:var(--amber)">${match}</span>`;
+      if (match === "null") return `<span style="color:var(--red)">${match}</span>`;
+      return `<span style="color:var(--amber)">${match}</span>`; // number
     },
   );
 }

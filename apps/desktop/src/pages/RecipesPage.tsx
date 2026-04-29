@@ -79,7 +79,7 @@ function TagsFilter({
             border: "1px solid var(--hairline)",
             borderRadius: 10,
             padding: 8,
-            boxShadow: "0 8px 24px rgba(0,0,0,0.18)",
+            boxShadow: "var(--shadow-md)",
           }}
         >
           {allTags.length === 0 ? (
