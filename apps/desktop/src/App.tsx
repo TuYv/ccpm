@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { HashRouter, Route, Routes } from "react-router-dom";
 import { api } from "./api/claudePreset";
+import CommandPalette from "./components/CommandPalette";
 import Layout from "./components/Layout";
 import RecipeEditor from "./components/RecipeEditor";
 import Toast from "./components/Toast";
@@ -20,9 +21,7 @@ export default function App() {
   const { load } = useConfigStore();
   const { addToast } = useUiStore();
 
-  useEffect(() => {
-    load();
-  }, [load]);
+  useEffect(() => { load(); }, [load]);
 
   useEffect(() => {
     (async () => {
@@ -32,13 +31,9 @@ export default function App() {
           const result = await api.scanAndSeed();
           const summary: string[] = [];
           if (result.claude_md_imported) summary.push("CLAUDE.md");
-          if (result.skills_imported.length > 0)
-            summary.push(`${result.skills_imported.length} skills`);
-          if (result.mcps_imported.length > 0)
-            summary.push(`${result.mcps_imported.length} MCPs`);
-          if (summary.length > 0) {
-            addToast(`✓ 已导入现有配置：${summary.join(", ")}`, "success");
-          }
+          if (result.skills_imported.length > 0) summary.push(`${result.skills_imported.length} skills`);
+          if (result.mcps_imported.length > 0) summary.push(`${result.mcps_imported.length} MCPs`);
+          if (summary.length > 0) addToast(`已导入现有配置：${summary.join(", ")}`, "success");
         }
       } catch (e) {
         addToast(`首次启动扫描失败：${String(e)}`, "error");
@@ -64,6 +59,7 @@ export default function App() {
         </Route>
       </Routes>
       <Toast />
+      <CommandPalette />
     </HashRouter>
   );
 }
