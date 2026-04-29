@@ -4,6 +4,7 @@ import { api } from "./api/claudePreset";
 import Layout from "./components/Layout";
 import RecipeEditor from "./components/RecipeEditor";
 import Toast from "./components/Toast";
+import { useTheme } from "./hooks/useTheme";
 import BackupsPage from "./pages/BackupsPage";
 import ClaudeSettingsPage from "./pages/ClaudeSettingsPage";
 import InstalledPage from "./pages/InstalledPage";
@@ -15,6 +16,7 @@ import SkillsPage from "./pages/SkillsPage";
 import { useConfigStore, useUiStore } from "./stores";
 
 export default function App() {
+  useTheme();
   const { load } = useConfigStore();
   const { addToast } = useUiStore();
 
