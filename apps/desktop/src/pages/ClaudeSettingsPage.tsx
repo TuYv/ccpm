@@ -2,6 +2,8 @@ import { useMemo, useEffect, useState } from "react";
 import { api } from "../api/claudePreset";
 import { useUiStore } from "../stores";
 import type { ClaudeSettings, EffortLevel, PermissionMode } from "../types/core";
+import Topbar from "../components/Topbar";
+import { Button, Switch } from "../components/ui";
 
 // ─── Models ──────────────────────────────────────────────────────────────────
 
@@ -9,16 +11,16 @@ const MODELS = [
   {
     group: "Claude 4（当前）",
     items: [
-      { id: "claude-opus-4-7",           name: "Opus 4.7",   badge: "最强", badgeColor: "bg-yellow-900/30 text-yellow-300 border-yellow-700/40", desc: "最强推理与代码，复杂长任务首选",   ctx: "1M" },
-      { id: "claude-sonnet-4-6",          name: "Sonnet 4.6", badge: "均衡", badgeColor: "bg-app-accent/10 text-app-accent border-app-accent/20",  desc: "速度与智能最佳平衡，日常开发推荐", ctx: "1M" },
-      { id: "claude-haiku-4-5-20251001",  name: "Haiku 4.5",  badge: "最快", badgeColor: "bg-app-green/10 text-app-green border-app-green/20",     desc: "响应最快，高频简单任务首选",       ctx: "200k" },
+      { id: "claude-opus-4-7",           name: "Opus 4.7",   badge: "最强", badgeColor: "bg-amber-soft text-amber border-hairline",   desc: "最强推理与代码，复杂长任务首选",   ctx: "1M" },
+      { id: "claude-sonnet-4-6",          name: "Sonnet 4.6", badge: "均衡", badgeColor: "bg-accent-soft text-accent border-hairline", desc: "速度与智能最佳平衡，日常开发推荐", ctx: "1M" },
+      { id: "claude-haiku-4-5-20251001",  name: "Haiku 4.5",  badge: "最快", badgeColor: "bg-green-soft text-green border-hairline",   desc: "响应最快，高频简单任务首选",       ctx: "200k" },
     ],
   },
   {
     group: "Claude 3.5（上一代）",
     items: [
-      { id: "claude-3-5-sonnet-20241022", name: "Sonnet 3.5", badge: "均衡", badgeColor: "bg-app-accent/10 text-app-accent border-app-accent/20",  desc: "上一代旗舰，仍广泛可用",           ctx: "200k" },
-      { id: "claude-3-5-haiku-20241022",  name: "Haiku 3.5",  badge: "快速", badgeColor: "bg-app-green/10 text-app-green border-app-green/20",     desc: "上一代轻量快速模型",               ctx: "200k" },
+      { id: "claude-3-5-sonnet-20241022", name: "Sonnet 3.5", badge: "均衡", badgeColor: "bg-accent-soft text-accent border-hairline", desc: "上一代旗舰，仍广泛可用",           ctx: "200k" },
+      { id: "claude-3-5-haiku-20241022",  name: "Haiku 3.5",  badge: "快速", badgeColor: "bg-green-soft text-green border-hairline",   desc: "上一代轻量快速模型",               ctx: "200k" },
     ],
   },
 ];
@@ -40,6 +42,20 @@ const QUICK_DENY = [
   { label: "拒绝网络请求",  rules: ["WebFetch", "Bash(curl *)", "Bash(wget *)"] },
   { label: "保护 secrets/", rules: ["Read(./secrets/**)"] },
   { label: "禁止 git push", rules: ["Bash(git push *)"] },
+];
+
+// ─── Section nav metadata ────────────────────────────────────────────────────
+
+const SECTIONS: [string, string][] = [
+  ["model", "模型"],
+  ["reasoning", "推理与输出"],
+  ["permissions", "默认权限模式"],
+  ["tools", "工具权限规则"],
+  ["behavior", "行为"],
+  ["display", "界面"],
+  ["updates", "更新"],
+  ["env", "环境变量"],
+  ["attribution", "Commit/PR 归因"],
 ];
 
 // ─── JSON helpers ─────────────────────────────────────────────────────────────
@@ -73,7 +89,7 @@ function highlightJson(json: string): string {
 
 function Cli({ cmd }: { cmd: string }) {
   return (
-    <code className="inline px-1.5 py-0.5 rounded bg-app-surface border border-app-border text-[10px] font-mono text-app-muted whitespace-nowrap">
+    <code className="inline px-1.5 py-0.5 rounded bg-surface border border-hairline text-[10px] font-mono text-ink-3 whitespace-nowrap">
       {cmd}
     </code>
   );
@@ -85,10 +101,10 @@ function SectionCard({ title, subtitle, children }: {
   return (
     <div>
       <div className="mb-3">
-        <div className="text-[15px] font-semibold text-app-text">{title}</div>
-        {subtitle && <div className="text-xs text-app-muted mt-1">{subtitle}</div>}
+        <div className="text-[15px] font-semibold text-ink">{title}</div>
+        {subtitle && <div className="text-xs text-ink-3 mt-1">{subtitle}</div>}
       </div>
-      <div className="bg-app-card rounded-xl overflow-hidden divide-y divide-app-border/40">
+      <div className="bg-card rounded-xl overflow-hidden divide-y divide-hairline">
         {children}
       </div>
     </div>
@@ -101,10 +117,10 @@ function SegPill<T extends string>({ options, value, onChange }: {
   onChange: (v: T) => void;
 }) {
   return (
-    <div className="inline-flex bg-app-surface rounded-xl p-1 gap-0.5">
+    <div className="inline-flex bg-surface rounded-xl p-1 gap-0.5">
       {options.map((o) => (
         <button key={o.value} onClick={() => onChange(o.value)}
-          className={`px-4 py-1.5 text-sm rounded-lg transition-colors ${value === o.value ? "bg-app-accent text-white font-medium" : "text-app-secondary hover:text-app-text"}`}>
+          className={`px-4 py-1.5 text-sm rounded-lg transition-colors ${value === o.value ? "bg-accent text-white font-medium" : "text-ink-2 hover:text-ink"}`}>
           {o.label}
         </button>
       ))}
@@ -125,27 +141,14 @@ function SettingRow({ label, hint, cli, children }: {
       <div className="flex items-start justify-between gap-4">
         <div className="min-w-0 flex-1">
           <div className="flex items-baseline gap-2 flex-wrap">
-            <span className="text-sm text-app-text leading-5">{label}</span>
+            <span className="text-sm text-ink leading-5">{label}</span>
             {cmds.map((c) => <Cli key={c} cmd={c} />)}
           </div>
-          {hint && <div className="text-xs text-app-muted mt-1">{hint}</div>}
+          {hint && <div className="text-xs text-ink-3 mt-1">{hint}</div>}
         </div>
         <div className="shrink-0 mt-0.5">{children}</div>
       </div>
     </Row>
-  );
-}
-
-function Toggle({ checked, onChange }: { checked: boolean; onChange: (v: boolean) => void }) {
-  return (
-    <button
-      role="switch"
-      aria-checked={checked}
-      onClick={() => onChange(!checked)}
-      className={`relative inline-flex w-11 h-6 rounded-full transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-app-accent ${checked ? "bg-app-accent" : "bg-[#636366]"}`}
-    >
-      <span className={`absolute top-[3px] w-[18px] h-[18px] bg-white rounded-full shadow-md transition-transform duration-200 ${checked ? "translate-x-[22px]" : "translate-x-[3px]"}`} />
-    </button>
   );
 }
 
@@ -162,16 +165,16 @@ function TagListEditor({ label, hint, cli, items, onChange }: {
   return (
     <Row>
       <div className="flex items-center gap-2 flex-wrap mb-2">
-        <span className="text-sm text-app-text font-medium">{label}</span>
+        <span className="text-sm text-ink font-medium">{label}</span>
         {cli && <Cli cmd={cli} />}
-        {hint && <span className="text-xs text-app-muted">{hint}</span>}
+        {hint && <span className="text-xs text-ink-3">{hint}</span>}
       </div>
       {items.length > 0 && (
         <div className="flex flex-wrap gap-1.5 mb-2">
           {items.map((item) => (
-            <span key={item} className="flex items-center gap-1 px-2.5 py-0.5 bg-app-surface border border-app-border rounded-full text-xs text-app-secondary font-mono">
+            <span key={item} className="flex items-center gap-1 px-2.5 py-0.5 bg-surface border border-hairline rounded-full text-xs text-ink-2 font-mono">
               {item}
-              <button onClick={() => onChange(items.filter((i) => i !== item))} className="text-app-muted hover:text-app-red transition-colors ml-0.5 text-sm leading-none">×</button>
+              <button onClick={() => onChange(items.filter((i) => i !== item))} className="text-ink-3 hover:text-red transition-colors ml-0.5 text-sm leading-none">×</button>
             </span>
           ))}
         </div>
@@ -179,8 +182,8 @@ function TagListEditor({ label, hint, cli, items, onChange }: {
       <div className="flex gap-2">
         <input value={input} onChange={(e) => setInput(e.target.value)} onKeyDown={(e) => e.key === "Enter" && add()}
           placeholder='如 "Bash(npm run *)" 或 "Read(./.env)"'
-          className="flex-1 bg-app-surface text-xs text-app-text px-3 py-1.5 rounded-lg border border-app-border focus:border-app-accent outline-none transition-colors font-mono" />
-        <button onClick={add} className="px-3 py-1.5 text-xs bg-app-surface hover:bg-app-cardHover text-app-secondary hover:text-app-text border border-app-border rounded-lg transition-colors shrink-0">
+          className="flex-1 bg-surface text-xs text-ink px-3 py-1.5 rounded-lg border border-hairline focus:border-accent outline-none transition-colors font-mono" />
+        <button onClick={add} className="px-3 py-1.5 text-xs bg-surface hover:bg-card-2 text-ink-2 hover:text-ink border border-hairline rounded-lg transition-colors shrink-0">
           添加
         </button>
       </div>
@@ -198,18 +201,18 @@ function EnvEditor({ env, onChange }: {
     <div className="space-y-1.5">
       {Object.entries(env).map(([k, v]) => (
         <div key={k} className="flex items-center gap-2 text-xs font-mono">
-          <span className="px-2 py-1 bg-app-surface border border-app-border rounded text-app-accent shrink-0 max-w-[130px] truncate">{k}</span>
-          <span className="text-app-muted">=</span>
-          <span className="flex-1 px-2 py-1 bg-app-surface border border-app-border rounded text-app-secondary truncate">{v}</span>
-          <button onClick={() => remove(k)} className="text-app-muted hover:text-app-red transition-colors px-1">×</button>
+          <span className="px-2 py-1 bg-surface border border-hairline rounded text-accent shrink-0 max-w-[130px] truncate">{k}</span>
+          <span className="text-ink-3">=</span>
+          <span className="flex-1 px-2 py-1 bg-surface border border-hairline rounded text-ink-2 truncate">{v}</span>
+          <button onClick={() => remove(k)} className="text-ink-3 hover:text-red transition-colors px-1">×</button>
         </div>
       ))}
       <div className="flex gap-2 pt-1">
         <input value={key} onChange={(e) => setKey(e.target.value)} placeholder="变量名"
-          className="w-32 bg-app-surface text-xs text-app-text px-2.5 py-1.5 rounded-lg border border-app-border focus:border-app-accent outline-none font-mono transition-colors" />
+          className="w-32 bg-surface text-xs text-ink px-2.5 py-1.5 rounded-lg border border-hairline focus:border-accent outline-none font-mono transition-colors" />
         <input value={val} onChange={(e) => setVal(e.target.value)} onKeyDown={(e) => e.key === "Enter" && add()} placeholder="值"
-          className="flex-1 bg-app-surface text-xs text-app-text px-2.5 py-1.5 rounded-lg border border-app-border focus:border-app-accent outline-none font-mono transition-colors" />
-        <button onClick={add} className="px-3 py-1.5 text-xs bg-app-surface hover:bg-app-cardHover text-app-secondary hover:text-app-text border border-app-border rounded-lg transition-colors shrink-0">添加</button>
+          className="flex-1 bg-surface text-xs text-ink px-2.5 py-1.5 rounded-lg border border-hairline focus:border-accent outline-none font-mono transition-colors" />
+        <button onClick={add} className="px-3 py-1.5 text-xs bg-surface hover:bg-card-2 text-ink-2 hover:text-ink border border-hairline rounded-lg transition-colors shrink-0">添加</button>
       </div>
     </div>
   );
@@ -231,20 +234,20 @@ function JsonPreview({ settings, dirty }: { settings: ClaudeSettings; dirty: boo
   }
 
   return (
-    <div className="flex flex-col h-full bg-app-surface border-l border-app-border">
+    <div className="flex flex-col h-full bg-surface border-l border-hairline">
       {/* Header */}
-      <div className="flex items-center justify-between px-4 py-3 border-b border-app-border shrink-0">
+      <div className="flex items-center justify-between px-4 py-3 border-b border-hairline shrink-0">
         <div>
-          <div className="text-xs font-mono text-app-muted">~/.claude/settings.json</div>
+          <div className="text-xs font-mono text-ink-3">~/.claude/settings.json</div>
           {dirty && (
             <div className="flex items-center gap-1 mt-0.5">
-              <div className="w-1.5 h-1.5 rounded-full bg-yellow-400" />
-              <span className="text-[10px] text-yellow-400">未保存</span>
+              <div className="w-1.5 h-1.5 rounded-full bg-amber" />
+              <span className="text-[10px] text-amber">未保存</span>
             </div>
           )}
         </div>
         <button onClick={copy}
-          className="text-xs px-2.5 py-1 bg-app-card hover:bg-app-cardHover text-app-secondary hover:text-app-text border border-app-border rounded-lg transition-colors">
+          className="text-xs px-2.5 py-1 bg-card hover:bg-card-2 text-ink-2 hover:text-ink border border-hairline rounded-lg transition-colors">
           {copied ? "✓ 已复制" : "复制"}
         </button>
       </div>
@@ -252,15 +255,53 @@ function JsonPreview({ settings, dirty }: { settings: ClaudeSettings; dirty: boo
       {/* JSON body */}
       <div className="flex-1 overflow-y-auto p-4">
         {isEmpty ? (
-          <div className="text-xs text-app-muted italic">（所有设置均为默认值，无需写入）</div>
+          <div className="text-xs text-ink-3 italic">（所有设置均为默认值，无需写入）</div>
         ) : (
           <pre
-            className="text-xs font-mono text-app-secondary leading-relaxed whitespace-pre-wrap break-all"
+            className="text-xs font-mono text-ink-2 leading-relaxed whitespace-pre-wrap break-all"
             dangerouslySetInnerHTML={{ __html: highlighted }}
           />
         )}
       </div>
     </div>
+  );
+}
+
+// ─── Section nav ──────────────────────────────────────────────────────────────
+
+function SectionNav({ activeSection }: { activeSection: string }) {
+  return (
+    <nav
+      style={{
+        borderRight: "1px solid var(--hairline)",
+        padding: "22px 14px",
+        overflow: "auto",
+      }}
+    >
+      {SECTIONS.map(([id, label]) => (
+        <a
+          key={id}
+          href={`#${id}`}
+          onClick={(e) => {
+            e.preventDefault();
+            document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+          }}
+          style={{
+            display: "block",
+            padding: "8px 10px",
+            fontSize: 13,
+            borderRadius: 6,
+            color: activeSection === id ? "var(--ink)" : "var(--ink-2)",
+            background: activeSection === id ? "var(--card)" : "transparent",
+            fontWeight: activeSection === id ? 600 : 500,
+            marginBottom: 2,
+            textDecoration: "none",
+          }}
+        >
+          {label}
+        </a>
+      ))}
+    </nav>
   );
 }
 
@@ -272,6 +313,7 @@ export default function ClaudeSettingsPage() {
   const [savedJson, setSavedJson] = useState("{}");
   const [saving, setSaving] = useState(false);
   const [loaded, setLoaded] = useState(false);
+  const [activeSection, setActiveSection] = useState<string>("model");
 
   useEffect(() => {
     api.readClaudeSettings().then((v) => {
@@ -281,6 +323,24 @@ export default function ClaudeSettingsPage() {
       setLoaded(true);
     }).catch((e) => addToast(String(e), "error"));
   }, [addToast]);
+
+  useEffect(() => {
+    if (!loaded) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+        if (visible[0]) setActiveSection(visible[0].target.id);
+      },
+      { threshold: [0.4], rootMargin: "-100px 0px -50% 0px" },
+    );
+    SECTIONS.forEach(([id]) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+    return () => observer.disconnect();
+  }, [loaded]);
 
   const dirty = useMemo(
     () => JSON.stringify(cleanSettings(s), null, 2) !== savedJson,
@@ -293,11 +353,19 @@ export default function ClaudeSettingsPage() {
       const clean = cleanSettings(s);
       await api.writeClaudeSettings(clean);
       setSavedJson(JSON.stringify(clean, null, 2));
-      addToast("✓ 已保存到 ~/.claude/settings.json", "success");
+      addToast("已保存到 ~/.claude/settings.json", "success");
     } catch (e) {
       addToast(String(e), "error");
     } finally {
       setSaving(false);
+    }
+  }
+
+  function discard() {
+    try {
+      setS(JSON.parse(savedJson) || {});
+    } catch {
+      setS({});
     }
   }
 
@@ -309,231 +377,278 @@ export default function ClaudeSettingsPage() {
   const perm = s.permissions ?? {};
   const isKnownModel = s.model ? ALL_MODEL_IDS.includes(s.model) : false;
 
-  if (!loaded) return <div className="p-6 text-app-muted text-sm">加载中…</div>;
+  if (!loaded) {
+    return (
+      <div style={{ display: "flex", flexDirection: "column", height: "100%" }}>
+        <Topbar title="Claude 配置" crumb="~/.claude/settings.json · global" actions={null} />
+        <div className="p-6 text-ink-3 text-sm">加载中…</div>
+      </div>
+    );
+  }
 
   return (
-    <div className="flex h-full">
+    <div style={{ display: "flex", flexDirection: "column", height: "100%" }}>
+      <Topbar
+        title="Claude 配置"
+        crumb="~/.claude/settings.json · global"
+        actions={
+          <>
+            <Button variant="subtle" disabled={!dirty} onClick={discard}>
+              Discard
+            </Button>
+            <Button
+              variant="primary"
+              disabled={!dirty || saving}
+              onClick={save}
+            >
+              {saving ? "保存中…" : "Save changes"}
+            </Button>
+          </>
+        }
+      />
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "200px 1fr 300px",
+          flex: 1,
+          overflow: "hidden",
+        }}
+      >
+        <SectionNav activeSection={activeSection} />
 
-      {/* ── Left: settings ── */}
-      <div className="flex-1 overflow-y-auto min-w-0">
-        <div className="p-6 max-w-2xl space-y-8">
+        {/* Form panel (middle) */}
+        <div className="overflow-y-auto min-w-0">
+          <div className="p-6 max-w-2xl space-y-8">
 
-          {/* 模型 */}
-          <SectionCard title="模型" subtitle="Claude Code 使用的 AI 模型">
-            {MODELS.map((group) => (
-              <Row key={group.group}>
-                <div className="text-xs font-medium text-app-muted mb-2.5 flex items-center gap-2 flex-wrap">
-                  {group.group}
-                  <Cli cmd="claude --model <id>" />
-                  <Cli cmd="/model" />
-                </div>
-                <div className="space-y-1.5">
-                  {group.items.map((m) => {
-                    const active = s.model === m.id;
-                    return (
-                      <button key={m.id} onClick={() => up({ model: active ? undefined : m.id })}
-                        className={`flex items-center gap-3 w-full text-left px-3.5 py-2.5 rounded-xl border transition-colors ${active ? "border-app-accent bg-app-cardActive" : "border-app-border hover:border-app-accent/30 hover:bg-app-cardHover"}`}>
-                        <div className={`w-3 h-3 rounded-full border-2 shrink-0 transition-colors ${active ? "border-app-accent bg-app-accent" : "border-app-border"}`} />
-                        <div className="flex-1 min-w-0">
-                          <div className="flex items-center gap-2">
-                            <span className="text-sm font-medium text-app-text">{m.name}</span>
-                            <span className={`text-xs px-2 py-0.5 rounded-full border ${m.badgeColor}`}>{m.badge}</span>
-                          </div>
-                          <div className="text-xs text-app-muted mt-0.5">{m.desc}</div>
-                        </div>
-                        <span className="text-xs text-app-muted shrink-0">{m.ctx}</span>
-                      </button>
-                    );
-                  })}
-                </div>
-              </Row>
-            ))}
-            <Row>
-              <div className="flex items-center gap-2 mb-1.5 flex-wrap">
-                <span className="text-xs text-app-muted">自定义模型 ID</span>
-                {!isKnownModel && s.model && (
-                  <span className="text-xs px-2 py-0.5 rounded-full bg-app-accent/10 text-app-accent border border-app-accent/20">当前使用</span>
-                )}
-              </div>
-              <input value={isKnownModel ? "" : (s.model ?? "")} onChange={(e) => up({ model: e.target.value || undefined })}
-                placeholder="留空则使用上方选中的模型"
-                className="w-full bg-app-surface text-sm text-app-text px-3 py-2 rounded-lg border border-app-border focus:border-app-accent outline-none transition-colors font-mono" />
-            </Row>
-          </SectionCard>
-
-          {/* 推理与输出 */}
-          <SectionCard title="推理与输出" subtitle="控制 Claude 的推理深度和响应风格">
-            <SettingRow label="扩展思考（Always Thinking）" hint="默认开启深度推理，响应更准但更慢" cli="/config">
-              <Toggle checked={s.alwaysThinkingEnabled ?? false} onChange={(v) => up({ alwaysThinkingEnabled: v || undefined })} />
-            </SettingRow>
-            <SettingRow label="快速模式（Fast Mode）" hint="Opus 4.6 专属：2.5x 更快输出，消耗更多 token" cli="/config">
-              <Toggle checked={s.fastMode ?? false} onChange={(v) => up({ fastMode: v || undefined })} />
-            </SettingRow>
-            <Row>
-              <div className="flex items-baseline gap-2 flex-wrap mb-2">
-                <span className="text-sm text-app-text">推理强度（Opus 4.6）</span>
-                <Cli cmd="claude --effort <level>" />
-              </div>
-              <div className="text-xs text-app-muted mb-3">低强度更快便宜，高强度更准更慢</div>
-              <SegPill
-                options={[{ value: "low", label: "低" }, { value: "medium", label: "中" }, { value: "high", label: "高" }, { value: "highest", label: "最高" }]}
-                value={s.effortLevel ?? "medium"}
-                onChange={(v) => up({ effortLevel: v as EffortLevel })}
-              />
-            </Row>
-            <Row>
-              <div className="flex items-baseline gap-2 flex-wrap mb-3">
-                <span className="text-sm text-app-text">输出风格</span>
-                <Cli cmd="/config" />
-              </div>
-              <SegPill
-                options={[{ value: "default", label: "默认" }, { value: "Explanatory", label: "详细解释" }, { value: "Learning", label: "教学模式" }]}
-                value={s.outputStyle ?? "default"}
-                onChange={(v) => up({ outputStyle: v })}
-              />
-            </Row>
-          </SectionCard>
-
-          {/* 权限模式 */}
-          <SectionCard title="默认权限模式" subtitle="Claude Code 执行操作时的询问行为">
-            {MODES.map((m) => {
-              const active = (perm.defaultMode ?? "default") === m.value;
-              return (
-                <button key={m.value} onClick={() => upPerm({ defaultMode: m.value })}
-                  className={`flex items-center gap-4 w-full text-left px-5 py-3.5 transition-colors ${active ? "bg-app-cardActive" : "hover:bg-app-cardHover"}`}>
-                  <div className={`w-4 h-4 rounded-full border-2 shrink-0 flex items-center justify-center transition-colors ${active ? "border-app-accent" : "border-app-border"}`}>
-                    {active && <div className="w-2 h-2 rounded-full bg-app-accent" />}
+            {/* 模型 */}
+            <section id="model">
+              <SectionCard title="模型" subtitle="Claude Code 使用的 AI 模型">
+                {MODELS.map((group) => (
+                  <Row key={group.group}>
+                    <div className="text-xs font-medium text-ink-3 mb-2.5 flex items-center gap-2 flex-wrap">
+                      {group.group}
+                      <Cli cmd="claude --model <id>" />
+                      <Cli cmd="/model" />
+                    </div>
+                    <div className="space-y-1.5">
+                      {group.items.map((m) => {
+                        const active = s.model === m.id;
+                        return (
+                          <button key={m.id} onClick={() => up({ model: active ? undefined : m.id })}
+                            className={`flex items-center gap-3 w-full text-left px-3.5 py-2.5 rounded-xl border transition-colors ${active ? "border-accent bg-accent-soft" : "border-hairline hover:border-accent hover:bg-card-2"}`}>
+                            <div className={`w-3 h-3 rounded-full border-2 shrink-0 transition-colors ${active ? "border-accent bg-accent" : "border-hairline"}`} />
+                            <div className="flex-1 min-w-0">
+                              <div className="flex items-center gap-2">
+                                <span className="text-sm font-medium text-ink">{m.name}</span>
+                                <span className={`text-xs px-2 py-0.5 rounded-full border ${m.badgeColor}`}>{m.badge}</span>
+                              </div>
+                              <div className="text-xs text-ink-3 mt-0.5">{m.desc}</div>
+                            </div>
+                            <span className="text-xs text-ink-3 shrink-0">{m.ctx}</span>
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </Row>
+                ))}
+                <Row>
+                  <div className="flex items-center gap-2 mb-1.5 flex-wrap">
+                    <span className="text-xs text-ink-3">自定义模型 ID</span>
+                    {!isKnownModel && s.model && (
+                      <span className="text-xs px-2 py-0.5 rounded-full bg-accent-soft text-accent border border-hairline">当前使用</span>
+                    )}
                   </div>
-                  <div className="flex-1 min-w-0">
-                    <span className="text-sm text-app-text font-medium">{m.label}</span>
-                    <span className="text-xs text-app-muted ml-2">{m.desc}</span>
-                  </div>
-                  <div className="flex items-center gap-2 shrink-0">
-                    <Cli cmd={`--permission-mode ${m.value}`} />
-                    {m.danger && <span className="text-xs px-2 py-0.5 rounded-full bg-app-red/10 text-app-red border border-app-red/20">危险</span>}
-                  </div>
-                </button>
-              );
-            })}
-          </SectionCard>
+                  <input value={isKnownModel ? "" : (s.model ?? "")} onChange={(e) => up({ model: e.target.value || undefined })}
+                    placeholder="留空则使用上方选中的模型"
+                    className="w-full bg-surface text-sm text-ink px-3 py-2 rounded-lg border border-hairline focus:border-accent outline-none transition-colors font-mono" />
+                </Row>
+              </SectionCard>
+            </section>
 
-          {/* 工具权限 */}
-          <SectionCard title="工具权限规则" subtitle="精确控制哪些工具或命令可以自动运行、需询问或直接拒绝">
-            <Row>
-              <div className="text-xs text-app-muted mb-2">快速添加到拒绝列表</div>
-              <div className="flex flex-wrap gap-2">
-                {QUICK_DENY.map((q) => {
-                  const deny = perm.deny ?? [];
-                  const done = q.rules.every((r) => deny.includes(r));
+            {/* 推理与输出 */}
+            <section id="reasoning">
+              <SectionCard title="推理与输出" subtitle="控制 Claude 的推理深度和响应风格">
+                <SettingRow label="扩展思考（Always Thinking）" hint="默认开启深度推理，响应更准但更慢" cli="/config">
+                  <Switch checked={s.alwaysThinkingEnabled ?? false} onChange={(v) => up({ alwaysThinkingEnabled: v || undefined })} />
+                </SettingRow>
+                <SettingRow label="快速模式（Fast Mode）" hint="Opus 4.6 专属：2.5x 更快输出，消耗更多 token" cli="/config">
+                  <Switch checked={s.fastMode ?? false} onChange={(v) => up({ fastMode: v || undefined })} />
+                </SettingRow>
+                <Row>
+                  <div className="flex items-baseline gap-2 flex-wrap mb-2">
+                    <span className="text-sm text-ink">推理强度（Opus 4.6）</span>
+                    <Cli cmd="claude --effort <level>" />
+                  </div>
+                  <div className="text-xs text-ink-3 mb-3">低强度更快便宜，高强度更准更慢</div>
+                  <SegPill
+                    options={[{ value: "low", label: "低" }, { value: "medium", label: "中" }, { value: "high", label: "高" }, { value: "highest", label: "最高" }]}
+                    value={s.effortLevel ?? "medium"}
+                    onChange={(v) => up({ effortLevel: v as EffortLevel })}
+                  />
+                </Row>
+                <Row>
+                  <div className="flex items-baseline gap-2 flex-wrap mb-3">
+                    <span className="text-sm text-ink">输出风格</span>
+                    <Cli cmd="/config" />
+                  </div>
+                  <SegPill
+                    options={[{ value: "default", label: "默认" }, { value: "Explanatory", label: "详细解释" }, { value: "Learning", label: "教学模式" }]}
+                    value={s.outputStyle ?? "default"}
+                    onChange={(v) => up({ outputStyle: v })}
+                  />
+                </Row>
+              </SectionCard>
+            </section>
+
+            {/* 权限模式 */}
+            <section id="permissions">
+              <SectionCard title="默认权限模式" subtitle="Claude Code 执行操作时的询问行为">
+                {MODES.map((m) => {
+                  const active = (perm.defaultMode ?? "default") === m.value;
                   return (
-                    <button key={q.label} disabled={done}
-                      onClick={() => { const add = q.rules.filter((r) => !deny.includes(r)); if (add.length) upPerm({ deny: [...deny, ...add] }); }}
-                      className={`px-3 py-1 text-xs rounded-full border transition-colors ${done ? "border-app-green/30 bg-app-green/10 text-app-green cursor-default" : "border-app-border bg-app-surface hover:border-app-accent/40 hover:bg-app-cardHover text-app-secondary hover:text-app-text"}`}>
-                      {done ? "✓ " : "+ "}{q.label}
+                    <button key={m.value} onClick={() => upPerm({ defaultMode: m.value })}
+                      className={`flex items-center gap-4 w-full text-left px-5 py-3.5 transition-colors ${active ? "bg-accent-soft" : "hover:bg-card-2"}`}>
+                      <div className={`w-4 h-4 rounded-full border-2 shrink-0 flex items-center justify-center transition-colors ${active ? "border-accent" : "border-hairline"}`}>
+                        {active && <div className="w-2 h-2 rounded-full bg-accent" />}
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <span className="text-sm text-ink font-medium">{m.label}</span>
+                        <span className="text-xs text-ink-3 ml-2">{m.desc}</span>
+                      </div>
+                      <div className="flex items-center gap-2 shrink-0">
+                        <Cli cmd={`--permission-mode ${m.value}`} />
+                        {m.danger && <span className="text-xs px-2 py-0.5 rounded-full bg-red-soft text-red border border-hairline">危险</span>}
+                      </div>
                     </button>
                   );
                 })}
-              </div>
-            </Row>
-            <TagListEditor label="✓ 允许" hint="无需确认自动执行" cli="--allowedTools '...'" items={perm.allow ?? []} onChange={(v) => upPerm({ allow: v })} />
-            <TagListEditor label="? 询问" hint="每次弹出确认" items={perm.ask ?? []} onChange={(v) => upPerm({ ask: v })} />
-            <TagListEditor label="✕ 拒绝" hint="直接阻止" items={perm.deny ?? []} onChange={(v) => upPerm({ deny: v })} />
-          </SectionCard>
+              </SectionCard>
+            </section>
 
-          {/* 行为 */}
-          <SectionCard title="行为设置">
-            <SettingRow label="自动记忆（Auto Memory）" hint="把有用上下文保存到 .claude/memory/" cli="CLAUDE_CODE_DISABLE_AUTO_MEMORY=1">
-              <Toggle checked={s.autoMemoryEnabled ?? true} onChange={(v) => up({ autoMemoryEnabled: v })} />
-            </SettingRow>
-            <SettingRow label="内置 Git 工作流提示" hint="自动包含 commit / PR 最佳实践说明">
-              <Toggle checked={s.includeGitInstructions ?? true} onChange={(v) => up({ includeGitInstructions: v })} />
-            </SettingRow>
-            <SettingRow label="遵循 .gitignore（@ 选择器）" hint="@ 选文件时跳过 .gitignore 中的条目">
-              <Toggle checked={s.respectGitignore ?? true} onChange={(v) => up({ respectGitignore: v })} />
-            </SettingRow>
-            <Row>
-              <div className="flex items-center gap-2 mb-1 flex-wrap">
-                <span className="text-sm text-app-text">聊天记录保留天数</span>
-                <Cli cmd="cleanupPeriodDays" />
-              </div>
-              <div className="text-xs text-app-muted mb-2">0 = 永不清理，默认 30 天</div>
-              <input type="number" min={0} value={s.cleanupPeriodDays ?? 30}
-                onChange={(e) => up({ cleanupPeriodDays: parseInt(e.target.value) || 0 })}
-                className="w-24 bg-app-surface text-sm text-app-text px-3 py-1.5 rounded-lg border border-app-border focus:border-app-accent outline-none transition-colors" />
-            </Row>
-          </SectionCard>
+            {/* 工具权限 */}
+            <section id="tools">
+              <SectionCard title="工具权限规则" subtitle="精确控制哪些工具或命令可以自动运行、需询问或直接拒绝">
+                <Row>
+                  <div className="text-xs text-ink-3 mb-2">快速添加到拒绝列表</div>
+                  <div className="flex flex-wrap gap-2">
+                    {QUICK_DENY.map((q) => {
+                      const deny = perm.deny ?? [];
+                      const done = q.rules.every((r) => deny.includes(r));
+                      return (
+                        <button key={q.label} disabled={done}
+                          onClick={() => { const add = q.rules.filter((r) => !deny.includes(r)); if (add.length) upPerm({ deny: [...deny, ...add] }); }}
+                          className={`px-3 py-1 text-xs rounded-full border transition-colors ${done ? "border-hairline bg-green-soft text-green cursor-default" : "border-hairline bg-surface hover:border-accent hover:bg-card-2 text-ink-2 hover:text-ink"}`}>
+                          {done ? "✓ " : "+ "}{q.label}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </Row>
+                <TagListEditor label="✓ 允许" hint="无需确认自动执行" cli="--allowedTools '...'" items={perm.allow ?? []} onChange={(v) => upPerm({ allow: v })} />
+                <TagListEditor label="? 询问" hint="每次弹出确认" items={perm.ask ?? []} onChange={(v) => upPerm({ ask: v })} />
+                <TagListEditor label="✕ 拒绝" hint="直接阻止" items={perm.deny ?? []} onChange={(v) => upPerm({ deny: v })} />
+              </SectionCard>
+            </section>
 
-          {/* 界面 */}
-          <SectionCard title="界面设置">
-            <SettingRow label="显示响应耗时" hint='每次回复后显示"Cooked for 1m 6s"等信息'>
-              <Toggle checked={s.showTurnDuration ?? true} onChange={(v) => up({ showTurnDuration: v })} />
-            </SettingRow>
-            <SettingRow label="终端进度条" hint="在 Windows Terminal / iTerm2 等终端显示进度">
-              <Toggle checked={s.terminalProgressBarEnabled ?? true} onChange={(v) => up({ terminalProgressBarEnabled: v })} />
-            </SettingRow>
-            <SettingRow label="减少动画（无障碍）" hint="关闭 spinner / shimmer / flash 等 UI 动画">
-              <Toggle checked={s.prefersReducedMotion ?? false} onChange={(v) => up({ prefersReducedMotion: v || undefined })} />
-            </SettingRow>
-          </SectionCard>
+            {/* 行为 */}
+            <section id="behavior">
+              <SectionCard title="行为设置">
+                <SettingRow label="自动记忆（Auto Memory）" hint="把有用上下文保存到 .claude/memory/" cli="CLAUDE_CODE_DISABLE_AUTO_MEMORY=1">
+                  <Switch checked={s.autoMemoryEnabled ?? true} onChange={(v) => up({ autoMemoryEnabled: v })} />
+                </SettingRow>
+                <SettingRow label="内置 Git 工作流提示" hint="自动包含 commit / PR 最佳实践说明">
+                  <Switch checked={s.includeGitInstructions ?? true} onChange={(v) => up({ includeGitInstructions: v })} />
+                </SettingRow>
+                <SettingRow label="遵循 .gitignore（@ 选择器）" hint="@ 选文件时跳过 .gitignore 中的条目">
+                  <Switch checked={s.respectGitignore ?? true} onChange={(v) => up({ respectGitignore: v })} />
+                </SettingRow>
+                <Row>
+                  <div className="flex items-center gap-2 mb-1 flex-wrap">
+                    <span className="text-sm text-ink">聊天记录保留天数</span>
+                    <Cli cmd="cleanupPeriodDays" />
+                  </div>
+                  <div className="text-xs text-ink-3 mb-2">0 = 永不清理，默认 30 天</div>
+                  <input type="number" min={0} value={s.cleanupPeriodDays ?? 30}
+                    onChange={(e) => up({ cleanupPeriodDays: parseInt(e.target.value) || 0 })}
+                    className="w-24 bg-surface text-sm text-ink px-3 py-1.5 rounded-lg border border-hairline focus:border-accent outline-none transition-colors" />
+                </Row>
+              </SectionCard>
+            </section>
 
-          {/* 更新 */}
-          <SectionCard title="更新频道">
-            <Row>
-              <div className="flex items-baseline gap-2 mb-3 flex-wrap">
-                <span className="text-sm text-app-text">发布频道</span>
-                <Cli cmd="claude install stable" />
-                <Cli cmd="claude install latest" />
-              </div>
-              <SegPill
-                options={[{ value: "latest", label: "最新版（默认）" }, { value: "stable", label: "稳定版" }]}
-                value={s.autoUpdatesChannel ?? "latest"}
-                onChange={(v) => up({ autoUpdatesChannel: v as "latest" | "stable" })}
-              />
-              <div className="text-xs text-app-muted mt-2">稳定版约落后一周，自动跳过有重大问题的版本</div>
-            </Row>
-          </SectionCard>
+            {/* 界面 */}
+            <section id="display">
+              <SectionCard title="界面设置">
+                <SettingRow label="显示响应耗时" hint='每次回复后显示"Cooked for 1m 6s"等信息'>
+                  <Switch checked={s.showTurnDuration ?? true} onChange={(v) => up({ showTurnDuration: v })} />
+                </SettingRow>
+                <SettingRow label="终端进度条" hint="在 Windows Terminal / iTerm2 等终端显示进度">
+                  <Switch checked={s.terminalProgressBarEnabled ?? true} onChange={(v) => up({ terminalProgressBarEnabled: v })} />
+                </SettingRow>
+                <SettingRow label="减少动画（无障碍）" hint="关闭 spinner / shimmer / flash 等 UI 动画">
+                  <Switch checked={s.prefersReducedMotion ?? false} onChange={(v) => up({ prefersReducedMotion: v || undefined })} />
+                </SettingRow>
+              </SectionCard>
+            </section>
 
-          {/* 环境变量 */}
-          <SectionCard title="环境变量注入" subtitle="Claude Code 启动时自动注入，可配置代理、API 端点等">
-            <Row>
-              <div className="text-xs text-app-muted mb-3 flex flex-wrap gap-x-3 gap-y-1">
-                常用：<Cli cmd="ANTHROPIC_BASE_URL" /> <Cli cmd="HTTPS_PROXY" /> <Cli cmd="CLAUDE_CODE_ENABLE_TELEMETRY=1" />
-              </div>
-              <EnvEditor env={s.env ?? {}} onChange={(v) => up({ env: Object.keys(v).length ? v : undefined })} />
-            </Row>
-          </SectionCard>
+            {/* 更新 */}
+            <section id="updates">
+              <SectionCard title="更新频道">
+                <Row>
+                  <div className="flex items-baseline gap-2 mb-3 flex-wrap">
+                    <span className="text-sm text-ink">发布频道</span>
+                    <Cli cmd="claude install stable" />
+                    <Cli cmd="claude install latest" />
+                  </div>
+                  <SegPill
+                    options={[{ value: "latest", label: "最新版（默认）" }, { value: "stable", label: "稳定版" }]}
+                    value={s.autoUpdatesChannel ?? "latest"}
+                    onChange={(v) => up({ autoUpdatesChannel: v as "latest" | "stable" })}
+                  />
+                  <div className="text-xs text-ink-3 mt-2">稳定版约落后一周，自动跳过有重大问题的版本</div>
+                </Row>
+              </SectionCard>
+            </section>
 
-          {/* 归因 */}
-          <SectionCard title="Commit / PR 归因" subtitle="自动提交或创建 PR 时的署名文本，留空则不添加">
-            <Row>
-              <label className="block text-xs text-app-muted mb-1.5">Git Commit 署名</label>
-              <textarea rows={3} value={s.attribution?.commit ?? ""}
-                onChange={(e) => setS((p) => ({ ...p, attribution: { ...p.attribution, commit: e.target.value || undefined } }))}
-                placeholder={"🤖 Generated with Claude Code\n\nCo-Authored-By: Claude <noreply@anthropic.com>"}
-                className="w-full bg-app-surface text-xs text-app-text px-3 py-2.5 rounded-lg border border-app-border focus:border-app-accent outline-none transition-colors resize-none font-mono" />
-            </Row>
-            <Row>
-              <label className="block text-xs text-app-muted mb-1.5">Pull Request 署名</label>
-              <input value={s.attribution?.pr ?? ""}
-                onChange={(e) => setS((p) => ({ ...p, attribution: { ...p.attribution, pr: e.target.value || undefined } }))}
-                placeholder="🤖 Generated with Claude Code"
-                className="w-full bg-app-surface text-sm text-app-text px-3 py-2 rounded-lg border border-app-border focus:border-app-accent outline-none transition-colors" />
-            </Row>
-          </SectionCard>
+            {/* 环境变量 */}
+            <section id="env">
+              <SectionCard title="环境变量注入" subtitle="Claude Code 启动时自动注入，可配置代理、API 端点等">
+                <Row>
+                  <div className="text-xs text-ink-3 mb-3 flex flex-wrap gap-x-3 gap-y-1">
+                    常用：<Cli cmd="ANTHROPIC_BASE_URL" /> <Cli cmd="HTTPS_PROXY" /> <Cli cmd="CLAUDE_CODE_ENABLE_TELEMETRY=1" />
+                  </div>
+                  <EnvEditor env={s.env ?? {}} onChange={(v) => up({ env: Object.keys(v).length ? v : undefined })} />
+                </Row>
+              </SectionCard>
+            </section>
 
-          {/* 保存 */}
-          <div className="pb-8">
-            <button onClick={save} disabled={saving || !dirty}
-              className={`px-6 py-2.5 rounded-lg text-sm font-medium transition-colors ${dirty ? "bg-app-accent hover:bg-app-accentHover text-white" : "bg-app-surface border border-app-border text-app-muted cursor-default"} disabled:opacity-50`}>
-              {saving ? "保存中…" : dirty ? "保存到 ~/.claude/settings.json" : "无改动"}
-            </button>
+            {/* 归因 */}
+            <section id="attribution">
+              <SectionCard title="Commit / PR 归因" subtitle="自动提交或创建 PR 时的署名文本，留空则不添加">
+                <Row>
+                  <label className="block text-xs text-ink-3 mb-1.5">Git Commit 署名</label>
+                  <textarea rows={3} value={s.attribution?.commit ?? ""}
+                    onChange={(e) => setS((p) => ({ ...p, attribution: { ...p.attribution, commit: e.target.value || undefined } }))}
+                    placeholder={"Generated with Claude Code\n\nCo-Authored-By: Claude <noreply@anthropic.com>"}
+                    className="w-full bg-surface text-xs text-ink px-3 py-2.5 rounded-lg border border-hairline focus:border-accent outline-none transition-colors resize-none font-mono" />
+                </Row>
+                <Row>
+                  <label className="block text-xs text-ink-3 mb-1.5">Pull Request 署名</label>
+                  <input value={s.attribution?.pr ?? ""}
+                    onChange={(e) => setS((p) => ({ ...p, attribution: { ...p.attribution, pr: e.target.value || undefined } }))}
+                    placeholder="Generated with Claude Code"
+                    className="w-full bg-surface text-sm text-ink px-3 py-2 rounded-lg border border-hairline focus:border-accent outline-none transition-colors" />
+                </Row>
+              </SectionCard>
+            </section>
+
+            <div className="pb-8" />
           </div>
         </div>
-      </div>
 
-      {/* ── Right: JSON preview ── */}
-      <div className="w-[300px] shrink-0 overflow-hidden flex flex-col border-l border-app-border">
-        <JsonPreview settings={s} dirty={dirty} />
+        {/* JSON preview (right) */}
+        <div className="overflow-hidden flex flex-col">
+          <JsonPreview settings={s} dirty={dirty} />
+        </div>
       </div>
     </div>
   );
