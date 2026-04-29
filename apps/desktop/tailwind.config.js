@@ -4,6 +4,29 @@ export default {
   theme: {
     extend: {
       colors: {
+        // ── New token palette (CSS-var backed) ──
+        bg: "var(--bg)",
+        surface: "var(--surface)",
+        card: { DEFAULT: "var(--card)", 2: "var(--card-2)" },
+        hairline: { DEFAULT: "var(--hairline)", strong: "var(--hairline-strong)" },
+        ink: {
+          DEFAULT: "var(--ink)",
+          2: "var(--ink-2)",
+          3: "var(--ink-3)",
+          4: "var(--ink-4)",
+        },
+        accent: {
+          DEFAULT: "var(--accent)",
+          hover: "var(--accent-hover)",
+          soft: "var(--accent-soft)",
+          ink: "var(--accent-ink)",
+        },
+        green: { DEFAULT: "var(--green)", soft: "var(--green-soft)" },
+        amber: { DEFAULT: "var(--amber)", soft: "var(--amber-soft)" },
+        red: { DEFAULT: "var(--red)", soft: "var(--red-soft)" },
+        blue: { DEFAULT: "var(--blue)", soft: "var(--blue-soft)" },
+
+        // ── Legacy app.* palette (REMOVED IN PHASE 5) ──
         app: {
           bg: "#171717",
           surface: "#202022",
@@ -32,12 +55,23 @@ export default {
           red: "#ff453a",
         },
       },
-      borderRadius: {
-        control: "6px",
-        panel: "8px",
+      fontFamily: {
+        sans: ["Inter", "ui-sans-serif", "system-ui", "-apple-system", "sans-serif"],
+        mono: ["JetBrains Mono", "ui-monospace", "Menlo", "Consolas", "monospace"],
       },
       boxShadow: {
-        popover: "0 18px 48px rgba(0, 0, 0, 0.38)",
+        sm: "var(--shadow-sm)",
+        md: "var(--shadow-md)",
+        lg: "var(--shadow-lg)",
+        popover: "0 18px 48px rgba(0, 0, 0, 0.38)", // legacy
+      },
+      borderRadius: {
+        DEFAULT: "var(--radius)",
+        sm: "var(--radius-sm)",
+        lg: "var(--radius-lg)",
+        xl: "var(--radius-xl)",
+        control: "6px", // legacy
+        panel: "8px",   // legacy
       },
     },
   },
