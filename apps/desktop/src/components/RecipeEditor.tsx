@@ -60,7 +60,7 @@ export default function RecipeEditor() {
     setRefreshing(true);
     try {
       await loadAll();
-      addToast("✓ 已刷新库", "success");
+      addToast("已刷新库", "success");
     } finally {
       setRefreshing(false);
     }
@@ -144,10 +144,10 @@ export default function RecipeEditor() {
     };
     try {
       await save(recipe);
-      addToast("✓ 已保存", "success");
+      addToast("已保存", "success");
       if (activateAfter) {
         await api.activateRecipe(recipe.id, { kind: "global" });
-        addToast(`✓ 已激活 ${recipe.name}`, "success");
+        addToast(`已激活 ${recipe.name}`, "success");
       }
       navigate("/recipes");
     } catch (e) {
@@ -187,7 +187,7 @@ export default function RecipeEditor() {
       setLibrarySkills((s) => new Set(s).add(skill.id));
       // auto-tick
       setSkillIds((prev) => (prev.includes(skill.id) ? prev : [...prev, skill.id]));
-      addToast(`✓ 已下载 ${skill.name}`, "success");
+      addToast(`已下载 ${skill.name}`, "success");
     } catch (e) {
       addToast(`下载失败：${String(e)}`, "error");
     } finally {
@@ -207,7 +207,7 @@ export default function RecipeEditor() {
           ? prev
           : [...prev, { library_id: mcp.id, env: {} }],
       );
-      addToast(`✓ 已下载 ${mcp.name}`, "success");
+      addToast(`已下载 ${mcp.name}`, "success");
     } catch (e) {
       addToast(`下载失败：${String(e)}`, "error");
     } finally {
