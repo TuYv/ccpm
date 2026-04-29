@@ -1,156 +1,175 @@
-import { useEffect, useState } from "react";
-import { api } from "../api/claudePreset";
+import { useNavigate } from "react-router-dom";
+import { useInstalledStore, useMcpsStore } from "../stores";
 import type { Recipe, ScopeArg } from "../types/core";
-
-type WriteEntry = {
-  path: string;
-  kind: "create" | "overwrite" | "update";
-  preview?: string;
-};
-
-const SKILL_PREVIEW_LIMIT = 3;
-
-const kindLabel = (k: WriteEntry["kind"]) =>
-  k === "create"
-    ? { text: "新增", cls: "bg-app-green/15 text-app-green border-app-green/30" }
-    : k === "overwrite"
-      ? { text: "覆盖", cls: "bg-yellow-900/30 text-yellow-300 border-yellow-700/40" }
-      : { text: "更新字段", cls: "bg-app-accent/10 text-app-accent border-app-accent/20" };
+import { Banner, Button, SectionLabel } from "./ui";
 
 export default function ActivationDialog({
   recipe,
   scope,
   onCancel,
   onConfirm,
+  onCustomize,
 }: {
   recipe: Recipe;
   scope: ScopeArg;
   onCancel: () => void;
   onConfirm: () => void;
+  onCustomize?: () => void;
 }) {
-  const targetDir = scope.kind === "global" ? "~/.claude/" : scope.path;
-  const [writes, setWrites] = useState<WriteEntry[]>([]);
-  const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
+  const installed = useInstalledStore((s) => s.state);
+  const mcpsIndex = useMcpsStore((s) => s.index?.mcps ?? []);
 
-  useEffect(() => {
-    let cancelled = false;
-    setLoading(true);
-    (async () => {
-      const list: WriteEntry[] = [];
-      if (recipe.claude_md) {
-        try {
-          const [md] = await api.getLibraryClaudeMd(recipe.claude_md);
-          list.push({ path: `${targetDir}/CLAUDE.md`, kind: "overwrite", preview: md });
-        } catch {
-          list.push({ path: `${targetDir}/CLAUDE.md`, kind: "overwrite" });
-        }
-      }
-      const skills = recipe.skills ?? [];
-      const previewSkills = skills.slice(0, SKILL_PREVIEW_LIMIT);
-      for (const s of previewSkills) {
-        try {
-          const md = await api.getLibrarySkillMd(s);
-          list.push({
-            path: `${targetDir}/skills/${s}/SKILL.md`,
-            kind: "create",
-            preview: md,
-          });
-        } catch {
-          list.push({ path: `${targetDir}/skills/${s}/SKILL.md`, kind: "create" });
-        }
-      }
-      if (skills.length > SKILL_PREVIEW_LIMIT) {
-        list.push({
-          path: `${targetDir}/skills/… (+${skills.length - SKILL_PREVIEW_LIMIT} more)`,
-          kind: "create",
-        });
-      }
-      if ((recipe.mcps?.length ?? 0) > 0) {
-        list.push({
-          path: `${targetDir}/settings.json (mcpServers 字段合并)`,
-          kind: "update",
-        });
-      }
-      const overrideKeys = Object.keys(recipe.settings_override ?? {});
-      if (overrideKeys.length > 0) {
-        list.push({
-          path: `${targetDir}/settings.json (覆盖字段：${overrideKeys.join(", ")})`,
-          kind: "update",
-        });
-      }
-      if (!cancelled) {
-        setWrites(list);
-        setLoading(false);
-      }
-    })();
-    return () => {
-      cancelled = true;
-    };
-  }, [recipe, targetDir]);
+  const scopeKey = scope.kind === "global" ? null : scope.path;
+  const installedSkills: string[] = scopeKey
+    ? installed?.project_skills?.[scopeKey] ?? []
+    : installed?.global_skills ?? [];
+  const installedMcps: string[] = scopeKey
+    ? installed?.project_mcps?.[scopeKey] ?? []
+    : installed?.global_mcps ?? [];
+  const activeFiles: string[] = scopeKey
+    ? installed?.projects?.[scopeKey]?.files ?? []
+    : installed?.global?.files ?? [];
+
+  const recipeSkillIds = recipe.skills ?? [];
+  const recipeMcpIds = (recipe.mcps ?? []).map((m) => m.library_id);
+
+  const diffLines: { kind: "+" | "-" | "~"; path: string }[] = [];
+
+  for (const id of recipeSkillIds.filter((id) => !installedSkills.includes(id))) {
+    diffLines.push({ kind: "+", path: `~/.claude/skills/${id}/` });
+  }
+  for (const id of recipeMcpIds.filter((id) => !installedMcps.includes(id))) {
+    diffLines.push({ kind: "+", path: `~/.claude/mcps/${id}` });
+  }
+  const hasActive = scopeKey ? !!installed?.projects?.[scopeKey] : !!installed?.global;
+  if (recipe.claude_md && hasActive) {
+    diffLines.push({ kind: "~", path: "~/.claude/CLAUDE.md" });
+    diffLines.push({ kind: "~", path: "~/.claude/settings.json" });
+  }
+  const recipeFileBaseNames = new Set<string>([
+    ...(recipe.claude_md ? ["CLAUDE.md", "settings.json"] : []),
+  ]);
+  for (const f of activeFiles) {
+    const base = f.split("/").pop() ?? f;
+    if (!recipeFileBaseNames.has(base)) {
+      diffLines.push({ kind: "-", path: f });
+    }
+  }
+
+  const envWarningCount = recipeMcpIds
+    .map((id) => mcpsIndex.find((m) => m.id === id)?.required_env.length ?? 0)
+    .filter((n) => n > 0).length;
+
+  const scopeLabel =
+    scope.kind === "global" ? "全局 ~/.claude" : `项目 ${scope.path}`;
 
   return (
-    <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-      <div className="bg-app-card border border-app-border rounded-xl w-full max-w-md p-6 max-h-[85vh] overflow-y-auto">
-        <h2 className="text-base font-semibold text-app-text mb-1">
-          激活「{recipe.name}」
-        </h2>
-        <div className="text-xs text-app-muted mb-4">
-          目标 scope：{scope.kind === "global" ? "全局" : scope.path}
+    <div className="modal-shell" style={{ position: "fixed", inset: 0, zIndex: 50 }}>
+      <div className="modal" style={{ width: 560 }}>
+        <div className="modal-head">
+          <SectionLabel style={{ marginBottom: 8, display: "block" }}>
+            Activate recipe
+          </SectionLabel>
+          <h3
+            style={{
+              margin: 0,
+              fontSize: 20,
+              fontWeight: 600,
+              letterSpacing: "-0.02em",
+            }}
+          >
+            切换到{" "}
+            <span style={{ color: "var(--accent)" }}>{recipe.name}</span>?
+          </h3>
         </div>
-
-        <div className="bg-app-green/10 border border-app-green/30 rounded-lg px-3 py-2 mb-4 text-xs text-app-green">
-          ✓ 激活前自动备份当前 ~/.claude/，可在「备份」tab 一键回滚
-        </div>
-
-        <div className="bg-app-surface rounded-lg border border-app-border p-3 mb-4 space-y-2">
-          <div className="text-[10px] uppercase text-app-muted">
-            {loading ? "加载预览中…" : `将写入 ${writes.length} 个文件`}
-          </div>
-          {loading ? (
-            <div className="text-xs text-app-muted italic">加载预览中…</div>
-          ) : writes.length === 0 ? (
-            <div className="text-xs text-app-muted italic">空配方，无写入</div>
-          ) : (
-            writes.map((w) => {
-              const b = kindLabel(w.kind);
-              return (
-                <div key={w.path}>
-                  <div className="flex items-center gap-2 mb-1">
-                    <span
-                      className={`px-1.5 py-0.5 text-[9px] rounded border ${b.cls}`}
-                    >
-                      {b.text}
-                    </span>
-                    <code className="text-xs font-mono text-app-secondary truncate flex-1">
-                      {w.path}
-                    </code>
-                  </div>
-                  {w.preview && (
-                    <pre className="text-[10px] font-mono text-app-muted bg-app-bg rounded p-2 mt-1 max-h-24 overflow-hidden whitespace-pre-wrap">
-                      {w.preview.slice(0, 200)}
-                      {w.preview.length > 200 ? "…" : ""}
-                    </pre>
-                  )}
+        <div className="modal-body">
+          <p
+            style={{
+              fontSize: 13.5,
+              color: "var(--ink-2)",
+              lineHeight: 1.55,
+              margin: "0 0 14px",
+            }}
+          >
+            将替换 {scopeLabel} 的当前配置。原有文件会备份到{" "}
+            <span className="mono" style={{ fontSize: 12 }}>
+              ~/.claude/.ccpm/backups
+            </span>
+            。
+          </p>
+          <div
+            style={{
+              background: "var(--card-2)",
+              borderRadius: 10,
+              padding: "12px 14px",
+              display: "grid",
+              gap: 8,
+            }}
+          >
+            <SectionLabel>Will overwrite</SectionLabel>
+            <div
+              className="mono"
+              style={{ fontSize: 12, display: "grid", gap: 4 }}
+            >
+              {diffLines.slice(0, 8).map((line, i) => (
+                <div
+                  key={i}
+                  style={{ display: "flex", gap: 8, alignItems: "center" }}
+                >
+                  <span
+                    style={{
+                      color:
+                        line.kind === "-"
+                          ? "var(--red)"
+                          : line.kind === "+"
+                            ? "var(--green)"
+                            : "var(--amber)",
+                    }}
+                  >
+                    {line.kind}
+                  </span>
+                  <span>{line.path}</span>
                 </div>
-              );
-            })
+              ))}
+              {diffLines.length > 8 && (
+                <div style={{ color: "var(--ink-3)" }}>
+                  + 还有 {diffLines.length - 8} 项…
+                </div>
+              )}
+              {diffLines.length === 0 && (
+                <div style={{ color: "var(--ink-3)" }}>无文件变更</div>
+              )}
+            </div>
+          </div>
+          {envWarningCount > 0 && (
+            <div style={{ marginTop: 12 }}>
+              <Banner
+                tone="amber"
+                dot
+                onClick={() => {
+                  navigate("/mcp");
+                  onCancel();
+                }}
+                actions={null}
+              >
+                {envWarningCount} 个 MCP 需要环境变量，激活前请先在 MCP 页配置
+              </Banner>
+            </div>
           )}
         </div>
-
-        <div className="flex justify-end gap-2">
-          <button
-            onClick={onCancel}
-            className="px-4 py-1.5 text-xs bg-app-surface border border-app-border text-app-secondary rounded-lg"
-          >
+        <div className="modal-foot">
+          <Button variant="subtle" onClick={onCancel}>
             取消
-          </button>
-          <button
-            onClick={onConfirm}
-            disabled={loading || writes.length === 0}
-            className="px-4 py-1.5 text-xs bg-app-accent text-white rounded-lg hover:bg-app-accentHover disabled:opacity-40"
-          >
-            确认激活
-          </button>
+          </Button>
+          {onCustomize && (
+            <Button variant="subtle" onClick={onCustomize}>
+              Customize files…
+            </Button>
+          )}
+          <Button variant="primary" onClick={onConfirm}>
+            激活
+          </Button>
         </div>
       </div>
     </div>
