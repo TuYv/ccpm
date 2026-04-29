@@ -115,13 +115,13 @@ function ScopeSelector({ scope, onChange }: Props) {
 
   return (
     <div className="flex items-center gap-2">
-      <div className="flex gap-1 bg-app-bg rounded-lg p-1 border border-app-border">
+      <div className="flex gap-1 bg-bg rounded-lg p-1 border border-hairline">
         <button
           onClick={() => onChange({ kind: "global" })}
           className={`px-3 py-1 rounded-md text-sm transition-colors ${
             isGlobal
-              ? "bg-app-accent text-white font-medium"
-              : "text-app-secondary hover:text-app-text"
+              ? "bg-accent text-white font-medium"
+              : "text-ink-2 hover:text-ink"
           }`}
         >
           全局
@@ -133,8 +133,8 @@ function ScopeSelector({ scope, onChange }: Props) {
           }}
           className={`px-3 py-1 rounded-md text-sm transition-colors ${
             !isGlobal
-              ? "bg-app-accent text-white font-medium"
-              : "text-app-secondary hover:text-app-text"
+              ? "bg-accent text-white font-medium"
+              : "text-ink-2 hover:text-ink"
           }`}
         >
           项目
@@ -147,46 +147,46 @@ function ScopeSelector({ scope, onChange }: Props) {
             <button
               ref={triggerRef}
               onClick={() => setOpen((v) => !v)}
-              className="px-3 py-1.5 text-xs bg-app-card hover:bg-app-cardHover text-app-secondary hover:text-app-text border border-app-border rounded-lg transition-colors max-w-72 truncate flex items-center gap-1.5"
+              className="px-3 py-1.5 text-xs bg-card hover:bg-card-2 text-ink-2 hover:text-ink border border-hairline rounded-lg transition-colors max-w-72 truncate flex items-center gap-1.5"
               title={scope.kind === "project" ? scope.path : ""}
             >
               <span className="truncate">
                 {scope.kind === "project" && scope.path ? scope.path : "选择项目…"}
               </span>
-              <span className="text-app-muted text-[10px]">▾</span>
+              <span className="text-ink-3 text-[10px]">▾</span>
             </button>
           ) : (
-            <span className="text-xs text-app-muted italic">仅桌面端可选</span>
+            <span className="text-xs text-ink-3 italic">仅桌面端可选</span>
           )}
 
           {open_ && canPickDir && (
             <div
               ref={popoverRef}
-              className="fixed w-[420px] max-h-96 overflow-y-auto bg-app-card border border-app-border rounded-xl shadow-2xl z-50"
+              className="fixed w-[420px] max-h-96 overflow-y-auto bg-card border border-hairline rounded-xl shadow-2xl z-50"
               style={{
                 top: coords.placement === "down" ? coords.top : undefined,
                 bottom: coords.placement === "up" ? window.innerHeight - coords.top : undefined,
                 left: coords.left,
               }}
             >
-              <div className="px-4 py-2.5 border-b border-app-border flex items-center justify-between">
-                <span className="text-[10px] uppercase text-app-muted tracking-wide">
+              <div className="px-4 py-2.5 border-b border-hairline flex items-center justify-between">
+                <span className="text-[10px] uppercase text-ink-3 tracking-wide">
                   Claude Code 最近项目
                 </span>
                 <button
                   onClick={pickDir}
-                  className="text-xs px-2 py-0.5 bg-app-surface border border-app-border rounded hover:border-app-accent/40 hover:text-app-text text-app-secondary transition-colors"
+                  className="text-xs px-2 py-0.5 bg-surface border border-hairline rounded hover:border-accent/40 hover:text-ink text-ink-2 transition-colors"
                 >
                   浏览…
                 </button>
               </div>
 
               {loading && (
-                <div className="px-4 py-6 text-center text-xs text-app-muted">加载中…</div>
+                <div className="px-4 py-6 text-center text-xs text-ink-3">加载中…</div>
               )}
 
               {!loading && recents.length === 0 && (
-                <div className="px-4 py-6 text-center text-xs text-app-muted">
+                <div className="px-4 py-6 text-center text-xs text-ink-3">
                   无历史项目，点上方「浏览…」选择目录
                 </div>
               )}
@@ -200,15 +200,15 @@ function ScopeSelector({ scope, onChange }: Props) {
                         key={p.path}
                         onClick={() => pickRecent(p)}
                         className={`w-full text-left px-4 py-2 transition-colors ${
-                          active ? "bg-app-cardActive" : "hover:bg-app-cardHover"
+                          active ? "bg-accent-soft" : "hover:bg-card-2"
                         }`}
                       >
-                        <div className="text-sm text-app-text font-medium truncate">{p.name}</div>
+                        <div className="text-sm text-ink font-medium truncate">{p.name}</div>
                         <div className="flex items-center justify-between gap-2 mt-0.5">
-                          <span className="text-[10px] text-app-muted font-mono truncate">
+                          <span className="text-[10px] text-ink-3 font-mono truncate">
                             {p.path}
                           </span>
-                          <span className="text-[10px] text-app-muted shrink-0">
+                          <span className="text-[10px] text-ink-3 shrink-0">
                             {formatRelative(p.last_used)}
                           </span>
                         </div>
