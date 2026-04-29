@@ -1,5 +1,6 @@
 import { useState } from "react";
 import type { PresetManifest, ScopeArg } from "../types/core";
+import { Button, SectionLabel, TextInput } from "./ui";
 
 interface Selection {
   files: { includeAll: boolean };
@@ -39,55 +40,62 @@ export default function SelectiveInstallModal({
     (manifest.mcps?.length ?? 0) === 0;
 
   return (
-    <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-      <div className="bg-app-bg border border-app-border rounded-xl w-full max-w-md max-h-[80vh] overflow-hidden flex flex-col">
-        <div className="px-5 py-4 border-b border-app-border">
-          <div className="text-sm font-semibold text-app-text">选择性安装 — {manifest.name}</div>
-          <div className="text-xs text-app-muted mt-1">
+    <div className="modal-shell" style={{ position: "fixed", inset: 0, zIndex: 50 }}>
+      <div
+        className="modal"
+        style={{ width: 720, maxHeight: "90vh", display: "flex", flexDirection: "column" }}
+      >
+        <div className="modal-head">
+          <SectionLabel style={{ display: "block", marginBottom: 6 }}>Selective install</SectionLabel>
+          <h3 style={{ margin: 0, fontSize: 18, fontWeight: 600 }}>{manifest.name}</h3>
+          <div className="text-xs text-ink-3" style={{ marginTop: 6 }}>
             目标：{scope.kind === "global" ? "全局 ~/.claude/" : `项目 ${scope.path}`}
           </div>
         </div>
 
-        <div className="flex-1 overflow-y-auto p-5 space-y-5">
+        <div className="modal-body" style={{ flex: 1, overflow: "auto" }}>
           {isEmpty ? (
-            <div className="text-center text-app-muted text-sm py-8">
+            <div className="text-center text-ink-3 text-sm" style={{ padding: "32px 0" }}>
               此预设无可选内容
             </div>
           ) : (
-            <>
+            <div className="space-y-5">
               {Object.keys(manifest.files).length > 0 && (
                 <div>
-                  <div className="text-xs text-app-secondary mb-2">文件</div>
-                  <label className="flex items-center gap-2 cursor-pointer">
-                    <input
-                      type="checkbox"
-                      checked={files.includeAll}
-                      onChange={(e) => setFiles({ includeAll: e.target.checked })}
-                      className="accent-app-accent"
-                    />
-                    <span className="text-xs text-app-text">
-                      包含全部文件 ({Object.keys(manifest.files).length})
-                    </span>
-                  </label>
-                  <div className="text-[10px] text-app-muted mt-1 ml-6">
-                    v1 仅支持「全部」或「不安装」文件；选择性按 skill / MCP 进行
+                  <SectionLabel style={{ display: "block", marginBottom: 8 }}>Files</SectionLabel>
+                  <div
+                    className="bg-card-2 rounded-control"
+                    style={{ padding: "10px 12px" }}
+                  >
+                    <label className="flex items-center gap-2 cursor-pointer">
+                      <input
+                        type="checkbox"
+                        checked={files.includeAll}
+                        onChange={(e) => setFiles({ includeAll: e.target.checked })}
+                      />
+                      <span className="text-xs text-ink font-mono">
+                        包含全部文件 ({Object.keys(manifest.files).length})
+                      </span>
+                    </label>
+                    <div className="text-[10px] text-ink-3" style={{ marginTop: 6, marginLeft: 24 }}>
+                      v1 仅支持「全部」或「不安装」文件；选择性按 skill / MCP 进行
+                    </div>
                   </div>
                 </div>
               )}
 
               {(manifest.skills ?? []).length > 0 && (
                 <div>
-                  <div className="text-xs text-app-secondary mb-2">Skills</div>
-                  <div className="space-y-1.5">
+                  <SectionLabel style={{ display: "block", marginBottom: 8 }}>Skills</SectionLabel>
+                  <div>
                     {(manifest.skills ?? []).map((id) => (
-                      <label key={id} className="flex items-center gap-2 cursor-pointer">
+                      <label key={id} className="row" style={{ cursor: "pointer" }}>
                         <input
                           type="checkbox"
                           checked={skills[id] ?? false}
                           onChange={(e) => setSkills((p) => ({ ...p, [id]: e.target.checked }))}
-                          className="accent-app-accent"
                         />
-                        <span className="text-xs text-app-text">{id}</span>
+                        <span className="name" style={{ marginLeft: 8 }}>{id}</span>
                       </label>
                     ))}
                   </div>
@@ -96,13 +104,13 @@ export default function SelectiveInstallModal({
 
               {(manifest.mcps ?? []).length > 0 && (
                 <div>
-                  <div className="text-xs text-app-secondary mb-2">MCPs</div>
-                  <div className="space-y-3">
+                  <SectionLabel style={{ display: "block", marginBottom: 8 }}>MCPs</SectionLabel>
+                  <div>
                     {(manifest.mcps ?? []).map((m) => {
                       const state = mcps[m.ref];
                       return (
-                        <div key={m.ref} className="space-y-2">
-                          <label className="flex items-center gap-2 cursor-pointer">
+                        <div key={m.ref} style={{ marginBottom: 8 }}>
+                          <label className="row" style={{ cursor: "pointer" }}>
                             <input
                               type="checkbox"
                               checked={state.selected}
@@ -112,55 +120,54 @@ export default function SelectiveInstallModal({
                                   [m.ref]: { ...p[m.ref], selected: e.target.checked },
                                 }))
                               }
-                              className="accent-app-accent"
                             />
-                            <span className="text-xs text-app-text">{m.ref}</span>
+                            <span className="name" style={{ marginLeft: 8 }}>{m.ref}</span>
                           </label>
-                          {state.selected &&
-                            (m.required_env ?? []).map((k) => (
-                              <div key={k} className="flex gap-2 ml-6">
-                                <span className="text-[10px] font-mono text-app-muted w-28 shrink-0 self-center">
-                                  {k}
-                                </span>
-                                <input
-                                  value={state.env[k] ?? ""}
-                                  onChange={(e) =>
-                                    setMcps((p) => ({
-                                      ...p,
-                                      [m.ref]: {
-                                        ...p[m.ref],
-                                        env: { ...p[m.ref].env, [k]: e.target.value },
-                                      },
-                                    }))
-                                  }
-                                  className="flex-1 bg-app-surface text-[11px] text-app-text px-2 py-1 rounded border border-app-border focus:border-app-accent outline-none font-mono"
-                                />
-                              </div>
-                            ))}
+                          {state.selected && (m.required_env ?? []).length > 0 && (
+                            <div style={{ marginTop: 8, marginLeft: 24, display: "flex", flexDirection: "column", gap: 6 }}>
+                              {(m.required_env ?? []).map((k) => (
+                                <div key={k} className="flex gap-2 items-center">
+                                  <span className="text-[10px] font-mono text-ink-3" style={{ width: 120, flexShrink: 0 }}>
+                                    {k}
+                                  </span>
+                                  <TextInput
+                                    value={state.env[k] ?? ""}
+                                    onChange={(e) =>
+                                      setMcps((p) => ({
+                                        ...p,
+                                        [m.ref]: {
+                                          ...p[m.ref],
+                                          env: { ...p[m.ref].env, [k]: e.target.value },
+                                        },
+                                      }))
+                                    }
+                                    style={{ flex: 1, fontFamily: "var(--font-mono)", fontSize: 12 }}
+                                  />
+                                </div>
+                              ))}
+                            </div>
+                          )}
                         </div>
                       );
                     })}
                   </div>
                 </div>
               )}
-            </>
+            </div>
           )}
         </div>
 
-        <div className="px-5 py-4 border-t border-app-border flex justify-end gap-2">
-          <button
-            onClick={onCancel}
-            className="px-4 py-1.5 text-xs bg-app-surface border border-app-border rounded-lg text-app-secondary hover:bg-app-cardHover transition-colors"
-          >
+        <div className="modal-foot">
+          <Button variant="subtle" onClick={onCancel}>
             取消
-          </button>
-          <button
+          </Button>
+          <Button
+            variant="primary"
             onClick={() => onConfirm({ files, skills, mcps })}
             disabled={isEmpty}
-            className="px-4 py-1.5 text-xs bg-app-accent rounded-lg text-white hover:bg-app-accentHover disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
           >
-            确认安装
-          </button>
+            安装
+          </Button>
         </div>
       </div>
     </div>
