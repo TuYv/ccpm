@@ -62,6 +62,8 @@ interface SkillsStore {
   loadInstalled: (scope: ScopeArg) => Promise<void>;
   install: (skillId: string, scope: ScopeArg) => Promise<void>;
   uninstall: (skillId: string, scope: ScopeArg) => Promise<void>;
+  focusId: string | null;
+  setFocusId: (id: string | null) => void;
 }
 
 interface McpsStore {
@@ -77,6 +79,8 @@ interface McpsStore {
     env: Record<string, string>,
   ) => Promise<void>;
   uninstall: (mcpId: string, scope: ScopeArg) => Promise<void>;
+  focusId: string | null;
+  setFocusId: (id: string | null) => void;
 }
 
 interface UiStore {
@@ -202,6 +206,8 @@ export const useSkillsStore = create<SkillsStore>((set, get) => ({
   loading: false,
   error: null,
   installed: {},
+  focusId: null,
+  setFocusId: (id) => set({ focusId: id }),
   fetchIndex: async (force = false) => {
     set({ loading: true, error: null });
     try {
@@ -234,6 +240,8 @@ export const useMcpsStore = create<McpsStore>((set, get) => ({
   loading: false,
   error: null,
   installed: {},
+  focusId: null,
+  setFocusId: (id) => set({ focusId: id }),
   fetchIndex: async (force = false) => {
     set({ loading: true, error: null });
     try {
