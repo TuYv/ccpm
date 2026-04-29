@@ -1,13 +1,23 @@
+// src/components/ui/index.ts
 export { Avatar } from "./Avatar";
 export { Badge } from "./Badge";
+export { Banner } from "./Banner";
+export type { BannerTone } from "./Banner";
 export { Button } from "./Button";
 export { Card } from "./Card";
+export { Chip } from "./Chip";
+export type { ChipTone } from "./Chip";
 export { EmptyState } from "./EmptyState";
 export { Field, SelectInput, TextArea, TextInput } from "./Field";
+export { Glyph } from "./Glyph";
 export { IconButton } from "./IconButton";
 export { ListRow } from "./ListRow";
 export { Panel } from "./Panel";
-export { SegmentedTabs } from "./SegmentedTabs";
+export { SectionLabel } from "./SectionLabel";
 export { SidebarItem } from "./SidebarItem";
 export { StatusDot } from "./StatusDot";
+export { Switch } from "./Switch";
+export { Tag } from "./Tag";
+// Temporarily kept until Phase 5 consumer migration:
+export { SegmentedTabs } from "./SegmentedTabs";
 export { Toolbar } from "./Toolbar";
