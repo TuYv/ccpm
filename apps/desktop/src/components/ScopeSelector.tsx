@@ -1,6 +1,7 @@
 import { open } from "@tauri-apps/plugin-dialog";
 import { useEffect, useRef, useState } from "react";
 import { api, isTauriApp } from "../api/claudePreset";
+import { useScopeStore } from "../stores/scope";
 import type { ScopeArg } from "../types/core";
 
 interface RecentProject {
@@ -30,7 +31,15 @@ function formatRelative(iso: string | null): string {
 const DROPDOWN_MAX_HEIGHT = 384; // matches max-h-96
 const DROPDOWN_WIDTH = 420;
 
-export default function ScopeSelector({ scope, onChange }: Props) {
+export { ScopeSelector };
+
+export function GlobalScopeSelector() {
+  const scope = useScopeStore((s) => s.scope);
+  const setScope = useScopeStore((s) => s.setScope);
+  return <ScopeSelector scope={scope} onChange={setScope} />;
+}
+
+function ScopeSelector({ scope, onChange }: Props) {
   const isGlobal = scope.kind === "global";
   const canPickDir = isTauriApp();
   const [open_, setOpen] = useState(false);
@@ -215,3 +224,5 @@ export default function ScopeSelector({ scope, onChange }: Props) {
     </div>
   );
 }
+
+export default ScopeSelector;
