@@ -11,8 +11,8 @@ export function Card({ children, active, onClick, className = "" }: CardProps) {
       onClick={onClick}
       className={`rounded-xl border transition-all duration-150 ${
         active
-          ? "bg-app-cardActive border-app-accent"
-          : "bg-app-card border-app-border hover:bg-app-cardHover hover:border-app-border/70"
+          ? "bg-accent-soft border-accent"
+          : "bg-card border-hairline hover:bg-card-2 hover:border-hairline/70"
       } ${onClick ? "cursor-pointer" : ""} ${className}`}
     >
       {children}

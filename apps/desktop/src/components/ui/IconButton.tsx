@@ -14,8 +14,8 @@ export function IconButton({ icon, onClick, title, active, disabled }: IconButto
       disabled={disabled}
       className={`flex h-8 w-8 items-center justify-center rounded-control border border-transparent transition-colors disabled:cursor-not-allowed disabled:opacity-40 ${
         active
-          ? "bg-app-accent text-white"
-          : "text-app-secondary hover:border-app-border hover:bg-app-rowHover hover:text-app-text"
+          ? "bg-accent text-white"
+          : "text-ink-2 hover:border-hairline hover:bg-card-2 hover:text-ink"
       }`}
     >
       {icon}

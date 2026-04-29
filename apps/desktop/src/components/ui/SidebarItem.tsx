@@ -19,8 +19,8 @@ export function SidebarItem({
       className={({ isActive }) =>
         `flex h-8 items-center gap-2 rounded-control px-2.5 text-sm transition-colors ${
           isActive
-            ? "bg-app-accent text-white"
-            : "text-app-secondary hover:bg-app-rowHover hover:text-app-text"
+            ? "bg-accent text-white"
+            : "text-ink-2 hover:bg-card-2 hover:text-ink"
         }`
       }
     >

@@ -1,11 +1,11 @@
 type StatusTone = "neutral" | "success" | "warning" | "danger" | "info";
 
 const toneClass: Record<StatusTone, string> = {
-  neutral: "bg-app-muted",
-  success: "bg-app-green",
-  warning: "bg-app-orange",
-  danger: "bg-app-red",
-  info: "bg-app-accent",
+  neutral: "bg-ink-3",
+  success: "bg-green",
+  warning: "bg-amber",
+  danger: "bg-red",
+  info: "bg-accent",
 };
 
 export function StatusDot({ tone = "neutral" }: { tone?: StatusTone }) {

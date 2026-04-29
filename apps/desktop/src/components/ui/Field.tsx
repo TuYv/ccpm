@@ -13,12 +13,12 @@ export function Field({
 }) {
   return (
     <label className="block space-y-1.5">
-      {label && <span className="block text-xs font-medium text-app-secondary">{label}</span>}
+      {label && <span className="block text-xs font-medium text-ink-2">{label}</span>}
       {children}
       {error ? (
-        <span className="block text-[11px] text-app-red">{error}</span>
+        <span className="block text-[11px] text-red">{error}</span>
       ) : helper ? (
-        <span className="block text-[11px] text-app-muted">{helper}</span>
+        <span className="block text-[11px] text-ink-3">{helper}</span>
       ) : null}
     </label>
   );
@@ -27,7 +27,7 @@ export function Field({
 export function TextInput({ className = "", ...props }: InputHTMLAttributes<HTMLInputElement>) {
   return (
     <input
-      className={`w-full rounded-control border border-app-border bg-app-surface px-3 py-1.5 text-sm text-app-text outline-none transition-colors placeholder:text-app-muted focus:border-app-focus ${className}`}
+      className={`w-full rounded-control border border-hairline bg-surface px-3 py-1.5 text-sm text-ink outline-none transition-colors placeholder:text-ink-3 focus:border-accent ${className}`}
       {...props}
     />
   );
@@ -36,7 +36,7 @@ export function TextInput({ className = "", ...props }: InputHTMLAttributes<HTML
 export function TextArea({ className = "", ...props }: TextareaHTMLAttributes<HTMLTextAreaElement>) {
   return (
     <textarea
-      className={`w-full rounded-control border border-app-border bg-app-surface px-3 py-2 text-sm text-app-text outline-none transition-colors placeholder:text-app-muted focus:border-app-focus ${className}`}
+      className={`w-full rounded-control border border-hairline bg-surface px-3 py-2 text-sm text-ink outline-none transition-colors placeholder:text-ink-3 focus:border-accent ${className}`}
       {...props}
     />
   );
@@ -45,7 +45,7 @@ export function TextArea({ className = "", ...props }: TextareaHTMLAttributes<HT
 export function SelectInput({ className = "", ...props }: SelectHTMLAttributes<HTMLSelectElement>) {
   return (
     <select
-      className={`w-full rounded-control border border-app-border bg-app-surface px-3 py-1.5 text-sm text-app-text outline-none transition-colors focus:border-app-focus ${className}`}
+      className={`w-full rounded-control border border-hairline bg-surface px-3 py-1.5 text-sm text-ink outline-none transition-colors focus:border-accent ${className}`}
       {...props}
     />
   );
