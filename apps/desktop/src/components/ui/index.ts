@@ -18,6 +18,3 @@ export { SidebarItem } from "./SidebarItem";
 export { StatusDot } from "./StatusDot";
 export { Switch } from "./Switch";
 export { Tag } from "./Tag";
-// Temporarily kept until Phase 5 consumer migration:
-export { SegmentedTabs } from "./SegmentedTabs";
-export { Toolbar } from "./Toolbar";
