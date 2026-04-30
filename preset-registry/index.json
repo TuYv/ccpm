@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-04-30T11:54:23.466Z",
+  "updated_at": "2026-04-30T14:25:27.307Z",
   "presets": [
     {
       "id": "code-review",
@@ -109,8 +109,8 @@
         "branch": "develop",
         "stars": 49621,
         "language": "TypeScript",
-        "pushed_at": "2026-04-30T08:43:25Z",
-        "discovered_at": "2026-04-30T11:54:23.100Z",
+        "pushed_at": "2026-04-30T14:06:33Z",
+        "discovered_at": "2026-04-30T14:25:26.647Z",
         "score": 0.936968
       }
     },
@@ -140,7 +140,7 @@
         "stars": 36074,
         "language": "TypeScript",
         "pushed_at": "2026-04-15T18:50:11Z",
-        "discovered_at": "2026-04-30T11:54:22.526Z",
+        "discovered_at": "2026-04-30T14:25:25.646Z",
         "score": 0.828592
       }
     },
@@ -170,11 +170,11 @@
         "homepage": "https://surrealdb.com",
         "path": "surrealism/runtime/CLAUDE.md",
         "branch": "main",
-        "stars": 31976,
+        "stars": 31978,
         "language": "Rust",
         "pushed_at": "2026-04-29T14:14:29Z",
-        "discovered_at": "2026-04-30T11:54:23.346Z",
-        "score": 0.795808
+        "discovered_at": "2026-04-30T14:25:26.980Z",
+        "score": 0.795824
       }
     },
     {
@@ -200,11 +200,11 @@
         "homepage": "https://nanoclaw.dev",
         "path": "groups/main/CLAUDE.md",
         "branch": "main",
-        "stars": 28410,
+        "stars": 28415,
         "language": "TypeScript",
-        "pushed_at": "2026-04-30T11:33:29Z",
-        "discovered_at": "2026-04-30T11:54:23.207Z",
-        "score": 0.76728
+        "pushed_at": "2026-04-30T14:13:58Z",
+        "discovered_at": "2026-04-30T14:25:26.827Z",
+        "score": 0.76732
       }
     },
     {
@@ -233,11 +233,11 @@
         "homepage": "https://obfuscator.io",
         "path": "CLAUDE.md",
         "branch": "master",
-        "stars": 16005,
+        "stars": 16004,
         "language": "TypeScript",
         "pushed_at": "2026-04-27T08:18:30Z",
-        "discovered_at": "2026-04-30T11:54:22.642Z",
-        "score": 0.66804
+        "discovered_at": "2026-04-30T14:25:25.810Z",
+        "score": 0.668032
       }
     },
     {
@@ -324,11 +324,11 @@
         "homepage": "https://canopynetwork.org",
         "path": "cmd/rpc/web/wallet/CLAUDE.md",
         "branch": "main",
-        "stars": 11021,
+        "stars": 11024,
         "language": "Go",
         "pushed_at": "2026-04-28T23:55:11Z",
-        "discovered_at": "2026-04-30T11:54:23.449Z",
-        "score": 0.6281680000000001
+        "discovered_at": "2026-04-30T14:25:27.149Z",
+        "score": 0.628192
       }
     },
     {
@@ -359,8 +359,8 @@
         "branch": "develop",
         "stars": 7435,
         "language": "Java",
-        "pushed_at": "2026-04-30T10:09:03Z",
-        "discovered_at": "2026-04-30T11:54:22.727Z",
+        "pushed_at": "2026-04-30T14:12:06Z",
+        "discovered_at": "2026-04-30T14:25:25.972Z",
         "score": 0.59948
       }
     },
@@ -801,7 +801,7 @@
         "CLAUDE.md"
       ],
       "version": "1.0.0",
-      "tested_on": "2026-04-28",
+      "tested_on": "2026-04-30",
       "author": "debugtheworldbot",
       "source": {
         "repo": "debugtheworldbot/keyStats",
@@ -809,11 +809,11 @@
         "homepage": "https://keystats.vercel.app",
         "path": "CLAUDE.md",
         "branch": "main",
-        "stars": 1272,
+        "stars": 1276,
         "language": "Swift",
-        "pushed_at": "2026-04-28T13:57:32Z",
-        "discovered_at": "2026-04-28T18:53:18.288Z",
-        "score": 0.550176
+        "pushed_at": "2026-04-29T15:05:02Z",
+        "discovered_at": "2026-04-30T14:25:26.327Z",
+        "score": 0.550208
       }
     },
     {
@@ -997,6 +997,35 @@
       }
     },
     {
+      "id": "lich0821-ccnexus",
+      "name": "lich0821/ccNexus",
+      "description": "Intelligent API gateway for Claude Code and Codex CLI - rotate endpoints, monitor usage, and seamlessly integrate OpenAI, Gemini, and other platforms.",
+      "tags": [
+        "ai-coding",
+        "claude-code",
+        "claude-code-proxy",
+        "claude-code-router"
+      ],
+      "components": [
+        "CLAUDE.md"
+      ],
+      "version": "1.0.0",
+      "tested_on": "2026-04-30",
+      "author": "lich0821",
+      "source": {
+        "repo": "lich0821/ccNexus",
+        "url": "https://github.com/lich0821/ccNexus/blob/master/CLAUDE.md",
+        "homepage": "",
+        "path": "CLAUDE.md",
+        "branch": "master",
+        "stars": 840,
+        "language": "Go",
+        "pushed_at": "2026-04-21T05:34:36Z",
+        "discovered_at": "2026-04-30T14:25:27.291Z",
+        "score": 0.54672
+      }
+    },
+    {
       "id": "smi2-phpclickhouse",
       "name": "smi2/phpClickHouse",
       "description": "php ClickHouse wrapper",
@@ -1023,35 +1052,6 @@
         "pushed_at": "2026-04-23T18:03:07Z",
         "discovered_at": "2026-04-30T04:04:23.530Z",
         "score": 0.54672
-      }
-    },
-    {
-      "id": "lich0821-ccnexus",
-      "name": "lich0821/ccNexus",
-      "description": "Intelligent API gateway for Claude Code and Codex CLI - rotate endpoints, monitor usage, and seamlessly integrate OpenAI, Gemini, and other platforms.",
-      "tags": [
-        "ai-coding",
-        "claude-code",
-        "claude-code-proxy",
-        "claude-code-router"
-      ],
-      "components": [
-        "CLAUDE.md"
-      ],
-      "version": "1.0.0",
-      "tested_on": "2026-04-28",
-      "author": "lich0821",
-      "source": {
-        "repo": "lich0821/ccNexus",
-        "url": "https://github.com/lich0821/ccNexus/blob/master/CLAUDE.md",
-        "homepage": "",
-        "path": "CLAUDE.md",
-        "branch": "master",
-        "stars": 839,
-        "language": "Go",
-        "pushed_at": "2026-04-21T05:34:36Z",
-        "discovered_at": "2026-04-28T22:12:21.407Z",
-        "score": 0.546712
       }
     },
     {
@@ -1145,11 +1145,11 @@
         "homepage": "https://stenoai.co/",
         "path": "CLAUDE.md",
         "branch": "main",
-        "stars": 693,
+        "stars": 705,
         "language": "HTML",
         "pushed_at": "2026-04-28T22:12:54Z",
-        "discovered_at": "2026-04-30T04:04:23.714Z",
-        "score": 0.545544
+        "discovered_at": "2026-04-30T14:25:26.507Z",
+        "score": 0.5456399999999999
       }
     },
     {
@@ -1205,8 +1205,8 @@
         "branch": "main",
         "stars": 610,
         "language": "TypeScript",
-        "pushed_at": "2026-04-30T01:49:38Z",
-        "discovered_at": "2026-04-30T11:54:22.848Z",
+        "pushed_at": "2026-04-30T14:04:08Z",
+        "discovered_at": "2026-04-30T14:25:26.157Z",
         "score": 0.54488
       }
     },
