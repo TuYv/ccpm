@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-04-30T00:08:03.787Z",
+  "updated_at": "2026-04-30T04:04:24.852Z",
   "presets": [
     {
       "id": "code-review",
@@ -107,11 +107,11 @@
         "homepage": "https://cypress.io",
         "path": "packages/ts/CLAUDE.md",
         "branch": "develop",
-        "stars": 49621,
+        "stars": 49620,
         "language": "TypeScript",
-        "pushed_at": "2026-04-29T18:40:58Z",
-        "discovered_at": "2026-04-30T00:08:03.305Z",
-        "score": 0.936968
+        "pushed_at": "2026-04-30T01:03:30Z",
+        "discovered_at": "2026-04-30T04:04:23.884Z",
+        "score": 0.93696
       }
     },
     {
@@ -140,7 +140,7 @@
         "stars": 36073,
         "language": "TypeScript",
         "pushed_at": "2026-04-15T18:50:11Z",
-        "discovered_at": "2026-04-30T00:08:02.826Z",
+        "discovered_at": "2026-04-30T04:04:22.756Z",
         "score": 0.828584
       }
     },
@@ -170,11 +170,11 @@
         "homepage": "https://surrealdb.com",
         "path": "surrealism/runtime/CLAUDE.md",
         "branch": "main",
-        "stars": 31971,
+        "stars": 31974,
         "language": "Rust",
         "pushed_at": "2026-04-29T14:14:29Z",
-        "discovered_at": "2026-04-30T00:08:03.505Z",
-        "score": 0.795768
+        "discovered_at": "2026-04-30T04:04:24.289Z",
+        "score": 0.795792
       }
     },
     {
@@ -200,11 +200,11 @@
         "homepage": "https://nanoclaw.dev",
         "path": "groups/main/CLAUDE.md",
         "branch": "main",
-        "stars": 28372,
+        "stars": 28385,
         "language": "TypeScript",
         "pushed_at": "2026-04-29T22:12:47Z",
-        "discovered_at": "2026-04-30T00:08:03.418Z",
-        "score": 0.766976
+        "discovered_at": "2026-04-30T04:04:24.114Z",
+        "score": 0.76708
       }
     },
     {
@@ -236,7 +236,7 @@
         "stars": 16004,
         "language": "TypeScript",
         "pushed_at": "2026-04-27T08:18:30Z",
-        "discovered_at": "2026-04-30T00:08:02.927Z",
+        "discovered_at": "2026-04-30T04:04:23.061Z",
         "score": 0.668032
       }
     },
@@ -360,8 +360,41 @@
         "stars": 7434,
         "language": "Java",
         "pushed_at": "2026-04-29T20:00:20Z",
-        "discovered_at": "2026-04-30T00:08:03.040Z",
+        "discovered_at": "2026-04-30T04:04:23.197Z",
         "score": 0.599472
+      }
+    },
+    {
+      "id": "interpretml-interpret",
+      "name": "interpretml/interpret",
+      "description": "Fit interpretable models. Explain blackbox machine learning. ",
+      "tags": [
+        "ai",
+        "artificial-intelligence",
+        "bias",
+        "blackbox",
+        "differential-privacy",
+        "explainability",
+        "explainable-ai",
+        "explainable-ml"
+      ],
+      "components": [
+        "CLAUDE.md"
+      ],
+      "version": "1.0.0",
+      "tested_on": "2026-04-30",
+      "author": "interpretml",
+      "source": {
+        "repo": "interpretml/interpret",
+        "url": "https://github.com/interpretml/interpret/blob/main/CLAUDE.md",
+        "homepage": "https://interpret.ml/docs",
+        "path": "CLAUDE.md",
+        "branch": "main",
+        "stars": 6840,
+        "language": "C++",
+        "pushed_at": "2026-04-29T18:43:44Z",
+        "discovered_at": "2026-04-30T04:04:24.676Z",
+        "score": 0.5947199999999999
       }
     },
     {
@@ -538,7 +571,7 @@
         "CLAUDE.md"
       ],
       "version": "1.0.0",
-      "tested_on": "2026-04-29",
+      "tested_on": "2026-04-30",
       "author": "Tracer-Cloud",
       "source": {
         "repo": "Tracer-Cloud/opensre",
@@ -546,11 +579,11 @@
         "homepage": "https://opensre.com",
         "path": "CLAUDE.md",
         "branch": "main",
-        "stars": 3894,
+        "stars": 3970,
         "language": "Python",
-        "pushed_at": "2026-04-29T11:44:11Z",
-        "discovered_at": "2026-04-29T11:56:09.539Z",
-        "score": 0.526152
+        "pushed_at": "2026-04-30T01:59:53Z",
+        "discovered_at": "2026-04-30T04:04:24.833Z",
+        "score": 0.52676
       }
     },
     {
@@ -657,7 +690,7 @@
         "CLAUDE.md"
       ],
       "version": "1.0.0",
-      "tested_on": "2026-04-29",
+      "tested_on": "2026-04-30",
       "author": "authorizerdev",
       "source": {
         "repo": "authorizerdev/authorizer",
@@ -668,7 +701,7 @@
         "stars": 1953,
         "language": "Go",
         "pushed_at": "2026-04-22T21:49:23Z",
-        "discovered_at": "2026-04-29T23:11:15.552Z",
+        "discovered_at": "2026-04-30T04:04:23.356Z",
         "score": 0.555624
       }
     },
@@ -964,6 +997,35 @@
       }
     },
     {
+      "id": "smi2-phpclickhouse",
+      "name": "smi2/phpClickHouse",
+      "description": "php ClickHouse wrapper",
+      "tags": [
+        "clickhouse",
+        "php",
+        "php-clickhouse",
+        "php-clickhouse-wrapper"
+      ],
+      "components": [
+        "CLAUDE.md"
+      ],
+      "version": "1.0.0",
+      "tested_on": "2026-04-30",
+      "author": "smi2",
+      "source": {
+        "repo": "smi2/phpClickHouse",
+        "url": "https://github.com/smi2/phpClickHouse/blob/master/CLAUDE.md",
+        "homepage": null,
+        "path": "CLAUDE.md",
+        "branch": "master",
+        "stars": 840,
+        "language": "PHP",
+        "pushed_at": "2026-04-23T18:03:07Z",
+        "discovered_at": "2026-04-30T04:04:23.530Z",
+        "score": 0.54672
+      }
+    },
+    {
       "id": "lich0821-ccnexus",
       "name": "lich0821/ccNexus",
       "description": "Intelligent API gateway for Claude Code and Codex CLI - rotate endpoints, monitor usage, and seamlessly integrate OpenAI, Gemini, and other platforms.",
@@ -989,35 +1051,6 @@
         "language": "Go",
         "pushed_at": "2026-04-21T05:34:36Z",
         "discovered_at": "2026-04-28T22:12:21.407Z",
-        "score": 0.546712
-      }
-    },
-    {
-      "id": "smi2-phpclickhouse",
-      "name": "smi2/phpClickHouse",
-      "description": "php ClickHouse wrapper",
-      "tags": [
-        "clickhouse",
-        "php",
-        "php-clickhouse",
-        "php-clickhouse-wrapper"
-      ],
-      "components": [
-        "CLAUDE.md"
-      ],
-      "version": "1.0.0",
-      "tested_on": "2026-04-29",
-      "author": "smi2",
-      "source": {
-        "repo": "smi2/phpClickHouse",
-        "url": "https://github.com/smi2/phpClickHouse/blob/master/CLAUDE.md",
-        "homepage": null,
-        "path": "CLAUDE.md",
-        "branch": "master",
-        "stars": 839,
-        "language": "PHP",
-        "pushed_at": "2026-04-23T18:03:07Z",
-        "discovered_at": "2026-04-29T11:56:08.520Z",
         "score": 0.546712
       }
     },
@@ -1104,7 +1137,7 @@
         "CLAUDE.md"
       ],
       "version": "1.0.0",
-      "tested_on": "2026-04-28",
+      "tested_on": "2026-04-30",
       "author": "ruzin",
       "source": {
         "repo": "ruzin/stenoai",
@@ -1112,11 +1145,11 @@
         "homepage": "https://stenoai.co/",
         "path": "CLAUDE.md",
         "branch": "main",
-        "stars": 692,
+        "stars": 693,
         "language": "HTML",
-        "pushed_at": "2026-04-26T21:43:39Z",
-        "discovered_at": "2026-04-28T12:03:31.803Z",
-        "score": 0.545536
+        "pushed_at": "2026-04-28T22:12:54Z",
+        "discovered_at": "2026-04-30T04:04:23.714Z",
+        "score": 0.545544
       }
     },
     {
