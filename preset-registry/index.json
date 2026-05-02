@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-05-02T19:17:36.501Z",
+  "updated_at": "2026-05-02T21:00:22.756Z",
   "presets": [
     {
       "id": "code-review",
@@ -107,11 +107,11 @@
         "homepage": "https://cypress.io",
         "path": "packages/ts/CLAUDE.md",
         "branch": "develop",
-        "stars": 49621,
+        "stars": 49622,
         "language": "TypeScript",
         "pushed_at": "2026-05-02T01:08:38Z",
-        "discovered_at": "2026-05-02T19:17:35.893Z",
-        "score": 0.936968
+        "discovered_at": "2026-05-02T21:00:21.470Z",
+        "score": 0.936976
       }
     },
     {
@@ -137,11 +137,11 @@
         "homepage": "https://keygraph.io/",
         "path": "CLAUDE.md",
         "branch": "main",
-        "stars": 41077,
+        "stars": 41083,
         "language": "TypeScript",
         "pushed_at": "2026-05-01T18:26:15Z",
-        "discovered_at": "2026-05-02T19:17:36.071Z",
-        "score": 0.868616
+        "discovered_at": "2026-05-02T21:00:21.685Z",
+        "score": 0.868664
       }
     },
     {
@@ -170,7 +170,7 @@
         "stars": 36075,
         "language": "TypeScript",
         "pushed_at": "2026-04-15T18:50:11Z",
-        "discovered_at": "2026-05-02T19:17:35.979Z",
+        "discovered_at": "2026-05-02T21:00:21.566Z",
         "score": 0.8286
       }
     },
@@ -200,11 +200,11 @@
         "homepage": "https://surrealdb.com",
         "path": "surrealism/runtime/CLAUDE.md",
         "branch": "main",
-        "stars": 32003,
+        "stars": 32004,
         "language": "Rust",
         "pushed_at": "2026-05-01T16:44:14Z",
-        "discovered_at": "2026-05-02T19:17:36.313Z",
-        "score": 0.796024
+        "discovered_at": "2026-05-02T21:00:22.260Z",
+        "score": 0.796032
       }
     },
     {
@@ -230,11 +230,11 @@
         "homepage": "https://nanoclaw.dev",
         "path": "groups/main/CLAUDE.md",
         "branch": "main",
-        "stars": 28506,
+        "stars": 28508,
         "language": "TypeScript",
         "pushed_at": "2026-05-02T18:37:46Z",
-        "discovered_at": "2026-05-02T19:17:36.228Z",
-        "score": 0.768048
+        "discovered_at": "2026-05-02T21:00:22.165Z",
+        "score": 0.768064
       }
     },
     {
@@ -256,11 +256,11 @@
         "homepage": "https://iterm2.com/",
         "path": "CLAUDE.md",
         "branch": "master",
-        "stars": 17486,
+        "stars": 17485,
         "language": "Objective-C",
         "pushed_at": "2026-05-02T18:47:01Z",
-        "discovered_at": "2026-05-02T19:17:36.147Z",
-        "score": 0.6798879999999999
+        "discovered_at": "2026-05-02T21:00:21.801Z",
+        "score": 0.67988
       }
     },
     {
@@ -449,7 +449,7 @@
         "stars": 6840,
         "language": "C++",
         "pushed_at": "2026-05-02T15:03:03Z",
-        "discovered_at": "2026-05-02T19:17:36.410Z",
+        "discovered_at": "2026-05-02T21:00:22.388Z",
         "score": 0.5947199999999999
       }
     },
@@ -594,7 +594,7 @@
         "CLAUDE.md"
       ],
       "version": "1.0.0",
-      "tested_on": "2026-05-01",
+      "tested_on": "2026-05-02",
       "author": "ModelEngine-Group",
       "source": {
         "repo": "ModelEngine-Group/nexent",
@@ -602,11 +602,11 @@
         "homepage": "https://nexent.tech",
         "path": "CLAUDE.md",
         "branch": "main",
-        "stars": 4379,
+        "stars": 4382,
         "language": "Python",
         "pushed_at": "2026-05-01T18:56:19Z",
-        "discovered_at": "2026-05-01T22:06:02.534Z",
-        "score": 0.575032
+        "discovered_at": "2026-05-02T21:00:22.501Z",
+        "score": 0.575056
       }
     },
     {
@@ -951,7 +951,7 @@
         "stars": 1266,
         "language": "PLpgSQL",
         "pushed_at": "2026-04-22T07:04:58Z",
-        "discovered_at": "2026-05-02T16:01:32.861Z",
+        "discovered_at": "2026-05-02T21:00:22.737Z",
         "score": 0.610128
       }
     },
@@ -1010,7 +1010,7 @@
         "stars": 1122,
         "language": "Python",
         "pushed_at": "2026-05-02T12:20:28Z",
-        "discovered_at": "2026-05-02T19:17:35.780Z",
+        "discovered_at": "2026-05-02T21:00:21.360Z",
         "score": 0.608976
       }
     },
@@ -1105,6 +1105,35 @@
       }
     },
     {
+      "id": "lich0821-ccnexus",
+      "name": "lich0821/ccNexus",
+      "description": "Intelligent API gateway for Claude Code and Codex CLI - rotate endpoints, monitor usage, and seamlessly integrate OpenAI, Gemini, and other platforms.",
+      "tags": [
+        "ai-coding",
+        "claude-code",
+        "claude-code-proxy",
+        "claude-code-router"
+      ],
+      "components": [
+        "CLAUDE.md"
+      ],
+      "version": "1.0.0",
+      "tested_on": "2026-05-02",
+      "author": "lich0821",
+      "source": {
+        "repo": "lich0821/ccNexus",
+        "url": "https://github.com/lich0821/ccNexus/blob/master/CLAUDE.md",
+        "homepage": "",
+        "path": "CLAUDE.md",
+        "branch": "master",
+        "stars": 840,
+        "language": "Go",
+        "pushed_at": "2026-04-21T05:34:36Z",
+        "discovered_at": "2026-05-02T21:00:22.630Z",
+        "score": 0.54672
+      }
+    },
+    {
       "id": "smi2-phpclickhouse",
       "name": "smi2/phpClickHouse",
       "description": "php ClickHouse wrapper",
@@ -1131,35 +1160,6 @@
         "pushed_at": "2026-04-23T18:03:07Z",
         "discovered_at": "2026-04-30T04:04:23.530Z",
         "score": 0.54672
-      }
-    },
-    {
-      "id": "lich0821-ccnexus",
-      "name": "lich0821/ccNexus",
-      "description": "Intelligent API gateway for Claude Code and Codex CLI - rotate endpoints, monitor usage, and seamlessly integrate OpenAI, Gemini, and other platforms.",
-      "tags": [
-        "ai-coding",
-        "claude-code",
-        "claude-code-proxy",
-        "claude-code-router"
-      ],
-      "components": [
-        "CLAUDE.md"
-      ],
-      "version": "1.0.0",
-      "tested_on": "2026-05-01",
-      "author": "lich0821",
-      "source": {
-        "repo": "lich0821/ccNexus",
-        "url": "https://github.com/lich0821/ccNexus/blob/master/CLAUDE.md",
-        "homepage": "",
-        "path": "CLAUDE.md",
-        "branch": "master",
-        "stars": 839,
-        "language": "Go",
-        "pushed_at": "2026-04-21T05:34:36Z",
-        "discovered_at": "2026-05-01T21:09:03.587Z",
-        "score": 0.546712
       }
     },
     {
@@ -1336,7 +1336,7 @@
         "CLAUDE.md"
       ],
       "version": "1.0.0",
-      "tested_on": "2026-04-30",
+      "tested_on": "2026-05-02",
       "author": "AudiusProject",
       "source": {
         "repo": "AudiusProject/apps",
@@ -1346,8 +1346,8 @@
         "branch": "main",
         "stars": 610,
         "language": "TypeScript",
-        "pushed_at": "2026-04-30T14:04:08Z",
-        "discovered_at": "2026-04-30T14:25:26.157Z",
+        "pushed_at": "2026-05-02T06:52:28Z",
+        "discovered_at": "2026-05-02T21:00:22.035Z",
         "score": 0.54488
       }
     },
@@ -1362,7 +1362,7 @@
         "CLAUDE.md"
       ],
       "version": "1.0.0",
-      "tested_on": "2026-04-30",
+      "tested_on": "2026-05-02",
       "author": "Uniswap",
       "source": {
         "repo": "Uniswap/universal-router",
@@ -1373,7 +1373,7 @@
         "stars": 500,
         "language": "TypeScript",
         "pushed_at": "2026-04-27T18:19:50Z",
-        "discovered_at": "2026-04-30T09:26:01.917Z",
+        "discovered_at": "2026-05-02T21:00:21.922Z",
         "score": 0.604
       }
     }
