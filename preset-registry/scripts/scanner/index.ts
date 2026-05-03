@@ -2,7 +2,7 @@ import { Octokit } from "@octokit/rest";
 import { mkdir, readFile, readdir, rm, writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import { join } from "node:path";
-import { fetchFile, searchClaudeMd } from "./searcher.js";
+import { fetchFile, fetchReadme, searchClaudeMd } from "./searcher.js";
 import { scoreHit } from "./scorer.js";
 import { normalizeToPreset, type PresetEntry } from "./normalizer.js";
 import { discoverSkills } from "./skills-scanner.js";
@@ -47,7 +47,8 @@ async function main() {
       if (!content) continue;
       const score = scoreHit(hit, content);
       if (score < 0.4) continue;
-      const entry = normalizeToPreset(hit, score);
+      const readme = await fetchReadme(octokit, hit.repo);
+      const entry = normalizeToPreset(hit, score, readme);
       accepted.push(entry);
 
       // Write under presets/<id>/ directly so the existing activation flow finds it.

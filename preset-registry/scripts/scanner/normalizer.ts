@@ -11,6 +11,7 @@ export interface PresetSource {
   pushed_at: string;
   discovered_at: string;
   score: number;            // 0..1, debug only
+  readme: string | null;    // upstream README.md (truncated), shown in detail panel
 }
 
 export interface PresetEntry {
@@ -24,7 +25,11 @@ export interface PresetEntry {
   source: PresetSource;
 }
 
-export function normalizeToPreset(hit: SearchHit, score: number): PresetEntry {
+export function normalizeToPreset(
+  hit: SearchHit,
+  score: number,
+  readme: string | null = null,
+): PresetEntry {
   const id = hit.repo.replace("/", "-").toLowerCase().replace(/[^a-z0-9-]/g, "-");
 
   // Tags: prefer the repo's own GitHub topics; fall back to language as single tag.
@@ -54,6 +59,7 @@ export function normalizeToPreset(hit: SearchHit, score: number): PresetEntry {
       pushed_at: hit.pushed_at,
       discovered_at: new Date().toISOString(),
       score,
+      readme,
     },
   };
 }

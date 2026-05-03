@@ -65,3 +65,22 @@ export async function fetchFile(
     return null;
   }
 }
+
+const README_MAX_BYTES = 60_000;
+
+export async function fetchReadme(
+  octokit: Octokit,
+  repoFullName: string,
+): Promise<string | null> {
+  const [owner, repo] = repoFullName.split("/");
+  try {
+    const { data } = await octokit.repos.getReadme({ owner, repo });
+    const decoded = Buffer.from((data as any).content, "base64").toString("utf-8");
+    if (decoded.length > README_MAX_BYTES) {
+      return decoded.slice(0, README_MAX_BYTES) + "\n\n…(README truncated)";
+    }
+    return decoded;
+  } catch {
+    return null;
+  }
+}
