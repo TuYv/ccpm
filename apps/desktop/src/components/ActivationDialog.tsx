@@ -1,7 +1,9 @@
 import { useNavigate } from "react-router-dom";
 import { useInstalledStore, useMcpsStore } from "../stores";
-import type { InstalledState, Recipe, ScopeArg } from "../types/core";
+import type { InstalledState, McpIndex, Recipe, ScopeArg } from "../types/core";
 import { Banner, Button, SectionLabel } from "./ui";
+
+const EMPTY_MCPS: McpIndex["mcps"] = [];
 
 function getScopeView(installed: InstalledState | null, scope: ScopeArg) {
   const isProject = scope.kind === "project";
@@ -37,7 +39,7 @@ export default function ActivationDialog({
 }) {
   const navigate = useNavigate();
   const installed = useInstalledStore((s) => s.state);
-  const mcpsIndex = useMcpsStore((s) => s.index?.mcps ?? []);
+  const mcpsIndex = useMcpsStore((s) => s.index?.mcps ?? EMPTY_MCPS);
 
   const { installedSkills, installedMcps, activeFiles, hasActive } =
     getScopeView(installed, scope);

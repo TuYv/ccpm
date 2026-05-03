@@ -32,16 +32,20 @@ export default function GithubImportInput({ onImported }: GithubImportInputProps
   }
 
   return (
-    <div className="flex items-center gap-2 bg-card border border-hairline rounded-control px-3 py-2 focus-within:border-accent transition-colors">
-      <span className="text-ink-3 text-xs">GH</span>
+    <div
+      className="flex items-center gap-2 bg-card border border-hairline rounded-control px-3 py-1 focus-within:border-accent transition-colors"
+      style={{ width: 320, height: 32, flex: "none", minWidth: 0 }}
+    >
+      <span className="text-ink-3 text-xs" style={{ flex: "none" }}>GH</span>
       <input
         value={url}
         onChange={(e) => setUrl(e.target.value)}
         onKeyDown={(e) => {
           if (e.key === "Enter" && !loading) handleImport();
         }}
-        placeholder="GitHub URL（如 https://github.com/owner/repo）"
+        placeholder="GitHub URL"
         className="flex-1 bg-transparent text-sm text-ink outline-none placeholder:text-ink-3"
+        style={{ minWidth: 0 }}
         disabled={loading}
       />
       <Button variant="primary" size="sm" onClick={handleImport} disabled={loading}>

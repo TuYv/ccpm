@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useCmdkStore } from "../stores/cmdk";
 import { useMcpsStore, usePresetsStore, useRecipesStore, useSkillsStore } from "../stores";
 import type { CmdkKind } from "../stores/cmdk";
+import type { McpIndex, PresetIndex, SkillIndex } from "../types/core";
 
 interface ResultItem {
   kind: CmdkKind;
@@ -18,6 +19,10 @@ const KIND_LABEL: Record<CmdkKind, string> = {
   skill: "Skill",
   mcp: "MCP",
 };
+
+const EMPTY_PRESETS: PresetIndex["presets"] = [];
+const EMPTY_SKILLS: SkillIndex["skills"] = [];
+const EMPTY_MCPS: McpIndex["mcps"] = [];
 
 function matches(q: string, name: string, id: string, tags?: string[]): boolean {
   const lower = q.toLowerCase();
@@ -37,9 +42,9 @@ export default function CommandPalette() {
   const recents = useCmdkStore((s) => s.recents);
 
   const recipes = useRecipesStore((s) => s.recipes);
-  const presets = usePresetsStore((s) => s.index?.presets ?? []);
-  const skills = useSkillsStore((s) => s.index?.skills ?? []);
-  const mcps = useMcpsStore((s) => s.index?.mcps ?? []);
+  const presets = usePresetsStore((s) => s.index?.presets ?? EMPTY_PRESETS);
+  const skills = useSkillsStore((s) => s.index?.skills ?? EMPTY_SKILLS);
+  const mcps = useMcpsStore((s) => s.index?.mcps ?? EMPTY_MCPS);
 
   const [active, setActive] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);

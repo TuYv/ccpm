@@ -185,19 +185,27 @@ body {
   border-bottom: 1px solid var(--hairline);
   background: var(--bg);
 }
+.topbar > :first-child { min-width: 0; }
 .topbar h1 {
   margin: 0;
   font-size: 17px;
   font-weight: 600;
   letter-spacing: -0.02em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .topbar .crumb {
   font-size: 12px;
   color: var(--ink-3);
   font-family: var(--font-mono);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .topbar .spacer { flex: 1; }
 .topbar-search {
+  flex: none;
   display: flex;
   align-items: center;
   gap: 8px;

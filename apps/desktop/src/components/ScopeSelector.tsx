@@ -15,6 +15,12 @@ interface Props {
   onChange: (scope: ScopeArg) => void;
 }
 
+function basename(p: string): string {
+  const trimmed = p.replace(/[/\\]+$/, "");
+  const idx = Math.max(trimmed.lastIndexOf("/"), trimmed.lastIndexOf("\\"));
+  return idx >= 0 ? trimmed.slice(idx + 1) : trimmed;
+}
+
 function formatRelative(iso: string | null): string {
   if (!iso) return "";
   const t = new Date(iso).getTime();
@@ -114,11 +120,11 @@ function ScopeSelector({ scope, onChange }: Props) {
   }
 
   return (
-    <div className="flex items-center gap-2">
-      <div className="flex gap-1 bg-bg rounded-lg p-1 border border-hairline">
+    <div className="flex items-center gap-2 flex-wrap">
+      <div className="flex gap-1 bg-bg rounded-lg p-1 border border-hairline shrink-0">
         <button
           onClick={() => onChange({ kind: "global" })}
-          className={`px-3 py-1 rounded-md text-sm transition-colors ${
+          className={`px-3 py-1 rounded-md text-sm transition-colors whitespace-nowrap ${
             isGlobal
               ? "bg-accent text-white font-medium"
               : "text-ink-2 hover:text-ink"
@@ -131,7 +137,7 @@ function ScopeSelector({ scope, onChange }: Props) {
             if (isGlobal) onChange({ kind: "project", path: "" });
             setOpen(true);
           }}
-          className={`px-3 py-1 rounded-md text-sm transition-colors ${
+          className={`px-3 py-1 rounded-md text-sm transition-colors whitespace-nowrap ${
             !isGlobal
               ? "bg-accent text-white font-medium"
               : "text-ink-2 hover:text-ink"
@@ -142,7 +148,7 @@ function ScopeSelector({ scope, onChange }: Props) {
       </div>
 
       {!isGlobal && (
-        <div ref={ref} className="relative">
+        <div ref={ref} className="relative min-w-0">
           {canPickDir ? (
             <button
               ref={triggerRef}
@@ -151,7 +157,7 @@ function ScopeSelector({ scope, onChange }: Props) {
               title={scope.kind === "project" ? scope.path : ""}
             >
               <span className="truncate">
-                {scope.kind === "project" && scope.path ? scope.path : "选择项目…"}
+                {scope.kind === "project" && scope.path ? basename(scope.path) : "选择项目…"}
               </span>
               <span className="text-ink-3 text-[10px]">▾</span>
             </button>

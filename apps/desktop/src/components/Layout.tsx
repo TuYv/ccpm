@@ -80,9 +80,9 @@ export default function Layout() {
   }, [fetchPresets, fetchSkills, fetchMcps, loadInstalled, loadBackups, loadRecipes]);
 
   return (
-    <div style={{ display: "grid", gridTemplateColumns: "220px 1fr", minHeight: "100vh", background: "var(--bg)", color: "var(--ink)" }}>
+    <div style={{ display: "grid", gridTemplateColumns: "220px 1fr", height: "100vh", overflow: "hidden", background: "var(--bg)", color: "var(--ink)" }}>
       <Sidebar counts={counts} />
-      <main style={{ display: "flex", flexDirection: "column", overflow: "hidden", minHeight: "100vh" }}>
+      <main style={{ display: "flex", flexDirection: "column", overflow: "hidden", minHeight: 0 }}>
         {isPreview && (
           <div style={{ background: "var(--amber-soft)", color: "var(--amber)", fontSize: 11, padding: "4px 22px", borderBottom: "1px solid var(--hairline)" }}>
             预览模式 · 浏览器预览，不会写入真实文件
@@ -93,7 +93,7 @@ export default function Layout() {
             <BaselineBanner />
           </div>
         )}
-        <div style={{ flex: 1, overflow: "auto" }}>
+        <div style={{ flex: 1, overflow: "auto", minHeight: 0 }}>
           <Outlet />
         </div>
       </main>

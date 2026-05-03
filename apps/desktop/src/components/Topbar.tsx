@@ -32,13 +32,17 @@ export default function Topbar({
             <circle cx="7" cy="7" r="4.5" />
             <path d="M10.5 10.5L14 14" />
           </svg>
-          <span style={{ flex: 1, color: "var(--ink-3)" }}>
+          <span style={{ flex: 1, color: "var(--ink-3)", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
             搜索 recipes / presets / skills…
           </span>
           <kbd>⌘K</kbd>
         </button>
       )}
-      {actions}
+      {actions && (
+        <div style={{ display: "flex", alignItems: "center", gap: 8, flex: "none" }}>
+          {actions}
+        </div>
+      )}
     </div>
   );
 }
