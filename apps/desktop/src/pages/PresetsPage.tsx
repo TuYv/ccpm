@@ -2,6 +2,7 @@ import { open as openDialog } from "@tauri-apps/plugin-dialog";
 import { useEffect, useMemo, useState } from "react";
 import { api, isTauriApp } from "../api/claudePreset";
 import GithubImportInput, { ImportPreviewModal } from "../components/GithubImportInput";
+import MarkdownPreview from "../components/MarkdownPreview";
 import SelectiveInstallModal from "../components/SelectiveInstallModal";
 import Topbar from "../components/Topbar";
 import {
@@ -28,6 +29,7 @@ import type {
   PresetMeta,
   ScopeArg,
 } from "../types/core";
+import { openExternal } from "../utils/openExternal";
 
 type FilterKey = "all" | "trending" | "skills" | "mcps" | "internal";
 
@@ -63,6 +65,34 @@ const CopyIcon = (
   </svg>
 );
 
+const GithubIcon = (
+  <svg
+    width="13"
+    height="13"
+    viewBox="0 0 16 16"
+    fill="currentColor"
+    aria-hidden="true"
+  >
+    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+  </svg>
+);
+
+const ChevronIcon = ({ open }: { open: boolean }) => (
+  <svg
+    width="11"
+    height="11"
+    viewBox="0 0 12 12"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.6"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    style={{ transform: open ? "rotate(90deg)" : "rotate(0deg)", transition: "transform 0.15s" }}
+  >
+    <path d="M4 2L8 6L4 10" />
+  </svg>
+);
+
 const FILTER_LABELS: { key: FilterKey; label: string }[] = [
   { key: "all", label: "All" },
   { key: "trending", label: "Trending" },
@@ -74,6 +104,12 @@ const FILTER_LABELS: { key: FilterKey; label: string }[] = [
 function formatStars(n: number): string {
   if (n >= 1000) return `${(n / 1000).toFixed(1)}k`;
   return String(n);
+}
+
+function basename(p: string): string {
+  const trimmed = p.replace(/[/\\]+$/, "");
+  const idx = Math.max(trimmed.lastIndexOf("/"), trimmed.lastIndexOf("\\"));
+  return idx >= 0 ? trimmed.slice(idx + 1) : trimmed;
 }
 
 function bytesOf(s: string): string {
@@ -128,6 +164,11 @@ export default function PresetsPage() {
   const [activating, setActivating] = useState(false);
   const [selective, setSelective] = useState(false);
   const [importPreview, setImportPreview] = useState<ImportedBundle | null>(null);
+  const [readmeOpen, setReadmeOpen] = useState(false);
+
+  useEffect(() => {
+    setReadmeOpen(false);
+  }, [selectedId]);
 
   const [manifestCache, setManifestCache] = useState<Record<string, PresetManifest>>({});
 
@@ -550,6 +591,22 @@ export default function PresetsPage() {
                           已安装
                         </Chip>
                       )}
+                      <span style={{ flex: 1 }} />
+                      {manifest.source?.repo && (
+                        <Button
+                          size="sm"
+                          variant="subtle"
+                          onClick={() =>
+                            openExternal(`https://github.com/${manifest.source!.repo}`)
+                          }
+                          title={`在 GitHub 中打开 ${manifest.source.repo}`}
+                        >
+                          <span style={{ display: "inline-flex", alignItems: "center", gap: 6 }}>
+                            {GithubIcon}
+                            <span>GitHub</span>
+                          </span>
+                        </Button>
+                      )}
                     </div>
                     <div
                       className="mono"
@@ -718,6 +775,56 @@ export default function PresetsPage() {
                   </div>
                 )}
 
+                {/* README (collapsible) — auto-discovered presets only */}
+                {manifest.source?.readme && (
+                  <div className="card" style={{ overflow: "hidden", padding: 0 }}>
+                    <button
+                      type="button"
+                      onClick={() => setReadmeOpen((v) => !v)}
+                      style={{
+                        width: "100%",
+                        display: "flex",
+                        alignItems: "center",
+                        gap: 10,
+                        padding: "10px 16px",
+                        background: "var(--card-2)",
+                        border: 0,
+                        borderBottom: readmeOpen ? "1px solid var(--hairline)" : "none",
+                        cursor: "pointer",
+                        textAlign: "left",
+                        color: "var(--ink-3)",
+                      }}
+                    >
+                      <ChevronIcon open={readmeOpen} />
+                      <SectionLabel>Upstream README</SectionLabel>
+                      <span
+                        className="mono"
+                        style={{ fontSize: 11, color: "var(--ink-3)" }}
+                      >
+                        {manifest.source.repo}
+                      </span>
+                      <span style={{ flex: 1 }} />
+                      <span
+                        className="mono"
+                        style={{ fontSize: 11, color: "var(--ink-3)" }}
+                      >
+                        {bytesOf(manifest.source.readme)} · {readmeOpen ? "收起" : "展开"}
+                      </span>
+                    </button>
+                    {readmeOpen && (
+                      <div
+                        style={{
+                          padding: "16px 20px",
+                          maxHeight: 480,
+                          overflow: "auto",
+                        }}
+                      >
+                        <MarkdownPreview content={manifest.source.readme} />
+                      </div>
+                    )}
+                  </div>
+                )}
+
                 {/* CLAUDE.md preview */}
                 <div className="card" style={{ overflow: "hidden", padding: 0 }}>
                   <div
@@ -756,19 +863,15 @@ export default function PresetsPage() {
                     </Button>
                   </div>
                   {files["CLAUDE.md"] ? (
-                    <pre
-                      className="code"
+                    <div
                       style={{
-                        border: "none",
-                        borderRadius: 0,
-                        margin: 0,
-                        fontSize: 12,
-                        maxHeight: 360,
+                        padding: "16px 20px",
+                        maxHeight: 480,
                         overflow: "auto",
                       }}
                     >
-                      {files["CLAUDE.md"]}
-                    </pre>
+                      <MarkdownPreview content={files["CLAUDE.md"]} />
+                    </div>
                   ) : (
                     <div style={{ padding: "24px 16px" }}>
                       <EmptyState
@@ -789,7 +892,9 @@ export default function PresetsPage() {
                   background: "var(--surface)",
                   display: "flex",
                   gap: 10,
+                  rowGap: 10,
                   alignItems: "center",
+                  flexWrap: "wrap",
                 }}
               >
                 <SectionLabel>Target scope</SectionLabel>
@@ -800,6 +905,7 @@ export default function PresetsPage() {
                     border: "1px solid var(--hairline)",
                     borderRadius: 8,
                     padding: 2,
+                    flexShrink: 0,
                   }}
                 >
                   <button
@@ -845,27 +951,36 @@ export default function PresetsPage() {
                     style={{
                       fontSize: 11,
                       color: "var(--ink-3)",
-                      maxWidth: 280,
+                      flex: "0 1 auto",
+                      minWidth: 0,
                       overflow: "hidden",
                       textOverflow: "ellipsis",
                       whiteSpace: "nowrap",
                     }}
                     title={targetScope.path}
                   >
-                    {targetScope.path}
+                    {basename(targetScope.path)}
                   </span>
                 )}
-                <span style={{ flex: 1 }} />
-                <Button variant="subtle" onClick={() => setSelective(true)}>
-                  Selective install…
-                </Button>
-                <Button
-                  variant="primary"
-                  disabled={activating || !selectedId}
-                  onClick={() => selectedId && handleDownload(selectedId)}
+                <div
+                  style={{
+                    display: "flex",
+                    gap: 10,
+                    marginLeft: "auto",
+                    flexShrink: 0,
+                  }}
                 >
-                  {activating ? "下载中…" : "下载到库"}
-                </Button>
+                  <Button variant="subtle" onClick={() => setSelective(true)}>
+                    Selective install…
+                  </Button>
+                  <Button
+                    variant="primary"
+                    disabled={activating || !selectedId}
+                    onClick={() => selectedId && handleDownload(selectedId)}
+                  >
+                    {activating ? "下载中…" : "下载到库"}
+                  </Button>
+                </div>
               </div>
             </>
           ) : (

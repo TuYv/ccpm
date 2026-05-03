@@ -21,6 +21,7 @@ export interface PresetSource {
   pushed_at?: string;
   discovered_at: string;
   score?: number;
+  readme?: string | null;  // upstream README.md content (truncated)
 }
 
 export interface PresetMeta {

@@ -33,7 +33,7 @@ export function Button({
   return (
     <button
       type={type}
-      className={`inline-flex items-center justify-center gap-1.5 rounded-control border transition-colors disabled:cursor-not-allowed disabled:opacity-45 ${variantClass[variant]} ${sizeClass[size]} ${className}`}
+      className={`inline-flex items-center justify-center gap-1.5 whitespace-nowrap shrink-0 rounded-control border transition-colors disabled:cursor-not-allowed disabled:opacity-45 ${variantClass[variant]} ${sizeClass[size]} ${className}`}
       {...props}
     >
       {icon}
