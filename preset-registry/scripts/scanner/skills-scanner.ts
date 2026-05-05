@@ -150,6 +150,7 @@ export async function discoverSkills(
       const fm = parseFrontmatter(content);
       const name = fm.name || skillName;
       const description = fm.description || `Skill from ${repo.owner}/${repo.name}`;
+      const version = fm.version || "";
 
       const meta = await fetchRepoMeta(octokit, `${repo.owner}/${repo.name}`);
       const entry: SkillEntry = {
@@ -158,7 +159,7 @@ export async function discoverSkills(
         description: description.slice(0, 500),
         category: repo.category,
         compatible_tools: ["claude", "codex", "gemini"],
-        version: "1.0.0",
+        version,
         author: repo.owner,
         // Preserves the original folder name so the skill stays drop-in
         // for Claude Code's ~/.claude/skills/<name>/SKILL.md convention.

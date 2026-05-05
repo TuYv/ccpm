@@ -355,12 +355,14 @@ export default function SkillsPage() {
                       </div>
                     )}
                     <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                      <span
-                        className="mono"
-                        style={{ fontSize: 11, color: "var(--ink-3)" }}
-                      >
-                        v{skill.version}
-                      </span>
+                      {skill.version && (
+                        <span
+                          className="mono"
+                          style={{ fontSize: 11, color: "var(--ink-3)" }}
+                        >
+                          v{skill.version}
+                        </span>
+                      )}
                       <span style={{ flex: 1 }} />
                       {skill.source?.repo && (
                         <Button
