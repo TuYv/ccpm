@@ -15,13 +15,7 @@ import {
 } from "../components/ui";
 import { openExternal } from "../utils/openExternal";
 import MarkdownPreview from "../components/MarkdownPreview";
-
-const TOOL_LABEL: Record<string, string> = {
-  claude: "Claude",
-  codex: "Codex",
-  gemini: "Gemini",
-  copilot: "Copilot",
-};
+import { relativeTime } from "../utils/time";
 
 const ALL = "All";
 
@@ -288,14 +282,14 @@ export default function SkillsPage() {
                           installed
                         </Chip>
                       )}
-                      {skill.compatible_tools.length > 0 && (
-                        <span style={{ display: "inline-flex", gap: 4, flexWrap: "wrap" }}>
-                          {skill.compatible_tools.map((t) => (
-                            <Chip key={t} tone="blue">
-                              {TOOL_LABEL[t] ?? t}
-                            </Chip>
-                          ))}
-                        </span>
+                      {skill.source?.language && (
+                        <Chip tone="blue">{skill.source.language}</Chip>
+                      )}
+                      {skill.source?.license && (
+                        <Chip>{skill.source.license}</Chip>
+                      )}
+                      {skill.source?.pushed_at && (
+                        <Chip>{relativeTime(skill.source.pushed_at)}</Chip>
                       )}
                     </div>
                     <p
@@ -324,7 +318,6 @@ export default function SkillsPage() {
                         {typeof skill.source.stars === "number" && skill.source.stars > 0 && (
                           <span>★ {formatStars(skill.source.stars)}</span>
                         )}
-                        {skill.source.language && <span>· {skill.source.language}</span>}
                       </div>
                     )}
                     {skill.source?.readme && (

@@ -12,6 +12,7 @@ export interface PresetSource {
   discovered_at: string;
   score: number;            // 0..1, debug only
   readme: string | null;    // upstream README.md (truncated), shown in detail panel
+  license: string | null;   // SPDX license id from GitHub
 }
 
 export interface PresetEntry {
@@ -60,6 +61,7 @@ export function normalizeToPreset(
       discovered_at: new Date().toISOString(),
       score,
       readme,
+      license: hit.license,
     },
   };
 }

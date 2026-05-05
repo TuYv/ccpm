@@ -30,6 +30,7 @@ export interface RepoMeta {
   language: string | null;
   pushed_at: string;
   readme: string | null;
+  license: string | null;
 }
 
 const repoMetaCache = new Map<string, RepoMeta>();
@@ -41,16 +42,19 @@ export async function fetchRepoMeta(octokit: Octokit, repoFullName: string): Pro
   let stars = 0;
   let language: string | null = null;
   let pushed_at = "";
+  let license: string | null = null;
   try {
     const { data } = await octokit.repos.get({ owner, repo });
     stars = data.stargazers_count ?? 0;
     language = data.language ?? null;
     pushed_at = data.pushed_at ?? "";
+    license = (data.license as { spdx_id?: string | null } | null)?.spdx_id ?? null;
+    if (license === "NOASSERTION") license = null;
   } catch {
     // Leave defaults — repo may be private or rate-limited.
   }
   const readme = await fetchReadme(octokit, repoFullName);
-  const meta: RepoMeta = { stars, language, pushed_at, readme };
+  const meta: RepoMeta = { stars, language, pushed_at, readme, license };
   repoMetaCache.set(repoFullName, meta);
   return meta;
 }
@@ -65,6 +69,7 @@ export interface SkillSource {
   language?: string | null;
   pushed_at?: string;
   readme?: string | null;
+  license?: string | null;
 }
 
 export interface SkillEntry {
@@ -168,6 +173,7 @@ export async function discoverSkills(
           language: meta.language,
           pushed_at: meta.pushed_at,
           readme: meta.readme,
+          license: meta.license,
         },
       };
       all.push(entry);

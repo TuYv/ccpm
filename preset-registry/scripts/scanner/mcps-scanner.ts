@@ -14,6 +14,7 @@ export interface McpSource {
   language?: string | null;
   pushed_at?: string;
   readme?: string | null;
+  license?: string | null;
 }
 
 export interface McpRequiredEnv {
@@ -349,6 +350,7 @@ export async function discoverMcps(
           language: meta.language,
           pushed_at: meta.pushed_at,
           readme: meta.readme,
+          license: meta.license,
         },
       };
       all.push(entry);
@@ -371,6 +373,7 @@ export async function discoverMcps(
     entry.source.language = curatedMeta.language;
     entry.source.pushed_at = curatedMeta.pushed_at;
     entry.source.readme = curatedMeta.readme;
+    entry.source.license = curatedMeta.license;
 
     const outDir = join(mcpsDir, entry.id);
     const mcpJson = join(outDir, "mcp.json");

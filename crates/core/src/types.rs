@@ -19,6 +19,9 @@ pub struct SkillSource {
     pub pushed_at: Option<String>,
     #[serde(default)]
     pub readme: Option<String>,
+    /// SPDX license identifier from the GitHub repo (e.g. "MIT", "AGPL-3.0").
+    #[serde(default)]
+    pub license: Option<String>,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -71,6 +74,9 @@ pub struct McpSource {
     pub pushed_at: Option<String>,
     #[serde(default)]
     pub readme: Option<String>,
+    /// SPDX license identifier from the GitHub repo (e.g. "MIT", "AGPL-3.0").
+    #[serde(default)]
+    pub license: Option<String>,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -109,6 +115,31 @@ pub struct PresetMcpRef {
 
 // ── Registry types ────────────────────────────────────────────────────────────
 
+/// Auto-discovered preset provenance — populated by the registry scanner for
+/// presets harvested from public GitHub repos. Curated presets omit this.
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct PresetSource {
+    pub repo: String,
+    pub url: String,
+    #[serde(default)]
+    pub homepage: Option<String>,
+    pub path: String,
+    pub branch: String,
+    pub stars: u64,
+    #[serde(default)]
+    pub language: Option<String>,
+    #[serde(default)]
+    pub pushed_at: Option<String>,
+    pub discovered_at: String,
+    #[serde(default)]
+    pub score: Option<f64>,
+    #[serde(default)]
+    pub readme: Option<String>,
+    /// SPDX license identifier from the GitHub repo (e.g. "MIT", "AGPL-3.0").
+    #[serde(default)]
+    pub license: Option<String>,
+}
+
 /// Lightweight entry from index.json (no file contents).
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct PresetMeta {
@@ -122,6 +153,8 @@ pub struct PresetMeta {
     pub version: String,
     pub tested_on: String,
     pub author: String,
+    #[serde(default)]
+    pub source: Option<PresetSource>,
 }
 
 /// Root of index.json.
@@ -157,6 +190,8 @@ pub struct PresetManifest {
     /// MCP refs bundled with this preset.
     #[serde(default)]
     pub mcps: Vec<PresetMcpRef>,
+    #[serde(default)]
+    pub source: Option<PresetSource>,
 }
 
 // ── Installed state ───────────────────────────────────────────────────────────

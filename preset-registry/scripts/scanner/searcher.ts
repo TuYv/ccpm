@@ -10,6 +10,7 @@ export interface SearchHit {
   topics: string[];
   language: string | null;
   homepage: string | null;
+  license: string | null;
 }
 
 export async function searchClaudeMd(octokit: Octokit, minStars = 500): Promise<SearchHit[]> {
@@ -29,6 +30,7 @@ export async function searchClaudeMd(octokit: Octokit, minStars = 500): Promise<
         const [owner, repo] = fullName.split("/");
         const { data: repoData } = await octokit.repos.get({ owner, repo });
         if ((repoData.stargazers_count ?? 0) < minStars) continue;
+        const licenseRaw = (repoData.license as { spdx_id?: string | null } | null)?.spdx_id ?? null;
         out.push({
           repo: fullName,
           default_branch: repoData.default_branch ?? "main",
@@ -39,6 +41,7 @@ export async function searchClaudeMd(octokit: Octokit, minStars = 500): Promise<
           topics: repoData.topics ?? [],
           language: repoData.language ?? null,
           homepage: repoData.homepage ?? null,
+          license: licenseRaw === "NOASSERTION" ? null : licenseRaw,
         });
       } catch (e) {
         // Skip private/deleted/rate-limited repos silently.

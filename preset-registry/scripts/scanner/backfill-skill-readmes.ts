@@ -63,10 +63,11 @@ async function main() {
     manifest.source.language = meta.language;
     manifest.source.pushed_at = meta.pushed_at;
     manifest.source.readme = meta.readme;
+    manifest.source.license = meta.license;
 
     await writeFile(path, JSON.stringify(manifest, null, 2));
     updated++;
-    console.log(`[ok]   ${manifest.source.repo} (${meta.readme ? meta.readme.length : 0} bytes)`);
+    console.log(`[ok]   ${manifest.source.repo} (${meta.readme ? meta.readme.length : 0} bytes, license=${meta.license ?? "—"})`);
   }
 
   console.log(

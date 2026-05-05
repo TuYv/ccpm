@@ -16,6 +16,7 @@ import {
 } from "../components/ui";
 import { openExternal } from "../utils/openExternal";
 import MarkdownPreview from "../components/MarkdownPreview";
+import { relativeTime } from "../utils/time";
 
 const ChevronIcon = ({ open }: { open: boolean }) => (
   <svg
@@ -134,6 +135,13 @@ function McpRow({
           {mcp.required_env.length > 0 && (
             <Chip tone="amber">requires {mcp.required_env.length} env</Chip>
           )}
+          {mcp.source?.language && (
+            <Chip tone="blue">{mcp.source.language}</Chip>
+          )}
+          {mcp.source?.license && <Chip>{mcp.source.license}</Chip>}
+          {mcp.source?.pushed_at && (
+            <Chip>{relativeTime(mcp.source.pushed_at)}</Chip>
+          )}
         </div>
         <div
           style={{
@@ -161,7 +169,6 @@ function McpRow({
             {typeof mcp.source.stars === "number" && mcp.source.stars > 0 && (
               <span>★ {formatStars(mcp.source.stars)}</span>
             )}
-            {mcp.source.language && <span>· {mcp.source.language}</span>}
           </div>
         )}
         {mcp.source?.readme && (

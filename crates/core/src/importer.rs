@@ -43,6 +43,7 @@ impl ImportedBundle {
             files: file_map,
             skills: vec![],
             mcps: vec![],
+            source: None,
         };
         (manifest, files)
     }

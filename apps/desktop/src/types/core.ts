@@ -22,6 +22,7 @@ export interface PresetSource {
   discovered_at: string;
   score?: number;
   readme?: string | null;  // upstream README.md content (truncated)
+  license?: string | null; // SPDX license id from GitHub repo
 }
 
 export interface PresetMeta {
@@ -142,6 +143,7 @@ export interface SkillSource {
   language?: string | null;
   pushed_at?: string | null;
   readme?: string | null;
+  license?: string | null;
 }
 
 export interface SkillMeta {
@@ -180,6 +182,7 @@ export interface McpSource {
   language?: string | null;
   pushed_at?: string | null;
   readme?: string | null;
+  license?: string | null;
 }
 
 export interface McpMeta {

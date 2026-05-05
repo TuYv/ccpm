@@ -11,7 +11,7 @@ import { Octokit } from "@octokit/rest";
 import { existsSync } from "node:fs";
 import { readFile, readdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
-import { fetchReadme } from "./searcher.js";
+import { fetchRepoMeta } from "./skills-scanner.js";
 
 const REGISTRY_DIR =
   process.env.REGISTRY_DIR ?? join(process.cwd(), "..", "..");
@@ -56,23 +56,22 @@ async function main() {
       continue;
     }
 
-    if (manifest.source.readme && !FORCE) {
+    if (manifest.source.readme && manifest.source.license !== undefined && !FORCE) {
       skipped++;
       continue;
     }
 
-    const readme = await fetchReadme(octokit, manifest.source.repo);
-    if (!readme) {
-      console.warn(`[miss] ${manifest.source.repo}: no README found`);
-      manifest.source.readme = null;
-    } else {
-      manifest.source.readme = readme;
-    }
+    const meta = await fetchRepoMeta(octokit, manifest.source.repo);
+    manifest.source.stars = meta.stars;
+    manifest.source.language = meta.language;
+    manifest.source.pushed_at = meta.pushed_at;
+    manifest.source.readme = meta.readme;
+    manifest.source.license = meta.license;
 
     await writeFile(presetJsonPath, JSON.stringify(manifest, null, 2));
     updated++;
     console.log(
-      `[ok]   ${manifest.source.repo} (${readme ? readme.length : 0} bytes)`,
+      `[ok]   ${manifest.source.repo} (${meta.readme ? meta.readme.length : 0} bytes, license=${meta.license ?? "—"})`,
     );
   }
 

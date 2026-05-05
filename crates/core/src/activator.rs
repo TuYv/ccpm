@@ -227,6 +227,7 @@ mod tests {
                 .collect(),
             skills: vec![],
             mcps: vec![],
+            source: None,
         }
     }
 
