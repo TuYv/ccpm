@@ -24,6 +24,11 @@ const TOOL_LABEL: Record<string, string> = {
 
 const ALL = "All";
 
+function formatStars(n: number): string {
+  if (n >= 1000) return `${(n / 1000).toFixed(1)}k`;
+  return String(n);
+}
+
 const RefreshIcon = (
   <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
     <path d="M14 8a6 6 0 1 1-1.76-4.24" />
@@ -281,6 +286,25 @@ export default function SkillsPage() {
                     >
                       {skill.description}
                     </p>
+                    {skill.source?.repo && (
+                      <div
+                        className="mono"
+                        style={{
+                          display: "flex",
+                          gap: 8,
+                          flexWrap: "wrap",
+                          fontSize: 11,
+                          color: "var(--ink-3)",
+                          marginTop: 6,
+                        }}
+                      >
+                        <span>{skill.source.repo}</span>
+                        {typeof skill.source.stars === "number" && skill.source.stars > 0 && (
+                          <span>★ {formatStars(skill.source.stars)}</span>
+                        )}
+                        {skill.source.language && <span>· {skill.source.language}</span>}
+                      </div>
+                    )}
                     <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
                       <span
                         className="mono"
