@@ -14,6 +14,7 @@ import {
   Tag,
 } from "../components/ui";
 import { openExternal } from "../utils/openExternal";
+import MarkdownPreview from "../components/MarkdownPreview";
 
 const TOOL_LABEL: Record<string, string> = {
   claude: "Claude",
@@ -48,6 +49,22 @@ const GithubIcon = (
   </svg>
 );
 
+const ChevronIcon = ({ open }: { open: boolean }) => (
+  <svg
+    width="11"
+    height="11"
+    viewBox="0 0 12 12"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.6"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    style={{ transform: open ? "rotate(90deg)" : "rotate(0deg)", transition: "transform 0.15s" }}
+  >
+    <path d="M4 2L8 6L4 10" />
+  </svg>
+);
+
 function scopeLabel(s: { kind: "global" } | { kind: "project"; path: string }): string {
   return s.kind === "global" ? "globally" : `in ${s.path}`;
 }
@@ -65,6 +82,11 @@ export default function SkillsPage() {
   const [importPreview, setImportPreview] = useState<ImportedBundle | null>(null);
   const [pickerSkillId, setPickerSkillId] = useState<string | null>(null);
   const [importing, setImporting] = useState(false);
+  const [readmeOpen, setReadmeOpen] = useState<Record<string, boolean>>({});
+
+  function toggleReadme(id: string) {
+    setReadmeOpen((m) => ({ ...m, [id]: !m[id] }));
+  }
 
   const cardRefs = useRef<Record<string, HTMLDivElement | null>>({});
 
@@ -303,6 +325,37 @@ export default function SkillsPage() {
                           <span>★ {formatStars(skill.source.stars)}</span>
                         )}
                         {skill.source.language && <span>· {skill.source.language}</span>}
+                      </div>
+                    )}
+                    {skill.source?.readme && (
+                      <div style={{ marginTop: 10, borderTop: "1px solid var(--hairline)", paddingTop: 10 }}>
+                        <button
+                          type="button"
+                          onClick={() => toggleReadme(skill.id)}
+                          style={{
+                            display: "flex",
+                            alignItems: "center",
+                            gap: 8,
+                            width: "100%",
+                            background: "transparent",
+                            border: 0,
+                            cursor: "pointer",
+                            textAlign: "left",
+                            color: "var(--ink-3)",
+                            padding: 0,
+                          }}
+                        >
+                          <ChevronIcon open={!!readmeOpen[skill.id]} />
+                          <SectionLabel>Upstream README</SectionLabel>
+                          <span className="mono" style={{ fontSize: 11, color: "var(--ink-3)", marginLeft: "auto" }}>
+                            {readmeOpen[skill.id] ? "收起" : "展开"}
+                          </span>
+                        </button>
+                        {readmeOpen[skill.id] && (
+                          <div style={{ marginTop: 10, maxHeight: 360, overflow: "auto" }}>
+                            <MarkdownPreview content={skill.source.readme} />
+                          </div>
+                        )}
                       </div>
                     )}
                     <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
