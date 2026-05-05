@@ -15,6 +15,23 @@ import {
   SectionLabel,
 } from "../components/ui";
 import { openExternal } from "../utils/openExternal";
+import MarkdownPreview from "../components/MarkdownPreview";
+
+const ChevronIcon = ({ open }: { open: boolean }) => (
+  <svg
+    width="11"
+    height="11"
+    viewBox="0 0 12 12"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.6"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    style={{ transform: open ? "rotate(90deg)" : "rotate(0deg)", transition: "transform 0.15s" }}
+  >
+    <path d="M4 2L8 6L4 10" />
+  </svg>
+);
 
 const RefreshIcon = (
   <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -73,6 +90,10 @@ function McpRow({
 }: McpRowProps) {
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement | null>(null);
+  const [readmeOpen, setReadmeOpen] = useState<Record<string, boolean>>({});
+  function toggleReadme(id: string) {
+    setReadmeOpen((m) => ({ ...m, [id]: !m[id] }));
+  }
 
   useEffect(() => {
     if (!menuOpen) return;
@@ -141,6 +162,37 @@ function McpRow({
               <span>★ {formatStars(mcp.source.stars)}</span>
             )}
             {mcp.source.language && <span>· {mcp.source.language}</span>}
+          </div>
+        )}
+        {mcp.source?.readme && (
+          <div style={{ marginTop: 10, borderTop: "1px solid var(--hairline)", paddingTop: 10 }}>
+            <button
+              type="button"
+              onClick={() => toggleReadme(mcp.id)}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: 8,
+                width: "100%",
+                background: "transparent",
+                border: 0,
+                cursor: "pointer",
+                textAlign: "left",
+                color: "var(--ink-3)",
+                padding: 0,
+              }}
+            >
+              <ChevronIcon open={!!readmeOpen[mcp.id]} />
+              <SectionLabel>Upstream README</SectionLabel>
+              <span className="mono" style={{ fontSize: 11, color: "var(--ink-3)", marginLeft: "auto" }}>
+                {readmeOpen[mcp.id] ? "收起" : "展开"}
+              </span>
+            </button>
+            {readmeOpen[mcp.id] && (
+              <div style={{ marginTop: 10, maxHeight: 360, overflow: "auto" }}>
+                <MarkdownPreview content={mcp.source.readme} />
+              </div>
+            )}
           </div>
         )}
         <div className="mono" style={{ fontSize: 11.5, color: "var(--ink-3)" }}>
