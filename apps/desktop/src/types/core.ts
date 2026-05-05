@@ -132,6 +132,18 @@ export interface ClaudeSettings {
 
 // ── Skills ───────────────────────────────────────────────────────────────────
 
+export interface SkillSource {
+  repo: string;
+  url: string;
+  path: string;
+  branch: string;
+  discovered_at: string;
+  stars?: number | null;
+  language?: string | null;
+  pushed_at?: string | null;
+  readme?: string | null;
+}
+
 export interface SkillMeta {
   id: string;
   name: string;
@@ -141,6 +153,7 @@ export interface SkillMeta {
   version: string;
   author: string;
   install_path: string;
+  source?: SkillSource | null;
 }
 
 export interface SkillIndex {
@@ -157,6 +170,18 @@ export interface McpRequiredEnv {
   description?: string;
 }
 
+export interface McpSource {
+  repo: string;
+  url: string;
+  path: string;
+  branch: string;
+  discovered_at: string;
+  stars?: number | null;
+  language?: string | null;
+  pushed_at?: string | null;
+  readme?: string | null;
+}
+
 export interface McpMeta {
   id: string;
   name: string;
@@ -166,6 +191,7 @@ export interface McpMeta {
   args: string[];
   required_env: McpRequiredEnv[];
   optional_env: McpRequiredEnv[];
+  source?: McpSource | null;
 }
 
 export interface McpIndex {
