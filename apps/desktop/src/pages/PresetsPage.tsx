@@ -819,7 +819,10 @@ export default function PresetsPage() {
                           overflow: "auto",
                         }}
                       >
-                        <MarkdownPreview content={manifest.source.readme} />
+                        <MarkdownPreview
+                          content={manifest.source.readme}
+                          baseUrl={`https://github.com/${manifest.source.repo}/blob/${manifest.source.branch}/`}
+                        />
                       </div>
                     )}
                   </div>
@@ -870,7 +873,14 @@ export default function PresetsPage() {
                         overflow: "auto",
                       }}
                     >
-                      <MarkdownPreview content={files["CLAUDE.md"]} />
+                      <MarkdownPreview
+                        content={files["CLAUDE.md"]}
+                        baseUrl={
+                          manifest.source
+                            ? `https://github.com/${manifest.source.repo}/blob/${manifest.source.branch}/${manifest.source.path.replace(/[^/]+$/, "")}`
+                            : undefined
+                        }
+                      />
                     </div>
                   ) : (
                     <div style={{ padding: "24px 16px" }}>

@@ -190,7 +190,10 @@ function McpRow({
             </button>
             {readmeOpen[mcp.id] && (
               <div style={{ marginTop: 10, maxHeight: 360, overflow: "auto" }}>
-                <MarkdownPreview content={mcp.source.readme} />
+                <MarkdownPreview
+                  content={mcp.source.readme}
+                  baseUrl={`https://github.com/${mcp.source.repo}/blob/${mcp.source.branch}/`}
+                />
               </div>
             )}
           </div>

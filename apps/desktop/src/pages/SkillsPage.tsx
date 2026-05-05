@@ -353,7 +353,10 @@ export default function SkillsPage() {
                         </button>
                         {readmeOpen[skill.id] && (
                           <div style={{ marginTop: 10, maxHeight: 360, overflow: "auto" }}>
-                            <MarkdownPreview content={skill.source.readme} />
+                            <MarkdownPreview
+                              content={skill.source.readme}
+                              baseUrl={`https://github.com/${skill.source.repo}/blob/${skill.source.branch}/`}
+                            />
                           </div>
                         )}
                       </div>
