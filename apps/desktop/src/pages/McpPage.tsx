@@ -47,6 +47,11 @@ function scopeLabel(s: { kind: "global" } | { kind: "project"; path: string }): 
   return s.kind === "global" ? "globally" : `in ${s.path}`;
 }
 
+function formatStars(n: number): string {
+  if (n >= 1000) return `${(n / 1000).toFixed(1)}k`;
+  return String(n);
+}
+
 interface McpRowProps {
   mcp: McpMeta;
   isInstalled: boolean;
@@ -119,6 +124,25 @@ function McpRow({
         >
           {mcp.description}
         </div>
+        {mcp.source?.repo && (
+          <div
+            className="mono"
+            style={{
+              display: "flex",
+              gap: 8,
+              flexWrap: "wrap",
+              fontSize: 11,
+              color: "var(--ink-3)",
+              marginTop: 6,
+            }}
+          >
+            <span>{mcp.source.repo}</span>
+            {typeof mcp.source.stars === "number" && mcp.source.stars > 0 && (
+              <span>★ {formatStars(mcp.source.stars)}</span>
+            )}
+            {mcp.source.language && <span>· {mcp.source.language}</span>}
+          </div>
+        )}
         <div className="mono" style={{ fontSize: 11.5, color: "var(--ink-3)" }}>
           $ {mcp.command} {mcp.args.join(" ")}
         </div>
