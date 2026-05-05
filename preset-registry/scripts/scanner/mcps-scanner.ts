@@ -2,6 +2,7 @@ import { Octokit } from "@octokit/rest";
 import { mkdir, readdir, readFile, writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import { join } from "node:path";
+import { fetchRepoMeta, type RepoMeta } from "./skills-scanner.js";
 
 export interface McpSource {
   repo: string;
@@ -9,6 +10,10 @@ export interface McpSource {
   path: string;
   branch: string;
   discovered_at: string;
+  stars?: number;
+  language?: string | null;
+  pushed_at?: string;
+  readme?: string | null;
 }
 
 export interface McpRequiredEnv {
@@ -324,6 +329,7 @@ export async function discoverMcps(
       }
 
       const id = slugify(name);
+      const meta: RepoMeta = await fetchRepoMeta(octokit, `${REPO.owner}/${REPO.name}`);
       const entry: McpEntry = {
         id,
         name,
@@ -339,6 +345,10 @@ export async function discoverMcps(
           path: `src/${name}`,
           branch: REPO.branch,
           discovered_at: new Date().toISOString(),
+          stars: meta.stars,
+          language: meta.language,
+          pushed_at: meta.pushed_at,
+          readme: meta.readme,
         },
       };
       all.push(entry);
@@ -355,6 +365,13 @@ export async function discoverMcps(
   // edits to mcp.json are preserved).
   console.log(`[mcps] seeding ${CURATED_COMMUNITY_MCPS.length} curated community MCPs…`);
   for (const entry of CURATED_COMMUNITY_MCPS) {
+    // Enrich source metadata regardless of whether the file already exists.
+    const curatedMeta: RepoMeta = await fetchRepoMeta(octokit, entry.source.repo);
+    entry.source.stars = curatedMeta.stars;
+    entry.source.language = curatedMeta.language;
+    entry.source.pushed_at = curatedMeta.pushed_at;
+    entry.source.readme = curatedMeta.readme;
+
     const outDir = join(mcpsDir, entry.id);
     const mcpJson = join(outDir, "mcp.json");
     if (existsSync(mcpJson)) continue; // do not clobber manual / scanner edits
