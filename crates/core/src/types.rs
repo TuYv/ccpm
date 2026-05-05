@@ -55,6 +55,24 @@ pub struct McpRequiredEnv {
     pub description: String,
 }
 
+/// Auto-discovered MCP provenance — populated by the registry scanner.
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct McpSource {
+    pub repo: String,
+    pub url: String,
+    pub path: String,
+    pub branch: String,
+    pub discovered_at: String,
+    #[serde(default)]
+    pub stars: Option<u64>,
+    #[serde(default)]
+    pub language: Option<String>,
+    #[serde(default)]
+    pub pushed_at: Option<String>,
+    #[serde(default)]
+    pub readme: Option<String>,
+}
+
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct McpMeta {
     pub id: String,
@@ -68,6 +86,8 @@ pub struct McpMeta {
     pub required_env: Vec<McpRequiredEnv>,
     #[serde(default)]
     pub optional_env: Vec<McpRequiredEnv>,
+    #[serde(default)]
+    pub source: Option<McpSource>,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -591,5 +611,43 @@ mod tests {
         });
         let s: SkillMeta = serde_json::from_value(json).unwrap();
         assert!(s.source.is_none());
+    }
+
+    #[test]
+    fn test_mcp_meta_roundtrip_with_source() {
+        let json = serde_json::json!({
+            "id": "modelcontextprotocol-servers-everything",
+            "name": "everything",
+            "description": "Reference MCP server",
+            "category": "Reference",
+            "command": "npx",
+            "args": ["-y", "@modelcontextprotocol/server-everything"],
+            "required_env": [],
+            "optional_env": [],
+            "source": {
+                "repo": "modelcontextprotocol/servers",
+                "url": "https://github.com/modelcontextprotocol/servers/blob/main/src/everything/README.md",
+                "path": "src/everything/README.md",
+                "branch": "main",
+                "discovered_at": "2026-04-29T00:00:00Z",
+                "stars": 5000,
+                "readme": "# Everything"
+            }
+        });
+        let m: McpMeta = serde_json::from_value(json).unwrap();
+        assert_eq!(m.source.as_ref().unwrap().repo, "modelcontextprotocol/servers");
+        assert_eq!(m.source.as_ref().unwrap().stars, Some(5000));
+        let back = serde_json::to_string(&m).unwrap();
+        assert!(back.contains("\"readme\""));
+    }
+
+    #[test]
+    fn test_mcp_meta_without_source_still_parses() {
+        let json = serde_json::json!({
+            "id": "x", "name": "x", "description": "x",
+            "category": "x", "command": "x"
+        });
+        let m: McpMeta = serde_json::from_value(json).unwrap();
+        assert!(m.source.is_none());
     }
 }
