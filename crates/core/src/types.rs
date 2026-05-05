@@ -3,6 +3,24 @@ use std::collections::HashMap;
 
 // ── Skill registry types ──────────────────────────────────────────────────────
 
+/// Auto-discovered skill provenance — populated by the registry scanner.
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct SkillSource {
+    pub repo: String,
+    pub url: String,
+    pub path: String,
+    pub branch: String,
+    pub discovered_at: String,
+    #[serde(default)]
+    pub stars: Option<u64>,
+    #[serde(default)]
+    pub language: Option<String>,
+    #[serde(default)]
+    pub pushed_at: Option<String>,
+    #[serde(default)]
+    pub readme: Option<String>,
+}
+
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct SkillMeta {
     pub id: String,
@@ -15,6 +33,8 @@ pub struct SkillMeta {
     pub author: String,
     /// Relative install path under scope_dir. e.g. ".claude/skills/<id>/SKILL.md"
     pub install_path: String,
+    #[serde(default)]
+    pub source: Option<SkillSource>,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -522,5 +542,54 @@ mod tests {
         let s = ActiveState::default();
         assert!(s.global.is_none());
         assert!(s.projects.is_empty());
+    }
+
+    #[test]
+    fn test_skill_meta_roundtrip_with_source() {
+        let json = serde_json::json!({
+            "id": "anthropics-skills-pdf",
+            "name": "PDF Skill",
+            "description": "Read and write PDFs",
+            "category": "Anthropic 官方",
+            "compatible_tools": ["claude-code"],
+            "version": "1.0.0",
+            "author": "anthropics",
+            "install_path": ".claude/skills/anthropics-skills-pdf/SKILL.md",
+            "source": {
+                "repo": "anthropics/skills",
+                "url": "https://github.com/anthropics/skills/blob/main/pdf/SKILL.md",
+                "path": "pdf/SKILL.md",
+                "branch": "main",
+                "discovered_at": "2026-04-29T00:00:00Z",
+                "stars": 1234,
+                "language": "Python",
+                "pushed_at": "2026-05-01T12:00:00Z",
+                "readme": "# Skills\n\nOfficial skill repo."
+            }
+        });
+        let s: SkillMeta = serde_json::from_value(json).unwrap();
+        assert!(s.source.is_some());
+        if let Some(ref src) = s.source {
+            assert_eq!(src.repo, "anthropics/skills");
+            assert_eq!(src.stars, Some(1234));
+            assert_eq!(src.readme.as_deref(), Some("# Skills\n\nOfficial skill repo."));
+        }
+        let back = serde_json::to_string(&s).unwrap();
+        assert!(back.contains("\"readme\""));
+    }
+
+    #[test]
+    fn test_skill_meta_without_source_still_parses() {
+        let json = serde_json::json!({
+            "id": "x",
+            "name": "x",
+            "description": "x",
+            "category": "x",
+            "version": "1.0.0",
+            "author": "x",
+            "install_path": "x"
+        });
+        let s: SkillMeta = serde_json::from_value(json).unwrap();
+        assert!(s.source.is_none());
     }
 }

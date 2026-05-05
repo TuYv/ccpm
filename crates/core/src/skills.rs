@@ -114,6 +114,7 @@ mod tests {
             version: "1.0.0".to_string(),
             author: "a".to_string(),
             install_path: format!(".claude/skills/{}/SKILL.md", id),
+            source: None,
         }
     }
 
