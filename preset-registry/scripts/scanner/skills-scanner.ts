@@ -3,6 +3,7 @@ import { mkdir, readdir, readFile, writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import { basename, dirname, join } from "node:path";
 import { parseFrontmatter } from "./frontmatter.js";
+import { fetchReadme } from "./searcher.js";
 
 export interface SkillRepo {
   owner: string;
@@ -24,12 +25,46 @@ export const SKILL_REPOS: SkillRepo[] = [
 
 const MAX_SKILLS_PER_REPO = 60;
 
+export interface RepoMeta {
+  stars: number;
+  language: string | null;
+  pushed_at: string;
+  readme: string | null;
+}
+
+const repoMetaCache = new Map<string, RepoMeta>();
+
+export async function fetchRepoMeta(octokit: Octokit, repoFullName: string): Promise<RepoMeta> {
+  const cached = repoMetaCache.get(repoFullName);
+  if (cached) return cached;
+  const [owner, repo] = repoFullName.split("/");
+  let stars = 0;
+  let language: string | null = null;
+  let pushed_at = "";
+  try {
+    const { data } = await octokit.repos.get({ owner, repo });
+    stars = data.stargazers_count ?? 0;
+    language = data.language ?? null;
+    pushed_at = data.pushed_at ?? "";
+  } catch {
+    // Leave defaults — repo may be private or rate-limited.
+  }
+  const readme = await fetchReadme(octokit, repoFullName);
+  const meta: RepoMeta = { stars, language, pushed_at, readme };
+  repoMetaCache.set(repoFullName, meta);
+  return meta;
+}
+
 export interface SkillSource {
   repo: string;
   url: string;
   path: string;
   branch: string;
   discovered_at: string;
+  stars?: number;
+  language?: string | null;
+  pushed_at?: string;
+  readme?: string | null;
 }
 
 export interface SkillEntry {
@@ -111,6 +146,7 @@ export async function discoverSkills(
       const name = fm.name || skillName;
       const description = fm.description || `Skill from ${repo.owner}/${repo.name}`;
 
+      const meta = await fetchRepoMeta(octokit, `${repo.owner}/${repo.name}`);
       const entry: SkillEntry = {
         id,
         name,
@@ -128,6 +164,10 @@ export async function discoverSkills(
           path: filePath,
           branch: repo.branch,
           discovered_at: new Date().toISOString(),
+          stars: meta.stars,
+          language: meta.language,
+          pushed_at: meta.pushed_at,
+          readme: meta.readme,
         },
       };
       all.push(entry);

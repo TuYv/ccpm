@@ -158,6 +158,7 @@ mod tests {
             args: vec!["-y".to_string(), format!("@example/{}", id)],
             required_env: vec![],
             optional_env: vec![],
+            source: None,
         }
     }
 

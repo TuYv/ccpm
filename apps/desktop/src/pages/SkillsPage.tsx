@@ -13,6 +13,8 @@ import {
   SectionLabel,
   Tag,
 } from "../components/ui";
+import { openExternal } from "../utils/openExternal";
+import MarkdownPreview from "../components/MarkdownPreview";
 
 const TOOL_LABEL: Record<string, string> = {
   claude: "Claude",
@@ -22,6 +24,11 @@ const TOOL_LABEL: Record<string, string> = {
 };
 
 const ALL = "All";
+
+function formatStars(n: number): string {
+  if (n >= 1000) return `${(n / 1000).toFixed(1)}k`;
+  return String(n);
+}
 
 const RefreshIcon = (
   <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -33,6 +40,28 @@ const RefreshIcon = (
 const PlusIcon = (
   <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round">
     <path d="M8 3v10M3 8h10" />
+  </svg>
+);
+
+const GithubIcon = (
+  <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+  </svg>
+);
+
+const ChevronIcon = ({ open }: { open: boolean }) => (
+  <svg
+    width="11"
+    height="11"
+    viewBox="0 0 12 12"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.6"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    style={{ transform: open ? "rotate(90deg)" : "rotate(0deg)", transition: "transform 0.15s" }}
+  >
+    <path d="M4 2L8 6L4 10" />
   </svg>
 );
 
@@ -53,6 +82,11 @@ export default function SkillsPage() {
   const [importPreview, setImportPreview] = useState<ImportedBundle | null>(null);
   const [pickerSkillId, setPickerSkillId] = useState<string | null>(null);
   const [importing, setImporting] = useState(false);
+  const [readmeOpen, setReadmeOpen] = useState<Record<string, boolean>>({});
+
+  function toggleReadme(id: string) {
+    setReadmeOpen((m) => ({ ...m, [id]: !m[id] }));
+  }
 
   const cardRefs = useRef<Record<string, HTMLDivElement | null>>({});
 
@@ -274,6 +308,56 @@ export default function SkillsPage() {
                     >
                       {skill.description}
                     </p>
+                    {skill.source?.repo && (
+                      <div
+                        className="mono"
+                        style={{
+                          display: "flex",
+                          gap: 8,
+                          flexWrap: "wrap",
+                          fontSize: 11,
+                          color: "var(--ink-3)",
+                          marginTop: 6,
+                        }}
+                      >
+                        <span>{skill.source.repo}</span>
+                        {typeof skill.source.stars === "number" && skill.source.stars > 0 && (
+                          <span>★ {formatStars(skill.source.stars)}</span>
+                        )}
+                        {skill.source.language && <span>· {skill.source.language}</span>}
+                      </div>
+                    )}
+                    {skill.source?.readme && (
+                      <div style={{ marginTop: 10, borderTop: "1px solid var(--hairline)", paddingTop: 10 }}>
+                        <button
+                          type="button"
+                          onClick={() => toggleReadme(skill.id)}
+                          style={{
+                            display: "flex",
+                            alignItems: "center",
+                            gap: 8,
+                            width: "100%",
+                            background: "transparent",
+                            border: 0,
+                            cursor: "pointer",
+                            textAlign: "left",
+                            color: "var(--ink-3)",
+                            padding: 0,
+                          }}
+                        >
+                          <ChevronIcon open={!!readmeOpen[skill.id]} />
+                          <SectionLabel>Upstream README</SectionLabel>
+                          <span className="mono" style={{ fontSize: 11, color: "var(--ink-3)", marginLeft: "auto" }}>
+                            {readmeOpen[skill.id] ? "收起" : "展开"}
+                          </span>
+                        </button>
+                        {readmeOpen[skill.id] && (
+                          <div style={{ marginTop: 10, maxHeight: 360, overflow: "auto" }}>
+                            <MarkdownPreview content={skill.source.readme} />
+                          </div>
+                        )}
+                      </div>
+                    )}
                     <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
                       <span
                         className="mono"
@@ -282,6 +366,19 @@ export default function SkillsPage() {
                         v{skill.version}
                       </span>
                       <span style={{ flex: 1 }} />
+                      {skill.source?.repo && (
+                        <Button
+                          size="sm"
+                          variant="subtle"
+                          onClick={() => openExternal(`https://github.com/${skill.source!.repo}`)}
+                          title={`在 GitHub 中打开 ${skill.source.repo}`}
+                        >
+                          <span style={{ display: "inline-flex", alignItems: "center", gap: 6 }}>
+                            {GithubIcon}
+                            <span>GitHub</span>
+                          </span>
+                        </Button>
+                      )}
                       {isInstalled ? (
                         <Button
                           size="sm"
