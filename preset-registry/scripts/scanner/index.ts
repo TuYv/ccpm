@@ -1,4 +1,5 @@
 import { Octokit } from "@octokit/rest";
+import { throttling } from "@octokit/plugin-throttling";
 import { mkdir, readFile, readdir, rm, writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import { join } from "node:path";
@@ -7,6 +8,7 @@ import { scoreHit } from "./scorer.js";
 import { normalizeToPreset, type PresetEntry } from "./normalizer.js";
 import { discoverSkills } from "./skills-scanner.js";
 import { discoverMcps } from "./mcps-scanner.js";
+import { runTranslations } from "./translator.js";
 
 const REGISTRY_DIR = process.env.REGISTRY_DIR ?? join(process.cwd(), "..", "..");
 const TOKEN = process.env.GITHUB_TOKEN;
@@ -15,6 +17,9 @@ if (!TOKEN) {
   process.exit(1);
 }
 
+const ThrottledOctokit = Octokit.plugin(throttling);
+const MAX_RETRIES = 2;
+
 type PresetSource = PresetEntry["source"];
 interface RootIndexEntry {
   id: string;
@@ -22,14 +27,29 @@ interface RootIndexEntry {
   description: string;
   tags?: string[];
   components?: string[];
-  version: string;
   tested_on: string;
   author: string;
   source?: PresetSource;
 }
 
 async function main() {
-  const octokit = new Octokit({ auth: TOKEN });
+  const octokit = new ThrottledOctokit({
+    auth: TOKEN,
+    throttle: {
+      onRateLimit: (retryAfter, options, _octokit, retryCount) => {
+        console.warn(
+          `[throttle] primary rate limit hit on ${options.method} ${options.url}; retry in ${retryAfter}s (attempt ${retryCount + 1}/${MAX_RETRIES})`,
+        );
+        return retryCount < MAX_RETRIES;
+      },
+      onSecondaryRateLimit: (retryAfter, options, _octokit, retryCount) => {
+        console.warn(
+          `[throttle] secondary rate limit hit on ${options.method} ${options.url}; retry in ${retryAfter}s (attempt ${retryCount + 1}/${MAX_RETRIES})`,
+        );
+        return retryCount < MAX_RETRIES;
+      },
+    },
+  });
   console.log("Searching CLAUDE.md (stars>500)…");
   let hits;
   try {
@@ -64,7 +84,6 @@ async function main() {
             name: entry.name,
             description: entry.description,
             tags: entry.tags,
-            version: entry.version,
             tested_on: entry.tested_on,
             author: entry.author,
             files: { "CLAUDE.md": "CLAUDE.md" },
@@ -96,7 +115,6 @@ async function main() {
           description: m.description,
           tags: m.tags ?? [],
           components: m.components ?? Object.keys(m.files ?? {}),
-          version: m.version,
           tested_on: m.tested_on,
           author: m.author,
           ...(m.source ? { source: m.source } : {}),
@@ -149,6 +167,15 @@ async function main() {
     await discoverMcps(octokit, REGISTRY_DIR);
   } catch (e) {
     console.error(`[mcps] discovery failed: ${e}`);
+  }
+
+  // ── Chinese summaries ───────────────────────────────────────────────────────
+  // Must run last: scanners overwrite per-item JSONs, so we backfill summary_zh
+  // from cache (and translate any new/changed items).
+  try {
+    await runTranslations(REGISTRY_DIR);
+  } catch (e) {
+    console.error(`[translate] step failed: ${e}`);
   }
 }
 

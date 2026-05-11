@@ -32,6 +32,14 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REGISTRY_DIR: ${{ github.workspace }}/preset-registry
+          # Chinese summary generation. Set ANTHROPIC_API_KEY in repo secrets to enable;
+          # if absent, the translation step is a no-op. Override the model / readme
+          # truncation / concurrency here without touching code.
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_BASE_URL: ${{ vars.ANTHROPIC_BASE_URL }}
+          TRANSLATION_MODEL: ${{ vars.TRANSLATION_MODEL || 'claude-haiku-4-5' }}
+          TRANSLATION_README_CHARS: ${{ vars.TRANSLATION_README_CHARS || '2000' }}
+          TRANSLATION_CONCURRENCY: ${{ vars.TRANSLATION_CONCURRENCY || '3' }}
         run: pnpm run scan
 
       - name: Commit changes
@@ -39,6 +47,7 @@ jobs:
           git config user.name "ccpm-scanner-bot"
           git config user.email "scanner@ccpm.local"
           git add preset-registry/index.json \
+                  preset-registry/translations.json \
                   preset-registry/presets/ \
                   preset-registry/skills/ \
                   preset-registry/mcps/
