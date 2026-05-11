@@ -1,0 +1,936 @@
+{
+  "version": "1",
+  "updated_at": "2026-05-11T09:38:57.089Z",
+  "entries": {
+    "preset:audiusproject-apps": {
+      "hash": "67ad5f278a9fa16d",
+      "summary_zh": "这是一个去中心化音乐流媒体平台的综合代码库，包含网页、移动端及应用开发包，适合想接入开放音乐协议或构建区块链音频应用的开发者。",
+      "translated_at": "2026-05-11T08:57:35.459Z"
+    },
+    "preset:apache-dolphinscheduler": {
+      "hash": "2b8362cee3fbc321",
+      "summary_zh": "这是一款现代数据工作流调度平台，能用低代码方式快速搭建高性能任务流，帮你轻松搞定复杂数据管道里的任务依赖与调度难题。",
+      "translated_at": "2026-05-11T08:57:37.654Z"
+    },
+    "preset:authorizerdev-authorizer": {
+      "hash": "525091d2f9ac3f71",
+      "summary_zh": "这是一个开源的私有化身份认证与授权服务，支持自带数据库，帮你快速为应用接入账号体系和权限管理，把用户数据牢牢握在自己手里，彻底告别厂商锁定。",
+      "translated_at": "2026-05-11T08:58:17.520Z"
+    },
+    "preset:adamlyttleapps-claude-skill-aso-appstore-screenshots": {
+      "hash": "ffe225b3e2695552",
+      "summary_zh": "这是一款Claude Code扩展，能分析iOS代码提取卖点，用AI自动生成高转化率的App Store截图，适合开发者快速搞定专业的上架展示图。",
+      "translated_at": "2026-05-11T08:58:29.308Z"
+    },
+    "preset:bytechefhq-bytechef": {
+      "hash": "4c6d807eed961ed0",
+      "summary_zh": "这是一个开源的AI原生低代码平台，能帮你轻松打通内部系统与各类SaaS，搞定跨系统的工作流自动化与AI智能体集成。",
+      "translated_at": "2026-05-11T08:58:47.789Z"
+    },
+    "preset:canopy-network-canopy": {
+      "hash": "f077b60ed1291266",
+      "summary_zh": "用Go实现的区块链协议，新链可通过递归机制相互引导并独立运行，适合快速创建区块链、共享安全及跨链互操作的场景。",
+      "translated_at": "2026-05-11T08:58:59.734Z"
+    },
+    "preset:bayramannakov-claude-reflect": {
+      "hash": "fd1ad8ec218f43a2",
+      "summary_zh": "这是一个让Claude Code长记性的自学习系统，能记录纠正与偏好避免AI重复犯错，还能把高频操作转为快捷命令，适合想深度定制专属工作流的开发者。",
+      "translated_at": "2026-05-11T08:59:06.401Z"
+    },
+    "preset:community-shaders-skyrim-community-shaders": {
+      "hash": "fc8bad5235441357",
+      "summary_zh": "这是一款《上古卷轴5》的图形增强插件，能帮你用社区共享的高级着色器大幅改善游戏画面，适合追求极致视觉或开发画面Mod的玩家。",
+      "translated_at": "2026-05-11T08:59:13.385Z"
+    },
+    "preset:coturn-coturn": {
+      "hash": "edbaf1663b5c16ed",
+      "summary_zh": "这是一款开源的TURN和STUN服务器，能解决音视频通信中的NAT穿透难题，非常适合WebRTC或VoIP等需要跨网互联的场景。",
+      "translated_at": "2026-05-11T08:59:25.492Z"
+    },
+    "preset:cypress-io-cypress": {
+      "hash": "2a13692d1183ebb9",
+      "summary_zh": "专为浏览器打造的前端测试框架，解决了传统测试难写且运行不稳定的问题，让你能轻松可靠地验证Web应用功能，非常适合需要快速保障前端质量的开发场景。",
+      "translated_at": "2026-05-11T08:59:43.617Z"
+    },
+    "preset:deanpeters-product-manager-skills": {
+      "hash": "92044e640e648c5f",
+      "summary_zh": "专给AI智能体用的产品经理技能框架，能让Claude Code等AI掌握专业产品管理方法，适合需要AI深度参与产品规划和需求管理的场景。",
+      "translated_at": "2026-05-11T09:00:05.923Z"
+    },
+    "preset:czy0729-bangumi": {
+      "hash": "f562aaf3667adc68",
+      "summary_zh": "这是一款无广告且高度自定义的bgm.tv第三方手机客户端，专为移动端重新设计，解决网页端操作不便的问题，方便ACG爱好者随时管理追番与交流。",
+      "translated_at": "2026-05-11T09:00:08.197Z"
+    },
+    "preset:debugtheworldbot-keystats": {
+      "hash": "3936169e793e4ee5",
+      "summary_zh": "这是一款轻量的桌面状态栏小工具，能记录你每天使用键盘和鼠标的各项数据，适合想量化电脑操作强度或了解自己使用习惯的用户。",
+      "translated_at": "2026-05-11T09:00:09.357Z"
+    },
+    "preset:enso-org-enso": {
+      "hash": "dd615bfad4db05d7",
+      "summary_zh": "这是一款可视化的数据分析与处理平台，能把繁琐的数据清洗与整合变成可复用的自动化工作流，非常适合财务或运营等人员低代码搞定日常数据。",
+      "translated_at": "2026-05-11T09:00:33.063Z"
+    },
+    "preset:giuseppe99barchetta-suggestarr": {
+      "hash": "747ebc4951daeff4",
+      "summary_zh": "这是一款媒体自动化工具，能读取你在Jellyfin等平台的观影记录，结合AI自动推荐并请求下载新片，帮你告别片荒，让媒体库常看常新。",
+      "translated_at": "2026-05-11T09:00:45.809Z"
+    },
+    "preset:gitpod-io-gitpod": {
+      "hash": "e01564d33591648d",
+      "summary_zh": "这是一款按需启动云端开发环境的平台，能帮你免去繁琐的本地配置，快速获得一致且安全的工作区，非常适合团队协作和代码审查。",
+      "translated_at": "2026-05-11T09:01:01.642Z"
+    },
+    "preset:gnachman-iterm2": {
+      "hash": "55964e830d6a7d44",
+      "summary_zh": "这是 macOS 上的强大终端替代工具，专治系统自带终端功能简陋的痛点，提供更丰富的高阶玩法与便捷交互，适合需要高频敲命令行的开发者提升效率。",
+      "translated_at": "2026-05-11T09:01:26.538Z"
+    },
+    "preset:hapelee-legado-with-md3": {
+      "hash": "f34c9a0afdfa94b4",
+      "summary_zh": "这是一款采用 Material Design 3 全新设计的阅读应用，适合追求现代流畅界面、需要详细阅读记录，以及看重平板和漫画阅读体验的用户。",
+      "translated_at": "2026-05-11T09:01:41.986Z"
+    },
+    "preset:harbor-framework-harbor": {
+      "hash": "1ac750c99f24f194",
+      "summary_zh": "这是一个AI智能体评估与强化学习环境框架，适合用来对各种智能体跑基准测试、做大规模实验或进行强化学习优化。",
+      "translated_at": "2026-05-11T09:01:42.390Z"
+    },
+    "preset:hascheksolutions-pictshare": {
+      "hash": "ba8d1f9a7a6f9fa9",
+      "summary_zh": "这是一个可自托管的多媒体与文本托管服务，帮你搭建专属图床、视频库和剪贴板，适合不想依赖第三方平台、需要完全掌控数据的场景。",
+      "translated_at": "2026-05-11T09:01:51.788Z"
+    },
+    "preset:hook0-hook0": {
+      "hash": "9550dafaa6cbad39",
+      "summary_zh": "这是一款开源的Webhook服务端，能帮你快速为产品提供Webhook功能，省去重复开发底层逻辑的麻烦，适合需要向用户推送事件通知的场景。",
+      "translated_at": "2026-05-11T09:02:24.265Z"
+    },
+    "preset:javascript-obfuscator-javascript-obfuscator": {
+      "hash": "0dc7a9bcb59e0e5d",
+      "summary_zh": "这是一款JS与Node.js代码混淆工具，能把源码变得极难读懂，专防代码被逆向破解，适合需要保护前端核心逻辑的场景。",
+      "translated_at": "2026-05-11T09:02:25.285Z"
+    },
+    "preset:interpretml-interpret": {
+      "hash": "db203055c041ca9e",
+      "summary_zh": "这是一款机器学习可解释性工具包，既能训练白盒模型也能解释黑盒模型，帮你摸清AI的决策逻辑，适合需要排查错误、检测偏见、满足合规或医疗金融等高风险场景。",
+      "translated_at": "2026-05-11T09:02:34.668Z"
+    },
+    "preset:jgraph-drawio-mcp": {
+      "hash": "4cdcc9543ebcc00d",
+      "summary_zh": "这是一个连接大模型与画图工具的服务，让AI能直接在对话中生成或编辑图表，适合想用AI辅助快速出图、边聊边画的场景。",
+      "translated_at": "2026-05-11T09:02:52.436Z"
+    },
+    "preset:johnmarktaylor91-torchlens": {
+      "hash": "8ca103d9de13c56a",
+      "summary_zh": "这是一个 PyTorch 模型分析工具，只需一行代码就能提取每步张量运算的结果并自动可视化计算图，适合需要调试或深入剖析模型内部结构的场景。",
+      "translated_at": "2026-05-11T09:02:52.812Z"
+    },
+    "preset:kimlimjustin-xplorer": {
+      "hash": "85b63cba68b02e44",
+      "summary_zh": "这是一款支持AI辅助与深度定制的跨平台文件管理器，适合嫌弃系统自带工具老旧、追求智能化和高颜值文件整理体验的用户。",
+      "translated_at": "2026-05-11T09:03:30.448Z"
+    },
+    "preset:keygraphhq-shannon": {
+      "hash": "233b61fedb387b7f",
+      "summary_zh": "面向Web和API的AI白盒渗透测试工具，能分析源码并执行真实攻击验证漏洞。适合每次发版时自动跑，解决人工渗透频率低带来的安全盲区，防止带病上线。",
+      "translated_at": "2026-05-11T09:03:44.651Z"
+    },
+    "preset:kostub-iosmath": {
+      "hash": "64e92b838ddf6842",
+      "summary_zh": "专为 iOS/macOS 打造的原生公式渲染库，无需加载网页即可排版 LaTeX，呈现与 TeX 一致的精美效果，适合教育或科学类应用展示复杂算式。",
+      "translated_at": "2026-05-11T09:03:55.489Z"
+    },
+    "preset:lerna-lerna": {
+      "hash": "2fa6438c33a10225",
+      "summary_zh": "这是一个单仓库构建工具，能帮你在同一代码库下轻松管理和发布多个 JS/TS 包，非常适合采用 monorepo 架构的项目。",
+      "translated_at": "2026-05-11T09:03:56.372Z"
+    },
+    "preset:lich0821-ccnexus": {
+      "hash": "c4df9c07897183e3",
+      "summary_zh": "一款专为AI编程工具设计的智能网关，能自动轮换API端点与Token并打通各家大模型接口，解决单点故障、额度受限和多平台调用的痛点。",
+      "translated_at": "2026-05-11T09:04:23.149Z"
+    },
+    "preset:lingyan000-fluxdo": {
+      "hash": "6711cfe4badad391",
+      "summary_zh": "专为 Linux.do 社区打造的第三方客户端，支持手机和电脑多端使用。它提供流畅优雅的界面和完整的互动功能，适合想在不同设备上舒适逛论坛的用户。",
+      "translated_at": "2026-05-11T09:04:31.858Z"
+    },
+    "preset:livekit-agents-js": {
+      "hash": "902aafca6c4aac0c",
+      "summary_zh": "一款用于构建实时多模态 AI 智能体的 Node.js 框架，适合开发能听、能看、能对话的智能语音助手。",
+      "translated_at": "2026-05-11T09:04:44.218Z"
+    },
+    "preset:lmcache-lmcache": {
+      "hash": "e188995596f2dd40",
+      "summary_zh": "这是一个极速的KV缓存层，专门用来给大语言模型推理加速，适合需要解决模型推理慢、想大幅提升生成速度的场景。",
+      "translated_at": "2026-05-11T09:04:46.675Z"
+    },
+    "preset:modelengine-group-nexent": {
+      "hash": "e68d28a4fcdfa299",
+      "summary_zh": "这是一个零代码的AI智能体构建平台，让你用自然语言代替复杂的拖拽编排，直接生成生产级智能体，适合想快速落地AI应用但不想写复杂代码的开发者。",
+      "translated_at": "2026-05-11T09:05:06.877Z"
+    },
+    "preset:mattermost-mattermost-mobile": {
+      "hash": "9f8b9f7ae492c7af",
+      "summary_zh": "这是开源团队协作平台的手机客户端，帮自建通讯的团队随时随地沟通，适合寻找 Slack 替代方案且注重数据隐私的企业。",
+      "translated_at": "2026-05-11T09:05:09.889Z"
+    },
+    "preset:mihai-dinculescu-tapo": {
+      "hash": "e471171b674e7dee",
+      "summary_zh": "专为TP-Link Tapo智能设备打造的控制工具，支持通过Rust、Python或MCP调用，方便开发者在代码中直接操控和联动各类智能家居硬件。",
+      "translated_at": "2026-05-11T09:05:24.319Z"
+    },
+    "preset:nvidia-trt-samples-for-hackathon-cn": {
+      "hash": "c3e4e0c7f3f57888",
+      "summary_zh": "这是面向初学者的 TensorRT 实战教程与代码合集，提供丰富的编程范例及历届比赛资料，能帮开发者快速入门模型部署与优化，也适合准备 Hackathon 比赛。",
+      "translated_at": "2026-05-11T09:05:52.495Z"
+    },
+    "preset:oldwinter-knowledge-garden": {
+      "hash": "9716c0594314bb5a",
+      "summary_zh": "一个基于双链笔记的个人知识库与数字花园，完整分享了日常阅读写作和Obsidian从入门到精通的工作流，适合想学习笔记管理和搭建第二大脑的人参考借鉴。",
+      "translated_at": "2026-05-11T09:05:56.877Z"
+    },
+    "preset:nanocoai-nanoclaw": {
+      "hash": "1c62572639027f3d",
+      "summary_zh": "这是一款用容器隔离运行智能体的轻量AI助手，解决了同类工具过于臃肿且缺乏系统级安全的问题，适合需要安全连接各大聊天软件并定制专属助手的用户。",
+      "translated_at": "2026-05-11T09:06:02.060Z"
+    },
+    "preset:openclaw-skills": {
+      "hash": "763817cf6f0105bd",
+      "summary_zh": "这是 Clawhub 网站全量技能与历史版本的存档库，适合需要离线备份、找回旧版技能或防止资源丢失的场景。",
+      "translated_at": "2026-05-11T09:06:15.796Z"
+    },
+    "preset:nikolays-postgres-dba": {
+      "hash": "dacdad55a1e91bf4",
+      "summary_zh": "一款免代理的PostgreSQL诊断工具集，纯SQL编写，在psql中即可运行，帮助DBA和开发者快速排查数据膨胀、锁等待及索引健康等日常性能问题。",
+      "translated_at": "2026-05-11T09:06:23.711Z"
+    },
+    "preset:opendatalab-labelu": {
+      "hash": "190dc1d55109c136",
+      "summary_zh": "一款支持AI自动标注的开源多模态数据标注平台，能轻松搞定图片、音视频等标注任务，非常适合给AI模型训练准备高质量数据。",
+      "translated_at": "2026-05-11T09:06:37.361Z"
+    },
+    "preset:posit-dev-positron": {
+      "hash": "d5c58765ecdac95a",
+      "summary_zh": "这是一款基于VS Code的下一代数据科学开发环境，支持多语言编程与数据探索，适合需要兼顾代码分析与可复现报告产出的数据工作者。",
+      "translated_at": "2026-05-11T09:07:04.822Z"
+    },
+    "preset:prql-prql": {
+      "hash": "c1904f826ef5b398",
+      "summary_zh": "这是一种现代数据转换语言，用来替代繁琐的SQL。它用直观的管道流写复杂查询，解决SQL逻辑不连贯的问题，且能编译成SQL在任何数据库使用。",
+      "translated_at": "2026-05-11T09:07:05.250Z"
+    },
+    "preset:qwibitai-nanoclaw": {
+      "hash": "0943a2047e0bb5e1",
+      "summary_zh": "一款轻量安全的AI代理助手，用容器隔离运行以避免权限风险，解决传统工具过于臃肿的问题，适合在各类聊天软件中安全跑自动化和定制任务。",
+      "translated_at": "2026-05-11T09:07:28.675Z"
+    },
+    "preset:rajnandan1-kener": {
+      "hash": "5cfff22a969a5bc3",
+      "summary_zh": "这是一个开箱即用且高颜值的服务状态页面工具，能帮团队轻松向用户展示系统的运行状况与可用性。",
+      "translated_at": "2026-05-11T09:07:30.336Z"
+    },
+    "preset:ray-project-ray": {
+      "hash": "fbc2056b3c7876b3",
+      "summary_zh": "这是一个AI计算引擎，专门解决机器学习和Python应用的分布式扩展难题，非常适合大模型训练、调参及模型部署等场景。",
+      "translated_at": "2026-05-11T09:07:34.105Z"
+    },
+    "preset:saltstack-salt": {
+      "hash": "a1337e692a440203",
+      "summary_zh": "这是一款事件驱动的自动化引擎，能大规模部署、配置和管理复杂的IT基础设施与应用，帮你确保系统状态一致，避免配置偏差。",
+      "translated_at": "2026-05-11T09:08:07.575Z"
+    },
+    "preset:ruzin-stenoai": {
+      "hash": "e7bac27b4f9a8c34",
+      "summary_zh": "一款主打隐私的本地AI会议记录工具，所有数据均在设备端处理以防泄露，非常适合金融、法律和医疗等对保密要求极高的专业人士用来记录与总结会议。",
+      "translated_at": "2026-05-11T09:08:13.489Z"
+    },
+    "preset:smi2-phpclickhouse": {
+      "hash": "8d7353330d3dc8f9",
+      "summary_zh": "这是一个轻量级的 PHP 客户端，能帮你在项目里轻松高效地操作 ClickHouse，解决原生交互繁琐和内存瓶颈的问题，非常适合大数据分析场景。",
+      "translated_at": "2026-05-11T09:08:15.122Z"
+    },
+    "preset:software-mansion-react-native-audio-api": {
+      "hash": "32acb5713d26a091",
+      "summary_zh": "基于 Web Audio API 规范的高性能音频引擎，让你在 React Native 中能像写网页一样生成和处理音频，适合开发音乐类或需要复杂声音交互的跨平台应用。",
+      "translated_at": "2026-05-11T09:08:45.764Z"
+    },
+    "preset:stripe-stripe-node": {
+      "hash": "c610081cb5190a77",
+      "summary_zh": "专为 Node.js 打造的 Stripe 开发包，能帮你在服务端轻松调用 API，快速搞定支付和客户管理等业务接入。",
+      "translated_at": "2026-05-11T09:08:56.808Z"
+    },
+    "preset:stephengpope-thepopebot": {
+      "hash": "265436eef09d65ed",
+      "summary_zh": "这是一个全天候自主运行的AI代理，融合了聊天与编程环境。它能自动帮你写代码、提PR并通知结果，适合需要不间断自动化处理开发任务的场景。",
+      "translated_at": "2026-05-11T09:09:19.035Z"
+    },
+    "preset:studyzy-imewlconverter": {
+      "hash": "153d6e8e8c68dc47",
+      "summary_zh": "这是一款免费的输入法词库转换工具，专门解决换输入法时词库不兼容的烦恼，适合想在不同输入法间无缝迁移个人词库的用户。",
+      "translated_at": "2026-05-11T09:09:19.531Z"
+    },
+    "preset:sugyan-claude-code-webui": {
+      "hash": "c5660dbfa1595fba",
+      "summary_zh": "给Claude命令行套上网页聊天界面的工具，把终端操作变成直观的网页对话，适合不爱敲命令或想在手机上随时写代码的人。",
+      "translated_at": "2026-05-11T09:09:39.571Z"
+    },
+    "preset:surrealdb-surrealdb": {
+      "hash": "8d08484fe8bc4d02",
+      "summary_zh": "这是一款结合文档与图模型的分布式数据库，专为实时Web场景打造，自带后端即服务能力，能帮你轻松应对复杂关系处理与实时协作需求。",
+      "translated_at": "2026-05-11T09:09:57.125Z"
+    },
+    "preset:tesslateai-opensail": {
+      "hash": "4a7f5ce555b883c6",
+      "summary_zh": "这是一款开源的AI智能体与自动化工作流桌面应用，能将邮件、工单等重复性业务变成自动程序，适合需要在自己服务器上完全掌控AI代理、摆脱繁琐流程的团队。",
+      "translated_at": "2026-05-11T09:09:58.527Z"
+    },
+    "preset:uniswap-universal-router": {
+      "hash": "6decb12729d2c28c",
+      "summary_zh": "这是一个代币与NFT交易路由器，能让你在单笔交易里同时兑换代币并购买多平台NFT，省去分开操作的麻烦，特别适合需要组合复杂交易策略的场景。",
+      "translated_at": "2026-05-11T09:10:30.233Z"
+    },
+    "preset:tracer-cloud-opensre": {
+      "hash": "68ec4036925a451e",
+      "summary_zh": "这是一款构建AI运维智能体的开源框架，能对接现有监控工具并自定义工作流，实现故障的自动调查与修复，适合需要提升排障自动化水平的团队。",
+      "translated_at": "2026-05-11T09:10:33.735Z"
+    },
+    "preset:twcclegg-libphonenumber-csharp": {
+      "hash": "fa1f34f2ad78edf2",
+      "summary_zh": "谷歌电话号码处理库的 C# 版本，专治 .NET 项目中国际手机号的解析与格式化难题，让你不再头疼复杂的跨国号码规则。",
+      "translated_at": "2026-05-11T09:10:49.642Z"
+    },
+    "preset:zippland-perler-beads": {
+      "hash": "c86793d48a82b1fc",
+      "summary_zh": "把任意图片一键转成拼豆图纸的工具，解决手工做底稿繁琐和备料难的问题。它能自动匹配品牌色号，直接导出带色号标注的图纸和采购清单，适合拼豆玩家快速做图和买豆。",
+      "translated_at": "2026-05-11T09:11:09.654Z"
+    },
+    "preset:vm0-ai-vm0": {
+      "hash": "a75dbbaee148ce90",
+      "summary_zh": "这是一个能在Slack里像真同事一样接手实际业务的AI助手，帮你搞定日常繁琐工作，适合需要减轻团队负担、提升执行效率的场景。",
+      "translated_at": "2026-05-11T09:11:24.191Z"
+    },
+    "skill:anthropics-skills-algorithmic-art": {
+      "hash": "039d2f417a87ca7e",
+      "summary_zh": "这是一个用 p5.js 生成原创算法艺术的工具。当你需要用代码创作流场、粒子等生成艺术，又想避免抄袭和版权纠纷时，用它就对了。",
+      "translated_at": "2026-05-11T09:11:38.402Z"
+    },
+    "skill:anthropics-skills-canvas-design": {
+      "hash": "324342050a6323c0",
+      "summary_zh": "这是一个帮你生成原创视觉设计的AI技能，适合制作海报或艺术图等静态设计场景，能直接导出PNG和PDF格式，轻松搞定设计且规避版权风险。",
+      "translated_at": "2026-05-11T09:11:40.835Z"
+    },
+    "skill:anthropics-skills-brand-guidelines": {
+      "hash": "4fdf0f4cfb81377d",
+      "summary_zh": "它是一套Claude的视觉规范技能，能让生成的内容自动套用Anthropic的官方配色与排版，解决AI产出物不符合公司品牌视觉标准的问题。",
+      "translated_at": "2026-05-11T09:11:45.170Z"
+    },
+    "skill:anthropics-skills-claude-api": {
+      "hash": "c033a499da1067d7",
+      "summary_zh": "这是一个辅助 Anthropic SDK 开发的技能包，能帮你快速构建调试接口，轻松搞定模型版本间的代码迁移及缓存等高级功能配置。",
+      "translated_at": "2026-05-11T09:12:22.907Z"
+    },
+    "skill:anthropics-skills-doc-coauthoring": {
+      "hash": "176536fef2564b32",
+      "summary_zh": "这是一个引导协作撰写文档的结构化工作流，适合写技术规范、提案或决策文档时使用，帮你高效对齐背景、迭代打磨内容并确保易读。",
+      "translated_at": "2026-05-11T09:12:27.483Z"
+    },
+    "skill:anthropics-skills-docx": {
+      "hash": "d876292716286856",
+      "summary_zh": "这是一个专为AI助手设计的文档处理技能，让AI能深度操作排版复杂的Word文件，适合需要自动生成专业文档或批量提取修改内容的场景。",
+      "translated_at": "2026-05-11T09:12:33.816Z"
+    },
+    "skill:anthropics-skills-frontend-design": {
+      "hash": "18f45586a35275f4",
+      "summary_zh": "这是一个供 AI 调用的前端设计技能包，能生成摆脱机器味、达到生产级的高质量网页代码与 UI，适合在搭建落地页、看板、组件或美化界面时使用。",
+      "translated_at": "2026-05-11T09:13:02.200Z"
+    },
+    "skill:anthropics-skills-internal-comms": {
+      "hash": "21c8dab41e16ab73",
+      "summary_zh": "一套专为企业内部文案设计的模板资源，能指导AI按公司偏好的格式撰写工作汇报、事故通报等文档，解决生成内容不符合内部行文规范的问题。",
+      "translated_at": "2026-05-11T09:13:03.489Z"
+    },
+    "skill:anthropics-skills-pdf": {
+      "hash": "9e97bd2cf656a47a",
+      "summary_zh": "让 AI 助手一站式搞定 PDF 文件，能提取图文表格、OCR 识别，还能合并拆分、加水印、填表单或加解密，适合需要频繁处理和整理 PDF 文档的场景。",
+      "translated_at": "2026-05-11T09:13:11.155Z"
+    },
+    "skill:anthropics-skills-mcp-builder": {
+      "hash": "4fd8399d071eade8",
+      "summary_zh": "一份教你开发大模型MCP服务器和技能的指南，让它能对接外部服务并按特定流程执行专业任务，适合需要给大模型外挂工具或定制专属工作流的场景。",
+      "translated_at": "2026-05-11T09:13:13.817Z"
+    },
+    "skill:anthropics-skills-skill-creator": {
+      "hash": "3082d2f3476f0f70",
+      "summary_zh": "这是一个帮Claude开发、测试和优化专属技能包的工具。适合从零创建新技能、评估技能表现，或优化技能描述以提升触发准确率的场景，让AI更稳定地完成特定任务。",
+      "translated_at": "2026-05-11T09:13:50.767Z"
+    },
+    "skill:anthropics-skills-pptx": {
+      "hash": "78d97717869f3908",
+      "summary_zh": "这是让AI助手直接处理PPT的插件，能帮你自动生成、解析或修改合并幻灯片，适合需要快速制作汇报材料、提取内容或自动化编辑排版的场景。",
+      "translated_at": "2026-05-11T09:13:54.675Z"
+    },
+    "skill:anthropics-skills-slack-gif-creator": {
+      "hash": "ea1dda56c5fec233",
+      "summary_zh": "专给Slack做动图的工具包，帮你解决普通动图不适配平台限制的问题，确保生成的图完美兼容，适合需要按需快速制作专属聊天动图的场景。",
+      "translated_at": "2026-05-11T09:14:10.424Z"
+    },
+    "skill:anthropics-skills-template": {
+      "hash": "d7988b927d8c8381",
+      "summary_zh": "这是一套供Claude动态加载的指令与资源包，能让它按特定规范重复完成专业任务，适合定制企业文档、专属数据分析或自动化工作流等场景。",
+      "translated_at": "2026-05-11T09:14:13.165Z"
+    },
+    "skill:anthropics-skills-web-artifacts-builder": {
+      "hash": "76b70ab1154655a0",
+      "summary_zh": "这是一套帮Claude生成复杂网页应用的工具，专治需要状态管理、路由和UI组件库的复杂交互场景，不适合写简单的单页面。",
+      "translated_at": "2026-05-11T09:14:41.198Z"
+    },
+    "skill:anthropics-skills-webapp-testing": {
+      "hash": "21b1cf55a89052ac",
+      "summary_zh": "这是一个基于Playwright的本地网页测试工具包，能模拟用户与网页交互，帮你搞定前端功能验证、界面调试和日志排查等自动化测试场景。",
+      "translated_at": "2026-05-11T09:15:05.226Z"
+    },
+    "skill:anthropics-skills-theme-factory": {
+      "hash": "e287407b581251b7",
+      "summary_zh": "专给各类文档和网页等内容统一样式的工具包，支持套用预设主题或随时生成新主题，解决多格式产出物风格杂乱的问题，适合需要快速换肤及保持品牌视觉一致的场景。",
+      "translated_at": "2026-05-11T09:15:22.049Z"
+    },
+    "skill:cexll-myclaude-browser": {
+      "hash": "09f62fa2f7205c4f",
+      "summary_zh": "这是一个基于CDP的网页自动化工具，帮你操控Chrome完成远程调试、页面交互、执行脚本或截图等任务，无需额外搭建MCP服务。",
+      "translated_at": "2026-05-11T09:15:53.073Z"
+    },
+    "skill:anthropics-skills-xlsx": {
+      "hash": "d3b2fac789b74202",
+      "summary_zh": "这项技能让AI助手能直接操作电子表格，专门解决AI无法处理Excel或CSV等表格文件的问题，非常适合需要让AI代为整理、编辑或生成表格数据的场景。",
+      "translated_at": "2026-05-11T09:15:59.912Z"
+    },
+    "skill:cexll-myclaude-codeagent": {
+      "hash": "6c61e177f85d4cef",
+      "summary_zh": "这是一个多模型AI编程工作流系统，能调度Claude、Gemini等大模型，通过多智能体协作，自动完成需求拆解、功能开发、调试与重构等日常开发任务。",
+      "translated_at": "2026-05-11T09:16:30.499Z"
+    },
+    "skill:cexll-myclaude-dev": {
+      "hash": "3023879bb19f0301",
+      "summary_zh": "这是一个极简的AI多智能体开发工作流，能自动搞定从梳理需求、写代码到跑测试的全流程并保障高测试覆盖率，适合想全自动化交付功能的开发团队。",
+      "translated_at": "2026-05-11T09:17:01.877Z"
+    },
+    "skill:cexll-myclaude-do": {
+      "hash": "ea7074d941aa477d",
+      "summary_zh": "这是一套能读懂现有代码的AI自动化开发工作流，通过调度多个AI助手按规范流程协同开发新功能，适合需要告别无序开发、高效推进工程进度的场景。",
+      "translated_at": "2026-05-11T09:17:05.655Z"
+    },
+    "skill:cexll-myclaude-harness": {
+      "hash": "939ea4865e56a715",
+      "summary_zh": "这是一个专为长耗时AI智能体设计的工作流系统，能解决任务中途崩溃丢失进度、跨上下文窗口难衔接的问题，支持断点恢复，适合需拆分多子任务并跨会话执行的复杂开发场景。",
+      "translated_at": "2026-05-11T09:17:23.013Z"
+    },
+    "skill:cexll-myclaude-product-requirements": {
+      "hash": "06d12b11fb57179d",
+      "summary_zh": "相当于一个AI产品经理，通过多轮对话引导你梳理和完善模糊的需求，并自动生成专业PRD，适合项目初期需要明确需求或撰写产品文档的场景。",
+      "translated_at": "2026-05-11T09:17:39.302Z"
+    },
+    "skill:cexll-myclaude-omo": {
+      "hash": "c2a7123268b307da",
+      "summary_zh": "这是一个多智能体编排工具，能根据任务风险智能调度AI组合，解决从代码分析、排查bug到修复落地的开发难题。",
+      "translated_at": "2026-05-11T09:17:39.796Z"
+    },
+    "skill:cexll-myclaude-prototype-prompt-generator": {
+      "hash": "22683726f31564c2",
+      "summary_zh": "专为UI/UX设计打造的提示词生成工具，当你需要设计网页或移动应用时，它能快速输出结构化的详细设计规范，帮你轻松搞定原型文档。",
+      "translated_at": "2026-05-11T09:17:57.557Z"
+    },
+    "skill:cexll-myclaude-skill-install": {
+      "hash": "31a2e6092e45d0c8",
+      "summary_zh": "这是一款从 GitHub 仓库安装 Claude 技能的工具，内置安全扫描。它解决了直接引入外部代码的安全顾虑，适合需要浏览可用技能并安全扩展 Claude 环境的开发者。",
+      "translated_at": "2026-05-11T09:18:17.781Z"
+    },
+    "skill:cexll-myclaude-sparv": {
+      "hash": "c879f4d4cfa2384f",
+      "summary_zh": "这是一套极简的五步AI编程工作流，内置规范审查与风险检测机制，解决AI写代码容易跑偏或失控的痛点，适合对安全与稳定性要求极高的开发场景。",
+      "translated_at": "2026-05-11T09:18:25.040Z"
+    },
+    "skill:cexll-myclaude-test-cases": {
+      "hash": "6b59fdf38c03f911",
+      "summary_zh": "这是一个能根据需求文档自动生成详尽测试用例的工具，帮你省去手动梳理测试场景和编写测试文档的繁琐，非常适合QA规划与质量保障。",
+      "translated_at": "2026-05-11T09:18:30.217Z"
+    },
+    "skill:composiohq-awesome-claude-skills-21risk-automation": {
+      "hash": "fa42b768a72f7117",
+      "summary_zh": "这是一款基于 Composio 的自动化工具，能让 AI 代理直接调用并执行 21risk 平台的风控任务，适合需要提升风险管理效率的场景。",
+      "translated_at": "2026-05-11T09:18:43.338Z"
+    },
+    "skill:composiohq-awesome-claude-skills-ably-automation": {
+      "hash": "5ac134e31b5f6d2b",
+      "summary_zh": "这是一个通过 Composio 自动执行 Ably 任务的工具，适合需要让 AI 代理直接操控 Ably 平台、省去繁琐手动操作的开发场景。",
+      "translated_at": "2026-05-11T09:18:50.016Z"
+    },
+    "skill:composiohq-awesome-claude-skills-2chat-automation": {
+      "hash": "3f29cdba5c117f9d",
+      "summary_zh": "这是一个基于MCP的2chat自动化工具，能帮你自动执行2chat上的重复性操作，适合需要批量处理消息或提升客服沟通效率的场景。",
+      "translated_at": "2026-05-11T09:19:00.490Z"
+    },
+    "skill:composiohq-awesome-claude-skills-abstract-automation": {
+      "hash": "88fc9b16fe2a9b52",
+      "summary_zh": "它是一款自动化工具，能帮你自动处理Abstract设计平台里的各项任务，适合需要省去繁琐手动操作、让AI简化设计协作流程的场景。",
+      "translated_at": "2026-05-11T09:19:14.204Z"
+    },
+    "skill:composiohq-awesome-claude-skills-abuselpdb-automation": {
+      "hash": "63c02fd873126e2b",
+      "summary_zh": "这是一款自动化处理IP滥用查询的工具，能帮你自动对接AbuseIPDB检查黑名单与滥用记录，省去手动操作，适合服务器安全防护与自动化运维场景。",
+      "translated_at": "2026-05-11T09:19:39.034Z"
+    },
+    "skill:composiohq-awesome-claude-skills-abyssale-automation": {
+      "hash": "37ae6af044fc8bae",
+      "summary_zh": "它是一款借助 Composio 自动执行 Abyssale 任务的工具，适合需要让 AI 代理直接生成和管理营销图片的场景，免去手动操作。",
+      "translated_at": "2026-05-11T09:19:48.030Z"
+    },
+    "skill:composiohq-awesome-claude-skills-accelo-automation": {
+      "hash": "1a5666d64b006692",
+      "summary_zh": "这是一款借助AI助手实现Accelo业务平台任务自动化的工具，能帮你告别繁琐的手动操作，适合需要提升日常办公效率的场景。",
+      "translated_at": "2026-05-11T09:19:57.236Z"
+    },
+    "skill:composiohq-awesome-claude-skills-accredible-certificates-automation": {
+      "hash": "73acefa8d71c651f",
+      "summary_zh": "这是一个让AI自动处理Accredible数字证书的插件，适合需要批量发放和管理证书的场景，帮你省去繁琐的手动操作。",
+      "translated_at": "2026-05-11T09:20:08.390Z"
+    },
+    "skill:composiohq-awesome-claude-skills-addresszen-automation": {
+      "hash": "c7f9273647e6d21d",
+      "summary_zh": "这是一个基于Composio的自动化连接器，能帮你自动处理Addresszen的地址验证和清洗任务，适合需要把地址处理无缝接入AI或自动化工作流的场景。",
+      "translated_at": "2026-05-11T09:20:37.211Z"
+    },
+    "skill:composiohq-awesome-claude-skills-active-campaign-automation": {
+      "hash": "e8efaeae242a33e3",
+      "summary_zh": "这是一个让AI直接操作ActiveCampaign的工具，能帮你自动执行营销邮件等繁琐任务，适合想用AI提升营销自动化效率的团队。",
+      "translated_at": "2026-05-11T09:20:42.537Z"
+    },
+    "skill:composiohq-awesome-claude-skills-acculynx-automation": {
+      "hash": "48db56bb253f4887",
+      "summary_zh": "这是一款基于 Composio MCP 的自动化工具，能帮你代劳 Acculynx 里的各种日常任务，适合需要减少手动操作、提升业务管理效率的团队。",
+      "translated_at": "2026-05-11T09:20:42.889Z"
+    },
+    "skill:composiohq-awesome-claude-skills-adobe-automation": {
+      "hash": "304df732ff1aff3d",
+      "summary_zh": "它能让AI自动操作Adobe软件，适合需要批量处理设计文件或自动执行重复修图任务的场景，帮你省去繁琐的手动操作。",
+      "translated_at": "2026-05-11T09:21:14.051Z"
+    },
+    "skill:composiohq-awesome-claude-skills-adyntel-automation": {
+      "hash": "84ed7f0c709348ae",
+      "summary_zh": "借助 Composio 实现自动执行 Adyntel 任务的工具，适合需要让 AI 代理接管日常操作、省去手动重复工作的场景。",
+      "translated_at": "2026-05-11T09:21:30.708Z"
+    },
+    "skill:composiohq-awesome-claude-skills-adrapid-automation": {
+      "hash": "1b7114ee50bcd995",
+      "summary_zh": "基于 Composio MCP 的自动化集成工具，能让 AI 代理自动调用最新接口执行 Adrapid 广告任务，免去繁琐的手动操作，适合需要批量管理广告的场景。",
+      "translated_at": "2026-05-11T09:21:31.362Z"
+    },
+    "skill:composiohq-awesome-claude-skills-aero-workflow-automation": {
+      "hash": "a9c40ee908de6b1c",
+      "summary_zh": "这是一个通过Composio让AI自动执行Aero Workflow任务的插件，解决AI无法直接操作业务软件的痛点，适合需要跨应用自动化处理工作流的场景。",
+      "translated_at": "2026-05-11T09:21:40.991Z"
+    },
+    "skill:composiohq-awesome-claude-skills-aeroleads-automation": {
+      "hash": "8bf6921953dd365a",
+      "summary_zh": "这是一个通过 Composio MCP 自动化执行 Aeroleads 任务的工具，能让你用 AI 智能体自动提取邮箱和寻找潜在客户，省去手动麻烦。",
+      "translated_at": "2026-05-11T09:22:00.190Z"
+    },
+    "skill:composiohq-awesome-claude-skills-affinity-automation": {
+      "hash": "38054a21f3972e2b",
+      "summary_zh": "它能让 AI 自动帮你执行 Affinity 里的任务，免去手动重复劳动，非常适合需要给 CRM 流程减负并提升效率的场景。",
+      "translated_at": "2026-05-11T09:22:10.465Z"
+    },
+    "skill:composiohq-awesome-claude-skills-affinda-automation": {
+      "hash": "ef0c40afda4d5f3b",
+      "summary_zh": "这是一个基于 Composio MCP 的自动化工具，能让你通过 AI 助手自动执行 Affinda 的文档解析任务，省去手动麻烦，适合批量提取简历或文件数据的场景。",
+      "translated_at": "2026-05-11T09:22:15.100Z"
+    },
+    "skill:composiohq-awesome-claude-skills-agencyzoom-automation": {
+      "hash": "573e3a723ea52578",
+      "summary_zh": "这是一款通过Composio实现的自动化工具，能让AI助手直接操作Agencyzoom，解决手动执行重复业务的繁琐问题，适合想提升工作流自动化效率的场景。",
+      "translated_at": "2026-05-11T09:22:35.538Z"
+    },
+    "skill:composiohq-awesome-claude-skills-agent-mail-automation": {
+      "hash": "461106f363c9d6ad",
+      "summary_zh": "这是一个让AI助手自动执行邮件任务的集成工具，解决AI无法操作真实应用的问题，适合需要让AI代发邮件或打通办公软件的自动化场景。",
+      "translated_at": "2026-05-11T09:22:41.092Z"
+    },
+    "skill:composiohq-awesome-claude-skills-agentql-automation": {
+      "hash": "6ac5d819f83ae517",
+      "summary_zh": "这是一款基于 Composio MCP 的自动化工具，能让 AI 智能体自动执行网页数据抓取任务，适合需要让 AI 代替人工提取网页数据的场景。",
+      "translated_at": "2026-05-11T09:23:01.243Z"
+    },
+    "skill:composiohq-awesome-claude-skills-agiled-automation": {
+      "hash": "35392fb2453c91d4",
+      "summary_zh": "这是一个通过MCP让AI助手自动操作Agiled的工具，能帮你把业务管理中的重复性任务交给AI完成，适合需要提升办公效率的自动化场景。",
+      "translated_at": "2026-05-11T09:23:35.419Z"
+    },
+    "skill:composiohq-awesome-claude-skills-agenty-automation": {
+      "hash": "c5613a9929817981",
+      "summary_zh": "这是一个基于 Composio 的 MCP 工具，能让你在 AI 工作流里自动执行 Agenty 平台的任务，还能动态适配最新接口，省去繁琐的手动操作。",
+      "translated_at": "2026-05-11T09:23:43.200Z"
+    },
+    "skill:composiohq-awesome-claude-skills-agility-cms-automation": {
+      "hash": "c5bc17aa04761ce5",
+      "summary_zh": "这是一个CMS自动化操控工具，能借助MCP协议让AI直接帮你执行Agility CMS的日常管理，省去繁琐的人工操作。",
+      "translated_at": "2026-05-11T09:23:51.769Z"
+    },
+    "skill:composiohq-awesome-claude-skills-ai-ml-api-automation": {
+      "hash": "d1d1ceebe7680eca",
+      "summary_zh": "这是一套让AI助手连接外部应用的插件合集，解决AI只会生成文本无法执行真实操作的痛点，适合自动化处理发邮件、建工单等跨应用任务。",
+      "translated_at": "2026-05-11T09:24:25.001Z"
+    },
+    "skill:composiohq-awesome-claude-skills-ahrefs-automation": {
+      "hash": "66f357dd06622eff",
+      "summary_zh": "这是一个针对 Ahrefs 的自动化集成工具，能把繁琐的手动 SEO 调研变成自动流程，特别适合需要大批量跑数据做站内外分析的从业者。",
+      "translated_at": "2026-05-11T09:24:43.420Z"
+    },
+    "skill:composiohq-awesome-claude-skills-algodocs-automation": {
+      "hash": "178f6d32de8f9f53",
+      "summary_zh": "这是一个自动化工具，能通过 Rube MCP 将 AI 助手与 Algodocs 打通，让 Claude 等智能体直接执行文档处理任务，适合需要 AI 自动化操作文档的场景。",
+      "translated_at": "2026-05-11T09:24:51.622Z"
+    },
+    "skill:composiohq-awesome-claude-skills-aivoov-automation": {
+      "hash": "2d35e2ba155e4b13",
+      "summary_zh": "这是一个基于Composio的自动化工具，能让AI直接操作Aivoov等应用执行真实动作，解决AI只会聊天无法实操的问题，适合跨软件自动办公场景。",
+      "translated_at": "2026-05-11T09:25:00.631Z"
+    },
+    "skill:composiohq-awesome-claude-skills-alchemy-automation": {
+      "hash": "5a4c59c25d70492b",
+      "summary_zh": "这是一个借助 Rube MCP 自动执行 Alchemy 任务的工具，适合让 AI 助手直接代为操作 Alchemy 的场景，省去繁琐的手动调用。",
+      "translated_at": "2026-05-11T09:25:04.188Z"
+    },
+    "skill:composiohq-awesome-claude-skills-algolia-automation": {
+      "hash": "ec834dff2297d484",
+      "summary_zh": "这是一款通过 MCP 让 AI 自动处理 Algolia 任务的工具，能帮你省去手动管理搜索索引和数据模式的麻烦，适合需要高频操作搜索服务的自动化开发场景。",
+      "translated_at": "2026-05-11T09:25:43.681Z"
+    },
+    "skill:composiohq-awesome-claude-skills-all-images-ai-automation": {
+      "hash": "be30d2901ab73516",
+      "summary_zh": "这是一个图像AI自动化工具，能通过Composio让AI代劳各类图片处理，并自动匹配最新接口规范，适合需要把AI出图或修图批量接入现有工作流的场景。",
+      "translated_at": "2026-05-11T09:25:45.561Z"
+    },
+    "skill:composiohq-awesome-claude-skills-alpha-vantage-automation": {
+      "hash": "3af9b82926608c85",
+      "summary_zh": "这是一款借助Composio自动执行Alpha Vantage金融数据任务的工具，适合让AI直接获取并分析股市行情，省去手动调接口麻烦的场景。",
+      "translated_at": "2026-05-11T09:25:47.583Z"
+    },
+    "skill:composiohq-awesome-claude-skills-alttext-ai-automation": {
+      "hash": "3cd8bd3622cbe252",
+      "summary_zh": "这是一个自动化运行Alttext AI的工具，能帮你批量生成图片替代文本，免去手动填写的繁琐，非常适合网站无障碍优化和SEO场景。",
+      "translated_at": "2026-05-11T09:26:15.241Z"
+    },
+    "skill:composiohq-awesome-claude-skills-amara-automation": {
+      "hash": "2608c1ad1ba8b0da",
+      "summary_zh": "这是一个能自动化执行Amara字幕平台任务的工具，帮你免去繁琐的手动操作，适合需要批量处理字幕或提升字幕管理效率的场景。",
+      "translated_at": "2026-05-11T09:26:15.818Z"
+    },
+    "skill:composiohq-awesome-claude-skills-altoviz-automation": {
+      "hash": "bd2b5c2a51eb9df0",
+      "summary_zh": "这是一款能通过 AI 代理自动化操控 Altoviz 的插件。它帮你免去繁琐的手动操作，特别适合需要让 AI 自动接管和执行 Altoviz 业务流程的工作场景。",
+      "translated_at": "2026-05-11T09:26:16.484Z"
+    },
+    "skill:composiohq-awesome-claude-skills-amazon-automation": {
+      "hash": "f6e98a4da1164b6f",
+      "summary_zh": "它是一个基于MCP的亚马逊自动化工具，适合让Claude等AI助手直接操作亚马逊平台，自动执行日常任务以提升工作效率。",
+      "translated_at": "2026-05-11T09:26:49.558Z"
+    },
+    "skill:composiohq-awesome-claude-skills-ambient-weather-automation": {
+      "hash": "8e060bf7659efa0c",
+      "summary_zh": "这是一个将个人气象站接入AI自动化工作流的工具，解决天气数据难与AI智能体联动的问题，适合需要基于实时天气自动触发操作的场景。",
+      "translated_at": "2026-05-11T09:26:50.038Z"
+    },
+    "skill:composiohq-awesome-claude-skills-ambee-automation": {
+      "hash": "4a7a10d3be7fd95d",
+      "summary_zh": "这是一个环境数据自动化集成工具，能让AI助手通过MCP直接调用Ambee接口，适合在AI工作流中需要自动获取并处理天气或空气质量等实时数据的场景。",
+      "translated_at": "2026-05-11T09:27:04.906Z"
+    },
+    "skill:composiohq-awesome-claude-skills-anonyflow-automation": {
+      "hash": "8d8c512151b59626",
+      "summary_zh": "通过 Rube MCP 自动化处理 Anonyflow 任务，适合需要批量或程序化操作 Anonyflow 的场景，执行前会自动搜索获取最新工具配置。",
+      "translated_at": "2026-05-11T09:27:09.704Z"
+    },
+    "skill:composiohq-awesome-claude-skills-anchor-browser-automation": {
+      "hash": "45ac350d8c5853a7",
+      "summary_zh": "这是一个基于Composio MCP的浏览器自动化工具，能让你通过AI直接控制浏览器执行操作，适合需要AI代理自动完成网页交互和跨应用任务的场景。",
+      "translated_at": "2026-05-11T09:27:26.240Z"
+    },
+    "skill:composiohq-awesome-claude-skills-amcards-automation": {
+      "hash": "96b56068dfe94747",
+      "summary_zh": "这是一款通过Rube MCP自动化Amcards任务的工具，能让你借助AI智能体自动完成贺卡发送与管理等操作，省去手动处理的麻烦。",
+      "translated_at": "2026-05-11T09:27:32.175Z"
+    },
+    "skill:composiohq-awesome-claude-skills-apex27-automation": {
+      "hash": "f1e2450d32c9bf3f",
+      "summary_zh": "这是一个让AI自动帮你处理Apex27日常任务的工具，免去繁琐的手动操作，适合需要频繁打理Apex27业务并想提升效率的场景。",
+      "translated_at": "2026-05-11T09:27:59.731Z"
+    },
+    "skill:composiohq-awesome-claude-skills-apaleo-automation": {
+      "hash": "4f5445aec0115801",
+      "summary_zh": "这是一个能自动执行 Apaleo 酒店管理系统任务的工具，帮酒店从业者免去繁琐的手动操作，轻松提升日常业务处理效率。",
+      "translated_at": "2026-05-11T09:28:01.474Z"
+    },
+    "skill:composiohq-awesome-claude-skills-api-bible-automation": {
+      "hash": "6c17967bc8d693ae",
+      "summary_zh": "通过 Rube MCP 自动化处理 API Bible 任务，适合需要批量查询或操作圣经 API 数据的开发者，避免手动调用接口的繁琐。",
+      "translated_at": "2026-05-11T09:28:02.396Z"
+    },
+    "skill:composiohq-awesome-claude-skills-anthropic-administrator-automation": {
+      "hash": "bb5b145fa3a802f9",
+      "summary_zh": "这是一个Anthropic后台管理自动化工具，能帮你通过MCP自动处理密钥分配、查用量、建工作区等日常管理琐事，省去手动折腾。",
+      "translated_at": "2026-05-11T09:28:02.810Z"
+    },
+    "skill:composiohq-awesome-claude-skills-api-sports-automation": {
+      "hash": "3b8ce10d5a07aaf6",
+      "summary_zh": "通过 Rube MCP 自动化处理体育 API 任务，帮你省去手动调用的麻烦，适合需要批量获取或对接体育赛事数据的开发场景。",
+      "translated_at": "2026-05-11T09:28:18.053Z"
+    },
+    "skill:composiohq-awesome-claude-skills-api-labz-automation": {
+      "hash": "9c00b85b14fada36",
+      "summary_zh": "这是一个通过 Rube MCP 自动执行 API Labz 任务的工具，能自动获取最新接口参数，适合需要频繁对接且想摆脱繁琐手动操作与参数过时风险的场景。",
+      "translated_at": "2026-05-11T09:28:33.642Z"
+    },
+    "skill:composiohq-awesome-claude-skills-api-ninjas-automation": {
+      "hash": "4c006107b7ac93a4",
+      "summary_zh": "一款借助Composio的MCP协议自动化调用API Ninjas的工具，省去了手动对接接口的麻烦，适合需要让AI智能体直接获取并处理各类外部数据的场景。",
+      "translated_at": "2026-05-11T09:28:36.167Z"
+    },
+    "skill:composiohq-awesome-claude-skills-api2pdf-automation": {
+      "hash": "fa2e169802c486d7",
+      "summary_zh": "这是一个基于Composio MCP的自动化连接器，能让AI助手直接调用Api2pdf生成处理PDF，省去手动操作，适合需要在工作流中自动出文档的场景。",
+      "translated_at": "2026-05-11T09:29:02.800Z"
+    },
+    "skill:composiohq-awesome-claude-skills-apiflash-automation": {
+      "hash": "eb351c03a769181b",
+      "summary_zh": "它通过Composio平台实现Apiflash任务自动化，省去手动对接API的麻烦，适合需要让AI在工作流中自动完成网页截图等操作的场景。",
+      "translated_at": "2026-05-11T09:29:15.989Z"
+    },
+    "skill:composiohq-awesome-claude-skills-apipie-ai-automation": {
+      "hash": "afb8c04b8ac43e65",
+      "summary_zh": "一个整理了上千个实用 Claude 技能与插件的合集，能帮你把大模型连接到各种应用去执行真实操作，适合想提升 AI 代理生产力的开发者。",
+      "translated_at": "2026-05-11T09:29:23.579Z"
+    },
+    "skill:composiohq-awesome-claude-skills-apify-automation": {
+      "hash": "d61c6326e0a80946",
+      "summary_zh": "这是一个网页抓取自动化工具，能帮你轻松运行爬虫并管理提取结果，适合需要高效获取和批量处理网页数据的场景。",
+      "translated_at": "2026-05-11T09:29:25.749Z"
+    },
+    "skill:composiohq-awesome-claude-skills-apitemplate-io-automation": {
+      "hash": "168e049827288d26",
+      "summary_zh": "这是一个通过MCP协议接入Apitemplate.io的自动化工具，能让你在Claude等AI代理中直接生成图像或PDF，免去手动调用API处理模板的麻烦。",
+      "translated_at": "2026-05-11T09:30:01.122Z"
+    },
+    "skill:composiohq-awesome-claude-skills-artifacts-builder": {
+      "hash": "774db84284606526",
+      "summary_zh": "专为 Claude 构建复杂多组件网页产物的工具集，采用现代前端技术，专治单文件搞不定的状态管理、路由和 UI 组件需求，适合开发交互复杂的网页应用。",
+      "translated_at": "2026-05-11T09:30:17.518Z"
+    },
+    "skill:composiohq-awesome-claude-skills-apilio-automation": {
+      "hash": "069b073655cef34e",
+      "summary_zh": "这是一个借助 Rube MCP 自动化 Apilio 任务的工具，适合需要用 AI 代理接管逻辑工作流的场景，能解决手动配置繁琐以及接口变动导致的自动化中断问题。",
+      "translated_at": "2026-05-11T09:30:26.836Z"
+    },
+    "skill:composiohq-awesome-claude-skills-brand-guidelines": {
+      "hash": "10450c3952ed15ce",
+      "summary_zh": "这是一套Anthropic官方的品牌视觉规范，能把官方配色和字体快速套用到各种产出物上，适合需要保持Anthropic视觉风格或遵守公司设计标准的场景。",
+      "translated_at": "2026-05-11T09:30:43.992Z"
+    },
+    "skill:composiohq-awesome-claude-skills-canvas-design": {
+      "hash": "1044c609144ada36",
+      "summary_zh": "这是一个帮你生成海报和艺术图等原创静态视觉设计的工具，支持导出图片和PDF，适合需要规避版权风险的原创出图场景。",
+      "translated_at": "2026-05-11T09:30:51.961Z"
+    },
+    "skill:composiohq-awesome-claude-skills-changelog-generator": {
+      "hash": "cd97e76772233b1b",
+      "summary_zh": "这是一款自动根据 Git 提交记录生成更新日志的工具，能把晦涩的技术提交转化为用户易懂的发布说明，省去手写繁琐，将数小时的工作缩短至几分钟。",
+      "translated_at": "2026-05-11T09:30:54.130Z"
+    },
+    "skill:composiohq-awesome-claude-skills-competitive-ads-extractor": {
+      "hash": "e5c802918b2316f0",
+      "summary_zh": "这是一款竞品广告提取与分析工具，能帮你从各大平台广告库中拆解对手的有效文案与创意，从而找灵感并优化自己的广告投放。",
+      "translated_at": "2026-05-11T09:31:18.112Z"
+    },
+    "skill:jimliu-baoyu-skills-baoyu-comic": {
+      "hash": "5ddf45eb5710c9cd",
+      "summary_zh": "专门用来创作知识漫画的工具，支持多种画风，能自动生成带详细分镜的连续画面，非常适合制作教育、教程、传记或逻辑科普类漫画。",
+      "translated_at": "2026-05-11T09:31:20.203Z"
+    },
+    "skill:jimliu-baoyu-skills-baoyu-article-illustrator": {
+      "hash": "831910b0b9a4c054",
+      "summary_zh": "它能自动分析文章结构，在需要配图的地方生成风格协调的插图，非常适合需要快速为文章补充视觉素材的场景。",
+      "translated_at": "2026-05-11T09:31:24.121Z"
+    },
+    "skill:jimliu-baoyu-skills-baoyu-compress-image": {
+      "hash": "f5824351ee6804b3",
+      "summary_zh": "能自动将图片压缩为WebP或PNG格式，适合需要优化图片、转换格式或减小文件体积的场景使用。",
+      "translated_at": "2026-05-11T09:31:58.720Z"
+    },
+    "skill:jimliu-baoyu-skills-baoyu-danger-gemini-web": {
+      "hash": "0e94f5def7ff836f",
+      "summary_zh": "通过逆向 Gemini 网页接口生成图文的工具。适合需要用 Gemini 看图说话、多轮对话、生成内容，或为其他功能提供图像生成后端的场景。",
+      "translated_at": "2026-05-11T09:32:08.049Z"
+    },
+    "skill:jimliu-baoyu-skills-baoyu-cover-image": {
+      "hash": "f52454b565b7217e",
+      "summary_zh": "这是一款文章封面生成工具，能组合多种风格与配色，快速生成多种比例的精美封面，适合需要频繁为文章制作配图的场景。",
+      "translated_at": "2026-05-11T09:32:15.585Z"
+    },
+    "skill:jimliu-baoyu-skills-baoyu-danger-x-to-markdown": {
+      "hash": "f2ed225ab0dd8442",
+      "summary_zh": "能将 X（推特）的推文和文章转为 Markdown 的工具。当你需要保存或处理相关链接时，它能快速生成带元数据的规范文本，方便归档和后续处理。",
+      "translated_at": "2026-05-11T09:32:32.303Z"
+    },
+    "skill:jimliu-baoyu-skills-baoyu-format-markdown": {
+      "hash": "afe7769486d1d931",
+      "summary_zh": "自动排版纯文本和Markdown文件的工具，适合需要美化文章或改善排版布局时使用，帮你快速生成结构规范的文档。",
+      "translated_at": "2026-05-11T09:32:48.741Z"
+    },
+    "skill:jimliu-baoyu-skills-baoyu-diagram": {
+      "hash": "0034bcab692b6043",
+      "summary_zh": "这是一个专门生成深色主题专业SVG图表的AI技能，帮你快速搞定架构设计、业务流程和逻辑结构等各类技术可视化需求。",
+      "translated_at": "2026-05-11T09:33:00.538Z"
+    },
+    "skill:jimliu-baoyu-skills-baoyu-image-cards": {
+      "hash": "689d4062f1e850db",
+      "summary_zh": "这是一个将文字内容拆解为系列卡通信息图的工具，专治社交媒体排版痛点，特别适合快速制作小红书和微信的种草系列图文。",
+      "translated_at": "2026-05-11T09:33:16.119Z"
+    },
+    "skill:jimliu-baoyu-skills-baoyu-image-gen": {
+      "hash": "0891bc061ec0f15d",
+      "summary_zh": "这是一个聚合多接口的AI绘图工具，能帮你灵活调用不同大模型生成或批量出图，适合日常需要高效获取图片的场景。",
+      "translated_at": "2026-05-11T09:33:16.613Z"
+    },
+    "skill:jimliu-baoyu-skills-baoyu-imagine": {
+      "hash": "0e2526c0995dd595",
+      "summary_zh": "这是一个聚合多家主流AI接口的画图工具，适合需要生成图片或批量出图的场景，帮你轻松调度不同模型并保障多图并发的稳定输出。",
+      "translated_at": "2026-05-11T09:33:38.724Z"
+    },
+    "skill:jimliu-baoyu-skills-baoyu-markdown-to-html": {
+      "hash": "410f033b893a22c3",
+      "summary_zh": "一款专为微信公众号排版打造的Markdown转HTML工具，能自动把外链转成底部引用，解决微信编辑器不支持原生Markdown排版和外链失效的痛点。",
+      "translated_at": "2026-05-11T09:34:00.357Z"
+    },
+    "skill:jimliu-baoyu-skills-baoyu-infographic": {
+      "hash": "5a2b44e321b988a4",
+      "summary_zh": "它能自动分析内容并匹配排版风格，快速生成可发布的专业信息图，专治做视觉总结或高密度大图时不知如何排版的难题。",
+      "translated_at": "2026-05-11T09:34:01.436Z"
+    },
+    "skill:jimliu-baoyu-skills-baoyu-post-to-wechat": {
+      "hash": "0ac77fcd6400cc27",
+      "summary_zh": "这是一个自动发布微信公众号的工具，能将Markdown等内容转为微信友好的图文一键发布，帮你彻底告别手动排版和处理外链的繁琐操作。",
+      "translated_at": "2026-05-11T09:34:19.319Z"
+    },
+    "skill:jimliu-baoyu-skills-baoyu-post-to-weibo": {
+      "hash": "82edd69f4cac783c",
+      "summary_zh": "这是一个帮你自动发微博的工具。当你想发图文视频动态，或用Markdown写头条文章时，它能直接代为发布，省去手动操作，适合在AI助手中快速分享内容。",
+      "translated_at": "2026-05-11T09:34:41.770Z"
+    },
+    "skill:jimliu-baoyu-skills-baoyu-post-to-x": {
+      "hash": "270161002f1d8439",
+      "summary_zh": "这是一款让AI助手自动代发推文的插件，能把图文视频或长文直接发到X平台，适合想通过对话指令让AI管理社交账号的场景。",
+      "translated_at": "2026-05-11T09:34:53.950Z"
+    },
+    "skill:jimliu-baoyu-skills-baoyu-slide-deck": {
+      "hash": "132d746139eae40b",
+      "summary_zh": "它能根据内容直接生成专业的幻灯片图片。当你需要做PPT或演示文稿时，它会自动规划大纲与样式，并逐页生成图片，让你告别繁琐的手动排版。",
+      "translated_at": "2026-05-11T09:34:54.478Z"
+    },
+    "skill:jimliu-baoyu-skills-baoyu-xhs-images": {
+      "hash": "609cb00004114696",
+      "summary_zh": "这是一个将文本自动拆解为小红书风格卡通卡片的工具，解决做小红书种草或微信图文时制图排版的麻烦，适合国内社媒的滑动图文创作。",
+      "translated_at": "2026-05-11T09:35:20.271Z"
+    },
+    "skill:jimliu-baoyu-skills-baoyu-translate": {
+      "hash": "d6143bd5a6d72c6b",
+      "summary_zh": "一款支持不同质量级别的文档翻译工具，能提供从直译到精校润色的服务，解决跨语言沟通和术语统一的问题，适合文章翻译与本地化场景。",
+      "translated_at": "2026-05-11T09:35:24.246Z"
+    },
+    "skill:jimliu-baoyu-skills-baoyu-url-to-markdown": {
+      "hash": "876a950cfa29a01f",
+      "summary_zh": "这是一个把网页转成Markdown的工具，能搞定需要登录验证或特定平台的内容抓取，适合想干净保存网页内容的场景。",
+      "translated_at": "2026-05-11T09:35:29.446Z"
+    },
+    "skill:jimliu-baoyu-skills-release-skills": {
+      "hash": "571e1e144df4b7f8",
+      "summary_zh": "这是一个通用的自动化发布工作流工具，能自动检测项目的版本文件和更新日志。适合在发新版、打标签或回填历史版本时，帮你一句话搞定繁琐的发版流程。",
+      "translated_at": "2026-05-11T09:35:59.579Z"
+    },
+    "skill:jimliu-baoyu-skills-baoyu-youtube-transcript": {
+      "hash": "cf13745bad71fce3",
+      "summary_zh": "这是一个提取YouTube视频字幕和封面的工具，能帮你快速拿到视频的文字稿或封面图，适合做内容整理、字幕翻译或视频笔记等场景。",
+      "translated_at": "2026-05-11T09:35:59.589Z"
+    },
+    "mcp:brave-search": {
+      "hash": "07d9a45936dab5ad",
+      "summary_zh": "这是一个接入搜索API的工具，能让AI模型实现网络与本地搜索，适合需要实时获取外部信息的场景。",
+      "translated_at": "2026-05-11T09:36:14.797Z"
+    },
+    "mcp:fetch": {
+      "hash": "de3b24915503c6e9",
+      "summary_zh": "它能抓取网页并转成Markdown，方便你直接把网页信息作为大模型的上下文。",
+      "translated_at": "2026-05-11T09:36:28.553Z"
+    },
+    "mcp:git": {
+      "hash": "96e01609a280fd1d",
+      "summary_zh": "一个已归档的MCP参考实现，能读取、搜索和操作本地Git仓库，适合历史参考或快速体验MCP功能，但不建议用于生产环境。",
+      "translated_at": "2026-05-11T09:36:31.983Z"
+    },
+    "mcp:everything": {
+      "hash": "d6922fe0c6cb41b5",
+      "summary_zh": "这是一个演示MCP协议全功能的参考服务器，适合开发者在学习协议规范、测试SDK用法或自己开发服务器时作为教学参考。",
+      "translated_at": "2026-05-11T09:36:36.528Z"
+    },
+    "mcp:filesystem": {
+      "hash": "442a285f06335252",
+      "summary_zh": "这是一个Node.js版的MCP官方示例，能让大模型安全读写本地文件，适合想给AI接文件数据或自研MCP服务的开发者参考学习。",
+      "translated_at": "2026-05-11T09:36:44.288Z"
+    },
+    "mcp:memory": {
+      "hash": "3b5fb8810e1e17e7",
+      "summary_zh": "借助本地知识图谱实现持久化记忆，解决大模型无法跨对话保留信息的痛点，适合需要让AI拥有长期记忆的开发场景。",
+      "translated_at": "2026-05-11T09:37:08.626Z"
+    },
+    "mcp:github": {
+      "hash": "25b7e823e396b120",
+      "summary_zh": "这是一款打通AI与代码平台的MCP服务，帮你用自然语言直接管理仓库、处理Issue和PR、排查流水线故障，适合想用AI自动化开发流程的开发者。",
+      "translated_at": "2026-05-11T09:37:27.668Z"
+    },
+    "mcp:google-drive": {
+      "hash": "e896a3bb0cabbf8e",
+      "summary_zh": "它是一款已归档停维的MCP服务，能让AI通过授权搜索并读取云端文档，适合需要让AI直接查阅和处理网盘资料的场景。",
+      "translated_at": "2026-05-11T09:37:32.849Z"
+    },
+    "mcp:postgres": {
+      "hash": "e9363193cb36dcc2",
+      "summary_zh": "这是一个针对PG数据库的MCP服务，提供只读访问和表结构查看，适合需要让AI安全查阅数据但不允许修改的场景。",
+      "translated_at": "2026-05-11T09:38:01.715Z"
+    },
+    "mcp:puppeteer": {
+      "hash": "942fb0f79205bd90",
+      "summary_zh": "这是一个浏览器自动化工具，能模拟真实用户在网页上的各种操作，非常适合用来做自动化测试、数据抓取或生成页面截图。",
+      "translated_at": "2026-05-11T09:38:02.733Z"
+    },
+    "mcp:sequentialthinking": {
+      "hash": "be4a6b002297919a",
+      "summary_zh": "这是一个提供结构化思考的MCP服务器，能解决AI应对复杂难题时逻辑跑偏或缺乏反思的痛点，非常适合需要大模型严谨推导和分步拆解的场景。",
+      "translated_at": "2026-05-11T09:38:04.069Z"
+    },
+    "mcp:sqlite": {
+      "hash": "4d0f875387485d92",
+      "summary_zh": "它是一个本地数据库访问接口，能查看表结构并执行查询，适合需要让大模型直接读取和操作本地库表的场景。",
+      "translated_at": "2026-05-11T09:38:33.306Z"
+    },
+    "mcp:time": {
+      "hash": "64b8c5615ffa8640",
+      "summary_zh": "这是一个时间与时区处理工具，能帮你轻松搞定跨时区换算和工作日计算，适合需要处理跨国排期的场景。",
+      "translated_at": "2026-05-11T09:38:41.367Z"
+    },
+    "mcp:slack": {
+      "hash": "3652eb973d8e1bbe",
+      "summary_zh": "这是一个供AI接入团队协作平台的MCP服务端，能让AI代为处理消息与管理工作区，适合需要AI自动化处理群聊通讯或辅助团队协作的场景。",
+      "translated_at": "2026-05-11T09:38:57.088Z"
+    }
+  }
+}
