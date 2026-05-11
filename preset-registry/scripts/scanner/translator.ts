@@ -19,7 +19,7 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { createHash } from "node:crypto";
 import { existsSync } from "node:fs";
-import { readFile, readdir, writeFile } from "node:fs/promises";
+import { mkdir, readFile, readdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 
 type EntryType = "preset" | "skill" | "mcp";
@@ -56,6 +56,23 @@ const PROMPT_SYSTEM =
   "你是一名技术写作者，帮助中文用户快速理解开源工具的用途。" +
   "根据给定的英文项目信息，输出一句中文摘要，描述「它是什么 + 能解决什么问题 / 适合什么场景」。" +
   "要求：80 字以内；不要前缀（如『摘要：』）；不要 Markdown；不要罗列特性；不要复述项目名；保持自然口语，避免翻译腔。";
+
+const BUNDLE_PROMPT_SYSTEM =
+  "你是一名技术写作者，帮助中文用户快速理解开源工具集的整体用途。" +
+  "根据给定的英文项目信息（一组配合使用的技能/工具），输出一句中文摘要，描述「这套合集解决什么场景、组合起来的价值是什么」。" +
+  "要求：80 字以内；不要前缀；不要 Markdown；不要罗列每个成员；保持自然口语，避免翻译腔；强调合集的整体定位而非单个成员。";
+
+interface BundleSpec {
+  id: string;          // slug, e.g. "jimliu-baoyu-skills"
+  repo: string;        // upstream, e.g. "JimLiu/baoyu-skills"
+  name: string;        // display name
+  url: string;
+  kind: "skill";       // future: could grow to "preset" / "mcp" bundles
+  skill_ids: string[];
+  stars: number;
+  readme: string;
+  members: Array<{ id: string; name: string; description: string }>;
+}
 
 function buildUserPrompt(item: ItemSpec, readmeChars: number): string {
   const d = item.data ?? {};
@@ -164,6 +181,160 @@ async function runWithConcurrency<T>(
   await Promise.all(workers);
 }
 
+function slugifyRepo(repo: string): string {
+  return repo.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+}
+
+function bundleDisplayName(repo: string): string {
+  const base = repo.split("/").pop() ?? repo;
+  return base
+    .replace(/-/g, " ")
+    .replace(/\b\w/g, (c) => c.toUpperCase());
+}
+
+function collectSkillBundles(items: ItemSpec[]): BundleSpec[] {
+  const byRepo = new Map<string, ItemSpec[]>();
+  for (const item of items) {
+    if (item.type !== "skill") continue;
+    const repo: string | undefined = item.data?.source?.repo;
+    if (!repo) continue;
+    if (!byRepo.has(repo)) byRepo.set(repo, []);
+    byRepo.get(repo)!.push(item);
+  }
+
+  const bundles: BundleSpec[] = [];
+  for (const [repo, members] of byRepo) {
+    if (members.length < 2) continue;
+    members.sort((a, b) => a.id.localeCompare(b.id));
+    const first = members[0];
+    bundles.push({
+      id: slugifyRepo(repo),
+      repo,
+      name: bundleDisplayName(repo),
+      url: first.data?.source?.url ?? `https://github.com/${repo}`,
+      kind: "skill",
+      skill_ids: members.map((m) => m.id),
+      stars: Number(first.data?.source?.stars ?? 0),
+      readme: String(first.data?.source?.readme ?? ""),
+      members: members.map((m) => ({
+        id: m.id,
+        name: String(m.data?.name ?? m.id),
+        description: String(m.data?.description ?? ""),
+      })),
+    });
+  }
+  bundles.sort((a, b) => (b.stars - a.stars) || a.id.localeCompare(b.id));
+  return bundles;
+}
+
+function buildBundleUserPrompt(b: BundleSpec, readmeChars: number): string {
+  const readmeSlice = b.readme.slice(0, readmeChars);
+  const memberLines = b.members
+    .slice(0, 10)
+    .map((m) => `- ${m.name}: ${m.description.slice(0, 100)}`)
+    .join("\n");
+  return [
+    `项目仓库: ${b.repo}`,
+    `成员数量: ${b.skill_ids.length}`,
+    readmeSlice ? `README 片段:\n${readmeSlice}` : "",
+    `主要成员（前 10 个）:\n${memberLines}`,
+  ]
+    .filter(Boolean)
+    .join("\n\n");
+}
+
+function bundleContentHash(b: BundleSpec, readmeChars: number): string {
+  const payload = JSON.stringify({
+    repo: b.repo,
+    members: b.members.map((m) => ({ id: m.id, desc: m.description })),
+    readme: b.readme.slice(0, readmeChars),
+  });
+  return createHash("sha256").update(payload).digest("hex").slice(0, 16);
+}
+
+async function translateBundle(
+  client: Anthropic,
+  model: string,
+  b: BundleSpec,
+  readmeChars: number,
+): Promise<string> {
+  const resp = await client.messages.create({
+    model,
+    max_tokens: 200,
+    system: BUNDLE_PROMPT_SYSTEM,
+    messages: [{ role: "user", content: buildBundleUserPrompt(b, readmeChars) }],
+  });
+  const block = resp.content.find((c) => c.type === "text");
+  if (!block || block.type !== "text") return "";
+  return block.text.trim();
+}
+
+async function runBundleTranslations(
+  client: Anthropic,
+  opts: RunOpts,
+  cache: TranslationsCache,
+  items: ItemSpec[],
+): Promise<{ total: number; hits: number; misses: number; failures: number }> {
+  const bundles = collectSkillBundles(items);
+  let hits = 0;
+  let misses = 0;
+  let failures = 0;
+
+  const tasks = bundles.map((b) => async () => {
+    const key = `bundle:${b.id}`;
+    const hash = bundleContentHash(b, opts.readmeChars);
+    const cached = cache.entries[key];
+    if (cached?.hash === hash && cached.summary_zh) {
+      hits++;
+      return;
+    }
+    try {
+      const summary = await translateBundle(client, opts.model, b, opts.readmeChars);
+      if (!summary) {
+        failures++;
+        console.warn(`[translate] empty bundle summary for ${key}`);
+        return;
+      }
+      cache.entries[key] = {
+        hash,
+        summary_zh: summary,
+        translated_at: new Date().toISOString(),
+      };
+      misses++;
+      console.log(`[translate] ${key} (${summary.length} chars, ${b.skill_ids.length} skills)`);
+    } catch (e) {
+      failures++;
+      console.warn(`[translate] failed ${key}: ${(e as Error).message}`);
+    }
+  });
+
+  await runWithConcurrency(tasks, opts.concurrency);
+
+  // Persist the bundles index regardless of translation outcomes — the UI can
+  // still group skills even when summaries are missing.
+  const bundlesDir = join(opts.registryDir, "bundles");
+  if (!existsSync(bundlesDir)) {
+    await mkdir(bundlesDir, { recursive: true });
+  }
+  const out = {
+    version: "1",
+    updated_at: new Date().toISOString(),
+    bundles: bundles.map((b) => ({
+      id: b.id,
+      repo: b.repo,
+      name: b.name,
+      url: b.url,
+      kind: b.kind,
+      stars: b.stars,
+      skill_ids: b.skill_ids,
+      summary_zh: cache.entries[`bundle:${b.id}`]?.summary_zh ?? null,
+    })),
+  };
+  await writeFile(join(bundlesDir, "index.json"), JSON.stringify(out, null, 2));
+
+  return { total: bundles.length, hits, misses, failures };
+}
+
 async function patchIndex(
   registryDir: string,
   relPath: string,
@@ -263,6 +434,10 @@ export async function runTranslations(registryDir: string): Promise<void> {
 
   await runWithConcurrency(tasks, opts.concurrency);
 
+  // Bundle-level summaries: group skills by source.repo and translate the
+  // collection as a unit. Reuses the same Anthropic client and cache file.
+  const bundleResult = await runBundleTranslations(client, opts, cache, items);
+
   cache.updated_at = new Date().toISOString();
   await writeFile(cachePath, JSON.stringify(cache, null, 2));
 
@@ -271,6 +446,6 @@ export async function runTranslations(registryDir: string): Promise<void> {
   await patchIndex(registryDir, "mcps/index.json", "mcps", cache, "mcp");
 
   console.log(
-    `[translate] done. items=${items.length} cache_hits=${hits} translated=${misses} failed=${failures}`,
+    `[translate] done. items=${items.length} cache_hits=${hits} translated=${misses} failed=${failures} | bundles=${bundleResult.total} hits=${bundleResult.hits} translated=${bundleResult.misses} failed=${bundleResult.failures}`,
   );
 }

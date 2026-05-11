@@ -54,7 +54,8 @@ jobs:
                   preset-registry/translations.json \
                   preset-registry/presets/ \
                   preset-registry/skills/ \
-                  preset-registry/mcps/
+                  preset-registry/mcps/ \
+                  preset-registry/bundles/
           if ! git diff --cached --quiet; then
             git commit -m "chore(registry): auto-discover update $(date -u +%FT%TZ)"
             git push
