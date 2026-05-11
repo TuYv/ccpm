@@ -1,0 +1,28 @@
+{
+  "id": "microsoft-bcapps",
+  "name": "microsoft/BCApps",
+  "description": "Repository for collaboration on Microsoft Dynamics 365 Business Central applications.",
+  "tags": [
+    "bcopensource"
+  ],
+  "tested_on": "2026-05-11",
+  "author": "microsoft",
+  "files": {
+    "CLAUDE.md": "CLAUDE.md"
+  },
+  "source": {
+    "repo": "microsoft/BCApps",
+    "url": "https://github.com/microsoft/BCApps/blob/main/src/Apps/W1/EDocument/App/src/Logging/docs/CLAUDE.md",
+    "homepage": "https://microsoft.github.io/BCApps/",
+    "path": "src/Apps/W1/EDocument/App/src/Logging/docs/CLAUDE.md",
+    "branch": "main",
+    "stars": 580,
+    "language": "AL",
+    "pushed_at": "2026-05-11T15:20:12Z",
+    "discovered_at": "2026-05-11T16:12:57.305Z",
+    "score": 0.54464,
+    "readme": "# Welcome to BCApps: Microsoft Dynamics 365 Business Central Application\n\n## The Repository\nThis repository contains the source code for several _Business Central_ applications, developed by Microsoft.\n\nThe source code in this repository is available to everyone under the standard [MIT license](https://github.com/microsoft/BCApps/blob/main/LICENSE).\n\n✨ **BCApps run on [AL-Go for GitHub](https://github.com/microsoft/AL-Go)** ✨\n\n## Contributing\n\nIn this repository, we welcome contributions to the **System Application**, **Business Foundation** and the **Developer Tools**, such as **Test Runner**, **Performance Toolkit** and others.\n\n* If you are looking to contribute to **Microsoft's 1st party apps** you can do so in the [ALAppExtensions](https://github.com/microsoft/ALAppExtensions) repository. \n* If you are looking to contribute to the **Base Application** you can do so in the [BusinessCentralApps](https://github.com/microsoft/BusinessCentralApps/) repository. Please note, that this repository is private but you can request access by filling out [this form](https://forms.office.com/pages/responsepage.aspx?id=v4j5cvGGr0GRqy180BHbR_Qj5hjzNeNOhBcvBoRIOltUOVBVTklZN1hBOTZJUU40OE5CUzNWNk1FQy4u). \n\n\nWant to learn more about how to contribute to this repository? Please refer to our [Contribution Guidelines](CONTRIBUTING.md).\n\n\n**⚠IMPORTANT⚠:**  This is not the right place to report product defects with customer impact to Microsoft! Issues created in this repository might not get picked up by the Microsoft engineering team and issues reported in this repository do not fall under SLAs (Service Level Agreements) and hence have no guaranteed time to mitigation, just as provided fixes won't get backported to all supported versions of the product.\n\n## Repository Structure\n\n- `src` folder stores the source code for Business Central application, such as `System Application` and developer tools like *test libraries*, *test runner* and others.\n- `src\\rulesets` is where the rulesets for building the applications are stored.\n- `build` folder contains the *magic* around how the applications are built.\n- `build\\projects` is where all AL-Go projects are defined.\n\n\n## Business Central\n\n![image](https://user-images.githubusercontent.com/19796701/178490212-f14a11e4-8b06-437d-8444-ea28156f70c7.png)\n\n[Business Central](https://docs.microsoft.com/dynamics365/business-central/) is a business management solution for small and mid-sized organizations that automates and streamlines business processes and helps you manage your business. Highly adaptable and rich with features, Business Central enables companies to manage their business, including finance, manufacturing, sales, shipping, project management, services, and more. Companies can easily add functionality that is relevant to the region of operation, and that is customized to support even highly specialized industries. Business Central is fast to implement, easy to configure, and simplicity guides innovations in product design, development, implementation, and usability.\n\n## Trademarks\n\nThis project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft\ntrademarks or logos is subject to and must follow\n[Microsoft's Trademark & Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general).\nUse of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship.\nAny use of third-party trademarks or logos are subject to those third-party's policies.\n",
+    "license": "MIT"
+  },
+  "summary_zh": "这是微软 Dynamics 365 Business Central 核心应用与开发工具的开源代码库，方便开发者参与协作共建或进行二次开发。"
+}
