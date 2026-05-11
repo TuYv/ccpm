@@ -30,7 +30,11 @@ jobs:
       - name: Run scanner
         working-directory: preset-registry/scripts/scanner
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Use a fine-grained PAT (public-repo read) instead of the default
+          # GITHUB_TOKEN: installation tokens get aggressively throttled on
+          # /search/code (secondary rate limits). Falls back to GITHUB_TOKEN
+          # if SCANNER_PAT isn't set.
+          GITHUB_TOKEN: ${{ secrets.SCANNER_PAT || secrets.GITHUB_TOKEN }}
           REGISTRY_DIR: ${{ github.workspace }}/preset-registry
           # Chinese summary generation. Set ANTHROPIC_API_KEY in repo secrets to enable;
           # if absent, the translation step is a no-op. Override the model / readme

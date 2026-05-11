@@ -18,7 +18,10 @@ if (!TOKEN) {
 }
 
 const ThrottledOctokit = Octokit.plugin(throttling);
-const MAX_RETRIES = 2;
+const MAX_RETRIES = 5;
+// GitHub sometimes omits Retry-After on secondary limits; wait this long
+// before our handler is invoked again (seconds).
+const SECONDARY_FALLBACK_WAIT_S = 90;
 
 type PresetSource = PresetEntry["source"];
 interface RootIndexEntry {
@@ -36,6 +39,7 @@ async function main() {
   const octokit = new ThrottledOctokit({
     auth: TOKEN,
     throttle: {
+      fallbackSecondaryRateRetryAfter: SECONDARY_FALLBACK_WAIT_S,
       onRateLimit: (retryAfter, options, _octokit, retryCount) => {
         console.warn(
           `[throttle] primary rate limit hit on ${options.method} ${options.url}; retry in ${retryAfter}s (attempt ${retryCount + 1}/${MAX_RETRIES})`,
