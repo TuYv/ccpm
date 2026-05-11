@@ -19,7 +19,6 @@ export interface PresetEntry {
   id: string;
   name: string;
   description: string;
-  version: string;
   tested_on: string;
   author: string;
   tags: string[];
@@ -45,7 +44,6 @@ export function normalizeToPreset(
     id,
     name: hit.repo,
     description: hit.description ?? `Discovered from ${hit.repo}`,
-    version: "1.0.0",
     tested_on: new Date().toISOString().slice(0, 10),
     author: hit.repo.split("/")[0],
     tags,

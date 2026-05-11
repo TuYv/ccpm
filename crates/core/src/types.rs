@@ -150,7 +150,7 @@ pub struct PresetMeta {
     pub tags: Vec<String>,
     #[serde(default)]
     pub components: Vec<String>,
-    pub version: String,
+    #[serde(default)]
     pub tested_on: String,
     pub author: String,
     #[serde(default)]
@@ -175,7 +175,6 @@ pub struct PresetManifest {
     pub tags: Vec<String>,
     #[serde(default)]
     pub components: Vec<String>,
-    pub version: String,
     #[serde(default)]
     pub min_claude_code_version: Option<String>,
     #[serde(default)]
@@ -201,7 +200,6 @@ pub struct PresetManifest {
 pub struct ActivePresetInfo {
     pub active_preset_id: String,
     pub activated_at: String,
-    pub preset_version: String,
     /// Target paths that were written (relative to scope root).
     pub files: Vec<String>,
     /// Backup timestamp ID created when this preset was activated.
@@ -391,7 +389,6 @@ mod tests {
             "description": "适合单人 Python 项目",
             "tags": ["python", "solo"],
             "components": ["CLAUDE.md", "settings.json"],
-            "version": "1.2.0",
             "tested_on": "2025-04-01",
             "author": "rick"
         }"#;
@@ -410,7 +407,6 @@ mod tests {
                     "id": "python-solo",
                     "name": "Python Solo",
                     "description": "d",
-                    "version": "1.0.0",
                     "tested_on": "2025-04-01",
                     "author": "a"
                 }
@@ -427,7 +423,6 @@ mod tests {
             "id": "python-solo",
             "name": "Python Solo",
             "description": "d",
-            "version": "1.0.0",
             "tested_on": "2025-04-01",
             "author": "a",
             "files": {"CLAUDE.md": "CLAUDE.md", "settings.json": "settings.json"}
@@ -450,7 +445,6 @@ mod tests {
             global: Some(ActivePresetInfo {
                 active_preset_id: "python-solo".to_string(),
                 activated_at: "2025-04-23T10:00:00Z".to_string(),
-                preset_version: "1.0.0".to_string(),
                 files: vec!["CLAUDE.md".to_string()],
                 backup_ref: "2025-04-23T10-00-00-000000Z".to_string(),
             }),

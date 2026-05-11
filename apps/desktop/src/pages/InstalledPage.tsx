@@ -100,7 +100,6 @@ function ActivePresetCard({
           }}
         >
           <span style={{ fontWeight: 600, fontSize: 14 }}>{recipeName}</span>
-          <Chip tone="accent">v{info.preset_version}</Chip>
           <Chip tone="green" dot>
             active{rel ? ` · ${rel}` : ""}
           </Chip>

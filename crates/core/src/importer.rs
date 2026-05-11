@@ -36,7 +36,6 @@ impl ImportedBundle {
             description: format!("从 {} 导入", self.source_repo),
             tags: vec!["imported".to_string()],
             components: vec![],
-            version: "1.0.0".to_string(),
             min_claude_code_version: None,
             tested_on: chrono::Utc::now().date_naive().to_string(),
             author: self.source_repo.clone(),

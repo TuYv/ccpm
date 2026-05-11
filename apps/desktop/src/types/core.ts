@@ -28,7 +28,6 @@ export interface PresetSource {
 export interface PresetMeta {
   id: string;
   name: string;
-  version: string;
   description: string;
   author: string;
   tags: string[];
@@ -42,7 +41,6 @@ export interface PresetIndex {
 export interface PresetManifest {
   id: string;
   name: string;
-  version: string;
   description: string;
   author: string;
   tags: string[];
@@ -54,7 +52,6 @@ export interface PresetManifest {
 
 export interface ActivePresetInfo {
   active_preset_id: string;
-  preset_version: string;
   activated_at: string;
   files: string[];
   backup_ref: string;

@@ -470,7 +470,6 @@ export default function PresetsPage() {
                       {p.source?.stars != null && (
                         <span>★ {formatStars(p.source.stars)}</span>
                       )}
-                      <span>v{p.version}</span>
                     </div>
                   </div>
                   <span
@@ -616,10 +615,9 @@ export default function PresetsPage() {
                         marginTop: 4,
                       }}
                     >
-                      {manifest.source?.repo ? `${manifest.source.repo} · ` : ""}
-                      v{manifest.version}
+                      {manifest.source?.repo ? `${manifest.source.repo}` : ""}
                       {manifest.source?.stars != null
-                        ? ` · ★ ${formatStars(manifest.source.stars)}`
+                        ? `${manifest.source?.repo ? " · " : ""}★ ${formatStars(manifest.source.stars)}`
                         : ""}
                       {manifest.author ? ` · by ${manifest.author}` : ""}
                     </div>
@@ -1029,7 +1027,6 @@ export default function PresetsPage() {
             const adHocManifest = {
               id: importPreview.suggested_id,
               name,
-              version: "1.0.0",
               description: `从 ${importPreview.source_repo} 导入`,
               author: importPreview.source_repo,
               tags: ["imported"],

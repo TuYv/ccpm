@@ -39,7 +39,6 @@ const previewPresets: PresetMeta[] = [
   {
     id: "safe-solo",
     name: "独立开发安全",
-    version: "1.0.0",
     description:
       "个人开发保守基线：先读仓库再动手，保护密钥，完成前跑验证，不擅自删除用户代码。",
     author: "claude-preset",
@@ -48,7 +47,6 @@ const previewPresets: PresetMeta[] = [
   {
     id: "code-review",
     name: "代码审查",
-    version: "1.0.0",
     description:
       "以发现问题为核心：按严重程度排序，聚焦回归、安全风险、数据丢失、缺失测试，精确到行。",
     author: "claude-preset",
@@ -57,7 +55,6 @@ const previewPresets: PresetMeta[] = [
   {
     id: "frontend-app",
     name: "前端应用构建",
-    version: "1.0.0",
     description:
       "生产级前端预设：构建可用页面而非展示壳，响应式布局、无障碍访问、声明完成前视觉验证。",
     author: "claude-preset",
@@ -66,7 +63,6 @@ const previewPresets: PresetMeta[] = [
   {
     id: "rust-cli",
     name: "Rust CLI 维护",
-    version: "1.0.0",
     description:
       "Rust CLI 工作流：小模块、类型化错误、集成测试，发布前强制跑 fmt / clippy / release 构建。",
     author: "claude-preset",
@@ -75,7 +71,6 @@ const previewPresets: PresetMeta[] = [
   {
     id: "docs-writer",
     name: "文档写作",
-    version: "1.0.0",
     description:
       "以最短路径引导用户跑通第一个结果，示例保持可执行并与当前命令一致，不写假设性内容。",
     author: "claude-preset",
@@ -154,7 +149,6 @@ function previewActiveInfo(presetId: string): ActivePresetInfo {
   const manifest = previewManifest(presetId);
   return {
     active_preset_id: presetId,
-    preset_version: manifest.version,
     activated_at: new Date().toISOString(),
     files: Object.values(manifest.files),
     backup_ref: `preview-${Date.now()}`,

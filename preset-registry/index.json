@@ -3,85 +3,6 @@
   "updated_at": "2026-05-05T03:51:29.555251Z",
   "presets": [
     {
-      "id": "code-review",
-      "name": "Code Review",
-      "description": "Review-focused instructions that prioritize regressions, risks, missing tests, and line-specific findings.",
-      "tags": [
-        "review",
-        "quality"
-      ],
-      "components": [
-        "CLAUDE.md"
-      ],
-      "version": "1.0.0",
-      "tested_on": "2026-04-26",
-      "author": "claude-preset"
-    },
-    {
-      "id": "docs-writer",
-      "name": "Documentation Writer",
-      "description": "Documentation preset for clear README, guides, changelogs, and examples that stay close to verified behavior.",
-      "tags": [
-        "docs",
-        "writing"
-      ],
-      "components": [
-        "CLAUDE.md"
-      ],
-      "version": "1.0.0",
-      "tested_on": "2026-04-26",
-      "author": "claude-preset"
-    },
-    {
-      "id": "frontend-app",
-      "name": "Frontend App Builder",
-      "description": "A practical frontend preset for production UI work with responsive layout, accessibility, and visual verification.",
-      "tags": [
-        "frontend",
-        "react",
-        "ui"
-      ],
-      "components": [
-        "CLAUDE.md"
-      ],
-      "version": "1.0.0",
-      "tested_on": "2026-04-26",
-      "author": "claude-preset"
-    },
-    {
-      "id": "rust-cli",
-      "name": "Rust CLI Maintainer",
-      "description": "Rust CLI workflow preset focused on small modules, clear errors, integration tests, clippy, and release checks.",
-      "tags": [
-        "rust",
-        "cli",
-        "testing"
-      ],
-      "components": [
-        "CLAUDE.md"
-      ],
-      "version": "1.0.0",
-      "tested_on": "2026-04-26",
-      "author": "claude-preset"
-    },
-    {
-      "id": "safe-solo",
-      "name": "Safe Solo Developer",
-      "description": "A conservative baseline for individual developers: read the repo first, protect secrets, test before claiming completion.",
-      "tags": [
-        "general",
-        "solo",
-        "safe"
-      ],
-      "components": [
-        "CLAUDE.md",
-        "settings.json"
-      ],
-      "version": "1.0.0",
-      "tested_on": "2026-04-26",
-      "author": "claude-preset"
-    },
-    {
       "id": "cypress-io-cypress",
       "name": "cypress-io/cypress",
       "description": "Fast, easy and reliable testing for anything that runs in a browser.",
@@ -98,7 +19,6 @@
       "components": [
         "CLAUDE.md"
       ],
-      "version": "1.0.0",
       "tested_on": "2026-05-05",
       "author": "cypress-io",
       "source": {
@@ -133,7 +53,6 @@
       "components": [
         "CLAUDE.md"
       ],
-      "version": "1.0.0",
       "tested_on": "2026-05-05",
       "author": "ray-project",
       "source": {
@@ -165,7 +84,6 @@
       "components": [
         "CLAUDE.md"
       ],
-      "version": "1.0.0",
       "tested_on": "2026-05-04",
       "author": "KeygraphHQ",
       "source": {
@@ -197,7 +115,6 @@
       "components": [
         "CLAUDE.md"
       ],
-      "version": "1.0.0",
       "tested_on": "2026-05-05",
       "author": "lerna",
       "source": {
@@ -232,7 +149,6 @@
       "components": [
         "CLAUDE.md"
       ],
-      "version": "1.0.0",
       "tested_on": "2026-05-05",
       "author": "surrealdb",
       "source": {
@@ -263,7 +179,6 @@
       "components": [
         "CLAUDE.md"
       ],
-      "version": "1.0.0",
       "tested_on": "2026-05-05",
       "author": "qwibitai",
       "source": {
@@ -291,7 +206,6 @@
       "components": [
         "CLAUDE.md"
       ],
-      "version": "1.0.0",
       "tested_on": "2026-05-05",
       "author": "gnachman",
       "source": {
@@ -326,7 +240,6 @@
       "components": [
         "CLAUDE.md"
       ],
-      "version": "1.0.0",
       "tested_on": "2026-05-03",
       "author": "javascript-obfuscator",
       "source": {
@@ -361,7 +274,6 @@
       "components": [
         "CLAUDE.md"
       ],
-      "version": "1.0.0",
       "tested_on": "2026-05-05",
       "author": "saltstack",
       "source": {
@@ -391,7 +303,6 @@
       "components": [
         "CLAUDE.md"
       ],
-      "version": "1.0.0",
       "tested_on": "2026-04-27",
       "author": "coturn",
       "source": {
@@ -425,7 +336,6 @@
       "components": [
         "CLAUDE.md"
       ],
-      "version": "1.0.0",
       "tested_on": "2026-05-05",
       "author": "gitpod-io",
       "source": {
@@ -457,7 +367,6 @@
       "components": [
         "CLAUDE.md"
       ],
-      "version": "1.0.0",
       "tested_on": "2026-05-02",
       "author": "canopy-network",
       "source": {
@@ -492,7 +401,6 @@
       "components": [
         "CLAUDE.md"
       ],
-      "version": "1.0.0",
       "tested_on": "2026-05-04",
       "author": "enso-org",
       "source": {
@@ -527,7 +435,6 @@
       "components": [
         "CLAUDE.md"
       ],
-      "version": "1.0.0",
       "tested_on": "2026-05-03",
       "author": "interpretml",
       "source": {
@@ -562,7 +469,6 @@
       "components": [
         "CLAUDE.md"
       ],
-      "version": "1.0.0",
       "tested_on": "2026-05-03",
       "author": "kimlimjustin",
       "source": {
@@ -597,7 +503,6 @@
       "components": [
         "CLAUDE.md"
       ],
-      "version": "1.0.0",
       "tested_on": "2026-05-05",
       "author": "rajnandan1",
       "source": {
@@ -629,7 +534,6 @@
       "components": [
         "CLAUDE.md"
       ],
-      "version": "1.0.0",
       "tested_on": "2026-04-28",
       "author": "openclaw",
       "source": {
@@ -656,7 +560,6 @@
       "components": [
         "CLAUDE.md"
       ],
-      "version": "1.0.0",
       "tested_on": "2026-05-03",
       "author": "stripe",
       "source": {
@@ -691,7 +594,6 @@
       "components": [
         "CLAUDE.md"
       ],
-      "version": "1.0.0",
       "tested_on": "2026-05-05",
       "author": "ModelEngine-Group",
       "source": {
@@ -726,7 +628,6 @@
       "components": [
         "CLAUDE.md"
       ],
-      "version": "1.0.0",
       "tested_on": "2026-05-04",
       "author": "Tracer-Cloud",
       "source": {
@@ -754,7 +655,6 @@
       "components": [
         "CLAUDE.md"
       ],
-      "version": "1.0.0",
       "tested_on": "2026-05-03",
       "author": "jgraph",
       "source": {
@@ -783,7 +683,6 @@
       "components": [
         "CLAUDE.md"
       ],
-      "version": "1.0.0",
       "tested_on": "2026-05-03",
       "author": "mattermost",
       "source": {
@@ -818,7 +717,6 @@
       "components": [
         "CLAUDE.md"
       ],
-      "version": "1.0.0",
       "tested_on": "2026-05-04",
       "author": "oldwinter",
       "source": {
@@ -853,7 +751,6 @@
       "components": [
         "CLAUDE.md"
       ],
-      "version": "1.0.0",
       "tested_on": "2026-05-05",
       "author": "authorizerdev",
       "source": {
@@ -881,7 +778,6 @@
       "components": [
         "CLAUDE.md"
       ],
-      "version": "1.0.0",
       "tested_on": "2026-05-01",
       "author": "stephengpope",
       "source": {
@@ -911,7 +807,6 @@
       "components": [
         "CLAUDE.md"
       ],
-      "version": "1.0.0",
       "tested_on": "2026-05-01",
       "author": "harbor-framework",
       "source": {
@@ -939,7 +834,6 @@
       "components": [
         "CLAUDE.md"
       ],
-      "version": "1.0.0",
       "tested_on": "2026-05-04",
       "author": "NVIDIA",
       "source": {
@@ -967,7 +861,6 @@
       "components": [
         "CLAUDE.md"
       ],
-      "version": "1.0.0",
       "tested_on": "2026-05-02",
       "author": "kostub",
       "source": {
@@ -1000,7 +893,6 @@
       "components": [
         "CLAUDE.md"
       ],
-      "version": "1.0.0",
       "tested_on": "2026-05-04",
       "author": "hook0",
       "source": {
@@ -1027,7 +919,6 @@
       "components": [
         "CLAUDE.md"
       ],
-      "version": "1.0.0",
       "tested_on": "2026-04-30",
       "author": "debugtheworldbot",
       "source": {
@@ -1060,7 +951,6 @@
       "components": [
         "CLAUDE.md"
       ],
-      "version": "1.0.0",
       "tested_on": "2026-05-04",
       "author": "NikolayS",
       "source": {
@@ -1088,7 +978,6 @@
       "components": [
         "CLAUDE.md"
       ],
-      "version": "1.0.0",
       "tested_on": "2026-05-03",
       "author": "adamlyttleapps",
       "source": {
@@ -1123,7 +1012,6 @@
       "components": [
         "CLAUDE.md"
       ],
-      "version": "1.0.0",
       "tested_on": "2026-05-05",
       "author": "giuseppe99barchetta",
       "source": {
@@ -1153,7 +1041,6 @@
       "components": [
         "CLAUDE.md"
       ],
-      "version": "1.0.0",
       "tested_on": "2026-05-02",
       "author": "sugyan",
       "source": {
@@ -1185,7 +1072,6 @@
       "components": [
         "CLAUDE.md"
       ],
-      "version": "1.0.0",
       "tested_on": "2026-05-04",
       "author": "BayramAnnakov",
       "source": {
@@ -1219,7 +1105,6 @@
       "components": [
         "CLAUDE.md"
       ],
-      "version": "1.0.0",
       "tested_on": "2026-05-04",
       "author": "HaschekSolutions",
       "source": {
@@ -1251,7 +1136,6 @@
       "components": [
         "CLAUDE.md"
       ],
-      "version": "1.0.0",
       "tested_on": "2026-05-05",
       "author": "twcclegg",
       "source": {
@@ -1282,7 +1166,6 @@
       "components": [
         "CLAUDE.md"
       ],
-      "version": "1.0.0",
       "tested_on": "2026-05-04",
       "author": "lich0821",
       "source": {
@@ -1313,7 +1196,6 @@
       "components": [
         "CLAUDE.md"
       ],
-      "version": "1.0.0",
       "tested_on": "2026-04-30",
       "author": "smi2",
       "source": {
@@ -1348,7 +1230,6 @@
       "components": [
         "CLAUDE.md"
       ],
-      "version": "1.0.0",
       "tested_on": "2026-05-03",
       "author": "software-mansion",
       "source": {
@@ -1383,7 +1264,6 @@
       "components": [
         "CLAUDE.md"
       ],
-      "version": "1.0.0",
       "tested_on": "2026-05-03",
       "author": "bytechefhq",
       "source": {
@@ -1416,7 +1296,6 @@
       "components": [
         "CLAUDE.md"
       ],
-      "version": "1.0.0",
       "tested_on": "2026-05-03",
       "author": "mihai-dinculescu",
       "source": {
@@ -1451,7 +1330,6 @@
       "components": [
         "CLAUDE.md"
       ],
-      "version": "1.0.0",
       "tested_on": "2026-04-30",
       "author": "ruzin",
       "source": {
@@ -1479,7 +1357,6 @@
       "components": [
         "CLAUDE.md"
       ],
-      "version": "1.0.0",
       "tested_on": "2026-04-30",
       "author": "johnmarktaylor91",
       "source": {
@@ -1513,7 +1390,6 @@
       "components": [
         "CLAUDE.md"
       ],
-      "version": "1.0.0",
       "tested_on": "2026-05-02",
       "author": "AudiusProject",
       "source": {
@@ -1541,7 +1417,6 @@
       "components": [
         "CLAUDE.md"
       ],
-      "version": "1.0.0",
       "tested_on": "2026-05-03",
       "author": "Uniswap",
       "source": {

@@ -210,7 +210,6 @@ mod tests {
         state.global = Some(ActivePresetInfo {
             active_preset_id: "python-solo".to_string(),
             activated_at: "2025-04-23T10:00:00Z".to_string(),
-            preset_version: "1.0.0".to_string(),
             files: vec!["CLAUDE.md".to_string()],
             backup_ref: "backup-1".to_string(),
         });
@@ -231,7 +230,6 @@ mod tests {
         state.global = Some(ActivePresetInfo {
             active_preset_id: "python-solo".to_string(),
             activated_at: "2025-04-23T10:00:00Z".to_string(),
-            preset_version: "1.0.0".to_string(),
             files: vec!["CLAUDE.md".to_string()],
             backup_ref: "backup-1".to_string(),
         });

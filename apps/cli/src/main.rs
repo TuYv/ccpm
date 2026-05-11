@@ -82,10 +82,10 @@ async fn run(cli: Cli) -> Result<(), Box<dyn std::error::Error>> {
             if index.presets.is_empty() {
                 println!("没有可用的 preset。");
             } else {
-                println!("{:<24} {:<10} {}", "ID", "版本", "名称");
+                println!("{:<24} {}", "ID", "名称");
                 println!("{}", "-".repeat(54));
                 for p in &index.presets {
-                    println!("{:<24} {:<10} {}", p.id, p.version, p.name);
+                    println!("{:<24} {}", p.id, p.name);
                 }
             }
         }
@@ -94,9 +94,8 @@ async fn run(cli: Cli) -> Result<(), Box<dyn std::error::Error>> {
             let state = read_installed(&pm_dir)?;
             if let Some(active) = &state.global {
                 println!(
-                    "全局：{} (v{}, 激活于 {})",
+                    "全局：{} (激活于 {})",
                     active.active_preset_id,
-                    active.preset_version,
                     &active.activated_at[..10]
                 );
             } else {
@@ -107,9 +106,8 @@ async fn run(cli: Cli) -> Result<(), Box<dyn std::error::Error>> {
             } else {
                 for (path, active) in &state.projects {
                     println!(
-                        "项目：{} (v{}, 激活于 {}) [{}]",
+                        "项目：{} (激活于 {}) [{}]",
                         active.active_preset_id,
-                        active.preset_version,
                         &active.activated_at[..10],
                         path
                     );

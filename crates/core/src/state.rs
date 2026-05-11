@@ -62,7 +62,6 @@ mod tests {
         ActivePresetInfo {
             active_preset_id: id.to_string(),
             activated_at: "2025-04-23T10:00:00Z".to_string(),
-            preset_version: "1.0.0".to_string(),
             files: vec!["CLAUDE.md".to_string()],
             backup_ref: "2025-04-23T10-00-00-000000Z".to_string(),
         }

@@ -297,7 +297,6 @@ mod tests {
                     "id": "python-solo",
                     "name": "Python Solo",
                     "description": "d",
-                    "version": "1.0.0",
                     "tested_on": "2025-04-01",
                     "author": "a"
                 }

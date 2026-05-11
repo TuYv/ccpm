@@ -128,7 +128,6 @@ pub fn activate_preset(
     let active_info = ActivePresetInfo {
         active_preset_id: manifest.id.clone(),
         activated_at: Utc::now().to_rfc3339(),
-        preset_version: manifest.version.clone(),
         files: written_files.clone(),
         backup_ref: backup_id.clone(),
     };
@@ -217,7 +216,6 @@ mod tests {
             description: "d".to_string(),
             tags: vec![],
             components: vec![],
-            version: "1.0.0".to_string(),
             min_claude_code_version: None,
             tested_on: "2025-04-01".to_string(),
             author: "a".to_string(),
@@ -287,7 +285,6 @@ mod tests {
         let state = read_installed(&pm).unwrap();
         let active = state.global.unwrap();
         assert_eq!(active.active_preset_id, "python-solo");
-        assert_eq!(active.preset_version, "1.0.0");
     }
 
     #[test]
