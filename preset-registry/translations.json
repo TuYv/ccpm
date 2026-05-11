@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-05-11T16:14:13.613Z",
+  "updated_at": "2026-05-11T18:07:05.024Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -986,6 +986,16 @@
       "hash": "4684b60cbf02d770",
       "summary_zh": "专为JVM应用设计的指标采集库，能帮你轻松将运行数据接入Prometheus监控，适合需要观测Java应用性能与状态的开发场景。",
       "translated_at": "2026-05-11T16:14:13.611Z"
+    },
+    "preset:rizsotto-bear": {
+      "hash": "2805e772fc657da6",
+      "summary_zh": "它能为Clang工具生成编译数据库，通过拦截构建过程自动记录编译参数，解决部分构建系统无法导出编译配置的问题，适合需要配合Clang进行代码补全或静态分析的场景。",
+      "translated_at": "2026-05-11T18:07:01.766Z"
+    },
+    "preset:bitwarden-self-host": {
+      "hash": "6cbdd8f32b098495",
+      "summary_zh": "这是密码管理器的自托管部署工具包，帮你把密码服务跑在自己的服务器上实现数据自主掌控，适合对隐私和合规性要求高的团队或个人。",
+      "translated_at": "2026-05-11T18:07:05.022Z"
     }
   }
 }
