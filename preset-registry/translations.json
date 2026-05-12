@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-05-12T04:06:43.258Z",
+  "updated_at": "2026-05-12T07:48:13.839Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -1021,6 +1021,996 @@
       "hash": "f5ecac9e0be13828",
       "summary_zh": "帮你一键部署自托管AI自动化平台，免去繁琐配置，轻松整合本地大模型与工作流，适合想免费替代Zapier、自建私有AI且注重数据安全的极客或团队。",
       "translated_at": "2026-05-12T04:06:43.256Z"
+    },
+    "preset:aaron-he-zhu-seo-geo-claude-skills": {
+      "hash": "8962365597406112",
+      "summary_zh": "这是一套专为AI助手打造的SEO与GEO优化技能包，让AI直接帮你搞定网站优化，适合想提升内容在搜索引擎和AI问答中曝光率的营销与开发场景。",
+      "translated_at": "2026-05-12T06:58:17.959Z"
+    },
+    "preset:actionbook-rust-skills": {
+      "hash": "7826a94504c8e87f",
+      "summary_zh": "专为Rust开发者打造的AI辅助插件，能结合业务逻辑深层分析报错，避免AI给出治标不治本的表面修复，而是提供真正契合场景的架构级方案。",
+      "translated_at": "2026-05-12T06:58:22.294Z"
+    },
+    "preset:adamlyttleapps-claude-skill-app-onboarding-questionnaire": {
+      "hash": "3cae3eadf5ea6e26",
+      "summary_zh": "这是一个Claude Code插件，能为App自动生成高转化率的问卷式新手引导流程。它借鉴头部订阅应用的转化心理学，直接输出文案与原生代码，适合不懂营销但想提升订阅转化率的开发者。",
+      "translated_at": "2026-05-12T06:59:13.860Z"
+    },
+    "preset:addyosmani-agent-skills": {
+      "hash": "f9072ee63f8a815d",
+      "summary_zh": "专为AI编程助手打造的工业级技能包，封装了资深工程师的规范与工作流，让AI在从需求到上线的开发全流程中按部就班，解决AI写代码缺乏工程约束的问题。",
+      "translated_at": "2026-05-12T06:59:20.429Z"
+    },
+    "preset:21st-dev-1code": {
+      "hash": "839659b2a6007630",
+      "summary_zh": "这是一个开源的AI编程助手调度客户端，能统一管理多种AI编程工具。它解决多工具割裂与易污染代码库的问题，适合需要可视化管理、隔离环境来调度AI写代码的开发者。",
+      "translated_at": "2026-05-12T06:59:26.291Z"
+    },
+    "preset:agent-sh-agentsys": {
+      "hash": "c59add92a23c681a",
+      "summary_zh": "专为AI编程助手打造的模块化运行与编排系统，负责让AI专心写代码，而它来自动搞定其他所有繁杂操作。",
+      "translated_at": "2026-05-12T06:59:50.033Z"
+    },
+    "preset:addyosmani-web-quality-skills": {
+      "hash": "5abe52c84ccb21a6",
+      "summary_zh": "专为 AI 助手定制的网页优化技能包，基于 Lighthouse 和核心网页指标标准，帮你解决网站性能、无障碍和 SEO 等质量问题。",
+      "translated_at": "2026-05-12T07:00:07.341Z"
+    },
+    "preset:agentsea-flashbacker": {
+      "hash": "b6da5f1312eff74d",
+      "summary_zh": "这是一个 Claude Code 的状态管理工具，通过赋予 AI 持久记忆与多智能体协作能力，解决长会话上下文丢失及复杂编程任务难以协同处理的问题。",
+      "translated_at": "2026-05-12T07:00:09.092Z"
+    },
+    "preset:agentseal-codeburn": {
+      "hash": "067c62a328ebd8f4",
+      "summary_zh": "这是个交互式终端看板，专门追踪AI编程工具的Token消耗与花费，帮你搞清预算到底花在哪了，适合需要监控Cursor或Claude开发成本的场景。",
+      "translated_at": "2026-05-12T07:00:24.357Z"
+    },
+    "preset:agricidaniel-claude-ads": {
+      "hash": "6a8e85f3a6ba1e78",
+      "summary_zh": "这是Claude Code的付费广告审计插件，能全面排查各大平台投放问题并给出优化方案，适合想提升广告效果的营销人员。",
+      "translated_at": "2026-05-12T07:00:34.443Z"
+    },
+    "preset:agricidaniel-claude-obsidian": {
+      "hash": "938444c10bd162e7",
+      "summary_zh": "这是一个AI驱动的笔记助手，能自动提炼资料概念并交叉关联，把零散信息整合成不断积累的维基库。它免去了手动归档的烦恼，适合想轻松打造“第二大脑”的人。",
+      "translated_at": "2026-05-12T07:01:08.964Z"
+    },
+    "preset:aker-dev-microfolio": {
+      "hash": "d1aa88d564ddb0f1",
+      "summary_zh": "这是一款专为创作者打造的静态作品集生成器，只需Markdown和文件夹即可管理内容，无需折腾数据库，轻松搭建专业的项目展示站。",
+      "translated_at": "2026-05-12T07:01:10.916Z"
+    },
+    "preset:agricidaniel-claude-seo": {
+      "hash": "3977664137a432bb",
+      "summary_zh": "这是专为 Claude Code 打造的 SEO 审计插件，能自动搞定技术排查、内容优化到生成报告的全链路分析，适合想用 AI 自动化深度 SEO 诊断的开发者与营销人员。",
+      "translated_at": "2026-05-12T07:01:29.684Z"
+    },
+    "preset:alirezarezvani-claude-skills": {
+      "hash": "8c64664ed6eb58bc",
+      "summary_zh": "这是为AI编程助手补充专家技能的插件库，解决AI缺乏垂直领域经验的问题。它让你在用各类AI写代码时，直接赋予其工程、营销或合规等专业能力，适合需要提升开发专业度的场景。",
+      "translated_at": "2026-05-12T07:02:00.433Z"
+    },
+    "preset:alinaqi-claude-bootstrap": {
+      "hash": "3d3e2171e072895b",
+      "summary_zh": "这是一个自主AI工程指挥中心，通过测试驱动和质量门禁严格把控AI代码的简洁与安全，适合追求高可靠性的自动化AI编程场景。",
+      "translated_at": "2026-05-12T07:02:28.012Z"
+    },
+    "preset:alonw0-web-asset-generator": {
+      "hash": "8ff22655e6ec5f5d",
+      "summary_zh": "这是一个Claude代码技能，让你通过自然对话从Logo、文字或表情生成网站图标和应用图标，适合想快速搞定线上产品视觉资源而免去手动作图的开发者。",
+      "translated_at": "2026-05-12T07:02:31.285Z"
+    },
+    "preset:alirezarezvani-claudeforge": {
+      "hash": "9ad67af4feb28c5e",
+      "summary_zh": "这是一款自动生成和维护Claude Code指令文件的工具，帮你告别手动编写CLAUDE.md的繁琐，确保项目规则始终与代码库同步。",
+      "translated_at": "2026-05-12T07:02:31.376Z"
+    },
+    "preset:almogbaku-debug-skill": {
+      "hash": "e4c02dde196881df",
+      "summary_zh": "专为AI编程助手打造的调试工具，让AI能像人类一样打断点和单步排查，解决AI只会用print盲目试错的低效排错问题。",
+      "translated_at": "2026-05-12T07:02:33.025Z"
+    },
+    "preset:arnaldo-delisio-claude-code-studio": {
+      "hash": "bb57507b7cedd3ae",
+      "summary_zh": "它能把Claude Code打造成开发工作室，通过将任务分派给专属智能体，解决长对话易触碰上下文上限导致中断和失忆的问题，适合需要全天候连续开发的场景。",
+      "translated_at": "2026-05-12T07:02:56.395Z"
+    },
+    "preset:avifenesh-agnix": {
+      "hash": "b21f0001bdb1f397",
+      "summary_zh": "专为AI编程助手打造的代码检查和语言服务工具，能在配置文件出错导致AI工具静默失效前提前揪出问题，适合用Claude或Cursor等AI写代码时保障配置不出错。",
+      "translated_at": "2026-05-12T07:03:04.119Z"
+    },
+    "preset:asklokesh-claudeskill-loki-mode": {
+      "hash": "4e89e859663ec5e2",
+      "summary_zh": "这是一个多智能体自主开发框架，只需提供需求文档或一句话描述，就能自动生成带测试的可部署代码，适合想全程无干预搞定应用开发的场景。",
+      "translated_at": "2026-05-12T07:03:05.530Z"
+    },
+    "preset:antonbabenko-terraform-skill": {
+      "hash": "8d9245dc6754127b",
+      "summary_zh": "这是给AI编程助手的技能包，内置Terraform与OpenTofu最佳实践，解决AI写基础设施代码不规范、难落地的问题，适合DevOps用AI生成生产级配置。",
+      "translated_at": "2026-05-12T07:03:41.819Z"
+    },
+    "preset:basicmachines-co-basic-memory": {
+      "hash": "5f4f1fd05b29792a",
+      "summary_zh": "这是一款本地优先的知识库工具，能为 AI 对话建立持久记忆。它解决了每次聊天都要重新交代项目背景的痛点，非常适合需要长期与 AI 深度协作的场景。",
+      "translated_at": "2026-05-12T07:03:43.211Z"
+    },
+    "preset:backnotprop-plannotator": {
+      "hash": "ef8cdf668e647f80",
+      "summary_zh": "专为AI编程助手打造的可视化审查工具。帮你直观批注并审核AI的计划与代码修改，一键把反馈发回AI或分享团队，适合需把控AI写码质量的协作场景。",
+      "translated_at": "2026-05-12T07:03:52.766Z"
+    },
+    "preset:bijutharakan-multi-agent-squad": {
+      "hash": "68ad51484030dbe0",
+      "summary_zh": "专为 Claude Code 打造的多智能体编排框架，能将 AI 变身分工明确的虚拟开发团队，自动搞定从需求到交付的全流程，适合想实现软件开发全自动化的场景。",
+      "translated_at": "2026-05-12T07:04:24.766Z"
+    },
+    "preset:bitwize-music-studio-claude-ai-music-skills": {
+      "hash": "8455dd45d29619c0",
+      "summary_zh": "这是一款配合Suno的Claude插件，让你靠聊天就能做专辑。它专为不懂乐器但有灵感的人设计，帮你自动搞定从概念构思到发布准备的全套音乐制作流程。",
+      "translated_at": "2026-05-12T07:04:52.892Z"
+    },
+    "preset:bmpixel-cui": {
+      "hash": "328624499ffb0eba",
+      "summary_zh": "这是一个Claude Code代理的网页交互界面，能让你在浏览器里直接管理和运行AI编程任务，适合需要远程或并行执行代码的开发场景。",
+      "translated_at": "2026-05-12T07:05:17.959Z"
+    },
+    "preset:bloopai-vibe-kanban": {
+      "hash": "619ae6e3ab90db60",
+      "summary_zh": "这是一款专为AI编程智能体打造的看板管理工具，能帮你统一搞定任务规划、代码执行与结果审查，大幅提升AI辅助开发的效率，特别适合需要频繁管理和检查AI生成代码的开发者。",
+      "translated_at": "2026-05-12T07:05:25.826Z"
+    },
+    "preset:beehiveinnovations-zen-mcp-server": {
+      "hash": "f68a0159b4b16e76",
+      "summary_zh": "它是连接AI编程工具和大模型的协作层，让你在一个命令行里调度不同模型和子智能体。像带AI团队一样协同干活，避免上下文污染，适合复杂开发或多模型配合的场景。",
+      "translated_at": "2026-05-12T07:05:35.537Z"
+    },
+    "preset:c0dezli-claude-code-personal-assistant": {
+      "hash": "960876834bfba64f",
+      "summary_zh": "用 Claude 搭建专属 AI 助理的配置模板，适合想打通 Google 邮箱日历和 Notion 待办的人，让日常办公与生活琐事自动化运转。",
+      "translated_at": "2026-05-12T07:06:05.734Z"
+    },
+    "preset:callstack-react-native-testing-library": {
+      "hash": "70ff9d41cd6f9222",
+      "summary_zh": "专为React Native组件打造的测试工具，引导你从用户视角而非代码实现编写测试，让测试更健壮，避免重构时频繁报错。",
+      "translated_at": "2026-05-12T07:06:14.965Z"
+    },
+    "preset:browser-use-bux": {
+      "hash": "65ffd6c57cefecd6",
+      "summary_zh": "在任何便宜VPS上跑一个全天在线的Claude网页助手，它能记住登录状态、遇验证码会找你接管，让你随时随地通过Telegram指挥它自动上网干活。",
+      "translated_at": "2026-05-12T07:06:37.577Z"
+    },
+    "preset:callstackincubator-agent-skills": {
+      "hash": "b68aa5a5ba2e63c7",
+      "summary_zh": "专为AI编程助手打造的React Native技能包，让AI掌握开发最佳实践、版本升级与工作流配置，适合需要AI深度参与RN项目构建与性能优化的场景。",
+      "translated_at": "2026-05-12T07:06:44.334Z"
+    },
+    "preset:campfirein-cipher": {
+      "hash": "c3008f920dd975c3",
+      "summary_zh": "这是一个为AI编程助手补充长期记忆的命令行工具，能帮你整理并同步项目知识，让AI跨会话记住上下文，解决每次都要重新熟悉项目的痛点。",
+      "translated_at": "2026-05-12T07:07:01.350Z"
+    },
+    "preset:charlie85270-dorothy": {
+      "hash": "222b6317f2cacd41",
+      "summary_zh": "一款AI智能体桌面调度工具，能在一个界面同时运行和管理多个智能体，告别终端单线程局限，适合需要跨项目并行跑任务或自动化工作流的场景。",
+      "translated_at": "2026-05-12T07:07:08.837Z"
+    },
+    "preset:chongdashu-cc-statusline": {
+      "hash": "3a693305bda3e6fa",
+      "summary_zh": "专为 Claude Code 打造的美观状态栏增强工具，能实时显示项目环境、代码状态与模型消耗等关键信息，帮你随时掌控开发进度与使用成本。",
+      "translated_at": "2026-05-12T07:07:24.185Z"
+    },
+    "preset:claude-did-this-claude-hub": {
+      "hash": "7676ac34540c9c55",
+      "summary_zh": "把Claude接入GitHub的机器人服务，在Issue或PR中@它，AI就能自动分析代码、答疑甚至实现功能，适合想让AI深度参与代码协作的开发团队。",
+      "translated_at": "2026-05-12T07:07:26.935Z"
+    },
+    "preset:coffeegrind123-gemini-for-claude-code": {
+      "hash": "20f14cf8db1f658e",
+      "summary_zh": "这是一个接口转换代理，解决API不兼容的问题，让你能在Claude Code里直接调用谷歌Gemini模型，适合习惯用Claude Code但想换Gemini大脑的开发者。",
+      "translated_at": "2026-05-12T07:07:58.832Z"
+    },
+    "preset:cloudai-x-claude-workflow-v2": {
+      "hash": "3b875051f35a32b0",
+      "summary_zh": "这是一个适配Claude Code和Cursor等AI编程助手的通用工作流插件，能为各类软件项目提供定制化的智能开发流程，让AI辅助开发更规范高效。",
+      "translated_at": "2026-05-12T07:08:04.686Z"
+    },
+    "preset:coder-claudecode-nvim": {
+      "hash": "3f47535ee64ee5af",
+      "summary_zh": "这是把Claude Code接入Neovim的插件，让你不用换到VS Code或JetBrains，就能在自己的编辑器里直接用AI辅助写代码。",
+      "translated_at": "2026-05-12T07:08:11.667Z"
+    },
+    "preset:conorbronsdon-avoid-ai-writing": {
+      "hash": "5b0cb44c7cd7055f",
+      "summary_zh": "这是一款供AI代理调用的写作技能，专门审查并改写文本以消除AI腔调，让表达更自然，适合需要去除文章机器味或给AI生成内容润色的场景。",
+      "translated_at": "2026-05-12T07:08:47.164Z"
+    },
+    "preset:conorluddy-ios-simulator-skill": {
+      "hash": "00b06b8c0fbc22bf",
+      "summary_zh": "这是给Claude Code的iOS开发插件，它封装了编译和模拟器操作，让AI能更节省上下文地构建、测试和交互应用，适合用AI自动化开发或测试iOS。",
+      "translated_at": "2026-05-12T07:09:12.312Z"
+    },
+    "preset:composiohq-composio": {
+      "hash": "80f40f6d68269b49",
+      "summary_zh": "这是专为AI代理打造的集成工具，内置海量应用接口与授权管理。它能让大模型直接调用外部软件把意图变成行动，适合需要让AI真正“干活”而非仅限聊天的开发者。",
+      "translated_at": "2026-05-12T07:09:12.841Z"
+    },
+    "preset:coreyhaines31-marketingskills": {
+      "hash": "91069177bb801ae4",
+      "summary_zh": "这是一套给AI编程助手的营销技能包，能让AI自动套用专业营销框架，适合想让AI深度参与业务增长和营销落地的技术创业者或营销人。",
+      "translated_at": "2026-05-12T07:09:37.275Z"
+    },
+    "preset:czlonkowski-n8n-skills": {
+      "hash": "58b97b5f26916acb",
+      "summary_zh": "这是一套 Claude Code 专用技能包，能教 AI 助手避开各种坑，正确搭建生产级 n8n 工作流，专治语法报错、节点配错和验证死循环等问题。",
+      "translated_at": "2026-05-12T07:10:02.798Z"
+    },
+    "preset:ctoth-claudio": {
+      "hash": "c5e51dc43d1e43b9",
+      "summary_zh": "这是专为 Claude Code 打造的音效插件，能根据工具调用和任务状态播放对应提示音，让你靠听觉掌握进度，适合不想死盯屏幕的开发场景。",
+      "translated_at": "2026-05-12T07:10:04.582Z"
+    },
+    "preset:davila7-claude-code-templates": {
+      "hash": "893795124260d6d8",
+      "summary_zh": "专为 Claude Code 打造的命令行工具，能帮你快速搞定环境配置并实时监控运行状态，适合需要管理和维护该工具的开发者。",
+      "translated_at": "2026-05-12T07:10:28.434Z"
+    },
+    "preset:d-kimuson-claude-code-viewer": {
+      "hash": "9ec810b71cc354df",
+      "summary_zh": "这是一个网页端图形界面客户端，帮你通过浏览器直观管理项目，适合需要实时监控运行任务或便捷查阅历史记录的场景。",
+      "translated_at": "2026-05-12T07:10:28.736Z"
+    },
+    "preset:daaain-claude-code-log": {
+      "hash": "053b4e2469a4426b",
+      "summary_zh": "这个Python命令行工具能把Claude Code的JSONL对话记录转成易读的HTML网页，解决原始日志难看懂的问题，方便你回顾和整理AI交互历史。",
+      "translated_at": "2026-05-12T07:10:59.914Z"
+    },
+    "preset:deusyu-translate-book": {
+      "hash": "62dd202fa5e3003b",
+      "summary_zh": "这是一款基于 Claude Code 的整书翻译工具，通过分块并行处理解决长文翻译易截断的问题，适合需要快速、完整地把整本电子书翻译成其他语言的场景。",
+      "translated_at": "2026-05-12T07:11:23.572Z"
+    },
+    "preset:digitalsamba-claude-code-video-toolkit": {
+      "hash": "31ef87479f10b8d6",
+      "summary_zh": "专为Claude Code打造的AI视频制作套件，让AI助手搞定从创意到渲染的全流程，适合开发者用代码自动化生成专业视频。",
+      "translated_at": "2026-05-12T07:11:26.721Z"
+    },
+    "preset:disler-claude-code-hooks-multi-agent-observability": {
+      "hash": "0b46656a478f379f",
+      "summary_zh": "这是一个实时监控 Claude Code 多个 Agent 运行状态的可视化工具，解决多智能体并行协作时难以追踪工具调用和任务交接的黑盒问题。",
+      "translated_at": "2026-05-12T07:11:43.026Z"
+    },
+    "preset:djyde-ccmate": {
+      "hash": "c584f3945f5cc195",
+      "summary_zh": "这是一款管理 Claude Code 配置文件的桌面应用，帮你告别手动改配置的繁琐，轻松搞定各项设置，适合经常使用 Claude Code 的开发者。",
+      "translated_at": "2026-05-12T07:11:49.722Z"
+    },
+    "preset:dmitrysolana-ralph-claude-code": {
+      "hash": "a8031338b94c9105",
+      "summary_zh": "这是一款专为树莓派硬件开发打造的AI助手，能自动生成控制代码并逐针指导接线，适合创客和初学者快速搞定传感器编程与硬件排错。",
+      "translated_at": "2026-05-12T07:12:03.856Z"
+    },
+    "preset:disler-infinite-agentic-loop": {
+      "hash": "0ce24f0e8b9d6771",
+      "summary_zh": "这是一个基于Claude Code的实验项目，能并行调度多个AI代理，根据需求文档持续自动生成和迭代内容，适合需要批量产出或探索多样化方案的场景。",
+      "translated_at": "2026-05-12T07:12:12.727Z"
+    },
+    "preset:drona23-claude-token-efficient": {
+      "hash": "5d61ea0b43262e35",
+      "summary_zh": "这是个即插即用的配置文件，能强制大模型省去废话与过度设计，让回复更精简，专为需要频繁交互、想大幅节省输出Token开销的重度工作流打造。",
+      "translated_at": "2026-05-12T07:12:15.111Z"
+    },
+    "preset:dvdsgl-claude-canvas": {
+      "hash": "1a48349884ff8c51",
+      "summary_zh": "这是一个给Claude Code外接“显示器”的工具，能在终端分屏中弹出独立的交互界面，解决AI只能输出纯文本的限制，适合需要直观展示和操作的场景。",
+      "translated_at": "2026-05-12T07:12:46.879Z"
+    },
+    "preset:ehmo-platform-design-skills": {
+      "hash": "ec08edc08d7537a0",
+      "summary_zh": "这是一个汇集苹果、安卓及网页端450多条设计规范与无障碍标准的规则包，适合在创建、审查或优化跨平台界面时，用来确保设计符合各平台的官方习惯与无障碍要求。",
+      "translated_at": "2026-05-12T07:12:47.901Z"
+    },
+    "preset:earthtojake-text-to-cad": {
+      "hash": "32ced5f042cc11ee",
+      "summary_zh": "这是一套赋予AI编程助手CAD能力的开源工具包，让AI直接生成3D模型，适合想靠对话或写代码快速完成建模与机器人设计的开发者。",
+      "translated_at": "2026-05-12T07:13:00.552Z"
+    },
+    "preset:ethereum-ethereum-org-website": {
+      "hash": "28d5c2950af0b5a6",
+      "summary_zh": "这是以太坊官方网站的源码，旨在为全球用户提供了解以太坊生态的核心门户，适合想参与网站内容、翻译或功能共建的社区贡献者。",
+      "translated_at": "2026-05-12T07:13:33.597Z"
+    },
+    "preset:ericosiu-ai-marketing-skills": {
+      "hash": "5e52fc6cc4b55a52",
+      "summary_zh": "专为营销和销售团队打造的开源AI自动化工作流脚本，能直接丢给Claude等AI去跑，帮你告别手动折腾，自动搞定各种繁杂的日常运营活儿。",
+      "translated_at": "2026-05-12T07:13:43.971Z"
+    },
+    "preset:eronred-aso-skills": {
+      "hash": "310806086d1a3937",
+      "summary_zh": "这是一套专为AI助手打造的ASO与营销技能包，让独立开发或运营团队在Cursor等工具里，就能结合真实商店数据获取专业优化方案，省去昂贵咨询成本。",
+      "translated_at": "2026-05-12T07:13:56.570Z"
+    },
+    "preset:expo-skills": {
+      "hash": "b36947fe56496bef",
+      "summary_zh": "一套官方的AI编程助手技能包，能让AI在写代码时自动运用Expo最佳实践，帮你更轻松地搞定应用的构建、调试与部署。",
+      "translated_at": "2026-05-12T07:14:02.559Z"
+    },
+    "preset:forrestchang-andrej-karpathy-skills": {
+      "hash": "119a97524aaf21ac",
+      "summary_zh": "这是一份给 Claude Code 用的配置文件，能纠正 AI 写代码时瞎猜需求、过度设计和乱改无关代码的毛病，让它的代码更精简，改动更精准。",
+      "translated_at": "2026-05-12T07:14:30.506Z"
+    },
+    "preset:farhanaliraza-claude-context-local": {
+      "hash": "5435885c28ebcdbd",
+      "summary_zh": "这是一个专为 AI 编程助手打造的本地语义代码搜索插件，能把整个代码库喂给模型作上下文，让你既不用花 API 钱，又能保证代码不出本机。",
+      "translated_at": "2026-05-12T07:14:37.875Z"
+    },
+    "preset:fuergaosi233-claude-code-proxy": {
+      "hash": "2913f935b941dc6b",
+      "summary_zh": "这是一个将Claude格式请求转为OpenAI格式的代理服务。它打破了命令行工具只能用官方接口的限制，让你能用各类兼容OpenAI的大模型或本地模型来跑Claude Code。",
+      "translated_at": "2026-05-12T07:15:05.983Z"
+    },
+    "preset:fradser-dotclaude": {
+      "hash": "cffb228df0b00225",
+      "summary_zh": "这是一套 Claude Code 的增强插件集，提供专业 AI 代理来接管繁琐的开发与工程管理流程，适合想大幅提升日常编码效率的开发者。",
+      "translated_at": "2026-05-12T07:15:08.429Z"
+    },
+    "preset:getsentry-sentry": {
+      "hash": "02f725018d62dcee",
+      "summary_zh": "这是一个专为开发者打造的应用调试与监控平台，能帮你自动追踪线上报错与性能瓶颈，告别盲目翻日志，快速定位问题根因并修复代码。",
+      "translated_at": "2026-05-12T07:15:36.348Z"
+    },
+    "preset:gman1911-claude-cognitive": {
+      "hash": "0d6b3d4b449138d7",
+      "summary_zh": "给 Claude Code 补充持久记忆与多实例协同能力，解决无状态导致的重复分析、幻觉和浪费 token 问题，适合大型代码库与长时并发开发。",
+      "translated_at": "2026-05-12T07:15:57.074Z"
+    },
+    "preset:fvadicamo-dev-agent-skills": {
+      "hash": "ebe31ce234f253cb",
+      "summary_zh": "专为 Claude Code 打造的技能插件，通过规范工作流解决 AI 操作 Git/GitHub 时随意发挥易出错的问题，让自动化代码协作更靠谱。",
+      "translated_at": "2026-05-12T07:16:04.232Z"
+    },
+    "preset:greggh-claude-code-nvim": {
+      "hash": "fdec33ff9580dea9",
+      "summary_zh": "一款 Neovim 插件，把 Claude Code AI 助手无缝接入编辑器，让你在 Neovim 里一键呼出终端与 AI 对话编程，免来回切换。",
+      "translated_at": "2026-05-12T07:16:04.643Z"
+    },
+    "preset:greensock-gsap-skills": {
+      "hash": "6e5d85007307a41c",
+      "summary_zh": "专门教 AI 编程助手正确使用 GSAP 动画库的官方技能包，解决 AI 乱写动效代码的问题，适合让 AI 辅助生成高质量动画。",
+      "translated_at": "2026-05-12T07:16:10.977Z"
+    },
+    "preset:gsd-build-get-shit-done": {
+      "hash": "7e4ba43c598b81be",
+      "summary_zh": "这是一款轻量的元提示与上下文工程系统，专为主流AI编程助手打造。它能有效解决AI对话过长导致的上下文退化问题，确保在大型项目中代码生成质量始终稳定。",
+      "translated_at": "2026-05-12T07:16:12.336Z"
+    },
+    "preset:gwudcap-cc-sessions": {
+      "hash": "270216a83416c896",
+      "summary_zh": "这是专为 Claude Code 打造的工作流自动化工具，能帮你规范开发流程、防止需求蔓延，适合重度依赖 AI 编程并追求高效的开发者。",
+      "translated_at": "2026-05-12T07:16:45.801Z"
+    },
+    "preset:hamelsmu-claude-review-loop": {
+      "hash": "1589a8e16e1e75d1",
+      "summary_zh": "这是一款 Claude Code 插件，能在 AI 写完代码后自动调用 Codex 进行多角度审查，给出独立的“第二意见”。适合需要双重 AI 把关代码质量与安全，避免直接引入缺陷的开发场景。",
+      "translated_at": "2026-05-12T07:16:49.463Z"
+    },
+    "preset:guia-matthieu-clawfu-skills": {
+      "hash": "a0ae7c07c52e84f5",
+      "summary_zh": "这是一个专为AI打造的专家级营销技能库，整合了上百个经典营销方法论，让AI能像专业营销人一样思考和输出，适合需要AI深度参与营销策划与内容创作的场景。",
+      "translated_at": "2026-05-12T07:16:57.899Z"
+    },
+    "preset:haunchen-n8n-skills": {
+      "hash": "c06c36dde1af2c50",
+      "summary_zh": "这是一套让AI助手直接看懂并操作n8n的技能包，适合需要AI辅助快速搭建工作流或查询节点用法的场景，能帮你大幅省去手动摸索的时间。",
+      "translated_at": "2026-05-12T07:17:19.332Z"
+    },
+    "preset:heygen-com-hyperframes": {
+      "hash": "e1ffee0d06f6fe0c",
+      "summary_zh": "专为AI助手打造的开源视频渲染框架，通过编写HTML就能生成视频，适合让AI自动写代码来制作动画视频的场景。",
+      "translated_at": "2026-05-12T07:17:32.842Z"
+    },
+    "preset:humanplane-homunculus": {
+      "hash": "1db1327a2da91051",
+      "summary_zh": "一个能观察你编码习惯的AI助手插件，它通过后台学习你的行为模式并自动进化，越用越懂你，适合需要长期与AI结对编程的开发者。",
+      "translated_at": "2026-05-12T07:17:37.674Z"
+    },
+    "preset:helmi-claude-simone": {
+      "hash": "760e72a58d9fab97",
+      "summary_zh": "专为 Claude Code 打造的 AI 开发项目管理框架，通过结构化提示让 AI 看懂项目并跟进任务，解决 AI 协作时缺乏全局观的问题，适合重度依赖 AI 编程的开发者。",
+      "translated_at": "2026-05-12T07:17:52.514Z"
+    },
+    "preset:hyf0-vue-skills": {
+      "hash": "bbb84d0c48f7ae19",
+      "summary_zh": "这是一套给AI编程助手准备的Vue 3专属技能包，能让AI遵循Vue最佳实践写代码，避免生成不规范的代码，适合用AI辅助开发Vue 3项目的场景。",
+      "translated_at": "2026-05-12T07:18:05.746Z"
+    },
+    "preset:htdt-godogen": {
+      "hash": "b25219154e5f2b31",
+      "summary_zh": "这是一款专为Godot和Bevy打造的AI游戏生成器。只需描述游戏想法，它就能结合Claude或Codex，自动完成从写代码、做素材到修Bug的全流程，实现真正的全自动游戏开发。",
+      "translated_at": "2026-05-12T07:18:09.345Z"
+    },
+    "preset:iamshankhadeep-ccseva": {
+      "hash": "9ce3211ba31ef3f9",
+      "summary_zh": "一款 macOS 菜单栏小工具，可实时追踪 Claude Code 的用量与花费，帮你随时掌握额度消耗，防止超额使用。",
+      "translated_at": "2026-05-12T07:18:27.276Z"
+    },
+    "preset:ido-levi-claude-code-tamagotchi": {
+      "hash": "9b6ad82ba2947658",
+      "summary_zh": "这是个带电子宠物界面的监督工具，能实时盯着Claude Code，一旦发现AI偏离指令就立刻拦截，防止它乱来。",
+      "translated_at": "2026-05-12T07:18:55.900Z"
+    },
+    "preset:imbad0202-academic-research-skills": {
+      "hash": "65ce3bee8cbcb78f",
+      "summary_zh": "给 Claude Code 用的学术写作技能包，帮你代劳查文献、排版与校对等繁琐工作，让你专注核心观点与论证，适合人机协作打磨论文的场景。",
+      "translated_at": "2026-05-12T07:19:11.361Z"
+    },
+    "preset:irenicj-claude-user-memory": {
+      "hash": "260de42dac9411a9",
+      "summary_zh": "专为Claude Code打造的多智能体协作框架，靠“先研究再规划后开发”的流程和测试卡点，解决AI瞎编或用过时信息写代码的问题，适合追求自动化、高质量的开发场景。",
+      "translated_at": "2026-05-12T07:19:33.276Z"
+    },
+    "preset:iamzhihuix-happy-claude-skills": {
+      "hash": "442d2f6244b07e2e",
+      "summary_zh": "这是一套专为AI编程助手打造的技能插件包，能让它们跳出纯写代码的局限，直接接管日常办公与内容创作等真实工作流，适合想全面拓展AI实操能力的用户。",
+      "translated_at": "2026-05-12T07:19:38.491Z"
+    },
+    "preset:jarrodwatts-claude-delegator": {
+      "hash": "1a98f36e003765f4",
+      "summary_zh": "这是一个Claude Code插件，能让你在Claude里直接把复杂编程任务派给GPT或Gemini专家代劳，适合需要多模型协作解决专业问题的场景。",
+      "translated_at": "2026-05-12T07:20:00.774Z"
+    },
+    "preset:jarrodwatts-claude-hud": {
+      "hash": "ead95215facaec9b",
+      "summary_zh": "这是一款 Claude Code 的状态栏插件，能实时展示 AI 的运行进度与资源消耗，让你随时掌控后台动态，告别盲等。",
+      "translated_at": "2026-05-12T07:20:14.556Z"
+    },
+    "preset:jeffallan-claude-skills": {
+      "hash": "b15da4408ef24755",
+      "summary_zh": "专为全栈开发者打造的Claude Code技能包，能把AI变成专家级结对编程搭档，适合需要全方位代码辅助的开发场景。",
+      "translated_at": "2026-05-12T07:20:19.409Z"
+    },
+    "preset:jimmc414-cctrace": {
+      "hash": "63c45c8458f90dfb",
+      "summary_zh": "能把 Claude Code 聊天记录转成 Markdown 或 XML，方便归档分析，或把会话存入 Git 让队友导入继续开发，适合需要复盘或团队接力编程的场景。",
+      "translated_at": "2026-05-12T07:20:51.598Z"
+    },
+    "preset:jeremylongshore-claude-code-plugins-plus-skills": {
+      "hash": "d39ab91767ef6ffe",
+      "summary_zh": "这是专为Claude Code打造的扩展市场，能一键安装海量现成的能力包与自动化工具，帮你快速强化AI助手，省去从头配置和开发的麻烦。",
+      "translated_at": "2026-05-12T07:20:57.847Z"
+    },
+    "preset:juliusbrussee-caveman": {
+      "hash": "ff2131a7de5e5098",
+      "summary_zh": "这是一个AI编程助手插件，让AI像原始人一样极简回复，在保持技术准确的同时砍掉约75%的输出token，适合想省API费用和阅读时间的开发者。",
+      "translated_at": "2026-05-12T07:21:04.205Z"
+    },
+    "preset:kbwo-ccmanager": {
+      "hash": "48c51cef3c4673dc",
+      "summary_zh": "这是一个AI编程助手会话管理器，能让你在多个Git项目中并行运行、无缝切换和监控各类AI编码任务，无需tmux也能轻松管理多线并发的开发工作。",
+      "translated_at": "2026-05-12T07:21:25.238Z"
+    },
+    "preset:kenryu42-claude-code-safety-net": {
+      "hash": "8995cd4dc31bd7d5",
+      "summary_zh": "作为 AI 编程助手的安全钩子，它能在执行破坏性文件或 git 操作前及时踩下刹车，防止代码仓库被误删，适合担心 AI 误操作的开发场景。",
+      "translated_at": "2026-05-12T07:21:38.301Z"
+    },
+    "preset:kevin7qi-codex-collab": {
+      "hash": "1f367c713e61dae5",
+      "summary_zh": "这款工具能让你在 Claude Code 里直接调用 Codex 跑任务，免去了不同 AI 间来回切换的麻烦，特别适合多模型协作和自动化代码审查。",
+      "translated_at": "2026-05-12T07:21:43.548Z"
+    },
+    "preset:kiliczsh-claude-cmd": {
+      "hash": "07af6fa765f4e375",
+      "summary_zh": "这是款轻量级命令行工具，帮你集中管理 Claude AI 的自定义命令、项目配置和 MCP 服务器，轻松搜索安装在线命令，告别手动维护的麻烦。",
+      "translated_at": "2026-05-12T07:22:01.025Z"
+    },
+    "preset:kubb-labs-kubb": {
+      "hash": "432fce8e4940bcd8",
+      "summary_zh": "这是一个代码生成框架，能根据 OpenAPI 自动生成类型安全的 TS 代码、请求客户端和模拟数据，让你不再手写胶水代码，非常适合前后端 API 对接与联调。",
+      "translated_at": "2026-05-12T07:22:04.289Z"
+    },
+    "preset:kyleamathews-claude-code-ui": {
+      "hash": "ffc503302260dbbb",
+      "summary_zh": "一款Claude Code会话的实时监控面板，能帮你跨项目追踪AI工作进度、审批需求及PR/CI状态，适合需要同时管理多个AI编程任务的场景。",
+      "translated_at": "2026-05-12T07:22:38.641Z"
+    },
+    "preset:lst97-claude-code-sub-agents": {
+      "hash": "5e6c20d206b9b6e1",
+      "summary_zh": "专为Claude Code打造的全栈AI专家库。它能根据任务自动匹配或按需调用各领域专家，解决复杂开发中的分工与协作问题，适合想提升全栈开发效率的场景。",
+      "translated_at": "2026-05-12T07:23:18.267Z"
+    },
+    "preset:lum1104-understand-anything": {
+      "hash": "d3544c46edb7e516",
+      "summary_zh": "把代码和文档转成可交互的知识图谱，配合主流AI编程助手，帮你理清逻辑脉络，快速吃透复杂的代码库与知识体系。",
+      "translated_at": "2026-05-12T07:23:22.295Z"
+    },
+    "preset:luongnv89-claude-statusline": {
+      "hash": "fbcb462a9ae12580",
+      "summary_zh": "这是一款 Claude Code 的用量分析工具，帮你摸清 token 和上下文的消耗去向，解决额度超支与成本盲区问题，适合想省钱高效开发的人。",
+      "translated_at": "2026-05-12T07:24:16.152Z"
+    },
+    "preset:manzaltu-claude-code-ide-el": {
+      "hash": "adc0dd08dfaa4bf5",
+      "summary_zh": "这是一个将Claude深度接入Emacs的插件，通过双向桥接让AI直接调用编辑器能力，解决普通AI不懂编辑器环境的问题，适合想在Emacs中无缝使用AI的开发者。",
+      "translated_at": "2026-05-12T07:24:24.722Z"
+    },
+    "preset:lkbaba-claude-code-chatinwindows": {
+      "hash": "6257d46db60898ff",
+      "summary_zh": "这是VSCode里的Claude Code图形扩展，让Win用户免WSL直接跑并支持第三方API，适合想在编辑器里告别命令行、轻松用它写代码的人。",
+      "translated_at": "2026-05-12T07:24:37.710Z"
+    },
+    "preset:meodai-skill-color-expert": {
+      "hash": "71e41ba199e67d4a",
+      "summary_zh": "这是一个给AI编程助手注入色彩专业知识的技能插件。它内置海量的色彩理论与实践资料，让AI能更专业地帮你解决前端与UI开发中的配色及无障碍对比度问题。",
+      "translated_at": "2026-05-12T07:24:56.297Z"
+    },
+    "preset:mattpocock-skills": {
+      "hash": "e6944d0ef637fc8e",
+      "summary_zh": "这是一套专为AI编程智能体打造的实战指令库，能帮你避免自动化流程失控，适合在任何模型下高效、自主地进行真正的软件工程开发。",
+      "translated_at": "2026-05-12T07:24:59.269Z"
+    },
+    "preset:mhattingpete-claude-skills-marketplace": {
+      "hash": "d5ccb63c9f0b0b2f",
+      "summary_zh": "这是一个Claude Code的插件市场，适合需要频繁处理Git、代码审查或测试的开发者，能帮你把这些繁琐的工程流程自动化。",
+      "translated_at": "2026-05-12T07:25:24.089Z"
+    },
+    "preset:mksglu-claude-context-mode": {
+      "hash": "06e34e7f2fbf6c1c",
+      "summary_zh": "专为AI编程助手打造的上下文优化工具，通过隔离工具运行的冗长输出，将上下文占用暴降98%，彻底解决长任务编程时上下文窗口极易爆满的问题。",
+      "translated_at": "2026-05-12T07:25:38.501Z"
+    },
+    "preset:muratcankoylan-agent-skills-for-context-engineering": {
+      "hash": "1271827807537033",
+      "summary_zh": "这是一套上下文工程技能合集，帮你解决大模型注意力衰减与信息丢失的问题，适合用来构建、优化或调试需要精细管理上下文的生产级智能体。",
+      "translated_at": "2026-05-12T07:25:44.232Z"
+    },
+    "preset:musistudio-claude-code-router": {
+      "hash": "6b2f94b53f57938e",
+      "summary_zh": "这是 Claude Code 的请求路由工具，能把请求转发给各种大模型并自定义交互。它让你既享受官方更新又打破模型绑定，适合需要灵活搭配底层模型、定制 AI 编程基础设施的场景。",
+      "translated_at": "2026-05-12T07:26:09.127Z"
+    },
+    "preset:neolabhq-context-engineering-kit": {
+      "hash": "c9ceb7570b1f6f3e",
+      "summary_zh": "这是套专为 Claude Code 和 Cursor 等编程助手打造的上下文工程技能包，能用极少 Token 显著提升 AI 写代码的质量与稳定性，适合想优化 AI 编程效果的开发者。",
+      "translated_at": "2026-05-12T07:26:27.434Z"
+    },
+    "preset:neondatabase-mcp-server-neon": {
+      "hash": "6c02e636ba2b5ae2",
+      "summary_zh": "这是一个能用自然语言管理 Neon 数据库的工具，不用写 SQL 或调 API 即可完成建库、查询和迁移等操作，非常适合非开发人员或想省事的开发者。",
+      "translated_at": "2026-05-12T07:26:27.808Z"
+    },
+    "preset:mvanhorn-last30days-skill": {
+      "hash": "4a36c53f142b5ef7",
+      "summary_zh": "它是一个AI搜索技能，能打破平台壁垒进行深度检索，按真实互动（点赞、押注等）而非编辑推荐排序，并生成综合摘要，帮你快速摸透大众近期的真实关注趋势。",
+      "translated_at": "2026-05-12T07:26:40.410Z"
+    },
+    "preset:njbrake-agent-of-empires": {
+      "hash": "d5d1e225dd12bf91",
+      "summary_zh": "它是一个AI编程代理会话管理器，专治多代理并行开发时的混乱，让你通过终端或网页（含手机）轻松掌控不同代码分支上多个代理的运行状态。",
+      "translated_at": "2026-05-12T07:27:33.503Z"
+    },
+    "preset:nextlevelbuilder-ui-ux-pro-max-skill": {
+      "hash": "5ac5cc483e36abd4",
+      "summary_zh": "一款提供设计智能的AI技能插件，能帮你在多平台和框架下构建专业的界面，适合需要快速提升UI/UX设计质量的开发场景。",
+      "translated_at": "2026-05-12T07:27:36.087Z"
+    },
+    "preset:nizos-tdd-guard": {
+      "hash": "80ddfef22b3f685c",
+      "summary_zh": "这是专为 Claude Code 打造的测试驱动开发守卫，能强制 AI 先写测试再写代码，阻止跳过测试或过度实现，适合需要严格把控质量的 AI 辅助编程场景。",
+      "translated_at": "2026-05-12T07:27:41.406Z"
+    },
+    "preset:nomenak-superclaude": {
+      "hash": "c74d338f5f9990d6",
+      "summary_zh": "这是一款Claude Code的增强框架，通过内置专家视角和系统化的开发方法，让AI编程变得更规范、更有条理，适合想提升AI协作效率的开发者。",
+      "translated_at": "2026-05-12T07:28:22.832Z"
+    },
+    "preset:numman-ali-cc-mirror": {
+      "hash": "14f25f4c3cc58433",
+      "summary_zh": "它能帮你创建多个互相隔离的 Claude Code 定制版，并自由接入第三方大模型，打破官方接口限制，适合需要灵活切换模型或管理多套独立环境的开发者。",
+      "translated_at": "2026-05-12T07:28:29.362Z"
+    },
+    "preset:numman-ali-n-skills": {
+      "hash": "c06167ea68d28308",
+      "summary_zh": "专为 AI 编码助手打造的统一插件市场，解决了 Claude Code、Copilot 等各端技能格式不通用的问题，让开发者写一次插件就能跨平台运行。",
+      "translated_at": "2026-05-12T07:28:47.519Z"
+    },
+    "preset:nowork-studio-toprank": {
+      "hash": "d635ba02dc44fa5b",
+      "summary_zh": "这是一款开源的Claude Code插件，能直连谷歌和Meta广告及搜索数据，帮你揪出浪费的广告费、诊断流量下跌原因，并自动执行SEO修复。",
+      "translated_at": "2026-05-12T07:28:49.642Z"
+    },
+    "preset:numman-ali-openskills": {
+      "hash": "2f14331c29b8acd4",
+      "summary_zh": "这是专为AI编程助手打造的通用技能加载器，通过统一技能文档格式，让各种AI编码工具都能无缝复用Claude的技能库，解决跨工具技能不兼容的问题。",
+      "translated_at": "2026-05-12T07:28:58.889Z"
+    },
+    "preset:ognjengt-founder-skills": {
+      "hash": "9fe6128e457c8148",
+      "summary_zh": "专为创业者和营销人员打造的Claude技能包，提供20多个现成的营销、文案和产品指令，帮你把Claude变成顶级增长团队，告别从零写提示词。",
+      "translated_at": "2026-05-12T07:29:11.038Z"
+    },
+    "preset:obie-claude-on-rails": {
+      "hash": "6eb9dca5b16d2239",
+      "summary_zh": "专为 Rails 打造的 AI 开发框架，能自动编排一组分工明确的 AI 代理协同工作。你只需描述需求，它们就会像真正的开发团队一样自动写代码，适合想用 AI 提效的开发者。",
+      "translated_at": "2026-05-12T07:29:23.299Z"
+    },
+    "preset:obra-superpowers": {
+      "hash": "d8c20c9d7b03e83f",
+      "summary_zh": "专为AI编程助手打造的技能框架与开发方法论，能避免AI盲目写代码，让它先理清需求、制定计划再按部就班执行，适合需要AI长时间自主且规范开发的项目场景。",
+      "translated_at": "2026-05-12T07:29:39.590Z"
+    },
+    "preset:oil-oil-oiloil-ui-ux-guide": {
+      "hash": "54a6d1925defdc38",
+      "summary_zh": "这是一款风格中立的UI/UX咨询工具，不强加审美，先倾听需求再给选项。适合新项目定制设计规范，也能评审现有界面或提供特定页面的设计指南，帮你摆脱单一审美的限制。",
+      "translated_at": "2026-05-12T07:30:07.390Z"
+    },
+    "preset:op7418-claude-to-im-skill": {
+      "hash": "fe4479b64215a2ba",
+      "summary_zh": "把Claude Code等AI编程助手接入聊天软件的桥接工具，让你能直接在微信、飞书或Telegram里指挥AI写代码、改项目，不用频繁切回终端操作。",
+      "translated_at": "2026-05-12T07:30:10.576Z"
+    },
+    "preset:onmax-nuxt-skills": {
+      "hash": "cb5a4a572d03acfc",
+      "summary_zh": "专给AI编程助手准备的Vue和Nuxt生态技能包，让Copilot等工具更懂这套框架，适合用AI写前端项目的开发者提升代码生成准确率。",
+      "translated_at": "2026-05-12T07:30:14.394Z"
+    },
+    "preset:op7418-codepilot": {
+      "hash": "f1973e93611d42a7",
+      "summary_zh": "这是一款多模型AI桌面客户端，能聚合不同大模型并自由扩展技能，还支持手机远程控制，适合想统一调度AI助手、打造自动化工作流的用户。",
+      "translated_at": "2026-05-12T07:30:46.158Z"
+    },
+    "preset:openagentsinc-openagents": {
+      "hash": "e9913edffb2a3a75",
+      "summary_zh": "这是专为AI代理打造的经济基础设施，解决代理滥用风险与算力短缺问题，让闲置电脑能跑代理赚比特币，并确保代理在风险可控下自动交易与协作。",
+      "translated_at": "2026-05-12T07:30:47.589Z"
+    },
+    "preset:openai-openai-agents-python": {
+      "hash": "c5b04b4ceabecf71",
+      "summary_zh": "轻量强大的多智能体协作框架，帮你轻松搭建和管理多个大模型分工协同的工作流，适合需要多个AI角色配合完成复杂任务的场景。",
+      "translated_at": "2026-05-12T07:30:49.107Z"
+    },
+    "preset:orchestra-research-ai-research-skills": {
+      "hash": "d75fa7b05161280a",
+      "summary_zh": "这是一个开源的AI科研技能库，能为Claude或Gemini等智能体注入科研能力，让它们自主搞定从产生想法到写出论文的全流程，适合需要让AI自动化做科研的场景。",
+      "translated_at": "2026-05-12T07:31:25.122Z"
+    },
+    "preset:papaoloba-spec-based-claude-code": {
+      "hash": "8de7e6b9218e4570",
+      "summary_zh": "它是为Claude Code定制的规范开发工作流，强制AI写代码前先依次梳理需求、设计和任务，适合想让AI按部就班干活、防止跑偏和返工的场景。",
+      "translated_at": "2026-05-12T07:31:30.775Z"
+    },
+    "preset:openshift-rosa": {
+      "hash": "302b2c88fa07aff0",
+      "summary_zh": "这是一个命令行工具，能帮你轻松管理AWS上的红帽OpenShift服务，特别适合需要快速初始化账号和搭建集群的场景。",
+      "translated_at": "2026-05-12T07:31:36.152Z"
+    },
+    "preset:peonping-peon-ping": {
+      "hash": "62a6b8926be40698",
+      "summary_zh": "这是一个给AI编程助手加游戏语音和弹窗提醒的工具，专门解决AI干完活或要授权时不吭声的问题，让你不用死盯终端，放心切屏去忙别的。",
+      "translated_at": "2026-05-12T07:32:11.286Z"
+    },
+    "preset:peterkrueck-claude-code-development-kit": {
+      "hash": "4e92ad3da05c343e",
+      "summary_zh": "这是给 Claude Code 用户准备的轻量起步套件，自带教程和一键安装。它能帮你免去前期摸索，快速搭好项目规范与防误操作等基础，让 AI 更懂你的代码，适合想快速开干的开发者。",
+      "translated_at": "2026-05-12T07:32:13.154Z"
+    },
+    "preset:prompt-security-clawsec": {
+      "hash": "433ed43bf079f25d",
+      "summary_zh": "专为各类AI代理打造的一站式安全套件，能防止核心指令被恶意篡改或注入，并监控运行偏移，适合需要保障AI代理安全运行的场景。",
+      "translated_at": "2026-05-12T07:32:42.777Z"
+    },
+    "preset:piebald-ai-tweakcc": {
+      "hash": "e9791d235bc6f040",
+      "summary_zh": "这是一个Claude Code的深度定制命令行工具，能帮你全面改造底层指令与界面风格，适合想让AI编程助手完全契合个人习惯的开发者。",
+      "translated_at": "2026-05-12T07:32:49.411Z"
+    },
+    "preset:ramakay-claude-self-reflect": {
+      "hash": "cf52556922857fc2",
+      "summary_zh": "给 Claude 桌面版补上长期记忆的工具，通过向量检索让 AI 记住历史对话，解决跨会话失忆问题，适合需要长期上下文连贯的深度使用者。",
+      "translated_at": "2026-05-12T07:32:55.759Z"
+    },
+    "preset:product-on-purpose-pm-skills": {
+      "hash": "816de79b55e029ec",
+      "summary_zh": "专为AI智能体打造的产品管理技能包，提供即插即用技能与模板。解决AI做产品管理缺乏规范的问题，适合让AI像专业产品经理一样完成需求分析、验证和产品规划的场景。",
+      "translated_at": "2026-05-12T07:33:05.346Z"
+    },
+    "preset:rchgrav-claudebox": {
+      "hash": "db4b49bba1ca509c",
+      "summary_zh": "它是为Claude编程助手定制的Docker开发环境，能让你在隔离且可复现的容器中运行，自带多语言预配置，适合追求开箱即用、避免项目环境互相污染的开发场景。",
+      "translated_at": "2026-05-12T07:33:42.576Z"
+    },
+    "preset:redis-agent-skills": {
+      "hash": "868b322e82f534a0",
+      "summary_zh": "官方为 AI 编程助手打造的 Redis 技能包，能让助手自动调用最佳实践，轻松搞定数据结构选型和查询优化等开发任务。",
+      "translated_at": "2026-05-12T07:33:44.704Z"
+    },
+    "preset:raintree-technology-claude-starter": {
+      "hash": "17fa2b671a5ea722",
+      "summary_zh": "专为金融科技开发者和Anthropic重度用户打造的Claude Code技能包，开箱即用覆盖支付和认证等常用代码模式，还能压缩表格数据省近半Token，告别繁琐配置直接提效。",
+      "translated_at": "2026-05-12T07:34:01.208Z"
+    },
+    "preset:resend-resend-skills": {
+      "hash": "81d9481acd031c8f",
+      "summary_zh": "这是一套专为AI编程助手打造的插件，让AI能直接调用Resend服务完成收发邮件与编写模板等操作，适合需要让AI代劳邮件功能的开发场景。",
+      "translated_at": "2026-05-12T07:34:09.970Z"
+    },
+    "preset:ruvnet-claude-flow": {
+      "hash": "42cde6d281043c88",
+      "summary_zh": "这是一个Claude智能体编排平台，能把多个AI组织成集群协同工作，适合搭建复杂的自动化工作流和对话式AI系统。",
+      "translated_at": "2026-05-12T07:34:14.208Z"
+    },
+    "preset:ryoppippi-ccusage": {
+      "hash": "43c582a525f4786e",
+      "summary_zh": "这是一款命令行工具，能读取本地JSONL文件来分析Claude Code和Codex CLI的使用情况，帮你轻松统计和掌握AI编程助手的用量。",
+      "translated_at": "2026-05-12T07:34:30.570Z"
+    },
+    "preset:seifbenayed-claude-code-sdk": {
+      "hash": "286ccf05446aff2e",
+      "summary_zh": "这是一个多AI代理运行环境，能让多个代理通过专属协议协同思考与执行，共享工具和记忆，适合需要把不同代理灵活组合成大型协作系统的开发场景。",
+      "translated_at": "2026-05-12T07:34:45.976Z"
+    },
+    "preset:sawyerhood-dev-browser": {
+      "hash": "8f8a61621cc2eb4d",
+      "summary_zh": "这是一个赋予AI智能体网页浏览能力的技能，让AI能直接操控浏览器，适合需要让AI代替人工完成网页交互或自动化任务的场景。",
+      "translated_at": "2026-05-12T07:35:03.378Z"
+    },
+    "preset:sepinetam-stata-mcp": {
+      "hash": "d2391cac2c321b63",
+      "summary_zh": "这是一个让大模型辅助Stata做回归分析的工具，能把你从“跑回归的机器”解放出来去专注因果推断，适合社科与计量经济学的实证研究。",
+      "translated_at": "2026-05-12T07:35:18.473Z"
+    },
+    "preset:severity1-claude-code-auto-memory": {
+      "hash": "aa22f480c9278d2d",
+      "summary_zh": "这是一个Claude Code插件，能自动追踪代码变动并在后台更新CLAUDE.md，省去手动维护的麻烦，让项目记忆始终同步最新。",
+      "translated_at": "2026-05-12T07:35:44.077Z"
+    },
+    "preset:sethgammon-citadel": {
+      "hash": "3f14350693850a26",
+      "summary_zh": "这是专为 AI 编程助手打造的智能体调度框架，解决每次对话都要从头解释代码库的痛点。它能让 AI 持续积累项目记忆并协调多智能体并行协作，非常适合复杂的长期工程开发。",
+      "translated_at": "2026-05-12T07:35:44.325Z"
+    },
+    "preset:severity1-claude-code-prompt-improver": {
+      "hash": "8c60d23fee5fd7c2",
+      "summary_zh": "这是一款 Claude Code 的提示词优化钩子，专治指令模糊。它会在执行前自动拦截含糊需求，通过提问帮你补全细节，让你一次就能拿到精准结果，告别反复沟通。",
+      "translated_at": "2026-05-12T07:35:55.258Z"
+    },
+    "preset:simonw-claude-code-transcripts": {
+      "hash": "15f538f701778055",
+      "summary_zh": "这是一款把Claude Code会话文件转成适配手机浏览的分页HTML页面的工具，方便你轻松归档、查阅或分享AI编程对话记录。",
+      "translated_at": "2026-05-12T07:36:26.078Z"
+    },
+    "preset:sickn33-antigravity-awesome-skills": {
+      "hash": "5cd938e6fba8f848",
+      "summary_zh": "包含1400多项可安装技能的指令库，专为各大AI编程助手打造，帮你告别零散提示词，让AI在规划、编码、调试等任务中输出更精准靠谱。",
+      "translated_at": "2026-05-12T07:36:36.240Z"
+    },
+    "preset:sirmalloc-ccstatusline": {
+      "hash": "53a149fedceb0b93",
+      "summary_zh": "这是给 Claude Code 定制的终端状态栏美化工具，能把模型信息、Git分支和Token用量等数据直观展示出来，适合开发者在使用AI编程时随时掌握运行状态并提升终端颜值。",
+      "translated_at": "2026-05-12T07:36:42.884Z"
+    },
+    "preset:slopus-happy": {
+      "hash": "d1f78cd82c3b878d",
+      "summary_zh": "它是Claude Code和Codex的移动端与网页客户端，让你随时随地都能安全地远程对话和调用这些AI编程助手，彻底摆脱必须守在电脑前的限制。",
+      "translated_at": "2026-05-12T07:37:17.459Z"
+    },
+    "preset:smerchek-claude-epub-skill": {
+      "hash": "420b9e1edc050aa0",
+      "summary_zh": "这是一个Claude技能，能把Markdown文档、聊天记录或研究报告转成EPUB电子书，方便发到Kindle等设备上随时阅读。",
+      "translated_at": "2026-05-12T07:37:17.606Z"
+    },
+    "preset:snipeship-claude-balancer": {
+      "hash": "666cea9a01898d69",
+      "summary_zh": "专为Anthropic和OpenAI设计的多账号负载均衡代理，能按需路由请求，在账号触发限速时自动切换，并提供可视化的请求监控与用量分析，适合多Key管理或高频调用场景。",
+      "translated_at": "2026-05-12T07:37:22.146Z"
+    },
+    "preset:softaworks-agent-toolkit": {
+      "hash": "5a55caa15c981162",
+      "summary_zh": "专为AI编程助手打造的技能包合集，通过内置的指令与脚本，扩展AI在代码开发、写文档及项目规划等场景下的能力，帮你轻松提升日常工作效率。",
+      "translated_at": "2026-05-12T07:37:45.942Z"
+    },
+    "preset:snipeship-ccflare": {
+      "hash": "666cea9a01898d69",
+      "summary_zh": "专为Anthropic和OpenAI打造的原生API代理，通过多账号负载均衡与自动容错解决限速痛点，适合需稳定调用并集中管理多个Key的场景。",
+      "translated_at": "2026-05-12T07:37:56.746Z"
+    },
+    "preset:spartan-stratos-spartan-ai-toolkit": {
+      "hash": "37b3bf877a433c1c",
+      "summary_zh": "一套专治 AI 编程助手乱写代码的工作流管控工具，能防止 AI 跳过测试或无视团队规范，通过在各开发环节强制执行质量关卡与规则，适合希望 AI 稳定产出可靠代码的团队。",
+      "translated_at": "2026-05-12T07:38:07.891Z"
+    },
+    "preset:specstoryai-getspecstory": {
+      "hash": "7eb7416683391656",
+      "summary_zh": "专为 AI 编程助手打造的对话管理插件，能把各 IDE 和终端的聊天记录同步云端并索引，解决好方案与架构决策易丢的问题，适合需要回顾、搜索和分享编程思路的开发者。",
+      "translated_at": "2026-05-12T07:38:33.163Z"
+    },
+    "preset:steipete-claude-code-mcp": {
+      "hash": "d36b81e5a791e03c",
+      "summary_zh": "把Claude Code封装为MCP服务，当你的AI编辑器在处理复杂代码修改或卡壳时，可以直接调用它代劳，实现AI调用AI。",
+      "translated_at": "2026-05-12T07:38:36.680Z"
+    },
+    "preset:stevemolitor-claude-code-el": {
+      "hash": "4ee18f75b95df01c",
+      "summary_zh": "这是一个 Emacs 的 Claude Code 插件，让你不用切出编辑器就能用 AI 辅助写代码、修 bug，适合想在 Emacs 里搞定一切的开发者。",
+      "translated_at": "2026-05-12T07:38:56.932Z"
+    },
+    "preset:steipete-codexbar": {
+      "hash": "c914d65d11580f1c",
+      "summary_zh": "这是一个macOS菜单栏小工具，能直接显示各大AI编程助手的剩余额度和重置倒计时，帮你合理规划任务、避免额度耗尽导致中断，且无需重复登录。",
+      "translated_at": "2026-05-12T07:39:01.107Z"
+    },
+    "preset:stravu-crystal": {
+      "hash": "520f278e7065811d",
+      "summary_zh": "它是一款桌面端AI编程管理工具，能在隔离的git工作树中并行跑多个AI编程会话，方便你同时测试对比不同方案，轻松管理AI辅助开发流程。",
+      "translated_at": "2026-05-12T07:39:09.867Z"
+    },
+    "preset:superclaude-org-superclaude-framework": {
+      "hash": "c74d338f5f9990d6",
+      "summary_zh": "这是Claude Code的增强配置框架，能把AI变成结构化的开发平台，适合想要系统化、规范化进行AI辅助编程的开发者。",
+      "translated_at": "2026-05-12T07:39:46.843Z"
+    },
+    "preset:supabase-agent-skills": {
+      "hash": "36440ca133b5eb14",
+      "summary_zh": "专为 AI 编程助手打造的 Supabase 指令与资源包，可接入 Cursor 等主流工具，让 AI 在处理鉴权、数据库等开发任务时更精准高效。",
+      "translated_at": "2026-05-12T07:40:00.305Z"
+    },
+    "preset:textcortex-claude-code-sandbox": {
+      "hash": "1609d7b0d896c906",
+      "summary_zh": "在本地 Docker 容器中安全运行 Claude Code 的工具，免去频繁手动授权的烦恼，让 AI 能自主改代码、跑测试和提交 Git，适合全自动的异步编程场景。",
+      "translated_at": "2026-05-12T07:40:22.676Z"
+    },
+    "preset:team-attention-plugins-for-claude-natives": {
+      "hash": "747ffde4ca04ca6d",
+      "summary_zh": "一套面向进阶用户的 Claude Code 插件合集，帮你突破默认能力限制，适合需要深度定制工作流、拓展 AI 协作与集成外部工具的高阶开发场景。",
+      "translated_at": "2026-05-12T07:40:22.925Z"
+    },
+    "preset:tfriedel-claude-office-skills": {
+      "hash": "6f3dcb53cccf161a",
+      "summary_zh": "它为Claude命令行工具补充了办公文档处理能力，让你能直接在终端、脚本或自动化流水线中轻松生成和编辑各类Office文件。",
+      "translated_at": "2026-05-12T07:40:31.689Z"
+    },
+    "preset:thecraighewitt-seomachine": {
+      "hash": "55a0d7012b889d53",
+      "summary_zh": "这是一个基于Claude Code的智能写作工作区，专为需要提升搜索排名的企业打造，能帮你一站式搞定长篇SEO博客的调研、撰写与优化。",
+      "translated_at": "2026-05-12T07:41:06.582Z"
+    },
+    "preset:thetronjohnson-visual-claude": {
+      "hash": "6877302016379731",
+      "summary_zh": "这是一个网页可视化改代码的工具，你只需在浏览器点击元素并提需求，它就会把精确位置和指令发给AI，免去手动翻找源码的麻烦。",
+      "translated_at": "2026-05-12T07:41:34.721Z"
+    },
+    "preset:thedotmack-claude-mem": {
+      "hash": "d22c4140d45b2c81",
+      "summary_zh": "这是一款为AI智能体补充跨会话记忆的工具，自动压缩记录历史操作并在新对话里注入上下文，解决AI一开新会话就忘的问题，适合需要长期连续跟进的开发场景。",
+      "translated_at": "2026-05-12T07:41:35.011Z"
+    },
+    "preset:the-vibe-company-companion": {
+      "hash": "8ea5b81a70a9907d",
+      "summary_zh": "为 Claude Code 与 Codex 提供的网页及手机界面，让你随时跨设备管控 AI 编程任务与风险操作，适合移动办公或需要可视化管理代码智能体的场景。",
+      "translated_at": "2026-05-12T07:42:06.555Z"
+    },
+    "preset:trailofbits-skills": {
+      "hash": "b5499550647eedcf",
+      "summary_zh": "这是一个Claude Code插件市场，专为AI辅助安全研究打造，能帮你提高代码漏洞检测与审计的效率，适合智能合约和代码安全分析场景。",
+      "translated_at": "2026-05-12T07:42:08.077Z"
+    },
+    "preset:tkaufmann-claude-gemini-bridge": {
+      "hash": "a65d4f608e596790",
+      "summary_zh": "打通Claude Code与Gemini的协作工具，能将大规模代码分析自动转交Gemini，结合两者的推理与超长上下文优势，专治海量代码的分析需求。",
+      "translated_at": "2026-05-12T07:42:30.946Z"
+    },
+    "preset:vercel-labs-agent-skills": {
+      "hash": "7a453ab14186c401",
+      "summary_zh": "Vercel 官方提供的 AI 编程代理技能包，通过预置指令和脚本扩展代理能力。适合在写 React/Next.js 组件、审查 UI 无障碍与性能、或遵循 Web 和 RN 最佳实践时，让 AI 自动按规范审查和优化代码。",
+      "translated_at": "2026-05-12T07:42:34.338Z"
+    },
+    "preset:uppinote20-claude-dashboard": {
+      "hash": "6a7b2a91ccfedab2",
+      "summary_zh": "这是Claude Code的状态栏增强插件，帮你在编程时实时监控上下文用量、API限制与花销，避免意外超支或触发限流。",
+      "translated_at": "2026-05-12T07:42:48.240Z"
+    },
+    "preset:vercel-labs-next-skills": {
+      "hash": "c765d14583eb0c5f",
+      "summary_zh": "这是一套专为AI编程助手定制的Next.js最佳实践规则，能自动注入开发规范，帮你避开代码编写时的常见坑。",
+      "translated_at": "2026-05-12T07:42:58.749Z"
+    },
+    "preset:udecode-dotai": {
+      "hash": "55f23e3480b67491",
+      "summary_zh": "这是专为AI编程助手打造的上下文管理工具，能帮你统一管理规划、调试和测试等开发流程，解决在Claude Code或Cursor里让Agent干活时缺乏上下文和规范的问题。",
+      "translated_at": "2026-05-12T07:43:07.830Z"
+    },
+    "preset:vijaythecoder-awesome-claude-agents": {
+      "hash": "22901971c9ee09db",
+      "summary_zh": "这是基于Claude Code组建的AI开发团队，让多个专业AI分工协作，适合用来开发完整功能、排查复杂Bug，帮你搞定各种技术栈的开发需求。",
+      "translated_at": "2026-05-12T07:43:19.379Z"
+    },
+    "preset:voltagent-voltagent": {
+      "hash": "0a77eb7bd28dd9e8",
+      "summary_zh": "这是一个基于TypeScript的开源AI智能体工程平台，能帮开发者轻松搞定聊天机器人及各类AI助手的开发与落地。",
+      "translated_at": "2026-05-12T07:43:39.593Z"
+    },
+    "preset:vuejs-ai-skills": {
+      "hash": "bbb84d0c48f7ae19",
+      "summary_zh": "专给 AI 编程助手用的 Vue 3 技能包，能让 AI 按最佳实践写代码，减少幻觉瞎编，适合用 AI 辅助开发 Vue 项目。",
+      "translated_at": "2026-05-12T07:43:50.656Z"
+    },
+    "preset:whawkinsiv-claude-code-skills": {
+      "hash": "3c75735f8cdcd748",
+      "summary_zh": "专为独立和非技术创始人打造的AI助手技能包，提供从规划到增长的全套指南与提示词，帮你用各类AI编程工具轻松搞定SaaS开发。",
+      "translated_at": "2026-05-12T07:44:09.141Z"
+    },
+    "preset:wondelai-skills": {
+      "hash": "807ff75c04ee14d7",
+      "summary_zh": "这是专为 Claude Code 等 AI 助手定制的技能插件库，内置产品、设计、营销与代码架构等专业知识，让 AI 真正成为懂行的业务与研发顾问。",
+      "translated_at": "2026-05-12T07:44:17.672Z"
+    },
+    "preset:wrsmith108-linear-claude-skill": {
+      "hash": "7370e1fc465891ee",
+      "summary_zh": "专给 Claude Code 用的技能插件，能让 AI 直接管理 Linear 里的任务、项目和团队，适合想用 AI 自动化搞定项目协作的开发者。",
+      "translated_at": "2026-05-12T07:44:24.260Z"
+    },
+    "preset:yifanzz-claude-code-boost": {
+      "hash": "fd3c5aa1469cb8c8",
+      "summary_zh": "这是一组给Claude Code用的增强钩子，能自动放行安全的开发操作帮你省去反复点击确认的麻烦，并在结束会话前提醒跑测试，适合想减少交互打断、提升编程流畅度的开发者。",
+      "translated_at": "2026-05-12T07:44:41.508Z"
+    },
+    "preset:yusufkaraaslan-skill-seekers": {
+      "hash": "2fc990258cfeedd9",
+      "summary_zh": "把文档网站、代码库和PDF转成Claude专属技能并自动排查冲突，适合需要快速给AI喂知识、打造专属助手的场景。",
+      "translated_at": "2026-05-12T07:45:06.964Z"
+    },
+    "preset:wshobson-agents": {
+      "hash": "4249620824c73828",
+      "summary_zh": "这是一套为Claude Code定制的多智能体自动化插件。它能调度多个专业AI协同干活，搞定复杂的开发任务，特别适合需要多角色配合的软件开发场景。",
+      "translated_at": "2026-05-12T07:45:17.704Z"
+    },
+    "preset:ykdojo-claude-code-tips": {
+      "hash": "416b2326bdc77eca",
+      "summary_zh": "这是一份包含45个实战技巧的指南，能帮开发者深度玩转AI编程代理，解决上下文遗忘、任务卡点和多模型协作等痛点，适合想大幅提升自动化开发效率的人。",
+      "translated_at": "2026-05-12T07:45:21.589Z"
+    },
+    "preset:yvgude-lean-ctx": {
+      "hash": "d079a8be6253afa9",
+      "summary_zh": "专为AI编程助手设计的上下文管理层，能在使用Cursor等工具写代码时大幅节省Token，帮你有效降低API成本，适合想提升AI交互效率的开发者。",
+      "translated_at": "2026-05-12T07:45:49.525Z"
+    },
+    "preset:zechenzhangagi-ai-research-skills": {
+      "hash": "d75fa7b05161280a",
+      "summary_zh": "这是一个专为AI助手打造的科研技能包，装上后，Claude或Gemini等模型就能化身AI研究员，帮你搞定从想点子到写论文的自主科研任务。",
+      "translated_at": "2026-05-12T07:45:52.760Z"
+    },
+    "preset:zeroz-lab-cc-design": {
+      "hash": "e9d0c384319eeac2",
+      "summary_zh": "专为AI编程助手打造的设计插件，能引导AI生成高保真网页与交互原型，适合需要快速输出落地页、演示文稿或交互动效等高质量设计稿的场景。",
+      "translated_at": "2026-05-12T07:46:19.534Z"
+    },
+    "preset:zebbern-claude-code-guide": {
+      "hash": "ff05af6b23309842",
+      "summary_zh": "这是一份带你从零上手到精通 Claude Code 的实战指南，帮你解决配置难、不会搭智能体工作流的问题，适合想彻底玩转这款 AI 编程工具的开发者。",
+      "translated_at": "2026-05-12T07:46:31.692Z"
+    },
+    "preset:zhanghandong-makepad-skills": {
+      "hash": "2583cd35938a64a4",
+      "summary_zh": "专为Claude等AI定制的Makepad开发知识库，让AI懂它的Rust架构与DSL，帮你高效生成和调试跨平台UI应用。",
+      "translated_at": "2026-05-12T07:46:34.143Z"
+    },
+    "preset:zhsama-claude-sub-agent": {
+      "hash": "bba55826cc44806e",
+      "summary_zh": "基于 Claude Code 子代理的多智能体开发工作流系统，它通过多个专属AI角色协同，把项目想法直接转化为生产级代码，适合需要全流程自动化开发的场景。",
+      "translated_at": "2026-05-12T07:46:39.298Z"
+    },
+    "preset:zxkane-aws-skills": {
+      "hash": "b14d36839218c8d6",
+      "summary_zh": "这是一组专为 Claude Code 打造的 AWS 开发插件，内置专业知识与 MCP 集成，适合需要 AI 辅助搞定 CDK 构建、无服务器架构、成本优化及 Bedrock 代理部署的开发场景。",
+      "translated_at": "2026-05-12T07:47:00.710Z"
+    },
+    "preset:zippoxer-recall": {
+      "hash": "8653f8a38b163924",
+      "summary_zh": "专为Claude Code等AI助手打造的对话搜索与接续工具。它能全文检索历史记录，帮你快速找回并恢复之前的编程会话，特别适合需要经常接续AI协作上下文的场景。",
+      "translated_at": "2026-05-12T07:48:13.836Z"
     }
   }
 }

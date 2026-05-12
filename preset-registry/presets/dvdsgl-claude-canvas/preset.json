@@ -19,12 +19,13 @@
     "stars": 1484,
     "language": "TypeScript",
     "pushed_at": "2026-01-08T02:19:55Z",
-    "discovered_at": "2026-05-12T06:15:59.253Z",
-    "score": 0.6982277693395544,
+    "discovered_at": "2026-05-12T06:56:04.732Z",
+    "score": 0.6982190689670138,
     "readme": "# Claude Canvas\n\nA TUI toolkit that gives Claude Code its own display. Spawn interactive terminal interfaces for emails, calendars, flight bookings, and more.\n\n**Note:** This is a proof of concept and is unsupported.\n\n![Claude Canvas Screenshot](media/screenshot.png)\n\n## Requirements\n\n- [Bun](https://bun.sh) — used to run skill tools\n- [tmux](https://github.com/tmux/tmux) — canvases spawn in split panes\n\n## Installation\n\nAdd this repository as a marketplace in Claude Code:\n\n```\n/plugin marketplace add dvdsgl/claude-canvas\n```\n\nThen install the canvas plugin:\n\n```\n/plugin install canvas@claude-canvas\n```\n\n## License\n\nMIT\n",
     "license": "MIT",
     "curated_by": [
       "jqueryscript/awesome-claude-code"
     ]
-  }
+  },
+  "summary_zh": "这是一个给Claude Code外接“显示器”的工具，能在终端分屏中弹出独立的交互界面，解决AI只能输出纯文本的限制，适合需要直观展示和操作的场景。"
 }
