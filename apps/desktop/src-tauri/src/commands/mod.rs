@@ -1,3 +1,4 @@
+pub mod bundles;
 pub mod claude_settings;
 pub mod config;
 pub mod importer;

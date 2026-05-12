@@ -38,6 +38,8 @@ pub struct SkillMeta {
     pub install_path: String,
     #[serde(default)]
     pub source: Option<SkillSource>,
+    #[serde(default)]
+    pub summary_zh: Option<String>,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -94,6 +96,8 @@ pub struct McpMeta {
     pub optional_env: Vec<McpRequiredEnv>,
     #[serde(default)]
     pub source: Option<McpSource>,
+    #[serde(default)]
+    pub summary_zh: Option<String>,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -101,6 +105,34 @@ pub struct McpIndex {
     pub version: String,
     pub updated_at: String,
     pub mcps: Vec<McpMeta>,
+}
+
+// ── Bundle registry types ─────────────────────────────────────────────────────
+//
+// A bundle groups items (currently: skills) that share the same upstream
+// source.repo, so the UI can collapse a long flat list into a few
+// collection cards. Produced by the registry scanner — read-only here.
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct BundleMeta {
+    pub id: String,           // slugified repo, e.g. "jimliu-baoyu-skills"
+    pub repo: String,         // upstream, e.g. "JimLiu/baoyu-skills"
+    pub name: String,         // display name
+    pub url: String,
+    pub kind: String,         // "skill" (future: "preset", "mcp")
+    #[serde(default)]
+    pub stars: u64,
+    #[serde(default)]
+    pub skill_ids: Vec<String>,
+    #[serde(default)]
+    pub summary_zh: Option<String>,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct BundleIndex {
+    pub version: String,
+    pub updated_at: String,
+    pub bundles: Vec<BundleMeta>,
 }
 
 // ── Preset manifest extensions ────────────────────────────────────────────────
@@ -155,6 +187,8 @@ pub struct PresetMeta {
     pub author: String,
     #[serde(default)]
     pub source: Option<PresetSource>,
+    #[serde(default)]
+    pub summary_zh: Option<String>,
 }
 
 /// Root of index.json.
@@ -191,6 +225,8 @@ pub struct PresetManifest {
     pub mcps: Vec<PresetMcpRef>,
     #[serde(default)]
     pub source: Option<PresetSource>,
+    #[serde(default)]
+    pub summary_zh: Option<String>,
 }
 
 // ── Installed state ───────────────────────────────────────────────────────────

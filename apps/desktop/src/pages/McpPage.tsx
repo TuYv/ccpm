@@ -151,7 +151,7 @@ function McpRow({
             lineHeight: 1.5,
           }}
         >
-          {mcp.description}
+          {mcp.summary_zh || mcp.description}
         </div>
         {mcp.source?.repo && (
           <div

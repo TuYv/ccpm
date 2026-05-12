@@ -1,7 +1,7 @@
 mod commands;
 
 use commands::{
-    claude_settings, config, importer, library, mcps, presets, recent_projects, recipes,
+    bundles, claude_settings, config, importer, library, mcps, presets, recent_projects, recipes,
     scan_existing, skills, state,
 };
 
@@ -31,6 +31,7 @@ pub fn run() {
             skills::install_skill_cmd,
             skills::uninstall_skill_cmd,
             skills::list_installed_skills_cmd,
+            bundles::fetch_bundles_index_cmd,
             mcps::fetch_mcps_index_cmd,
             mcps::install_mcp_cmd,
             mcps::uninstall_mcp_cmd,

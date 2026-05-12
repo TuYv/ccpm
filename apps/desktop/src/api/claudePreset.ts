@@ -5,6 +5,7 @@ import type {
   ActiveState,
   AppConfig,
   BackupEntry,
+  BundleIndex,
   ClaudeSettings,
   ImportedBundle,
   InstalledState,
@@ -268,6 +269,12 @@ export const api = {
     tauriAvailable()
       ? call<void>("restore_backup", { backupId })
       : previewApi.restoreBackup(),
+
+  // Bundles
+  fetchBundlesIndex: (forceRefresh = false) =>
+    tauriAvailable()
+      ? call<BundleIndex>("fetch_bundles_index_cmd", { forceRefresh })
+      : Promise.resolve<BundleIndex>({ version: "1", updated_at: "", bundles: [] }),
 
   // Skills
   fetchSkillsIndex: (forceRefresh = false) =>

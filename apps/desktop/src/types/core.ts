@@ -32,6 +32,7 @@ export interface PresetMeta {
   author: string;
   tags: string[];
   source?: PresetSource;
+  summary_zh?: string | null;
 }
 
 export interface PresetIndex {
@@ -48,6 +49,7 @@ export interface PresetManifest {
   skills?: string[];
   mcps?: { ref: string; required_env?: string[] }[];
   source?: PresetSource;
+  summary_zh?: string | null;
 }
 
 export interface ActivePresetInfo {
@@ -153,6 +155,7 @@ export interface SkillMeta {
   author: string;
   install_path: string;
   source?: SkillSource | null;
+  summary_zh?: string | null;
 }
 
 export interface SkillIndex {
@@ -192,12 +195,32 @@ export interface McpMeta {
   required_env: McpRequiredEnv[];
   optional_env: McpRequiredEnv[];
   source?: McpSource | null;
+  summary_zh?: string | null;
 }
 
 export interface McpIndex {
   version: string;
   updated_at: string;
   mcps: McpMeta[];
+}
+
+// ── Bundles ──────────────────────────────────────────────────────────────────
+
+export interface BundleMeta {
+  id: string;
+  repo: string;
+  name: string;
+  url: string;
+  kind: "skill";
+  stars: number;
+  skill_ids: string[];
+  summary_zh?: string | null;
+}
+
+export interface BundleIndex {
+  version: string;
+  updated_at: string;
+  bundles: BundleMeta[];
 }
 
 // ── Imported bundle ──────────────────────────────────────────────────────────

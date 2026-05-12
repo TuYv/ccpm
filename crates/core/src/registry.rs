@@ -259,6 +259,35 @@ pub async fn fetch_mcp_meta(
         .map_err(|e| AppError::Parse(format!("mcp meta 解析失败：{}", e)))
 }
 
+// ── Bundles namespace ─────────────────────────────────────────────────────────
+
+pub fn load_bundles_from_cache(
+    cache_dir: &Path,
+    ttl_minutes: u64,
+) -> Result<Option<crate::types::BundleIndex>, AppError> {
+    load_namespace_cache(cache_dir, "bundles-index.json", ttl_minutes)
+}
+
+pub async fn fetch_bundles_index(
+    client: &reqwest::Client,
+    source_url: &str,
+    cache_dir: &Path,
+) -> Result<crate::types::BundleIndex, AppError> {
+    let url = format!("{}/bundles/index.json", source_url.trim_end_matches('/'));
+    // Bundles namespace is optional — older registries may not have it yet.
+    let Some(content) = fetch_text_optional(client, &url).await? else {
+        return Ok(crate::types::BundleIndex {
+            version: "1".to_string(),
+            updated_at: String::new(),
+            bundles: vec![],
+        });
+    };
+    let index: crate::types::BundleIndex = serde_json::from_str(&content)
+        .map_err(|e| AppError::Parse(format!("remote bundles index 解析失败：{}", e)))?;
+    write_to_cache(cache_dir, "bundles-index.json", &content)?;
+    Ok(index)
+}
+
 // Generic cache loader for namespaced index files (skills-index.json, mcps-index.json).
 fn load_namespace_cache<T: for<'de> serde::Deserialize<'de>>(
     cache_dir: &Path,

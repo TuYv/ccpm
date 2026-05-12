@@ -4,6 +4,7 @@ import type {
   ActiveState,
   AppConfig,
   BackupEntry,
+  BundleMeta,
   InstalledState,
   McpIndex,
   PresetIndex,
@@ -55,6 +56,7 @@ interface BackupsStore {
 
 interface SkillsStore {
   index: SkillIndex | null;
+  bundles: BundleMeta[];
   loading: boolean;
   error: string | null;
   installed: Record<string, string[]>; // scope key → installed skill ids
@@ -207,6 +209,7 @@ function scopeKey(scope: ScopeArg): string {
 
 export const useSkillsStore = create<SkillsStore>((set, get) => ({
   index: null,
+  bundles: [],
   loading: false,
   error: null,
   installed: {},
@@ -216,8 +219,15 @@ export const useSkillsStore = create<SkillsStore>((set, get) => ({
     if (!force && get().index) return;
     set({ loading: true, error: null });
     try {
-      const index = await api.fetchSkillsIndex(force);
-      set({ index });
+      const [index, bundlesIdx] = await Promise.all([
+        api.fetchSkillsIndex(force),
+        api.fetchBundlesIndex(force).catch(() => ({
+          version: "1",
+          updated_at: "",
+          bundles: [],
+        })),
+      ]);
+      set({ index, bundles: bundlesIdx.bundles });
     } catch (e) {
       set({ error: String(e) });
     } finally {

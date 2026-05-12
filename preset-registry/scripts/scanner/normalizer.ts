@@ -13,6 +13,7 @@ export interface PresetSource {
   score: number;            // 0..1, debug only
   readme: string | null;    // upstream README.md (truncated), shown in detail panel
   license: string | null;   // SPDX license id from GitHub
+  curated_by?: string[];    // awesome-list IDs that surfaced this repo
 }
 
 export interface PresetEntry {
@@ -60,6 +61,7 @@ export function normalizeToPreset(
       score,
       readme,
       license: hit.license,
+      ...(hit.curated_by && hit.curated_by.length > 0 ? { curated_by: hit.curated_by } : {}),
     },
   };
 }

@@ -132,6 +132,7 @@ pub fn scan_and_seed(claude_dir: &Path, pm_dir: &Path) -> Result<ScanResult, App
                     required_env: vec![],
                     optional_env: vec![],
                     source: None,
+                    summary_zh: None,
                 };
                 let mcp_json = serde_json::to_string_pretty(&mcp)?;
                 library::add_mcp(pm_dir, &id, &mcp_json)?;

@@ -630,7 +630,7 @@ export default function PresetsPage() {
                         maxWidth: 640,
                       }}
                     >
-                      {manifest.description}
+                      {manifest.summary_zh || manifest.description}
                     </p>
                     {manifest.tags?.length > 0 && (
                       <div

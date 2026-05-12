@@ -3,7 +3,8 @@ import { throttling } from "@octokit/plugin-throttling";
 import { mkdir, readFile, readdir, rm, writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import { join } from "node:path";
-import { fetchFile, fetchReadme, searchClaudeMd } from "./searcher.js";
+import { fetchFile, fetchReadme } from "./searcher.js";
+import { discoverFromAwesomeLists } from "./awesome-source.js";
 import { scoreHit } from "./scorer.js";
 import { normalizeToPreset, type PresetEntry } from "./normalizer.js";
 import { discoverSkills } from "./skills-scanner.js";
@@ -54,24 +55,40 @@ async function main() {
       },
     },
   });
-  console.log("Searching CLAUDE.md (stars>500)…");
+  console.log("Discovering CLAUDE.md repos via awesome-lists (stars>=50)…");
   let hits;
   try {
-    hits = await searchClaudeMd(octokit, 500);
+    hits = await discoverFromAwesomeLists(octokit, 50);
   } catch (e) {
-    console.error(`Search failed: ${e}. Aborting this run; no changes committed.`);
+    console.error(`Discovery failed: ${e}. Aborting this run; no changes committed.`);
     return;
   }
-  console.log(`Found ${hits.length} candidates`);
+  console.log(`Found ${hits.length} candidates after enrichment`);
 
+  const SCORE_THRESHOLD = 0.6;
+  // Same throttling rationale as awesome-source's PER_CANDIDATE_DELAY_MS.
+  const sleep = (ms: number) => new Promise<void>((r) => setTimeout(r, ms));
   const accepted: PresetEntry[] = [];
-  for (const hit of hits) {
+  let rejectedNonSharing = 0;
+  for (let i = 0; i < hits.length; i++) {
+    const hit = hits[i];
     try {
       const content = await fetchFile(octokit, hit.repo, hit.default_branch, hit.path);
-      if (!content) continue;
-      const score = scoreHit(hit, content);
-      if (score < 0.4) continue;
+      if (!content) {
+        if (i < hits.length - 1) await sleep(100);
+        continue;
+      }
       const readme = await fetchReadme(octokit, hit.repo);
+      const { score, is_sharing } = scoreHit(hit, content, readme);
+      if (!is_sharing) {
+        rejectedNonSharing++;
+        if (i < hits.length - 1) await sleep(100);
+        continue;
+      }
+      if (score < SCORE_THRESHOLD) {
+        if (i < hits.length - 1) await sleep(100);
+        continue;
+      }
       const entry = normalizeToPreset(hit, score, readme);
       accepted.push(entry);
 
@@ -100,6 +117,7 @@ async function main() {
     } catch (e) {
       console.warn(`Skipping ${hit.repo}: ${e}`);
     }
+    if (i < hits.length - 1) await sleep(100);
   }
 
   // Build root index by walking presets/*/preset.json — this way the index always
@@ -156,7 +174,7 @@ async function main() {
   const auto = rootEntries.filter((e) => e.source).length;
   const curatedN = rootEntries.length - auto;
   console.log(
-    `[presets] this run accepted ${accepted.length} new entries; index now has ${rootEntries.length} (${curatedN} curated + ${auto} auto-discovered)`,
+    `[presets] this run accepted ${accepted.length} new entries (rejected ${rejectedNonSharing} as non-sharing); index now has ${rootEntries.length} (${curatedN} curated + ${auto} auto-discovered)`,
   );
 
   // ── Skills namespace ────────────────────────────────────────────────────────

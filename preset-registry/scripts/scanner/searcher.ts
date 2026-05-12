@@ -1,5 +1,13 @@
 import { Octokit } from "@octokit/rest";
 
+export interface RepoSignals {
+  has_claude_plugin: boolean;
+  has_skills_dir: boolean;
+  has_commands_dir: boolean;
+  // CLAUDE.md path is one segment from root (e.g. "CLAUDE.md"), not nested deep.
+  claude_md_at_root: boolean;
+}
+
 export interface SearchHit {
   repo: string;
   default_branch: string;
@@ -11,6 +19,8 @@ export interface SearchHit {
   language: string | null;
   homepage: string | null;
   license: string | null;
+  signals?: RepoSignals;
+  curated_by?: string[];
 }
 
 export async function searchClaudeMd(octokit: Octokit, minStars = 500): Promise<SearchHit[]> {
@@ -83,6 +93,20 @@ export async function fetchReadme(
       return decoded.slice(0, README_MAX_BYTES) + "\n\n…(README truncated)";
     }
     return decoded;
+  } catch {
+    return null;
+  }
+}
+
+/** Returns the full README without the preview truncation — for link parsing on long lists. */
+export async function fetchReadmeFull(
+  octokit: Octokit,
+  repoFullName: string,
+): Promise<string | null> {
+  const [owner, repo] = repoFullName.split("/");
+  try {
+    const { data } = await octokit.repos.getReadme({ owner, repo });
+    return Buffer.from((data as any).content, "base64").toString("utf-8");
   } catch {
     return null;
   }
