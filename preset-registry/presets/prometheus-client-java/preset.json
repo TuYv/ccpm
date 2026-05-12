@@ -8,7 +8,7 @@
     "metrics",
     "prometheus"
   ],
-  "tested_on": "2026-05-11",
+  "tested_on": "2026-05-12",
   "author": "prometheus",
   "files": {
     "CLAUDE.md": "CLAUDE.md"
@@ -22,7 +22,7 @@
     "stars": 2273,
     "language": "Java",
     "pushed_at": "2026-05-11T15:51:18Z",
-    "discovered_at": "2026-05-11T23:11:31.775Z",
+    "discovered_at": "2026-05-12T00:10:48.779Z",
     "score": 0.513184,
     "readme": "# Prometheus Java Metrics Library\n\n<!-- markdownlint-disable MD033 -->\n\n[![Build][build-badge]][build-workflow]\n<a href=\"#\"><img src=\"https://img.shields.io/badge/JDK%20compatibility-8+-blue.svg\" alt=\"java 8+\"></a>\n<a href=\"#\"><img src=\"https://img.shields.io/badge/license-Apache%202.0-blue.svg\" alt=\"Apache 2.0\"></a>\n\n<!-- markdownlint-enable MD033 -->\n\n[build-badge]: https://github.com/prometheus/client_java/actions/workflows/build.yml/badge.svg\n[build-workflow]: https://github.com/prometheus/client_java/actions/workflows/build.yml\n\n## Documentation\n\n[https://prometheus.github.io/client_java](https://prometheus.github.io/client_java)\n\n## Contributing and community\n\nSee [CONTRIBUTING.md](CONTRIBUTING.md) and\nthe [community section](http://prometheus.io/community/)\nof the Prometheus homepage.\n\nThe Prometheus Java community is present on the [CNCF Slack](https://cloud-native.slack.com) on\n`#prometheus-java`, and we have a fortnightly community call in\nthe [Prometheus public calendar](https://prometheus.io/community/).\n\n## Previous Releases\n\nThe source code for 0.16.0 and older is on\nthe [simpleclient](https://github.com/prometheus/client_java/tree/simpleclient) branch.\n\n## License\n\nApache License 2.0, see [LICENSE](LICENSE).\n",
     "license": "Apache-2.0"
