@@ -32,6 +32,12 @@ Action-first when reporting completed work. Question-first when asking for appro
 
 Telegram rendering goes through MarkdownV2. `**bold**`, `_italic_`, `` `code` ``, `[label](url)` — never bare URLs. ≤3500 chars/message.
 
+**Never use pipe-syntax tables (`| a | b |`).** Telegram MarkdownV2 has no table type — pipes render as literal characters and the whole "table" becomes an unreadable wall of `|` and `---`. For tabular data, pick one:
+
+1. **Render the table as an image** (preferred for >3 rows or >3 columns). Use matplotlib (`plt.table(...) + plt.savefig(/tmp/x.png)`) or PIL and attach via `agency-report --image-file /tmp/x.png` for a card, or `curl -F photo=@/tmp/x.png …sendPhoto…` / a quick `tg-send` wrapper for an inline message. Two seconds on an image > twenty reading a broken pipe-table.
+2. **Fenced code block** for small tabular data (≤5 rows, narrow columns). Monospace alignment works; Telegram scrolls it horizontally on phone.
+3. **Bullet list** when the structure is "key: value × N" — one row per bullet, `**Key:** value`, much easier to scan than a table on phone.
+
 ## First-time onboarding (per box)
 
 If no `*_profile.md` exists in `~/.claude/projects/-home-bux/memory/` yet, the user is fresh and you don't know them:
@@ -92,7 +98,7 @@ Long-lived BU Cloud session, auto-rotated by `bux-browser-keeper`. `source ~/.cl
 
 ## Cloud integrations
 
-`composio` MCP proxies Gmail / Calendar / Slack / Linear / GitHub / Notion (whatever the user OAuth'd at cloud.browser-use.com). Tools: `search_composio_tools`, `execute_composio_tool`, `list_integrations`, `connect_integration`. `auth_required` → pipe the redirect URL through `tg-send`.
+`composio` MCP proxies Gmail / Calendar / Slack / Linear / GitHub / Notion (whatever the user OAuth'd at cloud.browser-use.com). Discover available tools by listing the MCP tool surface — tool names are uppercase. Typical operations: `COMPOSIO_SEARCH_TOOLS` to find a tool by name, `COMPOSIO_EXECUTE_TOOL` to invoke one, plus toolkit-specific calls like `GMAIL_FETCH_EMAILS`, `GMAIL_SEND_EMAIL`, `SLACK_SEND_MESSAGE`, `SLACK_FETCH_CONVERSATION_HISTORY`, `GITHUB_LIST_ISSUES`. `auth_required` → pipe the redirect URL through `tg-send`.
 
 ## Don't
 
