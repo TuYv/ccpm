@@ -12,12 +12,12 @@ Python scripts with multi-source search aggregation.
 ## Commands
 ```bash
 python3 skills/last30days/scripts/last30days.py "test query" --emit=compact
-bash skills/last30days/scripts/sync.sh
+npx skills add . -g -y   # one-time: symlink this repo into every detected harness's skill dir
 ```
 
 ## Rules
 - `lib/__init__.py` must be bare package marker (comment only, NO eager imports)
-- After edits: run `bash skills/last30days/scripts/sync.sh` to deploy
+- One-time setup: `npx skills add . -g -y` creates symlinks from each detected harness's skill dir to this repo. Edits in the working tree propagate live to every harness — no re-deploy step needed.
 - Git remote: origin = public (`mvanhorn/last30days-skill`)
 
 ## Beta channel
