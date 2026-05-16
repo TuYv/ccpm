@@ -19,8 +19,8 @@
     "stars": 1485,
     "language": "TypeScript",
     "pushed_at": "2026-01-08T02:19:55Z",
-    "discovered_at": "2026-05-16T19:37:40.412Z",
-    "score": 0.6968097923466435,
+    "discovered_at": "2026-05-16T21:09:09.217Z",
+    "score": 0.6967899398980035,
     "readme": "# Claude Canvas\n\nA TUI toolkit that gives Claude Code its own display. Spawn interactive terminal interfaces for emails, calendars, flight bookings, and more.\n\n**Note:** This is a proof of concept and is unsupported.\n\n![Claude Canvas Screenshot](media/screenshot.png)\n\n## Requirements\n\n- [Bun](https://bun.sh) — used to run skill tools\n- [tmux](https://github.com/tmux/tmux) — canvases spawn in split panes\n\n## Installation\n\nAdd this repository as a marketplace in Claude Code:\n\n```\n/plugin marketplace add dvdsgl/claude-canvas\n```\n\nThen install the canvas plugin:\n\n```\n/plugin install canvas@claude-canvas\n```\n\n## License\n\nMIT\n",
     "license": "MIT",
     "curated_by": [
