@@ -8,7 +8,7 @@ A collection of Claude Code agent skills and hooks for development workflows, di
 
 - **github-workflow** plugin: `git-commit`, `github-pr-creation`, `github-pr-merge`, `github-pr-review`
 - **skill-authoring** plugin: `creating-skills`
-- **bash-safety** plugin: `guard-destructive` PreToolUse hook
+- **guardrails** plugin: `guard-destructive` PreToolUse hook
 
 Skills are model-invoked (Claude activates them based on user intent, not slash commands). The hook runs automatically on every Bash tool call.
 
@@ -16,22 +16,19 @@ Skills are model-invoked (Claude activates them based on user intent, not slash 
 
 ```
 .claude-plugin/
-  marketplace.json        # Plugin registry: defines plugins, skill paths, metadata
+  marketplace.json        # Plugin registry: defines all plugins and their components
 skills/
   <skill-name>/
     SKILL.md              # Main skill file (YAML frontmatter + markdown body)
     references/           # Optional deep-dive docs loaded on demand
-bash-safety/              # Hook plugin - its own plugin root (source: ./bash-safety)
-  .claude-plugin/
-    plugin.json           # Plugin manifest (name, version, description)
-  hooks/
-    hooks.json            # Hook registration (PreToolUse, matcher Bash)
-    guard-destructive.sh  # The guard script, run via ${CLAUDE_PLUGIN_ROOT}
+hooks/
+  guardrails.json         # Hook config for the guardrails plugin
+  guard-destructive.sh    # PreToolUse guard script, run via ${CLAUDE_PLUGIN_ROOT}
 ```
 
 ### Key file: `marketplace.json`
 
-Defines the plugin structure. The skill plugins share `source: "./"` and partition components via explicit `skills` arrays; when adding or removing a skill, update both the plugin's `skills` array and the directory. The `bash-safety` plugin instead has its own root (`source: "./bash-safety"`) with a `.claude-plugin/plugin.json` manifest; its `hooks/hooks.json` is auto-discovered - no explicit `hooks` key needed.
+Defines the plugin structure. All three plugins share `source: "./"` (the repo root) and partition their components via explicit arrays. The skill plugins list their `skills`; the `guardrails` plugin lists its `hooks` (pointing to `hooks/guardrails.json`) and has an empty `skills` array. The hook config file is deliberately named `guardrails.json`, not the auto-discovered `hooks.json`, so the skill plugins - which also have `source: "./"` - do not pick the hook up. When adding or removing a component, update both the plugin's array and the corresponding file.
 
 ### Skill anatomy
 
