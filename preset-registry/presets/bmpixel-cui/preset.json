@@ -12,7 +12,7 @@
     "web-ui",
     "webui"
   ],
-  "tested_on": "2026-05-16",
+  "tested_on": "2026-05-17",
   "author": "BMPixel",
   "files": {
     "CLAUDE.md": "CLAUDE.md"
@@ -26,7 +26,7 @@
     "stars": 1152,
     "language": "TypeScript",
     "pushed_at": "2026-03-20T03:27:01Z",
-    "discovered_at": "2026-05-16T23:13:03.963Z",
+    "discovered_at": "2026-05-17T00:13:09.723Z",
     "score": 0.706912,
     "readme": "# cui: Common Agent UI (Archived)\n\n> **This fork is archived.** Anthropic now offers official alternatives that cover all of cui's use cases. See below for migration guidance.\n\n## What was cui?\n\nA modern web UI for Claude Code agents, powered by [Claude Code SDK](https://claude.ai/code). It provided browser-based access to agent sessions, parallel background tasks, push notifications, and multi-model support.\n\nThe upstream project lives at [BMPixel/cui](https://github.com/BMPixel/cui).\n\n## Why archived?\n\nAnthropic has released official products that supersede cui's functionality:\n\n| Need | Official Solution |\n|------|-------------------|\n| Browser-based coding without local setup | [Claude Code Web](https://claude.ai/code) -- cloud VM execution, async tasks, built-in diff view, parallel sessions |\n| Access a local Claude Code session from phone/browser | [Remote Control](https://code.claude.com/docs/en/remote-control) -- `claude remote-control` or `/rc`, encrypted bridge, local execution |\n| Long-running desktop tasks with mobile dispatch | [Cowork Dispatch](https://www.anthropic.com/products/claude-code) -- Claude Desktop persistent agent, phone-to-desktop task dispatch |\n\n## Migration\n\n- **Claude Code Web**: Go to [claude.ai/code](https://claude.ai/code), connect GitHub, submit tasks. Use `claude --remote` from terminal to start cloud sessions.\n- **Remote Control**: Run `claude remote-control` in your project directory, scan the QR code with the Claude mobile app or open the session URL in a browser.\n- **Cowork Dispatch**: Use Claude Desktop app, pair with your phone via QR code, dispatch tasks remotely.\n\n## License\n\n[MIT](LICENSE)\n",
     "license": "Apache-2.0",
