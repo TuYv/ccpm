@@ -16,19 +16,23 @@ Skills are model-invoked (Claude activates them based on user intent, not slash 
 
 ```
 .claude-plugin/
-  marketplace.json        # Plugin registry: defines all plugins and their components
-skills/
-  <skill-name>/
-    SKILL.md              # Main skill file (YAML frontmatter + markdown body)
-    references/           # Optional deep-dive docs loaded on demand
-hooks/
-  guardrails.json         # Hook config for the guardrails plugin
-  guard-destructive.sh    # PreToolUse guard script, run via ${CLAUDE_PLUGIN_ROOT}
+  marketplace.json          # Marketplace registry: lists all plugins
+plugins/
+  <plugin-name>/
+    .claude-plugin/
+      plugin.json           # Plugin manifest
+    skills/                 # Skills (skill plugins) - auto-discovered
+      <skill-name>/
+        SKILL.md            # Main skill file (YAML frontmatter + markdown body)
+        references/         # Optional deep-dive docs loaded on demand
+    hooks/                  # Hooks (guardrails plugin) - auto-discovered
+      hooks.json            # Hook registration
+      guard-destructive.sh  # Hook script, run via ${CLAUDE_PLUGIN_ROOT}
 ```
 
 ### Key file: `marketplace.json`
 
-Defines the plugin structure. All three plugins share `source: "./"` (the repo root) and partition their components via explicit arrays. The skill plugins list their `skills`; the `guardrails` plugin lists its `hooks` (pointing to `hooks/guardrails.json`) and has an empty `skills` array. The hook config file is deliberately named `guardrails.json`, not the auto-discovered `hooks.json`, so the skill plugins - which also have `source: "./"` - do not pick the hook up. When adding or removing a component, update both the plugin's array and the corresponding file.
+Lists the plugins. Each plugin is a self-contained directory under `plugins/`, referenced only by `source` (e.g. `./plugins/github-workflow`); its components are auto-discovered from that directory. The marketplace entry carries no `skills`/`hooks` arrays - this is the standard Claude Code plugin layout. To add a plugin, create `plugins/<name>/` with a `.claude-plugin/plugin.json` and its components, then add an entry here.
 
 ### Skill anatomy
 
@@ -40,7 +44,7 @@ Reference files in `references/` provide extended examples and documentation tha
 
 ## Conventions
 
-- **Commits**: Conventional Commits format - `type(scope): subject` (see `skills/git-commit/SKILL.md`)
+- **Commits**: Conventional Commits format - `type(scope): subject` (see `plugins/github-workflow/skills/git-commit/SKILL.md`)
 - **Naming**: lowercase, hyphens between words, no spaces (e.g., `github-pr-review`)
 - **Merge strategy**: always merge commits (`--merge`), never squash/rebase
 - **Changelog**: follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) format
@@ -48,7 +52,7 @@ Reference files in `references/` provide extended examples and documentation tha
 
 ## Writing skills
 
-When creating or editing skills, follow the patterns in `skills/creating-skills/SKILL.md`:
+When creating or editing skills, follow the patterns in `plugins/skill-authoring/skills/creating-skills/SKILL.md`:
 
 - Description formula: `<What it does>. Use when <trigger phrases>. <Key capabilities>.`
 - SKILL.md body under 500 lines; move detailed content to `references/`
