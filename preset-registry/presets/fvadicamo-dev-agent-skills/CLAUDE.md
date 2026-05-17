@@ -4,12 +4,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project overview
 
-A collection of Claude Code agent skills for development workflows, distributed as a plugin marketplace. Contains 5 skills organized into 2 plugins:
+A collection of Claude Code agent skills and hooks for development workflows, distributed as a plugin marketplace. Contains 5 skills and 1 hook organized into 3 plugins:
 
 - **github-workflow** plugin: `git-commit`, `github-pr-creation`, `github-pr-merge`, `github-pr-review`
 - **skill-authoring** plugin: `creating-skills`
+- **bash-safety** plugin: `guard-destructive` PreToolUse hook
 
-Skills are model-invoked (Claude activates them based on user intent, not slash commands).
+Skills are model-invoked (Claude activates them based on user intent, not slash commands). The hook runs automatically on every Bash tool call.
 
 ## Architecture
 
@@ -20,11 +21,17 @@ skills/
   <skill-name>/
     SKILL.md              # Main skill file (YAML frontmatter + markdown body)
     references/           # Optional deep-dive docs loaded on demand
+bash-safety/              # Hook plugin - its own plugin root (source: ./bash-safety)
+  .claude-plugin/
+    plugin.json           # Plugin manifest (name, version, description)
+  hooks/
+    hooks.json            # Hook registration (PreToolUse, matcher Bash)
+    guard-destructive.sh  # The guard script, run via ${CLAUDE_PLUGIN_ROOT}
 ```
 
 ### Key file: `marketplace.json`
 
-Defines the plugin structure. Each plugin has a `skills` array pointing to skill directories. When adding or removing skills, update both the plugin's `skills` array and the corresponding directory.
+Defines the plugin structure. The skill plugins share `source: "./"` and partition components via explicit `skills` arrays; when adding or removing a skill, update both the plugin's `skills` array and the directory. The `bash-safety` plugin instead has its own root (`source: "./bash-safety"`) with a `.claude-plugin/plugin.json` manifest; its `hooks/hooks.json` is auto-discovered - no explicit `hooks` key needed.
 
 ### Skill anatomy
 
