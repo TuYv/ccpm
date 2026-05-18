@@ -1,0 +1,26 @@
+{
+  "id": "zhanghandong-makepad-skills-makepad-2-0-vector",
+  "name": "makepad-2.0-vector",
+  "description": "| CRITICAL: Use for Makepad 2.0 Vector graphics widget. Triggers on: makepad vector, Vector widget, SVG path, makepad path, makepad circle, makepad gradient, makepad tween, vector animation, Gradient, RadGradient, Filter, DropShadow, Group transform, vector drawing, inline SVG, 矢量图形, SVG, 路径, 渐变, 矢量动画",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ZhangHanDong",
+  "install_path": ".claude/skills/makepad-2.0-vector/SKILL.md",
+  "source": {
+    "repo": "ZhangHanDong/makepad-skills",
+    "url": "https://github.com/ZhangHanDong/makepad-skills/blob/main/skills/makepad-2.0-vector/SKILL.md",
+    "path": "skills/makepad-2.0-vector/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-18T14:09:31.531Z",
+    "stars": 736,
+    "language": null,
+    "pushed_at": "2026-04-07T15:51:03Z",
+    "readme": "# Makepad 2.0 Skills\n\nSkills for building cross-platform UI applications with [Makepad 2.0](https://github.com/makepad/makepad).\n\n## Skills (14)\n\n| Skill | Description |\n|-------|-------------|\n| `makepad-2.0-design-judgment` | **Entry point.** Design judgment anchors (Elm Architecture, Presentational/Container, GPU rendering mental model). Load this first, then co-load specific skills below. |\n| `makepad-2.0-app-structure` | App structure, `app_main!`, ScriptVm, Cargo setup, hot reload |\n| `makepad-2.0-dsl` | DSL syntax, `script_mod!`, colon syntax, `mod.widgets`, let bindings |\n| `makepad-2.0-layout` | Layout system, Flow, Fill, Fit, Inset, spacing, alignment |\n| `makepad-2.0-widgets` | Widget catalog (View, Button, Label, TextInput, PortalList, Dock, etc.) |\n| `makepad-2.0-events` | Event/action handling, `on_click`, `on_render`, Hit, `ids!` |\n| `makepad-2.0-animation` | Animator, states, Forward/Snap/Loop, ease functions |\n| `makepad-2.0-shaders` | Shader system, `draw_bg`, Sdf2d, pixel/vertex fn, DrawQuad |\n| `makepad-2.0-splash` | Splash scripting language, streaming evaluation, hot reload |\n| `makepad-2.0-theme` | Theme system, `mod.themes`, colors, fonts, dark/light mode |\n| `makepad-2.0-vector` | Vector graphics, SVG paths, gradients, tweens, DropShadow |\n| `makepad-2.0-performance` | Performance optimization, GC, draw batching, ViewOptimize |\n| `makepad-2.0-troubleshooting` | Common mistakes, FAQ, debugging tips |\n| `makepad-2.0-migration` | Migration guide from Makepad 1.x to 2.0 |\n\n## Installation\n\n### Option 1: Add as Working Directory\n\n```json\n// .claude/settings.json\n{\n  \"additionalWorkingDirectories\": [\n    \"/path/to/makepad-skills\"\n  ]\n}\n```\n\n### Option 2: Symlink to Skills Directory\n\n```bash\nfor skill in skills/*; do\n    ln -sf \"$(pwd)/$skill\" ~/.claude/skills/\ndone\n```\n\n### Option 3: Copy Skills\n\n```bash\ncp -r skills/* ~/.claude/skills/\n```\n\n## Legacy\n\nMakepad 1.x skills (including Robius and MolyKit patterns) are archived on the [`v1/makepad-1.0`](../../tree/v1/makepad-1.0) branch.\n\n## Source\n\n- **Makepad**: https://github.com/makepad/makepad\n\n## License\n\nMIT\n",
+    "license": null
+  }
+}

@@ -4,6 +4,7 @@ import { existsSync } from "node:fs";
 import { basename, dirname, join } from "node:path";
 import { parseFrontmatter } from "./frontmatter.js";
 import { fetchReadme } from "./searcher.js";
+import type { SearchHit } from "./searcher.js";
 
 export interface SkillRepo {
   owner: string;
@@ -24,6 +25,7 @@ export const SKILL_REPOS: SkillRepo[] = [
 ];
 
 const MAX_SKILLS_PER_REPO = 60;
+const COMMUNITY_SKILL_CATEGORY = "社区精选";
 
 export interface RepoMeta {
   stars: number;
@@ -104,6 +106,52 @@ async function fetchFile(
   }
 }
 
+async function writeSkill(
+  registryDir: string,
+  entry: SkillEntry,
+  content: string,
+): Promise<void> {
+  const outDir = join(registryDir, "skills", entry.id);
+  await mkdir(outDir, { recursive: true });
+  await writeFile(join(outDir, "skill.md"), content);
+  await writeFile(join(outDir, "skill.json"), JSON.stringify(entry, null, 2));
+}
+
+async function rebuildSkillIndex(registryDir: string): Promise<SkillEntry[]> {
+  const skillsDir = join(registryDir, "skills");
+  const indexEntries: SkillEntry[] = [];
+  if (existsSync(skillsDir)) {
+    for (const dirent of await readdir(skillsDir, { withFileTypes: true })) {
+      if (!dirent.isDirectory()) continue;
+      const skillJson = join(skillsDir, dirent.name, "skill.json");
+      if (!existsSync(skillJson)) continue;
+      try {
+        indexEntries.push(JSON.parse(await readFile(skillJson, "utf8")));
+      } catch {
+        // Skip bad files
+      }
+    }
+  }
+  indexEntries.sort(
+    (a, b) =>
+      a.category.localeCompare(b.category) || a.name.localeCompare(b.name),
+  );
+  await mkdir(skillsDir, { recursive: true });
+  await writeFile(
+    join(skillsDir, "index.json"),
+    JSON.stringify(
+      {
+        version: "1",
+        updated_at: new Date().toISOString(),
+        skills: indexEntries,
+      },
+      null,
+      2,
+    ),
+  );
+  return indexEntries;
+}
+
 export async function discoverSkills(
   octokit: Octokit,
   registryDir: string,
@@ -179,55 +227,79 @@ export async function discoverSkills(
       };
       all.push(entry);
 
-      // Write skill files into the registry
-      const outDir = join(skillsDir, id);
-      await mkdir(outDir, { recursive: true });
-      await writeFile(join(outDir, "skill.md"), content);
-      await writeFile(
-        join(outDir, "skill.json"),
-        JSON.stringify(entry, null, 2),
-      );
+      await writeSkill(registryDir, entry, content);
       count++;
     }
     console.log(`[skills]   wrote ${count} skills from ${repo.owner}/${repo.name}`);
   }
 
-  // Build skills/index.json by walking the skills dir (incremental accumulation).
-  const indexEntries: SkillEntry[] = [];
-  if (existsSync(skillsDir)) {
-    for (const dirent of await readdir(skillsDir, { withFileTypes: true })) {
-      if (!dirent.isDirectory()) continue;
-      const skillJson = join(skillsDir, dirent.name, "skill.json");
-      if (!existsSync(skillJson)) continue;
-      try {
-        indexEntries.push(JSON.parse(await readFile(skillJson, "utf8")));
-      } catch {
-        // Skip bad files
-      }
-    }
-  }
-  // Sort: category alphabetical then name
-  indexEntries.sort(
-    (a, b) =>
-      a.category.localeCompare(b.category) || a.name.localeCompare(b.name),
-  );
-
-  await mkdir(skillsDir, { recursive: true });
-  await writeFile(
-    join(skillsDir, "index.json"),
-    JSON.stringify(
-      {
-        version: "1",
-        updated_at: new Date().toISOString(),
-        skills: indexEntries,
-      },
-      null,
-      2,
-    ),
-  );
+  const indexEntries = await rebuildSkillIndex(registryDir);
 
   console.log(
     `[skills] index now has ${indexEntries.length} entries (this run added ${all.length} fresh)`,
+  );
+  return all;
+}
+
+export async function discoverSkillsFromHits(
+  octokit: Octokit,
+  registryDir: string,
+  hits: SearchHit[],
+): Promise<SkillEntry[]> {
+  const all: SkillEntry[] = [];
+
+  for (const hit of hits) {
+    const skillPaths = hit.signals?.skill_paths ?? [];
+    if (skillPaths.length === 0) continue;
+
+    const [owner, repo] = hit.repo.split("/");
+    if (!owner || !repo) continue;
+
+    const meta = await fetchRepoMeta(octokit, hit.repo);
+    let count = 0;
+    for (const filePath of skillPaths.slice(0, MAX_SKILLS_PER_REPO)) {
+      const content = await fetchFile(octokit, owner, repo, hit.default_branch, filePath);
+      if (!content) continue;
+
+      const dirPath = dirname(filePath);
+      const skillName = basename(dirPath);
+      const id = slugify(`${owner}-${repo}-${skillName}`);
+      const fm = parseFrontmatter(content);
+      const name = fm.name || skillName;
+      const description = fm.description || hit.description || `Skill from ${hit.repo}`;
+      const version = fm.version || "";
+      const entry: SkillEntry = {
+        id,
+        name,
+        description: description.slice(0, 500),
+        category: COMMUNITY_SKILL_CATEGORY,
+        compatible_tools: ["claude", "codex", "gemini"],
+        version,
+        author: owner,
+        install_path: `.claude/skills/${skillName}/SKILL.md`,
+        source: {
+          repo: hit.repo,
+          url: `https://github.com/${hit.repo}/blob/${hit.default_branch}/${filePath}`,
+          path: filePath,
+          branch: hit.default_branch,
+          discovered_at: new Date().toISOString(),
+          stars: meta.stars,
+          language: meta.language,
+          pushed_at: meta.pushed_at,
+          readme: meta.readme,
+          license: meta.license,
+        },
+      };
+      await writeSkill(registryDir, entry, content);
+      all.push(entry);
+      count++;
+    }
+    if (count > 0) console.log(`[skills]   wrote ${count} skills from ${hit.repo}`);
+  }
+
+  const indexEntries = await rebuildSkillIndex(registryDir);
+  console.log(
+    `[skills] migrated ${all.length} skills from awesome-list repos; index now has ${indexEntries.length} entries`,
   );
   return all;
 }

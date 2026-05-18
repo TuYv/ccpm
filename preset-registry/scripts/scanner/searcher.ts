@@ -3,6 +3,7 @@ import { Octokit } from "@octokit/rest";
 export interface RepoSignals {
   has_claude_plugin: boolean;
   has_skills_dir: boolean;
+  skill_paths: string[];
   has_commands_dir: boolean;
   // CLAUDE.md path is one segment from root (e.g. "CLAUDE.md"), not nested deep.
   claude_md_at_root: boolean;

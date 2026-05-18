@@ -1,0 +1,26 @@
+{
+  "id": "dvdsgl-claude-canvas-canvas",
+  "name": "canvas",
+  "description": "| **The primary skill for terminal TUI components.** Covers spawning, controlling, and interacting with terminal canvases. Use when displaying calendars, documents, or flight bookings.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "dvdsgl",
+  "install_path": ".claude/skills/canvas/SKILL.md",
+  "source": {
+    "repo": "dvdsgl/claude-canvas",
+    "url": "https://github.com/dvdsgl/claude-canvas/blob/main/canvas/skills/canvas/SKILL.md",
+    "path": "canvas/skills/canvas/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-18T14:03:59.883Z",
+    "stars": 1485,
+    "language": "TypeScript",
+    "pushed_at": "2026-01-08T02:19:55Z",
+    "readme": "# Claude Canvas\n\nA TUI toolkit that gives Claude Code its own display. Spawn interactive terminal interfaces for emails, calendars, flight bookings, and more.\n\n**Note:** This is a proof of concept and is unsupported.\n\n![Claude Canvas Screenshot](media/screenshot.png)\n\n## Requirements\n\n- [Bun](https://bun.sh) — used to run skill tools\n- [tmux](https://github.com/tmux/tmux) — canvases spawn in split panes\n\n## Installation\n\nAdd this repository as a marketplace in Claude Code:\n\n```\n/plugin marketplace add dvdsgl/claude-canvas\n```\n\nThen install the canvas plugin:\n\n```\n/plugin install canvas@claude-canvas\n```\n\n## License\n\nMIT\n",
+    "license": "MIT"
+  }
+}

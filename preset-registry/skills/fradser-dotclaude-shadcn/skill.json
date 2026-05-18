@@ -1,0 +1,26 @@
+{
+  "id": "fradser-dotclaude-shadcn",
+  "name": "shadcn",
+  "description": "Manages shadcn components and projects — adding, searching, fixing, debugging, styling, and composing UI. Provides project context, component docs, and usage examples. Applies when working with shadcn/ui, component registries, presets, --preset codes, or any project with a components.json file. Also triggers for \"shadcn init\", \"create an app with --preset\", or \"switch to --preset\".",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "FradSer",
+  "install_path": ".claude/skills/shadcn/SKILL.md",
+  "source": {
+    "repo": "FradSer/dotclaude",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/shadcn/skills/shadcn/SKILL.md",
+    "path": "shadcn/skills/shadcn/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-18T13:50:29.297Z",
+    "stars": 549,
+    "language": "Shell",
+    "pushed_at": "2026-05-15T14:48:46Z",
+    "readme": "# Frad's Claude Code Plugins ![](https://img.shields.io/badge/plugins-15-blue)\n\n[![MIT License](https://img.shields.io/badge/license-MIT-green)](LICENSE)\n[![Claude Code](https://img.shields.io/badge/Claude%20Code-v0.6+-purple)](https://claude.ai/code)\n\n**English** | [简体中文](README.zh-CN.md)\n\nA curated collection of 15 plugins for Claude Code, providing specialized agents, skills, and automation tools for development and productivity workflows.\n\n## Available Plugins\n\n### [git](git/)\n\nConventional Git automation for commits and repository management with AI code quality checks.\n\n**Installation:**\n```bash\nclaude plugin install git@frad-dotclaude\n```\n\n---\n\n### [gitflow](gitflow/)\n\nGitFlow workflow automation for feature, hotfix, and release branches with semantic versioning.\n\n**Installation:**\n```bash\nclaude plugin install gitflow@frad-dotclaude\n```\n\n---\n\n### [github](github/)\n\nGitHub project operations with quality gates, TDD workflows, and comprehensive validation.\n\n**Installation:**\n```bash\nclaude plugin install github@frad-dotclaude\n```\n\n---\n\n### [superpowers](superpowers/)\n\nAdvanced development workflow orchestration with BDD support and Agent Team execution for complex projects.\n\n**Installation:**\n```bash\nclaude plugin install superpowers@frad-dotclaude\n```\n\n---\n\n### [refactor](refactor/)\n\nCode simplification and refactoring with language-specific patterns and cross-file optimization.\n\n**Installation:**\n```bash\nclaude plugin install refactor@frad-dotclaude\n```\n\n---\n\n### [swiftui](swiftui/)\n\nSwiftUI Clean Architecture reviewer for iOS/macOS development with best practices enforcement.\n\n**Installation:**\n```bash\nclaude plugin install swiftui@frad-dotclaude\n```\n\n---\n\n### [claude-config](claude-config/)\n\nGenerate comprehensive CLAUDE.md configuration files with environment detection and interactive workflow.\n\n**Installation:**\n```bash\nclaude plugin install claude-config@frad-dotclaude\n```\n\n---\n\n### [office](office/)\n\nPatent application generation, Feishu document creation, and Product Requirements Documents.\n\n**Installation:**\n```bash\nclaude plugin install office@frad-dotclaude\n```\n\n---\n\n### [plugin-optimizer](plugin-optimizer/)\n\nValidate and optimize Claude Code plugins against official best practices with agent-based fixes.\n\n**Installation:**\n```bash\nclaude plugin install plugin-optimizer@frad-dotclaude\n```\n\n---\n\n### [next-devtools](next-devtools/)\n\nNext.js development tools integration via MCP server for routing, components, and API analysis.\n\n**Installation:**\n```bash\nclaude plugin install next-devtools@frad-dotclaude\n```\n\n---\n\n### [acpx](acpx/)\n\nKnowledge base for acpx - a headless ACP CLI for agent-to-agent communication.\n\n**Installation:**\n```bash\nclaude plugin install acpx@frad-dotclaude\n```\n\n---\n\n### [shadcn](shadcn/)\n\nManages shadcn components - adding, searching, fixing, debugging, styling, and composing UI.\n\n**Installation:**\n```bash\nclaude plugin install shadcn@frad-dotclaude\n```\n\n---\n\n### [code-context](code-context/)\n\nFive methods to retrieve code context: DeepWiki, Context7, Exa, git clone, and web search.\n\n**Installation:**\n```bash\nclaude plugin install code-context@frad-dotclaude\n```\n\n---\n\n### [utils](utils/)\n\nGeneral-purpose utility skills for documentation, writing, and project maintenance.\n\n**Installation:**\n```bash\nclaude plugin install utils@frad-dotclaude\n```\n\n---\n\n### [meeseeks-vetted](meeseeks-vetted/)\n\nEnforces task clarity before execution and requires verified work before exit.\n\n**Installation:**\n```bash\nclaude plugin install meeseeks-vetted@frad-dotclaude\n```\n\n---\n\n## Adding a New Plugin\n\n1. Create a plugin directory under `plugin-name/`.\n2. Add `.claude-plugin/plugin.json` with required metadata.\n3. Add the plugin entry to `.claude-plugin/marketplace.json`.\n4. Run `/utils:update-readme` to sync both README files.\n\n## License\n\n[MIT](LICENSE)",
+    "license": null
+  }
+}
