@@ -1,6 +1,6 @@
 import { useMemo, useEffect, useState } from "react";
 import { api } from "../api/claudePreset";
-import { useMcpsStore, usePresetsStore, useSkillsStore, useUiStore } from "../stores";
+import { useUiStore } from "../stores";
 import type { ClaudeSettings, EffortLevel, PermissionMode } from "../types/core";
 import Topbar from "../components/Topbar";
 import { Button, Switch } from "../components/ui";
@@ -347,19 +347,10 @@ function SectionNav({ activeSection }: { activeSection: string }) {
 
 export default function ClaudeSettingsPage() {
   const { addToast } = useUiStore();
-  const presetCount = usePresetsStore((state) => state.index?.presets.length ?? 0);
-  const skillCount = useSkillsStore((state) => state.index?.skills.length ?? 0);
-  const mcpCount = useMcpsStore((state) => state.index?.mcps.length ?? 0);
-  const sourceMode = usePresetsStore((state) => state.sourceMode);
-  const lastUpdated = usePresetsStore((state) => state.lastUpdated);
-  const refreshPresets = usePresetsStore((state) => state.fetchIndex);
-  const refreshSkills = useSkillsStore((state) => state.fetchIndex);
-  const refreshMcps = useMcpsStore((state) => state.fetchIndex);
   const [s, setS] = useState<ClaudeSettings>({});
   const [savedJson, setSavedJson] = useState("{}");
   const [saving, setSaving] = useState(false);
   const [loaded, setLoaded] = useState(false);
-  const [refreshingRegistry, setRefreshingRegistry] = useState(false);
   const activeSection = useScrollSpy(SECTIONS.map(([id]) => id), "model", loaded);
 
   useEffect(() => {
@@ -395,18 +386,6 @@ export default function ClaudeSettingsPage() {
       setS(JSON.parse(savedJson) || {});
     } catch {
       setS({});
-    }
-  }
-
-  async function refreshRegistry() {
-    setRefreshingRegistry(true);
-    try {
-      await Promise.all([refreshPresets(true), refreshSkills(true), refreshMcps(true)]);
-      addToast("远程缓存已刷新", "success");
-    } catch (e) {
-      addToast(`刷新失败：${String(e)}`, "error");
-    } finally {
-      setRefreshingRegistry(false);
     }
   }
 
@@ -646,24 +625,6 @@ export default function ClaudeSettingsPage() {
                     onChange={(v) => up({ autoUpdatesChannel: v as "latest" | "stable" })}
                   />
                   <div className="text-xs text-ink-3 mt-2">稳定版约落后一周，自动跳过有重大问题的版本</div>
-                </Row>
-                <Row>
-                  <div className="flex items-center justify-between gap-4">
-                    <div>
-                      <div className="text-sm text-ink font-medium">远程缓存</div>
-                      <div className="text-xs text-ink-3 mt-1">
-                        Presets {presetCount} · Skills {skillCount} · MCP {mcpCount} · {sourceMode === "remote" ? "远程" : "内置预设"}
-                      </div>
-                      {lastUpdated && (
-                        <div className="text-xs text-ink-3 mt-1">
-                          上次刷新 {lastUpdated.slice(0, 19).replace("T", " ")}
-                        </div>
-                      )}
-                    </div>
-                    <Button variant="subtle" disabled={refreshingRegistry} onClick={refreshRegistry}>
-                      {refreshingRegistry ? "刷新中…" : "刷新远程缓存"}
-                    </Button>
-                  </div>
                 </Row>
               </SectionCard>
             </section>
