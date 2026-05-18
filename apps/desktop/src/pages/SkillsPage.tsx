@@ -2,7 +2,12 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { api } from "../api/claudePreset";
 import GithubImportInput from "../components/GithubImportInput";
 import Topbar from "../components/Topbar";
-import { useInstalledStore, useSkillsStore, useUiStore } from "../stores";
+import {
+  triggerGlobalRefresh,
+  useInstalledStore,
+  useSkillsStore,
+  useUiStore,
+} from "../stores";
 import { useScopeStore } from "../stores/scope";
 import type { BundleMeta, ImportedBundle, SkillMeta } from "../types/core";
 import {
@@ -79,6 +84,7 @@ export default function SkillsPage() {
   const [readmeOpen, setReadmeOpen] = useState<Record<string, boolean>>({});
   const [groupByBundle, setGroupByBundle] = useState(true);
   const [bundleExpanded, setBundleExpanded] = useState<Record<string, boolean>>({});
+  const [refreshing, setRefreshing] = useState(false);
 
   function toggleBundle(id: string) {
     setBundleExpanded((m) => ({ ...m, [id]: !m[id] }));
@@ -504,8 +510,27 @@ export default function SkillsPage() {
                 {groupByBundle ? "全展开" : "按合集分组"}
               </Button>
             )}
-            <Button size="sm" variant="subtle" onClick={() => fetchIndex(true)} title="刷新">
-              {RefreshIcon}
+            <Button
+              size="sm"
+              variant="subtle"
+              onClick={async () => {
+                if (refreshing) return;
+                setRefreshing(true);
+                try {
+                  await triggerGlobalRefresh();
+                } finally {
+                  setRefreshing(false);
+                }
+              }}
+              disabled={refreshing}
+              title="刷新全部（presets / skills / mcps）"
+            >
+              <span
+                className={refreshing ? "animate-spin" : undefined}
+                style={{ display: "inline-flex" }}
+              >
+                {RefreshIcon}
+              </span>
             </Button>
           </>
         }

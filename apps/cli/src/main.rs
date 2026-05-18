@@ -77,7 +77,7 @@ async fn run(cli: Cli) -> Result<(), Box<dyn std::error::Error>> {
                 cached
             } else {
                 let client = build_client(&config)?;
-                fetch_index(&client, &config.preset_source_url, &cache_dir).await?
+                fetch_index(&client, &config.preset_source_url, &cache_dir, false).await?
             };
             if index.presets.is_empty() {
                 println!("没有可用的 preset。");
@@ -170,8 +170,9 @@ async fn run(cli: Cli) -> Result<(), Box<dyn std::error::Error>> {
 
         Command::Fetch => {
             let client = build_client(&config)?;
+            // `fetch` is explicitly user-initiated refresh — bust the CDN cache.
             let index =
-                fetch_index(&client, &config.preset_source_url, &cache_dir).await?;
+                fetch_index(&client, &config.preset_source_url, &cache_dir, true).await?;
             println!("✓ 已刷新，共 {} 个 preset", index.presets.len());
         }
 

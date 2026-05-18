@@ -226,6 +226,7 @@ mod tests {
             skills: vec![],
             mcps: vec![],
             source: None,
+            summary_zh: None,
         }
     }
 

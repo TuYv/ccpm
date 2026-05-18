@@ -27,9 +27,11 @@ pub async fn fetch_skills_index_cmd(force_refresh: bool) -> Result<SkillIndex, S
         if let Ok(Some(cached)) = load_skills_from_cache(&cache_dir, config.cache_ttl_minutes) {
             return Ok(cached);
         }
+    } else {
+        let _ = std::fs::remove_file(cache_dir.join("skills-index.json"));
     }
     let client = build_client(&config).map_err(|e| e.to_string())?;
-    fetch_skills_index(&client, &config.preset_source_url, &cache_dir)
+    fetch_skills_index(&client, &config.preset_source_url, &cache_dir, force_refresh)
         .await
         .map_err(|e| e.to_string())
 }

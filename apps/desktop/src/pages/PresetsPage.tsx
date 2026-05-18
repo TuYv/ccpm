@@ -15,6 +15,7 @@ import {
   TextInput,
 } from "../components/ui";
 import {
+  triggerGlobalRefresh,
   useInstalledStore,
   useMcpsStore,
   usePresetsStore,
@@ -162,6 +163,7 @@ export default function PresetsPage() {
   const [search, setSearch] = useState("");
   const [filter, setFilter] = useState<FilterKey>("all");
   const [activating, setActivating] = useState(false);
+  const [refreshing, setRefreshing] = useState(false);
   const [selective, setSelective] = useState(false);
   const [importPreview, setImportPreview] = useState<ImportedBundle | null>(null);
   const [readmeOpen, setReadmeOpen] = useState(false);
@@ -323,11 +325,24 @@ export default function PresetsPage() {
             <Button
               size="sm"
               variant="subtle"
-              onClick={() => fetchIndex(true)}
-              disabled={loading}
-              title="刷新"
+              onClick={async () => {
+                if (refreshing) return;
+                setRefreshing(true);
+                try {
+                  await triggerGlobalRefresh();
+                } finally {
+                  setRefreshing(false);
+                }
+              }}
+              disabled={refreshing}
+              title="刷新全部（presets / skills / mcps）"
             >
-              {RefreshIcon}
+              <span
+                className={refreshing ? "animate-spin" : undefined}
+                style={{ display: "inline-flex" }}
+              >
+                {RefreshIcon}
+              </span>
             </Button>
           </>
         }

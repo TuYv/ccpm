@@ -3,7 +3,12 @@ import { api } from "../api/claudePreset";
 import GithubImportInput from "../components/GithubImportInput";
 import McpEnvDialog from "../components/McpEnvDialog";
 import Topbar from "../components/Topbar";
-import { useInstalledStore, useMcpsStore, useUiStore } from "../stores";
+import {
+  triggerGlobalRefresh,
+  useInstalledStore,
+  useMcpsStore,
+  useUiStore,
+} from "../stores";
 import { useScopeStore } from "../stores/scope";
 import type { ImportedBundle, McpMeta } from "../types/core";
 import {
@@ -300,6 +305,7 @@ export default function McpPage() {
   const [importPreview, setImportPreview] = useState<ImportedBundle | null>(null);
   const [pickerMcpId, setPickerMcpId] = useState<string | null>(null);
   const [importing, setImporting] = useState(false);
+  const [refreshing, setRefreshing] = useState(false);
 
   const cardRefs = useRef<Record<string, HTMLDivElement | null>>({});
 
@@ -430,8 +436,27 @@ export default function McpPage() {
         actions={
           <>
             <GithubImportInput onImported={setImportPreview} />
-            <Button size="sm" variant="subtle" onClick={() => fetchIndex(true)} title="刷新">
-              {RefreshIcon}
+            <Button
+              size="sm"
+              variant="subtle"
+              onClick={async () => {
+                if (refreshing) return;
+                setRefreshing(true);
+                try {
+                  await triggerGlobalRefresh();
+                } finally {
+                  setRefreshing(false);
+                }
+              }}
+              disabled={refreshing}
+              title="刷新全部（presets / skills / mcps）"
+            >
+              <span
+                className={refreshing ? "animate-spin" : undefined}
+                style={{ display: "inline-flex" }}
+              >
+                {RefreshIcon}
+              </span>
             </Button>
           </>
         }

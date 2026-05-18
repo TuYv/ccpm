@@ -14,9 +14,11 @@ pub async fn fetch_bundles_index_cmd(force_refresh: bool) -> Result<BundleIndex,
         if let Ok(Some(cached)) = load_bundles_from_cache(&cache_dir, config.cache_ttl_minutes) {
             return Ok(cached);
         }
+    } else {
+        let _ = std::fs::remove_file(cache_dir.join("bundles-index.json"));
     }
     let client = build_client(&config).map_err(|e| e.to_string())?;
-    fetch_bundles_index(&client, &config.preset_source_url, &cache_dir)
+    fetch_bundles_index(&client, &config.preset_source_url, &cache_dir, force_refresh)
         .await
         .map_err(|e| e.to_string())
 }

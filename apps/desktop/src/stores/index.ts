@@ -103,7 +103,8 @@ export const usePresetsStore = create<PresetsStore>((set, get) => ({
   manifest: null,
   files: {},
   fetchIndex: async (force = false) => {
-    if (!force && get().index) return;
+    const { index, sourceMode } = get();
+    if (!force && index && sourceMode === "remote") return;
     set({ loading: true, error: null });
     try {
       const index = await api.fetchIndex(force);
@@ -185,6 +186,42 @@ export const useBackupsStore = create<BackupsStore>((set, get) => ({
     set({ entries });
   },
 }));
+
+/**
+ * Force-refreshes all four registry namespaces (presets, skills+bundles, mcps) in
+ * parallel. Returns the post-refresh entry counts so the caller can toast a
+ * concrete result like "已刷新：204 presets / 110 skills / 14 mcps".
+ */
+export async function refreshAllRegistries(): Promise<{
+  presets: number;
+  skills: number;
+  mcps: number;
+}> {
+  await Promise.all([
+    usePresetsStore.getState().fetchIndex(true),
+    useSkillsStore.getState().fetchIndex(true),
+    useMcpsStore.getState().fetchIndex(true),
+  ]);
+  return {
+    presets: usePresetsStore.getState().index?.presets.length ?? 0,
+    skills: useSkillsStore.getState().index?.skills.length ?? 0,
+    mcps: useMcpsStore.getState().index?.mcps.length ?? 0,
+  };
+}
+
+/**
+ * One-shot refresh: triggers a global refresh and toasts the result.
+ * The single source of truth for the refresh button on every registry page.
+ */
+export async function triggerGlobalRefresh(): Promise<void> {
+  const addToast = useUiStore.getState().addToast;
+  try {
+    const { presets, skills, mcps } = await refreshAllRegistries();
+    addToast(`已刷新：${presets} presets · ${skills} skills · ${mcps} mcps`, "success");
+  } catch (e) {
+    addToast(`刷新失败：${String(e)}`, "error");
+  }
+}
 
 const MAX_TOASTS = 10;
 

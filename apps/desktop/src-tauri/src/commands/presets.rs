@@ -66,10 +66,14 @@ pub async fn fetch_index_cmd(force_refresh: bool) -> Result<PresetIndex, String>
         {
             return Ok(cached);
         }
+    } else {
+        // Force refresh: drop the disk cache file too so a partial network failure
+        // doesn't silently revert the user to stale data on retry.
+        let _ = std::fs::remove_file(cache_dir.join("index.json"));
     }
 
     let client = build_client(&config).map_err(|e| e.to_string())?;
-    fetch_index(&client, &config.preset_source_url, &cache_dir)
+    fetch_index(&client, &config.preset_source_url, &cache_dir, force_refresh)
         .await
         .map_err(|e| e.to_string())
 }

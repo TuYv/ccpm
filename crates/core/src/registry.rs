@@ -60,6 +60,21 @@ fn write_to_cache(cache_dir: &Path, filename: &str, content: &str) -> Result<(),
 
 // ── HTTP fetch ────────────────────────────────────────────────────────────────
 
+/// Appends a cache-busting query param so Fastly/raw.githubusercontent.com
+/// returns an origin-fresh response instead of serving the edge-cached body
+/// (Cache-Control: max-age=300). Only used when the caller asked to bypass cache.
+fn cache_busted_url(url: &str, bust: bool) -> String {
+    if !bust {
+        return url.to_string();
+    }
+    let ts = std::time::SystemTime::now()
+        .duration_since(std::time::UNIX_EPOCH)
+        .map(|d| d.as_millis())
+        .unwrap_or(0);
+    let sep = if url.contains('?') { '&' } else { '?' };
+    format!("{}{}_={}", url, sep, ts)
+}
+
 async fn fetch_text(client: &reqwest::Client, url: &str) -> Result<String, AppError> {
     let resp = client.get(url).send().await?;
     if !resp.status().is_success() {
@@ -92,12 +107,15 @@ async fn fetch_text_optional(
 }
 
 /// Fetches index.json from remote, writes to cache, returns parsed index.
+/// `bust_cache=true` appends a cache-busting query string to dodge Fastly edge cache.
 pub async fn fetch_index(
     client: &reqwest::Client,
     source_url: &str,
     cache_dir: &Path,
+    bust_cache: bool,
 ) -> Result<PresetIndex, AppError> {
-    let url = format!("{}/index.json", source_url.trim_end_matches('/'));
+    let base = format!("{}/index.json", source_url.trim_end_matches('/'));
+    let url = cache_busted_url(&base, bust_cache);
     let content = fetch_text(client, &url).await?;
     let index: PresetIndex = serde_json::from_str(&content)
         .map_err(|e| AppError::Parse(format!("remote index 解析失败：{}", e)))?;
@@ -184,8 +202,10 @@ pub async fn fetch_skills_index(
     client: &reqwest::Client,
     source_url: &str,
     cache_dir: &Path,
+    bust_cache: bool,
 ) -> Result<crate::types::SkillIndex, AppError> {
-    let url = format!("{}/skills/index.json", source_url.trim_end_matches('/'));
+    let base = format!("{}/skills/index.json", source_url.trim_end_matches('/'));
+    let url = cache_busted_url(&base, bust_cache);
     // Skills namespace is optional — a registry without it returns an empty index.
     let Some(content) = fetch_text_optional(client, &url).await? else {
         return Ok(crate::types::SkillIndex {
@@ -227,8 +247,10 @@ pub async fn fetch_mcps_index(
     client: &reqwest::Client,
     source_url: &str,
     cache_dir: &Path,
+    bust_cache: bool,
 ) -> Result<crate::types::McpIndex, AppError> {
-    let url = format!("{}/mcps/index.json", source_url.trim_end_matches('/'));
+    let base = format!("{}/mcps/index.json", source_url.trim_end_matches('/'));
+    let url = cache_busted_url(&base, bust_cache);
     // MCPs namespace is optional — a registry without it returns an empty index.
     let Some(content) = fetch_text_optional(client, &url).await? else {
         return Ok(crate::types::McpIndex {
@@ -272,8 +294,10 @@ pub async fn fetch_bundles_index(
     client: &reqwest::Client,
     source_url: &str,
     cache_dir: &Path,
+    bust_cache: bool,
 ) -> Result<crate::types::BundleIndex, AppError> {
-    let url = format!("{}/bundles/index.json", source_url.trim_end_matches('/'));
+    let base = format!("{}/bundles/index.json", source_url.trim_end_matches('/'));
+    let url = cache_busted_url(&base, bust_cache);
     // Bundles namespace is optional — older registries may not have it yet.
     let Some(content) = fetch_text_optional(client, &url).await? else {
         return Ok(crate::types::BundleIndex {
