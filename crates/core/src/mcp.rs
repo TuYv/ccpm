@@ -159,6 +159,7 @@ mod tests {
             required_env: vec![],
             optional_env: vec![],
             source: None,
+            summary_zh: None,
         }
     }
 

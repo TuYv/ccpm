@@ -103,7 +103,8 @@ export const usePresetsStore = create<PresetsStore>((set, get) => ({
   manifest: null,
   files: {},
   fetchIndex: async (force = false) => {
-    if (!force && get().index) return;
+    const { index, sourceMode } = get();
+    if (!force && index && sourceMode === "remote") return;
     set({ loading: true, error: null });
     try {
       const index = await api.fetchIndex(force);
