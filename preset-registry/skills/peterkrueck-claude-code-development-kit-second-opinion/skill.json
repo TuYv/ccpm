@@ -1,7 +1,7 @@
 {
   "id": "peterkrueck-claude-code-development-kit-second-opinion",
   "name": "second-opinion",
-  "description": "Get a second opinion from Google's Gemini 3.1 Pro Preview via the locally installed Gemini CLI. Use this skill when in Plan Mode for large or critical tasks, when stuck on a debugging dead end, when facing architecture trade-offs, for subtle edge cases in code review, or any situation where an independent perspective would add value. Also use when the user explicitly asks for a \"second opinion\", \"ask Gemini\", \"another perspective\", or \"cross-check this\". This skill only uses gemini-3.1-pro-previ",
+  "description": "Get a second opinion from Google's Gemini Pro via the locally installed Gemini CLI (defaults to gemini-3.1-pro-preview; override with the CLAUDE_SECOND_OPINION_MODEL env var). Use this skill when in Plan Mode for large or critical tasks, when stuck on a debugging dead end, when facing architecture trade-offs, for subtle edge cases in code review, or any situation where an independent perspective would add value. Also use when the user explicitly asks for a \"second opinion\", \"ask Gemini\", \"anothe",
   "category": "社区精选",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,11 @@
     "url": "https://github.com/peterkrueck/Claude-Code-Development-Kit/blob/main/skills/second-opinion/SKILL.md",
     "path": "skills/second-opinion/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-18T14:05:40.334Z",
+    "discovered_at": "2026-05-19T19:33:21.907Z",
     "stars": 1355,
     "language": "Shell",
-    "pushed_at": "2026-05-06T07:04:00Z",
+    "pushed_at": "2026-05-18T15:20:13Z",
     "license": "MIT"
-  }
+  },
+  "summary_zh": "这是一个通过本地命令行调用 Gemini Pro 的工具。当你规划大型任务、陷入调试僵局、面临架构抉择或代码审查拿不准时，它能提供独立的 AI 视角帮你破局。"
 }

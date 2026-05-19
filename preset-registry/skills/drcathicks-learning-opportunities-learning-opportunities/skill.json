@@ -1,0 +1,26 @@
+{
+  "id": "drcathicks-learning-opportunities-learning-opportunities",
+  "name": "learning-opportunities",
+  "description": "Facilitates deliberate skill development during AI-assisted coding. Offers interactive learning exercises after architectural work (new files, schema changes, refactors). Use when completing features, making design decisions, or when user asks to understand code better. Supports the user's stated goal of understanding design choices as learning opportunities.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "DrCatHicks",
+  "install_path": ".claude/skills/learning-opportunities/SKILL.md",
+  "source": {
+    "repo": "DrCatHicks/learning-opportunities",
+    "url": "https://github.com/DrCatHicks/learning-opportunities/blob/main/learning-opportunities/skills/learning-opportunities/SKILL.md",
+    "path": "learning-opportunities/skills/learning-opportunities/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-19T19:30:08.510Z",
+    "stars": 1967,
+    "language": "Shell",
+    "pushed_at": "2026-05-02T17:59:34Z",
+    "license": "CC-BY-4.0"
+  },
+  "summary_zh": "在AI辅助编程时帮你刻意练习的工具。完成重构等架构工作后，它会提供互动练习，帮你深入理解代码背后的设计思路，适合想边写代码边提升架构能力的开发者。"
+}

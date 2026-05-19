@@ -1,0 +1,26 @@
+{
+  "id": "himself65-finance-skills-finance-sentiment",
+  "name": "finance-sentiment",
+  "description": "> Fetch structured stock sentiment across Reddit, X.com, news, and Polymarket using the Adanos Finance API. Use this skill whenever the user asks how much people are talking about a stock, how hot a ticker is on social platforms, how many Polymarket bets exist for a company, whether sources are aligned, or to compare stock sentiment across multiple tickers. Triggers include: \"social sentiment on TSLA\", \"how hot is NVDA on X.com\", \"how many Reddit mentions does AAPL have\", \"compare sentiment on A",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "himself65",
+  "install_path": ".claude/skills/finance-sentiment/SKILL.md",
+  "source": {
+    "repo": "himself65/finance-skills",
+    "url": "https://github.com/himself65/finance-skills/blob/main/plugins/data-providers/skills/finance-sentiment/SKILL.md",
+    "path": "plugins/data-providers/skills/finance-sentiment/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-19T19:29:58.156Z",
+    "stars": 2422,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-19T05:17:01Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个股票情绪查询工具，帮你摸清特定股票在社交平台、新闻和预测市场的讨论热度及投注情况，适合需要追踪个股关注度或对比多只股票市场情绪的场景。"
+}

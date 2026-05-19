@@ -16,10 +16,11 @@
     "url": "https://github.com/fvadicamo/dev-agent-skills/blob/main/plugins/github-workflow/skills/github-pr-merge/SKILL.md",
     "path": "plugins/github-workflow/skills/github-pr-merge/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-18T14:07:39.981Z",
+    "discovered_at": "2026-05-19T19:33:48.800Z",
     "stars": 62,
     "language": "Shell",
     "pushed_at": "2026-05-17T21:36:00Z",
     "license": "MIT"
-  }
+  },
+  "summary_zh": "这是一个自动合并 PR 的工具，解决手动合并易漏检查的问题。它会在合并前跑完测试和代码检查，确认无误后按规范合并并清理，适合需要安全合规地处理 PR 的场景。"
 }

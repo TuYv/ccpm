@@ -1,0 +1,26 @@
+{
+  "id": "himself65-finance-skills-options-payoff",
+  "name": "options-payoff",
+  "description": "> Generate an interactive options payoff curve chart with dynamic parameter controls. Use this skill whenever the user shares an options position screenshot, describes an options strategy, or asks to visualize how an options trade makes or loses money. Triggers include: any mention of butterfly, spread (vertical/calendar/diagonal/ratio), straddle, strangle, condor, covered call, protective put, iron condor, or any multi-leg options structure. Also triggers when a user pastes strike prices, premi",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "himself65",
+  "install_path": ".claude/skills/options-payoff/SKILL.md",
+  "source": {
+    "repo": "himself65/finance-skills",
+    "url": "https://github.com/himself65/finance-skills/blob/main/plugins/market-analysis/skills/options-payoff/SKILL.md",
+    "path": "plugins/market-analysis/skills/options-payoff/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-19T19:29:59.918Z",
+    "stars": 2422,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-19T05:17:01Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是个生成交互式期权收益曲线的工具，只需输入策略描述、截图或行权参数，就能直观展示期权交易的盈亏情况，适合快速分析各种复杂的期权组合策略。"
+}

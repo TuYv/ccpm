@@ -1,0 +1,26 @@
+{
+  "id": "himself65-finance-skills-linkedin-reader",
+  "name": "linkedin-reader",
+  "description": "> Read LinkedIn for financial research using opencli (read-only). Use this skill whenever the user wants to read their LinkedIn feed, search for jobs in the finance/trading industry, view professional posts about markets or earnings, or gather professional sentiment from LinkedIn. Triggers include: \"check my LinkedIn feed\", \"search LinkedIn for\", \"LinkedIn posts about\", \"what's on LinkedIn about AAPL\", \"finance jobs on LinkedIn\", \"LinkedIn market sentiment\", \"who's posting about earnings on Link",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "himself65",
+  "install_path": ".claude/skills/linkedin-reader/SKILL.md",
+  "source": {
+    "repo": "himself65/finance-skills",
+    "url": "https://github.com/himself65/finance-skills/blob/main/plugins/social-readers/skills/linkedin-reader/SKILL.md",
+    "path": "plugins/social-readers/skills/linkedin-reader/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-19T19:30:01.603Z",
+    "stars": 2422,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-19T05:17:01Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一款专为金融研究设计的只读领英工具，能帮你刷动态、找金融工作，还能追踪市场财报和收集行业情绪，非常适合需要从领英提取专业资讯的场景。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "himself65-finance-skills-sepa-strategy",
+  "name": "sepa-strategy",
+  "description": "> Analyze stocks using Mark Minervini's SEPA (Specific Entry Point Analysis) methodology. Use this skill whenever the user mentions SEPA, Minervini, superperformance, trend template, VCP (Volatility Contraction Pattern), Stage 2 uptrend, stage analysis, pivot point breakout, or asks about growth stock screening criteria. Also triggers when the user wants to evaluate whether a stock meets swing trading entry criteria, check moving average alignment (bullish stacking: price above 50MA above 150MA ",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "himself65",
+  "install_path": ".claude/skills/sepa-strategy/SKILL.md",
+  "source": {
+    "repo": "himself65/finance-skills",
+    "url": "https://github.com/himself65/finance-skills/blob/main/plugins/market-analysis/skills/sepa-strategy/SKILL.md",
+    "path": "plugins/market-analysis/skills/sepa-strategy/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-19T19:30:00.425Z",
+    "stars": 2422,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-19T05:17:01Z",
+    "license": "MIT"
+  },
+  "summary_zh": "基于Minervini SEPA策略的股票分析工具，帮你筛选强势成长股，识别趋势阶段与价格收缩形态，精准锁定波段交易入场点，适合追求突破买点的交易者。"
+}

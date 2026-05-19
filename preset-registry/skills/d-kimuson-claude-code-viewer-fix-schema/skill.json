@@ -16,10 +16,11 @@
     "url": "https://github.com/d-kimuson/claude-code-viewer/blob/main/.agents/skills/fix-schema/SKILL.md",
     "path": ".agents/skills/fix-schema/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-18T14:05:17.157Z",
-    "stars": 1188,
+    "discovered_at": "2026-05-19T19:33:15.975Z",
+    "stars": 1190,
     "language": "TypeScript",
     "pushed_at": "2026-05-10T17:15:44Z",
     "license": "MIT"
-  }
+  },
+  "summary_zh": "这是个自动修复会话日志解析错误并提交PR的工具。当日志结构异常导致解析失败时，它能自动修正错误并生成合并请求，省去手动排查改代码的麻烦。"
 }

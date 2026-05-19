@@ -1,0 +1,26 @@
+{
+  "id": "himself65-finance-skills-tradingview-reader",
+  "name": "tradingview-reader",
+  "description": "> Read TradingView desktop app for market data, news, alerts, watchlists, and screener results using opencli (read-only). Use this skill whenever the user wants quotes, options chains, options expiries, screener results across stocks/crypto/forex/futures/bonds, gainers/losers/movers, news headlines or full story bodies, alerts (active list, fire log, offline fires), watchlists including colored flag lists, symbol search/autocomplete, chart state, or screenshots from their local TradingView.app. ",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "himself65",
+  "install_path": ".claude/skills/tradingview-reader/SKILL.md",
+  "source": {
+    "repo": "himself65/finance-skills",
+    "url": "https://github.com/himself65/finance-skills/blob/main/plugins/data-providers/skills/tradingview-reader/SKILL.md",
+    "path": "plugins/data-providers/skills/tradingview-reader/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-19T19:29:58.672Z",
+    "stars": 2422,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-19T05:17:01Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个通过命令行只读访问TradingView桌面端的工具，能让你直接在终端获取行情、新闻、警报和选股结果等数据，适合想在终端环境下快速盯盘查盘的交易者。"
+}

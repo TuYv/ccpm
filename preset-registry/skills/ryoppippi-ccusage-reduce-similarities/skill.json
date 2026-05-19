@@ -1,7 +1,7 @@
 {
   "id": "ryoppippi-ccusage-reduce-similarities",
   "name": "reduce-similarities",
-  "description": "Detects duplicate JavaScript and TypeScript code with similarity-ts. Use when checking .js, .jsx, .ts, or .tsx files for refactoring opportunities.",
+  "description": "Detect duplicate Rust code using AST-based similarity analysis. Use when working with .rs files and looking for code duplication or refactoring opportunities.",
   "category": "社区精选",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/ryoppippi/ccusage/blob/main/.agents/skills/reduce-similarities/SKILL.md",
     "path": ".agents/skills/reduce-similarities/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-18T14:05:31.959Z",
-    "stars": 14337,
-    "language": "TypeScript",
-    "pushed_at": "2026-05-18T14:00:48Z",
+    "discovered_at": "2026-05-19T19:33:19.726Z",
+    "stars": 14389,
+    "language": "Rust",
+    "pushed_at": "2026-05-19T19:24:38Z",
     "license": null
   }
 }

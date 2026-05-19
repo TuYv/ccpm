@@ -1,0 +1,26 @@
+{
+  "id": "himself65-finance-skills-funda-data",
+  "name": "funda-data",
+  "description": "> Query Funda AI financial data via two surfaces: the MCP server at https://funda.ai/api/mcp for analyst-grade research synthesis (DCF, comps, earnings previews/recaps, sector deep-dives, SEC filings, transcripts, supply-chain mapping, ownership flow, macro framing) via the agent_chat tool — OR the REST API at https://api.funda.ai/v1 with FUNDA_API_KEY for raw data (real-time quotes, intraday candles, EOD prices, financial statements, options chains/greeks/GEX, supply-chain KG, social sentiment,",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "himself65",
+  "install_path": ".claude/skills/funda-data/SKILL.md",
+  "source": {
+    "repo": "himself65/finance-skills",
+    "url": "https://github.com/himself65/finance-skills/blob/main/plugins/data-providers/skills/funda-data/SKILL.md",
+    "path": "plugins/data-providers/skills/funda-data/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-19T19:29:58.321Z",
+    "stars": 2422,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-19T05:17:01Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个金融数据接口，既能用MCP做分析师级深度投研，也能用REST API拉取实时行情等原始数据。适合金融分析与量化开发场景，解决专业金融数据获取难的问题。"
+}

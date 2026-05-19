@@ -1,0 +1,26 @@
+{
+  "id": "alirezarezvani-claudeforge-claude-md-dependency-rescan",
+  "name": "claude-md-dependency-rescan",
+  "description": "Re-detect this project's tech stack from package.json / requirements.txt / pyproject.toml / go.mod / Cargo.toml and diff it against the Tech Stack section of every CLAUDE.md. Read-only — returns added / removed / renamed dependencies, never edits.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alirezarezvani",
+  "install_path": ".claude/skills/claude-md-dependency-rescan/SKILL.md",
+  "source": {
+    "repo": "alirezarezvani/ClaudeForge",
+    "url": "https://github.com/alirezarezvani/ClaudeForge/blob/dev/skill/claude-md-dependency-rescan/SKILL.md",
+    "path": "skill/claude-md-dependency-rescan/SKILL.md",
+    "branch": "dev",
+    "discovered_at": "2026-05-19T19:33:04.190Z",
+    "stars": 369,
+    "language": "Python",
+    "pushed_at": "2026-05-19T02:07:06Z",
+    "license": "MIT"
+  },
+  "summary_zh": "它能重新扫描项目依赖，并与CLAUDE.md里的技术栈说明做对比，只读输出新增、删除和更名的依赖，帮你快速发现文档与实际代码的差异。"
+}

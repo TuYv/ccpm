@@ -1,0 +1,26 @@
+{
+  "id": "himself65-finance-skills-skill-creator",
+  "name": "skill-creator",
+  "description": "> Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, update or optimize an existing skill, run evals to test a skill, benchmark skill performance with variance analysis, or iterate on skill quality. Triggers: \"create a skill\", \"make a new skill\", \"build a skill for\", \"write a skill that\", \"skill for doing X\", \"I want a skill to\", \"new skill\", \"design a skill\", \"scaffold a skill\", \"improve this skill\", \"optimiz",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "himself65",
+  "install_path": ".claude/skills/skill-creator/SKILL.md",
+  "source": {
+    "repo": "himself65/finance-skills",
+    "url": "https://github.com/himself65/finance-skills/blob/main/plugins/skill-creator/skills/skill-creator/SKILL.md",
+    "path": "plugins/skill-creator/skills/skill-creator/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-19T19:30:01.245Z",
+    "stars": 2422,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-19T05:17:01Z",
+    "license": "MIT"
+  },
+  "summary_zh": "帮你从零搭建、修改并优化技能的工具，还能评估测试其表现，适合需要开发新技能或持续迭代改进现有技能的场景。"
+}

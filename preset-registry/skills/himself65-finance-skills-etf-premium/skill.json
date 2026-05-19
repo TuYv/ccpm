@@ -1,0 +1,26 @@
+{
+  "id": "himself65-finance-skills-etf-premium",
+  "name": "etf-premium",
+  "description": "> Calculate ETF premium/discount vs NAV via Yahoo Finance, and decompose single-day surges into NAV-driven vs structural components (gamma squeeze, dealer hedging, blocked AP arbitrage). Use whenever the user asks about an ETF's premium or discount, NAV comparison, why an ETF diverged from its holdings, or how much of a move is dealer-hedging-driven. Triggers: \"ETF premium\", \"ETF discount\", \"NAV premium\", \"is SPY at a premium\", \"BITO premium\", \"IBIT premium\", \"bond ETF discount\", \"trading above/",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "himself65",
+  "install_path": ".claude/skills/etf-premium/SKILL.md",
+  "source": {
+    "repo": "himself65/finance-skills",
+    "url": "https://github.com/himself65/finance-skills/blob/main/plugins/market-analysis/skills/etf-premium/SKILL.md",
+    "path": "plugins/market-analysis/skills/etf-premium/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-19T19:29:59.718Z",
+    "stars": 2422,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-19T05:17:01Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用来算ETF折溢价并拆解单日暴涨原因的工具。帮你搞懂ETF为啥偏离净值，暴涨是底仓本身涨了还是做市商对冲等结构因素，适合分析ETF折溢价及异常波动场景。"
+}

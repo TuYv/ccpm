@@ -1,0 +1,26 @@
+{
+  "id": "himself65-finance-skills-yc-reader",
+  "name": "yc-reader",
+  "description": "> Look up Y Combinator companies, batches, and startup ecosystem data using the yc-oss API (read-only). Use this skill whenever the user wants to research YC-backed startups, find companies in a specific batch or industry, check which YC companies are hiring, explore top YC companies, or analyze startup trends by sector or tag. Triggers include: \"YC companies in fintech\", \"who's in the latest YC batch\", \"YC startups hiring\", \"top Y Combinator companies\", \"find YC companies tagged AI\", \"W25 batch",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "himself65",
+  "install_path": ".claude/skills/yc-reader/SKILL.md",
+  "source": {
+    "repo": "himself65/finance-skills",
+    "url": "https://github.com/himself65/finance-skills/blob/main/plugins/social-readers/skills/yc-reader/SKILL.md",
+    "path": "plugins/social-readers/skills/yc-reader/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-19T19:30:02.381Z",
+    "stars": 2422,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-19T05:17:01Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个查询YC初创生态数据的工具。想研究YC背景公司、找特定批次或行业的创业项目、看哪家在招人，或是分析创业趋势时，用它就能快速搞定。"
+}

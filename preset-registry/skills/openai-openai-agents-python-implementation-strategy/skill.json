@@ -16,10 +16,11 @@
     "url": "https://github.com/openai/openai-agents-python/blob/main/.agents/skills/implementation-strategy/SKILL.md",
     "path": ".agents/skills/implementation-strategy/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-18T13:45:28.043Z",
-    "stars": 26433,
+    "discovered_at": "2026-05-19T19:28:14.794Z",
+    "stars": 26477,
     "language": "Python",
-    "pushed_at": "2026-05-18T08:06:21Z",
+    "pushed_at": "2026-05-19T12:05:04Z",
     "license": "MIT"
-  }
+  },
+  "summary_zh": "这是修改openai-agents-python时的变更策略指南。在改API或运行时前，帮你划定兼容边界，决定是加兼容层、做迁移还是直接改，防止盲目动代码破坏兼容性。"
 }

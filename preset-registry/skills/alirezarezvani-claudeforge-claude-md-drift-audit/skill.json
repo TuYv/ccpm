@@ -1,0 +1,26 @@
+{
+  "id": "alirezarezvani-claudeforge-claude-md-drift-audit",
+  "name": "claude-md-drift-audit",
+  "description": "Audit every CLAUDE.md in this project for drift against the last week of git history. Flags sections that reference deleted files, renamed paths, or removed dependencies. Read-only — returns a punch list, never edits.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alirezarezvani",
+  "install_path": ".claude/skills/claude-md-drift-audit/SKILL.md",
+  "source": {
+    "repo": "alirezarezvani/ClaudeForge",
+    "url": "https://github.com/alirezarezvani/ClaudeForge/blob/dev/skill/claude-md-drift-audit/SKILL.md",
+    "path": "skill/claude-md-drift-audit/SKILL.md",
+    "branch": "dev",
+    "discovered_at": "2026-05-19T19:33:04.375Z",
+    "stars": 369,
+    "language": "Python",
+    "pushed_at": "2026-05-19T02:07:06Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是个只读审查工具，通过对比上周的 Git 记录，帮你揪出 CLAUDE.md 中引用已删文件、重命名路径或废弃依赖的过时段落并生成清理清单，专治文档与代码脱节的问题。"
+}
