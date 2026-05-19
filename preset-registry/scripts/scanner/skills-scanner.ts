@@ -221,7 +221,6 @@ export async function discoverSkills(
           stars: meta.stars,
           language: meta.language,
           pushed_at: meta.pushed_at,
-          readme: meta.readme,
           license: meta.license,
         },
       };
@@ -286,7 +285,6 @@ export async function discoverSkillsFromHits(
           stars: meta.stars,
           language: meta.language,
           pushed_at: meta.pushed_at,
-          readme: meta.readme,
           license: meta.license,
         },
       };
