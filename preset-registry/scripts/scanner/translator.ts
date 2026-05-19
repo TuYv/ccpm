@@ -269,6 +269,34 @@ async function translateBundle(
   return block.text.trim();
 }
 
+async function writeSkillBundlesIndex(
+  registryDir: string,
+  bundles: BundleSpec[],
+  cache: TranslationsCache,
+): Promise<void> {
+  const bundlesDir = join(registryDir, "bundles");
+  if (!existsSync(bundlesDir)) {
+    await mkdir(bundlesDir, { recursive: true });
+  }
+  const out = {
+    version: "1",
+    updated_at: new Date().toISOString(),
+    bundles: bundles.map((b) => ({
+      id: b.id,
+      repo: b.repo,
+      name: b.name,
+      url: b.url,
+      kind: b.kind,
+      stars: b.stars,
+      skill_ids: b.skill_ids,
+      summary_zh:
+        cache.entries[`bundle:${b.id}`]?.summary_zh ??
+        `来自 ${b.repo} 的 ${b.skill_ids.length} 个相关技能合集，适合按同一主题成组浏览和按需安装。`,
+    })),
+  };
+  await writeFile(join(bundlesDir, "index.json"), JSON.stringify(out, null, 2));
+}
+
 async function runBundleTranslations(
   client: Anthropic,
   opts: RunOpts,
@@ -310,27 +338,7 @@ async function runBundleTranslations(
 
   await runWithConcurrency(tasks, opts.concurrency);
 
-  // Persist the bundles index regardless of translation outcomes — the UI can
-  // still group skills even when summaries are missing.
-  const bundlesDir = join(opts.registryDir, "bundles");
-  if (!existsSync(bundlesDir)) {
-    await mkdir(bundlesDir, { recursive: true });
-  }
-  const out = {
-    version: "1",
-    updated_at: new Date().toISOString(),
-    bundles: bundles.map((b) => ({
-      id: b.id,
-      repo: b.repo,
-      name: b.name,
-      url: b.url,
-      kind: b.kind,
-      stars: b.stars,
-      skill_ids: b.skill_ids,
-      summary_zh: cache.entries[`bundle:${b.id}`]?.summary_zh ?? null,
-    })),
-  };
-  await writeFile(join(bundlesDir, "index.json"), JSON.stringify(out, null, 2));
+  await writeSkillBundlesIndex(opts.registryDir, bundles, cache);
 
   return { total: bundles.length, hits, misses, failures };
 }
@@ -366,8 +374,23 @@ async function patchIndex(
 
 export async function runTranslations(registryDir: string): Promise<void> {
   const apiKey = process.env.ANTHROPIC_API_KEY;
+  const cachePath = join(registryDir, "translations.json");
+  const cache = await loadCache(cachePath);
+  const items = await collectItems(registryDir);
+
   if (!apiKey) {
-    console.log("[translate] ANTHROPIC_API_KEY not set, skipping translation step");
+    console.log("[translate] ANTHROPIC_API_KEY not set, applying cached summaries only");
+    for (const item of items) {
+      const cached = cache.entries[`${item.type}:${item.id}`];
+      if (cached?.summary_zh && item.data.summary_zh !== cached.summary_zh) {
+        item.data.summary_zh = cached.summary_zh;
+        await writeFile(item.filePath, JSON.stringify(item.data, null, 2));
+      }
+    }
+    await writeSkillBundlesIndex(registryDir, collectSkillBundles(items), cache);
+    await patchIndex(registryDir, "index.json", "presets", cache, "preset");
+    await patchIndex(registryDir, "skills/index.json", "skills", cache, "skill");
+    await patchIndex(registryDir, "mcps/index.json", "mcps", cache, "mcp");
     return;
   }
   const opts: RunOpts = {
@@ -378,10 +401,6 @@ export async function runTranslations(registryDir: string): Promise<void> {
     readmeChars: Number(process.env.TRANSLATION_README_CHARS ?? "2000"),
     concurrency: Number(process.env.TRANSLATION_CONCURRENCY ?? "3"),
   };
-
-  const cachePath = join(registryDir, "translations.json");
-  const cache = await loadCache(cachePath);
-  const items = await collectItems(registryDir);
 
   const client = new Anthropic({
     apiKey: opts.apiKey,

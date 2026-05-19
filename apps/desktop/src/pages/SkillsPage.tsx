@@ -156,6 +156,9 @@ export default function SkillsPage() {
   }, [focusId, setFocusId, groupedView, bundleExpanded]);
 
   const total = index?.skills.length ?? 0;
+  const visibleTotal = groupedView
+    ? groupedView.bundles.length + groupedView.singletons.length
+    : total;
   const installedCount = installedIds.length;
 
   async function handleInstall(skill: SkillMeta) {
@@ -490,7 +493,10 @@ export default function SkillsPage() {
     <>
       <Topbar
         title="Skills"
-        crumb={`${total} available · ${installedCount} installed ${scopeLabel(scope)}`}
+        crumb={groupedView
+          ? `${visibleTotal} entries · ${total} skills · ${installedCount} installed ${scopeLabel(scope)}`
+          : `${total} available · ${installedCount} installed ${scopeLabel(scope)}`
+        }
         actions={
           <>
             <GithubImportInput onImported={setImportPreview} />
