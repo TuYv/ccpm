@@ -1,7 +1,7 @@
 {
   "id": "ryoppippi-ccusage-bun-cpu-profile",
   "name": "bun-cpu-profile",
-  "description": "Profiles Bun TypeScript and JavaScript CLI CPU performance. Use when debugging slow execution, reading CPU profiles, or comparing branch speed with hyperfine.",
+  "description": "Profiles Bun TypeScript and JavaScript package scripts. Use for launcher, benchmark, or packaging hot paths; use ccusage-rust-profile for native CLI performance.",
   "category": "社区精选",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/ryoppippi/ccusage/blob/main/.agents/skills/bun-cpu-profile/SKILL.md",
     "path": ".agents/skills/bun-cpu-profile/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-19T19:33:17.480Z",
-    "stars": 14389,
+    "discovered_at": "2026-05-20T00:32:32.654Z",
+    "stars": 14394,
     "language": "Rust",
-    "pushed_at": "2026-05-19T19:24:38Z",
+    "pushed_at": "2026-05-19T23:16:13Z",
     "license": null
   }
 }

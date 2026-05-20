@@ -1,0 +1,25 @@
+{
+  "id": "ryoppippi-ccusage-create-pr",
+  "name": "create-pr",
+  "description": "Runs the full PR lifecycle. Use when creating a branch, committing, pushing, opening a PR, requesting AI review, and driving CI and review to completion.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ryoppippi",
+  "install_path": ".claude/skills/create-pr/SKILL.md",
+  "source": {
+    "repo": "ryoppippi/ccusage",
+    "url": "https://github.com/ryoppippi/ccusage/blob/main/.agents/skills/create-pr/SKILL.md",
+    "path": ".agents/skills/create-pr/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-20T00:32:34.397Z",
+    "stars": 14394,
+    "language": "Rust",
+    "pushed_at": "2026-05-19T23:16:13Z",
+    "license": null
+  }
+}
