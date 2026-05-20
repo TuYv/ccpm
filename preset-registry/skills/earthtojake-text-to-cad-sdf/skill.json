@@ -1,7 +1,7 @@
 {
   "id": "earthtojake-text-to-cad-sdf",
   "name": "sdf",
-  "description": "SDFormat/SDF robot and simulator model generation and validation. Use when creating, editing, regenerating, inspecting, or validating `.sdf` / SDFormat files, `gen_sdf()` sources, SDF models or worlds, links, joints, poses, frames, inertials, visual/collision geometry, mesh URIs, sensors, plugins, or simulator-specific metadata. Use the URDF skill for ROS robot structure; use the SRDF skill for MoveIt planning semantics.",
+  "description": "SDFormat/SDF model and world generation, validation, and simulator handoff. Use for `.sdf` files, SDFormat XML, Python `gen_sdf()` sources, models, worlds, links, joints, poses, frames, inertials, visual/collision geometry, mesh URIs, sensors, lights, physics, plugins, includes, Gazebo, CAD Explorer static SDF review, or simulator-specific metadata. Do not use for signed-distance-field geometry.",
   "category": "社区精选",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/earthtojake/text-to-cad/blob/main/skills/sdf/SKILL.md",
     "path": "skills/sdf/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-20T18:40:29.196Z",
-    "stars": 3218,
+    "discovered_at": "2026-05-20T21:18:30.986Z",
+    "stars": 3220,
     "language": "JavaScript",
-    "pushed_at": "2026-05-18T18:23:55Z",
+    "pushed_at": "2026-05-20T21:05:26Z",
     "license": "MIT"
   },
-  "summary_zh": "专用于生成和验证 SDF 机器人及仿真模型的工具，适合需要创建、编辑或检查 SDF 文件及各类模型元素的场景。"
+  "summary_zh": "这是一个处理机器人仿真描述格式的工具，能帮你生成和验证模型及环境配置文件，适合需要对接Gazebo等仿真器的开发场景。"
 }

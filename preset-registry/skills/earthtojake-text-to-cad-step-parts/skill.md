@@ -16,8 +16,11 @@ Use the hosted step.parts machine endpoints instead of scraping HTML or relying 
    - `category`, `family`, `standard`, or `tag` when the user gives an exact facet.
 2. Search `/v1/parts` and inspect `items`, `total`, and `facets`.
 3. If results are ambiguous, present the best few options with `id`, `name`, `standard`, and key attributes before choosing. If one result clearly matches, return the selected record details without downloading unless the user asked for a local STEP file.
-4. When the user asks to download or save a STEP file, download its `downloadUrl` so the internal download count is updated, then verify the file with the record's `sha256` when present.
-5. Return the local path when downloaded, plus the selected part id and page/API URLs so the user can trace provenance.
+4. When the user asks to download or save a STEP file, download its `stepUrl`, then verify the file with the record's `sha256` when present.
+5. When a STEP file is downloaded as a local CAD asset, hand its explicit path to `$render` when available; `$render` checks/reuses a live viewer and returns a link.
+6. If the download path is outside the active CAD workspace/root, such as the default `/tmp/step-parts`, either choose a workspace output directory or tell `$render` to use the download directory as its workspace/root so the file is inside the viewer scan root.
+7. For visual feedback, prefer `$render` snapshots over opening the viewer manually or using Playwright. Use still snapshots only; standard-part lookup should not generate GIFs.
+8. Return the local path when downloaded, the render link when available, plus the selected part id and page/API URLs so the user can trace provenance.
 
 ## Bundled Downloader
 
@@ -45,7 +48,7 @@ Read `references/step-parts-api.md` when you need endpoint details, field meanin
 
 - `/v1/parts` for filtered search with absolute asset URLs.
 - `/v1/parts/{id}` for one enriched record.
-- `/v1/parts/{id}/download` or returned `downloadUrl` for counted STEP downloads.
+- Returned `stepUrl` for STEP downloads.
 - `/v1/catalog/parts.index.json` for a compact discovery index.
 - `/v1/catalog/schema` for field and family attribute meanings.
 - `/v1/openapi.json` when generating a client or tool.
@@ -56,4 +59,4 @@ Read `references/step-parts-api.md` when you need endpoint details, field meanin
 - Values within one facet are ORed together, and selected `tag`, `category`, `family`, and `standard` fields are ANDed together. Use exact facets to narrow within known categories, then rank manually by name and attributes.
 - Standards can be queried as `ISO 4762`, `ISO4762`, or the exact `standard.designation`.
 - The `attributes` object contains family-specific facts such as `thread`, `lengthMm`, `bore1Mm`, `material`, `profileSeries`, `slotSizeMm`, and dimensions in millimeters.
-- Part, GLB, and PNG URL patterns are predictable on `https://www.step.parts`; STEP URLs are environment-aware and may resolve to GitHub LFS media in production. Use API `downloadUrl` for downloads and catalog/API `stepUrl` only when the user explicitly needs the canonical asset URL.
+- Part, GLB, and PNG URL patterns are predictable on `https://www.step.parts`; STEP URLs are environment-aware and may resolve to GitHub LFS media in production. Use catalog/API `stepUrl` for downloads.

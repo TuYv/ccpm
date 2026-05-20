@@ -24,7 +24,7 @@
     "stars": 101,
     "language": "Go",
     "pushed_at": "2026-04-23T07:49:05Z",
-    "discovered_at": "2026-05-20T18:36:36.729Z",
+    "discovered_at": "2026-05-20T21:14:46.839Z",
     "score": 0.660606,
     "readme": "# Claudio\n\nClaudio is a hook-based audio plugin for Claude Code. It plays contextual\nsounds for tool starts, successes, failures, prompts, completions, and other\nevents.\n\nFull documentation lives in [docs/index.md](docs/index.md).\n\n## Soundpacks\n\nClaudio supports directory soundpacks, JSON soundpacks, and managed git\nsoundpacks.\n\n```bash\n# Create a JSON soundpack template\nclaudio soundpack init my-pack\n\n# Install a local directory or JSON soundpack\nclaudio soundpack install ./my-pack --default\n\n# Add a git-backed soundpack\nclaudio soundpack add https://github.com/ctoth/whatever --name whatever\n\n# GitHub shorthand\nclaudio soundpack add gh:ctoth/whatever\n\n# Update, inspect, and remove managed git soundpacks\nclaudio soundpack update whatever\nclaudio soundpack status whatever\nclaudio soundpack remove whatever\n```\n\nGit soundpacks are cloned into Claudio's data directory, recorded in\n`soundpacks.json`, and added to `soundpack_paths` so runtime loading still uses\nthe same directory/JSON resolver.\n\nSee [docs/soundpacks.md](docs/soundpacks.md) for the soundpack layout,\nfallback rules, JSON mappings, and git-backed workflow.\n",
     "license": null,

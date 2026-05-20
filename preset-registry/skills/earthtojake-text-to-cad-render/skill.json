@@ -1,0 +1,26 @@
+{
+  "id": "earthtojake-text-to-cad-render",
+  "name": "render",
+  "description": "Start or reuse the CAD Explorer viewer, return review links, and create saved snapshots for explicit CAD and robot-description files. Use when rendering or visually reviewing `.step`, `.stp`, `.glb`, `.stl`, `.3mf`, `.dxf`, `.urdf`, `.srdf`, or `.sdf` files, especially when handed off from CAD, URDF, SRDF, or SDF generation skills.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "earthtojake",
+  "install_path": ".claude/skills/render/SKILL.md",
+  "source": {
+    "repo": "earthtojake/text-to-cad",
+    "url": "https://github.com/earthtojake/text-to-cad/blob/main/skills/render/SKILL.md",
+    "path": "skills/render/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-20T21:18:30.887Z",
+    "stars": 3220,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-20T21:05:26Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一款3D与机器人模型查看器，能直观检查各类CAD和机器人描述文件，并生成审阅链接与快照，特别适合模型生成后的快速预览与协作交接。"
+}

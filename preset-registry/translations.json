@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-05-20T18:43:43.787Z",
+  "updated_at": "2026-05-20T21:23:34.635Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -5353,14 +5353,14 @@
       "translated_at": "2026-05-19T21:21:46.498Z"
     },
     "skill:earthtojake-text-to-cad-cad": {
-      "hash": "aa75322eff3b6025",
-      "summary_zh": "这是一个基于Python的CAD建模工具，能用自然语言创建、修改和检验三维零件与装配体，并导出STEP等格式，适合想用代码或自然语言快速生成和验证设计的场景。",
-      "translated_at": "2026-05-19T21:21:54.910Z"
+      "hash": "5b04da4cd1088d21",
+      "summary_zh": "这是一个基于Python的3D建模与检查工具，支持用自然语言或代码生成、验证并导出STEP等格式的CAD模型，适合编程化精准控制3D设计与装配的场景。",
+      "translated_at": "2026-05-20T21:23:10.866Z"
     },
     "skill:earthtojake-text-to-cad-sdf": {
-      "hash": "f57b33669451e882",
-      "summary_zh": "专用于生成和验证 SDF 机器人及仿真模型的工具，适合需要创建、编辑或检查 SDF 文件及各类模型元素的场景。",
-      "translated_at": "2026-05-19T21:22:03.419Z"
+      "hash": "6ab1bfaa7da60b2b",
+      "summary_zh": "这是一个处理机器人仿真描述格式的工具，能帮你生成和验证模型及环境配置文件，适合需要对接Gazebo等仿真器的开发场景。",
+      "translated_at": "2026-05-20T21:22:24.543Z"
     },
     "skill:earthtojake-text-to-cad-sendcutsend": {
       "hash": "faf4320380b360bc",
@@ -5368,9 +5368,9 @@
       "translated_at": "2026-05-19T21:22:27.309Z"
     },
     "skill:earthtojake-text-to-cad-srdf": {
-      "hash": "96ad265b2f9c6743",
-      "summary_zh": "专为 MoveIt2 打造的机器人语义配置工作流，能帮你轻松搞定配置文件的生成、编辑与校验，适合机器人运动规划开发与审查场景。",
-      "translated_at": "2026-05-19T21:22:28.258Z"
+      "hash": "2658061728c15562",
+      "summary_zh": "专用于 MoveIt2 的规划语义工作流工具，帮你轻松生成、编辑和验证机器人配置，特别适合在搭建或检查机器人运动规划时使用。",
+      "translated_at": "2026-05-20T21:23:03.708Z"
     },
     "skill:earthtojake-text-to-cad-step-parts": {
       "hash": "2dc748dae4547fd5",
@@ -5378,9 +5378,9 @@
       "translated_at": "2026-05-19T21:22:41.265Z"
     },
     "skill:earthtojake-text-to-cad-urdf": {
-      "hash": "bfcf81f0a6bd8105",
-      "summary_zh": "这是一个生成和验证机器人描述文件的工具，适合在创建、编辑、检查或调试机器人模型结构及相关代码时使用。",
-      "translated_at": "2026-05-19T21:22:43.738Z"
+      "hash": "02c5778828ddee71",
+      "summary_zh": "这是一个生成和校验URDF机器人描述的工具。在创建、编辑或调试机器人的连杆、关节和几何属性时，用它不仅能快速生成结构描述，还能自动检查格式错误。",
+      "translated_at": "2026-05-20T21:23:34.635Z"
     },
     "skill:ehmo-platform-design-skills-android": {
       "hash": "a606bed879c891c6",
@@ -9868,9 +9868,9 @@
       "translated_at": "2026-05-20T16:11:49.097Z"
     },
     "bundle:earthtojake-text-to-cad": {
-      "hash": "f7480e6432f63da1",
-      "summary_zh": "这套合集解决用文本生成CAD模型与机器人描述文件的需求，组合起来能打通从标准件调用、模型验证到加工下单的机械设计与机器人研发全流程。",
-      "translated_at": "2026-05-20T01:03:32.976Z"
+      "hash": "aff0965eab7775ce",
+      "summary_zh": "专攻文本生成CAD与机器人描述，打通从零件建模、可视化审查、仿真配置验证到制造下单的全流程，让机械设计与机器人开发一气呵成。",
+      "translated_at": "2026-05-20T21:21:59.704Z"
     },
     "bundle:nowork-studio-toprank": {
       "hash": "7ad8c019fcca74db",
@@ -13866,6 +13866,11 @@
       "hash": "4ef4c2f49fa3a740",
       "summary_zh": "这是一个支持60多项学术测试的大模型评测框架，适合用来评估模型质量、对比不同模型、出学术报告或追踪训练进度。",
       "translated_at": "2026-05-20T16:35:46.574Z"
+    },
+    "skill:earthtojake-text-to-cad-render": {
+      "hash": "8b6d864b0a1f58e2",
+      "summary_zh": "这是一款3D与机器人模型查看器，能直观检查各类CAD和机器人描述文件，并生成审阅链接与快照，特别适合模型生成后的快速预览与协作交接。",
+      "translated_at": "2026-05-20T21:22:40.153Z"
     }
   }
 }

@@ -1,7 +1,7 @@
 {
   "id": "earthtojake-text-to-cad-urdf",
   "name": "urdf",
-  "description": "URDF robot description generation and default generation-time validation. Use when creating, editing, regenerating, inspecting, or debugging `.urdf` files, Python `gen_urdf()` sources, robot links, joints, limits, inertials, visual/collision geometry, mesh references, frame conventions, or generated robot-description artifacts. Use the SRDF skill for MoveIt2 semantic groups and IK/path-planning semantics; use the CAD Explorer skill for local MoveIt2 server controls; use the CAD skill for STEP/ST",
+  "description": "URDF robot description generation and default generation-time validation. Use when creating, editing, regenerating, inspecting, or debugging `.urdf` files, Python `gen_urdf()` sources, robot links, joints, limits, inertials, visual/collision geometry, mesh references, frame conventions, or generated robot-description artifacts. Use the SRDF skill for MoveIt2 semantic groups and IK/path-planning semantics; use the render skill for local MoveIt2 server controls; use the CAD skill for STEP/STL/3MF/",
   "category": "社区精选",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/earthtojake/text-to-cad/blob/main/skills/urdf/SKILL.md",
     "path": "skills/urdf/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-20T18:40:29.649Z",
-    "stars": 3218,
+    "discovered_at": "2026-05-20T21:18:31.377Z",
+    "stars": 3220,
     "language": "JavaScript",
-    "pushed_at": "2026-05-18T18:23:55Z",
+    "pushed_at": "2026-05-20T21:05:26Z",
     "license": "MIT"
   },
-  "summary_zh": "这是一个生成和验证机器人描述文件的工具，适合在创建、编辑、检查或调试机器人模型结构及相关代码时使用。"
+  "summary_zh": "这是一个生成和校验URDF机器人描述的工具。在创建、编辑或调试机器人的连杆、关节和几何属性时，用它不仅能快速生成结构描述，还能自动检查格式错误。"
 }
