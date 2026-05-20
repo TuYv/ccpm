@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-05-20T12:52:16.233Z",
+  "updated_at": "2026-05-20T16:35:46.575Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -2103,9 +2103,9 @@
       "translated_at": "2026-05-19T22:35:20.636Z"
     },
     "skill:wrsmith108-linear-claude-skill": {
-      "hash": "manual-singleton-v1",
-      "summary_zh": "管理 Linear issue、项目和团队，适合创建任务、更新状态、查询项目和推进工作流。",
-      "translated_at": "2026-05-19T06:38:25.353Z"
+      "hash": "cfc004d83739c910",
+      "summary_zh": "这是一个帮你集中管理Linear任务和团队的集成工具，能自动处理事务追踪与进度更新，适合需要将项目管理工作流无缝融入日常开发的场景。",
+      "translated_at": "2026-05-20T16:15:56.434Z"
     },
     "skill:smerchek-claude-epub-skill-markdown-to-epub": {
       "hash": "858d2c60fae66102",
@@ -9758,9 +9758,9 @@
       "translated_at": "2026-05-20T00:59:29.563Z"
     },
     "bundle:ryoppippi-ccusage": {
-      "hash": "a9ad0ae6a0f8ea97",
-      "summary_zh": "专为开发 ccusage 项目量身定制，提供从代码搜索、API查询、Rust与TS双端开发，到测试、调优及文档编写的全流程辅助，让跨语言项目开发更省心高效。",
-      "translated_at": "2026-05-20T00:59:45.919Z"
+      "hash": "ca3dc796a0bf4488",
+      "summary_zh": "专为ccusage跨语言CLI开发打造，覆盖Rust与TS编码、性能调优、测试及文档全流程，组合起来提供一站式工程化支持，让多语言项目开发与维护更高效省心。",
+      "translated_at": "2026-05-20T16:12:25.535Z"
     },
     "bundle:imbad0202-academic-research-skills": {
       "hash": "66de2cf9483163b4",
@@ -9863,9 +9863,9 @@
       "translated_at": "2026-05-20T01:03:06.126Z"
     },
     "bundle:htdt-godogen": {
-      "hash": "8a448729fc09ef6b",
-      "summary_zh": "专为Godot和Bevy引擎定制的AI游戏开发助手，不仅能用自然语言一键生成或更新游戏项目，还能随时精准查阅引擎API与文档，让开发更直观高效。",
-      "translated_at": "2026-05-20T01:03:21.213Z"
+      "hash": "0356845265a662b6",
+      "summary_zh": "专为游戏开发打造的AI助手合集，一站式解决多引擎API查询与项目生成难题，既能秒查文档，又能用自然语言直接生成Godot游戏，告别繁琐查写，专注创意实现。",
+      "translated_at": "2026-05-20T16:11:49.097Z"
     },
     "bundle:earthtojake-text-to-cad": {
       "hash": "f7480e6432f63da1",
@@ -10853,9 +10853,9 @@
       "translated_at": "2026-05-20T05:14:15.991Z"
     },
     "skill:ryoppippi-ccusage-typescript-style": {
-      "hash": "ec44ad3ad900940d",
-      "summary_zh": "一份TS和JS的编写与审查指南，适合在修改代码前查阅。帮你规范正则、类型处理和测试模拟等复杂场景的写法，让团队代码风格统一、审查更轻松。",
-      "translated_at": "2026-05-20T05:14:20.416Z"
+      "hash": "30ef5d4317222bdc",
+      "summary_zh": "这是一份 TS 和 JS 的代码风格与审查指南。适合在编写或修改代码前查阅，帮你规范从基础代码到测试夹具等各类细节写法，保持风格统一。",
+      "translated_at": "2026-05-20T16:12:42.920Z"
     },
     "skill:seifbenayed-claude-code-sdk-browse": {
       "hash": "27d36658b2deb332",
@@ -13161,6 +13161,711 @@
       "hash": "5f6a6cdba1c8e3f8",
       "summary_zh": "这是一个帮你打磨表达的工具，让信息易懂、好记且有感染力。专治文案没吸引力或复杂产品难解释，特别适合写宣传语、提炼价值主张，或让路演与演讲更抓人、更具说服力。",
       "translated_at": "2026-05-20T12:52:16.232Z"
+    },
+    "skill:wondelai-skills-microinteractions": {
+      "hash": "2d56fb03fb25551a",
+      "summary_zh": "这是一套微交互设计指南，专注打磨触发与反馈细节。适合处理按钮点击、表单验证、加载状态等需要即时反馈的UI场景，帮你把好产品提升为体验绝佳的伟大产品。",
+      "translated_at": "2026-05-20T16:12:44.453Z"
+    },
+    "skill:htdt-godogen-babylon-help": {
+      "hash": "0ee22817d4a7f59b",
+      "summary_zh": "这是专门查 Babylon.js 技术细节的工具，能帮你快速找 API 和配置，轻松搞定 Vite 集成、渲染和资产加载，还能排查运行时的各种疑难杂症。",
+      "translated_at": "2026-05-20T16:12:54.130Z"
+    },
+    "skill:wondelai-skills-mom-test": {
+      "hash": "c89e1527c998ce9f",
+      "summary_zh": "这是一套客户访谈辅助工具，帮你避免引导性提问，解决用户口是心非、反馈失真等问题，特别适合在验证想法、准备调研问题或解读模糊反馈时，挖出客户的真实需求。",
+      "translated_at": "2026-05-20T16:13:20.032Z"
+    },
+    "skill:wondelai-skills-negotiation": {
+      "hash": "cb7ac0e9d3baf754",
+      "summary_zh": "这是一款辅助谈判准备与执行的工具，帮你应对薪资沟通、合同博弈及价格争议，在化解高风险对话僵局、让对方感到被倾听的同时争取最优结果。",
+      "translated_at": "2026-05-20T16:13:21.799Z"
+    },
+    "skill:wondelai-skills-obviously-awesome": {
+      "hash": "e64bbd44c57cf280",
+      "summary_zh": "这是一个帮产品找准市场定位的工具，通过梳理竞品和自身优势来锁定最佳分类。特别适合新产品发布、进入红海，或客户总不懂产品价值时用来破局。",
+      "translated_at": "2026-05-20T16:13:24.440Z"
+    },
+    "skill:wondelai-skills-pragmatic-programmer": {
+      "hash": "dbdded472dd82411",
+      "summary_zh": "它是应用软件工艺元原则的开发指南，适合在探讨最佳实践、预防技术债、评估自建还是购买，以及权衡架构决策时参考，帮你解决设计难题，写出务实的代码。",
+      "translated_at": "2026-05-20T16:13:47.900Z"
+    },
+    "skill:wondelai-skills-one-page-marketing": {
+      "hash": "e85a13fbae6c7c30",
+      "summary_zh": "这是一个帮你梳理从吸引陌生人到培养铁粉的完整营销策划工具，适合从零搭建营销体系、挑选获客渠道或设计客户全生命周期活动时使用。",
+      "translated_at": "2026-05-20T16:13:54.691Z"
+    },
+    "skill:wondelai-skills-predictable-revenue": {
+      "hash": "a7a541e7b4691e3f",
+      "summary_zh": "一套可扩展的B2B对外销售流程框架，适合从零搭建团队或提升成单率。它通过分离找线索与签单的职责，解决冷开发效率低、销售漏斗转化慢的难题，让团队分工更专业高效。",
+      "translated_at": "2026-05-20T16:13:56.523Z"
+    },
+    "skill:wondelai-skills-refactoring-patterns": {
+      "hash": "442fbddbb48c9896",
+      "summary_zh": "这是一套代码重构模式集合，能在不改变功能的前提下改善代码结构。适合处理代码坏味道、清理遗留代码，或为加新功能做结构准备，帮你安全地完成重构。",
+      "translated_at": "2026-05-20T16:14:11.302Z"
+    },
+    "skill:wondelai-skills-release-it": {
+      "hash": "8710b87c5f815b1f",
+      "summary_zh": "这是一套用于构建高可用系统的稳定性模式库，能解决微服务级联故障和生产宕机问题，非常适合设计弹性微服务、实现零停机部署以及应对混沌工程的场景。",
+      "translated_at": "2026-05-20T16:14:33.739Z"
+    },
+    "skill:wondelai-skills-refactoring-ui": {
+      "hash": "4cd0c3fe7c90339f",
+      "summary_zh": "专治网页界面看着不对劲的视觉问题，帮你审查并修复排版、色彩与层次感。特别适合上线前润色细节、搭建设计规范或暗黑模式，让界面变得专业又协调。",
+      "translated_at": "2026-05-20T16:14:34.307Z"
+    },
+    "skill:wondelai-skills-scorecard-marketing": {
+      "hash": "78fe4bbab812d436",
+      "summary_zh": "用来制作营销测验和评估漏斗的工具，帮你通过互动问答或评分测试精准筛选潜在客户，靠个性化结果大幅提升获客转化率。",
+      "translated_at": "2026-05-20T16:14:40.052Z"
+    },
+    "skill:wondelai-skills-software-design-philosophy": {
+      "hash": "05efa3b5f6260f99",
+      "summary_zh": "一套管理软件复杂性的设计方法论，主张通过深度模块和信息隐藏来降低开发难度。当API难用、类设计太浅，或在评审接口、权衡抽象价值时，它能帮你做出更简单的架构选择。",
+      "translated_at": "2026-05-20T16:14:57.039Z"
+    },
+    "skill:wondelai-skills-storybrand-messaging": {
+      "hash": "a3497dc75ea9afe8",
+      "summary_zh": "用“顾客即英雄”的叙事框架帮你理清品牌信息。适合文案没共鸣，或需要撰写网站首页、电梯演讲、营销邮件及销售物料时，快速生成统一且吸引人的品牌话术。",
+      "translated_at": "2026-05-20T16:15:00.835Z"
+    },
+    "skill:wondelai-skills-system-design": {
+      "hash": "60f8056cfa7f242c",
+      "summary_zh": "这是一个结构化的分布式架构设计指南，帮你搞定高并发、高可用系统的搭建与选型难题，特别适合准备系统设计面试，或做微服务拆分和容量规划时使用。",
+      "translated_at": "2026-05-20T16:15:05.899Z"
+    },
+    "skill:wondelai-skills-traction-eos": {
+      "hash": "bba720f7a0e60a19",
+      "summary_zh": "这是一套落地企业家运营系统的工具，能帮公司把愿景和执行对齐。特别适合成长型企业需要规范开会流程、设定目标，或者想系统化解决组织里反复发作的痛点时使用。",
+      "translated_at": "2026-05-20T16:15:24.527Z"
+    },
+    "skill:wondelai-skills-top-design": {
+      "hash": "3978b52176ec10aa",
+      "summary_zh": "帮你打造Awwwards级别的沉浸式高级网页，让原本平淡的网站拥有震撼的视觉冲击力，非常适合需要惊艳交互和电影级质感的高端落地页、作品集或品牌官网。",
+      "translated_at": "2026-05-20T16:15:28.902Z"
+    },
+    "skill:wondelai-skills-ux-heuristics": {
+      "hash": "4dc9a7617817542f",
+      "summary_zh": "这是一个通过启发式分析评估和改进界面可用性的工具，适合在用户感到困惑、需要做可用性审查、排查导航或表单问题，以及优化信息架构时使用。",
+      "translated_at": "2026-05-20T16:15:30.631Z"
+    },
+    "skill:wshobson-agents-airflow-dag-patterns": {
+      "hash": "3c9396963177c073",
+      "summary_zh": "提供构建生产级Airflow DAG的最佳实践参考，适合搭建数据管道、编排工作流或调度批处理任务时使用，帮你写出规范可靠的代码。",
+      "translated_at": "2026-05-20T16:15:55.032Z"
+    },
+    "skill:wondelai-skills-web-typography": {
+      "hash": "7ff9a7870dc99cab",
+      "summary_zh": "这是一个指导网页字体选择与搭配的实用指南，适合在纠结网页选字、优化字体加载闪屏或卡顿，以及需要提升长文阅读体验时参考。",
+      "translated_at": "2026-05-20T16:16:04.013Z"
+    },
+    "skill:wshobson-agents-api-design-principles": {
+      "hash": "ca6b8d52e209fd7f",
+      "summary_zh": "这是一份API设计原则指南，教你用REST和GraphQL打造直观、易扩展且好维护的接口，适合在设计新接口、评审规范或制定团队标准时参考。",
+      "translated_at": "2026-05-20T16:16:14.081Z"
+    },
+    "skill:wshobson-agents-architecture-decision-records": {
+      "hash": "538d881926390fd2",
+      "summary_zh": "这是一个帮你按最佳实践编写和维护架构决策记录的模板，适合在记录重大技术决策、回顾历史架构选型或规范决策流程时使用，让技术选型有据可查。",
+      "translated_at": "2026-05-20T16:16:26.031Z"
+    },
+    "skill:wshobson-agents-auth-implementation-patterns": {
+      "hash": "ed18890b4f6c0b67",
+      "summary_zh": "这是一套认证与授权模式指南，帮你构建安全可扩展的权限控制系统，适合在开发登录授权、保护API或排查安全问题时参考。",
+      "translated_at": "2026-05-20T16:16:48.000Z"
+    },
+    "skill:wshobson-agents-architecture-patterns": {
+      "hash": "4a3c235568550379",
+      "summary_zh": "帮你落地整洁架构、六边形架构与领域驱动设计。当你需要设计新微服务、把单体应用拆成限界上下文，或排查层间依赖循环时，它能帮你理清思路、规范代码。",
+      "translated_at": "2026-05-20T16:16:56.250Z"
+    },
+    "skill:wshobson-agents-bazel-build-optimization": {
+      "hash": "3a37ffd20fb540f6",
+      "summary_zh": "专为大型单体仓库优化Bazel构建，帮你搞定企业级代码库的Bazel配置、远程执行接入及编译提速。",
+      "translated_at": "2026-05-20T16:17:06.807Z"
+    },
+    "skill:wshobson-agents-brand-landingpage": {
+      "hash": "f54d892c4773903a",
+      "summary_zh": "它通过对话帮你梳理品牌调性，自动生成并迭代出可直接部署的精美落地页，专治还没确定视觉风格却要快速搭建独立营销页的痛点。",
+      "translated_at": "2026-05-20T16:17:29.228Z"
+    },
+    "skill:wshobson-agents-block-no-verify-hook": {
+      "hash": "77b157e9b28875ae",
+      "summary_zh": "这是一款前置拦截钩子，能阻止AI代理用--no-verify等参数跳过Git预提交检查，适合在Claude Code项目中强制把控代码提交质量的场景。",
+      "translated_at": "2026-05-20T16:17:30.934Z"
+    },
+    "skill:wshobson-agents-changelog-automation": {
+      "hash": "638898be44d2307d",
+      "summary_zh": "它能根据代码记录自动生成规范的更新日志，帮你省去手动整理发布说明的繁琐，非常适合用来搭建自动化发布工作流或规范团队提交习惯。",
+      "translated_at": "2026-05-20T16:17:35.214Z"
+    },
+    "skill:wshobson-agents-code-review-excellence": {
+      "hash": "87a505749d47108e",
+      "summary_zh": "这是一份代码审查指南，帮你在审查PR、定规范或带新人时，既能高效发现Bug和促进知识共享，又能给出不伤和气的建设性反馈。",
+      "translated_at": "2026-05-20T16:17:53.454Z"
+    },
+    "skill:wshobson-agents-cost-optimization": {
+      "hash": "7c1c635e6668dbb4",
+      "summary_zh": "这是一款多云成本优化工具，能帮你全面优化云上花费，适合需要降低云账单、分析基础设施开销或实施成本治理的场景。",
+      "translated_at": "2026-05-20T16:18:05.046Z"
+    },
+    "skill:wshobson-agents-context-driven-development": {
+      "hash": "0965fca9fc085c37",
+      "summary_zh": "这是一个项目上下文管理工具，帮你统一维护并同步产品、技术栈及工作流等核心文档，解决文档散落或过时的问题，适合项目初始化、提取现有代码上下文及新人入职。",
+      "translated_at": "2026-05-20T16:18:20.945Z"
+    },
+    "skill:wshobson-agents-cqrs-implementation": {
+      "hash": "fb61ec01caa8910f",
+      "summary_zh": "帮你在可扩展架构中落地CQRS读写分离，解决读写模型耦合与查询慢的问题，也适合搭建事件溯源系统。",
+      "translated_at": "2026-05-20T16:18:25.157Z"
+    },
+    "skill:wshobson-agents-data-storytelling": {
+      "hash": "aeebd47505850375",
+      "summary_zh": "它能把枯燥数据转化为有说服力的故事，特别适合向领导汇报分析结果、写数据报告或做高管演示，让你的数据表达更打动人。",
+      "translated_at": "2026-05-20T16:18:44.598Z"
+    },
+    "skill:wshobson-agents-dbt-transformation-patterns": {
+      "hash": "99fb4cc8dc44d4fb",
+      "summary_zh": "它是一套 dbt 分析工程的最佳实践指南，帮你规范数据转换与建模流程，适合搭建数据模型或推行分析工程规范时参考。",
+      "translated_at": "2026-05-20T16:18:45.529Z"
+    },
+    "skill:wshobson-agents-data-quality-frameworks": {
+      "hash": "70ce8081b5200cb6",
+      "summary_zh": "这是一个数据质量校验框架，帮你轻松搭建质量流水线、落实校验规则与数据契约，适合需要保障数据准确性的场景。",
+      "translated_at": "2026-05-20T16:18:47.593Z"
+    },
+    "skill:wshobson-agents-deployment-pipeline-design": {
+      "hash": "220f3eaf93414a3e",
+      "summary_zh": "帮你设计带审批门禁和安全检查的多阶段CI/CD流水线，适合需要零停机部署、金丝雀发布、多环境流转，或排查流水线卡壳的场景。",
+      "translated_at": "2026-05-20T16:19:20.409Z"
+    },
+    "skill:wshobson-agents-debugging-strategies": {
+      "hash": "8b2983c563f4a622",
+      "summary_zh": "这是一份系统性调试与根因分析指南，帮你高效排查各类技术栈中的Bug，适合在调查代码报错、性能问题或异常行为时参考。",
+      "translated_at": "2026-05-20T16:19:20.618Z"
+    },
+    "skill:wshobson-agents-defi-protocol-templates": {
+      "hash": "2b7b516c447bf30a",
+      "summary_zh": "提供生产级DeFi协议模板，帮你省去从零搭建的繁琐，非常适合快速开发去中心化金融应用或智能合约。",
+      "translated_at": "2026-05-20T16:19:21.655Z"
+    },
+    "skill:wshobson-agents-error-handling-patterns": {
+      "hash": "cb88d004dbf40176",
+      "summary_zh": "这是一份跨语言的错误处理模式指南，帮你掌握各类容错技巧来构建健壮应用。当你需要写容错逻辑、设计API或提升系统可靠性时，它是很好的参考。",
+      "translated_at": "2026-05-20T16:19:46.999Z"
+    },
+    "skill:wshobson-agents-event-store-design": {
+      "hash": "55365564430976d1",
+      "summary_zh": "教你设计和实现事件溯源系统的事件存储，适合在搭建相关基础设施、做技术选型或落地事件持久化模式时参考。",
+      "translated_at": "2026-05-20T16:19:50.764Z"
+    },
+    "skill:wshobson-agents-fastapi-templates": {
+      "hash": "46268f8194457bad",
+      "summary_zh": "这是一个生产可用的FastAPI脚手架，帮你免去繁琐的基础配置并直接提供规范架构，非常适合需要快速从零搭建后端API项目时使用。",
+      "translated_at": "2026-05-20T16:20:09.457Z"
+    },
+    "skill:wshobson-agents-e2e-testing-patterns": {
+      "hash": "3747a529f8482507",
+      "summary_zh": "这是一套结合 Playwright 和 Cypress 的端到端测试实战指南，帮你构建可靠测试套件以加速部署，适合编写测试、排查不稳定用例或制定规范时使用。",
+      "translated_at": "2026-05-20T16:20:13.964Z"
+    },
+    "skill:wshobson-agents-git-advanced-workflows": {
+      "hash": "36d9661cc29984b9",
+      "summary_zh": "帮你掌握Git高级技巧，轻松维护干净的提交历史并随时救场，非常适合处理复杂版本历史、团队协作或排查仓库故障的场景。",
+      "translated_at": "2026-05-20T16:20:18.893Z"
+    },
+    "skill:wshobson-agents-github-actions-templates": {
+      "hash": "c5a4c0253c4d8746",
+      "summary_zh": "提供开箱即用的 GitHub Actions 工作流模板，帮你快速搭建 CI/CD 流水线，轻松实现应用的自动测试、构建与部署，告别繁琐的从零配置。",
+      "translated_at": "2026-05-20T16:20:35.871Z"
+    },
+    "skill:wshobson-agents-gitlab-ci-patterns": {
+      "hash": "3f18bd757b2e4f6c",
+      "summary_zh": "提供 GitLab CI/CD 流水线构建方案，帮你解决流水线搭建与性能优化难题，适合需要落地自动化测试和部署的场景。",
+      "translated_at": "2026-05-20T16:20:41.758Z"
+    },
+    "skill:wshobson-agents-hybrid-cloud-networking": {
+      "hash": "bd51ddf8112d8979",
+      "summary_zh": "用来打通本地机房与云平台的安全高速组网工具，适合搭建混合云架构、数据中心上云或需要跨环境安全互通的场景。",
+      "translated_at": "2026-05-20T16:20:48.683Z"
+    },
+    "skill:wshobson-agents-istio-traffic-management": {
+      "hash": "504b47a6a73a1c29",
+      "summary_zh": "这是一个微服务流量管控工具，能帮你实现流量精准调度、平滑发布与故障容灾，特别适合做渐进式交付或保障系统稳定性的场景。",
+      "translated_at": "2026-05-20T16:21:02.039Z"
+    },
+    "skill:wshobson-agents-linkerd-patterns": {
+      "hash": "e7f537a767ad0758",
+      "summary_zh": "提供轻量安全的Linkerd服务网格部署方案，帮你快速完成环境搭建与流量策略配置，以极低开销实现零信任网络。",
+      "translated_at": "2026-05-20T16:21:13.559Z"
+    },
+    "skill:wshobson-agents-kpi-dashboard-design": {
+      "hash": "530ea2283df47993",
+      "summary_zh": "这是一套设计高效KPI看板的方法论，帮你搞定指标选择与可视化难题。适合搭建SaaS高管看板、运维监控中心、留存分析，或排查因计算口径不一致导致指标冲突的问题。",
+      "translated_at": "2026-05-20T16:21:23.449Z"
+    },
+    "skill:wshobson-agents-microservices-patterns": {
+      "hash": "333c3d4d4a85a68a",
+      "summary_zh": "这是一套微服务架构设计模式库，帮你解决服务划分与通信容错等架构难题，特别适合拆分单体应用、构建分布式系统或落地微服务时参考。",
+      "translated_at": "2026-05-20T16:21:38.642Z"
+    },
+    "skill:wshobson-agents-mtls-configuration": {
+      "hash": "6a5f91b944bc5c5a",
+      "summary_zh": "这是一个双向TLS配置工具，能解决服务间的安全通信问题，适合需要搭建零信任网络、管理证书或加固内部服务调用的场景。",
+      "translated_at": "2026-05-20T16:21:42.256Z"
+    },
+    "skill:wshobson-agents-monorepo-management": {
+      "hash": "f1ad595439e2bffe",
+      "summary_zh": "这是一套单仓多包管理方案，能帮你搭建高效且易扩展的项目架构，适合需要初始化单仓、提升构建速度或统一管理共享依赖的场景。",
+      "translated_at": "2026-05-20T16:21:52.322Z"
+    },
+    "skill:wshobson-agents-multi-cloud-architecture": {
+      "hash": "5b9aeeda77eab009",
+      "summary_zh": "这是一个多云架构设计决策框架，帮你挑选整合各大云服务。适合搭建多云系统、避免被单一厂商绑定，或想组合各家最强服务的场景。",
+      "translated_at": "2026-05-20T16:22:02.476Z"
+    },
+    "skill:wshobson-agents-multi-reviewer-patterns": {
+      "hash": "ad4ec22adcf85f50",
+      "summary_zh": "这是一套多人代码审查协调方案，能把各路审查结果去重、统一问题严重级别并出汇总报告，解决多人审查标准不一、结果难整合的痛点，适合需要多维度并行审查代码的团队。",
+      "translated_at": "2026-05-20T16:22:20.550Z"
+    },
+    "skill:wshobson-agents-nft-standards": {
+      "hash": "e349adde1ec94b10",
+      "summary_zh": "提供主流NFT协议的规范实现，帮你省去从零写合约的麻烦，适合快速搭建NFT交易市场或数字资产系统。",
+      "translated_at": "2026-05-20T16:22:24.597Z"
+    },
+    "skill:wshobson-agents-nx-workspace-patterns": {
+      "hash": "de0a979727be1600",
+      "summary_zh": "这是一套配置和优化 Nx 单体仓库的实践方案，帮你解决工作区搭建、代码边界管控、构建缓慢及增量测试难等痛点，适合需要高效管理多包项目的团队。",
+      "translated_at": "2026-05-20T16:22:31.417Z"
+    },
+    "skill:wshobson-agents-openapi-spec-generation": {
+      "hash": "21aa42ffe0d51f9d",
+      "summary_zh": "这是一个能从代码或设计规范自动生成并维护 OpenAPI 文档的工具，帮你轻松搞定接口文档编写、SDK 生成及 API 契约校验。",
+      "translated_at": "2026-05-20T16:22:41.457Z"
+    },
+    "skill:wshobson-agents-parallel-debugging": {
+      "hash": "aec1d10c4daf4857",
+      "summary_zh": "这是一套并行调试方法，专门对付原因复杂的疑难Bug。它通过同时验证多种猜测并收集证据来锁定真凶，特别适合多线索并行排查和根因分析的场景。",
+      "translated_at": "2026-05-20T16:22:46.487Z"
+    },
+    "skill:wshobson-agents-parallel-feature-development": {
+      "hash": "120ce40f5b85cb80",
+      "summary_zh": "这是一套并行开发协调方案，通过划分文件归属和约定接口，让多个开发者或AI智能体能同时开发同一系统的不同模块，有效避免代码冲突。",
+      "translated_at": "2026-05-20T16:22:58.354Z"
+    },
+    "skill:wshobson-agents-projection-patterns": {
+      "hash": "89ef091961b7cf2c",
+      "summary_zh": "它能从事件流构建读模型与投影，适合在事件溯源系统里实现CQRS读侧、构建物化视图，或解决查询性能瓶颈。",
+      "translated_at": "2026-05-20T16:23:14.794Z"
+    },
+    "skill:wshobson-agents-postgresql": {
+      "hash": "6c4dfc9b44f5226c",
+      "summary_zh": "专用于设计和审查PostgreSQL表结构，适合在建库或优化架构时参考，帮你应用最佳实践，避开常见的设计缺陷与性能陷阱。",
+      "translated_at": "2026-05-20T16:23:22.723Z"
+    },
+    "skill:wshobson-agents-screen-reader-testing": {
+      "hash": "e501ad998f3003a7",
+      "summary_zh": "这是一款用屏幕阅读器测试网页应用的工具，能帮你排查无障碍问题、验证读屏兼容性，适合需要保障辅助技术支持的开发场景。",
+      "translated_at": "2026-05-20T16:23:30.676Z"
+    },
+    "skill:wshobson-agents-saga-orchestration": {
+      "hash": "aa1fb0654552df99",
+      "summary_zh": "这是一个实现分布式事务Saga模式的编排工具，专解微服务下2PC不可用的跨服务一致性问题，适合订单、旅行预订等需跨服务补偿回滚的场景，还能排查卡死的事务。",
+      "translated_at": "2026-05-20T16:23:43.966Z"
+    },
+    "skill:wshobson-agents-secrets-management": {
+      "hash": "c4848104dbb0c957",
+      "summary_zh": "这是一个专为CI/CD流水线打造的安全密钥管理方案，能帮你安全处理敏感凭证并自动轮换密钥，适合需要保障交付环境安全的场景。",
+      "translated_at": "2026-05-20T16:23:48.105Z"
+    },
+    "skill:wshobson-agents-service-mesh-observability": {
+      "hash": "211608d2eee0aa7a",
+      "summary_zh": "这是一款服务网格可观测性工具，帮你全面掌握服务通信状况，适合在搭建网格监控、排查通信延迟或制定服务SLO时使用。",
+      "translated_at": "2026-05-20T16:23:57.723Z"
+    },
+    "skill:wshobson-agents-solidity-security": {
+      "hash": "a7f40542ee23f978",
+      "summary_zh": "这是一份智能合约安全指南，能帮你避开常见漏洞并写出安全的代码，特别适合在开发、审计智能合约，或给区块链应用加安全防护时参考。",
+      "translated_at": "2026-05-20T16:24:00.863Z"
+    },
+    "skill:wshobson-agents-spark-optimization": {
+      "hash": "ca1a4f27494ee2f0",
+      "summary_zh": "这是专门优化Apache Spark作业的工具，适合在提升运行性能、排查跑得慢的任务或扩展数据处理流程时使用，帮你轻松解决性能瓶颈。",
+      "translated_at": "2026-05-20T16:24:17.540Z"
+    },
+    "skill:wshobson-agents-sql-optimization-patterns": {
+      "hash": "a93a16a26b91fae3",
+      "summary_zh": "这是一套SQL调优指南，帮你大幅提升数据库性能、彻底解决慢查询问题，适合在排查慢SQL、设计表结构或优化应用响应速度时参考。",
+      "translated_at": "2026-05-20T16:24:21.880Z"
+    },
+    "skill:wshobson-agents-task-coordination-strategies": {
+      "hash": "6088e13667d5bb4d",
+      "summary_zh": "这是一个多智能体协作调度工具，能把复杂任务拆解为清晰的依赖图并平衡工作量。专治智能体团队分工混乱、任务依赖纠缠或进度难追踪的痛点。",
+      "translated_at": "2026-05-20T16:24:23.271Z"
+    },
+    "skill:wshobson-agents-team-composition-patterns": {
+      "hash": "2f7d0b10726d4e98",
+      "summary_zh": "这是一个帮你设计AI智能体团队最佳配置的工具。当你拿不准该派几个智能体、选开发还是调试团队、怎么给角色配工具，或需要自定义团队和运行环境时，它能帮你快速出方案。",
+      "translated_at": "2026-05-20T16:24:56.425Z"
+    },
+    "skill:wshobson-agents-team-communication-protocols": {
+      "hash": "f85dac9411defe42",
+      "summary_zh": "这是一套多智能体团队的结构化沟通规范，帮你在建组定规矩、决定私发或群发、主管审批计划、优雅关停及排查沟通卡点时避免混乱，保障高效协作。",
+      "translated_at": "2026-05-20T16:24:57.964Z"
+    },
+    "skill:wshobson-agents-temporal-python-testing": {
+      "hash": "29263fdf83cfc1cb",
+      "summary_zh": "这是一个结合pytest测试Temporal工作流的工具，能帮你轻松应对时间控制和环境模拟难题。当你在编写或调试工作流测试代码时，用它就能快速搞定各种复杂的测试场景。",
+      "translated_at": "2026-05-20T16:24:57.969Z"
+    },
+    "skill:wshobson-agents-terraform-module-library": {
+      "hash": "258ac8af02a26176",
+      "summary_zh": "一套遵循最佳实践的多云可复用Terraform模块集合，帮你轻松构建基础设施组件，实现云资源分配的标准化与代码复用。",
+      "translated_at": "2026-05-20T16:25:13.591Z"
+    },
+    "skill:wshobson-agents-track-management": {
+      "hash": "67f9d58282a04e61",
+      "summary_zh": "这是一个管理 Conductor 开发任务的工具，帮你规划和追踪新功能、Bug 修复或代码重构，轻松搞定从需求说明到执行计划的任务全生命周期。",
+      "translated_at": "2026-05-20T16:25:24.251Z"
+    },
+    "skill:wshobson-agents-turborepo-caching": {
+      "hash": "b1394cd57e6dff03",
+      "summary_zh": "这是一套为Turborepo配置缓存机制的方案，能大幅提升monorepo的构建速度，特别适合在初始化设置、优化构建流水线或搭建分布式缓存时使用。",
+      "translated_at": "2026-05-20T16:25:26.339Z"
+    },
+    "skill:wshobson-agents-wcag-audit-patterns": {
+      "hash": "323928128b600c70",
+      "summary_zh": "这是一个网站无障碍合规审查工具，提供从测试到修复的完整指导，适合用来排查网站无障碍问题、修复违规项，或落地无障碍设计模式。",
+      "translated_at": "2026-05-20T16:25:36.872Z"
+    },
+    "skill:wshobson-agents-workflow-orchestration-patterns": {
+      "hash": "b8829de60fcf0975",
+      "summary_zh": "这是一份基于Temporal的持久化工作流设计指南，专治微服务编排、长耗时进程和分布式事务等复杂场景。",
+      "translated_at": "2026-05-20T16:25:46.788Z"
+    },
+    "skill:wshobson-agents-web3-testing": {
+      "hash": "ee5c0cd2be0fb000",
+      "summary_zh": "结合Hardhat与Foundry的智能合约测试方案，帮你搞定从基础测试到主网分叉的全面验证，适合测试Solidity合约、搭建测试环境或验证DeFi协议。",
+      "translated_at": "2026-05-20T16:25:50.615Z"
+    },
+    "skill:ykdojo-claude-code-tips-gha": {
+      "hash": "d8a00e489fecfd16",
+      "summary_zh": "专门分析 GitHub Actions 报错的工具，能帮你快速揪出流水线失败的根本原因，省去手动翻查日志排错的麻烦。",
+      "translated_at": "2026-05-20T16:26:05.753Z"
+    },
+    "skill:ykdojo-claude-code-tips-clone": {
+      "hash": "583e72b7d44d1cb4",
+      "summary_zh": "这是一款对话复制工具，帮你把当前聊天另存为新分支。适合想换个思路或方案继续探索，又不想弄乱原有对话进展的场景。",
+      "translated_at": "2026-05-20T16:26:06.229Z"
+    },
+    "skill:wshobson-agents-workflow-patterns": {
+      "hash": "d7762a4e966f6b58",
+      "summary_zh": "这是一套专为Conductor的TDD工作流打造的开发指南，帮你轻松搞定阶段检查、代码提交与验证流程，让开发过程更规范有序。",
+      "translated_at": "2026-05-20T16:26:11.105Z"
+    },
+    "skill:ykdojo-claude-code-tips-half-clone": {
+      "hash": "92fa42f0d014dcaa",
+      "summary_zh": "它能克隆当前对话的后半段并丢弃早期内容。适合在AI长对话中省token，既降低开销又能保留最近的工作上下文。",
+      "translated_at": "2026-05-20T16:26:26.061Z"
+    },
+    "skill:ykdojo-claude-code-tips-handoff": {
+      "hash": "0cabbe4ab5e5a716",
+      "summary_zh": "专为AI生成工作交接文档的工具，解决智能体切换时的信息断层问题，让新接手的AI能快速掌握上下文并继续推进任务。",
+      "translated_at": "2026-05-20T16:26:26.256Z"
+    },
+    "skill:ykdojo-claude-code-tips-reddit-fetch": {
+      "hash": "3be2dbb462b94fbd",
+      "summary_zh": "这是一款抓取Reddit内容的工具，能帮你绕过403或访问被屏蔽的限制，非常适合需要直接读取Reddit链接或研究相关话题的场景。",
+      "translated_at": "2026-05-20T16:26:36.015Z"
+    },
+    "skill:yusufkaraaslan-skill-seekers-skill-builder": {
+      "hash": "c590c554b10dc1a0",
+      "summary_zh": "它能自动识别资料类型并生成AI技能，适合需要把文档、代码、视频等各类知识源快速转化为AI可用能力的场景。",
+      "translated_at": "2026-05-20T16:26:47.184Z"
+    },
+    "skill:ykdojo-claude-code-tips-review-claudemd": {
+      "hash": "ba1f499a8a181eaa",
+      "summary_zh": "它能复盘你最近的对话记录，找出可以改进 CLAUDE.md 文件的地方，适合想通过聊天记录持续优化 AI 配置、让助手更懂你的场景。",
+      "translated_at": "2026-05-20T16:26:47.280Z"
+    },
+    "skill:yusufkaraaslan-skill-seekers-skill-seekers": {
+      "hash": "c590c554b10dc1a0",
+      "summary_zh": "它能自动识别来源类型并构建AI技能，帮你把文档、代码库、PDF或视频等各种知识源直接变成AI可用的技能。",
+      "translated_at": "2026-05-20T16:27:14.387Z"
+    },
+    "skill:yvgude-lean-ctx-lean-ctx": {
+      "hash": "a276f7970507c12f",
+      "summary_zh": "这是专为AI智能体打造的上下文运行环境，在读文件、搜代码或跑命令等场景下，能把大模型的上下文体积压缩99%，帮你大幅节省Token并避免信息超载。",
+      "translated_at": "2026-05-20T16:27:15.403Z"
+    },
+    "skill:yvgude-lean-ctx-templates": {
+      "hash": "a276f7970507c12f",
+      "summary_zh": "专为AI代理打造的上下文压缩工具，在读取文件、搜索代码或执行命令时，能把大模型上下文压缩99%，解决输入过长导致的信息过载与性能问题。",
+      "translated_at": "2026-05-20T16:27:21.758Z"
+    },
+    "skill:zebbern-claude-code-guide-api-fuzzing-bug-bounty": {
+      "hash": "f0692669381caf74",
+      "summary_zh": "这是一个专攻接口安全的模糊测试技能，能帮你深挖API越权等漏洞，非常适合安全人员做接口渗透测试或参与漏洞赏金项目时获取指导。",
+      "translated_at": "2026-05-20T16:27:35.729Z"
+    },
+    "skill:zebbern-claude-code-guide-active-directory-attacks": {
+      "hash": "5183b7796475356e",
+      "summary_zh": "这是一款专攻Windows域渗透的指导工具，能帮你搞定活动目录环境下的各类攻击与提权难题，非常适合安全评估场景。",
+      "translated_at": "2026-05-20T16:27:39.442Z"
+    },
+    "skill:zebbern-claude-code-guide-aws-penetration-testing": {
+      "hash": "4abf2b76a335b6de",
+      "summary_zh": "这是一款亚马逊云安全测试工具，适合在评估云环境防护能力时使用，能帮你深入排查权限提升、配置错误等各类云特有漏洞与风险。",
+      "translated_at": "2026-05-20T16:27:46.646Z"
+    },
+    "skill:zebbern-claude-code-guide-broken-authentication": {
+      "hash": "282a08c6c833cae8",
+      "summary_zh": "这是一项专门挖掘Web应用登录认证和会话管理漏洞的安全测试技能，适合在评估网站登录机制健壮性、排查身份验证绕过等安全风险时使用。",
+      "translated_at": "2026-05-20T16:28:09.592Z"
+    },
+    "skill:zebbern-claude-code-guide-cloud-penetration-testing": {
+      "hash": "3645b8326f50e06c",
+      "summary_zh": "这是一个云安全评估技能，帮你全面测试AWS、Azure等主流云平台及O365的安全性，适合需要审计云设施、挖掘配置漏洞或提取密钥的渗透测试场景。",
+      "translated_at": "2026-05-20T16:28:15.073Z"
+    },
+    "skill:zebbern-claude-code-guide-ethical-hacking-methodology": {
+      "hash": "cfaa6ec95314cb5a",
+      "summary_zh": "这是一套白帽黑客实战指南，专为想系统学习渗透测试全流程的人设计，帮你搞定从前期侦察、漏洞扫描利用到最终写报告的各个环节。",
+      "translated_at": "2026-05-20T16:28:28.545Z"
+    },
+    "skill:zebbern-claude-code-guide-burp-suite-testing": {
+      "hash": "7193f55e549b0d0a",
+      "summary_zh": "提供Burp Suite实操指导，帮你轻松搞定抓包改包和漏洞扫描，非常适合做Web应用渗透测试。",
+      "translated_at": "2026-05-20T16:28:33.381Z"
+    },
+    "skill:zebbern-claude-code-guide-file-path-traversal": {
+      "hash": "a66896cbd1891d47",
+      "summary_zh": "这是一套路径遍历安全测试方法库，专门用来检测和利用目录遍历或本地文件包含漏洞，帮你通过Web应用越权读取服务器上的任意文件。",
+      "translated_at": "2026-05-20T16:28:39.535Z"
+    },
+    "skill:zebbern-claude-code-guide-html-injection-testing": {
+      "hash": "05d78b15b6dbeac7",
+      "summary_zh": "专攻HTML注入的安全测试工具，提供全面的攻击手法与测试方法，适合排查网页内容注入漏洞或评估网页防篡改能力。",
+      "translated_at": "2026-05-20T16:28:58.942Z"
+    },
+    "skill:zebbern-claude-code-guide-linux-privilege-escalation": {
+      "hash": "750a2ff291a7b8b2",
+      "summary_zh": "这是一套帮你拿root权限的技巧库，专门解决在Linux低权限shell下如何提权的问题，适合安全测试时通过排查系统配置失误和漏洞来获取最高权限。",
+      "translated_at": "2026-05-20T16:29:07.873Z"
+    },
+    "skill:zebbern-claude-code-guide-idor-testing": {
+      "hash": "b6e26f4ee4d54ce3",
+      "summary_zh": "这是一个专攻Web越权漏洞的测试指南，能帮你发现并修复通过篡改ID绕过授权访问他人数据的问题，适合安全测试与漏洞排查场景。",
+      "translated_at": "2026-05-20T16:29:10.843Z"
+    },
+    "skill:zebbern-claude-code-guide-linux-shell-scripting": {
+      "hash": "d65390ca0ddb2810",
+      "summary_zh": "这是一套生产级Shell脚本模板库，专治Linux日常运维的重复劳动，让你在监控资源、备份文件或管理用户等场景下拿来即用，省去从头写脚本的麻烦。",
+      "translated_at": "2026-05-20T16:29:23.055Z"
+    },
+    "skill:zebbern-claude-code-guide-network-101": {
+      "hash": "647d6877754da44c",
+      "summary_zh": "这是个网络服务配置指导工具，能帮你搞定Web服务器搭建、协议配置及服务测试，特别适合搭建和调试渗透测试实验环境时使用。",
+      "translated_at": "2026-05-20T16:29:31.575Z"
+    },
+    "skill:zebbern-claude-code-guide-metasploit-framework": {
+      "hash": "4cba02a8193b943d",
+      "summary_zh": "这是一款专业的渗透测试平台，能帮你在安全评估中快速利用系统漏洞并完成后续控制，非常适合用来检验网络环境的真实防御能力。",
+      "translated_at": "2026-05-20T16:29:41.123Z"
+    },
+    "skill:zebbern-claude-code-guide-pentest-checklist": {
+      "hash": "1de592e2d3b3b27c",
+      "summary_zh": "这是个渗透测试规划助手，能按最佳实践为你梳理出结构化的测试清单和范围，专门解决安全评估无从下手或流程不规范的问题。",
+      "translated_at": "2026-05-20T16:29:44.348Z"
+    },
+    "skill:zebbern-claude-code-guide-pentest-commands": {
+      "hash": "22488a6fecfe86ee",
+      "summary_zh": "这是一款渗透测试指令速查工具，当你要做网络扫描、漏洞利用或密码破解却忘了具体命令时，它能快速提供参考，帮你轻松搞定各类安全测试任务。",
+      "translated_at": "2026-05-20T16:29:50.935Z"
+    },
+    "skill:zebbern-claude-code-guide-privilege-escalation-methods": {
+      "hash": "1384628ab3b58abf",
+      "summary_zh": "这是一个针对Linux和Windows的提权指南，专门解决后渗透阶段的权限提升问题，适合需要获取root或管理员权限的安全测试与攻防演练场景。",
+      "translated_at": "2026-05-20T16:30:06.298Z"
+    },
+    "skill:zebbern-claude-code-guide-red-team-tools": {
+      "hash": "0c788d3cd8cb4a48",
+      "summary_zh": "这是一套红队安全测试的方法与工具集，适合红队演练和漏洞赏金狩猎场景，帮你解决自动化侦察与漏洞挖掘等需求，并提供顶尖安全专家的实战技巧与工具配置。",
+      "translated_at": "2026-05-20T16:30:11.979Z"
+    },
+    "skill:zebbern-claude-code-guide-scanning-tools": {
+      "hash": "9b094943f3c0fe74",
+      "summary_zh": "提供安全扫描工具与方法的全面指导，适合需要排查漏洞与端口、评估网络与云安全、检测恶意软件或验证合规性等场景，帮你轻松搞定各类安全检测需求。",
+      "translated_at": "2026-05-20T16:30:21.707Z"
+    },
+    "skill:zebbern-claude-code-guide-shodan-reconnaissance": {
+      "hash": "7d6ae6a91c4bbddc",
+      "summary_zh": "这是一个教你用Shodan做渗透侦察的技能。它能帮你找出互联网上暴露的设备、端口和漏洞服务，特别适合做安全评估或网络资产摸底。",
+      "translated_at": "2026-05-20T16:30:31.334Z"
+    },
+    "skill:zebbern-claude-code-guide-sql-injection-testing": {
+      "hash": "734f3facfa2fceba",
+      "summary_zh": "这是一个专攻SQL注入漏洞的安全测试工具，能帮你检测系统是否存在注入缺陷，并模拟绕过认证、提取数据库信息等攻击，适合安全评估和渗透测试场景。",
+      "translated_at": "2026-05-20T16:30:40.242Z"
+    },
+    "skill:zebbern-claude-code-guide-smtp-penetration-testing": {
+      "hash": "1b958ce49b159ab8",
+      "summary_zh": "这是一个邮件服务器安全测试技能包，能帮你全面排查邮箱系统的潜在风险，非常适合需要对邮件服务进行渗透测试或安全评估的场景。",
+      "translated_at": "2026-05-20T16:30:47.594Z"
+    },
+    "skill:zebbern-claude-code-guide-sqlmap-database-pentesting": {
+      "hash": "0ce4d7773c0451e9",
+      "summary_zh": "这是一份SQLMap实战指南，能帮你自动化发现和利用SQL注入漏洞，轻松获取数据库里的敏感信息，非常适合做数据库安全渗透测试。",
+      "translated_at": "2026-05-20T16:30:57.709Z"
+    },
+    "skill:zebbern-claude-code-guide-top-web-vulnerabilities": {
+      "hash": "492abc2a01d2281f",
+      "summary_zh": "这是一个Web安全漏洞参考库，能帮你快速识别和解释常见安全缺陷，适合学习安全知识、排查系统风险或理解OWASP漏洞分类时查阅。",
+      "translated_at": "2026-05-20T16:31:15.129Z"
+    },
+    "skill:zebbern-claude-code-guide-ssh-penetration-testing": {
+      "hash": "078182a918613db3",
+      "summary_zh": "这是一套SSH渗透测试方法库，专门解决SSH服务安全评估问题，适合需要破解登录凭证、挖掘服务漏洞或搭建隐蔽隧道的红队攻防场景。",
+      "translated_at": "2026-05-20T16:31:23.866Z"
+    },
+    "skill:zebbern-claude-code-guide-windows-privilege-escalation": {
+      "hash": "0c3790f69b8896f3",
+      "summary_zh": "这是一款提供Windows提权全面指导的工具，专门解决如何发现并利用系统错误配置来提升权限的问题，非常适合安全测试中的后渗透提权场景。",
+      "translated_at": "2026-05-20T16:31:30.230Z"
+    },
+    "skill:zebbern-claude-code-guide-wordpress-penetration-testing": {
+      "hash": "fba64a722f58ac1f",
+      "summary_zh": "这是一项针对WordPress的安全评估技能，能帮你全面排查站点漏洞并执行渗透测试，适合需要检验WordPress网站防御能力的场景。",
+      "translated_at": "2026-05-20T16:31:52.907Z"
+    },
+    "skill:zebbern-claude-code-guide-wireshark-analysis": {
+      "hash": "71f37b387b027013",
+      "summary_zh": "这是一套网络流量分析指南，帮你深入解析数据包，适合用来排查网络故障、分析协议或追查可疑流量。",
+      "translated_at": "2026-05-20T16:32:01.139Z"
+    },
+    "skill:zebbern-claude-code-guide-xss-html-injection": {
+      "hash": "5c626906e49a7e2c",
+      "summary_zh": "专门测试跨站脚本和HTML注入漏洞的工具，帮你发现并利用Web客户端注入攻击，适合需要绕过安全策略或验证Cookie窃取风险的渗透测试场景。",
+      "translated_at": "2026-05-20T16:32:02.674Z"
+    },
+    "skill:zechenzhangagi-ai-research-skills-0-autoresearch-skill": {
+      "hash": "d983692512f89b0c",
+      "summary_zh": "这是一款全自动协调AI研究项目的系统，能自动跑实验、总结规律并调整研究方向，最终生成论文，适合从零启动研究或需要长期跑自动化实验的场景。",
+      "translated_at": "2026-05-20T16:32:16.708Z"
+    },
+    "skill:zechenzhangagi-ai-research-skills-accelerate": {
+      "hash": "8ff6154862b84a58",
+      "summary_zh": "这是一个极简的PyTorch分布式训练库，只需几行代码就能让普通脚本支持多卡多机训练，屏蔽了底层框架差异，适合想轻松搞定大模型训练的开发者。",
+      "translated_at": "2026-05-20T16:32:26.412Z"
+    },
+    "skill:zechenzhangagi-ai-research-skills-a-evolve": {
+      "hash": "70ef456e3e82a74f",
+      "summary_zh": "用大模型进化算法让AI智能体自动进化与优化，适合构建能自我提升的智能体，或通过自动化评估闭环来调优提示词和技能。",
+      "translated_at": "2026-05-20T16:32:30.255Z"
+    },
+    "skill:zechenzhangagi-ai-research-skills-autogpt": {
+      "hash": "b3475922809f70f2",
+      "summary_zh": "这是一个用来搭建和部署持续运行AI智能体的平台，适合需要让AI长期自主跑任务、编排可视化工作流，或构建复杂多步骤自动化流程的场景。",
+      "translated_at": "2026-05-20T16:32:45.935Z"
+    },
+    "skill:zechenzhangagi-ai-research-skills-axolotl": {
+      "hash": "594d45828ca99ab5",
+      "summary_zh": "这是一款大模型微调工具，只需写简单的配置文件就能搞定各种主流模型的微调与对齐训练，帮你摆脱繁琐的代码配置，轻松定制专属模型。",
+      "translated_at": "2026-05-20T16:32:53.538Z"
+    },
+    "skill:zechenzhangagi-ai-research-skills-bigcode-evaluation-harness": {
+      "hash": "20ba32eb3e8837f8",
+      "summary_zh": "这是一个评估代码大模型编程能力的跑分工具，帮你基于主流基准测试算分。适合需要对比不同模型写代码水平、测试多语言支持或衡量代码生成质量的场景。",
+      "translated_at": "2026-05-20T16:33:10.991Z"
+    },
+    "skill:zechenzhangagi-ai-research-skills-awq": {
+      "hash": "d574dcbf51a4053f",
+      "summary_zh": "这是一种4位大模型压缩技术，能在几乎不掉精度的情况下大幅提速并节省显存。专为资源受限时部署7B-70B大模型设计，比GPTQ更快更准，特别适合指令微调与多模态模型。",
+      "translated_at": "2026-05-20T16:33:11.825Z"
+    },
+    "skill:zechenzhangagi-ai-research-skills-bitsandbytes": {
+      "hash": "69d9dcfdc5619020",
+      "summary_zh": "把大模型压缩到8位或4位的量化工具，能省下一半以上显存且几乎不掉精度，适合显卡装不下大模型或想加速推理的场景。",
+      "translated_at": "2026-05-20T16:33:14.587Z"
+    },
+    "skill:zechenzhangagi-ai-research-skills-constitutional-ai": {
+      "hash": "6cb76942799b3be2",
+      "summary_zh": "这是一种通过AI自我批评与反馈来训练无害模型的方法。无需人工标注就能减少有害输出，解决大模型安全对齐问题，适合低成本提升AI安全性的场景。",
+      "translated_at": "2026-05-20T16:33:36.423Z"
+    },
+    "skill:zechenzhangagi-ai-research-skills-deepspeed": {
+      "hash": "c9fa1068435549a4",
+      "summary_zh": "它是大模型分布式训练的加速框架，能通过显存优化和并行切分解决单卡装不下、训练太慢的痛点，特别适合多卡环境训练超大模型。",
+      "translated_at": "2026-05-20T16:33:37.525Z"
+    },
+    "skill:zechenzhangagi-ai-research-skills-crewai": {
+      "hash": "85fb83dfb54858f4",
+      "summary_zh": "它是一个轻量快速的多智能体编排框架，让多个AI像团队一样自主协作，适合专业智能体带记忆分工攻克复杂任务，或搭建顺序与层级式生产工作流的场景。",
+      "translated_at": "2026-05-20T16:33:55.383Z"
+    },
+    "skill:zechenzhangagi-ai-research-skills-flash-attention": {
+      "hash": "d7dea201d338b574",
+      "summary_zh": "优化Transformer注意力计算的工具，能大幅省显存并加速。特别适合跑长序列（超512词）显存不够，或者需要加速推理的场景。",
+      "translated_at": "2026-05-20T16:33:55.453Z"
+    },
+    "skill:zechenzhangagi-ai-research-skills-gguf": {
+      "hash": "09fdf325655fe83b",
+      "summary_zh": "这是一个GGUF和llama.cpp模型量化工具，能把模型灵活压缩，让你无需高端显卡也能在普通电脑或苹果芯片上高效部署和运行大模型。",
+      "translated_at": "2026-05-20T16:34:00.020Z"
+    },
+    "skill:zechenzhangagi-ai-research-skills-grpo-rl-training": {
+      "hash": "683cf51aa01b0037",
+      "summary_zh": "这是一份用TRL库做GRPO和强化学习微调的实战指南，帮你提升大模型的推理能力，或针对特定任务做专属训练。",
+      "translated_at": "2026-05-20T16:34:21.408Z"
+    },
+    "skill:zechenzhangagi-ai-research-skills-hqq": {
+      "hash": "60bfd4931bc98226",
+      "summary_zh": "这是一款大模型半二次量化工具，无需校准数据就能把模型压到2到4位，适合追求极速压缩或用vLLM和HuggingFace部署的场景。",
+      "translated_at": "2026-05-20T16:34:25.573Z"
+    },
+    "skill:zechenzhangagi-ai-research-skills-gptq": {
+      "hash": "b7f38d69a1661ac0",
+      "summary_zh": "这是一个大模型4位量化工具，能在几乎不掉精度的情况下，帮你把超大模型塞进普通显卡跑，大幅省显存并加快推理，也适合做微调。",
+      "translated_at": "2026-05-20T16:34:30.814Z"
+    },
+    "skill:zechenzhangagi-ai-research-skills-huggingface-tokenizers": {
+      "hash": "14654699598670e4",
+      "summary_zh": "这是一款极速分词工具，能轻松搞定海量文本的快速处理，突破分词速度瓶颈，特别适合需要极致性能的生产环境，或者想训练专属词表的研究场景。",
+      "translated_at": "2026-05-20T16:34:57.229Z"
+    },
+    "skill:zechenzhangagi-ai-research-skills-litgpt": {
+      "hash": "9f43454c208f0953",
+      "summary_zh": "基于LitGPT的大模型开发工具，用极简单文件代码实现各种主流架构，适合想直观理解模型底层原理，或需要干净利落地进行LoRA生产级微调的开发者。",
+      "translated_at": "2026-05-20T16:35:02.918Z"
+    },
+    "skill:zechenzhangagi-ai-research-skills-lambda-labs": {
+      "hash": "d6d5a3087b88de62",
+      "summary_zh": "这是一个专为机器学习打造的GPU云算力平台，帮你解决模型训练和推理中的算力获取、环境保存以及大规模集群搭建难题。",
+      "translated_at": "2026-05-20T16:35:04.434Z"
+    },
+    "skill:zechenzhangagi-ai-research-skills-llama-cpp": {
+      "hash": "7b8ad9fdd033e10c",
+      "summary_zh": "这是一个大模型推理工具，专帮没有英伟达显卡的电脑跑大模型。无论用苹果Mac、AMD显卡还是纯CPU，都能省内存且跑得快，特别适合低配设备或边缘部署。",
+      "translated_at": "2026-05-20T16:35:22.712Z"
+    },
+    "skill:zechenzhangagi-ai-research-skills-llamaguard": {
+      "hash": "8a35c8aad6013f63",
+      "summary_zh": "Meta推出的专为大模型设计的安全审核工具，能精准过滤输入输出中的违规有害内容，帮你给大模型加上安全护栏，非常适合需要防范合规风险的应用场景。",
+      "translated_at": "2026-05-20T16:35:31.601Z"
+    },
+    "skill:zechenzhangagi-ai-research-skills-llama-factory": {
+      "hash": "6e0bf6e41411639a",
+      "summary_zh": "这是一个带可视化界面的无代码大模型微调工具，让你不写代码也能轻松定制各类大语言及多模态模型，非常适合零基础小白或想低门槛打造专属AI的开发者。",
+      "translated_at": "2026-05-20T16:35:41.493Z"
+    },
+    "skill:zechenzhangagi-ai-research-skills-lm-evaluation-harness": {
+      "hash": "4ef4c2f49fa3a740",
+      "summary_zh": "这是一个支持60多项学术测试的大模型评测框架，适合用来评估模型质量、对比不同模型、出学术报告或追踪训练进度。",
+      "translated_at": "2026-05-20T16:35:46.574Z"
     }
   }
 }
