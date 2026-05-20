@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-05-20T01:16:46.155Z",
+  "updated_at": "2026-05-20T05:26:59.226Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -2068,9 +2068,9 @@
       "translated_at": "2026-05-19T20:21:07.806Z"
     },
     "skill:sawyerhood-dev-browser-dev-browser": {
-      "hash": "manual-singleton-v1",
-      "summary_zh": "用持久化浏览器状态执行网页自动化，适合填表、截图、抓取数据和测试页面流程。",
-      "translated_at": "2026-05-19T06:38:25.350Z"
+      "hash": "eab43b5c3fe2009b",
+      "summary_zh": "一款能保持页面状态的浏览器自动化工具，专门解决重复繁琐的网页交互问题，适合数据抓取、表单填写、网站测试等自动化场景。",
+      "translated_at": "2026-05-20T05:14:43.077Z"
     },
     "skill:mutable-state-inc-ensue-skill-ensue-memory": {
       "hash": "d4d82c497a40153a",
@@ -2128,9 +2128,9 @@
       "translated_at": "2026-05-19T23:15:11.857Z"
     },
     "skill:severity1-claude-code-prompt-improver-prompt-improver": {
-      "hash": "manual-singleton-v1",
-      "summary_zh": "在执行前补强模糊提示词，通过调研和澄清让任务目标更明确、结果更稳定。",
-      "translated_at": "2026-05-19T06:38:25.355Z"
+      "hash": "da11fc03f86310fc",
+      "summary_zh": "它能在执行前自动细化和补充模糊的提示词。当你遇到表述不清的指令不知如何下手时，它会帮你系统梳理、追问并补充细节，把模糊想法变成具体可执行的优质指令。",
+      "translated_at": "2026-05-20T05:26:32.814Z"
     },
     "skill:callstack-react-native-testing-library-react-native-testing": {
       "hash": "c64e25f419863c30",
@@ -2138,14 +2138,14 @@
       "translated_at": "2026-05-19T20:37:34.190Z"
     },
     "skill:redis-agent-skills-redis-development": {
-      "hash": "manual-singleton-v1",
-      "summary_zh": "提供 Redis 性能优化和最佳实践，适合数据结构、查询、向量搜索和缓存设计。",
-      "translated_at": "2026-05-19T06:38:25.355Z"
+      "hash": "feeee5ffb4c5eec9",
+      "summary_zh": "提供Redis性能优化与最佳实践，帮你解决从基础数据处理到AI向量搜索与语义缓存等各类难题，适合需要深度使用及调优Redis的场景。",
+      "translated_at": "2026-05-20T05:02:16.397Z"
     },
     "skill:sepinetam-stata-mcp-rfc-impl-generator": {
-      "hash": "manual-singleton-v1",
-      "summary_zh": "根据简短需求生成 RFC 和实现文档，适合把功能或修复想法整理成 AI 驱动开发流程。",
-      "translated_at": "2026-05-19T06:38:25.355Z"
+      "hash": "035bc48ee671c817",
+      "summary_zh": "它能根据你的简短想法或需求，自动生成正式的 RFC 提案和 IMPL 实施文档。帮你把零散的点子快速变成标准化的研发流程，适合需要把新功能或修复需求规范化落地的场景。",
+      "translated_at": "2026-05-20T05:17:24.847Z"
     },
     "skill:nizos-tdd-guard-setup": {
       "hash": "9cdfb07320c1547f",
@@ -10191,6 +10191,986 @@
       "hash": "c221df6ea0042cfb",
       "summary_zh": "这套包含60项技能的合集专为营销与增长打造，将战略策划、数据分析与内容制作融为一体，帮你一站式解决从获客转化到品牌建设的全链路难题。",
       "translated_at": "2026-05-20T01:16:46.153Z"
+    },
+    "skill:raintree-technology-apple-hig-skills-hig-components-system": {
+      "hash": "5d87f91052494a11",
+      "summary_zh": "苹果官方的系统级组件设计指南，专治不知道各类系统界面该怎么设计的问题，适合开发苹果应用时参考UI规范。",
+      "translated_at": "2026-05-20T04:53:49.573Z"
+    },
+    "skill:raintree-technology-apple-hig-skills-hig-inputs": {
+      "hash": "7502cfeb8ee49163",
+      "summary_zh": "提供苹果官方人机交互指南的输入与交互规范，适合开发者和设计师在解决各类输入方式的设计与适配问题时，查阅参考官方标准。",
+      "translated_at": "2026-05-20T04:53:50.147Z"
+    },
+    "skill:raintree-technology-apple-hig-skills-hig-foundations": {
+      "hash": "aadb225178456cec",
+      "summary_zh": "这是苹果官方人机界面指南的设计基础库，能帮你解答苹果应用开发中的界面设计疑问，确保配色、字体及无障碍等细节符合官方规范，适合开发者与设计师参考使用。",
+      "translated_at": "2026-05-20T04:53:53.764Z"
+    },
+    "skill:raintree-technology-apple-hig-skills-hig-patterns": {
+      "hash": "5535844d78a85802",
+      "summary_zh": "汇总了苹果官方人机交互指南的交互与体验模式，帮你解决开发苹果应用时的各类界面设计问题，适合做引导、加载、搜索等常见交互时参考官方规范。",
+      "translated_at": "2026-05-20T04:54:19.100Z"
+    },
+    "skill:raintree-technology-apple-hig-skills-hig-project-context": {
+      "hash": "75a694d596e58940",
+      "summary_zh": "这是一个用来初始化苹果设计项目基础信息的工具。在开启新苹果项目或配置设计规范时，它能生成统一的上下文文件，让其他设计指南技能为你提供量身定制的建议。",
+      "translated_at": "2026-05-20T04:54:19.702Z"
+    },
+    "skill:raintree-technology-apple-hig-skills-hig-platforms": {
+      "hash": "033e5c6dd57d75d0",
+      "summary_zh": "提供苹果各平台的人机界面设计指南，帮你搞清不同系统的设计差异与规范，适合跨平台应用适配、多端界面迁移，或解决不同苹果设备间该如何差异化设计等疑问。",
+      "translated_at": "2026-05-20T04:54:29.116Z"
+    },
+    "skill:raintree-technology-apple-hig-skills-hig-technologies": {
+      "hash": "8eda9c4681f8e9ca",
+      "summary_zh": "这是苹果各类原生技术集成的官方设计规范，适合开发者在App接入Siri、支付或AI等功能时，用来参考如何符合苹果的交互与设计标准。",
+      "translated_at": "2026-05-20T04:54:37.447Z"
+    },
+    "skill:raintree-technology-claude-starter-accounts": {
+      "hash": "bcd8ce0dec99872a",
+      "summary_zh": "这是个专攻 Plaid 账户的助手，能帮你搞定查余额、读数据、管多账户等各类管理难题，适合在需要处理 Plaid 账户相关事宜时调用。",
+      "translated_at": "2026-05-20T04:54:55.769Z"
+    },
+    "skill:raintree-technology-claude-starter-anthropic": {
+      "hash": "9ff7f4ff61cbf808",
+      "summary_zh": "这是一个精通Claude API的专家助手，专门帮开发者解决接口调用、提示词编写及功能接入难题，适合开发Claude应用时随时提问和查阅最佳实践。",
+      "translated_at": "2026-05-20T04:55:03.760Z"
+    },
+    "skill:raintree-technology-claude-starter-aptos": {
+      "hash": "32ecdbc062f099d6",
+      "summary_zh": "这是一个Aptos生态的智能助手，能帮你解决Move语言编程、智能合约编写及DeFi与NFT开发等难题，适合在Aptos网络上搞Web3开发的程序员。",
+      "translated_at": "2026-05-20T04:55:06.596Z"
+    },
+    "skill:raintree-technology-claude-starter-claude-command-builder": {
+      "hash": "cb8664a1ca0ee574",
+      "summary_zh": "帮你在 Claude Code 里快速生成自定义斜杠命令的交互工具。想新建命令、配置参数或搭命令工作流时，它都能一步步引导你轻松搞定，省去手动编写的麻烦。",
+      "translated_at": "2026-05-20T04:55:31.393Z"
+    },
+    "skill:raintree-technology-claude-starter-claude-code": {
+      "hash": "4727f9980766ee5d",
+      "summary_zh": "这是一个精通Claude Code命令行工具的专家助手，能帮你解决从基础配置到高级工作流搭建的各种疑问，适合开发中随时咨询使用技巧。",
+      "translated_at": "2026-05-20T04:55:37.399Z"
+    },
+    "skill:raintree-technology-claude-starter-auth": {
+      "hash": "de347505a6bbe229",
+      "summary_zh": "专精 Plaid Auth 的智能助手，主要解决银行账户认证与接入的开发难题，适合在需要验证 ACH、获取账户及户主信息时提供指导。",
+      "translated_at": "2026-05-20T04:55:40.664Z"
+    },
+    "skill:raintree-technology-claude-starter-claude-hook-builder": {
+      "hash": "ba8f3c5c3d60976d",
+      "summary_zh": "这是一款帮你在 Claude Code 里交互式创建和配置钩子的工具，适合想免去手写配置、轻松实现工具执行前后自动化工作流的场景。",
+      "translated_at": "2026-05-20T04:55:58.440Z"
+    },
+    "skill:raintree-technology-claude-starter-claude-settings-expert": {
+      "hash": "c68bf3581ccd9f09",
+      "summary_zh": "这是Claude Code的专属配置顾问，专门帮你理清并搞定复杂的配置文件、权限规则、沙盒环境和配置优先级。遇到环境设置或权限卡壳时找它最合适。",
+      "translated_at": "2026-05-20T04:56:02.171Z"
+    },
+    "skill:raintree-technology-claude-starter-claude-mcp-expert": {
+      "hash": "afd89a4f95d35e0a",
+      "summary_zh": "这是一个MCP协议专家助手，当你在接入本地或远程MCP服务器、配置环境或连接工具遇到困难时，它能帮你轻松搞定各种集成与验证问题。",
+      "translated_at": "2026-05-20T04:56:09.573Z"
+    },
+    "skill:raintree-technology-claude-starter-claude-skill-builder": {
+      "hash": "aa910fdadd243b0c",
+      "summary_zh": "交互式生成符合规范的 Claude 智能体技能文件，帮你自动搞定繁琐的配置和模板结构，适合需要给 Claude 快速开发或扩展新技能的场景。",
+      "translated_at": "2026-05-20T04:56:24.731Z"
+    },
+    "skill:raintree-technology-claude-starter-cli-assistant": {
+      "hash": "785360fc4480da6e",
+      "summary_zh": "这是一款命令行对象存储助手，能帮你搞定指令用法、账号配置及报错排查，适合需要在终端操作该工具的开发者。",
+      "translated_at": "2026-05-20T04:56:48.653Z"
+    },
+    "skill:raintree-technology-claude-starter-dapp-builder": {
+      "hash": "940a7f353a243794",
+      "summary_zh": "这是专帮开发者在 Aptos 链上构建 Shelby 协议去中心化应用的助手，能解决从架构设计到前端交互的开发难题，适合想快速搭建基于 Shelby 存储的 Web3 应用场景。",
+      "translated_at": "2026-05-20T04:56:53.952Z"
+    },
+    "skill:raintree-technology-claude-starter-dapp-integration": {
+      "hash": "5f16fbaa6a19dd46",
+      "summary_zh": "专为Aptos链上DApp开发打造的助手，帮你搞定前端与各类钱包的连接及交易签名等繁琐工作，适合需要快速实现Web3前端集成的开发场景。",
+      "translated_at": "2026-05-20T04:56:54.469Z"
+    },
+    "skill:raintree-technology-claude-starter-eas-update": {
+      "hash": "e4177db6d23e25c1",
+      "summary_zh": "专为Expo应用打造的OTA热更新专家，帮你绕过应用商店直接推送更新、管理发布渠道与版本回滚，适合需要快速发版和修复线上问题的场景。",
+      "translated_at": "2026-05-20T04:57:13.334Z"
+    },
+    "skill:raintree-technology-claude-starter-decibel": {
+      "hash": "fa35a68bc67163d8",
+      "summary_zh": "这是Aptos链上永续合约交易平台的专属助手，帮你快速搞懂交易规则与开发接口，适合开发者在代码接入或交易者进行复杂订单操作时随时提问。",
+      "translated_at": "2026-05-20T04:57:25.778Z"
+    },
+    "skill:raintree-technology-claude-starter-expo": {
+      "hash": "45061ec8b028893b",
+      "summary_zh": "它是个精通 Expo 官方文档的 AI 助手，专帮开发者搞定 React Native 跨平台开发中的配置、构建、部署和路由等疑难杂症。",
+      "translated_at": "2026-05-20T04:57:36.097Z"
+    },
+    "skill:raintree-technology-claude-starter-eas-build": {
+      "hash": "2d216ff4e39974d2",
+      "summary_zh": "这是精通EAS Build云服务的专家助手，专门帮你解决iOS和Android应用云端打包与编译的各种难题，适合需要自动化构建移动应用或排查构建报错的开发者。",
+      "translated_at": "2026-05-20T04:57:43.522Z"
+    },
+    "skill:raintree-technology-claude-starter-expo-router": {
+      "hash": "95b701459483229a",
+      "summary_zh": "它是专攻 React Native 文件路由的开发助手，能帮你搞定页面导航、深链接及 TS 集成等各类路由难题，遇到 Expo 路由开发问题时随时问它就行。",
+      "translated_at": "2026-05-20T04:57:50.944Z"
+    },
+    "skill:raintree-technology-claude-starter-framework": {
+      "hash": "81947963c64368ee",
+      "summary_zh": "专精Aptos底层标准库的开发助手，帮你快速搞懂账户、代币等核心模块的用法与排错，特别适合Aptos智能合约开发者在编码时随时查阅。",
+      "translated_at": "2026-05-20T04:57:58.839Z"
+    },
+    "skill:raintree-technology-claude-starter-gas-optimization": {
+      "hash": "655be60ffe0b4f8f",
+      "summary_zh": "它是Aptos链的燃料费优化专家，帮你解决合约运行成本高和性能差的问题，适合需要降低存储开销、提升执行效率或做代码调优的开发场景。",
+      "translated_at": "2026-05-20T04:58:12.428Z"
+    },
+    "skill:raintree-technology-claude-starter-helius": {
+      "hash": "2f46f7157fb4aa00",
+      "summary_zh": "专为Solana打造的高性能底层基建，提供一站式的数据访问与交易增强接口，帮开发者免去繁琐的底层对接，轻松构建高并发的Web3应用。",
+      "translated_at": "2026-05-20T04:58:24.119Z"
+    },
+    "skill:raintree-technology-claude-starter-ios": {
+      "hash": "f6aa40aebf376ef7",
+      "summary_zh": "这是一个专精苹果生态的开发助手，遇到iPhone或iPad应用开发、架构设计或Xcode调试等iOS相关的疑难杂症，都能找它解答。",
+      "translated_at": "2026-05-20T04:58:34.192Z"
+    },
+    "skill:raintree-technology-claude-starter-identity": {
+      "hash": "43a7c3796d49aeec",
+      "summary_zh": "专门处理 Plaid Identity 的查询助手，能帮你快速获取账户持有人信息，搞定身份验证、KYC合规和防欺诈等安全难题。",
+      "translated_at": "2026-05-20T04:58:35.323Z"
+    },
+    "skill:raintree-technology-claude-starter-move-language": {
+      "hash": "93d77c5b8c0618d3",
+      "summary_zh": "这是一个精通Move语言高级特性的专家助手，适合在开发智能合约时，遇到复杂语法、类型系统或底层存储等疑难问题需要快速解答的场景。",
+      "translated_at": "2026-05-20T04:58:49.935Z"
+    },
+    "skill:raintree-technology-claude-starter-move-testing": {
+      "hash": "dcce3305db47c7e5",
+      "summary_zh": "专门指导Aptos Move智能合约测试的专家，帮你解决从编写测试到形式化验证及调试排错的各种难题，适合需要全面保障合约安全与质量的开发者。",
+      "translated_at": "2026-05-20T04:58:58.930Z"
+    },
+    "skill:raintree-technology-claude-starter-move-prover": {
+      "hash": "6c2ec98464b7ced5",
+      "summary_zh": "Aptos智能合约的形式化验证工具，帮你通过编写规范严格校验代码逻辑的正确性，并排查验证失败原因，适合对安全性要求极高的合约开发场景。",
+      "translated_at": "2026-05-20T04:59:01.357Z"
+    },
+    "skill:raintree-technology-claude-starter-network-rpc": {
+      "hash": "8564a18b35d87205",
+      "summary_zh": "这是个专攻Shelby协议网络基建的技术助手，能帮你搞定RPC节点配置、网络性能调优、连接管理以及DoubleZero私有网络搭建等复杂问题。",
+      "translated_at": "2026-05-20T04:59:16.112Z"
+    },
+    "skill:raintree-technology-claude-starter-object-model": {
+      "hash": "e1aa192889c0be2c",
+      "summary_zh": "这是专攻Aptos对象模型的专家助手，能帮你理清对象所有权、能力控制和组合设计，特别适合需要从旧版资源模式迁移到新对象体系的开发者。",
+      "translated_at": "2026-05-20T04:59:23.083Z"
+    },
+    "skill:raintree-technology-claude-starter-plaid": {
+      "hash": "4b7b58093b99e908",
+      "summary_zh": "这是专攻Plaid银行API的集成助手，能帮你轻松打通银行账户连接、获取交易流水等金融数据，非常适合开发需要ACH转账或读取银行数据的金融科技应用。",
+      "translated_at": "2026-05-20T04:59:32.507Z"
+    },
+    "skill:raintree-technology-claude-starter-protocol-expert": {
+      "hash": "428abb20261dcfca",
+      "summary_zh": "这是Aptos链上Shelby去中心化存储协议的专家助手，能帮你解答架构、纠删码和读写机制等技术细节，适合开发或研究该协议时随时提问。",
+      "translated_at": "2026-05-20T04:59:39.250Z"
+    },
+    "skill:raintree-technology-claude-starter-shelby": {
+      "hash": "22b0c357583b5f4b",
+      "summary_zh": "它是Aptos链上Shelby去中心化存储协议的专家助手，掌握从底层架构到应用开发的全套知识，专门帮你解决在Aptos上构建或接入去中心化blob存储时的各种技术难题。",
+      "translated_at": "2026-05-20T04:59:59.949Z"
+    },
+    "skill:raintree-technology-claude-starter-sdk-developer": {
+      "hash": "cbd12e2dec2c182c",
+      "summary_zh": "它是Aptos去中心化存储的开发助手，能帮你在Node.js或浏览器中快速接入SDK，轻松解决各种存储交互与微支付的集成难题。",
+      "translated_at": "2026-05-20T05:00:05.499Z"
+    },
+    "skill:raintree-technology-claude-starter-shopify": {
+      "hash": "52537601d424bd3f",
+      "summary_zh": "这是一个内置全套官方文档的Shopify开发助手，能帮你解决建站、API对接、应用与主题开发，以及无头电商等各类开发难题。",
+      "translated_at": "2026-05-20T05:00:23.505Z"
+    },
+    "skill:raintree-technology-claude-starter-smart-contracts": {
+      "hash": "c9bc40f2f176e5e7",
+      "summary_zh": "这是Aptos链上Shelby协议的智能合约专家助手，能帮你轻松搞定该协议涉及的数据存储、微支付、审计及链上状态等合约开发与管理问题。",
+      "translated_at": "2026-05-20T05:00:38.146Z"
+    },
+    "skill:raintree-technology-claude-starter-stripe": {
+      "hash": "3946b8f71a13a192",
+      "summary_zh": "这是个精通Stripe的API开发助手，熟读官方文档，专门帮你解决支付、账单或订阅等支付相关的开发难题。",
+      "translated_at": "2026-05-20T05:00:41.482Z"
+    },
+    "skill:raintree-technology-claude-starter-storage-integration": {
+      "hash": "2e50ec55504eb09a",
+      "summary_zh": "专门指导你把Shelby去中心化存储接入应用，解决视频流、AI训练和数据分析等场景下的架构设计、数据迁移及性能与成本调优难题。",
+      "translated_at": "2026-05-20T05:00:54.142Z"
+    },
+    "skill:raintree-technology-claude-starter-supabase": {
+      "hash": "64fb17a22ab39794",
+      "summary_zh": "这是一个精通 Supabase 的 AI 专家，熟读海量官方文档，能帮你搞定数据库、认证、存储等各类后端开发疑问，适合在使用 Supabase 遇到问题时随时求助。",
+      "translated_at": "2026-05-20T05:01:05.834Z"
+    },
+    "skill:raintree-technology-claude-starter-token-standards": {
+      "hash": "71acefd0d63c84aa",
+      "summary_zh": "它是Aptos代币标准专家，能帮你搞定同质化代币与NFT相关的开发难题，非常适合在Aptos上构建各类数字资产应用。",
+      "translated_at": "2026-05-20T05:01:16.560Z"
+    },
+    "skill:raintree-technology-claude-starter-toon-formatter": {
+      "hash": "fd7b9302fb1a74db",
+      "summary_zh": "这是款TOON格式转换工具，能把大JSON、日志或接口返回等结构化数据的Token消耗省下30%到60%，特别适合给大模型喂长数据或降低API成本。",
+      "translated_at": "2026-05-20T05:01:28.182Z"
+    },
+    "skill:raintree-technology-claude-starter-transactions": {
+      "hash": "4cbd8f1fc23297f8",
+      "summary_zh": "这是一个专门处理Plaid银行交易数据的助手，能帮你轻松搞定交易记录的同步与分类，适合需要对接银行流水或处理历史交易数据的场景。",
+      "translated_at": "2026-05-20T05:01:28.406Z"
+    },
+    "skill:raintree-technology-claude-starter-whop": {
+      "hash": "5d9956aae0f3959f",
+      "summary_zh": "这是一个精通 Whop 平台的专家工具，当你需要做数字产品销售、会员订阅、课程搭建或社区变现时，它能帮你快速搞定相关的开发与运营难题。",
+      "translated_at": "2026-05-20T05:01:33.251Z"
+    },
+    "skill:resend-resend-skills-agent-email-inbox": {
+      "hash": "b1024a21328da250",
+      "summary_zh": "这是一款接收邮件并自动触发后续操作的工具，自带安全防护以防恶意邮件控制系统，适合搭建邮件转任务、AI自动客服等处理外部邮件的自动化工作流。",
+      "translated_at": "2026-05-20T05:01:55.604Z"
+    },
+    "skill:resend-resend-skills-email-best-practices": {
+      "hash": "c2eec34ae1a95fcc",
+      "summary_zh": "这是一份邮件开发避坑指南，帮你解决邮件易进垃圾箱、退信率高、认证配置难等痛点，适合开发邮件功能或保障邮件合规与稳定送达时参考。",
+      "translated_at": "2026-05-20T05:02:14.954Z"
+    },
+    "skill:resend-resend-skills-react-email": {
+      "hash": "27648819d06d7b0b",
+      "summary_zh": "用 React 组件写邮件模板的工具。专治各类业务邮件（通知、重置密码等）开发麻烦的痛点，还能在应用里嵌入可视化编辑器，让排版和发送变得轻松简单。",
+      "translated_at": "2026-05-20T05:02:20.162Z"
+    },
+    "skill:resend-resend-skills-resend-cli": {
+      "hash": "5c042b72825d3dbc",
+      "summary_zh": "这是Resend的命令行工具，能让你在终端、脚本或CI/CD流水线中发邮件（支持React模板）并管理各项配置，轻松实现邮件服务的自动化与集成。",
+      "translated_at": "2026-05-20T05:02:35.317Z"
+    },
+    "skill:resend-resend-skills-resend": {
+      "hash": "24239f09e6d07a21",
+      "summary_zh": "专为集成邮件API打造，帮你轻松搞定事务性邮件收发、模板管理及事件追踪，还提供了避坑指南，适合需要在应用中快速接入可靠邮件功能的开发场景。",
+      "translated_at": "2026-05-20T05:02:40.546Z"
+    },
+    "skill:ruvnet-claude-flow-agent-adaptive-coordinator": {
+      "hash": "fb1643a90b419223",
+      "summary_zh": "给AI智能体加的自适应协调技能，能解决多任务或多智能体协作时调度死板的问题，适合需要动态分配与灵活统筹的场景。",
+      "translated_at": "2026-05-20T05:02:54.346Z"
+    },
+    "skill:ruvnet-claude-flow-agent-agent": {
+      "hash": "89432fb5cf6f8572",
+      "summary_zh": "这是一个让AI智能体互相调用的技能插件，能打破单个智能体的能力局限，适合需要多智能体分工协作或任务委派的场景。",
+      "translated_at": "2026-05-20T05:02:58.746Z"
+    },
+    "skill:ruvnet-claude-flow-agent-agentic-payments": {
+      "hash": "78ef5f6341898554",
+      "summary_zh": "这是一款AI智能体支付技能插件，让AI在执行任务时能直接调用支付功能，适合需要让AI自主完成交易闭环的自动化场景。",
+      "translated_at": "2026-05-20T05:03:02.965Z"
+    },
+    "skill:ruvnet-claude-flow-agent-analyze-code-quality": {
+      "hash": "42b8040307dd6679",
+      "summary_zh": "这是一个用于检查代码质量的智能体技能，能帮你自动排查代码隐患，适合接入AI工作流来把控代码规范。",
+      "translated_at": "2026-05-20T05:03:17.462Z"
+    },
+    "skill:ruvnet-claude-flow-agent-arch-system-design": {
+      "hash": "264561254fed0121",
+      "summary_zh": "这是一个专用于系统架构设计的AI Agent技能插件，能帮你快速梳理和生成架构方案，适合需要辅助进行系统架构设计的开发者。",
+      "translated_at": "2026-05-20T05:03:22.129Z"
+    },
+    "skill:ruvnet-claude-flow-agent-app-store": {
+      "hash": "f59702e0a99e0ea2",
+      "summary_zh": "这是一个给AI智能体扩展应用商店能力的插件，让AI能通过指令直接调用商店数据，适合需要AI自动检索或获取应用信息的场景。",
+      "translated_at": "2026-05-20T05:03:27.282Z"
+    },
+    "skill:ruvnet-claude-flow-agent-authentication": {
+      "hash": "6df741ea152bed7a",
+      "summary_zh": "这是一款专供智能体使用的身份认证技能，能让智能体在执行需要登录或鉴权的任务时，顺利通过身份校验。",
+      "translated_at": "2026-05-20T05:03:40.719Z"
+    },
+    "skill:ruvnet-claude-flow-agent-architecture": {
+      "hash": "d96602af65412f62",
+      "summary_zh": "这是一个专用于架构设计的AI代理技能，能帮你快速梳理和生成架构方案，适合需要架构辅助的开发场景。",
+      "translated_at": "2026-05-20T05:03:42.408Z"
+    },
+    "skill:ruvnet-claude-flow-agent-automation-smart-agent": {
+      "hash": "3c3d4f8135c20335",
+      "summary_zh": "这是一个为智能体提供自动化执行能力的技能插件，能让智能体自主完成复杂任务，适合需要工作流自动编排的场景。",
+      "translated_at": "2026-05-20T05:03:54.448Z"
+    },
+    "skill:ruvnet-claude-flow-agent-base-template-generator": {
+      "hash": "21e72211a9851006",
+      "summary_zh": "这是一个AI代理技能插件，能帮你快速生成基础项目模板，省去重复搭建的麻烦，特别适合需要频繁初始化新项目的开发场景。",
+      "translated_at": "2026-05-20T05:04:03.107Z"
+    },
+    "skill:ruvnet-claude-flow-agent-benchmark-suite": {
+      "hash": "1881fab138c39efb",
+      "summary_zh": "这是一个基准测试代理技能，能帮你快速触发并自动执行性能评估，适合需要定期跑分或监控系统性能表现的开发场景。",
+      "translated_at": "2026-05-20T05:04:03.340Z"
+    },
+    "skill:ruvnet-claude-flow-agent-code-analyzer": {
+      "hash": "cdb884161b482432",
+      "summary_zh": "这是一个赋予AI助手代码分析能力的插件，适合需要在自动化工作流中让AI直接审查、理解或诊断代码的场景。",
+      "translated_at": "2026-05-20T05:04:24.014Z"
+    },
+    "skill:ruvnet-claude-flow-agent-challenges": {
+      "hash": "129ba22a7369125c",
+      "summary_zh": "这是一个专供智能体处理挑战任务的技能插件，通过命令行即可调用，适合需要自动化完成或发起挑战的场景。",
+      "translated_at": "2026-05-20T05:04:24.549Z"
+    },
+    "skill:ruvnet-claude-flow-agent-byzantine-coordinator": {
+      "hash": "86e504c4e7b7a6d0",
+      "summary_zh": "这是一个AI代理技能，用于调用拜占庭协调器，适合在不可信的分布式网络中处理节点共识与任务协调。",
+      "translated_at": "2026-05-20T05:04:25.359Z"
+    },
+    "skill:ruvnet-claude-flow-agent-code-goal-planner": {
+      "hash": "a91d1b02fbce419b",
+      "summary_zh": "这是一个专供AI代理调用的规划插件，能把复杂的编程目标拆解成清晰的执行步骤，解决AI写代码时缺乏条理或容易跑偏的问题。",
+      "translated_at": "2026-05-20T05:04:46.209Z"
+    },
+    "skill:ruvnet-claude-flow-agent-code-review-swarm": {
+      "hash": "61ce8e28e2d49c6e",
+      "summary_zh": "这是一个多智能体代码审查系统的技能插件，适合在团队协作开发时直接调用，让AI自动帮你完成代码审查。",
+      "translated_at": "2026-05-20T05:04:50.573Z"
+    },
+    "skill:ruvnet-claude-flow-agent-coder": {
+      "hash": "f9f0ad4cf1634f42",
+      "summary_zh": "这是一个给AI代理用的编程技能插件，能让AI助手真正动手写代码，适合需要让自动化Agent完成编程任务的场景。",
+      "translated_at": "2026-05-20T05:04:51.971Z"
+    },
+    "skill:ruvnet-claude-flow-agent-collective-intelligence-coordinator": {
+      "hash": "e149385612853f2c",
+      "summary_zh": "这是一个多智能体协同技能，能帮你调用群体智能的协调能力，适合需要多个AI分工合作、汇聚集体智慧来搞定复杂任务的场景。",
+      "translated_at": "2026-05-20T05:05:09.156Z"
+    },
+    "skill:ruvnet-claude-flow-agent-consensus-coordinator": {
+      "hash": "002ee0b2f2b42bec",
+      "summary_zh": "这是一个帮多个AI代理在协作时达成一致意见的技能模块，适合需要多方智能体共同决策或解决意见冲突的场景。",
+      "translated_at": "2026-05-20T05:05:18.463Z"
+    },
+    "skill:ruvnet-claude-flow-agent-coordination": {
+      "hash": "75973556d3bf693e",
+      "summary_zh": "这是个多智能体管理调度工具，负责智能体的创建、生命周期与协作。适合需要批量管理智能体池、让它们协同完成复杂任务的场景，单打独斗的活儿用不上。",
+      "translated_at": "2026-05-20T05:05:28.475Z"
+    },
+    "skill:ruvnet-claude-flow-agent-coordinator-swarm-init": {
+      "hash": "83866f0f9c4c0464",
+      "summary_zh": "这是一个用来初始化集群协调节点的智能体工具，适合在分布式系统或多智能体协作时，需要快速启动并配置主控节点的场景。",
+      "translated_at": "2026-05-20T05:05:29.164Z"
+    },
+    "skill:ruvnet-claude-flow-agent-crdt-synchronizer": {
+      "hash": "3164476fcb2dbfc2",
+      "summary_zh": "这是一个专为智能体设计的同步技能插件，让智能体能直接调用 CRDT 机制，轻松解决多端协作或分布式场景下的数据冲突与同步难题。",
+      "translated_at": "2026-05-20T05:05:40.218Z"
+    },
+    "skill:ruvnet-claude-flow-agent-data-ml-model": {
+      "hash": "b6c3089223c6c96f",
+      "summary_zh": "这是一个专用于数据和机器学习模型的智能体技能，让你能通过指令直接调用模型，适合在自动化工作流中快速接入AI能力。",
+      "translated_at": "2026-05-20T05:05:48.057Z"
+    },
+    "skill:ruvnet-claude-flow-agent-dev-backend-api": {
+      "hash": "630623fd5802a47a",
+      "summary_zh": "这是一个让AI智能体能调用后端接口的技能插件，适合在AI编程或自动化开发场景下，通过指令直接让智能体帮你操作后端服务。",
+      "translated_at": "2026-05-20T05:05:51.534Z"
+    },
+    "skill:ruvnet-claude-flow-agent-docs-api-openapi": {
+      "hash": "fa3f875eb5a969b5",
+      "summary_zh": "这是一个让AI智能体能看懂和解析OpenAPI文档的技能插件，适合需要让AI自动根据文档对接或测试API的场景。",
+      "translated_at": "2026-05-20T05:06:05.630Z"
+    },
+    "skill:ruvnet-claude-flow-agent-github-pr-manager": {
+      "hash": "e279234550c17c0f",
+      "summary_zh": "这是一个AI代理的技能插件，能让你在智能体工作流中直接管理和操作GitHub的PR，适合需要自动化处理代码合并与审查的场景。",
+      "translated_at": "2026-05-20T05:06:10.038Z"
+    },
+    "skill:ruvnet-claude-flow-agent-github-modes": {
+      "hash": "75214ac3f1a62396",
+      "summary_zh": "这是一个为 github-modes 提供支持的代理技能，能让你通过命令直接调用相关功能，适合需要自动化处理或快捷操作 GitHub 的开发场景。",
+      "translated_at": "2026-05-20T05:06:12.506Z"
+    },
+    "skill:ruvnet-claude-flow-agent-goal-planner": {
+      "hash": "87c4be08eb87e829",
+      "summary_zh": "这是给AI智能体用的目标规划技能，能帮智能体把复杂大目标拆解成可执行步骤，适合需要AI自主规划和执行任务的场景。",
+      "translated_at": "2026-05-20T05:06:26.297Z"
+    },
+    "skill:ruvnet-claude-flow-agent-hierarchical-coordinator": {
+      "hash": "790618c6e3f60ca0",
+      "summary_zh": "这是一个多层级任务调度技能，能帮你协调不同层级的代理协同工作，适合需要拆解复杂任务并让多个代理分层协作的场景。",
+      "translated_at": "2026-05-20T05:06:35.690Z"
+    },
+    "skill:ruvnet-claude-flow-agent-gossip-coordinator": {
+      "hash": "be8611f785dd4c93",
+      "summary_zh": "这是一个多智能体间的信息协调技能，能帮智能体在去中心化网络中高效同步和共享状态，适合需要节点间异步通信的场景。",
+      "translated_at": "2026-05-20T05:06:39.740Z"
+    },
+    "skill:ruvnet-claude-flow-agent-implementer-sparc-coder": {
+      "hash": "f25b6e3cffb269bb",
+      "summary_zh": "这是一款专攻代码实现的AI代理技能，适合在SPARC结构化开发流程中帮你自动完成编码任务。",
+      "translated_at": "2026-05-20T05:06:54.025Z"
+    },
+    "skill:ruvnet-claude-flow-agent-issue-tracker": {
+      "hash": "2fcd393856fb13ed",
+      "summary_zh": "这是一个让智能体对接问题追踪系统的技能插件，适合需要在对话或自动化工作流中直接管理工单的场景。",
+      "translated_at": "2026-05-20T05:06:57.774Z"
+    },
+    "skill:ruvnet-claude-flow-agent-matrix-optimizer": {
+      "hash": "e7ca7d2c91934ab7",
+      "summary_zh": "专用于矩阵优化的智能体技能，适合在AI工作流中随时调用，帮你高效搞定复杂的矩阵计算与调优任务。",
+      "translated_at": "2026-05-20T05:07:13.826Z"
+    },
+    "skill:ruvnet-claude-flow-agent-load-balancer": {
+      "hash": "eccd99f28d761dad",
+      "summary_zh": "这是一个专为智能体设计的负载均衡插件，能帮AI自动将请求分发到多个节点以避免过载，适合需要智能调度任务和分配流量的场景。",
+      "translated_at": "2026-05-20T05:07:18.462Z"
+    },
+    "skill:ruvnet-claude-flow-agent-memory-coordinator": {
+      "hash": "5198159e9d3c7dd0",
+      "summary_zh": "这是一个专给AI代理用的记忆管理插件，能帮代理高效协调和调度记忆信息，适合需要代理跨对话记住上下文或处理复杂记忆的场景。",
+      "translated_at": "2026-05-20T05:07:20.516Z"
+    },
+    "skill:ruvnet-claude-flow-agent-mesh-coordinator": {
+      "hash": "7f5b9fa38b3c430a",
+      "summary_zh": "这是一款用来统筹多代理网络的技能插件，能帮你调度和协调各个代理节点间的任务分配与通信，适合需要多个AI或自动化代理协同工作的场景。",
+      "translated_at": "2026-05-20T05:07:33.634Z"
+    },
+    "skill:ruvnet-claude-flow-agent-multi-repo-swarm": {
+      "hash": "55eee99b5c1854ed",
+      "summary_zh": "这是一个专为多代码库协作设计的智能体技能，能帮你跨仓库高效调度和执行任务，适合需要同时管理多个项目的开发场景。",
+      "translated_at": "2026-05-20T05:07:44.318Z"
+    },
+    "skill:ruvnet-claude-flow-agent-migration-plan": {
+      "hash": "f4f5a3ecd40bc83f",
+      "summary_zh": "这是一个专用于规划迁移的智能体技能插件，能帮你在AI助手中直接调用并执行迁移方案，适合需要自动化处理系统或数据迁移的场景。",
+      "translated_at": "2026-05-20T05:07:45.936Z"
+    },
+    "skill:ruvnet-claude-flow-agent-neural-network": {
+      "hash": "aa91fdcca2d60348",
+      "summary_zh": "这是一个给AI助手扩展神经网络能力的技能插件，通过简单命令即可调用，适合需要让助手直接处理深度学习任务的场景。",
+      "translated_at": "2026-05-20T05:07:52.619Z"
+    },
+    "skill:ruvnet-claude-flow-agent-orchestrator-task": {
+      "hash": "9621f925e72e0656",
+      "summary_zh": "这是一个AI代理的任务编排插件，能帮你调度和分配各个代理的工作，适合需要多个AI协同完成复杂工作流的场景。",
+      "translated_at": "2026-05-20T05:08:05.018Z"
+    },
+    "skill:ruvnet-claude-flow-agent-ops-cicd-github": {
+      "hash": "8f4f04548bb86dad",
+      "summary_zh": "这是一个专攻 GitHub 运维部署的智能体技能，让你能在 AI 助手中直接调用，轻松搞定代码的自动化构建、测试与发布等任务。",
+      "translated_at": "2026-05-20T05:08:09.333Z"
+    },
+    "skill:ruvnet-claude-flow-agent-pagerank-analyzer": {
+      "hash": "fa010a43853a598e",
+      "summary_zh": "这是一个供AI助手调用的网页权重分析插件，能帮你快速查询网页的PageRank值，适合SEO优化或评估网站影响力的场景。",
+      "translated_at": "2026-05-20T05:08:16.200Z"
+    },
+    "skill:ruvnet-claude-flow-agent-performance-analyzer": {
+      "hash": "13cc0ec7099c3e4f",
+      "summary_zh": "这是一个可调用的性能分析代理技能，适合需要集成自动化性能诊断的场景，帮你快速排查系统瓶颈。",
+      "translated_at": "2026-05-20T05:08:29.704Z"
+    },
+    "skill:ruvnet-claude-flow-agent-performance-benchmarker": {
+      "hash": "5c707aac6a874f7d",
+      "summary_zh": "这是一个让智能体自动执行性能基准测试的技能，能帮你省去手动压测和跑分的麻烦，适合需要自动化评估系统性能的场景。",
+      "translated_at": "2026-05-20T05:08:39.534Z"
+    },
+    "skill:ruvnet-claude-flow-agent-performance-monitor": {
+      "hash": "e4f20ef57a1d4e71",
+      "summary_zh": "这是一个专注性能监控的智能体技能，能帮你快速调用监控功能，随时掌握系统运行状况。",
+      "translated_at": "2026-05-20T05:08:51.151Z"
+    },
+    "skill:ruvnet-claude-flow-agent-payments": {
+      "hash": "69571563b58e0519",
+      "summary_zh": "这是一个让AI代理具备支付能力的工具，能直接调用完成付款操作，适合在智能助手或自动化流程中需要闭环交易结算的场景。",
+      "translated_at": "2026-05-20T05:08:57.659Z"
+    },
+    "skill:ruvnet-claude-flow-agent-performance-optimizer": {
+      "hash": "822c24c2f370a65c",
+      "summary_zh": "这是一个专做性能优化的智能体技能，适合需要自动化调优系统、提升运行效率的场景。",
+      "translated_at": "2026-05-20T05:08:58.681Z"
+    },
+    "skill:ruvnet-claude-flow-agent-planner": {
+      "hash": "15bb02f3405b12a0",
+      "summary_zh": "这是一个专给AI智能体用的任务规划插件，能帮智能体把复杂任务拆解成具体步骤，特别适合需要多步推理或搭建自动化工作流的场景。",
+      "translated_at": "2026-05-20T05:09:15.601Z"
+    },
+    "skill:ruvnet-claude-flow-agent-production-validator": {
+      "hash": "7cff516c19c5e3f5",
+      "summary_zh": "这是一个专用于生产环境校验的AI代理技能，能帮你在自动化流程中快速验证数据或配置是否符合上线标准，防止问题流入生产环境。",
+      "translated_at": "2026-05-20T05:09:17.634Z"
+    },
+    "skill:ruvnet-claude-flow-agent-pr-manager": {
+      "hash": "9b728b5a736dfd50",
+      "summary_zh": "这是一个管理代码合并请求的智能体技能，适合开发者接入AI工作流来自动处理PR，提升代码审查与合并效率。",
+      "translated_at": "2026-05-20T05:09:22.182Z"
+    },
+    "skill:ruvnet-claude-flow-agent-project-board-sync": {
+      "hash": "868edb510be9a231",
+      "summary_zh": "这是一个同步项目看板的智能体插件，能帮你自动跨看板同步任务进度，告别手动搬运，适合需要在不同项目管理工具间保持数据一致的场景。",
+      "translated_at": "2026-05-20T05:09:36.291Z"
+    },
+    "skill:ruvnet-claude-flow-agent-pseudocode": {
+      "hash": "f1b8c7e148f65a54",
+      "summary_zh": "这是一个专写伪代码的智能体技能，能帮你把模糊的算法思路快速转成结构化伪代码，适合算法设计和逻辑梳理时使用。",
+      "translated_at": "2026-05-20T05:09:38.433Z"
+    },
+    "skill:ruvnet-claude-flow-agent-queen-coordinator": {
+      "hash": "26f10e0e85e929d7",
+      "summary_zh": "这是一个AI代理调度插件，能让主代理统筹协调其他子代理，适合需要多个AI助手分工协作的复杂任务场景。",
+      "translated_at": "2026-05-20T05:09:42.761Z"
+    },
+    "skill:ruvnet-claude-flow-agent-quorum-manager": {
+      "hash": "5057cb4ec6e57448",
+      "summary_zh": "这是一个用于调用共识管理器的智能体技能，适合在分布式系统或多节点协作中需要快速达成投票与共识决策的场景。",
+      "translated_at": "2026-05-20T05:10:01.842Z"
+    },
+    "skill:ruvnet-claude-flow-agent-raft-manager": {
+      "hash": "3bd5830c220bd3ce",
+      "summary_zh": "这是一个用来管理Raft集群的智能体技能，适合需要让AI代理直接执行Raft管理操作的自动化场景。",
+      "translated_at": "2026-05-20T05:10:07.410Z"
+    },
+    "skill:ruvnet-claude-flow-agent-refinement": {
+      "hash": "7675616eff5f80b1",
+      "summary_zh": "这是一个用于打磨和优化内容的智能体技能，能解决生成结果粗糙的问题，适合需要对文本或代码进行反复润色与迭代改进的场景。",
+      "translated_at": "2026-05-20T05:10:11.870Z"
+    },
+    "skill:ruvnet-claude-flow-agent-release-manager": {
+      "hash": "88d9ad92c9703fd9",
+      "summary_zh": "这是一个专为AI代理打造的发布管理技能插件，能让你在对话或自动化流程中直接调用，轻松搞定软件发布任务。",
+      "translated_at": "2026-05-20T05:10:20.731Z"
+    },
+    "skill:ruvnet-claude-flow-agent-release-swarm": {
+      "hash": "46b1c84205160b8d",
+      "summary_zh": "它是 release-swarm 的代理技能，能让你通过命令直接调用发布功能，适合需要自动化触发群发部署的场景。",
+      "translated_at": "2026-05-20T05:10:29.031Z"
+    },
+    "skill:ruvnet-claude-flow-agent-repo-architect": {
+      "hash": "4e753b3ebecd30c2",
+      "summary_zh": "这是一款专用于规划代码仓库结构的智能体技能，能帮你自动梳理和设计项目架构，适合在项目初始化或重构代码时调用。",
+      "translated_at": "2026-05-20T05:10:36.369Z"
+    },
+    "skill:ruvnet-claude-flow-agent-researcher": {
+      "hash": "0ffaea2048ed717a",
+      "summary_zh": "专为AI代理打造的研究技能插件，能帮你自动搜集和整理资料，适合需要深度调研与信息检索的场景。",
+      "translated_at": "2026-05-20T05:10:37.543Z"
+    },
+    "skill:ryoppippi-ccusage-ast-grep": {
+      "hash": "536de3bbb15316ee",
+      "summary_zh": "这是一个基于语法树的结构化代码搜索工具，能帮你精准匹配特定代码写法，特别适合验证代码迁移或编写复杂的代码搜索指令。",
+      "translated_at": "2026-05-20T05:10:52.350Z"
+    },
+    "skill:ryoppippi-ccusage-bun-cpu-profile": {
+      "hash": "e2d9f1c7a6705e9b",
+      "summary_zh": "这是一个分析 Bun 环境下 TS/JS 脚本运行性能的工具，专门用来定位启动、基准测试或打包过程中的耗时瓶颈，帮你优化代码执行速度。",
+      "translated_at": "2026-05-20T05:11:02.343Z"
+    },
+    "skill:ryoppippi-ccusage-bun-api-reference": {
+      "hash": "f4506295c6870bd6",
+      "summary_zh": "它能在你调用或修改Bun运行时接口前，自动查阅本地类型文档，帮你快速确认API的正确用法，避免出错。",
+      "translated_at": "2026-05-20T05:11:02.730Z"
+    },
+    "skill:ryoppippi-ccusage-ccusage-agent-sources": {
+      "hash": "a256344f06d907ae",
+      "summary_zh": "这是一份开发指南，指导如何用Rust开发用量统计代理，帮开发者搞定日志读取、Token计费和报告生成等模块的源码编写与适配工作。",
+      "translated_at": "2026-05-20T05:11:25.279Z"
+    },
+    "skill:ryoppippi-ccusage-ccusage-docs": {
+      "hash": "951aeca6bee77a27",
+      "summary_zh": "这是一份项目文档编写的规范指南，当你要写用户手册、截配图、处理无障碍适配、规范Markdown格式或调整代码示例复制行为时，可以参考它来统一标准、高效出稿。",
+      "translated_at": "2026-05-20T05:11:31.063Z"
+    },
+    "skill:ryoppippi-ccusage-ccusage-development": {
+      "hash": "56b359a05d39bfb8",
+      "summary_zh": "专为该单体仓库打造的开发指南，适合在处理模块打包、配置共享或依赖维护等日常开发场景下参考，帮你理清并规范开发流程。",
+      "translated_at": "2026-05-20T05:11:31.837Z"
+    },
+    "skill:ryoppippi-ccusage-ccusage-rust-profile": {
+      "hash": "79a9dbb88acacfbd",
+      "summary_zh": "用来分析原生Rust命令行工具的性能，适合在排查卡顿、验证优化等性能调优场景下使用。",
+      "translated_at": "2026-05-20T05:12:13.108Z"
+    },
+    "skill:ryoppippi-ccusage-ccusage-testing": {
+      "hash": "dd670624733f9e40",
+      "summary_zh": "这是一个Rust测试指南，适合在编写或修复测试及处理兼容性问题时查阅，帮你快速理清思路并规范流程。",
+      "translated_at": "2026-05-20T05:12:15.122Z"
+    },
+    "skill:ryoppippi-ccusage-ccusage-rust": {
+      "hash": "c83817b7d9a6b1c4",
+      "summary_zh": "这是一份指导 Rust 实现的开发规范，解决跨语言重写时的架构与一致性问题，适合在编写底层代码、原生打包、模块设计或对齐 TypeScript 逻辑等场景下参考。",
+      "translated_at": "2026-05-20T05:12:17.932Z"
+    },
+    "skill:ryoppippi-ccusage-cmux-debug": {
+      "hash": "eeb2f4228b194dce",
+      "summary_zh": "这是一款终端界面调试工具，专门帮你解决命令行排版错乱、响应式表格异常、窗口尺寸不适配及长任务界面抓取等显示问题。",
+      "translated_at": "2026-05-20T05:12:43.247Z"
+    },
+    "skill:ryoppippi-ccusage-commit": {
+      "hash": "ab25b7679f667c92",
+      "summary_zh": "帮你生成符合约定式规范的原子化提交记录，解决代码提交粒度太粗、难以精准回退的问题，适合需要精细拆分代码块或写详细提交信息的场景。",
+      "translated_at": "2026-05-20T05:12:45.548Z"
+    },
+    "skill:ryoppippi-ccusage-ccusage-typescript": {
+      "hash": "17648481bc3fb5a2",
+      "summary_zh": "它是指导 ccusage TypeScript 开发与工具链配置的规范，适合在修改该项目代码、跑测试或编写脚本时参考，帮你统一开发标准。",
+      "translated_at": "2026-05-20T05:12:50.269Z"
+    },
+    "skill:ryoppippi-ccusage-fs-fixture": {
+      "hash": "2a64caed2cfd73dc",
+      "summary_zh": "这是一个文件系统测试辅助工具，适合需要临时文件、目录或软链接的测试场景，能自动创建并在用完后清理，省去手动管理测试数据的麻烦。",
+      "translated_at": "2026-05-20T05:13:18.652Z"
+    },
+    "skill:ryoppippi-ccusage-create-pr": {
+      "hash": "d22413bcac7cf7c5",
+      "summary_zh": "这是个自动化搞定PR全流程的工具，专治从建分支、推代码到等AI审查和CI通过这一路的繁琐操作，让你一口气推进到合并。",
+      "translated_at": "2026-05-20T05:13:24.243Z"
+    },
+    "skill:ryoppippi-ccusage-fix-ci": {
+      "hash": "8ccd4fe28ef5dc0f",
+      "summary_zh": "这是一个配合gh命令诊断并修复GitHub Actions报错的工具，专治PR构建失败，帮你快速拉日志、定位问题并验证。",
+      "translated_at": "2026-05-20T05:13:26.337Z"
+    },
+    "skill:ryoppippi-ccusage-skill-creator": {
+      "hash": "583539ca72925ca1",
+      "summary_zh": "这是一个引导创建和更新本地技能的工具，适合在添加或修改技能配置、脚本及路由时使用，帮你规范操作避免出错。",
+      "translated_at": "2026-05-20T05:13:48.335Z"
+    },
+    "skill:ryoppippi-ccusage-reduce-similarities": {
+      "hash": "c311a15b4c60aa43",
+      "summary_zh": "这是一个Rust代码查重工具，能帮你找出重复代码，特别适合在处理.rs文件、需要去重或寻找重构机会时使用。",
+      "translated_at": "2026-05-20T05:13:50.475Z"
+    },
+    "skill:ryoppippi-ccusage-tdd": {
+      "hash": "5d487dee67117054",
+      "summary_zh": "指导你实践t-wada风格的测试驱动开发，适合在写新功能、修Bug或重构时，要求严格坚持测试先行的场景。",
+      "translated_at": "2026-05-20T05:14:13.583Z"
+    },
+    "skill:ryoppippi-ccusage-pr-ai-review-workflow": {
+      "hash": "821b42c6c361733c",
+      "summary_zh": "这是一个用 gh 驱动 PR 审查闭环的工具。它能自动处理 AI 审查意见、修复代码并再次请求审查，省去手动交互的麻烦，适合想靠 AI 自动改代码并走完审查流程的开发场景。",
+      "translated_at": "2026-05-20T05:14:15.991Z"
+    },
+    "skill:ryoppippi-ccusage-typescript-style": {
+      "hash": "ec44ad3ad900940d",
+      "summary_zh": "一份TS和JS的编写与审查指南，适合在修改代码前查阅。帮你规范正则、类型处理和测试模拟等复杂场景的写法，让团队代码风格统一、审查更轻松。",
+      "translated_at": "2026-05-20T05:14:20.416Z"
+    },
+    "skill:seifbenayed-claude-code-sdk-browse": {
+      "hash": "27d36658b2deb332",
+      "summary_zh": "这是一款基于视觉反馈的浏览器自动化工具，能像真人一样操作网页。特别适合用来测试页面、填写表单、检查部署、验证UI等需要网页交互的场景。",
+      "translated_at": "2026-05-20T05:14:48.045Z"
+    },
+    "skill:seifbenayed-claude-code-sdk-commit": {
+      "hash": "1f5733a82cde3d96",
+      "summary_zh": "这是一个帮你自动写好 git 提交说明的工具。改完代码想快速保存，或者懒得费脑想提交词时，直接说句话就能生成规范的记录，省时省心。",
+      "translated_at": "2026-05-20T05:15:05.863Z"
+    },
+    "skill:seifbenayed-claude-code-sdk-chatgpt-search": {
+      "hash": "684eebd96a5bbd51",
+      "summary_zh": "这是一个能自动向ChatGPT提问并抓取完整回复的工具，帮你直接拿到结构化的对话内容及底层接口数据，适合需要批量抓取或程序化解析ChatGPT结果的场景。",
+      "translated_at": "2026-05-20T05:15:07.196Z"
+    },
+    "skill:seifbenayed-claude-code-sdk-debug": {
+      "hash": "dc20d6fb3621889b",
+      "summary_zh": "这是一个专门排查和调试问题的工具，适合在遇到报错、测试失败或程序行为异常时，帮你快速查明到底哪里出了毛病。",
+      "translated_at": "2026-05-20T05:15:12.656Z"
+    },
+    "skill:seifbenayed-claude-code-sdk-file-reading": {
+      "hash": "11287398beeb12b6",
+      "summary_zh": "这是一个智能读取调度工具，当上传文件未加载到上下文时，能根据格式自动匹配合适的读取方式，避免盲目解析二进制文件报错，适合处理各类格式附件的场景。",
+      "translated_at": "2026-05-20T05:15:35.407Z"
+    },
+    "skill:seifbenayed-claude-code-sdk-frontend-design": {
+      "hash": "b646b5a65086ada0",
+      "summary_zh": "帮你生成高质感、不落俗套的前端界面代码与UI设计，适合快速搭建网页、组件或应用界面的场景，轻松告别千篇一律的AI审美，直接产出生产级的高质量作品。",
+      "translated_at": "2026-05-20T05:15:40.796Z"
+    },
+    "skill:seifbenayed-claude-code-sdk-docx": {
+      "hash": "fc51d9e27a2291d6",
+      "summary_zh": "这是一个专门处理Word文档的工具，能帮你自动生成排版专业的复杂文档，也适合需要深度提取修改内容或处理批注的办公场景。",
+      "translated_at": "2026-05-20T05:15:45.793Z"
+    },
+    "skill:seifbenayed-claude-code-sdk-pdf-reading": {
+      "hash": "16d0a3376df55069",
+      "summary_zh": "这是一个专门读取和提取本地PDF内容的工具，适合需要直接从磁盘获取文件内部数据，或针对扫描件、表单等不同类型文档智能匹配读取策略的场景。",
+      "translated_at": "2026-05-20T05:16:04.236Z"
+    },
+    "skill:seifbenayed-claude-code-sdk-pptx": {
+      "hash": "cc4ba3552c927b5d",
+      "summary_zh": "这是一个专门处理PPT文件的工具，能帮你搞定演示文稿的生成、编辑与内容提取。适合需要自动化操作或批量处理幻灯片的场景。",
+      "translated_at": "2026-05-20T05:16:16.074Z"
+    },
+    "skill:seifbenayed-claude-code-sdk-product-self-knowledge": {
+      "hash": "bdbaed23574221e4",
+      "summary_zh": "这是一个Anthropic产品知识库，能帮你随时查阅Claude的各类细节。当回答关于Claude的具体问题、用SDK写代码或进行相关创作时，随时参考它就能确保信息准确无误。",
+      "translated_at": "2026-05-20T05:16:27.053Z"
+    },
+    "skill:seifbenayed-claude-code-sdk-pdf": {
+      "hash": "8f8da9c438752ffe",
+      "summary_zh": "这是一个全能的电子文档处理助手，能一站式解决从内容提取、页面调整到加密识别的各种难题，适合日常需要频繁处理这类格式文件的场景，轻松搞定繁杂操作。",
+      "translated_at": "2026-05-20T05:16:30.038Z"
+    },
+    "skill:seifbenayed-claude-code-sdk-review-pr": {
+      "hash": "5fe63fb8f6f89003",
+      "summary_zh": "这是一个代码审查助手，专门用来检查 PR 或分支的代码变更，帮你揪出里面的 Bug、安全漏洞和可优化的点，轻松把控代码质量。",
+      "translated_at": "2026-05-20T05:16:37.016Z"
+    },
+    "skill:seifbenayed-claude-code-sdk-simplify": {
+      "hash": "150935ceca454ac7",
+      "summary_zh": "这是个帮你审查并精简代码的工具。当项目代码臃肿难懂，需要清理冗余或降低复杂度来提升可读性时，用它最合适。",
+      "translated_at": "2026-05-20T05:16:54.746Z"
+    },
+    "skill:seifbenayed-claude-code-sdk-skill-creator": {
+      "hash": "c22f18bad86fd544",
+      "summary_zh": "这是一个帮你创建、修改和优化AI技能的工具。当你需要从零搭建技能、跑测试评估性能，或是优化技能描述提升触发准确率时，用它就对了。",
+      "translated_at": "2026-05-20T05:16:55.800Z"
+    },
+    "skill:seifbenayed-claude-code-sdk-xlsx": {
+      "hash": "ed26a5165f8cc008",
+      "summary_zh": "这是一个处理电子表格的工具，不管你是要新建、编辑还是整理表格数据，它都能帮你轻松搞定，特别适合需要频繁操作或转换表格文件的场景。",
+      "translated_at": "2026-05-20T05:17:28.385Z"
+    },
+    "skill:sethgammon-citadel-ascii-diagram": {
+      "hash": "01ab944e69eee5bd",
+      "summary_zh": "这是一个基于数学计算生成完美对齐字符图表的工具，彻底解决AI画图容易错位的问题，非常适合在纯文本文档里绘制架构图、流程图或时序图。",
+      "translated_at": "2026-05-20T05:17:52.298Z"
+    },
+    "skill:sethgammon-citadel-architect": {
+      "hash": "a46a1108252cc0f8",
+      "summary_zh": "它能将产品需求文档转化为可执行的开发方案，不仅为关键决策提供多方案评估，还能生成AI代理可直接落地的分步计划，适合需要从需求快速跨越到代码实现的项目前期。",
+      "translated_at": "2026-05-20T05:17:59.494Z"
+    },
+    "skill:sethgammon-citadel-archon": {
+      "hash": "8bc250269755bafb",
+      "summary_zh": "这是一个能跨会话持续工作的自主智能体，专门搞定耗时极长、需要分步拆解并记住进度的复杂大任务，让长线项目不再因对话中断而断档。",
+      "translated_at": "2026-05-20T05:17:59.768Z"
+    },
+    "skill:sethgammon-citadel-cost": {
+      "hash": "90f25d3f3e41f39c",
+      "summary_zh": "这是专为 Claude Code 打造的成本分析工具，能读取原生数据精准展示各项 API 开销与消耗速度，解决调用费用不透明的问题，适合需要精细化掌控预算的开发者。",
+      "translated_at": "2026-05-20T05:18:22.519Z"
+    },
+    "skill:sethgammon-citadel-create-app": {
+      "hash": "c50e028360b6182a",
+      "summary_zh": "这是一款根据一段描述自动生成应用的工具。它帮你搞定从需求、架构到代码的全流程并自动验证，不管从零建项目还是给老项目加功能，都能省去繁琐的规划与搭建。",
+      "translated_at": "2026-05-20T05:18:46.832Z"
+    },
+    "skill:sethgammon-citadel-create-skill": {
+      "hash": "1489c1f0ee80fae0",
+      "summary_zh": "它能通过交互问答，把你经常重复的操作自动提炼并固化为可复用的技能，非常适合用来将日常重复工作流标准化，但不适用于一次性任务。",
+      "translated_at": "2026-05-20T05:18:49.029Z"
+    },
+    "skill:sethgammon-citadel-autopilot": {
+      "hash": "c34c9d8de9069dff",
+      "summary_zh": "这是一条全自动任务流水线。只需把需求丢进指定目录，它就会自动拆解新点子，并从调研、规划一路推进到开发和验证，省去手动跟进的麻烦，适合想法快速落地的开发场景。",
+      "translated_at": "2026-05-20T05:18:55.734Z"
+    },
+    "skill:sethgammon-citadel-daemon": {
+      "hash": "133649dd018ffc10",
+      "summary_zh": "它是一种让AI任务全天候自主运行的模式，通过自动接续会话解决长任务因上下文耗尽而中断的问题，适合需要AI连续无人值守干活的长时任务场景。",
+      "translated_at": "2026-05-20T05:19:11.228Z"
+    },
+    "skill:sethgammon-citadel-dashboard": {
+      "hash": "c9e2cea7d3206a6b",
+      "summary_zh": "这是一款实时监控面板，能整合底层运行数据让你一眼看清框架当前状态，解决信息分散难把控的问题，适合随时快速掌握全局进度。",
+      "translated_at": "2026-05-20T05:19:33.988Z"
+    },
+    "skill:sethgammon-citadel-do": {
+      "hash": "2cdb094fd7521960",
+      "summary_zh": "这是一个智能路由调度系统，能自动分析用户意图的复杂度和需求，把任务精准派发给最划算的处理模块，避免大材小用，适合作为多层级系统的统一入口。",
+      "translated_at": "2026-05-20T05:19:39.157Z"
+    },
+    "skill:sethgammon-citadel-design": {
+      "hash": "94a151f2f77cd029",
+      "summary_zh": "一款保障视觉一致性的设计规范工具，适合新老项目统一视觉语言。它能自动生成并维护规范，帮你把好样式关，防止设计在迭代中跑偏。",
+      "translated_at": "2026-05-20T05:19:58.256Z"
+    },
+    "skill:sethgammon-citadel-evolve": {
+      "hash": "934ffae08d38c76e",
+      "summary_zh": "这是一个智能迭代优化控制器，能自动诊断表现不佳的原因，验证假设后执行针对性改进，并在预算内持续循环。它还会不断积累经验库，适合需要自动化持续调优和策略寻优的场景。",
+      "translated_at": "2026-05-20T05:20:12.715Z"
+    },
+    "skill:sethgammon-citadel-doc-gen": {
+      "hash": "7c6be60b25c4e020",
+      "summary_zh": "这是一款能针对代码各层级自动生成文档的工具，它会自动匹配项目现有风格，且拒绝只复述代码签名的废话，适合需要快速补全高质量、风格统一文档的开发者。",
+      "translated_at": "2026-05-20T05:20:13.747Z"
+    },
+    "skill:sethgammon-citadel-experiment": {
+      "hash": "0e8077b609946530",
+      "summary_zh": "这是一个自动试错的优化工具，它会不断尝试修改并用指标量化评估效果，自动保留有效改进、撤销失败变更。适合需要反复微调并对比量化结果的调优场景，省去手动折腾。",
+      "translated_at": "2026-05-20T05:20:31.095Z"
+    },
+    "skill:sethgammon-citadel-houseclean": {
+      "hash": "58f4298626cde8f1",
+      "summary_zh": "这是一个跨盘空间清理工具，能扫出吃硬盘的孤立git工作树、AI模型缓存和依赖包，并生成带迁移命令的优先清理方案，专治磁盘空间不足或工作树杂乱的问题。",
+      "translated_at": "2026-05-20T05:20:43.404Z"
+    },
+    "skill:sethgammon-citadel-fleet": {
+      "hash": "b5e08d39149bb860",
+      "summary_zh": "这是一款能调度多智能体分批并行协作的任务编排器，特别适合需要同时推进3个以上互不依赖的独立任务，以实现加速处理的场景。",
+      "translated_at": "2026-05-20T05:20:56.534Z"
+    },
+    "skill:sethgammon-citadel-improve": {
+      "hash": "ab9e8e376ef03e3f",
+      "summary_zh": "这是一个自主的质量优化循环，每次都从零评估目标并自动找出最关键的短板进行针对性改进，不断迭代直到达标，适合需要反复打磨、提升质量的场景。",
+      "translated_at": "2026-05-20T05:21:13.226Z"
+    },
+    "skill:sethgammon-citadel-infra-audit": {
+      "hash": "8e46c87c1d4336b1",
+      "summary_zh": "它能自动解析各类配置来梳理现有架构，帮你发现系统中缺失的基础组件，非常适合排查架构漏洞或生成全局清单。",
+      "translated_at": "2026-05-20T05:21:15.780Z"
+    },
+    "skill:sethgammon-citadel-learn": {
+      "hash": "c7044196c668959d",
+      "summary_zh": "它是个知识编译工具，能自动从项目复盘中提取经验和避坑指南，整理成结构化文档融入现有知识库，避免知识碎片化，适合团队复盘和经验沉淀。",
+      "translated_at": "2026-05-20T05:21:33.846Z"
+    },
+    "skill:sethgammon-citadel-live-preview": {
+      "hash": "35604657bc134222",
+      "summary_zh": "它能在组件开发时实时截图做视觉验证，帮你尽早揪出视觉偏差和隐藏缺陷，避免问题累积，非常适合边写代码边把控UI质量的场景。",
+      "translated_at": "2026-05-20T05:21:36.991Z"
+    },
+    "skill:sethgammon-citadel-map": {
+      "hash": "7e53dcfb234de683",
+      "summary_zh": "这是一款代码库结构索引生成器，能生成可检索的精简上下文供AI代理按需加载，从而大幅降低代码导航时的token消耗。",
+      "translated_at": "2026-05-20T05:21:58.731Z"
+    },
+    "skill:sethgammon-citadel-merge-review": {
+      "hash": "24fb3e78bafc8a5a",
+      "summary_zh": "这是一个代码合并预检工具，能提前发现分支间的文件冲突，自动规划安全的合并顺序并给出解决建议，专治多分支并行开发时的合并混乱与冲突难题。",
+      "translated_at": "2026-05-20T05:21:59.220Z"
+    },
+    "skill:sethgammon-citadel-marshal": {
+      "hash": "e7b57cce9cbe6a0b",
+      "summary_zh": "这是一个能自动把模糊需求拆解成可执行任务的智能调度器。它会自动结合代码和文档等上下文干活，只在卡壳时才找你确认，适合需要让AI高度自主、尽量少打扰人的场景。",
+      "translated_at": "2026-05-20T05:22:03.798Z"
+    },
+    "skill:sethgammon-citadel-postmortem": {
+      "hash": "84baf712f9040d43",
+      "summary_zh": "这是一个自动生成复盘报告的工具，通过分析日志自动总结故障原因、安全拦截记录和潜在规律，适合项目收尾或突发故障后快速梳理经验教训。",
+      "translated_at": "2026-05-20T05:22:18.996Z"
+    },
+    "skill:sethgammon-citadel-pr-watch": {
+      "hash": "da624e34ea7244f2",
+      "summary_zh": "这是一个本地命令行工具，能帮你盯着 PR 的 CI 状态，遇到报错就读日志自动修复，全部通过后还能自动合并，适合想省去手动排查 CI 失败麻烦的开发者。",
+      "translated_at": "2026-05-20T05:22:32.430Z"
+    },
+    "skill:sethgammon-citadel-organize": {
+      "hash": "a3cbdda50cf00237",
+      "summary_zh": "这是一个项目体检与目录管理工具，能检查文件是否放对位置、清理散落文件和冗余资源，并给出健康评分，专治项目结构混乱的问题。",
+      "translated_at": "2026-05-20T05:22:33.127Z"
+    },
+    "skill:sethgammon-citadel-prd": {
+      "hash": "547fd9003c2f772a",
+      "summary_zh": "把模糊的App想法生成结构化的产品需求文档。它会主动提问和调研竞品，帮你敲定功能范围与技术架构，适合从零规划项目、需要把想法梳理成可执行开发任务的场景。",
+      "translated_at": "2026-05-20T05:22:49.909Z"
+    },
+    "skill:sethgammon-citadel-qa": {
+      "hash": "ad50a4364693e593",
+      "summary_zh": "这是一个浏览器自动化测试工具，通过模拟真实用户操作来验证业务流程，适合Web应用的端到端测试，也可作为自动化流水线的阶段检查点。",
+      "translated_at": "2026-05-20T05:22:52.796Z"
+    },
+    "skill:sethgammon-citadel-refactor": {
+      "hash": "0f8381604a28d0cd",
+      "summary_zh": "这是一个能自动回滚的跨文件代码重构工具，通过测试把关确保不出错。适合需要大规模调整代码结构的场景，让你放心重构，再也不怕改出bug，出错还能自动恢复原状。",
+      "translated_at": "2026-05-20T05:23:02.226Z"
+    },
+    "skill:sethgammon-citadel-research": {
+      "hash": "6d14a1ef36c61176",
+      "summary_zh": "这款深度调研工具能把问题转化为带来源和可信度的结构化结论，它不替你做决定，只提供客观信息辅助下一步，适合需要精准资料支撑决策的场景。",
+      "translated_at": "2026-05-20T05:23:18.592Z"
+    },
+    "skill:sethgammon-citadel-review": {
+      "hash": "5fcb178afc57471c",
+      "summary_zh": "这是一种结构化的代码审查方法，把审查拆成五个独立步骤逐层把关，帮你全面排查各类隐患与缺陷，避免审查时顾此失彼，适合需要严控代码质量的开发团队。",
+      "translated_at": "2026-05-20T05:23:26.792Z"
+    },
+    "skill:sethgammon-citadel-research-fleet": {
+      "hash": "baadd86da6325c6e",
+      "summary_zh": "这是一个多角度并行研究工具，能派多个助手同时从不同方向调查同一问题，逐轮汇总提炼后输出综合简报，适合需要快速、全面拆解复杂问题的场景。",
+      "translated_at": "2026-05-20T05:23:31.591Z"
+    },
+    "skill:sethgammon-citadel-scaffold": {
+      "hash": "1ffbe15dae490bab",
+      "summary_zh": "它是个懂你项目规范的代码生成器，能自动识别现有代码风格，一键生成完全匹配的新文件并接入项目，免去手写样板代码和手动注册的繁琐，适合频繁新建模块的开发场景。",
+      "translated_at": "2026-05-20T05:23:43.004Z"
+    },
+    "skill:sethgammon-citadel-session-handoff": {
+      "hash": "88a13c5809ae5c09",
+      "summary_zh": "它能把当前会话提炼成结构化交接文档，记录工作进度、决策和待办，解决跨会话切换时上下文丢失的问题，适合需要无缝传递工作进度的场景。",
+      "translated_at": "2026-05-20T05:23:57.726Z"
+    },
+    "skill:sethgammon-citadel-schedule": {
+      "hash": "0a8bce26d5931230",
+      "summary_zh": "这是一个管理定时任务的工具，能处理周期或一次性任务，特别适合设备休眠或断网后任务仍需在云端继续执行的可靠调度场景。",
+      "translated_at": "2026-05-20T05:23:58.679Z"
+    },
+    "skill:sethgammon-citadel-telemetry": {
+      "hash": "b7b969abd09b5fd7",
+      "summary_zh": "这是一个统一的遥测控制中心，能集中查看花费明细和系统活动，并一键调整设置，帮你随时搞清开销和遥测状态。",
+      "translated_at": "2026-05-20T05:24:24.296Z"
+    },
+    "skill:sethgammon-citadel-systematic-debugging": {
+      "hash": "8493c4b990b496a1",
+      "summary_zh": "这套四阶段排错框架强制先查后改，并在两次试错失败后紧急叫停，专治盲目瞎试和改A坏B，适合需要理性定位根因的复杂调试场景。",
+      "translated_at": "2026-05-20T05:24:26.748Z"
+    },
+    "skill:sethgammon-citadel-setup": {
+      "hash": "53c44a485c237947",
+      "summary_zh": "这是一款首次运行引导工具，帮新用户告别繁琐配置。它能自动检测环境并完成初始化，还能在真实代码跑演示，让你最快半分钟零门槛上手，适合初次使用需要快速入门的场景。",
+      "translated_at": "2026-05-20T05:24:45.602Z"
+    },
+    "skill:sethgammon-citadel-test-gen": {
+      "hash": "d4f51d7749d28c23",
+      "summary_zh": "这是一款自动化测试生成与校验工具，能基于项目自身的框架和模式，自动生成并验证覆盖全场景的测试用例，帮你彻底告别手写繁琐测试的麻烦。",
+      "translated_at": "2026-05-20T05:25:08.170Z"
+    },
+    "skill:sethgammon-citadel-unharness": {
+      "hash": "95d3986b274a71db",
+      "summary_zh": "这是一款帮你安全卸载Citadel的工具，解决直接删除会丢失核心数据的问题。它能将重要状态导出为文档并清理残留文件，还支持重装时一键恢复。",
+      "translated_at": "2026-05-20T05:25:12.328Z"
+    },
+    "skill:sethgammon-citadel-triage": {
+      "hash": "1a719cf6a4cd1e2e",
+      "summary_zh": "这是专查 GitHub Issue 和 PR 的助手，能自动定位代码根因、审查 PR 并提供带行号的修复建议，甚至直接改代码。适合解决开源项目工单积压，不适合常规代码审查。",
+      "translated_at": "2026-05-20T05:25:16.874Z"
+    },
+    "skill:sethgammon-citadel-watch": {
+      "hash": "ca81c9341f6d81e7",
+      "summary_zh": "它能监控工作目录的文件变动和特定标记，并自动触发相应的批量处理。适合需要根据文件变更自动响应的场景，但不适合单次检查或需人工判断的任务。",
+      "translated_at": "2026-05-20T05:25:33.244Z"
+    },
+    "skill:sethgammon-citadel-verify": {
+      "hash": "139984d0f6c4284e",
+      "summary_zh": "这是一个在运行中自测 Citadel hook 管道健康状态的诊断工具，通过模拟真实操作验证各 hook 是否正常触发和记录，并输出明确通过或失败的报告，适合快速排查管道故障。",
+      "translated_at": "2026-05-20T05:25:40.510Z"
+    },
+    "skill:sethgammon-citadel-workspace": {
+      "hash": "cceb639af5d804a1",
+      "summary_zh": "这是一个跨多代码库的任务协调器，以仓库而非文件为工作单元，能在共享上下文中统一调度跨库操作，解决多仓库协同开发时的同步与执行难题。",
+      "translated_at": "2026-05-20T05:26:02.777Z"
+    },
+    "skill:sethgammon-citadel-wiki": {
+      "hash": "c95f77b39be5cf20",
+      "summary_zh": "这是一款让大模型当图书管理员的Markdown知识库。它能自动整理散落资料并串联索引，免去搭向量库的麻烦，适合想用AI轻松打理和检索本地笔记的场景。",
+      "translated_at": "2026-05-20T05:26:04.238Z"
+    },
+    "skill:severity1-claude-code-auto-memory-memory-processor": {
+      "hash": "003bb191a9457ff8",
+      "summary_zh": "这是一个在代码修改后自动同步项目记忆的工具。它能分析文件变动来更新 CLAUDE.md 的管理区域，清理过时指令，确保项目的上下文记忆始终与最新代码保持一致。",
+      "translated_at": "2026-05-20T05:26:25.273Z"
+    },
+    "skill:sickn33-antigravity-awesome-skills-00-andruia-consultant": {
+      "hash": "a39488ed738d5650",
+      "summary_zh": "它是专为西语AI项目打造的技术顾问，能帮你诊断项目现状并制定最优实施路线图，适合需要梳理开发方向的场景。",
+      "translated_at": "2026-05-20T05:26:49.379Z"
+    },
+    "skill:severity1-claude-code-auto-memory-codebase-analyzer": {
+      "hash": "4e89f915a384fce0",
+      "summary_zh": "这是一个代码结构分析工具，适合在初始化项目记忆或生成 CLAUDE.md 时使用。它能自动扫描代码库并按模板输出文件，帮你快速为 AI 建立项目上下文。",
+      "translated_at": "2026-05-20T05:26:59.225Z"
     }
   }
 }

@@ -16,10 +16,11 @@
     "url": "https://github.com/severity1/claude-code-auto-memory/blob/main/skills/memory-processor/SKILL.md",
     "path": "skills/memory-processor/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-20T00:32:22.769Z",
+    "discovered_at": "2026-05-20T04:50:40.087Z",
     "stars": 145,
     "language": "Python",
     "pushed_at": "2026-04-18T03:09:56Z",
     "license": "MIT"
-  }
+  },
+  "summary_zh": "这是一个在代码修改后自动同步项目记忆的工具。它能分析文件变动来更新 CLAUDE.md 的管理区域，清理过时指令，确保项目的上下文记忆始终与最新代码保持一致。"
 }
