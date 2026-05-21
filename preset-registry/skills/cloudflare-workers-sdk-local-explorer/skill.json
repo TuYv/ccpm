@@ -1,0 +1,25 @@
+{
+  "id": "cloudflare-workers-sdk-local-explorer",
+  "name": "local-explorer",
+  "description": "How to add products/resources to the local explorer or local API. Use when implementing new local APIs, or UI routes under packages/miniflare/src/workers/local-explorer or packages/local-explorer-ui.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "cloudflare",
+  "install_path": ".claude/skills/local-explorer/SKILL.md",
+  "source": {
+    "repo": "cloudflare/workers-sdk",
+    "url": "https://github.com/cloudflare/workers-sdk/blob/main/.opencode/skills/local-explorer/SKILL.md",
+    "path": ".opencode/skills/local-explorer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-21T16:57:05.961Z",
+    "stars": 4078,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-21T16:32:26Z",
+    "license": "Apache-2.0"
+  }
+}
