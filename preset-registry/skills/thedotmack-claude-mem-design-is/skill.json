@@ -1,0 +1,25 @@
+{
+  "id": "thedotmack-claude-mem-design-is",
+  "name": "design-is",
+  "description": "Audit a design against Dieter Rams' ten \"Good design is...\" principles, then hand off a /make-plan prompt for one of three outcomes — new design, refine design, or redesign. Use when the user says \"audit this design\", \"design review\", \"check this UI against Rams\", \"is this UI good\", \"critique this design\", \"design audit\", or asks for a critique that should lead to a plan.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "thedotmack",
+  "install_path": ".claude/skills/design-is/SKILL.md",
+  "source": {
+    "repo": "thedotmack/claude-mem",
+    "url": "https://github.com/thedotmack/claude-mem/blob/main/plugin/skills/design-is/SKILL.md",
+    "path": "plugin/skills/design-is/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-21T10:17:23.303Z",
+    "stars": 77173,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-21T08:48:59Z",
+    "license": "Apache-2.0"
+  }
+}
