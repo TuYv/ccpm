@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-05-21T10:21:23.594Z",
+  "updated_at": "2026-05-21T13:48:55.914Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -1063,9 +1063,9 @@
       "translated_at": "2026-05-12T07:00:09.092Z"
     },
     "preset:agentseal-codeburn": {
-      "hash": "067c62a328ebd8f4",
-      "summary_zh": "这是个交互式终端看板，专门追踪AI编程工具的Token消耗与花费，帮你搞清预算到底花在哪了，适合需要监控Cursor或Claude开发成本的场景。",
-      "translated_at": "2026-05-12T07:00:24.357Z"
+      "hash": "d49019f33c36860a",
+      "summary_zh": "一个本地运行的终端仪表盘，专门统计 Claude Code、Codex、Cursor 等 AI 编程工具的 token 消耗和花费，按任务、模型、项目细分账单，适合想搞清楚 AI 编码预算到底烧在哪里的开发者。",
+      "translated_at": "2026-05-21T13:48:50.185Z"
     },
     "preset:agricidaniel-claude-ads": {
       "hash": "2917aca02746e258",
@@ -1403,9 +1403,9 @@
       "translated_at": "2026-05-12T07:16:57.899Z"
     },
     "preset:haunchen-n8n-skills": {
-      "hash": "c06c36dde1af2c50",
-      "summary_zh": "这是一套让AI助手直接看懂并操作n8n的技能包，适合需要AI辅助快速搭建工作流或查询节点用法的场景，能帮你大幅省去手动摸索的时间。",
-      "translated_at": "2026-05-12T07:17:19.332Z"
+      "hash": "f8220820758d12b2",
+      "summary_zh": "一套给 AI 助手用的 n8n 知识包，内置 545 个节点的文档和 20 个常用模板，让 Claude 等助手能直接帮你查节点、推荐组合、搭建工作流，省去翻文档的时间。",
+      "translated_at": "2026-05-21T13:48:51.919Z"
     },
     "preset:heygen-com-hyperframes": {
       "hash": "e1ffee0d06f6fe0c",
@@ -9663,9 +9663,9 @@
       "translated_at": "2026-05-20T00:55:00.076Z"
     },
     "bundle:thedotmack-claude-mem": {
-      "hash": "90c0e72bd6d92b0f",
-      "summary_zh": "给AI代理装上记忆和工程大脑。它让AI能跨会话记住项目上下文、深度理解代码，并自主完成从规划、执行到监控的完整开发流程，解决AI健忘和无法独立干长线任务的痛点。",
-      "translated_at": "2026-05-20T00:55:13.054Z"
+      "hash": "2360d4696290721d",
+      "summary_zh": "这套合集围绕 claude-mem 的持久化记忆打造完整工作流，从理解代码库、规划方案、分阶段执行到搜索历史记忆和盯 PR，让 AI agent 跨会话不丢上下文，把零散技能串成一条可复用的协作链路。",
+      "translated_at": "2026-05-21T13:48:45.819Z"
     },
     "bundle:ruvnet-claude-flow": {
       "hash": "397a8d193e80f241",
@@ -13871,6 +13871,21 @@
       "hash": "8b6d864b0a1f58e2",
       "summary_zh": "这是一款3D与机器人模型查看器，能直观检查各类CAD和机器人描述文件，并生成审阅链接与快照，特别适合模型生成后的快速预览与协作交接。",
       "translated_at": "2026-05-20T21:22:40.153Z"
+    },
+    "skill:thedotmack-claude-mem-design-is": {
+      "hash": "4b7b1bac51e8885a",
+      "summary_zh": "用迪特·拉姆斯的十条「好设计」原则审视界面，给出评估结论，并衔接生成新设计、优化或重做的执行计划，适合做 UI 评审或求一份能落地的改进建议时使用。",
+      "translated_at": "2026-05-21T13:48:53.113Z"
+    },
+    "skill:thedotmack-claude-mem-oh-my-issues": {
+      "hash": "fbc08aa11664bf77",
+      "summary_zh": "把堆积的 GitHub issue 按根因聚类，整合成少量主计划 issue，自动给子 issue 留标准化评论并跳转，还能打包架构级修复 PR 一次性关闭整组问题，适合需要批量分诊、去重和梳理路线图的项目维护者。",
+      "translated_at": "2026-05-21T13:48:55.703Z"
+    },
+    "skill:thedotmack-claude-mem-weekly-digests": {
+      "hash": "e480d5958477ae3d",
+      "summary_zh": "把项目的 claude-mem 时间线按 ISO 周切分，逐周生成带上下文衔接的叙事章节，适合需要梳理项目历史、做周报回顾或连续时间线故事时使用。",
+      "translated_at": "2026-05-21T13:48:55.913Z"
     }
   }
 }
