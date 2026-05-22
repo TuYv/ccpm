@@ -2,7 +2,7 @@
   "id": "wshobson-agents-context-driven-development",
   "name": "context-driven-development",
   "description": ">- Creates and maintains project context artifacts (product.md, tech-stack.md, workflow.md, tracks.md) in a `conductor/` directory. Scaffolds new projects from scratch, extracts context from existing codebases, validates artifact consistency before implementation, and synchronizes documents as the project evolves. Use when setting up a project, creating or updating product docs, managing a tech stack file, defining development workflows, tracking work units, onboarding to an existing codebase, o",
-  "category": "开发编程",
+  "category": "文档写作",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/wshobson/agents/blob/main/plugins/conductor/skills/context-driven-development/SKILL.md",
     "path": "plugins/conductor/skills/context-driven-development/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-22T12:08:26.622Z",
-    "stars": 35790,
+    "discovered_at": "2026-05-22T15:31:38.334Z",
+    "stars": 35794,
     "language": "Python",
-    "pushed_at": "2026-05-22T12:00:58Z",
+    "pushed_at": "2026-05-22T15:22:18Z",
     "license": "MIT"
   },
   "summary_zh": "这是一个项目上下文管理工具，帮你统一维护并同步产品、技术栈及工作流等核心文档，解决文档散落或过时的问题，适合项目初始化、提取现有代码上下文及新人入职。"

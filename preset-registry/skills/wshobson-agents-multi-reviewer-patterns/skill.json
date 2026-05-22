@@ -2,7 +2,7 @@
   "id": "wshobson-agents-multi-reviewer-patterns",
   "name": "multi-reviewer-patterns",
   "description": "Coordinate parallel code reviews across multiple quality dimensions with finding deduplication, severity calibration, and consolidated reporting. Use this skill when organizing multi-reviewer code reviews, calibrating finding severity, or consolidating review results.",
-  "category": "开发编程",
+  "category": "文档写作",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/wshobson/agents/blob/main/plugins/agent-teams/skills/multi-reviewer-patterns/SKILL.md",
     "path": "plugins/agent-teams/skills/multi-reviewer-patterns/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-22T12:08:22.671Z",
-    "stars": 35790,
+    "discovered_at": "2026-05-22T15:31:32.862Z",
+    "stars": 35794,
     "language": "Python",
-    "pushed_at": "2026-05-22T12:00:58Z",
+    "pushed_at": "2026-05-22T15:22:18Z",
     "license": "MIT"
   },
   "summary_zh": "这是一套多人代码审查协调方案，能把各路审查结果去重、统一问题严重级别并出汇总报告，解决多人审查标准不一、结果难整合的痛点，适合需要多维度并行审查代码的团队。"

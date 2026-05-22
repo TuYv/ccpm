@@ -2,7 +2,7 @@
   "id": "wshobson-agents-workflow-patterns",
   "name": "workflow-patterns",
   "description": "Use this skill when implementing tasks according to Conductor's TDD workflow, handling phase checkpoints, managing git commits for tasks, or understanding the verification protocol.",
-  "category": "开发编程",
+  "category": "文档写作",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/wshobson/agents/blob/main/plugins/conductor/skills/workflow-patterns/SKILL.md",
     "path": "plugins/conductor/skills/workflow-patterns/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-22T12:08:26.850Z",
-    "stars": 35790,
+    "discovered_at": "2026-05-22T15:31:38.640Z",
+    "stars": 35794,
     "language": "Python",
-    "pushed_at": "2026-05-22T12:00:58Z",
+    "pushed_at": "2026-05-22T15:22:18Z",
     "license": "MIT"
   },
   "summary_zh": "这是一套专为Conductor的TDD工作流打造的开发指南，帮你轻松搞定阶段检查、代码提交与验证流程，让开发过程更规范有序。"
