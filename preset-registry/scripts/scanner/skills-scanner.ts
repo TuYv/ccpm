@@ -4,23 +4,24 @@ import { existsSync } from "node:fs";
 import { basename, dirname, join } from "node:path";
 import { parseFrontmatter } from "./frontmatter.js";
 import { fetchReadme } from "./searcher.js";
+import { classifySkill } from "./classify.js";
 
 export interface SkillRepo {
   owner: string;
   name: string;
   branch: string;
-  category: string;
 }
 
 /**
  * Pre-configured skill source repos (mirrored after CC Switch's defaults).
- * Each repo is walked recursively for SKILL.md files.
+ * Each repo is walked recursively for SKILL.md files. Topic category is derived
+ * per-skill via classifySkill(), not per-repo.
  */
 export const SKILL_REPOS: SkillRepo[] = [
-  { owner: "anthropics", name: "skills", branch: "main", category: "Anthropic 官方" },
-  { owner: "ComposioHQ", name: "awesome-claude-skills", branch: "master", category: "Composio 社区" },
-  { owner: "cexll", name: "myclaude", branch: "master", category: "社区精选" },
-  { owner: "JimLiu", name: "baoyu-skills", branch: "main", category: "社区精选" },
+  { owner: "anthropics", name: "skills", branch: "main" },
+  { owner: "ComposioHQ", name: "awesome-claude-skills", branch: "master" },
+  { owner: "cexll", name: "myclaude", branch: "master" },
+  { owner: "JimLiu", name: "baoyu-skills", branch: "main" },
 ];
 
 const MAX_SKILLS_PER_REPO = 60;
@@ -157,7 +158,7 @@ export async function discoverSkills(
         id,
         name,
         description: description.slice(0, 500),
-        category: repo.category,
+        category: classifySkill({ name, description, readme: meta.readme }),
         compatible_tools: ["claude", "codex", "gemini"],
         version,
         author: repo.owner,

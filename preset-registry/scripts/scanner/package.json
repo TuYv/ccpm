@@ -4,7 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "scan": "tsx index.ts"
+    "scan": "tsx index.ts",
+    "reclassify": "tsx reclassify-skills.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.30.0",
