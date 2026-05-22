@@ -64,6 +64,12 @@ const ChevronIcon = ({ open }: { open: boolean }) => (
   </svg>
 );
 
+const BackIcon = () => (
+  <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M10 13L5 8l5-5" />
+  </svg>
+);
+
 function scopeLabel(s: { kind: "global" } | { kind: "project"; path: string }): string {
   return s.kind === "global" ? "globally" : `in ${s.path}`;
 }
@@ -83,12 +89,8 @@ export default function SkillsPage() {
   const [importing, setImporting] = useState(false);
   const [readmeOpen, setReadmeOpen] = useState<Record<string, boolean>>({});
   const [groupByBundle, setGroupByBundle] = useState(true);
-  const [bundleExpanded, setBundleExpanded] = useState<Record<string, boolean>>({});
+  const [openBundleId, setOpenBundleId] = useState<string | null>(null);
   const [refreshing, setRefreshing] = useState(false);
-
-  function toggleBundle(id: string) {
-    setBundleExpanded((m) => ({ ...m, [id]: !m[id] }));
-  }
 
   function toggleReadme(id: string) {
     setReadmeOpen((m) => ({ ...m, [id]: !m[id] }));
@@ -142,24 +144,33 @@ export default function SkillsPage() {
     return { bundles: bundleEntries, singletons };
   }, [groupByBundle, activeCategory, filtered, bundles]);
 
+  // The bundle currently opened as a detail view (null = list view).
+  const openBundle = useMemo(() => {
+    if (!openBundleId || !index) return null;
+    const b = bundles.find((x) => x.id === openBundleId);
+    if (!b) return null;
+    const members = index.skills.filter((s) => b.skill_ids.includes(s.id));
+    return { bundle: b, members };
+  }, [openBundleId, bundles, index]);
+
   useEffect(() => {
     if (!focusId) return;
-    // When grouping is on, a bundle holding the focused skill may be collapsed,
-    // so the card isn't mounted yet. Expand it first; the effect re-runs after
-    // the resulting render and falls through to the scroll path.
-    if (groupedView) {
+    // When grouping is on, the focused skill may live inside a bundle that isn't
+    // rendered in the list view. Open that bundle's detail first; the effect
+    // re-runs after the render and falls through to the scroll path.
+    if (groupedView && !openBundleId) {
       const owning = groupedView.bundles.find((e) =>
         e.members.some((m) => m.id === focusId),
       );
-      if (owning && !bundleExpanded[owning.bundle.id]) {
-        setBundleExpanded((prev) => ({ ...prev, [owning.bundle.id]: true }));
+      if (owning) {
+        setOpenBundleId(owning.bundle.id);
         return;
       }
     }
     cardRefs.current[focusId]?.scrollIntoView({ behavior: "smooth", block: "center" });
     const t = setTimeout(() => setFocusId(null), 1500);
     return () => clearTimeout(t);
-  }, [focusId, setFocusId, groupedView, bundleExpanded]);
+  }, [focusId, setFocusId, groupedView, openBundleId]);
 
   const total = index?.skills.length ?? 0;
   const installedCount = installedIds.length;
@@ -372,18 +383,25 @@ export default function SkillsPage() {
   }
 
   function renderBundleCard(bundle: BundleMeta, members: SkillMeta[]) {
-    const isOpen = !!bundleExpanded[bundle.id];
     const installedInBundle = members.filter((m) => installedIds.includes(m.id)).length;
     return (
       <div
         key={`bundle-${bundle.id}`}
-        className="card"
+        className="card card-clickable"
+        role="button"
+        tabIndex={0}
+        onClick={() => setOpenBundleId(bundle.id)}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            setOpenBundleId(bundle.id);
+          }
+        }}
         style={{
           padding: 16,
           display: "flex",
           gap: 12,
-          gridColumn: isOpen ? "1 / -1" : undefined,
-          borderColor: isOpen ? "var(--accent)" : undefined,
+          cursor: "pointer",
         }}
       >
         <Glyph name={bundle.name} />
@@ -423,29 +441,18 @@ export default function SkillsPage() {
             <span>{bundle.repo}</span>
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: 10, marginTop: 10 }}>
-            <button
-              type="button"
-              onClick={() => toggleBundle(bundle.id)}
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: 6,
-                background: "transparent",
-                border: 0,
-                cursor: "pointer",
-                color: "var(--ink-2)",
-                padding: 0,
-                fontSize: 12,
-              }}
-            >
-              <ChevronIcon open={isOpen} />
-              <span>{isOpen ? "收起" : `展开 ${members.length} 个技能`}</span>
-            </button>
+            <span style={{ display: "flex", alignItems: "center", gap: 6, color: "var(--ink-2)", fontSize: 12 }}>
+              <span>查看 {members.length} 个技能</span>
+              <ChevronIcon open={false} />
+            </span>
             <span style={{ flex: 1 }} />
             <Button
               size="sm"
               variant="subtle"
-              onClick={() => openExternal(bundle.url)}
+              onClick={(e) => {
+                e.stopPropagation();
+                openExternal(bundle.url);
+              }}
               title={`在 GitHub 中打开 ${bundle.repo}`}
             >
               <span style={{ display: "inline-flex", alignItems: "center", gap: 6 }}>
@@ -454,18 +461,6 @@ export default function SkillsPage() {
               </span>
             </Button>
           </div>
-          {isOpen && (
-            <div
-              style={{
-                marginTop: 12,
-                display: "grid",
-                gridTemplateColumns: "repeat(2, 1fr)",
-                gap: 10,
-              }}
-            >
-              {members.map((m) => renderSkillCard(m))}
-            </div>
-          )}
         </div>
       </div>
     );
@@ -537,6 +532,85 @@ export default function SkillsPage() {
       />
 
       <div className="content" style={{ display: "grid", gap: 16 }}>
+        {openBundle ? (
+          <div style={{ display: "grid", gap: 16 }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+              <button
+                type="button"
+                onClick={() => setOpenBundleId(null)}
+                title="返回合集列表"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: 6,
+                  background: "transparent",
+                  border: "1px solid var(--hairline)",
+                  borderRadius: 8,
+                  cursor: "pointer",
+                  color: "var(--ink-2)",
+                  padding: "6px 12px",
+                  fontSize: 13,
+                }}
+              >
+                <BackIcon />
+                <span>返回</span>
+              </button>
+            </div>
+            <div className="card" style={{ padding: 16, display: "flex", gap: 12 }}>
+              <Glyph name={openBundle.bundle.name} />
+              <div style={{ flex: 1, minWidth: 0 }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
+                  <span style={{ fontSize: 16, fontWeight: 600, letterSpacing: "-0.01em" }}>
+                    {openBundle.bundle.name}
+                  </span>
+                  <Chip tone="blue">合集 · {openBundle.members.length} 个技能</Chip>
+                  {(() => {
+                    const n = openBundle.members.filter((m) => installedIds.includes(m.id)).length;
+                    return n > 0 ? (
+                      <Chip tone="green" dot>
+                        已装 {n}/{openBundle.members.length}
+                      </Chip>
+                    ) : null;
+                  })()}
+                  {openBundle.bundle.stars > 0 && (
+                    <Chip>★ {formatStars(openBundle.bundle.stars)}</Chip>
+                  )}
+                </div>
+                <p style={{ fontSize: 12.5, color: "var(--ink-2)", margin: "6px 0 10px", lineHeight: 1.5 }}>
+                  {openBundle.bundle.summary_zh ||
+                    `${openBundle.bundle.repo} 的 ${openBundle.members.length} 个配合使用的技能合集。`}
+                </p>
+                <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                  <span className="mono" style={{ fontSize: 11, color: "var(--ink-3)" }}>
+                    {openBundle.bundle.repo}
+                  </span>
+                  <span style={{ flex: 1 }} />
+                  <Button
+                    size="sm"
+                    variant="subtle"
+                    onClick={() => openExternal(openBundle.bundle.url)}
+                    title={`在 GitHub 中打开 ${openBundle.bundle.repo}`}
+                  >
+                    <span style={{ display: "inline-flex", alignItems: "center", gap: 6 }}>
+                      {GithubIcon}
+                      <span>GitHub</span>
+                    </span>
+                  </Button>
+                </div>
+              </div>
+            </div>
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(2, 1fr)",
+                gap: 12,
+              }}
+            >
+              {openBundle.members.map((m) => renderSkillCard(m))}
+            </div>
+          </div>
+        ) : (
+        <>
         <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
           {categories.map((c) => (
             <Tag
@@ -756,6 +830,8 @@ export default function SkillsPage() {
               );
             })}
           </div>
+        )}
+        </>
         )}
       </div>
 

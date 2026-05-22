@@ -282,6 +282,17 @@ body {
   border-radius: var(--radius-lg);
 }
 
+.card-clickable {
+  transition: border-color 150ms ease, box-shadow 150ms ease, transform 150ms ease;
+}
+.card-clickable:hover {
+  border-color: var(--accent);
+  box-shadow: 0 2px 12px var(--accent-soft);
+}
+.card-clickable:active {
+  transform: translateY(1px);
+}
+
 .section-label {
   font-size: 11px;
   font-weight: 600;
