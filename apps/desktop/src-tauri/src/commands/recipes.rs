@@ -2,7 +2,7 @@ use ccpm_core::{
     fs::{default_claude_dir, default_preset_manager_dir},
     recipes::{
         activate_recipe, deactivate_recipe, delete_recipe, get_active_for, get_recipe,
-        list_recipes, read_active, save_recipe, write_active,
+        list_recipes, read_active, save_recipe,
     },
     types::{ActiveState, Recipe, Scope},
 };

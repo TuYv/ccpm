@@ -2,7 +2,7 @@ use ccpm_core::{
     config::load_config,
     fs::default_preset_manager_dir,
     library::{
-        self, add_claude_md, add_mcp, add_skill, get_claude_md_files, get_meta, get_mcp_json,
+        add_claude_md, add_mcp, add_skill, get_claude_md_files, get_meta, get_mcp_json,
         get_skill_md, list_items, remove_item, ItemKind,
     },
     registry::{build_client, fetch_skill_content},
