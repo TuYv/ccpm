@@ -1,7 +1,7 @@
 {
   "id": "muratcankoylan-agent-skills-for-context-engineering-evaluation",
   "name": "evaluation",
-  "description": "This skill should be used when the user asks to \"evaluate agent performance\", \"build test framework\", \"measure agent quality\", \"create evaluation rubrics\", or mentions LLM-as-judge, multi-dimensional evaluation, agent testing, or quality gates for agent pipelines.",
+  "description": "This skill should be used when building agent evaluation systems: deterministic checks, regression suites, multi-dimensional rubrics, quality gates, production monitoring, baseline comparison, and outcome measurement for agent pipelines.",
   "category": "社区精选",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering/blob/main/skills/evaluation/SKILL.md",
     "path": "skills/evaluation/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-22T00:21:27.022Z",
-    "stars": 15850,
+    "discovered_at": "2026-05-22T04:42:08.973Z",
+    "stars": 15854,
     "language": "Python",
-    "pushed_at": "2026-05-19T06:23:21Z",
+    "pushed_at": "2026-05-22T04:31:12Z",
     "license": "MIT"
-  },
-  "summary_zh": "这是一个专门评估AI智能体表现的工具，适合需要测试智能体质量、搭建测试框架、制定多维评估标准，或给智能体流水线加质量门禁的场景。"
+  }
 }

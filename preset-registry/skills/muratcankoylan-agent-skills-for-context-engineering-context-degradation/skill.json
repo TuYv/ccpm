@@ -1,7 +1,7 @@
 {
   "id": "muratcankoylan-agent-skills-for-context-engineering-context-degradation",
   "name": "context-degradation",
-  "description": "This skill should be used when the user asks to \"diagnose context problems\", \"fix lost-in-middle issues\", \"debug agent failures\", \"understand context poisoning\", or mentions context degradation, attention patterns, context clash, context confusion, or agent performance degradation. Provides patterns for recognizing and mitigating context failures.",
+  "description": "This skill should be used for diagnosing and mitigating context degradation: lost-in-middle failures, context poisoning, context clash, context confusion, attention-pattern issues, and agent performance degradation caused by accumulated or conflicting context.",
   "category": "社区精选",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering/blob/main/skills/context-degradation/SKILL.md",
     "path": "skills/context-degradation/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-22T00:21:26.727Z",
-    "stars": 15850,
+    "discovered_at": "2026-05-22T04:42:08.710Z",
+    "stars": 15854,
     "language": "Python",
-    "pushed_at": "2026-05-19T06:23:21Z",
+    "pushed_at": "2026-05-22T04:31:12Z",
     "license": "MIT"
-  },
-  "summary_zh": "这是一款诊断和修复大模型上下文故障的工具，专门解决Agent因上下文污染、冲突或“迷失在中间”导致的性能下降问题，帮你识别并缓解上下文失效。"
+  }
 }

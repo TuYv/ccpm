@@ -1,7 +1,7 @@
 {
   "id": "muratcankoylan-agent-skills-for-context-engineering-filesystem-context",
   "name": "filesystem-context",
-  "description": "This skill should be used when the user asks to \"offload context to files\", \"implement dynamic context discovery\", \"use filesystem for agent memory\", \"reduce context window bloat\", or mentions file-based context management, tool output persistence, agent scratch pads, or just-in-time context loading.",
+  "description": "This skill should be used when agent work needs file-backed context: durable scratchpads, tool-output offloading, just-in-time discovery, cross-agent handoff files, filesystem memory, or cleanup policies for context stored outside the prompt.",
   "category": "社区精选",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering/blob/main/skills/filesystem-context/SKILL.md",
     "path": "skills/filesystem-context/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-22T00:21:27.120Z",
-    "stars": 15850,
+    "discovered_at": "2026-05-22T04:42:09.064Z",
+    "stars": 15854,
     "language": "Python",
-    "pushed_at": "2026-05-19T06:23:21Z",
+    "pushed_at": "2026-05-22T04:31:12Z",
     "license": "MIT"
-  },
-  "summary_zh": "专为 AI 智能体打造的记忆管理工具，把上下文交由本地文件存取，避免大模型上下文窗口塞爆，适合需要按需读取信息或暂存中间结果的场景。"
+  }
 }

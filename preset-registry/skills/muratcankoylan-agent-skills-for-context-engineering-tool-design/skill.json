@@ -1,7 +1,7 @@
 {
   "id": "muratcankoylan-agent-skills-for-context-engineering-tool-design",
   "name": "tool-design",
-  "description": "This skill should be used when the user asks to \"design agent tools\", \"create tool descriptions\", \"reduce tool complexity\", \"implement MCP tools\", or mentions tool consolidation, architectural reduction, tool naming conventions, or agent-tool interfaces.",
+  "description": "This skill should be used for the tool-interface layer of an agent system specifically: writing tool descriptions agents can route on, designing tool schemas and response formats, naming conventions, actionable error recovery messages, MCP server design, tool-set consolidation, and deciding when to add or remove an individual tool. Use this when the unit of work is a single tool or a set of tools. Route project-shape, pipeline architecture, and task-model-fit decisions to project-development; ro",
   "category": "社区精选",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering/blob/main/skills/tool-design/SKILL.md",
     "path": "skills/tool-design/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-22T00:21:27.640Z",
-    "stars": 15850,
+    "discovered_at": "2026-05-22T04:42:09.680Z",
+    "stars": 15854,
     "language": "Python",
-    "pushed_at": "2026-05-19T06:23:21Z",
+    "pushed_at": "2026-05-22T04:31:12Z",
     "license": "MIT"
-  },
-  "summary_zh": "专门帮AI代理设计工具的技能。当你需要开发MCP工具、写描述、规范接口，或是觉得现有工具太乱太复杂想精简合并时，用它就能轻松搞定。"
+  }
 }

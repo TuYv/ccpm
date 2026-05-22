@@ -1,7 +1,7 @@
 {
   "id": "muratcankoylan-agent-skills-for-context-engineering-bdi-mental-states",
   "name": "bdi-mental-states",
-  "description": "This skill should be used when the user asks to \"model agent mental states\", \"implement BDI architecture\", \"create belief-desire-intention models\", \"transform RDF to beliefs\", \"build cognitive agent\", or mentions BDI ontology, mental state modeling, rational agency, or neuro-symbolic AI integration.",
+  "description": "This skill should be used when modeling agent mental states with BDI concepts: beliefs, desires, intentions, RDF-to-belief transformations, rational agency traces, cognitive agents, BDI ontologies, and neuro-symbolic AI integration.",
   "category": "社区精选",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering/blob/main/skills/bdi-mental-states/SKILL.md",
     "path": "skills/bdi-mental-states/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-22T00:21:26.481Z",
-    "stars": 15850,
+    "discovered_at": "2026-05-22T04:42:08.536Z",
+    "stars": 15854,
     "language": "Python",
-    "pushed_at": "2026-05-19T06:23:21Z",
+    "pushed_at": "2026-05-22T04:31:12Z",
     "license": "MIT"
-  },
-  "summary_zh": "这是一个帮智能体建立心智状态的建模工具，基于信念-愿望-意图架构赋予AI类人的思考逻辑，适合需要构建理性认知智能体或进行神经符号AI融合的开发场景。"
+  }
 }

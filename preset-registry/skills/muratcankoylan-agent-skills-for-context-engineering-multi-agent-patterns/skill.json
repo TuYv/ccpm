@@ -1,7 +1,7 @@
 {
   "id": "muratcankoylan-agent-skills-for-context-engineering-multi-agent-patterns",
   "name": "multi-agent-patterns",
-  "description": "This skill should be used when the user asks to \"design multi-agent system\", \"implement supervisor pattern\", \"create swarm architecture\", \"coordinate multiple agents\", or mentions multi-agent patterns, context isolation, agent handoffs, sub-agents, or parallel agent execution.",
+  "description": "This skill should be used when designing multi-agent systems that need context isolation, supervisor or swarm coordination, explicit handoffs, parallel execution, or a decision on whether multiple agents are justified.",
   "category": "社区精选",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering/blob/main/skills/multi-agent-patterns/SKILL.md",
     "path": "skills/multi-agent-patterns/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-22T00:21:27.461Z",
-    "stars": 15850,
+    "discovered_at": "2026-05-22T04:42:09.527Z",
+    "stars": 15854,
     "language": "Python",
-    "pushed_at": "2026-05-19T06:23:21Z",
+    "pushed_at": "2026-05-22T04:31:12Z",
     "license": "MIT"
-  },
-  "summary_zh": "帮你设计和搭建多智能体协作架构，解决多个AI如何分工流转与协同的难题，适合需要主从调度或群体智能等复杂系统的场景。"
+  }
 }
