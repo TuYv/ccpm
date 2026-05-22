@@ -2,7 +2,7 @@
   "id": "davila7-claude-code-templates-inference-serving-vllm",
   "name": "serving-llms-vllm",
   "description": "Serves LLMs with high throughput using vLLM's PagedAttention and continuous batching. Use when deploying production LLM APIs, optimizing inference latency/throughput, or serving models with limited GPU memory. Supports OpenAI-compatible endpoints, quantization (GPTQ/AWQ/FP8), and tensor parallelism.",
-  "category": "社区精选",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,8 +16,8 @@
     "url": "https://github.com/davila7/claude-code-templates/blob/main/cli-tool/components/skills/ai-research/inference-serving-vllm/SKILL.md",
     "path": "cli-tool/components/skills/ai-research/inference-serving-vllm/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-22T04:44:47.143Z",
-    "stars": 27482,
+    "discovered_at": "2026-05-22T08:43:15.097Z",
+    "stars": 27485,
     "language": "Python",
     "pushed_at": "2026-05-22T04:31:04Z",
     "license": "MIT"

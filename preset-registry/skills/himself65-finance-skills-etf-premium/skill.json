@@ -2,7 +2,7 @@
   "id": "himself65-finance-skills-etf-premium",
   "name": "etf-premium",
   "description": "> Calculate ETF premium/discount vs NAV via Yahoo Finance, and decompose single-day surges into NAV-driven vs structural components (gamma squeeze, dealer hedging, blocked AP arbitrage). Use whenever the user asks about an ETF's premium or discount, NAV comparison, why an ETF diverged from its holdings, or how much of a move is dealer-hedging-driven. Triggers: \"ETF premium\", \"ETF discount\", \"NAV premium\", \"is SPY at a premium\", \"BITO premium\", \"IBIT premium\", \"bond ETF discount\", \"trading above/",
-  "category": "社区精选",
+  "category": "文档写作",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,8 +16,8 @@
     "url": "https://github.com/himself65/finance-skills/blob/main/plugins/market-analysis/skills/etf-premium/SKILL.md",
     "path": "plugins/market-analysis/skills/etf-premium/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-22T04:43:31.463Z",
-    "stars": 2456,
+    "discovered_at": "2026-05-22T08:41:32.607Z",
+    "stars": 2460,
     "language": "JavaScript",
     "pushed_at": "2026-05-19T23:27:16Z",
     "license": "MIT"

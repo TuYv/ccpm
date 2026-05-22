@@ -2,7 +2,7 @@
   "id": "muratcankoylan-agent-skills-for-context-engineering-tool-design",
   "name": "tool-design",
   "description": "This skill should be used for the tool-interface layer of an agent system specifically: writing tool descriptions agents can route on, designing tool schemas and response formats, naming conventions, actionable error recovery messages, MCP server design, tool-set consolidation, and deciding when to add or remove an individual tool. Use this when the unit of work is a single tool or a set of tools. Route project-shape, pipeline architecture, and task-model-fit decisions to project-development; ro",
-  "category": "社区精选",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,8 +16,8 @@
     "url": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering/blob/main/skills/tool-design/SKILL.md",
     "path": "skills/tool-design/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-22T04:42:09.680Z",
-    "stars": 15854,
+    "discovered_at": "2026-05-22T08:39:40.753Z",
+    "stars": 15860,
     "language": "Python",
     "pushed_at": "2026-05-22T04:31:12Z",
     "license": "MIT"

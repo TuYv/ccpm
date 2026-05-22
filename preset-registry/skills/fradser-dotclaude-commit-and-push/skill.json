@@ -2,7 +2,7 @@
   "id": "fradser-dotclaude-commit-and-push",
   "name": "commit-and-push",
   "description": "Creates conventional git commits using git-agent and pushes to the remote repository. This skill should be used when the user asks to \"commit and push\", \"push my changes\", or wants to commit and immediately push to remote. The executing AI auto-derives its own co-author string from its runtime model identity (e.g., `Claude Opus 4.7 <noreply@anthropic.com>`) and passes it to `--co-author`. `$ARGUMENTS`, if provided, overrides the auto-derived value.",
-  "category": "社区精选",
+  "category": "开发编程",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,7 +16,7 @@
     "url": "https://github.com/FradSer/dotclaude/blob/main/git/skills/commit-and-push/SKILL.md",
     "path": "git/skills/commit-and-push/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-22T04:43:14.042Z",
+    "discovered_at": "2026-05-22T08:41:08.059Z",
     "stars": 548,
     "language": "Shell",
     "pushed_at": "2026-05-21T09:20:23Z",

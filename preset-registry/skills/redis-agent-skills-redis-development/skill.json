@@ -2,7 +2,7 @@
   "id": "redis-agent-skills-redis-development",
   "name": "redis-development",
   "description": "Redis performance optimization and best practices. Use this skill when working with Redis data structures, Redis Query Engine (RQE), vector search with RedisVL, semantic caching with LangCache, or optimizing Redis performance.",
-  "category": "社区精选",
+  "category": "文档写作",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/redis/agent-skills/blob/main/skills/redis-development/SKILL.md",
     "path": "skills/redis-development/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-22T04:45:13.743Z",
+    "discovered_at": "2026-05-22T08:43:49.171Z",
     "stars": 59,
-    "language": "JavaScript",
-    "pushed_at": "2026-05-20T18:02:16Z",
+    "language": "TypeScript",
+    "pushed_at": "2026-05-22T06:39:42Z",
     "license": "MIT"
   },
   "summary_zh": "提供Redis性能优化与最佳实践，帮你解决从基础数据处理到AI向量搜索与语义缓存等各类难题，适合需要深度使用及调优Redis的场景。"

@@ -2,7 +2,7 @@
   "id": "prompt-security-clawsec-hermes-traffic-guardian",
   "name": "hermes-traffic-guardian",
   "description": "Hermes runtime traffic monitoring baseline for opt-in proxy inspection, egress detection, and attestation-aware traffic posture.",
-  "category": "社区精选",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/prompt-security/clawsec/blob/main/skills/hermes-traffic-guardian/SKILL.md",
     "path": "skills/hermes-traffic-guardian/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-22T04:45:46.187Z",
-    "stars": 1000,
+    "discovered_at": "2026-05-22T08:44:32.722Z",
+    "stars": 1001,
     "language": "JavaScript",
-    "pushed_at": "2026-05-21T07:14:18Z",
+    "pushed_at": "2026-05-22T07:09:58Z",
     "license": "AGPL-3.0"
   },
   "summary_zh": "这是一个运行时流量监控底座，能帮你审查代理请求、防范异常外发，并基于安全证明动态管控流量态势，适合对数据外泄零容忍的严格安全场景。"

@@ -2,7 +2,7 @@
   "id": "neondatabase-mcp-server-neon-claimable-postgres",
   "name": "claimable-postgres",
   "description": ">- Provision instant temporary Postgres databases via Claimable Postgres by Neon (pg.new) with no login, signup, or credit card. Use when users ask for a quick Postgres environment, a throwaway DATABASE_URL for prototyping/tests, or \"just give me a DB now\". Triggers include: \"quick postgres\", \"temporary postgres\", \"no signup database\", \"no credit card database\", \"instant DATABASE_URL\".",
-  "category": "社区精选",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,7 +16,7 @@
     "url": "https://github.com/neondatabase/mcp-server-neon/blob/main/.agents/skills/claimable-postgres/SKILL.md",
     "path": ".agents/skills/claimable-postgres/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-22T04:42:44.850Z",
+    "discovered_at": "2026-05-22T08:40:28.329Z",
     "stars": 598,
     "language": "TypeScript",
     "pushed_at": "2026-05-21T15:15:37Z",

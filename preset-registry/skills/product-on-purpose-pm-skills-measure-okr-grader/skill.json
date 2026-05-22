@@ -2,7 +2,7 @@
   "id": "product-on-purpose-pm-skills-measure-okr-grader",
   "name": "measure-okr-grader",
   "description": "Scores completed OKR sets at cycle close with KR-level scoring per the canonical OKR type enum (committed | aspirational | learning | operational_health | compliance_or_safety), committed-vs-aspirational interpretation, evidence quality assessment, learning synthesis, and next-cycle recommendations. Refuses to retroactively change targets or shrink committed scope, average away guardrail KRs, treat 0.7 as success for committed or compliance_or_safety KRs, equate effort with impact, or use scores",
-  "category": "社区精选",
+  "category": "开发编程",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/product-on-purpose/pm-skills/blob/main/skills/measure-okr-grader/SKILL.md",
     "path": "skills/measure-okr-grader/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-22T04:46:25.860Z",
+    "discovered_at": "2026-05-22T08:45:26.932Z",
     "stars": 226,
     "language": "Shell",
-    "pushed_at": "2026-05-22T03:57:47Z",
+    "pushed_at": "2026-05-22T06:29:38Z",
     "license": "Apache-2.0"
   },
   "summary_zh": "这是一个OKR周期末评分工具，能根据KR类型严格打分并给出下期建议。它专治复盘时事后改目标、降标准或拿苦劳当功劳等和稀泥做法，确保评分客观真实。"

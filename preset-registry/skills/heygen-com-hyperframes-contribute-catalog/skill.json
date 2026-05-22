@@ -2,7 +2,7 @@
   "id": "heygen-com-hyperframes-contribute-catalog",
   "name": "contribute-catalog",
   "description": "Author a new HyperFrames registry block (caption style, VFX block, transition, lower third) or component (text effect, overlay, snippet) and ship it as an upstream PR to the hyperframes repo. Use ONLY when the user wants to CONTRIBUTE to the public catalog — for in-project caption/transition authoring use the `hyperframes` skill, for installing existing registry items use the `hyperframes-registry` skill.",
-  "category": "社区精选",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/heygen-com/hyperframes/blob/main/skills/contribute-catalog/SKILL.md",
     "path": "skills/contribute-catalog/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-22T04:43:24.984Z",
-    "stars": 20321,
+    "discovered_at": "2026-05-22T08:41:23.698Z",
+    "stars": 20358,
     "language": "TypeScript",
-    "pushed_at": "2026-05-22T03:01:32Z",
+    "pushed_at": "2026-05-22T08:03:48Z",
     "license": "Apache-2.0"
   },
   "summary_zh": "专门帮你把自创的视觉组件（如字幕、转场等）提交到公共视频特效库，适合想为开源社区贡献特效的开发者，不适用于项目内自建或安装现有特效。"

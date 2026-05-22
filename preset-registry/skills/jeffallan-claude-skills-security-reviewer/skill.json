@@ -2,7 +2,7 @@
   "id": "jeffallan-claude-skills-security-reviewer",
   "name": "security-reviewer",
   "description": "Identifies security vulnerabilities, generates structured audit reports with severity ratings, and provides actionable remediation guidance. Use when conducting security audits, reviewing code for vulnerabilities, or analyzing infrastructure security. Invoke for SAST scans, penetration testing, DevSecOps practices, cloud security reviews, dependency audits, secrets scanning, or compliance checks. Produces vulnerability reports, prioritized recommendations, and compliance checklists.",
-  "category": "社区精选",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,8 +16,8 @@
     "url": "https://github.com/jeffallan/claude-skills/blob/main/skills/security-reviewer/SKILL.md",
     "path": "skills/security-reviewer/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-22T04:46:00.204Z",
-    "stars": 9253,
+    "discovered_at": "2026-05-22T08:44:52.162Z",
+    "stars": 9256,
     "language": "Python",
     "pushed_at": "2026-05-20T13:35:05Z",
     "license": "MIT"

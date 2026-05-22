@@ -2,7 +2,7 @@
   "id": "getsentry-sentry-cell-architecture",
   "name": "cell-architecture",
   "description": ">- Reference and active migration guide for Sentry's cell architecture. Explains what cells and localities are and why they're different, how requests reach cells via Synapse API routing, ingestion routing, and the control silo gateway, and how to safely query cross-cell data without silently missing results. The migration section covers how to do migration work: draining the URL_NAME_TO_ACTION registry in test_urls.py to zero (with a recipe for each action type), rolling deploy safety and the t",
-  "category": "社区精选",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/getsentry/sentry/blob/master/.agents/skills/cell-architecture/SKILL.md",
     "path": ".agents/skills/cell-architecture/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-05-22T04:42:50.434Z",
-    "stars": 43943,
+    "discovered_at": "2026-05-22T08:40:36.316Z",
+    "stars": 43946,
     "language": "Python",
-    "pushed_at": "2026-05-22T04:41:18Z",
+    "pushed_at": "2026-05-22T08:28:40Z",
     "license": null
   },
   "summary_zh": "这是Sentry单元化架构的参考与迁移指南，帮你理清请求路由与跨单元安全查询机制，指导团队安全平滑地完成架构迁移。"

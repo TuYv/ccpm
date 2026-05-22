@@ -2,7 +2,7 @@
   "id": "anthropics-skills-doc-coauthoring",
   "name": "doc-coauthoring",
   "description": "Guide users through a structured workflow for co-authoring documentation. Use when user wants to write documentation, proposals, technical specs, decision docs, or similar structured content. This workflow helps users efficiently transfer context, refine content through iteration, and verify the doc works for readers. Trigger when user mentions writing docs, creating proposals, drafting specs, or similar documentation tasks.",
-  "category": "Anthropic 官方",
+  "category": "文档写作",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,8 +16,8 @@
     "url": "https://github.com/anthropics/skills/blob/main/skills/doc-coauthoring/SKILL.md",
     "path": "skills/doc-coauthoring/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-22T04:41:28.711Z",
-    "stars": 138947,
+    "discovered_at": "2026-05-22T08:38:43.043Z",
+    "stars": 139075,
     "language": "Python",
     "pushed_at": "2026-05-19T14:11:10Z",
     "license": null

@@ -2,7 +2,7 @@
   "id": "openai-openai-agents-python-docs-sync",
   "name": "docs-sync",
   "description": "Analyze main branch implementation and configuration to find missing, incorrect, or outdated documentation in docs/. Use when asked to audit doc coverage, sync docs with code, or propose doc updates/structure changes. Only update English docs under docs/** and never touch translated docs under docs/ja, docs/ko, or docs/zh. Provide a report and ask for approval before editing docs.",
-  "category": "社区精选",
+  "category": "文档写作",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,8 +16,8 @@
     "url": "https://github.com/openai/openai-agents-python/blob/main/.agents/skills/docs-sync/SKILL.md",
     "path": ".agents/skills/docs-sync/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-22T04:42:40.872Z",
-    "stars": 26561,
+    "discovered_at": "2026-05-22T08:40:22.821Z",
+    "stars": 26565,
     "language": "Python",
     "pushed_at": "2026-05-22T01:08:07Z",
     "license": "MIT"

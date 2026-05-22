@@ -2,7 +2,7 @@
   "id": "cexll-myclaude-harness",
   "name": "harness",
   "description": "This skill should be used for multi-session autonomous agent work requiring progress checkpointing, failure recovery, and task dependency management. Triggers on '/harness' command, or when a task involves many subtasks needing progress persistence, sleep/resume cycles across context windows, recovery from mid-task failures with partial state, or distributed work across multiple agent sessions. Synthesized from Anthropic and OpenAI engineering practices for long-running agents.",
-  "category": "社区精选",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,8 +16,8 @@
     "url": "https://github.com/cexll/myclaude/blob/master/skills/harness/SKILL.md",
     "path": "skills/harness/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-05-22T04:41:37.836Z",
-    "stars": 2669,
+    "discovered_at": "2026-05-22T08:38:54.416Z",
+    "stars": 2668,
     "language": "Go",
     "pushed_at": "2026-05-04T04:25:57Z",
     "license": "AGPL-3.0"

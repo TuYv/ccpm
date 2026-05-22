@@ -2,7 +2,7 @@
   "id": "openshift-rosa-rosa-docs-and-structure-tests",
   "name": "ROSA Docs And Structure Tests",
   "description": "Keep CLI docs, structure tests, and user-facing guidance in sync when commands or workflow docs change.",
-  "category": "社区精选",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/openshift/rosa/blob/master/.claude/skills/rosa-docs-and-structure-tests/SKILL.md",
     "path": ".claude/skills/rosa-docs-and-structure-tests/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-05-22T04:42:53.737Z",
+    "discovered_at": "2026-05-22T08:40:40.829Z",
     "stars": 102,
     "language": "Go",
-    "pushed_at": "2026-05-22T02:10:14Z",
+    "pushed_at": "2026-05-22T06:13:04Z",
     "license": "Apache-2.0"
   },
   "summary_zh": "这是一款文档同步工具，能在命令或工作流发生变更时，确保CLI文档、结构测试和用户指南保持一致，避免文档与实际操作脱节。"

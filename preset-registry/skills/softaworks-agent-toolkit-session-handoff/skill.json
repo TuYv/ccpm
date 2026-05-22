@@ -2,7 +2,7 @@
   "id": "softaworks-agent-toolkit-session-handoff",
   "name": "session-handoff",
   "description": "Creates comprehensive handoff documents for seamless AI agent session transfers. Triggered when: (1) user requests handoff/memory/context save, (2) context window approaches capacity, (3) major task milestone completed, (4) work session ending, (5) user says 'save state', 'create handoff', 'I need to pause', 'context is getting full', (6) resuming work with 'load handoff', 'resume from', 'continue where we left off'. Proactively suggests handoffs after substantial work (multiple file edits, comp",
-  "category": "社区精选",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,8 +16,8 @@
     "url": "https://github.com/softaworks/agent-toolkit/blob/main/dist/plugins/session-handoff/skills/session-handoff/SKILL.md",
     "path": "dist/plugins/session-handoff/skills/session-handoff/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-22T04:44:20.711Z",
-    "stars": 1872,
+    "discovered_at": "2026-05-22T08:42:38.836Z",
+    "stars": 1873,
     "language": "Python",
     "pushed_at": "2026-03-05T16:46:24Z",
     "license": "MIT"

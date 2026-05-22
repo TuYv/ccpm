@@ -2,7 +2,7 @@
   "id": "alirezarezvani-claude-skills-autoresearch-agent",
   "name": "autoresearch-agent",
   "description": "Autonomous experiment loop that optimizes any file by a measurable metric. Inspired by Karpathy's autoresearch. The agent edits a target file, runs a fixed evaluation, keeps improvements (git commit), discards failures (git reset), and loops indefinitely. Use when: user wants to optimize code speed, reduce bundle/image size, improve test pass rate, optimize prompts, improve content quality (headlines, copy, CTR), or run any measurable improvement loop. Requires: a target file, an evaluation comm",
-  "category": "社区精选",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/autoresearch-agent/SKILL.md",
     "path": ".gemini/skills/autoresearch-agent/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-22T04:43:39.698Z",
-    "stars": 15795,
+    "discovered_at": "2026-05-22T08:41:44.422Z",
+    "stars": 15818,
     "language": "Python",
-    "pushed_at": "2026-05-21T17:51:26Z",
+    "pushed_at": "2026-05-22T05:59:55Z",
     "license": "MIT"
   },
   "summary_zh": "它能根据可量化指标自动循环试错并保留有效改进，适合想提升代码速度、减小包体积、提高测试通过率、优化提示词或文案点击率等有明确衡量标准的优化场景。"

@@ -2,7 +2,7 @@
   "id": "openshift-rosa-rosa-verification-gates",
   "name": "ROSA Verification Gates",
   "description": "Choose the right local verification steps before claiming a ROSA change is complete.",
-  "category": "社区精选",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/openshift/rosa/blob/master/.claude/skills/rosa-verification-gates/SKILL.md",
     "path": ".claude/skills/rosa-verification-gates/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-05-22T04:42:53.843Z",
+    "discovered_at": "2026-05-22T08:40:40.981Z",
     "stars": 102,
     "language": "Go",
-    "pushed_at": "2026-05-22T02:10:14Z",
+    "pushed_at": "2026-05-22T06:13:04Z",
     "license": "Apache-2.0"
   },
   "summary_zh": "它是个本地验证指导工具，帮你在提交ROSA变更前选对必须跑的检查步骤，防止漏测就宣布完工。"

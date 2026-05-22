@@ -2,7 +2,7 @@
   "id": "peterkrueck-claude-code-development-kit-second-opinion",
   "name": "second-opinion",
   "description": "Get a second opinion from Google's Gemini Pro via the locally installed Gemini CLI (defaults to gemini-3.1-pro-preview; override with the CLAUDE_SECOND_OPINION_MODEL env var). Use this skill when in Plan Mode for large or critical tasks, when stuck on a debugging dead end, when facing architecture trade-offs, for subtle edge cases in code review, or any situation where an independent perspective would add value. Also use when the user explicitly asks for a \"second opinion\", \"ask Gemini\", \"anothe",
-  "category": "社区精选",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,7 +16,7 @@
     "url": "https://github.com/peterkrueck/Claude-Code-Development-Kit/blob/main/skills/second-opinion/SKILL.md",
     "path": "skills/second-opinion/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-22T04:45:06.846Z",
+    "discovered_at": "2026-05-22T08:43:41.340Z",
     "stars": 1356,
     "language": "Shell",
     "pushed_at": "2026-05-18T15:20:13Z",

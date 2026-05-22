@@ -2,7 +2,7 @@
   "id": "numman-ali-n-skills-orchestration",
   "name": "orchestration",
   "description": "Multi-agent orchestration for complex tasks. Use when tasks require parallel work, multiple agents, or sophisticated coordination. Triggers include requests for features, reviews, refactoring, testing, documentation, or any work that benefits from decomposition into parallel subtasks. This skill defines how to orchestrate work using cc-mirror tasks for persistent dependency tracking and TodoWrite for real-time session visibility.",
-  "category": "社区精选",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,8 +16,8 @@
     "url": "https://github.com/numman-ali/n-skills/blob/main/skills/workflow/orchestration/skills/orchestration/SKILL.md",
     "path": "skills/workflow/orchestration/skills/orchestration/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-22T04:43:56.697Z",
-    "stars": 986,
+    "discovered_at": "2026-05-22T08:42:07.279Z",
+    "stars": 987,
     "language": "TypeScript",
     "pushed_at": "2026-05-12T00:39:11Z",
     "license": "Apache-2.0"

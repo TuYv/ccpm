@@ -2,7 +2,7 @@
   "id": "prompt-security-clawsec-hermes-attestation-guardian",
   "name": "hermes-attestation-guardian",
   "description": "Hermes-only runtime security attestation and drift detection skill for operator-managed Hermes infrastructure.",
-  "category": "社区精选",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/prompt-security/clawsec/blob/main/skills/hermes-attestation-guardian/SKILL.md",
     "path": "skills/hermes-attestation-guardian/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-22T04:45:46.090Z",
-    "stars": 1000,
+    "discovered_at": "2026-05-22T08:44:32.599Z",
+    "stars": 1001,
     "language": "JavaScript",
-    "pushed_at": "2026-05-21T07:14:18Z",
+    "pushed_at": "2026-05-22T07:09:58Z",
     "license": "AGPL-3.0"
   },
   "summary_zh": "专为Hermes基础设施打造的运行时安全组件，能实时验证系统安全状态并检测配置漂移，帮运维人员及时发现环境异常。"

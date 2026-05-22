@@ -2,7 +2,7 @@
   "id": "alirezarezvani-claude-skills-board-meeting",
   "name": "board-meeting",
   "description": "Multi-agent board meeting protocol for strategic decisions. Runs a structured 6-phase deliberation: context loading, independent C-suite contributions (isolated, no cross-pollination), critic analysis, synthesis, founder review, and decision extraction. Use when the user invokes /cs:board, calls a board meeting, or wants structured multi-perspective executive deliberation on a strategic question.",
-  "category": "社区精选",
+  "category": "数据分析",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/board-meeting/SKILL.md",
     "path": ".gemini/skills/board-meeting/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-22T04:43:40.097Z",
-    "stars": 15795,
+    "discovered_at": "2026-05-22T08:41:44.972Z",
+    "stars": 15818,
     "language": "Python",
-    "pushed_at": "2026-05-21T17:51:26Z",
+    "pushed_at": "2026-05-22T05:59:55Z",
     "license": "MIT"
   },
   "summary_zh": "这是一个用于战略决策的多智能体董事会协议，让不同角色独立探讨、互相批评并提炼最终决策。适合遇到战略难题，需要多视角、结构化分析来拍板的场景。"

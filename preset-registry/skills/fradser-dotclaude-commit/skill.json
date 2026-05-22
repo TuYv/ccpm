@@ -2,7 +2,7 @@
   "id": "fradser-dotclaude-commit",
   "name": "commit",
   "description": "Creates a conventional git commit using git-agent. This skill should be used when the user requests \"commit\", \"git commit\", \"create commit\", or wants to commit staged and unstaged changes following the conventional commits format. The executing AI auto-derives its own co-author string from its runtime model identity (e.g., `Claude Opus 4.7 <noreply@anthropic.com>`) and passes it to `--co-author`. `$ARGUMENTS`, if provided, overrides the auto-derived value.",
-  "category": "社区精选",
+  "category": "文档写作",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,7 +16,7 @@
     "url": "https://github.com/FradSer/dotclaude/blob/main/git/skills/commit/SKILL.md",
     "path": "git/skills/commit/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-22T04:43:14.124Z",
+    "discovered_at": "2026-05-22T08:41:08.180Z",
     "stars": 548,
     "language": "Shell",
     "pushed_at": "2026-05-21T09:20:23Z",

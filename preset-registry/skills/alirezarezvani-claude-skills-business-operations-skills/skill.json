@@ -2,7 +2,7 @@
   "id": "alirezarezvani-claude-skills-business-operations-skills",
   "name": "business-operations-skills",
   "description": "Use when running, diagnosing, or designing internal business operations — process documentation, vendor SLAs, capacity planning, internal comms, SOP/runbook authoring, procurement spend. Triggers on \"BizOps review\", \"where's the bottleneck\", \"vendor health\", \"internal SOP\", \"all-hands deck\", \"spend categorization\", \"capacity for Q3\", \"process mapping\". Forks context to route to one of six BizOps sub-skills (process-mapper, vendor-management, capacity-planner, internal-comms, knowledge-ops, procu",
-  "category": "社区精选",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/business-operations-skills/SKILL.md",
     "path": ".gemini/skills/business-operations-skills/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-22T04:43:40.874Z",
-    "stars": 15795,
+    "discovered_at": "2026-05-22T08:41:46.012Z",
+    "stars": 15818,
     "language": "Python",
-    "pushed_at": "2026-05-21T17:51:26Z",
+    "pushed_at": "2026-05-22T05:59:55Z",
     "license": "MIT"
   },
   "summary_zh": "这是个内部业务运营助手，专治流程梳理、供应商管理、产能规划与SOP编写等运营痛点，遇到查瓶颈、看支出等需求时会自动调用对应子技能帮你搞定。"

@@ -2,7 +2,7 @@
   "id": "trailofbits-skills-codeql",
   "name": "codeql",
   "description": ">- Scans a codebase for security vulnerabilities using CodeQL's interprocedural data flow and taint tracking analysis. Triggers on \"run codeql\", \"codeql scan\", \"codeql analysis\", \"build codeql database\", or \"find vulnerabilities with codeql\". Supports \"run all\" (security-and-quality + security-experimental suites) and \"important only\" (high-precision security findings) scan modes. Also handles creating data extension models and processing CodeQL SARIF output.",
-  "category": "社区精选",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,8 +16,8 @@
     "url": "https://github.com/trailofbits/skills/blob/main/plugins/static-analysis/skills/codeql/SKILL.md",
     "path": "plugins/static-analysis/skills/codeql/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-22T04:41:52.145Z",
-    "stars": 5325,
+    "discovered_at": "2026-05-22T08:39:14.711Z",
+    "stars": 5328,
     "language": "Python",
     "pushed_at": "2026-05-16T17:22:25Z",
     "license": "CC-BY-SA-4.0"

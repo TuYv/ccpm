@@ -2,7 +2,7 @@
   "id": "heygen-com-hyperframes-hyperframes-media",
   "name": "hyperframes-media",
   "description": "Asset preprocessing for HyperFrames compositions — text-to-speech narration (Kokoro), audio/video transcription (Whisper), and background removal for transparent overlays (u2net). Use when generating voiceover from text, transcribing speech for captions, removing the background from a video or image to use as a transparent overlay, choosing a TTS voice or whisper model, or chaining these (TTS → transcribe → captions). Each command downloads its own model on first run.",
-  "category": "社区精选",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/heygen-com/hyperframes/blob/main/skills/hyperframes-media/SKILL.md",
     "path": "skills/hyperframes-media/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-22T04:43:25.310Z",
-    "stars": 20321,
+    "discovered_at": "2026-05-22T08:41:24.198Z",
+    "stars": 20358,
     "language": "TypeScript",
-    "pushed_at": "2026-05-22T03:01:32Z",
+    "pushed_at": "2026-05-22T08:03:48Z",
     "license": "Apache-2.0"
   },
   "summary_zh": "一款多媒体素材预处理工具，能帮你搞定文字转配音、语音转字幕、视频或图片抠图做透明贴片，特别适合需要串联这些步骤进行自动化处理的场景。"

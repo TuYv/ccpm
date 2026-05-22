@@ -2,7 +2,7 @@
   "id": "alirezarezvani-claude-skills-agent-workflow-designer",
   "name": "agent-workflow-designer",
   "description": "Design production-grade multi-agent workflows with clear pattern choice (sequential, parallel, hierarchical), handoff contracts, failure handling, and cost/context controls. Use when architecting a multi-step agent pipeline, choosing between single-agent vs multi-agent approaches, or refactoring an LLM workflow that suffers from context bloat or unreliable handoffs.",
-  "category": "社区精选",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/agent-workflow-designer/SKILL.md",
     "path": ".gemini/skills/agent-workflow-designer/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-22T04:43:38.734Z",
-    "stars": 15795,
+    "discovered_at": "2026-05-22T08:41:43.028Z",
+    "stars": 15818,
     "language": "Python",
-    "pushed_at": "2026-05-21T17:51:26Z",
+    "pushed_at": "2026-05-22T05:59:55Z",
     "license": "MIT"
   },
   "summary_zh": "这是一个设计生产级多智能体工作流的工具，专治上下文膨胀和交接不可靠的痛点，适合构建复杂流水线、做单多智能体选型或重构现有LLM工作流。"

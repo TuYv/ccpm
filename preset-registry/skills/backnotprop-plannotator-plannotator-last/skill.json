@@ -2,7 +2,7 @@
   "id": "backnotprop-plannotator-plannotator-last",
   "name": "plannotator-last",
   "description": "Open Plannotator on the latest rendered assistant message and use the returned annotations to revise that message or continue.",
-  "category": "社区精选",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/backnotprop/plannotator/blob/main/apps/skills/plannotator-last/SKILL.md",
     "path": "apps/skills/plannotator-last/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-22T04:46:21.654Z",
-    "stars": 5510,
+    "discovered_at": "2026-05-22T08:45:20.890Z",
+    "stars": 5512,
     "language": "TypeScript",
-    "pushed_at": "2026-05-22T02:55:12Z",
+    "pushed_at": "2026-05-22T06:36:24Z",
     "license": "Apache-2.0"
   },
   "summary_zh": "它是一个AI回复标注工具，能让你在最新的生成内容上做批注，并据此精准修改或续写文本，适合需要精细打磨和调整AI输出的场景。"

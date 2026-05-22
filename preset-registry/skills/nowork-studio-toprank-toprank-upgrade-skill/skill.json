@@ -2,7 +2,7 @@
   "id": "nowork-studio-toprank-toprank-upgrade-skill",
   "name": "toprank-upgrade",
   "description": "> Upgrade toprank plugin to the latest version. Updates the marketplace repo, installs the new version to the plugin cache, and updates installed_plugins.json. Use when asked to \"upgrade toprank\", \"update toprank\", or \"get latest version\". Also handles inline upgrade prompts when a skill detects UPGRADE_AVAILABLE at startup.",
-  "category": "社区精选",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,7 +16,7 @@
     "url": "https://github.com/nowork-studio/toprank/blob/main/toprank-upgrade-skill/SKILL.md",
     "path": "toprank-upgrade-skill/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-22T04:43:37.769Z",
+    "discovered_at": "2026-05-22T08:41:41.650Z",
     "stars": 2599,
     "language": "Python",
     "pushed_at": "2026-05-20T05:41:47Z",

@@ -2,7 +2,7 @@
   "id": "heygen-com-hyperframes-animejs",
   "name": "animejs",
   "description": "Anime.js adapter patterns for HyperFrames. Use when writing Anime.js animations or timelines inside HyperFrames compositions, registering animations on window.__hfAnime, making Anime.js seek-driven and deterministic, or translating Anime.js examples into render-safe HyperFrames HTML.",
-  "category": "社区精选",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/heygen-com/hyperframes/blob/main/skills/animejs/SKILL.md",
     "path": "skills/animejs/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-22T04:43:24.877Z",
-    "stars": 20321,
+    "discovered_at": "2026-05-22T08:41:23.569Z",
+    "stars": 20358,
     "language": "TypeScript",
-    "pushed_at": "2026-05-22T03:01:32Z",
+    "pushed_at": "2026-05-22T08:03:48Z",
     "license": "Apache-2.0"
   },
   "summary_zh": "这是一个把动画库接入HyperFrames的适配器，能让动画实现帧精准受控和确定性渲染，确保安全输出，适合在HyperFrames中开发或移植动画的场景。"

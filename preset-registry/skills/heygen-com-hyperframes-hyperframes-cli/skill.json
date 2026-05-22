@@ -2,7 +2,7 @@
   "id": "heygen-com-hyperframes-hyperframes-cli",
   "name": "hyperframes-cli",
   "description": "HyperFrames CLI dev loop — `npx hyperframes` for scaffolding (init), validation (lint, inspect), preview, render, and environment troubleshooting (doctor, browser, info, upgrade). Use when running any of these commands or troubleshooting the HyperFrames build/render environment. For asset preprocessing commands (`tts`, `transcribe`, `remove-background`), invoke the `hyperframes-media` skill instead.",
-  "category": "社区精选",
+  "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/heygen-com/hyperframes/blob/main/skills/hyperframes-cli/SKILL.md",
     "path": "skills/hyperframes-cli/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-22T04:43:25.232Z",
-    "stars": 20321,
+    "discovered_at": "2026-05-22T08:41:24.089Z",
+    "stars": 20358,
     "language": "TypeScript",
-    "pushed_at": "2026-05-22T03:01:32Z",
+    "pushed_at": "2026-05-22T08:03:48Z",
     "license": "Apache-2.0"
   },
   "summary_zh": "这是一个开发辅助工具，帮你解决项目搭建、预览渲染和构建环境排障等问题，非常适合在开发和渲染环节用来提效与修bug。"

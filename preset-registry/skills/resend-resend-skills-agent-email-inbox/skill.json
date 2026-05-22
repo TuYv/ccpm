@@ -2,7 +2,7 @@
   "id": "resend-resend-skills-agent-email-inbox",
   "name": "agent-email-inbox",
   "description": "Use when building any system where email content triggers actions — AI agent inboxes, automated support handlers, email-to-task pipelines, or any workflow processing untrusted inbound email. Always use this skill when the user wants to receive emails and act on them programmatically, even if they don't mention \"agent\" — the skill contains critical security patterns (sender allowlists, content filtering, sandboxed processing) that prevent untrusted email from controlling your system.",
-  "category": "社区精选",
+  "category": "文档写作",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,7 +16,7 @@
     "url": "https://github.com/resend/resend-skills/blob/main/skills/agent-email-inbox/SKILL.md",
     "path": "skills/agent-email-inbox/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-22T04:45:12.798Z",
+    "discovered_at": "2026-05-22T08:43:48.041Z",
     "stars": 122,
     "language": "JavaScript",
     "pushed_at": "2026-05-04T14:49:16Z",

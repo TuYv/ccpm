@@ -2,7 +2,7 @@
   "id": "severity1-claude-code-auto-memory-memory-processor",
   "name": "memory-processor",
   "description": "Process file changes and update CLAUDE.md memory sections. Use when the memory-updater agent needs to analyze dirty files, update AUTO-MANAGED sections, verify content removal, or detect stale commands. Invoked after file edits to keep project memory in sync.",
-  "category": "社区精选",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,7 +16,7 @@
     "url": "https://github.com/severity1/claude-code-auto-memory/blob/main/skills/memory-processor/SKILL.md",
     "path": "skills/memory-processor/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-22T04:44:58.398Z",
+    "discovered_at": "2026-05-22T08:43:30.752Z",
     "stars": 147,
     "language": "Python",
     "pushed_at": "2026-04-18T03:09:56Z",

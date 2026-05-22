@@ -2,7 +2,7 @@
   "id": "softaworks-agent-toolkit-web-to-markdown",
   "name": "web-to-markdown",
   "description": "Use ONLY when the user explicitly says: 'use the skill web-to-markdown ...' (or 'use a skill web-to-markdown ...'). Converts webpage URLs to clean Markdown by calling the local web2md CLI (Puppeteer + Readability), suitable for JS-rendered pages.",
-  "category": "社区精选",
+  "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,8 +16,8 @@
     "url": "https://github.com/softaworks/agent-toolkit/blob/main/dist/plugins/web-to-markdown/skills/web-to-markdown/SKILL.md",
     "path": "dist/plugins/web-to-markdown/skills/web-to-markdown/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-22T04:44:21.013Z",
-    "stars": 1872,
+    "discovered_at": "2026-05-22T08:42:39.166Z",
+    "stars": 1873,
     "language": "Python",
     "pushed_at": "2026-03-05T16:46:24Z",
     "license": "MIT"

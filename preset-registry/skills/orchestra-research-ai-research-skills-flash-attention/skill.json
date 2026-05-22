@@ -2,7 +2,7 @@
   "id": "orchestra-research-ai-research-skills-flash-attention",
   "name": "optimizing-attention-flash",
   "description": "Optimizes transformer attention with Flash Attention for 2-4x speedup and 10-20x memory reduction. Use when training/running transformers with long sequences (>512 tokens), encountering GPU memory issues with attention, or need faster inference. Supports PyTorch native SDPA, flash-attn library, H100 FP8, and sliding window attention.",
-  "category": "社区精选",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,8 +16,8 @@
     "url": "https://github.com/Orchestra-Research/AI-research-SKILLs/blob/main/10-optimization/flash-attention/SKILL.md",
     "path": "10-optimization/flash-attention/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-22T04:42:18.918Z",
-    "stars": 8786,
+    "discovered_at": "2026-05-22T08:39:52.408Z",
+    "stars": 8794,
     "language": "TeX",
     "pushed_at": "2026-04-28T05:09:27Z",
     "license": "MIT"

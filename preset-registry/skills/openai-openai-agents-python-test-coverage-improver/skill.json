@@ -2,7 +2,7 @@
   "id": "openai-openai-agents-python-test-coverage-improver",
   "name": "test-coverage-improver",
   "description": "Improve test coverage in the OpenAI Agents Python repository: run `make coverage`, inspect coverage artifacts, identify low-coverage files, propose high-impact tests, and confirm with the user before writing tests.",
-  "category": "社区精选",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,8 +16,8 @@
     "url": "https://github.com/openai/openai-agents-python/blob/main/.agents/skills/test-coverage-improver/SKILL.md",
     "path": ".agents/skills/test-coverage-improver/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-22T04:42:41.572Z",
-    "stars": 26561,
+    "discovered_at": "2026-05-22T08:40:23.799Z",
+    "stars": 26565,
     "language": "Python",
     "pushed_at": "2026-05-22T01:08:07Z",
     "license": "MIT"

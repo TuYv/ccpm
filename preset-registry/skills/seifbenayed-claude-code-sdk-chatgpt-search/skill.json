@@ -2,7 +2,7 @@
   "id": "seifbenayed-claude-code-sdk-chatgpt-search",
   "name": "chatgpt-search",
   "description": "| Search ChatGPT and extract the full response + hydration JSON that powers the UI. Attaches to a running Chrome instance (port 9222 by default), opens ChatGPT, submits a query, waits for the streamed response, and returns structured data: messages, product cards, hydration JSON, and API calls. Use when asked to \"search chatgpt\", \"ask chatgpt\", \"chatgpt search\", \"get chatgpt response\", or \"scrape chatgpt\".",
-  "category": "社区精选",
+  "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,7 +16,7 @@
     "url": "https://github.com/SeifBenayed/claude-code-sdk/blob/main/.claude/skills/chatgpt-search/SKILL.md",
     "path": ".claude/skills/chatgpt-search/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-22T04:46:38.325Z",
+    "discovered_at": "2026-05-22T08:45:44.551Z",
     "stars": 115,
     "language": "JavaScript",
     "pushed_at": "2026-04-05T20:03:07Z",

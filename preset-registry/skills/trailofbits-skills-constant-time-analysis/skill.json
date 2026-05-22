@@ -2,7 +2,7 @@
   "id": "trailofbits-skills-constant-time-analysis",
   "name": "constant-time-analysis",
   "description": "Detects timing side-channel vulnerabilities in cryptographic code. Use when implementing or reviewing crypto code, encountering division on secrets, secret-dependent branches, or constant-time programming questions in C, C++, Go, Rust, Swift, Java, Kotlin, C#, PHP, JavaScript, TypeScript, Python, or Ruby.",
-  "category": "社区精选",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,8 +16,8 @@
     "url": "https://github.com/trailofbits/skills/blob/main/plugins/constant-time-analysis/skills/constant-time-analysis/SKILL.md",
     "path": "plugins/constant-time-analysis/skills/constant-time-analysis/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-22T04:41:50.060Z",
-    "stars": 5325,
+    "discovered_at": "2026-05-22T08:39:11.088Z",
+    "stars": 5328,
     "language": "Python",
     "pushed_at": "2026-05-16T17:22:25Z",
     "license": "CC-BY-SA-4.0"

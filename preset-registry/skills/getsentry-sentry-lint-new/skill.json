@@ -2,7 +2,7 @@
   "id": "getsentry-sentry-lint-new",
   "name": "lint-new",
   "description": "Create a new ESLint rule with tests for eslintPluginScraps. Use when asked to \"create a lint rule\", \"add an eslint rule\", \"scaffold a rule\", \"write a new scraps rule\", or \"new design system lint rule\". Covers rule creation, test authoring, registration, and autofix implementation.",
-  "category": "社区精选",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/getsentry/sentry/blob/master/.agents/skills/lint-new/SKILL.md",
     "path": ".agents/skills/lint-new/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-05-22T04:42:51.622Z",
-    "stars": 43943,
+    "discovered_at": "2026-05-22T08:40:37.876Z",
+    "stars": 43946,
     "language": "Python",
-    "pushed_at": "2026-05-22T04:41:18Z",
+    "pushed_at": "2026-05-22T08:28:40Z",
     "license": null
   },
   "summary_zh": "这是一个快速生成自定义 ESLint 规则的脚手架工具。当需要给项目新增代码检查规则时，它能帮你一键生成完整的规则代码和配套测试，省去繁琐的从零配置。"

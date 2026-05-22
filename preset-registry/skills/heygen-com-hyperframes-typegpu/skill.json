@@ -2,7 +2,7 @@
   "id": "heygen-com-hyperframes-typegpu",
   "name": "typegpu",
   "description": "TypeGPU and raw WebGPU adapter patterns for HyperFrames. Use when creating GPU-rendered compositions with TypeGPU, raw WebGPU, WGSL fragment shaders, compute pipelines, liquid glass effects, particle systems, or any canvas layer driven by navigator.gpu that responds to HyperFrames hf-seek events.",
-  "category": "社区精选",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/heygen-com/hyperframes/blob/main/skills/typegpu/SKILL.md",
     "path": "skills/typegpu/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-22T04:43:25.853Z",
-    "stars": 20321,
+    "discovered_at": "2026-05-22T08:41:25.060Z",
+    "stars": 20358,
     "language": "TypeScript",
-    "pushed_at": "2026-05-22T03:01:32Z",
+    "pushed_at": "2026-05-22T08:03:48Z",
     "license": "Apache-2.0"
   },
   "summary_zh": "这是一个为 HyperFrames 提供 WebGPU 适配方案的工具。适合在 HyperFrames 中开发能响应交互的 GPU 渲染特效，比如制作粒子系统、液态玻璃或运行着色器。"

@@ -2,7 +2,7 @@
   "id": "openai-openai-agents-python-code-change-verification",
   "name": "code-change-verification",
   "description": "Run the mandatory verification stack when changes affect runtime code, tests, or build/test behavior in the OpenAI Agents Python repository.",
-  "category": "社区精选",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,8 +16,8 @@
     "url": "https://github.com/openai/openai-agents-python/blob/main/.agents/skills/code-change-verification/SKILL.md",
     "path": ".agents/skills/code-change-verification/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-22T04:42:40.786Z",
-    "stars": 26561,
+    "discovered_at": "2026-05-22T08:40:22.656Z",
+    "stars": 26565,
     "language": "Python",
     "pushed_at": "2026-05-22T01:08:07Z",
     "license": "MIT"

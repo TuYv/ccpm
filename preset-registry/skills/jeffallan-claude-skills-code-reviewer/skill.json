@@ -2,7 +2,7 @@
   "id": "jeffallan-claude-skills-code-reviewer",
   "name": "code-reviewer",
   "description": "Analyzes code diffs and files to identify bugs, security vulnerabilities (SQL injection, XSS, insecure deserialization), code smells, N+1 queries, naming issues, and architectural concerns, then produces a structured review report with prioritized, actionable feedback. Use when reviewing pull requests, conducting code quality audits, identifying refactoring opportunities, or checking for security issues. Invoke for PR reviews, code quality checks, refactoring suggestions, review code, code quali",
-  "category": "社区精选",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,8 +16,8 @@
     "url": "https://github.com/jeffallan/claude-skills/blob/main/skills/code-reviewer/SKILL.md",
     "path": "skills/code-reviewer/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-22T04:45:56.967Z",
-    "stars": 9253,
+    "discovered_at": "2026-05-22T08:44:47.560Z",
+    "stars": 9256,
     "language": "Python",
     "pushed_at": "2026-05-20T13:35:05Z",
     "license": "MIT"

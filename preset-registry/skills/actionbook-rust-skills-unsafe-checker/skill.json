@@ -2,7 +2,7 @@
   "id": "actionbook-rust-skills-unsafe-checker",
   "name": "unsafe-checker",
   "description": "CRITICAL: Use for unsafe Rust code review and FFI. Triggers on: unsafe, raw pointer, FFI, extern, transmute, *mut, *const, union, #[repr(C)], libc, std::ffi, MaybeUninit, NonNull, SAFETY comment, soundness, undefined behavior, UB, safe wrapper, memory layout, bindgen, cbindgen, CString, CStr, 安全抽象, 裸指针, 外部函数接口, 内存布局, 不安全代码, FFI 绑定, 未定义行为",
-  "category": "社区精选",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,7 +16,7 @@
     "url": "https://github.com/actionbook/rust-skills/blob/main/skills/unsafe-checker/SKILL.md",
     "path": "skills/unsafe-checker/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-22T04:44:03.147Z",
+    "discovered_at": "2026-05-22T08:42:17.106Z",
     "stars": 1164,
     "language": "Shell",
     "pushed_at": "2026-05-12T12:59:42Z",

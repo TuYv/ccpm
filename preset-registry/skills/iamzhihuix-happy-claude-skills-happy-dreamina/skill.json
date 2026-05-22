@@ -2,7 +2,7 @@
   "id": "iamzhihuix-happy-claude-skills-happy-dreamina",
   "name": "happy-dreamina",
   "description": "ByteDance Jimeng (Dreamina) image and video generation via the official `dreamina` CLI. Use this skill whenever the user mentions 即梦, Dreamina, Jimeng, or asks to generate images or videos specifically through ByteDance's Jimeng service. Covers text2image, image2image, text2video, image2video, plus async task query and task-history browsing via list_task. Trigger this skill instead of happy-image-gen or happy-video-gen whenever the user explicitly names 即梦 or dreamina — it uses browser-based log",
-  "category": "社区精选",
+  "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,7 +16,7 @@
     "url": "https://github.com/iamzhihuix/happy-claude-skills/blob/main/skills/happy-dreamina/SKILL.md",
     "path": "skills/happy-dreamina/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-22T04:44:23.650Z",
+    "discovered_at": "2026-05-22T08:42:42.394Z",
     "stars": 295,
     "language": "TypeScript",
     "pushed_at": "2026-04-20T01:07:19Z",

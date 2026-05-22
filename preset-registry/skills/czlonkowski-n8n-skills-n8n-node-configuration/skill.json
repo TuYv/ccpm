@@ -2,7 +2,7 @@
   "id": "czlonkowski-n8n-skills-n8n-node-configuration",
   "name": "n8n-node-configuration",
   "description": "Operation-aware node configuration guidance. Use when configuring nodes, understanding property dependencies, determining required fields, choosing between get_node detail levels, or learning common configuration patterns by node type. Always use this skill when setting up node parameters — it explains which fields are required for each operation, how displayOptions control field visibility, and when to use patchNodeField for surgical edits vs full node updates.",
-  "category": "社区精选",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,8 +16,8 @@
     "url": "https://github.com/czlonkowski/n8n-skills/blob/main/skills/n8n-node-configuration/SKILL.md",
     "path": "skills/n8n-node-configuration/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-22T04:42:14.486Z",
-    "stars": 5096,
+    "discovered_at": "2026-05-22T08:39:47.106Z",
+    "stars": 5097,
     "language": "Shell",
     "pushed_at": "2026-05-06T13:23:16Z",
     "license": "MIT"

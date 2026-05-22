@@ -2,7 +2,7 @@
   "id": "sethgammon-citadel-verify",
   "name": "verify",
   "description": ">- Self-test the Citadel hook pipeline from within a live session. Exercises real tool calls (Write, Edit, Bash, Read) and checks that hooks fired, telemetry accumulated, and no errors occurred. Reports HOOK HEALTH: PASS or HOOK HEALTH: FAIL with a per-hook breakdown.",
-  "category": "社区精选",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,7 +16,7 @@
     "url": "https://github.com/SethGammon/Citadel/blob/main/skills/verify/SKILL.md",
     "path": "skills/verify/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-22T04:43:08.406Z",
+    "discovered_at": "2026-05-22T08:41:00.403Z",
     "stars": 572,
     "language": "JavaScript",
     "pushed_at": "2026-05-07T17:50:49Z",

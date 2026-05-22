@@ -2,7 +2,7 @@
   "id": "openai-openai-agents-python-openai-knowledge",
   "name": "openai-knowledge",
   "description": "Use when working with the OpenAI API (Responses API) or OpenAI platform features (tools, streaming, Realtime API, auth, models, rate limits, MCP) and you need authoritative, up-to-date documentation (schemas, examples, limits, edge cases). Prefer the OpenAI Developer Documentation MCP server tools when available; otherwise guide the user to enable `openaiDeveloperDocs`.",
-  "category": "社区精选",
+  "category": "开发编程",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,8 +16,8 @@
     "url": "https://github.com/openai/openai-agents-python/blob/main/.agents/skills/openai-knowledge/SKILL.md",
     "path": ".agents/skills/openai-knowledge/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-22T04:42:41.258Z",
-    "stars": 26561,
+    "discovered_at": "2026-05-22T08:40:23.334Z",
+    "stars": 26565,
     "language": "Python",
     "pushed_at": "2026-05-22T01:08:07Z",
     "license": "MIT"

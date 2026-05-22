@@ -2,7 +2,7 @@
   "id": "getsentry-sentry-sentry-javascript-bugs",
   "name": "sentry-javascript-bugs",
   "description": "Review Sentry React and TypeScript changes for bug patterns drawn from real production issues. Use when reviewing a frontend diff or PR, checking Warden findings, auditing the current branch, reviewing production-error patterns, or looking for common regressions in `static/`.",
-  "category": "社区精选",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/getsentry/sentry/blob/master/.agents/skills/sentry-javascript-bugs/SKILL.md",
     "path": ".agents/skills/sentry-javascript-bugs/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-05-22T04:42:52.093Z",
-    "stars": 43943,
+    "discovered_at": "2026-05-22T08:40:38.609Z",
+    "stars": 43946,
     "language": "Python",
-    "pushed_at": "2026-05-22T04:41:18Z",
+    "pushed_at": "2026-05-22T08:28:40Z",
     "license": null
   },
   "summary_zh": "这是一套基于真实生产 Bug 总结的代码审查参考，能帮你在看前端 PR、排查分支或检查静态文件时，快速揪出 React 和 TS 代码里的常见错误模式。"

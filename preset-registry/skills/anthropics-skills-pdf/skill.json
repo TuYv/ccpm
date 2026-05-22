@@ -2,7 +2,7 @@
   "id": "anthropics-skills-pdf",
   "name": "pdf",
   "description": "Use this skill whenever the user wants to do anything with PDF files. This includes reading or extracting text/tables from PDFs, combining or merging multiple PDFs into one, splitting PDFs apart, rotating pages, adding watermarks, creating new PDFs, filling PDF forms, encrypting/decrypting PDFs, extracting images, and OCR on scanned PDFs to make them searchable. If the user mentions a .pdf file or asks to produce one, use this skill.",
-  "category": "Anthropic 官方",
+  "category": "文档写作",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,8 +16,8 @@
     "url": "https://github.com/anthropics/skills/blob/main/skills/pdf/SKILL.md",
     "path": "skills/pdf/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-22T04:41:29.159Z",
-    "stars": 138947,
+    "discovered_at": "2026-05-22T08:38:43.639Z",
+    "stars": 139075,
     "language": "Python",
     "pushed_at": "2026-05-19T14:11:10Z",
     "license": null

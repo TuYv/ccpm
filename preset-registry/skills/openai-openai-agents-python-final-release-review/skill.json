@@ -2,7 +2,7 @@
   "id": "openai-openai-agents-python-final-release-review",
   "name": "final-release-review",
   "description": "Perform a release-readiness review by locating the previous release tag from remote tags and auditing the diff (e.g., v1.2.3...<commit>) for breaking changes, regressions, improvement opportunities, and risks before releasing openai-agents-python.",
-  "category": "社区精选",
+  "category": "开发编程",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,8 +16,8 @@
     "url": "https://github.com/openai/openai-agents-python/blob/main/.agents/skills/final-release-review/SKILL.md",
     "path": ".agents/skills/final-release-review/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-22T04:42:41.064Z",
-    "stars": 26561,
+    "discovered_at": "2026-05-22T08:40:23.063Z",
+    "stars": 26565,
     "language": "Python",
     "pushed_at": "2026-05-22T01:08:07Z",
     "license": "MIT"

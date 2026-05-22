@@ -2,7 +2,7 @@
   "id": "agricidaniel-claude-ads-ads-create",
   "name": "ads-create",
   "description": "Campaign concept and copy brief generator for paid advertising. Reads brand-profile.json and optional audit results to produce structured campaign concepts, messaging pillars, and copy briefs. Outputs campaign-brief.md to the current directory. Run after /ads dna and before /ads generate. Triggers on: create campaign, campaign brief, ad concepts, write ad copy, campaign strategy, ad messaging, creative brief, generate concepts.",
-  "category": "社区精选",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,8 +16,8 @@
     "url": "https://github.com/AgriciDaniel/claude-ads/blob/main/skills/ads-create/SKILL.md",
     "path": "skills/ads-create/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-22T04:43:28.132Z",
-    "stars": 5109,
+    "discovered_at": "2026-05-22T08:41:28.085Z",
+    "stars": 5116,
     "language": "Python",
     "pushed_at": "2026-05-18T17:32:57Z",
     "license": "MIT"

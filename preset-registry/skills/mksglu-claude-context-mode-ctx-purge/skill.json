@@ -2,7 +2,7 @@
   "id": "mksglu-claude-context-mode-ctx-purge",
   "name": "ctx-purge",
   "description": "| Purge the context-mode knowledge base. Permanently deletes all indexed content and resets session stats. This is destructive and cannot be undone. Trigger: /context-mode:ctx-purge",
-  "category": "社区精选",
+  "category": "开发编程",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,8 +16,8 @@
     "url": "https://github.com/mksglu/claude-context-mode/blob/main/skills/ctx-purge/SKILL.md",
     "path": "skills/ctx-purge/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-22T04:44:51.690Z",
-    "stars": 15360,
+    "discovered_at": "2026-05-22T08:43:21.658Z",
+    "stars": 15370,
     "language": "TypeScript",
     "pushed_at": "2026-05-21T13:02:08Z",
     "license": null

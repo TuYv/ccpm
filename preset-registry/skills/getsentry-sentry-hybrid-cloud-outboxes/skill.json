@@ -2,7 +2,7 @@
   "id": "getsentry-sentry-hybrid-cloud-outboxes",
   "name": "hybrid-cloud-outboxes",
   "description": ">- Guide for creating and maintaining outbox-based eventually consistent operations in Sentry. Most commonly used for cross-silo data replication, but applicable anywhere eventual consistency is needed — including single-silo deferred side effects, audit logging, and event fanout. Use when asked to \"add outbox\", \"add outbox replication\", \"replicate model to control silo\", \"replicate model to cell\", \"add outbox category\", \"write outbox signal receiver\", \"debug stuck outboxes\", \"outbox not process",
-  "category": "社区精选",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/getsentry/sentry/blob/master/.agents/skills/hybrid-cloud-outboxes/SKILL.md",
     "path": ".agents/skills/hybrid-cloud-outboxes/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-05-22T04:42:51.145Z",
-    "stars": 43943,
+    "discovered_at": "2026-05-22T08:40:37.325Z",
+    "stars": 43946,
     "language": "Python",
-    "pushed_at": "2026-05-22T04:41:18Z",
+    "pushed_at": "2026-05-22T08:28:40Z",
     "license": null
   },
   "summary_zh": "这是一份Sentry发件箱模式实践指南，帮你实现跨服务数据复制及各类最终一致性需求，适用于延迟处理、审计和事件分发等场景，还能排查卡住的发件箱任务。"

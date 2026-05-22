@@ -2,7 +2,7 @@
   "id": "ethereum-ethereum-org-website-page-visual-tests",
   "name": "page-visual-tests",
   "description": "Playwright + Chromatic full-page visual tests for ethereum.org. Trigger on \"add a page to the visual suite\", \"the snapshot keeps changing\", \"chromatic pages\", \"chromatic playwright\", or edits to `tests/visual/`, `playwright.visual.config.ts`, or `.github/workflows/chromatic-pages.yml`. Skip for Storybook Chromatic (`chromatic.yml`), e2e (`tests/e2e/`), unit (`tests/unit/`).",
-  "category": "社区精选",
+  "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,7 +16,7 @@
     "url": "https://github.com/ethereum/ethereum-org-website/blob/dev/.claude/skills/page-visual-tests/SKILL.md",
     "path": ".claude/skills/page-visual-tests/SKILL.md",
     "branch": "dev",
-    "discovered_at": "2026-05-22T04:42:52.971Z",
+    "discovered_at": "2026-05-22T08:40:39.812Z",
     "stars": 5933,
     "language": "Markdown",
     "pushed_at": "2026-05-21T21:57:06Z",

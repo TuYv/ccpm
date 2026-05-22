@@ -2,7 +2,7 @@
   "id": "openai-openai-agents-python-pr-draft-summary",
   "name": "pr-draft-summary",
   "description": "Create the required PR-ready summary block, branch suggestion, title, and draft description for openai-agents-python. Use in the final handoff after moderate-or-larger changes to runtime code, tests, examples, build/test configuration, or docs with behavior impact; skip only for trivial or conversation-only tasks, repo-meta/doc-only tasks without behavior impact, or when the user explicitly says not to include the PR draft block.",
-  "category": "社区精选",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,8 +16,8 @@
     "url": "https://github.com/openai/openai-agents-python/blob/main/.agents/skills/pr-draft-summary/SKILL.md",
     "path": ".agents/skills/pr-draft-summary/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-22T04:42:41.350Z",
-    "stars": 26561,
+    "discovered_at": "2026-05-22T08:40:23.490Z",
+    "stars": 26565,
     "language": "Python",
     "pushed_at": "2026-05-22T01:08:07Z",
     "license": "MIT"

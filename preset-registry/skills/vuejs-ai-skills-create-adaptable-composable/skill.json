@@ -2,7 +2,7 @@
   "id": "vuejs-ai-skills-create-adaptable-composable",
   "name": "create-adaptable-composable",
   "description": "Create a library-grade Vue composable that accepts maybe-reactive inputs (MaybeRef / MaybeRefOrGetter) so callers can pass a plain value, ref, or getter. Normalize inputs with toValue()/toRef() inside reactive effects (watch/watchEffect) to keep behavior predictable and reactive. Use this skill when user asks for creating adaptable or reusable composables.",
-  "category": "社区精选",
+  "category": "开发编程",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,8 +16,8 @@
     "url": "https://github.com/vuejs-ai/skills/blob/main/skills/create-adaptable-composable/SKILL.md",
     "path": "skills/create-adaptable-composable/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-22T04:43:57.671Z",
-    "stars": 2452,
+    "discovered_at": "2026-05-22T08:42:08.671Z",
+    "stars": 2454,
     "language": null,
     "pushed_at": "2026-03-26T05:50:25Z",
     "license": "MIT"

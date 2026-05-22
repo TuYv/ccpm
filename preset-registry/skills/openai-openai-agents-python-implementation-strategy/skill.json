@@ -2,7 +2,7 @@
   "id": "openai-openai-agents-python-implementation-strategy",
   "name": "implementation-strategy",
   "description": "Decide how to implement runtime and API changes in openai-agents-python before editing code. Use when a task changes exported APIs, runtime behavior, serialized state, tests, or docs and you need to choose the compatibility boundary, whether shims or migrations are warranted, and when unreleased interfaces can be rewritten directly.",
-  "category": "社区精选",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,8 +16,8 @@
     "url": "https://github.com/openai/openai-agents-python/blob/main/.agents/skills/implementation-strategy/SKILL.md",
     "path": ".agents/skills/implementation-strategy/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-22T04:42:41.155Z",
-    "stars": 26561,
+    "discovered_at": "2026-05-22T08:40:23.207Z",
+    "stars": 26565,
     "language": "Python",
     "pushed_at": "2026-05-22T01:08:07Z",
     "license": "MIT"

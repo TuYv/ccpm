@@ -2,7 +2,7 @@
   "id": "trailofbits-skills-agentic-actions-auditor",
   "name": "agentic-actions-auditor",
   "description": "Audits GitHub Actions workflows for security vulnerabilities in AI agent integrations including Claude Code Action, Gemini CLI, OpenAI Codex, and GitHub AI Inference. Detects attack vectors where attacker-controlled input reaches AI agents running in CI/CD pipelines, including env var intermediary patterns, direct expression injection, dangerous sandbox configurations, and wildcard user allowlists. Use when reviewing workflow files that invoke AI coding agents, auditing CI/CD pipeline security f",
-  "category": "社区精选",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,8 +16,8 @@
     "url": "https://github.com/trailofbits/skills/blob/main/plugins/agentic-actions-auditor/skills/agentic-actions-auditor/SKILL.md",
     "path": "plugins/agentic-actions-auditor/skills/agentic-actions-auditor/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-22T04:41:48.427Z",
-    "stars": 5325,
+    "discovered_at": "2026-05-22T08:39:08.816Z",
+    "stars": 5328,
     "language": "Python",
     "pushed_at": "2026-05-16T17:22:25Z",
     "license": "CC-BY-SA-4.0"

@@ -2,7 +2,7 @@
   "id": "agent-sh-agentsys-orchestrate-review",
   "name": "orchestrate-review",
   "description": "Use when user asks to \\\"deep review the code\\\", \\\"thorough code review\\\", \\\"multi-pass review\\\", or when orchestrating the Phase 9 review loop. Provides review pass definitions (code quality, security, performance, test coverage), signal detection patterns, and iteration algorithms.",
-  "category": "社区精选",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,7 +16,7 @@
     "url": "https://github.com/agent-sh/agentsys/blob/main/.kiro/skills/orchestrate-review/SKILL.md",
     "path": ".kiro/skills/orchestrate-review/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-22T04:43:03.042Z",
+    "discovered_at": "2026-05-22T08:40:53.100Z",
     "stars": 813,
     "language": "JavaScript",
     "pushed_at": "2026-05-21T17:59:34Z",

@@ -2,7 +2,7 @@
   "id": "mattpocock-skills-git-guardrails-claude-code",
   "name": "git-guardrails-claude-code",
   "description": "Set up Claude Code hooks to block dangerous git commands (push, reset --hard, clean, branch -D, etc.) before they execute. Use when user wants to prevent destructive git operations, add git safety hooks, or block git push/reset in Claude Code.",
-  "category": "社区精选",
+  "category": "开发编程",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,8 +16,8 @@
     "url": "https://github.com/mattpocock/skills/blob/main/skills/misc/git-guardrails-claude-code/SKILL.md",
     "path": "skills/misc/git-guardrails-claude-code/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-22T04:42:06.058Z",
-    "stars": 99464,
+    "discovered_at": "2026-05-22T08:39:36.020Z",
+    "stars": 99850,
     "language": "Shell",
     "pushed_at": "2026-05-20T08:46:54Z",
     "license": "MIT"
