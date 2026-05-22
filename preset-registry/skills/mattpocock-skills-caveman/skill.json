@@ -1,0 +1,26 @@
+{
+  "id": "mattpocock-skills-caveman",
+  "name": "caveman",
+  "description": "> Ultra-compressed communication mode. Cuts token usage ~75% by dropping filler, articles, and pleasantries while keeping full technical accuracy. Use when user says \"caveman mode\", \"talk like caveman\", \"use caveman\", \"less tokens\", \"be brief\", or invokes /caveman.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mattpocock",
+  "install_path": ".claude/skills/caveman/SKILL.md",
+  "source": {
+    "repo": "mattpocock/skills",
+    "url": "https://github.com/mattpocock/skills/blob/main/skills/productivity/caveman/SKILL.md",
+    "path": "skills/productivity/caveman/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:06.522Z",
+    "stars": 99464,
+    "language": "Shell",
+    "pushed_at": "2026-05-20T08:46:54Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一种极简对话指令，通过省去客套话和废话，把AI回复的token消耗砍掉约75%。适合想省token或只需快速看技术干货的场景，且不影响信息准确。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "team-attention-plugins-for-claude-natives-agent-council",
+  "name": "agent-council",
+  "description": "Collect and synthesize opinions from multiple AI agents. Use when users say \"summon the council\", \"ask other AIs\", or want multiple AI perspectives on a question.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "team-attention",
+  "install_path": ".claude/skills/agent-council/SKILL.md",
+  "source": {
+    "repo": "team-attention/plugins-for-claude-natives",
+    "url": "https://github.com/team-attention/plugins-for-claude-natives/blob/main/plugins/agent-council/skills/agent-council/SKILL.md",
+    "path": "plugins/agent-council/skills/agent-council/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:36.453Z",
+    "stars": 773,
+    "language": "Python",
+    "pushed_at": "2026-04-20T06:53:40Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个多AI意见汇总工具，能帮你收集并整合不同AI的看法。适合需要多视角探讨问题，或者想“召唤”其他AI一起出主意、获取综合答案的场景。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "thedotmack-claude-mem-wowerpoint",
+  "name": "wowerpoint",
+  "description": "Turn one document into a kawaii NotebookLM slide-deck PDF. Use for \"wowerpoint this\", \"make a deck about <file>\", \"turn this report into slides\", or any request to render a single document as shareable narrative slides.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "thedotmack",
+  "install_path": ".claude/skills/wowerpoint/SKILL.md",
+  "source": {
+    "repo": "thedotmack/claude-mem",
+    "url": "https://github.com/thedotmack/claude-mem/blob/main/plugin/skills/wowerpoint/SKILL.md",
+    "path": "plugin/skills/wowerpoint/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:49.065Z",
+    "stars": 77318,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-21T10:26:19Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "它能把单篇文档快速生成可爱风格的叙事幻灯片PDF，适合需要把长报告或资料变成可分享演示文稿的场景。"
+}

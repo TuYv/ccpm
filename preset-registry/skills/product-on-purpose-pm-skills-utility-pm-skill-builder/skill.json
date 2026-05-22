@@ -1,0 +1,26 @@
+{
+  "id": "product-on-purpose-pm-skills-utility-pm-skill-builder",
+  "name": "utility-pm-skill-builder",
+  "description": "Guides contributors from a PM skill idea to a complete Skill Implementation Packet aligned with pm-skills conventions. Runs gap analysis, validates through a Why Gate, classifies by type and phase, generates draft files, and writes to a staging area for review before promotion.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "product-on-purpose",
+  "install_path": ".claude/skills/utility-pm-skill-builder/SKILL.md",
+  "source": {
+    "repo": "product-on-purpose/pm-skills",
+    "url": "https://github.com/product-on-purpose/pm-skills/blob/main/skills/utility-pm-skill-builder/SKILL.md",
+    "path": "skills/utility-pm-skill-builder/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T00:25:41.280Z",
+    "stars": 226,
+    "language": "Shell",
+    "pushed_at": "2026-05-21T05:03:47Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "这是一款产品技能方案生成工具，能把粗略的技能点子转化为符合规范的完整实施方案包，自动把关逻辑并生成待审核草稿，适合需要规范化落地想法的贡献者。"
+}

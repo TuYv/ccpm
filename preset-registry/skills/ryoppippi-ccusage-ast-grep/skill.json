@@ -1,0 +1,26 @@
+{
+  "id": "ryoppippi-ccusage-ast-grep",
+  "name": "ast-grep",
+  "description": "Guides ccusage structural code searches with ast-grep. Use when finding Rust or TypeScript syntax patterns, validating migrations, or writing AST-based search commands.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ryoppippi",
+  "install_path": ".claude/skills/ast-grep/SKILL.md",
+  "source": {
+    "repo": "ryoppippi/ccusage",
+    "url": "https://github.com/ryoppippi/ccusage/blob/main/.agents/skills/ast-grep/SKILL.md",
+    "path": ".agents/skills/ast-grep/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:04.261Z",
+    "stars": 14512,
+    "language": "Rust",
+    "pushed_at": "2026-05-21T16:12:47Z",
+    "license": null
+  },
+  "summary_zh": "这是一个基于语法树的结构化代码搜索工具，能帮你精准匹配特定代码写法，特别适合验证代码迁移或编写复杂的代码搜索指令。"
+}

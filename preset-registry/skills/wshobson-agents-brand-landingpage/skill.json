@@ -1,0 +1,26 @@
+{
+  "id": "wshobson-agents-brand-landingpage",
+  "name": "brand-landingpage",
+  "description": "> Brand-first landing page designer — interviews the user to discover brand identity (adjectives, colors, typography, shape language), then generates and iterates on a polished landing page via Stitch with deployment-ready HTML output. Preferred over frontend-design for standalone landing/marketing pages where the user hasn't established visual direction yet.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "wshobson",
+  "install_path": ".claude/skills/brand-landingpage/SKILL.md",
+  "source": {
+    "repo": "wshobson/agents",
+    "url": "https://github.com/wshobson/agents/blob/main/plugins/brand-landingpage/skills/brand-landingpage/SKILL.md",
+    "path": "plugins/brand-landingpage/skills/brand-landingpage/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:56.108Z",
+    "stars": 35770,
+    "language": "Python",
+    "pushed_at": "2026-05-21T20:01:53Z",
+    "license": "MIT"
+  },
+  "summary_zh": "它通过对话帮你梳理品牌调性，自动生成并迭代出可直接部署的精美落地页，专治还没确定视觉风格却要快速搭建独立营销页的痛点。"
+}

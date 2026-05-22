@@ -1,0 +1,26 @@
+{
+  "id": "neolabhq-context-engineering-kit-git-worktrees",
+  "name": "git-worktrees",
+  "description": "Use when working on multiple branches simultaneously, context switching without stashing, reviewing PRs while developing, testing in isolation, or comparing implementations across branches - provides git worktree commands and workflow patterns for parallel development with multiple working directories.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "NeoLabHQ",
+  "install_path": ".claude/skills/git-worktrees/SKILL.md",
+  "source": {
+    "repo": "NeoLabHQ/context-engineering-kit",
+    "url": "https://github.com/NeoLabHQ/context-engineering-kit/blob/master/plugins/git/skills/git-worktrees/SKILL.md",
+    "path": "plugins/git/skills/git-worktrees/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-05-22T04:42:30.004Z",
+    "stars": 1025,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-22T00:32:29Z",
+    "license": "GPL-3.0"
+  },
+  "summary_zh": "提供Git多工作目录的管理命令与工作流，让你不用暂存代码就能随时切分支，轻松实现边开发边看PR、隔离测试或多分支并行对比。"
+}

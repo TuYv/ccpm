@@ -1,0 +1,26 @@
+{
+  "id": "getsentry-sentry-design-system",
+  "name": "design-system",
+  "description": "Guide for using Sentry's layout and text primitives. Use when implementing UI components, layouts, or typography. Enforces use of core components over styled components.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "getsentry",
+  "install_path": ".claude/skills/design-system/SKILL.md",
+  "source": {
+    "repo": "getsentry/sentry",
+    "url": "https://github.com/getsentry/sentry/blob/master/.agents/skills/design-system/SKILL.md",
+    "path": ".agents/skills/design-system/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-05-22T04:42:50.645Z",
+    "stars": 43943,
+    "language": "Python",
+    "pushed_at": "2026-05-22T04:41:18Z",
+    "license": null
+  },
+  "summary_zh": "Sentry的UI基础规范，适合在开发组件、布局或排版时参考，能帮你强制使用核心组件，避免随意写样式导致界面不统一。"
+}

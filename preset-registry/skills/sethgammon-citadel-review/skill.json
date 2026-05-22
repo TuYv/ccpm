@@ -1,0 +1,26 @@
+{
+  "id": "sethgammon-citadel-review",
+  "name": "review",
+  "description": "5-pass structured code review — correctness, security, performance, readability, consistency",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "SethGammon",
+  "install_path": ".claude/skills/review/SKILL.md",
+  "source": {
+    "repo": "SethGammon/Citadel",
+    "url": "https://github.com/SethGammon/Citadel/blob/main/skills/review/SKILL.md",
+    "path": "skills/review/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:07.517Z",
+    "stars": 572,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-07T17:50:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一种结构化的代码审查方法，把审查拆成五个独立步骤逐层把关，帮你全面排查各类隐患与缺陷，避免审查时顾此失彼，适合需要严控代码质量的开发团队。"
+}

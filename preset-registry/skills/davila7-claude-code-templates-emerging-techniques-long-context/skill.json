@@ -1,0 +1,26 @@
+{
+  "id": "davila7-claude-code-templates-emerging-techniques-long-context",
+  "name": "long-context",
+  "description": "Extend context windows of transformer models using RoPE, YaRN, ALiBi, and position interpolation techniques. Use when processing long documents (32k-128k+ tokens), extending pre-trained models beyond original context limits, or implementing efficient positional encodings. Covers rotary embeddings, attention biases, interpolation methods, and extrapolation strategies for LLMs.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "davila7",
+  "install_path": ".claude/skills/emerging-techniques-long-context/SKILL.md",
+  "source": {
+    "repo": "davila7/claude-code-templates",
+    "url": "https://github.com/davila7/claude-code-templates/blob/main/cli-tool/components/skills/ai-research/emerging-techniques-long-context/SKILL.md",
+    "path": "cli-tool/components/skills/ai-research/emerging-techniques-long-context/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:45.610Z",
+    "stars": 27482,
+    "language": "Python",
+    "pushed_at": "2026-05-22T04:31:04Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个扩展大模型上下文窗口的工具，帮你突破预训练模型的原始长度限制，轻松处理3万到12万以上token的超长文档。"
+}

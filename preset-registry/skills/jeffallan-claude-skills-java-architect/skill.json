@@ -1,0 +1,26 @@
+{
+  "id": "jeffallan-claude-skills-java-architect",
+  "name": "java-architect",
+  "description": "Use when building, configuring, or debugging enterprise Java applications with Spring Boot 3.x, microservices, or reactive programming. Invoke to implement WebFlux endpoints, optimize JPA queries and database performance, configure Spring Security with OAuth2/JWT, or resolve authentication issues and async processing challenges in cloud-native Spring applications.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "jeffallan",
+  "install_path": ".claude/skills/java-architect/SKILL.md",
+  "source": {
+    "repo": "jeffallan/claude-skills",
+    "url": "https://github.com/jeffallan/claude-skills/blob/main/skills/java-architect/SKILL.md",
+    "path": "skills/java-architect/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:58.337Z",
+    "stars": 9253,
+    "language": "Python",
+    "pushed_at": "2026-05-20T13:35:05Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个专为企业级Java应用打造的开发助手，适合Spring Boot 3、微服务及响应式编程场景，帮你解决安全鉴权、数据库调优及云原生架构下的异步处理等开发难题。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "iamzhihuix-happy-claude-skills-happy-dreamina",
+  "name": "happy-dreamina",
+  "description": "ByteDance Jimeng (Dreamina) image and video generation via the official `dreamina` CLI. Use this skill whenever the user mentions 即梦, Dreamina, Jimeng, or asks to generate images or videos specifically through ByteDance's Jimeng service. Covers text2image, image2image, text2video, image2video, plus async task query and task-history browsing via list_task. Trigger this skill instead of happy-image-gen or happy-video-gen whenever the user explicitly names 即梦 or dreamina — it uses browser-based log",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "0.1.0",
+  "author": "iamzhihuix",
+  "install_path": ".claude/skills/happy-dreamina/SKILL.md",
+  "source": {
+    "repo": "iamzhihuix/happy-claude-skills",
+    "url": "https://github.com/iamzhihuix/happy-claude-skills/blob/main/skills/happy-dreamina/SKILL.md",
+    "path": "skills/happy-dreamina/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:23.650Z",
+    "stars": 295,
+    "language": "TypeScript",
+    "pushed_at": "2026-04-20T01:07:19Z",
+    "license": "MIT"
+  },
+  "summary_zh": "专门调用字节跳动即梦服务的命令行工具。当你明确想用即梦来生成图片或视频，或者查询历史生成任务时，用它就能直接在终端搞定，省去手动操作的麻烦。"
+}

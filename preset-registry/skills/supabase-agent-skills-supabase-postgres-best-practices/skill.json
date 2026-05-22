@@ -1,0 +1,26 @@
+{
+  "id": "supabase-agent-skills-supabase-postgres-best-practices",
+  "name": "supabase-postgres-best-practices",
+  "description": "Postgres performance optimization and best practices from Supabase. Use this skill when writing, reviewing, or optimizing Postgres queries, schema designs, or database configurations.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "supabase",
+  "install_path": ".claude/skills/supabase-postgres-best-practices/SKILL.md",
+  "source": {
+    "repo": "supabase/agent-skills",
+    "url": "https://github.com/supabase/agent-skills/blob/main/skills/supabase-postgres-best-practices/SKILL.md",
+    "path": "skills/supabase-postgres-best-practices/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:57.152Z",
+    "stars": 2143,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-21T20:18:09Z",
+    "license": "MIT"
+  },
+  "summary_zh": "来自 Supabase 的 Postgres 性能优化指南，适合在编写审查查询、设计表结构或调整数据库配置时参考，帮你避开性能坑。"
+}

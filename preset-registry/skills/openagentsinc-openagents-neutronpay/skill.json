@@ -1,0 +1,26 @@
+{
+  "id": "openagentsinc-openagents-neutronpay",
+  "name": "neutronpay",
+  "description": "Neutronpay MCP and SDK workflows for Lightning, stablecoin, and fiat payments.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "OpenAgentsInc",
+  "install_path": ".claude/skills/neutronpay/SKILL.md",
+  "source": {
+    "repo": "OpenAgentsInc/openagents",
+    "url": "https://github.com/OpenAgentsInc/openagents/blob/main/skills/neutronpay/SKILL.md",
+    "path": "skills/neutronpay/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:10.500Z",
+    "stars": 420,
+    "language": "Rust",
+    "pushed_at": "2026-05-21T14:45:59Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "这套开发工具能帮你快速打通闪电网络、稳定币与法币的支付流程，适合需要整合加密货币和传统法币混合收款的开发场景。"
+}

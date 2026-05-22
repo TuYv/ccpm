@@ -1,0 +1,26 @@
+{
+  "id": "neolabhq-context-engineering-kit-setup-context7-mcp",
+  "name": "setup-context7-mcp",
+  "description": "Guide for setup Context7 MCP server to load documentation for specific technologies.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "NeoLabHQ",
+  "install_path": ".claude/skills/setup-context7-mcp/SKILL.md",
+  "source": {
+    "repo": "NeoLabHQ/context-engineering-kit",
+    "url": "https://github.com/NeoLabHQ/context-engineering-kit/blob/master/plugins/mcp/skills/setup-context7-mcp/SKILL.md",
+    "path": "plugins/mcp/skills/setup-context7-mcp/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-05-22T04:42:31.093Z",
+    "stars": 1025,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-22T00:32:29Z",
+    "license": "GPL-3.0"
+  },
+  "summary_zh": "这是一份配置指南，教你搭建 Context7 MCP 服务器，从而为特定技术加载专属文档，适合需要便捷查阅技术文档的开发场景。"
+}

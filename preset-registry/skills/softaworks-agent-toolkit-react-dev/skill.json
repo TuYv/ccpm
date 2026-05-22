@@ -1,0 +1,26 @@
+{
+  "id": "softaworks-agent-toolkit-react-dev",
+  "name": "react-dev",
+  "description": "This skill should be used when building React components with TypeScript, typing hooks, handling events, or when React TypeScript, React 19, Server Components are mentioned. Covers type-safe patterns for React 18-19 including generic components, proper event typing, and routing integration (TanStack Router, React Router).",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "softaworks",
+  "install_path": ".claude/skills/react-dev/SKILL.md",
+  "source": {
+    "repo": "softaworks/agent-toolkit",
+    "url": "https://github.com/softaworks/agent-toolkit/blob/main/dist/plugins/react-dev/skills/react-dev/SKILL.md",
+    "path": "dist/plugins/react-dev/skills/react-dev/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:20.331Z",
+    "stars": 1872,
+    "language": "Python",
+    "pushed_at": "2026-03-05T16:46:24Z",
+    "license": "MIT"
+  },
+  "summary_zh": "专攻 React 加 TypeScript 开发的辅助工具，帮你解决各类类型定义难题。适合使用 React 18/19 及服务端组件的场景，让你轻松写出类型安全的代码。"
+}

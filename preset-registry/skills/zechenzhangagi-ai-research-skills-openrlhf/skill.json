@@ -1,0 +1,26 @@
+{
+  "id": "zechenzhangagi-ai-research-skills-openrlhf",
+  "name": "openrlhf-training",
+  "description": "High-performance RLHF framework with Ray+vLLM acceleration. Use for PPO, GRPO, RLOO, DPO training of large models (7B-70B+). Built on Ray, vLLM, ZeRO-3. 2× faster than DeepSpeedChat with distributed architecture and GPU resource sharing.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "zechenzhangAGI",
+  "install_path": ".claude/skills/openrlhf/SKILL.md",
+  "source": {
+    "repo": "zechenzhangAGI/AI-research-SKILLs",
+    "url": "https://github.com/zechenzhangAGI/AI-research-SKILLs/blob/main/06-post-training/openrlhf/SKILL.md",
+    "path": "06-post-training/openrlhf/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:39.639Z",
+    "stars": 8786,
+    "language": "TeX",
+    "pushed_at": "2026-04-28T05:09:27Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个高性能的大模型对齐训练框架，专用于7B至70B以上模型的强化学习微调，能帮你解决传统方案训练慢、显存吃紧的问题，轻松实现两倍提速。"
+}

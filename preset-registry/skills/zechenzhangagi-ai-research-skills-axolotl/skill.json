@@ -1,0 +1,26 @@
+{
+  "id": "zechenzhangagi-ai-research-skills-axolotl",
+  "name": "axolotl",
+  "description": "Expert guidance for fine-tuning LLMs with Axolotl - YAML configs, 100+ models, LoRA/QLoRA, DPO/KTO/ORPO/GRPO, multimodal support",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "zechenzhangAGI",
+  "install_path": ".claude/skills/axolotl/SKILL.md",
+  "source": {
+    "repo": "zechenzhangAGI/AI-research-SKILLs",
+    "url": "https://github.com/zechenzhangAGI/AI-research-SKILLs/blob/main/03-fine-tuning/axolotl/SKILL.md",
+    "path": "03-fine-tuning/axolotl/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:37.857Z",
+    "stars": 8786,
+    "language": "TeX",
+    "pushed_at": "2026-04-28T05:09:27Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一款大模型微调工具，只需写简单的配置文件就能搞定各种主流模型的微调与对齐训练，帮你摆脱繁琐的代码配置，轻松定制专属模型。"
+}

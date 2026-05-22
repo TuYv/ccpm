@@ -1,0 +1,26 @@
+{
+  "id": "obra-superpowers-receiving-code-review",
+  "name": "receiving-code-review",
+  "description": "Use when receiving code review feedback, before implementing suggestions, especially if feedback seems unclear or technically questionable - requires technical rigor and verification, not performative agreement or blind implementation",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "obra",
+  "install_path": ".claude/skills/receiving-code-review/SKILL.md",
+  "source": {
+    "repo": "obra/superpowers",
+    "url": "https://github.com/obra/superpowers/blob/main/skills/receiving-code-review/SKILL.md",
+    "path": "skills/receiving-code-review/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:41:42.198Z",
+    "stars": 201805,
+    "language": "Shell",
+    "pushed_at": "2026-05-21T21:23:26Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是应对代码审查反馈的指南，专治盲目照做或敷衍同意。遇到模糊或技术存疑的修改意见时，它能引导你严谨验证后再动手，确保每次改动都真正合理。"
+}

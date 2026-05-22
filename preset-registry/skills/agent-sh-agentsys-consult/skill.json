@@ -1,0 +1,26 @@
+{
+  "id": "agent-sh-agentsys-consult",
+  "name": "consult",
+  "description": "Cross-tool AI consultation. Use when user asks to 'consult gemini', 'ask codex', 'get second opinion', 'cross-check with claude', 'consult another AI', 'ask opencode', 'copilot opinion', or wants a second opinion from a different AI tool.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "5.1.0",
+  "author": "agent-sh",
+  "install_path": ".claude/skills/consult/SKILL.md",
+  "source": {
+    "repo": "agent-sh/agentsys",
+    "url": "https://github.com/agent-sh/agentsys/blob/main/.kiro/skills/consult/SKILL.md",
+    "path": ".kiro/skills/consult/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:01.439Z",
+    "stars": 813,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-21T17:59:34Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个跨AI咨询工具，当你需要获取第二意见，或想用其他大模型交叉验证答案时，它能帮你快速调用不同AI获取多方反馈。"
+}

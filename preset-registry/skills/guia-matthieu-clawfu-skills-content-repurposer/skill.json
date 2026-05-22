@@ -1,0 +1,26 @@
+{
+  "id": "guia-matthieu-clawfu-skills-content-repurposer",
+  "name": "content-repurposer",
+  "description": "Transform long-form content into multiple short-form pieces. Use when: converting podcast to social posts; extracting Twitter threads from blog posts; pulling quotes from transcripts; creating content variants from single source",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "guia-matthieu",
+  "install_path": ".claude/skills/content-repurposer/SKILL.md",
+  "source": {
+    "repo": "guia-matthieu/clawfu-skills",
+    "url": "https://github.com/guia-matthieu/clawfu-skills/blob/main/skills/automation/content-repurposer/SKILL.md",
+    "path": "skills/automation/content-repurposer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:46:30.695Z",
+    "stars": 109,
+    "language": "Python",
+    "pushed_at": "2026-04-02T10:12:11Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个把长内容拆成短内容的工具，能把播客、博客或录音稿快速转成社交媒体贴文或金句，轻松实现“一鱼多吃”，特别适合需要跨平台分发内容的场景。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "sethgammon-citadel-marshal",
+  "name": "marshal",
+  "description": ">- Meta-orchestrator that takes any direction — broad, specific, or vague — and autonomously chains skills and context into actionable work. Gathers context from codebase, docs, and memory. Only asks the user when it genuinely cannot proceed. Single-session orchestrator.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "SethGammon",
+  "install_path": ".claude/skills/marshal/SKILL.md",
+  "source": {
+    "repo": "SethGammon/Citadel",
+    "url": "https://github.com/SethGammon/Citadel/blob/main/skills/marshal/SKILL.md",
+    "path": "skills/marshal/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:06.618Z",
+    "stars": 572,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-07T17:50:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个能自动把模糊需求拆解成可执行任务的智能调度器。它会自动结合代码和文档等上下文干活，只在卡壳时才找你确认，适合需要让AI高度自主、尽量少打扰人的场景。"
+}

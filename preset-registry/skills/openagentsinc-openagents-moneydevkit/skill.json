@@ -1,0 +1,26 @@
+{
+  "id": "openagentsinc-openagents-moneydevkit",
+  "name": "moneydevkit",
+  "description": "Money Dev Kit workflows for Lightning checkout and agent wallets.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "OpenAgentsInc",
+  "install_path": ".claude/skills/moneydevkit/SKILL.md",
+  "source": {
+    "repo": "OpenAgentsInc/openagents",
+    "url": "https://github.com/OpenAgentsInc/openagents/blob/main/skills/moneydevkit/SKILL.md",
+    "path": "skills/moneydevkit/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:10.399Z",
+    "stars": 420,
+    "language": "Rust",
+    "pushed_at": "2026-05-21T14:45:59Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "这是一套专为闪电网络支付和AI智能体钱包打造的开发工具，提供现成的工作流，帮你轻松搞定加密结账和智能体资金管理。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "forrestchang-andrej-karpathy-skills-karpathy-guidelines",
+  "name": "karpathy-guidelines",
+  "description": "Behavioral guidelines to reduce common LLM coding mistakes. Use when writing, reviewing, or refactoring code to avoid overcomplication, make surgical changes, surface assumptions, and define verifiable success criteria.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "forrestchang",
+  "install_path": ".claude/skills/karpathy-guidelines/SKILL.md",
+  "source": {
+    "repo": "forrestchang/andrej-karpathy-skills",
+    "url": "https://github.com/forrestchang/andrej-karpathy-skills/blob/main/skills/karpathy-guidelines/SKILL.md",
+    "path": "skills/karpathy-guidelines/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:19.113Z",
+    "stars": 143727,
+    "language": null,
+    "pushed_at": "2026-04-20T10:05:04Z",
+    "license": null
+  },
+  "summary_zh": "这是一套规范大模型编程行为的准则，专治AI写代码时容易过度复杂、乱改一通和目标模糊的毛病，在写代码、审查或重构时用上它，能让改动更精准可控。"
+}

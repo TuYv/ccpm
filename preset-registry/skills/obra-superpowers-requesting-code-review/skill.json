@@ -1,0 +1,26 @@
+{
+  "id": "obra-superpowers-requesting-code-review",
+  "name": "requesting-code-review",
+  "description": "Use when completing tasks, implementing major features, or before merging to verify work meets requirements",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "obra",
+  "install_path": ".claude/skills/requesting-code-review/SKILL.md",
+  "source": {
+    "repo": "obra/superpowers",
+    "url": "https://github.com/obra/superpowers/blob/main/skills/requesting-code-review/SKILL.md",
+    "path": "skills/requesting-code-review/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:41:42.272Z",
+    "stars": 201805,
+    "language": "Shell",
+    "pushed_at": "2026-05-21T21:23:26Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个代码审查辅助规范，适合在完成开发、上线大功能或合并代码前使用，帮你确认产出是否真正符合要求。"
+}

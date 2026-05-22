@@ -1,0 +1,26 @@
+{
+  "id": "dvdsgl-claude-canvas-document",
+  "name": "document",
+  "description": "| Document canvas for displaying and editing markdown content. Use when showing documents, emails, or when users need to select text for editing.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "dvdsgl",
+  "install_path": ".claude/skills/document/SKILL.md",
+  "source": {
+    "repo": "dvdsgl/claude-canvas",
+    "url": "https://github.com/dvdsgl/claude-canvas/blob/main/canvas/skills/document/SKILL.md",
+    "path": "canvas/skills/document/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:52.892Z",
+    "stars": 1485,
+    "language": "TypeScript",
+    "pushed_at": "2026-01-08T02:19:55Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个用于展示和编辑 Markdown 内容的画布组件，适合用来呈现文档、邮件，或需要用户选中文字进行编辑的场景。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "neolabhq-context-engineering-kit-create-workflow-command",
+  "name": "create-workflow-command",
+  "description": "Create a workflow command that orchestrates multi-step execution through sub-agents with file-based task prompts",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "NeoLabHQ",
+  "install_path": ".claude/skills/create-workflow-command/SKILL.md",
+  "source": {
+    "repo": "NeoLabHQ/context-engineering-kit",
+    "url": "https://github.com/NeoLabHQ/context-engineering-kit/blob/master/plugins/customaize-agent/skills/create-workflow-command/SKILL.md",
+    "path": "plugins/customaize-agent/skills/create-workflow-command/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-05-22T04:42:28.368Z",
+    "stars": 1025,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-22T00:32:29Z",
+    "license": "GPL-3.0"
+  },
+  "summary_zh": "这是一个多步工作流编排工具，通过读取文件里的任务提示来调度多个子智能体分步执行，适合需要多角色协作完成复杂自动化任务的场景。"
+}

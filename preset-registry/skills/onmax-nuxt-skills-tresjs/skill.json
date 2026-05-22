@@ -1,0 +1,26 @@
+{
+  "id": "onmax-nuxt-skills-tresjs",
+  "name": "tresjs",
+  "description": "Use when building 3D scenes with TresJS (Vue Three.js) - provides TresCanvas, composables (useTres, useLoop), Cientos helpers (OrbitControls, useGLTF, Environment), and post-processing effects",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "onmax",
+  "install_path": ".claude/skills/tresjs/SKILL.md",
+  "source": {
+    "repo": "onmax/nuxt-skills",
+    "url": "https://github.com/onmax/nuxt-skills/blob/main/skills/tresjs/SKILL.md",
+    "path": "skills/tresjs/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:06.376Z",
+    "stars": 663,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-04T06:59:41Z",
+    "license": null
+  },
+  "summary_zh": "这是一个专为Vue打造的Three.js开发工具包，适合在Vue项目中构建3D场景，帮你省去繁琐的底层配置，轻松实现3D渲染与后期特效。"
+}

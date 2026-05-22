@@ -1,0 +1,26 @@
+{
+  "id": "guia-matthieu-clawfu-skills-brand-voice",
+  "name": "brand-voice",
+  "description": "Use when writing any client-facing content, marketing copy, or communications. Use when AI output sounds generic, corporate, or lacks personality. Triggers on \"sounds like AI\", \"lacks voice\", \"too generic\", or when content could apply to any competitor.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "guia-matthieu",
+  "install_path": ".claude/skills/brand-voice/SKILL.md",
+  "source": {
+    "repo": "guia-matthieu/clawfu-skills",
+    "url": "https://github.com/guia-matthieu/clawfu-skills/blob/main/skills/branding/brand-voice/SKILL.md",
+    "path": "skills/branding/brand-voice/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:46:31.658Z",
+    "stars": 109,
+    "language": "Python",
+    "pushed_at": "2026-04-02T10:12:11Z",
+    "license": "MIT"
+  },
+  "summary_zh": "专为品牌表达定制的写作工具。当AI文案太机器味、太官方或缺乏辨识度时，用它来润色营销和客户沟通内容，让你的文字不再千篇一律。"
+}

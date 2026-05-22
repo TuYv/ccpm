@@ -1,0 +1,26 @@
+{
+  "id": "neolabhq-context-engineering-kit-do-in-steps",
+  "name": "do-in-steps",
+  "description": "Execute complex tasks through sequential sub-agent orchestration with intelligent model selection, meta-judge → LLM-as-a-judge verification",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "NeoLabHQ",
+  "install_path": ".claude/skills/do-in-steps/SKILL.md",
+  "source": {
+    "repo": "NeoLabHQ/context-engineering-kit",
+    "url": "https://github.com/NeoLabHQ/context-engineering-kit/blob/master/plugins/sadd/skills/do-in-steps/SKILL.md",
+    "path": "plugins/sadd/skills/do-in-steps/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-05-22T04:42:32.050Z",
+    "stars": 1025,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-22T00:32:29Z",
+    "license": "GPL-3.0"
+  },
+  "summary_zh": "它是一个AI任务编排工具，通过拆解复杂任务为多步子任务并依次执行，同时自动匹配模型与验证结果，专门解决单次难以搞定、需分步推进且要求高准确率的复杂工作流问题。"
+}

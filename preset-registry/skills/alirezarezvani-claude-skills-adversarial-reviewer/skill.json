@@ -1,0 +1,26 @@
+{
+  "id": "alirezarezvani-claude-skills-adversarial-reviewer",
+  "name": "adversarial-reviewer",
+  "description": "Adversarial code review that breaks the self-review monoculture. Use when you want a genuinely critical review of recent changes, before merging a PR, or when you suspect Claude is being too agreeable about code quality. Forces perspective shifts through hostile reviewer personas that catch blind spots the author's mental model shares with the reviewer.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "alirezarezvani",
+  "install_path": ".claude/skills/adversarial-reviewer/SKILL.md",
+  "source": {
+    "repo": "alirezarezvani/claude-skills",
+    "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/adversarial-reviewer/SKILL.md",
+    "path": ".gemini/skills/adversarial-reviewer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:38.410Z",
+    "stars": 15795,
+    "language": "Python",
+    "pushed_at": "2026-05-21T17:51:26Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一款用敌对角色做代码审查的工具，专治自我审查或AI审查时的“老好人”现象。在合并PR前用它，能强制转换视角，帮你揪出单一思维下的代码盲点。"
+}

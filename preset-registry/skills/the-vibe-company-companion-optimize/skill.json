@@ -1,0 +1,26 @@
+{
+  "id": "the-vibe-company-companion-optimize",
+  "name": "optimize",
+  "description": "Improve interface performance across loading speed, rendering, animations, images, and bundle size. Makes experiences faster and smoother.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "The-Vibe-Company",
+  "install_path": ".claude/skills/optimize/SKILL.md",
+  "source": {
+    "repo": "The-Vibe-Company/companion",
+    "url": "https://github.com/The-Vibe-Company/companion/blob/main/.agents/skills/optimize/SKILL.md",
+    "path": ".agents/skills/optimize/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:02.893Z",
+    "stars": 2339,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-09T06:06:27Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个前端性能优化工具，专门解决页面加载慢、运行卡顿和包体积过大的问题，让应用更流畅，适合追求丝滑体验的项目。"
+}

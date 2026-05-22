@@ -1,0 +1,26 @@
+{
+  "id": "op7418-codepilot-feishu-task",
+  "name": "feishu-task",
+  "description": "| 飞书任务管理工具,用于创建、查询、更新任务和清单。",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "op7418",
+  "install_path": ".claude/skills/feishu-task/SKILL.md",
+  "source": {
+    "repo": "op7418/CodePilot",
+    "url": "https://github.com/op7418/CodePilot/blob/main/资料/feishu-openclaw-plugin/package/skills/feishu-task/SKILL.md",
+    "path": "资料/feishu-openclaw-plugin/package/skills/feishu-task/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:00.797Z",
+    "stars": 5769,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-11T06:07:30Z",
+    "license": null
+  },
+  "summary_zh": "这是一个飞书任务管理工具，帮你便捷地创建和追踪待办清单，适合需要在飞书内高效统筹工作安排与进度的场景。"
+}

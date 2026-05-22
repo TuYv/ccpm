@@ -1,0 +1,26 @@
+{
+  "id": "trailofbits-skills-c-review",
+  "name": "c-review",
+  "description": "Performs comprehensive C/C++ security review for memory corruption, integer overflows, race conditions, and platform-specific vulnerabilities. Use when auditing native C/C++ applications, reviewing daemons or services for memory safety, or hunting integer overflow / use-after-free / race conditions in userspace code.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "trailofbits",
+  "install_path": ".claude/skills/c-review/SKILL.md",
+  "source": {
+    "repo": "trailofbits/skills",
+    "url": "https://github.com/trailofbits/skills/blob/main/plugins/c-review/skills/c-review/SKILL.md",
+    "path": "plugins/c-review/skills/c-review/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:41:49.874Z",
+    "stars": 5325,
+    "language": "Python",
+    "pushed_at": "2026-05-16T17:22:25Z",
+    "license": "CC-BY-SA-4.0"
+  },
+  "summary_zh": "专门给C/C++代码做安全审查的工具，能揪出内存破坏、溢出和竞态等底层漏洞，适合审计原生应用与守护进程，或深挖用户态代码的内存安全问题。"
+}

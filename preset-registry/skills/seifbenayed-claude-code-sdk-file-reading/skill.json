@@ -1,0 +1,26 @@
+{
+  "id": "seifbenayed-claude-code-sdk-file-reading",
+  "name": "file-reading",
+  "description": "Use this skill when a file has been uploaded but its content is NOT in your context — only its path at /mnt/user-data/uploads/ is listed in an uploaded_files block. This skill is a router: it tells you which tool to use for each file type (pdf, docx, xlsx, csv, json, images, archives, ebooks) so you read the right amount the right way instead of blindly running cat on a binary. Triggers: any mention of /mnt/user-data/uploads/, an uploaded_files section, a file_path tag, or a user asking about an",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "SeifBenayed",
+  "install_path": ".claude/skills/file-reading/SKILL.md",
+  "source": {
+    "repo": "SeifBenayed/claude-code-sdk",
+    "url": "https://github.com/SeifBenayed/claude-code-sdk/blob/main/.claude/skills/file-reading/SKILL.md",
+    "path": ".claude/skills/file-reading/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:46:38.967Z",
+    "stars": 115,
+    "language": "JavaScript",
+    "pushed_at": "2026-04-05T20:03:07Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个智能读取调度工具，当上传文件未加载到上下文时，能根据格式自动匹配合适的读取方式，避免盲目解析二进制文件报错，适合处理各类格式附件的场景。"
+}

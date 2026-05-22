@@ -1,0 +1,26 @@
+{
+  "id": "actionbook-rust-skills-m06-error-handling",
+  "name": "m06-error-handling",
+  "description": "CRITICAL: Use for error handling. Triggers: Result, Option, Error, ?, unwrap, expect, panic, anyhow, thiserror, when to panic vs return Result, custom error, error propagation, 错误处理, Result 用法, 什么时候用 panic",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "actionbook",
+  "install_path": ".claude/skills/m06-error-handling/SKILL.md",
+  "source": {
+    "repo": "actionbook/rust-skills",
+    "url": "https://github.com/actionbook/rust-skills/blob/main/skills/m06-error-handling/SKILL.md",
+    "path": "skills/m06-error-handling/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:01.274Z",
+    "stars": 1164,
+    "language": "Shell",
+    "pushed_at": "2026-05-12T12:59:42Z",
+    "license": null
+  },
+  "summary_zh": "专治Rust错误处理的各种纠结，帮你彻底搞懂何时该panic何时返回Result，以及如何优雅地传播和自定义错误。"
+}

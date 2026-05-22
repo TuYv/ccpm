@@ -1,0 +1,26 @@
+{
+  "id": "actionbook-rust-skills-m07-concurrency",
+  "name": "m07-concurrency",
+  "description": "CRITICAL: Use for concurrency/async. Triggers: E0277 Send Sync, cannot be sent between threads, thread, spawn, channel, mpsc, Mutex, RwLock, Atomic, async, await, Future, tokio, deadlock, race condition, 并发, 线程, 异步, 死锁",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "actionbook",
+  "install_path": ".claude/skills/m07-concurrency/SKILL.md",
+  "source": {
+    "repo": "actionbook/rust-skills",
+    "url": "https://github.com/actionbook/rust-skills/blob/main/skills/m07-concurrency/SKILL.md",
+    "path": "skills/m07-concurrency/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:01.368Z",
+    "stars": 1164,
+    "language": "Shell",
+    "pushed_at": "2026-05-12T12:59:42Z",
+    "license": null
+  },
+  "summary_zh": "专攻Rust并发与异步编程的参考指南，能帮你解决线程数据传递受阻、Send/Sync报错、死锁和竞态等问题，适合应对多线程或Tokio异步开发场景。"
+}

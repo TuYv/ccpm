@@ -1,0 +1,26 @@
+{
+  "id": "bitwize-music-studio-claude-ai-music-skills-genre-creator",
+  "name": "genre-creator",
+  "description": "Create new genre documentation files for the bitwize-music genre library. Use when the user wants to add a genre, says \"/genre-creator\", \"neues Genre erstellen\", \"Genre hinzufuegen\", \"add genre\", or asks to create genre documentation. Takes a genre name as argument.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "bitwize-music-studio",
+  "install_path": ".claude/skills/genre-creator/SKILL.md",
+  "source": {
+    "repo": "bitwize-music-studio/claude-ai-music-skills",
+    "url": "https://github.com/bitwize-music-studio/claude-ai-music-skills/blob/main/skills/genre-creator/SKILL.md",
+    "path": "skills/genre-creator/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:36.688Z",
+    "stars": 202,
+    "language": "Python",
+    "pushed_at": "2026-05-21T00:00:51Z",
+    "license": "CC0-1.0"
+  },
+  "summary_zh": "专门给 bitwize-music 曲风库生成文档的工具，只需输入曲风名，就能帮你轻松搞定添加新曲风时的文档创建需求。"
+}

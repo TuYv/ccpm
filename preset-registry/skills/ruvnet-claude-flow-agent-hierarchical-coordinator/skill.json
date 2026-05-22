@@ -1,0 +1,26 @@
+{
+  "id": "ruvnet-claude-flow-agent-hierarchical-coordinator",
+  "name": "agent-hierarchical-coordinator",
+  "description": "Agent skill for hierarchical-coordinator - invoke with $agent-hierarchical-coordinator",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ruvnet",
+  "install_path": ".claude/skills/agent-hierarchical-coordinator/SKILL.md",
+  "source": {
+    "repo": "ruvnet/claude-flow",
+    "url": "https://github.com/ruvnet/claude-flow/blob/main/.agents/skills/agent-hierarchical-coordinator/SKILL.md",
+    "path": ".agents/skills/agent-hierarchical-coordinator/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:00.305Z",
+    "stars": 53972,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-22T03:51:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个多层级任务调度技能，能帮你协调不同层级的代理协同工作，适合需要拆解复杂任务并让多个代理分层协作的场景。"
+}

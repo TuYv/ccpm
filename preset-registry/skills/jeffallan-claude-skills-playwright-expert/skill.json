@@ -1,0 +1,26 @@
+{
+  "id": "jeffallan-claude-skills-playwright-expert",
+  "name": "playwright-expert",
+  "description": "Use when writing E2E tests with Playwright, setting up test infrastructure, or debugging flaky browser tests. Invoke to write test scripts, create page objects, configure test fixtures, set up reporters, add CI integration, implement API mocking, or perform visual regression testing. Trigger terms: Playwright, E2E test, end-to-end, browser testing, automation, UI testing, visual testing, Page Object Model, test flakiness.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "jeffallan",
+  "install_path": ".claude/skills/playwright-expert/SKILL.md",
+  "source": {
+    "repo": "jeffallan/claude-skills",
+    "url": "https://github.com/jeffallan/claude-skills/blob/main/skills/playwright-expert/SKILL.md",
+    "path": "skills/playwright-expert/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:59.381Z",
+    "stars": 9253,
+    "language": "Python",
+    "pushed_at": "2026-05-20T13:35:05Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个专注 Playwright 的测试助手，能帮你搞定端到端测试脚本编写与环境搭建，还能排查偶发失败的用例，适合做浏览器自动化和视觉回归测试。"
+}

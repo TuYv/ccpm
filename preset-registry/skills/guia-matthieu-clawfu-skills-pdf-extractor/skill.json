@@ -1,0 +1,26 @@
+{
+  "id": "guia-matthieu-clawfu-skills-pdf-extractor",
+  "name": "pdf-extractor",
+  "description": "Extract text, tables, and images from PDFs. Use when: extracting data from reports; converting PDF tables to CSV; pulling images from presentations; processing research papers; batch converting PDFs to text",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "guia-matthieu",
+  "install_path": ".claude/skills/pdf-extractor/SKILL.md",
+  "source": {
+    "repo": "guia-matthieu/clawfu-skills",
+    "url": "https://github.com/guia-matthieu/clawfu-skills/blob/main/skills/automation/pdf-extractor/SKILL.md",
+    "path": "skills/automation/pdf-extractor/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:46:30.985Z",
+    "stars": 109,
+    "language": "Python",
+    "pushed_at": "2026-04-02T10:12:11Z",
+    "license": "MIT"
+  },
+  "summary_zh": "它能从PDF里提取文字、表格和图片，帮你把不可编辑的内容变成可用数据。适合处理报告论文、表格转CSV、提取图片或批量转文本等数据抽取场景。"
+}

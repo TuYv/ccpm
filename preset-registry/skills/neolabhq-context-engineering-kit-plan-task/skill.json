@@ -1,0 +1,26 @@
+{
+  "id": "neolabhq-context-engineering-kit-plan-task",
+  "name": "plan-task",
+  "description": "Refine, parallelize, and verify a draft task specification into a fully planned implementation-ready task",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "NeoLabHQ",
+  "install_path": ".claude/skills/plan-task/SKILL.md",
+  "source": {
+    "repo": "NeoLabHQ/context-engineering-kit",
+    "url": "https://github.com/NeoLabHQ/context-engineering-kit/blob/master/plugins/sdd/skills/plan-task/SKILL.md",
+    "path": "plugins/sdd/skills/plan-task/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-05-22T04:42:33.071Z",
+    "stars": 1025,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-22T00:32:29Z",
+    "license": "GPL-3.0"
+  },
+  "summary_zh": "把粗糙的任务草稿打磨成清晰、随时可执行的落地计划，帮你理清步骤、拆分并行任务并验证可行性，特别适合项目初期把模糊想法变成靠谱方案。"
+}

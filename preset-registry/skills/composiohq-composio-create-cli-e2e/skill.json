@@ -1,0 +1,26 @@
+{
+  "id": "composiohq-composio-create-cli-e2e",
+  "name": "create-cli-e2e",
+  "description": "Write end-to-end tests for CLI commands using the Docker-based test framework in ts/e2e-tests/cli/.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ComposioHQ",
+  "install_path": ".claude/skills/create-cli-e2e/SKILL.md",
+  "source": {
+    "repo": "ComposioHQ/composio",
+    "url": "https://github.com/ComposioHQ/composio/blob/next/.claude/skills/create-cli-e2e/SKILL.md",
+    "path": ".claude/skills/create-cli-e2e/SKILL.md",
+    "branch": "next",
+    "discovered_at": "2026-05-22T04:42:49.003Z",
+    "stars": 28386,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-21T10:55:25Z",
+    "license": "MIT"
+  },
+  "summary_zh": "基于 Docker 的测试框架，专门帮你给命令行工具写端到端测试，适合需要隔离环境来验证命令完整运行效果的场景。"
+}

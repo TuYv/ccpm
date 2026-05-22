@@ -1,0 +1,26 @@
+{
+  "id": "the-vibe-company-companion-audit",
+  "name": "audit",
+  "description": "Perform comprehensive audit of interface quality across accessibility, performance, theming, and responsive design. Generates detailed report of issues with severity ratings and recommendations.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "The-Vibe-Company",
+  "install_path": ".claude/skills/audit/SKILL.md",
+  "source": {
+    "repo": "The-Vibe-Company/companion",
+    "url": "https://github.com/The-Vibe-Company/companion/blob/main/.agents/skills/audit/SKILL.md",
+    "path": ".agents/skills/audit/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:01.666Z",
+    "stars": 2339,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-09T06:06:27Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是个界面质量审查工具，能全面排查无障碍、性能和响应式等体验问题，并输出带严重级别与修改建议的报告，适合前端上线前的质量把控。"
+}

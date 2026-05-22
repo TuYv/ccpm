@@ -1,0 +1,26 @@
+{
+  "id": "zechenzhangagi-ai-research-skills-mamba",
+  "name": "mamba-architecture",
+  "description": "State-space model with O(n) complexity vs Transformers' O(n²). 5× faster inference, million-token sequences, no KV cache. Selective SSM with hardware-aware design. Mamba-1 (d_state=16) and Mamba-2 (d_state=128, multi-head). Models 130M-2.8B on HuggingFace.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "zechenzhangAGI",
+  "install_path": ".claude/skills/mamba/SKILL.md",
+  "source": {
+    "repo": "zechenzhangAGI/AI-research-SKILLs",
+    "url": "https://github.com/zechenzhangAGI/AI-research-SKILLs/blob/main/01-model-architecture/mamba/SKILL.md",
+    "path": "01-model-architecture/mamba/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:36.994Z",
+    "stars": 8786,
+    "language": "TeX",
+    "pushed_at": "2026-04-28T05:09:27Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一种线性复杂度的模型架构，能解决Transformer处理长文本时计算慢、显存占用高的问题，特别适合需要处理超长上下文且要求极速推理的场景。"
+}

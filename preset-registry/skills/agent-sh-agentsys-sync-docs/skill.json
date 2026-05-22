@@ -1,0 +1,26 @@
+{
+  "id": "agent-sh-agentsys-sync-docs",
+  "name": "sync-docs",
+  "description": "Sync documentation with code. Use when user asks to update docs, check docs, fix stale documentation, update changelog, or after code changes.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "5.1.0",
+  "author": "agent-sh",
+  "install_path": ".claude/skills/sync-docs/SKILL.md",
+  "source": {
+    "repo": "agent-sh/agentsys",
+    "url": "https://github.com/agent-sh/agentsys/blob/main/.kiro/skills/sync-docs/SKILL.md",
+    "path": ".kiro/skills/sync-docs/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:04.030Z",
+    "stars": 813,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-21T17:59:34Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个让文档与代码保持同步的工具，专治代码改了文档却没跟着更新的痛点，适合在代码变更后需要及时更新或检查文档的场景。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "raintree-technology-claude-starter-decibel",
+  "name": "decibel-expert",
+  "description": "Expert on Decibel on-chain perpetual futures trading platform on Aptos. Covers trading engine, orderbook, TypeScript SDK, REST APIs, WebSocket streams, market data, position management, TWAP orders, and vault operations. Triggers on keywords decibel, perpetual futures, aptos trading, on-chain trading, decibel sdk, perps, orderbook, twap, market data, trading api.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "raintree-technology",
+  "install_path": ".claude/skills/decibel/SKILL.md",
+  "source": {
+    "repo": "raintree-technology/claude-starter",
+    "url": "https://github.com/raintree-technology/claude-starter/blob/main/.claude/skills/aptos/decibel/skill.md",
+    "path": ".claude/skills/aptos/decibel/skill.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:51.315Z",
+    "stars": 76,
+    "language": "Zig",
+    "pushed_at": "2026-04-24T22:45:15Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是Aptos链上永续合约交易平台的专属助手，帮你快速搞懂交易规则与开发接口，适合开发者在代码接入或交易者进行复杂订单操作时随时提问。"
+}

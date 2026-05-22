@@ -1,0 +1,26 @@
+{
+  "id": "neolabhq-context-engineering-kit-prompt-engineering",
+  "name": "prompt-engineering",
+  "description": "Use this skill when you writing commands, hooks, skills for Agent, or prompts for sub agents or any other LLM interaction, including optimizing prompts, improving LLM outputs, or designing production prompt templates.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "NeoLabHQ",
+  "install_path": ".claude/skills/prompt-engineering/SKILL.md",
+  "source": {
+    "repo": "NeoLabHQ/context-engineering-kit",
+    "url": "https://github.com/NeoLabHQ/context-engineering-kit/blob/master/plugins/customaize-agent/skills/prompt-engineering/SKILL.md",
+    "path": "plugins/customaize-agent/skills/prompt-engineering/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-05-22T04:42:28.440Z",
+    "stars": 1025,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-22T00:32:29Z",
+    "license": "GPL-3.0"
+  },
+  "summary_zh": "专为大模型交互打造的实用技能，适合在编写Agent指令、子Agent提示词或设计生产级模板时使用，帮你轻松优化提示词并提升输出质量。"
+}

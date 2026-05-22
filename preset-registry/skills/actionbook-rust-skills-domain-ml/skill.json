@@ -1,0 +1,26 @@
+{
+  "id": "actionbook-rust-skills-domain-ml",
+  "name": "domain-ml",
+  "description": "Use when building ML/AI apps in Rust. Keywords: machine learning, ML, AI, tensor, model, inference, neural network, deep learning, training, prediction, ndarray, tch-rs, burn, candle, 机器学习, 人工智能, 模型推理",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "actionbook",
+  "install_path": ".claude/skills/domain-ml/SKILL.md",
+  "source": {
+    "repo": "actionbook/rust-skills",
+    "url": "https://github.com/actionbook/rust-skills/blob/main/skills/domain-ml/SKILL.md",
+    "path": "skills/domain-ml/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:00.629Z",
+    "stars": 1164,
+    "language": "Shell",
+    "pushed_at": "2026-05-12T12:59:42Z",
+    "license": null
+  },
+  "summary_zh": "这是一个Rust机器学习开发库，专门解决在Rust里写AI应用、跑模型训练和推理的需求。"
+}

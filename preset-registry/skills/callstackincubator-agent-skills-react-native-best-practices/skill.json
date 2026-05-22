@@ -1,0 +1,26 @@
+{
+  "id": "callstackincubator-agent-skills-react-native-best-practices",
+  "name": "react-native-best-practices",
+  "description": "Provides React Native performance optimization guidelines for FPS, TTI, bundle size, memory leaks, re-renders, and animations. Applies to tasks involving Hermes optimization, JS thread blocking, bridge overhead, FlashList, native modules, or debugging jank and frame drops.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "callstackincubator",
+  "install_path": ".claude/skills/react-native-best-practices/SKILL.md",
+  "source": {
+    "repo": "callstackincubator/agent-skills",
+    "url": "https://github.com/callstackincubator/agent-skills/blob/main/skills/react-native-best-practices/SKILL.md",
+    "path": "skills/react-native-best-practices/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:15.118Z",
+    "stars": 1360,
+    "language": "JavaScript",
+    "pushed_at": "2026-04-28T03:25:43Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一份React Native性能优化指南，帮你解决卡顿掉帧、内存泄漏和包体积过大等痛点，适合在排查底层引擎、线程阻塞或界面渲染等性能调优场景下参考。"
+}

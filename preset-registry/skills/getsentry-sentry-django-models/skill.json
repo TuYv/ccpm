@@ -1,0 +1,26 @@
+{
+  "id": "getsentry-sentry-django-models",
+  "name": "django-models",
+  "description": "Design Django ORM models for Sentry following architectural conventions for silos, replication, relocation, and foreign keys. Use when adding a new Django model, designing a model for a feature, deciding where data should live, picking a foreign key type, or refactoring an existing model's silo placement. Trigger on \"add a Django model\", \"create a model\", \"design a model for X\", \"new database table\", \"store this data in the DB\", \"I need to track Y\", \"model for [feature]\". Not for Pydantic models",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "getsentry",
+  "install_path": ".claude/skills/django-models/SKILL.md",
+  "source": {
+    "repo": "getsentry/sentry",
+    "url": "https://github.com/getsentry/sentry/blob/master/.agents/skills/django-models/SKILL.md",
+    "path": ".agents/skills/django-models/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-05-22T04:42:50.743Z",
+    "stars": 43943,
+    "language": "Python",
+    "pushed_at": "2026-05-22T04:41:18Z",
+    "license": null
+  },
+  "summary_zh": "专为Sentry设计的Django ORM模型规范，帮你搞定数据隔离、复制等架构约定，适合建新表、定数据位置或选外键时使用，不适用Pydantic。"
+}

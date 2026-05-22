@@ -1,0 +1,26 @@
+{
+  "id": "trailofbits-skills-ruzzy",
+  "name": "ruzzy",
+  "description": "> Ruzzy is a coverage-guided Ruby fuzzer by Trail of Bits. Use for fuzzing pure Ruby code and Ruby C extensions.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "trailofbits",
+  "install_path": ".claude/skills/ruzzy/SKILL.md",
+  "source": {
+    "repo": "trailofbits/skills",
+    "url": "https://github.com/trailofbits/skills/blob/main/plugins/testing-handbook-skills/skills/ruzzy/SKILL.md",
+    "path": "plugins/testing-handbook-skills/skills/ruzzy/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:41:53.596Z",
+    "stars": 5325,
+    "language": "Python",
+    "pushed_at": "2026-05-16T17:22:25Z",
+    "license": "CC-BY-SA-4.0"
+  },
+  "summary_zh": "这是一个基于覆盖率的Ruby模糊测试工具，能帮你找出纯Ruby代码和C扩展里隐藏的漏洞与崩溃问题。"
+}

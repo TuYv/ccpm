@@ -1,0 +1,26 @@
+{
+  "id": "alirezarezvani-claude-skills-aws-solution-architect",
+  "name": "aws-solution-architect",
+  "description": "Design AWS architectures for startups using serverless patterns and IaC templates. Use when asked to design serverless architecture, create CloudFormation templates, optimize AWS costs, set up CI/CD pipelines, or migrate to AWS. Covers Lambda, API Gateway, DynamoDB, ECS, Aurora, and cost optimization.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alirezarezvani",
+  "install_path": ".claude/skills/aws-solution-architect/SKILL.md",
+  "source": {
+    "repo": "alirezarezvani/claude-skills",
+    "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/aws-solution-architect/SKILL.md",
+    "path": ".gemini/skills/aws-solution-architect/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:39.778Z",
+    "stars": 15795,
+    "language": "Python",
+    "pushed_at": "2026-05-21T17:51:26Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是专为初创团队打造的AWS架构设计助手，提供无服务器与基础设施即代码模板，适合需要快速设计云架构、生成部署模板、优化云成本或搭建自动化流水线的场景。"
+}

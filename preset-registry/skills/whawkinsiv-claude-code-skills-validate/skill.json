@@ -1,0 +1,26 @@
+{
+  "id": "whawkinsiv-claude-code-skills-validate",
+  "name": "validate",
+  "description": "Use this skill when the user needs to validate a business idea, test demand before building, run a smoke test, create an MVP experiment, or decide whether an idea is worth pursuing. Covers demand validation, smoke tests, fake-door tests, landing page experiments, and go/no-go decision frameworks for bootstrapped founders.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "whawkinsiv",
+  "install_path": ".claude/skills/validate/SKILL.md",
+  "source": {
+    "repo": "whawkinsiv/claude-code-skills",
+    "url": "https://github.com/whawkinsiv/claude-code-skills/blob/main/skills/validate/SKILL.md",
+    "path": "skills/validate/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:33.832Z",
+    "stars": 177,
+    "language": null,
+    "pushed_at": "2026-05-14T16:20:15Z",
+    "license": "MIT"
+  },
+  "summary_zh": "帮独立开发者在动手做产品前验证商业点子的工具，通过低成本实验和决策框架测试真实需求，判断想法值不值得投入，避免做没人用的产品。"
+}

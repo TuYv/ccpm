@@ -1,0 +1,26 @@
+{
+  "id": "fradser-dotclaude-create-feishu-doc",
+  "name": "create-feishu-doc",
+  "description": "Automates creating new documents in the Feishu workspace. This skill should be used when the user asks to \"create a Feishu doc\", \"create a new doc in Feishu\", \"open Feishu and create document\", \"create document in leiniao-ibg\", or mentions creating documents in Feishu or Lark workspace.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "0.1.0",
+  "author": "FradSer",
+  "install_path": ".claude/skills/create-feishu-doc/SKILL.md",
+  "source": {
+    "repo": "FradSer/dotclaude",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/office/skills/create-feishu-doc/SKILL.md",
+    "path": "office/skills/create-feishu-doc/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:15.469Z",
+    "stars": 548,
+    "language": "Shell",
+    "pushed_at": "2026-05-21T09:20:23Z",
+    "license": null
+  },
+  "summary_zh": "这是个自动在飞书里新建文档的工具，适合接入自动化流程或助手，听到“帮我建个飞书文档”等指令时，就能免去手动操作直接搞定。"
+}

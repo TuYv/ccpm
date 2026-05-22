@@ -1,0 +1,26 @@
+{
+  "id": "alirezarezvani-claude-skills-chief-data-officer-advisor",
+  "name": "chief-data-officer-advisor",
+  "description": "Chief Data Officer advisory for startups: AI training data rights and consent provenance, data product strategy (warehouse vs lakehouse vs mesh, build-vs-buy), B2B customer-data-as-asset valuation and M&A readiness, data team org evolution. Use when deciding whether to train models on customer data, choosing data architecture, valuing data for fundraising or M&A, sequencing data hires, or when user mentions CDO, chief data officer, data strategy, data mesh, lakehouse, training data, data product",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alirezarezvani",
+  "install_path": ".claude/skills/chief-data-officer-advisor/SKILL.md",
+  "source": {
+    "repo": "alirezarezvani/claude-skills",
+    "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/chief-data-officer-advisor/SKILL.md",
+    "path": ".gemini/skills/chief-data-officer-advisor/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:42.777Z",
+    "stars": 15795,
+    "language": "Python",
+    "pushed_at": "2026-05-21T17:51:26Z",
+    "license": "MIT"
+  },
+  "summary_zh": "专为初创公司提供首席数据官级别咨询，帮你解决AI训练数据合规、架构选型、数据资产估值及团队搭建难题，适合在训练模型、选架构、融资并购或招人时参考。"
+}

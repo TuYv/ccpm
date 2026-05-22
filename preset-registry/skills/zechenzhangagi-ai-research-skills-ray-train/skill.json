@@ -1,0 +1,26 @@
+{
+  "id": "zechenzhangagi-ai-research-skills-ray-train",
+  "name": "ray-train",
+  "description": "Distributed training orchestration across clusters. Scales PyTorch/TensorFlow/HuggingFace from laptop to 1000s of nodes. Built-in hyperparameter tuning with Ray Tune, fault tolerance, elastic scaling. Use when training massive models across multiple machines or running distributed hyperparameter sweeps.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "zechenzhangAGI",
+  "install_path": ".claude/skills/ray-train/SKILL.md",
+  "source": {
+    "repo": "zechenzhangAGI/AI-research-SKILLs",
+    "url": "https://github.com/zechenzhangAGI/AI-research-SKILLs/blob/main/08-distributed-training/ray-train/SKILL.md",
+    "path": "08-distributed-training/ray-train/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:41.658Z",
+    "stars": 8786,
+    "language": "TeX",
+    "pushed_at": "2026-04-28T05:09:27Z",
+    "license": "MIT"
+  },
+  "summary_zh": "它能帮你调度和管理分布式训练，把深度学习任务从单机无缝扩展到上千台机器，特别适合多机训练大模型或进行大规模超参搜索的场景。"
+}

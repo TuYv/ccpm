@@ -1,0 +1,26 @@
+{
+  "id": "ruvnet-claude-flow-agent-neural-network",
+  "name": "agent-neural-network",
+  "description": "Agent skill for neural-network - invoke with $agent-neural-network",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ruvnet",
+  "install_path": ".claude/skills/agent-neural-network/SKILL.md",
+  "source": {
+    "repo": "ruvnet/claude-flow",
+    "url": "https://github.com/ruvnet/claude-flow/blob/main/.agents/skills/agent-neural-network/SKILL.md",
+    "path": ".agents/skills/agent-neural-network/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:01.449Z",
+    "stars": 53972,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-22T03:51:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个给AI助手扩展神经网络能力的技能插件，通过简单命令即可调用，适合需要让助手直接处理深度学习任务的场景。"
+}

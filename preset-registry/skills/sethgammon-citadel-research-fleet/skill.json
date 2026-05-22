@@ -1,0 +1,26 @@
+{
+  "id": "sethgammon-citadel-research-fleet",
+  "name": "research-fleet",
+  "description": ">- Parallel research using Fleet wave mechanics. Spawns multiple scout agents, each investigating a different angle of the same question. Findings are compressed between waves. Produces a unified research brief from multiple independent perspectives.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "SethGammon",
+  "install_path": ".claude/skills/research-fleet/SKILL.md",
+  "source": {
+    "repo": "SethGammon/Citadel",
+    "url": "https://github.com/SethGammon/Citadel/blob/main/skills/research-fleet/SKILL.md",
+    "path": "skills/research-fleet/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:07.352Z",
+    "stars": 572,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-07T17:50:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个多角度并行研究工具，能派多个助手同时从不同方向调查同一问题，逐轮汇总提炼后输出综合简报，适合需要快速、全面拆解复杂问题的场景。"
+}

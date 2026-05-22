@@ -1,0 +1,26 @@
+{
+  "id": "raintree-technology-claude-starter-object-model",
+  "name": "aptos-object-model",
+  "description": "Expert on Aptos Object Model - ObjectCore, Object<T> wrapper, constructor references, ExtendRef/DeleteRef/TransferRef capabilities, object ownership, named vs generated objects, composability, and migration from resource-only patterns. Triggers on keywords object model, objectcore, constructorref, extendref, deleteref, transferref, named object, object ownership, composable object",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "raintree-technology",
+  "install_path": ".claude/skills/object-model/SKILL.md",
+  "source": {
+    "repo": "raintree-technology/claude-starter",
+    "url": "https://github.com/raintree-technology/claude-starter/blob/main/.claude/skills/aptos/object-model/skill.md",
+    "path": ".claude/skills/aptos/object-model/skill.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:51.870Z",
+    "stars": 76,
+    "language": "Zig",
+    "pushed_at": "2026-04-24T22:45:15Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是专攻Aptos对象模型的专家助手，能帮你理清对象所有权、能力控制和组合设计，特别适合需要从旧版资源模式迁移到新对象体系的开发者。"
+}

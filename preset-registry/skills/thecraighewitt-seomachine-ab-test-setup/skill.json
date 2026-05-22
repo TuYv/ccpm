@@ -1,0 +1,26 @@
+{
+  "id": "thecraighewitt-seomachine-ab-test-setup",
+  "name": "ab-test-setup",
+  "description": "When the user wants to plan, design, or implement an A/B test or experiment. Also use when the user mentions \"A/B test,\" \"split test,\" \"experiment,\" \"test this change,\" \"variant copy,\" \"multivariate test,\" or \"hypothesis.\" For tracking implementation, see analytics-tracking.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "TheCraigHewitt",
+  "install_path": ".claude/skills/ab-test-setup/SKILL.md",
+  "source": {
+    "repo": "TheCraigHewitt/seomachine",
+    "url": "https://github.com/TheCraigHewitt/seomachine/blob/main/.claude/skills/ab-test-setup/SKILL.md",
+    "path": ".claude/skills/ab-test-setup/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:10.897Z",
+    "stars": 7000,
+    "language": "Python",
+    "pushed_at": "2026-04-10T17:41:07Z",
+    "license": "MIT"
+  },
+  "summary_zh": "专门帮你规划、设计和落地A/B及多变量实验，适合需要验证产品假设或对比方案效果的场景，轻松搞定实验搭建。"
+}

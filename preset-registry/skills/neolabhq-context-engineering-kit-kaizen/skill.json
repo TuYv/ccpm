@@ -1,0 +1,26 @@
+{
+  "id": "neolabhq-context-engineering-kit-kaizen",
+  "name": "kaizen",
+  "description": "Use when Code implementation and refactoring, architecturing or designing systems, process and workflow improvements, error handling and validation. Provide tehniquest to avoid over-engineering and apply iterative improvements.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "NeoLabHQ",
+  "install_path": ".claude/skills/kaizen/SKILL.md",
+  "source": {
+    "repo": "NeoLabHQ/context-engineering-kit",
+    "url": "https://github.com/NeoLabHQ/context-engineering-kit/blob/master/plugins/kaizen/skills/kaizen/SKILL.md",
+    "path": "plugins/kaizen/skills/kaizen/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-05-22T04:42:30.467Z",
+    "stars": 1025,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-22T00:32:29Z",
+    "license": "GPL-3.0"
+  },
+  "summary_zh": "这是一套开发指导方法，适合在代码实现、架构设计或流程优化时使用，帮你避免过度设计，通过小步迭代稳步提升系统质量。"
+}

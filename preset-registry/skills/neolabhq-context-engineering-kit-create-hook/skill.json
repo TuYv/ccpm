@@ -1,0 +1,26 @@
+{
+  "id": "neolabhq-context-engineering-kit-create-hook",
+  "name": "create-hook",
+  "description": "Create and configure git hooks with intelligent project analysis, suggestions, and automated testing",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "NeoLabHQ",
+  "install_path": ".claude/skills/create-hook/SKILL.md",
+  "source": {
+    "repo": "NeoLabHQ/context-engineering-kit",
+    "url": "https://github.com/NeoLabHQ/context-engineering-kit/blob/master/plugins/customaize-agent/skills/create-hook/SKILL.md",
+    "path": "plugins/customaize-agent/skills/create-hook/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-05-22T04:42:28.082Z",
+    "stars": 1025,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-22T00:32:29Z",
+    "license": "GPL-3.0"
+  },
+  "summary_zh": "它能帮你智能分析项目并自动配置最合适的 git hooks，省去繁琐的手动设置，还能顺带跑测试把关，非常适合想轻松规范代码提交流程的开发者。"
+}

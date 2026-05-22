@@ -1,0 +1,26 @@
+{
+  "id": "muratcankoylan-agent-skills-for-context-engineering-comprehensive-research-agent",
+  "name": "comprehensive-research-agent",
+  "description": "Ensure thorough validation, error recovery, and transparent reasoning in research tasks with multiple tool calls",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "muratcankoylan",
+  "install_path": ".claude/skills/comprehensive-research-agent/SKILL.md",
+  "source": {
+    "repo": "muratcankoylan/Agent-Skills-for-Context-Engineering",
+    "url": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering/blob/main/examples/interleaved-thinking/generated_skills/comprehensive-research-agent/SKILL.md",
+    "path": "examples/interleaved-thinking/generated_skills/comprehensive-research-agent/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:08.141Z",
+    "stars": 15854,
+    "language": "Python",
+    "pushed_at": "2026-05-22T04:31:12Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个研究型智能体，专门解决复杂任务中多次调用工具容易出错且过程不透明的问题，让研究更严谨可靠，适合需要深度追溯的调研场景。"
+}

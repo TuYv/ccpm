@@ -1,0 +1,26 @@
+{
+  "id": "actionbook-rust-skills-core-dynamic-skills",
+  "name": "core-dynamic-skills",
+  "description": "Internal command support for dynamic Rust crate skill management. Use only when explicitly invoked by /sync-crate-skills, /clean-crate-skills, or /update-crate-skill.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "actionbook",
+  "install_path": ".claude/skills/core-dynamic-skills/SKILL.md",
+  "source": {
+    "repo": "actionbook/rust-skills",
+    "url": "https://github.com/actionbook/rust-skills/blob/main/skills/core-dynamic-skills/SKILL.md",
+    "path": "skills/core-dynamic-skills/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:59.975Z",
+    "stars": 1164,
+    "language": "Shell",
+    "pushed_at": "2026-05-12T12:59:42Z",
+    "license": null
+  },
+  "summary_zh": "它是一个动态管理Rust包技能的内部命令工具，适合在需要通过特定指令同步、清理或更新包技能时使用。"
+}

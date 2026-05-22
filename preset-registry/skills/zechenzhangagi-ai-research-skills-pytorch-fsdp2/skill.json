@@ -1,0 +1,26 @@
+{
+  "id": "zechenzhangagi-ai-research-skills-pytorch-fsdp2",
+  "name": "pytorch-fsdp2",
+  "description": "Adds PyTorch FSDP2 (fully_shard) to training scripts with correct init, sharding, mixed precision/offload config, and distributed checkpointing. Use when models exceed single-GPU memory or when you need DTensor-based sharding with DeviceMesh.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "zechenzhangAGI",
+  "install_path": ".claude/skills/pytorch-fsdp2/SKILL.md",
+  "source": {
+    "repo": "zechenzhangAGI/AI-research-SKILLs",
+    "url": "https://github.com/zechenzhangAGI/AI-research-SKILLs/blob/main/08-distributed-training/pytorch-fsdp2/SKILL.md",
+    "path": "08-distributed-training/pytorch-fsdp2/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:41.399Z",
+    "stars": 8786,
+    "language": "TeX",
+    "pushed_at": "2026-04-28T05:09:27Z",
+    "license": "MIT"
+  },
+  "summary_zh": "帮你在训练脚本里快速接入FSDP2全分片并行，专治单卡显存装不下大模型的痛点，也适合需要用DTensor做分布式分片的场景。"
+}

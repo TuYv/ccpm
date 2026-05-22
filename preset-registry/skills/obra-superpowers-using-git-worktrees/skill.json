@@ -1,0 +1,26 @@
+{
+  "id": "obra-superpowers-using-git-worktrees",
+  "name": "using-git-worktrees",
+  "description": "Use when starting feature work that needs isolation from current workspace or before executing implementation plans - ensures an isolated workspace exists via native tools or git worktree fallback",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "obra",
+  "install_path": ".claude/skills/using-git-worktrees/SKILL.md",
+  "source": {
+    "repo": "obra/superpowers",
+    "url": "https://github.com/obra/superpowers/blob/main/skills/using-git-worktrees/SKILL.md",
+    "path": "skills/using-git-worktrees/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:41:42.588Z",
+    "stars": 201805,
+    "language": "Shell",
+    "pushed_at": "2026-05-21T21:23:26Z",
+    "license": "MIT"
+  },
+  "summary_zh": "帮你快速创建Git隔离工作区，适合开发新功能或执行计划前使用，确保在独立环境干活，避免影响当前代码。"
+}

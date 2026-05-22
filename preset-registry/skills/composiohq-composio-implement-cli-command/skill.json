@@ -1,0 +1,26 @@
+{
+  "id": "composiohq-composio-implement-cli-command",
+  "name": "implement-cli-command",
+  "description": "Implement new CLI commands in ts/packages/cli/ using Effect.ts patterns, service wiring, and @effect/cli declarations.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ComposioHQ",
+  "install_path": ".claude/skills/implement-cli-command/SKILL.md",
+  "source": {
+    "repo": "ComposioHQ/composio",
+    "url": "https://github.com/ComposioHQ/composio/blob/next/.claude/skills/implement-cli-command/SKILL.md",
+    "path": ".claude/skills/implement-cli-command/SKILL.md",
+    "branch": "next",
+    "discovered_at": "2026-05-22T04:42:49.395Z",
+    "stars": 28386,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-21T10:55:25Z",
+    "license": "MIT"
+  },
+  "summary_zh": "它是一套开发指南，帮你遵循 Effect.ts 生态规范，在指定目录下轻松编写和接入新的命令行指令，适合基于该技术栈扩展 CLI 工具的场景。"
+}

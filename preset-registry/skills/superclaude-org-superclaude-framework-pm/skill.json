@@ -1,0 +1,26 @@
+{
+  "id": "superclaude-org-superclaude-framework-pm",
+  "name": "pm",
+  "description": "Project management with PDCA cycles, confidence checks, and context persistence. Auto-activates at session start to restore context. Use for task planning, progress tracking, and structured development.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "SuperClaude-Org",
+  "install_path": ".claude/skills/pm/SKILL.md",
+  "source": {
+    "repo": "SuperClaude-Org/SuperClaude_Framework",
+    "url": "https://github.com/SuperClaude-Org/SuperClaude_Framework/blob/master/plugins/superclaude/skills/pm/SKILL.md",
+    "path": "plugins/superclaude/skills/pm/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-05-22T04:44:41.521Z",
+    "stars": 22895,
+    "language": "Python",
+    "pushed_at": "2026-04-27T03:08:57Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个带上下文记忆和PDCA循环的项目管理工具，每次对话自动恢复进度，解决跨会话遗忘和开发无序的问题，适合做任务规划和结构化开发。"
+}

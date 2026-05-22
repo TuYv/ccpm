@@ -1,0 +1,26 @@
+{
+  "id": "mksglu-claude-context-mode-context-mode-ops",
+  "name": "context-mode-ops",
+  "description": "Manage context-mode GitHub issues, PRs, releases, and marketing with parallel subagent army. Orchestrates 10-20 dynamic agents per task. Use when triaging issues, reviewing PRs, releasing versions, writing LinkedIn posts, announcing releases, fixing bugs, merging contributions, validating ENV vars, testing adapters, or syncing branches.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mksglu",
+  "install_path": ".claude/skills/context-mode-ops/SKILL.md",
+  "source": {
+    "repo": "mksglu/claude-context-mode",
+    "url": "https://github.com/mksglu/claude-context-mode/blob/main/.claude/skills/context-mode-ops/SKILL.md",
+    "path": ".claude/skills/context-mode-ops/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:51.188Z",
+    "stars": 15360,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-21T13:02:08Z",
+    "license": null
+  },
+  "summary_zh": "这是一个能调动十几个AI智能体并行协作的开源项目管理工具。适合用来批量处理Issue、审查PR、自动发版或写推广文案等，帮你搞定繁杂的日常开源维护工作。"
+}

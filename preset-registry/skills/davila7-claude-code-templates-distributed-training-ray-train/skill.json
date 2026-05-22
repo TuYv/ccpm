@@ -1,0 +1,26 @@
+{
+  "id": "davila7-claude-code-templates-distributed-training-ray-train",
+  "name": "ray-train",
+  "description": "Distributed training orchestration across clusters. Scales PyTorch/TensorFlow/HuggingFace from laptop to 1000s of nodes. Built-in hyperparameter tuning with Ray Tune, fault tolerance, elastic scaling. Use when training massive models across multiple machines or running distributed hyperparameter sweeps.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "davila7",
+  "install_path": ".claude/skills/distributed-training-ray-train/SKILL.md",
+  "source": {
+    "repo": "davila7/claude-code-templates",
+    "url": "https://github.com/davila7/claude-code-templates/blob/main/cli-tool/components/skills/ai-research/distributed-training-ray-train/SKILL.md",
+    "path": "cli-tool/components/skills/ai-research/distributed-training-ray-train/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:45.414Z",
+    "stars": 27482,
+    "language": "Python",
+    "pushed_at": "2026-05-22T04:31:04Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个分布式训练编排工具，能把模型训练从单机扩展到上千个节点的集群，适合需要多机训练大模型或跑大规模超参搜索的场景。"
+}

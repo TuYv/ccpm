@@ -1,0 +1,26 @@
+{
+  "id": "neolabhq-context-engineering-kit-why",
+  "name": "why",
+  "description": "Iterative Five Whys root cause analysis drilling from symptoms to fundamentals",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "NeoLabHQ",
+  "install_path": ".claude/skills/why/SKILL.md",
+  "source": {
+    "repo": "NeoLabHQ/context-engineering-kit",
+    "url": "https://github.com/NeoLabHQ/context-engineering-kit/blob/master/plugins/kaizen/skills/why/SKILL.md",
+    "path": "plugins/kaizen/skills/why/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-05-22T04:42:30.734Z",
+    "stars": 1025,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-22T00:32:29Z",
+    "license": "GPL-3.0"
+  },
+  "summary_zh": "这是一个根本原因分析工具，通过反复追问“为什么”，帮你从表象层层深挖到问题本质，适合排查故障或复盘时寻找真正的症结。"
+}

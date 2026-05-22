@@ -1,0 +1,26 @@
+{
+  "id": "davila7-claude-code-templates-gepetto",
+  "name": "gepetto",
+  "description": "Creates detailed, sectionized implementation plans through research, stakeholder interviews, and multi-LLM review. Use when planning features that need thorough pre-implementation analysis.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "davila7",
+  "install_path": ".claude/skills/gepetto/SKILL.md",
+  "source": {
+    "repo": "davila7/claude-code-templates",
+    "url": "https://github.com/davila7/claude-code-templates/blob/main/cli-tool/components/skills/ai-research/gepetto/SKILL.md",
+    "path": "cli-tool/components/skills/ai-research/gepetto/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:46.818Z",
+    "stars": 27482,
+    "language": "Python",
+    "pushed_at": "2026-05-22T04:31:04Z",
+    "license": "MIT"
+  },
+  "summary_zh": "它能通过调研、访谈和多模型审查，帮你把复杂需求拆解成详细的落地执行计划，特别适合在动手写代码前需要深度分析和严密规划的场景。"
+}

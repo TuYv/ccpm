@@ -1,0 +1,26 @@
+{
+  "id": "raintree-technology-claude-starter-move-testing",
+  "name": "aptos-move-testing",
+  "description": "Expert on testing Move smart contracts on Aptos, including unit tests, integration tests, Move Prover formal verification, debugging strategies, and test coverage. Triggers on keywords move test, unit test, integration test, move prover, formal verification, debug, coverage, assert, expect",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "raintree-technology",
+  "install_path": ".claude/skills/move-testing/SKILL.md",
+  "source": {
+    "repo": "raintree-technology/claude-starter",
+    "url": "https://github.com/raintree-technology/claude-starter/blob/main/.claude/skills/aptos/move-testing/skill.md",
+    "path": ".claude/skills/aptos/move-testing/skill.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:51.780Z",
+    "stars": 76,
+    "language": "Zig",
+    "pushed_at": "2026-04-24T22:45:15Z",
+    "license": "MIT"
+  },
+  "summary_zh": "专门指导Aptos Move智能合约测试的专家，帮你解决从编写测试到形式化验证及调试排错的各种难题，适合需要全面保障合约安全与质量的开发者。"
+}

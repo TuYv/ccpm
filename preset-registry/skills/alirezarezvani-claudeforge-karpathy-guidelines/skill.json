@@ -1,0 +1,26 @@
+{
+  "id": "alirezarezvani-claudeforge-karpathy-guidelines",
+  "name": "karpathy-guidelines",
+  "description": "Behavioral guardrails for LLM-assisted coding. Use when writing, reviewing, or refactoring code in any project to avoid overcomplication, keep changes surgical, surface assumptions early, and execute against verifiable success criteria.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alirezarezvani",
+  "install_path": ".claude/skills/karpathy-guidelines/SKILL.md",
+  "source": {
+    "repo": "alirezarezvani/ClaudeForge",
+    "url": "https://github.com/alirezarezvani/ClaudeForge/blob/dev/skill/karpathy-guidelines/SKILL.md",
+    "path": "skill/karpathy-guidelines/SKILL.md",
+    "branch": "dev",
+    "discovered_at": "2026-05-22T04:44:57.721Z",
+    "stars": 371,
+    "language": "Python",
+    "pushed_at": "2026-05-19T02:07:06Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一套AI辅助编程的行为规范，适合在写、审或重构代码时用，能防止AI过度设计，让改动更精准，尽早明确前提，确保按可验证的标准推进。"
+}

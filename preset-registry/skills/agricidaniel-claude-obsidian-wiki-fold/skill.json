@@ -1,0 +1,26 @@
+{
+  "id": "agricidaniel-claude-obsidian-wiki-fold",
+  "name": "wiki-fold",
+  "description": "Rollup of wiki log entries into meta-pages. Reads the last 2^k entries from wiki/log.md, writes a structurally-idempotent fold page to wiki/folds/ that links back to children. Extractive summarization (no invention). Dry-run by default, stdout-only; commit mode writes and accepts that the PostToolUse hook auto-commits. Triggers on: fold the log, run a fold, run wiki-fold, log rollup, roll up log entries.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "AgriciDaniel",
+  "install_path": ".claude/skills/wiki-fold/SKILL.md",
+  "source": {
+    "repo": "AgriciDaniel/claude-obsidian",
+    "url": "https://github.com/AgriciDaniel/claude-obsidian/blob/main/skills/wiki-fold/SKILL.md",
+    "path": "skills/wiki-fold/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:53.852Z",
+    "stars": 5327,
+    "language": "Python",
+    "pushed_at": "2026-04-24T10:21:48Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个维基日志汇总工具，能把冗长的操作记录自动提取并汇总成结构化的摘要页，适合需要定期整理归档日志、方便回溯查阅的场景。"
+}

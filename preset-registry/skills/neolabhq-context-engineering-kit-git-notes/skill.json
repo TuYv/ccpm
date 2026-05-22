@@ -1,0 +1,26 @@
+{
+  "id": "neolabhq-context-engineering-kit-git-notes",
+  "name": "git-notes",
+  "description": "Use when adding metadata to commits without changing history, tracking review status, test results, code quality annotations, or supplementing commit messages post-hoc - provides git notes commands and patterns for attaching non-invasive metadata to Git objects.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "NeoLabHQ",
+  "install_path": ".claude/skills/git-notes/SKILL.md",
+  "source": {
+    "repo": "NeoLabHQ/context-engineering-kit",
+    "url": "https://github.com/NeoLabHQ/context-engineering-kit/blob/master/plugins/git/skills/git-notes/SKILL.md",
+    "path": "plugins/git/skills/git-notes/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-05-22T04:42:29.915Z",
+    "stars": 1025,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-22T00:32:29Z",
+    "license": "GPL-3.0"
+  },
+  "summary_zh": "这是一个给 Git 记录补充额外信息的工具，能在不修改提交历史的前提下，事后添加测试结果、审查状态或补充说明，适合需要无损标注代码的场景。"
+}

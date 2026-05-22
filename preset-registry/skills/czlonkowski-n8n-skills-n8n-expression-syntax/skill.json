@@ -1,0 +1,26 @@
+{
+  "id": "czlonkowski-n8n-skills-n8n-expression-syntax",
+  "name": "n8n-expression-syntax",
+  "description": "Validate n8n expression syntax and fix common errors. Use when writing n8n expressions, using {{}} syntax, accessing $json/$node variables, troubleshooting expression errors, mapping data between nodes, or referencing webhook data in workflows. Use this skill whenever configuring node fields that reference data from previous nodes — expressions are how n8n passes data between nodes, and getting the syntax wrong is the most common source of workflow errors.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "czlonkowski",
+  "install_path": ".claude/skills/n8n-expression-syntax/SKILL.md",
+  "source": {
+    "repo": "czlonkowski/n8n-skills",
+    "url": "https://github.com/czlonkowski/n8n-skills/blob/main/skills/n8n-expression-syntax/SKILL.md",
+    "path": "skills/n8n-expression-syntax/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:14.320Z",
+    "stars": 5096,
+    "language": "Shell",
+    "pushed_at": "2026-05-06T13:23:16Z",
+    "license": "MIT"
+  },
+  "summary_zh": "帮你校验并修复n8n表达式语法的工具，适合在写表达式、映射节点间数据或排查报错时使用，搞定因语法写错导致工作流出错的最常见问题。"
+}

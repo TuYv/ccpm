@@ -1,0 +1,26 @@
+{
+  "id": "deanpeters-product-manager-skills-skill-authoring-workflow",
+  "name": "skill-authoring-workflow",
+  "description": "Turn raw PM content into a compliant, publish-ready skill. Use when creating or updating a repo skill without breaking standards.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "deanpeters",
+  "install_path": ".claude/skills/skill-authoring-workflow/SKILL.md",
+  "source": {
+    "repo": "deanpeters/Product-Manager-Skills",
+    "url": "https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/skill-authoring-workflow/SKILL.md",
+    "path": "skills/skill-authoring-workflow/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:41:47.177Z",
+    "stars": 4428,
+    "language": "Shell",
+    "pushed_at": "2026-05-20T12:25:44Z",
+    "license": null
+  },
+  "summary_zh": "把原始产品需求转化为合规且可直接发布的技能，适合创建或更新技能时使用，确保产出不破坏现有规范。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "zebbern-claude-code-guide-file-path-traversal",
+  "name": "File Path Traversal Testing",
+  "description": "This skill should be used when the user asks to \"test for directory traversal\", \"exploit path traversal vulnerabilities\", \"read arbitrary files through web applications\", \"find LFI vulnerabilities\", or \"access files outside web root\". It provides comprehensive file path traversal attack and testing methodologies.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "zebbern",
+  "install_path": ".claude/skills/file-path-traversal/SKILL.md",
+  "source": {
+    "repo": "zebbern/claude-code-guide",
+    "url": "https://github.com/zebbern/claude-code-guide/blob/main/skills/file-path-traversal/SKILL.md",
+    "path": "skills/file-path-traversal/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:08.804Z",
+    "stars": 4156,
+    "language": null,
+    "pushed_at": "2026-05-22T01:16:53Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一套路径遍历安全测试方法库，专门用来检测和利用目录遍历或本地文件包含漏洞，帮你通过Web应用越权读取服务器上的任意文件。"
+}

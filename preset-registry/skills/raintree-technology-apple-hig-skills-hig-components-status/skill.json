@@ -1,0 +1,26 @@
+{
+  "id": "raintree-technology-apple-hig-skills-hig-components-status",
+  "name": "hig-components-status",
+  "description": ">- Apple HIG guidance for status and progress UI components including progress indicators, status bars, and activity rings. Use this skill when asked about: \"progress indicator\", \"progress bar\", \"loading spinner\", \"status bar\", \"activity ring\", \"progress display\", determinate vs indeterminate progress, loading states, or fitness tracking rings. Also use when the user says \"how do I show loading state,\" \"should I use a spinner or progress bar,\" \"what goes in the status bar,\" or asks about activit",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "raintree-technology",
+  "install_path": ".claude/skills/hig-components-status/SKILL.md",
+  "source": {
+    "repo": "raintree-technology/apple-hig-skills",
+    "url": "https://github.com/raintree-technology/apple-hig-skills/blob/main/skills/hig-components-status/SKILL.md",
+    "path": "skills/hig-components-status/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:34.920Z",
+    "stars": 52,
+    "language": "TypeScript",
+    "pushed_at": "2026-04-28T22:36:54Z",
+    "license": null
+  },
+  "summary_zh": "它是苹果官方的状态与进度组件设计规范，专治界面设计选择困难。当你纠结该用进度条还是加载圈、如何展示加载状态或设计健身环时，它能帮你做出符合规范的选择。"
+}

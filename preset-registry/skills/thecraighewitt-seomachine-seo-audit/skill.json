@@ -1,0 +1,26 @@
+{
+  "id": "thecraighewitt-seomachine-seo-audit",
+  "name": "seo-audit",
+  "description": "When the user wants to audit, review, or diagnose SEO issues on their site. Also use when the user mentions \"SEO audit,\" \"technical SEO,\" \"why am I not ranking,\" \"SEO issues,\" \"on-page SEO,\" \"meta tags review,\" or \"SEO health check.\" For building pages at scale to target keywords, see programmatic-seo. For adding structured data, see schema-markup.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "TheCraigHewitt",
+  "install_path": ".claude/skills/seo-audit/SKILL.md",
+  "source": {
+    "repo": "TheCraigHewitt/seomachine",
+    "url": "https://github.com/TheCraigHewitt/seomachine/blob/main/.claude/skills/seo-audit/SKILL.md",
+    "path": ".claude/skills/seo-audit/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:13.039Z",
+    "stars": 7000,
+    "language": "Python",
+    "pushed_at": "2026-04-10T17:41:07Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是个网站SEO诊断工具，专门帮你排查网站排名上不去的原因，适合做技术SEO审查、页面标签检查或整站健康体检。"
+}

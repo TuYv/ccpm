@@ -1,0 +1,26 @@
+{
+  "id": "prompt-security-clawsec-clawsec-clawhub-checker",
+  "name": "clawsec-clawhub-checker",
+  "description": "ClawHub reputation checker for clawsec-suite. Adds a standalone reputation gate before guarded skill installation.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "0.0.4",
+  "author": "prompt-security",
+  "install_path": ".claude/skills/clawsec-clawhub-checker/SKILL.md",
+  "source": {
+    "repo": "prompt-security/clawsec",
+    "url": "https://github.com/prompt-security/clawsec/blob/main/skills/clawsec-clawhub-checker/SKILL.md",
+    "path": "skills/clawsec-clawhub-checker/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:45.520Z",
+    "stars": 1000,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-21T07:14:18Z",
+    "license": "AGPL-3.0"
+  },
+  "summary_zh": "这是一个安全把关工具，能在安装受保护的技能前检查其来源信誉，防止误装不可信或恶意组件，适合需要前置安全审查的场景。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "jeffallan-claude-skills-spark-engineer",
+  "name": "spark-engineer",
+  "description": "Use when writing Spark jobs, debugging performance issues, or configuring cluster settings for Apache Spark applications, distributed data processing pipelines, or big data workloads. Invoke to write DataFrame transformations, optimize Spark SQL queries, implement RDD pipelines, tune shuffle operations, configure executor memory, process .parquet files, handle data partitioning, or build structured streaming analytics.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "jeffallan",
+  "install_path": ".claude/skills/spark-engineer/SKILL.md",
+  "source": {
+    "repo": "jeffallan/claude-skills",
+    "url": "https://github.com/jeffallan/claude-skills/blob/main/skills/spark-engineer/SKILL.md",
+    "path": "skills/spark-engineer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:46:00.355Z",
+    "stars": 9253,
+    "language": "Python",
+    "pushed_at": "2026-05-20T13:35:05Z",
+    "license": "MIT"
+  },
+  "summary_zh": "专为Apache Spark打造的开发助手，帮你搞定代码编写、性能调优和集群配置，适合大数据处理开发及排查分布式计算性能问题的场景。"
+}

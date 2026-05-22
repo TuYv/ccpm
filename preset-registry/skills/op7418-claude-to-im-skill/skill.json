@@ -1,0 +1,26 @@
+{
+  "id": "op7418-claude-to-im-skill",
+  "name": "claude-to-im",
+  "description": "| Bridge THIS Claude Code or Codex session to Telegram, Discord, Feishu/Lark, QQ, or WeChat so the user can chat with Claude from their phone. Use for: setting up, starting, stopping, or diagnosing the claude-to-im bridge daemon; forwarding Claude replies to a messaging app; any phrase like \"claude-to-im\", \"bridge\", \"消息推送\", \"消息转发\", \"桥接\", \"连上飞书\", \"手机上看claude\", \"启动后台服务\", \"诊断\", \"查看日志\", \"配置\". Subcommands: setup, start, stop, status, logs, reconfigure, doctor. Do NOT use for: building standalone bots",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "op7418",
+  "install_path": ".claude/skills/./SKILL.md",
+  "source": {
+    "repo": "op7418/Claude-to-IM-skill",
+    "url": "https://github.com/op7418/Claude-to-IM-skill/blob/main/SKILL.md",
+    "path": "SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:55.958Z",
+    "stars": 2544,
+    "language": "TypeScript",
+    "pushed_at": "2026-03-23T17:03:44Z",
+    "license": "MIT"
+  },
+  "summary_zh": "它能把Claude Code会话桥接到微信、飞书或QQ等聊天软件，让你随时随地用手机和Claude对话，并轻松管理后台转发服务。"
+}

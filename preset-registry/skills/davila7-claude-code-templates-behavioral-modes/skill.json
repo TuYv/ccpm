@@ -1,0 +1,26 @@
+{
+  "id": "davila7-claude-code-templates-behavioral-modes",
+  "name": "behavioral-modes",
+  "description": "AI operational modes (brainstorm, implement, debug, review, teach, ship, orchestrate). Use to adapt behavior based on task type.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "davila7",
+  "install_path": ".claude/skills/behavioral-modes/SKILL.md",
+  "source": {
+    "repo": "davila7/claude-code-templates",
+    "url": "https://github.com/davila7/claude-code-templates/blob/main/cli-tool/components/skills/ai-research/behavioral-modes/SKILL.md",
+    "path": "cli-tool/components/skills/ai-research/behavioral-modes/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:43.706Z",
+    "stars": 27482,
+    "language": "Python",
+    "pushed_at": "2026-05-22T04:31:04Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一套AI行为模式，能根据任务类型自动切换AI的工作状态，解决AI在不同场景下表现死板的问题，让它更贴合实际开发需求。"
+}

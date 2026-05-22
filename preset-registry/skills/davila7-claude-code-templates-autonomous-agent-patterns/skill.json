@@ -1,0 +1,26 @@
+{
+  "id": "davila7-claude-code-templates-autonomous-agent-patterns",
+  "name": "autonomous-agent-patterns",
+  "description": "Design patterns for building autonomous coding agents. Covers tool integration, permission systems, browser automation, and human-in-the-loop workflows. Use when building AI agents, designing tool APIs, implementing permission systems, or creating autonomous coding assistants.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "davila7",
+  "install_path": ".claude/skills/autonomous-agent-patterns/SKILL.md",
+  "source": {
+    "repo": "davila7/claude-code-templates",
+    "url": "https://github.com/davila7/claude-code-templates/blob/main/cli-tool/components/skills/ai-research/autonomous-agent-patterns/SKILL.md",
+    "path": "cli-tool/components/skills/ai-research/autonomous-agent-patterns/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:43.549Z",
+    "stars": 27482,
+    "language": "Python",
+    "pushed_at": "2026-05-22T04:31:04Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一套构建自主编程智能体的设计模式，帮你解决AI如何安全执行任务与人机协作的架构难题，适合开发AI编程助手或搭建智能体系统时参考。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "ruvnet-claude-flow-agent-pagerank-analyzer",
+  "name": "agent-pagerank-analyzer",
+  "description": "Agent skill for pagerank-analyzer - invoke with $agent-pagerank-analyzer",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ruvnet",
+  "install_path": ".claude/skills/agent-pagerank-analyzer/SKILL.md",
+  "source": {
+    "repo": "ruvnet/claude-flow",
+    "url": "https://github.com/ruvnet/claude-flow/blob/main/.agents/skills/agent-pagerank-analyzer/SKILL.md",
+    "path": ".agents/skills/agent-pagerank-analyzer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:01.822Z",
+    "stars": 53972,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-22T03:51:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个供AI助手调用的网页权重分析插件，能帮你快速查询网页的PageRank值，适合SEO优化或评估网站影响力的场景。"
+}

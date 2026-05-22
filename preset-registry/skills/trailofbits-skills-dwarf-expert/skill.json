@@ -1,0 +1,26 @@
+{
+  "id": "trailofbits-skills-dwarf-expert",
+  "name": "dwarf-expert",
+  "description": "Provides expertise for analyzing DWARF debug files and understanding the DWARF debug format/standard (v3-v5). Triggers when understanding DWARF information, interacting with DWARF files, answering DWARF-related questions, or working with code that parses DWARF data.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "trailofbits",
+  "install_path": ".claude/skills/dwarf-expert/SKILL.md",
+  "source": {
+    "repo": "trailofbits/skills",
+    "url": "https://github.com/trailofbits/skills/blob/main/plugins/dwarf-expert/skills/dwarf-expert/SKILL.md",
+    "path": "plugins/dwarf-expert/skills/dwarf-expert/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:41:50.584Z",
+    "stars": 5325,
+    "language": "Python",
+    "pushed_at": "2026-05-16T17:22:25Z",
+    "license": "CC-BY-SA-4.0"
+  },
+  "summary_zh": "专门帮你搞定DWARF调试文件与标准（v3-v5）的辅助工具。当你需要阅读调试信息、排查相关疑问，或开发解析代码时，它能提供专业指导，让你不再头疼复杂的调试数据。"
+}

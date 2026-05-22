@@ -1,0 +1,26 @@
+{
+  "id": "vercel-labs-next-skills-next-upgrade",
+  "name": "next-upgrade",
+  "description": "Upgrade Next.js to the latest version following official migration guides and codemods",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "vercel-labs",
+  "install_path": ".claude/skills/next-upgrade/SKILL.md",
+  "source": {
+    "repo": "vercel-labs/next-skills",
+    "url": "https://github.com/vercel-labs/next-skills/blob/main/skills/next-upgrade/SKILL.md",
+    "path": "skills/next-upgrade/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:13.937Z",
+    "stars": 883,
+    "language": null,
+    "pushed_at": "2026-05-07T18:32:08Z",
+    "license": null
+  },
+  "summary_zh": "按照官方指南和自动化脚本帮你把 Next.js 升级到最新版，适合老项目跨版本升级，省去手动查文档改代码的麻烦。"
+}

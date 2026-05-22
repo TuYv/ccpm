@@ -1,0 +1,26 @@
+{
+  "id": "udecode-dotai-debug",
+  "name": "debug",
+  "description": "Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes - four-phase framework with built-in backward tracing for deep-stack failures, ensuring root-cause understanding before implementation",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "udecode",
+  "install_path": ".claude/skills/debug/SKILL.md",
+  "source": {
+    "repo": "udecode/dotai",
+    "url": "https://github.com/udecode/dotai/blob/main/.claude-plugin/plugins/debug/skills/debug/SKILL.md",
+    "path": ".claude-plugin/plugins/debug/skills/debug/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:07.445Z",
+    "stars": 1154,
+    "language": "Shell",
+    "pushed_at": "2026-03-30T11:07:19Z",
+    "license": null
+  },
+  "summary_zh": "遇到报错或异常行为时，这套四阶段排错框架能通过内置的深层调用栈反向追踪，帮你先找准根本原因再动手修复，避免盲目改代码。"
+}

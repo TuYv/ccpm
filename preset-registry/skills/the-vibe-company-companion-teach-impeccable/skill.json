@@ -1,0 +1,26 @@
+{
+  "id": "the-vibe-company-companion-teach-impeccable",
+  "name": "teach-impeccable",
+  "description": "One-time setup that gathers design context for your project and saves it to your AI config file. Run once to establish persistent design guidelines.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "The-Vibe-Company",
+  "install_path": ".claude/skills/teach-impeccable/SKILL.md",
+  "source": {
+    "repo": "The-Vibe-Company/companion",
+    "url": "https://github.com/The-Vibe-Company/companion/blob/main/.agents/skills/teach-impeccable/SKILL.md",
+    "path": ".agents/skills/teach-impeccable/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:03.186Z",
+    "stars": 2339,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-09T06:06:27Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个一次性配置工具，能把项目的设计规范写入AI配置文件。它解决了AI生成内容风格不统一的问题，适合需要让AI长期遵守特定设计规范的场景。"
+}

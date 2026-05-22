@@ -1,0 +1,26 @@
+{
+  "id": "thedotmack-claude-mem-openclaw",
+  "name": "openclaw",
+  "description": "Persistent Context Across Sessions for Every Agent –  Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "thedotmack",
+  "install_path": ".claude/skills/openclaw/SKILL.md",
+  "source": {
+    "repo": "thedotmack/claude-mem",
+    "url": "https://github.com/thedotmack/claude-mem/blob/main/openclaw/SKILL.md",
+    "path": "openclaw/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:47.587Z",
+    "stars": 77318,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-21T10:26:19Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "这是一个给AI助手加跨会话记忆的工具。它自动记录并压缩AI的操作，在新对话时智能注入相关上下文，解决AI每次都失忆的问题，适合需要长期连贯开发的场景。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "guia-matthieu-clawfu-skills-report-generator",
+  "name": "report-generator",
+  "description": "Generate PDF/HTML reports from templates and data. Use when: creating client reports; generating weekly summaries; producing marketing performance reports; automating recurring reports",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "guia-matthieu",
+  "install_path": ".claude/skills/report-generator/SKILL.md",
+  "source": {
+    "repo": "guia-matthieu/clawfu-skills",
+    "url": "https://github.com/guia-matthieu/clawfu-skills/blob/main/skills/automation/report-generator/SKILL.md",
+    "path": "skills/automation/report-generator/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:46:31.065Z",
+    "stars": 109,
+    "language": "Python",
+    "pushed_at": "2026-04-02T10:12:11Z",
+    "license": "MIT"
+  },
+  "summary_zh": "只需套用模板和数据就能自动生成PDF或HTML报告，专治客户汇报、周报和营销复盘等各种周期性重复的报表工作。"
+}

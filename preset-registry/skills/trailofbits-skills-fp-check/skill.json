@@ -1,0 +1,26 @@
+{
+  "id": "trailofbits-skills-fp-check",
+  "name": "fp-check",
+  "description": "Systematically verifies suspected security bugs to eliminate false positives. Produces TRUE POSITIVE or FALSE POSITIVE verdicts with documented evidence for each bug.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "trailofbits",
+  "install_path": ".claude/skills/fp-check/SKILL.md",
+  "source": {
+    "repo": "trailofbits/skills",
+    "url": "https://github.com/trailofbits/skills/blob/main/plugins/fp-check/skills/fp-check/SKILL.md",
+    "path": "plugins/fp-check/skills/fp-check/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:41:50.861Z",
+    "stars": 5325,
+    "language": "Python",
+    "pushed_at": "2026-05-16T17:22:25Z",
+    "license": "CC-BY-SA-4.0"
+  },
+  "summary_zh": "这是一个安全漏洞验证工具，能帮你系统排查疑似漏洞并消除误报。它会附带证据明确判定漏洞真假，让你专注修复真实威胁，适合安全审计场景。"
+}

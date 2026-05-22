@@ -1,0 +1,26 @@
+{
+  "id": "trailofbits-skills-mutation-testing",
+  "name": "mutation-testing",
+  "description": "Configures mewt or muton mutation testing campaigns — scopes targets, tunes timeouts, and optimizes long-running runs. Use when the user mentions mewt, muton, mutation testing, or wants to configure or optimize a mutation testing campaign.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "trailofbits",
+  "install_path": ".claude/skills/mutation-testing/SKILL.md",
+  "source": {
+    "repo": "trailofbits/skills",
+    "url": "https://github.com/trailofbits/skills/blob/main/plugins/mutation-testing/skills/mutation-testing/SKILL.md",
+    "path": "plugins/mutation-testing/skills/mutation-testing/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:41:51.302Z",
+    "stars": 5325,
+    "language": "Python",
+    "pushed_at": "2026-05-16T17:22:25Z",
+    "license": "CC-BY-SA-4.0"
+  },
+  "summary_zh": "帮你配置和优化mewt或muton变异测试的工具，解决长耗时测试跑得慢、范围和超时不好定的问题，适合需要跑变异测试并想省时提效的场景。"
+}

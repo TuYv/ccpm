@@ -1,0 +1,26 @@
+{
+  "id": "actionbook-rust-skills-m12-lifecycle",
+  "name": "m12-lifecycle",
+  "description": "Use when designing resource lifecycles. Keywords: RAII, Drop, resource lifecycle, connection pool, lazy initialization, connection pool design, resource cleanup patterns, cleanup, scope, OnceCell, Lazy, once_cell, OnceLock, transaction, session management, when is Drop called, cleanup on error, guard pattern, scope guard, 资源生命周期, 连接池, 惰性初始化, 资源清理, RAII 模式",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "actionbook",
+  "install_path": ".claude/skills/m12-lifecycle/SKILL.md",
+  "source": {
+    "repo": "actionbook/rust-skills",
+    "url": "https://github.com/actionbook/rust-skills/blob/main/skills/m12-lifecycle/SKILL.md",
+    "path": "skills/m12-lifecycle/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:01.745Z",
+    "stars": 1164,
+    "language": "Shell",
+    "pushed_at": "2026-05-12T12:59:42Z",
+    "license": null
+  },
+  "summary_zh": "专用于设计资源生命周期，帮你解决连接池、事务等资源的惰性初始化与安全清理难题，适合需要精细控制资源作用域及异常时自动清理的场景。"
+}

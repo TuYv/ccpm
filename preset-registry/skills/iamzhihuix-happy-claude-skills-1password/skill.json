@@ -1,0 +1,26 @@
+{
+  "id": "iamzhihuix-happy-claude-skills-1password",
+  "name": "1password",
+  "description": "使用 1Password CLI (op) 管理密码和 API credentials。保存、查询、读取 API key/token，注入环境变量到脚本。当用户提到保存密码、保存 API key、查询密码、1password、op CLI、secret 管理时使用此 skill。",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "iamzhihuix",
+  "install_path": ".claude/skills/1password/SKILL.md",
+  "source": {
+    "repo": "iamzhihuix/happy-claude-skills",
+    "url": "https://github.com/iamzhihuix/happy-claude-skills/blob/main/skills/1password/SKILL.md",
+    "path": "skills/1password/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:23.193Z",
+    "stars": 295,
+    "language": "TypeScript",
+    "pushed_at": "2026-04-20T01:07:19Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个命令行工具，能帮你安全存取密码与API密钥，还能将密钥自动注入脚本环境变量，特别适合开发中需要调用敏感信息又怕明文泄露的场景。"
+}

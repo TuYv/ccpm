@@ -1,0 +1,26 @@
+{
+  "id": "fradser-dotclaude-finish-hotfix",
+  "name": "finish-hotfix",
+  "description": "Finalizes a hotfix and merges it into main and develop using git-flow. This skill should be used when the user asks to \"finish a hotfix\", \"merge hotfix branch\", \"complete hotfix\", \"git flow hotfix finish\", or wants to finalize a hotfix.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "FradSer",
+  "install_path": ".claude/skills/finish-hotfix/SKILL.md",
+  "source": {
+    "repo": "FradSer/dotclaude",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/gitflow/skills/finish-hotfix/SKILL.md",
+    "path": "gitflow/skills/finish-hotfix/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:14.463Z",
+    "stars": 548,
+    "language": "Shell",
+    "pushed_at": "2026-05-21T09:20:23Z",
+    "license": null
+  },
+  "summary_zh": "按git-flow规范帮你完成热修复收尾，把热修复分支合并回main和develop，适合需要结束线上紧急修复并同步代码的场景。"
+}

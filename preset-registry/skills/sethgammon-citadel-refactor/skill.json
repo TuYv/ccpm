@@ -1,0 +1,26 @@
+{
+  "id": "sethgammon-citadel-refactor",
+  "name": "refactor",
+  "description": ">- Safe multi-file refactoring with automatic rollback. Establishes a type/test baseline, plans all changes, executes file-by-file, and verifies zero regressions. Reverts if verification fails after two fix attempts. Handles renames, extracts, moves, splits, merges, and inlines.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "SethGammon",
+  "install_path": ".claude/skills/refactor/SKILL.md",
+  "source": {
+    "repo": "SethGammon/Citadel",
+    "url": "https://github.com/SethGammon/Citadel/blob/main/skills/refactor/SKILL.md",
+    "path": "skills/refactor/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:07.265Z",
+    "stars": 572,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-07T17:50:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个能自动回滚的跨文件代码重构工具，通过测试把关确保不出错。适合需要大规模调整代码结构的场景，让你放心重构，再也不怕改出bug，出错还能自动恢复原状。"
+}

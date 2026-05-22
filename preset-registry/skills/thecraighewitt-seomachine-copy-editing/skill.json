@@ -1,0 +1,26 @@
+{
+  "id": "thecraighewitt-seomachine-copy-editing",
+  "name": "copy-editing",
+  "description": "When the user wants to edit, review, or improve existing marketing copy. Also use when the user mentions 'edit this copy,' 'review my copy,' 'copy feedback,' 'proofread,' 'polish this,' 'make this better,' or 'copy sweep.' This skill provides a systematic approach to editing marketing copy through multiple focused passes.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "TheCraigHewitt",
+  "install_path": ".claude/skills/copy-editing/SKILL.md",
+  "source": {
+    "repo": "TheCraigHewitt/seomachine",
+    "url": "https://github.com/TheCraigHewitt/seomachine/blob/main/.claude/skills/copy-editing/SKILL.md",
+    "path": ".claude/skills/copy-editing/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:11.265Z",
+    "stars": 7000,
+    "language": "Python",
+    "pushed_at": "2026-04-10T17:41:07Z",
+    "license": "MIT"
+  },
+  "summary_zh": "它能通过多轮系统性审查帮你修改、校对和优化现有营销文案，适合需要润色文字、获取修改反馈或提升营销内容质量的场景。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "wshobson-agents-parallel-debugging",
+  "name": "parallel-debugging",
+  "description": "Debug complex issues using competing hypotheses with parallel investigation, evidence collection, and root cause arbitration. Use this skill when debugging bugs with multiple potential causes, performing root cause analysis, or organizing parallel investigation workflows.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.2",
+  "author": "wshobson",
+  "install_path": ".claude/skills/parallel-debugging/SKILL.md",
+  "source": {
+    "repo": "wshobson/agents",
+    "url": "https://github.com/wshobson/agents/blob/main/plugins/agent-teams/skills/parallel-debugging/SKILL.md",
+    "path": "plugins/agent-teams/skills/parallel-debugging/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:54.449Z",
+    "stars": 35770,
+    "language": "Python",
+    "pushed_at": "2026-05-21T20:01:53Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一套并行调试方法，专门对付原因复杂的疑难Bug。它通过同时验证多种猜测并收集证据来锁定真凶，特别适合多线索并行排查和根因分析的场景。"
+}

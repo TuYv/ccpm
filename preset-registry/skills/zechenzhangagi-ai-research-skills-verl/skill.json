@@ -1,0 +1,26 @@
+{
+  "id": "zechenzhangagi-ai-research-skills-verl",
+  "name": "verl-rl-training",
+  "description": "Provides guidance for training LLMs with reinforcement learning using verl (Volcano Engine RL). Use when implementing RLHF, GRPO, PPO, or other RL algorithms for LLM post-training at scale with flexible infrastructure backends.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "zechenzhangAGI",
+  "install_path": ".claude/skills/verl/SKILL.md",
+  "source": {
+    "repo": "zechenzhangAGI/AI-research-SKILLs",
+    "url": "https://github.com/zechenzhangAGI/AI-research-SKILLs/blob/main/06-post-training/verl/SKILL.md",
+    "path": "06-post-training/verl/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:40.299Z",
+    "stars": 8786,
+    "language": "TeX",
+    "pushed_at": "2026-04-28T05:09:27Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一份基于verl的大模型强化学习训练指南，帮你在大规模后训练阶段灵活调度算力，轻松实现各类对齐与强化算法。"
+}

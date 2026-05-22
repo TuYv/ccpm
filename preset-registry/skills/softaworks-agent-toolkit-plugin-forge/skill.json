@@ -1,0 +1,26 @@
+{
+  "id": "softaworks-agent-toolkit-plugin-forge",
+  "name": "plugin-forge",
+  "description": "Create and manage Claude Code plugins with proper structure, manifests, and marketplace integration. Use when creating plugins for a marketplace, adding plugin components (commands, agents, hooks), bumping plugin versions, or working with plugin.json/marketplace.json manifests.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "softaworks",
+  "install_path": ".claude/skills/plugin-forge/SKILL.md",
+  "source": {
+    "repo": "softaworks/agent-toolkit",
+    "url": "https://github.com/softaworks/agent-toolkit/blob/main/dist/plugins/plugin-forge/skills/plugin-forge/SKILL.md",
+    "path": "dist/plugins/plugin-forge/skills/plugin-forge/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:20.007Z",
+    "stars": 1872,
+    "language": "Python",
+    "pushed_at": "2026-03-05T16:46:24Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个帮你开发和管理 Claude Code 插件的工具，能自动搞定规范目录、配置清单和版本管理，适合准备上架插件市场或需要给插件添加各种组件的开发场景。"
+}

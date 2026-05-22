@@ -1,0 +1,26 @@
+{
+  "id": "agricidaniel-claude-ads-ads-youtube",
+  "name": "ads-youtube",
+  "description": "YouTube Ads specific analysis covering campaign types, creative quality, audience targeting, and measurement. Evaluates video ad performance across skippable in-stream, non-skippable, bumper, Shorts, Demand Gen, and Connected TV (CTV) formats. Covers VAC→Demand Gen migration, Shorts creative requirements, CTV shoppable ads, and frequency capping. Use when user says YouTube Ads, video ads, pre-roll, bumper ads, skippable in-stream, YouTube campaign, YouTube Shorts ads, Demand Gen, VAC, or CTV You",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "AgriciDaniel",
+  "install_path": ".claude/skills/ads-youtube/SKILL.md",
+  "source": {
+    "repo": "AgriciDaniel/claude-ads",
+    "url": "https://github.com/AgriciDaniel/claude-ads/blob/main/skills/ads-youtube/SKILL.md",
+    "path": "skills/ads-youtube/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:29.512Z",
+    "stars": 5109,
+    "language": "Python",
+    "pushed_at": "2026-05-18T17:32:57Z",
+    "license": "MIT"
+  },
+  "summary_zh": "专用于YouTube广告的分析工具，能评估各类视频广告的投放效果与受众定向。适合在优化视频投放、处理VAC迁移或应对CTV等广告场景时使用。"
+}

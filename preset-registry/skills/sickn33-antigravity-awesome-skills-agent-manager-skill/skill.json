@@ -1,0 +1,26 @@
+{
+  "id": "sickn33-antigravity-awesome-skills-agent-manager-skill",
+  "name": "agent-manager-skill",
+  "description": "Manage multiple local CLI agents via tmux sessions (start/stop/monitor/assign) with cron-friendly scheduling.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sickn33",
+  "install_path": ".claude/skills/agent-manager-skill/SKILL.md",
+  "source": {
+    "repo": "sickn33/antigravity-awesome-skills",
+    "url": "https://github.com/sickn33/antigravity-awesome-skills/blob/main/plugins/antigravity-awesome-skills-claude/skills/agent-manager-skill/SKILL.md",
+    "path": "plugins/antigravity-awesome-skills-claude/skills/agent-manager-skill/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:09.113Z",
+    "stars": 38305,
+    "language": "Python",
+    "pushed_at": "2026-05-21T19:35:19Z",
+    "license": "MIT"
+  },
+  "summary_zh": "它通过tmux帮你集中管理多个本地命令行代理的运行周期，并支持定时调度，非常适合需要批量、自动化操控多个本地代理任务的场景。"
+}

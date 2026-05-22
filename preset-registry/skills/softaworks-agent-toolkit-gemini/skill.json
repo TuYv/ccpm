@@ -1,0 +1,26 @@
+{
+  "id": "softaworks-agent-toolkit-gemini",
+  "name": "gemini",
+  "description": "Use when the user asks to run Gemini CLI for code review, plan review, or big context (>200k) processing. Ideal for comprehensive analysis requiring large context windows. Uses Gemini 3 Pro by default for state-of-the-art reasoning and coding.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "softaworks",
+  "install_path": ".claude/skills/gemini/SKILL.md",
+  "source": {
+    "repo": "softaworks/agent-toolkit",
+    "url": "https://github.com/softaworks/agent-toolkit/blob/main/dist/plugins/gemini/skills/gemini/SKILL.md",
+    "path": "dist/plugins/gemini/skills/gemini/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:18.763Z",
+    "stars": 1872,
+    "language": "Python",
+    "pushed_at": "2026-03-05T16:46:24Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个支持超大上下文的AI命令行助手，专治超长文本处理难题，适合代码审查、方案评审等深度分析场景。"
+}

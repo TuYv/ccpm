@@ -1,0 +1,26 @@
+{
+  "id": "trailofbits-skills-seatbelt-sandboxer",
+  "name": "seatbelt-sandboxer",
+  "description": "Generates minimal macOS Seatbelt sandbox configurations. Use when sandboxing, isolating, or restricting macOS applications with allowlist-based profiles.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "trailofbits",
+  "install_path": ".claude/skills/seatbelt-sandboxer/SKILL.md",
+  "source": {
+    "repo": "trailofbits/skills",
+    "url": "https://github.com/trailofbits/skills/blob/main/plugins/seatbelt-sandboxer/skills/seatbelt-sandboxer/SKILL.md",
+    "path": "plugins/seatbelt-sandboxer/skills/seatbelt-sandboxer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:41:51.504Z",
+    "stars": 5325,
+    "language": "Python",
+    "pushed_at": "2026-05-16T17:22:25Z",
+    "license": "CC-BY-SA-4.0"
+  },
+  "summary_zh": "它能帮你生成极简的macOS沙盒配置，适合需要用白名单机制来隔离或限制应用权限的场景。"
+}

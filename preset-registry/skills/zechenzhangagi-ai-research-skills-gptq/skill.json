@@ -1,0 +1,26 @@
+{
+  "id": "zechenzhangagi-ai-research-skills-gptq",
+  "name": "gptq",
+  "description": "Post-training 4-bit quantization for LLMs with minimal accuracy loss. Use for deploying large models (70B, 405B) on consumer GPUs, when you need 4× memory reduction with <2% perplexity degradation, or for faster inference (3-4× speedup) vs FP16. Integrates with transformers and PEFT for QLoRA fine-tuning.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "zechenzhangAGI",
+  "install_path": ".claude/skills/gptq/SKILL.md",
+  "source": {
+    "repo": "zechenzhangAGI/AI-research-SKILLs",
+    "url": "https://github.com/zechenzhangAGI/AI-research-SKILLs/blob/main/10-optimization/gptq/SKILL.md",
+    "path": "10-optimization/gptq/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:42.760Z",
+    "stars": 8786,
+    "language": "TeX",
+    "pushed_at": "2026-04-28T05:09:27Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个大模型4位量化工具，能在几乎不掉精度的情况下，帮你把超大模型塞进普通显卡跑，大幅省显存并加快推理，也适合做微调。"
+}

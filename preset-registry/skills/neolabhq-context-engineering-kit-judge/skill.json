@@ -1,0 +1,26 @@
+{
+  "id": "neolabhq-context-engineering-kit-judge",
+  "name": "judge",
+  "description": "Launch a meta-judge then a judge sub-agent to evaluate results produced in the current conversation",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "NeoLabHQ",
+  "install_path": ".claude/skills/judge/SKILL.md",
+  "source": {
+    "repo": "NeoLabHQ/context-engineering-kit",
+    "url": "https://github.com/NeoLabHQ/context-engineering-kit/blob/master/plugins/sadd/skills/judge/SKILL.md",
+    "path": "plugins/sadd/skills/judge/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-05-22T04:42:32.242Z",
+    "stars": 1025,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-22T00:32:29Z",
+    "license": "GPL-3.0"
+  },
+  "summary_zh": "这是一个对话结果自动评估工具，通过元评判和子代理的双重机制审查输出质量，适合需要给AI生成内容打分或多级审核的场景。"
+}

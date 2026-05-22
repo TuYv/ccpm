@@ -1,0 +1,26 @@
+{
+  "id": "neondatabase-mcp-server-neon-logging-best-practices",
+  "name": "logging-best-practices",
+  "description": "Logging best practices focused on wide events (canonical log lines) for powerful debugging and analytics",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "neondatabase",
+  "install_path": ".claude/skills/logging-best-practices/SKILL.md",
+  "source": {
+    "repo": "neondatabase/mcp-server-neon",
+    "url": "https://github.com/neondatabase/mcp-server-neon/blob/main/.agents/skills/logging-best-practices/SKILL.md",
+    "path": ".agents/skills/logging-best-practices/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:44.929Z",
+    "stars": 598,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-21T15:15:37Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一套日志记录指南，教你采用宽事件格式输出包含完整上下文的单条日志，从而更高效地排查故障与做数据分析。"
+}

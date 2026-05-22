@@ -1,0 +1,26 @@
+{
+  "id": "trailofbits-skills-ask-questions-if-underspecified",
+  "name": "ask-questions-if-underspecified",
+  "description": "Clarify requirements before implementing. Use when serious doubts arise.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "trailofbits",
+  "install_path": ".claude/skills/ask-questions-if-underspecified/SKILL.md",
+  "source": {
+    "repo": "trailofbits/skills",
+    "url": "https://github.com/trailofbits/skills/blob/main/plugins/ask-questions-if-underspecified/skills/ask-questions-if-underspecified/SKILL.md",
+    "path": "plugins/ask-questions-if-underspecified/skills/ask-questions-if-underspecified/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:41:48.528Z",
+    "stars": 5325,
+    "language": "Python",
+    "pushed_at": "2026-05-16T17:22:25Z",
+    "license": "CC-BY-SA-4.0"
+  },
+  "summary_zh": "这是一个需求澄清工具，能在动手前主动提问消除疑虑，避免瞎猜导致返工，适合遇到模糊需求时使用。"
+}

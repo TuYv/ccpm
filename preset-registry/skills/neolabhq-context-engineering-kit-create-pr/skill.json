@@ -1,0 +1,26 @@
+{
+  "id": "neolabhq-context-engineering-kit-create-pr",
+  "name": "create-pr",
+  "description": "Create pull requests using GitHub CLI with proper templates and formatting",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "NeoLabHQ",
+  "install_path": ".claude/skills/create-pr/SKILL.md",
+  "source": {
+    "repo": "NeoLabHQ/context-engineering-kit",
+    "url": "https://github.com/NeoLabHQ/context-engineering-kit/blob/master/plugins/git/skills/create-pr/SKILL.md",
+    "path": "plugins/git/skills/create-pr/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-05-22T04:42:29.813Z",
+    "stars": 1025,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-22T00:32:29Z",
+    "license": "GPL-3.0"
+  },
+  "summary_zh": "这是一个配合GitHub CLI的PR生成工具，能自动套用规范模板和排版来创建PR，省去手动写格式和复制模板的麻烦，适合需要频繁提PR且追求团队格式统一的开发者。"
+}

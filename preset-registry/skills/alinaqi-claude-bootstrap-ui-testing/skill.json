@@ -1,0 +1,26 @@
+{
+  "id": "alinaqi-claude-bootstrap-ui-testing",
+  "name": "ui-testing",
+  "description": "Visual testing - catch invisible buttons, broken layouts, contrast",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alinaqi",
+  "install_path": ".claude/skills/ui-testing/SKILL.md",
+  "source": {
+    "repo": "alinaqi/claude-bootstrap",
+    "url": "https://github.com/alinaqi/claude-bootstrap/blob/main/skills/ui-testing/SKILL.md",
+    "path": "skills/ui-testing/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:31.320Z",
+    "stars": 641,
+    "language": "Python",
+    "pushed_at": "2026-05-21T22:01:29Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一款界面视觉测试工具，专治按钮消失、排版错乱和对比度不足等外观缺陷，适合前端页面发布前的视觉走查。"
+}

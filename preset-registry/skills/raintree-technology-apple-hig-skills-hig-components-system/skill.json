@@ -1,0 +1,26 @@
+{
+  "id": "raintree-technology-apple-hig-skills-hig-components-system",
+  "name": "hig-components-system",
+  "description": ">- Apple HIG guidance for system experience components: widgets, live activities, notifications, complications, home screen quick actions, top shelf, watch faces, app clips, and app shortcuts. Use when asked about: \"widget design\", \"live activity\", \"notification design\", \"complication\", \"home screen quick action\", \"top shelf\", \"watch face\", \"app clip\", \"app shortcut\", \"system experience\". Also use when the user says \"how do I design a widget,\" \"what should my notification look like,\" \"how do Liv",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "raintree-technology",
+  "install_path": ".claude/skills/hig-components-system/SKILL.md",
+  "source": {
+    "repo": "raintree-technology/apple-hig-skills",
+    "url": "https://github.com/raintree-technology/apple-hig-skills/blob/main/skills/hig-components-system/SKILL.md",
+    "path": "skills/hig-components-system/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:35.066Z",
+    "stars": 52,
+    "language": "TypeScript",
+    "pushed_at": "2026-04-28T22:36:54Z",
+    "license": null
+  },
+  "summary_zh": "苹果官方的系统级组件设计指南，专治不知道各类系统界面该怎么设计的问题，适合开发苹果应用时参考UI规范。"
+}

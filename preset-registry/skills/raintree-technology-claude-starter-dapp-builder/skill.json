@@ -1,0 +1,26 @@
+{
+  "id": "raintree-technology-claude-starter-dapp-builder",
+  "name": "shelby-dapp-builder",
+  "description": "Expert on building decentralized applications with Shelby Protocol storage on Aptos. Helps with dApp architecture, wallet integration (Petra), browser SDK usage, React/Vue integration, file uploads, content delivery, and building Shelby-powered applications. Triggers on keywords Shelby dApp, build on Shelby, Shelby application, Petra wallet, browser storage, web3 app, decentralized app Shelby, React Shelby, Vue Shelby.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "raintree-technology",
+  "install_path": ".claude/skills/dapp-builder/SKILL.md",
+  "source": {
+    "repo": "raintree-technology/claude-starter",
+    "url": "https://github.com/raintree-technology/claude-starter/blob/main/.claude/skills/aptos/shelby/dapp-builder/skill.md",
+    "path": ".claude/skills/aptos/shelby/dapp-builder/skill.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:52.065Z",
+    "stars": 76,
+    "language": "Zig",
+    "pushed_at": "2026-04-24T22:45:15Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是专帮开发者在 Aptos 链上构建 Shelby 协议去中心化应用的助手，能解决从架构设计到前端交互的开发难题，适合想快速搭建基于 Shelby 存储的 Web3 应用场景。"
+}

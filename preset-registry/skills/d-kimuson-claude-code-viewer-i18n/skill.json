@@ -1,0 +1,26 @@
+{
+  "id": "d-kimuson-claude-code-viewer-i18n",
+  "name": "i18n",
+  "description": "Use when updating Lingui catalogs or fixing translations",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "d-kimuson",
+  "install_path": ".claude/skills/i18n/SKILL.md",
+  "source": {
+    "repo": "d-kimuson/claude-code-viewer",
+    "url": "https://github.com/d-kimuson/claude-code-viewer/blob/main/.claude/skills/i18n/SKILL.md",
+    "path": ".claude/skills/i18n/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:03.775Z",
+    "stars": 1195,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-10T17:15:44Z",
+    "license": "MIT"
+  },
+  "summary_zh": "Lingui多语言辅助工具，适合在更新翻译文件或修补错误翻译时使用，帮你轻松维护项目的国际化内容。"
+}

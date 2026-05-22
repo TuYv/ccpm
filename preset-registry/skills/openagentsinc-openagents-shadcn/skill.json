@@ -1,0 +1,26 @@
+{
+  "id": "openagentsinc-openagents-shadcn",
+  "name": "shadcn",
+  "description": "Manages shadcn components and projects — adding, searching, fixing, debugging, styling, and composing UI. Provides project context, component docs, and usage examples. Applies when working with shadcn/ui, component registries, presets, --preset codes, or any project with a components.json file. Also triggers for \"shadcn init\", \"create an app with --preset\", or \"switch to --preset\".",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "OpenAgentsInc",
+  "install_path": ".claude/skills/shadcn/SKILL.md",
+  "source": {
+    "repo": "OpenAgentsInc/openagents",
+    "url": "https://github.com/OpenAgentsInc/openagents/blob/main/apps/autopilot/.agents/skills/shadcn/SKILL.md",
+    "path": "apps/autopilot/.agents/skills/shadcn/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:09.186Z",
+    "stars": 420,
+    "language": "Rust",
+    "pushed_at": "2026-05-21T14:45:59Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "这是该 UI 生态的专属管理工具，帮你轻松搞定组件的引入、调试与组合，并提供文档和上下文参考，非常适合基于这套组件库搭建和定制前端界面的场景。"
+}

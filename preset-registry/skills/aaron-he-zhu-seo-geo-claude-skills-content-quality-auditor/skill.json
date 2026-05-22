@@ -1,0 +1,26 @@
+{
+  "id": "aaron-he-zhu-seo-geo-claude-skills-content-quality-auditor",
+  "name": "content-quality-auditor",
+  "description": "Use when auditing content quality, E-E-A-T, publish readiness, or 内容质量/EEAT评分. Runs 80-item CORE-EEAT scoring with veto checks and fix plan.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "9.9.9",
+  "author": "aaron-he-zhu",
+  "install_path": ".claude/skills/content-quality-auditor/SKILL.md",
+  "source": {
+    "repo": "aaron-he-zhu/seo-geo-claude-skills",
+    "url": "https://github.com/aaron-he-zhu/seo-geo-claude-skills/blob/main/cross-cutting/content-quality-auditor/SKILL.md",
+    "path": "cross-cutting/content-quality-auditor/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:59.767Z",
+    "stars": 1731,
+    "language": "Shell",
+    "pushed_at": "2026-05-14T08:11:30Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "这是个内容质量审计工具，能在发布前帮你全面评估E-E-A-T得分，揪出致命问题并给出修复方案，适合需要严格把控内容质量和SEO合规的场景。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "ykdojo-claude-code-tips-review-claudemd",
+  "name": "review-claudemd",
+  "description": "Review recent conversations to find improvements for CLAUDE.md files.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ykdojo",
+  "install_path": ".claude/skills/review-claudemd/SKILL.md",
+  "source": {
+    "repo": "ykdojo/claude-code-tips",
+    "url": "https://github.com/ykdojo/claude-code-tips/blob/main/skills/review-claudemd/SKILL.md",
+    "path": "skills/review-claudemd/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:41:54.601Z",
+    "stars": 8404,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-06T06:52:29Z",
+    "license": null
+  },
+  "summary_zh": "它能复盘你最近的对话记录，找出可以改进 CLAUDE.md 文件的地方，适合想通过聊天记录持续优化 AI 配置、让助手更懂你的场景。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "zechenzhangagi-ai-research-skills-constitutional-ai",
+  "name": "constitutional-ai",
+  "description": "Anthropic's method for training harmless AI through self-improvement. Two-phase approach - supervised learning with self-critique/revision, then RLAIF (RL from AI Feedback). Use for safety alignment, reducing harmful outputs without human labels. Powers Claude's safety system.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "zechenzhangAGI",
+  "install_path": ".claude/skills/constitutional-ai/SKILL.md",
+  "source": {
+    "repo": "zechenzhangAGI/AI-research-SKILLs",
+    "url": "https://github.com/zechenzhangAGI/AI-research-SKILLs/blob/main/07-safety-alignment/constitutional-ai/SKILL.md",
+    "path": "07-safety-alignment/constitutional-ai/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:40.441Z",
+    "stars": 8786,
+    "language": "TeX",
+    "pushed_at": "2026-04-28T05:09:27Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一种通过AI自我批评与反馈来训练无害模型的方法。无需人工标注就能减少有害输出，解决大模型安全对齐问题，适合低成本提升AI安全性的场景。"
+}

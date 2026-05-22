@@ -1,0 +1,26 @@
+{
+  "id": "mattpocock-skills-git-guardrails-claude-code",
+  "name": "git-guardrails-claude-code",
+  "description": "Set up Claude Code hooks to block dangerous git commands (push, reset --hard, clean, branch -D, etc.) before they execute. Use when user wants to prevent destructive git operations, add git safety hooks, or block git push/reset in Claude Code.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mattpocock",
+  "install_path": ".claude/skills/git-guardrails-claude-code/SKILL.md",
+  "source": {
+    "repo": "mattpocock/skills",
+    "url": "https://github.com/mattpocock/skills/blob/main/skills/misc/git-guardrails-claude-code/SKILL.md",
+    "path": "skills/misc/git-guardrails-claude-code/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:06.058Z",
+    "stars": 99464,
+    "language": "Shell",
+    "pushed_at": "2026-05-20T08:46:54Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是个给Claude Code加安全锁的工具，能在执行强推或硬回退等破坏性git操作前自动拦截。适合防止AI误操作搞坏代码仓库，给开发加份保险。"
+}

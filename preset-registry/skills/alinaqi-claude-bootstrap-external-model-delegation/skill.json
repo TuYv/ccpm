@@ -1,0 +1,26 @@
+{
+  "id": "alinaqi-claude-bootstrap-external-model-delegation",
+  "name": "external-model-delegation",
+  "description": "What started as an opinionated Claude Code setup kit is now an autonomous AI engineering command center",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alinaqi",
+  "install_path": ".claude/skills/external-model-delegation/SKILL.md",
+  "source": {
+    "repo": "alinaqi/claude-bootstrap",
+    "url": "https://github.com/alinaqi/claude-bootstrap/blob/main/skills/external-model-delegation/SKILL.md",
+    "path": "skills/external-model-delegation/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:26.358Z",
+    "stars": 641,
+    "language": "Python",
+    "pushed_at": "2026-05-21T22:01:29Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个自主的AI工程指挥中心，能帮你集中调度和自动执行编程任务，适合需要高效统筹复杂开发流程的场景。"
+}

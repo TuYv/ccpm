@@ -1,0 +1,26 @@
+{
+  "id": "softaworks-agent-toolkit-professional-communication",
+  "name": "professional-communication",
+  "description": "Guide technical communication for software developers. Covers email structure, team messaging etiquette, meeting agendas, and adapting messages for technical vs non-technical audiences. Use when drafting professional messages, preparing meeting communications, or improving written communication.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "softaworks",
+  "install_path": ".claude/skills/professional-communication/SKILL.md",
+  "source": {
+    "repo": "softaworks/agent-toolkit",
+    "url": "https://github.com/softaworks/agent-toolkit/blob/main/dist/plugins/professional-communication/skills/professional-communication/SKILL.md",
+    "path": "dist/plugins/professional-communication/skills/professional-communication/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:20.131Z",
+    "stars": 1872,
+    "language": "Python",
+    "pushed_at": "2026-03-05T16:46:24Z",
+    "license": "MIT"
+  },
+  "summary_zh": "专为开发者打造的职场沟通指南，帮你把复杂信息说明白，轻松应对技术与非技术受众，适合起草工作消息、准备会议或想提升书面表达时使用。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "sethgammon-citadel-wiki",
+  "name": "wiki",
+  "description": ">- Markdown-first knowledge base where the LLM acts as librarian. Ingests raw sources, compiles and interlinks topic files, self-maintains an index. No vector DB or embeddings required -- uses LLM-native navigation over structured markdown up to ~400K words.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "SethGammon",
+  "install_path": ".claude/skills/wiki/SKILL.md",
+  "source": {
+    "repo": "SethGammon/Citadel",
+    "url": "https://github.com/SethGammon/Citadel/blob/main/skills/wiki/SKILL.md",
+    "path": "skills/wiki/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:08.615Z",
+    "stars": 572,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-07T17:50:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一款让大模型当图书管理员的Markdown知识库。它能自动整理散落资料并串联索引，免去搭向量库的麻烦，适合想用AI轻松打理和检索本地笔记的场景。"
+}

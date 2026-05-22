@@ -1,0 +1,26 @@
+{
+  "id": "peterkrueck-claude-code-development-kit-image-edit",
+  "name": "image-edit",
+  "description": "Edit images with precision — crop, resize, mirror, rotate, trim, and reframe. Use this skill whenever the user asks to crop, resize, trim, mirror, flip, rotate, reframe, or otherwise manipulate an image. Also use for creating square crops, portraits/headshots from full-body images, icon sizes, or any image transformation. Even if the request sounds simple, this skill prevents common pitfalls and ensures correct results on the first try.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "peterkrueck",
+  "install_path": ".claude/skills/image-edit/SKILL.md",
+  "source": {
+    "repo": "peterkrueck/Claude-Code-Development-Kit",
+    "url": "https://github.com/peterkrueck/Claude-Code-Development-Kit/blob/main/skills/image-edit/SKILL.md",
+    "path": "skills/image-edit/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:06.588Z",
+    "stars": 1356,
+    "language": "Shell",
+    "pushed_at": "2026-05-18T15:20:13Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一款精准的图片处理工具，专治各种图片变形与画面调整需求。它能帮你避开常规操作坑，确保一次修图成功，特别适合裁剪头像、缩放图标等场景。"
+}

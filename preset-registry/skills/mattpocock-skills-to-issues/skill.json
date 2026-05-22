@@ -1,0 +1,26 @@
+{
+  "id": "mattpocock-skills-to-issues",
+  "name": "to-issues",
+  "description": "Break a plan, spec, or PRD into independently-grabbable issues on the project issue tracker using tracer-bullet vertical slices. Use when user wants to convert a plan into issues, create implementation tickets, or break down work into issues.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mattpocock",
+  "install_path": ".claude/skills/to-issues/SKILL.md",
+  "source": {
+    "repo": "mattpocock/skills",
+    "url": "https://github.com/mattpocock/skills/blob/main/skills/engineering/to-issues/SKILL.md",
+    "path": "skills/engineering/to-issues/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:05.420Z",
+    "stars": 99464,
+    "language": "Shell",
+    "pushed_at": "2026-05-20T08:46:54Z",
+    "license": "MIT"
+  },
+  "summary_zh": "它能把项目规划或需求文档拆解成独立可认领的开发任务，专治大需求落地难，适合需要把大计划拆成具体执行工单的场景。"
+}

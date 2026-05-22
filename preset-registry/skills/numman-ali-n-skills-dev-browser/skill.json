@@ -1,0 +1,26 @@
+{
+  "id": "numman-ali-n-skills-dev-browser",
+  "name": "dev-browser",
+  "description": "Browser automation with persistent page state. Use when users ask to navigate websites, fill forms, take screenshots, extract web data, test web apps, or automate browser workflows. Trigger phrases include \"go to [url]\", \"click on\", \"fill out the form\", \"take a screenshot\", \"scrape\", \"automate\", \"test the website\", \"log into\", or any browser interaction request.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "numman-ali",
+  "install_path": ".claude/skills/dev-browser/SKILL.md",
+  "source": {
+    "repo": "numman-ali/n-skills",
+    "url": "https://github.com/numman-ali/n-skills/blob/main/skills/automation/dev-browser/skills/dev-browser/SKILL.md",
+    "path": "skills/automation/dev-browser/skills/dev-browser/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:56.366Z",
+    "stars": 986,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-12T00:39:11Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "这是一个能保持页面状态的浏览器自动化工具，适合需要代劳网页操作的场景，帮你把繁琐的重复性交互全自动搞定，省去手动麻烦。"
+}

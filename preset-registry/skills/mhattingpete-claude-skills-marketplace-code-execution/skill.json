@@ -1,0 +1,26 @@
+{
+  "id": "mhattingpete-claude-skills-marketplace-code-execution",
+  "name": "code-execution",
+  "description": "Execute Python code locally with marketplace API access for 90%+ token savings on bulk operations. Activates when user requests bulk operations (10+ files), complex multi-step workflows, iterative processing, or mentions efficiency/performance.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mhattingpete",
+  "install_path": ".claude/skills/code-execution/SKILL.md",
+  "source": {
+    "repo": "mhattingpete/claude-skills-marketplace",
+    "url": "https://github.com/mhattingpete/claude-skills-marketplace/blob/main/code-operations-plugin/skills/code-execution/SKILL.md",
+    "path": "code-operations-plugin/skills/code-execution/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:33.556Z",
+    "stars": 583,
+    "language": "HTML",
+    "pushed_at": "2026-03-06T10:14:25Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "这是一个本地执行Python代码的工具，在处理大批量文件、复杂多步工作流或迭代任务时，能帮你省下九成以上的API Token，非常适合需要提升效率和性能的批量操作场景。"
+}

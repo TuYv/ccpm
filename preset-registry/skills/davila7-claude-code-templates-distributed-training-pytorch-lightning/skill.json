@@ -1,0 +1,26 @@
+{
+  "id": "davila7-claude-code-templates-distributed-training-pytorch-lightning",
+  "name": "pytorch-lightning",
+  "description": "High-level PyTorch framework with Trainer class, automatic distributed training (DDP/FSDP/DeepSpeed), callbacks system, and minimal boilerplate. Scales from laptop to supercomputer with same code. Use when you want clean training loops with built-in best practices.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "davila7",
+  "install_path": ".claude/skills/distributed-training-pytorch-lightning/SKILL.md",
+  "source": {
+    "repo": "davila7/claude-code-templates",
+    "url": "https://github.com/davila7/claude-code-templates/blob/main/cli-tool/components/skills/ai-research/distributed-training-pytorch-lightning/SKILL.md",
+    "path": "cli-tool/components/skills/ai-research/distributed-training-pytorch-lightning/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:45.305Z",
+    "stars": 27482,
+    "language": "Python",
+    "pushed_at": "2026-05-22T04:31:04Z",
+    "license": "MIT"
+  },
+  "summary_zh": "它是PyTorch的高层封装，帮你省去繁琐的样板代码，自动搞定分布式训练。适合想写干净训练循环，并让同一套代码从笔记本无缝跑上超算的开发者。"
+}

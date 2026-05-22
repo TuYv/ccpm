@@ -1,0 +1,26 @@
+{
+  "id": "agricidaniel-claude-seo-seo-technical",
+  "name": "seo-technical",
+  "description": "> Technical SEO audit across 9 categories: crawlability, indexability, security, URL structure, mobile, Core Web Vitals, structured data, JavaScript rendering, and IndexNow protocol. Use when user says \"technical SEO\", \"crawl issues\", \"robots.txt\", \"Core Web Vitals\", \"site speed\", or \"security headers\".",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "AgriciDaniel",
+  "install_path": ".claude/skills/seo-technical/SKILL.md",
+  "source": {
+    "repo": "AgriciDaniel/claude-seo",
+    "url": "https://github.com/AgriciDaniel/claude-seo/blob/main/skills/seo-technical/SKILL.md",
+    "path": "skills/seo-technical/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:24.204Z",
+    "stars": 6911,
+    "language": "Python",
+    "pushed_at": "2026-05-18T08:55:40Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个网站底层技术体检工具，能帮你全面排查抓取、收录、性能和安全等SEO隐患，适合遇到页面不收录、加载慢或想深度优化网站架构时使用。"
+}

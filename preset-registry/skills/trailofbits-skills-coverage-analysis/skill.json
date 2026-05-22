@@ -1,0 +1,26 @@
+{
+  "id": "trailofbits-skills-coverage-analysis",
+  "name": "coverage-analysis",
+  "description": "> Coverage analysis measures code exercised during fuzzing. Use when assessing harness effectiveness or identifying fuzzing blockers.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "trailofbits",
+  "install_path": ".claude/skills/coverage-analysis/SKILL.md",
+  "source": {
+    "repo": "trailofbits/skills",
+    "url": "https://github.com/trailofbits/skills/blob/main/plugins/testing-handbook-skills/skills/coverage-analysis/SKILL.md",
+    "path": "plugins/testing-handbook-skills/skills/coverage-analysis/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:41:52.940Z",
+    "stars": 5325,
+    "language": "Python",
+    "pushed_at": "2026-05-16T17:22:25Z",
+    "license": "CC-BY-SA-4.0"
+  },
+  "summary_zh": "它能统计模糊测试的代码覆盖率，适合用来评估测试程序的有效性，或找出阻碍测试推进的卡点。"
+}

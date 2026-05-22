@@ -1,0 +1,26 @@
+{
+  "id": "op7418-codepilot-feishu-troubleshoot",
+  "name": "feishu-troubleshoot",
+  "description": "| 飞书插件问题排查工具。包含常见问题 FAQ 和深度诊断命令（/feishu_doctor）。",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "op7418",
+  "install_path": ".claude/skills/feishu-troubleshoot/SKILL.md",
+  "source": {
+    "repo": "op7418/CodePilot",
+    "url": "https://github.com/op7418/CodePilot/blob/main/资料/feishu-openclaw-plugin/package/skills/feishu-troubleshoot/SKILL.md",
+    "path": "资料/feishu-openclaw-plugin/package/skills/feishu-troubleshoot/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:00.883Z",
+    "stars": 5769,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-11T06:07:30Z",
+    "license": null
+  },
+  "summary_zh": "帮你排查飞书插件故障的工具。遇到插件出问题时，能查常见解答，也能跑深度诊断，快速找出原因。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "jeffallan-claude-skills-terraform-engineer",
+  "name": "terraform-engineer",
+  "description": "Use when implementing infrastructure as code with Terraform across AWS, Azure, or GCP. Invoke for module development (create reusable modules, manage module versioning), state management (migrate backends, import existing resources, resolve state conflicts), provider configuration, multi-environment workflows, and infrastructure testing.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "jeffallan",
+  "install_path": ".claude/skills/terraform-engineer/SKILL.md",
+  "source": {
+    "repo": "jeffallan/claude-skills",
+    "url": "https://github.com/jeffallan/claude-skills/blob/main/skills/terraform-engineer/SKILL.md",
+    "path": "skills/terraform-engineer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:46:00.818Z",
+    "stars": 9253,
+    "language": "Python",
+    "pushed_at": "2026-05-20T13:35:05Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个跨云Terraform实践助手，专门解决模块复用、状态冲突及多环境协同等复杂基础设施代码化难题。"
+}

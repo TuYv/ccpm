@@ -1,0 +1,26 @@
+{
+  "id": "openagentsinc-openagents-autopilot-data-market-control",
+  "name": "autopilot-data-market-control",
+  "description": "Typed OpenAgents DS-first Data Market tool contract for seller publication and market read-back.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "OpenAgentsInc",
+  "install_path": ".claude/skills/autopilot-data-market-control/SKILL.md",
+  "source": {
+    "repo": "OpenAgentsInc/openagents",
+    "url": "https://github.com/OpenAgentsInc/openagents/blob/main/skills/autopilot-data-market-control/SKILL.md",
+    "path": "skills/autopilot-data-market-control/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:09.397Z",
+    "stars": 420,
+    "language": "Rust",
+    "pushed_at": "2026-05-21T14:45:59Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "这是一套数据市场的工具契约，帮卖家规范发布数据并读取市场行情，适合数据科学优先的AI代理生态。"
+}

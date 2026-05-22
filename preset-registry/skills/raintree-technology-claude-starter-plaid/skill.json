@@ -1,0 +1,26 @@
+{
+  "id": "raintree-technology-claude-starter-plaid",
+  "name": "plaid",
+  "description": "Plaid banking API expert for financial data integration. Covers Plaid Link, Auth (account/routing numbers), Transactions, Identity verification, Balance checking, and webhooks. Build fintech apps with bank connections, ACH transfers, and transaction history. Triggers on Plaid, banking API, Plaid Link, bank connection, ACH, financial data, transaction history.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "raintree-technology",
+  "install_path": ".claude/skills/plaid/SKILL.md",
+  "source": {
+    "repo": "raintree-technology/claude-starter",
+    "url": "https://github.com/raintree-technology/claude-starter/blob/main/skills/plaid/SKILL.md",
+    "path": "skills/plaid/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:54.313Z",
+    "stars": 76,
+    "language": "Zig",
+    "pushed_at": "2026-04-24T22:45:15Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是专攻Plaid银行API的集成助手，能帮你轻松打通银行账户连接、获取交易流水等金融数据，非常适合开发需要ACH转账或读取银行数据的金融科技应用。"
+}

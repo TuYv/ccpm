@@ -1,0 +1,26 @@
+{
+  "id": "nowork-studio-toprank-audit",
+  "name": "meta-ads-audit",
+  "description": "Meta Ads (Facebook + Instagram) account audit and business context setup. Run this first — it gathers business information, analyzes account health, and saves context that all other Meta ads skills reuse. Trigger on \"audit my Meta ads\", \"audit my Facebook ads\", \"Meta ads audit\", \"set up my Meta ads\", \"onboard Meta\", \"Meta account overview\", \"how's my Meta account\", \"Meta health check\", \"what should I fix in my Facebook ads\", or when the user is new to NotFair Meta and hasn't run an audit before.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "nowork-studio",
+  "install_path": ".claude/skills/audit/SKILL.md",
+  "source": {
+    "repo": "nowork-studio/toprank",
+    "url": "https://github.com/nowork-studio/toprank/blob/main/meta-ads/audit/SKILL.md",
+    "path": "meta-ads/audit/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:36.333Z",
+    "stars": 2599,
+    "language": "Python",
+    "pushed_at": "2026-05-20T05:41:47Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是Facebook和Instagram广告账户的体检与初始化工具，帮你全面诊断账户健康状况并梳理业务信息。适合刚接手账户或准备优化广告前优先运行，为后续所有操作打好基础。"
+}

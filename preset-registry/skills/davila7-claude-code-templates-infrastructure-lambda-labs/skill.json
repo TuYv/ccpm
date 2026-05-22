@@ -1,0 +1,26 @@
+{
+  "id": "davila7-claude-code-templates-infrastructure-lambda-labs",
+  "name": "lambda-labs-gpu-cloud",
+  "description": "Reserved and on-demand GPU cloud instances for ML training and inference. Use when you need dedicated GPU instances with simple SSH access, persistent filesystems, or high-performance multi-node clusters for large-scale training.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "davila7",
+  "install_path": ".claude/skills/infrastructure-lambda-labs/SKILL.md",
+  "source": {
+    "repo": "davila7/claude-code-templates",
+    "url": "https://github.com/davila7/claude-code-templates/blob/main/cli-tool/components/skills/ai-research/infrastructure-lambda-labs/SKILL.md",
+    "path": "cli-tool/components/skills/ai-research/infrastructure-lambda-labs/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:47.229Z",
+    "stars": 27482,
+    "language": "Python",
+    "pushed_at": "2026-05-22T04:31:04Z",
+    "license": "MIT"
+  },
+  "summary_zh": "专为机器学习打造的GPU云算力平台，提供按需或预留实例。当你需要便捷访问专属GPU、稳定保存数据，或搭建集群搞大规模训练时，用它正合适。"
+}

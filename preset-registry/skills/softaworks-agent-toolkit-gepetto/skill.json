@@ -1,0 +1,26 @@
+{
+  "id": "softaworks-agent-toolkit-gepetto",
+  "name": "gepetto",
+  "description": "Creates detailed, sectionized implementation plans through research, stakeholder interviews, and multi-LLM review. Use when planning features that need thorough pre-implementation analysis.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "softaworks",
+  "install_path": ".claude/skills/gepetto/SKILL.md",
+  "source": {
+    "repo": "softaworks/agent-toolkit",
+    "url": "https://github.com/softaworks/agent-toolkit/blob/main/dist/plugins/gepetto/skills/gepetto/SKILL.md",
+    "path": "dist/plugins/gepetto/skills/gepetto/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:18.858Z",
+    "stars": 1872,
+    "language": "Python",
+    "pushed_at": "2026-03-05T16:46:24Z",
+    "license": "MIT"
+  },
+  "summary_zh": "它能结合调研、需求访谈和多模型审核来生成结构清晰的详细实施方案，非常适合在动手开发前，需要对功能进行深度分析与规划的场景。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "openai-openai-agents-python-csv-workbench",
+  "name": "csv-workbench",
+  "description": "Analyze CSV files in /mnt/data and return concise numeric summaries.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openai",
+  "install_path": ".claude/skills/csv-workbench/SKILL.md",
+  "source": {
+    "repo": "openai/openai-agents-python",
+    "url": "https://github.com/openai/openai-agents-python/blob/main/examples/tools/skills/csv-workbench/SKILL.md",
+    "path": "examples/tools/skills/csv-workbench/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:41.944Z",
+    "stars": 26561,
+    "language": "Python",
+    "pushed_at": "2026-05-22T01:08:07Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个数据分析工具，能快速解析指定目录的CSV文件并生成精简的数值统计，帮你省去手动计算的麻烦，轻松掌握数据概况。"
+}

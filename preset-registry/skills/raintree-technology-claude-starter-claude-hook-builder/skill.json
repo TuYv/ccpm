@@ -1,0 +1,26 @@
+{
+  "id": "raintree-technology-claude-starter-claude-hook-builder",
+  "name": "claude-hook-builder",
+  "description": "Interactive hook creator for Claude Code. Triggers when user mentions creating hooks, PreToolUse, PostToolUse, hook validation, hook configuration, settings.json hooks, or wants to automate tool execution workflows.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "raintree-technology",
+  "install_path": ".claude/skills/claude-hook-builder/SKILL.md",
+  "source": {
+    "repo": "raintree-technology/claude-starter",
+    "url": "https://github.com/raintree-technology/claude-starter/blob/main/templates/.claude/skills/anthropic/claude-hook-builder/skill.md",
+    "path": "templates/.claude/skills/anthropic/claude-hook-builder/skill.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:54.659Z",
+    "stars": 76,
+    "language": "Zig",
+    "pushed_at": "2026-04-24T22:45:15Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一款帮你在 Claude Code 里交互式创建和配置钩子的工具，适合想免去手写配置、轻松实现工具执行前后自动化工作流的场景。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "actionbook-rust-skills-core-fix-skill-docs",
+  "name": "core-fix-skill-docs",
+  "description": "Internal maintenance support for checking and fixing generated Rust skill documentation references. Use only when explicitly invoked by /fix-skill-docs.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "actionbook",
+  "install_path": ".claude/skills/core-fix-skill-docs/SKILL.md",
+  "source": {
+    "repo": "actionbook/rust-skills",
+    "url": "https://github.com/actionbook/rust-skills/blob/main/skills/core-fix-skill-docs/SKILL.md",
+    "path": "skills/core-fix-skill-docs/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:00.069Z",
+    "stars": 1164,
+    "language": "Shell",
+    "pushed_at": "2026-05-12T12:59:42Z",
+    "license": null
+  },
+  "summary_zh": "这是个内部维护工具，专门检查并修复Rust技能文档的引用错误，适合在需要排查文档引用时通过特定指令手动触发使用。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "raintree-technology-claude-starter-shelby",
+  "name": "shelby-expert",
+  "description": "Expert on Shelby Protocol decentralized blob storage on Aptos blockchain. Coordinates 7 specialized sub-skills covering protocol architecture, SDK usage, smart contracts, CLI tools, RPC infrastructure, dApp building, and storage integration. Triggers on keywords Shelby Protocol, Shelby storage, decentralized storage, Aptos storage, blob storage, Shelby.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "raintree-technology",
+  "install_path": ".claude/skills/shelby/SKILL.md",
+  "source": {
+    "repo": "raintree-technology/claude-starter",
+    "url": "https://github.com/raintree-technology/claude-starter/blob/main/.claude/skills/aptos/shelby/skill.md",
+    "path": ".claude/skills/aptos/shelby/skill.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:52.429Z",
+    "stars": 76,
+    "language": "Zig",
+    "pushed_at": "2026-04-24T22:45:15Z",
+    "license": "MIT"
+  },
+  "summary_zh": "它是Aptos链上Shelby去中心化存储协议的专家助手，掌握从底层架构到应用开发的全套知识，专门帮你解决在Aptos上构建或接入去中心化blob存储时的各种技术难题。"
+}

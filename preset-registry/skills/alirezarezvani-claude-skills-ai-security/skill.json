@@ -1,0 +1,26 @@
+{
+  "id": "alirezarezvani-claude-skills-ai-security",
+  "name": "ai-security",
+  "description": "Use when assessing AI/ML systems for prompt injection, jailbreak vulnerabilities, model inversion risk, data poisoning exposure, or agent tool abuse. Covers MITRE ATLAS technique mapping, injection signature detection, and adversarial robustness scoring.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alirezarezvani",
+  "install_path": ".claude/skills/ai-security/SKILL.md",
+  "source": {
+    "repo": "alirezarezvani/claude-skills",
+    "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/ai-security/SKILL.md",
+    "path": ".gemini/skills/ai-security/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:38.979Z",
+    "stars": 15795,
+    "language": "Python",
+    "pushed_at": "2026-05-21T17:51:26Z",
+    "license": "MIT"
+  },
+  "summary_zh": "专用于评估AI应用安全性的工具，帮你排查提示注入、越狱、数据投毒及智能体工具滥用等漏洞并评估抗攻击能力，适合大模型上线前的安全测试。"
+}

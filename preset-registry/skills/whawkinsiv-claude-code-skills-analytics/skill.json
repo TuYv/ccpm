@@ -1,0 +1,26 @@
+{
+  "id": "whawkinsiv-claude-code-skills-analytics",
+  "name": "analytics",
+  "description": "Use this skill when the user needs to set up analytics, design event tracking, define key metrics, build funnels, or instrument their SaaS product for data-driven decisions. Covers event naming conventions, tracking strategy, funnel analytics, and data quality.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "whawkinsiv",
+  "install_path": ".claude/skills/analytics/SKILL.md",
+  "source": {
+    "repo": "whawkinsiv/claude-code-skills",
+    "url": "https://github.com/whawkinsiv/claude-code-skills/blob/main/skills/analytics/SKILL.md",
+    "path": "skills/analytics/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:26.125Z",
+    "stars": 177,
+    "language": null,
+    "pushed_at": "2026-05-14T16:20:15Z",
+    "license": "MIT"
+  },
+  "summary_zh": "专帮SaaS产品做数据埋点与分析的技能，解决不知如何规划事件追踪、制定指标和搭建漏斗的难题，助你轻松实现数据驱动决策。"
+}

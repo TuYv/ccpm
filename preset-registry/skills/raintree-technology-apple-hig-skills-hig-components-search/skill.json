@@ -1,0 +1,26 @@
+{
+  "id": "raintree-technology-apple-hig-skills-hig-components-search",
+  "name": "hig-components-search",
+  "description": ">- Apple HIG guidance for navigation-related components including search fields, page controls, and path controls. Use this skill when the user says \"how should search work in my app,\" \"I need a breadcrumb,\" \"how do I paginate content,\" or asks about search field, search bar, page control, path control, breadcrumb, navigation component, search UX, search suggestions, search scopes, paginated content navigation, or file path hierarchy display. Cross-references: hig-components-menus, hig-component",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "raintree-technology",
+  "install_path": ".claude/skills/hig-components-search/SKILL.md",
+  "source": {
+    "repo": "raintree-technology/apple-hig-skills",
+    "url": "https://github.com/raintree-technology/apple-hig-skills/blob/main/skills/hig-components-search/SKILL.md",
+    "path": "skills/hig-components-search/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:34.778Z",
+    "stars": 52,
+    "language": "TypeScript",
+    "pushed_at": "2026-04-28T22:36:54Z",
+    "license": null
+  },
+  "summary_zh": "提供苹果官方的导航组件设计规范，涵盖搜索、分页和面包屑等。适合开发应用时拿捏不准搜索交互、不知如何分页或展示文件路径的场景，帮你做出符合苹果风格的导航体验。"
+}

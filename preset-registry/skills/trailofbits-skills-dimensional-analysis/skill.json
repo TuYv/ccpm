@@ -1,0 +1,26 @@
+{
+  "id": "trailofbits-skills-dimensional-analysis",
+  "name": "dimensional-analysis",
+  "description": "Annotates codebases with dimensional analysis comments documenting units, dimensions, and decimal scaling. Use when someone asks to annotate units in a codebase, perform a dimensional analysis, or find vulnerabilities in a DeFi protocol, offchain code, or other blockchain-related codebase with arithmetic. Prevents dimensional mismatches and catches formula bugs early.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "trailofbits",
+  "install_path": ".claude/skills/dimensional-analysis/SKILL.md",
+  "source": {
+    "repo": "trailofbits/skills",
+    "url": "https://github.com/trailofbits/skills/blob/main/plugins/dimensional-analysis/skills/dimensional-analysis/SKILL.md",
+    "path": "plugins/dimensional-analysis/skills/dimensional-analysis/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:41:50.499Z",
+    "stars": 5325,
+    "language": "Python",
+    "pushed_at": "2026-05-16T17:22:25Z",
+    "license": "CC-BY-SA-4.0"
+  },
+  "summary_zh": "这是一个给代码标注单位和量纲注释的工具，能避免单位错配并尽早发现公式漏洞，特别适合审计DeFi等区块链算术代码的安全隐患。"
+}

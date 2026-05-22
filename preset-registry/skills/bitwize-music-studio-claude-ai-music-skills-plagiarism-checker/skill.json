@@ -1,0 +1,26 @@
+{
+  "id": "bitwize-music-studio-claude-ai-music-skills-plagiarism-checker",
+  "name": "plagiarism-checker",
+  "description": "Scans lyrics for phrases that may match existing songs using web search and LLM knowledge. Use before release to check for unintentional borrowing.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "bitwize-music-studio",
+  "install_path": ".claude/skills/plagiarism-checker/SKILL.md",
+  "source": {
+    "repo": "bitwize-music-studio/claude-ai-music-skills",
+    "url": "https://github.com/bitwize-music-studio/claude-ai-music-skills/blob/main/skills/plagiarism-checker/SKILL.md",
+    "path": "skills/plagiarism-checker/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:37.779Z",
+    "stars": 202,
+    "language": "Python",
+    "pushed_at": "2026-05-21T00:00:51Z",
+    "license": "CC0-1.0"
+  },
+  "summary_zh": "它结合网络搜索和AI知识帮你扫描歌词，找出与现有歌曲雷同的句子，适合在发布前排查无意的抄袭或借鉴。"
+}

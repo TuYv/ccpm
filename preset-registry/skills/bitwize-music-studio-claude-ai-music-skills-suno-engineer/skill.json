@@ -1,0 +1,26 @@
+{
+  "id": "bitwize-music-studio-claude-ai-music-skills-suno-engineer",
+  "name": "suno-engineer",
+  "description": "Constructs technical Suno V5/V5.5 style prompts, selects genres, and optimizes generation settings. Use when creating or refining Suno prompts for track generation.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "bitwize-music-studio",
+  "install_path": ".claude/skills/suno-engineer/SKILL.md",
+  "source": {
+    "repo": "bitwize-music-studio/claude-ai-music-skills",
+    "url": "https://github.com/bitwize-music-studio/claude-ai-music-skills/blob/main/skills/suno-engineer/SKILL.md",
+    "path": "skills/suno-engineer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:39.924Z",
+    "stars": 202,
+    "language": "Python",
+    "pushed_at": "2026-05-21T00:00:51Z",
+    "license": "CC0-1.0"
+  },
+  "summary_zh": "这是一个Suno音乐提示词助手，能帮你写出专业提示词、挑选流派并优化参数，适合需要创作或打磨Suno音乐生成词的场景。"
+}

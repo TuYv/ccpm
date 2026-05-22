@@ -1,0 +1,26 @@
+{
+  "id": "davila7-claude-code-templates-emerging-techniques-moe-training",
+  "name": "moe-training",
+  "description": "Train Mixture of Experts (MoE) models using DeepSpeed or HuggingFace. Use when training large-scale models with limited compute (5× cost reduction vs dense models), implementing sparse architectures like Mixtral 8x7B or DeepSeek-V3, or scaling model capacity without proportional compute increase. Covers MoE architectures, routing mechanisms, load balancing, expert parallelism, and inference optimization.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "davila7",
+  "install_path": ".claude/skills/emerging-techniques-moe-training/SKILL.md",
+  "source": {
+    "repo": "davila7/claude-code-templates",
+    "url": "https://github.com/davila7/claude-code-templates/blob/main/cli-tool/components/skills/ai-research/emerging-techniques-moe-training/SKILL.md",
+    "path": "cli-tool/components/skills/ai-research/emerging-techniques-moe-training/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:45.866Z",
+    "stars": 27482,
+    "language": "Python",
+    "pushed_at": "2026-05-22T04:31:04Z",
+    "license": "MIT"
+  },
+  "summary_zh": "帮你在算力有限时训练混合专家大模型，成本仅为传统密集模型的五分之一，适合想不加硬件就扩充模型容量或构建稀疏架构的场景。"
+}

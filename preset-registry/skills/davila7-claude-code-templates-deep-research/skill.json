@@ -1,0 +1,26 @@
+{
+  "id": "davila7-claude-code-templates-deep-research",
+  "name": "deep-research",
+  "description": "Run autonomous research tasks that plan, search, read, and synthesize information into comprehensive reports.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "davila7",
+  "install_path": ".claude/skills/deep-research/SKILL.md",
+  "source": {
+    "repo": "davila7/claude-code-templates",
+    "url": "https://github.com/davila7/claude-code-templates/blob/main/cli-tool/components/skills/ai-research/deep-research/SKILL.md",
+    "path": "cli-tool/components/skills/ai-research/deep-research/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:44.782Z",
+    "stars": 27482,
+    "language": "Python",
+    "pushed_at": "2026-05-22T04:31:04Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个能自主替你做调研的工具，它会自动搜集消化资料并整合成详尽报告，适合需要快速梳理海量信息并产出深度分析的场合。"
+}

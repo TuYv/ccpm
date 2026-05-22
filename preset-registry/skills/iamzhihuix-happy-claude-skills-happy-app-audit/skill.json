@@ -1,0 +1,26 @@
+{
+  "id": "iamzhihuix-happy-claude-skills-happy-app-audit",
+  "name": "happy-app-audit",
+  "description": "Audit a local macOS app's telemetry / reporting behavior using static analysis only. Reverse-engineers an .app bundle to identify embedded SDKs (AppLog/TEA, Parfait, TTNet, mars, MMKV, Sentry, Firebase, Bugly, Umeng, etc.), mapped upload endpoints, local on-disk queues, and privacy-relevant fields — without packet capture, network requests, debugger attach, or DRM bypass. Use when user asks to investigate, audit, or reverse-engineer a macOS app for telemetry, reporting, data upload, privacy, or ",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "iamzhihuix",
+  "install_path": ".claude/skills/happy-app-audit/SKILL.md",
+  "source": {
+    "repo": "iamzhihuix/happy-claude-skills",
+    "url": "https://github.com/iamzhihuix/happy-claude-skills/blob/main/skills/happy-app-audit/SKILL.md",
+    "path": "skills/happy-app-audit/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:23.486Z",
+    "stars": 295,
+    "language": "TypeScript",
+    "pushed_at": "2026-04-20T01:07:19Z",
+    "license": "MIT"
+  },
+  "summary_zh": "纯静态分析macOS应用遥测行为的工具。无需抓包调试，就能逆向排查应用内置的追踪SDK、上传地址和隐私字段，适合审查应用隐私合规或逆向调查数据上报情况。"
+}

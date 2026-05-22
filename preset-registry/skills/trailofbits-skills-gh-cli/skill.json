@@ -1,0 +1,26 @@
+{
+  "id": "trailofbits-skills-gh-cli",
+  "name": "gh-cli",
+  "description": "Enforces authenticated gh CLI workflows over unauthenticated curl/WebFetch patterns. Use when working with GitHub URLs, API access, pull requests, or issues.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "trailofbits",
+  "install_path": ".claude/skills/gh-cli/SKILL.md",
+  "source": {
+    "repo": "trailofbits/skills",
+    "url": "https://github.com/trailofbits/skills/blob/main/.codex/skills/gh-cli/SKILL.md",
+    "path": ".codex/skills/gh-cli/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:41:48.332Z",
+    "stars": 5325,
+    "language": "Python",
+    "pushed_at": "2026-05-16T17:22:25Z",
+    "license": "CC-BY-SA-4.0"
+  },
+  "summary_zh": "它强制用带身份验证的命令行替代未授权的请求方式，解决无权限访问GitHub数据的问题，适合需要安全调用API或处理PR和Issue的场景。"
+}

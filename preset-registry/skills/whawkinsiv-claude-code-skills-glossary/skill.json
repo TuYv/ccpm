@@ -1,0 +1,26 @@
+{
+  "id": "whawkinsiv-claude-code-skills-glossary",
+  "name": "glossary",
+  "description": "Use this skill when the user doesn't understand a technical term, asks 'what is a [technical concept],' 'what does [term] mean,' seems confused by jargon in another skill, or is encountering developer concepts for the first time. Covers the 50+ technical terms non-technical founders encounter most, explained in plain English with no jargon.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "whawkinsiv",
+  "install_path": ".claude/skills/glossary/SKILL.md",
+  "source": {
+    "repo": "whawkinsiv/claude-code-skills",
+    "url": "https://github.com/whawkinsiv/claude-code-skills/blob/main/skills/glossary/SKILL.md",
+    "path": "skills/glossary/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:28.843Z",
+    "stars": 177,
+    "language": null,
+    "pushed_at": "2026-05-14T16:20:15Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个用大白话解释技术行话的工具，专为非技术背景的创业者或小白打造，当你听不懂开发概念时，它能帮你轻松搞懂。"
+}

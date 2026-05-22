@@ -1,0 +1,26 @@
+{
+  "id": "kenryu42-claude-code-safety-net-verify-custom-rules",
+  "name": "verify-custom-rules",
+  "description": "Verify cc-safety-net custom rules.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "kenryu42",
+  "install_path": ".claude/skills/verify-custom-rules/SKILL.md",
+  "source": {
+    "repo": "kenryu42/claude-code-safety-net",
+    "url": "https://github.com/kenryu42/claude-code-safety-net/blob/main/skills/verify-custom-rules/SKILL.md",
+    "path": "skills/verify-custom-rules/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:35.900Z",
+    "stars": 1353,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-08T13:45:58Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用来检查 cc-safety-net 自定义规则是否正确的验证工具，适合在部署规则前进行测试，防止因配置错误导致安全策略失效。"
+}

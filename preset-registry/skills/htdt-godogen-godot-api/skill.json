@@ -1,0 +1,26 @@
+{
+  "id": "htdt-godogen-godot-api",
+  "name": "godot-api",
+  "description": "| Look up Godot engine class APIs, methods, properties, signals, enums, or C# Godot syntax. Use when you need a targeted Godot API answer or a specific engine-class recommendation.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "htdt",
+  "install_path": ".claude/skills/godot-api/SKILL.md",
+  "source": {
+    "repo": "htdt/godogen",
+    "url": "https://github.com/htdt/godogen/blob/master/godot/skills/godot-api/SKILL.md",
+    "path": "godot/skills/godot-api/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-05-22T04:43:30.370Z",
+    "stars": 3246,
+    "language": "Python",
+    "pushed_at": "2026-05-20T14:57:26Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个专门查询Godot引擎API细节和C#语法的工具，适合开发时需要快速弄清某个接口用法，或想获取特定类推荐的使用场景。"
+}

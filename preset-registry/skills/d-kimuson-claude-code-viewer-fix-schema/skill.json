@@ -1,0 +1,26 @@
+{
+  "id": "d-kimuson-claude-code-viewer-fix-schema",
+  "name": "fix-schema",
+  "description": "Fix session log schema parse errors and create a pull request",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "d-kimuson",
+  "install_path": ".claude/skills/fix-schema/SKILL.md",
+  "source": {
+    "repo": "d-kimuson/claude-code-viewer",
+    "url": "https://github.com/d-kimuson/claude-code-viewer/blob/main/.agents/skills/fix-schema/SKILL.md",
+    "path": ".agents/skills/fix-schema/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:03.613Z",
+    "stars": 1195,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-10T17:15:44Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是个自动修复会话日志解析错误并提交PR的工具。当日志结构异常导致解析失败时，它能自动修正错误并生成合并请求，省去手动排查改代码的麻烦。"
+}

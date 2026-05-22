@@ -1,0 +1,26 @@
+{
+  "id": "addyosmani-agent-skills-browser-testing-with-devtools",
+  "name": "browser-testing-with-devtools",
+  "description": "Tests in real browsers via Chrome DevTools MCP. Use when building or debugging anything that runs in a browser. Use when you need to inspect the DOM, capture console errors, analyze network requests, profile performance, or verify visual output with real runtime data. Requires the chrome-devtools MCP server to be configured.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "addyosmani",
+  "install_path": ".claude/skills/browser-testing-with-devtools/SKILL.md",
+  "source": {
+    "repo": "addyosmani/agent-skills",
+    "url": "https://github.com/addyosmani/agent-skills/blob/main/skills/browser-testing-with-devtools/SKILL.md",
+    "path": "skills/browser-testing-with-devtools/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:22.607Z",
+    "stars": 44664,
+    "language": "Shell",
+    "pushed_at": "2026-05-16T22:00:25Z",
+    "license": "MIT"
+  },
+  "summary_zh": "通过Chrome DevTools在真实浏览器里跑测试，适合网页应用的开发调试，能帮你排查运行报错、分析性能瓶颈，并验证页面渲染效果。"
+}

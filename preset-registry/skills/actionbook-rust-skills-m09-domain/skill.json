@@ -1,0 +1,26 @@
+{
+  "id": "actionbook-rust-skills-m09-domain",
+  "name": "m09-domain",
+  "description": "CRITICAL: Use for domain modeling. Triggers: domain model, DDD, domain-driven design, entity, value object, aggregate, repository pattern, business rules, validation, invariant, 领域模型, 领域驱动设计, 业务规则",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "actionbook",
+  "install_path": ".claude/skills/m09-domain/SKILL.md",
+  "source": {
+    "repo": "actionbook/rust-skills",
+    "url": "https://github.com/actionbook/rust-skills/blob/main/skills/m09-domain/SKILL.md",
+    "path": "skills/m09-domain/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:01.479Z",
+    "stars": 1164,
+    "language": "Shell",
+    "pushed_at": "2026-05-12T12:59:42Z",
+    "license": null
+  },
+  "summary_zh": "一个专门用于领域建模的工具，适合采用DDD的场景，能帮你规范实体和聚合等代码结构，确保复杂业务规则与逻辑校验不出错。"
+}

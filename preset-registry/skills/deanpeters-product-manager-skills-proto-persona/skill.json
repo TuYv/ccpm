@@ -1,0 +1,26 @@
+{
+  "id": "deanpeters-product-manager-skills-proto-persona",
+  "name": "proto-persona",
+  "description": "Create a proto-persona from current research, market signals, and team knowledge. Use when you need a working customer profile before deeper validation.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "deanpeters",
+  "install_path": ".claude/skills/proto-persona/SKILL.md",
+  "source": {
+    "repo": "deanpeters/Product-Manager-Skills",
+    "url": "https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/proto-persona/SKILL.md",
+    "path": "skills/proto-persona/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:41:46.767Z",
+    "stars": 4428,
+    "language": "Shell",
+    "pushed_at": "2026-05-20T12:25:44Z",
+    "license": null
+  },
+  "summary_zh": "帮你整合现有研究、市场信号和团队经验，快速生成初步用户画像。适合在深入验证前，急需一个能用的客户画像来推进工作的场景。"
+}

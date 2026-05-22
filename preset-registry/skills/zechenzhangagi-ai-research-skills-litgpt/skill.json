@@ -1,0 +1,26 @@
+{
+  "id": "zechenzhangagi-ai-research-skills-litgpt",
+  "name": "implementing-llms-litgpt",
+  "description": "Implements and trains LLMs using Lightning AI's LitGPT with 20+ pretrained architectures (Llama, Gemma, Phi, Qwen, Mistral). Use when need clean model implementations, educational understanding of architectures, or production fine-tuning with LoRA/QLoRA. Single-file implementations, no abstraction layers.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "zechenzhangAGI",
+  "install_path": ".claude/skills/litgpt/SKILL.md",
+  "source": {
+    "repo": "zechenzhangAGI/AI-research-SKILLs",
+    "url": "https://github.com/zechenzhangAGI/AI-research-SKILLs/blob/main/01-model-architecture/litgpt/SKILL.md",
+    "path": "01-model-architecture/litgpt/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:36.855Z",
+    "stars": 8786,
+    "language": "TeX",
+    "pushed_at": "2026-04-28T05:09:27Z",
+    "license": "MIT"
+  },
+  "summary_zh": "基于LitGPT的大模型开发工具，用极简单文件代码实现各种主流架构，适合想直观理解模型底层原理，或需要干净利落地进行LoRA生产级微调的开发者。"
+}

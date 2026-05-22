@@ -1,0 +1,26 @@
+{
+  "id": "bitwize-music-studio-claude-ai-music-skills-clipboard",
+  "name": "clipboard",
+  "description": "Copies track content (lyrics, style prompts, streaming lyrics) to the system clipboard. Use when the user needs to paste lyrics or style prompts into Suno or other external tools.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "bitwize-music-studio",
+  "install_path": ".claude/skills/clipboard/SKILL.md",
+  "source": {
+    "repo": "bitwize-music-studio/claude-ai-music-skills",
+    "url": "https://github.com/bitwize-music-studio/claude-ai-music-skills/blob/main/skills/clipboard/SKILL.md",
+    "path": "skills/clipboard/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:36.248Z",
+    "stars": 202,
+    "language": "Python",
+    "pushed_at": "2026-05-21T00:00:51Z",
+    "license": "CC0-1.0"
+  },
+  "summary_zh": "帮你把音轨的歌词和风格提示词复制到剪贴板，方便直接粘贴到Suno等外部工具中使用。"
+}

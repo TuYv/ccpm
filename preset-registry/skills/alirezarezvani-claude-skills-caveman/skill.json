@@ -1,0 +1,26 @@
+{
+  "id": "alirezarezvani-claude-skills-caveman",
+  "name": "caveman",
+  "description": "> Ultra-compressed communication mode. Cuts token usage ~75% by dropping filler, articles, and pleasantries while keeping full technical accuracy. Use when user says \"caveman mode\", \"talk like caveman\", \"use caveman\", \"less tokens\", \"be brief\", or invokes /caveman.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alirezarezvani",
+  "install_path": ".claude/skills/caveman/SKILL.md",
+  "source": {
+    "repo": "alirezarezvani/claude-skills",
+    "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/caveman/SKILL.md",
+    "path": ".gemini/skills/caveman/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:41.485Z",
+    "stars": 15795,
+    "language": "Python",
+    "pushed_at": "2026-05-21T17:51:26Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一种极简沟通模式，通过省去废话和客套来砍掉75%的token消耗，适合需要极致压缩字数、节省成本且只看核心干货的对话场景。"
+}

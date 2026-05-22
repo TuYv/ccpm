@@ -1,0 +1,26 @@
+{
+  "id": "neolabhq-context-engineering-kit-tree-of-thoughts",
+  "name": "tree-of-thoughts",
+  "description": "Execute tasks through systematic exploration, pruning, and expansion using Tree of Thoughts methodology with meta-judge evaluation specifications and multi-agent evaluation",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "NeoLabHQ",
+  "install_path": ".claude/skills/tree-of-thoughts/SKILL.md",
+  "source": {
+    "repo": "NeoLabHQ/context-engineering-kit",
+    "url": "https://github.com/NeoLabHQ/context-engineering-kit/blob/master/plugins/sadd/skills/tree-of-thoughts/SKILL.md",
+    "path": "plugins/sadd/skills/tree-of-thoughts/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-05-22T04:42:32.612Z",
+    "stars": 1025,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-22T00:32:29Z",
+    "license": "GPL-3.0"
+  },
+  "summary_zh": "基于思维树方法的推理框架，通过多路径探索筛选与多智能体评估来执行任务，专治大模型复杂推理容易跑偏的毛病，适合需要深度规划与多步决策的场景。"
+}

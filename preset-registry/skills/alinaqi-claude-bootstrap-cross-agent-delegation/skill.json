@@ -1,0 +1,26 @@
+{
+  "id": "alinaqi-claude-bootstrap-cross-agent-delegation",
+  "name": "cross-agent-delegation",
+  "description": "Cross-agent task routing — Codex auto-review, Kimi delegation by complexity score (iCPG + Claude reasoning), iCPG + Mnemos mandatory for all agents",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alinaqi",
+  "install_path": ".claude/skills/cross-agent-delegation/SKILL.md",
+  "source": {
+    "repo": "alinaqi/claude-bootstrap",
+    "url": "https://github.com/alinaqi/claude-bootstrap/blob/main/skills/cross-agent-delegation/SKILL.md",
+    "path": "skills/cross-agent-delegation/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:25.927Z",
+    "stars": 641,
+    "language": "Python",
+    "pushed_at": "2026-05-21T22:01:29Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个多智能体任务调度工具，能根据任务复杂度自动把工作分发给最合适的AI处理，适合需要多个模型协同应对不同难度任务的场景。"
+}

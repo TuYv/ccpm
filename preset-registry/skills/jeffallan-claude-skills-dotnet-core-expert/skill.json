@@ -1,0 +1,26 @@
+{
+  "id": "jeffallan-claude-skills-dotnet-core-expert",
+  "name": "dotnet-core-expert",
+  "description": "Use when building .NET 8 applications with minimal APIs, clean architecture, or cloud-native microservices. Invoke for Entity Framework Core, CQRS with MediatR, JWT authentication, AOT compilation.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "jeffallan",
+  "install_path": ".claude/skills/dotnet-core-expert/SKILL.md",
+  "source": {
+    "repo": "jeffallan/claude-skills",
+    "url": "https://github.com/jeffallan/claude-skills/blob/main/skills/dotnet-core-expert/SKILL.md",
+    "path": "skills/dotnet-core-expert/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:57.548Z",
+    "stars": 9253,
+    "language": "Python",
+    "pushed_at": "2026-05-20T13:35:05Z",
+    "license": "MIT"
+  },
+  "summary_zh": "专为 .NET 8 打造的开发助手，适合搭建云原生微服务、整洁架构或最小API，帮你轻松搞定数据访问、架构设计、安全认证与性能优化等核心难题。"
+}

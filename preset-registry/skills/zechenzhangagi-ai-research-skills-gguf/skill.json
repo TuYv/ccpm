@@ -1,0 +1,26 @@
+{
+  "id": "zechenzhangagi-ai-research-skills-gguf",
+  "name": "gguf-quantization",
+  "description": "GGUF format and llama.cpp quantization for efficient CPU/GPU inference. Use when deploying models on consumer hardware, Apple Silicon, or when needing flexible quantization from 2-8 bit without GPU requirements.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "zechenzhangAGI",
+  "install_path": ".claude/skills/gguf/SKILL.md",
+  "source": {
+    "repo": "zechenzhangAGI/AI-research-SKILLs",
+    "url": "https://github.com/zechenzhangAGI/AI-research-SKILLs/blob/main/10-optimization/gguf/SKILL.md",
+    "path": "10-optimization/gguf/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:42.609Z",
+    "stars": 8786,
+    "language": "TeX",
+    "pushed_at": "2026-04-28T05:09:27Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个GGUF和llama.cpp模型量化工具，能把模型灵活压缩，让你无需高端显卡也能在普通电脑或苹果芯片上高效部署和运行大模型。"
+}

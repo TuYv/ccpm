@@ -1,0 +1,26 @@
+{
+  "id": "zebbern-claude-code-guide-xss-html-injection",
+  "name": "Cross-Site Scripting and HTML Injection Testing",
+  "description": "This skill should be used when the user asks to \"test for XSS vulnerabilities\", \"perform cross-site scripting attacks\", \"identify HTML injection flaws\", \"exploit client-side injection vulnerabilities\", \"steal cookies via XSS\", or \"bypass content security policies\". It provides comprehensive techniques for detecting, exploiting, and understanding XSS and HTML injection attack vectors in web applications.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "zebbern",
+  "install_path": ".claude/skills/xss-html-injection/SKILL.md",
+  "source": {
+    "repo": "zebbern/claude-code-guide",
+    "url": "https://github.com/zebbern/claude-code-guide/blob/main/skills/xss-html-injection/SKILL.md",
+    "path": "skills/xss-html-injection/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:10.800Z",
+    "stars": 4156,
+    "language": null,
+    "pushed_at": "2026-05-22T01:16:53Z",
+    "license": "MIT"
+  },
+  "summary_zh": "专门测试跨站脚本和HTML注入漏洞的工具，帮你发现并利用Web客户端注入攻击，适合需要绕过安全策略或验证Cookie窃取风险的渗透测试场景。"
+}

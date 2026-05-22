@@ -1,0 +1,26 @@
+{
+  "id": "davila7-claude-code-templates-conversation-memory",
+  "name": "conversation-memory",
+  "description": "Persistent memory systems for LLM conversations including short-term, long-term, and entity-based memory Use when: conversation memory, remember, memory persistence, long-term memory, chat history.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "davila7",
+  "install_path": ".claude/skills/conversation-memory/SKILL.md",
+  "source": {
+    "repo": "davila7/claude-code-templates",
+    "url": "https://github.com/davila7/claude-code-templates/blob/main/cli-tool/components/skills/ai-research/conversation-memory/SKILL.md",
+    "path": "cli-tool/components/skills/ai-research/conversation-memory/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:44.088Z",
+    "stars": 27482,
+    "language": "Python",
+    "pushed_at": "2026-05-22T04:31:04Z",
+    "license": "MIT"
+  },
+  "summary_zh": "专为大模型打造的持久化记忆系统，能帮AI记住聊天历史，解决对话容易遗忘的问题，适合需要长期保持上下文连贯的聊天场景。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "ryoppippi-ccusage-typescript-style",
+  "name": "typescript-style",
+  "description": "Guides ccusage TypeScript and JavaScript reading, writing, and review. Use before opening or editing .ts, .tsx, .js, or .jsx files, including mocks, fixtures, satisfies, or suppressions.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ryoppippi",
+  "install_path": ".claude/skills/typescript-style/SKILL.md",
+  "source": {
+    "repo": "ryoppippi/ccusage",
+    "url": "https://github.com/ryoppippi/ccusage/blob/main/.agents/skills/typescript-style/SKILL.md",
+    "path": ".agents/skills/typescript-style/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:05.923Z",
+    "stars": 14512,
+    "language": "Rust",
+    "pushed_at": "2026-05-21T16:12:47Z",
+    "license": null
+  },
+  "summary_zh": "这是一份 TS 和 JS 的代码风格与审查指南。适合在编写或修改代码前查阅，帮你规范从基础代码到测试夹具等各类细节写法，保持风格统一。"
+}

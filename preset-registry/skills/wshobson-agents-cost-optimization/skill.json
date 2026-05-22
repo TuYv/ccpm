@@ -1,0 +1,26 @@
+{
+  "id": "wshobson-agents-cost-optimization",
+  "name": "cost-optimization",
+  "description": "Optimize cloud costs across AWS, Azure, GCP, and OCI through resource rightsizing, tagging strategies, reserved instances, and spending analysis. Use when reducing cloud expenses, analyzing infrastructure costs, or implementing cost governance policies.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "wshobson",
+  "install_path": ".claude/skills/cost-optimization/SKILL.md",
+  "source": {
+    "repo": "wshobson/agents",
+    "url": "https://github.com/wshobson/agents/blob/main/plugins/cloud-infrastructure/skills/cost-optimization/SKILL.md",
+    "path": "plugins/cloud-infrastructure/skills/cost-optimization/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:56.653Z",
+    "stars": 35770,
+    "language": "Python",
+    "pushed_at": "2026-05-21T20:01:53Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一款多云成本优化工具，能帮你全面优化云上花费，适合需要降低云账单、分析基础设施开销或实施成本治理的场景。"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "muratcankoylan-agent-skills-for-context-engineering-multi-agent-patterns",
+  "name": "multi-agent-patterns",
+  "description": "This skill should be used when designing multi-agent systems that need context isolation, supervisor or swarm coordination, explicit handoffs, parallel execution, or a decision on whether multiple agents are justified.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "muratcankoylan",
+  "install_path": ".claude/skills/multi-agent-patterns/SKILL.md",
+  "source": {
+    "repo": "muratcankoylan/Agent-Skills-for-Context-Engineering",
+    "url": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering/blob/main/skills/multi-agent-patterns/SKILL.md",
+    "path": "skills/multi-agent-patterns/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:09.527Z",
+    "stars": 15854,
+    "language": "Python",
+    "pushed_at": "2026-05-22T04:31:12Z",
+    "license": "MIT"
+  }
+}

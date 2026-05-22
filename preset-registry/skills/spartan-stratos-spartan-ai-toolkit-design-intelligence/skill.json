@@ -1,0 +1,26 @@
+{
+  "id": "spartan-stratos-spartan-ai-toolkit-design-intelligence",
+  "name": "design-intelligence",
+  "description": "Design system bootstrapping and token generation. Takes project context and outputs ready-to-use design tokens, Tailwind config, and CSS variables.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "spartan-stratos",
+  "install_path": ".claude/skills/design-intelligence/SKILL.md",
+  "source": {
+    "repo": "spartan-stratos/spartan-ai-toolkit",
+    "url": "https://github.com/spartan-stratos/spartan-ai-toolkit/blob/master/toolkit/skills/design-intelligence/SKILL.md",
+    "path": "toolkit/skills/design-intelligence/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-05-22T04:46:14.977Z",
+    "stars": 71,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-11T06:56:56Z",
+    "license": null
+  },
+  "summary_zh": "它是一款设计系统脚手架，能根据项目信息自动生成设计变量、Tailwind配置和CSS变量，帮你告别手动配置，快速搭好统一的前端样式规范。"
+}

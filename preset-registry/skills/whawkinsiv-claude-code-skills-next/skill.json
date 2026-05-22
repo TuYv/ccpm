@@ -1,0 +1,26 @@
+{
+  "id": "whawkinsiv-claude-code-skills-next",
+  "name": "next",
+  "description": "Use this skill when the user doesn't know what to work on next, asks 'what should I do?', wants to find high-value opportunities, or needs help deciding where to spend their time. Also use when the user mentions 'what should I do next,' 'what should I work on,' 'where should I focus,' 'find low-hanging fruit,' 'what's the most valuable thing I could do,' or 'I don't know what to do.' Scans the full project — code, infrastructure, marketing, growth, business — and surfaces 3-5 high-impact, low-ef",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "whawkinsiv",
+  "install_path": ".claude/skills/next/SKILL.md",
+  "source": {
+    "repo": "whawkinsiv/claude-code-skills",
+    "url": "https://github.com/whawkinsiv/claude-code-skills/blob/main/skills/next/SKILL.md",
+    "path": "skills/next/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:30.863Z",
+    "stars": 177,
+    "language": null,
+    "pushed_at": "2026-05-14T16:20:15Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个项目全局分析工具，当你迷茫不知道下一步做什么或时间不知花在哪时，它能全面扫描代码与业务，帮你找出几个高回报、低成本的行动方向。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "cloudai-x-claude-workflow-v2-devops-infrastructure",
+  "name": "devops-infrastructure",
+  "description": "Guides Docker, CI/CD pipelines, deployment strategies, infrastructure as code, and observability setup. Use when writing Dockerfiles, configuring GitHub Actions, planning deployments, setting up monitoring, or when asked about containers, pipelines, Terraform, or production infrastructure.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "CloudAI-X",
+  "install_path": ".claude/skills/devops-infrastructure/SKILL.md",
+  "source": {
+    "repo": "CloudAI-X/claude-workflow-v2",
+    "url": "https://github.com/CloudAI-X/claude-workflow-v2/blob/main/skills/devops-infrastructure/SKILL.md",
+    "path": "skills/devops-infrastructure/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:34.739Z",
+    "stars": 1361,
+    "language": "Python",
+    "pushed_at": "2026-02-14T18:09:29Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一套DevOps基础设施实践指南，专治容器化、CI/CD、部署策略和监控搭建等配置难题，适合写Dockerfile、配GitHub Actions或搭建生产环境时查阅。"
+}

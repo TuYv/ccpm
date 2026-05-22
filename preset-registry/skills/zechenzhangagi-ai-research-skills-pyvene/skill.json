@@ -1,0 +1,26 @@
+{
+  "id": "zechenzhangagi-ai-research-skills-pyvene",
+  "name": "pyvene-interventions",
+  "description": "Provides guidance for performing causal interventions on PyTorch models using pyvene's declarative intervention framework. Use when conducting causal tracing, activation patching, interchange intervention training, or testing causal hypotheses about model behavior.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "zechenzhangAGI",
+  "install_path": ".claude/skills/pyvene/SKILL.md",
+  "source": {
+    "repo": "zechenzhangAGI/AI-research-SKILLs",
+    "url": "https://github.com/zechenzhangAGI/AI-research-SKILLs/blob/main/04-mechanistic-interpretability/pyvene/SKILL.md",
+    "path": "04-mechanistic-interpretability/pyvene/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:38.529Z",
+    "stars": 8786,
+    "language": "TeX",
+    "pushed_at": "2026-04-28T05:09:27Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个在PyTorch模型上做因果干预的指南，帮你用声明式框架探究模型内部机制，适合验证模型行为的因果假设或进行干预训练。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "raintree-technology-apple-hig-skills-hig-project-context",
+  "name": "hig-project-context",
+  "description": ">- Create or update a shared Apple design context document that other HIG skills use to tailor guidance. Use when the user says \"set up my project context,\" \"what platforms am I targeting,\" \"configure HIG settings,\" or when starting a new Apple platform project. Also activates when other HIG skills need project context but none exists yet. This skill creates .claude/apple-design-context.md so that hig-foundations, hig-platforms, hig-components-*, hig-inputs, and hig-technologies can provide targ",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "raintree-technology",
+  "install_path": ".claude/skills/hig-project-context/SKILL.md",
+  "source": {
+    "repo": "raintree-technology/apple-hig-skills",
+    "url": "https://github.com/raintree-technology/apple-hig-skills/blob/main/skills/hig-project-context/SKILL.md",
+    "path": "skills/hig-project-context/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:35.882Z",
+    "stars": 52,
+    "language": "TypeScript",
+    "pushed_at": "2026-04-28T22:36:54Z",
+    "license": null
+  },
+  "summary_zh": "这是一个用来初始化苹果设计项目基础信息的工具。在开启新苹果项目或配置设计规范时，它能生成统一的上下文文件，让其他设计指南技能为你提供量身定制的建议。"
+}

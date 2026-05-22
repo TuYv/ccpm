@@ -1,0 +1,26 @@
+{
+  "id": "trailofbits-skills-debug-buttercup",
+  "name": "debug-buttercup",
+  "description": "> Debugs the Buttercup CRS (Cyber Reasoning System) running on Kubernetes. Use when diagnosing pod crashes, restart loops, Redis failures, resource pressure, disk saturation, DinD issues, or any service misbehavior in the crs namespace. Covers triage, log analysis, queue inspection, and common failure patterns for: redis, fuzzer-bot, coverage-bot, seed-gen, patcher, build-bot, scheduler, task-server, task-downloader, program-model, litellm, dind, tracer-bot, merger-bot, competition-api, pov-repr",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "trailofbits",
+  "install_path": ".claude/skills/debug-buttercup/SKILL.md",
+  "source": {
+    "repo": "trailofbits/skills",
+    "url": "https://github.com/trailofbits/skills/blob/main/plugins/debug-buttercup/skills/debug-buttercup/SKILL.md",
+    "path": "plugins/debug-buttercup/skills/debug-buttercup/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:41:50.234Z",
+    "stars": 5325,
+    "language": "Python",
+    "pushed_at": "2026-05-16T17:22:25Z",
+    "license": "CC-BY-SA-4.0"
+  },
+  "summary_zh": "专为K8s上的Buttercup网络推理系统打造的排障工具。遇到Pod崩溃、资源吃紧或微服务异常时，能帮你快速分析日志并定位根因，适合日常运维与故障诊断。"
+}

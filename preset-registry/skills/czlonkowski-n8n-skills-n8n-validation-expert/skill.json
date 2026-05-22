@@ -1,0 +1,26 @@
+{
+  "id": "czlonkowski-n8n-skills-n8n-validation-expert",
+  "name": "n8n-validation-expert",
+  "description": "Interpret validation errors and guide fixing them. Use when encountering validation errors, validation warnings, false positives, operator structure issues, or need help understanding validation results. Also use when asking about validation profiles, error types, the validation loop process, or auto-fix capabilities. Consult this skill whenever a validate_node or validate_workflow call returns errors or warnings — it knows which warnings are false positives and which errors need real fixes.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "czlonkowski",
+  "install_path": ".claude/skills/n8n-validation-expert/SKILL.md",
+  "source": {
+    "repo": "czlonkowski/n8n-skills",
+    "url": "https://github.com/czlonkowski/n8n-skills/blob/main/skills/n8n-validation-expert/SKILL.md",
+    "path": "skills/n8n-validation-expert/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:14.570Z",
+    "stars": 5096,
+    "language": "Shell",
+    "pushed_at": "2026-05-06T13:23:16Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个专门帮你解读n8n校验报错并指导修复的助手。当节点或工作流校验出错误或警告时，它能帮你分辨误报与真实错误，并提供修复建议，轻松搞定校验问题。"
+}

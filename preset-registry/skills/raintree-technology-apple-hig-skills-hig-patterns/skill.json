@@ -1,0 +1,26 @@
+{
+  "id": "raintree-technology-apple-hig-skills-hig-patterns",
+  "name": "hig-patterns",
+  "description": ">- Apple Human Interface Guidelines interaction and UX patterns. Use this skill when the user asks about \"onboarding flow\", \"user onboarding\", \"app launch\", \"loading state\", \"drag and drop\", \"search pattern\", \"settings design\", \"notifications\", \"modality\", \"multitasking\", \"feedback pattern\", \"haptics\", \"undo redo\", \"file management\", data entry, sharing, collaboration, full screen, audio, video, haptic feedback, ratings, printing, help, or account management in Apple apps. Also use when the user",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "raintree-technology",
+  "install_path": ".claude/skills/hig-patterns/SKILL.md",
+  "source": {
+    "repo": "raintree-technology/apple-hig-skills",
+    "url": "https://github.com/raintree-technology/apple-hig-skills/blob/main/skills/hig-patterns/SKILL.md",
+    "path": "skills/hig-patterns/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:35.520Z",
+    "stars": 52,
+    "language": "TypeScript",
+    "pushed_at": "2026-04-28T22:36:54Z",
+    "license": null
+  },
+  "summary_zh": "汇总了苹果官方人机交互指南的交互与体验模式，帮你解决开发苹果应用时的各类界面设计问题，适合做引导、加载、搜索等常见交互时参考官方规范。"
+}

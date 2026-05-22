@@ -1,0 +1,26 @@
+{
+  "id": "avifenesh-agnix-first-person-description",
+  "name": "first-person-description",
+  "description": "Use when you need pull-request review help",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "avifenesh",
+  "install_path": ".claude/skills/first-person-description/SKILL.md",
+  "source": {
+    "repo": "avifenesh/agnix",
+    "url": "https://github.com/avifenesh/agnix/blob/main/tests/fixtures/invalid/skills/first-person-description/SKILL.md",
+    "path": "tests/fixtures/invalid/skills/first-person-description/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:46:02.569Z",
+    "stars": 253,
+    "language": "Rust",
+    "pushed_at": "2026-05-19T14:13:30Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "这是一个代码审查辅助工具，能帮你解决PR没人看或看不过来的问题，适合需要协助审查代码的场景。"
+}

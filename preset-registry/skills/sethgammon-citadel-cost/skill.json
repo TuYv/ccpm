@@ -1,0 +1,26 @@
+{
+  "id": "sethgammon-citadel-cost",
+  "name": "cost",
+  "description": ">- Deep cost exploration and transparency. Shows real token usage, session costs, campaign spend, burn rates, and model breakdown. Reads Claude Code's native session data for exact numbers. Complements /dashboard with focused cost views.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "SethGammon",
+  "install_path": ".claude/skills/cost/SKILL.md",
+  "source": {
+    "repo": "SethGammon/Citadel",
+    "url": "https://github.com/SethGammon/Citadel/blob/main/skills/cost/SKILL.md",
+    "path": "skills/cost/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:05.173Z",
+    "stars": 572,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-07T17:50:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是专为 Claude Code 打造的成本分析工具，能读取原生数据精准展示各项 API 开销与消耗速度，解决调用费用不透明的问题，适合需要精细化掌控预算的开发者。"
+}

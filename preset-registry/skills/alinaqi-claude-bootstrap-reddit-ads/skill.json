@@ -1,0 +1,26 @@
+{
+  "id": "alinaqi-claude-bootstrap-reddit-ads",
+  "name": "reddit-ads",
+  "description": "Reddit Ads API - campaigns, targeting, conversions, agentic optimization",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alinaqi",
+  "install_path": ".claude/skills/reddit-ads/SKILL.md",
+  "source": {
+    "repo": "alinaqi/claude-bootstrap",
+    "url": "https://github.com/alinaqi/claude-bootstrap/blob/main/skills/reddit-ads/SKILL.md",
+    "path": "skills/reddit-ads/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:29.408Z",
+    "stars": 641,
+    "language": "Python",
+    "pushed_at": "2026-05-21T22:01:29Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个Reddit广告接口工具，能帮你用代码自动化搞定广告投放、追踪和智能优化，适合需要批量管理或程序化投放Reddit广告的开发者与营销团队。"
+}

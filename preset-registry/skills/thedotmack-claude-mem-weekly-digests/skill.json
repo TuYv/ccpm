@@ -1,0 +1,26 @@
+{
+  "id": "thedotmack-claude-mem-weekly-digests",
+  "name": "weekly-digests",
+  "description": "Generate a serial week-by-week narrative digest of a project's full claude-mem timeline. Splits the timeline into per-ISO-week files, then runs one consecutive subagent per week — each receiving the prior week's carry-forward block — to produce one chapter per ISO week of data. Use when asked for \"weekly digests\", \"week-by-week story\", \"serial timeline\", or \"narrative chapters\" of a project's history.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "thedotmack",
+  "install_path": ".claude/skills/weekly-digests/SKILL.md",
+  "source": {
+    "repo": "thedotmack/claude-mem",
+    "url": "https://github.com/thedotmack/claude-mem/blob/main/plugin/skills/weekly-digests/SKILL.md",
+    "path": "plugin/skills/weekly-digests/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:48.992Z",
+    "stars": 77318,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-21T10:26:19Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "把项目的 claude-mem 时间线按 ISO 周切分，逐周生成带上下文衔接的叙事章节，适合需要梳理项目历史、做周报回顾或连续时间线故事时使用。"
+}

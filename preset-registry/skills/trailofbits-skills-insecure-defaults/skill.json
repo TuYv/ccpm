@@ -1,0 +1,26 @@
+{
+  "id": "trailofbits-skills-insecure-defaults",
+  "name": "insecure-defaults",
+  "description": "Detects fail-open insecure defaults (hardcoded secrets, weak auth, permissive security) that allow apps to run insecurely in production. Use when auditing security, reviewing config management, or analyzing environment variable handling.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "trailofbits",
+  "install_path": ".claude/skills/insecure-defaults/SKILL.md",
+  "source": {
+    "repo": "trailofbits/skills",
+    "url": "https://github.com/trailofbits/skills/blob/main/plugins/insecure-defaults/skills/insecure-defaults/SKILL.md",
+    "path": "plugins/insecure-defaults/skills/insecure-defaults/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:41:51.050Z",
+    "stars": 5325,
+    "language": "Python",
+    "pushed_at": "2026-05-16T17:22:25Z",
+    "license": "CC-BY-SA-4.0"
+  },
+  "summary_zh": "它能揪出让应用在生产环境裸奔的不安全默认配置。在安全审计、配置管理审查或环境变量分析时，用它来排雷非常合适。"
+}

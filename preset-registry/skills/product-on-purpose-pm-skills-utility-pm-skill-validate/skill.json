@@ -1,0 +1,26 @@
+{
+  "id": "product-on-purpose-pm-skills-utility-pm-skill-validate",
+  "name": "utility-pm-skill-validate",
+  "description": "Audits an existing pm-skills skill against structural conventions and quality criteria. Produces a structured validation report with pass/fail checks, severity-graded findings, and actionable recommendations. Use when checking whether a skill meets repo standards before shipping or after making changes.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "product-on-purpose",
+  "install_path": ".claude/skills/utility-pm-skill-validate/SKILL.md",
+  "source": {
+    "repo": "product-on-purpose/pm-skills",
+    "url": "https://github.com/product-on-purpose/pm-skills/blob/main/skills/utility-pm-skill-validate/SKILL.md",
+    "path": "skills/utility-pm-skill-validate/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T00:25:41.462Z",
+    "stars": 226,
+    "language": "Shell",
+    "pushed_at": "2026-05-21T05:03:47Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "这是一个用来审核pm-skills技能是否符合结构和质量规范的工具，能给出改进建议，方便你在发布前或修改后检查技能是否达标。"
+}

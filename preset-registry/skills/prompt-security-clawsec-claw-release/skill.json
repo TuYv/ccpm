@@ -1,0 +1,26 @@
+{
+  "id": "prompt-security-clawsec-claw-release",
+  "name": "claw-release",
+  "description": "Release automation for Claw skills and website. Guides through version bumping, tagging, and release verification.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "0.0.3",
+  "author": "prompt-security",
+  "install_path": ".claude/skills/claw-release/SKILL.md",
+  "source": {
+    "repo": "prompt-security/clawsec",
+    "url": "https://github.com/prompt-security/clawsec/blob/main/skills/claw-release/SKILL.md",
+    "path": "skills/claw-release/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:45.444Z",
+    "stars": 1000,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-21T07:14:18Z",
+    "license": "AGPL-3.0"
+  },
+  "summary_zh": "专为 Claw 技能与网站打造的自动化发布工具，帮你搞定从更新版本、打标签到最终验证的繁琐流程，让发布省时省力。"
+}

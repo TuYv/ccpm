@@ -1,0 +1,26 @@
+{
+  "id": "sethgammon-citadel-triage",
+  "name": "triage",
+  "description": ">- GitHub issue and PR investigator. Pulls open issues/PRs, classifies them, searches the codebase for root cause or reviews contributed code, proposes fixes with file:line references, and optionally implements fixes. Use for investigating GitHub issues and reviewing PRs; do NOT use for general code review unrelated to GitHub issues.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "SethGammon",
+  "install_path": ".claude/skills/triage/SKILL.md",
+  "source": {
+    "repo": "SethGammon/Citadel",
+    "url": "https://github.com/SethGammon/Citadel/blob/main/skills/triage/SKILL.md",
+    "path": "skills/triage/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:08.242Z",
+    "stars": 572,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-07T17:50:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是专查 GitHub Issue 和 PR 的助手，能自动定位代码根因、审查 PR 并提供带行号的修复建议，甚至直接改代码。适合解决开源项目工单积压，不适合常规代码审查。"
+}

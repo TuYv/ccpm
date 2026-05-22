@@ -1,0 +1,26 @@
+{
+  "id": "mattpocock-skills-setup-pre-commit",
+  "name": "setup-pre-commit",
+  "description": "Set up Husky pre-commit hooks with lint-staged (Prettier), type checking, and tests in the current repo. Use when user wants to add pre-commit hooks, set up Husky, configure lint-staged, or add commit-time formatting/typechecking/testing.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mattpocock",
+  "install_path": ".claude/skills/setup-pre-commit/SKILL.md",
+  "source": {
+    "repo": "mattpocock/skills",
+    "url": "https://github.com/mattpocock/skills/blob/main/skills/misc/setup-pre-commit/SKILL.md",
+    "path": "skills/misc/setup-pre-commit/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:06.285Z",
+    "stars": 99464,
+    "language": "Shell",
+    "pushed_at": "2026-05-20T08:46:54Z",
+    "license": "MIT"
+  },
+  "summary_zh": "帮你快速配置Husky和lint-staged，在提交代码前自动跑格式化、类型检查和测试，适合想规范代码质量、拦截低级错误的场景。"
+}

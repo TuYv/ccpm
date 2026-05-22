@@ -1,0 +1,26 @@
+{
+  "id": "wshobson-agents-spark-optimization",
+  "name": "spark-optimization",
+  "description": "Optimize Apache Spark jobs with partitioning, caching, shuffle optimization, and memory tuning. Use when improving Spark performance, debugging slow jobs, or scaling data processing pipelines.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "wshobson",
+  "install_path": ".claude/skills/spark-optimization/SKILL.md",
+  "source": {
+    "repo": "wshobson/agents",
+    "url": "https://github.com/wshobson/agents/blob/main/plugins/data-engineering/skills/spark-optimization/SKILL.md",
+    "path": "plugins/data-engineering/skills/spark-optimization/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:57.763Z",
+    "stars": 35770,
+    "language": "Python",
+    "pushed_at": "2026-05-21T20:01:53Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是专门优化Apache Spark作业的工具，适合在提升运行性能、排查跑得慢的任务或扩展数据处理流程时使用，帮你轻松解决性能瓶颈。"
+}

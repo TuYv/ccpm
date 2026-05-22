@@ -1,0 +1,26 @@
+{
+  "id": "prompt-security-clawsec-picoclaw-security-guardian",
+  "name": "picoclaw-security-guardian",
+  "description": "Picoclaw security posture skill with advisory awareness, configuration drift detection, and supply-chain verification guidance.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "0.0.2",
+  "author": "prompt-security",
+  "install_path": ".claude/skills/picoclaw-security-guardian/SKILL.md",
+  "source": {
+    "repo": "prompt-security/clawsec",
+    "url": "https://github.com/prompt-security/clawsec/blob/main/skills/picoclaw-security-guardian/SKILL.md",
+    "path": "skills/picoclaw-security-guardian/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:46.544Z",
+    "stars": 1000,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-21T07:14:18Z",
+    "license": "AGPL-3.0"
+  },
+  "summary_zh": "这是一款系统安全防护工具，能帮你敏锐感知漏洞预警、揪出配置偏差，并提供供应链验证指导，适合需要持续保障系统安全合规的运维场景。"
+}

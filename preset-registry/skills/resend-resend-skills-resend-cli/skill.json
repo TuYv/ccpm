@@ -1,0 +1,26 @@
+{
+  "id": "resend-resend-skills-resend-cli",
+  "name": "resend-cli",
+  "description": "> Operate the Resend platform from the terminal — send emails (including React Email .tsx templates via --react-email), manage domains, contacts, broadcasts, templates, webhooks, API keys, logs, automations, and events via the `resend` CLI. Use when the user wants to run Resend commands in the shell, scripts, or CI/CD pipelines, or send/preview React Email templates. Always load this skill before running `resend` commands — it contains the non-interactive flag contract and gotchas that prevent s",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "resend",
+  "install_path": ".claude/skills/resend-cli/SKILL.md",
+  "source": {
+    "repo": "resend/resend-skills",
+    "url": "https://github.com/resend/resend-skills/blob/main/skills/resend-cli/SKILL.md",
+    "path": "skills/resend-cli/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:13.142Z",
+    "stars": 122,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-04T14:49:16Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是Resend的命令行工具，能让你在终端、脚本或CI/CD流水线中发邮件（支持React模板）并管理各项配置，轻松实现邮件服务的自动化与集成。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "raintree-technology-claude-starter-claude-mcp-expert",
+  "name": "claude-mcp-expert",
+  "description": "Expert on Model Context Protocol (MCP) integration, MCP servers, installation, configuration, and authentication. Triggers when user mentions MCP, MCP servers, installing MCP, connecting tools, MCP resources, MCP prompts, or remote/local MCP servers.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "raintree-technology",
+  "install_path": ".claude/skills/claude-mcp-expert/SKILL.md",
+  "source": {
+    "repo": "raintree-technology/claude-starter",
+    "url": "https://github.com/raintree-technology/claude-starter/blob/main/templates/.claude/skills/anthropic/claude-mcp-expert/skill.md",
+    "path": "templates/.claude/skills/anthropic/claude-mcp-expert/skill.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:54.756Z",
+    "stars": 76,
+    "language": "Zig",
+    "pushed_at": "2026-04-24T22:45:15Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个MCP协议专家助手，当你在接入本地或远程MCP服务器、配置环境或连接工具遇到困难时，它能帮你轻松搞定各种集成与验证问题。"
+}

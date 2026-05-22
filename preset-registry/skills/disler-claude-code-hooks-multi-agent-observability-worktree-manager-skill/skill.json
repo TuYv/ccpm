@@ -1,0 +1,26 @@
+{
+  "id": "disler-claude-code-hooks-multi-agent-observability-worktree-manager-skill",
+  "name": "worktree-manager-skill",
+  "description": "Comprehensive git worktree management. Use when the user wants to create, remove, list, or manage worktrees. Handles all worktree operations including creation, deletion, and status checking.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "disler",
+  "install_path": ".claude/skills/worktree-manager-skill/SKILL.md",
+  "source": {
+    "repo": "disler/claude-code-hooks-multi-agent-observability",
+    "url": "https://github.com/disler/claude-code-hooks-multi-agent-observability/blob/main/.claude/skills/worktree-manager-skill/SKILL.md",
+    "path": ".claude/skills/worktree-manager-skill/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:55.225Z",
+    "stars": 1426,
+    "language": "Python",
+    "pushed_at": "2026-02-08T23:59:13Z",
+    "license": null
+  },
+  "summary_zh": "这是一个Git多工作目录管理工具，帮你轻松维护各分支的工作区，特别适合需要同时并行开发多个分支的场景。"
+}

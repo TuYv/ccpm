@@ -1,0 +1,26 @@
+{
+  "id": "deusyu-translate-book",
+  "name": "translate-book",
+  "description": "Translate books (PDF/DOCX/EPUB) into any language using parallel sub-agents. Converts input -> Markdown chunks -> translated chunks -> HTML/DOCX/EPUB/PDF.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "deusyu",
+  "install_path": ".claude/skills/./SKILL.md",
+  "source": {
+    "repo": "deusyu/translate-book",
+    "url": "https://github.com/deusyu/translate-book/blob/main/SKILL.md",
+    "path": "SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:26.682Z",
+    "stars": 723,
+    "language": "Python",
+    "pushed_at": "2026-04-28T08:52:43Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个能把整本电子书快速翻译成各种语言的工具，它靠多智能体并行处理来提速，并支持PDF、EPUB等常见格式转换，适合需要高效翻译外文书籍或长文档的场景。"
+}

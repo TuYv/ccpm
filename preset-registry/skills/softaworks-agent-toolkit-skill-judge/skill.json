@@ -1,0 +1,26 @@
+{
+  "id": "softaworks-agent-toolkit-skill-judge",
+  "name": "skill-judge",
+  "description": "Evaluate Agent Skill design quality against official specifications and best practices. Use when reviewing, auditing, or improving SKILL.md files and skill packages. Provides multi-dimensional scoring and actionable improvement suggestions.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "softaworks",
+  "install_path": ".claude/skills/skill-judge/SKILL.md",
+  "source": {
+    "repo": "softaworks/agent-toolkit",
+    "url": "https://github.com/softaworks/agent-toolkit/blob/main/dist/plugins/skill-judge/skills/skill-judge/SKILL.md",
+    "path": "dist/plugins/skill-judge/skills/skill-judge/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:20.904Z",
+    "stars": 1872,
+    "language": "Python",
+    "pushed_at": "2026-03-05T16:46:24Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一款对照官方规范与最佳实践评估Agent Skill设计质量的工具，适合在审查或优化SKILL.md和技能包时使用，帮你快速找出设计短板并明确改进方向。"
+}

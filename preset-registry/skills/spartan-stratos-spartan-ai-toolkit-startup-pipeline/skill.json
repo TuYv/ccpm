@@ -1,0 +1,26 @@
+{
+  "id": "spartan-stratos-spartan-ai-toolkit-startup-pipeline",
+  "name": "startup-pipeline",
+  "description": "Coordinates the full startup idea pipeline from brainstorm to investor outreach. Use when the user starts a new idea project, asks for the 'full pipeline', or references stages/gates.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "spartan-stratos",
+  "install_path": ".claude/skills/startup-pipeline/SKILL.md",
+  "source": {
+    "repo": "spartan-stratos/spartan-ai-toolkit",
+    "url": "https://github.com/spartan-stratos/spartan-ai-toolkit/blob/master/toolkit/skills/startup-pipeline/SKILL.md",
+    "path": "toolkit/skills/startup-pipeline/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-05-22T04:46:17.631Z",
+    "stars": 71,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-11T06:56:56Z",
+    "license": null
+  },
+  "summary_zh": "帮创业者把从头脑风暴到寻找投资的全过程串联起来，特别适合刚有新点子、需要系统化推进项目，或想按阶段把控进度的场景。"
+}

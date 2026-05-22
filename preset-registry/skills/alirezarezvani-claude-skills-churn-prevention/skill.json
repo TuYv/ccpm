@@ -1,0 +1,26 @@
+{
+  "id": "alirezarezvani-claude-skills-churn-prevention",
+  "name": "churn-prevention",
+  "description": "Reduce voluntary and involuntary churn through cancel flow design, save offers, exit surveys, and dunning sequences. Use when designing or optimizing a cancel flow, building save offers, setting up dunning emails, or reducing failed-payment churn. Trigger keywords: cancel flow, churn reduction, save offers, dunning, exit survey, payment recovery, win-back, involuntary churn, failed payments, cancel page. NOT for customer health scoring or expansion revenue — use customer-success-manager for that",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alirezarezvani",
+  "install_path": ".claude/skills/churn-prevention/SKILL.md",
+  "source": {
+    "repo": "alirezarezvani/claude-skills",
+    "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/churn-prevention/SKILL.md",
+    "path": ".gemini/skills/churn-prevention/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-18T13:53:49.266Z",
+    "stars": 15314,
+    "language": "Python",
+    "pushed_at": "2026-05-18T13:34:06Z",
+    "license": "MIT"
+  },
+  "summary_zh": "专门用来防范用户流失，通过优化退订流程、设置挽留优惠和催款邮件，帮你减少用户主动取消或支付失败造成的流失，适合各类挽留场景，但不涉及客户健康评分和增收。"
+}

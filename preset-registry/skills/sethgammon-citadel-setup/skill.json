@@ -1,0 +1,26 @@
+{
+  "id": "sethgammon-citadel-setup",
+  "name": "setup",
+  "description": ">- First-run experience for the harness. Three modes: Recommended (guided, ~3 min), Full Tour (guided + skill walkthrough, ~8 min), and Express (zero questions, ~30 sec). Installs hooks first, detects stack, configures harness.json, runs a live demo on real code, and prints a reference card.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "SethGammon",
+  "install_path": ".claude/skills/setup/SKILL.md",
+  "source": {
+    "repo": "SethGammon/Citadel",
+    "url": "https://github.com/SethGammon/Citadel/blob/main/skills/setup/SKILL.md",
+    "path": "skills/setup/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:07.861Z",
+    "stars": 572,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-07T17:50:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一款首次运行引导工具，帮新用户告别繁琐配置。它能自动检测环境并完成初始化，还能在真实代码跑演示，让你最快半分钟零门槛上手，适合初次使用需要快速入门的场景。"
+}

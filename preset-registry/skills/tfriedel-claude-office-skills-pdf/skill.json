@@ -1,0 +1,26 @@
+{
+  "id": "tfriedel-claude-office-skills-pdf",
+  "name": "pdf",
+  "description": "Comprehensive PDF manipulation toolkit for extracting text and tables, creating new PDFs, merging/splitting documents, and handling forms. When Claude needs to fill in a PDF form or programmatically process, generate, or analyze PDF documents at scale.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tfriedel",
+  "install_path": ".claude/skills/pdf/SKILL.md",
+  "source": {
+    "repo": "tfriedel/claude-office-skills",
+    "url": "https://github.com/tfriedel/claude-office-skills/blob/main/public/pdf/SKILL.md",
+    "path": "public/pdf/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:24.751Z",
+    "stars": 658,
+    "language": "Python",
+    "pushed_at": "2026-04-01T11:49:29Z",
+    "license": null
+  },
+  "summary_zh": "这是一款全能的文档处理工具包，专为大体积或批量文件的自动化操作而设计，能让AI或程序轻松搞定复杂的PDF读写与表单交互任务。"
+}

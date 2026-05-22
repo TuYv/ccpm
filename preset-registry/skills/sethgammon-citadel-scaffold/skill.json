@@ -1,0 +1,26 @@
+{
+  "id": "sethgammon-citadel-scaffold",
+  "name": "scaffold",
+  "description": ">- Project-aware file generation. Reads existing codebase conventions (naming, structure, imports, exports, test patterns) then generates new files that match exactly. Wires generated files into the project's registration points.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "SethGammon",
+  "install_path": ".claude/skills/scaffold/SKILL.md",
+  "source": {
+    "repo": "SethGammon/Citadel",
+    "url": "https://github.com/SethGammon/Citadel/blob/main/skills/scaffold/SKILL.md",
+    "path": "skills/scaffold/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:07.606Z",
+    "stars": 572,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-07T17:50:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "它是个懂你项目规范的代码生成器，能自动识别现有代码风格，一键生成完全匹配的新文件并接入项目，免去手写样板代码和手动注册的繁琐，适合频繁新建模块的开发场景。"
+}

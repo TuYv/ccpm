@@ -1,0 +1,26 @@
+{
+  "id": "zechenzhangagi-ai-research-skills-torchtitan",
+  "name": "distributed-llm-pretraining-torchtitan",
+  "description": "Provides PyTorch-native distributed LLM pretraining using torchtitan with 4D parallelism (FSDP2, TP, PP, CP). Use when pretraining Llama 3.1, DeepSeek V3, or custom models at scale from 8 to 512+ GPUs with Float8, torch.compile, and distributed checkpointing.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "zechenzhangAGI",
+  "install_path": ".claude/skills/torchtitan/SKILL.md",
+  "source": {
+    "repo": "zechenzhangAGI/AI-research-SKILLs",
+    "url": "https://github.com/zechenzhangAGI/AI-research-SKILLs/blob/main/01-model-architecture/torchtitan/SKILL.md",
+    "path": "01-model-architecture/torchtitan/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:37.448Z",
+    "stars": 8786,
+    "language": "TeX",
+    "pushed_at": "2026-04-28T05:09:27Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是基于PyTorch的分布式大模型预训练方案，专门解决用几十到上百张显卡高效预训练Llama或DeepSeek等大模型时的并行与加速难题。"
+}

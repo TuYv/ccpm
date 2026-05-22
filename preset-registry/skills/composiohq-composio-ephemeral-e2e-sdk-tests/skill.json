@@ -1,0 +1,26 @@
+{
+  "id": "composiohq-composio-ephemeral-e2e-sdk-tests",
+  "name": "ephemeral-e2e-sdk-tests",
+  "description": "Composio powers 1000+ toolkits, tool search, context management, authentication, and a sandboxed workbench to help you build AI agents that turn intent into action.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ComposioHQ",
+  "install_path": ".claude/skills/ephemeral-e2e-sdk-tests/SKILL.md",
+  "source": {
+    "repo": "ComposioHQ/composio",
+    "url": "https://github.com/ComposioHQ/composio/blob/next/.claude/skills/ephemeral-e2e-sdk-tests/SKILL.md",
+    "path": ".claude/skills/ephemeral-e2e-sdk-tests/SKILL.md",
+    "branch": "next",
+    "discovered_at": "2026-05-22T04:42:49.193Z",
+    "stars": 28386,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-21T10:55:25Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个AI智能体开发平台，帮你解决AI无法直接操作外部工具的问题，适合需要让AI自动对接各类服务、将用户意图转化为实际行动的开发场景。"
+}

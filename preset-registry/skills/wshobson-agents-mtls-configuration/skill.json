@@ -1,0 +1,26 @@
+{
+  "id": "wshobson-agents-mtls-configuration",
+  "name": "mtls-configuration",
+  "description": "Configure mutual TLS (mTLS) for zero-trust service-to-service communication. Use when implementing zero-trust networking, certificate management, or securing internal service communication.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "wshobson",
+  "install_path": ".claude/skills/mtls-configuration/SKILL.md",
+  "source": {
+    "repo": "wshobson/agents",
+    "url": "https://github.com/wshobson/agents/blob/main/plugins/cloud-infrastructure/skills/mtls-configuration/SKILL.md",
+    "path": "plugins/cloud-infrastructure/skills/mtls-configuration/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:56.949Z",
+    "stars": 35770,
+    "language": "Python",
+    "pushed_at": "2026-05-21T20:01:53Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个双向TLS配置工具，能解决服务间的安全通信问题，适合需要搭建零信任网络、管理证书或加固内部服务调用的场景。"
+}

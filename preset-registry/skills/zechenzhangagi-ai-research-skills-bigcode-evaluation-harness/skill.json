@@ -1,0 +1,26 @@
+{
+  "id": "zechenzhangagi-ai-research-skills-bigcode-evaluation-harness",
+  "name": "evaluating-code-models",
+  "description": "Evaluates code generation models across HumanEval, MBPP, MultiPL-E, and 15+ benchmarks with pass@k metrics. Use when benchmarking code models, comparing coding abilities, testing multi-language support, or measuring code generation quality. Industry standard from BigCode Project used by HuggingFace leaderboards.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "zechenzhangAGI",
+  "install_path": ".claude/skills/bigcode-evaluation-harness/SKILL.md",
+  "source": {
+    "repo": "zechenzhangAGI/AI-research-SKILLs",
+    "url": "https://github.com/zechenzhangAGI/AI-research-SKILLs/blob/main/11-evaluation/bigcode-evaluation-harness/SKILL.md",
+    "path": "11-evaluation/bigcode-evaluation-harness/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:43.197Z",
+    "stars": 8786,
+    "language": "TeX",
+    "pushed_at": "2026-04-28T05:09:27Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个评估代码大模型编程能力的跑分工具，帮你基于主流基准测试算分。适合需要对比不同模型写代码水平、测试多语言支持或衡量代码生成质量的场景。"
+}

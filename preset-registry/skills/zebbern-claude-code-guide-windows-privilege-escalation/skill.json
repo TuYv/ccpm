@@ -1,0 +1,26 @@
+{
+  "id": "zebbern-claude-code-guide-windows-privilege-escalation",
+  "name": "Windows Privilege Escalation",
+  "description": "This skill should be used when the user asks to \"escalate privileges on Windows,\" \"find Windows privesc vectors,\" \"enumerate Windows for privilege escalation,\" \"exploit Windows misconfigurations,\" or \"perform post-exploitation privilege escalation.\" It provides comprehensive guidance for discovering and exploiting privilege escalation vulnerabilities in Windows environments.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "zebbern",
+  "install_path": ".claude/skills/windows-privilege-escalation/SKILL.md",
+  "source": {
+    "repo": "zebbern/claude-code-guide",
+    "url": "https://github.com/zebbern/claude-code-guide/blob/main/skills/windows-privilege-escalation/SKILL.md",
+    "path": "skills/windows-privilege-escalation/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:10.499Z",
+    "stars": 4156,
+    "language": null,
+    "pushed_at": "2026-05-22T01:16:53Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一款提供Windows提权全面指导的工具，专门解决如何发现并利用系统错误配置来提升权限的问题，非常适合安全测试中的后渗透提权场景。"
+}

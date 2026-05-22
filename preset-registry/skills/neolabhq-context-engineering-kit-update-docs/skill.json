@@ -1,0 +1,26 @@
+{
+  "id": "neolabhq-context-engineering-kit-update-docs",
+  "name": "update-docs",
+  "description": "Update and maintain project documentation for local code changes using multi-agent workflow with tech-writer agents. Covers docs/, READMEs, JSDoc, and API documentation.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "NeoLabHQ",
+  "install_path": ".claude/skills/update-docs/SKILL.md",
+  "source": {
+    "repo": "NeoLabHQ/context-engineering-kit",
+    "url": "https://github.com/NeoLabHQ/context-engineering-kit/blob/master/plugins/docs/skills/update-docs/SKILL.md",
+    "path": "plugins/docs/skills/update-docs/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-05-22T04:42:28.798Z",
+    "stars": 1025,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-22T00:32:29Z",
+    "license": "GPL-3.0"
+  },
+  "summary_zh": "这是一个基于多智能体协作的文档更新工具，能根据本地代码改动自动同步维护项目文档，解决代码改了但文档没跟上的痛点，适合日常开发需要频繁同步说明文档的场景。"
+}

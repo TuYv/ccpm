@@ -1,0 +1,26 @@
+{
+  "id": "bitwize-music-studio-claude-ai-music-skills-import-track",
+  "name": "import-track",
+  "description": "Moves track markdown files to the correct album location. Use when the user has track files in Downloads or other locations that need to be placed in an album.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "bitwize-music-studio",
+  "install_path": ".claude/skills/import-track/SKILL.md",
+  "source": {
+    "repo": "bitwize-music-studio/claude-ai-music-skills",
+    "url": "https://github.com/bitwize-music-studio/claude-ai-music-skills/blob/main/skills/import-track/SKILL.md",
+    "path": "skills/import-track/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:37.145Z",
+    "stars": 202,
+    "language": "Python",
+    "pushed_at": "2026-05-21T00:00:51Z",
+    "license": "CC0-1.0"
+  },
+  "summary_zh": "这是一个整理轨迹文件的工具，能把散落在下载夹等位置的markdown轨迹文件，自动挪到对应的相册目录里，省去手动归档的麻烦。"
+}

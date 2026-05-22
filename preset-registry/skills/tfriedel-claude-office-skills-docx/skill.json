@@ -1,0 +1,26 @@
+{
+  "id": "tfriedel-claude-office-skills-docx",
+  "name": "docx",
+  "description": "Comprehensive document creation, editing, and analysis with support for tracked changes, comments, formatting preservation, and text extraction. When Claude needs to work with professional documents (.docx files) for: (1) Creating new documents, (2) Modifying or editing content, (3) Working with tracked changes, (4) Adding comments, or any other document tasks",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tfriedel",
+  "install_path": ".claude/skills/docx/SKILL.md",
+  "source": {
+    "repo": "tfriedel/claude-office-skills",
+    "url": "https://github.com/tfriedel/claude-office-skills/blob/main/public/docx/SKILL.md",
+    "path": "public/docx/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:24.653Z",
+    "stars": 658,
+    "language": "Python",
+    "pushed_at": "2026-04-01T11:49:29Z",
+    "license": null
+  },
+  "summary_zh": "专门处理Word文档的工具，能帮你轻松搞定专业docx文件的创建、修改与分析，特别适合需要带修订痕迹、批注或保留格式处理文档的日常办公场景。"
+}

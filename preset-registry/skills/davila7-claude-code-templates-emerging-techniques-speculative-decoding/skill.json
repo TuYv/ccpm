@@ -1,0 +1,26 @@
+{
+  "id": "davila7-claude-code-templates-emerging-techniques-speculative-decoding",
+  "name": "speculative-decoding",
+  "description": "Accelerate LLM inference using speculative decoding, Medusa multiple heads, and lookahead decoding techniques. Use when optimizing inference speed (1.5-3.6× speedup), reducing latency for real-time applications, or deploying models with limited compute. Covers draft models, tree-based attention, Jacobi iteration, parallel token generation, and production deployment strategies.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "davila7",
+  "install_path": ".claude/skills/emerging-techniques-speculative-decoding/SKILL.md",
+  "source": {
+    "repo": "davila7/claude-code-templates",
+    "url": "https://github.com/davila7/claude-code-templates/blob/main/cli-tool/components/skills/ai-research/emerging-techniques-speculative-decoding/SKILL.md",
+    "path": "cli-tool/components/skills/ai-research/emerging-techniques-speculative-decoding/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:45.948Z",
+    "stars": 27482,
+    "language": "Python",
+    "pushed_at": "2026-05-22T04:31:04Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个大模型推理加速方案，能让生成速度提升1.5到3.6倍，专门解决实时应用响应慢或算力有限导致部署困难的问题。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "aaron-he-zhu-seo-geo-claude-skills-alert-manager",
+  "name": "alert-manager",
+  "description": "Use when the user asks to \"set SEO alerts\"; configures ranking, traffic, technical, competitor, and notification thresholds. SEO预警/排名监控",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "9.9.9",
+  "author": "aaron-he-zhu",
+  "install_path": ".claude/skills/alert-manager/SKILL.md",
+  "source": {
+    "repo": "aaron-he-zhu/seo-geo-claude-skills",
+    "url": "https://github.com/aaron-he-zhu/seo-geo-claude-skills/blob/main/monitor/alert-manager/SKILL.md",
+    "path": "monitor/alert-manager/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:00.126Z",
+    "stars": 1731,
+    "language": "Shell",
+    "pushed_at": "2026-05-14T08:11:30Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "这是一个SEO预警配置工具，能帮你监控各项SEO指标及竞品动态，并在触发阈值时自动通知，适合需要及时应对网站SEO异常波动的场景。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "earthtojake-text-to-cad-sdf",
+  "name": "sdf",
+  "description": "SDFormat/SDF model and world generation, validation, and simulator handoff. Use for `.sdf` files, SDFormat XML, Python `gen_sdf()` sources, models, worlds, links, joints, poses, frames, inertials, visual/collision geometry, mesh URIs, sensors, lights, physics, plugins, includes, Gazebo, CAD Explorer static SDF review, or simulator-specific metadata. Do not use for signed-distance-field geometry.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "earthtojake",
+  "install_path": ".claude/skills/sdf/SKILL.md",
+  "source": {
+    "repo": "earthtojake/text-to-cad",
+    "url": "https://github.com/earthtojake/text-to-cad/blob/main/skills/sdf/SKILL.md",
+    "path": "skills/sdf/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:55.292Z",
+    "stars": 3981,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-21T03:27:07Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个处理机器人仿真描述格式的工具，能帮你生成和验证模型及环境配置文件，适合需要对接Gazebo等仿真器的开发场景。"
+}

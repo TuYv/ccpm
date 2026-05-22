@@ -1,0 +1,26 @@
+{
+  "id": "conorbronsdon-avoid-ai-writing",
+  "name": "avoid-ai-writing",
+  "description": "Audit and rewrite content to remove AI writing patterns (\"AI-isms\"). Use this skill when asked to \"remove AI-isms,\" \"clean up AI writing,\" \"edit writing for AI patterns,\" \"audit writing for AI tells,\" or \"make this sound less like AI.\" Supports a detection-only mode that flags patterns without rewriting.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "3.4.0",
+  "author": "conorbronsdon",
+  "install_path": ".claude/skills/./SKILL.md",
+  "source": {
+    "repo": "conorbronsdon/avoid-ai-writing",
+    "url": "https://github.com/conorbronsdon/avoid-ai-writing/blob/main/SKILL.md",
+    "path": "SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:46:19.148Z",
+    "stars": 1534,
+    "language": null,
+    "pushed_at": "2026-05-20T15:49:21Z",
+    "license": "MIT"
+  },
+  "summary_zh": "专门帮文章去AI味的润色工具，能消除机器生成的套路和痕迹，让文字读起来像真人写的，适合需要给AI内容去痕迹或只做检测的场景。"
+}

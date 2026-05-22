@@ -1,0 +1,26 @@
+{
+  "id": "zebbern-claude-code-guide-broken-authentication",
+  "name": "Broken Authentication Testing",
+  "description": "This skill should be used when the user asks to \"test for broken authentication vulnerabilities\", \"assess session management security\", \"perform credential stuffing tests\", \"evaluate password policies\", \"test for session fixation\", or \"identify authentication bypass flaws\". It provides comprehensive techniques for identifying authentication and session management weaknesses in web applications.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "zebbern",
+  "install_path": ".claude/skills/broken-authentication/SKILL.md",
+  "source": {
+    "repo": "zebbern/claude-code-guide",
+    "url": "https://github.com/zebbern/claude-code-guide/blob/main/skills/broken-authentication/SKILL.md",
+    "path": "skills/broken-authentication/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:08.465Z",
+    "stars": 4156,
+    "language": null,
+    "pushed_at": "2026-05-22T01:16:53Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一项专门挖掘Web应用登录认证和会话管理漏洞的安全测试技能，适合在评估网站登录机制健壮性、排查身份验证绕过等安全风险时使用。"
+}

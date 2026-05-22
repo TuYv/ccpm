@@ -1,0 +1,26 @@
+{
+  "id": "avifenesh-agnix-test-skill",
+  "name": "test-skill",
+  "description": "Use when testing per-client skill rules",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "avifenesh",
+  "install_path": ".claude/skills/test-skill/SKILL.md",
+  "source": {
+    "repo": "avifenesh/agnix",
+    "url": "https://github.com/avifenesh/agnix/blob/main/tests/fixtures/per_client_skills/.windsurf/skills/test-skill/SKILL.md",
+    "path": "tests/fixtures/per_client_skills/.windsurf/skills/test-skill/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:46:06.090Z",
+    "stars": 253,
+    "language": "Rust",
+    "pushed_at": "2026-05-19T14:13:30Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "这是一个测试工具，专门用来验证不同客户端专属的技能规则是否按预期生效，适合在规则开发与调试阶段使用。"
+}

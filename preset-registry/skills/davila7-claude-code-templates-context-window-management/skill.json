@@ -1,0 +1,26 @@
+{
+  "id": "davila7-claude-code-templates-context-window-management",
+  "name": "context-window-management",
+  "description": "Strategies for managing LLM context windows including summarization, trimming, routing, and avoiding context rot Use when: context window, token limit, context management, context engineering, long context.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "davila7",
+  "install_path": ".claude/skills/context-window-management/SKILL.md",
+  "source": {
+    "repo": "davila7/claude-code-templates",
+    "url": "https://github.com/davila7/claude-code-templates/blob/main/cli-tool/components/skills/ai-research/context-window-management/SKILL.md",
+    "path": "cli-tool/components/skills/ai-research/context-window-management/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:43.935Z",
+    "stars": 27482,
+    "language": "Python",
+    "pushed_at": "2026-05-22T04:31:04Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一套大模型上下文管理策略合集，帮你解决长对话中的token超限与上下文失效问题，适合需要处理长文本或做上下文工程的开发者。"
+}

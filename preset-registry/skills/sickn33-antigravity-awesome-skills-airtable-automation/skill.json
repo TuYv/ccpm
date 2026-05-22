@@ -1,0 +1,26 @@
+{
+  "id": "sickn33-antigravity-awesome-skills-airtable-automation",
+  "name": "airtable-automation",
+  "description": "Automate Airtable tasks via Rube MCP (Composio): records, bases, tables, fields, views. Always search tools first for current schemas.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sickn33",
+  "install_path": ".claude/skills/airtable-automation/SKILL.md",
+  "source": {
+    "repo": "sickn33/antigravity-awesome-skills",
+    "url": "https://github.com/sickn33/antigravity-awesome-skills/blob/main/plugins/antigravity-awesome-skills-claude/skills/airtable-automation/SKILL.md",
+    "path": "plugins/antigravity-awesome-skills-claude/skills/airtable-automation/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:12.080Z",
+    "stars": 38305,
+    "language": "Python",
+    "pushed_at": "2026-05-21T19:35:19Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这个工具能通过 MCP 接口帮你自动化操作 Airtable，它会自动获取最新表结构来执行数据处理，适合需要批量或自动管理 Airtable 数据的场景。"
+}

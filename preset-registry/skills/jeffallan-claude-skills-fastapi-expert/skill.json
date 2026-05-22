@@ -1,0 +1,26 @@
+{
+  "id": "jeffallan-claude-skills-fastapi-expert",
+  "name": "fastapi-expert",
+  "description": "Use when building high-performance async Python APIs with FastAPI and Pydantic V2. Invoke to create REST endpoints, define Pydantic models, implement authentication flows, set up async SQLAlchemy database operations, add JWT authentication, build WebSocket endpoints, or generate OpenAPI documentation. Trigger terms: FastAPI, Pydantic, async Python, Python API, REST API Python, SQLAlchemy async, JWT authentication, OpenAPI, Swagger Python.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "jeffallan",
+  "install_path": ".claude/skills/fastapi-expert/SKILL.md",
+  "source": {
+    "repo": "jeffallan/claude-skills",
+    "url": "https://github.com/jeffallan/claude-skills/blob/main/skills/fastapi-expert/SKILL.md",
+    "path": "skills/fastapi-expert/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:57.712Z",
+    "stars": 9253,
+    "language": "Python",
+    "pushed_at": "2026-05-20T13:35:05Z",
+    "license": "MIT"
+  },
+  "summary_zh": "专为 FastAPI 与 Pydantic V2 打造的开发助手，适合构建高性能异步 Python API，帮你快速搞定各类复杂的后端开发任务。"
+}

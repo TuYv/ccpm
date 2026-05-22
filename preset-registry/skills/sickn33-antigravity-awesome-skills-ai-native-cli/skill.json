@@ -1,0 +1,26 @@
+{
+  "id": "sickn33-antigravity-awesome-skills-ai-native-cli",
+  "name": "ai-native-cli",
+  "description": "Design spec with 98 rules for building CLI tools that AI agents can safely use. Covers structured JSON output, error handling, input contracts, safety guardrails, exit codes, and agent self-description.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sickn33",
+  "install_path": ".claude/skills/ai-native-cli/SKILL.md",
+  "source": {
+    "repo": "sickn33/antigravity-awesome-skills",
+    "url": "https://github.com/sickn33/antigravity-awesome-skills/blob/main/plugins/antigravity-awesome-skills-claude/skills/ai-native-cli/SKILL.md",
+    "path": "plugins/antigravity-awesome-skills-claude/skills/ai-native-cli/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:11.438Z",
+    "stars": 38305,
+    "language": "Python",
+    "pushed_at": "2026-05-21T19:35:19Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一套包含98条规则的设计规范，指导开发能让AI智能体安全使用的命令行工具，解决AI操作命令行易出错或失控的问题，适合构建AI自动化工具链。"
+}

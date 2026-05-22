@@ -1,0 +1,26 @@
+{
+  "id": "softaworks-agent-toolkit-qa-test-planner",
+  "name": "qa-test-planner",
+  "description": "Generate comprehensive test plans, manual test cases, regression test suites, and bug reports for QA engineers. Includes Figma MCP integration for design validation.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "softaworks",
+  "install_path": ".claude/skills/qa-test-planner/SKILL.md",
+  "source": {
+    "repo": "softaworks/agent-toolkit",
+    "url": "https://github.com/softaworks/agent-toolkit/blob/main/dist/plugins/qa-test-planner/skills/qa-test-planner/SKILL.md",
+    "path": "dist/plugins/qa-test-planner/skills/qa-test-planner/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:20.222Z",
+    "stars": 1872,
+    "language": "Python",
+    "pushed_at": "2026-03-05T16:46:24Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一款帮测试工程师快速生成全套测试文档的工具，还能结合Figma核对设计，专治手写测试文档耗时费力的痛点。"
+}

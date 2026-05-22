@@ -1,0 +1,26 @@
+{
+  "id": "softaworks-agent-toolkit-domain-name-brainstormer",
+  "name": "domain-name-brainstormer",
+  "description": "Generates creative domain name ideas for your project and checks availability across multiple TLDs (.com, .io, .dev, .ai, etc.). Saves hours of brainstorming and manual checking.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "softaworks",
+  "install_path": ".claude/skills/domain-name-brainstormer/SKILL.md",
+  "source": {
+    "repo": "softaworks/agent-toolkit",
+    "url": "https://github.com/softaworks/agent-toolkit/blob/main/skills/domain-name-brainstormer/SKILL.md",
+    "path": "skills/domain-name-brainstormer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:22.536Z",
+    "stars": 1872,
+    "language": "Python",
+    "pushed_at": "2026-03-05T16:46:24Z",
+    "license": "MIT"
+  },
+  "summary_zh": "自动生成创意域名并批量检查各种后缀可用性的工具，省去苦思冥想和手动查重的时间，适合新项目起步时快速搞定域名。"
+}

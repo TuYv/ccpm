@@ -1,0 +1,26 @@
+{
+  "id": "sickn33-antigravity-awesome-skills-amazon-alexa",
+  "name": "amazon-alexa",
+  "description": "Integracao completa com Amazon Alexa para criar skills de voz inteligentes, transformar Alexa em assistente com Claude como cerebro (projeto Auri) e integrar com AWS ecosystem (Lambda, DynamoDB, Polly, Transcribe, Lex, Smart Home).",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sickn33",
+  "install_path": ".claude/skills/amazon-alexa/SKILL.md",
+  "source": {
+    "repo": "sickn33/antigravity-awesome-skills",
+    "url": "https://github.com/sickn33/antigravity-awesome-skills/blob/main/plugins/antigravity-awesome-skills-claude/skills/amazon-alexa/SKILL.md",
+    "path": "plugins/antigravity-awesome-skills-claude/skills/amazon-alexa/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:12.650Z",
+    "stars": 38305,
+    "language": "Python",
+    "pushed_at": "2026-05-21T19:35:19Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个把Claude接入Alexa的集成方案。它能帮你快速开发语音技能，把Alexa升级为Claude驱动的AI助手，并打通AWS云生态，适合打造高级语音助手或智能家居的场景。"
+}

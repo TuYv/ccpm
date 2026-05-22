@@ -1,0 +1,26 @@
+{
+  "id": "mattpocock-skills-obsidian-vault",
+  "name": "obsidian-vault",
+  "description": "Search, create, and manage notes in the Obsidian vault with wikilinks and index notes. Use when user wants to find, create, or organize notes in Obsidian.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mattpocock",
+  "install_path": ".claude/skills/obsidian-vault/SKILL.md",
+  "source": {
+    "repo": "mattpocock/skills",
+    "url": "https://github.com/mattpocock/skills/blob/main/skills/personal/obsidian-vault/SKILL.md",
+    "path": "skills/personal/obsidian-vault/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:06.435Z",
+    "stars": 99464,
+    "language": "Shell",
+    "pushed_at": "2026-05-20T08:46:54Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个Obsidian笔记管理工具，通过双链和索引帮你快速搜索、新建或整理笔记，适合需要高效打理知识库的场景。"
+}

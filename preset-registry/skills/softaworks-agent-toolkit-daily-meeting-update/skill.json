@@ -1,0 +1,26 @@
+{
+  "id": "softaworks-agent-toolkit-daily-meeting-update",
+  "name": "daily-meeting-update",
+  "description": "Interactive daily standup/meeting update generator. Use when user says 'daily', 'standup', 'scrum update', 'status update', 'what did I do yesterday', 'prepare for meeting', 'morning update', or 'team sync'. Pulls activity from GitHub, Jira, and Claude Code session history. Conducts 4-question interview (yesterday, today, blockers, discussion topics) and generates formatted Markdown update.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "softaworks",
+  "install_path": ".claude/skills/daily-meeting-update/SKILL.md",
+  "source": {
+    "repo": "softaworks/agent-toolkit",
+    "url": "https://github.com/softaworks/agent-toolkit/blob/main/skills/daily-meeting-update/SKILL.md",
+    "path": "skills/daily-meeting-update/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:21.906Z",
+    "stars": 1872,
+    "language": "Python",
+    "pushed_at": "2026-03-05T16:46:24Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个交互式站会汇报生成器。它能自动汇总你在 GitHub 和 Jira 上的工作记录，通过问答快速生成站会发言稿，专治开会前想不起昨天干了啥的尴尬，适合需要每日例会同步进度的程序员。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "alinaqi-claude-bootstrap-model-routing",
+  "name": "model-routing",
+  "description": "What started as an opinionated Claude Code setup kit is now an autonomous AI engineering command center",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alinaqi",
+  "install_path": ".claude/skills/model-routing/SKILL.md",
+  "source": {
+    "repo": "alinaqi/claude-bootstrap",
+    "url": "https://github.com/alinaqi/claude-bootstrap/blob/main/skills/model-routing/SKILL.md",
+    "path": "skills/model-routing/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:27.958Z",
+    "stars": 641,
+    "language": "Python",
+    "pushed_at": "2026-05-21T22:01:29Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这款由Claude配置工具演变而来的AI工程指挥中心，能帮你全自动统筹和调度AI编程任务，适合需要高效管理复杂AI开发流程的场景。"
+}

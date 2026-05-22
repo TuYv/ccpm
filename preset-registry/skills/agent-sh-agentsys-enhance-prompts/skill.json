@@ -1,0 +1,26 @@
+{
+  "id": "agent-sh-agentsys-enhance-prompts",
+  "name": "enhance-prompts",
+  "description": "Use when improving general prompts for structure, examples, and constraints.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "5.1.0",
+  "author": "agent-sh",
+  "install_path": ".claude/skills/enhance-prompts/SKILL.md",
+  "source": {
+    "repo": "agent-sh/agentsys",
+    "url": "https://github.com/agent-sh/agentsys/blob/main/.kiro/skills/enhance-prompts/SKILL.md",
+    "path": ".kiro/skills/enhance-prompts/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:02.775Z",
+    "stars": 813,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-21T17:59:34Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个提示词优化工具，能帮你给普通提示词理清条理、补上例子和限制条件，适合需要让AI指令更精准好用的场景。"
+}

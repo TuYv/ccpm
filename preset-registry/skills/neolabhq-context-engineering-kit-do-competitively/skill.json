@@ -1,0 +1,26 @@
+{
+  "id": "neolabhq-context-engineering-kit-do-competitively",
+  "name": "do-competitively",
+  "description": "Execute tasks through competitive multi-agent generation, meta-judge evaluation specification, multi-judge evaluation, and evidence-based synthesis",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "NeoLabHQ",
+  "install_path": ".claude/skills/do-competitively/SKILL.md",
+  "source": {
+    "repo": "NeoLabHQ/context-engineering-kit",
+    "url": "https://github.com/NeoLabHQ/context-engineering-kit/blob/master/plugins/sadd/skills/do-competitively/SKILL.md",
+    "path": "plugins/sadd/skills/do-competitively/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-05-22T04:42:31.849Z",
+    "stars": 1025,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-22T00:32:29Z",
+    "license": "GPL-3.0"
+  },
+  "summary_zh": "它让多个AI智能体竞争生成方案，并经多重评审与证据综合得出最优解，能解决单模型输出不可靠的问题，适合对结果准确度和可靠性要求高的复杂任务。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "ykdojo-claude-code-tips-handoff",
+  "name": "handoff",
+  "description": "Write or update a handoff document so the next agent with fresh context can continue this work.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ykdojo",
+  "install_path": ".claude/skills/handoff/SKILL.md",
+  "source": {
+    "repo": "ykdojo/claude-code-tips",
+    "url": "https://github.com/ykdojo/claude-code-tips/blob/main/skills/handoff/SKILL.md",
+    "path": "skills/handoff/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:41:54.447Z",
+    "stars": 8404,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-06T06:52:29Z",
+    "license": null
+  },
+  "summary_zh": "专为AI生成工作交接文档的工具，解决智能体切换时的信息断层问题，让新接手的AI能快速掌握上下文并继续推进任务。"
+}

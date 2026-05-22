@@ -1,0 +1,26 @@
+{
+  "id": "orchestra-research-ai-research-skills-vllm",
+  "name": "serving-llms-vllm",
+  "description": "Serves LLMs with high throughput using vLLM's PagedAttention and continuous batching. Use when deploying production LLM APIs, optimizing inference latency/throughput, or serving models with limited GPU memory. Supports OpenAI-compatible endpoints, quantization (GPTQ/AWQ/FP8), and tensor parallelism.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "Orchestra-Research",
+  "install_path": ".claude/skills/vllm/SKILL.md",
+  "source": {
+    "repo": "Orchestra-Research/AI-research-SKILLs",
+    "url": "https://github.com/Orchestra-Research/AI-research-SKILLs/blob/main/12-inference-serving/vllm/SKILL.md",
+    "path": "12-inference-serving/vllm/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:19.868Z",
+    "stars": 8786,
+    "language": "TeX",
+    "pushed_at": "2026-04-28T05:09:27Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个高吞吐的大模型部署服务，能有效解决推理延迟高和显存不足的问题，非常适合生产环境API部署或显卡受限的场景。"
+}

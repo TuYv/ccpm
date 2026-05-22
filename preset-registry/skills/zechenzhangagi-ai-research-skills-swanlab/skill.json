@@ -1,0 +1,26 @@
+{
+  "id": "zechenzhangagi-ai-research-skills-swanlab",
+  "name": "experiment-tracking-swanlab",
+  "description": "Provides guidance for experiment tracking with SwanLab. Use when you need open-source run tracking, local or self-hosted dashboards, and lightweight media logging for ML workflows.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "zechenzhangAGI",
+  "install_path": ".claude/skills/swanlab/SKILL.md",
+  "source": {
+    "repo": "zechenzhangAGI/AI-research-SKILLs",
+    "url": "https://github.com/zechenzhangAGI/AI-research-SKILLs/blob/main/13-mlops/swanlab/SKILL.md",
+    "path": "13-mlops/swanlab/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:44.259Z",
+    "stars": 8786,
+    "language": "TeX",
+    "pushed_at": "2026-04-28T05:09:27Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个机器学习实验跟踪指南，能帮你开源记录训练过程，特别适合需要私有部署看板和轻量记录多媒体日志的场景。"
+}

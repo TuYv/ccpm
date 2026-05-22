@@ -1,0 +1,26 @@
+{
+  "id": "mattpocock-skills-migrate-to-shoehorn",
+  "name": "migrate-to-shoehorn",
+  "description": "Migrate test files from `as` type assertions to @total-typescript/shoehorn. Use when user mentions shoehorn, wants to replace `as` in tests, or needs partial test data.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mattpocock",
+  "install_path": ".claude/skills/migrate-to-shoehorn/SKILL.md",
+  "source": {
+    "repo": "mattpocock/skills",
+    "url": "https://github.com/mattpocock/skills/blob/main/skills/misc/migrate-to-shoehorn/SKILL.md",
+    "path": "skills/misc/migrate-to-shoehorn/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:06.130Z",
+    "stars": 99464,
+    "language": "Shell",
+    "pushed_at": "2026-05-20T08:46:54Z",
+    "license": "MIT"
+  },
+  "summary_zh": "帮你把测试文件里的 `as` 类型断言自动迁移成 shoehorn，适合想消除测试代码中的类型硬转，或需要更便捷地构造部分测试数据的场景。"
+}

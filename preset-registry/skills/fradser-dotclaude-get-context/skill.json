@@ -1,0 +1,26 @@
+{
+  "id": "fradser-dotclaude-get-context",
+  "name": "get-context",
+  "description": "Execute this when the user requests code context for a repository or library using DeepWiki, Context7, Exa, and/or git clone.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "FradSer",
+  "install_path": ".claude/skills/get-context/SKILL.md",
+  "source": {
+    "repo": "FradSer/dotclaude",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/code-context/skills/get-context/SKILL.md",
+    "path": "code-context/skills/get-context/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:13.961Z",
+    "stars": 548,
+    "language": "Shell",
+    "pushed_at": "2026-05-21T09:20:23Z",
+    "license": null
+  },
+  "summary_zh": "帮你抓取代码库背景信息的工具，适合需要快速了解开源项目上下文的场景，它整合了多种搜索与克隆手段，省去手动翻找代码的麻烦。"
+}

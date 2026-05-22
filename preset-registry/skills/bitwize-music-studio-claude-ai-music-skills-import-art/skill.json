@@ -1,0 +1,26 @@
+{
+  "id": "bitwize-music-studio-claude-ai-music-skills-import-art",
+  "name": "import-art",
+  "description": "Places album art files in the correct audio and content directory locations. Use when the user has generated or downloaded album artwork that needs to be saved.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "bitwize-music-studio",
+  "install_path": ".claude/skills/import-art/SKILL.md",
+  "source": {
+    "repo": "bitwize-music-studio/claude-ai-music-skills",
+    "url": "https://github.com/bitwize-music-studio/claude-ai-music-skills/blob/main/skills/import-art/SKILL.md",
+    "path": "skills/import-art/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:36.961Z",
+    "stars": 202,
+    "language": "Python",
+    "pushed_at": "2026-05-21T00:00:51Z",
+    "license": "CC0-1.0"
+  },
+  "summary_zh": "自动把下载或生成的专辑封面图放到音频和内容对应的正确目录中，省去手动分类的麻烦，适合需要整理本地音乐封面的场景。"
+}

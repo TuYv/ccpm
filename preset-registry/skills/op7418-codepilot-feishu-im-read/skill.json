@@ -1,0 +1,26 @@
+{
+  "id": "op7418-codepilot-feishu-im-read",
+  "name": "feishu-im-read",
+  "description": "| 飞书 IM 消息读取工具使用指南，覆盖会话消息获取、话题回复读取、跨会话消息搜索、图片/文件资源下载。",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "op7418",
+  "install_path": ".claude/skills/feishu-im-read/SKILL.md",
+  "source": {
+    "repo": "op7418/CodePilot",
+    "url": "https://github.com/op7418/CodePilot/blob/main/资料/feishu-openclaw-plugin/package/skills/feishu-im-read/SKILL.md",
+    "path": "资料/feishu-openclaw-plugin/package/skills/feishu-im-read/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:00.719Z",
+    "stars": 5769,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-11T06:07:30Z",
+    "license": null
+  },
+  "summary_zh": "这是一个飞书消息读取工具，能帮你轻松提取和备份聊天记录及各类附件，适合需要导出沟通内容或查找历史消息的场景。"
+}

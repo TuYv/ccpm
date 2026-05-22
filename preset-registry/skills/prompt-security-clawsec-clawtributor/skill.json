@@ -1,0 +1,26 @@
+{
+  "id": "prompt-security-clawsec-clawtributor",
+  "name": "clawtributor",
+  "description": "Community incident reporting for AI agents. Contribute to collective security by reporting threats.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "0.0.6",
+  "author": "prompt-security",
+  "install_path": ".claude/skills/clawtributor/SKILL.md",
+  "source": {
+    "repo": "prompt-security/clawsec",
+    "url": "https://github.com/prompt-security/clawsec/blob/main/skills/clawtributor/SKILL.md",
+    "path": "skills/clawtributor/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:45.997Z",
+    "stars": 1000,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-21T07:14:18Z",
+    "license": "AGPL-3.0"
+  },
+  "summary_zh": "这是一个AI智能体安全威胁上报工具，遇到AI异常或遭受攻击时，可以用它提交报告共享信息，帮整个社区一起提升防御能力。"
+}

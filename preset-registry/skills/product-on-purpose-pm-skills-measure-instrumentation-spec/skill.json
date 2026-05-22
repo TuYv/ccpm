@@ -1,0 +1,26 @@
+{
+  "id": "product-on-purpose-pm-skills-measure-instrumentation-spec",
+  "name": "measure-instrumentation-spec",
+  "description": "Specifies event tracking and analytics instrumentation requirements for a feature. Use when defining what data to collect, ensuring consistent tracking implementation, or documenting analytics requirements for engineering.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "product-on-purpose",
+  "install_path": ".claude/skills/measure-instrumentation-spec/SKILL.md",
+  "source": {
+    "repo": "product-on-purpose/pm-skills",
+    "url": "https://github.com/product-on-purpose/pm-skills/blob/main/skills/measure-instrumentation-spec/SKILL.md",
+    "path": "skills/measure-instrumentation-spec/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:46:25.781Z",
+    "stars": 226,
+    "language": "Shell",
+    "pushed_at": "2026-05-22T03:57:47Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "它是一套功能埋点规范模板，帮你明确该收集哪些数据，确保团队埋点实现一致，并方便给开发写数据需求文档。"
+}

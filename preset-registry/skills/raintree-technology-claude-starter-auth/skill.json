@@ -1,0 +1,26 @@
+{
+  "id": "raintree-technology-claude-starter-auth",
+  "name": "plaid-auth-expert",
+  "description": "Expert on Plaid Auth product for bank account authentication and verification. Covers account and routing number retrieval, account ownership verification, balance checks, and integration patterns. Invoke when user mentions Plaid Auth, ACH verification, bank account verification, or routing numbers.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "raintree-technology",
+  "install_path": ".claude/skills/auth/SKILL.md",
+  "source": {
+    "repo": "raintree-technology/claude-starter",
+    "url": "https://github.com/raintree-technology/claude-starter/blob/main/.claude/skills/plaid/auth/skill.md",
+    "path": ".claude/skills/plaid/auth/skill.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:53.511Z",
+    "stars": 76,
+    "language": "Zig",
+    "pushed_at": "2026-04-24T22:45:15Z",
+    "license": "MIT"
+  },
+  "summary_zh": "专精 Plaid Auth 的智能助手，主要解决银行账户认证与接入的开发难题，适合在需要验证 ACH、获取账户及户主信息时提供指导。"
+}

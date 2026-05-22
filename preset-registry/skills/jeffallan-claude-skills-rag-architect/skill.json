@@ -1,0 +1,26 @@
+{
+  "id": "jeffallan-claude-skills-rag-architect",
+  "name": "rag-architect",
+  "description": "Designs and implements production-grade RAG systems by chunking documents, generating embeddings, configuring vector stores, building hybrid search pipelines, applying reranking, and evaluating retrieval quality. Use when building RAG systems, vector databases, or knowledge-grounded AI applications requiring semantic search, document retrieval, context augmentation, similarity search, or embedding-based indexing.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "jeffallan",
+  "install_path": ".claude/skills/rag-architect/SKILL.md",
+  "source": {
+    "repo": "jeffallan/claude-skills",
+    "url": "https://github.com/jeffallan/claude-skills/blob/main/skills/rag-architect/SKILL.md",
+    "path": "skills/rag-architect/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:59.683Z",
+    "stars": 9253,
+    "language": "Python",
+    "pushed_at": "2026-05-20T13:35:05Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个搭建生产级RAG系统的全流程工具，帮你解决从文档处理到检索调优的难题，适合开发知识库问答、语义搜索等让AI结合专属知识落地的场景。"
+}

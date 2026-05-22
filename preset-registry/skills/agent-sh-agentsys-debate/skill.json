@@ -1,0 +1,26 @@
+{
+  "id": "agent-sh-agentsys-debate",
+  "name": "debate",
+  "description": "Structured AI debate templates and synthesis. Use when orchestrating multi-round debates between AI tools, 'debate topic', 'argue about', 'stress test idea', 'devil advocate'.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "5.1.0",
+  "author": "agent-sh",
+  "install_path": ".claude/skills/debate/SKILL.md",
+  "source": {
+    "repo": "agent-sh/agentsys",
+    "url": "https://github.com/agent-sh/agentsys/blob/main/.kiro/skills/debate/SKILL.md",
+    "path": ".kiro/skills/debate/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:01.522Z",
+    "stars": 813,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-21T17:59:34Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一套结构化的AI辩论模板与综合工具，能指挥多个AI围绕特定话题进行多轮辩论，适合用来压力测试想法或让AI唱反调，帮你全方位审视问题。"
+}

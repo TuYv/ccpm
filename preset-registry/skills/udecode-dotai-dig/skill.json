@@ -1,0 +1,26 @@
+{
+  "id": "udecode-dotai-dig",
+  "name": "dig",
+  "description": "Look up documentation and source code for libraries and packages. Use when the user asks a question about a library, needs to understand a library's API, or when you need information about a library that you don't know about. Triggers on questions like \"How do I use X library?\", \"What's the API for Y?\", \"Show me how Z library handles this\", or when encountering unfamiliar library usage.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "udecode",
+  "install_path": ".claude/skills/dig/SKILL.md",
+  "source": {
+    "repo": "udecode/dotai",
+    "url": "https://github.com/udecode/dotai/blob/main/.claude-plugin/plugins/dig/skills/dig/SKILL.md",
+    "path": ".claude-plugin/plugins/dig/skills/dig/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:07.540Z",
+    "stars": 1154,
+    "language": "Shell",
+    "pushed_at": "2026-03-30T11:07:19Z",
+    "license": null
+  },
+  "summary_zh": "帮你查阅代码库文档与源码的工具。当你遇到不熟悉的库、想查API用法，或者想知道某个库具体怎么实现时，用它就能快速找到答案。"
+}

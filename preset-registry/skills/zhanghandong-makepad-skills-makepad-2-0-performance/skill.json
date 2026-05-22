@@ -1,0 +1,26 @@
+{
+  "id": "zhanghandong-makepad-skills-makepad-2-0-performance",
+  "name": "makepad-2.0-performance",
+  "description": "| CRITICAL: Use for Makepad 2.0 performance optimization and debugging. Triggers on: makepad performance, makepad debug, makepad profiling, makepad gc, new_batch, texture_caching, render optimization, draw batching, mod.gc, garbage collection, memory, debug logging, troubleshoot, ViewOptimize, PortalList, CachedView, render tree, invisible text, text disappears, UI freezes, scroll stuttering, 性能, 调试, 优化, 垃圾回收, 渲染, 批处理, 日志",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ZhangHanDong",
+  "install_path": ".claude/skills/makepad-2.0-performance/SKILL.md",
+  "source": {
+    "repo": "ZhangHanDong/makepad-skills",
+    "url": "https://github.com/ZhangHanDong/makepad-skills/blob/main/skills/makepad-2.0-performance/SKILL.md",
+    "path": "skills/makepad-2.0-performance/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:32.296Z",
+    "stars": 737,
+    "language": null,
+    "pushed_at": "2026-04-07T15:51:03Z",
+    "license": null
+  },
+  "summary_zh": "专为Makepad 2.0打造的性能调优与排障工具，能解决界面卡顿、滚动掉帧、文字消失及内存回收等麻烦，适合进行渲染优化与深度调试。"
+}

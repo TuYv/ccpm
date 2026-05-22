@@ -1,0 +1,26 @@
+{
+  "id": "sethgammon-citadel-unharness",
+  "name": "unharness",
+  "description": ">- Remove Citadel from a project. Exports valuable state (campaigns, postmortems, research, backlog, discoveries) to docs/citadel/ as human-readable markdown, then removes all harness files and hooks. The archive is detected by /do setup on re-install and offered for restore.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "SethGammon",
+  "install_path": ".claude/skills/unharness/SKILL.md",
+  "source": {
+    "repo": "SethGammon/Citadel",
+    "url": "https://github.com/SethGammon/Citadel/blob/main/skills/unharness/SKILL.md",
+    "path": "skills/unharness/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:08.317Z",
+    "stars": 572,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-07T17:50:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一款帮你安全卸载Citadel的工具，解决直接删除会丢失核心数据的问题。它能将重要状态导出为文档并清理残留文件，还支持重装时一键恢复。"
+}

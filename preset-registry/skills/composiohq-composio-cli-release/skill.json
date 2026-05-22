@@ -1,0 +1,26 @@
+{
+  "id": "composiohq-composio-cli-release",
+  "name": "cli-release",
+  "description": "Release the CLI — diff features since last release, run /full-cli-test on them, and create a changeset PR with patch bump and test results.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ComposioHQ",
+  "install_path": ".claude/skills/cli-release/SKILL.md",
+  "source": {
+    "repo": "ComposioHQ/composio",
+    "url": "https://github.com/ComposioHQ/composio/blob/next/.claude/skills/cli-release/SKILL.md",
+    "path": ".claude/skills/cli-release/SKILL.md",
+    "branch": "next",
+    "discovered_at": "2026-05-22T04:42:48.714Z",
+    "stars": 28386,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-21T10:55:25Z",
+    "license": "MIT"
+  },
+  "summary_zh": "它是一款CLI发布工具，能自动找出上次发布后的功能变动，跑完测试后直接生成带版本号和结果的变更PR，帮你省去手动排查、测试和发包的繁琐流程。"
+}

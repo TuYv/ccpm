@@ -1,0 +1,26 @@
+{
+  "id": "zechenzhangagi-ai-research-skills-prompt-guard",
+  "name": "prompt-guard",
+  "description": "Meta's 86M prompt injection and jailbreak detector. Filters malicious prompts and third-party data for LLM apps. 99%+ TPR, <1% FPR. Fast (<2ms GPU). Multilingual (8 languages). Deploy with HuggingFace or batch processing for RAG security.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "zechenzhangAGI",
+  "install_path": ".claude/skills/prompt-guard/SKILL.md",
+  "source": {
+    "repo": "zechenzhangAGI/AI-research-SKILLs",
+    "url": "https://github.com/zechenzhangAGI/AI-research-SKILLs/blob/main/07-safety-alignment/prompt-guard/SKILL.md",
+    "path": "07-safety-alignment/prompt-guard/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:40.846Z",
+    "stars": 8786,
+    "language": "TeX",
+    "pushed_at": "2026-04-28T05:09:27Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一款轻量级检测器，专帮大模型应用拦截提示注入和越狱攻击，过滤恶意输入，保障RAG等场景的安全。"
+}

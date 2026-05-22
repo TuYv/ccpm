@@ -1,0 +1,26 @@
+{
+  "id": "zebbern-claude-code-guide-red-team-tools",
+  "name": "Red Team Tools and Methodology",
+  "description": "This skill should be used when the user asks to \"follow red team methodology\", \"perform bug bounty hunting\", \"automate reconnaissance\", \"hunt for XSS vulnerabilities\", \"enumerate subdomains\", or needs security researcher techniques and tool configurations from top bug bounty hunters.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "zebbern",
+  "install_path": ".claude/skills/red-team-tools/SKILL.md",
+  "source": {
+    "repo": "zebbern/claude-code-guide",
+    "url": "https://github.com/zebbern/claude-code-guide/blob/main/skills/red-team-tools/SKILL.md",
+    "path": "skills/red-team-tools/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:09.763Z",
+    "stars": 4156,
+    "language": null,
+    "pushed_at": "2026-05-22T01:16:53Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一套红队安全测试的方法与工具集，适合红队演练和漏洞赏金狩猎场景，帮你解决自动化侦察与漏洞挖掘等需求，并提供顶尖安全专家的实战技巧与工具配置。"
+}

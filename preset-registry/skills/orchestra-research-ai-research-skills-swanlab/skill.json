@@ -1,0 +1,26 @@
+{
+  "id": "orchestra-research-ai-research-skills-swanlab",
+  "name": "experiment-tracking-swanlab",
+  "description": "Provides guidance for experiment tracking with SwanLab. Use when you need open-source run tracking, local or self-hosted dashboards, and lightweight media logging for ML workflows.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "Orchestra-Research",
+  "install_path": ".claude/skills/swanlab/SKILL.md",
+  "source": {
+    "repo": "Orchestra-Research/AI-research-SKILLs",
+    "url": "https://github.com/Orchestra-Research/AI-research-SKILLs/blob/main/13-mlops/swanlab/SKILL.md",
+    "path": "13-mlops/swanlab/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:20.041Z",
+    "stars": 8786,
+    "language": "TeX",
+    "pushed_at": "2026-04-28T05:09:27Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个帮你搞定机器学习实验追踪的指南，能轻松记录训练过程与多媒体数据，适合需要开源工具或私有部署看板来管理模型实验的场景。"
+}

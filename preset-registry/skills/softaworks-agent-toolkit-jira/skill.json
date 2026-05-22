@@ -1,0 +1,26 @@
+{
+  "id": "softaworks-agent-toolkit-jira",
+  "name": "jira",
+  "description": "Use when the user mentions Jira issues (e.g., \"PROJ-123\"), asks about tickets, wants to create/view/update issues, check sprint status, or manage their Jira workflow. Triggers on keywords like \"jira\", \"issue\", \"ticket\", \"sprint\", \"backlog\", or issue key patterns.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "softaworks",
+  "install_path": ".claude/skills/jira/SKILL.md",
+  "source": {
+    "repo": "softaworks/agent-toolkit",
+    "url": "https://github.com/softaworks/agent-toolkit/blob/main/dist/plugins/jira/skills/jira/SKILL.md",
+    "path": "dist/plugins/jira/skills/jira/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:19.057Z",
+    "stars": 1872,
+    "language": "Python",
+    "pushed_at": "2026-03-05T16:46:24Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个帮你快速对接Jira的辅助工具，能让你不用来回切屏就能直接处理工单和跟进迭代进度，特别适合需要高效管理项目进度的开发场景。"
+}

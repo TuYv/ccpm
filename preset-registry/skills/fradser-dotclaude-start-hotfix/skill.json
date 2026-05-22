@@ -1,0 +1,26 @@
+{
+  "id": "fradser-dotclaude-start-hotfix",
+  "name": "start-hotfix",
+  "description": "Begins a hotfix for a production issue using git-flow. This skill should be used when the user asks to \"start a hotfix\", \"create hotfix branch\", \"fix a critical bug\", \"git flow hotfix start\", or wants to begin a hotfix.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "FradSer",
+  "install_path": ".claude/skills/start-hotfix/SKILL.md",
+  "source": {
+    "repo": "FradSer/dotclaude",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/gitflow/skills/start-hotfix/SKILL.md",
+    "path": "gitflow/skills/start-hotfix/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:14.734Z",
+    "stars": 548,
+    "language": "Shell",
+    "pushed_at": "2026-05-21T09:20:23Z",
+    "license": null
+  },
+  "summary_zh": "它是一个基于 git-flow 发起热修复的工具。当线上出现紧急 Bug 需要立刻修复时，它能帮你快速拉起修复分支，省去手动操作的麻烦。"
+}

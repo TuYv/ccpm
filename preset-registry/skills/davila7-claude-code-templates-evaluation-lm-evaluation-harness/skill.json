@@ -1,0 +1,26 @@
+{
+  "id": "davila7-claude-code-templates-evaluation-lm-evaluation-harness",
+  "name": "evaluating-llms-harness",
+  "description": "Evaluates LLMs across 60+ academic benchmarks (MMLU, HumanEval, GSM8K, TruthfulQA, HellaSwag). Use when benchmarking model quality, comparing models, reporting academic results, or tracking training progress. Industry standard used by EleutherAI, HuggingFace, and major labs. Supports HuggingFace, vLLM, APIs.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "davila7",
+  "install_path": ".claude/skills/evaluation-lm-evaluation-harness/SKILL.md",
+  "source": {
+    "repo": "davila7/claude-code-templates",
+    "url": "https://github.com/davila7/claude-code-templates/blob/main/cli-tool/components/skills/ai-research/evaluation-lm-evaluation-harness/SKILL.md",
+    "path": "cli-tool/components/skills/ai-research/evaluation-lm-evaluation-harness/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:46.119Z",
+    "stars": 27482,
+    "language": "Python",
+    "pushed_at": "2026-05-22T04:31:04Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个涵盖六十多项学术测试的大模型评测框架，适合用来测试模型质量、对比模型能力、追踪训练进度或出具学术报告。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "slopus-happy-control-flow",
+  "name": "control-flow",
+  "description": "> Analyze and design control flows and data structures. Produces compact ASCII tree diagrams showing triggers, call chains, payload shapes, state mutations, and re-render effects. Use when user asks to diagram, trace, visualize, or design a flow or data structure.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "slopus",
+  "install_path": ".claude/skills/control-flow/SKILL.md",
+  "source": {
+    "repo": "slopus/happy",
+    "url": "https://github.com/slopus/happy/blob/main/.agents/skills/control-flow/SKILL.md",
+    "path": ".agents/skills/control-flow/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:59.090Z",
+    "stars": 21032,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-18T02:10:40Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是个帮你分析和设计控制流与数据结构的工具，能生成紧凑的ASCII树状图，直观梳理代码执行与状态变更逻辑，适合需要画图、追踪或设计代码流程的场景。"
+}

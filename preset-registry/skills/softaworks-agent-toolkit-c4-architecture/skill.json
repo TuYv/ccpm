@@ -1,0 +1,26 @@
+{
+  "id": "softaworks-agent-toolkit-c4-architecture",
+  "name": "c4-architecture",
+  "description": "Generate architecture documentation using C4 model Mermaid diagrams. Use when asked to create architecture diagrams, document system architecture, visualize software structure, create C4 diagrams, or generate context/container/component/deployment diagrams. Triggers include \"architecture diagram\", \"C4 diagram\", \"system context\", \"container diagram\", \"component diagram\", \"deployment diagram\", \"document architecture\", \"visualize architecture\".",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "softaworks",
+  "install_path": ".claude/skills/c4-architecture/SKILL.md",
+  "source": {
+    "repo": "softaworks/agent-toolkit",
+    "url": "https://github.com/softaworks/agent-toolkit/blob/main/skills/c4-architecture/SKILL.md",
+    "path": "skills/c4-architecture/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:21.388Z",
+    "stars": 1872,
+    "language": "Python",
+    "pushed_at": "2026-03-05T16:46:24Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用Mermaid自动生成C4架构图的工具，适合在梳理软件结构、编写架构文档或做可视化展示时使用，帮你轻松搞定从系统上下文到组件部署的各层级图表。"
+}

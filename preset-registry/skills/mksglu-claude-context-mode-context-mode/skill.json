@@ -1,0 +1,26 @@
+{
+  "id": "mksglu-claude-context-mode-context-mode",
+  "name": "context-mode",
+  "description": "| Use context-mode tools (ctx_execute, ctx_execute_file) instead of Bash/cat when processing large outputs. Triggers: \"analyze logs\", \"summarize output\", \"process data\", \"parse JSON\", \"filter results\", \"extract errors\", \"check build output\", \"analyze dependencies\", \"process API response\", \"large file analysis\", \"page snapshot\", \"browser snapshot\", \"DOM structure\", \"inspect page\", \"accessibility tree\", \"Playwright snapshot\", \"run tests\", \"test output\", \"coverage report\", \"git log\", \"recent commit",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mksglu",
+  "install_path": ".claude/skills/context-mode/SKILL.md",
+  "source": {
+    "repo": "mksglu/claude-context-mode",
+    "url": "https://github.com/mksglu/claude-context-mode/blob/main/skills/context-mode/SKILL.md",
+    "path": "skills/context-mode/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:51.318Z",
+    "stars": 15360,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-21T13:02:08Z",
+    "license": null
+  },
+  "summary_zh": "它是替代Bash或cat处理大体积输出的工具，适合分析日志、解析数据、检查网页结构或查看构建结果等场景，能有效避免大量内容输出时的截断问题。"
+}

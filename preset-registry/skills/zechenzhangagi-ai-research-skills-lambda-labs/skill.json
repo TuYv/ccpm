@@ -1,0 +1,26 @@
+{
+  "id": "zechenzhangagi-ai-research-skills-lambda-labs",
+  "name": "lambda-labs-gpu-cloud",
+  "description": "Reserved and on-demand GPU cloud instances for ML training and inference. Use when you need dedicated GPU instances with simple SSH access, persistent filesystems, or high-performance multi-node clusters for large-scale training.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "zechenzhangAGI",
+  "install_path": ".claude/skills/lambda-labs/SKILL.md",
+  "source": {
+    "repo": "zechenzhangAGI/AI-research-SKILLs",
+    "url": "https://github.com/zechenzhangAGI/AI-research-SKILLs/blob/main/09-infrastructure/lambda-labs/SKILL.md",
+    "path": "09-infrastructure/lambda-labs/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:41.790Z",
+    "stars": 8786,
+    "language": "TeX",
+    "pushed_at": "2026-04-28T05:09:27Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个专为机器学习打造的GPU云算力平台，帮你解决模型训练和推理中的算力获取、环境保存以及大规模集群搭建难题。"
+}

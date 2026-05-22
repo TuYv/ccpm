@@ -1,0 +1,26 @@
+{
+  "id": "agricidaniel-claude-ads-ads-apple",
+  "name": "ads-apple",
+  "description": "Apple Ads (formerly Apple Search Ads) deep analysis for mobile app advertisers. Evaluates campaign structure, bid health, Custom Product Pages (CPPs), AdAttributionKit (view-through attribution 24h post-impression), MMP attribution, budget pacing, TAP coverage (Today/Search/Product Pages), Maximize Conversions bidding, and goal CPA benchmarks by country. Use when user says Apple Ads, Apple Search Ads, ASA, App Store ads, Apple ads, Search Ads, AdAttributionKit, view-through attribution, or is ad",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "AgriciDaniel",
+  "install_path": ".claude/skills/ads-apple/SKILL.md",
+  "source": {
+    "repo": "AgriciDaniel/claude-ads",
+    "url": "https://github.com/AgriciDaniel/claude-ads/blob/main/skills/ads-apple/SKILL.md",
+    "path": "skills/ads-apple/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:27.696Z",
+    "stars": 5109,
+    "language": "Python",
+    "pushed_at": "2026-05-18T17:32:57Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个苹果搜索广告深度分析工具，能帮移动应用广告主全面诊断投放健康度与归因效果，适合需要优化App Store广告支出、降低获客成本的场景。"
+}

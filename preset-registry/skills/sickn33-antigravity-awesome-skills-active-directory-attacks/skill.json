@@ -1,0 +1,26 @@
+{
+  "id": "sickn33-antigravity-awesome-skills-active-directory-attacks",
+  "name": "active-directory-attacks",
+  "description": "Provide comprehensive techniques for attacking Microsoft Active Directory environments. Covers reconnaissance, credential harvesting, Kerberos attacks, lateral movement, privilege escalation, and domain dominance for red team operations and penetration testing.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sickn33",
+  "install_path": ".claude/skills/active-directory-attacks/SKILL.md",
+  "source": {
+    "repo": "sickn33/antigravity-awesome-skills",
+    "url": "https://github.com/sickn33/antigravity-awesome-skills/blob/main/plugins/antigravity-awesome-skills-claude/skills/active-directory-attacks/SKILL.md",
+    "path": "plugins/antigravity-awesome-skills-claude/skills/active-directory-attacks/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:08.119Z",
+    "stars": 38305,
+    "language": "Python",
+    "pushed_at": "2026-05-21T19:35:19Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一份微软域环境攻击技术大全，涵盖从前期踩点到夺取域控的完整链路，适合红队和渗透测试人员在实战中参考。"
+}

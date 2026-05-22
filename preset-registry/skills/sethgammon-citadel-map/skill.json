@@ -1,0 +1,26 @@
+{
+  "id": "sethgammon-citadel-map",
+  "name": "map",
+  "description": ">- Structural codebase index generator. Builds a compact JSON map of files, exports, imports, dependency graph, and roles. Queryable by keyword. Injected into fleet agents as context slices to reduce token usage on code navigation.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "SethGammon",
+  "install_path": ".claude/skills/map/SKILL.md",
+  "source": {
+    "repo": "SethGammon/Citadel",
+    "url": "https://github.com/SethGammon/Citadel/blob/main/skills/map/SKILL.md",
+    "path": "skills/map/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:06.526Z",
+    "stars": 572,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-07T17:50:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一款代码库结构索引生成器，能生成可检索的精简上下文供AI代理按需加载，从而大幅降低代码导航时的token消耗。"
+}

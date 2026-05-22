@@ -1,0 +1,26 @@
+{
+  "id": "njbrake-agent-of-empires-openclaw-skill",
+  "name": "aoe",
+  "description": "Manage AI coding agent sessions via Agent of Empires (aoe)",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "njbrake",
+  "install_path": ".claude/skills/openclaw-skill/SKILL.md",
+  "source": {
+    "repo": "njbrake/agent-of-empires",
+    "url": "https://github.com/njbrake/agent-of-empires/blob/main/contrib/openclaw-skill/SKILL.md",
+    "path": "contrib/openclaw-skill/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:55.695Z",
+    "stars": 2344,
+    "language": "Rust",
+    "pushed_at": "2026-05-21T23:58:43Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个AI编程助手会话管理工具，能帮你统一调度和追踪多个AI代理的运行，解决多会话并行时的混乱，适合需要同时让多个AI帮忙写代码的开发场景。"
+}

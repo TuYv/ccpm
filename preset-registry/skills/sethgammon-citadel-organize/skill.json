@@ -1,0 +1,26 @@
+{
+  "id": "sethgammon-citadel-organize",
+  "name": "organize",
+  "description": ">- Three-pass project health scan: architectural compliance (are source files in the right layers?), filesystem hygiene (loose files, misplaced assets, stale artifacts), and bloat detection (oversized files, binaries in git, compressible assets). Reports composite score. Also manages enforceable directory manifests and dynamic directory lifecycle.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "SethGammon",
+  "install_path": ".claude/skills/organize/SKILL.md",
+  "source": {
+    "repo": "SethGammon/Citadel",
+    "url": "https://github.com/SethGammon/Citadel/blob/main/skills/organize/SKILL.md",
+    "path": "skills/organize/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:06.797Z",
+    "stars": 572,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-07T17:50:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个项目体检与目录管理工具，能检查文件是否放对位置、清理散落文件和冗余资源，并给出健康评分，专治项目结构混乱的问题。"
+}

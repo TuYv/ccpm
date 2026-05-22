@@ -1,0 +1,26 @@
+{
+  "id": "himself65-finance-skills-discord-reader",
+  "name": "discord-reader",
+  "description": "> Read Discord for financial research using opencli (read-only). Use this skill whenever the user wants to read Discord channels, search for messages in trading servers, view guild/channel info, monitor crypto or market discussion groups, or gather financial sentiment from Discord. Triggers include: \"check my Discord\", \"search Discord for\", \"read Discord messages\", \"what's happening in the trading Discord\", \"show Discord channels\", \"list my servers\", \"Discord sentiment on BTC\", \"what are people ",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "himself65",
+  "install_path": ".claude/skills/discord-reader/SKILL.md",
+  "source": {
+    "repo": "himself65/finance-skills",
+    "url": "https://github.com/himself65/finance-skills/blob/main/plugins/social-readers/skills/discord-reader/SKILL.md",
+    "path": "plugins/social-readers/skills/discord-reader/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:32.146Z",
+    "stars": 2456,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-19T23:27:16Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一款专供金融研究的只读工具，能帮你读取Discord交易群和加密货币讨论区消息并收集市场情绪，非常适合需要从社群聊天中挖掘投资线索或做市场调研的场景。"
+}

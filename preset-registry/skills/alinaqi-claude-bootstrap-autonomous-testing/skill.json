@@ -1,0 +1,26 @@
+{
+  "id": "alinaqi-claude-bootstrap-autonomous-testing",
+  "name": "autonomous-testing",
+  "description": "What started as an opinionated Claude Code setup kit is now an autonomous AI engineering command center",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alinaqi",
+  "install_path": ".claude/skills/autonomous-testing/SKILL.md",
+  "source": {
+    "repo": "alinaqi/claude-bootstrap",
+    "url": "https://github.com/alinaqi/claude-bootstrap/blob/main/skills/autonomous-testing/SKILL.md",
+    "path": "skills/autonomous-testing/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:23.925Z",
+    "stars": 641,
+    "language": "Python",
+    "pushed_at": "2026-05-21T22:01:29Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个AI工程指挥中心，能帮你统筹调度自动化开发任务，适合需要让AI自主完成编程工作的场景。"
+}

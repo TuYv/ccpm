@@ -1,0 +1,26 @@
+{
+  "id": "ruvnet-claude-flow-agent-analyze-code-quality",
+  "name": "agent-analyze-code-quality",
+  "description": "Agent skill for analyze-code-quality - invoke with $agent-analyze-code-quality",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ruvnet",
+  "install_path": ".claude/skills/agent-analyze-code-quality/SKILL.md",
+  "source": {
+    "repo": "ruvnet/claude-flow",
+    "url": "https://github.com/ruvnet/claude-flow/blob/main/.agents/skills/agent-analyze-code-quality/SKILL.md",
+    "path": ".agents/skills/agent-analyze-code-quality/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:41:56.979Z",
+    "stars": 53972,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-22T03:51:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个用于检查代码质量的智能体技能，能帮你自动排查代码隐患，适合接入AI工作流来把控代码规范。"
+}

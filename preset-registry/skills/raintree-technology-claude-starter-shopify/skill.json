@@ -1,0 +1,26 @@
+{
+  "id": "raintree-technology-claude-starter-shopify",
+  "name": "shopify-expert",
+  "description": "Comprehensive Shopify development expert with access to 24 official documentation files covering APIs (GraphQL Admin, Storefront, REST), app development, themes, Liquid, Hydrogen, checkout, extensions, webhooks, Functions, CLI, subscriptions, payments, and all platform features. Invoke when user mentions Shopify, e-commerce, online store, product management, orders, checkout, themes, or headless commerce.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "raintree-technology",
+  "install_path": ".claude/skills/shopify/SKILL.md",
+  "source": {
+    "repo": "raintree-technology/claude-starter",
+    "url": "https://github.com/raintree-technology/claude-starter/blob/main/.claude/skills/shopify/skill.md",
+    "path": ".claude/skills/shopify/skill.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:53.839Z",
+    "stars": 76,
+    "language": "Zig",
+    "pushed_at": "2026-04-24T22:45:15Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个内置全套官方文档的Shopify开发助手，能帮你解决建站、API对接、应用与主题开发，以及无头电商等各类开发难题。"
+}

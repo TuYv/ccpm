@@ -1,0 +1,26 @@
+{
+  "id": "zebbern-claude-code-guide-metasploit-framework",
+  "name": "Metasploit Framework",
+  "description": "This skill should be used when the user asks to \"use Metasploit for penetration testing\", \"exploit vulnerabilities with msfconsole\", \"create payloads with msfvenom\", \"perform post-exploitation\", \"use auxiliary modules for scanning\", or \"develop custom exploits\". It provides comprehensive guidance for leveraging the Metasploit Framework in security assessments.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "zebbern",
+  "install_path": ".claude/skills/metasploit-framework/SKILL.md",
+  "source": {
+    "repo": "zebbern/claude-code-guide",
+    "url": "https://github.com/zebbern/claude-code-guide/blob/main/skills/metasploit-framework/SKILL.md",
+    "path": "skills/metasploit-framework/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:09.269Z",
+    "stars": 4156,
+    "language": null,
+    "pushed_at": "2026-05-22T01:16:53Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一款专业的渗透测试平台，能帮你在安全评估中快速利用系统漏洞并完成后续控制，非常适合用来检验网络环境的真实防御能力。"
+}

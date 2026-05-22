@@ -1,0 +1,26 @@
+{
+  "id": "slopus-happy-maintain",
+  "name": "maintain",
+  "description": "> Maintain the slopus/happy open source project. Triage issues, manage the GitHub project board, draft closing comments, find duplicates, check if bugs are fixed on main, and engage with community contributors. NEVER posts comments or closes issues without showing exact text and getting approval first.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "slopus",
+  "install_path": ".claude/skills/maintain/SKILL.md",
+  "source": {
+    "repo": "slopus/happy",
+    "url": "https://github.com/slopus/happy/blob/main/.agents/skills/maintain/SKILL.md",
+    "path": ".agents/skills/maintain/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:59.283Z",
+    "stars": 21032,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-18T02:10:40Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个开源项目维护助手，帮你搞定整理反馈、管理看板等繁琐的社区维护工作。它绝不擅自操作，所有动作都需经你确认才执行，适合想减轻日常负担又需保持人工审核的维护者。"
+}

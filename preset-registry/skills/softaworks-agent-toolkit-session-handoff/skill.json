@@ -1,0 +1,26 @@
+{
+  "id": "softaworks-agent-toolkit-session-handoff",
+  "name": "session-handoff",
+  "description": "Creates comprehensive handoff documents for seamless AI agent session transfers. Triggered when: (1) user requests handoff/memory/context save, (2) context window approaches capacity, (3) major task milestone completed, (4) work session ending, (5) user says 'save state', 'create handoff', 'I need to pause', 'context is getting full', (6) resuming work with 'load handoff', 'resume from', 'continue where we left off'. Proactively suggests handoffs after substantial work (multiple file edits, comp",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "softaworks",
+  "install_path": ".claude/skills/session-handoff/SKILL.md",
+  "source": {
+    "repo": "softaworks/agent-toolkit",
+    "url": "https://github.com/softaworks/agent-toolkit/blob/main/dist/plugins/session-handoff/skills/session-handoff/SKILL.md",
+    "path": "dist/plugins/session-handoff/skills/session-handoff/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:20.711Z",
+    "stars": 1872,
+    "language": "Python",
+    "pushed_at": "2026-03-05T16:46:24Z",
+    "license": "MIT"
+  },
+  "summary_zh": "为AI对话生成交接文档的工具。在上下文快满、任务告一段落或需要暂停时，它能自动保存进度防止记忆丢失，让你下次能无缝接续之前的工作。"
+}

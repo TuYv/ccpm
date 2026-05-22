@@ -1,0 +1,26 @@
+{
+  "id": "ruvnet-claude-flow-agent-benchmark-suite",
+  "name": "agent-benchmark-suite",
+  "description": "Agent skill for benchmark-suite - invoke with $agent-benchmark-suite",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ruvnet",
+  "install_path": ".claude/skills/agent-benchmark-suite/SKILL.md",
+  "source": {
+    "repo": "ruvnet/claude-flow",
+    "url": "https://github.com/ruvnet/claude-flow/blob/main/.agents/skills/agent-benchmark-suite/SKILL.md",
+    "path": ".agents/skills/agent-benchmark-suite/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:41:57.883Z",
+    "stars": 53972,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-22T03:51:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个基准测试代理技能，能帮你快速触发并自动执行性能评估，适合需要定期跑分或监控系统性能表现的开发场景。"
+}

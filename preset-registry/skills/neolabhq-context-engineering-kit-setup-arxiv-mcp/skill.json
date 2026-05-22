@@ -1,0 +1,26 @@
+{
+  "id": "neolabhq-context-engineering-kit-setup-arxiv-mcp",
+  "name": "setup-arxiv-mcp",
+  "description": "Guide for setup arXiv paper search MCP server using Docker MCP",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "NeoLabHQ",
+  "install_path": ".claude/skills/setup-arxiv-mcp/SKILL.md",
+  "source": {
+    "repo": "NeoLabHQ/context-engineering-kit",
+    "url": "https://github.com/NeoLabHQ/context-engineering-kit/blob/master/plugins/mcp/skills/setup-arxiv-mcp/SKILL.md",
+    "path": "plugins/mcp/skills/setup-arxiv-mcp/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-05-22T04:42:30.910Z",
+    "stars": 1025,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-22T00:32:29Z",
+    "license": "GPL-3.0"
+  },
+  "summary_zh": "教你用Docker快速搭建arXiv论文检索服务，让AI助手能直接搜索和获取学术文献，非常适合需要AI辅助科研和文献调研的场景。"
+}

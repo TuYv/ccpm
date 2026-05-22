@@ -1,0 +1,26 @@
+{
+  "id": "davila7-claude-code-templates-evaluation-nemo-evaluator",
+  "name": "nemo-evaluator-sdk",
+  "description": "Evaluates LLMs across 100+ benchmarks from 18+ harnesses (MMLU, HumanEval, GSM8K, safety, VLM) with multi-backend execution. Use when needing scalable evaluation on local Docker, Slurm HPC, or cloud platforms. NVIDIA's enterprise-grade platform with container-first architecture for reproducible benchmarking.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "davila7",
+  "install_path": ".claude/skills/evaluation-nemo-evaluator/SKILL.md",
+  "source": {
+    "repo": "davila7/claude-code-templates",
+    "url": "https://github.com/davila7/claude-code-templates/blob/main/cli-tool/components/skills/ai-research/evaluation-nemo-evaluator/SKILL.md",
+    "path": "cli-tool/components/skills/ai-research/evaluation-nemo-evaluator/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:46.204Z",
+    "stars": 27482,
+    "language": "Python",
+    "pushed_at": "2026-05-22T04:31:04Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是英伟达的企业级大模型评估工具，适合在本地、集群或云端进行大规模且可复现的模型测试，解决跨环境跑分结果不一致的问题。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "neolabhq-context-engineering-kit-test-skill",
+  "name": "test-skill",
+  "description": "Use when creating or editing skills, before deployment, to verify they work under pressure and resist rationalization - applies RED-GREEN-REFACTOR cycle to process documentation by running baseline without skill, writing to address failures, iterating to close loopholes",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "NeoLabHQ",
+  "install_path": ".claude/skills/test-skill/SKILL.md",
+  "source": {
+    "repo": "NeoLabHQ/context-engineering-kit",
+    "url": "https://github.com/NeoLabHQ/context-engineering-kit/blob/master/plugins/customaize-agent/skills/test-skill/SKILL.md",
+    "path": "plugins/customaize-agent/skills/test-skill/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-05-22T04:42:28.629Z",
+    "stars": 1025,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-22T00:32:29Z",
+    "license": "GPL-3.0"
+  },
+  "summary_zh": "这是一款技能部署前的压力测试工具，将测试驱动的开发模式用在流程文档上，帮你反复验证技能在高压下是否稳定，堵住逻辑漏洞，确保上线后不出乱子。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "ruvnet-claude-flow-agent-consensus-coordinator",
+  "name": "agent-consensus-coordinator",
+  "description": "Agent skill for consensus-coordinator - invoke with $agent-consensus-coordinator",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ruvnet",
+  "install_path": ".claude/skills/agent-consensus-coordinator/SKILL.md",
+  "source": {
+    "repo": "ruvnet/claude-flow",
+    "url": "https://github.com/ruvnet/claude-flow/blob/main/.agents/skills/agent-consensus-coordinator/SKILL.md",
+    "path": ".agents/skills/agent-consensus-coordinator/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:41:58.891Z",
+    "stars": 53972,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-22T03:51:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个帮多个AI代理在协作时达成一致意见的技能模块，适合需要多方智能体共同决策或解决意见冲突的场景。"
+}

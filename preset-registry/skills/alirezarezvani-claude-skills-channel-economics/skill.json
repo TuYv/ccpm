@@ -1,0 +1,26 @@
+{
+  "id": "alirezarezvani-claude-skills-channel-economics",
+  "name": "channel-economics",
+  "description": "Use when reviewing or rebalancing direct vs. partner-led channel economics — computing fully-loaded cost-to-serve per channel, channel ROI with cash / LTV / marginal lenses, and optimal channel mix subject to constraints. For Head of Commercial, RevOps, and VP Sales doing quarterly channel review when pipeline is mixed (e.g., 60% direct + 40% partner-led) and nobody actually knows which channel makes money after CAC, support load, partner discount, deal-velocity differences, retention differenti",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "2.8.0",
+  "author": "alirezarezvani",
+  "install_path": ".claude/skills/channel-economics/SKILL.md",
+  "source": {
+    "repo": "alirezarezvani/claude-skills",
+    "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/channel-economics/SKILL.md",
+    "path": ".gemini/skills/channel-economics/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:42.373Z",
+    "stars": 15795,
+    "language": "Python",
+    "pushed_at": "2026-05-21T17:51:26Z",
+    "license": "MIT"
+  },
+  "summary_zh": "帮你算清直销和代理谁真赚钱的渠道核算工具。解决混合销售算不清隐形成本和真实收益的痛点，适合高管季度复盘时，找出最赚钱的渠道组合比例。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "zebbern-claude-code-guide-sql-injection-testing",
+  "name": "SQL Injection Testing",
+  "description": "This skill should be used when the user asks to \"test for SQL injection vulnerabilities\", \"perform SQLi attacks\", \"bypass authentication using SQL injection\", \"extract database information through injection\", \"detect SQL injection flaws\", or \"exploit database query vulnerabilities\". It provides comprehensive techniques for identifying, exploiting, and understanding SQL injection attack vectors across different database systems.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "zebbern",
+  "install_path": ".claude/skills/sql-injection-testing/SKILL.md",
+  "source": {
+    "repo": "zebbern/claude-code-guide",
+    "url": "https://github.com/zebbern/claude-code-guide/blob/main/skills/sql-injection-testing/SKILL.md",
+    "path": "skills/sql-injection-testing/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:10.131Z",
+    "stars": 4156,
+    "language": null,
+    "pushed_at": "2026-05-22T01:16:53Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个专攻SQL注入漏洞的安全测试工具，能帮你检测系统是否存在注入缺陷，并模拟绕过认证、提取数据库信息等攻击，适合安全评估和渗透测试场景。"
+}

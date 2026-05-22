@@ -1,0 +1,26 @@
+{
+  "id": "neolabhq-context-engineering-kit-setup-serena-mcp",
+  "name": "setup-serena-mcp",
+  "description": "Guide for setup Serena MCP server for semantic code retrieval and editing capabilities",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "NeoLabHQ",
+  "install_path": ".claude/skills/setup-serena-mcp/SKILL.md",
+  "source": {
+    "repo": "NeoLabHQ/context-engineering-kit",
+    "url": "https://github.com/NeoLabHQ/context-engineering-kit/blob/master/plugins/mcp/skills/setup-serena-mcp/SKILL.md",
+    "path": "plugins/mcp/skills/setup-serena-mcp/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-05-22T04:42:31.186Z",
+    "stars": 1025,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-22T00:32:29Z",
+    "license": "GPL-3.0"
+  },
+  "summary_zh": "帮你快速配置一个支持语义检索与编辑的代码服务，让开发者能像懂自然语言一样精准搜索和修改代码。"
+}

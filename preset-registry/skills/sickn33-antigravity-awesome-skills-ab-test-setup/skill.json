@@ -1,0 +1,26 @@
+{
+  "id": "sickn33-antigravity-awesome-skills-ab-test-setup",
+  "name": "ab-test-setup",
+  "description": "Structured guide for setting up A/B tests with mandatory gates for hypothesis, metrics, and execution readiness.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sickn33",
+  "install_path": ".claude/skills/ab-test-setup/SKILL.md",
+  "source": {
+    "repo": "sickn33/antigravity-awesome-skills",
+    "url": "https://github.com/sickn33/antigravity-awesome-skills/blob/main/plugins/antigravity-awesome-skills-claude/skills/ab-test-setup/SKILL.md",
+    "path": "plugins/antigravity-awesome-skills-claude/skills/ab-test-setup/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:07.880Z",
+    "stars": 38305,
+    "language": "Python",
+    "pushed_at": "2026-05-21T19:35:19Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一份A/B测试搭建指南，通过关卡式把控确保你在实验前想清楚验证逻辑和准备度，避免盲目试错，适合需要规范化开展实验的团队。"
+}

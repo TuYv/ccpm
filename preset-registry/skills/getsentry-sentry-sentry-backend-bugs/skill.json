@@ -1,0 +1,26 @@
+{
+  "id": "getsentry-sentry-sentry-backend-bugs",
+  "name": "sentry-backend-bugs",
+  "description": "Review Sentry Python and Django changes for bug patterns drawn from real production issues. Use when reviewing a backend diff or PR, checking Warden findings, auditing the current branch, reviewing production-error patterns, or looking for common regressions in `src/` and `tests/`.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "getsentry",
+  "install_path": ".claude/skills/sentry-backend-bugs/SKILL.md",
+  "source": {
+    "repo": "getsentry/sentry",
+    "url": "https://github.com/getsentry/sentry/blob/master/.agents/skills/sentry-backend-bugs/SKILL.md",
+    "path": ".agents/skills/sentry-backend-bugs/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-05-22T04:42:51.991Z",
+    "stars": 43943,
+    "language": "Python",
+    "pushed_at": "2026-05-22T04:41:18Z",
+    "license": null
+  },
+  "summary_zh": "它是基于真实生产故障提炼的代码审查参考，专查Python和Django的常见Bug模式。审查后端PR、审计分支或排查回归时都能用，帮你提前拦截线上隐患。"
+}

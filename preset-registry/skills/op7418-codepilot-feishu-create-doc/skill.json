@@ -1,0 +1,26 @@
+{
+  "id": "op7418-codepilot-feishu-create-doc",
+  "name": "feishu-create-doc",
+  "description": "| 创建飞书云文档。从 Lark-flavored Markdown 内容创建新的飞书云文档，支持指定创建位置（文件夹/知识库/知识空间）。",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "op7418",
+  "install_path": ".claude/skills/feishu-create-doc/SKILL.md",
+  "source": {
+    "repo": "op7418/CodePilot",
+    "url": "https://github.com/op7418/CodePilot/blob/main/资料/feishu-openclaw-plugin/package/skills/feishu-create-doc/SKILL.md",
+    "path": "资料/feishu-openclaw-plugin/package/skills/feishu-create-doc/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:00.553Z",
+    "stars": 5769,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-11T06:07:30Z",
+    "license": null
+  },
+  "summary_zh": "把 Markdown 直接生成飞书云文档的工具，省去手动复制粘贴的麻烦，还能自动归档到指定文件夹或知识库，适合需要批量创建或自动化管理飞书文档的场景。"
+}

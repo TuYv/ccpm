@@ -1,0 +1,26 @@
+{
+  "id": "jeffallan-claude-skills-feature-forge",
+  "name": "feature-forge",
+  "description": "Conducts structured requirements workshops to produce feature specifications, user stories, EARS-format functional requirements, acceptance criteria, and implementation checklists. Use when defining new features, gathering requirements, or writing specifications. Invoke for feature definition, requirements gathering, user stories, EARS format specs, PRDs, acceptance criteria, or requirement matrices.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "jeffallan",
+  "install_path": ".claude/skills/feature-forge/SKILL.md",
+  "source": {
+    "repo": "jeffallan/claude-skills",
+    "url": "https://github.com/jeffallan/claude-skills/blob/main/skills/feature-forge/SKILL.md",
+    "path": "skills/feature-forge/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:57.784Z",
+    "stars": 9253,
+    "language": "Python",
+    "pushed_at": "2026-05-20T13:35:05Z",
+    "license": "MIT"
+  },
+  "summary_zh": "它是一个需求梳理助手，能通过结构化方式帮你快速产出PRD、用户故事和验收标准等全套文档。适合规划新功能或收集需求时使用，解决需求文档无从下手的烦恼。"
+}

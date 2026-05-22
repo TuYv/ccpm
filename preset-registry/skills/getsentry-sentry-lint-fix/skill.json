@@ -1,0 +1,26 @@
+{
+  "id": "getsentry-sentry-lint-fix",
+  "name": "lint-fix",
+  "description": "Fix violations of an eslintPluginScraps rule across the codebase. Use when asked to \"fix lint violations\", \"apply a lint rule\", \"fix scraps rule errors\", \"roll out a lint rule\", \"enforce a rule codebase-wide\", or \"fix design system lint\". Covers manual fixes, autofix, batching, and codemod strategies for large-scale rollouts.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "getsentry",
+  "install_path": ".claude/skills/lint-fix/SKILL.md",
+  "source": {
+    "repo": "getsentry/sentry",
+    "url": "https://github.com/getsentry/sentry/blob/master/.agents/skills/lint-fix/SKILL.md",
+    "path": ".agents/skills/lint-fix/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-05-22T04:42:51.528Z",
+    "stars": 43943,
+    "language": "Python",
+    "pushed_at": "2026-05-22T04:41:18Z",
+    "license": null
+  },
+  "summary_zh": "这是一款用于全项目批量修复 ESLint 规则报错的工具，特别适合需要强制推行新代码规范、大规模清理 lint 错误或执行自动化重构的场景。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "actionbook-rust-skills-rust-deps-visualizer",
+  "name": "rust-deps-visualizer",
+  "description": "Visualize Rust project dependencies as ASCII art. Triggers on: /deps-viz, dependency graph, show dependencies, visualize deps, 依赖图, 依赖可视化, 显示依赖",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "actionbook",
+  "install_path": ".claude/skills/rust-deps-visualizer/SKILL.md",
+  "source": {
+    "repo": "actionbook/rust-skills",
+    "url": "https://github.com/actionbook/rust-skills/blob/main/skills/rust-deps-visualizer/SKILL.md",
+    "path": "skills/rust-deps-visualizer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:02.513Z",
+    "stars": 1164,
+    "language": "Shell",
+    "pushed_at": "2026-05-12T12:59:42Z",
+    "license": null
+  },
+  "summary_zh": "把Rust项目的依赖关系生成ASCII字符画，让你在终端里也能直观理清模块间的复杂引用，非常适合快速梳理或排查依赖结构的场景。"
+}

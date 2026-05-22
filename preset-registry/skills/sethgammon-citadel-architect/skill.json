@@ -1,0 +1,26 @@
+{
+  "id": "sethgammon-citadel-architect",
+  "name": "architect",
+  "description": ">- Given a PRD, produces an implementation architecture: file tree, component breakdown, data model, and a phased build plan with end conditions that Archon can execute directly. Multi-candidate evaluation for key decisions.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "SethGammon",
+  "install_path": ".claude/skills/architect/SKILL.md",
+  "source": {
+    "repo": "SethGammon/Citadel",
+    "url": "https://github.com/SethGammon/Citadel/blob/main/skills/architect/SKILL.md",
+    "path": "skills/architect/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:04.839Z",
+    "stars": 572,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-07T17:50:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "它能将产品需求文档转化为可执行的开发方案，不仅为关键决策提供多方案评估，还能生成AI代理可直接落地的分步计划，适合需要从需求快速跨越到代码实现的项目前期。"
+}

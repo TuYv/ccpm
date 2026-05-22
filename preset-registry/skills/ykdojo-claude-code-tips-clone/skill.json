@@ -1,0 +1,26 @@
+{
+  "id": "ykdojo-claude-code-tips-clone",
+  "name": "clone",
+  "description": "Clone the current conversation so the user can branch off and try a different approach.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ykdojo",
+  "install_path": ".claude/skills/clone/SKILL.md",
+  "source": {
+    "repo": "ykdojo/claude-code-tips",
+    "url": "https://github.com/ykdojo/claude-code-tips/blob/main/skills/clone/SKILL.md",
+    "path": "skills/clone/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:41:54.124Z",
+    "stars": 8404,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-06T06:52:29Z",
+    "license": null
+  },
+  "summary_zh": "这是一款对话复制工具，帮你把当前聊天另存为新分支。适合想换个思路或方案继续探索，又不想弄乱原有对话进展的场景。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "orchestra-research-ai-research-skills-gguf",
+  "name": "gguf-quantization",
+  "description": "GGUF format and llama.cpp quantization for efficient CPU/GPU inference. Use when deploying models on consumer hardware, Apple Silicon, or when needing flexible quantization from 2-8 bit without GPU requirements.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "Orchestra-Research",
+  "install_path": ".claude/skills/gguf/SKILL.md",
+  "source": {
+    "repo": "Orchestra-Research/AI-research-SKILLs",
+    "url": "https://github.com/Orchestra-Research/AI-research-SKILLs/blob/main/10-optimization/gguf/SKILL.md",
+    "path": "10-optimization/gguf/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:19.007Z",
+    "stars": 8786,
+    "language": "TeX",
+    "pushed_at": "2026-04-28T05:09:27Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一款大模型量化工具，支持2到8位灵活压缩，让普通电脑和苹果芯片无需高端显卡也能高效运行大模型推理。"
+}

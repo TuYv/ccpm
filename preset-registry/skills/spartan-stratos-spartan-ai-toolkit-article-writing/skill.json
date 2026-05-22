@@ -1,0 +1,26 @@
+{
+  "id": "spartan-stratos-spartan-ai-toolkit-article-writing",
+  "name": "article-writing",
+  "description": "Write blog posts, guides, tutorials, and long-form content. Sounds like a real person, not AI. Use when the user wants polished written content.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "spartan-stratos",
+  "install_path": ".claude/skills/article-writing/SKILL.md",
+  "source": {
+    "repo": "spartan-stratos/spartan-ai-toolkit",
+    "url": "https://github.com/spartan-stratos/spartan-ai-toolkit/blob/master/toolkit/skills/article-writing/SKILL.md",
+    "path": "toolkit/skills/article-writing/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-05-22T04:46:13.242Z",
+    "stars": 71,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-11T06:56:56Z",
+    "license": null
+  },
+  "summary_zh": "帮你写博客和长篇教程的写作助手，文风自然像真人执笔，告别机器味，适合需要高质量、无AI痕迹的长文创作场景。"
+}

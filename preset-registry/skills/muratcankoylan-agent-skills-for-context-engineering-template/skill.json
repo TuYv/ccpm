@@ -1,0 +1,26 @@
+{
+  "id": "muratcankoylan-agent-skills-for-context-engineering-template",
+  "name": "skill-template",
+  "description": "Template for creating new Agent Skills for context engineering. Use this template when adding new skills to the collection.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "muratcankoylan",
+  "install_path": ".claude/skills/template/SKILL.md",
+  "source": {
+    "repo": "muratcankoylan/Agent-Skills-for-Context-Engineering",
+    "url": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering/blob/main/template/SKILL.md",
+    "path": "template/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:09.756Z",
+    "stars": 15854,
+    "language": "Python",
+    "pushed_at": "2026-05-22T04:31:12Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于上下文工程的技能开发模板，适合需要给Agent扩充新技能时使用，帮你免去从零搭建的麻烦。"
+}

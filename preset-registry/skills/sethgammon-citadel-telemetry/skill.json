@@ -1,0 +1,26 @@
+{
+  "id": "sethgammon-citadel-telemetry",
+  "name": "telemetry",
+  "description": ">- Unified telemetry hub. Shows current session cost, today's spend, all-time totals, hook activity, trust level, and a directory of every telemetry command available. Also the control surface to toggle telemetry on/off and tune thresholds. Single entry point for anyone asking \"what does this cost\" or \"what telemetry does Citadel have\".",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "SethGammon",
+  "install_path": ".claude/skills/telemetry/SKILL.md",
+  "source": {
+    "repo": "SethGammon/Citadel",
+    "url": "https://github.com/SethGammon/Citadel/blob/main/skills/telemetry/SKILL.md",
+    "path": "skills/telemetry/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:08.053Z",
+    "stars": 572,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-07T17:50:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个统一的遥测控制中心，能集中查看花费明细和系统活动，并一键调整设置，帮你随时搞清开销和遥测状态。"
+}

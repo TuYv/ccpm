@@ -1,0 +1,26 @@
+{
+  "id": "ryoppippi-ccusage-pr-ai-review-workflow",
+  "name": "pr-ai-review-workflow",
+  "description": "Manages PR AI review loops with gh. Use after opening or updating a PR to request review, inspect comments, reply, fix, and re-request review.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ryoppippi",
+  "install_path": ".claude/skills/pr-ai-review-workflow/SKILL.md",
+  "source": {
+    "repo": "ryoppippi/ccusage",
+    "url": "https://github.com/ryoppippi/ccusage/blob/main/.agents/skills/pr-ai-review-workflow/SKILL.md",
+    "path": ".agents/skills/pr-ai-review-workflow/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-19T19:33:19.475Z",
+    "stars": 14389,
+    "language": "Rust",
+    "pushed_at": "2026-05-19T19:24:38Z",
+    "license": null
+  },
+  "summary_zh": "这是一个用 gh 驱动 PR 审查闭环的工具。它能自动处理 AI 审查意见、修复代码并再次请求审查，省去手动交互的麻烦，适合想靠 AI 自动改代码并走完审查流程的开发场景。"
+}

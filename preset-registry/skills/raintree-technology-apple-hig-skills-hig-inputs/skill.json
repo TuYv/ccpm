@@ -1,0 +1,26 @@
+{
+  "id": "raintree-technology-apple-hig-skills-hig-inputs",
+  "name": "hig-inputs",
+  "description": ">- Apple HIG guidance for input methods and interaction patterns: gestures, Apple Pencil, keyboards, game controllers, pointers, Digital Crown, eye tracking, focus system, remotes, spatial interactions, gyroscope, accelerometer, and nearby interactions. Use when asked about: \"gesture design\", \"Apple Pencil\", \"keyboard shortcuts\", \"game controller\", \"pointer support\", \"mouse support\", \"trackpad\", \"Digital Crown\", \"eye tracking\", \"visionOS input\", \"focus system\", \"remote control\", \"gyroscope\", \"sp",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "raintree-technology",
+  "install_path": ".claude/skills/hig-inputs/SKILL.md",
+  "source": {
+    "repo": "raintree-technology/apple-hig-skills",
+    "url": "https://github.com/raintree-technology/apple-hig-skills/blob/main/skills/hig-inputs/SKILL.md",
+    "path": "skills/hig-inputs/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:35.380Z",
+    "stars": 52,
+    "language": "TypeScript",
+    "pushed_at": "2026-04-28T22:36:54Z",
+    "license": null
+  },
+  "summary_zh": "提供苹果官方人机交互指南的输入与交互规范，适合开发者和设计师在解决各类输入方式的设计与适配问题时，查阅参考官方标准。"
+}

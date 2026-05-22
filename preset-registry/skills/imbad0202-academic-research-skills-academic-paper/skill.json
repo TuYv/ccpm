@@ -1,0 +1,26 @@
+{
+  "id": "imbad0202-academic-research-skills-academic-paper",
+  "name": "academic-paper",
+  "description": "12-agent academic paper writing pipeline. 10 modes (full/plan/outline/revision/revision-coach/abstract/lit-review/format-convert/citation-check/disclosure). 6 paper types, 5 citation formats, bilingual abstracts, LaTeX/DOCX-via-Pandoc/PDF output. Style Calibration + Writing Quality Check + Anti-Patterns with IRON RULE markers. Triggers: write paper, academic paper, guide my paper, parse reviews, AI disclosure, 寫論文, 學術論文, 引導我寫論文, 審查意見.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Imbad0202",
+  "install_path": ".claude/skills/academic-paper/SKILL.md",
+  "source": {
+    "repo": "Imbad0202/academic-research-skills",
+    "url": "https://github.com/Imbad0202/academic-research-skills/blob/main/academic-paper/SKILL.md",
+    "path": "academic-paper/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:26.425Z",
+    "stars": 18399,
+    "language": "Python",
+    "pushed_at": "2026-05-21T08:31:11Z",
+    "license": null
+  },
+  "summary_zh": "这是一套12个智能体协作的科研论文写作流水线，能搞定从构思、起草、修改到排版和引用检查的全流程，并内置质量把控，适合需要高效产出规范论文及应对审稿意见的科研人员。"
+}

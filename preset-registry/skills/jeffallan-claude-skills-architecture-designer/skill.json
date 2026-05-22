@@ -1,0 +1,26 @@
+{
+  "id": "jeffallan-claude-skills-architecture-designer",
+  "name": "architecture-designer",
+  "description": "Use when designing new high-level system architecture, reviewing existing designs, or making architectural decisions. Invoke to create architecture diagrams, write Architecture Decision Records (ADRs), evaluate technology trade-offs, design component interactions, and plan for scalability. Use for system design, architecture review, microservices structuring, ADR authoring, scalability planning, and infrastructure pattern selection — distinct from code-level design patterns or database-only desi",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "jeffallan",
+  "install_path": ".claude/skills/architecture-designer/SKILL.md",
+  "source": {
+    "repo": "jeffallan/claude-skills",
+    "url": "https://github.com/jeffallan/claude-skills/blob/main/skills/architecture-designer/SKILL.md",
+    "path": "skills/architecture-designer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:56.520Z",
+    "stars": 9253,
+    "language": "Python",
+    "pushed_at": "2026-05-20T13:35:05Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个专注系统顶层设计的架构助手，帮你在搭建新系统、架构评审或做技术决策时理清思路，搞定微服务拆分、技术选型与扩展规划等系统级难题，而不局限于代码或单库细节。"
+}

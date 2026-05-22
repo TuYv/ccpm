@@ -1,0 +1,26 @@
+{
+  "id": "smerchek-claude-epub-skill-markdown-to-epub",
+  "name": "markdown-to-epub-converter",
+  "description": "Convert markdown documents and chat summaries into formatted EPUB ebook files that can be read on any device or uploaded to Kindle.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "smerchek",
+  "install_path": ".claude/skills/markdown-to-epub/SKILL.md",
+  "source": {
+    "repo": "smerchek/claude-epub-skill",
+    "url": "https://github.com/smerchek/claude-epub-skill/blob/main/markdown-to-epub/SKILL.md",
+    "path": "markdown-to-epub/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:27.133Z",
+    "stars": 122,
+    "language": "Python",
+    "pushed_at": "2025-10-18T00:40:32Z",
+    "license": "MIT"
+  },
+  "summary_zh": "把 Markdown 文档和对话记录转成排版好的 EPUB 电子书，方便你在 Kindle 或其他设备上随时阅读。"
+}

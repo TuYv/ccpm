@@ -1,0 +1,26 @@
+{
+  "id": "team-attention-plugins-for-claude-natives-kakaotalk",
+  "name": "kakaotalk",
+  "description": "This skill should be used when the user asks to \"카톡 보내줘\", \"카카오톡 메시지\", \"KakaoTalk message\", \"채팅 읽어줘\", \"~에게 메시지 보내줘\", or needs to send/read messages via KakaoTalk on macOS.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "2.0.0",
+  "author": "team-attention",
+  "install_path": ".claude/skills/kakaotalk/SKILL.md",
+  "source": {
+    "repo": "team-attention/plugins-for-claude-natives",
+    "url": "https://github.com/team-attention/plugins-for-claude-natives/blob/main/plugins/kakaotalk/skills/kakaotalk/SKILL.md",
+    "path": "plugins/kakaotalk/skills/kakaotalk/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:37.345Z",
+    "stars": 773,
+    "language": "Python",
+    "pushed_at": "2026-04-20T06:53:40Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个macOS上的语音控制技能，让你通过语音指令就能在电脑上收发KakaoTalk消息，适合双手忙碌时快速处理聊天。"
+}

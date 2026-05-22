@@ -1,0 +1,26 @@
+{
+  "id": "softaworks-agent-toolkit-datadog-cli",
+  "name": "datadog-cli",
+  "description": "Datadog CLI for searching logs, querying metrics, tracing requests, and managing dashboards. Use this when debugging production issues or working with Datadog observability.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "softaworks",
+  "install_path": ".claude/skills/datadog-cli/SKILL.md",
+  "source": {
+    "repo": "softaworks/agent-toolkit",
+    "url": "https://github.com/softaworks/agent-toolkit/blob/main/skills/datadog-cli/SKILL.md",
+    "path": "skills/datadog-cli/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:22.101Z",
+    "stars": 1872,
+    "language": "Python",
+    "pushed_at": "2026-03-05T16:46:24Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是 Datadog 的命令行工具，能让你在终端直接查看和管理各项监控数据，特别适合用来快速排查线上故障或日常进行可观测性分析。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "zebbern-claude-code-guide-ssh-penetration-testing",
+  "name": "SSH Penetration Testing",
+  "description": "This skill should be used when the user asks to \"pentest SSH services\", \"enumerate SSH configurations\", \"brute force SSH credentials\", \"exploit SSH vulnerabilities\", \"perform SSH tunneling\", or \"audit SSH security\". It provides comprehensive SSH penetration testing methodologies and techniques.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "zebbern",
+  "install_path": ".claude/skills/ssh-penetration-testing/SKILL.md",
+  "source": {
+    "repo": "zebbern/claude-code-guide",
+    "url": "https://github.com/zebbern/claude-code-guide/blob/main/skills/ssh-penetration-testing/SKILL.md",
+    "path": "skills/ssh-penetration-testing/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:10.313Z",
+    "stars": 4156,
+    "language": null,
+    "pushed_at": "2026-05-22T01:16:53Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一套SSH渗透测试方法库，专门解决SSH服务安全评估问题，适合需要破解登录凭证、挖掘服务漏洞或搭建隐蔽隧道的红队攻防场景。"
+}

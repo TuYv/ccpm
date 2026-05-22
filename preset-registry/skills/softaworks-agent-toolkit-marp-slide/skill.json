@@ -1,0 +1,26 @@
+{
+  "id": "softaworks-agent-toolkit-marp-slide",
+  "name": "marp-slide",
+  "description": "Create professional Marp presentation slides with 7 beautiful themes (default, minimal, colorful, dark, gradient, tech, business). Use when users request slide creation, presentations, or Marp documents. Supports custom themes, image layouts, and \"make it look good\" requests with automatic quality improvements.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "softaworks",
+  "install_path": ".claude/skills/marp-slide/SKILL.md",
+  "source": {
+    "repo": "softaworks/agent-toolkit",
+    "url": "https://github.com/softaworks/agent-toolkit/blob/main/dist/plugins/marp-slide/skills/marp-slide/SKILL.md",
+    "path": "dist/plugins/marp-slide/skills/marp-slide/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:19.282Z",
+    "stars": 1872,
+    "language": "Python",
+    "pushed_at": "2026-03-05T16:46:24Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一款Marp幻灯片制作工具，能自动搞定排版与美化。适合需要快速生成专业演示文稿，或想让幻灯片轻松变好看的使用场景。"
+}

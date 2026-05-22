@@ -1,0 +1,26 @@
+{
+  "id": "wshobson-agents-changelog-automation",
+  "name": "changelog-automation",
+  "description": "Automate changelog generation from commits, PRs, and releases following Keep a Changelog format. Use when setting up release workflows, generating release notes, or standardizing commit conventions.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "wshobson",
+  "install_path": ".claude/skills/changelog-automation/SKILL.md",
+  "source": {
+    "repo": "wshobson/agents",
+    "url": "https://github.com/wshobson/agents/blob/main/plugins/documentation-generation/skills/changelog-automation/SKILL.md",
+    "path": "plugins/documentation-generation/skills/changelog-automation/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:58.971Z",
+    "stars": 35770,
+    "language": "Python",
+    "pushed_at": "2026-05-21T20:01:53Z",
+    "license": "MIT"
+  },
+  "summary_zh": "它能根据代码记录自动生成规范的更新日志，帮你省去手动整理发布说明的繁琐，非常适合用来搭建自动化发布工作流或规范团队提交习惯。"
+}

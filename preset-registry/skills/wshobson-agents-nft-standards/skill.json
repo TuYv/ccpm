@@ -1,0 +1,26 @@
+{
+  "id": "wshobson-agents-nft-standards",
+  "name": "nft-standards",
+  "description": "Implement NFT standards (ERC-721, ERC-1155) with proper metadata handling, minting strategies, and marketplace integration. Use when creating NFT contracts, building NFT marketplaces, or implementing digital asset systems.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "wshobson",
+  "install_path": ".claude/skills/nft-standards/SKILL.md",
+  "source": {
+    "repo": "wshobson/agents",
+    "url": "https://github.com/wshobson/agents/blob/main/plugins/blockchain-web3/skills/nft-standards/SKILL.md",
+    "path": "plugins/blockchain-web3/skills/nft-standards/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:55.869Z",
+    "stars": 35770,
+    "language": "Python",
+    "pushed_at": "2026-05-21T20:01:53Z",
+    "license": "MIT"
+  },
+  "summary_zh": "提供主流NFT协议的规范实现，帮你省去从零写合约的麻烦，适合快速搭建NFT交易市场或数字资产系统。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "fradser-dotclaude-refactor",
+  "name": "refactor",
+  "description": "Executes automated refactoring for specific files, directories, or semantic queries. This skill should be used when the user asks to refactor specific files or directories, simplify recently changed code, clean up dead code in a limited scope, or invokes \"/refactor\".",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "FradSer",
+  "install_path": ".claude/skills/refactor/SKILL.md",
+  "source": {
+    "repo": "FradSer/dotclaude",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/refactor/skills/refactor/SKILL.md",
+    "path": "refactor/skills/refactor/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:16.081Z",
+    "stars": 548,
+    "language": "Shell",
+    "pushed_at": "2026-05-21T09:20:23Z",
+    "license": null
+  },
+  "summary_zh": "这是一个自动化代码重构工具，能按文件、目录或语义精准重构，特别适合简化近期改动或清理局部死代码等需要局部优化的场景。"
+}

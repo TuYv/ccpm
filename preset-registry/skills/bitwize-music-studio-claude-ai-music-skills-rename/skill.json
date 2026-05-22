@@ -1,0 +1,26 @@
+{
+  "id": "bitwize-music-studio-claude-ai-music-skills-rename",
+  "name": "rename",
+  "description": "Renames an album or track, updating slugs, titles, and all mirrored paths. Use when the user wants to rename an album or track.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "bitwize-music-studio",
+  "install_path": ".claude/skills/rename/SKILL.md",
+  "source": {
+    "repo": "bitwize-music-studio/claude-ai-music-skills",
+    "url": "https://github.com/bitwize-music-studio/claude-ai-music-skills/blob/main/skills/rename/SKILL.md",
+    "path": "skills/rename/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:38.502Z",
+    "stars": 202,
+    "language": "Python",
+    "pushed_at": "2026-05-21T00:00:51Z",
+    "license": "CC0-1.0"
+  },
+  "summary_zh": "用来重命名专辑或音轨，适合在修改名称时自动同步更新标题、链接别名和所有镜像路径，帮你免去手动逐一排查修改的麻烦。"
+}

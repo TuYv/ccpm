@@ -1,0 +1,26 @@
+{
+  "id": "cloudai-x-claude-workflow-v2-designing-tests",
+  "name": "designing-tests",
+  "description": "Designs and implements testing strategies for any codebase. Use when adding tests, improving coverage, setting up testing infrastructure, debugging test failures, or when asked about unit tests, integration tests, or E2E testing.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "CloudAI-X",
+  "install_path": ".claude/skills/designing-tests/SKILL.md",
+  "source": {
+    "repo": "CloudAI-X/claude-workflow-v2",
+    "url": "https://github.com/CloudAI-X/claude-workflow-v2/blob/main/skills/designing-tests/SKILL.md",
+    "path": "skills/designing-tests/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:34.651Z",
+    "stars": 1361,
+    "language": "Python",
+    "pushed_at": "2026-02-14T18:09:29Z",
+    "license": "MIT"
+  },
+  "summary_zh": "它能为代码库设计和落地测试策略。适合在补写测试、搭基建、查报错，或处理单元到端到端各类测试场景时使用。"
+}

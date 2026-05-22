@@ -1,0 +1,26 @@
+{
+  "id": "softaworks-agent-toolkit-meme-factory",
+  "name": "meme-factory",
+  "description": "Generate memes using the memegen.link API. Use when users request memes, want to add humor to content, or need visual aids for social media. Supports 100+ popular templates with custom text and styling.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "softaworks",
+  "install_path": ".claude/skills/meme-factory/SKILL.md",
+  "source": {
+    "repo": "softaworks/agent-toolkit",
+    "url": "https://github.com/softaworks/agent-toolkit/blob/main/dist/plugins/meme-factory/skills/meme-factory/SKILL.md",
+    "path": "dist/plugins/meme-factory/skills/meme-factory/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:19.383Z",
+    "stars": 1872,
+    "language": "Python",
+    "pushed_at": "2026-03-05T16:46:24Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个表情包生成工具，专治社交媒体缺配图、内容太严肃或日常斗图没素材的烦恼，帮你轻松给图文加点幽默感。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "zechenzhangagi-ai-research-skills-tensorboard",
+  "name": "tensorboard",
+  "description": "Visualize training metrics, debug models with histograms, compare experiments, visualize model graphs, and profile performance with TensorBoard - Google's ML visualization toolkit",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "zechenzhangAGI",
+  "install_path": ".claude/skills/tensorboard/SKILL.md",
+  "source": {
+    "repo": "zechenzhangAGI/AI-research-SKILLs",
+    "url": "https://github.com/zechenzhangAGI/AI-research-SKILLs/blob/main/13-mlops/tensorboard/SKILL.md",
+    "path": "13-mlops/tensorboard/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:44.400Z",
+    "stars": 8786,
+    "language": "TeX",
+    "pushed_at": "2026-04-28T05:09:27Z",
+    "license": "MIT"
+  },
+  "summary_zh": "谷歌出品的机器学习可视化工具，能帮你直观追踪训练过程、排查模型问题并分析运行性能，非常适合在模型开发与调优阶段对比实验。"
+}

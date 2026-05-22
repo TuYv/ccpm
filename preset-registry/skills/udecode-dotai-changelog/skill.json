@@ -1,0 +1,26 @@
+{
+  "id": "udecode-dotai-changelog",
+  "name": "changelog",
+  "description": "Use when updating CHANGELOG.md. Enforces consistent formatting with bolded item names, dash separators, and specific section ordering.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "udecode",
+  "install_path": ".claude/skills/changelog/SKILL.md",
+  "source": {
+    "repo": "udecode/dotai",
+    "url": "https://github.com/udecode/dotai/blob/main/.claude/skills/changelog/SKILL.md",
+    "path": ".claude/skills/changelog/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:07.753Z",
+    "stars": 1154,
+    "language": "Shell",
+    "pushed_at": "2026-03-30T11:07:19Z",
+    "license": null
+  },
+  "summary_zh": "这是一个更新日志的辅助工具，能帮你强制统一排版风格，解决多人协作时日志格式混乱的问题，适合需要规范化管理版本记录的项目。"
+}

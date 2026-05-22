@@ -1,0 +1,26 @@
+{
+  "id": "thedotmack-claude-mem-mem-search",
+  "name": "mem-search",
+  "description": "Search claude-mem's persistent cross-session memory database. Use when user asks \"did we already solve this?\", \"how did we do X last time?\", or needs work from previous sessions.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "thedotmack",
+  "install_path": ".claude/skills/mem-search/SKILL.md",
+  "source": {
+    "repo": "thedotmack/claude-mem",
+    "url": "https://github.com/thedotmack/claude-mem/blob/main/plugin/skills/mem-search/SKILL.md",
+    "path": "plugin/skills/mem-search/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:48.507Z",
+    "stars": 77318,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-21T10:26:19Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "这是搜索Claude跨会话历史记忆的工具，能帮你找回以前对话的工作记录，特别适合需要查询“上次怎么做的”或“之前解决过没”的场景。"
+}

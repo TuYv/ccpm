@@ -1,0 +1,26 @@
+{
+  "id": "mksglu-claude-context-mode-ctx-upgrade",
+  "name": "ctx-upgrade",
+  "description": "| Update context-mode from GitHub and fix hooks/settings. Pulls latest, builds, installs, updates npm global, configures hooks. Trigger: /context-mode:ctx-upgrade",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mksglu",
+  "install_path": ".claude/skills/ctx-upgrade/SKILL.md",
+  "source": {
+    "repo": "mksglu/claude-context-mode",
+    "url": "https://github.com/mksglu/claude-context-mode/blob/main/skills/ctx-upgrade/SKILL.md",
+    "path": "skills/ctx-upgrade/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:51.949Z",
+    "stars": 15360,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-21T13:02:08Z",
+    "license": null
+  },
+  "summary_zh": "这是一个一键更新 context-mode 的自动化工具，能帮你自动完成从下载到安装的全流程并修复相关配置，省去手动操作的麻烦，适合需要保持该工具最新版的开发者。"
+}

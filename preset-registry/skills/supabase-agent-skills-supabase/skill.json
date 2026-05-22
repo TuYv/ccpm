@@ -1,0 +1,26 @@
+{
+  "id": "supabase-agent-skills-supabase",
+  "name": "supabase",
+  "description": "Use when doing ANY task involving Supabase. Triggers: Supabase products (Database, Auth, Edge Functions, Realtime, Storage, Vectors, Cron, Queues); client libraries and SSR integrations (supabase-js, @supabase/ssr) in Next.js, React, SvelteKit, Astro, Remix; auth issues (login, logout, sessions, JWT, cookies, getSession, getUser, getClaims, RLS); Supabase CLI or MCP server; schema changes, migrations, security audits, Postgres extensions (pg_graphql, pg_cron, pg_vector).",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "supabase",
+  "install_path": ".claude/skills/supabase/SKILL.md",
+  "source": {
+    "repo": "supabase/agent-skills",
+    "url": "https://github.com/supabase/agent-skills/blob/main/skills/supabase/SKILL.md",
+    "path": "skills/supabase/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:57.231Z",
+    "stars": 2143,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-21T20:18:09Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个开源的后端即服务平台，提供开箱即用的全套后端功能。适合全栈开发者快速搭建应用，帮你省去从零开发用户鉴权、数据库管理及前后端联调的麻烦。"
+}

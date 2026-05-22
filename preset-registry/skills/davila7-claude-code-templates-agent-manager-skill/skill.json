@@ -1,0 +1,26 @@
+{
+  "id": "davila7-claude-code-templates-agent-manager-skill",
+  "name": "agent-manager-skill",
+  "description": "Manage multiple local CLI agents via tmux sessions (start/stop/monitor/assign) with cron-friendly scheduling.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "davila7",
+  "install_path": ".claude/skills/agent-manager-skill/SKILL.md",
+  "source": {
+    "repo": "davila7/claude-code-templates",
+    "url": "https://github.com/davila7/claude-code-templates/blob/main/cli-tool/components/skills/ai-research/agent-manager-skill/SKILL.md",
+    "path": "cli-tool/components/skills/ai-research/agent-manager-skill/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:42.821Z",
+    "stars": 27482,
+    "language": "Python",
+    "pushed_at": "2026-05-22T04:31:04Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个基于tmux的本地命令行智能体管理工具，能帮你轻松调度、监控和分配多个智能体，特别适合需要定时批量运行本地智能体的场景。"
+}

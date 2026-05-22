@@ -1,0 +1,26 @@
+{
+  "id": "avifenesh-agnix-argument-hint-no-args",
+  "name": "hint-skill",
+  "description": "Use when testing argument hints",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "avifenesh",
+  "install_path": ".claude/skills/argument-hint-no-args/SKILL.md",
+  "source": {
+    "repo": "avifenesh/agnix",
+    "url": "https://github.com/avifenesh/agnix/blob/main/tests/fixtures/invalid/skills/argument-hint-no-args/SKILL.md",
+    "path": "tests/fixtures/invalid/skills/argument-hint-no-args/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:46:02.108Z",
+    "stars": 253,
+    "language": "Rust",
+    "pushed_at": "2026-05-19T14:13:30Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "这是一个测试参数提示的辅助工具，适合在开发调试时验证代码的参数提示是否正常显示。"
+}

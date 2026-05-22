@@ -1,0 +1,26 @@
+{
+  "id": "cloudai-x-claude-workflow-v2-error-handling",
+  "name": "error-handling",
+  "description": "Implements error handling patterns, structured logging, retry strategies, circuit breakers, and graceful degradation. Use when designing error handling, setting up logging, implementing retries, adding error tracking, or when asked about error boundaries, log aggregation, alerting, or resilience patterns.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "CloudAI-X",
+  "install_path": ".claude/skills/error-handling/SKILL.md",
+  "source": {
+    "repo": "CloudAI-X/claude-workflow-v2",
+    "url": "https://github.com/CloudAI-X/claude-workflow-v2/blob/main/skills/error-handling/SKILL.md",
+    "path": "skills/error-handling/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:34.815Z",
+    "stars": 1361,
+    "language": "Python",
+    "pushed_at": "2026-02-14T18:09:29Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一套提升系统健壮性的容错与日志方案，适合在搭建错误追踪、日志告警，或需要给应用增加异常保底与恢复机制时使用。"
+}

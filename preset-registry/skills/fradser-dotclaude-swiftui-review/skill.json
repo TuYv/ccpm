@@ -1,0 +1,26 @@
+{
+  "id": "fradser-dotclaude-swiftui-review",
+  "name": "swiftui-review",
+  "description": "Reviews SwiftUI code for best practices on modern APIs, maintainability, and performance. This skill should be used when the user asks to review SwiftUI code, check for deprecated iOS/macOS APIs, validate data flow patterns, or audit accessibility compliance in Swift projects.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "FradSer",
+  "install_path": ".claude/skills/swiftui-review/SKILL.md",
+  "source": {
+    "repo": "FradSer/dotclaude",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/swiftui/skills/swiftui-review/SKILL.md",
+    "path": "swiftui/skills/swiftui-review/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:16.969Z",
+    "stars": 548,
+    "language": "Shell",
+    "pushed_at": "2026-05-21T09:20:23Z",
+    "license": null
+  },
+  "summary_zh": "专门审查SwiftUI代码的工具，帮你发现过时API、数据流和无障碍问题，确保代码性能好且易维护，适合日常代码评审和质量把控。"
+}

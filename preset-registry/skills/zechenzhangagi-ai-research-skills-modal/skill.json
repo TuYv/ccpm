@@ -1,0 +1,26 @@
+{
+  "id": "zechenzhangagi-ai-research-skills-modal",
+  "name": "modal-serverless-gpu",
+  "description": "Serverless GPU cloud platform for running ML workloads. Use when you need on-demand GPU access without infrastructure management, deploying ML models as APIs, or running batch jobs with automatic scaling.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "zechenzhangAGI",
+  "install_path": ".claude/skills/modal/SKILL.md",
+  "source": {
+    "repo": "zechenzhangAGI/AI-research-SKILLs",
+    "url": "https://github.com/zechenzhangAGI/AI-research-SKILLs/blob/main/09-infrastructure/modal/SKILL.md",
+    "path": "09-infrastructure/modal/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:41.917Z",
+    "stars": 8786,
+    "language": "TeX",
+    "pushed_at": "2026-04-28T05:09:27Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个无服务器GPU云平台，专跑机器学习任务。适合想按需用GPU但不愿管底层运维、要把模型做成API，或是跑大规模批量计算的场景。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "nowork-studio-toprank-toprank-upgrade-skill",
+  "name": "toprank-upgrade",
+  "description": "> Upgrade toprank plugin to the latest version. Updates the marketplace repo, installs the new version to the plugin cache, and updates installed_plugins.json. Use when asked to \"upgrade toprank\", \"update toprank\", or \"get latest version\". Also handles inline upgrade prompts when a skill detects UPGRADE_AVAILABLE at startup.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "nowork-studio",
+  "install_path": ".claude/skills/toprank-upgrade-skill/SKILL.md",
+  "source": {
+    "repo": "nowork-studio/toprank",
+    "url": "https://github.com/nowork-studio/toprank/blob/main/toprank-upgrade-skill/SKILL.md",
+    "path": "toprank-upgrade-skill/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:37.769Z",
+    "stars": 2599,
+    "language": "Python",
+    "pushed_at": "2026-05-20T05:41:47Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个自动把toprank插件升级到最新版的工具。它帮你省去手动处理仓库、缓存和配置的麻烦，适合在主动要求更新或启动时提示有新版本的场景下使用。"
+}

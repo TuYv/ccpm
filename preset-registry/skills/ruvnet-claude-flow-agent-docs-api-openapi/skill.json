@@ -1,0 +1,26 @@
+{
+  "id": "ruvnet-claude-flow-agent-docs-api-openapi",
+  "name": "agent-docs-api-openapi",
+  "description": "Agent skill for docs-api-openapi - invoke with $agent-docs-api-openapi",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ruvnet",
+  "install_path": ".claude/skills/agent-docs-api-openapi/SKILL.md",
+  "source": {
+    "repo": "ruvnet/claude-flow",
+    "url": "https://github.com/ruvnet/claude-flow/blob/main/.agents/skills/agent-docs-api-openapi/SKILL.md",
+    "path": ".agents/skills/agent-docs-api-openapi/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:41:59.677Z",
+    "stars": 53972,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-22T03:51:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个让AI智能体能看懂和解析OpenAPI文档的技能插件，适合需要让AI自动根据文档对接或测试API的场景。"
+}

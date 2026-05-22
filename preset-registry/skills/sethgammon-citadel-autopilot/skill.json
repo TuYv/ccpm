@@ -1,0 +1,26 @@
+{
+  "id": "sethgammon-citadel-autopilot",
+  "name": "autopilot",
+  "description": ">- Intake-to-delivery pipeline. Processes pending items from .planning/intake/: briefs new ideas, executes approved work through research → plan → build → verify. Drop a file in .planning/intake/ and invoke this skill.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "SethGammon",
+  "install_path": ".claude/skills/autopilot/SKILL.md",
+  "source": {
+    "repo": "SethGammon/Citadel",
+    "url": "https://github.com/SethGammon/Citadel/blob/main/skills/autopilot/SKILL.md",
+    "path": "skills/autopilot/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:05.085Z",
+    "stars": 572,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-07T17:50:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一条全自动任务流水线。只需把需求丢进指定目录，它就会自动拆解新点子，并从调研、规划一路推进到开发和验证，省去手动跟进的麻烦，适合想法快速落地的开发场景。"
+}

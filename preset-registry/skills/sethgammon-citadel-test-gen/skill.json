@@ -1,0 +1,26 @@
+{
+  "id": "sethgammon-citadel-test-gen",
+  "name": "test-gen",
+  "description": "Generate and verify tests — happy path, edge cases, error paths — using the project's own framework and patterns",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "SethGammon",
+  "install_path": ".claude/skills/test-gen/SKILL.md",
+  "source": {
+    "repo": "SethGammon/Citadel",
+    "url": "https://github.com/SethGammon/Citadel/blob/main/skills/test-gen/SKILL.md",
+    "path": "skills/test-gen/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:08.133Z",
+    "stars": 572,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-07T17:50:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一款自动化测试生成与校验工具，能基于项目自身的框架和模式，自动生成并验证覆盖全场景的测试用例，帮你彻底告别手写繁琐测试的麻烦。"
+}

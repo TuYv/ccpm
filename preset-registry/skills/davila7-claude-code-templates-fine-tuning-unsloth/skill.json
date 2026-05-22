@@ -1,0 +1,26 @@
+{
+  "id": "davila7-claude-code-templates-fine-tuning-unsloth",
+  "name": "unsloth",
+  "description": "Expert guidance for fast fine-tuning with Unsloth - 2-5x faster training, 50-80% less memory, LoRA/QLoRA optimization",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "davila7",
+  "install_path": ".claude/skills/fine-tuning-unsloth/SKILL.md",
+  "source": {
+    "repo": "davila7/claude-code-templates",
+    "url": "https://github.com/davila7/claude-code-templates/blob/main/cli-tool/components/skills/ai-research/fine-tuning-unsloth/SKILL.md",
+    "path": "cli-tool/components/skills/ai-research/fine-tuning-unsloth/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:46.557Z",
+    "stars": 27482,
+    "language": "Python",
+    "pushed_at": "2026-05-22T04:31:04Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是个能大幅加速大模型微调的工具，不仅成倍提升训练速度，还能省下大半显存，特别适合显卡有限又想快速跑LoRA微调的场景。"
+}

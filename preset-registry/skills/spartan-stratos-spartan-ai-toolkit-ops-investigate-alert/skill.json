@@ -1,0 +1,26 @@
+{
+  "id": "spartan-stratos-spartan-ai-toolkit-ops-investigate-alert",
+  "name": "ops-investigate-alert",
+  "description": "Investigate a monitoring alert end-to-end. Pulls metrics, logs, traces, and recent code changes to identify root cause. Works with any monitoring MCP.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "spartan-stratos",
+  "install_path": ".claude/skills/ops-investigate-alert/SKILL.md",
+  "source": {
+    "repo": "spartan-stratos/spartan-ai-toolkit",
+    "url": "https://github.com/spartan-stratos/spartan-ai-toolkit/blob/master/toolkit/skills/ops-investigate-alert/SKILL.md",
+    "path": "toolkit/skills/ops-investigate-alert/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-05-22T04:46:16.463Z",
+    "stars": 71,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-11T06:56:56Z",
+    "license": null
+  },
+  "summary_zh": "这是一款一站式监控告警排查工具，能自动关联可观测数据与代码变更来定位故障根因，适用于接入各类监控MCP的排障场景。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "trailofbits-skills-sharp-edges",
+  "name": "sharp-edges",
+  "description": "Identifies error-prone APIs, dangerous configurations, and footgun designs that enable security mistakes. Use when reviewing API designs, configuration schemas, cryptographic library ergonomics, or evaluating whether code follows 'secure by default' and 'pit of success' principles. Triggers: footgun, misuse-resistant, secure defaults, API usability, dangerous configuration.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "trailofbits",
+  "install_path": ".claude/skills/sharp-edges/SKILL.md",
+  "source": {
+    "repo": "trailofbits/skills",
+    "url": "https://github.com/trailofbits/skills/blob/main/plugins/sharp-edges/skills/sharp-edges/SKILL.md",
+    "path": "plugins/sharp-edges/skills/sharp-edges/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:41:51.868Z",
+    "stars": 5325,
+    "language": "Python",
+    "pushed_at": "2026-05-16T17:22:25Z",
+    "license": "CC-BY-SA-4.0"
+  },
+  "summary_zh": "专门识别易错API和危险配置，帮你避开容易引发安全漏洞的设计缺陷。适合审查API、加密库设计，或评估代码是否符合默认安全与防误用原则。"
+}

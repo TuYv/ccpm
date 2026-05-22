@@ -1,0 +1,26 @@
+{
+  "id": "deanpeters-product-manager-skills-prioritization-advisor",
+  "name": "prioritization-advisor",
+  "description": "Choose a prioritization framework based on stage, team context, and stakeholder needs. Use when deciding between RICE, ICE, value/effort, or another scoring approach.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "deanpeters",
+  "install_path": ".claude/skills/prioritization-advisor/SKILL.md",
+  "source": {
+    "repo": "deanpeters/Product-Manager-Skills",
+    "url": "https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/prioritization-advisor/SKILL.md",
+    "path": "skills/prioritization-advisor/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:41:46.392Z",
+    "stars": 4428,
+    "language": "Shell",
+    "pushed_at": "2026-05-20T12:25:44Z",
+    "license": null
+  },
+  "summary_zh": "帮你挑选需求优先级排序框架的决策工具。当纠结于用RICE、ICE还是其他评分法时，它能结合项目阶段、团队现状和各方诉求，推荐最合适的排序方案。"
+}

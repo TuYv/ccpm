@@ -1,0 +1,26 @@
+{
+  "id": "nowork-studio-toprank-content-planner",
+  "name": "content-planner",
+  "description": "> GSC-driven content calendar. Pulls real Search Console data, finds the highest click-potential opportunities (striking-distance queries at positions 5-20, unanswered query intent, related-keyword expansions), and produces a dated, prioritized content calendar — ready to hand to /content-writer. Use when the user asks \"plan my content\", \"what should I write next\", \"content calendar\", \"content plan\", \"content roadmap\", \"editorial calendar\", \"what topics will rank\", \"find quick-win SEO topics\", \"",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "nowork-studio",
+  "install_path": ".claude/skills/content-planner/SKILL.md",
+  "source": {
+    "repo": "nowork-studio/toprank",
+    "url": "https://github.com/nowork-studio/toprank/blob/main/seo/content-planner/SKILL.md",
+    "path": "seo/content-planner/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:37.027Z",
+    "stars": 2599,
+    "language": "Python",
+    "pushed_at": "2026-05-20T05:41:47Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个基于谷歌搜索数据的SEO内容排期工具。它帮你找出容易拿排名的主题，解决不知道写什么的难题，直接生成带优先级的发布日历，适合做内容规划或找快赢话题。"
+}

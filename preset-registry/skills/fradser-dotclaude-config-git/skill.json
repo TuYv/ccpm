@@ -1,0 +1,26 @@
+{
+  "id": "fradser-dotclaude-config-git",
+  "name": "config-git",
+  "description": "Configures git setup for user identity and project conventions. This skill should be used when the user asks to \"configure git\", \"setup git\", \"set commit scopes\", or needs project-specific Git settings.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "FradSer",
+  "install_path": ".claude/skills/config-git/SKILL.md",
+  "source": {
+    "repo": "FradSer/dotclaude",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/git/skills/config-git/SKILL.md",
+    "path": "git/skills/config-git/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:14.214Z",
+    "stars": 548,
+    "language": "Shell",
+    "pushed_at": "2026-05-21T09:20:23Z",
+    "license": null
+  },
+  "summary_zh": "帮你搞定 Git 用户身份和项目规范的配置，适合在初始化 Git、设定提交规范或需要项目级 Git 设置时使用。"
+}

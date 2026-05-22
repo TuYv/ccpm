@@ -1,0 +1,26 @@
+{
+  "id": "callstackincubator-agent-skills-react-native-brownfield-migration",
+  "name": "react-native-brownfield-migration",
+  "description": "Provides an incremental adoption strategy to migrate native iOS or Android apps to React Native or Expo using @callstack/react-native-brownfield for initial setup. Use when planning migration steps, packaging XCFramework/AAR artifacts, and integrating them into host apps.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "callstackincubator",
+  "install_path": ".claude/skills/react-native-brownfield-migration/SKILL.md",
+  "source": {
+    "repo": "callstackincubator/agent-skills",
+    "url": "https://github.com/callstackincubator/agent-skills/blob/main/skills/react-native-brownfield-migration/SKILL.md",
+    "path": "skills/react-native-brownfield-migration/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:15.239Z",
+    "stars": 1360,
+    "language": "JavaScript",
+    "pushed_at": "2026-04-28T03:25:43Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个渐进式迁移工具，帮原生iOS或安卓App逐步过渡到React Native或Expo，特别适合需要规划迁移步骤并把原生组件整合进现有项目的场景。"
+}

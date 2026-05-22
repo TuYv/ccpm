@@ -1,0 +1,26 @@
+{
+  "id": "davila7-claude-code-templates-deep-research-notebooklm",
+  "name": "deep-research-notebooklm",
+  "description": "Deep research skill powered by NotebookLM MCP. Conducts structured multi-source research (market analysis, competitive intel, trend analysis, prospect research) using Google NotebookLM as the research engine, then delivers formatted briefs and optional studio artifacts (slides, audio podcasts, videos, infographics, reports, mind maps).",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "davila7",
+  "install_path": ".claude/skills/deep-research-notebooklm/SKILL.md",
+  "source": {
+    "repo": "davila7/claude-code-templates",
+    "url": "https://github.com/davila7/claude-code-templates/blob/main/cli-tool/components/skills/ai-research/deep-research-notebooklm/SKILL.md",
+    "path": "cli-tool/components/skills/ai-research/deep-research-notebooklm/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:44.691Z",
+    "stars": 27482,
+    "language": "Python",
+    "pushed_at": "2026-05-22T04:31:04Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个借助NotebookLM进行多源深度调研的工具，能自动完成市场或竞品分析，并直接生成调研简报及多媒体展示材料，适合需要快速产出深度调研与汇报内容的场景。"
+}

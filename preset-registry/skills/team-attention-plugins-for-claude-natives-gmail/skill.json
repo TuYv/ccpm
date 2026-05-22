@@ -1,0 +1,26 @@
+{
+  "id": "team-attention-plugins-for-claude-natives-gmail",
+  "name": "gmail",
+  "description": "This skill should be used when the user asks to \"check email\", \"read emails\", \"send email\", \"reply to email\", \"search inbox\", or manages Gmail. Supports multi-account Gmail integration for reading, searching, sending, and label management.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "team-attention",
+  "install_path": ".claude/skills/gmail/SKILL.md",
+  "source": {
+    "repo": "team-attention/plugins-for-claude-natives",
+    "url": "https://github.com/team-attention/plugins-for-claude-natives/blob/main/plugins/gmail/skills/gmail/SKILL.md",
+    "path": "plugins/gmail/skills/gmail/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:37.085Z",
+    "stars": 773,
+    "language": "Python",
+    "pushed_at": "2026-04-20T06:53:40Z",
+    "license": "MIT"
+  },
+  "summary_zh": "帮你集中管理谷歌邮箱的工具，专门解决多账号下收发、搜索和整理邮件的麻烦，适合需要高效处理日常邮件的场景。"
+}

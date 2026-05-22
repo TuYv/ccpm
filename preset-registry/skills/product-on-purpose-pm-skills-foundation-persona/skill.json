@@ -1,0 +1,26 @@
+{
+  "id": "product-on-purpose-pm-skills-foundation-persona",
+  "name": "foundation-persona",
+  "description": "Generates an evidence-calibrated product or marketing persona using the canonical v2.5 output contract. Use when shaping artifact perspective, stress-testing decisions, or framing product and GTM strategy.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "product-on-purpose",
+  "install_path": ".claude/skills/foundation-persona/SKILL.md",
+  "source": {
+    "repo": "product-on-purpose/pm-skills",
+    "url": "https://github.com/product-on-purpose/pm-skills/blob/main/skills/foundation-persona/SKILL.md",
+    "path": "skills/foundation-persona/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:46:25.052Z",
+    "stars": 226,
+    "language": "Shell",
+    "pushed_at": "2026-05-22T03:57:47Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "它能生成有真实数据支撑的用户画像，适合在找准产品定位、验证决策或制定市场策略时使用。"
+}

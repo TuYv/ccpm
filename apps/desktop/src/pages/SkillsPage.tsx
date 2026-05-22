@@ -87,6 +87,7 @@ export default function SkillsPage() {
   const [importPreview, setImportPreview] = useState<ImportedBundle | null>(null);
   const [pickerSkillId, setPickerSkillId] = useState<string | null>(null);
   const [importing, setImporting] = useState(false);
+  const [installingBundleId, setInstallingBundleId] = useState<string | null>(null);
   const [readmeOpen, setReadmeOpen] = useState<Record<string, boolean>>({});
   const [groupByBundle, setGroupByBundle] = useState(true);
   const [openBundleId, setOpenBundleId] = useState<string | null>(null);
@@ -173,6 +174,9 @@ export default function SkillsPage() {
   }, [focusId, setFocusId, groupedView, openBundleId]);
 
   const total = index?.skills.length ?? 0;
+  const visibleTotal = groupedView
+    ? groupedView.bundles.length + groupedView.singletons.length
+    : total;
   const installedCount = installedIds.length;
 
   async function handleInstall(skill: SkillMeta) {
@@ -193,6 +197,33 @@ export default function SkillsPage() {
       addToast(`已从库移除 ${skill.name}`, "success");
     } catch (e) {
       addToast(`移除失败：${String(e)}`, "error");
+    }
+  }
+
+  async function handleInstallBundle(bundle: BundleMeta, members: SkillMeta[]) {
+    const pending = members.filter((skill) => !installedIds.includes(skill.id));
+    if (pending.length === 0) return;
+
+    setInstallingBundleId(bundle.id);
+    let failed = 0;
+    try {
+      for (const skill of pending) {
+        try {
+          await api.downloadSkillToLibrary(skill);
+        } catch {
+          failed += 1;
+        }
+      }
+      await loadInstalled(scope);
+      await installedLoad();
+      const installedN = pending.length - failed;
+      if (failed > 0) {
+        addToast(`已安装 ${installedN} 个，失败 ${failed} 个`, "error");
+      } else {
+        addToast(`已安装 ${bundle.name} 的 ${installedN} 个技能`, "success");
+      }
+    } finally {
+      setInstallingBundleId(null);
     }
   }
 
@@ -384,6 +415,8 @@ export default function SkillsPage() {
 
   function renderBundleCard(bundle: BundleMeta, members: SkillMeta[]) {
     const installedInBundle = members.filter((m) => installedIds.includes(m.id)).length;
+    const pendingInstallCount = members.length - installedInBundle;
+    const isInstallingBundle = installingBundleId === bundle.id;
     return (
       <div
         key={`bundle-${bundle.id}`}
@@ -460,6 +493,22 @@ export default function SkillsPage() {
                 <span>GitHub</span>
               </span>
             </Button>
+            <Button
+              size="sm"
+              variant="primary"
+              icon={PlusIcon}
+              disabled={pendingInstallCount === 0 || isInstallingBundle}
+              onClick={(e) => {
+                e.stopPropagation();
+                handleInstallBundle(bundle, members);
+              }}
+            >
+              {pendingInstallCount === 0
+                ? "已安装"
+                : isInstallingBundle
+                  ? "安装中…"
+                  : `Install all ${pendingInstallCount}`}
+            </Button>
           </div>
         </div>
       </div>
@@ -491,7 +540,10 @@ export default function SkillsPage() {
     <>
       <Topbar
         title="Skills"
-        crumb={`${total} available · ${installedCount} installed ${scopeLabel(scope)}`}
+        crumb={groupedView
+          ? `${visibleTotal} entries · ${total} skills · ${installedCount} installed ${scopeLabel(scope)}`
+          : `${total} available · ${installedCount} installed ${scopeLabel(scope)}`
+        }
         actions={
           <>
             <GithubImportInput onImported={setImportPreview} />

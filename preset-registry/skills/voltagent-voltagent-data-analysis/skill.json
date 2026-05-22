@@ -1,0 +1,26 @@
+{
+  "id": "voltagent-voltagent-data-analysis",
+  "name": "Workspace Data Analyst",
+  "description": "Analyze CSV files in the workspace and summarize insights.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "VoltAgent",
+  "install_path": ".claude/skills/data-analysis/SKILL.md",
+  "source": {
+    "repo": "VoltAgent/voltagent",
+    "url": "https://github.com/VoltAgent/voltagent/blob/main/examples/with-workspace/workspace/skills/data-analysis/SKILL.md",
+    "path": "examples/with-workspace/workspace/skills/data-analysis/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:11.850Z",
+    "stars": 9075,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-11T18:05:17Z",
+    "license": "MIT"
+  },
+  "summary_zh": "它能帮你分析CSV文件并提炼出关键洞察，适合需要快速从表格数据中提取核心结论的场景。"
+}

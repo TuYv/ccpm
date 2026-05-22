@@ -1,0 +1,26 @@
+{
+  "id": "prompt-security-clawsec-nanoclaw-traffic-guardian",
+  "name": "nanoclaw-traffic-guardian",
+  "description": "NanoClaw runtime traffic monitoring baseline for host-side proxy inspection with container-safe MCP and IPC status surfaces.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "0.0.1-beta2",
+  "author": "prompt-security",
+  "install_path": ".claude/skills/nanoclaw-traffic-guardian/SKILL.md",
+  "source": {
+    "repo": "prompt-security/clawsec",
+    "url": "https://github.com/prompt-security/clawsec/blob/main/skills/nanoclaw-traffic-guardian/SKILL.md",
+    "path": "skills/nanoclaw-traffic-guardian/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:46.275Z",
+    "stars": 1000,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-21T07:14:18Z",
+    "license": "AGPL-3.0"
+  },
+  "summary_zh": "这是一款运行时流量监控基线，专用于宿主机侧的代理流量审查，在保障容器安全的同时提供MCP与IPC状态接口，适合容器环境下的网络观测与安全检查场景。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "peterkrueck-claude-code-development-kit-bg-remove",
+  "name": "bg-remove",
+  "description": "Remove backgrounds from images using local AI (rembg). Use when removing backgrounds from character art, mascot images, photos, or any image that needs a transparent background.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "peterkrueck",
+  "install_path": ".claude/skills/bg-remove/SKILL.md",
+  "source": {
+    "repo": "peterkrueck/Claude-Code-Development-Kit",
+    "url": "https://github.com/peterkrueck/Claude-Code-Development-Kit/blob/main/skills/bg-remove/SKILL.md",
+    "path": "skills/bg-remove/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:06.410Z",
+    "stars": 1356,
+    "language": "Shell",
+    "pushed_at": "2026-05-18T15:20:13Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一款本地AI抠图工具，能帮你快速给角色立绘、吉祥物或照片去背景，轻松搞定透明底图需求。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "hyf0-vue-skills-create-adaptable-composable",
+  "name": "create-adaptable-composable",
+  "description": "Create a library-grade Vue composable that accepts maybe-reactive inputs (MaybeRef / MaybeRefOrGetter) so callers can pass a plain value, ref, or getter. Normalize inputs with toValue()/toRef() inside reactive effects (watch/watchEffect) to keep behavior predictable and reactive. Use this skill when user asks for creating adaptable or reusable composables.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "hyf0",
+  "install_path": ".claude/skills/create-adaptable-composable/SKILL.md",
+  "source": {
+    "repo": "hyf0/vue-skills",
+    "url": "https://github.com/hyf0/vue-skills/blob/main/skills/create-adaptable-composable/SKILL.md",
+    "path": "skills/create-adaptable-composable/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:03.778Z",
+    "stars": 2452,
+    "language": null,
+    "pushed_at": "2026-03-26T05:50:25Z",
+    "license": "MIT"
+  },
+  "summary_zh": "帮你编写高复用 Vue 组合式函数的工具，允许调用者随意传入普通值、ref或getter，内部自动统一处理响应式，解决传参类型受限问题，适合开发库级通用逻辑。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "fradser-dotclaude-best-practices",
+  "name": "best-practices",
+  "description": "Language-specific best practices, code quality standards, and framework detection rules. Use when executing refactoring workflows, applying code quality rules, detecting frameworks, or checking language-specific patterns for TypeScript, Python, Go, Swift, or React.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.3.0",
+  "author": "FradSer",
+  "install_path": ".claude/skills/best-practices/SKILL.md",
+  "source": {
+    "repo": "FradSer/dotclaude",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/refactor/skills/best-practices/SKILL.md",
+    "path": "refactor/skills/best-practices/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:15.900Z",
+    "stars": 548,
+    "language": "Shell",
+    "pushed_at": "2026-05-21T09:20:23Z",
+    "license": null
+  },
+  "summary_zh": "这是一套多语言代码规范与框架检测规则库，帮你在重构代码、把控质量或识别特定语言与框架模式时，直接获取现成的最佳实践参考。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "softaworks-agent-toolkit-frontend-to-backend-requirements",
+  "name": "frontend-to-backend-requirements",
+  "description": "Document frontend data needs for backend developers. Use when frontend needs to communicate API requirements to backend, or user says 'backend requirements', 'what data do I need', 'API requirements', or is describing data needs for a UI.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "softaworks",
+  "install_path": ".claude/skills/frontend-to-backend-requirements/SKILL.md",
+  "source": {
+    "repo": "softaworks/agent-toolkit",
+    "url": "https://github.com/softaworks/agent-toolkit/blob/main/dist/plugins/frontend-to-backend-requirements/skills/frontend-to-backend-requirements/SKILL.md",
+    "path": "dist/plugins/frontend-to-backend-requirements/skills/frontend-to-backend-requirements/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:18.435Z",
+    "stars": 1872,
+    "language": "Python",
+    "pushed_at": "2026-03-05T16:46:24Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个帮前端梳理并记录接口数据需求的文档工具，能解决前后端对接时前端说不清要什么数据的问题，特别适合前端向后端提API需求时使用。"
+}

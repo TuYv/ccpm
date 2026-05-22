@@ -1,0 +1,26 @@
+{
+  "id": "ruvnet-claude-flow-agent-researcher",
+  "name": "agent-researcher",
+  "description": "Agent skill for researcher - invoke with $agent-researcher",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ruvnet",
+  "install_path": ".claude/skills/agent-researcher/SKILL.md",
+  "source": {
+    "repo": "ruvnet/claude-flow",
+    "url": "https://github.com/ruvnet/claude-flow/blob/main/.agents/skills/agent-researcher/SKILL.md",
+    "path": ".agents/skills/agent-researcher/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:04.222Z",
+    "stars": 53972,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-22T03:51:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "专为AI代理打造的研究技能插件，能帮你自动搜集和整理资料，适合需要深度调研与信息检索的场景。"
+}

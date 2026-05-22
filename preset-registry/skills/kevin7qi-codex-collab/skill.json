@@ -1,0 +1,26 @@
+{
+  "id": "kevin7qi-codex-collab",
+  "name": "codex-collab",
+  "description": "Use when the user asks to invoke, delegate to, or collaborate with Codex on any task. Also use PROACTIVELY when an independent, non-Claude perspective from Codex would add value — second opinions on code, plans, architecture, or design decisions.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Kevin7Qi",
+  "install_path": ".claude/skills/./SKILL.md",
+  "source": {
+    "repo": "Kevin7Qi/codex-collab",
+    "url": "https://github.com/Kevin7Qi/codex-collab/blob/main/SKILL.md",
+    "path": "SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:33.245Z",
+    "stars": 82,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-20T12:31:26Z",
+    "license": "MIT"
+  },
+  "summary_zh": "帮你调用和委派任务给Codex的协作工具。当你在代码、架构或设计决策上需要独立于Claude的第三方视角和第二意见时，用它非常合适。"
+}

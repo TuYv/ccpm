@@ -1,0 +1,26 @@
+{
+  "id": "sethgammon-citadel-daemon",
+  "name": "daemon",
+  "description": ">- Continuous autonomous operation mode. Keeps campaigns running 24/7 by chaining Claude Code sessions via RemoteTrigger. Each session picks up from the campaign's continuation state, works until context runs low or the phase completes, then schedules the next session. Auto-stops on campaign completion or budget exhaustion. The thing that makes Citadel run overnight.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "SethGammon",
+  "install_path": ".claude/skills/daemon/SKILL.md",
+  "source": {
+    "repo": "SethGammon/Citadel",
+    "url": "https://github.com/SethGammon/Citadel/blob/main/skills/daemon/SKILL.md",
+    "path": "skills/daemon/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:05.441Z",
+    "stars": 572,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-07T17:50:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "它是一种让AI任务全天候自主运行的模式，通过自动接续会话解决长任务因上下文耗尽而中断的问题，适合需要AI连续无人值守干活的长时任务场景。"
+}

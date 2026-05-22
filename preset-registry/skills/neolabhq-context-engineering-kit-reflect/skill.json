@@ -1,0 +1,26 @@
+{
+  "id": "neolabhq-context-engineering-kit-reflect",
+  "name": "reflect",
+  "description": "Reflect on previus response and output, based on Self-refinement framework for iterative improvement with complexity triage and verification",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "NeoLabHQ",
+  "install_path": ".claude/skills/reflect/SKILL.md",
+  "source": {
+    "repo": "NeoLabHQ/context-engineering-kit",
+    "url": "https://github.com/NeoLabHQ/context-engineering-kit/blob/master/plugins/reflexion/skills/reflect/SKILL.md",
+    "path": "plugins/reflexion/skills/reflect/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-05-22T04:42:31.490Z",
+    "stars": 1025,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-22T00:32:29Z",
+    "license": "GPL-3.0"
+  },
+  "summary_zh": "这是一个让AI自我纠错的迭代优化工具，能反思并改进之前的输出，解决初版回答质量不佳的问题，特别适合需要反复验证和打磨高质量内容的场景。"
+}

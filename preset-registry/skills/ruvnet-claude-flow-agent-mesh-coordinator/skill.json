@@ -1,0 +1,26 @@
+{
+  "id": "ruvnet-claude-flow-agent-mesh-coordinator",
+  "name": "agent-mesh-coordinator",
+  "description": "Agent skill for mesh-coordinator - invoke with $agent-mesh-coordinator",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ruvnet",
+  "install_path": ".claude/skills/agent-mesh-coordinator/SKILL.md",
+  "source": {
+    "repo": "ruvnet/claude-flow",
+    "url": "https://github.com/ruvnet/claude-flow/blob/main/.agents/skills/agent-mesh-coordinator/SKILL.md",
+    "path": ".agents/skills/agent-mesh-coordinator/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:01.059Z",
+    "stars": 53972,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-22T03:51:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一款用来统筹多代理网络的技能插件，能帮你调度和协调各个代理节点间的任务分配与通信，适合需要多个AI或自动化代理协同工作的场景。"
+}

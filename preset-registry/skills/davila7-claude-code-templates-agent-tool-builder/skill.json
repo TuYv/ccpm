@@ -1,0 +1,26 @@
+{
+  "id": "davila7-claude-code-templates-agent-tool-builder",
+  "name": "agent-tool-builder",
+  "description": "Tools are how AI agents interact with the world. A well-designed tool is the difference between an agent that works and one that hallucinates, fails silently, or costs 10x more tokens than necessary.  This skill covers tool design from schema to error handling. JSON Schema best practices, description writing that actually helps the LLM, validation, and the emerging MCP standard that's becoming the lingua franca for AI tools.  Key insight: Tool descriptions are more important than tool implementa",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "davila7",
+  "install_path": ".claude/skills/agent-tool-builder/SKILL.md",
+  "source": {
+    "repo": "davila7/claude-code-templates",
+    "url": "https://github.com/davila7/claude-code-templates/blob/main/cli-tool/components/skills/ai-research/agent-tool-builder/SKILL.md",
+    "path": "cli-tool/components/skills/ai-research/agent-tool-builder/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:43.048Z",
+    "stars": 27482,
+    "language": "Python",
+    "pushed_at": "2026-05-22T04:31:04Z",
+    "license": "MIT"
+  },
+  "summary_zh": "教你为AI智能体设计高质量工具的实战指南，能避免模型瞎编、静默报错或狂烧token，适合需要优化工具接口和描述精准度的开发者。"
+}

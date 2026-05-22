@@ -1,0 +1,26 @@
+{
+  "id": "zebbern-claude-code-guide-burp-suite-testing",
+  "name": "Burp Suite Web Application Testing",
+  "description": "This skill should be used when the user asks to \"intercept HTTP traffic\", \"modify web requests\", \"use Burp Suite for testing\", \"perform web vulnerability scanning\", \"test with Burp Repeater\", \"analyze HTTP history\", or \"configure proxy for web testing\". It provides comprehensive guidance for using Burp Suite's core features for web application security testing.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "zebbern",
+  "install_path": ".claude/skills/burp-suite-testing/SKILL.md",
+  "source": {
+    "repo": "zebbern/claude-code-guide",
+    "url": "https://github.com/zebbern/claude-code-guide/blob/main/skills/burp-suite-testing/SKILL.md",
+    "path": "skills/burp-suite-testing/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:08.552Z",
+    "stars": 4156,
+    "language": null,
+    "pushed_at": "2026-05-22T01:16:53Z",
+    "license": "MIT"
+  },
+  "summary_zh": "提供Burp Suite实操指导，帮你轻松搞定抓包改包和漏洞扫描，非常适合做Web应用渗透测试。"
+}

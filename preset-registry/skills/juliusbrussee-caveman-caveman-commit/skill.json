@@ -1,0 +1,26 @@
+{
+  "id": "juliusbrussee-caveman-caveman-commit",
+  "name": "caveman-commit",
+  "description": "> Ultra-compressed commit message generator. Cuts noise from commit messages while preserving intent and reasoning. Conventional Commits format. Subject ≤50 chars, body only when \"why\" isn't obvious. Use when user says \"write a commit\", \"commit message\", \"generate commit\", \"/commit\", or invokes /caveman-commit. Auto-triggers when staging changes.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "JuliusBrussee",
+  "install_path": ".claude/skills/caveman-commit/SKILL.md",
+  "source": {
+    "repo": "JuliusBrussee/caveman",
+    "url": "https://github.com/JuliusBrussee/caveman/blob/main/skills/caveman-commit/SKILL.md",
+    "path": "skills/caveman-commit/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:20.280Z",
+    "stars": 63348,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-20T10:44:54Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个极简的提交信息生成器，帮你去除冗余内容只保留修改意图与原因，适合想保持提交历史干净规范、又不想写长篇说明的开发者。"
+}

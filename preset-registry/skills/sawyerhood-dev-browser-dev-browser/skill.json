@@ -1,0 +1,26 @@
+{
+  "id": "sawyerhood-dev-browser-dev-browser",
+  "name": "dev-browser",
+  "description": "Browser automation with persistent page state. Use when users ask to navigate websites, fill forms, take screenshots, extract web data, test web apps, or automate browser workflows. Trigger phrases include \"go to [url]\", \"click on\", \"fill out the form\", \"take a screenshot\", \"scrape\", \"automate\", \"test the website\", \"log into\", or any browser interaction request.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "SawyerHood",
+  "install_path": ".claude/skills/dev-browser/SKILL.md",
+  "source": {
+    "repo": "SawyerHood/dev-browser",
+    "url": "https://github.com/SawyerHood/dev-browser/blob/main/skills/dev-browser/SKILL.md",
+    "path": "skills/dev-browser/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:27.038Z",
+    "stars": 6146,
+    "language": "TypeScript",
+    "pushed_at": "2026-04-09T21:18:44Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一款能保持页面状态的浏览器自动化工具，专门解决重复繁琐的网页交互问题，适合数据抓取、表单填写、网站测试等自动化场景。"
+}

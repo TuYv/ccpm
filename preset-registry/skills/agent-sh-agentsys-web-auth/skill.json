@@ -1,0 +1,26 @@
+{
+  "id": "agent-sh-agentsys-web-auth",
+  "name": "web-auth",
+  "description": "Authenticate to websites with human-in-the-loop browser handoff. Use when user needs to log into a website, complete 2FA, or solve CAPTCHAs for agent access.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "agent-sh",
+  "install_path": ".claude/skills/web-auth/SKILL.md",
+  "source": {
+    "repo": "agent-sh/agentsys",
+    "url": "https://github.com/agent-sh/agentsys/blob/main/.kiro/skills/web-auth/SKILL.md",
+    "path": ".kiro/skills/web-auth/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:04.213Z",
+    "stars": 813,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-21T17:59:34Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个引入人工接管的认证工具，当自动化代理被登录、双重验证或验证码卡住时，能把浏览器交给人来操作，帮代理顺利过检拿到权限。"
+}

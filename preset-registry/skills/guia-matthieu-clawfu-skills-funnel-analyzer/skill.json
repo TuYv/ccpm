@@ -1,0 +1,26 @@
+{
+  "id": "guia-matthieu-clawfu-skills-funnel-analyzer",
+  "name": "funnel-analyzer",
+  "description": "Analyze conversion funnels and identify drop-offs. Use when: analyzing checkout funnel; tracking signup flow; identifying conversion blockers; optimizing user journey; visualizing funnel performance",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "guia-matthieu",
+  "install_path": ".claude/skills/funnel-analyzer/SKILL.md",
+  "source": {
+    "repo": "guia-matthieu/clawfu-skills",
+    "url": "https://github.com/guia-matthieu/clawfu-skills/blob/main/skills/analytics/funnel-analyzer/SKILL.md",
+    "path": "skills/analytics/funnel-analyzer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:46:28.931Z",
+    "stars": 109,
+    "language": "Python",
+    "pushed_at": "2026-04-02T10:12:11Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一款转化漏斗分析工具，帮你找出用户流失的关键环节，特别适合优化注册或支付流程时使用，快速定位转化痛点，提升业务指标。"
+}

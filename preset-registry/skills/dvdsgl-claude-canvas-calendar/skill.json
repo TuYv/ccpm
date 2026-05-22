@@ -1,0 +1,26 @@
+{
+  "id": "dvdsgl-claude-canvas-calendar",
+  "name": "calendar",
+  "description": "| Calendar canvas for displaying events and picking meeting times. Use when showing calendar views or when users need to select available time slots.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "dvdsgl",
+  "install_path": ".claude/skills/calendar/SKILL.md",
+  "source": {
+    "repo": "dvdsgl/claude-canvas",
+    "url": "https://github.com/dvdsgl/claude-canvas/blob/main/canvas/skills/calendar/SKILL.md",
+    "path": "canvas/skills/calendar/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:52.715Z",
+    "stars": 1485,
+    "language": "TypeScript",
+    "pushed_at": "2026-01-08T02:19:55Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个展示日程和挑选会议时间的日历组件，适合需要呈现日历视图或让用户选择空闲时段的场景。"
+}

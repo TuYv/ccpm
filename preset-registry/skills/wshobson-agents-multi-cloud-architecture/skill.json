@@ -1,0 +1,26 @@
+{
+  "id": "wshobson-agents-multi-cloud-architecture",
+  "name": "multi-cloud-architecture",
+  "description": "Design multi-cloud architectures using a decision framework to select and integrate services across AWS, Azure, GCP, and OCI. Use when building multi-cloud systems, avoiding vendor lock-in, or leveraging best-of-breed services from multiple providers.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "wshobson",
+  "install_path": ".claude/skills/multi-cloud-architecture/SKILL.md",
+  "source": {
+    "repo": "wshobson/agents",
+    "url": "https://github.com/wshobson/agents/blob/main/plugins/cloud-infrastructure/skills/multi-cloud-architecture/SKILL.md",
+    "path": "plugins/cloud-infrastructure/skills/multi-cloud-architecture/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:57.032Z",
+    "stars": 35770,
+    "language": "Python",
+    "pushed_at": "2026-05-21T20:01:53Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个多云架构设计决策框架，帮你挑选整合各大云服务。适合搭建多云系统、避免被单一厂商绑定，或想组合各家最强服务的场景。"
+}

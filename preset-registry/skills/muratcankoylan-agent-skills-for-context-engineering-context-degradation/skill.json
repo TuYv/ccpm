@@ -1,0 +1,25 @@
+{
+  "id": "muratcankoylan-agent-skills-for-context-engineering-context-degradation",
+  "name": "context-degradation",
+  "description": "This skill should be used for diagnosing and mitigating context degradation: lost-in-middle failures, context poisoning, context clash, context confusion, attention-pattern issues, and agent performance degradation caused by accumulated or conflicting context.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "muratcankoylan",
+  "install_path": ".claude/skills/context-degradation/SKILL.md",
+  "source": {
+    "repo": "muratcankoylan/Agent-Skills-for-Context-Engineering",
+    "url": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering/blob/main/skills/context-degradation/SKILL.md",
+    "path": "skills/context-degradation/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:08.710Z",
+    "stars": 15854,
+    "language": "Python",
+    "pushed_at": "2026-05-22T04:31:12Z",
+    "license": "MIT"
+  }
+}

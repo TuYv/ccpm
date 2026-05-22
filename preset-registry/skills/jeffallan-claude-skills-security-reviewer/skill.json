@@ -1,0 +1,26 @@
+{
+  "id": "jeffallan-claude-skills-security-reviewer",
+  "name": "security-reviewer",
+  "description": "Identifies security vulnerabilities, generates structured audit reports with severity ratings, and provides actionable remediation guidance. Use when conducting security audits, reviewing code for vulnerabilities, or analyzing infrastructure security. Invoke for SAST scans, penetration testing, DevSecOps practices, cloud security reviews, dependency audits, secrets scanning, or compliance checks. Produces vulnerability reports, prioritized recommendations, and compliance checklists.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "jeffallan",
+  "install_path": ".claude/skills/security-reviewer/SKILL.md",
+  "source": {
+    "repo": "jeffallan/claude-skills",
+    "url": "https://github.com/jeffallan/claude-skills/blob/main/skills/security-reviewer/SKILL.md",
+    "path": "skills/security-reviewer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:46:00.204Z",
+    "stars": 9253,
+    "language": "Python",
+    "pushed_at": "2026-05-20T13:35:05Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是个帮你排查安全漏洞的审查工具，能直接输出审计报告和修复建议。适合在代码审查、渗透测试、云安全检查或合规审计等场景下使用，帮你快速搞定安全隐患。"
+}

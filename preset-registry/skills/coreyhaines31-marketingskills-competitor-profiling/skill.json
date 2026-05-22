@@ -1,0 +1,26 @@
+{
+  "id": "coreyhaines31-marketingskills-competitor-profiling",
+  "name": "competitor-profiling",
+  "description": "When the user wants to research, profile, or analyze competitors from their URLs. Also use when the user mentions 'competitor profile,' 'competitor research,' 'competitor analysis,' 'profile this competitor,' 'analyze competitor,' 'competitive intelligence,' 'competitor deep dive,' 'who are my competitors,' 'competitor landscape,' 'competitor dossier,' 'competitive audit,' or 'research these competitors.' Input is a list of competitor URLs. Output is structured competitor profile markdown files.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "coreyhaines31",
+  "install_path": ".claude/skills/competitor-profiling/SKILL.md",
+  "source": {
+    "repo": "coreyhaines31/marketingskills",
+    "url": "https://github.com/coreyhaines31/marketingskills/blob/main/skills/competitor-profiling/SKILL.md",
+    "path": "skills/competitor-profiling/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:11.077Z",
+    "stars": 29947,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-21T23:46:45Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个自动生成竞品分析报告的工具。只需输入对手网址，就能快速生成详细的调研档案，帮你轻松搞定竞品情报收集与深度分析。"
+}

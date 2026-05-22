@@ -1,0 +1,26 @@
+{
+  "id": "prompt-security-clawsec-picoclaw-self-pen-testing",
+  "name": "picoclaw-self-pen-testing",
+  "description": "Picoclaw-only local posture-review skill focused on read-only findings and safe operator remediation guidance.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "0.0.2",
+  "author": "prompt-security",
+  "install_path": ".claude/skills/picoclaw-self-pen-testing/SKILL.md",
+  "source": {
+    "repo": "prompt-security/clawsec",
+    "url": "https://github.com/prompt-security/clawsec/blob/main/skills/picoclaw-self-pen-testing/SKILL.md",
+    "path": "skills/picoclaw-self-pen-testing/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:46.630Z",
+    "stars": 1000,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-21T07:14:18Z",
+    "license": "AGPL-3.0"
+  },
+  "summary_zh": "专为 Picoclaw 打造的本地安全排查工具，只做只读检测不改动系统，并附带安全的修复建议，适合运维人员做无侵入式的安全自查。"
+}

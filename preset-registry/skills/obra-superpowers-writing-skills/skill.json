@@ -1,0 +1,26 @@
+{
+  "id": "obra-superpowers-writing-skills",
+  "name": "writing-skills",
+  "description": "Use when creating new skills, editing existing skills, or verifying skills work before deployment",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "obra",
+  "install_path": ".claude/skills/writing-skills/SKILL.md",
+  "source": {
+    "repo": "obra/superpowers",
+    "url": "https://github.com/obra/superpowers/blob/main/skills/writing-skills/SKILL.md",
+    "path": "skills/writing-skills/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:41:42.910Z",
+    "stars": 201805,
+    "language": "Shell",
+    "pushed_at": "2026-05-21T21:23:26Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个技能开发辅助工具，用来帮你创建新技能、修改现有技能，或在部署前测试验证技能是否正常，让开发到上线的流程更省心。"
+}

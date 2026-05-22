@@ -1,0 +1,26 @@
+{
+  "id": "trailofbits-skills-libafl",
+  "name": "libafl",
+  "description": "> LibAFL is a modular fuzzing library for building custom fuzzers. Use for advanced fuzzing needs, custom mutators, or non-standard fuzzing targets.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "trailofbits",
+  "install_path": ".claude/skills/libafl/SKILL.md",
+  "source": {
+    "repo": "trailofbits/skills",
+    "url": "https://github.com/trailofbits/skills/blob/main/plugins/testing-handbook-skills/skills/libafl/SKILL.md",
+    "path": "plugins/testing-handbook-skills/skills/libafl/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:41:53.318Z",
+    "stars": 5325,
+    "language": "Python",
+    "pushed_at": "2026-05-16T17:22:25Z",
+    "license": "CC-BY-SA-4.0"
+  },
+  "summary_zh": "这是一个模块化的模糊测试库，帮你拼装专属的测试器。当标准工具搞不定高级需求、需要定制变异器或测试非标目标时用它最合适。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "alirezarezvani-claudeforge-claude-md-link-check",
+  "name": "claude-md-link-check",
+  "description": "Verify every @path chain import and every markdown link inside every CLAUDE.md in this project resolves to an existing file. Read-only — returns broken links with file:line refs, never edits.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alirezarezvani",
+  "install_path": ".claude/skills/claude-md-link-check/SKILL.md",
+  "source": {
+    "repo": "alirezarezvani/ClaudeForge",
+    "url": "https://github.com/alirezarezvani/ClaudeForge/blob/dev/skill/claude-md-link-check/SKILL.md",
+    "path": "skill/claude-md-link-check/SKILL.md",
+    "branch": "dev",
+    "discovered_at": "2026-05-22T04:44:57.615Z",
+    "stars": 371,
+    "language": "Python",
+    "pushed_at": "2026-05-19T02:07:06Z",
+    "license": "MIT"
+  },
+  "summary_zh": "专门检查 CLAUDE.md 中链接与路径引用是否有效的工具，能揪出失效的 markdown 链接和 @path 导入并定位行号，只读不改，适合排查项目文档的引用错误。"
+}

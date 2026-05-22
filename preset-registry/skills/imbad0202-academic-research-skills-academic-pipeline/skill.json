@@ -1,0 +1,26 @@
+{
+  "id": "imbad0202-academic-research-skills-academic-pipeline",
+  "name": "academic-pipeline",
+  "description": "Orchestrator for the full academic research pipeline: research -> write -> integrity check -> review -> revise -> re-review -> re-revise -> final integrity check -> finalize. Coordinates deep-research, academic-paper, and academic-paper-reviewer into a seamless 10-stage workflow with mandatory integrity verification, two-stage peer review, and reproducible quality gates. Triggers on: academic pipeline, research to paper, full paper workflow, paper pipeline, end-to-end paper, research-to-publicat",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Imbad0202",
+  "install_path": ".claude/skills/academic-pipeline/SKILL.md",
+  "source": {
+    "repo": "Imbad0202/academic-research-skills",
+    "url": "https://github.com/Imbad0202/academic-research-skills/blob/main/academic-pipeline/SKILL.md",
+    "path": "academic-pipeline/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:26.507Z",
+    "stars": 18399,
+    "language": "Python",
+    "pushed_at": "2026-05-21T08:31:11Z",
+    "license": null
+  },
+  "summary_zh": "这是一个学术研究全流程编排工具，能自动串联从调研、写作、查重到多轮审改的繁琐步骤，保障论文质量与原创性，适合需要一站式搞定论文产出的场景。"
+}

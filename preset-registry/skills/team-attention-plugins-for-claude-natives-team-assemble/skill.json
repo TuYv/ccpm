@@ -1,0 +1,26 @@
+{
+  "id": "team-attention-plugins-for-claude-natives-team-assemble",
+  "name": "team-assemble",
+  "description": "Analyze tasks and dynamically assemble expert agent teams using Claude Code's TeamCreate API. Scouts your codebase, designs optimal agents, and executes with validation.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "team-attention",
+  "install_path": ".claude/skills/team-assemble/SKILL.md",
+  "source": {
+    "repo": "team-attention/plugins-for-claude-natives",
+    "url": "https://github.com/team-attention/plugins-for-claude-natives/blob/main/plugins/team-assemble/skills/team-assemble/SKILL.md",
+    "path": "plugins/team-assemble/skills/team-assemble/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:37.772Z",
+    "stars": 773,
+    "language": "Python",
+    "pushed_at": "2026-04-20T06:53:40Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个能根据任务自动拉起专家AI团队的工具，它会扫描代码库并设计最合适的智能体组合来执行验证，省去手动配置的麻烦，适合需要多AI协作搞定复杂开发任务的场景。"
+}

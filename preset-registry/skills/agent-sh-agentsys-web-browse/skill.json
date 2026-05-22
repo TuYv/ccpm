@@ -1,0 +1,26 @@
+{
+  "id": "agent-sh-agentsys-web-browse",
+  "name": "web-browse",
+  "description": "Browse and interact with web pages headlessly. Use when agent needs to navigate websites, click elements, fill forms, read content, or take screenshots.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "agent-sh",
+  "install_path": ".claude/skills/web-browse/SKILL.md",
+  "source": {
+    "repo": "agent-sh/agentsys",
+    "url": "https://github.com/agent-sh/agentsys/blob/main/.kiro/skills/web-browse/SKILL.md",
+    "path": ".kiro/skills/web-browse/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:04.318Z",
+    "stars": 813,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-21T17:59:34Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个让AI代理在后台无界面操控网页的工具，专门解决需要代替人工自动浏览、提取内容及交互表单的网页自动化场景。"
+}

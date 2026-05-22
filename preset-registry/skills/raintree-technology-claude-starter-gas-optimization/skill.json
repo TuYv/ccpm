@@ -1,0 +1,26 @@
+{
+  "id": "raintree-technology-claude-starter-gas-optimization",
+  "name": "aptos-gas-optimization",
+  "description": "Expert on Aptos gas optimization, performance tuning, storage costs, execution efficiency, inline functions, aggregator usage, parallel execution, table vs vector tradeoffs, and gas profiling tools. Triggers on keywords gas optimization, performance, gas cost, storage fee, inline, aggregator, parallel execution, gas profiling, optimization",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "raintree-technology",
+  "install_path": ".claude/skills/gas-optimization/SKILL.md",
+  "source": {
+    "repo": "raintree-technology/claude-starter",
+    "url": "https://github.com/raintree-technology/claude-starter/blob/main/.claude/skills/aptos/gas-optimization/skill.md",
+    "path": ".claude/skills/aptos/gas-optimization/skill.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:51.519Z",
+    "stars": 76,
+    "language": "Zig",
+    "pushed_at": "2026-04-24T22:45:15Z",
+    "license": "MIT"
+  },
+  "summary_zh": "它是Aptos链的燃料费优化专家，帮你解决合约运行成本高和性能差的问题，适合需要降低存储开销、提升执行效率或做代码调优的开发场景。"
+}

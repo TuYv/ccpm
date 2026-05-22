@@ -1,0 +1,26 @@
+{
+  "id": "orchestra-research-ai-research-skills-hqq",
+  "name": "hqq-quantization",
+  "description": "Half-Quadratic Quantization for LLMs without calibration data. Use when quantizing models to 4/3/2-bit precision without needing calibration datasets, for fast quantization workflows, or when deploying with vLLM or HuggingFace Transformers.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "Orchestra-Research",
+  "install_path": ".claude/skills/hqq/SKILL.md",
+  "source": {
+    "repo": "Orchestra-Research/AI-research-SKILLs",
+    "url": "https://github.com/Orchestra-Research/AI-research-SKILLs/blob/main/10-optimization/hqq/SKILL.md",
+    "path": "10-optimization/hqq/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:19.169Z",
+    "stars": 8786,
+    "language": "TeX",
+    "pushed_at": "2026-04-28T05:09:27Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一款无需校准数据的大模型量化工具，能把模型压至2到4位，适合需要快速压缩模型，或在vLLM与HuggingFace上部署的场景。"
+}

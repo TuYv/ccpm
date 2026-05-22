@@ -1,0 +1,26 @@
+{
+  "id": "ognjengt-founder-skills-cro-optimization",
+  "name": "cro-optimization",
+  "description": "Analyzes landing pages and provides detailed CRO (Conversion Rate Optimization) recommendations. Use when user provides a landing page URL or HTML/CSS code and needs optimization advice to maximize conversions, signups, or sales. Extracts page elements, audits against proven CRO principles, and delivers actionable recommendations in report format.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ognjengt",
+  "install_path": ".claude/skills/cro-optimization/SKILL.md",
+  "source": {
+    "repo": "ognjengt/founder-skills",
+    "url": "https://github.com/ognjengt/founder-skills/blob/main/skills/cro-optimization/SKILL.md",
+    "path": "skills/cro-optimization/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:18.685Z",
+    "stars": 172,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-18T19:44:26Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个落地页分析工具，只需提供网址或代码，它就能对照转化率优化原则给出具体建议，帮你有效提升页面的注册量、销量和整体转化率。"
+}

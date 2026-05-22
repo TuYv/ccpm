@@ -1,0 +1,26 @@
+{
+  "id": "fradser-dotclaude-optimize-plugin",
+  "name": "optimize-plugin",
+  "description": "This skill should be used when the user asks to \"validate a plugin\", \"optimize plugin\", \"check plugin quality\", \"review plugin structure\", or \"run plugin optimizer\".",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "FradSer",
+  "install_path": ".claude/skills/optimize-plugin/SKILL.md",
+  "source": {
+    "repo": "FradSer/dotclaude",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/plugin-optimizer/skills/optimize-plugin/SKILL.md",
+    "path": "plugin-optimizer/skills/optimize-plugin/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:15.723Z",
+    "stars": 548,
+    "language": "Shell",
+    "pushed_at": "2026-05-21T09:20:23Z",
+    "license": null
+  },
+  "summary_zh": "帮你检查和优化插件的工具，适合在需要审查插件结构、验证有效性或提升插件质量时使用。"
+}

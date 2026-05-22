@@ -1,0 +1,26 @@
+{
+  "id": "trailofbits-skills-claude-in-chrome-troubleshooting",
+  "name": "claude-in-chrome-troubleshooting",
+  "description": "Diagnose and fix Claude in Chrome MCP extension connectivity issues. Use when mcp__claude-in-chrome__* tools fail, return \"Browser extension is not connected\", or behave erratically.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "trailofbits",
+  "install_path": ".claude/skills/claude-in-chrome-troubleshooting/SKILL.md",
+  "source": {
+    "repo": "trailofbits/skills",
+    "url": "https://github.com/trailofbits/skills/blob/main/plugins/claude-in-chrome-troubleshooting/skills/claude-in-chrome-troubleshooting/SKILL.md",
+    "path": "plugins/claude-in-chrome-troubleshooting/skills/claude-in-chrome-troubleshooting/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:41:49.962Z",
+    "stars": 5325,
+    "language": "Python",
+    "pushed_at": "2026-05-16T17:22:25Z",
+    "license": "CC-BY-SA-4.0"
+  },
+  "summary_zh": "专门用来排查和修复Chrome里Claude MCP插件的连接问题，当你遇到插件报“未连接”错误，或者工具调用失灵、行为异常时，用它就能搞定。"
+}

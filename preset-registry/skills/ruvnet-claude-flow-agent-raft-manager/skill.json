@@ -1,0 +1,26 @@
+{
+  "id": "ruvnet-claude-flow-agent-raft-manager",
+  "name": "agent-raft-manager",
+  "description": "Agent skill for raft-manager - invoke with $agent-raft-manager",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ruvnet",
+  "install_path": ".claude/skills/agent-raft-manager/SKILL.md",
+  "source": {
+    "repo": "ruvnet/claude-flow",
+    "url": "https://github.com/ruvnet/claude-flow/blob/main/.agents/skills/agent-raft-manager/SKILL.md",
+    "path": ".agents/skills/agent-raft-manager/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:03.563Z",
+    "stars": 53972,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-22T03:51:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个用来管理Raft集群的智能体技能，适合需要让AI代理直接执行Raft管理操作的自动化场景。"
+}

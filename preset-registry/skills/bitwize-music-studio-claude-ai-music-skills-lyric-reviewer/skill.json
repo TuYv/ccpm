@@ -1,0 +1,26 @@
+{
+  "id": "bitwize-music-studio-claude-ai-music-skills-lyric-reviewer",
+  "name": "lyric-reviewer",
+  "description": "Reviews lyrics against a quality checklist before Suno generation. Use before generating tracks to catch rhyme, prosody, pronunciation, and structural issues.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "bitwize-music-studio",
+  "install_path": ".claude/skills/lyric-reviewer/SKILL.md",
+  "source": {
+    "repo": "bitwize-music-studio/claude-ai-music-skills",
+    "url": "https://github.com/bitwize-music-studio/claude-ai-music-skills/blob/main/skills/lyric-reviewer/SKILL.md",
+    "path": "skills/lyric-reviewer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:37.311Z",
+    "stars": 202,
+    "language": "Python",
+    "pushed_at": "2026-05-21T00:00:51Z",
+    "license": "CC0-1.0"
+  },
+  "summary_zh": "这是一款歌词质检助手，专门在用Suno生成歌曲前帮你把关。它能提前排查押韵、韵律、发音和结构问题，避免生成废稿，适合AI音乐创作前的最后检查。"
+}

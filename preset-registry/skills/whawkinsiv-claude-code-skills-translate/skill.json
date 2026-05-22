@@ -1,0 +1,26 @@
+{
+  "id": "whawkinsiv-claude-code-skills-translate",
+  "name": "translate",
+  "description": "Use this skill when the user is a domain expert (lawyer, doctor, contractor, accountant, etc.) who wants to turn their professional knowledge into a software product. Also use when the user says 'I have an idea for my industry,' 'I know this problem exists,' 'I want to build something for [profession],' or is struggling to describe what they want the software to do. Helps identify which professional pain is worth building for, then translates it into requirements AI tools can execute.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "whawkinsiv",
+  "install_path": ".claude/skills/translate/SKILL.md",
+  "source": {
+    "repo": "whawkinsiv/claude-code-skills",
+    "url": "https://github.com/whawkinsiv/claude-code-skills/blob/main/skills/translate/SKILL.md",
+    "path": "skills/translate/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:33.418Z",
+    "stars": 177,
+    "language": null,
+    "pushed_at": "2026-05-14T16:20:15Z",
+    "license": "MIT"
+  },
+  "summary_zh": "帮行业专家把模糊的想法提炼成值得解决的痛点，并转化成AI能直接执行的软件需求，解决懂专业却不知怎么描述和落地软件产品的难题。"
+}

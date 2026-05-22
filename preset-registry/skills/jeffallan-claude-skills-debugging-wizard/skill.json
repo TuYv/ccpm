@@ -1,0 +1,26 @@
+{
+  "id": "jeffallan-claude-skills-debugging-wizard",
+  "name": "debugging-wizard",
+  "description": "Parses error messages, traces execution flow through stack traces, correlates log entries to identify failure points, and applies systematic hypothesis-driven methodology to isolate and resolve bugs. Use when investigating errors, analyzing stack traces, finding root causes of unexpected behavior, troubleshooting crashes, or performing log analysis, error investigation, or root cause analysis.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "jeffallan",
+  "install_path": ".claude/skills/debugging-wizard/SKILL.md",
+  "source": {
+    "repo": "jeffallan/claude-skills",
+    "url": "https://github.com/jeffallan/claude-skills/blob/main/skills/debugging-wizard/SKILL.md",
+    "path": "skills/debugging-wizard/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:57.308Z",
+    "stars": 9253,
+    "language": "Python",
+    "pushed_at": "2026-05-20T13:35:05Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个智能调试助手，适合在排查报错、崩溃或异常行为时使用，它能分析报错信息、调用栈和日志，帮你快速定位并解决根本原因。"
+}

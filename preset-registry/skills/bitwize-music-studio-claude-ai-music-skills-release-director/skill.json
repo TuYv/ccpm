@@ -1,0 +1,26 @@
+{
+  "id": "bitwize-music-studio-claude-ai-music-skills-release-director",
+  "name": "release-director",
+  "description": "Coordinates album release including QA, distribution prep, and platform uploads. Use when mastering and album art are complete and the user is ready to release.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "bitwize-music-studio",
+  "install_path": ".claude/skills/release-director/SKILL.md",
+  "source": {
+    "repo": "bitwize-music-studio/claude-ai-music-skills",
+    "url": "https://github.com/bitwize-music-studio/claude-ai-music-skills/blob/main/skills/release-director/SKILL.md",
+    "path": "skills/release-director/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:38.419Z",
+    "stars": 202,
+    "language": "Python",
+    "pushed_at": "2026-05-21T00:00:51Z",
+    "license": "CC0-1.0"
+  },
+  "summary_zh": "统筹专辑发布全流程的工具，帮你搞定质检、分发准备和各平台上传等杂活。当母带和封面制作完毕，准备发片时用它最省心。"
+}

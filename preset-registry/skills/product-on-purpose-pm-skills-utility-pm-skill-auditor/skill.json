@@ -1,0 +1,26 @@
+{
+  "id": "product-on-purpose-pm-skills-utility-pm-skill-auditor",
+  "name": "utility-pm-skill-auditor",
+  "description": "Run a repo-wide cross-cutting governance audit via the pm-skill-auditor sub-agent. Dispatches natively on Claude Code with the pm-skills plugin (invokes @agent-pm-skill-auditor); on non-Claude clients (Codex CLI, Cursor, Windsurf, Copilot, Gemini CLI) reads agents/pm-skill-auditor.md and executes the system prompt inline. Returns a layered audit report (full findings + Status Summary prose + Status YAML envelope per master plan D26) with cross-cutting findings graded P0/P1/P2/P3 plus aggregate c",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "product-on-purpose",
+  "install_path": ".claude/skills/utility-pm-skill-auditor/SKILL.md",
+  "source": {
+    "repo": "product-on-purpose/pm-skills",
+    "url": "https://github.com/product-on-purpose/pm-skills/blob/main/skills/utility-pm-skill-auditor/SKILL.md",
+    "path": "skills/utility-pm-skill-auditor/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T00:25:41.193Z",
+    "stars": 226,
+    "language": "Shell",
+    "pushed_at": "2026-05-21T05:03:47Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "这是一个全仓库治理审计代理，能自动生成按严重程度分级的分层审查报告，适合需要全面排查项目规范并掌控整体治理状况的场景。"
+}

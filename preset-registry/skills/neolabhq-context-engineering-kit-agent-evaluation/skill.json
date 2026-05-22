@@ -1,0 +1,26 @@
+{
+  "id": "neolabhq-context-engineering-kit-agent-evaluation",
+  "name": "agent-evaluation",
+  "description": "Evaluate and improve Claude Code commands, skills, and agents. Use when testing prompt effectiveness, validating context engineering choices, or measuring improvement quality.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "NeoLabHQ",
+  "install_path": ".claude/skills/agent-evaluation/SKILL.md",
+  "source": {
+    "repo": "NeoLabHQ/context-engineering-kit",
+    "url": "https://github.com/NeoLabHQ/context-engineering-kit/blob/master/plugins/customaize-agent/skills/agent-evaluation/SKILL.md",
+    "path": "plugins/customaize-agent/skills/agent-evaluation/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-05-22T04:42:27.616Z",
+    "stars": 1025,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-22T00:32:29Z",
+    "license": "GPL-3.0"
+  },
+  "summary_zh": "这是一个帮你评估和优化 Claude Code 指令与智能体的工具，方便测试提示词效果、验证上下文设计，并衡量改进质量。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "davila7-claude-code-templates-evaluation-bigcode-evaluation-harness",
+  "name": "evaluating-code-models",
+  "description": "Evaluates code generation models across HumanEval, MBPP, MultiPL-E, and 15+ benchmarks with pass@k metrics. Use when benchmarking code models, comparing coding abilities, testing multi-language support, or measuring code generation quality. Industry standard from BigCode Project used by HuggingFace leaderboards.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "davila7",
+  "install_path": ".claude/skills/evaluation-bigcode-evaluation-harness/SKILL.md",
+  "source": {
+    "repo": "davila7/claude-code-templates",
+    "url": "https://github.com/davila7/claude-code-templates/blob/main/cli-tool/components/skills/ai-research/evaluation-bigcode-evaluation-harness/SKILL.md",
+    "path": "cli-tool/components/skills/ai-research/evaluation-bigcode-evaluation-harness/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:46.025Z",
+    "stars": 27482,
+    "language": "Python",
+    "pushed_at": "2026-05-22T04:31:04Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个测试代码模型生成能力的业界标准工具，主要用来给模型跑分、对比编程水平、测多语言支持或评估代码质量，HuggingFace榜单也在用。"
+}

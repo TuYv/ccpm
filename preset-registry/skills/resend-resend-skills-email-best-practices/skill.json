@@ -1,0 +1,26 @@
+{
+  "id": "resend-resend-skills-email-best-practices",
+  "name": "email-best-practices",
+  "description": "Use when building email features, emails going to spam, high bounce rates, setting up SPF/DKIM/DMARC authentication, implementing email capture, ensuring compliance (CAN-SPAM, GDPR, CASL), handling webhooks, retry logic, or deciding transactional vs marketing.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "resend",
+  "install_path": ".claude/skills/email-best-practices/SKILL.md",
+  "source": {
+    "repo": "resend/resend-skills",
+    "url": "https://github.com/resend/resend-skills/blob/main/skills/email-best-practices/SKILL.md",
+    "path": "skills/email-best-practices/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:12.927Z",
+    "stars": 122,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-04T14:49:16Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一份邮件开发避坑指南，帮你解决邮件易进垃圾箱、退信率高、认证配置难等痛点，适合开发邮件功能或保障邮件合规与稳定送达时参考。"
+}

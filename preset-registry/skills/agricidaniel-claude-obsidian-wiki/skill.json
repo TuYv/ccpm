@@ -1,0 +1,26 @@
+{
+  "id": "agricidaniel-claude-obsidian-wiki",
+  "name": "wiki",
+  "description": "> Claude + Obsidian knowledge companion. Sets up a persistent wiki vault, scaffolds structure from a one-sentence description, and routes to specialized sub-skills. Use for setup, scaffolding, cross-project referencing, and hot cache management. Triggers on: \"set up wiki\", \"scaffold vault\", \"create knowledge base\", \"/wiki\", \"wiki setup\", \"obsidian vault\", \"knowledge base\", \"second brain setup\", \"running notetaker\", \"persistent memory\", \"llm wiki\".",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "AgriciDaniel",
+  "install_path": ".claude/skills/wiki/SKILL.md",
+  "source": {
+    "repo": "AgriciDaniel/claude-obsidian",
+    "url": "https://github.com/AgriciDaniel/claude-obsidian/blob/main/skills/wiki/SKILL.md",
+    "path": "skills/wiki/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:54.152Z",
+    "stars": 5327,
+    "language": "Python",
+    "pushed_at": "2026-04-24T10:21:48Z",
+    "license": "MIT"
+  },
+  "summary_zh": "它是结合Claude与Obsidian的知识伴侣，只需一句话就能自动生成并持久化知识库结构，适合想快速搭建“第二大脑”或需要跨项目笔记关联与管理的场景。"
+}

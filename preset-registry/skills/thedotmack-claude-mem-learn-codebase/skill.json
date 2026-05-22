@@ -1,0 +1,26 @@
+{
+  "id": "thedotmack-claude-mem-learn-codebase",
+  "name": "learn-codebase",
+  "description": "Prime a codebase by reading every source file in full. Use when starting work on a new or unfamiliar project, or when the user asks to \"learn the codebase\", \"read the codebase\", \"prime\", or \"get up to speed\".",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "thedotmack",
+  "install_path": ".claude/skills/learn-codebase/SKILL.md",
+  "source": {
+    "repo": "thedotmack/claude-mem",
+    "url": "https://github.com/thedotmack/claude-mem/blob/main/plugin/skills/learn-codebase/SKILL.md",
+    "path": "plugin/skills/learn-codebase/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:48.330Z",
+    "stars": 77318,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-21T10:26:19Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "这款工具通过通读所有源码帮你快速吃透陌生代码库，非常适合刚接手新项目或需要迅速进入开发状态时使用。"
+}

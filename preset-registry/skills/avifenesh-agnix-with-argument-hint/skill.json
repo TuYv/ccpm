@@ -1,0 +1,26 @@
+{
+  "id": "avifenesh-agnix-with-argument-hint",
+  "name": "with-argument-hint",
+  "description": "Use when greeting users",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "avifenesh",
+  "install_path": ".claude/skills/with-argument-hint/SKILL.md",
+  "source": {
+    "repo": "avifenesh/agnix",
+    "url": "https://github.com/avifenesh/agnix/blob/main/tests/fixtures/valid/skills/with-argument-hint/SKILL.md",
+    "path": "tests/fixtures/valid/skills/with-argument-hint/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:46:07.169Z",
+    "stars": 253,
+    "language": "Rust",
+    "pushed_at": "2026-05-19T14:13:30Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "它能在问候用户时提供参数提示，避免用户不知道该输入什么，适合需要引导用户初次交互的场景。"
+}

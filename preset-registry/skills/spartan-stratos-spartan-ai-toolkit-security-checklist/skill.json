@@ -1,0 +1,26 @@
+{
+  "id": "spartan-stratos-spartan-ai-toolkit-security-checklist",
+  "name": "security-checklist",
+  "description": "Security best practices for Micronaut/Kotlin backend including authentication, authorization, input validation, and OWASP prevention. Use when implementing auth, validating inputs, or reviewing security.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "spartan-stratos",
+  "install_path": ".claude/skills/security-checklist/SKILL.md",
+  "source": {
+    "repo": "spartan-stratos/spartan-ai-toolkit",
+    "url": "https://github.com/spartan-stratos/spartan-ai-toolkit/blob/master/toolkit/skills/security-checklist/SKILL.md",
+    "path": "toolkit/skills/security-checklist/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-05-22T04:46:17.320Z",
+    "stars": 71,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-11T06:56:56Z",
+    "license": null
+  },
+  "summary_zh": "专为Micronaut/Kotlin后端打造的安全实践指南，帮你在做身份认证、输入校验或安全审查时避坑，有效防范常见漏洞。"
+}

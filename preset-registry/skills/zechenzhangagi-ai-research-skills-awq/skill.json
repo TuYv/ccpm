@@ -1,0 +1,26 @@
+{
+  "id": "zechenzhangagi-ai-research-skills-awq",
+  "name": "awq-quantization",
+  "description": "Activation-aware weight quantization for 4-bit LLM compression with 3x speedup and minimal accuracy loss. Use when deploying large models (7B-70B) on limited GPU memory, when you need faster inference than GPTQ with better accuracy preservation, or for instruction-tuned and multimodal models. MLSys 2024 Best Paper Award winner.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "zechenzhangAGI",
+  "install_path": ".claude/skills/awq/SKILL.md",
+  "source": {
+    "repo": "zechenzhangAGI/AI-research-SKILLs",
+    "url": "https://github.com/zechenzhangAGI/AI-research-SKILLs/blob/main/10-optimization/awq/SKILL.md",
+    "path": "10-optimization/awq/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:42.189Z",
+    "stars": 8786,
+    "language": "TeX",
+    "pushed_at": "2026-04-28T05:09:27Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一种4位大模型压缩技术，能在几乎不掉精度的情况下大幅提速并节省显存。专为资源受限时部署7B-70B大模型设计，比GPTQ更快更准，特别适合指令微调与多模态模型。"
+}

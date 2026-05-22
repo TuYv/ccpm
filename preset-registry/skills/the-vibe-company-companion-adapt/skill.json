@@ -1,0 +1,26 @@
+{
+  "id": "the-vibe-company-companion-adapt",
+  "name": "adapt",
+  "description": "Adapt designs to work across different screen sizes, devices, contexts, or platforms. Ensures consistent experience across varied environments.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "The-Vibe-Company",
+  "install_path": ".claude/skills/adapt/SKILL.md",
+  "source": {
+    "repo": "The-Vibe-Company/companion",
+    "url": "https://github.com/The-Vibe-Company/companion/blob/main/.agents/skills/adapt/SKILL.md",
+    "path": ".agents/skills/adapt/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:01.461Z",
+    "stars": 2339,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-09T06:06:27Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个界面适配工具，能让设计自动适应不同屏幕和设备，解决多端显示体验不一致的问题，非常适合需要一套设计跑遍多平台的响应式开发场景。"
+}

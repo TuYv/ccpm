@@ -1,0 +1,26 @@
+{
+  "id": "ethereum-ethereum-org-website-data-layer",
+  "name": "data-layer",
+  "description": "This skill provides patterns for working with the data-layer module. Use when creating/editing files in src/data-layer/, src/lib/data/, or adding new data sources.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ethereum",
+  "install_path": ".claude/skills/data-layer/SKILL.md",
+  "source": {
+    "repo": "ethereum/ethereum-org-website",
+    "url": "https://github.com/ethereum/ethereum-org-website/blob/dev/.claude/skills/data-layer/SKILL.md",
+    "path": ".claude/skills/data-layer/SKILL.md",
+    "branch": "dev",
+    "discovered_at": "2026-05-22T04:42:52.779Z",
+    "stars": 5933,
+    "language": "Markdown",
+    "pushed_at": "2026-05-21T21:57:06Z",
+    "license": "MIT"
+  },
+  "summary_zh": "提供数据层模块的代码规范与模式，适合在相关目录下创建或修改文件、以及接入新数据源时使用，帮你统一数据处理方式。"
+}

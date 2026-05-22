@@ -1,0 +1,26 @@
+{
+  "id": "the-vibe-company-companion-harden",
+  "name": "harden",
+  "description": "Improve interface resilience through better error handling, i18n support, text overflow handling, and edge case management. Makes interfaces robust and production-ready.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "The-Vibe-Company",
+  "install_path": ".claude/skills/harden/SKILL.md",
+  "source": {
+    "repo": "The-Vibe-Company/companion",
+    "url": "https://github.com/The-Vibe-Company/companion/blob/main/.agents/skills/harden/SKILL.md",
+    "path": ".agents/skills/harden/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:02.568Z",
+    "stars": 2339,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-09T06:06:27Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个前端加固工具，专门兜底各种边界情况和意外报错，让界面更皮实耐用，确保应用安稳上线。"
+}

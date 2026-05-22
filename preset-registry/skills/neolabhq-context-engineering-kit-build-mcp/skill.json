@@ -1,0 +1,26 @@
+{
+  "id": "neolabhq-context-engineering-kit-build-mcp",
+  "name": "build-mcp",
+  "description": "Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools. Use when building MCP servers to integrate external APIs or services, whether in Python (FastMCP) or Node/TypeScript (MCP SDK).",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "NeoLabHQ",
+  "install_path": ".claude/skills/build-mcp/SKILL.md",
+  "source": {
+    "repo": "NeoLabHQ/context-engineering-kit",
+    "url": "https://github.com/NeoLabHQ/context-engineering-kit/blob/master/plugins/mcp/skills/build-mcp/SKILL.md",
+    "path": "plugins/mcp/skills/build-mcp/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-05-22T04:42:30.822Z",
+    "stars": 1025,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-22T00:32:29Z",
+    "license": "GPL-3.0"
+  },
+  "summary_zh": "一份教你怎么搭建高质量MCP服务器的指南，能让大模型顺利调用外部API和服务。当你需要开发MCP服务器让大模型对接外部能力时，正好用上。"
+}

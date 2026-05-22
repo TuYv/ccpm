@@ -1,0 +1,26 @@
+{
+  "id": "wshobson-agents-git-advanced-workflows",
+  "name": "git-advanced-workflows",
+  "description": "Master advanced Git workflows including rebasing, cherry-picking, bisect, worktrees, and reflog to maintain clean history and recover from any situation. Use when managing complex Git histories, collaborating on feature branches, or troubleshooting repository issues.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "wshobson",
+  "install_path": ".claude/skills/git-advanced-workflows/SKILL.md",
+  "source": {
+    "repo": "wshobson/agents",
+    "url": "https://github.com/wshobson/agents/blob/main/plugins/developer-essentials/skills/git-advanced-workflows/SKILL.md",
+    "path": "plugins/developer-essentials/skills/git-advanced-workflows/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:58.483Z",
+    "stars": 35770,
+    "language": "Python",
+    "pushed_at": "2026-05-21T20:01:53Z",
+    "license": "MIT"
+  },
+  "summary_zh": "帮你掌握Git高级技巧，轻松维护干净的提交历史并随时救场，非常适合处理复杂版本历史、团队协作或排查仓库故障的场景。"
+}

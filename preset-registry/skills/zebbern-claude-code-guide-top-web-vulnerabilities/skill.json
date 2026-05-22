@@ -1,0 +1,26 @@
+{
+  "id": "zebbern-claude-code-guide-top-web-vulnerabilities",
+  "name": "Top 100 Web Vulnerabilities Reference",
+  "description": "This skill should be used when the user asks to \"identify web application vulnerabilities\", \"explain common security flaws\", \"understand vulnerability categories\", \"learn about injection attacks\", \"review access control weaknesses\", \"analyze API security issues\", \"assess security misconfigurations\", \"understand client-side vulnerabilities\", \"examine mobile and IoT security flaws\", or \"reference the OWASP-aligned vulnerability taxonomy\". Use this skill to provide comprehensive vulnerability defin",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "zebbern",
+  "install_path": ".claude/skills/top-web-vulnerabilities/SKILL.md",
+  "source": {
+    "repo": "zebbern/claude-code-guide",
+    "url": "https://github.com/zebbern/claude-code-guide/blob/main/skills/top-web-vulnerabilities/SKILL.md",
+    "path": "skills/top-web-vulnerabilities/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:10.415Z",
+    "stars": 4156,
+    "language": null,
+    "pushed_at": "2026-05-22T01:16:53Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个Web安全漏洞参考库，能帮你快速识别和解释常见安全缺陷，适合学习安全知识、排查系统风险或理解OWASP漏洞分类时查阅。"
+}

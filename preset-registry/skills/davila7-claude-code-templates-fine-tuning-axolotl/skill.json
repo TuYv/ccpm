@@ -1,0 +1,26 @@
+{
+  "id": "davila7-claude-code-templates-fine-tuning-axolotl",
+  "name": "axolotl",
+  "description": "Expert guidance for fine-tuning LLMs with Axolotl - YAML configs, 100+ models, LoRA/QLoRA, DPO/KTO/ORPO/GRPO, multimodal support",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "davila7",
+  "install_path": ".claude/skills/fine-tuning-axolotl/SKILL.md",
+  "source": {
+    "repo": "davila7/claude-code-templates",
+    "url": "https://github.com/davila7/claude-code-templates/blob/main/cli-tool/components/skills/ai-research/fine-tuning-axolotl/SKILL.md",
+    "path": "cli-tool/components/skills/ai-research/fine-tuning-axolotl/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:46.289Z",
+    "stars": 27482,
+    "language": "Python",
+    "pushed_at": "2026-05-22T04:31:04Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个大模型微调工具，只需写简单配置就能搞定上百种模型的高效训练与对齐，特别适合想快速定制专属或多模态大模型的开发者。"
+}

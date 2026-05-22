@@ -1,0 +1,26 @@
+{
+  "id": "jeffallan-claude-skills-ml-pipeline",
+  "name": "ml-pipeline",
+  "description": "Designs and implements production-grade ML pipeline infrastructure: configures experiment tracking with MLflow or Weights & Biases, creates Kubeflow or Airflow DAGs for training orchestration, builds feature store schemas with Feast, deploys model registries, and automates retraining and validation workflows. Use when building ML pipelines, orchestrating training workflows, automating model lifecycle, implementing feature stores, managing experiment tracking systems, setting up DVC for data vers",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "jeffallan",
+  "install_path": ".claude/skills/ml-pipeline/SKILL.md",
+  "source": {
+    "repo": "jeffallan/claude-skills",
+    "url": "https://github.com/jeffallan/claude-skills/blob/main/skills/ml-pipeline/SKILL.md",
+    "path": "skills/ml-pipeline/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:58.938Z",
+    "stars": 9253,
+    "language": "Python",
+    "pushed_at": "2026-05-20T13:35:05Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一套生产级的机器学习流水线基础设施，帮你自动化并打通从实验、训练到部署的全生命周期，适合需要规范搭建和管理ML工作流的场景。"
+}

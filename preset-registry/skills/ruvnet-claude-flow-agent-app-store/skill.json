@@ -1,0 +1,26 @@
+{
+  "id": "ruvnet-claude-flow-agent-app-store",
+  "name": "agent-app-store",
+  "description": "Agent skill for app-store - invoke with $agent-app-store",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ruvnet",
+  "install_path": ".claude/skills/agent-app-store/SKILL.md",
+  "source": {
+    "repo": "ruvnet/claude-flow",
+    "url": "https://github.com/ruvnet/claude-flow/blob/main/.agents/skills/agent-app-store/SKILL.md",
+    "path": ".agents/skills/agent-app-store/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:41:57.112Z",
+    "stars": 53972,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-22T03:51:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个给AI智能体扩展应用商店能力的插件，让AI能通过指令直接调用商店数据，适合需要AI自动检索或获取应用信息的场景。"
+}

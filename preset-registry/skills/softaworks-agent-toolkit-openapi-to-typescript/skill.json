@@ -1,0 +1,26 @@
+{
+  "id": "softaworks-agent-toolkit-openapi-to-typescript",
+  "name": "openapi-to-typescript",
+  "description": "Converts OpenAPI 3.0 JSON/YAML to TypeScript interfaces and type guards. This skill should be used when the user asks to generate types from OpenAPI, convert schema to TS, create API interfaces, or generate TypeScript types from an API specification.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "softaworks",
+  "install_path": ".claude/skills/openapi-to-typescript/SKILL.md",
+  "source": {
+    "repo": "softaworks/agent-toolkit",
+    "url": "https://github.com/softaworks/agent-toolkit/blob/main/dist/plugins/openapi-to-typescript/skills/openapi-to-typescript/SKILL.md",
+    "path": "dist/plugins/openapi-to-typescript/skills/openapi-to-typescript/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:19.762Z",
+    "stars": 1872,
+    "language": "Python",
+    "pushed_at": "2026-03-05T16:46:24Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个能将 OpenAPI 规范转成 TypeScript 接口和类型守卫的工具。适合需要根据 API 文档自动生成前端类型定义，省去手写和同步麻烦的场景。"
+}

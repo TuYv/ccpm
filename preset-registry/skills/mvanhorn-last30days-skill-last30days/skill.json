@@ -1,0 +1,26 @@
+{
+  "id": "mvanhorn-last30days-skill-last30days",
+  "name": "last30days",
+  "description": "Research what people actually say about any topic in the last 30 days. Pulls posts and engagement from Reddit, X, YouTube, TikTok, Hacker News, Polymarket, GitHub, and the web.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "3.3.0",
+  "author": "mvanhorn",
+  "install_path": ".claude/skills/last30days/SKILL.md",
+  "source": {
+    "repo": "mvanhorn/last30days-skill",
+    "url": "https://github.com/mvanhorn/last30days-skill/blob/main/skills/last30days/SKILL.md",
+    "path": "skills/last30days/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:24.669Z",
+    "stars": 26320,
+    "language": "Python",
+    "pushed_at": "2026-05-18T04:18:13Z",
+    "license": "MIT"
+  },
+  "summary_zh": "它能帮你快速摸清某个话题近30天在全网的真实讨论，聚合各大平台的帖子与互动数据。适合需要掌握近期大众反馈、做市场调研或热点追踪的场景。"
+}

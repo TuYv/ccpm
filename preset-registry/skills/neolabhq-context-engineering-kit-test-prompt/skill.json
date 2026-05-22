@@ -1,0 +1,26 @@
+{
+  "id": "neolabhq-context-engineering-kit-test-prompt",
+  "name": "test-prompt",
+  "description": "Use when creating or editing any prompt (commands, hooks, skills, subagent instructions) to verify it produces desired behavior - applies RED-GREEN-REFACTOR cycle to prompt engineering using subagents for isolated testing",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "NeoLabHQ",
+  "install_path": ".claude/skills/test-prompt/SKILL.md",
+  "source": {
+    "repo": "NeoLabHQ/context-engineering-kit",
+    "url": "https://github.com/NeoLabHQ/context-engineering-kit/blob/master/plugins/customaize-agent/skills/test-prompt/SKILL.md",
+    "path": "plugins/customaize-agent/skills/test-prompt/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-05-22T04:42:28.521Z",
+    "stars": 1025,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-22T00:32:29Z",
+    "license": "GPL-3.0"
+  },
+  "summary_zh": "这是一个提示词测试工具，专用于编写或修改提示词时验证输出是否符合预期，它借鉴代码开发的红绿重构循环，让你能安全隔离地迭代和调试提示词。"
+}

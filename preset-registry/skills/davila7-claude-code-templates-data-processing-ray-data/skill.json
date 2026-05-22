@@ -1,0 +1,26 @@
+{
+  "id": "davila7-claude-code-templates-data-processing-ray-data",
+  "name": "ray-data",
+  "description": "Scalable data processing for ML workloads. Streaming execution across CPU/GPU, supports Parquet/CSV/JSON/images. Integrates with Ray Train, PyTorch, TensorFlow. Scales from single machine to 100s of nodes. Use for batch inference, data preprocessing, multi-modal data loading, or distributed ETL pipelines.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "davila7",
+  "install_path": ".claude/skills/data-processing-ray-data/SKILL.md",
+  "source": {
+    "repo": "davila7/claude-code-templates",
+    "url": "https://github.com/davila7/claude-code-templates/blob/main/cli-tool/components/skills/ai-research/data-processing-ray-data/SKILL.md",
+    "path": "cli-tool/components/skills/ai-research/data-processing-ray-data/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:44.448Z",
+    "stars": 27482,
+    "language": "Python",
+    "pushed_at": "2026-05-22T04:31:04Z",
+    "license": "MIT"
+  },
+  "summary_zh": "专为机器学习设计的可扩展数据处理库，能轻松实现从单机到集群的流式处理。它非常适合用来做数据预处理、多模态加载、批量推理，或者搭建分布式的ETL流水线。"
+}

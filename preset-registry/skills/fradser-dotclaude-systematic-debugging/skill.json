@@ -1,0 +1,26 @@
+{
+  "id": "fradser-dotclaude-systematic-debugging",
+  "name": "systematic-debugging",
+  "description": "Provides a systematic debugging methodology with a 4-phase root cause analysis process. This skill should be used when the user reports a bug, error, test failure, or unexpected behavior, ensuring thorough investigation precedes any code changes.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "FradSer",
+  "install_path": ".claude/skills/systematic-debugging/SKILL.md",
+  "source": {
+    "repo": "FradSer/dotclaude",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/superpowers/skills/systematic-debugging/SKILL.md",
+    "path": "superpowers/skills/systematic-debugging/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:16.802Z",
+    "stars": 548,
+    "language": "Shell",
+    "pushed_at": "2026-05-21T09:20:23Z",
+    "license": null
+  },
+  "summary_zh": "这是一套系统化的调试方法论，专门应对各种报错、测试失败或异常行为，帮你先彻底查明根本原因再动手改代码，避免盲目试错。"
+}

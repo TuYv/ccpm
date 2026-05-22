@@ -1,0 +1,26 @@
+{
+  "id": "fvadicamo-dev-agent-skills-git-commit",
+  "name": "git-commit",
+  "description": "Creates git commits following Conventional Commits format with type/scope/subject. Use when user wants to commit changes, create commit, save work, or stage and commit. Enforces project-specific conventions from CLAUDE.md.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "fvadicamo",
+  "install_path": ".claude/skills/git-commit/SKILL.md",
+  "source": {
+    "repo": "fvadicamo/dev-agent-skills",
+    "url": "https://github.com/fvadicamo/dev-agent-skills/blob/main/plugins/github-workflow/skills/git-commit/SKILL.md",
+    "path": "plugins/github-workflow/skills/git-commit/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:22.162Z",
+    "stars": 63,
+    "language": "Shell",
+    "pushed_at": "2026-05-17T21:36:00Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是个按约定式格式和项目规范自动生成提交信息的工具，适合日常写代码提交时使用，帮你告别杂乱无章的 commit 记录。"
+}

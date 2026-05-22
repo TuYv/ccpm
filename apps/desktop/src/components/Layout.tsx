@@ -58,7 +58,12 @@ export default function Layout() {
   const counts = {
     recipes: useRecipesStore((s) => (s.recipes.length || undefined)),
     presets: usePresetsStore((s) => s.index?.presets.length),
-    skills:  useSkillsStore((s) => s.index?.skills.length),
+    skills:  useSkillsStore((s) => {
+      if (!s.index) return undefined;
+      const bundledIds = new Set(s.bundles.flatMap((b) => b.skill_ids));
+      const singletons = s.index.skills.filter((skill) => !bundledIds.has(skill.id)).length;
+      return s.bundles.length + singletons;
+    }),
     mcps:    useMcpsStore((s) => s.index?.mcps.length),
     installed: useInstalledStore((s) => {
       const st = s.state;

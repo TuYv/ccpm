@@ -1,0 +1,26 @@
+{
+  "id": "team-attention-plugins-for-claude-natives-session-analyzer",
+  "name": "session-analyzer",
+  "description": "This skill should be used when the user asks to \"analyze session\", \"세션 분석\", \"evaluate skill execution\", \"스킬 실행 검증\", \"check session logs\", \"로그 분석\", provides a session ID with a skill path, or wants to verify that a skill executed correctly in a past session. Post-hoc analysis of Claude Code sessions to validate skill/agent/hook behavior against SKILL.md specifications.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "team-attention",
+  "install_path": ".claude/skills/session-analyzer/SKILL.md",
+  "source": {
+    "repo": "team-attention/plugins-for-claude-natives",
+    "url": "https://github.com/team-attention/plugins-for-claude-natives/blob/main/plugins/session-wrap/skills/session-analyzer/SKILL.md",
+    "path": "plugins/session-wrap/skills/session-analyzer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:37.610Z",
+    "stars": 773,
+    "language": "Python",
+    "pushed_at": "2026-04-20T06:53:40Z",
+    "license": "MIT"
+  },
+  "summary_zh": "专用于Claude Code会话的事后分析工具，能对照规范验证技能、代理或钩子的历史执行行为是否正确，适合排查会话日志或检验执行结果的场景。"
+}

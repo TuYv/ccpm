@@ -1,0 +1,26 @@
+{
+  "id": "iamzhihuix-happy-claude-skills-docx-format-replicator",
+  "name": "docx-format-replicator",
+  "description": "Extract formatting from existing Word documents and generate new documents with the same format but different content. Use this skill when users need to create multiple documents with consistent formatting, replicate document templates, or maintain corporate document standards across different content.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "iamzhihuix",
+  "install_path": ".claude/skills/docx-format-replicator/SKILL.md",
+  "source": {
+    "repo": "iamzhihuix/happy-claude-skills",
+    "url": "https://github.com/iamzhihuix/happy-claude-skills/blob/main/skills/docx-format-replicator/SKILL.md",
+    "path": "skills/docx-format-replicator/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:23.374Z",
+    "stars": 295,
+    "language": "TypeScript",
+    "pushed_at": "2026-04-20T01:07:19Z",
+    "license": "MIT"
+  },
+  "summary_zh": "它能提取现有Word文档的格式并套用到新内容上，帮你轻松搞定格式统一、模板复用的麻烦，特别适合需要维护企业文档规范的场景。"
+}

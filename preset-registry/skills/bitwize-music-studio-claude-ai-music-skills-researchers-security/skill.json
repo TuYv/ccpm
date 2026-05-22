@@ -1,0 +1,26 @@
+{
+  "id": "bitwize-music-studio-claude-ai-music-skills-researchers-security",
+  "name": "researchers-security",
+  "description": "Researches malware analysis, CVEs, attribution reports, and hacker community sources. Use when the album subject involves cybersecurity incidents or threat actors.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "bitwize-music-studio",
+  "install_path": ".claude/skills/researchers-security/SKILL.md",
+  "source": {
+    "repo": "bitwize-music-studio/claude-ai-music-skills",
+    "url": "https://github.com/bitwize-music-studio/claude-ai-music-skills/blob/main/skills/researchers-security/SKILL.md",
+    "path": "skills/researchers-security/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:39.234Z",
+    "stars": 202,
+    "language": "Python",
+    "pushed_at": "2026-05-21T00:00:51Z",
+    "license": "CC0-1.0"
+  },
+  "summary_zh": "这是一个网络安全情报研究助手，能帮你深挖漏洞、黑客组织及安全事件的背景。当你处理的内容涉及网络攻击或威胁者时，它能快速提供相关情报支持。"
+}

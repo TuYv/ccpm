@@ -1,0 +1,26 @@
+{
+  "id": "raintree-technology-claude-starter-stripe",
+  "name": "stripe-expert",
+  "description": "Comprehensive Stripe API expert with access to 3,253 official documentation files covering all payment processing, billing, subscriptions, webhooks, Connect, Terminal, Radar, Identity, Tax, Climate, and integrations. Invoke when user mentions Stripe, payments, subscriptions, billing, payment processing, checkout, invoices, or any payment-related features.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "raintree-technology",
+  "install_path": ".claude/skills/stripe/SKILL.md",
+  "source": {
+    "repo": "raintree-technology/claude-starter",
+    "url": "https://github.com/raintree-technology/claude-starter/blob/main/.claude/skills/stripe/skill.md",
+    "path": ".claude/skills/stripe/skill.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:53.928Z",
+    "stars": 76,
+    "language": "Zig",
+    "pushed_at": "2026-04-24T22:45:15Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是个精通Stripe的API开发助手，熟读官方文档，专门帮你解决支付、账单或订阅等支付相关的开发难题。"
+}

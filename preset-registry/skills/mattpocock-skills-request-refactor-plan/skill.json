@@ -1,0 +1,26 @@
+{
+  "id": "mattpocock-skills-request-refactor-plan",
+  "name": "request-refactor-plan",
+  "description": "Create a detailed refactor plan with tiny commits via user interview, then file it as a GitHub issue. Use when user wants to plan a refactor, create a refactoring RFC, or break a refactor into safe incremental steps.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mattpocock",
+  "install_path": ".claude/skills/request-refactor-plan/SKILL.md",
+  "source": {
+    "repo": "mattpocock/skills",
+    "url": "https://github.com/mattpocock/skills/blob/main/skills/deprecated/request-refactor-plan/SKILL.md",
+    "path": "skills/deprecated/request-refactor-plan/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:04.759Z",
+    "stars": 99464,
+    "language": "Shell",
+    "pushed_at": "2026-05-20T08:46:54Z",
+    "license": "MIT"
+  },
+  "summary_zh": "它通过交互问答帮你梳理思路，生成包含小步提交的重构计划并提为 GitHub issue，适合需要规划重构、写 RFC，或想把大重构安全拆解为渐进步骤的场景。"
+}

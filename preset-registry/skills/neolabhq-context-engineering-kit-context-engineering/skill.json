@@ -1,0 +1,26 @@
+{
+  "id": "neolabhq-context-engineering-kit-context-engineering",
+  "name": "context-engineering",
+  "description": "Understand the components, mechanics, and constraints of context in agent systems. Use when writing, editing, or optimizing commands, skills, or sub-agents prompts.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "NeoLabHQ",
+  "install_path": ".claude/skills/context-engineering/SKILL.md",
+  "source": {
+    "repo": "NeoLabHQ/context-engineering-kit",
+    "url": "https://github.com/NeoLabHQ/context-engineering-kit/blob/master/plugins/customaize-agent/skills/context-engineering/SKILL.md",
+    "path": "plugins/customaize-agent/skills/context-engineering/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-05-22T04:42:27.821Z",
+    "stars": 1025,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-22T00:32:29Z",
+    "license": "GPL-3.0"
+  },
+  "summary_zh": "这是一套关于智能体上下文的知识框架，帮你理清上下文的构成与运行机制，适合在编写或优化AI指令、技能及子智能体提示词时使用。"
+}

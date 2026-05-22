@@ -1,0 +1,26 @@
+{
+  "id": "zebbern-claude-code-guide-wordpress-penetration-testing",
+  "name": "WordPress Penetration Testing",
+  "description": "This skill should be used when the user asks to \"pentest WordPress sites\", \"scan WordPress for vulnerabilities\", \"enumerate WordPress users, themes, or plugins\", \"exploit WordPress vulnerabilities\", or \"use WPScan\". It provides comprehensive WordPress security assessment methodologies.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "zebbern",
+  "install_path": ".claude/skills/wordpress-penetration-testing/SKILL.md",
+  "source": {
+    "repo": "zebbern/claude-code-guide",
+    "url": "https://github.com/zebbern/claude-code-guide/blob/main/skills/wordpress-penetration-testing/SKILL.md",
+    "path": "skills/wordpress-penetration-testing/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:10.677Z",
+    "stars": 4156,
+    "language": null,
+    "pushed_at": "2026-05-22T01:16:53Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一项针对WordPress的安全评估技能，能帮你全面排查站点漏洞并执行渗透测试，适合需要检验WordPress网站防御能力的场景。"
+}

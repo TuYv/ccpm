@@ -1,0 +1,26 @@
+{
+  "id": "raintree-technology-claude-starter-sdk-developer",
+  "name": "shelby-sdk-developer",
+  "description": "Expert in Shelby Protocol TypeScript SDK for decentralized storage on Aptos. Helps with blob uploads/downloads, session management, micropayment channels, multipart uploads, and SDK integration for Node.js and browser environments. Triggers on keywords ShelbyNodeClient, ShelbyClient, @shelby-protocol/sdk, Shelby SDK, decentralized blob storage, Shelby upload, Shelby download, Shelby session.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "raintree-technology",
+  "install_path": ".claude/skills/sdk-developer/SKILL.md",
+  "source": {
+    "repo": "raintree-technology/claude-starter",
+    "url": "https://github.com/raintree-technology/claude-starter/blob/main/.claude/skills/aptos/shelby/sdk-developer/skill.md",
+    "path": ".claude/skills/aptos/shelby/sdk-developer/skill.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:52.334Z",
+    "stars": 76,
+    "language": "Zig",
+    "pushed_at": "2026-04-24T22:45:15Z",
+    "license": "MIT"
+  },
+  "summary_zh": "它是Aptos去中心化存储的开发助手，能帮你在Node.js或浏览器中快速接入SDK，轻松解决各种存储交互与微支付的集成难题。"
+}

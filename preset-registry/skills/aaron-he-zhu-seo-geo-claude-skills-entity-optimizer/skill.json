@@ -1,0 +1,26 @@
+{
+  "id": "aaron-he-zhu-seo-geo-claude-skills-entity-optimizer",
+  "name": "entity-optimizer",
+  "description": "Use when the user asks to \"optimize entity presence\"; builds Knowledge Graph, Wikidata, sameAs, and AI recognition signals. 实体优化/知识图谱",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "9.9.9",
+  "author": "aaron-he-zhu",
+  "install_path": ".claude/skills/entity-optimizer/SKILL.md",
+  "source": {
+    "repo": "aaron-he-zhu/seo-geo-claude-skills",
+    "url": "https://github.com/aaron-he-zhu/seo-geo-claude-skills/blob/main/cross-cutting/entity-optimizer/SKILL.md",
+    "path": "cross-cutting/entity-optimizer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:59.939Z",
+    "stars": 1731,
+    "language": "Shell",
+    "pushed_at": "2026-05-14T08:11:30Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "这是一个提升实体在AI和搜索中曝光度的工具，通过构建关联数据网络解决机器难以识别你的问题，适合需要增强实体存在感、让AI更懂你的品牌营销和SEO场景。"
+}

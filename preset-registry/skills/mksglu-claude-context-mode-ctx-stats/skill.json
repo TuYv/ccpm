@@ -1,0 +1,26 @@
+{
+  "id": "mksglu-claude-context-mode-ctx-stats",
+  "name": "ctx-stats",
+  "description": "| Show how much context window context-mode saved this session. Displays token consumption, context savings ratio, and per-tool breakdown. Read-only — shows stats only, no reset capability. To wipe the knowledge base entirely, use ctx_purge instead. Trigger: /context-mode:ctx-stats",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mksglu",
+  "install_path": ".claude/skills/ctx-stats/SKILL.md",
+  "source": {
+    "repo": "mksglu/claude-context-mode",
+    "url": "https://github.com/mksglu/claude-context-mode/blob/main/skills/ctx-stats/SKILL.md",
+    "path": "skills/ctx-stats/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:51.820Z",
+    "stars": 15360,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-21T13:02:08Z",
+    "license": null
+  },
+  "summary_zh": "这是一个只读统计面板，能直观展示当前会话省了多少上下文、Token消耗及各工具用量明细，适合需要监控上下文占用并优化Token消耗的场景。"
+}

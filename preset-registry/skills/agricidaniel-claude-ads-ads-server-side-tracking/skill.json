@@ -1,0 +1,26 @@
+{
+  "id": "agricidaniel-claude-ads-ads-server-side-tracking",
+  "name": "ads-server-side-tracking",
+  "description": "Server-side tracking pipeline audit covering server-side Google Tag Manager (sGTM), Meta CAPI Gateway, Conversions API health, event deduplication via event_id, server-side hit ratio targets, pixel debugging, and PII hashing discipline. Use when user says server-side tracking, sGTM, server-side GTM, server-side tagging, CAPI, Conversions API, CAPI Gateway, Meta Conversions API, event deduplication, event_id, pixel debug, pixel health, Pixel/CAPI audit, first-party tracking, iOS 14.5 recovery, or",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "AgriciDaniel",
+  "install_path": ".claude/skills/ads-server-side-tracking/SKILL.md",
+  "source": {
+    "repo": "AgriciDaniel/claude-ads",
+    "url": "https://github.com/AgriciDaniel/claude-ads/blob/main/skills/ads-server-side-tracking/SKILL.md",
+    "path": "skills/ads-server-side-tracking/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:29.243Z",
+    "stars": 5109,
+    "language": "Python",
+    "pushed_at": "2026-05-18T17:32:57Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一款服务端追踪审计工具，能帮你排查广告回传链路，解决事件重复、数据丢失及隐私合规痛点，特别适合应对iOS 14.5+导致归因失效或需精细化追踪的场景。"
+}

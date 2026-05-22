@@ -1,0 +1,26 @@
+{
+  "id": "zechenzhangagi-ai-research-skills-bitsandbytes",
+  "name": "quantizing-models-bitsandbytes",
+  "description": "Quantizes LLMs to 8-bit or 4-bit for 50-75% memory reduction with minimal accuracy loss. Use when GPU memory is limited, need to fit larger models, or want faster inference. Supports INT8, NF4, FP4 formats, QLoRA training, and 8-bit optimizers. Works with HuggingFace Transformers.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "zechenzhangAGI",
+  "install_path": ".claude/skills/bitsandbytes/SKILL.md",
+  "source": {
+    "repo": "zechenzhangAGI/AI-research-SKILLs",
+    "url": "https://github.com/zechenzhangAGI/AI-research-SKILLs/blob/main/10-optimization/bitsandbytes/SKILL.md",
+    "path": "10-optimization/bitsandbytes/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:42.319Z",
+    "stars": 8786,
+    "language": "TeX",
+    "pushed_at": "2026-04-28T05:09:27Z",
+    "license": "MIT"
+  },
+  "summary_zh": "把大模型压缩到8位或4位的量化工具，能省下一半以上显存且几乎不掉精度，适合显卡装不下大模型或想加速推理的场景。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "vercel-labs-agent-skills-react-best-practices",
+  "name": "vercel-react-best-practices",
+  "description": "React and Next.js performance optimization guidelines from Vercel Engineering. This skill should be used when writing, reviewing, or refactoring React/Next.js code to ensure optimal performance patterns. Triggers on tasks involving React components, Next.js pages, data fetching, bundle optimization, or performance improvements.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "vercel-labs",
+  "install_path": ".claude/skills/react-best-practices/SKILL.md",
+  "source": {
+    "repo": "vercel-labs/agent-skills",
+    "url": "https://github.com/vercel-labs/agent-skills/blob/main/skills/react-best-practices/SKILL.md",
+    "path": "skills/react-best-practices/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:21.325Z",
+    "stars": 26933,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-21T19:20:56Z",
+    "license": null
+  },
+  "summary_zh": "这是 Vercel 官方的 React 与 Next.js 性能优化指南，写代码、审查或重构时拿它当参考，能帮你避开性能坑，确保项目始终保持最佳运行效率。"
+}

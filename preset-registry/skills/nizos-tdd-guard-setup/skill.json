@@ -1,0 +1,26 @@
+{
+  "id": "nizos-tdd-guard-setup",
+  "name": "setup",
+  "description": "Set up or update TDD Guard for the current project. Detects the test framework, installs or updates the matching reporter, and configures or migrates its configuration to match the current specification.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "nizos",
+  "install_path": ".claude/skills/setup/SKILL.md",
+  "source": {
+    "repo": "nizos/tdd-guard",
+    "url": "https://github.com/nizos/tdd-guard/blob/main/plugin/skills/setup/SKILL.md",
+    "path": "plugin/skills/setup/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:52.349Z",
+    "stars": 2137,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-17T09:26:28Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个 TDD Guard 自动配置工具，能自动识别测试框架并完成相关组件安装与配置迁移，帮你省去繁琐的手动设置，轻松在项目中接入或升级测试规范。"
+}

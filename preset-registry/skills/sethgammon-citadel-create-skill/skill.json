@@ -1,0 +1,26 @@
+{
+  "id": "sethgammon-citadel-create-skill",
+  "name": "create-skill",
+  "description": ">- Creates new skills from the user's repeating patterns. Interview-driven: discovers the task, analyzes failure modes, generates a production SKILL.md, installs it, tests it on a real target, and teaches the user how to use it. Use when a user wants to encode a repeating workflow; do NOT use for one-off tasks or modifying existing skills.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "SethGammon",
+  "install_path": ".claude/skills/create-skill/SKILL.md",
+  "source": {
+    "repo": "SethGammon/Citadel",
+    "url": "https://github.com/SethGammon/Citadel/blob/main/skills/create-skill/SKILL.md",
+    "path": "skills/create-skill/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:05.334Z",
+    "stars": 572,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-07T17:50:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "它能通过交互问答，把你经常重复的操作自动提炼并固化为可复用的技能，非常适合用来将日常重复工作流标准化，但不适用于一次性任务。"
+}

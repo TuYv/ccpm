@@ -1,0 +1,26 @@
+{
+  "id": "addyosmani-agent-skills-interview-me",
+  "name": "interview-me",
+  "description": "Extracts what the user actually wants instead of what they think they should want. Achieves this through one-question-at-a-time interview until ~95% confidence about the underlying intent. Use when an ask is underspecified (\"build me X\" without \"for whom\" or \"why now\"), when the user explicitly invokes (\"interview me\", \"grill me\", \"are we sure?\", \"stress-test my thinking\"), or when you catch yourself silently filling in ambiguous requirements before any plan, spec, or code exists.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "addyosmani",
+  "install_path": ".claude/skills/interview-me/SKILL.md",
+  "source": {
+    "repo": "addyosmani/agent-skills",
+    "url": "https://github.com/addyosmani/agent-skills/blob/main/skills/interview-me/SKILL.md",
+    "path": "skills/interview-me/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:23.793Z",
+    "stars": 44664,
+    "language": "Shell",
+    "pushed_at": "2026-05-16T22:00:25Z",
+    "license": "MIT"
+  },
+  "summary_zh": "通过逐个提问挖掘真实需求的工具。专治需求模糊不清，适合接手“做个XX”这种残缺需求、想找人盘问验证想法，或是自己正要脑补细节时使用，帮你一步步问出底层的真正意图。"
+}

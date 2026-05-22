@@ -1,0 +1,26 @@
+{
+  "id": "sethgammon-citadel-create-app",
+  "name": "create-app",
+  "description": ">- End-to-end app creation from a single description. Five tiers: blank project, guided, templated, fully generated, or feature addition to existing codebase. Routes through PRD, architecture, and Archon campaign with verification at every step.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "SethGammon",
+  "install_path": ".claude/skills/create-app/SKILL.md",
+  "source": {
+    "repo": "SethGammon/Citadel",
+    "url": "https://github.com/SethGammon/Citadel/blob/main/skills/create-app/SKILL.md",
+    "path": "skills/create-app/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:05.244Z",
+    "stars": 572,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-07T17:50:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一款根据一段描述自动生成应用的工具。它帮你搞定从需求、架构到代码的全流程并自动验证，不管从零建项目还是给老项目加功能，都能省去繁琐的规划与搭建。"
+}

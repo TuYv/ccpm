@@ -1,0 +1,26 @@
+{
+  "id": "zebbern-claude-code-guide-active-directory-attacks",
+  "name": "Active Directory Attacks",
+  "description": "This skill should be used when the user asks to \"attack Active Directory\", \"exploit AD\", \"Kerberoasting\", \"DCSync\", \"pass-the-hash\", \"BloodHound enumeration\", \"Golden Ticket\", \"Silver Ticket\", \"AS-REP roasting\", \"NTLM relay\", or needs guidance on Windows domain penetration testing.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "zebbern",
+  "install_path": ".claude/skills/active-directory-attacks/SKILL.md",
+  "source": {
+    "repo": "zebbern/claude-code-guide",
+    "url": "https://github.com/zebbern/claude-code-guide/blob/main/skills/active-directory-attacks/SKILL.md",
+    "path": "skills/active-directory-attacks/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:08.147Z",
+    "stars": 4156,
+    "language": null,
+    "pushed_at": "2026-05-22T01:16:53Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一款专攻Windows域渗透的指导工具，能帮你搞定活动目录环境下的各类攻击与提权难题，非常适合安全评估场景。"
+}

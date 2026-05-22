@@ -1,0 +1,26 @@
+{
+  "id": "sethgammon-citadel-doc-gen",
+  "name": "doc-gen",
+  "description": ">- Documentation generator with three modes: function-level (JSDoc/docstrings), module-level (directory READMEs), and API reference (endpoints/exports). Reads existing project doc style and matches it. Never generates docs that just restate what the signature already says.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "SethGammon",
+  "install_path": ".claude/skills/doc-gen/SKILL.md",
+  "source": {
+    "repo": "SethGammon/Citadel",
+    "url": "https://github.com/SethGammon/Citadel/blob/main/skills/doc-gen/SKILL.md",
+    "path": "skills/doc-gen/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:05.761Z",
+    "stars": 572,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-07T17:50:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一款能针对代码各层级自动生成文档的工具，它会自动匹配项目现有风格，且拒绝只复述代码签名的废话，适合需要快速补全高质量、风格统一文档的开发者。"
+}

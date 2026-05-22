@@ -1,0 +1,26 @@
+{
+  "id": "davila7-claude-code-templates-agent-memory-mcp",
+  "name": "agent-memory-mcp",
+  "description": "A hybrid memory system that provides persistent, searchable knowledge management for AI agents (Architecture, Patterns, Decisions).",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "davila7",
+  "install_path": ".claude/skills/agent-memory-mcp/SKILL.md",
+  "source": {
+    "repo": "davila7/claude-code-templates",
+    "url": "https://github.com/davila7/claude-code-templates/blob/main/cli-tool/components/skills/ai-research/agent-memory-mcp/SKILL.md",
+    "path": "cli-tool/components/skills/ai-research/agent-memory-mcp/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:42.898Z",
+    "stars": 27482,
+    "language": "Python",
+    "pushed_at": "2026-05-22T04:31:04Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个给AI智能体用的混合记忆系统，能帮AI长期存取和检索关键项目知识，解决AI健忘的问题，适合需要让AI持续积累并复用经验的场景。"
+}

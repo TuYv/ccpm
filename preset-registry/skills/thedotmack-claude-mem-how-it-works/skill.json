@@ -1,0 +1,26 @@
+{
+  "id": "thedotmack-claude-mem-how-it-works",
+  "name": "how-it-works",
+  "description": "Explain how claude-mem captures observations, when memory injection kicks in, and where data lives. Use when the user asks \"how does claude-mem work?\" or \"what is this thing doing?\".",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "thedotmack",
+  "install_path": ".claude/skills/how-it-works/SKILL.md",
+  "source": {
+    "repo": "thedotmack/claude-mem",
+    "url": "https://github.com/thedotmack/claude-mem/blob/main/plugin/skills/how-it-works/SKILL.md",
+    "path": "plugin/skills/how-it-works/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:48.170Z",
+    "stars": 77318,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-21T10:26:19Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "专门解释claude-mem运作机制的指南，帮你搞懂它怎么记录信息、何时注入记忆以及数据存在哪，适合解答用户对它工作原理或当前行为的疑问。"
+}

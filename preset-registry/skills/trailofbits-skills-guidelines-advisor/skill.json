@@ -1,0 +1,26 @@
+{
+  "id": "trailofbits-skills-guidelines-advisor",
+  "name": "guidelines-advisor",
+  "description": "Smart contract development advisor based on Trail of Bits' best practices. Analyzes codebase to generate documentation/specifications, review architecture, check upgradeability patterns, assess implementation quality, identify pitfalls, review dependencies, and evaluate testing. Provides actionable recommendations.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "trailofbits",
+  "install_path": ".claude/skills/guidelines-advisor/SKILL.md",
+  "source": {
+    "repo": "trailofbits/skills",
+    "url": "https://github.com/trailofbits/skills/blob/main/plugins/building-secure-contracts/skills/guidelines-advisor/SKILL.md",
+    "path": "plugins/building-secure-contracts/skills/guidelines-advisor/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:41:49.182Z",
+    "stars": 5325,
+    "language": "Python",
+    "pushed_at": "2026-05-16T17:22:25Z",
+    "license": "CC-BY-SA-4.0"
+  },
+  "summary_zh": "这是一款基于行业最佳实践的智能合约开发顾问，能帮你审查代码、排查安全与架构风险，并输出修改建议，适合开发者在编写或审计合约时用来保障代码质量与安全。"
+}

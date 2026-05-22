@@ -1,0 +1,26 @@
+{
+  "id": "alinaqi-claude-bootstrap-ai-models",
+  "name": "ai-models",
+  "description": "Latest AI models reference - Claude, OpenAI, Gemini, Eleven Labs, Replicate",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alinaqi",
+  "install_path": ".claude/skills/ai-models/SKILL.md",
+  "source": {
+    "repo": "alinaqi/claude-bootstrap",
+    "url": "https://github.com/alinaqi/claude-bootstrap/blob/main/skills/ai-models/SKILL.md",
+    "path": "skills/ai-models/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:23.514Z",
+    "stars": 641,
+    "language": "Python",
+    "pushed_at": "2026-05-21T22:01:29Z",
+    "license": "MIT"
+  },
+  "summary_zh": "主流AI模型速查手册，帮你快速了解和对比各大厂最新模型，适合开发者在技术选型或接入API时查阅。"
+}

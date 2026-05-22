@@ -1,0 +1,26 @@
+{
+  "id": "davila7-claude-code-templates-planning",
+  "name": "planning",
+  "description": "Create and manage persistent markdown planning files for structured task execution. Use when the user asks to \"create a plan\", \"track progress\", \"start a research project\", or when a task requires more than 5 tool calls and needs structured phase tracking to stay focused and avoid goal drift.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "davila7",
+  "install_path": ".claude/skills/planning/SKILL.md",
+  "source": {
+    "repo": "davila7/claude-code-templates",
+    "url": "https://github.com/davila7/claude-code-templates/blob/main/cli-tool/components/skills/ai-maestro/planning/SKILL.md",
+    "path": "cli-tool/components/skills/ai-maestro/planning/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:42.637Z",
+    "stars": 27482,
+    "language": "Python",
+    "pushed_at": "2026-05-22T04:31:04Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用Markdown文件制定和管理结构化任务计划的工具，适合需要规划步骤、追踪进度或处理复杂繁琐任务时使用，帮你保持专注防止跑偏。"
+}

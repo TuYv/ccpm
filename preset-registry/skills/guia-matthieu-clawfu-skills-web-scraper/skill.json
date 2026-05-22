@@ -1,0 +1,26 @@
+{
+  "id": "guia-matthieu-clawfu-skills-web-scraper",
+  "name": "web-scraper",
+  "description": "Extract structured data from websites. Use when: collecting competitor pricing; scraping product listings; extracting contact information; gathering research data; monitoring website changes",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "guia-matthieu",
+  "install_path": ".claude/skills/web-scraper/SKILL.md",
+  "source": {
+    "repo": "guia-matthieu/clawfu-skills",
+    "url": "https://github.com/guia-matthieu/clawfu-skills/blob/main/skills/automation/web-scraper/SKILL.md",
+    "path": "skills/automation/web-scraper/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:46:31.225Z",
+    "stars": 109,
+    "language": "Python",
+    "pushed_at": "2026-04-02T10:12:11Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是个网页数据抓取工具，能帮你从网站提取结构化信息，特别适合做竞品监控、商品或联系方式采集，以及数据研究与动态追踪。"
+}

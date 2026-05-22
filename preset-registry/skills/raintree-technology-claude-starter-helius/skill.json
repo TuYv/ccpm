@@ -1,0 +1,26 @@
+{
+  "id": "raintree-technology-claude-starter-helius",
+  "name": "helius",
+  "description": "Helius Solana RPC and API expert. High-performance infrastructure for Solana including RPC nodes, DAS API for NFTs/tokens, LaserStream real-time streaming, webhooks, Priority Fee API, Enhanced Transactions, and ZK Compression. Triggers on Helius, Solana RPC, DAS API, Digital Asset Standard, NFT metadata, Solana webhooks, priority fees, LaserStream, ZK compression.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "raintree-technology",
+  "install_path": ".claude/skills/helius/SKILL.md",
+  "source": {
+    "repo": "raintree-technology/claude-starter",
+    "url": "https://github.com/raintree-technology/claude-starter/blob/main/.claude/skills/helius/SKILL.md",
+    "path": ".claude/skills/helius/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:53.216Z",
+    "stars": 76,
+    "language": "Zig",
+    "pushed_at": "2026-04-24T22:45:15Z",
+    "license": "MIT"
+  },
+  "summary_zh": "专为Solana打造的高性能底层基建，提供一站式的数据访问与交易增强接口，帮开发者免去繁琐的底层对接，轻松构建高并发的Web3应用。"
+}

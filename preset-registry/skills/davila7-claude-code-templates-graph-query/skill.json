@@ -1,0 +1,26 @@
+{
+  "id": "davila7-claude-code-templates-graph-query",
+  "name": "graph-query",
+  "description": "Query the code graph database to understand component relationships, dependencies, and change impact. Use when the user asks to \"find callers\", \"check dependencies\", \"what uses this\", \"show relationships\", \"find serializers\", or when reading code and needing to understand what depends on a component before modifications.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "davila7",
+  "install_path": ".claude/skills/graph-query/SKILL.md",
+  "source": {
+    "repo": "davila7/claude-code-templates",
+    "url": "https://github.com/davila7/claude-code-templates/blob/main/cli-tool/components/skills/ai-maestro/graph-query/SKILL.md",
+    "path": "cli-tool/components/skills/ai-maestro/graph-query/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:42.486Z",
+    "stars": 27482,
+    "language": "Python",
+    "pushed_at": "2026-05-22T04:31:04Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个查询代码关系图谱的工具，能帮你理清组件间的依赖和调用链，评估修改影响。特别适合在改代码前，查谁调用了它或看有哪些依赖的场景。"
+}

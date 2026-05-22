@@ -1,0 +1,26 @@
+{
+  "id": "raintree-technology-claude-starter-claude-code",
+  "name": "claude-code-expert",
+  "description": "Expert on Claude Code CLI, skills, commands, hooks, plugins, MCP, settings, and workflows. Triggers on claude code, cli, skill, command, hook, plugin, mcp, slash command, settings",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "raintree-technology",
+  "install_path": ".claude/skills/claude-code/SKILL.md",
+  "source": {
+    "repo": "raintree-technology/claude-starter",
+    "url": "https://github.com/raintree-technology/claude-starter/blob/main/templates/.claude/skills/anthropic/claude-code/skill.md",
+    "path": "templates/.claude/skills/anthropic/claude-code/skill.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:54.490Z",
+    "stars": 76,
+    "language": "Zig",
+    "pushed_at": "2026-04-24T22:45:15Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个精通Claude Code命令行工具的专家助手，能帮你解决从基础配置到高级工作流搭建的各种疑问，适合开发中随时咨询使用技巧。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "op7418-codepilot-feishu-channel-rules",
+  "name": "feishu-channel-rules",
+  "description": "| Lark/Feishu channel output rules. Always active in Lark conversations.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "op7418",
+  "install_path": ".claude/skills/feishu-channel-rules/SKILL.md",
+  "source": {
+    "repo": "op7418/CodePilot",
+    "url": "https://github.com/op7418/CodePilot/blob/main/资料/feishu-openclaw-plugin/package/skills/feishu-channel-rules/SKILL.md",
+    "path": "资料/feishu-openclaw-plugin/package/skills/feishu-channel-rules/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:00.463Z",
+    "stars": 5769,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-11T06:07:30Z",
+    "license": null
+  },
+  "summary_zh": "这是一套飞书频道的输出规范，确保在飞书对话中始终按既定规则生成内容，适合需要约束或统一群聊机器人回复行为的场景。"
+}

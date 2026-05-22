@@ -1,0 +1,26 @@
+{
+  "id": "wshobson-agents-linkerd-patterns",
+  "name": "linkerd-patterns",
+  "description": "Implement Linkerd service mesh patterns for lightweight, security-focused service mesh deployments. Use when setting up Linkerd, configuring traffic policies, or implementing zero-trust networking with minimal overhead.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "wshobson",
+  "install_path": ".claude/skills/linkerd-patterns/SKILL.md",
+  "source": {
+    "repo": "wshobson/agents",
+    "url": "https://github.com/wshobson/agents/blob/main/plugins/cloud-infrastructure/skills/linkerd-patterns/SKILL.md",
+    "path": "plugins/cloud-infrastructure/skills/linkerd-patterns/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:56.878Z",
+    "stars": 35770,
+    "language": "Python",
+    "pushed_at": "2026-05-21T20:01:53Z",
+    "license": "MIT"
+  },
+  "summary_zh": "提供轻量安全的Linkerd服务网格部署方案，帮你快速完成环境搭建与流量策略配置，以极低开销实现零信任网络。"
+}

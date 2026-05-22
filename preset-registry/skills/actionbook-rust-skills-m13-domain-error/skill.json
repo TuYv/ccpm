@@ -1,0 +1,26 @@
+{
+  "id": "actionbook-rust-skills-m13-domain-error",
+  "name": "m13-domain-error",
+  "description": "Use when designing domain error handling. Keywords: domain error, error categorization, recovery strategy, retry, fallback, domain error hierarchy, user-facing vs internal errors, error code design, circuit breaker, graceful degradation, resilience, error context, backoff, retry with backoff, error recovery, transient vs permanent error, 领域错误, 错误分类, 恢复策略, 重试, 熔断器, 优雅降级",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "actionbook",
+  "install_path": ".claude/skills/m13-domain-error/SKILL.md",
+  "source": {
+    "repo": "actionbook/rust-skills",
+    "url": "https://github.com/actionbook/rust-skills/blob/main/skills/m13-domain-error/SKILL.md",
+    "path": "skills/m13-domain-error/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:01.843Z",
+    "stars": 1164,
+    "language": "Shell",
+    "pushed_at": "2026-05-12T12:59:42Z",
+    "license": null
+  },
+  "summary_zh": "这是一套领域错误处理方案，帮你理清错误分类并制定容错与恢复策略，适合需要提升系统韧性和优雅处理异常的开发场景。"
+}

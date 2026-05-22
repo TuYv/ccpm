@@ -1,0 +1,26 @@
+{
+  "id": "htdt-godogen-godogen",
+  "name": "godogen",
+  "description": "| Generate or update a complete Godot game from a natural-language description. Use when the user wants ${AGENT_NAME} to make, rebuild, or substantially extend a Godot project end to end.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "htdt",
+  "install_path": ".claude/skills/godogen/SKILL.md",
+  "source": {
+    "repo": "htdt/godogen",
+    "url": "https://github.com/htdt/godogen/blob/master/godot/skills/godogen/SKILL.md",
+    "path": "godot/skills/godogen/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-05-22T04:43:30.289Z",
+    "stars": 3246,
+    "language": "Python",
+    "pushed_at": "2026-05-20T14:57:26Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用自然语言描述就能直接生成或更新完整的Godot游戏，特别适合从零搭建、重构或大幅扩写游戏项目的场景。"
+}

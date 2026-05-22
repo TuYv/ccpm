@@ -1,0 +1,26 @@
+{
+  "id": "digitalsamba-claude-code-video-toolkit-elevenlabs",
+  "name": "elevenlabs",
+  "description": "Generate AI voiceovers, sound effects, and music using ElevenLabs APIs. Use when creating audio content for videos, podcasts, or games. Triggers include generating voiceovers, narration, dialogue, sound effects from descriptions, background music, soundtrack generation, voice cloning, or any audio synthesis task.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "digitalsamba",
+  "install_path": ".claude/skills/elevenlabs/SKILL.md",
+  "source": {
+    "repo": "digitalsamba/claude-code-video-toolkit",
+    "url": "https://github.com/digitalsamba/claude-code-video-toolkit/blob/main/.claude/skills/elevenlabs/SKILL.md",
+    "path": ".claude/skills/elevenlabs/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:46:19.689Z",
+    "stars": 1232,
+    "language": "Python",
+    "pushed_at": "2026-05-20T21:16:18Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个AI音频生成工具，能帮你合成配音、音效和音乐。特别适合给视频、播客或游戏做旁白、配背景音，甚至克隆声音，轻松搞定各类音频制作需求。"
+}

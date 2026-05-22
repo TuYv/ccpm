@@ -1,0 +1,26 @@
+{
+  "id": "cloudai-x-claude-workflow-v2-database-design",
+  "name": "database-design",
+  "description": "Designs database schemas, indexing strategies, query optimization, and migration patterns for SQL and NoSQL databases. Use when designing tables, optimizing queries, fixing N+1 problems, planning migrations, or when asked about database performance, normalization, ORMs, or data modeling.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "CloudAI-X",
+  "install_path": ".claude/skills/database-design/SKILL.md",
+  "source": {
+    "repo": "CloudAI-X/claude-workflow-v2",
+    "url": "https://github.com/CloudAI-X/claude-workflow-v2/blob/main/skills/database-design/SKILL.md",
+    "path": "skills/database-design/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:34.392Z",
+    "stars": 1361,
+    "language": "Python",
+    "pushed_at": "2026-02-14T18:09:29Z",
+    "license": "MIT"
+  },
+  "summary_zh": "专为SQL和NoSQL数据库提供架构设计与优化方案，当你需要建表、解决N+1查询问题、规划数据迁移或提升数据库性能时，它能帮大忙。"
+}

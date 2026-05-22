@@ -1,0 +1,26 @@
+{
+  "id": "zechenzhangagi-ai-research-skills-mlflow",
+  "name": "mlflow",
+  "description": "Track ML experiments, manage model registry with versioning, deploy models to production, and reproduce experiments with MLflow - framework-agnostic ML lifecycle platform",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "zechenzhangAGI",
+  "install_path": ".claude/skills/mlflow/SKILL.md",
+  "source": {
+    "repo": "zechenzhangAGI/AI-research-SKILLs",
+    "url": "https://github.com/zechenzhangAGI/AI-research-SKILLs/blob/main/13-mlops/mlflow/SKILL.md",
+    "path": "13-mlops/mlflow/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:44.115Z",
+    "stars": 8786,
+    "language": "TeX",
+    "pushed_at": "2026-04-28T05:09:27Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一个不限框架的机器学习全生命周期平台，能解决实验难追踪、版本混乱、复现和部署麻烦等痛点，适合需要规范管理模型从训练到上线的团队。"
+}

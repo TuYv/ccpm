@@ -1,0 +1,26 @@
+{
+  "id": "openagentsinc-openagents-l402",
+  "name": "l402",
+  "description": "L402 agent commerce workflows with lnd, lnget, scoped macaroons, aperture, and MCP.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "OpenAgentsInc",
+  "install_path": ".claude/skills/l402/SKILL.md",
+  "source": {
+    "repo": "OpenAgentsInc/openagents",
+    "url": "https://github.com/OpenAgentsInc/openagents/blob/main/skills/l402/SKILL.md",
+    "path": "skills/l402/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:10.113Z",
+    "stars": 420,
+    "language": "Rust",
+    "pushed_at": "2026-05-21T14:45:59Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "这是一个基于闪电网络的AI代理商业交易工具，能让AI自动完成微支付和API付费访问，适合需要AI自主花钱买数据或调用服务的场景。"
+}

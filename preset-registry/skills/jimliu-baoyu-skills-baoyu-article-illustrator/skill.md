@@ -1,7 +1,7 @@
 ---
 name: baoyu-article-illustrator
 description: Analyzes article structure, identifies positions requiring visual aids, generates illustrations with Type × Style × Palette three-dimension approach. Use when user asks to "illustrate article", "add images", "generate images for article", or "为文章配图".
-version: 1.58.0
+version: 1.59.0
 metadata:
   openclaw:
     homepage: https://github.com/JimLiu/baoyu-skills#baoyu-article-illustrator
@@ -36,11 +36,29 @@ When this skill needs to render an image, resolve the backend in this order:
 
 **⛔ Never substitute SVG, HTML, canvas, or other code-based rendering for raster image generation.** Codex `imagegen`'s own description says it should be used "when the output should be a bitmap asset rather than repo-native code or vector." If you cannot resolve a raster backend via step 3, fall through to step 4 and ask the user — do **not** silently emit SVG, write inline `<svg>` markup, or produce HTML/CSS art as a substitute. This applies even if the article/section seems "diagram-like": the consumer skill calling this rule has already decided that a raster image is what it needs.
 
+**⛔ Never repair rendered text by painting over a generated bitmap.** Do not use ImageMagick, Pillow, Canvas, SVG, HTML/CSS, OCR scripts, or any other programmatic overlay to cover, rewrite, erase, stroke, or replace labels, captions, or any other text inside an already generated illustration. If text is wrong or unclear, regenerate from a corrected prompt, redraw with less or no on-image text, or ask the user which imperfect candidate to keep.
+
 Setting `preferred_image_backend: ask` forces the step-3 prompt every run regardless of available backends. Users change the pinned backend via the `## Changing Preferences` section below.
 
 **Prompt file requirement (hard)**: write each image's full, final prompt to a standalone file under `prompts/` (naming: `NN-{type}-[slug].md`) BEFORE invoking any backend. The backend receives the prompt file (or its content); the file is the reproducibility record and lets you switch backends without regenerating prompts.
 
 Concrete tool names (`imagegen`, `image_generate`, `baoyu-imagine`) above are examples — substitute the local equivalents under the same rule.
+
+## Batch Generation Policy
+
+After every prompt file for the run has been saved and verified, generate images in batches by default.
+
+Priority order:
+
+1. Use the chosen backend's native batch / multi-task interface if it exists. Each task must keep its own prompt file, output path, aspect ratio, and direct reference images.
+2. If no native batch interface exists but the runtime can issue parallel tool calls, dispatch up to `generation_batch_size` images at a time. Default: `4`. An explicit user request in the current message, such as `--batch-size 4` or "并行4张一起生成", overrides EXTEND.md.
+3. If neither native batch nor parallel tool calls are available, generate sequentially.
+
+Rules:
+
+- Never start the first batch until all prompt files for that batch exist on disk.
+- Retry failed items once without regenerating successful items.
+- Do not use subagents merely to parallelize image rendering. Use subagents only for separate prompt iteration or creative exploration.
 
 ## Confirmation Policy
 
@@ -167,7 +185,7 @@ Full template: [references/workflow.md](references/workflow.md#step-4-generate-o
 4. LABELS **MUST** include article-specific data: actual numbers, terms, metrics, quotes
 5. **DO NOT** pass ad-hoc inline prompts to `--prompt` without saving prompt files first
 6. Select the backend via the `## Image Generation Tools` rule at the top: use whatever is available; if multiple, ask the user once. Do this once per session before any generation.
-7. **Execution strategy**: When multiple illustrations have saved prompt files and the task is now plain generation, prefer the chosen backend's batch interface (if it offers one) over spawning subagents. Use subagents only when each image still needs separate prompt iteration or creative exploration. If the backend has no batch interface, generate sequentially.
+7. **Execution strategy**: Generate in batches per the `## Batch Generation Policy`: backend native batch first, runtime parallel tool calls second, sequential only as fallback. Default batch size is 4 unless EXTEND.md or the current request overrides it.
 8. Process references (`direct`/`style`/`palette`) per prompt frontmatter
 9. Apply watermark if EXTEND.md enabled
 10. Generate from saved prompt files; retry once on failure
@@ -217,6 +235,12 @@ When input is **pasted content** (no file path), always uses `illustrations/{top
 | Add | Position → Prompt → Generate → Update outline → Insert |
 | Delete | Delete files → Remove reference → Update outline |
 
+Text correction policy:
+
+- If any rendered text (labels, captions, etc.) is misspelled, garbled, hard to read, or visually weak, do not patch the bitmap with code.
+- For text-correction regenerations, write a new prompt file and a new output path so the flawed candidate is preserved for comparison.
+- Post-processing is limited to crop, resize, compression, or format conversion that does not alter text or the main composition.
+
 ## References
 
 | File | Content |
@@ -239,5 +263,6 @@ EXTEND.md lives at the first matching path listed in Step 1.5. Three ways to cha
   - `preferred_image_backend: codex-imagegen` — pin to Codex's built-in.
   - `preferred_image_backend: baoyu-imagine` — pin to the baoyu-imagine skill.
   - `preferred_image_backend: ask` — confirm backend every run.
+  - `generation_batch_size: 4` — default number of images to render concurrently when the runtime supports parallel generation calls.
   - `preferred_type: infographic`, `preferred_style: notion`, `preferred_palette: macaron`, `language: zh`.
   - `default_output_dir: imgs-subdir` — where to write generated images relative to the article.

@@ -1,0 +1,26 @@
+{
+  "id": "wshobson-agents-monorepo-management",
+  "name": "monorepo-management",
+  "description": "Master monorepo management with Turborepo, Nx, and pnpm workspaces to build efficient, scalable multi-package repositories with optimized builds and dependency management. Use when setting up monorepos, optimizing builds, or managing shared dependencies.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "wshobson",
+  "install_path": ".claude/skills/monorepo-management/SKILL.md",
+  "source": {
+    "repo": "wshobson/agents",
+    "url": "https://github.com/wshobson/agents/blob/main/plugins/developer-essentials/skills/monorepo-management/SKILL.md",
+    "path": "plugins/developer-essentials/skills/monorepo-management/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:58.562Z",
+    "stars": 35770,
+    "language": "Python",
+    "pushed_at": "2026-05-21T20:01:53Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一套单仓多包管理方案，能帮你搭建高效且易扩展的项目架构，适合需要初始化单仓、提升构建速度或统一管理共享依赖的场景。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "neolabhq-context-engineering-kit-do-and-judge",
+  "name": "do-and-judge",
+  "description": "Execute a task with sub-agent implementation and LLM-as-a-judge verification with automatic retry loop",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "NeoLabHQ",
+  "install_path": ".claude/skills/do-and-judge/SKILL.md",
+  "source": {
+    "repo": "NeoLabHQ/context-engineering-kit",
+    "url": "https://github.com/NeoLabHQ/context-engineering-kit/blob/master/plugins/sadd/skills/do-and-judge/SKILL.md",
+    "path": "plugins/sadd/skills/do-and-judge/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-05-22T04:42:31.770Z",
+    "stars": 1025,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-22T00:32:29Z",
+    "license": "GPL-3.0"
+  },
+  "summary_zh": "这是一个让AI子智能体干活、大模型当裁判验货且不达标自动重试的工具。专治AI任务执行容易出错的毛病，适合需要高可靠性和自动纠错的复杂场景。"
+}

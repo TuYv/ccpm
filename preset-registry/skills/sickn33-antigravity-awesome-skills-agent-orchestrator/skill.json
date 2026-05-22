@@ -1,0 +1,26 @@
+{
+  "id": "sickn33-antigravity-awesome-skills-agent-orchestrator",
+  "name": "agent-orchestrator",
+  "description": "Meta-skill que orquestra todos os agentes do ecossistema. Scan automatico de skills, match por capacidades, coordenacao de workflows multi-skill e registry management.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sickn33",
+  "install_path": ".claude/skills/agent-orchestrator/SKILL.md",
+  "source": {
+    "repo": "sickn33/antigravity-awesome-skills",
+    "url": "https://github.com/sickn33/antigravity-awesome-skills/blob/main/plugins/antigravity-awesome-skills-claude/skills/agent-orchestrator/SKILL.md",
+    "path": "plugins/antigravity-awesome-skills-claude/skills/agent-orchestrator/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:09.583Z",
+    "stars": 38305,
+    "language": "Python",
+    "pushed_at": "2026-05-21T19:35:19Z",
+    "license": "MIT"
+  },
+  "summary_zh": "它是一个智能体编排中枢，能自动发现并按能力匹配代理，统筹多代理协作完成复杂工作流，适合需要多个AI分工合作的复杂任务场景。"
+}

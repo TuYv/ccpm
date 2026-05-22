@@ -1,0 +1,26 @@
+{
+  "id": "wshobson-agents-team-communication-protocols",
+  "name": "team-communication-protocols",
+  "description": "Structured messaging protocols for agent team communication including message type selection, plan approval, shutdown procedures, and anti-patterns to avoid. Use this skill when establishing communication norms for a newly spawned team, when deciding whether to send a direct message or a broadcast, when a team-lead needs to review and approve an implementer's plan before work begins, when orchestrating a graceful team shutdown after all tasks are complete, or when debugging why teammates are not",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.2",
+  "author": "wshobson",
+  "install_path": ".claude/skills/team-communication-protocols/SKILL.md",
+  "source": {
+    "repo": "wshobson/agents",
+    "url": "https://github.com/wshobson/agents/blob/main/plugins/agent-teams/skills/team-communication-protocols/SKILL.md",
+    "path": "plugins/agent-teams/skills/team-communication-protocols/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:54.686Z",
+    "stars": 35770,
+    "language": "Python",
+    "pushed_at": "2026-05-21T20:01:53Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一套多智能体团队的结构化沟通规范，帮你在建组定规矩、决定私发或群发、主管审批计划、优雅关停及排查沟通卡点时避免混乱，保障高效协作。"
+}

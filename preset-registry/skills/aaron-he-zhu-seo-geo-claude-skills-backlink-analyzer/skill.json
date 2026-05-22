@@ -1,0 +1,26 @@
+{
+  "id": "aaron-he-zhu-seo-geo-claude-skills-backlink-analyzer",
+  "name": "backlink-analyzer",
+  "description": "Use when analyzing backlink profiles, link authority, toxic links, link-building opportunities, or competitor link gaps. 外链分析/反向链接",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "9.9.9",
+  "author": "aaron-he-zhu",
+  "install_path": ".claude/skills/backlink-analyzer/SKILL.md",
+  "source": {
+    "repo": "aaron-he-zhu/seo-geo-claude-skills",
+    "url": "https://github.com/aaron-he-zhu/seo-geo-claude-skills/blob/main/monitor/backlink-analyzer/SKILL.md",
+    "path": "monitor/backlink-analyzer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:00.209Z",
+    "stars": 1731,
+    "language": "Shell",
+    "pushed_at": "2026-05-14T08:11:30Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "这是一款外链分析工具，能帮你评估链接权重、排查垃圾外链，还能挖掘建链机会或对比竞品外链差距，非常适合SEO优化和竞品分析场景。"
+}

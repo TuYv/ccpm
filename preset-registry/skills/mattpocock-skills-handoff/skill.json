@@ -1,0 +1,26 @@
+{
+  "id": "mattpocock-skills-handoff",
+  "name": "handoff",
+  "description": "Compact the current conversation into a handoff document for another agent to pick up.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mattpocock",
+  "install_path": ".claude/skills/handoff/SKILL.md",
+  "source": {
+    "repo": "mattpocock/skills",
+    "url": "https://github.com/mattpocock/skills/blob/main/skills/productivity/handoff/SKILL.md",
+    "path": "skills/productivity/handoff/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:06.661Z",
+    "stars": 99464,
+    "language": "Shell",
+    "pushed_at": "2026-05-20T08:46:54Z",
+    "license": "MIT"
+  },
+  "summary_zh": "它能把当前对话浓缩成一份交接文档，方便其他AI智能体直接接手工作，特别适合多智能体协作时传递上下文。"
+}

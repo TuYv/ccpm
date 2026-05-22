@@ -1,0 +1,26 @@
+{
+  "id": "wshobson-agents-openapi-spec-generation",
+  "name": "openapi-spec-generation",
+  "description": "Generate and maintain OpenAPI 3.1 specifications from code, design-first specs, and validation patterns. Use when creating API documentation, generating SDKs, or ensuring API contract compliance.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "wshobson",
+  "install_path": ".claude/skills/openapi-spec-generation/SKILL.md",
+  "source": {
+    "repo": "wshobson/agents",
+    "url": "https://github.com/wshobson/agents/blob/main/plugins/documentation-generation/skills/openapi-spec-generation/SKILL.md",
+    "path": "plugins/documentation-generation/skills/openapi-spec-generation/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:59.064Z",
+    "stars": 35770,
+    "language": "Python",
+    "pushed_at": "2026-05-21T20:01:53Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个能从代码或设计规范自动生成并维护 OpenAPI 文档的工具，帮你轻松搞定接口文档编写、SDK 生成及 API 契约校验。"
+}

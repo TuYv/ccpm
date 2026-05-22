@@ -1,0 +1,26 @@
+{
+  "id": "zechenzhangagi-ai-research-skills-simpo",
+  "name": "simpo-training",
+  "description": "Simple Preference Optimization for LLM alignment. Reference-free alternative to DPO with better performance (+6.4 points on AlpacaEval 2.0). No reference model needed, more efficient than DPO. Use for preference alignment when want simpler, faster training than DPO/PPO.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "zechenzhangAGI",
+  "install_path": ".claude/skills/simpo/SKILL.md",
+  "source": {
+    "repo": "zechenzhangAGI/AI-research-SKILLs",
+    "url": "https://github.com/zechenzhangAGI/AI-research-SKILLs/blob/main/06-post-training/simpo/SKILL.md",
+    "path": "06-post-training/simpo/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:39.774Z",
+    "stars": 8786,
+    "language": "TeX",
+    "pushed_at": "2026-04-28T05:09:27Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一种更简单高效的大模型偏好对齐方法，省去了DPO等算法对参考模型的依赖，训练更快且效果更好，适合想低成本、快速完成模型偏好对齐的场景。"
+}

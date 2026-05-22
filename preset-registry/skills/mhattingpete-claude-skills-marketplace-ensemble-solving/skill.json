@@ -1,0 +1,26 @@
+{
+  "id": "mhattingpete-claude-skills-marketplace-ensemble-solving",
+  "name": "ensemble-solving",
+  "description": "Generate multiple diverse solutions in parallel and select the best. Use for architecture decisions, code generation with multiple valid approaches, or creative tasks where exploring alternatives improves quality.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mhattingpete",
+  "install_path": ".claude/skills/ensemble-solving/SKILL.md",
+  "source": {
+    "repo": "mhattingpete/claude-skills-marketplace",
+    "url": "https://github.com/mhattingpete/claude-skills-marketplace/blob/main/engineering-workflow-plugin/skills/ensemble-solving/SKILL.md",
+    "path": "engineering-workflow-plugin/skills/ensemble-solving/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:33.875Z",
+    "stars": 583,
+    "language": "HTML",
+    "pushed_at": "2026-03-06T10:14:25Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "这是一种并行生成多种方案并挑出最优解的策略，适合用来做架构决策、有多种实现思路的代码生成，或需要发散思维的创意任务，帮你跳出单一思路的局限。"
+}

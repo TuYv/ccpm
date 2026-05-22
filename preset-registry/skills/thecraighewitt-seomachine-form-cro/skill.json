@@ -1,0 +1,26 @@
+{
+  "id": "thecraighewitt-seomachine-form-cro",
+  "name": "form-cro",
+  "description": "When the user wants to optimize any form that is NOT signup/registration — including lead capture forms, contact forms, demo request forms, application forms, survey forms, or checkout forms. Also use when the user mentions \"form optimization,\" \"lead form conversions,\" \"form friction,\" \"form fields,\" \"form completion rate,\" or \"contact form.\" For signup/registration forms, see signup-flow-cro. For popups containing forms, see popup-cro.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "TheCraigHewitt",
+  "install_path": ".claude/skills/form-cro/SKILL.md",
+  "source": {
+    "repo": "TheCraigHewitt/seomachine",
+    "url": "https://github.com/TheCraigHewitt/seomachine/blob/main/.claude/skills/form-cro/SKILL.md",
+    "path": ".claude/skills/form-cro/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:11.556Z",
+    "stars": 7000,
+    "language": "Python",
+    "pushed_at": "2026-04-10T17:41:07Z",
+    "license": "MIT"
+  },
+  "summary_zh": "专攻非注册类表单的优化工具，适合线索收集、联系或结账等场景，帮你解决用户填写半途而废、转化率低的问题，但不适用注册和弹窗表单。"
+}

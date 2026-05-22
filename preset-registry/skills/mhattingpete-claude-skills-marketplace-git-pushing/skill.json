@@ -1,0 +1,26 @@
+{
+  "id": "mhattingpete-claude-skills-marketplace-git-pushing",
+  "name": "git-pushing",
+  "description": "Stage, commit, and push git changes with conventional commit messages. Use when user wants to commit and push changes, mentions pushing to remote, or asks to save and push their work. Also activates when user says \"push changes\", \"commit and push\", \"push this\", \"push to github\", or similar git workflow requests.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mhattingpete",
+  "install_path": ".claude/skills/git-pushing/SKILL.md",
+  "source": {
+    "repo": "mhattingpete/claude-skills-marketplace",
+    "url": "https://github.com/mhattingpete/claude-skills-marketplace/blob/main/engineering-workflow-plugin/skills/git-pushing/SKILL.md",
+    "path": "engineering-workflow-plugin/skills/git-pushing/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:34.030Z",
+    "stars": 583,
+    "language": "HTML",
+    "pushed_at": "2026-03-06T10:14:25Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "它能自动完成Git暂存、提交和推送，并生成规范的提交信息。当你想保存推送代码，或说出推到远程等指令时，用它即可一键搞定，省去手动敲命令和写信息的麻烦。"
+}

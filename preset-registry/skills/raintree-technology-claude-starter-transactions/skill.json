@@ -1,0 +1,26 @@
+{
+  "id": "raintree-technology-claude-starter-transactions",
+  "name": "plaid-transactions-expert",
+  "description": "Expert on Plaid Transactions product for retrieving banking transactions. Covers transaction sync, categorization, webhooks, recurring transactions, and historical data retrieval. Invoke when user mentions Plaid Transactions, transaction history, bank transactions, or transaction categorization.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "raintree-technology",
+  "install_path": ".claude/skills/transactions/SKILL.md",
+  "source": {
+    "repo": "raintree-technology/claude-starter",
+    "url": "https://github.com/raintree-technology/claude-starter/blob/main/.claude/skills/plaid/transactions/skill.md",
+    "path": ".claude/skills/plaid/transactions/skill.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:53.762Z",
+    "stars": 76,
+    "language": "Zig",
+    "pushed_at": "2026-04-24T22:45:15Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个专门处理Plaid银行交易数据的助手，能帮你轻松搞定交易记录的同步与分类，适合需要对接银行流水或处理历史交易数据的场景。"
+}

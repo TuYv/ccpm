@@ -1,0 +1,26 @@
+{
+  "id": "sethgammon-citadel-workspace",
+  "name": "workspace",
+  "description": ">- Multi-repo campaign coordinator. Same lifecycle as fleet -- scope claims, discovery relay, wave-based execution -- but the unit of work is a repo, not a file. Coordinates campaigns across repositories with shared context.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "SethGammon",
+  "install_path": ".claude/skills/workspace/SKILL.md",
+  "source": {
+    "repo": "SethGammon/Citadel",
+    "url": "https://github.com/SethGammon/Citadel/blob/main/skills/workspace/SKILL.md",
+    "path": "skills/workspace/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:08.685Z",
+    "stars": 572,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-07T17:50:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个跨多代码库的任务协调器，以仓库而非文件为工作单元，能在共享上下文中统一调度跨库操作，解决多仓库协同开发时的同步与执行难题。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "davila7-claude-code-templates-autonomous-agents",
+  "name": "autonomous-agents",
+  "description": "Autonomous agents are AI systems that can independently decompose goals, plan actions, execute tools, and self-correct without constant human guidance. The challenge isn't making them capable - it's making them reliable. Every extra decision multiplies failure probability.  This skill covers agent loops (ReAct, Plan-Execute), goal decomposition, reflection patterns, and production reliability. Key insight: compounding error rates kill autonomous agents. A 95% success rate per step drops to 60% b",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "davila7",
+  "install_path": ".claude/skills/autonomous-agents/SKILL.md",
+  "source": {
+    "repo": "davila7/claude-code-templates",
+    "url": "https://github.com/davila7/claude-code-templates/blob/main/cli-tool/components/skills/ai-research/autonomous-agents/SKILL.md",
+    "path": "cli-tool/components/skills/ai-research/autonomous-agents/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:43.619Z",
+    "stars": 27482,
+    "language": "Python",
+    "pushed_at": "2026-05-22T04:31:04Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一套构建可靠AI智能体的实践指南，重点解决智能体多步执行时因错误累积容易崩溃的问题，适合想将智能体真正落地生产的开发者参考。"
+}

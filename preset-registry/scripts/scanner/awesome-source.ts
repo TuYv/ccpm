@@ -138,11 +138,14 @@ async function probeRepo(
   if (claudeMdMatches.length === 0) return null;
   claudeMdMatches.sort((a, b) => a.split("/").length - b.split("/").length || a.length - b.length);
   const path = claudeMdMatches[0];
+  const skillPaths = paths
+    .filter((p) => /(?:^|\/)SKILL\.md$/i.test(p) || /^skills\/[^/]+\/CLAUDE\.md$/i.test(p))
+    .sort((a, b) => a.localeCompare(b));
 
   const signals: RepoSignals = {
     has_claude_plugin: paths.some((p) => p === ".claude-plugin" || p.startsWith(".claude-plugin/")),
-    has_skills_dir: paths.some((p) => /(?:^|\/)SKILL\.md$/i.test(p)) ||
-      paths.some((p) => p === "skills" || p.startsWith("skills/")),
+    has_skills_dir: skillPaths.length > 0 || paths.some((p) => p === "skills" || p.startsWith("skills/")),
+    skill_paths: skillPaths,
     has_commands_dir: paths.some((p) => p.startsWith(".claude/commands/")),
     claude_md_at_root: path === "CLAUDE.md",
   };

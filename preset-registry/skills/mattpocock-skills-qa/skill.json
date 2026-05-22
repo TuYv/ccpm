@@ -1,0 +1,26 @@
+{
+  "id": "mattpocock-skills-qa",
+  "name": "qa",
+  "description": "Interactive QA session where user reports bugs or issues conversationally, and the agent files GitHub issues. Explores the codebase in the background for context and domain language. Use when user wants to report bugs, do QA, file issues conversationally, or mentions \"QA session\".",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mattpocock",
+  "install_path": ".claude/skills/qa/SKILL.md",
+  "source": {
+    "repo": "mattpocock/skills",
+    "url": "https://github.com/mattpocock/skills/blob/main/skills/deprecated/qa/SKILL.md",
+    "path": "skills/deprecated/qa/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:04.681Z",
+    "stars": 99464,
+    "language": "Shell",
+    "pushed_at": "2026-05-20T08:46:54Z",
+    "license": "MIT"
+  },
+  "summary_zh": "能让你通过聊天提Bug的智能助手，它会在后台自动阅读代码库理解项目上下文，然后帮你自动生成并提交GitHub Issue，特别适合边聊边测的快速反馈场景。"
+}

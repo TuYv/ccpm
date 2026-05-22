@@ -1,0 +1,26 @@
+{
+  "id": "raintree-technology-claude-starter-claude-command-builder",
+  "name": "claude-command-builder",
+  "description": "Interactive slash command creator for Claude Code. Triggers when user mentions creating commands, slash commands, command templates, command arguments, or wants to build a new command workflow.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "raintree-technology",
+  "install_path": ".claude/skills/claude-command-builder/SKILL.md",
+  "source": {
+    "repo": "raintree-technology/claude-starter",
+    "url": "https://github.com/raintree-technology/claude-starter/blob/main/templates/.claude/skills/anthropic/claude-command-builder/skill.md",
+    "path": "templates/.claude/skills/anthropic/claude-command-builder/skill.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:54.571Z",
+    "stars": 76,
+    "language": "Zig",
+    "pushed_at": "2026-04-24T22:45:15Z",
+    "license": "MIT"
+  },
+  "summary_zh": "帮你在 Claude Code 里快速生成自定义斜杠命令的交互工具。想新建命令、配置参数或搭命令工作流时，它都能一步步引导你轻松搞定，省去手动编写的麻烦。"
+}

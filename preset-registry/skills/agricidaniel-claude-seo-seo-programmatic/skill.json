@@ -1,0 +1,26 @@
+{
+  "id": "agricidaniel-claude-seo-seo-programmatic",
+  "name": "seo-programmatic",
+  "description": "> Programmatic SEO planning and analysis for pages generated at scale from data sources. Covers template engines, URL patterns, internal linking automation, thin content safeguards, and index bloat prevention. Use when user says \"programmatic SEO\", \"pages at scale\", \"dynamic pages\", \"template pages\", \"generated pages\", or \"data-driven SEO\".",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "AgriciDaniel",
+  "install_path": ".claude/skills/seo-programmatic/SKILL.md",
+  "source": {
+    "repo": "AgriciDaniel/claude-seo",
+    "url": "https://github.com/AgriciDaniel/claude-seo/blob/main/skills/seo-programmatic/SKILL.md",
+    "path": "skills/seo-programmatic/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:23.909Z",
+    "stars": 6911,
+    "language": "Python",
+    "pushed_at": "2026-05-18T08:55:40Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个专为批量生成页面打造的SEO规划分析工具，能解决大规模动态页面的内容质量把控和搜索引擎收录难题，适合数据驱动下需要批量建站做搜索优化的场景。"
+}

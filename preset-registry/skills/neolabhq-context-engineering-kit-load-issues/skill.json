@@ -1,0 +1,26 @@
+{
+  "id": "neolabhq-context-engineering-kit-load-issues",
+  "name": "load-issues",
+  "description": "Load all open issues from GitHub and save them as markdown files",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "NeoLabHQ",
+  "install_path": ".claude/skills/load-issues/SKILL.md",
+  "source": {
+    "repo": "NeoLabHQ/context-engineering-kit",
+    "url": "https://github.com/NeoLabHQ/context-engineering-kit/blob/master/plugins/git/skills/load-issues/SKILL.md",
+    "path": "plugins/git/skills/load-issues/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-05-22T04:42:30.092Z",
+    "stars": 1025,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-22T00:32:29Z",
+    "license": "GPL-3.0"
+  },
+  "summary_zh": "把 GitHub 上的未解决 Issue 批量导出为 Markdown 文件，方便你离线阅读、归档备份，或用本地工具整理项目反馈。"
+}

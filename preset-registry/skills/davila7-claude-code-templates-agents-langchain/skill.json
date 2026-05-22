@@ -1,0 +1,26 @@
+{
+  "id": "davila7-claude-code-templates-agents-langchain",
+  "name": "langchain",
+  "description": "Framework for building LLM-powered applications with agents, chains, and RAG. Supports multiple providers (OpenAI, Anthropic, Google), 500+ integrations, ReAct agents, tool calling, memory management, and vector store retrieval. Use for building chatbots, question-answering systems, autonomous agents, or RAG applications. Best for rapid prototyping and production deployments.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "davila7",
+  "install_path": ".claude/skills/agents-langchain/SKILL.md",
+  "source": {
+    "repo": "davila7/claude-code-templates",
+    "url": "https://github.com/davila7/claude-code-templates/blob/main/cli-tool/components/skills/ai-research/agents-langchain/SKILL.md",
+    "path": "cli-tool/components/skills/ai-research/agents-langchain/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:43.307Z",
+    "stars": 27482,
+    "language": "Python",
+    "pushed_at": "2026-05-22T04:31:04Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个大模型应用开发框架，能帮你把大模型与外部工具和数据轻松串联，适合快速搭建聊天机器人、问答系统或智能体，搞定从原型到上线的全流程。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "wshobson-agents-turborepo-caching",
+  "name": "turborepo-caching",
+  "description": "Configure Turborepo for efficient monorepo builds with local and remote caching. Use when setting up Turborepo, optimizing build pipelines, or implementing distributed caching.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "wshobson",
+  "install_path": ".claude/skills/turborepo-caching/SKILL.md",
+  "source": {
+    "repo": "wshobson/agents",
+    "url": "https://github.com/wshobson/agents/blob/main/plugins/developer-essentials/skills/turborepo-caching/SKILL.md",
+    "path": "plugins/developer-essentials/skills/turborepo-caching/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:58.814Z",
+    "stars": 35770,
+    "language": "Python",
+    "pushed_at": "2026-05-21T20:01:53Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一套为Turborepo配置缓存机制的方案，能大幅提升monorepo的构建速度，特别适合在初始化设置、优化构建流水线或搭建分布式缓存时使用。"
+}

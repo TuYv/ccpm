@@ -1,0 +1,26 @@
+{
+  "id": "spartan-stratos-spartan-ai-toolkit-api-endpoint-creator",
+  "name": "api-endpoint-creator",
+  "description": "Creates RPC-style endpoint following layered architecture (Controller → Manager → Repository). Use when creating new API endpoints or CRUD operations.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "spartan-stratos",
+  "install_path": ".claude/skills/api-endpoint-creator/SKILL.md",
+  "source": {
+    "repo": "spartan-stratos/spartan-ai-toolkit",
+    "url": "https://github.com/spartan-stratos/spartan-ai-toolkit/blob/master/toolkit/skills/api-endpoint-creator/SKILL.md",
+    "path": "toolkit/skills/api-endpoint-creator/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-05-22T04:46:13.083Z",
+    "stars": 71,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-11T06:56:56Z",
+    "license": null
+  },
+  "summary_zh": "这是一个按分层架构自动生成RPC接口代码的工具，适合开发新API或做增删改查时使用，能帮你免去手动创建各层文件的繁琐，快速搭好代码架子。"
+}

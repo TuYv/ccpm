@@ -1,0 +1,26 @@
+{
+  "id": "softaworks-agent-toolkit-excalidraw",
+  "name": "excalidraw",
+  "description": "Use when working with *.excalidraw or *.excalidraw.json files, user mentions diagrams/flowcharts, or requests architecture visualization - delegates all Excalidraw operations to subagents to prevent context exhaustion from verbose JSON (single files: 4k-22k tokens, can exceed read limits)",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "softaworks",
+  "install_path": ".claude/skills/excalidraw/SKILL.md",
+  "source": {
+    "repo": "softaworks/agent-toolkit",
+    "url": "https://github.com/softaworks/agent-toolkit/blob/main/skills/excalidraw/SKILL.md",
+    "path": "skills/excalidraw/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:22.719Z",
+    "stars": 1872,
+    "language": "Python",
+    "pushed_at": "2026-03-05T16:46:24Z",
+    "license": "MIT"
+  },
+  "summary_zh": "专门处理手绘图表文件的辅助工具，适合需要AI读取或生成流程图、架构图的场景。它把庞大的JSON解析交给子代理，避免超长代码撑爆上下文限制。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "avifenesh-agnix-string-boolean-disable",
+  "name": "bad-bool-skill",
+  "description": "Use when testing boolean type validation",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "avifenesh",
+  "install_path": ".claude/skills/string-boolean-disable/SKILL.md",
+  "source": {
+    "repo": "avifenesh/agnix",
+    "url": "https://github.com/avifenesh/agnix/blob/main/tests/fixtures/invalid/skills/string-boolean-disable/SKILL.md",
+    "path": "tests/fixtures/invalid/skills/string-boolean-disable/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:46:03.949Z",
+    "stars": 253,
+    "language": "Rust",
+    "pushed_at": "2026-05-19T14:13:30Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "专门用来测试布尔类型验证的工具，适合开发时检查系统能否正确拦截非布尔值的异常输入。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "sethgammon-citadel-verify",
+  "name": "verify",
+  "description": ">- Self-test the Citadel hook pipeline from within a live session. Exercises real tool calls (Write, Edit, Bash, Read) and checks that hooks fired, telemetry accumulated, and no errors occurred. Reports HOOK HEALTH: PASS or HOOK HEALTH: FAIL with a per-hook breakdown.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "SethGammon",
+  "install_path": ".claude/skills/verify/SKILL.md",
+  "source": {
+    "repo": "SethGammon/Citadel",
+    "url": "https://github.com/SethGammon/Citadel/blob/main/skills/verify/SKILL.md",
+    "path": "skills/verify/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:08.406Z",
+    "stars": 572,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-07T17:50:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个在运行中自测 Citadel hook 管道健康状态的诊断工具，通过模拟真实操作验证各 hook 是否正常触发和记录，并输出明确通过或失败的报告，适合快速排查管道故障。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "zechenzhangagi-ai-research-skills-saelens",
+  "name": "sparse-autoencoder-training",
+  "description": "Provides guidance for training and analyzing Sparse Autoencoders (SAEs) using SAELens to decompose neural network activations into interpretable features. Use when discovering interpretable features, analyzing superposition, or studying monosemantic representations in language models.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "zechenzhangAGI",
+  "install_path": ".claude/skills/saelens/SKILL.md",
+  "source": {
+    "repo": "zechenzhangAGI/AI-research-SKILLs",
+    "url": "https://github.com/zechenzhangAGI/AI-research-SKILLs/blob/main/04-mechanistic-interpretability/saelens/SKILL.md",
+    "path": "04-mechanistic-interpretability/saelens/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:38.680Z",
+    "stars": 8786,
+    "language": "TeX",
+    "pushed_at": "2026-04-28T05:09:27Z",
+    "license": "MIT"
+  },
+  "summary_zh": "教你用SAELens训练稀疏自编码器，把神经网络激活值拆解成可解释特征，适合挖掘语言模型特征、分析叠加现象或研究单义表示的场景。"
+}

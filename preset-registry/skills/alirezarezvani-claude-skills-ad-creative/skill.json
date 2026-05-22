@@ -1,0 +1,26 @@
+{
+  "id": "alirezarezvani-claude-skills-ad-creative",
+  "name": "ad-creative",
+  "description": "When the user needs to generate, iterate, or scale ad creative for paid advertising. Use when they say 'write ad copy,' 'generate headlines,' 'create ad variations,' 'bulk creative,' 'iterate on ads,' 'ad copy validation,' 'RSA headlines,' 'Meta ad copy,' 'LinkedIn ad,' or 'creative testing.' This is pure creative production — distinct from paid-ads (campaign strategy). Use ad-creative when you need the copy, not the campaign plan.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alirezarezvani",
+  "install_path": ".claude/skills/ad-creative/SKILL.md",
+  "source": {
+    "repo": "alirezarezvani/claude-skills",
+    "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/ad-creative/SKILL.md",
+    "path": ".gemini/skills/ad-creative/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:38.340Z",
+    "stars": 15795,
+    "language": "Python",
+    "pushed_at": "2026-05-21T17:51:26Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个纯广告文案生成工具，专门解决付费广告的文案产出需求。当你需要写广告语、批量产出文案变体或做测试迭代时用它就行，它只负责写文案，不管投放策略。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "jeffallan-claude-skills-test-master",
+  "name": "test-master",
+  "description": "Generates test files, creates mocking strategies, analyzes code coverage, designs test architectures, and produces test plans and defect reports across functional, performance, and security testing disciplines. Use when writing unit tests, integration tests, or E2E tests; creating test strategies or automation frameworks; analyzing coverage gaps; performance testing with k6 or Artillery; security testing with OWASP methods; debugging flaky tests; or working on QA, regression, test automation, qu",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "jeffallan",
+  "install_path": ".claude/skills/test-master/SKILL.md",
+  "source": {
+    "repo": "jeffallan/claude-skills",
+    "url": "https://github.com/jeffallan/claude-skills/blob/main/skills/test-master/SKILL.md",
+    "path": "skills/test-master/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:46:00.904Z",
+    "stars": 9253,
+    "language": "Python",
+    "pushed_at": "2026-05-20T13:35:05Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一款全能测试辅助工具，帮你搞定从功能、性能到安全测试的全流程。特别适合在编写各类测试代码、搭建自动化框架、查覆盖率盲区或排查不稳定测试时使用。"
+}

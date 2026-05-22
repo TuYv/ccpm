@@ -1,0 +1,26 @@
+{
+  "id": "zechenzhangagi-ai-research-skills-slime",
+  "name": "slime-rl-training",
+  "description": "Provides guidance for LLM post-training with RL using slime, a Megatron+SGLang framework. Use when training GLM models, implementing custom data generation workflows, or needing tight Megatron-LM integration for RL scaling.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "zechenzhangAGI",
+  "install_path": ".claude/skills/slime/SKILL.md",
+  "source": {
+    "repo": "zechenzhangAGI/AI-research-SKILLs",
+    "url": "https://github.com/zechenzhangAGI/AI-research-SKILLs/blob/main/06-post-training/slime/SKILL.md",
+    "path": "06-post-training/slime/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:39.897Z",
+    "stars": 8786,
+    "language": "TeX",
+    "pushed_at": "2026-04-28T05:09:27Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一份基于 Megatron+SGLang 的大模型强化学习后训练指南，适合训练 GLM 模型、定制数据生成流程，或需要深度结合 Megatron-LM 做强化学习大规模扩展的场景。"
+}

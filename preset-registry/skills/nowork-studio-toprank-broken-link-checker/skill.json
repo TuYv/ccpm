@@ -1,0 +1,26 @@
+{
+  "id": "nowork-studio-toprank-broken-link-checker",
+  "name": "broken-link-checker",
+  "description": "> Scans a website to find broken links (404s, 500s). Crawls internal pages, identifies broken outbound links, and reports source pages for easy fixing. Use this when the user asks to \"check for broken links\", \"find 404s\", \"audit my links\", or \"is my site healthy\".",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "nowork-studio",
+  "install_path": ".claude/skills/broken-link-checker/SKILL.md",
+  "source": {
+    "repo": "nowork-studio/toprank",
+    "url": "https://github.com/nowork-studio/toprank/blob/main/seo/broken-link-checker/SKILL.md",
+    "path": "seo/broken-link-checker/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:36.944Z",
+    "stars": 2599,
+    "language": "Python",
+    "pushed_at": "2026-05-20T05:41:47Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个网站死链排查工具，能找出站内外404或500等失效链接并定位来源页，方便快速修复，适合做网站健康检查或清理死链。"
+}

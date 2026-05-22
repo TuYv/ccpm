@@ -1,0 +1,26 @@
+{
+  "id": "alirezarezvani-claude-skills-ab-test-setup",
+  "name": "ab-test-setup",
+  "description": "When the user wants to plan, design, or implement an A/B test or experiment. Also use when the user mentions \"A/B test,\" \"split test,\" \"experiment,\" \"test this change,\" \"variant copy,\" \"multivariate test,\" \"hypothesis,\" \"conversion experiment,\" \"statistical significance,\" or \"test this.\" For tracking implementation, see analytics-tracking.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alirezarezvani",
+  "install_path": ".claude/skills/ab-test-setup/SKILL.md",
+  "source": {
+    "repo": "alirezarezvani/claude-skills",
+    "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/ab-test-setup/SKILL.md",
+    "path": ".gemini/skills/ab-test-setup/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:38.237Z",
+    "stars": 15795,
+    "language": "Python",
+    "pushed_at": "2026-05-21T17:51:26Z",
+    "license": "MIT"
+  },
+  "summary_zh": "帮你规划、设计和落地A/B测试及多变量实验的工具，适合需要验证假设、测试产品变更或提升转化率的场景。"
+}

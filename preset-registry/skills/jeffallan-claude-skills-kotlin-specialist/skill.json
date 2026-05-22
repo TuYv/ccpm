@@ -1,0 +1,26 @@
+{
+  "id": "jeffallan-claude-skills-kotlin-specialist",
+  "name": "kotlin-specialist",
+  "description": "Provides idiomatic Kotlin implementation patterns including coroutine concurrency, Flow stream handling, multiplatform architecture, Compose UI construction, Ktor server setup, and type-safe DSL design. Use when building Kotlin applications requiring coroutines, multiplatform development, or Android with Compose. Invoke for Flow API, KMP projects, Ktor servers, DSL design, sealed classes, suspend function, Android Kotlin, Kotlin Multiplatform.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "jeffallan",
+  "install_path": ".claude/skills/kotlin-specialist/SKILL.md",
+  "source": {
+    "repo": "jeffallan/claude-skills",
+    "url": "https://github.com/jeffallan/claude-skills/blob/main/skills/kotlin-specialist/SKILL.md",
+    "path": "skills/kotlin-specialist/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:58.489Z",
+    "stars": 9253,
+    "language": "Python",
+    "pushed_at": "2026-05-20T13:35:05Z",
+    "license": "MIT"
+  },
+  "summary_zh": "整理了Kotlin核心场景的惯用写法，适合在开发协程并发、跨平台或Compose界面的现代应用时，用来参考怎么写出地道代码。"
+}

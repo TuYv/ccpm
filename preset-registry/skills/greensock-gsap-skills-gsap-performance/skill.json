@@ -1,0 +1,26 @@
+{
+  "id": "greensock-gsap-skills-gsap-performance",
+  "name": "gsap-performance",
+  "description": "Official GSAP skill for performance — prefer transforms, avoid layout thrashing, will-change, batching. Use when optimizing GSAP animations, reducing jank, or when the user asks about animation performance, FPS, or smooth 60fps.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "greensock",
+  "install_path": ".claude/skills/gsap-performance/SKILL.md",
+  "source": {
+    "repo": "greensock/gsap-skills",
+    "url": "https://github.com/greensock/gsap-skills/blob/main/skills/gsap-performance/SKILL.md",
+    "path": "skills/gsap-performance/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:54.359Z",
+    "stars": 3794,
+    "language": null,
+    "pushed_at": "2026-04-21T23:47:09Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是官方的GSAP动画性能优化指南，能帮你解决动画卡顿和掉帧问题，适合在需要提升网页动画流畅度、追求60帧丝滑体验时参考。"
+}

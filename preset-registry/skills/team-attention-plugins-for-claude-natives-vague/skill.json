@@ -1,0 +1,26 @@
+{
+  "id": "team-attention-plugins-for-claude-natives-vague",
+  "name": "vague",
+  "description": "This skill should be used when the user's request or requirement is ambiguous and needs iterative questioning to become actionable. Trigger on \"clarify requirements\", \"refine requirements\", \"요구사항 명확히\", \"요구사항 정리\", \"뭘 원하는 건지\", \"make this clearer\", \"spec this out\", \"scope this\", \"/clarify\". Turns vague inputs into concrete specs. For strategy blind spots use unknown; for content-vs-form reframing use metamedium.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "team-attention",
+  "install_path": ".claude/skills/vague/SKILL.md",
+  "source": {
+    "repo": "team-attention/plugins-for-claude-natives",
+    "url": "https://github.com/team-attention/plugins-for-claude-natives/blob/main/plugins/clarify/skills/vague/SKILL.md",
+    "path": "plugins/clarify/skills/vague/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:36.720Z",
+    "stars": 773,
+    "language": "Python",
+    "pushed_at": "2026-04-20T06:53:40Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一款能把模糊需求变清晰的技能。遇到含糊指令时，它会通过反复追问帮你梳理，把抽象想法转化为具体可执行的规格说明，特别适合需要澄清和细化需求的场景。"
+}

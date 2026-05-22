@@ -1,0 +1,26 @@
+{
+  "id": "jeffallan-claude-skills-spring-boot-engineer",
+  "name": "spring-boot-engineer",
+  "description": "Generates Spring Boot 3.x configurations, creates REST controllers, implements Spring Security 6 authentication flows, sets up Spring Data JPA repositories, and configures reactive WebFlux endpoints. Use when building Spring Boot 3.x applications, microservices, or reactive Java applications; invoke for Spring Data JPA, Spring Security 6, WebFlux, Spring Cloud integration, Java REST API design, or Microservices Java architecture.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "jeffallan",
+  "install_path": ".claude/skills/spring-boot-engineer/SKILL.md",
+  "source": {
+    "repo": "jeffallan/claude-skills",
+    "url": "https://github.com/jeffallan/claude-skills/blob/main/skills/spring-boot-engineer/SKILL.md",
+    "path": "skills/spring-boot-engineer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:46:00.510Z",
+    "stars": 9253,
+    "language": "Python",
+    "pushed_at": "2026-05-20T13:35:05Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一款自动生成 Spring Boot 3.x 项目配置与基础代码的工具，适合快速搭建微服务、响应式应用或 REST API，能帮你彻底摆脱繁琐的初始配置和样板代码编写。"
+}

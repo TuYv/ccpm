@@ -1,0 +1,26 @@
+{
+  "id": "agent-sh-agentsys-enhance-skills",
+  "name": "enhance-skills",
+  "description": "Use when reviewing SKILL.md files for structure and trigger quality.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "5.1.0",
+  "author": "agent-sh",
+  "install_path": ".claude/skills/enhance-skills/SKILL.md",
+  "source": {
+    "repo": "agent-sh/agentsys",
+    "url": "https://github.com/agent-sh/agentsys/blob/main/.kiro/skills/enhance-skills/SKILL.md",
+    "path": ".kiro/skills/enhance-skills/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:02.866Z",
+    "stars": 813,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-21T17:59:34Z",
+    "license": "MIT"
+  },
+  "summary_zh": "专门审查 SKILL.md 文件的辅助工具，帮你把关文件结构和触发质量，适合在编写或优化 AI 技能配置时使用，确保格式规范且触发准确。"
+}

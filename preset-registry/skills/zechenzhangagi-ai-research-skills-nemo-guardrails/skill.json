@@ -1,0 +1,26 @@
+{
+  "id": "zechenzhangagi-ai-research-skills-nemo-guardrails",
+  "name": "nemo-guardrails",
+  "description": "NVIDIA's runtime safety framework for LLM applications. Features jailbreak detection, input/output validation, fact-checking, hallucination detection, PII filtering, toxicity detection. Uses Colang 2.0 DSL for programmable rails. Production-ready, runs on T4 GPU.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "zechenzhangAGI",
+  "install_path": ".claude/skills/nemo-guardrails/SKILL.md",
+  "source": {
+    "repo": "zechenzhangAGI/AI-research-SKILLs",
+    "url": "https://github.com/zechenzhangAGI/AI-research-SKILLs/blob/main/07-safety-alignment/nemo-guardrails/SKILL.md",
+    "path": "07-safety-alignment/nemo-guardrails/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:40.718Z",
+    "stars": 8786,
+    "language": "TeX",
+    "pushed_at": "2026-04-28T05:09:27Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是英伟达的大模型应用安全框架，能防止大模型越狱、胡编乱造、泄露隐私或乱说话，适合需要给大模型加护栏的生产场景。"
+}

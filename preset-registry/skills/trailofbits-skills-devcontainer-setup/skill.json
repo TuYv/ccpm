@@ -1,0 +1,26 @@
+{
+  "id": "trailofbits-skills-devcontainer-setup",
+  "name": "devcontainer-setup",
+  "description": "Creates devcontainers with Claude Code, language-specific tooling (Python/Node/Rust/Go), and persistent volumes. Use when adding devcontainer support to a project, setting up isolated development environments, or configuring sandboxed Claude Code workspaces.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "trailofbits",
+  "install_path": ".claude/skills/devcontainer-setup/SKILL.md",
+  "source": {
+    "repo": "trailofbits/skills",
+    "url": "https://github.com/trailofbits/skills/blob/main/plugins/devcontainer-setup/skills/devcontainer-setup/SKILL.md",
+    "path": "plugins/devcontainer-setup/skills/devcontainer-setup/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:41:50.322Z",
+    "stars": 5325,
+    "language": "Python",
+    "pushed_at": "2026-05-16T17:22:25Z",
+    "license": "CC-BY-SA-4.0"
+  },
+  "summary_zh": "帮你快速生成内置多语言工具与持久卷的开发容器，适合给项目加容器支持、搭建隔离开发环境，或是配置沙箱化的Claude工作区。"
+}

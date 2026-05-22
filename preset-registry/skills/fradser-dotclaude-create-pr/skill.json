@@ -1,0 +1,26 @@
+{
+  "id": "fradser-dotclaude-create-pr",
+  "name": "create-pr",
+  "description": "Creates comprehensive GitHub pull requests with automated quality validation and security scanning. This skill should be used when the user asks to \"create a PR\", \"submit a pull request\", or needs to merge completed work with full compliance checks.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "FradSer",
+  "install_path": ".claude/skills/create-pr/SKILL.md",
+  "source": {
+    "repo": "FradSer/dotclaude",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/github/skills/create-pr/SKILL.md",
+    "path": "github/skills/create-pr/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:15.023Z",
+    "stars": 548,
+    "language": "Shell",
+    "pushed_at": "2026-05-21T09:20:23Z",
+    "license": null
+  },
+  "summary_zh": "自动生成 GitHub PR 并跑通合规与安全检查，适合需要确保代码质量再合并的场景，省去手动排查的麻烦。"
+}

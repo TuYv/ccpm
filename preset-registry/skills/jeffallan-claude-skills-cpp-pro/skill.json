@@ -1,0 +1,26 @@
+{
+  "id": "jeffallan-claude-skills-cpp-pro",
+  "name": "cpp-pro",
+  "description": "Writes, optimizes, and debugs C++ applications using modern C++20/23 features, template metaprogramming, and high-performance systems techniques. Use when building or refactoring C++ code requiring concepts, ranges, coroutines, SIMD optimization, or careful memory management — or when addressing performance bottlenecks, concurrency issues, and build system configuration with CMake.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "jeffallan",
+  "install_path": ".claude/skills/cpp-pro/SKILL.md",
+  "source": {
+    "repo": "jeffallan/claude-skills",
+    "url": "https://github.com/jeffallan/claude-skills/blob/main/skills/cpp-pro/SKILL.md",
+    "path": "skills/cpp-pro/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:57.072Z",
+    "stars": 9253,
+    "language": "Python",
+    "pushed_at": "2026-05-20T13:35:05Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一款专精编写、优化与调试现代C++代码的工具，适合在开发重构高性能系统、攻克性能与并发瓶颈，以及处理CMake构建配置时使用。"
+}

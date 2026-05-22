@@ -1,0 +1,26 @@
+{
+  "id": "openagentsinc-openagents-blink",
+  "name": "blink",
+  "description": "Bitcoin Lightning wallet for agents — balances, invoices, payments, BTC/USD swaps, QR codes, price conversion, and transaction history via the Blink API. All output is JSON.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "OpenAgentsInc",
+  "install_path": ".claude/skills/blink/SKILL.md",
+  "source": {
+    "repo": "OpenAgentsInc/openagents",
+    "url": "https://github.com/OpenAgentsInc/openagents/blob/main/skills/blink/SKILL.md",
+    "path": "skills/blink/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:09.785Z",
+    "stars": 420,
+    "language": "Rust",
+    "pushed_at": "2026-05-21T14:45:59Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "专为智能体打造的比特币闪电网络钱包接口，通过纯JSON输出，让程序轻松实现收付款与资产兑换的自动化。"
+}

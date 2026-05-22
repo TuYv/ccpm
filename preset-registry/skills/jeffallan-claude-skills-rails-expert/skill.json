@@ -1,0 +1,26 @@
+{
+  "id": "jeffallan-claude-skills-rails-expert",
+  "name": "rails-expert",
+  "description": "Rails 7+ specialist that optimizes Active Record queries with includes/eager_load, implements Turbo Frames and Turbo Streams for partial page updates, configures Action Cable for WebSocket connections, sets up Sidekiq workers for background job processing, and writes comprehensive RSpec test suites. Use when building Rails 7+ web applications with Hotwire, real-time features, or background job processing. Invoke for Active Record optimization, Turbo Frames/Streams, Action Cable, Sidekiq, RSpec R",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "jeffallan",
+  "install_path": ".claude/skills/rails-expert/SKILL.md",
+  "source": {
+    "repo": "jeffallan/claude-skills",
+    "url": "https://github.com/jeffallan/claude-skills/blob/main/skills/rails-expert/SKILL.md",
+    "path": "skills/rails-expert/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:59.763Z",
+    "stars": 9253,
+    "language": "Python",
+    "pushed_at": "2026-05-20T13:35:05Z",
+    "license": "MIT"
+  },
+  "summary_zh": "专为Rails 7+打造的开发助手，专治查询慢、实时交互难、后台任务繁等痛点，适合需要Hotwire、实时功能或后台处理的Web项目。"
+}

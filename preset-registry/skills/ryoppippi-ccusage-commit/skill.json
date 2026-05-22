@@ -1,0 +1,26 @@
+{
+  "id": "ryoppippi-ccusage-commit",
+  "name": "commit",
+  "description": "Creates atomic Conventional Commits. Use when committing code changes, splitting hunks into revertable units, or writing detailed commit messages.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ryoppippi",
+  "install_path": ".claude/skills/commit/SKILL.md",
+  "source": {
+    "repo": "ryoppippi/ccusage",
+    "url": "https://github.com/ryoppippi/ccusage/blob/main/.agents/skills/commit/SKILL.md",
+    "path": ".agents/skills/commit/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:05.301Z",
+    "stars": 14512,
+    "language": "Rust",
+    "pushed_at": "2026-05-21T16:12:47Z",
+    "license": null
+  },
+  "summary_zh": "帮你生成符合约定式规范的原子化提交记录，解决代码提交粒度太粗、难以精准回退的问题，适合需要精细拆分代码块或写详细提交信息的场景。"
+}

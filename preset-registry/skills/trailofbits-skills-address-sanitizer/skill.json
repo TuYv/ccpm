@@ -1,0 +1,26 @@
+{
+  "id": "trailofbits-skills-address-sanitizer",
+  "name": "address-sanitizer",
+  "description": "> AddressSanitizer detects memory errors during fuzzing. Use when fuzzing C/C++ code to find buffer overflows and use-after-free bugs.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "trailofbits",
+  "install_path": ".claude/skills/address-sanitizer/SKILL.md",
+  "source": {
+    "repo": "trailofbits/skills",
+    "url": "https://github.com/trailofbits/skills/blob/main/plugins/testing-handbook-skills/skills/address-sanitizer/SKILL.md",
+    "path": "plugins/testing-handbook-skills/skills/address-sanitizer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:41:52.505Z",
+    "stars": 5325,
+    "language": "Python",
+    "pushed_at": "2026-05-16T17:22:25Z",
+    "license": "CC-BY-SA-4.0"
+  },
+  "summary_zh": "这是款内存错误检测工具，适合在模糊测试C/C++代码时使用，帮你揪出缓冲区溢出和释放后使用等内存漏洞。"
+}

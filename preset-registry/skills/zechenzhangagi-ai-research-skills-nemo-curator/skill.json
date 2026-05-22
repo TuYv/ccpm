@@ -1,0 +1,26 @@
+{
+  "id": "zechenzhangagi-ai-research-skills-nemo-curator",
+  "name": "nemo-curator",
+  "description": "GPU-accelerated data curation for LLM training. Supports text/image/video/audio. Features fuzzy deduplication (16× faster), quality filtering (30+ heuristics), semantic deduplication, PII redaction, NSFW detection. Scales across GPUs with RAPIDS. Use for preparing high-quality training datasets, cleaning web data, or deduplicating large corpora.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "zechenzhangAGI",
+  "install_path": ".claude/skills/nemo-curator/SKILL.md",
+  "source": {
+    "repo": "zechenzhangAGI/AI-research-SKILLs",
+    "url": "https://github.com/zechenzhangAGI/AI-research-SKILLs/blob/main/05-data-processing/nemo-curator/SKILL.md",
+    "path": "05-data-processing/nemo-curator/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:39.053Z",
+    "stars": 8786,
+    "language": "TeX",
+    "pushed_at": "2026-04-28T05:09:27Z",
+    "license": "MIT"
+  },
+  "summary_zh": "专为大模型训练打造的GPU加速数据加工工具，能快速清洗网页数据、高效去重与脱敏，适合用来准备高质量的训练数据集。"
+}

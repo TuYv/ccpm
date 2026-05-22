@@ -1,0 +1,26 @@
+{
+  "id": "zebbern-claude-code-guide-linux-shell-scripting",
+  "name": "Linux Production Shell Scripts",
+  "description": "This skill should be used when the user asks to \"create bash scripts\", \"automate Linux tasks\", \"monitor system resources\", \"backup files\", \"manage users\", or \"write production shell scripts\". It provides ready-to-use shell script templates for system administration.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "zebbern",
+  "install_path": ".claude/skills/linux-shell-scripting/SKILL.md",
+  "source": {
+    "repo": "zebbern/claude-code-guide",
+    "url": "https://github.com/zebbern/claude-code-guide/blob/main/skills/linux-shell-scripting/SKILL.md",
+    "path": "skills/linux-shell-scripting/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:09.187Z",
+    "stars": 4156,
+    "language": null,
+    "pushed_at": "2026-05-22T01:16:53Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一套生产级Shell脚本模板库，专治Linux日常运维的重复劳动，让你在监控资源、备份文件或管理用户等场景下拿来即用，省去从头写脚本的麻烦。"
+}

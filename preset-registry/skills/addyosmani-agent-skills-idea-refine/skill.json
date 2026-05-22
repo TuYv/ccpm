@@ -1,0 +1,26 @@
+{
+  "id": "addyosmani-agent-skills-idea-refine",
+  "name": "idea-refine",
+  "description": "Refines raw ideas into sharp, actionable concepts through structured divergent and convergent thinking. Use when an idea is still vague, when you need to stress-test assumptions before committing to a plan, or when you want to expand options before converging on one. Triggers on \"ideate\", \"refine this idea\", or \"stress-test my plan\".",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "addyosmani",
+  "install_path": ".claude/skills/idea-refine/SKILL.md",
+  "source": {
+    "repo": "addyosmani/agent-skills",
+    "url": "https://github.com/addyosmani/agent-skills/blob/main/skills/idea-refine/SKILL.md",
+    "path": "skills/idea-refine/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:23.625Z",
+    "stars": 44664,
+    "language": "Shell",
+    "pushed_at": "2026-05-16T22:00:25Z",
+    "license": "MIT"
+  },
+  "summary_zh": "帮你把模糊的初始想法打磨成清晰可落地的方案。适合脑子一团乱、拍板前想验证想法靠不靠谱，或者需要先发散找更多选项再做决定的场景。"
+}

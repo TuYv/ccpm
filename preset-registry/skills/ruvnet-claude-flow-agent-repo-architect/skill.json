@@ -1,0 +1,26 @@
+{
+  "id": "ruvnet-claude-flow-agent-repo-architect",
+  "name": "agent-repo-architect",
+  "description": "Agent skill for repo-architect - invoke with $agent-repo-architect",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ruvnet",
+  "install_path": ".claude/skills/agent-repo-architect/SKILL.md",
+  "source": {
+    "repo": "ruvnet/claude-flow",
+    "url": "https://github.com/ruvnet/claude-flow/blob/main/.agents/skills/agent-repo-architect/SKILL.md",
+    "path": ".agents/skills/agent-repo-architect/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:04.096Z",
+    "stars": 53972,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-22T03:51:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一款专用于规划代码仓库结构的智能体技能，能帮你自动梳理和设计项目架构，适合在项目初始化或重构代码时调用。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "vercel-labs-agent-skills-composition-patterns",
+  "name": "vercel-composition-patterns",
+  "description": "React composition patterns that scale. Use when refactoring components with boolean prop proliferation, building flexible component libraries, or designing reusable APIs. Triggers on tasks involving compound components, render props, context providers, or component architecture. Includes React 19 API changes.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "vercel-labs",
+  "install_path": ".claude/skills/composition-patterns/SKILL.md",
+  "source": {
+    "repo": "vercel-labs/agent-skills",
+    "url": "https://github.com/vercel-labs/agent-skills/blob/main/skills/composition-patterns/SKILL.md",
+    "path": "skills/composition-patterns/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:21.125Z",
+    "stars": 26933,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-21T19:20:56Z",
+    "license": null
+  },
+  "summary_zh": "这是一套进阶的React组件组合模式指南，专治组件布尔属性泛滥，适合用来构建灵活组件库、设计可复用API或重构复杂组件架构，并融入了React 19的新变化。"
+}

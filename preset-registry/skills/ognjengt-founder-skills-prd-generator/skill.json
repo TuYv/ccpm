@@ -1,0 +1,26 @@
+{
+  "id": "ognjengt-founder-skills-prd-generator",
+  "name": "prd-generator",
+  "description": "Generates professional PRD (Product Requirements Document) files optimized for AI coding tools. Takes a rough product idea, asks clarifying questions, and outputs a structured PDF ready to feed into AI coding assistants.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ognjengt",
+  "install_path": ".claude/skills/prd-generator/SKILL.md",
+  "source": {
+    "repo": "ognjengt/founder-skills",
+    "url": "https://github.com/ognjengt/founder-skills/blob/main/skills/prd-generator/SKILL.md",
+    "path": "skills/prd-generator/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:19.281Z",
+    "stars": 172,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-18T19:44:26Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个把粗略产品想法变成专业需求文档的工具。它会通过提问帮你理清思路，并生成能直接喂给AI编程助手的PDF，解决手写需求费时且AI难以理解的问题。"
+}

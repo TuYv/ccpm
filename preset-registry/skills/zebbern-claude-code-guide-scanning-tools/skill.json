@@ -1,0 +1,26 @@
+{
+  "id": "zebbern-claude-code-guide-scanning-tools",
+  "name": "Security Scanning Tools",
+  "description": "This skill should be used when the user asks to \"perform vulnerability scanning\", \"scan networks for open ports\", \"assess web application security\", \"scan wireless networks\", \"detect malware\", \"check cloud security\", or \"evaluate system compliance\". It provides comprehensive guidance on security scanning tools and methodologies.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "zebbern",
+  "install_path": ".claude/skills/scanning-tools/SKILL.md",
+  "source": {
+    "repo": "zebbern/claude-code-guide",
+    "url": "https://github.com/zebbern/claude-code-guide/blob/main/skills/scanning-tools/SKILL.md",
+    "path": "skills/scanning-tools/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:09.846Z",
+    "stars": 4156,
+    "language": null,
+    "pushed_at": "2026-05-22T01:16:53Z",
+    "license": "MIT"
+  },
+  "summary_zh": "提供安全扫描工具与方法的全面指导，适合需要排查漏洞与端口、评估网络与云安全、检测恶意软件或验证合规性等场景，帮你轻松搞定各类安全检测需求。"
+}

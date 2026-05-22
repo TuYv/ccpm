@@ -1,0 +1,26 @@
+{
+  "id": "davila7-claude-code-templates-agents-crewai",
+  "name": "crewai-multi-agent",
+  "description": "Multi-agent orchestration framework for autonomous AI collaboration. Use when building teams of specialized agents working together on complex tasks, when you need role-based agent collaboration with memory, or for production workflows requiring sequential/hierarchical execution. Built without LangChain dependencies for lean, fast execution.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "davila7",
+  "install_path": ".claude/skills/agents-crewai/SKILL.md",
+  "source": {
+    "repo": "davila7/claude-code-templates",
+    "url": "https://github.com/davila7/claude-code-templates/blob/main/cli-tool/components/skills/ai-research/agents-crewai/SKILL.md",
+    "path": "cli-tool/components/skills/ai-research/agents-crewai/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:43.224Z",
+    "stars": 27482,
+    "language": "Python",
+    "pushed_at": "2026-05-22T04:31:04Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个轻量的多智能体编排框架，让AI像团队一样自主协作。适合用来处理复杂任务，或在需要按角色分工、带记忆协同，以及按流程顺序执行的生产环境中使用。"
+}

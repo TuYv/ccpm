@@ -1,0 +1,26 @@
+{
+  "id": "davila7-claude-code-templates-agent-memory-systems",
+  "name": "agent-memory-systems",
+  "description": "Memory is the cornerstone of intelligent agents. Without it, every interaction starts from zero. This skill covers the architecture of agent memory: short-term (context window), long-term (vector stores), and the cognitive architectures that organize them.  Key insight: Memory isn't just storage - it's retrieval. A million stored facts mean nothing if you can't find the right one. Chunking, embedding, and retrieval strategies determine whether your agent remembers or forgets.  The field is fragm",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "davila7",
+  "install_path": ".claude/skills/agent-memory-systems/SKILL.md",
+  "source": {
+    "repo": "davila7/claude-code-templates",
+    "url": "https://github.com/davila7/claude-code-templates/blob/main/cli-tool/components/skills/ai-research/agent-memory-systems/SKILL.md",
+    "path": "cli-tool/components/skills/ai-research/agent-memory-systems/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:42.963Z",
+    "stars": 27482,
+    "language": "Python",
+    "pushed_at": "2026-05-22T04:31:04Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是讲解智能体记忆架构的技能库，解决AI每次对话从零开始及海量知识难找回的问题。它教你优化分块与检索策略，让智能体真正记住并精准调用信息，适合打造有记忆AI的开发者。"
+}

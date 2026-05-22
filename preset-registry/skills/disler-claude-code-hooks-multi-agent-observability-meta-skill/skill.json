@@ -1,0 +1,26 @@
+{
+  "id": "disler-claude-code-hooks-multi-agent-observability-meta-skill",
+  "name": "Create New Skills",
+  "description": "Creates new Agent Skills for Claude Code following best practices and documentation. Use when the user wants to create a new skill, extend Claude's capabilities, or package domain expertise into a reusable skill.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "disler",
+  "install_path": ".claude/skills/meta-skill/SKILL.md",
+  "source": {
+    "repo": "disler/claude-code-hooks-multi-agent-observability",
+    "url": "https://github.com/disler/claude-code-hooks-multi-agent-observability/blob/main/.claude/skills/meta-skill/SKILL.md",
+    "path": ".claude/skills/meta-skill/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:55.057Z",
+    "stars": 1426,
+    "language": "Python",
+    "pushed_at": "2026-02-08T23:59:13Z",
+    "license": null
+  },
+  "summary_zh": "按规范为 Claude Code 生成新技能的工具。适合需要扩展其能力，或将专业知识打包成可复用技能的场景。"
+}

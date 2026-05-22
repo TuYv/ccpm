@@ -1,0 +1,26 @@
+{
+  "id": "neolabhq-context-engineering-kit-write-concisely",
+  "name": "write-concisely",
+  "description": "Apply writing rules to any documentation that humans will read. Makes your writing clearer, stronger, and more professional.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "NeoLabHQ",
+  "install_path": ".claude/skills/write-concisely/SKILL.md",
+  "source": {
+    "repo": "NeoLabHQ/context-engineering-kit",
+    "url": "https://github.com/NeoLabHQ/context-engineering-kit/blob/master/plugins/docs/skills/write-concisely/SKILL.md",
+    "path": "plugins/docs/skills/write-concisely/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-05-22T04:42:28.915Z",
+    "stars": 1025,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-22T00:32:29Z",
+    "license": "GPL-3.0"
+  },
+  "summary_zh": "这是一款文档润色工具，能把各类给人看的文档改得更清晰、有力、专业，特别适合需要提升文档可读性和专业度的写作场景。"
+}

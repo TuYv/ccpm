@@ -1,0 +1,26 @@
+{
+  "id": "mattpocock-skills-write-a-skill",
+  "name": "write-a-skill",
+  "description": "Create new agent skills with proper structure, progressive disclosure, and bundled resources. Use when user wants to create, write, or build a new skill.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mattpocock",
+  "install_path": ".claude/skills/write-a-skill/SKILL.md",
+  "source": {
+    "repo": "mattpocock/skills",
+    "url": "https://github.com/mattpocock/skills/blob/main/skills/productivity/write-a-skill/SKILL.md",
+    "path": "skills/productivity/write-a-skill/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:06.731Z",
+    "stars": 99464,
+    "language": "Shell",
+    "pushed_at": "2026-05-20T08:46:54Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个智能体技能脚手架。当你要给AI写新技能时，它能帮你快速搭好规范的项目结构，并自动搞定资源打包和渐进式展示，省去从零配置的麻烦。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "bitwize-music-studio-claude-ai-music-skills-pre-generation-check",
+  "name": "pre-generation-check",
+  "description": "Validates all pre-generation gates before sending tracks to Suno. Checks sources verified, lyrics reviewed, pronunciation resolved, explicit flag set, style prompt complete, and artist names cleared. Use before generating tracks on Suno or when the user says \"pre-gen check\" or \"ready to generate\".",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "bitwize-music-studio",
+  "install_path": ".claude/skills/pre-generation-check/SKILL.md",
+  "source": {
+    "repo": "bitwize-music-studio/claude-ai-music-skills",
+    "url": "https://github.com/bitwize-music-studio/claude-ai-music-skills/blob/main/skills/pre-generation-check/SKILL.md",
+    "path": "skills/pre-generation-check/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:37.850Z",
+    "stars": 202,
+    "language": "Python",
+    "pushed_at": "2026-05-21T00:00:51Z",
+    "license": "CC0-1.0"
+  },
+  "summary_zh": "这是Suno生成歌曲前的预检工具，能确保各项素材和设定都审核无误，避免生成时出错返工。适合在正式生成音乐前，或用户表示准备就绪时使用。"
+}

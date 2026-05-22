@@ -1,0 +1,26 @@
+{
+  "id": "zechenzhangagi-ai-research-skills-skypilot",
+  "name": "skypilot-multi-cloud-orchestration",
+  "description": "Multi-cloud orchestration for ML workloads with automatic cost optimization. Use when you need to run training or batch jobs across multiple clouds, leverage spot instances with auto-recovery, or optimize GPU costs across providers.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "zechenzhangAGI",
+  "install_path": ".claude/skills/skypilot/SKILL.md",
+  "source": {
+    "repo": "zechenzhangAGI/AI-research-SKILLs",
+    "url": "https://github.com/zechenzhangAGI/AI-research-SKILLs/blob/main/09-infrastructure/skypilot/SKILL.md",
+    "path": "09-infrastructure/skypilot/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:42.061Z",
+    "stars": 8786,
+    "language": "TeX",
+    "pushed_at": "2026-04-28T05:09:27Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个专为机器学习打造的多云编排工具，能自动优化开销。当你需要跨云跑训练或批处理任务、想用带自动恢复的竞价实例，或跨云省GPU钱时特别好用。"
+}

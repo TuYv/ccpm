@@ -1,0 +1,26 @@
+{
+  "id": "sickn33-antigravity-awesome-skills-agenttrace-session-audit",
+  "name": "agenttrace-session-audit",
+  "description": "Audit local AI coding-agent sessions with agenttrace for cost, tool failures, latency, anomalies, health, diffs, and CI gates.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sickn33",
+  "install_path": ".claude/skills/agenttrace-session-audit/SKILL.md",
+  "source": {
+    "repo": "sickn33/antigravity-awesome-skills",
+    "url": "https://github.com/sickn33/antigravity-awesome-skills/blob/main/plugins/antigravity-awesome-skills-claude/skills/agenttrace-session-audit/SKILL.md",
+    "path": "plugins/antigravity-awesome-skills-claude/skills/agenttrace-session-audit/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:10.387Z",
+    "stars": 38305,
+    "language": "Python",
+    "pushed_at": "2026-05-21T19:35:19Z",
+    "license": "MIT"
+  },
+  "summary_zh": "专门审查本地AI编程助手的会话记录，帮你追踪运行开销、排查性能异常并把控代码变更质量，适合需要监控AI编码成本及接入CI卡点的场景。"
+}

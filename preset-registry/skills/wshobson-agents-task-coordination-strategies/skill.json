@@ -1,0 +1,26 @@
+{
+  "id": "wshobson-agents-task-coordination-strategies",
+  "name": "task-coordination-strategies",
+  "description": "Decompose complex tasks, design dependency graphs, and coordinate multi-agent work with proper task descriptions and workload balancing. Use this skill when breaking down work for agent teams, managing task dependencies, or monitoring team progress.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.2",
+  "author": "wshobson",
+  "install_path": ".claude/skills/task-coordination-strategies/SKILL.md",
+  "source": {
+    "repo": "wshobson/agents",
+    "url": "https://github.com/wshobson/agents/blob/main/plugins/agent-teams/skills/task-coordination-strategies/SKILL.md",
+    "path": "plugins/agent-teams/skills/task-coordination-strategies/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:54.610Z",
+    "stars": 35770,
+    "language": "Python",
+    "pushed_at": "2026-05-21T20:01:53Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个多智能体协作调度工具，能把复杂任务拆解为清晰的依赖图并平衡工作量。专治智能体团队分工混乱、任务依赖纠缠或进度难追踪的痛点。"
+}

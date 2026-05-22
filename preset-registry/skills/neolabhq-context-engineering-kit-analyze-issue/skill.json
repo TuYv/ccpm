@@ -1,0 +1,26 @@
+{
+  "id": "neolabhq-context-engineering-kit-analyze-issue",
+  "name": "analyze-issue",
+  "description": "Analyze a GitHub issue and create a detailed technical specification",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "NeoLabHQ",
+  "install_path": ".claude/skills/analyze-issue/SKILL.md",
+  "source": {
+    "repo": "NeoLabHQ/context-engineering-kit",
+    "url": "https://github.com/NeoLabHQ/context-engineering-kit/blob/master/plugins/git/skills/analyze-issue/SKILL.md",
+    "path": "plugins/git/skills/analyze-issue/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-05-22T04:42:29.543Z",
+    "stars": 1025,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-22T00:32:29Z",
+    "license": "GPL-3.0"
+  },
+  "summary_zh": "这个工具能分析GitHub issue并自动生成详细的技术方案，适合开发者快速把模糊的需求描述转化为清晰的技术规格说明，省去手动梳理和撰写文档的麻烦。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "alonw0-web-asset-generator-web-asset-generator",
+  "name": "web-asset-generator",
+  "description": "Generate web assets including favicons, app icons (PWA), and social media meta images (Open Graph) for Facebook, Twitter, WhatsApp, and LinkedIn. Use when users need icons, favicons, social sharing images, or Open Graph images from logos or text slogans. Handles image resizing, text-to-image generation, and provides proper HTML meta tags.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alonw0",
+  "install_path": ".claude/skills/web-asset-generator/SKILL.md",
+  "source": {
+    "repo": "alonw0/web-asset-generator",
+    "url": "https://github.com/alonw0/web-asset-generator/blob/main/skills/web-asset-generator/SKILL.md",
+    "path": "skills/web-asset-generator/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:47.688Z",
+    "stars": 380,
+    "language": "Python",
+    "pushed_at": "2026-01-28T09:11:01Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个网页素材生成器，能把Logo或文字快速转换成各尺寸的网站图标和社交分享图，并自动输出配套的HTML代码，省去手动制图和适配多平台的麻烦。"
+}

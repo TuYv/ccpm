@@ -1,0 +1,26 @@
+{
+  "id": "neolabhq-context-engineering-kit-analyse-problem",
+  "name": "analyse-problem",
+  "description": "Comprehensive A3 one-page problem analysis with root cause and action plan",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "NeoLabHQ",
+  "install_path": ".claude/skills/analyse-problem/SKILL.md",
+  "source": {
+    "repo": "NeoLabHQ/context-engineering-kit",
+    "url": "https://github.com/NeoLabHQ/context-engineering-kit/blob/master/plugins/kaizen/skills/analyse-problem/SKILL.md",
+    "path": "plugins/kaizen/skills/analyse-problem/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-05-22T04:42:30.189Z",
+    "stars": 1025,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-22T00:32:29Z",
+    "license": "GPL-3.0"
+  },
+  "summary_zh": "这是一个A3一页纸问题分析工具，帮你理清根本原因并制定行动计划，适合需要结构化拆解与系统性解决问题的场景。"
+}

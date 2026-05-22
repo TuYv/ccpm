@@ -1,0 +1,26 @@
+{
+  "id": "slopus-happy-office-hours",
+  "name": "office-hours",
+  "description": "> MANUAL TRIGGER ONLY: invoke only when user types /office-hours. YC Office Hours — two modes. Startup mode: six forcing questions that expose demand reality, status quo, desperate specificity, narrowest wedge, observation, and future-fit. Builder mode: design thinking brainstorming for side projects, hackathons, learning, and open source. Saves a design doc. Use when asked to \"brainstorm this\", \"I have an idea\", \"help me think through this\", \"office hours\", or \"is this worth building\". Proactiv",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "slopus",
+  "install_path": ".claude/skills/office-hours/SKILL.md",
+  "source": {
+    "repo": "slopus/happy",
+    "url": "https://github.com/slopus/happy/blob/main/.agents/skills/office-hours/SKILL.md",
+    "path": ".agents/skills/office-hours/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:59.450Z",
+    "stars": 21032,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-18T02:10:40Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一款帮你验证点子和发散思维的助手。有新想法不知该不该做，或想为副业和黑客松找灵感时，它能用犀利提问帮你理清需求，或用设计思维陪你发散，最后输出设计文档。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "softaworks-agent-toolkit-codex",
+  "name": "codex",
+  "description": "Use when the user asks to run Codex CLI (codex exec, codex resume) or references OpenAI Codex for code analysis, refactoring, or automated editing. Uses GPT-5.2 by default for state-of-the-art software engineering.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "softaworks",
+  "install_path": ".claude/skills/codex/SKILL.md",
+  "source": {
+    "repo": "softaworks/agent-toolkit",
+    "url": "https://github.com/softaworks/agent-toolkit/blob/main/skills/codex/SKILL.md",
+    "path": "skills/codex/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:21.498Z",
+    "stars": 1872,
+    "language": "Python",
+    "pushed_at": "2026-03-05T16:46:24Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一款基于GPT-5.2的命令行编程助手，能帮你自动分析、重构和编辑代码，适合需要自动化处理软件开发任务的场景。"
+}

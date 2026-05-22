@@ -1,0 +1,26 @@
+{
+  "id": "wshobson-agents-dbt-transformation-patterns",
+  "name": "dbt-transformation-patterns",
+  "description": "Master dbt (data build tool) for analytics engineering with model organization, testing, documentation, and incremental strategies. Use when building data transformations, creating data models, or implementing analytics engineering best practices.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "wshobson",
+  "install_path": ".claude/skills/dbt-transformation-patterns/SKILL.md",
+  "source": {
+    "repo": "wshobson/agents",
+    "url": "https://github.com/wshobson/agents/blob/main/plugins/data-engineering/skills/dbt-transformation-patterns/SKILL.md",
+    "path": "plugins/data-engineering/skills/dbt-transformation-patterns/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:57.686Z",
+    "stars": 35770,
+    "language": "Python",
+    "pushed_at": "2026-05-21T20:01:53Z",
+    "license": "MIT"
+  },
+  "summary_zh": "它是一套 dbt 分析工程的最佳实践指南，帮你规范数据转换与建模流程，适合搭建数据模型或推行分析工程规范时参考。"
+}

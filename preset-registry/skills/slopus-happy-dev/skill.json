@@ -1,0 +1,26 @@
+{
+  "id": "slopus-happy-dev",
+  "name": "dev",
+  "description": "> Local development guide for the Happy monorepo. How to build, install, test, and run the CLI, server, mobile app, and desktop (Tauri) locally. Use when the user types /dev, asks how to \"build\", \"start dev\", \"install locally\", or \"run the ___ package\".",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "slopus",
+  "install_path": ".claude/skills/dev/SKILL.md",
+  "source": {
+    "repo": "slopus/happy",
+    "url": "https://github.com/slopus/happy/blob/main/.agents/skills/dev/SKILL.md",
+    "path": ".agents/skills/dev/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:59.178Z",
+    "stars": 21032,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-18T02:10:40Z",
+    "license": "MIT"
+  },
+  "summary_zh": "Happy monorepo的本地开发指南，教你如何在本地构建、安装、测试及运行各端应用，适合想在本地跑项目或遇到构建启动问题时查阅。"
+}

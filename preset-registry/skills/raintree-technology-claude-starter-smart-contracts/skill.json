@@ -1,0 +1,26 @@
+{
+  "id": "raintree-technology-claude-starter-smart-contracts",
+  "name": "shelby-smart-contracts",
+  "description": "Expert on Shelby Protocol smart contracts on Aptos blockchain. Helps with blob metadata, micropayment channels, auditing system, storage commitments, placement group assignments, Move modules, and on-chain state management. Triggers on keywords Shelby smart contract, Shelby Move, blob metadata, micropayment channel, Shelby auditing, placement group assignment, storage commitment, Aptos contract.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "raintree-technology",
+  "install_path": ".claude/skills/smart-contracts/SKILL.md",
+  "source": {
+    "repo": "raintree-technology/claude-starter",
+    "url": "https://github.com/raintree-technology/claude-starter/blob/main/.claude/skills/aptos/shelby/smart-contracts/skill.md",
+    "path": ".claude/skills/aptos/shelby/smart-contracts/skill.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:52.519Z",
+    "stars": 76,
+    "language": "Zig",
+    "pushed_at": "2026-04-24T22:45:15Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是Aptos链上Shelby协议的智能合约专家助手，能帮你轻松搞定该协议涉及的数据存储、微支付、审计及链上状态等合约开发与管理问题。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "softaworks-agent-toolkit-react-useeffect",
+  "name": "react-useeffect",
+  "description": "React useEffect best practices from official docs. Use when writing/reviewing useEffect, useState for derived values, data fetching, or state synchronization. Teaches when NOT to use Effect and better alternatives.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "softaworks",
+  "install_path": ".claude/skills/react-useeffect/SKILL.md",
+  "source": {
+    "repo": "softaworks/agent-toolkit",
+    "url": "https://github.com/softaworks/agent-toolkit/blob/main/dist/plugins/react-useeffect/skills/react-useeffect/SKILL.md",
+    "path": "dist/plugins/react-useeffect/skills/react-useeffect/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:20.432Z",
+    "stars": 1872,
+    "language": "Python",
+    "pushed_at": "2026-03-05T16:46:24Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一份基于官方文档的useEffect最佳实践指南，帮你规范编写与审查Effect，处理数据获取和状态同步等场景，并教你避开滥用，提供更优替代方案。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "davila7-claude-code-templates-gemini",
+  "name": "gemini",
+  "description": "Use when the user asks to run Gemini CLI for code review, plan review, or big context (>200k) processing. Ideal for comprehensive analysis requiring large context windows. Uses Gemini 3 Pro by default for state-of-the-art reasoning and coding.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "davila7",
+  "install_path": ".claude/skills/gemini/SKILL.md",
+  "source": {
+    "repo": "davila7/claude-code-templates",
+    "url": "https://github.com/davila7/claude-code-templates/blob/main/cli-tool/components/skills/ai-research/gemini/SKILL.md",
+    "path": "cli-tool/components/skills/ai-research/gemini/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:46.727Z",
+    "stars": 27482,
+    "language": "Python",
+    "pushed_at": "2026-05-22T04:31:04Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一款主打超长上下文处理的命令行工具，专攻代码审查、方案评估等需要海量信息支撑的深度分析场景，帮你轻松搞定超长文本的复杂推理与编码。"
+}

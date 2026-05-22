@@ -1,0 +1,26 @@
+{
+  "id": "fradser-dotclaude-finish-feature",
+  "name": "finish-feature",
+  "description": "Finalizes and merges a feature branch into develop using git-flow. This skill should be used when the user asks to \"finish a feature\", \"merge feature branch\", \"complete feature\", \"git flow feature finish\", or wants to finalize a feature branch.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "FradSer",
+  "install_path": ".claude/skills/finish-feature/SKILL.md",
+  "source": {
+    "repo": "FradSer/dotclaude",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/gitflow/skills/finish-feature/SKILL.md",
+    "path": "gitflow/skills/finish-feature/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:14.381Z",
+    "stars": 548,
+    "language": "Shell",
+    "pushed_at": "2026-05-21T09:20:23Z",
+    "license": null
+  },
+  "summary_zh": "这是一个git-flow辅助工具，专门帮你把功能分支收尾并合并到develop分支，适合新功能开发完毕需要合并代码的场景。"
+}

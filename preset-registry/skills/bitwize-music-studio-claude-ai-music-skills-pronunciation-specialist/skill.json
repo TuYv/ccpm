@@ -1,0 +1,26 @@
+{
+  "id": "bitwize-music-studio-claude-ai-music-skills-pronunciation-specialist",
+  "name": "pronunciation-specialist",
+  "description": "Scans lyrics for pronunciation risks and prevents Suno mispronunciations. Use when writing lyrics with proper nouns, technical terms, homographs, or non-English words.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "bitwize-music-studio",
+  "install_path": ".claude/skills/pronunciation-specialist/SKILL.md",
+  "source": {
+    "repo": "bitwize-music-studio/claude-ai-music-skills",
+    "url": "https://github.com/bitwize-music-studio/claude-ai-music-skills/blob/main/skills/pronunciation-specialist/SKILL.md",
+    "path": "skills/pronunciation-specialist/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:38.333Z",
+    "stars": 202,
+    "language": "Python",
+    "pushed_at": "2026-05-21T00:00:51Z",
+    "license": "CC0-1.0"
+  },
+  "summary_zh": "它能排查歌词的发音隐患，防止Suno唱错词。写歌时遇到专有名词、专业术语、多音字或外语，用它最合适。"
+}

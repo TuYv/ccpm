@@ -1,0 +1,26 @@
+{
+  "id": "zebbern-claude-code-guide-api-fuzzing-bug-bounty",
+  "name": "API Fuzzing for Bug Bounty",
+  "description": "This skill should be used when the user asks to \"test API security\", \"fuzz APIs\", \"find IDOR vulnerabilities\", \"test REST API\", \"test GraphQL\", \"API penetration testing\", \"bug bounty API testing\", or needs guidance on API security assessment techniques.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "zebbern",
+  "install_path": ".claude/skills/api-fuzzing-bug-bounty/SKILL.md",
+  "source": {
+    "repo": "zebbern/claude-code-guide",
+    "url": "https://github.com/zebbern/claude-code-guide/blob/main/skills/api-fuzzing-bug-bounty/SKILL.md",
+    "path": "skills/api-fuzzing-bug-bounty/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:08.235Z",
+    "stars": 4156,
+    "language": null,
+    "pushed_at": "2026-05-22T01:16:53Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个专攻接口安全的模糊测试技能，能帮你深挖API越权等漏洞，非常适合安全人员做接口渗透测试或参与漏洞赏金项目时获取指导。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "alinaqi-claude-bootstrap-code-graph",
+  "name": "code-graph",
+  "description": "AST-based code graph for fast symbol lookup, dependency analysis, and blast radius via codebase-memory-mcp MCP server",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alinaqi",
+  "install_path": ".claude/skills/code-graph/SKILL.md",
+  "source": {
+    "repo": "alinaqi/claude-bootstrap",
+    "url": "https://github.com/alinaqi/claude-bootstrap/blob/main/skills/code-graph/SKILL.md",
+    "path": "skills/code-graph/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:25.065Z",
+    "stars": 641,
+    "language": "Python",
+    "pushed_at": "2026-05-21T22:01:29Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个基于语法树的代码图谱工具，能帮你快速定位代码、理清依赖关系，并精准评估改动的影响范围，特别适合大型项目重构或深度梳理代码库的场景。"
+}

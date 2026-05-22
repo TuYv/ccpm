@@ -1,0 +1,26 @@
+{
+  "id": "davila7-claude-code-templates-agent-management",
+  "name": "agent-management",
+  "description": "Create, manage, and orchestrate AI agents using the AI Maestro CLI. Use when the user asks to \"create agent\", \"list agents\", \"delete agent\", \"hibernate agent\", \"wake agent\", \"install plugin\", \"show agent\", \"restart agent\", or any agent lifecycle management task.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "davila7",
+  "install_path": ".claude/skills/agent-management/SKILL.md",
+  "source": {
+    "repo": "davila7/claude-code-templates",
+    "url": "https://github.com/davila7/claude-code-templates/blob/main/cli-tool/components/skills/ai-maestro/agent-management/SKILL.md",
+    "path": "cli-tool/components/skills/ai-maestro/agent-management/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:42.261Z",
+    "stars": 27482,
+    "language": "Python",
+    "pushed_at": "2026-05-22T04:31:04Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个基于命令行的AI智能体编排工具，帮你搞定智能体创建、启停、删除和装插件等全生命周期维护，适合需要集中管理和高效调度智能体的场景。"
+}

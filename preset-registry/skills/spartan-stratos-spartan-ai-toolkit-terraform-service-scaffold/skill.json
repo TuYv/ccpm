@@ -1,0 +1,26 @@
+{
+  "id": "spartan-stratos-spartan-ai-toolkit-terraform-service-scaffold",
+  "name": "terraform-service-scaffold",
+  "description": "Generate complete service-level Terraform infrastructure with modules, environments, and CI/CD. Use when adding Terraform to a new service or bootstrapping infrastructure from scratch.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "spartan-stratos",
+  "install_path": ".claude/skills/terraform-service-scaffold/SKILL.md",
+  "source": {
+    "repo": "spartan-stratos/spartan-ai-toolkit",
+    "url": "https://github.com/spartan-stratos/spartan-ai-toolkit/blob/master/toolkit/skills/terraform-service-scaffold/SKILL.md",
+    "path": "toolkit/skills/terraform-service-scaffold/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-05-22T04:46:18.496Z",
+    "stars": 71,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-11T06:56:56Z",
+    "license": null
+  },
+  "summary_zh": "这是一个脚手架工具，能快速生成完整的服务级Terraform基础设施配置，解决新服务引入Terraform或从零搭建时起步慢、配置繁琐的问题。"
+}

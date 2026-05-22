@@ -1,0 +1,26 @@
+{
+  "id": "guia-matthieu-clawfu-skills-video-processing",
+  "name": "video-processing",
+  "description": "Process video files with ffmpeg automation. Use when: compressing videos for upload; extracting audio from video; resizing for social formats; clipping segments; merging multiple videos; generating thumbnails",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "guia-matthieu",
+  "install_path": ".claude/skills/video-processing/SKILL.md",
+  "source": {
+    "repo": "guia-matthieu/clawfu-skills",
+    "url": "https://github.com/guia-matthieu/clawfu-skills/blob/main/skills/automation/video-processing/SKILL.md",
+    "path": "skills/automation/video-processing/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:46:31.137Z",
+    "stars": 109,
+    "language": "Python",
+    "pushed_at": "2026-04-02T10:12:11Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是基于 ffmpeg 的视频自动化处理工具，能帮你轻松搞定视频压缩、剪辑与尺寸适配，特别适合需要快速处理视频以便上传分享或发布社交平台的场景。"
+}

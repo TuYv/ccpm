@@ -1,0 +1,26 @@
+{
+  "id": "jeffallan-claude-skills-javascript-pro",
+  "name": "javascript-pro",
+  "description": "Writes, debugs, and refactors JavaScript code using modern ES2023+ features, async/await patterns, ESM module systems, and Node.js APIs. Use when building vanilla JavaScript applications, implementing Promise-based async flows, optimising browser or Node.js performance, working with Web Workers or Fetch API, or reviewing .js/.mjs/.cjs files for correctness and best practices.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "jeffallan",
+  "install_path": ".claude/skills/javascript-pro/SKILL.md",
+  "source": {
+    "repo": "jeffallan/claude-skills",
+    "url": "https://github.com/jeffallan/claude-skills/blob/main/skills/javascript-pro/SKILL.md",
+    "path": "skills/javascript-pro/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:58.422Z",
+    "stars": 9253,
+    "language": "Python",
+    "pushed_at": "2026-05-20T13:35:05Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个帮你编写、调试和重构JS代码的助手，适合开发原生应用、搞定异步流程、提升运行性能，或者审查代码是否符合最新规范与最佳实践时使用。"
+}

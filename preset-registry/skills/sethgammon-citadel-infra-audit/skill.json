@@ -1,0 +1,26 @@
+{
+  "id": "sethgammon-citadel-infra-audit",
+  "name": "infra-audit",
+  "description": ">- Reads docker-compose, env files, ORM configs, and connection strings to map current infrastructure. Flags missing layers (cache, queue, analytics) based on observed access patterns. Outputs a structured infrastructure manifest.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "SethGammon",
+  "install_path": ".claude/skills/infra-audit/SKILL.md",
+  "source": {
+    "repo": "SethGammon/Citadel",
+    "url": "https://github.com/SethGammon/Citadel/blob/main/skills/infra-audit/SKILL.md",
+    "path": "skills/infra-audit/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:06.287Z",
+    "stars": 572,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-07T17:50:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "它能自动解析各类配置来梳理现有架构，帮你发现系统中缺失的基础组件，非常适合排查架构漏洞或生成全局清单。"
+}

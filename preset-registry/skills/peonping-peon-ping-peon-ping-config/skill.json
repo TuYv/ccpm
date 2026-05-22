@@ -1,0 +1,26 @@
+{
+  "id": "peonping-peon-ping-peon-ping-config",
+  "name": "peon-ping-config",
+  "description": "Update peon-ping configuration — volume, pack rotation, categories, active pack, and other settings. Use when user wants to change peon-ping settings like volume, enable round-robin, add packs to rotation, toggle sound categories, or adjust any config.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "PeonPing",
+  "install_path": ".claude/skills/peon-ping-config/SKILL.md",
+  "source": {
+    "repo": "PeonPing/peon-ping",
+    "url": "https://github.com/PeonPing/peon-ping/blob/main/skills/peon-ping-config/SKILL.md",
+    "path": "skills/peon-ping-config/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:50.262Z",
+    "stars": 4751,
+    "language": "Shell",
+    "pushed_at": "2026-05-18T01:30:33Z",
+    "license": "MIT"
+  },
+  "summary_zh": "专门用来修改提示音各项设置的工具，适合需要自定义音量、音效包轮播或声音分类等播放规则的场景。"
+}

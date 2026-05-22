@@ -1,0 +1,26 @@
+{
+  "id": "onmax-nuxt-skills-nuxt-content",
+  "name": "nuxt-content",
+  "description": "Use when working with Nuxt Content v3, markdown content, or CMS features in Nuxt - provides collections (local/remote/API sources), queryCollection API, MDC rendering, database configuration, NuxtStudio integration, hooks, i18n patterns, and LLMs integration",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "onmax",
+  "install_path": ".claude/skills/nuxt-content/SKILL.md",
+  "source": {
+    "repo": "onmax/nuxt-skills",
+    "url": "https://github.com/onmax/nuxt-skills/blob/main/skills/nuxt-content/SKILL.md",
+    "path": "skills/nuxt-content/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:05.559Z",
+    "stars": 663,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-04T06:59:41Z",
+    "license": null
+  },
+  "summary_zh": "这是 Nuxt 的专属内容管理模块，适合需要处理 Markdown 或搭建内容站的场景，能帮你轻松整合、查询和渲染本地与远程内容，让内容开发更简单。"
+}

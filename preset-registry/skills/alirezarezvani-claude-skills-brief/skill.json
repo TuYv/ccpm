@@ -1,0 +1,26 @@
+{
+  "id": "alirezarezvani-claude-skills-brief",
+  "name": "brief",
+  "description": "/cs:brief <topic> — Generate a one-page strategy brief from an office-hours intake. First step in the strategic sprint pipeline.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alirezarezvani",
+  "install_path": ".claude/skills/brief/SKILL.md",
+  "source": {
+    "repo": "alirezarezvani/claude-skills",
+    "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/brief/SKILL.md",
+    "path": ".gemini/skills/brief/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:40.492Z",
+    "stars": 15795,
+    "language": "Python",
+    "pushed_at": "2026-05-21T17:51:26Z",
+    "license": "MIT"
+  },
+  "summary_zh": "能把零散的沟通记录快速整理成一页纸战略简报，帮你省去繁琐梳理、快速对齐思路，适合战略冲刺启动前的信息归拢。"
+}

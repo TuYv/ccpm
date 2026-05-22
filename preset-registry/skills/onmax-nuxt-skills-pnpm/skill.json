@@ -1,0 +1,26 @@
+{
+  "id": "onmax-nuxt-skills-pnpm",
+  "name": "pnpm",
+  "description": "Use when managing Node.js dependencies with pnpm - install packages, configure monorepo workspaces, set up pnpm catalogs, resolve dependency conflicts with overrides, patch third-party packages, and configure CI pipelines for pnpm projects",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "onmax",
+  "install_path": ".claude/skills/pnpm/SKILL.md",
+  "source": {
+    "repo": "onmax/nuxt-skills",
+    "url": "https://github.com/onmax/nuxt-skills/blob/main/skills/pnpm/SKILL.md",
+    "path": "skills/pnpm/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:06.211Z",
+    "stars": 663,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-04T06:59:41Z",
+    "license": null
+  },
+  "summary_zh": "这是一款高效的 Node.js 依赖管理工具，专为复杂依赖场景设计，特别适合大型 monorepo 项目，帮你轻松搞定版本冲突与第三方包定制，让工程化流程更顺畅。"
+}

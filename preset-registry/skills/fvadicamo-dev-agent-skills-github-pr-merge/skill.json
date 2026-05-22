@@ -1,0 +1,26 @@
+{
+  "id": "fvadicamo-dev-agent-skills-github-pr-merge",
+  "name": "github-pr-merge",
+  "description": "Merges GitHub Pull Requests after validating pre-merge checklist. Use when user wants to merge PR, close PR, finalize PR, complete merge, approve and merge, or execute merge. Runs pre-merge validation (tests, lint, CI, comments), confirms with user, merges with proper format, handles post-merge cleanup.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "fvadicamo",
+  "install_path": ".claude/skills/github-pr-merge/SKILL.md",
+  "source": {
+    "repo": "fvadicamo/dev-agent-skills",
+    "url": "https://github.com/fvadicamo/dev-agent-skills/blob/main/plugins/github-workflow/skills/github-pr-merge/SKILL.md",
+    "path": "plugins/github-workflow/skills/github-pr-merge/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:22.313Z",
+    "stars": 63,
+    "language": "Shell",
+    "pushed_at": "2026-05-17T21:36:00Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个自动合并 PR 的工具，解决手动合并易漏检查的问题。它会在合并前跑完测试和代码检查，确认无误后按规范合并并清理，适合需要安全合规地处理 PR 的场景。"
+}

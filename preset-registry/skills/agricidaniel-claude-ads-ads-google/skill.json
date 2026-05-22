@@ -1,0 +1,26 @@
+{
+  "id": "agricidaniel-claude-ads-ads-google",
+  "name": "ads-google",
+  "description": "Google Ads deep analysis covering Search, Performance Max, AI Max, Display, YouTube, and Demand Gen campaigns. Evaluates 80 checks across conversion tracking, wasted spend, account structure, keywords, ads, and settings. Includes AI Max (search-term-matching, AI Brief, text customization, FUE, brand exclusions) and Smart Bidding signals. Use when user says Google Ads, Google PPC, search ads, PMax, Performance Max, AI Max, AI Brief, broad match audit, Quality Score check, search terms audit, Smar",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "AgriciDaniel",
+  "install_path": ".claude/skills/ads-google/SKILL.md",
+  "source": {
+    "repo": "AgriciDaniel/claude-ads",
+    "url": "https://github.com/AgriciDaniel/claude-ads/blob/main/skills/ads-google/SKILL.md",
+    "path": "skills/ads-google/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:28.544Z",
+    "stars": 5109,
+    "language": "Python",
+    "pushed_at": "2026-05-18T17:32:57Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个谷歌广告深度体检工具，能帮你排查预算浪费、转化跟踪异常和账号结构混乱等问题，适合在优化各类谷歌广告投放效果或做账号审查时使用。"
+}

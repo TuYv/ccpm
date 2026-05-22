@@ -1,0 +1,26 @@
+{
+  "id": "yusufkaraaslan-skill-seekers-skill-seekers",
+  "name": "skill-builder",
+  "description": "Automatically detect source types and build AI skills using Skill Seekers. Use when the user wants to create skills from documentation, repos, PDFs, videos, or other knowledge sources.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "yusufkaraaslan",
+  "install_path": ".claude/skills/skill-seekers/SKILL.md",
+  "source": {
+    "repo": "yusufkaraaslan/Skill_Seekers",
+    "url": "https://github.com/yusufkaraaslan/Skill_Seekers/blob/development/skills/skill-seekers/SKILL.md",
+    "path": "skills/skill-seekers/SKILL.md",
+    "branch": "development",
+    "discovered_at": "2026-05-22T04:41:55.972Z",
+    "stars": 13693,
+    "language": "Python",
+    "pushed_at": "2026-05-21T21:11:25Z",
+    "license": "MIT"
+  },
+  "summary_zh": "它能自动识别来源类型并构建AI技能，帮你把文档、代码库、PDF或视频等各种知识源直接变成AI可用的技能。"
+}

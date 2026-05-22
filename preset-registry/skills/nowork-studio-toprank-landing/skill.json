@@ -1,0 +1,26 @@
+{
+  "id": "nowork-studio-toprank-landing",
+  "name": "google-ads-landing",
+  "description": "Score and diagnose Google Ads landing pages. Use when asked to audit a landing page, check landing page quality, diagnose high-CTR but low-conversion-rate ad groups, improve Quality Score's Landing Page Experience component, or compare an ad group's messaging against its landing page. Trigger on \"landing page audit\", \"landing page score\", \"landing page quality\", \"why is my conversion rate low\", \"LPX\", \"landing page experience\", \"ad to page match\", or when `/google-ads-audit` surfaces a high-CTR ",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "nowork-studio",
+  "install_path": ".claude/skills/landing/SKILL.md",
+  "source": {
+    "repo": "nowork-studio/toprank",
+    "url": "https://github.com/nowork-studio/toprank/blob/main/google-ads/landing/SKILL.md",
+    "path": "google-ads/landing/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:36.150Z",
+    "stars": 2599,
+    "language": "Python",
+    "pushed_at": "2026-05-20T05:41:47Z",
+    "license": "MIT"
+  },
+  "summary_zh": "专门评估和诊断谷歌广告着陆页的工具，能帮你找出高点击低转化的原因，优化页面体验得分，并核对广告词与页面内容是否匹配，适合需要提升广告转化效果的场景。"
+}

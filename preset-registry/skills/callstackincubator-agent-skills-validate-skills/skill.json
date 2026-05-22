@@ -1,0 +1,26 @@
+{
+  "id": "callstackincubator-agent-skills-validate-skills",
+  "name": "validate-skills",
+  "description": "Validates skills in this repo against agentskills.io spec and Claude Code best practices. Use via /validate-skills command.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "callstackincubator",
+  "install_path": ".claude/skills/validate-skills/SKILL.md",
+  "source": {
+    "repo": "callstackincubator/agent-skills",
+    "url": "https://github.com/callstackincubator/agent-skills/blob/main/.claude/skills/validate-skills/SKILL.md",
+    "path": ".claude/skills/validate-skills/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:14.440Z",
+    "stars": 1360,
+    "language": "JavaScript",
+    "pushed_at": "2026-04-28T03:25:43Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用来检查仓库里的技能是否符合 agentskills.io 规范和 Claude 最佳实践的工具，适合开发 Claude 技能时，帮你快速排查并修复技能定义不合规的问题。"
+}

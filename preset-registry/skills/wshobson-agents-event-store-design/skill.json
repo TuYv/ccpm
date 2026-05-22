@@ -1,0 +1,26 @@
+{
+  "id": "wshobson-agents-event-store-design",
+  "name": "event-store-design",
+  "description": "Design and implement event stores for event-sourced systems. Use when building event sourcing infrastructure, choosing event store technologies, or implementing event persistence patterns.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "wshobson",
+  "install_path": ".claude/skills/event-store-design/SKILL.md",
+  "source": {
+    "repo": "wshobson/agents",
+    "url": "https://github.com/wshobson/agents/blob/main/plugins/backend-development/skills/event-store-design/SKILL.md",
+    "path": "plugins/backend-development/skills/event-store-design/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:55.205Z",
+    "stars": 35770,
+    "language": "Python",
+    "pushed_at": "2026-05-21T20:01:53Z",
+    "license": "MIT"
+  },
+  "summary_zh": "教你设计和实现事件溯源系统的事件存储，适合在搭建相关基础设施、做技术选型或落地事件持久化模式时参考。"
+}

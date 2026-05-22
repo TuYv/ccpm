@@ -1,0 +1,26 @@
+{
+  "id": "numman-ali-openskills-my-first-skill",
+  "name": "my-first-skill",
+  "description": "Example skill demonstrating Anthropic SKILL.md format. Load when learning to create skills or testing the OpenSkills loader.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "numman-ali",
+  "install_path": ".claude/skills/my-first-skill/SKILL.md",
+  "source": {
+    "repo": "numman-ali/openskills",
+    "url": "https://github.com/numman-ali/openskills/blob/main/examples/my-first-skill/SKILL.md",
+    "path": "examples/my-first-skill/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:22.152Z",
+    "stars": 10237,
+    "language": "TypeScript",
+    "pushed_at": "2026-01-18T13:09:50Z",
+    "license": null
+  },
+  "summary_zh": "一个展示 Anthropic SKILL.md 格式的示例技能，主要帮你学习如何创建技能，或者拿来测试 OpenSkills 加载器能不能正常工作。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "neolabhq-context-engineering-kit-plan-do-check-act",
+  "name": "plan-do-check-act",
+  "description": "Iterative PDCA cycle for systematic experimentation and continuous improvement",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "NeoLabHQ",
+  "install_path": ".claude/skills/plan-do-check-act/SKILL.md",
+  "source": {
+    "repo": "NeoLabHQ/context-engineering-kit",
+    "url": "https://github.com/NeoLabHQ/context-engineering-kit/blob/master/plugins/kaizen/skills/plan-do-check-act/SKILL.md",
+    "path": "plugins/kaizen/skills/plan-do-check-act/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-05-22T04:42:30.555Z",
+    "stars": 1025,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-22T00:32:29Z",
+    "license": "GPL-3.0"
+  },
+  "summary_zh": "这是一套迭代实践框架，帮你把试错过程系统化，让业务和项目能在不断复盘中实现持续优化。"
+}

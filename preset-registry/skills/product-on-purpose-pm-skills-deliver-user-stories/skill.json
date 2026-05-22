@@ -1,0 +1,26 @@
+{
+  "id": "product-on-purpose-pm-skills-deliver-user-stories",
+  "name": "deliver-user-stories",
+  "description": "Generates user stories with clear acceptance criteria from product requirements or feature descriptions. Use when breaking down features for sprint planning, writing tickets, or communicating requirements to engineering.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "product-on-purpose",
+  "install_path": ".claude/skills/deliver-user-stories/SKILL.md",
+  "source": {
+    "repo": "product-on-purpose/pm-skills",
+    "url": "https://github.com/product-on-purpose/pm-skills/blob/main/skills/deliver-user-stories/SKILL.md",
+    "path": "skills/deliver-user-stories/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:46:23.635Z",
+    "stars": 226,
+    "language": "Shell",
+    "pushed_at": "2026-05-22T03:57:47Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "它能把产品需求或功能描述直接转化为带验收标准的用户故事，方便你在冲刺规划拆任务、写工单或给开发提需求时使用。"
+}

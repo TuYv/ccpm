@@ -1,0 +1,26 @@
+{
+  "id": "neolabhq-context-engineering-kit-root-cause-tracing",
+  "name": "root-cause-tracing",
+  "description": "Use when errors occur deep in execution and you need to trace back to find the original trigger - systematically traces bugs backward through call stack, adding instrumentation when needed, to identify source of invalid data or incorrect behavior",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "NeoLabHQ",
+  "install_path": ".claude/skills/root-cause-tracing/SKILL.md",
+  "source": {
+    "repo": "NeoLabHQ/context-engineering-kit",
+    "url": "https://github.com/NeoLabHQ/context-engineering-kit/blob/master/plugins/kaizen/skills/root-cause-tracing/SKILL.md",
+    "path": "plugins/kaizen/skills/root-cause-tracing/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-05-22T04:42:30.647Z",
+    "stars": 1025,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-22T00:32:29Z",
+    "license": "GPL-3.0"
+  },
+  "summary_zh": "这是一个代码错误反向追踪工具，当程序深处报错难以定位源头时，它能沿调用栈回溯并按需插桩，帮你揪出无效数据或错误行为的最初触发点。"
+}

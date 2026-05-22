@@ -1,0 +1,26 @@
+{
+  "id": "fvadicamo-dev-agent-skills-github-pr-review",
+  "name": "github-pr-review",
+  "description": "Handles PR review comments and feedback resolution. Use when user wants to resolve PR comments, handle review feedback, fix review comments, address PR review, check review status, respond to reviewer, verify PR readiness, review PR comments, analyze review feedback, evaluate PR comments, assess review suggestions, or triage PR comments. Fetches comments via GitHub CLI, classifies by severity, applies fixes with user confirmation, commits with proper format, replies to threads.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "fvadicamo",
+  "install_path": ".claude/skills/github-pr-review/SKILL.md",
+  "source": {
+    "repo": "fvadicamo/dev-agent-skills",
+    "url": "https://github.com/fvadicamo/dev-agent-skills/blob/main/plugins/github-workflow/skills/github-pr-review/SKILL.md",
+    "path": "plugins/github-workflow/skills/github-pr-review/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:22.399Z",
+    "stars": 63,
+    "language": "Shell",
+    "pushed_at": "2026-05-17T21:36:00Z",
+    "license": "MIT"
+  },
+  "summary_zh": "专门处理GitHub PR审查反馈的工具，适合修改意见繁多、处理繁琐的场景，帮你自动消化意见、修复代码并完成回复，轻松搞定PR。"
+}

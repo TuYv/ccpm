@@ -1,0 +1,26 @@
+{
+  "id": "iamzhihuix-happy-claude-skills-open-source-prep",
+  "name": "open-source-prep",
+  "description": "帮用户把私有项目整理成可开源的仓库。核心能力：(1) 扫描源码和 git 历史中的密钥/token 泄漏；(2) 根据项目场景推荐开源协议（MIT / Apache 2.0 / GPL 等）并生成 LICENSE；(3) 补齐 README 免责声明、CONTRIBUTING.md、SECURITY.md、.gitignore 等开源必备文档；(4) 检查 bundle identifier、package.json 等所有权/商标隐患。触发词：「开源」「open source」「选择协议」「LICENSE」「准备开源」「检测密钥」「secret scan」「上传 github」。",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "iamzhihuix",
+  "install_path": ".claude/skills/open-source-prep/SKILL.md",
+  "source": {
+    "repo": "iamzhihuix/happy-claude-skills",
+    "url": "https://github.com/iamzhihuix/happy-claude-skills/blob/main/skills/open-source-prep/SKILL.md",
+    "path": "skills/open-source-prep/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:23.980Z",
+    "stars": 295,
+    "language": "TypeScript",
+    "pushed_at": "2026-04-20T01:07:19Z",
+    "license": "MIT"
+  },
+  "summary_zh": "帮你把私有项目安全变成开源仓库的工具，专治开源前的各种顾虑。它能自动排查密钥泄漏和商标隐患，并补齐协议与规范文档，适合准备公开代码的开发者。"
+}

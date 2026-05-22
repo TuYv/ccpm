@@ -1,0 +1,26 @@
+{
+  "id": "neolabhq-context-engineering-kit-thought-based-reasoning",
+  "name": "thought-based-reasoning",
+  "description": "Use when tackling complex reasoning tasks requiring step-by-step logic, multi-step arithmetic, commonsense reasoning, symbolic manipulation, or problems where simple prompting fails - provides comprehensive guide to Chain-of-Thought and related prompting techniques (Zero-shot CoT, Self-Consistency, Tree of Thoughts, Least-to-Most, ReAct, PAL, Reflexion) with templates, decision matrices, and research-backed patterns",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "NeoLabHQ",
+  "install_path": ".claude/skills/thought-based-reasoning/SKILL.md",
+  "source": {
+    "repo": "NeoLabHQ/context-engineering-kit",
+    "url": "https://github.com/NeoLabHQ/context-engineering-kit/blob/master/plugins/customaize-agent/skills/thought-based-reasoning/SKILL.md",
+    "path": "plugins/customaize-agent/skills/thought-based-reasoning/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-05-22T04:42:28.719Z",
+    "stars": 1025,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-22T00:32:29Z",
+    "license": "GPL-3.0"
+  },
+  "summary_zh": "这是一份思维链等高级提示技术的实战指南，专治普通提示词失效的复杂推理难题，适合多步逻辑、数学计算或常识推理等需要逐步拆解的场景。"
+}

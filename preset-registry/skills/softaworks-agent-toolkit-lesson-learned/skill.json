@@ -1,0 +1,26 @@
+{
+  "id": "softaworks-agent-toolkit-lesson-learned",
+  "name": "lesson-learned",
+  "description": "Analyze recent code changes via git history and extract software engineering lessons. Use when the user asks 'what is the lesson here?', 'what can I learn from this?', 'engineering takeaway', 'what did I just learn?', 'reflect on this code', or wants to extract principles from recent work.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "softaworks",
+  "install_path": ".claude/skills/lesson-learned/SKILL.md",
+  "source": {
+    "repo": "softaworks/agent-toolkit",
+    "url": "https://github.com/softaworks/agent-toolkit/blob/main/dist/plugins/lesson-learned/skills/lesson-learned/SKILL.md",
+    "path": "dist/plugins/lesson-learned/skills/lesson-learned/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:19.191Z",
+    "stars": 1872,
+    "language": "Python",
+    "pushed_at": "2026-03-05T16:46:24Z",
+    "license": "MIT"
+  },
+  "summary_zh": "它通过分析Git历史，帮你从近期的代码变更中提炼软件工程经验。当你想复盘代码、反思近期工作或总结开发原则时，它能帮你把日常改码变成可复用的经验。"
+}

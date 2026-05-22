@@ -11,8 +11,9 @@
 //   ANTHROPIC_API_KEY        — required; if absent, this step is a no-op (logged)
 //   ANTHROPIC_BASE_URL       — optional; override API endpoint (relay / proxy / CodePlan)
 //   TRANSLATION_MODEL        — default "claude-haiku-4-5"
-//   TRANSLATION_README_CHARS — default 2000 (readme truncation, by character count)
-//   TRANSLATION_CONCURRENCY  — default 3 (parallel API calls)
+//   TRANSLATION_README_CHARS  — default 2000 (readme truncation, by character count)
+//   TRANSLATION_CONCURRENCY   — default 3 (parallel API calls)
+//   TRANSLATION_MAX_PER_RUN   — default 200 (new/stale translations per scanner run; <=0 means unlimited)
 //
 // On per-item API failure: log and continue. Never fails the workflow.
 
@@ -50,6 +51,37 @@ interface RunOpts {
   model: string;
   readmeChars: number;
   concurrency: number;
+  maxTranslationsPerRun: number;
+}
+
+interface TranslationBudget {
+  tryTake(): boolean;
+  remaining(): number;
+}
+
+function parseMaxTranslationsPerRun(value: string | undefined): number {
+  if (!value) return 200;
+  const parsed = Number(value);
+  if (!Number.isFinite(parsed)) return 200;
+  return Math.floor(parsed);
+}
+
+function createTranslationBudget(max: number): TranslationBudget {
+  let remaining = max > 0 ? max : Number.POSITIVE_INFINITY;
+  return {
+    tryTake() {
+      if (remaining <= 0) return false;
+      remaining -= 1;
+      return true;
+    },
+    remaining() {
+      return remaining;
+    },
+  };
+}
+
+function formatBudget(value: number): string {
+  return Number.isFinite(value) ? String(value) : "unlimited";
 }
 
 const PROMPT_SYSTEM =
@@ -269,16 +301,46 @@ async function translateBundle(
   return block.text.trim();
 }
 
+async function writeSkillBundlesIndex(
+  registryDir: string,
+  bundles: BundleSpec[],
+  cache: TranslationsCache,
+): Promise<void> {
+  const bundlesDir = join(registryDir, "bundles");
+  if (!existsSync(bundlesDir)) {
+    await mkdir(bundlesDir, { recursive: true });
+  }
+  const out = {
+    version: "1",
+    updated_at: new Date().toISOString(),
+    bundles: bundles.map((b) => ({
+      id: b.id,
+      repo: b.repo,
+      name: b.name,
+      url: b.url,
+      kind: b.kind,
+      stars: b.stars,
+      skill_ids: b.skill_ids,
+      summary_zh:
+        cache.entries[`bundle:${b.id}`]?.summary_zh ??
+        `来自 ${b.repo} 的 ${b.skill_ids.length} 个相关技能合集，适合按同一主题成组浏览和按需安装。`,
+    })),
+  };
+  await writeFile(join(bundlesDir, "index.json"), JSON.stringify(out, null, 2));
+}
+
 async function runBundleTranslations(
   client: Anthropic,
   opts: RunOpts,
   cache: TranslationsCache,
   items: ItemSpec[],
-): Promise<{ total: number; hits: number; misses: number; failures: number }> {
+  budget: TranslationBudget,
+): Promise<{ total: number; hits: number; misses: number; failures: number; deferred: number }> {
   const bundles = collectSkillBundles(items);
   let hits = 0;
   let misses = 0;
   let failures = 0;
+  let deferred = 0;
 
   const tasks = bundles.map((b) => async () => {
     const key = `bundle:${b.id}`;
@@ -286,6 +348,10 @@ async function runBundleTranslations(
     const cached = cache.entries[key];
     if (cached?.hash === hash && cached.summary_zh) {
       hits++;
+      return;
+    }
+    if (!budget.tryTake()) {
+      deferred++;
       return;
     }
     try {
@@ -310,29 +376,9 @@ async function runBundleTranslations(
 
   await runWithConcurrency(tasks, opts.concurrency);
 
-  // Persist the bundles index regardless of translation outcomes — the UI can
-  // still group skills even when summaries are missing.
-  const bundlesDir = join(opts.registryDir, "bundles");
-  if (!existsSync(bundlesDir)) {
-    await mkdir(bundlesDir, { recursive: true });
-  }
-  const out = {
-    version: "1",
-    updated_at: new Date().toISOString(),
-    bundles: bundles.map((b) => ({
-      id: b.id,
-      repo: b.repo,
-      name: b.name,
-      url: b.url,
-      kind: b.kind,
-      stars: b.stars,
-      skill_ids: b.skill_ids,
-      summary_zh: cache.entries[`bundle:${b.id}`]?.summary_zh ?? null,
-    })),
-  };
-  await writeFile(join(bundlesDir, "index.json"), JSON.stringify(out, null, 2));
+  await writeSkillBundlesIndex(opts.registryDir, bundles, cache);
 
-  return { total: bundles.length, hits, misses, failures };
+  return { total: bundles.length, hits, misses, failures, deferred };
 }
 
 async function patchIndex(
@@ -366,8 +412,23 @@ async function patchIndex(
 
 export async function runTranslations(registryDir: string): Promise<void> {
   const apiKey = process.env.ANTHROPIC_API_KEY;
+  const cachePath = join(registryDir, "translations.json");
+  const cache = await loadCache(cachePath);
+  const items = await collectItems(registryDir);
+
   if (!apiKey) {
-    console.log("[translate] ANTHROPIC_API_KEY not set, skipping translation step");
+    console.log("[translate] ANTHROPIC_API_KEY not set, applying cached summaries only");
+    for (const item of items) {
+      const cached = cache.entries[`${item.type}:${item.id}`];
+      if (cached?.summary_zh && item.data.summary_zh !== cached.summary_zh) {
+        item.data.summary_zh = cached.summary_zh;
+        await writeFile(item.filePath, JSON.stringify(item.data, null, 2));
+      }
+    }
+    await writeSkillBundlesIndex(registryDir, collectSkillBundles(items), cache);
+    await patchIndex(registryDir, "index.json", "presets", cache, "preset");
+    await patchIndex(registryDir, "skills/index.json", "skills", cache, "skill");
+    await patchIndex(registryDir, "mcps/index.json", "mcps", cache, "mcp");
     return;
   }
   const opts: RunOpts = {
@@ -377,11 +438,10 @@ export async function runTranslations(registryDir: string): Promise<void> {
     model: process.env.TRANSLATION_MODEL ?? "claude-haiku-4-5",
     readmeChars: Number(process.env.TRANSLATION_README_CHARS ?? "2000"),
     concurrency: Number(process.env.TRANSLATION_CONCURRENCY ?? "3"),
+    maxTranslationsPerRun: parseMaxTranslationsPerRun(process.env.TRANSLATION_MAX_PER_RUN),
   };
-
-  const cachePath = join(registryDir, "translations.json");
-  const cache = await loadCache(cachePath);
-  const items = await collectItems(registryDir);
+  const budget = createTranslationBudget(opts.maxTranslationsPerRun);
+  console.log(`[translate] max new/stale translations this run: ${formatBudget(budget.remaining())}`);
 
   const client = new Anthropic({
     apiKey: opts.apiKey,
@@ -391,9 +451,12 @@ export async function runTranslations(registryDir: string): Promise<void> {
     console.log(`[translate] using custom base URL: ${opts.baseURL}`);
   }
 
+  const bundleResult = await runBundleTranslations(client, opts, cache, items, budget);
+
   let hits = 0;
   let misses = 0;
   let failures = 0;
+  let deferred = 0;
 
   const tasks = items.map((item) => async () => {
     const key = `${item.type}:${item.id}`;
@@ -407,6 +470,11 @@ export async function runTranslations(registryDir: string): Promise<void> {
         item.data.summary_zh = cached.summary_zh;
         await writeFile(item.filePath, JSON.stringify(item.data, null, 2));
       }
+      return;
+    }
+
+    if (!budget.tryTake()) {
+      deferred++;
       return;
     }
 
@@ -434,10 +502,6 @@ export async function runTranslations(registryDir: string): Promise<void> {
 
   await runWithConcurrency(tasks, opts.concurrency);
 
-  // Bundle-level summaries: group skills by source.repo and translate the
-  // collection as a unit. Reuses the same Anthropic client and cache file.
-  const bundleResult = await runBundleTranslations(client, opts, cache, items);
-
   cache.updated_at = new Date().toISOString();
   await writeFile(cachePath, JSON.stringify(cache, null, 2));
 
@@ -446,6 +510,6 @@ export async function runTranslations(registryDir: string): Promise<void> {
   await patchIndex(registryDir, "mcps/index.json", "mcps", cache, "mcp");
 
   console.log(
-    `[translate] done. items=${items.length} cache_hits=${hits} translated=${misses} failed=${failures} | bundles=${bundleResult.total} hits=${bundleResult.hits} translated=${bundleResult.misses} failed=${bundleResult.failures}`,
+    `[translate] done. items=${items.length} cache_hits=${hits} translated=${misses} failed=${failures} deferred=${deferred} | bundles=${bundleResult.total} hits=${bundleResult.hits} translated=${bundleResult.misses} failed=${bundleResult.failures} deferred=${bundleResult.deferred} budget_remaining=${formatBudget(budget.remaining())}`,
   );
 }

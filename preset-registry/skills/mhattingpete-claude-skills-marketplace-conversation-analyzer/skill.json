@@ -1,0 +1,26 @@
+{
+  "id": "mhattingpete-claude-skills-marketplace-conversation-analyzer",
+  "name": "conversation-analyzer",
+  "description": "Analyzes your Claude Code conversation history to identify patterns, common mistakes, and opportunities for workflow improvement. Use when user wants to understand usage patterns, optimize workflow, identify automation opportunities, or check if they're following best practices.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mhattingpete",
+  "install_path": ".claude/skills/conversation-analyzer/SKILL.md",
+  "source": {
+    "repo": "mhattingpete/claude-skills-marketplace",
+    "url": "https://github.com/mhattingpete/claude-skills-marketplace/blob/main/productivity-skills-plugin/skills/conversation-analyzer/SKILL.md",
+    "path": "productivity-skills-plugin/skills/conversation-analyzer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:34.448Z",
+    "stars": 583,
+    "language": "HTML",
+    "pushed_at": "2026-03-06T10:14:25Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "它能分析Claude Code的聊天记录，帮你揪出常犯的错误和低效操作。想摸清自己的使用习惯、优化工作流、挖掘自动化潜力，或是检查有没有遵循最佳实践，用它就对了。"
+}

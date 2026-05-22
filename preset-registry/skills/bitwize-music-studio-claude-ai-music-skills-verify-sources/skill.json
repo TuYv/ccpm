@@ -1,0 +1,26 @@
+{
+  "id": "bitwize-music-studio-claude-ai-music-skills-verify-sources",
+  "name": "verify-sources",
+  "description": "Captures human source verification for tracks, timestamps it, and updates track files. Use when sources need human review before generation.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "bitwize-music-studio",
+  "install_path": ".claude/skills/verify-sources/SKILL.md",
+  "source": {
+    "repo": "bitwize-music-studio/claude-ai-music-skills",
+    "url": "https://github.com/bitwize-music-studio/claude-ai-music-skills/blob/main/skills/verify-sources/SKILL.md",
+    "path": "skills/verify-sources/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:40.266Z",
+    "stars": 202,
+    "language": "Python",
+    "pushed_at": "2026-05-21T00:00:51Z",
+    "license": "CC0-1.0"
+  },
+  "summary_zh": "用来记录人工对来源的审核确认、打上时间戳并更新文件，非常适合在生成内容前，需要人工先确认来源是否靠谱的场景。"
+}

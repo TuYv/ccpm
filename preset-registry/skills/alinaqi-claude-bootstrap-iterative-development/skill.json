@@ -1,0 +1,26 @@
+{
+  "id": "alinaqi-claude-bootstrap-iterative-development",
+  "name": "iterative-development",
+  "description": "TDD iteration loops using Claude Code Stop hooks - runs tests after each response, feeds failures back automatically",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alinaqi",
+  "install_path": ".claude/skills/iterative-development/SKILL.md",
+  "source": {
+    "repo": "alinaqi/claude-bootstrap",
+    "url": "https://github.com/alinaqi/claude-bootstrap/blob/main/skills/iterative-development/SKILL.md",
+    "path": "skills/iterative-development/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:27.041Z",
+    "stars": 641,
+    "language": "Python",
+    "pushed_at": "2026-05-21T22:01:29Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一款能让Claude自动跑测试并反馈报错的工具，省去了手动检验和粘贴错误的繁琐，特别适合让AI无缝衔接修Bug、持续推进测试驱动开发的场景。"
+}

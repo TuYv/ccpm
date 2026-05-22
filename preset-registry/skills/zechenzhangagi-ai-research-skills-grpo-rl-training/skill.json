@@ -1,0 +1,26 @@
+{
+  "id": "zechenzhangagi-ai-research-skills-grpo-rl-training",
+  "name": "grpo-rl-training",
+  "description": "Expert guidance for GRPO/RL fine-tuning with TRL for reasoning and task-specific model training",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "zechenzhangAGI",
+  "install_path": ".claude/skills/grpo-rl-training/SKILL.md",
+  "source": {
+    "repo": "zechenzhangAGI/AI-research-SKILLs",
+    "url": "https://github.com/zechenzhangAGI/AI-research-SKILLs/blob/main/06-post-training/grpo-rl-training/SKILL.md",
+    "path": "06-post-training/grpo-rl-training/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:39.365Z",
+    "stars": 8786,
+    "language": "TeX",
+    "pushed_at": "2026-04-28T05:09:27Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一份用TRL库做GRPO和强化学习微调的实战指南，帮你提升大模型的推理能力，或针对特定任务做专属训练。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "cloudai-x-claude-workflow-v2-vercel-react-best-practices",
+  "name": "vercel-react-best-practices",
+  "description": "React and Next.js performance optimization guidelines from Vercel Engineering. This skill should be used when writing, reviewing, or refactoring React/Next.js code to ensure optimal performance patterns. Triggers on tasks involving React components, Next.js pages, data fetching, bundle optimization, or performance improvements.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "CloudAI-X",
+  "install_path": ".claude/skills/vercel-react-best-practices/SKILL.md",
+  "source": {
+    "repo": "CloudAI-X/claude-workflow-v2",
+    "url": "https://github.com/CloudAI-X/claude-workflow-v2/blob/main/skills/vercel-react-best-practices/SKILL.md",
+    "path": "skills/vercel-react-best-practices/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:35.272Z",
+    "stars": 1361,
+    "language": "Python",
+    "pushed_at": "2026-02-14T18:09:29Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一套 Vercel 官方的 React 和 Next.js 性能优化指南，适合在编写、审查或重构代码时参考，帮你避开性能坑，确保应用始终遵循最佳实践。"
+}

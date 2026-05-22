@@ -1,0 +1,26 @@
+{
+  "id": "sethgammon-citadel-fleet",
+  "name": "fleet",
+  "description": ">- Parallel campaign orchestrator. Runs multiple campaigns in coordinated waves within a single session. Spawns 2-3 agents per wave in isolated worktrees, collects discoveries, shares context between waves. Use when work decomposes into 3+ independent streams that can run simultaneously.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "SethGammon",
+  "install_path": ".claude/skills/fleet/SKILL.md",
+  "source": {
+    "repo": "SethGammon/Citadel",
+    "url": "https://github.com/SethGammon/Citadel/blob/main/skills/fleet/SKILL.md",
+    "path": "skills/fleet/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:06.021Z",
+    "stars": 572,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-07T17:50:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一款能调度多智能体分批并行协作的任务编排器，特别适合需要同时推进3个以上互不依赖的独立任务，以实现加速处理的场景。"
+}

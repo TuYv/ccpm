@@ -1,0 +1,26 @@
+{
+  "id": "aaron-he-zhu-seo-geo-claude-skills-schema-markup-generator",
+  "name": "schema-markup-generator",
+  "description": "Use when the user asks to \"generate schema\"; creates JSON-LD for FAQ, HowTo, Article, Product, and LocalBusiness rich-result candidates. Schema标记/结构化数据",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "9.9.9",
+  "author": "aaron-he-zhu",
+  "install_path": ".claude/skills/schema-markup-generator/SKILL.md",
+  "source": {
+    "repo": "aaron-he-zhu/seo-geo-claude-skills",
+    "url": "https://github.com/aaron-he-zhu/seo-geo-claude-skills/blob/main/build/schema-markup-generator/SKILL.md",
+    "path": "build/schema-markup-generator/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:59.621Z",
+    "stars": 1731,
+    "language": "Shell",
+    "pushed_at": "2026-05-14T08:11:30Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "它是一个网页结构化数据生成工具，能自动创建 JSON-LD 代码，帮网页在搜索引擎中获得富媒体展示效果，非常适合需要做 SEO 优化的场景。"
+}

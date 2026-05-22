@@ -1,0 +1,26 @@
+{
+  "id": "himself65-finance-skills-company-valuation",
+  "name": "company-valuation",
+  "description": "> Estimate the intrinsic value of a public company using DCF, relative (peer multiple) and sum-of-parts (SOTP) methods, then triangulate to an implied share price with upside/downside versus the current market price. Use this skill whenever the user asks: \"what is AAPL worth\", \"valuation of NVDA\", \"fair value of TSLA\", \"intrinsic value\", \"DCF for MSFT\", \"build a DCF\", \"discounted cash flow\", \"WACC\", \"terminal value\", \"implied share price\", \"upside to fair value\", \"is X overvalued/undervalued\", \"",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "himself65",
+  "install_path": ".claude/skills/company-valuation/SKILL.md",
+  "source": {
+    "repo": "himself65/finance-skills",
+    "url": "https://github.com/himself65/finance-skills/blob/main/plugins/market-analysis/skills/company-valuation/SKILL.md",
+    "path": "plugins/market-analysis/skills/company-valuation/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:31.085Z",
+    "stars": 2456,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-19T23:27:16Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一款估算上市公司内在价值的工具，能算出股票的合理价格与潜在涨跌空间，适合想判断某只股票是高估还是低估、或需要计算其公允价值时使用。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "zhanghandong-makepad-skills-makepad-2-0-migration",
+  "name": "makepad-2.0-migration",
+  "description": "| CRITICAL: Use for migrating from Makepad 1.x to 2.0. Triggers on: makepad migration, live_design to script_mod, makepad upgrade, makepad 1.x, old syntax, new syntax, makepad breaking changes, makepad 迁移, 旧语法, LiveHook to ScriptHook, apply_over to script_apply_eval, Live to Script, live_design!, angle brackets to curly braces",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ZhangHanDong",
+  "install_path": ".claude/skills/makepad-2.0-migration/SKILL.md",
+  "source": {
+    "repo": "ZhangHanDong/makepad-skills",
+    "url": "https://github.com/ZhangHanDong/makepad-skills/blob/main/skills/makepad-2.0-migration/SKILL.md",
+    "path": "skills/makepad-2.0-migration/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:32.195Z",
+    "stars": 737,
+    "language": null,
+    "pushed_at": "2026-04-07T15:51:03Z",
+    "license": null
+  },
+  "summary_zh": "这是Makepad框架的升级辅助工具，专门解决从1.x升级到2.0时的破坏性语法变更问题，帮你把旧代码自动转换为新语法，适合正面临大版本升级的开发者。"
+}

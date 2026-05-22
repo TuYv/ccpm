@@ -1,0 +1,26 @@
+{
+  "id": "irenicj-claude-user-memory-research-methodology",
+  "name": "research-methodology",
+  "description": "Systematic approach for gathering authoritative, version-accurate documentation. Claude invokes this skill when research is needed before implementation. Ensures truth over speed while achieving both.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "irenicj",
+  "install_path": ".claude/skills/research-methodology/SKILL.md",
+  "source": {
+    "repo": "irenicj/claude-user-memory",
+    "url": "https://github.com/irenicj/claude-user-memory/blob/main/.claude/skills/research-methodology/skill.md",
+    "path": ".claude/skills/research-methodology/skill.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:18.521Z",
+    "stars": 188,
+    "language": "Shell",
+    "pushed_at": "2025-11-23T04:17:58Z",
+    "license": null
+  },
+  "summary_zh": "这是一套获取权威且版本准确的文档的方法，主要解决写代码前查资料容易出错或过时的问题。适合需要精准调研的开发场景，确保在保证信息可靠的同时兼顾效率。"
+}

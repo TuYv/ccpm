@@ -1,0 +1,26 @@
+{
+  "id": "op7418-codepilot-feishu-bitable",
+  "name": "feishu-bitable",
+  "description": "| 飞书多维表格（Bitable）的创建、查询、编辑和管理工具。包含 27 种字段类型支持、高级筛选、批量操作和视图管理。",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "op7418",
+  "install_path": ".claude/skills/feishu-bitable/SKILL.md",
+  "source": {
+    "repo": "op7418/CodePilot",
+    "url": "https://github.com/op7418/CodePilot/blob/main/资料/feishu-openclaw-plugin/package/skills/feishu-bitable/SKILL.md",
+    "path": "资料/feishu-openclaw-plugin/package/skills/feishu-bitable/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:00.304Z",
+    "stars": 5769,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-11T06:07:30Z",
+    "license": null
+  },
+  "summary_zh": "这是飞书多维表格的自动化管理工具，能帮你轻松搞定数据的增删改查与复杂整理，适合需要批量处理或高效维护表格数据的工作流。"
+}

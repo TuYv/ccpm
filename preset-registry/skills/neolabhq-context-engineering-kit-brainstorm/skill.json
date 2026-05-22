@@ -1,0 +1,26 @@
+{
+  "id": "neolabhq-context-engineering-kit-brainstorm",
+  "name": "brainstorm",
+  "description": "Use when creating or developing, before writing code or implementation plans - refines rough ideas into fully-formed designs through collaborative questioning, alternative exploration, and incremental validation. Don't use during clear 'mechanical' processes",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "NeoLabHQ",
+  "install_path": ".claude/skills/brainstorm/SKILL.md",
+  "source": {
+    "repo": "NeoLabHQ/context-engineering-kit",
+    "url": "https://github.com/NeoLabHQ/context-engineering-kit/blob/master/plugins/sdd/skills/brainstorm/SKILL.md",
+    "path": "plugins/sdd/skills/brainstorm/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-05-22T04:42:32.794Z",
+    "stars": 1025,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-22T00:32:29Z",
+    "license": "GPL-3.0"
+  },
+  "summary_zh": "这是一个思路梳理工具，能在写代码前帮你把模糊想法打磨成成熟方案，适合开发初期的创意探索，不适用于按部就班的执行阶段。"
+}

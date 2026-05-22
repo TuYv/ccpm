@@ -1,0 +1,26 @@
+{
+  "id": "wshobson-agents-code-review-excellence",
+  "name": "code-review-excellence",
+  "description": "Master effective code review practices to provide constructive feedback, catch bugs early, and foster knowledge sharing while maintaining team morale. Use when reviewing pull requests, establishing review standards, or mentoring developers.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "wshobson",
+  "install_path": ".claude/skills/code-review-excellence/SKILL.md",
+  "source": {
+    "repo": "wshobson/agents",
+    "url": "https://github.com/wshobson/agents/blob/main/plugins/developer-essentials/skills/code-review-excellence/SKILL.md",
+    "path": "plugins/developer-essentials/skills/code-review-excellence/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:58.154Z",
+    "stars": 35770,
+    "language": "Python",
+    "pushed_at": "2026-05-21T20:01:53Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一份代码审查指南，帮你在审查PR、定规范或带新人时，既能高效发现Bug和促进知识共享，又能给出不伤和气的建设性反馈。"
+}

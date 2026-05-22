@@ -1,0 +1,26 @@
+{
+  "id": "jeffallan-claude-skills-django-expert",
+  "name": "django-expert",
+  "description": "Use when building Django web applications or REST APIs with Django REST Framework. Invoke when working with settings.py, models.py, manage.py, or any Django project file. Creates Django models with proper indexes, optimizes ORM queries using select_related/prefetch_related, builds DRF serializers and viewsets, and configures JWT authentication. Trigger terms: Django, DRF, Django REST Framework, Django ORM, Django model, serializer, viewset, Python web.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "jeffallan",
+  "install_path": ".claude/skills/django-expert/SKILL.md",
+  "source": {
+    "repo": "jeffallan/claude-skills",
+    "url": "https://github.com/jeffallan/claude-skills/blob/main/skills/django-expert/SKILL.md",
+    "path": "skills/django-expert/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:57.467Z",
+    "stars": 9253,
+    "language": "Python",
+    "pushed_at": "2026-05-20T13:35:05Z",
+    "license": "MIT"
+  },
+  "summary_zh": "Django和DRF专属开发助手，适合构建Web应用或API时使用，能帮你快速搞定模型设计、接口编写与查询优化等繁琐代码，省去手写配置的麻烦。"
+}

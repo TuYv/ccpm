@@ -1,0 +1,26 @@
+{
+  "id": "orchestra-research-ai-research-skills-ray-train",
+  "name": "ray-train",
+  "description": "Distributed training orchestration across clusters. Scales PyTorch/TensorFlow/HuggingFace from laptop to 1000s of nodes. Built-in hyperparameter tuning with Ray Tune, fault tolerance, elastic scaling. Use when training massive models across multiple machines or running distributed hyperparameter sweeps.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "Orchestra-Research",
+  "install_path": ".claude/skills/ray-train/SKILL.md",
+  "source": {
+    "repo": "Orchestra-Research/AI-research-SKILLs",
+    "url": "https://github.com/Orchestra-Research/AI-research-SKILLs/blob/main/08-distributed-training/ray-train/SKILL.md",
+    "path": "08-distributed-training/ray-train/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:18.408Z",
+    "stars": 8786,
+    "language": "TeX",
+    "pushed_at": "2026-04-28T05:09:27Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个分布式训练编排工具，能把主流框架的训练任务从单机轻松扩展到数千节点集群。适合需要多台机器训练大模型，或者跑大规模超参搜索的场景。"
+}

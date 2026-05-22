@@ -1,0 +1,26 @@
+{
+  "id": "thecraighewitt-seomachine-launch-strategy",
+  "name": "launch-strategy",
+  "description": "When the user wants to plan a product launch, feature announcement, or release strategy. Also use when the user mentions 'launch,' 'Product Hunt,' 'feature release,' 'announcement,' 'go-to-market,' 'beta launch,' 'early access,' 'waitlist,' or 'product update.' This skill covers phased launches, channel strategy, and ongoing launch momentum.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "TheCraigHewitt",
+  "install_path": ".claude/skills/launch-strategy/SKILL.md",
+  "source": {
+    "repo": "TheCraigHewitt/seomachine",
+    "url": "https://github.com/TheCraigHewitt/seomachine/blob/main/.claude/skills/launch-strategy/SKILL.md",
+    "path": ".claude/skills/launch-strategy/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:11.785Z",
+    "stars": 7000,
+    "language": "Python",
+    "pushed_at": "2026-04-10T17:41:07Z",
+    "license": "MIT"
+  },
+  "summary_zh": "专为产品上线、新功能发布或预热活动打造的策略规划工具。它能帮你搞定分阶段推进和渠道选择，让产品发布持续保持热度，告别手忙脚乱。"
+}

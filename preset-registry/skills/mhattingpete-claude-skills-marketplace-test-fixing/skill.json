@@ -1,0 +1,26 @@
+{
+  "id": "mhattingpete-claude-skills-marketplace-test-fixing",
+  "name": "test-fixing",
+  "description": "Run tests and systematically fix all failing tests using smart error grouping. Use when user asks to fix failing tests, mentions test failures, runs test suite and failures occur, or requests to make tests pass.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mhattingpete",
+  "install_path": ".claude/skills/test-fixing/SKILL.md",
+  "source": {
+    "repo": "mhattingpete/claude-skills-marketplace",
+    "url": "https://github.com/mhattingpete/claude-skills-marketplace/blob/main/engineering-workflow-plugin/skills/test-fixing/SKILL.md",
+    "path": "engineering-workflow-plugin/skills/test-fixing/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:34.209Z",
+    "stars": 583,
+    "language": "HTML",
+    "pushed_at": "2026-03-06T10:14:25Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "这是个自动修复失败测试的工具，当测试跑挂了或需要让测试通过时，它能智能归类错误并自动帮你批量修好。"
+}

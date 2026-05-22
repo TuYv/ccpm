@@ -1,0 +1,26 @@
+{
+  "id": "nowork-studio-toprank-toprank-portfolio-review",
+  "name": "toprank-portfolio-review",
+  "description": "Review all registered websites in the Toprank OpenClaw portfolio and rank which site deserves attention next.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "nowork-studio",
+  "install_path": ".claude/skills/toprank-portfolio-review/SKILL.md",
+  "source": {
+    "repo": "nowork-studio/toprank",
+    "url": "https://github.com/nowork-studio/toprank/blob/main/openclaw/skills/toprank-portfolio-review/SKILL.md",
+    "path": "openclaw/skills/toprank-portfolio-review/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:36.693Z",
+    "stars": 2599,
+    "language": "Python",
+    "pushed_at": "2026-05-20T05:41:47Z",
+    "license": "MIT"
+  },
+  "summary_zh": "帮你审查 Toprank OpenClaw 旗下网站并排优先级，解决面对一堆网站不知先看哪个的烦恼，适合评估网站组合与分配注意力时使用。"
+}

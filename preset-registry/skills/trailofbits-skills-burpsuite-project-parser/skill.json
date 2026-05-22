@@ -1,0 +1,26 @@
+{
+  "id": "trailofbits-skills-burpsuite-project-parser",
+  "name": "burpsuite-project-parser",
+  "description": "Searches and explores Burp Suite project files (.burp) from the command line. Use when searching response headers or bodies with regex patterns, extracting security audit findings, dumping proxy history or site map data, or analyzing HTTP traffic captured in a Burp project.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "trailofbits",
+  "install_path": ".claude/skills/burpsuite-project-parser/SKILL.md",
+  "source": {
+    "repo": "trailofbits/skills",
+    "url": "https://github.com/trailofbits/skills/blob/main/plugins/burpsuite-project-parser/skills/burpsuite-project-parser/SKILL.md",
+    "path": "plugins/burpsuite-project-parser/skills/burpsuite-project-parser/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:41:49.782Z",
+    "stars": 5325,
+    "language": "Python",
+    "pushed_at": "2026-05-16T17:22:25Z",
+    "license": "CC-BY-SA-4.0"
+  },
+  "summary_zh": "能在命令行解析Burp Suite项目文件的工具，适合需要从离线抓包记录中搜索特定响应、提取审计发现或导出流量数据来进一步分析的场景。"
+}

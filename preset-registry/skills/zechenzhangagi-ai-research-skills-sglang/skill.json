@@ -1,0 +1,26 @@
+{
+  "id": "zechenzhangagi-ai-research-skills-sglang",
+  "name": "sglang",
+  "description": "Fast structured generation and serving for LLMs with RadixAttention prefix caching. Use for JSON/regex outputs, constrained decoding, agentic workflows with tool calls, or when you need 5× faster inference than vLLM with prefix sharing. Powers 300,000+ GPUs at xAI, AMD, NVIDIA, and LinkedIn.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "zechenzhangAGI",
+  "install_path": ".claude/skills/sglang/SKILL.md",
+  "source": {
+    "repo": "zechenzhangAGI/AI-research-SKILLs",
+    "url": "https://github.com/zechenzhangAGI/AI-research-SKILLs/blob/main/12-inference-serving/sglang/SKILL.md",
+    "path": "12-inference-serving/sglang/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:43.709Z",
+    "stars": 8786,
+    "language": "TeX",
+    "pushed_at": "2026-04-28T05:09:27Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一款大模型推理与结构化生成引擎，专治需要严格输出特定格式或带工具调用的智能体场景，并在有前缀共享时提供比vLLM快5倍的极速推理。"
+}

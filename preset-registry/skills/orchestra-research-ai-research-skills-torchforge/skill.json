@@ -1,0 +1,26 @@
+{
+  "id": "orchestra-research-ai-research-skills-torchforge",
+  "name": "torchforge-rl-training",
+  "description": "Provides guidance for PyTorch-native agentic RL using torchforge, Meta's library separating infra from algorithms. Use when you want clean RL abstractions, easy algorithm experimentation, or scalable training with Monarch and TorchTitan.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "Orchestra-Research",
+  "install_path": ".claude/skills/torchforge/SKILL.md",
+  "source": {
+    "repo": "Orchestra-Research/AI-research-SKILLs",
+    "url": "https://github.com/Orchestra-Research/AI-research-SKILLs/blob/main/06-post-training/torchforge/SKILL.md",
+    "path": "06-post-training/torchforge/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:17.202Z",
+    "stars": 8786,
+    "language": "TeX",
+    "pushed_at": "2026-04-28T05:09:27Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一套指导原生 PyTorch 智能体强化学习的方案，帮你把底层架构和算法解耦。适合想要代码结构清爽、快速实验新算法，或者搞大规模扩展训练的场景。"
+}

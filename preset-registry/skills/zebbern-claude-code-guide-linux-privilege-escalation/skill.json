@@ -1,0 +1,26 @@
+{
+  "id": "zebbern-claude-code-guide-linux-privilege-escalation",
+  "name": "Linux Privilege Escalation",
+  "description": "This skill should be used when the user asks to \"escalate privileges on Linux\", \"find privesc vectors on Linux systems\", \"exploit sudo misconfigurations\", \"abuse SUID binaries\", \"exploit cron jobs for root access\", \"enumerate Linux systems for privilege escalation\", or \"gain root access from low-privilege shell\". It provides comprehensive techniques for identifying and exploiting privilege escalation paths on Linux systems.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "zebbern",
+  "install_path": ".claude/skills/linux-privilege-escalation/SKILL.md",
+  "source": {
+    "repo": "zebbern/claude-code-guide",
+    "url": "https://github.com/zebbern/claude-code-guide/blob/main/skills/linux-privilege-escalation/SKILL.md",
+    "path": "skills/linux-privilege-escalation/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:09.088Z",
+    "stars": 4156,
+    "language": null,
+    "pushed_at": "2026-05-22T01:16:53Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一套帮你拿root权限的技巧库，专门解决在Linux低权限shell下如何提权的问题，适合安全测试时通过排查系统配置失误和漏洞来获取最高权限。"
+}

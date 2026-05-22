@@ -1,0 +1,26 @@
+{
+  "id": "avifenesh-agnix-invalid-name",
+  "name": "invalid_name",
+  "description": "Use when user wants to review code",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "avifenesh",
+  "install_path": ".claude/skills/invalid-name/SKILL.md",
+  "source": {
+    "repo": "avifenesh/agnix",
+    "url": "https://github.com/avifenesh/agnix/blob/main/tests/fixtures/invalid/skills/invalid-name/SKILL.md",
+    "path": "tests/fixtures/invalid/skills/invalid-name/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:46:03.640Z",
+    "stars": 253,
+    "language": "Rust",
+    "pushed_at": "2026-05-19T14:13:30Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "这是一款代码审查工具，能帮你更高效地检查代码，特别适合开发者做代码质量把控或团队进行代码评审的场景。"
+}

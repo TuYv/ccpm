@@ -1,0 +1,26 @@
+{
+  "id": "prompt-security-clawsec-openclaw-audit-watchdog",
+  "name": "openclaw-audit-watchdog",
+  "description": "Automated daily security audits for OpenClaw agents with DM delivery and optional email reporting. Runs deep audits, creates or updates a recurring cron job, and sends formatted reports to configured recipients.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "0.1.6",
+  "author": "prompt-security",
+  "install_path": ".claude/skills/openclaw-audit-watchdog/SKILL.md",
+  "source": {
+    "repo": "prompt-security/clawsec",
+    "url": "https://github.com/prompt-security/clawsec/blob/main/skills/openclaw-audit-watchdog/SKILL.md",
+    "path": "skills/openclaw-audit-watchdog/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:46.356Z",
+    "stars": 1000,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-21T07:14:18Z",
+    "license": "AGPL-3.0"
+  },
+  "summary_zh": "针对OpenClaw代理的日常安全巡检工具，能自动定时深度排查隐患并推送报告到私信或邮箱，免去手动检查的麻烦，适合需要常态化安全监控与汇报的场景。"
+}

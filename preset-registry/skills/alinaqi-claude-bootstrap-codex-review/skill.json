@@ -1,0 +1,26 @@
+{
+  "id": "alinaqi-claude-bootstrap-codex-review",
+  "name": "codex-review",
+  "description": "OpenAI Codex CLI code review with GPT-5.2-Codex, CI/CD integration",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alinaqi",
+  "install_path": ".claude/skills/codex-review/SKILL.md",
+  "source": {
+    "repo": "alinaqi/claude-bootstrap",
+    "url": "https://github.com/alinaqi/claude-bootstrap/blob/main/skills/codex-review/SKILL.md",
+    "path": "skills/codex-review/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:25.346Z",
+    "stars": 641,
+    "language": "Python",
+    "pushed_at": "2026-05-21T22:01:29Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一款基于GPT-5.2-Codex的命令行代码审查工具，能直接接入CI/CD流水线，帮你自动Review代码找问题，省去人工审查的麻烦。"
+}

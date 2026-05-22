@@ -1,0 +1,26 @@
+{
+  "id": "digitalsamba-claude-code-video-toolkit-openclaw-video-toolkit",
+  "name": "video_toolkit",
+  "description": "Create professional videos autonomously using claude-code-video-toolkit — AI voiceovers, image generation, music, talking heads, and Remotion rendering.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "digitalsamba",
+  "install_path": ".claude/skills/openclaw-video-toolkit/SKILL.md",
+  "source": {
+    "repo": "digitalsamba/claude-code-video-toolkit",
+    "url": "https://github.com/digitalsamba/claude-code-video-toolkit/blob/main/skills/openclaw-video-toolkit/SKILL.md",
+    "path": "skills/openclaw-video-toolkit/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:46:20.622Z",
+    "stars": 1232,
+    "language": "Python",
+    "pushed_at": "2026-05-20T21:16:18Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个全自动生成专业视频的AI工具包，能自动搞定所有视听素材与数字人，适合需要零门槛快速批量制作高质量视频的场景。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "zebbern-claude-code-guide-html-injection-testing",
+  "name": "HTML Injection Testing",
+  "description": "This skill should be used when the user asks to \"test for HTML injection\", \"inject HTML into web pages\", \"perform HTML injection attacks\", \"deface web applications\", or \"test content injection vulnerabilities\". It provides comprehensive HTML injection attack techniques and testing methodologies.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "zebbern",
+  "install_path": ".claude/skills/html-injection-testing/SKILL.md",
+  "source": {
+    "repo": "zebbern/claude-code-guide",
+    "url": "https://github.com/zebbern/claude-code-guide/blob/main/skills/html-injection-testing/SKILL.md",
+    "path": "skills/html-injection-testing/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:08.919Z",
+    "stars": 4156,
+    "language": null,
+    "pushed_at": "2026-05-22T01:16:53Z",
+    "license": "MIT"
+  },
+  "summary_zh": "专攻HTML注入的安全测试工具，提供全面的攻击手法与测试方法，适合排查网页内容注入漏洞或评估网页防篡改能力。"
+}

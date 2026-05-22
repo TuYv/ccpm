@@ -1,0 +1,26 @@
+{
+  "id": "spartan-stratos-spartan-ai-toolkit-ops-oncall-log",
+  "name": "ops-oncall-log",
+  "description": "Create a structured on-call log by pulling alerts from monitoring and writing a summary to your team's wiki. Requires a monitoring MCP (recommended: Datadog) and a wiki MCP (Confluence or Notion).",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "spartan-stratos",
+  "install_path": ".claude/skills/ops-oncall-log/SKILL.md",
+  "source": {
+    "repo": "spartan-stratos/spartan-ai-toolkit",
+    "url": "https://github.com/spartan-stratos/spartan-ai-toolkit/blob/master/toolkit/skills/ops-oncall-log/SKILL.md",
+    "path": "toolkit/skills/ops-oncall-log/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-05-22T04:46:16.651Z",
+    "stars": 71,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-11T06:56:56Z",
+    "license": null
+  },
+  "summary_zh": "这是一个自动生成值班日志的工具，能从监控系统拉取告警并汇总写入团队维基。帮你告别手动整理告警的繁琐，适合运维团队做值班交接与复盘。"
+}

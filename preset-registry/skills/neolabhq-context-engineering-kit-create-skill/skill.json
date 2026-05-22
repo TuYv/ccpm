@@ -1,0 +1,26 @@
+{
+  "id": "neolabhq-context-engineering-kit-create-skill",
+  "name": "create-skill",
+  "description": "Guide for creating effective skills. This command should be used when users want to create a new skill (or update an existing skill) that extends Claude's capabilities with specialized knowledge, workflows, or tool integrations. Use when creating new skills, editing existing skills, or verifying skills work before deployment - applies TDD to process documentation by testing with subagents before writing, iterating until bulletproof against rationalization",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "NeoLabHQ",
+  "install_path": ".claude/skills/create-skill/SKILL.md",
+  "source": {
+    "repo": "NeoLabHQ/context-engineering-kit",
+    "url": "https://github.com/NeoLabHQ/context-engineering-kit/blob/master/plugins/customaize-agent/skills/create-skill/SKILL.md",
+    "path": "plugins/customaize-agent/skills/create-skill/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-05-22T04:42:28.270Z",
+    "stars": 1025,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-22T00:32:29Z",
+    "license": "GPL-3.0"
+  },
+  "summary_zh": "这是一款帮Claude开发专属技能的工具，适合需要用特定知识或工作流扩展AI能力的场景，能在部署前反复测试验证，确保技能稳定可靠。"
+}

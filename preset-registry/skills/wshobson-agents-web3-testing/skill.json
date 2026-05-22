@@ -1,0 +1,26 @@
+{
+  "id": "wshobson-agents-web3-testing",
+  "name": "web3-testing",
+  "description": "Test smart contracts comprehensively using Hardhat and Foundry with unit tests, integration tests, and mainnet forking. Use when testing Solidity contracts, setting up blockchain test suites, or validating DeFi protocols.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "wshobson",
+  "install_path": ".claude/skills/web3-testing/SKILL.md",
+  "source": {
+    "repo": "wshobson/agents",
+    "url": "https://github.com/wshobson/agents/blob/main/plugins/blockchain-web3/skills/web3-testing/SKILL.md",
+    "path": "plugins/blockchain-web3/skills/web3-testing/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:56.027Z",
+    "stars": 35770,
+    "language": "Python",
+    "pushed_at": "2026-05-21T20:01:53Z",
+    "license": "MIT"
+  },
+  "summary_zh": "结合Hardhat与Foundry的智能合约测试方案，帮你搞定从基础测试到主网分叉的全面验证，适合测试Solidity合约、搭建测试环境或验证DeFi协议。"
+}

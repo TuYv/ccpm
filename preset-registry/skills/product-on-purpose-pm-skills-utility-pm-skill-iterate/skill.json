@@ -1,0 +1,26 @@
+{
+  "id": "product-on-purpose-pm-skills-utility-pm-skill-iterate",
+  "name": "utility-pm-skill-iterate",
+  "description": "Applies targeted improvements to an existing pm-skills skill based on feedback, validation reports, or convention changes. Reads current files, previews proposed changes, writes on confirmation, and suggests a version bump. Use when improving a skill after validation or feedback.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "product-on-purpose",
+  "install_path": ".claude/skills/utility-pm-skill-iterate/SKILL.md",
+  "source": {
+    "repo": "product-on-purpose/pm-skills",
+    "url": "https://github.com/product-on-purpose/pm-skills/blob/main/skills/utility-pm-skill-iterate/SKILL.md",
+    "path": "skills/utility-pm-skill-iterate/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T00:25:41.368Z",
+    "stars": 226,
+    "language": "Shell",
+    "pushed_at": "2026-05-21T05:03:47Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "这是一个技能迭代工具，帮你根据反馈或验证报告针对性优化现有技能，自动完成更新并建议升版本，适合技能验证后的改进场景。"
+}

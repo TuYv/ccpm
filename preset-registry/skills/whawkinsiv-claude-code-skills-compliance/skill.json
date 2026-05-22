@@ -1,0 +1,26 @@
+{
+  "id": "whawkinsiv-claude-code-skills-compliance",
+  "name": "compliance",
+  "description": "Use this skill when the user is building software for a regulated industry and needs to understand compliance requirements. Also use when the user mentions 'HIPAA,' 'FERPA,' 'SOC 2,' 'PCI,' 'GDPR,' 'compliance,' 'regulated industry,' 'healthcare app,' 'fintech,' 'edtech,' or asks 'do I need to worry about [regulation]?' Covers what regulations mean for your tech stack — not legal theory, but concrete technical requirements.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "whawkinsiv",
+  "install_path": ".claude/skills/compliance/SKILL.md",
+  "source": {
+    "repo": "whawkinsiv/claude-code-skills",
+    "url": "https://github.com/whawkinsiv/claude-code-skills/blob/main/skills/compliance/SKILL.md",
+    "path": "skills/compliance/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:26.870Z",
+    "stars": 177,
+    "language": null,
+    "pushed_at": "2026-05-14T16:20:15Z",
+    "license": "MIT"
+  },
+  "summary_zh": "帮金融、医疗等受监管行业开发者搞懂合规的工具，能把各类法规直接转化为技术栈的具体要求，只讲技术落地，不谈法律理论。"
+}

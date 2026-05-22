@@ -1,0 +1,26 @@
+{
+  "id": "czlonkowski-n8n-skills-n8n-code-python",
+  "name": "n8n-code-python",
+  "description": "Write Python code in n8n Code nodes. Use when writing Python in n8n, using _input/_json/_node syntax, working with standard library, or need to understand Python limitations in n8n Code nodes. Use this skill when the user specifically requests Python for an n8n Code node. Note — JavaScript is recommended for 95% of use cases — only use Python when the user explicitly prefers it or the task requires Python-specific standard library capabilities (regex, hashlib, statistics).",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "czlonkowski",
+  "install_path": ".claude/skills/n8n-code-python/SKILL.md",
+  "source": {
+    "repo": "czlonkowski/n8n-skills",
+    "url": "https://github.com/czlonkowski/n8n-skills/blob/main/skills/n8n-code-python/SKILL.md",
+    "path": "skills/n8n-code-python/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:14.219Z",
+    "stars": 5096,
+    "language": "Shell",
+    "pushed_at": "2026-05-06T13:23:16Z",
+    "license": "MIT"
+  },
+  "summary_zh": "帮你在n8n代码节点里写Python。适合需要调用Python特有标准库或明确偏爱Python的场景，能帮你搞定专属语法并避开使用限制。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "zechenzhangagi-ai-research-skills-torchforge",
+  "name": "torchforge-rl-training",
+  "description": "Provides guidance for PyTorch-native agentic RL using torchforge, Meta's library separating infra from algorithms. Use when you want clean RL abstractions, easy algorithm experimentation, or scalable training with Monarch and TorchTitan.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "zechenzhangAGI",
+  "install_path": ".claude/skills/torchforge/SKILL.md",
+  "source": {
+    "repo": "zechenzhangAGI/AI-research-SKILLs",
+    "url": "https://github.com/zechenzhangAGI/AI-research-SKILLs/blob/main/06-post-training/torchforge/SKILL.md",
+    "path": "06-post-training/torchforge/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:40.036Z",
+    "stars": 8786,
+    "language": "TeX",
+    "pushed_at": "2026-04-28T05:09:27Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是基于Meta库的原生PyTorch智能体强化学习指南，能把底层架构和算法解耦。适合想要代码更清爽、方便实验算法或进行大规模扩展训练的场景。"
+}

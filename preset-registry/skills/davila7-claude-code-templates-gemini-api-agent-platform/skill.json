@@ -1,0 +1,26 @@
+{
+  "id": "davila7-claude-code-templates-gemini-api-agent-platform",
+  "name": "gemini-api-agent-platform",
+  "description": "Guides the usage of the Gemini API on Agent Platform with the Google Gen AI SDK for enterprise AI applications. Covers SDK usage (Python, JS/TS, Go, Java, C#), capabilities like Live API, tools, multimedia generation, caching, and batch prediction.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "davila7",
+  "install_path": ".claude/skills/gemini-api-agent-platform/SKILL.md",
+  "source": {
+    "repo": "davila7/claude-code-templates",
+    "url": "https://github.com/davila7/claude-code-templates/blob/main/cli-tool/components/skills/ai-research/gemini-api-agent-platform/SKILL.md",
+    "path": "cli-tool/components/skills/ai-research/gemini-api-agent-platform/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:46.636Z",
+    "stars": 27482,
+    "language": "Python",
+    "pushed_at": "2026-05-22T04:31:04Z",
+    "license": "MIT"
+  },
+  "summary_zh": "专为企业在Agent平台开发AI应用打造的指南，教你用Google Gen AI SDK快速接入Gemini API，轻松搞定实时交互与多媒体生成等复杂场景。"
+}

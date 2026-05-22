@@ -1,0 +1,26 @@
+{
+  "id": "trailofbits-skills-firebase-apk-scanner",
+  "name": "firebase-apk-scanner",
+  "description": "Scans Android APKs for Firebase security misconfigurations including open databases, storage buckets, authentication issues, and exposed cloud functions. Use when analyzing APK files for Firebase vulnerabilities, performing mobile app security audits, or testing Firebase endpoint security. For authorized security research only.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "trailofbits",
+  "install_path": ".claude/skills/firebase-apk-scanner/SKILL.md",
+  "source": {
+    "repo": "trailofbits/skills",
+    "url": "https://github.com/trailofbits/skills/blob/main/plugins/firebase-apk-scanner/skills/firebase-apk-scanner/SKILL.md",
+    "path": "plugins/firebase-apk-scanner/skills/firebase-apk-scanner/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:41:50.769Z",
+    "stars": 5325,
+    "language": "Python",
+    "pushed_at": "2026-05-16T17:22:25Z",
+    "license": "CC-BY-SA-4.0"
+  },
+  "summary_zh": "专门检查安卓应用Firebase安全配置的工具，能揪出配置不当引发的云端数据泄露等漏洞，适合做移动应用安全审计或渗透测试，仅限授权研究使用。"
+}

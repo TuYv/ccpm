@@ -1,0 +1,26 @@
+{
+  "id": "nowork-studio-toprank-toprank-site-onboard",
+  "name": "toprank-site-onboard",
+  "description": "Register a website in Toprank's OpenClaw adaptive layer and initialize its per-site work folder.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "nowork-studio",
+  "install_path": ".claude/skills/toprank-site-onboard/SKILL.md",
+  "source": {
+    "repo": "nowork-studio/toprank",
+    "url": "https://github.com/nowork-studio/toprank/blob/main/openclaw/skills/toprank-site-onboard/SKILL.md",
+    "path": "openclaw/skills/toprank-site-onboard/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:36.788Z",
+    "stars": 2599,
+    "language": "Python",
+    "pushed_at": "2026-05-20T05:41:47Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是帮新网站接入 Toprank OpenClaw 自适应层的引导工具，能自动完成系统注册并初始化专属工作目录，让网站马上拥有独立的工作空间。"
+}

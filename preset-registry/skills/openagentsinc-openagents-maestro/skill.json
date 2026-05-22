@@ -1,0 +1,26 @@
+{
+  "id": "openagentsinc-openagents-maestro",
+  "name": "maestro",
+  "description": "Maestro Symphony blockchain query operations for OpenAgents agents, including tip freshness checks, address/UTXO/runes queries, and production-safe troubleshooting against deployed Symphony API endpoints.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "OpenAgentsInc",
+  "install_path": ".claude/skills/maestro/SKILL.md",
+  "source": {
+    "repo": "OpenAgentsInc/openagents",
+    "url": "https://github.com/OpenAgentsInc/openagents/blob/main/skills/maestro/SKILL.md",
+    "path": "skills/maestro/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:10.195Z",
+    "stars": 420,
+    "language": "Rust",
+    "pushed_at": "2026-05-21T14:45:59Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "这是专为 OpenAgents 代理打造的 Symphony 链查询工具，能帮你安全获取链上数据及状态，并在生产环境中轻松排查 API 故障。"
+}

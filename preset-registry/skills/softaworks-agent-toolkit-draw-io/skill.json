@@ -1,0 +1,26 @@
+{
+  "id": "softaworks-agent-toolkit-draw-io",
+  "name": "draw-io",
+  "description": "draw.io diagram creation, editing, and review. Use for .drawio XML editing, PNG conversion, layout adjustment, and AWS icon usage.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "softaworks",
+  "install_path": ".claude/skills/draw-io/SKILL.md",
+  "source": {
+    "repo": "softaworks/agent-toolkit",
+    "url": "https://github.com/softaworks/agent-toolkit/blob/main/skills/draw-io/SKILL.md",
+    "path": "skills/draw-io/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:22.626Z",
+    "stars": 1872,
+    "language": "Python",
+    "pushed_at": "2026-03-05T16:46:24Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个图表绘制与审查工具，能帮你轻松制作和修改图表，特别适合画AWS架构图，或需要调整排版与转换图片格式的场景。"
+}

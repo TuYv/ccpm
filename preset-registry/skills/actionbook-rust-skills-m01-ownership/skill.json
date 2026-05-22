@@ -1,0 +1,26 @@
+{
+  "id": "actionbook-rust-skills-m01-ownership",
+  "name": "m01-ownership",
+  "description": "CRITICAL: Use for ownership/borrow/lifetime issues. Triggers: E0382, E0597, E0506, E0507, E0515, E0716, E0106, value moved, borrowed value does not live long enough, cannot move out of, use of moved value, ownership, borrow, lifetime, 'a, 'static, move, clone, Copy, 所有权, 借用, 生命周期",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "actionbook",
+  "install_path": ".claude/skills/m01-ownership/SKILL.md",
+  "source": {
+    "repo": "actionbook/rust-skills",
+    "url": "https://github.com/actionbook/rust-skills/blob/main/skills/m01-ownership/SKILL.md",
+    "path": "skills/m01-ownership/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:00.806Z",
+    "stars": 1164,
+    "language": "Shell",
+    "pushed_at": "2026-05-12T12:59:42Z",
+    "license": null
+  },
+  "summary_zh": "专门解决Rust中所有权、借用和生命周期引发的编译报错，遇到变量移动或引用存活不够久等让人头疼的错误时，用它来快速排查问题。"
+}

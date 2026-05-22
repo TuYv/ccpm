@@ -1,0 +1,26 @@
+{
+  "id": "fradser-dotclaude-next-devtools-guide",
+  "name": "next-devtools-guide",
+  "description": "Provides guidance on using the next-devtools MCP server. Use when working with Next.js projects that have the MCP server configured, when the user encounters connection issues, or when needing help with error detection, route inspection, Server Action tracing, or Cache Components migration.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "FradSer",
+  "install_path": ".claude/skills/next-devtools-guide/SKILL.md",
+  "source": {
+    "repo": "FradSer/dotclaude",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/next-devtools/skills/next-devtools-guide/SKILL.md",
+    "path": "next-devtools/skills/next-devtools-guide/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:15.276Z",
+    "stars": 548,
+    "language": "Shell",
+    "pushed_at": "2026-05-21T09:20:23Z",
+    "license": null
+  },
+  "summary_zh": "这是一份教你使用 Next.js MCP 开发服务器的指南。当项目碰到连接异常，或需要排查代码报错、调试路由与缓存等底层问题时，它能帮你快速搞定。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "team-attention-plugins-for-claude-natives-history-insight",
+  "name": "history-insight",
+  "description": "This skill should be used when user wants to access, capture, or reference Claude Code session history. Trigger when user says \"capture session\", \"save session history\", or references past/current conversation as a source - whether for saving, extracting, summarizing, or reviewing. This includes any mention of \"what we discussed\", \"today's work\", \"session history\", or when user treats the conversation itself as source material (e.g., \"from our conversation\").",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.1.0",
+  "author": "team-attention",
+  "install_path": ".claude/skills/history-insight/SKILL.md",
+  "source": {
+    "repo": "team-attention/plugins-for-claude-natives",
+    "url": "https://github.com/team-attention/plugins-for-claude-natives/blob/main/plugins/session-wrap/skills/history-insight/SKILL.md",
+    "path": "plugins/session-wrap/skills/history-insight/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:37.526Z",
+    "stars": 773,
+    "language": "Python",
+    "pushed_at": "2026-04-20T06:53:40Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个管理Claude Code聊天记录的工具，能帮你保存、提取和总结对话内容，特别适合需要复盘工作进展或把聊天记录当素材使用的场景。"
+}

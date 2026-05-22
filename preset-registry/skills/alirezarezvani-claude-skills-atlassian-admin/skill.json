@@ -1,0 +1,26 @@
+{
+  "id": "alirezarezvani-claude-skills-atlassian-admin",
+  "name": "atlassian-admin",
+  "description": "Atlassian Administrator for managing and organizing Atlassian products (Jira, Confluence, Bitbucket, Trello), users, permissions, security, integrations, system configuration, and org-wide governance. Use when asked to add users to Jira, change Confluence permissions, configure access control, update admin settings, manage Atlassian groups, set up SSO, install marketplace apps, review security policies, or handle any org-wide Atlassian administration task.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alirezarezvani",
+  "install_path": ".claude/skills/atlassian-admin/SKILL.md",
+  "source": {
+    "repo": "alirezarezvani/claude-skills",
+    "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/atlassian-admin/SKILL.md",
+    "path": ".gemini/skills/atlassian-admin/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:39.532Z",
+    "stars": 15795,
+    "language": "Python",
+    "pushed_at": "2026-05-21T17:51:26Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个集中管理Jira和Confluence等Atlassian套件的后台助手。专治账号权限、安全合规与系统配置等跨产品运维难题，适合需要统一管控公司协作生态的场景。"
+}

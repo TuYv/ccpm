@@ -1,0 +1,26 @@
+{
+  "id": "actionbook-rust-skills-coding-guidelines",
+  "name": "coding-guidelines",
+  "description": "Use when asking about Rust code style or best practices. Keywords: naming, formatting, comment, clippy, rustfmt, lint, code style, best practice, P.NAM, G.FMT, code review, naming convention, variable naming, function naming, type naming, 命名规范, 代码风格, 格式化, 最佳实践, 代码审查, 怎么命名",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "actionbook",
+  "install_path": ".claude/skills/coding-guidelines/SKILL.md",
+  "source": {
+    "repo": "actionbook/rust-skills",
+    "url": "https://github.com/actionbook/rust-skills/blob/main/skills/coding-guidelines/SKILL.md",
+    "path": "skills/coding-guidelines/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:59.708Z",
+    "stars": 1164,
+    "language": "Shell",
+    "pushed_at": "2026-05-12T12:59:42Z",
+    "license": null
+  },
+  "summary_zh": "提供Rust代码风格与最佳实践参考，专治命名纠结和格式混乱，适合日常开发规范代码与做代码审查时查阅。"
+}

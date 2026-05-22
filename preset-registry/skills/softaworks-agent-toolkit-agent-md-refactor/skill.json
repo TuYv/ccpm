@@ -1,0 +1,26 @@
+{
+  "id": "softaworks-agent-toolkit-agent-md-refactor",
+  "name": "agent-md-refactor",
+  "description": "Refactor bloated AGENTS.md, CLAUDE.md, or similar agent instruction files to follow progressive disclosure principles. Splits monolithic files into organized, linked documentation.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "softaworks",
+  "install_path": ".claude/skills/agent-md-refactor/SKILL.md",
+  "source": {
+    "repo": "softaworks/agent-toolkit",
+    "url": "https://github.com/softaworks/agent-toolkit/blob/main/skills/agent-md-refactor/SKILL.md",
+    "path": "skills/agent-md-refactor/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:21.210Z",
+    "stars": 1872,
+    "language": "Python",
+    "pushed_at": "2026-03-05T16:46:24Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用来给臃肿的AI指令文件瘦身，把大段长文拆成结构清晰的互联文档以实现分层展示，解决指令过长难读、难维护的问题。"
+}

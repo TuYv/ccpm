@@ -1,0 +1,26 @@
+{
+  "id": "zechenzhangagi-ai-research-skills-ray-data",
+  "name": "ray-data",
+  "description": "Scalable data processing for ML workloads. Streaming execution across CPU/GPU, supports Parquet/CSV/JSON/images. Integrates with Ray Train, PyTorch, TensorFlow. Scales from single machine to 100s of nodes. Use for batch inference, data preprocessing, multi-modal data loading, or distributed ETL pipelines.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "zechenzhangAGI",
+  "install_path": ".claude/skills/ray-data/SKILL.md",
+  "source": {
+    "repo": "zechenzhangAGI/AI-research-SKILLs",
+    "url": "https://github.com/zechenzhangAGI/AI-research-SKILLs/blob/main/05-data-processing/ray-data/SKILL.md",
+    "path": "05-data-processing/ray-data/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:39.192Z",
+    "stars": 8786,
+    "language": "TeX",
+    "pushed_at": "2026-04-28T05:09:27Z",
+    "license": "MIT"
+  },
+  "summary_zh": "专为机器学习打造的可扩展数据处理工具，能轻松从单机扩展到上百节点，解决海量训练数据的处理瓶颈，适合做大规模数据预处理、多模态数据加载、批量推理或分布式ETL流水线。"
+}

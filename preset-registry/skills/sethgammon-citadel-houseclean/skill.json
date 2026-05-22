@@ -1,0 +1,26 @@
+{
+  "id": "sethgammon-citadel-houseclean",
+  "name": "houseclean",
+  "description": ">- Cross-drive storage audit and cleanup. Surveys all drives, finds orphaned git worktrees, large AI tool caches (.ollama, .gemini, .cursor, npm, pip), and buildable artifacts (node_modules, .venv). Produces a prioritized action plan with specific migration commands. Use when disk space is low or worktrees need cleanup; do NOT use for project structure issues (use /organize instead).",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "SethGammon",
+  "install_path": ".claude/skills/houseclean/SKILL.md",
+  "source": {
+    "repo": "SethGammon/Citadel",
+    "url": "https://github.com/SethGammon/Citadel/blob/main/skills/houseclean/SKILL.md",
+    "path": "skills/houseclean/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:06.109Z",
+    "stars": 572,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-07T17:50:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个跨盘空间清理工具，能扫出吃硬盘的孤立git工作树、AI模型缓存和依赖包，并生成带迁移命令的优先清理方案，专治磁盘空间不足或工作树杂乱的问题。"
+}

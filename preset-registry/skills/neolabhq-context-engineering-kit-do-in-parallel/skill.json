@@ -1,0 +1,26 @@
+{
+  "id": "neolabhq-context-engineering-kit-do-in-parallel",
+  "name": "do-in-parallel",
+  "description": "Launch multiple sub-agents in parallel to execute tasks across files or targets with intelligent model selection, quality-focused prompting, and meta-judge → LLM-as-a-judge verification",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "NeoLabHQ",
+  "install_path": ".claude/skills/do-in-parallel/SKILL.md",
+  "source": {
+    "repo": "NeoLabHQ/context-engineering-kit",
+    "url": "https://github.com/NeoLabHQ/context-engineering-kit/blob/master/plugins/sadd/skills/do-in-parallel/SKILL.md",
+    "path": "plugins/sadd/skills/do-in-parallel/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-05-22T04:42:31.958Z",
+    "stars": 1025,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-22T00:32:29Z",
+    "license": "GPL-3.0"
+  },
+  "summary_zh": "这是一个并行调度多个AI智能体跨文件执行任务的工具，自带智能选模型与结果验证机制来保障产出质量，解决大批量并发任务容易粗制滥造的问题，适合高要求的批量处理场景。"
+}

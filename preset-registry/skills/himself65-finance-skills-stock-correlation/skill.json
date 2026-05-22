@@ -1,0 +1,26 @@
+{
+  "id": "himself65-finance-skills-stock-correlation",
+  "name": "stock-correlation",
+  "description": "> Analyze stock correlations to find related companies and trading pairs. Use when the user asks about correlated stocks, related companies, sector peers, trading pairs, or how two or more stocks move together. Triggers: \"what correlates with NVDA\", \"find stocks related to AMD\", \"correlation between AAPL and MSFT\", \"what moves with\", \"sector peers\", \"pair trading\", \"correlated stocks\", \"when NVDA drops what else drops\", \"stocks that move together\", \"beta to\", \"relative performance\", \"supply chai",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "himself65",
+  "install_path": ".claude/skills/stock-correlation/SKILL.md",
+  "source": {
+    "repo": "himself65/finance-skills",
+    "url": "https://github.com/himself65/finance-skills/blob/main/plugins/market-analysis/skills/stock-correlation/SKILL.md",
+    "path": "plugins/market-analysis/skills/stock-correlation/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:31.805Z",
+    "stars": 2456,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-19T23:27:16Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个分析股票走势关联性的工具，能帮你找出同涨同跌的关联公司、同板块股票或配对交易标的，适合想了解个股联动关系或寻找套利配对时使用。"
+}

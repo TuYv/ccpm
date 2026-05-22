@@ -1,0 +1,26 @@
+{
+  "id": "jeffallan-claude-skills-game-developer",
+  "name": "game-developer",
+  "description": "Use when building game systems, implementing Unity/Unreal Engine features, or optimizing game performance. Invoke to implement ECS architecture, configure physics systems and colliders, set up multiplayer networking with lag compensation, optimize frame rates to 60+ FPS targets, develop shaders, or apply game design patterns such as object pooling and state machines. Trigger keywords: Unity, Unreal Engine, game development, ECS architecture, game physics, multiplayer networking, game optimizatio",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "jeffallan",
+  "install_path": ".claude/skills/game-developer/SKILL.md",
+  "source": {
+    "repo": "jeffallan/claude-skills",
+    "url": "https://github.com/jeffallan/claude-skills/blob/main/skills/game-developer/SKILL.md",
+    "path": "skills/game-developer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:58.098Z",
+    "stars": 9253,
+    "language": "Python",
+    "pushed_at": "2026-05-20T13:35:05Z",
+    "license": "MIT"
+  },
+  "summary_zh": "专为Unity和虚幻引擎打造的游戏开发助手，适合需要搭建底层架构、实现复杂系统或进行性能调优的场景，帮你轻松搞定游戏开发中的各种硬核技术难题。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "zechenzhangagi-ai-research-skills-miles",
+  "name": "miles-rl-training",
+  "description": "Provides guidance for enterprise-grade RL training using miles, a production-ready fork of slime. Use when training large MoE models with FP8/INT4, needing train-inference alignment, or requiring speculative RL for maximum throughput.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "zechenzhangAGI",
+  "install_path": ".claude/skills/miles/SKILL.md",
+  "source": {
+    "repo": "zechenzhangAGI/AI-research-SKILLs",
+    "url": "https://github.com/zechenzhangAGI/AI-research-SKILLs/blob/main/06-post-training/miles/SKILL.md",
+    "path": "06-post-training/miles/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:39.494Z",
+    "stars": 8786,
+    "language": "TeX",
+    "pushed_at": "2026-04-28T05:09:27Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一套基于 miles 框架的企业级强化学习训练方案，能解决大模型低精度训练和训练推理不一致的问题，适合需要极致吞吐量的大型 MoE 模型训练场景。"
+}

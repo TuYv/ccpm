@@ -1,0 +1,26 @@
+{
+  "id": "wshobson-agents-github-actions-templates",
+  "name": "github-actions-templates",
+  "description": "Create production-ready GitHub Actions workflows for automated testing, building, and deploying applications. Use when setting up CI/CD with GitHub Actions, automating development workflows, or creating reusable workflow templates.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "wshobson",
+  "install_path": ".claude/skills/github-actions-templates/SKILL.md",
+  "source": {
+    "repo": "wshobson/agents",
+    "url": "https://github.com/wshobson/agents/blob/main/plugins/cicd-automation/skills/github-actions-templates/SKILL.md",
+    "path": "plugins/cicd-automation/skills/github-actions-templates/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:56.417Z",
+    "stars": 35770,
+    "language": "Python",
+    "pushed_at": "2026-05-21T20:01:53Z",
+    "license": "MIT"
+  },
+  "summary_zh": "提供开箱即用的 GitHub Actions 工作流模板，帮你快速搭建 CI/CD 流水线，轻松实现应用的自动测试、构建与部署，告别繁琐的从零配置。"
+}

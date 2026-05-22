@@ -1,0 +1,26 @@
+{
+  "id": "aaron-he-zhu-seo-geo-claude-skills-keyword-research",
+  "name": "keyword-research",
+  "description": "Use when the user asks to \"find keywords\"; prioritizes volume, difficulty, intent, and clusters from provided or connected data. 关键词研究/内容选题",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "9.9.9",
+  "author": "aaron-he-zhu",
+  "install_path": ".claude/skills/keyword-research/SKILL.md",
+  "source": {
+    "repo": "aaron-he-zhu/seo-geo-claude-skills",
+    "url": "https://github.com/aaron-he-zhu/seo-geo-claude-skills/blob/main/research/keyword-research/SKILL.md",
+    "path": "research/keyword-research/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:00.895Z",
+    "stars": 1731,
+    "language": "Shell",
+    "pushed_at": "2026-05-14T08:11:30Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "这是一个帮你挖掘关键词的工具，适合内容选题和SEO优化。它能从数据中筛选出高价值、符合用户意图的词群，让你轻松搞定找词难题。"
+}

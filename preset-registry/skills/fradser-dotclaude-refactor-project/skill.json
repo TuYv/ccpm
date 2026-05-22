@@ -1,0 +1,26 @@
+{
+  "id": "fradser-dotclaude-refactor-project",
+  "name": "refactor-project",
+  "description": "Executes automated project-wide refactoring with a focus on cross-file optimization. This skill should be used when the user asks for project-wide refactoring, cross-file simplification, consistency standardization across the codebase, duplication reduction, or invokes \"/refactor-project\".",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "FradSer",
+  "install_path": ".claude/skills/refactor-project/SKILL.md",
+  "source": {
+    "repo": "FradSer/dotclaude",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/refactor/skills/refactor-project/SKILL.md",
+    "path": "refactor/skills/refactor-project/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:15.970Z",
+    "stars": 548,
+    "language": "Shell",
+    "pushed_at": "2026-05-21T09:20:23Z",
+    "license": null
+  },
+  "summary_zh": "这是一个专注跨文件优化的自动化重构工具，适合需要全项目大范围整理代码、统一规范或消除重复的场景，帮你轻松搞定复杂的跨文件调整。"
+}

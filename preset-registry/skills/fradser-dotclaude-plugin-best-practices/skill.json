@@ -1,0 +1,26 @@
+{
+  "id": "fradser-dotclaude-plugin-best-practices",
+  "name": "plugin-best-practices",
+  "description": "This skill should be used when the user asks to \"validate plugin structure\", \"review manifest files\", \"check frontmatter compliance\", \"verify tool invocation patterns\", \"explain plugin component types\", or needs Claude Code plugin architectural guidance.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "FradSer",
+  "install_path": ".claude/skills/plugin-best-practices/SKILL.md",
+  "source": {
+    "repo": "FradSer/dotclaude",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/plugin-optimizer/skills/plugin-best-practices/SKILL.md",
+    "path": "plugin-optimizer/skills/plugin-best-practices/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:15.823Z",
+    "stars": 548,
+    "language": "Shell",
+    "pushed_at": "2026-05-21T09:20:23Z",
+    "license": null
+  },
+  "summary_zh": "这是一个Claude Code插件开发指导工具，能帮你检查插件结构与配置文件是否合规，验证调用规范，并解答架构设计疑问。"
+}

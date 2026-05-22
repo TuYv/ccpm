@@ -1,0 +1,26 @@
+{
+  "id": "op7418-codepilot-feishu-calendar",
+  "name": "feishu-calendar",
+  "description": "| 飞书日历与日程管理工具集。包含日历管理、日程管理、参会人管理、忙闲查询。",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "op7418",
+  "install_path": ".claude/skills/feishu-calendar/SKILL.md",
+  "source": {
+    "repo": "op7418/CodePilot",
+    "url": "https://github.com/op7418/CodePilot/blob/main/资料/feishu-openclaw-plugin/package/skills/feishu-calendar/SKILL.md",
+    "path": "资料/feishu-openclaw-plugin/package/skills/feishu-calendar/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:00.385Z",
+    "stars": 5769,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-11T06:07:30Z",
+    "license": null
+  },
+  "summary_zh": "这是一个飞书日历与日程管理工具，能帮你轻松协调会议和查询忙闲，非常适合需要批量处理排期或自动化管理日程的场景。"
+}

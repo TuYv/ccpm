@@ -1,0 +1,26 @@
+{
+  "id": "zechenzhangagi-ai-research-skills-nemo-evaluator",
+  "name": "nemo-evaluator-sdk",
+  "description": "Evaluates LLMs across 100+ benchmarks from 18+ harnesses (MMLU, HumanEval, GSM8K, safety, VLM) with multi-backend execution. Use when needing scalable evaluation on local Docker, Slurm HPC, or cloud platforms. NVIDIA's enterprise-grade platform with container-first architecture for reproducible benchmarking.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "zechenzhangAGI",
+  "install_path": ".claude/skills/nemo-evaluator/SKILL.md",
+  "source": {
+    "repo": "zechenzhangAGI/AI-research-SKILLs",
+    "url": "https://github.com/zechenzhangAGI/AI-research-SKILLs/blob/main/11-evaluation/nemo-evaluator/SKILL.md",
+    "path": "11-evaluation/nemo-evaluator/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:43.452Z",
+    "stars": 8786,
+    "language": "TeX",
+    "pushed_at": "2026-04-28T05:09:27Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是NVIDIA的企业级大模型评测工具，支持上百项基准测试，适合需要在本地、集群或云端进行大规模、可复现的模型性能评估。"
+}

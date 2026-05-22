@@ -1,0 +1,26 @@
+{
+  "id": "humanplane-homunculus-instinct-apply",
+  "name": "instinct-apply",
+  "description": "Surfaces relevant instincts during work. Use when starting a task to check if any learned behaviors apply.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "humanplane",
+  "install_path": ".claude/skills/instinct-apply/SKILL.md",
+  "source": {
+    "repo": "humanplane/homunculus",
+    "url": "https://github.com/humanplane/homunculus/blob/main/plugins/homunculus/skills/instinct-apply/SKILL.md",
+    "path": "plugins/homunculus/skills/instinct-apply/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:38.755Z",
+    "stars": 369,
+    "language": "Shell",
+    "pushed_at": "2026-01-23T20:48:08Z",
+    "license": null
+  },
+  "summary_zh": "这是一个工作经验提示工具，适合在开始新任务时用，帮你快速匹配过往积累的好习惯和经验，避免走弯路或遗忘。"
+}

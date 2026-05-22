@@ -1,0 +1,26 @@
+{
+  "id": "mattpocock-skills-tdd",
+  "name": "tdd",
+  "description": "Test-driven development with red-green-refactor loop. Use when user wants to build features or fix bugs using TDD, mentions \"red-green-refactor\", wants integration tests, or asks for test-first development.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mattpocock",
+  "install_path": ".claude/skills/tdd/SKILL.md",
+  "source": {
+    "repo": "mattpocock/skills",
+    "url": "https://github.com/mattpocock/skills/blob/main/skills/engineering/tdd/SKILL.md",
+    "path": "skills/engineering/tdd/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:05.330Z",
+    "stars": 99464,
+    "language": "Shell",
+    "pushed_at": "2026-05-20T08:46:54Z",
+    "license": "MIT"
+  },
+  "summary_zh": "帮你实践测试驱动开发的工具，遵循红绿重构循环。当你想用先写测试的方式开发新功能、修Bug或做集成测试时，用它就对了。"
+}

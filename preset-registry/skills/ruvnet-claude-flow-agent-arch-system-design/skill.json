@@ -1,0 +1,26 @@
+{
+  "id": "ruvnet-claude-flow-agent-arch-system-design",
+  "name": "agent-arch-system-design",
+  "description": "Agent skill for arch-system-design - invoke with $agent-arch-system-design",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ruvnet",
+  "install_path": ".claude/skills/agent-arch-system-design/SKILL.md",
+  "source": {
+    "repo": "ruvnet/claude-flow",
+    "url": "https://github.com/ruvnet/claude-flow/blob/main/.agents/skills/agent-arch-system-design/SKILL.md",
+    "path": ".agents/skills/agent-arch-system-design/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:41:57.243Z",
+    "stars": 53972,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-22T03:51:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个专用于系统架构设计的AI Agent技能插件，能帮你快速梳理和生成架构方案，适合需要辅助进行系统架构设计的开发者。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "onmax-nuxt-skills-vitest",
+  "name": "vitest",
+  "description": "Use when writing unit/integration tests for Vite projects - configure vitest.config.ts, write test suites with describe/it, create mock implementations with vi.fn and vi.mock, set up code coverage thresholds, and run tests in parallel",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "onmax",
+  "install_path": ".claude/skills/vitest/SKILL.md",
+  "source": {
+    "repo": "onmax/nuxt-skills",
+    "url": "https://github.com/onmax/nuxt-skills/blob/main/skills/vitest/SKILL.md",
+    "path": "skills/vitest/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:06.748Z",
+    "stars": 663,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-04T06:59:41Z",
+    "license": null
+  },
+  "summary_zh": "这是专为Vite项目打造的测试框架，最适合写单元和集成测试，能帮你轻松搞定代码模拟和覆盖率等繁琐环节，让测试跑得又快又省心。"
+}

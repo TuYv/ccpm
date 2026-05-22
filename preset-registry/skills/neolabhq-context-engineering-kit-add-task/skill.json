@@ -1,0 +1,26 @@
+{
+  "id": "neolabhq-context-engineering-kit-add-task",
+  "name": "add-task",
+  "description": "creates draft task file in .specs/tasks/draft/ with original user intent",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "NeoLabHQ",
+  "install_path": ".claude/skills/add-task/SKILL.md",
+  "source": {
+    "repo": "NeoLabHQ/context-engineering-kit",
+    "url": "https://github.com/NeoLabHQ/context-engineering-kit/blob/master/plugins/sdd/skills/add-task/SKILL.md",
+    "path": "plugins/sdd/skills/add-task/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-05-22T04:42:32.711Z",
+    "stars": 1025,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-22T00:32:29Z",
+    "license": "GPL-3.0"
+  },
+  "summary_zh": "它能自动生成包含用户原始意图的任务草稿文件，适合在收集需求时快速捕捉想法，避免遗忘，方便后续跟进细化。"
+}

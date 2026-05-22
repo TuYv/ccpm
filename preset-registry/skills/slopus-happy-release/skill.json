@@ -1,0 +1,26 @@
+{
+  "id": "slopus-happy-release",
+  "name": "release",
+  "description": "> Release pipeline for CLI, mobile, web, and server. Guides through version bumping, building, testing, publishing, and deploying. Replaces the old interactive release-it flow with a Claude Code-native experience. Use when user types /release or asks to release, publish, deploy, or ship any component.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "slopus",
+  "install_path": ".claude/skills/release/SKILL.md",
+  "source": {
+    "repo": "slopus/happy",
+    "url": "https://github.com/slopus/happy/blob/main/.agents/skills/release/SKILL.md",
+    "path": ".agents/skills/release/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:59.537Z",
+    "stars": 21032,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-18T02:10:40Z",
+    "license": "MIT"
+  },
+  "summary_zh": "Claude Code原生的自动化发布工具，能引导你顺畅走完版本升级、构建测试到部署上线的全流程，适合需要快速发布或部署各类组件的场景。"
+}

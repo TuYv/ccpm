@@ -1,0 +1,26 @@
+{
+  "id": "actionbook-rust-skills-rust-call-graph",
+  "name": "rust-call-graph",
+  "description": "Visualize Rust function call graphs using LSP. Triggers on: /call-graph, call hierarchy, who calls, what calls, 调用图, 调用关系, 谁调用了, 调用了谁",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "actionbook",
+  "install_path": ".claude/skills/rust-call-graph/SKILL.md",
+  "source": {
+    "repo": "actionbook/rust-skills",
+    "url": "https://github.com/actionbook/rust-skills/blob/main/skills/rust-call-graph/SKILL.md",
+    "path": "skills/rust-call-graph/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:02.252Z",
+    "stars": 1164,
+    "language": "Shell",
+    "pushed_at": "2026-05-12T12:59:42Z",
+    "license": null
+  },
+  "summary_zh": "这是一个借助LSP可视化Rust函数调用关系的工具，能帮你直观理清代码里谁调用了谁，特别适合阅读或重构复杂项目时快速梳理调用链。"
+}

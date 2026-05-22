@@ -1,0 +1,26 @@
+{
+  "id": "bitwize-music-studio-claude-ai-music-skills-sheet-music-publisher",
+  "name": "sheet-music-publisher",
+  "description": "Converts mastered audio to sheet music and creates printable songbooks. Use after mastering when the user wants sheet music or a songbook for their album.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "bitwize-music-studio",
+  "install_path": ".claude/skills/sheet-music-publisher/SKILL.md",
+  "source": {
+    "repo": "bitwize-music-studio/claude-ai-music-skills",
+    "url": "https://github.com/bitwize-music-studio/claude-ai-music-skills/blob/main/skills/sheet-music-publisher/SKILL.md",
+    "path": "skills/sheet-music-publisher/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:39.735Z",
+    "stars": 202,
+    "language": "Python",
+    "pushed_at": "2026-05-21T00:00:51Z",
+    "license": "CC0-1.0"
+  },
+  "summary_zh": "把母带音频转成乐谱并生成可打印歌本，适合专辑完成母带制作后，需要为作品制作配套乐谱或歌集的场景。"
+}

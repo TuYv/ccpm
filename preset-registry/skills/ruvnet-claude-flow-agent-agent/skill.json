@@ -1,0 +1,26 @@
+{
+  "id": "ruvnet-claude-flow-agent-agent",
+  "name": "agent-agent",
+  "description": "Agent skill for agent - invoke with $agent-agent",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ruvnet",
+  "install_path": ".claude/skills/agent-agent/SKILL.md",
+  "source": {
+    "repo": "ruvnet/claude-flow",
+    "url": "https://github.com/ruvnet/claude-flow/blob/main/.agents/skills/agent-agent/SKILL.md",
+    "path": ".agents/skills/agent-agent/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:41:56.733Z",
+    "stars": 53972,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-22T03:51:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个让AI智能体互相调用的技能插件，能打破单个智能体的能力局限，适合需要多智能体分工协作或任务委派的场景。"
+}

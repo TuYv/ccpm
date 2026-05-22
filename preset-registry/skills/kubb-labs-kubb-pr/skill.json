@@ -1,0 +1,26 @@
+{
+  "id": "kubb-labs-kubb-pr",
+  "name": "pr",
+  "description": "Rules and checklist for preparing PRs, creating changesets, and releasing packages in the monorepo.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "kubb-labs",
+  "install_path": ".claude/skills/pr/SKILL.md",
+  "source": {
+    "repo": "kubb-labs/kubb",
+    "url": "https://github.com/kubb-labs/kubb/blob/main/.skills/pr/SKILL.md",
+    "path": ".skills/pr/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:44.357Z",
+    "stars": 1722,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-21T18:57:54Z",
+    "license": null
+  },
+  "summary_zh": "这是一套单体仓库的开发规范与检查清单，帮你理清提PR、管理变更集和发版的流程，适合需要统一多包协作与版本发布标准的团队。"
+}

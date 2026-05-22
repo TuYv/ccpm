@@ -1,0 +1,26 @@
+{
+  "id": "wshobson-agents-architecture-decision-records",
+  "name": "architecture-decision-records",
+  "description": "Write and maintain Architecture Decision Records (ADRs) following best practices for technical decision documentation. Use when documenting significant technical decisions, reviewing past architectural choices, or establishing decision processes.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "wshobson",
+  "install_path": ".claude/skills/architecture-decision-records/SKILL.md",
+  "source": {
+    "repo": "wshobson/agents",
+    "url": "https://github.com/wshobson/agents/blob/main/plugins/documentation-generation/skills/architecture-decision-records/SKILL.md",
+    "path": "plugins/documentation-generation/skills/architecture-decision-records/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:58.894Z",
+    "stars": 35770,
+    "language": "Python",
+    "pushed_at": "2026-05-21T20:01:53Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个帮你按最佳实践编写和维护架构决策记录的模板，适合在记录重大技术决策、回顾历史架构选型或规范决策流程时使用，让技术选型有据可查。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "disler-claude-code-hooks-multi-agent-observability-video-processor",
+  "name": "Video Processor",
+  "description": "Process video files with audio extraction, format conversion (mp4, webm), and Whisper transcription. Use when user mentions video conversion, audio extraction, transcription, mp4, webm, ffmpeg, or whisper transcription.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "disler",
+  "install_path": ".claude/skills/video-processor/SKILL.md",
+  "source": {
+    "repo": "disler/claude-code-hooks-multi-agent-observability",
+    "url": "https://github.com/disler/claude-code-hooks-multi-agent-observability/blob/main/.claude/skills/video-processor/SKILL.md",
+    "path": ".claude/skills/video-processor/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:55.153Z",
+    "stars": 1426,
+    "language": "Python",
+    "pushed_at": "2026-02-08T23:59:13Z",
+    "license": null
+  },
+  "summary_zh": "这是一个视频处理工具，能帮你搞定视频转格式、提取音频，还能用Whisper把语音转成文字，适合需要快速处理视频音轨或生成字幕的场景。"
+}

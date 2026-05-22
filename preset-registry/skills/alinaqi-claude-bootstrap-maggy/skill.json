@@ -1,0 +1,26 @@
+{
+  "id": "alinaqi-claude-bootstrap-maggy",
+  "name": "maggy",
+  "description": "Maggy is a local AI engineering command center. AI-prioritized inbox across issue trackers (GitHub Issues/Asana), one-click TDD execute with iCPG context enrichment, daily competitor intelligence briefing.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alinaqi",
+  "install_path": ".claude/skills/maggy/SKILL.md",
+  "source": {
+    "repo": "alinaqi/claude-bootstrap",
+    "url": "https://github.com/alinaqi/claude-bootstrap/blob/main/skills/maggy/SKILL.md",
+    "path": "skills/maggy/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:27.423Z",
+    "stars": 641,
+    "language": "Python",
+    "pushed_at": "2026-05-21T22:01:29Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一款本地AI工程指挥中心，能帮你整合多平台任务并智能排优先级，一键执行TDD测试，每日推送竞品情报，适合需要高效处理杂乱工单并紧盯市场动态的开发者。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "jeffallan-claude-skills-rust-engineer",
+  "name": "rust-engineer",
+  "description": "Writes, reviews, and debugs idiomatic Rust code with memory safety and zero-cost abstractions. Implements ownership patterns, manages lifetimes, designs trait hierarchies, builds async applications with tokio, and structures error handling with Result/Option. Use when building Rust applications, solving ownership or borrowing issues, designing trait-based APIs, implementing async/await concurrency, creating FFI bindings, or optimizing for performance and memory safety. Invoke for Rust, Cargo, ow",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "jeffallan",
+  "install_path": ".claude/skills/rust-engineer/SKILL.md",
+  "source": {
+    "repo": "jeffallan/claude-skills",
+    "url": "https://github.com/jeffallan/claude-skills/blob/main/skills/rust-engineer/SKILL.md",
+    "path": "skills/rust-engineer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:59.988Z",
+    "stars": 9253,
+    "language": "Python",
+    "pushed_at": "2026-05-20T13:35:05Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个 Rust 专家助手，专写地道且内存安全的代码。当你卡在所有权或生命周期报错、需要设计异步或 trait 架构，以及做性能优化时特别好用。"
+}

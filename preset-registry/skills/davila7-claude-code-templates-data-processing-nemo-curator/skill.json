@@ -1,0 +1,26 @@
+{
+  "id": "davila7-claude-code-templates-data-processing-nemo-curator",
+  "name": "nemo-curator",
+  "description": "GPU-accelerated data curation for LLM training. Supports text/image/video/audio. Features fuzzy deduplication (16× faster), quality filtering (30+ heuristics), semantic deduplication, PII redaction, NSFW detection. Scales across GPUs with RAPIDS. Use for preparing high-quality training datasets, cleaning web data, or deduplicating large corpora.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "davila7",
+  "install_path": ".claude/skills/data-processing-nemo-curator/SKILL.md",
+  "source": {
+    "repo": "davila7/claude-code-templates",
+    "url": "https://github.com/davila7/claude-code-templates/blob/main/cli-tool/components/skills/ai-research/data-processing-nemo-curator/SKILL.md",
+    "path": "cli-tool/components/skills/ai-research/data-processing-nemo-curator/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:44.344Z",
+    "stars": 27482,
+    "language": "Python",
+    "pushed_at": "2026-05-22T04:31:04Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一款GPU加速的大模型数据加工工具，专门用来清洗网络数据、去重及脱敏大规模语料，帮你轻松准备高质量的训练集。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "bitwize-music-studio-claude-ai-music-skills-promote-idea",
+  "name": "promote-idea",
+  "description": "Converts an album idea from IDEAS.md into an actual album project in one step. Use when the user says \"promote [idea title]\", \"turn idea into album\", or \"start working on [idea]\".",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "bitwize-music-studio",
+  "install_path": ".claude/skills/promote-idea/SKILL.md",
+  "source": {
+    "repo": "bitwize-music-studio/claude-ai-music-skills",
+    "url": "https://github.com/bitwize-music-studio/claude-ai-music-skills/blob/main/skills/promote-idea/SKILL.md",
+    "path": "skills/promote-idea/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:38.252Z",
+    "stars": 202,
+    "language": "Python",
+    "pushed_at": "2026-05-21T00:00:51Z",
+    "license": "CC0-1.0"
+  },
+  "summary_zh": "一键把备忘文档里的专辑灵感落地成真正的项目工程，适合你想告别空想、直接动手开做某张专辑时使用。"
+}

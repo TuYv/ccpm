@@ -1,0 +1,26 @@
+{
+  "id": "agricidaniel-claude-ads-ads-attribution",
+  "name": "ads-attribution",
+  "description": "Cross-platform attribution health audit covering AdAttributionKit (iOS view-through 24h post-impression, WWDC 2025 configurable windows), GA4 attribution models (data-driven vs last-click), Consent Mode V2 enforcement, server-side attribution stitching, MMP integration health, and cross-device / cross-platform attribution. Use when user says attribution audit, attribution model, AdAttributionKit, AAK, view-through attribution, GA4 attribution, Consent Mode V2, conversion window, attribution wind",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "AgriciDaniel",
+  "install_path": ".claude/skills/ads-attribution/SKILL.md",
+  "source": {
+    "repo": "AgriciDaniel/claude-ads",
+    "url": "https://github.com/AgriciDaniel/claude-ads/blob/main/skills/ads-attribution/SKILL.md",
+    "path": "skills/ads-attribution/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:27.804Z",
+    "stars": 5109,
+    "language": "Python",
+    "pushed_at": "2026-05-18T17:32:57Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一款跨平台广告归因审计工具，能帮你全面排查多端数据拼接与归因链路的健康问题，适合需要精准评估多渠道广告效果或解决归因数据异常的场景。"
+}

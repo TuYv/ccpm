@@ -1,0 +1,26 @@
+{
+  "id": "actionbook-rust-skills-unsafe-checker",
+  "name": "unsafe-checker",
+  "description": "CRITICAL: Use for unsafe Rust code review and FFI. Triggers on: unsafe, raw pointer, FFI, extern, transmute, *mut, *const, union, #[repr(C)], libc, std::ffi, MaybeUninit, NonNull, SAFETY comment, soundness, undefined behavior, UB, safe wrapper, memory layout, bindgen, cbindgen, CString, CStr, 安全抽象, 裸指针, 外部函数接口, 内存布局, 不安全代码, FFI 绑定, 未定义行为",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "actionbook",
+  "install_path": ".claude/skills/unsafe-checker/SKILL.md",
+  "source": {
+    "repo": "actionbook/rust-skills",
+    "url": "https://github.com/actionbook/rust-skills/blob/main/skills/unsafe-checker/SKILL.md",
+    "path": "skills/unsafe-checker/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:03.147Z",
+    "stars": 1164,
+    "language": "Shell",
+    "pushed_at": "2026-05-12T12:59:42Z",
+    "license": null
+  },
+  "summary_zh": "专门审查 Rust 不安全代码与跨语言调用的工具，能帮你揪出内存隐患和未定义行为风险，适合做底层或 FFI 场景的代码把关。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "mksglu-claude-context-mode-ctx-insight",
+  "name": "ctx-insight",
+  "description": "| Open the context-mode Insight analytics dashboard in the browser. Shows personal metrics: session activity, tool usage, error rate, parallel work patterns, project focus, and actionable insights. First run installs dependencies (~30s). Subsequent runs open instantly. Trigger: /context-mode:ctx-insight",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mksglu",
+  "install_path": ".claude/skills/ctx-insight/SKILL.md",
+  "source": {
+    "repo": "mksglu/claude-context-mode",
+    "url": "https://github.com/mksglu/claude-context-mode/blob/main/skills/ctx-insight/SKILL.md",
+    "path": "skills/ctx-insight/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:51.562Z",
+    "stars": 15360,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-21T13:02:08Z",
+    "license": null
+  },
+  "summary_zh": "这是一个浏览器里的个人工作数据面板，能帮你追踪日常活动与项目专注度等指标，让你看清自身工作模式并获取优化建议，适合想复盘和提升效率的用户。"
+}

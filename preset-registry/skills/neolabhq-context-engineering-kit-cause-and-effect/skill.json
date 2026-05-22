@@ -1,0 +1,26 @@
+{
+  "id": "neolabhq-context-engineering-kit-cause-and-effect",
+  "name": "cause-and-effect",
+  "description": "Systematic Fishbone analysis exploring problem causes across six categories",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "NeoLabHQ",
+  "install_path": ".claude/skills/cause-and-effect/SKILL.md",
+  "source": {
+    "repo": "NeoLabHQ/context-engineering-kit",
+    "url": "https://github.com/NeoLabHQ/context-engineering-kit/blob/master/plugins/kaizen/skills/cause-and-effect/SKILL.md",
+    "path": "plugins/kaizen/skills/cause-and-effect/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-05-22T04:42:30.366Z",
+    "stars": 1025,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-22T00:32:29Z",
+    "license": "GPL-3.0"
+  },
+  "summary_zh": "这是一个鱼骨图分析工具，能帮你从六个维度系统梳理问题的根本原因，适合排查复杂故障或做根因分析时使用。"
+}

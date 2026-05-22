@@ -1,0 +1,26 @@
+{
+  "id": "zebbern-claude-code-guide-aws-penetration-testing",
+  "name": "AWS Penetration Testing",
+  "description": "This skill should be used when the user asks to \"pentest AWS\", \"test AWS security\", \"enumerate IAM\", \"exploit cloud infrastructure\", \"AWS privilege escalation\", \"S3 bucket testing\", \"metadata SSRF\", \"Lambda exploitation\", or needs guidance on Amazon Web Services security assessment.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "zebbern",
+  "install_path": ".claude/skills/aws-penetration-testing/SKILL.md",
+  "source": {
+    "repo": "zebbern/claude-code-guide",
+    "url": "https://github.com/zebbern/claude-code-guide/blob/main/skills/aws-penetration-testing/SKILL.md",
+    "path": "skills/aws-penetration-testing/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:08.357Z",
+    "stars": 4156,
+    "language": null,
+    "pushed_at": "2026-05-22T01:16:53Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一款亚马逊云安全测试工具，适合在评估云环境防护能力时使用，能帮你深入排查权限提升、配置错误等各类云特有漏洞与风险。"
+}

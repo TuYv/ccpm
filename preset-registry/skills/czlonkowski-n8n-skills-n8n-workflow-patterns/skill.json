@@ -1,0 +1,26 @@
+{
+  "id": "czlonkowski-n8n-skills-n8n-workflow-patterns",
+  "name": "n8n-workflow-patterns",
+  "description": "Proven workflow architectural patterns from real n8n workflows. Use when building new workflows, designing workflow structure, choosing workflow patterns, planning workflow architecture, or asking about webhook processing, HTTP API integration, database operations, AI agent workflows, batch processing, or scheduled tasks. Always consult this skill when the user asks to create, build, or design an n8n workflow, automate a process, or connect services — even if they don't explicitly mention 'patte",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "czlonkowski",
+  "install_path": ".claude/skills/n8n-workflow-patterns/SKILL.md",
+  "source": {
+    "repo": "czlonkowski/n8n-skills",
+    "url": "https://github.com/czlonkowski/n8n-skills/blob/main/skills/n8n-workflow-patterns/SKILL.md",
+    "path": "skills/n8n-workflow-patterns/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:14.654Z",
+    "stars": 5096,
+    "language": "Shell",
+    "pushed_at": "2026-05-06T13:23:16Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一套从真实案例提炼的n8n工作流架构模式。当你要搭建自动化流程或连接各种服务时，它能提供成熟的架构参考，帮你快速搞定工作流设计，少走弯路。"
+}

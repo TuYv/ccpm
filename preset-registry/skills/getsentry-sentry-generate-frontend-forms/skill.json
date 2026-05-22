@@ -1,0 +1,26 @@
+{
+  "id": "getsentry-sentry-generate-frontend-forms",
+  "name": "generate-frontend-forms",
+  "description": "Guide for creating forms using Sentry's new form system. Use when implementing forms, form fields, validation, or auto-save functionality.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "getsentry",
+  "install_path": ".claude/skills/generate-frontend-forms/SKILL.md",
+  "source": {
+    "repo": "getsentry/sentry",
+    "url": "https://github.com/getsentry/sentry/blob/master/.agents/skills/generate-frontend-forms/SKILL.md",
+    "path": ".agents/skills/generate-frontend-forms/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-05-22T04:42:50.833Z",
+    "stars": 43943,
+    "language": "Python",
+    "pushed_at": "2026-05-22T04:41:18Z",
+    "license": null
+  },
+  "summary_zh": "这是Sentry新表单系统的开发指南，适合在前端搭建表单、处理字段校验或实现自动保存时参考。"
+}

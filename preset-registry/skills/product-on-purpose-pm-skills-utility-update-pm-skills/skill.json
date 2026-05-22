@@ -1,0 +1,26 @@
+{
+  "id": "product-on-purpose-pm-skills-utility-update-pm-skills",
+  "name": "utility-update-pm-skills",
+  "description": ">- Checks for newer pm-skills releases, compares local vs. latest version, previews what would change, and updates local files after user confirmation. Generates a structured update report documenting changed files, new capabilities, and the value delta between versions. Use when you want to bring a local pm-skills installation up to date.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "product-on-purpose",
+  "install_path": ".claude/skills/utility-update-pm-skills/SKILL.md",
+  "source": {
+    "repo": "product-on-purpose/pm-skills",
+    "url": "https://github.com/product-on-purpose/pm-skills/blob/main/docs/internal/efforts/F-24-update-pm-skills/drafts/skills/utility-update-pm-skills/SKILL.md",
+    "path": "docs/internal/efforts/F-24-update-pm-skills/drafts/skills/utility-update-pm-skills/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:46:22.561Z",
+    "stars": 226,
+    "language": "Shell",
+    "pushed_at": "2026-05-22T03:57:47Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "这是一个更新本地 pm-skills 的工具，能对比版本差异、预览变更，确认后更新并生成报告。适合需要明确改动细节，再把本地环境安全升级到最新版的场景。"
+}

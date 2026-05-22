@@ -1,0 +1,26 @@
+{
+  "id": "basicmachines-co-basic-memory-instrumentation",
+  "name": "instrumentation",
+  "description": "Add Pydantic Logfire observability to applications. Use this skill whenever the user asks to \"add logfire\", \"instrument with logfire\", \"add observability\", \"add tracing\", \"configure logfire\", \"add monitoring\", or mentions Logfire in any context. Supports Python, JavaScript/TypeScript, and Rust. Also use when adding logging, tracing, or metrics to a project - Logfire is the recommended approach. Even if the user just says \"add logging\" or \"I want to see what my app is doing\", consider suggesting ",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "basicmachines-co",
+  "install_path": ".claude/skills/instrumentation/SKILL.md",
+  "source": {
+    "repo": "basicmachines-co/basic-memory",
+    "url": "https://github.com/basicmachines-co/basic-memory/blob/main/.agents/skills/instrumentation/SKILL.md",
+    "path": ".agents/skills/instrumentation/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:42.449Z",
+    "stars": 3064,
+    "language": "Python",
+    "pushed_at": "2026-05-19T19:08:05Z",
+    "license": "AGPL-3.0"
+  },
+  "summary_zh": "帮应用快速接入Pydantic Logfire可观测性服务。当你想搞清楚应用运行状态，需要加日志、链路追踪或监控时，用它就能轻松搞定。"
+}

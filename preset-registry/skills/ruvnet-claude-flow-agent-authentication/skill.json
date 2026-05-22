@@ -1,0 +1,26 @@
+{
+  "id": "ruvnet-claude-flow-agent-authentication",
+  "name": "agent-authentication",
+  "description": "Agent skill for authentication - invoke with $agent-authentication",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ruvnet",
+  "install_path": ".claude/skills/agent-authentication/SKILL.md",
+  "source": {
+    "repo": "ruvnet/claude-flow",
+    "url": "https://github.com/ruvnet/claude-flow/blob/main/.agents/skills/agent-authentication/SKILL.md",
+    "path": ".agents/skills/agent-authentication/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:41:57.512Z",
+    "stars": 53972,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-22T03:51:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一款专供智能体使用的身份认证技能，能让智能体在执行需要登录或鉴权的任务时，顺利通过身份校验。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "prompt-security-clawsec-picoclaw-traffic-guardian",
+  "name": "picoclaw-traffic-guardian",
+  "description": "Picoclaw runtime traffic monitoring baseline for lightweight AI gateway proxy inspection, egress detection, and posture integration.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "0.0.1-beta2",
+  "author": "prompt-security",
+  "install_path": ".claude/skills/picoclaw-traffic-guardian/SKILL.md",
+  "source": {
+    "repo": "prompt-security/clawsec",
+    "url": "https://github.com/prompt-security/clawsec/blob/main/skills/picoclaw-traffic-guardian/SKILL.md",
+    "path": "skills/picoclaw-traffic-guardian/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:46.716Z",
+    "stars": 1000,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-21T07:14:18Z",
+    "license": "AGPL-3.0"
+  },
+  "summary_zh": "这是一款轻量级 AI 网关的运行时流量监控底座，能解决代理审查、异常外发与安全态势对接难题，适合需要严格把控 AI 流量出入及合规风险的场景。"
+}

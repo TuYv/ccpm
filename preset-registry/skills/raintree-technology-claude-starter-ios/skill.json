@@ -1,0 +1,26 @@
+{
+  "id": "raintree-technology-claude-starter-ios",
+  "name": "ios-expert",
+  "description": "Expert on iOS development with Swift, UIKit, SwiftUI, Xcode, app architecture, platform features, and Apple ecosystem integration. Invoke when user mentions iOS, iPhone, iPad, Swift, SwiftUI, UIKit, Xcode, Apple development, or iOS-specific features.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "raintree-technology",
+  "install_path": ".claude/skills/ios/SKILL.md",
+  "source": {
+    "repo": "raintree-technology/claude-starter",
+    "url": "https://github.com/raintree-technology/claude-starter/blob/main/.claude/skills/ios/skill.md",
+    "path": ".claude/skills/ios/skill.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:53.308Z",
+    "stars": 76,
+    "language": "Zig",
+    "pushed_at": "2026-04-24T22:45:15Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个专精苹果生态的开发助手，遇到iPhone或iPad应用开发、架构设计或Xcode调试等iOS相关的疑难杂症，都能找它解答。"
+}

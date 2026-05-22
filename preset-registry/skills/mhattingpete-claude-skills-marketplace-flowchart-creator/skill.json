@@ -1,0 +1,26 @@
+{
+  "id": "mhattingpete-claude-skills-marketplace-flowchart-creator",
+  "name": "flowchart-creator",
+  "description": "Create HTML flowcharts and process diagrams with decision trees, color-coded stages, arrows, and swimlanes. Use when users request flowcharts, process diagrams, workflow visualizations, or decision trees.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mhattingpete",
+  "install_path": ".claude/skills/flowchart-creator/SKILL.md",
+  "source": {
+    "repo": "mhattingpete/claude-skills-marketplace",
+    "url": "https://github.com/mhattingpete/claude-skills-marketplace/blob/main/visual-documentation-plugin/skills/flowchart-creator/SKILL.md",
+    "path": "visual-documentation-plugin/skills/flowchart-creator/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:34.749Z",
+    "stars": 583,
+    "language": "HTML",
+    "pushed_at": "2026-03-06T10:14:25Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "这是一个生成 HTML 流程图的工具，适合需要可视化展示工作流、业务流程或决策逻辑的场景，帮你把复杂的步骤变得一目了然。"
+}

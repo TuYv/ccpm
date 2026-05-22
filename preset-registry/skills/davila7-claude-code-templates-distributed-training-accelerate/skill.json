@@ -1,0 +1,26 @@
+{
+  "id": "davila7-claude-code-templates-distributed-training-accelerate",
+  "name": "huggingface-accelerate",
+  "description": "Simplest distributed training API. 4 lines to add distributed support to any PyTorch script. Unified API for DeepSpeed/FSDP/Megatron/DDP. Automatic device placement, mixed precision (FP16/BF16/FP8). Interactive config, single launch command. HuggingFace ecosystem standard.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "davila7",
+  "install_path": ".claude/skills/distributed-training-accelerate/SKILL.md",
+  "source": {
+    "repo": "davila7/claude-code-templates",
+    "url": "https://github.com/davila7/claude-code-templates/blob/main/cli-tool/components/skills/ai-research/distributed-training-accelerate/SKILL.md",
+    "path": "cli-tool/components/skills/ai-research/distributed-training-accelerate/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:44.951Z",
+    "stars": 27482,
+    "language": "Python",
+    "pushed_at": "2026-05-22T04:31:04Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个极简的PyTorch分布式训练库，只需几行代码就能让单卡脚本轻松跑在多张显卡上，并统一了各种底层加速框架的接口，适合不想折腾繁琐配置的开发者。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "alirezarezvani-claude-skills-agenthub",
+  "name": "agenthub",
+  "description": "Multi-agent collaboration plugin that spawns N parallel subagents competing on the same task via git worktree isolation. Agents work independently, results are evaluated by metric or LLM judge, and the best branch is merged. Use when: user wants multiple approaches tried in parallel — code optimization, content variation, research exploration, or any task that benefits from parallel competition. Requires: a git repo.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alirezarezvani",
+  "install_path": ".claude/skills/agenthub/SKILL.md",
+  "source": {
+    "repo": "alirezarezvani/claude-skills",
+    "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/agenthub/SKILL.md",
+    "path": ".gemini/skills/agenthub/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:38.814Z",
+    "stars": 15795,
+    "language": "Python",
+    "pushed_at": "2026-05-21T17:51:26Z",
+    "license": "MIT"
+  },
+  "summary_zh": "多智能体并行协作插件，让多个AI同时尝试同一任务并自动评估保留最优方案。适合想同时对比多种思路的场景，比如代码优化、文案生成或研究探索。"
+}

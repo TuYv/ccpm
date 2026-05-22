@@ -1,0 +1,26 @@
+{
+  "id": "mhattingpete-claude-skills-marketplace-review-implementing",
+  "name": "review-implementing",
+  "description": "Process and implement code review feedback systematically. Use when user provides reviewer comments, PR feedback, code review notes, or asks to implement suggestions from reviews.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mhattingpete",
+  "install_path": ".claude/skills/review-implementing/SKILL.md",
+  "source": {
+    "repo": "mhattingpete/claude-skills-marketplace",
+    "url": "https://github.com/mhattingpete/claude-skills-marketplace/blob/main/engineering-workflow-plugin/skills/review-implementing/SKILL.md",
+    "path": "engineering-workflow-plugin/skills/review-implementing/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:34.123Z",
+    "stars": 583,
+    "language": "HTML",
+    "pushed_at": "2026-03-06T10:14:25Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "这是个帮你系统化处理并应用代码审查反馈的工具，适合在收到PR评论或修改建议后，快速完成代码调整。"
+}

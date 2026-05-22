@@ -1,0 +1,26 @@
+{
+  "id": "onmax-nuxt-skills-nuxthub",
+  "name": "nuxthub",
+  "description": "Use when building NuxtHub v0.10.6 applications - provides database (Drizzle ORM with sqlite/postgresql/mysql), KV storage, blob storage, and cache APIs. Covers configuration, schema definition, migrations, multi-cloud deployment (Cloudflare, Vercel), and the new hub:db, hub:kv, hub:blob virtual module imports.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "onmax",
+  "install_path": ".claude/skills/nuxthub/SKILL.md",
+  "source": {
+    "repo": "onmax/nuxt-skills",
+    "url": "https://github.com/onmax/nuxt-skills/blob/main/skills/nuxthub/SKILL.md",
+    "path": "skills/nuxthub/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:06.050Z",
+    "stars": 663,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-04T06:59:41Z",
+    "license": null
+  },
+  "summary_zh": "这是一个给 Nuxt 应用提供开箱即用后端能力的工具，内置数据库、存储和缓存接口并支持多云部署，适合前端开发者免折腾后端快速上线全栈项目。"
+}

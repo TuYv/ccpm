@@ -1,0 +1,26 @@
+{
+  "id": "jeffallan-claude-skills-swift-expert",
+  "name": "swift-expert",
+  "description": "Builds iOS/macOS/watchOS/tvOS applications, implements SwiftUI views and state management, designs protocol-oriented architectures, handles async/await concurrency, implements actors for thread safety, and debugs Swift-specific issues. Use when building iOS/macOS applications with Swift 5.9+, SwiftUI, or async/await concurrency. Invoke for protocol-oriented programming, SwiftUI state management, actors, server-side Swift, UIKit integration, Combine, or Vapor.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "jeffallan",
+  "install_path": ".claude/skills/swift-expert/SKILL.md",
+  "source": {
+    "repo": "jeffallan/claude-skills",
+    "url": "https://github.com/jeffallan/claude-skills/blob/main/skills/swift-expert/SKILL.md",
+    "path": "skills/swift-expert/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:46:00.750Z",
+    "stars": 9253,
+    "language": "Python",
+    "pushed_at": "2026-05-20T13:35:05Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个Swift开发助手，能帮你搞定苹果全平台App开发中的架构设计、界面状态管理、并发线程安全及各种Swift疑难杂症，适合日常应用开发或服务端场景。"
+}

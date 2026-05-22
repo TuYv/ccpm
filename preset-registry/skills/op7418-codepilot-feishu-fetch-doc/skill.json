@@ -1,0 +1,26 @@
+{
+  "id": "op7418-codepilot-feishu-fetch-doc",
+  "name": "feishu-fetch-doc",
+  "description": "| 获取飞书云文档内容。返回文档的 Markdown 内容，支持处理文档中的图片、文件和画板（需配合 feishu_doc_media 工具）。",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "op7418",
+  "install_path": ".claude/skills/feishu-fetch-doc/SKILL.md",
+  "source": {
+    "repo": "op7418/CodePilot",
+    "url": "https://github.com/op7418/CodePilot/blob/main/资料/feishu-openclaw-plugin/package/skills/feishu-fetch-doc/SKILL.md",
+    "path": "资料/feishu-openclaw-plugin/package/skills/feishu-fetch-doc/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:00.634Z",
+    "stars": 5769,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-11T06:07:30Z",
+    "license": null
+  },
+  "summary_zh": "它能把飞书云文档转为Markdown格式，并处理里面的图片等富媒体资源，解决飞书内容难以直接提取和迁移的问题，适合需要导出备份或对文档做二次加工的场景。"
+}

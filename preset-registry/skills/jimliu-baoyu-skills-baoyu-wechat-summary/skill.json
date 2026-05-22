@@ -1,0 +1,26 @@
+{
+  "id": "jimliu-baoyu-skills-baoyu-wechat-summary",
+  "name": "baoyu-wechat-summary",
+  "description": "Summarizes WeChat group chat highlights into a structured digest using the local wx-cli binary (https://github.com/jackwener/wx-cli). Generates a normal digest by default; a roast (毒舌) version is opt-in. Maintains per-group history (history.json + history-digests.jsonl) and per-user profiles across runs, with privacy guardrails baked in. Use when the user asks to \"总结群聊\", \"群聊精华\", \"群聊摘要\", \"summarize group chat\", \"group chat digest\", mentions a WeChat group name with a time range, says \"帮我看看 XX 群最近",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.117.3",
+  "author": "JimLiu",
+  "install_path": ".claude/skills/baoyu-wechat-summary/SKILL.md",
+  "source": {
+    "repo": "JimLiu/baoyu-skills",
+    "url": "https://github.com/JimLiu/baoyu-skills/blob/main/skills/baoyu-wechat-summary/SKILL.md",
+    "path": "skills/baoyu-wechat-summary/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:41:40.910Z",
+    "stars": 19108,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-21T21:56:22Z",
+    "license": null
+  },
+  "summary_zh": "这是一个整理微信群聊摘要的工具，能将冗长消息提炼成普通或毒舌版摘要，还自带记忆与隐私保护。适合群消息太多看不过来，想快速补课或了解群里最近聊了啥时使用。"
+}

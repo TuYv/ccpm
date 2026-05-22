@@ -1,0 +1,26 @@
+{
+  "id": "ruvnet-claude-flow-agent-crdt-synchronizer",
+  "name": "agent-crdt-synchronizer",
+  "description": "Agent skill for crdt-synchronizer - invoke with $agent-crdt-synchronizer",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ruvnet",
+  "install_path": ".claude/skills/agent-crdt-synchronizer/SKILL.md",
+  "source": {
+    "repo": "ruvnet/claude-flow",
+    "url": "https://github.com/ruvnet/claude-flow/blob/main/.agents/skills/agent-crdt-synchronizer/SKILL.md",
+    "path": ".agents/skills/agent-crdt-synchronizer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:41:59.278Z",
+    "stars": 53972,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-22T03:51:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个专为智能体设计的同步技能插件，让智能体能直接调用 CRDT 机制，轻松解决多端协作或分布式场景下的数据冲突与同步难题。"
+}

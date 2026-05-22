@@ -1,0 +1,26 @@
+{
+  "id": "mhattingpete-claude-skills-marketplace-codebase-documenter",
+  "name": "codebase-documenter",
+  "description": "Generates comprehensive documentation explaining how a codebase works, including architecture, key components, data flow, and development guidelines. Use when user wants to understand unfamiliar code, create onboarding docs, document architecture, or explain how the system works.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mhattingpete",
+  "install_path": ".claude/skills/codebase-documenter/SKILL.md",
+  "source": {
+    "repo": "mhattingpete/claude-skills-marketplace",
+    "url": "https://github.com/mhattingpete/claude-skills-marketplace/blob/main/productivity-skills-plugin/skills/codebase-documenter/SKILL.md",
+    "path": "productivity-skills-plugin/skills/codebase-documenter/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:34.361Z",
+    "stars": 583,
+    "language": "HTML",
+    "pushed_at": "2026-03-06T10:14:25Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "它能自动生成代码库解析文档，帮你讲清楚系统架构和运行机制。非常适合接手陌生项目时快速搞懂代码，或是需要给新人写入职文档、梳理整体架构的场景。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "ruvnet-claude-flow-agent-code-analyzer",
+  "name": "agent-code-analyzer",
+  "description": "Agent skill for code-analyzer - invoke with $agent-code-analyzer",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ruvnet",
+  "install_path": ".claude/skills/agent-code-analyzer/SKILL.md",
+  "source": {
+    "repo": "ruvnet/claude-flow",
+    "url": "https://github.com/ruvnet/claude-flow/blob/main/.agents/skills/agent-code-analyzer/SKILL.md",
+    "path": ".agents/skills/agent-code-analyzer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:41:58.267Z",
+    "stars": 53972,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-22T03:51:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个赋予AI助手代码分析能力的插件，适合需要在自动化工作流中让AI直接审查、理解或诊断代码的场景。"
+}

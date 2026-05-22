@@ -1,0 +1,26 @@
+{
+  "id": "deanpeters-product-manager-skills-finance-based-pricing-advisor",
+  "name": "finance-based-pricing-advisor",
+  "description": "Evaluate pricing changes using ARPU, conversion, churn risk, NRR, and payback. Use when deciding whether a pricing move should ship.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "deanpeters",
+  "install_path": ".claude/skills/finance-based-pricing-advisor/SKILL.md",
+  "source": {
+    "repo": "deanpeters/Product-Manager-Skills",
+    "url": "https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/finance-based-pricing-advisor/SKILL.md",
+    "path": "skills/finance-based-pricing-advisor/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:41:45.207Z",
+    "stars": 4428,
+    "language": "Shell",
+    "pushed_at": "2026-05-20T12:25:44Z",
+    "license": null
+  },
+  "summary_zh": "这是个定价调整评估工具，结合财务指标帮你算清调价对收入和流失的影响，解决新定价不敢拍板上线的问题，适合价格变动前的决策。"
+}

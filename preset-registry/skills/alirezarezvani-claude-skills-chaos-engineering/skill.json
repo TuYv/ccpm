@@ -1,0 +1,26 @@
+{
+  "id": "alirezarezvani-claude-skills-chaos-engineering",
+  "name": "chaos-engineering",
+  "description": "Use when planning, running, or learning from chaos engineering experiments. Triggers on \"chaos experiment\", \"fault injection\", \"gameday\", \"resilience test\", \"blast radius\", \"steady state\", \"abort criteria\", \"Chaos Toolkit\", \"Chaos Mesh\", \"Litmus\", \"Gremlin\", \"AWS FIS\", or any deliberate failure-injection question. Ships experiment designer, blast-radius calculator, and postmortem generator (all stdlib Python), 4 references on chaos principles + experiment design + attack taxonomy + tooling lands",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "2.4.0",
+  "author": "alirezarezvani",
+  "install_path": ".claude/skills/chaos-engineering/SKILL.md",
+  "source": {
+    "repo": "alirezarezvani/claude-skills",
+    "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/chaos-engineering/SKILL.md",
+    "path": ".gemini/skills/chaos-engineering/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:42.468Z",
+    "stars": 15795,
+    "language": "Python",
+    "pushed_at": "2026-05-21T17:51:26Z",
+    "license": "MIT"
+  },
+  "summary_zh": "混沌工程实验助手，帮你搞定故障注入与韧性测试的规划、执行和复盘，提供实验设计到复盘分析的全套支持，适合需要主动制造故障来检验系统稳定性的场景。"
+}

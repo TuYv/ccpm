@@ -1,0 +1,26 @@
+{
+  "id": "seifbenayed-claude-code-sdk-pdf-reading",
+  "name": "pdf-reading",
+  "description": "Use this skill when you need to read, inspect, or extract content from PDF files — especially when file content is NOT in your context and you need to read it from disk. Covers content inventory, text extraction, page rasterization for visual inspection, embedded image/attachment/table/form-field extraction, and choosing the right reading strategy for different document types (text-heavy, scanned, slide-decks, forms, data-heavy). Do NOT use this skill for PDF creation, form filling, merging, spl",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "SeifBenayed",
+  "install_path": ".claude/skills/pdf-reading/SKILL.md",
+  "source": {
+    "repo": "SeifBenayed/claude-code-sdk",
+    "url": "https://github.com/SeifBenayed/claude-code-sdk/blob/main/.claude/skills/pdf-reading/SKILL.md",
+    "path": ".claude/skills/pdf-reading/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:46:39.255Z",
+    "stars": 115,
+    "language": "JavaScript",
+    "pushed_at": "2026-04-05T20:03:07Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个专门读取和提取本地PDF内容的工具，适合需要直接从磁盘获取文件内部数据，或针对扫描件、表单等不同类型文档智能匹配读取策略的场景。"
+}

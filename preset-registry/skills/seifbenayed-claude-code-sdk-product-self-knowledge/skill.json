@@ -1,0 +1,26 @@
+{
+  "id": "seifbenayed-claude-code-sdk-product-self-knowledge",
+  "name": "product-self-knowledge",
+  "description": "Stop and consult this skill whenever your response would include specific facts about Anthropic's products. Covers: Claude Code (how to install, Node.js requirements, platform/OS support, MCP server integration, configuration), Claude API (function calling/tool use, batch processing, SDK usage, rate limits, pricing, models, streaming), and Claude.ai (Pro vs Team vs Enterprise plans, feature limits). Trigger this even for coding tasks that use the Anthropic SDK, content creation mentioning Claude",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "SeifBenayed",
+  "install_path": ".claude/skills/product-self-knowledge/SKILL.md",
+  "source": {
+    "repo": "SeifBenayed/claude-code-sdk",
+    "url": "https://github.com/SeifBenayed/claude-code-sdk/blob/main/.claude/skills/product-self-knowledge/SKILL.md",
+    "path": ".claude/skills/product-self-knowledge/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:46:39.673Z",
+    "stars": 115,
+    "language": "JavaScript",
+    "pushed_at": "2026-04-05T20:03:07Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个Anthropic产品知识库，能帮你随时查阅Claude的各类细节。当回答关于Claude的具体问题、用SDK写代码或进行相关创作时，随时参考它就能确保信息准确无误。"
+}

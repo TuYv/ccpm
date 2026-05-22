@@ -1,0 +1,26 @@
+{
+  "id": "agricidaniel-claude-ads-ads-generate",
+  "name": "ads-generate",
+  "description": "AI image generation for paid ad creatives. Reads campaign-brief.md and brand-profile.json to produce platform-sized ad images using banana-claude. Requires banana-claude (v1.4.1+) with nanobanana-mcp configured. Triggers on: generate ads, create images, make ad creatives, generate visuals, create ad images, generate campaign images, make the images, generate from brief.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "AgriciDaniel",
+  "install_path": ".claude/skills/ads-generate/SKILL.md",
+  "source": {
+    "repo": "AgriciDaniel/claude-ads",
+    "url": "https://github.com/AgriciDaniel/claude-ads/blob/main/skills/ads-generate/SKILL.md",
+    "path": "skills/ads-generate/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:28.473Z",
+    "stars": 5109,
+    "language": "Python",
+    "pushed_at": "2026-05-18T17:32:57Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一款AI广告图生成工具，能根据营销简报和品牌资料直接生成符合各平台尺寸的付费广告素材，帮你省去繁琐的排版调整，非常适合需要快速出图的营销场景。"
+}

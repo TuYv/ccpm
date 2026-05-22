@@ -1,0 +1,26 @@
+{
+  "id": "softaworks-agent-toolkit-requirements-clarity",
+  "name": "requirements-clarity",
+  "description": "Clarify ambiguous requirements through focused dialogue before implementation. Use when requirements are unclear, features are complex (>2 days), or involve cross-team coordination. Ask two core questions - Why? (YAGNI check) and Simpler? (KISS check) - to ensure clarity before coding.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "softaworks",
+  "install_path": ".claude/skills/requirements-clarity/SKILL.md",
+  "source": {
+    "repo": "softaworks/agent-toolkit",
+    "url": "https://github.com/softaworks/agent-toolkit/blob/main/dist/plugins/requirements-clarity/skills/requirements-clarity/SKILL.md",
+    "path": "dist/plugins/requirements-clarity/skills/requirements-clarity/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:20.621Z",
+    "stars": 1872,
+    "language": "Python",
+    "pushed_at": "2026-03-05T16:46:24Z",
+    "license": "MIT"
+  },
+  "summary_zh": "在写代码前通过对话澄清模糊需求，适合需求不清、功能复杂或跨团队协作的场景，帮你提前排除伪需求与过度设计，确保开发思路清晰。"
+}

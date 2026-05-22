@@ -1,0 +1,26 @@
+{
+  "id": "agent-sh-agentsys-perf-code-paths",
+  "name": "perf-code-paths",
+  "description": "Use when mapping code paths, entrypoints, and likely hot files before profiling.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "5.1.0",
+  "author": "agent-sh",
+  "install_path": ".claude/skills/perf-code-paths/SKILL.md",
+  "source": {
+    "repo": "agent-sh/agentsys",
+    "url": "https://github.com/agent-sh/agentsys/blob/main/.kiro/skills/perf-code-paths/SKILL.md",
+    "path": ".kiro/skills/perf-code-paths/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:03.441Z",
+    "stars": 813,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-21T17:59:34Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是个代码结构梳理工具，能在做性能分析前帮你提前摸清代码的执行脉络和潜在热点，让你找准优化方向，避免盲目排查。"
+}

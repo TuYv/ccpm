@@ -1,0 +1,26 @@
+{
+  "id": "addyosmani-agent-skills-using-agent-skills",
+  "name": "using-agent-skills",
+  "description": "Discovers and invokes agent skills. Use when starting a session or when you need to discover which skill applies to the current task. This is the meta-skill that governs how all other skills are discovered and invoked.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "addyosmani",
+  "install_path": ".claude/skills/using-agent-skills/SKILL.md",
+  "source": {
+    "repo": "addyosmani/agent-skills",
+    "url": "https://github.com/addyosmani/agent-skills/blob/main/skills/using-agent-skills/SKILL.md",
+    "path": "skills/using-agent-skills/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:24.458Z",
+    "stars": 44664,
+    "language": "Shell",
+    "pushed_at": "2026-05-16T22:00:25Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个专门管理AI代理技能的元工具，负责发现和调用其他技能。当你开启新对话，或者不确定当前任务该用哪个技能时，它能帮你快速匹配并激活合适的能力。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "obra-superpowers-finishing-a-development-branch",
+  "name": "finishing-a-development-branch",
+  "description": "Use when implementation is complete, all tests pass, and you need to decide how to integrate the work - guides completion of development work by presenting structured options for merge, PR, or cleanup",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "obra",
+  "install_path": ".claude/skills/finishing-a-development-branch/SKILL.md",
+  "source": {
+    "repo": "obra/superpowers",
+    "url": "https://github.com/obra/superpowers/blob/main/skills/finishing-a-development-branch/SKILL.md",
+    "path": "skills/finishing-a-development-branch/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:41:42.118Z",
+    "stars": 201805,
+    "language": "Shell",
+    "pushed_at": "2026-05-21T21:23:26Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个开发收尾指南，专门解决代码写完且测试通过后不知如何整合的问题，帮你理清直接合并、提PR还是清理分支的思路。"
+}

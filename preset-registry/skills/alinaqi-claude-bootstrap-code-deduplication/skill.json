@@ -1,0 +1,26 @@
+{
+  "id": "alinaqi-claude-bootstrap-code-deduplication",
+  "name": "code-deduplication",
+  "description": "Prevent semantic code duplication with capability index and check-before-write",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alinaqi",
+  "install_path": ".claude/skills/code-deduplication/SKILL.md",
+  "source": {
+    "repo": "alinaqi/claude-bootstrap",
+    "url": "https://github.com/alinaqi/claude-bootstrap/blob/main/skills/code-deduplication/SKILL.md",
+    "path": "skills/code-deduplication/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:24.942Z",
+    "stars": 641,
+    "language": "Python",
+    "pushed_at": "2026-05-21T22:01:29Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个防代码重复工具，能在写代码前自动匹配已有功能，帮你避免写出语义重复的代码，适合追求代码库精简和高度复用的场景。"
+}

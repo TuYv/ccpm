@@ -1,0 +1,26 @@
+{
+  "id": "aaron-he-zhu-seo-geo-claude-skills-serp-analysis",
+  "name": "serp-analysis",
+  "description": "Use when the user asks to \"analyze SERPs\"; reviews ranking factors, features, intent, AI Overviews, and snippets. SERP分析/搜索结果",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "9.9.9",
+  "author": "aaron-he-zhu",
+  "install_path": ".claude/skills/serp-analysis/SKILL.md",
+  "source": {
+    "repo": "aaron-he-zhu/seo-geo-claude-skills",
+    "url": "https://github.com/aaron-he-zhu/seo-geo-claude-skills/blob/main/research/serp-analysis/SKILL.md",
+    "path": "research/serp-analysis/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:00.970Z",
+    "stars": 1731,
+    "language": "Shell",
+    "pushed_at": "2026-05-14T08:11:30Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "这是一个搜索结果页分析工具，适合在需要拆解搜索排位时使用，帮你深度洞察排名逻辑、用户意图及AI摘要，轻松搞定搜索优化分析。"
+}

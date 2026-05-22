@@ -1,0 +1,26 @@
+{
+  "id": "addyosmani-web-quality-skills-best-practices",
+  "name": "best-practices",
+  "description": "Apply modern web development best practices for security, compatibility, and code quality. Use when asked to \"apply best practices\", \"security audit\", \"modernize code\", \"code quality review\", or \"check for vulnerabilities\".",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "addyosmani",
+  "install_path": ".claude/skills/best-practices/SKILL.md",
+  "source": {
+    "repo": "addyosmani/web-quality-skills",
+    "url": "https://github.com/addyosmani/web-quality-skills/blob/main/skills/best-practices/SKILL.md",
+    "path": "skills/best-practices/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:15.894Z",
+    "stars": 1970,
+    "language": "Shell",
+    "pushed_at": "2026-05-09T22:25:48Z",
+    "license": "MIT"
+  },
+  "summary_zh": "它能帮你将现代Web开发规范落地，排查安全漏洞、提升代码质量与兼容性，非常适合安全审计、代码审查或老代码现代化重构。"
+}

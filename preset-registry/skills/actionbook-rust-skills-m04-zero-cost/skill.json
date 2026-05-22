@@ -1,0 +1,26 @@
+{
+  "id": "actionbook-rust-skills-m04-zero-cost",
+  "name": "m04-zero-cost",
+  "description": "CRITICAL: Use for generics, traits, zero-cost abstraction. Triggers: E0277, E0308, E0599, generic, trait, impl, dyn, where, monomorphization, static dispatch, dynamic dispatch, impl Trait, trait bound not satisfied, 泛型, 特征, 零成本抽象, 单态化",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "actionbook",
+  "install_path": ".claude/skills/m04-zero-cost/SKILL.md",
+  "source": {
+    "repo": "actionbook/rust-skills",
+    "url": "https://github.com/actionbook/rust-skills/blob/main/skills/m04-zero-cost/SKILL.md",
+    "path": "skills/m04-zero-cost/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:01.078Z",
+    "stars": 1164,
+    "language": "Shell",
+    "pushed_at": "2026-05-12T12:59:42Z",
+    "license": null
+  },
+  "summary_zh": "专门解决Rust泛型与特征难题的工具，能帮你搞定特征约束报错，适合在写零成本抽象、处理单态化或静态分发时卡壳的场景使用。"
+}

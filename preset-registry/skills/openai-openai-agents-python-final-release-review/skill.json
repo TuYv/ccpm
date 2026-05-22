@@ -1,0 +1,26 @@
+{
+  "id": "openai-openai-agents-python-final-release-review",
+  "name": "final-release-review",
+  "description": "Perform a release-readiness review by locating the previous release tag from remote tags and auditing the diff (e.g., v1.2.3...<commit>) for breaking changes, regressions, improvement opportunities, and risks before releasing openai-agents-python.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openai",
+  "install_path": ".claude/skills/final-release-review/SKILL.md",
+  "source": {
+    "repo": "openai/openai-agents-python",
+    "url": "https://github.com/openai/openai-agents-python/blob/main/.agents/skills/final-release-review/SKILL.md",
+    "path": ".agents/skills/final-release-review/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:41.064Z",
+    "stars": 26561,
+    "language": "Python",
+    "pushed_at": "2026-05-22T01:08:07Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个发版前的审查工具，通过对比新旧版本差异来排查破坏性变更和回归风险，适合在正式发布前做最后的质量把关。"
+}

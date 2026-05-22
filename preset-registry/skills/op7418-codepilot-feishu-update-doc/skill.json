@@ -1,0 +1,26 @@
+{
+  "id": "op7418-codepilot-feishu-update-doc",
+  "name": "feishu-update-doc",
+  "description": "| 更新飞书云文档。支持 7 种更新模式：追加、覆盖、定位替换、全文替换、前/后插入、删除。",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "op7418",
+  "install_path": ".claude/skills/feishu-update-doc/SKILL.md",
+  "source": {
+    "repo": "op7418/CodePilot",
+    "url": "https://github.com/op7418/CodePilot/blob/main/资料/feishu-openclaw-plugin/package/skills/feishu-update-doc/SKILL.md",
+    "path": "资料/feishu-openclaw-plugin/package/skills/feishu-update-doc/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:00.965Z",
+    "stars": 5769,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-11T06:07:30Z",
+    "license": null
+  },
+  "summary_zh": "这是一个灵活编辑飞书云文档的工具，能精准控制内容的局部增删改。它解决了自动化维护文档时只能整体覆盖的痛点，适合程序化更新、动态追加日志或精细修改段落等场景。"
+}

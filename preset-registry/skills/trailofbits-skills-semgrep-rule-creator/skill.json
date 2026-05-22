@@ -1,0 +1,26 @@
+{
+  "id": "trailofbits-skills-semgrep-rule-creator",
+  "name": "semgrep-rule-creator",
+  "description": "Creates custom Semgrep rules for detecting security vulnerabilities, bug patterns, and code patterns. Use when writing Semgrep rules or building custom static analysis detections.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "trailofbits",
+  "install_path": ".claude/skills/semgrep-rule-creator/SKILL.md",
+  "source": {
+    "repo": "trailofbits/skills",
+    "url": "https://github.com/trailofbits/skills/blob/main/plugins/semgrep-rule-creator/skills/semgrep-rule-creator/SKILL.md",
+    "path": "plugins/semgrep-rule-creator/skills/semgrep-rule-creator/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:41:51.684Z",
+    "stars": 5325,
+    "language": "Python",
+    "pushed_at": "2026-05-16T17:22:25Z",
+    "license": "CC-BY-SA-4.0"
+  },
+  "summary_zh": "帮你自动生成自定义的 Semgrep 规则，用来检测安全漏洞和代码问题，适合需要写规则或做自定义静态分析的场景。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "thedotmack-claude-mem-do",
+  "name": "do",
+  "description": "Execute a phased implementation plan using subagents. Use when asked to execute, run, or carry out a plan — especially one created by make-plan.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "thedotmack",
+  "install_path": ".claude/skills/do/SKILL.md",
+  "source": {
+    "repo": "thedotmack/claude-mem",
+    "url": "https://github.com/thedotmack/claude-mem/blob/main/plugin/skills/do/SKILL.md",
+    "path": "plugin/skills/do/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:48.093Z",
+    "stars": 77318,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-21T10:26:19Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "它能调用子智能体分阶段执行计划，专门解决需要自动落实任务的需求，特别适合配合 make-plan 生成的计划使用。"
+}

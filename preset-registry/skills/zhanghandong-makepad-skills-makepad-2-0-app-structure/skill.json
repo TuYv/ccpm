@@ -1,0 +1,26 @@
+{
+  "id": "zhanghandong-makepad-skills-makepad-2-0-app-structure",
+  "name": "makepad-2.0-app-structure",
+  "description": "| CRITICAL: Use for Makepad 2.0 app structure and Rust integration. Triggers on: makepad app, makepad getting started, app_main!, App::run, MatchEvent, AppMain, handle_event, handle_actions, ScriptVm, from_script_mod, makepad boilerplate, makepad new project, makepad cargo, Cargo.toml setup, hot reload, --hot, live reload, wasm deploy, cargo makepad, media plugin, audio_output, audio_input, AudioBuffer, cx.audio, makepad audio, 音频, 应用结构, 入门, 新项目, 脚手架, 启动, 热重载, 部署",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ZhangHanDong",
+  "install_path": ".claude/skills/makepad-2.0-app-structure/SKILL.md",
+  "source": {
+    "repo": "ZhangHanDong/makepad-skills",
+    "url": "https://github.com/ZhangHanDong/makepad-skills/blob/main/skills/makepad-2.0-app-structure/SKILL.md",
+    "path": "skills/makepad-2.0-app-structure/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:31.775Z",
+    "stars": 737,
+    "language": null,
+    "pushed_at": "2026-04-07T15:51:03Z",
+    "license": null
+  },
+  "summary_zh": "这是Makepad 2.0的Rust应用脚手架，帮你快速搭建标准项目结构并跑通底层配置，省去从零搭环境的麻烦，适合需要热重载开发或跨平台部署的新项目。"
+}

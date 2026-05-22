@@ -1,0 +1,26 @@
+{
+  "id": "alinaqi-claude-bootstrap-aws-dynamodb",
+  "name": "aws-dynamodb",
+  "description": "AWS DynamoDB single-table design, GSI patterns, SDK v3 TypeScript/Python",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alinaqi",
+  "install_path": ".claude/skills/aws-dynamodb/SKILL.md",
+  "source": {
+    "repo": "alinaqi/claude-bootstrap",
+    "url": "https://github.com/alinaqi/claude-bootstrap/blob/main/skills/aws-dynamodb/SKILL.md",
+    "path": "skills/aws-dynamodb/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:24.209Z",
+    "stars": 641,
+    "language": "Python",
+    "pushed_at": "2026-05-21T22:01:29Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一套 DynamoDB 单表设计与索引模式的实战参考，帮你解决 NoSQL 数据建模难题，适合需要最佳实践参考的 TS/Python 开发者快速上手。"
+}

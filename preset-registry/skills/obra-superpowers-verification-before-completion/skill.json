@@ -1,0 +1,26 @@
+{
+  "id": "obra-superpowers-verification-before-completion",
+  "name": "verification-before-completion",
+  "description": "Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and confirming output before making any success claims; evidence before assertions always",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "obra",
+  "install_path": ".claude/skills/verification-before-completion/SKILL.md",
+  "source": {
+    "repo": "obra/superpowers",
+    "url": "https://github.com/obra/superpowers/blob/main/skills/verification-before-completion/SKILL.md",
+    "path": "skills/verification-before-completion/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:41:42.738Z",
+    "stars": 201805,
+    "language": "Shell",
+    "pushed_at": "2026-05-21T21:23:26Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个代码提交前的强制验证工具，专治没跑测试就宣称代码搞定的问题。它要求在提交或提PR前必须跑通验证命令并确认结果，确保先有证据再断言，避免提交带错代码。"
+}

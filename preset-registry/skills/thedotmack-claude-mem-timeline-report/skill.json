@@ -1,0 +1,26 @@
+{
+  "id": "thedotmack-claude-mem-timeline-report",
+  "name": "timeline-report",
+  "description": "Generate a \"Journey Into [Project]\" narrative report analyzing a project's entire development history from claude-mem's timeline. Use when asked for a timeline report, project history analysis, development journey, or full project report.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "thedotmack",
+  "install_path": ".claude/skills/timeline-report/SKILL.md",
+  "source": {
+    "repo": "thedotmack/claude-mem",
+    "url": "https://github.com/thedotmack/claude-mem/blob/main/plugin/skills/timeline-report/SKILL.md",
+    "path": "plugin/skills/timeline-report/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:48.826Z",
+    "stars": 77318,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-21T10:26:19Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "基于 claude-mem 时间线把项目开发史写成叙事报告的工具，特别适合需要复盘项目历史、梳理演进脉络或输出完整项目报告的场景。"
+}

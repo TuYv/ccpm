@@ -1,0 +1,26 @@
+{
+  "id": "kubb-labs-kubb-coding-style",
+  "name": "coding-style",
+  "description": "Coding style, testing, and PR guidelines. Use when writing or reviewing code.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "kubb-labs",
+  "install_path": ".claude/skills/coding-style/SKILL.md",
+  "source": {
+    "repo": "kubb-labs/kubb",
+    "url": "https://github.com/kubb-labs/kubb/blob/main/.skills/coding-style/SKILL.md",
+    "path": ".skills/coding-style/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:44.090Z",
+    "stars": 1722,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-21T18:57:54Z",
+    "license": null
+  },
+  "summary_zh": "提供代码风格、测试和提PR的规范指南，写代码或做代码审查时都能参考，帮你解决团队协作中规范不统一的问题。"
+}

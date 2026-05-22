@@ -1,0 +1,26 @@
+{
+  "id": "mutable-state-inc-ensue-skill-ensue-memory",
+  "name": "ensue-memory",
+  "description": "Augmented cognition layer that makes users smarter by connecting conversations to their persistent knowledge tree. Use proactively when topics arise that might have prior knowledge, and when users ask to remember, recall, search, or organize. Triggers on technical discussions, decision-making, project work, \"remember this\", \"recall\", \"what do I know about\", or any knowledge request.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mutable-state-inc",
+  "install_path": ".claude/skills/ensue-memory/SKILL.md",
+  "source": {
+    "repo": "mutable-state-inc/ensue-skill",
+    "url": "https://github.com/mutable-state-inc/ensue-skill/blob/main/skills/ensue-memory/SKILL.md",
+    "path": "skills/ensue-memory/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:38.263Z",
+    "stars": 420,
+    "language": "Shell",
+    "pushed_at": "2026-01-29T04:54:56Z",
+    "license": null
+  },
+  "summary_zh": "这是个把聊天内容沉淀为专属知识库的增强认知工具。适合在技术讨论、做决策或需要回忆、搜索过往信息时使用，能主动帮你联想和检索已有知识，让你不再遗忘重要细节。"
+}

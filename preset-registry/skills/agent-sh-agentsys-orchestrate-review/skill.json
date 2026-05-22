@@ -1,0 +1,26 @@
+{
+  "id": "agent-sh-agentsys-orchestrate-review",
+  "name": "orchestrate-review",
+  "description": "Use when user asks to \\\"deep review the code\\\", \\\"thorough code review\\\", \\\"multi-pass review\\\", or when orchestrating the Phase 9 review loop. Provides review pass definitions (code quality, security, performance, test coverage), signal detection patterns, and iteration algorithms.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "5.1.0",
+  "author": "agent-sh",
+  "install_path": ".claude/skills/orchestrate-review/SKILL.md",
+  "source": {
+    "repo": "agent-sh/agentsys",
+    "url": "https://github.com/agent-sh/agentsys/blob/main/.kiro/skills/orchestrate-review/SKILL.md",
+    "path": ".kiro/skills/orchestrate-review/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:03.042Z",
+    "stars": 813,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-21T17:59:34Z",
+    "license": "MIT"
+  },
+  "summary_zh": "专做深度或多轮代码审查的编排工具。当你需要全面、彻底地检查代码时，它能帮你把复杂的审查流程结构化，并提供问题检测与迭代机制，让深层隐患无处遁形。"
+}

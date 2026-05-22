@@ -1,0 +1,26 @@
+{
+  "id": "voltagent-voltagent-playwright-cli",
+  "name": "playwright-cli",
+  "description": "Automates browser interactions for web testing, form filling, screenshots, and data extraction. Use when the user needs to navigate websites, interact with web pages, fill forms, take screenshots, test web applications, or extract information from web pages.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "VoltAgent",
+  "install_path": ".claude/skills/playwright-cli/SKILL.md",
+  "source": {
+    "repo": "VoltAgent/voltagent",
+    "url": "https://github.com/VoltAgent/voltagent/blob/main/examples/with-workspace/workspace/skills/playwright-cli/SKILL.md",
+    "path": "examples/with-workspace/workspace/skills/playwright-cli/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:11.952Z",
+    "stars": 9075,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-11T18:05:17Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个浏览器自动化命令行工具，能代替人工完成繁琐的网页操作与数据采集，特别适合需要批量操控网页、自动化测试应用或抓取网站信息的场景。"
+}

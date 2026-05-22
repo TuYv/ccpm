@@ -1,0 +1,26 @@
+{
+  "id": "asklokesh-claudeskill-loki-mode-checkpoint-mode",
+  "name": "checkpoint-mode",
+  "description": "Pause for review every N tasks - selective autonomy pattern",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "asklokesh",
+  "install_path": ".claude/skills/checkpoint-mode/SKILL.md",
+  "source": {
+    "repo": "asklokesh/claudeskill-loki-mode",
+    "url": "https://github.com/asklokesh/claudeskill-loki-mode/blob/main/agent-skills/checkpoint-mode/SKILL.md",
+    "path": "agent-skills/checkpoint-mode/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:48.316Z",
+    "stars": 934,
+    "language": "Python",
+    "pushed_at": "2026-05-18T18:54:47Z",
+    "license": null
+  },
+  "summary_zh": "这是一种半自动执行模式，每跑完指定数量的任务就暂停等你检查，防止全自动流程失控，适合需要人工定期把关的批量操作场景。"
+}

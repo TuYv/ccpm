@@ -1,0 +1,26 @@
+{
+  "id": "deanpeters-product-manager-skills-user-story",
+  "name": "user-story",
+  "description": "Create user stories with Mike Cohn format and Gherkin acceptance criteria. Use when turning user needs into development-ready work with clear outcomes and testable conditions.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "deanpeters",
+  "install_path": ".claude/skills/user-story/SKILL.md",
+  "source": {
+    "repo": "deanpeters/Product-Manager-Skills",
+    "url": "https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/user-story/SKILL.md",
+    "path": "skills/user-story/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:41:47.696Z",
+    "stars": 4428,
+    "language": "Shell",
+    "pushed_at": "2026-05-20T12:25:44Z",
+    "license": null
+  },
+  "summary_zh": "这是一个规范编写需求文档的工具，能把模糊的用户需求拆解成开发可直接上手、结果明确且可测试的具体任务，非常适合需求梳理场景。"
+}

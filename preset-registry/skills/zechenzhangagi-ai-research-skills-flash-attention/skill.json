@@ -1,0 +1,26 @@
+{
+  "id": "zechenzhangagi-ai-research-skills-flash-attention",
+  "name": "optimizing-attention-flash",
+  "description": "Optimizes transformer attention with Flash Attention for 2-4x speedup and 10-20x memory reduction. Use when training/running transformers with long sequences (>512 tokens), encountering GPU memory issues with attention, or need faster inference. Supports PyTorch native SDPA, flash-attn library, H100 FP8, and sliding window attention.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "zechenzhangAGI",
+  "install_path": ".claude/skills/flash-attention/SKILL.md",
+  "source": {
+    "repo": "zechenzhangAGI/AI-research-SKILLs",
+    "url": "https://github.com/zechenzhangAGI/AI-research-SKILLs/blob/main/10-optimization/flash-attention/SKILL.md",
+    "path": "10-optimization/flash-attention/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:42.466Z",
+    "stars": 8786,
+    "language": "TeX",
+    "pushed_at": "2026-04-28T05:09:27Z",
+    "license": "MIT"
+  },
+  "summary_zh": "优化Transformer注意力计算的工具，能大幅省显存并加速。特别适合跑长序列（超512词）显存不够，或者需要加速推理的场景。"
+}

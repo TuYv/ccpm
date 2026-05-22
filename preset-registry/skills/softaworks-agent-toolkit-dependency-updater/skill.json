@@ -1,0 +1,26 @@
+{
+  "id": "softaworks-agent-toolkit-dependency-updater",
+  "name": "dependency-updater",
+  "description": "Smart dependency management for any language. Auto-detects project type, applies safe updates automatically, prompts for major versions, diagnoses and fixes dependency issues.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "softaworks",
+  "install_path": ".claude/skills/dependency-updater/SKILL.md",
+  "source": {
+    "repo": "softaworks/agent-toolkit",
+    "url": "https://github.com/softaworks/agent-toolkit/blob/main/skills/dependency-updater/SKILL.md",
+    "path": "skills/dependency-updater/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:22.186Z",
+    "stars": 1872,
+    "language": "Python",
+    "pushed_at": "2026-03-05T16:46:24Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个多语言通用的智能依赖管理工具，能自动帮你搞定日常更新、大版本升级和依赖冲突，彻底告别手动维护与排错的繁琐。"
+}

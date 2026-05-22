@@ -1,0 +1,26 @@
+{
+  "id": "seifbenayed-claude-code-sdk-skill-creator",
+  "name": "skill-creator",
+  "description": "Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, edit, or optimize an existing skill, run evals to test a skill, benchmark skill performance with variance analysis, or optimize a skill's description for better triggering accuracy.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "SeifBenayed",
+  "install_path": ".claude/skills/skill-creator/SKILL.md",
+  "source": {
+    "repo": "SeifBenayed/claude-code-sdk",
+    "url": "https://github.com/SeifBenayed/claude-code-sdk/blob/main/.claude/skills/skill-creator/SKILL.md",
+    "path": ".claude/skills/skill-creator/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:46:40.094Z",
+    "stars": 115,
+    "language": "JavaScript",
+    "pushed_at": "2026-04-05T20:03:07Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个帮你创建、修改和优化AI技能的工具。当你需要从零搭建技能、跑测试评估性能，或是优化技能描述提升触发准确率时，用它就对了。"
+}

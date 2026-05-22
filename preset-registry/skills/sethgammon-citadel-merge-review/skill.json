@@ -1,0 +1,26 @@
+{
+  "id": "sethgammon-citadel-merge-review",
+  "name": "merge-review",
+  "description": ">- Reviews pending fleet worktree merges before they're accepted. Reads the merge-check queue, detects file-level conflicts between branches, proposes a safe merge order, and surfaces reconciliation plans for overlapping changes.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "SethGammon",
+  "install_path": ".claude/skills/merge-review/SKILL.md",
+  "source": {
+    "repo": "SethGammon/Citadel",
+    "url": "https://github.com/SethGammon/Citadel/blob/main/skills/merge-review/SKILL.md",
+    "path": "skills/merge-review/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:06.698Z",
+    "stars": 572,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-07T17:50:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个代码合并预检工具，能提前发现分支间的文件冲突，自动规划安全的合并顺序并给出解决建议，专治多分支并行开发时的合并混乱与冲突难题。"
+}

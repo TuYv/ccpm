@@ -1,0 +1,26 @@
+{
+  "id": "agent-sh-agentsys-repo-intel",
+  "name": "repo-intel",
+  "description": "Use when user asks to \\\"run repo intel\\\", \\\"generate repo map\\\", \\\"analyze repo\\\", \\\"query hotspots\\\", \\\"check ownership\\\", or \\\"bus factor\\\". Unified static analysis - git history, AST symbols, project metadata.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "agent-sh",
+  "install_path": ".claude/skills/repo-intel/SKILL.md",
+  "source": {
+    "repo": "agent-sh/agentsys",
+    "url": "https://github.com/agent-sh/agentsys/blob/main/.kiro/skills/repo-intel/SKILL.md",
+    "path": ".kiro/skills/repo-intel/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:03.934Z",
+    "stars": 813,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-21T17:59:34Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一款代码库静态分析工具，能帮你快速摸底项目结构，定位高频修改的热点代码，明确代码归属并评估人员流失风险，非常适合接手或盘点复杂项目。"
+}

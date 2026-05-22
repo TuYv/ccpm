@@ -1,0 +1,26 @@
+{
+  "id": "ruvnet-claude-flow-agent-orchestrator-task",
+  "name": "agent-orchestrator-task",
+  "description": "Agent skill for orchestrator-task - invoke with $agent-orchestrator-task",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ruvnet",
+  "install_path": ".claude/skills/agent-orchestrator-task/SKILL.md",
+  "source": {
+    "repo": "ruvnet/claude-flow",
+    "url": "https://github.com/ruvnet/claude-flow/blob/main/.agents/skills/agent-orchestrator-task/SKILL.md",
+    "path": ".agents/skills/agent-orchestrator-task/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:01.703Z",
+    "stars": 53972,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-22T03:51:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个AI代理的任务编排插件，能帮你调度和分配各个代理的工作，适合需要多个AI协同完成复杂工作流的场景。"
+}

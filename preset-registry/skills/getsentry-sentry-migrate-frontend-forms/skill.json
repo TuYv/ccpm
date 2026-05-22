@@ -1,0 +1,26 @@
+{
+  "id": "getsentry-sentry-migrate-frontend-forms",
+  "name": "migrate-frontend-forms",
+  "description": "Guide for migrating forms from the legacy JsonForm/FormModel system to the new TanStack-based form system.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "getsentry",
+  "install_path": ".claude/skills/migrate-frontend-forms/SKILL.md",
+  "source": {
+    "repo": "getsentry/sentry",
+    "url": "https://github.com/getsentry/sentry/blob/master/.agents/skills/migrate-frontend-forms/SKILL.md",
+    "path": ".agents/skills/migrate-frontend-forms/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-05-22T04:42:51.711Z",
+    "stars": 43943,
+    "language": "Python",
+    "pushed_at": "2026-05-22T04:41:18Z",
+    "license": null
+  },
+  "summary_zh": "帮你把旧版 JsonForm/FormModel 系统的表单，迁移到基于 TanStack 的新表单系统，适合需要升级前端表单架构的开发者参考。"
+}

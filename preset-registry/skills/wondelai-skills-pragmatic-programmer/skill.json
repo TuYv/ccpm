@@ -1,0 +1,26 @@
+{
+  "id": "wondelai-skills-pragmatic-programmer",
+  "name": "pragmatic-programmer",
+  "description": "Apply meta-principles of software craftsmanship: DRY, orthogonality, tracer bullets, and design by contract. Use when the user mentions \"best practices\", \"pragmatic approach\", \"broken windows\", \"tracer bullet\", \"software craftsmanship\", \"technical debt prevention\", \"prototype vs tracer bullet\", or \"code ownership\". Also trigger when evaluating build-vs-buy decisions, designing estimation approaches, or choosing between reversible and irreversible architectural decisions. Covers estimation, domai",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "wondelai",
+  "install_path": ".claude/skills/pragmatic-programmer/SKILL.md",
+  "source": {
+    "repo": "wondelai/skills",
+    "url": "https://github.com/wondelai/skills/blob/main/pragmatic-programmer/SKILL.md",
+    "path": "pragmatic-programmer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:46:36.570Z",
+    "stars": 1047,
+    "language": "Shell",
+    "pushed_at": "2026-05-15T11:40:40Z",
+    "license": "MIT"
+  },
+  "summary_zh": "它是应用软件工艺元原则的开发指南，适合在探讨最佳实践、预防技术债、评估自建还是购买，以及权衡架构决策时参考，帮你解决设计难题，写出务实的代码。"
+}

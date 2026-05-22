@@ -1,0 +1,26 @@
+{
+  "id": "softaworks-agent-toolkit-database-schema-designer",
+  "name": "database-schema-designer",
+  "description": "Design robust, scalable database schemas for SQL and NoSQL databases. Provides normalization guidelines, indexing strategies, migration patterns, constraint design, and performance optimization. Ensures data integrity, query performance, and maintainable data models.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "softaworks",
+  "install_path": ".claude/skills/database-schema-designer/SKILL.md",
+  "source": {
+    "repo": "softaworks/agent-toolkit",
+    "url": "https://github.com/softaworks/agent-toolkit/blob/main/skills/database-schema-designer/SKILL.md",
+    "path": "skills/database-schema-designer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:21.992Z",
+    "stars": 1872,
+    "language": "Python",
+    "pushed_at": "2026-03-05T16:46:24Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个数据库表结构设计工具，能帮你搞定SQL和NoSQL的架构搭建，解决数据冗余、查询慢、难维护等痛点，适合从零建库或重构数据库架构的场景。"
+}

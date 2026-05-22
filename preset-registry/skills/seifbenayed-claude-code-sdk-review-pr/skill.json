@@ -1,0 +1,26 @@
+{
+  "id": "seifbenayed-claude-code-sdk-review-pr",
+  "name": "review-pr",
+  "description": "Review a pull request for bugs, security issues, and improvements. Use when the user asks to review a PR, review changes, or check code quality of a branch.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "SeifBenayed",
+  "install_path": ".claude/skills/review-pr/SKILL.md",
+  "source": {
+    "repo": "SeifBenayed/claude-code-sdk",
+    "url": "https://github.com/SeifBenayed/claude-code-sdk/blob/main/.claude/skills/review-pr/SKILL.md",
+    "path": ".claude/skills/review-pr/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:46:39.830Z",
+    "stars": 115,
+    "language": "JavaScript",
+    "pushed_at": "2026-04-05T20:03:07Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个代码审查助手，专门用来检查 PR 或分支的代码变更，帮你揪出里面的 Bug、安全漏洞和可优化的点，轻松把控代码质量。"
+}

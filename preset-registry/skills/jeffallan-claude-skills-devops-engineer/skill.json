@@ -1,0 +1,26 @@
+{
+  "id": "jeffallan-claude-skills-devops-engineer",
+  "name": "devops-engineer",
+  "description": "Creates Dockerfiles, configures CI/CD pipelines, writes Kubernetes manifests, and generates Terraform/Pulumi infrastructure templates. Handles deployment automation, GitOps configuration, incident response runbooks, and internal developer platform tooling. Use when setting up CI/CD pipelines, containerizing applications, managing infrastructure as code, deploying to Kubernetes clusters, configuring cloud platforms, automating releases, or responding to production incidents. Invoke for pipelines,",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "jeffallan",
+  "install_path": ".claude/skills/devops-engineer/SKILL.md",
+  "source": {
+    "repo": "jeffallan/claude-skills",
+    "url": "https://github.com/jeffallan/claude-skills/blob/main/skills/devops-engineer/SKILL.md",
+    "path": "skills/devops-engineer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:57.395Z",
+    "stars": 9253,
+    "language": "Python",
+    "pushed_at": "2026-05-20T13:35:05Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个自动生成运维配置的工具，能快速产出各类部署与云架构模板，省去手写麻烦，适合应用容器化、搭建流水线、管理基础设施及应对生产事故。"
+}

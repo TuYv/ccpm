@@ -1,0 +1,26 @@
+{
+  "id": "openshift-rosa-rosa-aws-context",
+  "name": "ROSA AWS Context",
+  "description": "Cross-check AWS-facing code and docs against official ROSA and AWS references before changing behavior.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openshift",
+  "install_path": ".claude/skills/rosa-aws-context/SKILL.md",
+  "source": {
+    "repo": "openshift/rosa",
+    "url": "https://github.com/openshift/rosa/blob/master/.claude/skills/rosa-aws-context/SKILL.md",
+    "path": ".claude/skills/rosa-aws-context/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-05-22T04:42:53.549Z",
+    "stars": 102,
+    "language": "Go",
+    "pushed_at": "2026-05-22T02:10:14Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "它是一款校验工具，在修改涉及AWS的代码或文档前，帮你对照ROSA和AWS的官方参考进行核对，防止引入错误的改动。"
+}

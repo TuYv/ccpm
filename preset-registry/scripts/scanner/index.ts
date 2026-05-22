@@ -7,7 +7,7 @@ import { fetchFile, fetchReadme } from "./searcher.js";
 import { discoverFromAwesomeLists } from "./awesome-source.js";
 import { scoreHit } from "./scorer.js";
 import { normalizeToPreset, type PresetEntry } from "./normalizer.js";
-import { discoverSkills } from "./skills-scanner.js";
+import { discoverSkills, discoverSkillsFromHits } from "./skills-scanner.js";
 import { discoverMcps } from "./mcps-scanner.js";
 import { runTranslations } from "./translator.js";
 
@@ -70,9 +70,18 @@ async function main() {
   const sleep = (ms: number) => new Promise<void>((r) => setTimeout(r, ms));
   const accepted: PresetEntry[] = [];
   let rejectedNonSharing = 0;
+  let migratedSkillRepos = 0;
   for (let i = 0; i < hits.length; i++) {
     const hit = hits[i];
     try {
+      if ((hit.signals?.skill_paths ?? []).length > 0) {
+        const presetId = hit.repo.replace("/", "-").toLowerCase().replace(/[^a-z0-9-]/g, "-");
+        await rm(join(REGISTRY_DIR, "presets", presetId), { recursive: true, force: true });
+        migratedSkillRepos++;
+        if (i < hits.length - 1) await sleep(100);
+        continue;
+      }
+
       const content = await fetchFile(octokit, hit.repo, hit.default_branch, hit.path);
       if (!content) {
         if (i < hits.length - 1) await sleep(100);
@@ -174,12 +183,13 @@ async function main() {
   const auto = rootEntries.filter((e) => e.source).length;
   const curatedN = rootEntries.length - auto;
   console.log(
-    `[presets] this run accepted ${accepted.length} new entries (rejected ${rejectedNonSharing} as non-sharing); index now has ${rootEntries.length} (${curatedN} curated + ${auto} auto-discovered)`,
+    `[presets] this run accepted ${accepted.length} new entries (rejected ${rejectedNonSharing} as non-sharing, migrated ${migratedSkillRepos} skill repos); index now has ${rootEntries.length} (${curatedN} curated + ${auto} auto-discovered)`,
   );
 
   // ── Skills namespace ────────────────────────────────────────────────────────
   try {
     await discoverSkills(octokit, REGISTRY_DIR);
+    await discoverSkillsFromHits(octokit, REGISTRY_DIR, hits);
   } catch (e) {
     console.error(`[skills] discovery failed: ${e}`);
   }

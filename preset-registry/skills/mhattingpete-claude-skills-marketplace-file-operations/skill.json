@@ -1,0 +1,26 @@
+{
+  "id": "mhattingpete-claude-skills-marketplace-file-operations",
+  "name": "file-operations",
+  "description": "Analyze files and get detailed metadata including size, line counts, modification times, and content statistics. Use when users request file information, statistics, or analysis without modifying files.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mhattingpete",
+  "install_path": ".claude/skills/file-operations/SKILL.md",
+  "source": {
+    "repo": "mhattingpete/claude-skills-marketplace",
+    "url": "https://github.com/mhattingpete/claude-skills-marketplace/blob/main/code-operations-plugin/skills/file-operations/SKILL.md",
+    "path": "code-operations-plugin/skills/file-operations/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:33.795Z",
+    "stars": 583,
+    "language": "HTML",
+    "pushed_at": "2026-03-06T10:14:25Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "它能在不改动原文件的情况下提取详细元数据和内容统计，非常适合需要只读查看或汇总分析文件信息的场景。"
+}

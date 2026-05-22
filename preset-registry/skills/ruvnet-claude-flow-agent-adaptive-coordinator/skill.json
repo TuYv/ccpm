@@ -1,0 +1,26 @@
+{
+  "id": "ruvnet-claude-flow-agent-adaptive-coordinator",
+  "name": "agent-adaptive-coordinator",
+  "description": "Agent skill for adaptive-coordinator - invoke with $agent-adaptive-coordinator",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ruvnet",
+  "install_path": ".claude/skills/agent-adaptive-coordinator/SKILL.md",
+  "source": {
+    "repo": "ruvnet/claude-flow",
+    "url": "https://github.com/ruvnet/claude-flow/blob/main/.agents/skills/agent-adaptive-coordinator/SKILL.md",
+    "path": ".agents/skills/agent-adaptive-coordinator/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:41:56.551Z",
+    "stars": 53972,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-22T03:51:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "给AI智能体加的自适应协调技能，能解决多任务或多智能体协作时调度死板的问题，适合需要动态分配与灵活统筹的场景。"
+}

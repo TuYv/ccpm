@@ -1,0 +1,26 @@
+{
+  "id": "ryoppippi-ccusage-ccusage-rust-profile",
+  "name": "ccusage-rust-profile",
+  "description": "Profiles ccusage native Rust CLI performance. Use when debugging slow Rust commands, comparing branch speed, reading profiles, or validating optimization work.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ryoppippi",
+  "install_path": ".claude/skills/ccusage-rust-profile/SKILL.md",
+  "source": {
+    "repo": "ryoppippi/ccusage",
+    "url": "https://github.com/ryoppippi/ccusage/blob/main/.agents/skills/ccusage-rust-profile/SKILL.md",
+    "path": ".agents/skills/ccusage-rust-profile/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:04.833Z",
+    "stars": 14512,
+    "language": "Rust",
+    "pushed_at": "2026-05-21T16:12:47Z",
+    "license": null
+  },
+  "summary_zh": "用来分析原生Rust命令行工具的性能，适合在排查卡顿、验证优化等性能调优场景下使用。"
+}

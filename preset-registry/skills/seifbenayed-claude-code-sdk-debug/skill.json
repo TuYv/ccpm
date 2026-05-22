@@ -1,0 +1,26 @@
+{
+  "id": "seifbenayed-claude-code-sdk-debug",
+  "name": "debug",
+  "description": "Troubleshoot and debug issues. Use when the user reports an error, a test failure, unexpected behavior, or asks to investigate why something isn't working.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "SeifBenayed",
+  "install_path": ".claude/skills/debug/SKILL.md",
+  "source": {
+    "repo": "SeifBenayed/claude-code-sdk",
+    "url": "https://github.com/SeifBenayed/claude-code-sdk/blob/main/.claude/skills/debug/SKILL.md",
+    "path": ".claude/skills/debug/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:46:38.629Z",
+    "stars": 115,
+    "language": "JavaScript",
+    "pushed_at": "2026-04-05T20:03:07Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个专门排查和调试问题的工具，适合在遇到报错、测试失败或程序行为异常时，帮你快速查明到底哪里出了毛病。"
+}

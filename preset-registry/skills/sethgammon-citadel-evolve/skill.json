@@ -1,0 +1,26 @@
+{
+  "id": "sethgammon-citadel-evolve",
+  "name": "evolve",
+  "description": ">- Research-driven multi-cycle improvement director. Forms causal hypotheses about why scores are low, validates them with scout agents before attacking, dispatches axis-parallel fleet attacks, extracts transferable patterns, and runs indefinitely within a budget envelope. Accumulates a persistent belief model and pattern library across sessions.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "SethGammon",
+  "install_path": ".claude/skills/evolve/SKILL.md",
+  "source": {
+    "repo": "SethGammon/Citadel",
+    "url": "https://github.com/SethGammon/Citadel/blob/main/skills/evolve/SKILL.md",
+    "path": "skills/evolve/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:05.846Z",
+    "stars": 572,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-07T17:50:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个智能迭代优化控制器，能自动诊断表现不佳的原因，验证假设后执行针对性改进，并在预算内持续循环。它还会不断积累经验库，适合需要自动化持续调优和策略寻优的场景。"
+}

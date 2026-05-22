@@ -1,0 +1,26 @@
+{
+  "id": "neolabhq-context-engineering-kit-create-agent",
+  "name": "create-agent",
+  "description": "Comprehensive guide for creating Claude Code agents with proper structure, triggering conditions, system prompts, and validation - combines official Anthropic best practices with proven patterns",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "NeoLabHQ",
+  "install_path": ".claude/skills/create-agent/SKILL.md",
+  "source": {
+    "repo": "NeoLabHQ/context-engineering-kit",
+    "url": "https://github.com/NeoLabHQ/context-engineering-kit/blob/master/plugins/customaize-agent/skills/create-agent/SKILL.md",
+    "path": "plugins/customaize-agent/skills/create-agent/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-05-22T04:42:27.916Z",
+    "stars": 1025,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-22T00:32:29Z",
+    "license": "GPL-3.0"
+  },
+  "summary_zh": "这是一份结合官方最佳实践的实战指南，帮你解决从零搭建 Claude 代码智能体的难题，轻松开发出结构规范且运行可靠的智能体，适合想要规范开发智能体的场景。"
+}

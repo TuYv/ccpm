@@ -1,0 +1,26 @@
+{
+  "id": "seifbenayed-claude-code-sdk-pdf",
+  "name": "pdf",
+  "description": "Use this skill whenever the user wants to do anything with PDF files. This includes reading or extracting text/tables from PDFs, combining or merging multiple PDFs into one, splitting PDFs apart, rotating pages, adding watermarks, creating new PDFs, filling PDF forms, encrypting/decrypting PDFs, extracting images, and OCR on scanned PDFs to make them searchable. If the user mentions a .pdf file or asks to produce one, use this skill.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "SeifBenayed",
+  "install_path": ".claude/skills/pdf/SKILL.md",
+  "source": {
+    "repo": "SeifBenayed/claude-code-sdk",
+    "url": "https://github.com/SeifBenayed/claude-code-sdk/blob/main/.claude/skills/pdf/SKILL.md",
+    "path": ".claude/skills/pdf/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:46:39.384Z",
+    "stars": 115,
+    "language": "JavaScript",
+    "pushed_at": "2026-04-05T20:03:07Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个全能的电子文档处理助手，能一站式解决从内容提取、页面调整到加密识别的各种难题，适合日常需要频繁处理这类格式文件的场景，轻松搞定繁杂操作。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "neolabhq-context-engineering-kit-setup-codemap-cli",
+  "name": "setup-codemap-cli",
+  "description": "Guide for setup Codemap CLI for intelligent codebase visualization and navigation",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "NeoLabHQ",
+  "install_path": ".claude/skills/setup-codemap-cli/SKILL.md",
+  "source": {
+    "repo": "NeoLabHQ/context-engineering-kit",
+    "url": "https://github.com/NeoLabHQ/context-engineering-kit/blob/master/plugins/mcp/skills/setup-codemap-cli/SKILL.md",
+    "path": "plugins/mcp/skills/setup-codemap-cli/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-05-22T04:42:31.002Z",
+    "stars": 1025,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-22T00:32:29Z",
+    "license": "GPL-3.0"
+  },
+  "summary_zh": "这是一个配置指南，帮你把代码库变成直观的可视化地图，适合在大型项目中需要快速理清结构和跳转浏览的开发者。"
+}

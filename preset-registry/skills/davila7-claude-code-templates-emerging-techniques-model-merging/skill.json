@@ -1,0 +1,26 @@
+{
+  "id": "davila7-claude-code-templates-emerging-techniques-model-merging",
+  "name": "model-merging",
+  "description": "Merge multiple fine-tuned models using mergekit to combine capabilities without retraining. Use when creating specialized models by blending domain-specific expertise (math + coding + chat), improving performance beyond single models, or experimenting rapidly with model variants. Covers SLERP, TIES-Merging, DARE, Task Arithmetic, linear merging, and production deployment strategies.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "davila7",
+  "install_path": ".claude/skills/emerging-techniques-model-merging/SKILL.md",
+  "source": {
+    "repo": "davila7/claude-code-templates",
+    "url": "https://github.com/davila7/claude-code-templates/blob/main/cli-tool/components/skills/ai-research/emerging-techniques-model-merging/SKILL.md",
+    "path": "cli-tool/components/skills/ai-research/emerging-techniques-model-merging/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:44:45.699Z",
+    "stars": 27482,
+    "language": "Python",
+    "pushed_at": "2026-05-22T04:31:04Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个模型合并工具，能让你无需重新训练就融合多个微调模型的不同领域专长，打造出超越单一模型的定制专家，非常适合快速实验模型变体或生产部署。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "wshobson-agents-hybrid-cloud-networking",
+  "name": "hybrid-cloud-networking",
+  "description": "Configure secure, high-performance connectivity between on-premises infrastructure and cloud platforms using VPN and dedicated connections. Use when building hybrid cloud architectures, connecting data centers to cloud, or implementing secure cross-premises networking.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "wshobson",
+  "install_path": ".claude/skills/hybrid-cloud-networking/SKILL.md",
+  "source": {
+    "repo": "wshobson/agents",
+    "url": "https://github.com/wshobson/agents/blob/main/plugins/cloud-infrastructure/skills/hybrid-cloud-networking/SKILL.md",
+    "path": "plugins/cloud-infrastructure/skills/hybrid-cloud-networking/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:42:56.725Z",
+    "stars": 35770,
+    "language": "Python",
+    "pushed_at": "2026-05-21T20:01:53Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用来打通本地机房与云平台的安全高速组网工具，适合搭建混合云架构、数据中心上云或需要跨环境安全互通的场景。"
+}

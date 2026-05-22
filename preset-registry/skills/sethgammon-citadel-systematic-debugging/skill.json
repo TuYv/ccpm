@@ -1,0 +1,26 @@
+{
+  "id": "sethgammon-citadel-systematic-debugging",
+  "name": "systematic-debugging",
+  "description": ">- 4-phase root cause analysis: observe, hypothesize, verify, fix. Enforces investigation before any code changes. Emergency stop after 2 failed fixes. Prevents shotgun debugging and fix cascades.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "SethGammon",
+  "install_path": ".claude/skills/systematic-debugging/SKILL.md",
+  "source": {
+    "repo": "SethGammon/Citadel",
+    "url": "https://github.com/SethGammon/Citadel/blob/main/skills/systematic-debugging/SKILL.md",
+    "path": "skills/systematic-debugging/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:43:07.958Z",
+    "stars": 572,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-07T17:50:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这套四阶段排错框架强制先查后改，并在两次试错失败后紧急叫停，专治盲目瞎试和改A坏B，适合需要理性定位根因的复杂调试场景。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "trailofbits-skills-constant-time-testing",
+  "name": "constant-time-testing",
+  "description": "> Constant-time testing detects timing side channels in cryptographic code. Use when auditing crypto implementations for timing vulnerabilities.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "trailofbits",
+  "install_path": ".claude/skills/constant-time-testing/SKILL.md",
+  "source": {
+    "repo": "trailofbits/skills",
+    "url": "https://github.com/trailofbits/skills/blob/main/plugins/testing-handbook-skills/skills/constant-time-testing/SKILL.md",
+    "path": "plugins/testing-handbook-skills/skills/constant-time-testing/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:41:52.841Z",
+    "stars": 5325,
+    "language": "Python",
+    "pushed_at": "2026-05-16T17:22:25Z",
+    "license": "CC-BY-SA-4.0"
+  },
+  "summary_zh": "专门检测加密代码中的计时侧信道漏洞，适合在审计密码学实现时使用，帮你找出因执行时间差异而引发的安全隐患。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "zechenzhangagi-ai-research-skills-hqq",
+  "name": "hqq-quantization",
+  "description": "Half-Quadratic Quantization for LLMs without calibration data. Use when quantizing models to 4/3/2-bit precision without needing calibration datasets, for fast quantization workflows, or when deploying with vLLM or HuggingFace Transformers.",
+  "category": "社区精选",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "zechenzhangAGI",
+  "install_path": ".claude/skills/hqq/SKILL.md",
+  "source": {
+    "repo": "zechenzhangAGI/AI-research-SKILLs",
+    "url": "https://github.com/zechenzhangAGI/AI-research-SKILLs/blob/main/10-optimization/hqq/SKILL.md",
+    "path": "10-optimization/hqq/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-22T04:45:42.906Z",
+    "stars": 8786,
+    "language": "TeX",
+    "pushed_at": "2026-04-28T05:09:27Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一款大模型半二次量化工具，无需校准数据就能把模型压到2到4位，适合追求极速压缩或用vLLM和HuggingFace部署的场景。"
+}
