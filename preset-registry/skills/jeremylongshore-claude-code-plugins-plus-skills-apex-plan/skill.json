@@ -1,0 +1,25 @@
+{
+  "id": "jeremylongshore-claude-code-plugins-plus-skills-apex-plan",
+  "name": "apex-plan",
+  "description": "Plan and scope a project — discovery, challenge assumptions, present S/M/L options with token and cost estimates. Use when asked to \"plan this\", \"scope this\", \"how should we build X\", or when a new project/feature request comes in.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "0.6.4",
+  "author": "jeremylongshore",
+  "install_path": ".claude/skills/apex-plan/SKILL.md",
+  "source": {
+    "repo": "jeremylongshore/claude-code-plugins-plus-skills",
+    "url": "https://github.com/jeremylongshore/claude-code-plugins-plus-skills/blob/main/plugins/ai-agency/tonone/skills/apex-plan/SKILL.md",
+    "path": "plugins/ai-agency/tonone/skills/apex-plan/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-23T06:52:56.935Z",
+    "stars": 2235,
+    "language": "Python",
+    "pushed_at": "2026-05-23T06:25:26Z",
+    "license": "MIT"
+  }
+}

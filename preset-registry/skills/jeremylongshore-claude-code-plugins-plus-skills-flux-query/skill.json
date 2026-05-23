@@ -1,0 +1,25 @@
+{
+  "id": "jeremylongshore-claude-code-plugins-plus-skills-flux-query",
+  "name": "flux-query",
+  "description": "Optimize slow database queries — analyze execution plans, add indexes, rewrite queries. Use when asked about \"slow query\", \"optimize SQL\", \"query performance\", or \"explain this query\".",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "0.6.4",
+  "author": "jeremylongshore",
+  "install_path": ".claude/skills/flux-query/SKILL.md",
+  "source": {
+    "repo": "jeremylongshore/claude-code-plugins-plus-skills",
+    "url": "https://github.com/jeremylongshore/claude-code-plugins-plus-skills/blob/main/plugins/ai-agency/tonone/skills/flux-query/SKILL.md",
+    "path": "plugins/ai-agency/tonone/skills/flux-query/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-23T06:53:02.034Z",
+    "stars": 2235,
+    "language": "Python",
+    "pushed_at": "2026-05-23T06:25:26Z",
+    "license": "MIT"
+  }
+}

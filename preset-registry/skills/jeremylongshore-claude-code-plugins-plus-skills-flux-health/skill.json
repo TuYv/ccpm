@@ -1,0 +1,25 @@
+{
+  "id": "jeremylongshore-claude-code-plugins-plus-skills-flux-health",
+  "name": "flux-health",
+  "description": "Data quality and pipeline health check — freshness, schema drift, null rates, orphaned records, pipeline status. Use when asked about \"data quality check\", \"pipeline health\", \"is our data fresh\", or \"schema drift\".",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "0.6.4",
+  "author": "jeremylongshore",
+  "install_path": ".claude/skills/flux-health/SKILL.md",
+  "source": {
+    "repo": "jeremylongshore/claude-code-plugins-plus-skills",
+    "url": "https://github.com/jeremylongshore/claude-code-plugins-plus-skills/blob/main/plugins/ai-agency/tonone/skills/flux-health/SKILL.md",
+    "path": "plugins/ai-agency/tonone/skills/flux-health/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-23T06:53:01.751Z",
+    "stars": 2235,
+    "language": "Python",
+    "pushed_at": "2026-05-23T06:25:26Z",
+    "license": "MIT"
+  }
+}

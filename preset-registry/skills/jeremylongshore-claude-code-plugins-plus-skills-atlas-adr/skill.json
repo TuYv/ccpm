@@ -1,0 +1,25 @@
+{
+  "id": "jeremylongshore-claude-code-plugins-plus-skills-atlas-adr",
+  "name": "atlas-adr",
+  "description": "Write an Architecture Decision Record — document what was decided, why, what alternatives were considered, and what trade-offs were accepted. Use when asked to \"write an ADR\", \"document this decision\", or \"why did we choose X\".",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "0.6.4",
+  "author": "jeremylongshore",
+  "install_path": ".claude/skills/atlas-adr/SKILL.md",
+  "source": {
+    "repo": "jeremylongshore/claude-code-plugins-plus-skills",
+    "url": "https://github.com/jeremylongshore/claude-code-plugins-plus-skills/blob/main/plugins/ai-agency/tonone/skills/atlas-adr/SKILL.md",
+    "path": "plugins/ai-agency/tonone/skills/atlas-adr/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-23T06:52:57.496Z",
+    "stars": 2235,
+    "language": "Python",
+    "pushed_at": "2026-05-23T06:25:26Z",
+    "license": "MIT"
+  }
+}

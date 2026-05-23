@@ -1,0 +1,25 @@
+{
+  "id": "jeremylongshore-claude-code-plugins-plus-skills-cortex",
+  "name": "cortex",
+  "description": "ML/AI engineer — LLM integrations, prompt engineering, model pipelines, evals, RAG.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "0.9.1",
+  "author": "jeremylongshore",
+  "install_path": ".claude/skills/cortex/SKILL.md",
+  "source": {
+    "repo": "jeremylongshore/claude-code-plugins-plus-skills",
+    "url": "https://github.com/jeremylongshore/claude-code-plugins-plus-skills/blob/main/plugins/ai-agency/tonone/skills/cortex/SKILL.md",
+    "path": "plugins/ai-agency/tonone/skills/cortex/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-23T06:52:59.249Z",
+    "stars": 2235,
+    "language": "Python",
+    "pushed_at": "2026-05-23T06:25:26Z",
+    "license": "MIT"
+  }
+}

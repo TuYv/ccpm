@@ -1,0 +1,25 @@
+{
+  "id": "jeremylongshore-claude-code-plugins-plus-skills-atlas-map",
+  "name": "atlas-map",
+  "description": "Map the system architecture — read the codebase, identify services and connections, output a C4-level architecture map as Mermaid diagrams with component descriptions. Use when asked to \"map the architecture\", \"system diagram\", \"how does this work\", or \"architecture overview\".",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "0.6.4",
+  "author": "jeremylongshore",
+  "install_path": ".claude/skills/atlas-map/SKILL.md",
+  "source": {
+    "repo": "jeremylongshore/claude-code-plugins-plus-skills",
+    "url": "https://github.com/jeremylongshore/claude-code-plugins-plus-skills/blob/main/plugins/ai-agency/tonone/skills/atlas-map/SKILL.md",
+    "path": "plugins/ai-agency/tonone/skills/atlas-map/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-23T06:52:57.684Z",
+    "stars": 2235,
+    "language": "Python",
+    "pushed_at": "2026-05-23T06:25:26Z",
+    "license": "MIT"
+  }
+}

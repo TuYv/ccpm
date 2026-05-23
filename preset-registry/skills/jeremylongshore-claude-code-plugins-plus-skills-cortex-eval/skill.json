@@ -1,0 +1,25 @@
+{
+  "id": "jeremylongshore-claude-code-plugins-plus-skills-cortex-eval",
+  "name": "cortex-eval",
+  "description": "Evaluate model performance — check for accuracy drops, data drift, and error patterns. Use when asked about \"model accuracy dropped\", \"evaluate the model\", \"check for drift\", or \"model performance\".",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "0.9.8",
+  "author": "jeremylongshore",
+  "install_path": ".claude/skills/cortex-eval/SKILL.md",
+  "source": {
+    "repo": "jeremylongshore/claude-code-plugins-plus-skills",
+    "url": "https://github.com/jeremylongshore/claude-code-plugins-plus-skills/blob/main/plugins/ai-agency/tonone/skills/cortex-eval/SKILL.md",
+    "path": "plugins/ai-agency/tonone/skills/cortex-eval/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-23T06:52:58.784Z",
+    "stars": 2235,
+    "language": "Python",
+    "pushed_at": "2026-05-23T06:25:26Z",
+    "license": "MIT"
+  }
+}

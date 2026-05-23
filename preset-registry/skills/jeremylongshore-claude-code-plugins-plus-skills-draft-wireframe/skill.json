@@ -1,0 +1,25 @@
+{
+  "id": "jeremylongshore-claude-code-plugins-plus-skills-draft-wireframe",
+  "name": "draft-wireframe",
+  "description": "| Wireframe a screen — text/ASCII by default, or hand-drawn HTML when the user says \"sketch\", \"hand-drawn\", \"lo-fi HTML\", \"whiteboard\", \"graph paper\", or \"visual wireframe\". Text mode produces a buildable ASCII spec Form and Prism can act on. HTML mode produces a single self-contained file with graph-paper background, marker headlines, sticky-note annotations, and hatched chart placeholders — looks like a designer's whiteboard, commits to nothing.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "0.7.0",
+  "author": "jeremylongshore",
+  "install_path": ".claude/skills/draft-wireframe/SKILL.md",
+  "source": {
+    "repo": "jeremylongshore/claude-code-plugins-plus-skills",
+    "url": "https://github.com/jeremylongshore/claude-code-plugins-plus-skills/blob/main/plugins/ai-agency/tonone/skills/draft-wireframe/SKILL.md",
+    "path": "plugins/ai-agency/tonone/skills/draft-wireframe/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-23T06:53:00.992Z",
+    "stars": 2235,
+    "language": "Python",
+    "pushed_at": "2026-05-23T06:25:26Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "jeremylongshore-claude-code-plugins-plus-skills-draft-patterns",
+  "name": "draft-patterns",
+  "description": "| Use when asked about UX patterns, interaction best practices, form design, navigation patterns, or loading states. Examples: \"best practice for form validation\", \"navigation pattern for dashboard\", \"loading state UX\"",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "0.6.6",
+  "author": "jeremylongshore",
+  "install_path": ".claude/skills/draft-patterns/SKILL.md",
+  "source": {
+    "repo": "jeremylongshore/claude-code-plugins-plus-skills",
+    "url": "https://github.com/jeremylongshore/claude-code-plugins-plus-skills/blob/main/plugins/ai-agency/tonone/skills/draft-patterns/SKILL.md",
+    "path": "plugins/ai-agency/tonone/skills/draft-patterns/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-23T06:53:00.713Z",
+    "stars": 2235,
+    "language": "Python",
+    "pushed_at": "2026-05-23T06:25:26Z",
+    "license": "MIT"
+  }
+}

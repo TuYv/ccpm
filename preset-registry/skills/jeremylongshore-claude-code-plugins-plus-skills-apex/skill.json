@@ -1,0 +1,25 @@
+{
+  "id": "jeremylongshore-claude-code-plugins-plus-skills-apex",
+  "name": "apex",
+  "description": "Engineering lead — hand Apex any task and it routes internally. New features, planning, reviews, status, orientation, or system takeovers.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "0.9.1",
+  "author": "jeremylongshore",
+  "install_path": ".claude/skills/apex/SKILL.md",
+  "source": {
+    "repo": "jeremylongshore/claude-code-plugins-plus-skills",
+    "url": "https://github.com/jeremylongshore/claude-code-plugins-plus-skills/blob/main/plugins/ai-agency/tonone/skills/apex/SKILL.md",
+    "path": "plugins/ai-agency/tonone/skills/apex/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-23T06:52:57.389Z",
+    "stars": 2235,
+    "language": "Python",
+    "pushed_at": "2026-05-23T06:25:26Z",
+    "license": "MIT"
+  }
+}

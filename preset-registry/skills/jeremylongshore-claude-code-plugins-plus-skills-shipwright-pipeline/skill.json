@@ -1,0 +1,25 @@
+{
+  "id": "jeremylongshore-claude-code-plugins-plus-skills-shipwright-pipeline",
+  "name": "shipwright-pipeline",
+  "description": "Autonomous app builder that converts plain-English descriptions into fully built, tested applications. Use when the user wants to build a new app, scaffold a project, generate a full-stack application, or create an app from a description. Trigger with \"build me an app\", \"create a new app\", \"shipwright build\", \"scaffold a project\", \"generate an application\".",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "jeremylongshore",
+  "install_path": ".claude/skills/shipwright-pipeline/SKILL.md",
+  "source": {
+    "repo": "jeremylongshore/claude-code-plugins-plus-skills",
+    "url": "https://github.com/jeremylongshore/claude-code-plugins-plus-skills/blob/main/plugins/ai-agency/shipwright/skills/shipwright-pipeline/SKILL.md",
+    "path": "plugins/ai-agency/shipwright/skills/shipwright-pipeline/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-23T06:52:56.845Z",
+    "stars": 2235,
+    "language": "Python",
+    "pushed_at": "2026-05-23T06:25:26Z",
+    "license": "MIT"
+  }
+}

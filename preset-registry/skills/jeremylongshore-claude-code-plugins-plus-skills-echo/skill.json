@@ -1,0 +1,25 @@
+{
+  "id": "jeremylongshore-claude-code-plugins-plus-skills-echo",
+  "name": "echo",
+  "description": "User researcher — interviews, personas, Jobs-to-Be-Done, and customer feedback synthesis.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "0.9.1",
+  "author": "jeremylongshore",
+  "install_path": ".claude/skills/echo/SKILL.md",
+  "source": {
+    "repo": "jeremylongshore/claude-code-plugins-plus-skills",
+    "url": "https://github.com/jeremylongshore/claude-code-plugins-plus-skills/blob/main/plugins/ai-agency/tonone/skills/echo/SKILL.md",
+    "path": "plugins/ai-agency/tonone/skills/echo/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-23T06:53:01.652Z",
+    "stars": 2235,
+    "language": "Python",
+    "pushed_at": "2026-05-23T06:25:26Z",
+    "license": "MIT"
+  }
+}

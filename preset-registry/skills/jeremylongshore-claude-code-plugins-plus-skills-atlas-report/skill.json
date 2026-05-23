@@ -1,0 +1,25 @@
+{
+  "id": "jeremylongshore-claude-code-plugins-plus-skills-atlas-report",
+  "name": "atlas-report",
+  "description": "Render agent findings as a styled HTML report in the browser. Use when asked for \"full report\", \"detailed report\", \"show in browser\", or when CLI output exceeds the 40-line budget.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "0.6.4",
+  "author": "jeremylongshore",
+  "install_path": ".claude/skills/atlas-report/SKILL.md",
+  "source": {
+    "repo": "jeremylongshore/claude-code-plugins-plus-skills",
+    "url": "https://github.com/jeremylongshore/claude-code-plugins-plus-skills/blob/main/plugins/ai-agency/tonone/skills/atlas-report/SKILL.md",
+    "path": "plugins/ai-agency/tonone/skills/atlas-report/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-23T06:52:58.069Z",
+    "stars": 2235,
+    "language": "Python",
+    "pushed_at": "2026-05-23T06:25:26Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "jeremylongshore-claude-code-plugins-plus-skills-flux-recon",
+  "name": "flux-recon",
+  "description": "Database reconnaissance — full inventory of schema, migrations, data volume, backups, connection pooling, and query patterns. Use when asked to \"assess this database\", \"understand the schema\", or \"database health check\".",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "0.6.4",
+  "author": "jeremylongshore",
+  "install_path": ".claude/skills/flux-recon/SKILL.md",
+  "source": {
+    "repo": "jeremylongshore/claude-code-plugins-plus-skills",
+    "url": "https://github.com/jeremylongshore/claude-code-plugins-plus-skills/blob/main/plugins/ai-agency/tonone/skills/flux-recon/SKILL.md",
+    "path": "plugins/ai-agency/tonone/skills/flux-recon/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-23T06:53:02.121Z",
+    "stars": 2235,
+    "language": "Python",
+    "pushed_at": "2026-05-23T06:25:26Z",
+    "license": "MIT"
+  }
+}

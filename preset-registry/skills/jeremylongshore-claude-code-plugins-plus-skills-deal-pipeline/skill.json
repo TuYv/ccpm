@@ -1,0 +1,25 @@
+{
+  "id": "jeremylongshore-claude-code-plugins-plus-skills-deal-pipeline",
+  "name": "deal-pipeline",
+  "description": "Design or audit B2B sales pipeline — define stage names, entry/exit criteria, qualification standards, and CRM field requirements. Use when asked to \"design our pipeline\", \"audit our CRM stages\", \"define what qualified means\", or \"build a sales process\".",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "0.1.0",
+  "author": "jeremylongshore",
+  "install_path": ".claude/skills/deal-pipeline/SKILL.md",
+  "source": {
+    "repo": "jeremylongshore/claude-code-plugins-plus-skills",
+    "url": "https://github.com/jeremylongshore/claude-code-plugins-plus-skills/blob/main/plugins/ai-agency/tonone/skills/deal-pipeline/SKILL.md",
+    "path": "plugins/ai-agency/tonone/skills/deal-pipeline/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-23T06:52:59.996Z",
+    "stars": 2235,
+    "language": "Python",
+    "pushed_at": "2026-05-23T06:25:26Z",
+    "license": "MIT"
+  }
+}

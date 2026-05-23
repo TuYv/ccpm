@@ -1,0 +1,25 @@
+{
+  "id": "jeremylongshore-claude-code-plugins-plus-skills-echo-recon",
+  "name": "echo-recon",
+  "description": "User research reconnaissance — survey existing personas, research docs, interview notes, and feedback artifacts to establish what is already known about users. Use when asked to \"what research exists\", \"review existing personas\", \"what do we know about our users\", or before starting new research or synthesis work.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "0.6.4",
+  "author": "jeremylongshore",
+  "install_path": ".claude/skills/echo-recon/SKILL.md",
+  "source": {
+    "repo": "jeremylongshore/claude-code-plugins-plus-skills",
+    "url": "https://github.com/jeremylongshore/claude-code-plugins-plus-skills/blob/main/plugins/ai-agency/tonone/skills/echo-recon/SKILL.md",
+    "path": "plugins/ai-agency/tonone/skills/echo-recon/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-23T06:53:01.459Z",
+    "stars": 2235,
+    "language": "Python",
+    "pushed_at": "2026-05-23T06:25:26Z",
+    "license": "MIT"
+  }
+}

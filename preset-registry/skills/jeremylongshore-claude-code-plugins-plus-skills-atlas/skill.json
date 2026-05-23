@@ -1,0 +1,25 @@
+{
+  "id": "jeremylongshore-claude-code-plugins-plus-skills-atlas",
+  "name": "atlas",
+  "description": "Knowledge engineer — architecture docs, ADRs, diagrams, changelogs, onboarding, and reports.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "0.9.1",
+  "author": "jeremylongshore",
+  "install_path": ".claude/skills/atlas/SKILL.md",
+  "source": {
+    "repo": "jeremylongshore/claude-code-plugins-plus-skills",
+    "url": "https://github.com/jeremylongshore/claude-code-plugins-plus-skills/blob/main/plugins/ai-agency/tonone/skills/atlas/SKILL.md",
+    "path": "plugins/ai-agency/tonone/skills/atlas/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-23T06:52:58.153Z",
+    "stars": 2235,
+    "language": "Python",
+    "pushed_at": "2026-05-23T06:25:26Z",
+    "license": "MIT"
+  }
+}
