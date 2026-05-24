@@ -1,0 +1,25 @@
+{
+  "id": "jeremylongshore-claude-code-plugins-plus-skills-agency-os",
+  "name": "agency-os",
+  "description": "| Notion-as-source-of-truth dispatch board for running your work like an AI agency. One Tasks database is the source of truth; tasks flow Suggestion through Discussion, To-Do, In Progress, and Done with subtasks, recurring cadences, dependencies, and template subtrees. Batch execution fans approved To-Do rows out to parallel agents with per-task model selection. Use when capturing chat to Notion, running the To-Do queue, suggesting, approving, or discussing tasks, or coordinating multi-task batc",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "0.1.8",
+  "author": "jeremylongshore",
+  "install_path": ".claude/skills/agency-os/SKILL.md",
+  "source": {
+    "repo": "jeremylongshore/claude-code-plugins-plus-skills",
+    "url": "https://github.com/jeremylongshore/claude-code-plugins-plus-skills/blob/main/plugins/ai-agency/agency-os/skills/agency-os/SKILL.md",
+    "path": "plugins/ai-agency/agency-os/skills/agency-os/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-24T08:09:10.464Z",
+    "stars": 2236,
+    "language": "Python",
+    "pushed_at": "2026-05-24T05:01:30Z",
+    "license": "MIT"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "id": "nowork-studio-toprank-setup-cms",
   "name": "setup-cms",
-  "description": "> Connect a CMS to toprank SEO tools. Guides users through configuring WordPress, Strapi, Contentful, or Ghost — tests the connection, and writes credentials to .env.local. Once set up, seo-analysis automatically cross- references CMS content against Google Search Console data. Use whenever the user says \"connect my CMS\", \"set up WordPress\", \"configure Strapi\", \"add Contentful\", \"connect Ghost\", or \"CMS setup\". Also trigger if the user asks why no CMS data appears in a seo-analysis report.",
+  "description": "> Connect a CMS to notfair SEO tools. Guides users through configuring WordPress, Strapi, Contentful, or Ghost — tests the connection, and writes credentials to .env.local. Once set up, seo-analysis automatically cross- references CMS content against Google Search Console data. Use whenever the user says \"connect my CMS\", \"set up WordPress\", \"configure Strapi\", \"add Contentful\", \"connect Ghost\", or \"CMS setup\". Also trigger if the user asks why no CMS data appears in a seo-analysis report.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/nowork-studio/toprank/blob/main/seo/setup-cms/SKILL.md",
     "path": "seo/setup-cms/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-24T04:48:00.913Z",
-    "stars": 2621,
+    "discovered_at": "2026-05-24T08:08:57.307Z",
+    "stars": 2623,
     "language": "Python",
-    "pushed_at": "2026-05-20T05:41:47Z",
+    "pushed_at": "2026-05-24T07:07:19Z",
     "license": "MIT"
-  },
-  "summary_zh": "帮你把WordPress等CMS接入SEO分析工具的配置向导。当需要将网站内容与谷歌搜索数据交叉分析，或发现SEO报告缺数据时，用它就能快速完成连接和凭证配置。"
+  }
 }

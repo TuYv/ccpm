@@ -1,0 +1,25 @@
+{
+  "id": "nowork-studio-toprank-notfair-portfolio-review",
+  "name": "notfair-portfolio-review",
+  "description": "Review all registered websites in the NotFair OpenClaw portfolio and rank which site deserves attention next.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "nowork-studio",
+  "install_path": ".claude/skills/notfair-portfolio-review/SKILL.md",
+  "source": {
+    "repo": "nowork-studio/toprank",
+    "url": "https://github.com/nowork-studio/toprank/blob/main/openclaw/skills/notfair-portfolio-review/SKILL.md",
+    "path": "openclaw/skills/notfair-portfolio-review/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-24T08:08:54.955Z",
+    "stars": 2623,
+    "language": "Python",
+    "pushed_at": "2026-05-24T07:07:19Z",
+    "license": "MIT"
+  }
+}
