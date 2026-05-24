@@ -1,0 +1,25 @@
+{
+  "id": "ryoppippi-ccusage-agent-sources",
+  "name": "agent-sources",
+  "description": "Guides ccusage agent source formats. Use when checking agent log locations, raw record structure, token mappings, model names, precomputed costs, or source-specific CLI behavior.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ryoppippi",
+  "install_path": ".claude/skills/agent-sources/SKILL.md",
+  "source": {
+    "repo": "ryoppippi/ccusage",
+    "url": "https://github.com/ryoppippi/ccusage/blob/main/.agents/skills/agent-sources/SKILL.md",
+    "path": ".agents/skills/agent-sources/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-24T00:23:35.235Z",
+    "stars": 14566,
+    "language": "Rust",
+    "pushed_at": "2026-05-23T23:34:26Z",
+    "license": null
+  }
+}

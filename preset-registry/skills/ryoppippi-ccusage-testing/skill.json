@@ -1,0 +1,25 @@
+{
+  "id": "ryoppippi-ccusage-testing",
+  "name": "testing",
+  "description": "Guides ccusage Rust and Vitest tests. Use when adding or fixing cargo tests, CLI snapshots, Claude model pricing, LiteLLM compatibility, Vitest tests, or fixture-backed tests.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ryoppippi",
+  "install_path": ".claude/skills/testing/SKILL.md",
+  "source": {
+    "repo": "ryoppippi/ccusage",
+    "url": "https://github.com/ryoppippi/ccusage/blob/main/.agents/skills/testing/SKILL.md",
+    "path": ".agents/skills/testing/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-24T00:23:37.104Z",
+    "stars": 14566,
+    "language": "Rust",
+    "pushed_at": "2026-05-23T23:34:26Z",
+    "license": null
+  }
+}

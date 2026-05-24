@@ -1,0 +1,25 @@
+{
+  "id": "ryoppippi-ccusage-profile",
+  "name": "profile",
+  "description": "Profiles ccusage performance. Use when debugging slow Rust CLI commands, TypeScript package scripts, launchers, benchmarks, packaging hot paths, or branch-vs-main speed changes.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ryoppippi",
+  "install_path": ".claude/skills/profile/SKILL.md",
+  "source": {
+    "repo": "ryoppippi/ccusage",
+    "url": "https://github.com/ryoppippi/ccusage/blob/main/.agents/skills/profile/SKILL.md",
+    "path": ".agents/skills/profile/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-24T00:23:36.419Z",
+    "stars": 14566,
+    "language": "Rust",
+    "pushed_at": "2026-05-23T23:34:26Z",
+    "license": null
+  }
+}
