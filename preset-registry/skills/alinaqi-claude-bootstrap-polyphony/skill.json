@@ -2,7 +2,7 @@
   "id": "alinaqi-claude-bootstrap-polyphony",
   "name": "polyphony",
   "description": "Multi-agent orchestration with container-isolated workspaces — each agent session runs in its own Docker container with independent git branches",
-  "category": "开发编程",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/alinaqi/claude-bootstrap/blob/main/skills/polyphony/SKILL.md",
     "path": "skills/polyphony/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-24T11:53:55.486Z",
-    "stars": 656,
+    "discovered_at": "2026-05-24T14:14:44.754Z",
+    "stars": 657,
     "language": "Python",
-    "pushed_at": "2026-05-24T11:37:40Z",
+    "pushed_at": "2026-05-24T12:55:59Z",
     "license": "MIT"
   },
   "summary_zh": "这是一个多智能体编排工具，让每个智能体在独立容器和代码分支中运行，解决多AI协作时的环境冲突与代码污染问题，适合需要多个代理安全并行开发的场景。"

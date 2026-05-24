@@ -2,7 +2,7 @@
   "id": "alinaqi-claude-bootstrap-mnemos",
   "name": "mnemos",
   "description": "Task-scoped memory lifecycle — typed MnemoGraph prevents lossy context compaction by treating facts/decisions/code-refs/handoffs as distinct node types with per-type eviction policies",
-  "category": "开发编程",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/alinaqi/claude-bootstrap/blob/main/skills/mnemos/SKILL.md",
     "path": "skills/mnemos/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-24T11:53:54.432Z",
-    "stars": 656,
+    "discovered_at": "2026-05-24T14:14:43.228Z",
+    "stars": 657,
     "language": "Python",
-    "pushed_at": "2026-05-24T11:37:40Z",
+    "pushed_at": "2026-05-24T12:55:59Z",
     "license": "MIT"
   },
   "summary_zh": "这是一个任务级记忆管理工具，通过为不同类型的信息设定专属淘汰规则，防止上下文压缩时丢失关键细节，适合需要精准维护长任务上下文的场景。"

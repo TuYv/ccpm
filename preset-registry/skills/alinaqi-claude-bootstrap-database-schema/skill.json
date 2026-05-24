@@ -2,7 +2,7 @@
   "id": "alinaqi-claude-bootstrap-database-schema",
   "name": "database-schema",
   "description": "Schema awareness - read before coding, type generation, prevent column errors",
-  "category": "开发编程",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/alinaqi/claude-bootstrap/blob/main/skills/database-schema/SKILL.md",
     "path": "skills/database-schema/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-24T11:53:51.621Z",
-    "stars": 656,
+    "discovered_at": "2026-05-24T14:14:39.359Z",
+    "stars": 657,
     "language": "Python",
-    "pushed_at": "2026-05-24T11:37:40Z",
+    "pushed_at": "2026-05-24T12:55:59Z",
     "license": "MIT"
   },
   "summary_zh": "它能在写代码前自动读取数据库结构并生成类型，帮你避免写错字段名引发的报错，适合需要频繁操作数据库的开发场景。"
