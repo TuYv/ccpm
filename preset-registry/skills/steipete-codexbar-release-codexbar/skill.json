@@ -1,0 +1,25 @@
+{
+  "id": "steipete-codexbar-release-codexbar",
+  "name": "release-codexbar",
+  "description": "CodexBar release: versioning, notarization, appcast, Homebrew, post-release bump.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "steipete",
+  "install_path": ".claude/skills/release-codexbar/SKILL.md",
+  "source": {
+    "repo": "steipete/CodexBar",
+    "url": "https://github.com/steipete/CodexBar/blob/main/.agents/skills/release-codexbar/SKILL.md",
+    "path": ".agents/skills/release-codexbar/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-25T12:57:47.594Z",
+    "stars": 13300,
+    "language": "Swift",
+    "pushed_at": "2026-05-25T09:34:54Z",
+    "license": "MIT"
+  }
+}
