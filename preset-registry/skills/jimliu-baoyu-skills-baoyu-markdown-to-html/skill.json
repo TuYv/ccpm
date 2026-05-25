@@ -1,14 +1,14 @@
 {
   "id": "jimliu-baoyu-skills-baoyu-markdown-to-html",
   "name": "baoyu-markdown-to-html",
-  "description": "Converts Markdown to styled HTML with WeChat-compatible themes. Supports code highlighting, math, PlantUML, footnotes, alerts, infographics, and optional bottom citations for external links. Use when user asks for \"markdown to html\", \"convert md to html\", \"md 转 html\", \"微信外链转底部引用\", or needs styled HTML output from markdown.",
-  "category": "设计创意",
+  "description": "Converts Markdown to styled HTML with WeChat-compatible themes. Supports code highlighting, math, Mermaid (rendered to PNG via headless Chrome), PlantUML, footnotes, alerts, infographics, and optional bottom citations for external links. Use when user asks for \"markdown to html\", \"convert md to html\", \"md 转 html\", \"微信外链转底部引用\", or needs styled HTML output from markdown.",
+  "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
     "codex",
     "gemini"
   ],
-  "version": "1.56.1",
+  "version": "1.57.0",
   "author": "JimLiu",
   "install_path": ".claude/skills/baoyu-markdown-to-html/SKILL.md",
   "source": {
@@ -16,11 +16,10 @@
     "url": "https://github.com/JimLiu/baoyu-skills/blob/main/skills/baoyu-markdown-to-html/SKILL.md",
     "path": "skills/baoyu-markdown-to-html/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-25T00:18:48.872Z",
-    "stars": 19388,
+    "discovered_at": "2026-05-25T04:56:33.293Z",
+    "stars": 19408,
     "language": "TypeScript",
-    "pushed_at": "2026-05-24T23:59:22Z",
+    "pushed_at": "2026-05-25T02:28:27Z",
     "license": null
-  },
-  "summary_zh": "把Markdown转成带样式HTML的工具，专为微信公众号排版优化，能把外链转成底部引用，解决微信不支持外链跳转和排版单调的问题，适合公众号内容发布场景。"
+  }
 }
