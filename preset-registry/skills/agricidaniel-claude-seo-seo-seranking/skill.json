@@ -1,0 +1,25 @@
+{
+  "id": "agricidaniel-claude-seo-seo-seranking",
+  "name": "seo-seranking",
+  "description": "SE Ranking AI visibility analyst (extension). Tracks AI Share-of-Voice across ChatGPT, Gemini, Perplexity, AI Overviews, and AI Mode in a single query. Highest-impact new extension per the v2 gap analysis — no other vendor covers all 5 AI platforms in one API.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "AgriciDaniel",
+  "install_path": ".claude/skills/seo-seranking/SKILL.md",
+  "source": {
+    "repo": "AgriciDaniel/claude-seo",
+    "url": "https://github.com/AgriciDaniel/claude-seo/blob/main/extensions/seranking/skills/seo-seranking/SKILL.md",
+    "path": "extensions/seranking/skills/seo-seranking/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-25T16:10:31.529Z",
+    "stars": 7063,
+    "language": "Python",
+    "pushed_at": "2026-05-25T15:42:04Z",
+    "license": "MIT"
+  }
+}

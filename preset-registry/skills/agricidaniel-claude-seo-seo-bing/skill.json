@@ -1,0 +1,25 @@
+{
+  "id": "agricidaniel-claude-seo-seo-bing",
+  "name": "seo-bing",
+  "description": "Bing Webmaster Tools + IndexNow extension. Microsoft Copilot citations are fed by the Bing index; this skill makes Bing visibility, link data, and IndexNow URL submission first-class.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "AgriciDaniel",
+  "install_path": ".claude/skills/seo-bing/SKILL.md",
+  "source": {
+    "repo": "AgriciDaniel/claude-seo",
+    "url": "https://github.com/AgriciDaniel/claude-seo/blob/main/extensions/bing-webmaster/skills/seo-bing/SKILL.md",
+    "path": "extensions/bing-webmaster/skills/seo-bing/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-25T16:10:31.062Z",
+    "stars": 7063,
+    "language": "Python",
+    "pushed_at": "2026-05-25T15:42:04Z",
+    "license": "MIT"
+  }
+}
