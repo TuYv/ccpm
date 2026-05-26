@@ -1,0 +1,25 @@
+{
+  "id": "redis-agent-skills-redis-security",
+  "name": "redis-security",
+  "description": "Redis security guidance covering authentication (requirepass and ACL users), TLS, ACL-based least-privilege access control, restricting network exposure via bind and protected-mode, firewall rules, and disabling dangerous commands. Use when deploying Redis to production, defining ACL users for an application, configuring TLS connections, locking down a Redis instance behind a firewall, or auditing a Redis deployment for security hardening.",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "redis",
+  "install_path": ".claude/skills/redis-security/SKILL.md",
+  "source": {
+    "repo": "redis/agent-skills",
+    "url": "https://github.com/redis/agent-skills/blob/main/skills/redis-security/SKILL.md",
+    "path": "skills/redis-security/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-26T17:04:41.842Z",
+    "stars": 59,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-26T14:57:32Z",
+    "license": "MIT"
+  }
+}

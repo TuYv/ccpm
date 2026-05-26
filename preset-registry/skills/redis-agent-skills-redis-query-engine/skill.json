@@ -1,0 +1,25 @@
+{
+  "id": "redis-agent-skills-redis-query-engine",
+  "name": "redis-query-engine",
+  "description": "Redis Query Engine (RQE) guidance covering FT.CREATE schema design, field type selection (TEXT, TAG, NUMERIC, GEO, GEOSHAPE, VECTOR), DIALECT 2 query syntax, efficient FT.SEARCH and FT.AGGREGATE queries, zero-downtime index updates via aliases, and the SKIPINITIALSCAN option. Use when defining a search index on Hash or JSON documents, picking between TEXT and TAG for filtering, writing FT.SEARCH queries with filters and SORTBY, managing or swapping indexes in production, or troubleshooting slow ",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "redis",
+  "install_path": ".claude/skills/redis-query-engine/SKILL.md",
+  "source": {
+    "repo": "redis/agent-skills",
+    "url": "https://github.com/redis/agent-skills/blob/main/skills/redis-query-engine/SKILL.md",
+    "path": "skills/redis-query-engine/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-26T17:04:41.739Z",
+    "stars": 59,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-26T14:57:32Z",
+    "license": "MIT"
+  }
+}

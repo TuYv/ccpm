@@ -1,0 +1,25 @@
+{
+  "id": "redis-agent-skills-redis-connections",
+  "name": "redis-connections",
+  "description": "Redis client and connection guidance covering connection pooling, multiplexing, pipelining, client-side caching with RESP3, avoiding slow commands (KEYS, SMEMBERS, HGETALL), and tuning socket timeouts. Use when configuring a Redis client (redis-py, Jedis, Lettuce, NRedisStack), batching commands for throughput, eliminating per-request connection creation, iterating large keyspaces with SCAN, enabling client-side caching for read-heavy workloads, or setting connect and read timeouts.",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "redis",
+  "install_path": ".claude/skills/redis-connections/SKILL.md",
+  "source": {
+    "repo": "redis/agent-skills",
+    "url": "https://github.com/redis/agent-skills/blob/main/skills/redis-connections/SKILL.md",
+    "path": "skills/redis-connections/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-26T17:04:41.310Z",
+    "stars": 59,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-26T14:57:32Z",
+    "license": "MIT"
+  }
+}

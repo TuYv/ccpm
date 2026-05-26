@@ -1,0 +1,25 @@
+{
+  "id": "redis-agent-skills-redis-semantic-cache",
+  "name": "redis-semantic-cache",
+  "description": "Redis LangCache guidance for semantic caching of LLM responses on Redis Cloud — calling search/set via the SDK or REST API, tuning the similarity threshold, separating caches per task type, and filtering with custom attributes. Use when caching LLM completions or RAG answers to cut API cost and latency, building a cache-aside layer in front of OpenAI / Anthropic / etc., tuning hit rate vs precision, or splitting one app's LLM workloads into multiple LangCache caches.",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "redis",
+  "install_path": ".claude/skills/redis-semantic-cache/SKILL.md",
+  "source": {
+    "repo": "redis/agent-skills",
+    "url": "https://github.com/redis/agent-skills/blob/main/skills/redis-semantic-cache/SKILL.md",
+    "path": "skills/redis-semantic-cache/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-26T17:04:41.934Z",
+    "stars": 59,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-26T14:57:32Z",
+    "license": "MIT"
+  }
+}

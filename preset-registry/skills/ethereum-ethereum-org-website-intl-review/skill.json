@@ -1,0 +1,25 @@
+{
+  "id": "ethereum-ethereum-org-website-intl-review",
+  "name": "intl-review",
+  "description": "Use when reviewing translation imports/PRs (especially against `intl/pending-*` branches), evaluating translation quality across any of the 24 target languages, triaging issues in `.claude/translation-review/`, scoring a locale's translation, running the `/review-translations` slash command, debugging brand-name mistranslations or glossary deviations, or working with the per-language findings tracking files. Covers the scoring rubric, ETHGlossary-as-authority policy, language-group rules, agent-",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ethereum",
+  "install_path": ".claude/skills/intl-review/SKILL.md",
+  "source": {
+    "repo": "ethereum/ethereum-org-website",
+    "url": "https://github.com/ethereum/ethereum-org-website/blob/dev/.claude/skills/intl-review/SKILL.md",
+    "path": ".claude/skills/intl-review/SKILL.md",
+    "branch": "dev",
+    "discovered_at": "2026-05-26T17:01:27.193Z",
+    "stars": 5937,
+    "language": "Markdown",
+    "pushed_at": "2026-05-26T17:01:23Z",
+    "license": "MIT"
+  }
+}

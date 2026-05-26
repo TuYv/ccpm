@@ -1,0 +1,25 @@
+{
+  "id": "redis-agent-skills-iris-development",
+  "name": "iris-development",
+  "description": "Iris is Redis's umbrella for AI-focused products. Use this skill when integrating with the Iris Redis Agent Memory (RAM) data plane on Redis Cloud — recording session events for an AI agent, creating or searching long-term memories, configuring a memory store, or tuning background memory promotion. Code examples use the official `redis-agent-memory` (Python) and `@redis-iris/agent-memory` (TypeScript) SDKs.",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "redis",
+  "install_path": ".claude/skills/iris-development/SKILL.md",
+  "source": {
+    "repo": "redis/agent-skills",
+    "url": "https://github.com/redis/agent-skills/blob/main/skills/iris-development/SKILL.md",
+    "path": "skills/iris-development/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-26T17:04:41.059Z",
+    "stars": 59,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-26T14:57:32Z",
+    "license": "MIT"
+  }
+}

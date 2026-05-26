@@ -1,0 +1,25 @@
+{
+  "id": "redis-agent-skills-redis-vector-search",
+  "name": "redis-vector-search",
+  "description": "Redis vector search guidance covering HNSW vs FLAT algorithm choice, vector index configuration (dims, distance metric, datatype), filtered hybrid search combining vector similarity with TAG or NUMERIC filters, and the RAG retrieval pattern with RedisVL. Use when defining a VECTOR field in FT.CREATE, integrating embeddings (OpenAI, Cohere, sentence-transformers), tuning HNSW parameters (M, EF_CONSTRUCTION, EF_RUNTIME), building a retrieval-augmented generation pipeline, or filtering vector resul",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "redis",
+  "install_path": ".claude/skills/redis-vector-search/SKILL.md",
+  "source": {
+    "repo": "redis/agent-skills",
+    "url": "https://github.com/redis/agent-skills/blob/main/skills/redis-vector-search/SKILL.md",
+    "path": "skills/redis-vector-search/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-26T17:04:42.059Z",
+    "stars": 59,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-26T14:57:32Z",
+    "license": "MIT"
+  }
+}
