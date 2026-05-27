@@ -1,7 +1,7 @@
 {
   "id": "trailofbits-skills-let-fate-decide",
   "name": "let-fate-decide",
-  "description": "Draws 4 Tarot cards to inject entropy into planning when prompts are vague, ambiguous, or casually delegated. Interprets the spread to guide next steps. Use when the user says 'let fate decide', 'YOLO', 'whatever', 'idk', or other nonchalant phrases, makes Yu-Gi-Oh references, or when you are about to arbitrarily pick between multiple reasonable approaches. Prefer over ask-questions-if-underspecified when the user's tone is casual or playful rather than precision-seeking.",
+  "description": "Draws the 12 Houses of the Zodiac Tarot spread to inject entropy into planning when prompts are vague, ambiguous, or casually delegated. Interprets the spread to guide next steps. Use when the user says 'let fate decide', 'YOLO', 'whatever', 'idk', or other nonchalant phrases, makes Yu-Gi-Oh references, or when you are about to arbitrarily pick between multiple reasonable approaches. Prefer over ask-questions-if-underspecified when the user's tone is casual or playful rather than precision-seeki",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/trailofbits/skills/blob/main/plugins/let-fate-decide/skills/let-fate-decide/SKILL.md",
     "path": "plugins/let-fate-decide/skills/let-fate-decide/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-27T16:53:18.760Z",
+    "discovered_at": "2026-05-27T19:39:46.317Z",
     "stars": 5433,
     "language": "Python",
-    "pushed_at": "2026-05-16T17:22:25Z",
+    "pushed_at": "2026-05-27T19:31:47Z",
     "license": "CC-BY-SA-4.0"
-  },
-  "summary_zh": "这是一个抽塔罗牌并解读的随机决策工具。当用户提示词模糊或敷衍说“随便”时，它能靠随机拍板来指引下一步，特别适合轻松玩闹而非追求严谨的交互场景。"
+  }
 }
