@@ -1,7 +1,7 @@
 {
   "id": "earthtojake-text-to-cad-cad",
   "name": "cad",
-  "description": "Create, modify, inspect, and validate STEP-first build123d/Python CAD parts and assemblies. Use for natural-language CAD specs, STEP/STP generation, build123d source, build123d source-level joints, @cad references, geometry facts, measurements, mating deltas, CAD Explorer handoffs, and secondary DXF/STL/3MF outputs.",
+  "description": "Create, modify, inspect, and validate STEP-first build123d/Python CAD parts and assemblies. Use for natural-language CAD specs, STEP/STP generation or direct inspection, build123d source, build123d source-level joints, @cad references, geometry facts, measurements, mating deltas, CAD Viewer handoffs, snapshots, and secondary DXF/STL/3MF/native GLB outputs from CAD geometry.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/earthtojake/text-to-cad/blob/main/skills/cad/SKILL.md",
     "path": "skills/cad/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-27T19:42:24.682Z",
-    "stars": 4980,
-    "language": "JavaScript",
-    "pushed_at": "2026-05-21T03:27:07Z",
+    "discovered_at": "2026-05-27T22:16:48.319Z",
+    "stars": 4991,
+    "language": "Python",
+    "pushed_at": "2026-05-27T21:31:36Z",
     "license": "MIT"
-  },
-  "summary_zh": "这是一个基于Python的3D建模与检查工具，支持用自然语言或代码生成、验证并导出STEP等格式的CAD模型，适合编程化精准控制3D设计与装配的场景。"
+  }
 }

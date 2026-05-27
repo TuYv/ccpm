@@ -1,0 +1,25 @@
+{
+  "id": "earthtojake-text-to-cad-bambu-labs",
+  "name": "bambu-labs",
+  "description": "Dry-run, upload, and cautiously initiate local Bambu Lab print jobs from validated plain `.gcode`, using Bambu LAN FTPS/MQTT handoffs.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "earthtojake",
+  "install_path": ".claude/skills/bambu-labs/SKILL.md",
+  "source": {
+    "repo": "earthtojake/text-to-cad",
+    "url": "https://github.com/earthtojake/text-to-cad/blob/main/skills/bambu-labs/SKILL.md",
+    "path": "skills/bambu-labs/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-27T22:16:48.153Z",
+    "stars": 4991,
+    "language": "Python",
+    "pushed_at": "2026-05-27T21:31:36Z",
+    "license": "MIT"
+  }
+}

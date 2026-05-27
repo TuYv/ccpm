@@ -1,0 +1,25 @@
+{
+  "id": "earthtojake-text-to-cad-cad-viewer",
+  "name": "cad-viewer",
+  "description": "Start or reuse CAD Viewer and return review links for explicit CAD, robot-description, and G-code files. Use when visually reviewing `.step`, `.stp`, `.glb`, `.stl`, `.3mf`, `.gcode`, `.dxf`, `.urdf`, `.srdf`, or `.sdf` files, especially when handed off from CAD, G-code, URDF, SRDF, or SDF generation skills.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "earthtojake",
+  "install_path": ".claude/skills/cad-viewer/SKILL.md",
+  "source": {
+    "repo": "earthtojake/text-to-cad",
+    "url": "https://github.com/earthtojake/text-to-cad/blob/main/skills/cad-viewer/SKILL.md",
+    "path": "skills/cad-viewer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-27T22:16:48.230Z",
+    "stars": 4991,
+    "language": "Python",
+    "pushed_at": "2026-05-27T21:31:36Z",
+    "license": "MIT"
+  }
+}

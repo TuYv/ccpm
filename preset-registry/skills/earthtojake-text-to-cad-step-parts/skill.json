@@ -1,7 +1,7 @@
 {
   "id": "earthtojake-text-to-cad-step-parts",
   "name": "step-parts",
-  "description": "Find, evaluate, and download low-level common standard CAD parts from step.parts, such as screws, bolts, nuts, washers, bearings, standoffs, electronics parts, motors, connectors, and other off-the-shelf components. Use when Codex needs to search the hosted step.parts catalog, resolve fuzzy part names, standards, aliases, or dimensions, choose a matching part, fetch a canonical .step file, verify checksums, or use the step.parts API/OpenAPI/catalog endpoints for standard part discovery.",
+  "description": "Find, evaluate, and download common purchasable CAD parts from step.parts, including named off-the-shelf actuators, servos, motors, electronics boards, connectors, screws, bolts, nuts, washers, bearings, standoffs, and other catalog components. Use when Codex needs to search the hosted step.parts catalog before creating simplified placeholder geometry, resolve fuzzy part names, standards, aliases, or dimensions, choose a matching part, fetch a canonical .step file, verify checksums, or use the s",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/earthtojake/text-to-cad/blob/main/skills/step-parts/SKILL.md",
     "path": "skills/step-parts/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-27T19:42:25.231Z",
-    "stars": 4980,
-    "language": "JavaScript",
-    "pushed_at": "2026-05-21T03:27:07Z",
+    "discovered_at": "2026-05-27T22:16:48.820Z",
+    "stars": 4991,
+    "language": "Python",
+    "pushed_at": "2026-05-27T21:31:36Z",
     "license": "MIT"
-  },
-  "summary_zh": "这是一个搜索和下载标准CAD零件的工具，适合在设计中需要快速查找现成零件、匹配模糊的零件名或规格，并直接获取可靠的STEP格式3D模型的场景。"
+  }
 }
