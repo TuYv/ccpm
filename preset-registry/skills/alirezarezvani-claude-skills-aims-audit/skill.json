@@ -1,0 +1,25 @@
+{
+  "id": "alirezarezvani-claude-skills-aims-audit",
+  "name": "aims-audit",
+  "description": "/cs:aims-audit <scope> — ISO/IEC 42001 AIMS internal-audit 6-question forcing interrogation. Use before certification stage 1, before annual internal audit cycles, or when onboarding a new AI system into an existing AIMS.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alirezarezvani",
+  "install_path": ".claude/skills/aims-audit/SKILL.md",
+  "source": {
+    "repo": "alirezarezvani/claude-skills",
+    "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/aims-audit/SKILL.md",
+    "path": ".gemini/skills/aims-audit/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-27T16:55:34.890Z",
+    "stars": 16323,
+    "language": "Python",
+    "pushed_at": "2026-05-27T15:06:12Z",
+    "license": "MIT"
+  }
+}

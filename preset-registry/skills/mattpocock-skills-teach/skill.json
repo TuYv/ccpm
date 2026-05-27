@@ -1,0 +1,25 @@
+{
+  "id": "mattpocock-skills-teach",
+  "name": "teach",
+  "description": "Teach the user a new skill or concept, within this workspace.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mattpocock",
+  "install_path": ".claude/skills/teach/SKILL.md",
+  "source": {
+    "repo": "mattpocock/skills",
+    "url": "https://github.com/mattpocock/skills/blob/main/skills/in-progress/teach/SKILL.md",
+    "path": "skills/in-progress/teach/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-27T16:53:37.018Z",
+    "stars": 108191,
+    "language": "Shell",
+    "pushed_at": "2026-05-27T12:36:27Z",
+    "license": "MIT"
+  }
+}

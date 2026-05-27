@@ -1,0 +1,25 @@
+{
+  "id": "openaccountants-openaccountants-classifying-tax-transactions",
+  "name": "classifying-tax-transactions",
+  "description": "Content skill for classifying business bank transactions into US federal Schedule C (Form 1040) line items for sole proprietors and single-member LLCs disregarded for federal tax. Tax year 2025. Federal only. Supplies the Tier 1 deterministic vendor pattern library, Tier 2 conservative-default table, and refusal catalog. MUST be loaded alongside the tax-workflow-base skill which provides the three-state contract, citation discipline, structured-question form, and reviewer-attention output spec. ",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openaccountants",
+  "install_path": ".claude/skills/classifying-tax-transactions/SKILL.md",
+  "source": {
+    "repo": "openaccountants/openaccountants",
+    "url": "https://github.com/openaccountants/openaccountants/blob/main/cookbook-contribution/custom_skills/classifying-tax-transactions/SKILL.md",
+    "path": "cookbook-contribution/custom_skills/classifying-tax-transactions/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-27T16:57:35.854Z",
+    "stars": 82,
+    "language": "Python",
+    "pushed_at": "2026-05-27T14:13:51Z",
+    "license": "AGPL-3.0"
+  }
+}
