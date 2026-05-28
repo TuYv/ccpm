@@ -1,7 +1,7 @@
 {
   "id": "asklokesh-claudeskill-loki-mode",
   "name": "loki-mode",
-  "description": "Multi-agent autonomous startup system. Triggers on \"Loki Mode\". Takes a spec (PRD, GitHub issue, OpenAPI doc, etc.) to deployed product with minimal human intervention. Requires --dangerously-skip-permissions flag.",
+  "description": "Autonomous spec-to-product system. Triggers on \"Loki Mode\". Takes a spec (PRD, GitHub issue, OpenAPI doc, etc.) to deployed product via the RARV-C closure loop, with minimal human intervention. Provider-agnostic. Requires --dangerously-skip-permissions flag.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/asklokesh/claudeskill-loki-mode/blob/main/SKILL.md",
     "path": "SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-28T12:57:51.709Z",
+    "discovered_at": "2026-05-28T17:17:06.856Z",
     "stars": 947,
     "language": "Python",
-    "pushed_at": "2026-05-28T05:04:25Z",
+    "pushed_at": "2026-05-28T15:30:51Z",
     "license": null
-  },
-  "summary_zh": "这是一个多智能体自动化系统，只需提供需求文档或接口规范，就能在几乎无需人工干预下自动完成开发与部署，适合追求全自动交付的极客场景。"
+  }
 }
