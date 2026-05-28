@@ -2,7 +2,7 @@
   "id": "backnotprop-plannotator-plannotator-setup-goal",
   "name": "plannotator-setup-goal",
   "description": "Turn an idea or objective into a goal package for /goal. Interviews the user, builds a reviewed fact sheet via Plannotator, then explores the codebase to produce an execution plan.",
-  "category": "开发编程",
+  "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/backnotprop/plannotator/blob/main/apps/skills/plannotator-setup-goal/SKILL.md",
     "path": "apps/skills/plannotator-setup-goal/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-28T04:48:35.669Z",
-    "stars": 5654,
+    "discovered_at": "2026-05-28T09:08:09.680Z",
+    "stars": 5667,
     "language": "TypeScript",
-    "pushed_at": "2026-05-28T04:44:56Z",
+    "pushed_at": "2026-05-28T06:12:10Z",
     "license": "Apache-2.0"
   },
   "summary_zh": "这是一个目标拆解工具，通过交互提问和代码分析，把模糊想法变成具体执行计划，适合需要将初步构想快速落地为行动方案的场景。"
