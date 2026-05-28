@@ -1,0 +1,25 @@
+{
+  "id": "thananon-9arm-skills-debug-mantra",
+  "name": "debug-mantra",
+  "description": "Four-mantra debugging discipline — reproduce, trace the fail path, falsify the hypothesis, cross-reference every breadcrumb. Recite the mantra block verbatim at the start of any debugging session, then apply the four steps in order before proposing any fix. Trigger on /debug-mantra and proactively whenever debugging starts — user reports a bug, says something is broken/throwing/failing, asks to debug/diagnose/investigate an issue, or pastes a stack trace or error log.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "thananon",
+  "install_path": ".claude/skills/debug-mantra/SKILL.md",
+  "source": {
+    "repo": "thananon/9arm-skills",
+    "url": "https://github.com/thananon/9arm-skills/blob/main/skills/engineering/debug-mantra/SKILL.md",
+    "path": "skills/engineering/debug-mantra/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-28T04:45:48.374Z",
+    "stars": 2449,
+    "language": "Shell",
+    "pushed_at": "2026-05-26T11:47:15Z",
+    "license": null
+  }
+}

@@ -1,7 +1,7 @@
 {
   "id": "campfirein-cipher-skill",
   "name": "byterover",
-  "description": "You MUST use this for gathering contexts before any work. This is a Knowledge management for AI agents. Use `brv` to store and retrieve project patterns, decisions, and architectural rules in .brv/context-tree. Uses a configured LLM provider (default: ByteRover, no API key needed) for query and curate operations.",
+  "description": "You MUST use this skill for: (1) 'Show me how ByteRover works', 'walk me through ByteRover', tour, intro, walkthrough, or onboarding requests — runs a guided 90-second introduction; (2) gathering contexts before any work; (3) saving knowledge after any change. ByteRover stores and retrieves project patterns, decisions, and architectural rules in `.brv/context-tree`. Iron Law: query before thinking, curate after implementing.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/campfirein/cipher/blob/main/src/server/templates/skill/SKILL.md",
     "path": "src/server/templates/skill/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-27T23:52:49.874Z",
+    "discovered_at": "2026-05-28T04:47:05.859Z",
     "stars": 4793,
     "language": "TypeScript",
-    "pushed_at": "2026-05-27T17:43:12Z",
+    "pushed_at": "2026-05-28T03:20:35Z",
     "license": null
-  },
-  "summary_zh": "专为AI代理打造的知识管理工具，让AI在干活前能快速掌握项目背景与架构决策，解决它缺乏上下文的问题。"
+  }
 }

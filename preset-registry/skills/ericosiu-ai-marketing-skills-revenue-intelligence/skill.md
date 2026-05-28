@@ -179,6 +179,33 @@ GA4 + HubSpot + Ahrefs + Gong → Client Report → Executive Summary + Anomalie
 4. **Quarterly:** Run `revenue_attribution.py --gaps` to find content gaps
 5. **Ongoing:** Feed Gong insight follow-ups into outbound sequences
 
+## Revenue Analytics Feedback Loop
+
+Any recommendation that changes outbound, sales language, routing, content investment, or client reporting should get a readback.
+
+Before recommending:
+- Define the baseline window and candidate window.
+- Pull source data from HubSpot, Gong, GA4, Ahrefs, and any outbound platform available.
+- Identify the primary metric before looking at the result, otherwise the analysis becomes KPI karaoke.
+
+After the change:
+1. Pull analytics after the readback date.
+2. Compare baseline vs candidate.
+3. Separate owner/participant effects, list quality, campaign changes, seasonality, and attribution gaps.
+4. Promote, keep testing, rollback, or mark unproven.
+
+Common primary metrics:
+- positive reply rate
+- booked meeting rate
+- qualified opportunity movement
+- pipeline created
+- speed-to-lead
+- content-assisted revenue
+- conversion rate
+- objection frequency reduction
+
+Every promoted playbook patch should include the change made, source systems, baseline window, candidate window, metric winner, caveats, and rollback rule.
+
 ## Dependencies
 
 ```bash

@@ -2,7 +2,7 @@
   "id": "agricidaniel-claude-obsidian-save",
   "name": "save",
   "description": "> Save the current conversation, answer, or insight into the Obsidian wiki vault as a structured note. Analyzes the chat, determines the right note type, creates frontmatter, files it in the correct wiki folder, and updates index, log, and hot cache. Triggers on: \"save this\", \"save that answer\", \"/save\", \"file this\", \"save to wiki\", \"save this session\", \"file this conversation\", \"keep this\", \"save this analysis\", \"add this to the wiki\".",
-  "category": "设计创意",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/AgriciDaniel/claude-obsidian/blob/main/skills/save/SKILL.md",
     "path": "skills/save/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-27T23:52:57.361Z",
-    "stars": 5635,
+    "discovered_at": "2026-05-28T04:47:09.946Z",
+    "stars": 5643,
     "language": "Python",
-    "pushed_at": "2026-04-24T10:21:48Z",
+    "pushed_at": "2026-05-28T00:42:43Z",
     "license": "MIT"
   },
   "summary_zh": "它能通过指令一键将对话存入Obsidian，自动分析内容并分类归档成结构化笔记，免去手动复制整理的麻烦，适合想用Obsidian沉淀聊天灵感或知识的人。"

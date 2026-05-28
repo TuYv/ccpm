@@ -102,6 +102,35 @@ Never fabricate metrics. Use real numbers or don't use numbers.
 
 ---
 
+## Analytics Feedback Loop
+
+If X/Twitter analytics are available, use them before drafting and after publishing.
+
+Before drafting:
+- Pull recent post performance for similar topics and formats.
+- Compare impressions, engagement rate, replies, reposts, bookmarks, profile clicks, follower delta, post length, hook style, proof number, CTA type, and topic bucket.
+- Prefer hooks and structures that have actually worked. Do not worship cleverness. Cleverness without distribution is theater with better fonts.
+
+After publishing:
+1. Log post URL/id, publish time, hook, title, proof number, structure, CTA, and topic bucket.
+2. Pull analytics after the readback window.
+3. Compare against a baseline cohort of similar posts.
+4. Patch the title formulas, hook patterns, CTA rules, or section structure only if the candidate beats baseline or produces a clearly better audience signal.
+
+Judgment metrics:
+- impressions
+- engagement rate
+- replies
+- reposts
+- bookmarks
+- profile clicks
+- follower delta
+- quality of replies
+
+Every promoted format change should include a baseline window, candidate window, metric winner, caveats, and rollback rule.
+
+---
+
 ## Input Format
 
 User provides:

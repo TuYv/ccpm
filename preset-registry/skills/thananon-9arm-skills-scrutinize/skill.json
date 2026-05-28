@@ -1,0 +1,25 @@
+{
+  "id": "thananon-9arm-skills-scrutinize",
+  "name": "scrutinize",
+  "description": "Outsider-perspective end-to-end review of a plan, PR, or code change. First questions intent and whether a simpler/more elegant approach would achieve the same goal, then traces the actual code path (not just the diff) to verify the change does what it claims. Output is concise, actionable, and every call carries its rationale. Trigger on /scrutinize and proactively whenever the user asks to review, audit, sanity-check, or get a second opinion on a plan, PR, diff, design doc, or proposed code ch",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "thananon",
+  "install_path": ".claude/skills/scrutinize/SKILL.md",
+  "source": {
+    "repo": "thananon/9arm-skills",
+    "url": "https://github.com/thananon/9arm-skills/blob/main/skills/engineering/scrutinize/SKILL.md",
+    "path": "skills/engineering/scrutinize/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-28T04:45:48.520Z",
+    "stars": 2449,
+    "language": "Shell",
+    "pushed_at": "2026-05-26T11:47:15Z",
+    "license": null
+  }
+}

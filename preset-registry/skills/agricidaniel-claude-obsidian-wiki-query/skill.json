@@ -2,7 +2,7 @@
   "id": "agricidaniel-claude-obsidian-wiki-query",
   "name": "wiki-query",
   "description": "Answer questions using the Obsidian wiki vault. Reads hot cache first, then index, then relevant pages. Synthesizes answers with citations. Files good answers back as wiki pages. Supports quick, standard, and deep modes. Triggers on: what do you know about, query:, what is, explain, summarize, find in wiki, search the wiki, based on the wiki, wiki query quick, wiki query deep.",
-  "category": "设计创意",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/AgriciDaniel/claude-obsidian/blob/main/skills/wiki-query/SKILL.md",
     "path": "skills/wiki-query/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-27T23:52:57.968Z",
-    "stars": 5635,
+    "discovered_at": "2026-05-28T04:47:10.707Z",
+    "stars": 5643,
     "language": "Python",
-    "pushed_at": "2026-04-24T10:21:48Z",
+    "pushed_at": "2026-05-28T00:42:43Z",
     "license": "MIT"
   },
   "summary_zh": "它是一个 Obsidian 知识库问答工具，能帮你从海量笔记中检索并生成带引用的答案，还会把高质量回答自动存回笔记，适合需要深度挖掘个人知识库的场景。"

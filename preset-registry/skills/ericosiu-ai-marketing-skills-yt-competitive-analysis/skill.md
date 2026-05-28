@@ -50,6 +50,28 @@ python3 analyze.py "$YOUTUBE_API_KEY" --set both --output console
 - **Title patterns**: Common words in outlier titles indicate proven formats
 - **Cadence**: Videos per week. Higher cadence creators may have lower per-video averages.
 
+## Channel Analytics Feedback Loop
+
+Competitive analysis is only half the loop. When you have access to the channel's own analytics, compare candidate packaging against actual performance after publish.
+
+Before recommending a package:
+- Pull channel baseline by topic, title pattern, thumbnail pattern, length, publish day/time, and format.
+- Check impressions, CTR, average view duration, retention curve, watch time, subscribers gained, comments, and traffic source.
+- Compare the proposed title/thumbnail/hook against similar historical videos and competitor outliers.
+
+After publishing:
+1. Log video ID, title, thumbnail concept, hook, topic bucket, retention devices, and publish date.
+2. Pull analytics after the chosen readback window.
+3. Compare baseline vs candidate.
+4. Patch title formulas, thumbnail rules, hook patterns, retention beats, chapter structure, Shorts selection, or repurposing guidance only if the candidate wins.
+
+Readback windows:
+- 24-48 hours for CTR and early retention
+- 7 days for average view duration and watch time
+- 28 days for topic durability and subscriber gain
+
+Do not call packaging validated until analytics are checked. Otherwise it is a screenplay wearing a lab coat.
+
 ## Packaging Skeletons (Proven Formats)
 
 **Long-form:**

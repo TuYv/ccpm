@@ -2,7 +2,7 @@
   "id": "agricidaniel-claude-obsidian-wiki-ingest",
   "name": "wiki-ingest",
   "description": "Ingest sources into the Obsidian wiki vault. Reads a source, extracts entities and concepts, creates or updates wiki pages, cross-references, and logs the operation. Supports files, URLs, and batch mode. Triggers on: ingest, process this source, add this to the wiki, read and file this, batch ingest, ingest all of these, ingest this url.",
-  "category": "设计创意",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/AgriciDaniel/claude-obsidian/blob/main/skills/wiki-ingest/SKILL.md",
     "path": "skills/wiki-ingest/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-27T23:52:57.647Z",
-    "stars": 5635,
+    "discovered_at": "2026-05-28T04:47:10.442Z",
+    "stars": 5643,
     "language": "Python",
-    "pushed_at": "2026-04-24T10:21:48Z",
+    "pushed_at": "2026-05-28T00:42:43Z",
     "license": "MIT"
   },
   "summary_zh": "这是一个把文件或网页自动导入Obsidian的工具，它能把资料转化为互相关联的维基笔记，帮你快速将零散信息整理成结构化的知识库。"

@@ -130,6 +130,45 @@ Keywords are scored on two axes:
 3. **2x/week:** Run `trend_scout.py` to catch trending topics early
 4. **Monthly:** Review competitor gaps and adjust `COMPETITORS` list
 
+## SEO/AEO/GEO Closed Loop
+
+Use analytics readbacks before promoting any SEO, AEO, GEO, or content-refresh playbook change.
+
+Inputs:
+- GSC clicks, impressions, CTR, average position, queries, pages
+- GA4 sessions, engaged sessions, conversions, assisted leads
+- Ahrefs rankings, backlinks, traffic estimates, keyword movement
+- ClickFlow opportunities where available
+- AI-search / answer-engine / GEO visibility where available
+- CMS/page change log
+
+Judgment:
+- Compare baseline vs candidate windows.
+- Segment by page, query, topic, intent, and source.
+- Track confounders: seasonality, indexing lag, brand spikes, campaigns, tracking changes, and unrelated site edits.
+
+Promotion rule:
+- Promote the playbook patch only if the candidate beats baseline or exposes a repeatable signal.
+- Otherwise mark it `unproven`, keep testing, or rollback.
+
+Common readback windows:
+- Content refresh: 7, 14, 28, and 56 days
+- New content: 14, 28, 56, and 90 days
+- Technical SEO fix: daily for 7 days, then 28-day readback
+- AEO/GEO visibility: weekly, because answer engines are noisy gremlins with citations
+
+Required readback fields:
+- change made
+- owner
+- page/query/topic affected
+- baseline window
+- candidate window
+- source systems pulled
+- primary and secondary metrics
+- caveats
+- decision: promote / keep testing / rollback / unproven
+- next playbook patch
+
 ## Dependencies
 
 ```bash
