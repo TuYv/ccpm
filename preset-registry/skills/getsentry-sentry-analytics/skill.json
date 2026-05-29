@@ -1,0 +1,25 @@
+{
+  "id": "getsentry-sentry-analytics",
+  "name": "analytics",
+  "description": "Instrument and discover analytics events in Sentry's frontend UI. Use when adding tracking to buttons, pages, modals, or custom interactions, when defining new analytics events, when searching for existing events, when auditing analytics coverage for a feature, or when answering questions about how users interact with a feature. Trigger on \"add analytics\", \"track event\", \"instrument analytics\", \"analytics event\", \"track click\", \"track page view\", \"add tracking\", \"what events exist for\", \"audit a",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "getsentry",
+  "install_path": ".claude/skills/analytics/SKILL.md",
+  "source": {
+    "repo": "getsentry/sentry",
+    "url": "https://github.com/getsentry/sentry/blob/master/.agents/skills/analytics/SKILL.md",
+    "path": ".agents/skills/analytics/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-05-29T17:01:53.245Z",
+    "stars": 43991,
+    "language": "Python",
+    "pushed_at": "2026-05-29T16:58:14Z",
+    "license": null
+  }
+}

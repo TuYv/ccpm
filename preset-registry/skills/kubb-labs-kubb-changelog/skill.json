@@ -2,7 +2,7 @@
   "id": "kubb-labs-kubb-changelog",
   "name": "changelog",
   "description": "Automatically creates user-facing changelogs from git commits by analyzing commit history, categorizing changes, and transforming technical commits into clear, customer-friendly release notes. Turns hours of manual changelog writing into minutes of automated generation.",
-  "category": "设计创意",
+  "category": "文档写作",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/kubb-labs/kubb/blob/main/.agents/skills/changelog/SKILL.md",
     "path": ".agents/skills/changelog/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-29T12:36:08.982Z",
+    "discovered_at": "2026-05-29T17:01:43.962Z",
     "stars": 1725,
     "language": "TypeScript",
-    "pushed_at": "2026-05-29T12:29:34Z",
+    "pushed_at": "2026-05-29T17:00:53Z",
     "license": null
   },
   "summary_zh": "它能自动分析Git提交记录，把技术性的代码变更转成用户易懂的更新日志，让你几分钟就能搞定原本要写几小时的发版说明，特别适合需要频繁发版的团队。"
