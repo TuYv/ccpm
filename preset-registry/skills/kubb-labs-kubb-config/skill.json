@@ -1,0 +1,25 @@
+{
+  "id": "kubb-labs-kubb-config",
+  "name": "config",
+  "description": "How to author a kubb.config.ts and pick the right @kubb/plugin-* packages when generating TypeScript from an OpenAPI/Swagger spec. Use whenever setting up Kubb, adding a generator, or debugging codegen output.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "kubb-labs",
+  "install_path": ".claude/skills/config/SKILL.md",
+  "source": {
+    "repo": "kubb-labs/kubb",
+    "url": "https://github.com/kubb-labs/kubb/blob/main/tools/claude/skills/config/SKILL.md",
+    "path": "tools/claude/skills/config/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-29T19:48:33.446Z",
+    "stars": 1725,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-29T19:33:04Z",
+    "license": null
+  }
+}

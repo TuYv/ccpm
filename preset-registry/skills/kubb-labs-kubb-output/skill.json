@@ -1,0 +1,25 @@
+{
+  "id": "kubb-labs-kubb-output",
+  "name": "output",
+  "description": "Import and use Kubb's generated code (types, clients, hooks, schemas, mocks). Use when writing app or test code that consumes a Kubb build.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "kubb-labs",
+  "install_path": ".claude/skills/output/SKILL.md",
+  "source": {
+    "repo": "kubb-labs/kubb",
+    "url": "https://github.com/kubb-labs/kubb/blob/main/tools/claude/skills/output/SKILL.md",
+    "path": "tools/claude/skills/output/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-29T19:48:33.565Z",
+    "stars": 1725,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-29T19:33:04Z",
+    "license": null
+  }
+}
