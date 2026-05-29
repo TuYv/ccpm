@@ -1,31 +1,16 @@
 ---
 name: jsdoc
-description: Guidelines for writing minimal, high-quality JSDoc comments in TypeScript.
+description: Full JSDoc format guide for TypeScript, covering @example formats (short, multi-line, multi-variant), tag usage (@default, @deprecated, what to avoid), documentation patterns for properties/enums/functions, and tag order.
 ---
 
-# JSDoc Skill
+# JSDoc
 
-This skill provides focused guidelines for writing JSDoc comments consistently across the codebase.
+The detailed JSDoc format guide with examples for every case. The always-on essentials live in
+the `jsdoc` rule. Reach here when you need the full reference.
 
-## When to Use
+## `@example` format
 
-- Documenting exported type properties and configuration options
-- Adding context that TypeScript types don't convey on their own
-- Providing usage examples for non-obvious or multi-variant APIs
-- Writing inline documentation for generated docs
-
-## What It Does
-
-- Defines `@example` format conventions (label + inline backtick or fenced block)
-- Ensures every exported type and property has meaningful documentation
-- Avoids redundant tags that duplicate TypeScript type information
-- Ensures consistent documentation style across all packages
-
----
-
-## `@example` Format
-
-### Short one-liner — label on the `@example` line, code as inline backtick on the next line
+### Short one-liner: label on the `@example` line, code as inline backtick on the next line
 
 ```typescript
 /**
@@ -37,7 +22,7 @@ This skill provides focused guidelines for writing JSDoc comments consistently a
  */
 ```
 
-### Multi-line — fenced code block immediately after `@example`
+### Multi-line: fenced code block immediately after `@example`
 
 ````typescript
 /**
@@ -50,7 +35,7 @@ This skill provides focused guidelines for writing JSDoc comments consistently a
  */
 ````
 
-### Multiple variants — use multiple `@example` blocks
+### Multiple variants: use multiple `@example` blocks
 
 ```typescript
 /**
@@ -64,27 +49,25 @@ This skill provides focused guidelines for writing JSDoc comments consistently a
 
 ### Rules
 
-| Rule                    | ✅ Correct                          | ❌ Incorrect                                 |
+| Rule                    | Correct                             | Incorrect                                    |
 | ----------------------- | ----------------------------------- | -------------------------------------------- |
 | Label + inline code     | `@example Required\n\`name: Type\`` | `@example \`name: Type\`` (code on tag line) |
 | Multi-line code         | Fenced ` ```ts ``` ` block          | Bare code lines without a fence              |
 | Short examples          | Inline backtick                     | Triple-backtick fence (too heavy)            |
 | One concern per example | Separate `@example` blocks          | One example covering all cases               |
 
----
-
 ## Tags
 
-### Use Frequently
+### Use frequently
 
 | Tag           | Purpose            | Notes                                                  |
 | ------------- | ------------------ | ------------------------------------------------------ |
-| `@default`    | Default value      | Only when default is non-obvious; omit for `undefined` |
+| `@default`    | Default value      | Only when the default is non-obvious (omit for `undefined`) |
 | `@example`    | Usage example      | Prefer for complex or multi-variant APIs               |
 | `@note`       | Important caveat   | Version info, breaking changes                         |
-| `@deprecated` | Mark as deprecated | Include migration path                                 |
+| `@deprecated` | Mark as deprecated | Include a migration path                               |
 
-### Use Sparingly
+### Use sparingly
 
 | Tag         | Purpose                 |
 | ----------- | ----------------------- |
@@ -92,19 +75,17 @@ This skill provides focused guidelines for writing JSDoc comments consistently a
 | `@internal` | Internal API            |
 | `@beta`     | Experimental            |
 
-### Avoid (TypeScript Provides)
+### Avoid (TypeScript already provides these)
 
-- ❌ `@param` — use TypeScript parameter types
-- ❌ `@returns` — use TypeScript return type
-- ❌ `@type` — use TypeScript type annotation
-- ❌ `@typedef` — use `type` or `interface`
-- ❌ `@default undefined` — optional (`?`) already implies this
+- `@param`: use TypeScript parameter types
+- `@returns`: use the TypeScript return type
+- `@type`: use a TypeScript type annotation
+- `@typedef`: use `type` or `interface`
+- `@default undefined`: optional (`?`) already implies this
 
----
+## Documentation patterns
 
-## Documentation Patterns
-
-### Simple property — always multi-line
+### Simple property: always multi-line
 
 ```typescript
 /**
@@ -113,9 +94,9 @@ This skill provides focused guidelines for writing JSDoc comments consistently a
 outDir?: string
 ```
 
-> ❌ Never use single-line `/** description */` — always expand to multi-line.
+Never use single-line `/** description */`. Always expand to multi-line.
 
-### Property with non-obvious default
+### Property with a non-obvious default
 
 ```typescript
 /**
@@ -127,9 +108,10 @@ outDir?: string
 concurrency?: number
 ```
 
-> Do **not** add `@default false` or `@default undefined` when the TypeScript type already makes the default obvious.
+Do not add `@default false` or `@default undefined` when the TypeScript type already makes the
+default obvious.
 
-### Enum / union with options
+### Enum or union with options
 
 ```typescript
 /**
@@ -141,20 +123,7 @@ concurrency?: number
 pathParamsType: 'object' | 'inline' | 'inlineSpread'
 ```
 
-### Property with example
-
-```typescript
-/**
- * Applies a uniform transformation to every resolved type string.
- * Use this for framework-level type wrappers.
- *
- * @example Wrap every type in a reactive container
- * `typeWrapper: (t) => \`Reactive<${t}>\``
- */
-typeWrapper?: (type: string) => string
-```
-
-### Nested properties — every field gets its own multi-line JSDoc
+### Nested properties: every field gets its own multi-line JSDoc
 
 ```typescript
 names?: {
@@ -168,11 +137,6 @@ names?: {
    * @default 'params'
    */
   params?: string
-  /**
-   * Name for the header parameters group parameter.
-   * @default 'headers'
-   */
-  headers?: string
 }
 ```
 
@@ -181,66 +145,45 @@ names?: {
 Only add JSDoc when it adds value beyond the signature:
 
 ```typescript
-// ✅ No JSDoc needed — signature is self-explanatory
+// No JSDoc needed: the signature is self-explanatory
 function camelCase(str: string): string { ... }
 
-// ✅ JSDoc adds value — explains behaviour and non-obvious edge cases
+// JSDoc adds value: it explains behavior and non-obvious edge cases
 /**
  * Returns `true` when the schema resolves to a plain string output.
  *
  * - `string`, `uuid`, `email`, `url`, `datetime` are always plain strings.
  * - `date` and `time` are plain strings when their `representation` is `'string'`.
- *
- * @example UUID resolves to a plain string
- * `isStringType(uuidSchema) // true`
- *
- * @example Date with date representation is not a plain string
- * `isStringType(dateSchema) // false`
  */
 function isStringType(node: SchemaNode): boolean { ... }
 ```
 
----
-
 ## Guidelines
 
-**✅ DO:**
+Do:
 
-- Document **what** the property does, not its TypeScript type
+- Document what the property does, not its TypeScript type
 - Give every exported type, property, and function a JSDoc comment
-- Always use multi-line JSDoc blocks — never single-line `/** ... */`
-- Use concrete, full-sentence descriptions — not "Enum schema." or "Boolean value."
-- Include `@default` only when the default is non-obvious (not `undefined`, not `false`)
-- Use multiple `@example` blocks to show different variants or modes
+- Always use multi-line JSDoc blocks
+- Use concrete, full-sentence descriptions
+- Include `@default` only when the default is non-obvious
+- Use multiple `@example` blocks for different variants
 - Keep `@example` labels short and descriptive
 
-**❌ DON'T:**
+Do not:
 
-- Write single-line `/** description */` — always use multi-line
-- Write `@default undefined` — optional `?` already implies this
-- Put code directly on the `@example` line: `@example \`foo: string\`` → move code to next line
+- Write single-line `/** description */`
+- Write `@default undefined`
+- Put code directly on the `@example` line
 - Use `@param` or `@returns` tags
 - Over-document trivial, self-explanatory properties
 
----
-
-## Tag Order
-
-For consistency, use this order within a JSDoc block:
+## Tag order
 
 1. Description (required)
-2. Bullet-list of variants or behaviours (if applicable)
+2. Bullet list of variants or behaviors (if applicable)
 3. `@default` (if non-obvious)
 4. `@example` (one or more)
 5. `@note` (if needed)
 6. `@deprecated` (if applicable)
 7. `@see` (if providing references)
-
----
-
-## Related Skills
-
-| Skill                                                      | Use For                              |
-| ---------------------------------------------------------- | ------------------------------------ |
-| **[../documentation/SKILL.md](../documentation/SKILL.md)** | Writing markdown documentation files |
-| **[../coding-style/SKILL.md](../coding-style/SKILL.md)**   | General coding conventions           |

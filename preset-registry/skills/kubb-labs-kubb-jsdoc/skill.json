@@ -1,7 +1,7 @@
 {
   "id": "kubb-labs-kubb-jsdoc",
   "name": "jsdoc",
-  "description": "Guidelines for writing minimal, high-quality JSDoc comments in TypeScript.",
+  "description": "Full JSDoc format guide for TypeScript, covering @example formats (short, multi-line, multi-variant), tag usage (@default, @deprecated, what to avoid), documentation patterns for properties/enums/functions, and tag order.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -13,14 +13,13 @@
   "install_path": ".claude/skills/jsdoc/SKILL.md",
   "source": {
     "repo": "kubb-labs/kubb",
-    "url": "https://github.com/kubb-labs/kubb/blob/main/.skills/jsdoc/SKILL.md",
-    "path": ".skills/jsdoc/SKILL.md",
+    "url": "https://github.com/kubb-labs/kubb/blob/main/.agents/skills/jsdoc/SKILL.md",
+    "path": ".agents/skills/jsdoc/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-29T09:00:00.905Z",
-    "stars": 1724,
+    "discovered_at": "2026-05-29T12:36:09.492Z",
+    "stars": 1725,
     "language": "TypeScript",
-    "pushed_at": "2026-05-28T20:35:03Z",
+    "pushed_at": "2026-05-29T12:29:34Z",
     "license": null
-  },
-  "summary_zh": "这是一份专为TypeScript打造的注释规范，教你写出精简且高质量的JSDoc文档，告别冗余拖沓，让代码更易维护。"
+  }
 }

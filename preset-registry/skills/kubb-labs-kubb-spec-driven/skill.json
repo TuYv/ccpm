@@ -1,0 +1,25 @@
+{
+  "id": "kubb-labs-kubb-spec-driven",
+  "name": "spec-driven",
+  "description": "Drive a spec-driven workflow for a larger feature: specify requirements and acceptance criteria, research decisions, plan numbered slices, implement, then verify. Use for multi-step features that need a reviewable paper trail. Skip it for small, obvious changes.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "kubb-labs",
+  "install_path": ".claude/skills/spec-driven/SKILL.md",
+  "source": {
+    "repo": "kubb-labs/kubb",
+    "url": "https://github.com/kubb-labs/kubb/blob/main/.agents/skills/spec-driven/SKILL.md",
+    "path": ".agents/skills/spec-driven/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-29T12:36:09.820Z",
+    "stars": 1725,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-29T12:29:34Z",
+    "license": null
+  }
+}
