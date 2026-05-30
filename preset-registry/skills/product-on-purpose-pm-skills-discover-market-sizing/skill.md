@@ -197,7 +197,7 @@ Quick-estimate mode still refuses unbounded fabrication. The difference is it ac
 
 - Output of this skill feeds into: `develop-solution-brief` and `deliver-prd` (sizing informs scope and the investment case)
 - Inputs to this skill often come from: `discover-competitive-analysis` (market and competitor context) and `discover-interview-synthesis` (qualitative signal that informs sizing assumptions)
-- Adversarial review via: `/pm-critic` (use proactively to challenge assumptions, source quality, and confidence labels)
+- Adversarial review via: `utility-pm-critic` (use proactively to challenge assumptions, source quality, and confidence labels)
 
 ## Output format
 
@@ -217,6 +217,5 @@ Before finalizing, verify:
 
 ## Cross-references
 
-- Companion command: `commands/market-sizing.md`
 - Template: `references/TEMPLATE.md`
 - Examples: `references/EXAMPLE.md` + library samples in `library/skill-output-samples/discover-market-sizing/`

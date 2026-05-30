@@ -181,7 +181,7 @@ Survey is a recurring instrument. Analysis focuses on:
 
 - Output of this skill feeds into: `define-problem-statement`, `define-hypothesis`, `deliver-prd`, `iterate-lessons-log`
 - Inputs to this skill often come from: live survey results (raw rows or a pre-aggregated summary) plus the survey's original design context
-- Adversarial review via: `/pm-critic` (challenges over-confident conclusions and missed limitations)
+- Adversarial review via: `utility-pm-critic` (challenges over-confident conclusions and missed limitations)
 - Complement to qualitative: `discover-interview-synthesis` covers qualitative; this skill covers quantitative; they should agree or the disagreement is itself a finding
 
 ## Output format
@@ -203,7 +203,6 @@ Before finalizing, verify:
 
 ## Cross-references
 
-- Companion command: `commands/survey-analysis.md`
 - Template: `references/TEMPLATE.md`
 - Examples: `references/EXAMPLE.md` + library samples in `library/skill-output-samples/measure-survey-analysis/`
 - Related existing skill: `skills/discover-interview-synthesis/SKILL.md` (qualitative complement)

@@ -1,0 +1,25 @@
+{
+  "id": "basicmachines-co-basic-memory-knowledge-capture",
+  "name": "knowledge-capture",
+  "description": "Capture the meaningful context of a Claude Code thread into a single coherent Basic Memory note. On subsequent invocations within the same thread (identified by the JSONL session UUID) the same note is rewritten, not appended.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "basicmachines-co",
+  "install_path": ".claude/skills/knowledge-capture/SKILL.md",
+  "source": {
+    "repo": "basicmachines-co/basic-memory",
+    "url": "https://github.com/basicmachines-co/basic-memory/blob/main/plugins/claude-code/skills/knowledge-capture/SKILL.md",
+    "path": "plugins/claude-code/skills/knowledge-capture/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-30T19:51:07.126Z",
+    "stars": 3111,
+    "language": "Python",
+    "pushed_at": "2026-05-30T19:47:19Z",
+    "license": "AGPL-3.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "basicmachines-co-basic-memory-memory-reflect",
+  "name": "memory-reflect",
+  "description": "Sleep-time memory reflection: review recent conversations and daily notes, extract insights, and consolidate into long-term memory. Use when triggered by cron, heartbeat, or explicit request to reflect on recent activity. Runs as background processing to improve memory quality over time.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "basicmachines-co",
+  "install_path": ".claude/skills/memory-reflect/SKILL.md",
+  "source": {
+    "repo": "basicmachines-co/basic-memory",
+    "url": "https://github.com/basicmachines-co/basic-memory/blob/main/skills/memory-reflect/SKILL.md",
+    "path": "skills/memory-reflect/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-30T19:51:08.935Z",
+    "stars": 3111,
+    "language": "Python",
+    "pushed_at": "2026-05-30T19:47:19Z",
+    "license": "AGPL-3.0"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "id": "product-on-purpose-pm-skills-utility-pm-critic",
   "name": "utility-pm-critic",
-  "description": "Run adversarial review on a PM artifact via the pm-critic sub-agent. Dispatches natively on Claude Code with the pm-skills plugin (invokes @agent-pm-critic); on non-Claude clients (Codex CLI, Cursor, Windsurf, Copilot, Gemini CLI) reads agents/pm-critic.md and executes the system prompt inline. Returns findings graded P0/P1/P2/P3 with concrete fix suggestions per finding, plus a layered Status Summary section and machine-readable Status YAML block per master plan D26.",
+  "description": "Run adversarial review on a PM artifact via the pm-critic sub-agent. Dispatches natively on Claude Code with the pm-skills plugin (invokes @agent-pm-skills:pm-critic); on non-Claude clients (Codex CLI, Cursor, Windsurf, Copilot, Gemini CLI) reads agents/pm-critic.md and executes the system prompt inline. Returns findings graded P0/P1/P2/P3 with concrete fix suggestions per finding, plus a layered Status Summary section and machine-readable Status YAML block per master plan D26.",
   "category": "文档写作",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/product-on-purpose/pm-skills/blob/main/skills/utility-pm-critic/SKILL.md",
     "path": "skills/utility-pm-critic/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-30T17:37:40.966Z",
+    "discovered_at": "2026-05-30T19:58:33.391Z",
     "stars": 251,
     "language": "Shell",
-    "pushed_at": "2026-05-29T08:45:09Z",
+    "pushed_at": "2026-05-30T19:55:19Z",
     "license": "Apache-2.0"
-  },
-  "summary_zh": "这是一个专给产品方案找茬的AI审查工具，能自动给需求文档挑错，按严重程度分级并提供修改建议，适合产品经理用来打磨和完善需求。"
+  }
 }

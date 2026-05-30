@@ -1,0 +1,25 @@
+{
+  "id": "basicmachines-co-basic-memory-skill",
+  "name": "basic-memory",
+  "description": "Use the Basic Memory knowledge graph for persistent memory across sessions. Search before answering; capture decisions, meetings, and insights as notes.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "basicmachines-co",
+  "install_path": ".claude/skills/skill/SKILL.md",
+  "source": {
+    "repo": "basicmachines-co/basic-memory",
+    "url": "https://github.com/basicmachines-co/basic-memory/blob/main/integrations/hermes/skill/SKILL.md",
+    "path": "integrations/hermes/skill/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-30T19:51:06.589Z",
+    "stars": 3111,
+    "language": "Python",
+    "pushed_at": "2026-05-30T19:47:19Z",
+    "license": "AGPL-3.0"
+  }
+}

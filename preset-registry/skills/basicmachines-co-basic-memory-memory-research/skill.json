@@ -1,0 +1,25 @@
+{
+  "id": "basicmachines-co-basic-memory-memory-research",
+  "name": "memory-research",
+  "description": "Research an external subject using web search, synthesize findings into a structured Basic Memory entity. Use when asked to research a company, person, technology, or topic — or when a bare name or URL is provided that implies a research request.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "basicmachines-co",
+  "install_path": ".claude/skills/memory-research/SKILL.md",
+  "source": {
+    "repo": "basicmachines-co/basic-memory",
+    "url": "https://github.com/basicmachines-co/basic-memory/blob/main/skills/memory-research/SKILL.md",
+    "path": "skills/memory-research/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-30T19:51:09.133Z",
+    "stars": 3111,
+    "language": "Python",
+    "pushed_at": "2026-05-30T19:47:19Z",
+    "license": "AGPL-3.0"
+  }
+}

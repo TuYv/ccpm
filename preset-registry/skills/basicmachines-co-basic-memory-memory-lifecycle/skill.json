@@ -1,0 +1,25 @@
+{
+  "id": "basicmachines-co-basic-memory-memory-lifecycle",
+  "name": "memory-lifecycle",
+  "description": "Manage entity status transitions in Basic Memory: archive completed work, move notes between status folders, update frontmatter, and handle edge cases. Use when marking items complete, archiving old entities, or managing any folder-based status workflow.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "basicmachines-co",
+  "install_path": ".claude/skills/memory-lifecycle/SKILL.md",
+  "source": {
+    "repo": "basicmachines-co/basic-memory",
+    "url": "https://github.com/basicmachines-co/basic-memory/blob/main/skills/memory-lifecycle/SKILL.md",
+    "path": "skills/memory-lifecycle/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-30T19:51:08.180Z",
+    "stars": 3111,
+    "language": "Python",
+    "pushed_at": "2026-05-30T19:47:19Z",
+    "license": "AGPL-3.0"
+  }
+}

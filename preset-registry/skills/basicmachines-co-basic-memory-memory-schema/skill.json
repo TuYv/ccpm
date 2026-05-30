@@ -1,0 +1,25 @@
+{
+  "id": "basicmachines-co-basic-memory-memory-schema",
+  "name": "memory-schema",
+  "description": "Schema lifecycle management for Basic Memory: discover unschemaed notes, infer schemas, create and edit schema definitions, validate notes, and detect drift. Use when working with structured note types (Task, Person, Meeting, etc.) to maintain consistency across the knowledge graph.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "basicmachines-co",
+  "install_path": ".claude/skills/memory-schema/SKILL.md",
+  "source": {
+    "repo": "basicmachines-co/basic-memory",
+    "url": "https://github.com/basicmachines-co/basic-memory/blob/main/skills/memory-schema/SKILL.md",
+    "path": "skills/memory-schema/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-30T19:51:09.287Z",
+    "stars": 3111,
+    "language": "Python",
+    "pushed_at": "2026-05-30T19:47:19Z",
+    "license": "AGPL-3.0"
+  }
+}

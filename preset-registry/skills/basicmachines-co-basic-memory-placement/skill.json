@@ -1,0 +1,25 @@
+{
+  "id": "basicmachines-co-basic-memory-placement",
+  "name": "placement",
+  "description": "Decide where a new note belongs in a Basic Memory project — which folder, matching project conventions read from a unified config file (basic-memory.md). Triggered automatically by a PreToolUse hook matching any MCP basic-memory write_note tool.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "basicmachines-co",
+  "install_path": ".claude/skills/placement/SKILL.md",
+  "source": {
+    "repo": "basicmachines-co/basic-memory",
+    "url": "https://github.com/basicmachines-co/basic-memory/blob/main/plugins/claude-code/skills/placement/SKILL.md",
+    "path": "plugins/claude-code/skills/placement/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-30T19:51:07.455Z",
+    "stars": 3111,
+    "language": "Python",
+    "pushed_at": "2026-05-30T19:47:19Z",
+    "license": "AGPL-3.0"
+  }
+}

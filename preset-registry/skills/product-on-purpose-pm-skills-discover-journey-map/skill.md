@@ -175,7 +175,7 @@ Multiple personas with intersecting journeys (e.g., buyer + influencer + user in
 - Output of this skill feeds into: `define-problem-statement`, `define-hypothesis`, `define-opportunity-tree` (each stage's pain or moment of truth can become a problem statement)
 - Inputs to this skill often come from: `foundation-persona` (the WHO), `discover-interview-synthesis` (qualitative signal), `measure-survey-analysis` (quantitative signal)
 - Visualizes via: `utility-mermaid-diagrams` (timeline or flowchart)
-- Adversarial review via: `/pm-critic` (challenges where emotions and moments of truth lack research evidence)
+- Adversarial review via: `utility-pm-critic` (challenges where emotions and moments of truth lack research evidence)
 
 ## Output format
 
@@ -195,6 +195,5 @@ Before finalizing, verify:
 
 ## Cross-references
 
-- Companion command: `commands/journey-map.md`
 - Template: `references/TEMPLATE.md`
 - Examples: `references/EXAMPLE.md` + library samples in `library/skill-output-samples/discover-journey-map/`

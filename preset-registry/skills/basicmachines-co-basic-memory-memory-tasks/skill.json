@@ -1,0 +1,25 @@
+{
+  "id": "basicmachines-co-basic-memory-memory-tasks",
+  "name": "memory-tasks",
+  "description": "Task management via Basic Memory schemas: create, track, and resume structured tasks that survive context compaction. Uses BM's schema system for uniform notes queryable through the knowledge graph.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "basicmachines-co",
+  "install_path": ".claude/skills/memory-tasks/SKILL.md",
+  "source": {
+    "repo": "basicmachines-co/basic-memory",
+    "url": "https://github.com/basicmachines-co/basic-memory/blob/main/skills/memory-tasks/SKILL.md",
+    "path": "skills/memory-tasks/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-30T19:51:09.444Z",
+    "stars": 3111,
+    "language": "Python",
+    "pushed_at": "2026-05-30T19:47:19Z",
+    "license": "AGPL-3.0"
+  }
+}

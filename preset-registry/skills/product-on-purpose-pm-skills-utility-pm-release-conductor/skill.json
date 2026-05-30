@@ -1,7 +1,7 @@
 {
   "id": "product-on-purpose-pm-skills-utility-pm-release-conductor",
   "name": "utility-pm-release-conductor",
-  "description": "Walk the guided release runbook (6 gates G0/G1/G2/G2.5/G3/G4) via the pm-release-conductor sub-agent. Dispatches natively on Claude Code with the pm-skills plugin (invokes @agent-pm-release-conductor with native chain composition to pm-skill-auditor at G0 and pm-changelog-curator at G2); on non-Claude clients (Codex CLI, Cursor, Windsurf, Copilot, Gemini CLI) reads agents/pm-release-conductor.md and inlines auditor + curator behaviors at G0 + G2 via reference-and-execute-inline pattern (because ",
+  "description": "Walk the guided release runbook (6 gates G0/G1/G2/G2.5/G3/G4) via the pm-release-conductor sub-agent. Dispatches natively on Claude Code with the pm-skills plugin (invokes @agent-pm-skills:pm-release-conductor with native chain composition to pm-skill-auditor at G0 and pm-changelog-curator at G2); on non-Claude clients (Codex CLI, Cursor, Windsurf, Copilot, Gemini CLI) reads agents/pm-release-conductor.md and inlines auditor + curator behaviors at G0 + G2 via reference-and-execute-inline pattern",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/product-on-purpose/pm-skills/blob/main/skills/utility-pm-release-conductor/SKILL.md",
     "path": "skills/utility-pm-release-conductor/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-30T17:37:41.150Z",
+    "discovered_at": "2026-05-30T19:58:33.564Z",
     "stars": 251,
     "language": "Shell",
-    "pushed_at": "2026-05-29T08:45:09Z",
+    "pushed_at": "2026-05-30T19:55:19Z",
     "license": "Apache-2.0"
-  },
-  "summary_zh": "这是一个多阶段自动化发布向导，能按流程引导并调度审计、更新日志等子任务，适配各类AI编程工具，解决跨平台发布流程难以统一规范和自动执行的问题。"
+  }
 }

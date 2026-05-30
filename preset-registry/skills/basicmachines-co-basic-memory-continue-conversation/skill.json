@@ -1,0 +1,25 @@
+{
+  "id": "basicmachines-co-basic-memory-continue-conversation",
+  "name": "continue-conversation",
+  "description": "Resume previous work by building context from Basic Memory knowledge graph using memory URLs and recent activity",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "basicmachines-co",
+  "install_path": ".claude/skills/continue-conversation/SKILL.md",
+  "source": {
+    "repo": "basicmachines-co/basic-memory",
+    "url": "https://github.com/basicmachines-co/basic-memory/blob/main/plugins/claude-code/skills/continue-conversation/SKILL.md",
+    "path": "plugins/claude-code/skills/continue-conversation/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-30T19:51:06.774Z",
+    "stars": 3111,
+    "language": "Python",
+    "pushed_at": "2026-05-30T19:47:19Z",
+    "license": "AGPL-3.0"
+  }
+}

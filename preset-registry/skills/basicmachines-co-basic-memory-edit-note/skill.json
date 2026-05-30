@@ -1,0 +1,25 @@
+{
+  "id": "basicmachines-co-basic-memory-edit-note",
+  "name": "edit-note",
+  "description": "Interactively edit Basic Memory notes using MCP tools - view, modify, and update notes in a conversational workflow (works with cloud and local)",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "basicmachines-co",
+  "install_path": ".claude/skills/edit-note/SKILL.md",
+  "source": {
+    "repo": "basicmachines-co/basic-memory",
+    "url": "https://github.com/basicmachines-co/basic-memory/blob/main/plugins/claude-code/skills/edit-note/SKILL.md",
+    "path": "plugins/claude-code/skills/edit-note/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-30T19:51:06.963Z",
+    "stars": 3111,
+    "language": "Python",
+    "pushed_at": "2026-05-30T19:47:19Z",
+    "license": "AGPL-3.0"
+  }
+}

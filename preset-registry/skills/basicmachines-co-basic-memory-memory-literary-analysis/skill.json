@@ -1,0 +1,25 @@
+{
+  "id": "basicmachines-co-basic-memory-memory-literary-analysis",
+  "name": "memory-literary-analysis",
+  "description": "Analyze a complete literary work into a structured Basic Memory knowledge graph. Covers schema design, entity seeding, chapter-by-chapter processing, cross-referencing, validation, and visualization.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "basicmachines-co",
+  "install_path": ".claude/skills/memory-literary-analysis/SKILL.md",
+  "source": {
+    "repo": "basicmachines-co/basic-memory",
+    "url": "https://github.com/basicmachines-co/basic-memory/blob/main/skills/memory-literary-analysis/SKILL.md",
+    "path": "skills/memory-literary-analysis/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-30T19:51:08.399Z",
+    "stars": 3111,
+    "language": "Python",
+    "pushed_at": "2026-05-30T19:47:19Z",
+    "license": "AGPL-3.0"
+  }
+}
