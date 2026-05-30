@@ -1,0 +1,25 @@
+{
+  "id": "mohamedabdallah-14-unslop-unslop-reasoning",
+  "name": "unslop-reasoning",
+  "description": "> Strip AI-slop patterns from reasoning traces (chain-of-thought, extended thinking, agent decomposition) — not final prose. Reasoning text has its own slop catalog that regular unslop doesn't target: over-explaining the question, over-hedging, over-decomposing trivial problems into 6-bullet substeps, infinite-loop rationalization. Trigger: /unslop-reasoning, \"clean up my reasoning\", \"fix this chain of thought\", \"this CoT sounds robotic\". Applies to reasoning output; does not override regular /u",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "MohamedAbdallah-14",
+  "install_path": ".claude/skills/unslop-reasoning/SKILL.md",
+  "source": {
+    "repo": "MohamedAbdallah-14/unslop",
+    "url": "https://github.com/MohamedAbdallah-14/unslop/blob/main/skills/unslop-reasoning/SKILL.md",
+    "path": "skills/unslop-reasoning/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-30T22:28:31.980Z",
+    "stars": 50,
+    "language": "Python",
+    "pushed_at": "2026-05-05T02:29:58Z",
+    "license": "MIT"
+  }
+}

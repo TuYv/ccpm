@@ -1,0 +1,25 @@
+{
+  "id": "mohamedabdallah-14-unslop-unslop-review",
+  "name": "unslop-review",
+  "description": "> Rewrites code review comments so they read like a human teammate wrote them. Cuts corporate-AI throat-clearing (\"I noticed...\", \"I was wondering if perhaps...\", \"It might be worth considering...\"). Each comment is direct: location, the issue, a concrete fix. Use when user says \"humanize review\", \"de-slop PR comment\", \"make this feedback sound human\", \"review this PR\", \"code review\", \"/review\", \"/unslop-review\". Auto-triggers when reviewing PRs.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "MohamedAbdallah-14",
+  "install_path": ".claude/skills/unslop-review/SKILL.md",
+  "source": {
+    "repo": "MohamedAbdallah-14/unslop",
+    "url": "https://github.com/MohamedAbdallah-14/unslop/blob/main/skills/unslop-review/SKILL.md",
+    "path": "skills/unslop-review/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-30T22:28:32.120Z",
+    "stars": 50,
+    "language": "Python",
+    "pushed_at": "2026-05-05T02:29:58Z",
+    "license": "MIT"
+  }
+}

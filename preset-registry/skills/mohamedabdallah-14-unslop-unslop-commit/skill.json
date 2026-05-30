@@ -1,0 +1,25 @@
+{
+  "id": "mohamedabdallah-14-unslop-unslop-commit",
+  "name": "unslop-commit",
+  "description": "> Rewrites commit messages so they sound like a careful human engineer wrote them. Strips AI/marketing slop (\"comprehensive solution\", \"robust implementation\", \"leverage\", \"enhance\", \"seamlessly\", \"This commit...\"). Keeps Conventional Commits format. Subject ≤72 chars (aim ≤50), imperative mood. Body only when \"why\" isn't obvious from the subject. Use when user says \"humanize commit\", \"de-slop commit message\", \"make this commit sound human\", \"/unslop-commit\", \"/commit\", \"write a commit\", or past",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "MohamedAbdallah-14",
+  "install_path": ".claude/skills/unslop-commit/SKILL.md",
+  "source": {
+    "repo": "MohamedAbdallah-14/unslop",
+    "url": "https://github.com/MohamedAbdallah-14/unslop/blob/main/skills/unslop-commit/SKILL.md",
+    "path": "skills/unslop-commit/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-30T22:28:31.514Z",
+    "stars": 50,
+    "language": "Python",
+    "pushed_at": "2026-05-05T02:29:58Z",
+    "license": "MIT"
+  }
+}
