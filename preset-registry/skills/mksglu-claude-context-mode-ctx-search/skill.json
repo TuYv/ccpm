@@ -1,0 +1,25 @@
+{
+  "id": "mksglu-claude-context-mode-ctx-search",
+  "name": "ctx-search",
+  "description": "| Search context-mode's persistent FTS5 knowledge base for previously indexed local project content, documentation, or session memory. Trigger: /context-mode:ctx-search",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mksglu",
+  "install_path": ".claude/skills/ctx-search/SKILL.md",
+  "source": {
+    "repo": "mksglu/claude-context-mode",
+    "url": "https://github.com/mksglu/claude-context-mode/blob/main/skills/ctx-search/SKILL.md",
+    "path": "skills/ctx-search/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-31T16:45:27.806Z",
+    "stars": 16079,
+    "language": "TypeScript",
+    "pushed_at": "2026-05-31T16:21:20Z",
+    "license": null
+  }
+}
