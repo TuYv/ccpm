@@ -1,0 +1,25 @@
+{
+  "id": "basicmachines-co-basic-memory-share",
+  "name": "share",
+  "description": "Promote a note from your personal Basic Memory project to a shared team project, with attribution. Use when the user says \"share this with the team\", \"publish this decision\", or runs /basic-memory:share. This is the deliberate way to write to a team workspace — auto-capture never does.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "basicmachines-co",
+  "install_path": ".claude/skills/share/SKILL.md",
+  "source": {
+    "repo": "basicmachines-co/basic-memory",
+    "url": "https://github.com/basicmachines-co/basic-memory/blob/main/plugins/claude-code/skills/share/SKILL.md",
+    "path": "plugins/claude-code/skills/share/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-31T18:23:57.319Z",
+    "stars": 3113,
+    "language": "Python",
+    "pushed_at": "2026-05-31T17:31:11Z",
+    "license": "AGPL-3.0"
+  }
+}

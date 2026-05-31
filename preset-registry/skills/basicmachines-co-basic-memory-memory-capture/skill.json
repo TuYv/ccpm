@@ -1,0 +1,25 @@
+{
+  "id": "basicmachines-co-basic-memory-memory-capture",
+  "name": "memory-capture",
+  "description": "Capture the current state of a working thread or conversation into a single coherent Basic Memory note — synthesize where it landed, don't append a log. On re-capture, rewrite the same note in place instead of duplicating. Use mid-thread or end-of-thread when decisions, insights, or context are worth preserving.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "basicmachines-co",
+  "install_path": ".claude/skills/memory-capture/SKILL.md",
+  "source": {
+    "repo": "basicmachines-co/basic-memory",
+    "url": "https://github.com/basicmachines-co/basic-memory/blob/main/skills/memory-capture/SKILL.md",
+    "path": "skills/memory-capture/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-31T18:23:57.532Z",
+    "stars": 3113,
+    "language": "Python",
+    "pushed_at": "2026-05-31T17:31:11Z",
+    "license": "AGPL-3.0"
+  }
+}

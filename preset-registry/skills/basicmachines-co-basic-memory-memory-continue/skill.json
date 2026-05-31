@@ -1,0 +1,25 @@
+{
+  "id": "basicmachines-co-basic-memory-memory-continue",
+  "name": "memory-continue",
+  "description": "Resume prior work by rebuilding context from the Basic Memory knowledge graph — pick up where you left off using memory:// URLs, recent activity, and search. Use when starting a session or when the user says 'continue with...', 'back to...', or 'where were we?'",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "basicmachines-co",
+  "install_path": ".claude/skills/memory-continue/SKILL.md",
+  "source": {
+    "repo": "basicmachines-co/basic-memory",
+    "url": "https://github.com/basicmachines-co/basic-memory/blob/main/skills/memory-continue/SKILL.md",
+    "path": "skills/memory-continue/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-31T18:23:57.634Z",
+    "stars": 3113,
+    "language": "Python",
+    "pushed_at": "2026-05-31T17:31:11Z",
+    "license": "AGPL-3.0"
+  }
+}

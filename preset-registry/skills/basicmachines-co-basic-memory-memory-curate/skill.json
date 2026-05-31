@@ -1,0 +1,25 @@
+{
+  "id": "basicmachines-co-basic-memory-memory-curate",
+  "name": "memory-curate",
+  "description": "Curate the Basic Memory knowledge graph: find orphan notes and suggest links, propose typed relations, merge duplicates, audit tags and folders, and build hub notes. Use to organize, connect, and improve a knowledge base as notes accumulate.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "basicmachines-co",
+  "install_path": ".claude/skills/memory-curate/SKILL.md",
+  "source": {
+    "repo": "basicmachines-co/basic-memory",
+    "url": "https://github.com/basicmachines-co/basic-memory/blob/main/skills/memory-curate/SKILL.md",
+    "path": "skills/memory-curate/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-05-31T18:23:57.732Z",
+    "stars": 3113,
+    "language": "Python",
+    "pushed_at": "2026-05-31T17:31:11Z",
+    "license": "AGPL-3.0"
+  }
+}
