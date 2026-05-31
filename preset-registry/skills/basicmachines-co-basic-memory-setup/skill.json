@@ -1,7 +1,7 @@
 {
   "id": "basicmachines-co-basic-memory-setup",
   "name": "setup",
-  "description": "Set up the Basic Memory plugin for this project — a short guided interview that configures the project mapping, seeds note schemas, optionally learns the project's conventions, and enables capture reflexes. Use when the user runs /basic-memory:setup, says \"set up basic memory\", or asks to configure/bootstrap the plugin.",
+  "description": "Set up the Basic Memory plugin for this project — a short guided interview that configures the project mapping, seeds note schemas, learns or suggests placement conventions, and enables capture reflexes. Use when the user runs /basic-memory:setup, says \"set up basic memory\", or asks to configure/bootstrap the plugin.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/basicmachines-co/basic-memory/blob/main/plugins/claude-code/skills/setup/SKILL.md",
     "path": "plugins/claude-code/skills/setup/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-05-31T19:48:14.647Z",
-    "stars": 3113,
+    "discovered_at": "2026-05-31T21:21:14.106Z",
+    "stars": 3114,
     "language": "Python",
-    "pushed_at": "2026-05-31T19:07:08Z",
+    "pushed_at": "2026-05-31T20:05:04Z",
     "license": "AGPL-3.0"
   }
 }
