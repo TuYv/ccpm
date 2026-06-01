@@ -1,0 +1,25 @@
+{
+  "id": "vercel-labs-agent-skills-writing-guidelines",
+  "name": "writing-guidelines",
+  "description": "Review docs/prose for Writing Guidelines compliance. Use when asked to \"review my docs\", \"check writing style\", \"audit prose\", \"review docs voice and tone\", or \"check this page against the writing handbook\".",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "vercel-labs",
+  "install_path": ".claude/skills/writing-guidelines/SKILL.md",
+  "source": {
+    "repo": "vercel-labs/agent-skills",
+    "url": "https://github.com/vercel-labs/agent-skills/blob/main/skills/writing-guidelines/SKILL.md",
+    "path": "skills/writing-guidelines/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-01T16:56:42.610Z",
+    "stars": 27415,
+    "language": "JavaScript",
+    "pushed_at": "2026-06-01T16:25:17Z",
+    "license": null
+  }
+}

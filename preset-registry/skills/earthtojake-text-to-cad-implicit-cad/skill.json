@@ -1,0 +1,25 @@
+{
+  "id": "earthtojake-text-to-cad-implicit-cad",
+  "name": "implicit-cad",
+  "description": "Create, edit, render, and snapshot browser-native implicit CAD `.implicit.js` and `.implicit.mjs` files using GLSL signed-distance fields, shader primitives, smooth booleans, TPMS fields, and direct CAD Viewer raymarch rendering. Experimental.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "earthtojake",
+  "install_path": ".claude/skills/implicit-cad/SKILL.md",
+  "source": {
+    "repo": "earthtojake/text-to-cad",
+    "url": "https://github.com/earthtojake/text-to-cad/blob/main/skills/implicit-cad/SKILL.md",
+    "path": "skills/implicit-cad/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-01T16:57:27.767Z",
+    "stars": 5412,
+    "language": "JavaScript",
+    "pushed_at": "2026-06-01T16:05:49Z",
+    "license": "MIT"
+  }
+}

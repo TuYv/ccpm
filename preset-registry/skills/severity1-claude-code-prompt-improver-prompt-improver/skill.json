@@ -2,7 +2,7 @@
   "id": "severity1-claude-code-prompt-improver-prompt-improver",
   "name": "prompt-improver",
   "description": "This skill enriches vague prompts with targeted research and clarification before execution. Should be used when a prompt is determined to be vague and requires systematic research, question generation, and execution guidance.",
-  "category": "开发编程",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/severity1/claude-code-prompt-improver/blob/main/skills/prompt-improver/SKILL.md",
     "path": "skills/prompt-improver/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-01T10:48:36.980Z",
-    "stars": 1563,
+    "discovered_at": "2026-06-01T16:58:39.775Z",
+    "stars": 1567,
     "language": "Python",
-    "pushed_at": "2026-05-31T03:00:17Z",
+    "pushed_at": "2026-06-01T12:38:51Z",
     "license": "MIT"
   },
   "summary_zh": "它能在执行前自动细化和补充模糊的提示词。当你遇到表述不清的指令不知如何下手时，它会帮你系统梳理、追问并补充细节，把模糊想法变成具体可执行的优质指令。"

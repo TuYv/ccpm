@@ -1,7 +1,7 @@
 {
   "id": "earthtojake-text-to-cad-cad-viewer",
   "name": "cad-viewer",
-  "description": "Start or reuse CAD Viewer and return review links for explicit CAD, robot-description, and G-code files. Use when visually reviewing `.step`, `.stp`, `.glb`, `.stl`, `.3mf`, `.gcode`, `.dxf`, `.urdf`, `.srdf`, or `.sdf` files, especially when handed off from CAD, G-code, URDF, SRDF, or SDF generation skills.",
+  "description": "Start or reuse CAD Viewer and return review links for explicit CAD, implicit CAD, robot-description, and G-code files. Use when visually reviewing `.step`, `.stp`, `.implicit.js`, `.implicit.mjs`, `.glb`, `.stl`, `.3mf`, `.gcode`, `.dxf`, `.urdf`, `.srdf`, or `.sdf` files, especially when handed off from CAD, implicit-cad, G-code, URDF, SRDF, or SDF generation skills.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/earthtojake/text-to-cad/blob/main/skills/cad-viewer/SKILL.md",
     "path": "skills/cad-viewer/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-01T10:46:24.498Z",
-    "stars": 5391,
+    "discovered_at": "2026-06-01T16:57:27.471Z",
+    "stars": 5412,
     "language": "JavaScript",
-    "pushed_at": "2026-06-01T08:13:00Z",
+    "pushed_at": "2026-06-01T16:05:49Z",
     "license": "MIT"
   }
 }
