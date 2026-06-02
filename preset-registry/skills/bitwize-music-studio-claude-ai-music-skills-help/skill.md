@@ -1,7 +1,7 @@
 ---
 name: help
 description: Shows available skills, common workflows, and quick reference for the plugin. Use when the user asks for help, what skills are available, or how to do something.
-model: claude-haiku-4-5-20251001
+model: haiku
 allowed-tools: []
 ---
 
@@ -78,7 +78,6 @@ Display this help information to the user in a clear, organized format.
 **System & Maintenance**
 - `/bitwize-music:configure` - Edit plugin configuration
 - `/bitwize-music:test` - Run automated tests
-- `/bitwize-music:skill-model-updater` - Update model references in skills
 - `/bitwize-music:help` - Show this help (you are here!)
 - `/bitwize-music:about` - About bitwize and the plugin
 
