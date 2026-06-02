@@ -1,0 +1,25 @@
+{
+  "id": "njbrake-agent-of-empires-hermes-skill",
+  "name": "aoe",
+  "description": "Use when launching, monitoring, or controlling AI coding agents (Claude Code, Codex, OpenCode, etc.) in tmux via Agent of Empires (aoe). Covers creating sessions, capturing agent output, running parallel worktree agents, and organizing work into groups and profiles. Prefer aoe over raw tmux for agent management.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "njbrake",
+  "install_path": ".claude/skills/hermes-skill/SKILL.md",
+  "source": {
+    "repo": "njbrake/agent-of-empires",
+    "url": "https://github.com/njbrake/agent-of-empires/blob/main/contrib/hermes-skill/SKILL.md",
+    "path": "contrib/hermes-skill/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-02T17:10:14.198Z",
+    "stars": 2495,
+    "language": "Rust",
+    "pushed_at": "2026-06-02T17:09:31Z",
+    "license": "MIT"
+  }
+}
