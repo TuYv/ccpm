@@ -1,0 +1,25 @@
+{
+  "id": "pingdotgg-t3code-scratchpad",
+  "name": "scratchpad",
+  "description": "Extract the JSDoc example nearest the active source selection or cursor into ./scratchpad as a TypeScript file. Use when the user asks to dump, copy, open, or try a source example in scratchpad.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "pingdotgg",
+  "install_path": ".claude/skills/scratchpad/SKILL.md",
+  "source": {
+    "repo": "pingdotgg/t3code",
+    "url": "https://github.com/pingdotgg/t3code/blob/main/.repos/effect-smol/.agents/skills/scratchpad/SKILL.md",
+    "path": ".repos/effect-smol/.agents/skills/scratchpad/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-02T07:06:32.645Z",
+    "stars": 12292,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-02T06:21:07Z",
+    "license": "MIT"
+  }
+}

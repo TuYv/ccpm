@@ -1,0 +1,25 @@
+{
+  "id": "pingdotgg-t3code-jsdocs",
+  "name": "jsdocs",
+  "description": "Write, insert, or update Effect public API JSDoc so it satisfies the jsdocs oxlint rule. Use when adding or fixing JSDoc comments, resolving jsdocs diagnostics, preparing docs for JSON extraction, or reviewing public API documentation.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "pingdotgg",
+  "install_path": ".claude/skills/jsdocs/SKILL.md",
+  "source": {
+    "repo": "pingdotgg/t3code",
+    "url": "https://github.com/pingdotgg/t3code/blob/main/.repos/effect-smol/.agents/skills/jsdocs/SKILL.md",
+    "path": ".repos/effect-smol/.agents/skills/jsdocs/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-02T07:06:32.535Z",
+    "stars": 12292,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-02T06:21:07Z",
+    "license": "MIT"
+  }
+}

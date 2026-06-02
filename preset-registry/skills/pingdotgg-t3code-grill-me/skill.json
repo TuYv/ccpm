@@ -1,0 +1,25 @@
+{
+  "id": "pingdotgg-t3code-grill-me",
+  "name": "grill-me",
+  "description": "Interview the user about a plan or design until reaching shared understanding, resolving each branch of the decision tree. Use when user wants to stress-test a plan, get grilled on their design, or mentions \"grill me\".",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "pingdotgg",
+  "install_path": ".claude/skills/grill-me/SKILL.md",
+  "source": {
+    "repo": "pingdotgg/t3code",
+    "url": "https://github.com/pingdotgg/t3code/blob/main/.repos/effect-smol/.agents/skills/grill-me/SKILL.md",
+    "path": ".repos/effect-smol/.agents/skills/grill-me/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-02T07:06:32.378Z",
+    "stars": 12292,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-02T06:21:07Z",
+    "license": "MIT"
+  }
+}
