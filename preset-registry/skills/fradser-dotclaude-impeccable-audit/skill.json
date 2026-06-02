@@ -1,0 +1,25 @@
+{
+  "id": "fradser-dotclaude-impeccable-audit",
+  "name": "audit",
+  "description": "Run technical quality checks across accessibility, performance, theming, responsive design, and anti-patterns. Generates a scored report with P0-P3 severity ratings and actionable plan. Use when the user wants an accessibility check, performance audit, or technical quality review.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "2.1.1",
+  "author": "FradSer",
+  "install_path": ".claude/skills/impeccable-audit/SKILL.md",
+  "source": {
+    "repo": "FradSer/dotclaude",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/frontend/skills/impeccable-audit/SKILL.md",
+    "path": "frontend/skills/impeccable-audit/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-02T20:29:01.530Z",
+    "stars": 552,
+    "language": "Python",
+    "pushed_at": "2026-06-02T19:07:30Z",
+    "license": null
+  }
+}

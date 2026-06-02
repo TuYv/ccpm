@@ -1,7 +1,7 @@
 {
   "id": "fradser-dotclaude-agent-browser",
   "name": "agent-browser",
-  "description": "Provides browser automation command reference and usage patterns. This skill should be used when the user asks for guidance on web testing, form filling, capturing screenshots, extracting data, or needs help with agent-browser commands.",
+  "description": "Browser automation CLI for AI agents. Use when the user needs to interact with websites, including navigating pages, filling forms, clicking buttons, taking screenshots, extracting data, testing web apps, or automating any browser task. Triggers include requests to \"open a website\", \"fill out a form\", \"click a button\", \"take a screenshot\", \"scrape data from a page\", \"test this web app\", \"login to a site\", \"automate browser actions\", or any task requiring programmatic web interaction. Also use fo",
   "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/FradSer/dotclaude/blob/main/office/skills/agent-browser/SKILL.md",
     "path": "office/skills/agent-browser/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-02T17:06:29.684Z",
-    "stars": 553,
-    "language": "Shell",
-    "pushed_at": "2026-06-02T07:14:15Z",
+    "discovered_at": "2026-06-02T20:29:06.694Z",
+    "stars": 552,
+    "language": "Python",
+    "pushed_at": "2026-06-02T19:07:30Z",
     "license": null
-  },
-  "summary_zh": "这是一个浏览器自动化技能库，专门帮你搞定网页测试、自动填表、截图或抓取数据，还能随时查阅相关操作命令。"
+  }
 }

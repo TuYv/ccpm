@@ -1,0 +1,25 @@
+{
+  "id": "fradser-dotclaude-impeccable",
+  "name": "impeccable",
+  "description": "Create distinctive, production-grade frontend interfaces with high design quality. Generates creative, polished code that avoids generic AI aesthetics. Use when the user asks to build web components, pages, artifacts, posters, or applications, or when any design skill requires project context. Call with 'craft' for shape-then-build, 'teach' for design context setup, or 'extract' to pull reusable components and tokens into the design system.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "2.1.1",
+  "author": "FradSer",
+  "install_path": ".claude/skills/impeccable/SKILL.md",
+  "source": {
+    "repo": "FradSer/dotclaude",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/frontend/skills/impeccable/SKILL.md",
+    "path": "frontend/skills/impeccable/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-02T20:29:03.974Z",
+    "stars": 552,
+    "language": "Python",
+    "pushed_at": "2026-06-02T19:07:30Z",
+    "license": null
+  }
+}

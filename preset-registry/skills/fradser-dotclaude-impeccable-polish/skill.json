@@ -1,0 +1,25 @@
+{
+  "id": "fradser-dotclaude-impeccable-polish",
+  "name": "polish",
+  "description": "Performs a final quality pass fixing alignment, spacing, consistency, and micro-detail issues before shipping. Use when the user mentions polish, finishing touches, pre-launch review, something looks off, or wants to go from good to great.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "2.1.1",
+  "author": "FradSer",
+  "install_path": ".claude/skills/impeccable-polish/SKILL.md",
+  "source": {
+    "repo": "FradSer/dotclaude",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/frontend/skills/impeccable-polish/SKILL.md",
+    "path": "frontend/skills/impeccable-polish/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-02T20:29:03.326Z",
+    "stars": 552,
+    "language": "Python",
+    "pushed_at": "2026-06-02T19:07:30Z",
+    "license": null
+  }
+}

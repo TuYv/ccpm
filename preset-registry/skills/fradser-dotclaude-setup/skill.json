@@ -1,0 +1,25 @@
+{
+  "id": "fradser-dotclaude-setup",
+  "name": "setup",
+  "description": "Initializes git-agent for a repository — generates commit scopes from git history and .gitignore via AI. Use when the user asks to \"configure git\", \"setup git\", \"set commit scopes\", \"update gitignore\", \"create gitignore\", or needs project-specific Git settings.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "FradSer",
+  "install_path": ".claude/skills/setup/SKILL.md",
+  "source": {
+    "repo": "FradSer/dotclaude",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/git/skills/setup/SKILL.md",
+    "path": "git/skills/setup/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-02T20:29:05.265Z",
+    "stars": 552,
+    "language": "Python",
+    "pushed_at": "2026-06-02T19:07:30Z",
+    "license": null
+  }
+}

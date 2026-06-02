@@ -1,0 +1,25 @@
+{
+  "id": "fradser-dotclaude-lark-shared",
+  "name": "lark-shared",
+  "description": "Use when first setting up lark-cli, running auth login, switching user/bot identity (--as), handling permission denied or scope errors, needing to update lark-cli, or seeing _notice in JSON output.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "FradSer",
+  "install_path": ".claude/skills/lark-shared/SKILL.md",
+  "source": {
+    "repo": "FradSer/dotclaude",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/office/skills/lark/lark-shared/SKILL.md",
+    "path": "office/skills/lark/lark-shared/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-02T20:29:09.418Z",
+    "stars": 552,
+    "language": "Python",
+    "pushed_at": "2026-06-02T19:07:30Z",
+    "license": null
+  }
+}

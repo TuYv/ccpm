@@ -1,0 +1,25 @@
+{
+  "id": "backnotprop-plannotator-plannotator-archive",
+  "name": "plannotator-archive",
+  "description": "Open the read-only Plannotator archive browser for prior plan decisions.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "backnotprop",
+  "install_path": ".claude/skills/plannotator-archive/SKILL.md",
+  "source": {
+    "repo": "backnotprop/plannotator",
+    "url": "https://github.com/backnotprop/plannotator/blob/main/apps/kiro-cli/skills/plannotator-archive/SKILL.md",
+    "path": "apps/kiro-cli/skills/plannotator-archive/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-02T20:34:11.921Z",
+    "stars": 5781,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-02T18:46:46Z",
+    "license": "Apache-2.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "fradser-dotclaude-impeccable-critique",
+  "name": "critique",
+  "description": "Evaluate design from a UX perspective, assessing visual hierarchy, information architecture, emotional resonance, cognitive load, and overall quality with quantitative scoring, persona-based testing, automated anti-pattern detection, and actionable feedback. Use when the user asks to review, critique, evaluate, or give feedback on a design or component.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "2.1.1",
+  "author": "FradSer",
+  "install_path": ".claude/skills/impeccable-critique/SKILL.md",
+  "source": {
+    "repo": "FradSer/dotclaude",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/frontend/skills/impeccable-critique/SKILL.md",
+    "path": "frontend/skills/impeccable-critique/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-02T20:29:02.167Z",
+    "stars": 552,
+    "language": "Python",
+    "pushed_at": "2026-06-02T19:07:30Z",
+    "license": null
+  }
+}

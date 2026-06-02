@@ -1,0 +1,25 @@
+{
+  "id": "fradser-dotclaude-impeccable-shape",
+  "name": "shape",
+  "description": "Plan the UX and UI for a feature before writing code. Runs a structured discovery interview, then produces a design brief that guides implementation. Use when planning a feature's UX and UI to establish design direction, constraints, and strategy before any code is written.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "2.1.1",
+  "author": "FradSer",
+  "install_path": ".claude/skills/impeccable-shape/SKILL.md",
+  "source": {
+    "repo": "FradSer/dotclaude",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/frontend/skills/impeccable-shape/SKILL.md",
+    "path": "frontend/skills/impeccable-shape/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-02T20:29:03.604Z",
+    "stars": 552,
+    "language": "Python",
+    "pushed_at": "2026-06-02T19:07:30Z",
+    "license": null
+  }
+}
