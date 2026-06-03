@@ -1,0 +1,25 @@
+{
+  "id": "jeremylongshore-claude-code-plugins-plus-skills-hyperflow-trace",
+  "name": "hyperflow-trace",
+  "description": "Hyperflow debugging. Use for bugs, test failures, runtime errors, broken builds, or \"this doesn't work\" reports — verbs like debug, \"fix it\", solve, \"why is X failing\", \"Y is broken\", or a pasted stack trace. Systematic root-cause analysis before any patch — never blind-patch symptoms.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "jeremylongshore",
+  "install_path": ".claude/skills/hyperflow-trace/SKILL.md",
+  "source": {
+    "repo": "jeremylongshore/claude-code-plugins-plus-skills",
+    "url": "https://github.com/jeremylongshore/claude-code-plugins-plus-skills/blob/main/plugins/ai-agency/hyperflow/templates/antigravity/skills/hyperflow-trace/SKILL.md",
+    "path": "plugins/ai-agency/hyperflow/templates/antigravity/skills/hyperflow-trace/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-03T01:55:40.195Z",
+    "stars": 2277,
+    "language": "Python",
+    "pushed_at": "2026-06-02T23:42:34Z",
+    "license": "MIT"
+  }
+}

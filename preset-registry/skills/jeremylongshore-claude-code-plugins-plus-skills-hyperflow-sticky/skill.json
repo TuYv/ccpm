@@ -1,0 +1,25 @@
+{
+  "id": "jeremylongshore-claude-code-plugins-plus-skills-hyperflow-sticky",
+  "name": "hyperflow-sticky",
+  "description": "Hyperflow auto-routing mode. Use to control how aggressively hyperflow auto-routes — \"make hyperflow sticky\", \"stop using hyperflow\", \"auto-route to hyperflow\", \"disable hyperflow auto-routing\". Sets on (every task-shaped message routes) / auto (intent-verb messages route — default) / off (no auto-routing).",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "jeremylongshore",
+  "install_path": ".claude/skills/hyperflow-sticky/SKILL.md",
+  "source": {
+    "repo": "jeremylongshore/claude-code-plugins-plus-skills",
+    "url": "https://github.com/jeremylongshore/claude-code-plugins-plus-skills/blob/main/plugins/ai-agency/hyperflow/templates/antigravity/skills/hyperflow-sticky/SKILL.md",
+    "path": "plugins/ai-agency/hyperflow/templates/antigravity/skills/hyperflow-sticky/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-03T01:55:40.104Z",
+    "stars": 2277,
+    "language": "Python",
+    "pushed_at": "2026-06-02T23:42:34Z",
+    "license": "MIT"
+  }
+}

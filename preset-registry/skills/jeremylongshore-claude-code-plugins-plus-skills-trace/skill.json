@@ -1,0 +1,25 @@
+{
+  "id": "jeremylongshore-claude-code-plugins-plus-skills-trace",
+  "name": "trace",
+  "description": "| Use when encountering bugs, test failures, runtime errors, broken builds, or \"this doesn't work\" reports. Systematic root-cause analysis before any patch — never blind-patches symptoms. Standalone, ends with thinking-tier review of the fix. Trigger with /hyperflow:trace, \"debug this\", \"find the root cause\", \"why is this failing\", \"this test is broken\".",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "3.1.2",
+  "author": "jeremylongshore",
+  "install_path": ".claude/skills/trace/SKILL.md",
+  "source": {
+    "repo": "jeremylongshore/claude-code-plugins-plus-skills",
+    "url": "https://github.com/jeremylongshore/claude-code-plugins-plus-skills/blob/main/plugins/ai-agency/hyperflow/skills/trace/SKILL.md",
+    "path": "plugins/ai-agency/hyperflow/skills/trace/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-03T01:55:39.015Z",
+    "stars": 2277,
+    "language": "Python",
+    "pushed_at": "2026-06-02T23:42:34Z",
+    "license": "MIT"
+  }
+}

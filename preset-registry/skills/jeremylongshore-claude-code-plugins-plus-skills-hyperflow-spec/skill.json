@@ -1,0 +1,25 @@
+{
+  "id": "jeremylongshore-claude-code-plugins-plus-skills-hyperflow-spec",
+  "name": "hyperflow-spec",
+  "description": "Hyperflow design phase. Use when the user is exploring an idea, weighing approaches, or has an ambiguous request — verbs like brainstorm, design, explore, \"should we\", \"what's the best way to\", \"unsure about\". Thinking, not building. Produces an approved design at .hyperflow/specs/<slug>.md, then hands off to hyperflow-scope.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "jeremylongshore",
+  "install_path": ".claude/skills/hyperflow-spec/SKILL.md",
+  "source": {
+    "repo": "jeremylongshore/claude-code-plugins-plus-skills",
+    "url": "https://github.com/jeremylongshore/claude-code-plugins-plus-skills/blob/main/plugins/ai-agency/hyperflow/templates/antigravity/skills/hyperflow-spec/SKILL.md",
+    "path": "plugins/ai-agency/hyperflow/templates/antigravity/skills/hyperflow-spec/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-03T01:55:39.909Z",
+    "stars": 2277,
+    "language": "Python",
+    "pushed_at": "2026-06-02T23:42:34Z",
+    "license": "MIT"
+  }
+}
