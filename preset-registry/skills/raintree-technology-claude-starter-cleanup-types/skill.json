@@ -1,0 +1,25 @@
+{
+  "id": "raintree-technology-claude-starter-cleanup-types",
+  "name": "cleanup-types",
+  "description": "Find duplicated or fragmented type/interface definitions across files and consolidate to a shared types module. TypeScript-first; also handles Python dataclasses/TypedDicts and Go structs. Use when the user asks to consolidate types, find duplicate interfaces, or organize type definitions. Example queries — \\\"consolidate our types\\\", \\\"find duplicate interfaces\\\", \\\"this same type is defined in three files\\\", \\\"organize the type definitions\\\".",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "raintree-technology",
+  "install_path": ".claude/skills/cleanup-types/SKILL.md",
+  "source": {
+    "repo": "raintree-technology/claude-starter",
+    "url": "https://github.com/raintree-technology/claude-starter/blob/main/templates/.claude/skills/cleanup-types/SKILL.md",
+    "path": "templates/.claude/skills/cleanup-types/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-03T20:39:36.902Z",
+    "stars": 78,
+    "language": "JavaScript",
+    "pushed_at": "2026-06-03T20:09:01Z",
+    "license": "MIT"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "id": "jimliu-baoyu-skills-baoyu-translate",
   "name": "baoyu-translate",
-  "description": "Translates articles and documents between languages with three modes - quick (direct), normal (analyze then translate), and refined (analyze, translate, review, polish). Supports custom glossaries and terminology consistency via EXTEND.md. Use when user asks to \"translate\", \"翻译\", \"精翻\", \"translate article\", \"translate to Chinese/English\", \"改成中文\", \"改成英文\", \"convert to Chinese\", \"localize\", \"本地化\", or needs any document translation. Also triggers for \"refined translation\", \"精细翻译\", \"proofread translat",
+  "description": ">- This skill should be used when the user asks to \"translate\", \"翻译\", \"精翻\", \"translate article\", \"translate to Chinese\", \"translate to English\", \"改成中文\", \"改成英文\", \"convert to Chinese\", \"localize\", \"本地化\", \"refined translation\", \"精细翻译\", \"proofread translation\", \"快速翻译\", \"快翻\", \"这篇文章翻译一下\", or provides a URL/file with translation intent. Supports three modes (quick/normal/refined) with custom glossary support.",
   "category": "文档写作",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/JimLiu/baoyu-skills/blob/main/skills/baoyu-translate/SKILL.md",
     "path": "skills/baoyu-translate/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-03T17:23:51.873Z",
-    "stars": 20369,
+    "discovered_at": "2026-06-03T20:34:49.879Z",
+    "stars": 20372,
     "language": "TypeScript",
-    "pushed_at": "2026-06-02T22:02:01Z",
+    "pushed_at": "2026-06-03T17:43:13Z",
     "license": null
-  },
-  "summary_zh": "这是一款多语言文档翻译工具，能根据需求提供从速译到深度润色的多级服务，并确保专业术语统一。适合日常中英互译、文章本地化，以及对翻译质量有较高要求的精翻场景。"
+  }
 }

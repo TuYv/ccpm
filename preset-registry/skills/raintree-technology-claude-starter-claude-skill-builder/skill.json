@@ -1,7 +1,7 @@
 {
   "id": "raintree-technology-claude-starter-claude-skill-builder",
   "name": "claude-skill-builder",
-  "description": "Interactive skill creator for Claude Code and Agent Skills ecosystem. Build SKILL.md files with proper frontmatter, triggers, and structure. Triggers on creating skills, building skills, skill templates, skill frontmatter, allowed-tools, npx add-skill, agent skills.",
+  "description": "Interactive skill creator for Claude Code and generated Codex/Cursor targets. Use when user mentions creating skills, updating skills, skill frontmatter, skill triggers/descriptions, bundled references/scripts/assets, allowed-tools, or wants to scaffold a project-local skill.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -13,14 +13,13 @@
   "install_path": ".claude/skills/claude-skill-builder/SKILL.md",
   "source": {
     "repo": "raintree-technology/claude-starter",
-    "url": "https://github.com/raintree-technology/claude-starter/blob/main/.claude/skills/anthropic/claude-skill-builder/SKILL.md",
-    "path": ".claude/skills/anthropic/claude-skill-builder/SKILL.md",
+    "url": "https://github.com/raintree-technology/claude-starter/blob/main/templates/.claude/skills/anthropic/claude-skill-builder/skill.md",
+    "path": "templates/.claude/skills/anthropic/claude-skill-builder/skill.md",
     "branch": "main",
-    "discovered_at": "2026-06-03T17:29:58.446Z",
+    "discovered_at": "2026-06-03T20:39:35.592Z",
     "stars": 78,
-    "language": "Zig",
-    "pushed_at": "2026-06-03T17:24:06Z",
+    "language": "JavaScript",
+    "pushed_at": "2026-06-03T20:09:01Z",
     "license": "MIT"
-  },
-  "summary_zh": "交互式生成符合规范的 Claude 智能体技能文件，帮你自动搞定繁琐的配置和模板结构，适合需要给 Claude 快速开发或扩展新技能的场景。"
+  }
 }

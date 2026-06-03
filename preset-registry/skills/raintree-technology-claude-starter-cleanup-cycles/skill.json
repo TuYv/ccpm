@@ -1,0 +1,25 @@
+{
+  "id": "raintree-technology-claude-starter-cleanup-cycles",
+  "name": "cleanup-cycles",
+  "description": "Detect and untangle circular dependencies. Runs madge/skott (TS), pycycle (Py), or compiler-only checks (Go/Rust). Auto-fixes leaf-extractable cycles; reports core cycles for human review. Use when the user asks to find circular imports, fix dependency cycles, or untangle module graph. Example queries — \\\"find circular imports\\\", \\\"fix dependency cycles\\\", \\\"untangle our module graph\\\", \\\"why is madge complaining\\\".",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "raintree-technology",
+  "install_path": ".claude/skills/cleanup-cycles/SKILL.md",
+  "source": {
+    "repo": "raintree-technology/claude-starter",
+    "url": "https://github.com/raintree-technology/claude-starter/blob/main/templates/.claude/skills/cleanup-cycles/SKILL.md",
+    "path": "templates/.claude/skills/cleanup-cycles/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-03T20:39:36.091Z",
+    "stars": 78,
+    "language": "JavaScript",
+    "pushed_at": "2026-06-03T20:09:01Z",
+    "license": "MIT"
+  }
+}

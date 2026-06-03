@@ -1,7 +1,7 @@
 {
   "id": "raintree-technology-claude-starter-toon-formatter",
   "name": "toon-formatter",
-  "description": "Token-Oriented Object Notation (TOON) format expert for 30-60% token savings on structured data. Auto-applies to arrays with 5+ items, tables, logs, API responses, database results. Supports tabular, inline, and expanded formats with comma/tab/pipe delimiters. Triggers on large JSON, data optimization, token reduction, structured data, arrays, tables, logs, metrics, TOON.",
+  "description": "Guidance on when and how to use TOON (Token-Oriented Object Notation) — a compact JSON alternative that typically cuts input tokens 30-50% on tabular data. Use when the user is about to paste or serialize a large JSON array into a prompt, has a payload with ≥5 uniform objects, or is optimizing an LLM pipeline for cost/context. Knows the format shapes (tabular `[N]{a,b}:` rows, inline `[N]: ...`, expanded), when TOON helps vs hurts, and how to invoke installed TOON commands or wrappers when avail",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -13,14 +13,13 @@
   "install_path": ".claude/skills/toon-formatter/SKILL.md",
   "source": {
     "repo": "raintree-technology/claude-starter",
-    "url": "https://github.com/raintree-technology/claude-starter/blob/main/skills/toon-formatter/SKILL.md",
-    "path": "skills/toon-formatter/SKILL.md",
+    "url": "https://github.com/raintree-technology/claude-starter/blob/main/templates/.claude/skills/toon-formatter/skill.md",
+    "path": "templates/.claude/skills/toon-formatter/skill.md",
     "branch": "main",
-    "discovered_at": "2026-06-03T17:30:03.957Z",
+    "discovered_at": "2026-06-03T20:39:38.164Z",
     "stars": 78,
-    "language": "Zig",
-    "pushed_at": "2026-06-03T17:24:06Z",
+    "language": "JavaScript",
+    "pushed_at": "2026-06-03T20:09:01Z",
     "license": "MIT"
-  },
-  "summary_zh": "这是款TOON格式转换工具，能把大JSON、日志或接口返回等结构化数据的Token消耗省下30%到60%，特别适合给大模型喂长数据或降低API成本。"
+  }
 }

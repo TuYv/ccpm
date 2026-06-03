@@ -1,0 +1,25 @@
+{
+  "id": "raintree-technology-claude-starter-cleanup-slop",
+  "name": "cleanup-slop",
+  "description": "Strip AI slop, narration comments, restated-code comments, in-motion notes, and stub markers. Preserves comments that explain WHY (workarounds, invariants, surprising behavior). Comment-only changes — never touches code logic. Use when the user asks to remove AI slop, clean up comments, strip narration, or remove unhelpful comments. Example queries — \\\"remove the AI slop\\\", \\\"strip the narration comments\\\", \\\"clean up unhelpful comments\\\", \\\"delete the comments that just restate the code\\\".",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "raintree-technology",
+  "install_path": ".claude/skills/cleanup-slop/SKILL.md",
+  "source": {
+    "repo": "raintree-technology/claude-starter",
+    "url": "https://github.com/raintree-technology/claude-starter/blob/main/templates/.claude/skills/cleanup-slop/SKILL.md",
+    "path": "templates/.claude/skills/cleanup-slop/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-03T20:39:36.748Z",
+    "stars": 78,
+    "language": "JavaScript",
+    "pushed_at": "2026-06-03T20:09:01Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "raintree-technology-claude-starter-cleanup-weak-types",
+  "name": "cleanup-weak-types",
+  "description": "Replace weak types (any, unknown, interface{}, untyped Python) with strong, inferable types. Researches actual usage to determine the correct type, runs typecheck after each change, reverts individual changes that fail. Use when the user asks to remove any/unknown, strengthen typing, fix weak types, or make code more type-safe. Example queries — \\\"remove all the `any` types\\\", \\\"strengthen our typing\\\", \\\"stop using unknown everywhere\\\", \\\"make this more type-safe\\\".",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "raintree-technology",
+  "install_path": ".claude/skills/cleanup-weak-types/SKILL.md",
+  "source": {
+    "repo": "raintree-technology/claude-starter",
+    "url": "https://github.com/raintree-technology/claude-starter/blob/main/templates/.claude/skills/cleanup-weak-types/SKILL.md",
+    "path": "templates/.claude/skills/cleanup-weak-types/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-03T20:39:37.204Z",
+    "stars": 78,
+    "language": "JavaScript",
+    "pushed_at": "2026-06-03T20:09:01Z",
+    "license": "MIT"
+  }
+}

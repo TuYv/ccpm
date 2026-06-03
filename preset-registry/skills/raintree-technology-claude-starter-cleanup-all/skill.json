@@ -1,0 +1,25 @@
+{
+  "id": "raintree-technology-claude-starter-cleanup-all",
+  "name": "cleanup-all",
+  "description": "Run all 8 cleanup skills in sequence: unused → cycles → dedupe → types → weak-types → defensive → legacy → slop. Each step verifies before the next runs; halts on first failure. Produces one consolidated report. Use when the user asks to clean up the whole codebase, run all cleanup skills, do a full code-quality pass, or sweep the repo. Example queries — \\\"clean up the whole codebase\\\", \\\"run a full code-quality pass\\\", \\\"sweep this repo\\\", \\\"do all the cleanups in order\\\".",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "raintree-technology",
+  "install_path": ".claude/skills/cleanup-all/SKILL.md",
+  "source": {
+    "repo": "raintree-technology/claude-starter",
+    "url": "https://github.com/raintree-technology/claude-starter/blob/main/templates/.claude/skills/cleanup-all/SKILL.md",
+    "path": "templates/.claude/skills/cleanup-all/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-03T20:39:35.893Z",
+    "stars": 78,
+    "language": "JavaScript",
+    "pushed_at": "2026-06-03T20:09:01Z",
+    "license": "MIT"
+  }
+}

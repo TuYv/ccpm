@@ -1,7 +1,7 @@
 {
   "id": "raintree-technology-claude-starter-stripe",
-  "name": "stripe-expert",
-  "description": "Comprehensive Stripe API expert with access to 3,253 official documentation files covering all payment processing, billing, subscriptions, webhooks, Connect, Terminal, Radar, Identity, Tax, Climate, and integrations. Invoke when user mentions Stripe, payments, subscriptions, billing, payment processing, checkout, invoices, or any payment-related features.",
+  "name": "stripe",
+  "description": "Deep Stripe integration expert — Checkout, Payment Intents, Elements, subscriptions (including metered and tiered), Connect (Express/Standard/Custom + marketplace flows), Terminal, Radar, Identity, Tax, Issuing, Treasury, Climate, webhooks (signature verification, idempotency keys, retries). Invoke when user mentions Stripe, payments, subscriptions, checkout, webhooks, Connect/marketplace, refunds, invoices, or 3DS. Example queries — \"accept a card payment with Payment Intents\", \"set up a metere",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -13,14 +13,13 @@
   "install_path": ".claude/skills/stripe/SKILL.md",
   "source": {
     "repo": "raintree-technology/claude-starter",
-    "url": "https://github.com/raintree-technology/claude-starter/blob/main/.claude/skills/stripe/skill.md",
-    "path": ".claude/skills/stripe/skill.md",
+    "url": "https://github.com/raintree-technology/claude-starter/blob/main/templates/.claude/skills/stripe/skill.md",
+    "path": "templates/.claude/skills/stripe/skill.md",
     "branch": "main",
-    "discovered_at": "2026-06-03T17:30:03.180Z",
+    "discovered_at": "2026-06-03T20:39:37.871Z",
     "stars": 78,
-    "language": "Zig",
-    "pushed_at": "2026-06-03T17:24:06Z",
+    "language": "JavaScript",
+    "pushed_at": "2026-06-03T20:09:01Z",
     "license": "MIT"
-  },
-  "summary_zh": "这是个精通Stripe的API开发助手，熟读官方文档，专门帮你解决支付、账单或订阅等支付相关的开发难题。"
+  }
 }

@@ -1,7 +1,7 @@
 {
   "id": "raintree-technology-claude-starter-expo",
-  "name": "expo-expert",
-  "description": "Comprehensive Expo expert with access to complete official documentation covering React Native development, EAS Build, EAS Submit, EAS Update, Expo Router, Expo Modules API, configuration, deployment, and all platform features. Invoke when user mentions Expo, React Native, EAS, Expo Router, mobile app development, iOS/Android development, or cross-platform development.",
+  "name": "expo",
+  "description": "Expert on Expo and React Native — EAS Build (cloud iOS/Android builds + credentials), EAS Update (OTA updates, channels, runtime versions, staged rollouts), EAS Submit, Expo Router (file-based routing, dynamic routes, layout groups), Expo Modules API, managed vs bare workflow, and deployment. Invoke when user mentions Expo, React Native, EAS Build, EAS Update, OTA updates, Expo Router, file-based routing, or expo-* packages. Example queries — \"configure eas.json for production builds\", \"publish ",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -13,14 +13,13 @@
   "install_path": ".claude/skills/expo/SKILL.md",
   "source": {
     "repo": "raintree-technology/claude-starter",
-    "url": "https://github.com/raintree-technology/claude-starter/blob/main/.claude/skills/expo/skill.md",
-    "path": ".claude/skills/expo/skill.md",
+    "url": "https://github.com/raintree-technology/claude-starter/blob/main/templates/.claude/skills/expo/skill.md",
+    "path": "templates/.claude/skills/expo/skill.md",
     "branch": "main",
-    "discovered_at": "2026-06-03T17:30:01.677Z",
+    "discovered_at": "2026-06-03T20:39:37.512Z",
     "stars": 78,
-    "language": "Zig",
-    "pushed_at": "2026-06-03T17:24:06Z",
+    "language": "JavaScript",
+    "pushed_at": "2026-06-03T20:09:01Z",
     "license": "MIT"
-  },
-  "summary_zh": "它是个精通 Expo 官方文档的 AI 助手，专帮开发者搞定 React Native 跨平台开发中的配置、构建、部署和路由等疑难杂症。"
+  }
 }

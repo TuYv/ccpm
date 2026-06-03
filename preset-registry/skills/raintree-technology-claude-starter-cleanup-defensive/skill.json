@@ -1,0 +1,25 @@
+{
+  "id": "raintree-technology-claude-starter-cleanup-defensive",
+  "name": "cleanup-defensive",
+  "description": "Remove pointless try/catch blocks and defensive guards that hide errors or add no value. Preserves catches at true system boundaries (HTTP handlers, CLI entry, message consumers). Use when the user asks to remove try/catch, fix error hiding, clean up defensive code, or stop swallowing errors. Example queries — \\\"remove pointless try/catch\\\", \\\"we're swallowing errors\\\", \\\"stop hiding bugs in catch blocks\\\", \\\"clean up the defensive code\\\".",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "raintree-technology",
+  "install_path": ".claude/skills/cleanup-defensive/SKILL.md",
+  "source": {
+    "repo": "raintree-technology/claude-starter",
+    "url": "https://github.com/raintree-technology/claude-starter/blob/main/templates/.claude/skills/cleanup-defensive/SKILL.md",
+    "path": "templates/.claude/skills/cleanup-defensive/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-03T20:39:36.439Z",
+    "stars": 78,
+    "language": "JavaScript",
+    "pushed_at": "2026-06-03T20:09:01Z",
+    "license": "MIT"
+  }
+}

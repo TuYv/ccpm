@@ -1,0 +1,25 @@
+{
+  "id": "raintree-technology-claude-starter-cleanup-legacy",
+  "name": "cleanup-legacy",
+  "description": "Find and remove deprecated, legacy, and fallback code paths with zero callers. Verifies callers via repo grep + LSP before deletion. Removes unreachable fallback branches. Use when the user asks to remove deprecated code, clean up legacy paths, drop fallbacks, or simplify code branches. Example queries — \\\"remove the deprecated API\\\", \\\"drop the v1 fallback\\\", \\\"this code is marked legacy, kill it\\\", \\\"simplify these branches\\\".",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "raintree-technology",
+  "install_path": ".claude/skills/cleanup-legacy/SKILL.md",
+  "source": {
+    "repo": "raintree-technology/claude-starter",
+    "url": "https://github.com/raintree-technology/claude-starter/blob/main/templates/.claude/skills/cleanup-legacy/SKILL.md",
+    "path": "templates/.claude/skills/cleanup-legacy/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-03T20:39:36.595Z",
+    "stars": 78,
+    "language": "JavaScript",
+    "pushed_at": "2026-06-03T20:09:01Z",
+    "license": "MIT"
+  }
+}
