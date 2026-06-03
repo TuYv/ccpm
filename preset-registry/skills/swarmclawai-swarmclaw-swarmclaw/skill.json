@@ -1,0 +1,25 @@
+{
+  "id": "swarmclawai-swarmclaw-swarmclaw",
+  "name": "swarmclaw",
+  "description": "Manage your SwarmClaw agent fleet — agents, tasks, chats, chatrooms, goals, schedules, memory, wallets, connectors, autonomy, and 40+ more command groups. Use when asked to dispatch work, check agent status, coordinate multi-agent work, run diagnostics, manage schedules, set goals, or orchestrate across a SwarmClaw dashboard instance.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "2.2.0",
+  "author": "swarmclawai",
+  "install_path": ".claude/skills/swarmclaw/SKILL.md",
+  "source": {
+    "repo": "swarmclawai/swarmclaw",
+    "url": "https://github.com/swarmclawai/swarmclaw/blob/main/swarmclaw/SKILL.md",
+    "path": "swarmclaw/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-03T17:30:43.420Z",
+    "stars": 544,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-02T12:01:17Z",
+    "license": "MIT"
+  }
+}

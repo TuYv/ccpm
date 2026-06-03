@@ -1,0 +1,25 @@
+{
+  "id": "human-avatar-skills-for-humanity-s4h-cognition",
+  "name": "s4h-cognition",
+  "description": "Entry point for the cognition toolkit. Routes to the right cognition skill based on your situation. Use when you say 'cognition', 'how am I thinking about this', 'why can't I focus', 'what mental model is driving this', 'am I thinking clearly', 'this is too complex to hold in my head', 'what do I actually know here', or want applied cognitive science without knowing which specific tool fits.",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "human-avatar",
+  "install_path": ".claude/skills/s4h-cognition/SKILL.md",
+  "source": {
+    "repo": "human-avatar/skills-for-humanity",
+    "url": "https://github.com/human-avatar/skills-for-humanity/blob/main/skills/s4h-cognition/SKILL.md",
+    "path": "skills/s4h-cognition/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-03T17:31:31.216Z",
+    "stars": 145,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-31T19:50:06Z",
+    "license": "MIT"
+  }
+}

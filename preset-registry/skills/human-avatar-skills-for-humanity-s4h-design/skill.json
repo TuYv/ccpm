@@ -1,0 +1,25 @@
+{
+  "id": "human-avatar-skills-for-humanity-s4h-design",
+  "name": "s4h-design",
+  "description": "Entry point for the design thinking toolkit. Routes to the right design skill based on your situation. Use when you say 'design', 'user needs', 'what do people actually want', 'design constraints', 'prototype and iterate', 'simplify this', 'remove what's unnecessary', or want design thinking applied without knowing which specific tool fits.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "human-avatar",
+  "install_path": ".claude/skills/s4h-design/SKILL.md",
+  "source": {
+    "repo": "human-avatar/skills-for-humanity",
+    "url": "https://github.com/human-avatar/skills-for-humanity/blob/main/skills/s4h-design/SKILL.md",
+    "path": "skills/s4h-design/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-03T17:31:35.922Z",
+    "stars": 145,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-31T19:50:06Z",
+    "license": "MIT"
+  }
+}

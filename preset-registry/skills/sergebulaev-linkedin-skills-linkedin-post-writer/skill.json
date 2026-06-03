@@ -1,0 +1,25 @@
+{
+  "id": "sergebulaev-linkedin-skills-linkedin-post-writer",
+  "name": "linkedin-post-writer",
+  "description": "Draft a new LinkedIn post from scratch using a 2026 hook formula (anaphora, R.I.P., year-pivot, time-anchor, self-proving, paid-vs-free, curiosity-gap, odd-money, contrarian). Runs the humanizer pass and schedules via Publora on approval. Use when the user asks to write a post, needs a hook, or wants a proven format. Not for reviewing existing drafts (use linkedin-humanizer --mode audit).",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sergebulaev",
+  "install_path": ".claude/skills/linkedin-post-writer/SKILL.md",
+  "source": {
+    "repo": "sergebulaev/linkedin-skills",
+    "url": "https://github.com/sergebulaev/linkedin-skills/blob/main/skills/linkedin-post-writer/SKILL.md",
+    "path": "skills/linkedin-post-writer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-03T17:31:28.158Z",
+    "stars": 148,
+    "language": "Python",
+    "pushed_at": "2026-05-21T11:15:51Z",
+    "license": "MIT"
+  }
+}

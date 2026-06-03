@@ -1,0 +1,25 @@
+{
+  "id": "human-avatar-skills-for-humanity-s4h-communication",
+  "name": "s4h-communication",
+  "description": "Entry point for the communication toolkit. Routes to the right communication skill based on your situation. Use when you say 'communication', 'how do I say this', 'will this land', 'which channel', 'what will they push back on', 'does this make sense', or want communication help without knowing which specific tool fits.",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "human-avatar",
+  "install_path": ".claude/skills/s4h-communication/SKILL.md",
+  "source": {
+    "repo": "human-avatar/skills-for-humanity",
+    "url": "https://github.com/human-avatar/skills-for-humanity/blob/main/skills/s4h-communication/SKILL.md",
+    "path": "skills/s4h-communication/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-03T17:31:31.931Z",
+    "stars": 145,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-31T19:50:06Z",
+    "license": "MIT"
+  }
+}

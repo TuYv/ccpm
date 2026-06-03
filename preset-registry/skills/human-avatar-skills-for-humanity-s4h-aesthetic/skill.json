@@ -1,0 +1,25 @@
+{
+  "id": "human-avatar-skills-for-humanity-s4h-aesthetic",
+  "name": "s4h-aesthetic",
+  "description": "Entry point for the aesthetic toolkit. Routes to the right aesthetic skill based on your situation. Use when you say 'aesthetic', 'check the design', 'does this feel right', 'is this elegant', 'is this too complex', 'what pattern is this', 'find the simpler version', or want an aesthetic lens applied without knowing which specific tool fits.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "human-avatar",
+  "install_path": ".claude/skills/s4h-aesthetic/SKILL.md",
+  "source": {
+    "repo": "human-avatar/skills-for-humanity",
+    "url": "https://github.com/human-avatar/skills-for-humanity/blob/main/skills/s4h-aesthetic/SKILL.md",
+    "path": "skills/s4h-aesthetic/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-03T17:31:29.836Z",
+    "stars": 145,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-31T19:50:06Z",
+    "license": "MIT"
+  }
+}

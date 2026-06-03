@@ -1,0 +1,25 @@
+{
+  "id": "human-avatar-skills-for-humanity-s4h-decision-criteria-weighting",
+  "name": "s4h-decision-criteria-weighting",
+  "description": "Runs a weighted multi-criteria analysis — making explicit what matters, how much, and how each option performs against it. Triggers: 'weighted decision matrix', 'multi-criteria analysis', 'help me choose between', 'compare these options', 'decision matrix'.",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "human-avatar",
+  "install_path": ".claude/skills/s4h-decision-criteria-weighting/SKILL.md",
+  "source": {
+    "repo": "human-avatar/skills-for-humanity",
+    "url": "https://github.com/human-avatar/skills-for-humanity/blob/main/skills/s4h-decision-criteria-weighting/SKILL.md",
+    "path": "skills/s4h-decision-criteria-weighting/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-03T17:31:34.703Z",
+    "stars": 145,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-31T19:50:06Z",
+    "license": "MIT"
+  }
+}

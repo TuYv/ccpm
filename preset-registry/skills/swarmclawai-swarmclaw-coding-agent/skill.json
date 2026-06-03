@@ -1,0 +1,25 @@
+{
+  "id": "swarmclawai-swarmclaw-coding-agent",
+  "name": "coding-agent",
+  "description": "Delegate coding tasks to external coding agents (Claude Code, Codex, Pi, OpenCode) via shell. Use when: (1) building new features or apps in a separate project, (2) reviewing PRs, (3) refactoring large codebases, (4) iterative coding that needs file exploration. NOT for: simple one-liner fixes (just edit directly), reading code (use read/file tools), or work inside the SwarmClaw workspace itself.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "swarmclawai",
+  "install_path": ".claude/skills/coding-agent/SKILL.md",
+  "source": {
+    "repo": "swarmclawai/swarmclaw",
+    "url": "https://github.com/swarmclawai/swarmclaw/blob/main/skills/coding-agent/SKILL.md",
+    "path": "skills/coding-agent/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-03T17:30:42.072Z",
+    "stars": 544,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-02T12:01:17Z",
+    "license": "MIT"
+  }
+}

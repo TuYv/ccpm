@@ -1,0 +1,25 @@
+{
+  "id": "human-avatar-skills-for-humanity-s4h-constraint-hardness-testing",
+  "name": "s4h-constraint-hardness-testing",
+  "description": "Tests whether a stated constraint is real — distinguishing genuine limits from assumptions, habits, or politics dressed as facts. Triggers: 'is this really a constraint', 'challenge the assumption', 'who says we can't', 'is this actually fixed', 'test the constraint'.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "human-avatar",
+  "install_path": ".claude/skills/s4h-constraint-hardness-testing/SKILL.md",
+  "source": {
+    "repo": "human-avatar/skills-for-humanity",
+    "url": "https://github.com/human-avatar/skills-for-humanity/blob/main/skills/s4h-constraint-hardness-testing/SKILL.md",
+    "path": "skills/s4h-constraint-hardness-testing/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-03T17:31:32.064Z",
+    "stars": 145,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-31T19:50:06Z",
+    "license": "MIT"
+  }
+}

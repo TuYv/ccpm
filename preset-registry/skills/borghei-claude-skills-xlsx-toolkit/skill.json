@@ -1,0 +1,25 @@
+{
+  "id": "borghei-claude-skills-xlsx-toolkit",
+  "name": "xlsx-toolkit",
+  "description": "> Audit Microsoft Excel (.xlsx) workbooks for sheet count, cell count, formula density, external references, named ranges, hidden sheets, and data validation rules. Use when reviewing a financial model, sharing a workbook externally, or when the user mentions xlsx audit, spreadsheet review, formula audit, or workbook leakage check.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "borghei",
+  "install_path": ".claude/skills/xlsx-toolkit/SKILL.md",
+  "source": {
+    "repo": "borghei/Claude-Skills",
+    "url": "https://github.com/borghei/Claude-Skills/blob/main/documents/xlsx-toolkit/SKILL.md",
+    "path": "documents/xlsx-toolkit/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-03T17:31:25.027Z",
+    "stars": 215,
+    "language": "HTML",
+    "pushed_at": "2026-05-27T21:35:05Z",
+    "license": null
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "swarmclawai-swarmclaw-nano-banana-pro",
+  "name": "nano-banana-pro",
+  "description": "Generate or edit images via Gemini 3 Pro Image (Nano Banana Pro). Use when asked to create, generate, or edit images and a Gemini API key is available. Supports text-to-image generation, single-image editing, and multi-image composition (up to 14 images).",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "swarmclawai",
+  "install_path": ".claude/skills/nano-banana-pro/SKILL.md",
+  "source": {
+    "repo": "swarmclawai/swarmclaw",
+    "url": "https://github.com/swarmclawai/swarmclaw/blob/main/skills/nano-banana-pro/SKILL.md",
+    "path": "skills/nano-banana-pro/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-03T17:30:42.411Z",
+    "stars": 544,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-02T12:01:17Z",
+    "license": "MIT"
+  }
+}

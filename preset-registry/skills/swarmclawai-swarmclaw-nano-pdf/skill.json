@@ -1,0 +1,25 @@
+{
+  "id": "swarmclawai-swarmclaw-nano-pdf",
+  "name": "nano-pdf",
+  "description": "Edit or create PDFs with natural-language instructions using the nano-pdf CLI. Use when asked to make a PDF, edit a PDF, add pages, change text in a PDF, or convert content to PDF format.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "swarmclawai",
+  "install_path": ".claude/skills/nano-pdf/SKILL.md",
+  "source": {
+    "repo": "swarmclawai/swarmclaw",
+    "url": "https://github.com/swarmclawai/swarmclaw/blob/main/skills/nano-pdf/SKILL.md",
+    "path": "skills/nano-pdf/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-03T17:30:42.535Z",
+    "stars": 544,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-02T12:01:17Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "swarmclawai-swarmclaw-github",
+  "name": "github",
+  "description": "GitHub operations via `gh` CLI: issues, PRs, CI runs, code review, API queries. Use when: (1) checking PR status or CI, (2) creating/commenting on issues, (3) listing/filtering PRs or issues, (4) viewing run logs. NOT for: local git operations (use git directly), non-GitHub repos, or cloning (use git clone).",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "swarmclawai",
+  "install_path": ".claude/skills/github/SKILL.md",
+  "source": {
+    "repo": "swarmclawai/swarmclaw",
+    "url": "https://github.com/swarmclawai/swarmclaw/blob/main/skills/github/SKILL.md",
+    "path": "skills/github/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-03T17:30:42.172Z",
+    "stars": 544,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-02T12:01:17Z",
+    "license": "MIT"
+  }
+}

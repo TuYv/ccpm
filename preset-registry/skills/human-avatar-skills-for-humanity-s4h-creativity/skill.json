@@ -1,0 +1,25 @@
+{
+  "id": "human-avatar-skills-for-humanity-s4h-creativity",
+  "name": "s4h-creativity",
+  "description": "Entry point for the creativity toolkit. Routes to the right creative thinking technique based on your situation. Use when you say 'creativity', 'think creatively', 'I need fresh ideas', 'help me think differently', 'I'm stuck', or want creative help without knowing which specific tool applies. For comprehensive multi-method sessions, this runs them in sequence.",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "human-avatar",
+  "install_path": ".claude/skills/s4h-creativity/SKILL.md",
+  "source": {
+    "repo": "human-avatar/skills-for-humanity",
+    "url": "https://github.com/human-avatar/skills-for-humanity/blob/main/skills/s4h-creativity/SKILL.md",
+    "path": "skills/s4h-creativity/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-03T17:31:34.571Z",
+    "stars": 145,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-31T19:50:06Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "human-avatar-skills-for-humanity-s4h-ecology",
+  "name": "s4h-ecology",
+  "description": "Entry point for the ecology thinking toolkit. Routes to the right ecology skill based on your situation. Use when you say 'ecology', 'carrying capacity', 'keystone', 'interdependence', 'succession', 'what holds this system together', 'who depends on whom', 'what happens if we remove X', or want ecological thinking applied without knowing which specific tool fits.",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "human-avatar",
+  "install_path": ".claude/skills/s4h-ecology/SKILL.md",
+  "source": {
+    "repo": "human-avatar/skills-for-humanity",
+    "url": "https://github.com/human-avatar/skills-for-humanity/blob/main/skills/s4h-ecology/SKILL.md",
+    "path": "skills/s4h-ecology/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-03T17:31:36.590Z",
+    "stars": 145,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-31T19:50:06Z",
+    "license": "MIT"
+  }
+}

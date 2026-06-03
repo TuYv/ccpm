@@ -1,0 +1,25 @@
+{
+  "id": "sergebulaev-linkedin-skills-linkedin-reply-handler",
+  "name": "linkedin-reply-handler",
+  "description": "Draft a reply to a specific existing LinkedIn comment from its URL. Use when the user wants to reply to a comment on any post, or follow up after an author replied to them. Parses the commentUrn, resolves the correct parentComment target (LinkedIn flattens threads to 2 levels), and posts via Publora on approval. Not for top-level comments (use linkedin-comment-drafter).",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sergebulaev",
+  "install_path": ".claude/skills/linkedin-reply-handler/SKILL.md",
+  "source": {
+    "repo": "sergebulaev/linkedin-skills",
+    "url": "https://github.com/sergebulaev/linkedin-skills/blob/main/skills/linkedin-reply-handler/SKILL.md",
+    "path": "skills/linkedin-reply-handler/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-03T17:31:28.418Z",
+    "stars": 148,
+    "language": "Python",
+    "pushed_at": "2026-05-21T11:15:51Z",
+    "license": "MIT"
+  }
+}

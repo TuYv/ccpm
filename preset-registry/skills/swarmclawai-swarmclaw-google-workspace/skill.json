@@ -1,0 +1,25 @@
+{
+  "id": "swarmclawai-swarmclaw-google-workspace",
+  "name": "google-workspace",
+  "description": "Use Google Workspace CLI (`gws`) for Drive, Docs, Sheets, Gmail, Calendar, Chat, and related Workspace API tasks.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "swarmclawai",
+  "install_path": ".claude/skills/google-workspace/SKILL.md",
+  "source": {
+    "repo": "swarmclawai/swarmclaw",
+    "url": "https://github.com/swarmclawai/swarmclaw/blob/main/skills/google-workspace/SKILL.md",
+    "path": "skills/google-workspace/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-03T17:30:42.298Z",
+    "stars": 544,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-02T12:01:17Z",
+    "license": "MIT"
+  }
+}

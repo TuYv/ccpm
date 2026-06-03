@@ -1,0 +1,25 @@
+{
+  "id": "swarmclawai-swarmclaw-resourceful-problem-solving",
+  "name": "resourceful-problem-solving",
+  "description": "Always-on guidance for solving tasks resourcefully. Teaches agents to escalate through skills, CLI tools, and custom scripts instead of refusing. Applies to any request where the agent lacks a dedicated tool.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "swarmclawai",
+  "install_path": ".claude/skills/resourceful-problem-solving/SKILL.md",
+  "source": {
+    "repo": "swarmclawai/swarmclaw",
+    "url": "https://github.com/swarmclawai/swarmclaw/blob/main/skills/resourceful-problem-solving/SKILL.md",
+    "path": "skills/resourceful-problem-solving/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-03T17:30:42.795Z",
+    "stars": 544,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-02T12:01:17Z",
+    "license": "MIT"
+  }
+}

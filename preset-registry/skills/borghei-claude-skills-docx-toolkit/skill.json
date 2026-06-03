@@ -1,0 +1,25 @@
+{
+  "id": "borghei-claude-skills-docx-toolkit",
+  "name": "docx-toolkit",
+  "description": "> Audit Microsoft Word (.docx) documents for word count, heading hierarchy, comments, tracked changes, broken cross-references, and style consistency. Use when reviewing a contract draft, preparing a document for handoff, enforcing a style guide, or when the user mentions Word document review, docx audit, comment cleanup, or tracked-changes resolution.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "borghei",
+  "install_path": ".claude/skills/docx-toolkit/SKILL.md",
+  "source": {
+    "repo": "borghei/Claude-Skills",
+    "url": "https://github.com/borghei/Claude-Skills/blob/main/documents/docx-toolkit/SKILL.md",
+    "path": "documents/docx-toolkit/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-03T17:31:24.620Z",
+    "stars": 215,
+    "language": "HTML",
+    "pushed_at": "2026-05-27T21:35:05Z",
+    "license": null
+  }
+}

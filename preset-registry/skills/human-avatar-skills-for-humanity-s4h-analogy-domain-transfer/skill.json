@@ -1,0 +1,25 @@
+{
+  "id": "human-avatar-skills-for-humanity-s4h-analogy-domain-transfer",
+  "name": "s4h-analogy-domain-transfer",
+  "description": "Imports solutions from unrelated domains by finding structural similarities between your problem and solved problems elsewhere. Triggers: 'cross-domain analogy', 'what solves this elsewhere', 'find a parallel problem', 'look outside this field', 'borrow a solution'.",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "human-avatar",
+  "install_path": ".claude/skills/s4h-analogy-domain-transfer/SKILL.md",
+  "source": {
+    "repo": "human-avatar/skills-for-humanity",
+    "url": "https://github.com/human-avatar/skills-for-humanity/blob/main/skills/s4h-analogy-domain-transfer/SKILL.md",
+    "path": "skills/s4h-analogy-domain-transfer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-03T17:31:30.127Z",
+    "stars": 145,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-31T19:50:06Z",
+    "license": "MIT"
+  }
+}

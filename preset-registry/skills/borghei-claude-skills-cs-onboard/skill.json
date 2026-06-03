@@ -1,0 +1,25 @@
+{
+  "id": "borghei-claude-skills-cs-onboard",
+  "name": "cs-onboard",
+  "description": "> Structured C-suite onboarding through a founder interview that captures company context across 7 dimensions. Generates a persistent company context file used by all C-level advisory skills. Includes quarterly refresh protocol, context quality scoring, and graceful handling of missing information. Use when setting up advisory context for the first time, refreshing stale company context, or onboarding a new executive.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "borghei",
+  "install_path": ".claude/skills/cs-onboard/SKILL.md",
+  "source": {
+    "repo": "borghei/Claude-Skills",
+    "url": "https://github.com/borghei/Claude-Skills/blob/main/c-level-advisor/cs-onboard/SKILL.md",
+    "path": "c-level-advisor/cs-onboard/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-03T17:31:21.759Z",
+    "stars": 215,
+    "language": "HTML",
+    "pushed_at": "2026-05-27T21:35:05Z",
+    "license": null
+  }
+}

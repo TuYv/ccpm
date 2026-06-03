@@ -1,0 +1,25 @@
+{
+  "id": "sickn33-antigravity-awesome-skills-accesslint-scan",
+  "name": "accesslint-scan",
+  "description": "Audit a live page for accessibility issues, locate each WCAG violation precisely, and return a selector-grounded fix worklist without editing.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sickn33",
+  "install_path": ".claude/skills/accesslint-scan/SKILL.md",
+  "source": {
+    "repo": "sickn33/antigravity-awesome-skills",
+    "url": "https://github.com/sickn33/antigravity-awesome-skills/blob/main/plugins/antigravity-awesome-skills-claude/skills/accesslint-scan/SKILL.md",
+    "path": "plugins/antigravity-awesome-skills-claude/skills/accesslint-scan/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-03T17:27:41.228Z",
+    "stars": 39592,
+    "language": "Python",
+    "pushed_at": "2026-06-03T14:50:53Z",
+    "license": "MIT"
+  }
+}

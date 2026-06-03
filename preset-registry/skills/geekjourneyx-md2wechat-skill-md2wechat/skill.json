@@ -1,0 +1,25 @@
+{
+  "id": "geekjourneyx-md2wechat-skill-md2wechat",
+  "name": "md2wechat",
+  "description": "Convert Markdown to WeChat Official Account HTML. Use this whenever the user wants WeChat article formatting, article preview, WeChat draft upload, image generation for articles, cover or infographic generation, image-post creation, writer-style drafting, AI trace removal, or current discovery of supported providers, themes, prompts, and layout modules.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "geekjourneyx",
+  "install_path": ".claude/skills/md2wechat/SKILL.md",
+  "source": {
+    "repo": "geekjourneyx/md2wechat-skill",
+    "url": "https://github.com/geekjourneyx/md2wechat-skill/blob/main/skills/md2wechat/SKILL.md",
+    "path": "skills/md2wechat/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-03T17:30:44.680Z",
+    "stars": 2700,
+    "language": "Go",
+    "pushed_at": "2026-05-28T14:58:31Z",
+    "license": null
+  }
+}

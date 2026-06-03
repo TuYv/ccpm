@@ -1,0 +1,25 @@
+{
+  "id": "human-avatar-skills-for-humanity-s4h-communication-medium-selection",
+  "name": "s4h-communication-medium-selection",
+  "description": "Matches the message to the right channel and format — the same content in the wrong medium loses most of its effect. Triggers: 'which channel', 'email vs meeting', 'should this be async or sync', 'medium fit', 'how should I deliver this'.",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "human-avatar",
+  "install_path": ".claude/skills/s4h-communication-medium-selection/SKILL.md",
+  "source": {
+    "repo": "human-avatar/skills-for-humanity",
+    "url": "https://github.com/human-avatar/skills-for-humanity/blob/main/skills/s4h-communication-medium-selection/SKILL.md",
+    "path": "skills/s4h-communication-medium-selection/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-03T17:31:31.672Z",
+    "stars": 145,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-31T19:50:06Z",
+    "license": "MIT"
+  }
+}

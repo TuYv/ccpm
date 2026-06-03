@@ -1,0 +1,25 @@
+{
+  "id": "sergebulaev-linkedin-skills-linkedin-thread-monitor",
+  "name": "linkedin-thread-monitor",
+  "description": "Track which of your LinkedIn comments earned author replies. Flags the 6-24h warm-reply window where thread momentum peaks, classifies threads as hot/warm/cool/dormant, and routes warm ones to linkedin-reply-handler for follow-up drafts. Powered by Apify, no LinkedIn login. Triggers on \"what threads need follow-up\", \"author replied\", \"monitor my comments\". Not for analyzing likers on a post (use linkedin-engager-analytics).",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sergebulaev",
+  "install_path": ".claude/skills/linkedin-thread-monitor/SKILL.md",
+  "source": {
+    "repo": "sergebulaev/linkedin-skills",
+    "url": "https://github.com/sergebulaev/linkedin-skills/blob/main/skills/linkedin-thread-monitor/SKILL.md",
+    "path": "skills/linkedin-thread-monitor/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-03T17:31:28.631Z",
+    "stars": 148,
+    "language": "Python",
+    "pushed_at": "2026-05-21T11:15:51Z",
+    "license": "MIT"
+  }
+}

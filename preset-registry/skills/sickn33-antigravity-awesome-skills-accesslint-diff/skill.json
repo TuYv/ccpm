@@ -1,0 +1,25 @@
+{
+  "id": "sickn33-antigravity-awesome-skills-accesslint-diff",
+  "name": "accesslint-diff",
+  "description": "Diff a live page's accessibility violations against a baseline — by default compares uncommitted changes (stash-based), or pass --branch [<name>] to diff against a branch. Reports only new violations introduced, violations fixed, and pre-existing count. Use `scan` for a full audit with no diffing.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sickn33",
+  "install_path": ".claude/skills/accesslint-diff/SKILL.md",
+  "source": {
+    "repo": "sickn33/antigravity-awesome-skills",
+    "url": "https://github.com/sickn33/antigravity-awesome-skills/blob/main/plugins/antigravity-awesome-skills-claude/skills/accesslint-diff/SKILL.md",
+    "path": "plugins/antigravity-awesome-skills-claude/skills/accesslint-diff/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-03T17:27:41.083Z",
+    "stars": 39592,
+    "language": "Python",
+    "pushed_at": "2026-06-03T14:50:53Z",
+    "license": "MIT"
+  }
+}

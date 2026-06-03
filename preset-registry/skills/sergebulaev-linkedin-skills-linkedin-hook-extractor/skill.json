@@ -1,0 +1,25 @@
+{
+  "id": "sergebulaev-linkedin-skills-linkedin-hook-extractor",
+  "name": "linkedin-hook-extractor",
+  "description": "Reverse-engineer the hook formula from a viral LinkedIn post URL. Returns which of the 10 canonical 2026 formulas it uses (anaphora, R.I.P., year-pivot, time-anchor, self-proving, odd-money, paid-vs-free, curiosity-gap, contrarian, comment-gate), why it worked, and a blank template. Use to learn from a competitor's post, not to write your own (use linkedin-post-writer).",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sergebulaev",
+  "install_path": ".claude/skills/linkedin-hook-extractor/SKILL.md",
+  "source": {
+    "repo": "sergebulaev/linkedin-skills",
+    "url": "https://github.com/sergebulaev/linkedin-skills/blob/main/skills/linkedin-hook-extractor/SKILL.md",
+    "path": "skills/linkedin-hook-extractor/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-03T17:31:27.820Z",
+    "stars": 148,
+    "language": "Python",
+    "pushed_at": "2026-05-21T11:15:51Z",
+    "license": "MIT"
+  }
+}

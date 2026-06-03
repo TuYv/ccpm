@@ -1,0 +1,25 @@
+{
+  "id": "human-avatar-skills-for-humanity-s4h-economics",
+  "name": "s4h-economics",
+  "description": "Entry point for the economics toolkit. Routes to the right economics skill based on your situation. Use when you say 'economics', 'what's the incentive here', 'what am I giving up', 'who pays for this', 'should we do more or less of this', 'why won't people cooperate', 'externality', 'opportunity cost', 'marginal', or want economic reasoning applied without knowing which specific tool fits.",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "human-avatar",
+  "install_path": ".claude/skills/s4h-economics/SKILL.md",
+  "source": {
+    "repo": "human-avatar/skills-for-humanity",
+    "url": "https://github.com/human-avatar/skills-for-humanity/blob/main/skills/s4h-economics/SKILL.md",
+    "path": "skills/s4h-economics/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-03T17:31:37.371Z",
+    "stars": 145,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-31T19:50:06Z",
+    "license": "MIT"
+  }
+}

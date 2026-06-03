@@ -1,0 +1,25 @@
+{
+  "id": "human-avatar-skills-for-humanity-s4h-communication-clarity-audit",
+  "name": "s4h-communication-clarity-audit",
+  "description": "Audits a communication for places where the message will be lost, misread, or misunderstood — before it's sent. Triggers: 'clarity audit', 'will this be understood', 'check my message', 'edit for clarity', 'where will this be misread'.",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "human-avatar",
+  "install_path": ".claude/skills/s4h-communication-clarity-audit/SKILL.md",
+  "source": {
+    "repo": "human-avatar/skills-for-humanity",
+    "url": "https://github.com/human-avatar/skills-for-humanity/blob/main/skills/s4h-communication-clarity-audit/SKILL.md",
+    "path": "skills/s4h-communication-clarity-audit/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-03T17:31:31.511Z",
+    "stars": 145,
+    "language": "JavaScript",
+    "pushed_at": "2026-05-31T19:50:06Z",
+    "license": "MIT"
+  }
+}

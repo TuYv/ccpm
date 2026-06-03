@@ -1,0 +1,25 @@
+{
+  "id": "swarmclawai-swarmclaw-skill-creator",
+  "name": "skill-creator",
+  "description": "Create, edit, improve, or audit skills for SwarmClaw agents. Use when creating a new skill from scratch or when asked to improve, review, audit, tidy up, or clean up an existing skill or SKILL.md file. Also use when editing or restructuring a skill directory. Triggers on phrases like \"create a skill\", \"author a skill\", \"tidy up a skill\", \"improve this skill\", \"review the skill\", \"clean up the skill\", \"audit the skill\".",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "swarmclawai",
+  "install_path": ".claude/skills/skill-creator/SKILL.md",
+  "source": {
+    "repo": "swarmclawai/swarmclaw",
+    "url": "https://github.com/swarmclawai/swarmclaw/blob/main/skills/skill-creator/SKILL.md",
+    "path": "skills/skill-creator/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-03T17:30:42.937Z",
+    "stars": 544,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-02T12:01:17Z",
+    "license": "MIT"
+  }
+}
