@@ -1,0 +1,25 @@
+{
+  "id": "raintree-technology-claude-starter-goms-klm-analysis",
+  "name": "goms-klm-analysis",
+  "description": "GOMS and Keystroke-Level Model analysis for decomposing UI workflows into goals, operators, methods, selections, and expert-user execution estimates. Use when the user asks to compare task flows, count interaction cost, reduce clicks or keystrokes, evaluate command/menu/navigation choices, model expert performance, or redesign a workflow using GOMS, KLM, CMN-GOMS, or cognitive walkthrough style reasoning.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "raintree-technology",
+  "install_path": ".claude/skills/goms-klm-analysis/SKILL.md",
+  "source": {
+    "repo": "raintree-technology/claude-starter",
+    "url": "https://github.com/raintree-technology/claude-starter/blob/main/templates/.claude/skills/goms-klm-analysis/SKILL.md",
+    "path": "templates/.claude/skills/goms-klm-analysis/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-04T01:59:38.694Z",
+    "stars": 78,
+    "language": "JavaScript",
+    "pushed_at": "2026-06-04T01:13:49Z",
+    "license": "MIT"
+  }
+}

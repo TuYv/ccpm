@@ -1,0 +1,25 @@
+{
+  "id": "raintree-technology-claude-starter-hig-platforms",
+  "name": "hig-platforms",
+  "description": ">- Apple Human Interface Guidelines for platform-specific design. Use this skill when the user asks about \"designing for iOS\", \"iPad app design\", \"macOS design\", \"tvOS\", \"visionOS\", \"watchOS\", \"Apple platform\", \"which platform\", platform differences, platform-specific conventions, or multi-platform app design. Also use when the user says \"should I design differently for iPad vs iPhone\", \"how does my app work on visionOS\", \"what's different about macOS apps\", \"porting my app to another platform\",",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "raintree-technology",
+  "install_path": ".claude/skills/hig-platforms/SKILL.md",
+  "source": {
+    "repo": "raintree-technology/claude-starter",
+    "url": "https://github.com/raintree-technology/claude-starter/blob/main/templates/.claude/skills/hig-platforms/SKILL.md",
+    "path": "templates/.claude/skills/hig-platforms/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-04T01:59:41.044Z",
+    "stars": 78,
+    "language": "JavaScript",
+    "pushed_at": "2026-06-04T01:13:49Z",
+    "license": "MIT"
+  }
+}

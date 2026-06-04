@@ -1,0 +1,25 @@
+{
+  "id": "raintree-technology-claude-starter-hig-technologies",
+  "name": "hig-technologies",
+  "description": ">- Apple HIG guidance for Apple technology integrations: Siri, Apple Pay, HealthKit, HomeKit, ARKit, machine learning, generative AI, iCloud, Sign in with Apple, SharePlay, CarPlay, Game Center, in-app purchase, NFC, Wallet, VoiceOver, Maps, Mac Catalyst, and more. Use when asked about: \"Siri integration\", \"Apple Pay\", \"HealthKit\", \"HomeKit\", \"ARKit\", \"augmented reality\", \"machine learning\", \"generative AI\", \"iCloud sync\", \"Sign in with Apple\", \"SharePlay\", \"CarPlay\", \"in-app purchase\", \"NFC\", \"",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "raintree-technology",
+  "install_path": ".claude/skills/hig-technologies/SKILL.md",
+  "source": {
+    "repo": "raintree-technology/claude-starter",
+    "url": "https://github.com/raintree-technology/claude-starter/blob/main/templates/.claude/skills/hig-technologies/SKILL.md",
+    "path": "templates/.claude/skills/hig-technologies/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-04T01:59:41.394Z",
+    "stars": 78,
+    "language": "JavaScript",
+    "pushed_at": "2026-06-04T01:13:49Z",
+    "license": "MIT"
+  }
+}

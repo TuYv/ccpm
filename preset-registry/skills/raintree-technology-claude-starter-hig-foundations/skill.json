@@ -1,0 +1,25 @@
+{
+  "id": "raintree-technology-claude-starter-hig-foundations",
+  "name": "hig-foundations",
+  "description": ">- Apple Human Interface Guidelines design foundations. Use this skill when the user asks about \"HIG color\", \"Apple typography\", \"SF Symbols\", \"dark mode guidelines\", \"accessible design\", \"Apple design foundations\", \"app icon\", \"layout guidelines\", \"materials\", \"motion\", \"privacy\", \"right to left\", \"RTL\", \"inclusive design\", branding, images, spatial layout, or writing style. Also use when the user says \"my colors look wrong in dark mode\", \"what font should I use\", \"is my app accessible enough\",",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "raintree-technology",
+  "install_path": ".claude/skills/hig-foundations/SKILL.md",
+  "source": {
+    "repo": "raintree-technology/claude-starter",
+    "url": "https://github.com/raintree-technology/claude-starter/blob/main/templates/.claude/skills/hig-foundations/SKILL.md",
+    "path": "templates/.claude/skills/hig-foundations/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-04T01:59:40.528Z",
+    "stars": 78,
+    "language": "JavaScript",
+    "pushed_at": "2026-06-04T01:13:49Z",
+    "license": "MIT"
+  }
+}
