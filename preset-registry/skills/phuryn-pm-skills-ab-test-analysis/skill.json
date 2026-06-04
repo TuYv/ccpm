@@ -1,0 +1,25 @@
+{
+  "id": "phuryn-pm-skills-ab-test-analysis",
+  "name": "ab-test-analysis",
+  "description": "Analyze A/B test results with statistical significance, sample size validation, confidence intervals, and ship/extend/stop recommendations. Use when evaluating experiment results, checking if a test reached significance, interpreting split test data, or deciding whether to ship a variant.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "phuryn",
+  "install_path": ".claude/skills/ab-test-analysis/SKILL.md",
+  "source": {
+    "repo": "phuryn/pm-skills",
+    "url": "https://github.com/phuryn/pm-skills/blob/main/pm-data-analytics/skills/ab-test-analysis/SKILL.md",
+    "path": "pm-data-analytics/skills/ab-test-analysis/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-04T14:24:38.076Z",
+    "stars": 11926,
+    "language": null,
+    "pushed_at": "2026-06-04T10:58:16Z",
+    "license": "MIT"
+  }
+}

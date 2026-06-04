@@ -1,0 +1,25 @@
+{
+  "id": "phuryn-pm-skills-release-notes",
+  "name": "release-notes",
+  "description": "Generate user-facing release notes from tickets, PRDs, or changelogs. Creates clear, engaging summaries organized by category (new features, improvements, fixes). Use when writing release notes, creating changelogs, announcing product updates, or summarizing what shipped.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "phuryn",
+  "install_path": ".claude/skills/release-notes/SKILL.md",
+  "source": {
+    "repo": "phuryn/pm-skills",
+    "url": "https://github.com/phuryn/pm-skills/blob/main/pm-execution/skills/release-notes/SKILL.md",
+    "path": "pm-execution/skills/release-notes/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-04T14:24:39.374Z",
+    "stars": 11926,
+    "language": null,
+    "pushed_at": "2026-06-04T10:58:16Z",
+    "license": "MIT"
+  }
+}

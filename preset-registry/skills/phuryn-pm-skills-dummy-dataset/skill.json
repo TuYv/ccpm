@@ -1,0 +1,25 @@
+{
+  "id": "phuryn-pm-skills-dummy-dataset",
+  "name": "dummy-dataset",
+  "description": "Generate realistic dummy datasets for testing with customizable columns, constraints, and output formats (CSV, JSON, SQL, Python script). Use when creating test data, building mock datasets, or generating sample data for development and demos.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "phuryn",
+  "install_path": ".claude/skills/dummy-dataset/SKILL.md",
+  "source": {
+    "repo": "phuryn/pm-skills",
+    "url": "https://github.com/phuryn/pm-skills/blob/main/pm-execution/skills/dummy-dataset/SKILL.md",
+    "path": "pm-execution/skills/dummy-dataset/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-04T14:24:38.688Z",
+    "stars": 11926,
+    "language": null,
+    "pushed_at": "2026-06-04T10:58:16Z",
+    "license": "MIT"
+  }
+}
