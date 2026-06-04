@@ -1,0 +1,25 @@
+{
+  "id": "basicmachines-co-basic-memory-bm-status",
+  "name": "bm-status",
+  "description": "Show the Basic Memory plugin's current state for this project — active project, capture folders, output style, recent session checkpoints, and whether Basic Memory is reachable.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "basicmachines-co",
+  "install_path": ".claude/skills/bm-status/SKILL.md",
+  "source": {
+    "repo": "basicmachines-co/basic-memory",
+    "url": "https://github.com/basicmachines-co/basic-memory/blob/main/plugins/claude-code/skills/bm-status/SKILL.md",
+    "path": "plugins/claude-code/skills/bm-status/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-04T17:31:17.223Z",
+    "stars": 3142,
+    "language": "Python",
+    "pushed_at": "2026-06-04T17:04:07Z",
+    "license": "AGPL-3.0"
+  }
+}

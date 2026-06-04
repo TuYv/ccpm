@@ -1,0 +1,25 @@
+{
+  "id": "basicmachines-co-basic-memory-bm-remember",
+  "name": "bm-remember",
+  "description": "Quickly capture a thought, fact, or reminder into Basic Memory as a lightweight note. Use when the user says \"remember that…\", \"note this\", \"save this to memory\", or runs /basic-memory:bm-remember. For quick deliberate capture — not full decision or session records.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "basicmachines-co",
+  "install_path": ".claude/skills/bm-remember/SKILL.md",
+  "source": {
+    "repo": "basicmachines-co/basic-memory",
+    "url": "https://github.com/basicmachines-co/basic-memory/blob/main/plugins/claude-code/skills/bm-remember/SKILL.md",
+    "path": "plugins/claude-code/skills/bm-remember/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-04T17:31:16.584Z",
+    "stars": 3142,
+    "language": "Python",
+    "pushed_at": "2026-06-04T17:04:07Z",
+    "license": "AGPL-3.0"
+  }
+}
