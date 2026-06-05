@@ -1,7 +1,7 @@
 {
   "id": "backnotprop-plannotator-plannotator-archive",
   "name": "plannotator-archive",
-  "description": "Open the read-only Plannotator archive browser for prior plan decisions.",
+  "description": "Browse saved plan decisions in Plannotator's read-only archive UI in the browser.",
   "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
@@ -13,13 +13,14 @@
   "install_path": ".claude/skills/plannotator-archive/SKILL.md",
   "source": {
     "repo": "backnotprop/plannotator",
-    "url": "https://github.com/backnotprop/plannotator/blob/main/apps/kiro-cli/skills/plannotator-archive/SKILL.md",
-    "path": "apps/kiro-cli/skills/plannotator-archive/SKILL.md",
+    "url": "https://github.com/backnotprop/plannotator/blob/main/apps/skills/core/plannotator-archive/SKILL.md",
+    "path": "apps/skills/core/plannotator-archive/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-05T13:46:27.580Z",
-    "stars": 5950,
+    "discovered_at": "2026-06-05T16:52:38.629Z",
+    "stars": 5953,
     "language": "TypeScript",
-    "pushed_at": "2026-06-05T13:43:38Z",
+    "pushed_at": "2026-06-05T16:27:22Z",
     "license": "Apache-2.0"
-  }
+  },
+  "summary_zh": "在浏览器中以只读方式查看 Plannotator 保存的方案决策记录，方便团队回顾和查阅历史规划过程。"
 }

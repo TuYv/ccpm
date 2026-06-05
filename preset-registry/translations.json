@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-06-05T13:54:14.650Z",
+  "updated_at": "2026-06-05T17:00:13.459Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -148,9 +148,9 @@
       "translated_at": "2026-05-11T09:03:56.372Z"
     },
     "preset:lich0821-ccnexus": {
-      "hash": "c4df9c07897183e3",
-      "summary_zh": "一款专为AI编程工具设计的智能网关，能自动轮换API端点与Token并打通各家大模型接口，解决单点故障、额度受限和多平台调用的痛点。",
-      "translated_at": "2026-05-11T09:04:23.149Z"
+      "hash": "a74604b641a9a2a5",
+      "summary_zh": "为 Claude Code 和 Codex CLI 打造的本地 API 网关，自动在多个上游端点间轮换并兼容 OpenAI、Gemini 等格式，适合需要稳定调用、监控用量或统一管理多家大模型接口的开发者。",
+      "translated_at": "2026-06-05T16:55:42.177Z"
     },
     "preset:lingyan000-fluxdo": {
       "hash": "6711cfe4badad391",
@@ -948,9 +948,9 @@
       "translated_at": "2026-05-20T00:55:15.344Z"
     },
     "bundle:jimliu-baoyu-skills": {
-      "hash": "fec0ef7acbb540ca",
-      "summary_zh": "这套专攻内容创作的AI技能合集，解决图文排版与视觉生成痛点。它将配图、画图与文本格式化能力组合起来，帮你把干瘪文字轻松变成排版精美、配图专业的图文内容。",
-      "translated_at": "2026-05-20T00:58:21.082Z"
+      "hash": "671b31e2cfeb3767",
+      "summary_zh": "这套合集面向中文创作者，把文章写作全流程串起来——从抓取素材、整理 Markdown、配图制图，到生成封面、漫画、信息卡片和压缩输出，让一个人也能高效完成图文并茂的内容生产与发布。",
+      "translated_at": "2026-06-05T16:53:43.292Z"
     },
     "bundle:cexll-myclaude": {
       "hash": "a3af743ff4cac1e4",
@@ -1063,9 +1063,9 @@
       "translated_at": "2026-05-12T07:00:09.092Z"
     },
     "preset:agentseal-codeburn": {
-      "hash": "d49019f33c36860a",
-      "summary_zh": "一个本地运行的终端仪表盘，专门统计 Claude Code、Codex、Cursor 等 AI 编程工具的 token 消耗和花费，按任务、模型、项目细分账单，适合想搞清楚 AI 编码预算到底烧在哪里的开发者。",
-      "translated_at": "2026-05-21T13:48:50.185Z"
+      "hash": "51220b356fe669fd",
+      "summary_zh": "一个本地运行的终端面板，能直接读取 Claude Code、Codex、Cursor 等 AI 编码工具的会话数据，按模型、项目、任务类型拆解 token 消耗和费用，适合想搞清楚 AI 编程开销花在哪儿的开发者。",
+      "translated_at": "2026-06-05T16:55:37.713Z"
     },
     "preset:agricidaniel-claude-ads": {
       "hash": "2917aca02746e258",
@@ -1248,9 +1248,9 @@
       "translated_at": "2026-05-12T07:10:02.798Z"
     },
     "preset:ctoth-claudio": {
-      "hash": "c5e51dc43d1e43b9",
-      "summary_zh": "这是专为 Claude Code 打造的音效插件，能根据工具调用和任务状态播放对应提示音，让你靠听觉掌握进度，适合不想死盯屏幕的开发场景。",
-      "translated_at": "2026-05-12T07:10:04.582Z"
+      "hash": "a5bfcf3cbbfa1c8b",
+      "summary_zh": "给 Claude Code 和 Codex CLI 加一层声音反馈，按工具调用、成功、失败、通知等不同事件播放对应音效，连 git commit、npm test 都能单独配音，适合想用听觉感知 AI 编程进度的人。",
+      "translated_at": "2026-06-05T16:55:38.385Z"
     },
     "preset:davila7-claude-code-templates": {
       "hash": "893795124260d6d8",
@@ -1403,9 +1403,9 @@
       "translated_at": "2026-05-12T07:16:57.899Z"
     },
     "preset:haunchen-n8n-skills": {
-      "hash": "f8220820758d12b2",
-      "summary_zh": "一套给 AI 助手用的 n8n 知识包，内置 545 个节点的文档和 20 个常用模板，让 Claude 等助手能直接帮你查节点、推荐组合、搭建工作流，省去翻文档的时间。",
-      "translated_at": "2026-05-21T13:48:51.919Z"
+      "hash": "5ed1bac8d6cfc946",
+      "summary_zh": "一个面向 Claude 等 AI 助手的 n8n 知识包，内置 545 个节点的文档和 20 个常用模板，让 AI 帮你查节点、配参数、搭工作流，省去翻文档的时间，适合想用对话方式快速搭自动化流程的人。",
+      "translated_at": "2026-06-05T16:55:44.163Z"
     },
     "preset:heygen-com-hyperframes": {
       "hash": "e1ffee0d06f6fe0c",
@@ -1533,9 +1533,9 @@
       "translated_at": "2026-05-12T07:24:16.152Z"
     },
     "preset:manzaltu-claude-code-ide-el": {
-      "hash": "adc0dd08dfaa4bf5",
-      "summary_zh": "这是一个将Claude深度接入Emacs的插件，通过双向桥接让AI直接调用编辑器能力，解决普通AI不懂编辑器环境的问题，适合想在Emacs中无缝使用AI的开发者。",
-      "translated_at": "2026-05-12T07:24:24.722Z"
+      "hash": "4a1b8719c6306783",
+      "summary_zh": "在 Emacs 中接入 Claude Code CLI，通过 MCP 协议让 AI 能调用 LSP、项目管理、xref 等原生能力，适合想在熟悉的 Emacs 工作流里用 Claude 辅助编码的人。",
+      "translated_at": "2026-06-05T16:55:44.094Z"
     },
     "preset:lkbaba-claude-code-chatinwindows": {
       "hash": "6257d46db60898ff",
@@ -1608,9 +1608,9 @@
       "translated_at": "2026-05-12T07:28:22.832Z"
     },
     "preset:numman-ali-cc-mirror": {
-      "hash": "14f25f4c3cc58433",
-      "summary_zh": "它能帮你创建多个互相隔离的 Claude Code 定制版，并自由接入第三方大模型，打破官方接口限制，适合需要灵活切换模型或管理多套独立环境的开发者。",
-      "translated_at": "2026-05-12T07:28:29.362Z"
+      "hash": "0b134e9a147695f6",
+      "summary_zh": "一键创建多个相互隔离的 Claude Code 实例，可分别接入 Z.ai、MiniMax、OpenRouter、LiteLLM 等不同模型供应商，适合想在本地并行使用多家 AI 编码服务、避免配置互相干扰的开发者。",
+      "translated_at": "2026-06-05T16:55:47.445Z"
     },
     "preset:numman-ali-n-skills": {
       "hash": "c06167ea68d28308",
@@ -1908,9 +1908,9 @@
       "translated_at": "2026-05-12T07:42:34.338Z"
     },
     "preset:uppinote20-claude-dashboard": {
-      "hash": "6a7b2a91ccfedab2",
-      "summary_zh": "这是Claude Code的状态栏增强插件，帮你在编程时实时监控上下文用量、API限制与花销，避免意外超支或触发限流。",
-      "translated_at": "2026-05-12T07:42:48.240Z"
+      "hash": "f66df24684480461",
+      "summary_zh": "一款给 Claude Code 用的状态栏插件，能在终端里实时显示上下文占用、API 速率限制、费用和会话信息，还支持 Codex、Gemini、z.ai 等多家 CLI 的统一监控，适合重度使用命令行 AI 工具的开发者随时掌握用量。",
+      "translated_at": "2026-06-05T16:55:51.029Z"
     },
     "preset:vercel-labs-next-skills": {
       "hash": "c765d14583eb0c5f",
@@ -2028,14 +2028,14 @@
       "translated_at": "2026-05-19T19:44:28.466Z"
     },
     "skill:conorbronsdon-avoid-ai-writing": {
-      "hash": "8491943c96e77106",
-      "summary_zh": "专门帮文章去AI味的润色工具，能消除机器生成的套路和痕迹，让文字读起来像真人写的，适合需要给AI内容去痕迹或只做检测的场景。",
-      "translated_at": "2026-05-19T20:55:25.942Z"
+      "hash": "9eee51a2e6befa93",
+      "summary_zh": "用来检测并改写文本里常见的「AI 腔」，让内容读起来更像人写的。支持只检测或直接改稿，可指定语气风格，也能反复打磨直到自然为止，适合润色 AI 生成的文章。",
+      "translated_at": "2026-06-05T17:00:00.013Z"
     },
     "skill:campfirein-cipher-skill": {
-      "hash": "fe7811f143dcc624",
-      "summary_zh": "专为AI代理打造的知识管理工具，让AI在干活前能快速掌握项目背景与架构决策，解决它缺乏上下文的问题。",
-      "translated_at": "2026-05-19T20:39:04.026Z"
+      "hash": "ccfe2229543e98ed",
+      "summary_zh": "一个专为 AI 编程助手设计的项目知识库工具，把架构决策、代码规则和常用模式存进本地上下文树，让助手干活前先查、改完后存，避免重复踩坑或忘记历史约定。",
+      "translated_at": "2026-06-05T16:59:56.348Z"
     },
     "skill:zeroz-lab-cc-design": {
       "hash": "cc38949881b5d22c",
@@ -2088,9 +2088,9 @@
       "translated_at": "2026-05-19T20:30:27.018Z"
     },
     "skill:conorluddy-ios-simulator-skill-ios-simulator-skill": {
-      "hash": "562592697e8c8647",
-      "summary_zh": "这是一套专为AI智能体优化的iOS自动化脚本，输出极简省token，特别适合需要让AI自动搞定App构建、测试和模拟器管理的场景。",
-      "translated_at": "2026-05-19T20:55:46.762Z"
+      "hash": "bb8d4eb605bf5472",
+      "summary_zh": "29个生产级脚本，用于iOS应用的测试、构建和自动化，支持语义UI导航和模拟器管理，特别适合AI代理高效使用。",
+      "translated_at": "2026-06-05T17:00:05.632Z"
     },
     "skill:forrestchang-andrej-karpathy-skills-karpathy-guidelines": {
       "hash": "2e4ab29d27bcfa70",
@@ -2178,104 +2178,104 @@
       "translated_at": "2026-05-19T20:21:09.767Z"
     },
     "skill:aaron-he-zhu-seo-geo-claude-skills-alert-manager": {
-      "hash": "138cd3eed2cc8595",
-      "summary_zh": "这是一个SEO预警配置工具，能帮你监控各项SEO指标及竞品动态，并在触发阈值时自动通知，适合需要及时应对网站SEO异常波动的场景。",
-      "translated_at": "2026-05-19T19:37:09.628Z"
+      "hash": "7946a786f39fc9ae",
+      "summary_zh": "用来给 SEO 数据设置阈值预警的工具，当排名、流量、技术指标或竞争对手出现异动时自动通知你，适合需要持续盯盘、第一时间发现问题的场景，不负责一次性的查询或报表。",
+      "translated_at": "2026-06-05T16:55:53.534Z"
     },
     "skill:aaron-he-zhu-seo-geo-claude-skills-competitor-analysis": {
-      "hash": "b6ec0d9c1d2d9416",
-      "summary_zh": "一款帮你对比竞争对手并挖掘SEO与AI搜索流量差距的工具。当你想摸清对手的流量来源和优化空间，制定赶超策略时用它最合适。",
-      "translated_at": "2026-05-19T19:37:10.512Z"
+      "hash": "1cf87bf3bcacdc51",
+      "summary_zh": "帮你系统盘点竞争对手在关键词、内容、外链、AI 引用和流量份额上的表现，梳理出对方的优劣势并给出可落地的应对方案，适合做市场定位或追赶头部对手时使用。",
+      "translated_at": "2026-06-05T16:56:09.991Z"
     },
     "skill:aaron-he-zhu-seo-geo-claude-skills-backlink-analyzer": {
-      "hash": "d219979655880a76",
-      "summary_zh": "这是一款外链分析工具，能帮你评估链接权重、排查垃圾外链，还能挖掘建链机会或对比竞品外链差距，非常适合SEO优化和竞品分析场景。",
-      "translated_at": "2026-05-19T19:37:11.439Z"
+      "hash": "9e35be6332147a55",
+      "summary_zh": "用于分析网站的外部反向链接，盘点引荐域名、锚文本分布、有害链接以及与竞争对手的外链差距，适合做SEO外链审计和竞品对比，不涉及站内链接。",
+      "translated_at": "2026-06-05T16:55:55.981Z"
     },
     "skill:aaron-he-zhu-seo-geo-claude-skills-content-gap-analysis": {
-      "hash": "1722a32f8d8e3f85",
-      "summary_zh": "这是一款选题挖掘工具，能帮你找出竞品覆盖而你遗漏的关键词与内容机会，轻松规划发布日历，特别适合做SEO和内容规划时填补空白。",
-      "translated_at": "2026-05-19T19:37:24.448Z"
+      "hash": "e2b0a75673f02ef6",
+      "summary_zh": "通过对比竞品已覆盖的内容，找出你还没写但值得写的话题，输出关键词缺口和选题日历建议，适合做内容规划和补位选题。",
+      "translated_at": "2026-06-05T16:55:59.487Z"
     },
     "skill:aaron-he-zhu-seo-geo-claude-skills-content-quality-auditor": {
-      "hash": "e47db82b61a5a217",
-      "summary_zh": "这是个内容质量审计工具，能在发布前帮你全面评估E-E-A-T得分，揪出致命问题并给出修复方案，适合需要严格把控内容质量和SEO合规的场景。",
-      "translated_at": "2026-05-19T19:37:30.872Z"
+      "hash": "c705eeda961bafbf",
+      "summary_zh": "用 80 项 CORE-EEAT 评分加一票否决检查来审核内容质量和发布就绪度，给出可执行的修改清单，适合发文前判断是否达标。",
+      "translated_at": "2026-06-05T16:56:01.713Z"
     },
     "skill:aaron-he-zhu-seo-geo-claude-skills-content-refresher": {
-      "hash": "2b097483d6fcf804",
-      "summary_zh": "这是一个帮你翻新旧文章的工具，能解决网站流量和搜索排名衰退的问题，特别适合需要通过更新数据和补充内容来提升搜索引擎新鲜度信号的SEO维护场景。",
-      "translated_at": "2026-05-19T19:37:34.501Z"
+      "hash": "35e9bb64c792e56b",
+      "summary_zh": "专门给老旧网页内容做体检的工具，帮你评估流量和排名下滑情况，排出更新优先级，再给出一份带 SEO 和重新发布建议的改稿计划，适合需要救活老文章的运营场景。",
+      "translated_at": "2026-06-05T16:56:12.882Z"
     },
     "skill:aaron-he-zhu-seo-geo-claude-skills-geo-content-optimizer": {
-      "hash": "8374efdf3d070c69",
-      "summary_zh": "专门针对AI搜索引擎的优化工具，能让你的内容更容易被ChatGPT等主流AI当作引用来源，适合想提升文章在AI问答中曝光率的创作者。",
-      "translated_at": "2026-05-19T19:37:57.869Z"
+      "hash": "2c5a2df5e1b4f2a1",
+      "summary_zh": "专门优化内容在 ChatGPT、Perplexity、AI Overviews、Gemini、Claude 等 AI 搜索中的被引用率，适合已有文章想提升 AI 时代曝光的场景，不负责传统 SEO 结构审查或从零撰稿。",
+      "translated_at": "2026-06-05T16:56:20.396Z"
     },
     "skill:aaron-he-zhu-seo-geo-claude-skills-entity-optimizer": {
-      "hash": "a22f8ba83037b4c3",
-      "summary_zh": "这是一个提升实体在AI和搜索中曝光度的工具，通过构建关联数据网络解决机器难以识别你的问题，适合需要增强实体存在感、让AI更懂你的品牌营销和SEO场景。",
-      "translated_at": "2026-05-19T19:37:59.717Z"
+      "hash": "f2a337f879f7d569",
+      "summary_zh": "用来打造统一的实体身份信息，构建知识图谱、Wikidata、sameAs 等关联信号，让品牌或人物更容易被 AI 和搜索引擎识别认知，适合做实体优化的场景。",
+      "translated_at": "2026-06-05T16:56:10.593Z"
     },
     "skill:aaron-he-zhu-seo-geo-claude-skills-internal-linking-optimizer": {
-      "hash": "987891a9352fa04c",
-      "summary_zh": "这是一个用来梳理网站架构和优化内链的工具，能帮你解决孤立页面、抓取层级过深或权重分散等问题，非常适合想提升网站SEO效果和收录率的场景。",
-      "translated_at": "2026-05-19T19:38:15.743Z"
+      "hash": "7e24b517d4fe94fb",
+      "summary_zh": "专门用来梳理站内链接结构的工具，能找出孤岛页面、分析权重流动和锚文本分布，并按优先级给出\"从哪页链到哪页、用什么锚文本\"的优化方案，适合做 SEO 站内优化时使用。",
+      "translated_at": "2026-06-05T16:56:15.600Z"
     },
     "skill:aaron-he-zhu-seo-geo-claude-skills-domain-authority-auditor": {
-      "hash": "77d44ec4cda41e19",
-      "summary_zh": "这是一款用来评估域名权威度和网站可信度的工具，能帮你全面检测网站引用与信任水平，并排查致命硬伤，适合SEO优化或网站价值评估时使用。",
-      "translated_at": "2026-05-19T19:38:19.230Z"
+      "hash": "4bc719193d9749a3",
+      "summary_zh": "用 40 项 CITE 评分加一票否决机制，快速判断一个网站的权威性和引用可信度，给出可信、谨慎或不可信的结论，适合做信源核查或外链筛选时用。",
+      "translated_at": "2026-06-05T16:56:06.219Z"
     },
     "skill:aaron-he-zhu-seo-geo-claude-skills-keyword-research": {
-      "hash": "345ad2592b481d16",
-      "summary_zh": "这是一个帮你挖掘关键词的工具，适合内容选题和SEO优化。它能从数据中筛选出高价值、符合用户意图的词群，让你轻松搞定找词难题。",
-      "translated_at": "2026-05-19T19:38:20.142Z"
+      "hash": "00703649bbc16a9c",
+      "summary_zh": "用于帮你挖掘和筛选关键词，结合搜索量、难度、用户意图和话题聚类来定选题，适合做SEO选词或内容规划时使用。",
+      "translated_at": "2026-06-05T16:56:17.084Z"
     },
     "skill:aaron-he-zhu-seo-geo-claude-skills-on-page-seo-auditor": {
-      "hash": "d2429f02393c2d43",
-      "summary_zh": "这是一个网页SEO诊断工具，能帮你找出页面内部影响搜索排名的各种问题，并按优先级给出修复建议，适合需要快速优化网页结构以提升排名的场景。",
-      "translated_at": "2026-05-19T19:38:34.333Z"
+      "hash": "9c8a56a37274e8be",
+      "summary_zh": "针对单个网页做SEO诊断，检查标题、描述、标题层级、关键词布局、内外链和图片等要素，给出按优先级排序的修改建议，适合排查页面排名下滑或上线前自查。",
+      "translated_at": "2026-06-05T16:56:28.806Z"
     },
     "skill:aaron-he-zhu-seo-geo-claude-skills-meta-tags-optimizer": {
-      "hash": "472048b7a9d26545",
-      "summary_zh": "帮你优化网页元标签的工具。当需要改进网页标题、描述或社交平台分享卡片，或者想通过测试变体提升点击率时，用它就能快速搞定。",
-      "translated_at": "2026-05-19T19:38:39.668Z"
+      "hash": "cf8b957cbc0df605",
+      "summary_zh": "专门优化网页 meta 标签的小工具，能改进标题、描述、Open Graph 和 Twitter 卡片，还能生成不同的 CTR 测试版本，适合想提升搜索点击率的场景。",
+      "translated_at": "2026-06-05T16:56:21.775Z"
     },
     "skill:aaron-he-zhu-seo-geo-claude-skills-performance-reporter": {
-      "hash": "c259062b51c66e2a",
-      "summary_zh": "这是一个生成SEO与网站绩效数据报告的工具，省去手动整理的麻烦，适合需要定期向团队或老板同步网站流量、排名与KPI表现时使用。",
-      "translated_at": "2026-05-19T19:38:52.382Z"
+      "hash": "0902d068513953a6",
+      "summary_zh": "当用户需要出月报或汇报 SEO 成效时调用，自动整合流量、排名、权重和内容进度等多维数据，生成面向利益相关方的报告和仪表盘；纯排名波动分析请改用 rank-tracker。",
+      "translated_at": "2026-06-05T16:56:27.183Z"
     },
     "skill:aaron-he-zhu-seo-geo-claude-skills-rank-tracker": {
-      "hash": "fa002ba4a7e49c83",
-      "summary_zh": "帮你监控关键词和搜索结果排名波动的工具。适合需要追踪网站SEO表现、观察搜索结果页变化，以及检查AI搜索回答展示情况的场景。",
-      "translated_at": "2026-05-19T19:38:58.549Z"
+      "hash": "684f5b4ef5ea3fbc",
+      "summary_zh": "用于持续追踪关键词在搜索结果中的排名变化，可对比不同时间点的位次波动，还能检查 AI 回答中的露出情况，适合做 SEO 排名监控。",
+      "translated_at": "2026-06-05T16:56:28.773Z"
     },
     "skill:aaron-he-zhu-seo-geo-claude-skills-memory-management": {
-      "hash": "edfc24d65f35f1a5",
-      "summary_zh": "专治系统“失忆”，能跨会话记住项目上下文，智能管理历史数据并保障隐私，适合需要长期跟进项目、随时无缝恢复工作进度的场景。",
-      "translated_at": "2026-05-19T19:39:00.541Z"
+      "hash": "468ded41059a8113",
+      "summary_zh": "一款面向 SEO/GEO 工作流的项目记忆管家，帮你在多轮会话中保留上下文，按热缓存、活跃任务、归档分层存放，还能定期清理隐私数据，适合需要长期跟进的项目场景。",
+      "translated_at": "2026-06-05T16:56:23.201Z"
     },
     "skill:aaron-he-zhu-seo-geo-claude-skills-schema-markup-generator": {
-      "hash": "647749f26d7ff816",
-      "summary_zh": "它是一个网页结构化数据生成工具，能自动创建 JSON-LD 代码，帮网页在搜索引擎中获得富媒体展示效果，非常适合需要做 SEO 优化的场景。",
-      "translated_at": "2026-05-19T19:39:15.148Z"
+      "hash": "39b0d871c126f056",
+      "summary_zh": "当用户需要给网页加结构化数据时用它，能生成 FAQ、HowTo、文章、产品、本地商家等类型的 JSON-LD 代码，方便争取搜索引擎的富媒体展示效果。",
+      "translated_at": "2026-06-05T16:56:32.090Z"
     },
     "skill:aaron-he-zhu-seo-geo-claude-skills-seo-content-writer": {
-      "hash": "331321ba5524b4ae",
-      "summary_zh": "这是一个SEO内容写作助手，专治写优化文章和落地页时不知如何下笔的痛点，它能自动帮你搞定关键词布局和文章结构，轻松生成搜索引擎爱看的优质内容。",
-      "translated_at": "2026-05-19T19:39:20.158Z"
+      "hash": "8632c5f078725048",
+      "summary_zh": "帮你从零起草符合 SEO 规范的文章、博客或落地页，自动安排关键词、标题结构和摘要片段，适合需要批量产出原创内容的场景；不负责给现有内容打分或翻新旧文。",
+      "translated_at": "2026-06-05T16:56:33.436Z"
     },
     "skill:aaron-he-zhu-seo-geo-claude-skills-technical-seo-checker": {
-      "hash": "1b8bae210cc1d2c6",
-      "summary_zh": "这是一个网站技术SEO检查工具，当你需要全面排查搜索引擎抓取、加载速度、移动适配或安全等底层问题时，它能帮你快速审计并找出漏洞。",
-      "translated_at": "2026-05-19T19:39:30.515Z"
+      "hash": "bf97d68cefaa24ba",
+      "summary_zh": "一款技术SEO体检工具，帮你排查抓取、索引、Core Web Vitals、robots.txt、站点地图、规范链接、重定向以及网站迁移等问题，适合做站点健康度检查，不涉及页面标签和内容优化。",
+      "translated_at": "2026-06-05T16:56:36.694Z"
     },
     "skill:aaron-he-zhu-seo-geo-claude-skills-serp-analysis": {
-      "hash": "8036ecbd7e02d05f",
-      "summary_zh": "这是一个搜索结果页分析工具，适合在需要拆解搜索排位时使用，帮你深度洞察排名逻辑、用户意图及AI摘要，轻松搞定搜索优化分析。",
-      "translated_at": "2026-05-19T19:39:31.796Z"
+      "hash": "bac81ad7c9d679b5",
+      "summary_zh": "针对指定关键词解析搜索结果页的布局、排名因素、搜索意图和 AI 概览，帮你发现摘要展示机会，适合做 SEO 优化前的竞争环境调研。",
+      "translated_at": "2026-06-05T16:56:33.598Z"
     },
     "skill:actionbook-rust-skills-coding-guidelines": {
       "hash": "8fa7c7bf53e1761f",
@@ -2433,9 +2433,9 @@
       "translated_at": "2026-05-19T19:43:24.507Z"
     },
     "skill:actionbook-rust-skills-rust-router": {
-      "hash": "2b817127d41a5ed0",
-      "summary_zh": "这是一个专门解答 Rust 问题的智能助手，无论你遇到代码报错需要排查，还是想做架构设计或代码编写，任何 Rust 疑问都能找它搞定。",
-      "translated_at": "2026-05-19T19:43:41.366Z"
+      "hash": "bd1d70c9e8800fb8",
+      "summary_zh": "一个面向 Rust 开发的智能问题路由工具，能识别报错、所有权、生命周期、异步框架对比等场景，自动分流到合适的处理逻辑，适合需要统一接管 Rust 相关提问的助手或工作流。",
+      "translated_at": "2026-06-05T16:56:37.918Z"
     },
     "skill:actionbook-rust-skills-rust-learner": {
       "hash": "0827ca68ec6d40de",
@@ -3688,9 +3688,9 @@
       "translated_at": "2026-05-19T20:20:51.117Z"
     },
     "skill:asklokesh-claudeskill-loki-mode": {
-      "hash": "53f43e691b65f413",
-      "summary_zh": "这是一个多智能体自动化系统，只需提供需求文档或接口规范，就能在几乎无需人工干预下自动完成开发与部署，适合追求全自动交付的极客场景。",
-      "translated_at": "2026-05-19T20:24:19.766Z"
+      "hash": "f2071ef12b6483d0",
+      "summary_zh": "一个自动化交付系统，输入需求文档（PRD、GitHub issue、OpenAPI 文档等）后，通过 RARV-C 闭环流程几乎无需人工干预就能完成从规格到上线产品的全过程，支持多种模型供应商，适合想让 AI 端到端跑通开发部署的场景。",
+      "translated_at": "2026-06-05T16:57:01.161Z"
     },
     "skill:asklokesh-claudeskill-loki-mode-checkpoint-mode": {
       "hash": "9dbd92df5178a388",
@@ -3748,9 +3748,9 @@
       "translated_at": "2026-05-19T20:25:54.996Z"
     },
     "skill:avifenesh-agnix-agnix": {
-      "hash": "32747a97aea574e5",
-      "summary_zh": "专用于校验智能体配置文件的工具，适合在检查和规范智能体配置、技能、钩子、CLAUDE.md 或 MCP 时使用，帮你快速找出并避免配置错误。",
-      "translated_at": "2026-05-19T20:25:56.575Z"
+      "hash": "f81d7f61c7bf2005",
+      "summary_zh": "用 422 条规则检查智能体配置、技能定义、CLAUDE.md、钩子和 MCP 等文件是否规范，适合需要统一校验 AI Agent 配置质量的团队。",
+      "translated_at": "2026-06-05T16:57:01.216Z"
     },
     "skill:avifenesh-agnix-fork-with-instructions": {
       "hash": "2faae074539089f9",
@@ -9648,9 +9648,9 @@
       "translated_at": "2026-05-20T00:54:23.787Z"
     },
     "bundle:mattpocock-skills": {
-      "hash": "82f8a41ed739e66c",
-      "summary_zh": "专为AI编程助手打造的高级技能包，解决架构优化、深度调试、需求理清与安全防护等场景，组合起来能省token并让AI像高级工程师般严谨工作，大幅提升开发效率与代码质量。",
-      "translated_at": "2026-05-20T00:54:32.963Z"
+      "hash": "a226912eb52eb6ab",
+      "summary_zh": "一套面向 AI 编码助手的工作流技能合集，覆盖调试、架构改进、设计评审、文章润色、上下文交接和 Git 防误操作等场景，帮你把日常开发与写作中的复杂任务拆成可复用的标准化流程。",
+      "translated_at": "2026-06-05T16:53:33.569Z"
     },
     "bundle:nextlevelbuilder-ui-ux-pro-max-skill": {
       "hash": "c709b13aaf55e37e",
@@ -9673,14 +9673,14 @@
       "translated_at": "2026-05-20T00:55:19.040Z"
     },
     "bundle:sickn33-antigravity-awesome-skills": {
-      "hash": "d326e55004f1cb88",
-      "summary_zh": "这套全能AI技能包覆盖架构设计、安全攻防、开发测试到营销自动化等全方位技术场景，相当于给项目配了个全栈专家团队，开箱即用，一站式搞定各种技术难题。",
-      "translated_at": "2026-05-20T00:55:46.003Z"
+      "hash": "2bbd887228c6ffb2",
+      "summary_zh": "这套合集把 Andru.ia 体系的咨询、架构、技能开发等核心角色，搭配安全审计、无障碍合规、A/B 测试、3D Web 开发等专项能力打包在一起，覆盖从需求诊断到落地交付的全流程，方便团队按场景随取随用，快速搭建可复用的 AI 工作流。",
+      "translated_at": "2026-06-05T16:53:32.596Z"
     },
     "bundle:getsentry-sentry": {
-      "hash": "5a5b3cbca5ddc1af",
-      "summary_zh": "Sentry 代码库的全栈开发规范与代码生成工具箱，覆盖架构、前后端、混合云及测试等核心环节，帮开发者快速摸清源码套路，高效合规地参与项目迭代与功能扩展。",
-      "translated_at": "2026-05-20T00:55:59.091Z"
+      "hash": "897155f34b6a54d7",
+      "summary_zh": "这套合集是 Sentry 自家的开发助手，覆盖前端组件、表单、快捷命令、设计系统，到后端 Django 模型、数据库迁移、混合云 RPC 与 outbox 等场景，帮助贡献者按官方规范快速上手并产出符合架构约定的代码。",
+      "translated_at": "2026-06-05T16:53:31.211Z"
     },
     "bundle:addyosmani-agent-skills": {
       "hash": "96d44713e40b4f7a",
@@ -9688,14 +9688,14 @@
       "translated_at": "2026-05-20T00:56:01.416Z"
     },
     "bundle:coreyhaines31-marketingskills": {
-      "hash": "1f216e2059c98a2e",
-      "summary_zh": "专为产品增长打造的全栈营销技能包，覆盖从获客投放、搜索优化到数据分析、用户留存的完整链路，帮你一站式搞定拉新转化与留存难题。",
-      "translated_at": "2026-05-20T00:56:19.406Z"
+      "hash": "2e8d6bb9199945e9",
+      "summary_zh": "一站式营销执行助手合集，覆盖增长实验、广告投放、SEO、邮件、社群、留存等 43 个细分场景，让你在做营销决策和落地时随时调用对应专家，省去拼凑工具和反复试错的功夫。",
+      "translated_at": "2026-06-05T16:53:38.493Z"
     },
     "bundle:wshobson-agents": {
-      "hash": "0601a18fbd32be1b",
-      "summary_zh": "专为AI开发助手打造的工程最佳实践合集，把架构设计、代码审查与研发流程沉淀为标准模板，让AI或开发者开箱即用，轻松写出规范的高质量代码。",
-      "translated_at": "2026-05-20T00:56:21.103Z"
+      "hash": "48ec2e4eb47523cb",
+      "summary_zh": "一套覆盖后端架构、API 设计、构建优化、认证授权、代码审查到 CI/CD 的工程实践技能合集，帮开发者在日常项目里直接套用业界成熟模式，少踩坑、快速落地高质量的生产级代码。",
+      "translated_at": "2026-06-05T16:53:35.577Z"
     },
     "bundle:composiohq-composio": {
       "hash": "5ef067f751f196c1",
@@ -9708,9 +9708,9 @@
       "translated_at": "2026-05-20T00:56:56.316Z"
     },
     "bundle:vercel-labs-agent-skills": {
-      "hash": "d15da6111ae358d0",
-      "summary_zh": "这套技能包专为 AI 代理打造，提供 Vercel 生态从编码规范、UI 审查到部署优化的全流程指导，让 AI 也能按业界最佳实践，高效搞定高质量 Web 应用的开发与上线。",
-      "translated_at": "2026-05-20T00:57:16.351Z"
+      "hash": "834a40a8c43be7c5",
+      "summary_zh": "Vercel 官方出品的一套开发助手合集，覆盖从 React/Next.js 编码规范、性能优化、动画实现，到部署上线、成本调优，再到 UI 与文档审查的全流程，帮你按 Vercel 工程团队的最佳实践把项目又快又稳地交付出去。",
+      "translated_at": "2026-06-05T16:53:38.210Z"
     },
     "bundle:openai-openai-agents-python": {
       "hash": "d79cfe7bfbafd865",
@@ -9728,9 +9728,9 @@
       "translated_at": "2026-05-20T00:57:40.515Z"
     },
     "bundle:slopus-happy": {
-      "hash": "e86fbaf9e7f5f158",
-      "summary_zh": "这套合集为AI代理提供开源项目全生命周期支持，覆盖架构设计、自动化测试、日常维护到发布与监控，让AI能像全栈工程师一样闭环搞定开发与运维。",
-      "translated_at": "2026-05-20T00:58:17.877Z"
+      "hash": "c900271776e853b1",
+      "summary_zh": "这套合集面向 Happy 项目维护者，把日常开发、发布、运维、社区维护和自动化测试串成一条流水线，让团队能在浏览器测试、终端调试、指标监控、版本发布到 issue 管理之间无缝切换，提升整体工程效率。",
+      "translated_at": "2026-06-05T16:53:41.373Z"
     },
     "bundle:heygen-com-hyperframes": {
       "hash": "92f84c8a622432d2",
@@ -9738,14 +9738,14 @@
       "translated_at": "2026-05-20T00:58:31.901Z"
     },
     "bundle:muratcankoylan-agent-skills-for-context-engineering": {
-      "hash": "d81352430b967acd",
-      "summary_zh": "专为AI智能体打造的上下文工程技能包，专治“记不住、理不清、费Token”的毛病。它整合上下文优化、记忆诊断、微调评估等能力，全方位解决信息过载，提升智能体理解与推理表现。",
-      "translated_at": "2026-05-20T00:58:49.273Z"
+      "hash": "6fc6166cd3b6ace6",
+      "summary_zh": "这套技能合集面向智能体开发者，专门解决「上下文工程」难题——从基础概念到压缩、优化、退化诊断，再到多智能体协作、评估和数据管道，帮你系统化地设计和调优 LLM 长程任务的上下文处理流程。",
+      "translated_at": "2026-06-05T16:53:49.779Z"
     },
     "bundle:alirezarezvani-claude-skills": {
-      "hash": "fb27d90ddbc839ac",
-      "summary_zh": "这套为Claude定制的全能技能包，覆盖产品研发、代码审查、营销增长及多智能体协作等场景，把大模型武装成跨领域专家团队，一站式搞定从需求落地到业务优化的全流程自动化。",
-      "translated_at": "2026-05-20T00:58:52.936Z"
+      "hash": "0f7f278c7443e9f0",
+      "summary_zh": "一套覆盖产品、营销、工程、合规等环节的 Claude 技能合集，把无障碍审计、A/B 实验、广告创意、多智能体协作等专业角色打包成可直接调用的助手，帮团队按场景拼装出端到端的 AI 工作流。",
+      "translated_at": "2026-06-05T16:53:46.227Z"
     },
     "bundle:lum1104-understand-anything": {
       "hash": "f4ba93af1c1184f2",
@@ -9753,14 +9753,14 @@
       "translated_at": "2026-05-20T00:59:03.386Z"
     },
     "bundle:mksglu-claude-context-mode": {
-      "hash": "c708667985ada289",
-      "summary_zh": "解决 Claude 处理大输出时 token 浪费的痛点，把上下文执行、效果监控、数据洞察与系统维护融为一体，帮你全方位打理对话上下文，大幅提升交互效率并降低成本。",
-      "translated_at": "2026-05-20T00:59:29.563Z"
+      "hash": "62d2d9983e30ddd3",
+      "summary_zh": "这套合集围绕 context-mode 打造一站式工作流，帮你索引本地代码、检索知识库、监控上下文消耗，并顺手处理诊断、升级和项目运营，让 Claude 在处理大体量内容时更省 token、更高效。",
+      "translated_at": "2026-06-05T16:53:48.716Z"
     },
     "bundle:ryoppippi-ccusage": {
-      "hash": "ca3dc796a0bf4488",
-      "summary_zh": "专为ccusage跨语言CLI开发打造，覆盖Rust与TS编码、性能调优、测试及文档全流程，组合起来提供一站式工程化支持，让多语言项目开发与维护更高效省心。",
-      "translated_at": "2026-05-20T16:12:25.535Z"
+      "hash": "a812647d214de554",
+      "summary_zh": "这套合集面向 ccusage 项目的日常开发与维护，覆盖 Rust 与 TypeScript 双实现、文档站点、测试快照、性能剖析及 Bun 运行时支持，帮助贡献者在统一工作流里搞定代码改动、文档更新和性能调优。",
+      "translated_at": "2026-06-05T16:53:51.525Z"
     },
     "bundle:imbad0202-academic-research-skills": {
       "hash": "66de2cf9483163b4",
@@ -9803,14 +9803,14 @@
       "translated_at": "2026-05-20T01:01:04.792Z"
     },
     "bundle:agricidaniel-claude-seo": {
-      "hash": "5c7a150cfb9b11a4",
-      "summary_zh": "专为网站搜索排名打造的一站式AI工具集，覆盖全站体检、内容规划、竞对分析到排名监控全流程。组合起来能全方位诊断并自动优化SEO，帮你彻底告别繁琐的人工分析。",
-      "translated_at": "2026-05-20T01:01:18.677Z"
+      "hash": "f0da292035458e15",
+      "summary_zh": "这套合集提供一站式SEO分析、审计和优化工具，覆盖网站检测、内容策略、竞争研究和实时数据，助你全面提升搜索排名。",
+      "translated_at": "2026-06-05T16:54:03.744Z"
     },
     "bundle:ethereum-ethereum-org-website": {
-      "hash": "b53c60c25209c606",
-      "summary_zh": "这套合集是专为以太坊官网打造的全栈开发与质保工具集，从底层数据到界面构建，再到视觉测试与性能优化全面覆盖，确保网站体验和性能高度一致，帮开发者高效交付高质量页面。",
-      "translated_at": "2026-05-20T01:01:25.710Z"
+      "hash": "6fbdbac1961302c9",
+      "summary_zh": "这套合集面向 ethereum.org 网站的日常开发与维护，覆盖数据层规范、设计系统、多语言翻译流程与审校、整页视觉回归测试以及性能优化，让贡献者在改动页面或功能时能一站式把控质量、风格与本地化一致性。",
+      "translated_at": "2026-06-05T16:54:10.222Z"
     },
     "bundle:op7418-codepilot": {
       "hash": "ff1f3fbc6677642a",
@@ -9818,14 +9818,14 @@
       "translated_at": "2026-05-20T01:01:31.181Z"
     },
     "bundle:backnotprop-plannotator": {
-      "hash": "58865772d1e019f3",
-      "summary_zh": "这套合集解决项目从规划到交付的全流程问题。它能帮你把想法变成可执行目标，用可视化和标注辅助设计，同时搞定代码审查、依赖安全校验和自动化发布，实现研发闭环。",
-      "translated_at": "2026-05-20T01:01:54.765Z"
+      "hash": "d7feef1aabb9efca",
+      "summary_zh": "一套围绕 Plannotator 的计划注释与代码审查工具集，覆盖从目标设定、注释审查到归档分析的完整工作流，提升开发协作效率。",
+      "translated_at": "2026-06-05T16:54:07.046Z"
     },
     "bundle:trailofbits-skills": {
-      "hash": "c00e663b3bb1bbed",
-      "summary_zh": "专攻安全审计与漏洞挖掘的实战技能集，将模糊测试、代码审查与自动化扫描串联，帮研究员一站式构建上下文、高效排查深层隐患。",
-      "translated_at": "2026-05-20T01:02:01.285Z"
+      "hash": "a6801e7298f73766",
+      "summary_zh": "Trail of Bits 出品的安全审计技能合集，把模糊测试、智能合约扫描、代码审查、CI/CD 审计等工作流打包给 AI 助手调用，帮安全研究员和审计员一站式完成漏洞挖掘与代码审查任务。",
+      "translated_at": "2026-06-05T16:54:12.009Z"
     },
     "bundle:czlonkowski-n8n-skills": {
       "hash": "2e5fd50f68ed4c03",
@@ -9838,9 +9838,9 @@
       "translated_at": "2026-05-20T01:02:20.595Z"
     },
     "bundle:agricidaniel-claude-obsidian": {
-      "hash": "d2f3da470f3ac4e8",
-      "summary_zh": "这套合集让Claude成为Obsidian的AI大脑，实现知识库的自动搭建与维护。从自动调研、提炼网页生成笔记，到知识梳理与自检，打通了信息采集到知识沉淀的闭环。",
-      "translated_at": "2026-05-20T01:02:21.680Z"
+      "hash": "e003e67c533ea560",
+      "summary_zh": "这套合集将Claude的自主研究与思维循环与Obsidian的知识管理无缝结合，实现从信息采集、深度思考到结构化存档的完整工作流。",
+      "translated_at": "2026-06-05T16:54:07.125Z"
     },
     "bundle:deanpeters-product-manager-skills": {
       "hash": "3b08ffe3f356c449",
@@ -9868,14 +9868,14 @@
       "translated_at": "2026-05-20T16:11:49.097Z"
     },
     "bundle:earthtojake-text-to-cad": {
-      "hash": "aff0965eab7775ce",
-      "summary_zh": "专攻文本生成CAD与机器人描述，打通从零件建模、可视化审查、仿真配置验证到制造下单的全流程，让机械设计与机器人开发一气呵成。",
-      "translated_at": "2026-05-20T21:21:59.704Z"
+      "hash": "1344639e39a7535e",
+      "summary_zh": "一套把自然语言转成可制造 CAD 的完整工具链，覆盖从建模、隐式/显式几何编辑、机器人语义配置，到可视化预览、切片生成 G-code，再到本地 Bambu 打印或 SendCutSend 在线下单的全流程，让用户一条思路走完从设计到成品。",
+      "translated_at": "2026-06-05T16:54:13.995Z"
     },
     "bundle:nowork-studio-toprank": {
-      "hash": "7ad8c019fcca74db",
-      "summary_zh": "一站式解决数字营销获客难题，把SEO与AI搜索优化、广告投放及内容策划全链路打通，实现从找词、写文到广告转化的流量闭环增长。",
-      "translated_at": "2026-05-20T01:03:55.548Z"
+      "hash": "1c452f1a1df02ee7",
+      "summary_zh": "一套面向数字营销团队的全流程作战工具箱，把 SEO 内容生产、关键词研究、Google/Meta 广告投放与落地页优化串成闭环，让一个人也能像专业增长团队一样做策略、写内容、投广告并持续诊断效果。",
+      "translated_at": "2026-06-05T16:54:20.308Z"
     },
     "bundle:hyf0-vue-skills": {
       "hash": "b8e584acca5db7a5",
@@ -9893,14 +9893,14 @@
       "translated_at": "2026-05-20T01:04:20.309Z"
     },
     "bundle:ericosiu-ai-marketing-skills": {
-      "hash": "e6cefe8f0b33c95f",
-      "summary_zh": "这套开源AI营销工具集专攻获客与增长，打通了从内容生产、主动触达到转化变现的全链路，帮你用AI自动化搞定营销策略与执行，大幅提升引流转化效率。",
-      "translated_at": "2026-05-20T01:04:38.330Z"
+      "hash": "d51b5d32be6cd1f8",
+      "summary_zh": "一套面向市场和增长团队的 AI 技能合集，覆盖内容创作、SEO、外联、销售线索、转化优化到财务分析的全链路，配合使用可把日常营销动作串成可量化、可迭代的增长闭环。",
+      "translated_at": "2026-06-05T16:54:25.003Z"
     },
     "bundle:njbrake-agent-of-empires": {
-      "hash": "3d5afa0b6decc141",
-      "summary_zh": "专治AI编码时代文档与代码脱节的痛点，既能统一管理AI编程会话，又能自动审查并同步更新过时文档，确保项目文档始终与代码库一致。",
-      "translated_at": "2026-05-20T01:04:43.519Z"
+      "hash": "ae266deadb91aaf0",
+      "summary_zh": "一套围绕 AI 编码代理的运维合集，帮你统一启动、监控和管理 Claude Code、Codex 等多种 Agent 会话，并顺手核查项目文档与代码的一致性，适合同时驾驭多个 AI 助手的开发者。",
+      "translated_at": "2026-06-05T16:54:33.506Z"
     },
     "bundle:drcathicks-learning-opportunities": {
       "hash": "1f8eb3e5f39ab70b",
@@ -9923,9 +9923,9 @@
       "translated_at": "2026-05-20T01:05:27.964Z"
     },
     "bundle:expo-skills": {
-      "hash": "5bbe50bb6eee6e4d",
-      "summary_zh": "专为Expo开发者打造的全栈实战工具集，覆盖从UI构建、原生集成、自动化部署到多端上线的完整周期，一站式解决跨平台应用的工程化与落地难题。",
-      "translated_at": "2026-05-20T01:05:38.317Z"
+      "hash": "68e7c7c8da2077c7",
+      "summary_zh": "这套合集面向 Expo/React Native 开发全流程，涵盖原生 UI 搭建、原生模块开发、与现有 iOS/Android 应用集成、API 路由、EAS 构建发布与 OTA 更新、CI/CD 工作流以及线上监控分析，帮你从写代码到上线运营一站式搞定。",
+      "translated_at": "2026-06-05T16:54:34.704Z"
     },
     "bundle:softaworks-agent-toolkit": {
       "hash": "d6cc12c1edf650d1",
@@ -9933,19 +9933,19 @@
       "translated_at": "2026-05-20T01:05:59.206Z"
     },
     "bundle:yvgude-lean-ctx": {
-      "hash": "e5064c9eac328e6e",
-      "summary_zh": "专给AI代理打造上下文运行环境，整合海量工具、多维读取与代码解析能力，帮Agent高效获取并理解复杂项目信息，解决AI因缺乏上下文而执行跑偏的痛点。",
-      "translated_at": "2026-05-20T22:58:26.580Z"
+      "hash": "54415eef90658c39",
+      "summary_zh": "这套合集为 AI 智能体提供轻量的代码上下文运行时，整合文件读取、Shell 操作和 AST 解析能力，让 Agent 在大型代码库中也能精准定位和理解代码，省去手动喂上下文的麻烦。",
+      "translated_at": "2026-06-05T16:55:27.497Z"
     },
     "bundle:kubb-labs-kubb": {
-      "hash": "0191eabed3fa3132",
-      "summary_zh": "专为团队协作打造的工程化规范合集，提供从编码、文档、测试到发版的全流程标准指南，帮你统一开发规范、省去沟通成本，让项目维护更高效省心。",
-      "translated_at": "2026-05-20T01:06:08.785Z"
+      "hash": "e42dfe427ea0a7ac",
+      "summary_zh": "这套合集围绕 Kubb 项目的日常开发协作，把配置编写、代码规范、JSDoc 注释、测试调试、PR 流程到文档润色和变更日志生成串成一条龙，帮贡献者按统一标准高效完成从写代码到发布的全流程。",
+      "translated_at": "2026-06-05T16:54:39.698Z"
     },
     "bundle:aaron-he-zhu-seo-geo-claude-skills": {
-      "hash": "6a283c9ea8a9417f",
-      "summary_zh": "专攻SEO与AI搜索优化的全套工具，组合起来能系统化搞定竞品分析、内容诊断及权威度建设，帮你同时拿下传统搜索排名和AI引用率。",
-      "translated_at": "2026-05-20T01:06:38.044Z"
+      "hash": "29f33ea480891ca7",
+      "summary_zh": "这套合集面向 SEO 和 AI 搜索优化场景，覆盖从竞品分析、内容审计、外链评估到 AI 引用优化与排名监控的完整链路，帮助内容团队系统性提升站点在传统搜索和 ChatGPT、Perplexity 等生成式引擎中的可见度。",
+      "translated_at": "2026-06-05T16:54:38.682Z"
     },
     "bundle:disler-claude-code-hooks-multi-agent-observability": {
       "hash": "8ba3dcccf8b852b9",
@@ -9968,9 +9968,9 @@
       "translated_at": "2026-05-20T01:07:31.307Z"
     },
     "bundle:kenryu42-claude-code-safety-net": {
-      "hash": "e4c068f09488200d",
-      "summary_zh": "专为 Claude Code 打造的安全网，让你能配置并验证自定义规则，有效约束 AI 的代码生成行为，确保开发过程安全合规、不越界。",
-      "translated_at": "2026-05-20T01:07:38.464Z"
+      "hash": "02e10745bca134a6",
+      "summary_zh": "这套合集为 Claude Code 提供安全防护网，帮你在用户、项目或团队层面统一配置规则手册，并支持自定义规则的设置与校验，避免 AI 写代码时踩雷或越界操作。",
+      "translated_at": "2026-06-05T16:54:44.604Z"
     },
     "bundle:callstackincubator-agent-skills": {
       "hash": "cb93a7cc48782e47",
@@ -9998,9 +9998,9 @@
       "translated_at": "2026-05-20T01:08:39.937Z"
     },
     "bundle:actionbook-rust-skills": {
-      "hash": "3242922623cea8c8",
-      "summary_zh": "这套Rust技能合集专为多场景开发打造，打通代码规范与各类垂直业务，提供一站式最佳实践与工作流支持，解决开发与规范脱节的痛点，大幅提升项目交付效率。",
-      "translated_at": "2026-05-20T01:08:43.873Z"
+      "hash": "8ebae25a29226356",
+      "summary_zh": "一套面向 Rust 开发的技能合集，覆盖从代码规范、CLI、云原生到嵌入式、金融、物联网等多种场景，按需调用对应技能，让 AI 助手在不同领域都能给出贴合实践的 Rust 编码建议。",
+      "translated_at": "2026-06-05T16:54:48.138Z"
     },
     "bundle:wondelai-skills": {
       "hash": "df5ca127a55a33a0",
@@ -10018,9 +10018,9 @@
       "translated_at": "2026-05-20T01:09:22.124Z"
     },
     "bundle:asklokesh-claudeskill-loki-mode": {
-      "hash": "0f7abf4d91bfe131",
-      "summary_zh": "这套合集专为AI全自动开发打造，让AI从需求文档一路干到部署。通过关键节点人工审查和提示词优化，确保AI自主跑项目时既高效又不失控。",
-      "translated_at": "2026-05-20T01:09:41.050Z"
+      "hash": "b5a9c6be11e62ed9",
+      "summary_zh": "一套面向自主软件开发的智能体合集，能把需求文档直接驱动到部署上线，过程中按节奏暂停供人工审阅，并通过提示优化提升非推理模型的执行准确度，适合追求极少人工干预的端到端研发流程。",
+      "translated_at": "2026-06-05T16:54:50.062Z"
     },
     "bundle:vercel-labs-next-skills": {
       "hash": "36c7b26c7c77aa8f",
@@ -10063,9 +10063,9 @@
       "translated_at": "2026-05-20T01:11:26.548Z"
     },
     "bundle:alinaqi-claude-bootstrap": {
-      "hash": "fdf4c8045b0012c0",
-      "summary_zh": "围绕Claude的全栈AI开发启动库，集成代理协作、自动测试、云服务与移动端模板，提供标准化流水线，助你用AI快速搭建并自动化从基础设施到业务应用的全流程项目。",
-      "translated_at": "2026-05-20T01:11:36.095Z"
+      "hash": "3e6147aca088478b",
+      "summary_zh": "一套覆盖前后端、移动端、云数据库到 AI 智能体开发的 Claude Code 启动包，把团队协作规范、TDD 流水线和主流技术栈最佳实践打包好，让你新开项目时直接套用，少踩坑、快速上手。",
+      "translated_at": "2026-06-05T16:54:54.632Z"
     },
     "bundle:mhattingpete-claude-skills-marketplace": {
       "hash": "99c9cc1dc239452b",
@@ -10078,9 +10078,9 @@
       "translated_at": "2026-05-20T01:12:04.611Z"
     },
     "bundle:fradser-dotclaude": {
-      "hash": "7adf61c8bb943355",
-      "summary_zh": "为AI编程助手打造的全流程技能包，覆盖从需求构思、规范开发、多智能体协作到Git工作流，让AI像专业开发团队一样高效交付项目。",
-      "translated_at": "2026-05-20T01:12:13.149Z"
+      "hash": "9f8de008d6531714",
+      "summary_zh": "一套面向 AI 编程助手的全流程技能包，涵盖需求脑暴、代码理解、最佳实践、测试驱动开发到提交推送，把日常开发协作环节串成开箱即用的工作流，让 Claude 在真实项目里更像一个训练有素的团队成员。",
+      "translated_at": "2026-06-05T16:54:59.095Z"
     },
     "bundle:sethgammon-citadel": {
       "hash": "b660df9cce8c95f0",
@@ -10113,9 +10113,9 @@
       "translated_at": "2026-05-20T01:13:22.220Z"
     },
     "bundle:avifenesh-agnix": {
-      "hash": "c8e8b59ce7c0e5e4",
-      "summary_zh": "这套工具集专为AI Agent开发打造，帮你一站式搞定配置校验、代码审查、测试与部署，让Agent跑得更规范、代码更安全。",
-      "translated_at": "2026-05-20T01:13:36.601Z"
+      "hash": "2d4c0a4a4751b124",
+      "summary_zh": "这是一套围绕 AI 代理开发与运维的工具合集，覆盖配置校验、代码审查、生产部署等环节，组合起来为你提供从测试到上线的全流程支持。",
+      "translated_at": "2026-06-05T16:55:07.950Z"
     },
     "bundle:bitwize-music-studio-claude-ai-music-skills": {
       "hash": "9e73b1e86b2302dc",
@@ -10123,9 +10123,9 @@
       "translated_at": "2026-05-20T01:14:01.367Z"
     },
     "bundle:product-on-purpose-pm-skills": {
-      "hash": "c7c65a614c3faa19",
-      "summary_zh": "专为产品经理打造的全流程工具箱，覆盖从定义问题、挖掘机会到拆解需求、上线验收的完整链路，帮你高效打通产品从想清楚到做出来的全过程。",
-      "translated_at": "2026-05-20T22:58:08.824Z"
+      "hash": "942fc8cb94145e9c",
+      "summary_zh": "这套产品管理技能合集，覆盖从定义假设到交付验收的全流程，提供即插即用的最佳实践，帮团队系统化完成产品工作。",
+      "translated_at": "2026-06-05T16:55:06.657Z"
     },
     "bundle:charlie85270-dorothy": {
       "hash": "b96805fcfadbc793",
@@ -10148,9 +10148,9 @@
       "translated_at": "2026-05-20T01:14:46.815Z"
     },
     "bundle:resend-resend-skills": {
-      "hash": "96ffac1bd726b25f",
-      "summary_zh": "解决AI与Web开发中的邮件集成难题，提供一站式现代邮件方案。组合起来打通了模板编写、收发、防垃圾配置与AI收件箱，帮你轻松构建稳定可靠的邮件功能。",
-      "translated_at": "2026-05-20T01:15:13.722Z"
+      "hash": "94ce873722610cf8",
+      "summary_zh": "一套面向 Resend 邮件平台的开发者技能合集，覆盖从模板搭建、发信投递到 AI 收件箱处理的全流程，帮你又快又稳地把邮件功能接入产品，避免踩到送达率和反垃圾的坑。",
+      "translated_at": "2026-06-05T16:55:24.664Z"
     },
     "bundle:seifbenayed-claude-code-sdk": {
       "hash": "e4c7db4b376d256c",
@@ -10168,9 +10168,9 @@
       "translated_at": "2026-05-20T01:15:40.304Z"
     },
     "bundle:raintree-technology-claude-starter": {
-      "hash": "16340e68b654c4a3",
-      "summary_zh": "专为Claude开发者打造的全能启动包，帮你深度定制Claude Code与各类扩展，快速打通金融和Web3等专业领域，一站式解决AI编程的集成与提效需求。",
-      "translated_at": "2026-05-20T01:15:56.364Z"
+      "hash": "ef9933ff52cf57f0",
+      "summary_zh": "这套合集把 Claude Code 的开发体验打包成一站式工作台，覆盖从技能、命令、Hook、MCP 配置的搭建，到 Plaid、Aptos、Anthropic API 等常用集成的专家辅助，帮你快速搭出可上手的 Claude 项目脚手架。",
+      "translated_at": "2026-06-05T16:55:29.497Z"
     },
     "bundle:spartan-stratos-spartan-ai-toolkit": {
       "hash": "59825a6a43deaf65",
@@ -13886,6 +13886,671 @@
       "hash": "e480d5958477ae3d",
       "summary_zh": "把项目的 claude-mem 时间线按 ISO 周切分，逐周生成带上下文衔接的叙事章节，适合需要梳理项目历史、做周报回顾或连续时间线故事时使用。",
       "translated_at": "2026-05-21T13:48:55.913Z"
+    },
+    "bundle:donchitos-claude-code-game-studios": {
+      "hash": "2f921ba0942b6546",
+      "summary_zh": "这套合集面向独立游戏工作室，覆盖从概念脑暴、GDD 撰写、美术规范到架构评审、资产审计和 Bug 管理的全流程，把策划、美术、程序、QA 的协作环节串成一条规范化流水线，帮小团队按工作室级标准推进项目。",
+      "translated_at": "2026-06-05T16:53:44.013Z"
+    },
+    "bundle:steipete-codexbar": {
+      "hash": "6e37917de2b52d54",
+      "summary_zh": "面向 CodexBar 这款 macOS 状态栏应用的发布运维合集，覆盖上线前的真实环境 QA 测试与版本发布全流程（签名公证、appcast 更新、Homebrew 同步等），帮助开发者一站式完成验证和分发。",
+      "translated_at": "2026-06-05T16:53:55.435Z"
+    },
+    "bundle:phuryn-pm-skills": {
+      "hash": "ec8d223332291354",
+      "summary_zh": "一套面向产品经理的全流程辅助工具，覆盖从市场分析、用户调研、想法brainstorm到 A/B 实验和 OKR 制定，把日常 PM 工作中常用的分析框架一次性沉淀下来，帮你更快做出有依据的产品决策。",
+      "translated_at": "2026-06-05T16:53:57.781Z"
+    },
+    "bundle:pingdotgg-t3code": {
+      "hash": "3977ac633e343922",
+      "summary_zh": "这套合集面向 T3 风格的 TypeScript 项目开发，从需求澄清、API 文档撰写到示例代码试跑串成一条龙，让设计讨论、JSDoc 维护和片段调试都能在编辑器里顺畅完成。",
+      "translated_at": "2026-06-05T16:53:58.834Z"
+    },
+    "bundle:tw93-waza": {
+      "hash": "105c858f0e21fc2c",
+      "summary_zh": "一套面向开发者全流程的 AI 助理合集，覆盖从查资料、想点子、定方案，到写代码、审代码、查 bug、做设计、润色文案的各个环节，帮你把日常工程和创作任务都交给合适的\"专家\"来处理。",
+      "translated_at": "2026-06-05T16:54:14.913Z"
+    },
+    "bundle:basicmachines-co-basic-memory": {
+      "hash": "964a70e2304b75cc",
+      "summary_zh": "把 Codex 的开发过程沉淀进 Basic Memory 知识库的一整套工作流，涵盖任务定向、决策记录、检查点保存、笔记编辑和对抗式评审，让 AI 编程助手能跨会话延续上下文、积累团队知识。",
+      "translated_at": "2026-06-05T16:54:16.910Z"
+    },
+    "bundle:nowork-studio-notfair": {
+      "hash": "8c2b2ab778c91768",
+      "summary_zh": "一站式数字营销与SEO工作流套件，把广告投放（Google/Meta）、内容策划写作、关键词研究、AI搜索优化和网站体检串成闭环，帮营销团队从数据洞察直达落地执行。",
+      "translated_at": "2026-06-05T16:54:22.330Z"
+    },
+    "bundle:thananon-9arm-skills": {
+      "hash": "f8286abe17e96c2c",
+      "summary_zh": "这套合集面向工程师的日常硬核工作流，从排查 bug、复盘事故，到把技术细节翻译给管理层，再到以局外人视角审视方案，帮你把调试、复盘、汇报、评审这几件容易踩坑的事都做得更扎实。",
+      "translated_at": "2026-06-05T16:54:27.347Z"
+    },
+    "bundle:jeremylongshore-claude-code-plugins-plus-skills": {
+      "hash": "b9d34f868439454e",
+      "summary_zh": "一套把 Claude Code 打造成完整 AI 工程团队的技能合集，覆盖从需求梳理、架构决策到项目接管、状态汇报的全流程，让你像调度一家 AI 代理公司一样推进开发工作。",
+      "translated_at": "2026-06-05T16:54:30.345Z"
+    },
+    "bundle:conorbronsdon-avoid-ai-writing": {
+      "hash": "91e4baa2ee96ec86",
+      "summary_zh": "这套合集专门用来揪出文字里的\"AI 味\"，帮你审查并改写内容，去除那些一眼就能看出是 AI 生成的套路化表达，让稿件读起来更像真人手写。",
+      "translated_at": "2026-06-05T16:54:43.718Z"
+    },
+    "bundle:zeroz-lab-cc-design": {
+      "hash": "7fb02e36b430ae18",
+      "summary_zh": "这套合集专注于高保真 HTML 设计稿和原型制作，适合需要快速把创意落地成可视化网页界面的场景，省去从零搭建的麻烦。",
+      "translated_at": "2026-06-05T16:54:52.619Z"
+    },
+    "bundle:swarmclawai-swarmclaw": {
+      "hash": "5c8acffb3389fb07",
+      "summary_zh": "一套面向 SwarmClaw 智能体的能力扩展包，把编码委派、GitHub、Google Workspace、图像与 PDF 生成、内容摘要等常用外部工具打包成可调用技能，让 AI 代理在日常任务中能顺手调用各种 CLI，省去自己拼装集成的麻烦。",
+      "translated_at": "2026-06-05T16:55:00.038Z"
+    },
+    "bundle:borghei-claude-skills": {
+      "hash": "0caec46a4dd87904",
+      "summary_zh": "一套面向企业管理层的 AI 顾问合集，覆盖 CEO、CFO、CAO 等高管视角和董事会、数据分析、变革管理等场景，帮你在战略决策、组织治理和经营分析时一站式获取多角色专业建议。",
+      "translated_at": "2026-06-05T16:55:11.058Z"
+    },
+    "bundle:sepinetam-stata-mcp": {
+      "hash": "222bd9813da81cfc",
+      "summary_zh": "这套合集面向 Stata 用户和开发者，一边能直接在 MCP 环境里跑 do 文件、调用 ado 包，一边帮你把功能想法快速整理成 RFC 和实现文档，让科研脚本开发和协作落地都更顺手。",
+      "translated_at": "2026-06-05T16:55:12.542Z"
+    },
+    "bundle:human-avatar-skills-for-humanity": {
+      "hash": "49f9e30f3c175344",
+      "summary_zh": "一套面向思维与表达训练的技能合集，把美感判断、类比推理等人文化的思考方式拆成可调用的小工具，帮你在写作、设计或决策时检查一致性、找到更简洁的方案、借鉴跨领域思路，让 AI 协作更贴近人类的判断力。",
+      "translated_at": "2026-06-05T16:55:17.811Z"
+    },
+    "bundle:sergebulaev-linkedin-skills": {
+      "hash": "f6dddba822abea79",
+      "summary_zh": "一站式 LinkedIn 运营助手合集，覆盖从内容策划、爆款撰写、评论互动到个人主页优化和员工社媒激活的全流程，帮助营销人员和个人品牌打造者按 2026 算法规则系统化产出高表现内容。",
+      "translated_at": "2026-06-05T16:55:17.875Z"
+    },
+    "bundle:openaccountants-openaccountants": {
+      "hash": "6355385b03f16d15",
+      "summary_zh": "这套合集为美国小微企业和会计师打造，帮你把银行流水按 Schedule C 税表自动分类，并通过标准化的清晰/模糊/拒绝三态流程，让税务等强监管场景的判定更可靠可追溯。",
+      "translated_at": "2026-06-05T16:55:23.506Z"
+    },
+    "bundle:redis-agent-skills": {
+      "hash": "685aaa70ec3a7528",
+      "summary_zh": "这套 Redis 官方技能合集覆盖建模、集群、连接、性能、可观测、安全到向量检索与语义缓存等方向，帮你在搭建或优化 Redis 应用时一站式获取最佳实践，少踩坑、用得更顺手。",
+      "translated_at": "2026-06-05T16:55:31.020Z"
+    },
+    "bundle:mohamedabdallah-14-unslop": {
+      "hash": "c2a2cbe30c117000",
+      "summary_zh": "这套工具专门用来\"去 AI 味\"，把提交信息、代码评审、记忆文件、推理过程等各种 AI 生成内容改写得更像真人手写，去掉套话和营销腔，让团队协作产出读起来自然可信。",
+      "translated_at": "2026-06-05T16:55:32.478Z"
+    },
+    "preset:getagentseal-codeburn": {
+      "hash": "51220b356fe669fd",
+      "summary_zh": "一款本地运行的终端仪表盘，直接读取 Claude Code、Codex、Cursor 等 25 款 AI 编程工具的会话数据，按任务、模型、项目维度拆解 token 消耗和花费，方便摸清预算都烧在哪儿。",
+      "translated_at": "2026-06-05T16:55:37.818Z"
+    },
+    "preset:phuryn-claude-usage": {
+      "hash": "1b145ba90e5d73b8",
+      "summary_zh": "在本地解析 Claude Code 留下的使用日志，生成 token 消耗、费用和会话历史的可视化面板，适合想看清自己用量明细的 API、Pro、Max 用户，免去额外依赖，开箱即用。",
+      "translated_at": "2026-06-05T16:55:49.074Z"
+    },
+    "preset:webdevtodayjason-sub-agents": {
+      "hash": "44cade46576e9583",
+      "summary_zh": "一个用来给 Claude Code 批量安装和管理子代理、斜杠命令与钩子的小工具，曾用于弥补官方早期缺失的能力。项目已于 2026 年 6 月归档，作者建议直接使用 Claude Code 现已内置的 Subagents、Skills、Hooks 等原生功能，仅作历史参考。",
+      "translated_at": "2026-06-05T16:55:54.597Z"
+    },
+    "skill:agricidaniel-claude-obsidian-think": {
+      "hash": "e3145901d8b37242",
+      "summary_zh": "用一套十步思维循环引导 Claude 深入剖析复杂问题，从观察、倾听、第一性原理到横向联想和迭代优化，适合需要系统化推理、避免草率结论的深度思考场景。",
+      "translated_at": "2026-06-05T16:56:38.031Z"
+    },
+    "skill:agricidaniel-claude-obsidian-wiki-cli": {
+      "hash": "f03b3fb5a7e19abd",
+      "summary_zh": "让 Claude 通过 Obsidian 自带命令行直接读写、搜索和修改库里的笔记，省去搭建 MCP 服务、REST 插件或处理 TLS 的麻烦，命令行不可用时还会自动退回到文件系统操作。",
+      "translated_at": "2026-06-05T16:56:42.006Z"
+    },
+    "skill:agricidaniel-claude-obsidian-wiki-mode": {
+      "hash": "49745c5867edffda",
+      "summary_zh": "给 Obsidian 知识库指定一套组织方法论（LYT、PARA、Zettelkasten 等），让 Claude 在抓取、保存或自动调研时按你习惯的方式归档新笔记，没设置就走通用模式。",
+      "translated_at": "2026-06-05T16:56:42.543Z"
+    },
+    "skill:agricidaniel-claude-obsidian-wiki-retrieve": {
+      "hash": "107e398a3873da4f",
+      "summary_zh": "一个面向知识库的混合检索组件，用上下文前缀加 BM25 与余弦重排替代原本的静态读取顺序，借鉴 Anthropic 的上下文检索方案，大幅降低查不到内容的概率，适合需要在大量笔记或文档块中精准搜索的场景。",
+      "translated_at": "2026-06-05T16:56:43.474Z"
+    },
+    "skill:agricidaniel-claude-seo-seo-ahrefs": {
+      "hash": "cf9cd96cf91053fd",
+      "summary_zh": "调用官方 Ahrefs MCP 接口获取外链、推荐域名、自然关键词等数据，方便做 SEO 分析；可与 seo-backlinks 搭配，从多个数据源交叉验证结果。",
+      "translated_at": "2026-06-05T16:56:46.182Z"
+    },
+    "skill:agricidaniel-claude-seo-seo-bing": {
+      "hash": "293ac0c04ee0a89f",
+      "summary_zh": "把网站快速推送到必应索引并查询链接数据的扩展，专为提升必应可见度而设计，尤其适合希望被微软 Copilot 引用的站点。",
+      "translated_at": "2026-06-05T16:56:46.528Z"
+    },
+    "skill:agricidaniel-claude-seo-seo-profound": {
+      "hash": "7857c01806553dba",
+      "summary_zh": "一款浏览器扩展，用来追踪品牌在 ChatGPT、Perplexity 等大模型回答中的被引用频次变化，配合 SEranking 使用可全面掌握 AI 搜索时代的品牌曝光情况。",
+      "translated_at": "2026-06-05T16:56:50.131Z"
+    },
+    "skill:agricidaniel-claude-seo-seo-unlighthouse": {
+      "hash": "6f37273ecfb49384",
+      "summary_zh": "基于开源 Unlighthouse 的批量网页性能检测工具，可在本地一次性扫描站内所有页面，免去逐个跑 PageSpeed 的麻烦，也不消耗 API 配额，适合做全站 SEO 体检。",
+      "translated_at": "2026-06-05T16:56:50.858Z"
+    },
+    "skill:agricidaniel-claude-seo-seo-seranking": {
+      "hash": "e8247e7b2c17ee1c",
+      "summary_zh": "一款追踪品牌在 ChatGPT、Gemini、Perplexity 等五大 AI 平台曝光份额的扩展工具，一次查询即可掌握 AI 时代的声量分布，适合做 AI 搜索可见度分析和竞品监测。",
+      "translated_at": "2026-06-05T16:56:51.295Z"
+    },
+    "skill:alinaqi-claude-bootstrap-council-review": {
+      "hash": "95078cf9bdc9a29c",
+      "summary_zh": "让多个大模型组成评审团，在执行前自动校验方案、架构变更和 PR，帮你提前发现问题，降低踩坑风险。",
+      "translated_at": "2026-06-05T16:56:54.148Z"
+    },
+    "skill:alirezarezvani-claude-skills-aims-audit": {
+      "hash": "85d60c80479b2fca",
+      "summary_zh": "一套针对 ISO/IEC 42001 AI 管理体系的六问式内部审计工具，适合认证一阶段评审前、年度内审周期开始时，或将新 AI 系统纳入现有体系时用来查漏补缺。",
+      "translated_at": "2026-06-05T16:56:56.076Z"
+    },
+    "skill:alirezarezvani-claude-skills-ai-act-readiness": {
+      "hash": "0001277567761f1a",
+      "summary_zh": "通过六个关键问题快速排查 AI 系统是否符合欧盟 AI 法案要求，适合在系统立项、上线欧盟市场前或年度合规复审时使用，帮你提前对齐 2025 到 2027 年陆续生效的义务。",
+      "translated_at": "2026-06-05T16:56:56.261Z"
+    },
+    "skill:alirezarezvani-claude-skills-andreessen": {
+      "hash": "5daa9b3802430681",
+      "summary_zh": "用安德森式的犀利视角帮你拷问创业点子、产品方向或职业选择，重点判断市场够不够大、有没有达到产品市场契合，逼你别空想、赶紧动手，适合需要被泼冷水和市场化思考的决策时刻。",
+      "translated_at": "2026-06-05T16:57:01.129Z"
+    },
+    "skill:backnotprop-plannotator-plannotator-archive": {
+      "hash": "4f050c33d1950f0e",
+      "summary_zh": "在浏览器中以只读方式查看 Plannotator 保存的方案决策记录，方便团队回顾和查阅历史规划过程。",
+      "translated_at": "2026-06-05T16:57:04.845Z"
+    },
+    "skill:basicmachines-co-basic-memory-adversarial-review": {
+      "hash": "854fc3cb8da49d4d",
+      "summary_zh": "让 Claude 和 GPT 两个模型分别评审当前分支的代码改动，再互相反驳对方的意见，最后按置信度汇总剩下的问题，适合合并前想要更可靠的交叉评审结论。",
+      "translated_at": "2026-06-05T16:57:07.007Z"
+    },
+    "skill:basicmachines-co-basic-memory-bm-checkpoint": {
+      "hash": "71dc82f9e7398b4e",
+      "summary_zh": "用于在 Basic Memory 中保存 Codex 的工作检查点，记录改动文件、验证情况、决策、阻塞点和下一步动作，方便随时回溯进度、无缝续接任务。",
+      "translated_at": "2026-06-05T16:57:07.331Z"
+    },
+    "skill:basicmachines-co-basic-memory-bm-decide": {
+      "hash": "9bffd660cb8a2a5d",
+      "summary_zh": "用于在 Basic Memory 中记录工程决策的工具，把决策理由、备选方案、影响后果和涉及的相关工作完整存档，方便团队日后追溯和复盘技术选型。",
+      "translated_at": "2026-06-05T16:57:09.153Z"
+    },
+    "skill:basicmachines-co-basic-memory-bm-remember": {
+      "hash": "0940531ef6656d21",
+      "summary_zh": "用于在 Codex 里把零碎的事实、提醒或用户偏好快速存进 Basic Memory，省去走完整决策或检查点流程的麻烦，适合随手记一笔的场景。",
+      "translated_at": "2026-06-05T16:57:11.391Z"
+    },
+    "skill:basicmachines-co-basic-memory-bm-orient": {
+      "hash": "1e578e25da176ec8",
+      "summary_zh": "在动手改动仓库前，先快速梳理当前任务、关键决策、近期进度和代码规范，帮你心里有数再开工，避免盲目下手。",
+      "translated_at": "2026-06-05T16:57:12.398Z"
+    },
+    "skill:basicmachines-co-basic-memory-bm-share": {
+      "hash": "7078447439e491cf",
+      "summary_zh": "一个 Codex 命令，把个人 Basic Memory 里的笔记分享到团队共享项目中，会标注来源并在执行前明确确认，方便个人知识沉淀后再有选择地同步给团队。",
+      "translated_at": "2026-06-05T16:57:15.720Z"
+    },
+    "skill:basicmachines-co-basic-memory-bm-status": {
+      "hash": "29ed077a9da8c7d5",
+      "summary_zh": "一键查看 Codex 的基础记忆配置、连通状态、钩子设置以及最近的检查点和进行中的任务，方便排查环境问题或快速了解当前工作进展。",
+      "translated_at": "2026-06-05T16:57:16.713Z"
+    },
+    "skill:basicmachines-co-basic-memory-bm-setup": {
+      "hash": "f63201cdd9c61ef6",
+      "summary_zh": "在当前仓库快速接入 Basic Memory，自动完成项目映射、初始化结构并生成 Codex 所需的配置文件，省去手动搭建知识库的繁琐步骤。",
+      "translated_at": "2026-06-05T16:57:16.953Z"
+    },
+    "skill:basicmachines-co-basic-memory-continue-conversation": {
+      "hash": "a7a5c34fca31a15a",
+      "summary_zh": "通过记忆图谱和近期活动快速还原上下文，让你无缝接续之前未完成的工作，适合需要长期跟进多线任务的场景。",
+      "translated_at": "2026-06-05T16:57:19.707Z"
+    },
+    "skill:basicmachines-co-basic-memory-knowledge-capture": {
+      "hash": "a2ad4f7b35ba96a3",
+      "summary_zh": "把 Claude Code 会话里有价值的上下文整理成一篇结构完整的 Basic Memory 笔记，同一会话再次调用时会直接重写而非追加，方便沉淀对话成果。",
+      "translated_at": "2026-06-05T16:57:21.512Z"
+    },
+    "skill:basicmachines-co-basic-memory-edit-note": {
+      "hash": "767ea737463ff125",
+      "summary_zh": "通过对话方式查看和修改个人笔记，让 AI 助手能够直接编辑本地或云端的知识库内容，适合想用自然语言整理笔记的场景。",
+      "translated_at": "2026-06-05T16:57:23.421Z"
+    },
+    "skill:basicmachines-co-basic-memory-knowledge-organize": {
+      "hash": "f6c55fb23005c5d6",
+      "summary_zh": "用于整理和维护个人知识图谱的小助手，能找出孤立笔记、识别重复内容、推荐关联关系，帮你把零散记录梳理成结构清晰的知识网络。",
+      "translated_at": "2026-06-05T16:57:23.894Z"
+    },
+    "skill:basicmachines-co-basic-memory-memory-capture": {
+      "hash": "d26bbfcba898a692",
+      "summary_zh": "把当前对话或工作线程的核心进展浓缩成一篇连贯的笔记，而不是流水账式追加；再次记录时会原地覆盖更新，避免重复堆积，适合在讨论中或结束时沉淀关键决策和洞见。",
+      "translated_at": "2026-06-05T16:57:25.758Z"
+    },
+    "skill:basicmachines-co-basic-memory-memory-continue": {
+      "hash": "5b1c5f33ed220220",
+      "summary_zh": "在新对话开始或用户说「接着上次」「回到刚才」时，自动从知识图谱里捞回相关笔记和最近动态，帮你无缝衔接之前的工作，不用重新交代背景。",
+      "translated_at": "2026-06-05T16:57:29.057Z"
+    },
+    "skill:basicmachines-co-basic-memory-memory-ci-capture": {
+      "hash": "09188ed7eaec6fc8",
+      "summary_zh": "在 CI 流程中将 GitHub 的提交、PR 等交付信息浓缩成结构化的项目进展更新，输出标准 JSON 供后续发布环节使用，适合需要自动汇总团队动态的场景。",
+      "translated_at": "2026-06-05T16:57:29.985Z"
+    },
+    "skill:basicmachines-co-basic-memory-memory-curate": {
+      "hash": "57dfddf6e078e834",
+      "summary_zh": "用来整理知识库的小工具，能找出孤立笔记、推荐关联和分类标签、合并重复内容、生成中枢索引页，适合笔记越积越多、结构开始混乱时拿来梳理脉络。",
+      "translated_at": "2026-06-05T16:57:31.587Z"
+    },
+    "skill:basicmachines-co-basic-memory-memory-defrag": {
+      "hash": "dfd0d16e90d2bf9b",
+      "summary_zh": "用来整理 AI 智能体的记忆文件，把过大的拆开、重复的合并、过期的清掉，并重新梳理目录结构。适合记忆库变得臃肿杂乱时使用，可以定期跑也能手动触发。",
+      "translated_at": "2026-06-05T16:57:33.295Z"
+    },
+    "skill:basicmachines-co-basic-memory-memory-ingest": {
+      "hash": "c81ac668b0da64df",
+      "summary_zh": "把会议记录、聊天日志、文档片段等零散文本整理成结构化的知识条目，自动识别实体、匹配已有内容、生成笔记和关联，还能顺手抓出待办事项。",
+      "translated_at": "2026-06-05T16:57:34.390Z"
+    },
+    "skill:basicmachines-co-basic-memory-memory-lifecycle": {
+      "hash": "bb06eae2d009c27b",
+      "summary_zh": "用于在 Basic Memory 中管理笔记的状态流转，自动归档已完成内容、在状态文件夹间移动笔记并更新 frontmatter，适合需要按文件夹组织任务进度的场景。",
+      "translated_at": "2026-06-05T16:57:35.690Z"
+    },
+    "skill:basicmachines-co-basic-memory-memory-literary-analysis": {
+      "hash": "a01e388278cad0d5",
+      "summary_zh": "把一整部文学作品拆解成结构化的知识图谱，按章节梳理人物、情节与关联，并支持校验和可视化，适合做深度文本研究或读书笔记整理。",
+      "translated_at": "2026-06-05T16:57:38.808Z"
+    },
+    "skill:basicmachines-co-basic-memory-memory-notes": {
+      "hash": "46dee2ca4958ae72",
+      "summary_zh": "教你如何写出结构清晰的 Basic Memory 笔记，涵盖元信息、语义化观察、Wiki 链接关系等写法，适合在新建或优化笔记、搭建知识图谱时参考。",
+      "translated_at": "2026-06-05T16:57:41.530Z"
+    },
+    "skill:basicmachines-co-basic-memory-memory-metadata-search": {
+      "hash": "e2fff3c234ae65bd",
+      "summary_zh": "用结构化条件检索 Basic Memory 笔记，支持按 frontmatter 中的状态、优先级、置信度等自定义字段做等值、范围、数组和嵌套过滤，比全文搜索更精准定位想要的笔记。",
+      "translated_at": "2026-06-05T16:57:42.737Z"
+    },
+    "skill:basicmachines-co-basic-memory-memory-reflect": {
+      "hash": "6327920600239670",
+      "summary_zh": "在空闲或定时触发时回顾最近的对话与日记，自动提炼要点并沉淀为长期记忆，让 AI 的记忆质量随时间不断变好，适合需要持续学习的智能体场景。",
+      "translated_at": "2026-06-05T16:57:43.993Z"
+    },
+    "skill:basicmachines-co-basic-memory-memory-research": {
+      "hash": "59cd41ff1df99394",
+      "summary_zh": "通过网络搜索调研公司、人物、技术等外部话题，并把结果整理成结构化的知识条目，适合需要快速收集资料并沉淀成笔记的场景。",
+      "translated_at": "2026-06-05T16:57:45.507Z"
+    },
+    "skill:basicmachines-co-basic-memory-memory-schema": {
+      "hash": "1d8a61b5317f49d1",
+      "summary_zh": "为结构化笔记提供模式管理工具，能自动发现未定义模式的笔记、推断并生成模式、校验内容并检测偏移，适合用任务、人物、会议等类型维护知识图谱一致性的场景。",
+      "translated_at": "2026-06-05T16:57:46.783Z"
+    },
+    "skill:basicmachines-co-basic-memory-memory-tasks": {
+      "hash": "0e3f0f1eb1f0b77f",
+      "summary_zh": "基于 Basic Memory 模式的任务管理工具，把任务存成结构化笔记，即便对话上下文被压缩也能继续追踪和恢复，适合需要长期跨会话管理待办的场景。",
+      "translated_at": "2026-06-05T16:57:49.097Z"
+    },
+    "skill:basicmachines-co-basic-memory-placement": {
+      "hash": "cc7f62afd1604b70",
+      "summary_zh": "在 Basic Memory 项目里自动判断新笔记该放哪个文件夹，按统一配置文件里的约定来组织目录，写入笔记时由钩子自动触发，省去手动归类的麻烦。",
+      "translated_at": "2026-06-05T16:57:49.930Z"
+    },
+    "skill:basicmachines-co-basic-memory-remember": {
+      "hash": "216c5de773e9de19",
+      "summary_zh": "用一句话把灵感、事实或备忘快速存进 Basic Memory，适合日常顺手记下的小事，不用来写完整的会议纪要或决策记录。",
+      "translated_at": "2026-06-05T16:57:50.779Z"
+    },
+    "skill:basicmachines-co-basic-memory-research": {
+      "hash": "a5d34fd03d8f1b3c",
+      "summary_zh": "一款主题研究助手，能系统调研某个概念、收集背景资料，并把整理好的结构化报告保存到 Basic Memory，适合需要深度学习或写调研笔记的场景。",
+      "translated_at": "2026-06-05T16:57:53.706Z"
+    },
+    "skill:basicmachines-co-basic-memory-share": {
+      "hash": "1b09d215081bf122",
+      "summary_zh": "把个人笔记正式发布到团队共享空间，并附上署名信息。适合需要主动公开一项决策或文档、让团队成员都能看到的场景，避免自动同步带来的误传。",
+      "translated_at": "2026-06-05T16:57:54.940Z"
+    },
+    "skill:basicmachines-co-basic-memory-setup": {
+      "hash": "19e4a1384beb5192",
+      "summary_zh": "通过一段引导式问答，帮你完成 Basic Memory 插件的初始化配置，包括项目映射、笔记模板和归档规则，让后续记录和归类更顺手，适合首次启用或重新配置插件时使用。",
+      "translated_at": "2026-06-05T16:57:55.038Z"
+    },
+    "skill:basicmachines-co-basic-memory-skill": {
+      "hash": "dfc46d1041a47519",
+      "summary_zh": "用知识图谱为 AI 助手提供跨会话的长期记忆，把会议、决策和想法沉淀成可检索的笔记，回答前先查历史，适合需要持续积累上下文的个人或团队。",
+      "translated_at": "2026-06-05T16:57:58.519Z"
+    },
+    "skill:basicmachines-co-basic-memory-status": {
+      "hash": "da1d8401e4e00c4c",
+      "summary_zh": "用来查看 Basic Memory 插件在当前项目中的运行状况，包括激活项目、捕获目录、输出格式、最近的会话存档以及服务是否可连，方便随时排查插件状态。",
+      "translated_at": "2026-06-05T16:58:00.464Z"
+    },
+    "skill:borghei-claude-skills-analytics-engineer": {
+      "hash": "27c1eef3bde2cf87",
+      "summary_zh": "一款面向分析工程的智能助手，覆盖 dbt 模型开发、星型模式设计、SQL 编写、数据测试、指标语义层定义和数仓查询优化，适合需要搭建数据建模与转换流程的团队使用。",
+      "translated_at": "2026-06-05T16:58:00.940Z"
+    },
+    "skill:borghei-claude-skills-board-meeting": {
+      "hash": "f3cb8284b58ea72d",
+      "summary_zh": "用多智能体模拟董事会议事流程，让各路高管先独立发言再批判、综合，避免群体思维，适合做重大战略决策、跨部门分歧仲裁或评估不可逆选择时使用。",
+      "translated_at": "2026-06-05T16:58:05.897Z"
+    },
+    "skill:borghei-claude-skills-business-intelligence": {
+      "hash": "642953d10b57ce76",
+      "summary_zh": "专注商业智能领域的专家助手，帮你设计仪表盘、搭建 KPI 体系、自动化定时报表，并把数据讲成管理层听得懂的故事，适合做 BI 方案或优化报表性能时使用。",
+      "translated_at": "2026-06-05T16:58:06.036Z"
+    },
+    "skill:borghei-claude-skills-cfo-advisor": {
+      "hash": "20e6b19003e815a9",
+      "summary_zh": "面向 CFO 的财务管理顾问，覆盖财务建模、融资尽调、投资人报告、单位经济测算、现金流规划和月末结账等场景，帮你理清财务决策思路。",
+      "translated_at": "2026-06-05T16:58:10.580Z"
+    },
+    "skill:borghei-claude-skills-ceo-advisor": {
+      "hash": "8b98cab77484ca28",
+      "summary_zh": "面向高管的战略决策辅助工具，涵盖战略分析、财务情景建模、董事会治理与投资者沟通模板，适合制定公司战略、筹备董事会汇报或与投资人打交道时参考使用。",
+      "translated_at": "2026-06-05T16:58:11.089Z"
+    },
+    "skill:borghei-claude-skills-board-deck-builder": {
+      "hash": "e41014d5cd8d8e10",
+      "summary_zh": "汇总各高管视角，帮你搭建董事会和投资人汇报材料，提供叙事框架、坏消息表达技巧及分章节写作建议，适合准备董事会、季度回顾或融资路演时使用。",
+      "translated_at": "2026-06-05T16:58:15.895Z"
+    },
+    "skill:borghei-claude-skills-channel-economics": {
+      "hash": "e68f32752789958b",
+      "summary_zh": "用于设计和测算各类销售渠道的财务结构，帮你在直销、分销、代理、市场平台等模式间权衡利弊，搭建合作伙伴分层返点机制，评估渠道冲突，或用数据判断一桩合作到底值不值得做。",
+      "translated_at": "2026-06-05T16:58:16.113Z"
+    },
+    "skill:borghei-claude-skills-change-management": {
+      "hash": "35ef24dff1505f03",
+      "summary_zh": "一套面向初创公司的组织变革落地方法论，涵盖沟通模板、应对抵触和疲劳的策略，以及重组、转型、换帅、流程或工具更替等场景的操作手册，帮你平稳推动变动而不引发混乱。",
+      "translated_at": "2026-06-05T16:58:17.664Z"
+    },
+    "skill:borghei-claude-skills-chief-ai-officer-advisor": {
+      "hash": "34ef6a441740fb45",
+      "summary_zh": "面向首席AI官的智能顾问，覆盖战略制定、治理框架、风险管理、投资规划与团队搭建，适合在评估自研还是采购、梳理AI成熟度、起草风险清单或做投资组合决策时使用。",
+      "translated_at": "2026-06-05T16:58:20.485Z"
+    },
+    "skill:borghei-claude-skills-chief-customer-officer-advisor": {
+      "hash": "4978ec1533ebaf77",
+      "summary_zh": "面向首席客户官的顾问助手，可用于制定客户体验战略、评估CX成熟度、规划防流失举措、搭建客户之声项目，或准备董事会汇报中的客户部分。",
+      "translated_at": "2026-06-05T16:58:21.419Z"
+    },
+    "skill:borghei-claude-skills-chief-data-officer-advisor": {
+      "hash": "6fe63f1b74d97ef8",
+      "summary_zh": "面向首席数据官的智能顾问，可在制定数据战略、评估数据成熟度、审计治理体系、选型数据平台、设计数据团队或准备董事会数据汇报时提供专业建议。",
+      "translated_at": "2026-06-05T16:58:21.831Z"
+    },
+    "skill:borghei-claude-skills-chief-of-staff": {
+      "hash": "63fb8613383c3ff4",
+      "summary_zh": "一个面向创始人的高管协调中枢，能把战略问题自动分派给合适的顾问角色，复杂决策时召集多方\"董事会\"会商，汇总意见、记录决议并打通跨部门协作，适合需要多视角决策支持的场景。",
+      "translated_at": "2026-06-05T16:58:25.612Z"
+    },
+    "skill:borghei-claude-skills-chro-advisor": {
+      "hash": "6da6f392221b7df0",
+      "summary_zh": "面向成长期公司的人力管理顾问，覆盖招聘策略、薪酬设计、组织架构、绩效与留存等场景，适合在制定招聘计划、搭建薪酬体系、调整团队结构或规划人员编制时使用。",
+      "translated_at": "2026-06-05T16:58:26.829Z"
+    },
+    "skill:borghei-claude-skills-churn-prevention": {
+      "hash": "08c2f1f4ff1db375",
+      "summary_zh": "一套面向 SaaS 的用户流失防控方案，覆盖取消挽留流程、动态优惠、退订调研、催款重试、付款恢复和赢回活动，适合想系统性降低流失率、提升订阅留存的团队参考落地。",
+      "translated_at": "2026-06-05T16:58:27.579Z"
+    },
+    "skill:borghei-claude-skills-ciso-advisor": {
+      "hash": "2168a046d79887ec",
+      "summary_zh": "面向成长期公司的安全负责人助手，能用美元量化风险、规划 SOC 2/ISO 27001 等合规路线、制定安全架构与事件响应策略，适合搭建安全体系、争取预算、应对审计或向董事会汇报时使用。",
+      "translated_at": "2026-06-05T16:58:31.544Z"
+    },
+    "skill:borghei-claude-skills-commercial-policy": {
+      "hash": "c48e54022fb761d8",
+      "summary_zh": "一套用于编写和更新企业商务政策的治理框架，明确销售在折扣、合同、付款、终止、责任等方面的权限边界和审批触发条件，适合制定政策章程、审计交易合规性，或为新地区、新行业定制专属规则。",
+      "translated_at": "2026-06-05T16:58:32.728Z"
+    },
+    "skill:borghei-claude-skills-company-os": {
+      "hash": "f1f173bc71efd3d0",
+      "summary_zh": "一套帮公司搭建运营体系的元框架，涵盖管理模式选型（EOS、Scaling Up、OKR等）、权责图、计分卡、会议节奏和问题解决机制，适合创业团队或高管搭建公司运转骨架时使用。",
+      "translated_at": "2026-06-05T16:58:36.279Z"
+    },
+    "skill:borghei-claude-skills-competitive-intel": {
+      "hash": "40bd4f12fe7ba006",
+      "summary_zh": "一套系统化的竞争对手追踪方法，覆盖从对手识别、八维度跟踪到战斗卡制作和输赢分析的完整流程，适合市场、销售和产品团队打磨定位、更新打法、复盘成败时使用。",
+      "translated_at": "2026-06-05T16:58:37.448Z"
+    },
+    "skill:borghei-claude-skills-cmo-advisor": {
+      "hash": "3eae82ff489640fa",
+      "summary_zh": "面向首席营销官的智能顾问，覆盖品牌策略、需求挖掘、营销运营到增长与营收对齐，适合制定营销战略、规划获客活动、设计线索评分模型或分配预算时参考。",
+      "translated_at": "2026-06-05T16:58:37.674Z"
+    },
+    "skill:borghei-claude-skills-competitive-teardown": {
+      "hash": "d44637c6db675e67",
+      "summary_zh": "一套系统化拆解竞品的方法和模板，从产品功能、定价到用户体验全面分析打分，还能生成 SWOT 和行动方案，适合做市场调研或给老板汇报竞品情况时用。",
+      "translated_at": "2026-06-05T16:58:40.700Z"
+    },
+    "skill:borghei-claude-skills-contract-and-proposal-writer": {
+      "hash": "c72b5091a6be8500",
+      "summary_zh": "一键生成合同、提案、SOW、NDA 等商务文书，内置美、欧、英、德四地法律条款库，支持 GDPR 合规附录和 DOCX 导出，适合接洽客户、起草合作协议时快速套用模板。",
+      "translated_at": "2026-06-05T16:58:42.605Z"
+    },
+    "skill:borghei-claude-skills-competitor-alternatives": {
+      "hash": "e2499118f31a01d1",
+      "summary_zh": "一套用于做竞品对比和替代方案页面的方法论与模板，涵盖单数/复数替代页、对比页等四种格式，帮 SEO 和销售团队统一研究流程、集中管理竞品资料，快速产出高质量对比内容。",
+      "translated_at": "2026-06-05T16:58:43.254Z"
+    },
+    "skill:borghei-claude-skills-coo-advisor": {
+      "hash": "cc2bbc7fb8210197",
+      "summary_zh": "面向首席运营官的智能顾问，覆盖流程优化、组织扩张、跨部门协同等场景，适合在设计运营流程、规划人力、管理供应商或制定业务连续性方案时使用。",
+      "translated_at": "2026-06-05T16:58:45.611Z"
+    },
+    "skill:borghei-claude-skills-cro-advisor": {
+      "hash": "3d8e0dfb8d03a027",
+      "summary_zh": "面向 B2B SaaS 公司的营收负责人助手，覆盖收入预测、销售模式设计、定价策略、NRR 建模、团队扩张与董事会汇报，适合搭建营收引擎、制定配额或评估增长健康度时使用。",
+      "translated_at": "2026-06-05T16:58:48.330Z"
+    },
+    "skill:borghei-claude-skills-cs-onboard": {
+      "hash": "54330068e1a58e57",
+      "summary_zh": "通过创始人访谈从 7 个维度采集公司背景，生成一份持久化的上下文文件，供各类高管顾问场景复用，适合首次搭建顾问语境、季度更新或新高管入职时快速对齐情况。",
+      "translated_at": "2026-06-05T16:58:50.879Z"
+    },
+    "skill:borghei-claude-skills-cpo-advisor": {
+      "hash": "2f38df09c3671f53",
+      "summary_zh": "面向规模化阶段公司的产品战略顾问，帮你梳理产品愿景、衡量PMF、设计产品组织、制定投资取舍以及向董事会汇报，专注于\"做什么、为什么做、由谁来做\"的高层决策，不涉及具体功能细节。",
+      "translated_at": "2026-06-05T16:58:51.459Z"
+    },
+    "skill:borghei-claude-skills-cto-advisor": {
+      "hash": "ea636b3b4bf3b342",
+      "summary_zh": "面向工程团队负责人的技术决策助手，提供技术债评估、团队扩张测算、技术选型对比和架构决策记录模板，适合在做架构选择、规划团队规模或建立工程度量体系时参考。",
+      "translated_at": "2026-06-05T16:58:53.081Z"
+    },
+    "skill:borghei-claude-skills-customer-success-manager": {
+      "hash": "136530262cdbe675",
+      "summary_zh": "一款面向 SaaS 客户成功团队的健康度监测工具，通过加权评分模型评估客户状态、预警流失风险并挖掘续费扩展机会。",
+      "translated_at": "2026-06-05T16:58:55.930Z"
+    },
+    "skill:borghei-claude-skills-culture-architect": {
+      "hash": "0d6636b46508558e",
+      "summary_zh": "帮你把企业文化从墙上的口号变成可落地的日常行为，涵盖使命愿景梳理、价值观转化、文化健康度评估、阶段性仪式设计和文化债务管理，适合初创定调、快速扩张、并购整合或处理团队文化冲突时使用。",
+      "translated_at": "2026-06-05T16:58:56.698Z"
+    },
+    "skill:borghei-claude-skills-data-scientist": {
+      "hash": "0c1a70c3e6896b81",
+      "summary_zh": "一个覆盖机器学习、统计建模和实验设计的数据科学工具，适合算法选型、特征工程和构建预测管线等场景。",
+      "translated_at": "2026-06-05T16:59:02.543Z"
+    },
+    "skill:borghei-claude-skills-deal-desk": {
+      "hash": "e2940b4e51a9508d",
+      "summary_zh": "协调跨部门审核与批准非标准销售交易的流程，适合从零建立交易审查机制或优化审批效率的场景。",
+      "translated_at": "2026-06-05T16:59:03.023Z"
+    },
+    "skill:borghei-claude-skills-data-analyst": {
+      "hash": "288cf414b03dd7d7",
+      "summary_zh": "这是一个数据分析专家，能帮你完成从SQL查询到可视化、统计分析和业务报告的全流程，适合需要数据洞察和向团队展示分析结果的场景。",
+      "translated_at": "2026-06-05T16:59:04.287Z"
+    },
+    "skill:borghei-claude-skills-docx-toolkit": {
+      "hash": "9914d62a7421a75b",
+      "summary_zh": "用来给 Word 文档做体检的命令行工具，能查字数、标题层级、批注、修订痕迹、交叉引用断链和样式一致性，适合合同审阅、交稿前自检或团队样式规范落地。",
+      "translated_at": "2026-06-05T16:59:08.813Z"
+    },
+    "skill:borghei-claude-skills-executive-mentor": {
+      "hash": "0511feabbd9039a5",
+      "summary_zh": "给创始人和高管当“唱反调”的搭档，帮你压力测试方案、备战董事会、复盘失败决策，提前揪出竞争对手或董事会才会发现的盲点。",
+      "translated_at": "2026-06-05T16:59:09.996Z"
+    },
+    "skill:borghei-claude-skills-decision-logger": {
+      "hash": "f7c47446cb9d86a9",
+      "summary_zh": "用双层记忆结构记录团队决策：一层存完整讨论过程，另一层只存创始人最终拍板的结论，避免日后翻旧账时把当年的争论误当成共识。适合需要追溯决策、检查逾期事项、识别相互冲突结论的场景。",
+      "translated_at": "2026-06-05T16:59:10.075Z"
+    },
+    "skill:borghei-claude-skills-form-cro": {
+      "hash": "d101b06178b9caa4",
+      "summary_zh": "一份系统化的表单优化指南，聚焦留资、咨询、注册、下单等转化场景，涵盖字段取舍、分步设计、校验体验、移动端适配和 A/B 测试方法，适合想提升转化率的产品和增长团队参考。",
+      "translated_at": "2026-06-05T16:59:13.820Z"
+    },
+    "skill:borghei-claude-skills-founder-coach": {
+      "hash": "b3b1002912416fb3",
+      "summary_zh": "面向初创公司创始人和首次担任 CEO 的人提供个人领导力陪练，适合在感觉自己成为团队瓶颈、不会授权、濒临倦怠，或首次从执行者转型为管理者、需要应对董事会时使用。",
+      "translated_at": "2026-06-05T16:59:15.408Z"
+    },
+    "skill:borghei-claude-skills-free-tool-strategy": {
+      "hash": "8c269f31104a1ee3",
+      "summary_zh": "一套面向计算器、生成器、检测器等免费在线小工具的营销实战指南，从选题评估、功能设计到落地页 SEO、获客漏斗、冷启动推广和效果衡量都给出方法论，适合想用免费工具引流获客的独立开发者和增长团队。",
+      "translated_at": "2026-06-05T16:59:16.500Z"
+    },
+    "skill:borghei-claude-skills-general-counsel-advisor": {
+      "hash": "f49e953c8e275692",
+      "summary_zh": "面向总法律顾问和高级法务负责人的智能顾问，可协助制定法律战略、评估风险、审查合同组合、搭建合规日历、管理诉讼，以及准备董事会法务汇报材料。",
+      "translated_at": "2026-06-05T16:59:18.357Z"
+    },
+    "skill:borghei-claude-skills-internal-narrative": {
+      "hash": "64e5548b7e02796b",
+      "summary_zh": "帮助公司面向员工、投资人、客户、候选人等不同受众，构建并保持一致的对外叙事，适用于全员大会、投资人更新、董事会汇报、招聘宣讲或危机公关等需要口径统一的场合。",
+      "translated_at": "2026-06-05T16:59:20.437Z"
+    },
+    "skill:borghei-claude-skills-intl-expansion": {
+      "hash": "cb120039d4e0caa8",
+      "summary_zh": "一套面向成长期公司的海外扩张方法论，帮你评估目标市场、选择进入方式、规划本地化和合规要点，并搭建区域团队和上市节奏，适合准备出海或落地新国家时参考。",
+      "translated_at": "2026-06-05T16:59:20.770Z"
+    },
+    "skill:borghei-claude-skills-ma-playbook": {
+      "hash": "47e5bb38a163836f",
+      "summary_zh": "一份覆盖并购全流程的实战指南，从战略评估、目标筛选、尽职调查到估值、谈判、交易结构和整合落地，适合在筹划收购、准备被收购或推进并购各环节时参考。",
+      "translated_at": "2026-06-05T16:59:23.579Z"
+    },
+    "skill:borghei-claude-skills-onboarding-cro": {
+      "hash": "1f89f04abca8ffdc",
+      "summary_zh": "帮助产品团队优化注册后的新用户引导流程，缩短上手时间、提升激活率，适合改善空状态体验、设计多渠道触达策略、挽回中途流失用户的场景。",
+      "translated_at": "2026-06-05T16:59:25.365Z"
+    },
+    "skill:borghei-claude-skills-ml-ops-engineer": {
+      "hash": "1d2a964cf3126951",
+      "summary_zh": "一个面向机器学习工程化的专家助手，帮你把模型部署上线、搭建训练流水线、监控模型漂移、配置特征存储，以及打通 ML 的 CI/CD 自动化流程，适合需要把模型推向生产环境的团队使用。",
+      "translated_at": "2026-06-05T16:59:26.117Z"
+    },
+    "skill:borghei-claude-skills-org-health-diagnostic": {
+      "hash": "0611e7d5ba4341b2",
+      "summary_zh": "一套从各高管视角综合评估公司整体健康度的诊断工具，用红黄绿灯打分八大维度，并提供下钻建议和连锁影响分析，适合董事会汇报前体检、识别高风险职能或排查跨部门问题。",
+      "translated_at": "2026-06-05T16:59:27.946Z"
+    },
+    "skill:borghei-claude-skills-partnerships-architect": {
+      "hash": "bc6e9fcf253b13ed",
+      "summary_zh": "帮你梳理合作伙伴战略的助手，涵盖技术集成、渠道分销、OEM、联合营销等模式选择，可用于评估潜在伙伴、从零搭建合作伙伴计划、设计具体合作条款、测算投入产出，或盘点现有合作组合的价值。",
+      "translated_at": "2026-06-05T16:59:30.738Z"
+    },
+    "skill:borghei-claude-skills-page-cro": {
+      "hash": "b4f738e42692b4c3",
+      "summary_zh": "帮你给落地页和营销页面做转化率优化诊断，覆盖价值主张、标题、CTA层级、视觉动线、社会认同和异议处理，并指导 A/B 测试，适合想提升页面成交效果的运营和产品同学。",
+      "translated_at": "2026-06-05T16:59:31.145Z"
+    },
+    "skill:borghei-claude-skills-paywall-upgrade-cro": {
+      "hash": "5615fd397a035af9",
+      "summary_zh": "帮助 SaaS 产品打磨付费墙和升级页面的转化设计，涵盖功能限制提示、试用到期引导、升级时机选择和挽留优惠策略，兼顾收益与用户体验，适合想提升订阅转化又不想过度打扰用户的团队参考。",
+      "translated_at": "2026-06-05T16:59:32.999Z"
+    },
+    "skill:borghei-claude-skills-popup-cro": {
+      "hash": "77003ea596bdae93",
+      "summary_zh": "一套面向转化率优化的弹窗与浮层方案，涵盖退出挽留、滑入提示、横幅展示，并配套时机控制、频次管理、人群定向、合规与 A/B 测试，适合做线索收集、促销推送和公告通知。",
+      "translated_at": "2026-06-05T16:59:36.022Z"
+    },
+    "skill:borghei-claude-skills-pdf-toolkit": {
+      "hash": "80eb27fe8a6fb935",
+      "summary_zh": "一个 PDF 安全审计小工具，可检查元数据泄露、加密状态、嵌入脚本和附件等隐患，适合在对外发送文件前做一轮敏感信息排查。",
+      "translated_at": "2026-06-05T16:59:37.059Z"
+    },
+    "skill:borghei-claude-skills-pptx-toolkit": {
+      "hash": "ce12384896d4b08a",
+      "summary_zh": "用来给 PPT 演示文稿做体检的工具，能快速查看页数、每页文字密度、嵌入的图片字体、隐藏页、备注和动画情况，适合在把董事会汇报、销售方案或大会演讲文件发出去前过一遍。",
+      "translated_at": "2026-06-05T16:59:38.373Z"
+    },
+    "skill:borghei-claude-skills-pricing-strategy": {
+      "hash": "e803833099efdc0f",
+      "summary_zh": "一套面向 SaaS 的定价方法论，涵盖价值指标选取、套餐分层、价格调研、定价页设计、调价执行和竞品分析，适合需要系统化设计或优化订阅定价的产品和运营团队参考。",
+      "translated_at": "2026-06-05T16:59:40.967Z"
+    },
+    "skill:borghei-claude-skills-referral-program": {
+      "hash": "54d56b3ecc391b9f",
+      "summary_zh": "一套推荐与联盟营销方案设计指南，涵盖裂变闭环、激励机制、触发时机、病毒系数测算等内容，适合想搭建或优化用户推荐体系的增长团队参考落地。",
+      "translated_at": "2026-06-05T16:59:41.762Z"
+    },
+    "skill:borghei-claude-skills-revenue-operations": {
+      "hash": "17ffca49f0adf4dd",
+      "summary_zh": "面向 SaaS 团队的营收分析工具，能评估销售管道覆盖率、用 MAPE 衡量预测准确度，并计算 GTM 效率指标，适合需要量化营收健康度、优化增长策略的运营和财务团队。",
+      "translated_at": "2026-06-05T16:59:44.071Z"
+    },
+    "skill:borghei-claude-skills-sales-engineer": {
+      "hash": "cbf27bc48af0483e",
+      "summary_zh": "帮售前工程师快速分析招标书应答的覆盖缺口、整理竞品功能对比表，并规划 POC 验证方案，适合 To B 售前团队提效使用。",
+      "translated_at": "2026-06-05T16:59:46.349Z"
+    },
+    "skill:borghei-claude-skills-scenario-war-room": {
+      "hash": "95314a882e1ebcf7",
+      "summary_zh": "用于模拟复合型危机场景的跨部门推演工具，能呈现一个问题如何引发连锁反应，适合应对多重风险叠加、下行影响重大的战略决策，或回答\"如果X和Y同时发生该怎么办\"这类问题。",
+      "translated_at": "2026-06-05T16:59:46.872Z"
+    },
+    "skill:borghei-claude-skills-signup-flow-cro": {
+      "hash": "0efc8c7b1d28301a",
+      "summary_zh": "一份注册流程优化指南，涵盖单点登录、渐进式信息收集、字段精简、多步骤拆分、移动端体验等，适合想提升注册转化率的产品和增长团队参考。",
+      "translated_at": "2026-06-05T16:59:48.190Z"
+    },
+    "skill:borghei-claude-skills-strategic-alignment": {
+      "hash": "9def8c867e53922c",
+      "summary_zh": "把公司战略层层拆解到每个执行者，自动识别孤立目标、冲突 KPI 和部门各自为政的问题，适合 OKR 落不了地、团队劲使不到一处时用来诊断并重新对齐方向。",
+      "translated_at": "2026-06-05T16:59:51.924Z"
+    },
+    "skill:borghei-claude-skills-vpe-advisor": {
+      "hash": "3a794ca113127d88",
+      "summary_zh": "面向工程负责人的 AI 顾问，专攻团队组织设计、产能规划、效能度量、交付质量和文化建设，适合在评估研发组织健康度、搭建效能看板或准备董事会汇报时使用。",
+      "translated_at": "2026-06-05T16:59:52.830Z"
+    },
+    "skill:borghei-claude-skills-xlsx-toolkit": {
+      "hash": "f0fa1715fb23fac1",
+      "summary_zh": "用于审查 Excel 工作簿的工具，可统计公式密度、外部引用、命名区域、隐藏表和数据验证规则，适合财务模型复核、对外分享前的泄密检查或电子表格安全审计。",
+      "translated_at": "2026-06-05T16:59:54.367Z"
+    },
+    "skill:cloudflare-workers-sdk-local-explorer": {
+      "hash": "be65503a70544fa9",
+      "summary_zh": "一份开发指引，告诉你如何往本地浏览器或本地 API 里新增产品和资源，适合在 Miniflare 相关目录下开发新接口或 UI 路由时参考。",
+      "translated_at": "2026-06-05T16:59:57.897Z"
+    },
+    "skill:conorbronsdon-avoid-ai-writing-avoid-ai-writing": {
+      "hash": "9eee51a2e6befa93",
+      "summary_zh": "用于审计并重写内容，去除AI写作痕迹，让文本听起来更自然、像人写的。",
+      "translated_at": "2026-06-05T17:00:03.161Z"
+    },
+    "skill:coreyhaines31-marketingskills-marketing-plan": {
+      "hash": "f5f8497210e9df26",
+      "summary_zh": "一款面向营销顾问和创业者的方案生成工具，基于 AARRR 增长漏斗框架，根据预算、团队和发展阶段，自动产出 13 个章节的完整营销规划，适合做 GTM、90 天打法或 12 个月路线图时直接套用。",
+      "translated_at": "2026-06-05T17:00:08.591Z"
+    },
+    "skill:coreyhaines31-marketingskills-prospecting": {
+      "hash": "92cbd173def09607",
+      "summary_zh": "帮你找潜在客户并整理成可联系的名单，覆盖 B2B SaaS、通用 B2B 和本地小商家，适合做外呼线索挖掘、目标客户研究和销售拓展。",
+      "translated_at": "2026-06-05T17:00:13.459Z"
     }
   }
 }

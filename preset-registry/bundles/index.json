@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-06-05T13:49:36.185Z",
+  "updated_at": "2026-06-05T16:55:32.478Z",
   "bundles": [
     {
       "id": "obra-superpowers",
@@ -8,7 +8,7 @@
       "name": "Superpowers",
       "url": "https://github.com/obra/superpowers/blob/main/skills/brainstorming/SKILL.md",
       "kind": "skill",
-      "stars": 218647,
+      "stars": 218777,
       "skill_ids": [
         "obra-superpowers-brainstorming",
         "obra-superpowers-dispatching-parallel-agents",
@@ -33,7 +33,7 @@
       "name": "Skills",
       "url": "https://github.com/anthropics/skills/blob/main/skills/algorithmic-art/SKILL.md",
       "kind": "skill",
-      "stars": 146850,
+      "stars": 146899,
       "skill_ids": [
         "anthropics-skills-algorithmic-art",
         "anthropics-skills-brand-guidelines",
@@ -62,7 +62,7 @@
       "name": "Skills",
       "url": "https://github.com/mattpocock/skills/blob/main/skills/productivity/caveman/SKILL.md",
       "kind": "skill",
-      "stars": 118350,
+      "stars": 118494,
       "skill_ids": [
         "mattpocock-skills-caveman",
         "mattpocock-skills-design-an-interface",
@@ -94,7 +94,7 @@
         "mattpocock-skills-writing-shape",
         "mattpocock-skills-zoom-out"
       ],
-      "summary_zh": "专为AI编程助手打造的高级技能包，解决架构优化、深度调试、需求理清与安全防护等场景，组合起来能省token并让AI像高级工程师般严谨工作，大幅提升开发效率与代码质量。"
+      "summary_zh": "一套面向 AI 编码助手的工作流技能合集，覆盖调试、架构改进、设计评审、文章润色、上下文交接和 Git 防误操作等场景，帮你把日常开发与写作中的复杂任务拆成可复用的标准化流程。"
     },
     {
       "id": "nextlevelbuilder-ui-ux-pro-max-skill",
@@ -102,7 +102,7 @@
       "name": "Ui Ux Pro Max Skill",
       "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/main/.claude/skills/banner-design/SKILL.md",
       "kind": "skill",
-      "stars": 87672,
+      "stars": 87729,
       "skill_ids": [
         "nextlevelbuilder-ui-ux-pro-max-skill-banner-design",
         "nextlevelbuilder-ui-ux-pro-max-skill-brand",
@@ -120,7 +120,7 @@
       "name": "Claude Mem",
       "url": "https://github.com/thedotmack/claude-mem/blob/main/plugin/skills/babysit/SKILL.md",
       "kind": "skill",
-      "stars": 80797,
+      "stars": 80822,
       "skill_ids": [
         "thedotmack-claude-mem-babysit",
         "thedotmack-claude-mem-design-is",
@@ -147,7 +147,7 @@
       "name": "Caveman",
       "url": "https://github.com/JuliusBrussee/caveman/blob/main/skills/cavecrew/SKILL.md",
       "kind": "skill",
-      "stars": 69136,
+      "stars": 69219,
       "skill_ids": [
         "juliusbrussee-caveman-cavecrew",
         "juliusbrussee-caveman-caveman",
@@ -165,7 +165,7 @@
       "name": "Awesome Claude Skills",
       "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/-21risk-automation/SKILL.md",
       "kind": "skill",
-      "stars": 63343,
+      "stars": 63357,
       "skill_ids": [
         "composiohq-awesome-claude-skills-21risk-automation",
         "composiohq-awesome-claude-skills-2chat-automation",
@@ -235,7 +235,7 @@
       "name": "Claude Flow",
       "url": "https://github.com/ruvnet/claude-flow/blob/main/.agents/skills/agent-adaptive-coordinator/SKILL.md",
       "kind": "skill",
-      "stars": 57989,
+      "stars": 58010,
       "skill_ids": [
         "ruvnet-claude-flow-agent-adaptive-coordinator",
         "ruvnet-claude-flow-agent-agent",
@@ -306,7 +306,7 @@
       "name": "Understand Anything",
       "url": "https://github.com/Lum1104/Understand-Anything/blob/main/understand-anything-plugin/skills/understand/SKILL.md",
       "kind": "skill",
-      "stars": 52625,
+      "stars": 52747,
       "skill_ids": [
         "lum1104-understand-anything-understand",
         "lum1104-understand-anything-understand-chat",
@@ -325,7 +325,7 @@
       "name": "Agent Skills",
       "url": "https://github.com/addyosmani/agent-skills/blob/main/skills/api-and-interface-design/SKILL.md",
       "kind": "skill",
-      "stars": 48393,
+      "stars": 48424,
       "skill_ids": [
         "addyosmani-agent-skills-api-and-interface-design",
         "addyosmani-agent-skills-browser-testing-with-devtools",
@@ -359,7 +359,7 @@
       "name": "Sentry",
       "url": "https://github.com/getsentry/sentry/blob/master/.agents/skills/analytics/SKILL.md",
       "kind": "skill",
-      "stars": 44047,
+      "stars": 44048,
       "skill_ids": [
         "getsentry-sentry-analytics",
         "getsentry-sentry-cell-architecture",
@@ -382,7 +382,7 @@
         "getsentry-sentry-sentry-security",
         "getsentry-sentry-setup-dev"
       ],
-      "summary_zh": "Sentry 代码库的全栈开发规范与代码生成工具箱，覆盖架构、前后端、混合云及测试等核心环节，帮开发者快速摸清源码套路，高效合规地参与项目迭代与功能扩展。"
+      "summary_zh": "这套合集是 Sentry 自家的开发助手，覆盖前端组件、表单、快捷命令、设计系统，到后端 Django 模型、数据库迁移、混合云 RPC 与 outbox 等场景，帮助贡献者按官方规范快速上手并产出符合架构约定的代码。"
     },
     {
       "id": "sickn33-antigravity-awesome-skills",
@@ -390,7 +390,7 @@
       "name": "Antigravity Awesome Skills",
       "url": "https://github.com/sickn33/antigravity-awesome-skills/blob/main/plugins/antigravity-awesome-skills-claude/skills/00-andruia-consultant/SKILL.md",
       "kind": "skill",
-      "stars": 39795,
+      "stars": 39816,
       "skill_ids": [
         "sickn33-antigravity-awesome-skills-00-andruia-consultant",
         "sickn33-antigravity-awesome-skills-007",
@@ -456,7 +456,7 @@
         "sickn33-antigravity-awesome-skills-android-jetpack-compose-expert",
         "sickn33-antigravity-awesome-skills-android-ui-verification"
       ],
-      "summary_zh": "这套全能AI技能包覆盖架构设计、安全攻防、开发测试到营销自动化等全方位技术场景，相当于给项目配了个全栈专家团队，开箱即用，一站式搞定各种技术难题。"
+      "summary_zh": "这套合集把 Andru.ia 体系的咨询、架构、技能开发等核心角色，搭配安全审计、无障碍合规、A/B 测试、3D Web 开发等专项能力打包在一起，覆盖从需求诊断到落地交付的全流程，方便团队按场景随取随用，快速搭建可复用的 AI 工作流。"
     },
     {
       "id": "wshobson-agents",
@@ -464,7 +464,7 @@
       "name": "Agents",
       "url": "https://github.com/wshobson/agents/blob/main/plugins/data-engineering/skills/airflow-dag-patterns/SKILL.md",
       "kind": "skill",
-      "stars": 36394,
+      "stars": 36400,
       "skill_ids": [
         "wshobson-agents-airflow-dag-patterns",
         "wshobson-agents-api-design-principles",
@@ -527,7 +527,7 @@
         "wshobson-agents-workflow-orchestration-patterns",
         "wshobson-agents-workflow-patterns"
       ],
-      "summary_zh": "专为AI开发助手打造的工程最佳实践合集，把架构设计、代码审查与研发流程沉淀为标准模板，让AI或开发者开箱即用，轻松写出规范的高质量代码。"
+      "summary_zh": "一套覆盖后端架构、API 设计、构建优化、认证授权、代码审查到 CI/CD 的工程实践技能合集，帮开发者在日常项目里直接套用业界成熟模式，少踩坑、快速落地高质量的生产级代码。"
     },
     {
       "id": "coreyhaines31-marketingskills",
@@ -535,7 +535,7 @@
       "name": "Marketingskills",
       "url": "https://github.com/coreyhaines31/marketingskills/blob/main/skills/ab-testing/SKILL.md",
       "kind": "skill",
-      "stars": 32019,
+      "stars": 32042,
       "skill_ids": [
         "coreyhaines31-marketingskills-ab-testing",
         "coreyhaines31-marketingskills-ad-creative",
@@ -581,7 +581,7 @@
         "coreyhaines31-marketingskills-social",
         "coreyhaines31-marketingskills-video"
       ],
-      "summary_zh": "专为产品增长打造的全栈营销技能包，覆盖从获客投放、搜索优化到数据分析、用户留存的完整链路，帮你一站式搞定拉新转化与留存难题。"
+      "summary_zh": "一站式营销执行助手合集，覆盖增长实验、广告投放、SEO、邮件、社群、留存等 43 个细分场景，让你在做营销决策和落地时随时调用对应专家，省去拼凑工具和反复试错的功夫。"
     },
     {
       "id": "composiohq-composio",
@@ -589,7 +589,7 @@
       "name": "Composio",
       "url": "https://github.com/ComposioHQ/composio/blob/next/.claude/skills/bug-fixing-guide/SKILL.md",
       "kind": "skill",
-      "stars": 28640,
+      "stars": 28646,
       "skill_ids": [
         "composiohq-composio-bug-fixing-guide",
         "composiohq-composio-building-agents",
@@ -623,7 +623,7 @@
       "name": "Claude Code Templates",
       "url": "https://github.com/davila7/claude-code-templates/blob/main/cli-tool/components/skills/ai-research/agent-evaluation/SKILL.md",
       "kind": "skill",
-      "stars": 27781,
+      "stars": 27783,
       "skill_ids": [
         "davila7-claude-code-templates-agent-evaluation",
         "davila7-claude-code-templates-agent-management",
@@ -689,12 +689,27 @@
       "summary_zh": "专攻AI智能体开发与编排的模板合集，解决从零搭建的痛点。它把管理、记忆、通信等核心能力打包，帮你快速组装出能协作、有记忆、可进化的多智能体系统，省去重复造轮子。"
     },
     {
+      "id": "imbad0202-academic-research-skills",
+      "repo": "Imbad0202/academic-research-skills",
+      "name": "Academic Research Skills",
+      "url": "https://github.com/Imbad0202/academic-research-skills/blob/main/academic-paper/SKILL.md",
+      "kind": "skill",
+      "stars": 27631,
+      "skill_ids": [
+        "imbad0202-academic-research-skills-academic-paper",
+        "imbad0202-academic-research-skills-academic-paper-reviewer",
+        "imbad0202-academic-research-skills-academic-pipeline",
+        "imbad0202-academic-research-skills-deep-research"
+      ],
+      "summary_zh": "专为学术科研打造的全流程工具集，靠多智能体协作串联深度调研、论文写作、完整性审查与模拟审稿，一站式搞定从前期探索到最终定稿的自动化闭环，大幅提升学术产出质效。"
+    },
+    {
       "id": "vercel-labs-agent-skills",
       "repo": "vercel-labs/agent-skills",
       "name": "Agent Skills",
       "url": "https://github.com/vercel-labs/agent-skills/blob/main/skills/composition-patterns/SKILL.md",
       "kind": "skill",
-      "stars": 27597,
+      "stars": 27605,
       "skill_ids": [
         "vercel-labs-agent-skills-composition-patterns",
         "vercel-labs-agent-skills-deploy-to-vercel",
@@ -706,22 +721,7 @@
         "vercel-labs-agent-skills-web-design-guidelines",
         "vercel-labs-agent-skills-writing-guidelines"
       ],
-      "summary_zh": "这套技能包专为 AI 代理打造，提供 Vercel 生态从编码规范、UI 审查到部署优化的全流程指导，让 AI 也能按业界最佳实践，高效搞定高质量 Web 应用的开发与上线。"
-    },
-    {
-      "id": "imbad0202-academic-research-skills",
-      "repo": "Imbad0202/academic-research-skills",
-      "name": "Academic Research Skills",
-      "url": "https://github.com/Imbad0202/academic-research-skills/blob/main/academic-paper/SKILL.md",
-      "kind": "skill",
-      "stars": 27573,
-      "skill_ids": [
-        "imbad0202-academic-research-skills-academic-paper",
-        "imbad0202-academic-research-skills-academic-paper-reviewer",
-        "imbad0202-academic-research-skills-academic-pipeline",
-        "imbad0202-academic-research-skills-deep-research"
-      ],
-      "summary_zh": "专为学术科研打造的全流程工具集，靠多智能体协作串联深度调研、论文写作、完整性审查与模拟审稿，一站式搞定从前期探索到最终定稿的自动化闭环，大幅提升学术产出质效。"
+      "summary_zh": "Vercel 官方出品的一套开发助手合集，覆盖从 React/Next.js 编码规范、性能优化、动画实现，到部署上线、成本调优，再到 UI 与文档审查的全流程，帮你按 Vercel 工程团队的最佳实践把项目又快又稳地交付出去。"
     },
     {
       "id": "openai-openai-agents-python",
@@ -729,7 +729,7 @@
       "name": "Openai Agents Python",
       "url": "https://github.com/openai/openai-agents-python/blob/main/.agents/skills/code-change-verification/SKILL.md",
       "kind": "skill",
-      "stars": 26937,
+      "stars": 26938,
       "skill_ids": [
         "openai-openai-agents-python-code-change-verification",
         "openai-openai-agents-python-credit-note-fixer",
@@ -753,7 +753,7 @@
       "name": "Hyperframes",
       "url": "https://github.com/heygen-com/hyperframes/blob/main/skills/animejs/SKILL.md",
       "kind": "skill",
-      "stars": 24580,
+      "stars": 24634,
       "skill_ids": [
         "heygen-com-hyperframes-animejs",
         "heygen-com-hyperframes-contribute-catalog",
@@ -813,7 +813,7 @@
       "name": "Happy",
       "url": "https://github.com/slopus/happy/blob/main/.claude/skills/agent-browser/SKILL.md",
       "kind": "skill",
-      "stars": 21618,
+      "stars": 21623,
       "skill_ids": [
         "slopus-happy-agent-browser",
         "slopus-happy-control-flow",
@@ -825,7 +825,7 @@
         "slopus-happy-sessions",
         "slopus-happy-terminal-emulator"
       ],
-      "summary_zh": "这套合集为AI代理提供开源项目全生命周期支持，覆盖架构设计、自动化测试、日常维护到发布与监控，让AI能像全栈工程师一样闭环搞定开发与运维。"
+      "summary_zh": "这套合集面向 Happy 项目维护者，把日常开发、发布、运维、社区维护和自动化测试串成一条流水线，让团队能在浏览器测试、终端调试、指标监控、版本发布到 issue 管理之间无缝切换，提升整体工程效率。"
     },
     {
       "id": "donchitos-claude-code-game-studios",
@@ -833,7 +833,7 @@
       "name": "Claude Code Game Studios",
       "url": "https://github.com/Donchitos/Claude-Code-Game-Studios/blob/main/.claude/skills/adopt/SKILL.md",
       "kind": "skill",
-      "stars": 20905,
+      "stars": 20913,
       "skill_ids": [
         "donchitos-claude-code-game-studios-adopt",
         "donchitos-claude-code-game-studios-architecture-decision",
@@ -896,7 +896,7 @@
         "donchitos-claude-code-game-studios-team-level",
         "donchitos-claude-code-game-studios-team-live-ops"
       ],
-      "summary_zh": "来自 Donchitos/Claude-Code-Game-Studios 的 60 个相关技能合集，适合按同一主题成组浏览和按需安装。"
+      "summary_zh": "这套合集面向独立游戏工作室，覆盖从概念脑暴、GDD 撰写、美术规范到架构评审、资产审计和 Bug 管理的全流程，把策划、美术、程序、QA 的协作环节串成一条规范化流水线，帮小团队按工作室级标准推进项目。"
     },
     {
       "id": "jimliu-baoyu-skills",
@@ -904,7 +904,7 @@
       "name": "Baoyu Skills",
       "url": "https://github.com/JimLiu/baoyu-skills/blob/main/skills/baoyu-article-illustrator/SKILL.md",
       "kind": "skill",
-      "stars": 20589,
+      "stars": 20601,
       "skill_ids": [
         "jimliu-baoyu-skills-baoyu-article-illustrator",
         "jimliu-baoyu-skills-baoyu-comic",
@@ -931,7 +931,7 @@
         "jimliu-baoyu-skills-baoyu-youtube-transcript",
         "jimliu-baoyu-skills-release-skills"
       ],
-      "summary_zh": "这套专攻内容创作的AI技能合集，解决图文排版与视觉生成痛点。它将配图、画图与文本格式化能力组合起来，帮你把干瘪文字轻松变成排版精美、配图专业的图文内容。"
+      "summary_zh": "这套合集面向中文创作者，把文章写作全流程串起来——从抓取素材、整理 Markdown、配图制图，到生成封面、漫画、信息卡片和压缩输出，让一个人也能高效完成图文并茂的内容生产与发布。"
     },
     {
       "id": "alirezarezvani-claude-skills",
@@ -939,7 +939,7 @@
       "name": "Claude Skills",
       "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/a11y-audit/SKILL.md",
       "kind": "skill",
-      "stars": 17221,
+      "stars": 17235,
       "skill_ids": [
         "alirezarezvani-claude-skills-a11y-audit",
         "alirezarezvani-claude-skills-ab-test-setup",
@@ -1006,7 +1006,7 @@
         "alirezarezvani-claude-skills-chro-advisor",
         "alirezarezvani-claude-skills-churn-prevention"
       ],
-      "summary_zh": "这套为Claude定制的全能技能包，覆盖产品研发、代码审查、营销增长及多智能体协作等场景，把大模型武装成跨领域专家团队，一站式搞定从需求落地到业务优化的全流程自动化。"
+      "summary_zh": "一套覆盖产品、营销、工程、合规等环节的 Claude 技能合集，把无障碍审计、A/B 实验、广告创意、多智能体协作等专业角色打包成可直接调用的助手，帮团队按场景拼装出端到端的 AI 工作流。"
     },
     {
       "id": "mksglu-claude-context-mode",
@@ -1014,7 +1014,7 @@
       "name": "Claude Context Mode",
       "url": "https://github.com/mksglu/claude-context-mode/blob/main/skills/context-mode/SKILL.md",
       "kind": "skill",
-      "stars": 16461,
+      "stars": 16470,
       "skill_ids": [
         "mksglu-claude-context-mode-context-mode",
         "mksglu-claude-context-mode-context-mode-ops",
@@ -1026,7 +1026,7 @@
         "mksglu-claude-context-mode-ctx-stats",
         "mksglu-claude-context-mode-ctx-upgrade"
       ],
-      "summary_zh": "解决 Claude 处理大输出时 token 浪费的痛点，把上下文执行、效果监控、数据洞察与系统维护融为一体，帮你全方位打理对话上下文，大幅提升交互效率并降低成本。"
+      "summary_zh": "这套合集围绕 context-mode 打造一站式工作流，帮你索引本地代码、检索知识库、监控上下文消耗，并顺手处理诊断、升级和项目运营，让 Claude 在处理大体量内容时更省 token、更高效。"
     },
     {
       "id": "muratcankoylan-agent-skills-for-context-engineering",
@@ -1034,7 +1034,7 @@
       "name": "Agent Skills For Context Engineering",
       "url": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering/blob/main/SKILL.md",
       "kind": "skill",
-      "stars": 16351,
+      "stars": 16353,
       "skill_ids": [
         "muratcankoylan-agent-skills-for-context-engineering",
         "muratcankoylan-agent-skills-for-context-engineering-advanced-evaluation",
@@ -1058,7 +1058,7 @@
         "muratcankoylan-agent-skills-for-context-engineering-template",
         "muratcankoylan-agent-skills-for-context-engineering-tool-design"
       ],
-      "summary_zh": "专为AI智能体打造的上下文工程技能包，专治“记不住、理不清、费Token”的毛病。它整合上下文优化、记忆诊断、微调评估等能力，全方位解决信息过载，提升智能体理解与推理表现。"
+      "summary_zh": "这套技能合集面向智能体开发者，专门解决「上下文工程」难题——从基础概念到压缩、优化、退化诊断，再到多智能体协作、评估和数据管道，帮你系统化地设计和调优 LLM 长程任务的上下文处理流程。"
     },
     {
       "id": "ryoppippi-ccusage",
@@ -1066,7 +1066,7 @@
       "name": "Ccusage",
       "url": "https://github.com/ryoppippi/ccusage/blob/main/.agents/skills/agent-sources/SKILL.md",
       "kind": "skill",
-      "stars": 15598,
+      "stars": 15607,
       "skill_ids": [
         "ryoppippi-ccusage-agent-sources",
         "ryoppippi-ccusage-ast-grep",
@@ -1096,7 +1096,7 @@
         "ryoppippi-ccusage-typescript",
         "ryoppippi-ccusage-typescript-style"
       ],
-      "summary_zh": "专为ccusage跨语言CLI开发打造，覆盖Rust与TS编码、性能调优、测试及文档全流程，组合起来提供一站式工程化支持，让多语言项目开发与维护更高效省心。"
+      "summary_zh": "这套合集面向 ccusage 项目的日常开发与维护，覆盖 Rust 与 TypeScript 双实现、文档站点、测试快照、性能剖析及 Bun 运行时支持，帮助贡献者在统一工作流里搞定代码改动、文档更新和性能调优。"
     },
     {
       "id": "steipete-codexbar",
@@ -1104,12 +1104,12 @@
       "name": "CodexBar",
       "url": "https://github.com/steipete/CodexBar/blob/main/.agents/skills/qa-test/SKILL.md",
       "kind": "skill",
-      "stars": 14278,
+      "stars": 14283,
       "skill_ids": [
         "steipete-codexbar-qa-test",
         "steipete-codexbar-release-codexbar"
       ],
-      "summary_zh": "来自 steipete/CodexBar 的 2 个相关技能合集，适合按同一主题成组浏览和按需安装。"
+      "summary_zh": "面向 CodexBar 这款 macOS 状态栏应用的发布运维合集，覆盖上线前的真实环境 QA 测试与版本发布全流程（签名公证、appcast 更新、Homebrew 同步等），帮助开发者一站式完成验证和分发。"
     },
     {
       "id": "yusufkaraaslan-skill-seekers",
@@ -1117,7 +1117,7 @@
       "name": "Skill_Seekers",
       "url": "https://github.com/yusufkaraaslan/Skill_Seekers/blob/development/distribution/claude-plugin/skills/skill-builder/SKILL.md",
       "kind": "skill",
-      "stars": 13951,
+      "stars": 13953,
       "skill_ids": [
         "yusufkaraaslan-skill-seekers-skill-builder",
         "yusufkaraaslan-skill-seekers-skill-seekers"
@@ -1130,13 +1130,13 @@
       "name": "T3code",
       "url": "https://github.com/pingdotgg/t3code/blob/main/.repos/effect-smol/.agents/skills/grill-me/SKILL.md",
       "kind": "skill",
-      "stars": 12397,
+      "stars": 12404,
       "skill_ids": [
         "pingdotgg-t3code-grill-me",
         "pingdotgg-t3code-jsdocs",
         "pingdotgg-t3code-scratchpad"
       ],
-      "summary_zh": "来自 pingdotgg/t3code 的 3 个相关技能合集，适合按同一主题成组浏览和按需安装。"
+      "summary_zh": "这套合集面向 T3 风格的 TypeScript 项目开发，从需求澄清、API 文档撰写到示例代码试跑串成一条龙，让设计讨论、JSDoc 维护和片段调试都能在编辑器里顺畅完成。"
     },
     {
       "id": "phuryn-pm-skills",
@@ -1144,7 +1144,7 @@
       "name": "Pm Skills",
       "url": "https://github.com/phuryn/pm-skills/blob/main/pm-data-analytics/skills/ab-test-analysis/SKILL.md",
       "kind": "skill",
-      "stars": 11958,
+      "stars": 11963,
       "skill_ids": [
         "phuryn-pm-skills-ab-test-analysis",
         "phuryn-pm-skills-analyze-feature-requests",
@@ -1207,7 +1207,7 @@
         "phuryn-pm-skills-value-prop-statements",
         "phuryn-pm-skills-wwas"
       ],
-      "summary_zh": "来自 phuryn/pm-skills 的 60 个相关技能合集，适合按同一主题成组浏览和按需安装。"
+      "summary_zh": "一套面向产品经理的全流程辅助工具，覆盖从市场分析、用户调研、想法brainstorm到 A/B 实验和 OKR 制定，把日常 PM 工作中常用的分析框架一次性沉淀下来，帮你更快做出有依据的产品决策。"
     },
     {
       "id": "jeffallan-claude-skills",
@@ -1215,7 +1215,7 @@
       "name": "Claude Skills",
       "url": "https://github.com/jeffallan/claude-skills/blob/main/skills/angular-architect/SKILL.md",
       "kind": "skill",
-      "stars": 9653,
+      "stars": 9659,
       "skill_ids": [
         "jeffallan-claude-skills-angular-architect",
         "jeffallan-claude-skills-api-designer",
@@ -1286,7 +1286,7 @@
       "name": "Voltagent",
       "url": "https://github.com/VoltAgent/voltagent/blob/main/examples/with-workspace/workspace/skills/data-analysis/SKILL.md",
       "kind": "skill",
-      "stars": 9383,
+      "stars": 9385,
       "skill_ids": [
         "voltagent-voltagent-data-analysis",
         "voltagent-voltagent-playwright-cli"
@@ -1294,83 +1294,12 @@
       "summary_zh": "打通网页数据自动采集与本地数据分析，实现从提取线上信息到生成业务洞察的一站式闭环。"
     },
     {
-      "id": "orchestra-research-ai-research-skills",
-      "repo": "Orchestra-Research/AI-research-SKILLs",
-      "name": "AI Research SKILLs",
-      "url": "https://github.com/Orchestra-Research/AI-research-SKILLs/blob/main/0-autoresearch-skill/SKILL.md",
-      "kind": "skill",
-      "stars": 9345,
-      "skill_ids": [
-        "orchestra-research-ai-research-skills-0-autoresearch-skill",
-        "orchestra-research-ai-research-skills-a-evolve",
-        "orchestra-research-ai-research-skills-accelerate",
-        "orchestra-research-ai-research-skills-autogpt",
-        "orchestra-research-ai-research-skills-awq",
-        "orchestra-research-ai-research-skills-axolotl",
-        "orchestra-research-ai-research-skills-bigcode-evaluation-harness",
-        "orchestra-research-ai-research-skills-bitsandbytes",
-        "orchestra-research-ai-research-skills-constitutional-ai",
-        "orchestra-research-ai-research-skills-crewai",
-        "orchestra-research-ai-research-skills-deepspeed",
-        "orchestra-research-ai-research-skills-flash-attention",
-        "orchestra-research-ai-research-skills-gguf",
-        "orchestra-research-ai-research-skills-gptq",
-        "orchestra-research-ai-research-skills-grpo-rl-training",
-        "orchestra-research-ai-research-skills-hqq",
-        "orchestra-research-ai-research-skills-huggingface-tokenizers",
-        "orchestra-research-ai-research-skills-lambda-labs",
-        "orchestra-research-ai-research-skills-litgpt",
-        "orchestra-research-ai-research-skills-llama-cpp",
-        "orchestra-research-ai-research-skills-llama-factory",
-        "orchestra-research-ai-research-skills-llamaguard",
-        "orchestra-research-ai-research-skills-lm-evaluation-harness",
-        "orchestra-research-ai-research-skills-mamba",
-        "orchestra-research-ai-research-skills-megatron-core",
-        "orchestra-research-ai-research-skills-miles",
-        "orchestra-research-ai-research-skills-ml-training-recipes",
-        "orchestra-research-ai-research-skills-mlflow",
-        "orchestra-research-ai-research-skills-modal",
-        "orchestra-research-ai-research-skills-nanogpt",
-        "orchestra-research-ai-research-skills-nemo-curator",
-        "orchestra-research-ai-research-skills-nemo-evaluator",
-        "orchestra-research-ai-research-skills-nemo-guardrails",
-        "orchestra-research-ai-research-skills-nnsight",
-        "orchestra-research-ai-research-skills-openrlhf",
-        "orchestra-research-ai-research-skills-peft",
-        "orchestra-research-ai-research-skills-prompt-guard",
-        "orchestra-research-ai-research-skills-pytorch-fsdp2",
-        "orchestra-research-ai-research-skills-pytorch-lightning",
-        "orchestra-research-ai-research-skills-pyvene",
-        "orchestra-research-ai-research-skills-ray-data",
-        "orchestra-research-ai-research-skills-ray-train",
-        "orchestra-research-ai-research-skills-rwkv",
-        "orchestra-research-ai-research-skills-saelens",
-        "orchestra-research-ai-research-skills-sentencepiece",
-        "orchestra-research-ai-research-skills-sglang",
-        "orchestra-research-ai-research-skills-simpo",
-        "orchestra-research-ai-research-skills-skypilot",
-        "orchestra-research-ai-research-skills-slime",
-        "orchestra-research-ai-research-skills-swanlab",
-        "orchestra-research-ai-research-skills-tensorboard",
-        "orchestra-research-ai-research-skills-tensorrt-llm",
-        "orchestra-research-ai-research-skills-torchforge",
-        "orchestra-research-ai-research-skills-torchtitan",
-        "orchestra-research-ai-research-skills-transformer-lens",
-        "orchestra-research-ai-research-skills-trl-fine-tuning",
-        "orchestra-research-ai-research-skills-unsloth",
-        "orchestra-research-ai-research-skills-verl",
-        "orchestra-research-ai-research-skills-vllm",
-        "orchestra-research-ai-research-skills-weights-and-biases"
-      ],
-      "summary_zh": "专为AI研发全流程打造的一站式工具箱，打通从大模型训练、微调、压缩、评估对齐到多智能体协作的完整链路，让自主研究与模型落地更高效自动化。"
-    },
-    {
       "id": "zechenzhangagi-ai-research-skills",
       "repo": "zechenzhangAGI/AI-research-SKILLs",
       "name": "AI Research SKILLs",
       "url": "https://github.com/zechenzhangAGI/AI-research-SKILLs/blob/main/0-autoresearch-skill/SKILL.md",
       "kind": "skill",
-      "stars": 9345,
+      "stars": 9351,
       "skill_ids": [
         "zechenzhangagi-ai-research-skills-0-autoresearch-skill",
         "zechenzhangagi-ai-research-skills-a-evolve",
@@ -1436,12 +1365,83 @@
       "summary_zh": "专为AI研发打造的全链路技能包，覆盖从大模型训练、微调压缩、评估对齐，到智能体构建与多智能体协作的完整闭环，帮你一站式搞定端到端AI研究。"
     },
     {
+      "id": "orchestra-research-ai-research-skills",
+      "repo": "Orchestra-Research/AI-research-SKILLs",
+      "name": "AI Research SKILLs",
+      "url": "https://github.com/Orchestra-Research/AI-research-SKILLs/blob/main/0-autoresearch-skill/SKILL.md",
+      "kind": "skill",
+      "stars": 9350,
+      "skill_ids": [
+        "orchestra-research-ai-research-skills-0-autoresearch-skill",
+        "orchestra-research-ai-research-skills-a-evolve",
+        "orchestra-research-ai-research-skills-accelerate",
+        "orchestra-research-ai-research-skills-autogpt",
+        "orchestra-research-ai-research-skills-awq",
+        "orchestra-research-ai-research-skills-axolotl",
+        "orchestra-research-ai-research-skills-bigcode-evaluation-harness",
+        "orchestra-research-ai-research-skills-bitsandbytes",
+        "orchestra-research-ai-research-skills-constitutional-ai",
+        "orchestra-research-ai-research-skills-crewai",
+        "orchestra-research-ai-research-skills-deepspeed",
+        "orchestra-research-ai-research-skills-flash-attention",
+        "orchestra-research-ai-research-skills-gguf",
+        "orchestra-research-ai-research-skills-gptq",
+        "orchestra-research-ai-research-skills-grpo-rl-training",
+        "orchestra-research-ai-research-skills-hqq",
+        "orchestra-research-ai-research-skills-huggingface-tokenizers",
+        "orchestra-research-ai-research-skills-lambda-labs",
+        "orchestra-research-ai-research-skills-litgpt",
+        "orchestra-research-ai-research-skills-llama-cpp",
+        "orchestra-research-ai-research-skills-llama-factory",
+        "orchestra-research-ai-research-skills-llamaguard",
+        "orchestra-research-ai-research-skills-lm-evaluation-harness",
+        "orchestra-research-ai-research-skills-mamba",
+        "orchestra-research-ai-research-skills-megatron-core",
+        "orchestra-research-ai-research-skills-miles",
+        "orchestra-research-ai-research-skills-ml-training-recipes",
+        "orchestra-research-ai-research-skills-mlflow",
+        "orchestra-research-ai-research-skills-modal",
+        "orchestra-research-ai-research-skills-nanogpt",
+        "orchestra-research-ai-research-skills-nemo-curator",
+        "orchestra-research-ai-research-skills-nemo-evaluator",
+        "orchestra-research-ai-research-skills-nemo-guardrails",
+        "orchestra-research-ai-research-skills-nnsight",
+        "orchestra-research-ai-research-skills-openrlhf",
+        "orchestra-research-ai-research-skills-peft",
+        "orchestra-research-ai-research-skills-prompt-guard",
+        "orchestra-research-ai-research-skills-pytorch-fsdp2",
+        "orchestra-research-ai-research-skills-pytorch-lightning",
+        "orchestra-research-ai-research-skills-pyvene",
+        "orchestra-research-ai-research-skills-ray-data",
+        "orchestra-research-ai-research-skills-ray-train",
+        "orchestra-research-ai-research-skills-rwkv",
+        "orchestra-research-ai-research-skills-saelens",
+        "orchestra-research-ai-research-skills-sentencepiece",
+        "orchestra-research-ai-research-skills-sglang",
+        "orchestra-research-ai-research-skills-simpo",
+        "orchestra-research-ai-research-skills-skypilot",
+        "orchestra-research-ai-research-skills-slime",
+        "orchestra-research-ai-research-skills-swanlab",
+        "orchestra-research-ai-research-skills-tensorboard",
+        "orchestra-research-ai-research-skills-tensorrt-llm",
+        "orchestra-research-ai-research-skills-torchforge",
+        "orchestra-research-ai-research-skills-torchtitan",
+        "orchestra-research-ai-research-skills-transformer-lens",
+        "orchestra-research-ai-research-skills-trl-fine-tuning",
+        "orchestra-research-ai-research-skills-unsloth",
+        "orchestra-research-ai-research-skills-verl",
+        "orchestra-research-ai-research-skills-vllm",
+        "orchestra-research-ai-research-skills-weights-and-biases"
+      ],
+      "summary_zh": "专为AI研发全流程打造的一站式工具箱，打通从大模型训练、微调、压缩、评估对齐到多智能体协作的完整链路，让自主研究与模型落地更高效自动化。"
+    },
+    {
       "id": "ykdojo-claude-code-tips",
       "repo": "ykdojo/claude-code-tips",
       "name": "Claude Code Tips",
       "url": "https://github.com/ykdojo/claude-code-tips/blob/main/skills/clone/SKILL.md",
       "kind": "skill",
-      "stars": 8619,
+      "stars": 8621,
       "skill_ids": [
         "ykdojo-claude-code-tips-clone",
         "ykdojo-claude-code-tips-gha",
@@ -1458,7 +1458,7 @@
       "name": "Claude Seo",
       "url": "https://github.com/AgriciDaniel/claude-seo/blob/main/skills/seo/SKILL.md",
       "kind": "skill",
-      "stars": 8248,
+      "stars": 8269,
       "skill_ids": [
         "agricidaniel-claude-seo-seo",
         "agricidaniel-claude-seo-seo-ahrefs",
@@ -1492,7 +1492,7 @@
         "agricidaniel-claude-seo-seo-technical",
         "agricidaniel-claude-seo-seo-unlighthouse"
       ],
-      "summary_zh": "专为网站搜索排名打造的一站式AI工具集，覆盖全站体检、内容规划、竞对分析到排名监控全流程。组合起来能全方位诊断并自动优化SEO，帮你彻底告别繁琐的人工分析。"
+      "summary_zh": "这套合集提供一站式SEO分析、审计和优化工具，覆盖网站检测、内容策略、竞争研究和实时数据，助你全面提升搜索排名。"
     },
     {
       "id": "greensock-gsap-skills",
@@ -1500,7 +1500,7 @@
       "name": "Gsap Skills",
       "url": "https://github.com/greensock/gsap-skills/blob/main/skills/gsap-core/SKILL.md",
       "kind": "skill",
-      "stars": 7998,
+      "stars": 8073,
       "skill_ids": [
         "greensock-gsap-skills-gsap-core",
         "greensock-gsap-skills-gsap-frameworks",
@@ -1555,7 +1555,7 @@
       "name": "Claude Obsidian",
       "url": "https://github.com/AgriciDaniel/claude-obsidian/blob/main/skills/autoresearch/SKILL.md",
       "kind": "skill",
-      "stars": 6107,
+      "stars": 6114,
       "skill_ids": [
         "agricidaniel-claude-obsidian-autoresearch",
         "agricidaniel-claude-obsidian-canvas",
@@ -1573,7 +1573,7 @@
         "agricidaniel-claude-obsidian-wiki-query",
         "agricidaniel-claude-obsidian-wiki-retrieve"
       ],
-      "summary_zh": "这套合集让Claude成为Obsidian的AI大脑，实现知识库的自动搭建与维护。从自动调研、提炼网页生成笔记，到知识梳理与自检，打通了信息采集到知识沉淀的闭环。"
+      "summary_zh": "这套合集将Claude的自主研究与思维循环与Obsidian的知识管理无缝结合，实现从信息采集、深度思考到结构化存档的完整工作流。"
     },
     {
       "id": "backnotprop-plannotator",
@@ -1581,7 +1581,7 @@
       "name": "Plannotator",
       "url": "https://github.com/backnotprop/plannotator/blob/main/.agents/skills/pierre-guard/SKILL.md",
       "kind": "skill",
-      "stars": 5950,
+      "stars": 5953,
       "skill_ids": [
         "backnotprop-plannotator-pierre-guard",
         "backnotprop-plannotator-plannotator-annotate",
@@ -1595,7 +1595,7 @@
         "backnotprop-plannotator-review-renovate",
         "backnotprop-plannotator-update-deps"
       ],
-      "summary_zh": "这套合集解决项目从规划到交付的全流程问题。它能帮你把想法变成可执行目标，用可视化和标注辅助设计，同时搞定代码审查、依赖安全校验和自动化发布，实现研发闭环。"
+      "summary_zh": "一套围绕 Plannotator 的计划注释与代码审查工具集，覆盖从目标设定、注释审查到归档分析的完整工作流，提升开发协作效率。"
     },
     {
       "id": "ethereum-ethereum-org-website",
@@ -1612,7 +1612,7 @@
         "ethereum-ethereum-org-website-page-visual-tests",
         "ethereum-ethereum-org-website-performance"
       ],
-      "summary_zh": "这套合集是专为以太坊官网打造的全栈开发与质保工具集，从底层数据到界面构建，再到视觉测试与性能优化全面覆盖，确保网站体验和性能高度一致，帮开发者高效交付高质量页面。"
+      "summary_zh": "这套合集面向 ethereum.org 网站的日常开发与维护，覆盖数据层规范、设计系统、多语言翻译流程与审校、整页视觉回归测试以及性能优化，让贡献者在改动页面或功能时能一站式把控质量、风格与本地化一致性。"
     },
     {
       "id": "op7418-codepilot",
@@ -1620,7 +1620,7 @@
       "name": "CodePilot",
       "url": "https://github.com/op7418/CodePilot/blob/main/资料/feishu-openclaw-plugin/package/skills/feishu-bitable/SKILL.md",
       "kind": "skill",
-      "stars": 5941,
+      "stars": 5942,
       "skill_ids": [
         "op7418-codepilot-feishu-bitable",
         "op7418-codepilot-feishu-calendar",
@@ -1640,7 +1640,7 @@
       "name": "Claude Ads",
       "url": "https://github.com/AgriciDaniel/claude-ads/blob/main/ads/SKILL.md",
       "kind": "skill",
-      "stars": 5710,
+      "stars": 5715,
       "skill_ids": [
         "agricidaniel-claude-ads-ads",
         "agricidaniel-claude-ads-ads-amazon",
@@ -1674,7 +1674,7 @@
       "name": "Text To Cad",
       "url": "https://github.com/earthtojake/text-to-cad/blob/main/skills/bambu-labs/SKILL.md",
       "kind": "skill",
-      "stars": 5664,
+      "stars": 5672,
       "skill_ids": [
         "earthtojake-text-to-cad-bambu-labs",
         "earthtojake-text-to-cad-cad",
@@ -1689,7 +1689,7 @@
         "earthtojake-text-to-cad-step-parts",
         "earthtojake-text-to-cad-urdf"
       ],
-      "summary_zh": "专攻文本生成CAD与机器人描述，打通从零件建模、可视化审查、仿真配置验证到制造下单的全流程，让机械设计与机器人开发一气呵成。"
+      "summary_zh": "一套把自然语言转成可制造 CAD 的完整工具链，覆盖从建模、隐式/显式几何编辑、机器人语义配置，到可视化预览、切片生成 G-code，再到本地 Bambu 打印或 SendCutSend 在线下单的全流程，让用户一条思路走完从设计到成品。"
     },
     {
       "id": "trailofbits-skills",
@@ -1697,7 +1697,7 @@
       "name": "Skills",
       "url": "https://github.com/trailofbits/skills/blob/main/plugins/testing-handbook-skills/skills/address-sanitizer/SKILL.md",
       "kind": "skill",
-      "stars": 5565,
+      "stars": 5567,
       "skill_ids": [
         "trailofbits-skills-address-sanitizer",
         "trailofbits-skills-aflpp",
@@ -1711,6 +1711,7 @@
         "trailofbits-skills-c-review",
         "trailofbits-skills-cairo-vulnerability-scanner",
         "trailofbits-skills-cargo-fuzz",
+        "trailofbits-skills-chrome-mcp-troubleshooting",
         "trailofbits-skills-claude-in-chrome-troubleshooting",
         "trailofbits-skills-code-maturity-assessor",
         "trailofbits-skills-codeql",
@@ -1760,7 +1761,7 @@
         "trailofbits-skills-ton-vulnerability-scanner",
         "trailofbits-skills-wycheproof"
       ],
-      "summary_zh": "专攻安全审计与漏洞挖掘的实战技能集，将模糊测试、代码审查与自动化扫描串联，帮研究员一站式构建上下文、高效排查深层隐患。"
+      "summary_zh": "Trail of Bits 出品的安全审计技能合集，把模糊测试、智能合约扫描、代码审查、CI/CD 审计等工作流打包给 AI 助手调用，帮安全研究员和审计员一站式完成漏洞挖掘与代码审查任务。"
     },
     {
       "id": "tw93-waza",
@@ -1768,7 +1769,7 @@
       "name": "Waza",
       "url": "https://github.com/tw93/Waza/blob/main/skills/check/SKILL.md",
       "kind": "skill",
-      "stars": 5525,
+      "stars": 5527,
       "skill_ids": [
         "tw93-waza-check",
         "tw93-waza-design",
@@ -1779,7 +1780,7 @@
         "tw93-waza-think",
         "tw93-waza-write"
       ],
-      "summary_zh": "来自 tw93/Waza 的 8 个相关技能合集，适合按同一主题成组浏览和按需安装。"
+      "summary_zh": "一套面向开发者全流程的 AI 助理合集，覆盖从查资料、想点子、定方案，到写代码、审代码、查 bug、做设计、润色文案的各个环节，帮你把日常工程和创作任务都交给合适的\"专家\"来处理。"
     },
     {
       "id": "czlonkowski-n8n-skills",
@@ -1821,7 +1822,7 @@
       "name": "Product Manager Skills",
       "url": "https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/acquisition-channel-advisor/SKILL.md",
       "kind": "skill",
-      "stars": 4789,
+      "stars": 4793,
       "skill_ids": [
         "deanpeters-product-manager-skills-acquisition-channel-advisor",
         "deanpeters-product-manager-skills-ai-shaped-readiness-advisor",
@@ -1921,7 +1922,7 @@
       "name": "Godogen",
       "url": "https://github.com/htdt/godogen/blob/master/babylon/skills/babylon-help/SKILL.md",
       "kind": "skill",
-      "stars": 3337,
+      "stars": 3338,
       "skill_ids": [
         "htdt-godogen-babylon-help",
         "htdt-godogen-bevy-help",
@@ -1973,7 +1974,7 @@
         "basicmachines-co-basic-memory-skill",
         "basicmachines-co-basic-memory-status"
       ],
-      "summary_zh": "来自 basicmachines-co/basic-memory 的 34 个相关技能合集，适合按同一主题成组浏览和按需安装。"
+      "summary_zh": "把 Codex 的开发过程沉淀进 Basic Memory 知识库的一整套工作流，涵盖任务定向、决策记录、检查点保存、笔记编辑和对抗式评审，让 AI 编程助手能跨会话延续上下文、积累团队知识。"
     },
     {
       "id": "nowork-studio-notfair",
@@ -1981,7 +1982,7 @@
       "name": "NotFair",
       "url": "https://github.com/nowork-studio/NotFair/blob/main/meta-ads/audit/SKILL.md",
       "kind": "skill",
-      "stars": 2779,
+      "stars": 2782,
       "skill_ids": [
         "nowork-studio-notfair-audit",
         "nowork-studio-notfair-broken-link-checker",
@@ -2000,7 +2001,7 @@
         "nowork-studio-notfair-seo-page",
         "nowork-studio-notfair-setup-cms"
       ],
-      "summary_zh": "来自 nowork-studio/NotFair 的 16 个相关技能合集，适合按同一主题成组浏览和按需安装。"
+      "summary_zh": "一站式数字营销与SEO工作流套件，把广告投放（Google/Meta）、内容策划写作、关键词研究、AI搜索优化和网站体检串成闭环，帮营销团队从数据洞察直达落地执行。"
     },
     {
       "id": "nowork-studio-toprank",
@@ -2008,7 +2009,7 @@
       "name": "Toprank",
       "url": "https://github.com/nowork-studio/toprank/blob/main/meta-ads/audit/SKILL.md",
       "kind": "skill",
-      "stars": 2779,
+      "stars": 2782,
       "skill_ids": [
         "nowork-studio-toprank-audit",
         "nowork-studio-toprank-broken-link-checker",
@@ -2039,7 +2040,7 @@
         "nowork-studio-toprank-toprank-upgrade-skill",
         "nowork-studio-toprank-toprank-weekly-review"
       ],
-      "summary_zh": "一站式解决数字营销获客难题，把SEO与AI搜索优化、广告投放及内容策划全链路打通，实现从找词、写文到广告转化的流量闭环增长。"
+      "summary_zh": "一套面向数字营销团队的全流程作战工具箱，把 SEO 内容生产、关键词研究、Google/Meta 广告投放与落地页优化串成闭环，让一个人也能像专业增长团队一样做策略、写内容、投广告并持续诊断效果。"
     },
     {
       "id": "himself65-finance-skills",
@@ -2047,7 +2048,7 @@
       "name": "Finance Skills",
       "url": "https://github.com/himself65/finance-skills/blob/main/plugins/market-analysis/skills/company-valuation/SKILL.md",
       "kind": "skill",
-      "stars": 2703,
+      "stars": 2705,
       "skill_ids": [
         "himself65-finance-skills-company-valuation",
         "himself65-finance-skills-discord-reader",
@@ -2104,14 +2105,14 @@
       "name": "9arm Skills",
       "url": "https://github.com/thananon/9arm-skills/blob/main/skills/engineering/debug-mantra/SKILL.md",
       "kind": "skill",
-      "stars": 2670,
+      "stars": 2672,
       "skill_ids": [
         "thananon-9arm-skills-debug-mantra",
         "thananon-9arm-skills-management-talk",
         "thananon-9arm-skills-post-mortem",
         "thananon-9arm-skills-scrutinize"
       ],
-      "summary_zh": "来自 thananon/9arm-skills 的 4 个相关技能合集，适合按同一主题成组浏览和按需安装。"
+      "summary_zh": "这套合集面向工程师的日常硬核工作流，从排查 bug、复盘事故，到把技术细节翻译给管理层，再到以局外人视角审视方案，帮你把调试、复盘、汇报、评审这几件容易踩坑的事都做得更扎实。"
     },
     {
       "id": "ericosiu-ai-marketing-skills",
@@ -2119,7 +2120,7 @@
       "name": "Ai Marketing Skills",
       "url": "https://github.com/ericosiu/ai-marketing-skills/blob/main/autoresearch/SKILL.md",
       "kind": "skill",
-      "stars": 2541,
+      "stars": 2542,
       "skill_ids": [
         "ericosiu-ai-marketing-skills-autoresearch",
         "ericosiu-ai-marketing-skills-clone-site",
@@ -2144,7 +2145,7 @@
         "ericosiu-ai-marketing-skills-x-longform-post",
         "ericosiu-ai-marketing-skills-yt-competitive-analysis"
       ],
-      "summary_zh": "这套开源AI营销工具集专攻获客与增长，打通了从内容生产、主动触达到转化变现的全链路，帮你用AI自动化搞定营销策略与执行，大幅提升引流转化效率。"
+      "summary_zh": "一套面向市场和增长团队的 AI 技能合集，覆盖内容创作、SEO、外联、销售线索、转化优化到财务分析的全链路，配合使用可把日常营销动作串成可量化、可迭代的增长闭环。"
     },
     {
       "id": "hyf0-vue-skills",
@@ -2152,7 +2153,7 @@
       "name": "Vue Skills",
       "url": "https://github.com/hyf0/vue-skills/blob/main/skills/create-adaptable-composable/SKILL.md",
       "kind": "skill",
-      "stars": 2533,
+      "stars": 2534,
       "skill_ids": [
         "hyf0-vue-skills-create-adaptable-composable",
         "hyf0-vue-skills-vue-best-practices",
@@ -2171,7 +2172,7 @@
       "name": "Skills",
       "url": "https://github.com/vuejs-ai/skills/blob/main/skills/create-adaptable-composable/SKILL.md",
       "kind": "skill",
-      "stars": 2533,
+      "stars": 2534,
       "skill_ids": [
         "vuejs-ai-skills-create-adaptable-composable",
         "vuejs-ai-skills-vue-best-practices",
@@ -2190,12 +2191,12 @@
       "name": "Lean Ctx",
       "url": "https://github.com/yvgude/lean-ctx/blob/main/skills/lean-ctx/SKILL.md",
       "kind": "skill",
-      "stars": 2461,
+      "stars": 2467,
       "skill_ids": [
         "yvgude-lean-ctx-lean-ctx",
         "yvgude-lean-ctx-templates"
       ],
-      "summary_zh": "专给AI代理打造上下文运行环境，整合海量工具、多维读取与代码解析能力，帮Agent高效获取并理解复杂项目信息，解决AI因缺乏上下文而执行跑偏的痛点。"
+      "summary_zh": "这套合集为 AI 智能体提供轻量的代码上下文运行时，整合文件读取、Shell 操作和 AST 解析能力，让 Agent 在大型代码库中也能精准定位和理解代码，省去手动喂上下文的麻烦。"
     },
     {
       "id": "the-vibe-company-companion",
@@ -2203,7 +2204,7 @@
       "name": "Companion",
       "url": "https://github.com/The-Vibe-Company/companion/blob/main/archived/legacy-companion/.agents/skills/adapt/SKILL.md",
       "kind": "skill",
-      "stars": 2354,
+      "stars": 2356,
       "skill_ids": [
         "the-vibe-company-companion-adapt",
         "the-vibe-company-companion-animate",
@@ -2232,7 +2233,7 @@
       "name": "Claude Code Plugins Plus Skills",
       "url": "https://github.com/jeremylongshore/claude-code-plugins-plus-skills/blob/main/plugins/ai-agency/agency-os/skills/agency-os/SKILL.md",
       "kind": "skill",
-      "stars": 2309,
+      "stars": 2314,
       "skill_ids": [
         "jeremylongshore-claude-code-plugins-plus-skills-agency-os",
         "jeremylongshore-claude-code-plugins-plus-skills-amplify",
@@ -2348,7 +2349,7 @@
         "jeremylongshore-claude-code-plugins-plus-skills-trace",
         "jeremylongshore-claude-code-plugins-plus-skills-workflow"
       ],
-      "summary_zh": "来自 jeremylongshore/claude-code-plugins-plus-skills 的 113 个相关技能合集，适合按同一主题成组浏览和按需安装。"
+      "summary_zh": "一套把 Claude Code 打造成完整 AI 工程团队的技能合集，覆盖从需求梳理、架构决策到项目接管、状态汇报的全流程，让你像调度一家 AI 代理公司一样推进开发工作。"
     },
     {
       "id": "njbrake-agent-of-empires",
@@ -2362,7 +2363,7 @@
         "njbrake-agent-of-empires-hermes-skill",
         "njbrake-agent-of-empires-openclaw-skill"
       ],
-      "summary_zh": "专治AI编码时代文档与代码脱节的痛点，既能统一管理AI编程会话，又能自动审查并同步更新过时文档，确保项目文档始终与代码库一致。"
+      "summary_zh": "一套围绕 AI 编码代理的运维合集，帮你统一启动、监控和管理 Claude Code、Codex 等多种 Agent 会话，并顺手核查项目文档与代码的一致性，适合同时驾驭多个 AI 助手的开发者。"
     },
     {
       "id": "supabase-agent-skills",
@@ -2370,7 +2371,7 @@
       "name": "Agent Skills",
       "url": "https://github.com/supabase/agent-skills/blob/main/skills/supabase/SKILL.md",
       "kind": "skill",
-      "stars": 2194,
+      "stars": 2195,
       "skill_ids": [
         "supabase-agent-skills-supabase",
         "supabase-agent-skills-supabase-postgres-best-practices"
@@ -2383,7 +2384,7 @@
       "name": "Web Quality Skills",
       "url": "https://github.com/addyosmani/web-quality-skills/blob/main/skills/accessibility/SKILL.md",
       "kind": "skill",
-      "stars": 2180,
+      "stars": 2182,
       "skill_ids": [
         "addyosmani-web-quality-skills-accessibility",
         "addyosmani-web-quality-skills-best-practices",
@@ -2400,7 +2401,7 @@
       "name": "Learning Opportunities",
       "url": "https://github.com/DrCatHicks/learning-opportunities/blob/main/learning-opportunities/skills/learning-opportunities/SKILL.md",
       "kind": "skill",
-      "stars": 2099,
+      "stars": 2100,
       "skill_ids": [
         "drcathicks-learning-opportunities-learning-opportunities",
         "drcathicks-learning-opportunities-orient"
@@ -2432,7 +2433,7 @@
         "expo-skills-upgrading-expo",
         "expo-skills-use-dom"
       ],
-      "summary_zh": "专为Expo开发者打造的全栈实战工具集，覆盖从UI构建、原生集成、自动化部署到多端上线的完整周期，一站式解决跨平台应用的工程化与落地难题。"
+      "summary_zh": "这套合集面向 Expo/React Native 开发全流程，涵盖原生 UI 搭建、原生模块开发、与现有 iOS/Android 应用集成、API 路由、EAS 构建发布与 OTA 更新、CI/CD 工作流以及线上监控分析，帮你从写代码到上线运营一站式搞定。"
     },
     {
       "id": "aaron-he-zhu-seo-geo-claude-skills",
@@ -2440,7 +2441,7 @@
       "name": "Seo Geo Claude Skills",
       "url": "https://github.com/aaron-he-zhu/seo-geo-claude-skills/blob/main/monitor/alert-manager/SKILL.md",
       "kind": "skill",
-      "stars": 2007,
+      "stars": 2008,
       "skill_ids": [
         "aaron-he-zhu-seo-geo-claude-skills-alert-manager",
         "aaron-he-zhu-seo-geo-claude-skills-backlink-analyzer",
@@ -2463,7 +2464,7 @@
         "aaron-he-zhu-seo-geo-claude-skills-serp-analysis",
         "aaron-he-zhu-seo-geo-claude-skills-technical-seo-checker"
       ],
-      "summary_zh": "专攻SEO与AI搜索优化的全套工具，组合起来能系统化搞定竞品分析、内容诊断及权威度建设，帮你同时拿下传统搜索排名和AI引用率。"
+      "summary_zh": "这套合集面向 SEO 和 AI 搜索优化场景，覆盖从竞品分析、内容审计、外链评估到 AI 引用优化与排名监控的完整链路，帮助内容团队系统性提升站点在传统搜索和 ChatGPT、Perplexity 等生成式引擎中的可见度。"
     },
     {
       "id": "softaworks-agent-toolkit",
@@ -2538,7 +2539,7 @@
         "kubb-labs-kubb-spec-driven",
         "kubb-labs-kubb-testing"
       ],
-      "summary_zh": "专为团队协作打造的工程化规范合集，提供从编码、文档、测试到发版的全流程标准指南，帮你统一开发规范、省去沟通成本，让项目维护更高效省心。"
+      "summary_zh": "这套合集围绕 Kubb 项目的日常开发协作，把配置编写、代码规范、JSDoc 注释、测试调试、PR 流程到文档润色和变更日志生成串成一条龙，帮贡献者按统一标准高效完成从写代码到发布的全流程。"
     },
     {
       "id": "conorbronsdon-avoid-ai-writing",
@@ -2546,12 +2547,12 @@
       "name": "Avoid Ai Writing",
       "url": "https://github.com/conorbronsdon/avoid-ai-writing/blob/main/SKILL.md",
       "kind": "skill",
-      "stars": 1696,
+      "stars": 1700,
       "skill_ids": [
         "conorbronsdon-avoid-ai-writing",
         "conorbronsdon-avoid-ai-writing-avoid-ai-writing"
       ],
-      "summary_zh": "来自 conorbronsdon/avoid-ai-writing 的 2 个相关技能合集，适合按同一主题成组浏览和按需安装。"
+      "summary_zh": "这套合集专门用来揪出文字里的\"AI 味\"，帮你审查并改写内容，去除那些一眼就能看出是 AI 生成的套路化表达，让稿件读起来更像真人手写。"
     },
     {
       "id": "dvdsgl-claude-canvas",
@@ -2640,7 +2641,7 @@
       "name": "Agent Skills",
       "url": "https://github.com/callstackincubator/agent-skills/blob/main/plugins/vendored/.agents/skills/agent-device/SKILL.md",
       "kind": "skill",
-      "stars": 1407,
+      "stars": 1408,
       "skill_ids": [
         "callstackincubator-agent-skills-agent-device",
         "callstackincubator-agent-skills-dogfood",
@@ -2661,13 +2662,13 @@
       "name": "Claude Code Safety Net",
       "url": "https://github.com/kenryu42/claude-code-safety-net/blob/main/skills/cc-safety-net/SKILL.md",
       "kind": "skill",
-      "stars": 1373,
+      "stars": 1374,
       "skill_ids": [
         "kenryu42-claude-code-safety-net-cc-safety-net",
         "kenryu42-claude-code-safety-net-set-custom-rules",
         "kenryu42-claude-code-safety-net-verify-custom-rules"
       ],
-      "summary_zh": "专为 Claude Code 打造的安全网，让你能配置并验证自定义规则，有效约束 AI 的代码生成行为，确保开发过程安全合规、不越界。"
+      "summary_zh": "这套合集为 Claude Code 提供安全防护网，帮你在用户、项目或团队层面统一配置规则手册，并支持自定义规则的设置与校验，避免 AI 写代码时踩雷或越界操作。"
     },
     {
       "id": "cloudai-x-claude-workflow-v2",
@@ -2782,21 +2783,7 @@
         "actionbook-rust-skills-rust-trait-explorer",
         "actionbook-rust-skills-unsafe-checker"
       ],
-      "summary_zh": "这套Rust技能合集专为多场景开发打造，打通代码规范与各类垂直业务，提供一站式最佳实践与工作流支持，解决开发与规范脱节的痛点，大幅提升项目交付效率。"
-    },
-    {
-      "id": "d-kimuson-claude-code-viewer",
-      "repo": "d-kimuson/claude-code-viewer",
-      "name": "Claude Code Viewer",
-      "url": "https://github.com/d-kimuson/claude-code-viewer/blob/main/.agents/skills/fix-schema/SKILL.md",
-      "kind": "skill",
-      "stars": 1209,
-      "skill_ids": [
-        "d-kimuson-claude-code-viewer-fix-schema",
-        "d-kimuson-claude-code-viewer-i18n",
-        "d-kimuson-claude-code-viewer-release"
-      ],
-      "summary_zh": "专给 claude-code-viewer 项目用的日常维护工具集，把日志修复、多语言更新和发版这些琐事自动化，省去繁琐操作，让项目迭代又快又省心。"
+      "summary_zh": "一套面向 Rust 开发的技能合集，覆盖从代码规范、CLI、云原生到嵌入式、金融、物联网等多种场景，按需调用对应技能，让 AI 助手在不同领域都能给出贴合实践的 Rust 编码建议。"
     },
     {
       "id": "wondelai-skills",
@@ -2804,7 +2791,7 @@
       "name": "Skills",
       "url": "https://github.com/wondelai/skills/blob/main/37signals-way/SKILL.md",
       "kind": "skill",
-      "stars": 1207,
+      "stars": 1211,
       "skill_ids": [
         "wondelai-skills-37signals-way",
         "wondelai-skills-blue-ocean-strategy",
@@ -2850,6 +2837,20 @@
         "wondelai-skills-web-typography"
       ],
       "summary_zh": "把商业战略、产品设计、系统架构与代码规范等经典方法论融为一体，帮你系统化解决从做产品、搞增长到写代码的全链路痛点，相当于给产品研发团队配了个资深智囊团。"
+    },
+    {
+      "id": "d-kimuson-claude-code-viewer",
+      "repo": "d-kimuson/claude-code-viewer",
+      "name": "Claude Code Viewer",
+      "url": "https://github.com/d-kimuson/claude-code-viewer/blob/main/.agents/skills/fix-schema/SKILL.md",
+      "kind": "skill",
+      "stars": 1210,
+      "skill_ids": [
+        "d-kimuson-claude-code-viewer-fix-schema",
+        "d-kimuson-claude-code-viewer-i18n",
+        "d-kimuson-claude-code-viewer-release"
+      ],
+      "summary_zh": "专给 claude-code-viewer 项目用的日常维护工具集，把日志修复、多语言更新和发版这些琐事自动化，省去繁琐操作，让项目迭代又快又省心。"
     },
     {
       "id": "udecode-dotai",
@@ -2993,7 +2994,7 @@
         "asklokesh-claudeskill-loki-mode-openclaw",
         "asklokesh-claudeskill-loki-mode-prompt-optimization"
       ],
-      "summary_zh": "这套合集专为AI全自动开发打造，让AI从需求文档一路干到部署。通过关键节点人工审查和提示词优化，确保AI自主跑项目时既高效又不失控。"
+      "summary_zh": "一套面向自主软件开发的智能体合集，能把需求文档直接驱动到部署上线，过程中按节奏暂停供人工审阅，并通过提示优化提升非推理模型的执行准确度，适合追求极少人工干预的端到端研发流程。"
     },
     {
       "id": "vercel-labs-next-skills",
@@ -3001,7 +3002,7 @@
       "name": "Next Skills",
       "url": "https://github.com/vercel-labs/next-skills/blob/main/skills/next-best-practices/SKILL.md",
       "kind": "skill",
-      "stars": 910,
+      "stars": 911,
       "skill_ids": [
         "vercel-labs-next-skills-next-best-practices",
         "vercel-labs-next-skills-next-cache-components",
@@ -3015,7 +3016,7 @@
       "name": "Agentsys",
       "url": "https://github.com/agent-sh/agentsys/blob/main/.kiro/skills/consult/SKILL.md",
       "kind": "skill",
-      "stars": 842,
+      "stars": 843,
       "skill_ids": [
         "agent-sh-agentsys-consult",
         "agent-sh-agentsys-debate",
@@ -3089,7 +3090,7 @@
         "zeroz-lab-cc-design",
         "zeroz-lab-cc-design-cc-design"
       ],
-      "summary_zh": "来自 ZeroZ-lab/cc-design 的 2 个相关技能合集，适合按同一主题成组浏览和按需安装。"
+      "summary_zh": "这套合集专注于高保真 HTML 设计稿和原型制作，适合需要快速把创意落地成可视化网页界面的场景，省去从零搭建的麻烦。"
     },
     {
       "id": "zhanghandong-makepad-skills",
@@ -3201,7 +3202,7 @@
         "alinaqi-claude-bootstrap-ui-mobile",
         "alinaqi-claude-bootstrap-ui-testing"
       ],
-      "summary_zh": "围绕Claude的全栈AI开发启动库，集成代理协作、自动测试、云服务与移动端模板，提供标准化流水线，助你用AI快速搭建并自动化从基础设施到业务应用的全流程项目。"
+      "summary_zh": "一套覆盖前后端、移动端、云数据库到 AI 智能体开发的 Claude Code 启动包，把团队协作规范、TDD 流水线和主流技术栈最佳实践打包好，让你新开项目时直接套用，少踩坑、快速上手。"
     },
     {
       "id": "onmax-nuxt-skills",
@@ -3423,7 +3424,7 @@
         "fradser-dotclaude-web-design-guidelines",
         "fradser-dotclaude-writing-plans"
       ],
-      "summary_zh": "为AI编程助手打造的全流程技能包，覆盖从需求构思、规范开发、多智能体协作到Git工作流，让AI像专业开发团队一样高效交付项目。"
+      "summary_zh": "一套面向 AI 编程助手的全流程技能包，涵盖需求脑暴、代码理解、最佳实践、测试驱动开发到提交推送，把日常开发协作环节串成开箱即用的工作流，让 Claude 在真实项目里更像一个训练有素的团队成员。"
     },
     {
       "id": "swarmclawai-swarmclaw",
@@ -3445,7 +3446,7 @@
         "swarmclawai-swarmclaw-swarmclaw",
         "swarmclawai-swarmclaw-swarmvault"
       ],
-      "summary_zh": "来自 swarmclawai/swarmclaw 的 11 个相关技能合集，适合按同一主题成组浏览和按需安装。"
+      "summary_zh": "一套面向 SwarmClaw 智能体的能力扩展包，把编码委派、GitHub、Google Workspace、图像与 PDF 生成、内容摘要等常用外部工具打包成可调用技能，让 AI 代理在日常任务中能顺手调用各种 CLI，省去自己拼装集成的麻烦。"
     },
     {
       "id": "openagentsinc-openagents",
@@ -3650,7 +3651,7 @@
         "product-on-purpose-pm-skills-utility-pm-skill-validate",
         "product-on-purpose-pm-skills-utility-update-pm-skills"
       ],
-      "summary_zh": "专为产品经理打造的全流程工具箱，覆盖从定义问题、挖掘机会到拆解需求、上线验收的完整链路，帮你高效打通产品从想清楚到做出来的全过程。"
+      "summary_zh": "这套产品管理技能合集，覆盖从定义假设到交付验收的全流程，提供即插即用的最佳实践，帮团队系统化完成产品工作。"
     },
     {
       "id": "avifenesh-agnix",
@@ -3693,7 +3694,7 @@
         "avifenesh-agnix-with-hooks",
         "avifenesh-agnix-with-model"
       ],
-      "summary_zh": "这套工具集专为AI Agent开发打造，帮你一站式搞定配置校验、代码审查、测试与部署，让Agent跑得更规范、代码更安全。"
+      "summary_zh": "这是一套围绕 AI 代理开发与运维的工具合集，覆盖配置校验、代码审查、生产部署等环节，组合起来为你提供从测试到上线的全流程支持。"
     },
     {
       "id": "bitwize-music-studio-claude-ai-music-skills",
@@ -3829,7 +3830,7 @@
         "borghei-claude-skills-vpe-advisor",
         "borghei-claude-skills-xlsx-toolkit"
       ],
-      "summary_zh": "来自 borghei/Claude-Skills 的 60 个相关技能合集，适合按同一主题成组浏览和按需安装。"
+      "summary_zh": "一套面向企业管理层的 AI 顾问合集，覆盖 CEO、CFO、CAO 等高管视角和董事会、数据分析、变革管理等场景，帮你在战略决策、组织治理和经营分析时一站式获取多角色专业建议。"
     },
     {
       "id": "whawkinsiv-claude-code-skills",
@@ -3928,7 +3929,7 @@
         "sepinetam-stata-mcp-rfc-impl-generator",
         "sepinetam-stata-mcp-stata-skill"
       ],
-      "summary_zh": "来自 SepineTam/stata-mcp 的 2 个相关技能合集，适合按同一主题成组浏览和按需安装。"
+      "summary_zh": "这套合集面向 Stata 用户和开发者，一边能直接在 MCP 环境里跑 do 文件、调用 ado 包，一边帮你把功能想法快速整理成 RFC 和实现文档，让科研脚本开发和协作落地都更顺手。"
     },
     {
       "id": "ognjengt-founder-skills",
@@ -3977,7 +3978,7 @@
         "sergebulaev-linkedin-skills-linkedin-skills",
         "sergebulaev-linkedin-skills-linkedin-thread-monitor"
       ],
-      "summary_zh": "来自 sergebulaev/linkedin-skills 的 12 个相关技能合集，适合按同一主题成组浏览和按需安装。"
+      "summary_zh": "一站式 LinkedIn 运营助手合集，覆盖从内容策划、爆款撰写、评论互动到个人主页优化和员工社媒激活的全流程，帮助营销人员和个人品牌打造者按 2026 算法规则系统化产出高表现内容。"
     },
     {
       "id": "human-avatar-skills-for-humanity",
@@ -4048,7 +4049,7 @@
         "human-avatar-skills-for-humanity-s4h-economics-opportunity-cost",
         "human-avatar-skills-for-humanity-s4h-emotional-motivation-mapping"
       ],
-      "summary_zh": "来自 human-avatar/skills-for-humanity 的 60 个相关技能合集，适合按同一主题成组浏览和按需安装。"
+      "summary_zh": "一套面向思维与表达训练的技能合集，把美感判断、类比推理等人文化的思考方式拆成可调用的小工具，帮你在写作、设计或决策时检查一致性、找到更简洁的方案、借鉴跨领域思路，让 AI 协作更贴近人类的判断力。"
     },
     {
       "id": "severity1-claude-code-auto-memory",
@@ -4069,12 +4070,12 @@
       "name": "Openaccountants",
       "url": "https://github.com/openaccountants/openaccountants/blob/main/cookbook-contribution/custom_skills/classifying-tax-transactions/SKILL.md",
       "kind": "skill",
-      "stars": 130,
+      "stars": 135,
       "skill_ids": [
         "openaccountants-openaccountants-classifying-tax-transactions",
         "openaccountants-openaccountants-tax-workflow-base"
       ],
-      "summary_zh": "来自 openaccountants/openaccountants 的 2 个相关技能合集，适合按同一主题成组浏览和按需安装。"
+      "summary_zh": "这套合集为美国小微企业和会计师打造，帮你把银行流水按 Schedule C 税表自动分类，并通过标准化的清晰/模糊/拒绝三态流程，让税务等强监管场景的判定更可靠可追溯。"
     },
     {
       "id": "resend-resend-skills",
@@ -4082,7 +4083,7 @@
       "name": "Resend Skills",
       "url": "https://github.com/resend/resend-skills/blob/main/skills/agent-email-inbox/SKILL.md",
       "kind": "skill",
-      "stars": 127,
+      "stars": 128,
       "skill_ids": [
         "resend-resend-skills-agent-email-inbox",
         "resend-resend-skills-email-best-practices",
@@ -4090,7 +4091,7 @@
         "resend-resend-skills-resend",
         "resend-resend-skills-resend-cli"
       ],
-      "summary_zh": "解决AI与Web开发中的邮件集成难题，提供一站式现代邮件方案。组合起来打通了模板编写、收发、防垃圾配置与AI收件箱，帮你轻松构建稳定可靠的邮件功能。"
+      "summary_zh": "一套面向 Resend 邮件平台的开发者技能合集，覆盖从模板搭建、发信投递到 AI 收件箱处理的全流程，帮你又快又稳地把邮件功能接入产品，避免踩到送达率和反垃圾的坑。"
     },
     {
       "id": "guia-matthieu-clawfu-skills",
@@ -4281,7 +4282,7 @@
         "raintree-technology-claude-starter-transactions",
         "raintree-technology-claude-starter-whop"
       ],
-      "summary_zh": "专为Claude开发者打造的全能启动包，帮你深度定制Claude Code与各类扩展，快速打通金融和Web3等专业领域，一站式解决AI编程的集成与提效需求。"
+      "summary_zh": "这套合集把 Claude Code 的开发体验打包成一站式工作台，覆盖从技能、命令、Hook、MCP 配置的搭建，到 Plaid、Aptos、Anthropic API 等常用集成的专家辅助，帮你快速搭出可上手的 Claude 项目脚手架。"
     },
     {
       "id": "spartan-stratos-spartan-ai-toolkit",
@@ -4348,7 +4349,7 @@
         "redis-agent-skills-redis-semantic-cache",
         "redis-agent-skills-redis-vector-search"
       ],
-      "summary_zh": "来自 redis/agent-skills 的 10 个相关技能合集，适合按同一主题成组浏览和按需安装。"
+      "summary_zh": "这套 Redis 官方技能合集覆盖建模、集群、连接、性能、可观测、安全到向量检索与语义缓存等方向，帮你在搭建或优化 Redis 应用时一站式获取最佳实践，少踩坑、用得更顺手。"
     },
     {
       "id": "fvadicamo-dev-agent-skills",
@@ -4406,7 +4407,7 @@
         "mohamedabdallah-14-unslop-unslop-reasoning",
         "mohamedabdallah-14-unslop-unslop-review"
       ],
-      "summary_zh": "来自 MohamedAbdallah-14/unslop 的 6 个相关技能合集，适合按同一主题成组浏览和按需安装。"
+      "summary_zh": "这套工具专门用来\"去 AI 味\"，把提交信息、代码评审、记忆文件、推理过程等各种 AI 生成内容改写得更像真人手写，去掉套话和营销腔，让团队协作产出读起来自然可信。"
     }
   ]
 }
