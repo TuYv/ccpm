@@ -16,10 +16,11 @@
     "url": "https://github.com/redis/agent-skills/blob/main/skills/redis-vector-search/SKILL.md",
     "path": "skills/redis-vector-search/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-05T21:09:51.908Z",
+    "discovered_at": "2026-06-05T22:48:42.807Z",
     "stars": 68,
     "language": "TypeScript",
     "pushed_at": "2026-05-27T10:12:12Z",
     "license": "MIT"
-  }
+  },
+  "summary_zh": "一份 Redis 向量检索的实战指南，讲清 HNSW 与 FLAT 的选型、索引参数怎么配、如何把向量相似度和标签或数值过滤结合，并演示用 RedisVL 搭建 RAG 流程，适合做嵌入检索或调优 HNSW 参数时参考。"
 }

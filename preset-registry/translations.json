@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-06-05T21:18:31.164Z",
+  "updated_at": "2026-06-05T22:55:39.219Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -9208,19 +9208,19 @@
       "translated_at": "2026-05-19T23:22:32.717Z"
     },
     "skill:product-on-purpose-pm-skills-utility-pm-changelog-curator": {
-      "hash": "298c7a6fd29343cc",
-      "summary_zh": "这是一个从 Git 记录自动生成结构化更新日志草稿的工具，兼容多种 AI 编程助手，帮你免去手动整理提交记录的麻烦，快速输出规范干净的版本说明。",
-      "translated_at": "2026-05-20T22:58:54.235Z"
+      "hash": "bd7e27b55b8c60fe",
+      "summary_zh": "根据 git log 自动生成规范的 CHANGELOG 草稿，自动过滤内部备注、破折号等不合规内容，适合需要整理版本变更记录的开发团队，在 Claude Code、Cursor、Copilot 等多种环境下都能直接调用。",
+      "translated_at": "2026-06-05T22:52:43.361Z"
     },
     "skill:product-on-purpose-pm-skills-utility-pm-critic": {
-      "hash": "a2067f2a42ccfa2d",
-      "summary_zh": "这是一个专给产品方案找茬的AI审查工具，能自动给需求文档挑错，按严重程度分级并提供修改建议，适合产品经理用来打磨和完善需求。",
-      "translated_at": "2026-05-20T22:58:51.865Z"
+      "hash": "1be5d2a2416c2c13",
+      "summary_zh": "用对抗式视角审查产品经理写的需求或方案文档，找出问题并按 P0–P3 分级，附带具体修改建议，适合在评审前自检或多人协作时统一质量标准。",
+      "translated_at": "2026-06-05T22:52:43.838Z"
     },
     "skill:product-on-purpose-pm-skills-utility-pm-release-conductor": {
-      "hash": "89ad8027a7cb7a1f",
-      "summary_zh": "这是一个多阶段自动化发布向导，能按流程引导并调度审计、更新日志等子任务，适配各类AI编程工具，解决跨平台发布流程难以统一规范和自动执行的问题。",
-      "translated_at": "2026-05-20T22:58:51.598Z"
+      "hash": "86947848a5a12010",
+      "summary_zh": "通过六道发布关卡（G0–G4）的引导式流程，一步步把控版本发布节奏，在 Claude Code 上自动联动审计与变更日志子代理，在 Codex、Cursor 等其他客户端则内联执行，适合需要规范化发布流程的团队。",
+      "translated_at": "2026-06-05T22:52:44.398Z"
     },
     "skill:product-on-purpose-pm-skills-utility-pm-skill-iterate": {
       "hash": "82444c2dcd9c8967",
@@ -10233,9 +10233,9 @@
       "translated_at": "2026-05-20T04:54:55.769Z"
     },
     "skill:raintree-technology-claude-starter-anthropic": {
-      "hash": "9ff7f4ff61cbf808",
-      "summary_zh": "这是一个精通Claude API的专家助手，专门帮开发者解决接口调用、提示词编写及功能接入难题，适合开发Claude应用时随时提问和查阅最佳实践。",
-      "translated_at": "2026-05-20T04:55:03.760Z"
+      "hash": "d8c59eede7a012a7",
+      "summary_zh": "专注于 Claude API 集成的助手，覆盖消息接口、模型选型、提示缓存、工具调用、流式输出、批处理等用法，适合在接入 Anthropic SDK、调优提示工程或迁移 Claude 版本时随时查询。",
+      "translated_at": "2026-06-05T22:52:48.023Z"
     },
     "skill:raintree-technology-claude-starter-aptos": {
       "hash": "32ecdbc062f099d6",
@@ -10273,9 +10273,9 @@
       "translated_at": "2026-05-20T04:56:09.573Z"
     },
     "skill:raintree-technology-claude-starter-claude-skill-builder": {
-      "hash": "aa910fdadd243b0c",
-      "summary_zh": "交互式生成符合规范的 Claude 智能体技能文件，帮你自动搞定繁琐的配置和模板结构，适合需要给 Claude 快速开发或扩展新技能的场景。",
-      "translated_at": "2026-05-20T04:56:24.731Z"
+      "hash": "18ca6df6410b3f35",
+      "summary_zh": "一个交互式工具，帮你为 Claude Code 快速搭建本地技能，支持配置触发条件、描述、附带的脚本资源和可用工具，也能生成 Codex、Cursor 等平台所需的格式，省去手写脚手架的麻烦。",
+      "translated_at": "2026-06-05T22:52:48.353Z"
     },
     "skill:raintree-technology-claude-starter-cli-assistant": {
       "hash": "785360fc4480da6e",
@@ -10303,9 +10303,9 @@
       "translated_at": "2026-05-20T04:57:25.778Z"
     },
     "skill:raintree-technology-claude-starter-expo": {
-      "hash": "45061ec8b028893b",
-      "summary_zh": "它是个精通 Expo 官方文档的 AI 助手，专帮开发者搞定 React Native 跨平台开发中的配置、构建、部署和路由等疑难杂症。",
-      "translated_at": "2026-05-20T04:57:36.097Z"
+      "hash": "63a668611a2488e7",
+      "summary_zh": "专注于 Expo 和 React Native 的智能助手，覆盖 EAS 云端构建、OTA 热更新、文件路由及原生模块开发，适合在配置打包、发布上架或处理跨端项目疑难时随时调用。",
+      "translated_at": "2026-06-05T22:53:08.388Z"
     },
     "skill:raintree-technology-claude-starter-eas-build": {
       "hash": "2d216ff4e39974d2",
@@ -10368,9 +10368,9 @@
       "translated_at": "2026-05-20T04:59:23.083Z"
     },
     "skill:raintree-technology-claude-starter-plaid": {
-      "hash": "4b7b58093b99e908",
-      "summary_zh": "这是专攻Plaid银行API的集成助手，能帮你轻松打通银行账户连接、获取交易流水等金融数据，非常适合开发需要ACH转账或读取银行数据的金融科技应用。",
-      "translated_at": "2026-05-20T04:59:32.507Z"
+      "hash": "276f76640cec8c04",
+      "summary_zh": "面向 Plaid 银行 API 集成的专家指引，涵盖 Link 流程、ACH 账户验证、交易同步与分类、KYC 身份核验、账户余额查询及 Webhook 处理，适合做银行连接和支付场景的开发者快速上手。",
+      "translated_at": "2026-06-05T22:53:38.512Z"
     },
     "skill:raintree-technology-claude-starter-protocol-expert": {
       "hash": "428abb20261dcfca",
@@ -10398,9 +10398,9 @@
       "translated_at": "2026-05-20T05:00:38.146Z"
     },
     "skill:raintree-technology-claude-starter-stripe": {
-      "hash": "3946b8f71a13a192",
-      "summary_zh": "这是个精通Stripe的API开发助手，熟读官方文档，专门帮你解决支付、账单或订阅等支付相关的开发难题。",
-      "translated_at": "2026-05-20T05:00:41.482Z"
+      "hash": "dc955d3d1480e318",
+      "summary_zh": "专攻 Stripe 支付集成的智能助手，涵盖 Checkout、订阅、Connect 分账、Webhook 验签等常见场景，适合在接入信用卡收款、搭建订阅计费或处理退款对账时快速给出实现思路。",
+      "translated_at": "2026-06-05T22:53:41.409Z"
     },
     "skill:raintree-technology-claude-starter-storage-integration": {
       "hash": "2e50ec55504eb09a",
@@ -10408,9 +10408,9 @@
       "translated_at": "2026-05-20T05:00:54.142Z"
     },
     "skill:raintree-technology-claude-starter-supabase": {
-      "hash": "64fb17a22ab39794",
-      "summary_zh": "这是一个精通 Supabase 的 AI 专家，熟读海量官方文档，能帮你搞定数据库、认证、存储等各类后端开发疑问，适合在使用 Supabase 遇到问题时随时求助。",
-      "translated_at": "2026-05-20T05:01:05.834Z"
+      "hash": "d8f6a6a933e5be37",
+      "summary_zh": "一位专攻 Supabase 全栈集成的助手，覆盖数据库 RLS 策略、认证、实时订阅、存储、Edge Functions 和向量检索，适合在用 Postgres 搭建带权限控制的应用、做实时协作或接入 AI 嵌入时随手咨询。",
+      "translated_at": "2026-06-05T22:53:42.136Z"
     },
     "skill:raintree-technology-claude-starter-token-standards": {
       "hash": "71acefd0d63c84aa",
@@ -10418,9 +10418,9 @@
       "translated_at": "2026-05-20T05:01:16.560Z"
     },
     "skill:raintree-technology-claude-starter-toon-formatter": {
-      "hash": "fd7b9302fb1a74db",
-      "summary_zh": "这是款TOON格式转换工具，能把大JSON、日志或接口返回等结构化数据的Token消耗省下30%到60%，特别适合给大模型喂长数据或降低API成本。",
-      "translated_at": "2026-05-20T05:01:28.182Z"
+      "hash": "5e558f656c6b1399",
+      "summary_zh": "一份关于 TOON 紧凑数据格式的使用指南，告诉你何时该用它替代 JSON 来压缩大体积表格数据，从而把 LLM 提示的输入 token 砍掉三到五成，适合优化大模型调用成本和上下文长度。",
+      "translated_at": "2026-06-05T22:53:43.227Z"
     },
     "skill:raintree-technology-claude-starter-transactions": {
       "hash": "4cbd8f1fc23297f8",
@@ -10438,9 +10438,9 @@
       "translated_at": "2026-05-20T05:01:55.604Z"
     },
     "skill:resend-resend-skills-email-best-practices": {
-      "hash": "c2eec34ae1a95fcc",
-      "summary_zh": "这是一份邮件开发避坑指南，帮你解决邮件易进垃圾箱、退信率高、认证配置难等痛点，适合开发邮件功能或保障邮件合规与稳定送达时参考。",
-      "translated_at": "2026-05-20T05:02:14.954Z"
+      "hash": "3438989b1c1c52b3",
+      "summary_zh": "一份邮件开发实践指南，涵盖 SPF/DKIM/DMARC 认证配置、退信处理、合规要求（CAN-SPAM、GDPR）、无障碍设计及事务性与营销邮件区分，适合在搭建邮件功能或排查进垃圾箱、退信率高等问题时参考。",
+      "translated_at": "2026-06-05T22:54:01.707Z"
     },
     "skill:resend-resend-skills-react-email": {
       "hash": "27648819d06d7b0b",
@@ -11443,9 +11443,9 @@
       "translated_at": "2026-05-20T09:05:24.571Z"
     },
     "skill:sickn33-antigravity-awesome-skills-andrej-karpathy": {
-      "hash": "43d0268d76b26c80",
-      "summary_zh": "一个模拟前特斯拉AI总监的智能体，能以他的视角和风格回答问题，适合想体验与顶尖AI教育家交流或探讨深度学习的人。",
-      "translated_at": "2026-05-20T09:05:28.565Z"
+      "hash": "2e4ab29d27bcfa70",
+      "summary_zh": "一份给大模型写代码用的行为规范，专治过度设计、改动失控、隐藏假设等通病，适合在写代码、审查或重构时让 AI 做出更克制、可验证的修改。",
+      "translated_at": "2026-06-05T22:54:44.038Z"
     },
     "skill:sickn33-antigravity-awesome-skills-analytics-product": {
       "hash": "32112dd1259ca0a9",
@@ -12498,9 +12498,9 @@
       "translated_at": "2026-05-20T12:28:38.022Z"
     },
     "skill:trailofbits-skills-let-fate-decide": {
-      "hash": "7953ffb754d754f4",
-      "summary_zh": "这是一个抽塔罗牌并解读的随机决策工具。当用户提示词模糊或敷衍说“随便”时，它能靠随机拍板来指引下一步，特别适合轻松玩闹而非追求严谨的交互场景。",
-      "translated_at": "2026-05-20T12:28:38.750Z"
+      "hash": "2340533dc0a16f87",
+      "summary_zh": "当需求模糊或随口一说时，用十二宫塔罗牌阵抽签来辅助决策，帮你在多个差不多的方案里随性选一个走向，适合玩梗或不想纠结的场合。",
+      "translated_at": "2026-06-05T22:55:16.786Z"
     },
     "skill:trailofbits-skills-modern-python": {
       "hash": "5b6cebc709c9979e",
@@ -13288,9 +13288,9 @@
       "translated_at": "2026-05-20T16:17:06.807Z"
     },
     "skill:wshobson-agents-brand-landingpage": {
-      "hash": "f54d892c4773903a",
-      "summary_zh": "它通过对话帮你梳理品牌调性，自动生成并迭代出可直接部署的精美落地页，专治还没确定视觉风格却要快速搭建独立营销页的痛点。",
-      "translated_at": "2026-05-20T16:17:29.228Z"
+      "hash": "60a5345324a933d9",
+      "summary_zh": "通过对话式访谈先帮你梳理品牌的色彩、字体和形状风格，再据此生成可直接部署的精致落地页 HTML，适合还没有明确视觉方向、想从零打造品牌首页或营销页的场景。",
+      "translated_at": "2026-06-05T22:55:31.789Z"
     },
     "skill:wshobson-agents-block-no-verify-hook": {
       "hash": "77b157e9b28875ae",
@@ -13598,14 +13598,14 @@
       "translated_at": "2026-05-20T16:27:14.387Z"
     },
     "skill:yvgude-lean-ctx-lean-ctx": {
-      "hash": "f96941dfc57f37cf",
-      "summary_zh": "专为AI代理打造的上下文运行时，能把大模型读文件、搜代码或跑命令时的上下文体积暴降99%，大幅节省token，特别适合需要频繁探索代码库的场景。",
-      "translated_at": "2026-05-20T22:59:09.594Z"
+      "hash": "6e6fc99a3ae12f1d",
+      "summary_zh": "给 AI 智能体用的上下文运行时，整合了文件读取、命令执行、代码搜索和目录浏览能力，能把喂给大模型的内容压缩到原来的百分之一，特别适合处理大型代码库时省 token。",
+      "translated_at": "2026-06-05T22:55:36.101Z"
     },
     "skill:yvgude-lean-ctx-templates": {
-      "hash": "f96941dfc57f37cf",
-      "summary_zh": "专为AI智能体打造的上下文运行时，在搜代码、读文件或跑命令时，能把大模型的上下文最高压缩99%，帮你大幅节省token开销。",
-      "translated_at": "2026-05-20T22:59:14.037Z"
+      "hash": "6e6fc99a3ae12f1d",
+      "summary_zh": "给 AI 智能体用的上下文运行时，通过结构化读取文件、执行命令和检索代码，把喂给大模型的上下文体积压缩到极致，适合处理大型代码库时省 token、提效率。",
+      "translated_at": "2026-06-05T22:55:36.625Z"
     },
     "skill:zebbern-claude-code-guide-api-fuzzing-bug-bounty": {
       "hash": "f0692669381caf74",
@@ -16396,6 +16396,671 @@
       "hash": "c03fae6bd20f76d3",
       "summary_zh": "用于规划产品指标看板的工具，帮你梳理关键指标、数据来源、图表形式和告警阈值，适合搭建 KPI 体系、做产品数据分析或制定监控方案时使用。",
       "translated_at": "2026-06-05T21:18:31.163Z"
+    },
+    "skill:phuryn-pm-skills-north-star-metric": {
+      "hash": "78e99dcf9db7970e",
+      "summary_zh": "帮你梳理业务的北极星指标和几个支撑指标，判断属于哪类业务模式，并按七条标准检验合理性，适合搭建指标体系或想清楚该衡量什么的时候用。",
+      "translated_at": "2026-06-05T22:51:33.196Z"
+    },
+    "skill:phuryn-pm-skills-opportunity-solution-tree": {
+      "hash": "977b6d78629f337e",
+      "summary_zh": "帮产品团队把目标拆解成机会、方案和实验，理清「下一步该做什么」的决策思路，适合在做产品探索、梳理用户机会时使用。",
+      "translated_at": "2026-06-05T22:51:33.922Z"
+    },
+    "skill:phuryn-pm-skills-monetization-strategy": {
+      "hash": "5492b6e008627e27",
+      "summary_zh": "帮你头脑风暴几种变现思路，分析各自适合的用户群、潜在风险和验证方法，适合在思考收入模式、定价策略或产品商业化路径时使用。",
+      "translated_at": "2026-06-05T22:51:35.670Z"
+    },
+    "skill:phuryn-pm-skills-pestle-analysis": {
+      "hash": "c8f807071e457fa8",
+      "summary_zh": "一款从政治、经济、社会、技术、法律、环境六个维度分析宏观环境的工具，适合做战略规划或评估影响业务的外部因素时使用。",
+      "translated_at": "2026-06-05T22:51:37.487Z"
+    },
+    "skill:phuryn-pm-skills-outcome-roadmap": {
+      "hash": "cb85191dddee42c3",
+      "summary_zh": "把以功能交付为中心的产品路线图改写成以成果为导向的版本，突出用户价值和业务影响，适合想让路线图更具战略性、或需要把功能清单转化为目标陈述的团队使用。",
+      "translated_at": "2026-06-05T22:51:38.053Z"
+    },
+    "skill:phuryn-pm-skills-porters-five-forces": {
+      "hash": "819a69c7977cb40c",
+      "summary_zh": "一款帮你做波特五力分析的工具，从竞争对手、供应商、买家、替代品和新进入者五个维度审视行业格局，适合做市场调研、判断行业吸引力或评估竞争态势时使用。",
+      "translated_at": "2026-06-05T22:51:39.975Z"
+    },
+    "skill:phuryn-pm-skills-positioning-ideas": {
+      "hash": "781f1897cbf41d41",
+      "summary_zh": "帮你梳理目标产品的主要竞品，并生成带依据的差异化定位方案，适合在做产品定位、品牌策略或寻找市场切入点时使用。",
+      "translated_at": "2026-06-05T22:51:41.894Z"
+    },
+    "skill:phuryn-pm-skills-pre-mortem": {
+      "hash": "3b507dfb1594db5f",
+      "summary_zh": "在产品发布前帮你做\"事前剖析\"风险评估，把潜在问题分成真隐患、虚惊一场和没人敢提的隐忧三类，并标出是必须上线前解决、可后续跟进还是持续观察，适合压力测试 PRD 或发布计划。",
+      "translated_at": "2026-06-05T22:51:43.433Z"
+    },
+    "skill:phuryn-pm-skills-pricing-strategy": {
+      "hash": "ec87bb376cf3feb6",
+      "summary_zh": "一款用于分析和设计定价策略的工具，涵盖定价模型选择、竞品价格对比、用户付费意愿评估和价格弹性测算，适合在定价决策、调价前评估或比较免费增值与付费方案时使用。",
+      "translated_at": "2026-06-05T22:51:44.550Z"
+    },
+    "skill:phuryn-pm-skills-prioritization-frameworks": {
+      "hash": "38362f7960670b7c",
+      "summary_zh": "汇总了 RICE、ICE、Kano、MoSCoW 等 9 种常见优先级排序方法，附公式、适用场景说明和模板，方便在选型、对比或学习时快速查阅。",
+      "translated_at": "2026-06-05T22:51:46.035Z"
+    },
+    "skill:phuryn-pm-skills-prioritize-assumptions": {
+      "hash": "cb64492d28dd7d23",
+      "summary_zh": "用影响力和风险两个维度给假设排优先级，并为每条假设推荐验证实验，适合在面对一堆待验证想法时快速判断先测哪个。",
+      "translated_at": "2026-06-05T22:51:47.654Z"
+    },
+    "skill:phuryn-pm-skills-prioritize-features": {
+      "hash": "99148e72a3e58615",
+      "summary_zh": "帮你从影响力、投入、风险和战略契合度等维度给功能需求池打分排序，挑出最值得做的前五项，适合做产品规划或砍需求时参考。",
+      "translated_at": "2026-06-05T22:51:50.566Z"
+    },
+    "skill:phuryn-pm-skills-product-name": {
+      "hash": "45c8875239ab3aaa",
+      "summary_zh": "帮你为新产品或品牌重塑快速构思 5 个独特好记的名字，并结合品牌调性和目标人群说明命名思路，适合起名卡壳或想多看几种方向时使用。",
+      "translated_at": "2026-06-05T22:51:51.118Z"
+    },
+    "skill:phuryn-pm-skills-product-strategy": {
+      "hash": "c82b0fbb56ffb153",
+      "summary_zh": "用九宫格画布从愿景、用户、价值主张到护城河等九个维度梳理产品战略，适合制定产品规划或明确发展方向时使用。",
+      "translated_at": "2026-06-05T22:51:53.414Z"
+    },
+    "skill:phuryn-pm-skills-product-vision": {
+      "hash": "52600f249f0ea5aa",
+      "summary_zh": "帮团队头脑风暴出一个有感染力又切实可行的产品愿景，适合在制定或打磨愿景陈述、凝聚团队方向共识时使用。",
+      "translated_at": "2026-06-05T22:51:54.735Z"
+    },
+    "skill:phuryn-pm-skills-release-notes": {
+      "hash": "e82b2cc65b874f6c",
+      "summary_zh": "把工单、PRD 或变更日志一键转成面向用户的发布说明，按新功能、改进、修复自动归类，适合产品更新公告、版本汇总等场景，省去手写整理的麻烦。",
+      "translated_at": "2026-06-05T22:51:55.551Z"
+    },
+    "skill:phuryn-pm-skills-retro": {
+      "hash": "b674ce95c8f107f1",
+      "summary_zh": "帮团队结构化地复盘冲刺，梳理做得好的、不足的地方，并把改进点转化为有负责人和截止日期的行动项，适合 Scrum 回顾会或想学习如何高效复盘的场景。",
+      "translated_at": "2026-06-05T22:51:58.156Z"
+    },
+    "skill:phuryn-pm-skills-sentiment-analysis": {
+      "hash": "9be4c524c8a989cc",
+      "summary_zh": "用来批量分析用户反馈、评论或问卷，自动打情感分、提炼用户需求场景（JTBD），帮你快速看清满意度走向和痛点分布。",
+      "translated_at": "2026-06-05T22:51:59.304Z"
+    },
+    "skill:phuryn-pm-skills-shipping-artifacts": {
+      "hash": "323ce200927352a3",
+      "summary_zh": "一套面向 AI 生成应用的交付文档规范，涵盖架构、权限、密钥、测试覆盖等核心内容，并按需补充邮件、定时任务、SEO 等模块，方便上线前评审、交接或审计时快速看懂代码库。",
+      "translated_at": "2026-06-05T22:52:01.440Z"
+    },
+    "skill:phuryn-pm-skills-sprint-plan": {
+      "hash": "edbfd5d33f9dcea8",
+      "summary_zh": "用于敏捷迭代规划的辅助工具，能估算团队产能、挑选合适的故事卡、梳理任务依赖并识别风险，适合在迭代启动前评估工作量、平衡范围与团队速率时使用。",
+      "translated_at": "2026-06-05T22:52:02.520Z"
+    },
+    "skill:phuryn-pm-skills-sql-queries": {
+      "hash": "fa1cd4968f6d3a26",
+      "summary_zh": "用自然语言生成 SQL，支持 BigQuery、PostgreSQL、MySQL 等方言，还能读取上传的库表结构图或文档，适合写查询、做报表或把业务问题转成 SQL 的场景。",
+      "translated_at": "2026-06-05T22:52:05.052Z"
+    },
+    "skill:phuryn-pm-skills-stakeholder-map": {
+      "hash": "3a49155f05732527",
+      "summary_zh": "用权力-利益四象限梳理项目相关方，针对不同人群制定沟通策略并生成沟通计划，适合产品发布、跨团队协作或需要系统管理干系人时使用。",
+      "translated_at": "2026-06-05T22:52:05.769Z"
+    },
+    "skill:phuryn-pm-skills-startup-canvas": {
+      "hash": "b435a1cd069980f8",
+      "summary_zh": "一款专为新产品或创业构想设计的画布工具，把产品战略和商业模式拆开来梳理，比传统的商业模式画布和精益画布更清晰，适合启动新项目或评估创业点子时使用。",
+      "translated_at": "2026-06-05T22:52:07.476Z"
+    },
+    "skill:phuryn-pm-skills-strategy-red-team": {
+      "hash": "c4e570ab35119fff",
+      "summary_zh": "在产品需求文档、路线图或战略落地前，先模拟对手挑出关键假设的漏洞，按影响、概率和验证成本排序失败风险，并给出最便宜的验证方法和叫停标准，适合高管评审前的压力测试。",
+      "translated_at": "2026-06-05T22:52:09.851Z"
+    },
+    "skill:phuryn-pm-skills-summarize-meeting": {
+      "hash": "9ba50c3eceaeb837",
+      "summary_zh": "把会议录音或文字记录整理成结构化笔记，自动提取日期、参与者、议题、关键决策、要点和待办事项，适合需要快速产出会议纪要或复盘讨论的场景。",
+      "translated_at": "2026-06-05T22:52:11.692Z"
+    },
+    "skill:phuryn-pm-skills-summarize-interview": {
+      "hash": "3f043ec34ab66749",
+      "summary_zh": "把客户访谈记录整理成结构化摘要，自动提取用户的待办任务、满意度信号和后续行动项，适合在做用户调研或访谈复盘时快速沉淀洞察。",
+      "translated_at": "2026-06-05T22:52:12.211Z"
+    },
+    "skill:phuryn-pm-skills-swot-analysis": {
+      "hash": "62de7e1544ce2f54",
+      "summary_zh": "帮你系统梳理优势、劣势、机会和威胁，并给出可落地的行动建议，适合做战略评估、竞品分析或判断产品与业务定位时使用。",
+      "translated_at": "2026-06-05T22:52:13.932Z"
+    },
+    "skill:phuryn-pm-skills-test-scenarios": {
+      "hash": "456965e8a0bfd8ea",
+      "summary_zh": "把用户故事转化成结构完整的测试场景，自动梳理目标、前置条件、角色、操作步骤和预期结果，适合 QA 写测试用例、做验收测试或功能验证时使用。",
+      "translated_at": "2026-06-05T22:52:15.630Z"
+    },
+    "skill:phuryn-pm-skills-user-personas": {
+      "hash": "52fa2bb0e7eb7298",
+      "summary_zh": "把用户调研数据快速提炼成三个精细画像，包含待办任务、痛点、收益和意外洞察，适合做问卷分析、用户分群或为产品决策梳理目标人群。",
+      "translated_at": "2026-06-05T22:52:17.731Z"
+    },
+    "skill:phuryn-pm-skills-user-segmentation": {
+      "hash": "a2eb7e7e1c1a38d6",
+      "summary_zh": "从用户反馈中按行为、待办任务和需求自动划分人群，至少识别出三类典型用户，适合在梳理用户画像、分析多样化反馈或搭建分群模型时使用。",
+      "translated_at": "2026-06-05T22:52:18.879Z"
+    },
+    "skill:phuryn-pm-skills-user-stories": {
+      "hash": "5d911aa584eeef5e",
+      "summary_zh": "帮你按照敏捷开发的最佳实践来写用户故事，自动生成包含描述、设计链接和验收标准的条目，适合在拆分需求、整理待办或明确验收条件时使用。",
+      "translated_at": "2026-06-05T22:52:19.820Z"
+    },
+    "skill:phuryn-pm-skills-wwas": {
+      "hash": "178990d9e2e8968e",
+      "summary_zh": "一款帮你按「为什么-做什么-验收标准」格式撰写产品待办事项的工具，适合需要把功能拆解为独立、可交付、可测试的工作项，并保留战略背景的团队。",
+      "translated_at": "2026-06-05T22:52:23.419Z"
+    },
+    "skill:pingdotgg-t3code-grill-me": {
+      "hash": "cba6561625491577",
+      "summary_zh": "通过追问的方式帮你打磨方案或设计思路，逐层挖出决策树中每个分支的盲点，适合想被人「拷问」、压力测试想法的场景。",
+      "translated_at": "2026-06-05T22:52:24.832Z"
+    },
+    "skill:phuryn-pm-skills-value-prop-statements": {
+      "hash": "764293710229274e",
+      "summary_zh": "基于已有的价值主张，自动生成可直接用于营销文案、销售话术和新用户引导的表达，适合在写推广内容、打磨销售说辞或设计新手引导时快速产出贴合场景的措辞。",
+      "translated_at": "2026-06-05T22:52:24.897Z"
+    },
+    "skill:pingdotgg-t3code-scratchpad": {
+      "hash": "065779371419675e",
+      "summary_zh": "把光标附近的 JSDoc 示例代码一键导出成 TypeScript 文件放到 scratchpad 目录，方便随时跑一下、改一改，不用手动复制粘贴。",
+      "translated_at": "2026-06-05T22:52:29.103Z"
+    },
+    "skill:pingdotgg-t3code-jsdocs": {
+      "hash": "37e09e785a36a855",
+      "summary_zh": "专为 Effect 公共 API 编写和修复 JSDoc 注释的工具，能让代码顺利通过 oxlint 的 jsdocs 校验，适合在补全文档、处理诊断告警或准备文档提取时使用。",
+      "translated_at": "2026-06-05T22:52:29.299Z"
+    },
+    "skill:product-on-purpose-pm-skills-define-prioritization-framework": {
+      "hash": "be06bfb528c3b9c5",
+      "summary_zh": "用多种优先级排序方法（RICE、ICE、MoSCoW、加权评分、Kano）同时评估一组功能或项目，输出对比表展示各方法结论的一致与分歧，并附带高管摘要和建议。数据不足时不会编造分数，而是生成填写模板，适合产品经理做需求排序决策。",
+      "translated_at": "2026-06-05T22:52:29.885Z"
+    },
+    "skill:product-on-purpose-pm-skills-define-x": {
+      "hash": "d03be3ee9d874e4b",
+      "summary_zh": "一套面向 AI 智能体的产品管理技能包，内置 65 个开箱即用的最佳实践模块，覆盖三钻流程、基础冲刺和设计冲刺等环节，并配套子代理、模板和工作流，适合想让 AI 协助打通产品全流程的团队。",
+      "translated_at": "2026-06-05T22:52:33.912Z"
+    },
+    "skill:product-on-purpose-pm-skills-deliver-y": {
+      "hash": "d03be3ee9d874e4b",
+      "summary_zh": "一套开箱即用的 AI 智能体产品管理技能包，涵盖三钻设计流程、基础冲刺等 65 项最佳实践，外加子智能体、模板和工作流，适合想让 AI 协助做产品规划与设计的团队。",
+      "translated_at": "2026-06-05T22:52:33.937Z"
+    },
+    "skill:product-on-purpose-pm-skills-discover-journey-map": {
+      "hash": "ebb0196eebba2199",
+      "summary_zh": "帮你梳理客户旅程图，覆盖各阶段触点、情绪曲线、痛点和关键时刻，输出带 mermaid 可视化的 markdown 文档，支持线性流程或循环互动场景，缺少调研数据时不会瞎编。",
+      "translated_at": "2026-06-05T22:52:34.551Z"
+    },
+    "skill:product-on-purpose-pm-skills-discover-market-sizing": {
+      "hash": "797a37dac5a996d5",
+      "summary_zh": "用多种方法交叉测算 TAM、SAM、SOM 市场规模，给出带置信度标签的合理区间，并指出不同框架结论的一致与分歧之处，适合做投资判断、立项决策或对外路演时支撑市场机会的说法。",
+      "translated_at": "2026-06-05T22:52:38.565Z"
+    },
+    "skill:product-on-purpose-pm-skills-foundation-prioritized-action-plan": {
+      "hash": "3a7a2b5352268745",
+      "summary_zh": "把产品经理手头零散的笔记、会议记录、Slack 讨论或上级需求整理成一份完整的行动方案，自动识别情境类型、找出关键瓶颈，并按优先级列出待办、风险和决策点，适合面对一堆信息不知从何下手的时候用。",
+      "translated_at": "2026-06-05T22:52:39.059Z"
+    },
+    "skill:product-on-purpose-pm-skills-measure-survey-analysis": {
+      "hash": "2c994751af1482cd",
+      "summary_zh": "把问卷原始数据转化为产品经理能直接用的洞察，自动做用户分群、假设验证、开放题归类，并给出置信度和优先级建议；样本量不够或问卷有偏时还会主动提醒别过度解读。",
+      "translated_at": "2026-06-05T22:52:39.419Z"
+    },
+    "skill:raintree-technology-claude-starter-cleanup-all": {
+      "hash": "8b45457a45414a7f",
+      "summary_zh": "一键串联跑完八轮代码清理，从未使用代码到冗余类型逐项扫除，每步通过验证才继续，失败即停，最后汇总成一份报告，适合想对整个仓库做全面体检和瘦身的场景。",
+      "translated_at": "2026-06-05T22:52:49.137Z"
+    },
+    "skill:raintree-technology-claude-starter-cleanup-dedupe": {
+      "hash": "1b99e28760d737c7",
+      "summary_zh": "自动扫描代码库里的重复片段，挑出真正值得合并的大块复制粘贴并重构，避免无意义的过度抽象，适合想给老项目做减法、清理冗余逻辑的场景。",
+      "translated_at": "2026-06-05T22:52:53.056Z"
+    },
+    "skill:raintree-technology-claude-starter-cleanup-defensive": {
+      "hash": "f4e4a18ac94702ec",
+      "summary_zh": "用于清理代码里多余的 try/catch 和防御性判断，专门干掉那些吞掉异常、掩盖 bug 的写法，同时保留 HTTP、CLI、消息消费等系统边界处真正该有的兜底，适合想让错误暴露出来、代码更干净的场景。",
+      "translated_at": "2026-06-05T22:52:54.116Z"
+    },
+    "skill:raintree-technology-claude-starter-cleanup-cycles": {
+      "hash": "db44f5730d2ca3b0",
+      "summary_zh": "帮你揪出代码里的循环依赖，支持 TS、Python、Go、Rust 多种语言，能自动拆掉容易剥离的循环，复杂的核心循环则列出来交给人来处理，适合项目模块越缠越乱、想清理依赖关系时用。",
+      "translated_at": "2026-06-05T22:52:54.398Z"
+    },
+    "skill:raintree-technology-claude-starter-cleanup-slop": {
+      "hash": "e88b100ed74b4bde",
+      "summary_zh": "专门清理代码里 AI 生成的废话注释、复述代码的冗余说明和过程性碎碎念，同时保留解释「为什么这么写」的有价值注释，全程只动注释、不碰逻辑，适合接手 AI 协作产物后做整理。",
+      "translated_at": "2026-06-05T22:52:59.241Z"
+    },
+    "skill:raintree-technology-claude-starter-cleanup-types": {
+      "hash": "9ba0997b86041061",
+      "summary_zh": "扫描项目里散落或重复的类型定义，合并到统一的类型模块中，主要服务 TypeScript，同时兼顾 Python 的 dataclass、TypedDict 以及 Go 的 struct，适合做类型整理和去重。",
+      "translated_at": "2026-06-05T22:52:59.779Z"
+    },
+    "skill:raintree-technology-claude-starter-cleanup-legacy": {
+      "hash": "49caf9bc814c17f6",
+      "summary_zh": "用来安全清理仓库里没人调用的废弃代码、旧版本兼容分支和兜底逻辑，删除前会通过 grep 和 LSP 双重确认无引用，适合想精简陈年遗留代码却又怕误删的场景。",
+      "translated_at": "2026-06-05T22:52:59.844Z"
+    },
+    "skill:raintree-technology-claude-starter-cleanup-unused": {
+      "hash": "42fbd8c6fc664425",
+      "summary_zh": "自动识别并清理项目中没用到的代码、导出、文件和依赖，会根据语言调用 knip、vulture、staticcheck 或 cargo-machete，给出分析报告，并直接删掉高置信度的冗余内容，适合想给仓库做减法的人。",
+      "translated_at": "2026-06-05T22:53:03.895Z"
+    },
+    "skill:raintree-technology-claude-starter-cleanup-weak-types": {
+      "hash": "3d3b4193712a257d",
+      "summary_zh": "自动把代码里的 any、unknown、interface{} 等弱类型替换成推断出的强类型，每改一处就跑类型检查，失败就回退，适合想给项目补强类型安全的场景。",
+      "translated_at": "2026-06-05T22:53:04.476Z"
+    },
+    "skill:raintree-technology-claude-starter-copywriting-frameworks": {
+      "hash": "fa70b2d094fff141",
+      "summary_zh": "一套帮 Claude 写直效文案的工作流，覆盖标题、广告、落地页、邮件、销售页等场景，适合需要打磨钩子、处理异议或拆解 swipe file 的文案工作。",
+      "translated_at": "2026-06-05T22:53:05.272Z"
+    },
+    "skill:raintree-technology-claude-starter-goms-klm-analysis": {
+      "hash": "5b1ea562ac8453cd",
+      "summary_zh": "用 GOMS 和击键层级模型把界面操作拆解成目标、操作和方法，估算熟练用户完成任务所需的时间和交互成本，适合对比不同流程、削减点击次数或重新设计工作流时使用。",
+      "translated_at": "2026-06-05T22:53:09.083Z"
+    },
+    "skill:raintree-technology-claude-starter-hig-components-content": {
+      "hash": "ce3906b69833ba8d",
+      "summary_zh": "整理了苹果人机界面指南中关于内容展示组件的规范，帮你在开发苹果应用时决定该用图表、集合视图、图片视图还是网页视图等，遇到展示图片、渲染网页、选颜色等场景可直接查阅。",
+      "translated_at": "2026-06-05T22:53:10.433Z"
+    },
+    "skill:raintree-technology-claude-starter-hig-components-controls": {
+      "hash": "884c2070f7acf8d5",
+      "summary_zh": "提供苹果人机界面指南中关于选择器、开关、滑块、文本框等输入控件的设计建议，适合在设计表单、挑选合适控件或纠结键盘类型时参考。",
+      "translated_at": "2026-06-05T22:53:12.838Z"
+    },
+    "skill:raintree-technology-claude-starter-hig-components-dialogs": {
+      "hash": "7bc8767f6a1d3822",
+      "summary_zh": "依据苹果人机界面指南，帮你判断何时该用警告框、操作表、弹出层、模态卡片还是数字输入视图，适合纠结确认弹窗设计、担心模态打扰用户体验时参考。",
+      "translated_at": "2026-06-05T22:53:14.032Z"
+    },
+    "skill:raintree-technology-claude-starter-hig-components-layout": {
+      "hash": "054aefa6dcea0f72",
+      "summary_zh": "提供苹果官方人机界面指南中关于布局与导航组件的设计建议，适合在设计 iOS、iPadOS 或 macOS 应用时，纠结侧边栏、分栏视图、标签栏等结构选择，或遇到 iPad 适配问题时参考。",
+      "translated_at": "2026-06-05T22:53:16.973Z"
+    },
+    "skill:raintree-technology-claude-starter-hig-components-menus": {
+      "hash": "d09c3023a9b5baa3",
+      "summary_zh": "整理了苹果人机界面指南里关于菜单和按钮的设计规范，涵盖菜单栏、工具栏、上下文菜单、各类按钮等，适合在纠结按钮长啥样、菜单怎么排时拿来对照参考。",
+      "translated_at": "2026-06-05T22:53:17.621Z"
+    },
+    "skill:raintree-technology-claude-starter-hig-components-search": {
+      "hash": "799f2f091fb0053e",
+      "summary_zh": "提供苹果人机界面规范中搜索框、分页控件、路径控件等导航组件的设计指引，适合在做应用搜索体验、面包屑或翻页交互时查阅参考。",
+      "translated_at": "2026-06-05T22:53:19.960Z"
+    },
+    "skill:raintree-technology-claude-starter-hig-components-status": {
+      "hash": "8104ff5e3fd4f396",
+      "summary_zh": "提供苹果人机界面指南中关于进度条、加载指示器、状态栏、活动圆环等状态类组件的设计建议，适合在纠结该用旋转图标还是进度条、或拿不准加载状态怎么呈现时参考。",
+      "translated_at": "2026-06-05T22:53:21.805Z"
+    },
+    "skill:raintree-technology-claude-starter-hig-components-system": {
+      "hash": "5d87f91052494a11",
+      "summary_zh": "一份苹果人机界面指南的中文整理，聚焦小组件、灵动岛、通知、表盘、App Clip 等系统级体验组件的设计规范，方便在做苹果生态应用设计时随时查阅。",
+      "translated_at": "2026-06-05T22:53:22.254Z"
+    },
+    "skill:raintree-technology-claude-starter-hig-doctor-audit": {
+      "hash": "f40c78e87b2184ac",
+      "summary_zh": "一个对照苹果人机界面指南（HIG）扫描前端项目的审计工具，支持 SwiftUI、UIKit、React、Vue、Flutter 等主流框架，能输出按严重程度分级的合规报告，也可接入 CI 做设计与无障碍把关。",
+      "translated_at": "2026-06-05T22:53:25.095Z"
+    },
+    "skill:raintree-technology-claude-starter-hig-foundations": {
+      "hash": "aadb225178456cec",
+      "summary_zh": "一份苹果人机界面指南的设计基础参考，涵盖配色、字体、SF Symbols、深色模式、无障碍、布局、动效等规范，适合在做苹果生态应用设计时随时查阅，解决“深色模式配色不对”“该用什么字体”这类困惑。",
+      "translated_at": "2026-06-05T22:53:27.427Z"
+    },
+    "skill:raintree-technology-claude-starter-hig-inputs": {
+      "hash": "7502cfeb8ee49163",
+      "summary_zh": "汇集了苹果人机界面指南中关于输入方式与交互模式的内容，涵盖手势、Apple Pencil、键盘、游戏手柄、指针、数字表冠、眼动追踪、遥控器及空间交互等，方便设计开发者在做跨设备交互方案时随时查阅参考。",
+      "translated_at": "2026-06-05T22:53:28.295Z"
+    },
+    "skill:raintree-technology-claude-starter-hig-patterns": {
+      "hash": "5535844d78a85802",
+      "summary_zh": "汇总苹果人机界面指南里的交互与体验模式，做苹果生态应用时，遇到引导流程、加载状态、拖拽、搜索、通知、撤销重做等设计问题可以直接参考。",
+      "translated_at": "2026-06-05T22:53:29.391Z"
+    },
+    "skill:raintree-technology-claude-starter-hig-platforms": {
+      "hash": "033e5c6dd57d75d0",
+      "summary_zh": "一份覆盖 iOS、iPad、macOS、tvOS、visionOS、watchOS 的苹果设计规范参考，帮你搞清楚不同平台的设计差异和适配要点，适合做多端应用或跨平台移植时查阅。",
+      "translated_at": "2026-06-05T22:53:32.843Z"
+    },
+    "skill:raintree-technology-claude-starter-hig-technologies": {
+      "hash": "8eda9c4681f8e9ca",
+      "summary_zh": "汇总了苹果各类系统服务和技术框架的人机界面指南，涵盖 Siri、Apple Pay、HealthKit、ARKit、生成式 AI、CarPlay 等，方便开发者在集成苹果生态功能时快速查阅设计规范。",
+      "translated_at": "2026-06-05T22:53:33.940Z"
+    },
+    "skill:raintree-technology-claude-starter-hig-project-context": {
+      "hash": "75a694d596e58940",
+      "summary_zh": "用来生成或更新苹果设计规范的项目上下文文档，记录目标平台、设备类型等信息，让其他 HIG 相关工具据此给出更贴合当前项目的设计建议，适合启动新苹果平台项目时统一配置。",
+      "translated_at": "2026-06-05T22:53:36.719Z"
+    },
+    "skill:raintree-technology-claude-starter-human-processor-model": {
+      "hash": "d26e6790e20c51e0",
+      "summary_zh": "一套基于人类处理器模型的可用性评估流程，无需用户测试就能估算任务耗时、认知负担、感知/操作瓶颈和记忆压力，适合在对比界面方案或审视原型交互成本时使用。",
+      "translated_at": "2026-06-05T22:53:37.385Z"
+    },
+    "skill:redis-agent-skills-iris-development": {
+      "hash": "230cbbd76bc2c147",
+      "summary_zh": "为 AI 智能体提供基于 Redis Cloud 的记忆管理方案，可记录会话事件、创建和检索长期记忆，并支持记忆存储配置与后台晋升调优，适合需要给 Agent 加持久化上下文的开发者。",
+      "translated_at": "2026-06-05T22:53:46.411Z"
+    },
+    "skill:redis-agent-skills-redis-clustering": {
+      "hash": "e973672352e2edb0",
+      "summary_zh": "一份 Redis 集群与主从复制的实战指南，教你用 hash tag 设计分片键、避开 MGET/管道里的 CROSSSLOT 报错，以及把读请求分流到副本扛住缓存和看板的高读负载。",
+      "translated_at": "2026-06-05T22:53:47.739Z"
+    },
+    "skill:redis-agent-skills-redis-connections": {
+      "hash": "35a0e428832bb7c4",
+      "summary_zh": "一份 Redis 客户端使用指南，讲解连接池、管道、客户端缓存和超时配置等实践，适合在搭建或调优 Redis 客户端、提升吞吐、避免慢命令拖垮服务时参考。",
+      "translated_at": "2026-06-05T22:53:47.807Z"
+    },
+    "skill:redis-agent-skills-redis-core": {
+      "hash": "c2bf2e3ddbcc9a77",
+      "summary_zh": "帮你做 Redis 数据建模决策的指南，告诉你该用 String、Hash、List 还是 JSON、Stream 等结构，以及如何统一冒号分隔的键名命名，适合设计缓存、计数器、排行榜、会话存储或梳理键名规范时参考。",
+      "translated_at": "2026-06-05T22:53:50.894Z"
+    },
+    "skill:redis-agent-skills-redis-query-engine": {
+      "hash": "96cf3d385c5a1b54",
+      "summary_zh": "一份关于 Redis 查询引擎的实用指南，帮你设计索引结构、挑选字段类型、写出高效的搜索与聚合查询，并在生产环境中无缝切换索引或排查慢查询问题。",
+      "translated_at": "2026-06-05T22:53:51.775Z"
+    },
+    "skill:redis-agent-skills-redis-observability": {
+      "hash": "4b9e3ecdada79a32",
+      "summary_zh": "一份 Redis 监控与故障排查指南，告诉你该盯哪些关键指标、出问题时用哪些内置命令排查，以及何时该打开 Insight 图形界面，适合搭建告警、排查性能回退或把指标接入 Prometheus、Datadog 时参考。",
+      "translated_at": "2026-06-05T22:53:52.762Z"
+    },
+    "skill:redis-agent-skills-redis-security": {
+      "hash": "4cc0322826fda342",
+      "summary_zh": "一份 Redis 安全加固指南，涵盖密码与 ACL 权限、TLS 加密、网络访问限制、防火墙配置和危险命令禁用，适合在生产部署、权限分配或安全审计时参考。",
+      "translated_at": "2026-06-05T22:53:56.691Z"
+    },
+    "skill:redis-agent-skills-redis-vector-search": {
+      "hash": "6d0e7320e00a65bf",
+      "summary_zh": "一份 Redis 向量检索的实战指南，讲清 HNSW 与 FLAT 的选型、索引参数怎么配、如何把向量相似度和标签或数值过滤结合，并演示用 RedisVL 搭建 RAG 流程，适合做嵌入检索或调优 HNSW 参数时参考。",
+      "translated_at": "2026-06-05T22:53:57.838Z"
+    },
+    "skill:redis-agent-skills-redis-semantic-cache": {
+      "hash": "71b87f9903bc2bb4",
+      "summary_zh": "基于 Redis 的 LLM 响应语义缓存方案，能把相似问题的回答缓存复用，帮你在调用 OpenAI、Anthropic 等大模型或做 RAG 时降低 API 成本和延迟，还能按任务类型拆分缓存、调相似度阈值平衡命中率与精度。",
+      "translated_at": "2026-06-05T22:53:58.315Z"
+    },
+    "skill:ryoppippi-ccusage-development": {
+      "hash": "56b359a05d39bfb8",
+      "summary_zh": "用于指导 ccusage 这个 monorepo 项目的开发工作，适合在改动子包、文档、共享配置、CLI 打包、依赖、导出或校验命令时参考。",
+      "translated_at": "2026-06-05T22:54:02.139Z"
+    },
+    "skill:ryoppippi-ccusage-agent-sources": {
+      "hash": "200bd917fcc41e7f",
+      "summary_zh": "一份帮助开发者梳理各类 AI 代理日志格式的参考指南，涵盖日志位置、原始记录结构、token 映射、模型名称和费用计算等，适合需要解析或对接 ccusage 数据源的场景。",
+      "translated_at": "2026-06-05T22:54:03.906Z"
+    },
+    "skill:ryoppippi-ccusage-profile": {
+      "hash": "b7aa98d8a10c80ef",
+      "summary_zh": "用于剖析 ccusage 各环节的性能瓶颈，适合排查 Rust 命令、TS 脚本、启动器或打包流程变慢的问题，也能对比分支与主干的速度差异。",
+      "translated_at": "2026-06-05T22:54:06.139Z"
+    },
+    "skill:ryoppippi-ccusage-docs": {
+      "hash": "f214acab55851116",
+      "summary_zh": "用于追踪 ccusage 项目中代码或行为变更对文档的影响，适合在改动涉及 README、VitePress 导航、截图、命令说明等需要同步更新文档的场景下使用。",
+      "translated_at": "2026-06-05T22:54:07.142Z"
+    },
+    "skill:ryoppippi-ccusage-rust": {
+      "hash": "c83817b7d9a6b1c4",
+      "summary_zh": "用于指导 ccusage 项目 Rust 版本的开发工作，涵盖 crate 结构、原生打包、解析器布局、定价嵌入以及与 TypeScript 版本保持一致等场景。",
+      "translated_at": "2026-06-05T22:54:08.446Z"
+    },
+    "skill:ryoppippi-ccusage-testing": {
+      "hash": "24497e81d761d78d",
+      "summary_zh": "一份测试编写指南，专门指导如何为相关项目补充或修复 Rust、Vitest 单元测试、CLI 快照、模型定价及 LiteLLM 兼容性等场景的测试用例。",
+      "translated_at": "2026-06-05T22:54:10.562Z"
+    },
+    "skill:santifer-career-ops-career-ops": {
+      "hash": "dffe51a0f76827b1",
+      "summary_zh": "一站式求职助手，能解析职位描述、自动生成定制简历、抓取招聘平台信息并追踪投递进度，帮你把繁琐的找工作流程交给 AI 打理。",
+      "translated_at": "2026-06-05T22:54:12.677Z"
+    },
+    "skill:ryoppippi-ccusage-typescript": {
+      "hash": "a13ae715f52805d4",
+      "summary_zh": "一份面向 ccusage 项目的 TS/JS 编码规范指引，在改动 .ts、.tsx、.js、.jsx 文件前先查阅，涵盖包启动器、Vitest 测试、Bun 脚本、类型定义和测试桩等场景。",
+      "translated_at": "2026-06-05T22:54:12.754Z"
+    },
+    "skill:sepinetam-stata-mcp-stata-skill": {
+      "hash": "043f5b7b7fb284fb",
+      "summary_zh": "通过官方 MCP 服务调用 Stata 的封装工具集，支持运行 do 文件、安装缺失的 ado 包、查文档、读取 smcl/文本日志，以及快速了解陌生数据文件的结构，适合在写 Stata 代码或排查语法错误时使用。",
+      "translated_at": "2026-06-05T22:54:16.162Z"
+    },
+    "skill:sergebulaev-linkedin-skills": {
+      "hash": "96ff9a8bfce3bf79",
+      "summary_zh": "帮你策划、撰写、优化并发布领英帖子与评论，能针对 2026 年算法做审查、去除 AI 痕迹、从爆款中提炼钩子句式，还能排好一周的内容计划，适合想做领英个人品牌或运营的人。",
+      "translated_at": "2026-06-05T22:54:17.527Z"
+    },
+    "skill:sergebulaev-linkedin-skills-linkedin-comment-drafter": {
+      "hash": "9bb10765edcaf3a8",
+      "summary_zh": "把别人 LinkedIn 帖子的链接丢进来，就能模仿你的语气生成 1-3 条评论草稿，挑好表情后通过 Publora 安排发布，适合想抢沙发或日常互动的人。",
+      "translated_at": "2026-06-05T22:54:17.762Z"
+    },
+    "skill:sergebulaev-linkedin-skills-linkedin-content-planner": {
+      "hash": "0cf9399d804167ef",
+      "summary_zh": "一个面向 LinkedIn 运营者的周更内容规划工具，输入主题、受众和内容支柱，就能生成 7 天的发文计划，涵盖每日选题、形式、钩子、CTA、发布时间和互动目标，适合排月度内容而非临时写单篇帖子。",
+      "translated_at": "2026-06-05T22:54:20.791Z"
+    },
+    "skill:sergebulaev-linkedin-skills-linkedin-engager-analytics": {
+      "hash": "0dc2b6ce2ffeb57e",
+      "summary_zh": "抓取任意 LinkedIn 帖子的点赞和评论者，按客户画像匹配度分成同行、向往对象、潜在客户等几类，并生成可直接执行的回关、评论、私信清单（含一句话开场白），适合做受众分析和外联拓展，用 Apify 实现，无需登录领英账号。",
+      "translated_at": "2026-06-05T22:54:22.971Z"
+    },
+    "skill:sergebulaev-linkedin-skills-linkedin-employee-advocacy": {
+      "hash": "bb173d12b67a611a",
+      "summary_zh": "一套帮市场或销售团队在 LinkedIn 上启动员工内容分发的实操方案，含 14 天上线计划、品牌合规、单帖耗时控制和发帖节奏基准，还能算清触达、互动到管道转化的团队 ROI，适合想让全员发声又怕乱的场景。",
+      "translated_at": "2026-06-05T22:54:23.060Z"
+    },
+    "skill:sergebulaev-linkedin-skills-linkedin-hook-extractor": {
+      "hash": "c29cacd5b86c1af9",
+      "summary_zh": "输入一条爆款领英帖子链接，自动拆解它用的是哪种开场套路，分析为什么有效，并给出可复用的空白模板，方便研究对手的写法找灵感。",
+      "translated_at": "2026-06-05T22:54:25.251Z"
+    },
+    "skill:sergebulaev-linkedin-skills-linkedin-post-writer": {
+      "hash": "8c9fb8594e0bd495",
+      "summary_zh": "用 2026 年流行的多种钩子套路从零写一篇 LinkedIn 帖子，自动跑去 AI 味处理，确认后通过 Publora 排期发布，适合需要灵感开头或想套用爆款格式的场景。",
+      "translated_at": "2026-06-05T22:54:28.040Z"
+    },
+    "skill:sergebulaev-linkedin-skills-linkedin-humanizer": {
+      "hash": "0c8c09d20a87c5db",
+      "summary_zh": "帮你把 AI 味浓的文案改得更像真人写的，也能在发布前按 2026 年领英算法清单检查草稿，看看长度、开头钩子、行动号召、表情符号和常见 AI 用词有没有踩雷，适合经常发帖又怕被识别为 AI 生成的人。",
+      "translated_at": "2026-06-05T22:54:28.259Z"
+    },
+    "skill:sergebulaev-linkedin-skills-linkedin-profile-optimizer": {
+      "hash": "3332e9eab1cbb8e9",
+      "summary_zh": "一套面向 2026 年的 LinkedIn 个人主页诊断与改写方案，覆盖标题、About、精选作品、横幅、头像、经历指标、技能、自定义链接和推荐语，帮你把简历式主页改造成转化率高出几倍的版本。",
+      "translated_at": "2026-06-05T22:54:32.157Z"
+    },
+    "skill:sergebulaev-linkedin-skills-linkedin-skills": {
+      "hash": "96ff9a8bfce3bf79",
+      "summary_zh": "帮你写、审、发 LinkedIn 帖子和评论，能起爆款钩子、按最新算法逻辑打分优化、去掉 AI 味，还能规划一周内容，确认后通过 Publora 直接发布。",
+      "translated_at": "2026-06-05T22:54:32.901Z"
+    },
+    "skill:sergebulaev-linkedin-skills-linkedin-reply-handler": {
+      "hash": "38f30ecd99f0db2c",
+      "summary_zh": "专门用来回复 LinkedIn 上某条具体评论的小工具，给个评论链接就能解析出正确的层级关系，自动生成回复草稿并在确认后通过 Publora 发布，适合跟进别人对你的回复，不用于发顶层评论。",
+      "translated_at": "2026-06-05T22:54:33.644Z"
+    },
+    "skill:sergebulaev-linkedin-skills-linkedin-thread-monitor": {
+      "hash": "2de8be6b1606e3f3",
+      "summary_zh": "监控你在领英评论后哪些获得了作者回复，识别 6-24 小时的黄金互动窗口，把热度分级并把温热线程转交给回复助手起草跟进内容，借助 Apify 实现，无需登录账号。",
+      "translated_at": "2026-06-05T22:54:36.696Z"
+    },
+    "skill:sickn33-antigravity-awesome-skills-2slides-ppt-generator": {
+      "hash": "6bab792bca9b920f",
+      "summary_zh": "用 AI 一键把文字或文档生成幻灯片，还能模仿参考图风格、自动配音并导出，适合需要快速产出演示稿的场景。",
+      "translated_at": "2026-06-05T22:54:37.303Z"
+    },
+    "skill:sickn33-antigravity-awesome-skills-accesslint-audit": {
+      "hash": "c83adde1804f3133",
+      "summary_zh": "一款无障碍合规检查工具，按 WCAG 2.2 标准扫描代码或页面，可生成优先级报告，也能自动修复并回归验证，适合前端团队做合规整改或上线前体检。",
+      "translated_at": "2026-06-05T22:54:38.319Z"
+    },
+    "skill:sickn33-antigravity-awesome-skills-accesslint-diff": {
+      "hash": "ccbb469a352f2df0",
+      "summary_zh": "对比网页改动前后的无障碍问题，默认检测未提交的修改，也能与指定分支对比，只显示新引入和已修复的违规项，方便在提交前快速发现自己改坏了什么。",
+      "translated_at": "2026-06-05T22:54:41.151Z"
+    },
+    "skill:sickn33-antigravity-awesome-skills-accesslint-scan": {
+      "hash": "80de4826df3bb394",
+      "summary_zh": "在线扫描网页的无障碍问题，精确定位每处 WCAG 违规并生成带选择器的修复清单，全程只读不改动代码，适合上线前快速排查和整改跟进。",
+      "translated_at": "2026-06-05T22:54:41.848Z"
+    },
+    "skill:steipete-codexbar-qa-test": {
+      "hash": "71e17c2a6afc4739",
+      "summary_zh": "用于 CodexBar 的实时质量与端到端测试工具，可跑通各服务商用量矩阵、校验真实应用配置，借助 Peekaboo 验证菜单、Browser Use 检查 API 与登录后台，并安全调用 1Password 凭据。",
+      "translated_at": "2026-06-05T22:54:46.751Z"
+    },
+    "skill:slopus-happy-sessions": {
+      "hash": "e4f9aec768c58732",
+      "summary_zh": "用来检索和回顾 Claude Code、Codex、Cursor 等编码助手的历史会话，方便回忆之前做过什么、试过哪些方案、问题是怎么排查的，适合需要追溯过往工作或避免重复踩坑的场景。",
+      "translated_at": "2026-06-05T22:54:47.328Z"
+    },
+    "skill:steipete-codexbar-release-codexbar": {
+      "hash": "aaec67432a521d68",
+      "summary_zh": "一套面向 macOS 应用的发布自动化流程，涵盖版本号管理、公证、自动更新源生成、Homebrew 分发和发布后版本递增，适合需要持续交付桌面应用的开发者省心打包上线。",
+      "translated_at": "2026-06-05T22:54:48.855Z"
+    },
+    "skill:swarmclawai-swarmclaw-coding-agent": {
+      "hash": "3b59508f2b592a59",
+      "summary_zh": "通过命令行把编码任务派发给 Claude Code、Codex 等外部 AI 编程助手，适合在独立项目里开发新功能、审查 PR、重构大型代码库或做需要反复探索文件的迭代开发，省去手动切换工具的麻烦。",
+      "translated_at": "2026-06-05T22:54:51.289Z"
+    },
+    "skill:swarmclawai-swarmclaw-github": {
+      "hash": "12d4dcf78a08e309",
+      "summary_zh": "通过 gh 命令行操作 GitHub，可以查看 PR 状态、CI 运行情况、创建评论 issue、调用 API 查询等，适合日常协作和代码评审场景，但本地 git 操作还得用 git 本身。",
+      "translated_at": "2026-06-05T22:54:51.519Z"
+    },
+    "skill:swarmclawai-swarmclaw-google-workspace": {
+      "hash": "233beed962a2bde0",
+      "summary_zh": "一款命令行工具，可直接在终端操作 Drive、Docs、Sheets、Gmail、日历和 Chat，方便把 Google Workspace 的日常事务接入脚本或自动化流程。",
+      "translated_at": "2026-06-05T22:54:52.706Z"
+    },
+    "skill:swarmclawai-swarmclaw-nano-banana-pro": {
+      "hash": "4bf395e2d982c34e",
+      "summary_zh": "调用 Gemini 3 Pro 图像模型来生成或编辑图片，支持文生图、单图修改和最多 14 张图的多图合成，适合需要在本地通过 API key 批量出图或改图的场景。",
+      "translated_at": "2026-06-05T22:54:55.696Z"
+    },
+    "skill:swarmclawai-swarmclaw-openai-image-gen": {
+      "hash": "a637df531ee24192",
+      "summary_zh": "调用 OpenAI 图像接口批量生成图片的小工具，支持随机抽取提示词并输出 HTML 画廊，适合需要快速跑一批 AI 配图或对比不同模型效果的场景。",
+      "translated_at": "2026-06-05T22:54:56.989Z"
+    },
+    "skill:swarmclawai-swarmclaw-nano-pdf": {
+      "hash": "3f49e50dce2b4e47",
+      "summary_zh": "用自然语言指令在命令行里生成或修改 PDF，适合快速新建文件、增删页面、改文字或把内容转成 PDF 的场景。",
+      "translated_at": "2026-06-05T22:54:57.480Z"
+    },
+    "skill:swarmclawai-swarmclaw-resourceful-problem-solving": {
+      "hash": "e361ac40b87c4368",
+      "summary_zh": "一份给 AI 代理的通用行动指南，遇到没有现成工具的任务时，引导它依次尝试已有技能、命令行工具或自写脚本去解决，而不是直接拒绝，适合用来提升智能体的应变能力。",
+      "translated_at": "2026-06-05T22:55:01.637Z"
+    },
+    "skill:swarmclawai-swarmclaw-skill-creator": {
+      "hash": "e5701ae9fd1e22c0",
+      "summary_zh": "专门用来给 SwarmClaw 智能体新建、编辑或审查技能包的工具，适合从零写一个 skill，或整理、优化、复查现有的 SKILL.md 和技能目录结构。",
+      "translated_at": "2026-06-05T22:55:02.106Z"
+    },
+    "skill:swarmclawai-swarmclaw-summarize": {
+      "hash": "eeddaa11fbab8363",
+      "summary_zh": "一个命令行工具，能从网页、播客、YouTube 视频或本地文件中提取并总结内容，也支持视频转录，适合快速消化长文章或音视频资料。",
+      "translated_at": "2026-06-05T22:55:02.672Z"
+    },
+    "skill:swarmclawai-swarmclaw-swarmclaw": {
+      "hash": "ba56254d5a34cc09",
+      "summary_zh": "一款多智能体编队的统一管理工具，能调度任务、协调对话、设定目标和日程、查看运行状态，适合需要集中编排多个 AI 代理协同工作的团队使用。",
+      "translated_at": "2026-06-05T22:55:06.107Z"
+    },
+    "skill:swarmclawai-swarmclaw-swarmvault": {
+      "hash": "202811ca6ff64f94",
+      "summary_zh": "一个面向知识库的协作规范工具，强制以 schema 为先组织笔记和资料，用图查询替代漫无目的的全文搜索，适合需要结构化管理多源知识的团队。",
+      "translated_at": "2026-06-05T22:55:06.951Z"
+    },
+    "skill:thananon-9arm-skills-debug-mantra": {
+      "hash": "c176d2c767c4d7c4",
+      "summary_zh": "一套四步调试口诀，帮你在排查 bug 时先复现、再追踪失败路径、证伪假设、交叉验证线索，避免上来就瞎改代码，适合接到报错、堆栈或诡异故障时按流程稳扎稳打地定位问题。",
+      "translated_at": "2026-06-05T22:55:07.970Z"
+    },
+    "skill:thananon-9arm-skills-post-mortem": {
+      "hash": "d53be975de6d5a10",
+      "summary_zh": "在修复 bug 后生成一份面向工程师的复盘文档，记录根因、机制、修复方案、验证过程以及问题为何被遗漏，适合在关闭工单前沉淀技术细节。",
+      "translated_at": "2026-06-05T22:55:11.114Z"
+    },
+    "skill:thananon-9arm-skills-management-talk": {
+      "hash": "bb4d467e75eafccc",
+      "summary_zh": "把工程师之间的技术对话改写成面向管理层的版本，自动适配 Jira 评论、Slack、邮件或会议要点等不同场景，适合需要向 VP、总监、PM 汇报进展又懒得反复润色措辞的开发者。",
+      "translated_at": "2026-06-05T22:55:11.634Z"
+    },
+    "skill:thananon-9arm-skills-scrutinize": {
+      "hash": "757979a20750bd16",
+      "summary_zh": "站在局外人视角对方案、PR 或代码改动做端到端审查，先质疑意图、追问是否有更简洁的实现，再顺着真实调用链验证改动是否名副其实，适合需要第二意见或代码评审把关的场景。",
+      "translated_at": "2026-06-05T22:55:12.795Z"
+    },
+    "skill:trailofbits-skills-chrome-mcp-troubleshooting": {
+      "hash": "a8b3ad4b2ee89bec",
+      "summary_zh": "用于排查和修复 Claude 浏览器扩展与 MCP 连接异常的工具，适合在调用相关接口报错「扩展未连接」或行为反常时使用。",
+      "translated_at": "2026-06-05T22:55:15.000Z"
+    },
+    "skill:tw93-waza-check": {
+      "hash": "c42653af5285584a",
+      "summary_zh": "一个面向代码与发布全流程的审查助手，覆盖代码 diff、PR、issue、提交推送到发版前的检查，并在工作区有未提交改动时进行安全拦截，适合合并前或上线前把关。",
+      "translated_at": "2026-06-05T22:55:17.115Z"
+    },
+    "skill:tw93-waza-design": {
+      "hash": "bfb40d478e0c55da",
+      "summary_zh": "专注前端界面打磨的设计助手，能生成有质感、可直接上线的页面、组件和排版，也能根据截图修复界面丑陋、混乱或不一致的问题，适合做 UI、调样式或优化视觉时使用。",
+      "translated_at": "2026-06-05T22:55:20.577Z"
+    },
+    "skill:tw93-waza-health": {
+      "hash": "4da1c035bd112480",
+      "summary_zh": "在预算范围内自动巡检 AI 编程助手的配置和工程健康度，排查指令漂移、钩子缺失、校验薄弱、代码越改越乱等问题，适合发现 Claude、Codex 等代理不听话或项目可维护性下降时使用。",
+      "translated_at": "2026-06-05T22:55:21.721Z"
+    },
+    "skill:tw93-waza-hunt": {
+      "hash": "be39ebd0c5d9acd6",
+      "summary_zh": "在代码出问题时先帮你定位根因再动手修，适合排查报错、崩溃、回归或某个功能突然失效的场景，不用于代码审查或开发新功能。",
+      "translated_at": "2026-06-05T22:55:22.337Z"
+    },
+    "skill:tw93-waza-learn": {
+      "hash": "3d6bf16639e0c9d6",
+      "summary_zh": "通过六阶段研究流程，把陌生领域或一堆零散资料梳理成可直接发布的长文，适合需要深度学习、专题调研或把多份素材整合成一篇参考文档的场景，不适合简单查询。",
+      "translated_at": "2026-06-05T22:55:25.258Z"
+    },
+    "skill:tw93-waza-think": {
+      "hash": "9af235f75c53ad54",
+      "summary_zh": "把模糊的想法打磨成结构清晰、决策完整的方案，适合在动手写代码前评估功能取舍、架构设计或可行性，不适用于小修小补和修 bug。",
+      "translated_at": "2026-06-05T22:55:26.804Z"
+    },
+    "skill:tw93-waza-read": {
+      "hash": "da645188051b90e1",
+      "summary_zh": "抓取网页或 PDF 内容，默认输出简明摘要，需要引用、保存或转换时则给出干净的 Markdown，适合让 AI 快速读懂外部链接。",
+      "translated_at": "2026-06-05T22:55:27.174Z"
+    },
+    "skill:vercel-labs-agent-skills-writing-guidelines": {
+      "hash": "faa12a441e434a92",
+      "summary_zh": "用于按写作规范审查文档和文稿的工具，能检查语气、风格是否符合写作手册，适合在需要统一团队文档调性或做发布前内容校审时使用。",
+      "translated_at": "2026-06-05T22:55:32.261Z"
+    },
+    "skill:tw93-waza-write": {
+      "hash": "2763a15da76491e5",
+      "summary_zh": "专门帮你润色中英文稿件的写作助手，能去除 AI 腔调、审校本地化文案，适合写初稿、改文档、发布说明、推文等场景，不掺和代码注释那类活儿。",
+      "translated_at": "2026-06-05T22:55:33.820Z"
+    },
+    "skill:zeroz-lab-cc-design-cc-design": {
+      "hash": "cc38949881b5d22c",
+      "summary_zh": "一款面向 AI 助手的 HTML 高保真设计技能，适用于制作幻灯片、落地页、UI 原型、交互动画等可视化稿件，让你只需说「设计个页面」就能直接产出像样的视觉成品。",
+      "translated_at": "2026-06-05T22:55:39.219Z"
     }
   }
 }

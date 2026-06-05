@@ -16,10 +16,11 @@
     "url": "https://github.com/redis/agent-skills/blob/main/skills/redis-clustering/SKILL.md",
     "path": "skills/redis-clustering/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-05T21:09:50.848Z",
+    "discovered_at": "2026-06-05T22:48:41.788Z",
     "stars": 68,
     "language": "TypeScript",
     "pushed_at": "2026-05-27T10:12:12Z",
     "license": "MIT"
-  }
+  },
+  "summary_zh": "一份 Redis 集群与主从复制的实战指南，教你用 hash tag 设计分片键、避开 MGET/管道里的 CROSSSLOT 报错，以及把读请求分流到副本扛住缓存和看板的高读负载。"
 }
