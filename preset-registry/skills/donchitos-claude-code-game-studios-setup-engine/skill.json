@@ -16,10 +16,11 @@
     "url": "https://github.com/Donchitos/Claude-Code-Game-Studios/blob/main/.claude/skills/setup-engine/SKILL.md",
     "path": ".claude/skills/setup-engine/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-05T16:48:23.617Z",
-    "stars": 20913,
+    "discovered_at": "2026-06-05T19:16:31.695Z",
+    "stars": 20915,
     "language": "Shell",
     "pushed_at": "2026-05-21T23:33:07Z",
     "license": "MIT"
-  }
+  },
+  "summary_zh": "用于锁定项目所用的游戏引擎和版本，自动写入 CLAUDE.md，并在遇到模型未掌握的新版本时联网检索补全参考文档，避免 AI 用过时知识写代码。"
 }

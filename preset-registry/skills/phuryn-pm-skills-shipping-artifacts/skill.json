@@ -1,0 +1,25 @@
+{
+  "id": "phuryn-pm-skills-shipping-artifacts",
+  "name": "shipping-artifacts",
+  "description": "The durable documentation set that makes an AI-built (vibe-coded) app reviewable before shipping. A small core every app needs — architecture, user/permission flows, permissions, variables/secrets, and a test-coverage map — plus conditional docs added only when they apply: emails, scheduled work, SEO, and embedded agents/automation. Defines what each doc must capture and how a reviewer or auditor uses it. Use when documenting a codebase for handoff, mapping user journeys and trust-boundary cross",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "phuryn",
+  "install_path": ".claude/skills/shipping-artifacts/SKILL.md",
+  "source": {
+    "repo": "phuryn/pm-skills",
+    "url": "https://github.com/phuryn/pm-skills/blob/main/pm-ai-shipping/skills/shipping-artifacts/SKILL.md",
+    "path": "pm-ai-shipping/skills/shipping-artifacts/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-05T19:18:53.805Z",
+    "stars": 11977,
+    "language": null,
+    "pushed_at": "2026-06-05T18:22:43Z",
+    "license": "MIT"
+  }
+}

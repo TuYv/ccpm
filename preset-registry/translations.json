@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-06-05T17:00:13.459Z",
+  "updated_at": "2026-06-05T19:27:15.026Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -5353,14 +5353,14 @@
       "translated_at": "2026-05-19T21:21:46.498Z"
     },
     "skill:earthtojake-text-to-cad-cad": {
-      "hash": "5b04da4cd1088d21",
-      "summary_zh": "这是一个基于Python的3D建模与检查工具，支持用自然语言或代码生成、验证并导出STEP等格式的CAD模型，适合编程化精准控制3D设计与装配的场景。",
-      "translated_at": "2026-05-20T21:23:10.866Z"
+      "hash": "9397c981a9ccf314",
+      "summary_zh": "用自然语言描述需求即可生成、修改和检查 build123d/Python 参数化模型，主打 STEP 输出，同时支持 DXF、STL、3MF、GLB 等格式导出，并能查询几何信息、测量尺寸、检查装配配合，适合做可编程 CAD 建模与自动化零件设计。",
+      "translated_at": "2026-06-05T19:23:27.172Z"
     },
     "skill:earthtojake-text-to-cad-sdf": {
-      "hash": "6ab1bfaa7da60b2b",
-      "summary_zh": "这是一个处理机器人仿真描述格式的工具，能帮你生成和验证模型及环境配置文件，适合需要对接Gazebo等仿真器的开发场景。",
-      "translated_at": "2026-05-20T21:22:24.543Z"
+      "hash": "50f1fdf5670c0546",
+      "summary_zh": "用于生成、校验 SDFormat 仿真模型与世界文件，处理 .sdf XML、模型链接关节、传感器物理插件等配置，方便对接 Gazebo 等仿真器，注意不涉及有向距离场几何。",
+      "translated_at": "2026-06-05T19:23:30.403Z"
     },
     "skill:earthtojake-text-to-cad-sendcutsend": {
       "hash": "faf4320380b360bc",
@@ -5368,19 +5368,19 @@
       "translated_at": "2026-05-19T21:22:27.309Z"
     },
     "skill:earthtojake-text-to-cad-srdf": {
-      "hash": "2658061728c15562",
-      "summary_zh": "专用于 MoveIt2 的规划语义工作流工具，帮你轻松生成、编辑和验证机器人配置，特别适合在搭建或检查机器人运动规划时使用。",
-      "translated_at": "2026-05-20T21:23:03.708Z"
+      "hash": "aec27b73449d4ada",
+      "summary_zh": "用于创建和校验 MoveIt2 的 SRDF 文件，处理规划组、虚拟关节、末端执行器、碰撞禁用等规划语义配置，适合需要生成或调试机器人运动规划描述的场景。",
+      "translated_at": "2026-06-05T19:23:34.524Z"
     },
     "skill:earthtojake-text-to-cad-step-parts": {
-      "hash": "2dc748dae4547fd5",
-      "summary_zh": "这是一个搜索和下载标准CAD零件的工具，适合在设计中需要快速查找现成零件、匹配模糊的零件名或规格，并直接获取可靠的STEP格式3D模型的场景。",
-      "translated_at": "2026-05-19T21:22:41.265Z"
+      "hash": "1a1919c88e5daf9f",
+      "summary_zh": "一个 CAD 标准件检索下载工具，可在 step.parts 目录中查找电机、螺丝、轴承、连接器等常见现成零件，按名称、规格或别名匹配后直接获取 .step 文件，省去自建占位几何的麻烦。",
+      "translated_at": "2026-06-05T19:23:34.430Z"
     },
     "skill:earthtojake-text-to-cad-urdf": {
-      "hash": "02c5778828ddee71",
-      "summary_zh": "这是一个生成和校验URDF机器人描述的工具。在创建、编辑或调试机器人的连杆、关节和几何属性时，用它不仅能快速生成结构描述，还能自动检查格式错误。",
-      "translated_at": "2026-05-20T21:23:34.635Z"
+      "hash": "e790eaf566b0ced2",
+      "summary_zh": "用于生成和校验机器人 URDF 描述文件的工具，支持编辑链接、关节、惯量、碰撞体和网格引用，适合在搭建或调试机器人模型时排查结构与坐标系问题。",
+      "translated_at": "2026-06-05T19:23:34.939Z"
     },
     "skill:ehmo-platform-design-skills-android": {
       "hash": "a606bed879c891c6",
@@ -5813,9 +5813,9 @@
       "translated_at": "2026-05-19T21:35:07.900Z"
     },
     "skill:fradser-dotclaude-agent-browser": {
-      "hash": "e31c61b2aaf405a0",
-      "summary_zh": "这是一个浏览器自动化技能库，专门帮你搞定网页测试、自动填表、截图或抓取数据，还能随时查阅相关操作命令。",
-      "translated_at": "2026-05-19T21:35:29.659Z"
+      "hash": "89d8e377575838ee",
+      "summary_zh": "一款给 AI 代理用的浏览器自动化命令行工具，能让代理直接打开网页、填表、点按钮、截图或抓取数据，适合做网页测试、登录操作和各种网页自动化任务。",
+      "translated_at": "2026-06-05T19:23:45.329Z"
     },
     "skill:expo-skills-native-data-fetching": {
       "hash": "3bd2ca7da5069bed",
@@ -9673,9 +9673,9 @@
       "translated_at": "2026-05-20T00:55:19.040Z"
     },
     "bundle:sickn33-antigravity-awesome-skills": {
-      "hash": "2bbd887228c6ffb2",
-      "summary_zh": "这套合集把 Andru.ia 体系的咨询、架构、技能开发等核心角色，搭配安全审计、无障碍合规、A/B 测试、3D Web 开发等专项能力打包在一起，覆盖从需求诊断到落地交付的全流程，方便团队按场景随取随用，快速搭建可复用的 AI 工作流。",
-      "translated_at": "2026-06-05T16:53:32.596Z"
+      "hash": "b5eb3b9b7874c97d",
+      "summary_zh": "这套合集汇聚了 64 个覆盖架构咨询、安全审计、无障碍合规、A/B 测试、3D 网页开发到演示文稿生成的实用技能，帮你在一个工作流里随取随用，把从需求落地到上线交付的各类专业活儿一站式搞定。",
+      "translated_at": "2026-06-05T19:21:18.230Z"
     },
     "bundle:getsentry-sentry": {
       "hash": "897155f34b6a54d7",
@@ -13898,9 +13898,9 @@
       "translated_at": "2026-06-05T16:53:55.435Z"
     },
     "bundle:phuryn-pm-skills": {
-      "hash": "ec8d223332291354",
-      "summary_zh": "一套面向产品经理的全流程辅助工具，覆盖从市场分析、用户调研、想法brainstorm到 A/B 实验和 OKR 制定，把日常 PM 工作中常用的分析框架一次性沉淀下来，帮你更快做出有依据的产品决策。",
-      "translated_at": "2026-06-05T16:53:57.781Z"
+      "hash": "6a50f8a84455abc6",
+      "summary_zh": "一站式产品经理工作台，把从市场分析、用户调研、创意发散到 A/B 测试和 OKR 制定的全流程方法论沉淀成可直接调用的技能，帮 PM 用结构化框架快速产出专业级决策文档。",
+      "translated_at": "2026-06-05T19:21:19.502Z"
     },
     "bundle:pingdotgg-t3code": {
       "hash": "3977ac633e343922",
@@ -14551,6 +14551,966 @@
       "hash": "92cbd173def09607",
       "summary_zh": "帮你找潜在客户并整理成可联系的名单，覆盖 B2B SaaS、通用 B2B 和本地小商家，适合做外呼线索挖掘、目标客户研究和销售拓展。",
       "translated_at": "2026-06-05T17:00:13.459Z"
+    },
+    "skill:donchitos-claude-code-game-studios-adopt": {
+      "hash": "c7cfc49097f0ab0b",
+      "summary_zh": "加入进行中的项目或升级旧版模板时用得上，会检查现有文件是否真正符合模板规范、按影响程度归类问题，并生成带编号的迁移步骤，避免只看文件存在却用不起来的尴尬。",
+      "translated_at": "2026-06-05T19:21:24.370Z"
+    },
+    "skill:donchitos-claude-code-game-studios-architecture-decision": {
+      "hash": "2b487c01a9ff1f19",
+      "summary_zh": "用来记录团队做出的重大技术决策，把背景、备选方案和后续影响都写清楚，方便日后追溯为什么当初这么选，适合需要沉淀架构决策依据的项目。",
+      "translated_at": "2026-06-05T19:21:24.492Z"
+    },
+    "skill:coreyhaines31-marketingskills-sms": {
+      "hash": "5b0ffe21c2f89fc0",
+      "summary_zh": "帮你规划和优化短信、彩信营销，涵盖欢迎、弃购、复购召回、促销、验证码等场景，也能应对A2P 10DLC、TCPA合规和短号选择等问题，适合电商和增长团队上手。",
+      "translated_at": "2026-06-05T19:21:26.178Z"
+    },
+    "skill:donchitos-claude-code-game-studios-architecture-review": {
+      "hash": "b39c61bb02faefd8",
+      "summary_zh": "用于检查项目架构与所有 GDD 是否完整一致的工具，会建立技术需求到 ADR 的追溯矩阵，找出覆盖缺口、ADR 之间的冲突以及引擎兼容性问题，最后给出通过、有顾虑或不通过的结论，适合在架构评审阶段使用。",
+      "translated_at": "2026-06-05T19:21:28.586Z"
+    },
+    "skill:donchitos-claude-code-game-studios-art-bible": {
+      "hash": "47277c75adc95063",
+      "summary_zh": "一款引导式美术圣经创作工具，按章节逐步生成视觉风格规范，作为后续美术资产制作的统一标准。适合在创意构思确认后、系统设计或游戏设计文档撰写前使用，帮团队先把视觉基调定下来。",
+      "translated_at": "2026-06-05T19:21:30.444Z"
+    },
+    "skill:donchitos-claude-code-game-studios-asset-audit": {
+      "hash": "7b84d66e22e81e9a",
+      "summary_zh": "一款面向游戏开发的资源检查工具，自动核对命名规范、文件大小、格式标准等流程要求，并找出孤立资源和缺失引用，适合需要统一资产管线、避免项目堆积问题的团队。",
+      "translated_at": "2026-06-05T19:21:30.809Z"
+    },
+    "skill:donchitos-claude-code-game-studios-asset-spec": {
+      "hash": "6dce411a623809a0",
+      "summary_zh": "把游戏设计文档、关卡说明或角色档案转化为单个资产的视觉规范和 AI 生成提示词，输出结构化规格文件并同步更新资产清单，适合美术圣经定稿后、正式开工前的预生产环节。",
+      "translated_at": "2026-06-05T19:21:33.561Z"
+    },
+    "skill:donchitos-claude-code-game-studios-balance-check": {
+      "hash": "4db489e4ec12c2c4",
+      "summary_zh": "一款游戏平衡性检查工具，自动扫描数值表、公式和配置，找出异常数据、断裂的成长曲线、过强套路以及经济系统失衡，适合策划改完数值后快速验证。",
+      "translated_at": "2026-06-05T19:21:35.114Z"
+    },
+    "skill:donchitos-claude-code-game-studios-brainstorm": {
+      "hash": "86e74c67ff5fbdbc",
+      "summary_zh": "一款引导式游戏创意工具，帮你从零灵感一步步梳理出结构化的游戏概念文档，融入了专业工作室的创意方法和玩家心理框架，适合卡壳或想系统化打磨点子的开发者。",
+      "translated_at": "2026-06-05T19:21:35.616Z"
+    },
+    "skill:donchitos-claude-code-game-studios-bug-report": {
+      "hash": "c7e3d8d2b3def4dc",
+      "summary_zh": "把一句话的问题描述自动整理成结构化缺陷报告，或扫描代码挖掘潜在 bug，自动补全复现步骤、严重程度和上下文，省去手写报告的麻烦。",
+      "translated_at": "2026-06-05T19:21:38.583Z"
+    },
+    "skill:donchitos-claude-code-game-studios-changelog": {
+      "hash": "a3835287c6b33498",
+      "summary_zh": "从 Git 提交、迭代数据和设计文档自动生成更新日志，同时产出团队内部版和面向玩家的版本，省去手动整理的麻烦。",
+      "translated_at": "2026-06-05T19:21:39.283Z"
+    },
+    "skill:donchitos-claude-code-game-studios-bug-triage": {
+      "hash": "812962e07ca601e9",
+      "summary_zh": "自动梳理生产环境的未处理缺陷，重新评估优先级和严重程度，分配到迭代中并汇总成报告，适合在迭代启动或缺陷堆积时快速理清头绪。",
+      "translated_at": "2026-06-05T19:21:39.374Z"
+    },
+    "skill:donchitos-claude-code-game-studios-code-review": {
+      "hash": "fedb21a814e22a72",
+      "summary_zh": "针对指定文件做架构和代码质量审查，检查编码规范、设计模式、SOLID 原则、可测试性以及性能问题，适合在提交前把关代码质量。",
+      "translated_at": "2026-06-05T19:21:42.466Z"
+    },
+    "skill:donchitos-claude-code-game-studios-content-audit": {
+      "hash": "bd3131db7fb686e8",
+      "summary_zh": "用于核对游戏设计文档里规划的内容数量和实际已实现的部分，快速看出哪些做了、哪些还没做，方便开发过程中盯进度。",
+      "translated_at": "2026-06-05T19:21:43.859Z"
+    },
+    "skill:donchitos-claude-code-game-studios-consistency-check": {
+      "hash": "477c921033dfeaa1",
+      "summary_zh": "用于扫描多份游戏设计文档，对照实体注册表找出跨文档的数据冲突，比如同一实体属性不一致、同一道具数值不同或同一公式变量有差异，采用先grep再精准定位的方式，避免全文通读，适合维护大型GDD体系时的一致性核查。",
+      "translated_at": "2026-06-05T19:21:44.034Z"
+    },
+    "skill:donchitos-claude-code-game-studios-create-architecture": {
+      "hash": "d73d79228b61157e",
+      "summary_zh": "在写代码之前，带你一步步搭建游戏的整体架构文档，自动读取设计稿、系统索引、ADR 和引擎资料，还会针对锁定的引擎版本提示知识盲点、校验技术选型是否靠谱。",
+      "translated_at": "2026-06-05T19:21:48.285Z"
+    },
+    "skill:donchitos-claude-code-game-studios-create-control-manifest": {
+      "hash": "6baf9c3437d2b034",
+      "summary_zh": "在架构定稿后，把所有已通过的 ADR、技术偏好和引擎文档整理成一份扁平的开发规则清单，分系统、分层列出该做什么、不该做什么，比 ADR 更直接好用，方便程序员照着落地。",
+      "translated_at": "2026-06-05T19:21:49.046Z"
+    },
+    "skill:donchitos-claude-code-game-studios-create-epics": {
+      "hash": "dfc40baaa58f9795",
+      "summary_zh": "把审批后的设计文档和架构拆成史诗级任务，按架构模块逐个生成，明确范围、关联决策、引擎风险和未追溯需求，适合需要规范化项目拆解的团队，后续再用配套命令细分故事。",
+      "translated_at": "2026-06-05T19:21:49.404Z"
+    },
+    "skill:donchitos-claude-code-game-studios-create-stories": {
+      "hash": "1e723f7cb8375e48",
+      "summary_zh": "把一个史诗任务自动拆解成可落地的用户故事文件，自动关联设计文档、架构决策和验收标准，适合需要规范化拆分需求、追溯测试证据的敏捷开发团队。",
+      "translated_at": "2026-06-05T19:21:52.695Z"
+    },
+    "skill:donchitos-claude-code-game-studios-design-review": {
+      "hash": "c2848a620a46511c",
+      "summary_zh": "在游戏设计文档交给程序员之前，先帮你检查内容是否完整、前后一致、可落地实现，并符合团队的设计规范。",
+      "translated_at": "2026-06-05T19:21:54.149Z"
+    },
+    "skill:donchitos-claude-code-game-studios-day-one-patch": {
+      "hash": "667cd3382404b539",
+      "summary_zh": "为游戏首发当天的补丁打理全流程，从问题梳理、优先级排序到实现和质量把关，按小型冲刺方式推进，还配套回滚预案，适合金盘后到上线前后这段紧张窗口期使用。",
+      "translated_at": "2026-06-05T19:21:54.789Z"
+    },
+    "skill:donchitos-claude-code-game-studios-design-system": {
+      "hash": "46b5de8a77a81f2c",
+      "summary_zh": "一款引导式游戏设计文档撰写工具，按章节协作完成单个游戏系统的 GDD，能读取已有文档作为背景、交叉核对依赖关系，并边写边保存，适合需要系统化梳理设计思路的独立开发者或策划。",
+      "translated_at": "2026-06-05T19:21:57.180Z"
+    },
+    "skill:donchitos-claude-code-game-studios-estimate": {
+      "hash": "1d16954984222ed5",
+      "summary_zh": "通过分析复杂度、依赖关系、历史速度和风险因素，给任务估算工作量，并给出带置信度的结构化结果，适合项目排期和迭代规划时参考。",
+      "translated_at": "2026-06-05T19:21:58.365Z"
+    },
+    "skill:donchitos-claude-code-game-studios-dev-story": {
+      "hash": "5d88d9869af3cc04",
+      "summary_zh": "读取故事文件并自动落地实现，串联需求文档、架构指南和控制清单，把任务派给对应的程序员智能体来写代码和测试，并逐条核对验收标准，适合在故事就绪检查后、代码评审前的开发环节使用。",
+      "translated_at": "2026-06-05T19:21:58.543Z"
+    },
+    "skill:donchitos-claude-code-game-studios-gate-check": {
+      "hash": "19f5206a617e9f42",
+      "summary_zh": "用来判断项目是否具备进入下一开发阶段的条件，会给出通过、存疑或不通过的结论，并列出阻碍项和缺失的交付物，适合在准备上线或推进里程碑前做把关。",
+      "translated_at": "2026-06-05T19:22:01.740Z"
+    },
+    "skill:donchitos-claude-code-game-studios-help": {
+      "hash": "34cbfb1b438b0de7",
+      "summary_zh": "当你在操作中卡住、不知道下一步该怎么办时，它会结合你已做的事和当前问题，给出接下来的行动建议。",
+      "translated_at": "2026-06-05T19:22:02.907Z"
+    },
+    "skill:donchitos-claude-code-game-studios-hotfix": {
+      "hash": "eaef6e6afbe06425",
+      "summary_zh": "一套紧急修复流程，跳过常规迭代直接拉出修复分支，同时完整记录审批和回合并轨迹，适合线上突发故障需要快速止血又要事后可追溯的场景。",
+      "translated_at": "2026-06-05T19:22:04.139Z"
+    },
+    "skill:donchitos-claude-code-game-studios-launch-checklist": {
+      "hash": "dbd9540ca1eef1f5",
+      "summary_zh": "一份覆盖代码、内容、商店、营销、社区、基础设施和法务等各部门的产品上线检查清单，帮团队在正式发布前做全方位准备，避免遗漏关键环节。",
+      "translated_at": "2026-06-05T19:22:06.735Z"
+    },
+    "skill:donchitos-claude-code-game-studios-map-systems": {
+      "hash": "fbaa39124fc3cf5d",
+      "summary_zh": "把游戏概念拆解成独立系统，梳理它们之间的依赖关系，排出设计先后顺序并生成系统清单，适合策划在立项初期理清整体结构。",
+      "translated_at": "2026-06-05T19:22:08.719Z"
+    },
+    "skill:donchitos-claude-code-game-studios-localize": {
+      "hash": "a5925ed1564f6002",
+      "summary_zh": "一套完整的本地化流程工具，能扫描代码里的硬编码文案、抽取并管理字符串表、校验译文质量、生成译员说明，还支持文化敏感审查、配音本地化、RTL 和多平台测试，适合需要规范多语言发布流程的团队。",
+      "translated_at": "2026-06-05T19:22:08.887Z"
+    },
+    "skill:donchitos-claude-code-game-studios-patch-notes": {
+      "hash": "27b751ed028d78e6",
+      "summary_zh": "把 git 提交、迭代记录和内部变更日志自动转写成面向玩家的更新公告，让晦涩的开发术语变成清晰好读的版本说明，适合游戏团队发版时用。",
+      "translated_at": "2026-06-05T19:22:13.210Z"
+    },
+    "skill:donchitos-claude-code-game-studios-onboard": {
+      "hash": "7180a17b7b8a9427",
+      "summary_zh": "为新加入项目的开发者或 AI 代理自动生成一份上手文档，梳理项目现状、架构、规范和当前重点，按角色或方向定制内容，省去手把手讲解的麻烦。",
+      "translated_at": "2026-06-05T19:22:14.094Z"
+    },
+    "skill:donchitos-claude-code-game-studios-milestone-review": {
+      "hash": "43c9973e534b0bb9",
+      "summary_zh": "在项目里程碑节点自动生成进度评审报告，涵盖功能完成度、质量指标和风险评估，并给出是否如期推进的建议，适合临近交付节点时判断准备情况。",
+      "translated_at": "2026-06-05T19:22:15.660Z"
+    },
+    "skill:donchitos-claude-code-game-studios-perf-profile": {
+      "hash": "7a5c0e6e659e349a",
+      "summary_zh": "一套结构化的性能分析流程，帮你定位瓶颈、对照预算指标评估表现，并按优先级给出可落地的优化建议，适合需要系统性调优却没头绪的场景。",
+      "translated_at": "2026-06-05T19:22:18.548Z"
+    },
+    "skill:donchitos-claude-code-game-studios-project-stage-detect": {
+      "hash": "7fc80cb88145d967",
+      "summary_zh": "自动扫描项目现有产物，判断当前所处的开发阶段、找出缺失环节并给出后续建议，适合想快速了解「项目进展到哪儿了」或做整体盘点的场景。",
+      "translated_at": "2026-06-05T19:22:20.225Z"
+    },
+    "skill:donchitos-claude-code-game-studios-propagate-design-change": {
+      "hash": "ff8a11b0a9115c5a",
+      "summary_zh": "当游戏设计文档更新后，自动比对所有架构决策记录和追溯索引，找出可能已过时的决策，生成变更影响报告并引导逐项处理，适合需要保持设计与架构同步的团队。",
+      "translated_at": "2026-06-05T19:22:22.957Z"
+    },
+    "skill:donchitos-claude-code-game-studios-playtest-report": {
+      "hash": "2778ab16f2c4b221",
+      "summary_zh": "用于生成结构化的游戏试玩反馈模板，或把零散的试玩笔记整理成规范格式，方便团队统一收集和分析玩家意见。",
+      "translated_at": "2026-06-05T19:22:23.156Z"
+    },
+    "skill:donchitos-claude-code-game-studios-prototype": {
+      "hash": "c2d560a60f9883e6",
+      "summary_zh": "在正式写设计文档前，用最小可玩 demo 验证核心玩法是否值得做下去，根据游戏类型选 HTML、引擎或纸面原型，最后给出继续、调整或砍掉的判断。",
+      "translated_at": "2026-06-05T19:22:26.066Z"
+    },
+    "skill:donchitos-claude-code-game-studios-qa-plan": {
+      "hash": "f8702d44458e8ea3",
+      "summary_zh": "在开发迭代或新功能启动前，自动读取设计文档和用户故事，按测试类型分类，生成涵盖自动化测试、手动用例、冒烟范围和体验验收的结构化测试计划，帮 QA 团队提前规划好测试工作。",
+      "translated_at": "2026-06-05T19:22:27.771Z"
+    },
+    "skill:donchitos-claude-code-game-studios-quick-design": {
+      "hash": "4392f2637e1d1723",
+      "summary_zh": "给小改动用的轻量设计说明工具，适合调参、平衡性微调这类不值得写完整 GDD 的场景，直接生成可嵌入故事文件的简短设计规格。",
+      "translated_at": "2026-06-05T19:22:28.771Z"
+    },
+    "skill:donchitos-claude-code-game-studios-regression-suite": {
+      "hash": "bb074eb1c692b691",
+      "summary_zh": "把测试覆盖与游戏设计文档的关键路径对应起来，找出缺少回归测试的已修复 Bug，发现新功能带来的覆盖盲区，适合修完 Bug 后或发版前用来把关测试质量。",
+      "translated_at": "2026-06-05T19:22:31.993Z"
+    },
+    "skill:donchitos-claude-code-game-studios-release-checklist": {
+      "hash": "b36e0f49cd74345c",
+      "summary_zh": "一份发布前的自检清单生成工具，覆盖构建验证、合规认证、应用商店信息和上线准备等环节，帮助团队在产品正式发布前查漏补缺，避免遗漏关键步骤。",
+      "translated_at": "2026-06-05T19:22:32.408Z"
+    },
+    "skill:donchitos-claude-code-game-studios-retrospective": {
+      "hash": "881d95a34419a12e",
+      "summary_zh": "自动分析已完成的工作、进度、阻塞点和规律，生成冲刺或里程碑复盘报告，并给出下一轮迭代可落地的改进建议。",
+      "translated_at": "2026-06-05T19:22:34.693Z"
+    },
+    "skill:donchitos-claude-code-game-studios-reverse-document": {
+      "hash": "84dfa4d61e24bb5c",
+      "summary_zh": "一款从已有代码或原型反向生成设计、架构文档的工具，适合补齐缺失的规划文档，方便老项目梳理思路或交接知识。",
+      "translated_at": "2026-06-05T19:22:35.799Z"
+    },
+    "skill:donchitos-claude-code-game-studios-review-all-gdds": {
+      "hash": "de54d021061acc48",
+      "summary_zh": "在多个系统GDD写完、进入架构设计前用一次，一次性读取所有文档，找出彼此之间的矛盾、过时引用、归属冲突、公式冲突，以及主导策略、经济失衡、认知超载等游戏设计层面的问题。",
+      "translated_at": "2026-06-05T19:22:37.294Z"
+    },
+    "skill:donchitos-claude-code-game-studios-scope-check": {
+      "hash": "e16c770b008afb55",
+      "summary_zh": "通过对比当前进度和最初规划，帮你揪出功能或迭代中悄悄膨胀的需求，量化偏离程度并给出砍掉的建议，适合在迭代复盘或担心范围失控时使用。",
+      "translated_at": "2026-06-05T19:22:39.777Z"
+    },
+    "skill:donchitos-claude-code-game-studios-security-audit": {
+      "hash": "08961b0765b6a613",
+      "summary_zh": "面向游戏的安全审计工具，专门排查存档篡改、作弊漏洞、网络攻击、数据泄露和输入校验缺陷，并按优先级生成带修复建议的报告，适合在公测或联机上线前做一轮安全把关。",
+      "translated_at": "2026-06-05T19:22:40.730Z"
+    },
+    "skill:donchitos-claude-code-game-studios-setup-engine": {
+      "hash": "18b152f03b148211",
+      "summary_zh": "用于锁定项目所用的游戏引擎和版本，自动写入 CLAUDE.md，并在遇到模型未掌握的新版本时联网检索补全参考文档，避免 AI 用过时知识写代码。",
+      "translated_at": "2026-06-05T19:22:43.195Z"
+    },
+    "skill:donchitos-claude-code-game-studios-skill-improve": {
+      "hash": "7248b340552aa7d8",
+      "summary_zh": "通过测试-修复-重测循环来打磨技能：先做静态检查，再针对性提改进建议并重写，最后根据评分决定保留还是回滚，适合需要持续迭代优化技能质量的场景。",
+      "translated_at": "2026-06-05T19:22:44.378Z"
+    },
+    "skill:donchitos-claude-code-game-studios-skill-test": {
+      "hash": "469c02fb9cb2e034",
+      "summary_zh": "用于检查 skill 文件是否符合规范并按预期工作，提供静态检查、行为测试和覆盖率审计三种模式，适合在开发或维护 skill 时做质量把关。",
+      "translated_at": "2026-06-05T19:22:45.021Z"
+    },
+    "skill:donchitos-claude-code-game-studios-smoke-check": {
+      "hash": "55d0d02ba8075e24",
+      "summary_zh": "在交付测试前跑一遍关键路径自动化用例，快速判断这次构建能不能交给 QA，输出明确的通过或失败结论，避免把不稳定的版本推过去。",
+      "translated_at": "2026-06-05T19:22:48.376Z"
+    },
+    "skill:donchitos-claude-code-game-studios-soak-test": {
+      "hash": "81dadc3d89ca6781",
+      "summary_zh": "用于制定长时间游戏测试方案，帮助开发者发现短时测试难以暴露的内存泄漏、性能衰减和长期运行下的边缘问题，适合打磨和发布阶段做稳定性验证。",
+      "translated_at": "2026-06-05T19:22:48.813Z"
+    },
+    "skill:donchitos-claude-code-game-studios-sprint-plan": {
+      "hash": "a2153ce92ae476b2",
+      "summary_zh": "根据当前里程碑、已完成工作和可用产能，自动生成或更新冲刺计划，并结合产品文档与设计待办，帮敏捷团队省去手动整理排期的麻烦。",
+      "translated_at": "2026-06-05T19:22:49.787Z"
+    },
+    "skill:donchitos-claude-code-game-studios-sprint-status": {
+      "hash": "8439ec515b2c701c",
+      "summary_zh": "快速查看当前冲刺进度的小工具，自动读取冲刺计划和故事文件状态，生成简明的进度快照、燃尽评估和潜在风险提示，方便随时了解团队推进情况。",
+      "translated_at": "2026-06-05T19:22:53.357Z"
+    },
+    "skill:donchitos-claude-code-game-studios-start": {
+      "hash": "5d3e576517b05903",
+      "summary_zh": "面向新手的引导式入口，先询问你的当前状态，再推荐合适的上手流程，避免一上来就丢一堆默认操作让人摸不着头脑。",
+      "translated_at": "2026-06-05T19:22:53.374Z"
+    },
+    "skill:donchitos-claude-code-game-studios-story-done": {
+      "hash": "752d83b47a4d8b69",
+      "summary_zh": "一款故事完成度审查工具，自动核对验收标准与实现是否一致、检查架构偏差并提示代码评审，完成后更新状态并推送下一个待办故事，适合敏捷迭代收尾环节使用。",
+      "translated_at": "2026-06-05T19:22:54.340Z"
+    },
+    "skill:donchitos-claude-code-game-studios-team-audio": {
+      "hash": "2be60d3daf4f181d",
+      "summary_zh": "一套协同工作的音频团队工作流，覆盖从音频总监、音效设计到技术美术和玩法程序员的全流程，适合需要完整音频管线落地的游戏或互动项目。",
+      "translated_at": "2026-06-05T19:22:57.814Z"
+    },
+    "skill:donchitos-claude-code-game-studios-story-readiness": {
+      "hash": "bcf8554bd3cf474a",
+      "summary_zh": "用来检查一份用户故事是否真的可以动工，自动核对需求文档、架构决策、引擎说明和验收标准是否齐全，给出「可做/待完善/受阻」的结论并指出缺漏，适合开发前的最后一道把关。",
+      "translated_at": "2026-06-05T19:22:58.242Z"
+    },
+    "skill:donchitos-claude-code-game-studios-team-combat": {
+      "hash": "59631500bea6da20",
+      "summary_zh": "一套面向战斗系统开发的多角色协作流程，串联策划、程序、AI、技术美术、音效和测试，从设计到验证一站式落地战斗功能，适合需要快速搭建或迭代战斗玩法的游戏团队。",
+      "translated_at": "2026-06-05T19:22:59.492Z"
+    },
+    "skill:donchitos-claude-code-game-studios-team-level": {
+      "hash": "8f139ba5d3db3c24",
+      "summary_zh": "一套关卡设计团队协作流程，把关卡设计、叙事、世界观、美术、系统和测试六个角色串起来，适合需要从零打造完整游戏关卡或区域的开发场景。",
+      "translated_at": "2026-06-05T19:23:02.570Z"
+    },
+    "skill:donchitos-claude-code-game-studios-team-live-ops": {
+      "hash": "79775f0830eeabcb",
+      "summary_zh": "面向游戏上线后的运营协作工具，把策划、经济、数据、社区、文案、叙事等角色串到一起，协同规划赛季、活动或版本更新内容。",
+      "translated_at": "2026-06-05T19:23:11.390Z"
+    },
+    "skill:earthtojake-text-to-cad-cad-viewer": {
+      "hash": "9df6c8d37b6de325",
+      "summary_zh": "一键启动可视化工具，在浏览器里查看 STEP、STL、G-code、URDF 等各种 CAD 和机器人模型文件，适合建模或代码生成后快速预览成果。",
+      "translated_at": "2026-06-05T19:23:15.580Z"
+    },
+    "skill:earthtojake-text-to-cad-gcode": {
+      "hash": "42a61500c65c962e",
+      "summary_zh": "调用本地切片软件，把 STL、OBJ、3MF 等三维模型转成可直接用于 FDM 打印的 G 代码，并支持试切、检查模型是否可切片，以及在送往打印机前对生成的 G 代码做静态校验。",
+      "translated_at": "2026-06-05T19:23:20.808Z"
+    },
+    "skill:earthtojake-text-to-cad-implicit-cad": {
+      "hash": "21c74683a88c183f",
+      "summary_zh": "在浏览器里直接用 GLSL 距离场写代码做 CAD 建模，支持平滑布尔、TPMS 等隐式几何，并能实时光线步进渲染和截图，适合想用着色器思路玩参数化建模的实验性场景。",
+      "translated_at": "2026-06-05T19:23:25.053Z"
+    },
+    "skill:earthtojake-text-to-cad-bambu-labs": {
+      "hash": "e9a07f1f5764ce13",
+      "summary_zh": "在本地网络下通过 FTPS 和 MQTT 与拓竹打印机对接，先校验普通 gcode 文件再上传、试运行或谨慎启动打印，适合想绕开切片软件自动化操作打印机的用户。",
+      "translated_at": "2026-06-05T19:23:30.742Z"
+    },
+    "skill:ericosiu-ai-marketing-skills-closed-loop-analytics-upgrade": {
+      "hash": "fecce1bec9d5cc27",
+      "summary_zh": "一套把营销、内容、SEO 和增长工作流接入平台数据的方法论，让每次调整都用分析结果说话，而不是凭感觉。适合想在 X、YouTube、获客或付费投放中建立闭环复盘机制的团队。",
+      "translated_at": "2026-06-05T19:23:38.855Z"
+    },
+    "skill:ethereum-ethereum-org-website-intl-pipeline": {
+      "hash": "53630187778e2c8b",
+      "summary_zh": "一套基于清单的增量翻译流水线工具，配套清理器与 GitHub Actions，适合处理翻译损坏、语言缺失、术语对照、ETHGlossary 集成等多语言维护场景。",
+      "translated_at": "2026-06-05T19:23:38.906Z"
+    },
+    "skill:ethereum-ethereum-org-website-intl-review": {
+      "hash": "9542986f3d76a8b8",
+      "summary_zh": "专为多语言翻译 PR 审校设计，覆盖 24 种目标语言的质量打分、术语一致性核查与品牌名误译排查，适合维护本地化项目时统一评审标准和追踪各语种问题。",
+      "translated_at": "2026-06-05T19:23:41.078Z"
+    },
+    "skill:expo-skills-add-app-clip": {
+      "hash": "b4d18aad54af057e",
+      "summary_zh": "一键为 Expo 项目添加 iOS App Clip 目标，自动配置 AASA 文件和相关参数，适合需要通过 URL 唤起轻量版应用、与主 App 一同分发的场景。",
+      "translated_at": "2026-06-05T19:23:42.961Z"
+    },
+    "skill:expo-skills-expo-observe": {
+      "hash": "92d96db3311aaacc",
+      "summary_zh": "一个面向 Expo 应用的性能观测库，帮你接入 EAS Observe，自动采集冷热启动、TTR、TTI、路由切换等指标，并能通过 CLI 查询分析，适合需要监控 React Native 应用真实性能表现的团队。",
+      "translated_at": "2026-06-05T19:23:43.115Z"
+    },
+    "skill:fradser-dotclaude-design-md": {
+      "hash": "485f94f71e20c6bc",
+      "summary_zh": "用于编写和落地 DESIGN.md 设计系统规范，能把设计 token 转成 Tailwind 主题配置、导出 DTCG 格式、校验一致性、对比版本差异，还能检查组件配色的 WCAG 对比度，适合维护设计系统的团队。",
+      "translated_at": "2026-06-05T19:23:47.127Z"
+    },
+    "skill:fradser-dotclaude-impeccable": {
+      "hash": "de2d430e4bd80fe9",
+      "summary_zh": "用于生成有设计感的前端代码，专门避开千篇一律的 AI 风格，帮你打造网页组件、海报、应用界面等成品，还能沉淀可复用组件到设计系统里。",
+      "translated_at": "2026-06-05T19:23:48.628Z"
+    },
+    "skill:fradser-dotclaude-impeccable-adapt": {
+      "hash": "ba1464c141c3cf0b",
+      "summary_zh": "一款帮助设计稿适配多种屏幕尺寸和设备的工具，支持断点设置、流式布局和触控区域优化，适合做响应式设计、移动端适配或跨设备兼容时使用。",
+      "translated_at": "2026-06-05T19:23:49.173Z"
+    },
+    "skill:fradser-dotclaude-impeccable-animate": {
+      "hash": "83b275d17d7255b0",
+      "summary_zh": "用来审视现有功能并为其加入合适的动画、微交互和动效，让界面更生动好用，适合想给 UI 增加过渡、悬停反馈或整体灵动感时使用。",
+      "translated_at": "2026-06-05T19:23:50.967Z"
+    },
+    "skill:fradser-dotclaude-impeccable-audit": {
+      "hash": "2459832432420041",
+      "summary_zh": "一键扫描网页的可访问性、性能、主题适配、响应式和反模式问题，按 P0-P3 严重等级打分并给出改进方案，适合做技术质量体检。",
+      "translated_at": "2026-06-05T19:23:52.522Z"
+    },
+    "skill:fradser-dotclaude-impeccable-bolder": {
+      "hash": "a6d2279a3f4001bd",
+      "summary_zh": "一款帮你把平淡保守的设计变得更有视觉张力和个性的工具，在保证可用性的同时提升冲击力，适合觉得稿子太普通、缺乏记忆点时使用。",
+      "translated_at": "2026-06-05T19:23:53.436Z"
+    },
+    "skill:fradser-dotclaude-impeccable-clarify": {
+      "hash": "e055edc4b890fb5f",
+      "summary_zh": "用来优化界面里那些让人看不懂的文案，比如模糊的按钮标签、含糊的报错提示或绕口的操作说明，帮你把交互文字写得更清楚易懂。",
+      "translated_at": "2026-06-05T19:23:57.057Z"
+    },
+    "skill:fradser-dotclaude-impeccable-critique": {
+      "hash": "ca82320ccf80186c",
+      "summary_zh": "从用户体验角度审视设计，对视觉层次、信息架构、情感共鸣、认知负担等维度打分，自动识别反模式并给出可落地的改进建议，适合在需要评审界面或组件时使用。",
+      "translated_at": "2026-06-05T19:23:57.927Z"
+    },
+    "skill:fradser-dotclaude-impeccable-colorize": {
+      "hash": "f185e2f378ca230a",
+      "summary_zh": "给过于单调、缺乏视觉吸引力的界面注入恰到好处的色彩，让设计更生动、更有表现力，适合页面看起来发灰、寡淡或想要更鲜明配色时使用。",
+      "translated_at": "2026-06-05T19:23:58.900Z"
+    },
+    "skill:fradser-dotclaude-impeccable-delight": {
+      "hash": "1639745b92d19cd0",
+      "summary_zh": "给界面添点小惊喜和个性化细节，比如微交互、动效和俏皮元素，让原本平淡的功能用起来更有趣、更难忘，适合想给产品做精致打磨的场景。",
+      "translated_at": "2026-06-05T19:24:01.562Z"
+    },
+    "skill:fradser-dotclaude-impeccable-distill": {
+      "hash": "d2e604c24918ece3",
+      "summary_zh": "帮你把界面设计去繁就简，砍掉多余元素和视觉噪音，让 UI 更清爽、更聚焦核心；适合想要精简页面或优化视觉层次的场景。",
+      "translated_at": "2026-06-05T19:24:02.738Z"
+    },
+    "skill:fradser-dotclaude-impeccable-harden": {
+      "hash": "637d1bef0fc7839d",
+      "summary_zh": "帮你把界面打磨到上线水准，专门处理报错提示、空状态、新手引导、多语言适配和文字溢出等边缘情况，适合产品准备发布前查漏补缺。",
+      "translated_at": "2026-06-05T19:24:03.403Z"
+    },
+    "skill:fradser-dotclaude-impeccable-layout": {
+      "hash": "21020db88fde02a5",
+      "summary_zh": "用于优化界面布局、间距与视觉节奏，解决排版单调、间距不一致、层级混乱或元素拥挤等问题，适合觉得页面\"看着别扭\"却说不出原因时使用。",
+      "translated_at": "2026-06-05T19:24:05.466Z"
+    },
+    "skill:fradser-dotclaude-impeccable-optimize": {
+      "hash": "6e37625ef667ed0a",
+      "summary_zh": "一款前端性能诊断与优化助手，帮你排查加载慢、渲染卡顿、动画掉帧、图片过大、打包体积臃肿等问题，适合想让页面跑得更顺滑的场景。",
+      "translated_at": "2026-06-05T19:24:07.125Z"
+    },
+    "skill:fradser-dotclaude-impeccable-overdrive": {
+      "hash": "85bfe098cda36ade",
+      "summary_zh": "用着色器、弹簧物理和滚动驱动动效等高难度技术打造突破常规的炫酷界面，适合想做出惊艳效果、追求极致视觉冲击力的场景。",
+      "translated_at": "2026-06-05T19:24:07.803Z"
+    },
+    "skill:fradser-dotclaude-impeccable-polish": {
+      "hash": "e5a5f52817a9adb3",
+      "summary_zh": "在交付前帮你做最后一遍精修，统一对齐、间距和细节，揪出那些\"说不上哪里怪\"的小问题，适合上线前的收尾打磨。",
+      "translated_at": "2026-06-05T19:24:09.625Z"
+    },
+    "skill:fradser-dotclaude-impeccable-quieter": {
+      "hash": "a5b3e3268dc6970e",
+      "summary_zh": "用来给视觉过于刺激、张扬的设计降调，让画面变柔和精致又不掉品质，适合觉得配色太冲、风格太闹想要更克制美感的时候。",
+      "translated_at": "2026-06-05T19:24:11.268Z"
+    },
+    "skill:fradser-dotclaude-impeccable-shape": {
+      "hash": "85a074106a14809c",
+      "summary_zh": "在动手写代码前，通过结构化访谈梳理功能的交互与界面思路，输出一份设计简报，帮你提前明确方向、约束和策略，适合规划新功能时使用。",
+      "translated_at": "2026-06-05T19:24:12.120Z"
+    },
+    "skill:fradser-dotclaude-impeccable-typeset": {
+      "hash": "82034c1517110868",
+      "summary_zh": "一款排版优化工具，专门修正字体选择、层级、字号、字重和可读性问题，适合觉得文字排版不够精致、想让界面文本看起来更用心的场景。",
+      "translated_at": "2026-06-05T19:24:13.933Z"
+    },
+    "skill:fradser-dotclaude-lark-approval": {
+      "hash": "e1093bc32fb8a3ad",
+      "summary_zh": "用于对接飞书审批系统的接口工具，可程序化创建审批单、查询进度和处理任务，适合需要把审批流嵌入自家业务系统的团队。",
+      "translated_at": "2026-06-05T19:24:16.080Z"
+    },
+    "skill:fradser-dotclaude-lark-apps": {
+      "hash": "49f36680f92a9964",
+      "summary_zh": "一键把本地 HTML 文件或整个静态站点发布到飞书妙搭，生成可分享的公网链接，适合快速上线网页 demo 或对外展示原型。",
+      "translated_at": "2026-06-05T19:24:16.938Z"
+    },
+    "skill:fradser-dotclaude-lark-attendance": {
+      "hash": "60843fae8bb33314",
+      "summary_zh": "一个用于查询飞书个人考勤打卡记录的小工具，方便上班族随时核对自己的出勤情况，避免漏打卡或记录异常。",
+      "translated_at": "2026-06-05T19:24:17.613Z"
+    },
+    "skill:fradser-dotclaude-lark-base": {
+      "hash": "c1dd2a6680e5a3db",
+      "summary_zh": "通过 lark-cli 命令行管理飞书多维表格，覆盖建表、字段、记录读写、视图、权限到工作流等操作，也能把老的 +table/+field 写法迁移到新命令，适合需要脚本化处理 Base 或设计公式字段、跨表计算的场景。",
+      "translated_at": "2026-06-05T19:24:21.185Z"
+    },
+    "skill:fradser-dotclaude-lark-calendar": {
+      "hash": "b35e401e323440d1",
+      "summary_zh": "用于管理飞书日历和日程，可查看搜索日程、创建更新会议、邀请参会人、查询忙闲并预定会议室，适合需要在飞书里高效安排会议和协调时间的场景。",
+      "translated_at": "2026-06-05T19:24:21.393Z"
+    },
+    "skill:fradser-dotclaude-lark-contact": {
+      "hash": "a2c4a09d28e1b606",
+      "summary_zh": "在飞书场景下把员工姓名或邮箱转成 open_id，也能反查某人的部门、邮箱和联系方式，适合发消息、拉群、排日程前先解析身份，或把接口返回的 ID 还原成可读姓名。",
+      "translated_at": "2026-06-05T19:24:22.540Z"
+    },
+    "skill:fradser-dotclaude-lark-doc": {
+      "hash": "47e29a4a25b6dadb",
+      "summary_zh": "一套对接飞书云文档的命令行工具，能创建、读取、改写、翻译和排版 Docx 与知识库文档，也可处理图片、附件和画板，遇到表格、多维表或同步块时还能提取 token 转交对应工具继续处理，适合需要在终端里批量操作飞书文档的场景。",
+      "translated_at": "2026-06-05T19:24:26.460Z"
+    },
+    "skill:fradser-dotclaude-lark-drive": {
+      "hash": "f357e1777b54d517",
+      "summary_zh": "用来管理飞书云空间里的文件和文件夹，支持上传下载、复制移动删除、改标题、管权限、看评论等操作，还能把本地 Word、Excel、Markdown、CSV 或 Base 快照导入成在线文档、表格或多维表格。",
+      "translated_at": "2026-06-05T19:24:27.080Z"
+    },
+    "skill:fradser-dotclaude-lark-event": {
+      "hash": "55bd1835daf188ef",
+      "summary_zh": "用命令行实时订阅飞书事件并以 NDJSON 流式输出，适合做机器人、消息处理或长跑订阅，特别方便 AI Agent 作为子进程调用。",
+      "translated_at": "2026-06-05T19:24:27.475Z"
+    },
+    "skill:fradser-dotclaude-lark-im": {
+      "hash": "21c8b7355e5791fa",
+      "summary_zh": "面向飞书的消息与群聊管理工具，可收发消息、搜索聊天记录、上传下载文件（支持大文件分片）、管理群成员和表情回复，适合需要在飞书里批量处理沟通内容或自动化群运营的场景。",
+      "translated_at": "2026-06-05T19:24:30.560Z"
+    },
+    "skill:fradser-dotclaude-lark-markdown": {
+      "hash": "69eff43b48af889a",
+      "summary_zh": "一款面向飞书场景的 Markdown 工具，支持查看、创建、上传、编辑和差异比较，适合需要快速读写、局部修改或对比 Markdown 文档的用户。",
+      "translated_at": "2026-06-05T19:24:31.783Z"
+    },
+    "skill:fradser-dotclaude-lark-mail": {
+      "hash": "6b516f2610e76a21",
+      "summary_zh": "在飞书里一站式处理邮件的工具，支持起草、发送、回复、转发、搜索，还能管理草稿、文件夹、标签、联系人、附件和收信规则，适合需要在飞书中高效收发和整理邮件的用户。",
+      "translated_at": "2026-06-05T19:24:32.602Z"
+    },
+    "skill:fradser-dotclaude-lark-minutes": {
+      "hash": "50a4aaa5cf96d3ed",
+      "summary_zh": "一键管理飞书妙记的工具，支持按条件搜索会议记录、下载音视频、提取 AI 总结和待办，还能把本地音视频上传转成逐字稿与纪要，省去本地跑 whisper、ffmpeg 的麻烦。",
+      "translated_at": "2026-06-05T19:24:35.502Z"
+    },
+    "skill:fradser-dotclaude-lark-okr": {
+      "hash": "fcc27fb8be5e33e0",
+      "summary_zh": "在飞书上管理团队和个人的 OKR，支持查看与编辑目标周期、关键结果、对齐关系以及进展更新，适合需要追踪目标完成情况的团队使用。",
+      "translated_at": "2026-06-05T19:24:35.895Z"
+    },
+    "skill:fradser-dotclaude-lark-openapi-explorer": {
+      "hash": "e3c66c2d8a9c1938",
+      "summary_zh": "当现成的飞书 CLI 命令满足不了需求时，用它从官方文档里挖出原生 OpenAPI 接口，方便直接调用，适合需要扩展飞书集成能力的开发场景。",
+      "translated_at": "2026-06-05T19:24:37.551Z"
+    },
+    "skill:fradser-dotclaude-lark-shared": {
+      "hash": "624f6742ebd0f69e",
+      "summary_zh": "一个面向 lark-cli 的辅助说明，适用于初次配置、登录授权、切换用户或机器人身份、排查权限不足或更新版本等场景。",
+      "translated_at": "2026-06-05T19:24:39.275Z"
+    },
+    "skill:fradser-dotclaude-lark-sheets": {
+      "hash": "9cf935574539d580",
+      "summary_zh": "在飞书电子表格里完成建表、增删改工作表、读写单元格、追加行、查找内容和导出文件等操作，适合需要批量处理或自动化管理飞书表格数据的场景。",
+      "translated_at": "2026-06-05T19:24:40.490Z"
+    },
+    "skill:fradser-dotclaude-react-best-practices": {
+      "hash": "434b7750e922a451",
+      "summary_zh": "汇集了 Vercel 工程团队的 React 与 Next.js 性能优化经验，适合在编写、审查或重构组件、页面、数据获取和打包逻辑时参考，帮你避开常见性能陷阱。",
+      "translated_at": "2026-06-05T19:24:42.513Z"
+    },
+    "skill:fradser-dotclaude-setup": {
+      "hash": "26662443309d7e63",
+      "summary_zh": "用 AI 分析仓库的提交历史和忽略规则，自动生成贴合项目的提交范围和 gitignore 配置，省去手动整理 Git 规范的麻烦。",
+      "translated_at": "2026-06-05T19:24:44.519Z"
+    },
+    "skill:fradser-dotclaude-supabase": {
+      "hash": "a257eccb00df31af",
+      "summary_zh": "一个面向 Supabase 全家桶的开发助手，覆盖数据库、Auth、Edge Functions、Realtime、Storage 等场景，能帮你处理客户端集成、SSR 鉴权、RLS 配置、迁移脚本和 CLI 操作，适合在 Next.js、SvelteKit 等框架里搭建或排障 Supabase 应用时使用。",
+      "translated_at": "2026-06-05T19:24:45.644Z"
+    },
+    "skill:fradser-dotclaude-supabase-postgres-best-practices": {
+      "hash": "a49cdde4366dbd8d",
+      "summary_zh": "汇总了 Supabase 的 Postgres 性能优化经验和最佳实践，写 SQL、设计表结构或调优数据库配置时可以拿来参考，帮你避开常见的性能坑。",
+      "translated_at": "2026-06-05T19:24:47.105Z"
+    },
+    "skill:fradser-dotclaude-web-design-guidelines": {
+      "hash": "2cfbe25ca875d76e",
+      "summary_zh": "一款帮你审查网页 UI 代码的工具，能对照设计与可访问性最佳实践给出改进建议，适合需要快速排查界面体验、无障碍和视觉规范问题的开发者使用。",
+      "translated_at": "2026-06-05T19:24:48.993Z"
+    },
+    "skill:geekjourneyx-md2wechat-skill-md2wechat": {
+      "hash": "8fd01f277d814667",
+      "summary_zh": "一款把 Markdown 一键转成微信公众号排版 HTML 的工具，支持预览、上传草稿、生成封面和配图，还能切换写作风格、去除 AI 痕迹，适合公众号作者高效出稿。",
+      "translated_at": "2026-06-05T19:24:50.087Z"
+    },
+    "skill:getsentry-sentry-analytics": {
+      "hash": "120042888af0c613",
+      "summary_zh": "用于在 Sentry 前端界面中埋点和查找分析事件，适合给按钮、弹窗、页面加追踪，定义新事件，或排查某个功能的埋点覆盖情况。",
+      "translated_at": "2026-06-05T19:24:51.998Z"
+    },
+    "skill:human-avatar-skills-for-humanity-s4h-aesthetic": {
+      "hash": "b8146c551155f5de",
+      "summary_zh": "一个帮你做设计与代码审美评估的入口工具，会根据当下场景自动调用合适的子技能，适合纠结某个方案是否优雅、是否过度复杂，或想换个更简洁写法时使用。",
+      "translated_at": "2026-06-05T19:24:54.970Z"
+    },
+    "skill:human-avatar-skills-for-humanity-s4h-aesthetic-coherence-check": {
+      "hash": "b63ecd9d9218e446",
+      "summary_zh": "检查作品整体是否风格统一，揪出多人协作时因缺乏共同审美而产生的违和与不协调，适合在感觉「哪里怪怪的」时用来做一致性审查。",
+      "translated_at": "2026-06-05T19:24:55.436Z"
+    },
+    "skill:human-avatar-skills-for-humanity-s4h-aesthetic-elegance-testing": {
+      "hash": "251b0236fb671dcd",
+      "summary_zh": "用于检验方案是否过度复杂，帮你分辨哪些复杂度是问题本身固有的，哪些是日积月累堆出来的冗余，适合在怀疑代码或设计被过度工程化时拿来对照审视。",
+      "translated_at": "2026-06-05T19:24:58.409Z"
+    },
+    "skill:human-avatar-skills-for-humanity-s4h-aesthetic-pattern-detection": {
+      "hash": "69e52def99feed23",
+      "summary_zh": "用来识别设计、论证或方案背后的深层结构模式，帮你看清「为什么这样行得通」，从而套用对应的成熟思路，适合做复盘、找灵感或拆解优秀案例时使用。",
+      "translated_at": "2026-06-05T19:24:59.407Z"
+    },
+    "skill:human-avatar-skills-for-humanity-s4h-aesthetic-simplicity-analysis": {
+      "hash": "292628581af6ab20",
+      "summary_zh": "在保留核心价值的前提下帮你找到更精简的方案，适合做设计取舍、代码瘦身或想厘清「什么才是真正重要的」时使用，不是简单删减，而是去伪存真。",
+      "translated_at": "2026-06-05T19:24:59.593Z"
+    },
+    "skill:human-avatar-skills-for-humanity-s4h-analogy": {
+      "hash": "8457c443d2c39d25",
+      "summary_zh": "一个类比推理工具的入口，会根据你的需求自动调用合适的类比技巧，适合想找参照案例、借鉴其他领域思路、或换个角度审视问题时使用。",
+      "translated_at": "2026-06-05T19:25:03.078Z"
+    },
+    "skill:human-avatar-skills-for-humanity-s4h-analogy-boundary-testing": {
+      "hash": "322c1c9b629c5273",
+      "summary_zh": "用来给类比和比喻做压力测试，提前找出它们在哪些维度上不成立，避免基于错误类比做出决策，适合在论证、写作或方案推演时检验比喻是否真的站得住脚。",
+      "translated_at": "2026-06-05T19:25:03.651Z"
+    },
+    "skill:human-avatar-skills-for-humanity-s4h-analogy-domain-transfer": {
+      "hash": "86c0e72a4a075e5f",
+      "summary_zh": "通过分析问题的结构特征，从其他领域找到类似已解决的问题并借鉴方案，适合在本领域思路卡壳时跨界寻找灵感。",
+      "translated_at": "2026-06-05T19:25:04.120Z"
+    },
+    "skill:human-avatar-skills-for-humanity-s4h-analogy-perspective-shifting": {
+      "hash": "c4691919635b88ef",
+      "summary_zh": "借用其他领域的视角和类比来重新审视问题，帮你跳出专业惯性思维，适合卡在思维定式、需要换个角度寻找突破口的时候。",
+      "translated_at": "2026-06-05T19:25:07.192Z"
+    },
+    "skill:human-avatar-skills-for-humanity-s4h-cognition": {
+      "hash": "25cf627c24d21b25",
+      "summary_zh": "一个认知工具集的入口，能根据你当下的困惑——比如思路混乱、注意力涣散、想理清自己在用什么思维模型——自动匹配合适的认知科学方法，省去自己挑工具的麻烦。",
+      "translated_at": "2026-06-05T19:25:08.749Z"
+    },
+    "skill:human-avatar-skills-for-humanity-s4h-analogy-structure-mapping": {
+      "hash": "f03fd1d1e3da6c4e",
+      "summary_zh": "用于判断两个事物的类比是否真的成立，区分深层结构对应和表面相似，适合在需要严谨推理或验证类比论证的场景下使用。",
+      "translated_at": "2026-06-05T19:25:08.813Z"
+    },
+    "skill:human-avatar-skills-for-humanity-s4h-cognition-attention": {
+      "hash": "33907ea54e471355",
+      "summary_zh": "帮你理清注意力都被什么吸走、被什么耗尽，又该怎么守住，适合用来排查分心原因、保护深度工作时间，或设计不打扰认知带宽的环境与沟通方式。",
+      "translated_at": "2026-06-05T19:25:11.364Z"
+    },
+    "skill:human-avatar-skills-for-humanity-s4h-cognition-cognitive-load": {
+      "hash": "1d8a5366b7ec3979",
+      "summary_zh": "帮你管理大脑工作记忆的负担，通过拆分、外置和精简复杂度，让思路不再爆炸。适合在设计、学习或沟通中感觉\"信息装不下、抓不住重点\"时使用，把复杂内容变得更易理解和记住。",
+      "translated_at": "2026-06-05T19:25:14.013Z"
+    },
+    "skill:human-avatar-skills-for-humanity-s4h-cognition-mental-models": {
+      "hash": "24ba98b0a641c587",
+      "summary_zh": "一个用来挖出并审视自己脑中思维模型的工具，适合在反复用同一视角看问题、想搞清楚某个判断背后藏着哪些假设时使用。",
+      "translated_at": "2026-06-05T19:25:15.314Z"
+    },
+    "skill:human-avatar-skills-for-humanity-s4h-cognition-metacognition": {
+      "hash": "58555aaf31242748",
+      "summary_zh": "一套帮你「思考自己思考」的方法，用来检查自己是不是真懂、判断信心是否靠谱、找出知识盲区。适合在做复杂推理、容易高估自己或反复出错时，跳出来审视一下思路质量。",
+      "translated_at": "2026-06-05T19:25:16.936Z"
+    },
+    "skill:human-avatar-skills-for-humanity-s4h-communication": {
+      "hash": "96a26eb72cc8f11e",
+      "summary_zh": "沟通场景的智能入口，根据你的具体问题（比如怎么开口、用什么渠道、对方会不会接受）自动匹配合适的沟通技巧，适合不确定该用哪种方法时直接求助。",
+      "translated_at": "2026-06-05T19:25:19.362Z"
+    },
+    "skill:human-avatar-skills-for-humanity-s4h-communication-audience-modeling": {
+      "hash": "9fd3891d3df47a70",
+      "summary_zh": "在沟通前先摸清听众的认知、在意点和顾虑，避免信息发出去却没人接住，适合做演讲、提案或跨团队对话前的受众分析。",
+      "translated_at": "2026-06-05T19:25:19.967Z"
+    },
+    "skill:human-avatar-skills-for-humanity-s4h-communication-medium-selection": {
+      "hash": "117f8a0764b15630",
+      "summary_zh": "帮你判断一条消息该用什么方式传达，比如发邮件还是开会、异步还是同步，避免内容因渠道选错而效果打折，适合纠结沟通形式时参考。",
+      "translated_at": "2026-06-05T19:25:24.088Z"
+    },
+    "skill:human-avatar-skills-for-humanity-s4h-communication-objection-mapping": {
+      "hash": "57c096b73bb0028e",
+      "summary_zh": "在正式提出方案前，提前预判对方可能的反对意见并做好应对准备，避免被突如其来的质疑打乱节奏，适合谈判、提案或方案汇报场景。",
+      "translated_at": "2026-06-05T19:25:24.282Z"
+    },
+    "skill:human-avatar-skills-for-humanity-s4h-communication-clarity-audit": {
+      "hash": "98ac3c3f35b642d3",
+      "summary_zh": "在消息发出前帮你审视沟通内容，找出容易被忽略、误读或会错意的地方，适合写邮件、发通知或重要表达前做一次清晰度检查。",
+      "translated_at": "2026-06-05T19:25:25.759Z"
+    },
+    "skill:human-avatar-skills-for-humanity-s4h-constraint": {
+      "hash": "84fb2fb2c41b1814",
+      "summary_zh": "当你被各种限制卡住时，自动帮你挑选合适的约束思维工具，无论是想突破边界、把限制变成优势，还是先做个最小可行版本，都能找到对应思路。",
+      "translated_at": "2026-06-05T19:25:28.453Z"
+    },
+    "skill:human-avatar-skills-for-humanity-s4h-constraint-hardness-testing": {
+      "hash": "d045c337a9d89aea",
+      "summary_zh": "用来检验某个\"限制\"到底是真的硬约束，还是被当成事实的假设、习惯或办公室政治，帮你在做决策前分清哪些真不能动、哪些其实可以谈。",
+      "translated_at": "2026-06-05T19:25:37.915Z"
+    },
+    "skill:human-avatar-skills-for-humanity-s4h-constraint-rule-inversion": {
+      "hash": "323f59f1aae8b8c9",
+      "summary_zh": "把限制反转成创作驱动力的思维工具，让约束本身成为生成方向，适合在卡壳或资源受限时换个角度找突破口。",
+      "translated_at": "2026-06-05T19:25:39.463Z"
+    },
+    "skill:human-avatar-skills-for-humanity-s4h-constraint-workaround-mapping": {
+      "hash": "8df2ea33cb02ccd6",
+      "summary_zh": "在无法移除某个硬性限制的前提下，帮你找到绕过它仍能达成目标的可行路径，适合面对死规定、技术约束或不可动摇的阻碍时寻找替代方案。",
+      "translated_at": "2026-06-05T19:25:43.115Z"
+    },
+    "skill:human-avatar-skills-for-humanity-s4h-creativity": {
+      "hash": "5703c801f75fcabf",
+      "summary_zh": "当你卡壳、想换个思路或需要新点子时，它会根据你的处境自动挑选合适的创意思考方法，也能把多种方法串起来完成一次系统的头脑风暴。",
+      "translated_at": "2026-06-05T19:25:44.457Z"
+    },
+    "skill:human-avatar-skills-for-humanity-s4h-constraint-scope-reduction": {
+      "hash": "d47ad3a69d482867",
+      "summary_zh": "帮你把需求砍到最小可用版本，剥离那些「想要但其实不必要」的部分，适合在做减法、定 MVP 或重新厘清真实需求时使用。",
+      "translated_at": "2026-06-05T19:25:46.153Z"
+    },
+    "skill:human-avatar-skills-for-humanity-s4h-creativity-alternatives": {
+      "hash": "11aba69545803ddd",
+      "summary_zh": "在做决定前帮你系统性地列出更多可能性，避免陷入非黑即白或被第一个想法绑架，适合纠结选择、规划方案或想跳出思维定式的时候用。",
+      "translated_at": "2026-06-05T19:25:48.906Z"
+    },
+    "skill:human-avatar-skills-for-humanity-s4h-creativity-assumption-excavator": {
+      "hash": "38cf56302765eae2",
+      "summary_zh": "当你反复尝试却走不出困境，或一个计划莫名失败、显而易见的事情屡屡反常时，用它挖出问题背后被忽略的隐藏前提，重新审视思考的起点，避免在错误的框架里打转。",
+      "translated_at": "2026-06-05T19:25:49.646Z"
+    },
+    "skill:human-avatar-skills-for-humanity-s4h-creativity-brainstorm": {
+      "hash": "50e6de79e4db984c",
+      "summary_zh": "面对棘手难题或重大决策时，自动编排多种创意思维方法，带你完整走一遍头脑风暴流程，比单一技巧更系统深入，适合需要认真琢磨、彻底想清楚的场景。",
+      "translated_at": "2026-06-05T19:25:51.841Z"
+    },
+    "skill:human-avatar-skills-for-humanity-s4h-creativity-concept-fan": {
+      "hash": "b27f3d91e16af7e2",
+      "summary_zh": "用爱德华·德博诺的概念扇方法帮你打开思路，把一个目标拆解到不同抽象层次，列出更多可行路径，适合在陷入单一方案、做决策前想看看还有没有别的选择时使用。",
+      "translated_at": "2026-06-05T19:25:54.674Z"
+    },
+    "skill:human-avatar-skills-for-humanity-s4h-creativity-consider-factors": {
+      "hash": "feafda9488af6212",
+      "summary_zh": "借助德博诺的 CAF 思维工具，在做重要决定前系统梳理所有相关因素，避免遗漏关键考量，适合规划行动、评估后果或想确保自己没有忽视什么的场景。",
+      "translated_at": "2026-06-05T19:25:55.210Z"
+    },
+    "skill:human-avatar-skills-for-humanity-s4h-creativity-lateral-thinking": {
+      "hash": "b16810c587813d65",
+      "summary_zh": "借鉴德博诺的水平思考法，帮你跳出固有思路，在卡壳或想换个角度看问题时生成全新方向，适用于创意、策略、技术或个人难题。",
+      "translated_at": "2026-06-05T19:25:56.584Z"
+    },
+    "skill:human-avatar-skills-for-humanity-s4h-creativity-other-perspectives": {
+      "hash": "a2942689008d8f02",
+      "summary_zh": "借助德博诺的“换位思考”方法，帮你站在他人立场推演反应，适合在决策前预判异议、谈判化解冲突，或为他人设计方案时检验是否真正考虑了相关者。",
+      "translated_at": "2026-06-05T19:25:59.081Z"
+    },
+    "skill:human-avatar-skills-for-humanity-s4h-creativity-plus-minus-interesting": {
+      "hash": "5685410686db8e02",
+      "summary_zh": "一款用于全面评估想法或方案的思维辅助工具，借鉴德博诺的PMI法，从正面、负面和有趣三个角度展开分析，帮你避免拍脑袋决定或被确认偏差左右，适合需要冷静权衡利弊的场景。",
+      "translated_at": "2026-06-05T19:26:00.241Z"
+    },
+    "skill:human-avatar-skills-for-humanity-s4h-creativity-provocation": {
+      "hash": "0bae7cf292f6078c",
+      "summary_zh": "借鉴德博诺的“Po”激发思维法，用看似荒诞或不可能的设定撬动新点子，适合陷入思维定式、想要打破常规或寻找突破性创意的场景。",
+      "translated_at": "2026-06-05T19:26:01.448Z"
+    },
+    "skill:human-avatar-skills-for-humanity-s4h-creativity-random-entry": {
+      "hash": "df69c66b99537eb6",
+      "summary_zh": "借鉴德博诺的「随机进入法」，用一个毫不相干的词、物或图像当跳板，帮你跳出思维定式。适合卡壳没灵感、想换全新角度、或常规思路已经用尽的时候。",
+      "translated_at": "2026-06-05T19:26:03.800Z"
+    },
+    "skill:human-avatar-skills-for-humanity-s4h-creativity-six-hats": {
+      "hash": "8b7ebef71a46687d",
+      "summary_zh": "用六顶思考帽法从事实、情感、风险、收益、创意、流程六个角度系统分析问题，适合做决策、做计划或开会前理清思路，避免片面判断和群体盲思。",
+      "translated_at": "2026-06-05T19:26:04.956Z"
+    },
+    "skill:human-avatar-skills-for-humanity-s4h-creativity-water-logic": {
+      "hash": "b94bd205f5caba08",
+      "summary_zh": "用水的流动思维替代非黑即白的判断，适合点子还没成型、过早下结论会扼杀可能性的探索阶段，帮你顺着思路自由延展，先铺开方向再谈对错。",
+      "translated_at": "2026-06-05T19:26:06.126Z"
+    },
+    "skill:human-avatar-skills-for-humanity-s4h-decision": {
+      "hash": "eb12ba123a27f6de",
+      "summary_zh": "帮你做决定的入口工具，根据你的具体情况自动匹配合适的决策方法，适合纠结选哪个、要不要做、有什么风险时使用。",
+      "translated_at": "2026-06-05T19:26:08.198Z"
+    },
+    "skill:human-avatar-skills-for-humanity-s4h-decision-criteria-weighting": {
+      "hash": "fb17a096b841f9bc",
+      "summary_zh": "用加权打分的方式帮你在多个选项中做选择，明确每项标准的权重和各方案的表现，适合纠结于多选一、想把决策过程理清楚的场景。",
+      "translated_at": "2026-06-05T19:26:09.155Z"
+    },
+    "skill:human-avatar-skills-for-humanity-s4h-decision-option-mapping": {
+      "hash": "e4e47c5a20c05603",
+      "summary_zh": "在做决策时强制列出所有可行方案，避免陷入\"非此即彼\"的二选一陷阱，适合需要拓宽思路、防止过早收敛的场景。",
+      "translated_at": "2026-06-05T19:26:11.659Z"
+    },
+    "skill:human-avatar-skills-for-humanity-s4h-decision-premortem-analysis": {
+      "hash": "5fa70573a520eeb2",
+      "summary_zh": "假设某个决策已经失败，再反向推演失败原因的思维工具，帮你打破方向定下后不愿正视风险的承诺偏见，适合在重大决策前做失败模式排查。",
+      "translated_at": "2026-06-05T19:26:13.017Z"
+    },
+    "skill:human-avatar-skills-for-humanity-s4h-decision-reversibility-analysis": {
+      "hash": "3b4145068233212b",
+      "summary_zh": "帮你判断一个决定是不是能反悔的，再决定要花多少精力去想，避免小事过度纠结、大事又草率拍板。",
+      "translated_at": "2026-06-05T19:26:15.793Z"
+    },
+    "skill:human-avatar-skills-for-humanity-s4h-design-constraints": {
+      "hash": "2da592cc48af16f5",
+      "summary_zh": "一款帮助梳理设计约束的工具，能区分硬性限制和软性偏好，并分析最关键的约束如何框定可行方案的边界，适合在做方案设计前快速明确「能在什么范围内动手」。",
+      "translated_at": "2026-06-05T19:26:17.383Z"
+    },
+    "skill:human-avatar-skills-for-humanity-s4h-design": {
+      "hash": "1e042bcf96772206",
+      "summary_zh": "设计思维工具包的入口，根据你描述的情境自动匹配合适的设计方法。适合想挖掘用户真实需求、梳理设计约束、做原型迭代或精简方案，却不知道该用哪种工具时使用。",
+      "translated_at": "2026-06-05T19:26:17.763Z"
+    },
+    "skill:human-avatar-skills-for-humanity-s4h-design-iteration": {
+      "hash": "77197158991b7106",
+      "summary_zh": "一套把「做—测—学」循环结构化的设计迭代方法，指导团队如何快速做原型、收集反馈并逐步收敛到合适方案，适合在产品打磨阶段判断是否走在正确方向上。",
+      "translated_at": "2026-06-05T19:26:21.255Z"
+    },
+    "skill:human-avatar-skills-for-humanity-s4h-design-simplicity": {
+      "hash": "b36784363c0390aa",
+      "summary_zh": "一套用于精简设计的思维提示，帮你在面对臃肿方案时找出真正必要的部分，砍掉多余环节，适合产品打磨和设计复盘时使用。",
+      "translated_at": "2026-06-05T19:26:21.777Z"
+    },
+    "skill:human-avatar-skills-for-humanity-s4h-design-user-needs": {
+      "hash": "5dceafec647a8011",
+      "summary_zh": "用 JTBD 方法挖掘用户真实需求，区分嘴上说的想要和实际要解决的问题，适合做用户研究、需求澄清或产品方向探索时使用。",
+      "translated_at": "2026-06-05T19:26:25.210Z"
+    },
+    "skill:human-avatar-skills-for-humanity-s4h-ecology-carrying-capacity": {
+      "hash": "2030bc12218da40a",
+      "summary_zh": "用生态学的承载力思维分析任何有上限的系统，帮你看清极限在哪、超载风险有多大、突破之后会发生什么，适合评估增长天花板或可持续规模时使用。",
+      "translated_at": "2026-06-05T19:26:27.959Z"
+    },
+    "skill:human-avatar-skills-for-humanity-s4h-ecology": {
+      "hash": "fc333d08a70497a9",
+      "summary_zh": "用生态学视角分析系统的入口工具，根据你的问题自动匹配合适的分析方法，适合思考承载力、关键物种、相互依赖、系统稳定性等问题，但不确定具体该用哪种思路时使用。",
+      "translated_at": "2026-06-05T19:26:28.154Z"
+    },
+    "skill:human-avatar-skills-for-humanity-s4h-ecology-interdependence": {
+      "hash": "f278b81cdfa72e49",
+      "summary_zh": "梳理系统中各节点之间的依赖关系，预测某个环节被改动或移除后会引发的连锁反应，适合排查上下游影响、评估变更风险或厘清「牵一发而动全身」的场景。",
+      "translated_at": "2026-06-05T19:26:31.345Z"
+    },
+    "skill:human-avatar-skills-for-humanity-s4h-ecology-succession": {
+      "hash": "ffd6f53c20ef5836",
+      "summary_zh": "借用生态演替的视角，把组织或系统的发展划分为先锋、巩固、顶峰、扰动几个阶段，帮你判断当下处于哪一环、接下来会发生什么，适合在面临转型、旧模式失效或想看清周期走向时使用。",
+      "translated_at": "2026-06-05T19:26:33.141Z"
+    },
+    "skill:human-avatar-skills-for-humanity-s4h-ecology-keystone-species": {
+      "hash": "d1e8c621757e0f9e",
+      "summary_zh": "一款用于识别系统中关键节点的分析工具，帮你找出那些一旦失去就会导致整体崩塌的核心角色，适合排查单点故障、评估关键依赖或判断谁是不可替代的支柱。",
+      "translated_at": "2026-06-05T19:26:33.295Z"
+    },
+    "skill:human-avatar-skills-for-humanity-s4h-economics": {
+      "hash": "8a6e198992a1f8cd",
+      "summary_zh": "经济学分析工具的入口，能根据你的具体问题自动匹配合适的分析方法，适合在思考激励、机会成本、外部性或权衡取舍时用，不用自己挑工具。",
+      "translated_at": "2026-06-05T19:26:35.998Z"
+    },
+    "skill:human-avatar-skills-for-humanity-s4h-economics-coordination": {
+      "hash": "d8fb2356b5c9c245",
+      "summary_zh": "用经济学视角分析集体行动困境，比如公地悲剧、搭便车、公共品供给不足等场景，帮你看清为什么人人理性却导致集体非理性，并思考促成合作的办法。",
+      "translated_at": "2026-06-05T19:26:37.565Z"
+    },
+    "skill:human-avatar-skills-for-humanity-s4h-economics-externalities": {
+      "hash": "275c43821eea08b2",
+      "summary_zh": "用来分析决策时被忽略的外部成本和收益，帮你看清谁在替别人买单、谁在白占便宜，并给出把这些影响纳入考量的思路，适合做政策评估、商业决策或社会问题分析时使用。",
+      "translated_at": "2026-06-05T19:26:37.831Z"
+    },
+    "skill:human-avatar-skills-for-humanity-s4h-economics-incentive-mapping": {
+      "hash": "ae49260977f2d9bb",
+      "summary_zh": "用来梳理一个体系里谁获益、谁买单、实际激励又在鼓励什么行为，适合分析政策为何失效、嘴上一套做的又是另一套、或想搞清楚某种现象为何屡禁不止的场景。",
+      "translated_at": "2026-06-05T19:26:40.802Z"
+    },
+    "skill:human-avatar-skills-for-humanity-s4h-economics-opportunity-cost": {
+      "hash": "229448407826ffc7",
+      "summary_zh": "帮你算清一个选择的真实代价，把放弃掉的最佳替代方案摆到台面上，适合纠结取舍、想看清隐性成本的决策时刻。",
+      "translated_at": "2026-06-05T19:26:42.263Z"
+    },
+    "skill:human-avatar-skills-for-humanity-s4h-economics-margin": {
+      "hash": "b0e04805ad90765b",
+      "summary_zh": "帮你用边际思维做决策，提醒别被沉没成本或平均值带偏，专注下一单位投入是否划算，适合纠结要不要扩张、缩减或继续投入某件事的时候用。",
+      "translated_at": "2026-06-05T19:26:42.263Z"
+    },
+    "skill:human-avatar-skills-for-humanity-s4h-emotional-motivation-mapping": {
+      "hash": "8321b9c54746431d",
+      "summary_zh": "帮你看透一个人真正在乎什么，而不只是嘴上说的理由或职位说明里的目标。当团队激励不对路、某人行为让你摸不着头脑时，可以用它来理清背后的驱动力。",
+      "translated_at": "2026-06-05T19:26:46.390Z"
+    },
+    "skill:jeremylongshore-claude-code-plugins-plus-skills-amplify": {
+      "hash": "0494a486d8692b5a",
+      "summary_zh": "把粗糙模糊的提示词自动改写成高质量版本，会识别领域、套用对应规范、参照项目规则，并按八维标准打分，适合在正式执行前打磨 prompt。",
+      "translated_at": "2026-06-05T19:26:46.577Z"
+    },
+    "skill:jeremylongshore-claude-code-plugins-plus-skills-agency-os": {
+      "hash": "146f21706f762d1c",
+      "summary_zh": "把 Notion 当作任务调度中心，用类似 AI 公司的方式管理工作：所有任务集中在一个数据库里，按建议、讨论、待办、进行中、已完成流转，支持子任务、循环、依赖和模板，还能把已批准的待办批量分派给多个智能体并行执行，每个任务可单独选模型。",
+      "translated_at": "2026-06-05T19:26:48.501Z"
+    },
+    "skill:jeremylongshore-claude-code-plugins-plus-skills-apex-plan": {
+      "hash": "9159f1511298a0b9",
+      "summary_zh": "用于项目前期的规划与范围界定，帮你梳理需求、质疑假设，并给出小中大三种实施方案及对应的 Token 消耗和成本预估，适合接到新需求时快速评估怎么做。",
+      "translated_at": "2026-06-05T19:26:50.798Z"
+    },
+    "skill:jeremylongshore-claude-code-plugins-plus-skills-apex-recon": {
+      "hash": "929984d8a8397138",
+      "summary_zh": "在动手改代码前先帮你摸清项目家底，盘点结构、进度和待办，适合接手陌生仓库或需要快速了解项目现状时使用。",
+      "translated_at": "2026-06-05T19:26:53.180Z"
+    },
+    "skill:jeremylongshore-claude-code-plugins-plus-skills-apex": {
+      "hash": "17f2dbd49a8fa97e",
+      "summary_zh": "一款工程负责人式的 AI 助手，接到任务后会自动在内部分派处理，涵盖新功能开发、规划、代码评审、状态汇报到系统接管，适合想用一个入口统筹各类研发工作的团队。",
+      "translated_at": "2026-06-05T19:26:53.309Z"
+    },
+    "skill:jeremylongshore-claude-code-plugins-plus-skills-apex-review": {
+      "hash": "a89243ec553f5d35",
+      "summary_zh": "在多人协作或多专家分工后，统一回顾近期成果，发现各环节之间被忽略的衔接问题，适合上线前或阶段性收尾时使用。",
+      "translated_at": "2026-06-05T19:26:56.197Z"
+    },
+    "skill:jeremylongshore-claude-code-plugins-plus-skills-apex-status": {
+      "hash": "86c0c0ab4f096c41",
+      "summary_zh": "通过分析 Git 历史和代码库状态，自动生成项目进展报告，适合开始新一轮工作前快速了解当前进度、已完成事项和待办方向。",
+      "translated_at": "2026-06-05T19:26:57.092Z"
+    },
+    "skill:jeremylongshore-claude-code-plugins-plus-skills-apex-takeover": {
+      "hash": "c2dc630217d34883",
+      "summary_zh": "帮助团队快速接手别人留下的项目或收购来的系统，理清代码结构和历史脉络，让你从零开始也能掌控全局。",
+      "translated_at": "2026-06-05T19:26:57.267Z"
+    },
+    "skill:jeremylongshore-claude-code-plugins-plus-skills-atlas": {
+      "hash": "14b8ce04df1dfd3a",
+      "summary_zh": "面向工程团队的知识管理助手，自动生成并维护架构文档、ADR、流程图、变更日志、新人上手指南和项目报告，适合想摆脱手写文档负担、保持知识沉淀的研发团队。",
+      "translated_at": "2026-06-05T19:27:00.815Z"
+    },
+    "skill:jeremylongshore-claude-code-plugins-plus-skills-atlas-adr": {
+      "hash": "47c893d42debeea7",
+      "summary_zh": "用于撰写架构决策记录，把团队选了什么、为什么这么选、考虑过哪些方案、接受了哪些取舍都讲清楚，方便日后追溯技术选型的来龙去脉。",
+      "translated_at": "2026-06-05T19:27:01.053Z"
+    },
+    "skill:jeremylongshore-claude-code-plugins-plus-skills-atlas-changelog": {
+      "hash": "a267f3b76bb67c01",
+      "summary_zh": "用于在 AI 智能体完成工作后，自动追加结构化条目到单仓库或跨仓库的变更日志中，方便随时查阅改动历史和回溯过往修改。",
+      "translated_at": "2026-06-05T19:27:01.379Z"
+    },
+    "skill:jeremylongshore-claude-code-plugins-plus-skills-atlas-map": {
+      "hash": "4650e893fc84a2a9",
+      "summary_zh": "自动梳理代码库结构，识别其中的服务与调用关系，生成 C4 架构图（Mermaid 格式）并附组件说明，适合快速搞清一个陌生项目的整体架构。",
+      "translated_at": "2026-06-05T19:27:05.046Z"
+    },
+    "skill:jeremylongshore-claude-code-plugins-plus-skills-atlas-onboard": {
+      "hash": "5446b66bece7bd48",
+      "summary_zh": "自动生成新人入职文档，覆盖项目介绍、本地搭建、代码结构、关键决策和部署流程，让第一天报到、对项目一无所知的工程师能快速上手。",
+      "translated_at": "2026-06-05T19:27:05.383Z"
+    },
+    "skill:jeremylongshore-claude-code-plugins-plus-skills-atlas-present": {
+      "hash": "4e6971c151a3ae8c",
+      "summary_zh": "把重大发布、产品上线或系统迁移一键转成精美的 HTML 演示页和 Obsidian Canvas，面向非技术听众，适合做发布公告或向利益相关方汇报成果。",
+      "translated_at": "2026-06-05T19:27:05.835Z"
+    },
+    "skill:jeremylongshore-claude-code-plugins-plus-skills-atlas-report": {
+      "hash": "2b64f00454140ad9",
+      "summary_zh": "把智能体的分析结果生成带样式的 HTML 报告并在浏览器中打开，适合需要完整详细呈现、或命令行输出过长不便查看的场景。",
+      "translated_at": "2026-06-05T19:27:09.208Z"
+    },
+    "skill:jeremylongshore-claude-code-plugins-plus-skills-audit": {
+      "hash": "294897692d4a8362",
+      "summary_zh": "针对最近的代码改动发起多层级评审，从质量、规范、安全到性能逐项把关，发现问题后还能直接转入修复流程，适合提交 PR 前快速过一遍代码。",
+      "translated_at": "2026-06-05T19:27:10.266Z"
+    },
+    "skill:jeremylongshore-claude-code-plugins-plus-skills-atlas-recon": {
+      "hash": "a440643bcc3d5d1a",
+      "summary_zh": "接手新项目时用来摸清文档家底的工具，能扫出所有文档并评估其准确性、时效性、覆盖度和可查找性，帮你快速定位关键的知识盲区。",
+      "translated_at": "2026-06-05T19:27:11.602Z"
+    },
+    "skill:jeremylongshore-claude-code-plugins-plus-skills-background": {
+      "hash": "e735b446470fcc09",
+      "summary_zh": "用来查看、检查、取消或清理之前链式运行中派生出的后台任务，方便随时掌握后台进程状态、读取执行结果，适合需要管理长跑任务的场景。",
+      "translated_at": "2026-06-05T19:27:13.413Z"
+    },
+    "skill:jeremylongshore-claude-code-plugins-plus-skills-bridge": {
+      "hash": "5af7994e16cce42d",
+      "summary_zh": "把 hyperflow 的行为规则写进项目的 CLAUDE.md，让桌面端、网页版或 IDE 插件里也能沿用同一套自治、提交节奏和文件优先策略，适合无法加载 CLI 插件的场景。",
+      "translated_at": "2026-06-05T19:27:15.026Z"
     }
   }
 }
