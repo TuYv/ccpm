@@ -1,0 +1,26 @@
+{
+  "id": "obra-dotfiles-managing-dotfiles",
+  "name": "managing-dotfiles",
+  "description": "Use when adding, changing, deploying, onboarding, or auditing Jesse's dotfiles — the symlink-based config system in ~/git/dotfiles (public) and ~/git/dotfiles-private (private), deployed across his Mac + Linux fleet. Covers the update workflow, the manifest, OS-splitting, secrets, new-machine onboarding, and the audit process.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "obra",
+  "install_path": ".claude/skills/managing-dotfiles/SKILL.md",
+  "source": {
+    "repo": "obra/dotfiles",
+    "url": "https://github.com/obra/dotfiles/blob/main/.claude/skills/managing-dotfiles/SKILL.md",
+    "path": ".claude/skills/managing-dotfiles/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-05T21:05:42.141Z",
+    "stars": 101,
+    "language": "Shell",
+    "pushed_at": "2026-06-05T19:49:20Z",
+    "license": null
+  },
+  "summary_zh": "一套基于符号链接的个人配置管理方案，把公开和私有的 dotfiles 分仓维护，统一部署到多台 Mac 和 Linux 机器，适合需要跨设备同步配置、处理敏感信息、快速上手新机器或定期审查配置一致性的场景。"
+}

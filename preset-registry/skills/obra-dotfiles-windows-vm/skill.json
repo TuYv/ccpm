@@ -1,0 +1,26 @@
+{
+  "id": "obra-dotfiles-windows-vm",
+  "name": "windows-vm",
+  "description": "Create, manage, or connect to a headless Windows 11 VM running in Docker with SSH access. Use when the user wants to spin up, stop, restart, or SSH into a Windows VM.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "obra",
+  "install_path": ".claude/skills/windows-vm/SKILL.md",
+  "source": {
+    "repo": "obra/dotfiles",
+    "url": "https://github.com/obra/dotfiles/blob/main/.claude/skills/windows-vm/SKILL.md",
+    "path": ".claude/skills/windows-vm/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-05T21:05:43.644Z",
+    "stars": 101,
+    "language": "Shell",
+    "pushed_at": "2026-06-05T19:49:20Z",
+    "license": null
+  },
+  "summary_zh": "在 Docker 里跑一个无界面的 Windows 11 虚拟机，支持 SSH 连接和启停管理，适合需要临时调用 Windows 环境跑测试、调试或运行专属软件的场景。"
+}

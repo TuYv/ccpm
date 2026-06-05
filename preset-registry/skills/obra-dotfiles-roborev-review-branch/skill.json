@@ -1,0 +1,26 @@
+{
+  "id": "obra-dotfiles-roborev-review-branch",
+  "name": "roborev-review-branch",
+  "description": "Request a code review for all commits on the current branch and present the results",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "obra",
+  "install_path": ".claude/skills/roborev-review-branch/SKILL.md",
+  "source": {
+    "repo": "obra/dotfiles",
+    "url": "https://github.com/obra/dotfiles/blob/main/.claude/skills/roborev-review-branch/SKILL.md",
+    "path": ".claude/skills/roborev-review-branch/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-05T21:05:43.180Z",
+    "stars": 101,
+    "language": "Shell",
+    "pushed_at": "2026-06-05T19:49:20Z",
+    "license": null
+  },
+  "summary_zh": "自动收集当前分支的所有提交并发起代码审查，把结果汇总展示，方便开发者在合并前快速发现问题。"
+}

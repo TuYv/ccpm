@@ -1,0 +1,26 @@
+{
+  "id": "obra-dotfiles-syncing-obsidian",
+  "name": "syncing-obsidian",
+  "description": "Use when reading or writing files in an Obsidian vault that is synced with obsync. Ensures changes are pulled before reading and pushed after writing. Also covers sync status, file history, version restore, and diagnosing sync issues.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "obra",
+  "install_path": ".claude/skills/syncing-obsidian/SKILL.md",
+  "source": {
+    "repo": "obra/dotfiles",
+    "url": "https://github.com/obra/dotfiles/blob/main/.claude/skills/syncing-obsidian/SKILL.md",
+    "path": ".claude/skills/syncing-obsidian/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-05T21:05:43.480Z",
+    "stars": 101,
+    "language": "Shell",
+    "pushed_at": "2026-06-05T19:49:20Z",
+    "license": null
+  },
+  "summary_zh": "在使用 obsync 同步的 Obsidian 库时自动处理读写流程，读取前先拉取、写入后推送，同时支持查看同步状态、文件历史、版本回滚和排查同步问题。"
+}

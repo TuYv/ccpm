@@ -1,0 +1,26 @@
+{
+  "id": "obra-dotfiles-roborev-design-review-branch",
+  "name": "roborev-design-review-branch",
+  "description": "Request a design review for all commits on the current branch and present the results",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "obra",
+  "install_path": ".claude/skills/roborev-design-review-branch/SKILL.md",
+  "source": {
+    "repo": "obra/dotfiles",
+    "url": "https://github.com/obra/dotfiles/blob/main/.claude/skills/roborev-design-review-branch/SKILL.md",
+    "path": ".claude/skills/roborev-design-review-branch/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-05T21:05:42.453Z",
+    "stars": 101,
+    "language": "Shell",
+    "pushed_at": "2026-06-05T19:49:20Z",
+    "license": null
+  },
+  "summary_zh": "一键对当前分支上的所有提交发起设计评审，并把结果汇总呈现，方便在合并前快速发现设计层面的问题。"
+}
