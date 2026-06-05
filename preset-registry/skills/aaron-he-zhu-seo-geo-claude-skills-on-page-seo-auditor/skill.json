@@ -1,14 +1,14 @@
 {
   "id": "aaron-he-zhu-seo-geo-claude-skills-on-page-seo-auditor",
   "name": "on-page-seo-auditor",
-  "description": "Use when the user asks to \"audit on-page SEO\"; checks titles, headers, images, links, content fit, and fix priorities. 页面SEO审计/排名诊断",
-  "category": "开发编程",
+  "description": "Use when the user asks to \"audit on-page SEO\" or \"diagnose why a single page dropped\"; scores titles, meta, header structure, keyword placement, links, and images with prioritized fixes. For E-E-A-T / publish-readiness scoring use content-quality-auditor; for crawl / CWV / indexing use technical-seo-checker. 页面SEO审计/排名诊断",
+  "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
     "codex",
     "gemini"
   ],
-  "version": "9.9.9",
+  "version": "9.9.10",
   "author": "aaron-he-zhu",
   "install_path": ".claude/skills/on-page-seo-auditor/SKILL.md",
   "source": {
@@ -16,11 +16,10 @@
     "url": "https://github.com/aaron-he-zhu/seo-geo-claude-skills/blob/main/optimize/on-page-seo-auditor/SKILL.md",
     "path": "optimize/on-page-seo-auditor/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-05T00:28:20.141Z",
-    "stars": 1995,
-    "language": "Shell",
-    "pushed_at": "2026-06-05T00:24:14Z",
+    "discovered_at": "2026-06-05T05:55:48.964Z",
+    "stars": 1999,
+    "language": "Python",
+    "pushed_at": "2026-06-05T00:51:59Z",
     "license": "Apache-2.0"
-  },
-  "summary_zh": "这是一个网页SEO诊断工具，能帮你找出页面内部影响搜索排名的各种问题，并按优先级给出修复建议，适合需要快速优化网页结构以提升排名的场景。"
+  }
 }

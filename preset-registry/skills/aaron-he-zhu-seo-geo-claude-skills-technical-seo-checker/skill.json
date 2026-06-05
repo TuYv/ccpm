@@ -1,14 +1,14 @@
 {
   "id": "aaron-he-zhu-seo-geo-claude-skills-technical-seo-checker",
   "name": "technical-seo-checker",
-  "description": "Use when the user asks to \"check technical SEO\"; audits crawl, indexing, CWV, mobile, security, redirects, and evidence gaps. 技术SEO/网站速度",
+  "description": "Use when the user asks to \"check technical SEO\"; audits crawlability, indexing, Core Web Vitals, robots.txt, sitemaps, canonicals, redirects, and migrations. Not for on-page tags or content — use on-page-seo-auditor. 技术SEO/网站速度",
   "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
     "codex",
     "gemini"
   ],
-  "version": "9.9.9",
+  "version": "9.9.10",
   "author": "aaron-he-zhu",
   "install_path": ".claude/skills/technical-seo-checker/SKILL.md",
   "source": {
@@ -16,11 +16,10 @@
     "url": "https://github.com/aaron-he-zhu/seo-geo-claude-skills/blob/main/optimize/technical-seo-checker/SKILL.md",
     "path": "optimize/technical-seo-checker/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-05T00:28:20.261Z",
-    "stars": 1995,
-    "language": "Shell",
-    "pushed_at": "2026-06-05T00:24:14Z",
+    "discovered_at": "2026-06-05T05:55:49.060Z",
+    "stars": 1999,
+    "language": "Python",
+    "pushed_at": "2026-06-05T00:51:59Z",
     "license": "Apache-2.0"
-  },
-  "summary_zh": "这是一个网站技术SEO检查工具，当你需要全面排查搜索引擎抓取、加载速度、移动适配或安全等底层问题时，它能帮你快速审计并找出漏洞。"
+  }
 }

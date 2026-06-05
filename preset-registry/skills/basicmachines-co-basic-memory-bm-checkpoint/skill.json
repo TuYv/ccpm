@@ -1,0 +1,25 @@
+{
+  "id": "basicmachines-co-basic-memory-bm-checkpoint",
+  "name": "bm-checkpoint",
+  "description": "Save a deliberate Codex work checkpoint to Basic Memory with changed files, verification, decisions, blockers, and the next action.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "basicmachines-co",
+  "install_path": ".claude/skills/bm-checkpoint/SKILL.md",
+  "source": {
+    "repo": "basicmachines-co/basic-memory",
+    "url": "https://github.com/basicmachines-co/basic-memory/blob/main/plugins/codex/skills/bm-checkpoint/SKILL.md",
+    "path": "plugins/codex/skills/bm-checkpoint/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-05T05:55:27.652Z",
+    "stars": 3144,
+    "language": "Python",
+    "pushed_at": "2026-06-05T04:41:44Z",
+    "license": "AGPL-3.0"
+  }
+}

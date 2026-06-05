@@ -1,14 +1,14 @@
 {
   "id": "aaron-he-zhu-seo-geo-claude-skills-rank-tracker",
   "name": "rank-tracker",
-  "description": "Use when the user asks to \"track rankings\"; monitors keyword/SERP changes from provided exports or connected tools, including AI response checks. 排名追踪/SERP监控",
+  "description": "Use when the user asks to \"track rankings\" or \"查排名\"; measures keyword and SERP-position deltas over time from provided exports or connected tools, including AI-response checks. Not for multi-metric stakeholder reports — use performance-reporter; not for setting alerts — use alert-manager. 排名追踪/SERP监控",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
     "codex",
     "gemini"
   ],
-  "version": "9.9.9",
+  "version": "9.9.10",
   "author": "aaron-he-zhu",
   "install_path": ".claude/skills/rank-tracker/SKILL.md",
   "source": {
@@ -16,11 +16,10 @@
     "url": "https://github.com/aaron-he-zhu/seo-geo-claude-skills/blob/main/monitor/rank-tracker/SKILL.md",
     "path": "monitor/rank-tracker/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-05T00:28:19.789Z",
-    "stars": 1995,
-    "language": "Shell",
-    "pushed_at": "2026-06-05T00:24:14Z",
+    "discovered_at": "2026-06-05T05:55:48.696Z",
+    "stars": 1999,
+    "language": "Python",
+    "pushed_at": "2026-06-05T00:51:59Z",
     "license": "Apache-2.0"
-  },
-  "summary_zh": "帮你监控关键词和搜索结果排名波动的工具。适合需要追踪网站SEO表现、观察搜索结果页变化，以及检查AI搜索回答展示情况的场景。"
+  }
 }

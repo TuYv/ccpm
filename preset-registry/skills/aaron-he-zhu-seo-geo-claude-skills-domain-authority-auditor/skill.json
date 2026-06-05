@@ -1,14 +1,14 @@
 {
   "id": "aaron-he-zhu-seo-geo-claude-skills-domain-authority-auditor",
   "name": "domain-authority-auditor",
-  "description": "Use when auditing domain authority, trust, citations, or 域名权威/网站可信度. Runs 40-item CITE scoring with veto checks.",
+  "description": "Use when auditing domain authority, trust, or citation credibility; runs 40-item CITE scoring with veto checks (TRUSTED/CAUTIOUS/UNTRUSTED). Not for page-level content quality — use content-quality-auditor; not for backlink profiling alone — use backlink-analyzer. 域名权威/网站可信度",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
     "codex",
     "gemini"
   ],
-  "version": "9.9.9",
+  "version": "9.9.10",
   "author": "aaron-he-zhu",
   "install_path": ".claude/skills/domain-authority-auditor/SKILL.md",
   "source": {
@@ -16,11 +16,10 @@
     "url": "https://github.com/aaron-he-zhu/seo-geo-claude-skills/blob/main/cross-cutting/domain-authority-auditor/SKILL.md",
     "path": "cross-cutting/domain-authority-auditor/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-05T00:28:19.126Z",
-    "stars": 1995,
-    "language": "Shell",
-    "pushed_at": "2026-06-05T00:24:14Z",
+    "discovered_at": "2026-06-05T05:55:48.152Z",
+    "stars": 1999,
+    "language": "Python",
+    "pushed_at": "2026-06-05T00:51:59Z",
     "license": "Apache-2.0"
-  },
-  "summary_zh": "这是一款用来评估域名权威度和网站可信度的工具，能帮你全面检测网站引用与信任水平，并排查致命硬伤，适合SEO优化或网站价值评估时使用。"
+  }
 }

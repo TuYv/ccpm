@@ -1,14 +1,14 @@
 {
   "id": "aaron-he-zhu-seo-geo-claude-skills-seo-content-writer",
   "name": "seo-content-writer",
-  "description": "Use when the user asks to \"write SEO content\"; drafts posts, articles, and landing pages with keywords, headers, snippets, and evidence boundaries. SEO文章写作/内容优化",
+  "description": "Use when the user asks to \"write SEO content\"; drafts new posts, articles, and landing pages with keywords, headers, snippets, and evidence boundaries. Not for AI-citation/GEO readiness scoring — use geo-content-optimizer; not for updating decaying existing content — use content-refresher. SEO文章写作/内容优化",
   "category": "文档写作",
   "compatible_tools": [
     "claude",
     "codex",
     "gemini"
   ],
-  "version": "9.9.9",
+  "version": "9.9.10",
   "author": "aaron-he-zhu",
   "install_path": ".claude/skills/seo-content-writer/SKILL.md",
   "source": {
@@ -16,11 +16,10 @@
     "url": "https://github.com/aaron-he-zhu/seo-geo-claude-skills/blob/main/build/seo-content-writer/SKILL.md",
     "path": "build/seo-content-writer/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-05T00:28:18.901Z",
-    "stars": 1995,
-    "language": "Shell",
-    "pushed_at": "2026-06-05T00:24:14Z",
+    "discovered_at": "2026-06-05T05:55:47.966Z",
+    "stars": 1999,
+    "language": "Python",
+    "pushed_at": "2026-06-05T00:51:59Z",
     "license": "Apache-2.0"
-  },
-  "summary_zh": "这是一个SEO内容写作助手，专治写优化文章和落地页时不知如何下笔的痛点，它能自动帮你搞定关键词布局和文章结构，轻松生成搜索引擎爱看的优质内容。"
+  }
 }

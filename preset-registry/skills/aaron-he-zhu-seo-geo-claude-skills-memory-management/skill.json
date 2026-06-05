@@ -1,14 +1,14 @@
 {
   "id": "aaron-he-zhu-seo-geo-claude-skills-memory-management",
   "name": "memory-management",
-  "description": "Use when the user asks to \"remember project context\"; manages SEO/GEO memory, hot-cache, active work, archive tiers, and privacy cleanup. 项目记忆/跨会话",
+  "description": "Use when the user asks to \"remember project context\"; manages the SEO/GEO memory lifecycle — hot-cache, active work, archive tiers, and privacy cleanup. Not for content or domain scoring — use the auditors. 项目记忆/跨会话",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
     "codex",
     "gemini"
   ],
-  "version": "9.9.9",
+  "version": "9.9.10",
   "author": "aaron-he-zhu",
   "install_path": ".claude/skills/memory-management/SKILL.md",
   "source": {
@@ -16,11 +16,10 @@
     "url": "https://github.com/aaron-he-zhu/seo-geo-claude-skills/blob/main/cross-cutting/memory-management/SKILL.md",
     "path": "cross-cutting/memory-management/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-05T00:28:19.342Z",
-    "stars": 1995,
-    "language": "Shell",
-    "pushed_at": "2026-06-05T00:24:14Z",
+    "discovered_at": "2026-06-05T05:55:48.346Z",
+    "stars": 1999,
+    "language": "Python",
+    "pushed_at": "2026-06-05T00:51:59Z",
     "license": "Apache-2.0"
-  },
-  "summary_zh": "专治系统“失忆”，能跨会话记住项目上下文，智能管理历史数据并保障隐私，适合需要长期跟进项目、随时无缝恢复工作进度的场景。"
+  }
 }

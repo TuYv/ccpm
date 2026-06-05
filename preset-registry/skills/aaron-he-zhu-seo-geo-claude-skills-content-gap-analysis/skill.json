@@ -1,14 +1,14 @@
 {
   "id": "aaron-he-zhu-seo-geo-claude-skills-content-gap-analysis",
   "name": "content-gap-analysis",
-  "description": "Use when the user asks to \"find content gaps\"; maps competitor topics, missing keywords, and editorial calendar opportunities. 内容缺口/选题规划",
+  "description": "Use when the user asks to \"find content gaps\", \"竞品写了什么\", or \"还应该写什么\"; builds a competitor-relative coverage map of missing topics, keyword gaps, and editorial-calendar opportunities. Not for raw keyword demand discovery — use keyword-research. 内容缺口/选题规划",
   "category": "数据分析",
   "compatible_tools": [
     "claude",
     "codex",
     "gemini"
   ],
-  "version": "9.9.9",
+  "version": "9.9.10",
   "author": "aaron-he-zhu",
   "install_path": ".claude/skills/content-gap-analysis/SKILL.md",
   "source": {
@@ -16,11 +16,10 @@
     "url": "https://github.com/aaron-he-zhu/seo-geo-claude-skills/blob/main/research/content-gap-analysis/SKILL.md",
     "path": "research/content-gap-analysis/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-05T00:28:20.469Z",
-    "stars": 1995,
-    "language": "Shell",
-    "pushed_at": "2026-06-05T00:24:14Z",
+    "discovered_at": "2026-06-05T05:55:49.252Z",
+    "stars": 1999,
+    "language": "Python",
+    "pushed_at": "2026-06-05T00:51:59Z",
     "license": "Apache-2.0"
-  },
-  "summary_zh": "这是一款选题挖掘工具，能帮你找出竞品覆盖而你遗漏的关键词与内容机会，轻松规划发布日历，特别适合做SEO和内容规划时填补空白。"
+  }
 }

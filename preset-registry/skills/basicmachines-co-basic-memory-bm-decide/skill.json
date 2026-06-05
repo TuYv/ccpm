@@ -1,0 +1,25 @@
+{
+  "id": "basicmachines-co-basic-memory-bm-decide",
+  "name": "bm-decide",
+  "description": "Capture a durable engineering decision in Basic Memory with rationale, alternatives, consequences, and affected work.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "basicmachines-co",
+  "install_path": ".claude/skills/bm-decide/SKILL.md",
+  "source": {
+    "repo": "basicmachines-co/basic-memory",
+    "url": "https://github.com/basicmachines-co/basic-memory/blob/main/plugins/codex/skills/bm-decide/SKILL.md",
+    "path": "plugins/codex/skills/bm-decide/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-05T05:55:27.751Z",
+    "stars": 3144,
+    "language": "Python",
+    "pushed_at": "2026-06-05T04:41:44Z",
+    "license": "AGPL-3.0"
+  }
+}

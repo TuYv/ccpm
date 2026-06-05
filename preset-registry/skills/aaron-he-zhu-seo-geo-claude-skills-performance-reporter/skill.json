@@ -1,14 +1,14 @@
 {
   "id": "aaron-he-zhu-seo-geo-claude-skills-performance-reporter",
   "name": "performance-reporter",
-  "description": "Use when generating SEO/GEO reports, traffic summaries, ranking reports, KPI dashboards, stakeholder updates, or monthly reports. SEO报告/绩效仪表盘",
+  "description": "Use when the user asks to \"generate an SEO report\" or \"出月报\"; builds multi-metric stakeholder reports and dashboards spanning traffic, rankings, authority, and content progress. Not for raw ranking deltas — use rank-tracker. SEO报告/绩效仪表盘",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
     "codex",
     "gemini"
   ],
-  "version": "9.9.9",
+  "version": "9.9.10",
   "author": "aaron-he-zhu",
   "install_path": ".claude/skills/performance-reporter/SKILL.md",
   "source": {
@@ -16,11 +16,10 @@
     "url": "https://github.com/aaron-he-zhu/seo-geo-claude-skills/blob/main/monitor/performance-reporter/SKILL.md",
     "path": "monitor/performance-reporter/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-05T00:28:19.687Z",
-    "stars": 1995,
-    "language": "Shell",
-    "pushed_at": "2026-06-05T00:24:14Z",
+    "discovered_at": "2026-06-05T05:55:48.608Z",
+    "stars": 1999,
+    "language": "Python",
+    "pushed_at": "2026-06-05T00:51:59Z",
     "license": "Apache-2.0"
-  },
-  "summary_zh": "这是一个生成SEO与网站绩效数据报告的工具，省去手动整理的麻烦，适合需要定期向团队或老板同步网站流量、排名与KPI表现时使用。"
+  }
 }

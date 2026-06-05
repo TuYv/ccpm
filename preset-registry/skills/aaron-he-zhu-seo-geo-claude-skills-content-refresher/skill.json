@@ -1,14 +1,14 @@
 {
   "id": "aaron-he-zhu-seo-geo-claude-skills-content-refresher",
   "name": "content-refresher",
-  "description": "Use when updating outdated content, fixing traffic/ranking decay, refreshing stats, adding new sections, or improving freshness signals. 内容更新/排名恢复",
+  "description": "Use when the user asks to \"update outdated content\" or \"fix traffic/ranking decay\"; scores decay, prioritizes refresh work, and produces an update plan with GEO and republishing guidance. Not for net-new content — use seo-content-writer. 内容更新/排名恢复",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
     "codex",
     "gemini"
   ],
-  "version": "9.9.9",
+  "version": "9.9.10",
   "author": "aaron-he-zhu",
   "install_path": ".claude/skills/content-refresher/SKILL.md",
   "source": {
@@ -16,11 +16,10 @@
     "url": "https://github.com/aaron-he-zhu/seo-geo-claude-skills/blob/main/optimize/content-refresher/SKILL.md",
     "path": "optimize/content-refresher/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-05T00:28:19.927Z",
-    "stars": 1995,
-    "language": "Shell",
-    "pushed_at": "2026-06-05T00:24:14Z",
+    "discovered_at": "2026-06-05T05:55:48.781Z",
+    "stars": 1999,
+    "language": "Python",
+    "pushed_at": "2026-06-05T00:51:59Z",
     "license": "Apache-2.0"
-  },
-  "summary_zh": "这是一个帮你翻新旧文章的工具，能解决网站流量和搜索排名衰退的问题，特别适合需要通过更新数据和补充内容来提升搜索引擎新鲜度信号的SEO维护场景。"
+  }
 }

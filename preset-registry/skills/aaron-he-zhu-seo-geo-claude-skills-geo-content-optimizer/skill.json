@@ -1,14 +1,14 @@
 {
   "id": "aaron-he-zhu-seo-geo-claude-skills-geo-content-optimizer",
   "name": "geo-content-optimizer",
-  "description": "Use when the user asks to \"optimize for AI citations\"; improves citation readiness for ChatGPT, Perplexity, AI Overviews, Gemini, and Claude. AI引用优化/GEO优化/AI搜索",
+  "description": "Use when the user asks to \"optimize for AI citations\"; improves citation readiness for ChatGPT, Perplexity, AI Overviews, Gemini, and Claude. Not for structural on-page SEO — use on-page-seo-auditor; not for net-new drafting — use seo-content-writer. AI引用优化/GEO优化/AI搜索",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
     "codex",
     "gemini"
   ],
-  "version": "9.9.9",
+  "version": "9.9.10",
   "author": "aaron-he-zhu",
   "install_path": ".claude/skills/geo-content-optimizer/SKILL.md",
   "source": {
@@ -16,11 +16,10 @@
     "url": "https://github.com/aaron-he-zhu/seo-geo-claude-skills/blob/main/build/geo-content-optimizer/SKILL.md",
     "path": "build/geo-content-optimizer/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-05T00:28:18.503Z",
-    "stars": 1995,
-    "language": "Shell",
-    "pushed_at": "2026-06-05T00:24:14Z",
+    "discovered_at": "2026-06-05T05:55:47.689Z",
+    "stars": 1999,
+    "language": "Python",
+    "pushed_at": "2026-06-05T00:51:59Z",
     "license": "Apache-2.0"
-  },
-  "summary_zh": "专门针对AI搜索引擎的优化工具，能让你的内容更容易被ChatGPT等主流AI当作引用来源，适合想提升文章在AI问答中曝光率的创作者。"
+  }
 }
