@@ -350,6 +350,8 @@ If the script exits non-zero or prints `(no test command detected)`: halt. Do no
 
 For bug fixes: a regression test that fails on the old code must exist before the fix is done.
 
+In a dirty or multi-agent checkout, a passing local build or test run is not proof your change is sound: unrelated WIP already in the tree can supply missing symbols, mask a break, or fail for reasons unrelated to you. Verify in isolation -- `git worktree add --detach <known-good-commit>`, `git apply` only the diff of the files you own, then build/test there. The clean isolated pass is the real signal; the contaminated local pass is not.
+
 ## Gotchas
 
 | What happened | Rule |
