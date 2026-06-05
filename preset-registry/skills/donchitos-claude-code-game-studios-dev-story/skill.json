@@ -1,0 +1,25 @@
+{
+  "id": "donchitos-claude-code-game-studios-dev-story",
+  "name": "dev-story",
+  "description": "Read a story file and implement it. Loads the full context (story, GDD requirement, ADR guidelines, control manifest), routes to the right programmer agent for the system and engine, implements the code and test, and confirms each acceptance criterion. The core implementation skill — run after /story-readiness, before /code-review and /story-done.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Donchitos",
+  "install_path": ".claude/skills/dev-story/SKILL.md",
+  "source": {
+    "repo": "Donchitos/Claude-Code-Game-Studios",
+    "url": "https://github.com/Donchitos/Claude-Code-Game-Studios/blob/main/.claude/skills/dev-story/SKILL.md",
+    "path": ".claude/skills/dev-story/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-05T10:24:16.066Z",
+    "stars": 20892,
+    "language": "Shell",
+    "pushed_at": "2026-05-21T23:33:07Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "nowork-studio-notfair-copy",
+  "name": "google-ads-copy",
+  "description": "Generate and A/B test Google Ads copy. Use when asked to write ad copy, headlines, descriptions, create ad variants, test ad messaging, improve CTR, or generate RSA (Responsive Search Ad) components. Trigger on \"ad copy\", \"write ads\", \"headlines\", \"descriptions\", \"RSA\", \"responsive search ad\", \"ad text\", \"ad creative\", \"improve CTR\", \"ad A/B test\", \"ad variants\", \"write me an ad\", \"ad variation experiment\", or when the user wants to improve click-through rate on existing ads.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "nowork-studio",
+  "install_path": ".claude/skills/copy/SKILL.md",
+  "source": {
+    "repo": "nowork-studio/NotFair",
+    "url": "https://github.com/nowork-studio/NotFair/blob/main/google-ads/copy/SKILL.md",
+    "path": "google-ads/copy/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-05T10:24:33.343Z",
+    "stars": 2778,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-05T02:14:21Z",
+    "license": "MIT"
+  }
+}

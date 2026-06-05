@@ -1,0 +1,25 @@
+{
+  "id": "tw93-waza-think",
+  "name": "think",
+  "description": "Turns rough ideas into approved, decision-complete plans with validated structure before coding. Use when users ask 出方案/给方案/深入分析/怎么设计/有没有必要/值不值得/plan this/how should I/should we keep this for features, architecture, or value judgments. Not for bug fixes or small edits.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tw93",
+  "install_path": ".claude/skills/think/SKILL.md",
+  "source": {
+    "repo": "tw93/Waza",
+    "url": "https://github.com/tw93/Waza/blob/main/skills/think/SKILL.md",
+    "path": "skills/think/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-05T10:24:28.424Z",
+    "stars": 5525,
+    "language": "Python",
+    "pushed_at": "2026-06-05T00:17:12Z",
+    "license": "MIT"
+  }
+}

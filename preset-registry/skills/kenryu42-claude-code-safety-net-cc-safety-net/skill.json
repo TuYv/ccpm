@@ -1,0 +1,25 @@
+{
+  "id": "kenryu42-claude-code-safety-net-cc-safety-net",
+  "name": "cc-safety-net",
+  "description": "Configure CC Safety Net rulebooks for user, project, or shareable GitHub scope.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "kenryu42",
+  "install_path": ".claude/skills/cc-safety-net/SKILL.md",
+  "source": {
+    "repo": "kenryu42/claude-code-safety-net",
+    "url": "https://github.com/kenryu42/claude-code-safety-net/blob/main/skills/cc-safety-net/SKILL.md",
+    "path": "skills/cc-safety-net/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-05T10:25:57.072Z",
+    "stars": 1373,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-05T10:22:12Z",
+    "license": "MIT"
+  }
+}

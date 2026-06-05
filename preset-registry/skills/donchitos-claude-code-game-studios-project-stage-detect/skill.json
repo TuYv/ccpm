@@ -1,0 +1,25 @@
+{
+  "id": "donchitos-claude-code-game-studios-project-stage-detect",
+  "name": "project-stage-detect",
+  "description": "Automatically analyze project state, detect stage, identify gaps, and recommend next steps based on existing artifacts. Use when user asks 'where are we in development', 'what stage are we in', 'full project audit'.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Donchitos",
+  "install_path": ".claude/skills/project-stage-detect/SKILL.md",
+  "source": {
+    "repo": "Donchitos/Claude-Code-Game-Studios",
+    "url": "https://github.com/Donchitos/Claude-Code-Game-Studios/blob/main/.claude/skills/project-stage-detect/SKILL.md",
+    "path": ".claude/skills/project-stage-detect/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-05T10:24:17.558Z",
+    "stars": 20892,
+    "language": "Shell",
+    "pushed_at": "2026-05-21T23:33:07Z",
+    "license": "MIT"
+  }
+}

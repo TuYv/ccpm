@@ -1,0 +1,25 @@
+{
+  "id": "nowork-studio-notfair-schema-markup-generator",
+  "name": "schema-markup-generator",
+  "description": "> Generate JSON-LD structured data markup for rich results in Google Search. Supports FAQ, HowTo, Article, Product, LocalBusiness, and multi-type schemas. Validates against Google requirements and provides implementation guidance. Use when asked to \"add schema markup\", \"generate structured data\", \"JSON-LD\", \"rich snippets\", \"FAQ schema\", \"product markup\", \"add structured data to my page\", \"how to get rich snippets\", or any structured data task.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "nowork-studio",
+  "install_path": ".claude/skills/schema-markup-generator/SKILL.md",
+  "source": {
+    "repo": "nowork-studio/NotFair",
+    "url": "https://github.com/nowork-studio/NotFair/blob/main/seo/schema-markup-generator/SKILL.md",
+    "path": "seo/schema-markup-generator/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-05T10:24:34.625Z",
+    "stars": 2778,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-05T02:14:21Z",
+    "license": "MIT"
+  }
+}

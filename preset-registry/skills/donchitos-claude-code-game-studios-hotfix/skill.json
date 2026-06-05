@@ -1,0 +1,25 @@
+{
+  "id": "donchitos-claude-code-game-studios-hotfix",
+  "name": "hotfix",
+  "description": "Emergency fix workflow that bypasses normal sprint processes with a full audit trail. Creates hotfix branch, tracks approvals, and ensures the fix is backported correctly.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Donchitos",
+  "install_path": ".claude/skills/hotfix/SKILL.md",
+  "source": {
+    "repo": "Donchitos/Claude-Code-Game-Studios",
+    "url": "https://github.com/Donchitos/Claude-Code-Game-Studios/blob/main/.claude/skills/hotfix/SKILL.md",
+    "path": ".claude/skills/hotfix/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-05T10:24:16.534Z",
+    "stars": 20892,
+    "language": "Shell",
+    "pushed_at": "2026-05-21T23:33:07Z",
+    "license": "MIT"
+  }
+}

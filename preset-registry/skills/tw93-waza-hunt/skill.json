@@ -1,0 +1,25 @@
+{
+  "id": "tw93-waza-hunt",
+  "name": "hunt",
+  "description": "Finds root cause before applying fixes for errors, crashes, regressions, failing tests, broken behavior, and screenshot-reported defects. Use when users ask 排查/报错/崩溃/不工作/回归/判断为什么报错, or say something used to work and now fails. Not for code review or new features.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tw93",
+  "install_path": ".claude/skills/hunt/SKILL.md",
+  "source": {
+    "repo": "tw93/Waza",
+    "url": "https://github.com/tw93/Waza/blob/main/skills/hunt/SKILL.md",
+    "path": "skills/hunt/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-05T10:24:28.135Z",
+    "stars": 5525,
+    "language": "Python",
+    "pushed_at": "2026-06-05T00:17:12Z",
+    "license": "MIT"
+  }
+}

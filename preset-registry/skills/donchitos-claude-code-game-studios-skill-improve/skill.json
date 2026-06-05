@@ -1,0 +1,25 @@
+{
+  "id": "donchitos-claude-code-game-studios-skill-improve",
+  "name": "skill-improve",
+  "description": "Improve a skill using a test-fix-retest loop. Runs static checks, proposes targeted fixes, rewrites the skill, re-tests, and keeps or reverts based on score change.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Donchitos",
+  "install_path": ".claude/skills/skill-improve/SKILL.md",
+  "source": {
+    "repo": "Donchitos/Claude-Code-Game-Studios",
+    "url": "https://github.com/Donchitos/Claude-Code-Game-Studios/blob/main/.claude/skills/skill-improve/SKILL.md",
+    "path": ".claude/skills/skill-improve/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-05T10:24:19.146Z",
+    "stars": 20892,
+    "language": "Shell",
+    "pushed_at": "2026-05-21T23:33:07Z",
+    "license": "MIT"
+  }
+}

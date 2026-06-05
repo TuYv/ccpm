@@ -1,0 +1,25 @@
+{
+  "id": "nowork-studio-notfair-landing",
+  "name": "google-ads-landing",
+  "description": "Score and diagnose Google Ads landing pages. Use when asked to audit a landing page, check landing page quality, diagnose high-CTR but low-conversion-rate ad groups, improve Quality Score's Landing Page Experience component, or compare an ad group's messaging against its landing page. Trigger on \"landing page audit\", \"landing page score\", \"landing page quality\", \"why is my conversion rate low\", \"LPX\", \"landing page experience\", \"ad to page match\", or when `/google-ads-audit` surfaces a high-CTR ",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "nowork-studio",
+  "install_path": ".claude/skills/landing/SKILL.md",
+  "source": {
+    "repo": "nowork-studio/NotFair",
+    "url": "https://github.com/nowork-studio/NotFair/blob/main/google-ads/landing/SKILL.md",
+    "path": "google-ads/landing/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-05T10:24:33.455Z",
+    "stars": 2778,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-05T02:14:21Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "donchitos-claude-code-game-studios-setup-engine",
+  "name": "setup-engine",
+  "description": "Configure the project's game engine and version. Pins the engine in CLAUDE.md, detects knowledge gaps, and populates engine reference docs via WebSearch when the version is beyond the LLM's training data.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Donchitos",
+  "install_path": ".claude/skills/setup-engine/SKILL.md",
+  "source": {
+    "repo": "Donchitos/Claude-Code-Game-Studios",
+    "url": "https://github.com/Donchitos/Claude-Code-Game-Studios/blob/main/.claude/skills/setup-engine/SKILL.md",
+    "path": ".claude/skills/setup-engine/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-05T10:24:19.024Z",
+    "stars": 20892,
+    "language": "Shell",
+    "pushed_at": "2026-05-21T23:33:07Z",
+    "license": "MIT"
+  }
+}

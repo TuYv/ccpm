@@ -1,0 +1,25 @@
+{
+  "id": "donchitos-claude-code-game-studios-day-one-patch",
+  "name": "day-one-patch",
+  "description": "Prepare a day-one patch for a game launch. Scopes, prioritises, implements, and QA-gates a focused patch addressing known issues discovered after gold master but before or immediately after public launch. Treats the patch as a mini-sprint with its own QA gate and rollback plan.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Donchitos",
+  "install_path": ".claude/skills/day-one-patch/SKILL.md",
+  "source": {
+    "repo": "Donchitos/Claude-Code-Game-Studios",
+    "url": "https://github.com/Donchitos/Claude-Code-Game-Studios/blob/main/.claude/skills/day-one-patch/SKILL.md",
+    "path": ".claude/skills/day-one-patch/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-05T10:24:15.675Z",
+    "stars": 20892,
+    "language": "Shell",
+    "pushed_at": "2026-05-21T23:33:07Z",
+    "license": "MIT"
+  }
+}

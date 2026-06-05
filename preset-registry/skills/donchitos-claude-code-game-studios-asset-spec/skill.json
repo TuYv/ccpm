@@ -1,0 +1,25 @@
+{
+  "id": "donchitos-claude-code-game-studios-asset-spec",
+  "name": "asset-spec",
+  "description": "Generate per-asset visual specifications and AI generation prompts from GDDs, level docs, or character profiles. Produces structured spec files and updates the master asset manifest. Run after art bible and GDD/level design are approved, before production begins.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Donchitos",
+  "install_path": ".claude/skills/asset-spec/SKILL.md",
+  "source": {
+    "repo": "Donchitos/Claude-Code-Game-Studios",
+    "url": "https://github.com/Donchitos/Claude-Code-Game-Studios/blob/main/.claude/skills/asset-spec/SKILL.md",
+    "path": ".claude/skills/asset-spec/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-05T10:24:14.168Z",
+    "stars": 20892,
+    "language": "Shell",
+    "pushed_at": "2026-05-21T23:33:07Z",
+    "license": "MIT"
+  }
+}

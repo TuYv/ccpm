@@ -1,0 +1,25 @@
+{
+  "id": "donchitos-claude-code-game-studios-skill-test",
+  "name": "skill-test",
+  "description": "Validate skill files for structural compliance and behavioral correctness. Three modes: static (linter), spec (behavioral), audit (coverage report).",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Donchitos",
+  "install_path": ".claude/skills/skill-test/SKILL.md",
+  "source": {
+    "repo": "Donchitos/Claude-Code-Game-Studios",
+    "url": "https://github.com/Donchitos/Claude-Code-Game-Studios/blob/main/.claude/skills/skill-test/SKILL.md",
+    "path": ".claude/skills/skill-test/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-05T10:24:19.253Z",
+    "stars": 20892,
+    "language": "Shell",
+    "pushed_at": "2026-05-21T23:33:07Z",
+    "license": "MIT"
+  }
+}

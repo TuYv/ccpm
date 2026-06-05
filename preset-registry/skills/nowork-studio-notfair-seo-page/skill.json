@@ -1,0 +1,25 @@
+{
+  "id": "nowork-studio-notfair-seo-page",
+  "name": "seo-page",
+  "description": "> Single-page SEO audit: deep content quality evaluation using Google's E-E-A-T framework, Helpful Content guidelines, on-page SEO factors, search intent alignment, technical signals, and readability analysis. Fetches GSC performance data for that specific page, crawls the live HTML, evaluates metadata, schema markup, internal linking, content depth, and produces a scored report with actionable fixes. Use this skill whenever the user wants to analyze a specific page or URL — not the whole site. ",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "nowork-studio",
+  "install_path": ".claude/skills/seo-page/SKILL.md",
+  "source": {
+    "repo": "nowork-studio/NotFair",
+    "url": "https://github.com/nowork-studio/NotFair/blob/main/seo/seo-page/SKILL.md",
+    "path": "seo/seo-page/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-05T10:24:34.845Z",
+    "stars": 2778,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-05T02:14:21Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "tw93-waza-health",
+  "name": "health",
+  "description": "Runs a budget-aware agent-assisted engineering health audit for instruction/config drift, hooks/MCP, verifier surfaces, and AI maintainability. Use when users ask 检查claude/检查codex/检查pi/配置检查/健康度 or report agents ignoring instructions, missing validation, or code becoming hard to maintain. Not for debugging code or reviewing PRs.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tw93",
+  "install_path": ".claude/skills/health/SKILL.md",
+  "source": {
+    "repo": "tw93/Waza",
+    "url": "https://github.com/tw93/Waza/blob/main/skills/health/SKILL.md",
+    "path": "skills/health/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-05T10:24:28.009Z",
+    "stars": 5525,
+    "language": "Python",
+    "pushed_at": "2026-06-05T00:17:12Z",
+    "license": "MIT"
+  }
+}

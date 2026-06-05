@@ -1,0 +1,25 @@
+{
+  "id": "donchitos-claude-code-game-studios-bug-triage",
+  "name": "bug-triage",
+  "description": "Read all open bugs in production/qa/bugs/, re-evaluate priority vs. severity, assign to sprints, surface systemic trends, and produce a triage report. Run at sprint start or when the bug count grows enough to need re-prioritization.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Donchitos",
+  "install_path": ".claude/skills/bug-triage/SKILL.md",
+  "source": {
+    "repo": "Donchitos/Claude-Code-Game-Studios",
+    "url": "https://github.com/Donchitos/Claude-Code-Game-Studios/blob/main/.claude/skills/bug-triage/SKILL.md",
+    "path": ".claude/skills/bug-triage/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-05T10:24:14.619Z",
+    "stars": 20892,
+    "language": "Shell",
+    "pushed_at": "2026-05-21T23:33:07Z",
+    "license": "MIT"
+  }
+}

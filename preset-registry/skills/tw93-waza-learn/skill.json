@@ -1,0 +1,25 @@
+{
+  "id": "tw93-waza-learn",
+  "name": "learn",
+  "description": "Runs a six-phase research workflow that turns unfamiliar domains, source bundles, or collected material into publish-ready output. Use when users ask 学习一下/深入研究/研究一下/整理成文章/deep dive/compile sources or need one coherent reference from many inputs. Not for quick lookups or single-file reads.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tw93",
+  "install_path": ".claude/skills/learn/SKILL.md",
+  "source": {
+    "repo": "tw93/Waza",
+    "url": "https://github.com/tw93/Waza/blob/main/skills/learn/SKILL.md",
+    "path": "skills/learn/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-05T10:24:28.232Z",
+    "stars": 5525,
+    "language": "Python",
+    "pushed_at": "2026-06-05T00:17:12Z",
+    "license": "MIT"
+  }
+}

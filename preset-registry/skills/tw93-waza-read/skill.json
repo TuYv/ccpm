@@ -1,0 +1,25 @@
+{
+  "id": "tw93-waza-read",
+  "name": "read",
+  "description": "Reads URLs and PDFs by fetching source content, defaulting to concise summaries for plain read requests and clean Markdown when asked to convert, save, quote, cite, or feed downstream work. Use when users ask 看这个链接/读一下/read this/check this URL. Not for local text files already in the repo.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tw93",
+  "install_path": ".claude/skills/read/SKILL.md",
+  "source": {
+    "repo": "tw93/Waza",
+    "url": "https://github.com/tw93/Waza/blob/main/skills/read/SKILL.md",
+    "path": "skills/read/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-05T10:24:28.310Z",
+    "stars": 5525,
+    "language": "Python",
+    "pushed_at": "2026-06-05T00:17:12Z",
+    "license": "MIT"
+  }
+}

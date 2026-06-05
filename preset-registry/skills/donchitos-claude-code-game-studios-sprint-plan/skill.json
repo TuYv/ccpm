@@ -1,0 +1,25 @@
+{
+  "id": "donchitos-claude-code-game-studios-sprint-plan",
+  "name": "sprint-plan",
+  "description": "Generates a new sprint plan or updates an existing one based on the current milestone, completed work, and available capacity. Pulls context from production documents and design backlogs.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Donchitos",
+  "install_path": ".claude/skills/sprint-plan/SKILL.md",
+  "source": {
+    "repo": "Donchitos/Claude-Code-Game-Studios",
+    "url": "https://github.com/Donchitos/Claude-Code-Game-Studios/blob/main/.claude/skills/sprint-plan/SKILL.md",
+    "path": ".claude/skills/sprint-plan/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-05T10:24:19.664Z",
+    "stars": 20892,
+    "language": "Shell",
+    "pushed_at": "2026-05-21T23:33:07Z",
+    "license": "MIT"
+  }
+}

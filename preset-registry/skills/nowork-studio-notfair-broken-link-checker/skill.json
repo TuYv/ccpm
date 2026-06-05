@@ -1,0 +1,25 @@
+{
+  "id": "nowork-studio-notfair-broken-link-checker",
+  "name": "broken-link-checker",
+  "description": "> Scans a website to find broken links (404s, 500s). Crawls internal pages, identifies broken outbound links, and reports source pages for easy fixing. Use this when the user asks to \"check for broken links\", \"find 404s\", \"audit my links\", or \"is my site healthy\".",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "nowork-studio",
+  "install_path": ".claude/skills/broken-link-checker/SKILL.md",
+  "source": {
+    "repo": "nowork-studio/NotFair",
+    "url": "https://github.com/nowork-studio/NotFair/blob/main/seo/broken-link-checker/SKILL.md",
+    "path": "seo/broken-link-checker/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-05T10:24:34.027Z",
+    "stars": 2778,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-05T02:14:21Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "nowork-studio-notfair-audit",
+  "name": "meta-ads-audit",
+  "description": "Meta Ads (Facebook + Instagram) account audit and business context setup. Run this first — it gathers business information, analyzes account health, and saves context that all other Meta ads skills reuse. Trigger on \"audit my Meta ads\", \"audit my Facebook ads\", \"Meta ads audit\", \"set up my Meta ads\", \"onboard Meta\", \"Meta account overview\", \"how's my Meta account\", \"Meta health check\", \"what should I fix in my Facebook ads\", or when the user is new to NotFair Meta and hasn't run an audit before.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "nowork-studio",
+  "install_path": ".claude/skills/audit/SKILL.md",
+  "source": {
+    "repo": "nowork-studio/NotFair",
+    "url": "https://github.com/nowork-studio/NotFair/blob/main/meta-ads/audit/SKILL.md",
+    "path": "meta-ads/audit/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-05T10:24:33.650Z",
+    "stars": 2778,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-05T02:14:21Z",
+    "license": "MIT"
+  }
+}

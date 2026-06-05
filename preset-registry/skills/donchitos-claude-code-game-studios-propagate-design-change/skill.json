@@ -1,0 +1,25 @@
+{
+  "id": "donchitos-claude-code-game-studios-propagate-design-change",
+  "name": "propagate-design-change",
+  "description": "When a GDD is revised, scans all ADRs and the traceability index to identify which architectural decisions are now potentially stale. Produces a change impact report and guides the user through resolution.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Donchitos",
+  "install_path": ".claude/skills/propagate-design-change/SKILL.md",
+  "source": {
+    "repo": "Donchitos/Claude-Code-Game-Studios",
+    "url": "https://github.com/Donchitos/Claude-Code-Game-Studios/blob/main/.claude/skills/propagate-design-change/SKILL.md",
+    "path": ".claude/skills/propagate-design-change/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-05T10:24:17.660Z",
+    "stars": 20892,
+    "language": "Shell",
+    "pushed_at": "2026-05-21T23:33:07Z",
+    "license": "MIT"
+  }
+}
