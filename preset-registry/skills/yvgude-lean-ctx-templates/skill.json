@@ -1,7 +1,7 @@
 {
   "id": "yvgude-lean-ctx-templates",
   "name": "lean-ctx",
-  "description": "Context Runtime for AI Agents — 69 MCP tools, 10 read modes, 60+ shell patterns, tree-sitter AST for 18 languages. Compresses LLM context by up to 99%. Use when reading files, running shell commands, searching code, or exploring directories. Auto-installs if not present.",
+  "description": "Context Runtime for AI Agents — 71 MCP tools, 10 read modes, 60+ shell patterns, tree-sitter AST for 18 languages. Compresses LLM context by up to 99%. Use when reading files, running shell commands, searching code, or exploring directories. Auto-installs if not present.",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/yvgude/lean-ctx/blob/main/rust/src/templates/SKILL.md",
     "path": "rust/src/templates/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-07T15:11:28.545Z",
-    "stars": 2504,
+    "discovered_at": "2026-06-07T16:58:27.555Z",
+    "stars": 2507,
     "language": "Rust",
-    "pushed_at": "2026-06-07T14:18:05Z",
+    "pushed_at": "2026-06-07T16:39:11Z",
     "license": "Apache-2.0"
   },
-  "summary_zh": "给 AI 代理用的上下文运行时，把读文件、跑命令、搜代码、看目录这些操作的上下文压缩到极致，token 消耗最多能降九成多，适合需要长时间处理大型代码库的智能体场景。"
+  "summary_zh": "给 AI 智能体用的上下文运行时，通过多种读取模式、Shell 模式和语法树解析，把喂给大模型的代码和文件内容压到极致，适合需要频繁查阅代码、跑命令或翻目录的场景。"
 }

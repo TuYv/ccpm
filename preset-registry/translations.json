@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-06-07T15:13:40.048Z",
+  "updated_at": "2026-06-07T17:02:12.777Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -9933,9 +9933,9 @@
       "translated_at": "2026-05-20T01:05:59.206Z"
     },
     "bundle:yvgude-lean-ctx": {
-      "hash": "f8bbba167712f33c",
-      "summary_zh": "一套为AI代理打造的上下文运行时工具箱，整合了69个MCP工具、10种读取模式和60多种Shell模式，让代理高效获取和解析代码上下文。",
-      "translated_at": "2026-06-06T10:33:06.622Z"
+      "hash": "a9d611c05864753a",
+      "summary_zh": "一套面向 AI Agent 的上下文运行时工具集，整合 MCP 工具、多种读取模式、Shell 模式与 AST 解析，帮你高效喂代码上下文给模型，减少无效 token 消耗。",
+      "translated_at": "2026-06-07T17:02:06.961Z"
     },
     "bundle:kubb-labs-kubb": {
       "hash": "e42dfe427ea0a7ac",
@@ -13598,14 +13598,14 @@
       "translated_at": "2026-05-20T16:27:14.387Z"
     },
     "skill:yvgude-lean-ctx-lean-ctx": {
-      "hash": "b0296e1024358d24",
-      "summary_zh": "给 AI 智能体用的上下文运行时，通过多种读取模式、shell 模式匹配和语法树解析，把传给大模型的上下文体积压缩到极致，适合需要频繁读文件、跑命令、搜代码或翻目录的场景。",
-      "translated_at": "2026-06-06T10:33:12.718Z"
+      "hash": "3ec84753c4cb476e",
+      "summary_zh": "给 AI 智能体用的上下文运行时，提供文件读取、命令执行、代码搜索和目录浏览能力，并通过多种读取模式和 AST 解析大幅压缩传给大模型的上下文，最高可省 99% token。",
+      "translated_at": "2026-06-07T17:02:12.527Z"
     },
     "skill:yvgude-lean-ctx-templates": {
-      "hash": "b0296e1024358d24",
-      "summary_zh": "给 AI 代理用的上下文运行时，把读文件、跑命令、搜代码、看目录这些操作的上下文压缩到极致，token 消耗最多能降九成多，适合需要长时间处理大型代码库的智能体场景。",
-      "translated_at": "2026-06-06T10:33:13.064Z"
+      "hash": "3ec84753c4cb476e",
+      "summary_zh": "给 AI 智能体用的上下文运行时，通过多种读取模式、Shell 模式和语法树解析，把喂给大模型的代码和文件内容压到极致，适合需要频繁查阅代码、跑命令或翻目录的场景。",
+      "translated_at": "2026-06-07T17:02:12.777Z"
     },
     "skill:zebbern-claude-code-guide-api-fuzzing-bug-bounty": {
       "hash": "f0692669381caf74",
