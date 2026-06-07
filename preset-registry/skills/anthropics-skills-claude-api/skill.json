@@ -1,7 +1,7 @@
 {
   "id": "anthropics-skills-claude-api",
   "name": "claude-api",
-  "description": "Build, debug, and optimize Claude API / Anthropic SDK apps. Apps built with this skill should include prompt caching. Also handles migrating existing Claude API code between Claude model versions (4.5 → 4.6, 4.6 → 4.7, retired-model replacements). TRIGGER when: code imports `anthropic`/`@anthropic-ai/sdk`; user asks for the Claude API, Anthropic SDK, or Managed Agents; user adds/modifies/tunes a Claude feature (caching, thinking, compaction, tool use, batch, files, citations, memory) or model (O",
+  "description": "|- Reference for the Claude API / Anthropic SDK — model ids, pricing, params, streaming, tool use, MCP, agents, caching, token counting, model migration. TRIGGER — read BEFORE opening the target file; don't skip because it \"looks like a one-liner\" — whenever: the prompt names Claude/Anthropic in any form (Claude, Anthropic, Opus, Sonnet, Haiku, `anthropic`, `@anthropic-ai`, `claude-*`, `us.anthropic.*`, `[1m]`); the user asks about an LLM (pricing/model choice/limits/caching) — never answer from",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/anthropics/skills/blob/main/skills/claude-api/SKILL.md",
     "path": "skills/claude-api/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-07T18:27:05.954Z",
-    "stars": 147534,
+    "discovered_at": "2026-06-07T20:42:55.799Z",
+    "stars": 147551,
     "language": "Python",
-    "pushed_at": "2026-06-07T03:15:14Z",
+    "pushed_at": "2026-06-07T20:21:35Z",
     "license": null
   },
-  "summary_zh": "专门辅助Claude API开发的工具，帮你构建、调试和优化应用，并轻松搞定不同模型版本间的代码迁移，适合在调用SDK或升级模型时使用。"
+  "summary_zh": "一份面向开发者的 Claude / Anthropic API 速查手册，覆盖模型 ID、价格、参数、流式输出、工具调用、缓存和迁移等细节，避免凭记忆瞎答或翻文档。"
 }

@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-06-07T18:38:40.446Z",
+  "updated_at": "2026-06-07T20:48:28.658Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -328,9 +328,9 @@
       "translated_at": "2026-05-19T20:21:31.044Z"
     },
     "skill:anthropics-skills-claude-api": {
-      "hash": "634eb6efa213176c",
-      "summary_zh": "专门辅助Claude API开发的工具，帮你构建、调试和优化应用，并轻松搞定不同模型版本间的代码迁移，适合在调用SDK或升级模型时使用。",
-      "translated_at": "2026-05-19T20:21:55.699Z"
+      "hash": "259c5296cd9496b3",
+      "summary_zh": "一份面向开发者的 Claude / Anthropic API 速查手册，覆盖模型 ID、价格、参数、流式输出、工具调用、缓存和迁移等细节，避免凭记忆瞎答或翻文档。",
+      "translated_at": "2026-06-07T20:48:27.566Z"
     },
     "skill:anthropics-skills-doc-coauthoring": {
       "hash": "5cd22526090a4906",
@@ -938,9 +938,9 @@
       "translated_at": "2026-05-11T10:07:22.788Z"
     },
     "bundle:anthropics-skills": {
-      "hash": "c87161c068f3906d",
-      "summary_zh": "这是Anthropic官方的大模型技能扩展包，一站式搞定设计创作、文档办公与技术开发场景，把专业能力组合起来，让AI直接交付高质量的设计、文档和代码成品。",
-      "translated_at": "2026-05-20T00:54:19.785Z"
+      "hash": "8d7a8c9b2580993a",
+      "summary_zh": "Anthropic 官方技能合集，覆盖文档创作、品牌设计、前端界面、PDF/Word/PPT 处理、Claude API 与 MCP 开发等场景，让 Claude 在内容生产和工程任务中具备一套即插即用的专业能力。",
+      "translated_at": "2026-06-07T20:48:22.920Z"
     },
     "bundle:composiohq-awesome-claude-skills": {
       "hash": "687bc933c85e04cb",
@@ -9933,9 +9933,9 @@
       "translated_at": "2026-05-20T01:05:59.206Z"
     },
     "bundle:yvgude-lean-ctx": {
-      "hash": "dac4315e012125dc",
-      "summary_zh": "这套合集为 AI Agent 提供轻量级代码上下文运行时，整合 MCP 工具、多种读取模式、常用 Shell 模式和 tree-sitter 语法树解析，帮助智能体高效检索和理解项目代码。",
-      "translated_at": "2026-06-07T18:38:33.600Z"
+      "hash": "193eb9738654a475",
+      "summary_zh": "一套为 AI 代理打造的代码上下文运行时，整合 MCP 工具、多种读取模式、常用 Shell 模式和 AST 解析，帮助代理高效检索和理解大型代码库。",
+      "translated_at": "2026-06-07T20:48:22.991Z"
     },
     "bundle:kubb-labs-kubb": {
       "hash": "e42dfe427ea0a7ac",
@@ -13598,14 +13598,14 @@
       "translated_at": "2026-05-20T16:27:14.387Z"
     },
     "skill:yvgude-lean-ctx-lean-ctx": {
-      "hash": "81bdc9ffe2f613e6",
-      "summary_zh": "给 AI Agent 用的上下文运行时，通过多种读取模式和语法树解析，把读文件、跑命令、搜代码时灌给大模型的内容压缩到极致，省 token 又提速，适合做智能体开发或本地编码助手。",
-      "translated_at": "2026-06-07T18:38:38.933Z"
+      "hash": "ed577a9e02a6b9d5",
+      "summary_zh": "给 AI 智能体用的上下文运行时，读文件、跑命令、搜代码、看目录时自动接管，把喂给大模型的内容压缩到极致，适合做 Agent 时省 token、提效率。",
+      "translated_at": "2026-06-07T20:48:28.249Z"
     },
     "skill:yvgude-lean-ctx-templates": {
-      "hash": "81bdc9ffe2f613e6",
-      "summary_zh": "给 AI 智能体用的上下文运行时，能在读文件、跑命令、搜代码、逛目录时把喂给大模型的内容压到极小，缓解上下文爆炸，适合做 Agent 工具链集成的开发者。",
-      "translated_at": "2026-06-07T18:38:40.445Z"
+      "hash": "ed577a9e02a6b9d5",
+      "summary_zh": "给 AI 智能体用的上下文运行时，通过结构化读取文件、跑命令、搜代码和遍历目录，把喂给大模型的上下文压缩最多 99%，适合需要省 token、提速的 agent 开发场景。",
+      "translated_at": "2026-06-07T20:48:28.657Z"
     },
     "skill:zebbern-claude-code-guide-api-fuzzing-bug-bounty": {
       "hash": "f0692669381caf74",
