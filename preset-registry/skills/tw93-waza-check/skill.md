@@ -54,22 +54,6 @@ Pick the mode that matches the user's intent, then read that section in full. Mo
 
 Before any mode, run [Project Context Extraction](#project-context-extraction) and (if memory is in scope) [Durable Context Preflight](#durable-context-preflight).
 
-## Plan Execution Mode
-
-Activate when the user's message starts with "Implement the following plan", "按计划实施", "按照计划", "整", "可以干", "直接改" followed by a plan body, or links to a `/think` output.
-
-In this mode, do not run a code review. Instead:
-
-1. State which plan is being executed (first heading or summary line).
-2. Check for obvious repo drift: run `git status --short --branch -uall` and skim any changed files that contradict the plan. If drift makes the plan unsafe, name the specific conflict and stop.
-3. Work through each plan item as a to-do. Mark each complete as you go.
-4. After all items are done, run the project's verification command.
-5. Transition automatically into Ship mode if the project context or current thread indicates review-then-ship.
-
-## Default Continuation (review-then-ship)
-
-When the project's `AGENTS.md` or the current thread explicitly asks to "commit after review", "ship if green", or equivalent, transition directly from review to the Ship flow after a clean review. Do not ask again. State "proceeding to ship" before acting.
-
 ## Project Context Extraction
 
 This is Waza's public, standalone code-review capability. It should not depend on private machine paths or unpublished project instructions.
@@ -91,6 +75,22 @@ For release or maintainer work, also fill the Release Gate 2.0 matrix from `refe
 See [rules/durable-context.md](../../rules/durable-context.md) for when to read durable context, the read-order budget, and the memory-type mapping.
 
 For `/check`, private task constraints are `decision`, `preference`, and `principle` entries; review checklists are `pattern` and `learning`. Current code, diff, public docs, CI, tests, and remote state override memory. Durable memory can explain user intent and preferred follow-through, but public project rules still come from README files, manifests, CI workflows, release docs, the diff, and explicit instructions in the current thread. Never cite private memory as a public project requirement.
+
+## Plan Execution Mode
+
+Activate when the user's message starts with "Implement the following plan", "按计划实施", "按照计划", "整", "可以干", "直接改" followed by a plan body, or links to a `/think` output.
+
+In this mode, do not run a code review. Instead:
+
+1. State which plan is being executed (first heading or summary line).
+2. Check for obvious repo drift: run `git status --short --branch -uall` and skim any changed files that contradict the plan. If drift makes the plan unsafe, name the specific conflict and stop.
+3. Work through each plan item as a to-do. Mark each complete as you go.
+4. After all items are done, run the project's verification command.
+5. Transition automatically into Ship mode if the project context or current thread indicates review-then-ship.
+
+## Default Continuation (review-then-ship)
+
+When the project's `AGENTS.md` or the current thread explicitly asks to "commit after review", "ship if green", or equivalent, transition directly from review to the Ship flow after a clean review. Do not ask again. State "proceeding to ship" before acting.
 
 ## Get the Diff
 
@@ -246,6 +246,10 @@ Drift signals (examples, not exhaustive -- any one is enough to label drift):
 ## Pattern-Fix Completeness
 
 When the diff fixes one instance of a class-of-bug (a missing validation, a wrong selector, an off-by-one, a missing lock), the same shape often lives elsewhere. Extract the pattern signature, `grep -rn` it across the repo (exclude generated dirs), and confirm sibling instances were also handled. List any unswept sibling: flag it as a hard stop when it carries the same risk, advisory when lower-risk. For a deeper sweep playbook, see hunt's Scope Blast Mode.
+
+## Testability Seam For Recurring Bugs
+
+When the diff fixes a visual, layout, timing, or stateful-UI bug that has recurred (the same area broke before, or the fix reads as "tune a number until it looks right"), a code change alone will let the regression return: the logic is entangled with mutable render or UI state, so there is nowhere to assert on it. Flag the fix as incomplete unless it pulls the decision into a pure function -- inputs in, value out, no mutable receiver -- and unit-tests the invariant that was violated (a width never collapses to zero, a hit region stays half-open, an offset stays in bounds). "Verified by running the app" confirms this one instance; only a pinned invariant stops the next one. Reserve this for classes that recur or that runtime checks cannot see; do not demand a seam for one-off logic that already has straightforward coverage.
 
 ## CLI Command Surface
 

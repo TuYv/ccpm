@@ -2,7 +2,7 @@
   "id": "obra-dotfiles-roborev-design-review",
   "name": "roborev-design-review",
   "description": "Request a design review for a commit and present the results",
-  "category": "测试调试",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/obra/dotfiles/blob/main/.claude/skills/roborev-design-review/SKILL.md",
     "path": ".claude/skills/roborev-design-review/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-07T00:23:24.211Z",
+    "discovered_at": "2026-06-07T05:06:07.901Z",
     "stars": 101,
     "language": "Shell",
-    "pushed_at": "2026-06-05T19:49:20Z",
+    "pushed_at": "2026-06-07T04:13:31Z",
     "license": null
   },
   "summary_zh": "针对指定 commit 自动发起设计评审，并把评审结果反馈出来，适合想在代码合并前快速获取架构或实现层面意见的开发团队。"

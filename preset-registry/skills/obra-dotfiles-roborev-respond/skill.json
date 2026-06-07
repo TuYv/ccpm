@@ -2,7 +2,7 @@
   "id": "obra-dotfiles-roborev-respond",
   "name": "roborev-respond",
   "description": "Add a comment to a roborev code review and close it",
-  "category": "测试调试",
+  "category": "开发编程",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/obra/dotfiles/blob/main/.claude/skills/roborev-respond/SKILL.md",
     "path": ".claude/skills/roborev-respond/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-07T00:23:24.416Z",
+    "discovered_at": "2026-06-07T05:06:08.274Z",
     "stars": 101,
     "language": "Shell",
-    "pushed_at": "2026-06-05T19:49:20Z",
+    "pushed_at": "2026-06-07T04:13:31Z",
     "license": null
   },
   "summary_zh": "用于在 RoboRev 代码评审上添加评论并自动关闭，适合在 CI 流程中自动化处理审查反馈的场景。"

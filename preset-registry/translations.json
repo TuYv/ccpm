@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-06-07T00:26:56.130Z",
+  "updated_at": "2026-06-07T05:13:14.772Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -17061,6 +17061,131 @@
       "hash": "cc38949881b5d22c",
       "summary_zh": "一款面向 AI 助手的 HTML 高保真设计技能，适用于制作幻灯片、落地页、UI 原型、交互动画等可视化稿件，让你只需说「设计个页面」就能直接产出像样的视觉成品。",
       "translated_at": "2026-06-05T22:55:39.219Z"
+    },
+    "bundle:blackwell-systems-agent-lsp": {
+      "hash": "b20c78ea5cea258d",
+      "summary_zh": "这套合集把 LSP 能力打包成一组可直接调用的代码理解与重构工作流，让 AI 助手在改动陌生代码库时能精准定位符号、追踪引用、评估影响并安全执行重命名、签名修改、提取函数等操作，显著降低盲改风险。",
+      "translated_at": "2026-06-07T05:12:34.318Z"
+    },
+    "skill:blackwell-systems-agent-lsp-lsp-architecture": {
+      "hash": "f1800d433ad99d43",
+      "summary_zh": "一键生成代码库的结构总览，包含语言构成、包结构、入口、依赖关系和热点模块，帮你快速摸清陌生项目的整体架构。",
+      "translated_at": "2026-06-07T05:12:38.438Z"
+    },
+    "skill:blackwell-systems-agent-lsp-lsp-concurrency-audit": {
+      "hash": "8f6eaa1bd22e5463",
+      "summary_zh": "针对指定类型或文件做并发安全审查，自动梳理字段在协程、线程或异步任务中的访问情况，标出缺少同步保护的字段并生成报告，适合排查多语言项目中的数据竞争隐患。",
+      "translated_at": "2026-06-07T05:12:39.220Z"
+    },
+    "skill:blackwell-systems-agent-lsp-lsp-cross-repo": {
+      "hash": "45028b0be8ff9338",
+      "summary_zh": "跨仓库分析共享库符号的所有调用方，适合在重构公共库时摸清各消费方的使用情况，避免改动引发连锁问题。",
+      "translated_at": "2026-06-07T05:12:42.151Z"
+    },
+    "skill:blackwell-systems-agent-lsp-lsp-dead-code": {
+      "hash": "a5c314ebffb97987",
+      "summary_zh": "扫描文件里导出的符号，找出在整个项目中零引用的那些，方便清理无用代码、精简 API，或者判断哪些导出可以安全删掉。",
+      "translated_at": "2026-06-07T05:12:43.372Z"
+    },
+    "skill:blackwell-systems-agent-lsp-lsp-docs": {
+      "hash": "99744f913ca7c5b6",
+      "summary_zh": "一个三级查文档的小工具，先看悬浮提示，没有就翻离线工具链文档，再不行就直接跳到源码定义，适合处理那些悬浮信息缺失、不够用或依赖未被索引的符号。",
+      "translated_at": "2026-06-07T05:12:43.647Z"
+    },
+    "skill:blackwell-systems-agent-lsp-lsp-edit-export": {
+      "hash": "af479db830e89adb",
+      "summary_zh": "在修改导出函数、公共类型等对外接口前，先借助 LSP 找出所有调用点，避免改完才发现破坏了其他模块，适合重构公共 API 时使用。",
+      "translated_at": "2026-06-07T05:12:46.603Z"
+    },
+    "skill:blackwell-systems-agent-lsp-lsp-explore": {
+      "hash": "336af4b9ad774d83",
+      "summary_zh": "一键聚合 LSP 的悬停信息、实现、调用层级和引用，帮你快速摸清陌生代码里某个符号的来龙去脉，适合上手新项目时探索代码结构。",
+      "translated_at": "2026-06-07T05:12:48.506Z"
+    },
+    "skill:blackwell-systems-agent-lsp-lsp-edit-symbol": {
+      "hash": "f57bc03c289f6fac",
+      "summary_zh": "只需提供函数、类型或变量的名称即可直接修改，无需手动定位文件和行号，自动找到定义位置并完成替换，适合在不熟悉代码结构时快速重构。",
+      "translated_at": "2026-06-07T05:12:49.136Z"
+    },
+    "skill:blackwell-systems-agent-lsp-lsp-extract-function": {
+      "hash": "19d9544a9ecdd4d4",
+      "summary_zh": "一键把选中的代码块抽成命名函数，优先调用语言服务器的重构能力，没有时自动手动处理，还会校验变量捕获、作用域遮蔽和抽取后能否正常编译，省去手工重构的繁琐与出错。",
+      "translated_at": "2026-06-07T05:12:51.216Z"
+    },
+    "skill:blackwell-systems-agent-lsp-lsp-format-code": {
+      "hash": "4a6890c9ddb215ce",
+      "summary_zh": "调用语言服务器对整个文件或选中代码进行格式化，适合提交前统一风格，或在生成代码后整理缩进与空格。",
+      "translated_at": "2026-06-07T05:12:52.832Z"
+    },
+    "skill:blackwell-systems-agent-lsp-lsp-fix-all": {
+      "hash": "3b4366d202660093",
+      "summary_zh": "一键批量修复当前文件里语言服务器能自动处理的报错和警告，每修一处就重新收集诊断再继续，适合清理一堆 lint 问题的场景。",
+      "translated_at": "2026-06-07T05:12:53.386Z"
+    },
+    "skill:blackwell-systems-agent-lsp-lsp-generate": {
+      "hash": "ca2ff1f62c671cb4",
+      "summary_zh": "通过语言服务器一键生成代码，比如补全接口实现、生成测试骨架、补齐缺失方法或创建 mock 类型，省去手动敲模板的麻烦，适合日常写代码时快速搭好结构。",
+      "translated_at": "2026-06-07T05:12:55.934Z"
+    },
+    "skill:blackwell-systems-agent-lsp-lsp-implement": {
+      "hash": "1b7b5dca51a47a31",
+      "summary_zh": "用于查找接口或抽象类型的所有具体实现，方便在修改基类前先摸清有哪些子类型会受影响。",
+      "translated_at": "2026-06-07T05:12:57.194Z"
+    },
+    "skill:blackwell-systems-agent-lsp-lsp-impact": {
+      "hash": "3d87d6120c39f380",
+      "summary_zh": "改代码前先看看影响范围，列出某个函数、类型或方法的所有调用方、父子类型和引用数量，也能传入文件路径一次性查看导出符号的牵连情况，适合重构、删除或改签名时心里有底。",
+      "translated_at": "2026-06-07T05:12:57.333Z"
+    },
+    "skill:blackwell-systems-agent-lsp-lsp-local-symbols": {
+      "hash": "b11fda518dfcbf87",
+      "summary_zh": "在单个文件内快速定位符号的所有引用、列出文件中定义的全部符号，并查询某位置的类型信息，适合无需全工程搜索的局部代码分析。",
+      "translated_at": "2026-06-07T05:13:01.211Z"
+    },
+    "skill:blackwell-systems-agent-lsp-lsp-inspect": {
+      "hash": "abda5bb53821175a",
+      "summary_zh": "通过 LSP 对单文件、包或整个目录做代码质量审计，能批量扫描并按严重程度排序，也支持分支差异对比，覆盖死代码、错误处理、测试缺失、并发安全等多种问题，并给出修复建议，适合 PR 审查和代码库整体体检。",
+      "translated_at": "2026-06-07T05:13:01.330Z"
+    },
+    "skill:blackwell-systems-agent-lsp-lsp-onboard": {
+      "hash": "35a95166d851c01a",
+      "summary_zh": "在首次接触新项目时自动梳理代码结构，识别构建系统、测试框架、入口文件和核心架构，生成一份可供 AI 助手全程参考的项目档案，省去手动摸索的时间。",
+      "translated_at": "2026-06-07T05:13:01.532Z"
+    },
+    "skill:blackwell-systems-agent-lsp-lsp-rename": {
+      "hash": "3da50166d7d2de0b",
+      "summary_zh": "基于 LSP 的跨工作区重命名工具，分两步执行：先列出所有受影响的位置供确认，再原子化批量替换，避免重命名函数、变量等符号时漏改或误改。",
+      "translated_at": "2026-06-07T05:13:05.688Z"
+    },
+    "skill:blackwell-systems-agent-lsp-lsp-refactor": {
+      "hash": "e8c709fcfc70dd5b",
+      "summary_zh": "一站式安全重构流程，先评估影响范围、预览改动，再落盘、跑构建和相关测试，把多个零散的代码改动验证步骤串成一条可控链路，适合大型代码库里做有风险的批量修改。",
+      "translated_at": "2026-06-07T05:13:05.992Z"
+    },
+    "skill:blackwell-systems-agent-lsp-lsp-safe-edit": {
+      "hash": "f34e5fc2cdbbd662",
+      "summary_zh": "在改代码前先模拟运行一次，对比改动前后的诊断错误，只有错误数量可接受才真正写入磁盘；如果改完冒出新报错，还会顺手给出修复建议，适合在自动化编辑或 AI 改码场景下兜底防止越改越糟。",
+      "translated_at": "2026-06-07T05:13:06.877Z"
+    },
+    "skill:blackwell-systems-agent-lsp-lsp-simulate": {
+      "hash": "06afb63c785ee6ec",
+      "summary_zh": "在内存里模拟代码改动，先预演再落盘，适合做风险较高的重构、跨文件改动或在真正动手前验证编辑是否安全。",
+      "translated_at": "2026-06-07T05:13:10.239Z"
+    },
+    "skill:blackwell-systems-agent-lsp-lsp-test-correlation": {
+      "hash": "fe06c8a7213caa97",
+      "summary_zh": "编辑源码后，能精准定位到覆盖该文件的测试用例并运行，避免每次都跑整套测试，省时高效。",
+      "translated_at": "2026-06-07T05:13:10.331Z"
+    },
+    "skill:blackwell-systems-agent-lsp-lsp-understand": {
+      "hash": "41f85a9511ba2145",
+      "summary_zh": "面对陌生代码时，输入一个符号或文件就能生成完整的代码地图，呈现类型、实现、双层调用关系、引用与源码，适合快速摸清项目结构和依赖脉络。",
+      "translated_at": "2026-06-07T05:13:11.533Z"
+    },
+    "skill:blackwell-systems-agent-lsp-lsp-verify": {
+      "hash": "ef2700437b4ac1b3",
+      "summary_zh": "在代码改动后自动跑一遍语言服务诊断、编译和测试，并按严重程度排序结果，方便你提交前确认没有引入问题，适合重构或加完功能后做最后把关。",
+      "translated_at": "2026-06-07T05:13:14.772Z"
     }
   }
 }

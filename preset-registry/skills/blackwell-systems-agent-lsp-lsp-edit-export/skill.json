@@ -1,0 +1,26 @@
+{
+  "id": "blackwell-systems-agent-lsp-lsp-edit-export",
+  "name": "lsp-edit-export",
+  "description": "Safe workflow for editing exported symbols or public APIs. Use when changing a function signature, modifying a public type, or altering any symbol used outside its own package — finds all callers first so nothing breaks silently.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "blackwell-systems",
+  "install_path": ".claude/skills/lsp-edit-export/SKILL.md",
+  "source": {
+    "repo": "blackwell-systems/agent-lsp",
+    "url": "https://github.com/blackwell-systems/agent-lsp/blob/main/skills/lsp-edit-export/SKILL.md",
+    "path": "skills/lsp-edit-export/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-07T05:11:25.949Z",
+    "stars": 50,
+    "language": "Go",
+    "pushed_at": "2026-06-04T19:51:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "在修改导出函数、公共类型等对外接口前，先借助 LSP 找出所有调用点，避免改完才发现破坏了其他模块，适合重构公共 API 时使用。"
+}

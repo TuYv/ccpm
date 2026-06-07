@@ -1,0 +1,26 @@
+{
+  "id": "blackwell-systems-agent-lsp-lsp-extract-function",
+  "name": "lsp-extract-function",
+  "description": "Extract a selected code block into a named function. Primary path uses the language server's extract-function code action; falls back to manual extraction when no code action is available. Validates captured variables, scope shadowing, and compilation after extraction.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "blackwell-systems",
+  "install_path": ".claude/skills/lsp-extract-function/SKILL.md",
+  "source": {
+    "repo": "blackwell-systems/agent-lsp",
+    "url": "https://github.com/blackwell-systems/agent-lsp/blob/main/skills/lsp-extract-function/SKILL.md",
+    "path": "skills/lsp-extract-function/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-07T05:11:26.350Z",
+    "stars": 50,
+    "language": "Go",
+    "pushed_at": "2026-06-04T19:51:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一键把选中的代码块抽成命名函数，优先调用语言服务器的重构能力，没有时自动手动处理，还会校验变量捕获、作用域遮蔽和抽取后能否正常编译，省去手工重构的繁琐与出错。"
+}

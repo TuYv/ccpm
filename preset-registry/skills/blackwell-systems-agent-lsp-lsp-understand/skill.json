@@ -1,0 +1,26 @@
+{
+  "id": "blackwell-systems-agent-lsp-lsp-understand",
+  "name": "lsp-understand",
+  "description": "Deep-dive exploration of unfamiliar code — given a symbol or file, builds a complete Code Map showing type info, implementations, call hierarchy (2-level depth limit), all references, and source. Broader than lsp-explore: accepts files, synthesizes multi-symbol relationships, and produces a navigable dependency map.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "blackwell-systems",
+  "install_path": ".claude/skills/lsp-understand/SKILL.md",
+  "source": {
+    "repo": "blackwell-systems/agent-lsp",
+    "url": "https://github.com/blackwell-systems/agent-lsp/blob/main/skills/lsp-understand/SKILL.md",
+    "path": "skills/lsp-understand/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-07T05:11:28.197Z",
+    "stars": 50,
+    "language": "Go",
+    "pushed_at": "2026-06-04T19:51:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "面对陌生代码时，输入一个符号或文件就能生成完整的代码地图，呈现类型、实现、双层调用关系、引用与源码，适合快速摸清项目结构和依赖脉络。"
+}

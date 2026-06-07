@@ -1,0 +1,26 @@
+{
+  "id": "blackwell-systems-agent-lsp-lsp-test-correlation",
+  "name": "lsp-test-correlation",
+  "description": "Find and run the tests that cover a source file. Use after editing a file to discover exactly which test files and test functions need to run — without running the entire test suite.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "blackwell-systems",
+  "install_path": ".claude/skills/lsp-test-correlation/SKILL.md",
+  "source": {
+    "repo": "blackwell-systems/agent-lsp",
+    "url": "https://github.com/blackwell-systems/agent-lsp/blob/main/skills/lsp-test-correlation/SKILL.md",
+    "path": "skills/lsp-test-correlation/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-07T05:11:28.070Z",
+    "stars": 50,
+    "language": "Go",
+    "pushed_at": "2026-06-04T19:51:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "编辑源码后，能精准定位到覆盖该文件的测试用例并运行，避免每次都跑整套测试，省时高效。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "blackwell-systems-agent-lsp-lsp-format-code",
+  "name": "lsp-format-code",
+  "description": "Format a file or selection using the language server's formatter. Use before committing to apply consistent style, or after generating code to clean up indentation and spacing. Supports full-file and range-based formatting.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "blackwell-systems",
+  "install_path": ".claude/skills/lsp-format-code/SKILL.md",
+  "source": {
+    "repo": "blackwell-systems/agent-lsp",
+    "url": "https://github.com/blackwell-systems/agent-lsp/blob/main/skills/lsp-format-code/SKILL.md",
+    "path": "skills/lsp-format-code/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-07T05:11:26.626Z",
+    "stars": 50,
+    "language": "Go",
+    "pushed_at": "2026-06-04T19:51:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "调用语言服务器对整个文件或选中代码进行格式化，适合提交前统一风格，或在生成代码后整理缩进与空格。"
+}

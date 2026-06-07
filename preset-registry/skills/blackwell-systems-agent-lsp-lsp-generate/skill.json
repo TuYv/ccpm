@@ -1,0 +1,26 @@
+{
+  "id": "blackwell-systems-agent-lsp-lsp-generate",
+  "name": "lsp-generate",
+  "description": "Trigger language server code generation — implement interface stubs, generate test skeletons, add missing methods, generate mock types. Uses suggest_fixes to surface generator options and execute_command to run them.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "blackwell-systems",
+  "install_path": ".claude/skills/lsp-generate/SKILL.md",
+  "source": {
+    "repo": "blackwell-systems/agent-lsp",
+    "url": "https://github.com/blackwell-systems/agent-lsp/blob/main/skills/lsp-generate/SKILL.md",
+    "path": "skills/lsp-generate/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-07T05:11:26.754Z",
+    "stars": 50,
+    "language": "Go",
+    "pushed_at": "2026-06-04T19:51:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "通过语言服务器一键生成代码，比如补全接口实现、生成测试骨架、补齐缺失方法或创建 mock 类型，省去手动敲模板的麻烦，适合日常写代码时快速搭好结构。"
+}

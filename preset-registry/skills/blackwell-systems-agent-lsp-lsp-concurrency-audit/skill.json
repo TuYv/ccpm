@@ -1,0 +1,26 @@
+{
+  "id": "blackwell-systems-agent-lsp-lsp-concurrency-audit",
+  "name": "lsp-concurrency-audit",
+  "description": "Concurrency safety audit for a type or file. Maps all fields, traces which are accessed from concurrent contexts (goroutines, threads, async tasks), and flags fields that lack synchronization. Produces a field-level safety report. Language-agnostic across 4 concurrency families.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "blackwell-systems",
+  "install_path": ".claude/skills/lsp-concurrency-audit/SKILL.md",
+  "source": {
+    "repo": "blackwell-systems/agent-lsp",
+    "url": "https://github.com/blackwell-systems/agent-lsp/blob/main/skills/lsp-concurrency-audit/SKILL.md",
+    "path": "skills/lsp-concurrency-audit/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-07T05:11:25.413Z",
+    "stars": 50,
+    "language": "Go",
+    "pushed_at": "2026-06-04T19:51:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "针对指定类型或文件做并发安全审查，自动梳理字段在协程、线程或异步任务中的访问情况，标出缺少同步保护的字段并生成报告，适合排查多语言项目中的数据竞争隐患。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "blackwell-systems-agent-lsp-lsp-docs",
+  "name": "lsp-docs",
+  "description": "Three-tier documentation lookup for any symbol — hover → offline toolchain doc → source definition. Use when hover text is absent, insufficient, or the symbol is in an unindexed dependency.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "blackwell-systems",
+  "install_path": ".claude/skills/lsp-docs/SKILL.md",
+  "source": {
+    "repo": "blackwell-systems/agent-lsp",
+    "url": "https://github.com/blackwell-systems/agent-lsp/blob/main/skills/lsp-docs/SKILL.md",
+    "path": "skills/lsp-docs/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-07T05:11:25.812Z",
+    "stars": 50,
+    "language": "Go",
+    "pushed_at": "2026-06-04T19:51:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一个三级查文档的小工具，先看悬浮提示，没有就翻离线工具链文档，再不行就直接跳到源码定义，适合处理那些悬浮信息缺失、不够用或依赖未被索引的符号。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "blackwell-systems-agent-lsp-lsp-onboard",
+  "name": "lsp-onboard",
+  "description": "First-session project onboarding. Explores the project structure, detects build system, test runner, entry points, and key architecture patterns. Produces a structured project profile the agent can reference throughout the session.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "blackwell-systems",
+  "install_path": ".claude/skills/lsp-onboard/SKILL.md",
+  "source": {
+    "repo": "blackwell-systems/agent-lsp",
+    "url": "https://github.com/blackwell-systems/agent-lsp/blob/main/skills/lsp-onboard/SKILL.md",
+    "path": "skills/lsp-onboard/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-07T05:11:27.402Z",
+    "stars": 50,
+    "language": "Go",
+    "pushed_at": "2026-06-04T19:51:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "在首次接触新项目时自动梳理代码结构，识别构建系统、测试框架、入口文件和核心架构，生成一份可供 AI 助手全程参考的项目档案，省去手动摸索的时间。"
+}

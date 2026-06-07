@@ -1,0 +1,26 @@
+{
+  "id": "blackwell-systems-agent-lsp-lsp-verify",
+  "name": "lsp-verify",
+  "description": "Full three-layer verification after any change — LSP diagnostics + compiler build + test suite, ranked by severity. Use after completing any edit, refactor, or feature to confirm nothing is broken before committing.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "blackwell-systems",
+  "install_path": ".claude/skills/lsp-verify/SKILL.md",
+  "source": {
+    "repo": "blackwell-systems/agent-lsp",
+    "url": "https://github.com/blackwell-systems/agent-lsp/blob/main/skills/lsp-verify/SKILL.md",
+    "path": "skills/lsp-verify/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-07T05:11:28.334Z",
+    "stars": 50,
+    "language": "Go",
+    "pushed_at": "2026-06-04T19:51:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "在代码改动后自动跑一遍语言服务诊断、编译和测试，并按严重程度排序结果，方便你提交前确认没有引入问题，适合重构或加完功能后做最后把关。"
+}

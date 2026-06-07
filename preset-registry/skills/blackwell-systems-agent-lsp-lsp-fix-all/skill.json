@@ -1,0 +1,26 @@
+{
+  "id": "blackwell-systems-agent-lsp-lsp-fix-all",
+  "name": "lsp-fix-all",
+  "description": "Apply available quick-fix code actions for all current diagnostics in a file, one at a time with re-collection between each fix. Use to bulk-resolve errors and warnings the language server can fix automatically.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "blackwell-systems",
+  "install_path": ".claude/skills/lsp-fix-all/SKILL.md",
+  "source": {
+    "repo": "blackwell-systems/agent-lsp",
+    "url": "https://github.com/blackwell-systems/agent-lsp/blob/main/skills/lsp-fix-all/SKILL.md",
+    "path": "skills/lsp-fix-all/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-07T05:11:26.477Z",
+    "stars": 50,
+    "language": "Go",
+    "pushed_at": "2026-06-04T19:51:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一键批量修复当前文件里语言服务器能自动处理的报错和警告，每修一处就重新收集诊断再继续，适合清理一堆 lint 问题的场景。"
+}

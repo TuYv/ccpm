@@ -1,0 +1,26 @@
+{
+  "id": "blackwell-systems-agent-lsp-lsp-rename",
+  "name": "lsp-rename",
+  "description": "Two-phase safe rename across the entire workspace. Use when renaming any symbol, function, method, variable, type, or identifier — shows all affected sites before executing atomically via LSP. Never renames without confirmation.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "blackwell-systems",
+  "install_path": ".claude/skills/lsp-rename/SKILL.md",
+  "source": {
+    "repo": "blackwell-systems/agent-lsp",
+    "url": "https://github.com/blackwell-systems/agent-lsp/blob/main/skills/lsp-rename/SKILL.md",
+    "path": "skills/lsp-rename/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-07T05:11:27.669Z",
+    "stars": 50,
+    "language": "Go",
+    "pushed_at": "2026-06-04T19:51:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "基于 LSP 的跨工作区重命名工具，分两步执行：先列出所有受影响的位置供确认，再原子化批量替换，避免重命名函数、变量等符号时漏改或误改。"
+}

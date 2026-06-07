@@ -1,0 +1,26 @@
+{
+  "id": "blackwell-systems-agent-lsp-lsp-explore",
+  "name": "lsp-explore",
+  "description": "\"Tell me about this symbol\": hover + implementations + call hierarchy + references in one pass — for navigating unfamiliar code.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "blackwell-systems",
+  "install_path": ".claude/skills/lsp-explore/SKILL.md",
+  "source": {
+    "repo": "blackwell-systems/agent-lsp",
+    "url": "https://github.com/blackwell-systems/agent-lsp/blob/main/skills/lsp-explore/SKILL.md",
+    "path": "skills/lsp-explore/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-07T05:11:26.201Z",
+    "stars": 50,
+    "language": "Go",
+    "pushed_at": "2026-06-04T19:51:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一键聚合 LSP 的悬停信息、实现、调用层级和引用，帮你快速摸清陌生代码里某个符号的来龙去脉，适合上手新项目时探索代码结构。"
+}

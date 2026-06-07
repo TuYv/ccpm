@@ -2,7 +2,7 @@
   "id": "obra-dotfiles-mcp-cli",
   "name": "mcp-cli",
   "description": "Use MCP servers on-demand via the mcp CLI tool - discover tools, resources, and prompts without polluting context with pre-loaded MCP integrations",
-  "category": "测试调试",
+  "category": "开发编程",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/obra/dotfiles/blob/main/.claude/skills/mcp-cli/SKILL.md",
     "path": ".claude/skills/mcp-cli/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-07T00:23:24.059Z",
+    "discovered_at": "2026-06-07T05:06:07.658Z",
     "stars": 101,
     "language": "Shell",
-    "pushed_at": "2026-06-05T19:49:20Z",
+    "pushed_at": "2026-06-07T04:13:31Z",
     "license": null
   },
   "summary_zh": "一个命令行工具，按需调用 MCP 服务器上的工具、资源和提示词，避免预加载占用上下文，适合想灵活使用各种 MCP 集成又不想拖慢主对话的场景。"

@@ -1,0 +1,26 @@
+{
+  "id": "blackwell-systems-agent-lsp-lsp-cross-repo",
+  "name": "lsp-cross-repo",
+  "description": "Cross-repository analysis — find all callers of a library symbol in one or more consumer repos. Use when refactoring a shared library and need to understand how consumers use it.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "blackwell-systems",
+  "install_path": ".claude/skills/lsp-cross-repo/SKILL.md",
+  "source": {
+    "repo": "blackwell-systems/agent-lsp",
+    "url": "https://github.com/blackwell-systems/agent-lsp/blob/main/skills/lsp-cross-repo/SKILL.md",
+    "path": "skills/lsp-cross-repo/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-07T05:11:25.557Z",
+    "stars": 50,
+    "language": "Go",
+    "pushed_at": "2026-06-04T19:51:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "跨仓库分析共享库符号的所有调用方，适合在重构公共库时摸清各消费方的使用情况，避免改动引发连锁问题。"
+}
