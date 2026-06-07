@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-06-07T20:48:28.658Z",
+  "updated_at": "2026-06-07T22:27:44.905Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -15513,9 +15513,9 @@
       "translated_at": "2026-06-05T19:27:15.026Z"
     },
     "bundle:obra-dotfiles": {
-      "hash": "d120a3b041b182af",
-      "summary_zh": "这套合集围绕个人开发环境打造，一边帮你打理 dotfiles、按需调用 MCP 工具、同步 Obsidian 笔记，一边通过 roborev 系列把代码和设计评审、修复、回应串成完整闭环，让日常开发协作更顺手。",
-      "translated_at": "2026-06-05T21:12:55.451Z"
+      "hash": "43492cc6d4738b63",
+      "summary_zh": "这套合集面向个人开发环境的日常运维与代码协作，把 dotfiles 管理、屏幕回溯、端到端验证、MCP 工具调用以及围绕 roborev 的代码评审闭环串在一起，让你既能稳妥维护本机配置，又能在写代码时获得从评审到修复的连贯辅助。",
+      "translated_at": "2026-06-07T22:27:39.592Z"
     },
     "skill:jeremylongshore-claude-code-plugins-plus-skills-buzz": {
       "hash": "e424aad40238a79a",
@@ -16203,9 +16203,9 @@
       "translated_at": "2026-06-05T21:17:29.048Z"
     },
     "skill:obra-dotfiles-roborev-fix": {
-      "hash": "2a303c0f3b1ff8d8",
-      "summary_zh": "自动发现并修复 GitHub Pull Request 中未解决的代码评审意见，适合开发者快速批量关闭 review 反馈的场景。",
-      "translated_at": "2026-06-05T21:17:29.876Z"
+      "hash": "3d5765eac194e8a0",
+      "summary_zh": "一个自动修复代码评审意见的助手，适合在收到任务 ID 或被要求处理未关闭评审时使用，帮你批量定位并解决遗留问题。",
+      "translated_at": "2026-06-07T22:27:44.664Z"
     },
     "skill:obra-dotfiles-roborev-refine": {
       "hash": "0e9b72b0137ff519",
@@ -17186,6 +17186,16 @@
       "hash": "ef2700437b4ac1b3",
       "summary_zh": "在代码改动后自动跑一遍语言服务诊断、编译和测试，并按严重程度排序结果，方便你提交前确认没有引入问题，适合重构或加完功能后做最后把关。",
       "translated_at": "2026-06-07T05:13:14.772Z"
+    },
+    "skill:obra-dotfiles-chronicle": {
+      "hash": "4090643c84edc7b1",
+      "summary_zh": "可以查看用户当前屏幕以及过去几小时的操作历史，适合在用户提及最近工作却描述不清时，用来还原上下文、消除歧义，比如搞清楚他们指的是哪个应用、文档或报错。",
+      "translated_at": "2026-06-07T22:27:44.594Z"
+    },
+    "skill:obra-dotfiles-e2e-scenario-testing": {
+      "hash": "e4dcf32b6ba1928e",
+      "summary_zh": "通过编写\"场景卡片\"驱动智能体对真实运行的应用做端到端验证，覆盖 Web、CLI、TUI 等用户界面，适合单元测试难以触及的交互改动，用可证伪的断言确认功能确实跑得通。",
+      "translated_at": "2026-06-07T22:27:44.904Z"
     }
   }
 }

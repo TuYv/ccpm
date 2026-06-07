@@ -1,0 +1,26 @@
+{
+  "id": "obra-dotfiles-chronicle",
+  "name": "chronicle",
+  "description": "| Allows you to view the user's screen as well as several hours of history. Use when the user makes a reference to their recent work, for which it'd be helpful to see the screen. This skill MUST be used whenever you need to resolve ambiguity in a user request, where the user hasn't specified enough context to do the task. Examples include disambiguating the specific user/app/document/error the user is referring to.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "obra",
+  "install_path": ".claude/skills/chronicle/SKILL.md",
+  "source": {
+    "repo": "obra/dotfiles",
+    "url": "https://github.com/obra/dotfiles/blob/main/.codex/skills/chronicle/SKILL.md",
+    "path": ".codex/skills/chronicle/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-07T22:23:57.346Z",
+    "stars": 101,
+    "language": "Shell",
+    "pushed_at": "2026-06-07T22:16:45Z",
+    "license": null
+  },
+  "summary_zh": "可以查看用户当前屏幕以及过去几小时的操作历史，适合在用户提及最近工作却描述不清时，用来还原上下文、消除歧义，比如搞清楚他们指的是哪个应用、文档或报错。"
+}

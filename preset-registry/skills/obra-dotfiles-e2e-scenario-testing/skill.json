@@ -1,0 +1,26 @@
+{
+  "id": "obra-dotfiles-e2e-scenario-testing",
+  "name": "e2e-scenario-testing",
+  "description": "Use when verifying a running application end-to-end through its real interface — a web UI, a CLI, or a TUI — by writing and executing agent-run \"scenario cards\" against a freshly built instance with falsifiable assertions. Trigger on \"test it end to end\", \"prove the UI actually works\", \"write/run a scenario\", or after a change touches a user-facing surface that unit tests can't fully cover. Not for unit tests, pure code review, or API-only checks.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "obra",
+  "install_path": ".claude/skills/e2e-scenario-testing/SKILL.md",
+  "source": {
+    "repo": "obra/dotfiles",
+    "url": "https://github.com/obra/dotfiles/blob/main/.claude/skills/e2e-scenario-testing/SKILL.md",
+    "path": ".claude/skills/e2e-scenario-testing/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-07T22:23:56.509Z",
+    "stars": 101,
+    "language": "Shell",
+    "pushed_at": "2026-06-07T22:16:45Z",
+    "license": null
+  },
+  "summary_zh": "通过编写\"场景卡片\"驱动智能体对真实运行的应用做端到端验证，覆盖 Web、CLI、TUI 等用户界面，适合单元测试难以触及的交互改动，用可证伪的断言确认功能确实跑得通。"
+}

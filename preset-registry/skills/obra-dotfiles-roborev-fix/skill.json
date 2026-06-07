@@ -1,7 +1,7 @@
 {
   "id": "obra-dotfiles-roborev-fix",
   "name": "roborev-fix",
-  "description": "Use when the user asks to fix open reviews, invokes /roborev-fix, or provides job IDs; do not use when the user only pastes review findings with no request to discover or close reviews",
+  "description": "Use when the user asks to fix open reviews, invokes $roborev-fix, or provides job IDs; do not use when the user only pastes review findings with no request to discover or close reviews",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -13,14 +13,14 @@
   "install_path": ".claude/skills/roborev-fix/SKILL.md",
   "source": {
     "repo": "obra/dotfiles",
-    "url": "https://github.com/obra/dotfiles/blob/main/.claude/skills/roborev-fix/SKILL.md",
-    "path": ".claude/skills/roborev-fix/SKILL.md",
+    "url": "https://github.com/obra/dotfiles/blob/main/.codex/skills/roborev-fix/SKILL.md",
+    "path": ".codex/skills/roborev-fix/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-07T20:44:20.847Z",
+    "discovered_at": "2026-06-07T22:23:57.576Z",
     "stars": 101,
     "language": "Shell",
-    "pushed_at": "2026-06-07T04:13:31Z",
+    "pushed_at": "2026-06-07T22:16:45Z",
     "license": null
   },
-  "summary_zh": "自动发现并修复 GitHub Pull Request 中未解决的代码评审意见，适合开发者快速批量关闭 review 反馈的场景。"
+  "summary_zh": "一个自动修复代码评审意见的助手，适合在收到任务 ID 或被要求处理未关闭评审时使用，帮你批量定位并解决遗留问题。"
 }
