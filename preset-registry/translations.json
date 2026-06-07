@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-06-07T05:13:14.772Z",
+  "updated_at": "2026-06-07T08:45:34.926Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -1403,9 +1403,9 @@
       "translated_at": "2026-05-12T07:16:57.899Z"
     },
     "preset:haunchen-n8n-skills": {
-      "hash": "5ed1bac8d6cfc946",
-      "summary_zh": "一个面向 Claude 等 AI 助手的 n8n 知识包，内置 545 个节点的文档和 20 个常用模板，让 AI 帮你查节点、配参数、搭工作流，省去翻文档的时间，适合想用对话方式快速搭自动化流程的人。",
-      "translated_at": "2026-06-05T16:55:44.163Z"
+      "hash": "057dc0276c5449ab",
+      "summary_zh": "给 AI 助手装上一套 n8n 知识库，让它熟悉 545 个节点和 20 个常用模板，能直接帮你设计、查询和搭建自动化工作流，省去翻文档的时间，适合在 Claude 里玩 n8n 的人。",
+      "translated_at": "2026-06-07T08:45:34.729Z"
     },
     "preset:heygen-com-hyperframes": {
       "hash": "e1ffee0d06f6fe0c",
@@ -5353,9 +5353,9 @@
       "translated_at": "2026-05-19T21:21:46.498Z"
     },
     "skill:earthtojake-text-to-cad-cad": {
-      "hash": "9397c981a9ccf314",
-      "summary_zh": "用自然语言描述需求即可生成、修改和检查 build123d/Python 参数化模型，主打 STEP 输出，同时支持 DXF、STL、3MF、GLB 等格式导出，并能查询几何信息、测量尺寸、检查装配配合，适合做可编程 CAD 建模与自动化零件设计。",
-      "translated_at": "2026-06-05T19:23:27.172Z"
+      "hash": "fe27f841e413881e",
+      "summary_zh": "用自然语言描述需求即可生成、修改和检查 build123d 的 Python 参数化模型，主打 STEP 格式输出，同时支持装配体配合、几何测量以及 DXF、STL、3MF、GLB 等格式导出，适合需要脚本化建模的工程场景。",
+      "translated_at": "2026-06-07T08:45:34.925Z"
     },
     "skill:earthtojake-text-to-cad-sdf": {
       "hash": "50f1fdf5670c0546",
@@ -9868,9 +9868,9 @@
       "translated_at": "2026-05-20T16:11:49.097Z"
     },
     "bundle:earthtojake-text-to-cad": {
-      "hash": "1344639e39a7535e",
-      "summary_zh": "一套把自然语言转成可制造 CAD 的完整工具链，覆盖从建模、隐式/显式几何编辑、机器人语义配置，到可视化预览、切片生成 G-code，再到本地 Bambu 打印或 SendCutSend 在线下单的全流程，让用户一条思路走完从设计到成品。",
-      "translated_at": "2026-06-05T16:54:13.995Z"
+      "hash": "664f453e46ff116d",
+      "summary_zh": "这套合集面向 3D 打印与 CAD 设计的完整工作流，从建模、隐式造型到 G-code 生成、可视化预览，再到 Bambu Lab 打印机推送或 SendCutSend 下单制造，还覆盖机器人仿真所需的 SDF/SRDF 文件，帮你把想法一路落到实物或仿真环境。",
+      "translated_at": "2026-06-07T08:45:29.675Z"
     },
     "bundle:nowork-studio-toprank": {
       "hash": "1c452f1a1df02ee7",
