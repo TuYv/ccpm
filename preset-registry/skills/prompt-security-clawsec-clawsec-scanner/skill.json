@@ -1,14 +1,14 @@
 {
   "id": "prompt-security-clawsec-clawsec-scanner",
   "name": "clawsec-scanner",
-  "description": "Automated vulnerability scanner for agent platforms. Performs dependency scanning (npm audit, pip-audit), multi-database CVE lookup (OSV, NVD, GitHub Advisory), SAST analysis (Semgrep, Bandit), and agent-specific DAST hook execution testing for OpenClaw hooks.",
-  "category": "测试调试",
+  "description": "Automated vulnerability scanner for agent platforms. Performs dependency scanning (npm audit, pip-audit), multi-database CVE lookup (OSV, NVD, GitHub Advisory), SAST analysis (Semgrep, Bandit), and agent-specific static hook inspection for OpenClaw hooks.",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
     "gemini"
   ],
-  "version": "0.0.3",
+  "version": "0.0.4",
   "author": "prompt-security",
   "install_path": ".claude/skills/clawsec-scanner/SKILL.md",
   "source": {
@@ -16,11 +16,11 @@
     "url": "https://github.com/prompt-security/clawsec/blob/main/skills/clawsec-scanner/SKILL.md",
     "path": "skills/clawsec-scanner/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-07T08:43:38.508Z",
-    "stars": 1027,
+    "discovered_at": "2026-06-07T11:27:49.370Z",
+    "stars": 1028,
     "language": "JavaScript",
-    "pushed_at": "2026-06-07T08:15:22Z",
+    "pushed_at": "2026-06-07T10:06:57Z",
     "license": "AGPL-3.0"
   },
-  "summary_zh": "专为智能体平台打造的自动化漏洞扫描工具，能一站式排查依赖与代码漏洞，并针对专属Hook进行安全测试，适合需要保障Agent运行安全的开发者。"
+  "summary_zh": "一款面向智能体平台的自动化漏洞扫描工具，集成依赖检查、多源 CVE 查询和静态代码分析，还能针对 OpenClaw 钩子做专项审计，适合保障 AI Agent 项目的安全。"
 }
