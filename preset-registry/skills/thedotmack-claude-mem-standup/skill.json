@@ -1,0 +1,25 @@
+{
+  "id": "thedotmack-claude-mem-standup",
+  "name": "standup",
+  "description": "| Convene the recently-active git worktrees as named agents in a markdown group chat, have them reconcile what each changed, and converge on ONE consolidated worktree. Each branch is an agent that posts to a shared STANDUP.md (YAML front matter holds the GOAL + PROMPT; the body is the chat log), then the room agrees on a merge order and a single consolidation plan in the SUMMATION. The room is filled either by time window (past 1h / 4h / 24h / 7d / all — only worktrees active in it join, so a 40",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "thedotmack",
+  "install_path": ".claude/skills/standup/SKILL.md",
+  "source": {
+    "repo": "thedotmack/claude-mem",
+    "url": "https://github.com/thedotmack/claude-mem/blob/main/plugin/skills/standup/SKILL.md",
+    "path": "plugin/skills/standup/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-08T05:13:34.799Z",
+    "stars": 81149,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-08T01:47:20Z",
+    "license": "Apache-2.0"
+  }
+}

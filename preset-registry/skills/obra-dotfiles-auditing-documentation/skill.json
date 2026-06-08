@@ -1,0 +1,25 @@
+{
+  "id": "obra-dotfiles-auditing-documentation",
+  "name": "auditing-documentation",
+  "description": "Use when documentation may have drifted from the code, CLI, config, or API it describes — auditing docs for staleness, checking whether a doc still matches current reality, \"the docs are out of date\", before a release, or when you don't trust a doc's accuracy and want it verified and fixed.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "obra",
+  "install_path": ".claude/skills/auditing-documentation/SKILL.md",
+  "source": {
+    "repo": "obra/dotfiles",
+    "url": "https://github.com/obra/dotfiles/blob/main/.claude/skills/auditing-documentation/SKILL.md",
+    "path": ".claude/skills/auditing-documentation/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-08T05:10:15.741Z",
+    "stars": 101,
+    "language": "Shell",
+    "pushed_at": "2026-06-08T02:28:06Z",
+    "license": null
+  }
+}

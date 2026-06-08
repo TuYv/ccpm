@@ -1,0 +1,25 @@
+{
+  "id": "himself65-finance-skills-hyperliquid-reader",
+  "name": "hyperliquid-reader",
+  "description": "> Read Hyperliquid (app.hyperliquid.xyz) perp + spot market data via opencli (read-only, public info API). Use whenever the user wants Hyperliquid perpetual or spot markets, mark/oracle/mid prices, 24h change, funding rates (hourly or annualized APR), open interest, volume, the L2 order book, OHLCV candles, historical funding, or a cross-venue funding comparison (Hyperliquid vs Binance vs Bybit) for funding arbitrage. Triggers: \"Hyperliquid funding for BTC\", \"HL perp markets\", \"funding on BTC pe",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "himself65",
+  "install_path": ".claude/skills/hyperliquid-reader/SKILL.md",
+  "source": {
+    "repo": "himself65/finance-skills",
+    "url": "https://github.com/himself65/finance-skills/blob/main/plugins/data-providers/skills/hyperliquid-reader/SKILL.md",
+    "path": "plugins/data-providers/skills/hyperliquid-reader/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-08T05:11:34.538Z",
+    "stars": 2719,
+    "language": "JavaScript",
+    "pushed_at": "2026-06-08T04:15:50Z",
+    "license": "MIT"
+  }
+}
