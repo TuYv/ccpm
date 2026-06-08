@@ -1,8 +1,8 @@
 {
   "id": "asklokesh-claudeskill-loki-mode",
   "name": "loki-mode",
-  "description": "Autonomous spec-to-product system. Triggers on \"Loki Mode\". Takes a spec (PRD, GitHub issue, OpenAPI doc, etc.) to deployed product via the RARV-C closure loop, with minimal human intervention. Provider-agnostic. Requires --dangerously-skip-permissions flag.",
-  "category": "设计创意",
+  "description": "Autonomous spec-driven build system with a built-in trust layer. It does not call work done until it is verified (RARV-C closure loop, 11 quality gates, completion council, verified-completion evidence gate). Triggers on \"Loki Mode\". Takes a spec (PRD, GitHub issue, OpenAPI doc, etc.) to deployed product with minimal human intervention. Provider-agnostic. Requires --dangerously-skip-permissions flag.",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,11 @@
     "url": "https://github.com/asklokesh/claudeskill-loki-mode/blob/main/SKILL.md",
     "path": "SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-08T20:52:12.689Z",
+    "discovered_at": "2026-06-08T23:07:26.269Z",
     "stars": 965,
     "language": "Python",
-    "pushed_at": "2026-06-08T15:11:22Z",
+    "pushed_at": "2026-06-08T22:22:07Z",
     "license": null
   },
-  "summary_zh": "一个自动化交付系统，输入需求文档（PRD、GitHub issue、OpenAPI 文档等）后，通过 RARV-C 闭环流程几乎无需人工干预就能完成从规格到上线产品的全过程，支持多种模型供应商，适合想让 AI 端到端跑通开发部署的场景。"
+  "summary_zh": "一套自动化的规格驱动开发系统，输入 PRD、GitHub issue 或 OpenAPI 文档，就能在几乎无人干预下交付可部署的产品，内置多重质量校验确保每步真正完成而非只是声称完成，适合想把需求文档直接跑成上线代码的团队。"
 }

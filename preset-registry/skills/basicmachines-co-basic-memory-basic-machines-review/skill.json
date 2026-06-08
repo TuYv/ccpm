@@ -1,0 +1,26 @@
+{
+  "id": "basicmachines-co-basic-memory-basic-machines-review",
+  "name": "basic-machines-review",
+  "description": "Use when reviewing Basic Machines code for house style, architecture risk, pre-merge hardening, or whether a change fits basic-memory/basic-memory-cloud conventions.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "basicmachines-co",
+  "install_path": ".claude/skills/basic-machines-review/SKILL.md",
+  "source": {
+    "repo": "basicmachines-co/basic-memory",
+    "url": "https://github.com/basicmachines-co/basic-memory/blob/main/.agents/skills/basic-machines-review/SKILL.md",
+    "path": ".agents/skills/basic-machines-review/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-08T23:00:01.023Z",
+    "stars": 3169,
+    "language": "Python",
+    "pushed_at": "2026-06-08T22:39:39Z",
+    "license": "AGPL-3.0"
+  },
+  "summary_zh": "用于审查 Basic Machines 项目代码，检查代码风格、架构隐患、合并前的稳健性，以及改动是否符合 basic-memory 系列项目的既定规范，适合提交 PR 前把关。"
+}

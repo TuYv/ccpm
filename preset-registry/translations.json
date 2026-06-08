@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-06-08T20:54:58.889Z",
+  "updated_at": "2026-06-08T23:10:23.279Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -3688,9 +3688,9 @@
       "translated_at": "2026-05-19T20:20:51.117Z"
     },
     "skill:asklokesh-claudeskill-loki-mode": {
-      "hash": "f2071ef12b6483d0",
-      "summary_zh": "一个自动化交付系统，输入需求文档（PRD、GitHub issue、OpenAPI 文档等）后，通过 RARV-C 闭环流程几乎无需人工干预就能完成从规格到上线产品的全过程，支持多种模型供应商，适合想让 AI 端到端跑通开发部署的场景。",
-      "translated_at": "2026-06-05T16:57:01.161Z"
+      "hash": "5c73d9e53723acc6",
+      "summary_zh": "一套自动化的规格驱动开发系统，输入 PRD、GitHub issue 或 OpenAPI 文档，就能在几乎无人干预下交付可部署的产品，内置多重质量校验确保每步真正完成而非只是声称完成，适合想把需求文档直接跑成上线代码的团队。",
+      "translated_at": "2026-06-08T23:10:22.586Z"
     },
     "skill:asklokesh-claudeskill-loki-mode-checkpoint-mode": {
       "hash": "9dbd92df5178a388",
@@ -10018,9 +10018,9 @@
       "translated_at": "2026-06-07T11:29:22.781Z"
     },
     "bundle:asklokesh-claudeskill-loki-mode": {
-      "hash": "b5a9c6be11e62ed9",
-      "summary_zh": "一套面向自主软件开发的智能体合集，能把需求文档直接驱动到部署上线，过程中按节奏暂停供人工审阅，并通过提示优化提升非推理模型的执行准确度，适合追求极少人工干预的端到端研发流程。",
-      "translated_at": "2026-06-05T16:54:50.062Z"
+      "hash": "c545721136fb1c0c",
+      "summary_zh": "一套面向自主软件开发的代理框架，把需求自动推进到部署，同时通过定时复核与提示优化机制保证过程可控、产出可信，适合想放手让 AI 跑全流程又不想失去把关能力的团队。",
+      "translated_at": "2026-06-08T23:10:16.669Z"
     },
     "bundle:vercel-labs-next-skills": {
       "hash": "36c7b26c7c77aa8f",
@@ -13913,9 +13913,9 @@
       "translated_at": "2026-06-05T16:54:14.913Z"
     },
     "bundle:basicmachines-co-basic-memory": {
-      "hash": "964a70e2304b75cc",
-      "summary_zh": "把 Codex 的开发过程沉淀进 Basic Memory 知识库的一整套工作流，涵盖任务定向、决策记录、检查点保存、笔记编辑和对抗式评审，让 AI 编程助手能跨会话延续上下文、积累团队知识。",
-      "translated_at": "2026-06-05T16:54:16.910Z"
+      "hash": "f88a1d72c711421a",
+      "summary_zh": "这套合集把 Basic Memory 知识库深度接入 Codex 开发流程，让你在写代码时顺手记录决策、检查点和上下文，下次回来或换人接手都能快速恢复状态，同时还串联了跨模型代码评审和团队笔记共享，适合需要长期沉淀工程记忆的团队。",
+      "translated_at": "2026-06-08T23:10:16.913Z"
     },
     "bundle:nowork-studio-notfair": {
       "hash": "8c2b2ab778c91768",
@@ -17216,6 +17216,11 @@
       "hash": "0b31f895ba396d13",
       "summary_zh": "一套用于文生图模型的提示词模板，通过结构化 JSON 描述精确控制图中文字、品牌色和元素布局，适合制作封面图、缩略图、海报、标识等需要清晰文字和精准排版的场景。",
       "translated_at": "2026-06-08T20:54:58.889Z"
+    },
+    "skill:basicmachines-co-basic-memory-basic-machines-review": {
+      "hash": "99179ba96e3a8250",
+      "summary_zh": "用于审查 Basic Machines 项目代码，检查代码风格、架构隐患、合并前的稳健性，以及改动是否符合 basic-memory 系列项目的既定规范，适合提交 PR 前把关。",
+      "translated_at": "2026-06-08T23:10:23.279Z"
     }
   }
 }
