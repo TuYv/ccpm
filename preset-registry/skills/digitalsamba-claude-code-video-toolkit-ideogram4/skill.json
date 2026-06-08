@@ -1,0 +1,26 @@
+{
+  "id": "digitalsamba-claude-code-video-toolkit-ideogram4",
+  "name": "ideogram4",
+  "description": "Prompting patterns for Ideogram 4 text-to-image — best-in-class in-image text rendering and exact color/layout control via structured JSON captions. Use when generating images that need legible on-image text (title cards, thumbnails, logos, signage, CTAs), precise brand colors, or controlled spatial layout. Triggers include title slide image, thumbnail with text, on-image text, legible text in image, brand color palette image, bounding-box layout, Ideogram.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "digitalsamba",
+  "install_path": ".claude/skills/ideogram4/SKILL.md",
+  "source": {
+    "repo": "digitalsamba/claude-code-video-toolkit",
+    "url": "https://github.com/digitalsamba/claude-code-video-toolkit/blob/main/.claude/skills/ideogram4/SKILL.md",
+    "path": ".claude/skills/ideogram4/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-08T20:53:25.838Z",
+    "stars": 1380,
+    "language": "Python",
+    "pushed_at": "2026-06-08T19:40:32Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一套用于文生图模型的提示词模板，通过结构化 JSON 描述精确控制图中文字、品牌色和元素布局，适合制作封面图、缩略图、海报、标识等需要清晰文字和精准排版的场景。"
+}
