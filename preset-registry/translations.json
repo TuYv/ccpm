@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-06-08T10:09:28.538Z",
+  "updated_at": "2026-06-08T14:38:08.148Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -1218,9 +1218,9 @@
       "translated_at": "2026-05-12T07:08:04.686Z"
     },
     "preset:coder-claudecode-nvim": {
-      "hash": "3f47535ee64ee5af",
-      "summary_zh": "这是把Claude Code接入Neovim的插件，让你不用换到VS Code或JetBrains，就能在自己的编辑器里直接用AI辅助写代码。",
-      "translated_at": "2026-05-12T07:08:11.667Z"
+      "hash": "583f17a2da6cae04",
+      "summary_zh": "把 Anthropic 的 Claude Code 接入 Neovim，用纯 Lua 实现了和官方 VS Code、JetBrains 插件相同的 WebSocket MCP 协议，让 Neovim 用户也能在编辑器里直接用上这款 AI 编码助手。",
+      "translated_at": "2026-06-08T14:38:01.470Z"
     },
     "preset:conorbronsdon-avoid-ai-writing": {
       "hash": "5b0cb44c7cd7055f",
@@ -9663,9 +9663,9 @@
       "translated_at": "2026-05-20T00:55:00.076Z"
     },
     "bundle:thedotmack-claude-mem": {
-      "hash": "2360d4696290721d",
-      "summary_zh": "这套合集围绕 claude-mem 的持久化记忆打造完整工作流，从理解代码库、规划方案、分阶段执行到搜索历史记忆和盯 PR，让 AI agent 跨会话不丢上下文，把零散技能串成一条可复用的协作链路。",
-      "translated_at": "2026-05-21T13:48:45.819Z"
+      "hash": "43bfdb07caa1c42a",
+      "summary_zh": "这套合集围绕 Claude 代码代理的全流程协作展开，把跨会话记忆、代码库熟悉、计划制定、分阶段执行到 PR 看护和 issue 梳理串成一条龙，让 AI 代理在长期项目里能记住上下文、有条理地推进开发。",
+      "translated_at": "2026-06-08T14:37:53.472Z"
     },
     "bundle:ruvnet-claude-flow": {
       "hash": "397a8d193e80f241",
@@ -9888,9 +9888,9 @@
       "translated_at": "2026-05-20T01:04:12.386Z"
     },
     "bundle:himself65-finance-skills": {
-      "hash": "61274a87e633912e",
-      "summary_zh": "专为金融投研打造的全能工具箱，把公司估值、财报解读、市场情绪和多源数据串联整合，将繁杂信息转化为直观洞察，一站式提升投资研究与决策效率。",
-      "translated_at": "2026-05-20T01:04:20.309Z"
+      "hash": "d7d1107ec19aafd4",
+      "summary_zh": "一套面向股票与市场研究的金融分析合集，覆盖公司估值、财报前瞻与复盘、分析师预期、ETF 折溢价、舆情和地缘风险等场景，把数据抓取、计算和可视化串成一条龙，帮助投资者快速完成系统化研究。",
+      "translated_at": "2026-06-08T14:37:56.323Z"
     },
     "bundle:ericosiu-ai-marketing-skills": {
       "hash": "d51b5d32be6cd1f8",
@@ -15513,9 +15513,9 @@
       "translated_at": "2026-06-05T19:27:15.026Z"
     },
     "bundle:obra-dotfiles": {
-      "hash": "43492cc6d4738b63",
-      "summary_zh": "这套合集面向个人开发环境的日常运维与代码协作，把 dotfiles 管理、屏幕回溯、端到端验证、MCP 工具调用以及围绕 roborev 的代码评审闭环串在一起，让你既能稳妥维护本机配置，又能在写代码时获得从评审到修复的连贯辅助。",
-      "translated_at": "2026-06-07T22:27:39.592Z"
+      "hash": "799287357cfc1b07",
+      "summary_zh": "这套个人 dotfiles 合集围绕日常开发流程打造，覆盖配置管理、文档审计、端到端测试、屏幕回溯，以及一整套基于 roborev 的代码评审与修复闭环，让单人开发也能拥有自动化的工程化协作体验。",
+      "translated_at": "2026-06-08T14:37:51.388Z"
     },
     "skill:jeremylongshore-claude-code-plugins-plus-skills-buzz": {
       "hash": "e424aad40238a79a",
@@ -17196,6 +17196,21 @@
       "hash": "e4dcf32b6ba1928e",
       "summary_zh": "通过编写\"场景卡片\"驱动智能体对真实运行的应用做端到端验证，覆盖 Web、CLI、TUI 等用户界面，适合单元测试难以触及的交互改动，用可证伪的断言确认功能确实跑得通。",
       "translated_at": "2026-06-07T22:27:44.904Z"
+    },
+    "skill:himself65-finance-skills-hyperliquid-reader": {
+      "hash": "58ab4a3d3073b42b",
+      "summary_zh": "通过命令行只读查询 Hyperliquid 交易所的永续和现货行情，涵盖标记价、资金费率、持仓量、订单簿、K线等数据，还能跨平台对比 Binance、Bybit 的费率，方便做资金费套利分析。",
+      "translated_at": "2026-06-08T14:38:01.616Z"
+    },
+    "skill:obra-dotfiles-auditing-documentation": {
+      "hash": "c9ec58e37c6da343",
+      "summary_zh": "用来检查文档是否还和当前的代码、命令行、配置或 API 保持一致，适合发布前核对、怀疑文档过时或不准确时做一次系统性校验和修正。",
+      "translated_at": "2026-06-08T14:38:05.176Z"
+    },
+    "skill:thedotmack-claude-mem-standup": {
+      "hash": "419a5d22784f1cc0",
+      "summary_zh": "把最近活跃的 git worktree 当作智能体拉进一个 Markdown 群聊，让它们互相对账各自改了什么，协商出合并顺序并汇总成一个统一的 worktree，适合多分支并行开发后梳理与整合改动。",
+      "translated_at": "2026-06-08T14:38:08.148Z"
     }
   }
 }
