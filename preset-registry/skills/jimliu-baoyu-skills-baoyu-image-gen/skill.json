@@ -1,7 +1,7 @@
 {
   "id": "jimliu-baoyu-skills-baoyu-image-gen",
   "name": "baoyu-image-gen",
-  "description": "AI image generation with OpenAI GPT Image 2, Azure OpenAI, Google, OpenRouter, DashScope, Z.AI GLM-Image, MiniMax, Jimeng, Seedream and Replicate APIs. Supports text-to-image, reference images, aspect ratios, and batch generation from saved prompt files. Sequential by default; use batch parallel generation when the user already has multiple prompts or wants stable multi-image throughput. Use when user asks to generate, create, or draw images.",
+  "description": "AI image generation with OpenAI GPT Image 2, Azure OpenAI, Google, OpenRouter, DashScope, Z.AI GLM-Image, MiniMax, Jimeng, Seedream, Replicate and Agnes APIs. Supports text-to-image, reference images, aspect ratios, and batch generation from saved prompt files. Sequential by default; use batch parallel generation when the user already has multiple prompts or wants stable multi-image throughput. Use when user asks to generate, create, or draw images.",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/JimLiu/baoyu-skills/blob/main/skills/baoyu-image-gen/SKILL.md",
     "path": "skills/baoyu-image-gen/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-09T00:21:13.981Z",
-    "stars": 20930,
+    "discovered_at": "2026-06-09T04:41:43.821Z",
+    "stars": 20955,
     "language": "TypeScript",
-    "pushed_at": "2026-06-03T17:43:13Z",
+    "pushed_at": "2026-06-09T04:32:34Z",
     "license": null
-  },
-  "summary_zh": "一款命令行 AI 画图工具，整合 OpenAI、谷歌、通义、即梦等多家主流图像生成接口，支持文生图、参考图、批量出图，适合需要在多平台间切换或批量跑提示词出图的场景。"
+  }
 }
