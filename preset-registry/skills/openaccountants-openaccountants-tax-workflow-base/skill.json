@@ -2,7 +2,7 @@
   "id": "openaccountants-openaccountants-tax-workflow-base",
   "name": "tax-workflow-base",
   "description": "Workflow-only base skill for regulated-domain classification. Defines the three-state contract (clean / conservative-default-with-flag / refuse), the conservative-defaults principle, the citation discipline, the structured-question form, and the reviewer-attention output contract. Contains no tax content, no rates, no thresholds, no jurisdiction-specific rules. MUST be loaded alongside at least one content skill (e.g., classifying-tax-transactions) that supplies the actual rules and the current ",
-  "category": "文档写作",
+  "category": "自动化集成",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/openaccountants/openaccountants/blob/main/cookbook-contribution/custom_skills/tax-workflow-base/SKILL.md",
     "path": "cookbook-contribution/custom_skills/tax-workflow-base/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-09T12:28:03.499Z",
-    "stars": 171,
+    "discovered_at": "2026-06-09T15:41:50.294Z",
+    "stars": 173,
     "language": "Python",
-    "pushed_at": "2026-06-07T15:30:50Z",
+    "pushed_at": "2026-06-09T13:53:03Z",
     "license": "AGPL-3.0"
   },
   "summary_zh": "为受监管领域的分类任务提供通用工作流框架，规定了三态结果契约、保守默认原则、引用规范和结构化提问格式，本身不含任何税务规则或税率，需搭配具体内容技能一起使用，适合搭建合规审查类应用的底层骨架。"
