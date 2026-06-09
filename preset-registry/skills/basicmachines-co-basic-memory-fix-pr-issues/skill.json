@@ -1,0 +1,25 @@
+{
+  "id": "basicmachines-co-basic-memory-fix-pr-issues",
+  "name": "fix-pr-issues",
+  "description": "Use when addressing Basic Memory pull request feedback, failed checks, or BM Bossbot blockers from Codex.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "basicmachines-co",
+  "install_path": ".claude/skills/fix-pr-issues/SKILL.md",
+  "source": {
+    "repo": "basicmachines-co/basic-memory",
+    "url": "https://github.com/basicmachines-co/basic-memory/blob/main/.agents/skills/fix-pr-issues/SKILL.md",
+    "path": ".agents/skills/fix-pr-issues/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-09T22:56:21.856Z",
+    "stars": 3175,
+    "language": "Python",
+    "pushed_at": "2026-06-09T22:18:40Z",
+    "license": "AGPL-3.0"
+  }
+}

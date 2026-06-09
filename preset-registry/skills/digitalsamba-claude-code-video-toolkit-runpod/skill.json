@@ -2,7 +2,7 @@
   "id": "digitalsamba-claude-code-video-toolkit-runpod",
   "name": "runpod",
   "description": "Cloud GPU processing via RunPod serverless. Use when setting up RunPod endpoints, deploying Docker images, managing GPU resources, troubleshooting endpoint issues, or understanding costs. Covers all 5 toolkit images (qwen-edit, realesrgan, propainter, sadtalker, qwen3-tts).",
-  "category": "开发编程",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/digitalsamba/claude-code-video-toolkit/blob/main/.claude/skills/runpod/SKILL.md",
     "path": ".claude/skills/runpod/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-09T21:31:33.747Z",
-    "stars": 1402,
+    "discovered_at": "2026-06-09T23:01:02.372Z",
+    "stars": 1404,
     "language": "Python",
-    "pushed_at": "2026-06-09T21:23:10Z",
+    "pushed_at": "2026-06-09T22:17:41Z",
     "license": "MIT"
   },
   "summary_zh": "这是一个无服务器云GPU平台，能帮你免运维搞定算力调用与模型部署，特别适合不想折腾硬件、想快速低成本跑通各类音视频及图文AI应用的开发者。"

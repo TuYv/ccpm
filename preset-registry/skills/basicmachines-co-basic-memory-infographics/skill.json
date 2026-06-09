@@ -1,0 +1,25 @@
+{
+  "id": "basicmachines-co-basic-memory-infographics",
+  "name": "infographics",
+  "description": "Use when generating Basic Memory PR, changelog, release, or weekly infographics from Codex.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "basicmachines-co",
+  "install_path": ".claude/skills/infographics/SKILL.md",
+  "source": {
+    "repo": "basicmachines-co/basic-memory",
+    "url": "https://github.com/basicmachines-co/basic-memory/blob/main/.agents/skills/infographics/SKILL.md",
+    "path": ".agents/skills/infographics/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-09T22:56:21.981Z",
+    "stars": 3175,
+    "language": "Python",
+    "pushed_at": "2026-06-09T22:18:40Z",
+    "license": "AGPL-3.0"
+  }
+}

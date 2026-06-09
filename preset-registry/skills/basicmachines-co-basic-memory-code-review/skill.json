@@ -1,0 +1,25 @@
+{
+  "id": "basicmachines-co-basic-memory-code-review",
+  "name": "code-review",
+  "description": "Use when reviewing Basic Machines code for house style, architecture risk, pre-merge hardening, or whether a change fits basic-memory/basic-memory-cloud conventions.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "basicmachines-co",
+  "install_path": ".claude/skills/code-review/SKILL.md",
+  "source": {
+    "repo": "basicmachines-co/basic-memory",
+    "url": "https://github.com/basicmachines-co/basic-memory/blob/main/.agents/skills/code-review/SKILL.md",
+    "path": ".agents/skills/code-review/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-09T22:56:21.756Z",
+    "stars": 3175,
+    "language": "Python",
+    "pushed_at": "2026-06-09T22:18:40Z",
+    "license": "AGPL-3.0"
+  }
+}

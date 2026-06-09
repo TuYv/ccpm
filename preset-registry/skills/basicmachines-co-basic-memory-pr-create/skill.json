@@ -1,0 +1,25 @@
+{
+  "id": "basicmachines-co-basic-memory-pr-create",
+  "name": "pr-create",
+  "description": "Use when creating or updating a Basic Memory pull request from Codex with BM Bossbot merge-gate monitoring.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "basicmachines-co",
+  "install_path": ".claude/skills/pr-create/SKILL.md",
+  "source": {
+    "repo": "basicmachines-co/basic-memory",
+    "url": "https://github.com/basicmachines-co/basic-memory/blob/main/.agents/skills/pr-create/SKILL.md",
+    "path": ".agents/skills/pr-create/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-09T22:56:22.232Z",
+    "stars": 3175,
+    "language": "Python",
+    "pushed_at": "2026-06-09T22:18:40Z",
+    "license": "AGPL-3.0"
+  }
+}
