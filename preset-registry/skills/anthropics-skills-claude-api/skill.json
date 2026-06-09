@@ -1,7 +1,7 @@
 {
   "id": "anthropics-skills-claude-api",
   "name": "claude-api",
-  "description": "|- Reference for the Claude API / Anthropic SDK — model ids, pricing, params, streaming, tool use, MCP, agents, caching, token counting, model migration. TRIGGER — read BEFORE opening the target file; don't skip because it \"looks like a one-liner\" — whenever: the prompt names Claude/Anthropic in any form (Claude, Anthropic, Opus, Sonnet, Haiku, `anthropic`, `@anthropic-ai`, `claude-*`, `us.anthropic.*`, `[1m]`); the user asks about an LLM (pricing/model choice/limits/caching) — never answer from",
+  "description": "|- Reference for the Claude API / Anthropic SDK — model ids, pricing, params, streaming, tool use, MCP, agents, caching, token counting, model migration. TRIGGER — read BEFORE opening the target file; don't skip because it \"looks like a one-liner\" — whenever: the prompt names Claude/Anthropic in any form (Claude, Anthropic, Fable, Opus, Sonnet, Haiku, `anthropic`, `@anthropic-ai`, `claude-*`, `us.anthropic.*`, `[1m]`); the user asks about an LLM (pricing/model choice/limits/caching) — never answ",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/anthropics/skills/blob/main/skills/claude-api/SKILL.md",
     "path": "skills/claude-api/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-09T15:34:42.773Z",
-    "stars": 148460,
+    "discovered_at": "2026-06-09T18:27:02.800Z",
+    "stars": 148509,
     "language": "Python",
-    "pushed_at": "2026-06-07T20:21:35Z",
+    "pushed_at": "2026-06-09T17:34:57Z",
     "license": null
-  },
-  "summary_zh": "一份面向开发者的 Claude / Anthropic API 速查手册，覆盖模型 ID、价格、参数、流式输出、工具调用、缓存和迁移等细节，避免凭记忆瞎答或翻文档。"
+  }
 }
