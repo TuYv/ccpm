@@ -1,8 +1,9 @@
 ---
 name: stata-skill
-version: 1.0.1
 description: |
   A packaged Stata Runner skill via official MCP-for-Stata server including stata_do, ado_package_install, help, read_log and get_data_info tools. Use it when (1) need to execute Stata do-file; (2) missing ado-packages; (3) find code error caused by syntax in Stata; (4) want to read smcl and text format log file with rich text output; (5) first encounter a data file and want to understand its structure and content.
+metadata:
+  version: "1.0.8"
 ---
 
 # MCP-for-Stata
@@ -68,19 +69,35 @@ When the user asks to run Stata commands, perform regression analysis, generate 
 
 ### 3. Install Third-Party Packages → `ado_package_install`
 
-When the user mentions a Stata command does not exist or needs to install packages like outreg2, reghdfe, estout, etc., call `ado_package_install`.
+Treat `ado_package_install` as a high-risk, opt-in tool. Do not call it merely
+because a command is missing. First identify the exact package and source, then
+ask the user to approve that package and source. The MCP tool is available only
+when the operator starts the MCP server with the unsafe profile.
 
 **Key parameters:**
 - `package`: package name. For GitHub source, use "user/repo" format
 - `source`: "ssc" (default), "github", or "net"
-- `is_replace`: defaults to true, forces reinstallation
-- `package_source_from`: required only when source="net", specifies directory or URL
+- `is_replace`: defaults to false
+- `package_source_from`: required only when source="net", specifies a validated HTTPS URL
+
+**Authorization and validation:** SSC and net package names may contain only
+ASCII letters and numbers. GitHub repositories must use `owner/repository`
+format and match the exact repository allowlist.
+Unknown sources, local paths, IP hosts, credentials, queries, fragments, and
+non-default ports are rejected. The MCP client will ask the user to approve the
+exact request during the tool call; do not attempt to bypass or pre-answer it.
+The Python API does not require caller confirmation. The CLI prompts unless
+`-y` or `--yes` is supplied.
 
 **Examples:**
-- `ado_package_install("outreg2")` — install from SSC
-- `ado_package_install("SepineTam/TexIV", source="github")` — install from GitHub
+- `ado_package_install("outreg2")` — request approval to install an SSC package
+- `ado_package_install("SepineTam/TexIV", source="github")` — request approval to install an allowlisted GitHub repository
 
-**Note:** SSC installations can be slow. If the package may already be installed, ask the user whether to skip.
+**Note:** GitHub repository contents receive no security protection. Inspect the
+repository before installation. The tool never installs the GitHub helper.
+Successful installs automatically attempt `help(..., replace=true)` for the
+likely command name; if the package exposes other commands, refresh those
+commands explicitly.
 
 ---
 
@@ -90,13 +107,15 @@ When the user asks about the syntax, options, or usage of a Stata command, or wa
 
 **Key parameter:**
 - `cmd`: Stata command name (e.g., "regress", "describe", "xtset")
+- `replace`: defaults to false. When true, bypasses cached help and refreshes it from Stata
 
-**Return value:** Stata help text string. If cache is hit, prefix shows "Cached result for {cmd}: ..."
+**Return value:** Stata help text string. A cache hit is prefixed with
+`Saved result for {cmd}` or `Cached result for {cmd}`.
 
 **Notes:**
 - **Unix only** (macOS/Linux), not available on Windows
-- Caching is enabled by default (in-memory + disk at `~/.statamcp/help/`)
-- If cached content seems incorrect, set `STATA_MCP__CACHE_HELP=false` to force a refresh
+- Enabled project and global caches are considered, and the newest non-empty result is returned
+- If cached content seems stale or incorrect, call `help(cmd=..., replace=true)` to refresh it
 
 ---
 
@@ -130,7 +149,7 @@ This tool is disabled by default and only available when `STATA_MCP__ENABLE_WRIT
 
 1. `get_data_info` — explore data structure
 2. Write do-file based on data characteristics (Write tool)
-3. `ado_package_install` — install third-party packages if needed
+3. Ask for approval and use `ado_package_install`; inspect GitHub repositories first
 4. `stata_do` — execute the do-file
 5. `read_log` — inspect execution results if needed
 
@@ -142,10 +161,11 @@ This tool is disabled by default and only available when `STATA_MCP__ENABLE_WRIT
 
 ### Scenario C: Install and Use a New Package
 
-1. `ado_package_install("pkg_name")` — install
-2. `help pkg_name` — check package usage
-3. Use the package commands in the do-file
-4. `stata_do` — execute
+1. Confirm the exact package and source with the user
+2. `ado_package_install("pkgname")` — request approval and install the package
+3. `help(cmd="pkg_name", replace=true)` — explicitly refresh and check package usage
+4. Use the package commands in the do-file
+5. `stata_do` — execute
 
 ## Edge Cases
 
@@ -169,4 +189,3 @@ This tool is disabled by default and only available when `STATA_MCP__ENABLE_WRIT
 | Documentation | [docs.statamcp.com](https://docs.statamcp.com) | Full user documentation |
 | Homepage | [statamcp.com](https://statamcp.com) | Project homepage |
 | Source Code | [github.com/sepinetam/mcp-for-stata](https://github.com/sepinetam/mcp-for-stata) | GitHub repository |
-
