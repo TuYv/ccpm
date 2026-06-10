@@ -1,7 +1,7 @@
 {
   "id": "ykdojo-claude-code-tips-reddit-fetch",
   "name": "reddit-fetch",
-  "description": "Fetch content from Reddit using Gemini CLI or curl JSON API fallback. Use when accessing Reddit URLs, researching topics on Reddit, or when Reddit returns 403/blocked errors.",
+  "description": "Fetch content from Reddit using the curl JSON API. Use when accessing Reddit URLs, researching topics on Reddit, or when Reddit returns 403/blocked errors.",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/ykdojo/claude-code-tips/blob/main/skills/reddit-fetch/SKILL.md",
     "path": "skills/reddit-fetch/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-09T22:55:19.231Z",
-    "stars": 8662,
-    "language": "JavaScript",
-    "pushed_at": "2026-05-06T06:52:29Z",
+    "discovered_at": "2026-06-10T01:36:27.398Z",
+    "stars": 8660,
+    "language": "HTML",
+    "pushed_at": "2026-06-10T01:24:08Z",
     "license": null
-  },
-  "summary_zh": "这是一款抓取Reddit内容的工具，能帮你绕过403或访问被屏蔽的限制，非常适合需要直接读取Reddit链接或研究相关话题的场景。"
+  }
 }
