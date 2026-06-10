@@ -1,0 +1,25 @@
+{
+  "id": "earthtojake-text-to-cad-dxf",
+  "name": "dxf",
+  "description": "Generate, regenerate, and validate 2D DXF drawings from Python ezdxf sources. Use for DXF files, gen_dxf() sources, 2D profiles, outlines, templates, gaskets, panels, flat patterns, laser/plasma/waterjet cut layouts, and 2D drawing exports of CAD geometry.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "earthtojake",
+  "install_path": ".claude/skills/dxf/SKILL.md",
+  "source": {
+    "repo": "earthtojake/text-to-cad",
+    "url": "https://github.com/earthtojake/text-to-cad/blob/main/skills/dxf/SKILL.md",
+    "path": "skills/dxf/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-10T11:12:50.748Z",
+    "stars": 5924,
+    "language": "JavaScript",
+    "pushed_at": "2026-06-10T10:57:25Z",
+    "license": "MIT"
+  }
+}
