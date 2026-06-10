@@ -1,8 +1,8 @@
 {
   "id": "product-on-purpose-pm-skills-deliver-user-stories",
   "name": "deliver-user-stories",
-  "description": "Generates user stories with clear acceptance criteria from product requirements or feature descriptions. Use when breaking down features for sprint planning, writing tickets, or communicating requirements to engineering.",
-  "category": "文档写作",
+  "description": "Generates user stories in the standard persona, action, benefit story format from product requirements or feature descriptions. Use when breaking a feature into stories for sprint planning, writing tickets, or communicating scope to engineering. For testable Given/When/Then acceptance criteria on a story, use deliver-acceptance-criteria; for boundary and failure scenarios, use deliver-edge-cases.",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,10 @@
     "url": "https://github.com/product-on-purpose/pm-skills/blob/main/skills/deliver-user-stories/SKILL.md",
     "path": "skills/deliver-user-stories/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-10T21:00:13.226Z",
+    "discovered_at": "2026-06-10T23:08:23.229Z",
     "stars": 287,
     "language": "JavaScript",
-    "pushed_at": "2026-06-10T20:42:10Z",
+    "pushed_at": "2026-06-10T22:39:01Z",
     "license": "Apache-2.0"
-  },
-  "summary_zh": "它能把产品需求或功能描述直接转化为带验收标准的用户故事，方便你在冲刺规划拆任务、写工单或给开发提需求时使用。"
+  }
 }

@@ -1,7 +1,7 @@
 {
   "id": "product-on-purpose-pm-skills-deliver-edge-cases",
   "name": "deliver-edge-cases",
-  "description": "Documents edge cases, error states, boundary conditions, and recovery paths for a feature. Use during specification to ensure comprehensive coverage, or during QA planning to identify test scenarios.",
+  "description": "Documents edge cases, error states, boundary conditions, and recovery paths for a feature. Use during specification to ensure comprehensive failure coverage, or during QA planning to identify test scenarios. Distinct from deliver-acceptance-criteria, which writes story-level Given/When/Then checks; this skill produces the systematic edge-case catalog for the whole feature.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/product-on-purpose/pm-skills/blob/main/skills/deliver-edge-cases/SKILL.md",
     "path": "skills/deliver-edge-cases/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-10T21:00:12.578Z",
+    "discovered_at": "2026-06-10T23:08:22.908Z",
     "stars": 287,
     "language": "JavaScript",
-    "pushed_at": "2026-06-10T20:42:10Z",
+    "pushed_at": "2026-06-10T22:39:01Z",
     "license": "Apache-2.0"
-  },
-  "summary_zh": "专门记录功能异常状态、边缘情况和恢复路径的文档工具。它能在写需求时帮你确保逻辑严密无遗漏，也能在测试规划时帮QA快速揪出潜在测试场景。"
+  }
 }

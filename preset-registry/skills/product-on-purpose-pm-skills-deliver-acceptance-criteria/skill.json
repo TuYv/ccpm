@@ -1,7 +1,7 @@
 {
   "id": "product-on-purpose-pm-skills-deliver-acceptance-criteria",
   "name": "deliver-acceptance-criteria",
-  "description": "Generates structured Given/When/Then acceptance criteria for a user story or feature slice. Use when translating product requirements into testable scenarios that cover the happy path, edge cases, error states, and non-functional expectations for engineering handoff and QA.",
+  "description": "Generates structured Given/When/Then acceptance criteria for a user story or feature slice, covering the happy path, key failure scenarios, and non-functional expectations in testable form. Use when turning requirements into verifiable scenarios for engineering handoff and QA sign-off. For a dedicated catalog of boundary conditions, error states, and recovery paths across a feature, use deliver-edge-cases; to write the stories themselves, use deliver-user-stories.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/product-on-purpose/pm-skills/blob/main/skills/deliver-acceptance-criteria/SKILL.md",
     "path": "skills/deliver-acceptance-criteria/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-10T21:00:12.457Z",
+    "discovered_at": "2026-06-10T23:08:22.814Z",
     "stars": 287,
     "language": "JavaScript",
-    "pushed_at": "2026-06-10T20:42:10Z",
+    "pushed_at": "2026-06-10T22:39:01Z",
     "license": "Apache-2.0"
-  },
-  "summary_zh": "帮你把产品需求自动转成结构化的Given/When/Then验收标准，覆盖主流程、边界和异常情况。适合开发与测试交接时，快速把需求拆解成清晰可测的场景。"
+  }
 }

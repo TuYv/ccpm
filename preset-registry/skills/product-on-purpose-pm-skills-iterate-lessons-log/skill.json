@@ -1,7 +1,7 @@
 {
   "id": "product-on-purpose-pm-skills-iterate-lessons-log",
   "name": "iterate-lessons-log",
-  "description": "Creates a structured lessons learned entry for organizational memory. Use after projects, incidents, or significant learnings to capture knowledge for future teams and initiatives.",
+  "description": "Creates a structured lessons learned entry for organizational memory. Use after an incident, a completed project, or a significant learning to record knowledge for future teams and initiatives. Distinct from iterate-retrospective, which facilitates the team ceremony; this skill writes the durable lessons entry that outlives it.",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/product-on-purpose/pm-skills/blob/main/skills/iterate-lessons-log/SKILL.md",
     "path": "skills/iterate-lessons-log/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-10T21:00:16.203Z",
+    "discovered_at": "2026-06-10T23:08:24.938Z",
     "stars": 287,
     "language": "JavaScript",
-    "pushed_at": "2026-06-10T20:42:10Z",
+    "pushed_at": "2026-06-10T22:39:01Z",
     "license": "Apache-2.0"
-  },
-  "summary_zh": "帮团队生成结构化经验记录的工具。适合在项目结束、事故复盘或有重要收获时，把经验沉淀下来留给未来的团队，帮大家少走弯路。"
+  }
 }

@@ -1,7 +1,7 @@
 {
   "id": "product-on-purpose-pm-skills-define-hypothesis",
   "name": "define-hypothesis",
-  "description": "Defines a testable hypothesis with clear success metrics and validation approach. Use when forming assumptions to test, designing experiments, or aligning team on what success looks like.",
+  "description": "Defines a testable hypothesis with clear success metrics and a validation approach. Use when forming assumptions to test or aligning a team on what success looks like, before any experiment is designed. To design the A/B test or experiment that will validate the hypothesis, use measure-experiment-design.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/product-on-purpose/pm-skills/blob/main/skills/define-hypothesis/SKILL.md",
     "path": "skills/define-hypothesis/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-10T21:00:11.629Z",
+    "discovered_at": "2026-06-10T23:08:22.271Z",
     "stars": 287,
     "language": "JavaScript",
-    "pushed_at": "2026-06-10T20:42:10Z",
+    "pushed_at": "2026-06-10T22:39:01Z",
     "license": "Apache-2.0"
-  },
-  "summary_zh": "帮你制定可测试的假设，并明确成功指标与验证方法。适合在提出待测假设、设计实验，或需要团队对齐成功标准时使用。"
+  }
 }

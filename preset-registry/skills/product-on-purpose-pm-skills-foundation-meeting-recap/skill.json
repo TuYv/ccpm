@@ -1,7 +1,7 @@
 {
   "id": "product-on-purpose-pm-skills-foundation-meeting-recap",
   "name": "foundation-meeting-recap",
-  "description": "Produces a topic-segmented post-meeting summary for attendees with decisions highlighted and actions captured inline per topic (plus a consolidated action view at the end). Auto-populates topic skeleton from a sibling meeting-agenda when available and reconciles planned vs. actual topics. Accepts transcripts from Zoom, Meet, Otter, Fireflies, Krisp MCP, or manual notes; runs on variable-quality input without blocking.",
+  "description": "Produces a topic-segmented post-meeting summary for attendees with decisions highlighted and actions captured inline per topic (plus a consolidated action view at the end). Auto-populates topic skeleton from a sibling meeting-agenda when available and reconciles planned vs. actual topics. Accepts transcripts from Zoom, Meet, Otter, Fireflies, Krisp MCP, or manual notes; runs on variable-quality input without blocking. For synthesizing user research interviews across participants, use discover-in",
   "category": "文档写作",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/product-on-purpose/pm-skills/blob/main/skills/foundation-meeting-recap/SKILL.md",
     "path": "skills/foundation-meeting-recap/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-10T21:00:15.301Z",
+    "discovered_at": "2026-06-10T23:08:24.430Z",
     "stars": 287,
     "language": "JavaScript",
-    "pushed_at": "2026-06-10T20:42:10Z",
+    "pushed_at": "2026-06-10T22:39:01Z",
     "license": "Apache-2.0"
-  },
-  "summary_zh": "这是一个会后纪要生成工具，能把杂乱录音或笔记按主题分段，提炼决策和待办，并与原定议程对比。适合需要从长会中快速抓取结论、跟进后续行动的职场人，告别低效整理。"
+  }
 }
