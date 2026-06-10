@@ -1,7 +1,7 @@
 {
   "id": "prompt-security-clawsec-openclaw-traffic-guardian",
   "name": "openclaw-traffic-guardian",
-  "description": "OpenClaw runtime traffic monitoring baseline for opt-in HTTP/HTTPS proxy inspection, egress detection, and inbound injection detection.",
+  "description": "OpenClaw runtime traffic monitoring baseline for opt-in HTTP/HTTPS proxy inspection, egress detection, inbound injection detection, and social-account policy review.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/prompt-security/clawsec/blob/main/skills/openclaw-traffic-guardian/SKILL.md",
     "path": "skills/openclaw-traffic-guardian/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-10T11:15:39.560Z",
+    "discovered_at": "2026-06-10T14:48:53.631Z",
     "stars": 1031,
     "language": "JavaScript",
-    "pushed_at": "2026-06-10T10:24:34Z",
+    "pushed_at": "2026-06-10T14:24:29Z",
     "license": "AGPL-3.0"
-  },
-  "summary_zh": "这是一个运行时流量监控工具，能帮你审查代理流量并拦截异常出站与入站攻击，适合需要严格把控网络进出安全的场景。"
+  }
 }
