@@ -1,0 +1,25 @@
+{
+  "id": "wondelai-skills-cold-start-problem",
+  "name": "cold-start-problem",
+  "description": "Start and scale networked products using Andrew Chen''s \"The Cold Start Problem\" framework for network effects. Use when the user mentions \"network effects\", \"chicken and egg\", \"cold start\", \"two-sided marketplace\", \"atomic network\", \"hard side\", \"liquidity\", \"critical mass\", \"invite-only launch\", or \"come for the tool stay for the network\". Also trigger when launching a marketplace, social, or collaboration product that is worthless without other users, deciding launch sequencing and seeding ta",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "wondelai",
+  "install_path": ".claude/skills/cold-start-problem/SKILL.md",
+  "source": {
+    "repo": "wondelai/skills",
+    "url": "https://github.com/wondelai/skills/blob/main/cold-start-problem/SKILL.md",
+    "path": "cold-start-problem/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-11T12:01:31.397Z",
+    "stars": 1265,
+    "language": "Shell",
+    "pushed_at": "2026-06-11T10:39:10Z",
+    "license": "MIT"
+  }
+}
