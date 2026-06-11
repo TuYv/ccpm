@@ -1,0 +1,25 @@
+{
+  "id": "specstoryai-getspecstory-lore",
+  "name": "lore",
+  "description": "SpecStory Lore - mine your SpecStory coding histories (any agent - Claude Code, Codex, Cursor, Gemini, and more) into a persistent corpus, surface your reproducible workflows with corroborated evidence, and interactively forge the chosen ones into skills installed across all your agent harnesses. Use when the user wants to turn past AI coding sessions into reusable skills, asks \"what could I make into a skill\", \"mine my lore\", \"forge skills from my history\", or points at a .specstory/history dir",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "specstoryai",
+  "install_path": ".claude/skills/lore/SKILL.md",
+  "source": {
+    "repo": "specstoryai/getspecstory",
+    "url": "https://github.com/specstoryai/getspecstory/blob/dev/lore/SKILL.md",
+    "path": "lore/SKILL.md",
+    "branch": "dev",
+    "discovered_at": "2026-06-11T19:55:55.676Z",
+    "stars": 1234,
+    "language": "Go",
+    "pushed_at": "2026-06-11T19:17:54Z",
+    "license": "Apache-2.0"
+  }
+}
