@@ -1,0 +1,25 @@
+{
+  "id": "yusufkaraaslan-skill-seekers-jupyter-kw",
+  "name": "golden-jupyter-kw",
+  "description": "Use when testing the golden_jupyter_kw golden build",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "yusufkaraaslan",
+  "install_path": ".claude/skills/jupyter_kw/SKILL.md",
+  "source": {
+    "repo": "yusufkaraaslan/Skill_Seekers",
+    "url": "https://github.com/yusufkaraaslan/Skill_Seekers/blob/development/tests/golden/phase2/jupyter_kw/SKILL.md",
+    "path": "tests/golden/phase2/jupyter_kw/SKILL.md",
+    "branch": "development",
+    "discovered_at": "2026-06-11T22:22:02.144Z",
+    "stars": 14054,
+    "language": "Python",
+    "pushed_at": "2026-06-11T21:20:13Z",
+    "license": "MIT"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "id": "sethgammon-citadel-research",
   "name": "research",
-  "description": ">- Focused research investigations. Converts questions into structured findings with confidence levels and source citations. Does not make decisions — produces information that informs the next step.",
+  "description": ">- Focused research investigations. Converts questions into structured findings with confidence levels and source citations. Single agent by default; with --parallel (or when the question decomposes into 3+ independent angles) it spawns scout agents whose findings are compressed into a unified brief. Does not make decisions; produces information that informs the next step.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/SethGammon/Citadel/blob/main/skills/research/SKILL.md",
     "path": "skills/research/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-11T19:53:13.161Z",
+    "discovered_at": "2026-06-11T22:23:48.493Z",
     "stars": 602,
     "language": "JavaScript",
-    "pushed_at": "2026-06-11T18:11:08Z",
+    "pushed_at": "2026-06-11T21:49:00Z",
     "license": "MIT"
-  },
-  "summary_zh": "这款深度调研工具能把问题转化为带来源和可信度的结构化结论，它不替你做决定，只提供客观信息辅助下一步，适合需要精准资料支撑决策的场景。"
+  }
 }

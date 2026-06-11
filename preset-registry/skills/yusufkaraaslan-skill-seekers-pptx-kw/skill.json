@@ -1,0 +1,25 @@
+{
+  "id": "yusufkaraaslan-skill-seekers-pptx-kw",
+  "name": "golden-pptx-kw",
+  "description": "Use when testing keyword categorization",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "yusufkaraaslan",
+  "install_path": ".claude/skills/pptx_kw/SKILL.md",
+  "source": {
+    "repo": "yusufkaraaslan/Skill_Seekers",
+    "url": "https://github.com/yusufkaraaslan/Skill_Seekers/blob/development/tests/golden/phase2/pptx_kw/SKILL.md",
+    "path": "tests/golden/phase2/pptx_kw/SKILL.md",
+    "branch": "development",
+    "discovered_at": "2026-06-11T22:22:03.111Z",
+    "stars": 14054,
+    "language": "Python",
+    "pushed_at": "2026-06-11T21:20:13Z",
+    "license": "MIT"
+  }
+}

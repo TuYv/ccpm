@@ -1,0 +1,25 @@
+{
+  "id": "yusufkaraaslan-skill-seekers-pdf-chapters",
+  "name": "golden-pdf-ch",
+  "description": "Use when testing chapter categorization",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "yusufkaraaslan",
+  "install_path": ".claude/skills/pdf_chapters/SKILL.md",
+  "source": {
+    "repo": "yusufkaraaslan/Skill_Seekers",
+    "url": "https://github.com/yusufkaraaslan/Skill_Seekers/blob/development/tests/golden/phase2/pdf_chapters/SKILL.md",
+    "path": "tests/golden/phase2/pdf_chapters/SKILL.md",
+    "branch": "development",
+    "discovered_at": "2026-06-11T22:22:02.773Z",
+    "stars": 14054,
+    "language": "Python",
+    "pushed_at": "2026-06-11T21:20:13Z",
+    "license": "MIT"
+  }
+}

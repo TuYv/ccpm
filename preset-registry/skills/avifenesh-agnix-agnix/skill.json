@@ -1,7 +1,7 @@
 {
   "id": "avifenesh-agnix-agnix",
   "name": "agnix",
-  "description": "Use when user asks to 'lint agent configs', 'validate skills', 'check CLAUDE.md', 'validate hooks', 'lint MCP'. Validates agent configuration files against 422 rules.",
+  "description": "Use when user asks to 'lint agent configs', 'validate skills', 'check CLAUDE.md', 'validate hooks', 'lint MCP'. Validates agent configuration files against 423 rules.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/avifenesh/agnix/blob/main/skills/agnix/SKILL.md",
     "path": "skills/agnix/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-11T19:57:23.413Z",
+    "discovered_at": "2026-06-11T22:27:45.080Z",
     "stars": 282,
     "language": "Rust",
-    "pushed_at": "2026-06-10T19:39:42Z",
+    "pushed_at": "2026-06-11T22:07:51Z",
     "license": "Apache-2.0"
-  },
-  "summary_zh": "用 422 条规则检查智能体配置、技能定义、CLAUDE.md、钩子和 MCP 等文件是否规范，适合需要统一校验 AI Agent 配置质量的团队。"
+  }
 }

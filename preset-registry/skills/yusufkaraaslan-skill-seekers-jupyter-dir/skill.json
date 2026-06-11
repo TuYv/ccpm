@@ -1,0 +1,25 @@
+{
+  "id": "yusufkaraaslan-skill-seekers-jupyter-dir",
+  "name": "golden-jupyter-dir",
+  "description": "Use when testing the golden_jupyter_dir golden build",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "yusufkaraaslan",
+  "install_path": ".claude/skills/jupyter_dir/SKILL.md",
+  "source": {
+    "repo": "yusufkaraaslan/Skill_Seekers",
+    "url": "https://github.com/yusufkaraaslan/Skill_Seekers/blob/development/tests/golden/phase2/jupyter_dir/SKILL.md",
+    "path": "tests/golden/phase2/jupyter_dir/SKILL.md",
+    "branch": "development",
+    "discovered_at": "2026-06-11T22:22:02.043Z",
+    "stars": 14054,
+    "language": "Python",
+    "pushed_at": "2026-06-11T21:20:13Z",
+    "license": "MIT"
+  }
+}
