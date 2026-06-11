@@ -1,7 +1,7 @@
 {
   "id": "neolabhq-context-engineering-kit-implement-task",
   "name": "implement-task",
-  "description": "Implement a task with automated LLM-as-Judge verification for critical steps",
+  "description": "Implement a task with automated LLM-as-Judge verification per step",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/NeoLabHQ/context-engineering-kit/blob/master/plugins/sdd/skills/implement-task/SKILL.md",
     "path": "plugins/sdd/skills/implement-task/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-06-10T23:03:51.923Z",
+    "discovered_at": "2026-06-11T01:45:57.820Z",
     "stars": 1090,
     "language": "TypeScript",
-    "pushed_at": "2026-06-09T00:20:47Z",
+    "pushed_at": "2026-06-11T00:03:09Z",
     "license": "GPL-3.0"
-  },
-  "summary_zh": "它能帮你执行任务，并在关键节点自动调用大模型当裁判做验证。解决复杂流程中缺乏自动把关的问题，适合需要大模型实时审查中间结果的工作流。"
+  }
 }

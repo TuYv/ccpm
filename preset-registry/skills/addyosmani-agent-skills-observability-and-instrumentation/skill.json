@@ -1,0 +1,25 @@
+{
+  "id": "addyosmani-agent-skills-observability-and-instrumentation",
+  "name": "observability-and-instrumentation",
+  "description": "Instruments code so production behavior is visible and diagnosable. Use when adding logging, metrics, tracing, or alerting. Use when shipping any feature that runs in production and you need evidence it works. Use when production issues are reported but you can't tell what happened from the available data.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "addyosmani",
+  "install_path": ".claude/skills/observability-and-instrumentation/SKILL.md",
+  "source": {
+    "repo": "addyosmani/agent-skills",
+    "url": "https://github.com/addyosmani/agent-skills/blob/main/skills/observability-and-instrumentation/SKILL.md",
+    "path": "skills/observability-and-instrumentation/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-11T01:47:14.917Z",
+    "stars": 51904,
+    "language": "Shell",
+    "pushed_at": "2026-06-11T01:40:56Z",
+    "license": "MIT"
+  }
+}
