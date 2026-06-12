@@ -1,7 +1,7 @@
 {
   "id": "alirezarezvani-claude-skills-boardroom",
   "name": "boardroom",
-  "description": "/cs:boardroom <brief> — 6-phase multi-role deliberation across the C-suite with Phase 2 isolation, critic pre-screen, and synthesis. Outputs a board memo.",
+  "description": "/cs:boardroom <brief> — 6-phase multi-role deliberation across the C-suite with Phase 2 isolation, critic pre-screen, and synthesis. Outputs a board memo. Use when a decision spans multiple executive domains — e.g. a pricing change touching finance, positioning, and product, or a raise-vs-cut runway call.",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/boardroom/SKILL.md",
     "path": ".gemini/skills/boardroom/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-12T05:13:10.899Z",
-    "stars": 17862,
+    "discovered_at": "2026-06-12T09:23:10.406Z",
+    "stars": 17878,
     "language": "Python",
-    "pushed_at": "2026-06-11T18:24:32Z",
+    "pushed_at": "2026-06-12T05:59:36Z",
     "license": "MIT"
-  },
-  "summary_zh": "它能模拟高管团队进行多角色讨论，从不同视角深入分析商业议题，并直接输出专业的董事会备忘录，非常适合用来做商业决策评估和战略规划。"
+  }
 }

@@ -1,7 +1,7 @@
 {
   "id": "alirezarezvani-claude-skills-caio-review",
   "name": "caio-review",
-  "description": "/cs:caio-review <plan> — Eval-demanding Chief AI Officer interrogation of any plan that involves AI: model selection, risk classification, cost economics, or AI hiring.",
+  "description": "/cs:caio-review <plan> — Eval-demanding Chief AI Officer interrogation of any plan that involves AI: model selection, risk classification, cost economics, or AI hiring. Use when shipping an AI feature without an eval set, choosing between API, fine-tune, and self-hosted, or classifying a use case under the EU AI Act.",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/caio-review/SKILL.md",
     "path": ".gemini/skills/caio-review/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-12T05:13:12.833Z",
-    "stars": 17862,
+    "discovered_at": "2026-06-12T09:23:11.937Z",
+    "stars": 17878,
     "language": "Python",
-    "pushed_at": "2026-06-11T18:24:32Z",
+    "pushed_at": "2026-06-12T05:59:36Z",
     "license": "MIT"
-  },
-  "summary_zh": "这是一个模拟严苛首席AI官的审查工具。它能在你推进AI项目前，对方案进行全方位的灵魂拷问，帮你提前排查技术和商业风险，避免盲目投入踩坑。"
+  }
 }

@@ -1,7 +1,7 @@
 {
   "id": "alirezarezvani-claude-skills-c-level-skills",
-  "name": "c-level-advisor",
-  "description": "10 C-level advisory agent skills and plugins for Claude Code, Codex, Gemini CLI, Cursor, OpenClaw. CEO, CTO, COO, CPO, CMO, CFO, CRO, CISO, CHRO, Executive Mentor. Multi-role board meetings, strategy routing, structured recommendations. For founders needing executive-level decision support.",
+  "name": "c-level-skills",
+  "description": "Index and router for the C-level advisory bundle: 33 skills covering 14 C-suite roles, orchestration, cross-cutting capabilities, and culture. Use when exploring what the c-level-advisor bundle contains, deciding which advisor skill fits a question, or finding the entry points (cs-onboard interview, chief-of-staff routing, board-meeting protocol).",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/c-level-skills/SKILL.md",
     "path": ".gemini/skills/c-level-skills/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-12T05:13:12.623Z",
-    "stars": 17862,
+    "discovered_at": "2026-06-12T09:23:11.797Z",
+    "stars": 17878,
     "language": "Python",
-    "pushed_at": "2026-06-11T18:24:32Z",
+    "pushed_at": "2026-06-12T05:59:36Z",
     "license": "MIT"
-  },
-  "summary_zh": "给AI编程工具加的高管顾问插件，内置十个C级角色，能模拟董事会开会并给出结构化战略建议，专帮创始人解决缺乏高管视角的决策痛点。"
+  }
 }

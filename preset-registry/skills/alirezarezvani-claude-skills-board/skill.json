@@ -1,7 +1,7 @@
 {
   "id": "alirezarezvani-claude-skills-board",
   "name": "board",
-  "description": "Read, write, and browse the AgentHub message board for agent coordination.",
+  "description": "Read, write, and browse the AgentHub message board for agent coordination. Use when the user runs /hub:board or asks to post, read, or inspect coordination messages between competing AgentHub agents.",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/board/SKILL.md",
     "path": ".gemini/skills/board/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-12T05:13:10.748Z",
-    "stars": 17862,
+    "discovered_at": "2026-06-12T09:23:10.260Z",
+    "stars": 17878,
     "language": "Python",
-    "pushed_at": "2026-06-11T18:24:32Z",
+    "pushed_at": "2026-06-12T05:59:36Z",
     "license": "MIT"
-  },
-  "summary_zh": "这是一个供智能体交流的留言板，能解决多智能体间的沟通与协作问题，适合需要多个智能体协同完成任务的场景。"
+  }
 }

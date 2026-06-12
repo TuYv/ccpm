@@ -1,7 +1,7 @@
 {
   "id": "alirezarezvani-claude-skills-apple-hig-expert",
   "name": "apple-hig-expert",
-  "description": "Expert guidance on Apple Human Interface Guidelines (HIG). Covers iOS, macOS, and visionOS with 2026 Liquid Glass aesthetics and accessibility-first design.",
+  "description": "Audits and designs iOS/macOS/watchOS/visionOS interfaces against the Apple Human Interface Guidelines, including the Liquid Glass design language (announced WWDC25, shipped with iOS 26/macOS Tahoe, Sept 2025). Use when reviewing an Apple-platform mockup or app for HIG compliance, checking contrast or tap-target sizes, or designing native-feeling Apple UI (e.g., 'audit my iOS app against the HIG', 'is this text readable on Liquid Glass?').",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/apple-hig-expert/SKILL.md",
     "path": ".gemini/skills/apple-hig-expert/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-12T05:13:09.171Z",
-    "stars": 17862,
+    "discovered_at": "2026-06-12T09:23:08.682Z",
+    "stars": 17878,
     "language": "Python",
-    "pushed_at": "2026-06-11T18:24:32Z",
+    "pushed_at": "2026-06-12T05:59:36Z",
     "license": "MIT"
-  },
-  "summary_zh": "这是一份苹果人机界面设计的专家级指南，帮你快速搞懂最新的液态玻璃美学和无障碍规范，轻松打造符合苹果原生体验的应用。"
+  }
 }

@@ -1,7 +1,7 @@
 {
   "id": "alirezarezvani-claude-skills-cfo-review",
   "name": "cfo-review",
-  "description": "/cs:cfo-review <plan> — Numerate-skeptic interrogation of any plan that touches money. Unit economics, runway, dilution, capital allocation.",
+  "description": "/cs:cfo-review <plan> — Numerate-skeptic interrogation of any plan that touches money. Unit economics, runway, dilution, capital allocation. Use when a plan commits meaningful spend — e.g. a hiring wave, a fundraise decision, or a new channel budget.",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/cfo-review/SKILL.md",
     "path": ".gemini/skills/cfo-review/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-12T05:13:14.617Z",
-    "stars": 17862,
+    "discovered_at": "2026-06-12T09:23:13.483Z",
+    "stars": 17878,
     "language": "Python",
-    "pushed_at": "2026-06-11T18:24:32Z",
+    "pushed_at": "2026-06-12T05:59:36Z",
     "license": "MIT"
-  },
-  "summary_zh": "这是个扮演严苛CFO的审查助手，专门对涉及资金的商业计划进行挑刺式数据拷问。适合创业者在敲定规划前深扒财务隐患，避免盲目决策。"
+  }
 }

@@ -1,7 +1,7 @@
 {
   "id": "alirezarezvani-claude-skills-changelog-generator",
   "name": "changelog-generator",
-  "description": "Produce consistent, auditable release notes from Conventional Commits. Separates commit parsing, semantic-bump logic, and changelog rendering for automated releases with editorial control. Use when cutting a release, generating CHANGELOG.md from git history, or automating release notes in CI.",
+  "description": "Produce consistent, auditable release notes from Conventional Commits. Separates commit parsing, semantic-bump logic, and changelog rendering for automated releases with editorial control. Use when cutting a release, generating CHANGELOG.md from git history, computing the next semantic version from commits, automating release notes in CI, or planning a hotfix/rollback. Examples: 'generate the changelog for v1.4.0', 'what version bump do these commits require', 'we need an emergency hotfix proces",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/changelog-generator/SKILL.md",
     "path": ".gemini/skills/changelog-generator/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-12T05:13:15.083Z",
-    "stars": 17862,
+    "discovered_at": "2026-06-12T09:23:13.923Z",
+    "stars": 17878,
     "language": "Python",
-    "pushed_at": "2026-06-11T18:24:32Z",
+    "pushed_at": "2026-06-12T05:59:36Z",
     "license": "MIT"
-  },
-  "summary_zh": "这是一款基于约定式提交生成更新日志的工具，让你在自动化发版时也能把控内容。适合发新版本、把Git历史转成CHANGELOG文件，或在CI中自动生成发版说明。"
+  }
 }

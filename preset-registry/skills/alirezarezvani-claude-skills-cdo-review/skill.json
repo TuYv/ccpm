@@ -1,7 +1,7 @@
 {
   "id": "alirezarezvani-claude-skills-cdo-review",
   "name": "cdo-review",
-  "description": "/cs:cdo-review <plan> — Decision-driven Chief Data Officer interrogation of any plan that touches training data, data architecture, data productization, or data team hiring.",
+  "description": "/cs:cdo-review <plan> — Decision-driven Chief Data Officer interrogation of any plan that touches training data, data architecture, data productization, or data team hiring. Use when validating training-data rights before model work, choosing warehouse vs lakehouse vs mesh, or valuing data assets for productization or M&A.",
   "category": "数据分析",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/cdo-review/SKILL.md",
     "path": ".gemini/skills/cdo-review/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-12T05:13:14.137Z",
-    "stars": 17862,
+    "discovered_at": "2026-06-12T09:23:13.009Z",
+    "stars": 17878,
     "language": "Python",
-    "pushed_at": "2026-06-11T18:24:32Z",
+    "pushed_at": "2026-06-12T05:59:36Z",
     "license": "MIT"
-  },
-  "summary_zh": "这是一个模拟首席数据官视角的审查助手，能对涉及训练数据、架构、产品化或团队招聘的方案进行深度盘问，帮你发现逻辑漏洞，确保数据决策严谨可靠。"
+  }
 }

@@ -1,7 +1,7 @@
 {
   "id": "alirezarezvani-claude-skills-agent-designer",
   "name": "agent-designer",
-  "description": "Use when the user asks to design multi-agent systems, create agent architectures, define agent communication patterns, or build autonomous agent workflows.",
+  "description": "Use when the user asks to design a multi-agent system, pick an orchestration pattern (supervisor/swarm/pipeline), generate tool schemas for agents, or evaluate agent execution logs for cost, latency, and failure bottlenecks. Examples: 'design an agent architecture for research automation', 'generate Anthropic tool schemas from these tool descriptions', 'analyze these agent run logs for bottlenecks'. NOT for Claude Code workflow files (use workflow-builder) or single-agent prompt design (use agen",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/agent-designer/SKILL.md",
     "path": ".gemini/skills/agent-designer/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-12T05:13:07.056Z",
-    "stars": 17862,
+    "discovered_at": "2026-06-12T09:23:06.785Z",
+    "stars": 17878,
     "language": "Python",
-    "pushed_at": "2026-06-11T18:24:32Z",
+    "pushed_at": "2026-06-12T05:59:36Z",
     "license": "MIT"
-  },
-  "summary_zh": "这是一个帮你设计多智能体系统的工具，专治多个智能体协同工作时架构怎么搭、怎么通信以及工作流怎么跑的难题。"
+  }
 }

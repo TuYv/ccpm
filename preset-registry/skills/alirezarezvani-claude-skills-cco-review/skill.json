@@ -1,7 +1,7 @@
 {
   "id": "alirezarezvani-claude-skills-cco-review",
   "name": "cco-review",
-  "description": "/cs:cco-review <plan> — Retention-obsessed Chief Customer Officer interrogation of any plan that touches customer retention, segmentation, CS team sizing, or CS team hiring.",
+  "description": "/cs:cco-review <plan> — Retention-obsessed Chief Customer Officer interrogation of any plan that touches customer retention, segmentation, CS team sizing, or CS team hiring. Use when gross retention is slipping, before approving CSM headcount, or when deciding which customer segments to keep or fire.",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/cco-review/SKILL.md",
     "path": ".gemini/skills/cco-review/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-12T05:13:14.003Z",
-    "stars": 17862,
+    "discovered_at": "2026-06-12T09:23:12.856Z",
+    "stars": 17878,
     "language": "Python",
-    "pushed_at": "2026-06-11T18:24:32Z",
+    "pushed_at": "2026-06-12T05:59:36Z",
     "license": "MIT"
-  },
-  "summary_zh": "它模拟极度关注留存率的CCO来审查方案，适合在制定客户留存、分层或客服团队规模与招聘计划时使用，通过灵魂拷问帮你提前排雷。"
+  }
 }
