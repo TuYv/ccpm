@@ -2,7 +2,7 @@
   "id": "sethgammon-citadel-session-handoff",
   "name": "session-handoff",
   "description": ">- Synthesizes the current session into a structured HANDOFF block for context transfer between sessions. Captures what was built, decisions made, and unresolved items.",
-  "category": "设计创意",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/SethGammon/Citadel/blob/main/skills/session-handoff/SKILL.md",
     "path": "skills/session-handoff/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-12T16:36:21.132Z",
+    "discovered_at": "2026-06-12T19:34:36.056Z",
     "stars": 604,
     "language": "JavaScript",
-    "pushed_at": "2026-06-11T22:56:28Z",
+    "pushed_at": "2026-06-12T18:15:56Z",
     "license": "MIT"
   },
   "summary_zh": "它能把当前会话提炼成结构化交接文档，记录工作进度、决策和待办，解决跨会话切换时上下文丢失的问题，适合需要无缝传递工作进度的场景。"

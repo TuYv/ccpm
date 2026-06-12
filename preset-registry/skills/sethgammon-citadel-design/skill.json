@@ -2,7 +2,7 @@
   "id": "sethgammon-citadel-design",
   "name": "design",
   "description": ">- Generates and maintains a design manifest for visual consistency. In existing projects, reads current styles and documents the design language. In new projects, asks a few questions and generates a starter manifest. The post-edit hook reads the manifest and flags deviations.",
-  "category": "设计创意",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/SethGammon/Citadel/blob/main/skills/design/SKILL.md",
     "path": "skills/design/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-12T16:36:18.566Z",
+    "discovered_at": "2026-06-12T19:34:31.265Z",
     "stars": 604,
     "language": "JavaScript",
-    "pushed_at": "2026-06-11T22:56:28Z",
+    "pushed_at": "2026-06-12T18:15:56Z",
     "license": "MIT"
   },
   "summary_zh": "一款保障视觉一致性的设计规范工具，适合新老项目统一视觉语言。它能自动生成并维护规范，帮你把好样式关，防止设计在迭代中跑偏。"

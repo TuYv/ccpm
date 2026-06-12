@@ -2,7 +2,7 @@
   "id": "sethgammon-citadel-dashboard",
   "name": "dashboard",
   "description": ">- Real-time harness observability dashboard. Reads campaigns, fleet sessions, telemetry, and pending queues to present a snapshot of harness state at a glance. Invoked by /dashboard, /do status, or phrases like \"what's happening\" and \"show activity\".",
-  "category": "设计创意",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/SethGammon/Citadel/blob/main/skills/dashboard/SKILL.md",
     "path": "skills/dashboard/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-12T16:36:18.440Z",
+    "discovered_at": "2026-06-12T19:34:31.076Z",
     "stars": 604,
     "language": "JavaScript",
-    "pushed_at": "2026-06-11T22:56:28Z",
+    "pushed_at": "2026-06-12T18:15:56Z",
     "license": "MIT"
   },
   "summary_zh": "这是一款实时监控面板，能整合底层运行数据让你一眼看清框架当前状态，解决信息分散难把控的问题，适合随时快速掌握全局进度。"
