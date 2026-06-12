@@ -1,0 +1,25 @@
+{
+  "id": "ganyuanran-aegis-subagent-driven-development",
+  "name": "subagent-driven-development",
+  "description": "Use when executing implementation plans with independent tasks in the current session",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "GanyuanRan",
+  "install_path": ".claude/skills/subagent-driven-development/SKILL.md",
+  "source": {
+    "repo": "GanyuanRan/Aegis",
+    "url": "https://github.com/GanyuanRan/Aegis/blob/main/skills/subagent-driven-development/SKILL.md",
+    "path": "skills/subagent-driven-development/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-12T22:13:05.800Z",
+    "stars": 506,
+    "language": "Shell",
+    "pushed_at": "2026-06-11T08:50:17Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "ganyuanran-aegis-anti-entropy-governance",
+  "name": "anti-entropy-governance",
+  "description": "Use when retiring old logic, collapsing duplicate owners, removing fallbacks, or touching schema, persistence, or source-of-truth boundaries while deciding whether to delete old paths, retain compatibility, or stop for confirmation.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "GanyuanRan",
+  "install_path": ".claude/skills/anti-entropy-governance/SKILL.md",
+  "source": {
+    "repo": "GanyuanRan/Aegis",
+    "url": "https://github.com/GanyuanRan/Aegis/blob/main/skills/anti-entropy-governance/SKILL.md",
+    "path": "skills/anti-entropy-governance/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-12T22:13:04.353Z",
+    "stars": 506,
+    "language": "Shell",
+    "pushed_at": "2026-06-11T08:50:17Z",
+    "license": "MIT"
+  }
+}

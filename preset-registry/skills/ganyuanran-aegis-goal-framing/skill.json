@@ -1,0 +1,25 @@
+{
+  "id": "ganyuanran-aegis-goal-framing",
+  "name": "goal-framing",
+  "description": "Use when the user explicitly sets an Aegis goal with /aegis-goal, Aegis goal:, or asks to define goal, success evidence, stop condition, or task boundaries before work.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "GanyuanRan",
+  "install_path": ".claude/skills/goal-framing/SKILL.md",
+  "source": {
+    "repo": "GanyuanRan/Aegis",
+    "url": "https://github.com/GanyuanRan/Aegis/blob/main/skills/goal-framing/SKILL.md",
+    "path": "skills/goal-framing/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-12T22:13:05.231Z",
+    "stars": 506,
+    "language": "Shell",
+    "pushed_at": "2026-06-11T08:50:17Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "ganyuanran-aegis-verification-before-completion",
+  "name": "verification-before-completion",
+  "description": "Use when about to claim work is complete, fixed, passing, verified, release-ready, or ready to commit, merge, publish, or hand off.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "GanyuanRan",
+  "install_path": ".claude/skills/verification-before-completion/SKILL.md",
+  "source": {
+    "repo": "GanyuanRan/Aegis",
+    "url": "https://github.com/GanyuanRan/Aegis/blob/main/skills/verification-before-completion/SKILL.md",
+    "path": "skills/verification-before-completion/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-12T22:13:06.467Z",
+    "stars": 506,
+    "language": "Shell",
+    "pushed_at": "2026-06-11T08:50:17Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "ganyuanran-aegis-test-driven-development",
+  "name": "test-driven-development",
+  "description": "Use when strict TDD is explicitly requested, or when an approved atomic implementation task has already chosen TDD Route strict.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "GanyuanRan",
+  "install_path": ".claude/skills/test-driven-development/SKILL.md",
+  "source": {
+    "repo": "GanyuanRan/Aegis",
+    "url": "https://github.com/GanyuanRan/Aegis/blob/main/skills/test-driven-development/SKILL.md",
+    "path": "skills/test-driven-development/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-12T22:13:06.015Z",
+    "stars": 506,
+    "language": "Shell",
+    "pushed_at": "2026-06-11T08:50:17Z",
+    "license": "MIT"
+  }
+}

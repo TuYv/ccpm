@@ -1,0 +1,25 @@
+{
+  "id": "ganyuanran-aegis-receiving-code-review",
+  "name": "receiving-code-review",
+  "description": "Use when receiving code review feedback before implementing suggestions, especially when feedback is unclear, risky, disputed, or technically questionable.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "GanyuanRan",
+  "install_path": ".claude/skills/receiving-code-review/SKILL.md",
+  "source": {
+    "repo": "GanyuanRan/Aegis",
+    "url": "https://github.com/GanyuanRan/Aegis/blob/main/skills/receiving-code-review/SKILL.md",
+    "path": "skills/receiving-code-review/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-12T22:13:05.456Z",
+    "stars": 506,
+    "language": "Shell",
+    "pushed_at": "2026-06-11T08:50:17Z",
+    "license": "MIT"
+  }
+}

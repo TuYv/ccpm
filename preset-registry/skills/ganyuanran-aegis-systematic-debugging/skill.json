@@ -1,0 +1,25 @@
+{
+  "id": "ganyuanran-aegis-systematic-debugging",
+  "name": "systematic-debugging",
+  "description": "Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "GanyuanRan",
+  "install_path": ".claude/skills/systematic-debugging/SKILL.md",
+  "source": {
+    "repo": "GanyuanRan/Aegis",
+    "url": "https://github.com/GanyuanRan/Aegis/blob/main/skills/systematic-debugging/SKILL.md",
+    "path": "skills/systematic-debugging/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-12T22:13:05.906Z",
+    "stars": 506,
+    "language": "Shell",
+    "pushed_at": "2026-06-11T08:50:17Z",
+    "license": "MIT"
+  }
+}

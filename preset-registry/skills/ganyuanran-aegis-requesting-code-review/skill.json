@@ -1,0 +1,25 @@
+{
+  "id": "ganyuanran-aegis-requesting-code-review",
+  "name": "requesting-code-review",
+  "description": "Use when explicitly requesting an independent code review, after subagent-driven implementation slices, before merging high-risk work, or when verification finds evidence, baseline, architecture, compatibility, or retirement uncertainty that needs reviewer scrutiny.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "GanyuanRan",
+  "install_path": ".claude/skills/requesting-code-review/SKILL.md",
+  "source": {
+    "repo": "GanyuanRan/Aegis",
+    "url": "https://github.com/GanyuanRan/Aegis/blob/main/skills/requesting-code-review/SKILL.md",
+    "path": "skills/requesting-code-review/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-12T22:13:05.683Z",
+    "stars": 506,
+    "language": "Shell",
+    "pushed_at": "2026-06-11T08:50:17Z",
+    "license": "MIT"
+  }
+}

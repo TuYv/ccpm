@@ -1,0 +1,25 @@
+{
+  "id": "ganyuanran-aegis-communicating-concisely",
+  "name": "communicating-concisely",
+  "description": "Use when the user asks for caveman mode, fewer tokens, brief responses, compressed communication, or otherwise explicitly requests a much shorter answer.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "GanyuanRan",
+  "install_path": ".claude/skills/communicating-concisely/SKILL.md",
+  "source": {
+    "repo": "GanyuanRan/Aegis",
+    "url": "https://github.com/GanyuanRan/Aegis/blob/main/skills/communicating-concisely/SKILL.md",
+    "path": "skills/communicating-concisely/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-12T22:13:04.563Z",
+    "stars": 506,
+    "language": "Shell",
+    "pushed_at": "2026-06-11T08:50:17Z",
+    "license": "MIT"
+  }
+}

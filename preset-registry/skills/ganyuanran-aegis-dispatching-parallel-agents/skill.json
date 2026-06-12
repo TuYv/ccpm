@@ -1,0 +1,25 @@
+{
+  "id": "ganyuanran-aegis-dispatching-parallel-agents",
+  "name": "dispatching-parallel-agents",
+  "description": "Use when facing 2+ independent tasks that can be worked on without shared state or sequential dependencies",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "GanyuanRan",
+  "install_path": ".claude/skills/dispatching-parallel-agents/SKILL.md",
+  "source": {
+    "repo": "GanyuanRan/Aegis",
+    "url": "https://github.com/GanyuanRan/Aegis/blob/main/skills/dispatching-parallel-agents/SKILL.md",
+    "path": "skills/dispatching-parallel-agents/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-12T22:13:04.663Z",
+    "stars": 506,
+    "language": "Shell",
+    "pushed_at": "2026-06-11T08:50:17Z",
+    "license": "MIT"
+  }
+}

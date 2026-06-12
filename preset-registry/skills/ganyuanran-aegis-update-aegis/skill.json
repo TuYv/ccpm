@@ -1,0 +1,25 @@
+{
+  "id": "ganyuanran-aegis-update-aegis",
+  "name": "update-aegis",
+  "description": "Use when the user says `aegis:update`, asks to update or upgrade an installed Aegis method-pack, wants the latest Aegis version, or asks whether Aegis is current on this host.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "GanyuanRan",
+  "install_path": ".claude/skills/update-aegis/SKILL.md",
+  "source": {
+    "repo": "GanyuanRan/Aegis",
+    "url": "https://github.com/GanyuanRan/Aegis/blob/main/skills/update-aegis/SKILL.md",
+    "path": "skills/update-aegis/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-12T22:13:06.137Z",
+    "stars": 506,
+    "language": "Shell",
+    "pushed_at": "2026-06-11T08:50:17Z",
+    "license": "MIT"
+  }
+}
