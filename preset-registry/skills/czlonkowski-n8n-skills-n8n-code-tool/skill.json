@@ -1,0 +1,25 @@
+{
+  "id": "czlonkowski-n8n-skills-n8n-code-tool",
+  "name": "n8n-code-tool",
+  "description": "Write JavaScript or Python for the n8n Custom Code Tool (@n8n/n8n-nodes-langchain.toolCode) — the AI-agent-callable tool, NOT the workflow Code node. Use when building a Code Tool attached to an AI Agent, writing code that an LLM will invoke, parsing the `query` input, returning a string result, defining an input schema for structured arguments (specifyInputSchema, jsonSchemaExample, DynamicStructuredTool), or troubleshooting errors like \"Wrong output type returned\", \"No execution data available",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "czlonkowski",
+  "install_path": ".claude/skills/n8n-code-tool/SKILL.md",
+  "source": {
+    "repo": "czlonkowski/n8n-skills",
+    "url": "https://github.com/czlonkowski/n8n-skills/blob/main/skills/n8n-code-tool/SKILL.md",
+    "path": "skills/n8n-code-tool/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-12T12:37:07.490Z",
+    "stars": 5392,
+    "language": "Shell",
+    "pushed_at": "2026-06-12T10:43:05Z",
+    "license": "MIT"
+  }
+}

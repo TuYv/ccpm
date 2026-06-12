@@ -34,6 +34,7 @@ return processed;
 3. **CRITICAL**: Must return `[{json: {...}}]` format
 4. **CRITICAL**: Webhook data is under `$json.body` (not `$json` directly)
 5. **Built-ins available**: $helpers.httpRequest() (no auth), DateTime (Luxon), $jmespath(). **Not available**: $helpers.httpRequestWithAuthentication, $env (when N8N_BLOCK_ENV_ACCESS_IN_NODE=true), require() (unless allowlisted)
+6. **Instance-allowlisted libraries**: Self-hosted instances can allowlist modules via `N8N_RUNNERS_ALLOWED_BUILT_IN_MODULES` and `N8N_RUNNERS_ALLOWED_EXTERNAL_MODULES` (legacy: `NODE_FUNCTION_ALLOW_BUILTIN` / `NODE_FUNCTION_ALLOW_EXTERNAL`). If the user says their instance allows specific modules (e.g. `axios`, `lodash`, `crypto`), use them via `require()` — don't refuse. If unsure, ask or default to built-ins only.
 
 ---
 

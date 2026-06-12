@@ -324,7 +324,9 @@ return [{"data": value}]  # Should be {"json": value}
 
 ## Critical Limitation: No External Libraries
 
-**MOST IMPORTANT PYTHON LIMITATION**: Cannot import external packages
+**MOST IMPORTANT PYTHON LIMITATION**: Cannot import external packages on default installs.
+
+> **Self-hosted exception**: external package availability depends entirely on the instance's Python runner configuration. If the user states their self-hosted instance has specific packages available in the Python runner environment, use them — don't refuse. When unsure, ask or write standard-library-only code.
 
 ### What's NOT Available
 
