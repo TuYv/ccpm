@@ -147,6 +147,20 @@ return JSON.stringify({
 
 The LLM parses JSON reliably and can pick the fields it needs to present to the user.
 
+### Error handling: the agent reads your failures
+
+Errors don't just stop the workflow — they go back to the LLM, which usually corrects its call and retries. Use that:
+
+```javascript
+// Option A: throw — n8n surfaces the message to the agent
+if (!isFinite(price)) throw new Error('price must be a number, e.g. 439900');
+
+// Option B: return an error string — agent reads it like any tool result
+if (!isFinite(price)) return JSON.stringify({ error: 'price must be a number, e.g. 439900' });
+```
+
+Either way, write error messages **for the LLM**: state what was wrong and what a valid call looks like. A bare `throw new Error('invalid input')` wastes the retry; an instructive message usually fixes the next call.
+
 ---
 
 ## Tool Name and Description
