@@ -1,7 +1,7 @@
 {
   "id": "ryoppippi-ccusage-testing",
   "name": "testing",
-  "description": "Guides ccusage Rust and Vitest tests. Use when adding or fixing cargo tests, CLI snapshots, Claude model pricing, LiteLLM compatibility, Vitest tests, or fixture-backed tests.",
+  "description": "Guides ccusage Rust and Node tests. Use when adding or fixing cargo tests, Node test files, CLI snapshots, Claude model pricing, LiteLLM compatibility, or fixture-backed tests.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/ryoppippi/ccusage/blob/main/.agents/skills/testing/SKILL.md",
     "path": ".agents/skills/testing/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-13T08:47:47.536Z",
-    "stars": 16108,
+    "discovered_at": "2026-06-13T11:37:22.477Z",
+    "stars": 16116,
     "language": "Rust",
-    "pushed_at": "2026-06-13T07:31:25Z",
+    "pushed_at": "2026-06-13T11:29:10Z",
     "license": null
-  },
-  "summary_zh": "一份测试编写指南，专门指导如何为相关项目补充或修复 Rust、Vitest 单元测试、CLI 快照、模型定价及 LiteLLM 兼容性等场景的测试用例。"
+  }
 }

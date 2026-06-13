@@ -1,0 +1,25 @@
+{
+  "id": "ryoppippi-ccusage-nushell",
+  "name": "nushell",
+  "description": "Guides ccusage Nushell scripts. Use when adding, editing, formatting, or validating .nu scripts, Nix shebangs, GitHub Actions script calls, or just recipes that invoke Nushell.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ryoppippi",
+  "install_path": ".claude/skills/nushell/SKILL.md",
+  "source": {
+    "repo": "ryoppippi/ccusage",
+    "url": "https://github.com/ryoppippi/ccusage/blob/main/.agents/skills/nushell/SKILL.md",
+    "path": ".agents/skills/nushell/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-13T11:37:20.802Z",
+    "stars": 16116,
+    "language": "Rust",
+    "pushed_at": "2026-06-13T11:29:10Z",
+    "license": null
+  }
+}
