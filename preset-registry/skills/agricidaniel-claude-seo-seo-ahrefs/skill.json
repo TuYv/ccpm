@@ -1,8 +1,8 @@
 {
   "id": "agricidaniel-claude-seo-seo-ahrefs",
   "name": "seo-ahrefs",
-  "description": "Ahrefs API analyst (extension). Reads referring domains, backlinks, organic keywords, and content explorer data via the official @ahrefs/mcp server. Pairs with seo-backlinks for multi-source confidence weighting.",
-  "category": "测试调试",
+  "description": "Ahrefs API analyst (extension). Reads referring domains, backlinks, organic keywords, and content explorer data via the official @ahrefs/mcp@0.0.11 server. Pairs with seo-backlinks for multi-source confidence weighting.",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,10 @@
     "url": "https://github.com/AgriciDaniel/claude-seo/blob/main/extensions/ahrefs/skills/seo-ahrefs/SKILL.md",
     "path": "extensions/ahrefs/skills/seo-ahrefs/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-12T22:08:23.791Z",
-    "stars": 8767,
+    "discovered_at": "2026-06-12T23:55:09.554Z",
+    "stars": 8771,
     "language": "Python",
-    "pushed_at": "2026-06-12T13:59:16Z",
+    "pushed_at": "2026-06-12T22:19:37Z",
     "license": "MIT"
-  },
-  "summary_zh": "调用官方 Ahrefs MCP 接口获取外链、推荐域名、自然关键词等数据，方便做 SEO 分析；可与 seo-backlinks 搭配，从多个数据源交叉验证结果。"
+  }
 }
