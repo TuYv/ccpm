@@ -1,0 +1,25 @@
+{
+  "id": "heygen-com-hyperframes-pr-to-video",
+  "name": "pr-to-video",
+  "description": "pr-to-video workflow - a GitHub pull request (URL like github.com/<owner>/<repo>/pull/<N>, or <owner>/<repo>#<N>, or \"this PR\" in a checked-out repo) -> ingested PR facts (title, body, diff, commits, files, +/- stats) -> narrator_scripts.json + audio (voice + BGM) + section_plan.md -> code-diff / before-after / impact explainer video. Input is a CODE CHANGE. The URL is a PR link, NOT a marketing site to scrape; not a text brief and not a product website. For a non-PR input (product site, general",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "heygen-com",
+  "install_path": ".claude/skills/pr-to-video/SKILL.md",
+  "source": {
+    "repo": "heygen-com/hyperframes",
+    "url": "https://github.com/heygen-com/hyperframes/blob/main/skills/pr-to-video/SKILL.md",
+    "path": "skills/pr-to-video/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-14T06:13:37.517Z",
+    "stars": 27422,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-14T02:46:30Z",
+    "license": "Apache-2.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "heygen-com-hyperframes-general-video",
+  "name": "general-video",
+  "description": "> Use as the fallback for custom HyperFrames HTML video composition authoring when no specialized workflow fits. Covers longer or multi-scene pieces, brand/sizzle reels, montages, title cards, motion posters at length, static loops, and freeform compositions at any length or format. Not for marketed product promos (product-launch-video), general website-to-video capture (website-to-video), topic explainers (faceless-explainer), GitHub PR videos (pr-to-video), captioning existing footage (embedde",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "heygen-com",
+  "install_path": ".claude/skills/general-video/SKILL.md",
+  "source": {
+    "repo": "heygen-com/hyperframes",
+    "url": "https://github.com/heygen-com/hyperframes/blob/main/skills/general-video/SKILL.md",
+    "path": "skills/general-video/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-14T06:13:36.407Z",
+    "stars": 27422,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-14T02:46:30Z",
+    "license": "Apache-2.0"
+  }
+}

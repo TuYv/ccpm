@@ -1,7 +1,7 @@
 {
   "id": "heygen-com-hyperframes-hyperframes-registry",
   "name": "hyperframes-registry",
-  "description": "Install and wire registry blocks and components into HyperFrames compositions. Use when running hyperframes add, installing a block or component, wiring an installed item into index.html, or working with hyperframes.json. Covers the add command, install locations, block sub-composition wiring, component snippet merging, and registry discovery.",
+  "description": "Install and wire registry blocks and components into HyperFrames compositions. Use when running hyperframes add, installing a block or component, wiring an installed item into index.html, or working with hyperframes.json. Covers the add command, install locations, block sub-composition wiring, component snippet merging, registry discovery, and authoring a new block or component to contribute upstream (idea → scaffold → validate → PR).",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/heygen-com/hyperframes/blob/main/skills/hyperframes-registry/SKILL.md",
     "path": "skills/hyperframes-registry/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-14T00:28:18.765Z",
-    "stars": 27358,
+    "discovered_at": "2026-06-14T06:13:37.329Z",
+    "stars": 27422,
     "language": "TypeScript",
-    "pushed_at": "2026-06-13T23:23:07Z",
+    "pushed_at": "2026-06-14T02:46:30Z",
     "license": "Apache-2.0"
-  },
-  "summary_zh": "这是 HyperFrames 的组件集成工具，能帮你快速安装外部模块并自动接入项目，省去手动拼代码和改配置的麻烦，特别适合需要频繁添加和组合组件的开发场景。"
+  }
 }

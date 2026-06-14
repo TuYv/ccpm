@@ -1,0 +1,25 @@
+{
+  "id": "heygen-com-hyperframes-faceless-explainer",
+  "name": "faceless-explainer",
+  "description": "faceless-explainer video workflow - arbitrary text (article / notes / topic / brief) -> narrator_scripts.json + audio (voice + BGM) + section_plan.md -> typography / abstract-graphics / diagram / data-viz video. Typical length up to ~3 min (sweet spot ~30-90s); a genuinely longer piece is general-video, not this workflow. Generates its OWN narration (TTS) — it does not sync to a user-supplied / pre-recorded voiceover (that is general-video). No website capture, no real product screenshots. If th",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "heygen-com",
+  "install_path": ".claude/skills/faceless-explainer/SKILL.md",
+  "source": {
+    "repo": "heygen-com/hyperframes",
+    "url": "https://github.com/heygen-com/hyperframes/blob/main/skills/faceless-explainer/SKILL.md",
+    "path": "skills/faceless-explainer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-14T06:13:36.305Z",
+    "stars": 27422,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-14T02:46:30Z",
+    "license": "Apache-2.0"
+  }
+}

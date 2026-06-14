@@ -1,8 +1,8 @@
 {
   "id": "heygen-com-hyperframes-remotion-to-hyperframes",
   "name": "remotion-to-hyperframes",
-  "description": "Translate an existing Remotion (React-based) video composition into a HyperFrames HTML composition. Use ONLY when the user explicitly asks to port, convert, migrate, translate, or rewrite a Remotion composition as HyperFrames (e.g. \"port my Remotion project to HyperFrames\"). Do NOT use when (a) authoring a NEW HyperFrames composition (even if A/B-testing a Remotion video); (b) Remotion is mentioned in passing; (c) Remotion code is shared as reference, not for translation; (d) the user wants \"the",
-  "category": "测试调试",
+  "description": "Port an existing Remotion (React) composition to HyperFrames HTML. Use ONLY when the user explicitly asks to port/convert/migrate/translate a Remotion source. Do NOT use: (a) authoring a new HyperFrames composition; (b) Remotion mentioned in passing; (c) Remotion code shared as reference only; (d) \"same video as my Remotion one\" without explicit migrate request — treat as fresh build. Doubt → `/general-video`. One-way, Remotion-only: no reverse export (HyperFrames→Remotion or any framework), no ",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,10 @@
     "url": "https://github.com/heygen-com/hyperframes/blob/main/skills/remotion-to-hyperframes/SKILL.md",
     "path": "skills/remotion-to-hyperframes/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-14T00:28:19.016Z",
-    "stars": 27358,
+    "discovered_at": "2026-06-14T06:13:37.699Z",
+    "stars": 27422,
     "language": "TypeScript",
-    "pushed_at": "2026-06-13T23:23:07Z",
+    "pushed_at": "2026-06-14T02:46:30Z",
     "license": "Apache-2.0"
-  },
-  "summary_zh": "把现有的Remotion视频项目转换成HyperFrames HTML格式，适合明确需要将老项目迁移或重写到HyperFrames的场景。"
+  }
 }
