@@ -1,0 +1,25 @@
+{
+  "id": "thananon-9arm-skills-qwenchance",
+  "name": "qwenchance",
+  "description": "Keeps a long Claude Code task on-track — breaks out of looping/circular thinking, watches the context budget, bounds internal reasoning, and triggers a clean handoff before the window fills. Use when the model is repeating steps, re-reading the same files, second-guessing in circles, stuck or spinning, or running a long multi-step task at risk of exhausting context. Also use when the user says it is \"looping\", \"going in circles\", \"stuck\", \"repeating itself\", or asks for a handoff before running ",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "thananon",
+  "install_path": ".claude/skills/qwenchance/SKILL.md",
+  "source": {
+    "repo": "thananon/9arm-skills",
+    "url": "https://github.com/thananon/9arm-skills/blob/main/skills/productivity/qwenchance/SKILL.md",
+    "path": "skills/productivity/qwenchance/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-14T18:55:49.927Z",
+    "stars": 2783,
+    "language": "Shell",
+    "pushed_at": "2026-06-14T17:31:47Z",
+    "license": null
+  }
+}
