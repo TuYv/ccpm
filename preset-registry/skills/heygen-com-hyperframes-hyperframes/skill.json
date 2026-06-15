@@ -1,8 +1,8 @@
 {
   "id": "heygen-com-hyperframes-hyperframes",
   "name": "hyperframes",
-  "description": "Create video compositions, animations, title cards, overlays, captions, voiceovers, audio-reactive visuals, and scene transitions in HyperFrames HTML. Use when asked to build any HTML-based video content, add captions or subtitles synced to audio, generate text-to-speech narration, create audio-reactive animation (beat sync, glow, pulse driven by music), add animated text highlighting (marker sweeps, hand-drawn circles, burst lines, scribble, sketchout), or add transitions between scenes (crossf",
-  "category": "测试调试",
+  "description": "> READ THIS FIRST — the HyperFrames entry skill. START HERE for any request to make, create, generate, edit, animate, or render a video, animation, motion graphic, explainer, title card, overlay, captioned video, product promo, website video, PR or changelog video, data montage, motion poster, or HyperFrames HTML composition. Read it before any other video or animation skill: it orients you to the whole surface and routes \"make me a video\" intent to the right workflow — product-launch-video, fac",
+  "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,10 @@
     "url": "https://github.com/heygen-com/hyperframes/blob/main/skills/hyperframes/SKILL.md",
     "path": "skills/hyperframes/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-14T00:28:18.856Z",
-    "stars": 27358,
+    "discovered_at": "2026-06-15T19:19:50.274Z",
+    "stars": 27878,
     "language": "TypeScript",
-    "pushed_at": "2026-06-13T23:23:07Z",
+    "pushed_at": "2026-06-15T19:15:42Z",
     "license": "Apache-2.0"
-  },
-  "summary_zh": "这是一个用 HTML 制作动态视频的工具，适合需要加配音字幕、做随音乐跳动的动画、文字特效及场景转场的视频制作需求。"
+  }
 }
