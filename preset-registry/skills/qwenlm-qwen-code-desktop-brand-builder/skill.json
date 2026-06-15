@@ -1,0 +1,25 @@
+{
+  "id": "qwenlm-qwen-code-desktop-brand-builder",
+  "name": "desktop-brand-builder",
+  "description": "Generate a branded qwen-code desktop package from a minimal brandId and logo. Use when the user wants a custom, white-label, rebranded, ModelStudio/OpenWork/Qwen Code desktop client, installer, DMG/EXE/AppImage, or one-click brand build.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "QwenLM",
+  "install_path": ".claude/skills/desktop-brand-builder/SKILL.md",
+  "source": {
+    "repo": "QwenLM/qwen-code",
+    "url": "https://github.com/QwenLM/qwen-code/blob/main/packages/desktop/.agents/skills/desktop-brand-builder/SKILL.md",
+    "path": "packages/desktop/.agents/skills/desktop-brand-builder/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-15T07:51:37.355Z",
+    "stars": 25219,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-15T07:48:54Z",
+    "license": "Apache-2.0"
+  }
+}

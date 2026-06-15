@@ -1,0 +1,25 @@
+{
+  "id": "qwenlm-qwen-code-desktop-develop",
+  "name": "desktop-develop",
+  "description": "Develop, debug, and verify the OpenWork desktop/Electron app with an agent-readable harness. Use when working on packages/desktop, Electron renderer/main/preload code, desktop UI bugs, local desktop runtime failures, Chrome DevTools MCP investigation, desktop logs, messaging gateway issues, or when improving the development feedback loop for desktop features.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "QwenLM",
+  "install_path": ".claude/skills/desktop-develop/SKILL.md",
+  "source": {
+    "repo": "QwenLM/qwen-code",
+    "url": "https://github.com/QwenLM/qwen-code/blob/main/packages/desktop/.agents/skills/desktop-develop/SKILL.md",
+    "path": "packages/desktop/.agents/skills/desktop-develop/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-15T07:51:37.516Z",
+    "stars": 25219,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-15T07:48:54Z",
+    "license": "Apache-2.0"
+  }
+}

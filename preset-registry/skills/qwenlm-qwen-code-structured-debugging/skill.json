@@ -1,0 +1,25 @@
+{
+  "id": "qwenlm-qwen-code-structured-debugging",
+  "name": "structured-debugging",
+  "description": "Hypothesis-driven debugging methodology for hard bugs. Use this skill whenever you're investigating non-trivial bugs, unexpected behavior, flaky tests, or tracing issues through complex systems. Activate proactively when debugging requires more than a quick glance — especially when the first attempt at a fix didn't work, when behavior seems \"impossible\", or when you're tempted to blame an external system (model, API, library) without evidence.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "QwenLM",
+  "install_path": ".claude/skills/structured-debugging/SKILL.md",
+  "source": {
+    "repo": "QwenLM/qwen-code",
+    "url": "https://github.com/QwenLM/qwen-code/blob/main/.qwen/skills/structured-debugging/SKILL.md",
+    "path": ".qwen/skills/structured-debugging/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-15T07:51:35.218Z",
+    "stars": 25219,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-15T07:48:54Z",
+    "license": "Apache-2.0"
+  }
+}

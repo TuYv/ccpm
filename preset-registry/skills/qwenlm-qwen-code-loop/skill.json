@@ -1,0 +1,25 @@
+{
+  "id": "qwenlm-qwen-code-loop",
+  "name": "loop",
+  "description": "Create a recurring loop that runs a prompt on a schedule. Usage - /loop 5m check the build, /loop check the PR every 30m, /loop run tests (defaults to 10m). /loop list to show jobs, /loop clear to cancel all.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "QwenLM",
+  "install_path": ".claude/skills/loop/SKILL.md",
+  "source": {
+    "repo": "QwenLM/qwen-code",
+    "url": "https://github.com/QwenLM/qwen-code/blob/main/packages/core/src/skills/bundled/loop/SKILL.md",
+    "path": "packages/core/src/skills/bundled/loop/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-15T07:51:36.415Z",
+    "stars": 25219,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-15T07:48:54Z",
+    "license": "Apache-2.0"
+  }
+}

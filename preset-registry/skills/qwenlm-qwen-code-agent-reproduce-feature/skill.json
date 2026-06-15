@@ -1,0 +1,25 @@
+{
+  "id": "qwenlm-qwen-code-agent-reproduce-feature",
+  "name": "agent-reproduce-feature",
+  "description": "Use when reproducing an existing Codex or Claude Code feature in Qwen Code or another agent CLI by choosing a reference agent, capturing HTTP request bodies, prompts, tool/function schemas, terminal output, and then implementing the matching behavior in the target repo.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "QwenLM",
+  "install_path": ".claude/skills/agent-reproduce-feature/SKILL.md",
+  "source": {
+    "repo": "QwenLM/qwen-code",
+    "url": "https://github.com/QwenLM/qwen-code/blob/main/.qwen/skills/agent-reproduce-feature/SKILL.md",
+    "path": ".qwen/skills/agent-reproduce-feature/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-15T07:51:33.456Z",
+    "stars": 25219,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-15T07:48:54Z",
+    "license": "Apache-2.0"
+  }
+}

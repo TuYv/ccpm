@@ -1,0 +1,25 @@
+{
+  "id": "qwenlm-qwen-code-docs-update-from-diff",
+  "name": "docs-update-from-diff",
+  "description": "Review local code changes with git diff and update the official docs under docs/ to match. Use when the user asks to document current uncommitted work, sync docs with local changes, update docs after a feature or refactor, or when phrases like \"git diff\", \"local changes\", \"update docs\", or \"official docs\" appear.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "QwenLM",
+  "install_path": ".claude/skills/docs-update-from-diff/SKILL.md",
+  "source": {
+    "repo": "QwenLM/qwen-code",
+    "url": "https://github.com/QwenLM/qwen-code/blob/main/.qwen/skills/docs-update-from-diff/SKILL.md",
+    "path": ".qwen/skills/docs-update-from-diff/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-15T07:51:34.284Z",
+    "stars": 25219,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-15T07:48:54Z",
+    "license": "Apache-2.0"
+  }
+}

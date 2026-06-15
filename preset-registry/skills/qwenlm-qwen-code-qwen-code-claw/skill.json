@@ -1,0 +1,25 @@
+{
+  "id": "qwenlm-qwen-code-qwen-code-claw",
+  "name": "qwen-code-claw",
+  "description": "Use Qwen Code as a Code Agent for code understanding, project generation, features, bug fixes, refactoring, and various programming tasks",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "QwenLM",
+  "install_path": ".claude/skills/qwen-code-claw/SKILL.md",
+  "source": {
+    "repo": "QwenLM/qwen-code",
+    "url": "https://github.com/QwenLM/qwen-code/blob/main/.qwen/skills/qwen-code-claw/SKILL.md",
+    "path": ".qwen/skills/qwen-code-claw/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-15T07:51:35.067Z",
+    "stars": 25219,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-15T07:48:54Z",
+    "license": "Apache-2.0"
+  }
+}

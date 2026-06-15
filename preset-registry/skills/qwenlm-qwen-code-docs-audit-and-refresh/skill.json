@@ -1,0 +1,25 @@
+{
+  "id": "qwenlm-qwen-code-docs-audit-and-refresh",
+  "name": "docs-audit-and-refresh",
+  "description": "Audit the repository's docs/ content against the current codebase, find missing, incorrect, or stale documentation, and refresh the affected pages. Use when the user asks to review docs coverage, find outdated docs, compare docs with the current repo, or fix documentation drift across features, settings, tools, or integrations.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "QwenLM",
+  "install_path": ".claude/skills/docs-audit-and-refresh/SKILL.md",
+  "source": {
+    "repo": "QwenLM/qwen-code",
+    "url": "https://github.com/QwenLM/qwen-code/blob/main/.qwen/skills/docs-audit-and-refresh/SKILL.md",
+    "path": ".qwen/skills/docs-audit-and-refresh/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-15T07:51:34.110Z",
+    "stars": 25219,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-15T07:48:54Z",
+    "license": "Apache-2.0"
+  }
+}

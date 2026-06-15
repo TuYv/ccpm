@@ -1,0 +1,25 @@
+{
+  "id": "qwenlm-qwen-code-synonyms",
+  "name": "synonyms",
+  "description": "Generate synonyms for words or phrases. Use this skill when the user needs alternative words with similar meanings, wants to expand vocabulary, or seeks varied expressions for writing.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "QwenLM",
+  "install_path": ".claude/skills/synonyms/SKILL.md",
+  "source": {
+    "repo": "QwenLM/qwen-code",
+    "url": "https://github.com/QwenLM/qwen-code/blob/main/packages/cli/src/commands/extensions/examples/starter/skills/synonyms/SKILL.md",
+    "path": "packages/cli/src/commands/extensions/examples/starter/skills/synonyms/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-15T07:51:36.103Z",
+    "stars": 25219,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-15T07:48:54Z",
+    "license": "Apache-2.0"
+  }
+}

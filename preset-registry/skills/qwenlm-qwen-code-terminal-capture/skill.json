@@ -1,0 +1,25 @@
+{
+  "id": "qwenlm-qwen-code-terminal-capture",
+  "name": "terminal-capture",
+  "description": "Automates terminal UI screenshot testing for CLI commands. Applies when reviewing PRs that affect CLI output, testing slash commands (/about, /context, /auth, /export), generating visual documentation, or when 'terminal screenshot', 'CLI test', 'visual test', or 'terminal-capture' is mentioned.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "QwenLM",
+  "install_path": ".claude/skills/terminal-capture/SKILL.md",
+  "source": {
+    "repo": "QwenLM/qwen-code",
+    "url": "https://github.com/QwenLM/qwen-code/blob/main/.qwen/skills/terminal-capture/SKILL.md",
+    "path": ".qwen/skills/terminal-capture/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-15T07:51:35.369Z",
+    "stars": 25219,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-15T07:48:54Z",
+    "license": "Apache-2.0"
+  }
+}

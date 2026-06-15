@@ -1,0 +1,25 @@
+{
+  "id": "qwenlm-qwen-code-bugfix",
+  "name": "bugfix",
+  "description": "Fix a bug from a GitHub issue, following the reproduce-first workflow. Use when the user asks to fix a bug, investigate a GitHub issue, or debug a user-reported problem. Takes a GitHub issue URL or number as input.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "QwenLM",
+  "install_path": ".claude/skills/bugfix/SKILL.md",
+  "source": {
+    "repo": "QwenLM/qwen-code",
+    "url": "https://github.com/QwenLM/qwen-code/blob/main/.qwen/skills/bugfix/SKILL.md",
+    "path": ".qwen/skills/bugfix/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-15T07:51:33.604Z",
+    "stars": 25219,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-15T07:48:54Z",
+    "license": "Apache-2.0"
+  }
+}
