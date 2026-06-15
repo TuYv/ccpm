@@ -1,0 +1,25 @@
+{
+  "id": "ogulcancelik-herdr-writing-commit-messages",
+  "name": "writing-commit-messages",
+  "description": ">- Writes Git commit messages. Activates when the user asks to write a commit message, draft a commit message, or similar.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ogulcancelik",
+  "install_path": ".claude/skills/writing-commit-messages/SKILL.md",
+  "source": {
+    "repo": "ogulcancelik/herdr",
+    "url": "https://github.com/ogulcancelik/herdr/blob/master/vendor/libghostty-vt/.agents/skills/writing-commit-messages/SKILL.md",
+    "path": "vendor/libghostty-vt/.agents/skills/writing-commit-messages/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-06-15T14:43:31.633Z",
+    "stars": 5706,
+    "language": "Rust",
+    "pushed_at": "2026-06-15T13:50:24Z",
+    "license": null
+  }
+}

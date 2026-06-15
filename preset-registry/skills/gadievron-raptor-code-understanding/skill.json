@@ -1,0 +1,25 @@
+{
+  "id": "gadievron-raptor-code-understanding",
+  "name": "code-understanding",
+  "description": "Provides adversarial code comprehension for security research, mapping architecture, tracing data flows, and hunting vulnerability variants to build ground-truth understanding before or alongside static analysis.",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "gadievron",
+  "install_path": ".claude/skills/code-understanding/SKILL.md",
+  "source": {
+    "repo": "gadievron/raptor",
+    "url": "https://github.com/gadievron/raptor/blob/main/.claude/skills/code-understanding/SKILL.md",
+    "path": ".claude/skills/code-understanding/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-15T14:43:32.211Z",
+    "stars": 2984,
+    "language": "Python",
+    "pushed_at": "2026-06-15T12:03:24Z",
+    "license": null
+  }
+}

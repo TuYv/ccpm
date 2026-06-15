@@ -1,0 +1,25 @@
+{
+  "id": "gadievron-raptor-rr-debugger",
+  "name": "rr-debugger",
+  "description": "Deterministic debugging with rr record-replay. Use when debugging crashes, ASAN faults, or when reverse execution is needed. Provides reverse-next, reverse-step, reverse-continue commands and crash trace extraction.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "gadievron",
+  "install_path": ".claude/skills/rr-debugger/SKILL.md",
+  "source": {
+    "repo": "gadievron/raptor",
+    "url": "https://github.com/gadievron/raptor/blob/main/.claude/skills/crash-analysis/rr-debugger/SKILL.md",
+    "path": ".claude/skills/crash-analysis/rr-debugger/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-15T14:43:32.661Z",
+    "stars": 2984,
+    "language": "Python",
+    "pushed_at": "2026-06-15T12:03:24Z",
+    "license": null
+  }
+}

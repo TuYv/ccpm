@@ -1,0 +1,25 @@
+{
+  "id": "ogulcancelik-herdr-triage",
+  "name": "triage",
+  "description": "Triage open herdr GitHub issues into a concise decision-first Markdown table. Use when the user says \"triage\", asks to triage open issues, asks which issues need attention, or wants issue priority/recommendation lights for herdr.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ogulcancelik",
+  "install_path": ".claude/skills/triage/SKILL.md",
+  "source": {
+    "repo": "ogulcancelik/herdr",
+    "url": "https://github.com/ogulcancelik/herdr/blob/master/.codex/skills/triage/SKILL.md",
+    "path": ".codex/skills/triage/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-06-15T14:43:31.390Z",
+    "stars": 5706,
+    "language": "Rust",
+    "pushed_at": "2026-06-15T13:50:24Z",
+    "license": null
+  }
+}

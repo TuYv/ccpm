@@ -1,0 +1,25 @@
+{
+  "id": "gadievron-raptor-orchestration",
+  "name": "oss-forensics-orchestration",
+  "description": "Orchestrates multi-agent forensic investigations on public GitHub repositories, coordinating parallel evidence collection, hypothesis formation, verification, and report generation.",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "gadievron",
+  "install_path": ".claude/skills/orchestration/SKILL.md",
+  "source": {
+    "repo": "gadievron/raptor",
+    "url": "https://github.com/gadievron/raptor/blob/main/.claude/skills/oss-forensics/orchestration/SKILL.md",
+    "path": ".claude/skills/oss-forensics/orchestration/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-15T14:43:33.300Z",
+    "stars": 2984,
+    "language": "Python",
+    "pushed_at": "2026-06-15T12:03:24Z",
+    "license": null
+  }
+}

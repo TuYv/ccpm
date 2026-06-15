@@ -1,0 +1,25 @@
+{
+  "id": "gadievron-raptor-function-tracing",
+  "name": "Function Call Tracing",
+  "description": "Instrument C/C++ with -finstrument-functions for execution tracing and Perfetto visualisation",
+  "category": "通用其他",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0",
+  "author": "gadievron",
+  "install_path": ".claude/skills/function-tracing/SKILL.md",
+  "source": {
+    "repo": "gadievron/raptor",
+    "url": "https://github.com/gadievron/raptor/blob/main/.claude/skills/crash-analysis/function-tracing/SKILL.md",
+    "path": ".claude/skills/crash-analysis/function-tracing/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-15T14:43:32.342Z",
+    "stars": 2984,
+    "language": "Python",
+    "pushed_at": "2026-06-15T12:03:24Z",
+    "license": null
+  }
+}

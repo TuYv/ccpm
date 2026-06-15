@@ -1,0 +1,25 @@
+{
+  "id": "gadievron-raptor-github-evidence-kit",
+  "name": "github-evidence-kit",
+  "description": "Generate, export, load, and verify forensic evidence from GitHub sources. Use when creating verifiable evidence objects from GitHub API, GH Archive, Wayback Machine, local git repositories, or security vendor reports. Handles evidence storage, querying, and re-verification against original sources.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "2.0",
+  "author": "gadievron",
+  "install_path": ".claude/skills/github-evidence-kit/SKILL.md",
+  "source": {
+    "repo": "gadievron/raptor",
+    "url": "https://github.com/gadievron/raptor/blob/main/.claude/skills/oss-forensics/github-evidence-kit/SKILL.md",
+    "path": ".claude/skills/oss-forensics/github-evidence-kit/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-15T14:43:33.112Z",
+    "stars": 2984,
+    "language": "Python",
+    "pushed_at": "2026-06-15T12:03:24Z",
+    "license": null
+  }
+}

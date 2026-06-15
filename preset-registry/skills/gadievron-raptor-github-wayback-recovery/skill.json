@@ -1,0 +1,25 @@
+{
+  "id": "gadievron-raptor-github-wayback-recovery",
+  "name": "github-wayback-recovery",
+  "description": "Recover deleted GitHub content using the Wayback Machine and Archive.org APIs. Use when repositories, files, issues, PRs, or wiki pages have been deleted from GitHub but may persist in web archives. Covers CDX API queries, URL patterns, and systematic recovery workflows.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0",
+  "author": "gadievron",
+  "install_path": ".claude/skills/github-wayback-recovery/SKILL.md",
+  "source": {
+    "repo": "gadievron/raptor",
+    "url": "https://github.com/gadievron/raptor/blob/main/.claude/skills/oss-forensics/github-wayback-recovery/SKILL.md",
+    "path": ".claude/skills/oss-forensics/github-wayback-recovery/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-15T14:43:33.199Z",
+    "stars": 2984,
+    "language": "Python",
+    "pushed_at": "2026-06-15T12:03:24Z",
+    "license": null
+  }
+}

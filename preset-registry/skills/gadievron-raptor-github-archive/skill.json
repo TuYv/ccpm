@@ -1,0 +1,25 @@
+{
+  "id": "gadievron-raptor-github-archive",
+  "name": "github-archive",
+  "description": "Investigate GitHub security incidents using tamper-proof GitHub Archive data via BigQuery. Use when verifying repository activity claims, recovering deleted PRs/branches/tags/repos, attributing actions to actors, or reconstructing attack timelines. Provides immutable forensic evidence of all public GitHub events since 2011.",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0",
+  "author": "gadievron",
+  "install_path": ".claude/skills/github-archive/SKILL.md",
+  "source": {
+    "repo": "gadievron/raptor",
+    "url": "https://github.com/gadievron/raptor/blob/main/.claude/skills/oss-forensics/github-archive/SKILL.md",
+    "path": ".claude/skills/oss-forensics/github-archive/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-15T14:43:32.891Z",
+    "stars": 2984,
+    "language": "Python",
+    "pushed_at": "2026-06-15T12:03:24Z",
+    "license": null
+  }
+}

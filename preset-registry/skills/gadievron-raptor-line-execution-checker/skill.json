@@ -1,0 +1,25 @@
+{
+  "id": "gadievron-raptor-line-execution-checker",
+  "name": "Line Execution Checker",
+  "description": "Check if specific lines were executed using gcov data",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0",
+  "author": "gadievron",
+  "install_path": ".claude/skills/line-execution-checker/SKILL.md",
+  "source": {
+    "repo": "gadievron/raptor",
+    "url": "https://github.com/gadievron/raptor/blob/main/.claude/skills/crash-analysis/line-execution-checker/SKILL.md",
+    "path": ".claude/skills/crash-analysis/line-execution-checker/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-15T14:43:32.551Z",
+    "stars": 2984,
+    "language": "Python",
+    "pushed_at": "2026-06-15T12:03:24Z",
+    "license": null
+  }
+}

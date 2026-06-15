@@ -1,0 +1,25 @@
+{
+  "id": "gadievron-raptor-github-commit-recovery",
+  "name": "github-commit-recovery",
+  "description": "Recover deleted commits from GitHub using REST API, web interface, and git fetch. Use when you have commit SHAs and need to retrieve actual commit content, diffs, or patches. Includes techniques for accessing \"deleted\" commits that remain on GitHub servers.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0",
+  "author": "gadievron",
+  "install_path": ".claude/skills/github-commit-recovery/SKILL.md",
+  "source": {
+    "repo": "gadievron/raptor",
+    "url": "https://github.com/gadievron/raptor/blob/main/.claude/skills/oss-forensics/github-commit-recovery/SKILL.md",
+    "path": ".claude/skills/oss-forensics/github-commit-recovery/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-15T14:43:32.987Z",
+    "stars": 2984,
+    "language": "Python",
+    "pushed_at": "2026-06-15T12:03:24Z",
+    "license": null
+  }
+}
