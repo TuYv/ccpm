@@ -1,0 +1,25 @@
+{
+  "id": "kenn-io-roborev-roborev-design-review",
+  "name": "roborev-design-review",
+  "description": "Request a design review for a commit and present the results",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "kenn-io",
+  "install_path": ".claude/skills/roborev-design-review/SKILL.md",
+  "source": {
+    "repo": "kenn-io/roborev",
+    "url": "https://github.com/kenn-io/roborev/blob/main/internal/skills/codex/roborev-design-review/SKILL.md",
+    "path": "internal/skills/codex/roborev-design-review/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-17T14:09:41.016Z",
+    "stars": 1404,
+    "language": "Go",
+    "pushed_at": "2026-06-17T13:15:51Z",
+    "license": "MIT"
+  }
+}

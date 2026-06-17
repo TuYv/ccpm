@@ -1,0 +1,25 @@
+{
+  "id": "samber-cc-skills-golang-golang-context",
+  "name": "golang-context",
+  "description": "Idiomatic context.Context usage in Golang — propagation through API boundaries, cancellation, timeouts and deadlines, request-scoped values, context.WithoutCancel for background work outliving requests. Apply when designing context propagation across layers, debugging leaked or unexpired contexts, choosing between context.Background/TODO/WithoutCancel, or storing values in context. Not for code that merely accepts ctx as first parameter.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "samber",
+  "install_path": ".claude/skills/golang-context/SKILL.md",
+  "source": {
+    "repo": "samber/cc-skills-golang",
+    "url": "https://github.com/samber/cc-skills-golang/blob/main/skills/golang-context/SKILL.md",
+    "path": "skills/golang-context/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-17T14:11:30.314Z",
+    "stars": 2197,
+    "language": "Go",
+    "pushed_at": "2026-06-09T13:53:57Z",
+    "license": "MIT"
+  }
+}

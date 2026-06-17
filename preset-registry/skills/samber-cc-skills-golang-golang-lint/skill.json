@@ -1,0 +1,25 @@
+{
+  "id": "samber-cc-skills-golang-golang-lint",
+  "name": "golang-lint",
+  "description": "Linting best practices and golangci-lint configuration for Golang projects — running linters, configuring .golangci.yml, suppressing warnings with nolint directives, interpreting lint output, and selecting linters. Use when configuring golangci-lint, asking about lint warnings or nolint suppressions, setting up code quality tooling, or choosing linters. Also use when the user mentions golangci-lint, go vet, staticcheck, or revive.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "samber",
+  "install_path": ".claude/skills/golang-lint/SKILL.md",
+  "source": {
+    "repo": "samber/cc-skills-golang",
+    "url": "https://github.com/samber/cc-skills-golang/blob/main/skills/golang-lint/SKILL.md",
+    "path": "skills/golang-lint/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-17T14:11:31.923Z",
+    "stars": 2197,
+    "language": "Go",
+    "pushed_at": "2026-06-09T13:53:57Z",
+    "license": "MIT"
+  }
+}

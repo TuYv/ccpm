@@ -1,0 +1,25 @@
+{
+  "id": "samber-cc-skills-golang-golang-cli",
+  "name": "golang-cli",
+  "description": "Golang CLI application development. Use when building, modifying, or reviewing a Go CLI tool — especially for command structure, flag handling, configuration layering, version embedding, exit codes, I/O patterns, signal handling, shell completion, argument validation, and CLI unit testing. Also triggers when code uses cobra, viper, or urfave/cli. For cobra-specific APIs → See `samber/cc-skills-golang@golang-spf13-cobra` skill; for viper configuration layering → See `samber/cc-skills-golang@golan",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "samber",
+  "install_path": ".claude/skills/golang-cli/SKILL.md",
+  "source": {
+    "repo": "samber/cc-skills-golang",
+    "url": "https://github.com/samber/cc-skills-golang/blob/main/skills/golang-cli/SKILL.md",
+    "path": "skills/golang-cli/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-17T14:11:29.925Z",
+    "stars": 2197,
+    "language": "Go",
+    "pushed_at": "2026-06-09T13:53:57Z",
+    "license": "MIT"
+  }
+}

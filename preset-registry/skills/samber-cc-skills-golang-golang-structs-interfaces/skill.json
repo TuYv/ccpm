@@ -1,0 +1,25 @@
+{
+  "id": "samber-cc-skills-golang-golang-structs-interfaces",
+  "name": "golang-structs-interfaces",
+  "description": "Golang struct and interface design patterns — composition, embedding, type assertions, type switches, interface segregation, dependency injection via interfaces, struct field tags, and pointer vs value receivers. Use this skill when designing Go types, defining or implementing interfaces, embedding structs or interfaces, writing type assertions or type switches, adding struct field tags for JSON/YAML/DB serialization, or choosing between pointer and value receivers. Also use when the user asks a",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "samber",
+  "install_path": ".claude/skills/golang-structs-interfaces/SKILL.md",
+  "source": {
+    "repo": "samber/cc-skills-golang",
+    "url": "https://github.com/samber/cc-skills-golang/blob/main/skills/golang-structs-interfaces/SKILL.md",
+    "path": "skills/golang-structs-interfaces/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-17T14:11:34.496Z",
+    "stars": 2197,
+    "language": "Go",
+    "pushed_at": "2026-06-09T13:53:57Z",
+    "license": "MIT"
+  }
+}

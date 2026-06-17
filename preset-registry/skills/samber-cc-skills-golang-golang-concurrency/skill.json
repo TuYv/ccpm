@@ -1,0 +1,25 @@
+{
+  "id": "samber-cc-skills-golang-golang-concurrency",
+  "name": "golang-concurrency",
+  "description": "Golang concurrency patterns. Use when writing or reviewing concurrent Go code involving goroutines, channels, select, locks, sync primitives, errgroup, singleflight, worker pools, or fan-out/fan-in pipelines. Also triggers when you detect goroutine leaks, race conditions, channel ownership issues, or need to choose between channels and mutexes.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "samber",
+  "install_path": ".claude/skills/golang-concurrency/SKILL.md",
+  "source": {
+    "repo": "samber/cc-skills-golang",
+    "url": "https://github.com/samber/cc-skills-golang/blob/main/skills/golang-concurrency/SKILL.md",
+    "path": "skills/golang-concurrency/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-17T14:11:30.158Z",
+    "stars": 2197,
+    "language": "Go",
+    "pushed_at": "2026-06-09T13:53:57Z",
+    "license": "MIT"
+  }
+}

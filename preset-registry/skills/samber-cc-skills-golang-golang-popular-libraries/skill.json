@@ -1,0 +1,25 @@
+{
+  "id": "samber-cc-skills-golang-golang-popular-libraries",
+  "name": "golang-popular-libraries",
+  "description": "Recommends production-ready Golang libraries and frameworks. Apply when the user explicitly asks for library suggestions, wants to compare alternatives, needs to choose a library for a specific task, or when a new dependency is being added to the project.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "samber",
+  "install_path": ".claude/skills/golang-popular-libraries/SKILL.md",
+  "source": {
+    "repo": "samber/cc-skills-golang",
+    "url": "https://github.com/samber/cc-skills-golang/blob/main/skills/golang-popular-libraries/SKILL.md",
+    "path": "skills/golang-popular-libraries/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-17T14:11:32.595Z",
+    "stars": 2197,
+    "language": "Go",
+    "pushed_at": "2026-06-09T13:53:57Z",
+    "license": "MIT"
+  }
+}

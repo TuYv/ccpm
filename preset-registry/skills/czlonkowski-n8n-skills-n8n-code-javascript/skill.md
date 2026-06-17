@@ -1,6 +1,6 @@
 ---
 name: n8n-code-javascript
-description: Write JavaScript code in n8n Code nodes. Use when writing JavaScript in n8n, using $input/$json/$node syntax, making HTTP requests with $helpers, working with dates using DateTime, troubleshooting Code node errors, choosing between Code node modes, or doing any custom data transformation in n8n. Always use this skill when a workflow needs a Code node — whether for data aggregation, filtering, API calls, format conversion, batch processing logic, or any custom JavaScript. Covers SplitInBatches loop patterns, cross-iteration data, pairedItem, and real-world production patterns. EXCEPTION — for the AI-agent-callable Custom Code Tool (@n8n/n8n-nodes-langchain.toolCode, a tool attached to an AI Agent), use the n8n-code-tool skill instead; it has a different runtime contract.
+description: Write JavaScript code in n8n Code nodes. Use when writing JavaScript in n8n, using $input/$json/$node syntax, making HTTP requests with $helpers, working with dates using DateTime, troubleshooting Code node errors, choosing between Code node modes, or doing any custom data transformation in n8n. Always use this skill when a workflow needs a Code node — whether for data aggregation, filtering, API calls, format conversion, batch processing logic, or any custom JavaScript. Covers SplitInBatches loop patterns, cross-iteration data, pairedItem, and real-world production patterns. Also use when asked why a Code node or workflow is slow, which execution mode is faster, or how to cut per-item overhead on large datasets. EXCEPTION — for the AI-agent-callable Custom Code Tool (@n8n/n8n-nodes-langchain.toolCode, a tool attached to an AI Agent), use the n8n-code-tool skill instead; it has a different runtime contract.
 ---
 
 # JavaScript Code Node
@@ -106,6 +106,25 @@ return [{
 - **Need to look at multiple items?** → Use "All Items" mode
 - **Each item completely independent?** → Use "Each Item" mode
 - **Not sure?** → Use "All Items" mode (you can always loop inside)
+
+### Why "All Items" is faster — the per-item boundary
+
+Mode choice is the single biggest performance lever in a Code node, and the reason generalizes to the rest of your workflow. Every time n8n hands items to a *per-item* execution context it pays a setup cost. Measured on an n8n 2.x instance (small records, ~10k items):
+
+| What runs per item | Approx. cost | Why |
+|---|---|---|
+| Code **All Items** (one run for the whole set) | ~0.02 ms/item | one context setup, then plain JS — the loop is free |
+| Expression in any node (IF / Set / etc.) | ~0.2 ms/item | a light eval context per item |
+| Code **Each Item** | ~0.6 ms/item | a full code sandbox per item — ~3× an expression, ~25–30× All Items |
+
+So `Run Once for Each Item` over 10k items is ~6 s of pure overhead vs ~0.2 s for the same logic in `Run Once for All Items`. Use Each Item only when an item genuinely needs isolating (independent error handling, or a per-item API call you can't batch); otherwise loop *inside* one All Items node.
+
+Two corollaries you will hit constantly:
+
+- **Expression complexity is essentially free.** An elaborate `{{ }}` measures the same as a trivial one — ~90% of the cost is n8n building the per-item context, not running your code. Don't simplify expressions for speed; reduce the *number* of per-item boundaries instead.
+- **Every node→node hop re-copies all items** (~0.05 ms/item per hop). Six chained All Items Code nodes cost ~7× a single node doing the same six steps, so consolidate a hot transform chain into one All Items node — and never build a chain of *Each Item* Code nodes, where the per-item tax multiplies by node count (a 6-node Each-Item chain over 2k items ≈ 7 s).
+
+**Scale check:** below a few hundred items this is all sub-100 ms and not worth a thought, and most real workflows are dominated by I/O (HTTP / DB / Sheets round-trips) that dwarfs node overhead. Reach for these rules on the hot path — large item counts with little I/O — not everywhere.
 
 ---
 
@@ -626,6 +645,13 @@ The SplitInBatches node has two outputs — and the naming is counterintuitive:
 - `main[1]` = **each batch** — fires for every batch (this is the loop body)
 
 Always add a **Limit 1** node after the done output before downstream processing, as a safety against edge cases where done fires with extra items.
+
+### SplitInBatches: iteration count is the cost
+
+Each loop iteration re-executes the entire loop body through the workflow engine — ~0.8 ms per iteration of pure overhead, on top of whatever the body does. Total ≈ `⌈items / batchSize⌉ × (~0.8 ms + body cost)`:
+
+- `batchSize: 1` over N items pays that N times — it's the loop equivalent of *Run Once for Each Item* (and if the body has several nodes, each iteration re-pays all of them).
+- Raising `batchSize` cuts iterations proportionally; the body still sees every item. Use the **largest batch your real constraint allows** (API rate limit, page size, memory). If you don't need batching at all, don't loop — process the whole set in one All Items node.
 
 ### Cross-Iteration Data Accumulation (CRITICAL)
 

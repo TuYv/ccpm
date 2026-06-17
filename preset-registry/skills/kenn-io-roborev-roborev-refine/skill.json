@@ -1,0 +1,25 @@
+{
+  "id": "kenn-io-roborev-roborev-refine",
+  "name": "roborev-refine",
+  "description": "Iterative review-fix loop for the current branch — reviews via daemon, fixes inline, re-reviews until passing or max iterations reached",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "kenn-io",
+  "install_path": ".claude/skills/roborev-refine/SKILL.md",
+  "source": {
+    "repo": "kenn-io/roborev",
+    "url": "https://github.com/kenn-io/roborev/blob/main/internal/skills/codex/roborev-refine/SKILL.md",
+    "path": "internal/skills/codex/roborev-refine/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-17T14:09:41.327Z",
+    "stars": 1404,
+    "language": "Go",
+    "pushed_at": "2026-06-17T13:15:51Z",
+    "license": "MIT"
+  }
+}
