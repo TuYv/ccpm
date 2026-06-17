@@ -1,7 +1,7 @@
 {
   "id": "backnotprop-plannotator-plannotator-annotate",
   "name": "plannotator-annotate",
-  "description": "Open Plannotator's annotation UI for a markdown file, converted HTML file, URL, or folder and then respond to the returned annotations.",
+  "description": "Open Plannotator's annotation UI for a markdown file, HTML file, URL, or folder and then respond to the returned annotations.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/backnotprop/plannotator/blob/main/apps/skills/core/plannotator-annotate/SKILL.md",
     "path": "apps/skills/core/plannotator-annotate/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-16T21:40:18.991Z",
-    "stars": 6267,
+    "discovered_at": "2026-06-16T23:59:00.937Z",
+    "stars": 6268,
     "language": "TypeScript",
-    "pushed_at": "2026-06-16T21:31:56Z",
+    "pushed_at": "2026-06-16T23:35:51Z",
     "license": "Apache-2.0"
-  },
-  "summary_zh": "这是一个批注交互工具，支持给网页或本地文档打开批注界面并处理批注结果，适合需要给各类内容做标注和收集反馈的场景。"
+  }
 }
