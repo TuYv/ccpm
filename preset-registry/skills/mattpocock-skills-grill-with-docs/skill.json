@@ -1,8 +1,8 @@
 {
   "id": "mattpocock-skills-grill-with-docs",
   "name": "grill-with-docs",
-  "description": "Grilling session that challenges your plan against the existing domain model, sharpens terminology, and updates documentation (CONTEXT.md, ADRs) inline as decisions crystallise. Use when user wants to stress-test a plan against their project's language and documented decisions.",
-  "category": "测试调试",
+  "description": "A relentless interview to sharpen a plan or design, which also creates docs (ADR's and glossary) as we go.",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,10 @@
     "url": "https://github.com/mattpocock/skills/blob/main/skills/engineering/grill-with-docs/SKILL.md",
     "path": "skills/engineering/grill-with-docs/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-17T14:07:51.032Z",
-    "stars": 132889,
+    "discovered_at": "2026-06-17T20:36:43.652Z",
+    "stars": 133324,
     "language": "Shell",
-    "pushed_at": "2026-06-17T13:57:27Z",
+    "pushed_at": "2026-06-17T14:46:56Z",
     "license": "MIT"
-  },
-  "summary_zh": "这是个帮你对计划做压力测试的工具，它会用现有领域模型挑战你的方案并理清术语，决策敲定时同步更新文档。适合检验新方案是否契合项目已有业务语言和决策记录。"
+  }
 }

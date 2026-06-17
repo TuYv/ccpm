@@ -1,8 +1,8 @@
 {
   "id": "mattpocock-skills-setup-matt-pocock-skills",
   "name": "setup-matt-pocock-skills",
-  "description": "Sets up an `## Agent skills` block in AGENTS.md/CLAUDE.md and `docs/agents/` so the engineering skills know this repo's issue tracker (GitHub or local markdown), triage label vocabulary, and domain doc layout. Run before first use of `to-issues`, `to-prd`, `triage`, `diagnose`, `tdd`, `improve-codebase-architecture`, or `zoom-out` — or if those skills appear to be missing context about the issue tracker, triage labels, or domain docs.",
-  "category": "文档写作",
+  "description": "Configure this repo for the engineering skills — set up its issue tracker, triage label vocabulary, and domain doc layout. Run once before first use of the other engineering skills.",
+  "category": "开发编程",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,10 @@
     "url": "https://github.com/mattpocock/skills/blob/main/skills/engineering/setup-matt-pocock-skills/SKILL.md",
     "path": "skills/engineering/setup-matt-pocock-skills/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-17T14:07:51.384Z",
-    "stars": 132889,
+    "discovered_at": "2026-06-17T20:36:44.155Z",
+    "stars": 133324,
     "language": "Shell",
-    "pushed_at": "2026-06-17T13:57:27Z",
+    "pushed_at": "2026-06-17T14:46:56Z",
     "license": "MIT"
-  },
-  "summary_zh": "这是一个为AI助手初始化项目上下文的工具，通过配置让AI掌握仓库的Issue、标签和文档结构，适合在首次调用其他技能前运行，解决AI缺乏项目背景的问题。"
+  }
 }

@@ -255,24 +255,69 @@ Research ANY topic across Reddit, X, YouTube, and other sources. Surface what pe
 Before running any `last30days.py` command in this skill, resolve a Python 3.12+ interpreter once and keep it in `LAST30DAYS_PYTHON`:
 
 ```bash
-for py in python3.14 python3.13 python3.12 python3; do
-  command -v "$py" >/dev/null 2>&1 || continue
-  "$py" -c 'import sys; raise SystemExit(0 if sys.version_info >= (3, 12) else 1)' || continue
-  LAST30DAYS_PYTHON="$py"
-  break
-done
+try_last30days_python() {
+  candidate="$1"
+  [ -n "$candidate" ] || return 1
+  if [ -x "$candidate" ]; then
+    :
+  elif command -v "$candidate" >/dev/null 2>&1; then
+    :
+  else
+    return 1
+  fi
+  "$candidate" -c 'import sys; raise SystemExit(0 if sys.version_info >= (3, 12) else 1)' || return 1
+  LAST30DAYS_PYTHON="$candidate"
+  return 0
+}
+
+windows_path_to_unix() {
+  path="$1"
+  [ -n "$path" ] || return 1
+  if command -v cygpath >/dev/null 2>&1; then
+    cygpath -u "$path"
+  else
+    printf '%s\n' "$path"
+  fi
+}
 
 if [ -z "${LAST30DAYS_PYTHON:-}" ]; then
-  echo "ERROR: last30days v3 requires Python 3.12+. Install python3.12 or python3.13 and rerun." >&2
+  while IFS= read -r windows_python_root; do
+    [ -n "$windows_python_root" ] && [ -d "$windows_python_root" ] || continue
+    while IFS= read -r py; do
+      try_last30days_python "$py" && break 2
+    done <<EOF_PYTHON_CANDIDATES
+$(find "$windows_python_root" -maxdepth 2 -type f -iname python.exe 2>/dev/null | sort -r)
+EOF_PYTHON_CANDIDATES
+  done <<EOF_WINDOWS_PYTHON_ROOTS
+$([ -n "${LOCALAPPDATA:-}" ] && printf '%s\n' "$(windows_path_to_unix "$LOCALAPPDATA")/Programs/Python")
+$([ -n "${ProgramFiles:-}" ] && windows_path_to_unix "$ProgramFiles")
+$([ -n "${PROGRAMFILES:-}" ] && windows_path_to_unix "$PROGRAMFILES")
+$(program_files_x86="$(printenv 'ProgramFiles(x86)' 2>/dev/null || true)"; [ -n "$program_files_x86" ] && windows_path_to_unix "$program_files_x86")
+EOF_WINDOWS_PYTHON_ROOTS
+fi
+
+if [ -z "${LAST30DAYS_PYTHON:-}" ]; then
+  for py in python3.14 python3.13 python3.12 python3 python; do
+    try_last30days_python "$py" && break
+  done
+fi
+
+if [ -z "${LAST30DAYS_PYTHON:-}" ]; then
+  echo "ERROR: last30days v3 requires Python 3.12+. Install Python 3.12+ or set LAST30DAYS_PYTHON to a supported interpreter." >&2
   exit 1
 fi
+
+"${LAST30DAYS_PYTHON}" -c 'import sys; raise SystemExit(0 if sys.version_info >= (3, 12) else 1)' || {
+  echo "ERROR: LAST30DAYS_PYTHON must point to Python 3.12+." >&2
+  exit 1
+}
 
 LAST30DAYS_MEMORY_DIR="${LAST30DAYS_MEMORY_DIR:-$HOME/Documents/Last30Days}"
 ```
 
 ## Configuration
 
-Set `LAST30DAYS_MEMORY_DIR` before invoking the skill to choose where raw research files are saved. If it is not set, the skill defaults to `~/Documents/Last30Days`.
+Set `LAST30DAYS_MEMORY_DIR` before invoking the skill to choose where raw research files are saved. If it is not set, the skill defaults to `~/Documents/Last30Days`. The SessionStart hook (`hooks/scripts/check-config.sh`) creates this directory automatically on every session start if it doesn't already exist, so first-run users don't need to `mkdir` by hand.
 
 ## Step 0: First-Run Setup Wizard
 
@@ -324,19 +369,17 @@ Common patterns:
 - `TOPIC_A = [first item]` (only if COMPARISON)
 - `TOPIC_B = [second item]` (only if COMPARISON)
 
-**Confirm the topic with a branded, truthful message. Build ACTIVE_SOURCES_LIST by checking what's configured in .env:**
+**Confirm the topic with a branded, truthful message. Build ACTIVE_SOURCES_LIST from the engine's own source diagnostic — do NOT infer availability by checking env vars or `.env`.** The engine resolves credentials at runtime from several places (process environment, `.env`, macOS Keychain, etc.), so a config-file check silently under-reports sources whenever a key is resolved at runtime rather than written literally in `.env`. Run the engine's `--diagnose` and read its result:
 
-- Always active: Reddit, Hacker News, Polymarket
-- If gh CLI is installed (check `which gh`): add GitHub
-- If digg-pp-cli is installed (check `which digg-pp-cli`): add Digg
-- If AUTH_TOKEN/CT0 or XAI_API_KEY or FROM_BROWSER is set, or xurl CLI is installed and authenticated: add X
-- If yt-dlp is installed (check `which yt-dlp`): add YouTube
-- If SCRAPECREATORS_API_KEY is set: add TikTok, Instagram, Threads (suppress any of these via EXCLUDE_SOURCES)
-- If SCRAPECREATORS_API_KEY is set and the user explicitly requested pinterest for this query (e.g. via `--search=pinterest`): add Pinterest
-- If the user asks for hiring signals, jobs pages, careers pages, focus shifts from hiring, or competitor hiring, add Jobs
-- If BSKY_HANDLE and BSKY_APP_PASSWORD are set: add Bluesky
-- If OPENROUTER_API_KEY is set and INCLUDE_SOURCES contains perplexity: add Perplexity
-- If EXCLUDE_SOURCES is set (comma-separated, case-insensitive): drop any matching source from the list above before displaying
+```bash
+SKILL_DIR="<absolute path of the directory containing the SKILL.md you just Read>"
+"${LAST30DAYS_PYTHON}" "${SKILL_DIR}/scripts/last30days.py" --diagnose
+```
+
+`--diagnose` prints JSON. `ACTIVE_SOURCES_LIST` is its `available_sources` array — the engine's authoritative source set, computed after credential resolution. Map the tokens to display names: `reddit`→Reddit, `hackernews`→Hacker News, `polymarket`→Polymarket, `github`→GitHub, `digg`→Digg, `x`→X, `youtube`→YouTube, `tiktok`→TikTok, `instagram`→Instagram, `threads`→Threads, `pinterest`→Pinterest, `bluesky`→Bluesky, `perplexity`→Perplexity, `grounding`→Web, `jobs`→Jobs.
+
+- If EXCLUDE_SOURCES is set (comma-separated, case-insensitive): drop any matching source from ACTIVE_SOURCES_LIST before displaying
+
 
 Then display (use "and more" if 5+ sources, otherwise list all with Oxford comma):
 
@@ -376,7 +419,7 @@ Known keyword-trap classes and how to handle each:
 **Class 2: Numeric / age keyword trap**
 - Pattern: topic contains a specific number that collides with unrelated content (42 = Jackie Robinson + Hitchhiker's + a 42" quilt; 40 = 40th anniversary posts; 50 = state-count posts; 100 = bench-press posts).
 - Why it fails: the number dominates retrieval and pulls in unrelated content. A search that prominently features "42" returns jersey-number posts; a search for "the 100" returns TV-show posts.
-- Action: Strip the number from the engine search query unless it is semantically load-bearing (e.g., "GPT-4" yes, "40 year old man" no, "Area 51" yes, "top 10 foods" no). Keep the number in the user's original framing for context; drop it from the engine query. Document in Resolved: "Dropping '{number}' from the search query - it is a keyword trap that pulls in unrelated content. Search will cover the concept generically."
+- Action: Strip the number from the engine search query unless changing or removing it would change the topic itself (e.g., "GPT-4" yes, "40 year old man" no, "Area 51" yes, "top 10 foods" no). Keep the number in the user's original framing for context; drop it from the engine query. Document in Resolved: "Dropping '{number}' from the search query - it is a keyword trap that pulls in unrelated content. Search will cover the concept generically."
 
 **Class 3: Overly-literal concept phrase**
 - Pattern: `how to use X`, `what is Y`, `tutorial for Z`, `explain A` — tutorial-shaped phrasing where social posts are in different vocabulary.
@@ -389,8 +432,18 @@ Known keyword-trap classes and how to handle each:
 - Action: Ask for specificity before running:
   > "{TOPIC} is a huge category - are you asking about {specific-facet-A}, {specific-facet-B}, or {specific-facet-C}? Each is a different community. Pick one or tell me the angle."
 
+**Class 5: Non-English / non-Latin-script topic (Hebrew, Arabic, Chinese, Japanese, etc.)**
+- Pattern: topic contains non-Latin characters (Hebrew [\u0590-\u05FF], Arabic [\u0600-\u06FF], CJK [\u4E00-\u9FFF], etc.).
+- Why it fails without intervention: Reddit, HackerNews, GitHub, and Polymarket are English-dominant platforms. A Hebrew brand like "קפה עלית" scores zero entity-matches across all four sources and returns only English-language noise as fallback padding.
+- Action: **Mandatory pre-flight steps for non-English topics:**
+  1. **Force `--web-backend brave`** in the engine command. Brave indexes non-English web (Ynet/Walla/Mako for Hebrew; Haber7/Hurriyet for Turkish; etc.) and is the only available source with real-language coverage.
+  2. **Skip `--subreddits` targeting unless the topic has a known English-speaking community.** Generic subreddits (r/food, r/Israel) return English noise; omit them or scope tightly to known bilingual communities.
+  3. **Note in the Resolved block:** "Non-English topic detected ([language]). Routing to `--web-backend brave`; Reddit/HN/GitHub will likely return zero on-topic results."
+  4. **X/Twitter and YouTube are the highest-value missing sources for non-English topics.** Surface this clearly in the output so the user knows what would unlock deeper coverage.
+- Do NOT skip this class check for mixed-script queries (e.g. "קפה עלית Elite Coffee") - if any non-Latin characters are present, Class 5 applies.
+
 **Pre-Flight decision flow (do this BEFORE any WebSearch):**
-1. Read the topic. Match against Classes 1-4 above.
+1. Read the topic. Match against Classes 1-5 above.
 2. If the topic matches a class, ALWAYS emit a visible pre-flight note before the Resolved block:
    - `Pre-Flight: topic matches {Class N} ({class name}). {Action: clarifying question / reframe / specificity ask}.`
 3. If the action is a clarifying question, STOP after emitting it. Wait for the user response before any engine work.
@@ -418,6 +471,7 @@ Before running the engine, determine which flags apply to this topic and resolve
 | `--tiktok-hashtags={h1,h2,...}` | Step 0.55 | Always — inferred from topic |
 | `--tiktok-creators={c1,c2,...}` | Step 0.55 | Creator / influencer / brand topics |
 | `--ig-creators={c1,c2,...}` | Step 0.55 | Creator / brand topics |
+| `--web-backend brave` | Step 0.45 Class 5 | **MANDATORY** for non-Latin-script topics (Hebrew, Arabic, CJK, etc.) — Brave is the only source that indexes non-English web |
 | `--auto-resolve` | Fallback | WebSearch is available but Step 0.55 could not resolve everything cleanly — use as belt-and-suspenders |
 
 **Checkpoint before running the engine:** your Bash command must include every flag from the checklist that applies to this topic. For a person who ships code (the Peter Steinberger class), that is MINIMUM `--x-handle` AND `--github-user` AND `--subreddits`, and typically `--x-related` too. A command with only `--x-handle` on a person topic is a pre-flight skip and a Step 0.5 regression.
@@ -619,7 +673,9 @@ fi
 # GNU; BSD only substitutes X's at the end of the template.
 COMPETITORS_PLAN_FILE=$(mktemp "${TMPDIR:-/tmp}/last30days-competitors.XXXXXX")
 trap 'rm -f "$COMPETITORS_PLAN_FILE"' EXIT
-cat > "$COMPETITORS_PLAN_FILE" <<'PLAN_EOF'
+# >| not >: mktemp already created the file, so a plain > is refused under
+# `set -o noclobber` (leaving the plan empty -> deterministic fallback).
+cat >| "$COMPETITORS_PLAN_FILE" <<'PLAN_EOF'
 {
   "{TOPIC_B}": {"x_handle":"{TOPIC_B_HANDLE}","subreddits":["{TOPIC_B_SUB_1}","{TOPIC_B_SUB_2}"],"github_user":"{TOPIC_B_GH}","context":"{TOPIC_B_CONTEXT}"},
   "{TOPIC_C}": {"x_handle":"{TOPIC_C_HANDLE}","subreddits":["{TOPIC_C_SUB_1}"],"github_user":"{TOPIC_C_GH}","context":"{TOPIC_C_CONTEXT}"}
@@ -635,7 +691,7 @@ PLAN_EOF
   --competitors-plan "$COMPETITORS_PLAN_FILE"
 ```
 
-**The quoted heredoc marker `'PLAN_EOF'` is load-bearing** — quoting suppresses shell interpolation so apostrophes, `$`, backticks, etc. pass through verbatim. If you ever switch to an unquoted `<<PLAN_EOF`, every variable reference and apostrophe inside the JSON becomes a parse hazard.
+**Keep the heredoc marker quoted as `'PLAN_EOF'`.** Quoting suppresses shell interpolation so apostrophes, `$`, backticks, etc. pass through verbatim. If you ever switch to an unquoted `<<PLAN_EOF`, every variable reference and apostrophe inside the JSON becomes a parse hazard.
 
 Topic A (the main topic, first in the vs-string) uses outer `--x-handle`, `--x-related`, `--subreddits`, `--github-user`, `--github-repo`, `--tiktok-*`, `--ig-creators` as usual. Topics B and C get their targeting from `--competitors-plan` entries (keyed by entity name, case-insensitive).
 
@@ -962,7 +1018,9 @@ fi
 # X's at the end of the template.
 QUERY_PLAN_FILE=$(mktemp "${TMPDIR:-/tmp}/last30days-plan.XXXXXX")
 trap 'rm -f "$QUERY_PLAN_FILE"' EXIT
-cat > "$QUERY_PLAN_FILE" <<'PLAN_EOF'
+# >| not >: mktemp already created the file, so a plain > is refused under
+# `set -o noclobber` (leaving the plan empty -> deterministic fallback).
+cat >| "$QUERY_PLAN_FILE" <<'PLAN_EOF'
 {QUERY_PLAN_JSON_FROM_STEP_0.75}
 PLAN_EOF
 ```
@@ -1238,7 +1296,7 @@ Also mentioned (exists, not recommended): [comma-separated list with one-line no
 - Ignoring anti-signal quotes. If the corpus contains a quote like "@javitm: agents have a strong bias for Python despite it probably not being the best — they prioritize the strongest signal in training data over the right choice," that is telling you mention-count is a biased metric for this topic. Read it; surface it; do not ignore it.
 - Stress-test your top pick before emitting. Ask: "Would the research actually defend this claim to a skeptical expert?" If the answer is no, re-rank.
 
-**Named failure mode (2026-04-18):** On `best programming language for AI agents`, Opus 4.7 led with `🏆 Most mentioned: Python (15+x mentions)` and put Go at #3 with 7x mentions. Model self-debug: "I counted when I should have judged. The single most load-bearing quote in the whole research was @javitm saying agents have a bias for Python despite it probably not being the best. I read that quote and then ranked by mention count anyway. The Flask-creator switching to Go was the real headline; I buried it." Do not repeat this failure.
+**Named failure mode (2026-04-18):** On `best programming language for AI agents`, Opus 4.7 led with `🏆 Most mentioned: Python (15+x mentions)` and put Go at #3 with 7x mentions. Model self-debug: "I counted when I should have judged. @javitm's quote should have changed the ranking because it called Python mentions a bias signal, not evidence of fit. I read that quote and then ranked by mention count anyway. The Flask-creator switching to Go was the real headline; I buried it." Do not repeat this failure.
 
 **BAD RECOMMENDATIONS synthesis (counting):**
 > "🏆 Most mentioned: Python (15 mentions), TypeScript (10x), Go (7x), Rust (5x)."
@@ -1477,6 +1535,7 @@ If the research output contains a `**🔍 Research Coverage:**` block, render it
 Question: "X/Twitter wasn't searched. Want to unlock it?"
 Options:
 - "Scan my browser cookies (free)" - Get consent, run cookie scan, write BROWSER_CONSENT=true + FROM_BROWSER=auto to .env
+- "I have AUTH_TOKEN and CT0 from my browser" - Ask them to paste each value, then write AUTH_TOKEN=<value>\nCT0=<value> to .env
 - "I have an xAI API key" - Ask them to paste it, write XAI_API_KEY to .env
 - "Skip for now"
 
@@ -1710,7 +1769,7 @@ Want another prompt? Just tell me what you're creating next.
 **What this skill does:**
 - Sends search queries to ScrapeCreators API (`api.scrapecreators.com`) for TikTok and Instagram search, and as a Reddit backup when public Reddit is unavailable (requires SCRAPECREATORS_API_KEY)
 - Legacy: Sends search queries to OpenAI's Responses API (`api.openai.com`) for Reddit discovery (fallback if no SCRAPECREATORS_API_KEY)
-- Sends search queries to Twitter's GraphQL API (via optional user-provided AUTH_TOKEN/CT0 env vars - no browser session access), xAI's API (`api.x.ai`), or the official X API v2 via xurl CLI (OAuth2, auto-detected when installed and authenticated) for X search
+- Sends search queries to Twitter's GraphQL API (via optional user-provided AUTH_TOKEN/CT0 env vars - no browser session access), xAI's API (`api.x.ai`), Xquik's API (`xquik.com`), or the official X API v2 via xurl CLI (OAuth2, auto-detected when installed and authenticated) for X search
 - Sends search queries to Algolia HN Search API (`hn.algolia.com`) for Hacker News story and comment discovery (free, no auth)
 - Sends search queries to Polymarket Gamma API (`gamma-api.polymarket.com`) for prediction market discovery (free, no auth)
 - Runs `yt-dlp` locally for YouTube search and transcript extraction (no API key, public data)

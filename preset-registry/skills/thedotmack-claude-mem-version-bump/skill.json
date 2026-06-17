@@ -1,7 +1,7 @@
 {
   "id": "thedotmack-claude-mem-version-bump",
   "name": "claude-code-plugin-release",
-  "description": "Automated semantic versioning and release workflow for Claude Code plugins. Handles version increments across package.json, marketplace.json, plugin.json manifests, npm publishing (so `npx claude-mem@X.Y.Z` resolves), build verification, git tagging, GitHub releases, and changelog generation.",
+  "description": "Automated semantic versioning and release workflow for Claude Code plugins. Handles version increments across package.json, marketplace.json, plugin.json manifests, build verification, git tagging, GitHub releases, and changelog generation. NPM publishing (so `npx claude-mem@X.Y.Z` resolves) is handed off to the human maintainer, who raised npm security.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/thedotmack/claude-mem/blob/main/plugin/skills/version-bump/SKILL.md",
     "path": "plugin/skills/version-bump/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-17T14:12:28.147Z",
-    "stars": 82935,
+    "discovered_at": "2026-06-17T20:40:33.502Z",
+    "stars": 82975,
     "language": "JavaScript",
-    "pushed_at": "2026-06-16T23:55:52Z",
+    "pushed_at": "2026-06-17T20:28:26Z",
     "license": "Apache-2.0"
-  },
-  "summary_zh": "专为 Claude Code 插件设计的自动化发布工具，能一键跑通从版本号更新、npm 发布到生成日志的完整流程，解决手动发版繁琐易错的问题，适合需要频繁迭代插件的开发者。"
+  }
 }

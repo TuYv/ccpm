@@ -1,7 +1,7 @@
 {
   "id": "mattpocock-skills-prototype",
   "name": "prototype",
-  "description": "Build a throwaway prototype to flesh out a design before committing to it. Routes between two branches — a runnable terminal app for state/business-logic questions, or several radically different UI variations toggleable from one route. Use when the user wants to prototype, sanity-check a data model or state machine, mock up a UI, explore design options, or says \"prototype this\", \"let me play with it\", \"try a few designs\".",
+  "description": "Build a throwaway prototype to flesh out a design — a runnable terminal app for state/business-logic questions, or several radically different UI variations toggleable from one route.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/mattpocock/skills/blob/main/skills/engineering/prototype/SKILL.md",
     "path": "skills/engineering/prototype/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-17T14:07:51.254Z",
-    "stars": 132889,
+    "discovered_at": "2026-06-17T20:36:43.930Z",
+    "stars": 133324,
     "language": "Shell",
-    "pushed_at": "2026-06-17T13:57:27Z",
+    "pushed_at": "2026-06-17T14:46:56Z",
     "license": "MIT"
-  },
-  "summary_zh": "这是一款帮你快速搭一次性原型的工具，用于正式开发前验证想法。既能跑终端验证逻辑，也能切换多套UI对比，特别适合验证数据模型、模拟界面或试错设计思路。"
+  }
 }

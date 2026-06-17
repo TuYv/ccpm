@@ -1,8 +1,8 @@
 {
   "id": "mattpocock-skills-improve-codebase-architecture",
   "name": "improve-codebase-architecture",
-  "description": "Find deepening opportunities in a codebase, informed by the domain language in CONTEXT.md and the decisions in docs/adr/. Use when the user wants to improve architecture, find refactoring opportunities, consolidate tightly-coupled modules, or make a codebase more testable and AI-navigable.",
-  "category": "测试调试",
+  "description": "Scan a codebase for deepening opportunities, present them as a visual HTML report, then grill through whichever one you pick.",
+  "category": "开发编程",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,10 @@
     "url": "https://github.com/mattpocock/skills/blob/main/skills/engineering/improve-codebase-architecture/SKILL.md",
     "path": "skills/engineering/improve-codebase-architecture/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-17T14:07:51.148Z",
-    "stars": 132889,
+    "discovered_at": "2026-06-17T20:36:43.814Z",
+    "stars": 133324,
     "language": "Shell",
-    "pushed_at": "2026-06-17T13:57:27Z",
+    "pushed_at": "2026-06-17T14:46:56Z",
     "license": "MIT"
-  },
-  "summary_zh": "这是一款结合项目上下文与架构决策记录来分析代码库的工具，适合需要优化架构、寻找重构点、解耦模块，或提升代码可测试性与AI可读性的场景。"
+  }
 }

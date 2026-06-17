@@ -1,0 +1,25 @@
+{
+  "id": "mattpocock-skills-ask-matt",
+  "name": "ask-matt",
+  "description": "Ask which skill or flow fits your situation. A router over the user-invoked skills in this repo.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mattpocock",
+  "install_path": ".claude/skills/ask-matt/SKILL.md",
+  "source": {
+    "repo": "mattpocock/skills",
+    "url": "https://github.com/mattpocock/skills/blob/main/skills/engineering/ask-matt/SKILL.md",
+    "path": "skills/engineering/ask-matt/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-17T20:36:43.288Z",
+    "stars": 133324,
+    "language": "Shell",
+    "pushed_at": "2026-06-17T14:46:56Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "mattpocock-skills-grilling",
+  "name": "grilling",
+  "description": "Interview the user relentlessly about a plan or design. Use when the user wants to stress-test a plan before building, or uses any 'grill' trigger phrases.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mattpocock",
+  "install_path": ".claude/skills/grilling/SKILL.md",
+  "source": {
+    "repo": "mattpocock/skills",
+    "url": "https://github.com/mattpocock/skills/blob/main/skills/productivity/grilling/SKILL.md",
+    "path": "skills/productivity/grilling/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-17T20:36:45.731Z",
+    "stars": 133324,
+    "language": "Shell",
+    "pushed_at": "2026-06-17T14:46:56Z",
+    "license": "MIT"
+  }
+}

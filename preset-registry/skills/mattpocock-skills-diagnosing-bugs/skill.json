@@ -1,0 +1,25 @@
+{
+  "id": "mattpocock-skills-diagnosing-bugs",
+  "name": "diagnosing-bugs",
+  "description": "Diagnosis loop for hard bugs and performance regressions. Use when the user says \"diagnose\"/\"debug this\", or reports something broken/throwing/failing/slow.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mattpocock",
+  "install_path": ".claude/skills/diagnosing-bugs/SKILL.md",
+  "source": {
+    "repo": "mattpocock/skills",
+    "url": "https://github.com/mattpocock/skills/blob/main/skills/engineering/diagnosing-bugs/SKILL.md",
+    "path": "skills/engineering/diagnosing-bugs/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-17T20:36:43.479Z",
+    "stars": 133324,
+    "language": "Shell",
+    "pushed_at": "2026-06-17T14:46:56Z",
+    "license": "MIT"
+  }
+}

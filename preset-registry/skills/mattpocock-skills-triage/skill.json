@@ -1,7 +1,7 @@
 {
   "id": "mattpocock-skills-triage",
   "name": "triage",
-  "description": "Triage issues through a state machine driven by triage roles. Use when user wants to create an issue, triage issues, review incoming bugs or feature requests, prepare issues for an AFK agent, or manage issue workflow.",
+  "description": "Move issues through a state machine of triage roles — categorise, reproduce, grill if needed, and write agent-ready briefs.",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/mattpocock/skills/blob/main/skills/engineering/triage/SKILL.md",
     "path": "skills/engineering/triage/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-17T14:07:51.795Z",
-    "stars": 132889,
+    "discovered_at": "2026-06-17T20:36:44.522Z",
+    "stars": 133324,
     "language": "Shell",
-    "pushed_at": "2026-06-17T13:57:27Z",
+    "pushed_at": "2026-06-17T14:46:56Z",
     "license": "MIT"
-  },
-  "summary_zh": "这是一个通过角色与状态机规范Issue分流的工具。适合团队需要集中审查和归类Bug与需求、推进问题处理，或给离线机器人派发任务时使用。"
+  }
 }
