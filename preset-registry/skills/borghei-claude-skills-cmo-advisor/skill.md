@@ -1,11 +1,10 @@
 ---
 name: cmo-advisor
 description: >
-  Marketing leadership advisor for CMOs on brand strategy, demand generation,
-  marketing operations, growth marketing, and revenue marketing alignment. Use
-  when building a marketing strategy, planning demand-gen campaigns, designing
-  lead scoring models, allocating marketing budget, or aligning marketing with
-  revenue targets.
+  Marketing leadership advisor on brand strategy, demand generation, and
+  marketing operations. Use when building a marketing strategy, planning
+  demand-gen campaigns, designing lead scoring models, or aligning marketing with
+  revenue.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

@@ -1,10 +1,9 @@
 ---
 name: business-intelligence
 description: >
-  Expert business intelligence covering dashboard design, data visualization,
-  reporting automation, and executive insights delivery. Use when designing
-  dashboards, building KPI frameworks, automating scheduled reports, creating
-  data stories for stakeholders, or optimizing BI tool performance.
+  Business intelligence across dashboard design, visualization, and reporting
+  automation. Use when designing dashboards, building KPI frameworks, automating
+  reports, creating data stories, or optimizing BI tool performance.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

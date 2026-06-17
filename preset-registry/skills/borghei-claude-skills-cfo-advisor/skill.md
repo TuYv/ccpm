@@ -1,11 +1,9 @@
 ---
 name: cfo-advisor
 description: >
-  Financial leadership advisor for CFOs on financial planning, fundraising,
-  investor reporting, unit economics, cash management, and financial operations.
-  Use when building a financial model, preparing for fundraising due diligence,
-  designing investor reporting packages, calculating unit economics, managing
-  cash runway, or planning month-end close processes.
+  Financial leadership advisor on financial planning, fundraising, investor
+  reporting, and unit economics. Use when building a financial model, preparing
+  for fundraising, calculating unit economics, or managing cash runway.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

@@ -1,11 +1,10 @@
 ---
 name: docx-toolkit
 description: >
-  Audit Microsoft Word (.docx) documents for word count, heading hierarchy,
-  comments, tracked changes, broken cross-references, and style consistency.
-  Use when reviewing a contract draft, preparing a document for handoff,
-  enforcing a style guide, or when the user mentions Word document review,
-  docx audit, comment cleanup, or tracked-changes resolution.
+  Audit Microsoft Word (.docx) documents for heading hierarchy, comments,
+  tracked changes, broken cross-references, and style consistency. Use when
+  reviewing a contract draft, preparing a document for handoff, or enforcing a
+  style guide.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

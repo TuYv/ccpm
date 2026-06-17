@@ -1,16 +1,9 @@
 ---
 name: chief-of-staff
 description: >
-  C-suite orchestration layer that routes founder questions to the right advisor
-  role(s), triggers multi-role board meetings for complex decisions, synthesizes
-  outputs, tracks decisions, and manages cross-functional alignment. Every
-  C-suite interaction starts here. Use when coordinating executive decisions,
-  routing strategic questions, managing board meetings, synthesizing
-  multi-perspective advice, tracking decision history, resolving
-  inter-department conflicts, or when user mentions chief of staff,
-  orchestrator, c-suite coordinator, executive routing, board coordination,
-  decision synthesis, advisor routing, multi-agent coordination, or strategic
-  orchestration.
+  C-suite orchestration that routes founder questions to the right advisor
+  role(s) and runs multi-role board meetings. Use when coordinating executive
+  decisions, routing strategic questions, or resolving cross-department conflicts.
 license: MIT + Commons Clause
 metadata:
   version: 2.0.0

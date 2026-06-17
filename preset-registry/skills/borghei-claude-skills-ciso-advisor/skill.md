@@ -1,15 +1,9 @@
 ---
 name: ciso-advisor
 description: >
-  Security leadership for growth-stage companies. Risk quantification in
-  dollars, compliance roadmap sequencing (SOC 2, ISO 27001, HIPAA, GDPR),
-  security architecture strategy, incident response leadership, vendor security
-  assessment, and board-level security reporting. Use when building security
-  programs, justifying security budget, selecting compliance frameworks,
-  managing incidents, assessing vendor risk, preparing for audits, or when user
-  mentions CISO, security strategy, compliance, zero trust, board security, risk
-  assessment, incident response, SOC 2, ISO 27001, HIPAA, GDPR, penetration
-  testing, or vulnerability management.
+  Security leadership for growth-stage companies. Use when building security
+  programs, selecting compliance frameworks (SOC 2, ISO 27001, HIPAA, GDPR),
+  managing incidents, or assessing vendor risk.
 license: MIT + Commons Clause
 metadata:
   version: 2.0.0

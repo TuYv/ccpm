@@ -1,7 +1,7 @@
 {
   "id": "borghei-claude-skills-pdf-toolkit",
   "name": "pdf-toolkit",
-  "description": "> Audit PDF files for metadata leakage, page count, encryption, JavaScript, embedded files, and version. Use before sending a PDF externally, when redacting sensitive metadata, or when the user mentions PDF audit, PDF metadata, PDF leakage check, or PDF security review.",
+  "description": "> Audit PDF files for metadata leakage, page count, encryption, JavaScript, embedded files, and version. Use before sending a PDF externally, when redacting sensitive metadata, or running a PDF security review.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/borghei/Claude-Skills/blob/main/documents/pdf-toolkit/SKILL.md",
     "path": "documents/pdf-toolkit/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-17T05:32:08.263Z",
-    "stars": 272,
+    "discovered_at": "2026-06-17T10:27:31.536Z",
+    "stars": 273,
     "language": "HTML",
-    "pushed_at": "2026-06-15T18:22:21Z",
+    "pushed_at": "2026-06-17T09:29:03Z",
     "license": null
-  },
-  "summary_zh": "一个 PDF 安全审计小工具，可检查元数据泄露、加密状态、嵌入脚本和附件等隐患，适合在对外发送文件前做一轮敏感信息排查。"
+  }
 }

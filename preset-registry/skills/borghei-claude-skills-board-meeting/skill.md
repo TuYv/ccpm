@@ -1,13 +1,9 @@
 ---
 name: board-meeting
 description: >
-  Multi-agent board meeting protocol for strategic decisions. Runs a structured
-  6-phase deliberation: context loading, independent C-suite contributions,
-  critic analysis, synthesis, founder review, and decision extraction. Prevents
-  groupthink through isolated contributions. Use when making major strategic
-  decisions, resolving cross-functional disagreements, evaluating irreversible
-  choices, or when user mentions board meeting, executive deliberation,
-  strategic decision, multi-perspective, or structured deliberation.
+  Multi-agent board meeting protocol running a structured 6-phase deliberation
+  with isolated C-suite contributions to prevent groupthink. Use when making
+  major strategic decisions or resolving cross-functional disagreements.
 license: MIT + Commons Clause
 metadata:
   version: 2.0.0

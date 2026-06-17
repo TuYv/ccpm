@@ -1,10 +1,9 @@
 ---
 name: data-analyst
 description: >
-  Expert data analysis covering SQL querying, data visualization, statistical
-  analysis, business reporting, and data storytelling. Use when writing SQL
-  queries, building dashboards, performing cohort or funnel analysis, running
-  hypothesis tests, or presenting data-driven recommendations to stakeholders.
+  Data analysis across SQL, visualization, statistics, and reporting. Use when
+  writing SQL queries, building dashboards, performing cohort or funnel
+  analysis, running hypothesis tests, or presenting data-driven recommendations.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

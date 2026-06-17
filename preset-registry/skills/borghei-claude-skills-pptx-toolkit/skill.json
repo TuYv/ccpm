@@ -1,7 +1,7 @@
 {
   "id": "borghei-claude-skills-pptx-toolkit",
   "name": "pptx-toolkit",
-  "description": "> Audit PowerPoint (.pptx) decks for slide count, text density per slide, embedded images, embedded fonts, hidden slides, speaker notes presence, and animation density. Use when reviewing a board deck, sales deck, or conference talk before sending, or when the user mentions deck audit, pptx review, slide density, or speaker notes check.",
+  "description": "> Audit PowerPoint (.pptx) decks for slide count, text density, embedded images and fonts, hidden slides, speaker notes, and animation density. Use when reviewing a board deck, sales deck, or conference talk before sending.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/borghei/Claude-Skills/blob/main/documents/pptx-toolkit/SKILL.md",
     "path": "documents/pptx-toolkit/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-17T05:32:08.391Z",
-    "stars": 272,
+    "discovered_at": "2026-06-17T10:27:31.719Z",
+    "stars": 273,
     "language": "HTML",
-    "pushed_at": "2026-06-15T18:22:21Z",
+    "pushed_at": "2026-06-17T09:29:03Z",
     "license": null
-  },
-  "summary_zh": "用来给 PPT 演示文稿做体检的工具，能快速查看页数、每页文字密度、嵌入的图片字体、隐藏页、备注和动画情况，适合在把董事会汇报、销售方案或大会演讲文件发出去前过一遍。"
+  }
 }

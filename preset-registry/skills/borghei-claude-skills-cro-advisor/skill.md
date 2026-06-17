@@ -1,13 +1,9 @@
 ---
 name: cro-advisor
 description: >
-  Revenue leadership for B2B SaaS companies. Covers revenue forecasting, sales
-  model design, pricing strategy, net revenue retention, sales team scaling,
-  pipeline management, and board-level revenue reporting. Use when designing the
-  revenue engine, setting quotas, modeling NRR, evaluating pricing, building
-  forecasts, scaling sales teams, or when user mentions CRO, revenue strategy,
-  sales model, ARR growth, NRR, expansion revenue, churn, pricing strategy,
-  sales capacity, pipeline, quota, or MEDDPICC.
+  Revenue leadership for B2B SaaS: forecasting, sales model design, pricing, and
+  net revenue retention. Use when designing the revenue engine, setting quotas,
+  modeling NRR, evaluating pricing, or scaling sales teams.
 license: MIT + Commons Clause
 metadata:
   version: 2.0.0

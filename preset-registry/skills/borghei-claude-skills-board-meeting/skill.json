@@ -1,7 +1,7 @@
 {
   "id": "borghei-claude-skills-board-meeting",
   "name": "board-meeting",
-  "description": "> Multi-agent board meeting protocol for strategic decisions. Runs a structured 6-phase deliberation: context loading, independent C-suite contributions, critic analysis, synthesis, founder review, and decision extraction. Prevents groupthink through isolated contributions. Use when making major strategic decisions, resolving cross-functional disagreements, evaluating irreversible choices, or when user mentions board meeting, executive deliberation, strategic decision, multi-perspective, or stru",
+  "description": "> Multi-agent board meeting protocol running a structured 6-phase deliberation with isolated C-suite contributions to prevent groupthink. Use when making major strategic decisions or resolving cross-functional disagreements.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/borghei/Claude-Skills/blob/main/c-level-advisor/board-meeting/SKILL.md",
     "path": "c-level-advisor/board-meeting/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-17T05:32:03.315Z",
-    "stars": 272,
+    "discovered_at": "2026-06-17T10:27:23.994Z",
+    "stars": 273,
     "language": "HTML",
-    "pushed_at": "2026-06-15T18:22:21Z",
+    "pushed_at": "2026-06-17T09:29:03Z",
     "license": null
-  },
-  "summary_zh": "用多智能体模拟董事会议事流程，让各路高管先独立发言再批判、综合，避免群体思维，适合做重大战略决策、跨部门分歧仲裁或评估不可逆选择时使用。"
+  }
 }

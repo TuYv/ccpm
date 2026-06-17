@@ -1,10 +1,9 @@
 ---
 name: analytics-engineer
 description: >
-  Expert analytics engineering covering data modeling, dbt development, data
-  transformation, and semantic layer management. Use when building dbt models,
-  designing star schemas, writing staging or mart SQL, configuring data tests,
-  defining semantic-layer metrics, or optimizing warehouse query performance.
+  Analytics engineering across data modeling, dbt, transformation, and semantic
+  layers. Use when building dbt models, designing star schemas, writing staging
+  or mart SQL, configuring data tests, or optimizing warehouse queries.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

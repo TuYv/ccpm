@@ -1,8 +1,8 @@
 {
   "id": "borghei-claude-skills-scenario-war-room",
   "name": "scenario-war-room",
-  "description": "> Cross-functional what-if modeling for compound adversity scenarios. Models cascading multi-variable risks across all business functions simultaneously. Unlike single-assumption stress tests, this shows how one problem creates the next. Use when facing complex risk scenarios, strategic decisions with major downside, multi-variable threats, or when someone asks \"what if X AND Y both happen?",
-  "category": "测试调试",
+  "description": "> Cross-functional what-if modeling for compound adversity -- shows how one problem cascades into the next. Use when facing complex risk scenarios, strategic decisions with major downside, or multi-variable threats.",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,10 @@
     "url": "https://github.com/borghei/Claude-Skills/blob/main/c-level-advisor/scenario-war-room/SKILL.md",
     "path": "c-level-advisor/scenario-war-room/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-17T05:32:07.013Z",
-    "stars": 272,
+    "discovered_at": "2026-06-17T10:27:29.537Z",
+    "stars": 273,
     "language": "HTML",
-    "pushed_at": "2026-06-15T18:22:21Z",
+    "pushed_at": "2026-06-17T09:29:03Z",
     "license": null
-  },
-  "summary_zh": "用于模拟复合型危机场景的跨部门推演工具，能呈现一个问题如何引发连锁反应，适合应对多重风险叠加、下行影响重大的战略决策，或回答\"如果X和Y同时发生该怎么办\"这类问题。"
+  }
 }

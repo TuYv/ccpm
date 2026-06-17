@@ -1,15 +1,9 @@
 ---
 name: commercial-policy
 description: >
-  Commercial policy: the written governance framework that defines what
-  commercial terms sales can offer, what triggers approval, and what's
-  off-limits. Use when authoring or refreshing a company commercial-policy
-  charter, defining discount / contract / payment / termination / liability
-  policies, auditing existing deals for policy compliance, drafting
-  commercial-policy training for sales, or generating a tailored policy
-  for a new region or vertical. Sits above deal-desk (which enforces) and
-  pricing-strategy (which sets prices) — this is the policy layer that
-  reflects how the company decides to do business.
+  Commercial policy: the governance framework defining what terms sales can offer
+  and what triggers approval. Use when authoring a policy charter, defining
+  discount/payment/liability rules, auditing deals, or generating a regional policy.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

@@ -1,15 +1,9 @@
 ---
 name: founder-coach
 description: >
-  Personal leadership development for founders and first-time CEOs. Covers
-  founder archetype identification, delegation frameworks, energy management,
-  CEO calendar audits, leadership style evolution, blind spot identification,
-  imposter syndrome, founder mental health, succession planning, and the founder
-  mode trap. Use when a founder feels like the bottleneck, struggles to
-  delegate, is burning out, transitioning from IC to executive, managing a board
-  for the first time, or when user mentions founder mode, CEO growth, leadership
-  development, delegation, burnout, imposter syndrome, founder bottleneck, or
-  executive transition.
+  Personal leadership development for founders and first-time CEOs. Use when a
+  founder feels like the bottleneck, struggles to delegate, is burning out, or
+  transitioning from IC to executive.
 license: MIT + Commons Clause
 metadata:
   version: 2.0.0

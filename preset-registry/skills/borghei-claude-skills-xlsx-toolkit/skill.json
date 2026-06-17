@@ -1,7 +1,7 @@
 {
   "id": "borghei-claude-skills-xlsx-toolkit",
   "name": "xlsx-toolkit",
-  "description": "> Audit Microsoft Excel (.xlsx) workbooks for sheet count, cell count, formula density, external references, named ranges, hidden sheets, and data validation rules. Use when reviewing a financial model, sharing a workbook externally, or when the user mentions xlsx audit, spreadsheet review, formula audit, or workbook leakage check.",
+  "description": "> Audit Microsoft Excel (.xlsx) workbooks for formula density, external references, named ranges, hidden sheets, and data validation. Use when reviewing a financial model, sharing a workbook externally, or checking for data leakage.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/borghei/Claude-Skills/blob/main/documents/xlsx-toolkit/SKILL.md",
     "path": "documents/xlsx-toolkit/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-17T05:32:08.552Z",
-    "stars": 272,
+    "discovered_at": "2026-06-17T10:27:32.036Z",
+    "stars": 273,
     "language": "HTML",
-    "pushed_at": "2026-06-15T18:22:21Z",
+    "pushed_at": "2026-06-17T09:29:03Z",
     "license": null
-  },
-  "summary_zh": "用于审查 Excel 工作簿的工具，可统计公式密度、外部引用、命名区域、隐藏表和数据验证规则，适合财务模型复核、对外分享前的泄密检查或电子表格安全审计。"
+  }
 }

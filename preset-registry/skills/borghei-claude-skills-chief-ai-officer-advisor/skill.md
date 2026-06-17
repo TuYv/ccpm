@@ -1,12 +1,9 @@
 ---
 name: chief-ai-officer-advisor
 description: >
-  AI leadership advisor for Chief AI Officers on AI strategy, governance,
-  risk management, investment planning, organizational design, and the
-  AI/ML talent stack. Use when defining an AI strategy, building an AI
-  governance program, evaluating build-vs-buy for AI capability, scoring
-  AI maturity, drafting an AI risk register, or planning AI investment
-  across the portfolio.
+  AI leadership advisor on AI strategy, governance, risk, investment, and org
+  design. Use when defining an AI strategy, building an AI governance program,
+  scoring AI maturity, or drafting an AI risk register.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

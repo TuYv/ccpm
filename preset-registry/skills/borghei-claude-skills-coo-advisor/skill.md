@@ -1,11 +1,9 @@
 ---
 name: coo-advisor
 description: >
-  Operations leadership advisor for COOs on business operations, process
-  optimization, scaling infrastructure, cross-functional alignment, and
-  operational excellence. Use when designing operational processes, planning
-  headcount capacity, optimizing vendor relationships, building business
-  continuity plans, or scaling operations for rapid growth.
+  Operations leadership advisor on business operations, process optimization, and
+  scaling infrastructure. Use when designing operational processes, planning
+  headcount capacity, optimizing vendors, or scaling operations.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

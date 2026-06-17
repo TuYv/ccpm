@@ -1,14 +1,10 @@
 ---
 name: intl-expansion
 description: >
-  International market expansion strategy for scaling companies. Covers market
-  selection scoring, entry mode evaluation, localization requirements,
-  regulatory compliance by region, go-to-market adaptation, team structure
-  decisions, and launch planning. Use when expanding to new countries,
-  evaluating international markets, planning localization, building regional
-  teams, assessing regulatory requirements, or when user mentions international
-  expansion, market entry, localization, regional strategy, global expansion,
-  cross-border, or new market.
+  International market expansion strategy for scaling companies. Use when
+  expanding to new countries, evaluating international markets, planning
+  localization, building regional teams, or assessing regulatory requirements by
+  region.
 license: MIT + Commons Clause
 metadata:
   version: 2.0.0

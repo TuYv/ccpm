@@ -1,13 +1,9 @@
 ---
 name: board-deck-builder
 description: >
-  Assembles comprehensive board and investor update decks by pulling
-  perspectives from all C-suite roles. Covers deck structure, narrative
-  frameworks, bad news delivery, section-by-section guidance, and common
-  mistakes. Use when preparing board meetings, investor updates, quarterly
-  business reviews, fundraising narratives, or when user mentions board deck,
-  investor update, board pack, board presentation, quarterly review, fundraising
-  deck, or investor deck.
+  Assembles board and investor update decks by pulling perspectives from all
+  C-suite roles. Use when preparing board meetings, investor updates, quarterly
+  business reviews, or fundraising narratives.
 license: MIT + Commons Clause
 metadata:
   version: 2.0.0

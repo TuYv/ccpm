@@ -3,8 +3,7 @@ name: pdf-toolkit
 description: >
   Audit PDF files for metadata leakage, page count, encryption, JavaScript,
   embedded files, and version. Use before sending a PDF externally, when
-  redacting sensitive metadata, or when the user mentions PDF audit, PDF
-  metadata, PDF leakage check, or PDF security review.
+  redacting sensitive metadata, or running a PDF security review.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

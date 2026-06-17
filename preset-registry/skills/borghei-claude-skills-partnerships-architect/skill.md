@@ -1,14 +1,9 @@
 ---
 name: partnerships-architect
 description: >
-  Design strategic partnerships — technology / channel / strategic / co-marketing
-  — and the programs that scale them. Use when evaluating a potential partner,
-  picking the right partnership type (tech integration vs reseller vs OEM vs
-  strategic alliance), designing a partner program from scratch, structuring a
-  specific partnership deal, modeling ROI on a partnership investment, or
-  auditing an existing partner portfolio for ROI / strategic fit. Pairs with
-  our channel-economics (financial mechanics) and deal-desk (per-deal approval)
-  — this skill is the strategy layer above both.
+  Design strategic partnerships — technology, channel, co-marketing — and the
+  programs that scale them. Use when evaluating a partner, picking a partnership
+  type, designing a partner program, structuring a deal, or modeling ROI.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

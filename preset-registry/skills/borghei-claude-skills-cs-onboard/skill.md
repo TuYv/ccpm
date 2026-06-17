@@ -1,12 +1,9 @@
 ---
 name: cs-onboard
 description: >
-  Structured C-suite onboarding through a founder interview that captures
-  company context across 7 dimensions. Generates a persistent company context
-  file used by all C-level advisory skills. Includes quarterly refresh protocol,
-  context quality scoring, and graceful handling of missing information. Use
-  when setting up advisory context for the first time, refreshing stale company
-  context, or onboarding a new executive.
+  Structured C-suite onboarding via a founder interview that captures company
+  context into a persistent file used by all advisory skills. Use when setting up
+  advisory context, refreshing stale context, or onboarding a new executive.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

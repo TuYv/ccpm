@@ -1,14 +1,10 @@
 ---
 name: company-os
 description: >
-  The meta-framework for how a company runs -- the connective tissue between all
-  C-suite roles. Covers operating system selection (EOS, Scaling Up, OKR-native,
-  hybrid), accountability charts, scorecards, meeting pulse design, issue
-  resolution (IDS), 90-day rocks, and communication cadence. Use when setting up
-  company operations, selecting a management framework, designing meeting
-  rhythms, building accountability systems, implementing OKRs, or when user
-  mentions EOS, Scaling Up, operating system, L10 meetings, rocks, scorecard,
-  accountability chart, quarterly planning, or meeting cadence.
+  Meta-framework for how a company runs -- the connective tissue between C-suite
+  roles (EOS, Scaling Up, OKR-native). Use when setting up company operations,
+  selecting a management framework, designing meeting rhythms, or implementing
+  OKRs.
 license: MIT + Commons Clause
 metadata:
   version: 2.0.0

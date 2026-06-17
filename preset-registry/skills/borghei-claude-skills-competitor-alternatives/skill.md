@@ -1,10 +1,10 @@
 ---
 name: competitor-alternatives
 description: >
-  Competitor comparison and alternative page creation for SEO and sales
-  enablement. Covers 4 page formats (singular alternative, plural alternatives,
-  vs pages, competitor vs competitor), content architecture, research
-  methodology, and centralized competitor data management.
+  Create competitor comparison and alternative pages for SEO and sales
+  enablement. Use when building alternative pages, vs pages, or
+  competitor-vs-competitor pages, planning comparison content, or managing
+  competitor data.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

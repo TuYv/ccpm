@@ -1,7 +1,7 @@
 {
   "id": "borghei-claude-skills-cs-onboard",
   "name": "cs-onboard",
-  "description": "> Structured C-suite onboarding through a founder interview that captures company context across 7 dimensions. Generates a persistent company context file used by all C-level advisory skills. Includes quarterly refresh protocol, context quality scoring, and graceful handling of missing information. Use when setting up advisory context for the first time, refreshing stale company context, or onboarding a new executive.",
+  "description": "> Structured C-suite onboarding via a founder interview that captures company context into a persistent file used by all advisory skills. Use when setting up advisory context, refreshing stale context, or onboarding a new executive.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/borghei/Claude-Skills/blob/main/c-level-advisor/cs-onboard/SKILL.md",
     "path": "c-level-advisor/cs-onboard/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-17T05:32:05.600Z",
-    "stars": 272,
+    "discovered_at": "2026-06-17T10:27:27.357Z",
+    "stars": 273,
     "language": "HTML",
-    "pushed_at": "2026-06-15T18:22:21Z",
+    "pushed_at": "2026-06-17T09:29:03Z",
     "license": null
-  },
-  "summary_zh": "通过创始人访谈从 7 个维度采集公司背景，生成一份持久化的上下文文件，供各类高管顾问场景复用，适合首次搭建顾问语境、季度更新或新高管入职时快速对齐情况。"
+  }
 }

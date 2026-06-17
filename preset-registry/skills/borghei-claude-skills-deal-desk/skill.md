@@ -1,15 +1,9 @@
 ---
 name: deal-desk
 description: >
-  Deal desk: the cross-functional function that reviews, approves, and structures
-  non-standard sales deals. Use when standing up a deal-desk function from scratch,
-  defining the deal-desk charter and SLA, building approval-threshold matrices
-  (discount %, contract length, custom terms, payment terms, custom SLAs),
-  designing a deal-review packet template, routing deals through the right
-  approvers, analyzing deal velocity to find bottlenecks, or auditing recent
-  deals for policy compliance. Pairs with our existing pricing-strategy
-  (sets the prices) and revenue-operations (measures the funnel) skills —
-  this one runs the operational machinery between those two.
+  Deal desk: reviews, approves, and structures non-standard sales deals. Use when
+  standing up a deal desk, building approval-threshold matrices, designing
+  deal-review packets, routing deals, or auditing deals for compliance.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

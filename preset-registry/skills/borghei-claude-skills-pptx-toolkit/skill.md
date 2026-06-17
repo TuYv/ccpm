@@ -1,11 +1,9 @@
 ---
 name: pptx-toolkit
 description: >
-  Audit PowerPoint (.pptx) decks for slide count, text density per slide,
-  embedded images, embedded fonts, hidden slides, speaker notes presence,
-  and animation density. Use when reviewing a board deck, sales deck, or
-  conference talk before sending, or when the user mentions deck audit,
-  pptx review, slide density, or speaker notes check.
+  Audit PowerPoint (.pptx) decks for slide count, text density, embedded images
+  and fonts, hidden slides, speaker notes, and animation density. Use when
+  reviewing a board deck, sales deck, or conference talk before sending.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

@@ -1,12 +1,9 @@
 ---
 name: vpe-advisor
 description: >
-  VP of Engineering advisor for engineering leaders on organizational
-  design, productivity, quality, delivery, capacity planning, and culture.
-  Complements cto-advisor (technical strategy) with the people-process-delivery
-  half of the engineering leadership mandate. Use when scoring engineering
-  org health, designing the engineering org, planning capacity, building
-  the productivity dashboard, or preparing the eng section of the board update.
+  VP of Engineering advisor on org design, productivity, quality, delivery, and
+  capacity planning. Use when scoring engineering org health, designing the eng
+  org, planning capacity, or building the productivity dashboard.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

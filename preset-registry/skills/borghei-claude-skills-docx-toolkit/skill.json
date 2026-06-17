@@ -1,7 +1,7 @@
 {
   "id": "borghei-claude-skills-docx-toolkit",
   "name": "docx-toolkit",
-  "description": "> Audit Microsoft Word (.docx) documents for word count, heading hierarchy, comments, tracked changes, broken cross-references, and style consistency. Use when reviewing a contract draft, preparing a document for handoff, enforcing a style guide, or when the user mentions Word document review, docx audit, comment cleanup, or tracked-changes resolution.",
+  "description": "> Audit Microsoft Word (.docx) documents for heading hierarchy, comments, tracked changes, broken cross-references, and style consistency. Use when reviewing a contract draft, preparing a document for handoff, or enforcing a style guide.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/borghei/Claude-Skills/blob/main/documents/docx-toolkit/SKILL.md",
     "path": "documents/docx-toolkit/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-17T05:32:08.137Z",
-    "stars": 272,
+    "discovered_at": "2026-06-17T10:27:31.219Z",
+    "stars": 273,
     "language": "HTML",
-    "pushed_at": "2026-06-15T18:22:21Z",
+    "pushed_at": "2026-06-17T09:29:03Z",
     "license": null
-  },
-  "summary_zh": "用来给 Word 文档做体检的命令行工具，能查字数、标题层级、批注、修订痕迹、交叉引用断链和样式一致性，适合合同审阅、交稿前自检或团队样式规范落地。"
+  }
 }

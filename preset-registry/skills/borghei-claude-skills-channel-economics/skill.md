@@ -2,13 +2,8 @@
 name: channel-economics
 description: >
   Channel economics: design and analyze the financial structure of go-to-market
-  channels (direct sales, resellers, distributors, marketplaces, embedded
-  partners, MSPs, integrators). Use when picking the right channel mix for a
-  product, modeling partner margin / TCO, designing partner tiers with rebate
-  structures, analyzing channel conflict, or building the financial model that
-  justifies (or kills) a partnership. Pairs with our partnerships-architect
-  (partnership type / strategy) and deal-desk (partner-deal mechanics) — this
-  one is the spreadsheet behind those conversations.
+  channels. Use when picking a channel mix, modeling partner margin or TCO,
+  designing partner tiers and rebates, or analyzing channel conflict.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

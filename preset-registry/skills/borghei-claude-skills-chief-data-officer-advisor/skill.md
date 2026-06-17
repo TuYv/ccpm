@@ -1,11 +1,9 @@
 ---
 name: chief-data-officer-advisor
 description: >
-  Data leadership advisor for Chief Data Officers on data strategy,
-  governance, quality, monetization, platform decisions, and team
-  design. Use when defining a data strategy, scoring data maturity,
-  auditing a data governance program, evaluating a data platform stack,
-  designing the data org, or preparing the data section of a board update.
+  Data leadership advisor on data strategy, governance, quality, and platform
+  decisions. Use when defining a data strategy, scoring data maturity, auditing
+  data governance, evaluating a data platform, or designing the data org.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

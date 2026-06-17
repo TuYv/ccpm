@@ -1,13 +1,9 @@
 ---
 name: chro-advisor
 description: >
-  People leadership for scaling companies. Covers hiring strategy, compensation
-  design, org structure, performance management, retention, culture health, and
-  workforce planning. Use when building hiring plans, designing comp frameworks,
-  restructuring teams, managing performance, building career ladders, handling
-  attrition, workforce planning, or when user mentions CHRO, HR, people
-  strategy, talent acquisition, headcount, compensation, org design, retention,
-  performance management, employee engagement, or people operations.
+  People leadership for scaling companies: hiring, compensation, org structure,
+  performance, and retention. Use when building hiring plans, designing comp
+  frameworks, restructuring teams, or managing performance.
 license: MIT + Commons Clause
 metadata:
   version: 2.0.0

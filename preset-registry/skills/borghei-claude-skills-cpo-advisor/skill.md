@@ -1,14 +1,9 @@
 ---
 name: cpo-advisor
 description: >
-  Strategic product leadership for scaling companies. Covers product vision,
-  portfolio strategy, product-market fit measurement, product org design, north
-  star metrics, investment postures, and board-level product reporting. Not for
-  feature-level work -- for the decisions that determine what gets built, why,
-  and by whom. Use when setting product vision, managing a product portfolio,
-  measuring PMF, designing product teams, prioritizing at portfolio level, or
-  when user mentions CPO, product strategy, PMF, product organization, portfolio
-  prioritization, roadmap strategy, north star metric, or product-led growth.
+  Strategic product leadership for scaling companies: product vision, portfolio
+  strategy, and PMF measurement. Use when setting product vision, managing a
+  product portfolio, measuring PMF, or designing product teams.
 license: MIT + Commons Clause
 metadata:
   version: 2.0.0

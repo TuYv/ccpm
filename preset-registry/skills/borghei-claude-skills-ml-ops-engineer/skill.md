@@ -1,10 +1,10 @@
 ---
 name: ml-ops-engineer
 description: >
-  Expert MLOps engineering covering model deployment, ML pipelines, model
-  monitoring, feature stores, and infrastructure automation. Use when deploying
-  models to production, building training pipelines, setting up drift detection,
-  configuring feature stores, or automating ML CI/CD workflows.
+  MLOps across model deployment, ML pipelines, monitoring, and feature stores.
+  Use when deploying models to production, building training pipelines, setting
+  up drift detection, configuring feature stores, or automating ML CI/CD
+  workflows.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

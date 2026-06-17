@@ -1,10 +1,10 @@
 ---
 name: data-scientist
 description: >
-  Expert data science covering machine learning, statistical modeling,
-  experimentation, predictive analytics, and advanced analytics. Use when
-  selecting ML algorithms, engineering features, designing A/B tests, evaluating
-  model performance, or building predictive pipelines.
+  Data science across machine learning, statistical modeling, and
+  experimentation. Use when selecting ML algorithms, engineering features,
+  designing A/B tests, evaluating model performance, or building predictive
+  pipelines.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

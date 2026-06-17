@@ -1,12 +1,9 @@
 ---
 name: org-health-diagnostic
 description: >
-  Cross-functional organizational health check combining signals from all
-  C-suite roles. Scores 8 dimensions on a traffic-light scale with drill-down
-  recommendations and cascade analysis. Use when assessing overall company
-  health, preparing for board reviews, identifying at-risk functions, diagnosing
-  cross-functional problems, or when user mentions org health, health check,
-  health dashboard, company health, functional health, or health assessment.
+  Cross-functional organizational health check scoring 8 dimensions on a
+  traffic-light scale. Use when assessing company health, preparing for board
+  reviews, identifying at-risk functions, or diagnosing cross-functional problems.
 license: MIT + Commons Clause
 metadata:
   version: 2.0.0

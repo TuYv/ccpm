@@ -1,11 +1,9 @@
 ---
 name: chief-customer-officer-advisor
 description: >
-  Customer leadership advisor for Chief Customer Officers on customer
-  experience strategy, retention and expansion, voice-of-customer programs,
-  CX organizational design, and customer outcomes accountability. Use when
-  defining a CX strategy, scoring CX maturity, planning churn interventions,
-  designing a VoC program, or preparing the customer section of a board update.
+  Customer leadership advisor on CX strategy, retention and expansion, and
+  voice-of-customer programs. Use when defining a CX strategy, scoring CX
+  maturity, planning churn interventions, or designing a VoC program.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

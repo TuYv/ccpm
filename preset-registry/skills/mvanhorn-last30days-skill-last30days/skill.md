@@ -283,11 +283,11 @@ Before proceeding to Step 1, handle first-run setup.
 - If the file exists and contains `SETUP_COMPLETE=true`, skip Step 0 entirely and go to Step 1 (CRITICAL: Parse User Intent below). Do NOT announce that setup is complete. The user does not need a status message on every run.
 
 **If this IS a first run:**
-- Use the Read tool to load `skills/last30days/nux-wizard.md` (relative to the skill root).
-- Follow the wizard's instructions end-to-end. The wizard handles platform detection (OpenClaw vs Claude Code), auto vs manual setup, ScrapeCreators opt-in, and the initial topic picker.
+- Run `python3 skills/last30days/scripts/last30days.py setup` (relative to the skill root) to launch the setup wizard.
+- Follow the wizard's prompts end-to-end. The wizard handles platform detection (OpenClaw vs Claude Code), auto vs manual setup, browser cookie extraction, ScrapeCreators opt-in, and the initial topic picker.
 - After the wizard writes `SETUP_COMPLETE=true` to `~/.config/last30days/.env`, proceed to research.
 
-The wizard lives in a separate file so the common-case (already set up) path through this file is short and the voice-contract rules further down stay in context.
+The setup wizard lives as a Python module so it works across all hosts (Claude Code, Codex, Cursor, etc.) and the common-case (already set up) path through this file stays short.
 
 ---
 
@@ -560,7 +560,7 @@ If `--agent` appears in ARGUMENTS (e.g., `/last30days plaud granola --agent`):
 5. **Skip** the follow-up invitation ("I'm now an expert on X...")
 6. **Output** the complete research report and stop - do not wait for further input
 
-Agent mode saves raw research data to `LAST30DAYS_MEMORY_DIR` (defaults to `~/Documents/Last30Days`) automatically via `--save-dir` (handled by the script, no extra tool calls).
+Agent mode saves raw research data to `LAST30DAYS_MEMORY_DIR` (defaults to `~/Documents/Last30Days`) automatically via `--save-dir` (handled by the script, no extra tool calls). Use `--output <file>` only when a caller needs the rendered stdout artifact at an exact path, with the format controlled by `--emit`.
 
 Agent mode report format:
 

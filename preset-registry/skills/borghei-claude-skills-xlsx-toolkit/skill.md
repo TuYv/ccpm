@@ -1,11 +1,10 @@
 ---
 name: xlsx-toolkit
 description: >
-  Audit Microsoft Excel (.xlsx) workbooks for sheet count, cell count, formula
-  density, external references, named ranges, hidden sheets, and data
-  validation rules. Use when reviewing a financial model, sharing a workbook
-  externally, or when the user mentions xlsx audit, spreadsheet review,
-  formula audit, or workbook leakage check.
+  Audit Microsoft Excel (.xlsx) workbooks for formula density, external
+  references, named ranges, hidden sheets, and data validation. Use when
+  reviewing a financial model, sharing a workbook externally, or checking for
+  data leakage.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

@@ -1,12 +1,9 @@
 ---
 name: general-counsel-advisor
 description: >
-  Legal leadership advisor for General Counsels and senior legal leaders
-  on legal strategy, risk management, contract and commercial governance,
-  regulatory tracking, litigation management, and legal-team operating
-  model. Use when defining a legal strategy, scoring legal risk,
-  auditing the contract portfolio, building a regulatory calendar, or
-  preparing the legal section of a board update.
+  Legal leadership advisor on legal strategy, risk, contract governance, and
+  regulatory tracking. Use when defining a legal strategy, scoring legal risk,
+  auditing the contract portfolio, or building a regulatory calendar.
 license: MIT + Commons Clause
 metadata:
   version: 1.0.0

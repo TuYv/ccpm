@@ -2,13 +2,9 @@
 name: strategic-alignment
 description: >
   Cascades strategy from boardroom to individual contributor and detects
-  misalignment. Covers strategy articulation testing, cascade mapping, orphan
-  goal detection, conflicting goal identification, silo diagnosis, communication
-  gap analysis, and realignment protocols. Use when teams are pulling in
-  different directions, OKRs don't connect, departments optimize locally at
-  company expense, strategy doesn't translate to execution, or when user
-  mentions alignment, strategy cascade, silo, conflicting OKRs, strategy
-  communication, goal cascade, or misalignment.
+  misalignment. Use when teams pull in different directions, OKRs don't connect,
+  departments optimize locally at company expense, or strategy doesn't translate
+  to execution.
 license: MIT + Commons Clause
 metadata:
   version: 2.0.0

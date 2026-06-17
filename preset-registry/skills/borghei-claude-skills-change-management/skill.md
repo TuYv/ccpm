@@ -1,14 +1,9 @@
 ---
 name: change-management
 description: >
-  Framework for rolling out organizational changes without chaos. Covers the
-  ADKAR model adapted for startups, communication templates, resistance patterns
-  and responses, change fatigue management, and specific playbooks for process
-  changes, reorgs, strategy pivots, and culture changes. Use when announcing a
-  reorg, switching tools, pivoting strategy, killing a product, changing
-  leadership, rolling out new processes, or when user mentions change
-  management, change rollout, managing resistance, org change, reorg, pivot
-  communication, tool migration, or change fatigue.
+  Framework for rolling out organizational changes without chaos, using ADKAR
+  adapted for startups. Use when announcing a reorg, switching tools, pivoting
+  strategy, killing a product, or managing change resistance.
 license: MIT + Commons Clause
 metadata:
   version: 2.0.0
