@@ -1,0 +1,25 @@
+{
+  "id": "czlonkowski-n8n-skills-using-n8n-mcp-skills",
+  "name": "using-n8n-mcp-skills",
+  "description": "Use when building, editing, validating, testing, or debugging an n8n workflow through the n8n-mcp MCP server — designing a flow, configuring a node, writing an expression or Code node, wiring credentials, or fixing one that misbehaves. The entry-point skill for the n8n-mcp-skills pack: it routes you to the right specialist skill, gives working knowledge of every n8n-mcp tool from turn one, and states the rules that keep workflows from breaking in production. Always consult it first on any n8n, w",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "czlonkowski",
+  "install_path": ".claude/skills/using-n8n-mcp-skills/SKILL.md",
+  "source": {
+    "repo": "czlonkowski/n8n-skills",
+    "url": "https://github.com/czlonkowski/n8n-skills/blob/main/skills/using-n8n-mcp-skills/SKILL.md",
+    "path": "skills/using-n8n-mcp-skills/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-17T23:04:04.802Z",
+    "stars": 5460,
+    "language": "Shell",
+    "pushed_at": "2026-06-17T22:52:08Z",
+    "license": "MIT"
+  }
+}

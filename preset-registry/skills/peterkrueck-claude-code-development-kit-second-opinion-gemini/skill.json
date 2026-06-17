@@ -1,0 +1,25 @@
+{
+  "id": "peterkrueck-claude-code-development-kit-second-opinion-gemini",
+  "name": "second-opinion-gemini",
+  "description": "Get a second opinion from Google's Gemini Pro via the locally installed Gemini CLI (defaults to gemini-3.1-pro-preview; override with the CLAUDE_SECOND_OPINION_MODEL env var). This is the explicit / fallback engine — invoke ONLY when the user explicitly says \"ask Gemini\", \"Gemini's take\", \"what does Gemini think\", or \"ask both\" (run alongside the default engine and synthesize). Do NOT trigger on a generic \"second opinion\", \"another perspective\", or \"cross-check this\" — those route to the default",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "peterkrueck",
+  "install_path": ".claude/skills/second-opinion-gemini/SKILL.md",
+  "source": {
+    "repo": "peterkrueck/Claude-Code-Development-Kit",
+    "url": "https://github.com/peterkrueck/Claude-Code-Development-Kit/blob/main/skills/second-opinion-gemini/SKILL.md",
+    "path": "skills/second-opinion-gemini/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-17T23:10:51.924Z",
+    "stars": 1355,
+    "language": "Shell",
+    "pushed_at": "2026-06-17T22:42:39Z",
+    "license": "MIT"
+  }
+}

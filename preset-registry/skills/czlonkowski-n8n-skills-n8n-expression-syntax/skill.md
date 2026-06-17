@@ -208,6 +208,66 @@ Use n8n credential system, not expressions
 
 ---
 
+## The transform gatekeeper
+
+Before you add any node — or write any code — to transform data, walk this order and stop at the first that fits:
+
+1. **Expression** (`{{ ... }}`) in the consuming field. Property access, method chains (`.map().filter().join()`), ternaries, string building, Luxon date math — if it's "take A, produce B" without intermediate variables, it's an expression. This covers most "just transform this" cases.
+2. **Arrow-function IIFE inside an Edit Fields field.** When the logic needs intermediate variables, branching, or comments but still operates on one item, wrap it in an immediately-invoked arrow function right in the field value:
+
+   ```
+   ={{ (() => {
+       const items = $json.line_items;
+       const subtotal = items.reduce((sum, it) => sum + it.price * it.qty, 0);
+       const tax = subtotal * 0.08;
+       return (subtotal + tax).toFixed(2);
+   })() }}
+   ```
+
+   The outer `(...)` brackets the function; the trailing `()` invokes it. Drop either and n8n refuses to run. Inside you get the full expression scope (`$json`, `$('Node')`, `$now`, Luxon) plus `const`/`let`, `if`/`switch`, `try`/`catch`, and regex. No `require`, no `await`.
+3. **Code node — last resort.** Only when you need multi-item aggregation across the whole dataset (`$input.all()`), an allowlisted library, or async work.
+
+**Why the order matters.** It's not style — it's readability and performance. The Code node runs in a sandboxed VM with per-invocation setup and value marshaling — a cold-start cost that can reach 500–1000ms before your logic runs. (It amortizes on warm, high-item-count runs, so treat this as the common-case cost, not a universal constant.) The same logic in an expression or Edit Fields IIFE runs in-process in single-digit milliseconds and skips the sandbox entirely. For pure single-item shaping that's a large gap with no functional difference, and it compounds on hot paths like per-request webhooks. The expression also stays visible in the field that uses it, instead of hiding in an upstream node someone has to open to understand. Reach past a stage only when the input or scope genuinely demands it.
+
+## The Set-node antipattern and branch convergence
+
+### Delete Set nodes that feed one consumer
+
+A Set / Edit Fields node whose only job is to extract a value and hand it to **one** downstream node is dead weight. Inline its expression at the consumer instead.
+
+```
+❌  Webhook → Set { customer_id: {{ $json.body.customer_id }} } → Postgres: WHERE id = {{ $json.customer_id }}
+
+✅  Webhook → Postgres: WHERE id = {{ $('Webhook').item.json.body.customer_id }}
+```
+
+The Set node adds a hop, more canvas clutter, and a refactor hazard, while doing nothing the consumer couldn't do itself. To remove it cleanly with `n8n_update_partial_workflow`: rewire the connection (`removeConnection` from the Set's source-and-target, `addConnection` straight from source to consumer), `patchNodeField` the consumer's expression to reference the original source by node name, then `removeNode` the Set.
+
+**Quick test:** count how many downstream nodes reference each field the Set produces.
+- **0 or 1** → delete, inline at the consumer.
+- **2+** → it may earn its place.
+
+**Legitimate exceptions** — keep the Set when:
+- **2+ consumers** read the same derived value and the derivation is non-trivial (a name aids readability and you compute it once).
+- **It's a sub-workflow's final Return node**, shaping the output contract. Here the "single consumer" is every caller, so the Set *is* the API boundary — and with `Include Other Fields: false` it whitelists the output shape so internal scratch fields don't leak.
+- **You're renaming or whitelisting fields** and want that visible in one place rather than spread across consumer expressions.
+
+### Branch convergence: anchor with a NoOp
+
+When branches converge (after IF/Switch/Merge), `$json` becomes "whichever branch fired last" — non-deterministic, and a silent source of wrong data. Insert a **NoOp** node at the convergence, name it descriptively (`Combine Inputs`), and have downstream nodes reference it by name:
+
+```
+Branch A ──┐
+           ├─→ [NoOp: Combine Inputs] ──→ downstream uses $('Combine Inputs').item.json.x
+Branch B ──┘
+```
+
+The NoOp survives refactors: inserting a transform later between it and the consumer doesn't break the `$('Combine Inputs')` reference. (If the branches produce *different* shapes, use a Set node instead of a NoOp to normalize both into one shape — see the exceptions above.)
+
+More broadly in branchy flows, **prefer `$('Node').item.json.x` over deep `$json.x`.** `$json` breaks the moment an intermediate node is inserted or a node clears item context (Aggregate, Code with Run for All, branching merges); the failure is silent and downstream gets the wrong data with no error. A node-name reference is unambiguous regardless of what sits between source and consumer.
+
+---
+
 ## Validation Rules
 
 ### 1. Always Use {{}}

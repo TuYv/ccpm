@@ -1,7 +1,7 @@
 {
   "id": "peterkrueck-claude-code-development-kit-deploy",
   "name": "deploy",
-  "description": "Test and deploy changes safely. Runs tests as a pre-deploy gate, deploys, then runs post-deploy verification. This is a TEMPLATE — customize the commands and checks for your specific deployment pipeline.",
+  "description": "Test and deploy changes safely. Discovers deploy targets, runs fail-stop gates before going live, optionally shadow-deploys and swaps, then runs report-only post-deploy checks. This is a TEMPLATE — customize the commands and checks for your specific deployment pipeline.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/peterkrueck/Claude-Code-Development-Kit/blob/main/skills/deploy/SKILL.md",
     "path": "skills/deploy/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-17T20:41:10.565Z",
-    "stars": 1356,
+    "discovered_at": "2026-06-17T23:10:51.227Z",
+    "stars": 1355,
     "language": "Shell",
-    "pushed_at": "2026-05-18T15:20:13Z",
+    "pushed_at": "2026-06-17T22:42:39Z",
     "license": "MIT"
-  },
-  "summary_zh": "这是一个可定制的流水线模板，能在部署前后自动测试把关，确保代码安全上线，适合需要搭建专属发布流程的场景。"
+  }
 }

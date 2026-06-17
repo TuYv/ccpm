@@ -1,0 +1,25 @@
+{
+  "id": "peterkrueck-claude-code-development-kit-context7-guidance",
+  "name": "context7-guidance",
+  "description": "Fetch CURRENT library/framework/API/CLI documentation via Context7 instead of relying on training data. Use whenever the user mentions a specific library, framework, SDK, API, or cloud service, asks a setup/configuration question, plans a version migration, or is debugging library-specific behavior. Triggers on common web frameworks, APIs, and cloud services — even well-known ones, since training data may be stale.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "peterkrueck",
+  "install_path": ".claude/skills/context7-guidance/SKILL.md",
+  "source": {
+    "repo": "peterkrueck/Claude-Code-Development-Kit",
+    "url": "https://github.com/peterkrueck/Claude-Code-Development-Kit/blob/main/skills/context7-guidance/SKILL.md",
+    "path": "skills/context7-guidance/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-17T23:10:51.050Z",
+    "stars": 1355,
+    "language": "Shell",
+    "pushed_at": "2026-06-17T22:42:39Z",
+    "license": "MIT"
+  }
+}

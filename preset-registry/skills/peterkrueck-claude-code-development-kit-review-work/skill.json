@@ -1,7 +1,7 @@
 {
   "id": "peterkrueck-claude-code-development-kit-review-work",
   "name": "review-work",
-  "description": "Review uncommitted code changes using parallel Claude sub-agents with specialized roles (Bug Hunter, Rules Auditor). Spawns multiple focused reviewers for large diffs (50+ lines), single reviewer for smaller changes. Checks for bugs, security issues, CLAUDE.md compliance, and test coverage gaps. Use after completing substantial implementation work, or when the Stop hook requests it. Also invocable manually with /review-work.",
+  "description": "Review uncommitted code changes using parallel Claude sub-agents (Bug Hunter, Rules Auditor, optional Architect). The invoking agent triages the diff by file path into impacted modules and risk surfaces, then spawns reviewers scaled to the change. Each reviewer self-primes via /prime, verifies any API/library claim via Context7 (mandatory — unverified claims are auto-discarded), and reports an intent verdict against progress.md before its findings. Catches bugs, security issues, CLAUDE.md compli",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/peterkrueck/Claude-Code-Development-Kit/blob/main/skills/review-work/SKILL.md",
     "path": "skills/review-work/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-17T20:41:10.905Z",
-    "stars": 1356,
+    "discovered_at": "2026-06-17T23:10:51.738Z",
+    "stars": 1355,
     "language": "Shell",
-    "pushed_at": "2026-05-18T15:20:13Z",
+    "pushed_at": "2026-06-17T22:42:39Z",
     "license": "MIT"
-  },
-  "summary_zh": "它能调度多个分工明确的Claude子代理审查未提交代码，并按改动大小智能调整审查力度，适合在写完重要功能后，帮你快速揪出bug、安全漏洞、规范偏差和测试缺失。"
+  }
 }

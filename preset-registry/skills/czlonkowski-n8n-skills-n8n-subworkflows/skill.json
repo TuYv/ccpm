@@ -1,0 +1,25 @@
+{
+  "id": "czlonkowski-n8n-skills-n8n-subworkflows",
+  "name": "n8n-subworkflows",
+  "description": "Build reusable, composable n8n sub-workflows. Use when extracting shared logic, building anything multi-step or reused across workflows, or any workflow over ~10 nodes — and whenever the user mentions sub-workflows, Execute Workflow, reuse, shared/common logic, modular workflows, \"Define Below\" inputs, waitForSubWorkflow, mode each vs all, or exposing a workflow as an agent tool. Covers typed sub-workflow inputs, all-vs-each execution, verb-first naming for discovery, stateless vs stateful desig",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "czlonkowski",
+  "install_path": ".claude/skills/n8n-subworkflows/SKILL.md",
+  "source": {
+    "repo": "czlonkowski/n8n-skills",
+    "url": "https://github.com/czlonkowski/n8n-skills/blob/main/skills/n8n-subworkflows/SKILL.md",
+    "path": "skills/n8n-subworkflows/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-17T23:04:04.229Z",
+    "stars": 5460,
+    "language": "Shell",
+    "pushed_at": "2026-06-17T22:52:08Z",
+    "license": "MIT"
+  }
+}

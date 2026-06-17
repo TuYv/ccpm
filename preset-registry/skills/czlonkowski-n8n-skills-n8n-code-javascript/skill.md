@@ -109,100 +109,34 @@ return [{
 
 ### Why "All Items" is faster — the per-item boundary
 
-Mode choice is the single biggest performance lever in a Code node, and the reason generalizes to the rest of your workflow. Every time n8n hands items to a *per-item* execution context it pays a setup cost. Measured on an n8n 2.x instance (small records, ~10k items):
+Mode choice is the single biggest performance lever in a Code node. Each *per-item* execution context costs a setup tax (measured on n8n 2.x, small records):
 
-| What runs per item | Approx. cost | Why |
-|---|---|---|
-| Code **All Items** (one run for the whole set) | ~0.02 ms/item | one context setup, then plain JS — the loop is free |
-| Expression in any node (IF / Set / etc.) | ~0.2 ms/item | a light eval context per item |
-| Code **Each Item** | ~0.6 ms/item | a full code sandbox per item — ~3× an expression, ~25–30× All Items |
+| What runs per item | Approx. cost |
+|---|---|
+| Code **All Items** (one run for the whole set) | ~0.02 ms/item |
+| Expression in any node (IF / Set / etc.) | ~0.2 ms/item |
+| Code **Each Item** (a full sandbox per item) | ~0.6 ms/item — ~25–30× All Items |
 
-So `Run Once for Each Item` over 10k items is ~6 s of pure overhead vs ~0.2 s for the same logic in `Run Once for All Items`. Use Each Item only when an item genuinely needs isolating (independent error handling, or a per-item API call you can't batch); otherwise loop *inside* one All Items node.
+So `Run Once for Each Item` over 10k items is ~6 s of pure overhead vs ~0.2 s in `Run Once for All Items`. Use Each Item only when an item genuinely needs isolating (independent error handling, or a per-item API call you can't batch); otherwise loop *inside* one All Items node. Expression complexity itself is essentially free (~90% of the cost is the per-item context, not your code) and every node→node hop re-copies all items — so reduce the *number* of per-item boundaries, don't micro-optimize each one. Below a few hundred items none of this matters; reach for it on the hot path (large item counts, little I/O).
 
-Two corollaries you will hit constantly:
-
-- **Expression complexity is essentially free.** An elaborate `{{ }}` measures the same as a trivial one — ~90% of the cost is n8n building the per-item context, not running your code. Don't simplify expressions for speed; reduce the *number* of per-item boundaries instead.
-- **Every node→node hop re-copies all items** (~0.05 ms/item per hop). Six chained All Items Code nodes cost ~7× a single node doing the same six steps, so consolidate a hot transform chain into one All Items node — and never build a chain of *Each Item* Code nodes, where the per-item tax multiplies by node count (a 6-node Each-Item chain over 2k items ≈ 7 s).
-
-**Scale check:** below a few hundred items this is all sub-100 ms and not worth a thought, and most real workflows are dominated by I/O (HTTP / DB / Sheets round-trips) that dwarfs node overhead. Reach for these rules on the hot path — large item counts with little I/O — not everywhere.
+**See**: [DATA_ACCESS.md](DATA_ACCESS.md) → "Mode Performance" for the corollaries, hop costs, and scale check.
 
 ---
 
 ## Data Access Patterns
 
-### Pattern 1: $input.all() - Most Common
-
-**Use when**: Processing arrays, batch operations, aggregations
+Four ways to pull data from upstream nodes. Note `$node["Name"]` and `$('Name')` need `.first().json` or `.all()` — never `.json` directly.
 
 ```javascript
-// Get all items from previous node
-const allItems = $input.all();
-
-// Filter, map, reduce as needed
-const valid = allItems.filter(item => item.json.status === 'active');
-const mapped = valid.map(item => ({
-  json: {
-    id: item.json.id,
-    name: item.json.name
-  }
-}));
-
-return mapped;
+const allItems = $input.all();          // 1. All items — batch ops, aggregation (most common)
+const data = $input.first().json;       // 2. First item — single objects, API responses
+const item = $input.item;               // 3. Current item — "Each Item" mode ONLY (undefined otherwise)
+const other = $node["Webhook"].json;    // 4. Named node — combine data across nodes
 ```
 
-### Pattern 2: $input.first() - Very Common
+Always access fields via `.json` (e.g. `item.json.name`, not `item.name`), and prefer the explicit `$input.first().json.field` over a bare `$json.field`.
 
-**Use when**: Working with single objects, API responses, first-in-first-out
-
-```javascript
-// Get first item only
-const firstItem = $input.first();
-const data = firstItem.json;
-
-return [{
-  json: {
-    result: processData(data),
-    processedAt: new Date().toISOString()
-  }
-}];
-```
-
-### Pattern 3: $input.item - Each Item Mode Only
-
-**Use when**: In "Run Once for Each Item" mode
-
-```javascript
-// Current item in loop (Each Item mode only)
-const currentItem = $input.item;
-
-return [{
-  json: {
-    ...currentItem.json,
-    itemProcessed: true
-  }
-}];
-```
-
-### Pattern 4: $node - Reference Other Nodes
-
-**Use when**: Need data from specific nodes in workflow
-
-```javascript
-// Get output from specific node
-const webhookData = $node["Webhook"].json;
-const httpData = $node["HTTP Request"].json;
-
-return [{
-  json: {
-    combined: {
-      webhook: webhookData,
-      api: httpData
-    }
-  }
-}];
-```
-
-**See**: [DATA_ACCESS.md](DATA_ACCESS.md) for comprehensive guide
+**See**: [DATA_ACCESS.md](DATA_ACCESS.md) for the full guide — every pattern with examples, a decision tree, and the common mistakes (mutating originals, missing length checks, `$input.item` in the wrong mode).
 
 ---
 
@@ -302,431 +236,86 @@ return [{data: value}];  // Should be {json: value}
 
 ## Common Patterns Overview
 
-Based on production workflows, here are the most useful patterns:
-
-### 1. Multi-Source Data Aggregation
-Combine data from multiple APIs, webhooks, or nodes
-
-```javascript
-const allItems = $input.all();
-const results = [];
-
-for (const item of allItems) {
-  const sourceName = item.json.name || 'Unknown';
-  // Parse source-specific structure
-  if (sourceName === 'API1' && item.json.data) {
-    results.push({
-      json: {
-        title: item.json.data.title,
-        source: 'API1'
-      }
-    });
-  }
-}
-
-return results;
-```
-
-### 2. Filtering with Regex
-Extract patterns, mentions, or keywords from text
-
-```javascript
-const pattern = /\b([A-Z]{2,5})\b/g;
-const matches = {};
-
-for (const item of $input.all()) {
-  const text = item.json.text;
-  const found = text.match(pattern);
-
-  if (found) {
-    found.forEach(match => {
-      matches[match] = (matches[match] || 0) + 1;
-    });
-  }
-}
-
-return [{json: {matches}}];
-```
-
-### 3. Data Transformation & Enrichment
-Map fields, normalize formats, add computed fields
-
-```javascript
-const items = $input.all();
-
-return items.map(item => {
-  const data = item.json;
-  const nameParts = data.name.split(' ');
-
-  return {
-    json: {
-      first_name: nameParts[0],
-      last_name: nameParts.slice(1).join(' '),
-      email: data.email,
-      created_at: new Date().toISOString()
-    }
-  };
-});
-```
-
-### 4. Top N Filtering & Ranking
-Sort and limit results
-
-```javascript
-const items = $input.all();
-
-const topItems = items
-  .sort((a, b) => (b.json.score || 0) - (a.json.score || 0))
-  .slice(0, 10);
-
-return topItems.map(item => ({json: item.json}));
-```
-
-### 5. Aggregation & Reporting
-Sum, count, group data
+The most useful Code node shapes from production workflows. One quick example — sum/aggregate across all items:
 
 ```javascript
 const items = $input.all();
 const total = items.reduce((sum, item) => sum + (item.json.amount || 0), 0);
-
-return [{
-  json: {
-    total,
-    count: items.length,
-    average: total / items.length,
-    timestamp: new Date().toISOString()
-  }
-}];
+return [{ json: { total, count: items.length, average: total / items.length } }];
 ```
 
-**See**: [COMMON_PATTERNS.md](COMMON_PATTERNS.md) for 10 detailed production patterns
+The full library covers 10 patterns: multi-source aggregation, regex filtering, markdown/structured-text parsing, JSON comparison, CRM/form transformation, release processing, array transformation with computed fields, Slack Block Kit formatting, top-N ranking, and string-aggregation reporting — each with variations.
+
+**See**: [COMMON_PATTERNS.md](COMMON_PATTERNS.md) for the 10 detailed production patterns (and the Best Practices section: validate input, try-catch, filter-early, array methods over loops, console.log debugging).
 
 ---
 
-## Error Prevention - Top 5 Mistakes
+## Error Prevention - Top Mistakes
 
-### #1: Empty Code or Missing Return (Most Common)
+The recurring Code node failures, in rough frequency order:
 
-```javascript
-// ❌ WRONG: No return statement
-const items = $input.all();
-// ... processing code ...
-// Forgot to return!
+1. **Empty code / missing return** — always end with `return [...]`, and make sure *every* branch returns.
+2. **Expression syntax in code** — no `{{ }}`. Use JavaScript: `` `${$json.field}` `` or `$input.first().json.field`.
+3. **Wrong return wrapper** — `return {json:{...}}` fails; must be `return [{json:{...}}]`.
+4. **Missing null checks** — use optional chaining: `item.json?.user?.email || 'fallback'`.
+5. **Webhook body nesting** — `$json.email` is undefined; use `$json.body.email`.
+6. **Auth helpers blocked** (`httpRequestWithAuthentication`) and `$env` blocked — route secrets through credentials/HTTP Request node, not the Code node sandbox.
 
-// ✅ CORRECT: Always return data
-const items = $input.all();
-// ... processing ...
-return items.map(item => ({json: item.json}));
-```
-
-### #2: Expression Syntax Confusion
-
-```javascript
-// ❌ WRONG: Using n8n expression syntax in code
-const value = "{{ $json.field }}";
-
-// ✅ CORRECT: Use JavaScript template literals
-const value = `${$json.field}`;
-
-// ✅ CORRECT: Direct access
-const value = $input.first().json.field;
-```
-
-### #3: Incorrect Return Wrapper
-
-```javascript
-// ❌ WRONG: Returning object instead of array
-return {json: {result: 'success'}};
-
-// ✅ CORRECT: Array wrapper required
-return [{json: {result: 'success'}}];
-```
-
-### #4: Missing Null Checks
-
-```javascript
-// ❌ WRONG: Crashes if field doesn't exist
-const value = item.json.user.email;
-
-// ✅ CORRECT: Safe access with optional chaining
-const value = item.json?.user?.email || 'no-email@example.com';
-
-// ✅ CORRECT: Guard clause
-if (!item.json.user) {
-  return [];
-}
-const value = item.json.user.email;
-```
-
-### #5: Webhook Body Nesting
-
-```javascript
-// ❌ WRONG: Direct access to webhook data
-const email = $json.email;
-
-// ✅ CORRECT: Webhook data under .body
-const email = $json.body.email;
-```
-
-**See**: [ERROR_PATTERNS.md](ERROR_PATTERNS.md) for comprehensive error guide
+**See**: [ERROR_PATTERNS.md](ERROR_PATTERNS.md) for the comprehensive guide — each error with wrong/right code, escaping rules, the sandbox restrictions (Errors #6–#7), a prevention checklist, and a quick error-message lookup table.
 
 ---
 
 ## Built-in Functions & Helpers
 
-### $helpers.httpRequest()
-
-Make HTTP requests from within code:
-
 ```javascript
-const response = await $helpers.httpRequest({
-  method: 'GET',
-  url: 'https://api.example.com/data',
-  headers: {
-    'Authorization': 'Bearer token',
-    'Content-Type': 'application/json'
-  }
-});
+// HTTP requests (no auth — see sandbox note below)
+const res = await $helpers.httpRequest({ method: 'GET', url: 'https://api.example.com/data' });
 
-return [{json: {data: response}}];
-```
-
-### DateTime (Luxon)
-
-Date and time operations:
-
-```javascript
-// Current time
+// DateTime (Luxon): now, formatting, arithmetic
 const now = DateTime.now();
-
-// Format dates
 const formatted = now.toFormat('yyyy-MM-dd');
-const iso = now.toISO();
+const tomorrow = now.plus({ days: 1 });
 
-// Date arithmetic
-const tomorrow = now.plus({days: 1});
-const lastWeek = now.minus({weeks: 1});
+// $jmespath() — query JSON structures
+const adults = $jmespath($input.first().json, 'users[?age >= `18`]');
 
-return [{
-  json: {
-    today: formatted,
-    tomorrow: tomorrow.toFormat('yyyy-MM-dd')
-  }
-}];
+// $getWorkflowStaticData() — data that persists across executions
 ```
 
-### $jmespath()
+**Sandbox (since n8n v2.0):** `$helpers.httpRequestWithAuthentication` is blocked; `$env` is blocked when `N8N_BLOCK_ENV_ACCESS_IN_NODE=true`; `require()` works only for allowlisted modules. `Buffer`, `URL`, and standard JS globals (Math, JSON, Object, Array) always work.
 
-Query JSON structures:
-
-```javascript
-const data = $input.first().json;
-
-// Filter array
-const adults = $jmespath(data, 'users[?age >= `18`]');
-
-// Extract fields
-const names = $jmespath(data, 'users[*].name');
-
-return [{json: {adults, names}}];
-```
-
-**See**: [BUILTIN_FUNCTIONS.md](BUILTIN_FUNCTIONS.md) for complete reference
+**See**: [BUILTIN_FUNCTIONS.md](BUILTIN_FUNCTIONS.md) for the complete reference — full httpRequest options, all DateTime/Luxon operations, JMESPath patterns, static-data use cases, and the sandbox-restriction details.
 
 ---
 
 ## Best Practices
 
-### 1. Always Validate Input Data
+- **Validate input first** — guard for empty arrays / missing `.json` before processing.
+- **Try-catch risky work** (HTTP calls) and return an error object instead of crashing.
+- **Prefer array methods** (`filter`/`map`/`reduce`) over manual loops.
+- **Filter early, transform late** — shrink the dataset before expensive work.
+- **Descriptive names** and `console.log()` for debugging (output goes to the browser console).
 
-```javascript
-const items = $input.all();
-
-// Check if data exists
-if (!items || items.length === 0) {
-  return [];
-}
-
-// Validate structure
-if (!items[0].json) {
-  return [{json: {error: 'Invalid input format'}}];
-}
-
-// Continue processing...
-```
-
-### 2. Use Try-Catch for Error Handling
-
-```javascript
-try {
-  const response = await $helpers.httpRequest({
-    url: 'https://api.example.com/data'
-  });
-
-  return [{json: {success: true, data: response}}];
-} catch (error) {
-  return [{
-    json: {
-      success: false,
-      error: error.message
-    }
-  }];
-}
-```
-
-### 3. Prefer Array Methods Over Loops
-
-```javascript
-// ✅ GOOD: Functional approach
-const processed = $input.all()
-  .filter(item => item.json.valid)
-  .map(item => ({json: {id: item.json.id}}));
-
-// ❌ SLOWER: Manual loop
-const processed = [];
-for (const item of $input.all()) {
-  if (item.json.valid) {
-    processed.push({json: {id: item.json.id}});
-  }
-}
-```
-
-### 4. Filter Early, Process Late
-
-```javascript
-// ✅ GOOD: Filter first to reduce processing
-const processed = $input.all()
-  .filter(item => item.json.status === 'active')  // Reduce dataset first
-  .map(item => expensiveTransformation(item));  // Then transform
-
-// ❌ WASTEFUL: Transform everything, then filter
-const processed = $input.all()
-  .map(item => expensiveTransformation(item))  // Wastes CPU
-  .filter(item => item.json.status === 'active');
-```
-
-### 5. Use Descriptive Variable Names
-
-```javascript
-// ✅ GOOD: Clear intent
-const activeUsers = $input.all().filter(item => item.json.active);
-const totalRevenue = activeUsers.reduce((sum, user) => sum + user.json.revenue, 0);
-
-// ❌ BAD: Unclear purpose
-const a = $input.all().filter(item => item.json.active);
-const t = a.reduce((s, u) => s + u.json.revenue, 0);
-```
-
-### 6. Debug with console.log()
-
-```javascript
-// Debug statements appear in browser console
-const items = $input.all();
-console.log(`Processing ${items.length} items`);
-
-for (const item of items) {
-  console.log('Item data:', item.json);
-  // Process...
-}
-
-return result;
-```
+**See**: [COMMON_PATTERNS.md](COMMON_PATTERNS.md) → "Best Practices" for code examples of each.
 
 ---
 
 ## Production Gotchas
 
-Hard-won lessons from real-world n8n workflow deployments:
+Hard-won lessons from real deployments — summarized here, with code in [DATA_ACCESS.md](DATA_ACCESS.md) → "Production Gotchas":
 
-### SplitInBatches Loop Semantics
-
-The SplitInBatches node has two outputs — and the naming is counterintuitive:
-- `main[0]` = **done** — fires ONCE after all batches are processed
-- `main[1]` = **each batch** — fires for every batch (this is the loop body)
-
-Always add a **Limit 1** node after the done output before downstream processing, as a safety against edge cases where done fires with extra items.
-
-### SplitInBatches: iteration count is the cost
-
-Each loop iteration re-executes the entire loop body through the workflow engine — ~0.8 ms per iteration of pure overhead, on top of whatever the body does. Total ≈ `⌈items / batchSize⌉ × (~0.8 ms + body cost)`:
-
-- `batchSize: 1` over N items pays that N times — it's the loop equivalent of *Run Once for Each Item* (and if the body has several nodes, each iteration re-pays all of them).
-- Raising `batchSize` cuts iterations proportionally; the body still sees every item. Use the **largest batch your real constraint allows** (API rate limit, page size, memory). If you don't need batching at all, don't loop — process the whole set in one All Items node.
-
-### Cross-Iteration Data Accumulation (CRITICAL)
-
-After a SplitInBatches loop, `$('Node Inside Loop').all()` returns **ONLY the last iteration's items**, not cumulative results. This silently drops data from all but the final batch.
-
-**Fix**: Use workflow static data to accumulate across iterations:
-
-```javascript
-// BEFORE the loop (reset accumulator):
-const staticData = $getWorkflowStaticData('global');
-staticData.results = [];
-return $input.all();
-
-// INSIDE the loop body (accumulate):
-const staticData = $getWorkflowStaticData('global');
-const results = [];
-for (const item of $input.all()) {
-  const processed = { /* ... */ };
-  results.push({ json: processed });
-  staticData.results.push(processed);
-}
-return results;
-
-// AFTER the loop (read accumulated data):
-const staticData = $getWorkflowStaticData('global');
-const allResults = staticData.results || [];
-// Now aggregate across ALL iterations
-```
-
-### pairedItem for New Output Items
-
-When creating new items that don't map 1:1 to input items, include `pairedItem` — otherwise downstream Set nodes fail with `paired_item_no_info`:
-
-```javascript
-const results = [];
-for (let i = 0; i < $input.all().length; i++) {
-  const item = $input.all()[i];
-  results.push({
-    json: { /* new data */ },
-    pairedItem: { item: i }
-  });
-}
-return results;
-```
-
-### Correct Node Reference Syntax
-
-```javascript
-// ❌ WRONG - .json directly on node reference
-const data = $('HTTP Request').json;
-
-// ✅ CORRECT - call .first() then access .json
-const data = $('HTTP Request').first().json;
-
-// ✅ Also correct - get all items
-const allData = $('HTTP Request').all();
-```
-
-### Float Precision for Price/Currency Comparison
-
-When comparing prices or currency values, floating point noise can cause false positives. Round to cents:
-
-```javascript
-// ❌ Unreliable - float comparison
-if (newPrice !== oldPrice) { /* triggers on noise */ }
-
-// ✅ Reliable - compare at cent level
-if (Math.round(newPrice * 100) !== Math.round(oldPrice * 100)) {
-  // Real price change detected
-}
-```
+- **SplitInBatches outputs are counterintuitive**: `main[0]` = **done** (fires once, after all batches), `main[1]` = **each batch** (the loop body). Add a **Limit 1** node after the done output as a safety.
+- **Iteration count is the cost**: each loop iteration re-runs the whole body through the engine (~0.8 ms overhead each). `batchSize: 1` is the loop equivalent of *Each Item* — use the largest batch your real constraint (rate limit, page size, memory) allows, or don't loop at all.
+- **Cross-iteration accumulation (CRITICAL)**: after the loop, `$('Node Inside Loop').all()` returns ONLY the last iteration's items. Accumulate via `$getWorkflowStaticData('global')` (reset before, push inside, read after).
+- **pairedItem**: when emitting items that don't map 1:1 to input, set `pairedItem: { item: i }` or downstream Set nodes fail with `paired_item_no_info`.
+- **Node reference syntax**: `$('Node').first().json` or `$('Node').all()` — never `.json` directly on the reference.
+- **Float precision**: compare currency at the cent level — `Math.round(a*100) !== Math.round(b*100)` — to avoid false positives from float noise.
 
 ---
 
 ## When to Use Code Node
+
+> **Before reaching for a Code node, walk the transform gatekeeper** in the n8n Expression Syntax skill: expression → arrow-function IIFE inside an Edit Fields field → Code node, in that order. The first two paths cover most "transform this data" tasks at ~1–10ms each, versus the Code node's sandboxed ~500–1000ms — a ~100x gap on pure single-item shaping, with no functional difference. The Code node earns its place only for whole-dataset aggregation (`$input.all()`), allowlisted libraries, or async work. And before writing code for crypto (HMAC, hashing, signing) or XML/SOAP/RSS parsing, check for a **native node** — n8n has a Crypto node (`nodes-base.crypto`) and an XML node (`nodes-base.xml`) that cover those without any JavaScript. Dropping into Code for something a native node already does is one of the most common false positives.
 
 Use Code node when:
 - ✅ Complex transformations requiring multiple steps

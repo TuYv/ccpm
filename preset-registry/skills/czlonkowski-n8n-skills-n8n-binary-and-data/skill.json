@@ -1,0 +1,25 @@
+{
+  "id": "czlonkowski-n8n-skills-n8n-binary-and-data",
+  "name": "n8n-binary-and-data",
+  "description": "Handle files and binary data in n8n correctly. Use when working with files, images, PDFs, attachments, uploads or downloads, base64, vision/multimodal input, or when an AI agent needs a file as tool input or output — and whenever the user mentions $binary, binaryPropertyName, \"read the PDF\", \"attach the file\", \"send the image\", Merge losing binary, or a CDN for chat images. Covers the $binary vs $json split, reading/writing binary, keeping binary alive across transforms with Merge, the agent-too",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "czlonkowski",
+  "install_path": ".claude/skills/n8n-binary-and-data/SKILL.md",
+  "source": {
+    "repo": "czlonkowski/n8n-skills",
+    "url": "https://github.com/czlonkowski/n8n-skills/blob/main/skills/n8n-binary-and-data/SKILL.md",
+    "path": "skills/n8n-binary-and-data/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-17T23:04:02.670Z",
+    "stars": 5460,
+    "language": "Shell",
+    "pushed_at": "2026-06-17T22:52:08Z",
+    "license": "MIT"
+  }
+}

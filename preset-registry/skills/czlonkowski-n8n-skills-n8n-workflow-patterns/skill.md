@@ -149,6 +149,19 @@ When building ANY workflow, follow this checklist:
 
 ---
 
+## Workflow lifecycle: validate, verify, test before activating
+
+Building the nodes is the start, not the finish. Before a workflow goes live, run it through four gates — and remember the headline rule: **validation passing is necessary, not sufficient.** A workflow can validate clean and still drop items, pick the wrong Merge input, or post Slack messages as plain text. Clean validation means the *shapes* are right, not that the *logic* is.
+
+1. **Validate.** Run `validate_workflow` on the full JSON during build, or `n8n_validate_workflow({ id })` once the workflow exists on the instance. Fix every error and re-validate. This catches schema, node-config, expression, and reference errors — the structural layer.
+2. **Verify the connections.** Pull the workflow with `n8n_get_workflow({ id })` and read the `connections` object directly. Validation confirms connections aren't *broken*; it doesn't confirm they're *correct*. This is where you catch the valid-but-wrong wiring: a Merge whose `useDataOfInput` doesn't line up with the connection slot, a Switch fallback that connects to nothing, a fan-out branch that was never wired onward, an error output that goes nowhere. (See the n8n Node Configuration skill's NODE_FAMILY_GOTCHAS.md for the silent ones.)
+3. **Test.** Run `n8n_test_workflow` and inspect the output via `n8n_executions`. Confirm the output shape matches what consumers expect, fan-outs all produced data, and (for webhook APIs) the status/body/headers are right. **Real side effects fire during a test** — writes commit, messages send, external APIs are called. If any node has a user-visible side effect, confirm with the user before running, or test against safe data first.
+4. **Activate** only after the first three pass — using `n8n_update_partial_workflow` with the `activateWorkflow` operation. Don't activate straight off a clean validation; an active workflow that drops data or double-sends is worse than one that never started.
+
+Skipping any gate trades a few minutes now for debugging a live, possibly stateful, possibly traffic-bearing workflow later. The trade is never worth it.
+
+---
+
 ## Data Flow Patterns
 
 ### Linear Flow

@@ -1,0 +1,25 @@
+{
+  "id": "czlonkowski-n8n-skills-n8n-error-handling",
+  "name": "n8n-error-handling",
+  "description": "Wire n8n error handling so failures are loud, structured, and recoverable. Use when building any webhook/API workflow, a scheduled or unattended workflow, or any path where a silent failure would drop user-visible work — and whenever the user mentions error handling, onError, continueErrorOutput, error branches/outputs, retries, retryOnFail, Respond to Webhook status codes, 4xx/5xx, Error Trigger, or \"my workflow fails silently\". Covers per-node error outputs and wiring, retry/self-healing, erro",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "czlonkowski",
+  "install_path": ".claude/skills/n8n-error-handling/SKILL.md",
+  "source": {
+    "repo": "czlonkowski/n8n-skills",
+    "url": "https://github.com/czlonkowski/n8n-skills/blob/main/skills/n8n-error-handling/SKILL.md",
+    "path": "skills/n8n-error-handling/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-17T23:04:03.474Z",
+    "stars": 5460,
+    "language": "Shell",
+    "pushed_at": "2026-06-17T22:52:08Z",
+    "license": "MIT"
+  }
+}
