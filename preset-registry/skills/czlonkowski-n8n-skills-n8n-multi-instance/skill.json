@@ -1,0 +1,25 @@
+{
+  "id": "czlonkowski-n8n-skills-n8n-multi-instance",
+  "name": "n8n-multi-instance",
+  "description": "Use when an n8n-mcp account targets more than one n8n instance — i.e. the `n8n_instances` tool is available, the user mentions multiple n8n instances or environments (prod vs staging, several teams or clients), a workflow / datatable / credential / execution call returns an unexpected NOT_FOUND or reads data you don't recognize, or a credential create/update/delete is refused with an `INSTANCE_AMBIGUOUS` error. Covers choosing and switching which instance this MCP session targets, verifying the ",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "czlonkowski",
+  "install_path": ".claude/skills/n8n-multi-instance/SKILL.md",
+  "source": {
+    "repo": "czlonkowski/n8n-skills",
+    "url": "https://github.com/czlonkowski/n8n-skills/blob/main/skills/n8n-multi-instance/SKILL.md",
+    "path": "skills/n8n-multi-instance/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-18T18:19:01.725Z",
+    "stars": 5481,
+    "language": "Shell",
+    "pushed_at": "2026-06-18T17:53:36Z",
+    "license": "MIT"
+  }
+}
