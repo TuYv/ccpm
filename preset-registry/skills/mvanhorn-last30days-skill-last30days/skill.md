@@ -1,6 +1,6 @@
 ---
 name: last30days
-version: "3.3.2"
+version: "3.6.0"
 description: "Research what people actually say about any topic in the last 30 days. Pulls posts and engagement from Reddit, X, YouTube, TikTok, Hacker News, Polymarket, GitHub, and the web."
 argument-hint: 'last30days nvidia earnings reaction | last30days AI video tools | last30days what users want in react'
 allowed-tools: Bash, Read, Write, AskUserQuestion, WebSearch
@@ -209,6 +209,12 @@ Named-entity topics (capitalized proper nouns, product names, person names, proj
 
 **Post-synthesis self-check (do this BEFORE emitting your response):** scan your drafted "What I learned:" and KEY PATTERNS for the `[name](url)` pattern. Count how many inline markdown links appear. If zero - and the raw dump has URLs for the @handles, r/subs, and publications you cited as plain text - regenerate ONCE with inline links added. Stripping links is not a valid way to satisfy any other LAW; LAWs 1 (no trailing Sources) and 8 (inline links required) are complementary, not alternatives.
 
+**LAW 9 - WEAVE THE COMMUNITY VOICE; NEVER NARRATE THE TOOLING.** The EVIDENCE block carries a `## Top Community Comments` section (vote-ranked actual comments across all sources, each with author, vote count, and URL) and, when present, a `## Best Takes` section. These are the funniest/sharpest crowd reactions and are the entire point of this tool. **You MUST weave at least 2 verbatim, attributed community comments into the synthesis** - quote the actual text, attribute to the commenter (`u/name`, `@handle`), mix them into the narrative where they fit (never a separate "Comments" section). A top comment with thousands of votes is a stronger signal than the parent post's stats. The "It's called TurkiYe" / "Tell me what he BUILT" class of line is the report's headline value, not a footnote. Copy each comment's URL verbatim from the block - NEVER reconstruct or guess a status id (a wrong link looks authoritative; reconstructing one is a LAW 8 violation). And **never narrate the engine's own behavior in the deliverable** - no "the social-listening engine struck out", no "name collided with X", no "the X column is noise". Present what is true about the subject and quietly drop the junk; engine-health belongs in diagnostics, not the prose.
+
+**Observed LAW 9 need (2026-06-17):** five consecutive runs (Kanye, Steinberger, Kevin Rose, Lan Xuezhao, Matt-vs-Trevin) shipped news-shaped reports that missed every funny comment, fabricated one citation URL, and leaked tooling meta-commentary - because the comment-weaving rule lived at line ~1189/1245, below the chunked-read window, and `## Best Takes` was empty (no in-subprocess fun scorer). The fix is two-part: the engine now always surfaces `## Top Community Comments` regardless of fun scoring, and this LAW hoists the weave-the-comments gate into the guaranteed-loaded band. Same hoist that fixed LAW 8.
+
+**LAW 10 - FIRST-PARTY POSTS ARE FIRST-CLASS EVIDENCE; READ THE INTERACTION TAG.** On a person topic, the subject's OWN posts (the `from:{handle}` lane) are the single richest vein - they are now surfaced into the EVIDENCE block as ranked evidence, not buried. When the subject has posts in the evidence, quote and weigh them as primary signal; do not lean on third-party coverage (podcasts, articles) for the subject's voice when their own posts are present. An evidence line tagged `interaction:→@handle` is the subject's own post directed at another account (a reply/mention): treat it as a RELATIONSHIP signal worth reading even at near-zero engagement - who someone personally, repeatedly engages is meaningful, and engagement count does not capture it. Surface what the interaction shows about the subject; per LAW 9, never narrate the tag or the mechanism in the deliverable (no "the engine flagged an interaction" / no "scored as first-party") - just read the signal and write the substance.
+
 End of OUTPUT CONTRACT. The laws above are the contract; everything below is implementation detail.
 
 ---
@@ -244,7 +250,7 @@ If your Bash call to `last30days.py` does NOT include the FULL pre-flight checkl
 
 ---
 
-# last30days v3.3.2: Research Any Topic from the Last 30 Days
+# last30days v3.6.0: Research Any Topic from the Last 30 Days
 
 > **Permissions overview:** Reads public web/platform data and optionally saves research briefings to `LAST30DAYS_MEMORY_DIR` (defaults to `~/Documents/Last30Days`). X/Twitter search uses optional user-provided tokens (AUTH_TOKEN/CT0 env vars). Bluesky search uses optional app password (BSKY_HANDLE/BSKY_APP_PASSWORD env vars - create at bsky.app/settings/app-passwords). All credential usage and data writes are documented in the [Security & Permissions](#security--permissions) section.
 
@@ -662,8 +668,8 @@ When the user asks "X vs Y" (or "X vs Y vs Z"), the engine fans out N full `pipe
 # the Read tool result. Examples:
 #   Read ~/.claude/skills/last30days/SKILL.md      → SKILL_DIR=$HOME/.claude/skills/last30days
 #   Read ~/.codex/skills/last30days/SKILL.md       → SKILL_DIR=$HOME/.codex/skills/last30days
-#   Read ~/.claude/plugins/cache/last30days-skill/last30days/3.3.2/skills/last30days/SKILL.md
-#     → SKILL_DIR=$HOME/.claude/plugins/cache/last30days-skill/last30days/3.3.2/skills/last30days
+#   Read ~/.claude/plugins/cache/last30days-skill/last30days/3.6.0/skills/last30days/SKILL.md
+#     → SKILL_DIR=$HOME/.claude/plugins/cache/last30days-skill/last30days/3.6.0/skills/last30days
 # scripts/last30days.py is always a direct child of SKILL_DIR (every install layout
 # packages SKILL.md and scripts/ as siblings).
 SKILL_DIR="<absolute path of the directory containing the SKILL.md you Read>"
@@ -943,7 +949,7 @@ Only show lines for platforms where something was resolved. Skip empty lines. On
 - **CRITICAL: Your PRIMARY subquery MUST include ALL of these sources: reddit, x, youtube, tiktok, instagram, hackernews, polymarket.** Never omit reddit (highest-signal discussion) or youtube (unique transcripts + official content). Secondary subqueries can target specific platforms.
 - `search_query` should be concise and keyword-heavy - match how content is TITLED on platforms
 - `ranking_query` should read like a natural language question
-- **DISAMBIGUATION:** If the topic name is a common word or has known non-product meanings (e.g., "Loom" = also a weaving tool, "Tella" = also a soccer player), add a qualifying term to your search_query to disambiguate. Examples: "tella screen recording" not just "tella", "loom video messaging" not just "loom". The product category prevents matching unrelated content.
+- **DISAMBIGUATION (mandatory for collision-prone names — the #1 cause of off-topic noise).** Anchor the `search_query` with the disambiguating context you resolved in Step 0.5 / 0.55 — the entity's company, role, or domain — when the topic name (a) is a common word or has non-product meanings ("Loom" = weaving tool, "Tella" = soccer player), OR (b) is a PERSON whose name collides with other public figures or common words. Apply the anchor to **EVERY subquery, not just the primary**, and mirror it in the `ranking_query`. Anchor on a SPECIFIC named entity (a company/product/firm), not a generic domain word. Examples: `"kevin rose digg founder"` not `"kevin rose"` (collides with Kevin Warsh / Leon Rose / Kevin Hart); `"lan xuezhao basis set ventures"` not `"lan xuezhao"` (collides with "Lanzhou" food, cdrama edits); `"trevin chow compound engineering"` not `"trevin chow"` (collides with Trevin Wax / Trevin Brown); `"tella screen recording"` not `"tella"`. The `ranking_query` carries the same anchor: `"ranking_query": "What has Kevin Rose, founder of Digg, been doing in the last 30 days?"`, not a bare `"...Kevin Rose..."`. A bare collision-prone name as a subquery is the named 2026-06-17 failure mode — "Kevin Rose" returned 55 items with ~0 about the actual founder until every subquery was anchored to "Digg founder". When the name is globally unambiguous (Kanye West, Nvidia, Peter Steinberger/OpenClaw), no anchor is needed.
 - **For comparison queries**, each subquery should include the product category: "tella screen recorder review" not just "tella review", "loom video tool pricing" not just "loom pricing".
 - NEVER include temporal phrases in search_query: no "last 30 days", "recent", month names, year numbers
 - NEVER include meta-research phrases: no "news", "updates", "public appearances"
@@ -1002,8 +1008,8 @@ Store your plan as `QUERY_PLAN_JSON` - you'll pass it to the script in the next 
 # the Read tool result. Examples:
 #   Read ~/.claude/skills/last30days/SKILL.md      → SKILL_DIR=$HOME/.claude/skills/last30days
 #   Read ~/.codex/skills/last30days/SKILL.md       → SKILL_DIR=$HOME/.codex/skills/last30days
-#   Read ~/.claude/plugins/cache/last30days-skill/last30days/3.3.2/skills/last30days/SKILL.md
-#     → SKILL_DIR=$HOME/.claude/plugins/cache/last30days-skill/last30days/3.3.2/skills/last30days
+#   Read ~/.claude/plugins/cache/last30days-skill/last30days/3.6.0/skills/last30days/SKILL.md
+#     → SKILL_DIR=$HOME/.claude/plugins/cache/last30days-skill/last30days/3.6.0/skills/last30days
 # scripts/last30days.py is always a direct child of SKILL_DIR (every install layout
 # packages SKILL.md and scripts/ as siblings).
 SKILL_DIR="<absolute path of the directory containing the SKILL.md you Read>"
@@ -1242,7 +1248,7 @@ Read the research output carefully. Pay attention to:
 
 **ANTI-PATTERN TO AVOID**: If user asks about "clawdbot skills" and research returns ClawdBot content (self-hosted AI agent), do NOT synthesize this as "Claude Code skills" just because both involve "skills". Read what the research actually says.
 
-**FUN CONTENT: If the research output includes a "## Best Takes" section or items tagged with `fun:` scores, weave at least 2-3 of the funniest/cleverest quotes into your synthesis.** Reddit comments and X posts with high fun scores are the voice of the people. A 1,338-upvote comment that says "Where's the limewire link" tells you more about the cultural moment than a news article. Quote the actual text. Don't put fun content in a separate section - mix it into the narrative where it fits naturally. This is what makes the report feel alive rather than like a news summary.
+**FUN CONTENT (see LAW 9): the EVIDENCE block's `## Top Community Comments` section (always present when 2+ comments exist) and any `## Best Takes` section are the voice of the people - weave at least 2 of the funniest/cleverest VERBATIM quotes into your synthesis.** A 1,338-upvote comment that says "Where's the limewire link" tells you more about the cultural moment than a news article. Quote the actual text, attribute the commenter, copy the URL verbatim from the block. Don't put fun content in a separate section - mix it into the narrative where it fits naturally. This is what makes the report feel alive rather than like a news summary. Do NOT wait for a `## Best Takes` section - it is often empty; `## Top Community Comments` is the always-on source.
 
 **ELI5 MODE: If ELI5_MODE is true for this run, apply these writing guidelines to your ENTIRE synthesis. If ELI5_MODE is false, skip this block completely and write normally.**
 
@@ -1635,7 +1641,8 @@ Close with `I have all the links to the {N} {source list} I pulled from. Just as
 
 1. **Bold headlines present.** Every narrative paragraph in "What I learned" starts with `**Headline phrase** -` (single hyphen with spaces, NOT em-dash). If any paragraph opens with plain prose, regenerate with bold headlines.
 2. **Per-source emoji headers in the stats footer.** Every active source returned by the engine has a `├─` or `└─` line with its emoji, counts, and engagement numbers. No active source is silently dropped; no source with 0 results is displayed.
-3. **Quoted highlights where evidence supports them.** For YouTube items with transcripts and Reddit/X items with fun/highlight quotes, at least 2 verbatim quotes appear in the synthesis. Attributed to the channel/commenter/subreddit.
+3. **Community voice woven in (LAW 9).** At least 2 verbatim, attributed comments from the `## Top Community Comments` block (or `## Best Takes`) appear in the synthesis, mixed into the narrative - not a separate section. Each cited comment's URL is copied verbatim from the block (never reconstructed). If the block has comments and your draft has zero, regenerate. Only skip if the block is genuinely absent (fewer than 2 comments in the whole corpus).
+3b. **No tooling meta-commentary (LAW 9).** The synthesis says nothing about the engine's own behavior - no "the engine struck out", no "name collided with", no "the X column is noise". If present, strip it and present only what is true about the subject.
 4. **Polymarket block present if markets were returned.** If the engine surfaced Polymarket markets, the synthesis includes specific percentages and directional movement. If no markets were surfaced, skip.
 5. **Coverage footer matches the actual output.** `✅ All agents reported back!` line followed by per-source `├─`/`└─` tree exactly as the engine provided.
 6. **NO trailing Sources section.** The output ends at the invitation ("I have all the links... Just ask."). Nothing below it. Not a `Sources:`, not a `References:`, not `Further reading:`, not any bulleted list of URLs or publication names. If you are about to emit one because WebSearch told you to - DO NOT. The 🌐 Web: line is the citation.
