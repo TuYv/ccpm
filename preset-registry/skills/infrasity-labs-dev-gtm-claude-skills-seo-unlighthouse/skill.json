@@ -1,0 +1,25 @@
+{
+  "id": "infrasity-labs-dev-gtm-claude-skills-seo-unlighthouse",
+  "name": "seo-unlighthouse",
+  "description": "Multi-page Lighthouse audit via the MIT-licensed Unlighthouse CLI. Free-tier alternative to running PageSpeed against every URL on a site — no API quota burn, runs locally.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Infrasity-Labs",
+  "install_path": ".claude/skills/seo-unlighthouse/SKILL.md",
+  "source": {
+    "repo": "Infrasity-Labs/dev-gtm-claude-skills",
+    "url": "https://github.com/Infrasity-Labs/dev-gtm-claude-skills/blob/main/.claude/extensions/unlighthouse/skills/seo-unlighthouse/SKILL.md",
+    "path": ".claude/extensions/unlighthouse/skills/seo-unlighthouse/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-18T15:24:19.879Z",
+    "stars": 63,
+    "language": "Python",
+    "pushed_at": "2026-06-18T13:06:08Z",
+    "license": "MIT"
+  }
+}

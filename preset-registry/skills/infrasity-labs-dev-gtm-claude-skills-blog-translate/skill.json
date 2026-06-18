@@ -1,0 +1,25 @@
+{
+  "id": "infrasity-labs-dev-gtm-claude-skills-blog-translate",
+  "name": "blog-translate",
+  "description": "> Translate existing blog posts into one or more target languages with SEO-optimized localization. Produces native-quality translations that preserve markdown structure, frontmatter, schema JSON-LD, image and chart embeds, and citation capsules. Localizes keywords, meta tags, numbers, dates, currencies, and quote styles per locale. Flags machine-translation artifacts for review. Run BEFORE blog-localize: this handles language conversion; localize handles cultural adaptation after translation com",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Infrasity-Labs",
+  "install_path": ".claude/skills/blog-translate/SKILL.md",
+  "source": {
+    "repo": "Infrasity-Labs/dev-gtm-claude-skills",
+    "url": "https://github.com/Infrasity-Labs/dev-gtm-claude-skills/blob/main/.claude/skills/blog-translate/SKILL.md",
+    "path": ".claude/skills/blog-translate/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-18T15:24:26.281Z",
+    "stars": 63,
+    "language": "Python",
+    "pushed_at": "2026-06-18T13:06:08Z",
+    "license": "MIT"
+  }
+}

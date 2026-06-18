@@ -1,0 +1,25 @@
+{
+  "id": "infrasity-labs-dev-gtm-claude-skills-blog-outline",
+  "name": "blog-outline",
+  "description": "> SERP-informed outline generation with H2/H3 heading hierarchy, competitive content gap analysis, section-by-section word count targets, chart and image placement markers, FAQ question planning, and internal linking zones. Skeleton only: structure, H2/H3 hierarchy, word counts, FAQ slots. Use blog-brief instead if you need full competitive analysis, statistics research, and image suggestions. Lighter than a full content brief, generates article skeleton and structure only, ready for /blog write",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Infrasity-Labs",
+  "install_path": ".claude/skills/blog-outline/SKILL.md",
+  "source": {
+    "repo": "Infrasity-Labs/dev-gtm-claude-skills",
+    "url": "https://github.com/Infrasity-Labs/dev-gtm-claude-skills/blob/main/.claude/skills/blog-outline/SKILL.md",
+    "path": ".claude/skills/blog-outline/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-18T15:24:24.770Z",
+    "stars": 63,
+    "language": "Python",
+    "pushed_at": "2026-06-18T13:06:08Z",
+    "license": "MIT"
+  }
+}

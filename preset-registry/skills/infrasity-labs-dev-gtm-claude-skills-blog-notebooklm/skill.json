@@ -1,0 +1,25 @@
+{
+  "id": "infrasity-labs-dev-gtm-claude-skills-blog-notebooklm",
+  "name": "blog-notebooklm",
+  "description": "> Query Google NotebookLM notebooks for source-grounded, citation-backed answers from user-uploaded documents. Manages notebook library, handles Google authentication, and supports smart discovery. Works standalone via /blog notebooklm or internally from blog-write and blog-researcher for Tier 1 research data. Falls back gracefully when not configured. Use when user says \"notebooklm\", \"notebook\", \"query notebook\", \"ask notebook\", \"notebook research\", \"source grounded research\", \"document query\",",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Infrasity-Labs",
+  "install_path": ".claude/skills/blog-notebooklm/SKILL.md",
+  "source": {
+    "repo": "Infrasity-Labs/dev-gtm-claude-skills",
+    "url": "https://github.com/Infrasity-Labs/dev-gtm-claude-skills/blob/main/.claude/skills/blog-notebooklm/SKILL.md",
+    "path": ".claude/skills/blog-notebooklm/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-18T15:24:24.598Z",
+    "stars": 63,
+    "language": "Python",
+    "pushed_at": "2026-06-18T13:06:08Z",
+    "license": "MIT"
+  }
+}

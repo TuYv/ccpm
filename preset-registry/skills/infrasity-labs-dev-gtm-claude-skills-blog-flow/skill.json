@@ -1,0 +1,25 @@
+{
+  "id": "infrasity-labs-dev-gtm-claude-skills-blog-flow",
+  "name": "blog-flow",
+  "description": "> FLOW framework integration for bloggers. Evidence-led content workflow using the Find, Optimize, Win loop with stage-specific AI prompts from the FLOW knowledge base (30 blog-applicable prompts). Use when user says \"FLOW\", \"FLOW framework\", \"blog flow\", \"evidence-led blogging\", \"find optimize win\", or wants stage-specific blog prompts.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Infrasity-Labs",
+  "install_path": ".claude/skills/blog-flow/SKILL.md",
+  "source": {
+    "repo": "Infrasity-Labs/dev-gtm-claude-skills",
+    "url": "https://github.com/Infrasity-Labs/dev-gtm-claude-skills/blob/main/.claude/skills/blog-flow/SKILL.md",
+    "path": ".claude/skills/blog-flow/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-18T15:24:23.347Z",
+    "stars": 63,
+    "language": "Python",
+    "pushed_at": "2026-06-18T13:06:08Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "infrasity-labs-dev-gtm-claude-skills-blog-brand",
+  "name": "blog-brand",
+  "description": "> Establish durable brand and voice context for cross-skill consumption. Generates BRAND.md (audience, positioning, do/don't editorial rules, taboo phrases, competitor differentiation) and VOICE.md (existing persona JSON re-expressed as readable prose), both written to the project root. When present, all blog sub-skills auto-load these files before writing or reviewing. Pairs with blog-persona, which manages the structured persona JSON. Use when user says \"blog brand\", \"create brand context\", \"b",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Infrasity-Labs",
+  "install_path": ".claude/skills/blog-brand/SKILL.md",
+  "source": {
+    "repo": "Infrasity-Labs/dev-gtm-claude-skills",
+    "url": "https://github.com/Infrasity-Labs/dev-gtm-claude-skills/blob/main/.claude/skills/blog-brand/SKILL.md",
+    "path": ".claude/skills/blog-brand/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-18T15:24:21.835Z",
+    "stars": 63,
+    "language": "Python",
+    "pushed_at": "2026-06-18T13:06:08Z",
+    "license": "MIT"
+  }
+}

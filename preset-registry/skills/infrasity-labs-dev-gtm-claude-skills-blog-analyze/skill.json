@@ -1,0 +1,25 @@
+{
+  "id": "infrasity-labs-dev-gtm-claude-skills-blog-analyze",
+  "name": "blog-analyze",
+  "description": "> Audit and score blog posts on a 5-category 100-point scoring system covering content quality, SEO optimization, E-E-A-T signals, technical elements, and AI citation readiness. Includes AI content detection (burstiness, phrase flagging, vocabulary diversity). Supports export formats (markdown, JSON, table) and batch analysis with sorting. Generates prioritized recommendations (Critical/High/Medium/Low) with specific fixes. Works with any format (MDX, markdown, HTML, URL). Use when user says \"an",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Infrasity-Labs",
+  "install_path": ".claude/skills/blog-analyze/SKILL.md",
+  "source": {
+    "repo": "Infrasity-Labs/dev-gtm-claude-skills",
+    "url": "https://github.com/Infrasity-Labs/dev-gtm-claude-skills/blob/main/.claude/skills/blog-analyze/SKILL.md",
+    "path": ".claude/skills/blog-analyze/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-18T15:24:21.325Z",
+    "stars": 63,
+    "language": "Python",
+    "pushed_at": "2026-06-18T13:06:08Z",
+    "license": "MIT"
+  }
+}

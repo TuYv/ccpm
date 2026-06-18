@@ -1,0 +1,25 @@
+{
+  "id": "infrasity-labs-dev-gtm-claude-skills-blog-seo-check",
+  "name": "blog-seo-check",
+  "description": "> Post-writing SEO validation with pass/fail checklist covering title tag length and keyword placement, meta description quality, heading hierarchy and keyword density, internal/external link audit with anchor text analysis, canonical URL verification, Open Graph meta tags (og:title, og:description, og:image), Twitter Card validation, URL structure optimization, and image alt text presence. Produces prioritized fix list with specific recommendations. Use when user says \"seo check\", \"check seo\", ",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Infrasity-Labs",
+  "install_path": ".claude/skills/blog-seo-check/SKILL.md",
+  "source": {
+    "repo": "Infrasity-Labs/dev-gtm-claude-skills",
+    "url": "https://github.com/Infrasity-Labs/dev-gtm-claude-skills/blob/main/.claude/skills/blog-seo-check/SKILL.md",
+    "path": ".claude/skills/blog-seo-check/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-18T15:24:25.731Z",
+    "stars": 63,
+    "language": "Python",
+    "pushed_at": "2026-06-18T13:06:08Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "infrasity-labs-dev-gtm-claude-skills-seo-ahrefs",
+  "name": "seo-ahrefs",
+  "description": "Ahrefs API analyst (extension). Reads referring domains, backlinks, organic keywords, and content explorer data via the official @ahrefs/mcp server. Pairs with seo-backlinks for multi-source confidence weighting.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Infrasity-Labs",
+  "install_path": ".claude/skills/seo-ahrefs/SKILL.md",
+  "source": {
+    "repo": "Infrasity-Labs/dev-gtm-claude-skills",
+    "url": "https://github.com/Infrasity-Labs/dev-gtm-claude-skills/blob/main/.claude/extensions/ahrefs/skills/seo-ahrefs/SKILL.md",
+    "path": ".claude/extensions/ahrefs/skills/seo-ahrefs/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-18T15:24:18.652Z",
+    "stars": 63,
+    "language": "Python",
+    "pushed_at": "2026-06-18T13:06:08Z",
+    "license": "MIT"
+  }
+}

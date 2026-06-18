@@ -1,0 +1,25 @@
+{
+  "id": "infrasity-labs-dev-gtm-claude-skills-blog-taxonomy",
+  "name": "blog-taxonomy",
+  "description": "> Extract, suggest, and sync tags and categories for blog posts across all major CMS platforms. Supports WordPress REST API, Shopify GraphQL, Ghost Content API, Strapi REST/GraphQL, and Sanity GROQ. Generates tag suggestions from content analysis (keyword frequency, heading extraction, semantic grouping), enforces minimum post-count thresholds to prevent thin tag archives, and syncs taxonomy via authenticated API calls. Use when user says \"tags\", \"categories\", \"taxonomy\", \"tag suggestions\", \"syn",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Infrasity-Labs",
+  "install_path": ".claude/skills/blog-taxonomy/SKILL.md",
+  "source": {
+    "repo": "Infrasity-Labs/dev-gtm-claude-skills",
+    "url": "https://github.com/Infrasity-Labs/dev-gtm-claude-skills/blob/main/.claude/skills/blog-taxonomy/SKILL.md",
+    "path": ".claude/skills/blog-taxonomy/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-18T15:24:26.065Z",
+    "stars": 63,
+    "language": "Python",
+    "pushed_at": "2026-06-18T13:06:08Z",
+    "license": "MIT"
+  }
+}

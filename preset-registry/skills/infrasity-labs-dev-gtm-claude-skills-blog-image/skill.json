@@ -1,0 +1,25 @@
+{
+  "id": "infrasity-labs-dev-gtm-claude-skills-blog-image",
+  "name": "blog-image",
+  "description": "> AI image generation and editing for blog content powered by Gemini via MCP. Claude acts as Creative Director - interpreting intent, selecting domain expertise, constructing optimized 6-component prompts (Subject + Action + Context + Composition + Lighting + Style), and orchestrating Gemini for blog-quality results. Generates hero images, inline illustrations, social preview cards, and OG images. Edits existing blog images. Supports 6 blog-optimized domain modes (Editorial, Product, Landscape, ",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Infrasity-Labs",
+  "install_path": ".claude/skills/blog-image/SKILL.md",
+  "source": {
+    "repo": "Infrasity-Labs/dev-gtm-claude-skills",
+    "url": "https://github.com/Infrasity-Labs/dev-gtm-claude-skills/blob/main/.claude/skills/blog-image/SKILL.md",
+    "path": ".claude/skills/blog-image/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-18T15:24:23.844Z",
+    "stars": 63,
+    "language": "Python",
+    "pushed_at": "2026-06-18T13:06:08Z",
+    "license": "MIT"
+  }
+}

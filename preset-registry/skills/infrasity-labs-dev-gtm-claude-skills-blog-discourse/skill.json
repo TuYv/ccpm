@@ -1,0 +1,25 @@
+{
+  "id": "infrasity-labs-dev-gtm-claude-skills-blog-discourse",
+  "name": "blog-discourse",
+  "description": "> Research what people are actually saying about a topic in the last 30 days across Reddit, X / Twitter, YouTube, Hacker News, dev.to, Medium, and other public discourse platforms. API-free; uses WebSearch with platform-targeted site operators plus recency filters. Produces DISCOURSE.md (a structured brief) and JSON output the writer can consume. Complements blog-researcher (which focuses on authority sources) with a recency-and-engagement lens. Use when user says \"blog discourse\", \"discourse re",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Infrasity-Labs",
+  "install_path": ".claude/skills/blog-discourse/SKILL.md",
+  "source": {
+    "repo": "Infrasity-Labs/dev-gtm-claude-skills",
+    "url": "https://github.com/Infrasity-Labs/dev-gtm-claude-skills/blob/main/.claude/skills/blog-discourse/SKILL.md",
+    "path": ".claude/skills/blog-discourse/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-18T15:24:23.003Z",
+    "stars": 63,
+    "language": "Python",
+    "pushed_at": "2026-06-18T13:06:08Z",
+    "license": "MIT"
+  }
+}

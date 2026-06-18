@@ -1,0 +1,25 @@
+{
+  "id": "infrasity-labs-dev-gtm-claude-skills-blog-factcheck",
+  "name": "blog-factcheck",
+  "description": "> Verify statistics and claims in blog posts by fetching cited source URLs and checking if the claimed data actually appears on the page. Extracts all statistical claims (numbers, percentages, named sources), fetches each cited URL via WebFetch, and scores match confidence (exact match 1.0, paraphrase 0.7-0.9, not found 0.0). Flags uncited claims as UNVERIFIED. Use when user says \"fact check\", \"verify statistics\", \"check sources\", \"validate claims\", \"factcheck\", \"source verification\".",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Infrasity-Labs",
+  "install_path": ".claude/skills/blog-factcheck/SKILL.md",
+  "source": {
+    "repo": "Infrasity-Labs/dev-gtm-claude-skills",
+    "url": "https://github.com/Infrasity-Labs/dev-gtm-claude-skills/blob/main/.claude/skills/blog-factcheck/SKILL.md",
+    "path": ".claude/skills/blog-factcheck/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-18T15:24:23.171Z",
+    "stars": 63,
+    "language": "Python",
+    "pushed_at": "2026-06-18T13:06:08Z",
+    "license": "MIT"
+  }
+}

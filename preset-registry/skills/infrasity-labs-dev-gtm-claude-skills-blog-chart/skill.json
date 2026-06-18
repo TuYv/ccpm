@@ -1,0 +1,25 @@
+{
+  "id": "infrasity-labs-dev-gtm-claude-skills-blog-chart",
+  "name": "blog-chart",
+  "description": "> Generate dark-mode-compatible inline SVG data visualization charts for blog posts. Supports horizontal bar, grouped bar, donut, line, lollipop, area, and radar charts with automatic platform detection (HTML vs JSX/MDX). Enforces chart type diversity, accessible markup (role=img, aria-label), source attribution, and transparent backgrounds. Use whenever the user mentions data visualization, charts, graphs, comparison tables that need to be visualized, or wants to embed inline SVG visualizations",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Infrasity-Labs",
+  "install_path": ".claude/skills/blog-chart/SKILL.md",
+  "source": {
+    "repo": "Infrasity-Labs/dev-gtm-claude-skills",
+    "url": "https://github.com/Infrasity-Labs/dev-gtm-claude-skills/blob/main/.claude/skills/blog-chart/SKILL.md",
+    "path": ".claude/skills/blog-chart/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-18T15:24:22.580Z",
+    "stars": 63,
+    "language": "Python",
+    "pushed_at": "2026-06-18T13:06:08Z",
+    "license": "MIT"
+  }
+}

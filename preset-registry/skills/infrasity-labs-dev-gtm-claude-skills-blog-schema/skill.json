@@ -1,0 +1,25 @@
+{
+  "id": "infrasity-labs-dev-gtm-claude-skills-blog-schema",
+  "name": "blog-schema",
+  "description": "> Generate complete JSON-LD schema markup for blog posts including BlogPosting, Person, Organization, BreadcrumbList, FAQPage, and ImageObject. Validates against Google requirements and warns about deprecated types. Use when user says \"schema\", \"blog schema\", \"json-ld\", \"structured data\", \"schema markup\", \"generate schema\".",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Infrasity-Labs",
+  "install_path": ".claude/skills/blog-schema/SKILL.md",
+  "source": {
+    "repo": "Infrasity-Labs/dev-gtm-claude-skills",
+    "url": "https://github.com/Infrasity-Labs/dev-gtm-claude-skills/blob/main/.claude/skills/blog-schema/SKILL.md",
+    "path": ".claude/skills/blog-schema/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-18T15:24:25.557Z",
+    "stars": 63,
+    "language": "Python",
+    "pushed_at": "2026-06-18T13:06:08Z",
+    "license": "MIT"
+  }
+}

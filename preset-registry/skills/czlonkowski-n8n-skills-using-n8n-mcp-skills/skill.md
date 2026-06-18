@@ -120,7 +120,7 @@ closes the gap where a tool's full description isn't loaded until first use.
 - `n8n_validate_workflow` — validate a deployed workflow by `{id}` (no node JSON to inspect).
 
 **Inspect & lifecycle**
-- `n8n_get_workflow` — fetch a workflow (full / structure / minimal). Use it to verify `connections` after edits.
+- `n8n_get_workflow` — fetch a workflow (full / structure / active / filtered / minimal). Use it to verify `connections` after edits; `mode="filtered"` + `nodeNames` reads one heavy node (e.g. long Code source) without pulling the whole workflow, which can truncate client-side.
 - `n8n_list_workflows` — list/filter (search before duplicating logic).
 - `n8n_delete_workflow`, `n8n_workflow_versions` (history/rollback), `n8n_instances`, `n8n_health_check`.
 
