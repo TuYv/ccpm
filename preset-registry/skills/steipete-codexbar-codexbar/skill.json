@@ -1,0 +1,25 @@
+{
+  "id": "steipete-codexbar-codexbar",
+  "name": "codexbar",
+  "description": "CodexBar read. Provider usage, limits, credits, config health. JSON. No writes.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "steipete",
+  "install_path": ".claude/skills/codexbar/SKILL.md",
+  "source": {
+    "repo": "steipete/CodexBar",
+    "url": "https://github.com/steipete/CodexBar/blob/main/.agents/skills/codexbar/SKILL.md",
+    "path": ".agents/skills/codexbar/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-18T11:29:21.907Z",
+    "stars": 14988,
+    "language": "Swift",
+    "pushed_at": "2026-06-18T11:23:55Z",
+    "license": "MIT"
+  }
+}
