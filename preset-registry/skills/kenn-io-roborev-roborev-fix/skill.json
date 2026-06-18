@@ -1,7 +1,7 @@
 {
   "id": "kenn-io-roborev-roborev-fix",
   "name": "roborev-fix",
-  "description": "Use when the user asks to fix open reviews, invokes $roborev-fix, or provides job IDs; do not use when the user only pastes review findings with no request to discover or close reviews",
+  "description": "Use when the user asks to fix open failing reviews, invokes $roborev-fix, or provides job IDs; do not use when the user only pastes review findings with no request to discover or close reviews",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/kenn-io/roborev/blob/main/internal/skills/codex/roborev-fix/SKILL.md",
     "path": "internal/skills/codex/roborev-fix/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-18T18:20:09.177Z",
+    "discovered_at": "2026-06-18T20:48:56.264Z",
     "stars": 1407,
     "language": "Go",
-    "pushed_at": "2026-06-18T12:12:56Z",
+    "pushed_at": "2026-06-18T20:29:04Z",
     "license": "MIT"
   }
 }
