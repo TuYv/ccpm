@@ -89,7 +89,7 @@ If you catch yourself thinking any of these, stop and invoke the named skill fir
 | `n8n-node-configuration` | Configuring any node; operation-aware required fields; property dependencies; surgical field edits |
 | `n8n-expression-syntax` | Writing `{{ }}`, `$json`/`$node`/`$now`; mapping data between nodes; the transform gatekeeper; Set-node discipline |
 | `n8n-validation-expert` | Interpreting validation errors/warnings; false positives; the validation loop; auto-fix; reviewing an existing workflow |
-| `n8n-code-javascript` | Any Code node in JavaScript; data access; `$helpers`; DateTime; SplitInBatches loop patterns |
+| `n8n-code-javascript` | Any Code node in JavaScript; data access; `this.helpers`; DateTime; SplitInBatches loop patterns |
 | `n8n-code-python` | A Code node specifically requested in Python; standard-library limits |
 | `n8n-code-tool` | The AI-agent-callable Custom Code Tool (`toolCode`) — returns a string, no `$fromAI`/`$input` |
 | `n8n-error-handling` | Webhook/API or unattended workflows; wiring error outputs; retries; 4xx/5xx response shapes; silent failures |
