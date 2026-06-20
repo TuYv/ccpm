@@ -1,0 +1,25 @@
+{
+  "id": "neolabhq-context-engineering-kit-load-pr-comments",
+  "name": "load-pr-comments",
+  "description": "Use to load open/unresolved PR review comments then aggregate them as tasks in .specs/comments/*.md for parallel agents to fix.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "NeoLabHQ",
+  "install_path": ".claude/skills/load-pr-comments/SKILL.md",
+  "source": {
+    "repo": "NeoLabHQ/context-engineering-kit",
+    "url": "https://github.com/NeoLabHQ/context-engineering-kit/blob/master/plugins/git/skills/load-pr-comments/SKILL.md",
+    "path": "plugins/git/skills/load-pr-comments/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-06-20T22:29:46.634Z",
+    "stars": 1149,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-20T20:50:20Z",
+    "license": "GPL-3.0"
+  }
+}
