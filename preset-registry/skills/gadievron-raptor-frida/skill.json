@@ -1,0 +1,25 @@
+{
+  "id": "gadievron-raptor-frida",
+  "name": "frida",
+  "description": "Dynamic instrumentation via Frida - attach to or spawn a process, load a JS hook script, capture send() events into a lifecycle-managed run directory. Supports local, USB-attached, and remote frida-server targets.",
+  "category": "通用其他",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "gadievron",
+  "install_path": ".claude/skills/frida/SKILL.md",
+  "source": {
+    "repo": "gadievron/raptor",
+    "url": "https://github.com/gadievron/raptor/blob/main/.claude/skills/frida/SKILL.md",
+    "path": ".claude/skills/frida/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-20T20:50:00.751Z",
+    "stars": 3025,
+    "language": "Python",
+    "pushed_at": "2026-06-20T20:39:10Z",
+    "license": null
+  }
+}
