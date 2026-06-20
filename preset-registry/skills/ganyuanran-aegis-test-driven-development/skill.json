@@ -1,7 +1,7 @@
 {
   "id": "ganyuanran-aegis-test-driven-development",
   "name": "test-driven-development",
-  "description": "Use when strict TDD is explicitly requested, or when an approved atomic implementation task has already chosen TDD Route strict.",
+  "description": "Use when the user explicitly requests strict or test-first TDD, or when the current conversation already contains an explicit `TDD Route: strict` decision from another Aegis workflow.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/GanyuanRan/Aegis/blob/main/skills/test-driven-development/SKILL.md",
     "path": "skills/test-driven-development/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-20T00:38:37.241Z",
-    "stars": 539,
+    "discovered_at": "2026-06-20T05:55:24.824Z",
+    "stars": 546,
     "language": "Shell",
-    "pushed_at": "2026-06-17T15:59:14Z",
+    "pushed_at": "2026-06-20T04:49:58Z",
     "license": "MIT"
   }
 }
