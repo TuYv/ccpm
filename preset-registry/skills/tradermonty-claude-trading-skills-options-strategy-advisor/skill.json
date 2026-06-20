@@ -1,0 +1,25 @@
+{
+  "id": "tradermonty-claude-trading-skills-options-strategy-advisor",
+  "name": "options-strategy-advisor",
+  "description": "Options trading strategy analysis and simulation tool. Provides theoretical pricing using Black-Scholes model, Greeks calculation, strategy P/L simulation, and risk management guidance. Use when user requests options strategy analysis, covered calls, protective puts, spreads, iron condors, earnings plays, or options risk management. Includes volatility analysis, position sizing, and earnings-based strategy recommendations. Educational focus with practical trade simulation.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tradermonty",
+  "install_path": ".claude/skills/options-strategy-advisor/SKILL.md",
+  "source": {
+    "repo": "tradermonty/claude-trading-skills",
+    "url": "https://github.com/tradermonty/claude-trading-skills/blob/main/skills/options-strategy-advisor/SKILL.md",
+    "path": "skills/options-strategy-advisor/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-20T09:52:50.228Z",
+    "stars": 1966,
+    "language": "Python",
+    "pushed_at": "2026-06-20T01:16:47Z",
+    "license": "MIT"
+  }
+}

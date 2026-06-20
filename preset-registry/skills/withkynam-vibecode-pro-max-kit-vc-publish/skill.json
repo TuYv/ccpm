@@ -1,0 +1,25 @@
+{
+  "id": "withkynam-vibecode-pro-max-kit-vc-publish",
+  "name": "vc-publish",
+  "description": "Use when publishing harness improvements to the remote kit repo. Diffs managed files, shows what changed, bumps version, and pushes. Counterpart to vc-update (pull).",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "withkynam",
+  "install_path": ".claude/skills/vc-publish/SKILL.md",
+  "source": {
+    "repo": "withkynam/vibecode-pro-max-kit",
+    "url": "https://github.com/withkynam/vibecode-pro-max-kit/blob/main/.claude/skills/vc-publish/SKILL.md",
+    "path": ".claude/skills/vc-publish/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-20T09:54:46.307Z",
+    "stars": 951,
+    "language": "JavaScript",
+    "pushed_at": "2026-06-20T06:09:27Z",
+    "license": "MIT"
+  }
+}

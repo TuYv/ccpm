@@ -1,0 +1,25 @@
+{
+  "id": "tradermonty-claude-trading-skills-market-breadth-analyzer",
+  "name": "market-breadth-analyzer",
+  "description": "Quantifies market breadth health using TraderMonty's public CSV data. Generates a 0-100 composite score across 6 components (100 = healthy). No API key required. Use when user asks about market breadth, participation rate, advance-decline health, whether the rally is broad-based, or general market health assessment.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tradermonty",
+  "install_path": ".claude/skills/market-breadth-analyzer/SKILL.md",
+  "source": {
+    "repo": "tradermonty/claude-trading-skills",
+    "url": "https://github.com/tradermonty/claude-trading-skills/blob/main/skills/market-breadth-analyzer/SKILL.md",
+    "path": "skills/market-breadth-analyzer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-20T09:52:49.469Z",
+    "stars": 1966,
+    "language": "Python",
+    "pushed_at": "2026-06-20T01:16:47Z",
+    "license": "MIT"
+  }
+}

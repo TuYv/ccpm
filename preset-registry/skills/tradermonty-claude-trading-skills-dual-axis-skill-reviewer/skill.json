@@ -1,0 +1,25 @@
+{
+  "id": "tradermonty-claude-trading-skills-dual-axis-skill-reviewer",
+  "name": "dual-axis-skill-reviewer",
+  "description": "Review skills in any project using a dual-axis method: (1) deterministic code-based checks (structure, scripts, tests, execution safety) and (2) LLM deep review findings. Use when you need reproducible quality scoring for `skills/*/SKILL.md`, want to gate merges with a score threshold (for example 90+), or need concrete improvement items for low-scoring skills. Works across projects via --project-root.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tradermonty",
+  "install_path": ".claude/skills/dual-axis-skill-reviewer/SKILL.md",
+  "source": {
+    "repo": "tradermonty/claude-trading-skills",
+    "url": "https://github.com/tradermonty/claude-trading-skills/blob/main/skills/dual-axis-skill-reviewer/SKILL.md",
+    "path": "skills/dual-axis-skill-reviewer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-20T09:52:45.889Z",
+    "stars": 1966,
+    "language": "Python",
+    "pushed_at": "2026-06-20T01:16:47Z",
+    "license": "MIT"
+  }
+}

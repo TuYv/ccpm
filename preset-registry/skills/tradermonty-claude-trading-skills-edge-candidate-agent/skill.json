@@ -1,0 +1,25 @@
+{
+  "id": "tradermonty-claude-trading-skills-edge-candidate-agent",
+  "name": "edge-candidate-agent",
+  "description": "Generate and prioritize US equity long-side edge research tickets from EOD observations, then export pipeline-ready candidate specs for trade-strategy-pipeline Phase I. Use when users ask to turn hypotheses/anomalies into reproducible research tickets, convert validated ideas into `strategy.yaml` + `metadata.json`, or preflight-check interface compatibility (`edge-finder-candidate/v1`) before running pipeline backtests.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tradermonty",
+  "install_path": ".claude/skills/edge-candidate-agent/SKILL.md",
+  "source": {
+    "repo": "tradermonty/claude-trading-skills",
+    "url": "https://github.com/tradermonty/claude-trading-skills/blob/main/skills/edge-candidate-agent/SKILL.md",
+    "path": "skills/edge-candidate-agent/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-20T09:52:46.669Z",
+    "stars": 1966,
+    "language": "Python",
+    "pushed_at": "2026-06-20T01:16:47Z",
+    "license": "MIT"
+  }
+}

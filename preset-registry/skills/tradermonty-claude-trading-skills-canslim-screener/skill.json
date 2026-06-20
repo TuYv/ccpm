@@ -1,0 +1,25 @@
+{
+  "id": "tradermonty-claude-trading-skills-canslim-screener",
+  "name": "canslim-screener",
+  "description": "Screen US stocks using William O'Neil's CANSLIM growth stock methodology. Use when user requests CANSLIM stock screening, growth stock analysis, momentum stock identification, or wants to find stocks with strong earnings and price momentum following O'Neil's investment system.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tradermonty",
+  "install_path": ".claude/skills/canslim-screener/SKILL.md",
+  "source": {
+    "repo": "tradermonty/claude-trading-skills",
+    "url": "https://github.com/tradermonty/claude-trading-skills/blob/main/skills/canslim-screener/SKILL.md",
+    "path": "skills/canslim-screener/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-20T09:52:45.264Z",
+    "stars": 1966,
+    "language": "Python",
+    "pushed_at": "2026-06-20T01:16:47Z",
+    "license": "MIT"
+  }
+}

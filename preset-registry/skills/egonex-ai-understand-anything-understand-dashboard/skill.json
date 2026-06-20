@@ -1,0 +1,25 @@
+{
+  "id": "egonex-ai-understand-anything-understand-dashboard",
+  "name": "understand-dashboard",
+  "description": "Launch the interactive web dashboard to visualize a codebase's knowledge graph",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Egonex-AI",
+  "install_path": ".claude/skills/understand-dashboard/SKILL.md",
+  "source": {
+    "repo": "Egonex-AI/Understand-Anything",
+    "url": "https://github.com/Egonex-AI/Understand-Anything/blob/main/understand-anything-plugin/skills/understand-dashboard/SKILL.md",
+    "path": "understand-anything-plugin/skills/understand-dashboard/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-20T09:54:06.151Z",
+    "stars": 64252,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-19T03:37:55Z",
+    "license": "MIT"
+  }
+}

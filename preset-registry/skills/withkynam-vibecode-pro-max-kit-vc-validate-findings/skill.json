@@ -1,0 +1,25 @@
+{
+  "id": "withkynam-vibecode-pro-max-kit-vc-validate-findings",
+  "name": "vc-validate-findings",
+  "description": "Use when running VALIDATE V2-V3 fan-out. Two-layer investigation (4 dimension agents + per-section feasibility agents) synthesized into PASS/CONDITIONAL/BLOCKED net gate. Strategy-agnostic.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "withkynam",
+  "install_path": ".claude/skills/vc-validate-findings/SKILL.md",
+  "source": {
+    "repo": "withkynam/vibecode-pro-max-kit",
+    "url": "https://github.com/withkynam/vibecode-pro-max-kit/blob/main/.claude/skills/vc-validate-findings/SKILL.md",
+    "path": ".claude/skills/vc-validate-findings/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-20T09:54:48.139Z",
+    "stars": 951,
+    "language": "JavaScript",
+    "pushed_at": "2026-06-20T06:09:27Z",
+    "license": "MIT"
+  }
+}

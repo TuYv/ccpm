@@ -1,0 +1,25 @@
+{
+  "id": "tradermonty-claude-trading-skills-exposure-coach",
+  "name": "exposure-coach",
+  "description": "Generate a one-page Market Posture summary with net exposure ceiling, growth-vs-value bias, participation breadth, and new-entry-allowed vs cash-priority recommendation by integrating signals from breadth, regime, and flow analysis skills.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tradermonty",
+  "install_path": ".claude/skills/exposure-coach/SKILL.md",
+  "source": {
+    "repo": "tradermonty/claude-trading-skills",
+    "url": "https://github.com/tradermonty/claude-trading-skills/blob/main/skills/exposure-coach/SKILL.md",
+    "path": "skills/exposure-coach/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-20T09:52:47.952Z",
+    "stars": 1966,
+    "language": "Python",
+    "pushed_at": "2026-06-20T01:16:47Z",
+    "license": "MIT"
+  }
+}

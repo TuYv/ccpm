@@ -1,0 +1,25 @@
+{
+  "id": "tradermonty-claude-trading-skills-edge-strategy-reviewer",
+  "name": "edge-strategy-reviewer",
+  "description": "> Critically review strategy drafts from edge-strategy-designer for edge plausibility, overfitting risk, sample size adequacy, and execution realism. Use when strategy_drafts/*.yaml exists and needs quality gate before pipeline export. Outputs PASS/REVISE/REJECT verdicts with confidence scores.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tradermonty",
+  "install_path": ".claude/skills/edge-strategy-reviewer/SKILL.md",
+  "source": {
+    "repo": "tradermonty/claude-trading-skills",
+    "url": "https://github.com/tradermonty/claude-trading-skills/blob/main/skills/edge-strategy-reviewer/SKILL.md",
+    "path": "skills/edge-strategy-reviewer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-20T09:52:47.790Z",
+    "stars": 1966,
+    "language": "Python",
+    "pushed_at": "2026-06-20T01:16:47Z",
+    "license": "MIT"
+  }
+}

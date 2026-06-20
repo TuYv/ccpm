@@ -1,0 +1,25 @@
+{
+  "id": "tradermonty-claude-trading-skills-scenario-analyzer",
+  "name": "scenario-analyzer",
+  "description": "| Skill that analyzes 18-month scenarios from a news headline. Runs the primary analysis with the scenario-analyst agent and obtains a second opinion with the strategy-reviewer agent. Generates a comprehensive English report covering 1st/2nd/3rd-order impacts, recommended stocks, and a critical review. Example: /scenario-analyzer \"Fed raises rates by 50bp\" Triggers: news analysis, scenario analysis, 18-month outlook, medium-to-long-term investment strategy",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tradermonty",
+  "install_path": ".claude/skills/scenario-analyzer/SKILL.md",
+  "source": {
+    "repo": "tradermonty/claude-trading-skills",
+    "url": "https://github.com/tradermonty/claude-trading-skills/blob/main/skills/scenario-analyzer/SKILL.md",
+    "path": "skills/scenario-analyzer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-20T09:52:51.441Z",
+    "stars": 1966,
+    "language": "Python",
+    "pushed_at": "2026-06-20T01:16:47Z",
+    "license": "MIT"
+  }
+}

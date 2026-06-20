@@ -1,0 +1,25 @@
+{
+  "id": "rpamis-comet-comet-build",
+  "name": "comet-build",
+  "description": "Comet Phase 3: Plan and Build. Invoke with /comet-build. Create plans and select execution method (subagent or direct) for implementation.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "rpamis",
+  "install_path": ".claude/skills/comet-build/SKILL.md",
+  "source": {
+    "repo": "rpamis/comet",
+    "url": "https://github.com/rpamis/comet/blob/master/assets/skills/comet-build/SKILL.md",
+    "path": "assets/skills/comet-build/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-06-20T09:53:05.046Z",
+    "stars": 1489,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-19T13:59:29Z",
+    "license": "MIT"
+  }
+}

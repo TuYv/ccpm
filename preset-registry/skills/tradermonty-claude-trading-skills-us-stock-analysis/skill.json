@@ -1,0 +1,25 @@
+{
+  "id": "tradermonty-claude-trading-skills-us-stock-analysis",
+  "name": "us-stock-analysis",
+  "description": "Comprehensive US stock analysis including fundamental analysis (financial metrics, business quality, valuation), technical analysis (indicators, chart patterns, support/resistance), stock comparisons, and investment report generation. Use when user requests analysis of US stock tickers (e.g., \"analyze AAPL\", \"compare TSLA vs NVDA\", \"give me a report on Microsoft\"), evaluation of financial metrics, technical chart analysis, or investment recommendations for American stocks.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tradermonty",
+  "install_path": ".claude/skills/us-stock-analysis/SKILL.md",
+  "source": {
+    "repo": "tradermonty/claude-trading-skills",
+    "url": "https://github.com/tradermonty/claude-trading-skills/blob/main/examples/weekly-trade-strategy/skills/us-stock-analysis/SKILL.md",
+    "path": "examples/weekly-trade-strategy/skills/us-stock-analysis/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-20T09:52:44.451Z",
+    "stars": 1966,
+    "language": "Python",
+    "pushed_at": "2026-06-20T01:16:47Z",
+    "license": "MIT"
+  }
+}

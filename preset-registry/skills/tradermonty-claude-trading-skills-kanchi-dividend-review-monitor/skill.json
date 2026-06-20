@@ -1,0 +1,25 @@
+{
+  "id": "tradermonty-claude-trading-skills-kanchi-dividend-review-monitor",
+  "name": "kanchi-dividend-review-monitor",
+  "description": "Monitor dividend portfolios with Kanchi-style forced-review triggers (T1-T5) and convert anomalies into OK/WARN/REVIEW states without auto-selling. Use when users ask for 減配検知, 8-Kガバナンス監視, 配当安全性モニタリング, REVIEWキュー自動化, or periodic dividend risk checks.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tradermonty",
+  "install_path": ".claude/skills/kanchi-dividend-review-monitor/SKILL.md",
+  "source": {
+    "repo": "tradermonty/claude-trading-skills",
+    "url": "https://github.com/tradermonty/claude-trading-skills/blob/main/skills/kanchi-dividend-review-monitor/SKILL.md",
+    "path": "skills/kanchi-dividend-review-monitor/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-20T09:52:48.823Z",
+    "stars": 1966,
+    "language": "Python",
+    "pushed_at": "2026-06-20T01:16:47Z",
+    "license": "MIT"
+  }
+}

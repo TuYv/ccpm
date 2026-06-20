@@ -1,0 +1,25 @@
+{
+  "id": "tradermonty-claude-trading-skills-edge-pipeline-orchestrator",
+  "name": "edge-pipeline-orchestrator",
+  "description": "Orchestrate the full edge research pipeline from candidate detection through strategy design, review, revision, and export. Use when coordinating multi-stage edge research workflows end-to-end.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tradermonty",
+  "install_path": ".claude/skills/edge-pipeline-orchestrator/SKILL.md",
+  "source": {
+    "repo": "tradermonty/claude-trading-skills",
+    "url": "https://github.com/tradermonty/claude-trading-skills/blob/main/skills/edge-pipeline-orchestrator/SKILL.md",
+    "path": "skills/edge-pipeline-orchestrator/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-20T09:52:47.171Z",
+    "stars": 1966,
+    "language": "Python",
+    "pushed_at": "2026-06-20T01:16:47Z",
+    "license": "MIT"
+  }
+}

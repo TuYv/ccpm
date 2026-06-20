@@ -1,0 +1,25 @@
+{
+  "id": "tradermonty-claude-trading-skills-data-quality-checker",
+  "name": "data-quality-checker",
+  "description": "Validate data quality in market analysis documents and blog articles before publication. Use when checking for price scale inconsistencies (ETF vs futures), instrument notation errors, date/day-of-week mismatches, allocation total errors, and unit mismatches. Supports English and Japanese content. Advisory mode -- flags issues as warnings for human review, not as blockers.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tradermonty",
+  "install_path": ".claude/skills/data-quality-checker/SKILL.md",
+  "source": {
+    "repo": "tradermonty/claude-trading-skills",
+    "url": "https://github.com/tradermonty/claude-trading-skills/blob/main/skills/data-quality-checker/SKILL.md",
+    "path": "skills/data-quality-checker/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-20T09:52:45.417Z",
+    "stars": 1966,
+    "language": "Python",
+    "pushed_at": "2026-06-20T01:16:47Z",
+    "license": "MIT"
+  }
+}

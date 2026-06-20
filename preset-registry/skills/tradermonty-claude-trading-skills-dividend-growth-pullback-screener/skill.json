@@ -1,0 +1,25 @@
+{
+  "id": "tradermonty-claude-trading-skills-dividend-growth-pullback-screener",
+  "name": "dividend-growth-pullback-screener",
+  "description": "Use this skill to find high-quality dividend growth stocks (12%+ annual dividend growth, 1.5%+ yield) that are experiencing temporary pullbacks, identified by RSI oversold conditions (RSI ≤40). This skill combines fundamental dividend analysis with technical timing indicators to identify buying opportunities in strong dividend growers during short-term weakness.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tradermonty",
+  "install_path": ".claude/skills/dividend-growth-pullback-screener/SKILL.md",
+  "source": {
+    "repo": "tradermonty/claude-trading-skills",
+    "url": "https://github.com/tradermonty/claude-trading-skills/blob/main/skills/dividend-growth-pullback-screener/SKILL.md",
+    "path": "skills/dividend-growth-pullback-screener/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-20T09:52:45.579Z",
+    "stars": 1966,
+    "language": "Python",
+    "pushed_at": "2026-06-20T01:16:47Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "tradermonty-claude-trading-skills-economic-calendar-fetcher",
+  "name": "economic-calendar-fetcher",
+  "description": "Fetch upcoming economic events and data releases using FMP API. Retrieve scheduled central bank decisions, employment reports, inflation data, GDP releases, and other market-moving economic indicators for specified date ranges (default: next 7 days). The script outputs raw JSON or text; the assistant filters, assesses impact, and generates the Markdown report.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tradermonty",
+  "install_path": ".claude/skills/economic-calendar-fetcher/SKILL.md",
+  "source": {
+    "repo": "tradermonty/claude-trading-skills",
+    "url": "https://github.com/tradermonty/claude-trading-skills/blob/main/skills/economic-calendar-fetcher/SKILL.md",
+    "path": "skills/economic-calendar-fetcher/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-20T09:52:46.511Z",
+    "stars": 1966,
+    "language": "Python",
+    "pushed_at": "2026-06-20T01:16:47Z",
+    "license": "MIT"
+  }
+}

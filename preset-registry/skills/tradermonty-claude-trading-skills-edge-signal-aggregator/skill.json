@@ -1,0 +1,25 @@
+{
+  "id": "tradermonty-claude-trading-skills-edge-signal-aggregator",
+  "name": "edge-signal-aggregator",
+  "description": "Aggregate and rank signals from multiple edge-finding skills (edge-candidate-agent, theme-detector, sector-analyst, institutional-flow-tracker) into a prioritized conviction dashboard with weighted scoring, deduplication, and contradiction detection.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tradermonty",
+  "install_path": ".claude/skills/edge-signal-aggregator/SKILL.md",
+  "source": {
+    "repo": "tradermonty/claude-trading-skills",
+    "url": "https://github.com/tradermonty/claude-trading-skills/blob/main/skills/edge-signal-aggregator/SKILL.md",
+    "path": "skills/edge-signal-aggregator/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-20T09:52:47.336Z",
+    "stars": 1966,
+    "language": "Python",
+    "pushed_at": "2026-06-20T01:16:47Z",
+    "license": "MIT"
+  }
+}

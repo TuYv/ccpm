@@ -1,0 +1,25 @@
+{
+  "id": "timescale-pg-aiguide-setup-timescaledb-hypertables",
+  "name": "setup-timescaledb-hypertables",
+  "description": "| Use this skill when creating database schemas or tables for Timescale, TimescaleDB, TigerData, or Tiger Cloud, especially for time-series, IoT, metrics, events, or log data. Use this to improve the performance of any insert-heavy table.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "timescale",
+  "install_path": ".claude/skills/setup-timescaledb-hypertables/SKILL.md",
+  "source": {
+    "repo": "timescale/pg-aiguide",
+    "url": "https://github.com/timescale/pg-aiguide/blob/main/skills/setup-timescaledb-hypertables/SKILL.md",
+    "path": "skills/setup-timescaledb-hypertables/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-20T09:53:52.354Z",
+    "stars": 1768,
+    "language": "Python",
+    "pushed_at": "2026-06-10T15:10:07Z",
+    "license": "Apache-2.0"
+  }
+}

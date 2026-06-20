@@ -1,0 +1,25 @@
+{
+  "id": "tradermonty-claude-trading-skills-finviz-screener",
+  "name": "finviz-screener",
+  "description": "Build and open FinViz screener URLs from natural language requests. Use when user wants to screen stocks, find stocks matching criteria, filter by fundamentals or technicals, or asks to open FinViz with specific conditions. Supports both Japanese and English input (e.g., \"高配当で成長している小型株を探したい\", \"Find oversold large caps with high ROE\").",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tradermonty",
+  "install_path": ".claude/skills/finviz-screener/SKILL.md",
+  "source": {
+    "repo": "tradermonty/claude-trading-skills",
+    "url": "https://github.com/tradermonty/claude-trading-skills/blob/main/skills/finviz-screener/SKILL.md",
+    "path": "skills/finviz-screener/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-20T09:52:48.098Z",
+    "stars": 1966,
+    "language": "Python",
+    "pushed_at": "2026-06-20T01:16:47Z",
+    "license": "MIT"
+  }
+}

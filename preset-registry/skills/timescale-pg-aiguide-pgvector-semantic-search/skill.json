@@ -1,0 +1,25 @@
+{
+  "id": "timescale-pg-aiguide-pgvector-semantic-search",
+  "name": "pgvector-semantic-search",
+  "description": "| Use this skill for setting up vector similarity search with pgvector for AI/ML embeddings, RAG applications, or semantic search.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "timescale",
+  "install_path": ".claude/skills/pgvector-semantic-search/SKILL.md",
+  "source": {
+    "repo": "timescale/pg-aiguide",
+    "url": "https://github.com/timescale/pg-aiguide/blob/main/skills/pgvector-semantic-search/SKILL.md",
+    "path": "skills/pgvector-semantic-search/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-20T09:53:51.816Z",
+    "stars": 1768,
+    "language": "Python",
+    "pushed_at": "2026-06-10T15:10:07Z",
+    "license": "Apache-2.0"
+  }
+}

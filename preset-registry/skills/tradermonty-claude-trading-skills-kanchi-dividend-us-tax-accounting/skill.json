@@ -1,0 +1,25 @@
+{
+  "id": "tradermonty-claude-trading-skills-kanchi-dividend-us-tax-accounting",
+  "name": "kanchi-dividend-us-tax-accounting",
+  "description": "Provide US dividend tax and account-location workflow for Kanchi-style income portfolios. Use when users ask about qualified vs ordinary dividends, 1099-DIV interpretation, REIT/BDC distribution treatment, holding-period checks, or taxable-vs-IRA account placement decisions for dividend assets.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tradermonty",
+  "install_path": ".claude/skills/kanchi-dividend-us-tax-accounting/SKILL.md",
+  "source": {
+    "repo": "tradermonty/claude-trading-skills",
+    "url": "https://github.com/tradermonty/claude-trading-skills/blob/main/skills/kanchi-dividend-us-tax-accounting/SKILL.md",
+    "path": "skills/kanchi-dividend-us-tax-accounting/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-20T09:52:49.149Z",
+    "stars": 1966,
+    "language": "Python",
+    "pushed_at": "2026-06-20T01:16:47Z",
+    "license": "MIT"
+  }
+}

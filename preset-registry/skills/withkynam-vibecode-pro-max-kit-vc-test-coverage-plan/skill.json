@@ -1,0 +1,25 @@
+{
+  "id": "withkynam-vibecode-pro-max-kit-vc-test-coverage-plan",
+  "name": "vc-test-coverage-plan",
+  "description": "Use when creating a test plan for a blast radius. Assigns all 4 tiers (fully-automated, hybrid, agent-probe, known-gap) with exact commands, what each proves, and gap resolution options.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "withkynam",
+  "install_path": ".claude/skills/vc-test-coverage-plan/SKILL.md",
+  "source": {
+    "repo": "withkynam/vibecode-pro-max-kit",
+    "url": "https://github.com/withkynam/vibecode-pro-max-kit/blob/main/.claude/skills/vc-test-coverage-plan/SKILL.md",
+    "path": ".claude/skills/vc-test-coverage-plan/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-20T09:54:47.713Z",
+    "stars": 951,
+    "language": "JavaScript",
+    "pushed_at": "2026-06-20T06:09:27Z",
+    "license": "MIT"
+  }
+}
