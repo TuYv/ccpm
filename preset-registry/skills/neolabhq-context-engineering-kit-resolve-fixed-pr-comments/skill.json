@@ -1,0 +1,25 @@
+{
+  "id": "neolabhq-context-engineering-kit-resolve-fixed-pr-comments",
+  "name": "resolve-fixed-pr-comments",
+  "description": "Verify what PR review comments have been addressed (committed/pushed OR uncommitted local changes) and resolve the threads that are genuinely fixed or no longer relevant.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "NeoLabHQ",
+  "install_path": ".claude/skills/resolve-fixed-pr-comments/SKILL.md",
+  "source": {
+    "repo": "NeoLabHQ/context-engineering-kit",
+    "url": "https://github.com/NeoLabHQ/context-engineering-kit/blob/master/plugins/git/skills/resolve-fixed-pr-comments/SKILL.md",
+    "path": "plugins/git/skills/resolve-fixed-pr-comments/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-06-21T00:28:39.923Z",
+    "stars": 1149,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-20T22:44:40Z",
+    "license": "GPL-3.0"
+  }
+}
