@@ -1,0 +1,25 @@
+{
+  "id": "thedotmack-claude-mem-what-the",
+  "name": "what-the",
+  "description": "What the? Use when the user wants a plain-English breakdown of something technical — the who, what, where, why, and when.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "thedotmack",
+  "install_path": ".claude/skills/what-the/SKILL.md",
+  "source": {
+    "repo": "thedotmack/claude-mem",
+    "url": "https://github.com/thedotmack/claude-mem/blob/main/plugin/skills/what-the/SKILL.md",
+    "path": "plugin/skills/what-the/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-21T22:45:55.751Z",
+    "stars": 83558,
+    "language": "JavaScript",
+    "pushed_at": "2026-06-21T22:43:44Z",
+    "license": "Apache-2.0"
+  }
+}
