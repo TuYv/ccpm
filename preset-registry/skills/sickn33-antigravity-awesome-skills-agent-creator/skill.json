@@ -1,0 +1,25 @@
+{
+  "id": "sickn33-antigravity-awesome-skills-agent-creator",
+  "name": "agent-creator",
+  "description": "Create custom AI subagents with proper plugin structure, persona generation, and companion routing skills.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sickn33",
+  "install_path": ".claude/skills/agent-creator/SKILL.md",
+  "source": {
+    "repo": "sickn33/antigravity-awesome-skills",
+    "url": "https://github.com/sickn33/antigravity-awesome-skills/blob/main/plugins/antigravity-awesome-skills-claude/skills/agent-creator/SKILL.md",
+    "path": "plugins/antigravity-awesome-skills-claude/skills/agent-creator/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-21T17:09:48.730Z",
+    "stars": 41304,
+    "language": "Python",
+    "pushed_at": "2026-06-21T16:06:23Z",
+    "license": "MIT"
+  }
+}
