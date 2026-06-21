@@ -1,7 +1,7 @@
 {
   "id": "heygen-com-hyperframes-slideshow",
   "name": "slideshow",
-  "description": "> Author a HyperFrames slideshow composition — a presentation, pitch deck, or interactive deck with discrete slides, fragment reveals, branching sequences, and hotspot navigation. Read when the request is to build or edit a slideshow, presentation, or pitch deck as a HyperFrames composition.",
+  "description": "> Author a HyperFrames slideshow composition — a presentation, pitch deck, or interactive deck with discrete slides, fragment reveals, branching sequences, and hotspot navigation. Use as an intent check when the user asks for a presentation, pitch deck, slide deck, interactive deck, or page-to-deck conversion that might be a slideshow; if the user did not explicitly ask for a slideshow / slide show, confirm before authoring.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/heygen-com/hyperframes/blob/main/skills/slideshow/SKILL.md",
     "path": "skills/slideshow/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-21T06:26:19.379Z",
-    "stars": 29173,
+    "discovered_at": "2026-06-21T10:15:47.862Z",
+    "stars": 29233,
     "language": "TypeScript",
-    "pushed_at": "2026-06-21T06:21:30Z",
+    "pushed_at": "2026-06-21T09:06:54Z",
     "license": "Apache-2.0"
   }
 }
