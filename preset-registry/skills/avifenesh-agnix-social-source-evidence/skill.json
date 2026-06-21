@@ -1,0 +1,25 @@
+{
+  "id": "avifenesh-agnix-social-source-evidence",
+  "name": "social-source-evidence",
+  "description": "Use when reviewing X/Twitter exports as source evidence for social content decisions.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "avifenesh",
+  "install_path": ".claude/skills/social-source-evidence/SKILL.md",
+  "source": {
+    "repo": "avifenesh/agnix",
+    "url": "https://github.com/avifenesh/agnix/blob/main/tests/fixtures/valid/skills/social-source-evidence/SKILL.md",
+    "path": "tests/fixtures/valid/skills/social-source-evidence/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-21T12:34:10.370Z",
+    "stars": 295,
+    "language": "Rust",
+    "pushed_at": "2026-06-21T12:33:31Z",
+    "license": "Apache-2.0"
+  }
+}
