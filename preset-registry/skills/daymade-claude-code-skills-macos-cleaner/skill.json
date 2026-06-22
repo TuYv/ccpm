@@ -1,0 +1,25 @@
+{
+  "id": "daymade-claude-code-skills-macos-cleaner",
+  "name": "macos-cleaner",
+  "description": "Analyze and reclaim macOS disk space through intelligent cleanup recommendations. This skill should be used when users report disk space issues, need to clean up their Mac, or want to understand what's consuming storage. Focus on safe, interactive analysis with user confirmation before any deletions.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/macos-cleaner/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/macos-cleaner/SKILL.md",
+    "path": "macos-cleaner/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:07:01.142Z",
+    "stars": 1206,
+    "language": "Python",
+    "pushed_at": "2026-06-14T10:01:47Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "daymade-claude-code-skills-deep-research",
+  "name": "deep-research",
+  "description": "| Generate format-controlled research reports with evidence tracking, citations, source governance, and multi-pass synthesis. This skill should be used when users request a research report, literature review, market or industry analysis, competitive landscape, policy or technical brief. Triggers: \"帮我调研一下\", \"深度研究\", \"综述报告\", \"深入分析\", \"research this topic\", \"write a report on\", \"survey the literature on\", \"competitive analysis of\", \"技术选型分析\", \"竞品研究\", \"政策分析\", \"行业报告\". V6 adds: source-type governance, AS",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/deep-research/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/deep-research/SKILL.md",
+    "path": "deep-research/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:06:58.329Z",
+    "stars": 1206,
+    "language": "Python",
+    "pushed_at": "2026-06-14T10:01:47Z",
+    "license": "MIT"
+  }
+}

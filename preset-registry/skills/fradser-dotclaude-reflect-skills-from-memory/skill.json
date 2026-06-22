@@ -1,0 +1,25 @@
+{
+  "id": "fradser-dotclaude-reflect-skills-from-memory",
+  "name": "reflect-skills-from-memory",
+  "description": "This skill should be used when the user asks to \"reflect on skills from memory\", \"audit marketplace skills against memory\", \"从记忆中检查 skills 的问题\", \"反思并修改 skill\", \"apply memory feedback to skills\", or wants to turn accumulated memory feedback about this marketplace's skills into concrete skill fixes. Reads the project's persistent memory, re-verifies each known skill problem against current code, then fixes the skill or corrects the stale memory.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "0.1.0",
+  "author": "FradSer",
+  "install_path": ".claude/skills/reflect-skills-from-memory/SKILL.md",
+  "source": {
+    "repo": "FradSer/dotclaude",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/.claude/skills/reflect-skills-from-memory/SKILL.md",
+    "path": ".claude/skills/reflect-skills-from-memory/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:03:36.270Z",
+    "stars": 558,
+    "language": "JavaScript",
+    "pushed_at": "2026-06-22T17:33:22Z",
+    "license": null
+  }
+}

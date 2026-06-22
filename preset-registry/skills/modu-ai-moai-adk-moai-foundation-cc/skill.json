@@ -1,0 +1,25 @@
+{
+  "id": "modu-ai-moai-adk-moai-foundation-cc",
+  "name": "moai-foundation-cc",
+  "description": "> Canonical Claude Code authoring kit covering Skills, sub-agents, plugins, slash commands, hooks, memory, settings, sandboxing, headless mode, and advanced agent patterns. Use when creating Claude Code extensions or configuring Claude Code features.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "modu-ai",
+  "install_path": ".claude/skills/moai-foundation-cc/SKILL.md",
+  "source": {
+    "repo": "modu-ai/moai-adk",
+    "url": "https://github.com/modu-ai/moai-adk/blob/main/.claude/skills/moai-foundation-cc/SKILL.md",
+    "path": ".claude/skills/moai-foundation-cc/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:07:27.342Z",
+    "stars": 1092,
+    "language": "Go",
+    "pushed_at": "2026-06-22T18:04:40Z",
+    "license": "Apache-2.0"
+  }
+}

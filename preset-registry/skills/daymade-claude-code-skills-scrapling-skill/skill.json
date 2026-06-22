@@ -1,0 +1,25 @@
+{
+  "id": "daymade-claude-code-skills-scrapling-skill",
+  "name": "scrapling-skill",
+  "description": "Install, troubleshoot, and use Scrapling CLI to extract HTML, Markdown, or text from webpages. Use this skill whenever the user mentions Scrapling, `uv tool install scrapling`, `scrapling extract`, WeChat/mp.weixin articles, browser-backed page fetching, or needs help deciding between static and dynamic extraction.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/scrapling-skill/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/scrapling-skill/SKILL.md",
+    "path": "scrapling-skill/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:07:02.669Z",
+    "stars": 1206,
+    "language": "Python",
+    "pushed_at": "2026-06-14T10:01:47Z",
+    "license": "MIT"
+  }
+}

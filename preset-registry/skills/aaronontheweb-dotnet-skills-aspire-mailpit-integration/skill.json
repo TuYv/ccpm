@@ -1,0 +1,25 @@
+{
+  "id": "aaronontheweb-dotnet-skills-aspire-mailpit-integration",
+  "name": "mailpit-integration",
+  "description": "Test email sending locally using Mailpit with .NET Aspire. Captures all outgoing emails without sending them. View rendered HTML, inspect headers, and verify delivery in integration tests.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Aaronontheweb",
+  "install_path": ".claude/skills/aspire-mailpit-integration/SKILL.md",
+  "source": {
+    "repo": "Aaronontheweb/dotnet-skills",
+    "url": "https://github.com/Aaronontheweb/dotnet-skills/blob/master/skills/aspire-mailpit-integration/SKILL.md",
+    "path": "skills/aspire-mailpit-integration/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-06-22T18:07:40.768Z",
+    "stars": 1025,
+    "language": "Shell",
+    "pushed_at": "2026-06-18T01:02:32Z",
+    "license": "MIT"
+  }
+}

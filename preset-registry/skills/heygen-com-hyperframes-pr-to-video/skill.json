@@ -1,8 +1,8 @@
 {
   "id": "heygen-com-hyperframes-pr-to-video",
   "name": "pr-to-video",
-  "description": "pr-to-video workflow - a GitHub pull request (URL like github.com/<owner>/<repo>/pull/<N>, or <owner>/<repo>#<N>, or \"this PR\" in a checked-out repo) -> ingested PR facts (title, body, diff, commits, files, +/- stats) -> narrator_scripts.json + audio (voice + BGM) + section_plan.md -> code-diff / before-after / impact explainer video. Input is a CODE CHANGE. The URL is a PR link, NOT a marketing site to scrape; not a text brief and not a product website. For a non-PR input (product site, general",
-  "category": "浏览器自动化",
+  "description": "turn a GitHub pull request (a PR URL like github.com/<owner>/<repo>/pull/<N>, an <owner>/<repo>#<N> ref, or 'this PR' in a checked-out repo) into a code-change explainer video, up to ~3 min (sweet spot 30-90s) — changelog, feature reveal, fix, or refactor walkthrough, rendered from the diff / commits / files. The input is a CODE CHANGE read via the gh CLI; there is no website capture. Use this skill for a GitHub PR. Do not use it for a product launch/promo (use /product-launch-video), a tour of ",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/heygen-com/hyperframes/blob/main/skills/pr-to-video/SKILL.md",
     "path": "skills/pr-to-video/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-22T13:17:40.680Z",
-    "stars": 29677,
+    "discovered_at": "2026-06-22T18:04:20.657Z",
+    "stars": 29831,
     "language": "TypeScript",
-    "pushed_at": "2026-06-22T10:42:08Z",
+    "pushed_at": "2026-06-22T18:02:29Z",
     "license": "Apache-2.0"
   }
 }

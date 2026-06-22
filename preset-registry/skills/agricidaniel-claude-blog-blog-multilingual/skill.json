@@ -1,0 +1,25 @@
+{
+  "id": "agricidaniel-claude-blog-blog-multilingual",
+  "name": "blog-multilingual",
+  "description": "> One-command multilingual blog creation. Writes a blog post, translates it into user-specified languages, applies cultural adaptation, and emits hreflang tags, sitemap entries, and a CMS-ready language map. The complete write-to-publish pipeline for international content. Orchestrates blog-write, blog-translate, blog-localize, and (optionally) seo-hreflang. Use when user says \"multilingual blog\", \"blog multilingual\", \"write in multiple languages\", \"international blog\", \"mehrsprachiger Blog\", \"b",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "AgriciDaniel",
+  "install_path": ".claude/skills/blog-multilingual/SKILL.md",
+  "source": {
+    "repo": "AgriciDaniel/claude-blog",
+    "url": "https://github.com/AgriciDaniel/claude-blog/blob/main/skills/blog-multilingual/SKILL.md",
+    "path": "skills/blog-multilingual/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:07:21.423Z",
+    "stars": 1132,
+    "language": "Python",
+    "pushed_at": "2026-06-05T04:23:28Z",
+    "license": "MIT"
+  }
+}

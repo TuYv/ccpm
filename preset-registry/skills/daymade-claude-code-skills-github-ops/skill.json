@@ -1,0 +1,25 @@
+{
+  "id": "daymade-claude-code-skills-github-ops",
+  "name": "github-ops",
+  "description": "Provides comprehensive GitHub operations using gh CLI and GitHub API. Activates when working with pull requests, issues, repositories, workflows, or GitHub API operations including creating/viewing/merging PRs, managing issues, querying API endpoints, and handling GitHub workflows in enterprise or public GitHub environments.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/github-ops/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/github-ops/SKILL.md",
+    "path": "github-ops/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:07:00.048Z",
+    "stars": 1206,
+    "language": "Python",
+    "pushed_at": "2026-06-14T10:01:47Z",
+    "license": "MIT"
+  }
+}

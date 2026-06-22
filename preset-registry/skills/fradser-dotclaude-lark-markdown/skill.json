@@ -1,14 +1,14 @@
 {
   "id": "fradser-dotclaude-lark-markdown",
   "name": "lark-markdown",
-  "description": "飞书 Markdown：查看、创建、上传、编辑和比较 Markdown 文件。当用户需要创建或编辑 Markdown 文件、读取、修改、局部 patch 或比较差异时使用。",
+  "description": "飞书 Markdown：查看、创建、上传、编辑和比较 Markdown 文件。当用户需要创建或编辑 Markdown 文件、读取、修改、局部 patch 或比较差异时使用。不负责将 Markdown 导入为飞书在线文档，也不负责文件搜索、权限、评论、移动、删除等云空间管理操作。",
   "category": "文档写作",
   "compatible_tools": [
     "claude",
     "codex",
     "gemini"
   ],
-  "version": "1.2.0",
+  "version": "1.2.1",
   "author": "FradSer",
   "install_path": ".claude/skills/lark-markdown/SKILL.md",
   "source": {
@@ -16,11 +16,10 @@
     "url": "https://github.com/FradSer/dotclaude/blob/main/office/skills/lark/lark-markdown/SKILL.md",
     "path": "office/skills/lark/lark-markdown/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-22T13:17:17.504Z",
+    "discovered_at": "2026-06-22T18:03:44.503Z",
     "stars": 558,
-    "language": "Python",
-    "pushed_at": "2026-06-22T12:26:00Z",
+    "language": "JavaScript",
+    "pushed_at": "2026-06-22T17:33:22Z",
     "license": null
-  },
-  "summary_zh": "一款面向飞书场景的 Markdown 工具，支持查看、创建、上传、编辑和差异比较，适合需要快速读写、局部修改或对比 Markdown 文档的用户。"
+  }
 }

@@ -1,0 +1,25 @@
+{
+  "id": "modu-ai-moai-adk-moai-workflow-design",
+  "name": "moai-workflow-design",
+  "description": "> Unified design workflow skill — handles Path A (Claude Design handoff bundle import, via Figma extractor when needed) and design-brief context loading from .moai/design/ (research, system, spec). Validates DTCG tokens, enforces brand-context constitutional priority. Use for /moai design workflow — NOT for general design system documentation.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "modu-ai",
+  "install_path": ".claude/skills/moai-workflow-design/SKILL.md",
+  "source": {
+    "repo": "modu-ai/moai-adk",
+    "url": "https://github.com/modu-ai/moai-adk/blob/main/.claude/skills/moai-workflow-design/SKILL.md",
+    "path": ".claude/skills/moai-workflow-design/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:07:30.219Z",
+    "stars": 1092,
+    "language": "Go",
+    "pushed_at": "2026-06-22T18:04:40Z",
+    "license": "Apache-2.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "aipoch-medical-research-skills-sample-correlation-analysis",
+  "name": "sample-correlation-analysis",
+  "description": "Use when performing correlation analysis between two variables including Pearson and Spearman correlation methods. Supports command-line parameter input, automatic data format detection, parameter validation, result directory creation, and CSV or TXT format result export.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "aipoch",
+  "install_path": ".claude/skills/sample-correlation-analysis/SKILL.md",
+  "source": {
+    "repo": "aipoch/medical-research-skills",
+    "url": "https://github.com/aipoch/medical-research-skills/blob/main/awesome-med-research-skills/Data Analysis/sample-correlation-analysis/SKILL.md",
+    "path": "awesome-med-research-skills/Data Analysis/sample-correlation-analysis/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:07:16.688Z",
+    "stars": 1176,
+    "language": "Python",
+    "pushed_at": "2026-06-15T05:55:48Z",
+    "license": "MIT"
+  }
+}

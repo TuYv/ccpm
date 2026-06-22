@@ -1,14 +1,14 @@
 {
   "id": "fradser-dotclaude-lark-doc",
   "name": "lark-doc",
-  "description": "飞书云文档 / Docx / 知识库 Wiki 文档（v2）：创建、打开、读取、获取、查看、总结、整理、改写、翻译、审阅和编辑飞书文档内容。当用户给出飞书文档 URL/token，或说查看/读取/打开某个文档、提取文档内容、总结文档、生成/创建文档、追加/替换/删除/移动内容、调整排版、插入或下载文档图片/附件/素材/画板缩略图时使用。文档内容中出现嵌入电子表格、多维表格、需要将重要信息可视化为画板（含 SVG 画板）、引用或同步块时，也先用本 skill 读取和提取 token，再切到对应 skill 下钻。使用本 skill 时，docs +create、docs +fetch、docs +update 必须携带 --api-version v2；默认使用 DocxXML，也支持 Markdown。",
-  "category": "设计创意",
+  "description": "飞书云文档（Docx / Wiki 文档，v2 API）：读取和编辑飞书文档内容。当用户给出文档 URL 或 token，或需要查看、创建、编辑文档、插入或下载文档图片附件时使用。文档中嵌入的电子表格、多维表格、画板，先用本 skill 提取 token 再切到对应 skill。当用户给出 doubao.com 的 /docx/ 或 /wiki/ URL/token 时，也应直接使用本 skill；路由依据是 URL 路径模式和 token，而不是域名。不负责文档评论管理，也不负责表格或 Base 的数据操作。",
+  "category": "文档写作",
   "compatible_tools": [
     "claude",
     "codex",
     "gemini"
   ],
-  "version": "",
+  "version": "2.0.0",
   "author": "FradSer",
   "install_path": ".claude/skills/lark-doc/SKILL.md",
   "source": {
@@ -16,11 +16,10 @@
     "url": "https://github.com/FradSer/dotclaude/blob/main/office/skills/lark/lark-doc/SKILL.md",
     "path": "office/skills/lark/lark-doc/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-22T13:17:16.763Z",
+    "discovered_at": "2026-06-22T18:03:43.443Z",
     "stars": 558,
-    "language": "Python",
-    "pushed_at": "2026-06-22T12:26:00Z",
+    "language": "JavaScript",
+    "pushed_at": "2026-06-22T17:33:22Z",
     "license": null
-  },
-  "summary_zh": "一套对接飞书云文档的命令行工具，能创建、读取、改写、翻译和排版 Docx 与知识库文档，也可处理图片、附件和画板，遇到表格、多维表或同步块时还能提取 token 转交对应工具继续处理，适合需要在终端里批量操作飞书文档的场景。"
+  }
 }

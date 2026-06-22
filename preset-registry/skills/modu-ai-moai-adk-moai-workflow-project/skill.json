@@ -1,0 +1,25 @@
+{
+  "id": "modu-ai-moai-adk-moai-workflow-project",
+  "name": "moai-workflow-project",
+  "description": "> Integrated project management system covering documentation, language initialization, template optimization, docs generation, and JIT document loading. Absorbed from moai-workflow-templates, moai-docs-generation, and moai-workflow-jit-docs.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "modu-ai",
+  "install_path": ".claude/skills/moai-workflow-project/SKILL.md",
+  "source": {
+    "repo": "modu-ai/moai-adk",
+    "url": "https://github.com/modu-ai/moai-adk/blob/main/.claude/skills/moai-workflow-project/SKILL.md",
+    "path": ".claude/skills/moai-workflow-project/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:07:30.815Z",
+    "stars": 1092,
+    "language": "Go",
+    "pushed_at": "2026-06-22T18:04:40Z",
+    "license": "Apache-2.0"
+  }
+}

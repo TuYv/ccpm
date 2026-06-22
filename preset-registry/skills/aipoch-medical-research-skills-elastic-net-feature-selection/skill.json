@@ -1,0 +1,25 @@
+{
+  "id": "aipoch-medical-research-skills-elastic-net-feature-selection",
+  "name": "elastic-net-feature-selection",
+  "description": "Use when selecting predictive genes or other molecular features from bulk expression matrices for binary case-vs-control classification with elastic net logistic regression, including coefficient path and cross-validation plots. Trigger keywords: elastic net, glmnet, feature selection, binary classification, lambda.min, lambda.1se. NOT for: survival/Cox modeling, multiclass outcomes, single-cell data, or non-expression tables.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "aipoch",
+  "install_path": ".claude/skills/elastic-net-feature-selection/SKILL.md",
+  "source": {
+    "repo": "aipoch/medical-research-skills",
+    "url": "https://github.com/aipoch/medical-research-skills/blob/main/awesome-med-research-skills/Data Analysis/elastic-net-feature-selection/SKILL.md",
+    "path": "awesome-med-research-skills/Data Analysis/elastic-net-feature-selection/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:07:11.977Z",
+    "stars": 1176,
+    "language": "Python",
+    "pushed_at": "2026-06-15T05:55:48Z",
+    "license": "MIT"
+  }
+}

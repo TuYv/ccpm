@@ -1,0 +1,25 @@
+{
+  "id": "daymade-claude-code-skills-transcript-fixer",
+  "name": "transcript-fixer",
+  "description": "Corrects speech-to-text transcription errors using dictionary rules and AI-powered analysis. Builds personalized correction databases that learn from each fix. Triggers when working with ASR/STT output containing recognition errors, homophones, garbled technical terms, or Chinese/English mixed content. Also triggers on requests to clean up meeting notes, lecture transcripts, interview recordings, or any text produced by speech recognition. Use this skill even when the user just says \"fix this tr",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/transcript-fixer/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-audio/transcript-fixer/SKILL.md",
+    "path": "daymade-audio/transcript-fixer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:06:54.627Z",
+    "stars": 1206,
+    "language": "Python",
+    "pushed_at": "2026-06-14T10:01:47Z",
+    "license": "MIT"
+  }
+}

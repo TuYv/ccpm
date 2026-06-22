@@ -1,0 +1,25 @@
+{
+  "id": "fradser-dotclaude-lark-workflow-meeting-summary",
+  "name": "lark-workflow-meeting-summary",
+  "description": "会议纪要整理工作流：汇总指定时间范围内的会议纪要并生成结构化报告。当用户需要整理会议纪要、生成会议周报、回顾一段时间内的会议内容时使用。",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "FradSer",
+  "install_path": ".claude/skills/lark-workflow-meeting-summary/SKILL.md",
+  "source": {
+    "repo": "FradSer/dotclaude",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/office/skills/lark/lark-workflow-meeting-summary/SKILL.md",
+    "path": "office/skills/lark/lark-workflow-meeting-summary/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:03:47.484Z",
+    "stars": 558,
+    "language": "JavaScript",
+    "pushed_at": "2026-06-22T17:33:22Z",
+    "license": null
+  }
+}

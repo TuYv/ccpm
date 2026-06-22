@@ -1,0 +1,25 @@
+{
+  "id": "aipoch-medical-research-skills-km-survival-curve",
+  "name": "km-survival-curve",
+  "description": "Use when generating Kaplan-Meier survival curves from tabular survival data containing time, event status, and a precomputed risk group. Supports command-line parameter input, parameter validation, automatic time-unit handling, single-file PDF figure export, and session metadata capture.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "aipoch",
+  "install_path": ".claude/skills/km-survival-curve/SKILL.md",
+  "source": {
+    "repo": "aipoch/medical-research-skills",
+    "url": "https://github.com/aipoch/medical-research-skills/blob/main/awesome-med-research-skills/Data Analysis/km-survival-curve/SKILL.md",
+    "path": "awesome-med-research-skills/Data Analysis/km-survival-curve/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:07:14.118Z",
+    "stars": 1176,
+    "language": "Python",
+    "pushed_at": "2026-06-15T05:55:48Z",
+    "license": "MIT"
+  }
+}

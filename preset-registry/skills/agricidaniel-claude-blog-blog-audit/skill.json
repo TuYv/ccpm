@@ -1,0 +1,25 @@
+{
+  "id": "agricidaniel-claude-blog-blog-audit",
+  "name": "blog-audit",
+  "description": "> Full-site blog health assessment scanning all blog files for quality scores, orphan pages, topic cannibalization, stale content, and AI citation readiness. Spawns parallel subagents for comprehensive analysis. Produces per-post scores and a prioritized action queue. Use when user says \"audit blog\", \"blog audit\", \"site audit\", \"blog health\", \"audit all posts\", \"check all blogs\".",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "AgriciDaniel",
+  "install_path": ".claude/skills/blog-audit/SKILL.md",
+  "source": {
+    "repo": "AgriciDaniel/claude-blog",
+    "url": "https://github.com/AgriciDaniel/claude-blog/blob/main/skills/blog-audit/SKILL.md",
+    "path": "skills/blog-audit/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:07:18.516Z",
+    "stars": 1132,
+    "language": "Python",
+    "pushed_at": "2026-06-05T04:23:28Z",
+    "license": "MIT"
+  }
+}

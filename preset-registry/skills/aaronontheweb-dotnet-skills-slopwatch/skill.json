@@ -1,0 +1,25 @@
+{
+  "id": "aaronontheweb-dotnet-skills-slopwatch",
+  "name": "dotnet-slopwatch",
+  "description": "Use Slopwatch to detect LLM reward hacking in .NET code changes. Run after every code modification to catch disabled tests, suppressed warnings, empty catch blocks, and other shortcuts that mask real problems.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Aaronontheweb",
+  "install_path": ".claude/skills/slopwatch/SKILL.md",
+  "source": {
+    "repo": "Aaronontheweb/dotnet-skills",
+    "url": "https://github.com/Aaronontheweb/dotnet-skills/blob/master/skills/slopwatch/SKILL.md",
+    "path": "skills/slopwatch/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-06-22T18:07:45.729Z",
+    "stars": 1025,
+    "language": "Shell",
+    "pushed_at": "2026-06-18T01:02:32Z",
+    "license": "MIT"
+  }
+}

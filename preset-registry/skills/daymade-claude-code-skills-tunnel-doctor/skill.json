@@ -1,0 +1,25 @@
+{
+  "id": "daymade-claude-code-skills-tunnel-doctor",
+  "name": "tunnel-doctor",
+  "description": "> Diagnoses and fixes conflicts between Tailscale and proxy/VPN tools (Shadowrocket, Clash, Surge, OrbStack/Docker) on macOS — route hijacking, HTTP proxy env vars, system proxy bypass, SSH ProxyCommand double-tunneling, VM/container proxy propagation, and stalled macOS DNS resolution. Use when Tailscale ping works but SSH/HTTP times out, browser returns 503 but curl works, git push fails with \"failed to begin relaying via HTTP\", Docker pull/build times out behind TUN/VPN, setting up Tailscale S",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/tunnel-doctor/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/tunnel-doctor/SKILL.md",
+    "path": "tunnel-doctor/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:07:03.382Z",
+    "stars": 1206,
+    "language": "Python",
+    "pushed_at": "2026-06-14T10:01:47Z",
+    "license": "MIT"
+  }
+}

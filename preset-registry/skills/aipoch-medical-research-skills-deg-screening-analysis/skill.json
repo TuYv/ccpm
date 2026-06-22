@@ -1,0 +1,25 @@
+{
+  "id": "aipoch-medical-research-skills-deg-screening-analysis",
+  "name": "deg-screening-analysis",
+  "description": "Use when screening differentially expressed genes from a bulk expression matrix between two user-specified groups, producing DEG tables, a volcano plot, and a clustered heatmap. Triggers include DEG analysis, volcano plot, clustered heatmap, limma-based two-group comparison, and case-vs-control screening. NOT for single-cell RNA-seq, multi-group contrasts, count-model workflows such as DESeq2/edgeR, or non-expression omics data.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "aipoch",
+  "install_path": ".claude/skills/deg-screening-analysis/SKILL.md",
+  "source": {
+    "repo": "aipoch/medical-research-skills",
+    "url": "https://github.com/aipoch/medical-research-skills/blob/main/awesome-med-research-skills/Data Analysis/deg-screening-analysis/SKILL.md",
+    "path": "awesome-med-research-skills/Data Analysis/deg-screening-analysis/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:07:11.495Z",
+    "stars": 1176,
+    "language": "Python",
+    "pushed_at": "2026-06-15T05:55:48Z",
+    "license": "MIT"
+  }
+}

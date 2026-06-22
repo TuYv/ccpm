@@ -1,0 +1,25 @@
+{
+  "id": "daymade-claude-code-skills-terminal-screenshot",
+  "name": "terminal-screenshot",
+  "description": "> Render a terminal CLI program's colored output to a PNG so Claude can actually SEE the real visual result — color contrast, alignment, background blocks, highlighting — instead of only reading plain text and raw ANSI escape codes. Use this whenever verifying or debugging how a CLI tool looks in the terminal: delta git diff colors, bat syntax highlighting, starship prompt, eza/ls colors, git diff, ripgrep matches, or any ANSI-colored output. ALWAYS use it right after changing any CLI color conf",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/terminal-screenshot/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-claude-code/terminal-screenshot/SKILL.md",
+    "path": "daymade-claude-code/terminal-screenshot/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:06:56.359Z",
+    "stars": 1206,
+    "language": "Python",
+    "pushed_at": "2026-06-14T10:01:47Z",
+    "license": "MIT"
+  }
+}

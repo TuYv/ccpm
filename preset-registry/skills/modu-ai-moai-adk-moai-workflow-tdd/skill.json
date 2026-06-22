@@ -1,0 +1,25 @@
+{
+  "id": "modu-ai-moai-adk-moai-workflow-tdd",
+  "name": "moai-workflow-tdd",
+  "description": "> Test-Driven Development workflow specialist using RED-GREEN-REFACTOR cycle for test-first software development. Use when developing new features from scratch or when behavior specification drives implementation.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "modu-ai",
+  "install_path": ".claude/skills/moai-workflow-tdd/SKILL.md",
+  "source": {
+    "repo": "modu-ai/moai-adk",
+    "url": "https://github.com/modu-ai/moai-adk/blob/main/.claude/skills/moai-workflow-tdd/SKILL.md",
+    "path": ".claude/skills/moai-workflow-tdd/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:07:31.296Z",
+    "stars": 1092,
+    "language": "Go",
+    "pushed_at": "2026-06-22T18:04:40Z",
+    "license": "Apache-2.0"
+  }
+}

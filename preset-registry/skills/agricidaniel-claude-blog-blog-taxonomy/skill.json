@@ -1,0 +1,25 @@
+{
+  "id": "agricidaniel-claude-blog-blog-taxonomy",
+  "name": "blog-taxonomy",
+  "description": "> Extract, suggest, and sync tags and categories for blog posts across all major CMS platforms. Supports WordPress REST API, Shopify GraphQL, Ghost Content API, Strapi REST/GraphQL, and Sanity GROQ. Generates tag suggestions from content analysis (keyword frequency, heading extraction, semantic grouping), enforces minimum post-count thresholds to prevent thin tag archives, and syncs taxonomy via authenticated API calls. Use when user says \"tags\", \"categories\", \"taxonomy\", \"tag suggestions\", \"syn",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "AgriciDaniel",
+  "install_path": ".claude/skills/blog-taxonomy/SKILL.md",
+  "source": {
+    "repo": "AgriciDaniel/claude-blog",
+    "url": "https://github.com/AgriciDaniel/claude-blog/blob/main/skills/blog-taxonomy/SKILL.md",
+    "path": "skills/blog-taxonomy/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:07:23.183Z",
+    "stars": 1132,
+    "language": "Python",
+    "pushed_at": "2026-06-05T04:23:28Z",
+    "license": "MIT"
+  }
+}

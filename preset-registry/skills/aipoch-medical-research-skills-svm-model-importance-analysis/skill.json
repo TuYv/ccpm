@@ -1,0 +1,25 @@
+{
+  "id": "aipoch-medical-research-skills-svm-model-importance-analysis",
+  "name": "svm-model-importance-analysis",
+  "description": "Use when you need a standardized R CLI workflow to run two-class SVM-RFE feature ranking on an expression-like matrix, choose an informative feature count from cross-validated error, and generate reproducible ranking and error plots. NOT for regression, multi-class classification, missing-value imputation, or remote data fetching.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "aipoch",
+  "install_path": ".claude/skills/svm-model-importance-analysis/SKILL.md",
+  "source": {
+    "repo": "aipoch/medical-research-skills",
+    "url": "https://github.com/aipoch/medical-research-skills/blob/main/awesome-med-research-skills/Data Analysis/svm-model-importance-analysis/SKILL.md",
+    "path": "awesome-med-research-skills/Data Analysis/svm-model-importance-analysis/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:07:17.257Z",
+    "stars": 1176,
+    "language": "Python",
+    "pushed_at": "2026-06-15T05:55:48Z",
+    "license": "MIT"
+  }
+}

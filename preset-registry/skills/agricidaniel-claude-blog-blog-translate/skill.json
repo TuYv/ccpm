@@ -1,0 +1,25 @@
+{
+  "id": "agricidaniel-claude-blog-blog-translate",
+  "name": "blog-translate",
+  "description": "> Translate existing blog posts into one or more target languages with SEO-optimized localization. Produces native-quality translations that preserve markdown structure, frontmatter, schema JSON-LD, image and chart embeds, and citation capsules. Localizes keywords, meta tags, numbers, dates, currencies, and quote styles per locale. Flags machine-translation artifacts for review. Run BEFORE blog-localize: this handles language conversion; localize handles cultural adaptation after translation com",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "AgriciDaniel",
+  "install_path": ".claude/skills/blog-translate/SKILL.md",
+  "source": {
+    "repo": "AgriciDaniel/claude-blog",
+    "url": "https://github.com/AgriciDaniel/claude-blog/blob/main/skills/blog-translate/SKILL.md",
+    "path": "skills/blog-translate/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:07:23.403Z",
+    "stars": 1132,
+    "language": "Python",
+    "pushed_at": "2026-06-05T04:23:28Z",
+    "license": "MIT"
+  }
+}

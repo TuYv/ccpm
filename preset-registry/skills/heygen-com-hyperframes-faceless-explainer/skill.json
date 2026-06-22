@@ -1,7 +1,7 @@
 {
   "id": "heygen-com-hyperframes-faceless-explainer",
   "name": "faceless-explainer",
-  "description": "faceless-explainer video workflow - arbitrary text (article / notes / topic / brief) -> narrator_scripts.json + audio (voice + BGM) + section_plan.md -> typography / abstract-graphics / diagram / data-viz video. Typical length up to ~3 min (sweet spot ~30-90s); a genuinely longer piece is general-video, not this workflow. Generates its OWN narration (TTS) — it does not sync to a user-supplied / pre-recorded voiceover (that is general-video). No website capture, no real product screenshots. If th",
+  "description": "turn arbitrary text — an article, notes, a topic, a brief — into a faceless explainer video, up to ~3 min (sweet spot 30-90s), where every visual is invented (typography, abstract graphics, diagrams, data-viz) rather than captured. There is no URL, no website capture, and no real assets. Use this skill for topic explainers, concept breakdowns, how-tos, listicles, and narrative explainers. Do not use it for a product launch/promo (use /product-launch-video), a tour of a real website (use /website",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/heygen-com/hyperframes/blob/main/skills/faceless-explainer/SKILL.md",
     "path": "skills/faceless-explainer/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-22T13:17:39.144Z",
-    "stars": 29677,
+    "discovered_at": "2026-06-22T18:04:17.850Z",
+    "stars": 29831,
     "language": "TypeScript",
-    "pushed_at": "2026-06-22T10:42:08Z",
+    "pushed_at": "2026-06-22T18:02:29Z",
     "license": "Apache-2.0"
   }
 }

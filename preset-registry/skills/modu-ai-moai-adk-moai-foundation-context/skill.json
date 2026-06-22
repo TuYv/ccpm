@@ -1,0 +1,25 @@
+{
+  "id": "modu-ai-moai-adk-moai-foundation-context",
+  "name": "moai-foundation-context",
+  "description": "> Manages context window optimization, session state persistence, and token budget allocation for multi-agent workflows. Use for token budget management, context limits, or session handoff across agents.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "modu-ai",
+  "install_path": ".claude/skills/moai-foundation-context/SKILL.md",
+  "source": {
+    "repo": "modu-ai/moai-adk",
+    "url": "https://github.com/modu-ai/moai-adk/blob/main/.moai/archive/skills/v3.0/moai-foundation-context/SKILL.md",
+    "path": ".moai/archive/skills/v3.0/moai-foundation-context/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:07:34.307Z",
+    "stars": 1092,
+    "language": "Go",
+    "pushed_at": "2026-06-22T18:04:40Z",
+    "license": "Apache-2.0"
+  }
+}

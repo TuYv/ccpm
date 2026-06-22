@@ -1,0 +1,25 @@
+{
+  "id": "agricidaniel-claude-blog-blog-flow",
+  "name": "blog-flow",
+  "description": "> FLOW framework integration for bloggers. Evidence-led content workflow using the Find, Optimize, Win loop with stage-specific AI prompts from the FLOW knowledge base (30 blog-applicable prompts, CC BY 4.0). Use when user says \"FLOW\", \"FLOW framework\", \"blog flow\", \"evidence-led blogging\", \"find optimize win\", or wants stage-specific blog prompts.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "AgriciDaniel",
+  "install_path": ".claude/skills/blog-flow/SKILL.md",
+  "source": {
+    "repo": "AgriciDaniel/claude-blog",
+    "url": "https://github.com/AgriciDaniel/claude-blog/blob/main/skills/blog-flow/SKILL.md",
+    "path": "skills/blog-flow/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:07:20.325Z",
+    "stars": 1132,
+    "language": "Python",
+    "pushed_at": "2026-06-05T04:23:28Z",
+    "license": "MIT"
+  }
+}

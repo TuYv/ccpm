@@ -1,0 +1,25 @@
+{
+  "id": "aipoch-medical-research-skills-gsva-analysis-and-visualization",
+  "name": "gsva-analysis-and-visualization",
+  "description": "Use this skill to run GSVA or ssGSEA pathway-level differential analysis from a bulk expression matrix and a sample group file, then generate a heatmap from the saved GSVA result object. Trigger keywords: GSVA, ssGSEA, pathway enrichment, KEGG pathway analysis, MSigDB. NOT for: gene-level differential expression, single-cell analysis, methylation analysis, clinical diagnosis.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "aipoch",
+  "install_path": ".claude/skills/gsva-analysis-and-visualization/SKILL.md",
+  "source": {
+    "repo": "aipoch/medical-research-skills",
+    "url": "https://github.com/aipoch/medical-research-skills/blob/main/awesome-med-research-skills/Data Analysis/gsva-analysis-and-visualization/SKILL.md",
+    "path": "awesome-med-research-skills/Data Analysis/gsva-analysis-and-visualization/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:07:13.447Z",
+    "stars": 1176,
+    "language": "Python",
+    "pushed_at": "2026-06-15T05:55:48Z",
+    "license": "MIT"
+  }
+}

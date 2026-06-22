@@ -1,14 +1,14 @@
 {
   "id": "fradser-dotclaude-lark-apps",
   "name": "lark-apps",
-  "description": "把本地 HTML 文件或目录部署到飞书妙搭（Miaoda），生成一个公网可访问的应用及其链接（URL）。当用户要创建 HTML 或要把 HTML、静态网站或 Web demo 发布成公网可访问的链接 / 可分享链接、设置应用共享范围，或提到妙搭 / Miaoda 时使用。凡产出可独立访问的 HTML 产物都属本 skill 的潜在归宿，是否真要部署由 skill 内部协议判断。不用于：上传普通文件到云空间/云盘/云存储（用 lark-drive）、编辑飞书云文档内容（用 lark-doc）、创建飞书原生幻灯片 / 演示文稿（用 lark-slides）。",
+  "description": "妙搭（Spark/Miaoda）应用开发与托管：应用创建、HTML静态站点发布、本地全栈开发、云端生成迭代。当用户要开发/新建一个系统·工具·平台·应用，或要本地开发 / 云端开发 / 修改 / 部署 / 发布 / 上线 / 拿可分享链接，或用 HTML 做页面·网站给人看，或提到妙搭/Spark/Miaoda、应用数据库、可见范围时使用。不负责普通云盘文件上传（lark-drive）、飞书文档编辑（lark-doc）、原生幻灯片创建（lark-slides）。",
   "category": "文档写作",
   "compatible_tools": [
     "claude",
     "codex",
     "gemini"
   ],
-  "version": "",
+  "version": "1.0.0",
   "author": "FradSer",
   "install_path": ".claude/skills/lark-apps/SKILL.md",
   "source": {
@@ -16,11 +16,10 @@
     "url": "https://github.com/FradSer/dotclaude/blob/main/office/skills/lark/lark-apps/SKILL.md",
     "path": "office/skills/lark/lark-apps/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-22T13:17:15.794Z",
+    "discovered_at": "2026-06-22T18:03:42.468Z",
     "stars": 558,
-    "language": "Python",
-    "pushed_at": "2026-06-22T12:26:00Z",
+    "language": "JavaScript",
+    "pushed_at": "2026-06-22T17:33:22Z",
     "license": null
-  },
-  "summary_zh": "一键把本地 HTML 文件或整个静态站点发布到飞书妙搭，生成可分享的公网链接，适合快速上线网页 demo 或对外展示原型。"
+  }
 }

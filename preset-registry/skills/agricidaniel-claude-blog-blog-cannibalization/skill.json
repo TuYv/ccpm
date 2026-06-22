@@ -1,0 +1,25 @@
+{
+  "id": "agricidaniel-claude-blog-blog-cannibalization",
+  "name": "blog-cannibalization",
+  "description": "> Detect keyword cannibalization across blog posts by extracting primary keywords from titles and headings, clustering semantically similar targets, and flagging posts competing for the same search intent. Supports local-only mode (grep-based) and DataForSEO API mode (Page Intersection endpoint at ~$0.01/call). Outputs severity-scored report with merge or differentiate recommendations. Use when user says \"cannibalization\", \"keyword overlap\", \"competing pages\", \"duplicate keywords\", \"cannibalize\"",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "AgriciDaniel",
+  "install_path": ".claude/skills/blog-cannibalization/SKILL.md",
+  "source": {
+    "repo": "AgriciDaniel/claude-blog",
+    "url": "https://github.com/AgriciDaniel/claude-blog/blob/main/skills/blog-cannibalization/SKILL.md",
+    "path": "skills/blog-cannibalization/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:07:19.352Z",
+    "stars": 1132,
+    "language": "Python",
+    "pushed_at": "2026-06-05T04:23:28Z",
+    "license": "MIT"
+  }
+}

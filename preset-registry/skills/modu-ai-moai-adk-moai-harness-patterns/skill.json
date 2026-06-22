@@ -1,0 +1,25 @@
+{
+  "id": "modu-ai-moai-adk-moai-harness-patterns",
+  "name": "moai-harness-patterns",
+  "description": "> MoAI-ADK harness pattern library — unified domain knowledge covering hook/CI dispatch (PostToolUse, SessionStart, GitHub Actions, release automation), workflow patterns (SPEC structure, EARS, MX tags, plan-run-sync pipeline), and Go quality gates (testing, linting, coverage, race detection, LSP). Use for moai-adk-go harness work — NOT for general MoAI agent patterns (see moai-foundation-cc).",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "modu-ai",
+  "install_path": ".claude/skills/moai-harness-patterns/SKILL.md",
+  "source": {
+    "repo": "modu-ai/moai-adk",
+    "url": "https://github.com/modu-ai/moai-adk/blob/main/.moai/backups/harness-namespace-cleanup-2026-05-24T18-53-53Z/.claude/skills/moai-harness-patterns/SKILL.md",
+    "path": ".moai/backups/harness-namespace-cleanup-2026-05-24T18-53-53Z/.claude/skills/moai-harness-patterns/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:07:36.013Z",
+    "stars": 1092,
+    "language": "Go",
+    "pushed_at": "2026-06-22T18:04:40Z",
+    "license": "Apache-2.0"
+  }
+}

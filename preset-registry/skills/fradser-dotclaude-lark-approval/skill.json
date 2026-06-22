@@ -1,14 +1,14 @@
 {
   "id": "fradser-dotclaude-lark-approval",
   "name": "lark-approval",
-  "description": "飞书审批 API：审批实例、审批任务管理。",
+  "description": "飞书审批：当前用户审批的查询与全部处理操作，覆盖待本人审批的任务与本人发起的实例。审批待办不是飞书任务（任务类待办走 lark-task）；不负责创建审批定义和发起新审批。",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
     "codex",
     "gemini"
   ],
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "FradSer",
   "install_path": ".claude/skills/lark-approval/SKILL.md",
   "source": {
@@ -16,11 +16,10 @@
     "url": "https://github.com/FradSer/dotclaude/blob/main/office/skills/lark/lark-approval/SKILL.md",
     "path": "office/skills/lark/lark-approval/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-22T13:17:15.522Z",
+    "discovered_at": "2026-06-22T18:03:42.278Z",
     "stars": 558,
-    "language": "Python",
-    "pushed_at": "2026-06-22T12:26:00Z",
+    "language": "JavaScript",
+    "pushed_at": "2026-06-22T17:33:22Z",
     "license": null
-  },
-  "summary_zh": "用于对接飞书审批系统的接口工具，可程序化创建审批单、查询进度和处理任务，适合需要把审批流嵌入自家业务系统的团队。"
+  }
 }

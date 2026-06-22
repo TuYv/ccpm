@@ -1,0 +1,25 @@
+{
+  "id": "aipoch-medical-research-skills-cibersort-immune-infiltration-analysis",
+  "name": "cibersort-immune-infiltration-analysis",
+  "description": "Use when estimating relative immune cell infiltration from a bulk expression matrix with a CIBERSORT-style nu-SVR deconvolution workflow based on an LM22 signature matrix, comparing one case group against one control group, and generating structured tables plus immune-fraction plots. NOT for single-cell RNA-seq, spatial data, clinical diagnosis, or workflows that require the original hosted CIBERSORT web service.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "aipoch",
+  "install_path": ".claude/skills/cibersort-immune-infiltration-analysis/SKILL.md",
+  "source": {
+    "repo": "aipoch/medical-research-skills",
+    "url": "https://github.com/aipoch/medical-research-skills/blob/main/awesome-med-research-skills/Data Analysis/cibersort-immune-infiltration-analysis/SKILL.md",
+    "path": "awesome-med-research-skills/Data Analysis/cibersort-immune-infiltration-analysis/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:07:10.554Z",
+    "stars": 1176,
+    "language": "Python",
+    "pushed_at": "2026-06-15T05:55:48Z",
+    "license": "MIT"
+  }
+}

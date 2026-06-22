@@ -1,0 +1,25 @@
+{
+  "id": "agricidaniel-claude-blog-blog-image",
+  "name": "blog-image",
+  "description": "> AI image generation and editing for blog content powered by Gemini via MCP. Claude acts as Creative Director - interpreting intent, selecting domain expertise, constructing optimized 6-component prompts (Subject + Action + Context + Composition + Lighting + Style), and orchestrating Gemini for blog-quality results. Generates hero images, inline illustrations, social preview cards, and OG images. Edits existing blog images. Supports 6 blog-optimized domain modes (Editorial, Product, Landscape, ",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "AgriciDaniel",
+  "install_path": ".claude/skills/blog-image/SKILL.md",
+  "source": {
+    "repo": "AgriciDaniel/claude-blog",
+    "url": "https://github.com/AgriciDaniel/claude-blog/blob/main/skills/blog-image/SKILL.md",
+    "path": "skills/blog-image/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:07:20.886Z",
+    "stars": 1132,
+    "language": "Python",
+    "pushed_at": "2026-06-05T04:23:28Z",
+    "license": "MIT"
+  }
+}

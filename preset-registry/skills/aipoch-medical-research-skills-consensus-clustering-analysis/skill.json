@@ -1,0 +1,25 @@
+{
+  "id": "aipoch-medical-research-skills-consensus-clustering-analysis",
+  "name": "consensus-clustering-analysis",
+  "description": "Use when identifying stable sample subtypes from bulk expression matrices with ConsensusClusterPlus, including PAC-based model selection and consensus matrix/CDF visualization. NOT for: differential expression analysis, single-cell clustering workflows, or non-expression tables.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "aipoch",
+  "install_path": ".claude/skills/consensus-clustering-analysis/SKILL.md",
+  "source": {
+    "repo": "aipoch/medical-research-skills",
+    "url": "https://github.com/aipoch/medical-research-skills/blob/main/awesome-med-research-skills/Data Analysis/consensus-clustering-analysis/SKILL.md",
+    "path": "awesome-med-research-skills/Data Analysis/consensus-clustering-analysis/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:07:10.748Z",
+    "stars": 1176,
+    "language": "Python",
+    "pushed_at": "2026-06-15T05:55:48Z",
+    "license": "MIT"
+  }
+}

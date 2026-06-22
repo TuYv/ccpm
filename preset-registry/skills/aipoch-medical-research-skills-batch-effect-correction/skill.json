@@ -1,0 +1,25 @@
+{
+  "id": "aipoch-medical-research-skills-batch-effect-correction",
+  "name": "batch-effect-correction",
+  "description": "Use when correcting batch effects in merged bulk expression matrices with sample-level batch metadata while preserving biological group structure and generating before-and-after QC plots. NOT for: single-cell integration, raw FASTQ processing, differential expression without batch labels, or datasets without biological groups.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "aipoch",
+  "install_path": ".claude/skills/batch-effect-correction/SKILL.md",
+  "source": {
+    "repo": "aipoch/medical-research-skills",
+    "url": "https://github.com/aipoch/medical-research-skills/blob/main/awesome-med-research-skills/Data Analysis/batch-effect-correction/SKILL.md",
+    "path": "awesome-med-research-skills/Data Analysis/batch-effect-correction/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:07:10.162Z",
+    "stars": 1176,
+    "language": "Python",
+    "pushed_at": "2026-06-15T05:55:48Z",
+    "license": "MIT"
+  }
+}

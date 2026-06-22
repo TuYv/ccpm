@@ -1,0 +1,25 @@
+{
+  "id": "modu-ai-moai-adk-moai-ref-git-workflow",
+  "name": "moai-ref-git-workflow",
+  "description": "> Git workflow patterns, branch strategies, conventional commits, and PR templates reference for git operations. Agent-extending skill that amplifies manager-git expertise with production-grade git workflow patterns. NOT for: code implementation, testing, architecture design, documentation content.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "modu-ai",
+  "install_path": ".claude/skills/moai-ref-git-workflow/SKILL.md",
+  "source": {
+    "repo": "modu-ai/moai-adk",
+    "url": "https://github.com/modu-ai/moai-adk/blob/main/.claude/skills/moai-ref-git-workflow/SKILL.md",
+    "path": ".claude/skills/moai-ref-git-workflow/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:07:28.885Z",
+    "stars": 1092,
+    "language": "Go",
+    "pushed_at": "2026-06-22T18:04:40Z",
+    "license": "Apache-2.0"
+  }
+}

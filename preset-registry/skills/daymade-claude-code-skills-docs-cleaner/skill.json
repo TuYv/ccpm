@@ -1,0 +1,25 @@
+{
+  "id": "daymade-claude-code-skills-docs-cleaner",
+  "name": "docs-cleaner",
+  "description": "Consolidates redundant documentation while preserving all valuable content. This skill should be used when users want to clean up documentation bloat, merge redundant docs, reduce documentation sprawl, or consolidate multiple files covering the same topic. Triggers include \"clean up docs\", \"consolidate documentation\", \"too many doc files\", \"merge these docs\", or when documentation exceeds 500 lines across multiple files covering similar topics.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/docs-cleaner/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-docs/docs-cleaner/SKILL.md",
+    "path": "daymade-docs/docs-cleaner/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:06:56.717Z",
+    "stars": 1206,
+    "language": "Python",
+    "pushed_at": "2026-06-14T10:01:47Z",
+    "license": "MIT"
+  }
+}

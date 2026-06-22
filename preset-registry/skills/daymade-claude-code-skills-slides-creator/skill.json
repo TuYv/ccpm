@@ -1,0 +1,25 @@
+{
+  "id": "daymade-claude-code-skills-slides-creator",
+  "name": "slides-creator",
+  "description": "Narrative-first slide deck creation. Guides users through structured narrative design (ABCDEFG model), then delegates visual generation to baoyu-slide-deck. Triggers on \"create slides\", \"make a presentation\", \"generate deck\", \"slide deck\", \"PPT\", or when user needs to turn content into visual slides.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/slides-creator/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/slides-creator/SKILL.md",
+    "path": "slides-creator/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:07:02.850Z",
+    "stars": 1206,
+    "language": "Python",
+    "pushed_at": "2026-06-14T10:01:47Z",
+    "license": "MIT"
+  }
+}

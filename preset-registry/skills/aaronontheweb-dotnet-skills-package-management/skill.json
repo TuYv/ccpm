@@ -1,0 +1,25 @@
+{
+  "id": "aaronontheweb-dotnet-skills-package-management",
+  "name": "package-management",
+  "description": "Manage NuGet packages using Central Package Management (CPM) and dotnet CLI commands. Never edit XML directly - use dotnet add/remove/list commands. Use shared version variables for related packages.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Aaronontheweb",
+  "install_path": ".claude/skills/package-management/SKILL.md",
+  "source": {
+    "repo": "Aaronontheweb/dotnet-skills",
+    "url": "https://github.com/Aaronontheweb/dotnet-skills/blob/master/skills/package-management/SKILL.md",
+    "path": "skills/package-management/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-06-22T18:07:44.074Z",
+    "stars": 1025,
+    "language": "Shell",
+    "pushed_at": "2026-06-18T01:02:32Z",
+    "license": "MIT"
+  }
+}

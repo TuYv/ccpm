@@ -1,0 +1,25 @@
+{
+  "id": "aipoch-medical-research-skills-ppi-network-analysis",
+  "name": "ppi-network-analysis",
+  "description": "Use when you need a standardized R CLI workflow to build a protein-protein interaction network from a local gene list and an offline STRING cache, export node and edge tables, and render a reproducible PDF network plot. NOT for online API fetching, arbitrary graph databases, multi-omics integration, or non-STRING interaction sources.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "aipoch",
+  "install_path": ".claude/skills/ppi-network-analysis/SKILL.md",
+  "source": {
+    "repo": "aipoch/medical-research-skills",
+    "url": "https://github.com/aipoch/medical-research-skills/blob/main/awesome-med-research-skills/Data Analysis/ppi-network-analysis/SKILL.md",
+    "path": "awesome-med-research-skills/Data Analysis/ppi-network-analysis/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:07:16.028Z",
+    "stars": 1176,
+    "language": "Python",
+    "pushed_at": "2026-06-15T05:55:48Z",
+    "license": "MIT"
+  }
+}

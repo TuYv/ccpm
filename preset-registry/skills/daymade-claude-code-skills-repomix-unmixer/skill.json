@@ -1,0 +1,25 @@
+{
+  "id": "daymade-claude-code-skills-repomix-unmixer",
+  "name": "repomix-unmixer",
+  "description": "Extracts files from repomix-packed repositories, restoring original directory structures from XML/Markdown/JSON formats. Activates when users need to unmix repomix files, extract packed repositories, restore file structures from repomix output, or reverse the repomix packing process.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/repomix-unmixer/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/repomix-unmixer/SKILL.md",
+    "path": "repomix-unmixer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:07:02.483Z",
+    "stars": 1206,
+    "language": "Python",
+    "pushed_at": "2026-06-14T10:01:47Z",
+    "license": "MIT"
+  }
+}

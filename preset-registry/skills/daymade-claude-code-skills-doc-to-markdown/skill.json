@@ -1,0 +1,25 @@
+{
+  "id": "daymade-claude-code-skills-doc-to-markdown",
+  "name": "doc-to-markdown",
+  "description": "Converts DOCX/PDF/PPTX to high-quality Markdown with automatic post-processing. Fixes pandoc grid tables, simple tables, image paths, CJK bold spacing, attribute noise, and code blocks. Benchmarked best-in-class (7.6/10) against Docling, MarkItDown, Pandoc raw, and Mammoth. Trigger on \"convert document\", \"docx to markdown\", \"parse word\", \"doc to markdown\", \"解析word\", \"转换文档\".",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/doc-to-markdown/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-docs/doc-to-markdown/SKILL.md",
+    "path": "daymade-docs/doc-to-markdown/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:06:56.526Z",
+    "stars": 1206,
+    "language": "Python",
+    "pushed_at": "2026-06-14T10:01:47Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "daymade-claude-code-skills-github-contributor",
+  "name": "github-contributor",
+  "description": "End-to-end playbook for shipping high-quality pull requests to open-source projects you don't maintain — discovery, CONTRIBUTING compliance, PR-size check, minimal-diff implementation, PR description with AI-assisted disclosure, conflict resolution, and post-submission maintainer interaction. Use whenever creating, editing, or pushing a PR to a third-party GitHub repo — \"submit a PR\", \"open a PR\", \"fix this upstream\", \"rebase against main\", \"respond to the bot review\", an `owner/repo` target, or",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/github-contributor/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/github-contributor/SKILL.md",
+    "path": "github-contributor/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:06:59.866Z",
+    "stars": 1206,
+    "language": "Python",
+    "pushed_at": "2026-06-14T10:01:47Z",
+    "license": "MIT"
+  }
+}

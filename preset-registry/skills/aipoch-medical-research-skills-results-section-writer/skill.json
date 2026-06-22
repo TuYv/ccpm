@@ -1,0 +1,25 @@
+{
+  "id": "aipoch-medical-research-skills-results-section-writer",
+  "name": "results-section-writer",
+  "description": "Writes the full Results section of a biomedical manuscript from a sufficiently clear result structure, figure inventory, or analysis summary while preserving evidence boundaries and result hierarchy.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "aipoch",
+  "install_path": ".claude/skills/results-section-writer/SKILL.md",
+  "source": {
+    "repo": "aipoch/medical-research-skills",
+    "url": "https://github.com/aipoch/medical-research-skills/blob/main/awesome-med-research-skills/Academic Writing/results-section-writer/SKILL.md",
+    "path": "awesome-med-research-skills/Academic Writing/results-section-writer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:07:08.928Z",
+    "stars": 1176,
+    "language": "Python",
+    "pushed_at": "2026-06-15T05:55:48Z",
+    "license": "MIT"
+  }
+}

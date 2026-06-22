@@ -1,0 +1,25 @@
+{
+  "id": "modu-ai-moai-adk-moai-domain-copywriting",
+  "name": "moai-domain-copywriting",
+  "description": "> Brand-aligned copywriting specialist for marketing and product text. Enforces brand voice, anti-AI-slop rules, concrete numbers, and JSON section structure for downstream agent consumption. Covers hero, features, social_proof, cta, and footer sections with A/B variant output.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "modu-ai",
+  "install_path": ".claude/skills/moai-domain-copywriting/SKILL.md",
+  "source": {
+    "repo": "modu-ai/moai-adk",
+    "url": "https://github.com/modu-ai/moai-adk/blob/main/internal/template/templates/.claude/skills/moai-domain-copywriting/SKILL.md",
+    "path": "internal/template/templates/.claude/skills/moai-domain-copywriting/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:07:37.527Z",
+    "stars": 1092,
+    "language": "Go",
+    "pushed_at": "2026-06-22T18:04:40Z",
+    "license": "Apache-2.0"
+  }
+}

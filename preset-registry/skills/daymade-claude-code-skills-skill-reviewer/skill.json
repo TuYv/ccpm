@@ -1,0 +1,25 @@
+{
+  "id": "daymade-claude-code-skills-skill-reviewer",
+  "name": "skill-reviewer",
+  "description": "Reviews and improves Claude Code skills against official best practices. Supports three modes - self-review (validate your own skills), external review (evaluate others' skills), and auto-PR (fork, improve, submit). Use when checking skill quality, reviewing skill repositories, or contributing improvements to open-source skills.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/skill-reviewer/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-skill/skill-reviewer/SKILL.md",
+    "path": "daymade-skill/skill-reviewer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:06:57.809Z",
+    "stars": 1206,
+    "language": "Python",
+    "pushed_at": "2026-06-14T10:01:47Z",
+    "license": "MIT"
+  }
+}

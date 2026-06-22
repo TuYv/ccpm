@@ -1,0 +1,25 @@
+{
+  "id": "daymade-claude-code-skills-claude-code-history-files-finder",
+  "name": "claude-code-history-files-finder",
+  "description": "Finds and recovers content from Claude Code session history files. This skill should be used when searching for deleted files, tracking changes across sessions, analyzing conversation history, or recovering code from previous Claude interactions. Triggers include mentions of \"session history\", \"recover deleted\", \"find in history\", \"previous conversation\", or \".claude/projects\".",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/claude-code-history-files-finder/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-claude-code/claude-code-history-files-finder/SKILL.md",
+    "path": "daymade-claude-code/claude-code-history-files-finder/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:06:54.817Z",
+    "stars": 1206,
+    "language": "Python",
+    "pushed_at": "2026-06-14T10:01:47Z",
+    "license": "MIT"
+  }
+}

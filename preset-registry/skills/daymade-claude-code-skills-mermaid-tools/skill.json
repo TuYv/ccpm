@@ -1,0 +1,25 @@
+{
+  "id": "daymade-claude-code-skills-mermaid-tools",
+  "name": "mermaid-tools",
+  "description": "Extracts Mermaid diagrams from markdown files and generates high-quality PNG images using bundled scripts. Activates when working with Mermaid diagrams, converting diagrams to PNG, extracting diagrams from markdown, or processing markdown files with embedded Mermaid code.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/mermaid-tools/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-docs/mermaid-tools/SKILL.md",
+    "path": "daymade-docs/mermaid-tools/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:06:56.876Z",
+    "stars": 1206,
+    "language": "Python",
+    "pushed_at": "2026-06-14T10:01:47Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "aipoch-medical-research-skills-nomogram-construction",
+  "name": "nomogram-construction",
+  "description": "Use when constructing a prognosis nomogram from survival-related clinical predictors, exporting the nomogram bundle and C-index table, and optionally rendering the final nomogram PDF. NOT for: univariate/multivariable Cox feature screening, calibration curves, ROC analysis, decision-curve analysis, or non-survival outcomes.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "aipoch",
+  "install_path": ".claude/skills/nomogram-construction/SKILL.md",
+  "source": {
+    "repo": "aipoch/medical-research-skills",
+    "url": "https://github.com/aipoch/medical-research-skills/blob/main/awesome-med-research-skills/Data Analysis/nomogram-construction/SKILL.md",
+    "path": "awesome-med-research-skills/Data Analysis/nomogram-construction/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:07:15.557Z",
+    "stars": 1176,
+    "language": "Python",
+    "pushed_at": "2026-06-15T05:55:48Z",
+    "license": "MIT"
+  }
+}

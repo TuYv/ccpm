@@ -1,0 +1,25 @@
+{
+  "id": "daymade-claude-code-skills-repomix-safe-mixer",
+  "name": "repomix-safe-mixer",
+  "description": "Safely package codebases with repomix by automatically detecting and removing hardcoded credentials before packing. Use when packaging code for distribution, creating reference packages, or when the user mentions security concerns about sharing code with repomix.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/repomix-safe-mixer/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/repomix-safe-mixer/SKILL.md",
+    "path": "repomix-safe-mixer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:07:02.303Z",
+    "stars": 1206,
+    "language": "Python",
+    "pushed_at": "2026-06-14T10:01:47Z",
+    "license": "MIT"
+  }
+}

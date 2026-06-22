@@ -1,0 +1,25 @@
+{
+  "id": "daymade-claude-code-skills-asr-transcribe-to-text",
+  "name": "asr-transcribe-to-text",
+  "description": "Transcribes audio and video files to text using Qwen3-ASR. Supports two modes — local MLX inference on macOS Apple Silicon (no API key, 15-27x realtime) and remote API via vLLM/OpenAI-compatible endpoints. Auto-detects platform and recommends the best path. Triggers when the user wants to transcribe recordings, convert audio/video to text, do speech-to-text, or mentions ASR, Qwen ASR, 转录, 语音转文字, 录音转文字. Also triggers for meeting recordings, lectures, interviews, podcasts, screen recordings, or an",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/asr-transcribe-to-text/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-audio/asr-transcribe-to-text/SKILL.md",
+    "path": "daymade-audio/asr-transcribe-to-text/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:06:53.842Z",
+    "stars": 1206,
+    "language": "Python",
+    "pushed_at": "2026-06-14T10:01:47Z",
+    "license": "MIT"
+  }
+}

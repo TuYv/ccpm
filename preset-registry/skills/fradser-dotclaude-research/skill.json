@@ -1,0 +1,25 @@
+{
+  "id": "fradser-dotclaude-research",
+  "name": "research",
+  "description": "Runs a deep-research query on Google Gemini's deep-research managed agent and returns a cited report. This skill should be used when the user asks to \"deep research with Gemini\", \"run Gemini deep research\", \"have Antigravity research X\", or wants a thorough, multi-source web research report produced by a remote Gemini agent. Invoked via \"/antigravity:research\". Supports a higher-effort max mode via \"--max\".",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "FradSer",
+  "install_path": ".claude/skills/research/SKILL.md",
+  "source": {
+    "repo": "FradSer/dotclaude",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/antigravity/skills/research/SKILL.md",
+    "path": "antigravity/skills/research/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:03:36.865Z",
+    "stars": 558,
+    "language": "JavaScript",
+    "pushed_at": "2026-06-22T17:33:22Z",
+    "license": null
+  }
+}

@@ -35,8 +35,8 @@ This is not a generic risk list. It's a guided scan tied to *your* specific prod
 Every product idea carries two kinds of risk. Most PMs check one and ignore the other.
 
 **Internal risks** ask whether the product itself will work:
-- **Success Metrics** (Desirability + Usability) = "What's in it for the customer?"
-- **Health Metrics** (Feasibility + Viability) = "What's in it for the business?"
+- **Product Outcome Metrics** (Desirability + Usability) = "What's in it for the customer/user?"
+- **Business Outcome Metrics** (Feasibility + Viability) = "What's in it for our business/organization?"
 
 **External risks** ask whether the world will let it work:
 - **PESTEL forces** (Political, Economic, Social, Technological, Environmental, Legal) = "What could blindside us?"
@@ -51,16 +51,16 @@ Adapted from Marty Cagan's four product risks, split into two measurement catego
 
 | Category | Dimension | Core Question |
 |----------|-----------|---------------|
-| **Success Metrics** | Desirability | Will customers value it enough to buy it? |
-| **Success Metrics** | Usability | Will customers figure out how to use it? |
-| **Health Metrics** | Feasibility | Can we build it? Can we sustain it at scale? |
-| **Health Metrics** | Viability | Will it work as a viable business? |
+| **Product Outcome Metrics** | Desirability | Will customers value it enough to buy it? |
+| **Product Outcome Metrics** | Usability | Will customers figure out how to use it? |
+| **Business Outcome Metrics** | Feasibility | Can we build it? Can we sustain it at scale? |
+| **Business Outcome Metrics** | Viability | Will it work as a viable business? |
 
-**Success Metrics** answer: *What's in it for the customer?* They measure whether the product is solving meaningful problems and delivering value to its intended users.
+**Product Outcome Metrics** answer: *What's in it for the customer/user?* They measure whether the product is solving meaningful problems and delivering value to its intended users.
 
-**Health Metrics** answer: *What's in it for the business?* They measure how effectively and reliably the product supports a seamless customer experience while remaining feasible to deliver.
+**Business Outcome Metrics** answer: *What's in it for our business/organization?* They measure how effectively and reliably the product supports a seamless customer experience while remaining feasible to deliver.
 
-The connection to positioning: Success Metrics validate your **Problem Positioning Statement** (the customer promise). Health Metrics validate your **Problem Framing Statement** (the business case).
+The connection to positioning: Product Outcome Metrics validate your **Problem Positioning Statement** (the customer promise). Business Outcome Metrics validate your **Problem Framing Statement** (the business case).
 
 ---
 
@@ -172,15 +172,15 @@ How do you want to do this?
 - **Primary concern:** [concern]
 - **Customer:** [role]
 
-Let's scan for risks. We'll start with internal risks (Success Metrics and Health Metrics), then move to external forces (PESTEL)."
+Let's scan for risks. We'll start with internal risks (Product Outcome Metrics and Business Outcome Metrics), then move to external forces (PESTEL)."
 
 ---
 
-### Step 1: Internal Risk Scan — Success Metrics (Desirability + Usability)
+### Step 1: Internal Risk Scan — Product Outcome Metrics (Desirability + Usability)
 
 **Agent introduces:**
 
-"First, let's check **Success Metrics** — whether the product will be valuable and usable for your customer. I'll present tests and metrics for two dimensions. For each, tell me which 2 are most critical for *your* product."
+"First, let's check **Product Outcome Metrics** — what's in it for the customer? These measure whether the product will be valuable and usable for your customer. I'll present tests and metrics for two dimensions. For each, tell me which 2 are most critical for *your* product."
 
 ---
 
@@ -212,11 +212,11 @@ Let's scan for risks. We'll start with internal risks (Success Metrics and Healt
 
 ---
 
-### Step 2: Internal Risk Scan — Health Metrics (Feasibility + Viability)
+### Step 2: Internal Risk Scan — Business Outcome Metrics (Feasibility + Viability)
 
 **Agent introduces:**
 
-"Now let's check **Health Metrics** — whether the business and technology can support this product."
+"Now let's check **Business Outcome Metrics** — what's in it for our business? These measure whether the business and technology can support this product."
 
 ---
 
@@ -379,11 +379,11 @@ Starter prompts:
 
 **Internal Risk Scan Results:**
 
-*Success Metrics:*
+*Product Outcome Metrics:*
 - Desirability: Observe feedback from storyboard demos (ACT) + Track feature adoption rates (WATCH)
 - Usability: Measure drop-offs in task completion workflows (WATCH) + Analyze time-to-complete for friction (WATCH)
 
-*Health Metrics:*
+*Business Outcome Metrics:*
 - Feasibility: Test integration readiness with EHR dependencies (ACT) + Monitor failure rates across environments (WATCH)
 - Viability: Examine analogous data from similar products (ACT) + Assess scalability of revenue vs. cost (WATCH)
 

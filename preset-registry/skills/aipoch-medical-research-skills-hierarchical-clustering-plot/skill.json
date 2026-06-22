@@ -1,0 +1,25 @@
+{
+  "id": "aipoch-medical-research-skills-hierarchical-clustering-plot",
+  "name": "hierarchical-clustering-plot",
+  "description": "Use when building a sample-level hierarchical clustering dendrogram from a bulk expression matrix and sample annotation table, especially for QC, batch inspection, or sample similarity assessment. Trigger keywords: hierarchical clustering, dendrogram, sample QC, batch inspection, sample similarity. NOT for: differential expression testing, gene clustering heatmaps, single-cell clustering workflows.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "aipoch",
+  "install_path": ".claude/skills/hierarchical-clustering-plot/SKILL.md",
+  "source": {
+    "repo": "aipoch/medical-research-skills",
+    "url": "https://github.com/aipoch/medical-research-skills/blob/main/awesome-med-research-skills/Data Analysis/hierarchical-clustering-plot/SKILL.md",
+    "path": "awesome-med-research-skills/Data Analysis/hierarchical-clustering-plot/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:07:13.743Z",
+    "stars": 1176,
+    "language": "Python",
+    "pushed_at": "2026-06-15T05:55:48Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "aipoch-medical-research-skills-roc-diagnostic-performance",
+  "name": "roc-diagnostic-performance",
+  "description": "Use when evaluating diagnostic biomarker performance from case-control expression data with logistic regression and ROC curves, exporting coefficient and AUC tables together with a ROC PDF. NOT for: survival analysis, time-to-event outcomes, multiclass classification, calibration curves, decision-curve analysis, or nomogram construction.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "aipoch",
+  "install_path": ".claude/skills/roc-diagnostic-performance/SKILL.md",
+  "source": {
+    "repo": "aipoch/medical-research-skills",
+    "url": "https://github.com/aipoch/medical-research-skills/blob/main/awesome-med-research-skills/Data Analysis/roc-diagnostic-performance/SKILL.md",
+    "path": "awesome-med-research-skills/Data Analysis/roc-diagnostic-performance/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:07:16.495Z",
+    "stars": 1176,
+    "language": "Python",
+    "pushed_at": "2026-06-15T05:55:48Z",
+    "license": "MIT"
+  }
+}

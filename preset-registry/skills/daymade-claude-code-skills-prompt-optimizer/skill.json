@@ -1,0 +1,25 @@
+{
+  "id": "daymade-claude-code-skills-prompt-optimizer",
+  "name": "prompt-optimizer",
+  "description": "Transform vague prompts into precise, well-structured specifications using EARS (Easy Approach to Requirements Syntax) methodology. This skill should be used when users provide loose requirements, ambiguous feature descriptions, or need to enhance prompts for AI-generated code, products, or documents. Triggers include requests to \"optimize my prompt\", \"improve this requirement\", \"make this more specific\", or when raw requirements lack detail and structure.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/prompt-optimizer/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/prompt-optimizer/SKILL.md",
+    "path": "prompt-optimizer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:07:01.711Z",
+    "stars": 1206,
+    "language": "Python",
+    "pushed_at": "2026-06-14T10:01:47Z",
+    "license": "MIT"
+  }
+}

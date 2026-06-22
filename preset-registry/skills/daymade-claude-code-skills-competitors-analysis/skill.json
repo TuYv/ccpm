@@ -1,0 +1,25 @@
+{
+  "id": "daymade-claude-code-skills-competitors-analysis",
+  "name": "competitors-analysis",
+  "description": "Analyze competitor repositories with evidence-based approach. Use when tracking competitors, creating competitor profiles, or generating competitive analysis. CRITICAL - all analysis must be based on actual cloned code, never assumptions. Triggers include \"analyze competitor\", \"add competitor\", \"competitive analysis\", or \"竞品分析\".",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/competitors-analysis/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/competitors-analysis/SKILL.md",
+    "path": "competitors-analysis/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:06:53.676Z",
+    "stars": 1206,
+    "language": "Python",
+    "pushed_at": "2026-06-14T10:01:47Z",
+    "license": "MIT"
+  }
+}

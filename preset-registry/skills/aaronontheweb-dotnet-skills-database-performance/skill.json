@@ -1,0 +1,25 @@
+{
+  "id": "aaronontheweb-dotnet-skills-database-performance",
+  "name": "database-performance",
+  "description": "Database access patterns for performance. Separate read/write models, avoid N+1 queries, use AsNoTracking, apply row limits, and never do application-side joins. Works with EF Core and Dapper.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Aaronontheweb",
+  "install_path": ".claude/skills/database-performance/SKILL.md",
+  "source": {
+    "repo": "Aaronontheweb/dotnet-skills",
+    "url": "https://github.com/Aaronontheweb/dotnet-skills/blob/master/skills/database-performance/SKILL.md",
+    "path": "skills/database-performance/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-06-22T18:07:42.233Z",
+    "stars": 1025,
+    "language": "Shell",
+    "pushed_at": "2026-06-18T01:02:32Z",
+    "license": "MIT"
+  }
+}

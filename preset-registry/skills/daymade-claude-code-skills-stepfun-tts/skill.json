@@ -1,0 +1,25 @@
+{
+  "id": "daymade-claude-code-skills-stepfun-tts",
+  "name": "stepfun-tts",
+  "description": "Generate Chinese / Japanese speech with StepFun's stepaudio-2.5-tts — Contextual TTS that replaces step-tts-2's `voice_label` with natural-language `instruction` (≤200 chars) plus inline `()` parentheses for句内 prosody. Use when the user wants emotional / prosody control over voice synthesis (whisper, pause, stress, mood pivot mid-sentence), batch-generates game / app voice lines, migrates from `step-tts-2` (the `voice_label → instruction` breaking change), or hits StepFun's stricter 2.5-era cens",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/stepfun-tts/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-audio/stepfun-tts/SKILL.md",
+    "path": "daymade-audio/stepfun-tts/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:06:54.440Z",
+    "stars": 1206,
+    "language": "Python",
+    "pushed_at": "2026-06-14T10:01:47Z",
+    "license": "MIT"
+  }
+}

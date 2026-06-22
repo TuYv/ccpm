@@ -1,0 +1,25 @@
+{
+  "id": "modu-ai-moai-adk-moai-domain-design-handoff",
+  "name": "moai-domain-design-handoff",
+  "description": "> Claude Design handoff package specialist for /moai brain Phase 7. Assembles 5-file handoff bundle (prompt/context/references/acceptance/checklist) for paste-ready claude.com Design session. Handles brand-absent fallback and section regeneration.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "modu-ai",
+  "install_path": ".claude/skills/moai-domain-design-handoff/SKILL.md",
+  "source": {
+    "repo": "modu-ai/moai-adk",
+    "url": "https://github.com/modu-ai/moai-adk/blob/main/.claude/skills/moai-domain-design-handoff/SKILL.md",
+    "path": ".claude/skills/moai-domain-design-handoff/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:07:26.316Z",
+    "stars": 1092,
+    "language": "Go",
+    "pushed_at": "2026-06-22T18:04:40Z",
+    "license": "Apache-2.0"
+  }
+}

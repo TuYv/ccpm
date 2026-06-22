@@ -1,0 +1,25 @@
+{
+  "id": "daymade-claude-code-skills-continue-claude-work",
+  "name": "continue-claude-work",
+  "description": "Recover actionable context from local `.claude` session artifacts and continue interrupted work without running `claude --resume`. This skill should be used when the user provides a Claude session ID, asks to continue prior work from local history, or wants to inspect `.claude` files before resuming implementation.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/continue-claude-work/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-claude-code/continue-claude-work/SKILL.md",
+    "path": "daymade-claude-code/continue-claude-work/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:06:55.736Z",
+    "stars": 1206,
+    "language": "Python",
+    "pushed_at": "2026-06-14T10:01:47Z",
+    "license": "MIT"
+  }
+}

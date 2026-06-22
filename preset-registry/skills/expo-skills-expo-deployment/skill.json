@@ -1,7 +1,7 @@
 {
   "id": "expo-skills-expo-deployment",
   "name": "expo-deployment",
-  "description": "Deploying Expo apps to iOS App Store, Android Play Store, web hosting, and API routes",
+  "description": "Deploy Expo apps to production with EAS — build and submit to the iOS App Store, Google Play Store, and TestFlight, configure eas.json build and submit profiles, manage app versions and build numbers, publish App Store metadata and ASO, and deploy web bundles and API routes via EAS Hosting. Use whenever the user is preparing a production build, running eas build or eas submit, shipping to TestFlight, releasing or rolling out to the app stores, bumping version or build numbers, or setting up stor",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/expo/skills/blob/main/plugins/expo/skills/expo-deployment/SKILL.md",
     "path": "plugins/expo/skills/expo-deployment/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-22T13:15:20.378Z",
+    "discovered_at": "2026-06-22T18:01:19.972Z",
     "stars": 2099,
     "language": "JavaScript",
-    "pushed_at": "2026-06-18T16:41:30Z",
+    "pushed_at": "2026-06-22T15:10:36Z",
     "license": "MIT"
-  },
-  "summary_zh": "专门把Expo应用发布到苹果、安卓商店、网站和API，解决跨平台部署流程繁琐的问题，适合需要多端同步上线的场景。"
+  }
 }

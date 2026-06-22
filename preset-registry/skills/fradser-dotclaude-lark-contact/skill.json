@@ -1,7 +1,7 @@
 {
   "id": "fradser-dotclaude-lark-contact",
   "name": "lark-contact",
-  "description": "飞书 / Lark 通讯录,用于按姓名 / 邮箱把员工解析成 open_id,以及按 open_id 反查员工的姓名 / 部门 / 邮箱 / 联系方式。当用户说出某人姓名而下一步需要发消息 / 加群 / 排日程时,先用本 skill 把姓名换成 ID;当输出里出现 open_id 需要展示成姓名给用户看,或用户直接询问某人的部门 / 邮箱 / 联系方式时,用本 skill 查。不负责部门树遍历、按部门列员工、组织架构图,这类需求走原生 OpenAPI。",
+  "description": "飞书 / Lark 通讯录:按姓名 / 邮箱解析成 open_id,或按 open_id 反查姓名 / 部门 / 邮箱 / 联系方式 / 个人状态 / 签名。当用户提到某人姓名要下一步发消息 / 排日程,或拿到 open_id 想查具体信息时使用。不负责部门树遍历、按部门列员工、组织架构图,这类需求走原生 OpenAPI。",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/FradSer/dotclaude/blob/main/office/skills/lark/lark-contact/SKILL.md",
     "path": "office/skills/lark/lark-contact/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-22T13:17:16.569Z",
+    "discovered_at": "2026-06-22T18:03:43.252Z",
     "stars": 558,
-    "language": "Python",
-    "pushed_at": "2026-06-22T12:26:00Z",
+    "language": "JavaScript",
+    "pushed_at": "2026-06-22T17:33:22Z",
     "license": null
-  },
-  "summary_zh": "在飞书场景下把员工姓名或邮箱转成 open_id，也能反查某人的部门、邮箱和联系方式，适合发消息、拉群、排日程前先解析身份，或把接口返回的 ID 还原成可读姓名。"
+  }
 }

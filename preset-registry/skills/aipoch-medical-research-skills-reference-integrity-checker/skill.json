@@ -1,0 +1,25 @@
+{
+  "id": "aipoch-medical-research-skills-reference-integrity-checker",
+  "name": "reference-integrity-checker",
+  "description": "Checks whether manuscript references are accurately matched to claims, appropriately scoped, and not overextended, misquoted, or second-hand cited.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "aipoch",
+  "install_path": ".claude/skills/reference-integrity-checker/SKILL.md",
+  "source": {
+    "repo": "aipoch/medical-research-skills",
+    "url": "https://github.com/aipoch/medical-research-skills/blob/main/awesome-med-research-skills/Academic Writing/reference-integrity-checker/SKILL.md",
+    "path": "awesome-med-research-skills/Academic Writing/reference-integrity-checker/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:07:08.197Z",
+    "stars": 1176,
+    "language": "Python",
+    "pushed_at": "2026-06-15T05:55:48Z",
+    "license": "MIT"
+  }
+}

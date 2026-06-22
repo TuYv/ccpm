@@ -1,0 +1,25 @@
+{
+  "id": "fradser-dotclaude-delegate",
+  "name": "delegate",
+  "description": "Delegates a self-contained task to a Google Gemini Managed Agent (Antigravity) running in a remote sandbox with code execution, web search, and URL reading. This skill should be used when the user asks to \"delegate to Gemini\", \"offload to Antigravity\", \"run this in a remote sandbox\", or wants a task executed in an isolated Linux sandbox with Google Search and code execution, then the result read back. Invoked via \"/antigravity:delegate\".",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "FradSer",
+  "install_path": ".claude/skills/delegate/SKILL.md",
+  "source": {
+    "repo": "FradSer/dotclaude",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/antigravity/skills/delegate/SKILL.md",
+    "path": "antigravity/skills/delegate/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:03:36.666Z",
+    "stars": 558,
+    "language": "JavaScript",
+    "pushed_at": "2026-06-22T17:33:22Z",
+    "license": null
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "modu-ai-moai-adk-moai-workflow-testing",
+  "name": "moai-workflow-testing",
+  "description": "> Comprehensive testing and development workflow specialist combining DDD testing, characterization tests, performance profiling, and quality assurance. Use when writing tests or measuring coverage.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "modu-ai",
+  "install_path": ".claude/skills/moai-workflow-testing/SKILL.md",
+  "source": {
+    "repo": "modu-ai/moai-adk",
+    "url": "https://github.com/modu-ai/moai-adk/blob/main/.claude/skills/moai-workflow-testing/SKILL.md",
+    "path": ".claude/skills/moai-workflow-testing/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:07:31.486Z",
+    "stars": 1092,
+    "language": "Go",
+    "pushed_at": "2026-06-22T18:04:40Z",
+    "license": "Apache-2.0"
+  }
+}

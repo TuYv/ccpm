@@ -1,0 +1,25 @@
+{
+  "id": "modu-ai-moai-adk-harness-moaiadk-best-practices",
+  "name": "harness-moaiadk-best-practices",
+  "description": "> moai-adk-go best-practices reference for the 4 harness specialists (cli-template-specialist, quality-specialist, workflow-specialist, hook-ci-specialist). Covers TRUST 5 gates, Go test isolation (t.TempDir, no OTEL env in parallel tests), hardcoding-prevention rules (env constants in envkeys.go, thresholds in defaults.go), the AskUserQuestion orchestrator-only boundary, the deferred-tool preload rule, the archived-agent rejection contract, and verification-claim integrity. Loaded by the specia",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "modu-ai",
+  "install_path": ".claude/skills/harness-moaiadk-best-practices/SKILL.md",
+  "source": {
+    "repo": "modu-ai/moai-adk",
+    "url": "https://github.com/modu-ai/moai-adk/blob/main/.claude/skills/harness-moaiadk-best-practices/SKILL.md",
+    "path": ".claude/skills/harness-moaiadk-best-practices/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:07:25.076Z",
+    "stars": 1092,
+    "language": "Go",
+    "pushed_at": "2026-06-22T18:04:40Z",
+    "license": "Apache-2.0"
+  }
+}

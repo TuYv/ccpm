@@ -1,0 +1,25 @@
+{
+  "id": "daymade-claude-code-skills-claude-skills-troubleshooting",
+  "name": "claude-skills-troubleshooting",
+  "description": "Diagnose and resolve Claude Code plugin and skill issues. This skill should be used when plugins are installed but not showing in available skills list, skills are not activating as expected, or when troubleshooting enabledPlugins configuration in settings.json. Triggers include \"plugin not working\", \"skill not showing\", \"installed but disabled\", or \"enabledPlugins\" issues.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/claude-skills-troubleshooting/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-claude-code/claude-skills-troubleshooting/SKILL.md",
+    "path": "daymade-claude-code/claude-skills-troubleshooting/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:06:55.389Z",
+    "stars": 1206,
+    "language": "Python",
+    "pushed_at": "2026-06-14T10:01:47Z",
+    "license": "MIT"
+  }
+}

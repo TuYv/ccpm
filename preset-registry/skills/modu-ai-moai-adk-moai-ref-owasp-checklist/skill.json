@@ -1,0 +1,25 @@
+{
+  "id": "modu-ai-moai-adk-moai-ref-owasp-checklist",
+  "name": "moai-ref-owasp-checklist",
+  "description": "> OWASP Top 10 security checklist, authentication patterns, input validation, and HTTP security headers reference. Agent-extending skill that amplifies expert-security and expert-backend expertise with production-grade security patterns. NOT for: frontend UI, DevOps deployment, performance optimization, testing strategy.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "modu-ai",
+  "install_path": ".claude/skills/moai-ref-owasp-checklist/SKILL.md",
+  "source": {
+    "repo": "modu-ai/moai-adk",
+    "url": "https://github.com/modu-ai/moai-adk/blob/main/.claude/skills/moai-ref-owasp-checklist/SKILL.md",
+    "path": ".claude/skills/moai-ref-owasp-checklist/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:07:29.062Z",
+    "stars": 1092,
+    "language": "Go",
+    "pushed_at": "2026-06-22T18:04:40Z",
+    "license": "Apache-2.0"
+  }
+}

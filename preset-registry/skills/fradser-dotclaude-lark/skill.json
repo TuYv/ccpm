@@ -1,0 +1,25 @@
+{
+  "id": "fradser-dotclaude-lark",
+  "name": "lark",
+  "description": "Lark/Feishu CLI skills: lark-cli operations for docs, markdown, sheets, base, calendar, im, mail, task, okr, drive, wiki, slides, whiteboard, apps, approval, attendance, contact, vc, minutes, note, event. Use when the user needs to operate Lark/Feishu resources via lark-cli, send messages, manage documents, spreadsheets, calendars, tasks, OKRs, deploy web pages, or any Feishu/Lark workspace operations.",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "FradSer",
+  "install_path": ".claude/skills/lark/SKILL.md",
+  "source": {
+    "repo": "FradSer/dotclaude",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/office/skills/lark/SKILL.md",
+    "path": "office/skills/lark/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:03:47.870Z",
+    "stars": 558,
+    "language": "JavaScript",
+    "pushed_at": "2026-06-22T17:33:22Z",
+    "license": null
+  }
+}

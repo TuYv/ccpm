@@ -1,0 +1,25 @@
+{
+  "id": "agricidaniel-claude-blog-blog",
+  "name": "blog",
+  "description": "> Full-lifecycle blog engine with 30 sub-skills, 12 content templates, 5-category 100-point scoring, and 5 specialized agents. Routes user requests to the right sub-skill: writing, rewriting, analysis, outlines, audits, schema, charts, images, repurposing, AI-citation optimization, FLOW framework prompts, topic-cluster execution, and multilingual publishing. Optimized for Google rankings (December 2025 Core Update, E-E-A-T) and AI citations (GEO/AEO). Supports any platform (WordPress, Next.js MD",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "AgriciDaniel",
+  "install_path": ".claude/skills/blog/SKILL.md",
+  "source": {
+    "repo": "AgriciDaniel/claude-blog",
+    "url": "https://github.com/AgriciDaniel/claude-blog/blob/main/skills/blog/SKILL.md",
+    "path": "skills/blog/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:07:24.232Z",
+    "stars": 1132,
+    "language": "Python",
+    "pushed_at": "2026-06-05T04:23:28Z",
+    "license": "MIT"
+  }
+}

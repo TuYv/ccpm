@@ -1,0 +1,25 @@
+{
+  "id": "fradser-dotclaude-lark-workflow-standup-report",
+  "name": "lark-workflow-standup-report",
+  "description": "日程待办摘要：编排 calendar +agenda 和 task +get-my-tasks，生成指定日期的日程与未完成任务摘要。适用于了解今天/明天/本周的安排。",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "FradSer",
+  "install_path": ".claude/skills/lark-workflow-standup-report/SKILL.md",
+  "source": {
+    "repo": "FradSer/dotclaude",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/office/skills/lark/lark-workflow-standup-report/SKILL.md",
+    "path": "office/skills/lark/lark-workflow-standup-report/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:03:47.685Z",
+    "stars": 558,
+    "language": "JavaScript",
+    "pushed_at": "2026-06-22T17:33:22Z",
+    "license": null
+  }
+}

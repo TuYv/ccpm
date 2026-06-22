@@ -1,0 +1,25 @@
+{
+  "id": "daymade-claude-code-skills-marketplace-health-check",
+  "name": "marketplace-health-check",
+  "description": ">- Run a full 6-dimension health check of this Claude Code skills marketplace repo — code/script safety, documentation/SSOT consistency, security/PII leaks, open-PR triage, open-issue triage, and marketplace-manifest integrity — via a parallel fan-out Dynamic Workflow, then verify the serious findings and report them by priority. Use this whenever the user asks to check the repo, run a health check, do a full sweep/audit before a release, 全面体检, 检查仓库状态, 看看仓库健康吗, 审计一下仓库, or asks whether the PRs / ",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/marketplace-health-check/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/marketplace-health-check/SKILL.md",
+    "path": "marketplace-health-check/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:07:01.315Z",
+    "stars": 1206,
+    "language": "Python",
+    "pushed_at": "2026-06-14T10:01:47Z",
+    "license": "MIT"
+  }
+}

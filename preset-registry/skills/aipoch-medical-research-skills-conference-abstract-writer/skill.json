@@ -1,0 +1,25 @@
+{
+  "id": "aipoch-medical-research-skills-conference-abstract-writer",
+  "name": "conference-abstract-writer",
+  "description": "Condenses a full study into conference-submission abstract format. Use when adapting a manuscript abstract or study summary to meet a specific conference's word limit, structured format (Background/Methods/Results/Conclusion), character limits, or required section headings. Also triggers on \"adapt my abstract for [conference]\", \"shorten my abstract to 250 words\", \"reformat for ASCO/ASGCT/SfN/AACR\", \"I need a conference abstract\", or \"cut my abstract to fit the word limit\".",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "aipoch",
+  "install_path": ".claude/skills/conference-abstract-writer/SKILL.md",
+  "source": {
+    "repo": "aipoch/medical-research-skills",
+    "url": "https://github.com/aipoch/medical-research-skills/blob/main/awesome-med-research-skills/Academic Writing/conference-abstract-writer/SKILL.md",
+    "path": "awesome-med-research-skills/Academic Writing/conference-abstract-writer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:07:04.869Z",
+    "stars": 1176,
+    "language": "Python",
+    "pushed_at": "2026-06-15T05:55:48Z",
+    "license": "MIT"
+  }
+}

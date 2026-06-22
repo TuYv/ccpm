@@ -1,0 +1,25 @@
+{
+  "id": "daymade-claude-code-skills-ima-copilot",
+  "name": "ima-copilot",
+  "description": "> Installs, troubleshoots, and personalizes the official Tencent IMA skill (a wrapper layer that orchestrates upstream ima-skill, not a replacement). Use when the user mentions IMA, 腾讯 IMA, ima.qq.com, ima-skill, installing or configuring ima-skill, IMA API key / credentials, searching across IMA knowledge bases, 知识库搜索, 笔记搜索, fan-out search with preferred KBs / priority boosting, or wants to diagnose, repair, or personalize an ima-skill install. Also trigger on the missing-YAML-frontmatter bug i",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/ima-copilot/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/ima-copilot/SKILL.md",
+    "path": "ima-copilot/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:07:00.403Z",
+    "stars": 1206,
+    "language": "Python",
+    "pushed_at": "2026-06-14T10:01:47Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "modu-ai-moai-adk-moai-workflow-spec",
+  "name": "moai-workflow-spec",
+  "description": "> SPEC workflow orchestration with EARS format requirements, acceptance criteria, and Plan-Run-Sync integration for MoAI-ADK development. Use when creating SPEC documents or defining acceptance criteria.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "modu-ai",
+  "install_path": ".claude/skills/moai-workflow-spec/SKILL.md",
+  "source": {
+    "repo": "modu-ai/moai-adk",
+    "url": "https://github.com/modu-ai/moai-adk/blob/main/.claude/skills/moai-workflow-spec/SKILL.md",
+    "path": ".claude/skills/moai-workflow-spec/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:07:31.076Z",
+    "stars": 1092,
+    "language": "Go",
+    "pushed_at": "2026-06-22T18:04:40Z",
+    "license": "Apache-2.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "daymade-claude-code-skills-auto-repo-setup",
+  "name": "auto-repo-setup",
+  "description": "| 自动化代码库环境配置、故障诊断与修复。当非技术人员（剪辑、商务、运营）拿到仓库说\"跑不起来\"、\"怎么启动\"、\"环境怎么配\"、\"帮我设置代码库\"、\"初始化项目\"、\"提交代码\"、\"冲突了怎么办\"时，自动读取 ONBOARDING.md、诊断环境缺口、修复依赖、验证可运行，并安全地完成 git 操作。也用于技术用户快速标准化新仓库的 setup 流程（SessionStart hook、PII Guard、历史净化、项目隔离 API key）。 只要用户提到\"环境\"、\"配置\"、\"跑不起来\"、\"setup\"、\"启动\"、\"clone 下来\"、\"怎么运行\"、\"依赖\"、\"装好了吗\"、\"提交代码\"、\"merge conflict\"、\"push 失败\"，就触发本 skill。",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/auto-repo-setup/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/auto-repo-setup/SKILL.md",
+    "path": "auto-repo-setup/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:06:52.258Z",
+    "stars": 1206,
+    "language": "Python",
+    "pushed_at": "2026-06-14T10:01:47Z",
+    "license": "MIT"
+  }
+}

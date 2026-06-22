@@ -1,0 +1,25 @@
+{
+  "id": "daymade-claude-code-skills-financial-data-collector",
+  "name": "financial-data-collector",
+  "description": "Collect real financial data for any US publicly traded company from free public sources (yfinance). Output structured JSON consumable by downstream financial skills (DCF modeling, comps analysis, earnings review). Handles market data (price, shares, beta), historical financials (income statement, cash flow, balance sheet), WACC inputs, and analyst estimates. Use when users request collect data for ticker, get financials for company, pull market data, gather DCF inputs, or any task requiring stru",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/financial-data-collector/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/financial-data-collector/SKILL.md",
+    "path": "financial-data-collector/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:06:59.486Z",
+    "stars": 1206,
+    "language": "Python",
+    "pushed_at": "2026-06-14T10:01:47Z",
+    "license": "MIT"
+  }
+}

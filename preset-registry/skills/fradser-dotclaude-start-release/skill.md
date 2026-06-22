@@ -16,8 +16,10 @@ disable-model-invocation: true
 ```
 Execute the start-release workflow.
 
-## Pre-operation Checks
-Verify working tree is clean per `${CLAUDE_PLUGIN_ROOT}/references/invariants.md`.
+CRITICAL:
+- Verify working tree is clean (`git status --porcelain` is empty) before starting. Abort if dirty.
+- If `$ARGUMENTS` is not strictly greater than the latest tag (semver), abort immediately.
+See `${CLAUDE_PLUGIN_ROOT}/references/invariants.md` for details.
 
 ## Phase 0: Validate Version
 **Goal**: Ensure `$ARGUMENTS` is a valid next version.
@@ -31,8 +33,8 @@ Verify working tree is clean per `${CLAUDE_PLUGIN_ROOT}/references/invariants.md
 1. Run `git flow release start $ARGUMENTS`
 2. Update version in project files (package.json, Cargo.toml, VERSION, etc.)
 3. Stage version files: `git add <modified version files>`
-4. Determine the correct Claude model name for co-author attribution
-   - Valid models: Claude Sonnet 4.6, Claude Opus 4.6, Claude Haiku 4.5
+4. Determine the Claude model name for co-author attribution
+   - Derive it from your own runtime model identity (e.g. Claude Opus 4.8) so it never goes stale; do not hardcode a fixed version
 5. Commit with git-agent: `git-agent commit --no-stage --intent "bump version to $ARGUMENTS" --co-author "Claude <Model> <Version> <noreply@anthropic.com>"`
 6. On auth error (401), retry with `--free`
 7. **Fallback** (git-agent unavailable): `git commit -m "chore: bump version to $ARGUMENTS"` with conventional format and `Co-Authored-By` footer

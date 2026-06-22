@@ -1,0 +1,25 @@
+{
+  "id": "modu-ai-moai-adk-moai-harness-learner",
+  "name": "moai-harness-learner",
+  "description": "Harness learning subsystem coordinator. Produces Tier 4 auto-update proposal payloads consumed by the orchestrator (which surfaces them via AskUserQuestion) and orchestrates Apply/Rollback flows. Triggers when harness learning proposals are pending or learning lifecycle management is needed.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "modu-ai",
+  "install_path": ".claude/skills/moai-harness-learner/SKILL.md",
+  "source": {
+    "repo": "modu-ai/moai-adk",
+    "url": "https://github.com/modu-ai/moai-adk/blob/main/.claude/skills/moai-harness-learner/SKILL.md",
+    "path": ".claude/skills/moai-harness-learner/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:07:28.300Z",
+    "stars": 1092,
+    "language": "Go",
+    "pushed_at": "2026-06-22T18:04:40Z",
+    "license": "Apache-2.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "daymade-claude-code-skills-cloudflare-troubleshooting",
+  "name": "cloudflare-troubleshooting",
+  "description": "Investigate and resolve Cloudflare configuration issues using API-driven evidence gathering. Use when troubleshooting ERR_TOO_MANY_REDIRECTS, SSL errors, DNS issues, or any Cloudflare-related problems. Focus on systematic investigation using Cloudflare API to examine actual configuration rather than making assumptions.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/cloudflare-troubleshooting/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/cloudflare-troubleshooting/SKILL.md",
+    "path": "cloudflare-troubleshooting/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:06:53.521Z",
+    "stars": 1206,
+    "language": "Python",
+    "pushed_at": "2026-06-14T10:01:47Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "fradser-dotclaude-lark-skill-maker",
+  "name": "lark-skill-maker",
+  "description": "创建 lark-cli 的自定义 Skill。当用户需要把飞书 API 操作封装成可复用的 Skill（包装原子 API 或编排多步流程）时使用。",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "FradSer",
+  "install_path": ".claude/skills/lark-skill-maker/SKILL.md",
+  "source": {
+    "repo": "FradSer/dotclaude",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/office/skills/lark/lark-skill-maker/SKILL.md",
+    "path": "office/skills/lark/lark-skill-maker/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:03:46.056Z",
+    "stars": 558,
+    "language": "JavaScript",
+    "pushed_at": "2026-06-22T17:33:22Z",
+    "license": null
+  }
+}

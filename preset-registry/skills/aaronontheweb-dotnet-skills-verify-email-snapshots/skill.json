@@ -1,0 +1,25 @@
+{
+  "id": "aaronontheweb-dotnet-skills-verify-email-snapshots",
+  "name": "verify-email-snapshots",
+  "description": "Snapshot test email templates using Verify to catch regressions. Validates rendered HTML output matches approved baseline. Works with MJML templates and any email renderer.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Aaronontheweb",
+  "install_path": ".claude/skills/verify-email-snapshots/SKILL.md",
+  "source": {
+    "repo": "Aaronontheweb/dotnet-skills",
+    "url": "https://github.com/Aaronontheweb/dotnet-skills/blob/master/skills/verify-email-snapshots/SKILL.md",
+    "path": "skills/verify-email-snapshots/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-06-22T18:07:46.257Z",
+    "stars": 1025,
+    "language": "Shell",
+    "pushed_at": "2026-06-18T01:02:32Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "daymade-claude-code-skills-statusline-generator",
+  "name": "statusline-generator",
+  "description": "> Installs, configures, customizes, or troubleshoots the Claude Code statusline (cwd, model, token counts). Use when the user wants to set up or change the statusline, switch minimal vs full layouts, show absolute token counts (e.g. ctx 108K / 1M) instead of a percentage, add cost via ccusage or git status, dump the stdin JSON Claude Code passes the script, or fix a statusline that is blank, silent, stuck, shows \"permission denied\", or stopped updating after a script edit (often a missing chmod ",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/statusline-generator/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-claude-code/statusline-generator/SKILL.md",
+    "path": "daymade-claude-code/statusline-generator/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:06:56.182Z",
+    "stars": 1206,
+    "language": "Python",
+    "pushed_at": "2026-06-14T10:01:47Z",
+    "license": "MIT"
+  }
+}

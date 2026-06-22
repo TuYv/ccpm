@@ -1,0 +1,25 @@
+{
+  "id": "aaronontheweb-dotnet-skills-ilspy-decompile",
+  "name": "ilspy-decompile",
+  "description": "Understand implementation details of .NET code by decompiling assemblies. Use when you want to see how a .NET API works internally, inspect NuGet package source, view framework implementation, or understand compiled .NET binaries.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Aaronontheweb",
+  "install_path": ".claude/skills/ilspy-decompile/SKILL.md",
+  "source": {
+    "repo": "Aaronontheweb/dotnet-skills",
+    "url": "https://github.com/Aaronontheweb/dotnet-skills/blob/master/skills/ilspy-decompile/SKILL.md",
+    "path": "skills/ilspy-decompile/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-06-22T18:07:42.758Z",
+    "stars": 1025,
+    "language": "Shell",
+    "pushed_at": "2026-06-18T01:02:32Z",
+    "license": "MIT"
+  }
+}

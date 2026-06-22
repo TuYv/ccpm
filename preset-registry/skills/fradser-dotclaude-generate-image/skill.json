@@ -1,0 +1,25 @@
+{
+  "id": "fradser-dotclaude-generate-image",
+  "name": "generate-image",
+  "description": "Generate or edit images from a text prompt using Google's Gemini 3 Pro Image model. Use this skill whenever the user wants to create, generate, draw, render, illustrate, or mock up an image, picture, illustration, concept art, storyboard panel, icon, logo, poster, or product shot — and also when they want to edit, restyle, retouch, combine, or extend an existing image. Triggers include \"generate an image\", \"make a picture of\", \"draw me\", \"create an illustration\", \"生成图片\", \"画一张\", \"做一张图\", \"P 一下这张图\"",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "FradSer",
+  "install_path": ".claude/skills/generate-image/SKILL.md",
+  "source": {
+    "repo": "FradSer/dotclaude",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/office/skills/generate-image/SKILL.md",
+    "path": "office/skills/generate-image/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:03:41.891Z",
+    "stars": 558,
+    "language": "JavaScript",
+    "pushed_at": "2026-06-22T17:33:22Z",
+    "license": null
+  }
+}

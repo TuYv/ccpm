@@ -1,8 +1,8 @@
 {
   "id": "fradser-dotclaude-use-acpx",
-  "name": "use-acpx",
-  "description": "Provides knowledge about acpx CLI for agent-to-agent communication. Use when user asks about acpx commands, ACP protocol, agent sessions, prompt queueing, or scriptable agent workflows.",
-  "category": "开发编程",
+  "name": "acpx",
+  "description": "Use acpx as a headless ACP CLI for agent-to-agent communication. Use when running coding agents through acpx, managing persistent ACP sessions, queueing prompts, overriding the Claude system prompt, consuming structured agent output from scripts, or composing multi-agent workflows with defineFlow/decision/decisionEdge.",
+  "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,10 @@
     "url": "https://github.com/FradSer/dotclaude/blob/main/acpx/skills/use-acpx/SKILL.md",
     "path": "acpx/skills/use-acpx/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-22T13:17:08.237Z",
+    "discovered_at": "2026-06-22T18:03:36.477Z",
     "stars": 558,
-    "language": "Python",
-    "pushed_at": "2026-06-22T12:26:00Z",
+    "language": "JavaScript",
+    "pushed_at": "2026-06-22T17:33:22Z",
     "license": null
-  },
-  "summary_zh": "这是一个为AI代理补充acpx命令行知识的插件，能解决多代理间的通信与协作问题，适合需要编排自动化多代理工作流的场景。"
+  }
 }

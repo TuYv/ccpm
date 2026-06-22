@@ -1,0 +1,25 @@
+{
+  "id": "daymade-claude-code-skills-claude-md-progressive-disclosurer",
+  "name": "claude-md-progressive-disclosurer",
+  "description": "| Optimize / slim down / restructure a CLAUDE.md (or AGENTS.md) using progressive disclosure — move low-frequency detail to Level 2 references while keeping Level 1 lean, WITHOUT losing information. Use this whenever the user asks to optimize / 精简 / 瘦身 / 重构 CLAUDE.md, asks \"CLAUDE.md 是不是太大了 / 太长了\" (is my CLAUDE.md too big / too long / bloated), wants to 把内容拆到 reference / 外部 / Level 2, do 整段外移 / 渐进式披露 / progressive disclosure, or whenever a CLAUDE.md duplicates info across files or the LLM keeps ",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/claude-md-progressive-disclosurer/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-claude-code/claude-md-progressive-disclosurer/SKILL.md",
+    "path": "daymade-claude-code/claude-md-progressive-disclosurer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:06:55.190Z",
+    "stars": 1206,
+    "language": "Python",
+    "pushed_at": "2026-06-14T10:01:47Z",
+    "license": "MIT"
+  }
+}

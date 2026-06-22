@@ -1,0 +1,25 @@
+{
+  "id": "daymade-claude-code-skills-pdf-to-html",
+  "name": "pdf-to-html",
+  "description": "Converts a PDF into one self-contained, readable HTML file that preserves images, tables, charts and reading order — optionally translating it into another language while keeping every figure. Uses structured extraction (PyMuPDF), font-size-driven layout, compressed base64-inlined images (a single portable file), and mandatory headless-Chrome visual verification. Use whenever someone wants to READ a PDF as a web page or clean document, turn a PDF into HTML, or translate a PDF into another langua",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/pdf-to-html/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-docs/pdf-to-html/SKILL.md",
+    "path": "daymade-docs/pdf-to-html/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:06:57.244Z",
+    "stars": 1206,
+    "language": "Python",
+    "pushed_at": "2026-06-14T10:01:47Z",
+    "license": "MIT"
+  }
+}

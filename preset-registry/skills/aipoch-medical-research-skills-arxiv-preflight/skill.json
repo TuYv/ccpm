@@ -1,0 +1,25 @@
+{
+  "id": "aipoch-medical-research-skills-arxiv-preflight",
+  "name": "arxiv-preflight",
+  "description": "Run a submission-readiness preflight on a manuscript before arXiv upload. Use when the user is preparing an arXiv submission, asks to check a paper before uploading, mentions hallucinated or fake references, leftover LLM meta-comments / prompts in text, placeholder data (TODO, TBD, XX%), AI-use disclosure, scholarly integrity, research integrity, or arXiv moderation risk — even if they don't say \\\"preflight\\\". Also trigger on phrases like \\\"check my paper before arXiv\\\", \\\"verify my references\\\"",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "aipoch",
+  "install_path": ".claude/skills/arxiv-preflight/SKILL.md",
+  "source": {
+    "repo": "aipoch/medical-research-skills",
+    "url": "https://github.com/aipoch/medical-research-skills/blob/main/awesome-med-research-skills/Academic Writing/arxiv-preflight/SKILL.md",
+    "path": "awesome-med-research-skills/Academic Writing/arxiv-preflight/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:07:04.353Z",
+    "stars": 1176,
+    "language": "Python",
+    "pushed_at": "2026-06-15T05:55:48Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "daymade-claude-code-skills-claude-usage-analyst",
+  "name": "claude-usage-analyst",
+  "description": "Analyze Claude Code and Claude Desktop Code token usage, cost, quota burn, model mix, cache read/write, and 5-hour block consumption using ccusage evidence. Use when the user asks why Claude quota was exhausted, whether a model such as fable/opus/sonnet is unusually expensive, how many tokens were spent today or historically, or needs a human-friendly explanation of local Claude Code CLI/Desktop usage.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/claude-usage-analyst/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-claude-code/claude-usage-analyst/SKILL.md",
+    "path": "daymade-claude-code/claude-usage-analyst/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:06:55.573Z",
+    "stars": 1206,
+    "language": "Python",
+    "pushed_at": "2026-06-14T10:01:47Z",
+    "license": "MIT"
+  }
+}

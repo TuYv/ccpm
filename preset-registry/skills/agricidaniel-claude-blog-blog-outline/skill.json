@@ -1,0 +1,25 @@
+{
+  "id": "agricidaniel-claude-blog-blog-outline",
+  "name": "blog-outline",
+  "description": "> SERP-informed outline generation with H2/H3 heading hierarchy, competitive content gap analysis, section-by-section word count targets, chart and image placement markers, FAQ question planning, and internal linking zones. Skeleton only: structure, H2/H3 hierarchy, word counts, FAQ slots. Use blog-brief instead if you need full competitive analysis, statistics research, and image suggestions. Lighter than a full content brief, generates article skeleton and structure only, ready for /blog write",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "AgriciDaniel",
+  "install_path": ".claude/skills/blog-outline/SKILL.md",
+  "source": {
+    "repo": "AgriciDaniel/claude-blog",
+    "url": "https://github.com/AgriciDaniel/claude-blog/blob/main/skills/blog-outline/SKILL.md",
+    "path": "skills/blog-outline/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:07:21.781Z",
+    "stars": 1132,
+    "language": "Python",
+    "pushed_at": "2026-06-05T04:23:28Z",
+    "license": "MIT"
+  }
+}

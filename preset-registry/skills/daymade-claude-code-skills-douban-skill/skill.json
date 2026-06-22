@@ -1,0 +1,25 @@
+{
+  "id": "daymade-claude-code-skills-douban-skill",
+  "name": "douban-skill",
+  "description": "> Export and sync Douban (豆瓣) book/movie/music/game collections to local CSV files via Frodo API. Supports full export (all history) and RSS incremental sync (recent items). Use when the user wants to export Douban reading/watching/listening/gaming history, back up their Douban data, set up incremental sync, or mentions 豆瓣/douban collections. Triggers on: 豆瓣, douban, 读书记录, 观影记录, 书影音, 导出豆瓣.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/douban-skill/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/douban-skill/SKILL.md",
+    "path": "douban-skill/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T18:06:58.485Z",
+    "stars": 1206,
+    "language": "Python",
+    "pushed_at": "2026-06-14T10:01:47Z",
+    "license": "MIT"
+  }
+}
