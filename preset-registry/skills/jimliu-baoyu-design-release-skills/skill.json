@@ -1,0 +1,25 @@
+{
+  "id": "jimliu-baoyu-design-release-skills",
+  "name": "release-skills",
+  "description": "Universal release workflow. Auto-detects version files and changelogs. Supports Node.js, Python, Rust, Claude Plugin, GitHub Releases, annotated tags, historical release backfill, and generic projects. Use when user says \"release\", \"发布\", \"new version\", \"bump version\", \"push\", \"推送\", \"release notes\", \"GitHub Release\", or \"回填 Release\".",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "JimLiu",
+  "install_path": ".claude/skills/release-skills/SKILL.md",
+  "source": {
+    "repo": "JimLiu/baoyu-design",
+    "url": "https://github.com/JimLiu/baoyu-design/blob/main/.claude/skills/release-skills/SKILL.md",
+    "path": ".claude/skills/release-skills/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-22T06:51:15.979Z",
+    "stars": 1733,
+    "language": "JavaScript",
+    "pushed_at": "2026-06-22T06:36:03Z",
+    "license": "MIT"
+  }
+}
