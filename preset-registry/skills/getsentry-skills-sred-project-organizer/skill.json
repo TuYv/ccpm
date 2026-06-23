@@ -1,0 +1,25 @@
+{
+  "id": "getsentry-skills-sred-project-organizer",
+  "name": "sred-project-organizer",
+  "description": "Take a list of projects and their related documentation, and organize them into the SRED format for submission.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "getsentry",
+  "install_path": ".claude/skills/sred-project-organizer/SKILL.md",
+  "source": {
+    "repo": "getsentry/skills",
+    "url": "https://github.com/getsentry/skills/blob/main/skills/sred-project-organizer/SKILL.md",
+    "path": "skills/sred-project-organizer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-23T18:26:39.746Z",
+    "stars": 807,
+    "language": "Python",
+    "pushed_at": "2026-06-22T21:39:17Z",
+    "license": "Apache-2.0"
+  }
+}

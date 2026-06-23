@@ -1,0 +1,25 @@
+{
+  "id": "getsentry-skills-find-bugs",
+  "name": "find-bugs",
+  "description": "Find bugs, security vulnerabilities, and code quality issues in local branch changes. Use when asked to review changes, find bugs, security review, or audit code on the current branch.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "getsentry",
+  "install_path": ".claude/skills/find-bugs/SKILL.md",
+  "source": {
+    "repo": "getsentry/skills",
+    "url": "https://github.com/getsentry/skills/blob/main/skills/find-bugs/SKILL.md",
+    "path": "skills/find-bugs/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-23T18:26:37.989Z",
+    "stars": 807,
+    "language": "Python",
+    "pushed_at": "2026-06-22T21:39:17Z",
+    "license": "Apache-2.0"
+  }
+}

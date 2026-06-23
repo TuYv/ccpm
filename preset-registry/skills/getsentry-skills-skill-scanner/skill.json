@@ -1,0 +1,25 @@
+{
+  "id": "getsentry-skills-skill-scanner",
+  "name": "skill-scanner",
+  "description": "Scan agent skills for security issues. Use when asked to \"scan a skill\", \"audit a skill\", \"review skill security\", \"check skill for injection\", \"validate SKILL.md\", or assess whether an agent skill is safe to install. Checks for prompt injection, malicious scripts, excessive permissions, secret exposure, and supply chain risks.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "getsentry",
+  "install_path": ".claude/skills/skill-scanner/SKILL.md",
+  "source": {
+    "repo": "getsentry/skills",
+    "url": "https://github.com/getsentry/skills/blob/main/skills/skill-scanner/SKILL.md",
+    "path": "skills/skill-scanner/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-23T18:26:39.480Z",
+    "stars": 807,
+    "language": "Python",
+    "pushed_at": "2026-06-22T21:39:17Z",
+    "license": "Apache-2.0"
+  }
+}

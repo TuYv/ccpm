@@ -1,0 +1,25 @@
+{
+  "id": "getsentry-skills-gh-review-requests",
+  "name": "gh-review-requests",
+  "description": "Fetch unread GitHub notifications for open PRs where review is requested from a specified team or opened by a team member. Use when asked to \"find PRs I need to review\", \"show my review requests\", \"what needs my review\", \"fetch GitHub review requests\", or \"check team review queue\".",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "getsentry",
+  "install_path": ".claude/skills/gh-review-requests/SKILL.md",
+  "source": {
+    "repo": "getsentry/skills",
+    "url": "https://github.com/getsentry/skills/blob/main/skills/gh-review-requests/SKILL.md",
+    "path": "skills/gh-review-requests/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-23T18:26:38.170Z",
+    "stars": 807,
+    "language": "Python",
+    "pushed_at": "2026-06-22T21:39:17Z",
+    "license": "Apache-2.0"
+  }
+}

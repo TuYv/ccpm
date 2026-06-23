@@ -1,0 +1,25 @@
+{
+  "id": "getsentry-skills-claude-settings-audit",
+  "name": "claude-settings-audit",
+  "description": "Analyze a repository to generate recommended Claude Code settings.json permissions. Use when setting up a new project, auditing existing settings, or determining which read-only bash commands to allow. Detects tech stack, build tools, and monorepo structure.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "getsentry",
+  "install_path": ".claude/skills/claude-settings-audit/SKILL.md",
+  "source": {
+    "repo": "getsentry/skills",
+    "url": "https://github.com/getsentry/skills/blob/main/skills/claude-settings-audit/SKILL.md",
+    "path": "skills/claude-settings-audit/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-23T18:26:36.550Z",
+    "stars": 807,
+    "language": "Python",
+    "pushed_at": "2026-06-22T21:39:17Z",
+    "license": "Apache-2.0"
+  }
+}

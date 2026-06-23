@@ -1,0 +1,25 @@
+{
+  "id": "getsentry-skills-replay-ux-research",
+  "name": "replay-ux-research",
+  "description": "Analyze Sentry session replays to surface UX patterns, pain points, and user journeys for a given product area. Use when asked to \"show me how users use\", \"day in the life\", \"UX research\", \"replay research\", \"how do customers use\", \"what's the user experience like for\", \"watch replays of\", \"analyze replays for\", \"user behavior on\", or \"replay UX audit\" for any Sentry product surface.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "getsentry",
+  "install_path": ".claude/skills/replay-ux-research/SKILL.md",
+  "source": {
+    "repo": "getsentry/skills",
+    "url": "https://github.com/getsentry/skills/blob/main/skills/replay-ux-research/SKILL.md",
+    "path": "skills/replay-ux-research/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-23T18:26:39.214Z",
+    "stars": 807,
+    "language": "Python",
+    "pushed_at": "2026-06-22T21:39:17Z",
+    "license": "Apache-2.0"
+  }
+}

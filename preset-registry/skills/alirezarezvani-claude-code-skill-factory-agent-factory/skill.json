@@ -1,0 +1,25 @@
+{
+  "id": "alirezarezvani-claude-code-skill-factory-agent-factory",
+  "name": "agent-factory",
+  "description": "Claude Code agent generation system that creates custom agents and sub-agents with enhanced YAML frontmatter, tool access patterns, and MCP integration support following proven production patterns",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alirezarezvani",
+  "install_path": ".claude/skills/agent-factory/SKILL.md",
+  "source": {
+    "repo": "alirezarezvani/claude-code-skill-factory",
+    "url": "https://github.com/alirezarezvani/claude-code-skill-factory/blob/dev/generated-skills/agent-factory/SKILL.md",
+    "path": "generated-skills/agent-factory/SKILL.md",
+    "branch": "dev",
+    "discovered_at": "2026-06-23T18:26:33.446Z",
+    "stars": 810,
+    "language": "Python",
+    "pushed_at": "2025-11-12T15:30:27Z",
+    "license": "MIT"
+  }
+}

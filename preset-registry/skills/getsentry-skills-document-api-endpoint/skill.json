@@ -1,0 +1,25 @@
+{
+  "id": "getsentry-skills-document-api-endpoint",
+  "name": "document-api-endpoint",
+  "description": "Document and type a Sentry API endpoint. Write or fix @extend_schema decorators, specify response TypedDicts, type request parameters, correct type drift between the declared schema and the runtime response, and validate the generated spec. Use when asked to \"document an endpoint\", \"add OpenAPI docs\", \"add/fix @extend_schema\", \"type an endpoint response\", \"fix the response type\", \"fix type drift\", \"reuse a response type\", \"split an overloaded endpoint\", \"specify the response schema\", \"add a Type",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "getsentry",
+  "install_path": ".claude/skills/document-api-endpoint/SKILL.md",
+  "source": {
+    "repo": "getsentry/skills",
+    "url": "https://github.com/getsentry/skills/blob/main/skills/document-api-endpoint/SKILL.md",
+    "path": "skills/document-api-endpoint/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-23T18:26:37.836Z",
+    "stars": 807,
+    "language": "Python",
+    "pushed_at": "2026-06-22T21:39:17Z",
+    "license": "Apache-2.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "heygen-com-hyperframes-music-to-video",
+  "name": "music-to-video",
+  "description": "Use when the user has a music track (an audio file, or a video to pull audio from) and wants a beat-synced HyperFrames video, calm to hard-hitting. The music drives everything: one analyzer reads it once, the orchestrator lays out the frames and fills a per-frame plan, and one sub-agent builds each frame. Typography and templates are the floor — a complete video needs zero assets — but any images or videos the user supplies are cut into the frames on the same beat grid (beat-cut / ken-burns). Th",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "heygen-com",
+  "install_path": ".claude/skills/music-to-video/SKILL.md",
+  "source": {
+    "repo": "heygen-com/hyperframes",
+    "url": "https://github.com/heygen-com/hyperframes/blob/main/skills/music-to-video/SKILL.md",
+    "path": "skills/music-to-video/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-23T18:27:02.380Z",
+    "stars": 30573,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-23T18:02:45Z",
+    "license": "Apache-2.0"
+  }
+}

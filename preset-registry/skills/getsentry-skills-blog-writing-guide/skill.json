@@ -1,0 +1,25 @@
+{
+  "id": "getsentry-skills-blog-writing-guide",
+  "name": "blog-writing-guide",
+  "description": "Write, review, and improve blog posts for the Sentry engineering blog following Sentry's specific writing standards, voice, and quality bar. Use this skill whenever someone asks to write a blog post, draft a technical article, review blog content, improve a draft, write a product announcement, create an engineering deep-dive, or produce any written content destined for the Sentry blog or developer audience. Also trigger when the user mentions \"blog post,\" \"blog draft,\" \"write-up,\" \"announcement ",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "getsentry",
+  "install_path": ".claude/skills/blog-writing-guide/SKILL.md",
+  "source": {
+    "repo": "getsentry/skills",
+    "url": "https://github.com/getsentry/skills/blob/main/skills/blog-writing-guide/SKILL.md",
+    "path": "skills/blog-writing-guide/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-23T18:26:36.196Z",
+    "stars": 807,
+    "language": "Python",
+    "pushed_at": "2026-06-22T21:39:17Z",
+    "license": "Apache-2.0"
+  }
+}

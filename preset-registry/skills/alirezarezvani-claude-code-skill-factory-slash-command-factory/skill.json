@@ -1,0 +1,25 @@
+{
+  "id": "alirezarezvani-claude-code-skill-factory-slash-command-factory",
+  "name": "slash-command-factory",
+  "description": "Generate custom Claude Code slash commands through intelligent 5-7 question flow. Creates powerful commands for business research, content analysis, healthcare compliance, API integration, documentation automation, and workflow optimization. Outputs organized commands to generated-commands/ with validation and installation guidance.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alirezarezvani",
+  "install_path": ".claude/skills/slash-command-factory/SKILL.md",
+  "source": {
+    "repo": "alirezarezvani/claude-code-skill-factory",
+    "url": "https://github.com/alirezarezvani/claude-code-skill-factory/blob/dev/generated-skills/slash-command-factory/SKILL.md",
+    "path": "generated-skills/slash-command-factory/SKILL.md",
+    "branch": "dev",
+    "discovered_at": "2026-06-23T18:26:34.905Z",
+    "stars": 810,
+    "language": "Python",
+    "pushed_at": "2025-11-12T15:30:27Z",
+    "license": "MIT"
+  }
+}

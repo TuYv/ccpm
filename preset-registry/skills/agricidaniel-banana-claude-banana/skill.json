@@ -1,0 +1,25 @@
+{
+  "id": "agricidaniel-banana-claude-banana",
+  "name": "banana",
+  "description": "AI image generation Creative Director powered by Google Gemini Nano Banana models. Use this skill for ANY request involving image creation, editing, visual asset production, or creative direction. Triggers on: generate an image, create a photo, edit this picture, design a logo, make a banner, visual for my anything, and all /banana commands. Handles text-to-image, image editing, multi-turn creative sessions, batch workflows, and brand presets.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "AgriciDaniel",
+  "install_path": ".claude/skills/banana/SKILL.md",
+  "source": {
+    "repo": "AgriciDaniel/banana-claude",
+    "url": "https://github.com/AgriciDaniel/banana-claude/blob/main/skills/banana/SKILL.md",
+    "path": "skills/banana/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-23T18:26:40.794Z",
+    "stars": 751,
+    "language": "Python",
+    "pushed_at": "2026-04-13T22:21:27Z",
+    "license": "MIT"
+  }
+}

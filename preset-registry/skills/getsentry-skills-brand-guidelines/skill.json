@@ -1,0 +1,25 @@
+{
+  "id": "getsentry-skills-brand-guidelines",
+  "name": "brand-guidelines",
+  "description": "Write copy following Sentry brand guidelines. Use when writing UI text, error messages, empty states, onboarding flows, 404 pages, documentation, marketing copy, or any user-facing content. Covers both Plain Speech (default) and Sentry Voice tones.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "getsentry",
+  "install_path": ".claude/skills/brand-guidelines/SKILL.md",
+  "source": {
+    "repo": "getsentry/skills",
+    "url": "https://github.com/getsentry/skills/blob/main/skills/brand-guidelines/SKILL.md",
+    "path": "skills/brand-guidelines/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-23T18:26:36.373Z",
+    "stars": 807,
+    "language": "Python",
+    "pushed_at": "2026-06-22T21:39:17Z",
+    "license": "Apache-2.0"
+  }
+}

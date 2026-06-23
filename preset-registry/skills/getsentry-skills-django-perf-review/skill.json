@@ -1,0 +1,25 @@
+{
+  "id": "getsentry-skills-django-perf-review",
+  "name": "django-perf-review",
+  "description": "Django performance code review. Use when asked to \"review Django performance\", \"find N+1 queries\", \"optimize Django\", \"check queryset performance\", \"database performance\", \"Django ORM issues\", or audit Django code for performance problems.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "getsentry",
+  "install_path": ".claude/skills/django-perf-review/SKILL.md",
+  "source": {
+    "repo": "getsentry/skills",
+    "url": "https://github.com/getsentry/skills/blob/main/skills/django-perf-review/SKILL.md",
+    "path": "skills/django-perf-review/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-23T18:26:37.548Z",
+    "stars": 807,
+    "language": "Python",
+    "pushed_at": "2026-06-22T21:39:17Z",
+    "license": "Apache-2.0"
+  }
+}
