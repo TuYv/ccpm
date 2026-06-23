@@ -1,0 +1,25 @@
+{
+  "id": "openai-openai-agents-python-maintainer-review",
+  "name": "maintainer-review",
+  "description": "Review a GitHub issue or pull request URL as an openai-agents-python maintainer, with a verdict on whether the claim is real, practically important, correctly scoped, and worth maintainer and contributor effort. Use when assessing issue validity or severity, deciding whether an issue should be prioritized or closed, judging whether a PR meets a real need and is worth bringing to mergeable quality, comparing open PRs that address the same issue, separating code quality from repository readiness, ",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openai",
+  "install_path": ".claude/skills/maintainer-review/SKILL.md",
+  "source": {
+    "repo": "openai/openai-agents-python",
+    "url": "https://github.com/openai/openai-agents-python/blob/main/.agents/skills/maintainer-review/SKILL.md",
+    "path": ".agents/skills/maintainer-review/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-23T05:22:37.046Z",
+    "stars": 27349,
+    "language": "Python",
+    "pushed_at": "2026-06-23T02:20:59Z",
+    "license": "MIT"
+  }
+}
