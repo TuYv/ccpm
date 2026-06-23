@@ -1,0 +1,25 @@
+{
+  "id": "modu-ai-moai-adk-moai-ref-supply-chain",
+  "name": "moai-ref-supply-chain",
+  "description": "> Software supply-chain defensive security reference: SBOM generation and verification (SPDX / CycloneDX), dependency-confusion defense, malicious-package triage playbook, SLSA provenance levels, Sigstore / cosign signing and verification, package-registry hardening, typosquatting defense, and transitive-dependency auditing. Agent-extending skill that amplifies backend, security, and release-engineering work with production-grade defensive patterns for the software supply chain. NOT for: offensi",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "modu-ai",
+  "install_path": ".claude/skills/moai-ref-supply-chain/SKILL.md",
+  "source": {
+    "repo": "modu-ai/moai-adk",
+    "url": "https://github.com/modu-ai/moai-adk/blob/main/.claude/skills/moai-ref-supply-chain/SKILL.md",
+    "path": ".claude/skills/moai-ref-supply-chain/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-23T20:33:41.383Z",
+    "stars": 1094,
+    "language": "Go",
+    "pushed_at": "2026-06-23T19:37:27Z",
+    "license": "Apache-2.0"
+  }
+}

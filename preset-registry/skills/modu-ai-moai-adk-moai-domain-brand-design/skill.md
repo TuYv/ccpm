@@ -5,12 +5,6 @@ description: >
   hero-first layout chaining, WCAG 2.1 AA accessibility, Lighthouse >= 80,
   and design token extraction from brand identity files. Covers color palettes,
   typography, spacing, and component specifications.
-
-when_to_use: >
-  Use for brand-aligned visual design systems: color palettes, typography,
-  spacing systems, hero-first layout, component specs, design tokens,
-  visual identity, and WCAG 2.1 AA accessibility enforcement.
-
 license: Apache-2.0
 compatibility: Designed for Claude Code
 allowed-tools: Read, Write, Edit, Grep, Glob
@@ -28,11 +22,17 @@ progressive_disclosure:
   enabled: true
   level1_tokens: 100
   level2_tokens: 5000
+
+# MoAI Extension: Triggers
+triggers:
+  keywords: ["design-tokens", "color-palette", "typography", "hero-section", "wcag", "visual-identity", "design system", "brand design", "spacing system", "component spec"]
+  agents: ["expert-frontend"]
+  phases: ["run"]
 ---
 
 # moai-domain-brand-design
 
-Visual design system skill for brand-aligned web projects. Absorbed from the retired v2.x `*-design-system` capability (per the design-system absorption policy) at v1.0.0. Enforces hero-first chaining, WCAG 2.1 AA contrast, and structured design token output for downstream implementation.
+Visual design system skill for brand-aligned web projects. Absorbed from agency-design-system (v1.0.0). Enforces hero-first chaining, WCAG 2.1 AA contrast, and structured design token output for downstream implementation.
 
 ---
 
@@ -252,6 +252,6 @@ Generated design must meet:
 
 ---
 
-Source: Absorbed from the retired v2.x `*-design-system` capability v1.0.0 (per the design-system absorption policy) on 2026-04-20.
-REQ coverage: (internal provenance omitted)
+Source: Absorbed from agency-design-system v1.0.0 on 2026-04-20.
+REQ coverage: REQ-SKILL-004, REQ-SKILL-005, REQ-SKILL-006, REQ-FALLBACK-003
 Version: 1.0.0

@@ -1,0 +1,25 @@
+{
+  "id": "redis-agent-skills-redis-search",
+  "name": "redis-search",
+  "description": "Redis Search guidance covering FT.CREATE schema design, field type selection (TEXT, TAG, NUMERIC, GEO, GEOSHAPE, VECTOR, JSON path), DIALECT 2 query syntax, FT.SEARCH / FT.AGGREGATE / FT.HYBRID command selection, vector similarity with HNSW or FLAT, hybrid retrieval combining lexical and vector ranking, RAG pipelines, zero-downtime index updates via aliases, and debugging with FT.PROFILE and FT.EXPLAIN. Use when defining a search index on Hash or JSON documents, writing FT.SEARCH queries with fi",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "redis",
+  "install_path": ".claude/skills/redis-search/SKILL.md",
+  "source": {
+    "repo": "redis/agent-skills",
+    "url": "https://github.com/redis/agent-skills/blob/main/skills/redis-search/SKILL.md",
+    "path": "skills/redis-search/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-23T20:35:16.053Z",
+    "stars": 76,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-23T19:54:40Z",
+    "license": "MIT"
+  }
+}
