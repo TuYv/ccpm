@@ -1,0 +1,25 @@
+{
+  "id": "infrasity-labs-dev-gtm-claude-skills-claude-md-starter",
+  "name": "claude-md-starter",
+  "description": "Generates a fully structured, project-specific CLAUDE.md by scanning the repo for signal files (package.json, Makefile, .github/workflows/, .env.example, etc.), inferring stack, commands, architecture, and conventions, then asking at most 3 targeted questions for what cannot be inferred. Use whenever the user says 'create a CLAUDE.md', 'my CLAUDE.md is blank', 'generate project context', 'initialize CLAUDE.md', 'set up Claude context for this repo', 'fill in my CLAUDE.md', or any variation where",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Infrasity-Labs",
+  "install_path": ".claude/skills/claude-md-starter/SKILL.md",
+  "source": {
+    "repo": "Infrasity-Labs/dev-gtm-claude-skills",
+    "url": "https://github.com/Infrasity-Labs/dev-gtm-claude-skills/blob/main/.claude/skills/claude-md-starter/SKILL.md",
+    "path": ".claude/skills/claude-md-starter/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-23T09:38:37.105Z",
+    "stars": 69,
+    "language": "Python",
+    "pushed_at": "2026-06-23T06:58:50Z",
+    "license": "MIT"
+  }
+}

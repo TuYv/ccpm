@@ -1,0 +1,25 @@
+{
+  "id": "infrasity-labs-dev-gtm-claude-skills-content-brief",
+  "name": "content-brief",
+  "description": "Generates a fully structured SEO content brief for a target keyword and optionally pushes it to a Notion database. Use this skill whenever the user says 'create a content brief', 'brief this keyword', 'run a content brief for', 'generate a brief', 'write a brief for [keyword]', 'content brief on [topic]', or any variation where someone needs a keyword researched and turned into a structured writing assignment with H1, H2 outline, FAQ, internal links, word count target, and writer notes. Also tri",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Infrasity-Labs",
+  "install_path": ".claude/skills/content-brief/SKILL.md",
+  "source": {
+    "repo": "Infrasity-Labs/dev-gtm-claude-skills",
+    "url": "https://github.com/Infrasity-Labs/dev-gtm-claude-skills/blob/main/.claude/skills/content-brief/SKILL.md",
+    "path": ".claude/skills/content-brief/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-23T09:38:37.630Z",
+    "stars": 69,
+    "language": "Python",
+    "pushed_at": "2026-06-23T06:58:50Z",
+    "license": "MIT"
+  }
+}
