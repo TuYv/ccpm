@@ -1,0 +1,25 @@
+{
+  "id": "daymade-claude-code-skills-claude-switch-models-setup",
+  "name": "claude-switch-models-setup",
+  "description": "Set up multiple isolated Claude Code CLI profiles so students and power users can run different LLM providers (Kimi, GLM, DeepSeek, StepFun, Anthropic) in separate terminal windows at the same time. Use this skill whenever the user asks about multi-provider Claude setup, multiple Claude Code windows, switching models, CLAUDE_CONFIG_DIR, post-class profile installation, or running Kimi/GLM/DeepSeek/StepFun alongside Anthropic in Claude Code.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/claude-switch-models-setup/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-claude-code/claude-switch-models-setup/SKILL.md",
+    "path": "daymade-claude-code/claude-switch-models-setup/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-24T04:46:13.006Z",
+    "stars": 1209,
+    "language": "Python",
+    "pushed_at": "2026-06-24T03:11:17Z",
+    "license": "MIT"
+  }
+}

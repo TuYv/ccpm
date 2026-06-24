@@ -1,7 +1,7 @@
 {
   "id": "daymade-claude-code-skills-debugging-network-issues",
   "name": "debugging-network-issues",
-  "description": "Evidence-driven investigation for network, streaming, and protocol-layer bugs where symptoms don't match the obvious cause. Use when debugging connection resets (ECONNRESET, HTTP/2 RST_STREAM, INTERNAL_ERROR), SSE or long-polling stalls, fixed-time connection drops, CDN/proxy/CGNAT idle timeouts, or symptoms like \"socket closed unexpectedly\", \"stream interrupted\", \"fails after N seconds\", \"works sometimes but not always\", \"upstream silent for X seconds\". Applies falsification-first layered isola",
+  "description": ">- Evidence-driven investigation for network, streaming, and protocol-layer bugs where symptoms don't match the obvious cause. Use when debugging connection resets (ECONNRESET, HTTP/2 RST_STREAM, INTERNAL_ERROR), SSE or long-polling stalls, fixed-time connection drops, CDN/proxy/CGNAT idle timeouts, client-side proxy/VPN/TUN misrouting, CNAME-based proxy rule overrides, or symptoms like \"socket closed unexpectedly\", \"stream interrupted\", \"fails after N seconds\", \"works sometimes but not always\",",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/daymade/claude-code-skills/blob/main/debugging-network-issues/SKILL.md",
     "path": "debugging-network-issues/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-24T00:22:30.659Z",
-    "stars": 1208,
+    "discovered_at": "2026-06-24T04:46:14.646Z",
+    "stars": 1209,
     "language": "Python",
-    "pushed_at": "2026-06-14T10:01:47Z",
+    "pushed_at": "2026-06-24T03:11:17Z",
     "license": "MIT"
   }
 }

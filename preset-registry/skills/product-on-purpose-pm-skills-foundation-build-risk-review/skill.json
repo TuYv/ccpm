@@ -1,0 +1,25 @@
+{
+  "id": "product-on-purpose-pm-skills-foundation-build-risk-review",
+  "name": "foundation-build-risk-review",
+  "description": "Runs a fast pre-build risk review on a product idea, feature request, or scope change, naming the single assumption most likely to make it fail and returning a clear verdict (build small, validate first, pivot first, or don't build yet) with a no-code validation step. Use before committing build effort, when triaging whether to honor a feature request, or when deciding whether to expand scope, ahead of writing a PRD. For a launched product's pivot-or-persevere decision, use iterate-pivot-decisio",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "product-on-purpose",
+  "install_path": ".claude/skills/foundation-build-risk-review/SKILL.md",
+  "source": {
+    "repo": "product-on-purpose/pm-skills",
+    "url": "https://github.com/product-on-purpose/pm-skills/blob/main/skills/foundation-build-risk-review/SKILL.md",
+    "path": "skills/foundation-build-risk-review/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-24T04:49:45.440Z",
+    "stars": 411,
+    "language": "JavaScript",
+    "pushed_at": "2026-06-24T02:39:28Z",
+    "license": "Apache-2.0"
+  }
+}
