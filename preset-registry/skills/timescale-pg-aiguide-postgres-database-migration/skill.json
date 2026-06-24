@@ -1,0 +1,25 @@
+{
+  "id": "timescale-pg-aiguide-postgres-database-migration",
+  "name": "postgres-database-migration",
+  "description": "| Use this skill for planning, testing, and safely executing PostgreSQL schema migrations — especially when working with production data or shared databases.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "timescale",
+  "install_path": ".claude/skills/postgres-database-migration/SKILL.md",
+  "source": {
+    "repo": "timescale/pg-aiguide",
+    "url": "https://github.com/timescale/pg-aiguide/blob/main/skills/postgres-database-migration/SKILL.md",
+    "path": "skills/postgres-database-migration/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-24T12:13:57.942Z",
+    "stars": 1771,
+    "language": "Python",
+    "pushed_at": "2026-06-24T08:47:53Z",
+    "license": "Apache-2.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "daymade-claude-code-skills-llm-eval-harness",
+  "name": "llm-eval-harness",
+  "description": ">- Evaluate any LLM behind an OpenAI- or Anthropic-compatible endpoint across four dimensions: speed (TTFT + thinking-aware tokens/sec), concurrency/stability (success rate, p50/p90 latency, the level where it breaks), Anthropic protocol compliance (thinking-block trigger rate), and quality regression against your own accumulated use cases (blind-judge precision). Use whenever someone wants to benchmark, 测评, or 压测 a model, verify a vendor's tokens-per-second claim, compare two models head-to-hea",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/llm-eval-harness/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/llm-eval-harness/SKILL.md",
+    "path": "llm-eval-harness/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-24T12:13:10.887Z",
+    "stars": 1210,
+    "language": "Python",
+    "pushed_at": "2026-06-24T10:20:49Z",
+    "license": "MIT"
+  }
+}

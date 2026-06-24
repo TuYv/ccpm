@@ -1,0 +1,25 @@
+{
+  "id": "timescale-pg-aiguide-ghost-database",
+  "name": "ghost-database",
+  "description": "| Use this skill for persistent PostgreSQL storage in agent workflows — spin up databases on demand, test schema migrations safely on forks, and pass databases as assets between agents using Ghost.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "timescale",
+  "install_path": ".claude/skills/ghost-database/SKILL.md",
+  "source": {
+    "repo": "timescale/pg-aiguide",
+    "url": "https://github.com/timescale/pg-aiguide/blob/main/skills/ghost-database/SKILL.md",
+    "path": "skills/ghost-database/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-24T12:13:57.464Z",
+    "stars": 1771,
+    "language": "Python",
+    "pushed_at": "2026-06-24T08:47:53Z",
+    "license": "Apache-2.0"
+  }
+}
