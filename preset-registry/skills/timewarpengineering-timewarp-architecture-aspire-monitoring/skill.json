@@ -1,0 +1,25 @@
+{
+  "id": "timewarpengineering-timewarp-architecture-aspire-monitoring",
+  "name": "aspire-monitoring",
+  "description": ">- **ANALYSIS SKILL** - Observe Aspire apps: logs, traces, metrics, resource state, telemetry export, browser telemetry, and the standalone dashboard. Routes between local Aspire CLI, AKS workload diagnostics, and deployed Azure resource health. USE FOR: aspire logs, aspire otel logs, aspire otel traces, aspire otel spans, aspire describe, aspire ps, aspire export, aspire dashboard run, --include-hidden, browser logs in dashboard, WithBrowserLogs, App Insights query, AKS pod logs, container app ",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "TimeWarpEngineering",
+  "install_path": ".claude/skills/aspire-monitoring/SKILL.md",
+  "source": {
+    "repo": "TimeWarpEngineering/timewarp-architecture",
+    "url": "https://github.com/TimeWarpEngineering/timewarp-architecture/blob/master/.claude/skills/aspire-monitoring/SKILL.md",
+    "path": ".claude/skills/aspire-monitoring/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-06-24T08:42:43.687Z",
+    "stars": 53,
+    "language": "C#",
+    "pushed_at": "2026-06-24T06:55:40Z",
+    "license": null
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "timewarpengineering-timewarp-architecture-aspire-orchestration",
+  "name": "aspire-orchestration",
+  "description": ">- **WORKFLOW SKILL** — Manage Aspire AppHost lifecycle and recover from file locks, port conflicts, and orphaned processes. WHEN: \"start my Aspire app\", \"aspire start\", \"aspire stop\", \"aspire wait\", \"restart the API service\", \"file lock error\", \"MSB3491\", \"CS2012\", \"port already in use\", \"upgrade Aspire CLI\", \"aspire update --self\", \"proxies missing in aspire ps\", \"--include-hidden\", \"aspire integration list\", \"aspire integration search\", \"default watch\", \"hot reload\". INVOKES: aspire CLI (star",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "TimeWarpEngineering",
+  "install_path": ".claude/skills/aspire-orchestration/SKILL.md",
+  "source": {
+    "repo": "TimeWarpEngineering/timewarp-architecture",
+    "url": "https://github.com/TimeWarpEngineering/timewarp-architecture/blob/master/.claude/skills/aspire-orchestration/SKILL.md",
+    "path": ".claude/skills/aspire-orchestration/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-06-24T08:42:43.818Z",
+    "stars": 53,
+    "language": "C#",
+    "pushed_at": "2026-06-24T06:55:40Z",
+    "license": null
+  }
+}

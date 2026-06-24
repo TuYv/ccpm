@@ -1,0 +1,25 @@
+{
+  "id": "timewarpengineering-timewarp-architecture-dotnet-inspect",
+  "name": "dotnet-inspect",
+  "description": "Query .NET APIs across NuGet packages, platform libraries, and local files. Search for types, list API surfaces, compare and diff versions, find extension methods and implementors. Use whenever you need to answer questions about .NET library contents.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "TimeWarpEngineering",
+  "install_path": ".claude/skills/dotnet-inspect/SKILL.md",
+  "source": {
+    "repo": "TimeWarpEngineering/timewarp-architecture",
+    "url": "https://github.com/TimeWarpEngineering/timewarp-architecture/blob/master/.claude/skills/dotnet-inspect/SKILL.md",
+    "path": ".claude/skills/dotnet-inspect/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-06-24T08:42:44.023Z",
+    "stars": 53,
+    "language": "C#",
+    "pushed_at": "2026-06-24T06:55:40Z",
+    "license": null
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "panniantong-agent-reach-skill",
+  "name": "agent-reach",
+  "description": "> MUST USE when user wants to 调研/research/搜索/search/查/找/look up anything on the internet — e.g. 全网调研 X / 帮我调研一下 X / 查一下 X / 搜搜 X / 看看大家怎么评价 X / X 上有什么讨论 / research this topic。",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Panniantong",
+  "install_path": ".claude/skills/skill/SKILL.md",
+  "source": {
+    "repo": "Panniantong/Agent-Reach",
+    "url": "https://github.com/Panniantong/Agent-Reach/blob/main/agent_reach/skill/SKILL.md",
+    "path": "agent_reach/skill/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-24T08:47:31.976Z",
+    "stars": 39051,
+    "language": "Python",
+    "pushed_at": "2026-06-23T13:04:55Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "timewarpengineering-timewarp-architecture-aspire-deployment",
+  "name": "aspire-deployment",
+  "description": "**WORKFLOW SKILL** — Deploy Aspire apps from AppHost models to Docker Compose, Kubernetes, Azure, or AWS. WHEN: \\\"deploy Aspire app\\\", \\\"publish Aspire artifacts\\\", \\\"deploy to Azure Container Apps\\\", \\\"generate Kubernetes artifacts\\\", \\\"tear down Aspire deployment\\\". INVOKES: aspire CLI, Aspire docs, target cloud/container CLIs. FOR SINGLE OPERATIONS: use generic Azure, Kubernetes, Docker, or AWS tools only when no Aspire AppHost exists.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "TimeWarpEngineering",
+  "install_path": ".claude/skills/aspire-deployment/SKILL.md",
+  "source": {
+    "repo": "TimeWarpEngineering/timewarp-architecture",
+    "url": "https://github.com/TimeWarpEngineering/timewarp-architecture/blob/master/.claude/skills/aspire-deployment/SKILL.md",
+    "path": ".claude/skills/aspire-deployment/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-06-24T08:42:43.467Z",
+    "stars": 53,
+    "language": "C#",
+    "pushed_at": "2026-06-24T06:55:40Z",
+    "license": null
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "timewarpengineering-timewarp-architecture-aspire",
+  "name": "aspire",
+  "description": ">- **WORKFLOW SKILL** - Top-level router for Aspire 13.4 distributed apps. Detects the AppHost, enforces safety guardrails, and routes to the right sub-skill. USE FOR: Aspire AppHost detected, aspire CLI, distributed app, cloud-native .NET, aspire start, aspire stop, aspire resource, aspire deploy, aspire destroy, aspire publish, aspire init, aspire new, aspire add, aspire integration list/search, aspire wait, aspire describe, aspire ps, aspire dashboard run, aspire doctor, aspire update, aspire",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "TimeWarpEngineering",
+  "install_path": ".claude/skills/aspire/SKILL.md",
+  "source": {
+    "repo": "TimeWarpEngineering/timewarp-architecture",
+    "url": "https://github.com/TimeWarpEngineering/timewarp-architecture/blob/master/.claude/skills/aspire/SKILL.md",
+    "path": ".claude/skills/aspire/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-06-24T08:42:43.922Z",
+    "stars": 53,
+    "language": "C#",
+    "pushed_at": "2026-06-24T06:55:40Z",
+    "license": null
+  }
+}
