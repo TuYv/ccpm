@@ -1,0 +1,25 @@
+{
+  "id": "specstoryai-getspecstory-workthreads",
+  "name": "workthreads",
+  "description": "SpecStory Workthreads - a weekly work-thread rollup across a team's repos from SpecStory coding histories (any agent - Claude Code, Codex, Cursor, Gemini, and more). It groups the window's sessions into threads of work per project and labels each new / open / recently closed, so a lead sees what shipped, what is still an open loop, and what was just started. Use when someone asks \"what happened this week\", \"what is still open\", \"what did the team finish\", \"give me the weekly rollup\", or wants a ",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "specstoryai",
+  "install_path": ".claude/skills/workthreads/SKILL.md",
+  "source": {
+    "repo": "specstoryai/getspecstory",
+    "url": "https://github.com/specstoryai/getspecstory/blob/dev/workthreads/SKILL.md",
+    "path": "workthreads/SKILL.md",
+    "branch": "dev",
+    "discovered_at": "2026-06-24T22:52:15.101Z",
+    "stars": 1256,
+    "language": "Go",
+    "pushed_at": "2026-06-24T21:25:39Z",
+    "license": "Apache-2.0"
+  }
+}
