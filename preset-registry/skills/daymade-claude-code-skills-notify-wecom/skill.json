@@ -1,0 +1,25 @@
+{
+  "id": "daymade-claude-code-skills-notify-wecom",
+  "name": "notify-wecom",
+  "description": ">- Send a single one-off message to a WeCom (Enterprise WeChat) group bot. Use this skill whenever the user says \"/notify-wecom\", \"send a quick WeCom message\", \"企微通知一下\", \"临时发一条企业微信\", or any one-shot notification that does not need a reusable template or setup workflow. The message is sent immediately; no confirmation prompt is shown unless the message is empty or the webhook is not configured.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/notify-wecom/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/notify-wecom/SKILL.md",
+    "path": "notify-wecom/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-24T17:29:16.568Z",
+    "stars": 1210,
+    "language": "Python",
+    "pushed_at": "2026-06-24T16:52:36Z",
+    "license": "MIT"
+  }
+}
