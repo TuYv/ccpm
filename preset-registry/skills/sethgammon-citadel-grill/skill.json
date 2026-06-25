@@ -1,0 +1,25 @@
+{
+  "id": "sethgammon-citadel-grill",
+  "name": "grill",
+  "description": ">- Relentless one-question-at-a-time interview that sharpens a vague plan or design into shared understanding before any build. The elicitation engine other planning skills call instead of inventing their own interview. Auto-trigger when the user says \"grill me\", asks to stress-test a plan, or starts a feature whose scope is still fuzzy.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "SethGammon",
+  "install_path": ".claude/skills/grill/SKILL.md",
+  "source": {
+    "repo": "SethGammon/Citadel",
+    "url": "https://github.com/SethGammon/Citadel/blob/main/skills/grill/SKILL.md",
+    "path": "skills/grill/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-25T00:30:29.384Z",
+    "stars": 617,
+    "language": "JavaScript",
+    "pushed_at": "2026-06-24T23:02:09Z",
+    "license": "MIT"
+  }
+}

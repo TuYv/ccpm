@@ -1,0 +1,25 @@
+{
+  "id": "ykdojo-claude-code-tips-version-check",
+  "name": "version-check",
+  "description": "Recommend which Claude Code version to run, or whether to update. Use when asked which Claude Code version is best/safe, whether to update now, whether a recent release is buggy, or what changed since the installed version.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ykdojo",
+  "install_path": ".claude/skills/version-check/SKILL.md",
+  "source": {
+    "repo": "ykdojo/claude-code-tips",
+    "url": "https://github.com/ykdojo/claude-code-tips/blob/main/skills/version-check/SKILL.md",
+    "path": "skills/version-check/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-25T00:28:36.103Z",
+    "stars": 8911,
+    "language": "HTML",
+    "pushed_at": "2026-06-25T00:20:52Z",
+    "license": null
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "ykdojo-claude-code-tips-hn-summarize",
+  "name": "hn-summarize",
+  "description": "Fetch and summarize Hacker News / hckrnews.com top stories, articles, and their comment threads. Use when asked to summarize HN front-page stories, a specific HN story plus its discussion, or \"the top N from hckrnews\".",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ykdojo",
+  "install_path": ".claude/skills/hn-summarize/SKILL.md",
+  "source": {
+    "repo": "ykdojo/claude-code-tips",
+    "url": "https://github.com/ykdojo/claude-code-tips/blob/main/skills/hn-summarize/SKILL.md",
+    "path": "skills/hn-summarize/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-25T00:28:35.803Z",
+    "stars": 8911,
+    "language": "HTML",
+    "pushed_at": "2026-06-25T00:20:52Z",
+    "license": null
+  }
+}

@@ -1,7 +1,7 @@
 {
   "id": "wondelai-skills-release-it",
   "name": "release-it",
-  "description": "Build production-ready systems with stability patterns: circuit breakers, bulkheads, timeouts, and retry logic. Use when the user mentions \"production outage\", \"circuit breaker\", \"timeout strategy\", \"deployment pipeline\", \"chaos engineering\", \"bulkhead pattern\", \"retry with backoff\", or \"health checks\". Also trigger when designing resilient microservices, planning zero-downtime deployments, or investigating cascading failure scenarios. Covers capacity planning, health checks, and anti-fragility ",
+  "description": "Build production-ready systems with stability patterns: circuit breakers, bulkheads, timeouts, and retry logic. Use when the user mentions \"production outage\", \"circuit breaker\", \"timeout strategy\", \"deployment pipeline\", \"chaos engineering\", \"bulkhead pattern\", \"retry with backoff\", \"health checks\", \"my service keeps crashing\", \"prevent cascading failures\", or \"make it resilient\". Also trigger when designing resilient microservices, planning zero-downtime deployments, or investigating cascading",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/wondelai/skills/blob/main/release-it/SKILL.md",
     "path": "release-it/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-24T22:47:59.860Z",
-    "stars": 1445,
+    "discovered_at": "2026-06-25T00:29:34.000Z",
+    "stars": 1446,
     "language": "Shell",
-    "pushed_at": "2026-06-24T19:43:34Z",
+    "pushed_at": "2026-06-24T23:22:57Z",
     "license": "MIT"
-  },
-  "summary_zh": "这是一套用于构建高可用系统的稳定性模式库，能解决微服务级联故障和生产宕机问题，非常适合设计弹性微服务、实现零停机部署以及应对混沌工程的场景。"
+  }
 }

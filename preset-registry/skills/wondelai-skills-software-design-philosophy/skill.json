@@ -1,7 +1,7 @@
 {
   "id": "wondelai-skills-software-design-philosophy",
   "name": "software-design-philosophy",
-  "description": "Manage software complexity through deep modules, information hiding, and strategic programming. Use when the user mentions \"module design\", \"API too complex\", \"shallow class\", \"complexity budget\", \"strategic vs tactical\", \"deep module\", \"information leakage\", or \"pass-through method\". Also trigger when reviewing interface designs for simplicity, evaluating whether an abstraction is pulling its weight, or choosing between general-purpose and special-purpose approaches. Covers deep vs shallow modu",
+  "description": "Manage software complexity through deep modules, information hiding, and strategic programming. Use when the user mentions \"module design\", \"API too complex\", \"shallow class\", \"complexity budget\", \"strategic vs tactical\", \"deep module\", \"information leakage\", \"pass-through method\", \"this code is over-engineered\", \"too many layers\", \"the abstraction isnt worth it\", or \"simplify this design\". Also trigger when reviewing an interface for simplicity, evaluating whether an abstraction is pulling its ",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/wondelai/skills/blob/main/software-design-philosophy/SKILL.md",
     "path": "software-design-philosophy/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-24T22:48:00.100Z",
-    "stars": 1445,
+    "discovered_at": "2026-06-25T00:29:34.234Z",
+    "stars": 1446,
     "language": "Shell",
-    "pushed_at": "2026-06-24T19:43:34Z",
+    "pushed_at": "2026-06-24T23:22:57Z",
     "license": "MIT"
-  },
-  "summary_zh": "一套管理软件复杂性的设计方法论，主张通过深度模块和信息隐藏来降低开发难度。当API难用、类设计太浅，或在评审接口、权衡抽象价值时，它能帮你做出更简单的架构选择。"
+  }
 }

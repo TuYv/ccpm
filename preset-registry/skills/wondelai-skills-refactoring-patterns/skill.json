@@ -1,7 +1,7 @@
 {
   "id": "wondelai-skills-refactoring-patterns",
   "name": "refactoring-patterns",
-  "description": "Apply named refactoring transformations to improve code structure without changing behavior. Use when the user mentions \"refactor this\", \"code smells\", \"extract method\", \"replace conditional\", \"technical debt\", \"move method\", \"inline variable\", or \"decompose conditional\". Also trigger when cleaning up legacy code, preparing code for new features by restructuring, or identifying which transformation to apply to a specific code smell. Covers smell-driven refactoring, safe transformation sequences,",
+  "description": "Apply named refactoring transformations to improve code structure without changing behavior. Use when the user mentions \"refactor this\", \"code smells\", \"extract method\", \"replace conditional\", \"technical debt\", \"move method\", \"inline variable\", \"decompose conditional\", \"clean up this messy code\", \"restructure without breaking anything\", or \"this code needs reorganizing\". Also trigger when cleaning up legacy code, preparing code for new features by restructuring, or identifying which transformati",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/wondelai/skills/blob/main/refactoring-patterns/SKILL.md",
     "path": "refactoring-patterns/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-24T22:47:59.623Z",
-    "stars": 1445,
+    "discovered_at": "2026-06-25T00:29:33.811Z",
+    "stars": 1446,
     "language": "Shell",
-    "pushed_at": "2026-06-24T19:43:34Z",
+    "pushed_at": "2026-06-24T23:22:57Z",
     "license": "MIT"
-  },
-  "summary_zh": "这是一套代码重构模式集合，能在不改变功能的前提下改善代码结构。适合处理代码坏味道、清理遗留代码，或为加新功能做结构准备，帮你安全地完成重构。"
+  }
 }

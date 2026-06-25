@@ -1,7 +1,7 @@
 {
   "id": "wondelai-skills-improve-retention",
   "name": "improve-retention",
-  "description": "Diagnose and fix retention problems using behavior design (B=MAP). Use when the user mentions \"users drop off\", \"activation rate\", \"onboarding friction\", \"retention metrics\", \"why users dont complete\", \"churn analysis\", \"user activation\", or \"aha moment\". Also trigger when analyzing cohort retention curves, designing activation milestones, reducing time-to-value for new users, or investigating why users stop after their first session. Covers the Ability Chain, prompt design, and tiny behaviors t",
+  "description": "Diagnose and fix retention problems using behavior design (B=MAP). Use when the user mentions \"users drop off\", \"activation rate\", \"onboarding friction\", \"retention metrics\", \"why users dont complete\", \"churn analysis\", \"user activation\", \"aha moment\", \"people sign up but dont stick around\", \"boost retention\", or \"improve activation\". Also trigger when analyzing cohort retention curves, designing activation milestones, reducing time-to-value for new users, or investigating why users quit after t",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/wondelai/skills/blob/main/improve-retention/SKILL.md",
     "path": "improve-retention/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-24T22:47:57.530Z",
-    "stars": 1445,
+    "discovered_at": "2026-06-25T00:29:32.114Z",
+    "stars": 1446,
     "language": "Shell",
-    "pushed_at": "2026-06-24T19:43:34Z",
+    "pushed_at": "2026-06-24T23:22:57Z",
     "license": "MIT"
-  },
-  "summary_zh": "基于行为设计模型诊断并修复用户留存问题，专治新手破冰难、激活率低和用户流失，适合分析留存曲线或缩短新用户价值实现时间的场景。"
+  }
 }

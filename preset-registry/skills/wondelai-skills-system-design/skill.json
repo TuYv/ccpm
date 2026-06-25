@@ -1,7 +1,7 @@
 {
   "id": "wondelai-skills-system-design",
   "name": "system-design",
-  "description": "Design scalable distributed systems using structured approaches for load balancing, caching, database scaling, and message queues. Use when the user mentions \"system design\", \"scale this\", \"high availability\", \"rate limiter\", \"design a URL shortener\", \"system design interview\", \"capacity planning\", or \"distributed architecture\". Also trigger when estimating infrastructure requirements, choosing between microservices and monoliths, or designing for millions of concurrent users. Covers common syst",
+  "description": "Design scalable distributed systems using structured approaches for load balancing, caching, database scaling, and message queues. Use when the user mentions \"system design\", \"scale this\", \"high availability\", \"rate limiter\", \"design a URL shortener\", \"design Twitter\", \"design Uber\", \"design a news feed\", \"system design interview\", \"system design interview prep\", \"capacity planning\", or \"distributed architecture\". Also trigger when estimating infrastructure requirements, choosing between microse",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/wondelai/skills/blob/main/system-design/SKILL.md",
     "path": "system-design/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-24T22:48:00.416Z",
-    "stars": 1445,
+    "discovered_at": "2026-06-25T00:29:34.471Z",
+    "stars": 1446,
     "language": "Shell",
-    "pushed_at": "2026-06-24T19:43:34Z",
+    "pushed_at": "2026-06-24T23:22:57Z",
     "license": "MIT"
-  },
-  "summary_zh": "这是一个结构化的分布式架构设计指南，帮你搞定高并发、高可用系统的搭建与选型难题，特别适合准备系统设计面试，或做微服务拆分和容量规划时使用。"
+  }
 }

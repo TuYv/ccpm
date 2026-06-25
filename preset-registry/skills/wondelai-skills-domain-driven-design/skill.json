@@ -1,7 +1,7 @@
 {
   "id": "wondelai-skills-domain-driven-design",
   "name": "domain-driven-design",
-  "description": "Model software around the business domain using bounded contexts, aggregates, and ubiquitous language. Use when the user mentions \"domain modeling\", \"bounded context\", \"aggregate root\", \"ubiquitous language\", \"anti-corruption layer\", \"context mapping\", \"domain events\", or \"strategic design\". Also trigger when splitting a monolith into services, defining microservice boundaries, or aligning code structure with business processes. Covers entities vs value objects, domain events, and context mappin",
+  "description": "Model software around the business domain using bounded contexts, aggregates, and ubiquitous language. Use when the user mentions \"domain modeling\", \"bounded context\", \"aggregate root\", \"ubiquitous language\", \"anti-corruption layer\", \"context mapping\", \"domain events\", \"strategic design\", \"model the business in code\", \"the code doesnt match the business\", or \"how do we split this big system\". Also trigger when breaking a monolith into services, defining service boundaries, or aligning code struc",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/wondelai/skills/blob/main/domain-driven-design/SKILL.md",
     "path": "domain-driven-design/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-24T22:47:56.819Z",
-    "stars": 1445,
+    "discovered_at": "2026-06-25T00:29:31.392Z",
+    "stars": 1446,
     "language": "Shell",
-    "pushed_at": "2026-06-24T19:43:34Z",
+    "pushed_at": "2026-06-24T23:22:57Z",
     "license": "MIT"
-  },
-  "summary_zh": "这是一套按业务领域建模的软件设计方法，专门解决微服务边界划分难、单体拆分乱，以及代码结构与业务脱节的问题。"
+  }
 }
