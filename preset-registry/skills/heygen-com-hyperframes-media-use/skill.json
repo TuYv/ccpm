@@ -1,0 +1,25 @@
+{
+  "id": "heygen-com-hyperframes-media-use",
+  "name": "media-use",
+  "description": "Agent Media OS — resolve any media need (BGM, SFX, image, icon) into a frozen local file + ledger record. One verb (`resolve`) handles the full cascade — project cache, global cache, HeyGen catalog search, freeze, register. Keeps search noise on disk, hands the agent a path. Use when a composition needs background music, sound effects, images, or icons.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "heygen-com",
+  "install_path": ".claude/skills/media-use/SKILL.md",
+  "source": {
+    "repo": "heygen-com/hyperframes",
+    "url": "https://github.com/heygen-com/hyperframes/blob/main/skills/media-use/SKILL.md",
+    "path": "skills/media-use/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-25T05:28:26.353Z",
+    "stars": 31107,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-25T05:20:48Z",
+    "license": "Apache-2.0"
+  }
+}

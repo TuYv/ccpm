@@ -1,0 +1,25 @@
+{
+  "id": "wshobson-agents-before-you-build",
+  "name": "before-you-build",
+  "description": "Pre-build product and feature risk review for founders, product managers, and AI-assisted builders. Use this skill when the user is about to build a landing page, MVP, SaaS product, internal tool, agent workflow, or major feature and needs to check demand, positioning, monetization, retention, trust, distribution, and adoption risk before implementation starts.",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "wshobson",
+  "install_path": ".claude/skills/before-you-build/SKILL.md",
+  "source": {
+    "repo": "wshobson/agents",
+    "url": "https://github.com/wshobson/agents/blob/main/plugins/before-you-build/skills/before-you-build/SKILL.md",
+    "path": "plugins/before-you-build/skills/before-you-build/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-25T05:27:13.070Z",
+    "stars": 37154,
+    "language": "Python",
+    "pushed_at": "2026-06-25T03:07:12Z",
+    "license": "MIT"
+  }
+}
