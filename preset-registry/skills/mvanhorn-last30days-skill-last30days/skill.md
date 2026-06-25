@@ -1771,6 +1771,13 @@ If the research output does not contain the footer block (rare, only when all so
 
 **SELF-CHECK before displaying**: Re-read your "What I learned" section. Does it match what the research ACTUALLY says? If you catch yourself projecting your own knowledge instead of the research, rewrite it. Then verify: (a) no `##` headers in your response body, (b) no em-dashes or en-dashes anywhere, (c) the engine footer block appears verbatim between KEY PATTERNS and the invitation.
 
+**Saved artifact access flow:** after the engine has created a file, decide how the user should get access to it based on what they asked for:
+
+- **Normal report:** the Markdown raw artifact already appears in the engine footer (`📎 Raw results saved to ...`). The chat synthesis is the primary user-facing report, so do not open the raw Markdown file automatically and do not ask a follow-up access question. The path line is enough.
+- **Markdown file requested:** if the user explicitly asked for a Markdown file/export, treat the saved Markdown path as the deliverable. Provide the path and open it locally when the host can safely open local files and the request implies viewing it now. Do not offer hosted publishing for Markdown.
+- **HTML file requested:** follow `references/save-html-brief.md`. Save the local HTML first, show the absolute path, then present explicit next-step choices: open the HTML file, publish to an available/preferred HTML publishing service, or done for now.
+- **Share/publish requested:** sharing means hosted HTML, not Markdown. Save the local HTML first and show the path. Then respect existing publishing preferences, show available publishing choices, and ask for public-vs-password only when the selected service requires that choice (for `ht-ml.app`, ask whether password protection should be used; if yes, ask the user to type the shared password before publishing). Never block creation of the local file on the hosting decision.
+
 **LAST - Invitation (adapt to QUERY_TYPE):**
 
 **CRITICAL: Every invitation MUST include 2-3 specific example suggestions based on what you ACTUALLY learned from the research.** Don't be generic - show the user you absorbed the content by referencing real things from the results.
@@ -1866,6 +1873,7 @@ Close with `I have all the links to the {N} {source list} I pulled from. Just as
 - Read `references/save-html-brief.md` BEFORE proceeding to WAIT FOR USER'S RESPONSE
 - Follow that file's instructions exactly - it is the canonical source for the save flow
 - End with the artifact handoff defined there: saved HTML path, open the local file when the host can do so, and a concise confirmation for requests where HTML is the requested deliverable
+- If the user explicitly asks for a hosted/shareable web link, follow the opt-in publishing instructions in the reference file. Never publish by default.
 
 **You MUST NOT:**
 
@@ -1874,7 +1882,7 @@ Close with `I have all the links to the {N} {source list} I pulled from. Just as
 - Save to a different path than the reference specifies
 - Add data quality warnings, debug headers, or safety notes to the saved HTML
 - Re-research the topic for the HTML render - the engine cache covers the second invocation
-- Upload or publish the HTML anywhere public in this flow
+- Upload or publish the HTML to a third-party host unless the user explicitly asked for hosted sharing and you have told them the link may be public/indexed unless password-protected
 
 **Why the directive is forceful:** the reference file is the only source of truth for the save flow. Skipping it produces broken artifacts - wrong path conventions, missing synthesis content, leaked engine debug output, or warnings that don't belong in shareable docs.
 
