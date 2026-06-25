@@ -1,0 +1,25 @@
+{
+  "id": "aitytech-agentkits-marketing-paywall-upgrade-cro",
+  "name": "paywall-upgrade-cro",
+  "description": "When the user wants to create or optimize in-app paywalls, upgrade screens, upsell modals, or feature gates. Also use when the user mentions \"paywall,\" \"upgrade screen,\" \"upgrade modal,\" \"upsell,\" \"feature gate,\" \"convert free to paid,\" \"freemium conversion,\" \"trial expiration screen,\" \"limit reached screen,\" \"plan upgrade prompt,\" or \"in-app pricing.\" Distinct from public pricing pages (see page-cro) — this skill focuses on in-product upgrade moments where the user has already experienced value",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "aitytech",
+  "install_path": ".claude/skills/paywall-upgrade-cro/SKILL.md",
+  "source": {
+    "repo": "aitytech/agentkits-marketing",
+    "url": "https://github.com/aitytech/agentkits-marketing/blob/main/skills/paywall-upgrade-cro/SKILL.md",
+    "path": "skills/paywall-upgrade-cro/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-25T17:40:08.549Z",
+    "stars": 552,
+    "language": "Python",
+    "pushed_at": "2026-03-10T11:32:08Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "microsoft-skills-for-fabric-powerbi-report-authoring",
+  "name": "powerbi-report-authoring",
+  "description": ">- Create and modify Power BI report files in PBIR/PBIP format using the `powerbi-report-author` and `powerbi-desktop` CLIs. Use when the user wants to: (1) implement an approved report spec or design brief, (2) add or edit pages, visuals, filters, slicers, bookmarks, themes, or formatting, (3) validate PBIR and verify rendering in Power BI Desktop. For open-ended visual design, use `powerbi-report-design` first. For end-to-end requirements and approval workflow, use `powerbi-report-planning` fi",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "microsoft",
+  "install_path": ".claude/skills/powerbi-report-authoring/SKILL.md",
+  "source": {
+    "repo": "microsoft/skills-for-fabric",
+    "url": "https://github.com/microsoft/skills-for-fabric/blob/main/plugins/powerbi-authoring/skills/powerbi-report-authoring/SKILL.md",
+    "path": "plugins/powerbi-authoring/skills/powerbi-report-authoring/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-25T17:40:00.239Z",
+    "stars": 639,
+    "language": "Shell",
+    "pushed_at": "2026-06-25T07:05:11Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "huytieu-cog-second-brain-meeting-transcript",
+  "name": "meeting-transcript",
+  "description": "Process meeting recordings and notes into structured decisions, action items, and team dynamics with intelligent noise filtering",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "huytieu",
+  "install_path": ".claude/skills/meeting-transcript/SKILL.md",
+  "source": {
+    "repo": "huytieu/COG-second-brain",
+    "url": "https://github.com/huytieu/COG-second-brain/blob/main/.claude/skills/meeting-transcript/SKILL.md",
+    "path": ".claude/skills/meeting-transcript/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-25T17:40:03.130Z",
+    "stars": 556,
+    "language": "Shell",
+    "pushed_at": "2026-06-22T03:04:05Z",
+    "license": "MIT"
+  }
+}

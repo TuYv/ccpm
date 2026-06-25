@@ -1,0 +1,25 @@
+{
+  "id": "microsoft-skills-for-fabric-check-updates",
+  "name": "check-updates",
+  "description": "> Check for skills-for-fabric marketplace updates at session start. Compares local version against GitHub releases and shows changelog if updates are available. Use when the user wants to: (1) check for skill updates, (2) see what's new in skills-for-fabric, (3) verify current version. Triggers: \"check for updates\", \"am I up to date\", \"what version\", \"update skills\", \"show changelog\".",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "microsoft",
+  "install_path": ".claude/skills/check-updates/SKILL.md",
+  "source": {
+    "repo": "microsoft/skills-for-fabric",
+    "url": "https://github.com/microsoft/skills-for-fabric/blob/main/plugins/powerbi-authoring/skills/check-updates/SKILL.md",
+    "path": "plugins/powerbi-authoring/skills/check-updates/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-25T17:40:00.062Z",
+    "stars": 639,
+    "language": "Shell",
+    "pushed_at": "2026-06-25T07:05:11Z",
+    "license": "MIT"
+  }
+}

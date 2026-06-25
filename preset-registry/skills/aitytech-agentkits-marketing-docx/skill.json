@@ -1,0 +1,25 @@
+{
+  "id": "aitytech-agentkits-marketing-docx",
+  "name": "document-skills/docx",
+  "description": "Comprehensive document creation, editing, and analysis with support for tracked changes, comments, formatting preservation, and text extraction. When Claude needs to work with professional documents (.docx files) for: (1) Creating new documents, (2) Modifying or editing content, (3) Working with tracked changes, (4) Adding comments, or any other document tasks",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "aitytech",
+  "install_path": ".claude/skills/docx/SKILL.md",
+  "source": {
+    "repo": "aitytech/agentkits-marketing",
+    "url": "https://github.com/aitytech/agentkits-marketing/blob/main/skills/document-skills/docx/SKILL.md",
+    "path": "skills/document-skills/docx/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-25T17:40:06.184Z",
+    "stars": 552,
+    "language": "Python",
+    "pushed_at": "2026-03-10T11:32:08Z",
+    "license": "MIT"
+  }
+}

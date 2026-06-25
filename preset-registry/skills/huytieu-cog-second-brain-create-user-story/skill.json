@@ -1,0 +1,25 @@
+{
+  "id": "huytieu-cog-second-brain-create-user-story",
+  "name": "create-user-story",
+  "description": "Create user stories with duplicate checking across any project tracker (Linear, GitHub Issues, Jira)",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "huytieu",
+  "install_path": ".claude/skills/create-user-story/SKILL.md",
+  "source": {
+    "repo": "huytieu/COG-second-brain",
+    "url": "https://github.com/huytieu/COG-second-brain/blob/main/.claude/skills/create-user-story/SKILL.md",
+    "path": ".claude/skills/create-user-story/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-25T17:40:01.986Z",
+    "stars": 556,
+    "language": "Shell",
+    "pushed_at": "2026-06-22T03:04:05Z",
+    "license": "MIT"
+  }
+}

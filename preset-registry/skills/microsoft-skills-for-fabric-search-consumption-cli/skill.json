@@ -1,0 +1,25 @@
+{
+  "id": "microsoft-skills-for-fabric-search-consumption-cli",
+  "name": "search-consumption-cli",
+  "description": "> Find and discover Microsoft Fabric items across workspaces when the workspace is unknown. Use when the user wants to: (1) find an item by name across workspaces, (2) list items of specific type across workspaces, (3) identify which workspace contains an item, (4) return item/workspace IDs for downstream API calls. Triggers: \"which workspace has\", \"where is\", \"what items do I have\", \"do I have\", \"find item\", \"find all items\", \"search for item\", \"discover items\", \"find across workspaces\".",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "microsoft",
+  "install_path": ".claude/skills/search-consumption-cli/SKILL.md",
+  "source": {
+    "repo": "microsoft/skills-for-fabric",
+    "url": "https://github.com/microsoft/skills-for-fabric/blob/main/plugins/fabric-skills/skills/search-consumption-cli/SKILL.md",
+    "path": "plugins/fabric-skills/skills/search-consumption-cli/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-25T17:39:58.399Z",
+    "stars": 639,
+    "language": "Shell",
+    "pushed_at": "2026-06-25T07:05:11Z",
+    "license": "MIT"
+  }
+}

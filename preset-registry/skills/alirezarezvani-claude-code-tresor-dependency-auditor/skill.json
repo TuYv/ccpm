@@ -1,0 +1,25 @@
+{
+  "id": "alirezarezvani-claude-code-tresor-dependency-auditor",
+  "name": "dependency-auditor",
+  "description": "Check dependencies for known vulnerabilities using npm audit, pip-audit, etc. Use when package.json or requirements.txt changes, or before deployments. Alerts on vulnerable dependencies. Triggers on dependency file changes, deployment prep, security mentions.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alirezarezvani",
+  "install_path": ".claude/skills/dependency-auditor/SKILL.md",
+  "source": {
+    "repo": "alirezarezvani/claude-code-tresor",
+    "url": "https://github.com/alirezarezvani/claude-code-tresor/blob/main/skills/security/dependency-auditor/SKILL.md",
+    "path": "skills/security/dependency-auditor/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-25T17:39:46.289Z",
+    "stars": 738,
+    "language": "Shell",
+    "pushed_at": "2026-05-19T02:11:20Z",
+    "license": "MIT"
+  }
+}

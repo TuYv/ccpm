@@ -1,0 +1,25 @@
+{
+  "id": "huytieu-cog-second-brain-onboarding",
+  "name": "onboarding",
+  "description": "Personalize COG for your workflow - creates profile, interests, and watchlist files with guided setup (run this first!)",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "huytieu",
+  "install_path": ".claude/skills/onboarding/SKILL.md",
+  "source": {
+    "repo": "huytieu/COG-second-brain",
+    "url": "https://github.com/huytieu/COG-second-brain/blob/main/.claude/skills/onboarding/SKILL.md",
+    "path": ".claude/skills/onboarding/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-25T17:40:03.272Z",
+    "stars": 556,
+    "language": "Shell",
+    "pushed_at": "2026-06-22T03:04:05Z",
+    "license": "MIT"
+  }
+}

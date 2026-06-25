@@ -1,0 +1,25 @@
+{
+  "id": "microsoft-skills-for-fabric-semantic-model-consumption",
+  "name": "semantic-model-consumption",
+  "description": "> Execute raw DAX queries and inspect metadata of Microsoft Fabric Power BI semantic models via the MCP server ExecuteQuery tool. Use when the user already knows the DAX to write, wants to run EVALUATE statements, or needs to inspect model metadata (tables, columns, measures, relationships, hierarchies) using INFO functions. For natural-language business questions (where you generate the DAX), use `fabriciq`. For creating, deploying, or managing semantic model definitions, use `semantic-model-au",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "microsoft",
+  "install_path": ".claude/skills/semantic-model-consumption/SKILL.md",
+  "source": {
+    "repo": "microsoft/skills-for-fabric",
+    "url": "https://github.com/microsoft/skills-for-fabric/blob/main/plugins/fabric-skills/skills/semantic-model-consumption/SKILL.md",
+    "path": "plugins/fabric-skills/skills/semantic-model-consumption/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-25T17:39:58.721Z",
+    "stars": 639,
+    "language": "Shell",
+    "pushed_at": "2026-06-25T07:05:11Z",
+    "license": "MIT"
+  }
+}

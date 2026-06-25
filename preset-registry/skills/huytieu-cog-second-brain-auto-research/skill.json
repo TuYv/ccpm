@@ -1,0 +1,25 @@
+{
+  "id": "huytieu-cog-second-brain-auto-research",
+  "name": "auto-research",
+  "description": "Deep strategic research engine — decomposes questions into parallel research threads, spawns multiple agents, and synthesizes into actionable strategic analysis",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "huytieu",
+  "install_path": ".claude/skills/auto-research/SKILL.md",
+  "source": {
+    "repo": "huytieu/COG-second-brain",
+    "url": "https://github.com/huytieu/COG-second-brain/blob/main/.claude/skills/auto-research/SKILL.md",
+    "path": ".claude/skills/auto-research/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-25T17:40:01.491Z",
+    "stars": 556,
+    "language": "Shell",
+    "pushed_at": "2026-06-22T03:04:05Z",
+    "license": "MIT"
+  }
+}

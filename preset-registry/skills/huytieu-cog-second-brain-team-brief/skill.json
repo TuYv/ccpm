@@ -1,0 +1,25 @@
+{
+  "id": "huytieu-cog-second-brain-team-brief",
+  "name": "team-brief",
+  "description": "Generate daily team intelligence brief by cross-referencing GitHub, Linear, Slack, PostHog, meetings, and braindumps with two-way Linear sync-back",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "huytieu",
+  "install_path": ".claude/skills/team-brief/SKILL.md",
+  "source": {
+    "repo": "huytieu/COG-second-brain",
+    "url": "https://github.com/huytieu/COG-second-brain/blob/main/.claude/skills/team-brief/SKILL.md",
+    "path": ".claude/skills/team-brief/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-25T17:40:03.738Z",
+    "stars": 556,
+    "language": "Shell",
+    "pushed_at": "2026-06-22T03:04:05Z",
+    "license": "MIT"
+  }
+}

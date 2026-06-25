@@ -1,0 +1,25 @@
+{
+  "id": "microsoft-skills-for-fabric-dataflows-save-as-authoring-cli",
+  "name": "dataflows-save-as-authoring-cli",
+  "description": "> Assess, plan, and execute dataflow Gen1 → Gen2.1 CI/CD save-as operations via CLI (az rest / curl) against Power BI REST and Fabric REST APIs. Scan workspaces or entire tenants for Gen1 dataflows, evaluate save-as readiness with seven risk signals (incremental refresh, BYOSA storage, Power Automate triggers, pipeline dependencies, linked entities, DirectQuery, caller-not-owner), produce a Save-As Readiness Snapshot (markdown + JSON), and invoke the SaveAsNativeArtifact API to create upgraded G",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "microsoft",
+  "install_path": ".claude/skills/dataflows-save-as-authoring-cli/SKILL.md",
+  "source": {
+    "repo": "microsoft/skills-for-fabric",
+    "url": "https://github.com/microsoft/skills-for-fabric/blob/main/plugins/fabric-skills/skills/dataflows-save-as-authoring-cli/SKILL.md",
+    "path": "plugins/fabric-skills/skills/dataflows-save-as-authoring-cli/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-25T17:39:56.265Z",
+    "stars": 639,
+    "language": "Shell",
+    "pushed_at": "2026-06-25T07:05:11Z",
+    "license": "MIT"
+  }
+}

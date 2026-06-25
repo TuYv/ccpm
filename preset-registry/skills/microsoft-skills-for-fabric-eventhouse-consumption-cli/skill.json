@@ -1,0 +1,25 @@
+{
+  "id": "microsoft-skills-for-fabric-eventhouse-consumption-cli",
+  "name": "eventhouse-consumption-cli",
+  "description": "> Run KQL queries against Fabric Eventhouse for real-time intelligence and time-series analytics using `az rest` against the Kusto REST API. Covers KQL operators (where, summarize, join, render), Eventhouse schema discovery (.show tables), time-series patterns with bin(), and ingestion monitoring. Use when the user wants to: 1. Run read-only KQL queries against an Eventhouse or KQL Database 2. Discover Eventhouse table schema and metadata 3. Analyse real-time or time-series data with KQL operato",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "microsoft",
+  "install_path": ".claude/skills/eventhouse-consumption-cli/SKILL.md",
+  "source": {
+    "repo": "microsoft/skills-for-fabric",
+    "url": "https://github.com/microsoft/skills-for-fabric/blob/main/plugins/fabric-skills/skills/eventhouse-consumption-cli/SKILL.md",
+    "path": "plugins/fabric-skills/skills/eventhouse-consumption-cli/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-25T17:39:56.813Z",
+    "stars": 639,
+    "language": "Shell",
+    "pushed_at": "2026-06-25T07:05:11Z",
+    "license": "MIT"
+  }
+}

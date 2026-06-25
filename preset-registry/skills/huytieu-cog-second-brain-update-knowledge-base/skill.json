@@ -1,0 +1,25 @@
+{
+  "id": "huytieu-cog-second-brain-update-knowledge-base",
+  "name": "update-knowledge-base",
+  "description": "Maintain and update product knowledge base from releases, features, and project changes with optional wiki sync",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "huytieu",
+  "install_path": ".claude/skills/update-knowledge-base/SKILL.md",
+  "source": {
+    "repo": "huytieu/COG-second-brain",
+    "url": "https://github.com/huytieu/COG-second-brain/blob/main/.claude/skills/update-knowledge-base/SKILL.md",
+    "path": ".claude/skills/update-knowledge-base/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-25T17:40:04.033Z",
+    "stars": 556,
+    "language": "Shell",
+    "pushed_at": "2026-06-22T03:04:05Z",
+    "license": "MIT"
+  }
+}

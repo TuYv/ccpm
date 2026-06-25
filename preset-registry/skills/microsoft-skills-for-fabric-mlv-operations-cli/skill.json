@@ -1,0 +1,25 @@
+{
+  "id": "microsoft-skills-for-fabric-mlv-operations-cli",
+  "name": "mlv-operations-cli",
+  "description": "> Manage Microsoft Fabric Materialized Lake View (MLV) refresh schedules and job execution via REST APIs. Create, update, and delete refresh schedules (interval-based: hourly, daily, weekly). Trigger on-demand refreshes, monitor job status, and cancel running jobs. Uses human-in-the-loop confirmations for safety. Materialized Lake Views are also known as Spark Materialized Views, MLVs, or lakehouse materialized views in Fabric documentation. Note: MLV discovery (list MLVs, lineage, data quality)",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "microsoft",
+  "install_path": ".claude/skills/mlv-operations-cli/SKILL.md",
+  "source": {
+    "repo": "microsoft/skills-for-fabric",
+    "url": "https://github.com/microsoft/skills-for-fabric/blob/main/plugins/fabric-skills/skills/mlv-operations-cli/SKILL.md",
+    "path": "plugins/fabric-skills/skills/mlv-operations-cli/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-25T17:39:58.047Z",
+    "stars": 639,
+    "language": "Shell",
+    "pushed_at": "2026-06-25T07:05:11Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "aitytech-agentkits-marketing-ab-test-setup",
+  "name": "ab-test-setup",
+  "description": "When the user wants to plan, design, or implement an A/B test or experiment. Also use when the user mentions \"A/B test,\" \"split test,\" \"experiment,\" \"test this change,\" \"variant copy,\" \"multivariate test,\" or \"hypothesis.\" For tracking implementation, see analytics-tracking.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "aitytech",
+  "install_path": ".claude/skills/ab-test-setup/SKILL.md",
+  "source": {
+    "repo": "aitytech/agentkits-marketing",
+    "url": "https://github.com/aitytech/agentkits-marketing/blob/main/skills/ab-test-setup/SKILL.md",
+    "path": "skills/ab-test-setup/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-25T17:40:05.113Z",
+    "stars": 552,
+    "language": "Python",
+    "pushed_at": "2026-03-10T11:32:08Z",
+    "license": "MIT"
+  }
+}

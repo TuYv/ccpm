@@ -1,0 +1,25 @@
+{
+  "id": "microsoft-skills-for-fabric-databricks-migration",
+  "name": "databricks-migration",
+  "description": "> Port Databricks notebooks and jobs to Microsoft Fabric. Provides an exhaustive dbutils to notebookutils substitution table: fs operations (mount removal via OneLake Shortcuts), secret scope to Key Vault URL conversion, notebook run and exit, widget replacement with parameter-tagged cells, and library install replacement with Fabric Environments. Covers Unity Catalog three-level namespace reduction to Lakehouse two-level schemas, DBFS path conversion to OneLake, Databricks Jobs to Spark Job Def",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "microsoft",
+  "install_path": ".claude/skills/databricks-migration/SKILL.md",
+  "source": {
+    "repo": "microsoft/skills-for-fabric",
+    "url": "https://github.com/microsoft/skills-for-fabric/blob/main/plugins/fabric-skills/skills/databricks-migration/SKILL.md",
+    "path": "plugins/fabric-skills/skills/databricks-migration/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-25T17:39:55.727Z",
+    "stars": 639,
+    "language": "Shell",
+    "pushed_at": "2026-06-25T07:05:11Z",
+    "license": "MIT"
+  }
+}

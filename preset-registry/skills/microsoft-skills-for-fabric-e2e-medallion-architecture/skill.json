@@ -1,0 +1,25 @@
+{
+  "id": "microsoft-skills-for-fabric-e2e-medallion-architecture",
+  "name": "e2e-medallion-architecture",
+  "description": "> Implement end-to-end Medallion Architecture (Bronze/Silver/Gold) lakehouse patterns in Microsoft Fabric using PySpark, Delta Lake, and Fabric Pipelines. Use when the user wants to: (1) design a Bronze/Silver/Gold data lakehouse, (2) set up multi-layer workspace with lakehouses for each tier, (3) build ingestion-to-analytics pipelines with data quality enforcement, (4) optimize Spark configurations per medallion layer, (5) orchestrate Bronze-to-Silver-to-Gold flows via notebooks. Triggers: \"med",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "microsoft",
+  "install_path": ".claude/skills/e2e-medallion-architecture/SKILL.md",
+  "source": {
+    "repo": "microsoft/skills-for-fabric",
+    "url": "https://github.com/microsoft/skills-for-fabric/blob/main/plugins/fabric-skills/skills/e2e-medallion-architecture/SKILL.md",
+    "path": "plugins/fabric-skills/skills/e2e-medallion-architecture/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-25T17:39:56.460Z",
+    "stars": 639,
+    "language": "Shell",
+    "pushed_at": "2026-06-25T07:05:11Z",
+    "license": "MIT"
+  }
+}

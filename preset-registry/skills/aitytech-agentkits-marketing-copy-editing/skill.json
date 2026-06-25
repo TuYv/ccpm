@@ -1,0 +1,25 @@
+{
+  "id": "aitytech-agentkits-marketing-copy-editing",
+  "name": "copy-editing",
+  "description": "When the user wants to edit, review, or improve existing marketing copy. Also use when the user mentions 'edit this copy,' 'review my copy,' 'copy feedback,' 'proofread,' 'polish this,' 'make this better,' or 'copy sweep.' This skill provides a systematic approach to editing marketing copy through multiple focused passes.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "aitytech",
+  "install_path": ".claude/skills/copy-editing/SKILL.md",
+  "source": {
+    "repo": "aitytech/agentkits-marketing",
+    "url": "https://github.com/aitytech/agentkits-marketing/blob/main/skills/copy-editing/SKILL.md",
+    "path": "skills/copy-editing/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-25T17:40:05.874Z",
+    "stars": 552,
+    "language": "Python",
+    "pushed_at": "2026-03-10T11:32:08Z",
+    "license": "MIT"
+  }
+}

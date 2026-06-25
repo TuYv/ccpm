@@ -1,0 +1,25 @@
+{
+  "id": "huytieu-cog-second-brain-update-cog",
+  "name": "update-cog",
+  "description": "Check for and apply upstream COG framework updates (skills, docs, scripts) without touching personal content",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "huytieu",
+  "install_path": ".claude/skills/update-cog/SKILL.md",
+  "source": {
+    "repo": "huytieu/COG-second-brain",
+    "url": "https://github.com/huytieu/COG-second-brain/blob/main/.claude/skills/update-cog/SKILL.md",
+    "path": ".claude/skills/update-cog/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-25T17:40:03.877Z",
+    "stars": 556,
+    "language": "Shell",
+    "pushed_at": "2026-06-22T03:04:05Z",
+    "license": "MIT"
+  }
+}

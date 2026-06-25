@@ -1,0 +1,25 @@
+{
+  "id": "alirezarezvani-claude-code-tresor-git-commit-helper",
+  "name": "git-commit-helper",
+  "description": "Generate conventional commit messages automatically. Use when user runs git commit, stages changes, or asks for commit message help. Analyzes git diff to create clear, descriptive conventional commit messages. Triggers on git commit, staged changes, commit message requests.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alirezarezvani",
+  "install_path": ".claude/skills/git-commit-helper/SKILL.md",
+  "source": {
+    "repo": "alirezarezvani/claude-code-tresor",
+    "url": "https://github.com/alirezarezvani/claude-code-tresor/blob/main/skills/development/git-commit-helper/SKILL.md",
+    "path": "skills/development/git-commit-helper/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-25T17:39:45.730Z",
+    "stars": 738,
+    "language": "Shell",
+    "pushed_at": "2026-05-19T02:11:20Z",
+    "license": "MIT"
+  }
+}

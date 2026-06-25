@@ -1,0 +1,25 @@
+{
+  "id": "alirezarezvani-claude-code-tresor-test-generator",
+  "name": "test-generator",
+  "description": "Automatically suggest tests for new functions and components. Use when new code is written, functions added, or user mentions testing. Creates test scaffolding with Jest, Vitest, Pytest patterns. Triggers on new functions, components, test requests, testing mentions.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alirezarezvani",
+  "install_path": ".claude/skills/test-generator/SKILL.md",
+  "source": {
+    "repo": "alirezarezvani/claude-code-tresor",
+    "url": "https://github.com/alirezarezvani/claude-code-tresor/blob/main/skills/development/test-generator/SKILL.md",
+    "path": "skills/development/test-generator/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-25T17:39:45.859Z",
+    "stars": 738,
+    "language": "Shell",
+    "pushed_at": "2026-05-19T02:11:20Z",
+    "license": "MIT"
+  }
+}

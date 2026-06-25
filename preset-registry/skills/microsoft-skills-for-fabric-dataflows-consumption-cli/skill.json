@@ -1,0 +1,25 @@
+{
+  "id": "microsoft-skills-for-fabric-dataflows-consumption-cli",
+  "name": "dataflows-consumption-cli",
+  "description": "> Monitor, inspect, and query saved Fabric Dataflows Gen2 via read-only CLI. List dataflows, decode base64 definitions (mashup.pq, queryMetadata.json, .platform), discover parameters, retrieve refresh status and job history, classify queries by staging, and execute queries against saved dataflows via the read-side `executeQuery` mashup engine (Arrow IPC response). Runs persisted or ad-hoc read-only executeQuery requests; parses/renders Arrow results. For previewing candidate M before persisting,",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "microsoft",
+  "install_path": ".claude/skills/dataflows-consumption-cli/SKILL.md",
+  "source": {
+    "repo": "microsoft/skills-for-fabric",
+    "url": "https://github.com/microsoft/skills-for-fabric/blob/main/plugins/fabric-skills/skills/dataflows-consumption-cli/SKILL.md",
+    "path": "plugins/fabric-skills/skills/dataflows-consumption-cli/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-25T17:39:56.085Z",
+    "stars": 639,
+    "language": "Shell",
+    "pushed_at": "2026-06-25T07:05:11Z",
+    "license": "MIT"
+  }
+}

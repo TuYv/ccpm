@@ -1,0 +1,25 @@
+{
+  "id": "huytieu-cog-second-brain-daily-brief",
+  "name": "daily-brief",
+  "description": "Generate personalized news intelligence with verified sources (7-day freshness requirement)",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "huytieu",
+  "install_path": ".claude/skills/daily-brief/SKILL.md",
+  "source": {
+    "repo": "huytieu/COG-second-brain",
+    "url": "https://github.com/huytieu/COG-second-brain/blob/main/.claude/skills/daily-brief/SKILL.md",
+    "path": ".claude/skills/daily-brief/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-25T17:40:02.180Z",
+    "stars": 556,
+    "language": "Shell",
+    "pushed_at": "2026-06-22T03:04:05Z",
+    "license": "MIT"
+  }
+}

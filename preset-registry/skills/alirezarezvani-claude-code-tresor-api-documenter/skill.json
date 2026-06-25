@@ -1,0 +1,25 @@
+{
+  "id": "alirezarezvani-claude-code-tresor-api-documenter",
+  "name": "api-documenter",
+  "description": "Auto-generate API documentation from code and comments. Use when API endpoints change, or user mentions API docs. Creates OpenAPI/Swagger specs from code. Triggers on API file changes, documentation requests, endpoint additions.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alirezarezvani",
+  "install_path": ".claude/skills/api-documenter/SKILL.md",
+  "source": {
+    "repo": "alirezarezvani/claude-code-tresor",
+    "url": "https://github.com/alirezarezvani/claude-code-tresor/blob/main/skills/documentation/api-documenter/SKILL.md",
+    "path": "skills/documentation/api-documenter/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-25T17:39:46.026Z",
+    "stars": 738,
+    "language": "Shell",
+    "pushed_at": "2026-05-19T02:11:20Z",
+    "license": "MIT"
+  }
+}

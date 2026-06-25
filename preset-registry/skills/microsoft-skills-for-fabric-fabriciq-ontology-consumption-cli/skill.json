@@ -1,0 +1,25 @@
+{
+  "id": "microsoft-skills-for-fabric-fabriciq-ontology-consumption-cli",
+  "name": "fabriciq-ontology-consumption-cli",
+  "description": "> Explore Fabric IQ Ontology (preview) items (read-only) from the CLI to ground an agent before it queries data. Explore, describe, and summarize what an ontology exposes — its entity types, keys, relationships, and the bindings that map each concept onto a lakehouse or Eventhouse source — then route the underlying data query to the matching per-datasource consumption skill (eventhouse-consumption-cli, spark-consumption-cli, sqldw-consumption-cli). Read-only discovery via Get Item Definition; ne",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "microsoft",
+  "install_path": ".claude/skills/fabriciq-ontology-consumption-cli/SKILL.md",
+  "source": {
+    "repo": "microsoft/skills-for-fabric",
+    "url": "https://github.com/microsoft/skills-for-fabric/blob/main/plugins/fabric-skills/skills/fabriciq-ontology-consumption-cli/SKILL.md",
+    "path": "plugins/fabric-skills/skills/fabriciq-ontology-consumption-cli/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-25T17:39:57.525Z",
+    "stars": 639,
+    "language": "Shell",
+    "pushed_at": "2026-06-25T07:05:11Z",
+    "license": "MIT"
+  }
+}

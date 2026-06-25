@@ -1,0 +1,25 @@
+{
+  "id": "alirezarezvani-claude-code-tresor-readme-updater",
+  "name": "readme-updater",
+  "description": "Keep README files current with project changes. Use when project structure changes, features added, or setup instructions modified. Suggests README updates based on code changes. Triggers on significant project changes, new features, dependency changes.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alirezarezvani",
+  "install_path": ".claude/skills/readme-updater/SKILL.md",
+  "source": {
+    "repo": "alirezarezvani/claude-code-tresor",
+    "url": "https://github.com/alirezarezvani/claude-code-tresor/blob/main/skills/documentation/readme-updater/SKILL.md",
+    "path": "skills/documentation/readme-updater/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-25T17:39:46.156Z",
+    "stars": 738,
+    "language": "Shell",
+    "pushed_at": "2026-05-19T02:11:20Z",
+    "license": "MIT"
+  }
+}

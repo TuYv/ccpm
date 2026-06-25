@@ -1,0 +1,25 @@
+{
+  "id": "microsoft-skills-for-fabric-dataflows-authoring-cli",
+  "name": "dataflows-authoring-cli",
+  "description": "> Create, update, delete, and refresh Fabric Dataflows Gen2 via write-side CLI against Fabric Items and Connections APIs. Builds mashup.pq + queryMetadata definitions, triggers parameterized refreshes, manages connections, and configures output destinations (Lakehouse, Warehouse, ADX, Azure SQL). Includes preview-driven authoring loop (executeQuery + customMashupDocument). Lists `supportedConnectionTypes`/`credentialType` per connector. For executing saved queries or reading refresh status, use ",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "microsoft",
+  "install_path": ".claude/skills/dataflows-authoring-cli/SKILL.md",
+  "source": {
+    "repo": "microsoft/skills-for-fabric",
+    "url": "https://github.com/microsoft/skills-for-fabric/blob/main/plugins/fabric-skills/skills/dataflows-authoring-cli/SKILL.md",
+    "path": "plugins/fabric-skills/skills/dataflows-authoring-cli/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-25T17:39:55.885Z",
+    "stars": 639,
+    "language": "Shell",
+    "pushed_at": "2026-06-25T07:05:11Z",
+    "license": "MIT"
+  }
+}

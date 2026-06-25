@@ -1,0 +1,25 @@
+{
+  "id": "microsoft-skills-for-fabric-fabriciq-ontology-authoring-cli",
+  "name": "fabriciq-ontology-authoring-cli",
+  "description": "Create and evolve Fabric IQ Ontology (preview) items from CLI — define entity types, properties (including timeseries), relationship types, and bind them to OneLake lakehouse tables (static + timeseries) or Eventhouse / KQL database tables (timeseries only). Uses the Fabric item-definition REST API (Create Item / Update Item Definition) with `InlineBase64` parts. Use to create a Fabric Ontology item; add or alter entity types, properties, or keys; add timeseries properties and bindings; bind an ",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "microsoft",
+  "install_path": ".claude/skills/fabriciq-ontology-authoring-cli/SKILL.md",
+  "source": {
+    "repo": "microsoft/skills-for-fabric",
+    "url": "https://github.com/microsoft/skills-for-fabric/blob/main/plugins/fabric-skills/skills/fabriciq-ontology-authoring-cli/SKILL.md",
+    "path": "plugins/fabric-skills/skills/fabriciq-ontology-authoring-cli/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-25T17:39:57.377Z",
+    "stars": 639,
+    "language": "Shell",
+    "pushed_at": "2026-06-25T07:05:11Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "alirezarezvani-claude-code-tresor-security-auditor",
+  "name": "security-auditor",
+  "description": "Continuous security vulnerability scanning for OWASP Top 10, common vulnerabilities, and insecure patterns. Use when reviewing code, before deployments, or on file changes. Scans for SQL injection, XSS, secrets exposure, auth issues. Triggers on file changes, security mentions, deployment prep.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alirezarezvani",
+  "install_path": ".claude/skills/security-auditor/SKILL.md",
+  "source": {
+    "repo": "alirezarezvani/claude-code-tresor",
+    "url": "https://github.com/alirezarezvani/claude-code-tresor/blob/main/skills/security/security-auditor/SKILL.md",
+    "path": "skills/security/security-auditor/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-25T17:39:46.583Z",
+    "stars": 738,
+    "language": "Shell",
+    "pushed_at": "2026-05-19T02:11:20Z",
+    "license": "MIT"
+  }
+}
