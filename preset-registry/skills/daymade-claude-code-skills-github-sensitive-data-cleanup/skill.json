@@ -1,0 +1,25 @@
+{
+  "id": "daymade-claude-code-skills-github-sensitive-data-cleanup",
+  "name": "github-sensitive-data-cleanup",
+  "description": ">- Scan and remove sensitive data (secrets, API keys, private domains/IPs, PII) from GitHub repository history. Use this skill whenever the user says \"scan sensitive data\", \"clean git history\", \"remove secrets from repo\", \"sanitize GitHub history\", \"清理敏感数据\", \"历史重写\", \"force push\", \"泄露\", or needs to repair a public repo after accidental secret/private context leakage. Also use before any force push to a public repository to verify visibility, backup, and scan results.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/github-sensitive-data-cleanup/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/github-sensitive-data-cleanup/SKILL.md",
+    "path": "github-sensitive-data-cleanup/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-25T12:09:14.381Z",
+    "stars": 1214,
+    "language": "Python",
+    "pushed_at": "2026-06-25T10:56:53Z",
+    "license": "MIT"
+  }
+}

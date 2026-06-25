@@ -1,0 +1,25 @@
+{
+  "id": "modu-ai-moai-adk-moai-domain-html-report",
+  "name": "moai-domain-html-report",
+  "description": "> Markdown-to-single-file-HTML report renderer. Six modes (status, incident, plan, explainer, financial, pr) selected automatically by report type. Zero external JS/CSS framework dependencies — inline SVG charts, single font-CDN exception for Korean readability. Self-contained output for email attachment, print, and offline viewing.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "modu-ai",
+  "install_path": ".claude/skills/moai-domain-html-report/SKILL.md",
+  "source": {
+    "repo": "modu-ai/moai-adk",
+    "url": "https://github.com/modu-ai/moai-adk/blob/main/.claude/skills/moai-domain-html-report/SKILL.md",
+    "path": ".claude/skills/moai-domain-html-report/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-25T12:09:40.035Z",
+    "stars": 1095,
+    "language": "Go",
+    "pushed_at": "2026-06-25T11:56:30Z",
+    "license": "Apache-2.0"
+  }
+}
