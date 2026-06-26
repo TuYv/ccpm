@@ -1,0 +1,25 @@
+{
+  "id": "composiohq-composio-eve",
+  "name": "eve",
+  "description": "Build durable backend AI agents with the eve framework. Use when creating, editing, or debugging an eve project — agent instructions, skills, tools, connections, channels, sandboxes, subagents, schedules, or evals.",
+  "category": "自动化集成",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ComposioHQ",
+  "install_path": ".claude/skills/eve/SKILL.md",
+  "source": {
+    "repo": "ComposioHQ/composio",
+    "url": "https://github.com/ComposioHQ/composio/blob/next/.agents/skills/eve/SKILL.md",
+    "path": ".agents/skills/eve/SKILL.md",
+    "branch": "next",
+    "discovered_at": "2026-06-26T01:38:24.085Z",
+    "stars": 28969,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-26T01:37:54Z",
+    "license": "MIT"
+  }
+}

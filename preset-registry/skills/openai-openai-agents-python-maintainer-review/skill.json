@@ -1,8 +1,8 @@
 {
   "id": "openai-openai-agents-python-maintainer-review",
   "name": "maintainer-review",
-  "description": "Review a GitHub issue or pull request URL as an openai-agents-python maintainer, with a staged assessment of whether the claim is real, practically important, correctly scoped, and worth maintainer and contributor effort. Use when assessing issue validity or severity, deciding whether an issue should be prioritized or closed, judging whether a PR meets a real need and is worth bringing to mergeable quality, comparing open PRs that address the same issue, separating code quality from repository r",
-  "category": "开发编程",
+  "description": "Review a GitHub issue or pull request URL as an openai-agents-python maintainer, with a staged assessment of whether the claim is real, practically important, already solvable with supported functionality, correctly scoped, better served by another design, and worth maintainer and contributor effort. Use when assessing issue validity or severity, deciding whether an issue should be prioritized or closed, determining whether a requested feature represents an unmet need rather than a discoverabili",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/openai/openai-agents-python/blob/main/.agents/skills/maintainer-review/SKILL.md",
     "path": ".agents/skills/maintainer-review/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-25T22:57:01.756Z",
-    "stars": 27422,
+    "discovered_at": "2026-06-26T01:38:13.989Z",
+    "stars": 27425,
     "language": "Python",
-    "pushed_at": "2026-06-25T22:39:18Z",
+    "pushed_at": "2026-06-25T23:31:44Z",
     "license": "MIT"
   }
 }

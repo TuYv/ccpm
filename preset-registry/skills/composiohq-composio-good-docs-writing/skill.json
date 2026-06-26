@@ -1,0 +1,25 @@
+{
+  "id": "composiohq-composio-good-docs-writing",
+  "name": "good-docs-writing",
+  "description": "Writing style guide derived from Modal's documentation voice. Apply when writing or editing docs, guides, tutorials, or technical prose that should read direct, second-person, confident, low-jargon, and example-first. Use to draft new docs in this voice or to revise existing prose toward it.",
+  "category": "自动化集成",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ComposioHQ",
+  "install_path": ".claude/skills/good-docs-writing/SKILL.md",
+  "source": {
+    "repo": "ComposioHQ/composio",
+    "url": "https://github.com/ComposioHQ/composio/blob/next/.claude/skills/good-docs-writing/SKILL.md",
+    "path": ".claude/skills/good-docs-writing/SKILL.md",
+    "branch": "next",
+    "discovered_at": "2026-06-26T01:38:26.679Z",
+    "stars": 28969,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-26T01:37:54Z",
+    "license": "MIT"
+  }
+}
