@@ -1,0 +1,25 @@
+{
+  "id": "composiohq-composio-docs-decisions",
+  "name": "docs-decisions",
+  "description": "Work on Composio documentation content, Fumadocs configuration, changelogs, docs automation prompts, docs decisions, ADR-style records, and docs review guidance. Use for files under docs/, documentation workflows, or requests to record or update a docs decision. Do not use for SDK runtime changes unless docs are the main deliverable.",
+  "category": "自动化集成",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ComposioHQ",
+  "install_path": ".claude/skills/docs-decisions/SKILL.md",
+  "source": {
+    "repo": "ComposioHQ/composio",
+    "url": "https://github.com/ComposioHQ/composio/blob/next/.agents/skills/docs-decisions/SKILL.md",
+    "path": ".agents/skills/docs-decisions/SKILL.md",
+    "branch": "next",
+    "discovered_at": "2026-06-26T21:04:28.323Z",
+    "stars": 28979,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-26T21:01:01Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "composiohq-composio-python-sdk",
+  "name": "python-sdk",
+  "description": "Implement or modify Python SDK behavior under python/composio, including tools, toolkits, sessions, auth configs, connected accounts, client integration, and shared Python models. Use for Python core runtime/API work; pair with python-testing and cross-sdk-parity when TypeScript must match.",
+  "category": "自动化集成",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ComposioHQ",
+  "install_path": ".claude/skills/python-sdk/SKILL.md",
+  "source": {
+    "repo": "ComposioHQ/composio",
+    "url": "https://github.com/ComposioHQ/composio/blob/next/.agents/skills/python-sdk/SKILL.md",
+    "path": ".agents/skills/python-sdk/SKILL.md",
+    "branch": "next",
+    "discovered_at": "2026-06-26T21:04:28.821Z",
+    "stars": 28979,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-26T21:01:01Z",
+    "license": "MIT"
+  }
+}

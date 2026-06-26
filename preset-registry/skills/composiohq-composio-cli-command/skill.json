@@ -1,0 +1,25 @@
+{
+  "id": "composiohq-composio-cli-command",
+  "name": "cli-command",
+  "description": "Design, implement, or review Composio CLI commands under ts/packages/cli using Effect, @effect/cli, services, output conventions, configuration and environment variables, and local vendor references. Use for CLI command UX, command wiring, service changes, or CLI source edits. Do not use for CLI E2E-only work; use cli-e2e there.",
+  "category": "自动化集成",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ComposioHQ",
+  "install_path": ".claude/skills/cli-command/SKILL.md",
+  "source": {
+    "repo": "ComposioHQ/composio",
+    "url": "https://github.com/ComposioHQ/composio/blob/next/.agents/skills/cli-command/SKILL.md",
+    "path": ".agents/skills/cli-command/SKILL.md",
+    "branch": "next",
+    "discovered_at": "2026-06-26T21:04:27.976Z",
+    "stars": 28979,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-26T21:01:01Z",
+    "license": "MIT"
+  }
+}

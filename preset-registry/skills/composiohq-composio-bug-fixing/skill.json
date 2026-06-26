@@ -1,0 +1,25 @@
+{
+  "id": "composiohq-composio-bug-fixing",
+  "name": "bug-fixing",
+  "description": "Fix defects in the Composio SDK repository with focused reproduction, root-cause analysis, regression tests, and narrow verification. Use when the user reports a bug, failing test, CI regression, runtime defect, or incorrect SDK behavior. Do not use for new feature design or broad refactors.",
+  "category": "自动化集成",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ComposioHQ",
+  "install_path": ".claude/skills/bug-fixing/SKILL.md",
+  "source": {
+    "repo": "ComposioHQ/composio",
+    "url": "https://github.com/ComposioHQ/composio/blob/next/.agents/skills/bug-fixing/SKILL.md",
+    "path": ".agents/skills/bug-fixing/SKILL.md",
+    "branch": "next",
+    "discovered_at": "2026-06-26T21:04:27.836Z",
+    "stars": 28979,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-26T21:01:01Z",
+    "license": "MIT"
+  }
+}
