@@ -1,0 +1,25 @@
+{
+  "id": "tzachbon-smart-ralph-communication-style",
+  "name": "communication-style",
+  "description": "This skill should be used when generating spec artifacts (research.md, requirements.md, design.md, tasks.md), formatting agent output, structuring phase results, or when any Ralph agent needs guidance on concise, scannable output formatting. Applies to all Ralph spec phase agents.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "0.2.0",
+  "author": "tzachbon",
+  "install_path": ".claude/skills/communication-style/SKILL.md",
+  "source": {
+    "repo": "tzachbon/smart-ralph",
+    "url": "https://github.com/tzachbon/smart-ralph/blob/main/plugins/ralph-specum/skills/communication-style/SKILL.md",
+    "path": "plugins/ralph-specum/skills/communication-style/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-26T13:34:19.441Z",
+    "stars": 348,
+    "language": "Shell",
+    "pushed_at": "2026-05-19T19:57:51Z",
+    "license": "MIT"
+  }
+}

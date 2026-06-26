@@ -1,0 +1,25 @@
+{
+  "id": "levnikolaevich-claude-code-skills-ln-611-docs-structure-auditor",
+  "name": "ln-611-docs-structure-auditor",
+  "description": "Checks hierarchy, links, SSOT, compression, requirements compliance, freshness, legacy cleanup. Use when auditing documentation structure.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "levnikolaevich",
+  "install_path": ".claude/skills/ln-611-docs-structure-auditor/SKILL.md",
+  "source": {
+    "repo": "levnikolaevich/claude-code-skills",
+    "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/codebase-audit-suite/skills/ln-611-docs-structure-auditor/SKILL.md",
+    "path": "plugins/codebase-audit-suite/skills/ln-611-docs-structure-auditor/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-06-26T13:33:20.240Z",
+    "stars": 502,
+    "language": "JavaScript",
+    "pushed_at": "2026-06-10T16:29:34Z",
+    "license": "MIT"
+  }
+}

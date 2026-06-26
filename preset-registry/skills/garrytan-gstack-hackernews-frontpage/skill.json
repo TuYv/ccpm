@@ -1,0 +1,25 @@
+{
+  "id": "garrytan-gstack-hackernews-frontpage",
+  "name": "hackernews-frontpage",
+  "description": "Scrape the Hacker News front page (titles, points, comment counts).",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "garrytan",
+  "install_path": ".claude/skills/hackernews-frontpage/SKILL.md",
+  "source": {
+    "repo": "garrytan/gstack",
+    "url": "https://github.com/garrytan/gstack/blob/main/browser-skills/hackernews-frontpage/SKILL.md",
+    "path": "browser-skills/hackernews-frontpage/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-26T13:29:50.206Z",
+    "stars": 116299,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-25T16:42:45Z",
+    "license": "MIT"
+  }
+}

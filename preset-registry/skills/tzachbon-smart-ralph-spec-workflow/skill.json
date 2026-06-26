@@ -1,0 +1,25 @@
+{
+  "id": "tzachbon-smart-ralph-spec-workflow",
+  "name": "spec-workflow",
+  "description": "This skill should be used when the user asks to \"build a feature\", \"create a spec\", \"start spec-driven development\", \"run research phase\", \"generate requirements\", \"create design\", \"plan tasks\", \"implement spec\", \"check spec status\", \"triage a feature\", \"create an epic\", \"decompose a large feature\", or needs guidance on spec-driven development workflow, phase ordering, or epic orchestration.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "0.2.0",
+  "author": "tzachbon",
+  "install_path": ".claude/skills/spec-workflow/SKILL.md",
+  "source": {
+    "repo": "tzachbon/smart-ralph",
+    "url": "https://github.com/tzachbon/smart-ralph/blob/main/plugins/ralph-specum/skills/spec-workflow/SKILL.md",
+    "path": "plugins/ralph-specum/skills/spec-workflow/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-26T13:34:19.838Z",
+    "stars": 348,
+    "language": "Shell",
+    "pushed_at": "2026-05-19T19:57:51Z",
+    "license": "MIT"
+  }
+}

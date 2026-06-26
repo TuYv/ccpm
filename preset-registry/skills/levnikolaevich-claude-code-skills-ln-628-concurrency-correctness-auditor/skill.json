@@ -1,0 +1,25 @@
+{
+  "id": "levnikolaevich-claude-code-skills-ln-628-concurrency-correctness-auditor",
+  "name": "ln-628-concurrency-correctness-auditor",
+  "description": "Checks races, deadlocks, async hazards, TOCTOU, blocking I/O, and shared resource contention. Use when auditing concurrency correctness.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "levnikolaevich",
+  "install_path": ".claude/skills/ln-628-concurrency-correctness-auditor/SKILL.md",
+  "source": {
+    "repo": "levnikolaevich/claude-code-skills",
+    "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/codebase-audit-suite/skills/ln-628-concurrency-correctness-auditor/SKILL.md",
+    "path": "plugins/codebase-audit-suite/skills/ln-628-concurrency-correctness-auditor/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-06-26T13:33:21.392Z",
+    "stars": 502,
+    "language": "JavaScript",
+    "pushed_at": "2026-06-10T16:29:34Z",
+    "license": "MIT"
+  }
+}

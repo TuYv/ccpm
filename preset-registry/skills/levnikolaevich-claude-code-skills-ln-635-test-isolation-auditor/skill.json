@@ -1,0 +1,25 @@
+{
+  "id": "levnikolaevich-claude-code-skills-ln-635-test-isolation-auditor",
+  "name": "ln-635-test-isolation-auditor",
+  "description": "Audits whether test results can be trusted: flakiness, isolation, real external dependencies, time/random/order dependency, and shared state. Use when auditing test trustworthiness.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "levnikolaevich",
+  "install_path": ".claude/skills/ln-635-test-isolation-auditor/SKILL.md",
+  "source": {
+    "repo": "levnikolaevich/claude-code-skills",
+    "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/codebase-audit-suite/skills/ln-635-test-isolation-auditor/SKILL.md",
+    "path": "plugins/codebase-audit-suite/skills/ln-635-test-isolation-auditor/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-06-26T13:33:22.074Z",
+    "stars": 502,
+    "language": "JavaScript",
+    "pushed_at": "2026-06-10T16:29:34Z",
+    "license": "MIT"
+  }
+}

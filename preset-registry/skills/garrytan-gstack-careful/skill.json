@@ -1,0 +1,25 @@
+{
+  "id": "garrytan-gstack-careful",
+  "name": "careful",
+  "description": "Safety guardrails for destructive commands. (gstack)",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "0.1.0",
+  "author": "garrytan",
+  "install_path": ".claude/skills/careful/SKILL.md",
+  "source": {
+    "repo": "garrytan/gstack",
+    "url": "https://github.com/garrytan/gstack/blob/main/careful/SKILL.md",
+    "path": "careful/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-26T13:29:50.395Z",
+    "stars": 116299,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-25T16:42:45Z",
+    "license": "MIT"
+  }
+}

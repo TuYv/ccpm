@@ -1,0 +1,25 @@
+{
+  "id": "levnikolaevich-claude-code-skills-ln-636-manual-test-auditor",
+  "name": "ln-636-manual-test-auditor",
+  "description": "Audits manual test evidence quality: reproducibility, fail-fast behavior, expected evidence/golden files, idempotency, and documentation. Use when auditing manual tests.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "levnikolaevich",
+  "install_path": ".claude/skills/ln-636-manual-test-auditor/SKILL.md",
+  "source": {
+    "repo": "levnikolaevich/claude-code-skills",
+    "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/codebase-audit-suite/skills/ln-636-manual-test-auditor/SKILL.md",
+    "path": "plugins/codebase-audit-suite/skills/ln-636-manual-test-auditor/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-06-26T13:33:22.154Z",
+    "stars": 502,
+    "language": "JavaScript",
+    "pushed_at": "2026-06-10T16:29:34Z",
+    "license": "MIT"
+  }
+}

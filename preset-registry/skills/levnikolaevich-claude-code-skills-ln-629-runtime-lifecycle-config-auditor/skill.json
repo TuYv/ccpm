@@ -1,0 +1,25 @@
+{
+  "id": "levnikolaevich-claude-code-skills-ln-629-runtime-lifecycle-config-auditor",
+  "name": "ln-629-runtime-lifecycle-config-auditor",
+  "description": "Checks runtime lifecycle and config validation: bootstrap, shutdown, probes, cleanup, env sync, and fail-fast startup. Use for runtime readiness.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "levnikolaevich",
+  "install_path": ".claude/skills/ln-629-runtime-lifecycle-config-auditor/SKILL.md",
+  "source": {
+    "repo": "levnikolaevich/claude-code-skills",
+    "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/codebase-audit-suite/skills/ln-629-runtime-lifecycle-config-auditor/SKILL.md",
+    "path": "plugins/codebase-audit-suite/skills/ln-629-runtime-lifecycle-config-auditor/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-06-26T13:33:21.485Z",
+    "stars": 502,
+    "language": "JavaScript",
+    "pushed_at": "2026-06-10T16:29:34Z",
+    "license": "MIT"
+  }
+}

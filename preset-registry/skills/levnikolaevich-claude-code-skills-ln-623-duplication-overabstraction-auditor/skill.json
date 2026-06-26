@@ -1,0 +1,25 @@
+{
+  "id": "levnikolaevich-claude-code-skills-ln-623-duplication-overabstraction-auditor",
+  "name": "ln-623-duplication-overabstraction-auditor",
+  "description": "Checks evidence-backed duplication, over-abstraction, and unused extensibility. Use when auditing DRY/KISS/YAGNI risk.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "levnikolaevich",
+  "install_path": ".claude/skills/ln-623-duplication-overabstraction-auditor/SKILL.md",
+  "source": {
+    "repo": "levnikolaevich/claude-code-skills",
+    "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/codebase-audit-suite/skills/ln-623-duplication-overabstraction-auditor/SKILL.md",
+    "path": "plugins/codebase-audit-suite/skills/ln-623-duplication-overabstraction-auditor/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-06-26T13:33:20.943Z",
+    "stars": 502,
+    "language": "JavaScript",
+    "pushed_at": "2026-06-10T16:29:34Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "colbymchenry-codegraph-agent-eval",
+  "name": "agent-eval",
+  "description": "Benchmark CodeGraph retrieval quality on a real codebase by comparing agent behavior with vs without CodeGraph. Use when the user runs /agent-eval or asks to test, benchmark, audit, or validate a codegraph version (the local dev build or a published npm version) against a language's repo.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "colbymchenry",
+  "install_path": ".claude/skills/agent-eval/SKILL.md",
+  "source": {
+    "repo": "colbymchenry/codegraph",
+    "url": "https://github.com/colbymchenry/codegraph/blob/main/.claude/skills/agent-eval/SKILL.md",
+    "path": ".claude/skills/agent-eval/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-26T13:33:48.154Z",
+    "stars": 54891,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-24T22:20:10Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "affaan-m-ecc-deep-research",
+  "name": "deep-research",
+  "description": "Multi-source deep research using firecrawl and exa MCPs. Searches the web, synthesizes findings, and delivers cited reports with source attribution. Use when the user wants thorough research on any topic with evidence and citations.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "affaan-m",
+  "install_path": ".claude/skills/deep-research/SKILL.md",
+  "source": {
+    "repo": "affaan-m/ECC",
+    "url": "https://github.com/affaan-m/ECC/blob/main/.kiro/skills/deep-research/SKILL.md",
+    "path": ".kiro/skills/deep-research/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-26T13:30:39.635Z",
+    "stars": 222011,
+    "language": "JavaScript",
+    "pushed_at": "2026-06-25T23:47:36Z",
+    "license": "MIT"
+  }
+}

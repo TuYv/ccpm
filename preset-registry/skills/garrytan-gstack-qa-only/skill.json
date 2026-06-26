@@ -1,0 +1,25 @@
+{
+  "id": "garrytan-gstack-qa-only",
+  "name": "qa-only",
+  "description": "Report-only QA testing. (gstack)",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "garrytan",
+  "install_path": ".claude/skills/qa-only/SKILL.md",
+  "source": {
+    "repo": "garrytan/gstack",
+    "url": "https://github.com/garrytan/gstack/blob/main/qa-only/SKILL.md",
+    "path": "qa-only/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-26T13:29:54.529Z",
+    "stars": 116299,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-25T16:42:45Z",
+    "license": "MIT"
+  }
+}

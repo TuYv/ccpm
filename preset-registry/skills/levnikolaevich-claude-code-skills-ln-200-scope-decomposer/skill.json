@@ -1,0 +1,25 @@
+{
+  "id": "levnikolaevich-claude-code-skills-ln-200-scope-decomposer",
+  "name": "ln-200-scope-decomposer",
+  "description": "Decomposes scope into Epics, Stories, and RICE priorities. Use when user has project scope and wants full Agile breakdown.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "levnikolaevich",
+  "install_path": ".claude/skills/ln-200-scope-decomposer/SKILL.md",
+  "source": {
+    "repo": "levnikolaevich/claude-code-skills",
+    "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/agile-workflow/skills/ln-200-scope-decomposer/SKILL.md",
+    "path": "plugins/agile-workflow/skills/ln-200-scope-decomposer/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-06-26T13:33:17.126Z",
+    "stars": 502,
+    "language": "JavaScript",
+    "pushed_at": "2026-06-10T16:29:34Z",
+    "license": "MIT"
+  }
+}

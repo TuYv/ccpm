@@ -1,0 +1,25 @@
+{
+  "id": "garrytan-gstack-gstack-upgrade",
+  "name": "gstack-upgrade",
+  "description": "Upgrade gstack to the latest version.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.1.0",
+  "author": "garrytan",
+  "install_path": ".claude/skills/gstack-upgrade/SKILL.md",
+  "source": {
+    "repo": "garrytan/gstack",
+    "url": "https://github.com/garrytan/gstack/blob/main/gstack-upgrade/SKILL.md",
+    "path": "gstack-upgrade/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-26T13:29:51.877Z",
+    "stars": 116299,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-25T16:42:45Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "levnikolaevich-claude-code-skills-ln-627-diagnosability-auditor",
+  "name": "ln-627-diagnosability-auditor",
+  "description": "Checks diagnosability through structured logs, metrics, traces, correlation IDs, and useful log levels. Use when auditing incident visibility.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "levnikolaevich",
+  "install_path": ".claude/skills/ln-627-diagnosability-auditor/SKILL.md",
+  "source": {
+    "repo": "levnikolaevich/claude-code-skills",
+    "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/codebase-audit-suite/skills/ln-627-diagnosability-auditor/SKILL.md",
+    "path": "plugins/codebase-audit-suite/skills/ln-627-diagnosability-auditor/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-06-26T13:33:21.292Z",
+    "stars": 502,
+    "language": "JavaScript",
+    "pushed_at": "2026-06-10T16:29:34Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "tzachbon-smart-ralph-mcp-integration",
+  "name": "MCP Integration",
+  "description": "This skill should be used when the user asks to \"add MCP server\", \"integrate MCP\", \"configure MCP in plugin\", \"use .mcp.json\", \"set up Model Context Protocol\", \"connect external service\", mentions \"${CLAUDE_PLUGIN_ROOT} with MCP\", or discusses MCP server types (SSE, stdio, HTTP, WebSocket). Provides comprehensive guidance for integrating Model Context Protocol servers into Claude Code plugins for external tool and service integration.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "0.1.0",
+  "author": "tzachbon",
+  "install_path": ".claude/skills/MCP Integration/SKILL.md",
+  "source": {
+    "repo": "tzachbon/smart-ralph",
+    "url": "https://github.com/tzachbon/smart-ralph/blob/main/.agents/skills/MCP Integration/SKILL.md",
+    "path": ".agents/skills/MCP Integration/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-26T13:34:16.784Z",
+    "stars": 348,
+    "language": "Shell",
+    "pushed_at": "2026-05-19T19:57:51Z",
+    "license": "MIT"
+  }
+}

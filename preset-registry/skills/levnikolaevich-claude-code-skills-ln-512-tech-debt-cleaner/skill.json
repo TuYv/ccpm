@@ -1,0 +1,25 @@
+{
+  "id": "levnikolaevich-claude-code-skills-ln-512-tech-debt-cleaner",
+  "name": "ln-512-tech-debt-cleaner",
+  "description": "Auto-fixes low-risk tech debt (unused imports, dead code, commented-out code) with >=90% confidence. Use when audit findings need safe automated cleanup.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "levnikolaevich",
+  "install_path": ".claude/skills/ln-512-tech-debt-cleaner/SKILL.md",
+  "source": {
+    "repo": "levnikolaevich/claude-code-skills",
+    "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/agile-workflow/skills/ln-512-tech-debt-cleaner/SKILL.md",
+    "path": "plugins/agile-workflow/skills/ln-512-tech-debt-cleaner/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-06-26T13:33:19.463Z",
+    "stars": 502,
+    "language": "JavaScript",
+    "pushed_at": "2026-06-10T16:29:34Z",
+    "license": "MIT"
+  }
+}

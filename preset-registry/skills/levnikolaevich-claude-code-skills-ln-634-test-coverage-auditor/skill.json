@@ -1,0 +1,25 @@
+{
+  "id": "levnikolaevich-claude-code-skills-ln-634-test-coverage-auditor",
+  "name": "ln-634-test-coverage-auditor",
+  "description": "Identifies missing tests for unique critical local logic: money, auth, permissions, data integrity, algorithms, and domain rules. Use when auditing critical logic coverage gaps.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "levnikolaevich",
+  "install_path": ".claude/skills/ln-634-test-coverage-auditor/SKILL.md",
+  "source": {
+    "repo": "levnikolaevich/claude-code-skills",
+    "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/codebase-audit-suite/skills/ln-634-test-coverage-auditor/SKILL.md",
+    "path": "plugins/codebase-audit-suite/skills/ln-634-test-coverage-auditor/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-06-26T13:33:21.979Z",
+    "stars": 502,
+    "language": "JavaScript",
+    "pushed_at": "2026-06-10T16:29:34Z",
+    "license": "MIT"
+  }
+}

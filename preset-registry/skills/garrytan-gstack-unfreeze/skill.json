@@ -1,0 +1,25 @@
+{
+  "id": "garrytan-gstack-unfreeze",
+  "name": "unfreeze",
+  "description": "Clear the freeze boundary set by /freeze, allowing edits to all directories again. (gstack)",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "0.1.0",
+  "author": "garrytan",
+  "install_path": ".claude/skills/unfreeze/SKILL.md",
+  "source": {
+    "repo": "garrytan/gstack",
+    "url": "https://github.com/garrytan/gstack/blob/main/unfreeze/SKILL.md",
+    "path": "unfreeze/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-26T13:29:55.863Z",
+    "stars": 116299,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-25T16:42:45Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "garrytan-gstack-scrape",
+  "name": "scrape",
+  "description": "Pull data from a web page. (gstack)",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "garrytan",
+  "install_path": ".claude/skills/scrape/SKILL.md",
+  "source": {
+    "repo": "garrytan/gstack",
+    "url": "https://github.com/garrytan/gstack/blob/main/scrape/SKILL.md",
+    "path": "scrape/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-26T13:29:54.950Z",
+    "stars": 116299,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-25T16:42:45Z",
+    "license": "MIT"
+  }
+}

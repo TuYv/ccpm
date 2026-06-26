@@ -1,0 +1,25 @@
+{
+  "id": "tzachbon-smart-ralph-hook-development",
+  "name": "Hook Development",
+  "description": "This skill should be used when the user asks to \"create a hook\", \"add a PreToolUse/PostToolUse/Stop hook\", \"validate tool use\", \"implement prompt-based hooks\", \"use ${CLAUDE_PLUGIN_ROOT}\", \"set up event-driven automation\", \"block dangerous commands\", or mentions hook events (PreToolUse, PostToolUse, Stop, SubagentStop, SessionStart, SessionEnd, UserPromptSubmit, PreCompact, Notification). Provides comprehensive guidance for creating and implementing Claude Code plugin hooks with focus on advance",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "0.1.0",
+  "author": "tzachbon",
+  "install_path": ".claude/skills/Hook Development/SKILL.md",
+  "source": {
+    "repo": "tzachbon/smart-ralph",
+    "url": "https://github.com/tzachbon/smart-ralph/blob/main/.agents/skills/Hook Development/SKILL.md",
+    "path": ".agents/skills/Hook Development/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-26T13:34:16.653Z",
+    "stars": 348,
+    "language": "Shell",
+    "pushed_at": "2026-05-19T19:57:51Z",
+    "license": "MIT"
+  }
+}

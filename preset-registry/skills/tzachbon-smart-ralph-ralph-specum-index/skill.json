@@ -1,0 +1,25 @@
+{
+  "id": "tzachbon-smart-ralph-ralph-specum-index",
+  "name": "ralph-specum-index",
+  "description": "This skill should be used only when the user explicitly asks to use `$ralph-specum-index`, or explicitly asks Ralph Specum in Codex to generate or refresh index artifacts.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tzachbon",
+  "install_path": ".claude/skills/ralph-specum-index/SKILL.md",
+  "source": {
+    "repo": "tzachbon/smart-ralph",
+    "url": "https://github.com/tzachbon/smart-ralph/blob/main/plugins/ralph-specum-codex/skills/ralph-specum-index/SKILL.md",
+    "path": "plugins/ralph-specum-codex/skills/ralph-specum-index/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-26T13:34:18.306Z",
+    "stars": 348,
+    "language": "Shell",
+    "pushed_at": "2026-05-19T19:57:51Z",
+    "license": "MIT"
+  }
+}

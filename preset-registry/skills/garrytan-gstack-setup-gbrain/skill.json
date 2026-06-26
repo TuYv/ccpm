@@ -1,0 +1,25 @@
+{
+  "id": "garrytan-gstack-setup-gbrain",
+  "name": "setup-gbrain",
+  "description": "Set up gbrain for this coding agent: install the CLI, initialize a local PGLite or Supabase brain, register MCP, capture per-remote trust policy. (gstack)",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "garrytan",
+  "install_path": ".claude/skills/setup-gbrain/SKILL.md",
+  "source": {
+    "repo": "garrytan/gstack",
+    "url": "https://github.com/garrytan/gstack/blob/main/setup-gbrain/SKILL.md",
+    "path": "setup-gbrain/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-26T13:29:55.254Z",
+    "stars": 116299,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-25T16:42:45Z",
+    "license": "MIT"
+  }
+}

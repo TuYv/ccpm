@@ -1,0 +1,25 @@
+{
+  "id": "affaan-m-ecc-video-editing",
+  "name": "video-editing",
+  "description": "AI-assisted video editing workflows for cutting, structuring, and augmenting real footage. Covers the full pipeline from raw capture through FFmpeg, Remotion, ElevenLabs, fal.ai, and final polish in Descript or CapCut. Use when the user wants to edit video, cut footage, create vlogs, or build video content.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "affaan-m",
+  "install_path": ".claude/skills/video-editing/SKILL.md",
+  "source": {
+    "repo": "affaan-m/ECC",
+    "url": "https://github.com/affaan-m/ECC/blob/main/.agents/skills/video-editing/SKILL.md",
+    "path": ".agents/skills/video-editing/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-26T13:30:37.231Z",
+    "stars": 222011,
+    "language": "JavaScript",
+    "pushed_at": "2026-06-25T23:47:36Z",
+    "license": "MIT"
+  }
+}

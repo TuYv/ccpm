@@ -1,0 +1,25 @@
+{
+  "id": "tzachbon-smart-ralph-ralph-specum-switch",
+  "name": "ralph-specum-switch",
+  "description": "This skill should be used only when the user explicitly asks to use `$ralph-specum-switch`, or explicitly asks Ralph Specum in Codex to switch the active spec.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tzachbon",
+  "install_path": ".claude/skills/ralph-specum-switch/SKILL.md",
+  "source": {
+    "repo": "tzachbon/smart-ralph",
+    "url": "https://github.com/tzachbon/smart-ralph/blob/main/plugins/ralph-specum-codex/skills/ralph-specum-switch/SKILL.md",
+    "path": "plugins/ralph-specum-codex/skills/ralph-specum-switch/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-26T13:34:19.012Z",
+    "stars": 348,
+    "language": "Shell",
+    "pushed_at": "2026-05-19T19:57:51Z",
+    "license": "MIT"
+  }
+}

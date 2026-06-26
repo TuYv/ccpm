@@ -1,0 +1,25 @@
+{
+  "id": "levnikolaevich-claude-code-skills-ln-637-test-structure-auditor",
+  "name": "ln-637-test-structure-auditor",
+  "description": "Audits test maintainability and structure: layout drift, orphan tests, fragmented duplicates, test-to-source mapping, and domain grouping. Use when auditing test suite organization.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "levnikolaevich",
+  "install_path": ".claude/skills/ln-637-test-structure-auditor/SKILL.md",
+  "source": {
+    "repo": "levnikolaevich/claude-code-skills",
+    "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/codebase-audit-suite/skills/ln-637-test-structure-auditor/SKILL.md",
+    "path": "plugins/codebase-audit-suite/skills/ln-637-test-structure-auditor/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-06-26T13:33:22.258Z",
+    "stars": 502,
+    "language": "JavaScript",
+    "pushed_at": "2026-06-10T16:29:34Z",
+    "license": "MIT"
+  }
+}

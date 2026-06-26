@@ -1,0 +1,25 @@
+{
+  "id": "colbymchenry-codegraph-add-lang",
+  "name": "add-lang",
+  "description": "Add tree-sitter language support to codegraph end-to-end — wire the grammar + extractor, write tests, then benchmark extraction quality and retrieval value on 3 popular real-world repos. Use when the user runs /add-lang <language> or asks to add/support a new language (e.g. Lua, Elixir, Zig, OCaml) in codegraph.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "colbymchenry",
+  "install_path": ".claude/skills/add-lang/SKILL.md",
+  "source": {
+    "repo": "colbymchenry/codegraph",
+    "url": "https://github.com/colbymchenry/codegraph/blob/main/.claude/skills/add-lang/SKILL.md",
+    "path": ".claude/skills/add-lang/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-26T13:33:48.046Z",
+    "stars": 54891,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-24T22:20:10Z",
+    "license": "MIT"
+  }
+}

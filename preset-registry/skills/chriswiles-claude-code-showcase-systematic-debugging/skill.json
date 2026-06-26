@@ -1,0 +1,25 @@
+{
+  "id": "chriswiles-claude-code-showcase-systematic-debugging",
+  "name": "systematic-debugging",
+  "description": "Four-phase debugging methodology with root cause analysis. Use when investigating bugs, fixing test failures, or troubleshooting unexpected behavior. Emphasizes NO FIXES WITHOUT ROOT CAUSE FIRST.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ChrisWiles",
+  "install_path": ".claude/skills/systematic-debugging/SKILL.md",
+  "source": {
+    "repo": "ChrisWiles/claude-code-showcase",
+    "url": "https://github.com/ChrisWiles/claude-code-showcase/blob/main/.claude/skills/systematic-debugging/SKILL.md",
+    "path": ".claude/skills/systematic-debugging/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-26T13:34:35.484Z",
+    "stars": 5977,
+    "language": "JavaScript",
+    "pushed_at": "2026-01-06T19:05:18Z",
+    "license": null
+  }
+}

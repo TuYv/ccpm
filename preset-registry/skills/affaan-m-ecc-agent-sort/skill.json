@@ -1,0 +1,25 @@
+{
+  "id": "affaan-m-ecc-agent-sort",
+  "name": "agent-sort",
+  "description": "Build an evidence-backed ECC install plan for a specific repo by sorting skills, commands, rules, hooks, and extras into DAILY vs LIBRARY buckets using parallel repo-aware review passes. Use when ECC should be trimmed to what a project actually needs instead of loading the full bundle.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "affaan-m",
+  "install_path": ".claude/skills/agent-sort/SKILL.md",
+  "source": {
+    "repo": "affaan-m/ECC",
+    "url": "https://github.com/affaan-m/ECC/blob/main/.agents/skills/agent-sort/SKILL.md",
+    "path": ".agents/skills/agent-sort/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-26T13:30:33.262Z",
+    "stars": 222011,
+    "language": "JavaScript",
+    "pushed_at": "2026-06-25T23:47:36Z",
+    "license": "MIT"
+  }
+}

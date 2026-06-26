@@ -1,0 +1,25 @@
+{
+  "id": "tzachbon-smart-ralph-skill-development",
+  "name": "Skill Development",
+  "description": "This skill should be used when the user wants to \"create a skill\", \"add a skill to plugin\", \"write a new skill\", \"improve skill description\", \"organize skill content\", or needs guidance on skill structure, progressive disclosure, or skill development best practices for Claude Code plugins.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "0.1.0",
+  "author": "tzachbon",
+  "install_path": ".claude/skills/Skill Development/SKILL.md",
+  "source": {
+    "repo": "tzachbon/smart-ralph",
+    "url": "https://github.com/tzachbon/smart-ralph/blob/main/.agents/skills/Skill Development/SKILL.md",
+    "path": ".agents/skills/Skill Development/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-26T13:34:17.157Z",
+    "stars": 348,
+    "language": "Shell",
+    "pushed_at": "2026-05-19T19:57:51Z",
+    "license": "MIT"
+  }
+}

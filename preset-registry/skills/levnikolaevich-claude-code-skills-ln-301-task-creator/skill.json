@@ -1,0 +1,25 @@
+{
+  "id": "levnikolaevich-claude-code-skills-ln-301-task-creator",
+  "name": "ln-301-task-creator",
+  "description": "Creates implementation, refactoring, and test tasks from templates. Use when an approved task plan needs tasks created via the configured tracker provider and reflected in kanban.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "levnikolaevich",
+  "install_path": ".claude/skills/ln-301-task-creator/SKILL.md",
+  "source": {
+    "repo": "levnikolaevich/claude-code-skills",
+    "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/agile-workflow/skills/ln-301-task-creator/SKILL.md",
+    "path": "plugins/agile-workflow/skills/ln-301-task-creator/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-06-26T13:33:17.921Z",
+    "stars": 502,
+    "language": "JavaScript",
+    "pushed_at": "2026-06-10T16:29:34Z",
+    "license": "MIT"
+  }
+}

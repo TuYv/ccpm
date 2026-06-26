@@ -1,0 +1,25 @@
+{
+  "id": "levnikolaevich-claude-code-skills-ln-310-multi-agent-validator",
+  "name": "ln-310-multi-agent-validator",
+  "description": "Use when validating Stories, plans, or tasks through the evaluation platform with mandatory research, parallel evidence lanes, sequential merge, and bounded refinement. Modes: story | plan_review.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "levnikolaevich",
+  "install_path": ".claude/skills/ln-310-multi-agent-validator/SKILL.md",
+  "source": {
+    "repo": "levnikolaevich/claude-code-skills",
+    "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/agile-workflow/skills/ln-310-multi-agent-validator/SKILL.md",
+    "path": "plugins/agile-workflow/skills/ln-310-multi-agent-validator/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-06-26T13:33:18.105Z",
+    "stars": 502,
+    "language": "JavaScript",
+    "pushed_at": "2026-06-10T16:29:34Z",
+    "license": "MIT"
+  }
+}

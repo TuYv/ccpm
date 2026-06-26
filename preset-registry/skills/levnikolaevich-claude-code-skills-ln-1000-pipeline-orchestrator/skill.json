@@ -1,0 +1,25 @@
+{
+  "id": "levnikolaevich-claude-code-skills-ln-1000-pipeline-orchestrator",
+  "name": "ln-1000-pipeline-orchestrator",
+  "description": "Drives a Story through full pipeline (tasks, validation, execution, quality). Use when executing a Story end-to-end from kanban board.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "levnikolaevich",
+  "install_path": ".claude/skills/ln-1000-pipeline-orchestrator/SKILL.md",
+  "source": {
+    "repo": "levnikolaevich/claude-code-skills",
+    "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/agile-workflow/skills/ln-1000-pipeline-orchestrator/SKILL.md",
+    "path": "plugins/agile-workflow/skills/ln-1000-pipeline-orchestrator/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-06-26T13:33:17.009Z",
+    "stars": 502,
+    "language": "JavaScript",
+    "pushed_at": "2026-06-10T16:29:34Z",
+    "license": "MIT"
+  }
+}

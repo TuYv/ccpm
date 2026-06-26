@@ -1,0 +1,25 @@
+{
+  "id": "qwenlm-qwen-code-extension-creator",
+  "name": "extension-creator",
+  "description": "Create, scaffold, customize, validate, and locally test Qwen Code extensions. Use when the user wants a new Qwen Code extension, needs help choosing an extension template, wants to add QWEN.md context, commands, skills, agents, MCP servers, settings, hooks, channels, or LSP servers, or asks how to link and test an extension locally. Invoke with `/extension-creator` followed by an extension path and optional template name.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "QwenLM",
+  "install_path": ".claude/skills/extension-creator/SKILL.md",
+  "source": {
+    "repo": "QwenLM/qwen-code",
+    "url": "https://github.com/QwenLM/qwen-code/blob/main/packages/core/src/skills/bundled/extension-creator/SKILL.md",
+    "path": "packages/core/src/skills/bundled/extension-creator/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-26T13:34:39.186Z",
+    "stars": 25551,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-26T13:34:16Z",
+    "license": "Apache-2.0"
+  }
+}

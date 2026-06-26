@@ -1,0 +1,25 @@
+{
+  "id": "levnikolaevich-claude-code-skills-ln-638-test-oracle-effectiveness-auditor",
+  "name": "ln-638-test-oracle-effectiveness-auditor",
+  "description": "Audits assertion strength and test oracles that prove real defects. Use when finding weak tests that execute code but prove little.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "levnikolaevich",
+  "install_path": ".claude/skills/ln-638-test-oracle-effectiveness-auditor/SKILL.md",
+  "source": {
+    "repo": "levnikolaevich/claude-code-skills",
+    "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/codebase-audit-suite/skills/ln-638-test-oracle-effectiveness-auditor/SKILL.md",
+    "path": "plugins/codebase-audit-suite/skills/ln-638-test-oracle-effectiveness-auditor/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-06-26T13:33:22.365Z",
+    "stars": 502,
+    "language": "JavaScript",
+    "pushed_at": "2026-06-10T16:29:34Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "tzachbon-smart-ralph-plugin-structure",
+  "name": "Plugin Structure",
+  "description": "This skill should be used when the user asks to \"create a plugin\", \"scaffold a plugin\", \"understand plugin structure\", \"organize plugin components\", \"set up plugin.json\", \"use ${CLAUDE_PLUGIN_ROOT}\", \"add commands/agents/skills/hooks\", \"configure auto-discovery\", or needs guidance on plugin directory layout, manifest configuration, component organization, file naming conventions, or Claude Code plugin architecture best practices.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "0.1.0",
+  "author": "tzachbon",
+  "install_path": ".claude/skills/Plugin Structure/SKILL.md",
+  "source": {
+    "repo": "tzachbon/smart-ralph",
+    "url": "https://github.com/tzachbon/smart-ralph/blob/main/.agents/skills/Plugin Structure/SKILL.md",
+    "path": ".agents/skills/Plugin Structure/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-26T13:34:17.022Z",
+    "stars": 348,
+    "language": "Shell",
+    "pushed_at": "2026-05-19T19:57:51Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "garrytan-gstack-qa",
+  "name": "qa",
+  "description": "Systematically QA test a web application and fix bugs found. (gstack)",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "2.0.0",
+  "author": "garrytan",
+  "install_path": ".claude/skills/qa/SKILL.md",
+  "source": {
+    "repo": "garrytan/gstack",
+    "url": "https://github.com/garrytan/gstack/blob/main/qa/SKILL.md",
+    "path": "qa/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-26T13:29:54.642Z",
+    "stars": 116299,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-25T16:42:45Z",
+    "license": "MIT"
+  }
+}

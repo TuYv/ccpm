@@ -1,0 +1,25 @@
+{
+  "id": "affaan-m-ecc-agentic-engineering",
+  "name": "agentic-engineering",
+  "description": "> Operate as an agentic engineer using eval-first execution, decomposition, and cost-aware model routing. Use when AI agents perform most implementation work and humans enforce quality and risk controls.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "affaan-m",
+  "install_path": ".claude/skills/agentic-engineering/SKILL.md",
+  "source": {
+    "repo": "affaan-m/ECC",
+    "url": "https://github.com/affaan-m/ECC/blob/main/.kiro/skills/agentic-engineering/SKILL.md",
+    "path": ".kiro/skills/agentic-engineering/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-26T13:30:38.635Z",
+    "stars": 222011,
+    "language": "JavaScript",
+    "pushed_at": "2026-06-25T23:47:36Z",
+    "license": "MIT"
+  }
+}

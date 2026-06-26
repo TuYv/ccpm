@@ -1,0 +1,25 @@
+{
+  "id": "daymade-claude-code-skills-read-claude-web-conversation",
+  "name": "read-claude-web-conversation",
+  "description": ">- Read or export the COMPLETE transcript of a Claude.ai web conversation (a claude.ai/chat/... link) by driving the user's already-logged-in Chrome and calling Claude.ai's own internal conversation API from inside the page. Use this whenever the user pastes a claude.ai conversation link and asks to read, summarize, export, or extract it — \"read this Claude conversation\", \"what did that other chat say\", \"导出这个网页版对话\", \"读一下这个 claude.ai 链接\". Plain curl / WebFetch FAIL (login-gated) and get_page_text",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/read-claude-web-conversation/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-claude-code/read-claude-web-conversation/SKILL.md",
+    "path": "daymade-claude-code/read-claude-web-conversation/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-26T13:32:18.765Z",
+    "stars": 1217,
+    "language": "Python",
+    "pushed_at": "2026-06-26T12:08:10Z",
+    "license": "MIT"
+  }
+}

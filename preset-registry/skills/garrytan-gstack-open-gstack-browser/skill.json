@@ -1,0 +1,25 @@
+{
+  "id": "garrytan-gstack-open-gstack-browser",
+  "name": "open-gstack-browser",
+  "description": "Launch GStack Browser — AI-controlled Chromium with the sidebar extension baked in.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "0.2.0",
+  "author": "garrytan",
+  "install_path": ".claude/skills/open-gstack-browser/SKILL.md",
+  "source": {
+    "repo": "garrytan/gstack",
+    "url": "https://github.com/garrytan/gstack/blob/main/open-gstack-browser/SKILL.md",
+    "path": "open-gstack-browser/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-26T13:29:53.336Z",
+    "stars": 116299,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-25T16:42:45Z",
+    "license": "MIT"
+  }
+}

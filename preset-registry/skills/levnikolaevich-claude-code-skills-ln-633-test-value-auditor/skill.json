@@ -1,0 +1,25 @@
+{
+  "id": "levnikolaevich-claude-code-skills-ln-633-test-value-auditor",
+  "name": "ln-633-test-value-auditor",
+  "description": "Scores each test by portfolio value and returns KEEP/DELETE/MERGE/REWRITE. Use when pruning test-suite cost.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "levnikolaevich",
+  "install_path": ".claude/skills/ln-633-test-value-auditor/SKILL.md",
+  "source": {
+    "repo": "levnikolaevich/claude-code-skills",
+    "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/codebase-audit-suite/skills/ln-633-test-value-auditor/SKILL.md",
+    "path": "plugins/codebase-audit-suite/skills/ln-633-test-value-auditor/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-06-26T13:33:21.893Z",
+    "stars": 502,
+    "language": "JavaScript",
+    "pushed_at": "2026-06-10T16:29:34Z",
+    "license": "MIT"
+  }
+}

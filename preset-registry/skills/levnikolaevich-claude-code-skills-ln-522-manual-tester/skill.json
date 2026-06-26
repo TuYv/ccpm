@@ -1,0 +1,25 @@
+{
+  "id": "levnikolaevich-claude-code-skills-ln-522-manual-tester",
+  "name": "ln-522-manual-tester",
+  "description": "Performs manual testing of Story AC via executable bash scripts in tests/manual/. Use when Story implementation needs hands-on AC verification.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "levnikolaevich",
+  "install_path": ".claude/skills/ln-522-manual-tester/SKILL.md",
+  "source": {
+    "repo": "levnikolaevich/claude-code-skills",
+    "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/agile-workflow/skills/ln-522-manual-tester/SKILL.md",
+    "path": "plugins/agile-workflow/skills/ln-522-manual-tester/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-06-26T13:33:19.963Z",
+    "stars": 502,
+    "language": "JavaScript",
+    "pushed_at": "2026-06-10T16:29:34Z",
+    "license": "MIT"
+  }
+}

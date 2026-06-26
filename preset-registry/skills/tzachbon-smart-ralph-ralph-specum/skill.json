@@ -1,0 +1,25 @@
+{
+  "id": "tzachbon-smart-ralph-ralph-specum",
+  "name": "ralph-specum",
+  "description": "Use only when the user explicitly invokes `$ralph-specum`, requests Ralph Specum in Codex, asks Ralph Specum to handle a named phase, or explicitly requests autonomous or quick mode or continuation without pauses.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tzachbon",
+  "install_path": ".claude/skills/ralph-specum/SKILL.md",
+  "source": {
+    "repo": "tzachbon/smart-ralph",
+    "url": "https://github.com/tzachbon/smart-ralph/blob/main/plugins/ralph-specum-codex/skills/ralph-specum/SKILL.md",
+    "path": "plugins/ralph-specum-codex/skills/ralph-specum/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-26T13:34:19.307Z",
+    "stars": 348,
+    "language": "Shell",
+    "pushed_at": "2026-05-19T19:57:51Z",
+    "license": "MIT"
+  }
+}

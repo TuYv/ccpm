@@ -1,0 +1,25 @@
+{
+  "id": "garrytan-gstack-document-release",
+  "name": "document-release",
+  "description": "Post-ship documentation update. (gstack)",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "garrytan",
+  "install_path": ".claude/skills/document-release/SKILL.md",
+  "source": {
+    "repo": "garrytan/gstack",
+    "url": "https://github.com/garrytan/gstack/blob/main/document-release/SKILL.md",
+    "path": "document-release/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-26T13:29:51.702Z",
+    "stars": 116299,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-25T16:42:45Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "levnikolaevich-claude-code-skills-ln-514-test-log-analyzer",
+  "name": "ln-514-test-log-analyzer",
+  "description": "Analyzes application logs: classifies errors, checks log quality, maps stack traces to source. Use when logs need review after test runs or during development.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "levnikolaevich",
+  "install_path": ".claude/skills/ln-514-test-log-analyzer/SKILL.md",
+  "source": {
+    "repo": "levnikolaevich/claude-code-skills",
+    "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/agile-workflow/skills/ln-514-test-log-analyzer/SKILL.md",
+    "path": "plugins/agile-workflow/skills/ln-514-test-log-analyzer/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-06-26T13:33:19.691Z",
+    "stars": 502,
+    "language": "JavaScript",
+    "pushed_at": "2026-06-10T16:29:34Z",
+    "license": "MIT"
+  }
+}
