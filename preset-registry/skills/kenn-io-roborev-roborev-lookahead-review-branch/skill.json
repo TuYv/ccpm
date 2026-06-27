@@ -1,0 +1,25 @@
+{
+  "id": "kenn-io-roborev-roborev-lookahead-review-branch",
+  "name": "roborev-lookahead-review-branch",
+  "description": "Request a time-series look-ahead (a.k.a. peekahead / future-data leakage) review for all commits on the current branch and present the results",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "kenn-io",
+  "install_path": ".claude/skills/roborev-lookahead-review-branch/SKILL.md",
+  "source": {
+    "repo": "kenn-io/roborev",
+    "url": "https://github.com/kenn-io/roborev/blob/main/internal/skills/codex/roborev-lookahead-review-branch/SKILL.md",
+    "path": "internal/skills/codex/roborev-lookahead-review-branch/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-27T19:59:15.051Z",
+    "stars": 1460,
+    "language": "Go",
+    "pushed_at": "2026-06-27T18:13:46Z",
+    "license": "MIT"
+  }
+}
