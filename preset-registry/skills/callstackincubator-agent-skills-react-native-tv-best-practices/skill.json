@@ -1,0 +1,25 @@
+{
+  "id": "callstackincubator-agent-skills-react-native-tv-best-practices",
+  "name": "react-native-tv-best-practices",
+  "description": "Reviews React Native TV apps for focus/D-pad navigation, 10-foot UI layout, TV playback/DRM integration, low-memory TV performance, and TV accessibility. Use when building, debugging, or reviewing react-native-tvos, Expo TV, Amazon Vega/Kepler, or React Native web TV targets where the issue depends on remote input, TV focus, TV packaging, TV hardware, or TV playback constraints.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "callstackincubator",
+  "install_path": ".claude/skills/react-native-tv-best-practices/SKILL.md",
+  "source": {
+    "repo": "callstackincubator/agent-skills",
+    "url": "https://github.com/callstackincubator/agent-skills/blob/main/skills/react-native-tv-best-practices/SKILL.md",
+    "path": "skills/react-native-tv-best-practices/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-27T12:28:24.429Z",
+    "stars": 1494,
+    "language": "Shell",
+    "pushed_at": "2026-06-27T11:28:29Z",
+    "license": "MIT"
+  }
+}
