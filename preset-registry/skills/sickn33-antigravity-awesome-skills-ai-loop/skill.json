@@ -1,0 +1,25 @@
+{
+  "id": "sickn33-antigravity-awesome-skills-ai-loop",
+  "name": "ai-loop",
+  "description": "Runs a bounded spec-build-review development loop with explicit scope, stop conditions, and human approval gates for risky or ambiguous work.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sickn33",
+  "install_path": ".claude/skills/ai-loop/SKILL.md",
+  "source": {
+    "repo": "sickn33/antigravity-awesome-skills",
+    "url": "https://github.com/sickn33/antigravity-awesome-skills/blob/main/plugins/antigravity-awesome-skills-claude/skills/ai-loop/SKILL.md",
+    "path": "plugins/antigravity-awesome-skills-claude/skills/ai-loop/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-27T08:19:20.445Z",
+    "stars": 41804,
+    "language": "Python",
+    "pushed_at": "2026-06-27T08:05:52Z",
+    "license": "MIT"
+  }
+}
