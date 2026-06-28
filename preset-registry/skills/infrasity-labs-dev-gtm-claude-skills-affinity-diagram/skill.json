@@ -1,0 +1,25 @@
+{
+  "id": "infrasity-labs-dev-gtm-claude-skills-affinity-diagram",
+  "name": "affinity-diagram",
+  "description": "Organize qualitative research data into an affinity diagram with themes, clusters, and insight statements. Use when synthesizing large amounts of qualitative data from interviews, observations, or surveys.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Infrasity-Labs",
+  "install_path": ".claude/skills/affinity-diagram/SKILL.md",
+  "source": {
+    "repo": "Infrasity-Labs/dev-gtm-claude-skills",
+    "url": "https://github.com/Infrasity-Labs/dev-gtm-claude-skills/blob/main/.claude/skills/affinity-diagram/SKILL.md",
+    "path": ".claude/skills/affinity-diagram/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-28T20:15:38.750Z",
+    "stars": 77,
+    "language": "Python",
+    "pushed_at": "2026-06-28T19:34:19Z",
+    "license": "MIT"
+  }
+}

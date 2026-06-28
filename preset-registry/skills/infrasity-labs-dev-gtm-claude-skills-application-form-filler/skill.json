@@ -1,0 +1,25 @@
+{
+  "id": "infrasity-labs-dev-gtm-claude-skills-application-form-filler",
+  "name": "application-form-filler",
+  "description": "Fill out job application form fields with context-aware, tailored answers drawn from the candidate's CV and the job description",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Infrasity-Labs",
+  "install_path": ".claude/skills/application-form-filler/SKILL.md",
+  "source": {
+    "repo": "Infrasity-Labs/dev-gtm-claude-skills",
+    "url": "https://github.com/Infrasity-Labs/dev-gtm-claude-skills/blob/main/.claude/skills/application-form-filler/SKILL.md",
+    "path": ".claude/skills/application-form-filler/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-28T20:15:40.034Z",
+    "stars": 77,
+    "language": "Python",
+    "pushed_at": "2026-06-28T19:34:19Z",
+    "license": "MIT"
+  }
+}

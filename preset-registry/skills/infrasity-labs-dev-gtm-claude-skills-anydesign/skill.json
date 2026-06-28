@@ -1,0 +1,25 @@
+{
+  "id": "infrasity-labs-dev-gtm-claude-skills-anydesign",
+  "name": "anydesign",
+  "description": "Analyze images, websites, and Figma files to extract their design and generate a `design.md` with token system, component inventory, and reconstruction notes. Use this skill whenever the user wants to understand, document, replicate, or audit the design of something visual: a screenshot, a URL, a Figma link, a Pinterest reference, a mockup, a competitor's site, a component, a dashboard, a landing page. Also when they ask 'extract the design system from X', 'document the style of Y', 'analyze thi",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Infrasity-Labs",
+  "install_path": ".claude/skills/anydesign/SKILL.md",
+  "source": {
+    "repo": "Infrasity-Labs/dev-gtm-claude-skills",
+    "url": "https://github.com/Infrasity-Labs/dev-gtm-claude-skills/blob/main/.claude/skills/anydesign/SKILL.md",
+    "path": ".claude/skills/anydesign/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-28T20:15:39.691Z",
+    "stars": 77,
+    "language": "Python",
+    "pushed_at": "2026-06-28T19:34:19Z",
+    "license": "MIT"
+  }
+}
