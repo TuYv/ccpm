@@ -1,0 +1,25 @@
+{
+  "id": "daymade-claude-code-skills-codex-image-gallery",
+  "name": "codex-image-gallery",
+  "description": "Start or reuse a self-contained local web gallery for browsing Codex-generated images. Use when the user asks to browse Codex generated images, open a local image gallery, inspect ~/.codex/generated_images, view a Codex image output folder, or browse image files produced by Codex.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/codex-image-gallery/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/codex-image-gallery/SKILL.md",
+    "path": "codex-image-gallery/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-28T05:10:57.712Z",
+    "stars": 1219,
+    "language": "Python",
+    "pushed_at": "2026-06-28T05:02:52Z",
+    "license": "MIT"
+  }
+}

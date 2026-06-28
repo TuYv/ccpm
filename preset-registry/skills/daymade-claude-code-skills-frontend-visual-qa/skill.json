@@ -1,0 +1,25 @@
+{
+  "id": "daymade-claude-code-skills-frontend-visual-qa",
+  "name": "frontend-visual-qa",
+  "description": ">- Reviews rendered frontends, websites, dashboards, HTML slides, design-system specimens, live-artifact design systems, and generated UIs for visual quality defects that lint/build miss. Use when shipping or reviewing UI, especially after frontend-design or ui-designer work, or when the user mentions awkward line breaks, orphan Chinese characters, cramped text, wrapped buttons/tags/nav, horizontal overflow, double scrollbars, overlapping elements, repeated card piles, wrong page type such as a ",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/frontend-visual-qa/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/frontend-visual-qa/SKILL.md",
+    "path": "frontend-visual-qa/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-28T05:11:04.452Z",
+    "stars": 1219,
+    "language": "Python",
+    "pushed_at": "2026-06-28T05:02:52Z",
+    "license": "MIT"
+  }
+}

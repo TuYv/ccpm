@@ -1,0 +1,25 @@
+{
+  "id": "daymade-claude-code-skills-openclaw",
+  "name": "openclaw",
+  "description": ">- Manage OpenClaw (龙虾) instance configurations. Use whenever the user wants to audit, diff, copy, add-model, list, or switch models in an openclaw.json file, or when they mention lobsters, 虾, 甲虾, 乙虾, DeepSeek patch, default model, model aliases, or OpenClaw config validation.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/openclaw/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/openclaw/SKILL.md",
+    "path": "openclaw/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-28T05:11:07.329Z",
+    "stars": 1219,
+    "language": "Python",
+    "pushed_at": "2026-06-28T05:02:52Z",
+    "license": "MIT"
+  }
+}
