@@ -1,0 +1,25 @@
+{
+  "id": "daymade-claude-code-skills-gemini-history-analyzer",
+  "name": "gemini-history-analyzer",
+  "description": "Analyze Google Takeout exports of Gemini conversation history. Use when the user mentions Gemini takeout, Gemini export, Gemini history, Gemini conversation analysis, Google Takeout zip analysis, or drags a takeout zip into the project. Also use when the user asks to \"analyze my Gemini data\", \"what did I talk to Gemini about\", or wants to extract insights from Gemini chat logs.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/gemini-history-analyzer/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/gemini-history-analyzer/SKILL.md",
+    "path": "gemini-history-analyzer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-28T21:38:34.279Z",
+    "stars": 1223,
+    "language": "Python",
+    "pushed_at": "2026-06-28T20:39:08Z",
+    "license": "MIT"
+  }
+}
