@@ -1,0 +1,25 @@
+{
+  "id": "daymade-claude-code-skills-claude-migrate-memory-to-doc",
+  "name": "claude-migrate-memory-to-doc",
+  "description": ">- Migrates Claude Code personal memory (the per-project memory/ directory) into tool-agnostic reference docs, so other AI CLIs that auto-load AGENTS.md (Codex primarily; the content architecture transfers to Cursor and others) working in the same directory can read the same user profile, collaboration preferences, and methodology instead of being blind to them. Use this whenever the user says things like \"migrate my memory\", \"my memory is locked to Claude Code\", \"make Codex/Cursor read my profi",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/claude-migrate-memory-to-doc/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-claude-code/claude-migrate-memory-to-doc/SKILL.md",
+    "path": "daymade-claude-code/claude-migrate-memory-to-doc/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-28T18:28:44.219Z",
+    "stars": 1223,
+    "language": "Python",
+    "pushed_at": "2026-06-28T17:48:17Z",
+    "license": "MIT"
+  }
+}

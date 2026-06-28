@@ -1,0 +1,25 @@
+{
+  "id": "daymade-claude-code-skills-design-style-picker",
+  "name": "design-style-picker",
+  "description": "Batch-generate and compare visual design directions so a user can choose the style they actually want. Use when the user says they cannot describe an abstract visual style, asks for many style options, wants to choose from generated UI/design-system images, rejects outputs as too colorful/too dead/too generic, or needs an existing UI/design system evolved without discarding current assets.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/design-style-picker/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/design-style-picker/SKILL.md",
+    "path": "design-style-picker/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-28T18:28:46.252Z",
+    "stars": 1223,
+    "language": "Python",
+    "pushed_at": "2026-06-28T17:48:17Z",
+    "license": "MIT"
+  }
+}

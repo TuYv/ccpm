@@ -1,7 +1,7 @@
 {
   "id": "daymade-claude-code-skills-frontend-visual-qa",
   "name": "frontend-visual-qa",
-  "description": ">- Reviews rendered frontends, websites, dashboards, HTML slides, design-system specimens, live-artifact design systems, and generated UIs for visual quality defects that lint/build miss. Use when shipping or reviewing UI, especially after frontend-design or ui-designer work, or when the user mentions awkward line breaks, orphan Chinese characters, cramped text, wrapped buttons/tags/nav, horizontal overflow, double scrollbars, overlapping elements, repeated card piles, wrong page type such as a ",
+  "description": ">- Reviews rendered frontends, websites, dashboards, HTML slides, design-system specimens, live-artifact design systems, and generated UIs for visual quality defects that lint/build miss, including same-row label/input/helper misalignment, sibling component axis drift, wrong rendered state/branch, and user-journey recovery gaps. Use when shipping or reviewing UI, especially after frontend-design or ui-designer work, or when the user mentions awkward line breaks, orphan Chinese characters, crampe",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/daymade/claude-code-skills/blob/main/frontend-visual-qa/SKILL.md",
     "path": "frontend-visual-qa/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-28T16:48:08.172Z",
+    "discovered_at": "2026-06-28T18:28:46.753Z",
     "stars": 1223,
     "language": "Python",
-    "pushed_at": "2026-06-28T16:37:44Z",
+    "pushed_at": "2026-06-28T17:48:17Z",
     "license": "MIT"
   }
 }
