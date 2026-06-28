@@ -1,0 +1,25 @@
+{
+  "id": "daymade-claude-code-skills-pharma-daily-report",
+  "name": "pharma-daily-report",
+  "description": "> 生成 A 股医药行业日报：从新浪财经抓取 20 只核心医药股实时行情，分析 7 大细分赛道排名、涨跌榜 TOP 3、资金流向，然后通过飞书发送富文本日报。 覆盖恒瑞医药、百济神州、智飞生物、药明康德、迈瑞医疗、片仔癀、云南白药等 20 只核心标的。 当用户需要 医药日报、医药行业日报、pharma daily report、 新浪财经医药数据、A 股医药板块分析、飞书推送医药数据、 制药行业快报 时触发。也适用于\"帮我看一下今天医药板块\"、 \"给飞书发一份今天的医药数据\"等口语化请求。",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/pharma-daily-report/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/pharma-daily-report/SKILL.md",
+    "path": "pharma-daily-report/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-28T08:39:37.021Z",
+    "stars": 1221,
+    "language": "Python",
+    "pushed_at": "2026-06-28T08:01:23Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "daymade-claude-code-skills-download-gemini-images",
+  "name": "download-gemini-images",
+  "description": "Download, export, save, or package images from a Google Gemini conversation/chat/app page, especially uploaded images or generated image previews visible in a Gemini thread. Use when the task needs logged-in Chrome/Gemini state, opening Gemini image lightboxes, downloading the larger displayed image files, renaming them in order, and producing a ZIP archive.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/download-gemini-images/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/download-gemini-images/SKILL.md",
+    "path": "download-gemini-images/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-28T08:39:35.470Z",
+    "stars": 1221,
+    "language": "Python",
+    "pushed_at": "2026-06-28T08:01:23Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "daymade-claude-code-skills-ashare-news-fetcher",
+  "name": "ashare-news-fetcher",
+  "description": ">- 抓取 A 股消息面情报：从财联社、华尔街见闻、金十、新浪 7x24、东财快讯、 证监会/央行/上交所/财政部政策公告、东方财富股吧等公开来源抓取与股票相关的 新闻、政策、情绪，输出结构化 JSON 或 Markdown。 当用户提到“A 股消息面”、“抓新闻”、“个股消息”、“政策监管”、“股吧情绪”、 “财联社”、“东财快讯”、“市场情绪”或需要把某只股票相关的公开情报聚合出来时 触发。也适用于“帮我看看 000001 最近有什么消息”这类口语化请求。",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/ashare-news-fetcher/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/ashare-news-fetcher/SKILL.md",
+    "path": "ashare-news-fetcher/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-28T08:39:32.513Z",
+    "stars": 1221,
+    "language": "Python",
+    "pushed_at": "2026-06-28T08:01:23Z",
+    "license": "MIT"
+  }
+}
