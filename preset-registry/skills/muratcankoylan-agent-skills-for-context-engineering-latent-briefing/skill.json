@@ -1,7 +1,7 @@
 {
   "id": "muratcankoylan-agent-skills-for-context-engineering-latent-briefing",
   "name": "latent-briefing",
-  "description": "This skill should be used when the user asks to \"share memory between agents\", \"KV cache compaction for multi-agent\", \"orchestrator worker context\", \"latent briefing\", \"reduce worker tokens\", \"cross-agent memory without summarization\", or discusses Attention Matching compaction, recursive language models with workers, or token explosion in hierarchical agents.",
+  "description": "This skill should be used when the user asks to \\\"share memory between agents\\\", \\\"KV cache compaction for multi-agent\\\", \\\"orchestrator worker context\\\", \\\"latent briefing\\\", \\\"reduce worker tokens\\\", \\\"cross-agent memory without summarization\\\", or discusses Attention Matching compaction, recursive language models with workers, or token explosion in hierarchical agents.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering/blob/main/skills/latent-briefing/SKILL.md",
     "path": "skills/latent-briefing/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-29T21:05:26.546Z",
+    "discovered_at": "2026-06-29T22:28:20.236Z",
     "stars": 16806,
     "language": "Python",
-    "pushed_at": "2026-06-29T20:52:07Z",
+    "pushed_at": "2026-06-29T21:52:52Z",
     "license": "MIT"
-  },
-  "summary_zh": "这是一种多智能体上下文压缩方案，专治层级智能体协作时的token爆炸问题，让子智能体无需生成摘要即可共享记忆，大幅降低token消耗。"
+  }
 }
