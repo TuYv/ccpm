@@ -1,7 +1,7 @@
 {
   "id": "neolabhq-context-engineering-kit-review-pr",
   "name": "review-pr",
-  "description": "Comprehensive pull request review using specialized agents",
+  "description": "Review an existing GitHub pull request and post inline review comments on its diff. Use when the changes are on an opened PR rather than your local working tree.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/NeoLabHQ/context-engineering-kit/blob/master/plugins/review/skills/review-pr/SKILL.md",
     "path": "plugins/review/skills/review-pr/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-06-29T18:34:15.102Z",
+    "discovered_at": "2026-06-29T21:04:44.309Z",
     "stars": 1186,
     "language": "TypeScript",
-    "pushed_at": "2026-06-20T22:44:40Z",
+    "pushed_at": "2026-06-29T20:51:08Z",
     "license": "GPL-3.0"
-  },
-  "summary_zh": "这是一款用专属智能体全面审查代码合并请求的工具，能帮你自动搞定繁琐的PR审查，适合想提升代码审查效率和质量的开发团队。"
+  }
 }

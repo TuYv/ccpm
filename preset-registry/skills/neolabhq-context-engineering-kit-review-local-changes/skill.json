@@ -1,7 +1,7 @@
 {
   "id": "neolabhq-context-engineering-kit-review-local-changes",
   "name": "review-local-changes",
-  "description": "Comprehensive review of local uncommitted changes using specialized agents with code improvement suggestions",
+  "description": "Review your local uncommitted working-tree changes (git diff plus untracked files) and return actionable improvement suggestions. Use before committing, when nothing has been pushed yet.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/NeoLabHQ/context-engineering-kit/blob/master/plugins/review/skills/review-local-changes/SKILL.md",
     "path": "plugins/review/skills/review-local-changes/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-06-29T18:34:14.634Z",
+    "discovered_at": "2026-06-29T21:04:44.186Z",
     "stars": 1186,
     "language": "TypeScript",
-    "pushed_at": "2026-06-20T22:44:40Z",
+    "pushed_at": "2026-06-29T20:51:08Z",
     "license": "GPL-3.0"
-  },
-  "summary_zh": "它用智能体全面审查本地未提交的代码修改，并给出改进建议，适合提交代码前做自查，帮你提前把关代码质量。"
+  }
 }

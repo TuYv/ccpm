@@ -1,7 +1,7 @@
 {
   "id": "muratcankoylan-agent-skills-for-context-engineering-memory-systems",
   "name": "memory-systems",
-  "description": "> This skill should be used for persistent semantic memory in agent systems: cross-session knowledge retention, entity tracking, temporal validity, graph or vector retrieval, memory consolidation, and memory benchmark selection. Route file-backed scratchpads to filesystem-context, handoff summaries to context-compression, and token-efficiency tactics to context-optimization.",
+  "description": "This skill should be used for persistent semantic memory in agent systems: cross-session knowledge retention, entity tracking, temporal validity, graph or vector retrieval, memory consolidation, and memory benchmark selection. Route file-backed scratchpads to filesystem-context, handoff summaries to context-compression, and token-efficiency tactics to context-optimization.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering/blob/main/skills/memory-systems/SKILL.md",
     "path": "skills/memory-systems/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-29T18:35:21.513Z",
+    "discovered_at": "2026-06-29T21:05:27.137Z",
     "stars": 16806,
     "language": "Python",
-    "pushed_at": "2026-05-26T05:36:56Z",
+    "pushed_at": "2026-06-29T20:52:07Z",
     "license": "MIT"
-  },
-  "summary_zh": "为智能体打造可跨会话保留的语义记忆层，支持实体追踪、时效管理、图谱或向量检索以及记忆整合，适合需要长期记住用户和上下文的 Agent 应用。"
+  }
 }
