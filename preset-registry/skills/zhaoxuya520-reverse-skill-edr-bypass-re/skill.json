@@ -1,0 +1,25 @@
+{
+  "id": "zhaoxuya520-reverse-skill-edr-bypass-re",
+  "name": "edr-bypass-re",
+  "description": "| 逆向防御方实现 → 红队针对性绕过。把 EDR / Defender / AV 的 hook 表、ETW provider、AMSI 实现先逆向出来， 再写针对性的 unhook / 间接 syscall / ETW patch / call stack spoof。对照 MITRE ATT&CK T1562 防御规避。 触发关键词：EDR 绕过、AV bypass、免杀、unhook、direct syscall、indirect syscall、Hell's Gate、Halo's Gate、 Tartarus Gate、ETW patch、AMSI patch、call stack spoofing、hardware breakpoint Blindside、MITRE T1562、 ntdll unhook、kernel callback、CrowdStrike 绕过、Defender 绕过、Sentinel One 绕过、Elastic Defend、 Sysmon 规避、PPID spoof、Sleep mask、Process Hollowing、Reflective",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "zhaoxuya520",
+  "install_path": ".claude/skills/edr-bypass-re/SKILL.md",
+  "source": {
+    "repo": "zhaoxuya520/reverse-skill",
+    "url": "https://github.com/zhaoxuya520/reverse-skill/blob/main/skills/edr-bypass-re/SKILL.md",
+    "path": "skills/edr-bypass-re/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-29T12:22:36.581Z",
+    "stars": 6881,
+    "language": "PowerShell",
+    "pushed_at": "2026-06-29T11:22:17Z",
+    "license": "MIT"
+  }
+}

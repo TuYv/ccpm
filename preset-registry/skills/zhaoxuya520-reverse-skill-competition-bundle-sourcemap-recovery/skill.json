@@ -1,0 +1,25 @@
+{
+  "id": "zhaoxuya520-reverse-skill-competition-bundle-sourcemap-recovery",
+  "name": "competition-bundle-sourcemap-recovery",
+  "description": "Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for source maps, build manifests, chunk registries, emitted bundles, obfuscated loader flow, and frontend runtime recovery. Use when the user asks to reconstruct served JavaScript structure, inspect source maps or chunk maps, trace bundle loading, recover hidden routes or APIs from emitted assets, or explain runtime behavior from built frontend artifacts. Use only after `$ctf-sandbox-orchestrator` has already establishe",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "zhaoxuya520",
+  "install_path": ".claude/skills/competition-bundle-sourcemap-recovery/SKILL.md",
+  "source": {
+    "repo": "zhaoxuya520/reverse-skill",
+    "url": "https://github.com/zhaoxuya520/reverse-skill/blob/main/CTF-Sandbox-Orchestrator/competition-bundle-sourcemap-recovery/SKILL.md",
+    "path": "CTF-Sandbox-Orchestrator/competition-bundle-sourcemap-recovery/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-29T12:22:32.151Z",
+    "stars": 6881,
+    "language": "PowerShell",
+    "pushed_at": "2026-06-29T11:22:17Z",
+    "license": "MIT"
+  }
+}

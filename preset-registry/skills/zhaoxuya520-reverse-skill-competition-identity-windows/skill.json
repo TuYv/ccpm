@@ -1,0 +1,25 @@
+{
+  "id": "zhaoxuya520-reverse-skill-competition-identity-windows",
+  "name": "competition-identity-windows",
+  "description": "Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for Active Directory, Kerberos, LDAP, OAuth, enterprise messaging, Windows host forensics, credential material, and lateral-movement challenges. Use when the user asks to trace tickets or tokens, inspect mailbox rules, analyze Windows host evidence, understand an AD trust path, or explain a lateral-movement chain across sandbox-linked nodes. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assu",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "zhaoxuya520",
+  "install_path": ".claude/skills/competition-identity-windows/SKILL.md",
+  "source": {
+    "repo": "zhaoxuya520/reverse-skill",
+    "url": "https://github.com/zhaoxuya520/reverse-skill/blob/main/CTF-Sandbox-Orchestrator/competition-identity-windows/SKILL.md",
+    "path": "CTF-Sandbox-Orchestrator/competition-identity-windows/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-29T12:22:33.215Z",
+    "stars": 6881,
+    "language": "PowerShell",
+    "pushed_at": "2026-06-29T11:22:17Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "zhaoxuya520-reverse-skill-competition-mailbox-abuse",
+  "name": "competition-mailbox-abuse",
+  "description": "Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for enterprise mail abuse, OAuth consent, inbox or forwarding rules, transport rules, shared mailbox access, phishing chains, and token-to-mailbox side effects. Use when the user asks to trace mailbox rules, OAuth consent grants, forwarding or delegate abuse, shared mailbox access, message-trace evidence, or explain how mail artifacts turn into persistence, exfiltration, or privilege. Use only after `$ctf-sandbox-orches",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "zhaoxuya520",
+  "install_path": ".claude/skills/competition-mailbox-abuse/SKILL.md",
+  "source": {
+    "repo": "zhaoxuya520/reverse-skill",
+    "url": "https://github.com/zhaoxuya520/reverse-skill/blob/main/CTF-Sandbox-Orchestrator/competition-mailbox-abuse/SKILL.md",
+    "path": "CTF-Sandbox-Orchestrator/competition-mailbox-abuse/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-29T12:22:33.988Z",
+    "stars": 6881,
+    "language": "PowerShell",
+    "pushed_at": "2026-06-29T11:22:17Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "zhaoxuya520-reverse-skill-src-hunter",
+  "name": "src-hunter",
+  "description": "实战 SRC / 众测 / Bug bounty 漏洞挖掘工作流 skill。包含：5 阶段方法论（intake → recon → enum → hunt → report）、19 个攻击类 playbook（SQLi/XSS/RCE/SSRF/IDOR/CSRF/Path Traversal/File Upload/SSTI/XXE/Race/HTTP Smuggling/OAuth/JWT/SAML/GraphQL/Mobile/LLM/DoS）、305 个结构化 payload、263 个 WAF/EDR 绕过变体、2887 份 HackerOne 真实 High/Critical 已披露案例、77,000+ WooYun 案例统计、国产 OA / 中间件指纹库、银行 / 电信行业垂直 playbook。当用户提到 \"src 挖洞 / src 漏洞挖掘 / bug bounty / 众测 / hackerone / 漏洞赏金 / SRC / 任意 X 漏洞 / 渗透测试\" 或问\"如何挖某个目标 / 怎么测某个 API / 如何绕过 WAF\" 时触发。",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "zhaoxuya520",
+  "install_path": ".claude/skills/src-hunter/SKILL.md",
+  "source": {
+    "repo": "zhaoxuya520/reverse-skill",
+    "url": "https://github.com/zhaoxuya520/reverse-skill/blob/main/skills/pentest-tools/src-hunter/SKILL.md",
+    "path": "skills/pentest-tools/src-hunter/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-29T12:22:37.496Z",
+    "stars": 6881,
+    "language": "PowerShell",
+    "pushed_at": "2026-06-29T11:22:17Z",
+    "license": "MIT"
+  }
+}

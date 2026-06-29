@@ -1,0 +1,25 @@
+{
+  "id": "zhaoxuya520-reverse-skill-competition-lsass-ticket-material",
+  "name": "competition-lsass-ticket-material",
+  "description": "Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for LSASS-resident secrets, Windows logon sessions, Kerberos ticket caches, DPAPI-backed material, SSP artifacts, and replayable credential extraction. Use when the user asks to inspect LSASS memory, recover tickets or logon sessions, trace DPAPI or SSP material, distinguish which credential artifacts are replayable, or connect host-resident credential material to an accepted pivot or privilege edge. Use only after `$ct",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "zhaoxuya520",
+  "install_path": ".claude/skills/competition-lsass-ticket-material/SKILL.md",
+  "source": {
+    "repo": "zhaoxuya520/reverse-skill",
+    "url": "https://github.com/zhaoxuya520/reverse-skill/blob/main/CTF-Sandbox-Orchestrator/competition-lsass-ticket-material/SKILL.md",
+    "path": "CTF-Sandbox-Orchestrator/competition-lsass-ticket-material/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-29T12:22:33.817Z",
+    "stars": 6881,
+    "language": "PowerShell",
+    "pushed_at": "2026-06-29T11:22:17Z",
+    "license": "MIT"
+  }
+}

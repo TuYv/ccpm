@@ -1,0 +1,25 @@
+{
+  "id": "zhaoxuya520-reverse-skill-competition-relay-coercion-chain",
+  "name": "competition-relay-coercion-chain",
+  "description": "Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for forced-auth coercion, relay chains, target selection, NTLM or related acceptance paths, and coercion-to-privilege transitions. Use when the user asks to trace a coercion primitive, follow a relay path, analyze forced authentication, determine which service accepts relayed auth, or connect a coercion step to resulting privilege, enrollment, or code execution. Use only after `$ctf-sandbox-orchestrator` has already est",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "zhaoxuya520",
+  "install_path": ".claude/skills/competition-relay-coercion-chain/SKILL.md",
+  "source": {
+    "repo": "zhaoxuya520/reverse-skill",
+    "url": "https://github.com/zhaoxuya520/reverse-skill/blob/main/CTF-Sandbox-Orchestrator/competition-relay-coercion-chain/SKILL.md",
+    "path": "CTF-Sandbox-Orchestrator/competition-relay-coercion-chain/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-29T12:22:34.663Z",
+    "stars": 6881,
+    "language": "PowerShell",
+    "pushed_at": "2026-06-29T11:22:17Z",
+    "license": "MIT"
+  }
+}

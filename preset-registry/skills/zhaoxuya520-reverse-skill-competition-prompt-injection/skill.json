@@ -1,0 +1,25 @@
+{
+  "id": "zhaoxuya520-reverse-skill-competition-prompt-injection",
+  "name": "competition-prompt-injection",
+  "description": "Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for prompt-injection, retrieval poisoning, memory contamination, planner drift, MCP or tool-boundary abuse, and agent exfiltration challenges. Use when the user asks to analyze prompt injection, retrieval poisoning, memory contamination, planner drift, tool-argument corruption, or secret exposure caused by an agent chain. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and routed h",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "zhaoxuya520",
+  "install_path": ".claude/skills/competition-prompt-injection/SKILL.md",
+  "source": {
+    "repo": "zhaoxuya520/reverse-skill",
+    "url": "https://github.com/zhaoxuya520/reverse-skill/blob/main/CTF-Sandbox-Orchestrator/competition-prompt-injection/SKILL.md",
+    "path": "CTF-Sandbox-Orchestrator/competition-prompt-injection/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-29T12:22:34.344Z",
+    "stars": 6881,
+    "language": "PowerShell",
+    "pushed_at": "2026-06-29T11:22:17Z",
+    "license": "MIT"
+  }
+}

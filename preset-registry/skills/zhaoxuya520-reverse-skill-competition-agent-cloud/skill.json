@@ -1,0 +1,25 @@
+{
+  "id": "zhaoxuya520-reverse-skill-competition-agent-cloud",
+  "name": "competition-agent-cloud",
+  "description": "Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for AI-agent, prompt-injection, MCP or toolchain, cloud, container, CI/CD, and supply-chain challenges. Use when the user asks to analyze prompt-to-tool flows, retrieval poisoning, mounted secrets, deployment drift, runtime-vs-manifest mismatches, registry provenance, or CI-produced artifacts under sandbox assumptions. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and routed here",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "zhaoxuya520",
+  "install_path": ".claude/skills/competition-agent-cloud/SKILL.md",
+  "source": {
+    "repo": "zhaoxuya520/reverse-skill",
+    "url": "https://github.com/zhaoxuya520/reverse-skill/blob/main/CTF-Sandbox-Orchestrator/competition-agent-cloud/SKILL.md",
+    "path": "CTF-Sandbox-Orchestrator/competition-agent-cloud/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-29T12:22:31.891Z",
+    "stars": 6881,
+    "language": "PowerShell",
+    "pushed_at": "2026-06-29T11:22:17Z",
+    "license": "MIT"
+  }
+}

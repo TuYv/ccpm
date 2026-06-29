@@ -1,0 +1,25 @@
+{
+  "id": "zhaoxuya520-reverse-skill-competition-runtime-routing",
+  "name": "competition-runtime-routing",
+  "description": "Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for reverse proxies, Host headers, forwarded headers, vhost routing, websocket upgrades, path-prefix rewriting, base-URL derivation, and multi-node route resolution. Use when the user asks which host or container serves a route, why a public-looking domain still belongs to the sandbox, how headers or proxies change behavior, or how a route resolves across proxy, container, and worker boundaries. Use only after `$ctf-san",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "zhaoxuya520",
+  "install_path": ".claude/skills/competition-runtime-routing/SKILL.md",
+  "source": {
+    "repo": "zhaoxuya520/reverse-skill",
+    "url": "https://github.com/zhaoxuya520/reverse-skill/blob/main/CTF-Sandbox-Orchestrator/competition-runtime-routing/SKILL.md",
+    "path": "CTF-Sandbox-Orchestrator/competition-runtime-routing/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-29T12:22:34.940Z",
+    "stars": 6881,
+    "language": "PowerShell",
+    "pushed_at": "2026-06-29T11:22:17Z",
+    "license": "MIT"
+  }
+}

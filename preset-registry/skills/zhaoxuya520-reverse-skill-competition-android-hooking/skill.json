@@ -1,0 +1,25 @@
+{
+  "id": "zhaoxuya520-reverse-skill-competition-android-hooking",
+  "name": "competition-android-hooking",
+  "description": "Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for Android APK hooking, Frida tracing, request-signing recovery, SSL pinning bypass, JNI boundary inspection, and app trust-boundary analysis. Use when the user asks to hook an APK, inspect signer logic, trace Java or native boundaries, bypass pinning or root checks, inspect shared prefs or app databases, or replay accepted mobile requests. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assu",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "zhaoxuya520",
+  "install_path": ".claude/skills/competition-android-hooking/SKILL.md",
+  "source": {
+    "repo": "zhaoxuya520/reverse-skill",
+    "url": "https://github.com/zhaoxuya520/reverse-skill/blob/main/CTF-Sandbox-Orchestrator/competition-android-hooking/SKILL.md",
+    "path": "CTF-Sandbox-Orchestrator/competition-android-hooking/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-29T12:22:31.978Z",
+    "stars": 6881,
+    "language": "PowerShell",
+    "pushed_at": "2026-06-29T11:22:17Z",
+    "license": "MIT"
+  }
+}

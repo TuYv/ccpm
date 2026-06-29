@@ -1,0 +1,25 @@
+{
+  "id": "zhaoxuya520-reverse-skill-competition-request-normalization-smuggling",
+  "name": "competition-request-normalization-smuggling",
+  "description": "Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for parser differentials, HTTP normalization gaps, ambiguous headers, path decoding drift, transfer-framing mismatches, and request smuggling routes. Use when the user asks to trace proxy and backend parse differences, conflicting path normalization, Host or forwarded-header ambiguity, CL/TE issues, or routing outcomes that differ across hops. Use only after `$ctf-sandbox-orchestrator` has already established sandbox as",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "zhaoxuya520",
+  "install_path": ".claude/skills/competition-request-normalization-smuggling/SKILL.md",
+  "source": {
+    "repo": "zhaoxuya520/reverse-skill",
+    "url": "https://github.com/zhaoxuya520/reverse-skill/blob/main/CTF-Sandbox-Orchestrator/competition-request-normalization-smuggling/SKILL.md",
+    "path": "CTF-Sandbox-Orchestrator/competition-request-normalization-smuggling/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-29T12:22:34.749Z",
+    "stars": 6881,
+    "language": "PowerShell",
+    "pushed_at": "2026-06-29T11:22:17Z",
+    "license": "MIT"
+  }
+}

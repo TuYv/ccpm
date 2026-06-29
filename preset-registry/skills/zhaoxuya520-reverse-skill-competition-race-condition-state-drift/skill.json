@@ -1,0 +1,25 @@
+{
+  "id": "zhaoxuya520-reverse-skill-competition-race-condition-state-drift",
+  "name": "competition-race-condition-state-drift",
+  "description": "Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for race windows, ordering bugs, idempotency failures, lock gaps, concurrent worker drift, and state inconsistencies that produce decisive effects. Use when the user asks to reproduce timing-sensitive bugs, concurrent state corruption, duplicate actions, stale reads, or privilege or balance drift caused by request ordering. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and routed",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "zhaoxuya520",
+  "install_path": ".claude/skills/competition-race-condition-state-drift/SKILL.md",
+  "source": {
+    "repo": "zhaoxuya520/reverse-skill",
+    "url": "https://github.com/zhaoxuya520/reverse-skill/blob/main/CTF-Sandbox-Orchestrator/competition-race-condition-state-drift/SKILL.md",
+    "path": "CTF-Sandbox-Orchestrator/competition-race-condition-state-drift/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-29T12:22:34.550Z",
+    "stars": 6881,
+    "language": "PowerShell",
+    "pushed_at": "2026-06-29T11:22:17Z",
+    "license": "MIT"
+  }
+}
