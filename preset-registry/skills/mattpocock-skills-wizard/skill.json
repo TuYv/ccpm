@@ -1,0 +1,25 @@
+{
+  "id": "mattpocock-skills-wizard",
+  "name": "wizard",
+  "description": "Generate an interactive bash wizard that walks a human through a manual procedure — third-party setup, a one-off migration, an A→B state transition — opening URLs, capturing values, confirming each step, and writing .env files and GitHub Actions secrets.",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mattpocock",
+  "install_path": ".claude/skills/wizard/SKILL.md",
+  "source": {
+    "repo": "mattpocock/skills",
+    "url": "https://github.com/mattpocock/skills/blob/main/skills/in-progress/wizard/SKILL.md",
+    "path": "skills/in-progress/wizard/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-29T16:17:49.378Z",
+    "stars": 150344,
+    "language": "Shell",
+    "pushed_at": "2026-06-29T12:53:44Z",
+    "license": "MIT"
+  }
+}

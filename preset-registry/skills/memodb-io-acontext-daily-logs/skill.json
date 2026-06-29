@@ -1,0 +1,25 @@
+{
+  "id": "memodb-io-acontext-daily-logs",
+  "name": "daily-logs",
+  "description": "Track daily activity logs and summaries for the user. TRIGGER BY: read/edit user memory",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "memodb-io",
+  "install_path": ".claude/skills/daily-logs/SKILL.md",
+  "source": {
+    "repo": "memodb-io/Acontext",
+    "url": "https://github.com/memodb-io/Acontext/blob/main/src/server/api/go/configs/skill_templates/daily-logs/SKILL.md",
+    "path": "src/server/api/go/configs/skill_templates/daily-logs/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-29T16:20:50.987Z",
+    "stars": 3562,
+    "language": "JavaScript",
+    "pushed_at": "2026-06-23T19:13:45Z",
+    "license": "Apache-2.0"
+  }
+}

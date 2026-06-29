@@ -1,0 +1,25 @@
+{
+  "id": "memodb-io-acontext-user-general-facts",
+  "name": "user-general-facts",
+  "description": "Capture and organize general facts about the user by topic",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "memodb-io",
+  "install_path": ".claude/skills/user-general-facts/SKILL.md",
+  "source": {
+    "repo": "memodb-io/Acontext",
+    "url": "https://github.com/memodb-io/Acontext/blob/main/src/server/api/go/configs/skill_templates/user-general-facts/SKILL.md",
+    "path": "src/server/api/go/configs/skill_templates/user-general-facts/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-29T16:20:51.092Z",
+    "stars": 3562,
+    "language": "JavaScript",
+    "pushed_at": "2026-06-23T19:13:45Z",
+    "license": "Apache-2.0"
+  }
+}

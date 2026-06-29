@@ -1,0 +1,25 @@
+{
+  "id": "memodb-io-acontext-public",
+  "name": "acontext-installer",
+  "description": "Install Acontext, Login & Init Acontext Project, Add Skill Memory to Agent.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "memodb-io",
+  "install_path": ".claude/skills/public/SKILL.md",
+  "source": {
+    "repo": "memodb-io/Acontext",
+    "url": "https://github.com/memodb-io/Acontext/blob/main/landingpage/public/SKILL.md",
+    "path": "landingpage/public/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-29T16:20:50.891Z",
+    "stars": 3562,
+    "language": "JavaScript",
+    "pushed_at": "2026-06-23T19:13:45Z",
+    "license": "Apache-2.0"
+  }
+}
