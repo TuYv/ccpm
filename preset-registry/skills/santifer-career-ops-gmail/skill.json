@@ -1,0 +1,25 @@
+{
+  "id": "santifer-career-ops-gmail",
+  "name": "career-ops-plugin-gmail",
+  "description": "How to pull job leads from a Gmail label into the career-ops pipeline.",
+  "category": "通用其他",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "santifer",
+  "install_path": ".claude/skills/gmail/SKILL.md",
+  "source": {
+    "repo": "santifer/career-ops",
+    "url": "https://github.com/santifer/career-ops/blob/main/plugins/gmail/skill.md",
+    "path": "plugins/gmail/skill.md",
+    "branch": "main",
+    "discovered_at": "2026-06-29T18:36:39.201Z",
+    "stars": 56594,
+    "language": "JavaScript",
+    "pushed_at": "2026-06-29T18:27:56Z",
+    "license": "MIT"
+  }
+}

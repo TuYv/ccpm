@@ -1,0 +1,25 @@
+{
+  "id": "santifer-career-ops-apify",
+  "name": "career-ops-plugin-apify",
+  "description": "How to scan a job source through an Apify actor as a keyed provider.",
+  "category": "通用其他",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "santifer",
+  "install_path": ".claude/skills/apify/SKILL.md",
+  "source": {
+    "repo": "santifer/career-ops",
+    "url": "https://github.com/santifer/career-ops/blob/main/plugins/apify/skill.md",
+    "path": "plugins/apify/skill.md",
+    "branch": "main",
+    "discovered_at": "2026-06-29T18:36:39.002Z",
+    "stars": 56594,
+    "language": "JavaScript",
+    "pushed_at": "2026-06-29T18:27:56Z",
+    "license": "MIT"
+  }
+}

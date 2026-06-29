@@ -1,0 +1,25 @@
+{
+  "id": "santifer-career-ops-notion",
+  "name": "career-ops-plugin-notion",
+  "description": "How to mirror the career-ops tracker to a Notion database and read records back as job leads.",
+  "category": "通用其他",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "santifer",
+  "install_path": ".claude/skills/notion/SKILL.md",
+  "source": {
+    "repo": "santifer/career-ops",
+    "url": "https://github.com/santifer/career-ops/blob/main/plugins/notion/skill.md",
+    "path": "plugins/notion/skill.md",
+    "branch": "main",
+    "discovered_at": "2026-06-29T18:36:39.398Z",
+    "stars": 56594,
+    "language": "JavaScript",
+    "pushed_at": "2026-06-29T18:27:56Z",
+    "license": "MIT"
+  }
+}

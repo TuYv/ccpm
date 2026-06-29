@@ -1,0 +1,25 @@
+{
+  "id": "santifer-career-ops-template",
+  "name": "career-ops-plugin-{{NAME}}",
+  "description": "How to use the {{NAME}} plugin and the data it produces.",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "santifer",
+  "install_path": ".claude/skills/_template/SKILL.md",
+  "source": {
+    "repo": "santifer/career-ops",
+    "url": "https://github.com/santifer/career-ops/blob/main/plugins/_template/skill.md",
+    "path": "plugins/_template/skill.md",
+    "branch": "main",
+    "discovered_at": "2026-06-29T18:36:38.815Z",
+    "stars": 56594,
+    "language": "JavaScript",
+    "pushed_at": "2026-06-29T18:27:56Z",
+    "license": "MIT"
+  }
+}
