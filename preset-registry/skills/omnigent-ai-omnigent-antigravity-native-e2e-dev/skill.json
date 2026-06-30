@@ -1,0 +1,25 @@
+{
+  "id": "omnigent-ai-omnigent-antigravity-native-e2e-dev",
+  "name": "antigravity-native-e2e-dev",
+  "description": "Spin up a live local Omnigent server + runner and exercise the native Antigravity (agy) TUI harness (antigravity-native) end-to-end — launch the real `agy` CLI via `omnigent antigravity`, drive turns through the web UI, smoke-test, and bug-bash. Load when developing, testing, or debugging the antigravity-native harness (omnigent/inner/antigravity_native_executor.py, omnigent/antigravity_native.py, antigravity_native_bridge.py, antigravity_native_rpc.py, antigravity_native_reader.py, antigravity_",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "omnigent-ai",
+  "install_path": ".claude/skills/antigravity-native-e2e-dev/SKILL.md",
+  "source": {
+    "repo": "omnigent-ai/omnigent",
+    "url": "https://github.com/omnigent-ai/omnigent/blob/main/.claude/skills/antigravity-native-e2e-dev/SKILL.md",
+    "path": ".claude/skills/antigravity-native-e2e-dev/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-30T14:53:54.629Z",
+    "stars": 5662,
+    "language": "Python",
+    "pushed_at": "2026-06-30T14:52:37Z",
+    "license": "Apache-2.0"
+  }
+}
