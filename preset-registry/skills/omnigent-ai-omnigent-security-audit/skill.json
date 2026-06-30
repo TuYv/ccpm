@@ -1,0 +1,25 @@
+{
+  "id": "omnigent-ai-omnigent-security-audit",
+  "name": "security-audit",
+  "description": "Audit a codebase or directory for security issues (hardcoded secrets, injection, unsafe deserialization, weak crypto, authz gaps) and produce a structured findings report. Use when the user asks for a security review, an audit, or to check code for vulnerabilities. Report only — never fix.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "omnigent-ai",
+  "install_path": ".claude/skills/security-audit/SKILL.md",
+  "source": {
+    "repo": "omnigent-ai/omnigent",
+    "url": "https://github.com/omnigent-ai/omnigent/blob/main/examples/sentinel/skills/security-audit/SKILL.md",
+    "path": "examples/sentinel/skills/security-audit/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-30T12:00:49.631Z",
+    "stars": 5619,
+    "language": "Python",
+    "pushed_at": "2026-06-30T11:50:08Z",
+    "license": "Apache-2.0"
+  }
+}
