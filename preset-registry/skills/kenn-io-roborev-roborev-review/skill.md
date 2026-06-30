@@ -10,7 +10,7 @@ Request a code review for a commit and present the results.
 ## Usage
 
 ```
-$roborev-review [commit] [--type security|design] [--panel <name>|none]
+/roborev-review [commit] [--type security|design] [--panel <name>|none]
 ```
 
 ## When NOT to invoke this skill
@@ -25,19 +25,15 @@ This skill requires you to **execute bash commands** to validate the commit and 
 
 These instructions are guidelines, not a rigid script. Use the conversation
 context. Skip steps that are already satisfied. Defer to project-level
-CLAUDE.md instructions when they conflict with these steps.
+AGENTS.md instructions when they conflict with these steps.
 
 ## Instructions
 
-When the user invokes `$roborev-review [commit] [--type security|design] [--panel <name>|none]`:
+When the user invokes `/roborev-review [commit] [--type security|design] [--panel <name>|none]`:
 
 ### 1. Validate inputs
 
-If a commit ref is provided, verify it resolves to a valid commit:
-
-```bash
-git rev-parse --verify -- <commit>^{commit}
-```
+If a commit ref is provided, use the commit-provided command snippet below; it stores and validates the ref before invoking `roborev review`.
 
 If validation fails, inform the user the ref is invalid. Do not proceed.
 
@@ -45,11 +41,22 @@ If validation fails, inform the user the ref is invalid. Do not proceed.
 
 Construct and execute the review command:
 
+If no commit is specified, run:
+
 ```bash
-roborev review [commit] --wait [--type <type>] [--panel <name>|none]
+roborev review --wait [--type <type>] [--panel <name>|none]
 ```
 
-- If no commit is specified, omit it (defaults to HEAD)
+If a commit is specified, run:
+
+```bash
+read -r commit <<'ROBOREV_REF'
+<commit>
+ROBOREV_REF
+git rev-parse --verify -- "$commit^{commit}" || exit 1
+roborev review "$commit" --wait [--type <type>] [--panel <name>|none]
+```
+
 - If `--type` is specified, include it
 - If `--panel <name>` is specified, include it (fans out to the named config panel); `--panel none` forces a single-agent review
 
@@ -80,36 +87,36 @@ single-agent regardless of `default_panel`.
 
 If the review has findings (verdict is Fail), offer to address them:
 
-- "Would you like me to fix these findings? You can run `$roborev-fix <job_id>`"
+- "Would you like me to fix these findings? You can run `/roborev-fix <job_id>`"
 
 Extract the job ID from the review output to include in the suggestion. Look for it in the `Enqueued job <id> for ...` line or in the review header. For a panel review this id is the synthesis parent.
 
-If the review passed, confirm the result and do not offer `$roborev-fix`.
+If the review passed, confirm the result and do not offer `/roborev-fix`.
 
 ## Examples
 
 **Default review of HEAD:**
 
-User: `$roborev-review`
+User: `/roborev-review`
 
 Agent:
 1. Executes `roborev review --wait`
 2. Presents the verdict and findings grouped by severity
-3. If findings exist: "Would you like me to address these findings? Run `$roborev-fix 1042`"
+3. If findings exist: "Would you like me to address these findings? Run `/roborev-fix 1042`"
 4. If passed: "Review passed with no findings."
 
 **Security review of a specific commit:**
 
-User: `$roborev-review abc123 --type security`
+User: `/roborev-review abc123 --type security`
 
 Agent:
-1. Validates: `git rev-parse --verify -- abc123^{commit}`
+1. Validates: `git rev-parse --verify -- "abc123^{commit}"`
 2. Executes `roborev review abc123 --wait --type security`
 3. Presents the verdict and findings
-4. If findings exist: "Would you like me to address these findings? Run `$roborev-fix 1043`"
+4. If findings exist: "Would you like me to address these findings? Run `/roborev-fix 1043`"
 
 ## See also
 
-- `$roborev-design-review` — shorthand for `$roborev-review --type design`
-- `$roborev-fix` — fix a review's findings in code
-- `$roborev-review-branch` — review all commits on the current branch
+- `/roborev-design-review` — shorthand for `/roborev-review --type design`
+- `/roborev-fix` — fix a review's findings in code
+- `/roborev-review-branch` — review all commits on the current branch

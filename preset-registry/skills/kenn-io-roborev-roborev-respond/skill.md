@@ -10,7 +10,7 @@ Record a comment on a roborev code review and close it.
 ## Usage
 
 ```
-$roborev-respond <job_id> [message]
+/roborev-respond <job_id> [message]
 ```
 
 ## IMPORTANT
@@ -19,11 +19,11 @@ This skill requires you to **execute bash commands** to record the comment and c
 
 These instructions are guidelines, not a rigid script. Use the conversation
 context. Skip steps that are already satisfied. Defer to project-level
-CLAUDE.md instructions when they conflict with these steps.
+AGENTS.md instructions when they conflict with these steps.
 
 ## Instructions
 
-When the user invokes `$roborev-respond <job_id> [message]`:
+When the user invokes `/roborev-respond <job_id> [message]`:
 
 ### 1. Validate input
 
@@ -66,7 +66,7 @@ The comment is recorded in roborev's database and the review is closed. View res
 
 **With message provided:**
 
-User: `$roborev-respond 1019 Fixed all issues`
+User: `/roborev-respond 1019 Fixed all issues`
 
 Agent action:
 ```bash
@@ -78,7 +78,7 @@ Then confirm: "Comment recorded and review #1019 closed."
 
 **Without message:**
 
-User: `$roborev-respond 1019`
+User: `/roborev-respond 1019`
 
 Agent: "What would you like to say about review #1019?"
 
@@ -92,4 +92,4 @@ Then confirm: "Comment recorded and review #1019 closed."
 
 ## See also
 
-- `$roborev-fix` — fix a review's findings in code, then comment and close it
+- `/roborev-fix` — fix a review's findings in code, then comment and close it

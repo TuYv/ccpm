@@ -10,7 +10,7 @@ Request a code review for all commits on the current branch and present the resu
 ## Usage
 
 ```
-$roborev-review-branch [--base <branch>] [--type security|design] [--panel <name>|none]
+/roborev-review-branch [--base <branch>] [--type security|design] [--panel <name>|none]
 ```
 
 ## When NOT to invoke this skill
@@ -25,19 +25,15 @@ This skill requires you to **execute bash commands** to validate inputs and run 
 
 These instructions are guidelines, not a rigid script. Use the conversation
 context. Skip steps that are already satisfied. Defer to project-level
-CLAUDE.md instructions when they conflict with these steps.
+AGENTS.md instructions when they conflict with these steps.
 
 ## Instructions
 
-When the user invokes `$roborev-review-branch [--base <branch>] [--type security|design] [--panel <name>|none]`:
+When the user invokes `/roborev-review-branch [--base <branch>] [--type security|design] [--panel <name>|none]`:
 
 ### 1. Validate inputs
 
-If a base branch is provided, verify it resolves to a valid ref:
-
-```bash
-git rev-parse --verify -- <branch>
-```
+If a base branch is provided, use the base-branch command snippet below; it stores and validates the ref before invoking `roborev review`.
 
 If validation fails, inform the user the ref is invalid. Do not proceed.
 
@@ -45,8 +41,20 @@ If validation fails, inform the user the ref is invalid. Do not proceed.
 
 Construct and execute the review command:
 
+If no base branch is specified, run:
+
 ```bash
-roborev review --branch --wait [--base <branch>] [--type <type>] [--panel <name>|none]
+roborev review --branch --wait [--type <type>] [--panel <name>|none]
+```
+
+If a base branch is specified, run:
+
+```bash
+read -r branch <<'ROBOREV_REF'
+<branch>
+ROBOREV_REF
+git rev-parse --verify -- "$branch" || exit 1
+roborev review --branch --wait --base "$branch" [--type <type>] [--panel <name>|none]
 ```
 
 - If `--base` is specified, include it (otherwise auto-detects the base branch)
@@ -80,36 +88,36 @@ single-agent regardless of `default_panel`.
 
 If the review has findings (verdict is Fail), offer to address them:
 
-- "Would you like me to fix these findings? You can run `$roborev-fix <job_id>`"
+- "Would you like me to fix these findings? You can run `/roborev-fix <job_id>`"
 
 Extract the job ID from the review output to include in the suggestion. Look for it in the `Enqueued job <id> for ...` line or in the review header. For a panel review this id is the synthesis parent.
 
-If the review passed, confirm the result and do not offer `$roborev-fix`.
+If the review passed, confirm the result and do not offer `/roborev-fix`.
 
 ## Examples
 
 **Default branch review:**
 
-User: `$roborev-review-branch`
+User: `/roborev-review-branch`
 
 Agent:
 1. Executes `roborev review --branch --wait`
 2. Presents the verdict and findings grouped by severity
-3. If findings exist: "Would you like me to address these findings? Run `$roborev-fix 1042`"
+3. If findings exist: "Would you like me to address these findings? Run `/roborev-fix 1042`"
 4. If passed: "Branch review passed with no findings."
 
 **Security review against a specific base:**
 
-User: `$roborev-review-branch --base develop --type security`
+User: `/roborev-review-branch --base develop --type security`
 
 Agent:
-1. Validates: `git rev-parse --verify -- develop`
+1. Validates: `git rev-parse --verify -- "develop"`
 2. Executes `roborev review --branch --wait --base develop --type security`
 3. Presents the verdict and findings
-4. If findings exist: "Would you like me to address these findings? Run `$roborev-fix 1043`"
+4. If findings exist: "Would you like me to address these findings? Run `/roborev-fix 1043`"
 
 ## See also
 
-- `$roborev-design-review-branch` — shorthand for `$roborev-review-branch --type design`
-- `$roborev-fix` — fix a review's findings in code
-- `$roborev-review` — review a single commit
+- `/roborev-design-review-branch` — shorthand for `/roborev-review-branch --type design`
+- `/roborev-fix` — fix a review's findings in code
+- `/roborev-review` — review a single commit
