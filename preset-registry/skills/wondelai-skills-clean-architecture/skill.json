@@ -1,7 +1,7 @@
 {
   "id": "wondelai-skills-clean-architecture",
   "name": "clean-architecture",
-  "description": "Structure software around the Dependency Rule: source code dependencies point inward from frameworks to use cases to entities. Use when the user mentions \"architecture layers\", \"dependency rule\", \"ports and adapters\", \"hexagonal architecture\", \"onion architecture\", \"screaming architecture\", \"where should business logic go\", \"decouple from the database\", \"swap the framework without a rewrite\", \"business logic is tangled with the framework\", or \"keep business rules independent\". Also trigger when ",
+  "description": "Structure software around the Dependency Rule: source code dependencies point inward from frameworks to use cases to entities. Use when the user mentions \"architecture layers\", \"dependency rule\", \"ports and adapters (hexagonal)\", \"onion architecture\", \"screaming architecture\", \"where should business logic go\", \"decouple from the database\", \"swap the framework without a rewrite\", or \"keep business rules independent\". Also trigger when deciding which layer code belongs in, isolating core logic fro",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/wondelai/skills/blob/main/clean-architecture/SKILL.md",
     "path": "clean-architecture/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-30T21:13:51.983Z",
-    "stars": 1499,
+    "discovered_at": "2026-06-30T22:48:07.380Z",
+    "stars": 1500,
     "language": "Shell",
-    "pushed_at": "2026-06-26T17:31:24Z",
+    "pushed_at": "2026-06-30T22:30:05Z",
     "license": "MIT"
   }
 }

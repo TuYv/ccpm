@@ -1,7 +1,7 @@
 {
   "id": "wondelai-skills-clean-code",
   "name": "clean-code",
-  "description": "Write readable, maintainable code through disciplined naming, small functions, and clean error handling. Use when the user mentions \"code review\", \"naming conventions\", \"function too long\", \"code smells\", \"readable code\", \"boy scout rule\", \"single responsibility\", \"unit test quality\", \"my code is hard to read\", \"this function is a mess\", \"clean up this code\", or \"hard to maintain\". Also trigger when reviewing pull requests for readability, untangling messy functions, debating comment styles, or ",
+  "description": "Write readable, maintainable code through disciplined naming, small functions, and clean error handling. Use when the user mentions \"clean up this code\", \"this function is too long\", \"code smells\", \"naming conventions\", \"boy scout rule\", \"single responsibility\", or \"unit test quality\". Also trigger when reviewing a pull request for readability, untangling a messy function, debating comment styles, or improving error-handling patterns. Covers SRP, comment discipline, formatting, and unit testing.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/wondelai/skills/blob/main/clean-code/SKILL.md",
     "path": "clean-code/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-30T21:13:52.078Z",
-    "stars": 1499,
+    "discovered_at": "2026-06-30T22:48:07.482Z",
+    "stars": 1500,
     "language": "Shell",
-    "pushed_at": "2026-06-26T17:31:24Z",
+    "pushed_at": "2026-06-30T22:30:05Z",
     "license": "MIT"
   }
 }

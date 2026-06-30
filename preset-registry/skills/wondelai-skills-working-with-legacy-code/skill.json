@@ -1,7 +1,7 @@
 {
   "id": "wondelai-skills-working-with-legacy-code",
   "name": "working-with-legacy-code",
-  "description": "Safely change and test untested codebases using Feathers'' \"Working Effectively with Legacy Code\". Use when the user mentions \"legacy code\", \"no tests\", \"untested codebase\", \"how do I test this\", \"seams\", \"characterization tests\", \"sprout method\", \"afraid to change this code\", \"monster method\", \"dependency breaking\", \"inherited a messy codebase\", or \"scared to touch this code\". Also trigger when changing code without tests safely, getting a class under test when constructors, statics, or singlet",
+  "description": "Safely change and test untested codebases using Feathers'' \"Working Effectively with Legacy Code\". Use when the user mentions \"legacy code\", \"no tests\", \"untested codebase\", \"how do I test this\", \"seams\", \"characterization tests\", \"golden master\", \"sprout method\", \"afraid to change this code\", \"monster method\", \"dependency breaking\", or \"inherited a messy codebase\". Also trigger when changing code without tests safely, getting a class under test when constructors, statics, or singletons block it",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/wondelai/skills/blob/main/working-with-legacy-code/SKILL.md",
     "path": "working-with-legacy-code/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-30T21:13:56.778Z",
-    "stars": 1499,
+    "discovered_at": "2026-06-30T22:48:13.152Z",
+    "stars": 1500,
     "language": "Shell",
-    "pushed_at": "2026-06-26T17:31:24Z",
+    "pushed_at": "2026-06-30T22:30:05Z",
     "license": "MIT"
   }
 }

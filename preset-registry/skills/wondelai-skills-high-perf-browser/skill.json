@@ -1,7 +1,7 @@
 {
   "id": "wondelai-skills-high-perf-browser",
   "name": "high-perf-browser",
-  "description": "Optimize web performance through network protocols, resource loading, and browser rendering internals. Use when the user mentions \"page load speed\", \"Core Web Vitals\", \"HTTP/2\", \"resource hints\", \"network latency\", \"render blocking\", \"TCP optimization\", \"service worker\", \"critical rendering path\", \"my site is slow\", \"improve page speed\", or \"slow to load\". Also trigger when diagnosing slow page loads, optimizing time to first byte, choosing between WebSocket and SSE, or reducing bundle sizes. Co",
+  "description": "Optimize web performance through network protocols, resource loading, and browser rendering internals. Use when the user mentions \"my site is slow\", \"Core Web Vitals\", \"HTTP/2 or HTTP/3\", \"resource hints\", \"network latency\", \"render blocking\", \"TCP/TLS optimization\", \"service worker\", \"Cache-Control or caching strategy\", or \"critical rendering path\". Also trigger when diagnosing slow page loads, optimizing time to first byte, choosing between WebSocket and SSE, or reducing bundle sizes. For UI v",
   "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/wondelai/skills/blob/main/high-perf-browser/SKILL.md",
     "path": "high-perf-browser/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-30T21:13:53.454Z",
-    "stars": 1499,
+    "discovered_at": "2026-06-30T22:48:08.761Z",
+    "stars": 1500,
     "language": "Shell",
-    "pushed_at": "2026-06-26T17:31:24Z",
+    "pushed_at": "2026-06-30T22:30:05Z",
     "license": "MIT"
   }
 }
