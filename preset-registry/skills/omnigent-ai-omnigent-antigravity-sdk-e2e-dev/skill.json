@@ -1,0 +1,25 @@
+{
+  "id": "omnigent-ai-omnigent-antigravity-sdk-e2e-dev",
+  "name": "antigravity-sdk-e2e-dev",
+  "description": "Spin up a live local Omnigent server and exercise the Antigravity (Gemini) SDK harness end-to-end — build antigravity agents, run real turns, smoke-test, and bug-bash. Load when developing, testing, or debugging the antigravity harness (omnigent/inner/antigravity_executor.py, antigravity_harness.py, omnigent/onboarding/antigravity_auth.py) or its auth / model / tool-bridge behavior.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "omnigent-ai",
+  "install_path": ".claude/skills/antigravity-sdk-e2e-dev/SKILL.md",
+  "source": {
+    "repo": "omnigent-ai/omnigent",
+    "url": "https://github.com/omnigent-ai/omnigent/blob/main/.claude/skills/antigravity-sdk-e2e-dev/SKILL.md",
+    "path": ".claude/skills/antigravity-sdk-e2e-dev/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-30T05:33:11.862Z",
+    "stars": 5509,
+    "language": "Python",
+    "pushed_at": "2026-06-30T05:22:51Z",
+    "license": "Apache-2.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "omnigent-ai-omnigent-api-docs",
+  "name": "api-docs",
+  "description": "Document a module or public API surface (functions, classes, CLI commands, endpoints) from the code itself. Use when the user asks for API reference, to document a module, or to write usage docs for a public interface.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "omnigent-ai",
+  "install_path": ".claude/skills/api-docs/SKILL.md",
+  "source": {
+    "repo": "omnigent-ai/omnigent",
+    "url": "https://github.com/omnigent-ai/omnigent/blob/main/examples/scribe/skills/api-docs/SKILL.md",
+    "path": "examples/scribe/skills/api-docs/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-30T05:33:14.023Z",
+    "stars": 5509,
+    "language": "Python",
+    "pushed_at": "2026-06-30T05:22:51Z",
+    "license": "Apache-2.0"
+  }
+}

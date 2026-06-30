@@ -1,0 +1,25 @@
+{
+  "id": "omnigent-ai-omnigent-migration-guide",
+  "name": "migration-guide",
+  "description": "Turn a breaking change (an API rename, removed flag, changed default, or moved module) into concrete upgrade steps with before/after examples. Use when the user asks how to migrate, upgrade, or adapt to a breaking change.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "omnigent-ai",
+  "install_path": ".claude/skills/migration-guide/SKILL.md",
+  "source": {
+    "repo": "omnigent-ai/omnigent",
+    "url": "https://github.com/omnigent-ai/omnigent/blob/main/examples/scribe/skills/migration-guide/SKILL.md",
+    "path": "examples/scribe/skills/migration-guide/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-30T05:33:14.384Z",
+    "stars": 5509,
+    "language": "Python",
+    "pushed_at": "2026-06-30T05:22:51Z",
+    "license": "Apache-2.0"
+  }
+}

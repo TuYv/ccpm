@@ -1,0 +1,25 @@
+{
+  "id": "omnigent-ai-omnigent-omnigent-knowledge",
+  "name": "omnigent-knowledge",
+  "description": "Deep reference on Omnigent config format, executor types, skill/tool structure, and conventions. Load when you need to look up how the platform works.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "omnigent-ai",
+  "install_path": ".claude/skills/omnigent-knowledge/SKILL.md",
+  "source": {
+    "repo": "omnigent-ai/omnigent",
+    "url": "https://github.com/omnigent-ai/omnigent/blob/main/omnigent/onboarding/agent/skills/omnigent-knowledge/SKILL.md",
+    "path": "omnigent/onboarding/agent/skills/omnigent-knowledge/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-30T05:33:15.043Z",
+    "stars": 5509,
+    "language": "Python",
+    "pushed_at": "2026-06-30T05:22:51Z",
+    "license": "Apache-2.0"
+  }
+}

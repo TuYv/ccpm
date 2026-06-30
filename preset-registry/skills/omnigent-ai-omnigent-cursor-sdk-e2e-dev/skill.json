@@ -1,0 +1,25 @@
+{
+  "id": "omnigent-ai-omnigent-cursor-sdk-e2e-dev",
+  "name": "cursor-sdk-e2e-dev",
+  "description": "Spin up a live local Omnigent server and exercise the Cursor SDK harness end-to-end — build cursor agents, run real turns, smoke-test, and bug-bash. Load when developing, testing, or debugging the cursor harness (omnigent/inner/cursor_executor.py, cursor_harness.py, cursor_auth.py) or its auth / model / tool-bridge behavior.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "omnigent-ai",
+  "install_path": ".claude/skills/cursor-sdk-e2e-dev/SKILL.md",
+  "source": {
+    "repo": "omnigent-ai/omnigent",
+    "url": "https://github.com/omnigent-ai/omnigent/blob/main/.claude/skills/cursor-sdk-e2e-dev/SKILL.md",
+    "path": ".claude/skills/cursor-sdk-e2e-dev/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-30T05:33:12.522Z",
+    "stars": 5509,
+    "language": "Python",
+    "pushed_at": "2026-06-30T05:22:51Z",
+    "license": "Apache-2.0"
+  }
+}

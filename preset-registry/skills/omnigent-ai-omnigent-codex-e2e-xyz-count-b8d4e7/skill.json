@@ -1,0 +1,25 @@
+{
+  "id": "omnigent-ai-omnigent-codex-e2e-xyz-count-b8d4e7",
+  "name": "codex_e2e_xyz_count_b8d4e7",
+  "description": "Test counter — codex skills e2e. The unique suffix b8d4e7 appears in the skill name so a string match in the agent's output proves codex loaded this skill.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "omnigent-ai",
+  "install_path": ".claude/skills/codex_e2e_xyz_count_b8d4e7/SKILL.md",
+  "source": {
+    "repo": "omnigent-ai/omnigent",
+    "url": "https://github.com/omnigent-ai/omnigent/blob/main/tests/resources/agents/codex_skills_none/skills/codex_e2e_xyz_count_b8d4e7/SKILL.md",
+    "path": "tests/resources/agents/codex_skills_none/skills/codex_e2e_xyz_count_b8d4e7/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-30T05:33:16.073Z",
+    "stars": 5509,
+    "language": "Python",
+    "pushed_at": "2026-06-30T05:22:51Z",
+    "license": "Apache-2.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "omnigent-ai-omnigent-deep-research",
+  "name": "deep-research",
+  "description": "Research checklist and source-quality guidance for the archer e2e fixture.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "omnigent-ai",
+  "install_path": ".claude/skills/deep-research/SKILL.md",
+  "source": {
+    "repo": "omnigent-ai/omnigent",
+    "url": "https://github.com/omnigent-ai/omnigent/blob/main/tests/resources/examples/archer/skills/deep-research/SKILL.md",
+    "path": "tests/resources/examples/archer/skills/deep-research/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-30T05:33:17.869Z",
+    "stars": 5509,
+    "language": "Python",
+    "pushed_at": "2026-06-30T05:22:51Z",
+    "license": "Apache-2.0"
+  }
+}

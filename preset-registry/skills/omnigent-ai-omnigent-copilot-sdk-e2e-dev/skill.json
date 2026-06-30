@@ -1,0 +1,25 @@
+{
+  "id": "omnigent-ai-omnigent-copilot-sdk-e2e-dev",
+  "name": "copilot-sdk-e2e-dev",
+  "description": "Spin up a live local Omnigent server and exercise the GitHub Copilot SDK harness end-to-end — build copilot agents, run real turns, smoke-test, and bug-bash. Load when developing, testing, or debugging the copilot harness (omnigent/inner/copilot_executor.py, copilot_harness.py, omnigent/onboarding/copilot_auth.py) or its auth / model / tool-bridge behavior.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "omnigent-ai",
+  "install_path": ".claude/skills/copilot-sdk-e2e-dev/SKILL.md",
+  "source": {
+    "repo": "omnigent-ai/omnigent",
+    "url": "https://github.com/omnigent-ai/omnigent/blob/main/.claude/skills/copilot-sdk-e2e-dev/SKILL.md",
+    "path": ".claude/skills/copilot-sdk-e2e-dev/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-30T05:33:12.300Z",
+    "stars": 5509,
+    "language": "Python",
+    "pushed_at": "2026-06-30T05:22:51Z",
+    "license": "Apache-2.0"
+  }
+}

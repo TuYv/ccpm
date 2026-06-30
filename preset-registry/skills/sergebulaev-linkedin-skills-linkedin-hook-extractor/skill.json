@@ -1,7 +1,7 @@
 {
   "id": "sergebulaev-linkedin-skills-linkedin-hook-extractor",
   "name": "linkedin-hook-extractor",
-  "description": "Reverse-engineer the hook formula from a viral LinkedIn post URL. Returns which of the 10 canonical 2026 formulas it uses (anaphora, R.I.P., year-pivot, time-anchor, self-proving, odd-money, paid-vs-free, curiosity-gap, contrarian, comment-gate), why it worked, and a blank template. Use to learn from a competitor's post, not to write your own (use linkedin-post-writer).",
+  "description": "Reverse-engineer the hook formula from a viral LinkedIn post URL. Returns which of the 16 canonical 2026 formulas it uses (anaphora, R.I.P., year-pivot, time-anchor, curiosity-gap, contrarian, comment-gate, emotional cold-open, named-gratitude, and 7 more), why it worked, and a blank template. Use to learn from a competitor's post, not to write your own (use linkedin-post-writer).",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/sergebulaev/linkedin-skills/blob/main/skills/linkedin-hook-extractor/SKILL.md",
     "path": "skills/linkedin-hook-extractor/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-06-30T01:17:51.043Z",
-    "stars": 259,
+    "discovered_at": "2026-06-30T06:17:05.707Z",
+    "stars": 260,
     "language": "Python",
-    "pushed_at": "2026-05-21T11:15:51Z",
+    "pushed_at": "2026-06-30T04:48:31Z",
     "license": "MIT"
-  },
-  "summary_zh": "输入一条爆款领英帖子链接，自动拆解它用的是哪种开场套路，分析为什么有效，并给出可复用的空白模板，方便研究对手的写法找灵感。"
+  }
 }

@@ -1,0 +1,25 @@
+{
+  "id": "omnigent-ai-omnigent-investigate",
+  "name": "investigate",
+  "description": "Delegate read-only investigation, debugging, audit, search, or code-understanding tasks to sub-agents; synthesize only from their structured reports.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "omnigent-ai",
+  "install_path": ".claude/skills/investigate/SKILL.md",
+  "source": {
+    "repo": "omnigent-ai/omnigent",
+    "url": "https://github.com/omnigent-ai/omnigent/blob/main/examples/polly/skills/investigate/SKILL.md",
+    "path": "examples/polly/skills/investigate/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-30T05:33:13.804Z",
+    "stars": 5509,
+    "language": "Python",
+    "pushed_at": "2026-06-30T05:22:51Z",
+    "license": "Apache-2.0"
+  }
+}

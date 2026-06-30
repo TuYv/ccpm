@@ -1,0 +1,25 @@
+{
+  "id": "omnigent-ai-omnigent-changelog",
+  "name": "changelog",
+  "description": "Turn a range of commits or merged PRs into a changelog entry grouped by change type. Use when the user asks for release notes, a changelog, or \"what changed\" between two points.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "omnigent-ai",
+  "install_path": ".claude/skills/changelog/SKILL.md",
+  "source": {
+    "repo": "omnigent-ai/omnigent",
+    "url": "https://github.com/omnigent-ai/omnigent/blob/main/examples/scribe/skills/changelog/SKILL.md",
+    "path": "examples/scribe/skills/changelog/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-06-30T05:33:14.198Z",
+    "stars": 5509,
+    "language": "Python",
+    "pushed_at": "2026-06-30T05:22:51Z",
+    "license": "Apache-2.0"
+  }
+}
