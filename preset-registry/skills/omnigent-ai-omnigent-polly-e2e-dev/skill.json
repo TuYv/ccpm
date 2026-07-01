@@ -1,0 +1,25 @@
+{
+  "id": "omnigent-ai-omnigent-polly-e2e-dev",
+  "name": "polly-e2e-dev",
+  "description": "End-to-end test the polly multi-agent coding orchestrator's critical user journeys (CUJs). Two halves — a deterministic mock-LLM driver (polly_cuj.py) that boots a throwaway local server + mock LLM and asserts the substrate (boot, bridged sys_* tool dispatch, the blast_radius / spawn_bounds / headless_subagent_purpose_guard guardrails, fan-out delegation), and a live real-CLI recipe (real claude/codex/pi, real worktrees/PRs) for polly's actual judgment. Load when developing, testing, or debuggin",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "omnigent-ai",
+  "install_path": ".claude/skills/polly-e2e-dev/SKILL.md",
+  "source": {
+    "repo": "omnigent-ai/omnigent",
+    "url": "https://github.com/omnigent-ai/omnigent/blob/main/.claude/skills/polly-e2e-dev/SKILL.md",
+    "path": ".claude/skills/polly-e2e-dev/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-01T00:30:53.404Z",
+    "stars": 5756,
+    "language": "Python",
+    "pushed_at": "2026-07-01T00:24:28Z",
+    "license": "Apache-2.0"
+  }
+}
