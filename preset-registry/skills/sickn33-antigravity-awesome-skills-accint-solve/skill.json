@@ -1,7 +1,7 @@
 {
   "id": "sickn33-antigravity-awesome-skills-accint-solve",
   "name": "accint-solve",
-  "description": "Route agent work through AccInt's MCP memory loop: retrieve prior outcomes, resolve frames, and close commitments with evidence.",
+  "description": "Route a goal through acc's scored-memory loop via acc_act(runtime=\"solve\"); deliberate any returned brain_frame and submit via continue.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/sickn33/antigravity-awesome-skills/blob/main/plugins/antigravity-awesome-skills-claude/skills/accint-solve/SKILL.md",
     "path": "plugins/antigravity-awesome-skills-claude/skills/accint-solve/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-01T10:23:02.441Z",
-    "stars": 42126,
+    "discovered_at": "2026-07-01T13:04:45.455Z",
+    "stars": 42138,
     "language": "Python",
-    "pushed_at": "2026-07-01T08:51:57Z",
+    "pushed_at": "2026-07-01T12:01:12Z",
     "license": "MIT"
   }
 }
