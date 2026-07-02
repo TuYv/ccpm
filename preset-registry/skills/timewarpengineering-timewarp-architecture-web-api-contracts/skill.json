@@ -1,7 +1,7 @@
 {
   "id": "timewarpengineering-timewarp-architecture-web-api-contracts",
   "name": "web-api-contracts",
-  "description": ">- **TIMEWARP SKILL** — endpoint-centric Web.Contracts API contracts (Command, Query, RouteMixin, I*Details, Validator, serialization tests). Invoke before scaffolding or fixing contracts. WHEN: \"Add a CreateTodoItem command contract in Web.Contracts Features folder\", \"Scaffold a GetRole query with RouteMixin and IRoleDetails for the edit form\", \"Fix string? plus NotEmpty contradiction in my API contract Command\", \"Add Web.Contracts.Tests serialize and deserialize round-trip for my Command\".",
+  "description": ">- **TIMEWARP SKILL** — endpoint-centric Web.Contracts API contracts (Command, Query, ApiRoute, I*Details, Validator, serialization tests). Invoke before scaffolding or fixing contracts. WHEN: \"Add a CreateTodoItem command contract\", \"Scaffold a GetRole query with ApiRoute and IRoleDetails for the edit form\", \"Add a serialization round-trip test for my Command\".",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/TimeWarpEngineering/timewarp-architecture/blob/master/skills/web-api-contracts/SKILL.md",
     "path": "skills/web-api-contracts/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-07-02T04:34:33.055Z",
+    "discovered_at": "2026-07-02T08:37:17.098Z",
     "stars": 54,
     "language": "C#",
-    "pushed_at": "2026-07-01T09:43:46Z",
+    "pushed_at": "2026-07-02T06:37:38Z",
     "license": "Unlicense"
   }
 }
