@@ -1,0 +1,25 @@
+{
+  "id": "sethgammon-citadel-deploy-steward",
+  "name": "deploy-steward",
+  "description": ">- Mainline deploy steward. Consumes ready PRs, owns a lease on mainline landing, refreshes PR state, updates stale branches, waits for CI and deploy gates, merges or queues one candidate at a time, and opens repair tasks for failures.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "SethGammon",
+  "install_path": ".claude/skills/deploy-steward/SKILL.md",
+  "source": {
+    "repo": "SethGammon/Citadel",
+    "url": "https://github.com/SethGammon/Citadel/blob/main/skills/deploy-steward/SKILL.md",
+    "path": "skills/deploy-steward/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-01T23:54:43.454Z",
+    "stars": 625,
+    "language": "JavaScript",
+    "pushed_at": "2026-07-01T23:00:43Z",
+    "license": "MIT"
+  }
+}
