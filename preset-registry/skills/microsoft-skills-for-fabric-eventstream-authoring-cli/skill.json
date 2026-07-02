@@ -1,8 +1,8 @@
 {
   "id": "microsoft-skills-for-fabric-eventstream-authoring-cli",
   "name": "eventstream-authoring-cli",
-  "description": "> Create, wire, and publish Microsoft Fabric Eventstream real-time event streaming topologies via the Fabric Items REST API. Build graph-based definitions with 25 source types (Event Hubs, IoT Hub, CDC connectors, Kafka, SampleData), 8 transformation operators (Filter, Aggregate, GroupBy, Join, ManageFields, Union, Expand, SQL), 4 destination types (Lakehouse Delta, Eventhouse, Activator, Custom Endpoint), and DefaultStream/DerivedStream routing. Use when the user wants to: (1) author or publish",
-  "category": "设计创意",
+  "description": "> Create, wire, and publish Fabric Eventstream real-time streaming topologies via the Items REST API. Build definitions with 25 source types (Event Hubs, IoT Hub, CDC, Kafka, SampleData), 8 operators (Filter, Aggregate, GroupBy, Join, ManageFields, Union, Expand, SQL), 4 destinations (Lakehouse, Eventhouse, Activator, Custom Endpoint), DefaultStream/DerivedStream routing. Use to: (1) author Eventstream topology, (2) add Event Hub source, (3) add filter operator, (4) add CDC source with Debezium ",
+  "category": "数据分析",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/microsoft/skills-for-fabric/blob/main/plugins/fabric-skills/skills/eventstream-authoring-cli/SKILL.md",
     "path": "plugins/fabric-skills/skills/eventstream-authoring-cli/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-02T08:42:04.421Z",
+    "discovered_at": "2026-07-02T11:57:59.876Z",
     "stars": 684,
-    "language": "Shell",
-    "pushed_at": "2026-07-02T08:39:24Z",
+    "language": "Python",
+    "pushed_at": "2026-07-02T11:46:49Z",
     "license": "MIT"
   }
 }

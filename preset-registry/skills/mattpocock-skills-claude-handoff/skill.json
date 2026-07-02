@@ -1,0 +1,25 @@
+{
+  "id": "mattpocock-skills-claude-handoff",
+  "name": "claude-handoff",
+  "description": "Hand the current conversation off to a fresh background agent that picks up the work immediately.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mattpocock",
+  "install_path": ".claude/skills/claude-handoff/SKILL.md",
+  "source": {
+    "repo": "mattpocock/skills",
+    "url": "https://github.com/mattpocock/skills/blob/main/skills/in-progress/claude-handoff/SKILL.md",
+    "path": "skills/in-progress/claude-handoff/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-02T11:52:35.388Z",
+    "stars": 153838,
+    "language": "Shell",
+    "pushed_at": "2026-07-02T10:34:03Z",
+    "license": "MIT"
+  }
+}

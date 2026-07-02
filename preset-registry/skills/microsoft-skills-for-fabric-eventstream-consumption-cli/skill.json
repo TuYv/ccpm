@@ -1,7 +1,7 @@
 {
   "id": "microsoft-skills-for-fabric-eventstream-consumption-cli",
   "name": "eventstream-consumption-cli",
-  "description": "> List, inspect, and monitor Microsoft Fabric Eventstream real-time event ingestion pipelines via the Fabric Items REST API. Discover Eventstreams across workspaces, decode base64-encoded graph topologies to trace event flow from source through operators to destination nodes. Validate source connection IDs, destination wiring, retention policies (1-90 days), and throughput levels. Use when the user wants to: (1) list or search Eventstreams in a workspace, (2) decode and trace graph topology from",
+  "description": "> List, inspect, and monitor Fabric Eventstream real-time ingestion pipelines via the Items REST API. Discover Eventstreams across workspaces, decode base64 graph topologies tracing event flow from source through operators to destination nodes. Validate connection IDs, wiring, retention policies (1-90 days), and throughput levels. Retrieve Custom Endpoint Kafka credentials via Topology API. Use to: (1) list Eventstreams, (2) inspect Eventstream topology showing sources and destinations, (3) vali",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/microsoft/skills-for-fabric/blob/main/plugins/fabric-skills/skills/eventstream-consumption-cli/SKILL.md",
     "path": "plugins/fabric-skills/skills/eventstream-consumption-cli/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-02T08:42:04.577Z",
+    "discovered_at": "2026-07-02T11:57:59.992Z",
     "stars": 684,
-    "language": "Shell",
-    "pushed_at": "2026-07-02T08:39:24Z",
+    "language": "Python",
+    "pushed_at": "2026-07-02T11:46:49Z",
     "license": "MIT"
   }
 }

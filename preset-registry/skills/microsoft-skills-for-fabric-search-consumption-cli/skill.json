@@ -1,7 +1,7 @@
 {
   "id": "microsoft-skills-for-fabric-search-consumption-cli",
   "name": "search-consumption-cli",
-  "description": "> Find and discover Microsoft Fabric items across workspaces when the workspace is unknown. Use when the user wants to: (1) find an item by name across workspaces, (2) list items of specific type across workspaces, (3) identify which workspace contains an item, (4) return item/workspace IDs for downstream API calls. Triggers: \"which workspace has\", \"where is\", \"what items do I have\", \"do I have\", \"find item\", \"find all items\", \"search for item\", \"discover items\", \"find across workspaces\".",
+  "description": "> Search the Microsoft Fabric catalog to find an item by name across all workspaces when you don't know which workspace it is in, using the Fabric Catalog Search API. Use when the user wants to: (1) search the catalog for an item by name across workspaces, (2) discover or list items of a specific type across the tenant, (3) identify which workspace contains an item, (4) return item/workspace IDs for downstream API calls. Triggers: \"search for an item\", \"search the catalog\", \"catalog search\", \"se",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/microsoft/skills-for-fabric/blob/main/plugins/fabric-skills/skills/search-consumption-cli/SKILL.md",
     "path": "plugins/fabric-skills/skills/search-consumption-cli/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-02T08:42:05.733Z",
+    "discovered_at": "2026-07-02T11:58:00.996Z",
     "stars": 684,
-    "language": "Shell",
-    "pushed_at": "2026-07-02T08:39:24Z",
+    "language": "Python",
+    "pushed_at": "2026-07-02T11:46:49Z",
     "license": "MIT"
   }
 }
