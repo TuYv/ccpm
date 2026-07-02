@@ -1,8 +1,8 @@
 {
   "id": "addyosmani-agent-skills-git-workflow-and-versioning",
   "name": "git-workflow-and-versioning",
-  "description": "Structures git workflow practices. Use when making any code change. Use when committing, branching, resolving conflicts, or when you need to organize work across multiple parallel streams.",
-  "category": "开发编程",
+  "description": "Structures git workflow practices. Use when making any code change. Use when committing, branching, resolving conflicts, or when you need to organize work across multiple parallel streams. Use when cutting a release, choosing a semantic version bump, tagging, or writing a changelog.",
+  "category": "文档写作",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,10 @@
     "url": "https://github.com/addyosmani/agent-skills/blob/main/skills/git-workflow-and-versioning/SKILL.md",
     "path": "skills/git-workflow-and-versioning/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-02T20:51:19.400Z",
-    "stars": 68582,
+    "discovered_at": "2026-07-02T22:28:25.125Z",
+    "stars": 68590,
     "language": "Shell",
-    "pushed_at": "2026-06-28T18:11:20Z",
+    "pushed_at": "2026-07-02T22:05:05Z",
     "license": "MIT"
-  },
-  "summary_zh": "规范Git工作流的实践指南，适合在提交代码、建分支、解决冲突或管理并行开发任务时使用，让团队协作不再混乱。"
+  }
 }
