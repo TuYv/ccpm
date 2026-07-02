@@ -1,0 +1,25 @@
+{
+  "id": "mattpocock-skills-research",
+  "name": "research",
+  "description": "Investigate a question against high-trust primary sources and capture the findings as a Markdown file in the repo. Use when the user wants a topic researched, docs or API facts gathered, or reading legwork delegated to a background agent.",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mattpocock",
+  "install_path": ".claude/skills/research/SKILL.md",
+  "source": {
+    "repo": "mattpocock/skills",
+    "url": "https://github.com/mattpocock/skills/blob/main/skills/engineering/research/SKILL.md",
+    "path": "skills/engineering/research/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-02T14:40:30.400Z",
+    "stars": 154009,
+    "language": "Shell",
+    "pushed_at": "2026-07-02T13:29:34Z",
+    "license": "MIT"
+  }
+}
