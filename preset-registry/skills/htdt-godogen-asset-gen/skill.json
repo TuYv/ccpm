@@ -1,0 +1,25 @@
+{
+  "id": "htdt-godogen-asset-gen",
+  "name": "asset-gen",
+  "description": "| Generate visual assets from text prompts: PNG images (Gemini / xAI Grok), GLB 3D models (Tripo3D), rigged biped characters, retargeted animations, and frame-by-frame animated sprites, plus background removal. Use whenever a game needs generated art.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "htdt",
+  "install_path": ".claude/skills/asset-gen/SKILL.md",
+  "source": {
+    "repo": "htdt/godogen",
+    "url": "https://github.com/htdt/godogen/blob/master/asset-gen/SKILL.md",
+    "path": "asset-gen/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-07-02T17:13:01.722Z",
+    "stars": 4225,
+    "language": "Python",
+    "pushed_at": "2026-07-02T16:00:10Z",
+    "license": "MIT"
+  }
+}
