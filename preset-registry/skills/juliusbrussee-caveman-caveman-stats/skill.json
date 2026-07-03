@@ -2,7 +2,7 @@
   "id": "juliusbrussee-caveman-caveman-stats",
   "name": "caveman-stats",
   "description": "> Show real token usage and estimated savings for the current session. Reads directly from the Claude Code session log — no AI estimation. Triggers on /caveman-stats. Output is injected by the mode-tracker hook; the model itself does not compute the numbers.",
-  "category": "开发编程",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/JuliusBrussee/caveman/blob/main/skills/caveman-stats/SKILL.md",
     "path": "skills/caveman-stats/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-03T08:43:43.990Z",
-    "stars": 81957,
+    "discovered_at": "2026-07-03T11:52:49.685Z",
+    "stars": 82358,
     "language": "JavaScript",
-    "pushed_at": "2026-07-02T22:36:10Z",
+    "pushed_at": "2026-07-03T11:10:42Z",
     "license": "MIT"
   },
   "summary_zh": "这是一个Claude Code的统计小工具，能直接读取日志精准显示当前对话的真实token用量和省钱情况，适合需要精打细算API开销的开发者。"
