@@ -1,7 +1,7 @@
 {
   "id": "qwenlm-qwen-code-cua-driver",
-  "name": "cua-driver",
-  "description": "Drive a native macOS app via the cua-driver CLI (default) or MCP server — snapshot its AX tree, click/type/scroll by element_index, verify via re-snapshot. Use when the user asks you to operate, drive, automate, or perform a GUI task in a real macOS application on the host (e.g. \"open a file in TextEdit\", \"navigate to /Applications in Finder\", \"click the Save button in Numbers\").",
+  "name": "cua-driver-rs",
+  "description": "Drive a native GUI app (macOS, Windows, Linux) via the cua-driver CLI (default) or MCP server — snapshot its accessibility tree, click/type/scroll by element_index or pixel coords, verify via re-snapshot, all without bringing the target to the foreground. Use when the user asks you to operate, drive, automate, or perform a GUI task in a real application on the host.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -13,13 +13,13 @@
   "install_path": ".claude/skills/cua-driver/SKILL.md",
   "source": {
     "repo": "QwenLM/qwen-code",
-    "url": "https://github.com/QwenLM/qwen-code/blob/main/packages/cua-driver/swift/Skills/cua-driver/SKILL.md",
-    "path": "packages/cua-driver/swift/Skills/cua-driver/SKILL.md",
+    "url": "https://github.com/QwenLM/qwen-code/blob/main/packages/cua-driver/rust/Skills/cua-driver/SKILL.md",
+    "path": "packages/cua-driver/rust/Skills/cua-driver/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-03T05:09:45.599Z",
-    "stars": 25754,
+    "discovered_at": "2026-07-03T08:51:01.757Z",
+    "stars": 25753,
     "language": "TypeScript",
-    "pushed_at": "2026-07-03T04:31:28Z",
+    "pushed_at": "2026-07-03T08:50:44Z",
     "license": "Apache-2.0"
   }
 }
