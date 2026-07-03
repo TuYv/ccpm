@@ -1,7 +1,7 @@
 {
   "id": "bitwize-music-studio-claude-ai-music-skills-health-check",
   "name": "health-check",
-  "description": "Runs plugin health checks (venv packages and skill registration). Use when the user asks to check plugin health, verify setup, or troubleshoot missing skills.",
+  "description": "Runs plugin health checks (venv packages, skill registration, and album slug collisions). Use when the user asks to check plugin health, verify setup, or troubleshoot missing skills.",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/bitwize-music-studio/claude-ai-music-skills/blob/main/skills/health-check/SKILL.md",
     "path": "skills/health-check/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-03T18:52:23.787Z",
+    "discovered_at": "2026-07-03T20:41:41.418Z",
     "stars": 323,
     "language": "Python",
-    "pushed_at": "2026-07-03T18:37:17Z",
+    "pushed_at": "2026-07-03T20:05:02Z",
     "license": "CC0-1.0"
-  },
-  "summary_zh": "这是一个用来检查插件依赖包和技能注册状态的工具，适合在验证安装配置、排查技能缺失或诊断插件异常时使用。"
+  }
 }

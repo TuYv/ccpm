@@ -1,14 +1,14 @@
 {
   "id": "aaronontheweb-dotnet-skills-opentelementry-dotnet-instrumentation",
-  "name": "OpenTelemetry-NET-Instrumentation",
-  "description": "Provides guidance for implementing OpenTelemetry instrumentation in .NET codebases, covering tracing (Activities/Spans), metrics, naming conventions, error handling, performance, and API design best practices.",
+  "name": "opentelemetry-net-instrumentation",
+  "description": "Provides guidance for implementing OpenTelemetry instrumentation in .NET codebases, covering tracing (Activities/Spans), metrics, logs, naming conventions, error handling, performance, SDK setup, resources, context propagation, and API design best practices.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
     "gemini"
   ],
-  "version": "1.0.0",
+  "version": "2.0.0",
   "author": "Aaronontheweb",
   "install_path": ".claude/skills/opentelementry-dotnet-instrumentation/SKILL.md",
   "source": {
@@ -16,10 +16,10 @@
     "url": "https://github.com/Aaronontheweb/dotnet-skills/blob/master/skills/opentelementry-dotnet-instrumentation/SKILL.md",
     "path": "skills/opentelementry-dotnet-instrumentation/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-07-03T18:58:34.597Z",
+    "discovered_at": "2026-07-03T20:45:20.800Z",
     "stars": 1040,
     "language": "Shell",
-    "pushed_at": "2026-06-18T01:02:32Z",
+    "pushed_at": "2026-07-03T20:16:26Z",
     "license": "MIT"
   }
 }
