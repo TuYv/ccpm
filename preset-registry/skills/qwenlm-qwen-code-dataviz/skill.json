@@ -1,0 +1,25 @@
+{
+  "id": "qwenlm-qwen-code-dataviz",
+  "name": "dataviz",
+  "description": "Design guidance for charts, graphs, dashboards, maps, and data visualizations, including a local palette validator.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "QwenLM",
+  "install_path": ".claude/skills/dataviz/SKILL.md",
+  "source": {
+    "repo": "QwenLM/qwen-code",
+    "url": "https://github.com/QwenLM/qwen-code/blob/main/packages/core/src/skills/bundled/dataviz/SKILL.md",
+    "path": "packages/core/src/skills/bundled/dataviz/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-03T05:09:44.724Z",
+    "stars": 25754,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-03T04:31:28Z",
+    "license": "Apache-2.0"
+  }
+}
