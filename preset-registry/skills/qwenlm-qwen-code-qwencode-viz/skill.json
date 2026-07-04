@@ -1,0 +1,25 @@
+{
+  "id": "qwenlm-qwen-code-qwencode-viz",
+  "name": "qwencode-viz",
+  "description": "> Generate renderable chart outputs for clients that support the Qwen Code Web Shell echarts-fulldata renderer. Use only when the current Web Shell host has explicitly registered that renderer and the user asks for a chart, visualization, ECharts output, or Web Shell-rendered chart block.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "QwenLM",
+  "install_path": ".claude/skills/qwencode-viz/SKILL.md",
+  "source": {
+    "repo": "QwenLM/qwen-code",
+    "url": "https://github.com/QwenLM/qwen-code/blob/main/packages/web-shell/docs/examples/qwencode-viz/SKILL.md",
+    "path": "packages/web-shell/docs/examples/qwencode-viz/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-04T17:42:36.285Z",
+    "stars": 25775,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-04T17:40:00Z",
+    "license": "Apache-2.0"
+  }
+}
