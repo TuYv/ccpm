@@ -1,0 +1,25 @@
+{
+  "id": "tradermonty-claude-trading-skills-drawdown-circuit-breaker",
+  "name": "drawdown-circuit-breaker",
+  "description": "Evaluate account-level drawdown circuit breaker rules from trader-memory-core state and decide whether new trade risk is allowed today. Uses realized P&L, losing-streak cooldowns, and weekly/monthly drawdown limits without any external API.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tradermonty",
+  "install_path": ".claude/skills/drawdown-circuit-breaker/SKILL.md",
+  "source": {
+    "repo": "tradermonty/claude-trading-skills",
+    "url": "https://github.com/tradermonty/claude-trading-skills/blob/main/skills/drawdown-circuit-breaker/SKILL.md",
+    "path": "skills/drawdown-circuit-breaker/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-03T23:31:15.757Z",
+    "stars": 2233,
+    "language": "Python",
+    "pushed_at": "2026-07-03T23:04:33Z",
+    "license": "MIT"
+  }
+}

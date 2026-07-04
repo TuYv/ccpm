@@ -1,0 +1,25 @@
+{
+  "id": "heygen-com-hyperframes-figma",
+  "name": "figma",
+  "description": "Import Figma content into a HyperFrames composition — rendered assets, brand tokens, components, and Figma Motion animations — via the Figma MCP connector. Use when the user pastes a figma.com link or asks to bring a Figma design, frame, logo, brand, or animation into a video/composition.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "heygen-com",
+  "install_path": ".claude/skills/figma/SKILL.md",
+  "source": {
+    "repo": "heygen-com/hyperframes",
+    "url": "https://github.com/heygen-com/hyperframes/blob/main/skills/figma/SKILL.md",
+    "path": "skills/figma/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-03T23:29:59.311Z",
+    "stars": 32961,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-03T23:25:53Z",
+    "license": "Apache-2.0"
+  }
+}
