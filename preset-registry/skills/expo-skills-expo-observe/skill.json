@@ -1,7 +1,7 @@
 {
   "id": "expo-skills-expo-observe",
   "name": "expo-observe",
-  "description": "Use for anything related to EAS Observe — adding `expo-observe` to an Expo project (AppMetricsRoot/ObserveRoot HOC, markInteractive, the useObserve hook, and the Expo Router / React Navigation integrations for per-route metrics), querying via the EAS CLI (`eas observe:metrics-summary`, `observe:metrics`, `observe:routes`, `observe:events`, `observe:versions`), or interpreting the resulting metrics (cold/warm launch, TTR, TTI, navigation cold/warm TTR, update download, and the TTI frameRate param",
+  "description": "Use for anything related to EAS Observe — adding `expo-observe` to an Expo project (AppMetricsRoot/ObserveRoot HOC, markInteractive, the useObserve hook, the Expo Router / React Navigation integrations for per-route metrics, and user-defined events via `Observe.logEvent`), querying via the EAS CLI (`eas observe:metrics-summary`, `observe:metrics`, `observe:routes`, `observe:events`, `observe:versions`), or interpreting the resulting metrics (cold/warm launch, TTR, TTI, navigation cold/warm TTR, ",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/expo/skills/blob/main/plugins/expo/skills/expo-observe/SKILL.md",
     "path": "plugins/expo/skills/expo-observe/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-04T09:43:45.987Z",
-    "stars": 2158,
+    "discovered_at": "2026-07-04T11:56:10.819Z",
+    "stars": 2159,
     "language": "Shell",
-    "pushed_at": "2026-07-03T22:10:36Z",
+    "pushed_at": "2026-07-04T10:02:03Z",
     "license": "MIT"
-  },
-  "summary_zh": "一个面向 Expo 应用的性能观测库，帮你接入 EAS Observe，自动采集冷热启动、TTR、TTI、路由切换等指标，并能通过 CLI 查询分析，适合需要监控 React Native 应用真实性能表现的团队。"
+  }
 }
