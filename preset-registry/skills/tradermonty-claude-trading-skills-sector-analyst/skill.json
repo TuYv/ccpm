@@ -1,7 +1,7 @@
 {
   "id": "tradermonty-claude-trading-skills-sector-analyst",
   "name": "sector-analyst",
-  "description": "This skill should be used when analyzing sector rotation patterns and market cycle positioning. It fetches sector uptrend data from CSV (no API key required) and optionally accepts chart images for supplementary analysis. Use this skill when the user requests sector rotation analysis, cyclical vs defensive assessment, overbought/oversold identification, or market cycle phase estimation. All analysis and output are conducted in English.",
+  "description": "This skill should be used when analyzing sector and industry performance charts to assess market positioning and rotation patterns. Use this skill when the user provides performance chart images (1-week or 1-month timeframes) for sectors or industries and requests market cycle assessment, sector rotation analysis, or strategic positioning recommendations based on performance data. All analysis and output are conducted in English.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -13,13 +13,13 @@
   "install_path": ".claude/skills/sector-analyst/SKILL.md",
   "source": {
     "repo": "tradermonty/claude-trading-skills",
-    "url": "https://github.com/tradermonty/claude-trading-skills/blob/main/skills/sector-analyst/SKILL.md",
-    "path": "skills/sector-analyst/SKILL.md",
+    "url": "https://github.com/tradermonty/claude-trading-skills/blob/main/examples/weekly-trade-strategy/skills/sector-analyst/SKILL.md",
+    "path": "examples/weekly-trade-strategy/skills/sector-analyst/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-03T23:31:19.689Z",
-    "stars": 2233,
+    "discovered_at": "2026-07-04T04:11:42.752Z",
+    "stars": 2234,
     "language": "Python",
-    "pushed_at": "2026-07-03T23:04:33Z",
+    "pushed_at": "2026-07-04T03:26:23Z",
     "license": "MIT"
   }
 }

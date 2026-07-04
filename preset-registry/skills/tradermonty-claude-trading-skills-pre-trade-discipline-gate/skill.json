@@ -1,0 +1,25 @@
+{
+  "id": "tradermonty-claude-trading-skills-pre-trade-discipline-gate",
+  "name": "pre-trade-discipline-gate",
+  "description": "Evaluate a local pre-trade checklist before manual order entry, blocking planless, oversized, revenge-risk, market-regime-blocked, or circuit-breaker-blocked entries while journaling the decision for trader-memory-core review.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tradermonty",
+  "install_path": ".claude/skills/pre-trade-discipline-gate/SKILL.md",
+  "source": {
+    "repo": "tradermonty/claude-trading-skills",
+    "url": "https://github.com/tradermonty/claude-trading-skills/blob/main/skills/pre-trade-discipline-gate/SKILL.md",
+    "path": "skills/pre-trade-discipline-gate/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-04T04:11:47.096Z",
+    "stars": 2234,
+    "language": "Python",
+    "pushed_at": "2026-07-04T03:26:23Z",
+    "license": "MIT"
+  }
+}
