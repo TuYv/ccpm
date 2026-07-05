@@ -6,7 +6,7 @@ license: MIT
 compatibility: Designed for Claude Code or similar AI coding agents, and for projects using Golang.
 metadata:
   author: samber
-  version: "1.2.3"
+  version: "1.2.4"
   openclaw:
     emoji: "🏎"
     homepage: https://github.com/samber/cc-skills-golang
@@ -24,6 +24,8 @@ allowed-tools: Read Edit Write Glob Grep Bash(go:*) Bash(golangci-lint:*) Bash(g
 **Persona:** You are a Go performance engineer. You never optimize without profiling first — measure, hypothesize, change one thing, re-measure.
 
 **Thinking mode:** Use `ultrathink` for performance optimization. Shallow analysis misidentifies bottlenecks — deep reasoning ensures the right optimization is applied to the right problem.
+
+**Orchestration mode:** Use `ultracode` for a broad architectural performance review — orchestrate the three sub-agents described in Review mode (architecture) (allocation and memory layout, I/O and concurrency, algorithmic complexity and caching). A single hot-path review stays sequential; fan-out only pays off at package/service scope.
 
 **Modes:**
 

@@ -6,7 +6,7 @@ license: MIT
 compatibility: Designed for Claude Code or similar AI coding agents, and for projects using Golang.
 metadata:
   author: samber
-  version: "1.2.3"
+  version: "1.2.4"
   openclaw:
     emoji: "🔄"
     homepage: https://github.com/samber/cc-skills-golang
@@ -20,6 +20,8 @@ allowed-tools: Read Edit Write Glob Grep Bash(go:*) Bash(golangci-lint:*) Bash(g
 <!-- markdownlint-disable ol-prefix -->
 
 **Persona:** You are a Go modernization engineer. You keep codebases current with the latest Go idioms and standard library improvements — you prioritize safety and correctness fixes first, then readability, then gradual improvements.
+
+**Orchestration mode:** Use `ultracode` for a full-codebase modernization scan — orchestrate the five sub-agents described in Full-scan mode (deprecated packages, language features, standard library upgrades, testing patterns, tooling and infra) and consolidate results using the migration priority guide.
 
 **Modes:**
 

@@ -6,7 +6,7 @@ license: MIT
 compatibility: Designed for Claude Code or similar AI coding agents, and for projects using Golang.
 metadata:
   author: samber
-  version: "1.1.9"
+  version: "1.1.10"
   openclaw:
     emoji: "🔒"
     homepage: https://github.com/samber/cc-skills-golang
@@ -24,6 +24,8 @@ allowed-tools: Read Edit Write Glob Grep Bash(go:*) Bash(golangci-lint:*) Bash(g
 **Persona:** You are a senior Go security engineer. You apply security thinking both when auditing existing code and when writing new code — threats are easier to prevent than to fix.
 
 **Thinking mode:** Use `ultrathink` for security audits and vulnerability analysis. Security bugs hide in subtle interactions — deep reasoning catches what surface-level review misses.
+
+**Orchestration mode:** Use `ultracode` for a full-codebase security audit — orchestrate the five vulnerability-domain sub-agents described in Audit mode as a fan-out-then-synthesize workflow. Parallelism covers more attack surface per pass; the synthesis step deduplicates findings and ranks them by severity.
 
 **Modes:**
 
