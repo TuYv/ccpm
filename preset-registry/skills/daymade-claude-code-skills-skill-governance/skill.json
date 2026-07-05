@@ -1,0 +1,25 @@
+{
+  "id": "daymade-claude-code-skills-skill-governance",
+  "name": "skill-governance",
+  "description": ">- Enforce source-of-truth discipline for Claude Code skill marketplaces and caches. Use whenever the user says \"check skill drift\", \"检查 skill 漂移\", \"sync skills from source\", \"以源码为准同步 skill 缓存\", \"clean old skill cache versions\", \"清理 skill 缓存旧版本\", \"switch marketplace to local source\", \"marketplace 切到本地源码\", or talks about skill caches being stale, version mismatches, orphaned plugins, or rebuilding the marketplace cache from a local source repo.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/skill-governance/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-skill/skill-governance/SKILL.md",
+    "path": "daymade-skill/skill-governance/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-05T18:27:39.934Z",
+    "stars": 1246,
+    "language": "Python",
+    "pushed_at": "2026-07-05T17:22:34Z",
+    "license": "MIT"
+  }
+}
