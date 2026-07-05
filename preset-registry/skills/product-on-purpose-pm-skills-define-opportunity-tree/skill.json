@@ -1,7 +1,7 @@
 {
   "id": "product-on-purpose-pm-skills-define-opportunity-tree",
   "name": "define-opportunity-tree",
-  "description": "Creates an opportunity solution tree mapping desired outcomes to opportunities and potential solutions. Use for outcome-driven product discovery, prioritization, or communicating product strategy.",
+  "description": "Creates an opportunity solution tree connecting a desired outcome to customer opportunities and candidate solutions, preventing solution-first jumps in continuous discovery. Use when structuring scattered feature ideas or communicating how the roadmap traces to outcomes. For ranking an existing flat list of candidates, use define-prioritization-framework instead; this skill discovers the list, it does not score one.",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/product-on-purpose/pm-skills/blob/main/skills/define-opportunity-tree/SKILL.md",
     "path": "skills/define-opportunity-tree/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-05T15:20:45.783Z",
+    "discovered_at": "2026-07-05T16:45:55.483Z",
     "stars": 444,
     "language": "JavaScript",
-    "pushed_at": "2026-07-05T07:12:37Z",
+    "pushed_at": "2026-07-05T16:43:04Z",
     "license": "Apache-2.0"
-  },
-  "summary_zh": "它能将期望结果、潜在机会和解决方案串联成树状图，帮你理清思路。适合做结果导向的产品探索、需求优先级排序或对齐产品战略。"
+  }
 }

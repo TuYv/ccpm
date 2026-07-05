@@ -1,7 +1,7 @@
 {
   "id": "product-on-purpose-pm-skills-measure-dashboard-requirements",
   "name": "measure-dashboard-requirements",
-  "description": "Specifies requirements for an analytics dashboard including metrics, visualizations, filters, and data sources. Use when requesting dashboards from data teams, defining KPI tracking, or documenting reporting needs.",
+  "description": "Specifies what questions a dashboard must answer and the metrics, visualizations, filters, and data sources it needs, so data teams build something that informs decisions rather than displaying numbers. Use when requesting a dashboard or formalizing ad-hoc reporting. For the event tracking that feeds the dashboard, use measure-instrumentation-spec instead; instrument first, visualize second.",
   "category": "数据分析",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/product-on-purpose/pm-skills/blob/main/skills/measure-dashboard-requirements/SKILL.md",
     "path": "skills/measure-dashboard-requirements/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-05T15:20:52.374Z",
+    "discovered_at": "2026-07-05T16:47:26.888Z",
     "stars": 444,
     "language": "JavaScript",
-    "pushed_at": "2026-07-05T07:12:37Z",
+    "pushed_at": "2026-07-05T16:43:04Z",
     "license": "Apache-2.0"
-  },
-  "summary_zh": "这是一套数据看板需求规范，帮你把要看的指标和图表理清楚。向数据团队提需求、规划KPI追踪或记录报表需求时用它，能避免沟通不清。"
+  }
 }

@@ -1,7 +1,7 @@
 {
   "id": "product-on-purpose-pm-skills-measure-instrumentation-spec",
   "name": "measure-instrumentation-spec",
-  "description": "Specifies event tracking and analytics instrumentation requirements for a feature. Use when defining what data to collect, ensuring consistent tracking implementation, or documenting analytics requirements for engineering.",
+  "description": "Specifies what analytics events to track, when they fire, and what properties to include, as a contract between product and engineering that prevents undertracked features. Use before engineering builds a feature or when auditing existing tracking for gaps. For the dashboard built on top of these events, use measure-dashboard-requirements instead.",
   "category": "数据分析",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/product-on-purpose/pm-skills/blob/main/skills/measure-instrumentation-spec/SKILL.md",
     "path": "skills/measure-instrumentation-spec/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-05T15:20:53.132Z",
+    "discovered_at": "2026-07-05T16:47:27.523Z",
     "stars": 444,
     "language": "JavaScript",
-    "pushed_at": "2026-07-05T07:12:37Z",
+    "pushed_at": "2026-07-05T16:43:04Z",
     "license": "Apache-2.0"
-  },
-  "summary_zh": "它是一套功能埋点规范模板，帮你明确该收集哪些数据，确保团队埋点实现一致，并方便给开发写数据需求文档。"
+  }
 }

@@ -1,7 +1,7 @@
 {
   "id": "product-on-purpose-pm-skills-develop-spike-summary",
   "name": "develop-spike-summary",
-  "description": "Documents the results of a time-boxed technical or design exploration (spike). Use after completing a spike to capture learnings, findings, and recommendations for the team.",
+  "description": "Documents the results of a completed technical or design spike, capturing the original question, approach, evidence-backed findings, and a clear proceed-or-not recommendation so the team does not re-litigate the exploration. Use once a time-boxed investigation has concluded. For the architecture decision the spike informs, use develop-adr instead; for research-based exploration, use discover-interview-synthesis.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/product-on-purpose/pm-skills/blob/main/skills/develop-spike-summary/SKILL.md",
     "path": "skills/develop-spike-summary/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-05T15:20:48.222Z",
+    "discovered_at": "2026-07-05T16:47:22.308Z",
     "stars": 444,
     "language": "JavaScript",
-    "pushed_at": "2026-07-05T07:12:37Z",
+    "pushed_at": "2026-07-05T16:43:04Z",
     "license": "Apache-2.0"
-  },
-  "summary_zh": "这是一个记录技术预研结果的文档模板。适合在限时技术或设计探索结束后使用，帮你沉淀团队的经验、发现和建议，解决预研成果难留存的问题。"
+  }
 }

@@ -1,7 +1,7 @@
 {
   "id": "product-on-purpose-pm-skills-deliver-launch-checklist",
   "name": "deliver-launch-checklist",
-  "description": "Creates a comprehensive pre-launch checklist covering engineering, design, marketing, support, legal, and operations readiness. Use before releasing features, products, or major updates to ensure nothing is missed.",
+  "description": "Creates a cross-functional pre-launch checklist covering engineering, design, marketing, support, legal, and operations readiness, with owners, dates, and go/no-go criteria so nothing is missed before release. Use for significant or cross-team launches, not a small single-team change. For the customer-facing announcement of what shipped, use deliver-release-notes instead.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/product-on-purpose/pm-skills/blob/main/skills/deliver-launch-checklist/SKILL.md",
     "path": "skills/deliver-launch-checklist/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-05T15:20:46.802Z",
+    "discovered_at": "2026-07-05T16:47:20.753Z",
     "stars": 444,
     "language": "JavaScript",
-    "pushed_at": "2026-07-05T07:12:37Z",
+    "pushed_at": "2026-07-05T16:43:04Z",
     "license": "Apache-2.0"
-  },
-  "summary_zh": "这是一个生成全面上线前检查清单的工具，帮你统筹各环节准备工作。在发布新功能、产品或大版本前用它查漏补缺，确保不遗漏任何细节。"
+  }
 }

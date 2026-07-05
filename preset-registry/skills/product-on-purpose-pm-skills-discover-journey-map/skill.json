@@ -1,8 +1,8 @@
 {
   "id": "product-on-purpose-pm-skills-discover-journey-map",
   "name": "discover-journey-map",
-  "description": "Produce a customer journey map covering stages, touchpoints, emotional curve, pain points, moments of truth, and opportunity annotations. Output is a markdown artifact that may include mermaid timeline / flowchart visualization. Supports both linear journey (start to end) and cyclical journey (recurring engagement loops). Refuses to fabricate emotional or behavioral data without research input.",
-  "category": "设计创意",
+  "description": "Maps a customer journey across stages, touchpoints, emotional curve, pain points, and moments of truth into a markdown artifact with an optional mermaid timeline or flowchart. Use when synthesizing existing research into the shape of a customer's experience, end-to-end or for one phase. Without research signal yet, run discover-interview-synthesis or measure-survey-analysis first; refuses to fabricate emotional or behavioral data.",
+  "category": "文档写作",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,10 @@
     "url": "https://github.com/product-on-purpose/pm-skills/blob/main/skills/discover-journey-map/SKILL.md",
     "path": "skills/discover-journey-map/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-05T15:20:48.827Z",
+    "discovered_at": "2026-07-05T16:47:23.024Z",
     "stars": 444,
     "language": "JavaScript",
-    "pushed_at": "2026-07-05T07:12:37Z",
+    "pushed_at": "2026-07-05T16:43:04Z",
     "license": "Apache-2.0"
-  },
-  "summary_zh": "帮你梳理客户旅程图，覆盖各阶段触点、情绪曲线、痛点和关键时刻，输出带 mermaid 可视化的 markdown 文档，支持线性流程或循环互动场景，缺少调研数据时不会瞎编。"
+  }
 }
