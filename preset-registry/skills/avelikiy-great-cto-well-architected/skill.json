@@ -1,0 +1,25 @@
+{
+  "id": "avelikiy-great-cto-well-architected",
+  "name": "well-architected",
+  "description": "6-pillar architecture review framework. Adapted from AWS Well-Architected for use by great_cto's architect agent on every non-nano ARCH document. Forces explicit answers across operational excellence, security, reliability, performance, cost, and sustainability — not just feature design.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "avelikiy",
+  "install_path": ".claude/skills/well-architected/SKILL.md",
+  "source": {
+    "repo": "avelikiy/great_cto",
+    "url": "https://github.com/avelikiy/great_cto/blob/main/skills/well-architected/SKILL.md",
+    "path": "skills/well-architected/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-06T09:19:51.817Z",
+    "stars": 50,
+    "language": "JavaScript",
+    "pushed_at": "2026-07-06T07:30:39Z",
+    "license": "MIT"
+  }
+}

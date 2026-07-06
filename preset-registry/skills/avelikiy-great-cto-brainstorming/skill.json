@@ -1,0 +1,25 @@
+{
+  "id": "avelikiy-great-cto-brainstorming",
+  "name": "brainstorming",
+  "description": "Structured idea generation + multi-LLM debate for the product-owner stage. Diverge (generate genuinely different bets), debate (a 4-persona panel on 4 models argues over 2 rounds), converge (synthesize a recommendation). Used by product-owner before architect; available to architect for design-space exploration.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "avelikiy",
+  "install_path": ".claude/skills/brainstorming/SKILL.md",
+  "source": {
+    "repo": "avelikiy/great_cto",
+    "url": "https://github.com/avelikiy/great_cto/blob/main/skills/brainstorming/SKILL.md",
+    "path": "skills/brainstorming/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-06T09:19:48.184Z",
+    "stars": 50,
+    "language": "JavaScript",
+    "pushed_at": "2026-07-06T07:30:39Z",
+    "license": "MIT"
+  }
+}

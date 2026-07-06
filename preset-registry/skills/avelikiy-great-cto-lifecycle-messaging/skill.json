@@ -1,0 +1,25 @@
+{
+  "id": "avelikiy-great-cto-lifecycle-messaging",
+  "name": "lifecycle-messaging",
+  "description": "Email/SMS lifecycle and deliverability framework for SMB Product-Builder products that send transactional or lifecycle messages (booking reminders, CRM sequences, receipts, win-back). Codifies provider selection (Resend/Postmark/Twilio/SendGrid), domain auth (SPF/DKIM/DMARC), consent and compliance (TCPA, CAN-SPAM, CASL, quiet hours, double opt-in), suppression-list discipline, and the transactional-vs-marketing split. Applied by integrations-engineer and senior-dev whenever a feature sends mess",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "avelikiy",
+  "install_path": ".claude/skills/lifecycle-messaging/SKILL.md",
+  "source": {
+    "repo": "avelikiy/great_cto",
+    "url": "https://github.com/avelikiy/great_cto/blob/main/skills/lifecycle-messaging/SKILL.md",
+    "path": "skills/lifecycle-messaging/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-06T09:19:49.030Z",
+    "stars": 50,
+    "language": "JavaScript",
+    "pushed_at": "2026-07-06T07:30:39Z",
+    "license": "MIT"
+  }
+}

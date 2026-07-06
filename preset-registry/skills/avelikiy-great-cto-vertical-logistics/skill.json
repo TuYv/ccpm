@@ -1,0 +1,25 @@
+{
+  "id": "avelikiy-great-cto-vertical-logistics",
+  "name": "vertical-logistics",
+  "description": "Domain knowledge for the logistics & supply-chain vertical (SMB shipping & inventory) so architect and pm don't spec naively. Covers the vocabulary (TMS vs WMS, multi-carrier rate shopping, dimensional weight, BOL/ASN, lot/batch, reorder point), the non-obvious rules incumbents get right, what a naive build gets wrong, and the entities each of the four products (shipment-tracking, warehouse-lite, route-optimization, po-mgmt) must model. Applied by architect when writing ARCH-{slug}.md and by pm ",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "avelikiy",
+  "install_path": ".claude/skills/vertical-logistics/SKILL.md",
+  "source": {
+    "repo": "avelikiy/great_cto",
+    "url": "https://github.com/avelikiy/great_cto/blob/main/skills/vertical-logistics/SKILL.md",
+    "path": "skills/vertical-logistics/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-06T09:19:51.106Z",
+    "stars": 50,
+    "language": "JavaScript",
+    "pushed_at": "2026-07-06T07:30:39Z",
+    "license": "MIT"
+  }
+}

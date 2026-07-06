@@ -1,0 +1,25 @@
+{
+  "id": "avelikiy-great-cto-discovery",
+  "name": "discovery",
+  "description": "Structured pre-design questioning to surface hidden constraints before any architecture decision is locked in. Forces the architect/auditor/reviewer to enumerate what they DON'T know before proposing.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "avelikiy",
+  "install_path": ".claude/skills/discovery/SKILL.md",
+  "source": {
+    "repo": "avelikiy/great_cto",
+    "url": "https://github.com/avelikiy/great_cto/blob/main/skills/discovery/SKILL.md",
+    "path": "skills/discovery/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-06T09:19:48.678Z",
+    "stars": 50,
+    "language": "JavaScript",
+    "pushed_at": "2026-07-06T07:30:39Z",
+    "license": "MIT"
+  }
+}

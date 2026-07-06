@@ -1,0 +1,25 @@
+{
+  "id": "avelikiy-great-cto-anydesign",
+  "name": "anydesign",
+  "description": "Analyze images, websites, and Figma files to extract their design and generate a `design.md` with token system, component inventory, and reconstruction notes. Use this skill whenever the user wants to understand, document, replicate, or audit the design of something visual: a screenshot, a URL, a Figma link, a Pinterest reference, a mockup, a competitor's site, a component, a dashboard, a landing page. Also when they ask 'extract the design system from X', 'document the style of Y', 'analyze thi",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "avelikiy",
+  "install_path": ".claude/skills/anydesign/SKILL.md",
+  "source": {
+    "repo": "avelikiy/great_cto",
+    "url": "https://github.com/avelikiy/great_cto/blob/main/skills/anydesign/SKILL.md",
+    "path": "skills/anydesign/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-06T09:19:47.884Z",
+    "stars": 50,
+    "language": "JavaScript",
+    "pushed_at": "2026-07-06T07:30:39Z",
+    "license": "MIT"
+  }
+}

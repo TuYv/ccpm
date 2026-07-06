@@ -1,0 +1,25 @@
+{
+  "id": "avelikiy-great-cto-done-blocked",
+  "name": "done-blocked",
+  "description": "Reusable reporting contract for any agent that hands work back to the pipeline. Forces ONE of two terminal statuses (DONE or BLOCKED) with a specific evidence shape. Stops vague \"probably finished\" and \"kind of stuck\" verdicts.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "avelikiy",
+  "install_path": ".claude/skills/done-blocked/SKILL.md",
+  "source": {
+    "repo": "avelikiy/great_cto",
+    "url": "https://github.com/avelikiy/great_cto/blob/main/skills/done-blocked/SKILL.md",
+    "path": "skills/done-blocked/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-06T09:19:48.793Z",
+    "stars": 50,
+    "language": "JavaScript",
+    "pushed_at": "2026-07-06T07:30:39Z",
+    "license": "MIT"
+  }
+}

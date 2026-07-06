@@ -1,0 +1,25 @@
+{
+  "id": "avelikiy-great-cto-archetype-review-base",
+  "name": "archetype-review-base",
+  "description": "Shared review framework that every domain reviewer (pci, oracle, gov, edtech, healthcare, mlops, etc.) MUST follow. Defines the output artifact (TM-{slug}.md), mandatory sections, severity scale, verdict format, the workflow scaffold (when-invoked, Step-0 read-inputs, HANDOFF), and the \"domain heuristic vs generic check\" boundary. Eliminates duplication across the ~30 reviewer prompts.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "avelikiy",
+  "install_path": ".claude/skills/archetype-review-base/SKILL.md",
+  "source": {
+    "repo": "avelikiy/great_cto",
+    "url": "https://github.com/avelikiy/great_cto/blob/main/skills/archetype-review-base/SKILL.md",
+    "path": "skills/archetype-review-base/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-06T09:19:47.999Z",
+    "stars": 50,
+    "language": "JavaScript",
+    "pushed_at": "2026-07-06T07:30:39Z",
+    "license": "MIT"
+  }
+}

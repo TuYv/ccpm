@@ -1,0 +1,25 @@
+{
+  "id": "avelikiy-great-cto-prose-style",
+  "name": "prose-style",
+  "description": "Reusable writing-style contract for agent outputs (reports, ARCH docs, verdicts, threat models). Forces direct prose with concrete evidence, no marketing voice, no hedge words. The single most-referenced skill across the pipeline — used by 28 agents.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "avelikiy",
+  "install_path": ".claude/skills/prose-style/SKILL.md",
+  "source": {
+    "repo": "avelikiy/great_cto",
+    "url": "https://github.com/avelikiy/great_cto/blob/main/skills/prose-style/SKILL.md",
+    "path": "skills/prose-style/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-06T09:19:49.959Z",
+    "stars": 50,
+    "language": "JavaScript",
+    "pushed_at": "2026-07-06T07:30:39Z",
+    "license": "MIT"
+  }
+}

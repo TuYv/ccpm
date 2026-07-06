@@ -1,0 +1,25 @@
+{
+  "id": "avelikiy-great-cto-skeptical-triage",
+  "name": "skeptical-triage",
+  "description": "Reusable 3-round self-challenge + arbiter pattern for filtering false positives from findings/verdicts. Use when the cost of a false-positive gate block exceeds the cost of ~4 extra LLM turns.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "avelikiy",
+  "install_path": ".claude/skills/skeptical-triage/SKILL.md",
+  "source": {
+    "repo": "avelikiy/great_cto",
+    "url": "https://github.com/avelikiy/great_cto/blob/main/skills/skeptical-triage/SKILL.md",
+    "path": "skills/skeptical-triage/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-06T09:19:50.058Z",
+    "stars": 50,
+    "language": "JavaScript",
+    "pushed_at": "2026-07-06T07:30:39Z",
+    "license": "MIT"
+  }
+}

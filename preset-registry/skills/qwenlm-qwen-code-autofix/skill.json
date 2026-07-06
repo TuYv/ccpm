@@ -1,0 +1,25 @@
+{
+  "id": "qwenlm-qwen-code-autofix",
+  "name": "autofix",
+  "description": "Use when Qwen Code Autofix runs from GitHub Actions or an operator dry-run to choose an approved issue, implement it, or address review feedback on an existing autofix PR.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "QwenLM",
+  "install_path": ".claude/skills/autofix/SKILL.md",
+  "source": {
+    "repo": "QwenLM/qwen-code",
+    "url": "https://github.com/QwenLM/qwen-code/blob/main/.qwen/skills/autofix/SKILL.md",
+    "path": ".qwen/skills/autofix/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-06T09:26:34.377Z",
+    "stars": 25815,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-06T08:13:37Z",
+    "license": "Apache-2.0"
+  }
+}

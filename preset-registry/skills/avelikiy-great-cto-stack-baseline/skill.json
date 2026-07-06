@@ -1,0 +1,25 @@
+{
+  "id": "avelikiy-great-cto-stack-baseline",
+  "name": "stack-baseline",
+  "description": "The pinned default technology stack for SMB Product-Builder products. One source of truth so the architect, app-scaffolder, auth-engineer, and senior-dev never re-decide the stack per build — they build ON it. Covers framework, ORM/DB, auth, UI, payments/email/SMS, files, jobs, testing, hosting, and observability, with the chosen default + the one sanctioned alternative for each. Applied whenever a new product is scaffolded or a stack choice would otherwise be improvised. Re-deciding the stack e",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "avelikiy",
+  "install_path": ".claude/skills/stack-baseline/SKILL.md",
+  "source": {
+    "repo": "avelikiy/great_cto",
+    "url": "https://github.com/avelikiy/great_cto/blob/main/skills/stack-baseline/SKILL.md",
+    "path": "skills/stack-baseline/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-06T09:19:50.178Z",
+    "stars": 50,
+    "language": "JavaScript",
+    "pushed_at": "2026-07-06T07:30:39Z",
+    "license": "MIT"
+  }
+}

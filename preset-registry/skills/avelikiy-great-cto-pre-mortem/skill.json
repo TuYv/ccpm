@@ -1,0 +1,25 @@
+{
+  "id": "avelikiy-great-cto-pre-mortem",
+  "name": "pre-mortem",
+  "description": "Imagine the project has already shipped and failed catastrophically — work backwards from the failure to identify the most likely causes BEFORE building. Forces concrete risk identification, not vague \"what could go wrong\" lists.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "avelikiy",
+  "install_path": ".claude/skills/pre-mortem/SKILL.md",
+  "source": {
+    "repo": "avelikiy/great_cto",
+    "url": "https://github.com/avelikiy/great_cto/blob/main/skills/pre-mortem/SKILL.md",
+    "path": "skills/pre-mortem/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-06T09:19:49.865Z",
+    "stars": 50,
+    "language": "JavaScript",
+    "pushed_at": "2026-07-06T07:30:39Z",
+    "license": "MIT"
+  }
+}

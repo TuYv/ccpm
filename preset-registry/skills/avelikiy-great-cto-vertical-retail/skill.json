@@ -1,0 +1,25 @@
+{
+  "id": "avelikiy-great-cto-vertical-retail",
+  "name": "vertical-retail",
+  "description": "Retail & e-commerce domain knowledge for SMB storefront products (storefront, inventory, pricing, cart-recovery). Codifies the vocabulary (SKU vs variant, reorder point, COGS/margin, ATS, AOV), the non-obvious rules (Shopify owns the storefront — don't fight it head-on; the wedge is multichannel inventory + reorder and cart recovery), the must-model entities (Product→Variants matrix, channel-aware InventoryLevel, ReorderRule, PricingRule, AbandonedCart), and what a naive build gets wrong (no var",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "avelikiy",
+  "install_path": ".claude/skills/vertical-retail/SKILL.md",
+  "source": {
+    "repo": "avelikiy/great_cto",
+    "url": "https://github.com/avelikiy/great_cto/blob/main/skills/vertical-retail/SKILL.md",
+    "path": "skills/vertical-retail/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-06T09:19:51.694Z",
+    "stars": 50,
+    "language": "JavaScript",
+    "pushed_at": "2026-07-06T07:30:39Z",
+    "license": "MIT"
+  }
+}

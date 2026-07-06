@@ -1,0 +1,25 @@
+{
+  "id": "avelikiy-great-cto-crystallize",
+  "name": "crystallize",
+  "description": "Distils repeating patterns from session logs and lessons.md into draft skill files. Run after ≥10 sessions to extract durable knowledge. Output: draft skills/ files + promotion report.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "avelikiy",
+  "install_path": ".claude/skills/crystallize/SKILL.md",
+  "source": {
+    "repo": "avelikiy/great_cto",
+    "url": "https://github.com/avelikiy/great_cto/blob/main/skills/crystallize/SKILL.md",
+    "path": "skills/crystallize/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-06T09:19:48.470Z",
+    "stars": 50,
+    "language": "JavaScript",
+    "pushed_at": "2026-07-06T07:30:39Z",
+    "license": "MIT"
+  }
+}

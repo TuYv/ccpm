@@ -1,0 +1,25 @@
+{
+  "id": "avelikiy-great-cto-observability-baseline",
+  "name": "observability-baseline",
+  "description": "Scaffold-time observability so a shipped product is not blind in prod from day one — error capture (Sentry), request-id structured logging, and /healthz + /readyz endpoints. stack-baseline pins Sentry but nothing wires it; this is the wiring. Loaded by app-scaffolder (bake into the scaffold), infra-provisioner (prod env + probes), and consumed by l3-support (traces) and devops (deploy gate).",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "avelikiy",
+  "install_path": ".claude/skills/observability-baseline/SKILL.md",
+  "source": {
+    "repo": "avelikiy/great_cto",
+    "url": "https://github.com/avelikiy/great_cto/blob/main/skills/observability-baseline/SKILL.md",
+    "path": "skills/observability-baseline/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-06T09:19:49.420Z",
+    "stars": 50,
+    "language": "JavaScript",
+    "pushed_at": "2026-07-06T07:30:39Z",
+    "license": "MIT"
+  }
+}
