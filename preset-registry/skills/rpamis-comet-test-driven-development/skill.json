@@ -1,0 +1,25 @@
+{
+  "id": "rpamis-comet-test-driven-development",
+  "name": "test-driven-development",
+  "description": "Use when implementing any feature or bugfix, before writing implementation code",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "rpamis",
+  "install_path": ".claude/skills/test-driven-development/SKILL.md",
+  "source": {
+    "repo": "rpamis/comet",
+    "url": "https://github.com/rpamis/comet/blob/master/eval/local/skills/benchmarks/dependency/superpowers/test-driven-development/SKILL.md",
+    "path": "eval/local/skills/benchmarks/dependency/superpowers/test-driven-development/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-07-06T16:44:07.777Z",
+    "stars": 1997,
+    "language": "JavaScript",
+    "pushed_at": "2026-07-06T16:01:00Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "rpamis-comet-subagent-driven-development",
+  "name": "subagent-driven-development",
+  "description": "Use when executing implementation plans with independent tasks in the current session",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "rpamis",
+  "install_path": ".claude/skills/subagent-driven-development/SKILL.md",
+  "source": {
+    "repo": "rpamis/comet",
+    "url": "https://github.com/rpamis/comet/blob/master/eval/local/skills/benchmarks/dependency/superpowers/subagent-driven-development/SKILL.md",
+    "path": "eval/local/skills/benchmarks/dependency/superpowers/subagent-driven-development/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-07-06T16:44:07.537Z",
+    "stars": 1997,
+    "language": "JavaScript",
+    "pushed_at": "2026-07-06T16:01:00Z",
+    "license": "MIT"
+  }
+}

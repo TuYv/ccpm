@@ -1,0 +1,25 @@
+{
+  "id": "rpamis-comet-openspec-propose",
+  "name": "openspec-propose",
+  "description": "Propose a new change with all artifacts generated in one step. Use when the user wants to quickly describe what they want to build and get a complete proposal with design, specs, and tasks ready for implementation.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "rpamis",
+  "install_path": ".claude/skills/openspec-propose/SKILL.md",
+  "source": {
+    "repo": "rpamis/comet",
+    "url": "https://github.com/rpamis/comet/blob/master/eval/local/skills/benchmarks/dependency/openspec/openspec-propose/SKILL.md",
+    "path": "eval/local/skills/benchmarks/dependency/openspec/openspec-propose/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-07-06T16:44:06.308Z",
+    "stars": 1997,
+    "language": "JavaScript",
+    "pushed_at": "2026-07-06T16:01:00Z",
+    "license": "MIT"
+  }
+}

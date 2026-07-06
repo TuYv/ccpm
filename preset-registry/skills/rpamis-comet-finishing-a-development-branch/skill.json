@@ -1,0 +1,25 @@
+{
+  "id": "rpamis-comet-finishing-a-development-branch",
+  "name": "finishing-a-development-branch",
+  "description": "Use when implementation is complete, all tests pass, and you need to decide how to integrate the work - guides completion of development work by presenting structured options for merge, PR, or cleanup",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "rpamis",
+  "install_path": ".claude/skills/finishing-a-development-branch/SKILL.md",
+  "source": {
+    "repo": "rpamis/comet",
+    "url": "https://github.com/rpamis/comet/blob/master/eval/local/skills/benchmarks/dependency/superpowers/finishing-a-development-branch/SKILL.md",
+    "path": "eval/local/skills/benchmarks/dependency/superpowers/finishing-a-development-branch/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-07-06T16:44:07.163Z",
+    "stars": 1997,
+    "language": "JavaScript",
+    "pushed_at": "2026-07-06T16:01:00Z",
+    "license": "MIT"
+  }
+}

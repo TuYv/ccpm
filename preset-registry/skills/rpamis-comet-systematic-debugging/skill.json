@@ -1,0 +1,25 @@
+{
+  "id": "rpamis-comet-systematic-debugging",
+  "name": "systematic-debugging",
+  "description": "Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "rpamis",
+  "install_path": ".claude/skills/systematic-debugging/SKILL.md",
+  "source": {
+    "repo": "rpamis/comet",
+    "url": "https://github.com/rpamis/comet/blob/master/eval/local/skills/benchmarks/dependency/superpowers/systematic-debugging/SKILL.md",
+    "path": "eval/local/skills/benchmarks/dependency/superpowers/systematic-debugging/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-07-06T16:44:07.661Z",
+    "stars": 1997,
+    "language": "JavaScript",
+    "pushed_at": "2026-07-06T16:01:00Z",
+    "license": "MIT"
+  }
+}

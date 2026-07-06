@@ -1,0 +1,25 @@
+{
+  "id": "rpamis-comet-openspec-new-change",
+  "name": "openspec-new-change",
+  "description": "Start a new OpenSpec change using the experimental artifact workflow. Use when the user wants to create a new feature, fix, or modification with a structured step-by-step approach.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "rpamis",
+  "install_path": ".claude/skills/openspec-new-change/SKILL.md",
+  "source": {
+    "repo": "rpamis/comet",
+    "url": "https://github.com/rpamis/comet/blob/master/eval/local/skills/benchmarks/dependency/openspec/openspec-new-change/SKILL.md",
+    "path": "eval/local/skills/benchmarks/dependency/openspec/openspec-new-change/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-07-06T16:44:06.044Z",
+    "stars": 1997,
+    "language": "JavaScript",
+    "pushed_at": "2026-07-06T16:01:00Z",
+    "license": "MIT"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "id": "rpamis-comet-comet-design",
   "name": "comet-design",
-  "description": "Comet Phase 2: Deep Design. Invoke with /comet-design. Produce Design Doc and delta spec through brainstorming.",
+  "description": "Use when full Comet change 已完成 open 阶段但缺少 Superpowers Design Doc，或 design 阶段需要从 OpenSpec 交接包恢复。",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -13,13 +13,13 @@
   "install_path": ".claude/skills/comet-design/SKILL.md",
   "source": {
     "repo": "rpamis/comet",
-    "url": "https://github.com/rpamis/comet/blob/master/assets/skills/comet-design/SKILL.md",
-    "path": "assets/skills/comet-design/SKILL.md",
+    "url": "https://github.com/rpamis/comet/blob/master/eval/local/skills/benchmarks/040-beta/comet-design/SKILL.md",
+    "path": "eval/local/skills/benchmarks/040-beta/comet-design/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-07-06T13:12:25.650Z",
-    "stars": 1993,
-    "language": "TypeScript",
-    "pushed_at": "2026-07-06T09:55:01Z",
+    "discovered_at": "2026-07-06T16:44:04.451Z",
+    "stars": 1997,
+    "language": "JavaScript",
+    "pushed_at": "2026-07-06T16:01:00Z",
     "license": "MIT"
   }
 }

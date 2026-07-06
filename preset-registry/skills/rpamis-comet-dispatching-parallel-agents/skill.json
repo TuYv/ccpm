@@ -1,0 +1,25 @@
+{
+  "id": "rpamis-comet-dispatching-parallel-agents",
+  "name": "dispatching-parallel-agents",
+  "description": "Use when facing 2+ independent tasks that can be worked on without shared state or sequential dependencies",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "rpamis",
+  "install_path": ".claude/skills/dispatching-parallel-agents/SKILL.md",
+  "source": {
+    "repo": "rpamis/comet",
+    "url": "https://github.com/rpamis/comet/blob/master/eval/local/skills/benchmarks/dependency/superpowers/dispatching-parallel-agents/SKILL.md",
+    "path": "eval/local/skills/benchmarks/dependency/superpowers/dispatching-parallel-agents/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-07-06T16:44:06.882Z",
+    "stars": 1997,
+    "language": "JavaScript",
+    "pushed_at": "2026-07-06T16:01:00Z",
+    "license": "MIT"
+  }
+}

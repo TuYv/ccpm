@@ -1,0 +1,25 @@
+{
+  "id": "rpamis-comet-openspec-archive-change",
+  "name": "openspec-archive-change",
+  "description": "Archive a completed change in the experimental workflow. Use when the user wants to finalize and archive a change after implementation is complete.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "rpamis",
+  "install_path": ".claude/skills/openspec-archive-change/SKILL.md",
+  "source": {
+    "repo": "rpamis/comet",
+    "url": "https://github.com/rpamis/comet/blob/master/eval/local/skills/benchmarks/dependency/openspec/openspec-archive-change/SKILL.md",
+    "path": "eval/local/skills/benchmarks/dependency/openspec/openspec-archive-change/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-07-06T16:44:05.442Z",
+    "stars": 1997,
+    "language": "JavaScript",
+    "pushed_at": "2026-07-06T16:01:00Z",
+    "license": "MIT"
+  }
+}

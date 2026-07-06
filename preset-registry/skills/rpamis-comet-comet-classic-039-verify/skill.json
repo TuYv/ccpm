@@ -1,0 +1,25 @@
+{
+  "id": "rpamis-comet-comet-classic-039-verify",
+  "name": "comet-verify",
+  "description": "Comet Phase 4: Verify and Close. Invoke with /comet-verify. Verify implementation matches design, handle development branch.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "rpamis",
+  "install_path": ".claude/skills/comet-classic-039-verify/SKILL.md",
+  "source": {
+    "repo": "rpamis/comet",
+    "url": "https://github.com/rpamis/comet/blob/master/eval/local/skills/benchmarks/039-release/comet-classic-039-verify/SKILL.md",
+    "path": "eval/local/skills/benchmarks/039-release/comet-classic-039-verify/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-07-06T16:44:03.934Z",
+    "stars": 1997,
+    "language": "JavaScript",
+    "pushed_at": "2026-07-06T16:01:00Z",
+    "license": "MIT"
+  }
+}

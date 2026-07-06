@@ -1,0 +1,25 @@
+{
+  "id": "rpamis-comet-openspec-bulk-archive-change",
+  "name": "openspec-bulk-archive-change",
+  "description": "Archive multiple completed changes at once. Use when archiving several parallel changes.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "rpamis",
+  "install_path": ".claude/skills/openspec-bulk-archive-change/SKILL.md",
+  "source": {
+    "repo": "rpamis/comet",
+    "url": "https://github.com/rpamis/comet/blob/master/eval/local/skills/benchmarks/dependency/openspec/openspec-bulk-archive-change/SKILL.md",
+    "path": "eval/local/skills/benchmarks/dependency/openspec/openspec-bulk-archive-change/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-07-06T16:44:05.554Z",
+    "stars": 1997,
+    "language": "JavaScript",
+    "pushed_at": "2026-07-06T16:01:00Z",
+    "license": "MIT"
+  }
+}

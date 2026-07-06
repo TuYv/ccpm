@@ -1,0 +1,25 @@
+{
+  "id": "rpamis-comet-openspec-explore",
+  "name": "openspec-explore",
+  "description": "Enter explore mode - a thinking partner for exploring ideas, investigating problems, and clarifying requirements. Use when the user wants to think through something before or during a change.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "rpamis",
+  "install_path": ".claude/skills/openspec-explore/SKILL.md",
+  "source": {
+    "repo": "rpamis/comet",
+    "url": "https://github.com/rpamis/comet/blob/master/eval/local/skills/benchmarks/dependency/openspec/openspec-explore/SKILL.md",
+    "path": "eval/local/skills/benchmarks/dependency/openspec/openspec-explore/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-07-06T16:44:05.781Z",
+    "stars": 1997,
+    "language": "JavaScript",
+    "pushed_at": "2026-07-06T16:01:00Z",
+    "license": "MIT"
+  }
+}

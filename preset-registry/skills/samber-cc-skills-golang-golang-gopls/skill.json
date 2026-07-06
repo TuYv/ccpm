@@ -1,0 +1,25 @@
+{
+  "id": "samber-cc-skills-golang-golang-gopls",
+  "name": "golang-gopls",
+  "description": "Golang semantic code intelligence via `gopls`, the official Go language server — go-to-definition, find references, call/implementation hierarchy, workspace symbol search, package API discovery, diagnostics, safe rename, refactors (extract/inline/fill/rewrite code actions), formatting, and generated tests. Reaches an agent via gopls's own MCP server (`go_*` tools), Claude Code's native `LSP` tool, or the `gopls` CLI. Use when navigating or refactoring Go code — jumping to a definition, finding c",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "samber",
+  "install_path": ".claude/skills/golang-gopls/SKILL.md",
+  "source": {
+    "repo": "samber/cc-skills-golang",
+    "url": "https://github.com/samber/cc-skills-golang/blob/main/skills/golang-gopls/SKILL.md",
+    "path": "skills/golang-gopls/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-06T16:43:30.331Z",
+    "stars": 2423,
+    "language": "Go",
+    "pushed_at": "2026-07-06T16:31:09Z",
+    "license": "MIT"
+  }
+}

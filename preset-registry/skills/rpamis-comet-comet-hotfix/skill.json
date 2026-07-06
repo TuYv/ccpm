@@ -1,7 +1,7 @@
 {
   "id": "rpamis-comet-comet-hotfix",
   "name": "comet-hotfix",
-  "description": "Comet preset path: Bug fix / hotfix. Skip brainstorming, directly open → build → verify → archive. Applicable for behavior fixes, scenarios not involving new capability design.",
+  "description": "Use when 用户要修复已有行为 bug，且不新增 capability、不需要完整设计；也用于恢复 hotfix workflow。",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -13,13 +13,13 @@
   "install_path": ".claude/skills/comet-hotfix/SKILL.md",
   "source": {
     "repo": "rpamis/comet",
-    "url": "https://github.com/rpamis/comet/blob/master/assets/skills/comet-hotfix/SKILL.md",
-    "path": "assets/skills/comet-hotfix/SKILL.md",
+    "url": "https://github.com/rpamis/comet/blob/master/eval/local/skills/benchmarks/040-beta/comet-hotfix/SKILL.md",
+    "path": "eval/local/skills/benchmarks/040-beta/comet-hotfix/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-07-06T13:12:25.799Z",
-    "stars": 1993,
-    "language": "TypeScript",
-    "pushed_at": "2026-07-06T09:55:01Z",
+    "discovered_at": "2026-07-06T16:44:04.634Z",
+    "stars": 1997,
+    "language": "JavaScript",
+    "pushed_at": "2026-07-06T16:01:00Z",
     "license": "MIT"
   }
 }

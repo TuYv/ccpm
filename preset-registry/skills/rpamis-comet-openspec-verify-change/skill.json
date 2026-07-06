@@ -1,0 +1,25 @@
+{
+  "id": "rpamis-comet-openspec-verify-change",
+  "name": "openspec-verify-change",
+  "description": "Verify implementation matches change artifacts. Use when the user wants to validate that implementation is complete, correct, and coherent before archiving.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "rpamis",
+  "install_path": ".claude/skills/openspec-verify-change/SKILL.md",
+  "source": {
+    "repo": "rpamis/comet",
+    "url": "https://github.com/rpamis/comet/blob/master/eval/local/skills/benchmarks/dependency/openspec/openspec-verify-change/SKILL.md",
+    "path": "eval/local/skills/benchmarks/dependency/openspec/openspec-verify-change/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-07-06T16:44:06.581Z",
+    "stars": 1997,
+    "language": "JavaScript",
+    "pushed_at": "2026-07-06T16:01:00Z",
+    "license": "MIT"
+  }
+}

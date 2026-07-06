@@ -1,0 +1,25 @@
+{
+  "id": "rpamis-comet-openspec-onboard",
+  "name": "openspec-onboard",
+  "description": "Guided onboarding for OpenSpec - walk through a complete workflow cycle with narration and real codebase work.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "rpamis",
+  "install_path": ".claude/skills/openspec-onboard/SKILL.md",
+  "source": {
+    "repo": "rpamis/comet",
+    "url": "https://github.com/rpamis/comet/blob/master/eval/local/skills/benchmarks/dependency/openspec/openspec-onboard/SKILL.md",
+    "path": "eval/local/skills/benchmarks/dependency/openspec/openspec-onboard/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-07-06T16:44:06.182Z",
+    "stars": 1997,
+    "language": "JavaScript",
+    "pushed_at": "2026-07-06T16:01:00Z",
+    "license": "MIT"
+  }
+}
