@@ -1,7 +1,7 @@
 {
   "id": "fradser-dotclaude-finish-release",
   "name": "finish-release",
-  "description": "Finalizes a release and merges it into main and develop with a tag using git-flow. This skill should be used when the user asks to \"finish a release\", \"merge release branch\", \"complete release\", \"git flow release finish\", or wants to finalize a release.",
+  "description": "Finalizes a release and merges it into main and develop with a tag using git-flow, then prunes stale branches and worktrees. This skill should be used when the user asks to \"finish a release\", \"merge release branch\", \"complete release\", \"git flow release finish\", or wants to finalize a release.",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/FradSer/dotclaude/blob/main/gitflow/skills/finish-release/SKILL.md",
     "path": "gitflow/skills/finish-release/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-06T09:21:24.610Z",
+    "discovered_at": "2026-07-06T13:10:01.566Z",
     "stars": 572,
     "language": "JavaScript",
-    "pushed_at": "2026-07-06T09:19:43Z",
-    "license": null
-  },
-  "summary_zh": "帮你按 git-flow 规范完成版本发布收尾，自动将发布分支合并到主分支和开发分支并打上标签。适合需要结束发布、合并发布分支或规范化收尾项目版本时使用。"
+    "pushed_at": "2026-07-06T12:49:59Z",
+    "license": "MIT"
+  }
 }

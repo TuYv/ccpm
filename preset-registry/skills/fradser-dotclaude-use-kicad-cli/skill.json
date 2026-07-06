@@ -1,0 +1,25 @@
+{
+  "id": "fradser-dotclaude-use-kicad-cli",
+  "name": "use-kicad-cli",
+  "description": "Drives the KiCad command-line interface (`kicad-cli`, version 9.0) to export schematics and PCBs, produce fabrication outputs, and run design checks. This skill should be used when the user asks to export gerbers, drill, or pick-and-place files, generate a BOM or netlist, run ERC or DRC (including in CI), export a STEP/3D model or PDF/SVG, upgrade KiCad symbol/footprint libraries, or run a KiCad job set. Invoked via \"/hardware:use-kicad-cli\".",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "FradSer",
+  "install_path": ".claude/skills/use-kicad-cli/SKILL.md",
+  "source": {
+    "repo": "FradSer/dotclaude",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/hardware/skills/use-kicad-cli/SKILL.md",
+    "path": "hardware/skills/use-kicad-cli/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-06T13:10:02.610Z",
+    "stars": 572,
+    "language": "JavaScript",
+    "pushed_at": "2026-07-06T12:49:59Z",
+    "license": "MIT"
+  }
+}

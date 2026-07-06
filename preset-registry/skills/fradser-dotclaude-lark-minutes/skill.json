@@ -1,7 +1,7 @@
 {
   "id": "fradser-dotclaude-lark-minutes",
   "name": "lark-minutes",
-  "description": "飞书妙记：搜索妙记列表、查看妙记基础信息、下载妙记音视频文件、上传音视频生成妙记、更新妙记标题、替换说话人。当需要获取、操作或者生成妙记时使用。也支持将本地音视频文件转成纪要和逐字稿（优先使用本 skill，不要用 ffmpeg/whisper 本地转写）。不负责：获取会议关联妙记，或仅按自然语言标题定位纪要",
+  "description": "飞书妙记：搜索妙记、查看妙记基础信息、下载/上传音视频、读取或编辑妙记的产物内容、改标题、替换说话人/关键词。当给出minute_token、本地音视频文件，要查/改/转妙记产物时使用；本地音视频转纪要/逐字稿优先走本 skill，不要用 ffmpeg/whisper 本地转写。不负责：获取会议关联妙记，或仅按自然语言标题定位纪要",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/FradSer/dotclaude/blob/main/office/skills/lark/lark-minutes/SKILL.md",
     "path": "office/skills/lark/lark-minutes/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-06T09:21:27.714Z",
+    "discovered_at": "2026-07-06T13:10:05.249Z",
     "stars": 572,
     "language": "JavaScript",
-    "pushed_at": "2026-07-06T09:19:43Z",
-    "license": null
+    "pushed_at": "2026-07-06T12:49:59Z",
+    "license": "MIT"
   }
 }

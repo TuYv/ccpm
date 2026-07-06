@@ -1,14 +1,14 @@
 {
   "id": "expo-skills-building-native-ui",
   "name": "building-native-ui",
-  "description": "Complete guide for building beautiful apps with Expo Router. Covers fundamentals, styling, components, navigation, animations, patterns, and native tabs.",
+  "description": "Build beautiful, native-feeling Expo screens. Covers Apple HIG styling, semantic colors, native controls, SF Symbols, media, animations, visual effects, gradients, storage, and responsive layout. For routing and navigation, use the expo-router skill.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
     "gemini"
   ],
-  "version": "1.0.1",
+  "version": "1.1.0",
   "author": "expo",
   "install_path": ".claude/skills/building-native-ui/SKILL.md",
   "source": {
@@ -16,11 +16,10 @@
     "url": "https://github.com/expo/skills/blob/main/plugins/expo/skills/building-native-ui/SKILL.md",
     "path": "plugins/expo/skills/building-native-ui/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-06T09:19:29.974Z",
+    "discovered_at": "2026-07-06T13:07:57.480Z",
     "stars": 2161,
     "language": "Shell",
-    "pushed_at": "2026-07-04T10:02:03Z",
+    "pushed_at": "2026-07-06T10:17:25Z",
     "license": "MIT"
-  },
-  "summary_zh": "这是一份基于Expo Router开发精美应用的实战指南，帮你系统掌握从界面排版、路由导航到交互动画的核心技巧，适合想用Expo打造高质量原生应用的开发者。"
+  }
 }

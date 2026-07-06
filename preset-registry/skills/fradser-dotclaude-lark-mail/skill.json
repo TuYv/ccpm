@@ -1,7 +1,7 @@
 {
   "id": "fradser-dotclaude-lark-mail",
   "name": "lark-mail",
-  "description": "飞书邮箱 — draft, compose, send, reply, forward, read, and search emails; manage drafts, folders, labels, contacts, attachments, and mail rules. Use when user mentions 起草邮件, 写一封邮件, 拟邮件, 草稿, 发通知邮件, 发送邮件, 发邮件, 回复邮件, 转发邮件, 查看邮件, 看邮件, 读邮件, 搜索邮件, 查邮件, 收件箱, 邮件会话, 编辑草稿, 管理草稿, 下载附件, 邮件文件夹, 邮件标签, 邮件联系人, 监听新邮件, 收信规则, 邮件规则, draft, compose, send email, reply, forward, inbox, mail thread, mail rules.",
+  "description": "飞书邮箱：Use when user mentions 起草邮件、写邮件、草稿、发送/回复/转发邮件、查阅邮件、看邮件、搜索邮件、邮件文件夹、邮件标签、邮件联系人、监听新邮件、邮件收信规则等；use for mail/email intent only. Do not use for docs/sheets/calendar/auth setup/pure contact lookup/IM chat tasks.",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/FradSer/dotclaude/blob/main/office/skills/lark/lark-mail/SKILL.md",
     "path": "office/skills/lark/lark-mail/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-06T09:21:27.438Z",
+    "discovered_at": "2026-07-06T13:10:04.967Z",
     "stars": 572,
     "language": "JavaScript",
-    "pushed_at": "2026-07-06T09:19:43Z",
-    "license": null
-  },
-  "summary_zh": "在飞书里一站式处理邮件的工具，支持起草、发送、回复、转发、搜索，还能管理草稿、文件夹、标签、联系人、附件和收信规则，适合需要在飞书中高效收发和整理邮件的用户。"
+    "pushed_at": "2026-07-06T12:49:59Z",
+    "license": "MIT"
+  }
 }

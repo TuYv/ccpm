@@ -1,7 +1,7 @@
 {
   "id": "fradser-dotclaude-start-release",
   "name": "start-release",
-  "description": "Begins a new version release using git-flow. This skill should be used when the user asks to \"start a release\", \"create release branch\", \"prepare a release\", \"git flow release start\", or wants to begin a new version release.",
+  "description": "Begins a new version release using git-flow. This skill should be used when the user asks to \"start a release\", \"create release branch\", \"prepare a release\", \"git flow release start\", or wants to begin a new version release. Accepts either an explicit version or a natural-language description of the release.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/FradSer/dotclaude/blob/main/gitflow/skills/start-release/SKILL.md",
     "path": "gitflow/skills/start-release/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-06T09:21:24.993Z",
+    "discovered_at": "2026-07-06T13:10:02.016Z",
     "stars": 572,
     "language": "JavaScript",
-    "pushed_at": "2026-07-06T09:19:43Z",
-    "license": null
-  },
-  "summary_zh": "基于 git-flow 帮你发起新版本发布，当你需要创建发布分支或准备发版时，用它就能轻松搞定。"
+    "pushed_at": "2026-07-06T12:49:59Z",
+    "license": "MIT"
+  }
 }

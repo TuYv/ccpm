@@ -1,7 +1,7 @@
 {
   "id": "fradser-dotclaude-lark-event",
   "name": "lark-event",
-  "description": "Lark/Feishu real-time event listening / subscribing / consuming: stream events as NDJSON via `lark-cli event consume <EventKey>` (covers IM messages/reactions/chat changes, VC meeting ended, Minutes generated, Whiteboard updated, etc.). Use for Lark bots, real-time message processing, long-running subscribers, streaming webhook/push handlers. Supports `--max-events` / `--timeout` bounded runs and a stderr ready-marker contract — designed for AI agents running as subprocesses.",
+  "description": "Lark/Feishu real-time event listening / subscribing / consuming: stream events as NDJSON via `lark-cli event consume <EventKey>` (covers IM messages/reactions/chat changes, Task updates, VC meeting started/joined/ended, Minutes generated, Whiteboard updated, etc.). Use for Lark bots, real-time message processing, long-running subscribers, streaming webhook/push handlers. Supports `--max-events` / `--timeout` bounded runs and a stderr ready-marker contract — designed for AI agents running as subp",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/FradSer/dotclaude/blob/main/office/skills/lark/lark-event/SKILL.md",
     "path": "office/skills/lark/lark-event/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-06T09:21:27.157Z",
+    "discovered_at": "2026-07-06T13:10:04.676Z",
     "stars": 572,
     "language": "JavaScript",
-    "pushed_at": "2026-07-06T09:19:43Z",
-    "license": null
+    "pushed_at": "2026-07-06T12:49:59Z",
+    "license": "MIT"
   }
 }

@@ -1,7 +1,7 @@
 {
   "id": "fradser-dotclaude-start-feature",
   "name": "start-feature",
-  "description": "Starts working on a new feature branch using git-flow. This skill should be used when the user asks to \"start a feature\", \"create feature branch\", \"begin new feature\", \"git flow feature start\", or wants to start a new feature.",
+  "description": "Starts working on a new feature branch using git-flow. This skill should be used when the user asks to \"start a feature\", \"create feature branch\", \"begin new feature\", \"git flow feature start\", or wants to start a new feature. Accepts either a branch name or a natural-language description.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/FradSer/dotclaude/blob/main/gitflow/skills/start-feature/SKILL.md",
     "path": "gitflow/skills/start-feature/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-06T09:21:24.745Z",
+    "discovered_at": "2026-07-06T13:10:01.729Z",
     "stars": 572,
     "language": "JavaScript",
-    "pushed_at": "2026-07-06T09:19:43Z",
-    "license": null
-  },
-  "summary_zh": "基于 git-flow 快速开启新功能分支，适合开发新功能或创建分支的场景，免去手动敲命令的麻烦。"
+    "pushed_at": "2026-07-06T12:49:59Z",
+    "license": "MIT"
+  }
 }

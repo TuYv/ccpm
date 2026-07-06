@@ -1,7 +1,7 @@
 {
   "id": "fradser-dotclaude-use-acpx",
   "name": "acpx",
-  "description": "Use acpx as a headless ACP CLI for agent-to-agent communication. Use when running coding agents through acpx, managing persistent ACP sessions, queueing prompts, overriding the Claude system prompt, consuming structured agent output from scripts, or composing multi-agent workflows with defineFlow/decision/decisionEdge.",
+  "description": "Use acpx as a headless ACP CLI for agent-to-agent communication, always inside an isolated SubAgent. Use when running coding agents through acpx, managing persistent ACP sessions, queueing prompts, consuming structured agent output from scripts, comparing the same prompt across multiple agents, or composing multi-agent workflows with defineFlow/decision/decisionEdge. Never invoke the claude adapter (nested-instance blacklist).",
   "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/FradSer/dotclaude/blob/main/acpx/skills/use-acpx/SKILL.md",
     "path": "acpx/skills/use-acpx/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-06T09:21:21.922Z",
+    "discovered_at": "2026-07-06T13:09:58.882Z",
     "stars": 572,
     "language": "JavaScript",
-    "pushed_at": "2026-07-06T09:19:43Z",
-    "license": null
+    "pushed_at": "2026-07-06T12:49:59Z",
+    "license": "MIT"
   }
 }

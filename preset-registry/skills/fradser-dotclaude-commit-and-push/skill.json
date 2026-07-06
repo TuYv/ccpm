@@ -1,7 +1,7 @@
 {
   "id": "fradser-dotclaude-commit-and-push",
   "name": "commit-and-push",
-  "description": "Creates conventional git commits using git-agent and pushes to the remote repository. This skill should be used when the user asks to \"commit and push\", \"push my changes\", or wants to commit and immediately push to remote. The executing AI auto-derives its own co-author string from its runtime model identity (e.g., `Claude Opus 4.7 <noreply@anthropic.com>`) and passes it to `--co-author`. `$ARGUMENTS`, if provided, overrides the auto-derived value.",
+  "description": "Creates conventional git commits using git-agent and pushes to the remote repository. This skill should be used when the user asks to \"commit and push\", \"push my changes\", or wants to commit and immediately push to remote. The executing AI auto-derives its own co-author string from its runtime model identity (e.g., `Claude Opus 4.7 <noreply@anthropic.com>`, `GLM-4.5 <noreply@zhipuai.cn>`) and passes it to `--co-author`. `$ARGUMENTS`, if provided, overrides the auto-derived value.",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/FradSer/dotclaude/blob/main/git/skills/commit-and-push/SKILL.md",
     "path": "git/skills/commit-and-push/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-06T09:21:23.942Z",
+    "discovered_at": "2026-07-06T13:10:00.858Z",
     "stars": 572,
     "language": "JavaScript",
-    "pushed_at": "2026-07-06T09:19:43Z",
-    "license": null
-  },
-  "summary_zh": "这是一个AI辅助的Git提交工具，当你需要提交并推送代码时，它能自动生成规范的提交信息并推送到远程仓库，还会自动添加AI作为共同作者。"
+    "pushed_at": "2026-07-06T12:49:59Z",
+    "license": "MIT"
+  }
 }
