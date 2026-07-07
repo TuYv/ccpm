@@ -2,7 +2,7 @@
   "id": "openagentsinc-openagents-khala-fleet",
   "name": "khala-fleet",
   "description": "Operate an OpenAgents Khala coding fleet safely. Use when the user asks to connect or list fleet accounts, spawn/delegate coding work to Codex or Claude workers, start/monitor/pause/drain/stop a sustained fleet run, burn down a backlog with parallel workers, verify that fleet work actually completed, or diagnose dispatch failures like \"0/1 available\" or target_pylon_unavailable.",
-  "category": "测试调试",
+  "category": "开发编程",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/OpenAgentsInc/openagents/blob/main/.agents/skills/khala-fleet/SKILL.md",
     "path": ".agents/skills/khala-fleet/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-07T20:31:02.937Z",
+    "discovered_at": "2026-07-07T21:53:08.920Z",
     "stars": 437,
     "language": "TypeScript",
-    "pushed_at": "2026-07-07T20:25:01Z",
+    "pushed_at": "2026-07-07T21:49:55Z",
     "license": null
   }
 }
