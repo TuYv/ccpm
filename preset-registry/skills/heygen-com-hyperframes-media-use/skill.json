@@ -1,7 +1,7 @@
 {
   "id": "heygen-com-hyperframes-media-use",
   "name": "media-use",
-  "description": "Agent Media OS — resolve any media need (BGM, SFX, image, icon) into a frozen local file + ledger record. One verb (`resolve`) handles the full cascade — project cache, global cache, HeyGen catalog search, freeze, register. Keeps search noise on disk, hands the agent a path. Use when a composition needs background music, sound effects, images, or icons.",
+  "description": "Agent Media OS, the single skill for every media need in a HyperFrames project. Resolve BGM, SFX, image, icon, or voice into a frozen local file + ledger record (one verb, `resolve`); generate via TTS / music / image models when the catalog misses; produce voiceover, transcription, captions, and background removal through one shared audio engine; operate on media (cut / reframe / transform); and reuse assets across projects. Keeps search noise on disk, hands the agent a path. Use for any audio, ",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/heygen-com/hyperframes/blob/main/skills/media-use/SKILL.md",
     "path": "skills/media-use/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-07T00:37:03.861Z",
-    "stars": 33494,
+    "discovered_at": "2026-07-07T05:17:10.934Z",
+    "stars": 33527,
     "language": "TypeScript",
-    "pushed_at": "2026-07-07T00:36:42Z",
+    "pushed_at": "2026-07-07T05:15:43Z",
     "license": "Apache-2.0"
   }
 }
