@@ -1,0 +1,25 @@
+{
+  "id": "expo-skills-eas-workflows",
+  "name": "eas-workflows",
+  "description": "EAS service (paid). Helps understand and write EAS workflow YAML files for Expo projects. Use this skill when the user asks about CI/CD or workflows in an Expo or EAS context, mentions .eas/workflows/, or wants help with EAS build pipelines or deployment automation.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "expo",
+  "install_path": ".claude/skills/eas-workflows/SKILL.md",
+  "source": {
+    "repo": "expo/skills",
+    "url": "https://github.com/expo/skills/blob/main/plugins/expo/skills/eas-workflows/SKILL.md",
+    "path": "plugins/expo/skills/eas-workflows/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-07T17:40:50.454Z",
+    "stars": 2168,
+    "language": "Shell",
+    "pushed_at": "2026-07-07T16:18:54Z",
+    "license": "MIT"
+  }
+}
