@@ -1,7 +1,7 @@
 {
   "id": "heygen-com-hyperframes-product-launch-video",
   "name": "product-launch-video",
-  "description": "turn a product or marketing URL, pasted script, or brief into a product launch video, including SaaS promos, feature reveals, app launches, company promos, and product marketing videos. Use this skill when the user wants to market, launch, promote, or reveal a product. Do not use it for general non-launch website tours, non-product topic explainers, GitHub pull requests, captioning existing footage, or short unnarrated motion graphics. If the intent is unclear, route through /hyperframes first. ",
+  "description": "Turn a product or marketing URL, pasted script, or brief into a product launch / promo video — SaaS promos, feature reveals, product demos, app and company launches. Use when the user wants to market, launch, promote, or reveal a product; the default for any commercial URL. Not a general site tour (/website-to-video). Unclear → /hyperframes.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/heygen-com/hyperframes/blob/main/skills/product-launch-video/SKILL.md",
     "path": "skills/product-launch-video/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-07T05:17:11.474Z",
-    "stars": 33527,
+    "discovered_at": "2026-07-07T08:52:40.713Z",
+    "stars": 33558,
     "language": "TypeScript",
-    "pushed_at": "2026-07-07T05:15:43Z",
+    "pushed_at": "2026-07-07T08:52:28Z",
     "license": "Apache-2.0"
   }
 }

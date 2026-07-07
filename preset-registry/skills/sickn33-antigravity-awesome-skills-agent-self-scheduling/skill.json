@@ -1,0 +1,25 @@
+{
+  "id": "sickn33-antigravity-awesome-skills-agent-self-scheduling",
+  "name": "agent-self-scheduling",
+  "description": "Schedule AI agent runs with cron, loops, or external clocks while avoiding unsafe tight autonomous timers.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sickn33",
+  "install_path": ".claude/skills/agent-self-scheduling/SKILL.md",
+  "source": {
+    "repo": "sickn33/antigravity-awesome-skills",
+    "url": "https://github.com/sickn33/antigravity-awesome-skills/blob/main/plugins/antigravity-awesome-skills-claude/skills/agent-self-scheduling/SKILL.md",
+    "path": "plugins/antigravity-awesome-skills-claude/skills/agent-self-scheduling/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-07T08:52:31.472Z",
+    "stars": 42506,
+    "language": "Python",
+    "pushed_at": "2026-07-07T07:15:15Z",
+    "license": "MIT"
+  }
+}

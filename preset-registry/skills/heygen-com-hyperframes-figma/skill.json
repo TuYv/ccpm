@@ -1,7 +1,7 @@
 {
   "id": "heygen-com-hyperframes-figma",
   "name": "figma",
-  "description": "Import Figma content into a HyperFrames composition — rendered assets, brand tokens, components, storyboard sections → reconstructed motion (frames read as states, not slides) (REST/CLI), and Figma Motion animations + shaders (MCP). Use when the user pastes a figma.com link or asks to bring a Figma design, frame, logo, brand, or animation into a video/composition.",
+  "description": "Import Figma content into a HyperFrames composition — rendered assets, brand tokens, components, storyboard sections → reconstructed motion (frames read as states, not slides) (REST/CLI), Figma Motion animations (MCP), and shaders (MCP source / native export). Use when the user pastes a figma.com link or asks to bring a Figma design, frame, logo, brand, or animation into a video/composition.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/heygen-com/hyperframes/blob/main/skills/figma/SKILL.md",
     "path": "skills/figma/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-07T05:17:09.777Z",
-    "stars": 33527,
+    "discovered_at": "2026-07-07T08:52:38.797Z",
+    "stars": 33558,
     "language": "TypeScript",
-    "pushed_at": "2026-07-07T05:15:43Z",
+    "pushed_at": "2026-07-07T08:52:28Z",
     "license": "Apache-2.0"
   }
 }

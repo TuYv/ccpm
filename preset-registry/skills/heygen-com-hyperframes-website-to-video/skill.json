@@ -1,8 +1,8 @@
 {
   "id": "heygen-com-hyperframes-website-to-video",
   "name": "website-to-video",
-  "description": "Capture a general website/URL and turn it into a HyperFrames video (site tour, showcase, or social clip from the site's own visuals). Uses headless Chrome screenshots + brand assets. Use when intent is general — portfolio/blog/landing-page showcase or social clip from the site. NOT for: product/SaaS launch or promo (→ /product-launch-video, even from a URL); topic explainer with no site (→ /faceless-explainer); GitHub PR (→ /pr-to-video); adding captions to existing video (→ /embedded-captions);",
-  "category": "浏览器自动化",
+  "description": "Capture a general website/URL and turn it into a video OF the site — tour, showcase, or social clip built from captured screenshots and the site's own brand assets. Use for portfolio / blog / docs / landing-page showcases. Not a product launch or promo, even from a URL (/product-launch-video). Unclear → /hyperframes.",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/heygen-com/hyperframes/blob/main/skills/website-to-video/SKILL.md",
     "path": "skills/website-to-video/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-07T05:17:12.017Z",
-    "stars": 33527,
+    "discovered_at": "2026-07-07T08:52:41.285Z",
+    "stars": 33558,
     "language": "TypeScript",
-    "pushed_at": "2026-07-07T05:15:43Z",
+    "pushed_at": "2026-07-07T08:52:28Z",
     "license": "Apache-2.0"
   }
 }
