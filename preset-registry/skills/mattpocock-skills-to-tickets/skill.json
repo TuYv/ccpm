@@ -1,0 +1,25 @@
+{
+  "id": "mattpocock-skills-to-tickets",
+  "name": "to-tickets",
+  "description": "Break a plan, spec, or the current conversation into a set of tracer-bullet tickets, each declaring its blocking edges, published to the configured tracker — edges as text in a local file, or native blocking links on a real tracker.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mattpocock",
+  "install_path": ".claude/skills/to-tickets/SKILL.md",
+  "source": {
+    "repo": "mattpocock/skills",
+    "url": "https://github.com/mattpocock/skills/blob/main/skills/engineering/to-tickets/SKILL.md",
+    "path": "skills/engineering/to-tickets/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-08T14:54:25.356Z",
+    "stars": 160749,
+    "language": "Shell",
+    "pushed_at": "2026-07-08T13:20:56Z",
+    "license": "MIT"
+  }
+}

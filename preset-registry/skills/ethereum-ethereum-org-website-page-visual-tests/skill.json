@@ -1,7 +1,7 @@
 {
   "id": "ethereum-ethereum-org-website-page-visual-tests",
   "name": "page-visual-tests",
-  "description": "Playwright + Chromatic full-page visual tests for ethereum.org. Trigger on \"add a page to the visual suite\", \"the snapshot keeps changing\", \"chromatic pages\", \"chromatic playwright\", or edits to `tests/visual/`, `playwright.visual.config.ts`, or `.github/workflows/chromatic-pages.yml`. Skip for Storybook Chromatic (`chromatic.yml`), e2e (`tests/e2e/`), unit (`tests/unit/`).",
+  "description": "Playwright + Chromatic full-page visual tests for ethereum.org. Trigger on \"add a page to the visual suite\", \"the snapshot keeps changing\", \"chromatic pages\", \"chromatic playwright\", or edits to `tests/visual/`, `playwright.visual.config.ts`, or the `page-visual-tests` job in `.github/workflows/ci.yml`. Skip for Storybook Chromatic (the `visual-tests` job in ci.yml), e2e (`tests/e2e/`), unit (`tests/unit/`).",
   "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/ethereum/ethereum-org-website/blob/dev/.claude/skills/page-visual-tests/SKILL.md",
     "path": ".claude/skills/page-visual-tests/SKILL.md",
     "branch": "dev",
-    "discovered_at": "2026-07-08T12:10:22.395Z",
-    "stars": 5943,
+    "discovered_at": "2026-07-08T14:57:11.591Z",
+    "stars": 5942,
     "language": "Markdown",
-    "pushed_at": "2026-07-08T10:58:47Z",
+    "pushed_at": "2026-07-08T13:18:34Z",
     "license": "MIT"
-  },
-  "summary_zh": "专为 ethereum.org 打造的全页面视觉测试工具，能在网页新增或界面外观变动时自动排查视觉异常，确保页面呈现符合预期，且不干扰常规的功能或组件测试。"
+  }
 }
