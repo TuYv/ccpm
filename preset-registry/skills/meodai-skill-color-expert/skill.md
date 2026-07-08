@@ -18,7 +18,7 @@ Match the response to the user's explicit request and clearly implied constraint
 - Use OKLCH to build perceptually uniform scales (consistent lightness across hues, no muddy mid-tones).
 - Build a token graph: reference tokens (palette) → semantic tokens (surface, on-surface, accent, success, warning, danger) → component usage; see *Implementation Guidance* below.
 - Verify every text/background pair against APCA or WCAG in both light and dark.
-- Suggest tools only as needed: Huetone (LCH/OKLCH builder), Leonardo (contrast-ratio-driven ramps + adaptive theming, Adobe), Components.ai Color Scale (parametric), dittoTones (extract perceptual DNA from Tailwind/Radix), Color Buddy (lint).
+- Suggest tools only as needed: Huetone (LCH/OKLCH builder), Leonardo (contrast-ratio-driven ramps + adaptive theming, Adobe), Components.ai Color Scale (parametric), dittoTones (extract perceptual DNA from Tailwind/Radix), Color Buddy (lint). For dataviz sequential/diverging ramps specifically, CuspHanger (Wijffelaars model in OKLCH, in-gamut by construction).
 
 **Generative art / creative coding** — "color for my fxhash piece", "palette for thousands of generated strokes", "paint-like mixing in p5.js / WebGL." Different from building a palette generator: the code *is* the artwork, and the user wants to understand the *techniques*, not copy a named artist's style. Help them compose their own system. Useful techniques to teach and combine:
 
@@ -102,6 +102,7 @@ The most common OKLCH mistake: picking a chroma that doesn't exist in the target
 - **CSS gamut-maps for you.** Browsers map `oklch()` / `color()` automatically, so authored CSS rarely clips badly. JS conversions do **not** — `oklch→hex` just truncates channels.
 - **Reduce chroma, not lightness or hue.** Clipping R/G/B shifts the hue; pulling chroma toward the gamut boundary preserves the color's identity. Use Culori's `clampChroma(color, 'oklch')` (holds L and H) or `toGamut()` rather than naive RGB clamping.
 - **Test against the actual target:** `inGamut('rgb')` vs `inGamut('p3')` — a color valid in P3 can still clip in sRGB.
+- **Or avoid the problem by construction:** nutelch expresses chroma *relative to the gamut boundary* (`relC: 0.5` = halfway to the shell at that L/H), so generated colors can't accidentally ask for chroma that isn't there.
 
 ## Implementation Guidance — Code and CSS
 
@@ -133,7 +134,16 @@ Good pattern: palette/reference tokens define available colors; semantic tokens 
 
 If a system can derive a decision from constraints, encode that derivation. Examples: nearest named hue in a generated palette, foreground chosen by APCA/WCAG target, hover state computed from the base token in OKLCH instead of hand-picking a second unrelated hex.
 
-For larger systems, prefer a **token graph** over a flat token dump: references, semantic roles, derived functions, and scope inheritance. This makes theme changes, accessibility guarantees, and multi-platform export auditable and easier to maintain.
+**Especially when applying generated colors to a UI**: the generator gives you primitives, but the *mapping* onto roles is where designs rot. Don't freeze one manual mapping into literals — emit the rule. A useful decision vocabulary (from Design Book, see below):
+
+- `text := bestContrastWith(surface, palette)` — recomputes when the palette regenerates
+- `accent := mostVivid(palette, { against: surface, minContrast: 4.5, not: [error, success] })` — vividness gated by readability, role-reserved tokens excluded
+- `surface := nth(ramp, 0)`, `text := nth(ramp, -1)` — ramp roles pinned to *position*, so they survive regenerating the ramp with a different stop count
+- `hover := colorMix(accent, ink, 0.12)` or adaptive `shade(surface)` — flips darken/lighten by the input's lightness, so it never collapses on dark themes
+
+In CSS, many decisions can stay native (the browser re-runs them): `var()` for references, `color-mix()` for hover states, relative color syntax for channel edits — see the cheat sheet below.
+
+For larger systems, prefer a **token graph** over a flat token dump: references, semantic roles, derived functions, and scope inheritance. This makes theme changes, accessibility guarantees, and multi-platform export auditable and easier to maintain. **Design Book** (`npm install design-book`) is the reference implementation: a reactive constraint system where tokens store *how values are chosen*, dependents recompute on change, and `inspect()` explains why a value won; renders to CSS vars, JSON, and W3 design tokens. See `references/techniques/designbook-reactive-design-token-spec.md`.
 
 ## CSS Color 4/5 — Syntax Cheat Sheet
 
@@ -230,6 +240,7 @@ Use `color-name-lists` npm package for 18 naming systems in one import.
 Note: coolors.co does not generate palettes — it picks randomly from 7,821 pre-made palettes hardcoded in its JS bundle.
 
 - **RampenSau** — hue cycling + easing, color space agnostic
+- **CuspHanger** — the Wijffelaars 2009 EuroVis palette model in OKLCH: Bézier paths through each hue's black–cusp–white gamut triangle, perceptual lightness sampling calibrated against Brewer. Sequential/diverging ramps for dataviz, in-gamut by construction, sRGB + Display-P3, RampenSau-compatible API
 - **Poline** — anchor points + per-axis position functions (1.2K stars); ships a `<poline-palette>` web component for interactive controls
 - **pro-color-harmonies** — adaptive OKLCH harmony, muddy-zone avoidance, 4 styles × 4 modifiers
 - **dittoTones** — extract Tailwind/Radix "perceptual DNA", apply to your hue
@@ -246,6 +257,7 @@ Note: coolors.co does not generate palettes — it picks randomly from 7,821 pre
 ### Color Libraries (code)
 
 - **Culori** — 30 spaces, 10 distance metrics, gamut mapping, CVD sim
+- **nutelch** — gamut-relative chroma in OKLCH/LCH: `relC: 0.5` = "halfway to the gamut boundary" at any lightness/hue. The one OkHSL idea (boundary-relative saturation) without leaving native `oklch()` — LUT-backed (faster than OkHSL's runtime gamut math), zero runtime deps, sRGB + P3
 - **@texel/color** — 5–125× faster than Color.js, minimal, for real-time
 - **Spectral.js** — open-source K-M pigment mixing (blue+yellow=green)
 - **RYBitten** — RGB↔RYB with 26 historical color cubes
