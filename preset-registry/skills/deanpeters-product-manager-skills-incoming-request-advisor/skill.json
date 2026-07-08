@@ -1,0 +1,25 @@
+{
+  "id": "deanpeters-product-manager-skills-incoming-request-advisor",
+  "name": "incoming-request-advisor",
+  "description": "Decode an incoming message into a structured breakdown that separates the literal ask from the job-to-be-done. Use before replying to a loaded Slack ping, email, mandate, or escalation.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "deanpeters",
+  "install_path": ".claude/skills/incoming-request-advisor/SKILL.md",
+  "source": {
+    "repo": "deanpeters/Product-Manager-Skills",
+    "url": "https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/incoming-request-advisor/SKILL.md",
+    "path": "skills/incoming-request-advisor/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-08T12:07:18.375Z",
+    "stars": 5633,
+    "language": "Shell",
+    "pushed_at": "2026-07-08T10:36:34Z",
+    "license": null
+  }
+}
