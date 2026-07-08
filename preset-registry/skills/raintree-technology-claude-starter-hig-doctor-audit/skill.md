@@ -22,7 +22,7 @@ npx hig-doctor ./path/to/project --fail-on critical
 Requires Node 20+ for the published package. From the local source repo, the Bun entrypoint is:
 
 ```bash
-cd /Users/mb1/Code/secondary/hig-doctor/packages/hig-doctor/src-termcast
+cd /path/to/hig-doctor/packages/hig-doctor/src-termcast
 bun run audit ./path/to/project
 ```
 
