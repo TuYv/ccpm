@@ -1,0 +1,25 @@
+{
+  "id": "muratcankoylan-agent-skills-for-context-engineering-self-improvement-loops",
+  "name": "self-improvement-loops",
+  "description": "This skill should be used when the harness, scaffold, workflow, or optimizer itself is the optimization target: recursive self-improvement (RSI) loops, meta-harnesses, self-improving harnesses that mine their own failures and propose bounded edits, evolutionary or population-based search over agent scaffolds, acceptance gates for self-modifying systems, and agentic context evolution where the mechanism that produces context is versioned and evolved. Route governance of a single autonomous loop (",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "muratcankoylan",
+  "install_path": ".claude/skills/self-improvement-loops/SKILL.md",
+  "source": {
+    "repo": "muratcankoylan/Agent-Skills-for-Context-Engineering",
+    "url": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering/blob/main/skills/self-improvement-loops/SKILL.md",
+    "path": "skills/self-improvement-loops/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-08T06:47:40.050Z",
+    "stars": 16923,
+    "language": "Python",
+    "pushed_at": "2026-07-08T05:04:30Z",
+    "license": "MIT"
+  }
+}
