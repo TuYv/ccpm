@@ -1,0 +1,25 @@
+{
+  "id": "sepinetam-stata-mcp-mcp-smoke-test",
+  "name": "mcp-smoke-test",
+  "description": "Run a local smoke test for the Stata-MCP server.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "SepineTam",
+  "install_path": ".claude/skills/mcp-smoke-test/SKILL.md",
+  "source": {
+    "repo": "SepineTam/stata-mcp",
+    "url": "https://github.com/SepineTam/stata-mcp/blob/master/.claude/skills/mcp-smoke-test/SKILL.md",
+    "path": ".claude/skills/mcp-smoke-test/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-07-09T17:03:01.051Z",
+    "stars": 217,
+    "language": "Python",
+    "pushed_at": "2026-07-09T16:37:01Z",
+    "license": "AGPL-3.0"
+  }
+}
