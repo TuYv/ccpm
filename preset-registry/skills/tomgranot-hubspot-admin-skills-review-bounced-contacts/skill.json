@@ -1,0 +1,25 @@
+{
+  "id": "tomgranot-hubspot-admin-skills-review-bounced-contacts",
+  "name": "review-bounced-contacts",
+  "description": "Weekly manual review of contacts with 3+ bounce events. Decide whether to delete or attempt recovery for each flagged contact. Prevents over-suppression while removing truly bad data.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "TomGranot",
+  "install_path": ".claude/skills/review-bounced-contacts/SKILL.md",
+  "source": {
+    "repo": "TomGranot/hubspot-admin-skills",
+    "url": "https://github.com/TomGranot/hubspot-admin-skills/blob/main/skills/review-bounced-contacts/SKILL.md",
+    "path": "skills/review-bounced-contacts/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-09T11:41:50.916Z",
+    "stars": 50,
+    "language": "Python",
+    "pushed_at": "2026-03-26T15:55:43Z",
+    "license": "MIT"
+  }
+}

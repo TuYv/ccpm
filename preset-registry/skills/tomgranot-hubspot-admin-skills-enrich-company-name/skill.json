@@ -1,0 +1,25 @@
+{
+  "id": "tomgranot-hubspot-admin-skills-enrich-company-name",
+  "name": "enrich-company-name",
+  "description": "Populate missing contact company name fields from associated company records using a HubSpot workflow with optional API backfill. Ensures contacts inherit their company name for segmentation, personalization, and ICP classification.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "TomGranot",
+  "install_path": ".claude/skills/enrich-company-name/SKILL.md",
+  "source": {
+    "repo": "TomGranot/hubspot-admin-skills",
+    "url": "https://github.com/TomGranot/hubspot-admin-skills/blob/main/skills/enrich-company-name/SKILL.md",
+    "path": "skills/enrich-company-name/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-09T11:41:49.082Z",
+    "stars": 50,
+    "language": "Python",
+    "pushed_at": "2026-03-26T15:55:43Z",
+    "license": "MIT"
+  }
+}

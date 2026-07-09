@@ -1,0 +1,25 @@
+{
+  "id": "fradser-dotclaude-review-pr",
+  "name": "review-pr",
+  "description": "Reviews a pull request with the built-in /review skill, then persists a Monitor watch over CI results and incoming reviewer comments, triages each comment through an independent skeptical agent, applies only verified fixes, and commits+pushes via /git:commit-and-push until CI passes and no comments remain to adopt. Use this skill when the user asks to \"review a PR\", \"monitor PR review comments\", \"address reviewer feedback on #123\", or \"watch CI on a pull request\".",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "FradSer",
+  "install_path": ".claude/skills/review-pr/SKILL.md",
+  "source": {
+    "repo": "FradSer/dotclaude",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/github/skills/review-pr/SKILL.md",
+    "path": "github/skills/review-pr/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-09T11:31:59.663Z",
+    "stars": 573,
+    "language": "JavaScript",
+    "pushed_at": "2026-07-09T09:19:08Z",
+    "license": "MIT"
+  }
+}

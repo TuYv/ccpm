@@ -191,7 +191,7 @@ Use this when the dataflow already exists. Canonical Discover → Formulate → 
 1. **Discover** — list workspaces, list dataflows, `getDefinition` (decode `mashup.pq` and `queryMetadata.json`). Validate all `connections[]` entries via `GET /v1/connections/{id}`.
 2. **Formulate** — modify M, re-encode parts, ensure every referenced `connectionId` exists in the caller's connection store.
 3. **Execute** — `POST .../updateDefinition?updateMetadata=true` with **all 3 parts** (full replacement). Optionally trigger refresh.
-4. **Verify** — re-call `getDefinition` to confirm changes; poll refresh LRO; for refresh failures, isolate M+source via `executeQuery` before re-triggering.
+4. **Verify** — re-call `getDefinition` to confirm changes; poll refresh LRO; for refresh failures, make at most **one** `executeQuery` isolation attempt to localize a fixable M/source issue. On a terminal/non-retriable failure (`isRetriable: false`, workspace-wide `UnknownException`), surface the raw error and **stop** rather than re-triggering.
 
 ```bash
 # Concise skeleton — full templates: references/authoring-script-templates.md
@@ -301,6 +301,7 @@ For connection discovery: [authoring-cli-quickref.md § Connection Discovery and
 - **`executeQuery` body uses a top-level `QueryName` field** (PascalCase canonical; the field name itself is case-insensitive on the wire — lowercase `queryName` also evaluates). Value must name a `shared` member from the persisted M or the supplied `customMashupDocument`. The `{"queries":[…]}` array shape **always** fails with `DataflowExecuteQueryError: Invalid query name`; a wrong query name returns `QueryNotFound`. Full contract: [mashup-preview.md § Request body](references/mashup-preview.md).
 - **Use the exact, case-sensitive API names.** The endpoint is `executeQuery` (singular, never `executeQueries`) and the request-body field is `customMashupDocument` (never `mashupDocument`, never base64-encoded — it is a plain UTF-8 M string). The same M body becomes the saved `mashup.pq` part referenced as `customMashupDocument`. Vocabulary table: [mashup-preview.md § Vocabulary](references/mashup-preview.md#vocabulary----name-the-things-you-send).
 - **First refresh after any `updateDefinition` MUST use `executeOption: "ApplyChangesIfNeeded"`.** Body: `{"executionData":{"executeOption":"ApplyChangesIfNeeded"}}`. Without it, Fabric refreshes the previously-applied definition.
+- **Treat a terminal refresh failure as a stop condition — do not debug-loop.** When a refresh/LRO job reaches terminal `Failed`/`Cancelled`, or a backend error carries `isRetriable: false` (or a workspace-wide `UnknownException`), report the raw error verbatim and **stop**. These are backend/infra outcomes the agent cannot fix by retrying — do not re-trigger the refresh, keep re-polling, or open an extended investigation. At most, make **one** `executeQuery` isolation attempt to localize a fixable M/source cause; if that does not reveal a definition-side issue, end and surface the error.
 - **Call `GET /v1/connections/supportedConnectionTypes` before `POST /v1/connections`** — never guess parameter names or credential types; they vary by connector, tenant, and time. When summarizing a connector's required parameters or `credentialType` set for a user, use the exact, case-sensitive endpoint path `GET /v1/connections/supportedConnectionTypes`.
 - **Validate referenced connections before refresh.** For each `connectionId` in `queryMetadata.json`, `GET /v1/connections/{id}` (plain GUID extracted from the composite). Cryptic `EntityUserFailure` at refresh time is often a missing/inaccessible connection. See [connection-management.md](references/connection-management.md).
 - **Bootstrap-bind connections before previewing credentialed M.** A `connections[]` array in the initial create payload is **not** yet visible to `executeQuery`; persist it through at least one `updateDefinition` first. Detail: [mashup-preview.md § Bootstrap branch](references/mashup-preview.md#bootstrap-branch--new-dataflow--new-credentialed-source).
@@ -521,14 +522,43 @@ LOCATION=$(curl -sS -X POST \
   "https://api.fabric.microsoft.com/v1/workspaces/${WS_ID}/dataflows/${DF_ID}/jobs/instances?jobType=Refresh" \
   -o /dev/null -D - | tr -d '\r' | grep -i "^location:" | awk '{print $2}')
 
-# Poll until terminal (Fabric refresh job status enum: NotStarted / InProgress / Completed / Failed / Cancelled).
-while true; do
+# Poll while the status is non-terminal. Fabric refresh job status enum:
+#   NotStarted / InProgress   -> non-terminal, keep polling
+#   Completed                 -> success
+#   Failed / Cancelled        -> terminal backend outcome (fatal-stop)
+#   Deduped                   -> another refresh is already running; this trigger was skipped (NOT success)
+# Treat ONLY NotStarted/InProgress as non-terminal and break on anything else, so a newly-added
+# terminal status surfaces immediately instead of waiting out MAX_POLLS (the contract notes more
+# status values may be added over time). MAX_POLLS bounds the wait if the job never terminates.
+ATTEMPT=0; MAX_POLLS="${MAX_POLLS:-60}"
+while [ "$ATTEMPT" -lt "$MAX_POLLS" ]; do
   STATUS=$(az rest --method get --url "$LOCATION" \
     --resource "https://api.fabric.microsoft.com" --query "status" -o tsv)
   echo "Status: $STATUS"
-  [[ "$STATUS" == "Completed" || "$STATUS" == "Failed" || "$STATUS" == "Cancelled" ]] && break
-  sleep 10
+  case "$STATUS" in NotStarted|InProgress) ;; *) break ;; esac
+  sleep 10; ATTEMPT=$((ATTEMPT + 1))
 done
+case "$STATUS" in
+  Completed) : ;;  # success (exit 0)
+  Deduped)
+    # Concurrency, not success: another refresh is already running and this trigger was skipped.
+    # Monitor the in-flight instance instead of re-triggering. Exit non-zero so automation does not
+    # mistake a skipped trigger for a completed refresh.
+    echo "Refresh deduplicated — another instance is already running; monitor that instance instead of re-triggering."
+    exit 2 ;;
+  NotStarted|InProgress)
+    # Max-poll bound reached before any terminal status — a polling timeout, NOT a terminal outcome.
+    # Surface the raw job instance and stop; do not assume success.
+    echo "Polling stopped after ${MAX_POLLS} attempts with non-terminal status '$STATUS' (max-poll timeout, not a terminal outcome)."
+    az rest --method get --url "$LOCATION" --resource "https://api.fabric.microsoft.com"
+    exit 1 ;;
+  *)  # Failed / Cancelled (or any other terminal status): a terminal backend outcome — not something
+      # to debug-loop. Surface the job's raw error (the job-instance body's .failureReason, an
+      # ErrorResponse with .errorCode / .isRetriable / .message) and STOP. Do NOT re-trigger or keep
+      # polling when .failureReason.isRetriable=false or the error is workspace-wide.
+      az rest --method get --url "$LOCATION" --resource "https://api.fabric.microsoft.com"
+      exit 1 ;;
+esac
 ```
 
 **PowerShell variant** (`Invoke-WebRequest` exposes response headers natively; avoids the `tr | grep | awk` pipe):
@@ -538,7 +568,10 @@ done
 # - $Resp.Headers["Location"] returns string or string[] depending on PS version — never
 #   use .Location[0] (returns first character on Windows PS 5.1 plain-string case).
 # - Wrap Invoke-WebRequest in try/catch on 5.1 (-SkipHttpErrorCheck is PS 7+).
-# - Fabric refresh job status enum: NotStarted / InProgress / Completed / Failed / Cancelled.
+# - Fabric refresh job status enum: NotStarted / InProgress (non-terminal); Completed (success);
+#   Failed / Cancelled (fatal); Deduped (another refresh already running — NOT success). Treat only
+#   NotStarted/InProgress as non-terminal and break on anything else, bounded by a max-poll count, so
+#   a newly-added terminal status surfaces immediately instead of waiting out $MaxPolls.
 #   This is distinct from the LRO operation enum (Running / Succeeded / Failed / Cancelled).
 #   Refresh "success" = "Completed", not "Succeeded".
 # Acquire $Token per common/COMMON-CLI.md § Token-in-Variable Pattern (resource = https://api.fabric.microsoft.com).
@@ -553,12 +586,35 @@ try {
 $Location = $Resp.Headers["Location"]
 if ($Location -is [array]) { $Location = $Location[0] }
 
-while ($true) {
+$Attempt = 0; $MaxPolls = 60
+do {
   $Status = az rest --method get --url $Location `
     --resource "https://api.fabric.microsoft.com" --query "status" -o tsv
   Write-Host "Status: $Status"
-  if ($Status -in 'Completed','Failed','Cancelled') { break }
-  Start-Sleep -Seconds 10
+  if ($Status -notin 'NotStarted','InProgress') { break }
+  Start-Sleep -Seconds 10; $Attempt++
+} while ($Attempt -lt $MaxPolls)
+if ($Status -in 'NotStarted','InProgress') {
+  # Max-poll bound reached before any terminal status — a polling timeout, NOT a terminal outcome.
+  Write-Host "Polling stopped after $MaxPolls attempts with non-terminal status '$Status' (max-poll timeout, not a terminal outcome)."
+  az rest --method get --url $Location --resource "https://api.fabric.microsoft.com"
+  exit 1
+}
+switch ($Status) {
+  'Completed' { }  # success (exit 0)
+  'Deduped' {
+    # Concurrency, not success: another refresh is already running and this trigger was skipped.
+    # Exit non-zero so callers don't treat a skipped trigger as a completed refresh.
+    Write-Host "Refresh deduplicated — another instance is already running; monitor that instance instead of re-triggering."
+    exit 2
+  }
+  default {
+    # Failed / Cancelled (or any other terminal status): a terminal backend outcome — surface the job's
+    # raw error (the job-instance body's .failureReason: .errorCode / .isRetriable / .message) and STOP;
+    # do not re-trigger or debug-loop when failureReason.isRetriable=false or the error is workspace-wide.
+    az rest --method get --url $Location --resource "https://api.fabric.microsoft.com"
+    Write-Error "Refresh terminated '$Status' (not Completed)"; exit 1
+  }
 }
 ```
 
@@ -633,7 +689,7 @@ When this skill completes a task, the agent should return:
 | **Default format** | Markdown for status reports; fenced JSON code block for single-resource responses; markdown table for list responses. |
 | **Side-effect disclosure** | Explicitly report IDs created/modified/deleted and the target workspace ID. Never imply success without an ID. When you saved or replaced a dataflow definition, name the parts you wrote in prose — `mashup.pq`, `queryMetadata.json`, `.platform` — since long command bodies are truncated in the transcript and the part names would otherwise be lost. |
 | **Verification** | Re-`GET` the affected resource (dataflow, connection, job instance) and surface its state (e.g., `provisionState`, `status`, `Completed`) before declaring done. |
-| **Error surfacing** | If any step returned a non-2xx status, an LRO `Failed`/`Cancelled`, or an Arrow-stream `{"Error":"..."}`, propagate the raw error verbatim and stop. |
+| **Error surfacing** | If any step returned a non-2xx status, an LRO `Failed`/`Cancelled`, or an Arrow-stream `{"Error":"..."}`, propagate the raw error verbatim and stop. A terminal refresh `Failed`/`Cancelled`, an `isRetriable: false` backend error, or a workspace-wide `UnknownException` is a **fatal-stop** condition — report it and end; do not re-trigger, re-poll, or enter an extended debugging loop. |
 | **Preview rendering (Workflow C)** | After `executeQuery`, render `head(10)` of the result as a markdown table in chat alongside the saved Arrow file — even when the embedded-error check passes. Catches silent-success bugs (filter dropped all rows, wrong column, off-by-one, wrong cast) that the embedded-error detector cannot see. Snippet + suppression rules: [dataflows-consumption-cli § Example 5b](../dataflows-consumption-cli/SKILL.md#example-5b-render-query-results-as-a-markdown-table). |
 | **API names** | When the answer references API endpoints or request-body fields, use their exact, case-sensitive names (`executeQuery`, `customMashupDocument`, `QueryName`, `mashup.pq`, `queryMetadata.json`, `GET /v1/connections/supportedConnectionTypes`) rather than paraphrased or pluralized variants. |
 

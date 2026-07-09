@@ -1,0 +1,25 @@
+{
+  "id": "tomgranot-hubspot-admin-skills-new-contact-hygiene-workflow",
+  "name": "new-contact-hygiene-workflow",
+  "description": "Build a HubSpot workflow that auto-enriches and stages new contacts upon creation. Sets lifecycle stage, copies company name and industry from associated company, and branches on completeness. Must be built manually in the HubSpot UI due to API limitations.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "TomGranot",
+  "install_path": ".claude/skills/new-contact-hygiene-workflow/SKILL.md",
+  "source": {
+    "repo": "TomGranot/hubspot-admin-skills",
+    "url": "https://github.com/TomGranot/hubspot-admin-skills/blob/main/skills/new-contact-hygiene-workflow/SKILL.md",
+    "path": "skills/new-contact-hygiene-workflow/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-09T11:41:50.361Z",
+    "stars": 50,
+    "language": "Python",
+    "pushed_at": "2026-03-26T15:55:43Z",
+    "license": "MIT"
+  }
+}

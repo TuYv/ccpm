@@ -1,0 +1,25 @@
+{
+  "id": "tomgranot-hubspot-admin-skills-hubspot-implementation-plan",
+  "name": "hubspot-implementation-plan",
+  "description": "Generate a phased implementation plan from a HubSpot audit report. Creates prioritized, sequenced cleanup processes with effort estimates, dependencies, and automation feasibility. Use after running /hubspot-audit.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "TomGranot",
+  "install_path": ".claude/skills/hubspot-implementation-plan/SKILL.md",
+  "source": {
+    "repo": "TomGranot/hubspot-admin-skills",
+    "url": "https://github.com/TomGranot/hubspot-admin-skills/blob/main/skills/hubspot-implementation-plan/SKILL.md",
+    "path": "skills/hubspot-implementation-plan/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-09T11:41:49.784Z",
+    "stars": 50,
+    "language": "Python",
+    "pushed_at": "2026-03-26T15:55:43Z",
+    "license": "MIT"
+  }
+}

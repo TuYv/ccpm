@@ -1,0 +1,25 @@
+{
+  "id": "tomgranot-hubspot-admin-skills-quarterly-database-cleanup",
+  "name": "quarterly-database-cleanup",
+  "description": "Run a comprehensive quarterly CRM audit covering list health, bounce monitoring, data quality, scoring calibration, engagement metrics, and property cleanup. Produces a health report with quarter-over-quarter trend comparison.",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "TomGranot",
+  "install_path": ".claude/skills/quarterly-database-cleanup/SKILL.md",
+  "source": {
+    "repo": "TomGranot/hubspot-admin-skills",
+    "url": "https://github.com/TomGranot/hubspot-admin-skills/blob/main/skills/quarterly-database-cleanup/SKILL.md",
+    "path": "skills/quarterly-database-cleanup/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-09T11:41:50.569Z",
+    "stars": 50,
+    "language": "Python",
+    "pushed_at": "2026-03-26T15:55:43Z",
+    "license": "MIT"
+  }
+}

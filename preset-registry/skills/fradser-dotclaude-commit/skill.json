@@ -1,7 +1,7 @@
 {
   "id": "fradser-dotclaude-commit",
   "name": "commit",
-  "description": "Creates a conventional git commit using git-agent. This skill should be used when the user requests \"commit\", \"git commit\", \"create commit\", or wants to commit staged and unstaged changes following the conventional commits format. The executing AI auto-derives its own co-author string from its runtime model identity (e.g., `Claude Opus 4.7 <noreply@anthropic.com>`, `GLM-4.5 <noreply@zhipuai.cn>`) and passes it to `--co-author`. `$ARGUMENTS`, if provided, overrides the auto-derived value.",
+  "description": "Creates a conventional git commit using git-agent. This skill should be used when the user requests \"commit\", \"git commit\", \"create commit\", or wants to commit staged and unstaged changes following the conventional commits format. The executing AI auto-derives its own co-author string from its runtime model identity (e.g., `Claude Opus 4.7 <noreply@anthropic.com>`, `Grok 4.5 <noreply@x.ai>`, `GLM-4.5 <noreply@zhipuai.cn>`) and passes it to `--co-author`. `$ARGUMENTS`, if provided, overrides the ",
   "category": "文档写作",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/FradSer/dotclaude/blob/main/git/skills/commit/SKILL.md",
     "path": "git/skills/commit/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-09T04:22:23.825Z",
+    "discovered_at": "2026-07-09T11:31:57.795Z",
     "stars": 573,
     "language": "JavaScript",
-    "pushed_at": "2026-07-09T04:07:40Z",
+    "pushed_at": "2026-07-09T09:19:08Z",
     "license": "MIT"
   }
 }

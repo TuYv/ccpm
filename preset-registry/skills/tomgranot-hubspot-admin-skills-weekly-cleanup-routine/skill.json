@@ -1,0 +1,25 @@
+{
+  "id": "tomgranot-hubspot-admin-skills-weekly-cleanup-routine",
+  "name": "weekly-cleanup-routine",
+  "description": "A lightweight 5-minute weekly health check covering bounce monitoring, new contact quality, workflow health, list growth trends, and data quality sampling. Quick early warning system, not a comprehensive audit.",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "TomGranot",
+  "install_path": ".claude/skills/weekly-cleanup-routine/SKILL.md",
+  "source": {
+    "repo": "TomGranot/hubspot-admin-skills",
+    "url": "https://github.com/TomGranot/hubspot-admin-skills/blob/main/skills/weekly-cleanup-routine/SKILL.md",
+    "path": "skills/weekly-cleanup-routine/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-09T11:41:51.769Z",
+    "stars": 50,
+    "language": "Python",
+    "pushed_at": "2026-03-26T15:55:43Z",
+    "license": "MIT"
+  }
+}

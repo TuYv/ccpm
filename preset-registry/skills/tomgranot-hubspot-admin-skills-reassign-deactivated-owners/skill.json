@@ -1,0 +1,25 @@
+{
+  "id": "tomgranot-hubspot-admin-skills-reassign-deactivated-owners",
+  "name": "reassign-deactivated-owners",
+  "description": "> Reassign contacts and companies from deactivated team members to active owners. Fully automated via the HubSpot Owners API and Batch Update API. Includes territory analysis for informed reassignment decisions.",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "TomGranot",
+  "install_path": ".claude/skills/reassign-deactivated-owners/SKILL.md",
+  "source": {
+    "repo": "TomGranot/hubspot-admin-skills",
+    "url": "https://github.com/TomGranot/hubspot-admin-skills/blob/main/skills/reassign-deactivated-owners/SKILL.md",
+    "path": "skills/reassign-deactivated-owners/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-09T11:41:50.741Z",
+    "stars": 50,
+    "language": "Python",
+    "pushed_at": "2026-03-26T15:55:43Z",
+    "license": "MIT"
+  }
+}

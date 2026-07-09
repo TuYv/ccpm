@@ -1,0 +1,25 @@
+{
+  "id": "tomgranot-hubspot-admin-skills-create-icp-tiers",
+  "name": "create-icp-tiers",
+  "description": "Classify companies into Ideal Customer Profile (ICP) tiers based on firmographic data (industry + employee count). Creates a custom property via API and 4 classification workflows in HubSpot UI.",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "TomGranot",
+  "install_path": ".claude/skills/create-icp-tiers/SKILL.md",
+  "source": {
+    "repo": "TomGranot/hubspot-admin-skills",
+    "url": "https://github.com/TomGranot/hubspot-admin-skills/blob/main/skills/create-icp-tiers/SKILL.md",
+    "path": "skills/create-icp-tiers/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-09T11:41:48.394Z",
+    "stars": 50,
+    "language": "Python",
+    "pushed_at": "2026-03-26T15:55:43Z",
+    "license": "MIT"
+  }
+}

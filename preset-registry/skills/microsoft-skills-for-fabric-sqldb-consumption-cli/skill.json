@@ -1,0 +1,25 @@
+{
+  "id": "microsoft-skills-for-fabric-sqldb-consumption-cli",
+  "name": "sqldb-consumption-cli",
+  "description": "> Query SQL database in Fabric via sqlcmd: interactive exploration, vector similarity, JSON, temporal queries, and security policy inspection on the OLTP and SQL analytics endpoints. For schema changes see the sqldb-authoring-cli skill. Triggers: \"sql database in Fabric query sys.tables sqlcmd\", \"sql database in Fabric system view list user tables sqlcmd\", \"list user tables sqldb\", \"sys.tables sqldb\", \"explore sqldb schema\", \"vector similarity sqldb\", \"RAG embedding sqldb\", \"row level security s",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "microsoft",
+  "install_path": ".claude/skills/sqldb-consumption-cli/SKILL.md",
+  "source": {
+    "repo": "microsoft/skills-for-fabric",
+    "url": "https://github.com/microsoft/skills-for-fabric/blob/main/plugins/fabric-skills/skills/sqldb-consumption-cli/SKILL.md",
+    "path": "plugins/fabric-skills/skills/sqldb-consumption-cli/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-09T11:36:35.877Z",
+    "stars": 754,
+    "language": "Python",
+    "pushed_at": "2026-07-09T10:45:39Z",
+    "license": "MIT"
+  }
+}

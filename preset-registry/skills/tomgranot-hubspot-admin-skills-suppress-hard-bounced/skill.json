@@ -1,0 +1,25 @@
+{
+  "id": "tomgranot-hubspot-admin-skills-suppress-hard-bounced",
+  "name": "suppress-hard-bounced",
+  "description": "> Identify and suppress hard-bounced contacts to protect email sender reputation. Hybrid approach: API for discovery and audit, manual UI for suppression (hs_marketable_status is read-only via API).",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "TomGranot",
+  "install_path": ".claude/skills/suppress-hard-bounced/SKILL.md",
+  "source": {
+    "repo": "TomGranot/hubspot-admin-skills",
+    "url": "https://github.com/TomGranot/hubspot-admin-skills/blob/main/skills/suppress-hard-bounced/SKILL.md",
+    "path": "skills/suppress-hard-bounced/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-09T11:41:51.613Z",
+    "stars": 50,
+    "language": "Python",
+    "pushed_at": "2026-03-26T15:55:43Z",
+    "license": "MIT"
+  }
+}

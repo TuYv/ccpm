@@ -1,0 +1,25 @@
+{
+  "id": "microsoft-skills-for-fabric-sqldb-authoring-cli",
+  "name": "sqldb-authoring-cli",
+  "description": "> Create and manage SQL database in Fabric items, author T-SQL DDL/DML with constraints, foreign keys, triggers, indexes, and vector columns. Deploy schema via SqlPackage (.dacpac/.bacpac), configure source control, CI/CD, and GraphQL APIs. Triggers: \"sql database in Fabric create table sqlcmd ddl\", \"sql database in Fabric primary key default getdate sqlcmd\", \"create sqldb item\", \"create table sqldb ddl\", \"sqldb foreign key constraint\", \"sqldb stored procedure\", \"sqldb trigger create\", \"sqldb ve",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "microsoft",
+  "install_path": ".claude/skills/sqldb-authoring-cli/SKILL.md",
+  "source": {
+    "repo": "microsoft/skills-for-fabric",
+    "url": "https://github.com/microsoft/skills-for-fabric/blob/main/plugins/fabric-skills/skills/sqldb-authoring-cli/SKILL.md",
+    "path": "plugins/fabric-skills/skills/sqldb-authoring-cli/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-09T11:36:35.707Z",
+    "stars": 754,
+    "language": "Python",
+    "pushed_at": "2026-07-09T10:45:39Z",
+    "license": "MIT"
+  }
+}

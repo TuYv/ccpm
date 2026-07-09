@@ -1,0 +1,25 @@
+{
+  "id": "tomgranot-hubspot-admin-skills-merge-duplicate-companies",
+  "name": "merge-duplicate-companies",
+  "description": "> Identify duplicate company records by domain and name, export audit CSVs for review, and guide merging. API for discovery, third-party tools or manual UI for merging (HubSpot has no bulk merge API).",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "TomGranot",
+  "install_path": ".claude/skills/merge-duplicate-companies/SKILL.md",
+  "source": {
+    "repo": "TomGranot/hubspot-admin-skills",
+    "url": "https://github.com/TomGranot/hubspot-admin-skills/blob/main/skills/merge-duplicate-companies/SKILL.md",
+    "path": "skills/merge-duplicate-companies/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-09T11:41:50.193Z",
+    "stars": 50,
+    "language": "Python",
+    "pushed_at": "2026-03-26T15:55:43Z",
+    "license": "MIT"
+  }
+}

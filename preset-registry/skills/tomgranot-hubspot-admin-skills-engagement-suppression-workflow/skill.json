@@ -1,0 +1,25 @@
+{
+  "id": "tomgranot-hubspot-admin-skills-engagement-suppression-workflow",
+  "name": "engagement-suppression-workflow",
+  "description": "Build a two-tier sunset workflow that re-engages dormant contacts before suppressing them. Tier 1 triggers a re-engagement campaign after a configurable inactivity window. Tier 2 suppresses contacts that fail to re-engage within a configurable re-engagement window.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "TomGranot",
+  "install_path": ".claude/skills/engagement-suppression-workflow/SKILL.md",
+  "source": {
+    "repo": "TomGranot/hubspot-admin-skills",
+    "url": "https://github.com/TomGranot/hubspot-admin-skills/blob/main/skills/engagement-suppression-workflow/SKILL.md",
+    "path": "skills/engagement-suppression-workflow/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-09T11:41:48.921Z",
+    "stars": 50,
+    "language": "Python",
+    "pushed_at": "2026-03-26T15:55:43Z",
+    "license": "MIT"
+  }
+}
