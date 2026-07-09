@@ -1,7 +1,7 @@
 {
   "id": "daymade-claude-code-skills-skill-governance",
   "name": "skill-governance",
-  "description": ">- Enforce source-of-truth discipline for Claude Code skill marketplaces and caches. Use whenever the user says \"check skill drift\", \"检查 skill 漂移\", \"sync skills from source\", \"以源码为准同步 skill 缓存\", \"clean old skill cache versions\", \"清理 skill 缓存旧版本\", \"switch marketplace to local source\", \"marketplace 切到本地源码\", or talks about skill caches being stale, version mismatches, orphaned plugins, or rebuilding the marketplace cache from a local source repo.",
+  "description": ">- Enforce source-of-truth discipline for Claude Code skill marketplaces, caches, and loose userSettings skills. Use whenever the user says \"check skill drift\", \"检查 skill 漂移\", \"sync skills from source\", \"以源码为准同步 skill 缓存\", \"clean old skill cache versions\", \"清理 skill 缓存旧版本\", \"switch marketplace to local source\", \"marketplace 切到本地源码\", \"thin skills\", \"薄 skill\", \"loose skills\", \"清理 user skills\", or talks about skill caches being stale, version mismatches, orphaned plugins, duplicate direct-copy skil",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-skill/skill-governance/SKILL.md",
     "path": "daymade-skill/skill-governance/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-09T17:19:54.644Z",
+    "discovered_at": "2026-07-09T19:21:37.382Z",
     "stars": 1257,
     "language": "Python",
-    "pushed_at": "2026-07-07T15:36:17Z",
+    "pushed_at": "2026-07-09T18:56:52Z",
     "license": "MIT"
   }
 }
