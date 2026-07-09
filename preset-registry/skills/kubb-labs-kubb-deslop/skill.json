@@ -1,0 +1,25 @@
+{
+  "id": "kubb-labs-kubb-deslop",
+  "name": "deslop",
+  "description": "Remove AI-generated code slop from a branch or diff. Use after writing or generating code to strip unnecessary comments, defensive checks, `any` casts, and style that does not match the surrounding file. For prose and markdown, use the humanizer skill instead.",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "kubb-labs",
+  "install_path": ".claude/skills/deslop/SKILL.md",
+  "source": {
+    "repo": "kubb-labs/kubb",
+    "url": "https://github.com/kubb-labs/kubb/blob/main/.agents/skills/deslop/SKILL.md",
+    "path": ".agents/skills/deslop/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-09T14:17:23.304Z",
+    "stars": 1756,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-09T14:09:43Z",
+    "license": "MIT"
+  }
+}
