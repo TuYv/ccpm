@@ -1,7 +1,7 @@
 {
   "id": "ogulcancelik-herdr",
   "name": "herdr",
-  "description": "Control herdr from inside it. Manage workspaces and tabs, split panes, spawn agents, read output, and wait for state changes — all via CLI commands that talk to the running herdr instance over a local unix socket. Use when running inside herdr (HERDR_ENV=1).",
+  "description": "Control Herdr, a terminal multiplexer for coding agents. Use only when the user explicitly mentions Herdr or asks to use Herdr to inspect or control panes, tabs, workspaces, terminals, commands, or communication with another agent. Do not use merely because a task could benefit from a background terminal, delegation, or parallel work. Requires HERDR_ENV=1.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/ogulcancelik/herdr/blob/master/SKILL.md",
     "path": "SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-07-10T18:59:09.902Z",
-    "stars": 15154,
+    "discovered_at": "2026-07-10T21:11:33.288Z",
+    "stars": 15177,
     "language": "Rust",
-    "pushed_at": "2026-07-10T13:09:28Z",
+    "pushed_at": "2026-07-10T20:37:04Z",
     "license": null
   }
 }
