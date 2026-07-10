@@ -1,0 +1,25 @@
+{
+  "id": "aaron-he-zhu-aaron-marketing-skills-campaign-planner",
+  "name": "campaign-planner",
+  "description": "Use when the user asks to \"plan an influencer campaign\", \"build a campaign blueprint\", or \"launch a product with creators\"; produces campaign objectives, platform and influencer-tier strategy, content requirements, a phased timeline, budget allocation, and KPI targets. Not for writing individual creator briefs — use brief-generator; not for the overall product-launch plan (tiering, calendar, press, community day) — use launch-tier-planner, which hands this skill the creator lane. A launch reques",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "16.0.0",
+  "author": "aaron-he-zhu",
+  "install_path": ".claude/skills/campaign-planner/SKILL.md",
+  "source": {
+    "repo": "aaron-he-zhu/aaron-marketing-skills",
+    "url": "https://github.com/aaron-he-zhu/aaron-marketing-skills/blob/main/influencer/plan/campaign-planner/SKILL.md",
+    "path": "influencer/plan/campaign-planner/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-10T17:08:01.702Z",
+    "stars": 2357,
+    "language": "Python",
+    "pushed_at": "2026-07-10T09:52:59Z",
+    "license": "Apache-2.0"
+  }
+}

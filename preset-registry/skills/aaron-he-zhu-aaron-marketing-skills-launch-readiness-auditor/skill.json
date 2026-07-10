@@ -1,0 +1,25 @@
+{
+  "id": "aaron-he-zhu-aaron-marketing-skills-launch-readiness-auditor",
+  "name": "launch-readiness-auditor",
+  "description": "Use when the user asks to \"audit our launch plan\", \"are we ready to launch\", or run a T-1 launch-eve go/no-go before a committed date; runs RAMP LQS scoring with R1/A1/M1/P1 veto checks and a SHIP/FIX/BLOCK gate, and emits a gated audit artifact. Not for recording launch dates or stages — use launch-registry; not for running launch day itself — use launch-day-conductor. 发布就绪审计/LQS评分/发布前放行",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "16.0.0",
+  "author": "aaron-he-zhu",
+  "install_path": ".claude/skills/launch-readiness-auditor/SKILL.md",
+  "source": {
+    "repo": "aaron-he-zhu/aaron-marketing-skills",
+    "url": "https://github.com/aaron-he-zhu/aaron-marketing-skills/blob/main/launch/mobilize/launch-readiness-auditor/SKILL.md",
+    "path": "launch/mobilize/launch-readiness-auditor/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-10T17:08:08.253Z",
+    "stars": 2357,
+    "language": "Python",
+    "pushed_at": "2026-07-10T09:52:59Z",
+    "license": "Apache-2.0"
+  }
+}

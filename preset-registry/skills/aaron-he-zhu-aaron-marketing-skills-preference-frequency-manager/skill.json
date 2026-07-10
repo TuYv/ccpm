@@ -1,0 +1,25 @@
+{
+  "id": "aaron-he-zhu-aaron-marketing-skills-preference-frequency-manager",
+  "name": "preference-frequency-manager",
+  "description": "Use when the user asks to \"build a preference center\", \"set up a frequency opt-down ladder\", \"give people a step-down instead of unsubscribe\", or \"design a topic/cadence preference page\"; produces a preference-center field spec, a frequency/topic opt-down ladder (down-tier paths that substitute for a hard unsubscribe), a preference-to-suppression mapping, and a SEND N-dimension sub-item note on preference-center / frequency options offered. Not for the lifecycle flow map or cadence governance — ",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "16.0.0",
+  "author": "aaron-he-zhu",
+  "install_path": ".claude/skills/preference-frequency-manager/SKILL.md",
+  "source": {
+    "repo": "aaron-he-zhu/aaron-marketing-skills",
+    "url": "https://github.com/aaron-he-zhu/aaron-marketing-skills/blob/main/email/nurture/preference-frequency-manager/SKILL.md",
+    "path": "email/nurture/preference-frequency-manager/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-10T17:07:48.083Z",
+    "stars": 2357,
+    "language": "Python",
+    "pushed_at": "2026-07-10T09:52:59Z",
+    "license": "Apache-2.0"
+  }
+}

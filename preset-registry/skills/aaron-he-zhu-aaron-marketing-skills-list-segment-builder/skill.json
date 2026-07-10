@@ -1,0 +1,25 @@
+{
+  "id": "aaron-he-zhu-aaron-marketing-skills-list-segment-builder",
+  "name": "list-segment-builder",
+  "description": "Use when the user asks to \"build email segments from my list\", \"make engaged / lapsed / RFM segments\", \"set up cart-abandoner or lifecycle-stage audiences\", or \"build a suppression list of unsubscribes and bounces\"; turns the user''s OWN list/CRM/GA4/ecommerce export into behavioral, attribute, and lifecycle-stage segments plus a suppression list, with per-segment sizes labeled Measured/Estimated, informing the SEND E (Engagement/targeting) dimension. Not for scoring EQS or running vetoes — use ",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "16.0.0",
+  "author": "aaron-he-zhu",
+  "install_path": ".claude/skills/list-segment-builder/SKILL.md",
+  "source": {
+    "repo": "aaron-he-zhu/aaron-marketing-skills",
+    "url": "https://github.com/aaron-he-zhu/aaron-marketing-skills/blob/main/email/setup/list-segment-builder/SKILL.md",
+    "path": "email/setup/list-segment-builder/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-10T17:07:49.099Z",
+    "stars": 2357,
+    "language": "Python",
+    "pushed_at": "2026-07-10T09:52:59Z",
+    "license": "Apache-2.0"
+  }
+}

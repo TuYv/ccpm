@@ -1,0 +1,25 @@
+{
+  "id": "aaron-he-zhu-aaron-marketing-skills-deliverability-qa",
+  "name": "deliverability-qa",
+  "description": "Use when the user asks to \"run a deliverability pre-flight before I send\", \"check my SPF/DKIM/DMARC/BIMI\", \"why am I landing in spam / promotions\", or \"score my sender reputation and list hygiene\"; runs the ONE-TIME pre-send SEND S1 authentication pre-flight and scores the SEND S (Sender-integrity / Deliverability) dimension — a DNS + DMARC-RUA auth check, domain/IP reputation read, inbox-placement (seed-list) result, a spam-content/link/render scan, and a point-in-time bounce/complaint list-hyg",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "16.0.0",
+  "author": "aaron-he-zhu",
+  "install_path": ".claude/skills/deliverability-qa/SKILL.md",
+  "source": {
+    "repo": "aaron-he-zhu/aaron-marketing-skills",
+    "url": "https://github.com/aaron-he-zhu/aaron-marketing-skills/blob/main/email/setup/deliverability-qa/SKILL.md",
+    "path": "email/setup/deliverability-qa/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-10T17:07:48.606Z",
+    "stars": 2357,
+    "language": "Python",
+    "pushed_at": "2026-07-10T09:52:59Z",
+    "license": "Apache-2.0"
+  }
+}

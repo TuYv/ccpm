@@ -1,0 +1,25 @@
+{
+  "id": "aaron-he-zhu-aaron-marketing-skills-budget-pacing-monitor",
+  "name": "budget-pacing-monitor",
+  "description": "Use when the user asks to \"check pacing\", \"am I over/under-spending\", \"is this campaign on track to hit budget\", or \"why did spend spike/stall mid-flight\"; returns a spend-vs-target-curve read, learning-phase status, an over/under-delivery call, and a reallocation trigger. Not for initial budget allocation — use budget-optimizer; not for choosing the bid strategy — use bid-strategy-planner; not for the RQS gate — use ad-account-auditor. 付费广告预算节奏监控/跑量过快过慢/在途配速",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "16.0.0",
+  "author": "aaron-he-zhu",
+  "install_path": ".claude/skills/budget-pacing-monitor/SKILL.md",
+  "source": {
+    "repo": "aaron-he-zhu/aaron-marketing-skills",
+    "url": "https://github.com/aaron-he-zhu/aaron-marketing-skills/blob/main/ad/scale/budget-pacing-monitor/SKILL.md",
+    "path": "ad/scale/budget-pacing-monitor/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-10T17:07:44.650Z",
+    "stars": 2357,
+    "language": "Python",
+    "pushed_at": "2026-07-10T09:52:59Z",
+    "license": "Apache-2.0"
+  }
+}

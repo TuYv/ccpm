@@ -1,0 +1,25 @@
+{
+  "id": "aaron-he-zhu-aaron-marketing-skills-report-generator",
+  "name": "report-generator",
+  "description": "Use when the user asks to \"create a campaign report\", \"build an executive summary\", or \"deliver client results\"; produces audience-tailored influencer marketing reports (executive, client, internal team) with data tables, narrative, key learnings, and recommendations. Not for raw metric computation — use performance-analyzer.",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "16.0.1",
+  "author": "aaron-he-zhu",
+  "install_path": ".claude/skills/report-generator/SKILL.md",
+  "source": {
+    "repo": "aaron-he-zhu/aaron-marketing-skills",
+    "url": "https://github.com/aaron-he-zhu/aaron-marketing-skills/blob/main/influencer/measure/report-generator/SKILL.md",
+    "path": "influencer/measure/report-generator/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-10T17:07:58.617Z",
+    "stars": 2357,
+    "language": "Python",
+    "pushed_at": "2026-07-10T09:52:59Z",
+    "license": "Apache-2.0"
+  }
+}

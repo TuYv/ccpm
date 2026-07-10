@@ -1,0 +1,25 @@
+{
+  "id": "aaron-he-zhu-aaron-marketing-skills-launch-feedback-synthesizer",
+  "name": "launch-feedback-synthesizer",
+  "description": "Use when the user asks to \"triage launch feedback\", \"cluster reviews, comments, and board posts into themes\", or \"set up a you asked, we shipped loop\"; produces a feedback theme digest (frequency, severity, representative quotes per theme), an open→planned→started→completed/declined status loop with duplicate-merge and notification rules, shipped-change announcement material, and a compliant social-proof harvest protocol (never incentivized store reviews). Not for repurposing or amplifying the h",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "16.0.0",
+  "author": "aaron-he-zhu",
+  "install_path": ".claude/skills/launch-feedback-synthesizer/SKILL.md",
+  "source": {
+    "repo": "aaron-he-zhu/aaron-marketing-skills",
+    "url": "https://github.com/aaron-he-zhu/aaron-marketing-skills/blob/main/launch/prove/launch-feedback-synthesizer/SKILL.md",
+    "path": "launch/prove/launch-feedback-synthesizer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-10T17:08:09.572Z",
+    "stars": 2357,
+    "language": "Python",
+    "pushed_at": "2026-07-10T09:52:59Z",
+    "license": "Apache-2.0"
+  }
+}

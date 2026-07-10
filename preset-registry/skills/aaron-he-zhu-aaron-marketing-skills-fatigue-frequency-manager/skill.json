@@ -1,0 +1,25 @@
+{
+  "id": "aaron-he-zhu-aaron-marketing-skills-fatigue-frequency-manager",
+  "name": "fatigue-frequency-manager",
+  "description": "Use when the user asks to \"is my ad fatiguing\", \"why is CTR dropping at scale\", or \"should I rotate creative / widen the audience\"; reads frequency, CTR and CVR decay against an early-flight baseline and returns Rotate-creative / Widen-audience / Hold triggers with a per-ad-set fatigue read. Not for building the replacement creative — use ad-creative-builder; not for the RQS score or vetoes — use ad-account-auditor. 广告疲劳检测/频次管理/换素材还是扩人群",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "16.0.0",
+  "author": "aaron-he-zhu",
+  "install_path": ".claude/skills/fatigue-frequency-manager/SKILL.md",
+  "source": {
+    "repo": "aaron-he-zhu/aaron-marketing-skills",
+    "url": "https://github.com/aaron-he-zhu/aaron-marketing-skills/blob/main/ad/scale/fatigue-frequency-manager/SKILL.md",
+    "path": "ad/scale/fatigue-frequency-manager/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-10T17:07:44.964Z",
+    "stars": 2357,
+    "language": "Python",
+    "pushed_at": "2026-07-10T09:52:59Z",
+    "license": "Apache-2.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "aaron-he-zhu-aaron-marketing-skills-bid-strategy-planner",
+  "name": "bid-strategy-planner",
+  "description": "Use when the user asks to \"pick a bid strategy\", \"set a tCPA/tROAS target\", or \"plan the learning-phase entry\"; produces a bid-strategy choice (tCPA / tROAS / max-conversions / manual CPC), the starting target math, a portfolio grouping map, and a learning-phase entry plan. Not for splitting the budget across campaigns — use budget-optimizer; not for in-flight pacing/scale moves — use budget-pacing-monitor; not for scoring the account — use ad-account-auditor. 出价策略/tCPA目标/tROAS/学习期",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "16.0.0",
+  "author": "aaron-he-zhu",
+  "install_path": ".claude/skills/bid-strategy-planner/SKILL.md",
+  "source": {
+    "repo": "aaron-he-zhu/aaron-marketing-skills",
+    "url": "https://github.com/aaron-he-zhu/aaron-marketing-skills/blob/main/ad/orchestrate/bid-strategy-planner/SKILL.md",
+    "path": "ad/orchestrate/bid-strategy-planner/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-10T17:07:40.969Z",
+    "stars": 2357,
+    "language": "Python",
+    "pushed_at": "2026-07-10T09:52:59Z",
+    "license": "Apache-2.0"
+  }
+}

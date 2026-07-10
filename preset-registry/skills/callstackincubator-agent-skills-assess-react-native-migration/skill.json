@@ -1,0 +1,25 @@
+{
+  "id": "callstackincubator-agent-skills-assess-react-native-migration",
+  "name": "assess-react-native-migration",
+  "description": "Assesses whether and how an existing mobile product should migrate to React Native. Use when auditing one or more product repositories for migration readiness, including products whose iOS, Android, and other clients live in separate directories or repositories; choosing brownfield, greenfield, or a checkpoint-based path; defining a representative trial; or preparing a baseline and ROI decision before implementation. When product scope or material evidence is unavailable, grills the stakeholder ",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "callstackincubator",
+  "install_path": ".claude/skills/assess-react-native-migration/SKILL.md",
+  "source": {
+    "repo": "callstackincubator/agent-skills",
+    "url": "https://github.com/callstackincubator/agent-skills/blob/main/skills/assess-react-native-migration/SKILL.md",
+    "path": "skills/assess-react-native-migration/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-10T16:48:57.700Z",
+    "stars": 1524,
+    "language": "Shell",
+    "pushed_at": "2026-07-10T15:57:04Z",
+    "license": "MIT"
+  }
+}

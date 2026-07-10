@@ -1,0 +1,25 @@
+{
+  "id": "aaron-he-zhu-aaron-marketing-skills-email-quality-auditor",
+  "name": "email-quality-auditor",
+  "description": "Use when the user asks to \"audit an email program\", \"is this campaign safe to send\", or run a pre-send go/no-go on their own exported email data; runs SEND EQS scoring with S1/S2/N1/D1 veto checks and a SHIP/FIX/BLOCK gate, and emits a gated audit artifact. Not for building deliverability setup — use deliverability-qa; not for designing lifecycle flows — use email-sequence-designer. 邮件质量审计/EQS评分/发送前放行",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "16.0.0",
+  "author": "aaron-he-zhu",
+  "install_path": ".claude/skills/email-quality-auditor/SKILL.md",
+  "source": {
+    "repo": "aaron-he-zhu/aaron-marketing-skills",
+    "url": "https://github.com/aaron-he-zhu/aaron-marketing-skills/blob/main/email/deliver/email-quality-auditor/SKILL.md",
+    "path": "email/deliver/email-quality-auditor/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-10T17:07:45.984Z",
+    "stars": 2357,
+    "language": "Python",
+    "pushed_at": "2026-07-10T09:52:59Z",
+    "license": "Apache-2.0"
+  }
+}

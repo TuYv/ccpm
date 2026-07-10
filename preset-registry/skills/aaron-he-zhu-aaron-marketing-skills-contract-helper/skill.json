@@ -1,0 +1,25 @@
+{
+  "id": "aaron-he-zhu-aaron-marketing-skills-contract-helper",
+  "name": "contract-helper",
+  "description": "Use when the user asks to \"draft an influencer contract\", \"review these agreement terms\", or \"build a partnership template\"; produces a full influencer agreement framework (scope, compensation, usage rights, exclusivity, FTC disclosure), a clause-by-clause review with red flags, and a negotiation cheat sheet. Not for outreach negotiation before a deal exists — use outreach-manager.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "16.0.1",
+  "author": "aaron-he-zhu",
+  "install_path": ".claude/skills/contract-helper/SKILL.md",
+  "source": {
+    "repo": "aaron-he-zhu/aaron-marketing-skills",
+    "url": "https://github.com/aaron-he-zhu/aaron-marketing-skills/blob/main/influencer/activate/contract-helper/SKILL.md",
+    "path": "influencer/activate/contract-helper/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-10T17:07:51.741Z",
+    "stars": 2357,
+    "language": "Python",
+    "pushed_at": "2026-07-10T09:52:59Z",
+    "license": "Apache-2.0"
+  }
+}

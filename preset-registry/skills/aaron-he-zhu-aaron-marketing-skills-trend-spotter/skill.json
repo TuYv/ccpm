@@ -1,0 +1,25 @@
+{
+  "id": "aaron-he-zhu-aaron-marketing-skills-trend-spotter",
+  "name": "trend-spotter",
+  "description": "Use when the user asks to \"find trending topics\", \"what trends should my brand jump on\", or \"time a campaign around a cultural moment\"; produces a ranked trend report with brand-fit scores, format calls (rising/peak/declining), a cultural calendar, and go/skip recommendations. Not for finding the creators to run those trends — use influencer-discovery; not for building the brand posting calendar from a go verdict — use social-calendar-builder.",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "16.0.1",
+  "author": "aaron-he-zhu",
+  "install_path": ".claude/skills/trend-spotter/SKILL.md",
+  "source": {
+    "repo": "aaron-he-zhu/aaron-marketing-skills",
+    "url": "https://github.com/aaron-he-zhu/aaron-marketing-skills/blob/main/influencer/discover/trend-spotter/SKILL.md",
+    "path": "influencer/discover/trend-spotter/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-10T17:07:55.242Z",
+    "stars": 2357,
+    "language": "Python",
+    "pushed_at": "2026-07-10T09:52:59Z",
+    "license": "Apache-2.0"
+  }
+}

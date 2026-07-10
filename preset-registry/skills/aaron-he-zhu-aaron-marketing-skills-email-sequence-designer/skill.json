@@ -1,0 +1,25 @@
+{
+  "id": "aaron-he-zhu-aaron-marketing-skills-email-sequence-designer",
+  "name": "email-sequence-designer",
+  "description": "Use when the user asks to \"design a welcome flow\", \"set up an abandoned-cart sequence\", \"build a light re-engagement branch inside a lifecycle flow\", or \"plan a cold-outbound sequence\"; produces general lifecycle automation flows (welcome, cart, browse-abandon, post-purchase, in-flow re-engagement, B2B cold outbound) with trigger, step timing, branch/exit conditions, goal, frequency governance (send caps, quiet hours, fatigue guardrail), a sunset path, and a SEND N-dimension score. Not for the c",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "16.0.0",
+  "author": "aaron-he-zhu",
+  "install_path": ".claude/skills/email-sequence-designer/SKILL.md",
+  "source": {
+    "repo": "aaron-he-zhu/aaron-marketing-skills",
+    "url": "https://github.com/aaron-he-zhu/aaron-marketing-skills/blob/main/email/nurture/email-sequence-designer/SKILL.md",
+    "path": "email/nurture/email-sequence-designer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-10T17:07:47.701Z",
+    "stars": 2357,
+    "language": "Python",
+    "pushed_at": "2026-07-10T09:52:59Z",
+    "license": "Apache-2.0"
+  }
+}

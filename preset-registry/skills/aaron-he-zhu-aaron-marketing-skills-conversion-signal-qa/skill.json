@@ -1,0 +1,25 @@
+{
+  "id": "aaron-he-zhu-aaron-marketing-skills-conversion-signal-qa",
+  "name": "conversion-signal-qa",
+  "description": "Use when the user asks to \"QA my conversion tracking before launch\", \"check my UTMs / pixel / event firing\", \"set up a tracking pre-flight\", or \"set the dedup rule so Meta and Google stop double-counting\"; builds and fixes the measurement plumbing — conversion-event firing, UTM hygiene, cross-platform dedup rules, attribution-window alignment, and offline/iOS-ATT modeled-gap flags — as a pre-flight checklist plus a UTM/event-spec builder. Not for scoring R1/R2 — that is a scored veto in ad-accou",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "16.0.0",
+  "author": "aaron-he-zhu",
+  "install_path": ".claude/skills/conversion-signal-qa/SKILL.md",
+  "source": {
+    "repo": "aaron-he-zhu/aaron-marketing-skills",
+    "url": "https://github.com/aaron-he-zhu/aaron-marketing-skills/blob/main/ad/activate/conversion-signal-qa/SKILL.md",
+    "path": "ad/activate/conversion-signal-qa/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-10T17:07:39.201Z",
+    "stars": 2357,
+    "language": "Python",
+    "pushed_at": "2026-07-10T09:52:59Z",
+    "license": "Apache-2.0"
+  }
+}

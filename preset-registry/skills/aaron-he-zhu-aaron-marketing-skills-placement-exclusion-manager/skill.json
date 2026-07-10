@@ -1,0 +1,25 @@
+{
+  "id": "aaron-he-zhu-aaron-marketing-skills-placement-exclusion-manager",
+  "name": "placement-exclusion-manager",
+  "description": "Use when the user asks to \"build my brand-safety exclusion lists\", \"set placement / topic / content exclusions before launch\", \"add network and audience exclusions\", or \"prep the A1 brand-safety evidence for the auditor\"; produces a placement/network exclusion list, a content-suitability & sensitive-topic block list, an audience/negative-audience exclusion set, and a packaged A1 brand/placement-safety evidence file for the gate. Not for building the audiences you target — use audience-segment-bu",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "16.0.0",
+  "author": "aaron-he-zhu",
+  "install_path": ".claude/skills/placement-exclusion-manager/SKILL.md",
+  "source": {
+    "repo": "aaron-he-zhu/aaron-marketing-skills",
+    "url": "https://github.com/aaron-he-zhu/aaron-marketing-skills/blob/main/ad/activate/placement-exclusion-manager/SKILL.md",
+    "path": "ad/activate/placement-exclusion-manager/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-10T17:07:39.847Z",
+    "stars": 2357,
+    "language": "Python",
+    "pushed_at": "2026-07-10T09:52:59Z",
+    "license": "Apache-2.0"
+  }
+}
