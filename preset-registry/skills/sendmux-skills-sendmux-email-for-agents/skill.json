@@ -1,0 +1,25 @@
+{
+  "id": "sendmux-skills-sendmux-email-for-agents",
+  "name": "sendmux-email-for-agents",
+  "description": "Design and route Sendmux email workflows for AI agents, including skill installation, self-registration, secure agent credential-bundle storage, owner approval, and runtime email operations. Use when a user wants to give an AI agent its own inbox or email address, let an agent receive/search/triage/reply to mail, draft human-approved replies, send notifications, monitor mailbox state, or build email-based agent workflows even when the user does not mention Sendmux by name.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Sendmux",
+  "install_path": ".claude/skills/sendmux-email-for-agents/SKILL.md",
+  "source": {
+    "repo": "Sendmux/skills",
+    "url": "https://github.com/Sendmux/skills/blob/main/skills/sendmux-email-for-agents/SKILL.md",
+    "path": "skills/sendmux-email-for-agents/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-10T13:51:20.875Z",
+    "stars": 53,
+    "language": "JavaScript",
+    "pushed_at": "2026-07-09T03:59:22Z",
+    "license": null
+  }
+}

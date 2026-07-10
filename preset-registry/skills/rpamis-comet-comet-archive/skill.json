@@ -1,7 +1,7 @@
 {
   "id": "rpamis-comet-comet-archive",
   "name": "comet-archive",
-  "description": "Use when a Comet change has passed verification and needs archive confirmation, delta spec merge, or archive-phase recovery.",
+  "description": "Use when Comet change 验证已通过，需要用户确认归档、合并 delta spec，或恢复 archive 阶段。",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -13,11 +13,11 @@
   "install_path": ".claude/skills/comet-archive/SKILL.md",
   "source": {
     "repo": "rpamis/comet",
-    "url": "https://github.com/rpamis/comet/blob/master/assets/skills/comet-archive/SKILL.md",
-    "path": "assets/skills/comet-archive/SKILL.md",
+    "url": "https://github.com/rpamis/comet/blob/master/eval/local/skills/benchmarks/040-beta/comet-archive/SKILL.md",
+    "path": "eval/local/skills/benchmarks/040-beta/comet-archive/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-07-10T11:48:10.017Z",
-    "stars": 2150,
+    "discovered_at": "2026-07-10T13:47:32.853Z",
+    "stars": 2152,
     "language": "JavaScript",
     "pushed_at": "2026-07-09T15:37:30Z",
     "license": "MIT"

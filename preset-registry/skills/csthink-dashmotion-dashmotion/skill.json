@@ -1,0 +1,25 @@
+{
+  "id": "csthink-dashmotion-dashmotion",
+  "name": "dashmotion",
+  "description": "Create dark-themed, animated technical diagrams as self-contained HTML+SVG files — flowcharts whose connectors visibly flow, and architecture diagrams where requests travel as light dots through the system (Diagrid/Temporal landing-page style). Use this skill whenever the user asks for a flowchart, workflow, pipeline, process diagram, state machine, system architecture, infrastructure, cloud, microservices, or network topology diagram — and especially when they mention \"animated\", \"flowing\", \"dy",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "2.2.4",
+  "author": "csthink",
+  "install_path": ".claude/skills/dashmotion/SKILL.md",
+  "source": {
+    "repo": "csthink/dashmotion",
+    "url": "https://github.com/csthink/dashmotion/blob/main/skills/dashmotion/SKILL.md",
+    "path": "skills/dashmotion/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-10T13:51:46.330Z",
+    "stars": 134,
+    "language": "HTML",
+    "pushed_at": "2026-06-16T12:57:39Z",
+    "license": "MIT"
+  }
+}

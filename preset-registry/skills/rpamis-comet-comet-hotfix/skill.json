@@ -1,7 +1,7 @@
 {
   "id": "rpamis-comet-comet-hotfix",
   "name": "comet-hotfix",
-  "description": "Use when the user wants to fix an existing behavior bug without adding capability or needing full design; also use when resuming hotfix workflow.",
+  "description": "Use when 用户要修复已有行为 bug，且不新增 capability、不需要完整设计；也用于恢复 hotfix workflow。",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -13,11 +13,11 @@
   "install_path": ".claude/skills/comet-hotfix/SKILL.md",
   "source": {
     "repo": "rpamis/comet",
-    "url": "https://github.com/rpamis/comet/blob/master/assets/skills/comet-hotfix/SKILL.md",
-    "path": "assets/skills/comet-hotfix/SKILL.md",
+    "url": "https://github.com/rpamis/comet/blob/master/eval/local/skills/benchmarks/040-beta/comet-hotfix/SKILL.md",
+    "path": "eval/local/skills/benchmarks/040-beta/comet-hotfix/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-07-10T11:48:10.437Z",
-    "stars": 2150,
+    "discovered_at": "2026-07-10T13:47:33.322Z",
+    "stars": 2152,
     "language": "JavaScript",
     "pushed_at": "2026-07-09T15:37:30Z",
     "license": "MIT"

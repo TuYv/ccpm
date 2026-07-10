@@ -1,0 +1,25 @@
+{
+  "id": "sendmux-skills-sendmux-getting-started",
+  "name": "sendmux-getting-started",
+  "description": "Sendmux setup, skill installation, API key validation, agent access, secure agent credential-bundle storage, and first-call guidance. Use when the user wants to install Sendmux tooling or skills, check whether an smx_root_, smx_mbx_, or smx_agent_ credential works, choose MCP vs CLI vs SDK, connect an agent to Sendmux email, configure auth, self-register an agent, or make the first harmless Sendmux API call from an agent, terminal, or application.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Sendmux",
+  "install_path": ".claude/skills/sendmux-getting-started/SKILL.md",
+  "source": {
+    "repo": "Sendmux/skills",
+    "url": "https://github.com/Sendmux/skills/blob/main/skills/sendmux-getting-started/SKILL.md",
+    "path": "skills/sendmux-getting-started/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-10T13:51:21.004Z",
+    "stars": 53,
+    "language": "JavaScript",
+    "pushed_at": "2026-07-09T03:59:22Z",
+    "license": null
+  }
+}

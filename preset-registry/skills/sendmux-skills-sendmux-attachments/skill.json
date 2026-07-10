@@ -1,0 +1,25 @@
+{
+  "id": "sendmux-skills-sendmux-attachments",
+  "name": "sendmux-attachments",
+  "description": "Use Sendmux attachment workflows without wasting model context on base64. Use when uploading, downloading, reading, forwarding, or sending email attachments through Sendmux MCP, CLI, SDKs, or direct HTTP, especially when choosing file_path vs presigned upload URL vs inline base64, reading inbound attachments with mailbox_read_attachment, fetching short-lived download_url links, or attaching local files to outbound mail.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Sendmux",
+  "install_path": ".claude/skills/sendmux-attachments/SKILL.md",
+  "source": {
+    "repo": "Sendmux/skills",
+    "url": "https://github.com/Sendmux/skills/blob/main/skills/sendmux-attachments/SKILL.md",
+    "path": "skills/sendmux-attachments/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-10T13:51:20.574Z",
+    "stars": 53,
+    "language": "JavaScript",
+    "pushed_at": "2026-07-09T03:59:22Z",
+    "license": null
+  }
+}
