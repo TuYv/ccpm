@@ -1,7 +1,7 @@
 {
   "id": "rpamis-comet-comet-build",
   "name": "comet-build",
-  "description": "Use when full Comet change 已完成 design 阶段，需要创建/恢复实施计划、选择执行方式或继续 build 阶段任务。",
+  "description": "Use when a full Comet change has completed design and needs an implementation plan, execution-mode selection, or resumed build tasks.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -13,11 +13,11 @@
   "install_path": ".claude/skills/comet-build/SKILL.md",
   "source": {
     "repo": "rpamis/comet",
-    "url": "https://github.com/rpamis/comet/blob/master/eval/local/skills/benchmarks/040-beta/comet-build/SKILL.md",
-    "path": "eval/local/skills/benchmarks/040-beta/comet-build/SKILL.md",
+    "url": "https://github.com/rpamis/comet/blob/master/assets/skills/comet-build/SKILL.md",
+    "path": "assets/skills/comet-build/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-07-10T08:34:19.636Z",
-    "stars": 2148,
+    "discovered_at": "2026-07-10T11:48:10.151Z",
+    "stars": 2150,
     "language": "JavaScript",
     "pushed_at": "2026-07-09T15:37:30Z",
     "license": "MIT"

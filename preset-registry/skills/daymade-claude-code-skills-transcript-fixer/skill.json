@@ -1,7 +1,7 @@
 {
   "id": "daymade-claude-code-skills-transcript-fixer",
   "name": "transcript-fixer",
-  "description": "Corrects speech-to-text transcription errors using dictionary rules and AI-powered analysis. Builds personalized correction databases that learn from each fix, and auto-loads person-name ASR variants from your people roster. Triggers when working with ASR/STT output containing recognition errors, homophones, garbled technical terms, person-name errors, or Chinese/English mixed content. Also triggers on requests to clean up meeting notes, lecture transcripts, interview recordings, or any text pro",
+  "description": "Corrects speech-to-text transcription errors using dictionary rules and AI-powered analysis. Builds personalized correction databases that learn from each fix, auto-loads person-name ASR variants from your people roster, and reads per-domain context files that prime the AI pass for context-dependent homophones. Triggers when working with ASR/STT output containing recognition errors, homophones, garbled technical terms, person-name errors, or Chinese/English mixed content. Also triggers on reques",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-audio/transcript-fixer/SKILL.md",
     "path": "daymade-audio/transcript-fixer/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-10T08:35:53.089Z",
+    "discovered_at": "2026-07-10T11:49:09.609Z",
     "stars": 1259,
     "language": "Python",
-    "pushed_at": "2026-07-10T08:30:07Z",
+    "pushed_at": "2026-07-10T08:36:31Z",
     "license": "MIT"
   }
 }

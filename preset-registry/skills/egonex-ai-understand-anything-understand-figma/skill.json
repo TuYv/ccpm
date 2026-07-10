@@ -1,0 +1,25 @@
+{
+  "id": "egonex-ai-understand-anything-understand-figma",
+  "name": "understand-figma",
+  "description": "Analyze a Figma file via the Figma REST API and generate an interactive design knowledge graph (pages, screens, components, component sets, instances, design tokens) with a kind:\"design\" dashboard.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Egonex-AI",
+  "install_path": ".claude/skills/understand-figma/SKILL.md",
+  "source": {
+    "repo": "Egonex-AI/Understand-Anything",
+    "url": "https://github.com/Egonex-AI/Understand-Anything/blob/main/understand-anything-plugin/skills/understand-figma/SKILL.md",
+    "path": "understand-anything-plugin/skills/understand-figma/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-10T11:55:26.089Z",
+    "stars": 72467,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-10T11:48:12Z",
+    "license": "MIT"
+  }
+}

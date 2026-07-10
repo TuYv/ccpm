@@ -1,8 +1,8 @@
 {
   "id": "modu-ai-moai-adk-moai-foundation-quality",
   "name": "moai-foundation-quality",
-  "description": "> Code quality orchestrator enforcing TRUST 5 validation, proactive code analysis, linting standards, and automated best practices. Use for code review, quality gate checks, or TRUST 5 compliance.",
-  "category": "测试调试",
+  "description": "> TRUST 5 quality principles and how MoAI enforces them through agents, the 3-level harness, /moai gate, and sync-auditor scoring. Use for code review, quality gate checks, coverage targets, or TRUST 5 compliance.",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -13,13 +13,13 @@
   "install_path": ".claude/skills/moai-foundation-quality/SKILL.md",
   "source": {
     "repo": "modu-ai/moai-adk",
-    "url": "https://github.com/modu-ai/moai-adk/blob/main/.claude/skills/moai-foundation-quality/SKILL.md",
-    "path": ".claude/skills/moai-foundation-quality/SKILL.md",
+    "url": "https://github.com/modu-ai/moai-adk/blob/main/internal/template/templates/.claude/skills/moai-foundation-quality/SKILL.md",
+    "path": "internal/template/templates/.claude/skills/moai-foundation-quality/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-10T08:37:47.247Z",
+    "discovered_at": "2026-07-10T11:50:21.932Z",
     "stars": 1120,
     "language": "Go",
-    "pushed_at": "2026-07-10T07:58:03Z",
+    "pushed_at": "2026-07-10T10:56:01Z",
     "license": "Apache-2.0"
   }
 }
