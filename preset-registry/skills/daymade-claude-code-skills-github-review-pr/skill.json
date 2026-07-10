@@ -1,0 +1,25 @@
+{
+  "id": "daymade-claude-code-skills-github-review-pr",
+  "name": "github-review-pr",
+  "description": ">- Reviews or re-reviews one contributor pull request—including an explicitly named closed PR being reconsidered—or a bounded newest-to-oldest sweep of all open contributor PRs, for a GitHub repository maintainer against the current base branch. Handles base drift, history discontinuities, polluted branches, ownership, curation, supersession, and review-conditioned repair or landing using immutable Git snapshots, three-way merge results, isolated contribution projection, checks, tests, and findi",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/github-review-pr/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/github-review-pr/SKILL.md",
+    "path": "github-review-pr/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-10T19:07:05.066Z",
+    "stars": 1259,
+    "language": "Python",
+    "pushed_at": "2026-07-10T18:58:33Z",
+    "license": "MIT"
+  }
+}

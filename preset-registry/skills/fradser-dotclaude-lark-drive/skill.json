@@ -1,7 +1,7 @@
 {
   "id": "fradser-dotclaude-lark-drive",
   "name": "lark-drive",
-  "description": "飞书云空间（云盘/云存储）：管理 Drive 文件和文件夹，包含上传/下载、创建文件夹、复制/移动/删除、查看元数据、评论/权限/订阅、标题、版本和本地文件导入。用户需要整理云盘目录、处理云空间资源 URL/token，或导入 Word/Markdown/Excel/CSV/PPTX/.base 为 docx/sheet/bitable/slides 时使用；doubao.com 云空间 URL/token 也按资源路径和 token 路由，不回退 WebFetch。不负责：文档内容编辑（走 lark-doc）、表格/Base 表内数据操作（走 lark-sheets/lark-base）、知识空间节点/成员管理（走 lark-wiki）、原生 Markdown 文件读写/patch/diff（走 lark-markdown）。",
+  "description": "飞书云空间（云盘/云存储）：管理 Drive 文件和文件夹，包含上传/下载、创建文件夹、复制/移动/删除、查看元数据、评论/权限/订阅、标题、版本和本地文件导入。用户需要整理云盘目录、处理云空间资源 URL/token、判断链接类型/真实 token/标题，或导入 Word/Markdown/Excel/CSV/PPTX/.base 为 docx/sheet/bitable/slides 时使用；doubao.com 云空间 URL/token 也按资源路径和 token 路由，不回退 WebFetch。不负责：文档内容编辑（走 lark-doc）、表格/Base 表内数据操作（走 lark-sheets/lark-base）、知识空间节点/成员管理（走 lark-wiki）、原生 Markdown 文件读写/patch/diff（走 lark-markdown）。",
   "category": "文档写作",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/FradSer/dotclaude/blob/main/office/skills/lark/lark-drive/SKILL.md",
     "path": "office/skills/lark/lark-drive/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-10T16:45:37.087Z",
+    "discovered_at": "2026-07-10T18:59:55.659Z",
     "stars": 573,
     "language": "JavaScript",
-    "pushed_at": "2026-07-10T15:54:22Z",
+    "pushed_at": "2026-07-10T16:49:18Z",
     "license": "MIT"
   }
 }

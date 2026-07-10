@@ -1,7 +1,7 @@
 {
   "id": "fradser-dotclaude-lark-vc-agent",
   "name": "lark-vc-agent",
-  "description": "飞书视频会议会中能力：用于让应用机器人真实加入或离开正在进行的会议，并读取当前身份可见的会中事件，如参会人加入/离开、发言、聊天、屏幕共享。适用于用户询问正在开的会议发生了什么、谁在发言、是否共享内容，或需要发现当前可读的进行中会议 ID。不负责已结束会议搜索、参会人快照、纪要、逐字稿或录制查询，这些使用 lark-vc 技能。",
+  "description": "飞书视频会议会中能力：用于让应用机器人真实加入或离开正在进行的会议，并读取当前身份可见的会中事件、发送会中文本消息或会中表情。适用于用户询问正在开的会议发生了什么、谁在发言、是否共享内容，或需要发现当前可读的进行中会议 ID。不负责已结束会议搜索、参会人快照、纪要、逐字稿或录制查询，这些使用 lark-vc 技能。",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/FradSer/dotclaude/blob/main/office/skills/lark/lark-vc-agent/SKILL.md",
     "path": "office/skills/lark/lark-vc-agent/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-10T16:45:38.890Z",
+    "discovered_at": "2026-07-10T18:59:58.025Z",
     "stars": 573,
     "language": "JavaScript",
-    "pushed_at": "2026-07-10T15:54:22Z",
+    "pushed_at": "2026-07-10T16:49:18Z",
     "license": "MIT"
   }
 }

@@ -1,0 +1,25 @@
+{
+  "id": "aaron-he-zhu-aaron-marketing-skills-ad-creative-builder",
+  "name": "ad-creative-builder",
+  "description": "Use when the user asks to \"write ad copy\", \"generate RSA headlines\", or \"build ad creative at volume\"; produces ad units — RSA headlines/descriptions, hooks, and an angle matrix — message-matched to the destination landing page. Not for scoring an ad account — use ad-account-auditor; not for the post-click page — use landing-optimizer; not for organic articles — use content-writer. 广告创意/广告文案/RSA标题",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "16.0.0",
+  "author": "aaron-he-zhu",
+  "install_path": ".claude/skills/ad-creative-builder/SKILL.md",
+  "source": {
+    "repo": "aaron-he-zhu/aaron-marketing-skills",
+    "url": "https://github.com/aaron-he-zhu/aaron-marketing-skills/blob/main/ad/orchestrate/ad-creative-builder/SKILL.md",
+    "path": "ad/orchestrate/ad-creative-builder/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-10T19:20:26.021Z",
+    "stars": 2358,
+    "language": "Python",
+    "pushed_at": "2026-07-10T09:52:59Z",
+    "license": "Apache-2.0"
+  }
+}

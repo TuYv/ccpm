@@ -1,7 +1,7 @@
 {
   "id": "daymade-claude-code-skills-read-claude-web-conversation",
   "name": "read-claude-web-conversation",
-  "description": ">- Read or export the COMPLETE transcript of a Claude.ai web conversation (a claude.ai/chat/... link) by driving the user's already-logged-in Chrome and calling Claude.ai's own internal conversation API from inside the page. Use this whenever the user pastes a claude.ai conversation link and asks to read, summarize, export, or extract it — \"read this Claude conversation\", \"what did that other chat say\", \"导出这个网页版对话\", \"读一下这个 claude.ai 链接\". Plain curl / WebFetch FAIL (login-gated) and get_page_text",
+  "description": ">- Read or export the COMPLETE transcript of a Claude.ai web conversation (a claude.ai/chat/... link) by calling Claude.ai's own internal API from inside the user's logged-in Chrome — and download the conversation's FILES too (uploads, assistant-produced spreadsheets/scripts/charts). Use whenever the user pastes a claude.ai conversation link and asks to read, summarize, export, or extract it — \"read this Claude conversation\", \"导出这个网页版对话\", \"把对话里的文件也下载下来\". curl/WebFetch FAIL (login-gated); get_pag",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-claude-code/read-claude-web-conversation/SKILL.md",
     "path": "daymade-claude-code/read-claude-web-conversation/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-10T16:49:31.936Z",
+    "discovered_at": "2026-07-10T19:06:58.386Z",
     "stars": 1259,
     "language": "Python",
-    "pushed_at": "2026-07-10T16:39:56Z",
+    "pushed_at": "2026-07-10T18:58:33Z",
     "license": "MIT"
   }
 }

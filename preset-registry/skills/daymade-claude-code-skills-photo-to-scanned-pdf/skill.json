@@ -1,0 +1,25 @@
+{
+  "id": "daymade-claude-code-skills-photo-to-scanned-pdf",
+  "name": "photo-to-scanned-pdf",
+  "description": ">- Turn phone photos of paper documents (contracts, stamped certificates, receipts, forms, handwritten notes) into a clean scanner-quality PDF: perspective rectification + noteshrink background-whitening + A4 PDF assembly, with colored-paper white-balance handling and a mandatory whole-document visual check. Use this skill whenever the user has photos of paper documents and wants them as a PDF / 扫描件 / scan — trigger on \"把照片做成扫描件\", \"photos to scanned PDF\", \"make this look scanned\", \"手机拍的文档转 PDF\",",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/photo-to-scanned-pdf/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-docs/photo-to-scanned-pdf/SKILL.md",
+    "path": "daymade-docs/photo-to-scanned-pdf/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-10T19:06:59.741Z",
+    "stars": 1259,
+    "language": "Python",
+    "pushed_at": "2026-07-10T18:58:33Z",
+    "license": "MIT"
+  }
+}
