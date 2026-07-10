@@ -1,0 +1,25 @@
+{
+  "id": "modu-ai-moai-adk-harness-moaiadk-dev-reference",
+  "name": "harness-moaiadk-dev-reference",
+  "description": "moai-adk-go local dev reference — version management/release process (sec 5), shell-script hook development (sec 7), build & dev commands (sec 10). Load only when performing these specific tasks.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "modu-ai",
+  "install_path": ".claude/skills/harness-moaiadk-dev-reference/SKILL.md",
+  "source": {
+    "repo": "modu-ai/moai-adk",
+    "url": "https://github.com/modu-ai/moai-adk/blob/main/.claude/skills/harness-moaiadk-dev-reference/SKILL.md",
+    "path": ".claude/skills/harness-moaiadk-dev-reference/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-10T22:46:28.894Z",
+    "stars": 1120,
+    "language": "Go",
+    "pushed_at": "2026-07-10T22:26:06Z",
+    "license": "Apache-2.0"
+  }
+}
