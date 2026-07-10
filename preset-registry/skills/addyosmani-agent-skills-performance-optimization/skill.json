@@ -1,7 +1,7 @@
 {
   "id": "addyosmani-agent-skills-performance-optimization",
   "name": "performance-optimization",
-  "description": "Optimizes application performance. Use when performance requirements exist, when you suspect performance regressions, or when Core Web Vitals or load times need improvement. Use when profiling reveals bottlenecks that need fixing.",
+  "description": "Optimizes application performance across frontend, backend, queries, and databases. Use when performance requirements exist, when you suspect performance regressions, when Core Web Vitals or load times need improvement, when N+1 query patterns need fixing, or when profiling reveals bottlenecks.",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/addyosmani/agent-skills/blob/main/skills/performance-optimization/SKILL.md",
     "path": "skills/performance-optimization/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-10T00:36:39.897Z",
-    "stars": 75860,
+    "discovered_at": "2026-07-10T04:39:47.371Z",
+    "stars": 76080,
     "language": "JavaScript",
-    "pushed_at": "2026-07-09T19:49:37Z",
+    "pushed_at": "2026-07-10T02:59:20Z",
     "license": "MIT"
-  },
-  "summary_zh": "这是一款应用性能优化工具，专门用来解决加载慢、网页核心指标差或性能倒退等问题，适合在排查出性能瓶颈后做针对性提速。"
+  }
 }
