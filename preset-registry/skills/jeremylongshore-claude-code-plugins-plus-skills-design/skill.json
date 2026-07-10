@@ -1,0 +1,25 @@
+{
+  "id": "jeremylongshore-claude-code-plugins-plus-skills-design",
+  "name": "design",
+  "description": "| Use when the user wants the visual/experiential design of a product done systematically — a design system, a screen, a landing page, or a visual identity — grounded in researched real-world prior art and free of AI slop. Establishes/extends the design system, invokes the matching local taste skill, dispatches the designer specialist, and reviews for taste + accessibility. Standalone — ends with a handoff gate into the chain. Trigger with /hyperflow:design, \"design the UI\", \"make a design syste",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "jeremylongshore",
+  "install_path": ".claude/skills/design/SKILL.md",
+  "source": {
+    "repo": "jeremylongshore/claude-code-plugins-plus-skills",
+    "url": "https://github.com/jeremylongshore/claude-code-plugins-plus-skills/blob/main/plugins/ai-agency/hyperflow/skills/design/SKILL.md",
+    "path": "plugins/ai-agency/hyperflow/skills/design/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-10T08:30:31.728Z",
+    "stars": 2493,
+    "language": "Python",
+    "pushed_at": "2026-07-10T06:59:10Z",
+    "license": "MIT"
+  }
+}

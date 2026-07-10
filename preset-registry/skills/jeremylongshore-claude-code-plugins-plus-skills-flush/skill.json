@@ -8,7 +8,7 @@
     "codex",
     "gemini"
   ],
-  "version": "4.12.6",
+  "version": "4.12.7",
   "author": "jeremylongshore",
   "install_path": ".claude/skills/flush/SKILL.md",
   "source": {
@@ -16,10 +16,10 @@
     "url": "https://github.com/jeremylongshore/claude-code-plugins-plus-skills/blob/main/plugins/ai-agency/hyperflow/skills/flush/SKILL.md",
     "path": "plugins/ai-agency/hyperflow/skills/flush/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-10T04:44:46.845Z",
-    "stars": 2491,
+    "discovered_at": "2026-07-10T08:30:32.219Z",
+    "stars": 2493,
     "language": "Python",
-    "pushed_at": "2026-07-10T01:31:45Z",
+    "pushed_at": "2026-07-10T06:59:10Z",
     "license": "MIT"
   },
   "summary_zh": "用于手动提交此前中断或残留的延迟提交队列，把暂存分支快进合并回当前分支并清理，适合在自动化流程崩溃、找不到已暂存提交时做兜底恢复。"

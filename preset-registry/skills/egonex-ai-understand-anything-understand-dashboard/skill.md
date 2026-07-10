@@ -70,16 +70,16 @@ Start the Understand Anything dashboard to visualize the knowledge graph for the
 
 4. Install dependencies and build if needed:
    ```bash
-   cd <dashboard-dir> && pnpm install --frozen-lockfile 2>/dev/null || pnpm install
+   cd "<dashboard-dir>" && (pnpm install --frozen-lockfile 2>/dev/null || pnpm install)
    ```
    Then ensure the core package is built (the dashboard depends on it):
    ```bash
-   cd <plugin-root> && pnpm --filter @understand-anything/core build
+   cd "<plugin-root>" && pnpm --filter @understand-anything/core build
    ```
 
 5. Start the Vite dev server pointing at the project's knowledge graph:
    ```bash
-   cd <dashboard-dir> && GRAPH_DIR=<project-dir> npx vite --host 127.0.0.1
+   cd "<dashboard-dir>" && GRAPH_DIR="<project-dir>" npx vite --host 127.0.0.1
    ```
    Run this in the background so the user can continue working.
 

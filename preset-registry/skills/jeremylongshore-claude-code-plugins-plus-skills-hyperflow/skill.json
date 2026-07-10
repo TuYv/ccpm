@@ -1,14 +1,14 @@
 {
   "id": "jeremylongshore-claude-code-plugins-plus-skills-hyperflow",
   "name": "hyperflow",
-  "description": "Use when applying Hyperflow's orchestration doctrine in Codex, Antigravity, or another single-agent surface. Auto-invoke for non-trivial engineering work: build, implement, add, refactor, debug, fix, review, audit, plan, scope, design, brainstorm, ship, or deploy.",
+  "description": "| Use when applying Hyperflow's orchestration doctrine in Codex, Antigravity, Grok, or another single-agent surface. Auto-invoke for non-trivial engineering work: build, implement, add, refactor, debug, fix, review, audit, plan, scope, design, brainstorm, ship, or deploy. Trigger with /hyperflow:hyperflow, \"use hyperflow\", \"apply the doctrine\", or automatically on any task-shaped message.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
     "gemini"
   ],
-  "version": "",
+  "version": "1.0.0",
   "author": "jeremylongshore",
   "install_path": ".claude/skills/hyperflow/SKILL.md",
   "source": {
@@ -16,11 +16,10 @@
     "url": "https://github.com/jeremylongshore/claude-code-plugins-plus-skills/blob/main/plugins/ai-agency/hyperflow/skills/hyperflow/SKILL.md",
     "path": "plugins/ai-agency/hyperflow/skills/hyperflow/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-10T04:44:48.274Z",
-    "stars": 2491,
+    "discovered_at": "2026-07-10T08:30:32.618Z",
+    "stars": 2493,
     "language": "Python",
-    "pushed_at": "2026-07-10T01:31:45Z",
+    "pushed_at": "2026-07-10T06:59:10Z",
     "license": "MIT"
-  },
-  "summary_zh": "在单智能体环境（如 Codex、Antigravity）里套用一套编排方法论，适合处理构建、重构、排查、评审、规划、上线等稍有难度的工程任务，让 AI 干活更有章法。"
+  }
 }

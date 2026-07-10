@@ -1,14 +1,14 @@
 {
   "id": "jeremylongshore-claude-code-plugins-plus-skills-dispatch",
   "name": "dispatch",
-  "description": "| Use when a task file exists in .hyperflow/tasks/ and workers need dispatching. Fans out parallel Sonnet workers under per-batch Opus reviewers, runs a final integration review, and commits per sub-task. Endpoint of the auto-chain — no auto-deploy. Trigger with /hyperflow:dispatch, \"run the plan\", \"execute the task\", \"build it\", \"run the batches\".",
+  "description": "| Use when a task file exists in .hyperflow/tasks/ and workers need dispatching. Fans out parallel workers under per-batch Reviewers, runs a final integration review, and commits per sub-task. Endpoint of the auto-chain — no auto-deploy. Trigger with /hyperflow:dispatch, \"run the plan\", \"execute the task\", \"build it\", \"run the batches\".",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
     "gemini"
   ],
-  "version": "3.1.2",
+  "version": "3.2.0",
   "author": "jeremylongshore",
   "install_path": ".claude/skills/dispatch/SKILL.md",
   "source": {
@@ -16,11 +16,10 @@
     "url": "https://github.com/jeremylongshore/claude-code-plugins-plus-skills/blob/main/plugins/ai-agency/hyperflow/skills/dispatch/SKILL.md",
     "path": "plugins/ai-agency/hyperflow/skills/dispatch/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-10T04:44:46.207Z",
-    "stars": 2491,
+    "discovered_at": "2026-07-10T08:30:31.944Z",
+    "stars": 2493,
     "language": "Python",
-    "pushed_at": "2026-07-10T01:31:45Z",
+    "pushed_at": "2026-07-10T06:59:10Z",
     "license": "MIT"
-  },
-  "summary_zh": "适合在已有任务规划文件后，自动派发多个并行子任务执行、分批由审阅者把关，最后整合审查并按子任务提交代码，省去手动协调多轮开发的麻烦。"
+  }
 }

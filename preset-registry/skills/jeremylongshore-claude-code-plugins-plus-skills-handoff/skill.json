@@ -1,0 +1,25 @@
+{
+  "id": "jeremylongshore-claude-code-plugins-plus-skills-handoff",
+  "name": "handoff",
+  "description": "| Use when managing a two-session handoff — inspecting, picking up, or reviewing a committed handoff package produced by a session=two scope run. The operator interface over the cross-environment handoff lifecycle (plan in one session, build in another, review back in the first). Trigger with /hyperflow:handoff, \"list handoffs\", \"pick up the handoff\", \"review the handoff build\".",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.1",
+  "author": "jeremylongshore",
+  "install_path": ".claude/skills/handoff/SKILL.md",
+  "source": {
+    "repo": "jeremylongshore/claude-code-plugins-plus-skills",
+    "url": "https://github.com/jeremylongshore/claude-code-plugins-plus-skills/blob/main/plugins/ai-agency/hyperflow/skills/handoff/SKILL.md",
+    "path": "plugins/ai-agency/hyperflow/skills/handoff/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-10T08:30:32.416Z",
+    "stars": 2493,
+    "language": "Python",
+    "pushed_at": "2026-07-10T06:59:10Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "jeremylongshore-claude-code-plugins-plus-skills-hyperflow-plan",
+  "name": "hyperflow-plan",
+  "description": "Hyperflow planning phase. Use when a request needs shaping before code — a rough prompt to sharpen, an ambiguous idea to design, or a clear-enough task to decompose. Verbs like plan, design, brainstorm, explore, \"should we\", \"what's the best way to\", scope, decompose, \"plan out\", \"break down\", \"enhance this prompt\". Thinking, not building. Writes an optional spec to .hyperflow/specs/<slug>.md and a task file to .hyperflow/tasks/<slug>.md, then hands off to hyperflow-dispatch.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "jeremylongshore",
+  "install_path": ".claude/skills/hyperflow-plan/SKILL.md",
+  "source": {
+    "repo": "jeremylongshore/claude-code-plugins-plus-skills",
+    "url": "https://github.com/jeremylongshore/claude-code-plugins-plus-skills/blob/main/plugins/ai-agency/hyperflow/templates/antigravity/skills/hyperflow-plan/SKILL.md",
+    "path": "plugins/ai-agency/hyperflow/templates/antigravity/skills/hyperflow-plan/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-10T08:30:48.939Z",
+    "stars": 2493,
+    "language": "Python",
+    "pushed_at": "2026-07-10T06:59:10Z",
+    "license": "MIT"
+  }
+}

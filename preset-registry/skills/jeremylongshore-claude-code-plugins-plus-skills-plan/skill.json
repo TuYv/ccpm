@@ -1,0 +1,25 @@
+{
+  "id": "jeremylongshore-claude-code-plugins-plus-skills-plan",
+  "name": "plan",
+  "description": "| Use when a request needs shaping before any code is written — a rough or vague prompt to sharpen, an ambiguous idea to design, or a clear-enough task to decompose. One chain-starter that amplifies the prompt, designs the approach, and decomposes it into a batched task file, skipping whichever phases the request doesn't need, then STOPS at a build-location gate (build here, hand off to another session, or just keep the plan). Plan never implements. Trigger with /hyperflow:plan, \"design this\", \"",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "2.0.1",
+  "author": "jeremylongshore",
+  "install_path": ".claude/skills/plan/SKILL.md",
+  "source": {
+    "repo": "jeremylongshore/claude-code-plugins-plus-skills",
+    "url": "https://github.com/jeremylongshore/claude-code-plugins-plus-skills/blob/main/plugins/ai-agency/hyperflow/skills/plan/SKILL.md",
+    "path": "plugins/ai-agency/hyperflow/skills/plan/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-10T08:30:32.980Z",
+    "stars": 2493,
+    "language": "Python",
+    "pushed_at": "2026-07-10T06:59:10Z",
+    "license": "MIT"
+  }
+}
