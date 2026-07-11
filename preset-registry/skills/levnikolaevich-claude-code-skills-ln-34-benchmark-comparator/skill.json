@@ -1,0 +1,25 @@
+{
+  "id": "levnikolaevich-claude-code-skills-ln-34-benchmark-comparator",
+  "name": "ln-34-benchmark-comparator",
+  "description": "Compares tools or implementations through reproducible A/B workloads, correctness oracles, and controlled measurements. Use to choose alternatives; not to optimize a known bottleneck.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "levnikolaevich",
+  "install_path": ".claude/skills/ln-34-benchmark-comparator/SKILL.md",
+  "source": {
+    "repo": "levnikolaevich/claude-code-skills",
+    "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/optimization-suite/skills/ln-34-benchmark-comparator/SKILL.md",
+    "path": "plugins/optimization-suite/skills/ln-34-benchmark-comparator/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-07-11T21:43:12.627Z",
+    "stars": 515,
+    "language": "HTML",
+    "pushed_at": "2026-07-11T20:45:37Z",
+    "license": "MIT"
+  }
+}

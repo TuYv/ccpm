@@ -1,0 +1,25 @@
+{
+  "id": "levnikolaevich-claude-code-skills-ln-25-persistence-auditor",
+  "name": "ln-25-persistence-auditor",
+  "description": "Audits queries, transactions, data-path performance, and persistence resource lifecycle. Use when data correctness or scalability is at risk; not for general performance tuning.",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "levnikolaevich",
+  "install_path": ".claude/skills/ln-25-persistence-auditor/SKILL.md",
+  "source": {
+    "repo": "levnikolaevich/claude-code-skills",
+    "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/codebase-audit-suite/skills/ln-25-persistence-auditor/SKILL.md",
+    "path": "plugins/codebase-audit-suite/skills/ln-25-persistence-auditor/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-07-11T21:43:09.339Z",
+    "stars": 515,
+    "language": "HTML",
+    "pushed_at": "2026-07-11T20:45:37Z",
+    "license": "MIT"
+  }
+}

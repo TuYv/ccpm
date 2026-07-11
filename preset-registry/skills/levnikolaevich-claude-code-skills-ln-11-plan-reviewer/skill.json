@@ -1,0 +1,25 @@
+{
+  "id": "levnikolaevich-claude-code-skills-ln-11-plan-reviewer",
+  "name": "ln-11-plan-reviewer",
+  "description": "Reviews implementation plans against repository evidence and current authoritative guidance. Use before execution to expose gaps and risks; not for completed delivery review.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "levnikolaevich",
+  "install_path": ".claude/skills/ln-11-plan-reviewer/SKILL.md",
+  "source": {
+    "repo": "levnikolaevich/claude-code-skills",
+    "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/review-suite/skills/ln-11-plan-reviewer/SKILL.md",
+    "path": "plugins/review-suite/skills/ln-11-plan-reviewer/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-07-11T21:43:13.076Z",
+    "stars": 515,
+    "language": "HTML",
+    "pushed_at": "2026-07-11T20:45:37Z",
+    "license": "MIT"
+  }
+}

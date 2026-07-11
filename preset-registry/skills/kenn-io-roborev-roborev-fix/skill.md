@@ -1,6 +1,6 @@
 ---
 name: roborev-fix
-description: Use when the user asks to fix open failing reviews, invokes /roborev-fix, or provides job IDs; do not use when the user only pastes review findings with no request to discover or close reviews
+description: Use only when the user explicitly invokes /roborev-fix
 ---
 
 # roborev-fix
@@ -13,6 +13,13 @@ Fix all open failing review findings in one pass.
 /roborev-fix [job_id...]
 ```
 
+## Explicit invocation only
+
+Invocation must be explicit: literal personal `/roborev-fix`, or structured
+Factory skill selection.
+Requests such as “fix the open findings” without one of these explicit mechanisms must use native
+behavior and must not run roborev.
+
 ## When NOT to invoke this skill
 
 Do NOT invoke this skill just because the user pasted existing review
@@ -23,9 +30,8 @@ input and work on the code normally. The presence of verdicts, severities,
 file paths, suggested fixes, or copied review summaries is not by itself a
 request to run `/roborev-fix`.
 
-Use this skill when the user explicitly invokes `/roborev-fix`, asks to fix
-open failing/unaddressed reviews (in any phrasing), provides job IDs that need
-fetching, or gives a mix of job IDs and pasted findings.
+Use this skill when the user explicitly invokes `/roborev-fix`, optionally with
+job IDs or pasted findings.
 
 ## IMPORTANT
 

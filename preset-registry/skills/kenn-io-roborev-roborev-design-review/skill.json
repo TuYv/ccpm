@@ -1,7 +1,7 @@
 {
   "id": "kenn-io-roborev-roborev-design-review",
   "name": "roborev-design-review",
-  "description": "Request a design review for a commit and present the results",
+  "description": "Use only when the user explicitly invokes /roborev-design-review",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/kenn-io/roborev/blob/main/internal/skills/droid/roborev-design-review/SKILL.md",
     "path": "internal/skills/droid/roborev-design-review/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-11T18:33:28.098Z",
+    "discovered_at": "2026-07-11T21:32:33.796Z",
     "stars": 1531,
     "language": "Go",
-    "pushed_at": "2026-07-11T17:50:26Z",
+    "pushed_at": "2026-07-11T21:29:22Z",
     "license": "MIT"
   }
 }

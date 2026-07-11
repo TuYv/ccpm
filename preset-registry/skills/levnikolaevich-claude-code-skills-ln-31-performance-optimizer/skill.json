@@ -1,0 +1,25 @@
+{
+  "id": "levnikolaevich-claude-code-skills-ln-31-performance-optimizer",
+  "name": "ln-31-performance-optimizer",
+  "description": "Optimizes a measured latency, throughput, memory, CPU, or I/O problem through profiling and keep-or-discard experiments. Use for a known bottleneck; not unbiased A/B comparison.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "levnikolaevich",
+  "install_path": ".claude/skills/ln-31-performance-optimizer/SKILL.md",
+  "source": {
+    "repo": "levnikolaevich/claude-code-skills",
+    "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/optimization-suite/skills/ln-31-performance-optimizer/SKILL.md",
+    "path": "plugins/optimization-suite/skills/ln-31-performance-optimizer/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-07-11T21:43:10.097Z",
+    "stars": 515,
+    "language": "HTML",
+    "pushed_at": "2026-07-11T20:45:37Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "levnikolaevich-claude-code-skills-ln-23-test-suite-auditor",
+  "name": "ln-23-test-suite-auditor",
+  "description": "Audits whether an existing test suite proves important product behavior with strong, isolated tests. Use when test confidence is uncertain; not to design or implement new tests.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "levnikolaevich",
+  "install_path": ".claude/skills/ln-23-test-suite-auditor/SKILL.md",
+  "source": {
+    "repo": "levnikolaevich/claude-code-skills",
+    "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/codebase-audit-suite/skills/ln-23-test-suite-auditor/SKILL.md",
+    "path": "plugins/codebase-audit-suite/skills/ln-23-test-suite-auditor/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-07-11T21:43:08.927Z",
+    "stars": 515,
+    "language": "HTML",
+    "pushed_at": "2026-07-11T20:45:37Z",
+    "license": "MIT"
+  }
+}

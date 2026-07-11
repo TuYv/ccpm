@@ -1,6 +1,6 @@
 ---
 name: roborev-review
-description: Request a code review for a commit and present the results
+description: Use only when the user explicitly invokes /roborev-review
 ---
 
 # roborev-review
@@ -12,6 +12,13 @@ Request a code review for a commit and present the results.
 ```
 /roborev-review [commit] [--type security|design] [--panel <name>|none]
 ```
+
+## Explicit invocation only
+
+Invocation must be explicit: literal personal `/roborev-review`, or structured
+Factory skill selection.
+Requests such as “review this commit” without one of these explicit mechanisms must use native
+behavior and must not run roborev.
 
 ## When NOT to invoke this skill
 
