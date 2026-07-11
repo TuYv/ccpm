@@ -1,14 +1,14 @@
 {
   "id": "aaron-he-zhu-aaron-marketing-skills-pricing-packaging-planner",
   "name": "pricing-packaging-planner",
-  "description": "Use when the user asks to \"plan launch pricing\", \"design pricing tiers / packaging\", or \"set up a launch discount / early-bird offer\"; produces a launch pricing and packaging plan — tier structure and naming, a value-to-price map aligned to the message house, a launch-offer ladder with a true deadline reason, beta / early-adopter pricing with a post-launch graduation path, and guarantee / refund terms — with every price claim and offer term submitted to memory/claims/candidates.md. Not for the c",
+  "description": "Use when the user asks to \"plan launch pricing\", \"design pricing tiers / packaging\", or \"set up a launch discount / early-bird offer\"; produces a launch pricing and packaging plan — tier structure and naming, a value-to-price map aligned to the message house, a launch-offer ladder with a true deadline reason, beta / early-adopter pricing with a post-launch graduation path, and guarantee / refund terms — with every price claim and offer term submitted to memory/events/claims.ndjson. Not for the c",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
     "gemini"
   ],
-  "version": "16.0.0",
+  "version": "17.0.0",
   "author": "aaron-he-zhu",
   "install_path": ".claude/skills/pricing-packaging-planner/SKILL.md",
   "source": {
@@ -16,10 +16,10 @@
     "url": "https://github.com/aaron-he-zhu/aaron-marketing-skills/blob/main/launch/assemble/pricing-packaging-planner/SKILL.md",
     "path": "launch/assemble/pricing-packaging-planner/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-11T14:29:50.532Z",
+    "discovered_at": "2026-07-11T15:47:59.143Z",
     "stars": 2364,
     "language": "Python",
-    "pushed_at": "2026-07-11T08:14:55Z",
+    "pushed_at": "2026-07-11T14:53:58Z",
     "license": "Apache-2.0"
   }
 }

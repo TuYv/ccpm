@@ -1,14 +1,14 @@
 {
   "id": "aaron-he-zhu-aaron-marketing-skills-fit-scorer",
   "name": "fit-scorer",
-  "description": "Use when the user asks to \"score this influencer\", \"rank these creators for our campaign\", or \"tell me which influencer is the best fit\"; produces weighted fit scores across audience match, content quality, brand alignment, engagement authenticity, and partnership potential, plus a ranked comparison and a go/pass verdict. Not for finding new influencers — use influencer-discovery; not for sending outreach — use outreach-manager.",
+  "description": "Use when the user asks to \"score this influencer\", \"rank these creators for our campaign\", or \"tell me which influencer is the best fit\"; produces typed C3 ACE creator results plus a separately labeled campaign-fit ranking without mixing brand fit into ACE. Not for finding new influencers — use influencer-discovery; not for sending outreach — use outreach-manager.",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
     "codex",
     "gemini"
   ],
-  "version": "16.0.0",
+  "version": "17.0.0",
   "author": "aaron-he-zhu",
   "install_path": ".claude/skills/fit-scorer/SKILL.md",
   "source": {
@@ -16,10 +16,10 @@
     "url": "https://github.com/aaron-he-zhu/aaron-marketing-skills/blob/main/influencer/discover/fit-scorer/SKILL.md",
     "path": "influencer/discover/fit-scorer/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-11T14:29:47.582Z",
+    "discovered_at": "2026-07-11T15:47:57.703Z",
     "stars": 2364,
     "language": "Python",
-    "pushed_at": "2026-07-11T08:14:55Z",
+    "pushed_at": "2026-07-11T14:53:58Z",
     "license": "Apache-2.0"
   }
 }

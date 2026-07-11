@@ -1,14 +1,14 @@
 {
   "id": "aaron-he-zhu-aaron-marketing-skills-ad-account-auditor",
   "name": "ad-account-auditor",
-  "description": "Use when auditing a paid ad account for ROAS quality, wasted spend, or measurement integrity before scaling; runs RQS scoring with veto checks and a SHIP/FIX/BLOCK gate on your own exported account data. Not for building campaign structure — use campaign-architect; not for creative units — use ad-creative-builder. 付费广告账户审计/ROAS评分",
-  "category": "开发编程",
+  "description": "Use when auditing a paid ad account for incremental contribution, wasted spend, or measurement integrity before scaling; runs a typed 20-item ROAS profile with verified vetoes and a SHIP/FIX/BLOCK/UNDECIDED gate on own exported data. Not for campaign structure design — use campaign-architect; not for creative production — use ad-creative-builder. 付费广告账户审计/ROAS评分",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
     "gemini"
   ],
-  "version": "16.0.0",
+  "version": "17.0.0",
   "author": "aaron-he-zhu",
   "install_path": ".claude/skills/ad-account-auditor/SKILL.md",
   "source": {
@@ -16,10 +16,10 @@
     "url": "https://github.com/aaron-he-zhu/aaron-marketing-skills/blob/main/ad/activate/ad-account-auditor/SKILL.md",
     "path": "ad/activate/ad-account-auditor/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-11T14:29:39.172Z",
+    "discovered_at": "2026-07-11T15:47:53.574Z",
     "stars": 2364,
     "language": "Python",
-    "pushed_at": "2026-07-11T08:14:55Z",
+    "pushed_at": "2026-07-11T14:53:58Z",
     "license": "Apache-2.0"
   }
 }

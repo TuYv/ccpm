@@ -1,14 +1,14 @@
 {
   "id": "aaron-he-zhu-aaron-marketing-skills-send-experiment-designer",
   "name": "send-experiment-designer",
-  "description": "Use when the user asks to \"design an email A/B test\", \"set up a multivariate subject/CTA test\", \"run a send-time test\", \"build a hold-out group\", or \"is this email test significant — promote or kill?\"; produces a falsifiable hypothesis, a one-variable-per-cell variant matrix, a sample-size / MDE / duration / power plan, and a documented significance read with a promote / kill / keep-testing call on your own ESP export. Not for computing the program-wide EQS or running the vetoes — use email-qual",
+  "description": "Use when the user asks to \"design an email A/B test\", \"set up a multivariate subject/CTA test\", \"run a send-time test\", \"build a hold-out group\", or \"is this email result statistically and practically material?\"; produces a falsifiable hypothesis, one-variable-per-cell matrix, sample-size/MDE/duration/power plan, and an effect/uncertainty read from own ESP data. Applies only a precommitted owner-approved action rule; the helper never chooses a business action. Not for EQS/vetoes or writing the e",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
     "gemini"
   ],
-  "version": "16.0.3",
+  "version": "17.0.0",
   "author": "aaron-he-zhu",
   "install_path": ".claude/skills/send-experiment-designer/SKILL.md",
   "source": {
@@ -16,10 +16,10 @@
     "url": "https://github.com/aaron-he-zhu/aaron-marketing-skills/blob/main/email/deliver/send-experiment-designer/SKILL.md",
     "path": "email/deliver/send-experiment-designer/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-11T14:29:43.170Z",
+    "discovered_at": "2026-07-11T15:47:55.747Z",
     "stars": 2364,
     "language": "Python",
-    "pushed_at": "2026-07-11T08:14:55Z",
+    "pushed_at": "2026-07-11T14:53:58Z",
     "license": "Apache-2.0"
   }
 }
