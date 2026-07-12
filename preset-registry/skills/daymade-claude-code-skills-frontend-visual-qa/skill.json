@@ -1,7 +1,7 @@
 {
   "id": "daymade-claude-code-skills-frontend-visual-qa",
   "name": "frontend-visual-qa",
-  "description": ">- Reviews rendered frontends, dashboards/admin consoles, GIS/map canvases, design-system/live artifacts, HTML slides, and generated UIs for visual/UX defects lint/build miss: wrapping, layout drift, wrong branch, broken journeys, route drift, repeated cards, non-deep-linkable workspaces, unowned rails, blocking drawers, unusable map pan/zoom/hit targets, dashboard-as-manual copy, mobile table failures, brand drift, hardcoded chart colors vs design-system tokens, colorblind palette gaps, reporti",
+  "description": ">- Audits already-rendered web, landing-page, HTML deck/slide, browser tool/game, dashboard/admin, design-system, and desktop UIs using real-browser or native-app journeys, inspected screenshots, DOM geometry, responsive or projection viewports, and a bundled Playwright sweep. Use after UI implementation to find typography, wrapping, overlap, overflow, responsive, route, overlay, map, transient-state, data-visualization, browser-output, file-dialog, PDF/print, or Electron-shell defects, or to co",
   "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/daymade/claude-code-skills/blob/main/frontend-visual-qa/SKILL.md",
     "path": "frontend-visual-qa/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-12T16:04:59.485Z",
-    "stars": 1264,
+    "discovered_at": "2026-07-12T18:23:44.345Z",
+    "stars": 1263,
     "language": "Python",
-    "pushed_at": "2026-07-12T14:19:56Z",
+    "pushed_at": "2026-07-12T17:39:34Z",
     "license": "MIT"
   }
 }

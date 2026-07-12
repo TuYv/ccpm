@@ -1,0 +1,25 @@
+{
+  "id": "tomgranot-hubspot-admin-skills-workflows-as-code",
+  "name": "workflows-as-code",
+  "description": "Export all HubSpot workflows to versioned JSON files via the v4 Automation API, diff exports over time, and restore or recreate workflows from JSON. Treats workflow definitions like code: backed up, reviewable, and recoverable.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "TomGranot",
+  "install_path": ".claude/skills/workflows-as-code/SKILL.md",
+  "source": {
+    "repo": "TomGranot/hubspot-admin-skills",
+    "url": "https://github.com/TomGranot/hubspot-admin-skills/blob/main/skills/workflows-as-code/SKILL.md",
+    "path": "skills/workflows-as-code/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-12T19:00:10.668Z",
+    "stars": 51,
+    "language": "Python",
+    "pushed_at": "2026-07-12T17:52:23Z",
+    "license": "MIT"
+  }
+}
