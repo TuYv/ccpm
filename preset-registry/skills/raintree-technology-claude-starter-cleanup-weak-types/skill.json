@@ -16,10 +16,10 @@
     "url": "https://github.com/raintree-technology/claude-starter/blob/main/templates/.claude/skills/cleanup-weak-types/SKILL.md",
     "path": "templates/.claude/skills/cleanup-weak-types/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-11T21:51:18.503Z",
+    "discovered_at": "2026-07-12T00:22:15.704Z",
     "stars": 84,
     "language": "JavaScript",
-    "pushed_at": "2026-07-08T18:08:54Z",
+    "pushed_at": "2026-07-11T23:50:45Z",
     "license": "MIT"
   },
   "summary_zh": "自动把代码里的 any、unknown、interface{} 等弱类型替换成推断出的强类型，每改一处就跑类型检查，失败就回退，适合想给项目补强类型安全的场景。"

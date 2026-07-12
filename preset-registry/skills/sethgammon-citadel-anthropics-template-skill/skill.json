@@ -1,0 +1,25 @@
+{
+  "id": "sethgammon-citadel-anthropics-template-skill",
+  "name": "template-skill",
+  "description": "Replace with description of the skill and when Claude should use it.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "SethGammon",
+  "install_path": ".claude/skills/anthropics-template-skill/SKILL.md",
+  "source": {
+    "repo": "SethGammon/Citadel",
+    "url": "https://github.com/SethGammon/Citadel/blob/main/scripts/fixtures/ecosystem/anthropics-template-skill/SKILL.md",
+    "path": "scripts/fixtures/ecosystem/anthropics-template-skill/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-11T23:35:53.345Z",
+    "stars": 688,
+    "language": "JavaScript",
+    "pushed_at": "2026-07-11T21:26:50Z",
+    "license": "MIT"
+  }
+}
