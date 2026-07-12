@@ -1,7 +1,7 @@
 {
   "id": "qwenlm-qwen-code-review",
   "name": "review",
-  "description": "Review changed code for correctness, security, code quality, and performance. Use when the user asks to review code changes, a PR, or specific files. Invoke with `/review`, `/review <pr-number>`, `/review <file-path>`, or `/review <pr-number> --comment` to post inline comments on the PR.",
+  "description": "Review changed code for correctness, security, code quality, and performance. Use when the user asks to review code changes, a PR, or specific files. Invoke with `/review`, `/review <pr-number>`, `/review <file-path>`, or `/review <pr-number> --comment` to post inline comments on the PR. Add `--effort low|medium|high` to trade depth for speed (defaults to high for PRs, medium for local changes).",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/QwenLM/qwen-code/blob/main/packages/core/src/skills/bundled/review/SKILL.md",
     "path": "packages/core/src/skills/bundled/review/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-12T09:56:57.104Z",
-    "stars": 25963,
+    "discovered_at": "2026-07-12T11:35:30.678Z",
+    "stars": 25967,
     "language": "TypeScript",
-    "pushed_at": "2026-07-12T09:51:57Z",
+    "pushed_at": "2026-07-12T11:34:09Z",
     "license": "Apache-2.0"
   }
 }
