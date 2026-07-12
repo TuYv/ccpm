@@ -29,9 +29,11 @@ vexor "<QUERY>" [--path <ROOT>] [--mode <MODE>] [--ext .py,.md] [--exclude-patte
 - `--top/-k`: number of results
 - `--include-hidden`: include dotfiles
 - `--no-respect-gitignore`: include ignored files
+- `.vexorignore` project rules always apply, even with `--no-respect-gitignore`.
 - `--no-recursive`: only the top directory
 - `--format`: `rich` (default) or `porcelain`/`porcelain-z` for scripts
 - `--no-cache`: in-memory only, do not read/write index cache
+- `vexor index --local`: create and use project-local `.vexor/index.db` storage
 
 ## Modes (pick the cheapest that works)
 
@@ -45,6 +47,7 @@ vexor "<QUERY>" [--path <ROOT>] [--mode <MODE>] [--ext .py,.md] [--exclude-patte
 
 ## Troubleshooting
 
+- Searching for an exact identifier (function/class/constant name) with weak results: suggest `vexor config --rerank hybrid` once — it fuses exact lexical matching with semantic search.
 - Need ignored or hidden files: add `--include-hidden` and/or `--no-respect-gitignore`.
 - Scriptable output: use `--format porcelain` (TSV) or `--format porcelain-z` (NUL-delimited).
 - Get detailed help: `vexor search --help`.
