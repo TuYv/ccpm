@@ -1,7 +1,7 @@
 {
   "id": "modu-ai-moai-adk-moai-domain-html-report",
   "name": "moai-domain-html-report",
-  "description": "> Markdown-to-single-file-HTML report renderer. Six modes (status, incident, plan, explainer, financial, pr) selected automatically by report type. Zero external JS/CSS framework dependencies — inline SVG charts, single font-CDN exception for Korean readability. Self-contained output for email attachment, print, and offline viewing.",
+  "description": "> Markdown-to-single-file-HTML report renderer. Six modes (status, incident, plan, explainer, financial, pr) selected by report type, crossed with three audience tiers (expert, basic, learn) derived from the active output style. The basic and learn tiers enrich the HTML with mermaid flowcharts, worked examples, and plain-language primers; the expert tier stays dense. Zero external JS/CSS framework dependencies — inline SVG charts, a font-CDN exception for Korean readability, and a tier-gated mer",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/modu-ai/moai-adk/blob/main/internal/template/templates/.claude/skills/moai-domain-html-report/SKILL.md",
     "path": "internal/template/templates/.claude/skills/moai-domain-html-report/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-12T04:22:32.404Z",
+    "discovered_at": "2026-07-12T07:29:06.014Z",
     "stars": 1120,
     "language": "Go",
-    "pushed_at": "2026-07-12T01:50:44Z",
+    "pushed_at": "2026-07-12T07:01:57Z",
     "license": "Apache-2.0"
   }
 }
