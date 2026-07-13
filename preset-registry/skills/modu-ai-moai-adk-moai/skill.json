@@ -1,8 +1,8 @@
 {
   "id": "modu-ai-moai-adk-moai",
   "name": "moai",
-  "description": "> MoAI unified orchestrator for autonomous development. Routes natural language or subcommands (plan, run, sync, project, fix, loop, mx, feedback, review, clean, codemaps, gate, harness) to specialized agents.",
-  "category": "设计创意",
+  "description": "> MoAI unified orchestrator for autonomous development. Routes natural language or subcommands (plan, run, sync, project, fix, loop, mx, feedback, review, clean, codemaps, gate, e2e, harness) to specialized agents.",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/modu-ai/moai-adk/blob/main/.claude/skills/moai/SKILL.md",
     "path": ".claude/skills/moai/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-13T05:07:48.433Z",
-    "stars": 1120,
+    "discovered_at": "2026-07-13T09:04:23.579Z",
+    "stars": 1121,
     "language": "Go",
-    "pushed_at": "2026-07-13T04:34:11Z",
+    "pushed_at": "2026-07-13T09:01:58Z",
     "license": "Apache-2.0"
   }
 }

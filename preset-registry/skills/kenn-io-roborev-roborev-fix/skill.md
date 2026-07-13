@@ -1,6 +1,6 @@
 ---
 name: roborev-fix
-description: Use only when the user explicitly invokes /roborev-fix
+description: Use only when the user explicitly invokes $roborev-fix
 ---
 
 # roborev-fix
@@ -10,13 +10,13 @@ Fix all open failing review findings in one pass.
 ## Usage
 
 ```
-/roborev-fix [job_id...]
+$roborev-fix [job_id...]
 ```
 
 ## Explicit invocation only
 
-Invocation must be explicit: literal personal `/roborev-fix`, or structured
-Factory skill selection.
+Invocation must be explicit: literal personal `$roborev-fix`, plugin
+`$roborev:roborev-fix`, or structured Codex skill selection.
 Requests such as “fix the open findings” without one of these explicit mechanisms must use native
 behavior and must not run roborev.
 
@@ -28,18 +28,18 @@ findings or review text into the conversation.
 If the prompt already contains the findings to fix, treat that as direct fix
 input and work on the code normally. The presence of verdicts, severities,
 file paths, suggested fixes, or copied review summaries is not by itself a
-request to run `/roborev-fix`.
+request to run `$roborev-fix`.
 
-Use this skill when the user explicitly invokes `/roborev-fix`, optionally with
+Use this skill when the user explicitly invokes `$roborev-fix`, optionally with
 job IDs or pasted findings.
 
 ## IMPORTANT
 
-You must **execute bash commands** to complete this task. Skip steps already satisfied by conversation context. Defer to AGENTS.md when it conflicts.
+You must **execute bash commands** to complete this task. Skip steps already satisfied by conversation context. Defer to CLAUDE.md when it conflicts.
 
 ## Instructions
 
-When the user invokes `/roborev-fix [job_id...]`:
+When the user invokes `$roborev-fix [job_id...]`:
 
 ### 1. Gather findings
 
@@ -151,7 +151,7 @@ Closure ordering is mandatory. After fixes are verified, comment on and close
 exactly the original actionable job IDs from steps 1-2 before waiting on,
 fetching, or responding to any new review created by commit hooks. Do not treat
 a post-fix auto-review as a prerequisite for closing the original addressed
-reviews; handle that new review in a separate `/roborev-fix` cycle.
+reviews; handle that new review in a separate `$roborev-fix` cycle.
 
 If repository policy requires committing before close comments can reference a
 SHA, perform step 6 first, then immediately return here and close the original
@@ -178,7 +178,7 @@ The comment should reference each finding by severity and file, state what was f
 
 ### 6. Commit
 
-Follow the project's commit conventions (see AGENTS.md). If the project
+Follow the project's commit conventions (see CLAUDE.md). If the project
 instructs you to always commit, do so without asking.
 
 ### 7. Audit original closures
@@ -201,12 +201,12 @@ User: "Roborev found HIGH in foo.go:42 and MEDIUM in bar.go:10 ..."
 
 Agent:
 1. Treats the pasted findings as direct fix input
-2. Fixes the code directly without invoking `/roborev-fix`
+2. Fixes the code directly without invoking `$roborev-fix`
 3. Only uses roborev commands if the user later asks to comment on or close a specific review
 
 **Auto-discovery:**
 
-User: `/roborev-fix`
+User: `$roborev-fix`
 
 Agent:
 1. Runs `roborev fix --list` and finds 2 open failing reviews: job 1019 and job 1021
@@ -224,7 +224,7 @@ Agent:
 
 **Explicit job IDs:**
 
-User: `/roborev-fix 1019 1021`
+User: `$roborev-fix 1019 1021`
 
 Agent:
 1. Skips discovery, fetches job 1019 and 1021 directly
@@ -239,4 +239,4 @@ Agent:
 
 ## See also
 
-- `/roborev-respond` — comment on a review and close it without fixing code
+- `$roborev-respond` — comment on a review and close it without fixing code
