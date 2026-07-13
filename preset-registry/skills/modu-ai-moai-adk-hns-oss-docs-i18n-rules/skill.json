@@ -1,0 +1,25 @@
+{
+  "id": "modu-ai-moai-adk-hns-oss-docs-i18n-rules",
+  "name": "hns-oss-docs-i18n-rules",
+  "description": "> HARD i18n rules digest for the oss-docs harness specialists working on moai-adk-go README 4-locale set and the docs-site (adk.mo.ai.kr). Covers the canonical-locale chains, the 4-locale same-PR obligation, Mermaid TD-only, the no-emoji + icon-shortcode rule, emphasis-marker spacing, the URL blacklist, version SSOT, vercel.json redirect pattern, and the immutable Vercel binding. Loaded FIRST by every oss-docs specialist before any edit.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "modu-ai",
+  "install_path": ".claude/skills/hns-oss-docs-i18n-rules/SKILL.md",
+  "source": {
+    "repo": "modu-ai/moai-adk",
+    "url": "https://github.com/modu-ai/moai-adk/blob/main/.claude/skills/hns-oss-docs-i18n-rules/SKILL.md",
+    "path": ".claude/skills/hns-oss-docs-i18n-rules/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-13T12:08:55.874Z",
+    "stars": 1121,
+    "language": "Go",
+    "pushed_at": "2026-07-13T12:07:12Z",
+    "license": "Apache-2.0"
+  }
+}

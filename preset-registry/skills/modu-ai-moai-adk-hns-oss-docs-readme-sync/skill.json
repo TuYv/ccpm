@@ -1,0 +1,25 @@
+{
+  "id": "modu-ai-moai-adk-hns-oss-docs-readme-sync",
+  "name": "hns-oss-docs-readme-sync",
+  "description": "> README 4-file synchronization procedure for the oss-docs harness: English README.md as primary source, ko/ja/zh derivation, the shared language-switcher header contract, section-order parity checklist, and the manual verification recipe (no linter exists for READMEs). Loaded by the content-author and locale-translator specialists for any README work.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "modu-ai",
+  "install_path": ".claude/skills/hns-oss-docs-readme-sync/SKILL.md",
+  "source": {
+    "repo": "modu-ai/moai-adk",
+    "url": "https://github.com/modu-ai/moai-adk/blob/main/.claude/skills/hns-oss-docs-readme-sync/SKILL.md",
+    "path": ".claude/skills/hns-oss-docs-readme-sync/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-13T12:08:56.229Z",
+    "stars": 1121,
+    "language": "Go",
+    "pushed_at": "2026-07-13T12:07:12Z",
+    "license": "Apache-2.0"
+  }
+}
