@@ -1,7 +1,7 @@
 {
   "id": "agricidaniel-claude-ads-ads-budget",
   "name": "ads-budget",
-  "description": "Budget allocation and bidding strategy review across all ad platforms. Evaluates spend distribution, bidding strategy appropriateness, scaling readiness, and identifies campaigns to kill or scale. Uses 70/20/10 rule, 3x Kill Rule, and 20% scaling rule. Use when user says budget allocation, bidding strategy, ad spend, ROAS target, media budget, or scaling.",
+  "description": "Plan and review paid-media budgets, bidding, pacing, marginal return, forecasts, CPA, ROAS, MER, LTV:CAC, constraints, and allocation across supported platforms. Use for ad budget allocation, media budget, bidding strategy, scaling, spend pacing, budget forecast, ROAS target, or investment tradeoffs.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/AgriciDaniel/claude-ads/blob/main/skills/ads-budget/SKILL.md",
     "path": "skills/ads-budget/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-13T20:03:17.139Z",
-    "stars": 6968,
+    "discovered_at": "2026-07-13T21:24:44.694Z",
+    "stars": 6971,
     "language": "Python",
-    "pushed_at": "2026-06-26T21:03:50Z",
+    "pushed_at": "2026-07-13T20:22:29Z",
     "license": "MIT"
-  },
-  "summary_zh": "全平台广告预算与出价策略审查工具，帮你评估花费是否合理，并明确指出哪些广告该停投、哪些该加码，适合需要优化广告支出和提升回报率的场景。"
+  }
 }

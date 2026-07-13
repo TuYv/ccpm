@@ -1,7 +1,7 @@
 {
   "id": "agricidaniel-claude-ads-ads-amazon",
   "name": "ads-amazon",
-  "description": "Amazon Ads deep analysis covering Sponsored Products, Sponsored Brands (incl. Sponsored Brands Video), Sponsored Display (audiences + contextual), and basic Amazon DSP. Evaluates campaign structure, ACOS/TACOS targets, search-term harvesting, negative keyword discipline, Brand Analytics signals, day-parting, bid management, auto vs manual campaign mix, ASIN targeting, and DSP retargeting. Use when user says Amazon Ads, Amazon advertising, Amazon PPC, Amazon search ads, Sponsored Products, Sponso",
+  "description": "Audit Amazon Ads profiles, regions, Sponsored Products, Sponsored Brands, Sponsored Display, DSP, portfolios, targeting, search terms, retail readiness, creative, budgets, ACOS, TACOS, reporting, and policy. Use for Amazon Ads, sponsored ads, Amazon PPC, ACOS, TACOS, ASIN advertising, Amazon DSP, or retail-media optimization.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/AgriciDaniel/claude-ads/blob/main/skills/ads-amazon/SKILL.md",
     "path": "skills/ads-amazon/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-13T20:03:16.322Z",
-    "stars": 6968,
+    "discovered_at": "2026-07-13T21:24:44.255Z",
+    "stars": 6971,
     "language": "Python",
-    "pushed_at": "2026-06-26T21:03:50Z",
+    "pushed_at": "2026-07-13T20:22:29Z",
     "license": "MIT"
-  },
-  "summary_zh": "这是一个亚马逊广告深度分析助手，能帮你拆解广告架构、控制转化成本并精细化竞价与选词，适合需要全面优化站内推广与DSP投放效果的场景。"
+  }
 }

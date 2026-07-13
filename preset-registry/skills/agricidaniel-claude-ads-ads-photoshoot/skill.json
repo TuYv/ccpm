@@ -1,7 +1,7 @@
 {
   "id": "agricidaniel-claude-ads-ads-photoshoot",
   "name": "ads-photoshoot",
-  "description": "Product photography enhancement for ad creatives using banana-claude image generation. Takes a product image and generates 5 professional photography styles for ad use: Studio, Floating, Ingredient, In Use, and Lifestyle. Requires banana-claude (v1.4.1+) with nanobanana-mcp. Triggers on: product photo, product photography, photoshoot, enhance product image, product shoot, product photos for ads, generate product photos, studio shot, lifestyle photo.",
+  "description": "Generate rights-cleared paid-ad product photography variants from an authorized source image and validated brand profile. Triggers on: product photo, product photography, virtual photoshoot, photoshoot, enhance product image, studio shot, lifestyle shot, lifestyle product image, floating product image, ingredient shot.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/AgriciDaniel/claude-ads/blob/main/skills/ads-photoshoot/SKILL.md",
     "path": "skills/ads-photoshoot/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-13T20:03:20.118Z",
-    "stars": 6968,
+    "discovered_at": "2026-07-13T21:24:46.325Z",
+    "stars": 6971,
     "language": "Python",
-    "pushed_at": "2026-06-26T21:03:50Z",
+    "pushed_at": "2026-07-13T20:22:29Z",
     "license": "MIT"
-  },
-  "summary_zh": "这是一款AI商品图生成工具，只需一张原图就能生成多种专业广告大片风格，帮你省去昂贵的实拍成本，轻松搞定电商和广告的视觉素材。"
+  }
 }

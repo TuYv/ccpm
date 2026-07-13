@@ -1,7 +1,7 @@
 {
   "id": "agricidaniel-claude-ads-ads-create",
   "name": "ads-create",
-  "description": "Campaign concept and copy brief generator for paid advertising. Reads brand-profile.json and optional audit results to produce structured campaign concepts, messaging pillars, and copy briefs. Outputs campaign-brief.md to the current directory. Run after /ads dna and before /ads generate. Triggers on: create campaign, campaign brief, ad concepts, write ad copy, campaign strategy, ad messaging, creative brief, generate concepts.",
+  "description": "Create source-grounded paid-ad campaign concepts, messaging, copy, creative briefs, and production plans from a validated brand profile, campaign objective, platform requirements, and optional audit evidence. Triggers on: campaign brief, campaign concepts, create a campaign, ad concepts, ad copy, ad messaging, creative brief, headlines, descriptions.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/AgriciDaniel/claude-ads/blob/main/skills/ads-create/SKILL.md",
     "path": "skills/ads-create/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-13T20:03:17.767Z",
-    "stars": 6968,
+    "discovered_at": "2026-07-13T21:24:44.930Z",
+    "stars": 6971,
     "language": "Python",
-    "pushed_at": "2026-06-26T21:03:50Z",
+    "pushed_at": "2026-07-13T20:22:29Z",
     "license": "MIT"
-  },
-  "summary_zh": "它是一款付费广告策划与文案生成工具，能基于品牌资料快速产出结构化的广告概念和文案简报，适合需要高效搭建广告活动框架、制定文案策略的场景。"
+  }
 }

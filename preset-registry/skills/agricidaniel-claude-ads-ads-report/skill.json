@@ -1,0 +1,25 @@
+{
+  "id": "agricidaniel-claude-ads-ads-report",
+  "name": "ads-report",
+  "description": "Render Markdown, HTML, or PDF paid-advertising reports from a validated Claude Ads JSON run bundle. Use for ads report, client report, audit PDF, executive audience reporting, or exporting prior audit and plan results.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "AgriciDaniel",
+  "install_path": ".claude/skills/ads-report/SKILL.md",
+  "source": {
+    "repo": "AgriciDaniel/claude-ads",
+    "url": "https://github.com/AgriciDaniel/claude-ads/blob/main/skills/ads-report/SKILL.md",
+    "path": "skills/ads-report/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-13T21:24:46.744Z",
+    "stars": 6971,
+    "language": "Python",
+    "pushed_at": "2026-07-13T20:22:29Z",
+    "license": "MIT"
+  }
+}

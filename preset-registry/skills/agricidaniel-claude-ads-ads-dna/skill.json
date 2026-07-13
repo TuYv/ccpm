@@ -1,7 +1,7 @@
 {
   "id": "agricidaniel-claude-ads-ads-dna",
   "name": "ads-dna",
-  "description": "Brand DNA extractor for paid advertising. Scans a website URL to extract visual identity, tone of voice, color palette, typography, and imagery style. Outputs brand-profile.json to the current directory. Run before /ads create or /ads generate for brand-consistent creative. Triggers on: brand DNA, brand profile, extract brand, brand identity, brand colors, what is the brand voice, analyze brand, brand style guide.",
+  "description": "Extract a public-safe brand and offer profile for paid advertising from an authorized website and operator input. Triggers on: brand DNA, brand profile, brand identity, brand style, brand colors, brand voice, visual identity, style guide, website brand analysis.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/AgriciDaniel/claude-ads/blob/main/skills/ads-dna/SKILL.md",
     "path": "skills/ads-dna/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-13T20:03:18.283Z",
-    "stars": 6968,
+    "discovered_at": "2026-07-13T21:24:45.142Z",
+    "stars": 6971,
     "language": "Python",
-    "pushed_at": "2026-06-26T21:03:50Z",
+    "pushed_at": "2026-07-13T20:22:29Z",
     "license": "MIT"
-  },
-  "summary_zh": "这是一款品牌风格提取工具，通过扫描网站自动抓取配色、字体和语调等特征。适合在制作广告素材前使用，确保生成的创意内容与品牌调性保持一致。"
+  }
 }

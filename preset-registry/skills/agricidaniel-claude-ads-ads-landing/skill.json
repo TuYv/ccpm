@@ -1,7 +1,7 @@
 {
   "id": "agricidaniel-claude-ads-ads-landing",
   "name": "ads-landing",
-  "description": "Landing page quality assessment for paid advertising campaigns. Evaluates message match, page speed, mobile experience, trust signals, form optimization, and conversion rate potential. Use when user says landing page, post-click experience, landing page audit, LP audit, conversion rate, landing page CRO, post-click CRO, or landing page optimization.",
+  "description": "Audit paid-ad landing pages for message match, mobile experience, performance, accessibility, trust, forms, consent, tracking, security, and conversion friction. Use for landing-page audit, post-click experience, LP audit, conversion-rate optimization, form optimization, ad-to-page message match, redirects, blocked navigation, or requests involving private, loopback, link-local, or metadata IP destinations.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/AgriciDaniel/claude-ads/blob/main/skills/ads-landing/SKILL.md",
     "path": "skills/ads-landing/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-13T20:03:18.930Z",
-    "stars": 6968,
+    "discovered_at": "2026-07-13T21:24:45.441Z",
+    "stars": 6971,
     "language": "Python",
-    "pushed_at": "2026-06-26T21:03:50Z",
+    "pushed_at": "2026-07-13T20:22:29Z",
     "license": "MIT"
-  },
-  "summary_zh": "专用于评估付费广告落地页质量的工具，能帮你找出信息匹配、加载体验等影响转化的短板，适合做落地页审查或转化率优化时使用。"
+  }
 }

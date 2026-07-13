@@ -1,7 +1,7 @@
 {
   "id": "agricidaniel-claude-ads-ads-test",
   "name": "ads-test",
-  "description": "A/B test design and experiment planning for paid advertising. Structured hypothesis framework, statistical significance calculator, test duration estimator, sample size calculator, and platform-specific experiment setup guides (Meta Experiments, Google Experiments, LinkedIn A/B). Use when user says A/B test, split test, experiment design, test hypothesis, statistical significance, sample size, or test duration.",
+  "description": "Design and evaluate paid-ad experiments with hypotheses, randomization units, sample-size and duration assumptions, guardrails, platform experiment tools, analysis, and decision rules. Use for A/B test, split test, experiment design, hypothesis, statistical significance, sample size, test duration, or experiment readout.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/AgriciDaniel/claude-ads/blob/main/skills/ads-test/SKILL.md",
     "path": "skills/ads-test/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-13T20:03:20.667Z",
-    "stars": 6968,
+    "discovered_at": "2026-07-13T21:24:47.246Z",
+    "stars": 6971,
     "language": "Python",
-    "pushed_at": "2026-06-26T21:03:50Z",
+    "pushed_at": "2026-07-13T20:22:29Z",
     "license": "MIT"
-  },
-  "summary_zh": "这是一个付费广告的A/B测试规划工具。它帮你科学搭建实验框架、搞定样本与时长计算，并提供主流平台实操指南，适合需要严谨验证投放效果、告别盲目试错的营销场景。"
+  }
 }

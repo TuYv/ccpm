@@ -1,7 +1,7 @@
 {
   "id": "agricidaniel-claude-ads-ads-math",
   "name": "ads-math",
-  "description": "PPC financial calculator and modeling tool. CPA, ROAS, CPL calculations, break-even analysis, impression share opportunity sizing, budget forecasting, LTV:CAC ratio analysis, and MER (Marketing Efficiency Ratio) assessment. Requires zero API access. Works with pasted data from exports. Use when user says PPC math, ad calculator, break-even, budget forecast, ROAS calculator, CPA calculator, impression share, LTV CAC, or MER.",
+  "description": "Calculate and model paid-media CPA, CPL, CPC, CPM, ROAS, MER, break-even targets, contribution margin, LTV:CAC, impression-share opportunity, budgets, forecasts, and experiment economics. Use for PPC math, ad calculator, break-even analysis, ROAS calculator, CPA calculator, budget forecast, LTV CAC, or MER.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/AgriciDaniel/claude-ads/blob/main/skills/ads-math/SKILL.md",
     "path": "skills/ads-math/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-13T20:03:19.538Z",
-    "stars": 6968,
+    "discovered_at": "2026-07-13T21:24:45.782Z",
+    "stars": 6971,
     "language": "Python",
-    "pushed_at": "2026-06-26T21:03:50Z",
+    "pushed_at": "2026-07-13T20:22:29Z",
     "license": "MIT"
-  },
-  "summary_zh": "它是个广告投放算账工具，帮你快速算清收益、盈亏和预算。不用配API，粘贴数据就能算，特别适合需要随时盘算广告花钱效率的投放场景。"
+  }
 }

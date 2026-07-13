@@ -1,0 +1,25 @@
+{
+  "id": "agricidaniel-claude-ads-ads-validate",
+  "name": "ads-validate",
+  "description": "Validate Claude Ads contracts, scoring inputs, run bundles, capabilities, source freshness, safety, installation, uninstall, or release readiness. Use for ads validate, ads status, ads next, stale claims with missing tool access, maturity checks, ownership-manifest uninstall, preserving unrelated ads-* skills, checksum verification, preflight, QA, or release audits. Missing access must demote stale evidence for the run and block dependent release-current claims before recovery guidance.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "AgriciDaniel",
+  "install_path": ".claude/skills/ads-validate/SKILL.md",
+  "source": {
+    "repo": "AgriciDaniel/claude-ads",
+    "url": "https://github.com/AgriciDaniel/claude-ads/blob/main/skills/ads-validate/SKILL.md",
+    "path": "skills/ads-validate/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-13T21:24:47.467Z",
+    "stars": 6971,
+    "language": "Python",
+    "pushed_at": "2026-07-13T20:22:29Z",
+    "license": "MIT"
+  }
+}

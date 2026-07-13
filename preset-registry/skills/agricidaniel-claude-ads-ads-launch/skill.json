@@ -1,0 +1,25 @@
+{
+  "id": "agricidaniel-claude-ads-ads-launch",
+  "name": "ads-launch",
+  "description": "Draft or explicitly apply a paid-ad campaign launch through Claude Ads capability-gated adapters. Use for campaign creation, launch plans, publishing ads, activating campaigns, uploading creative, or requests to push a campaign live.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "AgriciDaniel",
+  "install_path": ".claude/skills/ads-launch/SKILL.md",
+  "source": {
+    "repo": "AgriciDaniel/claude-ads",
+    "url": "https://github.com/AgriciDaniel/claude-ads/blob/main/skills/ads-launch/SKILL.md",
+    "path": "skills/ads-launch/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-13T21:24:45.559Z",
+    "stars": 6971,
+    "language": "Python",
+    "pushed_at": "2026-07-13T20:22:29Z",
+    "license": "MIT"
+  }
+}

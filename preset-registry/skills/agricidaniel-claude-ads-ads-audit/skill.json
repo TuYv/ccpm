@@ -1,7 +1,7 @@
 {
   "id": "agricidaniel-claude-ads-ads-audit",
   "name": "ads-audit",
-  "description": "Full multi-platform paid advertising audit with parallel subagent delegation. Analyzes Google Ads, Meta Ads, LinkedIn Ads, TikTok Ads, Microsoft Ads, and Apple Ads accounts via 6 parallel audit agents. Amazon Ads, cross-platform attribution, and server-side tracking are covered by their standalone sub-skills (ads-amazon, ads-attribution, ads-server-side-tracking) — Wave 3 will add their paired agents so they can dispatch in parallel here. Generates health score per platform and aggregate score (",
+  "description": "Run a source-grounded paid-advertising audit for one or more of Google, Meta, YouTube, LinkedIn, TikTok, Microsoft, Apple, Amazon, Reddit, Pinterest, Snapchat, and X. Use for full ad checks, account health reviews, paid-media diagnostics, partial audits after authentication or worker failure, missing-platform weighting, beta-feature eligibility and scoring, spend audits, tracking audits, or prioritized opportunities and risks.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/AgriciDaniel/claude-ads/blob/main/skills/ads-audit/SKILL.md",
     "path": "skills/ads-audit/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-13T20:03:16.927Z",
-    "stars": 6968,
+    "discovered_at": "2026-07-13T21:24:44.578Z",
+    "stars": 6971,
     "language": "Python",
-    "pushed_at": "2026-06-26T21:03:50Z",
+    "pushed_at": "2026-07-13T20:22:29Z",
     "license": "MIT"
-  },
-  "summary_zh": "这是一款跨平台付费广告审计工具，能同时诊断各大主流广告账户并给出健康评分，帮你快速摸清全局投放效果，适合需要高效排查多渠道广告问题的营销人员。"
+  }
 }
