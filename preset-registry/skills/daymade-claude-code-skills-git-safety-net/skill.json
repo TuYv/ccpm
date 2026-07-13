@@ -1,0 +1,25 @@
+{
+  "id": "daymade-claude-code-skills-git-safety-net",
+  "name": "git-safety-net",
+  "description": ">- Prevent and recover from local-Git disasters — commits stranded on the wrong or unpushed branch, orphaned/dropped stashes, dangling commits about to be garbage-collected, work that seems lost after heavy branch/stash/rebase juggling or parallel-agent work, and \"is everything actually merged?\" uncertainty. Use whenever the user fears they lost code, asks to recover a deleted commit / branch / stash, wonders what is still unmerged, needs to prove nothing was dropped after rebasing or deleting b",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/git-safety-net/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/git-safety-net/SKILL.md",
+    "path": "git-safety-net/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-13T20:05:26.391Z",
+    "stars": 1267,
+    "language": "Python",
+    "pushed_at": "2026-07-13T19:23:33Z",
+    "license": "MIT"
+  }
+}
