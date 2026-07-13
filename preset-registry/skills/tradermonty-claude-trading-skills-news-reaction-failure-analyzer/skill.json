@@ -1,0 +1,25 @@
+{
+  "id": "tradermonty-claude-trading-skills-news-reaction-failure-analyzer",
+  "name": "news-reaction-failure-analyzer",
+  "description": "Judge whether a market FAILED to react to news favorable to a crowded speculative position — step 2 of Jason Shapiro's COT contrarian process. Consumes a cot-contrarian-detector report (or an explicit direction) plus a Claude-curated events JSON, fetches the underlying price series with a documented fallback chain, and produces a fail-closed CONFIRMED / NOT_CONFIRMED / INSUFFICIENT_EVIDENCE verdict using a statistically validated drift-significance test (not a naive failure-ratio, which false-co",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tradermonty",
+  "install_path": ".claude/skills/news-reaction-failure-analyzer/SKILL.md",
+  "source": {
+    "repo": "tradermonty/claude-trading-skills",
+    "url": "https://github.com/tradermonty/claude-trading-skills/blob/main/skills/news-reaction-failure-analyzer/SKILL.md",
+    "path": "skills/news-reaction-failure-analyzer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-13T15:45:59.595Z",
+    "stars": 2361,
+    "language": "Python",
+    "pushed_at": "2026-07-13T13:00:43Z",
+    "license": "MIT"
+  }
+}
