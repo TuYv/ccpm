@@ -1,0 +1,25 @@
+{
+  "id": "modu-ai-moai-adk-hns-moaiadk-patterns",
+  "name": "hns-moaiadk-patterns",
+  "description": "> moai-adk-go domain-patterns reference for the 4 harness specialists (cli-template-specialist, quality-specialist, workflow-specialist, hook-ci-specialist). Covers the CLI/template/config/hook/spec subsystem architecture, key source paths, the Pipeline specialist delegation map, the Template-First build cycle, the namespace separation contract, and common add-a-template / add-a-hook / add-an-agent / add-a-SPEC workflows. Loaded by the specialists when working on moai-adk-go's own Go codebase an",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "modu-ai",
+  "install_path": ".claude/skills/hns-moaiadk-patterns/SKILL.md",
+  "source": {
+    "repo": "modu-ai/moai-adk",
+    "url": "https://github.com/modu-ai/moai-adk/blob/main/.claude/skills/hns-moaiadk-patterns/SKILL.md",
+    "path": ".claude/skills/hns-moaiadk-patterns/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-13T05:07:15.482Z",
+    "stars": 1120,
+    "language": "Go",
+    "pushed_at": "2026-07-13T04:34:11Z",
+    "license": "Apache-2.0"
+  }
+}

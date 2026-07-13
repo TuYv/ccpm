@@ -1,0 +1,25 @@
+{
+  "id": "tradermonty-claude-trading-skills-cot-contrarian-detector",
+  "name": "cot-contrarian-detector",
+  "description": "Detect crowded speculative positioning in CFTC futures markets (COT report analysis) to find contrarian setups using Jason Shapiro's methodology. Screens large-speculator (\"non-commercial\") net positioning across 65 futures markets (indices, rates, FX, metals, energy, crypto) via the FMP Commitment of Traders API, computes a 3-year and 26-week COT Index per market, and classifies extremes as CROWDED_LONG / CROWDED_SHORT. Use when the user asks about COT report analysis, crowded positioning, \"who",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tradermonty",
+  "install_path": ".claude/skills/cot-contrarian-detector/SKILL.md",
+  "source": {
+    "repo": "tradermonty/claude-trading-skills",
+    "url": "https://github.com/tradermonty/claude-trading-skills/blob/main/skills/cot-contrarian-detector/SKILL.md",
+    "path": "skills/cot-contrarian-detector/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-13T04:59:02.439Z",
+    "stars": 2355,
+    "language": "Python",
+    "pushed_at": "2026-07-13T04:38:14Z",
+    "license": "MIT"
+  }
+}

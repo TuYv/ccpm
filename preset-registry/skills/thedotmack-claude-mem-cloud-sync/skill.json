@@ -1,0 +1,25 @@
+{
+  "id": "thedotmack-claude-mem-cloud-sync",
+  "name": "cloud-sync",
+  "description": "Set up or check claude-mem cloud sync with cmem.ai Pro. Use when the user says \"set up cloud sync\", \"sync my memories\", \"cmem pro\", \"cloud backup\", \"sync status\", or wants their memory database backed up or synced to their cmem.ai account.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "thedotmack",
+  "install_path": ".claude/skills/cloud-sync/SKILL.md",
+  "source": {
+    "repo": "thedotmack/claude-mem",
+    "url": "https://github.com/thedotmack/claude-mem/blob/main/plugin/skills/cloud-sync/SKILL.md",
+    "path": "plugin/skills/cloud-sync/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-13T05:18:44.529Z",
+    "stars": 86995,
+    "language": "JavaScript",
+    "pushed_at": "2026-07-13T04:01:24Z",
+    "license": "Apache-2.0"
+  }
+}
