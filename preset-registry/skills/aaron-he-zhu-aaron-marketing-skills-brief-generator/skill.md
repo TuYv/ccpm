@@ -4,13 +4,13 @@ slug: brief-generator
 displayName: "Brief Generator · 创作简报生成"
 summary: "结构化红人简报:交付物、关键信息、创意方向、时间线、披露要求与报酬条款"
 description: 'Use when the user asks to "create an influencer brief" or "write a campaign brief"; produces a structured creator brief with deliverables, key messages, creative direction, timeline, disclosure rules, and compensation terms. Not for choosing how to split spend across creators — use budget-optimizer.'
-version: "17.0.0"
+version: "18.0.0"
 license: Apache-2.0
 compatibility: "Claude Code and compatible agent-skill hosts"
 homepage: "https://github.com/aaron-he-zhu/aaron-marketing-skills"
 when_to_use: "Activate when the user needs to brief one or more influencers for a campaign, standardize brief formats across a team, onboard ambassador partners, build reusable templates for recurring campaigns, or tighten brief clarity after revision-heavy collaborations. Also fires for platform-specific briefs (TikTok review, Instagram Stories takeover, YouTube integration)."
 argument-hint: "<campaign or product> [platform] [content type]"
-metadata: {"author": "aaron-he-zhu", "version": "17.0.0", "discipline": "influencer", "phase": "plan", "family": "influencer-marketing", "hermes": {"tags": ["marketing", "influencer", "plan"], "category": "influencer"}, "openclaw": {"emoji": "📣", "homepage": "https://github.com/aaron-he-zhu/aaron-marketing-skills"}}
+metadata: {"author": "aaron-he-zhu", "version": "18.0.0", "discipline": "influencer", "phase": "target", "geo-relevance": "low", "hermes": {"tags": ["marketing", "influencer", "target"], "category": "influencer"}, "openclaw": {"emoji": "📣", "homepage": "https://github.com/aaron-he-zhu/aaron-marketing-skills"}}
 ---
 
 # Brief Generator
@@ -84,20 +84,20 @@ Disclosure and usage rights must be stated explicitly — never leave them as pl
 - Shared contract: [skill-contract.md](../../../references/skill-contract.md)
 - Shared state model: [state-model.md](../../../references/state-model.md)
 - Connector recipes: [CONNECTORS.md](../../../CONNECTORS.md)
-- C3 scoring architecture (when scoring brief quality): [references/c3/scoring-architecture.md](../../../references/c3/scoring-architecture.md)
+- STAR benchmark (when scoring brief quality): [references/star-benchmark.md](../../../references/star-benchmark.md)
 - Brief templates & variations (master fill-in template, content-type and campaign-type variations, invoke patterns, tips): [brief-templates.md](references/brief-templates.md)
-- Creator voice intake (capture real voice before briefing; content-reviewer reads the captured voice): [creator-voice-intake.md](references/creator-voice-intake.md)
+- Creator voice intake (capture real voice before briefing; creator-content-auditor reads the captured voice): [creator-voice-intake.md](references/creator-voice-intake.md)
 - Sibling skills:
   - [campaign-planner](../campaign-planner/SKILL.md) - Create the campaign this brief supports
   - [budget-optimizer](../budget-optimizer/SKILL.md) - Allocate spend across the briefed creators
-  - [content-reviewer](../../activate/content-reviewer/SKILL.md) - Review submitted content
+  - [creator-content-auditor](../../activate/creator-content-auditor/SKILL.md) - Review submitted content
   - [outreach-manager](../../activate/outreach-manager/SKILL.md) - Deliver briefs to influencers
   - [contract-helper](../../activate/contract-helper/SKILL.md) - Include legal terms
 
 ## Next Best Skill
 
 - **Primary**: [budget-optimizer](../budget-optimizer/SKILL.md) - Once the brief defines deliverables, set how spend is split across creators and platforms.
-- **Alternates (same Plan family)**:
+- **Alternates (same Target family)**:
   - [campaign-planner](../campaign-planner/SKILL.md) - Re-plan campaign scope if the brief surfaces new deliverable needs.
   - [outreach-manager](../../activate/outreach-manager/SKILL.md) - Send the finished brief to selected creators.
 

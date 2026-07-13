@@ -4,13 +4,13 @@ slug: performance-analyzer
 displayName: "Performance Analyzer · 效果分析"
 summary: "活动效果分析:达成 vs 目标、平台与创作者维度拆解、优化建议"
 description: 'Use when the user asks to "analyze influencer campaign performance", "compare influencers", or "find what content worked"; produces metric scorecards vs target and benchmark, platform/influencer/content rankings, engagement-quality and sentiment reads, conversion-attribution breakdowns, and ranked learnings. Not for dollar-level return math — use roi-calculator.'
-version: "17.0.0"
+version: "18.0.0"
 license: Apache-2.0
 compatibility: "Claude Code and compatible agent-skill hosts"
 homepage: "https://github.com/aaron-he-zhu/aaron-marketing-skills"
 when_to_use: "Use mid-flight or post-campaign when a user wants to evaluate influencer results, compare creators against each other, find top-performing content or formats, judge engagement quality and comment sentiment, connect influencer activity to conversions, or build performance benchmarks for future planning."
 argument-hint: "<campaign name> [platform or influencer handles]"
-metadata: {"author": "aaron-he-zhu", "version": "17.0.0", "discipline": "influencer", "phase": "measure", "family": "influencer-marketing", "hermes": {"tags": ["marketing", "influencer", "measure"], "category": "influencer"}, "openclaw": {"emoji": "📣", "homepage": "https://github.com/aaron-he-zhu/aaron-marketing-skills"}}
+metadata: {"author": "aaron-he-zhu", "version": "18.0.0", "discipline": "influencer", "phase": "report", "geo-relevance": "low", "hermes": {"tags": ["marketing", "influencer", "report"], "category": "influencer"}, "openclaw": {"emoji": "📣", "homepage": "https://github.com/aaron-he-zhu/aaron-marketing-skills"}}
 ---
 
 # Performance Analyzer
@@ -74,7 +74,7 @@ Work the steps in order. Each fill-in template lives in [references/analysis-tem
 7. **Conversion & attribution analysis** — draw the funnel, score conversion metrics vs benchmark, attribute by method (promo / UTM / direct / estimated), and table promo-code performance. Template: step 7.
 8. **Generate insights & recommendations** — write the top-5 learnings, what worked / what didn't, optimization opportunities, roster renew/drop calls, and future-campaign guidance. Template: step 8.
 
-Before naming any creator/format/platform a real winner, clear the significance bar in [measurement-protocol.md](../../../references/measurement-protocol.md) — otherwise mark it Keep-testing. When a structured score is needed, apply per-dimension C3 analysis (ACE/ART scope scores) from [c3/scoring-architecture.md](../../../references/c3/scoring-architecture.md), and hand the measured inputs to [roi-calculator](../roi-calculator/SKILL.md) for the ROI score and CVI rollup — this skill contributes the inputs but does not compute the rollup.
+Before naming any creator/format/platform a real winner, clear the significance bar in [measurement-protocol.md](../../../references/measurement-protocol.md) — otherwise mark it Keep-testing. When a structured score is needed, apply per-dimension STAR analysis (Suitability/Trust/Appeal/Return dimension reads) from [star-benchmark.md](../../../references/star-benchmark.md), and hand the measured inputs to [roi-calculator](../roi-calculator/SKILL.md) for the measured Return (R) evidence — this skill contributes the inputs but does not compute the SQS (the creator-content-auditor gate does).
 
 ## Example
 
@@ -105,16 +105,16 @@ Before naming any creator/format/platform a real winner, clear the significance 
 - [state-model.md](../../../references/state-model.md) — memory tiers and save-path conventions.
 - [CONNECTORS.md](../../../CONNECTORS.md) — verified free/keyless data recipes per connector category.
 - [measurement-protocol.md](../../../references/measurement-protocol.md) — preregistered readback windows, outcome unit, alpha, practical-effect boundary, multiplicity/sequential policy, guardrails, and decision owner. Report statistical and practical flags separately; use `experiment.py` for deterministic `Calculated` evidence, and never substitute a universal p-value/lift rule or attribute a business action to the helper.
-- The C3 benchmark at [references/c3/scoring-architecture.md](../../../references/c3/scoring-architecture.md) — scoring architecture when a structured score is needed.
-- Sibling skills: [roi-calculator](../roi-calculator/SKILL.md), [report-generator](../report-generator/SKILL.md), [fit-scorer](../../discover/fit-scorer/SKILL.md), [campaign-planner](../../plan/campaign-planner/SKILL.md).
+- The STAR benchmark at [references/star-benchmark.md](../../../references/star-benchmark.md) — scoring architecture when a structured score is needed.
+- Sibling skills: [roi-calculator](../roi-calculator/SKILL.md), [report-generator](../report-generator/SKILL.md), [fit-scorer](../../scout/fit-scorer/SKILL.md), [campaign-planner](../../target/campaign-planner/SKILL.md).
 
 ## Next Best Skill
 
 **Primary**: [roi-calculator](../roi-calculator/SKILL.md) — convert measured performance into dollar-level ROI, cost-per-result, and payback math.
 
-**Alternates** (same Measure family):
+**Alternates** (same Report family):
 
 - [report-generator](../report-generator/SKILL.md) — package the analysis into a formal stakeholder report.
-- [fit-scorer](../../discover/fit-scorer/SKILL.md) — feed proven performers back into creator scoring for the next round.
+- [fit-scorer](../../scout/fit-scorer/SKILL.md) — feed proven performers back into creator scoring for the next round.
 
 **Termination note**: Maintain a visited-set. If a skill has already been invoked this session, stop and report chain-complete rather than re-running it. Cap the chain at max-depth 3 hops; if results are inconclusive after that, surface the open loops to the user instead of continuing.

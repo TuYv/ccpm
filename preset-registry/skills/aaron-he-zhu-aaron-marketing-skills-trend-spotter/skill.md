@@ -4,13 +4,13 @@ slug: trend-spotter
 displayName: "Trend Spotter · 趋势侦察"
 summary: "排名化趋势报告:品牌契合评分、rising/peak/declining 判断与 go/skip 建议"
 description: 'Use when the user asks to "find trending topics", "what trends should my brand jump on", or "time a campaign around a cultural moment"; produces a ranked trend report with brand-fit scores, format calls (rising/peak/declining), a cultural calendar, and go/skip recommendations. Not for finding the creators to run those trends — use influencer-discovery; not for building the brand posting calendar from a go verdict — use social-calendar-builder.'
-version: "17.0.0"
+version: "18.0.0"
 license: Apache-2.0
 compatibility: "Claude Code and compatible agent-skill hosts"
 homepage: "https://github.com/aaron-he-zhu/aaron-marketing-skills"
 when_to_use: "Use when planning campaign timing and themes, deciding whether to join a hashtag, sound, or challenge, scouting trending content formats on a platform, mapping upcoming cultural moments to lead times, or checking which trends competitors have adopted or missed. Auto-activate when the request is about what is trending, what to post around, or when to act."
 argument-hint: "<brand or industry> [platform] [time horizon]"
-metadata: {"author": "aaron-he-zhu", "version": "17.0.0", "discipline": "influencer", "phase": "discover", "family": "influencer-marketing", "hermes": {"tags": ["marketing", "influencer", "discover"], "category": "influencer"}, "openclaw": {"emoji": "📣", "homepage": "https://github.com/aaron-he-zhu/aaron-marketing-skills"}}
+metadata: {"author": "aaron-he-zhu", "version": "18.0.0", "discipline": "influencer", "phase": "scout", "geo-relevance": "low", "hermes": {"tags": ["marketing", "influencer", "scout"], "category": "influencer"}, "openclaw": {"emoji": "📣", "homepage": "https://github.com/aaron-he-zhu/aaron-marketing-skills"}}
 ---
 
 # Trend Spotter
@@ -88,8 +88,8 @@ Output names the top trends to act on now — e.g. "Hot Girl Walk" Evolution (2.
 - [skill-contract.md](../../../references/skill-contract.md) — shared contract and Handoff Summary format.
 - [state-model.md](../../../references/state-model.md) — HOT/WARM/COLD memory tiers and save paths.
 - [CONNECTORS.md](../../../CONNECTORS.md) — free/keyless data recipe per connector category.
-- C3 benchmark scoring at [references/c3/scoring-architecture.md](../../../references/c3/scoring-architecture.md) — for grading trend-driven creative output downstream.
-- Siblings in the discover phase: [audience-mapper](../audience-mapper/SKILL.md), [influencer-discovery](../influencer-discovery/SKILL.md), [fit-scorer](../fit-scorer/SKILL.md).
+- STAR benchmark scoring at [references/star-benchmark.md](../../../references/star-benchmark.md) — for grading trend-driven creative output downstream.
+- Siblings in the scout phase: [audience-mapper](../audience-mapper/SKILL.md), [influencer-discovery](../influencer-discovery/SKILL.md), [fit-scorer](../fit-scorer/SKILL.md).
 
 ## Next Best Skill
 

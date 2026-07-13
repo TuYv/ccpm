@@ -4,13 +4,13 @@ slug: aaron-report-generator
 displayName: "Report Generator · 报告生成"
 summary: "面向干系人的营销活动报告:叙事结构、图表建议与洞察提炼"
 description: 'Use when the user asks to "create a campaign report", "build an executive summary", or "deliver client results"; produces audience-tailored influencer marketing reports (executive, client, internal team) with data tables, narrative, key learnings, and recommendations. Not for raw metric computation — use performance-analyzer.'
-version: "17.0.0"
+version: "18.0.0"
 license: Apache-2.0
 compatibility: "Claude Code and compatible agent-skill hosts"
 homepage: "https://github.com/aaron-he-zhu/aaron-marketing-skills"
 when_to_use: "Activate after a campaign or reporting period ends and the user needs a written report for a specific stakeholder. Triggers include post-campaign wrap-ups, executive or board summaries, client-facing results decks, internal team retrospectives, and monthly or quarterly performance reports. Pick this when the inputs are already-computed metrics that need structure, narrative, and recommendations for a named audience."
 argument-hint: "<campaign name> [audience: executive|client|team|board]"
-metadata: {"author": "aaron-he-zhu", "version": "17.0.0", "discipline": "influencer", "phase": "measure", "family": "influencer-marketing", "hermes": {"tags": ["marketing", "influencer", "measure"], "category": "influencer"}, "openclaw": {"emoji": "📣", "homepage": "https://github.com/aaron-he-zhu/aaron-marketing-skills"}}
+metadata: {"author": "aaron-he-zhu", "version": "18.0.0", "discipline": "influencer", "phase": "report", "geo-relevance": "low", "hermes": {"tags": ["marketing", "influencer", "report"], "category": "influencer"}, "openclaw": {"emoji": "📣", "homepage": "https://github.com/aaron-he-zhu/aaron-marketing-skills"}}
 ---
 
 # Report Generator
@@ -42,7 +42,7 @@ Generate an executive summary for our Q3 influencer campaigns
   1. The report matches the requested audience template (executive, client, team, or board).
   2. Every metric is paired with context (target, benchmark, or prior period).
   3. The report ends with concrete recommendations and, where relevant, action items.
-- **Primary next skill**: [content-quality-auditor](../../../seo-geo/optimize/content-quality-auditor/SKILL.md)
+- **Primary next skill**: [content-quality-auditor](../../../seo-geo/tune/content-quality-auditor/SKILL.md)
 
 ### Handoff Summary
 
@@ -107,15 +107,15 @@ Increase Q1 influencer budget by 25%, focused on TikTok micro-influencers and pr
 - [CONNECTORS.md](../../../CONNECTORS.md) — free/keyless data recipes per connector category
 - [performance-analyzer](../performance-analyzer/SKILL.md) — generates the metrics this report consumes
 - [roi-calculator](../roi-calculator/SKILL.md) — supplies ROI/ROAS figures
-- [campaign-planner](../../plan/campaign-planner/SKILL.md) — original plan to compare results against
+- [campaign-planner](../../target/campaign-planner/SKILL.md) — original plan to compare results against
 - [content-amplifier](../../activate/content-amplifier/SKILL.md) — amplification results to report on
-- [content-quality-auditor](../../../seo-geo/optimize/content-quality-auditor/SKILL.md) — quality gate for the report itself
+- [content-quality-auditor](../../../seo-geo/tune/content-quality-auditor/SKILL.md) — quality gate for the report itself
 
 ## Next Best Skill
 
-**Primary**: [content-quality-auditor](../../../seo-geo/optimize/content-quality-auditor/SKILL.md) — run the finished report through the publish-readiness gate before it goes to a stakeholder.
+**Primary**: [content-quality-auditor](../../../seo-geo/tune/content-quality-auditor/SKILL.md) — run the finished report through the publish-readiness gate before it goes to a stakeholder.
 
-**Alternates (same measure phase / influencer family)**:
+**Alternates (same report phase / influencer family)**:
 
 - [performance-analyzer](../performance-analyzer/SKILL.md) — if the report exposes data gaps, re-analyze before re-reporting.
 - [roi-calculator](../roi-calculator/SKILL.md) — recompute return figures if the financial inputs changed.

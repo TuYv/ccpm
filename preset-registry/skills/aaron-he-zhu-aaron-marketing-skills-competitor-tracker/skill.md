@@ -4,13 +4,13 @@ slug: aaron-competitor-tracker
 displayName: "Competitor Tracker · 竞对红人追踪"
 summary: "竞品创作者合作动向:合作名单、投放节奏与策略启示"
 description: 'Use when the user asks to "track competitor influencer marketing", "see who my rivals partner with", or "benchmark my influencer program"; produces a competitor partnership roster, campaign and content-strategy breakdown, performance estimates, and a gap/opportunity list. Not for finding your own new creators — use influencer-discovery.'
-version: "17.0.0"
+version: "18.0.0"
 license: Apache-2.0
 compatibility: "Claude Code and compatible agent-skill hosts"
 homepage: "https://github.com/aaron-he-zhu/aaron-marketing-skills"
 when_to_use: "Use when the user wants to understand a competitor's influencer marketing: which creators they partner with, what campaigns and content formats they run, estimated reach and spend, and where they leave gaps. Activate for competitive benchmarking, finding untapped or former-competitor creators, and spotting strategy shifts over time."
 argument-hint: "<your brand> [competitor names] [platform]"
-metadata: {"author": "aaron-he-zhu", "version": "17.0.0", "discipline": "influencer", "phase": "plan", "family": "influencer-marketing", "hermes": {"tags": ["marketing", "influencer", "plan"], "category": "influencer"}, "openclaw": {"emoji": "📣", "homepage": "https://github.com/aaron-he-zhu/aaron-marketing-skills"}}
+metadata: {"author": "aaron-he-zhu", "version": "18.0.0", "discipline": "influencer", "phase": "target", "geo-relevance": "low", "hermes": {"tags": ["marketing", "influencer", "target"], "category": "influencer"}, "openclaw": {"emoji": "📣", "homepage": "https://github.com/aaron-he-zhu/aaron-marketing-skills"}}
 ---
 
 # Competitor Tracker
@@ -87,13 +87,13 @@ Each step has a fill-in template in [references/templates.md](references/templat
 - [skill-contract.md](../../../references/skill-contract.md) — shared contract and handoff summary format.
 - [state-model.md](../../../references/state-model.md) — memory tiers and save-path conventions.
 - [CONNECTORS.md](../../../CONNECTORS.md) — keyless/free data recipe per `~~` connector category.
-- Sibling Map skills: [influencer-discovery](../../discover/influencer-discovery/SKILL.md) — find creators competitors aren't using; [fit-scorer](../../discover/fit-scorer/SKILL.md) — score competitor partners for your brand.
-- [trend-spotter](../../discover/trend-spotter/SKILL.md) — spot trends competitors are riding.
+- Sibling Scout skills: [influencer-discovery](../../scout/influencer-discovery/SKILL.md) — find creators competitors aren't using; [fit-scorer](../../scout/fit-scorer/SKILL.md) — score competitor partners for your brand.
+- [trend-spotter](../../scout/trend-spotter/SKILL.md) — spot trends competitors are riding.
 
 ## Next Best Skill
 
 - **Primary**: [campaign-planner](../campaign-planner/SKILL.md) — turn competitive gaps into a differentiated campaign.
-- **Alternate (Map)**: [influencer-discovery](../../discover/influencer-discovery/SKILL.md) — pursue the untapped and former-competitor creators this analysis surfaced.
-- **Alternate (Map)**: [fit-scorer](../../discover/fit-scorer/SKILL.md) — score a competitor's roster against your brand before you poach.
+- **Alternate (Scout)**: [influencer-discovery](../../scout/influencer-discovery/SKILL.md) — pursue the untapped and former-competitor creators this analysis surfaced.
+- **Alternate (Scout)**: [fit-scorer](../../scout/fit-scorer/SKILL.md) — score a competitor's roster against your brand before you poach.
 
 Termination note: keep a visited-set of skills invoked this session. If the next skill has already run this session, stop and report the chain complete instead of re-invoking. Max chain depth is 3 hops.

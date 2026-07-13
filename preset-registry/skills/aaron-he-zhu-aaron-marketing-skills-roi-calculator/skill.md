@@ -2,15 +2,15 @@
 name: roi-calculator
 slug: aaron-roi-calculator
 displayName: "ROI Calculator · ROI 计算"
-summary: "活动投入产出核算:成本归集、收益口径与 CVI/ROI 汇总"
+summary: "活动投入产出核算:成本归集、收益口径与 ROI 及 STAR 回报(R)证据汇总"
 description: 'Use when the user asks to "calculate influencer ROI", "prove campaign value", or "what was our ROAS"; produces direct ROI/ROAS, earned media value, attribution-modeled revenue, LTV-based ROI, and a stakeholder-ready summary. Not for building the full slide/written report — use report-generator.'
-version: "17.0.0"
+version: "18.0.0"
 license: Apache-2.0
 compatibility: "Claude Code and compatible agent-skill hosts"
 homepage: "https://github.com/aaron-he-zhu/aaron-marketing-skills"
 when_to_use: "Use when measuring or projecting influencer campaign ROI, justifying or defending budgets, comparing ROI across campaigns or channels, evaluating individual influencer or tier value, or preparing executive-level ROI numbers. Activate when the user supplies spend and results data and wants ROI, ROAS, EMV, CPA/CAC, attribution, or LTV impact computed."
 argument-hint: "<campaign name or spend> [revenue] [results data]"
-metadata: {"author": "aaron-he-zhu", "version": "17.0.0", "discipline": "influencer", "phase": "measure", "family": "influencer-marketing", "hermes": {"tags": ["marketing", "influencer", "measure"], "category": "influencer"}, "openclaw": {"emoji": "📣", "homepage": "https://github.com/aaron-he-zhu/aaron-marketing-skills"}}
+metadata: {"author": "aaron-he-zhu", "version": "18.0.0", "discipline": "influencer", "phase": "report", "geo-relevance": "low", "hermes": {"tags": ["marketing", "influencer", "report"], "category": "influencer"}, "openclaw": {"emoji": "📣", "homepage": "https://github.com/aaron-he-zhu/aaron-marketing-skills"}}
 ---
 
 # ROI Calculator
@@ -79,19 +79,13 @@ When a user requests ROI calculation, work the steps below. Each step has a fill
 
 8. **Generate the ROI report summary** — investment, returns, ROI by methodology, key metrics vs. benchmark, bottom line, and 1-3 recommendations. ([template](references/roi-templates.md#step-8--roi-summary-report))
 
-9. **Produce the typed C3 ROI scope and, when complete, CVI**
+9. **Produce the measured Return (R) evidence for the gate**
 
-   Declare goal, profile `roi-<goal>`, `scope: roi`, `assessment_time: forecast|actual`, campaign `rollup_id`, observation date, and the same catalog version used by ACE/ART. Follow [`runtime-invocation.md`](../../../references/runtime-invocation.md), resolve `AARON_SKILLS_ROOT="${CLAUDE_PLUGIN_ROOT:-$(git rev-parse --show-toplevel 2>/dev/null || true)}"`, verify the scorer and typed catalog, then score all 12 ROI items through `python3 "$AARON_SKILLS_ROOT/scripts/rubric-score.py" score <run.json>`. If the standalone install lacks them, return `score_state: NOT_SCORED` / `score_confidence: not_scored` and do not hand-calculate or persist a typed result. Actual-only R1/R2/I1/I2/I3 items are N/A with reasons in a forecast read; they require evidence in an actual read. **This 0–100 rubric result is not financial ROI %** from steps 1-8: the financial outputs are evidence consumed by ROI.R items, never the CVI input themselves.
+   The financial outputs from steps 1–8 are the campaign's **measured Return (R) evidence** for STAR: ROI/ROAS read against the declared target (`R1`) and the alternative-channel baseline (`R3`), CPE/CPM/CPA benchmarked on a normalized window (`R2`), KPI attainment versus the pre-registered target (`R4`), conversions attributed with a stated method and rigor (`R5`), and incremental impact separated from baseline where measurable (`R6`). Measured Return exists only at `assessment_time: actual`; a forecast read has no `R1`–`R6`. Label each figure Measured / User-provided / Calculated / Estimated.
 
-   ROI.I3 Fail emits `results-unverified`; report I1/I2/R1/R2 as low-confidence and do not make attributable-return claims. Preserve the scorer result rather than recomputing it in prose.
+   Hand this Return evidence to the [creator-content-auditor](../../activate/creator-content-auditor/SKILL.md) gate — it folds R into the full actual STAR run and computes the profile-weighted **SQS**. This skill does not run the scorer or emit the composite. Unverified conversions emit `results-unverified`: report `R1`/`R2`/`R5` as low-confidence and make no attributable-return claims. These financial numbers are consumed as R evidence; they are not themselves an SQS.
 
-   For CVI, combine complete typed ACE results from [fit-scorer](../../discover/fit-scorer/SKILL.md), complete ART results from [content-reviewer](../../activate/content-reviewer/SKILL.md), and exactly one ROI result through `python3 "$AARON_SKILLS_ROOT/scripts/rubric-score.py" c3-rollup <results.json>`:
-
-   ```
-   CVI = ( ACE_avg × ART_avg × ROI )^(1/3)
-   ```
-
-   Use the typed [`c3-rollup.schema.json`](../../../references/c3-rollup.schema.json) `components` form for real campaigns: positive budget weights for every ACE result, equal-weight ART results, and one ROI result. All components must share goal, `rollup_id`, observation date, assessment time, and catalog version. Keep the three aggregate scope scores beside CVI. If ACE/ART is missing, incomplete, or Unknown, emit ROI and mark CVI pending. If any component is `BLOCK` and therefore has no final scope score, **do not emit CVI**; report the blocking component instead of capping or averaging it.
+   For a multi-creator campaign, the gate scores each creator partnership separately; a budget-weighted mean of the per-partnership SQS values may summarize the campaign but never replaces the per-partnership diagnosis. This skill supplies the per-partnership Return evidence; it does not aggregate or roll up a composite.
 
 10. **Persist only with permission** — save under `memory/influencer/roi-calculator/` (or the paid path) only after authorization; request separate authorization for hot-cache promotion.
 
@@ -139,23 +133,23 @@ The source-dated benchmark evidence template lives in [references/roi-templates.
 ## Reference Materials
 
 - [references/roi-templates.md](references/roi-templates.md) — fill-in templates for every Instructions step, the worked example, and benchmark evidence inputs.
-- [measurement-protocol.md](../../../references/measurement-protocol.md) — read ROI/CVI deltas against a control over the readback window; do not over-claim attribution.
+- [measurement-protocol.md](../../../references/measurement-protocol.md) — read ROI and Return (R) deltas against a control over the readback window; do not over-claim attribution.
 - [skill-contract.md](../../../references/skill-contract.md) — shared contract and Handoff Summary format.
 - [state-model.md](../../../references/state-model.md) — memory tiers and save-path conventions.
 - [CONNECTORS.md](../../../CONNECTORS.md) — free/keyless data recipe per connector category.
-- C³ scoring: [c3-benchmark.md](../../../references/c3-benchmark.md), [c3/roi-campaign-benchmark.md](../../../references/c3/roi-campaign-benchmark.md), and [c3-rollup.schema.json](../../../references/c3-rollup.schema.json) — typed ROI and multi-component CVI contracts.
+- STAR scoring: [star-benchmark.md](../../../references/star-benchmark.md) — the Return (R) dimension this skill's evidence feeds and the profile-weighted SQS the gate computes.
 - [performance-analyzer](../performance-analyzer/SKILL.md) — supplies the results data this skill consumes.
 - [report-generator](../report-generator/SKILL.md) — wraps these numbers into a full report.
-- [budget-optimizer](../../plan/budget-optimizer/SKILL.md) — uses ROI output to reallocate spend.
-- [campaign-planner](../../plan/campaign-planner/SKILL.md) — sets the ROI targets these results are checked against.
+- [budget-optimizer](../../target/budget-optimizer/SKILL.md) — uses ROI output to reallocate spend.
+- [campaign-planner](../../target/campaign-planner/SKILL.md) — sets the ROI targets these results are checked against.
 
 ## Next Best Skill
 
 **Primary**: [report-generator](../report-generator/SKILL.md) — turn the ROI numbers into a stakeholder-ready report.
 
-**Alternates** (same Measure family):
+**Alternates** (same Report family):
 
 - [performance-analyzer](../performance-analyzer/SKILL.md) — go back for deeper performance breakdowns if the ROI math exposed gaps.
-- [budget-optimizer](../../plan/budget-optimizer/SKILL.md) — feed by-influencer and by-tier ROI into the next budget allocation.
+- [budget-optimizer](../../target/budget-optimizer/SKILL.md) — feed by-influencer and by-tier ROI into the next budget allocation.
 
 Termination note: keep a visited-set of skills invoked this session. If the primary next skill was already run, stop and report the chain complete rather than re-invoking it. Stop after at most 3 hops in a single chain.

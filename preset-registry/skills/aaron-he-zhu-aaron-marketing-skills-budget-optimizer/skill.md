@@ -4,13 +4,13 @@ slug: budget-optimizer
 displayName: "Budget Optimizer · 预算优化"
 summary: "跨创作者与层级的预算分配:目标导向的花费拆分与情景对比"
 description: 'Use when the user asks to "allocate my influencer budget", "optimize spend across tiers", or "compare budget scenarios"; produces a tier/platform/content allocation table, ROI and CPM/CPE projections, scenario comparisons, and mid-campaign reallocation moves. Not for building the full campaign plan — use campaign-planner.'
-version: "17.0.0"
+version: "18.0.0"
 license: Apache-2.0
 compatibility: "Claude Code and compatible agent-skill hosts"
 homepage: "https://github.com/aaron-he-zhu/aaron-marketing-skills"
 when_to_use: "Use when planning budget allocation for a new influencer campaign, splitting spend across nano/micro/macro tiers or platforms, estimating influencer costs and projecting ROI, modeling conservative vs aggressive scenarios, justifying a budget request, or reallocating budget mid-campaign based on performance."
 argument-hint: "<total budget> [platforms] [campaign goal]"
-metadata: {"author": "aaron-he-zhu", "version": "17.0.0", "discipline": "influencer", "phase": "plan", "family": "influencer-marketing", "hermes": {"tags": ["marketing", "influencer", "plan"], "category": "influencer"}, "openclaw": {"emoji": "📣", "homepage": "https://github.com/aaron-he-zhu/aaron-marketing-skills"}}
+metadata: {"author": "aaron-he-zhu", "version": "18.0.0", "discipline": "influencer", "phase": "target", "geo-relevance": "low", "hermes": {"tags": ["marketing", "influencer", "target"], "category": "influencer"}, "openclaw": {"emoji": "📣", "homepage": "https://github.com/aaron-he-zhu/aaron-marketing-skills"}}
 ---
 
 # Budget Optimizer
@@ -126,10 +126,10 @@ This allocation prioritizes TikTok for viral potential while using Instagram for
 - Connector recipes: [CONNECTORS.md](../../../CONNECTORS.md)
 - Sibling skills:
   - [campaign-planner](../campaign-planner/SKILL.md) — the campaign plan this budget funds
-  - [influencer-discovery](../../discover/influencer-discovery/SKILL.md) — find influencers in budget range
+  - [influencer-discovery](../../scout/influencer-discovery/SKILL.md) — find influencers in budget range
   - [outreach-manager](../../activate/outreach-manager/SKILL.md) — turn the allocation into outreach
-  - [roi-calculator](../../measure/roi-calculator/SKILL.md) — calculate actual ROI post-campaign
-  - [performance-analyzer](../../measure/performance-analyzer/SKILL.md) — inform reallocation decisions
+  - [roi-calculator](../../report/roi-calculator/SKILL.md) — calculate actual ROI post-campaign
+  - [performance-analyzer](../../report/performance-analyzer/SKILL.md) — inform reallocation decisions
 
 ## Next Best Skill
 
@@ -137,7 +137,7 @@ This allocation prioritizes TikTok for viral potential while using Instagram for
 
 **Alternates** (same influencer family):
 
-- [influencer-discovery](../../discover/influencer-discovery/SKILL.md) — if you need to source candidates that fit each tier's per-influencer budget first.
+- [influencer-discovery](../../scout/influencer-discovery/SKILL.md) — if you need to source candidates that fit each tier's per-influencer budget first.
 - [campaign-planner](../campaign-planner/SKILL.md) — if the budget exposed a gap in the underlying campaign plan.
 
 **Termination**: keep a visited-set. If the recommended next skill was already invoked in this session's chain, stop and report chain-complete instead of re-invoking. Default `max-depth: 3`. When routing is ambiguous, present the options and stop rather than auto-following.

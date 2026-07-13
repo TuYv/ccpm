@@ -4,13 +4,13 @@ slug: aaron-campaign-planner
 displayName: "Campaign Planner · 活动规划"
 summary: "红人活动整体规划:目标、阶段、创作者组合、时间线与风险预案"
 description: 'Use when the user asks to "plan an influencer campaign", "build a campaign blueprint", or "launch a product with creators"; produces campaign objectives, platform and influencer-tier strategy, content requirements, a phased timeline, budget allocation, and KPI targets. Not for writing individual creator briefs — use brief-generator; not for the overall product-launch plan (tiering, calendar, press, community day) — use launch-tier-planner, which hands this skill the creator lane. A launch request that does not mention creators routes to the launch discipline, not here.'
-version: "17.0.0"
+version: "18.0.0"
 license: Apache-2.0
 compatibility: "Claude Code and compatible agent-skill hosts"
 homepage: "https://github.com/aaron-he-zhu/aaron-marketing-skills"
 when_to_use: "Use when planning a new influencer campaign, launching a product with influencer support, building seasonal or tentpole activations, designing always-on creator programs, restructuring an underperforming campaign, or preparing a campaign plan to present to stakeholders. Activate when the user gives a brand, budget, audience, or timeframe and wants the full strategy-to-execution blueprint before briefs or outreach begin."
 argument-hint: "<brand or product> [budget] [platform] [timeframe]"
-metadata: {"author": "aaron-he-zhu", "version": "17.0.0", "discipline": "influencer", "phase": "plan", "family": "influencer-marketing", "hermes": {"tags": ["marketing", "influencer", "plan"], "category": "influencer"}, "openclaw": {"emoji": "📣", "homepage": "https://github.com/aaron-he-zhu/aaron-marketing-skills"}}
+metadata: {"author": "aaron-he-zhu", "version": "18.0.0", "discipline": "influencer", "phase": "target", "geo-relevance": "low", "hermes": {"tags": ["marketing", "influencer", "target"], "category": "influencer"}, "openclaw": {"emoji": "📣", "homepage": "https://github.com/aaron-he-zhu/aaron-marketing-skills"}}
 ---
 
 # Campaign Planner
@@ -84,15 +84,15 @@ Work the nine steps in order. Each has a fill-in template in [references/templat
 - [skill-contract.md](../../../references/skill-contract.md) — shared contract and handoff schema.
 - [state-model.md](../../../references/state-model.md) — memory tiers and save-path conventions.
 - [CONNECTORS.md](../../../CONNECTORS.md) — free/keyless data recipes per connector category.
-- [audience-mapper](../../discover/audience-mapper/SKILL.md) — define the target audience this plan serves.
+- [audience-mapper](../../scout/audience-mapper/SKILL.md) — define the target audience this plan serves.
 - [brief-generator](../brief-generator/SKILL.md) — turn the plan into per-influencer briefs.
 - [budget-optimizer](../budget-optimizer/SKILL.md) — refine the budget allocation.
-- [influencer-discovery](../../discover/influencer-discovery/SKILL.md) — find influencers matching the criteria.
+- [influencer-discovery](../../scout/influencer-discovery/SKILL.md) — find influencers matching the criteria.
 
 ## Next Best Skill
 
 - **Primary**: [brief-generator](../brief-generator/SKILL.md) — convert the approved plan into concrete influencer briefs.
 - **Alternate**: [budget-optimizer](../budget-optimizer/SKILL.md) — pressure-test and optimize the budget split before locking the plan.
-- **Alternate**: [influencer-discovery](../../discover/influencer-discovery/SKILL.md) — build the shortlist against the selection criteria defined here.
+- **Alternate**: [influencer-discovery](../../scout/influencer-discovery/SKILL.md) — build the shortlist against the selection criteria defined here.
 
 Termination note: keep a visited-set of skills invoked this session. If the primary next skill has already run this session, stop and report the chain complete rather than re-invoking. Do not chain deeper than 3 hops from the originating request.

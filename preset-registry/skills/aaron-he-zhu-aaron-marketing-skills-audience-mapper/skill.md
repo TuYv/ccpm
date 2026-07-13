@@ -3,24 +3,24 @@ name: audience-mapper
 slug: audience-mapper
 displayName: "Audience Mapper · 目标受众画像"
 summary: "目标受众画像/人群分析 · 细分社群/亚文化调研"
-description: 'Use when the user asks to "analyze my target audience", "build an audience profile for influencer targeting", "research a niche community", or "deep-dive a subculture before partnering with creators"; in audience mode produces demographic/psychographic profiles, a platform-priority matrix, named personas, and an influencer-selection criteria set, and in niche mode produces a community map, culture decode (language/norms/taboos), key-voice tiers, a Brand Fit Score, and a phased entry strategy. Not for finding specific creators to contract — use influencer-discovery; not for scoring a shortlist on ACE — use fit-scorer. 目标受众画像/人群分析 · 细分社群/亚文化调研'
-version: "17.0.0"
+description: 'Use when the user asks to "analyze my target audience", "build an audience profile for influencer targeting", "research a niche community", or "deep-dive a subculture before partnering with creators"; in audience mode produces demographic/psychographic profiles, a platform-priority matrix, named personas, and an influencer-selection criteria set, and in niche mode produces a community map, culture decode (language/norms/taboos), key-voice tiers, a Brand Fit Score, and a phased entry strategy. Not for finding specific creators to contract — use influencer-discovery; not for scoring a shortlist on Suitability — use fit-scorer. 目标受众画像/人群分析 · 细分社群/亚文化调研'
+version: "18.0.0"
 license: Apache-2.0
 compatibility: "Claude Code and compatible agent-skill hosts"
 homepage: "https://github.com/aaron-he-zhu/aaron-marketing-skills"
 when_to_use: "Run at the start of an influencer program, or when entering a new market/segment, before any creator selection — this is the who + what-community step. Use audience mode to understand who the customer is, where they spend time online, which creators they trust, and what selection criteria follow; use niche mode to decode a specific subculture's language, norms, taboos, key voices, and brand fit before outreach so the brand avoids cultural missteps. Works from a brand or product name alone, or from supplied customer/community data. Also use to diagnose why a prior campaign underperformed or to build personas for a creative brief."
 argument-hint: "<brand/product or niche> [mode: audience|niche] [category] [geo/platforms]"
-metadata: {"author": "aaron-he-zhu", "version": "17.0.0", "discipline": "influencer", "phase": "discover", "geo-relevance": "low", "family": "influencer-marketing", "hermes": {"tags": ["marketing", "influencer", "discover"], "category": "influencer"}, "openclaw": {"emoji": "📣", "homepage": "https://github.com/aaron-he-zhu/aaron-marketing-skills"}}
+metadata: {"author": "aaron-he-zhu", "version": "18.0.0", "discipline": "influencer", "phase": "scout", "geo-relevance": "low", "hermes": {"tags": ["marketing", "influencer", "scout"], "category": "influencer"}, "openclaw": {"emoji": "📣", "homepage": "https://github.com/aaron-he-zhu/aaron-marketing-skills"}}
 ---
 
 # Audience Mapper
 
 Maps **who** the brand is trying to reach and **what community** they belong to — the two halves of understanding an audience before any creator is selected. It runs in two modes against one shared inputs set:
 
-- **`audience` mode** — the wide-angle read: demographic + psychographic profiles, a behavioral/media-diet map, a platform-priority matrix, content preferences, an influencer-affinity table, one or more named personas, and a must-have / nice-to-have / red-flag **influencer-selection criteria** set ready to hand to discovery. (Absorbs the former `audience-analyzer`.)
-- **`niche` mode** — the deep-dive: a community map (size, sub-niches, psychographics), a culture decode (language, norms, taboos), key-voice tiers, a content ecosystem, a **Brand Fit Score (X/25)** with a Strong/Moderate/Weak/Poor verdict, and a phased entry strategy with explicit red lines. (Absorbs the former `niche-researcher`.)
+- **`audience` mode** — the wide-angle read: demographic + psychographic profiles, a behavioral/media-diet map, a platform-priority matrix, content preferences, an influencer-affinity table, one or more named personas, and a must-have / nice-to-have / red-flag **influencer-selection criteria** set ready to hand to discovery.
+- **`niche` mode** — the deep-dive: a community map (size, sub-niches, psychographics), a culture decode (language, norms, taboos), key-voice tiers, a content ecosystem, a **Brand Fit Score (X/25)** with a Strong/Moderate/Weak/Poor verdict, and a phased entry strategy with explicit red lines.
 
-Both feed [C³](../../../references/c3-benchmark.md) creator/content scoring downstream, but this skill computes **neither** the ACE/ART/ROI scores nor the CVI — it produces the audience and community facts that `fit-scorer` and `content-reviewer` later score against. Scope guard below.
+Both feed [STAR](../../../references/star-benchmark.md) creator/content scoring downstream, but this skill computes **neither** the Suitability/Trust/Appeal/Return dimension scores nor the SQS — it produces the audience and community facts that `fit-scorer` and `creator-content-auditor` later score against. Scope guard below.
 
 ## Quick Start
 
@@ -90,7 +90,7 @@ Then run the branch for the chosen mode.
 6. **Assess opportunities & risks** — market opportunity, the **Brand Fit Score (X/25)** with Strong/Moderate/Weak/Poor verdict, risks with mitigations, cultural sensitivities, competitive map, white-space. (§N6)
 7. **Generate the entry strategy** — recommended approach, phased rollout (Listen & Learn → Soft Entry → Active Engagement), prioritized creator partnerships, content strategy, success metrics, and explicit **Red Lines**. (§N7)
 
-**Scope guard**: this skill maps the audience and the community — it does **not** find or contract specific creators (that is [influencer-discovery](../influencer-discovery/SKILL.md)), score a creator shortlist on ACE or run the A2/C1/E2 vetoes (that is [fit-scorer](../fit-scorer/SKILL.md)), or gate deliverable content on ART (that is [content-reviewer](../../activate/content-reviewer/SKILL.md)). The Brand Fit Score (X/25) is a niche-entry go/no-go for the community, **not** the C³ ACE creator score or the CVI. Produce the audience/community facts and hand off; let the scoring skills roll up. When the goal is the brand's own organic presence rather than a creator partnership, the niche-mode phased entry strategy hands execution to [participation-warmup-planner](../../../social/explore/participation-warmup-planner/SKILL.md).
+**Scope guard**: this skill maps the audience and the community — it does **not** find or contract specific creators (that is [influencer-discovery](../influencer-discovery/SKILL.md)), score a creator shortlist on Suitability or run the `STAR-S2`/`STAR-S6` vetoes (that is [fit-scorer](../fit-scorer/SKILL.md)), or gate deliverable content on Trust and Appeal (that is [creator-content-auditor](../../activate/creator-content-auditor/SKILL.md)). The Brand Fit Score (X/25) is a niche-entry go/no-go for the community, **not** the STAR Suitability (S) read or the SQS. Produce the audience/community facts and hand off; let the scoring skills roll up. When the goal is the brand's own organic presence rather than a creator partnership, the niche-mode phased entry strategy hands execution to [participation-warmup-planner](../../../social/explore/participation-warmup-planner/SKILL.md).
 
 ## Save Results
 
@@ -99,11 +99,11 @@ Ask "Save these results for future sessions?" If yes, write to `memory/influence
 ## Reference Materials
 
 - [references/templates.md](references/templates.md) — fill-in templates for both modes (audience §A1–A9, niche §N1–N7), worked examples, and tips for success.
-- [C³ Benchmark](../../../references/c3-benchmark.md) — the framework these facts feed; note the audience/community mapping is upstream of ACE/ART scoring, which this skill does not compute.
-- [C³ scoring architecture](../../../references/c3/scoring-architecture.md) — how downstream creator/fit scoring uses this output.
+- [STAR Benchmark](../../../references/star-benchmark.md) — the framework these facts feed; note the audience/community mapping is upstream of Suitability/Trust/Appeal scoring, which this skill does not compute.
+- [STAR benchmark — Skill Ownership](../../../references/star-benchmark.md) — how downstream creator/fit scoring uses this output.
 - [skill-contract.md](../../../references/skill-contract.md) · [state-model.md](../../../references/state-model.md) — shared contract, handoff schema, memory tiers, save paths.
 - [CONNECTORS.md](../../../CONNECTORS.md) · [SECURITY.md](../../../SECURITY.md) — free/keyless recipe per connector category and the untrusted-data boundary.
-- Sibling Discover skills: [trend-spotter](../trend-spotter/SKILL.md), [influencer-discovery](../influencer-discovery/SKILL.md), [fit-scorer](../fit-scorer/SKILL.md).
+- Sibling Scout skills: [trend-spotter](../trend-spotter/SKILL.md), [influencer-discovery](../influencer-discovery/SKILL.md), [fit-scorer](../fit-scorer/SKILL.md).
 
 ## Next Best Skill
 
@@ -111,5 +111,5 @@ Global termination applies (visited-set, `max-depth: 3`, ambiguity-stop) — see
 
 - **Primary**: [influencer-discovery](../influencer-discovery/SKILL.md) — once the selection criteria (audience mode) or the voice tiers + red lines (niche mode) are written and promoted, find and shortlist specific creators against them.
 - **If the audience/niche is set but you need live momentum first**: [trend-spotter](../trend-spotter/SKILL.md) — surface what is currently moving so partnerships ride live signal; then STOP if it was already visited this chain.
-- **After a shortlist exists**: [fit-scorer](../fit-scorer/SKILL.md) — score candidates on ACE and run the A2/C1/E2 vetoes (this skill does not score).
-- **Terminal**: once the influencer-selection criteria (audience) or the phased entry strategy + red lines (niche) are written and promoted, the discover-mapping step is complete — hand off to discovery and STOP; report chain-complete rather than re-entering the sibling mode on the same brand.
+- **After a shortlist exists**: [fit-scorer](../fit-scorer/SKILL.md) — score candidates on Suitability and run the `STAR-S2`/`STAR-S6` vetoes (this skill does not score).
+- **Terminal**: once the influencer-selection criteria (audience) or the phased entry strategy + red lines (niche) are written and promoted, the scout-mapping step is complete — hand off to discovery and STOP; report chain-complete rather than re-entering the sibling mode on the same brand.
