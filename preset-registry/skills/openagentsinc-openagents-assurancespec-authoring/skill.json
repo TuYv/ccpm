@@ -1,0 +1,25 @@
+{
+  "id": "openagentsinc-openagents-assurancespec-authoring",
+  "name": "assurancespec-authoring",
+  "description": "Author or refine a deterministic, digest-bound AssuranceSpec proposal with explicit obligations, oracles, falsifiers, seams, environments, and honest design gaps.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "OpenAgentsInc",
+  "install_path": ".claude/skills/assurancespec-authoring/SKILL.md",
+  "source": {
+    "repo": "OpenAgentsInc/openagents",
+    "url": "https://github.com/OpenAgentsInc/openagents/blob/main/packages/assurance-spec/skills/assurancespec-authoring/SKILL.md",
+    "path": "packages/assurance-spec/skills/assurancespec-authoring/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-14T03:42:52.998Z",
+    "stars": 439,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-14T03:42:43Z",
+    "license": null
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "openagentsinc-openagents-assurancespec-work",
+  "name": "assurancespec-work",
+  "description": "Work under an admitted AssuranceSpec by binding exact subject and obligation identities, checking staleness, executing reviewed proof designs, and reporting evidence without claiming lifecycle authority.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "OpenAgentsInc",
+  "install_path": ".claude/skills/assurancespec-work/SKILL.md",
+  "source": {
+    "repo": "OpenAgentsInc/openagents",
+    "url": "https://github.com/OpenAgentsInc/openagents/blob/main/packages/assurance-spec/skills/assurancespec-work/SKILL.md",
+    "path": "packages/assurance-spec/skills/assurancespec-work/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-14T03:42:53.116Z",
+    "stars": 439,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-14T03:42:43Z",
+    "license": null
+  }
+}

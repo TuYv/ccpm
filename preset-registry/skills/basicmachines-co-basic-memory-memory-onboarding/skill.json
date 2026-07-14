@@ -1,0 +1,25 @@
+{
+  "id": "basicmachines-co-basic-memory-memory-onboarding",
+  "name": "memory-onboarding",
+  "description": "Guide someone new to Basic Memory through designing and building a complete personal knowledge system — interview them about what they want to track, propose a structure, build it with schemas and instruction notes, teach them to use it, and set up their AI assistant to load it automatically. Use this skill whenever a user says they're new to Basic Memory, wants to 'get started', 'set up', or 'onboard' with Basic Memory, doesn't know what to use it for, asks how to organize their memory project ",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "basicmachines-co",
+  "install_path": ".claude/skills/memory-onboarding/SKILL.md",
+  "source": {
+    "repo": "basicmachines-co/basic-memory",
+    "url": "https://github.com/basicmachines-co/basic-memory/blob/main/skills/memory-onboarding/SKILL.md",
+    "path": "skills/memory-onboarding/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-14T03:41:43.312Z",
+    "stars": 3422,
+    "language": "Python",
+    "pushed_at": "2026-07-14T02:51:20Z",
+    "license": "AGPL-3.0"
+  }
+}

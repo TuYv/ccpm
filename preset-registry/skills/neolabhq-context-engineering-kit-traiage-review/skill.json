@@ -1,0 +1,25 @@
+{
+  "id": "neolabhq-context-engineering-kit-traiage-review",
+  "name": "traiage-review",
+  "description": "This skill should be used when need prioritize what changed code in repository human must review.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "NeoLabHQ",
+  "install_path": ".claude/skills/traiage-review/SKILL.md",
+  "source": {
+    "repo": "NeoLabHQ/context-engineering-kit",
+    "url": "https://github.com/NeoLabHQ/context-engineering-kit/blob/master/plugins/review/skills/traiage-review/SKILL.md",
+    "path": "plugins/review/skills/traiage-review/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-07-14T03:39:58.351Z",
+    "stars": 1236,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-14T00:21:18Z",
+    "license": "GPL-3.0"
+  }
+}
