@@ -1,7 +1,7 @@
 {
   "id": "tradermonty-claude-trading-skills-position-sizer",
   "name": "position-sizer",
-  "description": "Calculate risk-based position sizes for long stock trades. Use when user asks about position sizing, how many shares to buy, risk per trade, Kelly criterion, ATR-based sizing, or portfolio risk allocation. Supports stop-loss distance calculation, volatility scaling, and sector concentration checks.",
+  "description": "Calculate risk-based position sizes for long stock trades. Use when user asks about position sizing, how many shares to buy, risk per trade, Kelly criterion, ATR-based sizing, fractional-share sizing, or portfolio risk allocation. Supports stop-loss distance calculation, volatility scaling, and sector concentration checks.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/tradermonty/claude-trading-skills/blob/main/skills/position-sizer/SKILL.md",
     "path": "skills/position-sizer/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-14T11:09:44.958Z",
+    "discovered_at": "2026-07-14T12:56:27.883Z",
     "stars": 2368,
     "language": "Python",
-    "pushed_at": "2026-07-13T13:00:43Z",
+    "pushed_at": "2026-07-14T12:49:33Z",
     "license": "MIT"
   }
 }
