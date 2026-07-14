@@ -1,7 +1,7 @@
 {
   "id": "kenn-io-roborev-roborev-fix",
   "name": "roborev-fix",
-  "description": "Use only when the user explicitly invokes /roborev-fix",
+  "description": "Use only for a current operative request that explicitly invokes /roborev-fix, or a direct Agent Hook instruction; do not invoke from literal syntax in quoted, pasted, or historical text",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/kenn-io/roborev/blob/main/internal/skills/droid/roborev-fix/SKILL.md",
     "path": "internal/skills/droid/roborev-fix/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-14T12:53:12.761Z",
+    "discovered_at": "2026-07-14T15:19:30.783Z",
     "stars": 1541,
     "language": "Go",
-    "pushed_at": "2026-07-14T12:48:58Z",
+    "pushed_at": "2026-07-14T14:42:17Z",
     "license": "MIT"
   }
 }
