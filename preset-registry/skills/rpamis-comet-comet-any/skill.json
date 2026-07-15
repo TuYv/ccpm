@@ -1,7 +1,7 @@
 {
   "id": "rpamis-comet-comet-any",
   "name": "comet-any",
-  "description": "Use when the user wants to customize Comet five-phase skills, create a workflow skill, organize an existing skill, or compose skills with Workflow Node / Skill Binding / Output Schema.",
+  "description": "Use only when explicitly invoked as /comet-any or when the user explicitly wants to customize Comet's five-phase workflow or create/upgrade a workflow Skill managed by Comet Creator. Do not use for general Skill authoring, cleanup, or review.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/rpamis/comet/blob/master/assets/skills/comet-any/SKILL.md",
     "path": "assets/skills/comet-any/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-07-15T14:21:08.587Z",
-    "stars": 2300,
+    "discovered_at": "2026-07-15T16:02:18.161Z",
+    "stars": 2305,
     "language": "JavaScript",
-    "pushed_at": "2026-07-15T10:02:57Z",
+    "pushed_at": "2026-07-15T15:33:54Z",
     "license": "MIT"
   }
 }

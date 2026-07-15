@@ -1,7 +1,7 @@
 {
   "id": "daymade-claude-code-skills-asr-transcribe-to-text",
   "name": "asr-transcribe-to-text",
-  "description": ">- Transcribes audio and video to text using Qwen3-ASR, with input handling for local files, direct media URLs, and podcast/web pages. Supports local MLX inference on macOS Apple Silicon and remote OpenAI-compatible ASR endpoints. Use when the user wants to transcribe recordings, podcasts, lectures, interviews, meetings, screen recordings, or any audio/video file; also use for ASR, Qwen ASR, speech-to-text, 转录, 语音转文字, and 录音转文字 requests. Also covers word-level timestamps via mlx-whisper for subt",
+  "description": ">- Transcribes audio and video to speaker-labeled text: Qwen3-ASR full-audio transcription + whisper word timing + pyannote diarization, aligned into a who-said-what transcript BY DEFAULT (decoupled WhisperX-style — the audio is never cut before ASR). Handles local files, direct media URLs, and podcast/web pages; local MLX inference on macOS Apple Silicon or remote OpenAI-compatible ASR endpoints. Use when the user wants to transcribe recordings, podcasts, lectures, interviews, meetings, screen ",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-audio/asr-transcribe-to-text/SKILL.md",
     "path": "daymade-audio/asr-transcribe-to-text/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-15T14:21:25.840Z",
+    "discovered_at": "2026-07-15T16:02:34.885Z",
     "stars": 1269,
     "language": "Python",
-    "pushed_at": "2026-07-15T13:38:43Z",
+    "pushed_at": "2026-07-15T15:38:53Z",
     "license": "MIT"
   }
 }
