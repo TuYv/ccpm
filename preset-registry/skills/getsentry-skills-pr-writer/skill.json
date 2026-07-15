@@ -1,7 +1,7 @@
 {
   "id": "getsentry-skills-pr-writer",
   "name": "pr-writer",
-  "description": "Create, refresh, and rewrite PR titles and descriptions following Sentry conventions. Use when opening a PR, writing or updating a PR title/body/description, refreshing an existing PR after material changes, or preparing branch changes for review.",
+  "description": "Create or refresh reviewer-facing PR titles and descriptions. Use when opening a PR, updating its title or body, or preparing branch changes for review.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/getsentry/skills/blob/main/skills/pr-writer/SKILL.md",
     "path": "skills/pr-writer/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-15T19:57:31.388Z",
-    "stars": 863,
+    "discovered_at": "2026-07-15T21:27:36.540Z",
+    "stars": 864,
     "language": "Python",
-    "pushed_at": "2026-06-30T20:52:20Z",
+    "pushed_at": "2026-07-15T21:24:32Z",
     "license": "Apache-2.0"
   }
 }

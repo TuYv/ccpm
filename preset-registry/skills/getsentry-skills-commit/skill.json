@@ -1,7 +1,7 @@
 {
   "id": "getsentry-skills-commit",
   "name": "commit",
-  "description": "ALWAYS use this skill when committing code changes — never commit directly without it. Creates commits following Sentry conventions with proper conventional commit format and issue references. Trigger on any commit, git commit, save changes, or commit message task.",
+  "description": "Use for every request to commit changes or draft a commit message. Creates Sentry-style conventional commits with issue references.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/getsentry/skills/blob/main/skills/commit/SKILL.md",
     "path": "skills/commit/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-15T19:57:28.900Z",
-    "stars": 863,
+    "discovered_at": "2026-07-15T21:27:35.313Z",
+    "stars": 864,
     "language": "Python",
-    "pushed_at": "2026-06-30T20:52:20Z",
+    "pushed_at": "2026-07-15T21:24:32Z",
     "license": "Apache-2.0"
   }
 }
