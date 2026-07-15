@@ -1,0 +1,25 @@
+{
+  "id": "ykdojo-claude-code-tips-private-github-search",
+  "name": "private-github-search",
+  "description": "Full-text search across all of the user's GitHub repos (including private ones) using a local mirror and ripgrep. Use for \"where did I put X\", \"which repo has X\", or any search spanning the user's repos - gh search code / the REST API cannot reliably search private repos.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ykdojo",
+  "install_path": ".claude/skills/private-github-search/SKILL.md",
+  "source": {
+    "repo": "ykdojo/claude-code-tips",
+    "url": "https://github.com/ykdojo/claude-code-tips/blob/main/skills/private-github-search/SKILL.md",
+    "path": "skills/private-github-search/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-15T06:35:54.167Z",
+    "stars": 9266,
+    "language": "HTML",
+    "pushed_at": "2026-07-15T05:54:48Z",
+    "license": null
+  }
+}
