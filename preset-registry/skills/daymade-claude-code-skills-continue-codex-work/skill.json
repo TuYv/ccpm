@@ -1,0 +1,25 @@
+{
+  "id": "daymade-claude-code-skills-continue-codex-work",
+  "name": "continue-codex-work",
+  "description": ">- Recover actionable context from a prior Codex CLI session's local rollout files and continue interrupted work without running `codex resume`. Use this whenever the user wants to pick up Codex (OpenAI Codex CLI / GPT agent) work — they give a Codex session id, ask to continue what Codex was doing, say a Codex run was cut off mid-task, or want to inspect `~/.codex/sessions` rollout JSONL before resuming. This is the Codex counterpart of continue-claude-work: reach for it for Codex/`~/.codex` se",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/continue-codex-work/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-claude-code/continue-codex-work/SKILL.md",
+    "path": "daymade-claude-code/continue-codex-work/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-15T17:58:43.445Z",
+    "stars": 1269,
+    "language": "Python",
+    "pushed_at": "2026-07-15T17:53:58Z",
+    "license": "MIT"
+  }
+}
