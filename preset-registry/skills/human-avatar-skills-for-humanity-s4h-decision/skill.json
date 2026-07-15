@@ -2,7 +2,7 @@
   "id": "human-avatar-skills-for-humanity-s4h-decision",
   "name": "s4h-decision",
   "description": "Entry point for the decision toolkit. Routes to the right decision skill based on your situation. Use when you say 'decision', 'help me decide', 'should I', 'which option', 'what are my choices', 'what could go wrong', 'is this reversible', or want decision help without knowing which specific tool fits.",
-  "category": "文档写作",
+  "category": "开发编程",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/human-avatar/skills-for-humanity/blob/main/skills/s4h-decision/SKILL.md",
     "path": "skills/s4h-decision/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-15T12:47:27.815Z",
-    "stars": 199,
+    "discovered_at": "2026-07-15T15:07:42.357Z",
+    "stars": 200,
     "language": "JavaScript",
-    "pushed_at": "2026-05-31T19:50:06Z",
+    "pushed_at": "2026-07-15T14:16:11Z",
     "license": "MIT"
   },
   "summary_zh": "帮你做决定的入口工具，根据你的具体情况自动匹配合适的决策方法，适合纠结选哪个、要不要做、有什么风险时使用。"

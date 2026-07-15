@@ -1,0 +1,25 @@
+{
+  "id": "timewarpengineering-timewarp-architecture-slice-isolation",
+  "name": "slice-isolation",
+  "description": ">- **TIMEWARP SKILL** — product slice placement and TWA0009 isolation (SliceRoot, namespaces, platform Applications, Components/contracts sharing, CrossSliceReference opt-out). Invoke before scaffolding a new feature/slice/page or when fixing TWA0009 / cross-slice references. WHEN: \"Add a new clients feature page\", \"Where does this state live?\", \"TWA0009 slice references another product slice\", \"CrossSliceReference\", \"new product area under features/\", greenfield slice scaffolding.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "TimeWarpEngineering",
+  "install_path": ".claude/skills/slice-isolation/SKILL.md",
+  "source": {
+    "repo": "TimeWarpEngineering/timewarp-architecture",
+    "url": "https://github.com/TimeWarpEngineering/timewarp-architecture/blob/master/skills/slice-isolation/SKILL.md",
+    "path": "skills/slice-isolation/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-07-15T14:18:04.081Z",
+    "stars": 54,
+    "language": "C#",
+    "pushed_at": "2026-07-15T13:42:53Z",
+    "license": "Unlicense"
+  }
+}

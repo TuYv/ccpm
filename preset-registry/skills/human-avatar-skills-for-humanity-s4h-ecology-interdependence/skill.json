@@ -2,7 +2,7 @@
   "id": "human-avatar-skills-for-humanity-s4h-ecology-interdependence",
   "name": "s4h-ecology-interdependence",
   "description": "Maps dependency webs and the cascading effects of removing or changing a node in the web. Use when asked 'who depends on whom', 'what cascades if we change X', 'downstream effects', 'what holds this together', 'ripple effects', or 'what breaks if we remove this'.",
-  "category": "文档写作",
+  "category": "开发编程",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/human-avatar/skills-for-humanity/blob/main/skills/s4h-ecology-interdependence/SKILL.md",
     "path": "skills/s4h-ecology-interdependence/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-15T12:47:28.678Z",
-    "stars": 199,
+    "discovered_at": "2026-07-15T15:07:43.168Z",
+    "stars": 200,
     "language": "JavaScript",
-    "pushed_at": "2026-05-31T19:50:06Z",
+    "pushed_at": "2026-07-15T14:16:11Z",
     "license": "MIT"
   },
   "summary_zh": "梳理系统中各节点之间的依赖关系，预测某个环节被改动或移除后会引发的连锁反应，适合排查上下游影响、评估变更风险或厘清「牵一发而动全身」的场景。"

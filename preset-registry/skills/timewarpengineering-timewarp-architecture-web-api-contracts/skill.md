@@ -207,7 +207,7 @@ validators must agree.
 - `string?` with unconditional `NotEmpty()` — **discouraged, a smell**: runtime behavior is right,
   but the annotation lies and disarms the compiler's null analysis.
 
-The timewarp-architecture template enforces both at build time (**TWPA0002**/**TWPA0003**).
+The timewarp-architecture template enforces both at build time (**TWA0002**/**TWA0003**).
 
 Also forbidden: `= default!` on non-generic reference types (use `null!`), and FluentValidation on
 `Response` (use ctor + `Guard.Against.*`; validation is for user-facing requests).
@@ -288,8 +288,8 @@ error. See the `mock-response-factory` skill.
 - [ ] Folder plural + repo's casing; namespace plural
 - [ ] Bindable flows use `I*Details` + shared `AbstractValidator<I*Details>`; Command/Response
       declare the interface properties
-- [ ] Nullability matches validator rules — no `string?` + unconditional `NotEmpty()` (TWPA0002),
-      no `= string.Empty` on required fields (TWPA0003)
+- [ ] Nullability matches validator rules — no `string?` + unconditional `NotEmpty()` (TWA0002),
+      no `= string.Empty` on required fields (TWA0003)
 - [ ] No `default!` on non-generic reference types
 - [ ] Response invariants enforced in ctor + `Guard`, not FluentValidation
 - [ ] Mutability matches binding intent (`set` vs `init`/get-only)
@@ -324,4 +324,7 @@ error. See the `mock-response-factory` skill.
 - `mock-response-factory` — `GetMockResponseFactory()` on contracts + SPA mock service registration
 - `csharp` — formatting and naming only; does not override contract nullability/mutability rules
 - `blazor-layout` / `blazor-css-strategy` — UI shell and styling; contracts feed `EditForm` binding
+- `slice-isolation` — product-slice placement / TWA0009; **contracts assemblies are free**
+  under TWA0009 (other assembly), but still use plural `…Features.*` namespaces aligned with
+  the SPA product slices they serve
 - Do **not** use `dotnet-webapi` for this contract pattern

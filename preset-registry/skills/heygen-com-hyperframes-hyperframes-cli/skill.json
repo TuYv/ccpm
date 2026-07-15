@@ -1,7 +1,7 @@
 {
   "id": "heygen-com-hyperframes-hyperframes-cli",
   "name": "hyperframes-cli",
-  "description": "HyperFrames CLI dev loop. Use when running npx hyperframes init, add, catalog, capture, lint, check, snapshot, compare, grade-compare, preview, play, render, publish, cloud, feedback, lambda, doctor, browser, info, upgrade, skills, compositions, docs, benchmark, telemetry, transcribe, tts, or remove-background (validate/inspect/layout are deprecated aliases covered by check), or when troubleshooting the HyperFrames build/render environment. Entry point for HeyGen-hosted cloud rendering (`hyperfr",
+  "description": "> Use the HyperFrames CLI development loop: init, add, catalog, capture, lint, check, snapshot, compare, grade-compare, preview, play, present, beats, keyframes, single or batch render, publish, cloud, cloudrun, feedback, lambda, doctor, browser, info, upgrade, skills, compositions, docs, benchmark, telemetry, transcribe, auth, tts, and remove-background. Also use when diagnosing build or render failures. validate, inspect, and layout are deprecated aliases; use check. Covers local, HeyGen-hoste",
   "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/heygen-com/hyperframes/blob/main/skills/hyperframes-cli/SKILL.md",
     "path": "skills/hyperframes-cli/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-15T11:59:11.692Z",
-    "stars": 35310,
+    "discovered_at": "2026-07-15T14:19:34.020Z",
+    "stars": 35340,
     "language": "TypeScript",
-    "pushed_at": "2026-07-15T11:57:14Z",
+    "pushed_at": "2026-07-15T14:15:22Z",
     "license": "Apache-2.0"
   }
 }

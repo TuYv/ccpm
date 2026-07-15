@@ -2,7 +2,7 @@
   "id": "human-avatar-skills-for-humanity-s4h-constraint-workaround-mapping",
   "name": "s4h-constraint-workaround-mapping",
   "description": "Finds paths around a fixed constraint without removing it — routing around a hard limit to reach the same goal. Triggers: 'work around this', 'given this constraint', 'path around the blocker', 'how do we do this anyway', 'constrained solution'.",
-  "category": "文档写作",
+  "category": "开发编程",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/human-avatar/skills-for-humanity/blob/main/skills/s4h-constraint-workaround-mapping/SKILL.md",
     "path": "skills/s4h-constraint-workaround-mapping/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-15T12:47:25.519Z",
-    "stars": 199,
+    "discovered_at": "2026-07-15T15:07:40.086Z",
+    "stars": 200,
     "language": "JavaScript",
-    "pushed_at": "2026-05-31T19:50:06Z",
+    "pushed_at": "2026-07-15T14:16:11Z",
     "license": "MIT"
   },
   "summary_zh": "在无法移除某个硬性限制的前提下，帮你找到绕过它仍能达成目标的可行路径，适合面对死规定、技术约束或不可动摇的阻碍时寻找替代方案。"
