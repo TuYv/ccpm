@@ -1,0 +1,25 @@
+{
+  "id": "heygen-com-hyperframes-seam-craft",
+  "name": "seam-craft",
+  "description": "Render-correctness doctrine for scene-to-scene seams in HyperFrames launch videos — the prerequisites that make transitions composite correctly on the master timeline. Load when assembling the master timeline / index.html, when a white flash appears at a cut or crossfade seam (especially on dark films), when reasoning about why a transition opacity dip shows through, or when verifying the render-side mechanics of how overlapping scene wrappers blend. Covers the opaque stage-ground (#root backgro",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "heygen-com",
+  "install_path": ".claude/skills/seam-craft/SKILL.md",
+  "source": {
+    "repo": "heygen-com/hyperframes",
+    "url": "https://github.com/heygen-com/hyperframes/blob/main/.claude/skills/seam-craft/SKILL.md",
+    "path": ".claude/skills/seam-craft/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-16T22:29:30.615Z",
+    "stars": 0,
+    "language": null,
+    "pushed_at": "",
+    "license": null
+  }
+}

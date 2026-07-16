@@ -1,0 +1,25 @@
+{
+  "id": "heygen-com-hyperframes-changelog-video",
+  "name": "changelog-video",
+  "description": "Turn a weekly changelog .md into a finished branded changelog video (square 1080, ~45-60s, Annie VO, animated brand background, mock-UI visualizations, lowkey captions). Use when the user provides a changelog/digest markdown and wants the weekly video, or says \"changelog video\". Self-contained — fonts, background, lexicon, and scripts ship in this skill.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "heygen-com",
+  "install_path": ".claude/skills/changelog-video/SKILL.md",
+  "source": {
+    "repo": "heygen-com/hyperframes",
+    "url": "https://github.com/heygen-com/hyperframes/blob/main/.claude/skills/changelog-video/SKILL.md",
+    "path": ".claude/skills/changelog-video/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-16T22:29:29.871Z",
+    "stars": 0,
+    "language": null,
+    "pushed_at": "",
+    "license": null
+  }
+}
