@@ -2,7 +2,7 @@
   "id": "wondelai-skills-clean-architecture",
   "name": "clean-architecture",
   "description": "Structure software around the Dependency Rule: source code dependencies point inward from frameworks to use cases to entities. Use when the user mentions \"architecture layers\", \"dependency rule\", \"ports and adapters (hexagonal)\", \"onion architecture\", \"screaming architecture\", \"where should business logic go\", \"decouple from the database\", \"swap the framework without a rewrite\", or \"keep business rules independent\". Also trigger when deciding which layer code belongs in, isolating core logic fro",
-  "category": "测试调试",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/wondelai/skills/blob/main/clean-architecture/SKILL.md",
     "path": "clean-architecture/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-16T14:33:04.707Z",
-    "stars": 1644,
+    "discovered_at": "2026-07-16T16:54:59.847Z",
+    "stars": 1645,
     "language": "Shell",
-    "pushed_at": "2026-07-16T12:17:36Z",
+    "pushed_at": "2026-07-16T16:39:07Z",
     "license": "MIT"
   }
 }

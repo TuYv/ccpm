@@ -1,10 +1,10 @@
 ---
 name: grow-app
-description: 'Guided journey from an app people sign up for and then quietly abandon to a sealed retention engine with a habit loop, an activated first run, and one metric the whole team trusts. Orchestrates eight skills phase by phase - hooked-ux, improve-retention, continuous-discovery, lean-ux, inspired-product, lean-analytics, microinteractions, drive-motivation - asking the user questions at every decision point and recording results in the project docs/ folder (PRODUCT.md, METRICS.md, GROW-APP-PLAN.md) so the journey resumes across sessions. Use when the user wants to lift activation and retention, design a habit loop, fix a leaky onboarding funnel, or says ''users sign up then disappear''. Do not use to fix broken UX, performance, or reliability that no engagement mechanic can paper over - run improve-app first; if there is no app yet, use create-app. For one framework in isolation, invoke that skill directly.'
+description: 'Guided journey from an app people sign up for and then quietly abandon to a sealed retention engine with a habit loop, an activated first run, and one metric the whole team trusts. Orchestrates eight skills phase by phase - hooked-ux, improve-retention, continuous-discovery, lean-ux, inspired-product, lean-analytics, microinteractions, drive-motivation - asking the user questions at every decision point and recording results in the project docs/ folder (PRODUCT.md, METRICS.md, GROW-APP-PLAN.md) so the journey resumes across sessions. Use when the user wants to lift activation and retention, design a habit loop, fix a leaky onboarding funnel, or says ''users sign up then disappear''. Do not use to fix broken UX or performance that no engagement mechanic can paper over - run improve-app first; if there is no app yet, use create-app. For one framework in isolation, invoke that skill directly.'
 license: MIT
 metadata:
   author: wondelai
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Grow an App
@@ -51,7 +51,7 @@ Run only on first start (no tracker). Ask:
 4. Solo/small team or a full product trio (PM, designer, engineer)? (scales continuous-discovery and inspired-product)
 5. Is the app a network/marketplace product, and do engaged users fail to convert to revenue? (flags optional cold-start-problem / monetizing-innovation)
 6. What analytics and instrumentation exist today? (gates lean-analytics and every experiment)
-7. Is retention broken by UX, performance, or reliability rather than missing engagement? (if yes, route to improve-app first)
+7. Is retention broken by UX or performance rather than missing engagement? (if yes, route to improve-app first)
 
 Skip heuristics: skip Phase 5 for a solo founder with no team to realign; defer Phase 7 until the loop and activation clear their bars; run Phase 3's cadence degraded if no user access exists yet. Then create the tracker from references/artifact-templates.md with every phase statused, and confirm the plan.
 
@@ -228,5 +228,5 @@ Optional phases follow the same operating rules; insert where the Add-when condi
 
 Close the tracker: every phase `done` or `skipped`, with Next Actions carried into PRODUCT.md, METRICS.md, and EXPERIMENTS.md. Then route forward:
 
-- When engagement mechanics cannot fix a product held back by broken UX, performance, or reliability, continue with `improve-app`.
+- When engagement mechanics cannot fix a product held back by broken UX or performance, continue with `improve-app`.
 - When the app is sticking and the business around it must keep pace — revenue, channels, operations — continue with `grow-business`.
