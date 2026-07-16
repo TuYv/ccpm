@@ -1,8 +1,8 @@
 {
   "id": "mksglu-claude-context-mode-context-mode",
   "name": "context-mode",
-  "description": "| Use context-mode tools (ctx_execute, ctx_execute_file) instead of Bash/cat when processing large outputs. Triggers: \"analyze logs\", \"summarize output\", \"process data\", \"parse JSON\", \"filter results\", \"extract errors\", \"check build output\", \"analyze dependencies\", \"process API response\", \"large file analysis\", \"page snapshot\", \"browser snapshot\", \"DOM structure\", \"inspect page\", \"accessibility tree\", \"Playwright snapshot\", \"run tests\", \"test output\", \"coverage report\", \"git log\", \"recent commit",
-  "category": "浏览器自动化",
+  "description": "MANDATORY routing rules for context-mode. Invoke whenever you analyze, count, filter, compare, search, parse, or transform data; fetch a URL; or run a data-heavy command — so raw bytes stay out of the context window.",
+  "category": "开发编程",
   "compatible_tools": [
     "claude",
     "codex",
@@ -13,14 +13,13 @@
   "install_path": ".claude/skills/context-mode/SKILL.md",
   "source": {
     "repo": "mksglu/claude-context-mode",
-    "url": "https://github.com/mksglu/claude-context-mode/blob/main/skills/context-mode/SKILL.md",
-    "path": "skills/context-mode/SKILL.md",
+    "url": "https://github.com/mksglu/claude-context-mode/blob/main/configs/copilot-cli/skills/context-mode/SKILL.md",
+    "path": "configs/copilot-cli/skills/context-mode/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-16T18:39:16.442Z",
-    "stars": 19006,
+    "discovered_at": "2026-07-16T20:34:42.415Z",
+    "stars": 19010,
     "language": "TypeScript",
     "pushed_at": "2026-07-16T12:29:54Z",
     "license": null
-  },
-  "summary_zh": "它是替代Bash或cat处理大体积输出的工具，适合分析日志、解析数据、检查网页结构或查看构建结果等场景，能有效避免大量内容输出时的截断问题。"
+  }
 }

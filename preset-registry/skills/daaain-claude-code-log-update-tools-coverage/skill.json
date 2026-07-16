@@ -1,0 +1,25 @@
+{
+  "id": "daaain-claude-code-log-update-tools-coverage",
+  "name": "update-tools-coverage",
+  "description": "Refresh dev-docs/tools-coverage.md against the upstream Claude Code tools reference. Use when checkpointing tool-renderer coverage, after adding/removing a tool renderer, or when the upstream tools list may have changed.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daaain",
+  "install_path": ".claude/skills/update-tools-coverage/SKILL.md",
+  "source": {
+    "repo": "daaain/claude-code-log",
+    "url": "https://github.com/daaain/claude-code-log/blob/main/.claude/skills/update-tools-coverage/SKILL.md",
+    "path": ".claude/skills/update-tools-coverage/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-16T20:34:59.233Z",
+    "stars": 1149,
+    "language": "Python",
+    "pushed_at": "2026-07-16T18:51:11Z",
+    "license": "MIT"
+  }
+}
