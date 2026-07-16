@@ -1,7 +1,7 @@
 {
   "id": "sergebulaev-linkedin-skills-linkedin-comment-drafter",
   "name": "linkedin-comment-drafter",
-  "description": "Draft a LinkedIn comment on someone else's post from its URL. Use when the user pastes a post URL and asks to comment, engage, or be first commenter. Produces 1-3 variants in the user's voice, picks a reaction, and schedules via Publora on approval. Not for replying to existing comments (use linkedin-reply-handler).",
+  "description": "Draft a LinkedIn comment on someone else's post from its URL, or reshare (repost) it to your feed with optional commentary. Use when the user pastes a post URL and asks to comment, engage, be first commenter, or repost with their thoughts. Produces 1-3 variants in the user's voice, picks a reaction, and publishes via Publora on approval. Not for replying to existing comments (use linkedin-reply-handler).",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/sergebulaev/linkedin-skills/blob/main/skills/linkedin-comment-drafter/SKILL.md",
     "path": "skills/linkedin-comment-drafter/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-16T04:34:56.861Z",
-    "stars": 385,
+    "discovered_at": "2026-07-16T07:30:41.256Z",
+    "stars": 386,
     "language": "Python",
-    "pushed_at": "2026-07-15T07:50:16Z",
+    "pushed_at": "2026-07-16T06:50:55Z",
     "license": "MIT"
-  },
-  "summary_zh": "把别人 LinkedIn 帖子的链接丢进来，就能模仿你的语气生成 1-3 条评论草稿，挑好表情后通过 Publora 安排发布，适合想抢沙发或日常互动的人。"
+  }
 }
