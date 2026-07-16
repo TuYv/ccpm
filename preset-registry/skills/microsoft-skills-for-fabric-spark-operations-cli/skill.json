@@ -1,7 +1,7 @@
 {
   "id": "microsoft-skills-for-fabric-spark-operations-cli",
   "name": "spark-operations-cli",
-  "description": "> Diagnose failed Spark jobs, unhealthy Livy sessions, and performance bottlenecks in Microsoft Fabric via read-only CLI triage. Use when the user wants to: (1) diagnose why a Spark job, notebook run, or Lakehouse job failed, (2) triage stuck or dead Livy sessions, (3) identify OOM, shuffle spill, or data skew, (4) retrieve driver and executor logs or Spark Advisor findings, (5) copy event logs and start a local Spark History Server, (6) diagnose all Spark activities within a failed pipeline run",
+  "description": "> Diagnose failed Spark jobs, unhealthy Livy sessions, and performance bottlenecks in Microsoft Fabric via read-only CLI triage. Use ONLY for FAILED/unhealthy runs; running a notebook and reporting its success status is `spark-authoring-cli`. Use when the user wants to: (1) diagnose why a Spark job, notebook run, or Lakehouse job failed, (2) triage stuck or dead Livy sessions, (3) identify OOM, shuffle spill, or data skew, (4) retrieve driver/executor logs or Spark Advisor findings, (5) copy eve",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/microsoft/skills-for-fabric/blob/main/plugins/fabric-skills/skills/spark-operations-cli/SKILL.md",
     "path": "plugins/fabric-skills/skills/spark-operations-cli/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-16T09:46:11.982Z",
+    "discovered_at": "2026-07-16T12:08:56.981Z",
     "stars": 798,
     "language": "Python",
-    "pushed_at": "2026-07-16T09:27:18Z",
+    "pushed_at": "2026-07-16T10:59:15Z",
     "license": "MIT"
   }
 }

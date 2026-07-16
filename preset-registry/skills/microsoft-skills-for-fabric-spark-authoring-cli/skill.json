@@ -1,8 +1,8 @@
 {
   "id": "microsoft-skills-for-fabric-spark-authoring-cli",
   "name": "spark-authoring-cli",
-  "description": "> Develop Microsoft Fabric Spark/data engineering workflows and write code in Fabric Notebook cells with intelligent routing to specialized resources. Provides workspace/lakehouse management, notebook code authoring (PySpark, Scala, SparkR, SQL), and Materialized Lake View (MLV) authoring (Spark SQL MLVs support incremental refresh; PySpark is full-refresh only). Routes to data engineering patterns, development workflow, or infrastructure orchestration. Triggers: \"develop notebook\", \"data engine",
-  "category": "设计创意",
+  "description": "> Author Fabric notebook cell code; run a notebook by name and report its status; and author/create Materialized Lake View (MLV) definitions (CREATE MATERIALIZED LAKE VIEW). Use for writing notebook cell code (PySpark, Scala, SparkR, %%sql, %%configure) — a %%sql cell that queries a lakehouse is authoring, not a T-SQL query — and running a notebook via the Jobs API (RunNotebook), including on the success path. Not for Livy sessions or ad-hoc calculations (use `spark-consumption-cli`); to refresh",
+  "category": "文档写作",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/microsoft/skills-for-fabric/blob/main/plugins/fabric-skills/skills/spark-authoring-cli/SKILL.md",
     "path": "plugins/fabric-skills/skills/spark-authoring-cli/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-16T09:46:11.514Z",
+    "discovered_at": "2026-07-16T12:08:56.717Z",
     "stars": 798,
     "language": "Python",
-    "pushed_at": "2026-07-16T09:27:18Z",
+    "pushed_at": "2026-07-16T10:59:15Z",
     "license": "MIT"
   }
 }

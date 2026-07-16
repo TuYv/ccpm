@@ -1,7 +1,7 @@
 {
   "id": "microsoft-skills-for-fabric-spark-consumption-cli",
   "name": "spark-consumption-cli",
-  "description": "> Analyze lakehouse data interactively using Fabric Lakehouse Livy API sessions and PySpark/Spark SQL for advanced analytics, DataFrames, cross-lakehouse joins, Delta time-travel, and unstructured/JSON data. Use when the user explicitly asks for PySpark, Spark DataFrames, Livy sessions, or Python-based analysis — NOT for simple SQL queries. Triggers: \"PySpark\", \"Spark SQL\", \"analyze with PySpark\", \"Spark DataFrame\", \"Livy session\", \"lakehouse with Python\", \"PySpark analysis\", \"PySpark data quali",
+  "description": "> Interactive ad-hoc Spark analysis through Fabric Lakehouse Livy API sessions ONLY. This skill NEVER authors or runs a notebook: any notebook cell (%%sql/%%configure) or a notebook-run-by-name (and reporting its run status) is `spark-authoring-cli`, not this skill. Scope: create a Livy session, execute PySpark, inspect output, and compute quick calculations over lakehouse data (DataFrames, cross-lakehouse joins, Delta time-travel, unstructured/JSON). For Spark failure triage use `spark-operatio",
   "category": "数据分析",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/microsoft/skills-for-fabric/blob/main/plugins/fabric-skills/skills/spark-consumption-cli/SKILL.md",
     "path": "plugins/fabric-skills/skills/spark-consumption-cli/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-16T09:46:11.780Z",
+    "discovered_at": "2026-07-16T12:08:56.856Z",
     "stars": 798,
     "language": "Python",
-    "pushed_at": "2026-07-16T09:27:18Z",
+    "pushed_at": "2026-07-16T10:59:15Z",
     "license": "MIT"
   }
 }

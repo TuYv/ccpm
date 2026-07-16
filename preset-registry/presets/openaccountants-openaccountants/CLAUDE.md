@@ -9,7 +9,7 @@
 - The website with the Tax Library and Partner reviews: https://www.openaccountants.com
 - More detail for agents: `llms.txt` (short) and `llms-full.txt` (every Guide listed).
 
-This is the open-source skills repository (AGPL-3.0 + attribution + commercial dual-license). The companion website + admin layer lives in a separate repo. AI agents working on this repo should read the following before writing or committing.
+This is a mixed-licence repository: **software** is AGPL-3.0-only, and the **Guides** (`skills/`, `packages/`, `workflows/`, `index.json`, `llms*.txt`) are under the source-available OA Guide License, with a commercial track for both. See `LICENSING.md`. The companion website + admin layer lives in a separate repo. AI agents working on this repo should read the following before writing or committing.
 
 ## Repository overview
 
@@ -19,9 +19,11 @@ This is the open-source skills repository (AGPL-3.0 + attribution + commercial d
 - `mcp/` — Python MCP server package (`openaccountants-mcp` on PyPI).
 - `docs/` — Repo documentation, quality tiers, contributor guides. Canonical layout answer: `docs/REPO-LAYOUT.md`.
 - `scripts/` — Maintenance scripts (frontmatter cleanup, index regeneration via `build-index.py`, package builds, validation).
-- `LICENSE` — AGPL-3.0.
-- `LICENSE-ADDITIONAL.md` — Section 7 attribution requirement.
-- `COMMERCIAL_LICENSE.md` — Commercial alternative for those who can't comply with AGPL.
+- `LICENSING.md` — which licence applies to which files (start here).
+- `LICENSE` / `LICENSES/AGPL-3.0-only.txt` — AGPL-3.0-only, for the software.
+- `LICENSES/LicenseRef-OA-Guide-License-1.0.txt` — OA Guide License (source-available) for the Guides.
+- `REUSE.toml` — machine-readable per-path licence mapping.
+- `COMMERCIAL-LICENSING.md` — commercial alternative for both tracks.
 
 ## Skill file conventions
 
