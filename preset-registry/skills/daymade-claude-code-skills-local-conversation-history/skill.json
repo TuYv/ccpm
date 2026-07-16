@@ -1,7 +1,7 @@
 {
   "id": "daymade-claude-code-skills-local-conversation-history",
   "name": "local-conversation-history",
-  "description": ">- Lists recent local Claude Code and OpenAI Codex conversations for the current folder or another workspace in one fast, read-only command. Produces readable Markdown or JSON with titles, timezone-qualified timestamps, sources, session IDs, and archive/test markers while excluding internal sub-agent noise by default. Use this skill first whenever the user asks to list, show, browse, or find recent local chats, conversation history, task history, or session IDs across Claude Code and Codex. Do n",
+  "description": ">- Lists recent local Claude Code and OpenAI Codex conversations for a workspace in one read-only command. For Claude Code, the default inventory combines every active config home with every long-term archive registered in ~/.claude/history-sources.json, de-duplicates session IDs, and orders or filters by internal JSONL timestamps rather than file mtime. Produces readable Markdown or JSON with titles, timezone-qualified timestamps, provenance, session IDs, and archive/test markers while excludin",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-claude-code/local-conversation-history/SKILL.md",
     "path": "daymade-claude-code/local-conversation-history/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-16T06:47:22.847Z",
-    "stars": 1271,
+    "discovered_at": "2026-07-16T09:44:57.014Z",
+    "stars": 1272,
     "language": "Python",
-    "pushed_at": "2026-07-16T06:08:58Z",
+    "pushed_at": "2026-07-16T09:22:51Z",
     "license": "MIT"
   }
 }

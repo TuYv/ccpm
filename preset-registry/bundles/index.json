@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-07-16T07:31:10.872Z",
+  "updated_at": "2026-07-16T10:27:19.061Z",
   "bundles": [
     {
       "id": "obra-superpowers",
@@ -8,7 +8,7 @@
       "name": "Superpowers",
       "url": "https://github.com/obra/superpowers/blob/main/skills/brainstorming/SKILL.md",
       "kind": "skill",
-      "stars": 255574,
+      "stars": 255706,
       "skill_ids": [
         "obra-superpowers-brainstorming",
         "obra-superpowers-dispatching-parallel-agents",
@@ -33,7 +33,7 @@
       "name": "ECC",
       "url": "https://github.com/affaan-m/ECC/blob/main/.agents/skills/agent-introspection-debugging/SKILL.md",
       "kind": "skill",
-      "stars": 230205,
+      "stars": 230256,
       "skill_ids": [
         "affaan-m-ecc-agent-introspection-debugging",
         "affaan-m-ecc-agent-sort",
@@ -90,9 +90,10 @@
       "name": "Skills",
       "url": "https://github.com/mattpocock/skills/blob/main/skills/engineering/ask-matt/SKILL.md",
       "kind": "skill",
-      "stars": 172844,
+      "stars": 173247,
       "skill_ids": [
         "mattpocock-skills-ask-matt",
+        "mattpocock-skills-batch-grill-me",
         "mattpocock-skills-caveman",
         "mattpocock-skills-claude-handoff",
         "mattpocock-skills-code-review",
@@ -149,7 +150,7 @@
       "name": "Skills",
       "url": "https://github.com/anthropics/skills/blob/main/skills/algorithmic-art/SKILL.md",
       "kind": "skill",
-      "stars": 161512,
+      "stars": 161564,
       "skill_ids": [
         "anthropics-skills-algorithmic-art",
         "anthropics-skills-brand-guidelines",
@@ -178,7 +179,7 @@
       "name": "Gstack",
       "url": "https://github.com/garrytan/gstack/blob/main/SKILL.md",
       "kind": "skill",
-      "stars": 122147,
+      "stars": 122186,
       "skill_ids": [
         "garrytan-gstack",
         "garrytan-gstack-autoplan",
@@ -248,7 +249,7 @@
       "name": "Ui Ux Pro Max Skill",
       "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/main/cli/assets/skills/banner-design/SKILL.md",
       "kind": "skill",
-      "stars": 106240,
+      "stars": 106333,
       "skill_ids": [
         "nextlevelbuilder-ui-ux-pro-max-skill-banner-design",
         "nextlevelbuilder-ui-ux-pro-max-skill-brand",
@@ -266,7 +267,7 @@
       "name": "Caveman",
       "url": "https://github.com/JuliusBrussee/caveman/blob/main/skills/cavecrew/SKILL.md",
       "kind": "skill",
-      "stars": 89961,
+      "stars": 90017,
       "skill_ids": [
         "juliusbrussee-caveman-cavecrew",
         "juliusbrussee-caveman-caveman",
@@ -284,7 +285,7 @@
       "name": "Claude Mem",
       "url": "https://github.com/thedotmack/claude-mem/blob/main/plugin/skills/babysit/SKILL.md",
       "kind": "skill",
-      "stars": 87431,
+      "stars": 87448,
       "skill_ids": [
         "thedotmack-claude-mem-babysit",
         "thedotmack-claude-mem-cloud-sync",
@@ -314,7 +315,7 @@
       "name": "Agent Skills",
       "url": "https://github.com/addyosmani/agent-skills/blob/main/skills/api-and-interface-design/SKILL.md",
       "kind": "skill",
-      "stars": 78621,
+      "stars": 78668,
       "skill_ids": [
         "addyosmani-agent-skills-api-and-interface-design",
         "addyosmani-agent-skills-browser-testing-with-devtools",
@@ -349,7 +350,7 @@
       "name": "Understand Anything",
       "url": "https://github.com/Egonex-AI/Understand-Anything/blob/main/understand-anything-plugin/skills/understand/SKILL.md",
       "kind": "skill",
-      "stars": 74377,
+      "stars": 74427,
       "skill_ids": [
         "egonex-ai-understand-anything-understand",
         "egonex-ai-understand-anything-understand-chat",
@@ -369,7 +370,7 @@
       "name": "Understand Anything",
       "url": "https://github.com/Lum1104/Understand-Anything/blob/main/understand-anything-plugin/skills/understand/SKILL.md",
       "kind": "skill",
-      "stars": 74377,
+      "stars": 74424,
       "skill_ids": [
         "lum1104-understand-anything-understand",
         "lum1104-understand-anything-understand-chat",
@@ -389,7 +390,7 @@
       "name": "Awesome Claude Skills",
       "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/-21risk-automation/SKILL.md",
       "kind": "skill",
-      "stars": 67844,
+      "stars": 67858,
       "skill_ids": [
         "composiohq-awesome-claude-skills-21risk-automation",
         "composiohq-awesome-claude-skills-2chat-automation",
@@ -459,7 +460,7 @@
       "name": "Claude Flow",
       "url": "https://github.com/ruvnet/claude-flow/blob/main/.agents/skills/agent-adaptive-coordinator/SKILL.md",
       "kind": "skill",
-      "stars": 64580,
+      "stars": 64594,
       "skill_ids": [
         "ruvnet-claude-flow-agent-adaptive-coordinator",
         "ruvnet-claude-flow-agent-agent",
@@ -525,12 +526,25 @@
       "summary_zh": "专为AI智能体打造的全方位技能扩展包，覆盖架构设计、代码分析、支付认证等开发场景，组合起来能让智能体像全能团队一样，自主搞定复杂软件的构建与全流程管理。"
     },
     {
+      "id": "colbymchenry-codegraph",
+      "repo": "colbymchenry/codegraph",
+      "name": "Codegraph",
+      "url": "https://github.com/colbymchenry/codegraph/blob/main/.claude/skills/add-lang/SKILL.md",
+      "kind": "skill",
+      "stars": 60305,
+      "skill_ids": [
+        "colbymchenry-codegraph-add-lang",
+        "colbymchenry-codegraph-agent-eval"
+      ],
+      "summary_zh": "来自 colbymchenry/codegraph 的 2 个相关技能合集，适合按同一主题成组浏览和按需安装。"
+    },
+    {
       "id": "santifer-career-ops",
       "repo": "santifer/career-ops",
       "name": "Career Ops",
       "url": "https://github.com/santifer/career-ops/blob/main/plugins/apify/skill.md",
       "kind": "skill",
-      "stars": 60278,
+      "stars": 60295,
       "skill_ids": [
         "santifer-career-ops-apify",
         "santifer-career-ops-career-ops",
@@ -541,25 +555,12 @@
       "summary_zh": "来自 santifer/career-ops 的 5 个相关技能合集，适合按同一主题成组浏览和按需安装。"
     },
     {
-      "id": "colbymchenry-codegraph",
-      "repo": "colbymchenry/codegraph",
-      "name": "Codegraph",
-      "url": "https://github.com/colbymchenry/codegraph/blob/main/.claude/skills/add-lang/SKILL.md",
-      "kind": "skill",
-      "stars": 60271,
-      "skill_ids": [
-        "colbymchenry-codegraph-add-lang",
-        "colbymchenry-codegraph-agent-eval"
-      ],
-      "summary_zh": "来自 colbymchenry/codegraph 的 2 个相关技能合集，适合按同一主题成组浏览和按需安装。"
-    },
-    {
       "id": "getsentry-sentry",
       "repo": "getsentry/sentry",
       "name": "Sentry",
       "url": "https://github.com/getsentry/sentry/blob/master/.agents/skills/analytics/SKILL.md",
       "kind": "skill",
-      "stars": 44302,
+      "stars": 44300,
       "skill_ids": [
         "getsentry-sentry-analytics",
         "getsentry-sentry-cell-architecture",
@@ -590,7 +591,7 @@
       "name": "Antigravity Awesome Skills",
       "url": "https://github.com/sickn33/antigravity-awesome-skills/blob/main/plugins/agentic-awesome-skills-claude/skills/00-andruia-consultant/SKILL.md",
       "kind": "skill",
-      "stars": 43376,
+      "stars": 43386,
       "skill_ids": [
         "sickn33-antigravity-awesome-skills-00-andruia-consultant",
         "sickn33-antigravity-awesome-skills-007",
@@ -683,7 +684,7 @@
       "name": "Marketingskills",
       "url": "https://github.com/coreyhaines31/marketingskills/blob/main/skills/ab-testing/SKILL.md",
       "kind": "skill",
-      "stars": 39939,
+      "stars": 40043,
       "skill_ids": [
         "coreyhaines31-marketingskills-ab-testing",
         "coreyhaines31-marketingskills-ad-creative",
@@ -741,7 +742,7 @@
       "name": "Academic Research Skills",
       "url": "https://github.com/Imbad0202/academic-research-skills/blob/main/academic-paper/SKILL.md",
       "kind": "skill",
-      "stars": 38015,
+      "stars": 38052,
       "skill_ids": [
         "imbad0202-academic-research-skills-academic-paper",
         "imbad0202-academic-research-skills-academic-paper-reviewer",
@@ -756,7 +757,7 @@
       "name": "Agents",
       "url": "https://github.com/wshobson/agents/blob/main/plugins/data-engineering/skills/airflow-dag-patterns/SKILL.md",
       "kind": "skill",
-      "stars": 37945,
+      "stars": 37950,
       "skill_ids": [
         "wshobson-agents-airflow-dag-patterns",
         "wshobson-agents-api-design-principles",
@@ -830,7 +831,7 @@
       "name": "Claude Code Templates",
       "url": "https://github.com/davila7/claude-code-templates/blob/main/cli-tool/components/skills/ai-research/agent-evaluation/SKILL.md",
       "kind": "skill",
-      "stars": 29578,
+      "stars": 29589,
       "skill_ids": [
         "davila7-claude-code-templates-agent-evaluation",
         "davila7-claude-code-templates-agent-management",
@@ -902,7 +903,7 @@
       "name": "Composio",
       "url": "https://github.com/ComposioHQ/composio/blob/next/.agents/skills/bug-fixing/SKILL.md",
       "kind": "skill",
-      "stars": 29249,
+      "stars": 29252,
       "skill_ids": [
         "composiohq-composio-bug-fixing",
         "composiohq-composio-bug-fixing-guide",
@@ -953,7 +954,7 @@
       "name": "Agent Skills",
       "url": "https://github.com/vercel-labs/agent-skills/blob/main/skills/composition-patterns/SKILL.md",
       "kind": "skill",
-      "stars": 29114,
+      "stars": 29123,
       "skill_ids": [
         "vercel-labs-agent-skills-composition-patterns",
         "vercel-labs-agent-skills-deploy-to-vercel",
@@ -973,7 +974,7 @@
       "name": "Openai Agents Python",
       "url": "https://github.com/openai/openai-agents-python/blob/main/.agents/skills/code-change-verification/SKILL.md",
       "kind": "skill",
-      "stars": 27939,
+      "stars": 27943,
       "skill_ids": [
         "openai-openai-agents-python-code-change-verification",
         "openai-openai-agents-python-credit-note-fixer",
@@ -1042,7 +1043,7 @@
       "name": "Qwen Code",
       "url": "https://github.com/QwenLM/qwen-code/blob/main/.qwen/skills/agent-reproduce-align/SKILL.md",
       "kind": "skill",
-      "stars": 26040,
+      "stars": 26049,
       "skill_ids": [
         "qwenlm-qwen-code-agent-reproduce-align",
         "qwenlm-qwen-code-agent-reproduce-feature",
@@ -1087,7 +1088,7 @@
       "name": "Pm Skills",
       "url": "https://github.com/phuryn/pm-skills/blob/main/pm-data-analytics/skills/ab-test-analysis/SKILL.md",
       "kind": "skill",
-      "stars": 23774,
+      "stars": 23800,
       "skill_ids": [
         "phuryn-pm-skills-ab-test-analysis",
         "phuryn-pm-skills-analyze-feature-requests",
@@ -1161,7 +1162,7 @@
       "name": "Baoyu Skills",
       "url": "https://github.com/JimLiu/baoyu-skills/blob/main/skills/baoyu-article-illustrator/SKILL.md",
       "kind": "skill",
-      "stars": 23687,
+      "stars": 23702,
       "skill_ids": [
         "jimliu-baoyu-skills-baoyu-article-illustrator",
         "jimliu-baoyu-skills-baoyu-comic",
@@ -1196,7 +1197,7 @@
       "name": "SuperClaude",
       "url": "https://github.com/NomenAK/SuperClaude/blob/master/plugins/superclaude/skills/brainstorm/SKILL.md",
       "kind": "skill",
-      "stars": 23567,
+      "stars": 23566,
       "skill_ids": [
         "nomenak-superclaude-brainstorm",
         "nomenak-superclaude-confidence-check",
@@ -1213,7 +1214,7 @@
       "name": "SuperClaude_Framework",
       "url": "https://github.com/SuperClaude-Org/SuperClaude_Framework/blob/master/plugins/superclaude/skills/brainstorm/SKILL.md",
       "kind": "skill",
-      "stars": 23567,
+      "stars": 23566,
       "skill_ids": [
         "superclaude-org-superclaude-framework-brainstorm",
         "superclaude-org-superclaude-framework-confidence-check",
@@ -1230,7 +1231,7 @@
       "name": "Claude Code Game Studios",
       "url": "https://github.com/Donchitos/Claude-Code-Game-Studios/blob/main/.claude/skills/adopt/SKILL.md",
       "kind": "skill",
-      "stars": 23039,
+      "stars": 23043,
       "skill_ids": [
         "donchitos-claude-code-game-studios-adopt",
         "donchitos-claude-code-game-studios-architecture-decision",
@@ -1301,7 +1302,7 @@
       "name": "Claude Skills",
       "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/a11y-audit/SKILL.md",
       "kind": "skill",
-      "stars": 22677,
+      "stars": 22688,
       "skill_ids": [
         "alirezarezvani-claude-skills-a11y-audit",
         "alirezarezvani-claude-skills-ab-test-setup",
@@ -1376,7 +1377,7 @@
       "name": "Happy",
       "url": "https://github.com/slopus/happy/blob/main/.claude/skills/agent-browser/SKILL.md",
       "kind": "skill",
-      "stars": 22659,
+      "stars": 22663,
       "skill_ids": [
         "slopus-happy-agent-browser",
         "slopus-happy-control-flow",
@@ -1396,7 +1397,7 @@
       "name": "Claude Context Mode",
       "url": "https://github.com/mksglu/claude-context-mode/blob/main/skills/context-mode/SKILL.md",
       "kind": "skill",
-      "stars": 18984,
+      "stars": 18990,
       "skill_ids": [
         "mksglu-claude-context-mode-context-mode",
         "mksglu-claude-context-mode-context-mode-ops",
@@ -1416,7 +1417,7 @@
       "name": "CodexBar",
       "url": "https://github.com/steipete/CodexBar/blob/main/.agents/skills/codexbar/SKILL.md",
       "kind": "skill",
-      "stars": 18407,
+      "stars": 18423,
       "skill_ids": [
         "steipete-codexbar-codexbar",
         "steipete-codexbar-qa-test",
@@ -1430,7 +1431,7 @@
       "name": "Agent Skills For Context Engineering",
       "url": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering/blob/main/SKILL.md",
       "kind": "skill",
-      "stars": 17265,
+      "stars": 17269,
       "skill_ids": [
         "muratcankoylan-agent-skills-for-context-engineering",
         "muratcankoylan-agent-skills-for-context-engineering-advanced-evaluation",
@@ -1464,7 +1465,7 @@
       "name": "Ccusage",
       "url": "https://github.com/ryoppippi/ccusage/blob/main/.agents/skills/agent-sources/SKILL.md",
       "kind": "skill",
-      "stars": 17200,
+      "stars": 17201,
       "skill_ids": [
         "ryoppippi-ccusage-agent-sources",
         "ryoppippi-ccusage-ast-grep",
@@ -1504,7 +1505,7 @@
       "name": "Herdr",
       "url": "https://github.com/ogulcancelik/herdr/blob/master/SKILL.md",
       "kind": "skill",
-      "stars": 16950,
+      "stars": 17011,
       "skill_ids": [
         "ogulcancelik-herdr",
         "ogulcancelik-herdr-herdr-pre-release-audit",
@@ -1519,7 +1520,7 @@
       "name": "Skill_Seekers",
       "url": "https://github.com/yusufkaraaslan/Skill_Seekers/blob/development/tests/golden/phase2/chat/SKILL.md",
       "kind": "skill",
-      "stars": 14473,
+      "stars": 14475,
       "skill_ids": [
         "yusufkaraaslan-skill-seekers-chat",
         "yusufkaraaslan-skill-seekers-chat-empty",
@@ -1556,7 +1557,7 @@
       "name": "T3code",
       "url": "https://github.com/pingdotgg/t3code/blob/main/.repos/effect-smol/.agents/skills/grill-me/SKILL.md",
       "kind": "skill",
-      "stars": 14039,
+      "stars": 14044,
       "skill_ids": [
         "pingdotgg-t3code-grill-me",
         "pingdotgg-t3code-jsdocs",
@@ -1570,7 +1571,7 @@
       "name": "Gsap Skills",
       "url": "https://github.com/greensock/gsap-skills/blob/main/skills/gsap-core/SKILL.md",
       "kind": "skill",
-      "stars": 11589,
+      "stars": 11601,
       "skill_ids": [
         "greensock-gsap-skills-gsap-core",
         "greensock-gsap-skills-gsap-frameworks",
@@ -1589,7 +1590,7 @@
       "name": "Claude Seo",
       "url": "https://github.com/AgriciDaniel/claude-seo/blob/main/skills/seo/SKILL.md",
       "kind": "skill",
-      "stars": 11506,
+      "stars": 11519,
       "skill_ids": [
         "agricidaniel-claude-seo-seo",
         "agricidaniel-claude-seo-seo-ahrefs",
@@ -1631,7 +1632,7 @@
       "name": "AI Research SKILLs",
       "url": "https://github.com/zechenzhangAGI/AI-research-SKILLs/blob/main/0-autoresearch-skill/SKILL.md",
       "kind": "skill",
-      "stars": 10759,
+      "stars": 10767,
       "skill_ids": [
         "zechenzhangagi-ai-research-skills-0-autoresearch-skill",
         "zechenzhangagi-ai-research-skills-a-evolve",
@@ -1702,7 +1703,7 @@
       "name": "AI Research SKILLs",
       "url": "https://github.com/Orchestra-Research/AI-research-SKILLs/blob/main/0-autoresearch-skill/SKILL.md",
       "kind": "skill",
-      "stars": 10758,
+      "stars": 10766,
       "skill_ids": [
         "orchestra-research-ai-research-skills-0-autoresearch-skill",
         "orchestra-research-ai-research-skills-a-evolve",
@@ -1844,7 +1845,7 @@
       "name": "Voltagent",
       "url": "https://github.com/VoltAgent/voltagent/blob/main/examples/with-workspace/workspace/skills/data-analysis/SKILL.md",
       "kind": "skill",
-      "stars": 10057,
+      "stars": 10058,
       "skill_ids": [
         "voltagent-voltagent-data-analysis",
         "voltagent-voltagent-playwright-cli"
@@ -1857,7 +1858,7 @@
       "name": "Claude Obsidian",
       "url": "https://github.com/AgriciDaniel/claude-obsidian/blob/main/skills/autoresearch/SKILL.md",
       "kind": "skill",
-      "stars": 9462,
+      "stars": 9472,
       "skill_ids": [
         "agricidaniel-claude-obsidian-autoresearch",
         "agricidaniel-claude-obsidian-canvas",
@@ -1903,7 +1904,7 @@
       "name": "Reverse Skill",
       "url": "https://github.com/zhaoxuya520/reverse-skill/blob/main/skills/api-security/SKILL.md",
       "kind": "skill",
-      "stars": 8293,
+      "stars": 8297,
       "skill_ids": [
         "zhaoxuya520-reverse-skill-api-security",
         "zhaoxuya520-reverse-skill-apk-reverse",
@@ -1974,7 +1975,7 @@
       "name": "Text To Cad",
       "url": "https://github.com/earthtojake/text-to-cad/blob/main/skills/bambu-labs/SKILL.md",
       "kind": "skill",
-      "stars": 8173,
+      "stars": 8182,
       "skill_ids": [
         "earthtojake-text-to-cad-bambu-labs",
         "earthtojake-text-to-cad-cad",
@@ -1998,7 +1999,7 @@
       "name": "Omnigent",
       "url": "https://github.com/omnigent-ai/omnigent/blob/main/.claude/skills/antigravity-native-e2e-dev/SKILL.md",
       "kind": "skill",
-      "stars": 7349,
+      "stars": 7357,
       "skill_ids": [
         "omnigent-ai-omnigent-antigravity-native-e2e-dev",
         "omnigent-ai-omnigent-antigravity-sdk-e2e-dev",
@@ -2034,7 +2035,7 @@
       "name": "Seomachine",
       "url": "https://github.com/TheCraigHewitt/seomachine/blob/main/.claude/skills/ab-test-setup/SKILL.md",
       "kind": "skill",
-      "stars": 7240,
+      "stars": 7242,
       "skill_ids": [
         "thecraighewitt-seomachine-ab-test-setup",
         "thecraighewitt-seomachine-analytics-tracking",
@@ -2070,7 +2071,7 @@
       "name": "Claude Ads",
       "url": "https://github.com/AgriciDaniel/claude-ads/blob/main/ads/SKILL.md",
       "kind": "skill",
-      "stars": 7094,
+      "stars": 7098,
       "skill_ids": [
         "agricidaniel-claude-ads-ads",
         "agricidaniel-claude-ads-ads-amazon",
@@ -2115,7 +2116,7 @@
       "name": "Plannotator",
       "url": "https://github.com/backnotprop/plannotator/blob/main/.agents/skills/pierre-guard/SKILL.md",
       "kind": "skill",
-      "stars": 7055,
+      "stars": 7056,
       "skill_ids": [
         "backnotprop-plannotator-pierre-guard",
         "backnotprop-plannotator-plannotator-annotate",
@@ -2137,7 +2138,7 @@
       "name": "Waza",
       "url": "https://github.com/tw93/Waza/blob/main/skills/check/SKILL.md",
       "kind": "skill",
-      "stars": 6455,
+      "stars": 6457,
       "skill_ids": [
         "tw93-waza-check",
         "tw93-waza-design",
@@ -2157,7 +2158,7 @@
       "name": "Skills",
       "url": "https://github.com/trailofbits/skills/blob/main/plugins/testing-handbook-skills/skills/address-sanitizer/SKILL.md",
       "kind": "skill",
-      "stars": 6139,
+      "stars": 6141,
       "skill_ids": [
         "trailofbits-skills-address-sanitizer",
         "trailofbits-skills-aflpp",
@@ -2284,7 +2285,7 @@
       "name": "N8n Skills",
       "url": "https://github.com/czlonkowski/n8n-skills/blob/main/skills/n8n-agents/SKILL.md",
       "kind": "skill",
-      "stars": 5806,
+      "stars": 5808,
       "skill_ids": [
         "czlonkowski-n8n-skills-n8n-agents",
         "czlonkowski-n8n-skills-n8n-binary-and-data",
@@ -2310,7 +2311,7 @@
       "name": "Product Manager Skills",
       "url": "https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/acquisition-channel-advisor/SKILL.md",
       "kind": "skill",
-      "stars": 5786,
+      "stars": 5789,
       "skill_ids": [
         "deanpeters-product-manager-skills-acquisition-channel-advisor",
         "deanpeters-product-manager-skills-agent-orchestration-advisor",
@@ -2393,7 +2394,7 @@
       "name": "Godogen",
       "url": "https://github.com/htdt/godogen/blob/master/asset-gen/SKILL.md",
       "kind": "skill",
-      "stars": 4743,
+      "stars": 4744,
       "skill_ids": [
         "htdt-godogen-asset-gen",
         "htdt-godogen-babylon-help",
@@ -2463,7 +2464,7 @@
       "name": "Basic Memory",
       "url": "https://github.com/basicmachines-co/basic-memory/blob/main/.agents/skills/adversarial-review/SKILL.md",
       "kind": "skill",
-      "stars": 3442,
+      "stars": 3444,
       "skill_ids": [
         "basicmachines-co-basic-memory-adversarial-review",
         "basicmachines-co-basic-memory-basic-machines-review",
@@ -2537,7 +2538,7 @@
       "name": "Lean Ctx",
       "url": "https://github.com/yvgude/lean-ctx/blob/main/skills/lean-ctx/SKILL.md",
       "kind": "skill",
-      "stars": 3254,
+      "stars": 3257,
       "skill_ids": [
         "yvgude-lean-ctx-lean-ctx",
         "yvgude-lean-ctx-templates"
@@ -2616,7 +2617,7 @@
       "name": "Finance Skills",
       "url": "https://github.com/himself65/finance-skills/blob/main/plugins/market-analysis/skills/company-valuation/SKILL.md",
       "kind": "skill",
-      "stars": 3018,
+      "stars": 3019,
       "skill_ids": [
         "himself65-finance-skills-company-valuation",
         "himself65-finance-skills-discord-reader",
@@ -2669,7 +2670,7 @@
       "name": "Ai Marketing Skills",
       "url": "https://github.com/ericosiu/ai-marketing-skills/blob/main/autoresearch/SKILL.md",
       "kind": "skill",
-      "stars": 2870,
+      "stars": 2873,
       "skill_ids": [
         "ericosiu-ai-marketing-skills-autoresearch",
         "ericosiu-ai-marketing-skills-clone-site",
@@ -2724,7 +2725,7 @@
       "name": "Vue Skills",
       "url": "https://github.com/hyf0/vue-skills/blob/main/skills/create-adaptable-composable/SKILL.md",
       "kind": "skill",
-      "stars": 2703,
+      "stars": 2704,
       "skill_ids": [
         "hyf0-vue-skills-create-adaptable-composable",
         "hyf0-vue-skills-vue-best-practices",
@@ -2743,7 +2744,7 @@
       "name": "Skills",
       "url": "https://github.com/vuejs-ai/skills/blob/main/skills/create-adaptable-composable/SKILL.md",
       "kind": "skill",
-      "stars": 2703,
+      "stars": 2704,
       "skill_ids": [
         "vuejs-ai-skills-create-adaptable-composable",
         "vuejs-ai-skills-vue-best-practices",
@@ -2762,7 +2763,7 @@
       "name": "Baoyu Design",
       "url": "https://github.com/JimLiu/baoyu-design/blob/main/skills/baoyu-design/SKILL.md",
       "kind": "skill",
-      "stars": 2622,
+      "stars": 2626,
       "skill_ids": [
         "jimliu-baoyu-design-baoyu-design",
         "jimliu-baoyu-design-release-skills"
@@ -2775,7 +2776,7 @@
       "name": "Cc Skills Golang",
       "url": "https://github.com/samber/cc-skills-golang/blob/main/skills/golang-benchmark/SKILL.md",
       "kind": "skill",
-      "stars": 2564,
+      "stars": 2574,
       "skill_ids": [
         "samber-cc-skills-golang-golang-benchmark",
         "samber-cc-skills-golang-golang-cli",
@@ -2832,7 +2833,7 @@
       "name": "Claude Code Plugins Plus Skills",
       "url": "https://github.com/jeremylongshore/claude-code-plugins-plus-skills/blob/main/plugins/ai-agency/agency-os/skills/agency-os/SKILL.md",
       "kind": "skill",
-      "stars": 2518,
+      "stars": 2519,
       "skill_ids": [
         "jeremylongshore-claude-code-plugins-plus-skills-agency-os",
         "jeremylongshore-claude-code-plugins-plus-skills-amplify",
@@ -2963,7 +2964,7 @@
       "name": "Web Quality Skills",
       "url": "https://github.com/addyosmani/web-quality-skills/blob/main/skills/accessibility/SKILL.md",
       "kind": "skill",
-      "stars": 2506,
+      "stars": 2507,
       "skill_ids": [
         "addyosmani-web-quality-skills-accessibility",
         "addyosmani-web-quality-skills-best-practices",
@@ -2975,12 +2976,71 @@
       "summary_zh": "这套合集专为全方位提升网页质量而生，帮你一站式搞定网站性能、SEO、无障碍和开发规范，相当于给网站做深度体检与优化，让页面体验和搜索排名双提升。"
     },
     {
+      "id": "tradermonty-claude-trading-skills",
+      "repo": "tradermonty/claude-trading-skills",
+      "name": "Claude Trading Skills",
+      "url": "https://github.com/tradermonty/claude-trading-skills/blob/main/skills/backtest-expert/SKILL.md",
+      "kind": "skill",
+      "stars": 2398,
+      "skill_ids": [
+        "tradermonty-claude-trading-skills-backtest-expert",
+        "tradermonty-claude-trading-skills-breadth-chart-analyst",
+        "tradermonty-claude-trading-skills-breakout-trade-planner",
+        "tradermonty-claude-trading-skills-canslim-screener",
+        "tradermonty-claude-trading-skills-cot-contrarian-detector",
+        "tradermonty-claude-trading-skills-data-quality-checker",
+        "tradermonty-claude-trading-skills-dividend-growth-pullback-screener",
+        "tradermonty-claude-trading-skills-downtrend-duration-analyzer",
+        "tradermonty-claude-trading-skills-drawdown-circuit-breaker",
+        "tradermonty-claude-trading-skills-dual-axis-skill-reviewer",
+        "tradermonty-claude-trading-skills-earnings-calendar",
+        "tradermonty-claude-trading-skills-earnings-trade-analyzer",
+        "tradermonty-claude-trading-skills-economic-calendar-fetcher",
+        "tradermonty-claude-trading-skills-edge-candidate-agent",
+        "tradermonty-claude-trading-skills-edge-concept-synthesizer",
+        "tradermonty-claude-trading-skills-edge-hint-extractor",
+        "tradermonty-claude-trading-skills-edge-pipeline-orchestrator",
+        "tradermonty-claude-trading-skills-edge-signal-aggregator",
+        "tradermonty-claude-trading-skills-edge-strategy-designer",
+        "tradermonty-claude-trading-skills-edge-strategy-reviewer",
+        "tradermonty-claude-trading-skills-exposure-coach",
+        "tradermonty-claude-trading-skills-finviz-screener",
+        "tradermonty-claude-trading-skills-ftd-detector",
+        "tradermonty-claude-trading-skills-ibd-distribution-day-monitor",
+        "tradermonty-claude-trading-skills-institutional-flow-tracker",
+        "tradermonty-claude-trading-skills-kanchi-dividend-review-monitor",
+        "tradermonty-claude-trading-skills-kanchi-dividend-sop",
+        "tradermonty-claude-trading-skills-kanchi-dividend-us-tax-accounting",
+        "tradermonty-claude-trading-skills-macro-regime-detector",
+        "tradermonty-claude-trading-skills-market-breadth-analyzer",
+        "tradermonty-claude-trading-skills-market-environment-analysis",
+        "tradermonty-claude-trading-skills-market-news-analyst",
+        "tradermonty-claude-trading-skills-market-top-detector",
+        "tradermonty-claude-trading-skills-news-reaction-failure-analyzer",
+        "tradermonty-claude-trading-skills-options-strategy-advisor",
+        "tradermonty-claude-trading-skills-pair-trade-screener",
+        "tradermonty-claude-trading-skills-parabolic-short-trade-planner",
+        "tradermonty-claude-trading-skills-pead-screener",
+        "tradermonty-claude-trading-skills-portfolio-manager",
+        "tradermonty-claude-trading-skills-position-sizer",
+        "tradermonty-claude-trading-skills-pre-trade-discipline-gate",
+        "tradermonty-claude-trading-skills-scenario-analyzer",
+        "tradermonty-claude-trading-skills-sector-analyst",
+        "tradermonty-claude-trading-skills-signal-postmortem",
+        "tradermonty-claude-trading-skills-stanley-druckenmiller-investment",
+        "tradermonty-claude-trading-skills-technical-analyst",
+        "tradermonty-claude-trading-skills-us-market-bubble-detector",
+        "tradermonty-claude-trading-skills-us-stock-analysis"
+      ],
+      "summary_zh": "来自 tradermonty/claude-trading-skills 的 48 个相关技能合集，适合按同一主题成组浏览和按需安装。"
+    },
+    {
       "id": "aaron-he-zhu-aaron-marketing-skills",
       "repo": "aaron-he-zhu/aaron-marketing-skills",
       "name": "Aaron Marketing Skills",
       "url": "https://github.com/aaron-he-zhu/aaron-marketing-skills/blob/main/ad/activate/ad-account-auditor/SKILL.md",
       "kind": "skill",
-      "stars": 2395,
+      "stars": 2396,
       "skill_ids": [
         "aaron-he-zhu-aaron-marketing-skills-ad-account-auditor",
         "aaron-he-zhu-aaron-marketing-skills-ad-creative-builder",
@@ -3047,71 +3107,12 @@
       "summary_zh": "来自 aaron-he-zhu/aaron-marketing-skills 的 61 个相关技能合集，适合按同一主题成组浏览和按需安装。"
     },
     {
-      "id": "tradermonty-claude-trading-skills",
-      "repo": "tradermonty/claude-trading-skills",
-      "name": "Claude Trading Skills",
-      "url": "https://github.com/tradermonty/claude-trading-skills/blob/main/skills/backtest-expert/SKILL.md",
-      "kind": "skill",
-      "stars": 2395,
-      "skill_ids": [
-        "tradermonty-claude-trading-skills-backtest-expert",
-        "tradermonty-claude-trading-skills-breadth-chart-analyst",
-        "tradermonty-claude-trading-skills-breakout-trade-planner",
-        "tradermonty-claude-trading-skills-canslim-screener",
-        "tradermonty-claude-trading-skills-cot-contrarian-detector",
-        "tradermonty-claude-trading-skills-data-quality-checker",
-        "tradermonty-claude-trading-skills-dividend-growth-pullback-screener",
-        "tradermonty-claude-trading-skills-downtrend-duration-analyzer",
-        "tradermonty-claude-trading-skills-drawdown-circuit-breaker",
-        "tradermonty-claude-trading-skills-dual-axis-skill-reviewer",
-        "tradermonty-claude-trading-skills-earnings-calendar",
-        "tradermonty-claude-trading-skills-earnings-trade-analyzer",
-        "tradermonty-claude-trading-skills-economic-calendar-fetcher",
-        "tradermonty-claude-trading-skills-edge-candidate-agent",
-        "tradermonty-claude-trading-skills-edge-concept-synthesizer",
-        "tradermonty-claude-trading-skills-edge-hint-extractor",
-        "tradermonty-claude-trading-skills-edge-pipeline-orchestrator",
-        "tradermonty-claude-trading-skills-edge-signal-aggregator",
-        "tradermonty-claude-trading-skills-edge-strategy-designer",
-        "tradermonty-claude-trading-skills-edge-strategy-reviewer",
-        "tradermonty-claude-trading-skills-exposure-coach",
-        "tradermonty-claude-trading-skills-finviz-screener",
-        "tradermonty-claude-trading-skills-ftd-detector",
-        "tradermonty-claude-trading-skills-ibd-distribution-day-monitor",
-        "tradermonty-claude-trading-skills-institutional-flow-tracker",
-        "tradermonty-claude-trading-skills-kanchi-dividend-review-monitor",
-        "tradermonty-claude-trading-skills-kanchi-dividend-sop",
-        "tradermonty-claude-trading-skills-kanchi-dividend-us-tax-accounting",
-        "tradermonty-claude-trading-skills-macro-regime-detector",
-        "tradermonty-claude-trading-skills-market-breadth-analyzer",
-        "tradermonty-claude-trading-skills-market-environment-analysis",
-        "tradermonty-claude-trading-skills-market-news-analyst",
-        "tradermonty-claude-trading-skills-market-top-detector",
-        "tradermonty-claude-trading-skills-news-reaction-failure-analyzer",
-        "tradermonty-claude-trading-skills-options-strategy-advisor",
-        "tradermonty-claude-trading-skills-pair-trade-screener",
-        "tradermonty-claude-trading-skills-parabolic-short-trade-planner",
-        "tradermonty-claude-trading-skills-pead-screener",
-        "tradermonty-claude-trading-skills-portfolio-manager",
-        "tradermonty-claude-trading-skills-position-sizer",
-        "tradermonty-claude-trading-skills-pre-trade-discipline-gate",
-        "tradermonty-claude-trading-skills-scenario-analyzer",
-        "tradermonty-claude-trading-skills-sector-analyst",
-        "tradermonty-claude-trading-skills-signal-postmortem",
-        "tradermonty-claude-trading-skills-stanley-druckenmiller-investment",
-        "tradermonty-claude-trading-skills-technical-analyst",
-        "tradermonty-claude-trading-skills-us-market-bubble-detector",
-        "tradermonty-claude-trading-skills-us-stock-analysis"
-      ],
-      "summary_zh": "来自 tradermonty/claude-trading-skills 的 48 个相关技能合集，适合按同一主题成组浏览和按需安装。"
-    },
-    {
       "id": "conorbronsdon-avoid-ai-writing",
       "repo": "conorbronsdon/avoid-ai-writing",
       "name": "Avoid Ai Writing",
       "url": "https://github.com/conorbronsdon/avoid-ai-writing/blob/main/SKILL.md",
       "kind": "skill",
-      "stars": 2390,
+      "stars": 2393,
       "skill_ids": [
         "conorbronsdon-avoid-ai-writing",
         "conorbronsdon-avoid-ai-writing-avoid-ai-writing"
@@ -3153,7 +3154,7 @@
       "name": "Agent Skills",
       "url": "https://github.com/supabase/agent-skills/blob/main/skills/supabase/SKILL.md",
       "kind": "skill",
-      "stars": 2339,
+      "stars": 2340,
       "skill_ids": [
         "supabase-agent-skills-supabase",
         "supabase-agent-skills-supabase-postgres-best-practices"
@@ -3166,7 +3167,7 @@
       "name": "Comet",
       "url": "https://github.com/rpamis/comet/blob/master/eval/local/skills/benchmarks/dependency/superpowers/brainstorming/SKILL.md",
       "kind": "skill",
-      "stars": 2319,
+      "stars": 2320,
       "skill_ids": [
         "rpamis-comet-brainstorming",
         "rpamis-comet-comet",
@@ -3245,7 +3246,7 @@
       "name": "Agent Toolkit",
       "url": "https://github.com/softaworks/agent-toolkit/blob/main/skills/agent-md-refactor/SKILL.md",
       "kind": "skill",
-      "stars": 2195,
+      "stars": 2196,
       "skill_ids": [
         "softaworks-agent-toolkit-agent-md-refactor",
         "softaworks-agent-toolkit-backend-to-frontend-handoff-docs",
@@ -3472,7 +3473,7 @@
       "name": "Aso Skills",
       "url": "https://github.com/Eronred/aso-skills/blob/main/skills/ab-test-store-listing/SKILL.md",
       "kind": "skill",
-      "stars": 1628,
+      "stars": 1629,
       "skill_ids": [
         "eronred-aso-skills-ab-test-store-listing",
         "eronred-aso-skills-android-aso",
@@ -3523,7 +3524,7 @@
       "name": "Roborev",
       "url": "https://github.com/kenn-io/roborev/blob/main/internal/skills/droid/roborev-design-review/SKILL.md",
       "kind": "skill",
-      "stars": 1548,
+      "stars": 1550,
       "skill_ids": [
         "kenn-io-roborev-roborev-design-review",
         "kenn-io-roborev-roborev-design-review-branch",
@@ -3543,7 +3544,7 @@
       "name": "Agent Skills",
       "url": "https://github.com/callstackincubator/agent-skills/blob/main/plugins/vendored/.agents/skills/agent-device/SKILL.md",
       "kind": "skill",
-      "stars": 1538,
+      "stars": 1539,
       "skill_ids": [
         "callstackincubator-agent-skills-agent-device",
         "callstackincubator-agent-skills-assess-react-native-migration",
@@ -3598,7 +3599,7 @@
       "name": "Medical Research Skills",
       "url": "https://github.com/aipoch/medical-research-skills/blob/main/awesome-med-research-skills/Academic Writing/arxiv-preflight/SKILL.md",
       "kind": "skill",
-      "stars": 1451,
+      "stars": 1453,
       "skill_ids": [
         "aipoch-medical-research-skills-arxiv-preflight",
         "aipoch-medical-research-skills-author-response-builder",
@@ -3682,7 +3683,7 @@
       "name": "Claude Code Safety Net",
       "url": "https://github.com/kenryu42/claude-code-safety-net/blob/main/skills/cc-safety-net/SKILL.md",
       "kind": "skill",
-      "stars": 1442,
+      "stars": 1443,
       "skill_ids": [
         "kenryu42-claude-code-safety-net-cc-safety-net",
         "kenryu42-claude-code-safety-net-set-custom-rules",
@@ -3696,7 +3697,7 @@
       "name": "Claude Blog",
       "url": "https://github.com/AgriciDaniel/claude-blog/blob/main/skills/blog/SKILL.md",
       "kind": "skill",
-      "stars": 1391,
+      "stars": 1393,
       "skill_ids": [
         "agricidaniel-claude-blog-blog",
         "agricidaniel-claude-blog-blog-analyze",
@@ -3782,7 +3783,7 @@
       "name": "Rust Skills",
       "url": "https://github.com/actionbook/rust-skills/blob/main/skills/coding-guidelines/SKILL.md",
       "kind": "skill",
-      "stars": 1306,
+      "stars": 1307,
       "skill_ids": [
         "actionbook-rust-skills-coding-guidelines",
         "actionbook-rust-skills-core-actionbook",
@@ -3831,7 +3832,7 @@
       "name": "Getspecstory",
       "url": "https://github.com/specstoryai/getspecstory/blob/dev/lore/SKILL.md",
       "kind": "skill",
-      "stars": 1279,
+      "stars": 1281,
       "skill_ids": [
         "specstoryai-getspecstory-lore",
         "specstoryai-getspecstory-workthreads"
@@ -3844,7 +3845,7 @@
       "name": "Claude Code Skills",
       "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-financial/ashare-news-fetcher/SKILL.md",
       "kind": "skill",
-      "stars": 1271,
+      "stars": 1272,
       "skill_ids": [
         "daymade-claude-code-skills-ashare-news-fetcher",
         "daymade-claude-code-skills-asr-transcribe-to-text",
@@ -4453,7 +4454,7 @@
       "name": "Skills For Fabric",
       "url": "https://github.com/microsoft/skills-for-fabric/blob/main/plugins/fabric-skills/skills/activator-authoring-cli/SKILL.md",
       "kind": "skill",
-      "stars": 796,
+      "stars": 798,
       "skill_ids": [
         "microsoft-skills-for-fabric-activator-authoring-cli",
         "microsoft-skills-for-fabric-activator-consumption-cli",
@@ -4499,7 +4500,7 @@
       "name": "Citadel",
       "url": "https://github.com/SethGammon/Citadel/blob/main/scripts/fixtures/ecosystem/anthropics-template-skill/SKILL.md",
       "kind": "skill",
-      "stars": 788,
+      "stars": 789,
       "skill_ids": [
         "sethgammon-citadel-anthropics-template-skill",
         "sethgammon-citadel-architect",
@@ -4723,7 +4724,7 @@
       "name": "Aegis",
       "url": "https://github.com/GanyuanRan/Aegis/blob/main/skills/anti-entropy-governance/SKILL.md",
       "kind": "skill",
-      "stars": 669,
+      "stars": 671,
       "skill_ids": [
         "ganyuanran-aegis-anti-entropy-governance",
         "ganyuanran-aegis-brainstorming",
@@ -4785,7 +4786,7 @@
       "name": "Mcp Server Neon",
       "url": "https://github.com/neondatabase/mcp-server-neon/blob/main/.agents/skills/claimable-postgres/SKILL.md",
       "kind": "skill",
-      "stars": 617,
+      "stars": 618,
       "skill_ids": [
         "neondatabase-mcp-server-neon-claimable-postgres",
         "neondatabase-mcp-server-neon-logging-best-practices",
@@ -4799,7 +4800,7 @@
       "name": "Swarmclaw",
       "url": "https://github.com/swarmclawai/swarmclaw/blob/main/skills/coding-agent/SKILL.md",
       "kind": "skill",
-      "stars": 615,
+      "stars": 616,
       "skill_ids": [
         "swarmclawai-swarmclaw-coding-agent",
         "swarmclawai-swarmclaw-github",
@@ -5193,7 +5194,7 @@
       "name": "Platform Design Skills",
       "url": "https://github.com/ehmo/platform-design-skills/blob/main/skills/android/SKILL.md",
       "kind": "skill",
-      "stars": 445,
+      "stars": 447,
       "skill_ids": [
         "ehmo-platform-design-skills-android",
         "ehmo-platform-design-skills-ios",
@@ -5241,7 +5242,7 @@
       "name": "Smart Ralph",
       "url": "https://github.com/tzachbon/smart-ralph/blob/main/.agents/skills/Command Development/SKILL.md",
       "kind": "skill",
-      "stars": 423,
+      "stars": 424,
       "skill_ids": [
         "tzachbon-smart-ralph-command-development",
         "tzachbon-smart-ralph-communication-style",
@@ -5333,7 +5334,7 @@
       "name": "Claude Skills",
       "url": "https://github.com/borghei/Claude-Skills/blob/main/data-analytics/analytics-engineer/SKILL.md",
       "kind": "skill",
-      "stars": 375,
+      "stars": 376,
       "skill_ids": [
         "borghei-claude-skills-analytics-engineer",
         "borghei-claude-skills-board-deck-builder",
@@ -5577,6 +5578,20 @@
       "summary_zh": "这套合集为美国小微企业和会计师打造，帮你把银行流水按 Schedule C 税表自动分类，并通过标准化的清晰/模糊/拒绝三态流程，让税务等强监管场景的判定更可靠可追溯。"
     },
     {
+      "id": "sepinetam-stata-mcp",
+      "repo": "SepineTam/stata-mcp",
+      "name": "Stata Mcp",
+      "url": "https://github.com/SepineTam/stata-mcp/blob/master/.claude/skills/mcp-smoke-test/SKILL.md",
+      "kind": "skill",
+      "stars": 224,
+      "skill_ids": [
+        "sepinetam-stata-mcp-mcp-smoke-test",
+        "sepinetam-stata-mcp-rfc-impl-generator",
+        "sepinetam-stata-mcp-stata-skill"
+      ],
+      "summary_zh": "这套合集面向 Stata 用户和开发者，一边能直接在 MCP 环境里跑 do 文件、调用 ado 包，一边帮你把功能想法快速整理成 RFC 和实现文档，让科研脚本开发和协作落地都更顺手。"
+    },
+    {
       "id": "whawkinsiv-claude-code-skills",
       "repo": "whawkinsiv/claude-code-skills",
       "name": "Claude Code Skills",
@@ -5645,20 +5660,6 @@
         "whawkinsiv-claude-code-skills-validate"
       ],
       "summary_zh": "这是一套为初创团队量身定制的AI全栈技能包，让AI不仅能写代码，还能包揽品牌营销、财务合规及社区运营等全流程工作，帮你用AI搞定从零到一的业务落地。"
-    },
-    {
-      "id": "sepinetam-stata-mcp",
-      "repo": "SepineTam/stata-mcp",
-      "name": "Stata Mcp",
-      "url": "https://github.com/SepineTam/stata-mcp/blob/master/.claude/skills/mcp-smoke-test/SKILL.md",
-      "kind": "skill",
-      "stars": 223,
-      "skill_ids": [
-        "sepinetam-stata-mcp-mcp-smoke-test",
-        "sepinetam-stata-mcp-rfc-impl-generator",
-        "sepinetam-stata-mcp-stata-skill"
-      ],
-      "summary_zh": "这套合集面向 Stata 用户和开发者，一边能直接在 MCP 环境里跑 do 文件、调用 ado 包，一边帮你把功能想法快速整理成 RFC 和实现文档，让科研脚本开发和协作落地都更顺手。"
     },
     {
       "id": "ognjengt-founder-skills",
@@ -5946,7 +5947,7 @@
       "name": "Dev Gtm Claude Skills",
       "url": "https://github.com/Infrasity-Labs/dev-gtm-claude-skills/blob/main/.claude/skills/a-b-test-design/SKILL.md",
       "kind": "skill",
-      "stars": 91,
+      "stars": 90,
       "skill_ids": [
         "infrasity-labs-dev-gtm-claude-skills-a-b-test-design",
         "infrasity-labs-dev-gtm-claude-skills-ab-testing",
@@ -6078,7 +6079,7 @@
       "name": "Agent Skills",
       "url": "https://github.com/redis/agent-skills/blob/main/skills/iris-development/SKILL.md",
       "kind": "skill",
-      "stars": 88,
+      "stars": 89,
       "skill_ids": [
         "redis-agent-skills-iris-development",
         "redis-agent-skills-redis-clustering",

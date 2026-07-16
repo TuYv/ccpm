@@ -1,7 +1,7 @@
 {
   "id": "daymade-claude-code-skills-claude-code-history-files-finder",
   "name": "claude-code-history-files-finder",
-  "description": "Finds and recovers content from Claude Code session history files. This skill should be used when searching for deleted files, tracking changes across sessions, analyzing conversation history, or recovering code from previous Claude interactions. Triggers include mentions of \"session history\", \"recover deleted\", \"find in history\", \"previous conversation\", or \".claude/projects\".",
+  "description": ">- Searches and recovers content from Claude Code JSONL session history across all active config homes and every long-term archive registered in ~/.claude/history-sources.json — sweeping every project at once with --all-projects when the project is unknown, and optionally covering Codex rollout history with --codex. Uses internal record timestamps rather than file mtime and searches message text, thinking, tool inputs/results, queue-operation content, attachments, summaries, and titles. Use for ",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-claude-code/claude-code-history-files-finder/SKILL.md",
     "path": "daymade-claude-code/claude-code-history-files-finder/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-16T06:47:21.358Z",
-    "stars": 1271,
+    "discovered_at": "2026-07-16T09:44:55.509Z",
+    "stars": 1272,
     "language": "Python",
-    "pushed_at": "2026-07-16T06:08:58Z",
+    "pushed_at": "2026-07-16T09:22:51Z",
     "license": "MIT"
   }
 }
