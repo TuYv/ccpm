@@ -1,0 +1,25 @@
+{
+  "id": "wondelai-skills-remove-technical-debt",
+  "name": "remove-technical-debt",
+  "description": "Guided journey from a large aged codebase everyone fears to touch to one that is safe to change, legible, bounded, and resilient - paid down in place without a rewrite. Orchestrates eight skills phase by phase - working-with-legacy-code, refactoring-patterns, clean-code, software-design-philosophy, clean-architecture, pragmatic-programmer, release-it, domain-driven-design - asking the user questions at every decision point and recording results in the project docs/ folder (TESTING.md, TECH-DEBT.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "wondelai",
+  "install_path": ".claude/skills/remove-technical-debt/SKILL.md",
+  "source": {
+    "repo": "wondelai/skills",
+    "url": "https://github.com/wondelai/skills/blob/main/remove-technical-debt/SKILL.md",
+    "path": "remove-technical-debt/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-16T14:33:12.726Z",
+    "stars": 1644,
+    "language": "Shell",
+    "pushed_at": "2026-07-16T12:17:36Z",
+    "license": "MIT"
+  }
+}
