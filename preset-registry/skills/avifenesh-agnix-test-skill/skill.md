@@ -1,9 +1,9 @@
 ---
 name: test-skill
 description: Use when testing per-client skill rules
-user-invocable: true
+disable-model-invocation: false
 ---
-# WS-SK-001 Test Fixture
+# RC-SK-001 Test Fixture
 
-This skill has a field unsupported by Windsurf (user-invocable).
-The WS-SK-001 rule should flag this field.
+This skill has a field unsupported by Roo Code (disable-model-invocation).
+The RC-SK-001 rule should flag this field.
