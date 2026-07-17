@@ -1,0 +1,25 @@
+{
+  "id": "tradermonty-claude-trading-skills-contrarian-setup-gate",
+  "name": "contrarian-setup-gate",
+  "description": "Synthesize the three Jason Shapiro contrarian-pipeline verdicts (COT crowding, news-reaction failure, weekly price-action confirmation) into one actionable setup_status via a fail-closed precedence state machine. Pure, offline synthesis -- no network, no API keys, no computation beyond validation and precedence.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tradermonty",
+  "install_path": ".claude/skills/contrarian-setup-gate/SKILL.md",
+  "source": {
+    "repo": "tradermonty/claude-trading-skills",
+    "url": "https://github.com/tradermonty/claude-trading-skills/blob/main/skills/contrarian-setup-gate/SKILL.md",
+    "path": "skills/contrarian-setup-gate/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-17T15:50:57.992Z",
+    "stars": 2433,
+    "language": "Python",
+    "pushed_at": "2026-07-17T14:20:01Z",
+    "license": "MIT"
+  }
+}
