@@ -2,7 +2,7 @@
   "id": "zhaoxuya520-reverse-skill-competition-firmware-layout",
   "name": "competition-firmware-layout",
   "description": "Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for firmware images, partition tables, boot chains, update packages, extracted filesystems, embedded configs, and device-facing trust boundaries. Use when the user asks to unpack firmware, map partition layout, inspect bootloader or init chains, recover update keys or credentials, trace config loading, or explain how a device surface reaches the decisive artifact. Use only after `$ctf-sandbox-orchestrator` has already e",
-  "category": "测试调试",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/zhaoxuya520/reverse-skill/blob/main/CTF-Sandbox-Orchestrator/competition-firmware-layout/SKILL.md",
     "path": "CTF-Sandbox-Orchestrator/competition-firmware-layout/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-17T17:45:54.271Z",
-    "stars": 8366,
+    "discovered_at": "2026-07-17T19:51:05.003Z",
+    "stars": 8368,
     "language": "PowerShell",
-    "pushed_at": "2026-07-17T17:20:45Z",
+    "pushed_at": "2026-07-17T18:09:39Z",
     "license": "MIT"
   }
 }

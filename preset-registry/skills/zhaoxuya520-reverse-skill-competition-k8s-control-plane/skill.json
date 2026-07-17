@@ -2,7 +2,7 @@
   "id": "zhaoxuya520-reverse-skill-competition-k8s-control-plane",
   "name": "competition-k8s-control-plane",
   "description": "Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for Kubernetes API analysis, service-account trust, RBAC edges, admission and controller behavior, cluster secrets, workload mutation, and namespace-scoped drift. Use when the user asks to inspect kube API permissions, service-account tokens, RoleBinding or ClusterRoleBinding edges, admission webhooks, controller-created pods, secret exposure, or why live workloads differ from manifests. Use only after `$ctf-sandbox-orc",
-  "category": "测试调试",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/zhaoxuya520/reverse-skill/blob/main/CTF-Sandbox-Orchestrator/competition-k8s-control-plane/SKILL.md",
     "path": "CTF-Sandbox-Orchestrator/competition-k8s-control-plane/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-17T17:45:55.181Z",
-    "stars": 8366,
+    "discovered_at": "2026-07-17T19:51:06.148Z",
+    "stars": 8368,
     "language": "PowerShell",
-    "pushed_at": "2026-07-17T17:20:45Z",
+    "pushed_at": "2026-07-17T18:09:39Z",
     "license": "MIT"
   }
 }

@@ -2,7 +2,7 @@
   "id": "zhaoxuya520-reverse-skill-competition-supply-chain",
   "name": "competition-supply-chain",
   "description": "Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for CI/CD, registry, dependency drift, artifact provenance, image build, release pipeline, and runtime consumer challenges. Use when the user asks to trace dependency drift, registry pulls, malicious packages, build or release tampering, CI execution, artifact signing, or which shipped artifact the runtime actually consumes. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and route",
-  "category": "测试调试",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/zhaoxuya520/reverse-skill/blob/main/CTF-Sandbox-Orchestrator/competition-supply-chain/SKILL.md",
     "path": "CTF-Sandbox-Orchestrator/competition-supply-chain/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-17T17:45:57.898Z",
-    "stars": 8366,
+    "discovered_at": "2026-07-17T19:51:09.761Z",
+    "stars": 8368,
     "language": "PowerShell",
-    "pushed_at": "2026-07-17T17:20:45Z",
+    "pushed_at": "2026-07-17T18:09:39Z",
     "license": "MIT"
   }
 }

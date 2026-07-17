@@ -2,7 +2,7 @@
   "id": "zhaoxuya520-reverse-skill-competition-queue-worker-drift",
   "name": "competition-queue-worker-drift",
   "description": "Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for queues, async workers, cron jobs, delayed tasks, retry behavior, worker-only config drift, and payload-to-side-effect chains. Use when the user asks to trace a queue payload, inspect async job execution, explain worker-only behavior, follow retries or dead-letter handling, or connect an enqueued item to a later file, cache, email, or privilege-bearing side effect. Use only after `$ctf-sandbox-orchestrator` has alrea",
-  "category": "测试调试",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/zhaoxuya520/reverse-skill/blob/main/CTF-Sandbox-Orchestrator/competition-queue-worker-drift/SKILL.md",
     "path": "CTF-Sandbox-Orchestrator/competition-queue-worker-drift/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-17T17:45:56.690Z",
-    "stars": 8366,
+    "discovered_at": "2026-07-17T19:51:08.149Z",
+    "stars": 8368,
     "language": "PowerShell",
-    "pushed_at": "2026-07-17T17:20:45Z",
+    "pushed_at": "2026-07-17T18:09:39Z",
     "license": "MIT"
   }
 }

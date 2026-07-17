@@ -2,7 +2,7 @@
   "id": "zhaoxuya520-reverse-skill-competition-jwt-claim-confusion",
   "name": "competition-jwt-claim-confusion",
   "description": "Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for JWT, JWS, and JWE validation paths, header parsing, key selection, claim acceptance, audience and issuer checks, role derivation, and token-to-identity confusion bugs. Use when the user asks to inspect JWT headers or claims, key lookup, `kid` handling, `alg` confusion, audience or issuer validation, role claims, or explain how a token becomes accepted identity or privilege. Use only after `$ctf-sandbox-orchestrator`",
-  "category": "测试调试",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/zhaoxuya520/reverse-skill/blob/main/CTF-Sandbox-Orchestrator/competition-jwt-claim-confusion/SKILL.md",
     "path": "CTF-Sandbox-Orchestrator/competition-jwt-claim-confusion/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-17T17:45:55.031Z",
-    "stars": 8366,
+    "discovered_at": "2026-07-17T19:51:05.966Z",
+    "stars": 8368,
     "language": "PowerShell",
-    "pushed_at": "2026-07-17T17:20:45Z",
+    "pushed_at": "2026-07-17T18:09:39Z",
     "license": "MIT"
   }
 }

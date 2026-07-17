@@ -2,7 +2,7 @@
   "id": "zhaoxuya520-reverse-skill-competition-cloud-metadata-path",
   "name": "competition-cloud-metadata-path",
   "description": "Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for cloud metadata services, instance identity, workload identity, link-local credential paths, role assumption, and metadata-to-privilege trust edges. Use when the user asks to inspect metadata-service access, instance credentials, pod or workload identity, link-local token paths, SSRF-to-metadata escalation, or explain how metadata-derived credentials turn into accepted cloud or control-plane privilege. Use only after",
-  "category": "测试调试",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/zhaoxuya520/reverse-skill/blob/main/CTF-Sandbox-Orchestrator/competition-cloud-metadata-path/SKILL.md",
     "path": "CTF-Sandbox-Orchestrator/competition-cloud-metadata-path/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-17T17:45:53.356Z",
-    "stars": 8366,
+    "discovered_at": "2026-07-17T19:51:03.638Z",
+    "stars": 8368,
     "language": "PowerShell",
-    "pushed_at": "2026-07-17T17:20:45Z",
+    "pushed_at": "2026-07-17T18:09:39Z",
     "license": "MIT"
   }
 }

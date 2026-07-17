@@ -2,7 +2,7 @@
   "id": "zhaoxuya520-reverse-skill-competition-stego-media",
   "name": "competition-stego-media",
   "description": "Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for image, audio, video, document, and container steganography. Use when the user asks to inspect metadata, alpha or palette channels, LSBs, thumbnails, appended trailers, QR fragments, transcoding artifacts, or recover a hidden payload from media without blind brute force. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and routed here.",
-  "category": "测试调试",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/zhaoxuya520/reverse-skill/blob/main/CTF-Sandbox-Orchestrator/competition-stego-media/SKILL.md",
     "path": "CTF-Sandbox-Orchestrator/competition-stego-media/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-17T17:45:57.763Z",
-    "stars": 8366,
+    "discovered_at": "2026-07-17T19:51:09.554Z",
+    "stars": 8368,
     "language": "PowerShell",
-    "pushed_at": "2026-07-17T17:20:45Z",
+    "pushed_at": "2026-07-17T18:09:39Z",
     "license": "MIT"
   }
 }

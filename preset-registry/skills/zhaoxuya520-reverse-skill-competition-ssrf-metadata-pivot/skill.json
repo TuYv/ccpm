@@ -2,7 +2,7 @@
   "id": "zhaoxuya520-reverse-skill-competition-ssrf-metadata-pivot",
   "name": "competition-ssrf-metadata-pivot",
   "description": "Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for SSRF reachability, internal route probing, metadata-service access, credential pivoting, and token-to-accepted-privilege chains. Use when the user asks to trace SSRF sources, internal hosts, metadata endpoints, link-local tokens, service-account credentials, or explain how a server-side fetch edge turns into accepted access. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and r",
-  "category": "测试调试",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/zhaoxuya520/reverse-skill/blob/main/CTF-Sandbox-Orchestrator/competition-ssrf-metadata-pivot/SKILL.md",
     "path": "CTF-Sandbox-Orchestrator/competition-ssrf-metadata-pivot/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-17T17:45:57.609Z",
-    "stars": 8366,
+    "discovered_at": "2026-07-17T19:51:09.351Z",
+    "stars": 8368,
     "language": "PowerShell",
-    "pushed_at": "2026-07-17T17:20:45Z",
+    "pushed_at": "2026-07-17T18:09:39Z",
     "license": "MIT"
   }
 }

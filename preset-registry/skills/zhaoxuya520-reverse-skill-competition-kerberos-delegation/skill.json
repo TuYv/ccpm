@@ -2,7 +2,7 @@
   "id": "zhaoxuya520-reverse-skill-competition-kerberos-delegation",
   "name": "competition-kerberos-delegation",
   "description": "Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for Kerberos delegation, SPN trust edges, S4U abuse, RBCD, constrained or unconstrained delegation, and service-ticket acceptance. Use when the user asks about constrained delegation, unconstrained delegation, RBCD, S4U, SPNs, ticket acceptance, or how a Kerberos trust edge turns into effective privilege under sandbox assumptions. Use only after `$ctf-sandbox-orchestrator` has already established sandbox assumptions and",
-  "category": "测试调试",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/zhaoxuya520/reverse-skill/blob/main/CTF-Sandbox-Orchestrator/competition-kerberos-delegation/SKILL.md",
     "path": "CTF-Sandbox-Orchestrator/competition-kerberos-delegation/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-17T17:45:55.335Z",
-    "stars": 8366,
+    "discovered_at": "2026-07-17T19:51:06.356Z",
+    "stars": 8368,
     "language": "PowerShell",
-    "pushed_at": "2026-07-17T17:20:45Z",
+    "pushed_at": "2026-07-17T18:09:39Z",
     "license": "MIT"
   }
 }
