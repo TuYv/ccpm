@@ -1,0 +1,25 @@
+{
+  "id": "openagentsinc-openagents-fast-follow",
+  "name": "fast-follow",
+  "description": "Use a project's FastFollowSpec to produce source-grounded research, target gap assessments, issue candidates, or separately admitted implementations without treating upstream projects as authority.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "OpenAgentsInc",
+  "install_path": ".claude/skills/fast-follow/SKILL.md",
+  "source": {
+    "repo": "OpenAgentsInc/openagents",
+    "url": "https://github.com/OpenAgentsInc/openagents/blob/main/.agents/skills/fast-follow/SKILL.md",
+    "path": ".agents/skills/fast-follow/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-17T06:43:10.352Z",
+    "stars": 439,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-17T05:12:17Z",
+    "license": null
+  }
+}
