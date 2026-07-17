@@ -1,0 +1,25 @@
+{
+  "id": "zhaoxuya520-reverse-skill-go-rust-reverse",
+  "name": "go-rust-reverse",
+  "description": "Use for reverse engineering stripped Go and Rust binaries including runtime recognition, pclntab/moduel data recovery, panic strings, and idiomatic decompilation recovery.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "zhaoxuya520",
+  "install_path": ".claude/skills/go-rust-reverse/SKILL.md",
+  "source": {
+    "repo": "zhaoxuya520/reverse-skill",
+    "url": "https://github.com/zhaoxuya520/reverse-skill/blob/main/skills/go-rust-reverse/SKILL.md",
+    "path": "skills/go-rust-reverse/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-17T17:46:01.415Z",
+    "stars": 8366,
+    "language": "PowerShell",
+    "pushed_at": "2026-07-17T17:20:45Z",
+    "license": "MIT"
+  }
+}

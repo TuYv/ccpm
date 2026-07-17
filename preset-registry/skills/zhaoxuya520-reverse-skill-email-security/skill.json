@@ -1,0 +1,25 @@
+{
+  "id": "zhaoxuya520-reverse-skill-email-security",
+  "name": "email-security",
+  "description": "Use for authorized email security review including phishing analysis, header authentication (SPF/DKIM/DMARC), BEC patterns, and mailbox token abuse research.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "zhaoxuya520",
+  "install_path": ".claude/skills/email-security/SKILL.md",
+  "source": {
+    "repo": "zhaoxuya520/reverse-skill",
+    "url": "https://github.com/zhaoxuya520/reverse-skill/blob/main/skills/email-security/SKILL.md",
+    "path": "skills/email-security/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-17T17:46:00.975Z",
+    "stars": 8366,
+    "language": "PowerShell",
+    "pushed_at": "2026-07-17T17:20:45Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "zhaoxuya520-reverse-skill-ghidra-reverse",
+  "name": "ghidra-reverse",
+  "description": "Use for free/open reverse engineering with Ghidra (headless or GUI), including decompile, cross-refs, and optional Ghidra MCP workflows when IDA is unavailable.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "zhaoxuya520",
+  "install_path": ".claude/skills/ghidra-reverse/SKILL.md",
+  "source": {
+    "repo": "zhaoxuya520/reverse-skill",
+    "url": "https://github.com/zhaoxuya520/reverse-skill/blob/main/skills/ghidra-reverse/SKILL.md",
+    "path": "skills/ghidra-reverse/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-17T17:46:01.267Z",
+    "stars": 8366,
+    "language": "PowerShell",
+    "pushed_at": "2026-07-17T17:20:45Z",
+    "license": "MIT"
+  }
+}
