@@ -207,6 +207,9 @@ async function chatComplete(opts: RunOpts, system: string, user: string): Promis
         { role: "user", content: user },
       ],
     }),
+    // 无超时的 fetch 在网关挂起时会永久阻塞 worker（并发全挂 → 整步卡死）。
+    // ponytail: 单发 60s 硬超时，超时即失败；上层每条独立 try/catch，失败下轮重试。
+    signal: AbortSignal.timeout(60_000),
   });
   if (!res.ok) {
     throw new Error(`${res.status} ${(await res.text()).slice(0, 300)}`);
