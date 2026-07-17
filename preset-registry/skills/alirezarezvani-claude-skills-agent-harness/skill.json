@@ -1,0 +1,25 @@
+{
+  "id": "alirezarezvani-claude-skills-agent-harness",
+  "name": "agent-harness",
+  "description": "Turn any domain folder of skills into a bounded agentic loop: compile a goal into a verifiable task plan, execute tasks with the domain's own tools, verify every task with machine-run checks, retry with caps, escalate to a human when budgets exhaust, and refuse to close until everything is verified or explicitly waived. Use when you want an agent or subagent to pick up a goal and drive it to a verified close across one of this repo's 18 domains ('run this goal through the engineering harness', '",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alirezarezvani",
+  "install_path": ".claude/skills/agent-harness/SKILL.md",
+  "source": {
+    "repo": "alirezarezvani/claude-skills",
+    "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/agent-harness/SKILL.md",
+    "path": ".gemini/skills/agent-harness/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-17T14:13:00.019Z",
+    "stars": 22674,
+    "language": "Python",
+    "pushed_at": "2026-07-17T13:02:50Z",
+    "license": "MIT"
+  }
+}

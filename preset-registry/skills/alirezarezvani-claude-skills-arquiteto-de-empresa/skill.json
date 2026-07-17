@@ -1,0 +1,25 @@
+{
+  "id": "alirezarezvani-claude-skills-arquiteto-de-empresa",
+  "name": "arquiteto-de-empresa",
+  "description": "Company Architect: builds a business from scratch as an OKF (Open Knowledge Format) bundle — a tree of version-controllable .md files with frontmatter type, links forming a graph, and reserved index.md/log.md, readable by humans and agents. Guides the founder through a 12-phase interview (foundation, strategy, market, financial, sales, marketing, product, operations, tech, people, legal, governance), one phase at a time, few questions per block, and generates the concepts as conformant markdown.",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alirezarezvani",
+  "install_path": ".claude/skills/arquiteto-de-empresa/SKILL.md",
+  "source": {
+    "repo": "alirezarezvani/claude-skills",
+    "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/arquiteto-de-empresa/SKILL.md",
+    "path": ".gemini/skills/arquiteto-de-empresa/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-17T14:13:01.336Z",
+    "stars": 22674,
+    "language": "Python",
+    "pushed_at": "2026-07-17T13:02:50Z",
+    "license": "MIT"
+  }
+}
