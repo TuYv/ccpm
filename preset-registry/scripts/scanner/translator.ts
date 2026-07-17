@@ -7,21 +7,23 @@
 // summary into per-item JSONs and patch the three index.json files so the client
 // can read summary_zh without loading the cache.
 //
+// Uses an OpenAI-compatible /chat/completions endpoint (built-in fetch, no SDK).
+//
 // Configuration (env):
-//   ANTHROPIC_API_KEY        — required; if absent, this step is a no-op (logged)
-//   ANTHROPIC_BASE_URL       — optional; override API endpoint (relay / proxy / CodePlan)
-//   TRANSLATION_MODEL        — default "claude-haiku-4-5"
+//   OPENAI_API_KEY           — required; if absent, this step is a no-op (logged). Falls back to ANTHROPIC_API_KEY.
+//   OPENAI_BASE_URL          — gateway base; `/v1` auto-appended if missing. Falls back to ANTHROPIC_BASE_URL.
+//   TRANSLATION_MODEL        — default "gpt-4o-mini"
 //   TRANSLATION_README_CHARS  — default 2000 (readme truncation, by character count)
 //   TRANSLATION_CONCURRENCY   — default 3 (parallel API calls)
 //   TRANSLATION_MAX_PER_RUN   — default 200 (new/stale translations per scanner run; <=0 means unlimited)
 //
 // On per-item API failure: log and continue. Never fails the workflow.
 
-import Anthropic from "@anthropic-ai/sdk";
 import { createHash } from "node:crypto";
 import { existsSync } from "node:fs";
 import { mkdir, readFile, readdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
+import { classifyBundle, type SkillCategory } from "./classify.js";
 
 type EntryType = "preset" | "skill" | "mcp";
 
@@ -182,16 +184,39 @@ async function collectItems(registryDir: string): Promise<ItemSpec[]> {
   return items;
 }
 
-async function translate(client: Anthropic, model: string, item: ItemSpec, readmeChars: number): Promise<string> {
-  const resp = await client.messages.create({
-    model,
-    max_tokens: 200,
-    system: PROMPT_SYSTEM,
-    messages: [{ role: "user", content: buildUserPrompt(item, readmeChars) }],
+// OpenAI 兼容 Chat Completions（用内置 fetch，不引 SDK）。
+// base URL 缺 /v1 时自动补：`https://host` → `https://host/v1/chat/completions`。
+function chatEndpoint(baseURL: string): string {
+  const b = baseURL.replace(/\/+$/, "");
+  return /\/v\d+$/.test(b) ? `${b}/chat/completions` : `${b}/v1/chat/completions`;
+}
+
+async function chatComplete(opts: RunOpts, system: string, user: string): Promise<string> {
+  const base = opts.baseURL ?? "https://api.openai.com/v1";
+  const res = await fetch(chatEndpoint(base), {
+    method: "POST",
+    headers: {
+      "content-type": "application/json",
+      authorization: `Bearer ${opts.apiKey}`,
+    },
+    body: JSON.stringify({
+      model: opts.model,
+      max_tokens: 200,
+      messages: [
+        { role: "system", content: system },
+        { role: "user", content: user },
+      ],
+    }),
   });
-  const block = resp.content.find((b) => b.type === "text");
-  if (!block || block.type !== "text") return "";
-  return block.text.trim();
+  if (!res.ok) {
+    throw new Error(`${res.status} ${(await res.text()).slice(0, 300)}`);
+  }
+  const data: any = await res.json();
+  return String(data?.choices?.[0]?.message?.content ?? "").trim();
+}
+
+async function translate(opts: RunOpts, item: ItemSpec, readmeChars: number): Promise<string> {
+  return chatComplete(opts, PROMPT_SYSTEM, buildUserPrompt(item, readmeChars));
 }
 
 async function runWithConcurrency<T>(
@@ -285,20 +310,11 @@ function bundleContentHash(b: BundleSpec, readmeChars: number): string {
 }
 
 async function translateBundle(
-  client: Anthropic,
-  model: string,
+  opts: RunOpts,
   b: BundleSpec,
   readmeChars: number,
 ): Promise<string> {
-  const resp = await client.messages.create({
-    model,
-    max_tokens: 200,
-    system: BUNDLE_PROMPT_SYSTEM,
-    messages: [{ role: "user", content: buildBundleUserPrompt(b, readmeChars) }],
-  });
-  const block = resp.content.find((c) => c.type === "text");
-  if (!block || block.type !== "text") return "";
-  return block.text.trim();
+  return chatComplete(opts, BUNDLE_PROMPT_SYSTEM, buildBundleUserPrompt(b, readmeChars));
 }
 
 async function writeSkillBundlesIndex(
@@ -310,27 +326,78 @@ async function writeSkillBundlesIndex(
   if (!existsSync(bundlesDir)) {
     await mkdir(bundlesDir, { recursive: true });
   }
+  // 合集定分类：每个合集算一个分类，成员 skill 全部继承（见 patchSkillCategoriesFromBundles）。
+  const bundleCategory = new Map<string, SkillCategory>();
   const out = {
     version: "1",
     updated_at: new Date().toISOString(),
-    bundles: bundles.map((b) => ({
-      id: b.id,
-      repo: b.repo,
-      name: b.name,
-      url: b.url,
-      kind: b.kind,
-      stars: b.stars,
-      skill_ids: b.skill_ids,
-      summary_zh:
+    bundles: bundles.map((b) => {
+      const summary_zh =
         cache.entries[`bundle:${b.id}`]?.summary_zh ??
-        `来自 ${b.repo} 的 ${b.skill_ids.length} 个相关技能合集，适合按同一主题成组浏览和按需安装。`,
-    })),
+        `来自 ${b.repo} 的 ${b.skill_ids.length} 个相关技能合集，适合按同一主题成组浏览和按需安装。`;
+      const category = classifyBundle({
+        name: b.name,
+        summary_zh,
+        readme: b.readme,
+      });
+      bundleCategory.set(b.id, category);
+      return {
+        id: b.id,
+        repo: b.repo,
+        name: b.name,
+        url: b.url,
+        kind: b.kind,
+        stars: b.stars,
+        category,
+        skill_ids: b.skill_ids,
+        summary_zh,
+      };
+    }),
   };
   await writeFile(join(bundlesDir, "index.json"), JSON.stringify(out, null, 2));
+  await patchSkillCategoriesFromBundles(registryDir, bundles, bundleCategory);
+}
+
+/**
+ * 合集内每个 skill 的 category 改写为其所属合集的 category（skill 跟着合集走）。
+ * 不在任何合集里的单例 skill 保持扫描时 classifySkill 的结果不动。
+ */
+async function patchSkillCategoriesFromBundles(
+  registryDir: string,
+  bundles: BundleSpec[],
+  bundleCategory: Map<string, SkillCategory>,
+): Promise<void> {
+  const indexPath = join(registryDir, "skills", "index.json");
+  if (!existsSync(indexPath)) return;
+  let raw: any;
+  try {
+    raw = JSON.parse(await readFile(indexPath, "utf8"));
+  } catch {
+    return;
+  }
+  const skills = raw?.skills;
+  if (!Array.isArray(skills)) return;
+  const skillCategory = new Map<string, SkillCategory>();
+  for (const b of bundles) {
+    const cat = bundleCategory.get(b.id);
+    if (!cat) continue;
+    for (const id of b.skill_ids) skillCategory.set(id, cat);
+  }
+  let changed = 0;
+  for (const s of skills) {
+    const cat = skillCategory.get(s?.id);
+    if (cat && s.category !== cat) {
+      s.category = cat;
+      changed++;
+    }
+  }
+  if (changed > 0) {
+    await writeFile(indexPath, JSON.stringify(raw, null, 2));
+    console.log(`[classify] 合集定分类：改写 ${changed} 个 skill 的 category`);
+  }
 }
 
 async function runBundleTranslations(
-  client: Anthropic,
   opts: RunOpts,
   cache: TranslationsCache,
   items: ItemSpec[],
@@ -355,7 +422,7 @@ async function runBundleTranslations(
       return;
     }
     try {
-      const summary = await translateBundle(client, opts.model, b, opts.readmeChars);
+      const summary = await translateBundle(opts, b, opts.readmeChars);
       if (!summary) {
         failures++;
         console.warn(`[translate] empty bundle summary for ${key}`);
@@ -411,13 +478,13 @@ async function patchIndex(
 }
 
 export async function runTranslations(registryDir: string): Promise<void> {
-  const apiKey = process.env.ANTHROPIC_API_KEY;
+  const apiKey = process.env.OPENAI_API_KEY ?? process.env.ANTHROPIC_API_KEY;
   const cachePath = join(registryDir, "translations.json");
   const cache = await loadCache(cachePath);
   const items = await collectItems(registryDir);
 
   if (!apiKey) {
-    console.log("[translate] ANTHROPIC_API_KEY not set, applying cached summaries only");
+    console.log("[translate] OPENAI_API_KEY not set, applying cached summaries only");
     for (const item of items) {
       const cached = cache.entries[`${item.type}:${item.id}`];
       if (cached?.summary_zh && item.data.summary_zh !== cached.summary_zh) {
@@ -434,8 +501,8 @@ export async function runTranslations(registryDir: string): Promise<void> {
   const opts: RunOpts = {
     registryDir,
     apiKey,
-    baseURL: process.env.ANTHROPIC_BASE_URL || undefined,
-    model: process.env.TRANSLATION_MODEL ?? "claude-haiku-4-5",
+    baseURL: process.env.OPENAI_BASE_URL || process.env.ANTHROPIC_BASE_URL || undefined,
+    model: process.env.TRANSLATION_MODEL ?? "gpt-4o-mini",
     readmeChars: Number(process.env.TRANSLATION_README_CHARS ?? "2000"),
     concurrency: Number(process.env.TRANSLATION_CONCURRENCY ?? "3"),
     maxTranslationsPerRun: parseMaxTranslationsPerRun(process.env.TRANSLATION_MAX_PER_RUN),
@@ -443,15 +510,11 @@ export async function runTranslations(registryDir: string): Promise<void> {
   const budget = createTranslationBudget(opts.maxTranslationsPerRun);
   console.log(`[translate] max new/stale translations this run: ${formatBudget(budget.remaining())}`);
 
-  const client = new Anthropic({
-    apiKey: opts.apiKey,
-    ...(opts.baseURL ? { baseURL: opts.baseURL } : {}),
-  });
   if (opts.baseURL) {
     console.log(`[translate] using custom base URL: ${opts.baseURL}`);
   }
 
-  const bundleResult = await runBundleTranslations(client, opts, cache, items, budget);
+  const bundleResult = await runBundleTranslations(opts, cache, items, budget);
 
   let hits = 0;
   let misses = 0;
@@ -479,7 +542,7 @@ export async function runTranslations(registryDir: string): Promise<void> {
     }
 
     try {
-      const summary = await translate(client, opts.model, item, opts.readmeChars);
+      const summary = await translate(opts, item, opts.readmeChars);
       if (!summary) {
         failures++;
         console.warn(`[translate] empty summary for ${key}`);

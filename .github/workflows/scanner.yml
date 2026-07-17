@@ -36,12 +36,13 @@ jobs:
           # if SCANNER_PAT isn't set.
           GITHUB_TOKEN: ${{ secrets.SCANNER_PAT || secrets.GITHUB_TOKEN }}
           REGISTRY_DIR: ${{ github.workspace }}/preset-registry
-          # Chinese summary generation. Set ANTHROPIC_API_KEY in repo secrets to enable;
-          # if absent, the translation step is a no-op. Override the model / readme
-          # truncation / concurrency here without touching code.
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          ANTHROPIC_BASE_URL: ${{ vars.ANTHROPIC_BASE_URL }}
-          TRANSLATION_MODEL: ${{ vars.TRANSLATION_MODEL || 'claude-haiku-4-5' }}
+          # Chinese summary generation via an OpenAI-compatible endpoint (/chat/completions).
+          # Set OPENAI_API_KEY in repo secrets to enable; if absent the translation step is
+          # a no-op. OPENAI_BASE_URL points at the gateway (include /v1 if it needs it; falls
+          # back to the legacy ANTHROPIC_* names). Override model / truncation / concurrency here.
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY || secrets.ANTHROPIC_API_KEY }}
+          OPENAI_BASE_URL: ${{ vars.OPENAI_BASE_URL || vars.ANTHROPIC_BASE_URL }}
+          TRANSLATION_MODEL: ${{ vars.TRANSLATION_MODEL || 'gpt-4o-mini' }}
           TRANSLATION_README_CHARS: ${{ vars.TRANSLATION_README_CHARS || '2000' }}
           TRANSLATION_CONCURRENCY: ${{ vars.TRANSLATION_CONCURRENCY || '3' }}
         run: pnpm run scan
