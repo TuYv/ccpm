@@ -1,7 +1,7 @@
 {
   "id": "anthropics-skills-xlsx",
   "name": "xlsx",
-  "description": "Use this skill any time a spreadsheet file is the primary input or output. This means any task where the user wants to: open, read, edit, or fix an existing .xlsx, .xlsm, .csv, or .tsv file (e.g., adding columns, computing formulas, formatting, charting, cleaning messy data); create a new spreadsheet from scratch or from other data sources; or convert between tabular file formats. Trigger especially when the user references a spreadsheet file by name or path — even casually (like \\\"the xlsx in m",
+  "description": "Use this skill any time a spreadsheet file is the primary input or output. This means any task where the user wants to: open, read, edit, or fix an existing .xlsx, .xlsm, .xltx, .csv, or .tsv file (e.g., adding columns, computing formulas, formatting, charting, cleaning messy data); create a new spreadsheet from scratch or from other data sources; or convert between tabular file formats. Trigger especially when the user references a spreadsheet file by name or path — even casually (like \\\"the xl",
   "category": "文档写作",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/anthropics/skills/blob/main/skills/xlsx/SKILL.md",
     "path": "skills/xlsx/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-16T21:22:39.517Z",
-    "stars": 161689,
+    "discovered_at": "2026-07-17T03:43:05.053Z",
+    "stars": 161786,
     "language": "Python",
-    "pushed_at": "2026-07-16T19:00:24Z",
+    "pushed_at": "2026-07-17T02:47:40Z",
     "license": null
-  },
-  "summary_zh": "这是一个处理电子表格的技能，能帮你轻松搞定各类表格文件的创建、编辑、修复与格式转换，只要涉及表格数据操作的场景都能派上用场。"
+  }
 }
