@@ -213,6 +213,7 @@ export interface BundleMeta {
   url: string;
   kind: "skill";
   stars: number;
+  category?: string;
   skill_ids: string[];
   summary_zh?: string | null;
 }

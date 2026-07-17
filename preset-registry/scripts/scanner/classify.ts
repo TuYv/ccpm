@@ -44,7 +44,33 @@ export function classifySkill(input: ClassifyInput): SkillCategory {
     (input.summary_zh ?? "").toLowerCase(),
     (input.readme ?? "").slice(0, 800).toLowerCase(),
   ].join("  ");
+  return classifyFrom(name, hay);
+}
 
+export interface BundleClassifyInput {
+  name?: string | null;
+  summary_zh?: string | null;
+  readme?: string | null;
+}
+
+/**
+ * 合集定分类：用合集自身的描述（合集名 + 中文摘要 + README）跑关键词规则得到唯一分类，
+ * 成员 skill 继承此分类，不再单独判定。
+ *
+ * 用合集摘要而非汇总所有成员文本：后者会让大合集里任一成员提到 browser/test 就把
+ * 整个合集吸进靠前的桶；合集摘要是对整包主题的一句话概括，噪声小得多。
+ */
+export function classifyBundle(input: BundleClassifyInput): SkillCategory {
+  const name = (input.name ?? "").toLowerCase();
+  const hay = [
+    name,
+    (input.summary_zh ?? "").toLowerCase(),
+    (input.readme ?? "").slice(0, 1200).toLowerCase(),
+  ].join("  ");
+  return classifyFrom(name, hay);
+}
+
+function classifyFrom(name: string, hay: string): SkillCategory {
   // 1) Composio / Rube MCP SaaS connectors — the "*-automation" bulk.
   if (
     /-automation$/.test(name) ||
