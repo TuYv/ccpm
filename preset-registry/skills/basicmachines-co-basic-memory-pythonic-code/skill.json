@@ -1,0 +1,25 @@
+{
+  "id": "basicmachines-co-basic-memory-pythonic-code",
+  "name": "pythonic-code",
+  "description": ">- Write, refactor, and review Python for clarity, explicit behavior, local reasoning, strong types, and minimal abstraction. Use when creating or changing nontrivial Python, simplifying object-heavy or helper-heavy code, evaluating whether code is Pythonic, or reviewing Python maintainability in Basic Memory repositories.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "basicmachines-co",
+  "install_path": ".claude/skills/pythonic-code/SKILL.md",
+  "source": {
+    "repo": "basicmachines-co/basic-memory",
+    "url": "https://github.com/basicmachines-co/basic-memory/blob/main/.agents/skills/pythonic-code/SKILL.md",
+    "path": ".agents/skills/pythonic-code/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-18T03:43:54.375Z",
+    "stars": 3451,
+    "language": "Python",
+    "pushed_at": "2026-07-18T03:20:29Z",
+    "license": "AGPL-3.0"
+  }
+}
