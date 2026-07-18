@@ -14,14 +14,9 @@ npm run compile
 
 Package VSIX (must use `cmd` wrapper, Git Bash swallows vsce output):
 ```bash
-cmd //c "npx @vscode/vsce package"
+cmd //c "npx @vscode/vsce package --no-dependencies"
 ```
-- Do NOT pass `--no-dependencies`: as of v5 the extension has a real runtime
-  native dependency (`node-pty`). `--no-dependencies` makes vsce skip the entire
-  production-dependency tree, which ALSO nullifies the `!node_modules/node-pty/...`
-  re-include rules in `.vscodeignore` — the resulting VSIX ships ZERO node_modules
-  and node-pty fails to load at runtime (extension installs but the panel won't
-  open; F5 still works because it uses the on-disk node_modules). See gotcha #11.
+- `--no-dependencies`: skips `npm install` during packaging — dependencies are already in `node_modules` from development; without this flag, vsce may fail or produce a bloated package
 - Do NOT use `npx @vscode/vsce package` directly in Git Bash — it silently fails (exit 0 but no .vsix generated)
 - Output file: `claude-code-chatui-{version}.vsix`
 
@@ -35,48 +30,23 @@ Debug (Extension Development Host):
 
 ## Architecture Overview
 
-### Data Flow (v5.0.1+ — PTY interactive driver)
-
-As of v5.0.1 the extension drives a **real interactive `claude` CLI through a
-node-pty pseudo-terminal** (NOT `claude -p` / stream-json). This keeps usage on
-the user's subscription pool (Pro/Max) instead of the Agent SDK billing pool.
+### Data Flow
 
 ```
-INPUT  side:
 User input → Webview postMessage → ClaudeChatProvider
-  → ClaudeProcessService (node-pty: bracketed-paste + Enter into a long-lived
-    interactive `claude` TUI) → Claude CLI (subscription-billed)
-
-OUTPUT side:
-Claude CLI → ~/.claude/projects/{slug}/{sessionId}.jsonl (transcript JSONL)
-  → TranscriptTailService (real-time tail) → MessageProcessor (JSONL-line parse)
-  → postMessage → Webview
+  → ClaudeProcessService (stdin JSON) → Claude CLI
+  → stdout JSON stream → MessageProcessor → postMessage → Webview
 ```
-
-Key contrasts with the old `-p` architecture:
-- **Output is read from the transcript JSONL, NOT parsed from PTY stdout.** PTY
-  stdout is used only for *interaction-state detection* (input-box readiness via
-  footer marker, image-chip detection, startup gate dialogs).
-- **Turn completion** is detected from `stop_reason === "end_turn"` in the
-  transcript (B1), with an optional Stop-hook sentinel fallback (B2).
-- A **single long-lived PTY session** is reused across turns; messages are
-  injected via bracketed paste + a delayed Enter.
-- On Windows, `claude` runs inside Git Bash (ConPTY cannot exec a `.cmd`
-  directly); `useConpty: false` (winpty backend).
 
 ### Key Components
 
 | Component | File | Role |
 |-----------|------|------|
 | Entry point | `src/extension.ts` | Registers commands, subscriptions, status bar |
-| Webview orchestrator | `src/providers/ClaudeChatProvider.ts` | Owns all managers/services, handles all webview messages; splits image mentions, expands file mentions |
-| PTY driver / CLI lifecycle | `src/services/ClaudeProcessService.ts` | Spawn interactive `claude` via node-pty; bracketed-paste injection, slash-command injection, ESC interrupt, staged image-chip injection, startup-gate handling, readiness detection |
-| Transcript locator | `src/services/TranscriptLocator.ts` | Encodes cwd → project slug, finds the session JSONL under `~/.claude/projects` |
-| Transcript tail | `src/services/TranscriptTailService.ts` | Real-time tail of the session JSONL; emits new lines |
-| Transcript parser | `src/services/MessageProcessor.ts` | JSONL-line parsing, tool-use extraction, `end_turn` detection, token/cost dispatch |
-| Cost estimation | `src/services/ModelPricing.ts` | Local token×unit-price cost estimate (subscription mode shows estimated, not billed, amounts) |
-| Stop-hook fallback | `src/services/StopHookFallbackService.ts` | Optional idempotent one-shot Stop hook writing an end-of-turn sentinel (B2) |
-| Process mgmt | `src/managers/WindowsCompatibility.ts` | Executable discovery (`findCliExecutable` priority order), `taskkill` tree kill (Win) / SIGTERM (Unix), shell env |
+| Webview orchestrator | `src/providers/ClaudeChatProvider.ts` | Owns all managers/services, handles all webview messages |
+| CLI lifecycle | `src/services/ClaudeProcessService.ts` | Spawn, kill, temp-file cleanup |
+| Stream parser | `src/services/MessageProcessor.ts` | JSON-line parsing, tool-use extraction, token/cost dispatch |
+| Process mgmt | `src/managers/WindowsCompatibility.ts` | Executable discovery, `taskkill` tree kill, shell env |
 | Config facade | `src/managers/config/ConfigurationManagerFacade.ts` | Combines VsCode + MCP + API config managers |
 | Undo/redo | `src/managers/UndoRedoManager.ts` | Strategy pattern — one strategy class per operation type |
 | UI HTML | `src/ui-v2/index.ts` | Assembles full HTML: CSP header + styles + body + script |
@@ -91,10 +61,7 @@ Key contrasts with the old `-p` architecture:
 - **Strategy pattern**: Undo/redo operations — each `OperationType` has a strategy in `src/managers/operations/strategies/`
 - **Facade pattern**: `ConfigurationManagerFacade` unifies 3 config sub-managers
 - **Singleton pattern**: `DebugLogger`, `PluginManager`, `SkillManager`, `SecretService`
-- **PTY interactive driver** (v5.0.1+): input injected via node-pty bracketed
-  paste; output read by tailing the transcript JSONL. The old stream-json
-  (`--input-format stream-json --output-format stream-json`) protocol has been
-  removed.
+- **Stream protocol**: CLI communication via `--input-format stream-json --output-format stream-json`
 
 ## Critical Gotchas
 
@@ -174,100 +141,6 @@ When building Stop-hook completion notifications on Windows, use the WinRT Toast
 
 **Embedding in TypeScript** — for the plugin template, write the PowerShell as a clean multi-line TS template literal, then at runtime: `Buffer.from(script, 'utf16le').toString('base64')` and invoke as `powershell -NoProfile -EncodedCommand ${b64}`. This avoids the nested-quote/backslash escaping nightmare of a single-line inline command.
 
-### 8. PTY Driver Depends on Undocumented TUI Strings (FRAGILE)
-
-The v5 driver detects interaction state by scanning the `claude` TUI's own
-output for **hard-coded English marker strings**. These are undocumented CLI
-internals that can change across `claude` versions and silently break the driver:
-
-- **Input-box readiness**: footer markers `shift+tab to cycle` / `? for shortcuts`
-  (`_scanInputBoxReady` in `ClaudeProcessService.ts`). If absent, injection
-  either never fires or fires too early and gets swallowed.
-- **Image attachment chip**: regex `/\[\s*image\s*#?\s*(\d+)\s*\]/gi` matching
-  `[Image #N]` (`_detectImageChip`). If the chip text changes, staged image
-  injection times out and degrades to a `Read` round-trip (§ image flow below).
-- **Startup gate dialogs**: ANSI-stripped substring match on `yesiaccept` /
-  `yesitrustthisfolder` to auto-navigate the trust / bypass-permissions prompts
-  with a Down-arrow + Enter (`_handleStartupGate`).
-- **Self-edit permission gate**: ANSI-stripped substring match on
-  `allowclaudetoedititsownsettingsforthissession` to auto-navigate the `.claude/`
-  edit confirmation menu with Down+Enter (`_handleSelfEditGate`; see #10). If the
-  option wording changes, editing skills/hooks hangs ~69s again.
-- **Turn completion**: transcript `stop_reason === "end_turn"` — a JSONL schema
-  contract, also version-dependent.
-
-Verified on `claude` 2.1.85 (the npm build the extension launches) and 2.1.119.
-There is **no runtime version guard**: a future CLI that renames any of these
-markers fails silently (hang / lost image / stuck "processing"), not loudly.
-When debugging "UI hangs after sending" or "image not seen", first check the
-installed `claude --version` and whether these marker strings still appear in
-the raw PTY output (DebugLogger logs `PTY raw output`).
-
-### 9. PTY Injection Timing & Idempotency
-
-- **Bracketed paste needs a delayed Enter**: pasting `\x1b[200~text\x1b[201~`
-  then immediately writing `\r` gets the Enter swallowed by the TUI. A
-  `PASTE_SUBMIT_DELAY_MS` (~250ms) gap is required.
-- **Slash commands inject char-by-char** (`injectSlashCommand`, ~60ms/char) so
-  the TUI's slash menu can filter; concurrent slash injection is guarded by
-  `_slashInjecting` (two at once → garbled `//mmooddeell`).
-- **Staged image injection is idempotent** under the reinject watchdog
-  (`_stagedInjectInProgress` / `_stagedArmed`); a re-call must never stack
-  duplicate chips or re-submit. ESC interrupt (`stopProcess`) sends bare `\x1b`
-  and resets staged state without killing the PTY session.
-
-### 10. TUI Menu Navigation Is Limited to Two Hard-Coded Gates
-
-There is still **no generic capability** to detect an arbitrary runtime TUI
-option menu (`ExitPlanMode` Yes/No, `AskUserQuestion` options) and inject an
-arrow-key + Enter selection. Only two specific menus are auto-navigated, each by
-a hard-coded distinctive marker string (both fragile per #8):
-
-1. **Startup gate** (#8): workspace-trust AND/OR bypass-permissions warning
-   (`_handleStartupGate`). A fresh machine shows BOTH in sequence; each gate type
-   is answered once (`_trustGateHandled` / `_bypassGateHandled`), and the bypass
-   gate can paint AFTER silence-readiness, so scanning continues for
-   `STARTUP_GATE_WINDOW_MS` (~25s) post-spawn even once "ready". If only the first
-   gate is answered, the prompt's Enter lands on the second's default "No, exit"
-   → claude exits code 1 and the first message is silently lost (the session then
-   loops re-spawning — symptom: "won't run on a freshly-installed machine").
-2. **Self-edit permission gate** (post-ready, mid-turn): editing a file under a
-   `.claude/` dir (skills / hooks / settings) makes claude paint a confirmation
-   menu that `bypassPermissions` does NOT auto-answer (self-modification is
-   treated as code injection). Without it the turn hangs ~69s until the next user
-   message's Enter accidentally accepts it. `_handleSelfEditGate` detects the menu
-   by the distinctive option-2 wording `allowclaudetoedititsownsettingsforthissession`
-   (ANSI-stripped) and sends Down+Enter to pick option 2 ("Yes, and allow Claude
-   to edit its own settings for this session"), a **session-wide** grant so later
-   `.claude` edits don't re-gate. Gated by `claudeCodeChatUI.autoAcceptEditGate`
-   (default true); debounced via `_permGateAnswering` so menu repaints don't
-   double-fire. Verified on claude 2.1.85 via `scripts/verify-claude-dotclaude-gate.js`.
-
-Other permission menus are bypassed wholesale by the default `bypassPermissions`
-mode; plan-mode confirmation is handled at the prompt level. The legacy
-`AskUserQuestion` handling in `MessageProcessor.ts` / `ui-script.ts` is **dead
-code from the `-p` era** (its comments still describe `-p` auto-error behavior) —
-revive/replace it deliberately if building an interactive options UI.
-
-### 11. `--no-dependencies` Drops node-pty From the VSIX (REGRESSION TRAP)
-
-`vsce package --no-dependencies` makes vsce **skip the entire production-dependency
-tree**. This ALSO defeats the `!node_modules/node-pty/...` re-include negations in
-`.vscodeignore` (those negations only matter while vsce is walking node_modules at
-all). Net effect: the VSIX ships **zero `node_modules`**, so at runtime
-`require('node-pty')` throws → the extension activates but **the chat panel won't
-open** (clicking the icon does nothing). The Extension Development Host (F5) is
-unaffected because it loads the on-disk `node_modules` directly.
-
-This was latent from v5.0.1 (when node-pty was introduced) and shipped broken in
-the v5.0.3 GitHub release. v4.x was unaffected — it had no native runtime dep.
-
-**Rule**: package with plain `cmd //c "npx @vscode/vsce package"` (NO
-`--no-dependencies`). vsce then bundles prod deps (node-pty + glob) and
-`.vscodeignore` still trims `.pdb` (~40MB) and non-win32 prebuilds. Always verify:
-`unzip -l <vsix> | grep node-pty` must show the `prebuilds/win32-x64/*.node`
-binaries; `unzip -l <vsix> | grep '\.pdb'` must be empty.
-
 ## Version Release Checklist
 
 When bumping the version, update **all five locations**:
@@ -281,12 +154,10 @@ When bumping the version, update **all five locations**:
 Then:
 ```bash
 npm run compile
-cmd //c "npx @vscode/vsce package"
+cmd //c "npx @vscode/vsce package --no-dependencies"
 ```
 
-Verify the output file name matches the new version: `claude-code-chatui-{version}.vsix`.
-Also confirm node-pty is bundled: `unzip -l <vsix> | grep node-pty` must list the
-`prebuilds/win32-x64/*.node` binaries (see gotcha #11).
+Verify the output file name matches the new version: `claude-code-chatui-{version}.vsix`
 
 After packaging, publish the release on GitHub:
 - Create a new Release tag `vX.Y.Z` pointing to the latest commit on `main`
