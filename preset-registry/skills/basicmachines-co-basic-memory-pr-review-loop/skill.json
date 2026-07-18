@@ -1,0 +1,25 @@
+{
+  "id": "basicmachines-co-basic-memory-pr-review-loop",
+  "name": "pr-review-loop",
+  "description": "Enforce the Basic Machines GitHub PR review loop before merging. Use whenever Codex is preparing to merge, squash-merge, auto-merge, declare a PR ready, monitor Codex comments, address review feedback, or wait for Codex approval on a GitHub PR, especially when the user says \"approved\", \"merge\", \"ship\", \"PR is ready\", \"monitor Codex comments\", or \"address Codex feedback\".",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "basicmachines-co",
+  "install_path": ".claude/skills/pr-review-loop/SKILL.md",
+  "source": {
+    "repo": "basicmachines-co/basic-memory",
+    "url": "https://github.com/basicmachines-co/basic-memory/blob/main/.agents/skills/pr-review-loop/SKILL.md",
+    "path": ".agents/skills/pr-review-loop/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-18T19:40:15.937Z",
+    "stars": 3456,
+    "language": "Python",
+    "pushed_at": "2026-07-18T18:18:33Z",
+    "license": "AGPL-3.0"
+  }
+}

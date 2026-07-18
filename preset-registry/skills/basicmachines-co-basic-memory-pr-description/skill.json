@@ -1,0 +1,25 @@
+{
+  "id": "basicmachines-co-basic-memory-pr-description",
+  "name": "pr-description",
+  "description": "Use when opening or updating a GitHub PR - writes a detailed PR description that explains what changed, why it changed, how it was implemented, and how it was tested.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "basicmachines-co",
+  "install_path": ".claude/skills/pr-description/SKILL.md",
+  "source": {
+    "repo": "basicmachines-co/basic-memory",
+    "url": "https://github.com/basicmachines-co/basic-memory/blob/main/.agents/skills/pr-description/SKILL.md",
+    "path": ".agents/skills/pr-description/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-18T19:40:15.817Z",
+    "stars": 3456,
+    "language": "Python",
+    "pushed_at": "2026-07-18T18:18:33Z",
+    "license": "AGPL-3.0"
+  }
+}

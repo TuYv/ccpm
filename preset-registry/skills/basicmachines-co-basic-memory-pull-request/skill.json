@@ -1,0 +1,25 @@
+{
+  "id": "basicmachines-co-basic-memory-pull-request",
+  "name": "pull-request",
+  "description": "Drive GitHub pull request work end to end. Use when Codex is asked to open, update, describe, push to, monitor, review, address comments on, declare ready, or merge a PR. Covers branch hygiene, PR descriptions with why/what/testing/risk, CI checks, Codex review-loop monitoring, comment handling, and the final merge gate.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "basicmachines-co",
+  "install_path": ".claude/skills/pull-request/SKILL.md",
+  "source": {
+    "repo": "basicmachines-co/basic-memory",
+    "url": "https://github.com/basicmachines-co/basic-memory/blob/main/.agents/skills/pull-request/SKILL.md",
+    "path": ".agents/skills/pull-request/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-18T19:40:16.056Z",
+    "stars": 3456,
+    "language": "Python",
+    "pushed_at": "2026-07-18T18:18:33Z",
+    "license": "AGPL-3.0"
+  }
+}
