@@ -1,7 +1,7 @@
 {
   "id": "daymade-claude-code-skills-git-safety-net",
   "name": "git-safety-net",
-  "description": ">- Prevent and recover from local-Git disasters — commits stranded on the wrong or unpushed branch, orphaned/dropped stashes, dangling commits about to be garbage-collected, work that seems lost after heavy branch/stash/rebase juggling or parallel-agent work, and \"is everything actually merged?\" uncertainty. Use whenever the user fears they lost code, asks to recover a deleted commit / branch / stash, wonders what is still unmerged, needs to prove nothing was dropped after rebasing or deleting b",
+  "description": ">- Audits, preserves, recovers, and safely retires local Git state: unpushed or wrong-branch commits, dirty or detached worktrees, orphaned/dropped stashes, dangling commits, stale branches, and squash/rebase merge uncertainty. Use when the user fears work was lost; asks to recover a commit, branch, stash, or reflog state; asks whether a worktree can be deleted; wants all valuable state converged onto main; or needs proof that cleanup/rebase/branch deletion will not drop work. Triggers on \"did I",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/daymade/claude-code-skills/blob/main/git-safety-net/SKILL.md",
     "path": "git-safety-net/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-18T08:29:44.430Z",
+    "discovered_at": "2026-07-18T10:00:36.478Z",
     "stars": 1277,
     "language": "Python",
-    "pushed_at": "2026-07-18T04:21:38Z",
+    "pushed_at": "2026-07-18T09:31:52Z",
     "license": "MIT"
   }
 }
