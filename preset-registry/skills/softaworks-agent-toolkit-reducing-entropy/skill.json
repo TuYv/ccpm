@@ -2,7 +2,7 @@
   "id": "softaworks-agent-toolkit-reducing-entropy",
   "name": "reducing-entropy",
   "description": "Manual-only skill for minimizing total codebase size. Only activate when explicitly requested by user. Measures success by final code amount, not effort. Bias toward deletion.",
-  "category": "文档写作",
+  "category": "开发编程",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,8 +16,8 @@
     "url": "https://github.com/softaworks/agent-toolkit/blob/main/dist/plugins/reducing-entropy/skills/reducing-entropy/SKILL.md",
     "path": "dist/plugins/reducing-entropy/skills/reducing-entropy/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-19T04:03:21.814Z",
-    "stars": 2203,
+    "discovered_at": "2026-07-19T07:01:27.895Z",
+    "stars": 2204,
     "language": "Python",
     "pushed_at": "2026-03-05T16:46:24Z",
     "license": "MIT"
