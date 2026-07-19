@@ -1,0 +1,25 @@
+{
+  "id": "openagentsinc-openagents-promissory",
+  "name": "promissory",
+  "description": "Assault non-green product promises per the PROMISSORY runbook. Use when the user says /promissory, asks to flip/advance/assault product promises, wants the next non-green promise target selected and worked, or wants a fleet wave dispatched at the promise backlog. Modes - no args = supervisor (rank pool, dispatch or work top targets); a promiseId arg = assault that specific promise (owner-directed override); a number N = dispatch a wave of N fleet workers.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "OpenAgentsInc",
+  "install_path": ".claude/skills/promissory/SKILL.md",
+  "source": {
+    "repo": "OpenAgentsInc/openagents",
+    "url": "https://github.com/OpenAgentsInc/openagents/blob/main/.agents/skills/promissory/SKILL.md",
+    "path": ".agents/skills/promissory/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-19T21:17:49.438Z",
+    "stars": 441,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-19T21:14:18Z",
+    "license": null
+  }
+}

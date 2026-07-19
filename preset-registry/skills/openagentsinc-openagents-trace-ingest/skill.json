@@ -1,0 +1,25 @@
+{
+  "id": "openagentsinc-openagents-trace-ingest",
+  "name": "trace-ingest",
+  "description": "Publish a local Claude, Codex, or OpenAgents conversation as a public OpenAgents trace at openagents.com/trace/{uuid}. Use when the user wants to take a conversation/session id on this machine, sanitize/redact it, ingest it via the OpenAgents API, and get a shareable /trace/{uuid} URL — repeatably and at scale.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "OpenAgentsInc",
+  "install_path": ".claude/skills/trace-ingest/SKILL.md",
+  "source": {
+    "repo": "OpenAgentsInc/openagents",
+    "url": "https://github.com/OpenAgentsInc/openagents/blob/main/.agents/skills/trace-ingest/SKILL.md",
+    "path": ".agents/skills/trace-ingest/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-19T21:17:49.552Z",
+    "stars": 441,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-19T21:14:18Z",
+    "license": null
+  }
+}
