@@ -1,7 +1,7 @@
 {
   "id": "fradser-dotclaude-resolve-issues",
   "name": "resolve-issues",
-  "description": "Resolves GitHub issues using isolated worktrees and test-driven development. This skill should be used when the user asks to \"resolve an issue\", \"fix issue #123\", or needs to implement a solution for a specific GitHub ticket using a structured workflow.",
+  "description": "Resolves GitHub issues using isolated worktrees and test-driven development, then delegates PR creation to /github:create-pr so the quality gate and the /github:review-pr loop always run. This skill should be used when the user asks to \"resolve an issue\", \"fix issue #123\", or needs to implement a solution for a specific GitHub ticket using a structured workflow.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/FradSer/dotclaude/blob/main/github/skills/resolve-issues/SKILL.md",
     "path": "github/skills/resolve-issues/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-19T16:20:59.836Z",
+    "discovered_at": "2026-07-19T17:24:50.338Z",
     "stars": 573,
     "language": "JavaScript",
-    "pushed_at": "2026-07-19T16:16:00Z",
+    "pushed_at": "2026-07-19T16:43:29Z",
     "license": "MIT"
-  },
-  "summary_zh": "它能用隔离工作区和测试驱动开发来修复GitHub问题。当你需要按规范流程处理特定工单，比如要求“修复123号问题”时，交给它就行。"
+  }
 }

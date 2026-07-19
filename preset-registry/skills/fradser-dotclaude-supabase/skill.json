@@ -1,7 +1,7 @@
 {
   "id": "fradser-dotclaude-supabase",
   "name": "supabase",
-  "description": "Use when doing ANY task involving Supabase. Triggers: Supabase products (Database, Auth, Edge Functions, Realtime, Storage, Vectors, Cron, Queues); client libraries and SSR integrations (supabase-js, @supabase/ssr) in Next.js, React, SvelteKit, Astro, Remix; auth issues (login, logout, sessions, JWT, cookies, getSession, getUser, getClaims, RLS); Supabase CLI or MCP server; schema changes, migrations, security audits, Postgres extensions (pg_graphql, pg_cron, pg_vector).",
+  "description": "Use when doing ANY task involving Supabase. Triggers: Supabase products (Database, Auth, Edge Functions, Realtime, Storage, Vectors, Cron, Queues); client libraries and SSR integrations (supabase-js, @supabase/ssr) in Next.js, React, SvelteKit, Astro, Remix; auth issues (login, logout, sessions, JWT, cookies, getSession, getUser, getClaims, RLS); Supabase CLI or MCP server; schema changes, migrations, declarative schemas, security audits, Postgres extensions (pg_graphql, pg_cron, pg_vector).",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/FradSer/dotclaude/blob/main/frontend/skills/supabase/SKILL.md",
     "path": "frontend/skills/supabase/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-19T16:20:58.241Z",
+    "discovered_at": "2026-07-19T17:24:49.048Z",
     "stars": 573,
     "language": "JavaScript",
-    "pushed_at": "2026-07-19T16:16:00Z",
+    "pushed_at": "2026-07-19T16:43:29Z",
     "license": "MIT"
-  },
-  "summary_zh": "一个面向 Supabase 全家桶的开发助手，覆盖数据库、Auth、Edge Functions、Realtime、Storage 等场景，能帮你处理客户端集成、SSR 鉴权、RLS 配置、迁移脚本和 CLI 操作，适合在 Next.js、SvelteKit 等框架里搭建或排障 Supabase 应用时使用。"
+  }
 }

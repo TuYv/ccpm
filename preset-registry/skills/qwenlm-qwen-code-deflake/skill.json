@@ -1,0 +1,25 @@
+{
+  "id": "qwenlm-qwen-code-deflake",
+  "name": "deflake",
+  "description": "Stabilize a flaky test with a minimal, assertion-preserving fix — never by weakening or deleting the check.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "QwenLM",
+  "install_path": ".claude/skills/deflake/SKILL.md",
+  "source": {
+    "repo": "QwenLM/qwen-code",
+    "url": "https://github.com/QwenLM/qwen-code/blob/main/.qwen/skills/deflake/SKILL.md",
+    "path": ".qwen/skills/deflake/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-19T17:28:58.886Z",
+    "stars": 26111,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-19T17:22:58Z",
+    "license": "Apache-2.0"
+  }
+}

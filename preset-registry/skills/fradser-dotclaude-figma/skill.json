@@ -1,0 +1,25 @@
+{
+  "id": "fradser-dotclaude-figma",
+  "name": "figma",
+  "description": "Import Figma content into a HyperFrames composition — rendered assets, brand tokens, components, storyboard sections → reconstructed motion (frames read as states, not slides) (REST/CLI), Figma Motion animations (MCP), and shaders (MCP source / native export). Use when the user pastes a figma.com link or asks to bring a Figma design, frame, logo, brand, or animation into a video/composition.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "FradSer",
+  "install_path": ".claude/skills/figma/SKILL.md",
+  "source": {
+    "repo": "FradSer/dotclaude",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/marketing/skills/hyperframes/figma/SKILL.md",
+    "path": "marketing/skills/hyperframes/figma/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-19T17:24:52.892Z",
+    "stars": 573,
+    "language": "JavaScript",
+    "pushed_at": "2026-07-19T16:43:29Z",
+    "license": "MIT"
+  }
+}

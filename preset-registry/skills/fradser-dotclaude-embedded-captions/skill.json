@@ -1,0 +1,25 @@
+{
+  "id": "fradser-dotclaude-embedded-captions",
+  "name": "embedded-captions",
+  "description": "> Add captions or subtitles to an existing single-subject talking-head video without editing the footage. Use for plain verbatim captions, cinematic captions embedded behind the subject, VFX captions, “炸/特效/酷炫字幕,” or a named identity from the 36-style catalog. Route by visual identity, not by backend engine. The quiet `anchor` rail is the default; embed every word only when the user explicitly wants a fully cinematic treatment. The workflow runs locally end to end, including transcription and su",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "FradSer",
+  "install_path": ".claude/skills/embedded-captions/SKILL.md",
+  "source": {
+    "repo": "FradSer/dotclaude",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/marketing/skills/hyperframes/embedded-captions/SKILL.md",
+    "path": "marketing/skills/hyperframes/embedded-captions/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-19T17:24:52.696Z",
+    "stars": 573,
+    "language": "JavaScript",
+    "pushed_at": "2026-07-19T16:43:29Z",
+    "license": "MIT"
+  }
+}
