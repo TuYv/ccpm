@@ -2,7 +2,7 @@
   "id": "softaworks-agent-toolkit-excalidraw",
   "name": "excalidraw",
   "description": "Use when working with *.excalidraw or *.excalidraw.json files, user mentions diagrams/flowcharts, or requests architecture visualization - delegates all Excalidraw operations to subagents to prevent context exhaustion from verbose JSON (single files: 4k-22k tokens, can exceed read limits)",
-  "category": "数据分析",
+  "category": "文档写作",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,8 +16,8 @@
     "url": "https://github.com/softaworks/agent-toolkit/blob/main/skills/excalidraw/SKILL.md",
     "path": "skills/excalidraw/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-19T07:01:32.100Z",
-    "stars": 2204,
+    "discovered_at": "2026-07-19T09:35:23.058Z",
+    "stars": 2206,
     "language": "Python",
     "pushed_at": "2026-03-05T16:46:24Z",
     "license": "MIT"
