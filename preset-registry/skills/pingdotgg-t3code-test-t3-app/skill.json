@@ -1,0 +1,25 @@
+{
+  "id": "pingdotgg-t3code-test-t3-app",
+  "name": "test-t3-app",
+  "description": "Launch and test the T3 Code web app in isolated development environments, including first-try browser authentication with one-time pairing URLs, pairing-token recovery, worktree-safe state directories, dev server lifecycle, and direct SQLite inspection or fixture seeding. Use when an agent needs to run T3 locally, test UI behavior in a browser, recover from an expired or consumed pairing token, isolate dev state, or prepare test data in state.sqlite.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "pingdotgg",
+  "install_path": ".claude/skills/test-t3-app/SKILL.md",
+  "source": {
+    "repo": "pingdotgg/t3code",
+    "url": "https://github.com/pingdotgg/t3code/blob/main/.agents/skills/test-t3-app/SKILL.md",
+    "path": ".agents/skills/test-t3-app/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-19T10:57:13.403Z",
+    "stars": 14167,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-19T10:48:58Z",
+    "license": "MIT"
+  }
+}

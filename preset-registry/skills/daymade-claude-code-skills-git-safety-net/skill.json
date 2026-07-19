@@ -1,7 +1,7 @@
 {
   "id": "daymade-claude-code-skills-git-safety-net",
   "name": "git-safety-net",
-  "description": ">- Audits, preserves, recovers, and safely retires local Git state: unpushed or wrong-branch commits, dirty or detached worktrees, orphaned/dropped stashes, dangling commits, stale branches, and squash/rebase merge uncertainty. Use when the user fears work was lost; asks to recover a commit, branch, stash, or reflog state; asks whether a worktree can be deleted; wants all valuable state converged onto main; or needs proof that cleanup/rebase/branch deletion will not drop work. Triggers on \"did I",
+  "description": ">- Audits, preserves, recovers, and safely retires local Git state: unpushed or wrong-branch commits, dirty or detached worktrees, forgotten duplicate clones of the same repo, untracked work no bundle can back up, orphaned stashes, dangling commits, stale branches, and squash/rebase merge uncertainty. Use when the user fears work was lost; asks to recover a commit or branch; asks whether a worktree, clone, or scratch directory can be deleted; wants everything converged onto one main branch; or n",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/daymade/claude-code-skills/blob/main/git-safety-net/SKILL.md",
     "path": "git-safety-net/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-19T09:35:59.879Z",
+    "discovered_at": "2026-07-19T10:55:32.526Z",
     "stars": 1279,
     "language": "Python",
-    "pushed_at": "2026-07-19T08:14:58Z",
+    "pushed_at": "2026-07-19T10:11:32Z",
     "license": "MIT"
   }
 }

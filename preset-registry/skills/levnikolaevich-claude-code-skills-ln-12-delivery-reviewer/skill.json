@@ -1,7 +1,7 @@
 {
   "id": "levnikolaevich-claude-code-skills-ln-12-delivery-reviewer",
   "name": "ln-12-delivery-reviewer",
-  "description": "Reviews completed code and delivery evidence before acceptance or release. Use to find defects and verify readiness; not for plan review, implementation, or repair.",
+  "description": "Reviews a completed scoped change and its affected runtime and contract paths. Use to find change-caused defects and verify readiness; not for codebase audit, implementation, or repair.",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/review-suite/skills/ln-12-delivery-reviewer/SKILL.md",
     "path": "plugins/review-suite/skills/ln-12-delivery-reviewer/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-07-19T09:37:38.180Z",
+    "discovered_at": "2026-07-19T10:56:20.821Z",
     "stars": 518,
     "language": "HTML",
-    "pushed_at": "2026-07-19T09:15:50Z",
+    "pushed_at": "2026-07-19T10:43:16Z",
     "license": "MIT"
   }
 }

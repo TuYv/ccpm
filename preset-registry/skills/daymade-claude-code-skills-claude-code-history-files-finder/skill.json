@@ -1,7 +1,7 @@
 {
   "id": "daymade-claude-code-skills-claude-code-history-files-finder",
   "name": "claude-code-history-files-finder",
-  "description": ">- Searches and recovers content from Claude Code JSONL session history across all active config homes and every long-term archive registered in ~/.claude/history-sources.json — sweeping every project at once with --all-projects when the project is unknown, and optionally covering Codex rollout history with --codex. Uses internal record timestamps rather than file mtime and searches message text, thinking, tool inputs/results, queue-operation content, attachments, summaries, and titles. Use for ",
+  "description": ">- Searches and recovers Claude Code JSONL history across all active config homes and archives registered in ~/.claude/history-sources.json. Use --all-projects when the project is unknown and --codex to include Codex rollout search. Uses internal timestamps and searches messages, thinking, tool inputs/results, queues, attachments, summaries, titles, and file-history paths. Recovers exact captured bytes from Claude file-history snapshots, including post-Write edits and binary files; otherwise lab",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-claude-code/claude-code-history-files-finder/SKILL.md",
     "path": "daymade-claude-code/claude-code-history-files-finder/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-19T09:35:52.028Z",
+    "discovered_at": "2026-07-19T10:55:28.723Z",
     "stars": 1279,
     "language": "Python",
-    "pushed_at": "2026-07-19T08:14:58Z",
+    "pushed_at": "2026-07-19T10:11:32Z",
     "license": "MIT"
   }
 }
