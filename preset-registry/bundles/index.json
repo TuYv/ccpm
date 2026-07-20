@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-07-20T07:45:35.177Z",
+  "updated_at": "2026-07-20T11:43:40.786Z",
   "bundles": [
     {
       "id": "obra-superpowers",
@@ -8,7 +8,7 @@
       "name": "Superpowers",
       "url": "https://github.com/obra/superpowers/blob/main/skills/brainstorming/SKILL.md",
       "kind": "skill",
-      "stars": 257778,
+      "stars": 257904,
       "category": "测试调试",
       "skill_ids": [
         "obra-superpowers-brainstorming",
@@ -34,7 +34,7 @@
       "name": "ECC",
       "url": "https://github.com/affaan-m/ECC/blob/main/.agents/skills/agent-introspection-debugging/SKILL.md",
       "kind": "skill",
-      "stars": 231345,
+      "stars": 231397,
       "category": "通用其他",
       "skill_ids": [
         "affaan-m-ecc-agent-introspection-debugging",
@@ -92,7 +92,7 @@
       "name": "Skills",
       "url": "https://github.com/mattpocock/skills/blob/main/skills/engineering/ask-matt/SKILL.md",
       "kind": "skill",
-      "stars": 178014,
+      "stars": 178304,
       "category": "测试调试",
       "skill_ids": [
         "mattpocock-skills-ask-matt",
@@ -153,7 +153,7 @@
       "name": "Skills",
       "url": "https://github.com/anthropics/skills/blob/main/skills/algorithmic-art/SKILL.md",
       "kind": "skill",
-      "stars": 162807,
+      "stars": 162853,
       "category": "设计创意",
       "skill_ids": [
         "anthropics-skills-algorithmic-art",
@@ -183,7 +183,7 @@
       "name": "Gstack",
       "url": "https://github.com/garrytan/gstack/blob/main/SKILL.md",
       "kind": "skill",
-      "stars": 123048,
+      "stars": 123093,
       "category": "通用其他",
       "skill_ids": [
         "garrytan-gstack",
@@ -254,7 +254,7 @@
       "name": "Ui Ux Pro Max Skill",
       "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/main/cli/assets/skills/banner-design/SKILL.md",
       "kind": "skill",
-      "stars": 107932,
+      "stars": 108012,
       "category": "设计创意",
       "skill_ids": [
         "nextlevelbuilder-ui-ux-pro-max-skill-banner-design",
@@ -273,7 +273,7 @@
       "name": "Caveman",
       "url": "https://github.com/JuliusBrussee/caveman/blob/main/skills/cavecrew/SKILL.md",
       "kind": "skill",
-      "stars": 90941,
+      "stars": 91007,
       "category": "通用其他",
       "skill_ids": [
         "juliusbrussee-caveman-cavecrew",
@@ -292,7 +292,7 @@
       "name": "Claude Mem",
       "url": "https://github.com/thedotmack/claude-mem/blob/main/plugin/skills/babysit/SKILL.md",
       "kind": "skill",
-      "stars": 87911,
+      "stars": 87928,
       "category": "开发编程",
       "skill_ids": [
         "thedotmack-claude-mem-babysit",
@@ -323,7 +323,7 @@
       "name": "Agent Skills",
       "url": "https://github.com/addyosmani/agent-skills/blob/main/skills/api-and-interface-design/SKILL.md",
       "kind": "skill",
-      "stars": 79365,
+      "stars": 79395,
       "category": "开发编程",
       "skill_ids": [
         "addyosmani-agent-skills-api-and-interface-design",
@@ -354,33 +354,12 @@
       "summary_zh": "专为AI编程助手打造的软件开发全流程技能包，解决智能体缺乏工程规范的问题，让它告别盲目写码，系统化保障代码质量与工程交付标准。"
     },
     {
-      "id": "lum1104-understand-anything",
-      "repo": "Lum1104/Understand-Anything",
-      "name": "Understand Anything",
-      "url": "https://github.com/Lum1104/Understand-Anything/blob/main/understand-anything-plugin/skills/understand/SKILL.md",
-      "kind": "skill",
-      "stars": 75242,
-      "category": "开发编程",
-      "skill_ids": [
-        "lum1104-understand-anything-understand",
-        "lum1104-understand-anything-understand-chat",
-        "lum1104-understand-anything-understand-dashboard",
-        "lum1104-understand-anything-understand-diff",
-        "lum1104-understand-anything-understand-domain",
-        "lum1104-understand-anything-understand-explain",
-        "lum1104-understand-anything-understand-figma",
-        "lum1104-understand-anything-understand-knowledge",
-        "lum1104-understand-anything-understand-onboard"
-      ],
-      "summary_zh": "这套合集通过生成交互式知识图谱，帮你全方位吃透复杂代码库。无论是梳理架构、审查变更还是新人入职，都能把晦涩代码变成直观认知，大幅降低项目理解门槛。"
-    },
-    {
       "id": "egonex-ai-understand-anything",
       "repo": "Egonex-AI/Understand-Anything",
       "name": "Understand Anything",
       "url": "https://github.com/Egonex-AI/Understand-Anything/blob/main/understand-anything-plugin/skills/understand/SKILL.md",
       "kind": "skill",
-      "stars": 75241,
+      "stars": 75283,
       "category": "通用其他",
       "skill_ids": [
         "egonex-ai-understand-anything-understand",
@@ -396,12 +375,33 @@
       "summary_zh": "来自 Egonex-AI/Understand-Anything 的 9 个相关技能合集，适合按同一主题成组浏览和按需安装。"
     },
     {
+      "id": "lum1104-understand-anything",
+      "repo": "Lum1104/Understand-Anything",
+      "name": "Understand Anything",
+      "url": "https://github.com/Lum1104/Understand-Anything/blob/main/understand-anything-plugin/skills/understand/SKILL.md",
+      "kind": "skill",
+      "stars": 75281,
+      "category": "开发编程",
+      "skill_ids": [
+        "lum1104-understand-anything-understand",
+        "lum1104-understand-anything-understand-chat",
+        "lum1104-understand-anything-understand-dashboard",
+        "lum1104-understand-anything-understand-diff",
+        "lum1104-understand-anything-understand-domain",
+        "lum1104-understand-anything-understand-explain",
+        "lum1104-understand-anything-understand-figma",
+        "lum1104-understand-anything-understand-knowledge",
+        "lum1104-understand-anything-understand-onboard"
+      ],
+      "summary_zh": "这套合集通过生成交互式知识图谱，帮你全方位吃透复杂代码库。无论是梳理架构、审查变更还是新人入职，都能把晦涩代码变成直观认知，大幅降低项目理解门槛。"
+    },
+    {
       "id": "composiohq-awesome-claude-skills",
       "repo": "ComposioHQ/awesome-claude-skills",
       "name": "Awesome Claude Skills",
       "url": "https://github.com/ComposioHQ/awesome-claude-skills/blob/master/composio-skills/-21risk-automation/SKILL.md",
       "kind": "skill",
-      "stars": 68133,
+      "stars": 68150,
       "category": "自动化集成",
       "skill_ids": [
         "composiohq-awesome-claude-skills-21risk-automation",
@@ -472,7 +472,7 @@
       "name": "Claude Flow",
       "url": "https://github.com/ruvnet/claude-flow/blob/main/.agents/skills/agent-adaptive-coordinator/SKILL.md",
       "kind": "skill",
-      "stars": 65234,
+      "stars": 65250,
       "category": "设计创意",
       "skill_ids": [
         "ruvnet-claude-flow-agent-adaptive-coordinator",
@@ -544,7 +544,7 @@
       "name": "Codegraph",
       "url": "https://github.com/colbymchenry/codegraph/blob/main/.claude/skills/add-lang/SKILL.md",
       "kind": "skill",
-      "stars": 61018,
+      "stars": 61068,
       "category": "开发编程",
       "skill_ids": [
         "colbymchenry-codegraph-add-lang",
@@ -558,7 +558,7 @@
       "name": "Career Ops",
       "url": "https://github.com/santifer/career-ops/blob/main/plugins/apify/skill.md",
       "kind": "skill",
-      "stars": 60643,
+      "stars": 60663,
       "category": "通用其他",
       "skill_ids": [
         "santifer-career-ops-apify",
@@ -607,7 +607,7 @@
       "name": "Antigravity Awesome Skills",
       "url": "https://github.com/sickn33/antigravity-awesome-skills/blob/main/plugins/agentic-awesome-skills-claude/skills/00-andruia-consultant/SKILL.md",
       "kind": "skill",
-      "stars": 43609,
+      "stars": 43618,
       "category": "测试调试",
       "skill_ids": [
         "sickn33-antigravity-awesome-skills-00-andruia-consultant",
@@ -702,7 +702,7 @@
       "name": "Marketingskills",
       "url": "https://github.com/coreyhaines31/marketingskills/blob/main/skills/ab-testing/SKILL.md",
       "kind": "skill",
-      "stars": 40801,
+      "stars": 40825,
       "category": "通用其他",
       "skill_ids": [
         "coreyhaines31-marketingskills-ab-testing",
@@ -761,7 +761,7 @@
       "name": "Academic Research Skills",
       "url": "https://github.com/Imbad0202/academic-research-skills/blob/main/academic-paper/SKILL.md",
       "kind": "skill",
-      "stars": 38545,
+      "stars": 38572,
       "category": "文档写作",
       "skill_ids": [
         "imbad0202-academic-research-skills-academic-paper",
@@ -777,7 +777,7 @@
       "name": "Agents",
       "url": "https://github.com/wshobson/agents/blob/main/plugins/data-engineering/skills/airflow-dag-patterns/SKILL.md",
       "kind": "skill",
-      "stars": 38069,
+      "stars": 38073,
       "category": "设计创意",
       "skill_ids": [
         "wshobson-agents-airflow-dag-patterns",
@@ -852,7 +852,7 @@
       "name": "Claude Code Templates",
       "url": "https://github.com/davila7/claude-code-templates/blob/main/cli-tool/components/skills/ai-research/agent-evaluation/SKILL.md",
       "kind": "skill",
-      "stars": 29749,
+      "stars": 29766,
       "category": "开发编程",
       "skill_ids": [
         "davila7-claude-code-templates-agent-evaluation",
@@ -925,7 +925,7 @@
       "name": "Composio",
       "url": "https://github.com/ComposioHQ/composio/blob/next/.agents/skills/bug-fixing/SKILL.md",
       "kind": "skill",
-      "stars": 29291,
+      "stars": 29293,
       "category": "自动化集成",
       "skill_ids": [
         "composiohq-composio-bug-fixing",
@@ -977,7 +977,7 @@
       "name": "Agent Skills",
       "url": "https://github.com/vercel-labs/agent-skills/blob/main/skills/composition-patterns/SKILL.md",
       "kind": "skill",
-      "stars": 29231,
+      "stars": 29242,
       "category": "文档写作",
       "skill_ids": [
         "vercel-labs-agent-skills-composition-patterns",
@@ -998,7 +998,7 @@
       "name": "Openai Agents Python",
       "url": "https://github.com/openai/openai-agents-python/blob/main/.agents/skills/code-change-verification/SKILL.md",
       "kind": "skill",
-      "stars": 28028,
+      "stars": 28033,
       "category": "测试调试",
       "skill_ids": [
         "openai-openai-agents-python-code-change-verification",
@@ -1075,7 +1075,7 @@
       "name": "Qwen Code",
       "url": "https://github.com/QwenLM/qwen-code/blob/main/.qwen/skills/agent-reproduce-align/SKILL.md",
       "kind": "skill",
-      "stars": 26139,
+      "stars": 26148,
       "category": "开发编程",
       "skill_ids": [
         "qwenlm-qwen-code-agent-reproduce-align",
@@ -1122,7 +1122,7 @@
       "name": "Pm Skills",
       "url": "https://github.com/phuryn/pm-skills/blob/main/pm-data-analytics/skills/ab-test-analysis/SKILL.md",
       "kind": "skill",
-      "stars": 24050,
+      "stars": 24075,
       "category": "测试调试",
       "skill_ids": [
         "phuryn-pm-skills-ab-test-analysis",
@@ -1197,7 +1197,7 @@
       "name": "Baoyu Skills",
       "url": "https://github.com/JimLiu/baoyu-skills/blob/main/skills/baoyu-article-illustrator/SKILL.md",
       "kind": "skill",
-      "stars": 23878,
+      "stars": 23892,
       "category": "浏览器自动化",
       "skill_ids": [
         "jimliu-baoyu-skills-baoyu-article-illustrator",
@@ -1233,7 +1233,7 @@
       "name": "SuperClaude",
       "url": "https://github.com/NomenAK/SuperClaude/blob/master/plugins/superclaude/skills/brainstorm/SKILL.md",
       "kind": "skill",
-      "stars": 23578,
+      "stars": 23577,
       "category": "自动化集成",
       "skill_ids": [
         "nomenak-superclaude-brainstorm",
@@ -1251,7 +1251,7 @@
       "name": "SuperClaude_Framework",
       "url": "https://github.com/SuperClaude-Org/SuperClaude_Framework/blob/master/plugins/superclaude/skills/brainstorm/SKILL.md",
       "kind": "skill",
-      "stars": 23578,
+      "stars": 23577,
       "category": "通用其他",
       "skill_ids": [
         "superclaude-org-superclaude-framework-brainstorm",
@@ -1269,7 +1269,7 @@
       "name": "Claude Code Game Studios",
       "url": "https://github.com/Donchitos/Claude-Code-Game-Studios/blob/main/.claude/skills/adopt/SKILL.md",
       "kind": "skill",
-      "stars": 23224,
+      "stars": 23233,
       "category": "开发编程",
       "skill_ids": [
         "donchitos-claude-code-game-studios-adopt",
@@ -1341,7 +1341,7 @@
       "name": "Claude Skills",
       "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/a11y-audit/SKILL.md",
       "kind": "skill",
-      "stars": 22845,
+      "stars": 22854,
       "category": "设计创意",
       "skill_ids": [
         "alirezarezvani-claude-skills-a11y-audit",
@@ -1420,7 +1420,7 @@
       "name": "Happy",
       "url": "https://github.com/slopus/happy/blob/main/.claude/skills/agent-browser/SKILL.md",
       "kind": "skill",
-      "stars": 22739,
+      "stars": 22741,
       "category": "浏览器自动化",
       "skill_ids": [
         "slopus-happy-agent-browser",
@@ -1441,7 +1441,7 @@
       "name": "Claude Context Mode",
       "url": "https://github.com/mksglu/claude-context-mode/blob/main/skills/context-mode/SKILL.md",
       "kind": "skill",
-      "stars": 19108,
+      "stars": 19113,
       "category": "开发编程",
       "skill_ids": [
         "mksglu-claude-context-mode-context-mode",
@@ -1462,7 +1462,7 @@
       "name": "CodexBar",
       "url": "https://github.com/steipete/CodexBar/blob/main/.agents/skills/codexbar/SKILL.md",
       "kind": "skill",
-      "stars": 18702,
+      "stars": 18708,
       "category": "测试调试",
       "skill_ids": [
         "steipete-codexbar-codexbar",
@@ -1477,7 +1477,7 @@
       "name": "Herdr",
       "url": "https://github.com/ogulcancelik/herdr/blob/master/SKILL.md",
       "kind": "skill",
-      "stars": 18500,
+      "stars": 18585,
       "category": "通用其他",
       "skill_ids": [
         "ogulcancelik-herdr",
@@ -1493,7 +1493,7 @@
       "name": "Agent Skills For Context Engineering",
       "url": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering/blob/main/SKILL.md",
       "kind": "skill",
-      "stars": 17352,
+      "stars": 17354,
       "category": "设计创意",
       "skill_ids": [
         "muratcankoylan-agent-skills-for-context-engineering",
@@ -1528,7 +1528,7 @@
       "name": "Ccusage",
       "url": "https://github.com/ryoppippi/ccusage/blob/main/.agents/skills/agent-sources/SKILL.md",
       "kind": "skill",
-      "stars": 17313,
+      "stars": 17318,
       "category": "测试调试",
       "skill_ids": [
         "ryoppippi-ccusage-agent-sources",
@@ -1569,7 +1569,7 @@
       "name": "Skill_Seekers",
       "url": "https://github.com/yusufkaraaslan/Skill_Seekers/blob/development/tests/golden/phase2/chat/SKILL.md",
       "kind": "skill",
-      "stars": 14503,
+      "stars": 14504,
       "category": "数据分析",
       "skill_ids": [
         "yusufkaraaslan-skill-seekers-chat",
@@ -1607,7 +1607,7 @@
       "name": "T3code",
       "url": "https://github.com/pingdotgg/t3code/blob/main/.repos/effect-smol/.agents/skills/grill-me/SKILL.md",
       "kind": "skill",
-      "stars": 14194,
+      "stars": 14201,
       "category": "测试调试",
       "skill_ids": [
         "pingdotgg-t3code-grill-me",
@@ -1626,7 +1626,7 @@
       "name": "Gsap Skills",
       "url": "https://github.com/greensock/gsap-skills/blob/main/skills/gsap-core/SKILL.md",
       "kind": "skill",
-      "stars": 11971,
+      "stars": 11989,
       "category": "开发编程",
       "skill_ids": [
         "greensock-gsap-skills-gsap-core",
@@ -1646,7 +1646,7 @@
       "name": "Claude Seo",
       "url": "https://github.com/AgriciDaniel/claude-seo/blob/main/skills/seo/SKILL.md",
       "kind": "skill",
-      "stars": 11828,
+      "stars": 11844,
       "category": "数据分析",
       "skill_ids": [
         "agricidaniel-claude-seo-seo",
@@ -1684,84 +1684,12 @@
       "summary_zh": "这套合集提供一站式SEO分析、审计和优化工具，覆盖网站检测、内容策略、竞争研究和实时数据，助你全面提升搜索排名。"
     },
     {
-      "id": "orchestra-research-ai-research-skills",
-      "repo": "Orchestra-Research/AI-research-SKILLs",
-      "name": "AI Research SKILLs",
-      "url": "https://github.com/Orchestra-Research/AI-research-SKILLs/blob/main/0-autoresearch-skill/SKILL.md",
-      "kind": "skill",
-      "stars": 10875,
-      "category": "自动化集成",
-      "skill_ids": [
-        "orchestra-research-ai-research-skills-0-autoresearch-skill",
-        "orchestra-research-ai-research-skills-a-evolve",
-        "orchestra-research-ai-research-skills-accelerate",
-        "orchestra-research-ai-research-skills-autogpt",
-        "orchestra-research-ai-research-skills-awq",
-        "orchestra-research-ai-research-skills-axolotl",
-        "orchestra-research-ai-research-skills-bigcode-evaluation-harness",
-        "orchestra-research-ai-research-skills-bitsandbytes",
-        "orchestra-research-ai-research-skills-constitutional-ai",
-        "orchestra-research-ai-research-skills-crewai",
-        "orchestra-research-ai-research-skills-deepspeed",
-        "orchestra-research-ai-research-skills-flash-attention",
-        "orchestra-research-ai-research-skills-gguf",
-        "orchestra-research-ai-research-skills-gptq",
-        "orchestra-research-ai-research-skills-grpo-rl-training",
-        "orchestra-research-ai-research-skills-hqq",
-        "orchestra-research-ai-research-skills-huggingface-tokenizers",
-        "orchestra-research-ai-research-skills-lambda-labs",
-        "orchestra-research-ai-research-skills-litgpt",
-        "orchestra-research-ai-research-skills-llama-cpp",
-        "orchestra-research-ai-research-skills-llama-factory",
-        "orchestra-research-ai-research-skills-llamaguard",
-        "orchestra-research-ai-research-skills-lm-evaluation-harness",
-        "orchestra-research-ai-research-skills-mamba",
-        "orchestra-research-ai-research-skills-megatron-core",
-        "orchestra-research-ai-research-skills-miles",
-        "orchestra-research-ai-research-skills-ml-training-recipes",
-        "orchestra-research-ai-research-skills-mlflow",
-        "orchestra-research-ai-research-skills-modal",
-        "orchestra-research-ai-research-skills-nanogpt",
-        "orchestra-research-ai-research-skills-nemo-curator",
-        "orchestra-research-ai-research-skills-nemo-evaluator",
-        "orchestra-research-ai-research-skills-nemo-guardrails",
-        "orchestra-research-ai-research-skills-nnsight",
-        "orchestra-research-ai-research-skills-openrlhf",
-        "orchestra-research-ai-research-skills-peft",
-        "orchestra-research-ai-research-skills-prompt-guard",
-        "orchestra-research-ai-research-skills-pytorch-fsdp2",
-        "orchestra-research-ai-research-skills-pytorch-lightning",
-        "orchestra-research-ai-research-skills-pyvene",
-        "orchestra-research-ai-research-skills-ray-data",
-        "orchestra-research-ai-research-skills-ray-train",
-        "orchestra-research-ai-research-skills-rwkv",
-        "orchestra-research-ai-research-skills-saelens",
-        "orchestra-research-ai-research-skills-sentencepiece",
-        "orchestra-research-ai-research-skills-sglang",
-        "orchestra-research-ai-research-skills-simpo",
-        "orchestra-research-ai-research-skills-skypilot",
-        "orchestra-research-ai-research-skills-slime",
-        "orchestra-research-ai-research-skills-swanlab",
-        "orchestra-research-ai-research-skills-tensorboard",
-        "orchestra-research-ai-research-skills-tensorrt-llm",
-        "orchestra-research-ai-research-skills-torchforge",
-        "orchestra-research-ai-research-skills-torchtitan",
-        "orchestra-research-ai-research-skills-transformer-lens",
-        "orchestra-research-ai-research-skills-trl-fine-tuning",
-        "orchestra-research-ai-research-skills-unsloth",
-        "orchestra-research-ai-research-skills-verl",
-        "orchestra-research-ai-research-skills-vllm",
-        "orchestra-research-ai-research-skills-weights-and-biases"
-      ],
-      "summary_zh": "专为AI研发全流程打造的一站式工具箱，打通从大模型训练、微调、压缩、评估对齐到多智能体协作的完整链路，让自主研究与模型落地更高效自动化。"
-    },
-    {
       "id": "zechenzhangagi-ai-research-skills",
       "repo": "zechenzhangAGI/AI-research-SKILLs",
       "name": "AI Research SKILLs",
       "url": "https://github.com/zechenzhangAGI/AI-research-SKILLs/blob/main/0-autoresearch-skill/SKILL.md",
       "kind": "skill",
-      "stars": 10875,
+      "stars": 10882,
       "category": "通用其他",
       "skill_ids": [
         "zechenzhangagi-ai-research-skills-0-autoresearch-skill",
@@ -1828,12 +1756,84 @@
       "summary_zh": "专为AI研发打造的全链路技能包，覆盖从大模型训练、微调压缩、评估对齐，到智能体构建与多智能体协作的完整闭环，帮你一站式搞定端到端AI研究。"
     },
     {
+      "id": "orchestra-research-ai-research-skills",
+      "repo": "Orchestra-Research/AI-research-SKILLs",
+      "name": "AI Research SKILLs",
+      "url": "https://github.com/Orchestra-Research/AI-research-SKILLs/blob/main/0-autoresearch-skill/SKILL.md",
+      "kind": "skill",
+      "stars": 10881,
+      "category": "自动化集成",
+      "skill_ids": [
+        "orchestra-research-ai-research-skills-0-autoresearch-skill",
+        "orchestra-research-ai-research-skills-a-evolve",
+        "orchestra-research-ai-research-skills-accelerate",
+        "orchestra-research-ai-research-skills-autogpt",
+        "orchestra-research-ai-research-skills-awq",
+        "orchestra-research-ai-research-skills-axolotl",
+        "orchestra-research-ai-research-skills-bigcode-evaluation-harness",
+        "orchestra-research-ai-research-skills-bitsandbytes",
+        "orchestra-research-ai-research-skills-constitutional-ai",
+        "orchestra-research-ai-research-skills-crewai",
+        "orchestra-research-ai-research-skills-deepspeed",
+        "orchestra-research-ai-research-skills-flash-attention",
+        "orchestra-research-ai-research-skills-gguf",
+        "orchestra-research-ai-research-skills-gptq",
+        "orchestra-research-ai-research-skills-grpo-rl-training",
+        "orchestra-research-ai-research-skills-hqq",
+        "orchestra-research-ai-research-skills-huggingface-tokenizers",
+        "orchestra-research-ai-research-skills-lambda-labs",
+        "orchestra-research-ai-research-skills-litgpt",
+        "orchestra-research-ai-research-skills-llama-cpp",
+        "orchestra-research-ai-research-skills-llama-factory",
+        "orchestra-research-ai-research-skills-llamaguard",
+        "orchestra-research-ai-research-skills-lm-evaluation-harness",
+        "orchestra-research-ai-research-skills-mamba",
+        "orchestra-research-ai-research-skills-megatron-core",
+        "orchestra-research-ai-research-skills-miles",
+        "orchestra-research-ai-research-skills-ml-training-recipes",
+        "orchestra-research-ai-research-skills-mlflow",
+        "orchestra-research-ai-research-skills-modal",
+        "orchestra-research-ai-research-skills-nanogpt",
+        "orchestra-research-ai-research-skills-nemo-curator",
+        "orchestra-research-ai-research-skills-nemo-evaluator",
+        "orchestra-research-ai-research-skills-nemo-guardrails",
+        "orchestra-research-ai-research-skills-nnsight",
+        "orchestra-research-ai-research-skills-openrlhf",
+        "orchestra-research-ai-research-skills-peft",
+        "orchestra-research-ai-research-skills-prompt-guard",
+        "orchestra-research-ai-research-skills-pytorch-fsdp2",
+        "orchestra-research-ai-research-skills-pytorch-lightning",
+        "orchestra-research-ai-research-skills-pyvene",
+        "orchestra-research-ai-research-skills-ray-data",
+        "orchestra-research-ai-research-skills-ray-train",
+        "orchestra-research-ai-research-skills-rwkv",
+        "orchestra-research-ai-research-skills-saelens",
+        "orchestra-research-ai-research-skills-sentencepiece",
+        "orchestra-research-ai-research-skills-sglang",
+        "orchestra-research-ai-research-skills-simpo",
+        "orchestra-research-ai-research-skills-skypilot",
+        "orchestra-research-ai-research-skills-slime",
+        "orchestra-research-ai-research-skills-swanlab",
+        "orchestra-research-ai-research-skills-tensorboard",
+        "orchestra-research-ai-research-skills-tensorrt-llm",
+        "orchestra-research-ai-research-skills-torchforge",
+        "orchestra-research-ai-research-skills-torchtitan",
+        "orchestra-research-ai-research-skills-transformer-lens",
+        "orchestra-research-ai-research-skills-trl-fine-tuning",
+        "orchestra-research-ai-research-skills-unsloth",
+        "orchestra-research-ai-research-skills-verl",
+        "orchestra-research-ai-research-skills-vllm",
+        "orchestra-research-ai-research-skills-weights-and-biases"
+      ],
+      "summary_zh": "专为AI研发全流程打造的一站式工具箱，打通从大模型训练、微调、压缩、评估对齐到多智能体协作的完整链路，让自主研究与模型落地更高效自动化。"
+    },
+    {
       "id": "jeffallan-claude-skills",
       "repo": "jeffallan/claude-skills",
       "name": "Claude Skills",
       "url": "https://github.com/jeffallan/claude-skills/blob/main/skills/angular-architect/SKILL.md",
       "kind": "skill",
-      "stars": 10653,
+      "stars": 10658,
       "category": "测试调试",
       "skill_ids": [
         "jeffallan-claude-skills-angular-architect",
@@ -1905,7 +1905,7 @@
       "name": "Voltagent",
       "url": "https://github.com/VoltAgent/voltagent/blob/main/examples/with-workspace/workspace/skills/data-analysis/SKILL.md",
       "kind": "skill",
-      "stars": 10096,
+      "stars": 10097,
       "category": "数据分析",
       "skill_ids": [
         "voltagent-voltagent-data-analysis",
@@ -1919,7 +1919,7 @@
       "name": "Claude Obsidian",
       "url": "https://github.com/AgriciDaniel/claude-obsidian/blob/main/skills/autoresearch/SKILL.md",
       "kind": "skill",
-      "stars": 9656,
+      "stars": 9671,
       "category": "自动化集成",
       "skill_ids": [
         "agricidaniel-claude-obsidian-autoresearch",
@@ -1967,7 +1967,7 @@
       "name": "Reverse Skill",
       "url": "https://github.com/zhaoxuya520/reverse-skill/blob/main/skills/api-security/SKILL.md",
       "kind": "skill",
-      "stars": 8497,
+      "stars": 8514,
       "category": "通用其他",
       "skill_ids": [
         "zhaoxuya520-reverse-skill-api-security",
@@ -2048,7 +2048,7 @@
       "name": "Text To Cad",
       "url": "https://github.com/earthtojake/text-to-cad/blob/main/skills/bambu-labs/SKILL.md",
       "kind": "skill",
-      "stars": 8439,
+      "stars": 8485,
       "category": "设计创意",
       "skill_ids": [
         "earthtojake-text-to-cad-bambu-labs",
@@ -2073,7 +2073,7 @@
       "name": "Omnigent",
       "url": "https://github.com/omnigent-ai/omnigent/blob/main/.claude/skills/antigravity-native-e2e-dev/SKILL.md",
       "kind": "skill",
-      "stars": 7520,
+      "stars": 7525,
       "category": "通用其他",
       "skill_ids": [
         "omnigent-ai-omnigent-antigravity-native-e2e-dev",
@@ -2110,7 +2110,7 @@
       "name": "Seomachine",
       "url": "https://github.com/TheCraigHewitt/seomachine/blob/main/.claude/skills/ab-test-setup/SKILL.md",
       "kind": "skill",
-      "stars": 7252,
+      "stars": 7251,
       "category": "数据分析",
       "skill_ids": [
         "thecraighewitt-seomachine-ab-test-setup",
@@ -2147,7 +2147,7 @@
       "name": "Claude Ads",
       "url": "https://github.com/AgriciDaniel/claude-ads/blob/main/ads/SKILL.md",
       "kind": "skill",
-      "stars": 7231,
+      "stars": 7234,
       "category": "设计创意",
       "skill_ids": [
         "agricidaniel-claude-ads-ads",
@@ -2193,7 +2193,7 @@
       "name": "Plannotator",
       "url": "https://github.com/backnotprop/plannotator/blob/main/.agents/skills/pierre-guard/SKILL.md",
       "kind": "skill",
-      "stars": 7112,
+      "stars": 7116,
       "category": "数据分析",
       "skill_ids": [
         "backnotprop-plannotator-pierre-guard",
@@ -2216,7 +2216,7 @@
       "name": "Waza",
       "url": "https://github.com/tw93/Waza/blob/main/skills/check/SKILL.md",
       "kind": "skill",
-      "stars": 6554,
+      "stars": 6558,
       "category": "设计创意",
       "skill_ids": [
         "tw93-waza-check",
@@ -2237,7 +2237,7 @@
       "name": "Skills",
       "url": "https://github.com/trailofbits/skills/blob/main/plugins/testing-handbook-skills/skills/address-sanitizer/SKILL.md",
       "kind": "skill",
-      "stars": 6185,
+      "stars": 6187,
       "category": "测试调试",
       "skill_ids": [
         "trailofbits-skills-address-sanitizer",
@@ -2311,7 +2311,7 @@
       "name": "CodePilot",
       "url": "https://github.com/op7418/CodePilot/blob/main/资料/feishu-openclaw-plugin/package/skills/feishu-bitable/SKILL.md",
       "kind": "skill",
-      "stars": 6141,
+      "stars": 6142,
       "category": "文档写作",
       "skill_ids": [
         "op7418-codepilot-feishu-bitable",
@@ -2368,7 +2368,7 @@
       "name": "Product Manager Skills",
       "url": "https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/acquisition-channel-advisor/SKILL.md",
       "kind": "skill",
-      "stars": 5850,
+      "stars": 5856,
       "category": "通用其他",
       "skill_ids": [
         "deanpeters-product-manager-skills-acquisition-channel-advisor",
@@ -2448,7 +2448,7 @@
       "name": "N8n Skills",
       "url": "https://github.com/czlonkowski/n8n-skills/blob/main/skills/n8n-agents/SKILL.md",
       "kind": "skill",
-      "stars": 5832,
+      "stars": 5833,
       "category": "测试调试",
       "skill_ids": [
         "czlonkowski-n8n-skills-n8n-agents",
@@ -2492,7 +2492,7 @@
       "name": "Godogen",
       "url": "https://github.com/htdt/godogen/blob/master/asset-gen/SKILL.md",
       "kind": "skill",
-      "stars": 4848,
+      "stars": 4856,
       "category": "设计创意",
       "skill_ids": [
         "htdt-godogen-asset-gen",
@@ -2645,7 +2645,7 @@
       "name": "Lean Ctx",
       "url": "https://github.com/yvgude/lean-ctx/blob/main/skills/lean-ctx/SKILL.md",
       "kind": "skill",
-      "stars": 3299,
+      "stars": 3309,
       "category": "开发编程",
       "skill_ids": [
         "yvgude-lean-ctx-lean-ctx",
@@ -2659,7 +2659,7 @@
       "name": "NotFair",
       "url": "https://github.com/nowork-studio/NotFair/blob/main/meta-ads/audit/SKILL.md",
       "kind": "skill",
-      "stars": 3161,
+      "stars": 3163,
       "category": "文档写作",
       "skill_ids": [
         "nowork-studio-notfair-audit",
@@ -2687,7 +2687,7 @@
       "name": "Toprank",
       "url": "https://github.com/nowork-studio/toprank/blob/main/meta-ads/audit/SKILL.md",
       "kind": "skill",
-      "stars": 3161,
+      "stars": 3163,
       "category": "通用其他",
       "skill_ids": [
         "nowork-studio-toprank-audit",
@@ -2727,7 +2727,7 @@
       "name": "Ai Marketing Skills",
       "url": "https://github.com/ericosiu/ai-marketing-skills/blob/main/autoresearch/SKILL.md",
       "kind": "skill",
-      "stars": 3079,
+      "stars": 3085,
       "category": "数据分析",
       "skill_ids": [
         "ericosiu-ai-marketing-skills-autoresearch",
@@ -2761,7 +2761,7 @@
       "name": "Finance Skills",
       "url": "https://github.com/himself65/finance-skills/blob/main/plugins/market-analysis/skills/company-valuation/SKILL.md",
       "kind": "skill",
-      "stars": 3032,
+      "stars": 3039,
       "category": "浏览器自动化",
       "skill_ids": [
         "himself65-finance-skills-company-valuation",
@@ -2798,7 +2798,7 @@
       "name": "9arm Skills",
       "url": "https://github.com/thananon/9arm-skills/blob/main/skills/engineering/debug-mantra/SKILL.md",
       "kind": "skill",
-      "stars": 3008,
+      "stars": 3009,
       "category": "测试调试",
       "skill_ids": [
         "thananon-9arm-skills-debug-mantra",
@@ -2839,7 +2839,7 @@
       "name": "Baoyu Design",
       "url": "https://github.com/JimLiu/baoyu-design/blob/main/skills/baoyu-design/SKILL.md",
       "kind": "skill",
-      "stars": 2722,
+      "stars": 2727,
       "category": "设计创意",
       "skill_ids": [
         "jimliu-baoyu-design-baoyu-design",
@@ -2853,7 +2853,7 @@
       "name": "Vue Skills",
       "url": "https://github.com/hyf0/vue-skills/blob/main/skills/create-adaptable-composable/SKILL.md",
       "kind": "skill",
-      "stars": 2714,
+      "stars": 2716,
       "category": "测试调试",
       "skill_ids": [
         "hyf0-vue-skills-create-adaptable-composable",
@@ -2873,7 +2873,7 @@
       "name": "Skills",
       "url": "https://github.com/vuejs-ai/skills/blob/main/skills/create-adaptable-composable/SKILL.md",
       "kind": "skill",
-      "stars": 2714,
+      "stars": 2716,
       "category": "测试调试",
       "skill_ids": [
         "vuejs-ai-skills-create-adaptable-composable",
@@ -2893,7 +2893,7 @@
       "name": "Cc Skills Golang",
       "url": "https://github.com/samber/cc-skills-golang/blob/main/skills/golang-benchmark/SKILL.md",
       "kind": "skill",
-      "stars": 2666,
+      "stars": 2667,
       "category": "通用其他",
       "skill_ids": [
         "samber-cc-skills-golang-golang-benchmark",
@@ -2951,7 +2951,7 @@
       "name": "Claude Code Plugins Plus Skills",
       "url": "https://github.com/jeremylongshore/claude-code-plugins-plus-skills/blob/main/plugins/ai-agency/agency-os/skills/agency-os/SKILL.md",
       "kind": "skill",
-      "stars": 2532,
+      "stars": 2534,
       "category": "开发编程",
       "skill_ids": [
         "jeremylongshore-claude-code-plugins-plus-skills-agency-os",
@@ -3083,7 +3083,7 @@
       "name": "Web Quality Skills",
       "url": "https://github.com/addyosmani/web-quality-skills/blob/main/skills/accessibility/SKILL.md",
       "kind": "skill",
-      "stars": 2519,
+      "stars": 2520,
       "category": "开发编程",
       "skill_ids": [
         "addyosmani-web-quality-skills-accessibility",
@@ -3101,7 +3101,7 @@
       "name": "Avoid Ai Writing",
       "url": "https://github.com/conorbronsdon/avoid-ai-writing/blob/main/SKILL.md",
       "kind": "skill",
-      "stars": 2472,
+      "stars": 2477,
       "category": "文档写作",
       "skill_ids": [
         "conorbronsdon-avoid-ai-writing",
@@ -3115,7 +3115,7 @@
       "name": "Claude Trading Skills",
       "url": "https://github.com/tradermonty/claude-trading-skills/blob/main/skills/backtest-expert/SKILL.md",
       "kind": "skill",
-      "stars": 2452,
+      "stars": 2453,
       "category": "通用其他",
       "skill_ids": [
         "tradermonty-claude-trading-skills-backtest-expert",
@@ -3177,7 +3177,7 @@
       "name": "Aaron Marketing Skills",
       "url": "https://github.com/aaron-he-zhu/aaron-marketing-skills/blob/main/ad/activate/ad-account-auditor/SKILL.md",
       "kind": "skill",
-      "stars": 2422,
+      "stars": 2424,
       "category": "通用其他",
       "skill_ids": [
         "aaron-he-zhu-aaron-marketing-skills-ad-account-auditor",
@@ -3280,7 +3280,7 @@
       "name": "Comet",
       "url": "https://github.com/rpamis/comet/blob/master/eval/local/skills/benchmarks/dependency/superpowers/brainstorming/SKILL.md",
       "kind": "skill",
-      "stars": 2373,
+      "stars": 2375,
       "category": "通用其他",
       "skill_ids": [
         "rpamis-comet-brainstorming",
@@ -3362,7 +3362,7 @@
       "name": "Learning Opportunities",
       "url": "https://github.com/DrCatHicks/learning-opportunities/blob/main/learning-opportunities/skills/learning-opportunities/SKILL.md",
       "kind": "skill",
-      "stars": 2276,
+      "stars": 2278,
       "category": "开发编程",
       "skill_ids": [
         "drcathicks-learning-opportunities-learning-opportunities",
@@ -3376,7 +3376,7 @@
       "name": "Agent Toolkit",
       "url": "https://github.com/softaworks/agent-toolkit/blob/main/skills/agent-md-refactor/SKILL.md",
       "kind": "skill",
-      "stars": 2209,
+      "stars": 2211,
       "category": "设计创意",
       "skill_ids": [
         "softaworks-agent-toolkit-agent-md-refactor",
@@ -3500,7 +3500,7 @@
       "name": "Claude Code Video Toolkit",
       "url": "https://github.com/digitalsamba/claude-code-video-toolkit/blob/main/.claude/skills/acestep/SKILL.md",
       "kind": "skill",
-      "stars": 1784,
+      "stars": 1786,
       "category": "浏览器自动化",
       "skill_ids": [
         "digitalsamba-claude-code-video-toolkit-acestep",
@@ -3525,7 +3525,7 @@
       "name": "Kubb",
       "url": "https://github.com/kubb-labs/kubb/blob/main/.agents/skills/changelog/SKILL.md",
       "kind": "skill",
-      "stars": 1762,
+      "stars": 1763,
       "category": "测试调试",
       "skill_ids": [
         "kubb-labs-kubb-changelog",
@@ -3622,7 +3622,7 @@
       "name": "Aso Skills",
       "url": "https://github.com/Eronred/aso-skills/blob/main/skills/ab-test-store-listing/SKILL.md",
       "kind": "skill",
-      "stars": 1652,
+      "stars": 1654,
       "category": "开发编程",
       "skill_ids": [
         "eronred-aso-skills-ab-test-store-listing",
@@ -3695,7 +3695,7 @@
       "name": "Agent Skills",
       "url": "https://github.com/callstackincubator/agent-skills/blob/main/plugins/vendored/.agents/skills/agent-device/SKILL.md",
       "kind": "skill",
-      "stars": 1547,
+      "stars": 1549,
       "category": "测试调试",
       "skill_ids": [
         "callstackincubator-agent-skills-agent-device",
@@ -3721,7 +3721,7 @@
       "name": "Claude Canvas",
       "url": "https://github.com/dvdsgl/claude-canvas/blob/main/canvas/skills/calendar/SKILL.md",
       "kind": "skill",
-      "stars": 1507,
+      "stars": 1508,
       "category": "设计创意",
       "skill_ids": [
         "dvdsgl-claude-canvas-calendar",
@@ -3753,7 +3753,7 @@
       "name": "Medical Research Skills",
       "url": "https://github.com/aipoch/medical-research-skills/blob/main/awesome-med-research-skills/Academic Writing/arxiv-preflight/SKILL.md",
       "kind": "skill",
-      "stars": 1481,
+      "stars": 1483,
       "category": "通用其他",
       "skill_ids": [
         "aipoch-medical-research-skills-arxiv-preflight",
@@ -3943,7 +3943,7 @@
       "name": "Rust Skills",
       "url": "https://github.com/actionbook/rust-skills/blob/main/skills/coding-guidelines/SKILL.md",
       "kind": "skill",
-      "stars": 1327,
+      "stars": 1328,
       "category": "开发编程",
       "skill_ids": [
         "actionbook-rust-skills-coding-guidelines",
@@ -4007,7 +4007,7 @@
       "name": "Claude Code Skills",
       "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-financial/ashare-news-fetcher/SKILL.md",
       "kind": "skill",
-      "stars": 1281,
+      "stars": 1282,
       "category": "开发编程",
       "skill_ids": [
         "daymade-claude-code-skills-ashare-news-fetcher",
@@ -4101,7 +4101,7 @@
       "name": "Context Engineering Kit",
       "url": "https://github.com/NeoLabHQ/context-engineering-kit/blob/master/plugins/fpf/skills/actualize/SKILL.md",
       "kind": "skill",
-      "stars": 1258,
+      "stars": 1260,
       "category": "数据分析",
       "skill_ids": [
         "neolabhq-context-engineering-kit-actualize",
@@ -4295,7 +4295,7 @@
       "name": "Dotnet Skills",
       "url": "https://github.com/Aaronontheweb/dotnet-skills/blob/master/skills/akka-aspire-configuration/SKILL.md",
       "kind": "skill",
-      "stars": 1074,
+      "stars": 1075,
       "category": "通用其他",
       "skill_ids": [
         "aaronontheweb-dotnet-skills-akka-aspire-configuration",
@@ -4370,7 +4370,7 @@
       "name": "Vibecode Pro Max Kit",
       "url": "https://github.com/withkynam/vibecode-pro-max-kit/blob/main/.claude/skills/vc-agent-browser/SKILL.md",
       "kind": "skill",
-      "stars": 1048,
+      "stars": 1049,
       "category": "开发编程",
       "skill_ids": [
         "withkynam-vibecode-pro-max-kit-vc-agent-browser",
@@ -4505,7 +4505,7 @@
       "name": "Skills",
       "url": "https://github.com/getsentry/skills/blob/main/skills/agents-md/SKILL.md",
       "kind": "skill",
-      "stars": 868,
+      "stars": 869,
       "category": "通用其他",
       "skill_ids": [
         "getsentry-skills-agents-md",
@@ -4604,7 +4604,7 @@
       "name": "Skills For Fabric",
       "url": "https://github.com/microsoft/skills-for-fabric/blob/main/plugins/fabric-skills/skills/activator-authoring-cli/SKILL.md",
       "kind": "skill",
-      "stars": 828,
+      "stars": 829,
       "category": "通用其他",
       "skill_ids": [
         "microsoft-skills-for-fabric-activator-authoring-cli",
@@ -4818,7 +4818,7 @@
       "name": "Aegis",
       "url": "https://github.com/GanyuanRan/Aegis/blob/main/skills/anti-entropy-governance/SKILL.md",
       "kind": "skill",
-      "stars": 716,
+      "stars": 717,
       "category": "通用其他",
       "skill_ids": [
         "ganyuanran-aegis-anti-entropy-governance",
@@ -4958,7 +4958,7 @@
       "name": "COG Second Brain",
       "url": "https://github.com/huytieu/COG-second-brain/blob/main/.claude/skills/auto-research/SKILL.md",
       "kind": "skill",
-      "stars": 685,
+      "stars": 686,
       "category": "通用其他",
       "skill_ids": [
         "huytieu-cog-second-brain-auto-research",
@@ -4991,7 +4991,7 @@
       "name": "Claude Skills Marketplace",
       "url": "https://github.com/mhattingpete/claude-skills-marketplace/blob/main/visual-documentation-plugin/skills/architecture-diagram-creator/SKILL.md",
       "kind": "skill",
-      "stars": 648,
+      "stars": 649,
       "category": "设计创意",
       "skill_ids": [
         "mhattingpete-claude-skills-marketplace-architecture-diagram-creator",
@@ -5826,7 +5826,7 @@
       "name": "Founder Skills",
       "url": "https://github.com/ognjengt/founder-skills/blob/main/skills/brand-copywriter/SKILL.md",
       "kind": "skill",
-      "stars": 239,
+      "stars": 240,
       "category": "设计创意",
       "skill_ids": [
         "ognjengt-founder-skills-brand-copywriter",
@@ -6367,38 +6367,12 @@
       "summary_zh": "这套 Redis 官方技能合集覆盖建模、集群、连接、性能、可观测、安全到向量检索与语义缓存等方向，帮你在搭建或优化 Redis 应用时一站式获取最佳实践，少踩坑、用得更顺手。"
     },
     {
-      "id": "raintree-technology-apple-hig-skills",
-      "repo": "raintree-technology/apple-hig-skills",
-      "name": "Apple Hig Skills",
-      "url": "https://github.com/raintree-technology/apple-hig-skills/blob/main/skills/hig-components-content/SKILL.md",
-      "kind": "skill",
-      "stars": 85,
-      "category": "设计创意",
-      "skill_ids": [
-        "raintree-technology-apple-hig-skills-hig-components-content",
-        "raintree-technology-apple-hig-skills-hig-components-controls",
-        "raintree-technology-apple-hig-skills-hig-components-dialogs",
-        "raintree-technology-apple-hig-skills-hig-components-layout",
-        "raintree-technology-apple-hig-skills-hig-components-menus",
-        "raintree-technology-apple-hig-skills-hig-components-search",
-        "raintree-technology-apple-hig-skills-hig-components-status",
-        "raintree-technology-apple-hig-skills-hig-components-system",
-        "raintree-technology-apple-hig-skills-hig-foundations",
-        "raintree-technology-apple-hig-skills-hig-inputs",
-        "raintree-technology-apple-hig-skills-hig-patterns",
-        "raintree-technology-apple-hig-skills-hig-platforms",
-        "raintree-technology-apple-hig-skills-hig-project-context",
-        "raintree-technology-apple-hig-skills-hig-technologies"
-      ],
-      "summary_zh": "专为苹果开发设计的一站式规范速查合集，涵盖界面组件、交互模式与设计基础，帮你轻松吃透人机交互指南，打造原汁原味的原生体验。"
-    },
-    {
       "id": "blackwell-systems-agent-lsp",
       "repo": "blackwell-systems/agent-lsp",
       "name": "Agent Lsp",
       "url": "https://github.com/blackwell-systems/agent-lsp/blob/main/skills/lsp-architecture/SKILL.md",
       "kind": "skill",
-      "stars": 84,
+      "stars": 85,
       "category": "开发编程",
       "skill_ids": [
         "blackwell-systems-agent-lsp-lsp-architecture",
@@ -6429,12 +6403,38 @@
       "summary_zh": "这套合集把 LSP 能力打包成一组可直接调用的代码理解与重构工作流，让 AI 助手在改动陌生代码库时能精准定位符号、追踪引用、评估影响并安全执行重命名、签名修改、提取函数等操作，显著降低盲改风险。"
     },
     {
+      "id": "raintree-technology-apple-hig-skills",
+      "repo": "raintree-technology/apple-hig-skills",
+      "name": "Apple Hig Skills",
+      "url": "https://github.com/raintree-technology/apple-hig-skills/blob/main/skills/hig-components-content/SKILL.md",
+      "kind": "skill",
+      "stars": 85,
+      "category": "设计创意",
+      "skill_ids": [
+        "raintree-technology-apple-hig-skills-hig-components-content",
+        "raintree-technology-apple-hig-skills-hig-components-controls",
+        "raintree-technology-apple-hig-skills-hig-components-dialogs",
+        "raintree-technology-apple-hig-skills-hig-components-layout",
+        "raintree-technology-apple-hig-skills-hig-components-menus",
+        "raintree-technology-apple-hig-skills-hig-components-search",
+        "raintree-technology-apple-hig-skills-hig-components-status",
+        "raintree-technology-apple-hig-skills-hig-components-system",
+        "raintree-technology-apple-hig-skills-hig-foundations",
+        "raintree-technology-apple-hig-skills-hig-inputs",
+        "raintree-technology-apple-hig-skills-hig-patterns",
+        "raintree-technology-apple-hig-skills-hig-platforms",
+        "raintree-technology-apple-hig-skills-hig-project-context",
+        "raintree-technology-apple-hig-skills-hig-technologies"
+      ],
+      "summary_zh": "专为苹果开发设计的一站式规范速查合集，涵盖界面组件、交互模式与设计基础，帮你轻松吃透人机交互指南，打造原汁原味的原生体验。"
+    },
+    {
       "id": "mohamedabdallah-14-unslop",
       "repo": "MohamedAbdallah-14/unslop",
       "name": "Unslop",
       "url": "https://github.com/MohamedAbdallah-14/unslop/blob/main/unslop/SKILL.md",
       "kind": "skill",
-      "stars": 78,
+      "stars": 79,
       "category": "开发编程",
       "skill_ids": [
         "mohamedabdallah-14-unslop-unslop",
