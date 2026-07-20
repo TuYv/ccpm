@@ -1,0 +1,25 @@
+{
+  "id": "timewarpengineering-timewarp-architecture-tw-blazor-layout",
+  "name": "tw-blazor-layout",
+  "description": "How to structure Blazor app chrome with the \"empty layout + cascaded page-component shell\" pattern — keep LayoutComponentBase empty and put header/nav/content/aside/footer in ONE shell component that pages wrap their content in and that cascades itself. Use when designing a Blazor app's layout/navigation, deciding where chrome belongs, building a layout shell, or when chrome must react to a state store or per-navigation lifecycle that a layout can't provide.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "TimeWarpEngineering",
+  "install_path": ".claude/skills/tw-blazor-layout/SKILL.md",
+  "source": {
+    "repo": "TimeWarpEngineering/timewarp-architecture",
+    "url": "https://github.com/TimeWarpEngineering/timewarp-architecture/blob/master/skills/tw-blazor-layout/SKILL.md",
+    "path": "skills/tw-blazor-layout/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-07-20T13:29:02.870Z",
+    "stars": 54,
+    "language": "C#",
+    "pushed_at": "2026-07-20T12:41:52Z",
+    "license": "Unlicense"
+  }
+}
