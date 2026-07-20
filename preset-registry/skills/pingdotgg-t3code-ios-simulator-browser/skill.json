@@ -1,0 +1,25 @@
+{
+  "id": "pingdotgg-t3code-ios-simulator-browser",
+  "name": "ios-simulator-browser",
+  "description": "Stream an explicit iOS Simulator through pinned serve-sim into the T3 Code in-app browser or another agent browser. Use on Apple Silicon macOS when the user should watch simulator verification live or when browser-visible simulator evidence is needed.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "pingdotgg",
+  "install_path": ".claude/skills/ios-simulator-browser/SKILL.md",
+  "source": {
+    "repo": "pingdotgg/t3code",
+    "url": "https://github.com/pingdotgg/t3code/blob/main/.agents/skills/ios-simulator-browser/SKILL.md",
+    "path": ".agents/skills/ios-simulator-browser/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-20T00:43:47.886Z",
+    "stars": 14187,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-19T23:34:40Z",
+    "license": "MIT"
+  }
+}

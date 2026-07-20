@@ -2,7 +2,7 @@
   "id": "omnigent-ai-omnigent-debate",
   "name": "debate",
   "description": "Have the Claude and GPT partners critique each other's answers across a configurable number of rounds (default 1) before converging on a synthesis. Use when the user wants the two perspectives stress-tested against each other, not just shown side by side.",
-  "category": "浏览器自动化",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,8 +16,8 @@
     "url": "https://github.com/omnigent-ai/omnigent/blob/main/examples/debby/skills/debate/SKILL.md",
     "path": "examples/debby/skills/debate/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-19T23:20:59.379Z",
-    "stars": 7511,
+    "discovered_at": "2026-07-20T00:32:30.623Z",
+    "stars": 7512,
     "language": "Python",
     "pushed_at": "2026-07-19T13:12:22Z",
     "license": "Apache-2.0"

@@ -1,0 +1,25 @@
+{
+  "id": "pingdotgg-t3code-test-t3-mobile",
+  "name": "test-t3-mobile",
+  "description": "Launch and test T3 Code Mobile on an iOS Simulator or Android Emulator against disposable local T3 environments, including Metro and dev-client reuse, native rebuild decisions, per-client pairing, seeded projects, semantic UI control, screenshots, and iOS serve-sim streaming. Use after mobile UI or native changes, when reproducing phone or tablet behavior, pairing an emulator to isolated state, or verifying mobile behavior on macOS, Linux, or Windows.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "pingdotgg",
+  "install_path": ".claude/skills/test-t3-mobile/SKILL.md",
+  "source": {
+    "repo": "pingdotgg/t3code",
+    "url": "https://github.com/pingdotgg/t3code/blob/main/.agents/skills/test-t3-mobile/SKILL.md",
+    "path": ".agents/skills/test-t3-mobile/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-20T00:43:48.146Z",
+    "stars": 14187,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-19T23:34:40Z",
+    "license": "MIT"
+  }
+}

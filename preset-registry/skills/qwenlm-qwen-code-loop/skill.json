@@ -2,7 +2,7 @@
   "id": "qwenlm-qwen-code-loop",
   "name": "loop",
   "description": "Create a loop that runs a prompt now and follows up either on a fixed schedule or through self-paced wakeups. Usage - /loop check the build, /loop 5m check the build, /loop check the PR every 30m. /loop list to show jobs, /loop clear to cancel all.",
-  "category": "设计创意",
+  "category": "通用其他",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/QwenLM/qwen-code/blob/main/packages/core/src/skills/bundled/loop/SKILL.md",
     "path": "packages/core/src/skills/bundled/loop/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-19T23:26:00.235Z",
-    "stars": 26120,
+    "discovered_at": "2026-07-20T00:44:38.122Z",
+    "stars": 26124,
     "language": "TypeScript",
-    "pushed_at": "2026-07-19T22:58:43Z",
+    "pushed_at": "2026-07-19T23:51:36Z",
     "license": "Apache-2.0"
   }
 }

@@ -2,7 +2,7 @@
   "id": "resend-resend-skills-resend-cli",
   "name": "resend-cli",
   "description": "> Operate the Resend platform from the terminal — send emails (including React Email .tsx templates via --react-email), manage domains, contacts, broadcasts, templates, webhooks, API keys, logs, automations, and events via the `resend` CLI. Use when the user wants to run Resend commands in the shell, scripts, or CI/CD pipelines, or send/preview React Email templates. Always load this skill before running `resend` commands — it contains the non-interactive flag contract and gotchas that prevent s",
-  "category": "文档写作",
+  "category": "开发编程",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,7 +16,7 @@
     "url": "https://github.com/resend/resend-skills/blob/main/skills/resend-cli/SKILL.md",
     "path": "skills/resend-cli/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-19T23:26:11.143Z",
+    "discovered_at": "2026-07-20T00:45:04.065Z",
     "stars": 151,
     "language": "JavaScript",
     "pushed_at": "2026-07-15T20:13:48Z",

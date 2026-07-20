@@ -1,0 +1,25 @@
+{
+  "id": "pingdotgg-t3code-ios-debugger-agent",
+  "name": "ios-debugger-agent",
+  "description": "Build, launch, inspect, and drive iOS apps with the repository-configured XcodeBuildMCP server. Use on macOS for iOS Simulator builds, focused native test runs, semantic UI automation, screenshots, logs, or debugging, including T3 Code Mobile verification.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "pingdotgg",
+  "install_path": ".claude/skills/ios-debugger-agent/SKILL.md",
+  "source": {
+    "repo": "pingdotgg/t3code",
+    "url": "https://github.com/pingdotgg/t3code/blob/main/.agents/skills/ios-debugger-agent/SKILL.md",
+    "path": ".agents/skills/ios-debugger-agent/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-20T00:43:47.783Z",
+    "stars": 14187,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-19T23:34:40Z",
+    "license": "MIT"
+  }
+}

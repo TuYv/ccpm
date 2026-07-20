@@ -2,7 +2,7 @@
   "id": "omnigent-ai-omnigent-docker",
   "name": "deploy-docker-compose",
   "description": "Run the Omnigent server as a Docker compose stack (server + Postgres) on any Docker host — your laptop, a VPS, EC2 by hand, or as the base layer of any container-platform deploy. Invoke when the user wants to build the image, bring up the compose stack, debug the stack on a host they already have, or extend the stack for a new platform.",
-  "category": "浏览器自动化",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,8 +16,8 @@
     "url": "https://github.com/omnigent-ai/omnigent/blob/main/deploy/docker/SKILL.md",
     "path": "deploy/docker/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-19T23:20:59.262Z",
-    "stars": 7511,
+    "discovered_at": "2026-07-20T00:32:30.506Z",
+    "stars": 7512,
     "language": "Python",
     "pushed_at": "2026-07-19T13:12:22Z",
     "license": "Apache-2.0"

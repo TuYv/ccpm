@@ -2,7 +2,7 @@
   "id": "omnigent-ai-omnigent-cross-review",
   "name": "cross-review",
   "description": "Verify an implementer's diff with an INDEPENDENT, different-vendor sub-agent (diff plus contract only); turn blocking issues into fix-tasks and loop until clean.",
-  "category": "浏览器自动化",
+  "category": "通用其他",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,8 +16,8 @@
     "url": "https://github.com/omnigent-ai/omnigent/blob/main/examples/polly/skills/cross-review/SKILL.md",
     "path": "examples/polly/skills/cross-review/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-19T23:20:59.499Z",
-    "stars": 7511,
+    "discovered_at": "2026-07-20T00:32:30.731Z",
+    "stars": 7512,
     "language": "Python",
     "pushed_at": "2026-07-19T13:12:22Z",
     "license": "Apache-2.0"

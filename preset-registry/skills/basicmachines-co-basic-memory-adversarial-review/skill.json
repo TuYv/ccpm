@@ -2,7 +2,7 @@
   "id": "basicmachines-co-basic-memory-adversarial-review",
   "name": "adversarial-review",
   "description": "Cross-vendor adversarial code review of the current branch. Two different model families (Claude + Codex/GPT) review the diff independently, then try to refute each other's findings; survivors are reported by confidence. Runs from either Claude Code or Codex. Use when the user asks for an adversarial review, a cross-model / second-opinion review, or wants high-confidence findings before merging. Report-only — never auto-applies fixes.",
-  "category": "测试调试",
+  "category": "开发编程",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,7 +16,7 @@
     "url": "https://github.com/basicmachines-co/basic-memory/blob/main/.agents/skills/adversarial-review/SKILL.md",
     "path": ".agents/skills/adversarial-review/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-19T23:20:15.109Z",
+    "discovered_at": "2026-07-20T00:30:59.527Z",
     "stars": 3461,
     "language": "Python",
     "pushed_at": "2026-07-18T18:18:33Z",

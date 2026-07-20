@@ -2,7 +2,7 @@
   "id": "agricidaniel-claude-obsidian-autoresearch",
   "name": "autoresearch",
   "description": "> Autonomous iterative research loop. Takes a topic, runs web searches, fetches sources, synthesizes findings, and files everything into the wiki as structured pages. Based on Karpathy's autoresearch pattern: program.md configures objectives and constraints, the loop runs until depth is reached, output goes directly into the knowledge base. Triggers on: \"/autoresearch\", \"autoresearch\", \"research [topic]\", \"deep dive into [topic]\", \"investigate [topic]\", \"find everything about [topic]\", \"research",
-  "category": "测试调试",
+  "category": "通用其他",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,8 +16,8 @@
     "url": "https://github.com/AgriciDaniel/claude-obsidian/blob/main/skills/autoresearch/SKILL.md",
     "path": "skills/autoresearch/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-19T23:25:19.215Z",
-    "stars": 9633,
+    "discovered_at": "2026-07-20T00:41:55.044Z",
+    "stars": 9636,
     "language": "Python",
     "pushed_at": "2026-05-28T00:42:43Z",
     "license": "MIT"

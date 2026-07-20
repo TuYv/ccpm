@@ -2,7 +2,7 @@
   "id": "sethgammon-citadel-loop",
   "name": "loop",
   "description": ">- Bounded foreground repetition for the current session. Creates a loop contract, runs or coordinates an action plus verifier up to a declared attempt limit, and records evidence under .planning/loops/. Use for repeat-until-pass work that is too small for daemon and not time-based scheduling.",
-  "category": "测试调试",
+  "category": "通用其他",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,7 +16,7 @@
     "url": "https://github.com/SethGammon/Citadel/blob/main/skills/loop/SKILL.md",
     "path": "skills/loop/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-19T23:21:13.399Z",
+    "discovered_at": "2026-07-20T00:32:53.280Z",
     "stars": 795,
     "language": "JavaScript",
     "pushed_at": "2026-07-16T19:52:33Z",

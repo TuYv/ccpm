@@ -2,7 +2,7 @@
   "id": "obra-dotfiles-roborev-fix",
   "name": "roborev-fix",
   "description": "Use when the user asks to fix open failing reviews, invokes $roborev-fix, or provides job IDs; do not use when the user only pastes review findings with no request to discover or close reviews",
-  "category": "开发编程",
+  "category": "通用其他",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,7 +16,7 @@
     "url": "https://github.com/obra/dotfiles/blob/main/.codex/skills/roborev-fix/SKILL.md",
     "path": ".codex/skills/roborev-fix/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-19T23:20:35.921Z",
+    "discovered_at": "2026-07-20T00:31:49.916Z",
     "stars": 110,
     "language": "Shell",
     "pushed_at": "2026-07-10T20:18:42Z",

@@ -2,7 +2,7 @@
   "id": "thedotmack-claude-mem-weekly-digests",
   "name": "weekly-digests",
   "description": "Generate a serial week-by-week narrative digest of a project's full claude-mem timeline. Splits the timeline into per-ISO-week files, then runs one consecutive subagent per week — each receiving the prior week's carry-forward block — to produce one chapter per ISO week of data. Use when asked for \"weekly digests\", \"week-by-week story\", \"serial timeline\", or \"narrative chapters\" of a project's history.",
-  "category": "设计创意",
+  "category": "通用其他",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,8 +16,8 @@
     "url": "https://github.com/thedotmack/claude-mem/blob/main/plugin/skills/weekly-digests/SKILL.md",
     "path": "plugin/skills/weekly-digests/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-19T23:25:01.126Z",
-    "stars": 87868,
+    "discovered_at": "2026-07-20T00:41:05.454Z",
+    "stars": 87873,
     "language": "JavaScript",
     "pushed_at": "2026-07-19T07:34:01Z",
     "license": "Apache-2.0"

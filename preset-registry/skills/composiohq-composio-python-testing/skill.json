@@ -2,7 +2,7 @@
   "id": "composiohq-composio-python-testing",
   "name": "python-testing",
   "description": "Select and run Python SDK verification with nox, Makefile targets, Ruff, mypy, pytest markers, sanity tests, type inference checks, and build checks. Use when adding Python tests, diagnosing Python CI, or validating Python SDK/provider changes. Do not use for TypeScript-only checks.",
-  "category": "自动化集成",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,7 +16,7 @@
     "url": "https://github.com/ComposioHQ/composio/blob/next/.agents/skills/python-testing/SKILL.md",
     "path": ".agents/skills/python-testing/SKILL.md",
     "branch": "next",
-    "discovered_at": "2026-07-19T23:20:25.001Z",
+    "discovered_at": "2026-07-20T00:31:22.554Z",
     "stars": 29287,
     "language": "TypeScript",
     "pushed_at": "2026-07-19T10:29:58Z",

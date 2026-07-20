@@ -2,7 +2,7 @@
   "id": "davila7-claude-code-templates-emerging-techniques-moe-training",
   "name": "moe-training",
   "description": "Train Mixture of Experts (MoE) models using DeepSpeed or HuggingFace. Use when training large-scale models with limited compute (5× cost reduction vs dense models), implementing sparse architectures like Mixtral 8x7B or DeepSeek-V3, or scaling model capacity without proportional compute increase. Covers MoE architectures, routing mechanisms, load balancing, expert parallelism, and inference optimization.",
-  "category": "设计创意",
+  "category": "通用其他",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,8 +16,8 @@
     "url": "https://github.com/davila7/claude-code-templates/blob/main/cli-tool/components/skills/ai-research/emerging-techniques-moe-training/SKILL.md",
     "path": "cli-tool/components/skills/ai-research/emerging-techniques-moe-training/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-19T23:25:09.556Z",
-    "stars": 29735,
+    "discovered_at": "2026-07-20T00:41:28.055Z",
+    "stars": 29737,
     "language": "Python",
     "pushed_at": "2026-07-19T18:00:11Z",
     "license": "MIT"

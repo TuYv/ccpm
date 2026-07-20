@@ -2,7 +2,7 @@
   "id": "omnigent-ai-omnigent-pi-native-e2e-dev",
   "name": "pi-native-e2e-dev",
   "description": "Spin up a live local Omnigent server + runner and exercise the native Pi TUI harness (pi-native) end-to-end — launch the real `pi` CLI via `omnigent pi`, drive turns through the web/bridge, smoke-test, and bug-bash. Load when developing, testing, or debugging the pi-native harness (omnigent/inner/pi_native_executor.py, pi_native_harness.py, omnigent/pi_native.py, pi_native_bridge.py, pi_native_credentials.py) or its bridge / extension / auth / model behavior.",
-  "category": "浏览器自动化",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,8 +16,8 @@
     "url": "https://github.com/omnigent-ai/omnigent/blob/main/.claude/skills/pi-native-e2e-dev/SKILL.md",
     "path": ".claude/skills/pi-native-e2e-dev/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-19T23:20:59.026Z",
-    "stars": 7511,
+    "discovered_at": "2026-07-20T00:32:30.263Z",
+    "stars": 7512,
     "language": "Python",
     "pushed_at": "2026-07-19T13:12:22Z",
     "license": "Apache-2.0"

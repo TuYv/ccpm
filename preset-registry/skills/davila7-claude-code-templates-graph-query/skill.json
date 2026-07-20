@@ -2,7 +2,7 @@
   "id": "davila7-claude-code-templates-graph-query",
   "name": "graph-query",
   "description": "Query the code graph database to understand component relationships, dependencies, and change impact. Use when the user asks to \"find callers\", \"check dependencies\", \"what uses this\", \"show relationships\", \"find serializers\", or when reading code and needing to understand what depends on a component before modifications.",
-  "category": "设计创意",
+  "category": "开发编程",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,8 +16,8 @@
     "url": "https://github.com/davila7/claude-code-templates/blob/main/cli-tool/components/skills/ai-maestro/graph-query/SKILL.md",
     "path": "cli-tool/components/skills/ai-maestro/graph-query/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-19T23:25:05.162Z",
-    "stars": 29735,
+    "discovered_at": "2026-07-20T00:41:23.688Z",
+    "stars": 29737,
     "language": "Python",
     "pushed_at": "2026-07-19T18:00:11Z",
     "license": "MIT"

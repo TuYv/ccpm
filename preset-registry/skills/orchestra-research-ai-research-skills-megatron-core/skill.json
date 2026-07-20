@@ -2,7 +2,7 @@
   "id": "orchestra-research-ai-research-skills-megatron-core",
   "name": "training-llms-megatron",
   "description": "Trains large language models (2B-462B parameters) using NVIDIA Megatron-Core with advanced parallelism strategies. Use when training models >1B parameters, need maximum GPU efficiency (47% MFU on H100), or require tensor/pipeline/sequence/context/expert parallelism. Production-ready framework used for Nemotron, LLaMA, DeepSeek.",
-  "category": "设计创意",
+  "category": "通用其他",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,7 +16,7 @@
     "url": "https://github.com/Orchestra-Research/AI-research-SKILLs/blob/main/08-distributed-training/megatron-core/SKILL.md",
     "path": "08-distributed-training/megatron-core/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-19T23:19:20.949Z",
+    "discovered_at": "2026-07-20T00:28:47.382Z",
     "stars": 10861,
     "language": "TeX",
     "pushed_at": "2026-06-16T01:36:46Z",

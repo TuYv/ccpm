@@ -2,7 +2,7 @@
   "id": "omnigent-ai-omnigent-cli-setup-verify",
   "name": "cli-setup-verify",
   "description": "Verify the Omnigent CLI's setup/onboarding flow, terminal UI/UX, and critical user journeys in a completely isolated, reproducible loop. Drives the real `omnigent` binary through a PTY (pexpect) inside a throwaway OMNIGENT_CONFIG_HOME / OMNIGENT_DATA_DIR sandbox that never touches the user's real ~/.omnigent, captures ANSI-stripped frames for UX inspection, and proves a change is verifiable via a before→fix→after baseline diff. Load when developing or reviewing a CLI setup/onboarding/REPL/picker",
-  "category": "浏览器自动化",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,8 +16,8 @@
     "url": "https://github.com/omnigent-ai/omnigent/blob/main/.claude/skills/cli-setup-verify/SKILL.md",
     "path": ".claude/skills/cli-setup-verify/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-19T23:20:58.535Z",
-    "stars": 7511,
+    "discovered_at": "2026-07-20T00:32:29.797Z",
+    "stars": 7512,
     "language": "Python",
     "pushed_at": "2026-07-19T13:12:22Z",
     "license": "Apache-2.0"

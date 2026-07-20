@@ -2,7 +2,7 @@
   "id": "openshift-rosa-rosa-aws-context",
   "name": "ROSA AWS Context",
   "description": "Cross-check AWS-facing code and docs against official ROSA and AWS references before changing behavior.",
-  "category": "测试调试",
+  "category": "开发编程",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,7 +16,7 @@
     "url": "https://github.com/openshift/rosa/blob/master/.claude/skills/rosa-aws-context/SKILL.md",
     "path": ".claude/skills/rosa-aws-context/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-07-19T23:20:36.956Z",
+    "discovered_at": "2026-07-20T00:31:52.847Z",
     "stars": 104,
     "language": "Go",
     "pushed_at": "2026-07-19T21:27:34Z",

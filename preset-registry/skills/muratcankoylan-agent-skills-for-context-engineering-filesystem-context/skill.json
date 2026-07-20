@@ -2,7 +2,7 @@
   "id": "muratcankoylan-agent-skills-for-context-engineering-filesystem-context",
   "name": "filesystem-context",
   "description": "This skill should be used when agent work needs file-backed context: durable scratchpads, tool-output offloading, just-in-time discovery, cross-agent handoff files, filesystem memory, or cleanup policies for context stored outside the prompt.",
-  "category": "设计创意",
+  "category": "通用其他",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,8 +16,8 @@
     "url": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering/blob/main/skills/filesystem-context/SKILL.md",
     "path": "skills/filesystem-context/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-19T23:19:15.344Z",
-    "stars": 17341,
+    "discovered_at": "2026-07-20T00:28:40.075Z",
+    "stars": 17342,
     "language": "Python",
     "pushed_at": "2026-07-14T05:15:52Z",
     "license": "MIT"

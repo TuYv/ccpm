@@ -2,7 +2,7 @@
   "id": "sethgammon-citadel-research",
   "name": "research",
   "description": ">- Focused research investigations. Converts questions into structured findings with confidence levels and source citations. Single agent by default; with --parallel (or when the question decomposes into 3+ independent angles) it spawns scout agents whose findings are compressed into a unified brief. Does not make decisions; produces information that informs the next step.",
-  "category": "测试调试",
+  "category": "文档写作",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,7 +16,7 @@
     "url": "https://github.com/SethGammon/Citadel/blob/main/skills/research/SKILL.md",
     "path": "skills/research/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-19T23:21:14.541Z",
+    "discovered_at": "2026-07-20T00:32:54.390Z",
     "stars": 795,
     "language": "JavaScript",
     "pushed_at": "2026-07-16T19:52:33Z",

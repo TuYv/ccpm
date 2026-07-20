@@ -2,7 +2,7 @@
   "id": "trailofbits-skills-semgrep",
   "name": "semgrep",
   "description": ">- Run Semgrep static analysis scan on a codebase using parallel subagents. Supports two scan modes — \"run all\" (full ruleset coverage) and \"important only\" (high-confidence security vulnerabilities). Automatically detects and uses Semgrep Pro for cross-file taint analysis when available. Use when asked to scan code for vulnerabilities, run a security audit with Semgrep, find bugs, or perform static analysis. Spawns parallel workers for multi-language codebases.",
-  "category": "测试调试",
+  "category": "数据分析",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,7 +16,7 @@
     "url": "https://github.com/trailofbits/skills/blob/main/plugins/static-analysis/skills/semgrep/SKILL.md",
     "path": "plugins/static-analysis/skills/semgrep/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-19T23:18:22.605Z",
+    "discovered_at": "2026-07-20T00:27:05.143Z",
     "stars": 6181,
     "language": "Python",
     "pushed_at": "2026-07-17T16:49:57Z",

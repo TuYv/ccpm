@@ -2,7 +2,7 @@
   "id": "qwenlm-qwen-code-prepare-pr",
   "name": "prepare-pr",
   "description": "Prepare GitHub pull request title and body files from the current branch diff, especially for non-interactive CI/autofix flows that must follow the repository PR template without pushing or creating the PR.",
-  "category": "设计创意",
+  "category": "开发编程",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/QwenLM/qwen-code/blob/main/.qwen/skills/prepare-pr/SKILL.md",
     "path": ".qwen/skills/prepare-pr/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-19T23:25:58.744Z",
-    "stars": 26120,
+    "discovered_at": "2026-07-20T00:44:36.686Z",
+    "stars": 26124,
     "language": "TypeScript",
-    "pushed_at": "2026-07-19T22:58:43Z",
+    "pushed_at": "2026-07-19T23:51:36Z",
     "license": "Apache-2.0"
   }
 }

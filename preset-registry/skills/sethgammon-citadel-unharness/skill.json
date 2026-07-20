@@ -2,7 +2,7 @@
   "id": "sethgammon-citadel-unharness",
   "name": "unharness",
   "description": ">- Remove Citadel from a project. Exports valuable state (campaigns, postmortems, research, backlog, discoveries) to docs/citadel/ as human-readable markdown, then removes all harness files and hooks. The archive is detected by /do setup on re-install and offered for restore.",
-  "category": "测试调试",
+  "category": "文档写作",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,7 +16,7 @@
     "url": "https://github.com/SethGammon/Citadel/blob/main/skills/unharness/SKILL.md",
     "path": "skills/unharness/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-19T23:21:15.587Z",
+    "discovered_at": "2026-07-20T00:32:55.430Z",
     "stars": 795,
     "language": "JavaScript",
     "pushed_at": "2026-07-16T19:52:33Z",

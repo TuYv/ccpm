@@ -2,7 +2,7 @@
   "id": "tomgranot-hubspot-admin-skills-fix-lifecycle-stages",
   "name": "fix-lifecycle-stages",
   "description": "Ensure all contacts and companies have appropriate lifecycle stages. Backfills missing stages via API, fixes records stuck at disallowed stages, and creates prevention workflows to stop future gaps.",
-  "category": "开发编程",
+  "category": "自动化集成",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,7 +16,7 @@
     "url": "https://github.com/TomGranot/hubspot-admin-skills/blob/main/skills/fix-lifecycle-stages/SKILL.md",
     "path": "skills/fix-lifecycle-stages/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-19T23:28:12.202Z",
+    "discovered_at": "2026-07-20T00:49:37.070Z",
     "stars": 53,
     "language": "Python",
     "pushed_at": "2026-07-12T21:44:59Z",
