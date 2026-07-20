@@ -2,7 +2,7 @@
   "id": "omnigent-ai-omnigent-fanout",
   "name": "fanout",
   "description": "Run independent subtasks in parallel — one git worktree and one implementation sub-agent per task, each opening its own PR — then cross-review every PR. polly never merges; the human does.",
-  "category": "开发编程",
+  "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/omnigent-ai/omnigent/blob/main/examples/polly/skills/fanout/SKILL.md",
     "path": "examples/polly/skills/fanout/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-20T00:32:30.834Z",
-    "stars": 7512,
+    "discovered_at": "2026-07-20T04:13:20.389Z",
+    "stars": 7519,
     "language": "Python",
-    "pushed_at": "2026-07-19T13:12:22Z",
+    "pushed_at": "2026-07-20T04:12:07Z",
     "license": "Apache-2.0"
   }
 }

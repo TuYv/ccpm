@@ -2,7 +2,7 @@
   "id": "sepinetam-stata-mcp-rfc-impl-generator",
   "name": "rfc-impl-generator",
   "description": "Generate RFC and IMPL documents from a user-provided feature/fix description. Use when the user says something like \"I want to add a feature with codex\", \"Implement this\", \"Write an RFC for...\", or provides a short idea that needs to be formalized into the ai-driven/rfc + ai-driven/impl pipeline.",
-  "category": "开发编程",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,7 +16,7 @@
     "url": "https://github.com/SepineTam/stata-mcp/blob/master/.claude/skills/rfc-impl-generator/SKILL.md",
     "path": ".claude/skills/rfc-impl-generator/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-07-20T00:31:25.965Z",
+    "discovered_at": "2026-07-20T04:12:46.450Z",
     "stars": 225,
     "language": "Python",
     "pushed_at": "2026-07-17T00:18:07Z",

@@ -2,7 +2,7 @@
   "id": "basicmachines-co-basic-memory-memory-ingest",
   "name": "memory-ingest",
   "description": "Process unstructured external input (meeting transcripts, conversation logs, pasted documents) into structured Basic Memory entities. Extracts entities, searches for existing matches, proposes new entities with approval, creates notes with observations and relations, and captures action items.",
-  "category": "通用其他",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,8 +16,8 @@
     "url": "https://github.com/basicmachines-co/basic-memory/blob/main/skills/memory-ingest/SKILL.md",
     "path": "skills/memory-ingest/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-20T00:31:02.598Z",
-    "stars": 3461,
+    "discovered_at": "2026-07-20T04:12:38.551Z",
+    "stars": 3462,
     "language": "Python",
     "pushed_at": "2026-07-18T18:18:33Z",
     "license": "AGPL-3.0"

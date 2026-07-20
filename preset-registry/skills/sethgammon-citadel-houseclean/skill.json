@@ -2,7 +2,7 @@
   "id": "sethgammon-citadel-houseclean",
   "name": "houseclean",
   "description": ">- Cross-drive storage audit and cleanup. Surveys all drives, finds orphaned git worktrees, large AI tool caches (.ollama, .gemini, .cursor, npm, pip), and buildable artifacts (node_modules, .venv). Produces a prioritized action plan with specific migration commands. Use when disk space is low or worktrees need cleanup; do NOT use for project structure issues (use /organize instead).",
-  "category": "开发编程",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,7 +16,7 @@
     "url": "https://github.com/SethGammon/Citadel/blob/main/skills/houseclean/SKILL.md",
     "path": "skills/houseclean/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-20T00:32:52.759Z",
+    "discovered_at": "2026-07-20T04:13:33.471Z",
     "stars": 795,
     "language": "JavaScript",
     "pushed_at": "2026-07-16T19:52:33Z",

@@ -2,7 +2,7 @@
   "id": "sendmux-skills-sendmux-token-efficient-usage",
   "name": "sendmux-token-efficient-usage",
   "description": "Choose the cheapest correct Sendmux surface and call. Use whenever a Sendmux task could be done through MCP, the sendmux CLI, an SDK, or direct HTTP and the user needs low-token, low-round-trip usage: batch sends, mailbox search/count/batch reads, sync deltas, cursor pagination, ETags, conditional requests, idempotency keys, attachment file transfer, or avoiding broad mailbox/log fetches.",
-  "category": "通用其他",
+  "category": "开发编程",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,7 +16,7 @@
     "url": "https://github.com/Sendmux/skills/blob/main/skills/sendmux-token-efficient-usage/SKILL.md",
     "path": "skills/sendmux-token-efficient-usage/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-20T00:46:09.033Z",
+    "discovered_at": "2026-07-20T04:19:10.346Z",
     "stars": 53,
     "language": "JavaScript",
     "pushed_at": "2026-07-14T02:28:00Z",

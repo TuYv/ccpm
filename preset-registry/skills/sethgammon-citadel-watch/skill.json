@@ -2,7 +2,7 @@
   "id": "sethgammon-citadel-watch",
   "name": "watch",
   "description": ">- File sentinel that monitors the working directory for changes and marker comments, then auto-triggers appropriate skills. Poll-based via git diff against the last scan commit. Writes intake items for batch processing and routes marker actions through /do. Use for automatic reactions to file changes; do NOT use for one-off inspection or tasks needing human judgment per file.",
-  "category": "开发编程",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,7 +16,7 @@
     "url": "https://github.com/SethGammon/Citadel/blob/main/skills/watch/SKILL.md",
     "path": "skills/watch/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-20T00:32:55.632Z",
+    "discovered_at": "2026-07-20T04:13:36.655Z",
     "stars": 795,
     "language": "JavaScript",
     "pushed_at": "2026-07-16T19:52:33Z",

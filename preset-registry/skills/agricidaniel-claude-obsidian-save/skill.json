@@ -2,7 +2,7 @@
   "id": "agricidaniel-claude-obsidian-save",
   "name": "save",
   "description": "> Save the current conversation, answer, or insight into the Obsidian wiki vault as a structured note. Analyzes the chat, determines the right note type, creates frontmatter, files it in the correct wiki folder, and updates index, log, and hot cache. Triggers on: \"save this\", \"save that answer\", \"/save\", \"file this\", \"save to wiki\", \"save this session\", \"file this conversation\", \"keep this\", \"save this analysis\", \"add this to the wiki\".",
-  "category": "数据分析",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,8 +16,8 @@
     "url": "https://github.com/AgriciDaniel/claude-obsidian/blob/main/skills/save/SKILL.md",
     "path": "skills/save/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-20T00:41:55.623Z",
-    "stars": 9636,
+    "discovered_at": "2026-07-20T04:17:55.249Z",
+    "stars": 9644,
     "language": "Python",
     "pushed_at": "2026-05-28T00:42:43Z",
     "license": "MIT"

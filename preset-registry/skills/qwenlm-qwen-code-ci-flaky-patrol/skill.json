@@ -2,7 +2,7 @@
   "id": "qwenlm-qwen-code-ci-flaky-patrol",
   "name": "ci-flaky-patrol",
   "description": "Classify a bounded batch of stale PR CI failures and choose the safest response.",
-  "category": "通用其他",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/QwenLM/qwen-code/blob/main/.qwen/skills/ci-flaky-patrol/SKILL.md",
     "path": ".qwen/skills/ci-flaky-patrol/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-20T00:44:35.218Z",
-    "stars": 26124,
+    "discovered_at": "2026-07-20T04:18:32.037Z",
+    "stars": 26132,
     "language": "TypeScript",
-    "pushed_at": "2026-07-19T23:51:36Z",
+    "pushed_at": "2026-07-20T04:09:29Z",
     "license": "Apache-2.0"
   }
 }

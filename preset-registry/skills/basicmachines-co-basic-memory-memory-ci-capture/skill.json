@@ -2,7 +2,7 @@
   "id": "basicmachines-co-basic-memory-memory-ci-capture",
   "name": "memory-ci-capture",
   "description": "Synthesize GitHub delivery context into a concise Basic Memory project update. Use in CI after `bm ci collect` prepares a ProjectUpdateContext; return only structured AgentSynthesis JSON for `bm ci publish`.",
-  "category": "开发编程",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,8 +16,8 @@
     "url": "https://github.com/basicmachines-co/basic-memory/blob/main/skills/memory-ci-capture/SKILL.md",
     "path": "skills/memory-ci-capture/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-20T00:31:02.086Z",
-    "stars": 3461,
+    "discovered_at": "2026-07-20T04:12:38.070Z",
+    "stars": 3462,
     "language": "Python",
     "pushed_at": "2026-07-18T18:18:33Z",
     "license": "AGPL-3.0"

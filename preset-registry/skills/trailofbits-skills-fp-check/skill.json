@@ -2,7 +2,7 @@
   "id": "trailofbits-skills-fp-check",
   "name": "fp-check",
   "description": "Systematically verifies suspected security bugs to eliminate false positives, producing a TRUE POSITIVE or FALSE POSITIVE verdict with documented evidence for each. Use when asked whether a specific finding is real, exploitable, or a false positive, or to verify or validate a suspected vulnerability — not for hunting or discovering new bugs.",
-  "category": "通用其他",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,8 +16,8 @@
     "url": "https://github.com/trailofbits/skills/blob/main/plugins/fp-check/skills/fp-check/SKILL.md",
     "path": "plugins/fp-check/skills/fp-check/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-20T00:27:03.045Z",
-    "stars": 6181,
+    "discovered_at": "2026-07-20T04:10:42.102Z",
+    "stars": 6184,
     "language": "Python",
     "pushed_at": "2026-07-17T16:49:57Z",
     "license": "CC-BY-SA-4.0"

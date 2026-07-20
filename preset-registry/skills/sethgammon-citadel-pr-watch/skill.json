@@ -2,7 +2,7 @@
   "id": "sethgammon-citadel-pr-watch",
   "name": "pr-watch",
   "description": ">- Local PR watcher. Monitors CI status, automatically fixes failing checks by reading failure logs and applying targeted fixes, then optionally merges when all checks pass. Local CLI analog to Claude Code's cloud auto-fix feature.",
-  "category": "开发编程",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,7 +16,7 @@
     "url": "https://github.com/SethGammon/Citadel/blob/main/skills/pr-watch/SKILL.md",
     "path": "skills/pr-watch/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-20T00:32:53.858Z",
+    "discovered_at": "2026-07-20T04:13:34.675Z",
     "stars": 795,
     "language": "JavaScript",
     "pushed_at": "2026-07-16T19:52:33Z",

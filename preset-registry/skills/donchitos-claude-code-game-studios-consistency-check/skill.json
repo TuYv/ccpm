@@ -2,7 +2,7 @@
   "id": "donchitos-claude-code-game-studios-consistency-check",
   "name": "consistency-check",
   "description": "Scan all GDDs against the entity registry to detect cross-document inconsistencies: same entity with different stats, same item with different values, same formula with different variables. Grep-first approach — reads registry then targets only conflicting GDD sections rather than full document reads.",
-  "category": "通用其他",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,8 +16,8 @@
     "url": "https://github.com/Donchitos/Claude-Code-Game-Studios/blob/main/.claude/skills/consistency-check/SKILL.md",
     "path": ".claude/skills/consistency-check/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-20T00:34:11.732Z",
-    "stars": 23208,
+    "discovered_at": "2026-07-20T04:14:19.617Z",
+    "stars": 23216,
     "language": "Shell",
     "pushed_at": "2026-05-21T23:33:07Z",
     "license": "MIT"

@@ -2,7 +2,7 @@
   "id": "zechenzhangagi-ai-research-skills-pytorch-fsdp2",
   "name": "pytorch-fsdp2",
   "description": "Adds PyTorch FSDP2 (fully_shard) to training scripts with correct init, sharding, mixed precision/offload config, and distributed checkpointing. Use when models exceed single-GPU memory or when you need DTensor-based sharding with DeviceMesh.",
-  "category": "通用其他",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,8 +16,8 @@
     "url": "https://github.com/zechenzhangAGI/AI-research-SKILLs/blob/main/08-distributed-training/pytorch-fsdp2/SKILL.md",
     "path": "08-distributed-training/pytorch-fsdp2/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-20T00:47:15.833Z",
-    "stars": 10861,
+    "discovered_at": "2026-07-20T04:19:42.166Z",
+    "stars": 10865,
     "language": "TeX",
     "pushed_at": "2026-06-16T01:36:46Z",
     "license": "MIT"

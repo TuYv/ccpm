@@ -2,7 +2,7 @@
   "id": "sethgammon-citadel-organize",
   "name": "organize",
   "description": ">- Repository structure only: directory layout, file placement, naming conventions, and where-does-this-belong decisions. Detects the project's convention, audits files against it, and executes move plans with import-path updates. Never changes code inside files beyond the import updates a move forces; in-file restructuring is /refactor.",
-  "category": "开发编程",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,7 +16,7 @@
     "url": "https://github.com/SethGammon/Citadel/blob/main/skills/organize/SKILL.md",
     "path": "skills/organize/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-20T00:32:53.661Z",
+    "discovered_at": "2026-07-20T04:13:34.447Z",
     "stars": 795,
     "language": "JavaScript",
     "pushed_at": "2026-07-16T19:52:33Z",

@@ -2,7 +2,7 @@
   "id": "ogulcancelik-herdr-herdr-pre-release-audit",
   "name": "herdr-pre-release-audit",
   "description": "Audit herdr release readiness by comparing commits since the base release against next-release changelog and docs. Use when asked to run or apply the repo's pre-release audit, validate docs/next before release, inspect issue refs that release CI will close, or finalize release docs for herdr.",
-  "category": "通用其他",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,8 +16,8 @@
     "url": "https://github.com/ogulcancelik/herdr/blob/master/.codex/skills/herdr-pre-release-audit/SKILL.md",
     "path": ".codex/skills/herdr-pre-release-audit/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-07-20T00:32:23.112Z",
-    "stars": 18378,
+    "discovered_at": "2026-07-20T04:13:16.339Z",
+    "stars": 18444,
     "language": "Rust",
     "pushed_at": "2026-07-19T23:13:40Z",
     "license": null

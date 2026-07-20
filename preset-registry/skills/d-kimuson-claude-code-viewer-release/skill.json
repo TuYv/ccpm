@@ -2,7 +2,7 @@
   "id": "d-kimuson-claude-code-viewer-release",
   "name": "release",
   "description": "Run the claude-code-viewer release flow end-to-end. Use when the user asks to release patch, minor, major, beta, or an explicit semver; includes non-interactive release execution, GitHub Actions monitoring with gh, release note cleanup, and publishing the GitHub Release.",
-  "category": "开发编程",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,7 +16,7 @@
     "url": "https://github.com/d-kimuson/claude-code-viewer/blob/main/.agents/skills/release/SKILL.md",
     "path": ".agents/skills/release/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-20T00:44:01.292Z",
+    "discovered_at": "2026-07-20T04:18:22.919Z",
     "stars": 1253,
     "language": "TypeScript",
     "pushed_at": "2026-05-10T17:15:44Z",

@@ -2,7 +2,7 @@
   "id": "composiohq-composio-skill-maintenance",
   "name": "skill-maintenance",
   "description": "Create, update, validate, or reorganize repo-local Agent Skills under .agents/skills, including SKILL.md frontmatter, first-level references, compatibility symlinks, and validation scripts. Use only for skill-tree maintenance, skill taxonomy changes, or agent-guidance validation work.",
-  "category": "通用其他",
+  "category": "自动化集成",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,8 +16,8 @@
     "url": "https://github.com/ComposioHQ/composio/blob/next/.agents/skills/skill-maintenance/SKILL.md",
     "path": ".agents/skills/skill-maintenance/SKILL.md",
     "branch": "next",
-    "discovered_at": "2026-07-20T00:31:22.796Z",
-    "stars": 29287,
+    "discovered_at": "2026-07-20T04:12:44.900Z",
+    "stars": 29290,
     "language": "TypeScript",
     "pushed_at": "2026-07-19T10:29:58Z",
     "license": "MIT"

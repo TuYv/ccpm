@@ -2,7 +2,7 @@
   "id": "qwenlm-qwen-code-qc-helper",
   "name": "qc-helper",
   "description": "Answer any question about Qwen Code usage, features, configuration, and troubleshooting by referencing the official user documentation. Also helps users view or modify their settings.json. Invoke with `/qc-helper` followed by a question, e.g. `/qc-helper how do I configure MCP servers?` or `/qc-helper change approval mode to yolo`.",
-  "category": "开发编程",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/QwenLM/qwen-code/blob/main/packages/core/src/skills/bundled/qc-helper/SKILL.md",
     "path": "packages/core/src/skills/bundled/qc-helper/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-20T00:44:38.392Z",
-    "stars": 26124,
+    "discovered_at": "2026-07-20T04:18:34.947Z",
+    "stars": 26132,
     "language": "TypeScript",
-    "pushed_at": "2026-07-19T23:51:36Z",
+    "pushed_at": "2026-07-20T04:09:29Z",
     "license": "Apache-2.0"
   }
 }

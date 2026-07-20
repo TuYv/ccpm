@@ -2,7 +2,7 @@
   "id": "backnotprop-plannotator-pierre-guard",
   "name": "pierre-guard",
   "description": "Guard against breaking the @pierre/diffs integration in Plannotator's code review UI. Use this skill whenever modifying DiffViewer.tsx, upgrading the @pierre/diffs package, changing unsafeCSS injection, adding new props to FileDiff, or touching shadow DOM selectors or CSS variables that cross into Pierre's shadow boundary. Also trigger when someone asks \"will this break the diff viewer\", \"is this safe to change\", or when reviewing PRs that touch the review-editor package.",
-  "category": "开发编程",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,8 +16,8 @@
     "url": "https://github.com/backnotprop/plannotator/blob/main/.agents/skills/pierre-guard/SKILL.md",
     "path": ".agents/skills/pierre-guard/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-20T00:49:17.257Z",
-    "stars": 7105,
+    "discovered_at": "2026-07-20T04:20:38.120Z",
+    "stars": 7110,
     "language": "TypeScript",
     "pushed_at": "2026-07-19T20:21:47Z",
     "license": "Apache-2.0"

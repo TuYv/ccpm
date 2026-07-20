@@ -2,7 +2,7 @@
   "id": "qwenlm-qwen-code-review",
   "name": "review",
   "description": "Review changed code for correctness, security, code quality, and performance. Use when the user asks to review code changes, a PR, or specific files. Invoke with `/review`, `/review <pr-number>`, `/review <file-path>`, or `/review <pr-number> --comment` to post inline comments on the PR. Add `--effort low|medium|high` to trade depth for speed (defaults to high for PRs, medium for local changes).",
-  "category": "开发编程",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/QwenLM/qwen-code/blob/main/packages/core/src/skills/bundled/review/SKILL.md",
     "path": "packages/core/src/skills/bundled/review/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-20T00:44:38.566Z",
-    "stars": 26124,
+    "discovered_at": "2026-07-20T04:18:35.078Z",
+    "stars": 26132,
     "language": "TypeScript",
-    "pushed_at": "2026-07-19T23:51:36Z",
+    "pushed_at": "2026-07-20T04:09:29Z",
     "license": "Apache-2.0"
   }
 }

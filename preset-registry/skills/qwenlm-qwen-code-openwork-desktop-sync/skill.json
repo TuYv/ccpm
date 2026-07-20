@@ -2,7 +2,7 @@
   "id": "qwenlm-qwen-code-openwork-desktop-sync",
   "name": "openwork-desktop-sync",
   "description": "Sync qwen-code packages/desktop with modelstudioai/openwork using commit-by-commit path migration, not subtree split or tree overwrite. Use when exporting qwen-code desktop changes to OpenWork, importing OpenWork desktop changes into qwen-code, preserving target-owned overlay files such as README.md, resolving sync conflicts, or preparing sync PR branches between the two repositories.",
-  "category": "开发编程",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/QwenLM/qwen-code/blob/main/.qwen/skills/openwork-desktop-sync/SKILL.md",
     "path": ".qwen/skills/openwork-desktop-sync/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-20T00:44:36.559Z",
-    "stars": 26124,
+    "discovered_at": "2026-07-20T04:18:33.250Z",
+    "stars": 26132,
     "language": "TypeScript",
-    "pushed_at": "2026-07-19T23:51:36Z",
+    "pushed_at": "2026-07-20T04:09:29Z",
     "license": "Apache-2.0"
   }
 }

@@ -2,7 +2,7 @@
   "id": "wshobson-agents-block-no-verify-hook",
   "name": "block-no-verify-hook",
   "description": "Configure a PreToolUse hook to prevent AI agents from skipping git pre-commit hooks with --no-verify and other bypass flags. Use when setting up Claude Code projects that enforce commit quality gates.",
-  "category": "开发编程",
+  "category": "文档写作",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/wshobson/agents/blob/main/plugins/block-no-verify/skills/block-no-verify-hook/SKILL.md",
     "path": "plugins/block-no-verify/skills/block-no-verify-hook/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-20T00:32:06.804Z",
-    "stars": 38064,
+    "discovered_at": "2026-07-20T04:13:07.411Z",
+    "stars": 38068,
     "language": "Python",
-    "pushed_at": "2026-07-18T21:25:19Z",
+    "pushed_at": "2026-07-20T01:09:04Z",
     "license": "MIT"
   },
   "summary_zh": "这是一款前置拦截钩子，能阻止AI代理用--no-verify等参数跳过Git预提交检查，适合在Claude Code项目中强制把控代码提交质量的场景。"

@@ -2,7 +2,7 @@
   "id": "trailofbits-skills-dimensional-analysis",
   "name": "dimensional-analysis",
   "description": "Annotates codebases with dimensional analysis comments documenting units, dimensions, and decimal scaling. Use when someone asks to annotate units in a codebase, perform a dimensional analysis, or find vulnerabilities in a DeFi protocol, offchain code, or other blockchain-related codebase with arithmetic. Prevents dimensional mismatches and catches formula bugs early.",
-  "category": "数据分析",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,8 +16,8 @@
     "url": "https://github.com/trailofbits/skills/blob/main/plugins/dimensional-analysis/skills/dimensional-analysis/SKILL.md",
     "path": "plugins/dimensional-analysis/skills/dimensional-analysis/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-20T00:27:02.567Z",
-    "stars": 6181,
+    "discovered_at": "2026-07-20T04:10:41.587Z",
+    "stars": 6184,
     "language": "Python",
     "pushed_at": "2026-07-17T16:49:57Z",
     "license": "CC-BY-SA-4.0"

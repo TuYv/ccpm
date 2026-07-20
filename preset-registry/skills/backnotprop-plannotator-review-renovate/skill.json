@@ -2,7 +2,7 @@
   "id": "backnotprop-plannotator-review-renovate",
   "name": "review-renovate",
   "description": "Review Renovate bot PRs that update GitHub Actions dependencies. Verifies supply chain integrity by checking pinned commit SHAs against upstream tagged releases, reviews changelogs for breaking changes, and confirms compatibility with existing workflow configurations. Use when a Renovate PR updates GitHub Actions in .github/workflows/.",
-  "category": "开发编程",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,8 +16,8 @@
     "url": "https://github.com/backnotprop/plannotator/blob/main/.agents/skills/review-renovate/SKILL.md",
     "path": ".agents/skills/review-renovate/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-20T00:49:17.484Z",
-    "stars": 7105,
+    "discovered_at": "2026-07-20T04:20:38.360Z",
+    "stars": 7110,
     "language": "TypeScript",
     "pushed_at": "2026-07-19T20:21:47Z",
     "license": "Apache-2.0"

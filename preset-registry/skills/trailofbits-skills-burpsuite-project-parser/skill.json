@@ -2,7 +2,7 @@
   "id": "trailofbits-skills-burpsuite-project-parser",
   "name": "burpsuite-project-parser",
   "description": "Searches and explores Burp Suite project files (.burp) from the command line. Use when searching response headers or bodies with regex patterns, extracting security audit findings, dumping proxy history or site map data, or analyzing HTTP traffic captured in a Burp project.",
-  "category": "通用其他",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,8 +16,8 @@
     "url": "https://github.com/trailofbits/skills/blob/main/plugins/burpsuite-project-parser/skills/burpsuite-project-parser/SKILL.md",
     "path": "plugins/burpsuite-project-parser/skills/burpsuite-project-parser/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-20T00:27:01.615Z",
-    "stars": 6181,
+    "discovered_at": "2026-07-20T04:10:40.518Z",
+    "stars": 6184,
     "language": "Python",
     "pushed_at": "2026-07-17T16:49:57Z",
     "license": "CC-BY-SA-4.0"

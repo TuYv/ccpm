@@ -2,7 +2,7 @@
   "id": "trailofbits-skills-insecure-defaults",
   "name": "insecure-defaults",
   "description": "Detects fail-open insecure defaults (hardcoded secrets, weak auth, permissive security) that allow apps to run insecurely in production. Use when auditing security, reviewing config management, or analyzing environment variable handling.",
-  "category": "开发编程",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,8 +16,8 @@
     "url": "https://github.com/trailofbits/skills/blob/main/plugins/insecure-defaults/skills/insecure-defaults/SKILL.md",
     "path": "plugins/insecure-defaults/skills/insecure-defaults/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-20T00:27:03.398Z",
-    "stars": 6181,
+    "discovered_at": "2026-07-20T04:10:42.458Z",
+    "stars": 6184,
     "language": "Python",
     "pushed_at": "2026-07-17T16:49:57Z",
     "license": "CC-BY-SA-4.0"

@@ -2,7 +2,7 @@
   "id": "iamzhihuix-happy-claude-skills-mkfast-deploy",
   "name": "mkfast-deploy",
   "description": "把 mkfast-template / TanStarter 系项目部署到 Cloudflare Workers —— 自动检测实际启用的组件（D1 / R2 / Email / Better Auth / Stripe / Creem / Beehiiv / 通知 / 分析），动态裁剪部署步骤。Use PROACTIVELY whenever 用户提到部署、上线、deploy 到 Cloudflare、wrangler、pnpm deploy、推到生产、发布站点、CF Workers 上线 —— 即使用户没明确说 \"mkfast\"，只要项目含 `wrangler.jsonc` + `@tanstack/react-start` 或 `drizzle-orm` / `better-auth` 任一，就**优先使用此 skill 而非通用 wrangler / cloudflare skill**（本 skill 更懂 mkfast 的占位符、logpush 默认值陷阱、enable=false 陷阱、tailoring 策略）。SKIP when 项目明显不是 mkfast-templ",
-  "category": "数据分析",
+  "category": "文档写作",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,7 +16,7 @@
     "url": "https://github.com/iamzhihuix/happy-claude-skills/blob/main/skills/mkfast-deploy/SKILL.md",
     "path": "skills/mkfast-deploy/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-20T00:40:25.336Z",
+    "discovered_at": "2026-07-20T04:17:15.817Z",
     "stars": 304,
     "language": "TypeScript",
     "pushed_at": "2026-04-20T01:07:19Z",

@@ -2,7 +2,7 @@
   "id": "agricidaniel-claude-obsidian-wiki-cli",
   "name": "wiki-cli",
   "description": "Default vault-mutation transport for claude-obsidian v1.7+. Wraps the Obsidian CLI (Obsidian 1.12+) as the preferred way to read, write, search, and modify vault notes from Claude — no MCP server, no REST API plugin, no TLS workarounds. Falls back to direct filesystem Read/Write/Edit when the CLI is unavailable. Triggers on: wiki-cli, obsidian cli, obsidian read, obsidian write, obsidian search, daily note, obsidian create, obsidian append, vault transport, which transport, transport detection, ",
-  "category": "通用其他",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,8 +16,8 @@
     "url": "https://github.com/AgriciDaniel/claude-obsidian/blob/main/skills/wiki-cli/SKILL.md",
     "path": "skills/wiki-cli/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-20T00:41:55.842Z",
-    "stars": 9636,
+    "discovered_at": "2026-07-20T04:17:55.490Z",
+    "stars": 9644,
     "language": "Python",
     "pushed_at": "2026-05-28T00:42:43Z",
     "license": "MIT"
