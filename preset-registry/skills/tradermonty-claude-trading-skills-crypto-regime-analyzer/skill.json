@@ -1,0 +1,25 @@
+{
+  "id": "tradermonty-claude-trading-skills-crypto-regime-analyzer",
+  "name": "crypto-regime-analyzer",
+  "description": "Quantifies crypto market regime health using free, keyless public data (CoinGecko + Binance funding). Generates a 0-100 composite score across 6 components (100 = risk-on) with a posture recommendation. No API key required. Use when user asks about crypto market conditions, whether it's alt season, BTC dominance, crypto risk-on vs risk-off, funding rates, or whether crypto exposure should be increased or reduced.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tradermonty",
+  "install_path": ".claude/skills/crypto-regime-analyzer/SKILL.md",
+  "source": {
+    "repo": "tradermonty/claude-trading-skills",
+    "url": "https://github.com/tradermonty/claude-trading-skills/blob/main/skills/crypto-regime-analyzer/SKILL.md",
+    "path": "skills/crypto-regime-analyzer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-20T15:37:34.395Z",
+    "stars": 2453,
+    "language": "Python",
+    "pushed_at": "2026-07-20T14:59:27Z",
+    "license": "MIT"
+  }
+}
