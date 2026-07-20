@@ -1,7 +1,7 @@
 {
   "id": "expo-skills-expo-module",
   "name": "expo-module",
-  "description": "Framework (OSS). Guide for creating and writing Expo native modules and views using the Expo Modules API (Swift, Kotlin, TypeScript). Covers module definition DSL, native views, shared objects, config plugins, lifecycle hooks, autolinking, and type system. Use when building or modifying native modules for Expo.",
+  "description": "Framework (OSS). Guide for creating and writing Expo native modules and views using the Expo Modules API (Swift, Kotlin, TypeScript). Covers module definition DSL, native views, shared objects, config plugins, lifecycle hooks, autolinking, and type system. Use when building or modifying native modules for Expo. Not for migrating an existing Swift module from the definition DSL to the Expo Modules API 2.0 macros; use expo-migrate-module (from the expo-experiments plugin) for that.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/expo/skills/blob/main/plugins/expo/skills/expo-module/SKILL.md",
     "path": "plugins/expo/skills/expo-module/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-20T04:11:59.143Z",
+    "discovered_at": "2026-07-20T07:36:50.105Z",
     "stars": 2229,
     "language": "JavaScript",
-    "pushed_at": "2026-07-19T22:15:10Z",
+    "pushed_at": "2026-07-20T05:29:38Z",
     "license": "MIT"
   }
 }
