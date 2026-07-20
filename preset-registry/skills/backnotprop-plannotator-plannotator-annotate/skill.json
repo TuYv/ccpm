@@ -1,7 +1,7 @@
 {
   "id": "backnotprop-plannotator-plannotator-annotate",
   "name": "plannotator-annotate",
-  "description": "Open Plannotator's annotation UI for a markdown file, HTML file, URL, or folder and then respond to the returned annotations.",
+  "description": "Open Plannotator's annotation UI for a markdown file, plain-text config file (.yaml, .json, .toml, .ini, .csv, .log, …), HTML file, URL, or folder and then respond to the returned annotations.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/backnotprop/plannotator/blob/main/apps/skills/core/plannotator-annotate/SKILL.md",
     "path": "apps/skills/core/plannotator-annotate/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-20T21:48:34.903Z",
-    "stars": 7128,
+    "discovered_at": "2026-07-20T23:40:20.917Z",
+    "stars": 7130,
     "language": "TypeScript",
-    "pushed_at": "2026-07-20T19:05:10Z",
+    "pushed_at": "2026-07-20T22:33:43Z",
     "license": "Apache-2.0"
   }
 }
