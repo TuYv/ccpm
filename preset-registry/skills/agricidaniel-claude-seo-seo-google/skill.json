@@ -1,7 +1,7 @@
 {
   "id": "agricidaniel-claude-seo-seo-google",
   "name": "seo-google",
-  "description": "> Google SEO APIs: Search Console (Search Analytics, URL Inspection, Sitemaps), PageSpeed Insights v5, CrUX field data with 25-week history, Indexing API v3, and GA4 organic traffic. Provides real Google field data for Core Web Vitals, indexation status, search performance, and organic traffic trends. Use when user says \"search console\", \"GSC\", \"PageSpeed\", \"CrUX\", \"field data\", \"indexing API\", \"GA4 organic\", \"URL inspection\", \"google api setup\", \"real CWV data\", \"impressions\", \"clicks\", \"CTR\", ",
+  "description": "> Google SEO APIs: Search Console (Search Analytics, URL Inspection, Sitemaps), PageSpeed Insights v5, CrUX field data with 25-week history, Indexing API v3, and GA4 organic traffic. Provides real Google field data for Core Web Vitals, indexation status, search performance, and organic traffic trends. Use when user says \"search console\", \"GSC\", \"PageSpeed\", \"CrUX\", \"field data\", \"indexing API\", \"GA4 organic\", \"URL inspection\", or \"real CWV data\".",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/AgriciDaniel/claude-seo/blob/main/skills/seo-google/SKILL.md",
     "path": "skills/seo-google/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-20T15:32:47.256Z",
-    "stars": 11867,
+    "discovered_at": "2026-07-20T18:27:12.782Z",
+    "stars": 11877,
     "language": "Python",
-    "pushed_at": "2026-07-20T06:09:17Z",
+    "pushed_at": "2026-07-20T16:44:12Z",
     "license": "MIT"
-  },
-  "summary_zh": "这是一个整合谷歌各项SEO接口的工具包，帮你直接拉取网站性能、收录状态和搜索流量等真实数据，适合需要一站式获取和分析谷歌搜索表现的场景。"
+  }
 }

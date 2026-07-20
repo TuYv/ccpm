@@ -1,7 +1,7 @@
 {
   "id": "agricidaniel-claude-seo-seo-unlighthouse",
   "name": "seo-unlighthouse",
-  "description": "Multi-page Lighthouse audit via the MIT-licensed Unlighthouse CLI. Free-tier alternative to running PageSpeed against every URL on a site — no API quota burn, runs locally.",
+  "description": "Multi-page Lighthouse audit via the MIT-licensed Unlighthouse CLI. Free-tier alternative to running PageSpeed against every URL on a site, no API quota burn, runs locally.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/AgriciDaniel/claude-seo/blob/main/extensions/unlighthouse/skills/seo-unlighthouse/SKILL.md",
     "path": "extensions/unlighthouse/skills/seo-unlighthouse/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-20T15:32:45.517Z",
-    "stars": 11867,
+    "discovered_at": "2026-07-20T18:27:11.147Z",
+    "stars": 11877,
     "language": "Python",
-    "pushed_at": "2026-07-20T06:09:17Z",
+    "pushed_at": "2026-07-20T16:44:12Z",
     "license": "MIT"
-  },
-  "summary_zh": "基于开源 Unlighthouse 的批量网页性能检测工具，可在本地一次性扫描站内所有页面，免去逐个跑 PageSpeed 的麻烦，也不消耗 API 配额，适合做全站 SEO 体检。"
+  }
 }

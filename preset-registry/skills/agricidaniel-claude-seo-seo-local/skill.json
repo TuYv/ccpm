@@ -1,7 +1,7 @@
 {
   "id": "agricidaniel-claude-seo-seo-local",
   "name": "seo-local",
-  "description": "> Local SEO analysis covering Google Business Profile optimization, NAP consistency, citation health, review signals, local schema markup, location page quality, multi-location SEO, and industry-specific recommendations. Detects business type (brick-and-mortar, SAB, hybrid) and industry vertical (restaurant, healthcare, legal, home services, real estate, automotive). Use when user says \"local SEO\", \"Google Business Profile\", \"GBP\", \"map pack\", \"local pack\", \"citations\", \"NAP consistency\", \"local",
+  "description": "> Local SEO analysis covering Google Business Profile optimization, NAP consistency, citation health, review signals, local schema markup, location page quality, multi-location SEO, and industry-specific recommendations. Detects business type (brick-and-mortar, SAB, hybrid) and industry vertical. Use when user says \"local SEO\", \"Google Business Profile\", \"GBP\", \"map pack\", \"local pack\", \"citations\", \"NAP consistency\", \"service area\", or \"multi-location\".",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/AgriciDaniel/claude-seo/blob/main/skills/seo-local/SKILL.md",
     "path": "skills/seo-local/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-20T15:32:47.913Z",
-    "stars": 11867,
+    "discovered_at": "2026-07-20T18:27:13.243Z",
+    "stars": 11877,
     "language": "Python",
-    "pushed_at": "2026-07-20T06:09:17Z",
+    "pushed_at": "2026-07-20T16:44:12Z",
     "license": "MIT"
-  },
-  "summary_zh": "这是一款本地SEO分析工具，能帮你诊断并优化谷歌商家档案与信息一致性，并根据你的业务和行业类型提供专属排名建议，非常适合需要提升地图包和本地搜索曝光的场景。"
+  }
 }

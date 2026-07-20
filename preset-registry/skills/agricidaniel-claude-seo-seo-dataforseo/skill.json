@@ -1,8 +1,8 @@
 {
   "id": "agricidaniel-claude-seo-seo-dataforseo",
   "name": "seo-dataforseo",
-  "description": "> Live SEO data via DataForSEO MCP server. SERP analysis (Google, Bing, Yahoo, YouTube, Google Images), keyword research (volume, difficulty, intent, trends), backlink profiles, on-page analysis (Lighthouse, content parsing), competitor analysis, content analysis, business listings, AI visibility (ChatGPT scraper, LLM mention tracking), and domain analytics. Requires DataForSEO extension installed. Use when user says \"dataforseo\", \"live SERP\", \"keyword volume\", \"backlink data\", \"competitor data\"",
-  "category": "浏览器自动化",
+  "description": "> Live SEO data via DataForSEO MCP server: SERP analysis, keyword research (volume, difficulty, intent, trends), backlink profiles, on-page analysis, competitor and content analysis, business listings, AI visibility (LLM mention tracking), and domain analytics. Requires DataForSEO extension installed. Use when user says \"dataforseo\", \"live SERP\", \"keyword volume\", \"backlink data\", \"AI visibility check\", or \"real search data\".",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,10 @@
     "url": "https://github.com/AgriciDaniel/claude-seo/blob/main/skills/seo-dataforseo/SKILL.md",
     "path": "skills/seo-dataforseo/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-20T15:32:46.399Z",
-    "stars": 11867,
+    "discovered_at": "2026-07-20T18:27:12.113Z",
+    "stars": 11877,
     "language": "Python",
-    "pushed_at": "2026-07-20T06:09:17Z",
+    "pushed_at": "2026-07-20T16:44:12Z",
     "license": "MIT"
-  },
-  "summary_zh": "这是一个提供实时SEO数据的MCP服务器，能帮你快速获取搜索排名、竞品分析甚至AI可见性等全方位数据，适合网站优化和竞调时使用。"
+  }
 }
