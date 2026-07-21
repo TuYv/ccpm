@@ -1,0 +1,25 @@
+{
+  "id": "basicmachines-co-basic-memory-bm-writing",
+  "name": "bm-writing",
+  "description": "Apply the user-customizable writing standard for Basic Memory notes created or substantially revised by Codex. Use with bm-checkpoint, bm-decide, bm-remember, and other Basic Memory note-writing workflows.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "basicmachines-co",
+  "install_path": ".claude/skills/bm-writing/SKILL.md",
+  "source": {
+    "repo": "basicmachines-co/basic-memory",
+    "url": "https://github.com/basicmachines-co/basic-memory/blob/main/plugins/codex/skills/bm-writing/SKILL.md",
+    "path": "plugins/codex/skills/bm-writing/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-21T00:23:25.199Z",
+    "stars": 3466,
+    "language": "Python",
+    "pushed_at": "2026-07-21T00:22:25Z",
+    "license": "AGPL-3.0"
+  }
+}
