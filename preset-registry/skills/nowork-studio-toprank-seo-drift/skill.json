@@ -1,0 +1,25 @@
+{
+  "id": "nowork-studio-toprank-seo-drift",
+  "name": "seo-drift",
+  "description": "> SEO drift monitoring — snapshot a site's SEO state and detect regressions over time. Captures a baseline (rankings/positions, indexed page count, titles & meta descriptions, canonical/robots directives, schema presence, key on-page elements) and on later runs diffs against it to surface what changed: ranking drops, pages that fell out of the index, titles/metas that were accidentally overwritten (a CMS/redeploy classic), canonicals or noindex flipped, schema that disappeared. Use this skill wh",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "nowork-studio",
+  "install_path": ".claude/skills/seo-drift/SKILL.md",
+  "source": {
+    "repo": "nowork-studio/toprank",
+    "url": "https://github.com/nowork-studio/toprank/blob/main/seo/seo-drift/SKILL.md",
+    "path": "seo/seo-drift/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-21T06:54:33.263Z",
+    "stars": 3167,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-21T06:43:07Z",
+    "license": "MIT"
+  }
+}

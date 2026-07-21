@@ -1,0 +1,25 @@
+{
+  "id": "daymade-claude-code-skills-docx-creator",
+  "name": "docx-creator",
+  "description": ">- Produce production-grade Word (.docx) documents — especially Chinese ones — by driving the minimax-skills:minimax-docx OpenXML engine correctly. Use whenever the deliverable is a .docx file: 生成 Word 文档 / 做一份 docx / 写合同 docx / 起草协议 / 正式文书 / 公文 / offer / 劳动合同 / 把 markdown 转成 Word / Word 排版 / 中文排版 / 签字栏 / 盖章版 / 甲方乙方, or any plain \"give me a Word file\" request. This skill adds the layer minimax-docx does not ship: a verified markdown-to-docx OpenXML generator, the alignment-layering rule that sto",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/docx-creator/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-docs/docx-creator/SKILL.md",
+    "path": "daymade-docs/docx-creator/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-21T07:01:53.637Z",
+    "stars": 1284,
+    "language": "Python",
+    "pushed_at": "2026-07-21T05:25:57Z",
+    "license": "MIT"
+  }
+}
