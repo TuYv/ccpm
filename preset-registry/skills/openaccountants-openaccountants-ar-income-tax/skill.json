@@ -1,0 +1,25 @@
+{
+  "id": "openaccountants-openaccountants-ar-income-tax",
+  "name": "ar-income-tax",
+  "description": "> Use this skill whenever asked about Argentine income tax (Impuesto a las Ganancias) for self-employed individuals (autónomos / profesionales independientes). Trigger on phrases like \\\"Ganancias\\\", \\\"impuesto a las ganancias\\\", \\\"autónomo Argentina\\\", \\\"monotributo vs responsable inscripto\\\", \\\"cuarta categoría\\\", \\\"deducciones personales\\\", \\\"ganancia no imponible\\\", \\\"bienes personales\\\", \\\"DDJJ Ganancias\\\", \\\"ARCA\\\", \\\"AFIP\\\", \\\"CUIT\\\", \\\"income tax Argentina\\\", \\\"anticipos ganancias\\\", or a",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openaccountants",
+  "install_path": ".claude/skills/ar-income-tax/SKILL.md",
+  "source": {
+    "repo": "openaccountants/openaccountants",
+    "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/ar-income-tax/SKILL.md",
+    "path": "agent-skills/ar-income-tax/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-21T12:15:56.406Z",
+    "stars": 259,
+    "language": "Python",
+    "pushed_at": "2026-07-21T09:51:12Z",
+    "license": "AGPL-3.0"
+  }
+}

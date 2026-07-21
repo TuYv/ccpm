@@ -1,0 +1,25 @@
+{
+  "id": "openaccountants-openaccountants-australia-formation",
+  "name": "australia-formation",
+  "description": "> Use this skill whenever asked about forming, incorporating, or registering a company in Australia. Trigger on phrases like \\\"set up a company in Australia\\\", \\\"Pty Ltd\\\", \\\"ASIC registration\\\", \\\"Australian company formation\\\", \\\"register a business Australia\\\", \\\"ABN\\\", \\\"ACN\\\", \\\"proprietary limited\\\", \\\"sole trader Australia\\\", \\\"partnership Australia\\\", or any question about starting a business entity in Australia. Covers entity types (Pty Ltd, Ltd, sole trader, partnership, trust), regist",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openaccountants",
+  "install_path": ".claude/skills/australia-formation/SKILL.md",
+  "source": {
+    "repo": "openaccountants/openaccountants",
+    "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/australia-formation/SKILL.md",
+    "path": "agent-skills/australia-formation/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-21T12:15:58.795Z",
+    "stars": 259,
+    "language": "Python",
+    "pushed_at": "2026-07-21T09:51:12Z",
+    "license": "AGPL-3.0"
+  }
+}

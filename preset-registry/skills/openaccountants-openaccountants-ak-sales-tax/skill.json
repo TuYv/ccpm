@@ -1,0 +1,25 @@
+{
+  "id": "openaccountants-openaccountants-ak-sales-tax",
+  "name": "ak-sales-tax",
+  "description": "Use this skill whenever asked about Alaska sales and use tax. Trigger on phrases like \\\"Alaska sales tax\\\", \\\"AK sales tax\\\", \\\"Alaska local sales tax\\\", \\\"ARSSTC\\\", \\\"Alaska Remote Seller Sales Tax Commission\\\", \\\"Alaska economic nexus\\\", \\\"do I charge sales tax in Alaska\\\". ALWAYS load us-sales-tax first.",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openaccountants",
+  "install_path": ".claude/skills/ak-sales-tax/SKILL.md",
+  "source": {
+    "repo": "openaccountants/openaccountants",
+    "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/ak-sales-tax/SKILL.md",
+    "path": "agent-skills/ak-sales-tax/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-21T12:15:55.484Z",
+    "stars": 259,
+    "language": "Python",
+    "pushed_at": "2026-07-21T09:51:12Z",
+    "license": "AGPL-3.0"
+  }
+}

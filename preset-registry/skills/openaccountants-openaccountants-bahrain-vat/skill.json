@@ -1,0 +1,25 @@
+{
+  "id": "openaccountants-openaccountants-bahrain-vat",
+  "name": "bahrain-vat",
+  "description": "Use this skill whenever asked to prepare, review, or classify transactions for a Bahrain VAT return for any client. Trigger on phrases like \\\"prepare VAT return\\\", \\\"Bahrain VAT\\\", \\\"NBR return\\\", \\\"file VAT Bahrain\\\", or any request involving Bahrain VAT filing. Also trigger when classifying transactions for VAT purposes from bank statements, invoices, or other source data. This skill contains the complete Bahrain VAT classification rules, return box mappings, deductibility rules, reverse charg",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openaccountants",
+  "install_path": ".claude/skills/bahrain-vat/SKILL.md",
+  "source": {
+    "repo": "openaccountants/openaccountants",
+    "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/bahrain-vat/SKILL.md",
+    "path": "agent-skills/bahrain-vat/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-21T12:16:00.063Z",
+    "stars": 259,
+    "language": "Python",
+    "pushed_at": "2026-07-21T09:51:12Z",
+    "license": "AGPL-3.0"
+  }
+}

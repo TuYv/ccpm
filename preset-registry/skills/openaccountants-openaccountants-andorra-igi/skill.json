@@ -1,0 +1,25 @@
+{
+  "id": "openaccountants-openaccountants-andorra-igi",
+  "name": "andorra-igi",
+  "description": "Use this skill whenever asked to prepare, review, or classify transactions for an Andorran IGI (Impost General Indirecte) return for any client. Trigger on phrases like \\\"Andorra VAT\\\", \\\"Andorra IGI\\\", \\\"IGI return\\\", \\\"Andorran tax\\\", or any request involving Andorran indirect tax filing. Andorra does NOT have VAT — it has the IGI at 4.5% standard rate. Andorra is NOT in the EU and is NOT harmonized with the EU VAT Directive. ALWAYS read this skill before touching any Andorran IGI work.",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openaccountants",
+  "install_path": ".claude/skills/andorra-igi/SKILL.md",
+  "source": {
+    "repo": "openaccountants/openaccountants",
+    "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/andorra-igi/SKILL.md",
+    "path": "agent-skills/andorra-igi/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-21T12:15:56.306Z",
+    "stars": 259,
+    "language": "Python",
+    "pushed_at": "2026-07-21T09:51:12Z",
+    "license": "AGPL-3.0"
+  }
+}

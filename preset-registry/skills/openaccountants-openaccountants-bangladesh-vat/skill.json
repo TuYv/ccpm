@@ -1,0 +1,25 @@
+{
+  "id": "openaccountants-openaccountants-bangladesh-vat",
+  "name": "bangladesh-vat",
+  "description": "Use this skill whenever asked to prepare, review, or classify transactions for a Bangladesh VAT return (Mushak-9.1) or turnover tax return for any client. Trigger on phrases like \\\"prepare VAT return\\\", \\\"Bangladesh VAT\\\", \\\"Mushak\\\", \\\"BIN registration\\\", \\\"NBR filing\\\", or any request involving Bangladesh VAT. Also trigger when classifying transactions for VAT purposes from bank statements, invoices, or other source data. This skill covers standard VAT-registered (Article 10 equivalent) and tu",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openaccountants",
+  "install_path": ".claude/skills/bangladesh-vat/SKILL.md",
+  "source": {
+    "repo": "openaccountants/openaccountants",
+    "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/bangladesh-vat/SKILL.md",
+    "path": "agent-skills/bangladesh-vat/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-21T12:16:00.390Z",
+    "stars": 259,
+    "language": "Python",
+    "pushed_at": "2026-07-21T09:51:12Z",
+    "license": "AGPL-3.0"
+  }
+}

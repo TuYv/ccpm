@@ -1,0 +1,25 @@
+{
+  "id": "openaccountants-openaccountants-ar-vat-return",
+  "name": "ar-vat-return",
+  "description": "> Argentine VAT return (IVA -- Impuesto al Valor Agregado) for self-employed individuals under the regimen general. Covers the standard 21% rate, reduced 10.5%, increased 27%, monthly filing via AFIP SIAP/web, debito/credito fiscal computation, and withholding/perception regimes. Primary source: Ley 23.349 (Ley de IVA) and its regulatory decree (Decreto 692/98).",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openaccountants",
+  "install_path": ".claude/skills/ar-vat-return/SKILL.md",
+  "source": {
+    "repo": "openaccountants/openaccountants",
+    "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/ar-vat-return/SKILL.md",
+    "path": "agent-skills/ar-vat-return/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-21T12:15:56.824Z",
+    "stars": 259,
+    "language": "Python",
+    "pushed_at": "2026-07-21T09:51:12Z",
+    "license": "AGPL-3.0"
+  }
+}

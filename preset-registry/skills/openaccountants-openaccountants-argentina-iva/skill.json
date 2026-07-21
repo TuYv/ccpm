@@ -1,0 +1,25 @@
+{
+  "id": "openaccountants-openaccountants-argentina-iva",
+  "name": "argentina-iva",
+  "description": "Use this skill whenever asked to prepare, review, or classify transactions for an Argentina IVA (Impuesto al Valor Agregado) return or advise on Argentine VAT registration, filing, and AFIP compliance. Trigger on phrases like \\\"prepare IVA return\\\", \\\"Argentine VAT\\\", \\\"IVA Argentina\\\", \\\"AFIP\\\", \\\"CUIT\\\", or any Argentina IVA request. ALWAYS read this skill before touching any Argentina IVA work.",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openaccountants",
+  "install_path": ".claude/skills/argentina-iva/SKILL.md",
+  "source": {
+    "repo": "openaccountants/openaccountants",
+    "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/argentina-iva/SKILL.md",
+    "path": "agent-skills/argentina-iva/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-21T12:15:56.948Z",
+    "stars": 259,
+    "language": "Python",
+    "pushed_at": "2026-07-21T09:51:12Z",
+    "license": "AGPL-3.0"
+  }
+}

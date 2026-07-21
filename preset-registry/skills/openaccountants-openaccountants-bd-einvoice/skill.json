@@ -1,0 +1,25 @@
+{
+  "id": "openaccountants-openaccountants-bd-einvoice",
+  "name": "bd-einvoice",
+  "description": "> Use this skill whenever asked about electronic invoicing, fiscal devices, and digital VAT compliance in Bangladesh. Trigger on phrases like \\\"Bangladesh e-invoicing\\\", \\\"EFD SDC NBR\\\", \\\"electronic fiscal device Bangladesh\\\", \\\"Mushak invoice\\\", \\\"VAT software Bangladesh\\\". Covers the NBR's electronic fiscal devices (EFD/SDC) for VAT, the Mushak invoice/return forms, and what small/non-VAT businesses must issue. ALWAYS read before any Bangladesh e-invoicing work.",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openaccountants",
+  "install_path": ".claude/skills/bd-einvoice/SKILL.md",
+  "source": {
+    "repo": "openaccountants/openaccountants",
+    "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/bd-einvoice/SKILL.md",
+    "path": "agent-skills/bd-einvoice/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-21T12:16:01.038Z",
+    "stars": 259,
+    "language": "Python",
+    "pushed_at": "2026-07-21T09:51:12Z",
+    "license": "AGPL-3.0"
+  }
+}

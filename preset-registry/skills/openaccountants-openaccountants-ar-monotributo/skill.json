@@ -1,0 +1,25 @@
+{
+  "id": "openaccountants-openaccountants-ar-monotributo",
+  "name": "ar-monotributo",
+  "description": "> Use this skill whenever asked about the Argentine Monotributo simplified tax regime. Trigger on phrases like \\\"monotributo\\\", \\\"regimen simplificado\\\", \\\"AFIP\\\", \\\"DAS monotributo\\\", \\\"categorias monotributo\\\", \\\"impuesto integrado\\\", \\\"monotributista\\\", or any question about the unified monthly payment, category thresholds, or obligations for small self-employed individuals in Argentina. Covers the unified monthly payment (impuesto integrado + aportes jubilatorios + obra social), revenue-base",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openaccountants",
+  "install_path": ".claude/skills/ar-monotributo/SKILL.md",
+  "source": {
+    "repo": "openaccountants/openaccountants",
+    "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/ar-monotributo/SKILL.md",
+    "path": "agent-skills/ar-monotributo/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-21T12:15:56.514Z",
+    "stars": 259,
+    "language": "Python",
+    "pushed_at": "2026-07-21T09:51:12Z",
+    "license": "AGPL-3.0"
+  }
+}

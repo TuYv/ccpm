@@ -1,0 +1,25 @@
+{
+  "id": "openaccountants-openaccountants-bd-bookkeeping",
+  "name": "bd-bookkeeping",
+  "description": "> Use this skill whenever asked about record-keeping and bookkeeping for self-employed people and small businesses in Bangladesh. Trigger on phrases like \\\"Bangladesh bookkeeping\\\", \\\"records for NBR\\\", \\\"invoice requirements Bangladesh\\\", \\\"freelancer records Bangladesh\\\", \\\"what records to keep NBR\\\". Covers the records a business individual must keep, foreign-remittance evidence for IT exporters, invoicing, and retention. ALWAYS read before any Bangladesh bookkeeping work.",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openaccountants",
+  "install_path": ".claude/skills/bd-bookkeeping/SKILL.md",
+  "source": {
+    "repo": "openaccountants/openaccountants",
+    "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/bd-bookkeeping/SKILL.md",
+    "path": "agent-skills/bd-bookkeeping/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-21T12:16:00.834Z",
+    "stars": 259,
+    "language": "Python",
+    "pushed_at": "2026-07-21T09:51:12Z",
+    "license": "AGPL-3.0"
+  }
+}

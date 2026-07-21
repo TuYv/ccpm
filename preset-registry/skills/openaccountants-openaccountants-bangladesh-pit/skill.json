@@ -1,0 +1,25 @@
+{
+  "id": "openaccountants-openaccountants-bangladesh-pit",
+  "name": "bangladesh-pit",
+  "description": "Use this skill whenever asked to prepare, review, or classify transactions for Bangladesh Personal Income Tax, annual return filing with NBR, or advise on Bangladeshi income tax slabs, exemptions, and investment rebates. Trigger on phrases like \\\"আয়কর\\\", \\\"income tax Bangladesh\\\", \\\"NBR\\\", \\\"TIN\\\", \\\"salary tax BD\\\", or any Bangladesh personal tax request. ALWAYS read this skill before touching any Bangladesh PIT work.",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openaccountants",
+  "install_path": ".claude/skills/bangladesh-pit/SKILL.md",
+  "source": {
+    "repo": "openaccountants/openaccountants",
+    "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/bangladesh-pit/SKILL.md",
+    "path": "agent-skills/bangladesh-pit/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-21T12:16:00.175Z",
+    "stars": 259,
+    "language": "Python",
+    "pushed_at": "2026-07-21T09:51:12Z",
+    "license": "AGPL-3.0"
+  }
+}

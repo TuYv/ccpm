@@ -1,0 +1,25 @@
+{
+  "id": "openaccountants-openaccountants-amazon-seller-integration",
+  "name": "amazon-seller-integration",
+  "description": "> Integration skill for Amazon Seller Central settlement reports and date range reports. Activate when the user uploads an Amazon settlement report, Amazon seller CSV, or mentions Amazon Seller Central, FBA, or Amazon payouts.",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openaccountants",
+  "install_path": ".claude/skills/amazon-seller-integration/SKILL.md",
+  "source": {
+    "repo": "openaccountants/openaccountants",
+    "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/amazon-seller-integration/SKILL.md",
+    "path": "agent-skills/amazon-seller-integration/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-21T12:15:56.088Z",
+    "stars": 259,
+    "language": "Python",
+    "pushed_at": "2026-07-21T09:51:12Z",
+    "license": "AGPL-3.0"
+  }
+}

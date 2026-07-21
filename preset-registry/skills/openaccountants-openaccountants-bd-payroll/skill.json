@@ -1,0 +1,25 @@
+{
+  "id": "openaccountants-openaccountants-bd-payroll",
+  "name": "bd-payroll",
+  "description": "> Use this skill whenever asked about Bangladesh payroll and salary-tax withholding for employers. Trigger on phrases like \\\"Bangladesh payroll\\\", \\\"salary TDS Bangladesh\\\", \\\"deduct tax from salary NBR\\\", \\\"provident fund gratuity Bangladesh\\\", \\\"payroll Bangladesh freelancer hiring staff\\\". Covers salary income-tax withholding under the slabs, provident fund/gratuity, the (limited) social-security position, and monthly TDS deposit/returns. ALWAYS read before any Bangladesh payroll work.",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openaccountants",
+  "install_path": ".claude/skills/bd-payroll/SKILL.md",
+  "source": {
+    "repo": "openaccountants/openaccountants",
+    "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/bd-payroll/SKILL.md",
+    "path": "agent-skills/bd-payroll/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-21T12:16:01.544Z",
+    "stars": 259,
+    "language": "Python",
+    "pushed_at": "2026-07-21T09:51:12Z",
+    "license": "AGPL-3.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "openaccountants-openaccountants-ab-individual-return",
+  "name": "ab-individual-return",
+  "description": "> Use this skill whenever asked about Alberta provincial individual income tax. Trigger on phrases like \\\"Alberta tax\\\", \\\"Alberta T1\\\", \\\"AB provincial tax\\\", \\\"Alberta flat tax\\\", \\\"Alberta credits\\\", \\\"Alberta personal amount\\\", \\\"no PST Alberta\\\", or any question about computing Alberta provincial tax for an individual return. This skill covers Alberta's 10% flat personal income tax rate, provincial credits, interaction with federal T1, and Alberta-specific deductions. ALWAYS read this skill",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openaccountants",
+  "install_path": ".claude/skills/ab-individual-return/SKILL.md",
+  "source": {
+    "repo": "openaccountants/openaccountants",
+    "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/ab-individual-return/SKILL.md",
+    "path": "agent-skills/ab-individual-return/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-21T12:15:55.268Z",
+    "stars": 259,
+    "language": "Python",
+    "pushed_at": "2026-07-21T09:51:12Z",
+    "license": "AGPL-3.0"
+  }
+}

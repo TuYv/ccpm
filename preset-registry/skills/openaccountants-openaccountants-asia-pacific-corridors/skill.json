@@ -1,0 +1,25 @@
+{
+  "id": "openaccountants-openaccountants-asia-pacific-corridors",
+  "name": "asia-pacific-corridors",
+  "description": "OpenAccountants tax and accounting reference for INTL: asia pacific corridors. Use for cross-border questions in INTL (tax year ).",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openaccountants",
+  "install_path": ".claude/skills/asia-pacific-corridors/SKILL.md",
+  "source": {
+    "repo": "openaccountants/openaccountants",
+    "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/asia-pacific-corridors/SKILL.md",
+    "path": "agent-skills/asia-pacific-corridors/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-21T12:15:57.258Z",
+    "stars": 259,
+    "language": "Python",
+    "pushed_at": "2026-07-21T09:51:12Z",
+    "license": "AGPL-3.0"
+  }
+}

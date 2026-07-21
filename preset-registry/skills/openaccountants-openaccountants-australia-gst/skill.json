@@ -1,0 +1,25 @@
+{
+  "id": "openaccountants-openaccountants-australia-gst",
+  "name": "australia-gst",
+  "description": "Use this skill whenever asked to prepare, review, or classify transactions for an Australian GST return (Business Activity Statement / BAS) for any client. Trigger on phrases like \\\"prepare BAS\\\", \\\"do the GST\\\", \\\"fill in BAS\\\", \\\"create the return\\\", \\\"GST return\\\", \\\"Activity Statement\\\", or any request involving Australian GST filing. Also trigger when classifying transactions for GST purposes from bank statements, invoices, or other source data. This skill covers Australia only and covers b",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openaccountants",
+  "install_path": ".claude/skills/australia-gst/SKILL.md",
+  "source": {
+    "repo": "openaccountants/openaccountants",
+    "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/australia-gst/SKILL.md",
+    "path": "agent-skills/australia-gst/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-21T12:15:58.919Z",
+    "stars": 259,
+    "language": "Python",
+    "pushed_at": "2026-07-21T09:51:12Z",
+    "license": "AGPL-3.0"
+  }
+}

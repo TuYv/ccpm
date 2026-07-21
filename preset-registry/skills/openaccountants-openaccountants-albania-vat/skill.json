@@ -1,0 +1,25 @@
+{
+  "id": "openaccountants-openaccountants-albania-vat",
+  "name": "albania-vat",
+  "description": "Use this skill whenever asked to prepare, review, or classify transactions for an Albanian VAT (TVSH) return for any client. Trigger on phrases like \\\"Albania VAT\\\", \\\"Albanian TVSH\\\", \\\"TVSH return\\\", \\\"DPT filing\\\", \\\"Albanian tax\\\", or any request involving Albanian VAT filing. Also trigger when classifying transactions for VAT purposes from bank statements, invoices, or other source data. This skill covers Albania only — standard TVSH payers filing monthly returns. Small business exemptions,",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openaccountants",
+  "install_path": ".claude/skills/albania-vat/SKILL.md",
+  "source": {
+    "repo": "openaccountants/openaccountants",
+    "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/albania-vat/SKILL.md",
+    "path": "agent-skills/albania-vat/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-21T12:15:55.869Z",
+    "stars": 259,
+    "language": "Python",
+    "pushed_at": "2026-07-21T09:51:12Z",
+    "license": "AGPL-3.0"
+  }
+}

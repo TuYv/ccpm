@@ -1,0 +1,25 @@
+{
+  "id": "openaccountants-openaccountants-barbados-vat",
+  "name": "barbados-vat",
+  "description": "Use this skill whenever asked to prepare, review, or classify transactions for a Barbados VAT return for any client. Trigger on phrases like \\\"Barbados VAT\\\", \\\"BRA filing\\\", \\\"Barbados Revenue Authority\\\", or any request involving Barbados VAT. MUST be loaded alongside vat-workflow-base v0.1 or later. ALWAYS read this skill before touching any Barbados VAT work.",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openaccountants",
+  "install_path": ".claude/skills/barbados-vat/SKILL.md",
+  "source": {
+    "repo": "openaccountants/openaccountants",
+    "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/barbados-vat/SKILL.md",
+    "path": "agent-skills/barbados-vat/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-21T12:16:00.594Z",
+    "stars": 259,
+    "language": "Python",
+    "pushed_at": "2026-07-21T09:51:12Z",
+    "license": "AGPL-3.0"
+  }
+}

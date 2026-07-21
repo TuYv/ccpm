@@ -1,0 +1,25 @@
+{
+  "id": "openaccountants-openaccountants-al-income-tax",
+  "name": "al-income-tax",
+  "description": "Use this skill whenever asked about Alabama individual income tax for self-employed individuals or sole proprietors — filing Form 40, AL estimated tax (Form 40-ES), Alabama tax brackets, Alabama deductions, federal income tax deduction on AL return, or any query involving Alabama state income tax compliance. Trigger on phrases like \\\"Alabama income tax\\\", \\\"AL income tax\\\", \\\"Form 40\\\", \\\"Alabama estimated tax\\\", \\\"Alabama self-employed tax\\\", \\\"ADOR income tax\\\", or \\\"Code of Ala. §40-18\\\".",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openaccountants",
+  "install_path": ".claude/skills/al-income-tax/SKILL.md",
+  "source": {
+    "repo": "openaccountants/openaccountants",
+    "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/al-income-tax/SKILL.md",
+    "path": "agent-skills/al-income-tax/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-21T12:15:55.616Z",
+    "stars": 259,
+    "language": "Python",
+    "pushed_at": "2026-07-21T09:51:12Z",
+    "license": "AGPL-3.0"
+  }
+}

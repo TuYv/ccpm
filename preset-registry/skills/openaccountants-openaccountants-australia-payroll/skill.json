@@ -1,0 +1,25 @@
+{
+  "id": "openaccountants-openaccountants-australia-payroll",
+  "name": "australia-payroll",
+  "description": "> Use this skill whenever asked about Australian payroll, PAYG withholding, superannuation guarantee, Single Touch Payroll, or employer obligations in Australia. Trigger on phrases like \\\"PAYG\\\", \\\"pay as you go withholding\\\", \\\"superannuation\\\", \\\"super guarantee\\\", \\\"STP\\\", \\\"Single Touch Payroll\\\", \\\"STP Phase 2\\\", \\\"Medicare levy\\\", \\\"tax file number\\\", \\\"TFN declaration\\\", \\\"HECS-HELP\\\", \\\"STSL\\\", \\\"Fair Work\\\", \\\"NES\\\", \\\"national employment standards\\\", \\\"modern award\\\", \\\"payslip Austral",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openaccountants",
+  "install_path": ".claude/skills/australia-payroll/SKILL.md",
+  "source": {
+    "repo": "openaccountants/openaccountants",
+    "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/australia-payroll/SKILL.md",
+    "path": "agent-skills/australia-payroll/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-21T12:15:59.047Z",
+    "stars": 259,
+    "language": "Python",
+    "pushed_at": "2026-07-21T09:51:12Z",
+    "license": "AGPL-3.0"
+  }
+}

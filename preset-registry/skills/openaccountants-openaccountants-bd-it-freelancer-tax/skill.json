@@ -1,0 +1,25 @@
+{
+  "id": "openaccountants-openaccountants-bd-it-freelancer-tax",
+  "name": "bd-it-freelancer-tax",
+  "description": "> Use this skill whenever asked how Bangladeshi freelancers and IT/ITES exporters are taxed on income from foreign clients. Trigger on phrases like \\\"Bangladesh freelancer tax\\\", \\\"IT export tax Bangladesh\\\", \\\"ITES tax exemption Bangladesh\\\", \\\"Upwork Fiverr tax Bangladesh\\\", \\\"freelancing income tax NBR\\\", \\\"software export Bangladesh tax\\\". Explains that the long-standing IT/ITES tax exemption EXPIRED on 30 June 2024 and how freelance/IT-export income is taxed now, including the remittance/ca",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openaccountants",
+  "install_path": ".claude/skills/bd-it-freelancer-tax/SKILL.md",
+  "source": {
+    "repo": "openaccountants/openaccountants",
+    "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/bd-it-freelancer-tax/SKILL.md",
+    "path": "agent-skills/bd-it-freelancer-tax/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-21T12:16:01.443Z",
+    "stars": 259,
+    "language": "Python",
+    "pushed_at": "2026-07-21T09:51:12Z",
+    "license": "AGPL-3.0"
+  }
+}

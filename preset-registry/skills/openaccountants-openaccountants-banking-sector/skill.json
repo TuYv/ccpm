@@ -1,0 +1,25 @@
+{
+  "id": "openaccountants-openaccountants-banking-sector",
+  "name": "banking-sector",
+  "description": "> Use this skill whenever a bank, neobank, payment institution, e-money institution, or regulated financial holding company asks about accounting, regulatory capital, or tax issues specific to financial institutions. Trigger on phrases like \\\"bank tax\\\", \\\"bank levy\\\", \\\"IRB approach\\\", \\\"standardised approach\\\", \\\"IFRS 9 ECL\\\", \\\"FRTB\\\", \\\"Basel III\\\", \\\"Basel IV\\\", \\\"CRR/CRD\\\", \\\"Prudential regulation\\\", \\\"PRA\\\", \\\"ECB SSM\\\", \\\"FED CCAR\\\", \\\"OSFI\\\", \\\"expected credit loss\\\", \\\"ICAAP\\\", \\\"ILAAP",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openaccountants",
+  "install_path": ".claude/skills/banking-sector/SKILL.md",
+  "source": {
+    "repo": "openaccountants/openaccountants",
+    "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/banking-sector/SKILL.md",
+    "path": "agent-skills/banking-sector/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-21T12:16:00.490Z",
+    "stars": 259,
+    "language": "Python",
+    "pushed_at": "2026-07-21T09:51:12Z",
+    "license": "AGPL-3.0"
+  }
+}

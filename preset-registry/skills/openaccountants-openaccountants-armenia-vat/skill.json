@@ -1,0 +1,25 @@
+{
+  "id": "openaccountants-openaccountants-armenia-vat",
+  "name": "armenia-vat",
+  "description": "Use this skill whenever asked to prepare, review, or classify transactions for an Armenian VAT (AVH) return for any client. Trigger on phrases like \\\"Armenia VAT\\\", \\\"Armenian VAT\\\", \\\"AVH return\\\", \\\"SRC filing\\\", or any request involving Armenian VAT filing. This skill covers standard VAT payers filing monthly returns. Turnover tax, micro-enterprise, and IT sector special regimes are in the refusal catalogue. MUST be loaded alongside vat-workflow-base v0.1 or later. ALWAYS read this skill befo",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openaccountants",
+  "install_path": ".claude/skills/armenia-vat/SKILL.md",
+  "source": {
+    "repo": "openaccountants/openaccountants",
+    "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/armenia-vat/SKILL.md",
+    "path": "agent-skills/armenia-vat/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-21T12:15:57.161Z",
+    "stars": 259,
+    "language": "Python",
+    "pushed_at": "2026-07-21T09:51:12Z",
+    "license": "AGPL-3.0"
+  }
+}

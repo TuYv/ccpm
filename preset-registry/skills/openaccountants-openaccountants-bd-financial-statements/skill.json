@@ -1,0 +1,25 @@
+{
+  "id": "openaccountants-openaccountants-bd-financial-statements",
+  "name": "bd-financial-statements",
+  "description": "> Use this skill whenever asked about financial statements and accounting reporting in Bangladesh. Trigger on phrases like \\\"Bangladesh financial statements\\\", \\\"do I file accounts as sole proprietor Bangladesh\\\", \\\"RJSC financial statements\\\", \\\"IFRS Bangladesh\\\", \\\"BFRS\\\", \\\"audit requirement Bangladesh\\\". Explains that sole proprietors file accounts with the tax return rather than statutory statements, and what companies must prepare under BFRS/IFRS and file with RJSC. ALWAYS read before any ",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openaccountants",
+  "install_path": ".claude/skills/bd-financial-statements/SKILL.md",
+  "source": {
+    "repo": "openaccountants/openaccountants",
+    "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/bd-financial-statements/SKILL.md",
+    "path": "agent-skills/bd-financial-statements/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-21T12:16:01.143Z",
+    "stars": 259,
+    "language": "Python",
+    "pushed_at": "2026-07-21T09:51:12Z",
+    "license": "AGPL-3.0"
+  }
+}

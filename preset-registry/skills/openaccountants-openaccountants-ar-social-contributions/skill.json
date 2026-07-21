@@ -1,0 +1,25 @@
+{
+  "id": "openaccountants-openaccountants-ar-social-contributions",
+  "name": "ar-social-contributions",
+  "description": "Use this skill whenever asked about Argentine self-employed social contributions (aportes autónomos). Trigger on phrases like \\\"aportes autónomos\\\", \\\"categoría autónomos\\\", \\\"jubilación autónomos\\\", \\\"PAMI autónomos\\\", \\\"cuánto pago de autónomo\\\", \\\"contribuciones SIPA\\\", or any question about Argentine social security obligations for self-employed individuals. Covers Categories I-V, retirement (SIPA), PAMI (INSSJP), and obra social contributions, monthly fixed amounts, VEP payment, and edge ca",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openaccountants",
+  "install_path": ".claude/skills/ar-social-contributions/SKILL.md",
+  "source": {
+    "repo": "openaccountants/openaccountants",
+    "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/ar-social-contributions/SKILL.md",
+    "path": "agent-skills/ar-social-contributions/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-21T12:15:56.727Z",
+    "stars": 259,
+    "language": "Python",
+    "pushed_at": "2026-07-21T09:51:12Z",
+    "license": "AGPL-3.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "openaccountants-openaccountants-bc-individual-return",
+  "name": "bc-individual-return",
+  "description": "> Use this skill whenever asked about British Columbia provincial income tax for a self-employed sole proprietor. Trigger on phrases like \\\"BC tax\\\", \\\"BC428\\\", \\\"British Columbia income tax\\\", \\\"BC tax brackets\\\", \\\"BC tax reduction\\\", \\\"BC climate action tax credit\\\", \\\"provincial tax BC\\\", or any question about computing BC provincial tax for a self-employed individual. Covers BC tax brackets, personal credits, BC tax reduction, climate action tax credit, and BC-specific rules. ALWAYS read th",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openaccountants",
+  "install_path": ".claude/skills/bc-individual-return/SKILL.md",
+  "source": {
+    "repo": "openaccountants/openaccountants",
+    "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/bc-individual-return/SKILL.md",
+    "path": "agent-skills/bc-individual-return/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-21T12:16:00.713Z",
+    "stars": 259,
+    "language": "Python",
+    "pushed_at": "2026-07-21T09:51:12Z",
+    "license": "AGPL-3.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "openaccountants-openaccountants-bd-social-contributions",
+  "name": "bd-social-contributions",
+  "description": "> Use this skill whenever asked about social security, pension, or retirement contributions for workers and the self-employed in Bangladesh. Trigger on phrases like \\\"Bangladesh pension\\\", \\\"Universal Pension Scheme\\\", \\\"Sarbojanin Pension\\\", \\\"Surokkha scheme\\\", \\\"provident fund Bangladesh\\\", \\\"do freelancers pay social security Bangladesh\\\". Covers the voluntary Universal Pension Scheme (incl. the self-employed Surokkha scheme), employee provident fund/gratuity, and the (limited) mandatory pos",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openaccountants",
+  "install_path": ".claude/skills/bd-social-contributions/SKILL.md",
+  "source": {
+    "repo": "openaccountants/openaccountants",
+    "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/bd-social-contributions/SKILL.md",
+    "path": "agent-skills/bd-social-contributions/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-21T12:16:01.751Z",
+    "stars": 259,
+    "language": "Python",
+    "pushed_at": "2026-07-21T09:51:12Z",
+    "license": "AGPL-3.0"
+  }
+}

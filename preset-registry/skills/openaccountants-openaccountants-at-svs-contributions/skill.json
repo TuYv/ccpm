@@ -1,0 +1,25 @@
+{
+  "id": "openaccountants-openaccountants-at-svs-contributions",
+  "name": "at-svs-contributions",
+  "description": "Use this skill whenever asked about Austrian SVS (Sozialversicherungsanstalt der Selbständigen) social insurance contributions for self-employed individuals. Trigger on phrases like \\\"SVS contributions\\\", \\\"Austrian social insurance\\\", \\\"GSVG\\\", \\\"self-employed Austria contributions\\\", \\\"Pensionsversicherung self-employed\\\", \\\"SVS Vorschreibung\\\", or any question about social insurance obligations for a self-employed client in Austria. Covers pension (18.5%), health (6.8%), accident (flat monthl",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openaccountants",
+  "install_path": ".claude/skills/at-svs-contributions/SKILL.md",
+  "source": {
+    "repo": "openaccountants/openaccountants",
+    "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/at-svs-contributions/SKILL.md",
+    "path": "agent-skills/at-svs-contributions/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-21T12:15:57.471Z",
+    "stars": 259,
+    "language": "Python",
+    "pushed_at": "2026-07-21T09:51:12Z",
+    "license": "AGPL-3.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "openaccountants-openaccountants-au-rental-property",
+  "name": "au-rental-property",
+  "description": "> Use this skill whenever asked about Australian rental property income and deductions. Trigger on phrases like \\\"rental income Australia\\\", \\\"negative gearing\\\", \\\"rental deductions\\\", \\\"investment property tax\\\", \\\"Division 40\\\", \\\"Division 43\\\", \\\"capital works deduction\\\", \\\"depreciation schedule\\\", \\\"rental property CGT\\\", \\\"rental withholding\\\", \\\"body corporate fees\\\", \\\"strata levy deduction\\\", \\\"repairs vs improvements\\\", \\\"TR 97/23\\\", or any question about completing the rental propert",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openaccountants",
+  "install_path": ".claude/skills/au-rental-property/SKILL.md",
+  "source": {
+    "repo": "openaccountants/openaccountants",
+    "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/au-rental-property/SKILL.md",
+    "path": "agent-skills/au-rental-property/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-21T12:15:58.113Z",
+    "stars": 259,
+    "language": "Python",
+    "pushed_at": "2026-07-21T09:51:12Z",
+    "license": "AGPL-3.0"
+  }
+}

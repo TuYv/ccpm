@@ -1,0 +1,25 @@
+{
+  "id": "openaccountants-openaccountants-az-income-tax",
+  "name": "az-income-tax",
+  "description": "Use this skill whenever asked about Arizona individual income tax for self-employed individuals or sole proprietors — filing Form 140, AZ estimated tax (Form 140ES), Arizona flat tax rate, Arizona standard deduction, or any query involving Arizona state income tax compliance. Trigger on phrases like \\\"Arizona income tax\\\", \\\"AZ income tax\\\", \\\"Form 140\\\", \\\"Arizona estimated tax\\\", \\\"Arizona self-employed tax\\\", \\\"AZDOR income tax\\\", \\\"Arizona flat tax\\\", or \\\"ARS §43\\\".",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openaccountants",
+  "install_path": ".claude/skills/az-income-tax/SKILL.md",
+  "source": {
+    "repo": "openaccountants/openaccountants",
+    "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/az-income-tax/SKILL.md",
+    "path": "agent-skills/az-income-tax/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-21T12:15:59.597Z",
+    "stars": 259,
+    "language": "Python",
+    "pushed_at": "2026-07-21T09:51:12Z",
+    "license": "AGPL-3.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "openaccountants-openaccountants-austria-vat-return",
+  "name": "austria-vat-return",
+  "description": "Use this skill whenever asked to prepare, review, or classify transactions for an Austrian VAT return (Umsatzsteuervoranmeldung / UVA) or annual declaration (Umsatzsteuererklärung / U1) for a self-employed individual or small business in Austria. Trigger on phrases like \\\"prepare UVA\\\", \\\"Austrian VAT return\\\", \\\"Umsatzsteuer\\\", \\\"classify transactions for Austrian VAT\\\", or any request involving Austria VAT filing. This skill covers Austria only, standard regime (Regelbesteuerung). Kleinunterne",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openaccountants",
+  "install_path": ".claude/skills/austria-vat-return/SKILL.md",
+  "source": {
+    "repo": "openaccountants/openaccountants",
+    "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/austria-vat-return/SKILL.md",
+    "path": "agent-skills/austria-vat-return/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-21T12:15:59.492Z",
+    "stars": 259,
+    "language": "Python",
+    "pushed_at": "2026-07-21T09:51:12Z",
+    "license": "AGPL-3.0"
+  }
+}

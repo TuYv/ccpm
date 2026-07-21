@@ -1,0 +1,25 @@
+{
+  "id": "openaccountants-openaccountants-az-sales-tax",
+  "name": "az-sales-tax",
+  "description": "Use this skill whenever asked about Arizona sales tax, Arizona Transaction Privilege Tax (TPT), Arizona use tax, Arizona tax nexus, or any request involving Arizona state-level consumption taxes. Trigger on phrases like \\\"Arizona sales tax\\\", \\\"AZ sales tax\\\", \\\"TPT\\\", \\\"Transaction Privilege Tax\\\", \\\"Arizona DOR\\\", or any request involving Arizona TPT compliance. CRITICAL -- Arizona has a Transaction Privilege Tax on the SELLER, not a traditional sales tax. ALWAYS load us-sales-tax first.",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openaccountants",
+  "install_path": ".claude/skills/az-sales-tax/SKILL.md",
+  "source": {
+    "repo": "openaccountants/openaccountants",
+    "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/az-sales-tax/SKILL.md",
+    "path": "agent-skills/az-sales-tax/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-21T12:15:59.716Z",
+    "stars": 259,
+    "language": "Python",
+    "pushed_at": "2026-07-21T09:51:12Z",
+    "license": "AGPL-3.0"
+  }
+}

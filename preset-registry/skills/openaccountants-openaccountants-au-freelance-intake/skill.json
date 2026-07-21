@@ -1,0 +1,25 @@
+{
+  "id": "openaccountants-openaccountants-au-freelance-intake",
+  "name": "au-freelance-intake",
+  "description": "ALWAYS USE THIS SKILL when a user asks for help preparing their Australian tax returns AND mentions freelancing, self-employment, contracting, sole trading, or ABN-based work. Trigger on phrases like \\\"help me do my taxes\\\", \\\"prepare my ITR\\\", \\\"I'm a sole trader in Australia\\\", \\\"I'm a freelancer in Australia\\\", \\\"do my taxes as a contractor\\\", \\\"prepare my BAS and income tax\\\", or any similar phrasing where the user is an Australian-resident self-employed individual needing tax return prepara",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openaccountants",
+  "install_path": ".claude/skills/au-freelance-intake/SKILL.md",
+  "source": {
+    "repo": "openaccountants/openaccountants",
+    "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/au-freelance-intake/SKILL.md",
+    "path": "agent-skills/au-freelance-intake/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-21T12:15:57.674Z",
+    "stars": 259,
+    "language": "Python",
+    "pushed_at": "2026-07-21T09:51:12Z",
+    "license": "AGPL-3.0"
+  }
+}

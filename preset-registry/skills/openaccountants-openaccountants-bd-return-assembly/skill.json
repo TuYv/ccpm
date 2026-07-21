@@ -1,0 +1,25 @@
+{
+  "id": "openaccountants-openaccountants-bd-return-assembly",
+  "name": "bd-return-assembly",
+  "description": "> Final orchestrator that assembles the complete Bangladesh filing package for a Bangladesh-resident self-employed person. Trigger on phrases like \\\"assemble my Bangladesh return\\\", \\\"what do I file NBR\\\", \\\"file my e-Return Bangladesh\\\", \\\"Bangladesh freelancer filing\\\", \\\"Tax Day Bangladesh\\\". Consumes outputs from bd-it-freelancer-tax / bangladesh-pit, bangladesh-vat, and bd-social-contributions, and produces the filing checklist, forms, and deadlines. Computes nothing itself.",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openaccountants",
+  "install_path": ".claude/skills/bd-return-assembly/SKILL.md",
+  "source": {
+    "repo": "openaccountants/openaccountants",
+    "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/bd-return-assembly/SKILL.md",
+    "path": "agent-skills/bd-return-assembly/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-21T12:16:01.655Z",
+    "stars": 259,
+    "language": "Python",
+    "pushed_at": "2026-07-21T09:51:12Z",
+    "license": "AGPL-3.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "openaccountants-openaccountants-au-medicare-levy",
+  "name": "au-medicare-levy",
+  "description": "> Use this skill whenever asked about the Australian Medicare Levy, Medicare Levy Surcharge (MLS), low-income reduction thresholds, family thresholds, surcharge tiers, private health insurance (PHI) rebate interaction, or Medicare levy exemptions. Trigger on phrases like \\\"Medicare levy\\\", \\\"Medicare surcharge\\\", \\\"MLS\\\", \\\"do I pay Medicare levy\\\", \\\"low income Medicare\\\", \\\"Medicare levy reduction\\\", \\\"Medicare levy exemption\\\", \\\"private health insurance rebate\\\", \\\"PHI rebate\\\", \\\"M1\\\", \\\"M2",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openaccountants",
+  "install_path": ".claude/skills/au-medicare-levy/SKILL.md",
+  "source": {
+    "repo": "openaccountants/openaccountants",
+    "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/au-medicare-levy/SKILL.md",
+    "path": "agent-skills/au-medicare-levy/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-21T12:15:57.890Z",
+    "stars": 259,
+    "language": "Python",
+    "pushed_at": "2026-07-21T09:51:12Z",
+    "license": "AGPL-3.0"
+  }
+}

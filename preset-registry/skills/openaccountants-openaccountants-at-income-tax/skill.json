@@ -1,0 +1,25 @@
+{
+  "id": "openaccountants-openaccountants-at-income-tax",
+  "name": "at-income-tax",
+  "description": "> Use this skill whenever asked about Austrian income tax (Einkommensteuer) for self-employed individuals filing form E1. Trigger on phrases like \\\"Einkommensteuer\\\", \\\"ESt\\\", \\\"E1 Erklarung\\\", \\\"Gewinnfreibetrag\\\", \\\"Betriebsausgabenpauschale\\\", \\\"Absetzbetrge\\\", \\\"Sonderausgaben\\\", \\\"selbstandig Steuer Osterreich\\\", \\\"Austrian income tax\\\", \\\"self-employed tax Austria\\\", or any question about computing or filing income tax for a self-employed person in Austria. This skill covers progressive ta",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openaccountants",
+  "install_path": ".claude/skills/at-income-tax/SKILL.md",
+  "source": {
+    "repo": "openaccountants/openaccountants",
+    "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/at-income-tax/SKILL.md",
+    "path": "agent-skills/at-income-tax/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-21T12:15:57.368Z",
+    "stars": 259,
+    "language": "Python",
+    "pushed_at": "2026-07-21T09:51:12Z",
+    "license": "AGPL-3.0"
+  }
+}
