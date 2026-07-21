@@ -1,0 +1,25 @@
+{
+  "id": "himself65-finance-skills-fintel-data",
+  "name": "fintel-data",
+  "description": "> Query Fintel (fintel.io) institutional market intelligence via the REST API at https://api.fintel.io/v1 with FINTEL_API_KEY (X-API-KEY header), or the official MCP server at https://mcp.fintel.io/mcp. Read-only data: short interest, borrow rate/fee and shares available to borrow, daily short volume, fails-to-deliver (FTD), institutional ownership from SEC 13F filings, insider transactions from SEC Form 3/4/5, analyst price targets, ratings and forecasts, dividends and earnings history, earning",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "himself65",
+  "install_path": ".claude/skills/fintel-data/SKILL.md",
+  "source": {
+    "repo": "himself65/finance-skills",
+    "url": "https://github.com/himself65/finance-skills/blob/main/plugins/data-providers/skills/fintel-data/SKILL.md",
+    "path": "plugins/data-providers/skills/fintel-data/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-21T20:49:18.652Z",
+    "stars": 3043,
+    "language": "JavaScript",
+    "pushed_at": "2026-07-21T20:33:47Z",
+    "license": "MIT"
+  }
+}
