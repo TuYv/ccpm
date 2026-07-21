@@ -1,7 +1,7 @@
 {
   "id": "santifer-career-ops-career-ops",
   "name": "career-ops",
-  "description": "AI job search command center -- evaluate offers, generate CVs, scan portals, track applications",
+  "description": "AI job search command center -- evaluate offers, tailor CVs, scan portals, track applications. Use when the user pastes a job description or URL, asks to evaluate an offer, tailor a resume or cover letter, scan job boards, prepare for an interview, or track/update their applications.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/santifer/career-ops/blob/main/.qwen/skills/career-ops/SKILL.md",
     "path": ".qwen/skills/career-ops/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-21T14:34:52.032Z",
-    "stars": 60823,
+    "discovered_at": "2026-07-21T16:56:32.224Z",
+    "stars": 60840,
     "language": "JavaScript",
-    "pushed_at": "2026-07-21T09:29:36Z",
+    "pushed_at": "2026-07-21T16:22:44Z",
     "license": "MIT"
-  },
-  "summary_zh": "一站式求职助手，能解析职位描述、自动生成定制简历、抓取招聘平台信息并追踪投递进度，帮你把繁琐的找工作流程交给 AI 打理。"
+  }
 }

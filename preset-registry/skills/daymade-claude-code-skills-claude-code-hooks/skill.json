@@ -1,7 +1,7 @@
 {
   "id": "daymade-claude-code-skills-claude-code-hooks",
   "name": "claude-code-hooks",
-  "description": ">- How to write, test, register, and debug Claude Code hooks — PreToolUse / PostToolUse / SessionStart Bash guards that enforce a rule the model would otherwise talk itself past. Use whenever the user wants to create a hook, block or intercept a tool call, turn a repeatedly-violated prose rule into a hard gate, add a guard rail, debug a hook that misfires or \"poisons the session\", register a hook across profiles, or mentions hooks / PreToolUse / 拦截 / 守卫 / 钩子 / 拦下. Bakes in the hard-won pitfalls:",
+  "description": ">- How to write, test, register, and debug Claude Code hooks — PreToolUse / PostToolUse / SessionStart / Stop Bash guards that enforce a rule the model would otherwise talk itself past. Use whenever the user wants to create a hook, block/intercept a tool call, turn a repeatedly-violated rule into a hard gate, add a guard rail, debug a hook that misfires or \"poisons the session\", register a hook across profiles, or mentions hooks / PreToolUse / Stop hook / 拦截 / 守卫 / 钩子 / 拦下. Bakes in the hard-won",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-claude-code/claude-code-hooks/SKILL.md",
     "path": "daymade-claude-code/claude-code-hooks/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-21T14:41:18.105Z",
-    "stars": 1284,
+    "discovered_at": "2026-07-21T17:03:00.154Z",
+    "stars": 1286,
     "language": "Python",
-    "pushed_at": "2026-07-21T14:28:37Z",
+    "pushed_at": "2026-07-21T16:58:20Z",
     "license": "MIT"
   }
 }
