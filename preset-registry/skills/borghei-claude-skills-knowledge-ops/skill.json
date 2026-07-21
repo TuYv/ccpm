@@ -1,0 +1,25 @@
+{
+  "id": "borghei-claude-skills-knowledge-ops",
+  "name": "knowledge-ops",
+  "description": "> Audit and repair an internal knowledge base — staleness, ownership gaps, orphans, duplication, and findability. Use when the wiki is untrusted, docs are out of date, nobody owns pages, or search returns the wrong answer.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "borghei",
+  "install_path": ".claude/skills/knowledge-ops/SKILL.md",
+  "source": {
+    "repo": "borghei/Claude-Skills",
+    "url": "https://github.com/borghei/Claude-Skills/blob/main/business-operations/knowledge-ops/SKILL.md",
+    "path": "business-operations/knowledge-ops/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-21T14:49:56.340Z",
+    "stars": 395,
+    "language": "HTML",
+    "pushed_at": "2026-07-21T13:25:21Z",
+    "license": null
+  }
+}
