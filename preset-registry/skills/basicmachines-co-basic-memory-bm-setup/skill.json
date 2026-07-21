@@ -1,7 +1,7 @@
 {
   "id": "basicmachines-co-basic-memory-bm-setup",
   "name": "bm-setup",
-  "description": "Set up Basic Memory for Codex in the current repo by mapping a Basic Memory project, seeding schemas, and writing .codex/basic-memory.json.",
+  "description": "Set up Basic Memory for Codex at user or project level by mapping a Basic Memory project and seeding schemas.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/basicmachines-co/basic-memory/blob/main/plugins/codex/skills/bm-setup/SKILL.md",
     "path": "plugins/codex/skills/bm-setup/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-21T16:56:54.066Z",
-    "stars": 3470,
+    "discovered_at": "2026-07-21T18:49:26.846Z",
+    "stars": 3472,
     "language": "Python",
-    "pushed_at": "2026-07-21T15:46:43Z",
+    "pushed_at": "2026-07-21T18:41:44Z",
     "license": "AGPL-3.0"
-  },
-  "summary_zh": "在当前仓库快速接入 Basic Memory，自动完成项目映射、初始化结构并生成 Codex 所需的配置文件，省去手动搭建知识库的繁琐步骤。"
+  }
 }
