@@ -1,0 +1,25 @@
+{
+  "id": "pydantic-genai-prices-add-price-model",
+  "name": "add-price-model",
+  "description": ">- Add a new LLM model (or provider) to genai-prices pricing data. Use when asked to add/update pricing for a model — e.g. \"add grok 4.5\", \"add the new Claude\", \"update openai o5 prices\". Covers sourcing prices, probing OpenRouter for undocumented dated snapshot IDs, editing the provider YAML, building, verifying resolution, and opening the PR.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "pydantic",
+  "install_path": ".claude/skills/add-price-model/SKILL.md",
+  "source": {
+    "repo": "pydantic/genai-prices",
+    "url": "https://github.com/pydantic/genai-prices/blob/main/.claude/skills/add-price-model/SKILL.md",
+    "path": ".claude/skills/add-price-model/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-22T18:35:41.681Z",
+    "stars": 328,
+    "language": "Python",
+    "pushed_at": "2026-07-22T18:20:24Z",
+    "license": "MIT"
+  }
+}
