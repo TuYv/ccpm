@@ -1,0 +1,25 @@
+{
+  "id": "getsentry-sentry-seer-embed",
+  "name": "seer-embed",
+  "description": "Add a new Seer embed widget — a rich component rendered inline in Seer's markdown output via tag syntax. Covers schema, component, registration, and backend codegen. Use when asked to \"add an embed\", \"new seer embed\", \"create a seer widget\", \"add a markdown widget\", \"new seer tag\", or \"embed widget\".",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "getsentry",
+  "install_path": ".claude/skills/seer-embed/SKILL.md",
+  "source": {
+    "repo": "getsentry/sentry",
+    "url": "https://github.com/getsentry/sentry/blob/master/.agents/skills/seer-embed/SKILL.md",
+    "path": ".agents/skills/seer-embed/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-07-22T22:25:45.604Z",
+    "stars": 44355,
+    "language": "Python",
+    "pushed_at": "2026-07-22T22:22:34Z",
+    "license": null
+  }
+}
