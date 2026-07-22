@@ -1,0 +1,25 @@
+{
+  "id": "rpamis-comet-comet-classic",
+  "name": "comet-classic",
+  "description": "Use when the user explicitly invokes /comet-classic, asks to start or resume the permanent Comet Classic workflow, or repository evidence identifies one unambiguous active Classic change; route through the intent runtime and .comet.yaml.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "rpamis",
+  "install_path": ".claude/skills/comet-classic/SKILL.md",
+  "source": {
+    "repo": "rpamis/comet",
+    "url": "https://github.com/rpamis/comet/blob/master/assets/skills/comet-classic/SKILL.md",
+    "path": "assets/skills/comet-classic/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-07-22T09:51:10.430Z",
+    "stars": 2413,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-22T09:40:19Z",
+    "license": "MIT"
+  }
+}

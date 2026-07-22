@@ -1,0 +1,25 @@
+{
+  "id": "rpamis-comet-comet-native",
+  "name": "comet-native",
+  "description": "Use when the user explicitly invokes /comet-native, asks to start or resume a Native change, or the entry routes to Native; clarify requirements, read state, and drive Shape → Build → Verify → Archive.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "rpamis",
+  "install_path": ".claude/skills/comet-native/SKILL.md",
+  "source": {
+    "repo": "rpamis/comet",
+    "url": "https://github.com/rpamis/comet/blob/master/assets/skills/comet-native/SKILL.md",
+    "path": "assets/skills/comet-native/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-07-22T09:51:10.793Z",
+    "stars": 2413,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-22T09:40:19Z",
+    "license": "MIT"
+  }
+}
