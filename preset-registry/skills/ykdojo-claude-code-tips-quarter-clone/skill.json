@@ -1,0 +1,25 @@
+{
+  "id": "ykdojo-claude-code-tips-quarter-clone",
+  "name": "quarter-clone",
+  "description": "Clone the last quarter of the current conversation, discarding earlier context to reduce token usage while preserving recent work.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ykdojo",
+  "install_path": ".claude/skills/quarter-clone/SKILL.md",
+  "source": {
+    "repo": "ykdojo/claude-code-tips",
+    "url": "https://github.com/ykdojo/claude-code-tips/blob/main/skills/quarter-clone/SKILL.md",
+    "path": "skills/quarter-clone/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-22T20:29:06.163Z",
+    "stars": 9395,
+    "language": "HTML",
+    "pushed_at": "2026-07-22T19:20:18Z",
+    "license": null
+  }
+}
