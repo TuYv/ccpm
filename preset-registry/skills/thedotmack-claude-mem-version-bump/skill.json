@@ -1,6 +1,6 @@
 {
   "id": "thedotmack-claude-mem-version-bump",
-  "name": "claude-code-plugin-release",
+  "name": "version-bump",
   "description": "Automated semantic versioning and release workflow for Claude Code plugins. Handles version increments across package.json, marketplace.json, plugin.json manifests, build verification, git tagging, GitHub releases, and changelog generation. NPM publishing (so `npx claude-mem@X.Y.Z` resolves) is handed off to the human maintainer, who raised npm security.",
   "category": "设计创意",
   "compatible_tools": [
@@ -16,10 +16,10 @@
     "url": "https://github.com/thedotmack/claude-mem/blob/main/plugin/skills/version-bump/SKILL.md",
     "path": "plugin/skills/version-bump/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-23T03:58:28.844Z",
-    "stars": 88277,
+    "discovered_at": "2026-07-23T06:53:53.319Z",
+    "stars": 88294,
     "language": "JavaScript",
-    "pushed_at": "2026-07-23T00:42:59Z",
+    "pushed_at": "2026-07-23T06:51:36Z",
     "license": "Apache-2.0"
   }
 }
