@@ -1,0 +1,25 @@
+{
+  "id": "alterlab-ieu-alterlab-academic-skills-alterlab-pydeseq2",
+  "name": "alterlab-pydeseq2",
+  "description": "Run differential gene expression analysis on bulk RNA-seq count matrices with PyDESeq2, the Python port of DESeq2 — size-factor normalization, dispersion estimation, Wald tests, FDR (Benjamini-Hochberg) correction, and volcano/MA plots. Use when identifying differentially expressed genes between conditions from raw bulk RNA-seq counts. Part of the AlterLab Academic Skills suite.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "AlterLab-IEU",
+  "install_path": ".claude/skills/alterlab-pydeseq2/SKILL.md",
+  "source": {
+    "repo": "AlterLab-IEU/AlterLab-Academic-Skills",
+    "url": "https://github.com/AlterLab-IEU/AlterLab-Academic-Skills/blob/main/skills/bioinformatics/alterlab-pydeseq2/SKILL.md",
+    "path": "skills/bioinformatics/alterlab-pydeseq2/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-23T17:03:21.760Z",
+    "stars": 50,
+    "language": "Python",
+    "pushed_at": "2026-07-03T07:06:25Z",
+    "license": "MIT"
+  }
+}

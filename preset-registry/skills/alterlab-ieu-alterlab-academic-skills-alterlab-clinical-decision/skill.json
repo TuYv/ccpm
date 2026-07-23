@@ -1,0 +1,25 @@
+{
+  "id": "alterlab-ieu-alterlab-academic-skills-alterlab-clinical-decision",
+  "name": "alterlab-clinical-decision",
+  "description": "Generates professional clinical decision support (CDS) documents for pharmaceutical and clinical research settings — biomarker-stratified patient cohort analyses with outcomes and evidence-based treatment recommendation reports with decision algorithms, supporting GRADE evidence grading, statistical analysis (hazard ratios, survival curves, waterfall plots), biomarker integration, and regulatory compliance, output as publication-ready LaTeX/PDF. Use when building a CDS document, cohort analysis,",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "AlterLab-IEU",
+  "install_path": ".claude/skills/alterlab-clinical-decision/SKILL.md",
+  "source": {
+    "repo": "AlterLab-IEU/AlterLab-Academic-Skills",
+    "url": "https://github.com/AlterLab-IEU/AlterLab-Academic-Skills/blob/main/skills/clinical-research/alterlab-clinical-decision/SKILL.md",
+    "path": "skills/clinical-research/alterlab-clinical-decision/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-23T17:03:24.357Z",
+    "stars": 50,
+    "language": "Python",
+    "pushed_at": "2026-07-03T07:06:25Z",
+    "license": "MIT"
+  }
+}

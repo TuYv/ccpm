@@ -1,0 +1,25 @@
+{
+  "id": "alterlab-ieu-alterlab-academic-skills-alterlab-scanpy",
+  "name": "alterlab-scanpy",
+  "description": "Run the standard single-cell RNA-seq analysis pipeline with Scanpy on AnnData — QC filtering, normalization, dimensionality reduction (PCA, UMAP, t-SNE), Leiden/Louvain clustering, marker/differential expression, PAGA trajectories, and plotting. Use when analyzing scRNA-seq data through clustering, cell-type annotation, DE, or pseudotime workflows; for building or reading the .h5ad data structure itself (layers, obs/var, concatenation, backed mode) prefer alterlab-anndata instead, and for RNA ve",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "AlterLab-IEU",
+  "install_path": ".claude/skills/alterlab-scanpy/SKILL.md",
+  "source": {
+    "repo": "AlterLab-IEU/AlterLab-Academic-Skills",
+    "url": "https://github.com/AlterLab-IEU/AlterLab-Academic-Skills/blob/main/skills/bioinformatics/alterlab-scanpy/SKILL.md",
+    "path": "skills/bioinformatics/alterlab-scanpy/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-23T17:03:22.388Z",
+    "stars": 50,
+    "language": "Python",
+    "pushed_at": "2026-07-03T07:06:25Z",
+    "license": "MIT"
+  }
+}

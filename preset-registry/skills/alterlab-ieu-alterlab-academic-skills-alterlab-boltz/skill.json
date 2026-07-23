@@ -1,0 +1,25 @@
+{
+  "id": "alterlab-ieu-alterlab-academic-skills-alterlab-boltz",
+  "name": "alterlab-boltz",
+  "description": "Co-fold biomolecular complexes with Boltz-2, an open AlphaFold3-style model — predict protein + ligand (SMILES/CCD), protein + nucleic-acid, and multi-chain structures in one pass, with binding-affinity prediction. Use when folding a protein together with a small-molecule ligand, predicting a holo (ligand-bound) complex or its binding affinity, or co-folding protein–DNA/RNA assemblies. For protein-only or protein–protein folding without ligands prefer alterlab-alphafold; for antibody–antigen com",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "AlterLab-IEU",
+  "install_path": ".claude/skills/alterlab-boltz/SKILL.md",
+  "source": {
+    "repo": "AlterLab-IEU/AlterLab-Academic-Skills",
+    "url": "https://github.com/AlterLab-IEU/AlterLab-Academic-Skills/blob/main/skills/bioinformatics/alterlab-boltz/SKILL.md",
+    "path": "skills/bioinformatics/alterlab-boltz/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-23T17:03:19.476Z",
+    "stars": 50,
+    "language": "Python",
+    "pushed_at": "2026-07-03T07:06:25Z",
+    "license": "MIT"
+  }
+}

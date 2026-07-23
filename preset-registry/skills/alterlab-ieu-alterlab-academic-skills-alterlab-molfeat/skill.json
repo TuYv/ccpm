@@ -1,0 +1,25 @@
+{
+  "id": "alterlab-ieu-alterlab-academic-skills-alterlab-molfeat",
+  "name": "alterlab-molfeat",
+  "description": "Featurizes molecules for machine learning with molfeat (100+ featurizers) — ECFP/MACCS/MAP4 fingerprints, RDKit and Mordred physicochemical descriptors, and pretrained embeddings (ChemBERTa, ChemGPT, GIN) exposed as scikit-learn transformers that convert SMILES into feature vectors. Use when turning molecules into ML-ready feature matrices for QSAR/QSPR or virtual screening, or benchmarking fingerprint against descriptor and embedding representations; for training models and MoleculeNet benchmar",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "AlterLab-IEU",
+  "install_path": ".claude/skills/alterlab-molfeat/SKILL.md",
+  "source": {
+    "repo": "AlterLab-IEU/AlterLab-Academic-Skills",
+    "url": "https://github.com/AlterLab-IEU/AlterLab-Academic-Skills/blob/main/skills/cheminformatics/alterlab-molfeat/SKILL.md",
+    "path": "skills/cheminformatics/alterlab-molfeat/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-23T17:03:23.751Z",
+    "stars": 50,
+    "language": "Python",
+    "pushed_at": "2026-07-03T07:06:25Z",
+    "license": "MIT"
+  }
+}

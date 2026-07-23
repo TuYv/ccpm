@@ -1,0 +1,25 @@
+{
+  "id": "alterlab-ieu-alterlab-academic-skills-alterlab-pydicom",
+  "name": "alterlab-pydicom",
+  "description": "Reads, writes, and manipulates DICOM (Digital Imaging and Communications in Medicine) medical imaging files with the pydicom Python library. Use when reading/writing/modifying DICOM data, extracting pixel data from CT, MRI, X-ray, or ultrasound images, anonymizing DICOM files, working with DICOM metadata and tags, converting DICOM to other formats, handling compressed DICOM, or processing medical imaging datasets for PACS systems, radiology workflows, and healthcare imaging applications. Part of",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "AlterLab-IEU",
+  "install_path": ".claude/skills/alterlab-pydicom/SKILL.md",
+  "source": {
+    "repo": "AlterLab-IEU/AlterLab-Academic-Skills",
+    "url": "https://github.com/AlterLab-IEU/AlterLab-Academic-Skills/blob/main/skills/clinical-research/alterlab-pydicom/SKILL.md",
+    "path": "skills/clinical-research/alterlab-pydicom/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-23T17:03:24.748Z",
+    "stars": 50,
+    "language": "Python",
+    "pushed_at": "2026-07-03T07:06:25Z",
+    "license": "MIT"
+  }
+}

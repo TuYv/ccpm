@@ -1,0 +1,25 @@
+{
+  "id": "alterlab-ieu-alterlab-academic-skills-alterlab-chai",
+  "name": "alterlab-chai",
+  "description": "Predict biomolecular complexes with Chai-1, an open AlphaFold3-style model that folds multi-entity assemblies (proteins, ligands, nucleic acids) from a single typed FASTA — strong on antibody–antigen and protein–ligand complexes, with optional MSA and restraint inputs. Use when predicting an antibody–antigen complex, folding a mixed protein/ligand/nucleic-acid assembly described in one FASTA, or generating a complex with experimental restraints. For binding-affinity prediction or a ligand-focuse",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "AlterLab-IEU",
+  "install_path": ".claude/skills/alterlab-chai/SKILL.md",
+  "source": {
+    "repo": "AlterLab-IEU/AlterLab-Academic-Skills",
+    "url": "https://github.com/AlterLab-IEU/AlterLab-Academic-Skills/blob/main/skills/bioinformatics/alterlab-chai/SKILL.md",
+    "path": "skills/bioinformatics/alterlab-chai/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-23T17:03:19.974Z",
+    "stars": 50,
+    "language": "Python",
+    "pushed_at": "2026-07-03T07:06:25Z",
+    "license": "MIT"
+  }
+}

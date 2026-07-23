@@ -1,0 +1,25 @@
+{
+  "id": "alterlab-ieu-alterlab-academic-skills-alterlab-pysam",
+  "name": "alterlab-pysam",
+  "description": "Read and write genomic alignment and variant files in Python with pysam (htslib bindings) — SAM/BAM/CRAM alignments, VCF/BCF variants, and FASTA/FASTQ sequences, plus region extraction and per-base coverage/pileup. Use when scripting NGS data-processing pipelines that parse, filter, index, or compute coverage over BAM/CRAM/VCF files. Part of the AlterLab Academic Skills suite.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "AlterLab-IEU",
+  "install_path": ".claude/skills/alterlab-pysam/SKILL.md",
+  "source": {
+    "repo": "AlterLab-IEU/AlterLab-Academic-Skills",
+    "url": "https://github.com/AlterLab-IEU/AlterLab-Academic-Skills/blob/main/skills/bioinformatics/alterlab-pysam/SKILL.md",
+    "path": "skills/bioinformatics/alterlab-pysam/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-23T17:03:21.957Z",
+    "stars": 50,
+    "language": "Python",
+    "pushed_at": "2026-07-03T07:06:25Z",
+    "license": "MIT"
+  }
+}

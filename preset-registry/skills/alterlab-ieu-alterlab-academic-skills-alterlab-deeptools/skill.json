@@ -1,0 +1,25 @@
+{
+  "id": "alterlab-ieu-alterlab-academic-skills-alterlab-deeptools",
+  "name": "alterlab-deeptools",
+  "description": "Process and visualize deep-sequencing coverage with the deepTools CLI — convert BAM to bigWig (bamCoverage), build log2 ratio tracks (bamCompare), run QC (multiBamSummary correlation, PCA, plotFingerprint), apply the ATAC-seq Tn5 shift (alignmentSieve --ATACshift), and make TSS/peak heatmaps and profiles (computeMatrix, plotHeatmap, plotProfile). Use for coverage tracks, signal heatmaps/profiles, normalization (RPGC/CPM/RPKM), and effective-genome-size lookups for ChIP-seq, ATAC-seq, MNase-seq, ",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "AlterLab-IEU",
+  "install_path": ".claude/skills/alterlab-deeptools/SKILL.md",
+  "source": {
+    "repo": "AlterLab-IEU/AlterLab-Academic-Skills",
+    "url": "https://github.com/AlterLab-IEU/AlterLab-Academic-Skills/blob/main/skills/bioinformatics/alterlab-deeptools/SKILL.md",
+    "path": "skills/bioinformatics/alterlab-deeptools/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-23T17:03:20.215Z",
+    "stars": 50,
+    "language": "Python",
+    "pushed_at": "2026-07-03T07:06:25Z",
+    "license": "MIT"
+  }
+}

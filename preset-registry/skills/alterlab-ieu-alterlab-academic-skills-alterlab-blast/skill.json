@@ -1,0 +1,25 @@
+{
+  "id": "alterlab-ieu-alterlab-academic-skills-alterlab-blast",
+  "name": "alterlab-blast",
+  "description": "Runs NCBI BLAST+ 2.17.0 sequence searches from the command line: makeblastdb (with -parse_seqids), blastn/blastp/blastx/tblastn with tabular -outfmt 6/7 for parsing, correct -task choice (megablast vs blastn vs blastn-short), -taxids/-negative_taxids taxonomic scoping, and -mt_mode multithreading; plus a DIAMOND blastp --ultra-sensitive path for large protein searches. Warns that -max_target_seqs is a heuristic keep-count, not a top-N best-hits filter. Use when the user wants command-line BLAST,",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "AlterLab-IEU",
+  "install_path": ".claude/skills/alterlab-blast/SKILL.md",
+  "source": {
+    "repo": "AlterLab-IEU/AlterLab-Academic-Skills",
+    "url": "https://github.com/AlterLab-IEU/AlterLab-Academic-Skills/blob/main/skills/bioinformatics/alterlab-blast/SKILL.md",
+    "path": "skills/bioinformatics/alterlab-blast/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-23T17:03:19.329Z",
+    "stars": 50,
+    "language": "Python",
+    "pushed_at": "2026-07-03T07:06:25Z",
+    "license": "MIT"
+  }
+}

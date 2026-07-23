@@ -1,0 +1,25 @@
+{
+  "id": "alterlab-ieu-alterlab-academic-skills-alterlab-scgpt",
+  "name": "alterlab-scgpt",
+  "description": "Apply the scGPT single-cell foundation model (Cui 2024) to annotate and embed cells — zero-shot and fine-tuned cell-type annotation, gene/cell embeddings, batch integration, and gene-regulatory / perturbation inference from AnnData. Use when annotating cell types with a pretrained foundation model, generating scGPT embeddings, integrating batches with a transformer, or running zero-shot single-cell inference on an h5ad. For probabilistic latent models (scVI/scANVI) prefer alterlab-scvi-tools; fo",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "AlterLab-IEU",
+  "install_path": ".claude/skills/alterlab-scgpt/SKILL.md",
+  "source": {
+    "repo": "AlterLab-IEU/AlterLab-Academic-Skills",
+    "url": "https://github.com/AlterLab-IEU/AlterLab-Academic-Skills/blob/main/skills/bioinformatics/alterlab-scgpt/SKILL.md",
+    "path": "skills/bioinformatics/alterlab-scgpt/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-23T17:03:22.477Z",
+    "stars": 50,
+    "language": "Python",
+    "pushed_at": "2026-07-03T07:06:25Z",
+    "license": "MIT"
+  }
+}

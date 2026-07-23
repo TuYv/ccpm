@@ -1,0 +1,25 @@
+{
+  "id": "alterlab-ieu-alterlab-academic-skills-alterlab-rfdiffusion",
+  "name": "alterlab-rfdiffusion",
+  "description": "Generate de-novo protein backbones with RFdiffusion (Watson 2023) — a diffusion model for unconditional monomer generation, motif scaffolding, binder design against a target, and symmetric oligomers. Use when generating a new protein backbone from scratch, scaffolding a functional motif into a fold, designing a binder backbone to a target surface, or building symmetric assemblies; RFdiffusion produces the STRUCTURE, then alterlab-proteinmpnn designs its sequence and alterlab-alphafold validates ",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "AlterLab-IEU",
+  "install_path": ".claude/skills/alterlab-rfdiffusion/SKILL.md",
+  "source": {
+    "repo": "AlterLab-IEU/AlterLab-Academic-Skills",
+    "url": "https://github.com/AlterLab-IEU/AlterLab-Academic-Skills/blob/main/skills/bioinformatics/alterlab-rfdiffusion/SKILL.md",
+    "path": "skills/bioinformatics/alterlab-rfdiffusion/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-23T17:03:22.180Z",
+    "stars": 50,
+    "language": "Python",
+    "pushed_at": "2026-07-03T07:06:25Z",
+    "license": "MIT"
+  }
+}

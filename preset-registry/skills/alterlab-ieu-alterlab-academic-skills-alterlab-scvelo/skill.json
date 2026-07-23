@@ -1,0 +1,25 @@
+{
+  "id": "alterlab-ieu-alterlab-academic-skills-alterlab-scvelo",
+  "name": "alterlab-scvelo",
+  "description": "Run RNA velocity analysis with scVelo on single-cell RNA-seq data — estimate cell-state transitions from spliced/unspliced mRNA dynamics, infer trajectory direction, compute latent time, and identify driver genes. Use when adding directionality to trajectories or studying differentiation dynamics from spliced/unspliced layers (velocyto/STARsolo output); for the general QC, clustering, UMAP, and differential-expression analysis pipeline prefer alterlab-scanpy instead, and for .h5ad data-structure",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "AlterLab-IEU",
+  "install_path": ".claude/skills/alterlab-scvelo/SKILL.md",
+  "source": {
+    "repo": "AlterLab-IEU/AlterLab-Academic-Skills",
+    "url": "https://github.com/AlterLab-IEU/AlterLab-Academic-Skills/blob/main/skills/bioinformatics/alterlab-scvelo/SKILL.md",
+    "path": "skills/bioinformatics/alterlab-scvelo/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-23T17:03:22.665Z",
+    "stars": 50,
+    "language": "Python",
+    "pushed_at": "2026-07-03T07:06:25Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "alterlab-ieu-alterlab-academic-skills-alterlab-bioservices",
+  "name": "alterlab-bioservices",
+  "description": "Query 40+ bioinformatics web services through one consistent Python API with bioservices (UniProt, KEGG, ChEMBL, Reactome, Ensembl, NCBI and more). Use when a workflow must hit multiple databases together, map identifiers across services, or run cross-database analyses — for quick single-database lookups use gget, for sequence and file manipulation use biopython. Part of the AlterLab Academic Skills suite.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "AlterLab-IEU",
+  "install_path": ".claude/skills/alterlab-bioservices/SKILL.md",
+  "source": {
+    "repo": "AlterLab-IEU/AlterLab-Academic-Skills",
+    "url": "https://github.com/AlterLab-IEU/AlterLab-Academic-Skills/blob/main/skills/bioinformatics/alterlab-bioservices/SKILL.md",
+    "path": "skills/bioinformatics/alterlab-bioservices/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-23T17:03:19.206Z",
+    "stars": 50,
+    "language": "Python",
+    "pushed_at": "2026-07-03T07:06:25Z",
+    "license": "MIT"
+  }
+}

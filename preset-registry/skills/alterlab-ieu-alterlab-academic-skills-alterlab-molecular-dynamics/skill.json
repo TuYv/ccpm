@@ -1,0 +1,25 @@
+{
+  "id": "alterlab-ieu-alterlab-academic-skills-alterlab-molecular-dynamics",
+  "name": "alterlab-molecular-dynamics",
+  "description": "Runs and analyzes molecular dynamics simulations with OpenMM and MDAnalysis — setting up protein and small-molecule systems, assigning force fields, running energy minimization and production MD, and analyzing trajectories (RMSD, RMSF, contact maps, free energy surfaces). Use when simulating protein or ligand dynamics, equilibrating a system, or computing trajectory metrics for structural biology, drug binding, or biophysics. Part of the AlterLab Academic Skills suite.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "AlterLab-IEU",
+  "install_path": ".claude/skills/alterlab-molecular-dynamics/SKILL.md",
+  "source": {
+    "repo": "AlterLab-IEU/AlterLab-Academic-Skills",
+    "url": "https://github.com/AlterLab-IEU/AlterLab-Academic-Skills/blob/main/skills/cheminformatics/alterlab-molecular-dynamics/SKILL.md",
+    "path": "skills/cheminformatics/alterlab-molecular-dynamics/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-23T17:03:23.618Z",
+    "stars": 50,
+    "language": "Python",
+    "pushed_at": "2026-07-03T07:06:25Z",
+    "license": "MIT"
+  }
+}

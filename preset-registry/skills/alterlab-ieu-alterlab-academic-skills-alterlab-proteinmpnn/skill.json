@@ -1,0 +1,25 @@
+{
+  "id": "alterlab-ieu-alterlab-academic-skills-alterlab-proteinmpnn",
+  "name": "alterlab-proteinmpnn",
+  "description": "Design protein sequences for a fixed backbone with ProteinMPNN (Dauparas 2022) — message-passing inverse folding that outputs sequences predicted to fold to a given structure, with fixed positions, tied/symmetric chains, amino-acid bias, and a soluble-model variant. Use when inverse-folding a backbone PDB into sequences, redesigning selected positions, imposing symmetry across chains, or generating the sequence step of a design→fold→score loop. For pocket/interface design WITH a bound ligand, me",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "AlterLab-IEU",
+  "install_path": ".claude/skills/alterlab-proteinmpnn/SKILL.md",
+  "source": {
+    "repo": "AlterLab-IEU/AlterLab-Academic-Skills",
+    "url": "https://github.com/AlterLab-IEU/AlterLab-Academic-Skills/blob/main/skills/bioinformatics/alterlab-proteinmpnn/SKILL.md",
+    "path": "skills/bioinformatics/alterlab-proteinmpnn/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-23T17:03:21.649Z",
+    "stars": 50,
+    "language": "Python",
+    "pushed_at": "2026-07-03T07:06:25Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "alterlab-ieu-alterlab-academic-skills-alterlab-rdkit",
+  "name": "alterlab-rdkit",
+  "description": "Provides the RDKit cheminformatics toolkit for low-level, fine-grained molecular primitives — SMILES/SDF parsing, descriptors (MW, LogP, TPSA), fingerprints, substructure/SMARTS search, 2D/3D coordinate generation, similarity, and reaction handling. Use when custom sanitization, specialized fingerprint or descriptor algorithms, reaction enumeration, or conformer generation demand direct API control; for a high-level pandas-friendly wrapper over RDKit prefer alterlab-datamol, and for turning mole",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "AlterLab-IEU",
+  "install_path": ".claude/skills/alterlab-rdkit/SKILL.md",
+  "source": {
+    "repo": "AlterLab-IEU/AlterLab-Academic-Skills",
+    "url": "https://github.com/AlterLab-IEU/AlterLab-Academic-Skills/blob/main/skills/cheminformatics/alterlab-rdkit/SKILL.md",
+    "path": "skills/cheminformatics/alterlab-rdkit/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-23T17:03:24.024Z",
+    "stars": 50,
+    "language": "Python",
+    "pushed_at": "2026-07-03T07:06:25Z",
+    "license": "MIT"
+  }
+}

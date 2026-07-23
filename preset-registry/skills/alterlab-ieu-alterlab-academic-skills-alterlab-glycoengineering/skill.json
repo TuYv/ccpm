@@ -1,0 +1,25 @@
+{
+  "id": "alterlab-ieu-alterlab-academic-skills-alterlab-glycoengineering",
+  "name": "alterlab-glycoengineering",
+  "description": "Analyze and engineer protein glycosylation — scan sequences for N-glycosylation sequons (N-X-S/T), predict O-glycosylation hotspots, and reach curated glycoengineering tools (NetOGlyc, GlycoShield, GlycoWorkbench). Use when identifying or designing glycosylation sites, optimizing therapeutic-antibody or biologic glycoforms, or doing glycoprotein engineering and vaccine-design work. Part of the AlterLab Academic Skills suite.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "AlterLab-IEU",
+  "install_path": ".claude/skills/alterlab-glycoengineering/SKILL.md",
+  "source": {
+    "repo": "AlterLab-IEU/AlterLab-Academic-Skills",
+    "url": "https://github.com/AlterLab-IEU/AlterLab-Academic-Skills/blob/main/skills/bioinformatics/alterlab-glycoengineering/SKILL.md",
+    "path": "skills/bioinformatics/alterlab-glycoengineering/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-23T17:03:20.807Z",
+    "stars": 50,
+    "language": "Python",
+    "pushed_at": "2026-07-03T07:06:25Z",
+    "license": "MIT"
+  }
+}

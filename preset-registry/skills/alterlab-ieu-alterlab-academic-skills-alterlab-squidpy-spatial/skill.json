@@ -1,0 +1,25 @@
+{
+  "id": "alterlab-ieu-alterlab-academic-skills-alterlab-squidpy-spatial",
+  "name": "alterlab-squidpy-spatial",
+  "description": "Analyzes spatial transcriptomics with squidpy (1.8.x) on AnnData and SpatialData objects, routing platforms correctly: Visium spots use spatial_neighbors(coord_type='grid') and pair with deconvolution, while Xenium/MERFISH single-cell data use coord_type='generic'/Delaunay neighbors and spatialdata-io readers (xenium, visium_hd, merscope). Runs sq.gr.spatial_neighbors, nhood_enrichment, co_occurrence, spatial_autocorr (Moran's I for spatially variable genes), ripley, and ligrec. Use when the use",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "AlterLab-IEU",
+  "install_path": ".claude/skills/alterlab-squidpy-spatial/SKILL.md",
+  "source": {
+    "repo": "AlterLab-IEU/AlterLab-Academic-Skills",
+    "url": "https://github.com/AlterLab-IEU/AlterLab-Academic-Skills/blob/main/skills/bioinformatics/alterlab-squidpy-spatial/SKILL.md",
+    "path": "skills/bioinformatics/alterlab-squidpy-spatial/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-23T17:03:22.889Z",
+    "stars": 50,
+    "language": "Python",
+    "pushed_at": "2026-07-03T07:06:25Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "alterlab-ieu-alterlab-academic-skills-alterlab-borzoi",
+  "name": "alterlab-borzoi",
+  "description": "Predict genome-wide functional genomics tracks from DNA sequence with Borzoi (Linder 2025) — a sequence-to-function model outputting RNA-seq, CAGE, ATAC, and ChIP coverage across long context, used to score non-coding and regulatory variant effects. Use when predicting functional tracks from a DNA sequence, scoring a non-coding/regulatory variant's effect on expression or chromatin, or doing in-silico mutagenesis of a locus. To LOOK UP a variant's population frequency prefer alterlab-gnomad; for",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "AlterLab-IEU",
+  "install_path": ".claude/skills/alterlab-borzoi/SKILL.md",
+  "source": {
+    "repo": "AlterLab-IEU/AlterLab-Academic-Skills",
+    "url": "https://github.com/AlterLab-IEU/AlterLab-Academic-Skills/blob/main/skills/bioinformatics/alterlab-borzoi/SKILL.md",
+    "path": "skills/bioinformatics/alterlab-borzoi/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-23T17:03:19.660Z",
+    "stars": 50,
+    "language": "Python",
+    "pushed_at": "2026-07-03T07:06:25Z",
+    "license": "MIT"
+  }
+}
