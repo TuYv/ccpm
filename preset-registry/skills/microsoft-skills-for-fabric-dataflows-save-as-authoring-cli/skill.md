@@ -23,6 +23,18 @@ description: >
 > 1. To find the workspace details (including its ID) from workspace name: list all workspaces and, then, use JMESPath filtering
 > 2. To find the item details (including its ID) from workspace ID, item type, and item name: list all items of that type in that workspace and, then, use JMESPath filtering
 
+> **GENERATION BOUNDARY -- HARD STOP (mandatory)**
+> This skill executes save-as only from Gen1 to Gen2.1. For an execution
+> request whose source is Gen2, or whose source generation is not established,
+> state that no public save-as or in-place upgrade endpoint is available and
+> stop before API calls. This does not block a read-only readiness scan whose
+> purpose is to discover and classify Gen1 candidates.
+> Do not interpret "choose the closest endpoint and proceed" as approval to
+> export a definition and create a copy, do not invoke the authoring skill
+> automatically, and do not mutate anything. Ask the user to clarify the
+> intended outcome and explicitly approve any separately documented
+> alternative.
+
 # dataflows-save-as-authoring-cli — Dataflow Save-As Gen1 → Gen2.1 CI/CD via CLI
 
 A save-as companion for creating upgraded Gen2.1 copies from Power BI Gen1 dataflows using readiness assessment and guarded execution.

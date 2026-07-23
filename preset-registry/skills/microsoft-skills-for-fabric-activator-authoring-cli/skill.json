@@ -1,8 +1,8 @@
 {
   "id": "microsoft-skills-for-fabric-activator-authoring-cli",
   "name": "activator-authoring-cli",
-  "description": "> Create alerts, notifications, and automated actions on Fabric data and events via Fabric REST API and `az rest` CLI. **Invoke this skill** whenever the user wants to: (1) create, update, or delete an alert or notification flow, (2) send a Teams message, email, or run a Fabric item when something happens, (3) connect alert logic to Eventhouse, Eventstream, Real-time Hub, or DTB / Ontology data, (4) adjust thresholds, filters, event triggers, or actions, (5) troubleshoot or change an existing Ac",
-  "category": "设计创意",
+  "description": "> Author Fabric Activator rules and Reflex items through Fabric REST API and `az rest`. Invoke for write intents: create or delete items; add or update rule definitions; configure thresholds, filters, Teams/email notifications, Fabric item actions, and Eventhouse/Eventstream/Real-Time Hub/DTB/Ontology sources. Pure GET/explain prompts belong to `activator-consumption-cli`. Clarification for missing sources, thresholds, recipients, and action targets happens inside this skill. Triggers: \"create a",
+  "category": "开发编程",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/microsoft/skills-for-fabric/blob/main/plugins/fabric-skills/skills/activator-authoring-cli/SKILL.md",
     "path": "plugins/fabric-skills/skills/activator-authoring-cli/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-23T09:51:18.550Z",
-    "stars": 858,
+    "discovered_at": "2026-07-23T12:16:55.418Z",
+    "stars": 861,
     "language": "Python",
-    "pushed_at": "2026-07-23T08:42:26Z",
+    "pushed_at": "2026-07-23T10:07:18Z",
     "license": "MIT"
   }
 }

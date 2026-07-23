@@ -1,22 +1,21 @@
 ---
 name: dataflows-authoring-cli
 description: >
-  Create, update, delete, and refresh Fabric Dataflows Gen2 via write-side CLI
-  against Fabric Items and Connections APIs. Builds mashup.pq + queryMetadata
-  definitions, triggers parameterized refreshes, manages connections, and
-  configures output destinations (Lakehouse, Warehouse, ADX, Azure SQL).
-  Includes preview-driven authoring loop (executeQuery + customMashupDocument).
-  Lists `supportedConnectionTypes`/`credentialType` per connector.
-  For executing saved queries or reading refresh status, use
-  `dataflows-consumption-cli`.
-  Triggers: "create dataflow", "update dataflow", "delete dataflow",
-  "trigger dataflow refresh", "refresh dataflow", "preview Power Query M",
-  "preview mashup", "preview before save", "iterate dataflow M",
-  "create Fabric data source connection", "create dataflow connection",
-  "bind connection", "list supportedConnectionTypes",
-  "dataflow output destination", "dataflow write to lakehouse",
-  "dataflow write to warehouse", "dataflow write to ADX",
-  "DataDestinations annotation".
+  Create, update, delete, and refresh Fabric Dataflows Gen2 with write-side CLI
+  via Fabric APIs. Build mashup.pq and queryMetadata.json,
+  preview candidate M with executeQuery/customMashupDocument, bind connections,
+  and configure output destinations. For saved
+  query execution or refresh-status reads, use `dataflows-consumption-cli`. If
+  a request explicitly insists on the Dataflows consumption or read-only path
+  for a mutation, do not route here; let consumption refuse before any
+  separately confirmed authoring handoff. Triggers: "create dataflow", "update
+  dataflow", "delete dataflow", "trigger dataflow refresh", "preview Power
+  Query M", "preview before save", "customMashupDocument", "create Fabric data
+  source connection", "create SQL Server source REST", "POST /v1/connections",
+  "supportedConnectionTypes", "passwordReference", "bind
+  connection", "dataflow output destination", "dataflow write to lakehouse",
+  "dataflow write to warehouse", "dataflow write to ADX", "DataDestinations
+  annotation".
 ---
 
 > **Update Check — ONCE PER SESSION (mandatory)**
@@ -28,6 +27,16 @@ description: >
 > **CRITICAL NOTES**
 > 1. To find the workspace details (including its ID) from workspace name: list all workspaces and, then, use JMESPath filtering
 > 2. To find the item details (including its ID) from workspace ID, item type, and item name: list all items of that type in that workspace and, then, use JMESPath filtering
+
+> **PRE-MUTATION REQUIREMENTS GATE (mandatory)**
+> Before any mutation, confirm enough user intent for the requested operation.
+> For create or update requests, establish the source, query/schema and
+> transformation, destination behavior, and refresh behavior (including an
+> explicit choice of no destination or no refresh). If the request is generic,
+> such as "set up the Dataflow I need for reporting," ask a structured
+> clarifying question and stop before mutation. Do not infer requirements from
+> unrelated workspace items or create a best-guess source, connection, or
+> Dataflow.
 
 # dataflows-authoring-cli — Dataflows Gen2 Authoring via CLI
 
@@ -52,7 +61,7 @@ description: >
 | [authoring-cli-quickref.md](references/authoring-cli-quickref.md) | One-liner recipes, status enums, base64 helpers, connection-binding quick patterns |
 | [authoring-script-templates.md](references/authoring-script-templates.md) | Full bash + PowerShell templates; end-to-end smoke test; LRO polling pattern |
 | [connection-management.md](references/connection-management.md) | List/create/inspect connections; `supportedConnectionTypes`; resolve `ClusterId`; ID format cheat sheet |
-| [connectors.md](references/connectors.md) | M-side source connectors: live-verified function inventory, Lakehouse deep navigation, runtime-disabled functions (`Web.Page`, `Web.BrowserContents`), `Html.Table` / `Csv.Document` / `Json.Document` patterns |
+| [connectors.md](references/connectors.md) | M-side source connectors: live-verified function inventory, Lakehouse deep navigation, gateway scope for `Web.Page` / `Web.BrowserContents`, and `Html.Table` / `Csv.Document` / `Json.Document` patterns |
 | [m-language.md](references/m-language.md) | M language semantics for Dataflow Gen2: `try` record shapes, per-cell error wrapping in column transforms, `each` scoping in row vs sub-table contexts, optional field access `[?]` / `Record.FieldOrDefault`, quoted identifiers, sandbox-disabled symbols (`File.Contents`) |
 | [mashup-preview.md](references/mashup-preview.md) | `executeQuery` contract: bootstrap branch, auto-wrap rule, hard avoid for unbounded preview |
 | [output-destinations.md](references/output-destinations.md) | Output destination patterns: Lakehouse Table, Lakehouse Files, Warehouse, ADX, Azure SQL. `DataDestinations` annotation, hidden query, `loadEnabled` rules, connection limitations |

@@ -5,15 +5,16 @@ description: >
   the Items REST API. Build definitions with 25 source types (Event Hubs, IoT Hub,
   CDC, Kafka, SampleData), 8 operators (Filter, Aggregate, GroupBy, Join,
   ManageFields, Union, Expand, SQL), 4 destinations (Lakehouse, Eventhouse,
-  Activator, Custom Endpoint), DefaultStream/DerivedStream routing. Use to:
-  (1) author Eventstream topology, (2) add Event Hub source, (3) add filter
-  operator, (4) add CDC source with Debezium flattening, (5) wire destinations,
-  (6) modify/delete Eventstream definitions. Triggers: "create eventstream",
-  "deploy eventstream", "eventstream topology", "add source to eventstream",
-  "add event hub source", "add filter operator", "eventstream filter",
-  "eventstream destination", "CDC source", "eventstream operator",
-  "eventstream definition", "update eventstream", "wire eventstream",
-  "real-time ingestion pipeline", "eventstream topology deployment".
+  Activator, Custom Endpoint), DefaultStream/DerivedStream routing. **Invoke this
+  skill** to: (1) author Eventstream topology, (2) add Event Hub source, (3) add
+  filter operator, (4) add CDC source with Debezium flattening, (5) wire
+  destinations, (6) modify/delete Eventstream definitions. Invoke before making
+  topology changes. Triggers: "create eventstream", "deploy eventstream",
+  "eventstream topology", "add source to eventstream", "add event hub source",
+  "add filter operator", "eventstream filter", "eventstream destination",
+  "CDC source", "eventstream operator", "eventstream definition",
+  "update eventstream", "wire eventstream", "real-time ingestion pipeline",
+  "eventstream topology deployment".
 ---
 
 > **Update Check — ONCE PER SESSION (mandatory)**
@@ -181,8 +182,8 @@ The Update Definition API returns `202 Accepted` for long-running operations. Po
 **Required structure for ALL operator condition fields:**
 - `column` → object with `{node, columnName, columnPath, expressionType: "ColumnReference"}`
 - `value` → object with `{dataType, value, expressionType: "Literal"}`
-- `operatorType` → string: `GreaterThan`, `LessThan`, `Equals`, `NotEquals`, `GreaterThanOrEqual`, `LessThanOrEqual`
-- `dataType` → `Float`, `Int`, `Long`, `String`, `DateTime`
+- `operatorType` → string: `Equals`, `NotEquals`, `GreaterThan`, `GreaterThanOrEquals`, `LessThan`, `LessThanOrEquals`, `Contains`, `DoesNotContain`, `StartsWith`, `DoesNotStartWith`, `EndsWith`, `DoesNotEndWith`, `IsEmpty`, `IsNull`, `IsNotNull`, `IsNotNullOrEmpty`
+- `dataType` → `BigInt`, `Float`, `Nvarchar(max)`, `DateTime`, `Bit`
 
 This same nested-object pattern applies to **all operators** that reference columns (Filter, Aggregate, GroupBy, Join, ManageFields).
 
@@ -227,3 +228,352 @@ Returns `200 OK` on success.
 - Do NOT exceed 11 combined CustomEndpoint sources and CustomEndpoint/Eventhouse-direct-ingestion destinations
 - Do NOT confuse Eventstream with Eventhouse — they are separate Fabric workloads
 - Do NOT hardcode workspace or item IDs — always discover them via the API
+
+---
+
+## Examples
+
+> **Platform note** — examples use PowerShell. Always write the JSON body to
+> a temp file via `[IO.File]::WriteAllText()` (no BOM) and pass
+> `--body "@$file"` to `az rest`, rather than inline `--body "..."` which
+> `cmd.exe` can mangle. Use `-Compress` with `ConvertTo-Json` to avoid
+> newline issues. The one safe inline exception is `--body '{}'` for empty bodies.
+
+### Example 1: Create an Eventstream with a Source
+
+**Prompt**: "Create an Eventstream called SensorIngestion in my dev workspace with a sample data source."
+
+```powershell
+# 1. Discover workspace ID
+$wsId = (az rest --method get `
+  --url "https://api.fabric.microsoft.com/v1/workspaces" `
+  --resource "https://api.fabric.microsoft.com" `
+  --query "value[?displayName=='dev'] | [0].id" -o tsv)
+if (-not $wsId) { throw "Workspace 'dev' not found" }
+
+# 2. Create empty Eventstream
+$esBody = @{ displayName = "SensorIngestion"; description = "IoT sensor pipeline" } | ConvertTo-Json -Compress
+$bodyFile = Join-Path ([IO.Path]::GetTempPath()) "es_create.json"
+[IO.File]::WriteAllText($bodyFile, $esBody, [System.Text.UTF8Encoding]::new($false))
+$created = az rest --method post `
+  --url "https://api.fabric.microsoft.com/v1/workspaces/$wsId/eventstreams" `
+  --resource "https://api.fabric.microsoft.com" `
+  --headers "Content-Type=application/json" `
+  --body "@$bodyFile" | ConvertFrom-Json
+
+# 3. Get the created Eventstream ID from response
+$esId = $created.id
+if (-not $esId) { throw "Eventstream creation did not return an ID" }
+
+# 4. Build topology — DefaultStream uses inputNodes (not parentName)
+$topology = @{
+    compatibilityLevel = "1.0"
+    sources = @(@{
+        name = "SampleSource"
+        type = "SampleData"
+        properties = @{ type = "Bicycles" }
+    })
+    streams = @(@{
+        name = "SensorIngestion-stream"
+        type = "DefaultStream"
+        properties = @{}
+        inputNodes = @(@{ name = "SampleSource" })
+    })
+    operators = @()
+    destinations = @()
+}
+$topologyJson = $topology | ConvertTo-Json -Depth 10 -Compress
+$topologyB64 = [Convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes($topologyJson))
+
+# 5. Deploy definition
+$defBody = @{
+    definition = @{
+        parts = @(@{
+            path = "eventstream.json"
+            payload = $topologyB64
+            payloadType = "InlineBase64"
+        })
+    }
+} | ConvertTo-Json -Depth 5 -Compress
+$defFile = Join-Path ([IO.Path]::GetTempPath()) "es_def.json"
+[IO.File]::WriteAllText($defFile, $defBody, [System.Text.UTF8Encoding]::new($false))
+# Note: updateDefinition returns 202 Accepted (LRO). Poll until completion.
+$updateJson = az rest --method post `
+  --url "https://api.fabric.microsoft.com/v1/workspaces/$wsId/eventstreams/$esId/updateDefinition" `
+  --resource "https://api.fabric.microsoft.com" `
+  --headers "Content-Type=application/json" `
+  --body "@$defFile"
+if ($LASTEXITCODE -ne 0) { throw "updateDefinition request failed" }
+
+$updateResp = $updateJson | ConvertFrom-Json -ErrorAction SilentlyContinue
+if ($updateResp.operationId) {
+    for ($i = 0; $i -lt 12; $i++) {
+        Start-Sleep -Seconds 5
+        $status = (az rest --method get `
+          --url "https://api.fabric.microsoft.com/v1/operations/$($updateResp.operationId)" `
+          --resource "https://api.fabric.microsoft.com" | ConvertFrom-Json)
+        if ($status.status -eq 'Succeeded') { Write-Host "Update succeeded"; break }
+        elseif ($status.status -in @('Failed', 'Cancelled')) {
+            throw "updateDefinition LRO $($status.status): $($status.error.message)"
+        }
+    }
+}
+```
+
+### Example 2: Add a Filter Operator with a DerivedStream
+
+**Prompt**: "Add a filter to my SensorIngestion Eventstream that keeps only events where No_Bikes > 5 and expose the filtered output as a DerivedStream."
+
+> **Important**: Adding a Filter operator node alone does not redirect the DefaultStream.
+> To make the filtered output consumable, wire a DerivedStream (or destination) to the
+> filter's output via `inputNodes`.
+
+```powershell
+# 1. Discover workspace + Eventstream IDs
+$wsId = (az rest --method get `
+  --url "https://api.fabric.microsoft.com/v1/workspaces" `
+  --resource "https://api.fabric.microsoft.com" `
+  --query "value[?displayName=='dev'] | [0].id" -o tsv)
+if (-not $wsId) { throw "Workspace 'dev' not found" }
+
+$esId = (az rest --method get `
+  --url "https://api.fabric.microsoft.com/v1/workspaces/$wsId/eventstreams" `
+  --resource "https://api.fabric.microsoft.com" `
+  --query "value[?displayName=='SensorIngestion'] | [0].id" -o tsv)
+if (-not $esId) { throw "Eventstream 'SensorIngestion' not found" }
+
+# 2. Get current definition (handles LRO if API returns 202)
+$respJson = az rest --method post `
+  --url "https://api.fabric.microsoft.com/v1/workspaces/$wsId/eventstreams/$esId/getDefinition" `
+  --resource "https://api.fabric.microsoft.com" `
+  --headers "Content-Type=application/json" `
+  --body '{}'
+if ($LASTEXITCODE -ne 0 -or -not $respJson) { throw "getDefinition request failed" }
+$resp = $respJson | ConvertFrom-Json
+
+if ($resp.definition) {
+    $def = $resp  # Synchronous — got definition immediately
+} elseif ($resp.operationId) {
+    # Asynchronous (LRO) — poll operation status
+    $def = $null
+    for ($i = 0; $i -lt 12; $i++) {
+        Start-Sleep -Seconds 5
+        $status = (az rest --method get `
+          --url "https://api.fabric.microsoft.com/v1/operations/$($resp.operationId)" `
+          --resource "https://api.fabric.microsoft.com" | ConvertFrom-Json)
+        if ($status.status -eq 'Succeeded') {
+            $def = (az rest --method get `
+              --url "https://api.fabric.microsoft.com/v1/operations/$($resp.operationId)/result" `
+              --resource "https://api.fabric.microsoft.com" | ConvertFrom-Json)
+            break
+        } elseif ($status.status -in @('Failed', 'Cancelled')) {
+            throw "getDefinition LRO $($status.status): $($status.error.message)"
+        }
+    }
+    if (-not $def.definition) { throw "getDefinition LRO timed out (last status: $($status.status))" }
+} else {
+    throw "getDefinition returned neither a definition nor an operationId"
+}
+
+# 3. Decode existing topology
+$esPart = $def.definition.parts | Where-Object { $_.path -eq 'eventstream.json' } | Select-Object -First 1
+if (-not $esPart) { throw "eventstream.json part not found in definition" }
+$topology = [Text.Encoding]::UTF8.GetString(
+  [Convert]::FromBase64String($esPart.payload)) | ConvertFrom-Json
+
+# 4. Add Filter operator (PascalCase name — no underscores or hyphens)
+#    Column: expressionType + columnName; Value: expressionType + dataType + value
+$filter = @{
+    name = "FilterLowBikes"
+    type = "Filter"
+    inputNodes = @(@{ name = "SensorIngestion-stream" })
+    properties = @{
+        conditions = @(@{
+            operatorType = "GreaterThan"
+            column = @{
+                expressionType = "ColumnReference"
+                node = $null
+                columnName = "No_Bikes"
+                columnPath = $null
+            }
+            value = @{
+                expressionType = "Literal"
+                dataType = "BigInt"
+                value = "5"
+            }
+        })
+    }
+}
+$existingOps = @($topology.operators | Where-Object { $_ -ne $null })
+$topology.operators = $existingOps + @($filter)
+
+# 5. Add DerivedStream wired to filter output (makes filtered data available)
+$derivedStream = @{
+    name = "FilteredOutput"
+    type = "DerivedStream"
+    properties = @{
+        inputSerialization = @{ type = "Json"; properties = @{ encoding = "UTF8" } }
+    }
+    inputNodes = @(@{ name = "FilterLowBikes" })
+}
+$existingStreams = @($topology.streams | Where-Object { $_ -ne $null })
+$topology.streams = $existingStreams + @($derivedStream)
+
+# 6. Re-encode and update
+$topologyJson = $topology | ConvertTo-Json -Depth 10 -Compress
+$topologyB64 = [Convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes($topologyJson))
+$esPart.payload = $topologyB64
+
+$defBody = @{ definition = @{ parts = $def.definition.parts } } | ConvertTo-Json -Depth 5 -Compress
+$defFile = Join-Path ([IO.Path]::GetTempPath()) "es_def.json"
+[IO.File]::WriteAllText($defFile, $defBody, [System.Text.UTF8Encoding]::new($false))
+# Note: updateDefinition returns 202 Accepted (LRO). Poll until completion.
+$updateJson = az rest --method post `
+  --url "https://api.fabric.microsoft.com/v1/workspaces/$wsId/eventstreams/$esId/updateDefinition" `
+  --resource "https://api.fabric.microsoft.com" `
+  --headers "Content-Type=application/json" `
+  --body "@$defFile"
+if ($LASTEXITCODE -ne 0) { throw "updateDefinition request failed" }
+
+$updateResp = $updateJson | ConvertFrom-Json -ErrorAction SilentlyContinue
+if ($updateResp.operationId) {
+    for ($i = 0; $i -lt 12; $i++) {
+        Start-Sleep -Seconds 5
+        $status = (az rest --method get `
+          --url "https://api.fabric.microsoft.com/v1/operations/$($updateResp.operationId)" `
+          --resource "https://api.fabric.microsoft.com" | ConvertFrom-Json)
+        if ($status.status -eq 'Succeeded') { Write-Host "Update succeeded"; break }
+        elseif ($status.status -in @('Failed', 'Cancelled')) {
+            throw "updateDefinition LRO $($status.status): $($status.error.message)"
+        }
+    }
+}
+```
+
+### Example 3: Deploy Full Topology (Create with Inline Definition)
+
+**Prompt**: "Create a complete Eventstream called EventPipeline with a Custom Endpoint source, a filter for high-value events, and a DerivedStream for the filtered output."
+
+> **Note**: This uses the Fabric Items API (`POST /items`) to create the Eventstream with its
+> definition in a single call, rather than create-then-update.
+
+```powershell
+# 1. Discover workspace ID
+$wsId = (az rest --method get `
+  --url "https://api.fabric.microsoft.com/v1/workspaces" `
+  --resource "https://api.fabric.microsoft.com" `
+  --query "value[?displayName=='dev'] | [0].id" -o tsv)
+if (-not $wsId) { throw "Workspace 'dev' not found" }
+
+# 2. Build complete topology with filter + DerivedStream
+$topology = @{
+    compatibilityLevel = "1.0"
+    sources = @(@{
+        name = "CustomSource"
+        type = "CustomEndpoint"
+        properties = @{}
+    })
+    streams = @(
+        @{
+            name = "EventPipeline-stream"
+            type = "DefaultStream"
+            properties = @{}
+            inputNodes = @(@{ name = "CustomSource" })
+        }
+        @{
+            name = "FilteredEvents"
+            type = "DerivedStream"
+            properties = @{
+                inputSerialization = @{ type = "Json"; properties = @{ encoding = "UTF8" } }
+            }
+            inputNodes = @(@{ name = "FilterPremium" })
+        }
+    )
+    operators = @(@{
+        name = "FilterPremium"
+        type = "Filter"
+        inputNodes = @(@{ name = "EventPipeline-stream" })
+        properties = @{
+            conditions = @(@{
+                operatorType = "GreaterThan"
+                column = @{
+                    expressionType = "ColumnReference"
+                        node = $null
+                        columnName = "Amount"
+                        columnPath = $null
+                    }
+                value = @{
+                    expressionType = "Literal"
+                    dataType = "BigInt"
+                    value = "100"
+                }
+            })
+        }
+    })
+    destinations = @()
+}
+
+# 3. Create with inline definition (single API call)
+$topologyJson = $topology | ConvertTo-Json -Depth 10 -Compress
+$topologyB64 = [Convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes($topologyJson))
+
+$body = @{
+    displayName = "EventPipeline"
+    type = "Eventstream"
+    definition = @{
+        parts = @(@{
+            path = "eventstream.json"
+            payload = $topologyB64
+            payloadType = "InlineBase64"
+        })
+    }
+} | ConvertTo-Json -Depth 5 -Compress
+$bodyFile = Join-Path ([IO.Path]::GetTempPath()) "es_create_full.json"
+[IO.File]::WriteAllText($bodyFile, $body, [System.Text.UTF8Encoding]::new($false))
+
+# Create-with-definition returns 202 Accepted (LRO). Poll until completion.
+$createJson = az rest --method post `
+  --url "https://api.fabric.microsoft.com/v1/workspaces/$wsId/items" `
+  --resource "https://api.fabric.microsoft.com" `
+  --headers "Content-Type=application/json" `
+  --body "@$bodyFile"
+if ($LASTEXITCODE -ne 0) { throw "Create Eventstream request failed" }
+
+$createResp = $createJson | ConvertFrom-Json -ErrorAction SilentlyContinue
+if ($createResp.operationId) {
+    for ($i = 0; $i -lt 12; $i++) {
+        Start-Sleep -Seconds 5
+        $status = (az rest --method get `
+          --url "https://api.fabric.microsoft.com/v1/operations/$($createResp.operationId)" `
+          --resource "https://api.fabric.microsoft.com" | ConvertFrom-Json)
+        if ($status.status -eq 'Succeeded') { Write-Host "Create succeeded"; break }
+        elseif ($status.status -in @('Failed', 'Cancelled')) {
+            throw "Create LRO $($status.status): $($status.error.message)"
+        }
+    }
+}
+```
+
+### Example 4: Delete an Eventstream
+
+**Prompt**: "Delete the SensorIngestion Eventstream from my dev workspace."
+
+```powershell
+# 1. Discover workspace + Eventstream IDs
+$wsId = (az rest --method get `
+  --url "https://api.fabric.microsoft.com/v1/workspaces" `
+  --resource "https://api.fabric.microsoft.com" `
+  --query "value[?displayName=='dev'] | [0].id" -o tsv)
+if (-not $wsId) { throw "Workspace 'dev' not found" }
+
+$esId = (az rest --method get `
+  --url "https://api.fabric.microsoft.com/v1/workspaces/$wsId/eventstreams" `
+  --resource "https://api.fabric.microsoft.com" `
+  --query "value[?displayName=='SensorIngestion'] | [0].id" -o tsv)
+if (-not $esId) { throw "Eventstream 'SensorIngestion' not found" }
+
+# 2. Delete
+az rest --method delete `
+  --url "https://api.fabric.microsoft.com/v1/workspaces/$wsId/eventstreams/$esId" `
+  --resource "https://api.fabric.microsoft.com"
+```

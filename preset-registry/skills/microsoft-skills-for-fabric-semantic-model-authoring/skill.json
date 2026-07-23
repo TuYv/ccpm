@@ -1,7 +1,7 @@
 {
   "id": "microsoft-skills-for-fabric-semantic-model-authoring",
   "name": "semantic-model-authoring",
-  "description": "> Develops and manages Power BI semantic models across Desktop, PBIP projects, and Fabric Service. Handles: (1) creating new models (Import, DirectQuery, Direct Lake), (2) editing existing models (e.g. measures, tables, columns, relationships), (3) deploying models to Fabric workspaces, (4) working with PBIP project files, (5) refreshing semantic models, (6) configuring data sources and permissions, (7) DAX performance optimization. Supports both Power BI Desktop and Fabric Service development w",
+  "description": "> Develops and manages Power BI semantic models across Desktop, PBIP projects, and Fabric Service. Handles: (1) creating new models (Import, DirectQuery, Direct Lake), (2) editing existing models (e.g. measures, tables, columns, relationships), (3) preparing semantic models for AI/Copilot consumption, (4) deploying models to Fabric workspaces, (5) working with PBIP project files, (6) refreshing semantic models, (7) configuring data sources and permissions, (8) DAX performance optimization. Suppo",
   "category": "数据分析",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/microsoft/skills-for-fabric/blob/main/plugins/fabric-skills/skills/semantic-model-authoring/SKILL.md",
     "path": "plugins/fabric-skills/skills/semantic-model-authoring/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-23T09:51:21.218Z",
-    "stars": 858,
+    "discovered_at": "2026-07-23T12:16:57.917Z",
+    "stars": 861,
     "language": "Python",
-    "pushed_at": "2026-07-23T08:42:26Z",
+    "pushed_at": "2026-07-23T10:07:18Z",
     "license": "MIT"
   }
 }

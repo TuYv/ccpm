@@ -4,14 +4,15 @@ description: >
   Develops and manages Power BI semantic models across Desktop, PBIP projects, and Fabric Service. Handles:
   (1) creating new models (Import, DirectQuery, Direct Lake),
   (2) editing existing models (e.g. measures, tables, columns, relationships),
-  (3) deploying models to Fabric workspaces,
-  (4) working with PBIP project files,
-  (5) refreshing semantic models,
-  (6) configuring data sources and permissions,
-  (7) DAX performance optimization.
+  (3) preparing semantic models for AI/Copilot consumption,
+  (4) deploying models to Fabric workspaces,
+  (5) working with PBIP project files,
+  (6) refreshing semantic models,
+  (7) configuring data sources and permissions,
+  (8) DAX performance optimization.
   Supports both Power BI Desktop and Fabric Service development workflows. For read-only DAX queries, use `semantic-model-consumption`.
   Does NOT handle report layout/visual authoring, workspace administration, or RLS/OLS role membership management.
-  Triggers: "create semantic model", "edit semantic model", "add a DAX measure to semantic model", "refresh semantic model", "set semantic model permissions", "Prepare semantic model for AI/Copilot".
+  Triggers: "create semantic model", "edit semantic model", "add a DAX measure to semantic model", "refresh semantic model", "set semantic model permissions", "Prepare semantic model for AI or Copilot".
 ---
 
 > **Update Check — ONCE PER SESSION (mandatory)**
@@ -182,7 +183,7 @@ Steps:
 
 ## Workflow: Semantic Model AI Readiness
 
-**When this applies:** User asks to make a semantic model ready for Microsoft Fabric Copilot, a Power BI Data Agent, or any conversational BI experience. Triggers include "Copilot readiness", "AI readiness", "prep for AI", "prepare model for Copilot".
+**When this applies:** User asks to make a semantic model ready for Microsoft Fabric Copilot, a Power BI Data Agent, or any conversational BI experience. Triggers include "Copilot readiness", "AI readiness", "Prep for AI", "prepare model for Copilot".
 
 Load [semantic-model-ai-readiness.md](./references/semantic-model-ai-readiness.md) before starting.
 
@@ -190,9 +191,9 @@ Steps:
 
 1. **Confirm scope & gather context** - via `ask_user`, confirm consumption mode (reports only / conversational BI / both) and model stability per the *When to Apply* section. Collect business context (process, key metrics, common natural-language questions, vocabulary). Do not invent.
 2. **Connect & inventory** - per [Connecting to a Semantic Model](#connecting-to-a-semantic-model). Capture model contents and the source location (PBIP / Fabric workspace / Desktop-only).
-3. **Evaluate & route** - walk the [Readiness Checklist](./references/semantic-model-ai-readiness.md#readiness-checklist) in order; for each gap, classify the fix per [Editing Capability by Source and Tier](./references/semantic-model-ai-readiness.md#editing-capability-by-source-and-tier) (MCP-editable TOM metadata vs PBIP-only artifact).
+3. **Evaluate & route** - walk the [Readiness Checklist](./references/semantic-model-ai-readiness.md#readiness-checklist) in order; for each gap, classify the fix per [Editing Capability](./references/semantic-model-ai-readiness.md#editing-capability) (agent-editable TOM metadata vs AI-specific artifacts the user configures in the Power BI "Prep data for AI" UI).
 4. **Present findings** grouped by severity, each tagged with routing (agent-applicable vs user-action-required). Wait for approval.
-5. **Apply approved changes** - TOM metadata via [Modify an Existing Model](#workflow-modify-an-existing-model); PBIP-only artifacts via direct file edits or Fabric `getDefinition`/`updateDefinition` round-trip; Desktop-only PBIX -> instruct user.
+5. **Apply approved changes** - apply TOM metadata fixes via [Modify an Existing Model](#workflow-modify-an-existing-model); for AI instructions, AI Data Schema, and Verified Answers, instruct the user to configure them in the Power BI "Prep data for AI" UI and, only if the user agrees, offer suggestions per the readiness reference; Desktop-only PBIX -> instruct user.
 6. **Save, validate, recommend live testing** - per [Saving Changes to a Semantic Model](#saving-changes-to-a-semantic-model) and [Validation Checklist](#validation-checklist); advise the user to test representative natural-language prompts in Copilot or the Data Agent and iterate.
 
 ---

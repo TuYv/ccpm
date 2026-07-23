@@ -1,21 +1,20 @@
 ---
 name: dataflows-consumption-cli
 description: >
-  Monitor, inspect, and query saved Fabric Dataflows Gen2 via read-only CLI.
-  List dataflows, decode base64 definitions (mashup.pq, queryMetadata.json,
-  .platform), discover parameters, retrieve refresh status and job history,
-  classify queries by staging, and execute queries against saved dataflows via
-  the read-side `executeQuery` mashup engine (Arrow IPC response). Runs
-  persisted or ad-hoc read-only executeQuery requests; parses/renders Arrow
-  results. For previewing
-  candidate M before persisting, or for `supportedConnectionTypes`/`credentialType`
-  discovery and connection configuration, use `dataflows-authoring-cli`
-  (not this skill).
-  Triggers: "list dataflows", "inspect dataflow", "decode dataflow definition",
-  "dataflow parameters", "dataflow refresh status", "refresh history",
+  Monitor, inspect, and query saved Fabric Dataflows Gen2 with read-only CLI.
+  List dataflows, decode mashup.pq/queryMetadata.json/.platform, inspect parameters,
+  refresh status, job history, staging, and destinations, or run saved/ad-hoc
+  read-only executeQuery requests and parse Arrow. Handle explicit
+  requests to mutate through the Dataflows consumption or read-only path by
+  refusing the write; offer `dataflows-authoring-cli` only after separate
+  confirmation. For candidate M before persistence or connection configuration, use
+  `dataflows-authoring-cli`. Triggers: "list dataflows", "inspect dataflow",
+  "decode dataflow definition", "dataflow parameters", "refresh history",
   "last refresh status", "dataflow job history", "execute dataflow query",
-  "executeQuery saved query", "executeQuery fetch rows", "ad-hoc dataflow query",
-  "parse Arrow response", "Arrow IPC", "dataflow staging analysis".
+  "executeQuery saved query", "executeQuery fetch rows", "ad-hoc dataflow
+  query", "parse Arrow response", "Arrow IPC", "dataflow staging analysis",
+  "use Dataflows consumption path to delete", "Dataflows read-only mutation
+  refusal", "separate Dataflows authoring handoff".
 ---
 
 > **Update Check — ONCE PER SESSION (mandatory)**
@@ -36,9 +35,12 @@ description: >
 > call (e.g. `az rest --method delete/put/patch` against a dataflow, or a POST that
 > creates/overwrites). The only permitted POSTs are the explicitly read-side
 > `getDefinition` and `executeQuery` operations documented below.
-> If the user asks to delete, create, modify, or persist a dataflow, **refuse the
-> mutation** and route them to `dataflows-authoring-cli` — do not run the destructive
-> command, even if the user provides the exact API call.
+> If the user asks to delete, create, modify, or persist a dataflow, **explicitly
+> refuse the mutation in the final response** and name
+> `dataflows-authoring-cli` only as a future handoff. Do not invoke that skill,
+> perform discovery in preparation for the write, or continue the write workflow
+> in the same turn. A mutation may begin only after the user explicitly confirms
+> a separate authoring request.
 
 # dataflows-consumption-cli — Dataflows Gen2 Consumption via CLI
 

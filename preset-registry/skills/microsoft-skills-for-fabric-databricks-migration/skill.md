@@ -2,7 +2,7 @@
 name: databricks-migration
 description: >
   Port Databricks notebooks and jobs to Microsoft Fabric. Provides an exhaustive dbutils
-  to notebookutils substitution table: fs operations (mount removal via OneLake Shortcuts),
+  to notebookutils substitution table: fs operations (runtime mounts or OneLake Shortcuts),
   secret scope to Key Vault URL conversion, notebook run and exit, widget replacement with
   parameter-tagged cells, and library install replacement with Fabric Environments.
   Covers Unity Catalog three-level namespace reduction to Lakehouse two-level schemas,
@@ -24,9 +24,11 @@ description: >
 > **CRITICAL NOTES**
 > 1. To find workspace details (including its ID) from a workspace name: list all workspaces, then use JMESPath filtering
 > 2. To find item details (including its ID) from workspace ID, item type, and item name: list all items of that type in that workspace, then use JMESPath filtering
-> 3. `dbutils.widgets` has **no direct equivalent** in Fabric — use notebook parameters (cell tag `parameters`) or `notebookutils.runtime.context` for context injection
+> 3. `dbutils.widgets` has **no direct equivalent** in Fabric — use notebook parameters (cell tag `parameters`); `notebookutils.runtime.context` is execution metadata, not parameter storage. If showing context fields, use documented names such as `currentWorkspaceId`, `currentWorkspaceName`, `currentNotebookId`, `currentNotebookName`, `isForPipeline`, and `isForInteractive`; `activityId` is the Livy job ID
 > 4. `dbutils.library` (runtime library install) has **no equivalent** — use Fabric Environments for reproducible library management
 > 5. Unity Catalog uses a 3-level namespace (`catalog.schema.table`); Fabric Lakehouse uses 2-level (`schema.table` within a named Lakehouse)
+> 6. For an under-specified workspace-wide migration, ask focused questions about inventory, workload topology, security, data locations, and runtime constraints before recommending a Fabric topology
+> 7. A completed Fabric migration must not retain executable `dbutils.*` calls in dual-runtime branches or `try/except` guards — replace the calls and Databricks paths outright
 
 # Databricks → Microsoft Fabric Migration
 
@@ -53,7 +55,7 @@ For Fabric Warehouse DDL/DML authoring, see [sqldw-authoring-cli](../sqldw-autho
 | Before/After Code Patterns | [code-patterns.md](resources/code-patterns.md) |
 | Cluster Config → Fabric Spark Pools | [§ Cluster Config → Fabric Spark Pools](#cluster-config--fabric-spark-pools) |
 | Databricks Jobs → Spark Job Definitions | [§ Databricks Jobs → Spark Job Definitions](#databricks-jobs--spark-job-definitions) |
-| Delta Sharing → OneLake Shortcuts | [§ Delta Sharing → OneLake Shortcuts](#delta-sharing--onelake-shortcuts) |
+| Delta Sharing → Fabric External Data Sharing and OneLake Shortcuts | [§ Delta Sharing → Fabric External Data Sharing and OneLake Shortcuts](#delta-sharing--fabric-external-data-sharing-and-onelake-shortcuts) |
 | MLflow → Fabric ML Experiments | [§ MLflow → Fabric ML Experiments](#mlflow--fabric-ml-experiments) |
 | Must / Prefer / Avoid | [§ Must / Prefer / Avoid](#must--prefer--avoid) |
 | Authentication & Token Acquisition | [COMMON-CORE.md § Authentication](../../common/COMMON-CORE.md#authentication--token-acquisition) |
@@ -73,7 +75,7 @@ For Fabric Warehouse DDL/DML authoring, see [sqldw-authoring-cli](../sqldw-autho
 | **Delta Live Tables (DLT)** | **Fabric Notebooks** + **Data Pipelines** | No DLT equivalent — rewrite DLT datasets as parameterized notebook cells with pipeline orchestration |
 | **Databricks SQL Warehouses** | **Fabric Warehouse** or **Lakehouse SQL Endpoint** | SQL warehouse sessions → Warehouse (for write) or SQL Endpoint (for read-only) |
 | **MLflow Tracking** | **Fabric ML Experiments** | MLflow SDK is supported in Fabric — see [§ MLflow](#mlflow--fabric-ml-experiments) |
-| **Delta Sharing** | **OneLake Shortcuts** + **Fabric external data sharing** | See [§ Delta Sharing → OneLake Shortcuts](#delta-sharing--onelake-shortcuts) |
+| **Delta Sharing** | **OneLake Shortcuts** + **Fabric external data sharing** | See [§ Delta Sharing → Fabric External Data Sharing and OneLake Shortcuts](#delta-sharing--fabric-external-data-sharing-and-onelake-shortcuts) |
 | **Databricks Feature Store** | **Fabric Feature Store** (preview) | Direct conceptual equivalent; APIs differ |
 | **dbutils** (all sub-modules) | **`notebookutils`** (most sub-modules) | See [dbutils-to-notebookutils.md](resources/dbutils-to-notebookutils.md) for full mapping |
 
@@ -145,14 +147,16 @@ The complete side-by-side API table is in [dbutils-to-notebookutils.md](resource
 
 ---
 
-## Delta Sharing → OneLake Shortcuts
+## Delta Sharing → Fabric External Data Sharing and OneLake Shortcuts
 
 | Databricks Delta Sharing Pattern | Fabric Equivalent |
 |---|---|
-| Provider publishes a Delta share | Fabric **external data sharing** (preview) or OneLake Shortcut to ADLS Gen2 where Delta data resides |
-| Recipient reads shared data | Create a **OneLake Shortcut** pointing to the ADLS Gen2 Delta table; access via Lakehouse |
+| Provider publishes a Delta share | Fabric **external data sharing** for cross-tenant Fabric data, or a OneLake Shortcut to ADLS Gen2 where the Delta data resides |
+| Recipient reads shared data | Accept the external data share into a Lakehouse (Fabric creates a read-only OneLake Shortcut), or create a direct **OneLake Shortcut** to accessible ADLS Gen2 data |
 | Cross-workspace table sharing within org | **OneLake Shortcuts** pointing to another workspace's Lakehouse tables — no data copy |
-| Cross-tenant sharing | Fabric **external data sharing** (GA roadmap) — use ADLS Gen2 shortcut as interim |
+| Cross-tenant sharing | Fabric **external data sharing** — live, read-only, in-place access through a shortcut in the recipient tenant |
+
+When producing a migration workload map, include both paths: direct OneLake Shortcuts for accessible ADLS or same-tenant OneLake data, and Fabric external data sharing for native cross-tenant recipient sharing.
 
 ---
 
@@ -175,6 +179,7 @@ Fabric ML Experiments are built on the MLflow SDK — most code is directly port
 ## Must / Prefer / Avoid
 
 ### MUST DO
+- **Inventory before prescribing a workspace topology** — for workspace-wide requests that omit workload inventory, dependencies, security requirements, data locations, or runtime constraints, ask focused clarifying questions and present conditional choices before selecting a Fabric design
 - **Replace all `dbutils.*` calls** using the mapping in [dbutils-to-notebookutils.md](resources/dbutils-to-notebookutils.md) — `dbutils` is not available in Fabric notebooks
 - **Migrate `dbutils.fs.mount()` to `notebookutils.fs.mount()`** (✅ supported — Microsoft Entra default, or `accountKey` / `sasToken` from Key Vault). For cross-workspace or persistent sharing, prefer **OneLake Shortcuts** instead. Always pair `mount()` with `unmount()` in `try/finally` — Fabric mounts are not released automatically on session end
 - **Replace `dbutils.secrets.get(scope, key)`** with `notebookutils.credentials.getSecret(keyVaultUrl, secretName)` — secret scopes map to Azure Key Vault URLs
@@ -192,7 +197,9 @@ Fabric ML Experiments are built on the MLflow SDK — most code is directly port
 - **Starter Pool** for migrating interactive notebook workflows — eliminates cluster startup time that was a common pain point in Databricks job clusters
 
 ### AVOID
-- **Do not import `dbutils` or attempt `dbutils = ...` assignments** in Fabric notebooks — this will raise `NameError`; always use `notebookutils`
+- **Do not prescribe a one-size-fits-all workspace topology** when the source inventory and migration constraints are missing
+- **Do not import `dbutils` or attempt `dbutils = ...` assignments** in Fabric notebooks — import attempts fail with `ModuleNotFoundError`, while unresolved `dbutils` references raise `NameError`; always use `notebookutils`
+- **Do not retain `dbutils.*` calls behind runtime-detection guards** (`try/except`, `if IS_DATABRICKS`) — replace the calls and Databricks paths outright with `notebookutils` and Fabric paths
 - **Do not assume Unity Catalog governance policies transfer automatically** — RBAC, row-level security, and column masking must be reconfigured in Fabric using workspace roles and Lakehouse permissions
 - **Do not use `%pip install` in production Fabric notebooks** at runtime — use Fabric Environments for stable, versioned library management
 - **Do not attempt to port Delta Live Tables (DLT) pipelines verbatim** — DLT has no Fabric equivalent; rewrite as parameterized notebooks orchestrated by Fabric Pipelines

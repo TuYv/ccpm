@@ -1,15 +1,12 @@
 ---
 name: activator-authoring-cli
 description: >
-  Create alerts, notifications, and automated actions on Fabric data and events
-  via Fabric REST API and `az rest` CLI. **Invoke this skill** whenever the user
-  wants to:
-  (1) create, update, or delete an alert or notification flow,
-  (2) send a Teams message, email, or run a Fabric item when something happens,
-  (3) connect alert logic to Eventhouse, Eventstream, Real-time Hub, or DTB / Ontology data,
-  (4) adjust thresholds, filters, event triggers, or actions,
-  (5) troubleshoot or change an existing Activator/Reflex definition.
-  Invoke this skill **before** asking clarifying questions — clarification is part of this skill, not a preamble to it.
+  Author Fabric Activator rules and Reflex items through Fabric REST API and `az rest`.
+  Invoke for write intents: create or delete items; add or update rule definitions;
+  configure thresholds, filters, Teams/email notifications, Fabric item actions, and
+  Eventhouse/Eventstream/Real-Time Hub/DTB/Ontology sources. Pure GET/explain prompts
+  belong to `activator-consumption-cli`. Clarification for missing sources, thresholds,
+  recipients, and action targets happens inside this skill.
   Triggers: "create an alert", "create an activator", "create a reflex",
   "create an activator item", "create an alert item",
   "notify me when", "let me know when",
@@ -201,6 +198,17 @@ Example rule entity:
 - In the rule's `FabricItemBinding`, set `fabricJobConnectionDocumentId` to the standalone `fabricItemAction-v1.uniqueIdentifier`
 - See [action-types.md](references/action-types.md) for per-target schemas and UDF-specific gotchas (`itemType` vs readback `FunctionSet`, `subitemId`, canonical `parameterType` mapping, dynamic parameter shape)
 
+### Reference Integrity Preflight
+
+Before every `updateDefinition`, validate the exact entity array you will send:
+
+1. Build the set of every top-level `uniqueIdentifier` in `ReflexEntities.json`.
+2. Confirm every `parentContainer.targetUniqueIdentifier`, `parentObject.targetUniqueIdentifier`, `SourceReference.entityId`, `EventReference.entityId`, `AttributeReference.entityId`, and `fabricJobConnectionDocumentId` resolves to an entity in that same array (or to an unchanged entity from the latest decoded readback that is included in the re-encoded array).
+3. Confirm each reference points to the expected entity type: containers to `container-v1`, source/event/attribute/rule/object references to `timeSeriesView-v1` when the template expects a view, source references to the source entity, and Fabric item action bindings to `fabricItemAction-v1`.
+4. If any reference is missing, rebuild the graph from the latest `getDefinition` output and do not call `updateDefinition`.
+
+`FailedToResolveEntity` with `DocumentType timeSeriesView not found` means a rule, attribute, split event, or event reference points at a `timeSeriesView-v1` GUID that is not present in the submitted definition. Treat that as an entity-wiring bug to fix before retrying, not as a transient backend failure.
+
 ### Entity Wiring Summary
 
 ```text
@@ -277,11 +285,23 @@ Use `json.dumps()` to stringify. **Do NOT use PowerShell's `ConvertTo-Json`.**
 
 ---
 
+## Source Validation Gate
+
+Before authoring **any** rule that references a signal (a measurement, field, or event property), confirm the source is real. A requested source only counts as **real** after all three checks pass:
+
+1. **Resolve** the source in the **requested** workspace only -- do not search or substitute another workspace.
+2. **Validate** that the requested signal column/field exists on that source (KQL table/column, Eventstream field, Real-Time Hub event property, or DTB / Ontology property).
+3. **Observe** at least one representative row/event/sample carrying that signal -- run the KQL / DTB query or inspect the stream and confirm it actually returns data.
+
+Treat **schema-only**, **zero-row**, **non-emitting**, or **stale** evidence as **missing source data**, not a real source. When the source is missing, **stop and ask** which source and fields provide the signal (plus any missing threshold, recipient, or action details). Do **not** create a Reflex or call `updateDefinition` on any existing Activator / Eventstream to force-fit the request, and state plainly that **no Activator / Reflex / Eventstream was created or updated**. The only exception is when the user explicitly instructs you to author against a future / not-yet-emitting source.
+
+---
+
 ## Must / Prefer / Avoid
 
 ### MUST DO
 
-- **Confirm a real source before authoring** -- when the request targets a specific signal or measurement (for example "temperature > 30"), first resolve the workspace and verify that a discoverable source (Eventhouse/KQL table, Eventstream, Real-Time Hub, or DTB / Ontology) actually exposes that signal. If none does, **stop and ask** which source and fields provide it (plus any missing threshold, recipient, or action details) instead of authoring the rule
+- **Confirm a real source before authoring** -- follow the [Source Validation Gate](#source-validation-gate): resolve the source in the requested workspace, validate the requested signal column/field, and observe at least one representative row/event/sample before authoring. Schema-only, zero-row, non-emitting, or stale evidence is **missing source data** -- **stop and ask** which source and fields provide it (plus any missing threshold, recipient, or action details), and state that no Activator/Reflex/Eventstream was created or updated, instead of authoring the rule. If the user explicitly instructs authoring against a future / not-yet-emitting source, state that assumption and continue without claiming the source was observed.
 - **Always use `--resource https://api.fabric.microsoft.com`** with `az rest` — without it, token audience is wrong
 - **Always send `--body '{}'`** for `getDefinition` — it is a POST and omitting the body can cause 411 errors
 - **Always Base64-encode** `ReflexEntities.json` payload when calling `updateDefinition`
@@ -289,6 +309,7 @@ Use `json.dumps()` to stringify. **Do NOT use PowerShell's `ConvertTo-Json`.**
 - **Always use the correct template type** — `AttributeTrigger` for value-based conditions (has ScalarSelectStep + ScalarDetectStep), `EventTrigger` for event-based firing (has FieldsDefaultsStep + EventDetectStep, no ScalarDetectStep)
 - **Always use new GUIDs** for `uniqueIdentifier` when adding entities — duplicate GUIDs cause corruption
 - **Always update all cross-references** when changing a `uniqueIdentifier` — other entities reference it via `targetUniqueIdentifier`
+- **Always run the Reference Integrity Preflight before `updateDefinition`** -- every `targetUniqueIdentifier`, `entityId`, and `fabricJobConnectionDocumentId` in the payload must resolve to an entity included in the submitted `ReflexEntities.json`
 - **Handle LRO responses** — `create`, `getDefinition`, and `updateDefinition` may return 202; poll the `Location` header
 
 ### PREFER
@@ -308,7 +329,8 @@ Use `json.dumps()` to stringify. **Do NOT use PowerShell's `ConvertTo-Json`.**
 - **Pre-filtering conditions in the KQL query** — return all data from KQL and let the Activator rule steps handle thresholds, text conditions, and dimensional filters. KQL is the data source, not the rule engine
 - **Inline JSON in PowerShell `az rest --body`** — PowerShell mangles quotes and special characters. Always write JSON to a temp file with `[System.IO.File]::WriteAllText($path, $json, [System.Text.UTF8Encoding]::new($false))` and pass `--body @$path`
 - **Reusing display names after deletion** — soft-deleted items hold their name for several minutes. Use a unique name or hard-delete first
-- **Force-fitting a request onto unrelated existing items** -- when no source exposes the requested signal, do NOT create a Reflex or call `updateDefinition` on an unrelated existing Activator / Eventstream to satisfy it; ask for the missing source first
+- **Force-fitting a request onto unrelated existing items** -- when no source clears the [Source Validation Gate](#source-validation-gate) (missing, schema-only, zero-row, non-emitting, or stale), do NOT create a Reflex or call `updateDefinition` on an unrelated existing Activator / Eventstream to satisfy it; ask for the missing source first
+- **Read-only listing or inspection** -- use [activator-consumption-cli](../activator-consumption-cli/SKILL.md) for prompts like "show me all Activators", "list Activators", "show the rules", "inspect this alert", or "decode the definition". This authoring skill should only run when the user asks to create, update, delete, configure, or change something.
 
 ---
 

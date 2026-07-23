@@ -1,7 +1,7 @@
 {
   "id": "microsoft-skills-for-fabric-check-updates",
   "name": "check-updates",
-  "description": "> Check for skills-for-fabric marketplace updates at session start. Compares local version against GitHub releases and shows changelog if updates are available. Use when the user wants to: (1) check for skill updates, (2) see what's new in skills-for-fabric, (3) verify current version. Triggers: \"check for updates\", \"am I up to date\", \"what version\", \"update skills\", \"show changelog\".",
+  "description": "> Check an installed skills-for-fabric plugin bundle or git clone for updates, show the matching changelog, and provide host-appropriate update guidance. Use when the user wants to: (1) check for skill updates, (2) see what changed, (3) verify the installed version. Triggers: \"check for updates\", \"am I up to date\", \"what version\", \"update skills\", \"show changelog\".",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/microsoft/skills-for-fabric/blob/main/plugins/fabric-skills/skills/check-updates/SKILL.md",
     "path": "plugins/fabric-skills/skills/check-updates/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-23T09:51:18.835Z",
-    "stars": 858,
+    "discovered_at": "2026-07-23T12:16:55.749Z",
+    "stars": 861,
     "language": "Python",
-    "pushed_at": "2026-07-23T08:42:26Z",
+    "pushed_at": "2026-07-23T10:07:18Z",
     "license": "MIT"
   }
 }

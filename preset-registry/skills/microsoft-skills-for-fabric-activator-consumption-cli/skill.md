@@ -12,7 +12,7 @@ description: >
   **Invoke this skill before answering questions** about an Activator/Reflex item
   in a Fabric workspace — the listing, lookup, and decoding workflows are part of
   this skill, not preamble to it.
-  Triggers: "show my alerts", "what alerts do I have", "inspect this alert",
+  Triggers: "show my alerts", "what alerts do I have", "show me all activators", "inspect this alert",
   "show me the rule", "show me the action", "show me the source",
   "get reflex definition", "list activators", "list alerts",
   "list reflex items", "show activator items", "activator details",

@@ -5,16 +5,16 @@ description: >
   the Items REST API. Discover Eventstreams across workspaces, decode base64 graph
   topologies tracing event flow from source through operators to destination nodes.
   Validate connection IDs, wiring, retention policies (1-90 days), and throughput
-  levels. Retrieve Custom Endpoint Kafka credentials via Topology API. Use to:
-  (1) list Eventstreams, (2) inspect Eventstream topology showing sources and
-  destinations, (3) validate Eventstream configurations, (4) check Eventstream
-  retention policy and throughput level, (5) get connection strings. Triggers:
-  "list eventstreams", "inspect eventstream", "inspect eventstream topology",
-  "eventstream sources and destinations",
-  "eventstream health", "eventstream configuration", "eventstream retention",
-  "eventstream retention policy", "eventstream throughput level",
-  "eventstream connection string", "custom endpoint credentials",
-  "kafka connection", "check eventstream".
+  levels. Retrieve Custom Endpoint Kafka credentials via Topology API. **Invoke
+  this skill** to: (1) list Eventstreams, (2) inspect Eventstream topology showing
+  sources and destinations, (3) validate Eventstream configurations, (4) check
+  Eventstream retention policy and throughput level, (5) get connection strings.
+  Triggers: "list eventstreams", "inspect eventstream",
+  "describe eventstream topology", "eventstream operator nodes",
+  "eventstream sources and destinations", "eventstream health",
+  "eventstream status", "eventstream configuration", "eventstream retention",
+  "eventstream throughput level", "eventstream connection string",
+  "custom endpoint credentials", "check eventstream".
 ---
 
 > **Update Check — ONCE PER SESSION (mandatory)**
@@ -284,3 +284,247 @@ Decode `eventstreamProperties.json` and check:
 - Do NOT assume all source types appear in API enums — preview sources exist only in the UI
 - Do NOT modify Eventstream topology with this consumption skill — use `eventstream-authoring-cli` for writes
 - Do NOT attempt to query event data through the Eventstream API — use downstream skills (eventhouse-consumption-cli, sqldw-consumption-cli) for querying landed data
+
+---
+
+## Examples
+
+> **Platform note** — examples use PowerShell. Always write the JSON body to
+> a temp file via `[IO.File]::WriteAllText()` (no BOM) and pass
+> `--body "@$file"` to `az rest`, rather than inline `--body "..."` which
+> `cmd.exe` can mangle. Use `-Compress` with `ConvertTo-Json` to avoid
+> newline issues. The one safe inline exception is `--body '{}'` for empty bodies.
+> For large workspaces, check for `continuationUri` in list responses to handle
+> pagination.
+
+### Example 1: List All Eventstreams in a Workspace
+
+**Prompt**: "List all Eventstreams in my analytics workspace showing their names and IDs."
+
+```powershell
+# 1. Discover workspace ID
+$wsId = (az rest --method get `
+  --url "https://api.fabric.microsoft.com/v1/workspaces" `
+  --resource "https://api.fabric.microsoft.com" `
+  --query "value[?displayName=='analytics'] | [0].id" -o tsv)
+if (-not $wsId) { throw "Workspace 'analytics' not found" }
+
+# 2. List Eventstreams (handles pagination)
+$allItems = @()
+$resp = az rest --method get `
+  --url "https://api.fabric.microsoft.com/v1/workspaces/$wsId/eventstreams" `
+  --resource "https://api.fabric.microsoft.com" | ConvertFrom-Json
+$allItems += $resp.value
+while ($resp.continuationUri) {
+    $resp = az rest --method get `
+      --url $resp.continuationUri `
+      --resource "https://api.fabric.microsoft.com" | ConvertFrom-Json
+    $allItems += $resp.value
+}
+$allItems | Select-Object displayName, id, description | Format-Table
+```
+
+### Example 2: Inspect Eventstream Topology
+
+**Prompt**: "Show me the topology of my SensorIngestion Eventstream — all sources, operators, and destinations."
+
+```powershell
+# 1. Discover workspace + Eventstream IDs
+$wsId = (az rest --method get `
+  --url "https://api.fabric.microsoft.com/v1/workspaces" `
+  --resource "https://api.fabric.microsoft.com" `
+  --query "value[?displayName=='analytics'] | [0].id" -o tsv)
+if (-not $wsId) { throw "Workspace 'analytics' not found" }
+
+$esId = (az rest --method get `
+  --url "https://api.fabric.microsoft.com/v1/workspaces/$wsId/eventstreams" `
+  --resource "https://api.fabric.microsoft.com" `
+  --query "value[?displayName=='SensorIngestion'] | [0].id" -o tsv)
+if (-not $esId) { throw "Eventstream 'SensorIngestion' not found" }
+
+# 2. Get topology (returns JSON directly — no base64 decoding needed)
+$topo = az rest --method get `
+  --url "https://api.fabric.microsoft.com/v1/workspaces/$wsId/eventstreams/$esId/topology" `
+  --resource "https://api.fabric.microsoft.com" | ConvertFrom-Json
+
+# 3. Summarize nodes (filter nulls from arrays)
+Write-Host "Sources:"
+@($topo.sources | Where-Object { $_ -ne $null }) | ForEach-Object {
+    Write-Host "  - $($_.name) (type: $($_.type), id: $($_.id))"
+}
+Write-Host "Operators:"
+@($topo.operators | Where-Object { $_ -ne $null }) | ForEach-Object {
+    Write-Host "  - $($_.name) (type: $($_.type))"
+}
+Write-Host "Destinations:"
+@($topo.destinations | Where-Object { $_ -ne $null }) | ForEach-Object {
+    Write-Host "  - $($_.name) (type: $($_.type))"
+}
+Write-Host "Streams:"
+@($topo.streams | Where-Object { $_ -ne $null }) | ForEach-Object {
+    Write-Host "  - $($_.name) (type: $($_.type))"
+}
+```
+
+### Example 3: Check Retention and Throughput Settings
+
+**Prompt**: "What are the retention and throughput settings for my SensorIngestion Eventstream?"
+
+> **Note**: Retention and throughput settings are stored in the `eventstreamProperties.json`
+> part of the definition (not `eventstream.json`). If this part is absent, the Eventstream
+> uses platform defaults.
+
+```powershell
+# 1. Discover workspace + Eventstream IDs
+$wsId = (az rest --method get `
+  --url "https://api.fabric.microsoft.com/v1/workspaces" `
+  --resource "https://api.fabric.microsoft.com" `
+  --query "value[?displayName=='analytics'] | [0].id" -o tsv)
+if (-not $wsId) { throw "Workspace 'analytics' not found" }
+
+$esId = (az rest --method get `
+  --url "https://api.fabric.microsoft.com/v1/workspaces/$wsId/items?type=Eventstream" `
+  --resource "https://api.fabric.microsoft.com" `
+  --query "value[?displayName=='SensorIngestion'] | [0].id" -o tsv)
+if (-not $esId) { throw "Eventstream 'SensorIngestion' not found" }
+
+# 2. Get definition (handles LRO if API returns 202)
+$respJson = az rest --method post `
+  --url "https://api.fabric.microsoft.com/v1/workspaces/$wsId/eventstreams/$esId/getDefinition" `
+  --resource "https://api.fabric.microsoft.com" `
+  --headers "Content-Type=application/json" `
+  --body '{}'
+if ($LASTEXITCODE -ne 0 -or -not $respJson) { throw "getDefinition request failed" }
+$resp = $respJson | ConvertFrom-Json
+
+if ($resp.definition) {
+    $def = $resp  # Synchronous — got definition immediately
+} elseif ($resp.operationId) {
+    # Asynchronous (LRO) — poll operation status
+    $def = $null
+    for ($i = 0; $i -lt 12; $i++) {
+        Start-Sleep -Seconds 5
+        $status = (az rest --method get `
+          --url "https://api.fabric.microsoft.com/v1/operations/$($resp.operationId)" `
+          --resource "https://api.fabric.microsoft.com" | ConvertFrom-Json)
+        if ($status.status -eq 'Succeeded') {
+            $def = (az rest --method get `
+              --url "https://api.fabric.microsoft.com/v1/operations/$($resp.operationId)/result" `
+              --resource "https://api.fabric.microsoft.com" | ConvertFrom-Json)
+            break
+        } elseif ($status.status -in @('Failed', 'Cancelled')) {
+            throw "getDefinition LRO $($status.status): $($status.error.message)"
+        }
+    }
+    if (-not $def.definition) { throw "getDefinition LRO timed out (last status: $($status.status))" }
+} else {
+    throw "getDefinition returned neither a definition nor an operationId"
+}
+
+# 3. Decode eventstreamProperties.json part (holds retention + throughput)
+$propsPart = $def.definition.parts | Where-Object { $_.path -eq 'eventstreamProperties.json' } | Select-Object -First 1
+if ($propsPart) {
+    $props = [Text.Encoding]::UTF8.GetString(
+      [Convert]::FromBase64String($propsPart.payload)) | ConvertFrom-Json
+    Write-Host "Retention: $($props.retentionTimeInDays) days"
+    Write-Host "Throughput Level: $($props.eventThroughputLevel)"
+} else {
+    # Fall back to topology-level properties (older format)
+    $esPart = $def.definition.parts | Where-Object { $_.path -eq 'eventstream.json' } | Select-Object -First 1
+    if (-not $esPart) { throw "eventstream.json part not found in definition" }
+    $topology = [Text.Encoding]::UTF8.GetString(
+      [Convert]::FromBase64String($esPart.payload)) | ConvertFrom-Json
+    if ($topology.properties.retentionTimeInDays) {
+        Write-Host "Retention: $($topology.properties.retentionTimeInDays) days"
+    } else {
+        Write-Host "Retention: (platform default — not explicitly configured)"
+    }
+    if ($topology.properties.eventThroughputLevel) {
+        Write-Host "Throughput Level: $($topology.properties.eventThroughputLevel)"
+    } else {
+        Write-Host "Throughput Level: (platform default — not explicitly configured)"
+    }
+}
+```
+
+### Example 4: Get Custom Endpoint Connection Metadata
+
+**Prompt**: "Get the Kafka connection metadata for the Custom Endpoint source in my SensorIngestion Eventstream."
+
+> **Security**: The connection endpoint returns access keys. Get user confirmation before
+> calling it and avoid logging raw credentials.
+
+```powershell
+# 1. Discover workspace + Eventstream IDs (omitted for brevity)
+
+# 2. Get topology to find Custom Endpoint source ID
+$topo = az rest --method get `
+  --url "https://api.fabric.microsoft.com/v1/workspaces/$wsId/eventstreams/$esId/topology" `
+  --resource "https://api.fabric.microsoft.com" | ConvertFrom-Json
+
+$ceSource = @($topo.sources | Where-Object { $_.type -eq 'CustomEndpoint' }) | Select-Object -First 1
+if (-not $ceSource) { throw "No CustomEndpoint source found in this Eventstream" }
+$sourceId = $ceSource.id
+
+# 3. Get connection metadata
+$conn = az rest --method get `
+  --url "https://api.fabric.microsoft.com/v1/workspaces/$wsId/eventstreams/$esId/sources/$sourceId/connection" `
+  --resource "https://api.fabric.microsoft.com" | ConvertFrom-Json
+
+Write-Host "Fully Qualified Namespace: $($conn.fullyQualifiedNamespace)"
+Write-Host "Event Hub Name:            $($conn.eventHubName)"
+Write-Host "Kafka Bootstrap Server:    $($conn.fullyQualifiedNamespace):9093"
+```
+
+### Example 5: Validate Eventstream Configuration
+
+**Prompt**: "Check if my SensorIngestion Eventstream has any configuration issues."
+
+```powershell
+# 1. Discover workspace + Eventstream IDs (omitted for brevity)
+
+# 2. Get topology
+$topo = az rest --method get `
+  --url "https://api.fabric.microsoft.com/v1/workspaces/$wsId/eventstreams/$esId/topology" `
+  --resource "https://api.fabric.microsoft.com" | ConvertFrom-Json
+
+# 3. Validate sources
+@($topo.sources | Where-Object { $_ -ne $null }) | ForEach-Object {
+    $src = $_
+    Write-Host "Source: $($src.name) (type: $($src.type))"
+    if ($src.properties.dataConnectionId) {
+        Write-Host "  Cloud connection: $($src.properties.dataConnectionId)"
+    }
+    if ($src.type -in @('AzureEventHub','AzureEventHubExtended','AzureIoTHub','ConfluentCloud','ApacheKafka','AmazonMSKKafka') -and
+        -not $src.properties.consumerGroupName) {
+        Write-Host "  WARNING: No consumer group set (required for $($src.type))"
+    }
+}
+
+# 4. Validate destinations
+@($topo.destinations | Where-Object { $_ -ne $null }) | ForEach-Object {
+    $dst = $_
+    Write-Host "Destination: $($dst.name) (type: $($dst.type))"
+    if (-not $dst.inputNodes -or $dst.inputNodes.Count -eq 0) {
+        Write-Host "  WARNING: No input wired — destination will receive no events"
+    }
+    if ($dst.type -eq 'Eventhouse' -and -not $dst.properties.tableName) {
+        Write-Host "  WARNING: No target table configured"
+    }
+    if ($dst.type -eq 'Eventhouse' -and $dst.properties.dataIngestionMode -eq 'DirectIngestion') {
+        if (-not $dst.properties.connectionName -or -not $dst.properties.mappingRuleName) {
+            Write-Host "  WARNING: DirectIngestion requires connectionName and mappingRuleName"
+        }
+    }
+}
+
+# 5. Check node count limits
+$ceCount = @($topo.sources | Where-Object { $_.type -eq 'CustomEndpoint' }).Count +
+           @($topo.destinations | Where-Object { $_.type -eq 'CustomEndpoint' }).Count +
+           @($topo.destinations | Where-Object { $_.type -eq 'Eventhouse' -and
+             $_.properties.dataIngestionMode -eq 'DirectIngestion' }).Count
+Write-Host "CustomEndpoint + DI count: $ceCount / 11 limit"
+if ($ceCount -gt 11) {
+    Write-Host "WARNING: Exceeds limit of 11 CustomEndpoint + DirectIngestion nodes"
+}
+```
