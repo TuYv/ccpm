@@ -1,7 +1,7 @@
 {
   "id": "agricidaniel-claude-blog-blog-analyze",
   "name": "blog-analyze",
-  "description": "> Audit and score blog posts on a 5-category 100-point scoring system covering content quality, SEO optimization, E-E-A-T signals, technical elements, and AI citation readiness. Includes AI content detection (burstiness, phrase flagging, vocabulary diversity). Supports export formats (markdown, JSON, table) and batch analysis with sorting. Generates prioritized recommendations (Critical/High/Medium/Low) with specific fixes. Works with any format (MDX, markdown, HTML, URL). Use when user says \"an",
+  "description": "> Audit and score blog posts on a 5-category 100-point scoring system covering content quality, SEO optimization, E-E-A-T signals, technical elements, and AI citation readiness. Includes advisory editorial style diagnostics (sentence-length variation, configured phrase lists, vocabulary sampling) that never infer authorship or affect scoring. Supports export formats (markdown, JSON, table) and batch analysis with sorting. Generates prioritized recommendations (Critical/High/Medium/Low) with spec",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/AgriciDaniel/claude-blog/blob/main/skills/blog-analyze/SKILL.md",
     "path": "skills/blog-analyze/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-23T16:58:47.061Z",
-    "stars": 1450,
+    "discovered_at": "2026-07-23T20:40:30.837Z",
+    "stars": 1451,
     "language": "Python",
-    "pushed_at": "2026-07-17T04:24:00Z",
+    "pushed_at": "2026-07-23T17:30:50Z",
     "license": "MIT"
   }
 }

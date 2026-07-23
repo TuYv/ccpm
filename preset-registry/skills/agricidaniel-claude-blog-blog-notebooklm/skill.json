@@ -1,7 +1,7 @@
 {
   "id": "agricidaniel-claude-blog-blog-notebooklm",
   "name": "blog-notebooklm",
-  "description": "> Query Google NotebookLM notebooks for source-grounded, citation-backed answers from user-uploaded documents. Manages notebook library, handles Google authentication, and supports smart discovery. Works standalone via /blog notebooklm or internally from blog-write and blog-researcher for Tier 1 research data. Falls back gracefully when not configured. Use when user says \"notebooklm\", \"notebook\", \"query notebook\", \"ask notebook\", \"notebook research\", \"source grounded research\", \"document query\",",
+  "description": "> Query Google NotebookLM notebooks for source-grounded, citation-backed answers from user-uploaded documents. Manages notebook library, handles Google authentication, and supports smart discovery. Works standalone via /blog notebooklm or internally from blog-write and blog-researcher for source-grounded research context. Falls back gracefully when not configured. Use when user says \"notebooklm\", \"notebook\", \"query notebook\", \"ask notebook\", \"notebook research\", \"source grounded research\", \"docu",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/AgriciDaniel/claude-blog/blob/main/skills/blog-notebooklm/SKILL.md",
     "path": "skills/blog-notebooklm/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-23T16:58:49.012Z",
-    "stars": 1450,
+    "discovered_at": "2026-07-23T20:40:35.245Z",
+    "stars": 1451,
     "language": "Python",
-    "pushed_at": "2026-07-17T04:24:00Z",
+    "pushed_at": "2026-07-23T17:30:50Z",
     "license": "MIT"
   }
 }

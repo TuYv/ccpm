@@ -1,7 +1,7 @@
 {
   "id": "agricidaniel-claude-blog-blog-audit",
   "name": "blog-audit",
-  "description": "> Full-site blog health assessment scanning all blog files for quality scores, orphan pages, topic cannibalization, stale content, and AI citation readiness. Spawns parallel subagents for comprehensive analysis. Produces per-post scores and a prioritized action queue. Use when user says \"audit blog\", \"blog audit\", \"site audit\", \"blog health\", \"audit all posts\", \"check all blogs\".",
+  "description": "> Full-site blog health assessment scanning all blog files for quality scores, orphan pages, topic cannibalization, stale content, and AI citation readiness. Runs canonical batch analysis before site-wide checks. Produces per-post scores and a prioritized action queue. Use when user says \"audit blog\", \"blog audit\", \"site audit\", \"blog health\", \"audit all posts\", \"check all blogs\".",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/AgriciDaniel/claude-blog/blob/main/skills/blog-audit/SKILL.md",
     "path": "skills/blog-audit/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-23T16:58:47.315Z",
-    "stars": 1450,
+    "discovered_at": "2026-07-23T20:40:31.207Z",
+    "stars": 1451,
     "language": "Python",
-    "pushed_at": "2026-07-17T04:24:00Z",
+    "pushed_at": "2026-07-23T17:30:50Z",
     "license": "MIT"
   }
 }

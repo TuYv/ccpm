@@ -1,0 +1,25 @@
+{
+  "id": "agricidaniel-claude-blog-blog-style",
+  "name": "blog-style",
+  "description": "Learn author writing style from 5 to 10 existing blog posts and generate a voice profile for /blog style learn, VOICE.md, blog-persona, and blog-write when users ask to infer tone, analyze author voice, learn style, or build a writing baseline.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "AgriciDaniel",
+  "install_path": ".claude/skills/blog-style/SKILL.md",
+  "source": {
+    "repo": "AgriciDaniel/claude-blog",
+    "url": "https://github.com/AgriciDaniel/claude-blog/blob/main/brain/.raw/sources/claude-blog-skill/skills/blog-style/SKILL.md",
+    "path": "brain/.raw/sources/claude-blog-skill/skills/blog-style/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-23T20:40:29.504Z",
+    "stars": 1451,
+    "language": "Python",
+    "pushed_at": "2026-07-23T17:30:50Z",
+    "license": "MIT"
+  }
+}

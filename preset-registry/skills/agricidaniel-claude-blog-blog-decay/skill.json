@@ -1,0 +1,25 @@
+{
+  "id": "agricidaniel-claude-blog-blog-decay",
+  "name": "blog-decay",
+  "description": "Detect content decay from Google Search Console exports by comparing current and previous page performance, flagging quarter-over-quarter traffic drops, dropped pages, and refresh, consolidate, prune, or query-shift actions. Use when the user says \"/blog decay\", \"content decay\", \"traffic drop\", \"QoQ decline\", \"GSC decay\", or \"refresh declining posts\".",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "AgriciDaniel",
+  "install_path": ".claude/skills/blog-decay/SKILL.md",
+  "source": {
+    "repo": "AgriciDaniel/claude-blog",
+    "url": "https://github.com/AgriciDaniel/claude-blog/blob/main/skills/blog-decay/SKILL.md",
+    "path": "skills/blog-decay/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-23T20:40:32.794Z",
+    "stars": 1451,
+    "language": "Python",
+    "pushed_at": "2026-07-23T17:30:50Z",
+    "license": "MIT"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "id": "agricidaniel-claude-blog-blog-localize",
   "name": "blog-localize",
-  "description": "> Cultural adaptation for translated content. Run AFTER blog-translate completes. Adjusts brand examples, CTAs, legal references, and formality for the target market (German, French, Japanese, Spanish, etc.). Deep cultural adaptation of translated blog posts. Goes beyond translation to swap brand examples, adapt CTAs, substitute legal references, localize statistic sources where possible, and adjust formality (Sie/du, tu/vous, formal/informal). Built-in profiles for DACH, Francophone, Hispanic, ",
+  "description": "> Deep cultural adaptation of translated blog posts. Run after blog-translate completes. Goes beyond translation to swap brand examples, adapt CTAs, substitute legal references, localize statistic sources where possible, and adjust formality (Sie/du, tu/vous, formal/informal). Built-in profiles for DACH, Francophone, Hispanic, and Japanese markets. Use when user says \"localize blog\", \"blog localize\", \"cultural adaptation\", \"adapt for Germany\", \"lokalisieren\", \"localiser\", \"adaptar\".",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/AgriciDaniel/claude-blog/blob/main/skills/blog-localize/SKILL.md",
     "path": "skills/blog-localize/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-23T16:58:48.811Z",
-    "stars": 1450,
+    "discovered_at": "2026-07-23T20:40:34.801Z",
+    "stars": 1451,
     "language": "Python",
-    "pushed_at": "2026-07-17T04:24:00Z",
+    "pushed_at": "2026-07-23T17:30:50Z",
     "license": "MIT"
   }
 }

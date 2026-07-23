@@ -1,7 +1,7 @@
 {
   "id": "agricidaniel-claude-blog-blog-schema",
   "name": "blog-schema",
-  "description": "> Generate complete JSON-LD schema markup for blog posts including BlogPosting, Person, Organization, BreadcrumbList, FAQPage, and ImageObject. Validates against Google requirements and warns about deprecated types. Use when user says \"schema\", \"blog schema\", \"json-ld\", \"structured data\", \"schema markup\", \"generate schema\".",
+  "description": "> Generate complete JSON-LD schema markup for blog posts with Article/BlogPosting, Person, Organization, BreadcrumbList, ImageObject, and optional FAQPage. Validates against Google requirements and warns about deprecated types. Use when user says \"schema\", \"blog schema\", \"json-ld\", \"structured data\", \"schema markup\", \"generate schema\".",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/AgriciDaniel/claude-blog/blob/main/skills/blog-schema/SKILL.md",
     "path": "skills/blog-schema/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-23T16:58:49.548Z",
-    "stars": 1450,
+    "discovered_at": "2026-07-23T20:40:36.372Z",
+    "stars": 1451,
     "language": "Python",
-    "pushed_at": "2026-07-17T04:24:00Z",
+    "pushed_at": "2026-07-23T17:30:50Z",
     "license": "MIT"
   }
 }

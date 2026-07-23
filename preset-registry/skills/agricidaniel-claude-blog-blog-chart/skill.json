@@ -1,7 +1,7 @@
 {
   "id": "agricidaniel-claude-blog-blog-chart",
   "name": "blog-chart",
-  "description": "> Generate dark-mode-compatible inline SVG data visualization charts for blog posts. Supports horizontal bar, grouped bar, donut, line, lollipop, area, and radar charts with automatic platform detection (HTML vs JSX/MDX). Enforces chart type diversity, accessible markup (role=img, aria-label), source attribution, and transparent backgrounds. Use whenever the user mentions data visualization, charts, graphs, comparison tables that need to be visualized, or wants to embed inline SVG visualizations",
+  "description": "> Generate dark-mode-compatible inline SVG data visualization charts for blog posts. Supports horizontal bar, grouped bar, donut, line, lollipop, area, and radar charts with automatic platform detection (HTML vs JSX/MDX). Enforces chart type diversity, accessible markup (role=img, aria-labelledby), source attribution, and transparent backgrounds. Use when user says \"blog chart\", \"generate chart\", \"data visualization\", \"svg chart\", \"blog graph\", or \"visualize data\".",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/AgriciDaniel/claude-blog/blob/main/skills/blog-chart/SKILL.md",
     "path": "skills/blog-chart/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-23T16:58:47.857Z",
-    "stars": 1450,
+    "discovered_at": "2026-07-23T20:40:32.331Z",
+    "stars": 1451,
     "language": "Python",
-    "pushed_at": "2026-07-17T04:24:00Z",
+    "pushed_at": "2026-07-23T17:30:50Z",
     "license": "MIT"
   }
 }

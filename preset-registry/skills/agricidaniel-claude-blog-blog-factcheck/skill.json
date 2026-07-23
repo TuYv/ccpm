@@ -1,7 +1,7 @@
 {
   "id": "agricidaniel-claude-blog-blog-factcheck",
   "name": "blog-factcheck",
-  "description": "> Verify statistics and claims in blog posts by fetching cited source URLs and checking if the claimed data actually appears on the page. Extracts all statistical claims (numbers, percentages, named sources), fetches each cited URL via WebFetch, and scores match confidence (exact match 1.0, paraphrase 0.7-0.9, not found 0.0). Flags uncited claims as UNVERIFIED. Use when user says \"fact check\", \"verify statistics\", \"check sources\", \"validate claims\", \"factcheck\", \"source verification\".",
+  "description": "> Verify statistics and claims in blog posts by fetching cited source URLs and checking if the claimed data actually appears on the page. Extracts all load-bearing claims (statistics, product or policy claims, ranking and comparative claims, named sources), validates cited URLs before fetching, and scores match confidence (exact match 1.0, paraphrase 0.7-0.9, not found 0.0). Flags uncited claims as UNVERIFIED. Use when user says \"fact check\", \"verify statistics\", \"check sources\", \"validate claim",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/AgriciDaniel/claude-blog/blob/main/skills/blog-factcheck/SKILL.md",
     "path": "skills/blog-factcheck/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-23T16:58:48.209Z",
-    "stars": 1450,
+    "discovered_at": "2026-07-23T20:40:33.165Z",
+    "stars": 1451,
     "language": "Python",
-    "pushed_at": "2026-07-17T04:24:00Z",
+    "pushed_at": "2026-07-23T17:30:50Z",
     "license": "MIT"
   }
 }
