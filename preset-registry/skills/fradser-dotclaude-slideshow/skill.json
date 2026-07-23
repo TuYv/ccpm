@@ -1,0 +1,25 @@
+{
+  "id": "fradser-dotclaude-slideshow",
+  "name": "slideshow",
+  "description": "> Author a HyperFrames slideshow — a presentation, pitch deck, or interactive deck with discrete slides, fragment reveals, branching, hotspot navigation, and built-in presenter mode with speaker notes; also converts an existing page into a deck. Output is a navigable deck, not a rendered MP4. If the user didn't explicitly ask for a slideshow, confirm before authoring. Unclear → /hyperframes.",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "FradSer",
+  "install_path": ".claude/skills/slideshow/SKILL.md",
+  "source": {
+    "repo": "FradSer/dotclaude",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/marketing/skills/hyperframes/slideshow/SKILL.md",
+    "path": "marketing/skills/hyperframes/slideshow/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-23T09:47:40.940Z",
+    "stars": 574,
+    "language": "JavaScript",
+    "pushed_at": "2026-07-23T07:12:35Z",
+    "license": "MIT"
+  }
+}

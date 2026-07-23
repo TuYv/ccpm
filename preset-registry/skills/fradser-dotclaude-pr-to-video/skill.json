@@ -1,0 +1,25 @@
+{
+  "id": "fradser-dotclaude-pr-to-video",
+  "name": "pr-to-video",
+  "description": "Turn a GitHub pull request (a PR URL, owner/repo#N, or 'this PR' in a checked-out repo) into a code-change explainer video — changelog, feature reveal, fix, or refactor walkthrough built from the diff, commits, and files: the input is a code change, not a website. Not a product promo (/product-launch-video) or a no-PR topic explainer (/faceless-explainer). Unclear → /hyperframes.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "FradSer",
+  "install_path": ".claude/skills/pr-to-video/SKILL.md",
+  "source": {
+    "repo": "FradSer/dotclaude",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/marketing/skills/hyperframes/pr-to-video/SKILL.md",
+    "path": "marketing/skills/hyperframes/pr-to-video/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-23T09:47:40.420Z",
+    "stars": 574,
+    "language": "JavaScript",
+    "pushed_at": "2026-07-23T07:12:35Z",
+    "license": "MIT"
+  }
+}
