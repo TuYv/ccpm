@@ -1,14 +1,14 @@
 {
   "id": "aaron-he-zhu-aaron-marketing-skills-deliverability-qa",
   "name": "deliverability-qa",
-  "description": "Use when the user asks to \"run a deliverability pre-flight before I send\", \"check my SPF/DKIM/DMARC/BIMI\", \"why am I landing in spam / promotions\", or \"score my sender reputation and list hygiene\"; runs the ONE-TIME pre-send SEND S1 authentication pre-flight and scores the SEND S (Sender-integrity / Deliverability) dimension — a DNS + DMARC-RUA auth check, domain/IP reputation read, inbox-placement (seed-list) result, a spam-content/link/render scan, and a point-in-time bounce/complaint list-hyg",
+  "description": "Use when the user asks to \"run a deliverability pre-flight before I send\", \"check my SPF/DKIM/DMARC/BIMI\", \"why am I landing in spam / promotions\", or \"score my sender reputation and list hygiene\"; runs the ONE-TIME pre-send SEND S1 authentication pre-flight and builds the SEND S (Sender-integrity / Deliverability) evidence read — DNS + DMARC-RUA auth, domain/IP reputation, inbox placement, content/link/render, and point-in-time bounce/complaint hygiene — using Pass/Partial/Fail/Unknown/N/A stat",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
     "codex",
     "gemini"
   ],
-  "version": "18.0.0",
+  "version": "19.0.0",
   "author": "aaron-he-zhu",
   "install_path": ".claude/skills/deliverability-qa/SKILL.md",
   "source": {
@@ -16,10 +16,10 @@
     "url": "https://github.com/aaron-he-zhu/aaron-marketing-skills/blob/main/email/setup/deliverability-qa/SKILL.md",
     "path": "email/setup/deliverability-qa/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-24T10:13:39.809Z",
+    "discovered_at": "2026-07-24T12:57:48.566Z",
     "stars": 2455,
     "language": "Python",
-    "pushed_at": "2026-07-24T08:42:33Z",
+    "pushed_at": "2026-07-24T11:27:40Z",
     "license": "Apache-2.0"
   }
 }

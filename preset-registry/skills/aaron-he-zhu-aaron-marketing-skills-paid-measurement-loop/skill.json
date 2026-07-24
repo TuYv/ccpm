@@ -1,14 +1,14 @@
 {
   "id": "aaron-he-zhu-aaron-marketing-skills-paid-measurement-loop",
   "name": "paid-measurement-loop",
-  "description": "Use when the user asks to \"read back\" a paid campaign change, \"did this ad change work\", or \"compare ROAS/CPA before and after\"; reads ROAS/CPA against a control over a fixed readback window and returns a Promote / Keep-testing / Rollback / Unproven decision with the math delegated to roi-calculator. Not for the ROI ratio math itself — use roi-calculator; not for cross-channel rollups — use performance-analyzer. 付费广告复盘/ROAS回看/投放效果归因",
+  "description": "Use when the user asks to \"read back\" a paid campaign change, \"did this ad change work\", or \"compare ROAS/CPA before and after\"; reads ROAS/CPA against a control over a fixed readback window and returns a Promote / Keep-testing / Rollback / Unproven readback decision with the math delegated to roi-calculator. Not for RQS scoring or veto adjudication — use ad-account-auditor; not for the ROI ratio math — use roi-calculator; not for cross-channel rollups — use performance-analyzer. 付费广告复盘/ROAS回看/投",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
     "gemini"
   ],
-  "version": "18.0.0",
+  "version": "19.0.0",
   "author": "aaron-he-zhu",
   "install_path": ".claude/skills/paid-measurement-loop/SKILL.md",
   "source": {
@@ -16,10 +16,10 @@
     "url": "https://github.com/aaron-he-zhu/aaron-marketing-skills/blob/main/ad/scale/paid-measurement-loop/SKILL.md",
     "path": "ad/scale/paid-measurement-loop/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-24T10:13:38.351Z",
+    "discovered_at": "2026-07-24T12:57:46.341Z",
     "stars": 2455,
     "language": "Python",
-    "pushed_at": "2026-07-24T08:42:33Z",
+    "pushed_at": "2026-07-24T11:27:40Z",
     "license": "Apache-2.0"
   }
 }

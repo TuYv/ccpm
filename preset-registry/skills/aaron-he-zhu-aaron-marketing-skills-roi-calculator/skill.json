@@ -1,14 +1,14 @@
 {
   "id": "aaron-he-zhu-aaron-marketing-skills-roi-calculator",
   "name": "roi-calculator",
-  "description": "Use when the user asks to \"calculate influencer ROI\", \"prove campaign value\", or \"what was our ROAS\"; produces direct ROI/ROAS, earned media value, attribution-modeled revenue, LTV-based ROI, and a stakeholder-ready summary. Not for building the full slide/written report — use report-generator.",
+  "description": "Use when the user asks to \"calculate influencer ROI\", \"prove campaign value\", or \"what was our ROAS\"; produces direct ROI/ROAS, earned media value, attribution-modeled revenue, LTV-based ROI, and a stakeholder-ready summary. Not for building the full slide/written report — use report-generator. 达人营销ROI计算/投资回报测算",
   "category": "文档写作",
   "compatible_tools": [
     "claude",
     "codex",
     "gemini"
   ],
-  "version": "18.0.0",
+  "version": "19.0.0",
   "author": "aaron-he-zhu",
   "install_path": ".claude/skills/roi-calculator/SKILL.md",
   "source": {
@@ -16,10 +16,10 @@
     "url": "https://github.com/aaron-he-zhu/aaron-marketing-skills/blob/main/influencer/report/roi-calculator/SKILL.md",
     "path": "influencer/report/roi-calculator/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-24T10:13:41.017Z",
+    "discovered_at": "2026-07-24T12:57:50.430Z",
     "stars": 2455,
     "language": "Python",
-    "pushed_at": "2026-07-24T08:42:33Z",
+    "pushed_at": "2026-07-24T11:27:40Z",
     "license": "Apache-2.0"
   }
 }
