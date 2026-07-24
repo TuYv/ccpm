@@ -1,0 +1,25 @@
+{
+  "id": "makenotion-notion-cookbook-meeting-intelligence",
+  "name": "notion-meeting-intelligence",
+  "description": "Prepares meeting materials by gathering context from Notion, enriching with Claude research, and creating both an internal pre-read and external agenda saved to Notion. Helps you arrive prepared with comprehensive background and structured meeting docs.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "makenotion",
+  "install_path": ".claude/skills/meeting-intelligence/SKILL.md",
+  "source": {
+    "repo": "makenotion/notion-cookbook",
+    "url": "https://github.com/makenotion/notion-cookbook/blob/main/skills/claude/meeting-intelligence/SKILL.md",
+    "path": "skills/claude/meeting-intelligence/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-24T22:21:10.567Z",
+    "stars": 175,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-24T20:57:09Z",
+    "license": "MIT"
+  }
+}

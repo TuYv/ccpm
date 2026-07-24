@@ -1,0 +1,25 @@
+{
+  "id": "makenotion-notion-cookbook-knowledge-capture",
+  "name": "notion-knowledge-capture",
+  "description": "Transforms conversations and discussions into structured documentation pages in Notion. Captures insights, decisions, and knowledge from chat context, formats appropriately, and saves to wikis or databases with proper organization and linking for easy discovery.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "makenotion",
+  "install_path": ".claude/skills/knowledge-capture/SKILL.md",
+  "source": {
+    "repo": "makenotion/notion-cookbook",
+    "url": "https://github.com/makenotion/notion-cookbook/blob/main/skills/claude/knowledge-capture/SKILL.md",
+    "path": "skills/claude/knowledge-capture/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-24T22:21:10.426Z",
+    "stars": 175,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-24T20:57:09Z",
+    "license": "MIT"
+  }
+}

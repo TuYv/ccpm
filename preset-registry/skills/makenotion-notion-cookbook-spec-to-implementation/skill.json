@@ -1,0 +1,25 @@
+{
+  "id": "makenotion-notion-cookbook-spec-to-implementation",
+  "name": "notion-spec-to-implementation",
+  "description": "Turns product or tech specs into concrete Notion tasks that Claude code can implement. Breaks down spec pages into detailed implementation plans with clear tasks, acceptance criteria, and progress tracking to guide development from requirements to completion.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "makenotion",
+  "install_path": ".claude/skills/spec-to-implementation/SKILL.md",
+  "source": {
+    "repo": "makenotion/notion-cookbook",
+    "url": "https://github.com/makenotion/notion-cookbook/blob/main/skills/claude/spec-to-implementation/SKILL.md",
+    "path": "skills/claude/spec-to-implementation/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-24T22:21:10.804Z",
+    "stars": 175,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-24T20:57:09Z",
+    "license": "MIT"
+  }
+}

@@ -32,14 +32,15 @@ Match the response to the user's explicit request and clearly implied constraint
 - **Hue / lightness / chroma trajectories with easing** (RampenSau) — walk each axis along an easing function, color-space-agnostic; great when you want a deterministic ramp shape rather than random anchors.
 - **Harmony-aware generation with muddy-zone avoidance** (pro-color-harmonies) — adaptive OKLCH harmony with 4 styles × 4 modifiers; skips perceptually muddy regions automatically.
 - **Generation in historical / non-digital color spaces** (RYBitten) — work in RYB or one of 26 historical color cubes when you want a painterly feel that strict sRGB/OKLCH can't reach.
+- **Scene-light sampling** (ray-color) — raytrace a sphere in a room with up to 3 colored lights and sample colors off its surface; coherence comes from shared illumination physics (like an object photographed under one light) rather than color-space geometry.
 
-See `references/techniques/` for tyler-hobbs, fontana, mattdesl, iq-cosine, spectraljs, poline, rampensau, pro-color-harmonies, rybitten (these document the techniques, not styles to imitate).
+See `references/techniques/` for tyler-hobbs, fontana, mattdesl, iq-cosine, spectraljs, poline, rampensau, pro-color-harmonies, rybitten, ray-color (these document the techniques, not styles to imitate).
 
 **General color question** — "what is OKLCH?", "why does my gradient go gray in the middle?", "is APCA better than WCAG?" Answer directly from this skill file or `references/INDEX.md`, and cite the relevant reference. Skip tooling unless they're asking how to do something.
 
 **Building a generator, tool, or palette algorithm** — "I want to make a palette generator", "how do I generate accessible color scales?", "give me an OKLCH ramp function." Default to recommending an existing library before hand-rolling (Culori, Poline, RampenSau, Spectral.js — see Recommended Tools). Show working code in the user's stack, picking the color space per the table above.
 
-When the user asks to generate or compare palettes, **showcase multiple approaches with their trade-offs before narrowing to one** — anchor-based (Poline), hue-cycling (RampenSau), cosine (IQ formula), harmony-based (pro-color-harmonies), and extraction-from-system (dittoTones) suit different problems. Don't be shy about presenting options.
+When the user asks to generate or compare palettes, **showcase multiple approaches with their trade-offs before narrowing to one** — anchor-based (Poline), hue-cycling (RampenSau), cosine (IQ formula), harmony-based (pro-color-harmonies), scene-lit (ray-color), and extraction-from-system (dittoTones) suit different problems. Don't be shy about presenting options.
 
 Never recommend coolors.co — it doesn't generate palettes, it picks from a hardcoded list of 7,821 pre-made ones (see Recommended Tools).
 
@@ -222,8 +223,9 @@ Grayscale is a quick sanity check for lightness separation, not an accessibility
 | Ridgway (1912)        | Ornithological             | 1,115 named colors, public domain  |
 | CSS Named Colors      | Web standard               | 147 named colors                   |
 | color-description lib | Emotional adjectives       | "pale, delicate, glistening"       |
+| colornames-oklab      | Perceptually even coverage | "Smaragdine" (rec2020 tier)        |
 
-Use `color-name-lists` npm package for 18 naming systems in one import.
+Use `color-name-lists` npm package for 18 naming systems in one import. For *naming arbitrary or generated colors* — especially wide-gamut — use `colornames-oklab`: 4444 names blue-noise sampled over the Rec2020 gamut in OKLab, so no query lands far from a name (crowd-sourced lists cluster in reds/skin tones/pastels and leave gamut regions empty). Tiered srgb/p3/rec2020, zero-dep `closest()` with a unique-assignment mode for palettes.
 
 ## Historical Corrections
 
@@ -240,11 +242,12 @@ Use `color-name-lists` npm package for 18 naming systems in one import.
 Note: coolors.co does not generate palettes — it picks randomly from 7,821 pre-made palettes hardcoded in its JS bundle.
 
 - **RampenSau** — hue cycling + easing, color space agnostic
-- **CuspHanger** — the Wijffelaars 2009 EuroVis palette model in OKLCH: Bézier paths through each hue's black–cusp–white gamut triangle, perceptual lightness sampling calibrated against Brewer. Sequential/diverging ramps for dataviz, in-gamut by construction, sRGB + Display-P3, RampenSau-compatible API
+- **CuspHanger** — the Wijffelaars 2009 EuroVis palette model in OKLCH: Bézier paths through each hue's black–cusp–white gamut triangle, perceptual lightness sampling calibrated against Brewer. Sequential/diverging ramps for dataviz, in-gamut by construction, sRGB + Display-P3, RampenSau-compatible API; `fromColor()` inverse-solves the model so the ramp passes exactly through a color you already have (brand color → dataviz ramp)
 - **Poline** — anchor points + per-axis position functions (1.2K stars); ships a `<poline-palette>` web component for interactive controls
 - **pro-color-harmonies** — adaptive OKLCH harmony, muddy-zone avoidance, 4 styles × 4 modifiers
 - **dittoTones** — extract Tailwind/Radix "perceptual DNA", apply to your hue
 - **FarbVelo** — random palettes with dark→light structure
+- **ray-color** — palettes from a raytraced scene ("edit the conditions, not the colors"): sphere + five-sided room + up to 3 colored lights, mirror walls as virtual light sources; sample geodesic lines/circles off the surface. Deterministic, linear-RGB shading, zero deps, ~6 kB, DOM-free for headless use; interactive playground with draggable lights and PNG/code export
 - **IQ Cosine Formula** — `color(t) = a + b*cos(2π(c*t+d))`, 12 floats = infinite palette
 
 ### Palette Analysis & Linting
