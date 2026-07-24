@@ -16,10 +16,10 @@
     "url": "https://github.com/blackwell-systems/agent-lsp/blob/main/skills/lsp-safe-edit/SKILL.md",
     "path": "skills/lsp-safe-edit/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-24T02:15:32.660Z",
+    "discovered_at": "2026-07-24T04:45:36.577Z",
     "stars": 89,
     "language": "Go",
-    "pushed_at": "2026-07-23T14:05:05Z",
+    "pushed_at": "2026-07-24T02:48:58Z",
     "license": "MIT"
   },
   "summary_zh": "在改代码前先模拟运行一次，对比改动前后的诊断错误，只有错误数量可接受才真正写入磁盘；如果改完冒出新报错，还会顺手给出修复建议，适合在自动化编辑或 AI 改码场景下兜底防止越改越糟。"
