@@ -1,0 +1,25 @@
+{
+  "id": "openai-openai-agents-python-integration-tests",
+  "name": "integration-tests",
+  "description": "Run the packaged OpenAI Agents Python SDK integration tests from clean wheel and source-distribution environments. Use for release readiness, live OpenAI regression checks, package import compatibility, optional-extra validation, or when asked to run integration tests after examples-auto-run.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openai",
+  "install_path": ".claude/skills/integration-tests/SKILL.md",
+  "source": {
+    "repo": "openai/openai-agents-python",
+    "url": "https://github.com/openai/openai-agents-python/blob/main/.agents/skills/integration-tests/SKILL.md",
+    "path": ".agents/skills/integration-tests/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-24T09:43:22.961Z",
+    "stars": 28142,
+    "language": "Python",
+    "pushed_at": "2026-07-24T08:56:38Z",
+    "license": "MIT"
+  }
+}
