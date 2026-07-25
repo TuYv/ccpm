@@ -1,6 +1,6 @@
 ---
 name: last30days
-version: "3.18.0"
+version: "3.18.1"
 description: "Research what people actually say about any topic in the last 30 days. Pulls posts and engagement from Reddit, X, YouTube, TikTok, Hacker News, Polymarket, GitHub, and the web. Includes a doctor health check to diagnose broken or missing sources."
 argument-hint: 'last30days nvidia earnings reaction | last30days AI video tools | last30days what users want in react'
 allowed-tools: Bash, Read, Write, AskUserQuestion, WebSearch
@@ -160,6 +160,8 @@ These LAWs dominate every other rule in this file. If you find yourself about to
 **LAW 5 - ENGINE FOOTER PASS-THROUGH. EVERY QUERY TYPE. EVERY RUN.** The engine output ends with a `✅ All agents reported back!` emoji-tree footer bounded by `---` lines and wrapped in `<!-- PASS-THROUGH FOOTER -->` / `<!-- END PASS-THROUGH FOOTER -->` comments (v3.0.10+). You MUST include that block verbatim in your synthesis, positioned after KEY PATTERNS (and after the comparison-table scaffold if present) and before the invitation. Do not recompute the stats, reformat the tree, paraphrase, skip it, or fabricate your own `## Notable Stats` replacement. A response without the engine footer is not valid skill output.
 
 **LAW 6 - NO RAW RANKED EVIDENCE CLUSTERS IN BODY.** The engine's `## Ranked Evidence Clusters`, `## Stats`, and `## Source Coverage` blocks are bounded inside `<!-- EVIDENCE FOR SYNTHESIS -->` / `<!-- END EVIDENCE FOR SYNTHESIS -->` comments in the `--emit compact` / `--emit md` stdout. They are raw evidence for YOU to read, not output to emit. Transform them into `What I learned:` prose paragraphs per LAW 2 (or the COMPARISON template sections per the LAW 4 exception). If your response contains the literal string `### 1.` followed by a score tuple like `(score N, M items, sources: ...)`, or the string `- Uncertainty: single-source` / `- Uncertainty: thin-evidence`, you dumped evidence instead of synthesizing. STOP and regenerate.
+
+**GENERAL nothing-solid floor.** If the `## Ranked Evidence Clusters` block says `Nothing solid this window`, the engine found items but every visible cluster failed the positive, non-entity-miss relevance floor. Treat that community evidence as absent: do not infer findings from its stats, quote its comments, or satisfy LAW 9 from rejected candidates. Build the `What I learned:` body only from supported Step 2 web supplements, if any, and say plainly that recent community evidence was insufficient without narrating engine mechanics. If the supplements are also insufficient, an honest short no-finding answer is the result; retain the engine footer and invitation.
 
 **Per-run source outcomes (doctor-aligned):** Read `## Partial Coverage` and `Report.source_status` before synthesizing. `no-results` means the source completed cleanly with zero matches. `partial`, `rate-limited`, `auth-failed`, `unreachable`, `timeout`, `schema-drift`, `skipped-unconfigured`, and `error` mean the run did not establish that the source was quiet. Never write "nothing on X/Reddit/YouTube" for those states; qualify the conclusion as partial coverage and rely only on evidence that was actually returned. The engine footer carries the user-visible outcome and `doctor` pointer, so do not invent a repair prescription in prose. Plain `doctor` predicts configuration health before a run; `source_status` reports what happened during this run, and `doctor --postmortem` reads that same `source_status` from the last run's cache to report what actually broke after the fact.
 
@@ -410,7 +412,7 @@ If your Bash call to `last30days.py` does NOT include the FULL pre-flight checkl
 
 ---
 
-# last30days v3.18.0: Research Any Topic from the Last 30 Days
+# last30days v3.18.1: Research Any Topic from the Last 30 Days
 
 > **Permissions overview:** Reads public web/platform data and optionally saves research briefings to `LAST30DAYS_MEMORY_DIR` (defaults to `~/Documents/Last30Days`). X/Twitter search uses optional user-provided tokens (AUTH_TOKEN/CT0 env vars). Bluesky search uses optional app password (BSKY_HANDLE/BSKY_APP_PASSWORD env vars - create at bsky.app/settings/app-passwords). On hosts with `uv` and no Python 3.12+, the preflight may install a uv-managed CPython 3.12 (one-time ~28MB download, announced on stderr). All credential usage and data writes are documented in the [Security & Permissions](#security--permissions) section.
 
@@ -1670,7 +1672,7 @@ Read the research output carefully. Pay attention to:
 
 **ANTI-PATTERN TO AVOID**: If user asks about "clawdbot skills" and research returns ClawdBot content (self-hosted AI agent), do NOT synthesize this as "Claude Code skills" just because both involve "skills". Read what the research actually says.
 
-**FUN CONTENT (see LAW 9): the EVIDENCE block's `## Top Community Comments` section (always present when 2+ comments exist) and any `## Best Takes` section are the voice of the people - weave at least 2 of the funniest/cleverest VERBATIM quotes into your synthesis.** A 1,338-upvote comment that says "Where's the limewire link" tells you more about the cultural moment than a news article. Quote the actual text and attribute the commenter; when you inline-link the comment on a hidden-link host copy its URL verbatim from the block (never reconstructed), and on a visible-URL host keep the attribution plain and leave the URL to the saved raw file. Don't put fun content in a separate section - mix it into the narrative where it fits naturally. This is what makes the report feel alive rather than like a news summary. Do NOT wait for a `## Best Takes` section - it is often empty; `## Top Community Comments` is the always-on source.
+**FUN CONTENT (see LAW 9): the EVIDENCE block's `## Top Community Comments` section (present when 2+ relevance-qualified comments exist and the GENERAL nothing-solid floor did not fire) and any `## Best Takes` section are the voice of the people - weave at least 2 of the funniest/cleverest VERBATIM quotes into your synthesis.** A 1,338-upvote comment that says "Where's the limewire link" tells you more about the cultural moment than a news article. Quote the actual text and attribute the commenter; when you inline-link the comment on a hidden-link host copy its URL verbatim from the block (never reconstructed), and on a visible-URL host keep the attribution plain and leave the URL to the saved raw file. Don't put fun content in a separate section - mix it into the narrative where it fits naturally. This is what makes the report feel alive rather than like a news summary. Do NOT wait for a `## Best Takes` section - it is often empty; `## Top Community Comments` is the always-on source when qualifying comments remain.
 
 **ELI5 MODE: If REGISTER is `eli5` (including the legacy `ELI5_MODE=true` fallback), apply these writing guidelines to your ENTIRE synthesis. Otherwise skip this block completely and write normally.**
 
