@@ -1,7 +1,7 @@
 {
   "id": "openai-openai-agents-python-implementation-strategy",
   "name": "implementation-strategy",
-  "description": "Decide how to implement runtime and API changes in openai-agents-python before editing code. Use when a task changes exported APIs, runtime behavior, serialized state, tests, or docs and you need to choose the compatibility boundary, whether shims or migrations are warranted, and when unreleased interfaces can be rewritten directly.",
+  "description": "Decide how to implement or review runtime and API changes in openai-agents-python. Use when a task changes or reviews exported APIs, runtime behavior, serialized state, tests, or docs and you need to choose the compatibility boundary, the smallest coherent implementation, whether shims or migrations are warranted, and when unreleased interfaces can be rewritten directly.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/openai/openai-agents-python/blob/main/.agents/skills/implementation-strategy/SKILL.md",
     "path": ".agents/skills/implementation-strategy/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-24T23:30:52.900Z",
-    "stars": 28152,
+    "discovered_at": "2026-07-25T03:48:07.223Z",
+    "stars": 28156,
     "language": "Python",
-    "pushed_at": "2026-07-24T23:06:53Z",
+    "pushed_at": "2026-07-25T03:28:20Z",
     "license": "MIT"
-  },
-  "summary_zh": "这是修改openai-agents-python时的变更策略指南。在改API或运行时前，帮你划定兼容边界，决定是加兼容层、做迁移还是直接改，防止盲目动代码破坏兼容性。"
+  }
 }
