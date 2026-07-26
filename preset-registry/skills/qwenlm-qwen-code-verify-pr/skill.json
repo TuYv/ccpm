@@ -1,0 +1,25 @@
+{
+  "id": "qwenlm-qwen-code-verify-pr",
+  "name": "verify-pr",
+  "description": "This skill should be used to run a sandboxed deep verification of a qwen-code PR — \"/verify-pr <n>\", \"深度验证这个 PR\", A/B load-bearing proof against the base build, mock-free harnesses with wire oracles, and targeted gates — producing tmp/pr<n>-verify-<ts>/report.md plus a machine-readable verdict. Designed for the token-free CI verify job; also usable locally.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "QwenLM",
+  "install_path": ".claude/skills/verify-pr/SKILL.md",
+  "source": {
+    "repo": "QwenLM/qwen-code",
+    "url": "https://github.com/QwenLM/qwen-code/blob/main/.qwen/skills/verify-pr/SKILL.md",
+    "path": ".qwen/skills/verify-pr/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-26T14:55:13.875Z",
+    "stars": 26336,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-26T14:53:37Z",
+    "license": "Apache-2.0"
+  }
+}
