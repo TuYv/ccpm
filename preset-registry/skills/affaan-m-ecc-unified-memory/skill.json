@@ -1,0 +1,25 @@
+{
+  "id": "affaan-m-ecc-unified-memory",
+  "name": "unified-memory",
+  "description": "Share durable, inspectable context and handoffs between Claude, Codex, Hermes, Cursor, OpenCode, and other agents through the local ECC Memory Vault. Use when an agent must save work state, transfer context, resume another agent's task, or search shared project knowledge.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "affaan-m",
+  "install_path": ".claude/skills/unified-memory/SKILL.md",
+  "source": {
+    "repo": "affaan-m/ECC",
+    "url": "https://github.com/affaan-m/ECC/blob/main/.cursor/skills/unified-memory/SKILL.md",
+    "path": ".cursor/skills/unified-memory/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-26T11:50:21.805Z",
+    "stars": 233487,
+    "language": "JavaScript",
+    "pushed_at": "2026-07-26T10:26:33Z",
+    "license": "MIT"
+  }
+}
