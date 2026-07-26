@@ -1,7 +1,7 @@
 {
   "id": "basicmachines-co-basic-memory-bm-orient",
   "name": "bm-orient",
-  "description": "Orient Codex from Basic Memory before substantial repo work by reading active tasks, decisions, recent Codex checkpoints, and repo conventions.",
+  "description": "Resume from an exact Basic Memory checkpoint or orient Codex from current graph and repository evidence.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/basicmachines-co/basic-memory/blob/main/plugins/codex/skills/bm-orient/SKILL.md",
     "path": "plugins/codex/skills/bm-orient/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-25T20:25:35.816Z",
-    "stars": 3511,
+    "discovered_at": "2026-07-25T23:14:36.591Z",
+    "stars": 3512,
     "language": "Python",
-    "pushed_at": "2026-07-25T15:19:00Z",
+    "pushed_at": "2026-07-25T23:01:02Z",
     "license": "AGPL-3.0"
-  },
-  "summary_zh": "在动手改动仓库前，先快速梳理当前任务、关键决策、近期进度和代码规范，帮你心里有数再开工，避免盲目下手。"
+  }
 }

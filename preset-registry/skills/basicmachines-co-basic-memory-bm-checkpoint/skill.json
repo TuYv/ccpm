@@ -1,7 +1,7 @@
 {
   "id": "basicmachines-co-basic-memory-bm-checkpoint",
   "name": "bm-checkpoint",
-  "description": "Save a deliberate Codex work checkpoint to Basic Memory with changed files, verification, decisions, blockers, and the next action.",
+  "description": "Create an immutable Codex handoff in Basic Memory and return an exact bm-orient resume command.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/basicmachines-co/basic-memory/blob/main/plugins/codex/skills/bm-checkpoint/SKILL.md",
     "path": "plugins/codex/skills/bm-checkpoint/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-25T20:25:35.408Z",
-    "stars": 3511,
+    "discovered_at": "2026-07-25T23:14:36.364Z",
+    "stars": 3512,
     "language": "Python",
-    "pushed_at": "2026-07-25T15:19:00Z",
+    "pushed_at": "2026-07-25T23:01:02Z",
     "license": "AGPL-3.0"
-  },
-  "summary_zh": "用于在 Basic Memory 中保存 Codex 的工作检查点，记录改动文件、验证情况、决策、阻塞点和下一步动作，方便随时回溯进度、无缝续接任务。"
+  }
 }
