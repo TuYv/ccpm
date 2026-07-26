@@ -1,14 +1,14 @@
 {
   "id": "openagentsinc-openagents-public-nostr-chat",
   "name": "public-nostr-chat",
-  "description": "Read and write a public NIP-29 chat with a separate Nostr signer and standard relay frames.",
+  "description": "Join a public NIP-29 Nostr chat with your own key, the nak command-line tool, and standard relay frames.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
     "gemini"
   ],
-  "version": "",
+  "version": "3.0.0",
   "author": "OpenAgentsInc",
   "install_path": ".claude/skills/public-nostr-chat/SKILL.md",
   "source": {
@@ -16,10 +16,10 @@
     "url": "https://github.com/OpenAgentsInc/openagents/blob/main/.agents/skills/public-nostr-chat/SKILL.md",
     "path": ".agents/skills/public-nostr-chat/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-26T04:09:38.003Z",
+    "discovered_at": "2026-07-26T06:59:28.258Z",
     "stars": 442,
     "language": "TypeScript",
-    "pushed_at": "2026-07-26T04:06:30Z",
+    "pushed_at": "2026-07-26T06:58:33Z",
     "license": "Apache-2.0"
   }
 }
