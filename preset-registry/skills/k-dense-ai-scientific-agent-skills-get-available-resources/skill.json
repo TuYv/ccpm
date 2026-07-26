@@ -1,0 +1,25 @@
+{
+  "id": "k-dense-ai-scientific-agent-skills-get-available-resources",
+  "name": "get-available-resources",
+  "description": "Detect host inventory and effective CPU, memory, disk, scheduler, container, and accelerator limits when a user asks for resource-aware planning or before a clearly resource-sensitive local workload. Produces a redacted JSON snapshot and conservative planning helpers without stress tests or assuming visible host hardware is usable.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "K-Dense-AI",
+  "install_path": ".claude/skills/get-available-resources/SKILL.md",
+  "source": {
+    "repo": "K-Dense-AI/scientific-agent-skills",
+    "url": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/skills/get-available-resources/SKILL.md",
+    "path": "skills/get-available-resources/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-26T17:26:06.255Z",
+    "stars": 31825,
+    "language": "Python",
+    "pushed_at": "2026-07-26T17:15:15Z",
+    "license": "MIT"
+  }
+}

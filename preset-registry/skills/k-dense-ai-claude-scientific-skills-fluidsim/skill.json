@@ -1,0 +1,25 @@
+{
+  "id": "k-dense-ai-claude-scientific-skills-fluidsim",
+  "name": "fluidsim",
+  "description": "Plan, configure, inspect, restart, and analyze bounded FluidSim computational-fluid-dynamics simulations with explicit numerical-validity and HPC safety checks. Use for FluidSim solver selection, parameter review, FFT/MPI setup, output diagnostics, or restart compatibility.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "K-Dense-AI",
+  "install_path": ".claude/skills/fluidsim/SKILL.md",
+  "source": {
+    "repo": "K-Dense-AI/claude-scientific-skills",
+    "url": "https://github.com/K-Dense-AI/claude-scientific-skills/blob/main/skills/fluidsim/SKILL.md",
+    "path": "skills/fluidsim/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-26T17:22:14.276Z",
+    "stars": 31825,
+    "language": "Python",
+    "pushed_at": "2026-07-26T17:15:15Z",
+    "license": "MIT"
+  }
+}

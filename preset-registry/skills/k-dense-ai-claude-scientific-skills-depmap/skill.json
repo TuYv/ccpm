@@ -1,0 +1,25 @@
+{
+  "id": "k-dense-ai-claude-scientific-skills-depmap",
+  "name": "depmap",
+  "description": "Query the Cancer Dependency Map (DepMap) for cancer cell line gene dependency scores (CRISPR Chronos), drug sensitivity data, and gene effect profiles. Use for identifying cancer-specific vulnerabilities, synthetic lethal interactions, and validating oncology drug targets.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "K-Dense-AI",
+  "install_path": ".claude/skills/depmap/SKILL.md",
+  "source": {
+    "repo": "K-Dense-AI/claude-scientific-skills",
+    "url": "https://github.com/K-Dense-AI/claude-scientific-skills/blob/main/skills/depmap/SKILL.md",
+    "path": "skills/depmap/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-26T17:22:11.906Z",
+    "stars": 31825,
+    "language": "Python",
+    "pushed_at": "2026-07-26T17:15:15Z",
+    "license": "MIT"
+  }
+}

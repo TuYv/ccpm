@@ -1,0 +1,25 @@
+{
+  "id": "k-dense-ai-claude-scientific-skills-exa-search",
+  "name": "exa-search",
+  "description": "Web toolkit powered by Exa, tuned for scientific and technical content. Use this skill when the user needs to search the web or fetch/extract URL content. Covers: web search (semantic lookups, research, current info — with optional research-paper category and academic domain filtering) and URL extraction (fetching pages, articles, academic PDFs in batch). Use this skill for web-related tasks when the user wants high-quality search or scholarly filtering via category=research paper. Triggers on r",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "K-Dense-AI",
+  "install_path": ".claude/skills/exa-search/SKILL.md",
+  "source": {
+    "repo": "K-Dense-AI/claude-scientific-skills",
+    "url": "https://github.com/K-Dense-AI/claude-scientific-skills/blob/main/skills/exa-search/SKILL.md",
+    "path": "skills/exa-search/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-26T17:22:13.421Z",
+    "stars": 31825,
+    "language": "Python",
+    "pushed_at": "2026-07-26T17:15:15Z",
+    "license": "MIT"
+  }
+}

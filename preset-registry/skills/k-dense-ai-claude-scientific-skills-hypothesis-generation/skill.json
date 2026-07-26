@@ -1,0 +1,25 @@
+{
+  "id": "k-dense-ai-claude-scientific-skills-hypothesis-generation",
+  "name": "hypothesis-generation",
+  "description": "Formulate evidence-bounded scientific questions, candidate hypotheses, rival explanations, causal or associational claims, discriminating predictions, measurements, and preregistration-ready analysis plans. Use when turning observations or preliminary findings into transparent, testable research plans without treating hypotheses as facts.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "K-Dense-AI",
+  "install_path": ".claude/skills/hypothesis-generation/SKILL.md",
+  "source": {
+    "repo": "K-Dense-AI/claude-scientific-skills",
+    "url": "https://github.com/K-Dense-AI/claude-scientific-skills/blob/main/skills/hypothesis-generation/SKILL.md",
+    "path": "skills/hypothesis-generation/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-26T17:22:17.065Z",
+    "stars": 31825,
+    "language": "Python",
+    "pushed_at": "2026-07-26T17:15:15Z",
+    "license": "MIT"
+  }
+}
