@@ -1,0 +1,25 @@
+{
+  "id": "huytieu-cog-second-brain-taste-skill",
+  "name": "taste-skill",
+  "description": "Anti-slop frontend skill for landing pages, portfolios, and redesigns. The agent reads the brief, infers the right design direction, and ships interfaces that do not look templated. Real design systems when applicable, audit-first on redesigns, strict pre-flight check.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "huytieu",
+  "install_path": ".claude/skills/taste-skill/SKILL.md",
+  "source": {
+    "repo": "huytieu/COG-second-brain",
+    "url": "https://github.com/huytieu/COG-second-brain/blob/main/.claude/skills/taste-skill/SKILL.md",
+    "path": ".claude/skills/taste-skill/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-27T16:11:31.781Z",
+    "stars": 740,
+    "language": "HTML",
+    "pushed_at": "2026-07-27T14:06:21Z",
+    "license": "MIT"
+  }
+}
