@@ -1,0 +1,25 @@
+{
+  "id": "talkstream-ru-text-ru-score",
+  "name": "ru-score",
+  "description": "Score Russian text quality on a 0.0–10.0 scale across 5 dimensions",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "talkstream",
+  "install_path": ".claude/skills/ru-score/SKILL.md",
+  "source": {
+    "repo": "talkstream/ru-text",
+    "url": "https://github.com/talkstream/ru-text/blob/main/skills/ru-score/SKILL.md",
+    "path": "skills/ru-score/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-27T11:53:27.105Z",
+    "stars": 169,
+    "language": "Shell",
+    "pushed_at": "2026-07-27T08:28:55Z",
+    "license": "MIT"
+  }
+}

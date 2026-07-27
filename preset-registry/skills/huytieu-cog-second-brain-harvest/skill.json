@@ -1,0 +1,25 @@
+{
+  "id": "huytieu-cog-second-brain-harvest",
+  "name": "harvest",
+  "description": "> Capture durable session learnings, stage for human promotion to 05-knowledge/lizard, and propose skill/CLAUDE.md patches. Triggered by /harvest, SessionEnd hook staging, or nightly enhance. Never writes durable knowledge without your approval.",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "huytieu",
+  "install_path": ".claude/skills/harvest/SKILL.md",
+  "source": {
+    "repo": "huytieu/COG-second-brain",
+    "url": "https://github.com/huytieu/COG-second-brain/blob/main/.claude/skills/harvest/SKILL.md",
+    "path": ".claude/skills/harvest/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-27T12:37:49.254Z",
+    "stars": 739,
+    "language": "HTML",
+    "pushed_at": "2026-07-27T08:46:19Z",
+    "license": "MIT"
+  }
+}

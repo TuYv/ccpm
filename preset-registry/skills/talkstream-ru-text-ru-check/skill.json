@@ -1,0 +1,25 @@
+{
+  "id": "talkstream-ru-text-ru-check",
+  "name": "ru-check",
+  "description": "Run a comprehensive Russian text quality check on provided text or recent output",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "talkstream",
+  "install_path": ".claude/skills/ru-check/SKILL.md",
+  "source": {
+    "repo": "talkstream/ru-text",
+    "url": "https://github.com/talkstream/ru-text/blob/main/skills/ru-check/SKILL.md",
+    "path": "skills/ru-check/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-27T11:53:26.662Z",
+    "stars": 169,
+    "language": "Shell",
+    "pushed_at": "2026-07-27T08:28:55Z",
+    "license": "MIT"
+  }
+}

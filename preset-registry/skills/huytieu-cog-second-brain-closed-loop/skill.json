@@ -1,0 +1,25 @@
+{
+  "id": "huytieu-cog-second-brain-closed-loop",
+  "name": "closed-loop",
+  "description": "> V-model execute: CP-2 plan → CP-3 build → CP-3v component verify → CP-4 integration verify (full) → CP-5 acceptance. Worker never grades its own homework; evidence rows trace back to AC-n. Use via /execute.",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "huytieu",
+  "install_path": ".claude/skills/closed-loop/SKILL.md",
+  "source": {
+    "repo": "huytieu/COG-second-brain",
+    "url": "https://github.com/huytieu/COG-second-brain/blob/main/.claude/skills/closed-loop/SKILL.md",
+    "path": ".claude/skills/closed-loop/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-27T12:37:46.771Z",
+    "stars": 739,
+    "language": "HTML",
+    "pushed_at": "2026-07-27T08:46:19Z",
+    "license": "MIT"
+  }
+}

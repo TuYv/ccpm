@@ -1,0 +1,25 @@
+{
+  "id": "huytieu-cog-second-brain-ultragoal",
+  "name": "ultragoal",
+  "description": "> Run a large, multi-session goal (e.g. shipping a whole side product) through the full V-model closed loop, one phase at a time, with cross-session state and a final north-star acceptance gate. Ultragoals never downgrade the lane: every phase runs CP-1→CP-6 with adversarial verification. Use via /ultragoal.",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "huytieu",
+  "install_path": ".claude/skills/ultragoal/SKILL.md",
+  "source": {
+    "repo": "huytieu/COG-second-brain",
+    "url": "https://github.com/huytieu/COG-second-brain/blob/main/.claude/skills/ultragoal/SKILL.md",
+    "path": ".claude/skills/ultragoal/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-27T12:37:52.367Z",
+    "stars": 739,
+    "language": "HTML",
+    "pushed_at": "2026-07-27T08:46:19Z",
+    "license": "MIT"
+  }
+}
