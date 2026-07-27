@@ -1,0 +1,25 @@
+{
+  "id": "gadievron-raptor-audit",
+  "name": "audit",
+  "description": "Hypothesis-driven, tool-grounded security review of coverage gaps",
+  "category": "通用其他",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "gadievron",
+  "install_path": ".claude/skills/audit/SKILL.md",
+  "source": {
+    "repo": "gadievron/raptor",
+    "url": "https://github.com/gadievron/raptor/blob/main/.claude/skills/audit/SKILL.md",
+    "path": ".claude/skills/audit/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-27T04:14:14.055Z",
+    "stars": 3404,
+    "language": "Python",
+    "pushed_at": "2026-07-27T03:22:39Z",
+    "license": null
+  }
+}
