@@ -1,0 +1,25 @@
+{
+  "id": "fvadicamo-dev-agent-skills-privacy-guard",
+  "name": "privacy-guard",
+  "description": "Prevents private infrastructure details (node hostnames, internal project names, local usernames and personal emails, absolute home paths, private and VPN IP ranges) from leaking into public repositories through commits, PRs, docs or release artifacts. Use when working in a public or soon-to-be-public repo, before commits or releases, when writing deployment docs for an OSS project, or when the user asks to \"set up the privacy guard\", \"install privacy-guard\", \"check for leaks\", \"protect this pub",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "fvadicamo",
+  "install_path": ".claude/skills/privacy-guard/SKILL.md",
+  "source": {
+    "repo": "fvadicamo/dev-agent-skills",
+    "url": "https://github.com/fvadicamo/dev-agent-skills/blob/main/plugins/privacy-guard/skills/privacy-guard/SKILL.md",
+    "path": "plugins/privacy-guard/skills/privacy-guard/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-27T18:12:03.954Z",
+    "stars": 70,
+    "language": "Shell",
+    "pushed_at": "2026-07-27T16:50:48Z",
+    "license": "MIT"
+  }
+}
