@@ -1,0 +1,25 @@
+{
+  "id": "internet-court-internet-court-skill-altllm-portal-auth",
+  "name": "altllm-portal-auth",
+  "description": "Use this skill when the user asks to log in or out with a wallet session, fetch a wallet sign-in challenge, verify an externally signed challenge, or troubleshoot AltLLM Portal wallet login for the local altllm CLI. Do NOT use for API key management, billing history, or payment links.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "internet-court",
+  "install_path": ".claude/skills/altllm-portal-auth/SKILL.md",
+  "source": {
+    "repo": "internet-court/internet-court-skill",
+    "url": "https://github.com/internet-court/internet-court-skill/blob/main/vendored/altlayer/altllm-portal-auth/SKILL.md",
+    "path": "vendored/altlayer/altllm-portal-auth/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-27T19:15:42.594Z",
+    "stars": 1373,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-10T04:27:35Z",
+    "license": null
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "internet-court-internet-court-skill-genlayer-erc7710-connector",
+  "name": "genlayer-erc7710-connector",
+  "description": "Connect GenLayer Intelligent Contract decisions to ERC-7710-style delegated authority. Use when an agent needs to design the interface, message schema, relayer/bridge path, EVM revocation controller, constraint updates, proof/finality assumptions, and failure handling that turn a GenLayer agent-performance review into ERC-7710 revocation or policy changes.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "internet-court",
+  "install_path": ".claude/skills/genlayer-erc7710-connector/SKILL.md",
+  "source": {
+    "repo": "internet-court/internet-court-skill",
+    "url": "https://github.com/internet-court/internet-court-skill/blob/main/integrations/genlayer-erc7710-connector/SKILL.md",
+    "path": "integrations/genlayer-erc7710-connector/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-27T19:15:41.404Z",
+    "stars": 1373,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-10T04:27:35Z",
+    "license": null
+  }
+}

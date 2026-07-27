@@ -1,0 +1,25 @@
+{
+  "id": "internet-court-internet-court-skill-nansen-prediction-markets",
+  "name": "nansen-prediction-markets",
+  "description": "Polymarket screeners — discover trending events, top markets by volume, and search for specific markets. Use when browsing what's happening on prediction markets.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "internet-court",
+  "install_path": ".claude/skills/nansen-prediction-markets/SKILL.md",
+  "source": {
+    "repo": "internet-court/internet-court-skill",
+    "url": "https://github.com/internet-court/internet-court-skill/blob/main/vendored/nansen/nansen-prediction-markets/SKILL.md",
+    "path": "vendored/nansen/nansen-prediction-markets/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-27T19:15:50.122Z",
+    "stars": 1373,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-10T04:27:35Z",
+    "license": null
+  }
+}

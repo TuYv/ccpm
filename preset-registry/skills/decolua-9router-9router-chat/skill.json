@@ -1,0 +1,25 @@
+{
+  "id": "decolua-9router-9router-chat",
+  "name": "9router-chat",
+  "description": "Chat / code generation via 9Router using OpenAI /v1/chat/completions or Anthropic /v1/messages format with streaming + auto-fallback combos. Use when the user wants to ask an LLM, generate code, summarize text, or run prompts through 9Router.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "decolua",
+  "install_path": ".claude/skills/9router-chat/SKILL.md",
+  "source": {
+    "repo": "decolua/9router",
+    "url": "https://github.com/decolua/9router/blob/master/skills/9router-chat/SKILL.md",
+    "path": "skills/9router-chat/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-07-27T19:20:06.926Z",
+    "stars": 23768,
+    "language": "JavaScript",
+    "pushed_at": "2026-07-20T10:22:50Z",
+    "license": "MIT"
+  }
+}

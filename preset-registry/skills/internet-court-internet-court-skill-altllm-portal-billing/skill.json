@@ -1,0 +1,25 @@
+{
+  "id": "internet-court-internet-court-skill-altllm-portal-billing",
+  "name": "altllm-portal-billing",
+  "description": "Use this skill when the user asks to inspect AltLLM Portal balance, redeem a promo code, review billing transactions, or view usage analytics by period, model, or API key using the local altllm CLI. Do NOT use for API key lifecycle management or payment-link execution.",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "internet-court",
+  "install_path": ".claude/skills/altllm-portal-billing/SKILL.md",
+  "source": {
+    "repo": "internet-court/internet-court-skill",
+    "url": "https://github.com/internet-court/internet-court-skill/blob/main/vendored/altlayer/altllm-portal-billing/SKILL.md",
+    "path": "vendored/altlayer/altllm-portal-billing/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-27T19:15:42.772Z",
+    "stars": 1373,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-10T04:27:35Z",
+    "license": null
+  }
+}

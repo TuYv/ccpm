@@ -1,0 +1,25 @@
+{
+  "id": "internet-court-internet-court-skill-make-git-escrow",
+  "name": "make-git-escrow",
+  "description": "Create a new git escrow bounty for a test suite. Use when the user wants to submit a challenge with escrowed token rewards for passing a failing test suite. Requires the git-escrows CLI (npm i -g git-escrows).",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "internet-court",
+  "install_path": ".claude/skills/make-git-escrow/SKILL.md",
+  "source": {
+    "repo": "internet-court/internet-court-skill",
+    "url": "https://github.com/internet-court/internet-court-skill/blob/main/vendored/arkhai/make-git-escrow/SKILL.md",
+    "path": "vendored/arkhai/make-git-escrow/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-27T19:15:44.807Z",
+    "stars": 1373,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-10T04:27:35Z",
+    "license": null
+  }
+}

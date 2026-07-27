@@ -1,0 +1,25 @@
+{
+  "id": "internet-court-internet-court-skill-intelligent-oracle",
+  "name": "intelligent-oracle",
+  "description": "Design, deploy, and monitor a GenLayer Intelligent Oracle prediction market from any coding agent. Use when a user wants to create a settled-by-web-evidence prediction market without opening the web UI.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "internet-court",
+  "install_path": ".claude/skills/intelligent-oracle/SKILL.md",
+  "source": {
+    "repo": "internet-court/internet-court-skill",
+    "url": "https://github.com/internet-court/internet-court-skill/blob/main/vendored/intelligent-oracle/intelligent-oracle/SKILL.md",
+    "path": "vendored/intelligent-oracle/intelligent-oracle/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-27T19:15:48.341Z",
+    "stars": 1373,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-10T04:27:35Z",
+    "license": null
+  }
+}

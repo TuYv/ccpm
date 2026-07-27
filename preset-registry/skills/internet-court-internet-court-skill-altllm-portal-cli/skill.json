@@ -1,0 +1,25 @@
+{
+  "id": "internet-court-internet-court-skill-altllm-portal-cli",
+  "name": "altllm-portal-cli",
+  "description": "Use this umbrella skill when the request spans multiple AltLLM Portal CLI domains, or when you need to navigate the local altllm CLI in this repository across auth, API keys, billing history, NOWPayments payment links, and related x402 Portal top-up guidance.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "internet-court",
+  "install_path": ".claude/skills/altllm-portal-cli/SKILL.md",
+  "source": {
+    "repo": "internet-court/internet-court-skill",
+    "url": "https://github.com/internet-court/internet-court-skill/blob/main/vendored/altlayer/altllm-portal-cli/SKILL.md",
+    "path": "vendored/altlayer/altllm-portal-cli/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-27T19:15:42.935Z",
+    "stars": 1373,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-10T04:27:35Z",
+    "license": null
+  }
+}

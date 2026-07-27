@@ -1,0 +1,25 @@
+{
+  "id": "internet-court-internet-court-skill-genvm-lint",
+  "name": "genvm-lint",
+  "description": "Validate GenLayer intelligent contracts with the GenVM linter.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "internet-court",
+  "install_path": ".claude/skills/genvm-lint/SKILL.md",
+  "source": {
+    "repo": "internet-court/internet-court-skill",
+    "url": "https://github.com/internet-court/internet-court-skill/blob/main/vendored/genlayer/genvm-lint/SKILL.md",
+    "path": "vendored/genlayer/genvm-lint/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-27T19:15:47.296Z",
+    "stars": 1373,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-10T04:27:35Z",
+    "license": null
+  }
+}

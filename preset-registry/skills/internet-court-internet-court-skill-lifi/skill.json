@@ -1,0 +1,25 @@
+{
+  "id": "internet-court-internet-court-skill-lifi",
+  "name": "lifi",
+  "description": "| LI.FI REST API for cross-chain and same-chain token swaps, bridging, DeFi deposits (Composer), yield discovery (Earn), and intent-based execution (Intents).",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "internet-court",
+  "install_path": ".claude/skills/lifi/SKILL.md",
+  "source": {
+    "repo": "internet-court/internet-court-skill",
+    "url": "https://github.com/internet-court/internet-court-skill/blob/main/vendored/lifi/lifi/SKILL.md",
+    "path": "vendored/lifi/lifi/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-27T19:15:49.127Z",
+    "stars": 1373,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-10T04:27:35Z",
+    "license": null
+  }
+}

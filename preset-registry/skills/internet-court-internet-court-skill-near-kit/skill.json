@@ -1,0 +1,25 @@
+{
+  "id": "internet-court-internet-court-skill-near-kit",
+  "name": "near-kit",
+  "description": "TypeScript library for NEAR Protocol blockchain interaction. Use this skill when writing code that interacts with NEAR Protocol, including viewing contract data, calling contract methods, sending NEAR tokens, building transactions, creating type-safe contract wrappers, integrating wallets (Wallet Selector, HOT Connect), React hooks and providers (@near-kit/react), managing keys, testing with sandbox, meta-transactions (NEP-366), and message signing (NEP-413).",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "internet-court",
+  "install_path": ".claude/skills/near-kit/SKILL.md",
+  "source": {
+    "repo": "internet-court/internet-court-skill",
+    "url": "https://github.com/internet-court/internet-court-skill/blob/main/vendored/near/near-kit/SKILL.md",
+    "path": "vendored/near/near-kit/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-27T19:15:51.632Z",
+    "stars": 1373,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-10T04:27:35Z",
+    "license": null
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "internet-court-internet-court-skill-genlayer-intelligent-contracts",
+  "name": "genlayer-intelligent-contracts",
+  "description": "Internet Court adapter for GenLayer Intelligent Contract supervision. Use to specify agent-performance rubrics, evidence schemas, decision outputs, and ERC-7710 connector expectations, while delegating actual GenLayer contract writing, linting, testing, deployment, and CLI interaction to the official GenLayer skills at https://skills.genlayer.com/.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "internet-court",
+  "install_path": ".claude/skills/genlayer-intelligent-contracts/SKILL.md",
+  "source": {
+    "repo": "internet-court/internet-court-skill",
+    "url": "https://github.com/internet-court/internet-court-skill/blob/main/integrations/genlayer-intelligent-contracts/SKILL.md",
+    "path": "integrations/genlayer-intelligent-contracts/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-27T19:15:41.624Z",
+    "stars": 1373,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-10T04:27:35Z",
+    "license": null
+  }
+}

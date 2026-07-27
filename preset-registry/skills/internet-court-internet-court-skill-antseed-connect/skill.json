@@ -1,0 +1,25 @@
+{
+  "id": "internet-court-internet-court-skill-antseed-connect",
+  "name": "antseed-connect",
+  "description": "Connect coding agents, AI SDKs, and LLM tools to the AntSeed buyer proxy. Use when configuring Claude Code, Codex, OpenCode, Pi, OpenClaw, Hermes, GenLayer Studio, Vercel AI SDK, LangChain, or raw HTTP to route inference through AntSeed at localhost:8377.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "internet-court",
+  "install_path": ".claude/skills/antseed-connect/SKILL.md",
+  "source": {
+    "repo": "internet-court/internet-court-skill",
+    "url": "https://github.com/internet-court/internet-court-skill/blob/main/vendored/antseed/antseed-connect/SKILL.md",
+    "path": "vendored/antseed/antseed-connect/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-27T19:15:43.738Z",
+    "stars": 1373,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-10T04:27:35Z",
+    "license": null
+  }
+}

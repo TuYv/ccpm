@@ -1,0 +1,25 @@
+{
+  "id": "internet-court-internet-court-skill-nansen-smart-money-tracker",
+  "name": "nansen-smart-money-tracker",
+  "description": "Smart money tracking — netflow, trades, holdings, perp trades. Use when finding what smart money wallets are buying/selling or tracking whale activity.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "internet-court",
+  "install_path": ".claude/skills/nansen-smart-money-tracker/SKILL.md",
+  "source": {
+    "repo": "internet-court/internet-court-skill",
+    "url": "https://github.com/internet-court/internet-court-skill/blob/main/vendored/nansen/nansen-smart-money-tracker/SKILL.md",
+    "path": "vendored/nansen/nansen-smart-money-tracker/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-27T19:15:50.333Z",
+    "stars": 1373,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-10T04:27:35Z",
+    "license": null
+  }
+}

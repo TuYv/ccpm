@@ -1,0 +1,25 @@
+{
+  "id": "internet-court-internet-court-skill-okx-dex",
+  "name": "okx-dex",
+  "description": "HARD BLOCK — never use for prediction-market/Polymarket UpDown queries; route to okx-dapp-discovery when a named DApp (Polymarket/Aave/Hyperliquid/PancakeSwap/Morpho) appears with a timeframe, or 涨跌/updown for BTC/ETH/SOL/XRP/BNB/DOGE/HYPE. Otherwise, read-only on-chain DEX data, 6 groups: TOKEN (search, hot/热门, liquidity, holders/whale, risk metadata, cluster/持仓集中度, trade history, top traders); MARKET (price/价格, K线/OHLC, index price, wallet PnL/胜率, trade history); SIGNAL (smart money/KOL/whale ",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "internet-court",
+  "install_path": ".claude/skills/okx-dex/SKILL.md",
+  "source": {
+    "repo": "internet-court/internet-court-skill",
+    "url": "https://github.com/internet-court/internet-court-skill/blob/main/vendored/okx/okx-dex/SKILL.md",
+    "path": "vendored/okx/okx-dex/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-27T19:15:53.113Z",
+    "stars": 1373,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-10T04:27:35Z",
+    "license": null
+  }
+}

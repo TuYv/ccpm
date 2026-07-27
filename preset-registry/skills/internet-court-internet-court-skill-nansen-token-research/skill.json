@@ -1,0 +1,25 @@
+{
+  "id": "internet-court-internet-court-skill-nansen-token-research",
+  "name": "nansen-token-research",
+  "description": "Token deep dive — info, OHLCV, holders, flows, flow intelligence, who bought/sold, DEX trades, PnL, perp trades, perp positions, perp PnL leaderboard. Use when researching a specific token in depth.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "internet-court",
+  "install_path": ".claude/skills/nansen-token-research/SKILL.md",
+  "source": {
+    "repo": "internet-court/internet-court-skill",
+    "url": "https://github.com/internet-court/internet-court-skill/blob/main/vendored/nansen/nansen-token-research/SKILL.md",
+    "path": "vendored/nansen/nansen-token-research/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-27T19:15:50.501Z",
+    "stars": 1373,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-10T04:27:35Z",
+    "license": null
+  }
+}

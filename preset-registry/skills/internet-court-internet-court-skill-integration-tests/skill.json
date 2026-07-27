@@ -1,0 +1,25 @@
+{
+  "id": "internet-court-internet-court-skill-integration-tests",
+  "name": "integration-tests",
+  "description": "Write and run integration tests against a GenLayer environment.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "internet-court",
+  "install_path": ".claude/skills/integration-tests/SKILL.md",
+  "source": {
+    "repo": "internet-court/internet-court-skill",
+    "url": "https://github.com/internet-court/internet-court-skill/blob/main/vendored/genlayer/integration-tests/SKILL.md",
+    "path": "vendored/genlayer/integration-tests/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-27T19:15:47.490Z",
+    "stars": 1373,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-10T04:27:35Z",
+    "license": null
+  }
+}

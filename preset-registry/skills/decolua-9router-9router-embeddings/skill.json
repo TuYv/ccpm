@@ -1,0 +1,25 @@
+{
+  "id": "decolua-9router-9router-embeddings",
+  "name": "9router-embeddings",
+  "description": "Generate vector embeddings via 9Router /v1/embeddings using OpenAI / Gemini / Mistral / Voyage / Nvidia / GitHub embedding models for RAG, semantic search, similarity. Use when the user wants embeddings, vectors, RAG, semantic search, or to embed text.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "decolua",
+  "install_path": ".claude/skills/9router-embeddings/SKILL.md",
+  "source": {
+    "repo": "decolua/9router",
+    "url": "https://github.com/decolua/9router/blob/master/skills/9router-embeddings/SKILL.md",
+    "path": "skills/9router-embeddings/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-07-27T19:20:07.108Z",
+    "stars": 23768,
+    "language": "JavaScript",
+    "pushed_at": "2026-07-20T10:22:50Z",
+    "license": "MIT"
+  }
+}

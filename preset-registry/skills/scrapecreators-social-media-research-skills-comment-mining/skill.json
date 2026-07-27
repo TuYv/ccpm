@@ -1,0 +1,25 @@
+{
+  "id": "scrapecreators-social-media-research-skills-comment-mining",
+  "name": "comment-mining",
+  "description": "Use when the user wants to mine comments and replies for audience reactions, customer language, questions, objections, complaints, product ideas, buying intent, sentiment, or voice-of-customer insights from public social posts and videos.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "ScrapeCreators",
+  "install_path": ".claude/skills/comment-mining/SKILL.md",
+  "source": {
+    "repo": "ScrapeCreators/social-media-research-skills",
+    "url": "https://github.com/ScrapeCreators/social-media-research-skills/blob/main/skills/comment-mining/SKILL.md",
+    "path": "skills/comment-mining/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-27T19:17:09.063Z",
+    "stars": 931,
+    "language": "Python",
+    "pushed_at": "2026-07-24T23:07:16Z",
+    "license": null
+  }
+}

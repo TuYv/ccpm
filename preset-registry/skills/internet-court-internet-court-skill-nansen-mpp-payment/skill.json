@@ -1,0 +1,25 @@
+{
+  "id": "internet-court-internet-court-skill-nansen-mpp-payment",
+  "name": "nansen-mpp-payment",
+  "description": "Pay-per-call access to the Nansen API via MPP (Tempo). Use when a user wants anonymous Nansen access without an API key and without managing their own Base/Solana wallet — they install the tempo CLI separately and call the API through `tempo request`.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "internet-court",
+  "install_path": ".claude/skills/nansen-mpp-payment/SKILL.md",
+  "source": {
+    "repo": "internet-court/internet-court-skill",
+    "url": "https://github.com/internet-court/internet-court-skill/blob/main/vendored/nansen/nansen-mpp-payment/SKILL.md",
+    "path": "vendored/nansen/nansen-mpp-payment/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-27T19:15:49.936Z",
+    "stars": 1373,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-10T04:27:35Z",
+    "license": null
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "internet-court-internet-court-skill-nla-arbitrate",
+  "name": "nla-arbitrate",
+  "description": "Manually arbitrate NLA escrow fulfillments as an alternative to the automated oracle. Use when the user wants to review pending arbitration requests, evaluate demands against fulfillments, and submit on-chain decisions. Supports both interactive and LLM-auto modes.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "internet-court",
+  "install_path": ".claude/skills/nla-arbitrate/SKILL.md",
+  "source": {
+    "repo": "internet-court/internet-court-skill",
+    "url": "https://github.com/internet-court/internet-court-skill/blob/main/vendored/arkhai/nla-arbitrate/SKILL.md",
+    "path": "vendored/arkhai/nla-arbitrate/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-27T19:15:44.994Z",
+    "stars": 1373,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-10T04:27:35Z",
+    "license": null
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "internet-court-internet-court-skill-trustless-agents",
+  "name": "trustless-agents",
+  "description": "ERC-8004 Trustless Agents — on-chain agent identity + reputation. Resolve an agent by id (Identity Registry ERC-721 → owner + AgentCard), list the canonical registry addresses, and generate a spec-compliant agent registration card (registration-v1, with x402 support + trust models). Custody-free, read + scaffolding. Triggers: ERC-8004, trustless agent, agent identity, agent registry, AgentCard, agent reputation, on-chain agent, A2A, agent discovery, agent card, 8004.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "internet-court",
+  "install_path": ".claude/skills/trustless-agents/SKILL.md",
+  "source": {
+    "repo": "internet-court/internet-court-skill",
+    "url": "https://github.com/internet-court/internet-court-skill/blob/main/vendored/chaingpt/trustless-agents/SKILL.md",
+    "path": "vendored/chaingpt/trustless-agents/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-27T19:15:46.357Z",
+    "stars": 1373,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-10T04:27:35Z",
+    "license": null
+  }
+}

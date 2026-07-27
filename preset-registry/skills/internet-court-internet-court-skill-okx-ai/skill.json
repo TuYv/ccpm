@@ -1,0 +1,25 @@
+{
+  "id": "internet-court-internet-court-skill-okx-ai",
+  "name": "okx-ai",
+  "description": "> ERC-8004 Agent identity: 注册/更新/上架/下架/搜索agent, register/update/activate/deactivate/search — User/ASP/Evaluator(买家/卖家/仲裁者); 我的agent/ASP, 找做X的ASP/agent有什么服务/endpoint怎么填/查口碑/传头像. + Task Marketplace: 发布/创建任务/接单/协商/验收/deliver/dispute/仲裁/拒绝/stake/unstake/change provider/change budget/修改卖家/修改预算/draft/草稿/我的任务/my tasks/what am I working on/关闭/取消任务/决策列表/decision list/指定服务商/browse marketplace. + task watch: 监听任务进展/历史消息/未读消息/未决策/outstanding decisions. + okx-a2a missing/uninitialized. Match by meaning. MUST",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "internet-court",
+  "install_path": ".claude/skills/okx-ai/SKILL.md",
+  "source": {
+    "repo": "internet-court/internet-court-skill",
+    "url": "https://github.com/internet-court/internet-court-skill/blob/main/vendored/okx/okx-ai/SKILL.md",
+    "path": "vendored/okx/okx-ai/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-27T19:15:52.504Z",
+    "stars": 1373,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-10T04:27:35Z",
+    "license": null
+  }
+}

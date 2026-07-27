@@ -1,0 +1,25 @@
+{
+  "id": "internet-court-internet-court-skill-alkahest-developer",
+  "name": "alkahest-developer",
+  "description": "Help developers write code that interacts with Alkahest escrow contracts using the TypeScript, Rust, or Python SDK",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "internet-court",
+  "install_path": ".claude/skills/alkahest-developer/SKILL.md",
+  "source": {
+    "repo": "internet-court/internet-court-skill",
+    "url": "https://github.com/internet-court/internet-court-skill/blob/main/vendored/arkhai/alkahest-developer/SKILL.md",
+    "path": "vendored/arkhai/alkahest-developer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-27T19:15:44.177Z",
+    "stars": 1373,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-10T04:27:35Z",
+    "license": null
+  }
+}

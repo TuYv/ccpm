@@ -1,0 +1,25 @@
+{
+  "id": "internet-court-internet-court-skill-nansen-wallet-profiler",
+  "name": "nansen-wallet-profiler",
+  "description": "Wallet profiler — balance, PnL, labels, transactions, counterparties, related wallets, batch, trace, compare. Use when analysing a specific wallet address or comparing wallets.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "internet-court",
+  "install_path": ".claude/skills/nansen-wallet-profiler/SKILL.md",
+  "source": {
+    "repo": "internet-court/internet-court-skill",
+    "url": "https://github.com/internet-court/internet-court-skill/blob/main/vendored/nansen/nansen-wallet-profiler/SKILL.md",
+    "path": "vendored/nansen/nansen-wallet-profiler/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-27T19:15:50.682Z",
+    "stars": 1373,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-10T04:27:35Z",
+    "license": null
+  }
+}

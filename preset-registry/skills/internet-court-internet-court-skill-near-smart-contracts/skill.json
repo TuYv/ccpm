@@ -1,0 +1,25 @@
+{
+  "id": "internet-court-internet-court-skill-near-smart-contracts",
+  "name": "near-smart-contracts",
+  "description": "NEAR Protocol smart contract development in Rust. Use when writing, reviewing, or deploying NEAR smart contracts. Covers contract structure, state management, cross-contract calls, testing, security, and optimization patterns. Based on near-sdk v5.x with modern macro syntax.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "internet-court",
+  "install_path": ".claude/skills/near-smart-contracts/SKILL.md",
+  "source": {
+    "repo": "internet-court/internet-court-skill",
+    "url": "https://github.com/internet-court/internet-court-skill/blob/main/vendored/near/near-smart-contracts/SKILL.md",
+    "path": "vendored/near/near-smart-contracts/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-27T19:15:51.861Z",
+    "stars": 1373,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-10T04:27:35Z",
+    "license": null
+  }
+}

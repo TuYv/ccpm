@@ -1,0 +1,25 @@
+{
+  "id": "internet-court-internet-court-skill-nla-create",
+  "name": "nla-create",
+  "description": "Create a Natural Language Agreement escrow on-chain. Use when the user wants to lock ERC20 tokens in an escrow with a natural language demand that an AI oracle will arbitrate. Handles demand crafting, parameter gathering, and CLI execution.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "internet-court",
+  "install_path": ".claude/skills/nla-create/SKILL.md",
+  "source": {
+    "repo": "internet-court/internet-court-skill",
+    "url": "https://github.com/internet-court/internet-court-skill/blob/main/vendored/arkhai/nla-create/SKILL.md",
+    "path": "vendored/arkhai/nla-create/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-27T19:15:45.197Z",
+    "stars": 1373,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-10T04:27:35Z",
+    "license": null
+  }
+}

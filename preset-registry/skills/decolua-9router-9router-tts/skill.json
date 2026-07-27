@@ -1,0 +1,25 @@
+{
+  "id": "decolua-9router-9router-tts",
+  "name": "9router-tts",
+  "description": "Text-to-speech via 9Router /v1/audio/speech using OpenAI / ElevenLabs / Deepgram / Edge TTS / Google TTS / Hyperbolic / Inworld voices. Use when the user wants to convert text to speech, generate audio, voiceover, narrate, or read text aloud.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "decolua",
+  "install_path": ".claude/skills/9router-tts/SKILL.md",
+  "source": {
+    "repo": "decolua/9router",
+    "url": "https://github.com/decolua/9router/blob/master/skills/9router-tts/SKILL.md",
+    "path": "skills/9router-tts/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-07-27T19:20:07.680Z",
+    "stars": 23768,
+    "language": "JavaScript",
+    "pushed_at": "2026-07-20T10:22:50Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "internet-court-internet-court-skill-okx-agentic-wallet",
+  "name": "okx-agentic-wallet",
+  "description": "OKX Agentic Wallet — the single skill for the user's wallet and on-chain execution. Use it whenever the user wants to operate their wallet or execute an on-chain action, including: login & accounts, balance / holdings, wallet address / deposit / receive, send / transfer, contract calls (approve / deposit / withdraw), transaction history & status, message signing, wallet export & policy; pay gas with a stablecoin (Gas Station, Solana); swap / trade / buy / sell / convert, get a quote; cross-chain",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "internet-court",
+  "install_path": ".claude/skills/okx-agentic-wallet/SKILL.md",
+  "source": {
+    "repo": "internet-court/internet-court-skill",
+    "url": "https://github.com/internet-court/internet-court-skill/blob/main/vendored/okx/okx-agentic-wallet/SKILL.md",
+    "path": "vendored/okx/okx-agentic-wallet/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-27T19:15:52.296Z",
+    "stars": 1373,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-10T04:27:35Z",
+    "license": null
+  }
+}

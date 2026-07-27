@@ -1,0 +1,25 @@
+{
+  "id": "internet-court-internet-court-skill-web3-data",
+  "name": "web3-data",
+  "description": "> Two services in one skill: (1) Web3 on-chain data via Chainbase CLI — use when the user asks about blockchain data, token holders, wallet addresses, token prices, ENS domains, transactions, DeFi portfolios, or any on-chain analytics. Triggers: \"top holders of\", \"who holds\", \"wallet address\", \"token price\", \"token transfers\", \"ENS domain\", \"on-chain data\", \"blockchain query\", \"SQL query on-chain\", across Ethereum, BSC, Polygon, Arbitrum, Optimism, Base, Avalanche, zkSync, and other EVM chains. ",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "internet-court",
+  "install_path": ".claude/skills/web3-data/SKILL.md",
+  "source": {
+    "repo": "internet-court/internet-court-skill",
+    "url": "https://github.com/internet-court/internet-court-skill/blob/main/vendored/chainbase/web3-data/SKILL.md",
+    "path": "vendored/chainbase/web3-data/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-27T19:15:45.767Z",
+    "stars": 1373,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-10T04:27:35Z",
+    "license": null
+  }
+}

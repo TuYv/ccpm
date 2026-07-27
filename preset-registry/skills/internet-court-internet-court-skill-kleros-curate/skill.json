@@ -1,0 +1,25 @@
+{
+  "id": "internet-court-internet-court-skill-kleros-curate",
+  "name": "kleros-curate",
+  "description": "Interact with Kleros Curate registries — the decentralized token-curated list protocol for token lists, address tags, and policy-driven curation. Use this skill when the user mentions Curate, Light Curate, LightGeneralizedTCR, LGTCR, LightCurate, Stake Curate, PermanentGTCR, PGTCR, Scout, token-curated registry, TCR, curated list, decentralized registry, registry, token list, address tags, CDN tags, Goldsky, or Solidity functions addItem, removeItem, challengeItem, challengeRequest. Covers all t",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "internet-court",
+  "install_path": ".claude/skills/kleros-curate/SKILL.md",
+  "source": {
+    "repo": "internet-court/internet-court-skill",
+    "url": "https://github.com/internet-court/internet-court-skill/blob/main/vendored/kleros/kleros-curate/SKILL.md",
+    "path": "vendored/kleros/kleros-curate/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-27T19:15:48.539Z",
+    "stars": 1373,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-10T04:27:35Z",
+    "license": null
+  }
+}

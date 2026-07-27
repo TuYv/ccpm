@@ -1,0 +1,25 @@
+{
+  "id": "decolua-9router-9router-image",
+  "name": "9router-image",
+  "description": "Generate images via 9Router /v1/images/generations using OpenAI / Gemini Imagen / DALL-E / FLUX / MiniMax / SDWebUI / ComfyUI / Codex models. Use when the user wants to create, generate, draw, or render an image, picture, or text-to-image (txt2img).",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "decolua",
+  "install_path": ".claude/skills/9router-image/SKILL.md",
+  "source": {
+    "repo": "decolua/9router",
+    "url": "https://github.com/decolua/9router/blob/master/skills/9router-image/SKILL.md",
+    "path": "skills/9router-image/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-07-27T19:20:07.280Z",
+    "stars": 23768,
+    "language": "JavaScript",
+    "pushed_at": "2026-07-20T10:22:50Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "internet-court-internet-court-skill-nansen-holder-analysis",
+  "name": "nansen-holder-analysis",
+  "description": "Is this token held by quality wallets or retail noise? SM holder ratio, flow breakdown by label, and recent buyer quality.",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "internet-court",
+  "install_path": ".claude/skills/nansen-holder-analysis/SKILL.md",
+  "source": {
+    "repo": "internet-court/internet-court-skill",
+    "url": "https://github.com/internet-court/internet-court-skill/blob/main/vendored/nansen/nansen-holder-analysis/SKILL.md",
+    "path": "vendored/nansen/nansen-holder-analysis/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-27T19:15:49.756Z",
+    "stars": 1373,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-10T04:27:35Z",
+    "license": null
+  }
+}

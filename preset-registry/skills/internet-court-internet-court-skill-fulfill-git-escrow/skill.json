@@ -1,0 +1,25 @@
+{
+  "id": "internet-court-internet-court-skill-fulfill-git-escrow",
+  "name": "fulfill-git-escrow",
+  "description": "Fulfill a git escrow bounty by writing a solution or submitting an existing one. Use when the user wants to solve a test suite challenge, write code to pass tests, and claim a token reward. Requires the git-escrows CLI (npm i -g git-escrows).",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "internet-court",
+  "install_path": ".claude/skills/fulfill-git-escrow/SKILL.md",
+  "source": {
+    "repo": "internet-court/internet-court-skill",
+    "url": "https://github.com/internet-court/internet-court-skill/blob/main/vendored/arkhai/fulfill-git-escrow/SKILL.md",
+    "path": "vendored/arkhai/fulfill-git-escrow/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-27T19:15:44.588Z",
+    "stars": 1373,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-10T04:27:35Z",
+    "license": null
+  }
+}

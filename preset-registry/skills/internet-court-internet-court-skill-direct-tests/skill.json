@@ -1,0 +1,25 @@
+{
+  "id": "internet-court-internet-court-skill-direct-tests",
+  "name": "direct-tests",
+  "description": "Write and run fast direct mode tests for GenLayer intelligent contracts.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "internet-court",
+  "install_path": ".claude/skills/direct-tests/SKILL.md",
+  "source": {
+    "repo": "internet-court/internet-court-skill",
+    "url": "https://github.com/internet-court/internet-court-skill/blob/main/vendored/genlayer/direct-tests/SKILL.md",
+    "path": "vendored/genlayer/direct-tests/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-27T19:15:46.920Z",
+    "stars": 1373,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-10T04:27:35Z",
+    "license": null
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "internet-court-internet-court-skill-altllm-portal-api-keys",
+  "name": "altllm-portal-api-keys",
+  "description": "Use this skill when the user asks to list, create, inspect, update, disable, re-enable, or revoke AltLLM Portal API keys for external agents or applications. Do NOT use for wallet login, billing history, or payment links.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "internet-court",
+  "install_path": ".claude/skills/altllm-portal-api-keys/SKILL.md",
+  "source": {
+    "repo": "internet-court/internet-court-skill",
+    "url": "https://github.com/internet-court/internet-court-skill/blob/main/vendored/altlayer/altllm-portal-api-keys/SKILL.md",
+    "path": "vendored/altlayer/altllm-portal-api-keys/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-27T19:15:42.400Z",
+    "stars": 1373,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-10T04:27:35Z",
+    "license": null
+  }
+}

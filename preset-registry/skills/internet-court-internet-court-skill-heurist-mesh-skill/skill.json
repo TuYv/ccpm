@@ -1,0 +1,25 @@
+{
+  "id": "internet-court-internet-court-skill-heurist-mesh-skill",
+  "name": "heurist-mesh-skill",
+  "description": "Access real-time crypto token data, DeFi analytics, wallet intelligence, project research, and blockchain insights through Heurist Mesh agents. Use when the user asks about token trends, DeFi protocols, wallet holdings, project due diligence, Twitter/X crypto sentiment, or deeper market analysis.",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "internet-court",
+  "install_path": ".claude/skills/heurist-mesh-skill/SKILL.md",
+  "source": {
+    "repo": "internet-court/internet-court-skill",
+    "url": "https://github.com/internet-court/internet-court-skill/blob/main/vendored/heurist/heurist-mesh-skill/SKILL.md",
+    "path": "vendored/heurist/heurist-mesh-skill/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-27T19:15:47.896Z",
+    "stars": 1373,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-10T04:27:35Z",
+    "license": null
+  }
+}

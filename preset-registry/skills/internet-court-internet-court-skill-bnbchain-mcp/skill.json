@@ -1,0 +1,25 @@
+{
+  "id": "internet-court-internet-court-skill-bnbchain-mcp",
+  "name": "bnbchain-mcp",
+  "description": "BNB Chain MCP server connection and tool usage. Covers npx @bnb-chain/mcp@latest, PRIVATE_KEY and RPC, and every MCP tool — blocks, transactions, contracts, ERC20/NFT transfers, wallet, ERC-8004 agent registration, Greenfield. Use when connecting to bnbchain-mcp, querying or transacting on BNB Chain/opBNB/EVM, registering as ERC-8004 agent, or using Greenfield.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "internet-court",
+  "install_path": ".claude/skills/bnbchain-mcp/SKILL.md",
+  "source": {
+    "repo": "internet-court/internet-court-skill",
+    "url": "https://github.com/internet-court/internet-court-skill/blob/main/vendored/bnb-chain/bnbchain-mcp/SKILL.md",
+    "path": "vendored/bnb-chain/bnbchain-mcp/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-27T19:15:45.579Z",
+    "stars": 1373,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-10T04:27:35Z",
+    "license": null
+  }
+}

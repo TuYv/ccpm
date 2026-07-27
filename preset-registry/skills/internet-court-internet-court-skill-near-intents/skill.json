@@ -1,0 +1,25 @@
+{
+  "id": "internet-court-internet-court-skill-near-intents",
+  "name": "near-intents",
+  "description": "Cross-chain token swap integration using NEAR Intents 1Click API. Use when building swap widgets, bridge interfaces, or multi-chain transfers across EVM, Solana, NEAR, TON, Stellar, and Tron.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "internet-court",
+  "install_path": ".claude/skills/near-intents/SKILL.md",
+  "source": {
+    "repo": "internet-court/internet-court-skill",
+    "url": "https://github.com/internet-court/internet-court-skill/blob/main/vendored/near/near-intents/SKILL.md",
+    "path": "vendored/near/near-intents/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-27T19:15:51.451Z",
+    "stars": 1373,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-10T04:27:35Z",
+    "license": null
+  }
+}

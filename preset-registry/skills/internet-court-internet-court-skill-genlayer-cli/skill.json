@@ -1,0 +1,25 @@
+{
+  "id": "internet-court-internet-court-skill-genlayer-cli",
+  "name": "genlayer-cli",
+  "description": "Use the GenLayer CLI to deploy, interact with, and debug intelligent contracts.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "internet-court",
+  "install_path": ".claude/skills/genlayer-cli/SKILL.md",
+  "source": {
+    "repo": "internet-court/internet-court-skill",
+    "url": "https://github.com/internet-court/internet-court-skill/blob/main/vendored/genlayer/genlayer-cli/SKILL.md",
+    "path": "vendored/genlayer/genlayer-cli/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-27T19:15:47.099Z",
+    "stars": 1373,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-10T04:27:35Z",
+    "license": null
+  }
+}

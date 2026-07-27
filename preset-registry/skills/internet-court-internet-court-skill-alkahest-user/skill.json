@@ -1,0 +1,25 @@
+{
+  "id": "internet-court-internet-court-skill-alkahest-user",
+  "name": "alkahest-user",
+  "description": "Interact with Alkahest escrow contracts as a buyer, seller, or oracle using the CLI",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "internet-court",
+  "install_path": ".claude/skills/alkahest-user/SKILL.md",
+  "source": {
+    "repo": "internet-court/internet-court-skill",
+    "url": "https://github.com/internet-court/internet-court-skill/blob/main/vendored/arkhai/alkahest-user/SKILL.md",
+    "path": "vendored/arkhai/alkahest-user/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-27T19:15:44.375Z",
+    "stars": 1373,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-10T04:27:35Z",
+    "license": null
+  }
+}

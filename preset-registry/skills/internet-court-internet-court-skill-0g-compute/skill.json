@@ -1,0 +1,25 @@
+{
+  "id": "internet-court-internet-court-skill-0g-compute",
+  "name": "0g-compute",
+  "description": "0G Compute Network guide for decentralized AI inference, fine-tuning, and GPU services. Covers chatbots, image generation, speech-to-text, SDK integration (0g-serving-broker), processResponse API, broker.inference methods, CLI commands (0g-compute-cli), and account management. Use this skill for any 0G compute, 0G AI, or decentralized GPU question.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "internet-court",
+  "install_path": ".claude/skills/0g-compute/SKILL.md",
+  "source": {
+    "repo": "internet-court/internet-court-skill",
+    "url": "https://github.com/internet-court/internet-court-skill/blob/main/vendored/0g/0g-compute/SKILL.md",
+    "path": "vendored/0g/0g-compute/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-27T19:15:42.218Z",
+    "stars": 1373,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-10T04:27:35Z",
+    "license": null
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "decolua-9router-9router-stt",
+  "name": "9router-stt",
+  "description": "Speech-to-text via 9Router /v1/audio/transcriptions using OpenAI Whisper / Groq / Gemini / Deepgram / AssemblyAI / NVIDIA / HuggingFace models. Use when the user wants to transcribe audio, convert speech to text, or get subtitles from audio files.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "decolua",
+  "install_path": ".claude/skills/9router-stt/SKILL.md",
+  "source": {
+    "repo": "decolua/9router",
+    "url": "https://github.com/decolua/9router/blob/master/skills/9router-stt/SKILL.md",
+    "path": "skills/9router-stt/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-07-27T19:20:07.484Z",
+    "stars": 23768,
+    "language": "JavaScript",
+    "pushed_at": "2026-07-20T10:22:50Z",
+    "license": "MIT"
+  }
+}

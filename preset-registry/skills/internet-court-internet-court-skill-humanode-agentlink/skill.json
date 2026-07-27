@@ -1,0 +1,25 @@
+{
+  "id": "internet-court-internet-court-skill-humanode-agentlink",
+  "name": "humanode-agentlink",
+  "description": "The trust layer for agent-to-agent commerce — natural-language mandates, ERC-7710 delegated permissions, x402 payments, escrow, and dispute resolution as one open, catch-all Agent Skill / Claude Code plugin.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "internet-court",
+  "install_path": ".claude/skills/humanode-agentlink/SKILL.md",
+  "source": {
+    "repo": "internet-court/internet-court-skill",
+    "url": "https://github.com/internet-court/internet-court-skill/blob/main/vendored/humanode/humanode-agentlink/SKILL.md",
+    "path": "vendored/humanode/humanode-agentlink/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-27T19:15:48.079Z",
+    "stars": 1373,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-10T04:27:35Z",
+    "license": null
+  }
+}

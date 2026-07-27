@@ -1,0 +1,25 @@
+{
+  "id": "internet-court-internet-court-skill-x402",
+  "name": "x402",
+  "description": "x402 agentic payments (Coinbase's HTTP 402 protocol). Custody-free tools to pay x402-protected endpoints (build the EIP-3009 transferWithAuthorization the payer signs, assemble the X-PAYMENT header), call a facilitator (verify/settle/supported), and monetize your own API by generating PaymentRequirements. USDC on Base. Triggers: x402, HTTP 402, pay per request, agentic payment, machine payment, X-PAYMENT, transferWithAuthorization, EIP-3009, facilitator, monetize API, pay for API, agent pays.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "internet-court",
+  "install_path": ".claude/skills/x402/SKILL.md",
+  "source": {
+    "repo": "internet-court/internet-court-skill",
+    "url": "https://github.com/internet-court/internet-court-skill/blob/main/vendored/chaingpt/x402/SKILL.md",
+    "path": "vendored/chaingpt/x402/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-27T19:15:46.565Z",
+    "stars": 1373,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-10T04:27:35Z",
+    "license": null
+  }
+}
