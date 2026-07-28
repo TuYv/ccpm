@@ -2,7 +2,7 @@
   "id": "k-dense-ai-claude-scientific-skills-autoskill",
   "name": "autoskill",
   "description": "Observe the user's screen via screenpipe, detect repeated research workflows, match them against existing scientific-agent-skills, and draft new skills (or composition recipes that chain existing ones) for the patterns not yet covered. Use when the user asks to analyze their recent work and propose skills based on what they actually do. Requires the screenpipe daemon (https://github.com/screenpipe/screenpipe) running locally on port 3030 — the skill has no other data source and will refuse to ru",
-  "category": "设计创意",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/K-Dense-AI/claude-scientific-skills/blob/main/skills/autoskill/SKILL.md",
     "path": "skills/autoskill/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-28T17:01:23.379Z",
-    "stars": 31999,
+    "discovered_at": "2026-07-28T18:54:10.550Z",
+    "stars": 32003,
     "language": "Python",
-    "pushed_at": "2026-07-28T16:10:36Z",
+    "pushed_at": "2026-07-28T18:22:53Z",
     "license": "MIT"
   }
 }

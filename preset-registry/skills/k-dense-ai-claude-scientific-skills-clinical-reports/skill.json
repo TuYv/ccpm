@@ -2,7 +2,7 @@
   "id": "k-dense-ai-claude-scientific-skills-clinical-reports",
   "name": "clinical-reports",
   "description": "Create safety-bounded draft structures and run local deterministic checks for clinical case, diagnostic, trial, safety, and aggregate research reports. Use only with synthetic, de-identified, or aggregate inputs and verified source-fact manifests; every output requires qualified review.",
-  "category": "设计创意",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/K-Dense-AI/claude-scientific-skills/blob/main/skills/clinical-reports/SKILL.md",
     "path": "skills/clinical-reports/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-28T17:01:26.786Z",
-    "stars": 31999,
+    "discovered_at": "2026-07-28T18:54:13.503Z",
+    "stars": 32003,
     "language": "Python",
-    "pushed_at": "2026-07-28T16:10:36Z",
+    "pushed_at": "2026-07-28T18:22:53Z",
     "license": "MIT"
   }
 }

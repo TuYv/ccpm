@@ -2,7 +2,7 @@
   "id": "k-dense-ai-scientific-agent-skills-cirq",
   "name": "cirq",
   "description": "Google quantum computing framework. Use when targeting Google Quantum AI hardware, designing noise-aware circuits, or running quantum characterization experiments. Best for Google hardware, noise modeling, and low-level circuit design. For IBM hardware use qiskit; for quantum ML with autodiff use pennylane; for physics simulations use qutip.",
-  "category": "设计创意",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/skills/cirq/SKILL.md",
     "path": "skills/cirq/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-28T17:07:22.465Z",
-    "stars": 31999,
+    "discovered_at": "2026-07-28T18:59:34.634Z",
+    "stars": 32003,
     "language": "Python",
-    "pushed_at": "2026-07-28T16:10:36Z",
+    "pushed_at": "2026-07-28T18:22:53Z",
     "license": "MIT"
   }
 }

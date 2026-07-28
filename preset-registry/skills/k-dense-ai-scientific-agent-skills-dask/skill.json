@@ -2,7 +2,7 @@
   "id": "k-dense-ai-scientific-agent-skills-dask",
   "name": "dask",
   "description": "Distributed computing for larger-than-RAM pandas/NumPy workflows. Use when you need to scale existing pandas/NumPy code beyond memory or across clusters. Best for parallel file processing, distributed ML, integration with existing pandas code. For out-of-core analytics on single machine use vaex; for in-memory speed use polars.",
-  "category": "设计创意",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/skills/dask/SKILL.md",
     "path": "skills/dask/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-28T17:07:24.425Z",
-    "stars": 31999,
+    "discovered_at": "2026-07-28T18:59:35.450Z",
+    "stars": 32003,
     "language": "Python",
-    "pushed_at": "2026-07-28T16:10:36Z",
+    "pushed_at": "2026-07-28T18:22:53Z",
     "license": "MIT"
   }
 }

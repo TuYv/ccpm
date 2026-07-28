@@ -2,7 +2,7 @@
   "id": "k-dense-ai-claude-scientific-skills-bulk-rnaseq",
   "name": "bulk-rnaseq",
   "description": "End-to-end bulk RNA-seq orchestrator — takes raw FASTQ reads through QC and trimming (FastQC, fastp/Trim Galore), alignment and quantification (STAR, Salmon, featureCounts), assembles a gene-level counts matrix, then hands off to differential expression (pydeseq2), pathway/GSEA enrichment (pathway-enrichment), and publication figures (scientific-visualization). Use whenever the user has bulk RNA-seq reads or quant output and wants a complete, reproducible differential-expression workflow — e.g. ",
-  "category": "设计创意",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/K-Dense-AI/claude-scientific-skills/blob/main/skills/bulk-rnaseq/SKILL.md",
     "path": "skills/bulk-rnaseq/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-28T17:01:25.262Z",
-    "stars": 31999,
+    "discovered_at": "2026-07-28T18:54:12.155Z",
+    "stars": 32003,
     "language": "Python",
-    "pushed_at": "2026-07-28T16:10:36Z",
+    "pushed_at": "2026-07-28T18:22:53Z",
     "license": "MIT"
   }
 }

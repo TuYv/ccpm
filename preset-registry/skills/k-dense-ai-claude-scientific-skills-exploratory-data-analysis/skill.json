@@ -2,7 +2,7 @@
   "id": "k-dense-ai-claude-scientific-skills-exploratory-data-analysis",
   "name": "exploratory-data-analysis",
   "description": "Perform bounded, local exploratory analysis of explicitly supported scientific files. Use for redacted CSV/TSV/JSON profiles; optional NumPy, HDF5, FASTA/FASTQ, and basic image metadata inspection; missingness/leakage audits; outlier and transformation sensitivity; and rigorous EDA report scaffolds. Other domain formats are reference-only and unknown formats fail closed.",
-  "category": "设计创意",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/K-Dense-AI/claude-scientific-skills/blob/main/skills/exploratory-data-analysis/SKILL.md",
     "path": "skills/exploratory-data-analysis/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-28T17:01:33.458Z",
-    "stars": 31999,
+    "discovered_at": "2026-07-28T18:54:17.939Z",
+    "stars": 32003,
     "language": "Python",
-    "pushed_at": "2026-07-28T16:10:36Z",
+    "pushed_at": "2026-07-28T18:22:53Z",
     "license": "MIT"
   }
 }
