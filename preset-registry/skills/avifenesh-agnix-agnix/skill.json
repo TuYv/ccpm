@@ -1,7 +1,7 @@
 {
   "id": "avifenesh-agnix-agnix",
   "name": "agnix",
-  "description": "Use when user asks to 'lint agent configs', 'validate skills', 'check CLAUDE.md', 'validate hooks', 'lint MCP'. Validates agent configuration files against 443 rules.",
+  "description": "Use when user asks to 'lint agent configs', 'validate skills', 'check CLAUDE.md', 'validate hooks', 'lint MCP'. Validates agent configuration files against 444 rules.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/avifenesh/agnix/blob/main/skills/agnix/SKILL.md",
     "path": "skills/agnix/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-27T22:51:54.496Z",
+    "discovered_at": "2026-07-28T04:36:04.975Z",
     "stars": 367,
     "language": "Rust",
-    "pushed_at": "2026-07-27T14:24:41Z",
+    "pushed_at": "2026-07-27T23:55:52Z",
     "license": "Apache-2.0"
   }
 }
