@@ -1,7 +1,7 @@
 {
   "id": "timewarpengineering-timewarp-architecture-tw-feature-placement",
   "name": "tw-feature-placement",
-  "description": ">- **TIMEWARP SKILL** — feature-cohesive folder placement and the filename grammar `<name>[-<function>]-<layer>.cs` for product code under `web/features/`: which layer a file belongs to, what to name it, the registry that backs TWA0015/TWA0016, and the membership-guard build errors. Invoke before creating, moving, or renaming a file under a feature slice, or when a TWA0015/TWA0016/membership-guard error appears. WHEN: \"Where does this handler file go?\", \"What do I name this contract file?\", \"TWA",
+  "description": ">- **TIMEWARP SKILL** — feature-cohesive folder placement, per-use-case folders, and the filename grammar `<name>[-<function>]-<layer>.cs` for product code under `<family>/features/` and platform clusters under `<family>/platform/` (family-generic: web, api, grpc all share this machinery — worked examples below use web): which layer a file belongs to, what to name it and which folder it goes in, the registry that backs TWA0015/TWA0016, and the membership-guard build errors. Invoke before creatin",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/TimeWarpEngineering/timewarp-architecture/blob/master/skills/tw-feature-placement/SKILL.md",
     "path": "skills/tw-feature-placement/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-07-28T03:43:33.483Z",
+    "discovered_at": "2026-07-28T06:50:53.056Z",
     "stars": 54,
     "language": "C#",
-    "pushed_at": "2026-07-28T01:08:49Z",
+    "pushed_at": "2026-07-28T05:41:19Z",
     "license": "Unlicense"
   }
 }

@@ -1,0 +1,25 @@
+{
+  "id": "timewarpengineering-timewarp-architecture-tw-aggregate-pattern",
+  "name": "tw-aggregate-pattern",
+  "description": ">- **TIMEWARP SKILL** — the golden aggregate-root pattern: typed id, `Entity<TId>` base, fail-closed `Create`, named mutations with no public setters, a private nested `Invariants` validator, and save-time enforcement via `DomainInvariantsGuard`/`AggregateDbContext`. Invoke before adding or reviewing an `IAggregateRoot`, or when TWA0011/TWA0012 fire. WHEN: \"add an aggregate\", \"IAggregateRoot\", \"aggregate root\", \"TWA0011\", \"TWA0012\", \"Invariants validator\", \"typed id\".",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "TimeWarpEngineering",
+  "install_path": ".claude/skills/tw-aggregate-pattern/SKILL.md",
+  "source": {
+    "repo": "TimeWarpEngineering/timewarp-architecture",
+    "url": "https://github.com/TimeWarpEngineering/timewarp-architecture/blob/master/skills/tw-aggregate-pattern/SKILL.md",
+    "path": "skills/tw-aggregate-pattern/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-07-28T06:50:52.646Z",
+    "stars": 54,
+    "language": "C#",
+    "pushed_at": "2026-07-28T05:41:19Z",
+    "license": "Unlicense"
+  }
+}
