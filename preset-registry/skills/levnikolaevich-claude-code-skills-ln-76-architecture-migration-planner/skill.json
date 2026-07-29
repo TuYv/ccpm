@@ -1,0 +1,25 @@
+{
+  "id": "levnikolaevich-claude-code-skills-ln-76-architecture-migration-planner",
+  "name": "ln-76-architecture-migration-planner",
+  "description": "Plans a reversible architecture migration with compatibility, data movement, rollout, and rollback. Use for current-to-target transitions; not execution, generic planning, or delivery review.",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "levnikolaevich",
+  "install_path": ".claude/skills/ln-76-architecture-migration-planner/SKILL.md",
+  "source": {
+    "repo": "levnikolaevich/claude-code-skills",
+    "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/architecture-suite/skills/ln-76-architecture-migration-planner/SKILL.md",
+    "path": "plugins/architecture-suite/skills/ln-76-architecture-migration-planner/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-07-29T16:19:16.395Z",
+    "stars": 524,
+    "language": "HTML",
+    "pushed_at": "2026-07-29T13:45:07Z",
+    "license": "MIT"
+  }
+}
