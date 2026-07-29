@@ -1,0 +1,25 @@
+{
+  "id": "chrisbanes-skills-to-plan",
+  "name": "to-plan",
+  "description": "Use when one ready GitHub issue needs a repository-aware implementation plan published as a single issue comment before a separate implementation session.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "chrisbanes",
+  "install_path": ".claude/skills/to-plan/SKILL.md",
+  "source": {
+    "repo": "chrisbanes/skills",
+    "url": "https://github.com/chrisbanes/skills/blob/main/skills/to-plan/SKILL.md",
+    "path": "skills/to-plan/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-29T07:37:00.982Z",
+    "stars": 868,
+    "language": "Python",
+    "pushed_at": "2026-07-29T05:37:25Z",
+    "license": "Apache-2.0"
+  }
+}
