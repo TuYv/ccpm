@@ -1,0 +1,25 @@
+{
+  "id": "ogulcancelik-herdr-herdr",
+  "name": "herdr",
+  "description": "Control Herdr, a terminal multiplexer for coding agents. Use only when the user explicitly mentions Herdr or asks to use Herdr to inspect or control panes, tabs, workspaces, commands, or another agent. Do not use merely because a task could benefit from a background terminal, delegation, or parallel work. Requires HERDR_ENV=1.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ogulcancelik",
+  "install_path": ".claude/skills/herdr/SKILL.md",
+  "source": {
+    "repo": "ogulcancelik/herdr",
+    "url": "https://github.com/ogulcancelik/herdr/blob/master/skills/herdr/SKILL.md",
+    "path": "skills/herdr/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-07-29T19:58:12.837Z",
+    "stars": 22345,
+    "language": "Rust",
+    "pushed_at": "2026-07-29T19:23:24Z",
+    "license": "Apache-2.0"
+  }
+}
