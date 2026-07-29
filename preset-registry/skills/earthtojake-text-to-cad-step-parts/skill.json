@@ -2,7 +2,7 @@
   "id": "earthtojake-text-to-cad-step-parts",
   "name": "step-parts",
   "description": "Find, evaluate, and download common purchasable CAD parts from step.parts, including named off-the-shelf actuators, servos, motors, electronics boards, connectors, screws, bolts, nuts, washers, bearings, standoffs, and other catalog components. Use when Codex needs to search the hosted step.parts catalog before creating simplified placeholder geometry, resolve fuzzy part names, standards, aliases, or dimensions, choose a matching part, fetch a canonical .step file, verify checksums, or use the s",
-  "category": "设计创意",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/earthtojake/text-to-cad/blob/main/skills/step-parts/SKILL.md",
     "path": "skills/step-parts/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-29T15:35:36.803Z",
-    "stars": 11764,
+    "discovered_at": "2026-07-29T17:52:08.925Z",
+    "stars": 11792,
     "language": "JavaScript",
-    "pushed_at": "2026-07-28T23:54:08Z",
+    "pushed_at": "2026-07-29T17:33:48Z",
     "license": "MIT"
   },
   "summary_zh": "一个 CAD 标准件检索下载工具，可在 step.parts 目录中查找电机、螺丝、轴承、连接器等常见现成零件，按名称、规格或别名匹配后直接获取 .step 文件，省去自建占位几何的麻烦。"

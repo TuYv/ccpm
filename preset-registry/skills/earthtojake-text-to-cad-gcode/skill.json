@@ -2,7 +2,7 @@
   "id": "earthtojake-text-to-cad-gcode",
   "name": "gcode",
   "description": "Generate, inspect, dry-run, and statically validate plain FDM `.gcode` from 3D mesh files by orchestrating real slicer CLIs. Use when Codex needs to slice `.stl`, `.obj`, unsliced `.3mf`, `.ply`, `.glb`, or `.gltf` into printer-profiled G-code, discover local slicer backends, inspect whether a mesh is slice-ready, or validate generated G-code before any printer-specific handoff.",
-  "category": "设计创意",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/earthtojake/text-to-cad/blob/main/skills/gcode/SKILL.md",
     "path": "skills/gcode/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-29T15:35:35.954Z",
-    "stars": 11764,
+    "discovered_at": "2026-07-29T17:52:07.947Z",
+    "stars": 11792,
     "language": "JavaScript",
-    "pushed_at": "2026-07-28T23:54:08Z",
+    "pushed_at": "2026-07-29T17:33:48Z",
     "license": "MIT"
   },
   "summary_zh": "调用本地切片软件，把 STL、OBJ、3MF 等三维模型转成可直接用于 FDM 打印的 G 代码，并支持试切、检查模型是否可切片，以及在送往打印机前对生成的 G 代码做静态校验。"

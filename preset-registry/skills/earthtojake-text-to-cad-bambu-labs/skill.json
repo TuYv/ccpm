@@ -2,7 +2,7 @@
   "id": "earthtojake-text-to-cad-bambu-labs",
   "name": "bambu-labs",
   "description": "Dry-run, upload, and cautiously initiate local Bambu Lab print jobs from validated plain `.gcode`, using Bambu LAN FTPS/MQTT handoffs.",
-  "category": "设计创意",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/earthtojake/text-to-cad/blob/main/skills/bambu-labs/SKILL.md",
     "path": "skills/bambu-labs/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-29T15:35:35.302Z",
-    "stars": 11764,
+    "discovered_at": "2026-07-29T17:52:07.414Z",
+    "stars": 11792,
     "language": "JavaScript",
-    "pushed_at": "2026-07-28T23:54:08Z",
+    "pushed_at": "2026-07-29T17:33:48Z",
     "license": "MIT"
   },
   "summary_zh": "在本地网络下通过 FTPS 和 MQTT 与拓竹打印机对接，先校验普通 gcode 文件再上传、试运行或谨慎启动打印，适合想绕开切片软件自动化操作打印机的用户。"

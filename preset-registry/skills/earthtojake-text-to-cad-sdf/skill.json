@@ -2,7 +2,7 @@
   "id": "earthtojake-text-to-cad-sdf",
   "name": "sdf",
   "description": "SDFormat/SDF model and world generation, validation, and simulator handoff. Use for `.sdf` files, SDFormat XML, Python `gen_sdf()` sources, models, worlds, links, joints, poses, frames, inertials, visual/collision geometry, mesh URIs, sensors, lights, physics, plugins, includes, Gazebo, static SDF review, or simulator-specific metadata. Do not use for signed-distance-field geometry.",
-  "category": "设计创意",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/earthtojake/text-to-cad/blob/main/skills/sdf/SKILL.md",
     "path": "skills/sdf/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-29T15:35:36.285Z",
-    "stars": 11764,
+    "discovered_at": "2026-07-29T17:52:08.220Z",
+    "stars": 11792,
     "language": "JavaScript",
-    "pushed_at": "2026-07-28T23:54:08Z",
+    "pushed_at": "2026-07-29T17:33:48Z",
     "license": "MIT"
   },
   "summary_zh": "用于生成、校验 SDFormat 仿真模型与世界文件，处理 .sdf XML、模型链接关节、传感器物理插件等配置，方便对接 Gazebo 等仿真器，注意不涉及有向距离场几何。"
