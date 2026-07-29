@@ -2,7 +2,7 @@
   "id": "modu-ai-moai-adk-moai-domain-humanize",
   "name": "moai-domain-humanize",
   "description": "> AI text humanization and 윤문 (post-editing) specialist that detects and removes AI tells while preserving meaning, facts, and figures. Covers Korean, English, Japanese, and Chinese with a shared severity model (S1/S2/S3), quality grades (A/B/C/D), and 30%/50% over-editing guardrails. Use to make AI-generated text read as human-authored without changing what it says (de-ai, naturalness pass).",
-  "category": "设计创意",
+  "category": "开发编程",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/modu-ai/moai-adk/blob/main/.claude/skills/moai-domain-humanize/SKILL.md",
     "path": ".claude/skills/moai-domain-humanize/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-28T23:15:35.734Z",
+    "discovered_at": "2026-07-29T02:15:57.440Z",
     "stars": 1146,
     "language": "Go",
-    "pushed_at": "2026-07-28T23:02:34Z",
+    "pushed_at": "2026-07-29T01:57:43Z",
     "license": "Apache-2.0"
   }
 }

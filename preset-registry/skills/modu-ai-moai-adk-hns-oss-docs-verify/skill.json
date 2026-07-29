@@ -2,7 +2,7 @@
   "id": "modu-ai-moai-adk-hns-oss-docs-verify",
   "name": "hns-oss-docs-verify",
   "description": "> Mandatory verify recipe for the oss-docs harness — the runnable exit gate every specialist executes before returning: warning-free hugo build, sitemap existence, URL-blacklist grep, Mermaid LR/RL direction grep, 4-locale file-existence and section-count parity, README 4-file heading parity, and body-emoji scan. All checks are inlined here because docs-i18n-check.sh and gen_menu.py do not exist.",
-  "category": "设计创意",
+  "category": "开发编程",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/modu-ai/moai-adk/blob/main/.claude/skills/hns-oss-docs-verify/SKILL.md",
     "path": ".claude/skills/hns-oss-docs-verify/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-28T23:15:34.654Z",
+    "discovered_at": "2026-07-29T02:15:56.171Z",
     "stars": 1146,
     "language": "Go",
-    "pushed_at": "2026-07-28T23:02:34Z",
+    "pushed_at": "2026-07-29T01:57:43Z",
     "license": "Apache-2.0"
   }
 }

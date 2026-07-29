@@ -2,7 +2,7 @@
   "id": "modu-ai-moai-adk-moai-workflow-ci-loop",
   "name": "moai-workflow-ci-loop",
   "description": "> Unified CI watch + auto-fix loop skill. Polls gh pr checks after /moai sync PR creation, classifies required vs auxiliary failures, attempts safe automated patches (max 3 iterations), and escalates semantic failures to the user. Use for CI loop workflow — NOT for general loop iteration patterns (see moai-workflow-loop).",
-  "category": "设计创意",
+  "category": "开发编程",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/modu-ai/moai-adk/blob/main/.claude/skills/moai-workflow-ci-loop/SKILL.md",
     "path": ".claude/skills/moai-workflow-ci-loop/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-28T23:15:39.427Z",
+    "discovered_at": "2026-07-29T02:16:00.768Z",
     "stars": 1146,
     "language": "Go",
-    "pushed_at": "2026-07-28T23:02:34Z",
+    "pushed_at": "2026-07-29T01:57:43Z",
     "license": "Apache-2.0"
   }
 }
