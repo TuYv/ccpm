@@ -297,26 +297,32 @@ $defBody = @{
 } | ConvertTo-Json -Depth 5 -Compress
 $defFile = Join-Path ([IO.Path]::GetTempPath()) "es_def.json"
 [IO.File]::WriteAllText($defFile, $defBody, [System.Text.UTF8Encoding]::new($false))
-# Note: updateDefinition returns 202 Accepted (LRO). Poll until completion.
-$updateJson = az rest --method post `
-  --url "https://api.fabric.microsoft.com/v1/workspaces/$wsId/eventstreams/$esId/updateDefinition" `
-  --resource "https://api.fabric.microsoft.com" `
-  --headers "Content-Type=application/json" `
-  --body "@$defFile"
-if ($LASTEXITCODE -ne 0) { throw "updateDefinition request failed" }
+# updateDefinition returns 202 Accepted (LRO). Use Invoke-WebRequest to capture headers.
+$token = (az account get-access-token --resource "https://api.fabric.microsoft.com" --query accessToken -o tsv)
+$ps5 = @{}; if ($PSVersionTable.PSVersion.Major -lt 6) { $ps5.UseBasicParsing = $true }
+$response = Invoke-WebRequest @ps5 -Method Post `
+  -Uri "https://api.fabric.microsoft.com/v1/workspaces/$wsId/eventstreams/$esId/updateDefinition" `
+  -Headers @{ Authorization = "Bearer $token" } `
+  -ContentType "application/json; charset=utf-8" `
+  -Body (Get-Content $defFile -Raw -Encoding UTF8)
 
-$updateResp = $updateJson | ConvertFrom-Json -ErrorAction SilentlyContinue
-if ($updateResp.operationId) {
+if ($response.StatusCode -eq 202) {
+    $location = $response.Headers['Location']
+    if ($location -is [array]) { $location = $location[0] }
+    if (-not $location) { throw "LRO response missing Location header" }
+    $ra = $response.Headers['Retry-After']
+    if ($ra -is [array]) { $ra = $ra[0] }
+    $retryAfter = if ($ra) { [int]$ra } else { 5 }
+    $succeeded = $false
     for ($i = 0; $i -lt 12; $i++) {
-        Start-Sleep -Seconds 5
-        $status = (az rest --method get `
-          --url "https://api.fabric.microsoft.com/v1/operations/$($updateResp.operationId)" `
-          --resource "https://api.fabric.microsoft.com" | ConvertFrom-Json)
-        if ($status.status -eq 'Succeeded') { Write-Host "Update succeeded"; break }
-        elseif ($status.status -in @('Failed', 'Cancelled')) {
-            throw "updateDefinition LRO $($status.status): $($status.error.message)"
+        Start-Sleep -Seconds $retryAfter
+        $poll = Invoke-RestMethod -Uri $location -Headers @{ Authorization = "Bearer $token" }
+        if ($poll.status -eq 'Succeeded') { $succeeded = $true; Write-Host "Update succeeded"; break }
+        elseif ($poll.status -in @('Failed', 'Cancelled')) {
+            throw "updateDefinition LRO $($poll.status): $($poll.error.message)"
         }
     }
+    if (-not $succeeded) { throw "updateDefinition LRO timed out" }
 }
 ```
 
@@ -342,37 +348,36 @@ $esId = (az rest --method get `
   --query "value[?displayName=='SensorIngestion'] | [0].id" -o tsv)
 if (-not $esId) { throw "Eventstream 'SensorIngestion' not found" }
 
-# 2. Get current definition (handles LRO if API returns 202)
-$respJson = az rest --method post `
-  --url "https://api.fabric.microsoft.com/v1/workspaces/$wsId/eventstreams/$esId/getDefinition" `
-  --resource "https://api.fabric.microsoft.com" `
-  --headers "Content-Type=application/json" `
-  --body '{}'
-if ($LASTEXITCODE -ne 0 -or -not $respJson) { throw "getDefinition request failed" }
-$resp = $respJson | ConvertFrom-Json
+# 2. Get current definition (handles LRO via Location header)
+$token = (az account get-access-token --resource "https://api.fabric.microsoft.com" --query accessToken -o tsv)
+$ps5 = @{}; if ($PSVersionTable.PSVersion.Major -lt 6) { $ps5.UseBasicParsing = $true }
+$response = Invoke-WebRequest @ps5 -Method Post `
+  -Uri "https://api.fabric.microsoft.com/v1/workspaces/$wsId/eventstreams/$esId/getDefinition" `
+  -Headers @{ Authorization = "Bearer $token"; "Content-Type" = "application/json" } `
+  -Body '{}'
 
-if ($resp.definition) {
-    $def = $resp  # Synchronous — got definition immediately
-} elseif ($resp.operationId) {
-    # Asynchronous (LRO) — poll operation status
+if ($response.StatusCode -eq 202) {
+    $location = $response.Headers['Location']
+    if ($location -is [array]) { $location = $location[0] }
+    if (-not $location) { throw "LRO response missing Location header" }
+    $ra = $response.Headers['Retry-After']
+    if ($ra -is [array]) { $ra = $ra[0] }
+    $retryAfter = if ($ra) { [int]$ra } else { 5 }
     $def = $null
     for ($i = 0; $i -lt 12; $i++) {
-        Start-Sleep -Seconds 5
-        $status = (az rest --method get `
-          --url "https://api.fabric.microsoft.com/v1/operations/$($resp.operationId)" `
-          --resource "https://api.fabric.microsoft.com" | ConvertFrom-Json)
-        if ($status.status -eq 'Succeeded') {
-            $def = (az rest --method get `
-              --url "https://api.fabric.microsoft.com/v1/operations/$($resp.operationId)/result" `
-              --resource "https://api.fabric.microsoft.com" | ConvertFrom-Json)
+        Start-Sleep -Seconds $retryAfter
+        $poll = Invoke-RestMethod -Uri $location -Headers @{ Authorization = "Bearer $token" }
+        if ($poll.status -eq 'Succeeded') {
+            $def = Invoke-RestMethod -Uri "$location/result" `
+              -Headers @{ Authorization = "Bearer $token" }
             break
-        } elseif ($status.status -in @('Failed', 'Cancelled')) {
-            throw "getDefinition LRO $($status.status): $($status.error.message)"
+        } elseif ($poll.status -in @('Failed', 'Cancelled')) {
+            throw "getDefinition LRO $($poll.status): $($poll.error.message)"
         }
     }
-    if (-not $def.definition) { throw "getDefinition LRO timed out (last status: $($status.status))" }
+    if (-not $def -or -not $def.definition) { throw "getDefinition LRO timed out (last status: $(if ($poll) { $poll.status } else { 'unknown' }))" }
 } else {
-    throw "getDefinition returned neither a definition nor an operationId"
+    $def = $response.Content | ConvertFrom-Json
 }
 
 # 3. Decode existing topology
@@ -427,26 +432,31 @@ $esPart.payload = $topologyB64
 $defBody = @{ definition = @{ parts = $def.definition.parts } } | ConvertTo-Json -Depth 5 -Compress
 $defFile = Join-Path ([IO.Path]::GetTempPath()) "es_def.json"
 [IO.File]::WriteAllText($defFile, $defBody, [System.Text.UTF8Encoding]::new($false))
-# Note: updateDefinition returns 202 Accepted (LRO). Poll until completion.
-$updateJson = az rest --method post `
-  --url "https://api.fabric.microsoft.com/v1/workspaces/$wsId/eventstreams/$esId/updateDefinition" `
-  --resource "https://api.fabric.microsoft.com" `
-  --headers "Content-Type=application/json" `
-  --body "@$defFile"
-if ($LASTEXITCODE -ne 0) { throw "updateDefinition request failed" }
+# updateDefinition returns 202 Accepted (LRO). Use Invoke-WebRequest to capture headers.
+$ps5 = @{}; if ($PSVersionTable.PSVersion.Major -lt 6) { $ps5.UseBasicParsing = $true }
+$response = Invoke-WebRequest @ps5 -Method Post `
+  -Uri "https://api.fabric.microsoft.com/v1/workspaces/$wsId/eventstreams/$esId/updateDefinition" `
+  -Headers @{ Authorization = "Bearer $token" } `
+  -ContentType "application/json; charset=utf-8" `
+  -Body (Get-Content $defFile -Raw -Encoding UTF8)
 
-$updateResp = $updateJson | ConvertFrom-Json -ErrorAction SilentlyContinue
-if ($updateResp.operationId) {
+if ($response.StatusCode -eq 202) {
+    $location = $response.Headers['Location']
+    if ($location -is [array]) { $location = $location[0] }
+    if (-not $location) { throw "LRO response missing Location header" }
+    $ra = $response.Headers['Retry-After']
+    if ($ra -is [array]) { $ra = $ra[0] }
+    $retryAfter = if ($ra) { [int]$ra } else { 5 }
+    $succeeded = $false
     for ($i = 0; $i -lt 12; $i++) {
-        Start-Sleep -Seconds 5
-        $status = (az rest --method get `
-          --url "https://api.fabric.microsoft.com/v1/operations/$($updateResp.operationId)" `
-          --resource "https://api.fabric.microsoft.com" | ConvertFrom-Json)
-        if ($status.status -eq 'Succeeded') { Write-Host "Update succeeded"; break }
-        elseif ($status.status -in @('Failed', 'Cancelled')) {
-            throw "updateDefinition LRO $($status.status): $($status.error.message)"
+        Start-Sleep -Seconds $retryAfter
+        $poll = Invoke-RestMethod -Uri $location -Headers @{ Authorization = "Bearer $token" }
+        if ($poll.status -eq 'Succeeded') { $succeeded = $true; Write-Host "Update succeeded"; break }
+        elseif ($poll.status -in @('Failed', 'Cancelled')) {
+            throw "updateDefinition LRO $($poll.status): $($poll.error.message)"
         }
     }
+    if (-not $succeeded) { throw "updateDefinition LRO timed out" }
 }
 ```
 
@@ -531,26 +541,34 @@ $body = @{
 $bodyFile = Join-Path ([IO.Path]::GetTempPath()) "es_create_full.json"
 [IO.File]::WriteAllText($bodyFile, $body, [System.Text.UTF8Encoding]::new($false))
 
-# Create-with-definition returns 202 Accepted (LRO). Poll until completion.
-$createJson = az rest --method post `
-  --url "https://api.fabric.microsoft.com/v1/workspaces/$wsId/items" `
-  --resource "https://api.fabric.microsoft.com" `
-  --headers "Content-Type=application/json" `
-  --body "@$bodyFile"
-if ($LASTEXITCODE -ne 0) { throw "Create Eventstream request failed" }
+# Create-with-definition returns 202 Accepted (LRO). Use Invoke-WebRequest to capture headers.
+$token = (az account get-access-token --resource "https://api.fabric.microsoft.com" --query accessToken -o tsv)
+$ps5 = @{}; if ($PSVersionTable.PSVersion.Major -lt 6) { $ps5.UseBasicParsing = $true }
+$response = Invoke-WebRequest @ps5 -Method Post `
+  -Uri "https://api.fabric.microsoft.com/v1/workspaces/$wsId/items" `
+  -Headers @{ Authorization = "Bearer $token" } `
+  -ContentType "application/json; charset=utf-8" `
+  -Body (Get-Content $bodyFile -Raw -Encoding UTF8)
 
-$createResp = $createJson | ConvertFrom-Json -ErrorAction SilentlyContinue
-if ($createResp.operationId) {
+if ($response.StatusCode -eq 202) {
+    $location = $response.Headers['Location']
+    if ($location -is [array]) { $location = $location[0] }
+    if (-not $location) { throw "LRO response missing Location header" }
+    $ra = $response.Headers['Retry-After']
+    if ($ra -is [array]) { $ra = $ra[0] }
+    $retryAfter = if ($ra) { [int]$ra } else { 10 }
+    $succeeded = $false
     for ($i = 0; $i -lt 12; $i++) {
-        Start-Sleep -Seconds 5
-        $status = (az rest --method get `
-          --url "https://api.fabric.microsoft.com/v1/operations/$($createResp.operationId)" `
-          --resource "https://api.fabric.microsoft.com" | ConvertFrom-Json)
-        if ($status.status -eq 'Succeeded') { Write-Host "Create succeeded"; break }
-        elseif ($status.status -in @('Failed', 'Cancelled')) {
-            throw "Create LRO $($status.status): $($status.error.message)"
+        Start-Sleep -Seconds $retryAfter
+        $poll = Invoke-RestMethod -Uri $location -Headers @{ Authorization = "Bearer $token" }
+        if ($poll.status -eq 'Succeeded') { $succeeded = $true; Write-Host "Create succeeded"; break }
+        elseif ($poll.status -in @('Failed', 'Cancelled')) {
+            throw "Create LRO $($poll.status): $($poll.error.message)"
         }
     }
+    if (-not $succeeded) { throw "Create LRO timed out" }
+} else {
+    Write-Host "Created: $(($response.Content | ConvertFrom-Json).displayName)"
 }
 ```
 

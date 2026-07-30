@@ -1,6 +1,6 @@
 ---
 name: azmon-mirroredcatalogs-operations-cli
-description: "Onboard Log Analytics, Application Insights, and Azure Monitor telemetry into Microsoft Fabric as a Mirrored Catalog, then turn it into business-impact insights by correlating telemetry with business data via Eventhouse shortcuts, verified schemas, and ready-to-use Operations Agent instructions. Triggers: onboard Log Analytics telemetry, connect Application Insights to a Mirrored Catalog, correlate App Insights telemetry with business data, build an Operations Agent for business-impact alerting, determine if availability or latency impacted bookings orders or revenue."
+description: "Onboard Azure Monitor / Application Insights observability data into Microsoft Fabric and guide business-impact insights by correlating telemetry with business data, Eventhouse external delta tables, verified schemas, an optional Real-Time (KQL) dashboard, and opt-in Operations Agent instructions. Triggers: onboard Azure Monitor into Fabric, correlate App Insights telemetry with business data, build a Real-Time KQL dashboard over telemetry, build an Operations Agent for business-impact alerting, determine if availability or latency impacted bookings orders or revenue, connect a Log Analytics workspace to Fabric."
 ---
 
 > **Update Check — ONCE PER SESSION (mandatory)**
@@ -63,13 +63,14 @@ them wholesale into user responses — they are guidance for you, the agent.
 | Reference | Use it for |
 |-----------|-----------|
 | [references/azmon-fabric-api-reference.md](references/azmon-fabric-api-reference.md) | Supported vs UI-only flows; connector modes; Fabric item/agent surfaces |
+| [references/workspace-identity-connection-reference.md](references/workspace-identity-connection-reference.md) | Mode B workspace-identity connection: provision/detect identity, user-granted LA RBAC, WorkspaceIdentity connection |
 | [references/mirrored-catalog-reference.md](references/mirrored-catalog-reference.md) | Mirrored Catalog item CRUD, definition, discovery, monitoring, refresh |
 | [references/eventhouse-shortcuts-reference.md](references/eventhouse-shortcuts-reference.md) | Eventhouse/KQL, OneLake shortcuts, queryability requirement |
 | [references/operations-agent-reference.md](references/operations-agent-reference.md) | Operations Agent instruction template, validation, troubleshooting |
-| [references/app-insights-table-reference.md](references/app-insights-table-reference.md) | App Insights / Azure Monitor telemetry tables and business meaning |
+| [references/telemetry-table-reference.md](references/telemetry-table-reference.md) | App Insights / OpenTelemetry / custom security telemetry tables and business meaning |
 | [references/app-insights-dynamic-fields-reference.md](references/app-insights-dynamic-fields-reference.md) | Dynamic fields (Properties/CustomDimensions) and hidden business keys |
-| [references/business-correlation-patterns.md](references/business-correlation-patterns.md) | Signal → business-impact patterns and candidate keys |
-| [references/business-insight-modeling-reference.md](references/business-insight-modeling-reference.md) | Bins, derived entities, direct join vs time-window, thresholds |
+| [references/dashboard-reference.md](references/dashboard-reference.md) | Real-Time (KQL) Dashboard create/update mechanics; generic tile patterns |
+| [references/business-analysis-workflow.md](references/business-analysis-workflow.md) | Full detail for the business-analysis half — Stages 13–17 (incl. correlation patterns & modeling appendices); load at the Stage 12 handoff |
 
 ## Secrecy & scope guardrails
 
@@ -98,22 +99,38 @@ them wholesale into user responses — they are guidance for you, the agent.
 
 Business entities named anywhere in this Skill or its references — bookings,
 orders, customers, flights, revenue, tenants, payments, and similar — are
-**EXAMPLES ONLY** (non-normative illustrations). The Skill is **domain-agnostic**
-and MUST NOT infer or assume the user's business domain from these examples, from
-table/column names that resemble an example, or from any prior context. The
-user's actual business entities MUST be discovered from real Fabric data
-(Eventhouse / KQL database / Warehouse / Lakehouse / shortcuts) and confirmed with
-the user before use. Until discovered and confirmed, refer to them generically —
-as *business entities*, *business datasets*, *business KPIs*, or *business
-outcomes*.
+**EXAMPLES ONLY**. The Skill MUST NOT infer the user's business domain from these
+examples. The user's actual business entities MUST be discovered from real Fabric
+data (Eventhouse / KQL database / Warehouse / Lakehouse / shortcuts) and confirmed
+with the user before use.
+
+To be explicit:
+
+- **Examples are illustrative only.** Every business-entity name in this Skill
+  and its references (e.g. bookings, orders, customers, revenue, flights,
+  tenants, payments) is a non-normative illustration, not a required or expected
+  entity.
+- **The Skill is domain-agnostic.** It applies to any business domain and assumes
+  none.
+- **The Skill MUST NOT infer or assume the user's business domain** from the
+  illustrative examples, from table or column names that happen to resemble an
+  example, or from any prior context.
+- **Business entities MUST be discovered from the user's actual data** and, until
+  discovered and confirmed, MUST be referred to generically — as *business
+  entities*, *business datasets*, *business KPIs*, or *business outcomes* — rather
+  than by any assumed domain-specific name.
 
 ## EXECUTION CAPABILITY POLICY
 
-The Skill is a guided staged workflow; actual execution depends on capabilities
-available in the current environment. Portal-guided instructions are allowed ONLY
-for OAuth Azure Monitor connector creation — the Skill MUST NOT switch the entire
-onboarding flow to portal guidance as a generic fallback. For all non-OAuth
-stages, the Skill MUST first discover whether a supported execution path exists.
+The Skill is a guided staged workflow.
+
+Actual execution depends on capabilities available in the current environment.
+
+Portal-guided instructions are allowed ONLY for OAuth Azure Monitor connector creation.
+
+The Skill MUST NOT switch the entire onboarding flow to portal-guided instructions as a generic fallback.
+
+For all non-OAuth stages, the Skill MUST first attempt to discover whether a supported execution path exists in the current environment.
 
 Supported execution paths may include:
 
@@ -138,33 +155,56 @@ These execution paths are distinct and MUST NOT be conflated:
 4. **Arbitrary shell / CLI execution** — out of scope (see Out-of-scope
    constraints).
 5. **Fabric REST read-only discovery via authenticated `az rest --method get`** —
-   a narrow GET-only exception for Fabric discovery/read against
-   `https://api.fabric.microsoft.com/...`; never mutates anything and never
-   exposes tokens, secrets, or auth headers. NOT general shell/CLI access.
+   a narrow, permitted exception used ONLY for Fabric discovery/read against
+   `https://api.fabric.microsoft.com/...`. It is GET-only, never creates,
+   updates, deletes, or modifies anything, and never exposes tokens, secrets,
+   auth headers, or sensitive payloads. This is NOT general shell/CLI access.
 
 MCP unavailability alone does NOT mean execution capability is unavailable.
-Unavailability of any single execution path does NOT imply the capability is
-unavailable. Before declaring a capability unavailable, the Skill MUST evaluate
-ALL supported execution paths listed above and confirm none is available.
 
-If no supported execution path exists, the Skill MUST: stop; identify the missing
-capability; explain why it is required; identify which stage is blocked; and wait
-for user confirmation.
+Unavailability of any single execution path does NOT automatically imply the
+capability is unavailable. Before declaring a capability unavailable, the Skill
+MUST evaluate ALL supported execution paths listed above and confirm that none is
+available. Capability unavailable may be reported only after every supported
+execution path has been evaluated.
 
-The Skill MUST NOT replace validation, Mirrored Catalog creation, discovery,
-monitoring, refresh, shortcut creation, schema verification, or Operations Agent
-creation with portal guidance, and MUST NOT claim an action completed when
-execution capability is unavailable.
+If no supported execution path exists, the Skill MUST:
+
+1. Stop.
+2. Identify the missing capability.
+3. Explain why it is required.
+4. Identify which stage is blocked.
+5. Wait for user confirmation.
+
+The Skill MUST NOT:
+
+- Replace validation with portal guidance.
+- Replace Mirrored Catalog creation with portal guidance.
+- Replace discovery, monitoring, refresh, shortcut creation, schema verification, or Operations Agent creation with portal guidance.
+- Claim an action completed when execution capability is unavailable.
 
 
 ## PORTAL GUIDANCE POLICY
 
-Prefer automated execution paths (Fabric REST, Azure REST, Fabric Actions, Azure
-CLI, other supported automation) over UI-guided instructions. Before providing
-UI-guided instructions the Skill MUST: (1) evaluate the available execution paths,
-(2) attempt supported ones where available, (3) explain which were evaluated and
-why they cannot be used. OAuth Azure Monitor connector creation is the one
-explicitly supported UI-guided scenario and is exempt from this evaluation.
+The Skill SHOULD prefer automated execution paths over UI-guided instructions:
+
+- Fabric REST APIs
+- Azure REST APIs
+- Fabric Actions
+- Azure CLI
+- Other supported automation mechanisms
+
+Before providing UI-guided instructions the Skill MUST:
+
+1. Evaluate the available execution paths.
+2. Attempt supported execution paths where available.
+3. Explain which execution paths were evaluated.
+4. Explain why they cannot be used.
+
+Only after those steps may the Skill provide UI-guided guidance.
+
+OAuth Azure Monitor connector creation remains an explicitly supported UI-guided
+scenario and does not require the above evaluation.
 
 
 ## STRICT STAGED WORKFLOW CONTROLLER (ENFORCED)
@@ -176,19 +216,23 @@ The Skill MUST operate as a strict staged workflow controller.
 1. Intent and scope
 2. Log Analytics workspace selection
 3. Fabric workspace selection
-4. Validation
+4. Identity selection and validation
 5. Connection resolution
 6. AzMon / Mirrored Catalog item creation or reuse
-7. **Business Insight Capture** (immediately after item creation/reuse)
+7. **Business Insight Capture** (optional here; may be deferred — intent MUST be
+   captured/confirmed before schema verification, Stage 12)
 8. Azure Monitor table discovery
-9. Eventhouse / KQL database selection
-10. Shortcut planning
-11. Shortcut creation
+9. Eventhouse / KQL database **target** selection (default auto endpoint vs a
+   specific/new Eventhouse)
+10. External Delta table registration planning
+11. External Delta table registration
 12. Schema and data verification
 13. Business data discovery and scoring
 14. Correlation planning
-15. Operations Agent instruction generation
-16. Optional Operations Agent creation / validation
+15. Optional dashboard suggestion and creation
+16. Operations Agent instruction generation (optional — gated: only if the user
+    wants an agent)
+17. Optional Operations Agent creation / validation
 
 ### Execution rules
 
@@ -198,30 +242,17 @@ The Skill MUST operate as a strict staged workflow controller.
 
 ### Stage visibility (REQUIRED in every user-facing response)
 
-Begin every response with exactly this structure:
+Begin every response with this structure, written as **normal chat text (not a
+code block)**:
 
-```text
-Current stage: <stage name>
-What I found:
-<short summary>
+- **Current stage:** <stage name>
+- **What I found:** <short summary>
+- **Next step:** <one clear action>
 
-Next step:
-<one clear action>
-
-Waiting for your confirmation to continue.
-```
+Then close with a line inviting the user to confirm before continuing (e.g.
+*“Waiting for your confirmation to continue.”*).
 
 If the current stage is unclear → **STOP** and ask the user where to resume.
-
-**Stage 15 exemption (ready-to-paste block).** The Stage 15 Operations Agent
-instructions are delivered as ONE self-contained, ready-to-paste fenced block.
-For that response only, place the stage-visibility header and the
-`Waiting for your confirmation to continue.` line OUTSIDE and AROUND the fenced
-block — the header (and a one-line summary) immediately before it, the
-confirmation line immediately after it. Do NOT insert the header, summary,
-`What I found` / `Next step` labels, or the confirmation line INSIDE the
-ready-to-paste block: the fenced block must contain only the Operations Agent
-instructions so the user can copy it verbatim.
 
 ### Hard stop behavior
 
@@ -233,30 +264,40 @@ After presenting any step that requires confirmation:
 
 ### Confirmation gates (explicit confirmation REQUIRED before)
 
+- Selecting the identity for the flow (Stage 4) — recommend Service Principal,
+  but WAIT for the user's choice before validating.
 - Creating or reusing any resource that modifies Fabric.
-- Selecting an Eventhouse / KQL database.
-- Creating shortcuts.
+- Provisioning the Fabric workspace identity and assigning its Log Analytics
+  role (Stage 5, Mode B workspace-identity option) — WAIT before each write.
+- Selecting the Eventhouse target (a specific existing Eventhouse, or a new one).
+- Creating shortcuts in the chosen / new Eventhouse — explicitly show the target
+  Eventhouse and exactly what will be created.
 - Proceeding from schema verification (Stage 12) to correlation planning
   (Stage 14).
+- Creating or modifying a dashboard (present suggestions and WAIT for approval
+  first).
+- Building an Operations Agent at all (Stage 16) — explicitly ask whether the
+  user wants an agent before generating any instructions. If they do not, skip
+  Stages 16–17; the flow may end after the dashboard.
 - Generating final Operations Agent instructions if the correlation model has
   not been confirmed.
 - Creating or modifying an Operations Agent.
 
 ### Stage guardrails
 
-- Shortcut planning (Stage 10) MUST occur before schema verification or join
-  logic. If schema/join is attempted early → STOP and return to shortcut
-  planning.
-- Shortcut creation (Stage 11) MUST complete before schema verification.
+- External Delta table registration planning (Stage 10) MUST occur before schema verification or join
+  logic. If schema/join is attempted early → STOP and return to Stage 10.
+- External Delta table registration (Stage 11) MUST complete before schema verification.
 - Schema verification (Stage 12) MUST complete before correlation planning
   (Stage 14).
-- If data is not queryable in Eventhouse via shortcuts → STOP → return to
-  shortcut planning / creation.
-- Correlation planning MUST NOT begin until data queryability via shortcuts is
+- If data is not queryable in Eventhouse via the registered external delta tables
+  → STOP → return to Stage 10/11.
+- Correlation planning MUST NOT begin until external-table queryability is
   confirmed.
-- Business Insight Capture (Stage 7) MUST be satisfied (intent provided OR a
-  suggested direction explicitly selected) before correlation planning. Never
-  assume intent.
+- Business Insight Capture (Stage 7) MAY be answered early or **deferred** so the
+  user can explore their data first, but intent MUST be captured/confirmed
+  (intent provided OR a suggested direction explicitly selected) **before schema
+  verification (Stage 12)** and correlation planning. Never assume intent.
 
 ### Out-of-scope constraints
 
@@ -267,13 +308,37 @@ stage.
 
 **Narrow exception — Fabric REST read-only discovery.** The Skill MAY use an
 authenticated `az rest --method get` call ONLY for Fabric REST read-only
-discovery, and ONLY when ALL hold: endpoint is
-`https://api.fabric.microsoft.com/...`; method is **GET** only; the operation is
-discovery/read-only; nothing is created, updated, deleted, or modified; no tokens,
-secrets, auth headers, or sensitive payloads are exposed; and the Skill states the
-capability path used. This exception does NOT permit arbitrary shell/CLI
-execution, non-GET `az rest` calls, or use of the Kusto / KQL data-plane when
-disabled.
+discovery, and ONLY when ALL of the following hold:
+
+- The endpoint is `https://api.fabric.microsoft.com/...`.
+- The HTTP method is **GET** only.
+- The operation is discovery / read-only only.
+- Nothing is created, updated, deleted, or modified (no Fabric items, shortcuts,
+  mirrored catalog items, or connectors via CLI).
+- No tokens, secrets, raw auth headers, or sensitive payloads are exposed.
+- The Skill clearly states the capability path used.
+
+This exception does NOT permit arbitrary shell/CLI execution, non-GET `az rest`
+calls, or use of the Kusto / KQL data-plane when disabled.
+
+**Narrow exception — Fabric workspace-identity provisioning + LA role assignment
+(Mode B only).** In the Mode B workspace-identity option, the Skill MAY use
+authenticated `az` calls to detect/provision the workspace identity and, when the
+caller is permitted, assign its Log Analytics role, limited to:
+
+- `GET https://api.fabric.microsoft.com/v1/workspaces/{id}` (detect), and
+- `POST https://api.fabric.microsoft.com/v1/workspaces/{id}/provisionIdentity`
+  (provision) plus GET polling of its long-running operation, and
+- `az role assignment list` (check) and `az role assignment create` at the Log
+  Analytics workspace scope to grant the identity **Owner**, but ONLY when the
+  caller holds `Microsoft.Authorization/roleAssignments/write` there.
+
+Each write is confirmation-gated (Stage 5), touches only the workspace identity
+and its LA role (nothing else), exposes no tokens/secrets/auth headers, and
+the Skill states the capability path used. If the caller lacks role-assignment
+permission, the Skill MUST NOT force it — it instructs the user / an admin to run
+the assignment instead. This does NOT permit any other non-GET `az rest` calls or
+any broader `az` usage.
 
 ### Response style (ENFORCED)
 
@@ -337,54 +402,200 @@ here. Never expose raw API responses or tokens.
 
 ### Fabric Workspace Discovery & Capability Resolution Policy (REQUIRED)
 
-Fabric workspaces are **not** ARM resources, so missing automatic enumeration does
-NOT mean no workspace exists. Follow the full required policy in
-[references/azmon-fabric-api-reference.md](references/azmon-fabric-api-reference.md#fabric-workspace-discovery--capability-resolution):
-discover all surfaced Fabric mechanisms first (Fabric REST/Actions, OneLake/Power
-BI, and read-only `az rest --method get` against `https://api.fabric.microsoft.com/...`);
-never terminate on missing enumeration; ask the user for a workspace Name / ID /
-URL; validate before continuing; and mark Stage 3 BLOCKED only after ALL discovery
-AND user-supplied paths are exhausted. UI-guided selection is the final fallback only.
+Fabric workspaces are **not** Azure Resource Manager resources, so absence of an
+automatic enumeration path does NOT mean no Fabric workspace exists. Before
+declaring Stage 3 blocked, the Skill MUST work through this policy in order and
+MUST NOT terminate the workflow early.
 
-## Stage 4 — Validation
+1. **Discover** all available Fabric workspace discovery mechanisms in the
+   current environment, in order, before asking the user to hand-provide a
+   workspace:
+   - Fabric REST APIs, if surfaced.
+   - Fabric Actions, if surfaced.
+   - Fabric / OneLake / Power BI execution capabilities, if surfaced.
+   - Authenticated Fabric REST **read-only** discovery via `az rest --method get`
+     against `https://api.fabric.microsoft.com/...`, if Azure CLI execution is
+     available and permitted under the read-only Fabric REST discovery exception
+     (GET-only, no modifications, no secret/token/header exposure, capability
+     path stated).
+   - Any other documented capability provider available to the agent
+     environment.
 
-Before any creation, verify:
+   If workspace discovery succeeds, list the candidate workspaces, do NOT
+   auto-select, and ask the user to choose or confirm. Only if no supported
+   Fabric REST read-only discovery path is available, proceed to ask the user for
+   the workspace information below.
+
+2. **Interpret** the result of discovery. Automatic enumeration being
+   unavailable means one of two things — the Skill MUST distinguish them:
+   - No Fabric control-plane capability is available in this agent environment,
+     OR
+   - Automatic workspace enumeration is unavailable, but the workflow can still
+     continue using **user-provided** workspace information.
+
+3. **Do not terminate** if automatic discovery fails or no Fabric control-plane
+   capability is detected. Never assume Fabric workspaces do not exist just
+   because automatic discovery failed.
+
+4. **Ask the user** for workspace information. Explain the missing capability in
+   plain terms, then request **one** of:
+   - Fabric Workspace Name
+   - Fabric Workspace ID
+   - Fabric Workspace URL
+
+5. **Validate** any user-provided workspace as much as the available
+   tools/capabilities allow (e.g. confirm the id/name/URL resolves, or that the
+   caller can access it). Continue the workflow only when it is safe to do so.
+   Never fabricate a workspace, workspace id, or validation result, and never
+   claim a Fabric action succeeded when the required execution capability is
+   unavailable.
+
+6. **Block only as a last resort.** Mark Stage 3 as BLOCKED only after ALL
+   supported discovery mechanisms AND all user-supplied resolution paths
+   (Name / ID / URL) have been exhausted.
+
+UI-guided instructions for Fabric workspace selection are permitted ONLY as the
+final fallback, after every programmatic discovery path and every user-supplied
+resolution path above has failed. This is distinct from the general Portal
+Guidance Policy and does not relax any other stage's portal boundary.
+
+## Stage 4 — Identity selection and validation
+
+### Identity selection (REQUIRED first — WAIT for the user)
+
+Validation MUST run against the **identity that will actually perform the flow**,
+so the identity is chosen **before** any validation check — not deferred to
+Stage 5. Do NOT silently reuse whatever `az` happens to be signed in as.
+
+Present the choice and STOP — ask this as **normal chat text (a plain numbered
+list, not a code block)**:
+
+Which identity should I use for this onboarding?
+
+1. **Service Principal (recommended)** — automated, non-interactive; best for
+   repeatable runs and CI. Requires tenant id, app/client id, and a securely
+   provided secret/certificate.
+2. **Your user account (interactive sign-in)** — if you prefer to run as
+   yourself, or a Service Principal is not available.
+
+Invite the user to reply **1** or **2**; note that Service Principal is
+recommended.
+
+- **Recommend Service Principal**, but let the user choose. If the user asks to
+  sign in as themselves, allow interactive user login and continue as the user.
+- After the choice, confirm the effective identity (e.g. `az account show`) so
+  validation runs against the right principal. If it does not match the chosen
+  identity, stop and resolve the sign-in before validating.
+- Carry the chosen identity forward: Stage 5 connection resolution and all later
+  Fabric-modifying actions use this same identity.
+
+### Validate against the chosen identity
+
+Before any creation, verify **for that identity**:
 
 - The workspace exists.
-- The workspace is **not Sentinel** or otherwise unsupported.
-- The caller has the required Log Analytics access.
-- The caller has sufficient Fabric workspace permission to create the item.
+- The **chosen identity** has the required Log Analytics access.
+- The **chosen identity** has sufficient Fabric workspace permission to operate
+  (and, for a Service Principal, that the tenant setting *"Service principals can
+  use Fabric APIs"* is enabled).
+- Surface early that connection detection/reuse will later need the chosen
+  identity to hold **a role** on the Azure Monitor connection (a **User** role is
+  enough; **Owner** is not required), so a permission gap is caught here rather
+  than at Stage 5.
+- For the Mode B **workspace-identity** connection option (Stage 5), the chosen
+  identity must be a workspace **Admin** (required to provision the workspace
+  identity). The Skill can assign the identity's Log Analytics role itself
+  when the caller holds role-assignment permission (**Owner** / **User Access
+  Administrator**) on the LA scope; otherwise it instructs the user. Surface both
+  early.
 
 If validation fails, summarize which checks passed/failed in user terms, explain
-the missing capability, and offer to try another workspace or request access.
-See `references/azmon-fabric-api-reference.md` for supported-scope rules.
-
-### Sentinel detection source hierarchy (REQUIRED)
-
-Sentinel detection is a **control-plane** check and MUST NOT be treated as
-dependent on Kusto / KQL data-plane availability. Follow the full required
-hierarchy in
-[references/azmon-fabric-api-reference.md](references/azmon-fabric-api-reference.md#sentinel-detection-source-hierarchy):
-enumerate ARM resources / `Microsoft.OperationsManagement/solutions`
-`SecurityInsights(<workspaceName>)` / `Microsoft.SecurityInsights/*` /
-feature metadata, then classify as **Sentinel / blocked**, **Not Sentinel
-(control-plane verified)**, or — only if all checks are unavailable —
-**not verifiable**. Never fabricate Sentinel status.
+the missing capability, and offer to try another workspace, grant the missing
+permission, or switch identity. See
+`references/azmon-fabric-api-reference.md` for supported-scope rules.
 
 ### Validation capability discovery (REQUIRED)
 
-Apply the [EXECUTION CAPABILITY POLICY](#execution-capability-policy): evaluate ALL
-supported execution paths (Fabric REST, Azure REST, Fabric Actions, Azure CLI,
-Azure Resource Graph) before declaring validation capability unavailable. MCP is
-only one possible path.
+Before declaring validation capability unavailable, the Skill MUST determine whether the environment provides one of the following:
+
+- Fabric REST APIs
+- Azure REST APIs
+- Fabric Actions
+- Azure CLI
+- Azure Resource Graph
+
+MCP availability is only one possible execution path.
+
+The Skill MUST report validation capability unavailable only after evaluating all supported execution paths and finding none.
+
+Before declaring validation capability unavailable, the Skill MUST:
+
+1. Determine whether another supported execution path exists.
+2. Attempt capability discovery using all supported mechanisms available
+   in the current environment.
+3. Only after all supported mechanisms have been evaluated and none are
+   available may the Skill declare the capability unavailable.
 
 ## Stage 5 — Connection resolution
 
-Two connection modes are supported. Keep them **separate**. Never route OAuth
-through Service Principal logic, and never route Service Principal through OAuth /
-interactive sign-in logic. See
+Two connection modes are supported. **Prefer Service Principal (Mode A)** — the
+automated, non-interactive path — as the default. Fall back to **OAuth (Mode B)**
+only when Service Principal is unavailable or the user explicitly requests it.
+Keep the two modes **separate**. Never route OAuth through Service Principal
+logic, and never route Service Principal through OAuth / interactive sign-in
+logic. See
 [references/azmon-fabric-api-reference.md](references/azmon-fabric-api-reference.md)
-for the authoritative connector rules.
+for the authoritative connector rules **and the exact documented connection API
+endpoints and payload shapes** (List / Get / Create Connection + List Supported
+Connection Types). Use those documented shapes — do **not** guess a connection
+payload or go searching general docs. When the Azure Monitor connector's exact
+`type` / `creationMethod` / `parameters` are unknown, resolve them from the
+`supportedConnectionTypes` endpoint rather than assuming.
+
+### Mode selection (REQUIRED order)
+
+The identity was already chosen and validated in **Stage 4 (Identity selection)**.
+Use that identity here — do not re-prompt unless the user changes it. Map the
+chosen identity to its connection mode:
+
+1. **Service Principal → Mode A.** If a matching Service Principal connector
+   already exists for the same Log Analytics workspace, reuse it. Otherwise, when
+   the required Service Principal inputs are available (tenant id, app/client id,
+   and a securely-provided secret/certificate reference), create-or-reuse the
+   Service Principal connector automatically — no UI step.
+2. **User / interactive → Mode B.** Use when the user chose to sign in as
+   themselves, the Service Principal is unavailable, or the tenant disallows it.
+   In Mode B, first prompt the user to choose the connection authentication method
+   — interactive OAuth or workspace identity (see "Mode B — choose connection
+   authentication" below) — then route to that sub-branch.
+
+### Connection visibility caveat (applies to BOTH modes)
+
+To be **discoverable**, a connection must have **at least one role assigned to the
+calling identity** — whether the **Service Principal** (Mode A) or the **user**
+(Mode B). Any assigned role makes it appear in the listing and reusable; a
+**User** role is enough for detection and reuse, and **Owner** is only needed to
+**manage / modify / delete** it. If the caller holds **no role** on a connection,
+the API will **not** return it — that is **by design**, not a failure.
+
+Therefore, if the search finds **no** matching connection, the Skill MUST NOT
+immediately conclude the connection does not exist. It MUST first consider that
+the connection may exist but simply be **invisible to the current identity
+because it holds no role on it**, and:
+
+- State that a matching connection was not found **for the current identity**,
+  and that this can mean either (a) no such connection exists, or (b) one exists
+  but the calling Service Principal / user holds **no role** on it.
+- Advise assigning the Service Principal or user **a role** on the existing Azure
+  Monitor connection (for the same Log Analytics workspace) — a **User** role is
+  enough for detection and reuse — then re-run detection. (If a Service Principal
+  still can't see it after a lower role is granted, see the Service Principal note
+  in
+  [references/azmon-fabric-api-reference.md](references/azmon-fabric-api-reference.md).)
+- Only after this permission possibility has been surfaced may the Skill proceed
+  to create a new connector (Mode A) or the OAuth create-once guidance (Mode B).
+
+Never fabricate a connection or claim one exists without a real listing match.
 
 ### Portal guidance boundary
 
@@ -407,7 +618,53 @@ Portal guidance is NOT an allowed fallback for:
 
 If execution capability for these actions is unavailable, the Skill MUST stop and identify the missing capability.
 
-### Mode A — OAuth (UI-guided only)
+### Mode A — Service Principal (automated create-or-reuse, default)
+
+Present this as **"connect using Service Principal"** — the automated,
+non-interactive path (no user login, no UI step). This is the **preferred**
+default; attempt it before OAuth.
+
+- **Idempotent create-or-reuse**: if a matching Azure Monitor Service Principal
+  connector already exists for the same Log Analytics workspace (same data source
+  path + Service Principal credential type), reuse it — never create a duplicate.
+- Only **one** connector is created per run.
+- **Never** reuse a non-Service-Principal (e.g. OAuth) connector in this mode.
+- **Never** ask the user to paste a client secret into chat. Secrets come from
+  **environment variables or Key Vault references** only, are never echoed,
+  logged, exposed, or included in generated instructions.
+- If required Service Principal inputs are missing, describe **what** is missing
+  (tenant id, app/client id, and a securely-provided secret reference) using
+  presence checks only — never request the secret value in chat. Only when
+  Service Principal inputs cannot be provided, fall back to OAuth (Mode B).
+
+Automation boundary: infrastructure (connector create-or-reuse, mirrored item
+creation) is automated; **business decisions** (Eventhouse/KQL DB selection,
+shortcut creation) always require explicit user confirmation.
+
+### Mode B — choose connection authentication (REQUIRED prompt)
+
+When the chosen identity is User / interactive (Mode B), the connection can be
+created two ways. Before detecting or creating anything, present this choice as
+**normal chat text (a plain numbered list, not a code block)** and STOP for the
+user's answer:
+
+How should I authenticate the Azure Monitor connection?
+
+1. **Interactive sign-in (OAuth)** — you sign in once in Fabric → Manage
+   Connections; the connection uses your organizational account.
+2. **Workspace identity (no secrets)** — Fabric's automatically-managed workspace
+   identity is used as the credential; you grant it access on your Log
+   Analytics workspace. No secret to handle.
+
+Route to the matching sub-branch below — **1 → Mode B (OAuth)**, **2 → Mode B
+(Workspace identity)**. Keep the two strictly separate. If the user has no
+preference, note that workspace identity avoids interactive sign-in and secret
+handling, but WAIT for their choice — never auto-select.
+
+### Mode B — OAuth (UI-guided only, fallback)
+
+Use this mode only when Service Principal (Mode A) is unavailable or the user
+explicitly requests OAuth.
 
 - OAuth connector **creation** is interactive, done once in **Fabric → Manage
   Connections**. The Skill does **not** create OAuth connectors through any API.
@@ -428,43 +685,39 @@ If execution capability for these actions is unavailable, the Skill MUST stop an
 - If exactly one match → reuse automatically and continue.
 - If multiple matches → show display names and ask the user to choose (never
   auto-pick).
-- If no match → guide the user with this exact, simple message and then WAIT:
+- If no match → guide the user with this message as **normal chat text (not a
+  code block)** and then WAIT:
 
-```text
-I couldn’t find an existing Azure Monitor connection for this workspace.
-Please create it once in Fabric Manage Connections, then come back and continue.
+  I couldn’t find an existing Azure Monitor connection for this workspace.
+  Please create it once in Fabric → Manage Connections, then come back and
+  continue:
 
-1. Open Fabric.
-2. Go to Manage Connections.
-3. Select New connection → Azure Monitor.
-4. Sign in with your organizational account.
-5. Use the same Log Analytics Workspace.
-6. When done, come back here and type: Done.
-```
+  1. Open Fabric.
+  2. Go to Manage Connections.
+  3. Select New connection → Azure Monitor.
+  4. Sign in with your organizational account.
+  5. Use the same Log Analytics workspace.
+  6. When done, come back here and type **Done**.
 
 When the user resumes, re-detect and continue automatically ("Connection
 detected. Continuing setup.").
 
-### Mode B — Service Principal (automated create-or-reuse)
+### Mode B — Workspace identity (no secrets)
 
-Present this as **"connect using Service Principal"** — the automated,
-non-interactive path (no user login, no UI step).
+Use this sub-branch when the user picked option 2 above. Fabric's
+automatically-managed **workspace identity** is used as the connection credential
+(no secret). This flow provisions the identity if needed, ensures it has a
+sufficient Log Analytics role — **assigning it automatically when the caller is
+permitted, otherwise instructing the user** — then creates the connection.
 
-- **Idempotent create-or-reuse**: if a matching Azure Monitor Service Principal
-  connector already exists for the same Log Analytics workspace (same data source
-  path + Service Principal credential type), reuse it — never create a duplicate.
-- Only **one** connector is created per run.
-- **Never** reuse a non-Service-Principal (e.g. OAuth) connector in this mode.
-- **Never** ask the user to paste a client secret into chat. Secrets come from
-  **environment variables or Key Vault references** only, are never echoed,
-  logged, exposed, or included in generated instructions.
-- If required Service Principal inputs are missing, describe **what** is missing
-  (tenant id, app/client id, and a securely-provided secret reference) using
-  presence checks only — never request the secret value in chat.
-
-Automation boundary: infrastructure (connector create-or-reuse, mirrored item
-creation) is automated; **business decisions** (Eventhouse/KQL DB selection,
-shortcut creation) always require explicit user confirmation.
+Follow the full sequence, endpoints, gates, and payloads in
+[references/workspace-identity-connection-reference.md](references/workspace-identity-connection-reference.md).
+Key gates: provisioning the identity is confirmation-gated (caller must be
+workspace **Admin**); the LA role is assigned by the Skill when the caller
+holds role-assignment permission (else the Skill instructs and WAITs for
+confirmation) — both writes are confirmation-gated; then create the connection
+using the `WorkspaceIdentity` credential type. Keep this strictly separate from
+Mode A.
 
 ## Stage 6 — AzMon / Mirrored Catalog item creation or reuse
 
@@ -474,16 +727,121 @@ workspace, or reuse an existing matching item. This is a Fabric-modifying action
 discovery, monitoring, refresh) are documented in
 [references/mirrored-catalog-reference.md](references/mirrored-catalog-reference.md).
 
-After the item is created or reused, immediately proceed to Business Insight
-Capture (Stage 7).
+### Service Principal item-creation (IMPORTANT — prefer reuse; observed fallback)
 
-## Stage 7 — Business Insight Capture (MANDATORY, happens here — early)
+Per Microsoft Learn, the **Create Mirrored Catalog** API lists **service principals
+and managed identities** as supported identities for create, so a Service Principal
+create is **documented as supported** and is not an absolute platform limitation.
 
-Immediately after the AzMon item is created or reused, ask the user **what
-business insight they want to explore**, so discovery and table selection are
-guided by the business outcome.
+> **Observed fallback.** Some Service Principal runs have nonetheless seen the
+> item **create** rejected under an application-only token (the underlying
+> item-creation path can run **on-behalf-of** a signed-in user). Treat this as
+> **observed** tenant behavior, not a documented rule, and keep the docs-accurate
+> default: attempt create under the SP, and only fall back to a user (delegated) /
+> UI context if the create call is actually **denied or unavailable**.
 
-Ask in business language, e.g.:
+Get, list, **update**, discovery, monitoring, refresh, and shortcut operations all
+work under an application-only SP token once the item exists.
+
+Consequently, when running under a Service Principal, the Skill MUST:
+
+- **Prefer reuse** — reuse an existing Azure Monitor Mirrored Catalog item (and
+  its existing connection) that the SP can see and operate on. This is the
+  preferred path: build on an already-created item + connection rather than
+  creating a new one. The SP can then **update** and operate that item normally.
+- If no reusable item exists, **attempt to create the item under the SP** (the
+  create API documents SP/managed-identity support). Only if that create is
+  **denied or unavailable** (the observed fallback above), **create the item in a
+  user context** — either from the **Fabric UI**, or via a **user (delegated)
+  sign-in** — preferably seeded from an existing item and connection. After the
+  item exists, the Service Principal can resume the automated flow (update,
+  discovery, monitoring, refresh, shortcuts) on that item.
+- Never claim the item was created by the SP when the create actually occurred in
+  a user/UI context.
+
+Downstream Mirrored Catalog operations (update, discovery, monitoring, refresh)
+remain available to the Service Principal once the item exists.
+
+### Table selection via scope (choosing which tables the item mirrors)
+
+The item does **not** take a free-form list of table names — it mirrors by
+**`scope`** (a namespace hierarchy path in the definition), and that scope MUST be
+a **`Selectable`** value returned by the **List Scopes** discovery API. To target
+only the tables the user wants:
+
+- Call **List Scopes** and choose a `Selectable` scope for the item. If the user
+  already knows the target tables, pick the **narrowest `Selectable` scope** that
+  covers them. If there is no intent yet (the user wants to explore first),
+  create with a **broader scope** and optionally **re-scope** narrower later —
+  updating the item definition — once intent is captured. Use only real returned
+  scope values — never fabricate a scope or table name.
+- If the narrowest available `Selectable` scope is **broader** than the requested
+  set, the item **will also mirror the extra sibling tables** under that scope —
+  mirroring cannot exclude individual siblings. State this plainly and get
+  explicit confirmation before creating.
+- For an existing/reused item, read its current definition scope before assuming
+  it matches the request; do not fabricate definition fields.
+
+### Default mirror set (REQUIRED starting point)
+
+Unless the user specifies otherwise, the **default set of tables to mirror** is
+every table that (a) appears in real **List Scopes / Discovery** output and (b)
+matches one of these name prefixes (case-insensitive; tolerate the `_CL`
+custom-table suffix):
+
+- `App*` — Application Insights tables
+- `OTel*` — OpenTelemetry-native tables (e.g. `OTelLogs`)
+- `XD*` — custom, security-related log tables
+
+Then **ask the user whether they want any additional tables** before creating
+(confirmation gate — present the resolved set and WAIT).
+
+- Match prefixes against **real discovered tables only** — never invent a table.
+  If a prefix matches nothing, omit it silently.
+- Resolve the default set to the **narrowest single `Selectable` scope that covers
+  all matched tables**. If that scope also pulls in **extra sibling tables** beyond
+  the default set, **list the extras explicitly**, explain that siblings cannot be
+  individually excluded, and get confirmation before creating. Once confirmed, the
+  extras are **expected** — they are not failures at the Stage 8 equality check.
+- Adding user-requested tables may widen the chosen scope — re-resolve and
+  re-disclose.
+- If **none** of `App*` / `OTel*` / `XD*` match any discovered table, fall back to
+  presenting all/representative discovered tables (explore-first) and let the user
+  choose.
+- **`XD*` security tables** are only considered **after** the workspace has passed
+  Stage 4's validation (a supported, validated workspace); an unsupported-workspace
+  block takes precedence and table selection MUST NOT be used to bypass it.
+- **On reuse:** read the existing item's current scope and compare its mirrored
+  set to the default set. If not fully covered, offer to **re-scope** (update the
+  item definition) to add the missing `App*`/`OTel*`/`XD*` tables, disclosing any
+  extra siblings — never re-scope silently; confirm first.
+
+The confirmed set (default + confirmed siblings + any tables the user adds) becomes
+the **expected set** for the Stage 8 requested-vs-mirrored equality check.
+
+### First-time mirroring latency (disclosure — REQUIRED)
+
+For a **first-time mirrored workspace**, tell the user upfront that mirrored
+tables and data typically take **around 5 minutes** to materialize and become
+queryable after the item is created. Until then, discovery/queries may return
+empty or partial results — this is **expected**, not an error. Do not declare
+tables missing during this window: verify mirror/refresh status, wait, and
+re-check before concluding anything.
+
+After the item is created or reused, optionally capture business intent now
+(Stage 7) if the user already has a goal; otherwise proceed to table discovery
+and exploration and capture intent before schema verification (Stage 12).
+
+## Stage 7 — Business Insight Capture (optional here; deferrable)
+
+If the user already has a business question, capture it now so table discovery
+(Stage 8) and Eventhouse scoring (Stage 9) can be guided by it. If they don't,
+this stage is **optional right now** — the user may explore their data first
+(Stages 8–11) and provide intent later. Either way, intent is **MANDATORY before
+schema verification (Stage 12)** and correlation (Stage 14); capturing it early is
+just an optimization that focuses discovery.
+
+When capturing intent, ask in business language, e.g.:
 
 - Did service availability issues impact bookings?
 - Did request latency reduce customer conversions?
@@ -495,12 +853,14 @@ Ask in business language, e.g.:
 
 ### Enforcement
 
-The Skill MUST NOT proceed to business correlation without either:
+The Skill MUST NOT proceed to schema verification (Stage 12) or business
+**correlation** (Stage 14) without either:
 
 - (a) user-provided business intent, OR
 - (b) explicit user selection from suggested directions.
 
-Never assume intent.
+Intent may be provided here or after exploration, but it MUST exist before
+Stage 12. Never assume intent.
 
 ### Fallback (when the user is unsure / vague / no exact match)
 
@@ -515,19 +875,22 @@ impact**, and ask the user to choose one:
 
 ### Important distinction
 
-Capturing intent early is allowed and required. But the Skill MUST NOT generate
-correlation logic yet. Correlation logic only comes after shortcuts exist, schema
-is verified, data is queryable, dynamic fields are inspected, join candidates are
-validated, and data freshness is checked (Stages 10–14).
+Capturing intent early is **allowed but optional** — it MUST exist before schema
+verification (Stage 12). Either way, the Skill MUST NOT generate correlation logic
+yet. Correlation logic only comes after shortcuts exist, schema is verified, data
+is queryable, dynamic fields are inspected, join candidates are validated, and
+data freshness is checked (Stages 10–14).
 
 ## Stage 8 — Azure Monitor table discovery
 
-Browse candidate Azure Monitor / Application Insights tables relevant to the
-captured business goal. Use only real discovered scope/table values — never
-fabricate table names. Use
-[references/app-insights-table-reference.md](references/app-insights-table-reference.md)
+Browse candidate Azure Monitor / Application Insights tables. **If a business goal
+was captured (Stage 7),** filter to the tables relevant to it. **If there is no
+intent yet (explore-first),** present all/representative discovered tables so the
+user can browse. Use only real discovered scope/table values — never fabricate
+table names. Use
+[references/telemetry-table-reference.md](references/telemetry-table-reference.md)
 to explain what each table means in business terms and which tables best fit the
-stated goal.
+stated goal (or what each table offers when exploring).
 
 ### Discovery API fallback policy (REQUIRED)
 
@@ -543,92 +906,115 @@ switch to alternative metadata paths. First:
 Only after these checks may the Skill evaluate alternative metadata paths. See
 [references/mirrored-catalog-reference.md](references/mirrored-catalog-reference.md).
 
-## Stage 9 — Eventhouse / KQL database selection
+### Requested-vs-mirrored set-equality check (REQUIRED once a specific table set is requested)
 
-Before asking the user to choose an Eventhouse, run **Eventhouse Recommendation
-Mode**:
+This check applies once a **requested table set exists** — whether specified up
+front or after intent is captured later. When the **default mirror set** (Stage 6)
+or a user-adjusted set is in effect, that set is the **requested set** for this
+check, and any sibling tables disclosed and confirmed under the narrowest-common-
+scope rule are **expected** (compare against the chosen scope's expected contents,
+not a bare table list — do not report confirmed siblings as failures). When the
+user asked for a specific set of
+tables, verify the item mirrors
+**exactly** that set — use **equality, not subset** ("my tables are present" is not
+enough). Compare the **actually-mirrored** table set (from Discovery / Monitoring)
+against the **requested** set and report the result:
 
-1. **Discover** available Eventhouses.
-2. **Inspect** their available contents (tables, shortcuts, KQL databases).
-3. **Score** each Eventhouse.
-4. **Present** a recommendation.
+- **Extra tables present** → the chosen scope is broader than requested. Report the
+  extras and, if a narrower `Selectable` scope exists, offer to re-scope; otherwise
+  state that the source only exposes a broader scope and the extras are
+  unavoidable.
+- **Requested tables missing** → the mirror may not have materialized yet. Verify
+  mirror/refresh status, run a **Refresh/sync**, wait, then re-check — do not
+  declare them absent prematurely.
+- **Exact match** → confirm and proceed.
 
-Score each Eventhouse by:
+Never fabricate the mirrored table set; enumerate it from real Discovery /
+Monitoring results only.
 
-- Relevant business tables
-- Relevant telemetry tables
-- Existing shortcuts
-- Queryable tables
-- KQL database availability
-- Data freshness
-- Alignment to the selected business goal
+## Stage 9 — Eventhouse / KQL database target selection
 
-Present the result in this format:
+Ask the user which Eventhouse should host the LA-table shortcuts. Present these
+options as **normal chat text (not a code block)** and require explicit
+confirmation:
 
-```text
-Recommended Eventhouse:
-<EventHouseName>
+- **A — A specific existing Eventhouse** (e.g. one that already holds business
+  data you want to correlate with). The Skill creates LA-table shortcuts
+  **there**, colocating telemetry with the business data.
+- **B — A new Eventhouse.** The Skill creates it and the LA-table shortcuts;
+  starts empty.
 
-Reason:
-<why this Eventhouse was chosen>
+Both options are writable and support the Operations Agent path (they can host
+`IncidentBins` materialization).
 
-Alternative Eventhouses:
-<list>
-```
+Run **Eventhouse Recommendation Mode** to inform the choice — discover available
+Eventhouses, inspect their contents (tables, shortcuts, KQL databases), and score
+each by relevant business tables, relevant telemetry tables, existing shortcuts,
+queryable tables, KQL database availability, and data freshness. **When the
+user's goal is correlating telemetry with existing business data, recommend
+option A** (colocation); otherwise a new Eventhouse is a clean starting point.
+Present as normal chat text:
 
-The Skill MUST NOT auto-select, even when one Eventhouse scores highest. This is a
-user decision (confirmation gate) — present the recommendation and **require
-explicit confirmation** before proceeding. See
+- **Recommended target:** <A ‹EventhouseName› | B new>
+- **Reason:** <why>
+- **Alternatives:** <list>
+
+The Skill MUST NOT auto-select. Present the recommendation, state exactly what
+will be created, and require explicit confirmation. See
 [references/eventhouse-shortcuts-reference.md](references/eventhouse-shortcuts-reference.md).
 
-## Stage 10 — Shortcut planning
+## Stage 10 — External Delta table registration planning
 
-Plan OneLake shortcuts from the AzMon item's tables into the selected
-Eventhouse / KQL database **before** any schema verification or join logic.
-Present the plan and STOP for confirmation.
+Plan **external Delta table registrations** for the resolved table set into the
+**chosen/new Eventhouse** — name the target Eventhouse in the plan header —
+**before** any schema verification or join logic. Present the plan and STOP for
+confirmation.
 
 Key rules (see the shortcuts reference for detail):
 
-- Keep source table names **exact** — a renamed shortcut may create the OneLake
-  link but fail to register as a queryable KQL table.
-- A OneLake link alone is **not** enough — the table must be registered as an
-  external/queryable table.
+- Queryability in a KQL database comes from registering each table as an
+  **external Delta table** pointing at the mirrored item's OneLake
+  `Tables/dbo/<Table>` path — **not** from the Core Shortcuts API (which creates a
+  link only). Query via `external_table('<name>')`.
+- Plan, per table: exact name, OneLake `Tables/dbo/<Table>` path, target KQL
+  database, and that the schema will be read from the table's Delta log.
 
-### Shortcut acceleration (SHOULD)
+### Query acceleration policy — external delta tables (MUST — always `true`)
 
-Query acceleration on shortcuts SHOULD be treated as the preferred configuration
-because testing showed schema verification, queryability validation, telemetry
-sampling, correlation analysis, and Operations Agent preparation became
-substantially faster when acceleration was enabled. Present the shortcut plan with
-an acceleration column:
+Query acceleration is a **policy on external delta tables** (set via
+`.alter external table … policy query_acceleration`), **not** a shortcut-object
+property. Every registered external delta table gets **acceleration enabled
+(`true`)** — not optional. Include an `Acceleration Enabled (always Yes)` plan-table
+column; if the environment can't support it, surface that rather than registering
+without the policy. Full policy in
+[references/eventhouse-shortcuts-reference.md](references/eventhouse-shortcuts-reference.md#external-delta-table-query-acceleration-policy-must--always-true).
 
-| Shortcut Name | Source | Target | Acceleration Supported (Yes/No) | Acceleration Enabled (Yes/No) |
-|---------------|--------|--------|---------------------------------|-------------------------------|
+## Stage 11 — External Delta table registration
 
-If acceleration is disabled, explain the potential impact on: queryability
-validation, schema verification, telemetry sampling, correlation analysis, and
-Operations Agent preparation. Do NOT assume acceleration exists in every
-environment — use SHOULD, not MUST. See
-[references/eventhouse-shortcuts-reference.md](references/eventhouse-shortcuts-reference.md).
+Only after explicit confirmation, register each table as an **external Delta
+table** in the target KQL database (report which one): read the table's schema
+from its Delta log, map Delta → Eventhouse types, and run `.create external table
+['<Table>'] (<cols>) kind=delta ( h@'<OneLake Tables/dbo/<Table> path>;impersonate' )`
+via `POST {clusterUri}/v1/rest/mgmt`. Then verify with `.show external tables` +
+`external_table('<Table>') | take 1`. The Core Shortcuts API is **not** required
+for queryability (it creates a link only). If a table is not queryable → STOP and
+return to planning / registration. See
+[references/eventhouse-shortcuts-reference.md](references/eventhouse-shortcuts-reference.md)
+for the schema-read, type mapping, and command template.
 
-## Stage 11 — Shortcut creation
-
-Only after explicit confirmation, create the planned shortcuts. Then verify each
-table is actually **queryable** in Eventhouse (e.g. `<Table> | take 1`). Do not
-assume a OneLake link means the table is queryable. If a table is not queryable →
-STOP and return to shortcut planning / creation.
-
-When creating ANY shortcut, apply the **Shortcut Acceleration Policy**:
-
-1. Determine whether acceleration is supported for the shortcut.
-2. Determine its current acceleration status.
-3. Enable acceleration when supported and appropriate (preferred configuration).
-4. Report the acceleration status back to the user.
+When registering ANY external delta table, **always enable the query acceleration
+policy (`true`)** per the
+[Query acceleration policy](references/eventhouse-shortcuts-reference.md#external-delta-table-query-acceleration-policy-must--always-true),
+and report the resulting status (expected: enabled).
 
 ## Stage 12 — Schema and data verification (REQUIRED before correlation)
 
 Never build correlation logic on assumptions or screenshots. Before proposing any
-join, bin, or threshold, verify against the **actual** KQL database.
+join, bin, or threshold, verify against the **actual** KQL database. Business
+intent MUST already be captured/confirmed before this stage — if it was deferred
+at Stage 7, capture it now (using the Stage 7 questions/fallback) before
+proceeding, since the telemetry-source selection below is scored by goal
+relevance. Never assume intent.
 
 ### Preconditions
 
@@ -647,9 +1033,15 @@ join, bin, or threshold, verify against the **actual** KQL database.
 
 ### Steps
 
+> **Query convention.** Mirrored telemetry tables are **external tables** — query
+> them via `external_table('<name>')` (they do not appear in `.show tables`);
+> business tables that are **managed** in an Eventhouse use their bare
+> name.
+
 1. **Retrieve real schema.** For each table:
-   `TableName | getschema | project ColumnName, ColumnType`. Use authoritative
-   column names/types — not names guessed from screenshots or table names.
+   `external_table('<TableName>') | getschema | project ColumnName, ColumnType`.
+   Use authoritative column names/types — not names guessed from screenshots or
+   table names.
 2. **Inspect and sample dynamic fields.** Business join keys are often nested in
    dynamic columns (`Properties`, `CustomDimensions`, `Details`, `Measurements`,
    `Payload`, `Context`). Sample rows and inspect keys. See
@@ -660,7 +1052,7 @@ join, bin, or threshold, verify against the **actual** KQL database.
    join and confirm non-zero matches:
 
    ```kusto
-   AppEvents
+   external_table('AppEvents')
    | extend BookingId = tostring(Properties.BookingId)
    | where isnotempty(BookingId)
    | join kind=inner (Bookings | project BookingId = tostring(BookingId)) on BookingId
@@ -670,11 +1062,12 @@ join, bin, or threshold, verify against the **actual** KQL database.
    Non-zero → **direct join, high confidence**. Zero → the key is wrong or data
    doesn't overlap; find the real one.
 5. **Check freshness and align the window.**
-   `TableName | summarize Rows=count(), MinTime=min(TimeGenerated), MaxTime=max(TimeGenerated)`.
+   `external_table('<TableName>') | summarize Rows=count(), MinTime=min(TimeGenerated), MaxTime=max(TimeGenerated)`.
    Do not assume `ago(1h)`; use a window covering the actual data range and
    explain it in user terms.
 6. **Confirm categorical values** used by rules
-   (`Table | summarize count() by <field>`) so impact rules use real categories.
+   (`external_table('<Table>') | summarize count() by <field>`) so impact rules
+   use real categories.
 
 ### Telemetry source selection framework (REQUIRED)
 
@@ -707,127 +1100,23 @@ do not proceed.
 ### Handoff (MANDATORY)
 
 Present a concise summary (verified join keys, match results, business impact if
-any, data time window). Then ask: "Do you want to generate Operations Agent
-instructions based on this verified model?" HARD STOP and wait.
+any, data time window). Then ask: "Do you want to continue to business analysis
+(impact modeling, a dashboard, and optionally an Operations Agent) based on this
+verified model?" HARD STOP and wait. On confirmation, continue with Stages 13–17
+as defined in
+[references/business-analysis-workflow.md](references/business-analysis-workflow.md).
 
-## Stage 13 — Business data discovery and scoring
+## Stages 13–17 — Business-oriented analysis (defined in the reference)
 
-Business tables are **not** expected to exist in Log Analytics. They may live in
-an Eventhouse, KQL database, Warehouse, Lakehouse, or via Fabric shortcuts.
-Absence of business tables in Log Analytics MUST NOT be interpreted as absence of
-business data — discover them across the available Fabric data surfaces.
-
-If the exact business table or join is not known, do **not** fail. Score
-candidate business databases/tables by likely relevance to the stated goal,
-present a ranked list with explanation, propose shortcut creation for the top
-candidates, and ask the user to choose. Never conclude "no correlation is
-possible" without presenting options. Scoring hints are in
-[references/business-correlation-patterns.md](references/business-correlation-patterns.md).
-
-## Stage 14 — Correlation planning
-
-The user should not need to know joins, KQL, thresholds, or bins. Infer
-candidates from verified top-level schema, verified dynamic fields, sampled
-values, business table schema, actual join test results, and data freshness. When
-asking for confirmation, ask about **business meaning**, not SQL/KQL, e.g.:
-
-> "I found `BookingId` inside `AppEvents.Properties` and it matches
-> `Bookings.BookingId`. Should I treat this as the booking identifier for
-> business impact?"
-
-Present a correlation plan (see
-[references/business-insight-modeling-reference.md](references/business-insight-modeling-reference.md))
-including: operational signal; business impact table; verified join keys;
-whether the join came from top-level columns or dynamic fields; match
-count/validation result; time window + freshness status; proposed bin size;
-metrics and thresholds. Then ask for confirmation and STOP.
-
-Default modeling guidance: prefer **direct joins** when verified identifiers
-exist; use **time-window correlation** only when no direct identifier is found
-(and state clearly it shows correlation, not causality); default bin size **5
-minutes** (larger when data is sparse or KPIs are slower); default derived entity
-**IncidentBin**.
-
-### Correlation planning validation (REQUIRED)
-
-When finalizing the correlation model, the Skill MUST explain **why** the selected
-telemetry source was chosen, justified using real data. Include:
-
-- Match counts.
-- Business identifiers discovered.
-- Direct-join confidence.
-- Validation results.
-
-## Stage 15 — Operations Agent instruction generation
-
-Only after the correlation model is confirmed. Produce a single clean copy/paste
-block using the template in
-[references/operations-agent-reference.md](references/operations-agent-reference.md).
-
-> **Wrapper exemption:** deliver the instructions as ONE self-contained fenced
-> block. Put the stage-visibility header and the
-> `Waiting for your confirmation to continue.` line OUTSIDE the block (before and
-> after it) — never inside — so the copy/paste block stays clean. See
-> [Stage visibility](#stage-visibility-required-in-every-user-facing-response).
-
-The instructions MUST include **explicit KQL**, not conceptual descriptions:
-
-- One verbatim **IncidentBin materialization query** whose **output columns are
-  exactly the alert fields** (includes the `tostring(Properties.x)` extraction,
-  the explicit `join`, and the exact aggregations).
-- A per-field KQL definition list mapping each output column to a one-line
-  expression.
-- Alert rules that reference **actual output columns**.
-
-Include **both** threshold sets:
-
-- **Production-like:** e.g. ErrorCount increases by more than 20% versus the
-  previous-hour baseline; AffectedCustomers ≥ configured business threshold;
-  RevenueAtRisk ≥ configured business threshold.
-- **Relaxed POC / debug:** e.g. `ErrorCount >= 1`; `ErrorCount >= 5 and
-  AffectedBusinessRecords >= 1`; `AffectedCustomers >= 1`.
-
-Required sections: Goal, Data sources, Field mapping definitions, Dynamic field
-extraction logic, Derived analysis entity, IncidentBin materialization query,
-Metric definitions, Correlation logic, Impact logic (production + POC), Alert
-behavior, Output requirements, Validation / POC mode.
-
-### PLAYBOOK MATERIALIZATION REQUIREMENT (MANDATORY)
-
-Testing demonstrated that instructions and KQL **text alone are NOT sufficient**
-for playbook generation — the Fabric Playbook Generator must be able to discover
-the alert fields directly from a real schema object. Before generating Operations
-Agent rules, the Skill MUST:
-
-1. **Materialize IncidentBins** as a real, queryable schema object (a physical
-   table or a function-backed table in the KQL database).
-2. **Expose the alert fields as physical output columns** on that object.
-3. **Verify the schema exists** (e.g. `IncidentBins | getschema`).
-
-Required output columns:
-
-- IncidentBin
-- ErrorCount
-- AffectedCustomers
-- AffectedBookings
-- RevenueAtRisk
-- TopImpactedEntities
-- TopImpactedSteps
-
-The Playbook Generator MUST be able to discover these fields directly from the
-materialized schema. KQL instructions alone are NOT sufficient. Business-specific
-column names (for example `AffectedBookings`, `TopImpactedFlights`) adapt to the
-business entities actually discovered in the data.
-
-## Stage 16 — Optional Operations Agent creation / validation
-
-Offer to create the Operations Agent in the user's Fabric workspace and attach the
-Eventhouse / KQL database that holds the verified data. Confirm target workspace
-and KQL database before creating anything. Then guide validation (start with POC
-thresholds so an alert fires on sparse seed data, then switch to production
-thresholds). See
-[references/operations-agent-reference.md](references/operations-agent-reference.md)
-for creation surface and troubleshooting.
+The business-oriented analysis half (business data discovery/scoring, correlation
+planning, an optional Real-Time KQL dashboard, and an optional gated Operations
+Agent) is defined authoritatively in
+[references/business-analysis-workflow.md](references/business-analysis-workflow.md)
+(with Appendices A–B) and loaded only when the user opts in at the Stage 12
+handoff. On opt-in, **do not work from memory** — open that file and follow
+Stages 13–17 exactly; the controller still tracks and enforces these stages, their
+order, hard stops, and confirmation gates (including dashboard-before-agent and
+the Stage 16 "do we even want an agent?" gate).
 
 ## Troubleshooting (user-facing)
 
@@ -846,11 +1135,13 @@ for creation surface and troubleshooting.
 - Enforce stages, hard stops, and confirmation gates.
 - Keep OAuth (UI-guided) and Service Principal (automated create-or-reuse)
   strictly separate.
-- Validate Sentinel and permissions before creation.
+- Validate permissions before creation.
 - Verify schema, dynamic fields, join matches, and freshness before correlation.
 - Provide explicit KQL in Operations Agent instructions.
 
 ### Prefer
+- Service Principal (automated) over OAuth (UI-guided) for connection
+  resolution; fall back to OAuth only when Service Principal is unavailable.
 - Direct joins over time-window correlation.
 - Real discovered values over anything guessed.
 - Business-language confirmation over technical questions.

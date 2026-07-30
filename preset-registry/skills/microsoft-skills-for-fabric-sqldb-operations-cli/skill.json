@@ -1,7 +1,7 @@
 {
   "id": "microsoft-skills-for-fabric-sqldb-operations-cli",
   "name": "sqldb-operations-cli",
-  "description": "> Diagnose SQL database in Fabric performance via sqlcmd against Query Store, DMVs, sys.dm_db_resource_stats, and Extended Events on the OLTP endpoint. Identifies the top resource-consuming, slowest, or most expensive queries and handles query-performance ranking, blocking-chain, missing-index, and plan-regression diagnostics. For routine data queries use the sqldb-consumption-cli skill; for schema changes use the sqldb-authoring-cli skill. Triggers: \"query store slow query analysis sqldb top qu",
+  "description": "> Diagnose SQL database in Fabric performance over TDS using Query Store, DMVs, sys.dm_db_resource_stats, and Extended Events on the OLTP endpoint. Identifies the top resource-consuming, slowest, or most expensive queries and handles query-performance ranking, blocking-chain, missing-index, and plan-regression diagnostics. For routine data queries use the sqldb-consumption-cli skill; for schema changes use the sqldb-authoring-cli skill. Triggers: \"query store slow query analysis sqldb top querie",
   "category": "数据分析",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/microsoft/skills-for-fabric/blob/main/plugins/fabric-skills/skills/sqldb-operations-cli/SKILL.md",
     "path": "plugins/fabric-skills/skills/sqldb-operations-cli/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-30T14:50:19.075Z",
+    "discovered_at": "2026-07-30T17:48:11.531Z",
     "stars": 904,
     "language": "Python",
-    "pushed_at": "2026-07-23T10:07:18Z",
+    "pushed_at": "2026-07-30T17:15:57Z",
     "license": "MIT"
   }
 }

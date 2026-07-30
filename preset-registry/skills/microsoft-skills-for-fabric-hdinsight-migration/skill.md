@@ -2,7 +2,7 @@
 name: hdinsight-migration
 description: >
   Port Azure HDInsight Spark clusters and Hive workloads to Microsoft Fabric.
-  Removes legacy HiveContext and standalone SparkContext constructors, replacing them with
+  Replaces legacy HiveContext and standalone SparkContext constructors with
   the pre-instantiated SparkSession. Converts WASB and ABFS storage paths to OneLake
   abfss URLs via Shortcuts. Transforms Hive DDL (STORED AS ORC, external tables) to
   Delta Lake schemas inside Fabric Lakehouse. Maps Oozie workflow actions — spark, hive,
@@ -14,7 +14,7 @@ description: >
   (3) replace Oozie coordinators with Fabric Pipelines.
   Triggers: "migrate from hdinsight", "hdi to fabric", "hivecontext sparksession fabric",
   "wasb to onelake", "hive ddl to delta", "oozie to fabric pipelines",
-  "hive metastore lakehouse", "hdinsight spark migration".
+  "migrate an oozie action", "hive metastore lakehouse", "hdinsight spark migration".
 ---
 
 > **Update Check — ONCE PER SESSION (mandatory)**
@@ -29,6 +29,7 @@ description: >
 > 3. HDInsight has no `mssparkutils` or `dbutils` equivalent — `notebookutils` is net-new capability being introduced
 > 4. `HiveContext` and `SQLContext` are legacy Spark 1.x/2.x APIs — Fabric uses Spark 3.x `SparkSession` exclusively
 > 5. `wasb://` paths are deprecated and require a Storage Account key or SAS — replace with OneLake shortcuts
+> 6. Fabric cannot read or shortcut `hdfs://` directly. Its Pipeline HDFS connector supports Anonymous authentication only; export or bridge Kerberos sources to supported storage first.
 
 # HDInsight → Microsoft Fabric Migration
 
@@ -153,6 +154,7 @@ HDInsight Spark had no built-in utility framework equivalent to `mssparkutils` o
 - **Introduce `notebookutils`** for file system operations, secret retrieval, and child notebook orchestration where HDInsight used custom scripts or direct API calls
 - **Replace Oozie XML workflows** with Fabric Data Pipelines — see [§ Oozie → Fabric Pipelines](#oozie--fabric-pipelines)
 - **Align library management** to Fabric Environments — remove `bootstrap.sh`, conda envs, and runtime `%pip install` patterns for production workloads
+- **Treat `hdfs://` as source-cluster-only** — export or ingest into ADLS Gen2 or OneLake; do not claim that a gateway adds Kerberos support to Fabric's Anonymous-only HDFS connector
 
 ### PREFER
 - **OneLake Shortcuts** over copying data — mount existing ADLS Gen2 containers as shortcuts to avoid re-ingestion during migration

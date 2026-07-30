@@ -2,13 +2,13 @@
 name: sqldw-authoring-cli
 description: >
   Execute authoring T-SQL (DDL, DML, data ingestion, transactions, schema changes) against Microsoft Fabric
-  Data Warehouse and SQL endpoints from agentic CLI environments. Use when the user wants to: (1) create/alter/drop
-  tables from terminal, (2) insert/update/delete/merge data via CLI, (3) run COPY INTO or OPENROWSET ingestion,
+  Data Warehouse and SQL endpoints via the MCP `fabric-sqlendpoint-execute_query` tool. Use when the user wants to: (1) create/alter/drop
+  tables, (2) insert/update/delete/merge data, (3) run COPY INTO or OPENROWSET ingestion,
   (4) manage transactions or stored procedures, (5) perform schema evolution, (6) use time travel or snapshots,
-  (7) generate ETL/ELT shell scripts, (8) create views/functions/procedures on Lakehouse SQLEP. Triggers:
+  (7) generate ETL/ELT workflows, (8) create views/functions/procedures on Lakehouse SQLEP. Triggers:
   "create table in warehouse", "insert data via T-SQL", "load from ADLS", "COPY INTO", "run ETL with T-SQL", "alter warehouse table", "upsert with T-SQL", "merge into warehouse",
-  "create T-SQL procedure", "warehouse time travel", "recover deleted warehouse data", "create warehouse schema", "deploy warehouse", "transaction
-  conflict", "snapshot isolation error".
+  "create T-SQL procedure", "warehouse time travel", "recover deleted warehouse data", "create warehouse schema", "deploy warehouse",
+  "transaction conflict", "snapshot isolation error".
 ---
 
 > **Update Check — ONCE PER SESSION (mandatory)**
@@ -22,6 +22,8 @@ description: >
 > 2. To find the item details (including its ID) from workspace ID, item type, and item name: list all items of that type in that workspace and, then, use JMESPath filtering
 
 # SQL Endpoint Authoring — CLI Skill
+
+> **⚠️ SQL Execution Override:** For SQL data-plane execution, this skill supersedes COMMON-CLI SQL/TDS guidance. Use MCP `fabric-sqlendpoint-execute_query` (see [Tool Stack](#tool-stack)) unless explicitly using Legacy CLI Fallback.
 
 ## Table of Contents
 
@@ -42,7 +44,7 @@ description: >
 | Authentication Recipes | [COMMON-CLI.md § Authentication Recipes](../../common/COMMON-CLI.md#authentication-recipes) | `az login` flows and token acquisition |
 | Fabric Control-Plane API via `az rest` | [COMMON-CLI.md § Fabric Control-Plane API via az rest](../../common/COMMON-CLI.md#fabric-control-plane-api-via-az-rest) | **Always pass `--resource`**; includes pagination and LRO helpers |
 | OneLake Data Access via `curl` | [COMMON-CLI.md § OneLake Data Access via curl](../../common/COMMON-CLI.md#onelake-data-access-via-curl) | Use `curl` not `az rest` (different token audience) |
-| SQL / TDS Data-Plane Access | [COMMON-CLI.md § SQL / TDS Data-Plane Access](../../common/COMMON-CLI.md#sql--tds-data-plane-access) | `sqlcmd` (Go) connect, query, CSV export |
+| SQL / TDS Data-Plane Access | [COMMON-CLI.md § SQL / TDS Data-Plane Access](../../common/COMMON-CLI.md#sql--tds-data-plane-access) | Legacy `sqlcmd` reference (MCP is primary — see Tool Stack) |
 | Job Execution (CLI) | [COMMON-CLI.md § Job Execution](../../common/COMMON-CLI.md#job-execution) ||
 | OneLake Shortcuts | [COMMON-CLI.md § OneLake Shortcuts](../../common/COMMON-CLI.md#onelake-shortcuts) ||
 | Capacity Management (CLI) | [COMMON-CLI.md § Capacity Management](../../common/COMMON-CLI.md#capacity-management) ||
@@ -75,13 +77,12 @@ description: >
 | Authoring Gotchas and Troubleshooting | [SQLDW-AUTHORING-CORE.md § Authoring Gotchas and Troubleshooting](../../common/SQLDW-AUTHORING-CORE.md#authoring-gotchas-and-troubleshooting) | 17-row issue/cause/resolution table |
 | Common Authoring Patterns | [SQLDW-AUTHORING-CORE.md § Common Authoring Patterns](../../common/SQLDW-AUTHORING-CORE.md#common-authoring-patterns-end-to-end-examples) | Incremental load, SCD Type 1, SQLEP view layer |
 | Quick Reference: Authoring Decision Guide | [SQLDW-AUTHORING-CORE.md § Quick Reference: Authoring Decision Guide](../../common/SQLDW-AUTHORING-CORE.md#quick-reference-authoring-decision-guide) | Scenario → recommended approach lookup |
-| Core Authoring via CLI | [authoring-cli-quickref.md § Core Authoring via CLI](references/authoring-cli-quickref.md#core-authoring-via-cli) | Table DDL, DML, data ingestion `sqlcmd` one-liners |
-| Advanced Authoring Patterns via CLI | [authoring-cli-quickref.md § Advanced Authoring Patterns via CLI](references/authoring-cli-quickref.md#advanced-authoring-patterns-via-cli) | Transactions, schema evolution, stored procedures, time travel |
-| Bash Templates | [authoring-script-templates.md § Bash Templates](references/authoring-script-templates.md#bash-templates) | COPY INTO, ELT pipeline, upsert with retry, schema migration, time travel recovery, stored procedure |
-| PowerShell Templates | [authoring-script-templates.md § PowerShell Templates](references/authoring-script-templates.md#powershell-templates) | COPY INTO ingestion, incremental upsert with retry |
-| Tool Stack | [SKILL.md § Tool Stack](#tool-stack) | `sqlcmd` (Go) + `az` CLI + `jq`; verify before first op |
-| Connection | [SKILL.md § Connection](#connection) | FQDN discovery, reusable vars, PowerShell |
-| Script Generation | [authoring-cli-quickref.md § Script Generation](references/authoring-cli-quickref.md#script-generation) | sqlcmd output flags, piped input, parameterized queries |
+| Core Authoring via MCP | [authoring-cli-quickref.md § Core Authoring via MCP](references/authoring-cli-quickref.md#core-authoring-via-mcp) | Table DDL, DML, data ingestion via execute_query |
+| Advanced Authoring Patterns via MCP | [authoring-cli-quickref.md § Advanced Authoring Patterns via MCP](references/authoring-cli-quickref.md#advanced-authoring-patterns-via-mcp) | Transactions, schema evolution, stored procedures, time travel |
+| MCP Workflow Templates | [authoring-script-templates.md § MCP Workflow Templates](references/authoring-script-templates.md#mcp-workflow-templates) | COPY INTO, ELT pipeline, upsert with retry, schema migration, time travel recovery |
+| Tool Stack | [SKILL.md § Tool Stack](#tool-stack) | `fabric-sqlendpoint-execute_query` MCP tool + `az` CLI; verify before first op |
+| Connection | [SKILL.md § Connection](#connection) | workspaceId/itemId discovery, execute example |
+| Query Execution | [authoring-cli-quickref.md § Query Execution](references/authoring-cli-quickref.md#query-execution) | MCP tool call format, batch considerations |
 | Agentic Workflows | [SKILL.md § Agentic Workflows](#agentic-workflows) | **Start here** — discover schema before any write |
 | Monitoring Authoring Operations | [authoring-cli-quickref.md § Monitoring Authoring Operations](references/authoring-cli-quickref.md#monitoring-authoring-operations) | Active DML/DDL, recent ETL, failed writes |
 | Gotchas, Rules, Troubleshooting | [SKILL.md § Gotchas, Rules, Troubleshooting](#gotchas-rules-troubleshooting) | **MUST DO / AVOID / PREFER** checklists |
@@ -93,14 +94,49 @@ description: >
 
 | Tool | Role | Install |
 |---|---|---|
-| `sqlcmd` (Go) | **Primary**: Execute DDL/DML T-SQL. Standalone binary, no ODBC, built-in Entra ID auth. | `winget install sqlcmd` / `brew install sqlcmd` / `apt-get install sqlcmd` |
-| `az` CLI | Auth (`az login`), token acquisition, Fabric REST for endpoint discovery, snapshot management. | Pre-installed in most dev environments |
+| `fabric-sqlendpoint-execute_query` MCP tool | **Primary**: Execute DDL/DML T-SQL queries against Fabric SQL Endpoints. Returns CSV results. Auth handled by MCP protocol. | No install — server-side. Requires MCP server registration. |
+| `az` CLI | Auth (`az login`), Fabric REST for workspace/item discovery, snapshot management. | Pre-installed in most dev environments |
 | `jq` | Parse JSON from `az rest` | Pre-installed or trivial |
 
-> **Agent check** — verify before first operation:
-> ```bash
-> sqlcmd --version 2>/dev/null || echo "INSTALL: winget install sqlcmd OR brew install sqlcmd"
-> ```
+> **IMPORTANT — MCP vs sqlcmd:**
+> This skill uses the `fabric-sqlendpoint-execute_query` MCP tool for all T-SQL execution. Do **not** use COMMON-CLI SQL/TDS/sqlcmd sections for query execution.
+
+> **Agent preflight** — verify before first operation:
+> 1. Confirm the `fabric-sqlendpoint-execute_query` tool is available in your tool list. This tool is provided by the `fabric-sqlendpoint` MCP server, which is registered either by installing a Fabric skills **plugin** (the path for end users) or via this repo's `.mcp.json` — other MCP clients may register it through their own configuration.
+> 2. If no matching tool is found, the user must register the Fabric SQL Endpoint MCP server. See [mcp-setup/](../../mcp-setup/).
+>    - **Global URL**: `https://api.fabric.microsoft.com/v1/mcp/dataPlane/sqlEndpoint`
+>    - **Item-scoped URL**: `https://api.fabric.microsoft.com/v1/mcp/dataPlane/workspaces/{workspaceId}/items/{itemId}/sqlEndpoint`
+
+### MCP Tool Signature
+
+```text
+fabric-sqlendpoint-execute_query(workspaceId, itemId, query)
+```
+
+> **Tool name may differ:** `execute_query` is the logical operation. Depending on how the server is
+> registered, the concrete tool name in your tool list may be prefixed (e.g.
+> `fabric-sqlendpoint-execute_query` or `sqlendpoint-global-execute_query`). Invoke the concrete name
+> shown in your tool list, always passing `workspaceId`, `itemId`, and `query`.
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `workspaceId` | string (UUID) | The workspace GUID containing the target item |
+| `itemId` | string (UUID) | The Fabric item GUID to target. For a **Warehouse**, use the item id. For a **Lakehouse**, use its **SQL analytics endpoint** id (`properties.sqlEndpointProperties.id`) — **not** the Lakehouse item id. |
+| `query` | string | T-SQL query text (single batch — no `GO` separators or sqlcmd meta-commands) |
+
+**Returns:** CSV resource (RFC 4180) with tabular results + metadata text.
+
+> **Batch guidance:** Multiple statements without `GO` are allowed in one call (e.g., `CREATE TABLE ...; INSERT INTO ...`). However, only the last result set is returned, and an error in any statement fails the entire batch. **Prefer separate `fabric-sqlendpoint-execute_query` calls** for independent DDL/DML operations — this gives clearer error messages and lets you verify each step succeeded before proceeding.
+
+### MCP Limits
+
+| Limit | Value | Notes |
+|-------|-------|-------|
+| Max rows returned | 10,000 | For DDL/DML, row count metadata indicates affected rows |
+| Query timeout | 300 seconds | Long-running operations may timeout |
+| Rate limit | 20 requests/min per identity | HTTP 429 returned when exceeded |
+
+> These values are **observed defaults, not a documented contract** — the MCP service can change them. Treat them as guidance and confirm the current behavior from live `429` / timeout / truncation responses (or Microsoft Learn, if/when published) rather than relying on the exact numbers.
 
 ### Authoring Scope by Item Type
 
@@ -114,67 +150,93 @@ description: >
 | CREATE VIEW/FUNCTION/PROCEDURE | ✅ | ✅ |
 | CREATE SCHEMA | ✅ | ✅ |
 
+### Fabric DW DDL Constraints
+
+These constraints are **hard requirements** — violating them produces errors:
+
+| Constraint | Details |
+|---|---|
+| No `DEFAULT` in CREATE TABLE | Default values not supported. Set defaults in application/INSERT logic. |
+| No `PRIMARY KEY` inside CREATE TABLE | Must add via `ALTER TABLE ... ADD CONSTRAINT ... PRIMARY KEY NONCLUSTERED (col) NOT ENFORCED` |
+| `DATETIME2` requires precision | Always use `DATETIME2(6)`, never bare `DATETIME2` |
+| Unsupported data types | `NCHAR`, `NVARCHAR`, `TEXT`, `IMAGE`, `MONEY`, `SMALLMONEY`, `DATETIME` — use `VARCHAR`, `DECIMAL`, `DATETIME2(6)` instead |
+| No `WITH DISTRIBUTION` | Distribution is automatic in Fabric |
+| Constraints must be `NOT ENFORCED` | `PRIMARY KEY NONCLUSTERED NOT ENFORCED`, `UNIQUE NONCLUSTERED NOT ENFORCED`, `FOREIGN KEY NOT ENFORCED` |
+| PK columns must be `NOT NULL` | Declare PK columns as `NOT NULL` in CREATE TABLE before adding PK constraint |
+| `ALTER TABLE` scope | Add/drop nullable columns (must specify `NULL`) and add/drop constraints (`NOT ENFORCED` only) are GA; `ALTER COLUMN` type changes are **in preview** (see note below) |
+
+> **`MERGE` and `ALTER COLUMN` are NOT hard errors.** Per [T-SQL surface area](https://learn.microsoft.com/en-us/fabric/data-warehouse/tsql-surface-area), `MERGE` is a **generally available** Warehouse feature and `ALTER TABLE ... ALTER COLUMN` is **in preview**. Prefer an explicit `DELETE`+`INSERT` when snapshot-conflict isolation matters, and `CTAS` + `sp_rename` for production-critical column-type changes — as a robustness choice, not because the syntax is blocked.
+
+**Correct CREATE TABLE pattern:**
+
+```sql
+CREATE TABLE dbo.Orders (
+    OrderID INT NOT NULL,
+    CustomerName VARCHAR(100) NULL,
+    Amount DECIMAL(19,4) NULL,
+    CreatedAt DATETIME2(6) NULL
+)
+```
+
+```sql
+ALTER TABLE dbo.Orders ADD CONSTRAINT PK_Orders PRIMARY KEY NONCLUSTERED (OrderID) NOT ENFORCED
+```
+
+**Additional supported patterns:**
+- `CREATE TABLE [dbo].[clone] AS CLONE OF [dbo].[source]` — duplicate table structure + data
+- `COPY INTO` — highest-throughput ingestion from external storage
+
 ---
 
 ## Connection
 
-### Discover the SQL Endpoint FQDN
+### Discover workspaceId and itemId
 
-Per [COMMON-CLI.md](../../common/COMMON-CLI.md) Discovering Connection Parameters via REST:
+You need the workspace GUID and item GUID to call `fabric-sqlendpoint-execute_query`:
 
 ```bash
-WS_ID="<workspaceId>"
-ITEM_ID="<warehouseOrLakehouseId>"
+# 1. Find workspace ID by name (capture into WS_ID for the next call)
+WS_ID=$(az rest --method get \
+  --resource "https://api.fabric.microsoft.com" \
+  --url "https://api.fabric.microsoft.com/v1/workspaces" \
+  --query "value[?displayName=='MyWorkspace'].id" --output tsv)
+echo "Workspace ID: $WS_ID"
 
-# Warehouse
+# 2. Find warehouse item ID by name
 az rest --method get \
   --resource "https://api.fabric.microsoft.com" \
-  --url "https://api.fabric.microsoft.com/v1/workspaces/$WS_ID/warehouses/$ITEM_ID" \
-  --query "properties.connectionString" --output tsv
+  --url "https://api.fabric.microsoft.com/v1/workspaces/$WS_ID/warehouses" \
+  --query "value[?displayName=='MyWarehouse'].id" --output tsv
 
-# Lakehouse SQL endpoint
+# For a Lakehouse SQL endpoint, pass its SQL analytics endpoint id — NOT the lakehouse item id
 az rest --method get \
   --resource "https://api.fabric.microsoft.com" \
-  --url "https://api.fabric.microsoft.com/v1/workspaces/$WS_ID/lakehouses/$ITEM_ID" \
-  --query "properties.sqlEndpointProperties.connectionString" --output tsv
+  --url "https://api.fabric.microsoft.com/v1/workspaces/$WS_ID/lakehouses" \
+  --query "value[?displayName=='MyLakehouse'].properties.sqlEndpointProperties.id" --output tsv
 ```
 
-Result: `<uniqueId>.datawarehouse.fabric.microsoft.com`
+### Execute a Query
 
-### Connect with sqlcmd (Go)
-
-```bash
-# Non-interactive one-shot query
-sqlcmd -S "<endpoint>.datawarehouse.fabric.microsoft.com" -d "<DatabaseName>" -G \
-  -Q "SELECT TOP 10 * FROM dbo.FactSales"
-
-# Service principal (CI/CD)
-SQLCMDPASSWORD="<clientSecret>" \
-sqlcmd -S "<endpoint>.datawarehouse.fabric.microsoft.com" -d "<DatabaseName>" \
-  --authentication-method ActiveDirectoryServicePrincipal \
-  -U "<appId>" \
-  -Q "SELECT COUNT(*) FROM dbo.FactSales"
+```text
+fabric-sqlendpoint-execute_query(
+  workspaceId: "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee",
+  itemId: "11111111-2222-3333-4444-555555555555",
+  query: "CREATE TABLE dbo.FactSales (SaleID bigint NOT NULL, Amount decimal(19,4) NOT NULL)"
+)
 ```
 
-### Reusable Connection Variables
+**No additional connection setup needed** — authentication is handled transparently by the MCP protocol.
 
-```bash
-# Set once at script top
-FABRIC_SERVER="<endpoint>.datawarehouse.fabric.microsoft.com"
-FABRIC_DB="<DatabaseName>"
-SQLCMD="sqlcmd -S $FABRIC_SERVER -d $FABRIC_DB -G"
+### Verifying DDL/DML Results
 
-# Use throughout
-$SQLCMD -Q "SELECT TOP 5 * FROM dbo.DimProduct"
-$SQLCMD -i myscript.sql
-```
+For DDL (CREATE/ALTER/DROP), the tool returns success with metadata. Always verify:
 
-### PowerShell / Windows CMD
+```text
+# After CREATE TABLE, verify it exists
+fabric-sqlendpoint-execute_query(workspaceId, itemId, "SELECT table_schema, table_name FROM INFORMATION_SCHEMA.TABLES WHERE table_name = 'FactSales'")
 
-```powershell
-$s = "<endpoint>.datawarehouse.fabric.microsoft.com"; $db = "<DatabaseName>"
-sqlcmd -S $s -d $db -G -Q "SELECT TOP 10 * FROM dbo.FactSales"
-# CMD: use set S=... and %S% / %DB% instead of $variables
+# After DML, check row count
+fabric-sqlendpoint-execute_query(workspaceId, itemId, "SELECT COUNT(*) AS row_count FROM dbo.FactSales")
 ```
 
 ---
@@ -185,24 +247,24 @@ sqlcmd -S $s -d $db -G -Q "SELECT TOP 10 * FROM dbo.FactSales"
 
 Before any write operation, discover the target schema:
 
-```bash
+```text
 # 1. List tables
-$SQLCMD -Q "SELECT table_schema, table_name FROM information_schema.tables ORDER BY 1,2" -W
+fabric-sqlendpoint-execute_query(workspaceId, itemId, "SELECT table_schema, table_name FROM INFORMATION_SCHEMA.TABLES ORDER BY 1,2")
 
 # 2. Check columns
-$SQLCMD -Q "SELECT column_name, data_type, is_nullable FROM information_schema.columns WHERE table_name='FactSales' ORDER BY ordinal_position" -W
+fabric-sqlendpoint-execute_query(workspaceId, itemId, "SELECT column_name, data_type, is_nullable FROM INFORMATION_SCHEMA.COLUMNS WHERE table_name='FactSales' ORDER BY ordinal_position")
 
 # 3. Sample data
-$SQLCMD -Q "SELECT TOP 5 * FROM dbo.FactSales" -W
+fabric-sqlendpoint-execute_query(workspaceId, itemId, "SELECT TOP 5 * FROM dbo.FactSales")
 
 # 4. Check constraints
-$SQLCMD -Q "SELECT constraint_name, constraint_type FROM information_schema.table_constraints WHERE table_name='FactSales'" -W
+fabric-sqlendpoint-execute_query(workspaceId, itemId, "SELECT constraint_name, constraint_type FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='FactSales'")
 
 # 5. Row counts
-$SQLCMD -Q "SELECT s.name AS [schema], t.name AS [table], SUM(p.rows) AS row_count FROM sys.tables t JOIN sys.schemas s ON t.schema_id=s.schema_id JOIN sys.partitions p ON t.object_id=p.object_id AND p.index_id IN (0,1) GROUP BY s.name, t.name ORDER BY row_count DESC" -W
+fabric-sqlendpoint-execute_query(workspaceId, itemId, "SELECT s.name AS [schema], t.name AS [table], SUM(p.rows) AS row_count FROM sys.tables t JOIN sys.schemas s ON t.schema_id=s.schema_id JOIN sys.partitions p ON t.object_id=p.object_id AND p.index_id IN (0,1) GROUP BY s.name, t.name ORDER BY row_count DESC")
 
 # 6. Programmability objects
-$SQLCMD -Q "SELECT name, type_desc FROM sys.objects WHERE type IN ('V','FN','IF','P','TF') ORDER BY type_desc, name" -W
+fabric-sqlendpoint-execute_query(workspaceId, itemId, "SELECT name, type_desc FROM sys.objects WHERE type IN ('V','FN','IF','P','TF') ORDER BY type_desc, name")
 ```
 
 ### Agentic Workflow
@@ -210,9 +272,9 @@ $SQLCMD -Q "SELECT name, type_desc FROM sys.objects WHERE type IN ('V','FN','IF'
 1. **Discover** → Run steps 1–4 to understand available tables/columns.
 2. **Sample** → `SELECT TOP 5` on relevant tables.
 3. **Formulate** → Select pattern from [SQLDW-AUTHORING-CORE.md](../../common/SQLDW-AUTHORING-CORE.md) (Table DDL through Common Authoring Patterns).
-4. **Execute** → `$SQLCMD -Q "..."` or `$SQLCMD -i file.sql` for multi-statement.
+4. **Execute** → Call `fabric-sqlendpoint-execute_query(workspaceId, itemId, query)`. For multi-batch operations (e.g., CREATE PROCEDURE with BEGIN/END), use a single batch without `GO`.
 5. **Verify** → Query affected table (`SELECT COUNT(*)`, `SELECT TOP 5`).
-6. **Optionally script** → Generate reusable `.sh` or `.ps1` using [references/authoring-script-templates.md](references/authoring-script-templates.md).
+6. **Optionally follow up** → Run additional queries to confirm schema changes.
 
 ---
 
@@ -224,27 +286,28 @@ For CLI-specific issues: [COMMON-CLI.md](../../common/COMMON-CLI.md) Gotchas & T
 ### MUST DO
 
 - **Verify workspace has capacity before creating warehouse** — call `GET /v1/workspaces/{id}` and check `capacityId`.
-- **Always `-d <DatabaseName>`** — FQDN alone is insufficient.
-- **Always `-G` or `--authentication-method`** — SQL auth not supported on Fabric.
-- **`az login` first** — `ActiveDirectoryDefault` uses az session. No session → cryptic failure.
+- **Verify `fabric-sqlendpoint-execute_query` MCP tool is available** — check the tool list before the first operation. If unavailable, instruct the user to register the MCP server.
+- **Discover `workspaceId` and `itemId` first** — resolve the target Warehouse via `az rest`; the tool takes GUIDs, not an FQDN or `-d <DatabaseName>`.
+- **`az login` first (for discovery)** — the `az rest` workspace/warehouse lookups need an Azure CLI session. The `fabric-sqlendpoint` MCP server itself ships headerless and authenticates via your MCP client's native Fabric session, not the Azure CLI token; no signed-in session → auth failure on either path.
 - **`SET NOCOUNT ON;`** in scripts — suppresses row-count messages that corrupt output.
-- **Use `-i file.sql`** for multi-statement batches (CREATE PROCEDURE, transactions with GO separators).
+- **Send a single T-SQL batch per call** — no `GO` separators and no `-i file.sql`; split multi-batch work (CREATE PROCEDURE, multi-step transactions) into separate `fabric-sqlendpoint-execute_query` calls.
 - **Label authoring queries** with `OPTION (LABEL = 'ETL_description')`.
 - **Use explicit `CAST()`** in CTAS to control output types.
 - **Keep transactions short** — long transactions increase conflict window.
 
 ### AVOID
 
-- **ODBC sqlcmd** (`/opt/mssql-tools/bin/sqlcmd`) — requires ODBC driver. Use Go version.
-- **Omitting `-W`** in scripts — trailing spaces corrupt CSV.
+- **`GO` separators** — the MCP tool accepts only a single T-SQL batch. Combine related DDL in one statement or call `fabric-sqlendpoint-execute_query` multiple times.
+- **sqlcmd meta-commands** (`:setvar`, `:r`, `-i`) — not available in MCP tool. Inline all SQL in the `query` parameter.
+- **Unbounded `SELECT *`** — 10,000 row limit. Always use `TOP N` or `WHERE` to limit result sets.
 - **Singleton `INSERT ... VALUES`** at scale — creates tiny Parquet files. Use INSERT...SELECT, CTAS, or COPY INTO.
 - **`DROP TABLE IF EXISTS` + `CREATE TABLE`** to refresh — loses time-travel history. Use `TRUNCATE TABLE` + `INSERT INTO`.
-- **MERGE in production** — preview, table-level conflict detection. Use DELETE + INSERT.
-- **ALTER COLUMN** — not supported. Use CTAS workaround (Schema Evolution).
+- **MERGE in production** — GA, but table-level snapshot-conflict detection makes concurrent writers likely to fail. Prefer DELETE + INSERT when isolation matters.
+- **ALTER COLUMN in production** — in preview; prefer CTAS + `sp_rename` for production-critical column-type changes (Schema Evolution).
 - **Variables in CTAS** — not allowed. Wrap in dynamic SQL: `EXEC sp_executesql N'CREATE TABLE ...'`.
 - **DML on Lakehouse/Mirrored DB SQLEP** — read-only for table data. Only views/funcs/procs can be authored.
 - **Concurrent UPDATE/DELETE on same table** — snapshot isolation conflicts at table level. Serialize writes.
-- **Hardcoded FQDNs** — discover via REST API (Connection section).
+- **Rapid-fire MCP calls** — rate limit is 20 req/min. Consolidate multiple statements into one batch where possible.
 - **MARS** — not supported. Remove `MultipleActiveResultSets` from connection strings.
 
 ### PREFER
@@ -254,13 +317,11 @@ For CLI-specific issues: [COMMON-CLI.md](../../common/COMMON-CLI.md) Gotchas & T
 - **`COPY INTO`** for external file ingestion — highest throughput.
 - **DELETE + INSERT** over MERGE for upserts in production.
 - **`TRUNCATE TABLE`** over `DELETE FROM` without WHERE — faster, preserves history.
-- **`-i file.sql`** over `-Q "..."` for anything beyond simple one-liners.
-- **Piped here-doc** for multi-statement batches without GO requirements.
+- **Consolidating related DDL** into a single `fabric-sqlendpoint-execute_query` call when no `GO` is required between statements.
 - **CTAS + sp_rename** for large-scale transforms instead of UPDATE.
-- **`sqlcmd (Go) -G`** over curl+token for SQL queries.
-- **`-Q`** (non-interactive exit) for agentic use.
-- **`-F vertical`** for exploration of wide tables.
-- **Env vars** (`FABRIC_SERVER`, `FABRIC_DB`) for script reuse.
+- **`fabric-sqlendpoint-execute_query` MCP tool** over sqlcmd for all T-SQL operations.
+- **`SET NOCOUNT ON;`** prefix — reduces metadata noise in results.
+- **`TOP N` or `WHERE`** clauses — stay within 10K row limit.
 
 ### TROUBLESHOOTING
 
@@ -271,12 +332,11 @@ For CLI-specific issues: [COMMON-CLI.md](../../common/COMMON-CLI.md) Gotchas & T
 | COPY INTO from OneLake fails | Provision workspace identity; check firewall rules |
 | CTAS unexpected types | Use explicit `CAST()` in SELECT |
 | Singleton INSERT poor perf | Remediate: CTAS + drop + rename to consolidate Parquet |
-| Proc CREATE fails with `-Q` | Use `-i file.sql` (GO separators needed) |
+| `fabric-sqlendpoint-execute_query` tool not available | MCP server not registered — user must add Fabric SQL Endpoint MCP server |
+| HTTP 429 rate limit exceeded | Wait 60s and retry; consolidate queries into fewer calls |
+| Query timeout (300s) | Break into smaller operations; for COPY INTO, check source file sizes |
 | sp_rename on SQLEP fails | Only available on Warehouse, not Lakehouse/Mirrored DB |
 | Deploy drops/recreates table | Avoid ALTER TABLE in DB project; apply manually |
-| `Login failed for user` | Verify `-d` matches item name exactly (case-sensitive) |
-| `Cannot open server` / `Login timeout expired` | Re-discover FQDN via REST API; check port 1433 / firewall |
-| `ActiveDirectoryDefault` failure | `az login` expired — `az login --tenant <tenantId>` |
-| Garbled CSV / `(N rows affected)` in file | Add `-W -s"," -w 4000`; prepend `SET NOCOUNT ON;` |
-| `sqlcmd` not found | Install Go version: `winget install sqlcmd` |
+| Only last result set returned | MCP returns only the final SELECT. Split multi-SELECT batches into separate calls. |
+| Binary columns unreadable | Columns with `[base64]` suffix are base64-encoded. Decode if needed. |
 

@@ -1,7 +1,7 @@
 ---
 name: sqldw-operations-cli
 description: >
-  Analyze Fabric Data Warehouse performance via CLI using sqlcmd and queryinsights views.
+  Analyze Fabric Data Warehouse performance via the MCP execute_query tool and queryinsights views.
   Diagnose slow queries, SQL pool pressure, cache coldness, and recommend clustering keys.
   Triggers: "DW slow query analysis", "slowest queries warehouse",
   "queryinsights long running", "warehouse CPU resource consumers",
@@ -10,7 +10,7 @@ description: >
   "warehouse cluster key recommendation", "cluster tables performance",
   "DW performance baseline comparison", "performance degraded warehouse",
   "warehouse user query patterns", "queryinsights diagnostics",
-  "DW optimization sqlcmd".
+  "DW optimization MCP".
 ---
 
 > **Update Check — ONCE PER SESSION (mandatory)**
@@ -25,11 +25,13 @@ description: >
 
 # SQL DW Performance & Diagnostics — CLI Skill
 
-This skill provides performance analysis, deep diagnostics, and optimization guidance for Microsoft Fabric Data Warehouse via **`sqlcmd`** and the built-in **`queryinsights`** views. All queries are read-only.
+This skill provides performance analysis, deep diagnostics, and optimization guidance for Microsoft Fabric Data Warehouse via the **`fabric-sqlendpoint-execute_query` MCP tool** and the built-in **`queryinsights`** views. All queries are read-only.
 
 ## Prerequisites
 
-For tool installation and authentication setup, see [COMMON-CLI.md § Authentication Recipes](../../common/COMMON-CLI.md#authentication-recipes) and [COMMON-CLI.md § SQL / TDS Data-Plane Access](../../common/COMMON-CLI.md#sql--tds-data-plane-access).
+For workspace/item discovery via `az rest`, see [COMMON-CLI.md § Fabric Control-Plane API via az rest](../../common/COMMON-CLI.md#fabric-control-plane-api-via-az-rest). For legacy `sqlcmd` reference (fallback only), see [COMMON-CLI.md § SQL / TDS Data-Plane Access](../../common/COMMON-CLI.md#sql--tds-data-plane-access).
+
+> **⚠️ SQL Execution Override:** For SQL data-plane execution, this skill supersedes COMMON-CLI SQL/TDS guidance. Use MCP `fabric-sqlendpoint-execute_query` (see [Tool Stack](#tool-stack)) unless explicitly using Legacy CLI Fallback.
 
 **Monitoring-specific requirements:**
 - **Workspace role**: Admin or Member on the target workspace (required for `queryinsights` views)
@@ -49,7 +51,7 @@ For tool installation and authentication setup, see [COMMON-CLI.md § Authentica
 | Tool Selection Rationale | [COMMON-CLI.md § Tool Selection Rationale](../../common/COMMON-CLI.md#tool-selection-rationale) ||
 | Authentication Recipes | [COMMON-CLI.md § Authentication Recipes](../../common/COMMON-CLI.md#authentication-recipes) | `az login` flows and token acquisition |
 | Fabric Control-Plane API via `az rest` | [COMMON-CLI.md § Fabric Control-Plane API via az rest](../../common/COMMON-CLI.md#fabric-control-plane-api-via-az-rest) | **Always pass `--resource`**; includes pagination and LRO helpers |
-| SQL / TDS Data-Plane Access | [COMMON-CLI.md § SQL / TDS Data-Plane Access](../../common/COMMON-CLI.md#sql--tds-data-plane-access) | `sqlcmd` (Go) connect, query, CSV export |
+| SQL / TDS Data-Plane Access | [COMMON-CLI.md § SQL / TDS Data-Plane Access](../../common/COMMON-CLI.md#sql--tds-data-plane-access) | Legacy `sqlcmd` reference (MCP is primary — see Tool Stack) |
 | Gotchas & Troubleshooting (CLI-Specific) | [COMMON-CLI.md § Gotchas & Troubleshooting (CLI-Specific)](../../common/COMMON-CLI.md#gotchas--troubleshooting-cli-specific) | `az rest` audience, shell escaping, token expiry |
 | Quick Reference | [COMMON-CLI.md § Quick Reference](../../common/COMMON-CLI.md#quick-reference) | `az rest` template + token audience/tool matrix |
 | Connection Fundamentals | [SQLDW-CONSUMPTION-CORE.md § Connection Fundamentals](../../common/SQLDW-CONSUMPTION-CORE.md#connection-fundamentals) | TDS, port 1433, Entra-only, no MARS |
@@ -79,54 +81,74 @@ For installation and setup, see [Prerequisites](#prerequisites).
 
 | Tool | Role |
 |---|---|
-| `sqlcmd` (Go) | Execute monitoring T-SQL queries via Entra ID auth (`-G`) |
-| `az` CLI | Token acquisition, Fabric REST for endpoint discovery |
+| `fabric-sqlendpoint-execute_query` MCP tool | **Primary**: Execute monitoring T-SQL queries against Fabric SQL Endpoints. Auth handled by MCP protocol. |
+| `az` CLI | Token acquisition, Fabric REST for workspace/item discovery |
 | `jq` | Parse JSON from `az rest` |
+
+> **IMPORTANT — MCP vs sqlcmd:**
+> This skill uses the `fabric-sqlendpoint-execute_query` MCP tool for all T-SQL execution. Do **not** use COMMON-CLI SQL/TDS/sqlcmd sections for query execution.
+
+> **Agent preflight** — verify before first operation:
+> 1. Confirm the `fabric-sqlendpoint-execute_query` tool is available in your tool list. This tool is provided by the `fabric-sqlendpoint` MCP server, which is registered either by installing a Fabric skills **plugin** (the path for end users) or via this repo's `.mcp.json` — other MCP clients may register it through their own configuration.
+> 2. If no matching tool is found, the user must register the Fabric SQL Endpoint MCP server.
+>    - **Global URL**: `https://api.fabric.microsoft.com/v1/mcp/dataPlane/sqlEndpoint`
+>    - **Item-scoped URL**: `https://api.fabric.microsoft.com/v1/mcp/dataPlane/workspaces/{workspaceId}/items/{itemId}/sqlEndpoint`
+
+### MCP Tool Signature
+
+```text
+fabric-sqlendpoint-execute_query(workspaceId, itemId, query)
+```
+
+> **Tool name may differ:** `execute_query` is the logical operation. Depending on how the server is
+> registered, the concrete tool name in your tool list may be prefixed (e.g.
+> `fabric-sqlendpoint-execute_query` or `sqlendpoint-global-execute_query`). Invoke the concrete name
+> shown in your tool list, always passing `workspaceId`, `itemId`, and `query`.
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `workspaceId` | string (UUID) | The workspace GUID containing the target Warehouse |
+| `itemId` | string (UUID) | The GUID of the Warehouse item |
+| `query` | string | T-SQL query text (single batch — no `GO` separators) |
+
+**Returns:** CSV resource (RFC 4180) with tabular results + metadata text.
+
+**Limits:** 10,000 rows max | 300s timeout | 20 req/min rate limit _(observed defaults, not a documented contract — the service can change them; verify against live 429/timeout/truncation responses)_
 
 ---
 
 ## Connection
 
-For authentication recipes (interactive, service principal, CI/CD), see [COMMON-CLI.md § Authentication Recipes](../../common/COMMON-CLI.md#authentication-recipes).
+### Discover workspaceId and itemId
 
-### Discover the SQL Endpoint FQDN
-
-Per [COMMON-CLI.md](../../common/COMMON-CLI.md) Discovering Connection Parameters via REST:
+You need the workspace GUID and warehouse GUID to call `fabric-sqlendpoint-execute_query`:
 
 ```bash
-WS_ID="<workspaceId>"
-ITEM_ID="<warehouseId>"
+# 1. Find workspace ID by name (capture into WS_ID for the next call)
+WS_ID=$(az rest --method get \
+  --resource "https://api.fabric.microsoft.com" \
+  --url "https://api.fabric.microsoft.com/v1/workspaces" \
+  --query "value[?displayName=='MyWorkspace'].id" --output tsv)
+echo "Workspace ID: $WS_ID"
 
-# Warehouse
+# 2. Find warehouse item ID by name
 az rest --method get \
   --resource "https://api.fabric.microsoft.com" \
-  --url "https://api.fabric.microsoft.com/v1/workspaces/$WS_ID/warehouses/$ITEM_ID" \
-  --query "properties.connectionString" --output tsv
+  --url "https://api.fabric.microsoft.com/v1/workspaces/$WS_ID/warehouses" \
+  --query "value[?displayName=='MyWarehouse'].id" --output tsv
 ```
 
-Result: `<uniqueId>.datawarehouse.fabric.microsoft.com`
+### Execute a Monitoring Query
 
-### Connect with sqlcmd (Go)
-
-```bash
-sqlcmd -S "<endpoint>.datawarehouse.fabric.microsoft.com" -d "<DatabaseName>" -G \
-  -Q "SELECT TOP 5 * FROM queryinsights.exec_requests_history ORDER BY total_elapsed_time_ms DESC"
+```text
+fabric-sqlendpoint-execute_query(
+  workspaceId: "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee",
+  itemId: "11111111-2222-3333-4444-555555555555",
+  query: "SELECT TOP 5 * FROM queryinsights.long_running_queries ORDER BY last_run_total_elapsed_time_ms DESC"
+)
 ```
 
-### Reusable Connection Variables
-
-```bash
-FABRIC_SERVER="<endpoint>.datawarehouse.fabric.microsoft.com"
-FABRIC_DB="<DatabaseName>"
-SQLCMD="sqlcmd -S $FABRIC_SERVER -d $FABRIC_DB -G"
-$SQLCMD -Q "SELECT TOP 5 * FROM queryinsights.long_running_queries ORDER BY last_run_total_elapsed_time_ms DESC"
-```
-
-```powershell
-# PowerShell
-$s = "<endpoint>.datawarehouse.fabric.microsoft.com"; $db = "<DatabaseName>"
-sqlcmd -S $s -d $db -G -Q "SELECT TOP 5 * FROM queryinsights.exec_requests_history ORDER BY total_elapsed_time_ms DESC"
-```
+**No additional connection setup needed** — authentication is handled transparently by the MCP protocol.
 
 ---
 
@@ -297,19 +319,23 @@ For T-SQL/platform gotchas: see [SQLDW-CONSUMPTION-CORE.md § Gotchas and Troubl
 - When recommending clustering, instruct users to use CTAS with `WITH (CLUSTER BY (...))` — not ALTER TABLE
 - Report actual query output — do not fabricate or assume results
 - **Label queries** with `OPTION (LABEL = 'AGENTCLI_MONITOR_...')` for Query Insights tracing
+- **Verify `fabric-sqlendpoint-execute_query` MCP tool availability** before first operation
 
 ### PREFER
 - Start with high-level queries (long-running summary, baseline comparison) before drilling into diagnostics
 - Use the pressure window analysis for root-cause analysis rather than guessing at bottlenecks
 - Combine multiple queries in the [Agentic Workflows](#agentic-workflows) for comprehensive investigations
 - Adjust time windows (`DATEADD` parameters) based on what the user asks for
+- Consolidate related diagnostic queries into fewer calls to respect rate limits
 
 ### AVOID
 - Recommending Fabric-unsupported features (nonclustered indexes, materialized views, index hints, triggers)
 - Suggesting that Query Insights needs to be "enabled" or "turned on" — `queryinsights` views are always available; permission errors indicate insufficient workspace role (Admin or Member required)
-- Running monitoring queries without confirming connection parameters (server, database)
+- Running monitoring queries without confirming workspaceId and itemId
 - Guessing at performance root causes without running the diagnostic queries
 - Using `SELECT *` in monitoring queries — always select specific columns
+- Using `GO` separators or sqlcmd meta-commands in queries (MCP tool accepts single batches only)
+- Unbounded queries without `TOP N` — 10,000 row limit applies
 
 ### TROUBLESHOOTING (Monitoring-Specific)
 
@@ -321,6 +347,9 @@ For generic connection/auth troubleshooting, see [COMMON-CLI.md § Gotchas & Tro
 | Permission errors on `queryinsights.*` | Insufficient workspace role | Requires Admin or Member role |
 | No data in queryinsights views | No recent query activity or < 15 min delay | Wait 15 min after query completion |
 | No rows but data exists | RLS filtering | Check `USER_NAME()`, verify RLS policies |
+| `fabric-sqlendpoint-execute_query` tool not available | MCP server not registered | User must add Fabric SQL Endpoint MCP server |
+| HTTP 429 rate limit | Too many calls in 1 min | Wait 60s; consolidate queries |
+| Query timeout (300s) | Complex diagnostics | Narrow time window with tighter DATEADD |
 
 ---
 
@@ -330,18 +359,17 @@ For generic connection/auth troubleshooting, see [COMMON-CLI.md § Gotchas & Tro
 
 **User:** "What are the slowest queries in my warehouse?"
 
-**Agent:** Runs the long-running queries summary via `sqlcmd`:
+**Agent:** Runs the long-running queries summary via `fabric-sqlendpoint-execute_query`:
 
-```bash
-sqlcmd -S "myserver.datawarehouse.fabric.microsoft.com" -d "MyWarehouse" -G -Q "
-SELECT TOP 5
-    left(last_run_command, 80) AS query_preview,
-    number_of_runs,
-    last_run_total_elapsed_time_ms,
-    median_total_elapsed_time_ms
-FROM queryinsights.long_running_queries
-ORDER BY median_total_elapsed_time_ms DESC
-"
+```text
+fabric-sqlendpoint-execute_query(workspaceId, itemId,
+  "SELECT TOP 5
+      left(last_run_command, 80) AS query_preview,
+      number_of_runs,
+      last_run_total_elapsed_time_ms,
+      median_total_elapsed_time_ms
+   FROM queryinsights.long_running_queries
+   ORDER BY median_total_elapsed_time_ms DESC")
 ```
 
 > The top 5 slowest queries are:

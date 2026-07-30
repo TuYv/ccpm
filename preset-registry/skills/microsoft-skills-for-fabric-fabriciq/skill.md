@@ -3,8 +3,7 @@ name: fabriciq
 description: >
   Answer natural-language business questions over existing Power BI reports and dashboards through the FabricIQ MCP endpoint.
   Orchestrates artifact discovery, schema inspection, entity resolution, DAX generation, and query execution to return plain-language answers.
-  Use when the user asks what, which, compare, rank, explain, or summarize questions about Power BI report or dashboard content (not raw DAX).
-  For raw DAX execution (EVALUATE statements) or model metadata inspection (INFO functions), use `semantic-model-consumption`. For upload/download/publish/list/delete report items or PBIR definitions, use `powerbi-report-management`. For PBIR file/page/visual edits, use `powerbi-report-authoring`.
+  Use when the user asks what, which, compare, rank, explain, or summarize questions about Power BI report or dashboard content.
   Triggers: "ask power bi", "PBI question", "discover my Power BI report", "report data",
   "dashboard data", "what are the top", "show me the power bi data",
   "which products sold", "compare sales in report", "which customers churned",

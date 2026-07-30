@@ -2,7 +2,7 @@
 name: activator-consumption-cli
 description: >
   Inspect existing alerts, notifications, and automated actions in Fabric via
-  read-only REST API calls using `az rest` CLI. **Invoke this skill** whenever
+  read-only REST calls using `az rest` CLI. **Invoke this skill** whenever
   the user wants to:
   (1) list existing alerts in a workspace,
   (2) inspect how an alert or notification is configured,
@@ -16,7 +16,8 @@ description: >
   "show me the rule", "show me the action", "show me the source",
   "get reflex definition", "list activators", "list alerts",
   "list reflex items", "show activator items", "activator details",
-  "find activator named"
+  "find activator named", "inspect Power BI source",
+  "metric definition behind this alert"
 ---
 
 > **Update Check — ONCE PER SESSION (mandatory)**
@@ -52,6 +53,7 @@ description: >
 | Inspecting a Single Activator | [SKILL.md § Inspecting a Single Activator](#inspecting-a-single-activator) | |
 | Reading the Definition | [SKILL.md § Reading the Definition](#reading-the-definition) | |
 | Exploring Rules, Sources, and Actions | [SKILL.md § Exploring Rules, Sources, and Actions](#exploring-rules-sources-and-actions) | |
+| Inspecting Power BI Sources | [SKILL.md § Inspecting Power BI Sources](#inspecting-power-bi-sources) | `powerBiSource-v1`, stored query JSON, `metricDefinition`, report/model lineage |
 | Must / Prefer / Avoid | [SKILL.md § Must / Prefer / Avoid](#must--prefer--avoid) | |
 | Examples | [SKILL.md § Examples](#examples) | |
 
@@ -216,6 +218,81 @@ cat reflex-entities.json | jq '{
 
 ---
 
+## Inspecting Power BI Sources
+
+Power BI-backed Activator sources use `powerBiSource-v1`. The source's parent
+`container-v1` must use exact case-sensitive `payload.type: "pbiMetrics"`.
+The source `query.queryString` is a JSON-string Power BI source query payload,
+and `metricDefinition` describes the same semantic model metric,
+dimensions, filters, and report visual lineage. The Activator API does not
+accept semantic-model query text in `query.queryString`.
+
+> **Current public API limitation:** Power BI-backed Activator definitions
+> cannot currently be relied on for public ALM readback. `getDefinition` can
+> reject an artifact that was imported successfully when PBI ALM export is
+> disabled. Preserve the exact response and request/correlation ID, describe
+> inspection as unavailable, and do not claim that persistence failed or that
+> the source is absent solely because the definition cannot be exported.
+
+Flag a missing parent container or any container type other than `pbiMetrics`.
+In particular, `powerBiQueries` is invalid.
+
+### Parse the Stored Query and Metric Definition
+
+```bash
+jq -r '.[] | select(.type == "powerBiSource-v1")
+  | .payload.query.queryString' reflex-entities.json | jq .
+```
+
+`metricDefinition` can be either a JSON string or an object. Parse both forms
+before explaining the metric:
+
+```python
+import json
+from pathlib import Path
+
+entities = json.loads(Path("reflex-entities.json").read_text(encoding="utf-8"))
+for entity in entities:
+    if entity.get("type") != "powerBiSource-v1":
+        continue
+    payload = entity["payload"]
+    metric = payload.get("metricDefinition")
+    if isinstance(metric, str):
+        metric = json.loads(metric)
+    print(json.dumps({
+        "sourceName": payload.get("name"),
+        "datasetId": payload.get("datasetId") or payload.get("metadata", {}).get("datasetId"),
+        "reportId": payload.get("reportId") or payload.get("metadata", {}).get("reportId"),
+        "pageId": payload.get("pageId") or payload.get("metadata", {}).get("pageId"),
+        "visualId": payload.get("visualId") or payload.get("metadata", {}).get("visualId"),
+        "measureName": payload.get("measureName") or payload.get("metadata", {}).get("measureName"),
+        "dimensionValue": payload.get("dimensionValue"),
+        "metricDefinition": metric,
+    }, indent=2))
+```
+
+Persisted Power BI source queries should omit `top`.
+
+### Consistency Checks
+
+Call out any of these issues:
+
+- `getDefinition` is blocked because PBI ALM export is disabled. Report the
+  limitation rather than fabricating source details.
+- `query.queryString` or `metricDefinition` is not parseable JSON.
+- The parent container is missing or is not exact `pbiMetrics`.
+- `metricDefinition.type` is not `DatasetMetric`.
+- Source `datasetId`, query `provider.datasetId`, and
+  `metricDefinition.definition.datasetId` disagree.
+- The persisted query includes `top`.
+- A personalized source has `dimensionValue`, but the same value is absent
+  from the query filters or `metricDefinition.definition.filter`.
+- `metricDefinition.definition.filter` uses `BasicFilter` instead of the
+  semantic-query `Version` / `From` / `Where` contract.
+- Report, page, visual, or measure lineage is missing.
+
+---
+
 ## Must / Prefer / Avoid
 
 ### MUST DO
@@ -225,6 +302,7 @@ cat reflex-entities.json | jq '{
 - **Handle LRO responses** — `getDefinition` may return 202; poll the `Location` header
 - **Base64-decode** the `ReflexEntities.json` payload before inspection — it is Base64-encoded in the API response
 - **JSON-parse** the `definition.instance` field in rule entities — it is a JSON-encoded string, not a nested object
+- **For Power BI sources, JSON-parse** both `query.queryString` and `metricDefinition` before explaining metrics, dimensions, or filters
 
 ### PREFER
 
@@ -232,6 +310,8 @@ cat reflex-entities.json | jq '{
 - **Save to file** when the definition is large — decode once and explore with `jq` locally
 - **Discover IDs dynamically** via workspace and item listing + JMESPath filtering
 - **Paginated listing** for workspaces with many Activator items
+- **Report Power BI lineage** — include dataset/report/page/visual/measure metadata when available
+- **Flag Power BI filter inconsistencies** — especially missing personalized dimension values
 
 ### AVOID
 
@@ -239,6 +319,7 @@ cat reflex-entities.json | jq '{
 - **Using GET for `getDefinition`** — it is a POST endpoint; GET will return 405
 - **Attempting to read definitions of items with encrypted sensitivity labels** — it will be blocked
 - **Modifying data** — this is a read-only skill; use [activator-authoring-cli](../activator-authoring-cli/SKILL.md) for write operations
+- **Treating Power BI source queries as semantic-model query text** — they are source payloads stored as JSON strings
 
 ---
 

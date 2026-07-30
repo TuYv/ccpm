@@ -336,7 +336,7 @@ For connection discovery: [authoring-cli-quickref.md § Connection Discovery and
 - **Binding connections by display name** — connection IDs are the source of truth; names can change.
 - **Assuming all connections are accessible to all users.** Visibility is **per-caller**: `GET /v1/connections/{id}` may return 403/404 for callers without access. An empty `GET /v1/connections` is not proof a connection is absent.
 - **Hand-crafting connection request bodies without `supportedConnectionTypes`** — guessing produces `400 InvalidConnectionDetails` / `400 InvalidCredentialDetails`.
-- **Plaintext credentials in committed scripts** — prefer Key-Vault-backed `passwordReference` / `keyReference` / `tokenReference` / `servicePrincipalSecretReference`.
+- **Plaintext credentials in generated examples or committed scripts** — never render or commit plaintext credential values. Show only `passwordReference` / `keyReference` / `tokenReference` / `servicePrincipalSecretReference` in generated connection bodies.
 - **Templating on-prem gateway connection bodies as plaintext** — `OnPremisesGateway` needs RSA-encrypted credentials per gateway member.
 - **Converting a published single-source dataflow to multi-source in place** — bindings drift into inconsistent state; create fresh and retire the old.
 - **Persisting un-previewed candidate M via `updateDefinition`** — `executeQuery` is significantly faster than the `updateDefinition`-then-debug-refresh loop. See [mashup-preview.md](references/mashup-preview.md).

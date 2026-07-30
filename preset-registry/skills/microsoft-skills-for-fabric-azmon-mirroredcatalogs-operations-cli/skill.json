@@ -1,7 +1,7 @@
 {
   "id": "microsoft-skills-for-fabric-azmon-mirroredcatalogs-operations-cli",
   "name": "azmon-mirroredcatalogs-operations-cli",
-  "description": "Onboard Log Analytics, Application Insights, and Azure Monitor telemetry into Microsoft Fabric as a Mirrored Catalog, then turn it into business-impact insights by correlating telemetry with business data via Eventhouse shortcuts, verified schemas, and ready-to-use Operations Agent instructions. Triggers: onboard Log Analytics telemetry, connect Application Insights to a Mirrored Catalog, correlate App Insights telemetry with business data, build an Operations Agent for business-impact alerting,",
+  "description": "Onboard Azure Monitor / Application Insights observability data into Microsoft Fabric and guide business-impact insights by correlating telemetry with business data, Eventhouse external delta tables, verified schemas, an optional Real-Time (KQL) dashboard, and opt-in Operations Agent instructions. Triggers: onboard Azure Monitor into Fabric, correlate App Insights telemetry with business data, build a Real-Time KQL dashboard over telemetry, build an Operations Agent for business-impact alerting,",
   "category": "数据分析",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/microsoft/skills-for-fabric/blob/main/plugins/fabric-skills/skills/azmon-mirroredcatalogs-operations-cli/SKILL.md",
     "path": "plugins/fabric-skills/skills/azmon-mirroredcatalogs-operations-cli/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-30T14:50:14.759Z",
+    "discovered_at": "2026-07-30T17:48:07.713Z",
     "stars": 904,
     "language": "Python",
-    "pushed_at": "2026-07-23T10:07:18Z",
+    "pushed_at": "2026-07-30T17:15:57Z",
     "license": "MIT"
   }
 }

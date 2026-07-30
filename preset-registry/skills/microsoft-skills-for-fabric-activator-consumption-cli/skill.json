@@ -1,7 +1,7 @@
 {
   "id": "microsoft-skills-for-fabric-activator-consumption-cli",
   "name": "activator-consumption-cli",
-  "description": "> Inspect existing alerts, notifications, and automated actions in Fabric via read-only REST API calls using `az rest` CLI. **Invoke this skill** whenever the user wants to: (1) list existing alerts in a workspace, (2) inspect how an alert or notification is configured, (3) read and decode an Activator/Reflex definition (ReflexEntities.json), (4) list rules, sources, and actions behind an alert, (5) understand why an alert fires or what action it takes. **Invoke this skill before answering quest",
+  "description": "> Inspect existing alerts, notifications, and automated actions in Fabric via read-only REST calls using `az rest` CLI. **Invoke this skill** whenever the user wants to: (1) list existing alerts in a workspace, (2) inspect how an alert or notification is configured, (3) read and decode an Activator/Reflex definition (ReflexEntities.json), (4) list rules, sources, and actions behind an alert, (5) understand why an alert fires or what action it takes. **Invoke this skill before answering questions",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/microsoft/skills-for-fabric/blob/main/plugins/fabric-skills/skills/activator-consumption-cli/SKILL.md",
     "path": "plugins/fabric-skills/skills/activator-consumption-cli/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-30T14:50:14.591Z",
+    "discovered_at": "2026-07-30T17:48:07.555Z",
     "stars": 904,
     "language": "Python",
-    "pushed_at": "2026-07-23T10:07:18Z",
+    "pushed_at": "2026-07-30T17:15:57Z",
     "license": "MIT"
   }
 }

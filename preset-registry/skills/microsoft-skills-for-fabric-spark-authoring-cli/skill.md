@@ -72,6 +72,7 @@ This skill covers two complementary areas: (1) **managing Fabric Spark artifacts
 | CI/CD & Automation Patterns | [SPARK-AUTHORING-CORE.md § CI/CD & Automation Patterns](../../common/SPARK-AUTHORING-CORE.md#cicd--automation-patterns) ||
 | Infrastructure-as-Code | [SPARK-AUTHORING-CORE.md § Infrastructure-as-Code](../../common/SPARK-AUTHORING-CORE.md#infrastructure-as-code) ||
 | Performance Optimization & Resource Management | [SPARK-AUTHORING-CORE.md § Performance Optimization & Resource Management](../../common/SPARK-AUTHORING-CORE.md#performance-optimization--resource-management) ||
+| Runtime 2.0 Performance Features | [data-engineering-patterns.md § Runtime 2.0 Performance Features](resources/data-engineering-patterns.md#runtime-20-performance-features-spark-41-delta-42) | NEE, Efficient Scaledown, Liquid Clustering, Spark 4.1 |
 | Authoring Gotchas and Troubleshooting | [SPARK-AUTHORING-CORE.md § Authoring Gotchas and Troubleshooting](../../common/SPARK-AUTHORING-CORE.md#authoring-gotchas-and-troubleshooting) ||
 | Quick Reference: Authoring Decision Guide | [SPARK-AUTHORING-CORE.md § Quick Reference: Authoring Decision Guide](../../common/SPARK-AUTHORING-CORE.md#quick-reference-authoring-decision-guide) ||
 | Recommended Patterns (Data Engineering) |[data-engineering-patterns.md § Recommended patterns](resources/data-engineering-patterns.md#recommended-patterns) ||
@@ -96,6 +97,7 @@ This skill covers two complementary areas: (1) **managing Fabric Spark artifacts
 | CI/CD Integration Strategy | [infrastructure-orchestration.md § CI/CD Integration Strategy](resources/infrastructure-orchestration.md#cicd-integration-strategy) ||
 | Notebook API — Which Endpoint to Use | [notebook-api-operations.md § Quick Decision](resources/notebook-api-operations.md#quick-decision-which-endpoint-to-use) | **Start here for remote notebook edits** — getDefinition vs updateDefinition |
 | Notebook Modification Workflow | [notebook-api-operations.md § Workflow](resources/notebook-api-operations.md#workflow-get--decode--modify--encode--upload--verify) | Five-step flow: retrieve, decode, modify, encode, upload |
+| Notebook Orchestration (parallel + DAG) | [notebook-api-operations.md § Notebook Orchestration](resources/notebook-api-operations.md#notebook-orchestration--parallel-run--dag-dependencies) | `notebookutils.notebook.runMultiple(DAG)` for parallel runs and run-order dependencies (fan-in/fan-out); use instead of hand-rolled threads |
 | Notebook API Error Reference | [notebook-api-operations.md § Error Reference](resources/notebook-api-operations.md#error-reference) | 411, 400 (updateMetadata), 401, 403 explained |
 | Notebook API Gotchas | [notebook-api-operations.md § Gotchas](resources/notebook-api-operations.md#gotchas) | `/result` suffix, empty body, `\n` per-line rule, `format=ipynb` |
 | Default Lakehouse Binding | [notebook-api-operations.md § Default Lakehouse Binding](resources/notebook-api-operations.md#default-lakehouse-binding) | `.ipynb` metadata vs `.py` `# METADATA` block; discover IDs dynamically |
@@ -235,10 +237,40 @@ lakehouse_id=$(az rest --method post --resource "https://api.fabric.microsoft.co
 ### Organize Lakehouse Tables with Schemas
 ```python
 # See SPARK-AUTHORING-CORE.md Lakehouse Schema Organization for table organization patterns
-# Create schemas for medallion architecture
-spark.sql("CREATE SCHEMA IF NOT EXISTS bronze")
-spark.sql("CREATE SCHEMA IF NOT EXISTS silver")
-spark.sql("CREATE SCHEMA IF NOT EXISTS gold")
+#
+# IMPORTANT: `CREATE SCHEMA` is only supported on schema-enabled lakehouses. On a
+# lakehouse created WITHOUT `enableSchemas`, it fails with
+# "Feature not supported on Apache Spark in Microsoft Fabric". Always detect schema
+# support first, then branch: create schemas only when enabled, otherwise skip.
+# Schema names are configurable. If your workspace standard is `raw`/`curated`
+# instead of `bronze`/`silver`/`gold`, substitute those names consistently.
+import uuid
+
+def lakehouse_is_schema_enabled():
+    # Probe schema support by attempting CREATE SCHEMA and catching the
+    # platform-blocked error. Use a unique probe schema name to avoid
+    # accidentally dropping a real pre-existing schema.
+    probe = f"_schema_probe_{uuid.uuid4().hex}"
+    try:
+        spark.sql(f"CREATE SCHEMA IF NOT EXISTS {probe}")
+        spark.sql(f"DROP SCHEMA IF EXISTS {probe}")
+        return True
+    except Exception as e:
+        if "Feature not supported on Apache Spark in Microsoft Fabric" in str(e):
+            return False
+        raise
+
+if lakehouse_is_schema_enabled():
+    # Schema-enabled: create medallion schemas and write tables as `schema.table`.
+    spark.sql("CREATE SCHEMA IF NOT EXISTS bronze")
+    spark.sql("CREATE SCHEMA IF NOT EXISTS silver")
+    spark.sql("CREATE SCHEMA IF NOT EXISTS gold")
+else:
+    # Not schema-enabled: skip CREATE SCHEMA (unsupported). Organize tables by name
+    # prefix instead (e.g. `bronze_orders` / `raw_orders`, `silver_orders` /
+    # `curated_orders`), or recreate the lakehouse with
+    # `creationPayload.enableSchemas: true` if schemas are required.
+    print("Lakehouse is not schema-enabled; skipping schema creation and using name prefixes.")
 ```
 
 ### Create and Refresh a Materialized Lake View (MLV)

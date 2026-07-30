@@ -1,18 +1,11 @@
 ---
 name: semantic-model-authoring
-description: >
-  Develops and manages Power BI semantic models across Desktop, PBIP projects, and Fabric Service. Handles:
-  (1) creating new models (Import, DirectQuery, Direct Lake),
-  (2) editing existing models (e.g. measures, tables, columns, relationships),
-  (3) preparing semantic models for AI/Copilot consumption,
-  (4) deploying models to Fabric workspaces,
-  (5) working with PBIP project files,
-  (6) refreshing semantic models,
-  (7) configuring data sources and permissions,
-  (8) DAX performance optimization.
-  Supports both Power BI Desktop and Fabric Service development workflows. For read-only DAX queries, use `semantic-model-consumption`.
-  Does NOT handle report layout/visual authoring, workspace administration, or RLS/OLS role membership management.
-  Triggers: "create semantic model", "edit semantic model", "add a DAX measure to semantic model", "refresh semantic model", "set semantic model permissions", "Prepare semantic model for AI or Copilot".
+description: >  
+  Author and inspect Power BI semantic models and their metadata: list tables, columns, measures, relationships; create, edit, deploy, refresh, and manage models; optimize DAX; build Import, DirectQuery, and Direct Lake models; configure data sources, permissions, connections; and prepare for AI/Copilot.
+  Load this skill before acting on any semantic model authoring, metadata, or read-only inspection request: it picks the correct tool and method for the environment and permissions.
+  Authoring-scoped: does not answer natural-language or data questions about a model's data.
+  Does NOT author report visuals, manage workspaces, or manage RLS/OLS roles.
+  Triggers: "create or edit a semantic model", "create or edit a DAX measure", "discover semantic model metadata", "list tables, columns, or measures in a semantic model", "refresh semantic model", "deploy semantic model to Fabric",  "prepare semantic model for AI/Copilot", "set semantic model permissions".
 ---
 
 > **Update Check — ONCE PER SESSION (mandatory)**
@@ -35,6 +28,7 @@ Use this decision tree to route to the correct workflow based on user intent:
 | User wants to...                                                                | Workflow                                                                             |
 | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
 | Create a semantic model from scratch                                            | [Create new semantic model](#workflow-create-new-semantic-model)                     |
+| Inspect or discover model metadata (tables, columns, measures, relationships)   | [Discover Semantic Model Metadata](#workflow-discover-semantic-model-metadata)      |
 | Add/edit semantic model objects (e.g. measures, tables, columns, relationships) | [Modify an Existing Model](#workflow-modify-an-existing-model)                       |
 | Write or refactor DAX code                                                      | [Modify an Existing Model](#workflow-modify-an-existing-model)                       |
 | Improve DAX query or measure performance                                        | [Optimize DAX Performance](#workflow-optimize-dax-performance)                       |
@@ -58,7 +52,7 @@ Load these references on demand when a workflow step requires them. Do not load 
 | TMDL Editing                     | [tmdl-guidelines.md](./references/tmdl-guidelines.md)                              | Before generating or editing any TMDL file                                                  |
 | PBIP Projects                    | [pbip.md](./references/pbip.md)                                                    | When working with PBIP folders                                                              |
 | DAX Language                     | [dax-guidelines.md](./references/dax-guidelines.md)                                | When writing or reviewing any DAX code                                                      |
-| DAX Queries & Metadata Discovery | [semantic-model-consumption](../semantic-model-consumption/SKILL.md)                     | Read-only DAX queries; use for post-creation validation                                     |
+| Metadata Discovery (DAX INFO functions) | [metadata-discovery.md](./references/metadata-discovery.md)                 | When discovering model metadata via DAX INFO functions (see [Workflow: Discover Semantic Model Metadata](#workflow-discover-semantic-model-metadata)) |
 | DAX Performance Decision Guide   | [dax-perf-decision-guide.md](./references/dax-perf-decision-guide.md)              | Start here when optimizing DAX                                                             |
 | DAX Performance Pattern Catalog  | [dax-perf-patterns.md](./references/dax-perf-patterns.md)                          | Load on demand after the decision guide identifies candidate patterns                       |
 | Semantic Model AI Readiness                | [semantic-model-ai-readiness.md](./references/semantic-model-ai-readiness.md)                          | When preparing a model for Copilot or Data Agents                                           |
@@ -126,12 +120,38 @@ Steps:
 2. **Determine storage mode** - data source is Fabric OneLake -> **Direct Lake**; otherwise default to **Import**. Only use **DirectQuery** when the user explicitly asks for it.
 3. **Design star schema** - identify fact and dimension tables and relationship keys.
    - If fact table includes date field(s), create a separate date dimension table and link it to the fact with a relationship. If not explicitly requested, use PowerQuery/M partition instead of DAX calculated table.
-4. **Load applicable guidelines** - [modeling-guidelines.md](./references/modeling-guidelines.md) always; [direct-lake-guidelines.md](./references/direct-lake-guidelines.md) if Direct Lake.
-5. **Build** - create an empty database (compatibility level 1702+), then for each table follow the execution order from [Modify an Existing Model](#workflow-modify-an-existing-model) (partitions -> columns -> relationships -> measures). Storage-mode specifics:
+4. **Load applicable guidelines** - **MANDATORY: load [modeling-guidelines.md](./references/modeling-guidelines.md) before building any object** (including the Tier 1 MCP path below); also load [direct-lake-guidelines.md](./references/direct-lake-guidelines.md) if Direct Lake. Don't build from memory.
+5. **Build** - follow [Tool Selection Priority](#tool-selection-priority): **prefer the modeling MCP to build the whole model when one is available; otherwise use the TMDL code-edit path.** Create an empty database (compatibility level 1702+), then for each table follow the execution order from [Modify an Existing Model](#workflow-modify-an-existing-model) (partitions -> columns -> relationships -> measures). Storage-mode specifics:
    - **Import / DirectQuery** - create M parameters for the data source (`Server`, `Database`, ...) and reference them in partition M code; ensure proper `dataType` and `sourceColumn` mapping on columns.
    - **Direct Lake** - create a shared named expression for the Direct Lake connection using the `AzureStorage.DataLake` connector; use `EntityPartitionSource` with `directLake` mode mapped to the lakehouse table columns.
-6. **Deploy or save** - Fabric workspace available -> [Deploy to Fabric](#workflow-deploy-to-fabric); otherwise -> [Export to PBIP](#workflow-export-to-pbip). See [Saving Changes to a Semantic Model](#saving-changes-to-a-semantic-model).
+
+   > **Build the whole model in one pass, then deploy once.** Add every table, column, relationship and measure before deploying - don't deploy a partial model and edit-redeploy. On the MCP path, keep the model in the session end to end.
+6. **Deploy or save** - Fabric workspace available -> [Deploy to Fabric](#workflow-deploy-to-fabric); otherwise -> [Export to PBIP](#workflow-export-to-pbip). See [Saving Changes to a Semantic Model](#saving-changes-to-a-semantic-model). Deploy through the same path you built with.
 7. **Validate** - run [Validation Checklist](#validation-checklist).
+
+---
+
+## Workflow: Discover Semantic Model Metadata
+
+**When this applies:** User asks to inspect, list, or discover the model's structure - tables, columns, measures, relationships, hierarchies, partitions, roles, or storage internals. Also used internally by other workflows ([Modify](#workflow-modify-an-existing-model), [Analyze Best Practices](#workflow-analyze-best-practices), [AI Readiness](#workflow-semantic-model-ai-readiness)) to inventory the model before editing.
+
+> **Scope:** This workflow covers **metadata** discovery only. To answer natural-language/data questions against the model, use the `FabricIQ` skill instead.
+
+Pick a discovery method (highest priority first):
+
+1. **`powerbi-modeling-mcp` TOM inspection (List / Get)** - the default when `powerbi-modeling-mcp` is registered and connected to the target model **with Write access**. It returns the structured object model directly and stays in sync with pending edits, so it is preferred while authoring.
+
+2. **DAX `INFO` functions** - query the model's `INFO.VIEW.*` / `INFO.*` metadata rowsets. **MANDATORY: before writing or running ANY `INFO`-function DAX, you MUST load [metadata-discovery.md](./references/metadata-discovery.md) first**. Do NOT compose `INFO` queries from memory; load the reference and use its patterns. **Prioritize this method when any of the following is true:**
+   - **You lack Write permission** on the model. `powerbi-modeling-mcp` operations require Write access; with Read or Build access, use `INFO` functions.
+   - **`powerbi-modeling-mcp` is not registered or not available** in the current environment.
+ 
+   Execute the `INFO`-function DAX through one of these tools (highest priority first):
+   - **FabricIQ `ExecuteQuery`** - requires only **Read** permission on the model. Load the `FabricIQ` skill for artifact discovery (`DiscoverArtifacts`) and execution mechanics.
+   - **`powerbi-modeling-mcp` `dax_query_operations`** - requires **Write** permission. Use this when the modeling MCP is already connected with Write access.
+
+> **Do NOT use FabricIQ `GetSemanticModelSchema` for authoring metadata discovery** - it is a data-consumption tool that can return stale metadata and miss recent edits. Even when FabricIQ is available, always use the `INFO` functions (via `ExecuteQuery`); they query the live model.
+
+Start narrow: run the scope-estimation and `INFO.VIEW.*` queries first, then project/filter to only the objects relevant to the task (see [metadata-discovery.md](./references/metadata-discovery.md)).
 
 ---
 
@@ -141,7 +161,7 @@ Steps:
 
 Steps:
 
-1. **Connect & discover** - per [Connecting to a Semantic Model](#connecting-to-a-semantic-model). List tables, relationships, existing measures, and identify storage mode (it dictates which guidelines apply).
+1. **Connect & discover** - per [Connecting to a Semantic Model](#connecting-to-a-semantic-model) and [Discover Semantic Model Metadata](#workflow-discover-semantic-model-metadata). List tables, relationships, existing measures, and identify storage mode (it dictates which guidelines apply).
 2. **Load applicable guidelines** - [modeling-guidelines.md](./references/modeling-guidelines.md) always; [direct-lake-guidelines.md](./references/direct-lake-guidelines.md) if Direct Lake; [tmdl-guidelines.md](./references/tmdl-guidelines.md) when editing TMDL directly; [dax-guidelines.md](./references/dax-guidelines.md) for any DAX changes (includes UDF refactoring).
 3. **Plan changes** - identify exactly what to add, modify, or remove. Check for naming conflicts and duplicates.
 4. **Execute** in correct order:
@@ -172,7 +192,7 @@ Load [dax-perf-decision-guide.md](./references/dax-perf-decision-guide.md) first
 
 Steps:
 
-1. **Connect & inventory** - per [Connecting to a Semantic Model](#connecting-to-a-semantic-model). Capture all tables, columns, relationships, measures, and storage mode.
+1. **Connect & inventory** - per [Connecting to a Semantic Model](#connecting-to-a-semantic-model) and [Discover Semantic Model Metadata](#workflow-discover-semantic-model-metadata). Capture all tables, columns, relationships, measures, and storage mode.
 2. **Load applicable guidelines** - [modeling-guidelines.md](./references/modeling-guidelines.md) always; [direct-lake-guidelines.md](./references/direct-lake-guidelines.md) if Direct Lake; [naming-conventions.md](./references/naming-conventions.md) when assessing naming; [dax-guidelines.md](./references/dax-guidelines.md) when assessing DAX.
 3. **Evaluate** - compare the model against the loaded guidelines (star schema, naming, relationship cardinality and cross-filter, explicit measures with `formatString`, column data types and `sourceColumn`, hidden FK columns, calculated-column-vs-measure choices, Direct Lake constraints, etc.).
 4. **Present findings** grouped by severity (critical, recommended, optional). For each item state the rule violated and the proposed fix. Wait for user approval.
@@ -236,6 +256,8 @@ Decision tree (pick exactly one — top-down, first match wins):
    -> Use MCP Deploy if MCP is connected to Desktop. If MCP is not available, instruct the user to save as PBIP first, then restart this workflow at step 1.
 
 Verify deployment succeeded by listing workspace items of type `SemanticModel`.
+
+> **Deploy exactly once; the deploy is NOT idempotent.** A retried deploy creates a *second* model with the same name, after which the deploy fails with `There are multiple datasets named '<name>'`. If you hit that error, do NOT retry blindly: list the workspace's semantic models, **delete every duplicate with that name**, then deploy once from the clean state. If deploying a model that may already exist, delete the existing same-named model(s) *before* the single deploy.
 
 ---
 
@@ -312,7 +334,7 @@ If any check fails, fix the issue and re-run validation.
 - **Star schema over snowflake or flat tables** - denormalized dimensions with single-column relationship keys
 - **Consistency with existing model patterns** - when editing an existing model, match its naming conventions and structure rather than imposing new ones
 - **TMDL format over TMSL** - text-based, diff-friendly, preferred for Fabric
-- **Cross-reference `semantic-model-consumption`** for post-creation validation — run DAX queries to verify measures, relationships, and data.
+- **Validate after changes** - use [Workflow: Discover Semantic Model Metadata](#workflow-discover-semantic-model-metadata) to confirm objects landed.
 
 ### AVOID
 
@@ -395,7 +417,7 @@ If any check fails, fix the issue and re-run validation.
 | MCP connection failure               | Fall back to TMDL editing (see Tool Selection Priority). Inform the user about the fallback.                          |
 | TMDL validation errors               | Read error details, fix syntax, re-validate. Load [tmdl-guidelines.md](./references/tmdl-guidelines.md).              |
 | `403 Forbidden` / `identity None`    | User needs Contributor+ role - stop immediately. Do not retry.                                                        |
-| `401 Unauthorized`                   | Wrong `--resource` audience or missing permissions to the item. Check [semantic-model-rest-api.md](./references/semantic-model-rest-api.md). |
+| `401 Unauthorized`                   | Correct the `--resource` audience once (see [semantic-model-rest-api.md](./references/semantic-model-rest-api.md)). If it persists after the audience is right, it is missing permissions - stop and tell the user. Do not retry-loop. |
 | `202 Accepted` but no result         | Poll LRO to completion.                                                                                               |
 | Parts missing after updateDefinition | Must include ALL parts - modified + unmodified.                                                                       |
 | Refresh credential error             | Direct user to configure in Service portal. Do not retry.                                                             |

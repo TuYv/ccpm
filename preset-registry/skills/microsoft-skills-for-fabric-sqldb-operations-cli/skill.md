@@ -1,7 +1,7 @@
 ---
 name: sqldb-operations-cli
 description: >
-  Diagnose SQL database in Fabric performance via sqlcmd against Query Store, DMVs,
+  Diagnose SQL database in Fabric performance over TDS using Query Store, DMVs,
   sys.dm_db_resource_stats, and Extended Events on the OLTP endpoint. Identifies the top
   resource-consuming, slowest, or most expensive queries and handles query-performance
   ranking, blocking-chain, missing-index, and plan-regression diagnostics. For routine data
@@ -28,7 +28,7 @@ description: >
 
 # SQL Database in Fabric — Operations & Diagnostics CLI Skill
 
-Deep performance diagnostics for **SQL database in Fabric** via **`sqlcmd`** against Query Store, DMVs, `sys.dm_db_resource_stats`, and Extended Events. All analytical queries are read-only; the optional XE session creation is dropped at the end of the investigation.
+Deep performance diagnostics for **SQL database in Fabric** over TDS against Query Store, DMVs, `sys.dm_db_resource_stats`, and Extended Events. All analytical queries are read-only; the optional XE session creation is dropped at the end of the investigation.
 
 ## Prerequisites
 
@@ -57,7 +57,9 @@ For Fabric topology, capacity, and platform auth basics see [COMMON-CORE.md](../
 
 ## Connection
 
-Diagnostics run against the **SQL database (OLTP) endpoint**. For endpoint discovery, authentication, and `sqlcmd` connection guidance, use the shared CLI instructions in [COMMON-CLI.md](../../common/COMMON-CLI.md) rather than inline setup here.
+Diagnostics run against the **SQL database (OLTP) endpoint**. For endpoint discovery, authentication, and already-installed `sqlcmd` connection guidance, use the shared CLI instructions in [COMMON-CLI.md](../../common/COMMON-CLI.md) rather than inline setup here. Do not follow its tool-install steps during an investigation.
+
+Use an already-installed `sqlcmd` first and make at most one connection attempt with it. If it is absent or its Entra authentication mode fails, do not install or upgrade tooling during the investigation. When the current PowerShell runtime already exposes `System.Data.SqlClient.SqlConnection` (commonly Windows PowerShell 5.1), make at most one fallback connection attempt with that provider, using an access token for `https://database.windows.net/`, and run the same read-only T-SQL. If the provider is unavailable, report that no compatible preinstalled TDS client is available. If its connection fails, surface that error. In either case, stop rather than installing tooling.
 
 Once connected, use the diagnostic workflows below and the full T-SQL catalog in [query-reference.md](references/query-reference.md).
 
@@ -182,6 +184,7 @@ CLI/auth issues: [COMMON-CLI.md § Gotchas](../../common/COMMON-CLI.md#gotchas--
 ### AVOID
 - Recommending Fabric-unsupported features (CDC, Always Encrypted, in-memory, ledger, server-scoped DMVs, file-target XE).
 - Running diagnostics on the **SQL analytics endpoint**.
+- Installing or upgrading SQL client tools during an investigation.
 - Manually creating indexes without checking auto-tuning first.
 - Leaving XE sessions running after an investigation.
 - Forcing plans via `sp_query_store_force_plan` instead of fixing root cause.

@@ -4,9 +4,12 @@ description: >
   Author Fabric Activator rules and Reflex items through Fabric REST API and `az rest`.
   Invoke for write intents: create or delete items; add or update rule definitions;
   configure thresholds, filters, Teams/email notifications, Fabric item actions, and
-  Eventhouse/Eventstream/Real-Time Hub/DTB/Ontology sources. Pure GET/explain prompts
+  Eventhouse/Eventstream/Real-Time Hub/DTB/Ontology/Power BI sources. Pure GET/explain prompts
   belong to `activator-consumption-cli`. Clarification for missing sources, thresholds,
   recipients, and action targets happens inside this skill.
+  After another data skill finds a timely operational signal such as a spike, failure,
+  anomaly, SLA risk, or capacity constraint, proactively ask whether the user wants an
+  alert for future occurrences.
   Triggers: "create an alert", "create an activator", "create a reflex",
   "create an activator item", "create an alert item",
   "notify me when", "let me know when",
@@ -43,6 +46,7 @@ description: >
 | KQL Source | [kql-source.md](references/kql-source.md) | KQL source schema, time-axis support, design guidance |
 | Digital Twin Builder / Ontology Source | [dtb-source.md](references/dtb-source.md) | DTB / ontology source schema, JSON-string query payloads, snapshot vs time-axis guidance |
 | Real-time Hub Source | [real-time-hub-source.md](references/real-time-hub-source.md) | Real-time Hub source schema, workspace event types |
+| Power BI Source | [powerbi-source.md](references/powerbi-source.md) | `powerBiSource-v1`, stored query payloads, `DatasetMetric`, filters, persistence, and ALM readback limits |
 | Rule Conditions | [rule-conditions.md](references/rule-conditions.md) | Rule template structure, detection conditions, aggregation, time windows, occurrence options, enrichments |
 | Action Types | [action-types.md](references/action-types.md) | TeamsMessage, EmailMessage, FabricItemInvocation action schemas |
 
@@ -132,15 +136,16 @@ echo "$DEFINITION" \
 Build a JSON array of entities in order. Each needs a fresh GUID for `uniqueIdentifier`. For the hand-authored pull-source flows in this skill, use templateVersion `1.2.4`. For Eventstream sink-created flows, preserve the template version already present in the decoded Activator definition; those readbacks can use `1.1`.
 
 **Step 1 — Container** (exactly 1):
-- Type: `container-v1`. Use the container payload type that matches the source graph: `kqlQueries` for KQL sources, `rthSubscriptions` for Real-Time Hub workspace subscriptions, or the service-created type already present in readback for Eventstream flows.
+- Type: `container-v1`. Use the container payload type that matches the source graph: `kqlQueries` for KQL sources, `rthSubscriptions` for Real-Time Hub workspace subscriptions, exact case-sensitive `pbiMetrics` for Power BI sources, or the service-created type already present in readback for Eventstream flows.
 - All other entities reference this via `parentContainer.targetUniqueIdentifier`
 
 **Step 2 — Data Source** (exactly 1, pick the right type):
-- See [eventstream-source.md](references/eventstream-source.md), [kql-source.md](references/kql-source.md), [dtb-source.md](references/dtb-source.md), or [real-time-hub-source.md](references/real-time-hub-source.md) for the supported source workflows
+- See [eventstream-source.md](references/eventstream-source.md), [kql-source.md](references/kql-source.md), [dtb-source.md](references/dtb-source.md), [real-time-hub-source.md](references/real-time-hub-source.md), or [powerbi-source.md](references/powerbi-source.md) for the supported source workflows
 - For hand-authored pull sources, set `parentContainer.targetUniqueIdentifier` → Container GUID
 - For `eventstreamSource-v1`: do **not** start by hand-authoring the source. Create or update the Eventstream with an `Activator` destination first, then read the Activator definition and continue from the auto-created `eventstreamSource-v1` + SourceEvent entities. In public readback, those sink-created entities can appear without explicit `parentContainer`.
 - For `kqlSource-v1`: the KQL query should return ALL data (do NOT pre-filter conditions — let the rule handle that). Must include `eventhouseItem`, `metadata`, and `queryParameters`. For Fabric Eventhouse/KQL DB sources, use `eventhouseItem: { itemId, workspaceId, itemType: "KustoDatabase" }`. For external ADX/Kusto sources, use `eventhouseItem: { clusterHostName, databaseName }`. **Before creating the Activator, run the KQL directly against the target source first and confirm the returned columns, timestamp field, and row shape are correct.** **Use `eventTimeSettings` plus `DURATION_START`/`DURATION_END` queryParameters whenever the query results have a reasonable timestamp column, and declare those parameters in the KQL with `declare query_parameters(startTime:datetime, endTime:datetime);`.** Only use snapshot mode (`queryParameters: []`, no `eventTimeSettings`, no time filtering) when the underlying data has no reasonable timestamp column and each row represents current state. See [kql-source.md](references/kql-source.md).
 - For `digitalTwinBuilderSource-v1`: use a DTB / Ontology `connection` item ref `{ itemId, workspaceId, itemType }`, where `itemType` is either `DigitalTwinBuilder` or `Ontology`. `query.queryString` must be a JSON-string payload, not KQL. **Before creating the Activator, run the DTB / Ontology query directly first and confirm the returned columns, key fields, and timestamp field are correct.** Prefer `eventTimeSettings` plus `DURATION_START`/`DURATION_END` query parameters when the returned rows include a reasonable timestamp field; unlike KQL, those duration parameters are applied as DTB endpoint URL query params rather than referenced inside the query body. See [dtb-source.md](references/dtb-source.md).
+- For `powerBiSource-v1`: build the source deterministically from a scoped report/page/visual plus semantic model metadata. Its parent container must use exact `payload.type: "pbiMetrics"`. Store the source query payload as JSON text in `query.queryString` and a matching `DatasetMetric` in `metricDefinition`. Persist with `updateDefinition`, require explicit HTTP `200` (or terminal LRO success), and stop on any import error. See [powerbi-source.md](references/powerbi-source.md).
 
 **Step 3 — SourceEvent view** (exactly 1):
 - Type: `timeSeriesView-v1`, definition.type: `"Event"`, instance: `SourceEvent` template referencing Source by `entityId`
@@ -158,6 +163,7 @@ Build a JSON array of entities in order. Each needs a fresh GUID for `uniqueIden
 - **For `EventTrigger` rules** (fire on every event, heartbeat, event field state/change):
   - Use the minimal graph: **Container → Source → SourceEvent → Rule** (+ optional `fabricItemAction-v1`)
   - **Do NOT create Object, SplitEvent, IdentityPartAttribute, or BasicEventAttribute entities** unless the scenario truly needs attribute-based modeling
+  - `FieldsDefaultsStep` must contain an `EventSelector` row whose nested `EventReference.entityId` points to the SourceEvent entity. A top-level `EventReference` row is invalid.
   - EventTrigger reads raw event fields directly in `FieldsDefaultsStep` / `EventDetectStep`
 
 **Step 5 — Rule** (1 per alert):
@@ -307,6 +313,7 @@ Treat **schema-only**, **zero-row**, **non-emitting**, or **stale** evidence as 
 - **Always Base64-encode** `ReflexEntities.json` payload when calling `updateDefinition`
 - **Always JSON.stringify** the `definition.instance` field in `timeSeriesView-v1` entities — it must be a string, not a nested object. **Always wrap rule templates in the full entity envelope** (see the ❌/✅ example above) — never output a raw template object without the entity wrapper
 - **Always use the correct template type** — `AttributeTrigger` for value-based conditions (has ScalarSelectStep + ScalarDetectStep), `EventTrigger` for event-based firing (has FieldsDefaultsStep + EventDetectStep, no ScalarDetectStep)
+- **Always use the canonical EventTrigger selector** — `FieldsDefaultsStep.rows` contains `EventSelector` (`kind: Event`) with a nested complex `EventReference`; never put `EventReference` directly in `rows`
 - **Always use new GUIDs** for `uniqueIdentifier` when adding entities — duplicate GUIDs cause corruption
 - **Always update all cross-references** when changing a `uniqueIdentifier` — other entities reference it via `targetUniqueIdentifier`
 - **Always run the Reference Integrity Preflight before `updateDefinition`** -- every `targetUniqueIdentifier`, `entityId`, and `fabricJobConnectionDocumentId` in the payload must resolve to an entity included in the submitted `ReflexEntities.json`

@@ -1,7 +1,7 @@
 {
   "id": "microsoft-skills-for-fabric-sqldw-operations-cli",
   "name": "sqldw-operations-cli",
-  "description": "> Analyze Fabric Data Warehouse performance via CLI using sqlcmd and queryinsights views. Diagnose slow queries, SQL pool pressure, cache coldness, and recommend clustering keys. Triggers: \"DW slow query analysis\", \"slowest queries warehouse\", \"queryinsights long running\", \"warehouse CPU resource consumers\", \"SQL pool pressure window\", \"pressure events warehouse\", \"DW cache warmth cold start\", \"cache warmth analysis\", \"warehouse cluster key recommendation\", \"cluster tables performance\", \"DW perf",
+  "description": "> Analyze Fabric Data Warehouse performance via the MCP execute_query tool and queryinsights views. Diagnose slow queries, SQL pool pressure, cache coldness, and recommend clustering keys. Triggers: \"DW slow query analysis\", \"slowest queries warehouse\", \"queryinsights long running\", \"warehouse CPU resource consumers\", \"SQL pool pressure window\", \"pressure events warehouse\", \"DW cache warmth cold start\", \"cache warmth analysis\", \"warehouse cluster key recommendation\", \"cluster tables performance\"",
   "category": "数据分析",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/microsoft/skills-for-fabric/blob/main/plugins/fabric-operations/skills/sqldw-operations-cli/SKILL.md",
     "path": "plugins/fabric-operations/skills/sqldw-operations-cli/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-30T14:50:14.182Z",
+    "discovered_at": "2026-07-30T17:48:07.243Z",
     "stars": 904,
     "language": "Python",
-    "pushed_at": "2026-07-23T10:07:18Z",
+    "pushed_at": "2026-07-30T17:15:57Z",
     "license": "MIT"
   }
 }

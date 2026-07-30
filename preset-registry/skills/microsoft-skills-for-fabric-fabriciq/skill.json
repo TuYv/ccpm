@@ -1,7 +1,7 @@
 {
   "id": "microsoft-skills-for-fabric-fabriciq",
   "name": "fabriciq",
-  "description": "> Answer natural-language business questions over existing Power BI reports and dashboards through the FabricIQ MCP endpoint. Orchestrates artifact discovery, schema inspection, entity resolution, DAX generation, and query execution to return plain-language answers. Use when the user asks what, which, compare, rank, explain, or summarize questions about Power BI report or dashboard content (not raw DAX). For raw DAX execution (EVALUATE statements) or model metadata inspection (INFO functions), u",
+  "description": "> Answer natural-language business questions over existing Power BI reports and dashboards through the FabricIQ MCP endpoint. Orchestrates artifact discovery, schema inspection, entity resolution, DAX generation, and query execution to return plain-language answers. Use when the user asks what, which, compare, rank, explain, or summarize questions about Power BI report or dashboard content. Triggers: \"ask power bi\", \"PBI question\", \"discover my Power BI report\", \"report data\", \"dashboard data\", ",
   "category": "文档写作",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/microsoft/skills-for-fabric/blob/main/plugins/fabric-skills/skills/fabriciq/SKILL.md",
     "path": "plugins/fabric-skills/skills/fabriciq/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-30T14:50:17.037Z",
+    "discovered_at": "2026-07-30T17:48:09.647Z",
     "stars": 904,
     "language": "Python",
-    "pushed_at": "2026-07-23T10:07:18Z",
+    "pushed_at": "2026-07-30T17:15:57Z",
     "license": "MIT"
   }
 }
