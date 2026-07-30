@@ -1,7 +1,7 @@
 {
   "id": "talkstream-ru-text-ru-text",
   "name": "ru-text",
-  "description": "> Use when writing, editing, or reviewing Russian-language text, or when user mentions ru-text. Covers typography, info-style, editorial, UX writing, business correspondence, AI-text cleanup. Auto-activates on Russian text output.",
+  "description": "> Russian text quality. Triggers: вычитай, проверь текст, поправь, отредактируй, причеши, ru-text. Also any Russian output. Typography, info-style, editorial, UX writing, business correspondence, AI-text cleanup.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/talkstream/ru-text/blob/main/skills/ru-text/SKILL.md",
     "path": "skills/ru-text/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-30T12:17:47.857Z",
+    "discovered_at": "2026-07-30T14:43:33.584Z",
     "stars": 171,
     "language": "Shell",
-    "pushed_at": "2026-07-30T11:49:57Z",
+    "pushed_at": "2026-07-30T14:03:22Z",
     "license": "MIT"
   }
 }
