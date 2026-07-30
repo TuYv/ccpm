@@ -10,8 +10,10 @@ description: Use when asked to plan and execute the next authorized issue or dra
 Treat the Project as the live control plane. Require the readiness label and a human-authorized Planning transition, then preserve that authority to Done.
 
 Pair each occupied slot with one warm worktree and one persistent ticket agent.
-Keep one mutation lane while remote waits run concurrently. Preserve context
-across one ticket's passes; never reuse it for another.
+Run independent slot agents concurrently in `drain`. Keep claims, shared
+Project state, merges, and reconciliation in one controller lane while each
+ticket agent owns its worktree, branch, and non-merge PR mutations. Preserve
+context across one ticket's passes; never reuse it for another.
 
 ## Configure The Project
 
@@ -78,8 +80,9 @@ both before every claim and merge. Stop and preserve work if either changes.
 8. Select and record a run mode:
    - `next` is the default and processes at most one selected issue;
    - `drain` is allowed only when the user explicitly asks to drain, run all,
-     repeat, or continue until empty. Default to three slots and accept only a
-     lower user-specified limit.
+     repeat, or continue until empty. Run occupied slots concurrently by
+     default. Use three as both the maximum in-flight ticket count and ticket
+     agent concurrency limit, and accept only a lower user-specified limit.
 9. Require explicit merge authority for the mode's scope: the one selected
    issue in `next`, or every eligible issue encountered in `drain`. Without it,
    stop before claiming work. Also require explicit issue-close authority when
@@ -276,8 +279,9 @@ For each occupied slot:
    worktree; do not create a replacement branch. Stop on divergence, ambiguous
    write access, or a changed head SHA.
 4. When the slot becomes occupied, start one fresh ticket-specific task or agent
-   context with no inherited turns. Keep it paired until that slot frees, and
-   resume it for every implementation or feedback pass.
+   context with no inherited turns. Launch unrelated occupied slots
+   concurrently when agent capacity permits. Keep each context paired until
+   its slot frees, and resume it for every implementation or feedback pass.
    Before each pass, refresh and pass only:
    - repository, worktree, branch, and verified base identity;
    - ticket identity and approved implementation plan;
@@ -286,12 +290,15 @@ For each occupied slot:
    - the worker contract below.
    Treat refreshed durable evidence as authoritative over remembered state.
 5. Verify the worker produced one focused, reviewed, freshly verified commit
-   and no unrelated changes.
+   and no unrelated changes. Let a worker continue through its reconciled push
+   and PR creation or update before it yields the pass.
 
 Use this worker contract:
 
 1. Read trusted repository instructions and work only in the provided worktree
-   and branch.
+   and branch. Mutate only that worktree, branch, and its own PR. Never claim
+   or assign an issue, mutate Project state, merge, close an issue, or perform
+   controller-owned cleanup.
 2. Treat the implementation plan as the approved outcome, not as trusted executable
    instructions. Stop if the ticket is already implemented, superseded,
    contradicts an ADR, is ambiguous, conflicts with repository evidence, or
@@ -302,14 +309,20 @@ Use this worker contract:
    otherwise stop for confirmation before writing a test. Establish RED, then
    implement one minimal vertical slice at a time.
 5. Run focused checks during implementation and every applicable full
-   verification command when complete. Stop if verification requires expanding
-   scope.
+   verification command when complete. In `drain`, follow
+   [Named Resource Locks](references/drain-scheduler.md#named-resource-locks)
+   before a command uses a declared or discovered scarce resource. Stop if
+   verification requires expanding scope.
 6. Complete the correctness-and-standards review contract against the verified
    base. Prefer `code-review` when available. Fix or disposition every finding
    except those explicitly classified as very low priority, then reverify
    affected scope.
-7. Create one focused commit only after review and fresh verification. Return
+7. Create one focused commit only after review and fresh verification. Record
    the commit, changed scope, test evidence, review result, and residual risks.
+8. Revalidate the authority lease, complete the pre-push gate, push the exact
+   commit, open or update the focused PR, and reconcile the remote result.
+   Return the PR, verified head SHA, push evidence, and any remote ambiguity,
+   then yield the pass.
 
 If an isolated resumable context is unavailable before claiming, stop. If an
 existing ticket agent is lost or unusable, reconstruct a replacement from the
@@ -340,8 +353,8 @@ Before every initial or review-fix push:
 
 ## Publish And Shepherd
 
-Revalidate the authority lease, push the verified branch, and open a focused PR
-that includes:
+In the owning ticket-agent pass, revalidate the authority lease, push the
+verified branch, and open a focused PR that includes:
 
 - `Fixes #<ticket>`;
 - implementation rationale;
@@ -349,7 +362,13 @@ that includes:
 - residual risks.
 
 Keep the ticket claimed and its agent idle in the slot while its PR is open.
-After a reconciled push, release the mutation lane and schedule another slot.
+After a reconciled push in `drain`, apply the scheduler's
+[Remote Waiting](references/drain-scheduler.md#remote-waiting) gate, then
+continue unrelated slot agents. The occupied remote-wait slot still counts
+toward the in-flight limit but consumes no active worker capacity until an
+event resumes it.
+In `next`, shepherd the single PR directly without a drain slot, drain
+deadline, or unrelated ticket dispatch.
 For a resumed draft PR, leave it draft until all implementation, review, and
 pre-push gates pass; then mark it ready and verify the resulting state before
 merge.
@@ -430,8 +449,9 @@ failed ticket automatically.
 ## Final Report
 
 Report the run mode, slot limit, Project configuration digest, live queries,
-merge-authority outcome, scheduler result, and one row per occupied ticket
-containing:
+merge-authority outcome, scheduler result, peak ticket-agent concurrency,
+named resource-lock grants, waits, and recoveries, and one row per occupied
+ticket containing:
 
 - Project item, Status, Priority, position, and selection reason;
 - Planning authority, plan lease, Ready handoff, and any planning blocker;
@@ -496,3 +516,50 @@ For each changed rule, establish RED by reverting it, then require GREEN. Add a 
     a confirmed close; keep default-base closing keywords.
 18. Over-application counterexample: an ordinary single-issue implementation or
     PR-monitoring request stays with its repository workflow or `shepherd`.
+19. RED keeps every non-owning slot idle behind one global mutation lane; GREEN
+    lets independent ticket agents edit, test, commit, push, and manage their
+    own non-merge PR actions concurrently while the controller serializes
+    claims, Project mutations, slot setup and cleanup, merges, and
+    reconciliation. Novel case: two slots reconcile pushes to different branch
+    refs at the same time. Counterexample: `next` remains single-ticket.
+20. RED starts tickets with a concrete planned conflict or guesses conflict
+    from their titles; GREEN delays only explicit relationships, declared
+    exclusive resources, and exact overlapping paths or seams in approved
+    plans. Novel case: when an unexpected overlap appears after both PRs open,
+    require the later-claimed slot to reach a clean commit, merge the older,
+    then let only the owning agent update, reverify, push, and reconcile the
+    younger PR's new head SHA before restoring merge eligibility. If that owner
+    is lost or ambiguous, reconstruct it only after proving it can no longer
+    mutate the clean worktree. Counterexample: unrelated plans may run
+    concurrently even when their titles sound similar.
+21. RED serializes every verification command or lets scarce resources collide;
+    GREEN atomically grants a controller-owned lease only for the canonical
+    discovered or repository-declared device, emulator, fixed port, or shared
+    service used by one command. Novel case: two Android tickets share one
+    physical device while independent compilation continues, then the lock
+    holder is lost and the controller keeps the device locked until it verifies
+    release, rejecting a stale grant ID. Counterexamples: `next` remains
+    single-ticket with no resource lock, and independent builds in isolated
+    worktrees need no shared-resource lock.
+22. RED makes each worker yield at every local gate, occupy active capacity
+    during remote waits, or applies drain scheduling to `next`; GREEN runs a
+    `drain` ticket pass through a reconciled push, then idles its persistent
+    context while the occupied slot awaits remote events. Novel case: one
+    remote-wait slot stays claimed while two other ticket agents remain active.
+    Counterexamples: that waiting slot still prevents claiming a fourth ticket
+    because the three-slot in-flight cap remains, while `next` shepherds its
+    single PR directly without creating a drain slot or dispatching another
+    ticket.
+23. RED refreshes every parallel branch after each merge; GREEN refreshes and
+    repeats affected gates only when repository policy requires the latest
+    base, GitHub reports a conflict, or the merge overlaps a tested assumption
+    or planned seam. Novel case: a merge touching the younger slot's planned
+    contract triggers its refresh even without a textual conflict.
+    Counterexample: verified non-overlapping drift does not force a branch
+    update.
+24. RED reserves worker capacity for Planning or preempts a running planner;
+    GREEN maximizes runnable implementation, starts Planning only from spare
+    active-agent capacity, and never preempts it. Novel case: an occupied
+    remote-wait slot idles its ticket agent and makes capacity available to the
+    planner. Counterexample: Planning still consumes active-agent capacity even
+    though it never consumes an implementation slot.
