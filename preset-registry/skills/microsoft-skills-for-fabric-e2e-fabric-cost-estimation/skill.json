@@ -1,0 +1,25 @@
+{
+  "id": "microsoft-skills-for-fabric-e2e-fabric-cost-estimation",
+  "name": "e2e-fabric-cost-estimation",
+  "description": "> Estimate Microsoft Fabric capacity costs before migration by analyzing existing workload profiles (Spark, SQL, Power BI, Real-Time Intelligence) and recommending optimal SKU sizing, billing modes, and Reserved Instance strategies. Use when the user wants to: (1) estimate Fabric costs for a migration, (2) size a Fabric capacity SKU, (3) compare Fabric pricing tiers, (4) calculate storage/compute/network costs, (5) recommend Reserved vs. Pay-As-You-Go vs. Autoscale billing. Trigger phrases are s",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "microsoft",
+  "install_path": ".claude/skills/e2e-fabric-cost-estimation/SKILL.md",
+  "source": {
+    "repo": "microsoft/skills-for-fabric",
+    "url": "https://github.com/microsoft/skills-for-fabric/blob/main/plugins/fabric-skills/skills/e2e-fabric-cost-estimation/SKILL.md",
+    "path": "plugins/fabric-skills/skills/e2e-fabric-cost-estimation/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-30T19:47:00.522Z",
+    "stars": 904,
+    "language": "Python",
+    "pushed_at": "2026-07-30T17:15:57Z",
+    "license": "MIT"
+  }
+}

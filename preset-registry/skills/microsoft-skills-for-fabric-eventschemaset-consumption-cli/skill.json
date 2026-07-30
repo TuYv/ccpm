@@ -1,0 +1,25 @@
+{
+  "id": "microsoft-skills-for-fabric-eventschemaset-consumption-cli",
+  "name": "eventschemaset-consumption-cli",
+  "description": "> List, inspect, and describe Microsoft Fabric Event Schema Sets — the centralized catalogs of event types and message schemas — via the Fabric Items REST API using `az rest` and `jq`. Enumerate Event Schema Sets in a workspace, read item properties (sensitivity label, tags), and retrieve then base64-decode the item definition to summarize its `eventTypes` and `schemas`. Use when the user wants to: (1) list or search Event Schema Sets in a workspace, (2) inspect an Event Schema Set's properties,",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "microsoft",
+  "install_path": ".claude/skills/eventschemaset-consumption-cli/SKILL.md",
+  "source": {
+    "repo": "microsoft/skills-for-fabric",
+    "url": "https://github.com/microsoft/skills-for-fabric/blob/main/plugins/fabric-skills/skills/eventschemaset-consumption-cli/SKILL.md",
+    "path": "plugins/fabric-skills/skills/eventschemaset-consumption-cli/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-30T19:47:01.404Z",
+    "stars": 904,
+    "language": "Python",
+    "pushed_at": "2026-07-30T17:15:57Z",
+    "license": "MIT"
+  }
+}
