@@ -2,10 +2,10 @@
 name: unharness
 license: MIT
 description: >-
-  Remove Citadel from a project. Exports valuable state (campaigns, postmortems,
-  research, backlog, discoveries) to docs/citadel/ as human-readable markdown,
-  then removes all harness files and hooks. The archive is detected by /do setup
-  on re-install and offered for restore.
+  Safely leave Citadel using the active adoption receipt. Produces a no-write,
+  reviewable plan, preserves a portable archive, removes only exact owned
+  material, and reports modified or externally registered surfaces as retained
+  or unknown. Legacy installs must be imported before exact leave is claimed.
 user-invocable: true
 auto-trigger: false
 trigger_keywords:
@@ -15,121 +15,123 @@ trigger_keywords:
   - clean up citadel
   - remove harness
   - uninstall harness
-last-updated: 2026-04-30
+last-updated: 2026-07-30
 ---
 
-# /unharness — Remove Citadel from a Project
+# /unharness - Receipt-owned exit from Citadel
 
 ## Orientation
 
-**Use when:** removing Citadel from a project entirely -- exports state and cleans up hooks before uninstall.
-**Don't use when:** pausing campaign work (just stop or use /session-handoff); removing a single skill (delete its directory manually).
+Use this skill when the user wants Citadel removed from a project. Exit is a
+two-step, receipt-owned operation. A plan never mutates the project. Apply
+requires the exact saved plan and its confirmation token.
 
-## Invocation Forms
-
-```
-/unharness               # Export archive, then remove harness
-/unharness --export-only # Export to docs/citadel/ without removing anything
-```
-
----
+Do not infer ownership from familiar paths. Do not delete `.planning/`,
+`.citadel/`, runtime settings, hooks, skills, or registrations merely because
+they look Citadel-related.
 
 ## Protocol
 
-### Step 1: FIND CITADEL ROOT
+### 1. Locate Citadel and inspect adoption authority
 
-Read `.citadel/plugin-root.txt` to locate the Citadel install.
-If missing, use the directory containing this SKILL.md as the fallback.
+Read `.citadel/plugin-root.txt` when present. Otherwise use the directory
+containing this skill. Check for `.citadel/adoption/active.json`; the adoption
+planner also checks the private recovery ledger.
 
-```bash
-cat .citadel/plugin-root.txt 2>/dev/null || echo "fallback"
-```
+### 2. Create a no-write leave plan
 
-Store as `{citadelRoot}`.
-
----
-
-### Step 2: RUN UNHARNESS SCRIPT
+Choose a plan path inside the project, such as
+`.planning/adoption/leave.plan.json`, and run:
 
 ```bash
-node {citadelRoot}/scripts/unharness.js
+node {citadelRoot}/scripts/adopt.js leave plan \
+  --target {projectRoot} \
+  --out {planPath} \
+  --json
 ```
 
-For `--export-only`:
+Show the user:
+
+- exact files that will be removed or restored;
+- modified or ambiguous footprint entries that will be retained;
+- portable archive path;
+- runtime registrations whose removal evidence is `unknown`;
+- the plan digest and confirmation token.
+
+If the result is `NOT_ADOPTED`, stop. Create a conservative legacy inventory:
 
 ```bash
-node {citadelRoot}/scripts/unharness.js --export-only
+node {citadelRoot}/scripts/adopt.js import plan {citadelRoot} \
+  --target {projectRoot} \
+  --out {importPlanPath} \
+  --json
 ```
 
-The script:
-1. Scans `.planning/` for valuable content (campaigns, postmortems, research, backlog, discoveries)
-2. Reads `.citadel/project.md` and `.claude/harness.json` for project metadata
-3. Writes `docs/citadel/{category}.md` files with `citadel-archive: true` frontmatter
-4. Removes `.planning/`, `.citadel/`, `.claude/agent-context/`
-5. Strips Citadel hook entries from `.claude/settings.json` (preserves user hooks)
-6. Prints a summary of what was exported and removed
+Apply that import only after its own explicit approval. Then create a new leave
+plan from the resulting receipt. Never describe legacy cleanup as exact
+removal.
 
-Print the script output verbatim.
+### 3. Obtain explicit approval
 
----
+Leaving is destructive. Ask the user to approve the displayed plan and exact
+confirmation token. Do not apply from an unsaved or regenerated plan.
 
-### Step 3: CLOSING MESSAGE
+### 4. Apply and verify
 
-After the script completes, print:
+After approval:
 
-**If archive was written:**
-```
-Archive is at docs/citadel/ — commit it, delete it, or leave it.
-Run /do setup again anytime to reinstall Citadel.
-If you run setup in this project, it will find the archive and offer to restore your history.
-```
+```bash
+node {citadelRoot}/scripts/adopt.js leave apply {planPath} \
+  --confirm {confirmationToken} \
+  --json
 
-**If nothing was exported (empty project):**
-```
-Citadel removed. No history to archive.
-Run /do setup again anytime to reinstall.
+node {citadelRoot}/scripts/adopt.js doctor \
+  --target {projectRoot} \
+  --json
 ```
 
-**If --export-only:**
-```
-Archive written to docs/citadel/. Harness files left in place.
-Run /unharness without --export-only to complete the removal.
+Doctor may report `not_adopted` after a clean leave. Report the leave receipt,
+archive path, removed entries, retained conflicts, and every `unknown`
+unregistration observation. “Citadel removed” is permitted only when the
+receipt proves every required local and external removal.
+
+## Export-only compatibility
+
+When the user explicitly wants a human-readable export without leaving:
+
+```bash
+node {citadelRoot}/scripts/unharness.js {projectRoot} --export-only
 ```
 
----
+This writes the legacy Markdown archive but does not remove harness material.
 
 ## Fringe Cases
 
-**Script not found:**
-Report the error and explain the user can run the hook installer manually:
-`node /path/to/Citadel/scripts/unharness.js`
+- If `.planning/` does not exist, treat it as an empty portable-state set and
+  show the setup/import hint; do not create it merely to leave.
+- Missing or invalid adoption authority blocks leave. Use `import plan` or
+  private-ledger recovery; never guess ownership.
+- A changed saved plan, source, target, or pre-image requires a fresh plan.
+- An unavailable runtime unregister API stays `unknown`; report the manual
+  observation required.
+- If the Citadel root cannot be located, stop with the exact missing path.
 
-**No .planning/ directory (harness was installed but never used):**
-The script handles this gracefully — it skips the export and proceeds to cleanup.
-Nothing special needed.
+## Quality gates
 
-**docs/citadel/ already exists from a previous unharness:**
-The script overwrites with the current timestamp. Prior archives are replaced.
-If the user wants to keep prior archives, they should commit `docs/citadel/` to git first.
-
-**User runs unharness on a project that was never set up:**
-The script exits cleanly with "Nothing to export." and nothing is deleted that shouldn't be.
-
----
-
-## Contextual Gates
-
-**Disclosure:** "Removing Citadel from [project]. Exporting state to [path] before deletion. This is irreversible without reinstalling."
-**Reversibility:** red — removes hooks, clears .claude/settings.json entries, deletes .planning/. State export is made first, but reinstalling requires /setup.
-**Trust gates:**
-- Trusted (20+ sessions): irreversible unless reinstalled; exports state first.
-
-## Quality Gates
-
-- Never prompt the user before running — the export is the safety net, not a confirmation dialog
-- Always print the script output so the user can see exactly what happened
-- If the script errors, surface the error directly — don't swallow it
+- Planning is read-only unless the user explicitly requests `--out`.
+- Apply consumes the exact saved plan and revalidates source, target, and
+  pre-images.
+- Modified owned material is retained with an explicit conflict.
+- Shared runtime files restore exact pre-images only while installed bytes
+  remain exact.
+- Missing receipts, malformed receipts, and unenumerable registrations are
+  `unknown` or blocked, never successful.
+- The portable archive and private receipt ledger remain available for restore
+  and recovery.
 
 ## Exit Protocol
 
-After the closing message in Step 3, output nothing further. Unharness is a terminal action — no HANDOFF block, no next-step suggestions. The session is now running without hooks.
+Return the leave operation ID and receipt digest, portable archive path, exact
+removed/restored counts, retained conflicts, and unknown external removals.
+State plainly whether exact exit was proved. Do not claim success from a
+completed command when required removal evidence is missing.

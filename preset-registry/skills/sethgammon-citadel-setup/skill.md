@@ -73,7 +73,7 @@ If harness.json already exists with full config, add: `  [4] Update — reconfig
 
 ### Step 1: INSTALL HOOKS (all modes, always first)
 
-Hooks must be live before anything else. Run `node {citadel-root}/scripts/install-hooks.js`. Find `{citadel-root}`: read `.citadel/plugin-root.txt`; fallback: directory containing this SKILL.md. The installer reads `hooks/hooks-template.json`, resolves absolute paths, writes into `.claude/settings.json`, preserves non-Citadel settings, is idempotent.
+Hooks must be live before anything else. Run `node {citadel-root}/scripts/install-hooks.js`. Find `{citadel-root}`: read `.citadel/plugin-root.txt`; fallback: directory containing this SKILL.md. The installer resolves the current config (or the bootstrap Standard + Core + Persistence default), writes `.citadel/effective-config.json`, installs only hooks owned by effective bundles, preserves non-Citadel settings, and is idempotent.
 
 **On success:** `  ✓ {N} hooks installed (protect-files, external-gate, circuit-breaker, quality-gate + more)`
 **On failure:** output the error, explain manual install path (`node /path/to/Citadel/scripts/install-hooks.js`), continue — setup must not abort.
@@ -92,28 +92,55 @@ Auto-detect by scanning the project root. Never ask what can be read. (Readable 
 
 ### Step 3: GENERATE CONFIG (all modes)
 
-Write `.claude/harness.json` using Node (not Write tool — harness.json is protected after first install):
+Create `.planning/tmp/citadel-stack.json` with only the detected compatibility
+fields below. This input is not authoritative and must not contain profile,
+bundle, consent, trust, or policy fields:
 
-```javascript
-node -e "
-const fs = require('fs');
-const existing = fs.existsSync('.claude/harness.json') ? JSON.parse(fs.readFileSync('.claude/harness.json', 'utf8')) : {};
-const skillDirs = fs.readdirSync('{citadelRoot}/skills', { withFileTypes: true }).filter(d => d.isDirectory()).map(d => d.name);
-const config = {
-  language: '{detected}', framework: '{detected or null}', packageManager: '{detected}',
-  typecheck: { command: '{command}', perFile: {bool}, timeoutMs: 25000 },
-  test: { command: '{testCommand}', framework: '{testFramework}' },
-  qualityRules: { builtIn: ['no-confirm-alert', 'no-transition-all'], custom: [] },
-  protectedFiles: ['.claude/harness.json', '.claude/settings.json'],
-  features: { intakeScanner: true, telemetry: true },
-  registeredSkills: skillDirs, registeredSkillCount: skillDirs.length,
-  agentTimeouts: { skill: 600000, research: 900000, build: 1800000 },
-  trust: { sessionCount: existing.trust?.sessionCount || 0, campaignCount: existing.trust?.campaignCount || 0, level: existing.trust?.level || 'novice' },
-  ...existing  // preserve consent, storage, policy
-};
-fs.writeFileSync('.claude/harness.json', JSON.stringify(config, null, 2));
-"
+```json
+{
+  "language": "typescript",
+  "framework": "react",
+  "packageManager": "npm",
+  "typecheck": { "command": "npx tsc --noEmit", "perFile": false, "timeoutMs": 25000 },
+  "test": { "command": "npm test", "framework": "vitest" },
+  "qualityRules": { "builtIn": ["no-confirm-alert", "no-transition-all"], "custom": [] },
+  "protectedFiles": [".claude/harness.json", ".claude/settings.json"],
+  "features": { "intakeScanner": true, "telemetry": true },
+  "registeredSkills": ["do", "review"],
+  "registeredSkillCount": 2,
+  "agentTimeouts": { "skill": 600000, "research": 900000, "build": 1800000 }
+}
 ```
+
+Substitute the detected values and complete skill list; use JSON `null` when no
+framework or test framework is detected.
+
+Preview the deterministic version-2 config migration without writing:
+
+```bash
+node {citadelRoot}/scripts/citadel-config.js initialize \
+  --input .planning/tmp/citadel-stack.json --runtime {claude-code|codex} --json
+```
+
+Show profile, bundles, source/candidate digests, and changed fields. Apply only
+after the selected setup mode authorizes this exact plan:
+
+```bash
+node {citadelRoot}/scripts/citadel-config.js initialize \
+  --input .planning/tmp/citadel-stack.json --runtime {claude-code|codex} --apply --json
+```
+
+Recommended and Express use `standard@1.0.0` with Core + Persistence. Full Tour
+may preview Parallel and Operations, but each bundle needs an explicit enable
+plan. If the runtime is partial, show the named adapter and require
+`--allow-degraded-runtime`; never silently describe degraded support as full.
+Delivery remains off until the user explicitly enables it.
+
+The apply creates a sibling backup when replacing an existing config, validates
+the observed digest, rolls back a failed write, and reconciles
+`.citadel/effective-config.json`. Re-run `install-hooks.js` after the final
+bundle choice so disabled hook families are removed from the generated runtime
+projection.
 
 Note: `perFile` applies to Python checkers only; TypeScript always runs a project-scope incremental check and ignores `perFile` with an advisory.
 
@@ -233,7 +260,8 @@ Update:       Configuration updated. {N} hooks reinstalled, {N} skills re-regist
 
 **Project has no source files:** Skip demo. Output: `"Once you have code, try /review [file] to see the harness in action."`
 
-**harness.json is protected and Write tool is blocked:** Use `node -e "..."` via Bash — Node script bypasses the Write hook, which is correct since setup is the authorized path.
+**harness.json is protected and Write tool is blocked:** Do not bypass the hook.
+Use the plan-first `citadel-config.js initialize` flow above.
 
 **Existing CLAUDE.md with no blank line at end:** Append newline before `## Citadel Harness` section.
 
@@ -245,15 +273,17 @@ Update:       Configuration updated. {N} hooks reinstalled, {N} skills re-regist
 
 ## Contextual Gates
 
-**Disclosure:** "Configuring Citadel for this project. Will modify `.claude/settings.json` and install hooks."
-**Reversibility:** amber — writes `.claude/settings.json`, installs hooks, creates `.planning/`; undo by running `/unharness`
+**Disclosure:** "Configuring Citadel for this project. Will preview a versioned config, reconcile the effective receipt, and install hooks owned by the selected bundles."
+**Reversibility:** amber — writes receipted config/hook state and creates `.planning/`; undo through `citadel adopt leave plan|apply`
 **Trust gates:**
 - Any: first-run configuration; expected to modify settings and install hooks
 
 ## Quality Gates
 
 - Hooks must be installed before any other step completes
-- harness.json must contain `registeredSkillCount` matching actual skill count
+- harness.json must validate as schema v2 and contain `registeredSkillCount` matching actual skill count
+- `.citadel/effective-config.json` must be current for the harness source digest
+- installed hooks must belong only to effective bundles
 - CLAUDE.md must not lose existing content
 - Demo must run on real user code, not a canned example
 - Reference card must show accurate skill and hook counts

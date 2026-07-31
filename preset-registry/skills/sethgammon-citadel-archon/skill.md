@@ -12,7 +12,7 @@ trigger_keywords:
   - campaign
   - multi-session
   - phases
-last-updated: 2026-03-21
+last-updated: 2026-07-30
 ---
 
 # /archon — Autonomous Strategist
@@ -52,9 +52,10 @@ Break the direction into 3-8 phases:
 4. For each phase, write machine-verifiable end conditions:
    - Every phase MUST have at least one non-manual condition
    - Condition types: `file_exists`, `command_passes`, `metric_threshold`, `visual_verify`, `manual`
-   - `manual` is acceptable for UX/design decisions but must not be the only condition
+   - `manual` is a required human gate unless explicitly labeled `advisory: true`; advisory review does not count toward required coverage
    - Write conditions to the Phase End Conditions table in the campaign file
    - Include a `validator_retries_remaining: 3` field per phase row (consumed by step 4.5)
+   - Declare required, subject-bound rows for the phase in `## Exit Evidence`; an absent table or required row is `unknown`, not successful
 5. Write the campaign file to `.planning/campaigns/{slug}.md`
 6. Register a scope claim if `.planning/coordination/` exists
 
@@ -76,7 +77,9 @@ Break the direction into 3-8 phases:
 For each phase:
 
 1. **Direction check**: Is this phase still aligned with the campaign goal?
-1.5. **Create phase checkpoint**: `git stash push --include-untracked -m "citadel-checkpoint-{campaign-slug}-phase-{N}"`. Capture the stash ref and write to campaign Continuation State: `checkpoint-phase-N: stash@{0}`. If `git stash` fails: log `checkpoint-phase-N: none` and continue. Never block on checkpoint failure.
+1.5. **Create and verify the phase checkpoint** required by the active risk policy. Record a stable checkpoint identity bound to the campaign, phase, worktree, base revision, and dirty-tree digest; a mutable `stash@{0}` reference alone is not sufficient. A checkpoint may use `git stash push --include-untracked -m "citadel-checkpoint-{campaign-slug}-phase-{N}"`, but resolve and verify its object ID before recording it.
+   - For Green, dependency-independent, workspace-reversible work, checkpoint policy may be advisory. Record checkpoint failure as `unknown/CHECKPOINT_UNAVAILABLE` and continue only that reversible work.
+   - For Amber/Red, shared-state, or nonrepeatable work, checkpoint policy is required. Hold the phase and every dependent phase until a verified checkpoint exists or a human records a scoped decision.
 2. **Log delegation start**: `node .citadel/scripts/telemetry-log.cjs --event agent-start --agent {delegate-name} --session {campaign-slug}`
 3. **Delegate**: Spawn a sub-agent with full context injection:
    - CLAUDE.md content and `.claude/agent-context/rules-summary.md`
@@ -89,20 +92,25 @@ For each phase:
    - `command_passes`: run command, verify exit code 0
    - `metric_threshold`: run command, parse output, compare to threshold
    - `visual_verify`: invoke /live-preview on the specified route
-   - `manual`: log to Review Queue, don't block
-   - If ANY non-manual condition fails: phase is NOT complete. Fix what's failing.
+   - required `manual`: record `blocked/HUMAN_INPUT_REQUIRED` in the Review Queue and hold the gate until the user approves or rejects it
+   - advisory `manual`: log to the Review Queue without adding it to required coverage
+   - If ANY required condition is failed, blocked, or unknown: phase is NOT complete. Fix or resolve what's non-passing.
    - Log which conditions passed/failed in the Feature Ledger
-4.25. **Validate exit evidence** if the campaign has an `## Exit Evidence` table: run `node scripts/evidence-validate.js --file .planning/campaigns/{slug}.md --target phase:{N}`.
-   - Passes: continue. Fails with retries remaining: run again with `--write-repair`, keep the phase active, perform the repair task. Fails with no retries remaining: block advancement or mark the phase `partial`; never mark complete from prose alone.
+4.25. **Validate required exit evidence**: run `node scripts/evidence-validate.js --file .planning/campaigns/{slug}.md --target phase:{N}`.
+   - Only current, subject-bound `passed` evidence with complete required coverage satisfies this gate.
+   - Failed evidence with repair budget remaining: run again with `--write-repair`, keep the phase active, perform the repair task, and create a new attempt without rewriting the prior result.
+   - Missing, stale, malformed, or incomplete evidence is `unknown`; exhausted repair budget holds advancement and joins the campaign's single human escalation.
    - For package/review phases, run `node scripts/package-delivery.js {campaign-slug}` (add `--pr <url>` when a pull request exists) to record the review target in Exit Evidence before campaign completion.
 4.5. **Validate handoff** — spawn a Phase Validator (subagent_type `citadel:phase-validator`, Haiku, read-only, effort: low) with the campaign slug, phase number and title, the exit conditions from the Phase End Conditions table, and the sub-agent's full HANDOFF (invocation template: docs/CAMPAIGNS.md#phase-validation). Parse the validator's JSON response:
    - **`verdict: "pass"`**: proceed to step 5.
    - **`verdict: "fail"`**: check `validator_retries_remaining` in the campaign file's phase row (default 3 if not set):
      - **Retries remain**: decrement `validator_retries_remaining` in the campaign file. Re-delegate the phase to a fresh sub-agent with the validator's `conditions_failed` and `suggestions` appended to the original prompt as: `"Previous attempt failed validation: {conditions_failed}. Fix: {suggestions}."` Return to step 3.
-     - **Retries exhausted (0)**: log `validator_halt: phase {N} failed validation after 3 retries — {conditions_failed}` to the campaign Decision Log. Mark phase `partial`. Advance to the next phase.
-   - **Validator timeout**: if the validator does not return within 3 minutes, treat the result as `verdict: "pass"` with `warnings: ["validator timed out"]` and log the timeout. Never let validation block the campaign indefinitely.
+     - **Retries exhausted (0)**: preserve the last result as `failed`, log `validator_halt: phase {N} failed validation after 3 retries — {conditions_failed}`, and invoke the strong acting Arbiter for the binding holistic decision. Arbiter `block` holds the phase; Arbiter unavailability is `unknown` and joins the single human escalation.
+   - **Validator timeout or malformed output**: record `unknown/VALIDATOR_TIMEOUT` or `unknown/OUTPUT_UNPARSEABLE`. Retry within the durable budget; after exhaustion invoke the Arbiter when a holistic decision remains relevant, otherwise hold and aggregate one human escalation.
+   - A Phase Validator checks HANDOFF claims only. Deterministic end conditions and Exit Evidence remain authoritative and must pass independently.
 5. **Review**: Read the sub-agent's HANDOFF. Did it accomplish the phase goal?
-   - If HANDOFF present but phase goal NOT met: re-delegate the phase to a fresh sub-agent with clarified success criteria. If second attempt also fails goal: mark phase as `partial`, log the gap, continue to next phase.
+   - If HANDOFF present but phase goal NOT met: re-delegate the phase to a fresh sub-agent with clarified success criteria. If the bounded attempts are exhausted, record incomplete coverage, hold dependent phases and terminal completion, and add the gap to the single human escalation.
+   - A `partial` phase is progress metadata only. It never satisfies a dependency or authorizes advancement.
 5.5. **Log delegation result**: `node .citadel/scripts/telemetry-log.cjs --event agent-complete --agent {delegate-name} --session {campaign-slug} --status {success|partial|failed}`
 6. **Record**: Update the campaign file:
    - Mark phase status using `updatePhaseStatus` from `core/campaigns/update-campaign` via `node -e` (snippet: docs/CAMPAIGNS.md#updating-phase-status). Valid values: `pending`, `in-progress`, `design-complete`, `complete`, `partial`, `failed`, `skipped`
@@ -155,14 +163,15 @@ Scan modified files for: `transition-all` (name specific properties); `confirm()
 ### Step 7: COMPLETION
 
 1. Run final verification via `node scripts/run-with-timeout.js 300`
-2. Update campaign status to `completed`
-2.5. **Propagate knowledge**: `npm run propagate -- --campaign {slug}`. If unavailable: add `<!-- TODO: run npm run propagate -- --campaign {slug} -->` to LEARNINGS.md.
-3. Move campaign file to `.planning/campaigns/completed/`
-4. Release scope claims
-5. Log completion: `node .citadel/scripts/telemetry-log.cjs --event campaign-complete --agent archon --session {campaign-slug}`
-6. Output final HANDOFF
-7. Suggest `/postmortem`
-8. **Auto-fix handoff** — for any PRs created this campaign:
+2. Confirm every required phase gate is current, subject-bound, `passed`, and complete, with no unresolved required checkpoint, human gate, dependency, or Arbiter block. Otherwise keep the campaign active or record a non-success terminal outcome such as `blocked-decision`; do not mark it completed.
+3. Update campaign status to `completed`
+3.5. **Propagate knowledge**: `npm run propagate -- --campaign {slug}`. If unavailable: add `<!-- TODO: run npm run propagate -- --campaign {slug} -->` to LEARNINGS.md.
+4. Move campaign file to `.planning/campaigns/completed/`
+5. Release scope claims
+6. Log completion: `node .citadel/scripts/telemetry-log.cjs --event campaign-complete --agent archon --session {campaign-slug}`
+7. Output final HANDOFF
+8. Suggest `/postmortem`
+9. **Auto-fix handoff** — for any PRs created this campaign:
    ```
    ---PR READY---
    PR #<N>: <url>
@@ -189,7 +198,10 @@ Scan modified files for: `transition-all` (name specific properties); `confirm()
 - Campaign file must be updated after every phase
 - Sub-agents must receive full context injection (CLAUDE.md + rules-summary)
 - Never re-delegate the same failing work without changing the approach
-- Every phase must pass validator (or exhaust 3 retries) before advancing
+- Every required gate must be current, subject-bound, `passed`, and complete before it unlocks a dependent phase
+- Timeout, malformed output, missing evidence, incomplete coverage, and exhausted retries never authorize advancement or completion
+- Continue only dependency-independent reversible work while held gates remain unresolved
+- Maintain one deduplicated human escalation per campaign, updated with every held subject and reason
 - Continuation State must be written before context runs low
 - Direction alignment must pass every 2 phases
 - Quality spot-check must pass every phase
@@ -207,8 +219,8 @@ Park the campaign when:
 
 ## Recovery
 
-1. Find the checkpoint in Continuation State (`checkpoint-phase-N: stash@{N} | none`)
-2. Run: `git stash pop <ref>` (or `git stash pop` if ref unavailable)
+1. Find the verified checkpoint identity in Continuation State and confirm it is bound to the expected campaign, phase, worktree, base revision, and dirty-tree digest.
+2. Apply the verified checkpoint without consuming the only copy; do not guess a ref or fall back to an unqualified `git stash pop`.
 3. Run typecheck to confirm clean state
 4. Log rollback to Decision Log with what was restored and why
 
@@ -218,15 +230,14 @@ Within a live session, prefer native rollback first: Claude Code checkpoints plu
 
 - **No active campaign + no direction**: Run Health Diagnostic. Never error.
 - **Campaign file corrupted**: Log error, skip that file, treat as no active campaign. Report to user.
-- **`git stash` fails during checkpoint**: Log `checkpoint-phase-N: none` and continue.
+- **Checkpoint creation or verification fails**: Record `unknown/CHECKPOINT_UNAVAILABLE`. Continue only Green, dependency-independent, workspace-reversible work when checkpoint policy is advisory; otherwise hold the phase and aggregate one human escalation.
 - **`.planning/campaigns/` missing**: Treat as no active campaigns. Proceed to directed/undirected mode.
-- **Sub-agent returns no HANDOFF**: Treat phase as partial. Log observations, proceed to next phase.
-- **Sub-agent hangs and never returns**: After 30 minutes without a response, abort the phase, log `phase-timeout` in the campaign Decision Log, and proceed to Recovery. Never let a hung phase block the entire campaign.
-- **Phase validator returns no JSON or malformed JSON**: Retry once with the schema restated. If still malformed, mark the phase `partial` with `warnings: ["validator output unparseable"]`, log, and advance. Malformed output is never a pass; only a timeout (below) advances as pass with warning.
-- **Policy enforcer returns no JSON or malformed JSON**: Retry once with the schema restated. If still malformed, fail closed for irreversible operations (treat as `deny`, queue for operator review) and allow reversible operations with `warnings: ["policy-enforcer output unparseable"]`. The hook layer still provides baseline protection either way.
-- **Policy enforcer times out (> 2 min)**: Treat as allow with warning. Log. Never let the policy gate block a campaign indefinitely.
-- **Phase validator times out (> 3 min)**: Treat as pass with warning. Log timeout. Advance.
-- **All 3 validator retries exhausted**: Mark phase `partial`, log `validator_halt` with the failed conditions, advance to next phase. Never park the campaign solely due to validator failure.
+- **Sub-agent returns no HANDOFF**: Record `unknown/MISSING_HANDOFF`, preserve any observable work as incomplete coverage, hold dependents, and aggregate one human escalation after bounded retry.
+- **Sub-agent hangs and never returns**: After 30 minutes without a response, abort the attempt, log `unknown/PHASE_TIMEOUT`, and proceed to Recovery. Independent reversible phases may continue; dependents remain held.
+- **Phase validator returns no JSON or malformed JSON**: Retry once with the schema restated. If still malformed, record `unknown/OUTPUT_UNPARSEABLE`, consume the durable retry budget, then hold or invoke the Arbiter as specified in Step 4.5.
+- **Policy enforcer returns no JSON, malformed JSON, or times out (> 2 min)**: Record `unknown/POLICY_RESULT_UNAVAILABLE`, hold the Red operation, and add it to the campaign's single human escalation. Policy unavailability cannot grant authority.
+- **Phase validator times out (> 3 min)**: Record `unknown/VALIDATOR_TIMEOUT`, consume the durable retry budget, then hold or invoke the Arbiter as specified in Step 4.5.
+- **All validator retries exhausted**: Preserve the failed/unknown observations, log `validator_halt`, invoke the Arbiter when applicable, hold dependent work and completion, and aggregate one human escalation.
 
 ## Contextual Gates
 

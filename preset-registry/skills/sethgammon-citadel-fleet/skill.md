@@ -13,7 +13,7 @@ trigger_keywords:
   - simultaneous
   - multiple agents
   - at the same time
-last-updated: 2026-03-21
+last-updated: 2026-07-30
 ---
 
 # /fleet — Parallel Coordinator
@@ -34,7 +34,7 @@ Use for 3+ independent work streams that can run simultaneously in isolated work
 | `/fleet [path-to-spec]` | Read a spec file, decompose into streams |
 | `/fleet continue` | Resume from the last fleet session file |
 | `/fleet` (no args) | Health diagnostic → work queue → execute |
-| `/fleet --quick [task1]; [task2]` | Lightweight parallel mode for solo devs — 2+ tasks, single wave, auto-merge, no session file |
+| `/fleet --quick [task1]; [task2]` | Lightweight parallel mode for solo devs — 2+ tasks, single wave, governed merge, minimal durable receipt |
 | `/fleet --speculative N [direction]` | Try N different approaches to the same task in parallel — see Speculative Mode below |
 | `/fleet --teams [direction]` | Pilot: native task spine when `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS` is set, see Teams Mode (experimental) below |
 
@@ -78,22 +78,23 @@ For each wave:
 3. **Spawn agents** with `isolation: "worktree"`, `mode: "bypassPermissions"`, prompt = full context + direction
 4. **Collect results** from all agents in the wave
 4.5. **Validate wave results** — spawn one Phase Validator per agent (subagent_type `citadel:phase-validator`, Haiku, read-only, effort: low), all in a single parallel batch — never sequentially. Validator prompt: campaign slug, wave, agent name, exit conditions (the agent's scope goal and any stated conditions), and the agent's full HANDOFF text. For each verdict:
-   - **`pass`**: mark agent `validated` in session file. Proceed.
+   - **`pass`**: record the validator observation. The task becomes merge-eligible only after its deterministic gates and required Exit Evidence are also current, subject-bound, `passed`, and complete.
    - **`fail`**: check the retry counter for this agent (max 2 retries in fleet; single-session so lower budget than Archon's 3):
      - **Retries remain**: re-spawn the failed agent in a new worktree with the validator's `conditions_failed` and `suggestions` appended to its prompt. Collect, re-validate, decrement counter.
-     - **Retries exhausted**: mark agent `partial` in session file. Log `validator_halt: {agent-name} wave {N} — {conditions_failed}`. Continue.
-   - **Validator timeout or unparseable output**: treat as pass with warning. Log. Advance.
-4.75. **Validate task exit evidence** if the Fleet session file has an `## Exit Evidence` table: `node scripts/evidence-validate.js --file .planning/fleet/session-{slug}.md --target task:{id}`. Failed required evidence creates a repair task or blocks advancement based on its retries remaining.
+     - **Retries exhausted**: preserve the result as `failed`, log `validator_halt: {agent-name} wave {N} — {conditions_failed}`, and invoke the strong acting Arbiter when a binding holistic decision remains relevant. Arbiter `block` holds the task; Arbiter unavailability is `unknown`.
+   - **Validator timeout or unparseable output**: record `unknown/VALIDATOR_TIMEOUT` or `unknown/OUTPUT_UNPARSEABLE`. Retry within the durable budget; after exhaustion hold the task and its dependents.
+   - A Phase Validator checks HANDOFF claims only. It cannot replace deterministic verification or required evidence.
+4.75. **Validate required task exit evidence**: every task must have subject-bound rows in the Fleet `## Exit Evidence` table. Run `node scripts/evidence-validate.js --file .planning/fleet/session-{slug}.md --target task:{id}`.
+   - Only current, subject-bound `passed` evidence with complete required coverage unlocks dependencies or merge candidacy.
+   - Failed evidence creates a repair attempt while budget remains. Missing, stale, malformed, incomplete, or exhausted evidence is `unknown`/held and joins the session's single deduplicated human escalation.
 5. **Log per-agent results**: `node .citadel/scripts/telemetry-log.cjs --event agent-complete --agent {agent-name} --session {session-slug} --status {success|partial|failed}`
 6. **Compress discoveries**: extract HANDOFF blocks, run `node .citadel/scripts/compress-discovery.cjs` on each output, write compressed briefs to `.planning/fleet/briefs/`
 6b. **Write persistent discovery records** per agent (cross-session memory): `node .citadel/scripts/discovery-write.cjs --session {session-slug} --agent {agent-name} --wave {N} --status {success|partial|failed} --scope "{comma-separated-scope-dirs}" --handoff "{json-array}" --decisions "{json-array}" --files "{json-array}" --failures "{json-array}"`
 7. **Log wave complete**: `node .citadel/scripts/telemetry-log.cjs --event wave-complete --agent fleet --session {session-slug} --meta '{"wave":N,"status":"complete"}'`
-8. **Merge branches** from worktrees:
-   - Run the fleet steward (command above); merge only tasks listed under `MERGE NEXT`
-   - Review changes from each agent; if clean, merge the branch
-   - If conflicts: record in session file, then decide:
-     - **Resolve if:** the conflict is < 20 lines and affects only formatting or naming
-     - **Skip if:** the conflict involves competing logic changes; keep the higher-delta worktree result and log the discarded changes in session file
+8. **Stage merge candidates** on a temporary Fleet integration branch:
+   - Run the fleet steward (command above). Treat its output as scheduling advice; stage only tasks whose required gate decision is current `passed` with complete coverage.
+   - Review each candidate and integrate it into the temporary branch. Do not merge the target branch yet.
+   - If conflicts: record them in the session file. Resolve only when the resolution is within declared scope and can be re-verified; otherwise hold the candidate and its dependents. Change volume or absence of textual conflict is not acceptance evidence.
 9. **Update session file** with wave results and accumulated discoveries
 
 ### Step 5: COMPLETION
@@ -101,12 +102,14 @@ For each wave:
 After all waves:
 
 1. Run typecheck on the full project via `node scripts/run-with-timeout.js 300 <typecheck-cmd>`
-2. Run tests if configured (also use the timeout wrapper). If tests fail after wave completion, apply the error ladder: 1-2 failures — fix before merging; 3-4 — attempt fixes, continue if resolved; 5+ — halt the wave merge for that worktree and log `wave_test_fail: true` in the session file.
-3. Update session file status to `completed`
-4. Log: `node .citadel/scripts/telemetry-log.cjs --event campaign-complete --agent fleet --session {session-slug}`
-5. **Update momentum** (cross-session synthesis): `node .citadel/scripts/momentum-synthesize.cjs`
-5.5. **Propagate knowledge**: run `npm run propagate -- --campaign {slug}` once per campaign that completed this session (not per wave). If `npm run propagate` is unavailable, note each slug in the fleet session file under `## Pending Propagation`.
-6. Output final HANDOFF
+2. Run tests if configured (also use the timeout wrapper) on the temporary integration branch. Any non-passing required check holds target-branch merge and terminal success; repair within budget or add the subject to the single human escalation.
+3. Reconfirm every merge candidate is current for the tested integration subject, with complete required `passed` evidence, no unresolved dependency/checkpoint/human gate, and no binding Arbiter block.
+4. Merge only the governed integration result into the target branch. A clean diff, clean branch, status label, vote, or conflict-free merge cannot substitute for the passed decision.
+5. Update the session file to `completed` only when all required tasks and full-project gates passed. Otherwise use `needs-continue` and preserve held subjects; dependency-independent reversible work may still be packaged.
+6. Log: `node .citadel/scripts/telemetry-log.cjs --event campaign-complete --agent fleet --session {session-slug}`
+7. **Update momentum** (cross-session synthesis): `node .citadel/scripts/momentum-synthesize.cjs`
+7.5. **Propagate knowledge**: run `npm run propagate -- --campaign {slug}` once per campaign that completed this session (not per wave). If `npm run propagate` is unavailable, note each slug in the fleet session file under `## Pending Propagation`.
+8. Output final HANDOFF
 
 ## Fleet Session File Format
 
@@ -134,6 +137,10 @@ Direction: {original direction}
 
 ## Continuation State
 Next wave: N  Blocked items: ...  Auto-continue: true
+
+## Human Escalation
+Status: open | resolved
+- {subject}: {truth status}/{reason}; attempts={n}; dependent work held={ids}; next safe action={action}
 ```
 
 ## Scope Overlap Prevention
@@ -157,12 +164,16 @@ Use the `effort` parameter for wave agents, not `budget_tokens` (rationale: docs
 - Discovery relay must be injected into subsequent waves
 - Merge conflicts must be resolved or explicitly recorded
 - Final typecheck must pass after all waves
+- Only current, subject-bound `passed` evidence with complete required coverage unlocks a dependency or authorizes merge
+- Timeout, malformed output, missing evidence, incomplete coverage, exhausted retries, partial status, and absent votes never authorize advancement, completion, or merge
+- Continue only dependency-independent reversible work while held gates remain unresolved
+- Maintain one deduplicated human escalation per Fleet session
 
 ## Agent Timeouts
 
 Sub-agents can hang indefinitely; Fleet enforces time limits at the orchestrator level. Read values from `harness.json` → `agentTimeouts.{skill|research|build}` (defaults: skill 10 min / research 15 min / build 30 min = 600000/900000/1800000 ms; config reference: docs/FLEET.md#agent-timeouts).
 
-On timeout: log `agent-timeout` event, extract partial HANDOFF if present, retry once with simplified prompt (Wave 1 critical scope only), skip otherwise. Never block the wave. Record `Status: timed out` in session file.
+On timeout: log `agent-timeout`, record `unknown/AGENT_TIMEOUT`, extract a partial HANDOFF if present, and retry once with a simplified prompt when safe. The timed-out task and its dependents remain held; other dependency-independent reversible tasks may continue. Record `Status: timed out` in the session file and add the subject to the single human escalation after retry exhaustion.
 
 ## Shared State Merge Strategies
 
@@ -175,13 +186,13 @@ Parallel agents writing to the same `.planning/` directory can silently overwrit
 
 ## Consistency Voting (High-Stakes Decisions)
 
-For decisions that cannot easily be undone, spawn 3 Phase Validators in parallel with an identical vote prompt and require 2/3 agreement before proceeding.
+For decisions that cannot easily be undone, spawn 3 Phase Validators in parallel with an identical vote prompt. Voting is advisory control input only; it cannot override evidence, a required checkpoint, a human gate, or a binding Arbiter block.
 
-**When to vote:** proposing to mark a multi-wave fleet `completed` while any wave is `partial`; merging an agent's branch after its phase validator returned `fail` (even after retries); deciding to abort and discard work from a wave with mixed results. Skip voting when the decision is clearly safe (all waves complete, all validators pass).
+**When to vote:** selecting among safe repair/retry paths or deciding whether to abort and preserve mixed-result work. Do not use a vote to mark a partial Fleet completed or to merge failed, blocked, or unknown work.
 
 **Vote prompt:** state the session slug, wave, proposed decision, and evidence (handoff summaries, validator results); ask for JSON `{verdict: 'proceed'|'block', reason}` (template: docs/FLEET.md#consistency-voting).
 
-**Tally:** 3/3 proceed → proceed; 2/3 proceed → proceed, log the dissenting reason; 2/3 block → block, escalate to user with the reasons; 3/3 block → block. A timed-out voter counts as `proceed` (conservative — don't let validator failure park the fleet).
+**Tally:** require at least 2 explicit, parseable `proceed` votes for an otherwise-authorized control decision. A timeout, malformed response, or absent vote is `unknown`/abstain. Two explicit blocks hold the decision. Any missing quorum joins the single human escalation. Underlying required evidence must independently pass regardless of the tally.
 
 ## Coordination Safety
 
@@ -196,8 +207,8 @@ For decisions that cannot easily be undone, spawn 3 Phase Validators in parallel
 - **Worktree checkout fails for an agent**: Skip that agent, log the failure in the session file, and continue. Record the skipped scope as a gap for the next wave.
 - **`.planning/` does not exist**: Create `.planning/fleet/` before starting. If `.planning/coordination/` is absent, skip scope claim registration.
 - **Discovery compression script missing**: Write raw HANDOFF excerpts to the briefs directory instead.
-- **Phase validator times out or returns malformed output**: Treat as pass with warning. Log and advance. Never block a wave on validator failure.
-- **All agents in a wave fail validation and exhaust retries**: Mark the entire wave `partial`. Log `wave_validator_halt`. Escalate to the user before proceeding to the next wave — partial wave results may invalidate downstream wave assumptions.
+- **Phase validator times out or returns malformed output**: Record `unknown/VALIDATOR_TIMEOUT` or `unknown/OUTPUT_UNPARSEABLE`, retry within budget, then hold the task and its dependents. Continue only dependency-independent reversible tasks.
+- **All agents in a wave fail validation and exhaust retries**: Record incomplete coverage, log `wave_validator_halt`, hold dependent waves and target-branch merge, and add one consolidated entry to the session's human escalation.
 - **An agent fails validation or post-wave tests**: Run `node scripts/fleet-steward.js --session .planning/fleet/session-{slug}.md --mark-failed {id} --reason "{reason}" --write` to mark the row failed and add a repair task with inherited dependencies.
 
 ## Speculative Mode
@@ -213,14 +224,15 @@ For decisions that cannot easily be undone, spawn 3 Phase Validators in parallel
 
 `/fleet --quick [task1]; [task2]; [task3]`
 
-Differences from standard fleet: minimum 2 streams (not 3), minimum complexity 3 (not 4), single wave only, no session file (results reported inline), no discovery briefs, auto-merge if no conflicts, no scope claim. (Full comparison table and `/do` routing conditions: docs/FLEET.md#quick-mode.)
+Differences from standard Fleet are limited to minimum 2 streams, single-wave scheduling, no discovery briefs, and no scope claim. Quick Mode uses the identical validator, required evidence, retry, Arbiter, full-project verification, dependency hold, escalation, and governed merge semantics.
 
 1. Parse tasks from the `--quick` argument (semicolon-separated)
 2. Validate scope overlap — if any two tasks touch the same files, merge them or sequence them
 3. Spawn all agents simultaneously with `isolation: "worktree"`
-4. Collect results; auto-merge worktrees if no conflicts detected
-5. If merge conflict: surface to user, offer manual resolution
-6. Report results inline — no session file written unless the user asks
+4. Create `.planning/fleet/quick/{run-id}.json` before validation and durably record task IDs, subject/worktree/base digests, attempts, truth status, coverage, reason codes, evidence references, dependency holds, decisions, escalation ID, and timestamps.
+5. Collect results and run the same per-task validators and required Exit Evidence checks as standard Fleet. Missing evidence is `unknown`; `partial` is progress metadata only.
+6. Stage eligible branches on a temporary integration branch, run the same full-project gates, then merge only a current, completely covered `passed` decision. No-conflict is not a gate.
+7. Update the minimal receipt with the final merge or held disposition and report results inline. Preserve one deduplicated human escalation in the receipt.
 
 Entry from `/do` confirmation prompt: user chose yes (1) or always (2). Preferences stored under `consent.fleetSpawn` in harness.json via `readConsent`/`writeConsent`.
 
