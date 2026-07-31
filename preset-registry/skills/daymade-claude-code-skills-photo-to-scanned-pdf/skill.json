@@ -1,7 +1,7 @@
 {
   "id": "daymade-claude-code-skills-photo-to-scanned-pdf",
   "name": "photo-to-scanned-pdf",
-  "description": ">- Turn phone photos of paper documents (contracts, stamped certificates, receipts, forms, handwritten notes) into a clean scanner-quality PDF: perspective rectification + noteshrink background-whitening + A4 PDF assembly, with colored-paper white-balance handling and a mandatory whole-document visual check. Use this skill whenever the user has photos of paper documents and wants them as a PDF / 扫描件 / scan — trigger on \"把照片做成扫描件\", \"photos to scanned PDF\", \"make this look scanned\", \"手机拍的文档转 PDF\",",
+  "description": ">- Two pipelines ending at a scanner-look PDF. (1) Phone photos of paper documents (contracts, stamped certificates, receipts, forms, handwritten notes) → clean scanner-quality PDF: perspective rectification + noteshrink whitening + A4 assembly + mandatory whole-document check. Trigger: \"把照片 做成扫描件\", \"photos to scanned PDF\", \"make this look scanned\", \"手机拍的 文档转 PDF\", \"盖章文件扫描\", replacing pages in an existing scanned PDF, any CamScanner-like request. (2) A digital document with no signature yet (ren",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-docs/photo-to-scanned-pdf/SKILL.md",
     "path": "daymade-docs/photo-to-scanned-pdf/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-31T14:49:26.679Z",
+    "discovered_at": "2026-07-31T17:15:06.291Z",
     "stars": 1306,
     "language": "Python",
-    "pushed_at": "2026-07-30T18:14:10Z",
+    "pushed_at": "2026-07-31T14:56:02Z",
     "license": "MIT"
   }
 }

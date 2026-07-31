@@ -177,6 +177,28 @@ Optional integrations — choose any, or press Enter to skip all:
 **GitHub:** create `.github/workflows/` if missing; copy `.planning/_templates/claude-triage.yml` → `.github/workflows/claude-triage.yml` and `.planning/_templates/REVIEW.md` → `REVIEW.md` (skip any that already exist). Output: `"Add ANTHROPIC_API_KEY to Settings > Secrets > Actions to activate."`
 **MCP:** copy `.planning/_templates/.mcp.json` → `.mcp.json` (skip if exists). Output: `"Edit .mcp.json to uncomment the servers you want."`
 
+### Step 5b: CROSS-CLONE MEMORY (Recommended + Full Tour only)
+
+Run `node {citadelRoot}/scripts/repository-memory.js status --project-root {projectRoot} --json`.
+
+- Already `enabled`: report the stored file/version counts and do not prompt.
+- `unavailable`: skip the prompt; this optional capability requires Node.js 22.13+.
+- Otherwise ask: `"Preserve completed Citadel lessons across disposable clones in a local user-level SQLite database? [y/N]"`
+
+On yes, run:
+
+```bash
+node {citadelRoot}/scripts/repository-memory.js enable --project-root {projectRoot}
+```
+
+State exactly what is stored: completed campaigns, postmortems, research,
+discoveries, backlog Markdown, and `.citadel/project.md`. State what is excluded:
+active work, telemetry, worktrees, consent, runtime config, and credentials. Raw
+remote URLs and clone paths are excluded as identity metadata, but allowlisted
+documents are stored verbatim and may mention either. Express mode never opts in
+automatically, but an already-enabled repository continues to restore and sync
+through lifecycle hooks.
+
 ### Step 6: LIVE DEMO (Recommended + Full Tour only)
 
 **Find target file:** `git diff --name-only HEAD~1 HEAD 2>/dev/null | head -5`, filter for source files, use the most recently changed. If no git history, use `find` for recently modified files.
