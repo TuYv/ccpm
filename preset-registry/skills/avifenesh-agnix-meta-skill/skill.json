@@ -1,0 +1,25 @@
+{
+  "id": "avifenesh-agnix-meta-skill",
+  "name": "meta-skill",
+  "description": "Use when checking metadata parsing of unquoted numeric values in frontmatter.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "avifenesh",
+  "install_path": ".claude/skills/meta-skill/SKILL.md",
+  "source": {
+    "repo": "avifenesh/agnix",
+    "url": "https://github.com/avifenesh/agnix/blob/main/sk/meta-skill/SKILL.md",
+    "path": "sk/meta-skill/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-07-31T10:56:09.507Z",
+    "stars": 372,
+    "language": "Rust",
+    "pushed_at": "2026-07-31T10:50:56Z",
+    "license": "Apache-2.0"
+  }
+}
