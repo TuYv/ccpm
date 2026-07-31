@@ -2,7 +2,7 @@
   "id": "disler-claude-code-hooks-multi-agent-observability-create-worktree-skill",
   "name": "create-worktree-skill",
   "description": "Use when the user explicitly asks for a SKILL to create a worktree. If the user does not mention \"skill\" or explicitly request skill invocation, do NOT trigger this. Only use when user says things like \"use a skill to create a worktree\" or \"invoke the worktree skill\". Creates isolated git worktrees with parallel-running configuration.",
-  "category": "测试调试",
+  "category": "开发编程",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,7 +16,7 @@
     "url": "https://github.com/disler/claude-code-hooks-multi-agent-observability/blob/main/.claude/skills/create-worktree-skill/SKILL.md",
     "path": ".claude/skills/create-worktree-skill/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-31T04:38:36.107Z",
+    "discovered_at": "2026-07-31T08:14:21.529Z",
     "stars": 1501,
     "language": "Python",
     "pushed_at": "2026-02-08T23:59:13Z",
