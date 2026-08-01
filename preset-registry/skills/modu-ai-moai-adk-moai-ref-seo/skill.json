@@ -1,0 +1,25 @@
+{
+  "id": "modu-ai-moai-adk-moai-ref-seo",
+  "name": "moai-ref-seo",
+  "description": "> Search-visibility and crawlability reference for web output: canonical URL discipline, per-page title and meta description uniqueness, robots.txt and sitemap.xml as host-derived artifacts, JSON-LD structured data with entity consistency, and the document-semantics rules that decide whether a machine can read a page at all. Agent-extending skill that amplifies web-output implementation and pre-ship review with production-grade indexing and structured-data patterns. NOT for: keyboard operability",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "modu-ai",
+  "install_path": ".claude/skills/moai-ref-seo/SKILL.md",
+  "source": {
+    "repo": "modu-ai/moai-adk",
+    "url": "https://github.com/modu-ai/moai-adk/blob/main/.claude/skills/moai-ref-seo/SKILL.md",
+    "path": ".claude/skills/moai-ref-seo/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-01T14:51:48.021Z",
+    "stars": 1152,
+    "language": "Go",
+    "pushed_at": "2026-08-01T14:50:42Z",
+    "license": "Apache-2.0"
+  }
+}

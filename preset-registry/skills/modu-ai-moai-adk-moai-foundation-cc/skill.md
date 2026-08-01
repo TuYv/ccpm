@@ -239,10 +239,10 @@ For detailed patterns and working examples, see the reference directory.
 
 Version History:
 
-- v5.0.0: Converted to narrative format per CLAUDE.md Documentation Standards
-- v4.0.0: Added plugins, sandboxing, headless, statusline, dev containers, CLI reference, advanced patterns
-- v3.0.0: Added progressive disclosure, sub-agent details, integration patterns
-- v2.0.0: Initial comprehensive release
+- v5.0.0 (2026-01-11): Converted to narrative format per CLAUDE.md Documentation Standards
+- v4.0.0 (2026-01-06): Added plugins, sandboxing, headless, statusline, dev containers, CLI reference, advanced patterns
+- v3.0.0 (2025-12-06): Added progressive disclosure, sub-agent details, integration patterns
+- v2.0.0 (2025-11-26): Initial comprehensive release
 
 <!-- moai:evolvable-start id="rationalizations" -->
 ## Common Rationalizations
@@ -268,6 +268,8 @@ Version History:
 - settings.json contains hardcoded absolute paths instead of $CLAUDE_PROJECT_DIR
 - Progressive disclosure disabled for a skill that exceeds 3000 tokens
 
+Provenance (frontmatter CSV-format drift): space-separated `allowed-tools` silently breaks tool permissions (CONST-V3R5-038) — observed recurrence, provenance pending in memory.
+
 <!-- moai:evolvable-end -->
 
 <!-- moai:evolvable-start id="verification" -->
@@ -282,3 +284,15 @@ Version History:
 - [ ] $CLAUDE_PROJECT_DIR used instead of absolute paths in hook commands
 
 <!-- moai:evolvable-end -->
+
+---
+
+## Decision Heuristics
+
+Fast defaults — always confirm against the cited body section for non-trivial decisions.
+
+- If a deferred tool (AskUserQuestion etc.) is needed, default to a `ToolSearch` preload first (<- §Documentation Index / sub-agents).
+- If declaring `allowed-tools`, default to a comma-separated string, never space-separated (<- §Red Flags).
+- If CLAUDE.md nears 40K chars, default to moving detail into path-scoped rules (<- §Verification).
+- If a hook is registered, default to also setting an explicit timeout (<- §Common Rationalizations).
+- If a skill exceeds ~3000 tokens, default to keeping progressive disclosure enabled (<- §Common Rationalizations).
