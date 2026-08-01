@@ -1,7 +1,7 @@
 {
   "id": "ryoppippi-ccusage-rust-binary-size",
   "name": "rust-binary-size",
-  "description": "Guides Rust binary size reduction for ccusage. Use when changing release profiles, dependency features, native packaging size, or investigating Rust executable bloat.",
+  "description": "Guides Rust binary size reduction for ccusage. Use when changing the rust/Cargo.toml release profile, dependency features, native packaging size, or investigating executable bloat with cargo bloat.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/ryoppippi/ccusage/blob/main/.agents/skills/rust-binary-size/SKILL.md",
     "path": ".agents/skills/rust-binary-size/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-01T10:21:56.190Z",
-    "stars": 17646,
+    "discovered_at": "2026-08-01T12:37:04.195Z",
+    "stars": 17649,
     "language": "Rust",
-    "pushed_at": "2026-08-01T09:18:09Z",
+    "pushed_at": "2026-08-01T11:35:18Z",
     "license": null
   }
 }

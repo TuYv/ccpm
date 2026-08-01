@@ -1,7 +1,7 @@
 {
   "id": "ryoppippi-ccusage-create-pr",
   "name": "create-pr",
-  "description": "Runs the full PR lifecycle. Use when creating a branch, committing, pushing, opening a PR, requesting AI review, and driving CI and review to completion.",
+  "description": "Runs the full PR lifecycle. Use when creating a branch, committing, pushing, opening a PR, requesting AI review, replying to review threads, and driving CI to green.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/ryoppippi/ccusage/blob/main/.agents/skills/create-pr/SKILL.md",
     "path": ".agents/skills/create-pr/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-01T10:21:54.152Z",
-    "stars": 17646,
+    "discovered_at": "2026-08-01T12:37:02.083Z",
+    "stars": 17649,
     "language": "Rust",
-    "pushed_at": "2026-08-01T09:18:09Z",
+    "pushed_at": "2026-08-01T11:35:18Z",
     "license": null
-  },
-  "summary_zh": "这是个自动化搞定PR全流程的工具，专治从建分支、推代码到等AI审查和CI通过这一路的繁琐操作，让你一口气推进到合并。"
+  }
 }

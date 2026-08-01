@@ -1,7 +1,7 @@
 {
   "id": "ryoppippi-ccusage-cmux-debug",
   "name": "cmux-debug",
-  "description": "Guides cmux terminal debugging. Use when validating CLI visual output, responsive tables, terminal geometry, long-running commands, or pane captures.",
+  "description": "Verifies ccusage terminal output in a real cmux pane. Use when changing responsive tables, column widths, progress bars, spinners, or colors, or when a long-running command's output must be captured beyond the visible viewport.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/ryoppippi/ccusage/blob/main/.agents/skills/cmux-debug/SKILL.md",
     "path": ".agents/skills/cmux-debug/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-01T10:21:53.557Z",
-    "stars": 17646,
+    "discovered_at": "2026-08-01T12:37:01.504Z",
+    "stars": 17649,
     "language": "Rust",
-    "pushed_at": "2026-08-01T09:18:09Z",
+    "pushed_at": "2026-08-01T11:35:18Z",
     "license": null
-  },
-  "summary_zh": "这是一款终端界面调试工具，专门帮你解决命令行排版错乱、响应式表格异常、窗口尺寸不适配及长任务界面抓取等显示问题。"
+  }
 }

@@ -1,7 +1,7 @@
 {
   "id": "ryoppippi-ccusage-reduce-similarities",
   "name": "reduce-similarities",
-  "description": "Detect duplicate Rust code using AST-based similarity analysis. Use when working with .rs files and looking for code duplication or refactoring opportunities.",
+  "description": "Detects duplicated Rust code with the dev-shell similarity-rs CLI. Use when reviewing .rs files for repeated functions, impl methods, or parallel struct and enum definitions, or before extracting a shared helper.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/ryoppippi/ccusage/blob/main/.agents/skills/reduce-similarities/SKILL.md",
     "path": ".agents/skills/reduce-similarities/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-01T10:21:55.898Z",
-    "stars": 17646,
+    "discovered_at": "2026-08-01T12:37:03.882Z",
+    "stars": 17649,
     "language": "Rust",
-    "pushed_at": "2026-08-01T09:18:09Z",
+    "pushed_at": "2026-08-01T11:35:18Z",
     "license": null
-  },
-  "summary_zh": "这是一个Rust代码查重工具，能帮你找出重复代码，特别适合在处理.rs文件、需要去重或寻找重构机会时使用。"
+  }
 }

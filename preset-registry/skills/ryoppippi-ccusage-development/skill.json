@@ -1,8 +1,8 @@
 {
   "id": "ryoppippi-ccusage-development",
   "name": "development",
-  "description": "Guides ccusage monorepo development. Use when editing packages, docs, shared configuration, bundled CLI packaging, dependencies, exports, or validation commands.",
-  "category": "设计创意",
+  "description": "Guides ccusage monorepo development. Use when editing workspace packages, the npm launcher or native packaging, dependencies, or shared configuration, and when running the `just` build, typecheck, test, format, or check recipes.",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,10 @@
     "url": "https://github.com/ryoppippi/ccusage/blob/main/.agents/skills/development/SKILL.md",
     "path": ".agents/skills/development/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-01T10:21:54.441Z",
-    "stars": 17646,
+    "discovered_at": "2026-08-01T12:37:02.380Z",
+    "stars": 17649,
     "language": "Rust",
-    "pushed_at": "2026-08-01T09:18:09Z",
+    "pushed_at": "2026-08-01T11:35:18Z",
     "license": null
-  },
-  "summary_zh": "用于指导 ccusage 这个 monorepo 项目的开发工作，适合在改动子包、文档、共享配置、CLI 打包、依赖、导出或校验命令时参考。"
+  }
 }

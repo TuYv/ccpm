@@ -1,7 +1,7 @@
 {
   "id": "ryoppippi-ccusage-docs",
   "name": "docs",
-  "description": "Routes ccusage documentation impact work. Use when code or behavior changes affect README files, docs guides, VitePress navigation, screenshots, schema docs, or user-facing commands/options.",
+  "description": "Routes ccusage documentation impact work. Use when code or behavior changes affect README files, docs guides, VitePress navigation, screenshots, schema docs, or user-facing commands/options, and when auditing whether a change needs docs at all.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/ryoppippi/ccusage/blob/main/.agents/skills/docs/SKILL.md",
     "path": ".agents/skills/docs/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-01T10:21:54.736Z",
-    "stars": 17646,
+    "discovered_at": "2026-08-01T12:37:02.706Z",
+    "stars": 17649,
     "language": "Rust",
-    "pushed_at": "2026-08-01T09:18:09Z",
+    "pushed_at": "2026-08-01T11:35:18Z",
     "license": null
-  },
-  "summary_zh": "用于追踪 ccusage 项目中代码或行为变更对文档的影响，适合在改动涉及 README、VitePress 导航、截图、命令说明等需要同步更新文档的场景下使用。"
+  }
 }

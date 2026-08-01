@@ -1,7 +1,7 @@
 {
   "id": "ryoppippi-ccusage-agent-sources",
   "name": "agent-sources",
-  "description": "Guides ccusage agent source formats. Use when checking agent log locations, raw record structure, token mappings, model names, precomputed costs, or source-specific CLI behavior.",
+  "description": "Guides ccusage agent source formats. Use when checking where an agent stores its logs, how raw records map to tokens and models, how precomputed costs interact with cost modes, or which reports an agent supports.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/ryoppippi/ccusage/blob/main/.agents/skills/agent-sources/SKILL.md",
     "path": ".agents/skills/agent-sources/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-01T10:21:52.988Z",
-    "stars": 17646,
+    "discovered_at": "2026-08-01T12:37:00.896Z",
+    "stars": 17649,
     "language": "Rust",
-    "pushed_at": "2026-08-01T09:18:09Z",
+    "pushed_at": "2026-08-01T11:35:18Z",
     "license": null
-  },
-  "summary_zh": "一份帮助开发者梳理各类 AI 代理日志格式的参考指南，涵盖日志位置、原始记录结构、token 映射、模型名称和费用计算等，适合需要解析或对接 ccusage 数据源的场景。"
+  }
 }

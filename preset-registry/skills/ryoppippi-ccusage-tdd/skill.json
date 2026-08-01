@@ -1,7 +1,7 @@
 {
   "id": "ryoppippi-ccusage-tdd",
   "name": "tdd",
-  "description": "Guides t-wada Red-Green-Refactor TDD. Use when implementing features, fixing bugs, or refactoring logic with strict test-first development.",
+  "description": "Guides t-wada Red-Green-Refactor TDD for ccusage logic changes. Use when implementing a feature, writing a regression test for a bug, or refactoring Rust or TypeScript behavior test-first.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/ryoppippi/ccusage/blob/main/.agents/skills/tdd/SKILL.md",
     "path": ".agents/skills/tdd/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-01T10:21:57.081Z",
-    "stars": 17646,
+    "discovered_at": "2026-08-01T12:37:05.058Z",
+    "stars": 17649,
     "language": "Rust",
-    "pushed_at": "2026-08-01T09:18:09Z",
+    "pushed_at": "2026-08-01T11:35:18Z",
     "license": null
-  },
-  "summary_zh": "指导你实践t-wada风格的测试驱动开发，适合在写新功能、修Bug或重构时，要求严格坚持测试先行的场景。"
+  }
 }
