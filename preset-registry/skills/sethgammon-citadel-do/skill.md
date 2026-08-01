@@ -2,7 +2,8 @@
 name: do
 license: MIT
 description: >-
-  Unified router that auto-routes user intent to the right orchestrator or skill.
+  Unified router that auto-routes user intent to the right direct action, skill,
+  orchestrator, or explicit Operation Control plan.
   Classifies input by scope, complexity, persistence needs, and parallelism, then
   dispatches to the cheapest path that can handle it: direct command, skill, marshal,
   archon, or fleet. Single entry point for all work.
@@ -13,7 +14,7 @@ trigger_keywords:
   - which tool
   - auto-route
   - unified router
-last-updated: 2026-03-20
+last-updated: 2026-07-31
 ---
 
 # /do — Unified Intent Router
@@ -180,6 +181,7 @@ and any project-level custom skills in `.claude/skills/`.
 | "next", "what should I do next", "repair harness", "fix harness state" | `node scripts/operator-console.js --run`; auto-runs deterministic local repairs and stops at skill/human routes with a console report |
 | "operator", "operator console", "what's up", "what should happen next", "approval capsule" | `node scripts/operator-console.js`; inspect-only decision cockpit |
 | "preview route", "route preview", "dry run route", "what would /do do" | `node scripts/route-preview.js -- "<request>"`; route preflight without execution |
+| "operation control", "cost-constrained operation", "quality target", "model fallback", "tool boundary" | Use `citadel operation init` to create explicit request/catalog inputs, then run `citadel operation plan`; do not execute until the plan and independent verifier are concrete |
 
 If ONE skill matches with high confidence → invoke it directly. Done.
 High confidence = evaluator assigns ≥ 0.85 probability to exactly one skill. Below 0.85, or multiple skills above 0.70, fall through to Tier 3.

@@ -1,7 +1,7 @@
 {
   "id": "sethgammon-citadel-do",
   "name": "do",
-  "description": ">- Unified router that auto-routes user intent to the right orchestrator or skill. Classifies input by scope, complexity, persistence needs, and parallelism, then dispatches to the cheapest path that can handle it: direct command, skill, marshal, archon, or fleet. Single entry point for all work.",
+  "description": ">- Unified router that auto-routes user intent to the right direct action, skill, orchestrator, or explicit Operation Control plan. Classifies input by scope, complexity, persistence needs, and parallelism, then dispatches to the cheapest path that can handle it: direct command, skill, marshal, archon, or fleet. Single entry point for all work.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/SethGammon/Citadel/blob/main/skills/do/SKILL.md",
     "path": "skills/do/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-07-31T22:27:51.339Z",
+    "discovered_at": "2026-08-01T01:17:45.495Z",
     "stars": 808,
     "language": "JavaScript",
-    "pushed_at": "2026-07-31T20:18:39Z",
+    "pushed_at": "2026-08-01T00:53:44Z",
     "license": "MIT"
-  },
-  "summary_zh": "这是一个智能路由调度系统，能自动分析用户意图的复杂度和需求，把任务精准派发给最划算的处理模块，避免大材小用，适合作为多层级系统的统一入口。"
+  }
 }
