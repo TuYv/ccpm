@@ -1,0 +1,25 @@
+{
+  "id": "sneg55-agent-starter-adopt-project",
+  "name": "adopt-project",
+  "description": "Apply agent-starter patterns to an EXISTING project - audits the codebase, proposes components by invasiveness tier (hooks, skills, CLAUDE.md, lint configs, patterns), and applies only what the developer approves. Use when the user says adopt, retrofit, \"apply agent-starter to this project\", or wants starter patterns in an existing codebase.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sneg55",
+  "install_path": ".claude/skills/adopt-project/SKILL.md",
+  "source": {
+    "repo": "sneg55/agent-starter",
+    "url": "https://github.com/sneg55/agent-starter/blob/main/skills/adopt-project/SKILL.md",
+    "path": "skills/adopt-project/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-02T12:38:27.122Z",
+    "stars": 79,
+    "language": "Shell",
+    "pushed_at": "2026-07-27T10:04:18Z",
+    "license": "MIT"
+  }
+}

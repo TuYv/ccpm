@@ -1,0 +1,25 @@
+{
+  "id": "eduardo-sl-go-agent-skills-go-modernize",
+  "name": "go-modernize",
+  "description": "> Modernize Go code to use current language features and standard library additions. Covers generics, log/slog, errors.Join, slices/maps packages, range-over-func, and iterators introduced in Go 1.21-1.23+. Use when: \"modernize\", \"update to modern Go\", \"use generics\", \"replace interface{}\", \"upgrade Go version\", \"slog\", \"errors.Join\", \"range over func\", \"iterators\". Do NOT use for: general code style (use go-coding-standards), error handling philosophy (use go-error-handling), or logging archite",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "eduardo-sl",
+  "install_path": ".claude/skills/go-modernize/SKILL.md",
+  "source": {
+    "repo": "eduardo-sl/go-agent-skills",
+    "url": "https://github.com/eduardo-sl/go-agent-skills/blob/main/skills/(code-quality)/go-modernize/SKILL.md",
+    "path": "skills/(code-quality)/go-modernize/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-02T12:37:26.084Z",
+    "stars": 63,
+    "language": "Shell",
+    "pushed_at": "2026-07-11T22:56:44Z",
+    "license": "MIT"
+  }
+}

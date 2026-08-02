@@ -1,0 +1,25 @@
+{
+  "id": "serhiikorniienko-bullshit-detector-share",
+  "name": "share",
+  "description": "Turn a BS report (or any analysis result) into ready-to-paste posts for X/Twitter, LinkedIn, Facebook, Reddit, Hacker News, or a newsletter issue — plus a branded image carousel (PNGs + PDF) for visual platforms. Use when the user wants to share, post, publish, or promote a report, asks for \"a thread\", \"a LinkedIn post\", \"a carousel\", or \"format this for X\".",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "SerhiiKorniienko",
+  "install_path": ".claude/skills/share/SKILL.md",
+  "source": {
+    "repo": "SerhiiKorniienko/bullshit-detector",
+    "url": "https://github.com/SerhiiKorniienko/bullshit-detector/blob/main/skills/publishing/share/SKILL.md",
+    "path": "skills/publishing/share/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-02T12:37:29.117Z",
+    "stars": 96,
+    "language": "Python",
+    "pushed_at": "2026-08-02T11:05:04Z",
+    "license": "MIT"
+  }
+}

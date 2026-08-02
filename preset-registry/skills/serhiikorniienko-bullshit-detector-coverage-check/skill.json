@@ -1,0 +1,25 @@
+{
+  "id": "serhiikorniienko-bullshit-detector-coverage-check",
+  "name": "coverage-check",
+  "description": "Count how many independent origins are behind news coverage of a claim, instead of counting URLs. Queries GDELT for matching articles, collapses reprints and wire copy into single origins, and flags publication bursts that indicate syndication. Use when a claim appears to be confirmed by many outlets and you need to know whether that's many sources or one source many times.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "SerhiiKorniienko",
+  "install_path": ".claude/skills/coverage-check/SKILL.md",
+  "source": {
+    "repo": "SerhiiKorniienko/bullshit-detector",
+    "url": "https://github.com/SerhiiKorniienko/bullshit-detector/blob/main/skills/ingestion/coverage-check/SKILL.md",
+    "path": "skills/ingestion/coverage-check/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-02T12:37:28.764Z",
+    "stars": 96,
+    "language": "Python",
+    "pushed_at": "2026-08-02T11:05:04Z",
+    "license": "MIT"
+  }
+}

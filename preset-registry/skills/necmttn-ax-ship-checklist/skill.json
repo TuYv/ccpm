@@ -1,0 +1,25 @@
+{
+  "id": "necmttn-ax-ship-checklist",
+  "name": "ship-checklist",
+  "description": "Definition-of-done checklist for shipping a new write, signal, table, edge, or query to the ax graph. Use when adding a SurrealDB table/edge/field, an ingest derive-stage, a new analytic query, or any new ax capability - before opening the PR. Ensures every write gets an on-demand read AND a proactive (agent-facing) read AND docs/distribution, not just the write. Triggers on \"ship\", \"new signal\", \"new table/edge\", \"new lens/query\", \"wire this up\", \"is this done\", or finishing an ax feature branc",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Necmttn",
+  "install_path": ".claude/skills/ship-checklist/SKILL.md",
+  "source": {
+    "repo": "Necmttn/ax",
+    "url": "https://github.com/Necmttn/ax/blob/main/skills/ship-checklist/SKILL.md",
+    "path": "skills/ship-checklist/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-02T12:37:23.664Z",
+    "stars": 91,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-23T06:19:29Z",
+    "license": "AGPL-3.0"
+  }
+}

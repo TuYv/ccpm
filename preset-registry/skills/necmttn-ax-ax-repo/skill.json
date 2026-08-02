@@ -1,0 +1,25 @@
+{
+  "id": "necmttn-ax-ax-repo",
+  "name": "ax-repo",
+  "description": "Star the ax repo, file an issue / bug report, or fork-and-open-a-PR against github.com/Necmttn/ax on the user's behalf, by shelling out to the `gh` CLI. Triggers when the user says \"star ax\", \"star the repo\", \"I want to support ax\", \"report this as an ax bug\", \"file an ax issue\", \"open an issue on ax\", \"this looks like an ax bug\", \"I want to contribute to ax\", \"fix this in ax\", \"open a PR against ax\", or after an unhandled ax error when the user wants to report it. Acts only on an explicit user ",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Necmttn",
+  "install_path": ".claude/skills/ax-repo/SKILL.md",
+  "source": {
+    "repo": "Necmttn/ax",
+    "url": "https://github.com/Necmttn/ax/blob/main/skills/ax-repo/SKILL.md",
+    "path": "skills/ax-repo/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-02T12:37:22.819Z",
+    "stars": 91,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-23T06:19:29Z",
+    "license": "AGPL-3.0"
+  }
+}

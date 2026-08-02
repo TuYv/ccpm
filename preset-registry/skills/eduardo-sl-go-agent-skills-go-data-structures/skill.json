@@ -1,0 +1,25 @@
+{
+  "id": "eduardo-sl-go-agent-skills-go-data-structures",
+  "name": "go-data-structures",
+  "description": "> Correct use of Go's built-in data structures: slices (nil vs empty, append semantics, aliasing, preallocation), maps (comma-ok, sets, iteration order), arrays, and choosing between them. Use when: \"slice vs array\", \"nil slice\", \"empty slice\", \"preallocate\", \"map iteration\", \"use a set in Go\", \"slice aliasing\", \"append gotcha\", \"copy a slice\", \"sync.Map or mutex\". Do NOT use for: protecting structures shared across goroutines (use go-concurrency-review), allocation profiling (use go-performance",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "eduardo-sl",
+  "install_path": ".claude/skills/go-data-structures/SKILL.md",
+  "source": {
+    "repo": "eduardo-sl/go-agent-skills",
+    "url": "https://github.com/eduardo-sl/go-agent-skills/blob/main/skills/(code-quality)/go-data-structures/SKILL.md",
+    "path": "skills/(code-quality)/go-data-structures/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-02T12:37:25.770Z",
+    "stars": 63,
+    "language": "Shell",
+    "pushed_at": "2026-07-11T22:56:44Z",
+    "license": "MIT"
+  }
+}

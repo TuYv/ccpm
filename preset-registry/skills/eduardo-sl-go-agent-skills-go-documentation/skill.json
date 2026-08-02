@@ -1,0 +1,25 @@
+{
+  "id": "eduardo-sl-go-agent-skills-go-documentation",
+  "name": "go-documentation",
+  "description": "> Go documentation conventions: godoc comments, package docs, testable Example functions, deprecation notices, and doc links. Use when: \"add godoc\", \"document this package\", \"write doc comments\", \"add examples to docs\", \"deprecate a function\", \"package documentation\", \"improve the docs\". Do NOT use for: commit messages (use git-commit), README-level project guides (plain writing task), or code style rules (use go-coding-standards).",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "eduardo-sl",
+  "install_path": ".claude/skills/go-documentation/SKILL.md",
+  "source": {
+    "repo": "eduardo-sl/go-agent-skills",
+    "url": "https://github.com/eduardo-sl/go-agent-skills/blob/main/skills/(code-quality)/go-documentation/SKILL.md",
+    "path": "skills/(code-quality)/go-documentation/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-02T12:37:25.877Z",
+    "stars": 63,
+    "language": "Shell",
+    "pushed_at": "2026-07-11T22:56:44Z",
+    "license": "MIT"
+  }
+}

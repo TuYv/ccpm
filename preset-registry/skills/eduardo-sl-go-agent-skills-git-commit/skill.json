@@ -1,0 +1,25 @@
+{
+  "id": "eduardo-sl-go-agent-skills-git-commit",
+  "name": "git-commit",
+  "description": "> Structured git commit messages following Conventional Commits format for Go projects. Generates well-scoped, atomic commits with clear descriptions. Use when committing changes, writing commit messages, preparing PRs, or reviewing commit history quality. Trigger examples: \"commit these changes\", \"create commit\", \"commit message\", \"prepare PR\", \"squash commits\". Do NOT use for changelog generation (use changelog-generator) or code review (use go-code-review).",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "eduardo-sl",
+  "install_path": ".claude/skills/git-commit/SKILL.md",
+  "source": {
+    "repo": "eduardo-sl/go-agent-skills",
+    "url": "https://github.com/eduardo-sl/go-agent-skills/blob/main/skills/(workflow)/git-commit/SKILL.md",
+    "path": "skills/(workflow)/git-commit/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-02T12:37:27.020Z",
+    "stars": 63,
+    "language": "Shell",
+    "pushed_at": "2026-07-11T22:56:44Z",
+    "license": "MIT"
+  }
+}

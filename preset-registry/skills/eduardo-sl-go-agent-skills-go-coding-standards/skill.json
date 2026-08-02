@@ -1,0 +1,25 @@
+{
+  "id": "eduardo-sl-go-agent-skills-go-coding-standards",
+  "name": "go-coding-standards",
+  "description": "> Go coding standards and style conventions grounded in Effective Go, Go Code Review Comments, and production-proven idioms. Use when writing or reviewing Go code, enforcing naming conventions, import ordering, variable declarations, struct initialization, or formatting rules. Trigger examples: \"check Go style\", \"fix formatting\", \"review naming\", \"Go conventions\". Do NOT use for architecture decisions, concurrency patterns, or performance tuning — use go-architecture-review, go-concurrency-revie",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "eduardo-sl",
+  "install_path": ".claude/skills/go-coding-standards/SKILL.md",
+  "source": {
+    "repo": "eduardo-sl/go-agent-skills",
+    "url": "https://github.com/eduardo-sl/go-agent-skills/blob/main/skills/(code-quality)/go-coding-standards/SKILL.md",
+    "path": "skills/(code-quality)/go-coding-standards/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-02T12:37:25.561Z",
+    "stars": 63,
+    "language": "Shell",
+    "pushed_at": "2026-07-11T22:56:44Z",
+    "license": "MIT"
+  }
+}

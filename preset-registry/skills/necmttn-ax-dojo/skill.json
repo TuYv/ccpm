@@ -1,0 +1,25 @@
+{
+  "id": "necmttn-ax-dojo",
+  "name": "dojo",
+  "description": "Surplus-quota training loop over the ax graph - the agent burns the remaining 5h/7d plan-quota window on self-improvement: locking pending verdicts, filling briefs, backtesting routing classes, minting proposals, running worktree experiments, and drafting upstream issue reports. Triggers when the user says \"/dojo\", \"enter the dojo\", \"dojo time\", \"train overnight\", \"burn my surplus quota\", \"dream mode\" (legacy name), or invokes /loop /dojo. Requires ax (axctl) on PATH and the local SurrealDB runn",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Necmttn",
+  "install_path": ".claude/skills/dojo/SKILL.md",
+  "source": {
+    "repo": "Necmttn/ax",
+    "url": "https://github.com/Necmttn/ax/blob/main/skills/dojo/SKILL.md",
+    "path": "skills/dojo/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-02T12:37:22.935Z",
+    "stars": 91,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-23T06:19:29Z",
+    "license": "AGPL-3.0"
+  }
+}

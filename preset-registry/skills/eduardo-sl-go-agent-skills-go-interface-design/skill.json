@@ -1,0 +1,25 @@
+{
+  "id": "eduardo-sl-go-agent-skills-go-interface-design",
+  "name": "go-interface-design",
+  "description": "> Go interface design patterns: implicit interfaces, consumer-side definition, interface compliance verification, composition, the accept-interfaces-return-structs principle, and common pitfalls. Use when designing interfaces, decoupling packages, defining contracts, reviewing interface usage, or refactoring for testability. Trigger examples: \"design interface\", \"accept interfaces return structs\", \"interface compliance\", \"consumer-side interface\", \"interface composition\". Do NOT use for HTTP han",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "eduardo-sl",
+  "install_path": ".claude/skills/go-interface-design/SKILL.md",
+  "source": {
+    "repo": "eduardo-sl/go-agent-skills",
+    "url": "https://github.com/eduardo-sl/go-agent-skills/blob/main/skills/(architecture)/go-interface-design/SKILL.md",
+    "path": "skills/(architecture)/go-interface-design/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-02T12:37:25.256Z",
+    "stars": 63,
+    "language": "Shell",
+    "pushed_at": "2026-07-11T22:56:44Z",
+    "license": "MIT"
+  }
+}

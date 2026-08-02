@@ -1,0 +1,25 @@
+{
+  "id": "eduardo-sl-go-agent-skills-go-architecture-review",
+  "name": "go-architecture-review",
+  "description": "> Review Go project architecture: package structure, dependency direction, layering, separation of concerns, domain modeling, and module boundaries. Use when reviewing architecture, designing package layout, evaluating dependency graphs, or refactoring monoliths into modules. Trigger examples: \"review architecture\", \"package structure\", \"project layout\", \"dependency direction\", \"clean architecture Go\", \"module boundaries\". Do NOT use for code-level style (use go-coding-standards) or API endpoint",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "eduardo-sl",
+  "install_path": ".claude/skills/go-architecture-review/SKILL.md",
+  "source": {
+    "repo": "eduardo-sl/go-agent-skills",
+    "url": "https://github.com/eduardo-sl/go-agent-skills/blob/main/skills/(architecture)/go-architecture-review/SKILL.md",
+    "path": "skills/(architecture)/go-architecture-review/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-02T12:37:24.709Z",
+    "stars": 63,
+    "language": "Shell",
+    "pushed_at": "2026-07-11T22:56:44Z",
+    "license": "MIT"
+  }
+}

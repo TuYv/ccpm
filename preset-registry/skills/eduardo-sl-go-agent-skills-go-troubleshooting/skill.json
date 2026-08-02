@@ -1,0 +1,25 @@
+{
+  "id": "eduardo-sl-go-agent-skills-go-troubleshooting",
+  "name": "go-troubleshooting",
+  "description": "> Diagnose runtime problems in Go programs: panics and stack traces, deadlocks, goroutine leaks, memory leaks, OOM kills, race reports, and debugging with delve and pprof. Use when: \"debug this panic\", \"read this stack trace\", \"deadlock\", \"memory leak\", \"goroutine count growing\", \"OOM\", \"program hangs\", \"race detector output\", \"use delve\". Do NOT use for: optimizing code that works (use go-performance-review), writing new concurrent code (use go-concurrency-review), or failing test design (use g",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "eduardo-sl",
+  "install_path": ".claude/skills/go-troubleshooting/SKILL.md",
+  "source": {
+    "repo": "eduardo-sl/go-agent-skills",
+    "url": "https://github.com/eduardo-sl/go-agent-skills/blob/main/skills/(safety)/go-troubleshooting/SKILL.md",
+    "path": "skills/(safety)/go-troubleshooting/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-02T12:37:26.714Z",
+    "stars": 63,
+    "language": "Shell",
+    "pushed_at": "2026-07-11T22:56:44Z",
+    "license": "MIT"
+  }
+}

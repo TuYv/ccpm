@@ -1,0 +1,25 @@
+{
+  "id": "serhiikorniienko-bullshit-detector-fetch-content",
+  "name": "fetch-content",
+  "description": "Fetch and normalize any content source into clean text with metadata — YouTube video transcripts, TikTok captions, web articles, PDFs, tweets/X posts, local files. Use when the user shares a YouTube link, TikTok link, article URL, tweet/X link, or PDF (URL or file) and you need its actual text content to summarize, analyze, fact-check, or answer questions about it.",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "SerhiiKorniienko",
+  "install_path": ".claude/skills/fetch-content/SKILL.md",
+  "source": {
+    "repo": "SerhiiKorniienko/bullshit-detector",
+    "url": "https://github.com/SerhiiKorniienko/bullshit-detector/blob/main/skills/ingestion/fetch-content/SKILL.md",
+    "path": "skills/ingestion/fetch-content/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-02T12:37:28.891Z",
+    "stars": 96,
+    "language": "Python",
+    "pushed_at": "2026-08-02T11:05:04Z",
+    "license": "MIT"
+  }
+}

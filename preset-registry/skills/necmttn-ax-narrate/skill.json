@@ -1,0 +1,25 @@
+{
+  "id": "necmttn-ax-narrate",
+  "name": "ax-narrate",
+  "description": "Write the agent-generated narration of the current session - the reviewable story of what changed, including what never reaches a PR (user corrections, abandoned attempts, tool failures). Triggers on \"narrate this session\", \"summarize what changed\", \"write the session story\", \"narrate what we did\", \"session narration\". Output is .ax/narrations/<session-id>.json for the ax studio narration view. Do NOT fire on \"summarize this file\" or generic recap questions answered inline - this skill writes a ",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Necmttn",
+  "install_path": ".claude/skills/narrate/SKILL.md",
+  "source": {
+    "repo": "Necmttn/ax",
+    "url": "https://github.com/Necmttn/ax/blob/main/skills/narrate/SKILL.md",
+    "path": "skills/narrate/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-02T12:37:23.156Z",
+    "stars": 91,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-23T06:19:29Z",
+    "license": "AGPL-3.0"
+  }
+}

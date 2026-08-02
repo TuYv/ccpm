@@ -1,0 +1,25 @@
+{
+  "id": "eduardo-sl-go-agent-skills-go-refactoring",
+  "name": "go-refactoring",
+  "description": "> Safe refactoring workflow for Go: behavior-preserving steps, compiler-checked renames, extracting packages, breaking circular dependencies, and strangler migrations — always behind green tests. Use when: \"refactor this\", \"rename across the codebase\", \"extract a package\", \"break this circular dependency\", \"split this god package\", \"migrate callers\", \"clean up without changing behavior\". Do NOT use for: deciding the target architecture (use go-architecture-review), adopting new language features",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "eduardo-sl",
+  "install_path": ".claude/skills/go-refactoring/SKILL.md",
+  "source": {
+    "repo": "eduardo-sl/go-agent-skills",
+    "url": "https://github.com/eduardo-sl/go-agent-skills/blob/main/skills/(workflow)/go-refactoring/SKILL.md",
+    "path": "skills/(workflow)/go-refactoring/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-02T12:37:27.344Z",
+    "stars": 63,
+    "language": "Shell",
+    "pushed_at": "2026-07-11T22:56:44Z",
+    "license": "MIT"
+  }
+}

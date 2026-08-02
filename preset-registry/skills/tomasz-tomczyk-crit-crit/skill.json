@@ -1,0 +1,25 @@
+{
+  "id": "tomasz-tomczyk-crit-crit",
+  "name": "crit",
+  "description": "Review code changes, a plan, a live page (running dev server), or a local HTML file with crit inline comments. Use when asked to review code, a plan, a diff, a running web app, or when you want structured human feedback on your work.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tomasz-tomczyk",
+  "install_path": ".claude/skills/crit/SKILL.md",
+  "source": {
+    "repo": "tomasz-tomczyk/crit",
+    "url": "https://github.com/tomasz-tomczyk/crit/blob/main/integrations/qwen/skills/crit/SKILL.md",
+    "path": "integrations/qwen/skills/crit/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-02T12:37:21.809Z",
+    "stars": 862,
+    "language": "Go",
+    "pushed_at": "2026-08-01T21:27:10Z",
+    "license": "MIT"
+  }
+}

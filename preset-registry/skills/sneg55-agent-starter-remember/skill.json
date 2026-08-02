@@ -1,0 +1,25 @@
+{
+  "id": "sneg55-agent-starter-remember",
+  "name": "remember",
+  "description": "Review auto-memory entries and propose promotions to CLAUDE.md, CLAUDE.local.md, or shared memory. Also detects outdated, conflicting, and duplicate entries across memory layers.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sneg55",
+  "install_path": ".claude/skills/remember/SKILL.md",
+  "source": {
+    "repo": "sneg55/agent-starter",
+    "url": "https://github.com/sneg55/agent-starter/blob/main/skills/remember/SKILL.md",
+    "path": "skills/remember/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-02T12:38:27.830Z",
+    "stars": 79,
+    "language": "Shell",
+    "pushed_at": "2026-07-27T10:04:18Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "eduardo-sl-go-agent-skills-go-performance-review",
+  "name": "go-performance-review",
+  "description": "> Detect performance anti-patterns and apply optimization techniques in Go. Covers allocations, string handling, slice/map preallocation, sync.Pool, benchmarking, and profiling with pprof. Use when checking performance, finding slow code, reducing allocations, profiling, or reviewing hot paths. Trigger examples: \"check performance\", \"find slow code\", \"reduce allocations\", \"benchmark this\", \"profile\", \"optimize Go code\". Do NOT use for concurrency correctness (use go-concurrency-review) or genera",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "eduardo-sl",
+  "install_path": ".claude/skills/go-performance-review/SKILL.md",
+  "source": {
+    "repo": "eduardo-sl/go-agent-skills",
+    "url": "https://github.com/eduardo-sl/go-agent-skills/blob/main/skills/(safety)/go-performance-review/SKILL.md",
+    "path": "skills/(safety)/go-performance-review/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-02T12:37:26.516Z",
+    "stars": 63,
+    "language": "Shell",
+    "pushed_at": "2026-07-11T22:56:44Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "tomasz-tomczyk-crit-crit-story",
+  "name": "crit-story",
+  "description": "Author a crit story only when the user explicitly invokes /crit-story or directly asks you to generate a crit story. Do not infer this skill from generic review, PR, or diff-review requests.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tomasz-tomczyk",
+  "install_path": ".claude/skills/crit-story/SKILL.md",
+  "source": {
+    "repo": "tomasz-tomczyk/crit",
+    "url": "https://github.com/tomasz-tomczyk/crit/blob/main/integrations/claude-code/skills/crit-story/SKILL.md",
+    "path": "integrations/claude-code/skills/crit-story/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-02T12:37:19.674Z",
+    "stars": 862,
+    "language": "Go",
+    "pushed_at": "2026-08-01T21:27:10Z",
+    "license": "MIT"
+  }
+}

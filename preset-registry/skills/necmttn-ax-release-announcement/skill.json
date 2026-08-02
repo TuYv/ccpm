@@ -1,0 +1,25 @@
+{
+  "id": "necmttn-ax-release-announcement",
+  "name": "release-announcement",
+  "description": "Draft or revise ax release announcements and website changelog pages. Triggers when the user says \"write release notes\", \"draft release announcement\", \"prepare changelog\", \"release page\", \"version page\", \"what changed in vX.Y.Z\", \"generate announcement for vX.Y.Z\", or asks for a release narrative. Uses Release Please range evidence, git changed files/commits, and ax sessions/recall to explain how the release got there. Do NOT trigger for ordinary commit messages or unrelated docs.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Necmttn",
+  "install_path": ".claude/skills/release-announcement/SKILL.md",
+  "source": {
+    "repo": "Necmttn/ax",
+    "url": "https://github.com/Necmttn/ax/blob/main/skills/release-announcement/SKILL.md",
+    "path": "skills/release-announcement/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-02T12:37:23.257Z",
+    "stars": 91,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-23T06:19:29Z",
+    "license": "AGPL-3.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "agent37-platform-agent37-skills-collection-yc-advisor",
+  "name": "yc-advisor",
+  "description": "This skill should be used when the user asks questions about startups, founding decisions, co-founders, fundraising, product development, growth, hiring, or any entrepreneurial advice. It provides access to Y Combinator's complete library of 443 curated resources including essays by Paul Graham, founder interviews, and startup school lectures. Use this skill to give thorough, research-backed advice on startup decisions.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "agent37-platform",
+  "install_path": ".claude/skills/yc-advisor/SKILL.md",
+  "source": {
+    "repo": "agent37-platform/agent37-skills-collection",
+    "url": "https://github.com/agent37-platform/agent37-skills-collection/blob/main/plugins/yc-advisor/skills/yc-advisor/SKILL.md",
+    "path": "plugins/yc-advisor/skills/yc-advisor/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-02T12:38:28.565Z",
+    "stars": 185,
+    "language": "Python",
+    "pushed_at": "2026-07-20T23:16:59Z",
+    "license": "MIT"
+  }
+}

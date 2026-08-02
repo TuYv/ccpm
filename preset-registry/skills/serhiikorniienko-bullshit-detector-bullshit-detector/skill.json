@@ -1,0 +1,25 @@
+{
+  "id": "serhiikorniienko-bullshit-detector-bullshit-detector",
+  "name": "bullshit-detector",
+  "description": "Fact-check and hype-audit content. Extracts the discrete claims from a video, article, tweet, or PDF, verifies each against independent sources via web search, and produces a report card with per-claim verdicts and an overall BS score (0-10). Use when the user asks to fact-check, verify, debunk, or evaluate credibility — \"is this true/legit/bullshit\", \"check this video\", \"how much of this holds up\".",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "SerhiiKorniienko",
+  "install_path": ".claude/skills/bullshit-detector/SKILL.md",
+  "source": {
+    "repo": "SerhiiKorniienko/bullshit-detector",
+    "url": "https://github.com/SerhiiKorniienko/bullshit-detector/blob/main/skills/analysis/bullshit-detector/SKILL.md",
+    "path": "skills/analysis/bullshit-detector/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-02T12:37:28.436Z",
+    "stars": 96,
+    "language": "Python",
+    "pushed_at": "2026-08-02T11:05:04Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "eduardo-sl-go-agent-skills-go-grpc",
+  "name": "go-grpc",
+  "description": "> gRPC services in Go beyond the basics: proto design, status codes and error details, interceptors, deadlines, streaming, health checks, and graceful shutdown. Use when: \"gRPC service\", \"proto design\", \"gRPC error handling\", \"interceptor\", \"gRPC streaming\", \"gRPC deadline\", \"grpc health check\", \"gRPC status codes\". Do NOT use for: REST/HTTP handler design (use go-api-design), protobuf-agnostic API layering (use go-architecture-review), or TLS hardening details (use go-security-audit).",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "eduardo-sl",
+  "install_path": ".claude/skills/go-grpc/SKILL.md",
+  "source": {
+    "repo": "eduardo-sl/go-agent-skills",
+    "url": "https://github.com/eduardo-sl/go-agent-skills/blob/main/skills/(architecture)/go-grpc/SKILL.md",
+    "path": "skills/(architecture)/go-grpc/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-02T12:37:25.127Z",
+    "stars": 63,
+    "language": "Shell",
+    "pushed_at": "2026-07-11T22:56:44Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "eduardo-sl-go-agent-skills-go-code-review",
+  "name": "go-code-review",
+  "description": "> Comprehensive code review checklist for Go projects. Evaluates code quality, idiomatic patterns, error handling, naming, package structure, and test coverage. Use when reviewing Go code, PRs, or before merging changes. Trigger examples: \"review this code\", \"check this PR\", \"code review\", \"review Go file\". Do NOT use for security-specific audits (use go-security-audit) or performance-specific analysis (use go-performance-review).",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "eduardo-sl",
+  "install_path": ".claude/skills/go-code-review/SKILL.md",
+  "source": {
+    "repo": "eduardo-sl/go-agent-skills",
+    "url": "https://github.com/eduardo-sl/go-agent-skills/blob/main/skills/(code-quality)/go-code-review/SKILL.md",
+    "path": "skills/(code-quality)/go-code-review/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-02T12:37:25.461Z",
+    "stars": 63,
+    "language": "Shell",
+    "pushed_at": "2026-07-11T22:56:44Z",
+    "license": "MIT"
+  }
+}

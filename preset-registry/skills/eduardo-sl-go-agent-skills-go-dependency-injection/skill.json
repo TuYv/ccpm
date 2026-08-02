@@ -1,0 +1,25 @@
+{
+  "id": "eduardo-sl-go-agent-skills-go-dependency-injection",
+  "name": "go-dependency-injection",
+  "description": "> Dependency injection in Go: constructor injection, wiring in main, avoiding global state, and when frameworks (wire, fx, dig) earn their complexity. Use when: \"dependency injection\", \"wire up dependencies\", \"inject this\", \"remove global state\", \"singleton in Go\", \"use google/wire\", \"uber fx\", \"make this testable\". Do NOT use for: interface design principles (use go-interface-design), project directory structure (use go-project-layout), or test doubles and mocks (use go-test-quality).",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "eduardo-sl",
+  "install_path": ".claude/skills/go-dependency-injection/SKILL.md",
+  "source": {
+    "repo": "eduardo-sl/go-agent-skills",
+    "url": "https://github.com/eduardo-sl/go-agent-skills/blob/main/skills/(architecture)/go-dependency-injection/SKILL.md",
+    "path": "skills/(architecture)/go-dependency-injection/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-02T12:37:24.921Z",
+    "stars": 63,
+    "language": "Shell",
+    "pushed_at": "2026-07-11T22:56:44Z",
+    "license": "MIT"
+  }
+}

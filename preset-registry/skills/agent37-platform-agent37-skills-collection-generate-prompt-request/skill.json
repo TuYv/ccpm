@@ -1,0 +1,25 @@
+{
+  "id": "agent37-platform-agent37-skills-collection-generate-prompt-request",
+  "name": "generate-prompt-request",
+  "description": "This skill should be used to generate a \"prompt request\" one-pager that summarizes the current session for a pull request. It produces one consolidated User block folding together every ask and decision from the session, plus one Assistant block summarizing what was built. Use it when the user asks to \"generate a prompt request\", recap or summarize the session for a PR, or capture what was requested. Also use it automatically when opening a pull request or writing a PR description, so the PR bod",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "agent37-platform",
+  "install_path": ".claude/skills/generate-prompt-request/SKILL.md",
+  "source": {
+    "repo": "agent37-platform/agent37-skills-collection",
+    "url": "https://github.com/agent37-platform/agent37-skills-collection/blob/main/plugins/generate-prompt-request/skills/generate-prompt-request/SKILL.md",
+    "path": "plugins/generate-prompt-request/skills/generate-prompt-request/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-02T12:38:28.458Z",
+    "stars": 185,
+    "language": "Python",
+    "pushed_at": "2026-07-20T23:16:59Z",
+    "license": "MIT"
+  }
+}

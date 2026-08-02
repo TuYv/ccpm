@@ -1,0 +1,25 @@
+{
+  "id": "jnmetacode-ai-shortfilm-prompts-shortfilm-prompt",
+  "name": "shortfilm-prompt",
+  "description": "Generate cinematic AI shortfilm prompts (works with Seedance 2.0, Xiaoyunque, Sora, Kling, Jimeng, Veo) using the 5-stage structure from Mx-Shell's Zombie Scavenger. Trigger when the user wants transformation sequences, multi-shot narrative shorts, weapon-charge/combat segments, emotional family/pet/farewell narratives (催泪/亲情/萌宠/离别), or any cinematic video prompt.",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "jnMetaCode",
+  "install_path": ".claude/skills/shortfilm-prompt/SKILL.md",
+  "source": {
+    "repo": "jnMetaCode/ai-shortfilm-prompts",
+    "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/skills/shortfilm-prompt/SKILL.md",
+    "path": "skills/shortfilm-prompt/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-02T12:37:32.012Z",
+    "stars": 311,
+    "language": "Python",
+    "pushed_at": "2026-07-23T07:13:32Z",
+    "license": "MIT"
+  }
+}

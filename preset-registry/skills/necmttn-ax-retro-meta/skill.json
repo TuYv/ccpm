@@ -1,0 +1,25 @@
+{
+  "id": "necmttn-ax-retro-meta",
+  "name": "retro-meta",
+  "description": "Deep retro of retros - investigation pass that surfaces improvements across older retros and the current ax setup. External AI agent drives the reasoning with high thinking enabled. Triggers when user says \"deep retro\", \"investigate ax\", \"what should I fix in my setup\", \"retro of retros\", or invokes /ax:retro-meta. Use after `ax:retro` if proposals are sparse or you want broader exploration.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Necmttn",
+  "install_path": ".claude/skills/retro-meta/SKILL.md",
+  "source": {
+    "repo": "Necmttn/ax",
+    "url": "https://github.com/Necmttn/ax/blob/main/skills/retro-meta/SKILL.md",
+    "path": "skills/retro-meta/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-02T12:37:23.357Z",
+    "stars": 91,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-23T06:19:29Z",
+    "license": "AGPL-3.0"
+  }
+}

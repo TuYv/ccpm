@@ -1,0 +1,25 @@
+{
+  "id": "eduardo-sl-go-agent-skills-go-test-table-driven",
+  "name": "go-test-table-driven",
+  "description": "> Deep dive on table-driven tests in Go: when to use them, when to avoid them, struct design, subtest naming, advanced patterns like test matrices and shared setup, and refactoring bloated tables into clean ones. Use when writing table-driven tests, refactoring test tables, reviewing table test structure, or deciding whether table-driven is the right approach. Trigger examples: \"table-driven test\", \"table test\", \"test cases struct\", \"test matrix\", \"parametrize tests\", \"data-driven test\", \"refact",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "eduardo-sl",
+  "install_path": ".claude/skills/go-test-table-driven/SKILL.md",
+  "source": {
+    "repo": "eduardo-sl/go-agent-skills",
+    "url": "https://github.com/eduardo-sl/go-agent-skills/blob/main/skills/(testing)/go-test-table-driven/SKILL.md",
+    "path": "skills/(testing)/go-test-table-driven/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-02T12:37:26.917Z",
+    "stars": 63,
+    "language": "Shell",
+    "pushed_at": "2026-07-11T22:56:44Z",
+    "license": "MIT"
+  }
+}

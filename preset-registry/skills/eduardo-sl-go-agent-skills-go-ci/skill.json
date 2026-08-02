@@ -1,0 +1,25 @@
+{
+  "id": "eduardo-sl-go-agent-skills-go-ci",
+  "name": "go-ci",
+  "description": "> Continuous integration for Go projects: GitHub Actions pipelines, caching, golangci-lint setup, test/coverage gates, vulnerability scanning, build matrices, and Makefile targets. Use when: \"set up CI\", \"GitHub Actions for Go\", \"add lint to the pipeline\", \"CI is slow\", \"coverage gate\", \"build matrix\", \"write a Makefile\", \"run govulncheck in CI\". Do NOT use for: commit message conventions (use git-commit), choosing or auditing dependencies (use go-dependency-audit), or writing the tests themselv",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "eduardo-sl",
+  "install_path": ".claude/skills/go-ci/SKILL.md",
+  "source": {
+    "repo": "eduardo-sl/go-agent-skills",
+    "url": "https://github.com/eduardo-sl/go-agent-skills/blob/main/skills/(workflow)/go-ci/SKILL.md",
+    "path": "skills/(workflow)/go-ci/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-02T12:37:27.122Z",
+    "stars": 63,
+    "language": "Shell",
+    "pushed_at": "2026-07-11T22:56:44Z",
+    "license": "MIT"
+  }
+}

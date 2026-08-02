@@ -1,0 +1,25 @@
+{
+  "id": "eduardo-sl-go-agent-skills-go-project-layout",
+  "name": "go-project-layout",
+  "description": "> Scaffold new Go projects and services: directory structure, cmd/ and internal/ conventions, when to use a flat layout, module naming, and main package wiring. Use when: \"new Go project\", \"scaffold a service\", \"create project structure\", \"start a Go module\", \"how do I organize a new service\", \"set up folder structure\". Do NOT use for: reviewing an existing architecture (use go-architecture-review), dependency injection wiring details (use go-dependency-injection), or CI pipeline setup (use go-c",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "eduardo-sl",
+  "install_path": ".claude/skills/go-project-layout/SKILL.md",
+  "source": {
+    "repo": "eduardo-sl/go-agent-skills",
+    "url": "https://github.com/eduardo-sl/go-agent-skills/blob/main/skills/(architecture)/go-project-layout/SKILL.md",
+    "path": "skills/(architecture)/go-project-layout/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-02T12:37:25.363Z",
+    "stars": 63,
+    "language": "Shell",
+    "pushed_at": "2026-07-11T22:56:44Z",
+    "license": "MIT"
+  }
+}

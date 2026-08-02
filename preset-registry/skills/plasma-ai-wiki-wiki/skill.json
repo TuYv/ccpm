@@ -1,0 +1,25 @@
+{
+  "id": "plasma-ai-wiki-wiki",
+  "name": "wiki",
+  "description": "Indexed knowledge bases with command-line tools for agents.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "plasma-ai",
+  "install_path": ".claude/skills/wiki/SKILL.md",
+  "source": {
+    "repo": "plasma-ai/wiki",
+    "url": "https://github.com/plasma-ai/wiki/blob/main/wiki/skills/wiki/SKILL.md",
+    "path": "wiki/skills/wiki/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-02T12:37:29.648Z",
+    "stars": 75,
+    "language": "Python",
+    "pushed_at": "2026-07-29T06:00:16Z",
+    "license": "Apache-2.0"
+  }
+}

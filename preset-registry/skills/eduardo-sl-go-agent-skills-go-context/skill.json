@@ -1,0 +1,25 @@
+{
+  "id": "eduardo-sl-go-agent-skills-go-context",
+  "name": "go-context",
+  "description": "> Correct usage of context.Context in Go: propagation, cancellation, timeouts, deadlines, values, and common anti-patterns. Use when: \"context usage\", \"context.Context\", \"context cancellation\", \"timeout\", \"context.WithTimeout\", \"context.WithCancel\", \"context values\", \"context propagation\". Do NOT use for: concurrency patterns beyond context (use go-concurrency-review), HTTP middleware context (use go-api-design), or error handling (use go-error-handling).",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "eduardo-sl",
+  "install_path": ".claude/skills/go-context/SKILL.md",
+  "source": {
+    "repo": "eduardo-sl/go-agent-skills",
+    "url": "https://github.com/eduardo-sl/go-agent-skills/blob/main/skills/(code-quality)/go-context/SKILL.md",
+    "path": "skills/(code-quality)/go-context/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-02T12:37:25.671Z",
+    "stars": 63,
+    "language": "Shell",
+    "pushed_at": "2026-07-11T22:56:44Z",
+    "license": "MIT"
+  }
+}

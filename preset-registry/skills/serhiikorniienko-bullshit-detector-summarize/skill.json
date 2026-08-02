@@ -1,0 +1,25 @@
+{
+  "id": "serhiikorniienko-bullshit-detector-summarize",
+  "name": "summarize",
+  "description": "Produce a structured summary of a video, article, tweet thread, or PDF — TLDR, key points with timestamps/locations, notable quotes, and who should read/watch it. Use when the user asks to summarize a link or file, wants a TLDR, or asks \"what does this video/article say\" / \"is this worth watching\".",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "SerhiiKorniienko",
+  "install_path": ".claude/skills/summarize/SKILL.md",
+  "source": {
+    "repo": "SerhiiKorniienko/bullshit-detector",
+    "url": "https://github.com/SerhiiKorniienko/bullshit-detector/blob/main/skills/analysis/summarize/SKILL.md",
+    "path": "skills/analysis/summarize/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-02T12:37:28.660Z",
+    "stars": 96,
+    "language": "Python",
+    "pushed_at": "2026-08-02T11:05:04Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "eduardo-sl-go-agent-skills-go-test-quality",
+  "name": "go-test-quality",
+  "description": "> Go testing patterns for production-grade code: subtests, test helpers, fixtures, golden files, httptest, testcontainers, property-based testing, and fuzz testing. Covers mocking strategies, test isolation, coverage analysis, and test design philosophy. Use when writing tests, improving coverage, reviewing test quality, setting up test infrastructure, or choosing a testing approach. Trigger examples: \"add tests\", \"improve coverage\", \"write tests for this\", \"test helpers\", \"mock this dependency\"",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "eduardo-sl",
+  "install_path": ".claude/skills/go-test-quality/SKILL.md",
+  "source": {
+    "repo": "eduardo-sl/go-agent-skills",
+    "url": "https://github.com/eduardo-sl/go-agent-skills/blob/main/skills/(testing)/go-test-quality/SKILL.md",
+    "path": "skills/(testing)/go-test-quality/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-02T12:37:26.819Z",
+    "stars": 63,
+    "language": "Shell",
+    "pushed_at": "2026-07-11T22:56:44Z",
+    "license": "MIT"
+  }
+}

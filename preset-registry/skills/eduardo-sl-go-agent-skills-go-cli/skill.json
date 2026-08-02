@@ -1,0 +1,25 @@
+{
+  "id": "eduardo-sl-go-agent-skills-go-cli",
+  "name": "go-cli",
+  "description": "> Build command-line tools in Go: flag handling, subcommands, stdin/stdout discipline, exit codes, signal handling, and when Cobra/Viper earn their weight over the standard library. Use when: \"build a CLI\", \"add a subcommand\", \"parse flags\", \"exit codes\", \"handle Ctrl+C\", \"cobra command\", \"read from stdin\", \"CLI UX\". Do NOT use for: HTTP API design (use go-api-design), project scaffolding in general (use go-project-layout), or configuration of services (use go-architecture-review).",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "eduardo-sl",
+  "install_path": ".claude/skills/go-cli/SKILL.md",
+  "source": {
+    "repo": "eduardo-sl/go-agent-skills",
+    "url": "https://github.com/eduardo-sl/go-agent-skills/blob/main/skills/(architecture)/go-cli/SKILL.md",
+    "path": "skills/(architecture)/go-cli/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-02T12:37:24.820Z",
+    "stars": 63,
+    "language": "Shell",
+    "pushed_at": "2026-07-11T22:56:44Z",
+    "license": "MIT"
+  }
+}

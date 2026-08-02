@@ -1,0 +1,25 @@
+{
+  "id": "qwenlm-qwen-code-repo-hygiene",
+  "name": "repo-hygiene",
+  "description": "Use when the scheduled repo-hygiene workflow runs from GitHub Actions (or an operator dry-run) to scan the repository for small, certain docs/test/code hygiene issues and fix them as one batched branch.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "QwenLM",
+  "install_path": ".claude/skills/repo-hygiene/SKILL.md",
+  "source": {
+    "repo": "QwenLM/qwen-code",
+    "url": "https://github.com/QwenLM/qwen-code/blob/main/.qwen/skills/repo-hygiene/SKILL.md",
+    "path": ".qwen/skills/repo-hygiene/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-02T12:35:32.022Z",
+    "stars": 26510,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-02T12:31:19Z",
+    "license": "Apache-2.0"
+  }
+}
