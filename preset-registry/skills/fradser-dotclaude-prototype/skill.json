@@ -1,0 +1,25 @@
+{
+  "id": "fradser-dotclaude-prototype",
+  "name": "prototype",
+  "description": "Build a throwaway prototype to answer a design question. Use when the user wants to sanity-check whether a state model or logic feels right, or explore what a UI should look like.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "FradSer",
+  "install_path": ".claude/skills/prototype/SKILL.md",
+  "source": {
+    "repo": "FradSer/dotclaude",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/superdev/skills/engineering/prototype/SKILL.md",
+    "path": "superdev/skills/engineering/prototype/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-02T14:09:37.740Z",
+    "stars": 577,
+    "language": "JavaScript",
+    "pushed_at": "2026-08-02T12:11:55Z",
+    "license": "MIT"
+  }
+}

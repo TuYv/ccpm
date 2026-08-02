@@ -1,7 +1,7 @@
 {
   "id": "fradser-dotclaude-research",
-  "name": "storm-research",
-  "description": "Run STORM phase 1 — multi-perspective research. This skill should be used when the user asks to \"research a topic for an article\", \"find sources on X from multiple perspectives\", \"do storm research on X\", or invokes /storm:research. Discovers personas, runs simulated Q&A per persona in parallel, and produces an information table + deduplicated sources.",
+  "name": "research",
+  "description": "Investigate a question against high-trust primary sources and capture the findings as a Markdown file in the repo. Use when the user wants a topic researched, docs or API facts gathered, or reading legwork delegated to a background agent.",
   "category": "文档写作",
   "compatible_tools": [
     "claude",
@@ -13,13 +13,13 @@
   "install_path": ".claude/skills/research/SKILL.md",
   "source": {
     "repo": "FradSer/dotclaude",
-    "url": "https://github.com/FradSer/dotclaude/blob/main/storm/skills/research/SKILL.md",
-    "path": "storm/skills/research/SKILL.md",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/superdev/skills/engineering/research/SKILL.md",
+    "path": "superdev/skills/engineering/research/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-02T11:45:33.169Z",
+    "discovered_at": "2026-08-02T14:09:38.056Z",
     "stars": 577,
     "language": "JavaScript",
-    "pushed_at": "2026-08-02T08:12:03Z",
+    "pushed_at": "2026-08-02T12:11:55Z",
     "license": "MIT"
   }
 }
