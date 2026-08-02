@@ -1,12 +1,16 @@
 ---
 name: to-spec
-description: Turn the current conversation into a spec and publish it to the project issue tracker — no interview, just synthesis of what you've already discussed.
+description: "Turns the current conversation into a spec and publishes it to the project issue tracker, with no interview. Use when the user says \"write a spec\", \"create a PRD\", or wants the discussion captured as a spec."
 disable-model-invocation: true
 ---
 
 This skill takes the current conversation context and codebase understanding and produces a spec (you may know this document as a PRD). Do NOT interview the user — just synthesize what you already know.
 
 The issue tracker and triage label vocabulary should have been provided to you — run `/superdev:setup-matt-pocock-skills` if not.
+
+## CRITICAL: No interview — synthesize what you already know
+
+Do NOT interview the user; the spec is a synthesis of the conversation and codebase understanding already in context. Test at the highest existing seam, preferring one seam to many — check the seams with the user before writing.
 
 ## Process
 
@@ -77,13 +81,3 @@ A description of the things that are out of scope for this spec.
 Any further notes about the feature.
 
 </spec-template>
-
-## Self-evaluate against the spec checklist (optional, feeds self-improvement)
-
-After publishing the spec, optionally apply the spec-quality checklist so the self-improvement loop (`/superdev:retrospective`) has spec-mode input to learn from — not just code-mode (which `/superdev:code-review` supplies).
-
-- Resolve `docs/retros/checklist-spec.md`. If it doesn't exist, skip — the retrospective will bootstrap it on its first run.
-- Apply each item to the spec you just wrote (scenario coverage, requirement traceability, declarative Gherkin), emitting a binary PASS/FAIL per item with the spec section/scenario as evidence.
-- Report the per-item results in this conversation (no file is written — retrospective reads the outcomes from the conversation and the published spec).
-
-This step is the spec counterpart of `/superdev:code-review` step 5.5's Standards-axis checklist scoring — it closes the loop so every checklist mode has at least one producing consumer.

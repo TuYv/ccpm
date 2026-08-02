@@ -29,7 +29,7 @@ Look for the originating spec, in this order:
 1. Issue references in the commit messages (`#123`, `Closes #45`, GitLab `!67`, etc.) — fetch via the workflow in `docs/agents/issue-tracker.md`.
 2. A path the user passed as an argument.
 3. A PRD/spec file under `docs/`, `specs/`, or `.scratch/` matching the branch name or feature.
-4. If nothing is found, ask the user where the spec is. If they say there isn't one, the **Spec** sub-agent will skip and report "no spec available".
+4. If nothing is found, use the AskUserQuestion tool to ask where the spec is (options: in the repo / linked from the issue or PR / external document / no spec exists). If there isn't one, the **Spec** sub-agent will skip and report "no spec available".
 
 ### 3. Identify the standards sources
 
@@ -83,13 +83,13 @@ End with a one-line summary: total findings per axis, and the worst issue _withi
 
 Before scoring, load the project's known traps: `Glob docs/memory/*.md`, then read every file whose frontmatter `category` is `pitfall` or `convention` and whose `summary` is topically related to this review (the diff's files, patterns, or stack). These are evaluator-verified failure modes this repo already paid for.
 
-In step 5.5's Standards scoring, treat a read memory file as a red flag: if the diff exhibits a known pitfall, the item FAILs and its evidence cites the memory file (`docs/memory/pitfall_<slug>.md`). If `docs/memory/` does not exist, skip this step.
+In step 5.5's Standards scoring, treat a read memory file as a red flag: if the diff exhibits a known pitfall, record it as a FAIL in the Standards report with evidence citing the memory file (`docs/memory/pitfall_<slug>.md`). If `docs/memory/` does not exist, skip this step.
 
 ### 5.5 Binary verdict + refute-before-PASS
 
 After presenting the two reports, emit a binary verdict per axis:
 
-- **Standards axis**: apply `docs/retros/checklist-code.md` if present; each item PASS/FAIL with `file:line` evidence. If no checklist exists, skip scoring and report "no code checklist seeded — run /superdev:retrospective to bootstrap."
+- **Standards axis**: binary PASS (no unresolved standard violations or smells in the Standards report) / REWORK (any standard violation or listed smell).
 - **Spec axis**: binary PASS (all Gherkin scenarios in the spec demonstrably implemented) / REWORK (any scenario missing/partial/wrong).
 
 **Refute-before-PASS (red-team protocol):** Before assigning PASS to either axis, attempt to refute your own PASS:
@@ -100,7 +100,11 @@ After presenting the two reports, emit a binary verdict per axis:
 
 A PASS without an attempted refutation is invalid — downgrade to REWORK and list the un-refuted risk.
 
-**Final verdict:** REWORK if either axis is REWORK; PASS only if both axes PASS (post-refutation). This is the binary verdict the downstream `/superdev:retrospective` consumes as evaluation input.
+**Final verdict:** REWORK if either axis is REWORK; PASS only if both axes PASS (post-refutation).
+
+## CRITICAL: Refute-before-PASS
+
+A PASS without an attempted refutation is invalid. Before assigning PASS to either axis, state the strongest reason the work might still fail, cite the evidence (diff hunk or missing scenario) that would confirm it, and hold PASS only when concrete contrary evidence refutes it. Never merge or rerank the two axes — the separation exists to stop one axis masking the other.
 
 ## Why two axes
 

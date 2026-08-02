@@ -1,7 +1,7 @@
 {
   "id": "fradser-dotclaude-to-spec",
   "name": "to-spec",
-  "description": "Turn the current conversation into a spec and publish it to the project issue tracker — no interview, just synthesis of what you've already discussed.",
+  "description": "Turns the current conversation into a spec and publishes it to the project issue tracker, with no interview. Use when the user says \\\"write a spec\\\", \\\"create a PRD\\\", or wants the discussion captured as a spec.",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/FradSer/dotclaude/blob/main/superdev/skills/engineering/to-spec/SKILL.md",
     "path": "superdev/skills/engineering/to-spec/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-02T15:56:53.429Z",
+    "discovered_at": "2026-08-02T17:28:22.892Z",
     "stars": 577,
     "language": "JavaScript",
-    "pushed_at": "2026-08-02T14:54:37Z",
+    "pushed_at": "2026-08-02T17:15:11Z",
     "license": "MIT"
   }
 }
