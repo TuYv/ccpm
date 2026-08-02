@@ -1,0 +1,25 @@
+{
+  "id": "fradser-dotclaude-bdd",
+  "name": "bdd",
+  "description": "Behavior-driven development. Use when the user wants to build features or fix bugs test-first via Gherkin scenarios and the red-green-refactor loop, or mentions BDD/Gherkin/Executable Specifications.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "FradSer",
+  "install_path": ".claude/skills/bdd/SKILL.md",
+  "source": {
+    "repo": "FradSer/dotclaude",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/superdev/skills/engineering/bdd/SKILL.md",
+    "path": "superdev/skills/engineering/bdd/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-02T06:57:39.435Z",
+    "stars": 577,
+    "language": "JavaScript",
+    "pushed_at": "2026-08-02T06:07:54Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "fradser-dotclaude-diagnosing-bugs",
+  "name": "diagnosing-bugs",
+  "description": "Diagnosis loop for hard bugs and performance regressions. Use when the user says \"diagnose\"/\"debug this\", or reports something broken/throwing/failing/slow.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "FradSer",
+  "install_path": ".claude/skills/diagnosing-bugs/SKILL.md",
+  "source": {
+    "repo": "FradSer/dotclaude",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/superdev/skills/engineering/diagnosing-bugs/SKILL.md",
+    "path": "superdev/skills/engineering/diagnosing-bugs/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-02T06:57:39.806Z",
+    "stars": 577,
+    "language": "JavaScript",
+    "pushed_at": "2026-08-02T06:07:54Z",
+    "license": "MIT"
+  }
+}

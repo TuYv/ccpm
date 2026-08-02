@@ -1,0 +1,25 @@
+{
+  "id": "fradser-dotclaude-remotion-best-practices",
+  "name": "remotion-best-practices",
+  "description": "Remotion best-practices router (shim). Use when a sub-skill points here via ../remotion-best-practices/SKILL.md — forwards to the top-level remotion router.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "FradSer",
+  "install_path": ".claude/skills/remotion-best-practices/SKILL.md",
+  "source": {
+    "repo": "FradSer/dotclaude",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/office/skills/remotion/remotion-best-practices/SKILL.md",
+    "path": "office/skills/remotion/remotion-best-practices/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-02T06:57:36.255Z",
+    "stars": 577,
+    "language": "JavaScript",
+    "pushed_at": "2026-08-02T06:07:54Z",
+    "license": "MIT"
+  }
+}

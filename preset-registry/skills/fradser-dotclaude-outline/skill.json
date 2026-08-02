@@ -1,0 +1,25 @@
+{
+  "id": "fradser-dotclaude-outline",
+  "name": "storm-outline",
+  "description": "Run STORM phase 2 — outline generation. This skill should be used when the user asks to \"generate an outline for a storm article\", \"draft a wikipedia-style outline\", or invokes /storm:outline. Produces a draft outline from parametric knowledge then refines it using the research information table.",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "FradSer",
+  "install_path": ".claude/skills/outline/SKILL.md",
+  "source": {
+    "repo": "FradSer/dotclaude",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/storm/skills/outline/SKILL.md",
+    "path": "storm/skills/outline/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-02T06:57:38.289Z",
+    "stars": 577,
+    "language": "JavaScript",
+    "pushed_at": "2026-08-02T06:07:54Z",
+    "license": "MIT"
+  }
+}

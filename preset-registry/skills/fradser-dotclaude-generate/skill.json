@@ -1,0 +1,25 @@
+{
+  "id": "fradser-dotclaude-generate",
+  "name": "storm-generate",
+  "description": "Run the full STORM pipeline end-to-end. This skill should be used when the user asks to \"generate a storm article\", \"write a wikipedia-style article about X\", \"research and write a long-form piece on X\", or invokes /storm:generate. Orchestrates research -> outline -> write -> polish, skipping already-completed phases.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "FradSer",
+  "install_path": ".claude/skills/generate/SKILL.md",
+  "source": {
+    "repo": "FradSer/dotclaude",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/storm/skills/generate/SKILL.md",
+    "path": "storm/skills/generate/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-02T06:57:38.162Z",
+    "stars": 577,
+    "language": "JavaScript",
+    "pushed_at": "2026-08-02T06:07:54Z",
+    "license": "MIT"
+  }
+}

@@ -1,7 +1,7 @@
 ---
 name: refactor
 description: Executes automated refactoring for specific files, directories, or semantic queries. This skill should be used when the user asks to refactor specific files or directories, simplify recently changed code, clean up dead code in a limited scope, or invokes "/refactor".
-argument-hint: [files-or-directories-or-semantic-query]
+argument-hint: "[files-or-directories-or-semantic-query]"
 allowed-tools: ["Task", "Read", "Bash(git:*)", "Grep", "Glob"]
 user-invocable: true
 ---
@@ -27,6 +27,8 @@ Execute automated refactoring for $ARGUMENTS using `refactor:code-simplifier` ag
 3. If paths don't exist: treat arguments as semantic query, search codebase with Grep
 4. If no arguments: run `git diff --name-only` to find recently modified code files
 5. If no recent changes found: inform user and exit without refactoring
+
+CRITICAL: Never include `node_modules/`, `.git/`, `dist/`, `build/`, lock files, or compiled artifacts in refactoring scope — use Grep `--glob` exclusions to enforce.
 
 See `references/scope-determination.md` for search strategies and edge cases.
 

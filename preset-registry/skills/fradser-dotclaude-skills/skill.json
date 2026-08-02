@@ -1,0 +1,25 @@
+{
+  "id": "fradser-dotclaude-skills",
+  "name": "marketing",
+  "description": "Marketing skills router: match marketing intent to a sub-skill, then Read its Entry file under skills/<name>/ (e.g. ads/ads.md). Covers CRO, copywriting, SEO/AEO, paid ads, ad creative, analytics, email/SMS, pricing, launches, video/image generation, and growth loops. Use for any marketing request — campaigns, content, optimization, measurement. For video/animation authoring, route to hyperframes.",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "0.1.0",
+  "author": "FradSer",
+  "install_path": ".claude/skills/skills/SKILL.md",
+  "source": {
+    "repo": "FradSer/dotclaude",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/marketing/skills/SKILL.md",
+    "path": "marketing/skills/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-02T06:57:35.060Z",
+    "stars": 577,
+    "language": "JavaScript",
+    "pushed_at": "2026-08-02T06:07:54Z",
+    "license": "MIT"
+  }
+}

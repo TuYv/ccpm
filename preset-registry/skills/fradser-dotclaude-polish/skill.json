@@ -1,0 +1,25 @@
+{
+  "id": "fradser-dotclaude-polish",
+  "name": "storm-polish",
+  "description": "Run STORM phase 4 — article polishing. This skill should be used when the user asks to \"polish the storm article\", \"finalize the article\", or invokes /storm:polish. Adds a summary section, removes duplicate content, and verifies citation integrity.",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "FradSer",
+  "install_path": ".claude/skills/polish/SKILL.md",
+  "source": {
+    "repo": "FradSer/dotclaude",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/storm/skills/polish/SKILL.md",
+    "path": "storm/skills/polish/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-02T06:57:38.455Z",
+    "stars": 577,
+    "language": "JavaScript",
+    "pushed_at": "2026-08-02T06:07:54Z",
+    "license": "MIT"
+  }
+}

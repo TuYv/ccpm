@@ -1,0 +1,25 @@
+{
+  "id": "fradser-dotclaude-ubiquitous-language",
+  "name": "ubiquitous-language",
+  "description": "Extract a DDD-style ubiquitous language glossary from the current conversation, flagging ambiguities and proposing canonical terms. Saves to UBIQUITOUS_LANGUAGE.md. Use when user wants to define domain terms, build a glossary, harden terminology, create a ubiquitous language, or mentions \"domain model\" or \"DDD\".",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "FradSer",
+  "install_path": ".claude/skills/ubiquitous-language/SKILL.md",
+  "source": {
+    "repo": "FradSer/dotclaude",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/superdev/skills/deprecated/ubiquitous-language/SKILL.md",
+    "path": "superdev/skills/deprecated/ubiquitous-language/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-02T06:57:39.198Z",
+    "stars": 577,
+    "language": "JavaScript",
+    "pushed_at": "2026-08-02T06:07:54Z",
+    "license": "MIT"
+  }
+}

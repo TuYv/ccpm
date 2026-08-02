@@ -1,8 +1,8 @@
 {
   "id": "fradser-dotclaude-research",
-  "name": "research",
-  "description": "Runs a deep-research query on Google Gemini's deep-research managed agent and returns a cited report. This skill should be used when the user asks to \"deep research with Gemini\", \"run Gemini deep research\", \"have Antigravity research X\", or wants a thorough, multi-source web research report produced by a remote Gemini agent. Invoked via \"/antigravity:research\". Supports a higher-effort max mode via \"--max\".",
-  "category": "开发编程",
+  "name": "storm-research",
+  "description": "Run STORM phase 1 — multi-perspective research. This skill should be used when the user asks to \"research a topic for an article\", \"find sources on X from multiple perspectives\", \"do storm research on X\", or invokes /storm:research. Discovers personas, runs simulated Q&A per persona in parallel, and produces an information table + deduplicated sources.",
+  "category": "文档写作",
   "compatible_tools": [
     "claude",
     "codex",
@@ -13,13 +13,13 @@
   "install_path": ".claude/skills/research/SKILL.md",
   "source": {
     "repo": "FradSer/dotclaude",
-    "url": "https://github.com/FradSer/dotclaude/blob/main/antigravity/skills/research/SKILL.md",
-    "path": "antigravity/skills/research/SKILL.md",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/storm/skills/research/SKILL.md",
+    "path": "storm/skills/research/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-02T04:58:15.930Z",
+    "discovered_at": "2026-08-02T06:57:38.577Z",
     "stars": 577,
     "language": "JavaScript",
-    "pushed_at": "2026-07-31T17:46:47Z",
+    "pushed_at": "2026-08-02T06:07:54Z",
     "license": "MIT"
   }
 }

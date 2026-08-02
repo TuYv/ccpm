@@ -1,0 +1,25 @@
+{
+  "id": "fradser-dotclaude-engine",
+  "name": "storm-engine",
+  "description": "Provides the shared STORM methodology, artifact layout, stage-gating contract, citation hygiene, and retrieval fallback. Use when executing any /storm:* skill (generate, research, outline, write, polish). Internal knowledge; never user-invocable.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "FradSer",
+  "install_path": ".claude/skills/engine/SKILL.md",
+  "source": {
+    "repo": "FradSer/dotclaude",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/storm/skills/engine/SKILL.md",
+    "path": "storm/skills/engine/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-02T06:57:38.032Z",
+    "stars": 577,
+    "language": "JavaScript",
+    "pushed_at": "2026-08-02T06:07:54Z",
+    "license": "MIT"
+  }
+}

@@ -1,81 +1,42 @@
 ---
-name: research
-description: Runs a deep-research query on Google Gemini's deep-research managed agent and returns a cited report. This skill should be used when the user asks to "deep research with Gemini", "run Gemini deep research", "have Antigravity research X", or wants a thorough, multi-source web research report produced by a remote Gemini agent. Invoked via "/antigravity:research". Supports a higher-effort max mode via "--max".
-argument-hint: "<research question> [--max]"
-allowed-tools: ["Bash(uv:*)", "Monitor", "Read"]
+name: storm-research
+description: Run STORM phase 1 — multi-perspective research. This skill should be used when the user asks to "research a topic for an article", "find sources on X from multiple perspectives", "do storm research on X", or invokes /storm:research. Discovers personas, runs simulated Q&A per persona in parallel, and produces an information table + deduplicated sources.
 user-invocable: true
+argument-hint: "<topic> [--max-perspective N] [--max-turns N] [--output-dir PATH | --save] [--docs DIR] [--docs-only] [--retriever mcp|web|local] [--force]"
+allowed-tools: ["Read", "Write", "Edit", "Glob", "Grep", "Bash(mktemp:*)", "Bash(mkdir:*)", "Bash(date:*)", "WebSearch", "WebFetch", "Task", "Skill", "ToolSearch"]
 ---
 
-# Antigravity Deep Research
+# /storm:research
 
-Run `$ARGUMENTS` as a deep-research query on Gemini's deep-research managed agent,
-wait for it to finish, and report the cited result. Two models are available:
-`deep-research-preview-04-2026` (default) and `deep-research-max-preview-04-2026`
-(max mode — slower, higher effort), selected with `--max`.
+Phase 1 of the STORM pipeline. Discovers research personas, runs a simulated multi-turn conversation per persona (each grounded in retrieval), and produces the information table that downstream phases consume.
 
-The script is at `${CLAUDE_PLUGIN_ROOT}/scripts/antigravity.py`. It is self-daemonizing:
-`research` returns immediately with a `run_id`, a detached worker runs the research,
-and a `status` file flips to `completed` / `failed` when done. Requires `GEMINI_API_KEY`
-in the environment and `uv` on PATH. Deep research can take several minutes.
+## CRITICAL: Load Engine First
 
-## Phase 1: Frame the query
+Load `storm-engine` via the Skill tool. Its "Persona Discovery", "Simulated Conversation", "Retrieval", and "Citation Hygiene" sections govern this phase.
 
-**Goal**: Turn `$ARGUMENTS` into a clear research question.
+## Completion Contract
 
-**Actions**:
-1. Use the full `$ARGUMENTS` text (minus a `--max` flag) as the research question.
-   Pass `--max` through to the script when the user wants max mode (deeper, slower).
-2. If it is empty or too vague to research (no subject, scope, or constraints),
-   ask the user one or two clarifying questions, then proceed.
+This phase is complete iff `research/sources.json` exists and has ≥1 entry. If `--force` is not set and the artifact exists, skip and exit early.
 
-## Phase 2: Launch the run
+## Procedure
 
-**Goal**: Start the detached research worker.
+1. Resolve output dir (see engine). Ensure `research/` subdir exists.
+2. **Persona discovery** — search the web for the topic + 2-3 related concepts; fetch reference pages and extract their section headings. Use those real structures to propose `--max-perspective` personas (default 3), each with a distinct question category, plus one "Basic fact writer". Write `research/personas.json`.
+3. **Retrieval probe** — via `ToolSearch`, look for exa-mcp-server search tools (`code-search`, `research-paper-search`, `company-search`, `personal-site-search`, `financial-report-search`, `x-search`). Record which are available in `run-config.json` as `retriever`. If none and not `--docs`, fall back to `WebSearch`/`WebFetch`.
+4. **Parallel simulated conversations** — launch one `storm-researcher` subagent per persona in a single message (parallel). Each subagent:
+   - Receives: topic, persona definition, retrieval instructions, `max_turns`.
+   - Runs the WikiWriter↔TopicExpert dialogue: writer asks a question, expert does `question_to_query`, retrieves, answers with source attribution.
+   - Ends when writer says "Thank you so much for your help!" or `max_turns` reached.
+   - Returns: a JSON array of `{question, queries, snippets, answer, cited_sources}`.
+   - Launch all persona subagents in a single message (parallel) — do not serialize.
+5. **Merge** — collect all conversation records into `research/conversations.jsonl` (one JSON object per line). Deduplicate cited sources by URL into `research/sources.json`, assigning sequential `id`s. Strip any inline `[n]` from snippets before storing (citation hygiene).
+6. **Verify** — assert `sources.json` has ≥1 entry and every persona produced ≥1 turn. If a persona produced nothing, note it but do not fail the whole phase.
+7. Update `run-config.json`: `phases.research = "completed"`, `retriever`, source count.
 
-**Actions**:
-1. Run the script:
-   ```
-   uv run "${CLAUDE_PLUGIN_ROOT}/scripts/antigravity.py" research --query "<question>" [--max]
-   ```
-2. Capture `run_id`, `output_file`, and `wait_command` from stdout.
-3. If stdout reports an error (for example a missing `GEMINI_API_KEY`), surface it and stop.
+## Concurrency Note
 
-## Phase 3: Wait for completion
+If the user reports rate-limit errors during this phase, reduce concurrency by running personas in smaller batches (e.g. 2 at a time) rather than lowering `max_turns` — mirroring upstream's `max_thread_num` guidance.
 
-**Goal**: Block until the research finishes without busy-looping the model.
+## Output
 
-**Actions**:
-1. Start a Monitor on the captured `wait_command`. It emits one line —
-   `antigravity run <id>: completed` / `failed` / `timeout` — then exits:
-   ```
-   uv run "${CLAUDE_PLUGIN_ROOT}/scripts/antigravity.py" wait --run <run_id>
-   ```
-   Deep research is slow: set the Monitor `timeout_ms` to 1800000 (30 min) and pass
-   `--timeout 1800` to the wait command. Use a clear description like
-   "antigravity research <run_id>".
-2. When the Monitor event arrives, read the last word of its line:
-   - `completed` or `failed` → proceed to Phase 4.
-   - `timeout` → the research is still running (the worker keeps polling up to ~2h).
-     Start the Monitor on the same `wait_command` again to keep waiting. After a second
-     consecutive timeout, tell the user it is still running and give them
-     `... status --run <run_id> --full` to fetch it later, then stop.
-   Never present a `timeout` / still-running state as the report.
-
-## Phase 4: Report the result
-
-**Goal**: Present the research report.
-
-**Actions**:
-1. Fetch the full result:
-   ```
-   uv run "${CLAUDE_PLUGIN_ROOT}/scripts/antigravity.py" status --run <run_id> --full
-   ```
-   Or read the rendered `output_file` directly.
-2. Present the report text to the user, preserving any citations and sources.
-3. If the status is `failed`, report the recorded error and likely cause.
-
-## Notes
-
-- This uses Gemini's managed deep-research agent; it manages its own search and
-  browsing. No sandbox tools or network flags apply here.
-- See `../delegate/references/usage.md` for the shared API surface and limits.
+Report: number of personas, total conversation turns, number of deduplicated sources, and the path to `research/sources.json`.

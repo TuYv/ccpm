@@ -1,0 +1,25 @@
+{
+  "id": "fradser-dotclaude-consolidate",
+  "name": "consolidate",
+  "description": "This skill should be used when the user asks to \"consolidate memory\", \"tidy memory\", \"整理记忆\", \"consolidate Tier A\", \"consolidate Tier B\", \"rebuild MEMORY.md\", \"sync memory\", \"sync memories\", \"双向同步记忆\", \"push memory to repo\", \"pull memory from repo\", \"promote Tier A to Tier B\", \"backport Tier B to Tier A\", \"publish a memory\", \"promote a memory to public\", \"make this memory shareable\", \"发布记忆\", \"公开某条记忆\", \"move memory to repo\", or wants to normalize, deduplicate, prune, rebuild, sync between layers, o",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "FradSer",
+  "install_path": ".claude/skills/consolidate/SKILL.md",
+  "source": {
+    "repo": "FradSer/dotclaude",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/memory/skills/consolidate/SKILL.md",
+    "path": "memory/skills/consolidate/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-02T06:57:35.190Z",
+    "stars": 577,
+    "language": "JavaScript",
+    "pushed_at": "2026-08-02T06:07:54Z",
+    "license": "MIT"
+  }
+}

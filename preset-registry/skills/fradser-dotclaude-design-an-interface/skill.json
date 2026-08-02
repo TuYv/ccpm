@@ -1,0 +1,25 @@
+{
+  "id": "fradser-dotclaude-design-an-interface",
+  "name": "design-an-interface",
+  "description": "Generate multiple radically different interface designs for a module using parallel sub-agents. Use when user wants to design an API, explore interface options, compare module shapes, or mentions \"design it twice\".",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "FradSer",
+  "install_path": ".claude/skills/design-an-interface/SKILL.md",
+  "source": {
+    "repo": "FradSer/dotclaude",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/superdev/skills/deprecated/design-an-interface/SKILL.md",
+    "path": "superdev/skills/deprecated/design-an-interface/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-02T06:57:38.827Z",
+    "stars": 577,
+    "language": "JavaScript",
+    "pushed_at": "2026-08-02T06:07:54Z",
+    "license": "MIT"
+  }
+}

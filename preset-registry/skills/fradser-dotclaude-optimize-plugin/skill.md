@@ -3,7 +3,7 @@ name: optimize-plugin
 description: This skill should be used when the user asks to "validate a plugin", "optimize plugin", "check plugin quality", "review plugin structure", or "run plugin optimizer".
 argument-hint: <plugin-path>
 user-invocable: true
-allowed-tools: ["Read", "Glob", "Bash(realpath:*)", "Bash(python3:*)", "AskUserQuestion", "TaskCreate", "TaskUpdate"]
+allowed-tools: ["Read", "Glob", "Bash(realpath:*)", "Bash(python3:*)", "AskUserQuestion", "TaskCreate", "TaskUpdate", "Skill", "Task"]
 ---
 
 # Plugin Optimization
@@ -110,9 +110,9 @@ Version: [old] -> [new]
 
 ### Token Budget Analysis
 - Skills analyzed: [count]
-- Tier 1 (Metadata ~50): [OK count], [WARNING count]
-- Tier 2 (SKILL.md ~500): [OK count], [WARNING count], [CRITICAL count]
-- Tier 3 (References 2000+ typical): [total tokens]
+- Tier 1 (Metadata ~100): [OK count], [WARNING count]
+- Tier 2 (SKILL.md under 5k): [OK count], [WARNING count], [CRITICAL count]
+- Tier 3 (References, effectively unlimited): [total tokens]
 
 ### Component Inventory
 - Commands: [count] found, [count] valid
