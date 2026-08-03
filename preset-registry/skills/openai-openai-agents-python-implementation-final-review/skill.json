@@ -1,0 +1,25 @@
+{
+  "id": "openai-openai-agents-python-implementation-final-review",
+  "name": "implementation-final-review",
+  "description": "Perform a risk-tiered zero-base final review loop before an implementation is declared complete. Use only when the user explicitly invokes $implementation-final-review or repository instructions authorize automatic invocation after implementation. Audit the complete merge-base diff for requirement fit, contract-surface coverage, await-boundary and lifecycle gaps, released compatibility, security, protocol, and persistence boundaries, unnecessary complexity, package and generated public surfaces,",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openai",
+  "install_path": ".claude/skills/implementation-final-review/SKILL.md",
+  "source": {
+    "repo": "openai/openai-agents-python",
+    "url": "https://github.com/openai/openai-agents-python/blob/main/.agents/skills/implementation-final-review/SKILL.md",
+    "path": ".agents/skills/implementation-final-review/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-03T07:56:11.604Z",
+    "stars": 28350,
+    "language": "Python",
+    "pushed_at": "2026-08-03T07:41:58Z",
+    "license": "MIT"
+  }
+}
