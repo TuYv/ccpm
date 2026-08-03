@@ -1,0 +1,25 @@
+{
+  "id": "omnigent-ai-omnigent-run-load-test",
+  "name": "run-load-test",
+  "description": "Run the Omnigent load test and produce a results file explaining the latencies. Load when the user wants to load-test / stress-test / benchmark Omnigent under concurrency (\"load test omnigent\", \"stress test the server\", \"how many hosts/sessions/turns can it handle\", \"load test real agent turns / conversations\", \"run a load test\"). The test makes each simulated user a real omnigent host that creates host-bound sessions and drives real multi-turn conversations with a mocked LLM; it boots its own l",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "omnigent-ai",
+  "install_path": ".claude/skills/run-load-test/SKILL.md",
+  "source": {
+    "repo": "omnigent-ai/omnigent",
+    "url": "https://github.com/omnigent-ai/omnigent/blob/main/.claude/skills/run-load-test/SKILL.md",
+    "path": ".claude/skills/run-load-test/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-03T20:08:31.342Z",
+    "stars": 8072,
+    "language": "Python",
+    "pushed_at": "2026-08-03T20:05:52Z",
+    "license": "Apache-2.0"
+  }
+}

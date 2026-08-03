@@ -1,0 +1,25 @@
+{
+  "id": "kenn-io-roborev-roborev-snooze",
+  "name": "roborev-snooze",
+  "description": "Use only when the user explicitly invokes /roborev-snooze",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "kenn-io",
+  "install_path": ".claude/skills/roborev-snooze/SKILL.md",
+  "source": {
+    "repo": "kenn-io/roborev",
+    "url": "https://github.com/kenn-io/roborev/blob/main/internal/skills/droid/roborev-snooze/SKILL.md",
+    "path": "internal/skills/droid/roborev-snooze/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-03T20:08:38.992Z",
+    "stars": 1589,
+    "language": "Go",
+    "pushed_at": "2026-08-03T19:40:30Z",
+    "license": "MIT"
+  }
+}
