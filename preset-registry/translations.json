@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-03T16:29:05.829Z",
+  "updated_at": "2026-08-03T18:33:40.364Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -5953,29 +5953,29 @@
       "translated_at": "2026-05-19T21:39:23.416Z"
     },
     "skill:fradser-dotclaude-resolve-issues": {
-      "hash": "6adbcdf8a208e3e7",
-      "summary_zh": "它能用隔离工作区和测试驱动开发来修复GitHub问题。当你需要按规范流程处理特定工单，比如要求“修复123号问题”时，交给它就行。",
-      "translated_at": "2026-05-19T21:39:30.188Z"
+      "hash": "a156e204828ffbc6",
+      "summary_zh": "通过隔离工作树和测试驱动开发修复指定 GitHub Issue，并自动进入 PR 创建与审查流程，适合规范化处理工单。",
+      "translated_at": "2026-08-03T18:30:44.196Z"
     },
     "skill:fradser-dotclaude-start-feature": {
-      "hash": "367ddb4c636f184e",
-      "summary_zh": "基于 git-flow 快速开启新功能分支，适合开发新功能或创建分支的场景，免去手动敲命令的麻烦。",
-      "translated_at": "2026-05-19T21:39:41.423Z"
+      "hash": "2347bd6de3c7c9ec",
+      "summary_zh": "用于通过 git-flow 快速创建并切换到新的功能分支，适合开始开发新功能时使用，支持分支名或自然语言描述。",
+      "translated_at": "2026-08-03T18:30:53.067Z"
     },
     "skill:fradser-dotclaude-shadcn": {
-      "hash": "01858cc6c9012e62",
-      "summary_zh": "专为 shadcn/ui 打造的组件开发助手，帮你一站式搞定组件的日常管理与样式拼装，并提供文档和示例，适合在搭建或维护 shadcn 生态界面时，提升开发与排错效率。",
-      "translated_at": "2026-05-19T21:39:47.571Z"
+      "hash": "7400b2b9fcf93adf",
+      "summary_zh": "一款用于管理前端组件和项目的工具，可添加、查找、修复并组合 UI，适合快速搭建和调试界面及聊天应用。",
+      "translated_at": "2026-08-03T18:30:51.523Z"
     },
     "skill:fradser-dotclaude-start-hotfix": {
-      "hash": "9490da7343d4d6ec",
-      "summary_zh": "它是一个基于 git-flow 发起热修复的工具。当线上出现紧急 Bug 需要立刻修复时，它能帮你快速拉起修复分支，省去手动操作的麻烦。",
-      "translated_at": "2026-05-19T21:39:49.711Z"
+      "hash": "8d8e07552f827985",
+      "summary_zh": "一个基于 Git Flow 快速创建热修复分支的工具，适合紧急处理生产环境中的严重问题。",
+      "translated_at": "2026-08-03T18:30:54.405Z"
     },
     "skill:fradser-dotclaude-start-release": {
-      "hash": "2ac1a185f88de8a9",
-      "summary_zh": "基于 git-flow 帮你发起新版本发布，当你需要创建发布分支或准备发版时，用它就能轻松搞定。",
-      "translated_at": "2026-05-19T21:39:58.473Z"
+      "hash": "fa9f60f3a4574ec6",
+      "summary_zh": "用于按 Git Flow 启动新版本发布，自动创建发布分支，适合准备发版或根据版本号、自然语言描述开启发布流程。",
+      "translated_at": "2026-08-03T18:30:55.745Z"
     },
     "skill:fradser-dotclaude-systematic-debugging": {
       "hash": "805d1496431e75e5",
@@ -5993,9 +5993,9 @@
       "translated_at": "2026-05-19T21:40:28.434Z"
     },
     "skill:fradser-dotclaude-use-acpx": {
-      "hash": "f1cac308a7ae185d",
-      "summary_zh": "这是一个为AI代理补充acpx命令行知识的插件，能解决多代理间的通信与协作问题，适合需要编排自动化多代理工作流的场景。",
-      "translated_at": "2026-05-19T21:40:31.529Z"
+      "hash": "1f358575c6185def",
+      "summary_zh": "一个运行在隔离子代理中的无头 ACP 命令行工具，适合管理持久会话、批量调用编码代理及编排多代理工作流。",
+      "translated_at": "2026-08-03T18:31:03.037Z"
     },
     "skill:fradser-dotclaude-update-readme": {
       "hash": "bf3f7d9a0226c920",
@@ -9823,9 +9823,9 @@
       "translated_at": "2026-08-03T04:57:53.991Z"
     },
     "bundle:trailofbits-skills": {
-      "hash": "450b173064727a6a",
-      "summary_zh": "面向代码与智能合约安全审计的实战工具集，串联审计准备、深度分析、模糊测试与漏洞排查，提升端到端安全评估效率。",
-      "translated_at": "2026-08-03T16:24:54.577Z"
+      "hash": "531227f19825e978",
+      "summary_zh": "面向安全研究与代码审计的工具合集，串联模糊测试、漏洞扫描和自动化分析，帮助团队更快发现并定位安全风险。",
+      "translated_at": "2026-08-03T18:29:34.031Z"
     },
     "bundle:czlonkowski-n8n-skills": {
       "hash": "703062f2bfbd677e",
@@ -14908,9 +14908,9 @@
       "translated_at": "2026-06-05T19:23:47.127Z"
     },
     "skill:fradser-dotclaude-impeccable": {
-      "hash": "de2d430e4bd80fe9",
-      "summary_zh": "用于生成有设计感的前端代码，专门避开千篇一律的 AI 风格，帮你打造网页组件、海报、应用界面等成品，还能沉淀可复用组件到设计系统里。",
-      "translated_at": "2026-06-05T19:23:48.628Z"
+      "hash": "96fe7d6eb4ae0fc2",
+      "summary_zh": "一款前端界面设计与审查工具，适合优化网站和应用的视觉、交互、可访问性及响应式体验。",
+      "translated_at": "2026-08-03T18:29:43.168Z"
     },
     "skill:fradser-dotclaude-impeccable-adapt": {
       "hash": "ba1464c141c3cf0b",
@@ -14998,14 +14998,14 @@
       "translated_at": "2026-06-05T19:24:13.933Z"
     },
     "skill:fradser-dotclaude-lark-approval": {
-      "hash": "e1093bc32fb8a3ad",
-      "summary_zh": "用于对接飞书审批系统的接口工具，可程序化创建审批单、查询进度和处理任务，适合需要把审批流嵌入自家业务系统的团队。",
-      "translated_at": "2026-06-05T19:24:16.080Z"
+      "hash": "cc166c9868ba7899",
+      "summary_zh": "用于查询和处理飞书审批待办、已办及实例，也可搜索审批定义并发起原生审批，适合审批办理与进度查询场景。",
+      "translated_at": "2026-08-03T18:29:49.769Z"
     },
     "skill:fradser-dotclaude-lark-apps": {
-      "hash": "49f36680f92a9964",
-      "summary_zh": "一键把本地 HTML 文件或整个静态站点发布到飞书妙搭，生成可分享的公网链接，适合快速上线网页 demo 或对外展示原型。",
-      "translated_at": "2026-06-05T19:24:16.938Z"
+      "hash": "8fed3b463488d8d1",
+      "summary_zh": "用于创建、开发和托管全栈应用或静态网站，适合结合 AI 与飞书能力快速部署上线并监控运维。",
+      "translated_at": "2026-08-03T18:29:53.263Z"
     },
     "skill:fradser-dotclaude-lark-attendance": {
       "hash": "60843fae8bb33314",
@@ -15013,59 +15013,59 @@
       "translated_at": "2026-06-05T19:24:17.613Z"
     },
     "skill:fradser-dotclaude-lark-base": {
-      "hash": "c1dd2a6680e5a3db",
-      "summary_zh": "通过 lark-cli 命令行管理飞书多维表格，覆盖建表、字段、记录读写、视图、权限到工作流等操作，也能把老的 +table/+field 写法迁移到新命令，适合需要脚本化处理 Base 或设计公式字段、跨表计算的场景。",
-      "translated_at": "2026-06-05T19:24:21.185Z"
+      "hash": "c1ef450d6d7af72a",
+      "summary_zh": "用于操作飞书多维表格的工具，适合自动化建表、管理数据与权限，并配置表单、仪表盘和工作流。",
+      "translated_at": "2026-08-03T18:29:53.794Z"
     },
     "skill:fradser-dotclaude-lark-calendar": {
-      "hash": "b35e401e323440d1",
-      "summary_zh": "用于管理飞书日历和日程，可查看搜索日程、创建更新会议、邀请参会人、查询忙闲并预定会议室，适合需要在飞书里高效安排会议和协调时间的场景。",
-      "translated_at": "2026-06-05T19:24:21.393Z"
+      "hash": "fbf8ef343d1815fd",
+      "summary_zh": "用于管理飞书日历、日程和会议室，适合查找或修改会议、协调参会时间及预定会议室。",
+      "translated_at": "2026-08-03T18:29:53.987Z"
     },
     "skill:fradser-dotclaude-lark-contact": {
-      "hash": "a2c4a09d28e1b606",
-      "summary_zh": "在飞书场景下把员工姓名或邮箱转成 open_id，也能反查某人的部门、邮箱和联系方式，适合发消息、拉群、排日程前先解析身份，或把接口返回的 ID 还原成可读姓名。",
-      "translated_at": "2026-06-05T19:24:22.540Z"
+      "hash": "e10d6501aab4565e",
+      "summary_zh": "飞书通讯录查询工具，可在姓名、邮箱和 open_id 间互查，适合发消息、排日程或核实员工信息。",
+      "translated_at": "2026-08-03T18:29:55.466Z"
     },
     "skill:fradser-dotclaude-lark-doc": {
-      "hash": "47e29a4a25b6dadb",
-      "summary_zh": "一套对接飞书云文档的命令行工具，能创建、读取、改写、翻译和排版 Docx 与知识库文档，也可处理图片、附件和画板，遇到表格、多维表或同步块时还能提取 token 转交对应工具继续处理，适合需要在终端里批量操作飞书文档的场景。",
-      "translated_at": "2026-06-05T19:24:26.460Z"
+      "hash": "494b531387a03c50",
+      "summary_zh": "一款飞书云文档操作工具，可读取、创建和编辑文档，处理图片附件、思维笔记及嵌入内容跳转。",
+      "translated_at": "2026-08-03T18:30:01.867Z"
     },
     "skill:fradser-dotclaude-lark-drive": {
-      "hash": "f357e1777b54d517",
-      "summary_zh": "用来管理飞书云空间里的文件和文件夹，支持上传下载、复制移动删除、改标题、管权限、看评论等操作，还能把本地 Word、Excel、Markdown、CSV 或 Base 快照导入成在线文档、表格或多维表格。",
-      "translated_at": "2026-06-05T19:24:27.080Z"
+      "hash": "cc1855722a599fdd",
+      "summary_zh": "飞书云空间资源管理工具，适合统一整理云盘文件、处理资源链接及导入常见办公文档。",
+      "translated_at": "2026-08-03T18:30:01.155Z"
     },
     "skill:fradser-dotclaude-lark-event": {
-      "hash": "55bd1835daf188ef",
-      "summary_zh": "用命令行实时订阅飞书事件并以 NDJSON 流式输出，适合做机器人、消息处理或长跑订阅，特别方便 AI Agent 作为子进程调用。",
-      "translated_at": "2026-06-05T19:24:27.475Z"
+      "hash": "eb88363cfb282418",
+      "summary_zh": "一个飞书实时事件订阅与流式消费工具，适合机器人、消息处理和 AI 代理持续监听会话、任务及会议动态。",
+      "translated_at": "2026-08-03T18:30:00.031Z"
     },
     "skill:fradser-dotclaude-lark-im": {
-      "hash": "21c8b7355e5791fa",
-      "summary_zh": "面向飞书的消息与群聊管理工具，可收发消息、搜索聊天记录、上传下载文件（支持大文件分片）、管理群成员和表情回复，适合需要在飞书里批量处理沟通内容或自动化群运营的场景。",
-      "translated_at": "2026-06-05T19:24:30.560Z"
+      "hash": "26cde8f35e2dafa9",
+      "summary_zh": "用于接入飞书即时通讯，可收发和搜索消息、管理群聊、传输文件及处理交互卡片，适合自动化办公与机器人场景。",
+      "translated_at": "2026-08-03T18:30:02.456Z"
     },
     "skill:fradser-dotclaude-lark-markdown": {
-      "hash": "69eff43b48af889a",
-      "summary_zh": "一款面向飞书场景的 Markdown 工具，支持查看、创建、上传、编辑和差异比较，适合需要快速读写、局部修改或对比 Markdown 文档的用户。",
-      "translated_at": "2026-06-05T19:24:31.783Z"
+      "hash": "9eefee822bdfb5b1",
+      "summary_zh": "用于在飞书中查看、创建、上传、编辑及对比 Markdown 文件，适合内容修改、局部更新和差异检查。",
+      "translated_at": "2026-08-03T18:30:05.432Z"
     },
     "skill:fradser-dotclaude-lark-mail": {
-      "hash": "6b516f2610e76a21",
-      "summary_zh": "在飞书里一站式处理邮件的工具，支持起草、发送、回复、转发、搜索，还能管理草稿、文件夹、标签、联系人、附件和收信规则，适合需要在飞书中高效收发和整理邮件的用户。",
-      "translated_at": "2026-06-05T19:24:32.602Z"
+      "hash": "f5d053d4df2849ed",
+      "summary_zh": "用于在飞书中起草、收发、搜索和管理邮件，适合处理邮件联系人、标签、文件夹、收信规则及新邮件监听等场景。",
+      "translated_at": "2026-08-03T18:30:04.584Z"
     },
     "skill:fradser-dotclaude-lark-minutes": {
-      "hash": "50a4aaa5cf96d3ed",
-      "summary_zh": "一键管理飞书妙记的工具，支持按条件搜索会议记录、下载音视频、提取 AI 总结和待办，还能把本地音视频上传转成逐字稿与纪要，省去本地跑 whisper、ffmpeg 的麻烦。",
-      "translated_at": "2026-06-05T19:24:35.502Z"
+      "hash": "38b21aa50c55164a",
+      "summary_zh": "用于管理飞书妙记，可按令牌查询和编辑内容、上传下载音视频，并将本地音视频转成纪要或逐字稿。",
+      "translated_at": "2026-08-03T18:30:07.660Z"
     },
     "skill:fradser-dotclaude-lark-okr": {
-      "hash": "fcc27fb8be5e33e0",
-      "summary_zh": "在飞书上管理团队和个人的 OKR，支持查看与编辑目标周期、关键结果、对齐关系以及进展更新，适合需要追踪目标完成情况的团队使用。",
-      "translated_at": "2026-06-05T19:24:35.895Z"
+      "hash": "fa232f58cd6d6978",
+      "summary_zh": "用于在飞书中查看、创建和维护 OKR，管理目标、关键结果、对齐关系、量化指标及进展记录。",
+      "translated_at": "2026-08-03T18:30:07.331Z"
     },
     "skill:fradser-dotclaude-lark-openapi-explorer": {
       "hash": "e3c66c2d8a9c1938",
@@ -15073,14 +15073,14 @@
       "translated_at": "2026-06-05T19:24:37.551Z"
     },
     "skill:fradser-dotclaude-lark-shared": {
-      "hash": "624f6742ebd0f69e",
-      "summary_zh": "一个面向 lark-cli 的辅助说明，适用于初次配置、登录授权、切换用户或机器人身份、排查权限不足或更新版本等场景。",
-      "translated_at": "2026-06-05T19:24:39.275Z"
+      "hash": "a93dd04a633eaf8e",
+      "summary_zh": "用于飞书命令行工具的认证与权限管理，适合处理登录登出、身份切换、授权范围缺失及授权撤销等问题。",
+      "translated_at": "2026-08-03T18:30:10.736Z"
     },
     "skill:fradser-dotclaude-lark-sheets": {
-      "hash": "9cf935574539d580",
-      "summary_zh": "在飞书电子表格里完成建表、增删改工作表、读写单元格、追加行、查找内容和导出文件等操作，适合需要批量处理或自动化管理飞书表格数据的场景。",
-      "translated_at": "2026-06-05T19:24:40.490Z"
+      "hash": "8831ca2026259b25",
+      "summary_zh": "用于创建和自动化操作飞书电子表格，适合批量处理数据、公式计算、统计分析、可视化及财务建模。",
+      "translated_at": "2026-08-03T18:30:11.989Z"
     },
     "skill:fradser-dotclaude-react-best-practices": {
       "hash": "434b7750e922a451",
@@ -15093,14 +15093,14 @@
       "translated_at": "2026-06-05T19:24:44.519Z"
     },
     "skill:fradser-dotclaude-supabase": {
-      "hash": "a257eccb00df31af",
-      "summary_zh": "一个面向 Supabase 全家桶的开发助手，覆盖数据库、Auth、Edge Functions、Realtime、Storage 等场景，能帮你处理客户端集成、SSR 鉴权、RLS 配置、迁移脚本和 CLI 操作，适合在 Next.js、SvelteKit 等框架里搭建或排障 Supabase 应用时使用。",
-      "translated_at": "2026-06-05T19:24:45.644Z"
+      "hash": "9ed953c61c155f54",
+      "summary_zh": "一个基于 PostgreSQL 的开源后端平台，适合快速搭建数据库、用户认证、文件存储、实时通信和边缘函数等应用能力。",
+      "translated_at": "2026-08-03T18:30:56.654Z"
     },
     "skill:fradser-dotclaude-supabase-postgres-best-practices": {
-      "hash": "a49cdde4366dbd8d",
-      "summary_zh": "汇总了 Supabase 的 Postgres 性能优化经验和最佳实践，写 SQL、设计表结构或调优数据库配置时可以拿来参考，帮你避开常见的性能坑。",
-      "translated_at": "2026-06-05T19:24:47.105Z"
+      "hash": "00281bd8f5993294",
+      "summary_zh": "一套来自 Supabase 的 Postgres 优化实践，适合编写、审查查询及改进表结构和数据库配置时参考。",
+      "translated_at": "2026-08-03T18:30:56.481Z"
     },
     "skill:fradser-dotclaude-web-design-guidelines": {
       "hash": "2cfbe25ca875d76e",
@@ -15108,9 +15108,9 @@
       "translated_at": "2026-06-05T19:24:48.993Z"
     },
     "skill:geekjourneyx-md2wechat-skill-md2wechat": {
-      "hash": "8fd01f277d814667",
-      "summary_zh": "一款把 Markdown 一键转成微信公众号排版 HTML 的工具，支持预览、上传草稿、生成封面和配图，还能切换写作风格、去除 AI 痕迹，适合公众号作者高效出稿。",
-      "translated_at": "2026-06-05T19:24:50.087Z"
+      "hash": "3ab587b1e0888aa8",
+      "summary_zh": "一款将 Markdown 转为微信公众号 HTML 的排版工具，适合文章预览、草稿上传、配图封面生成和内容润色。",
+      "translated_at": "2026-08-03T18:33:06.007Z"
     },
     "skill:getsentry-sentry-analytics": {
       "hash": "120042888af0c613",
@@ -21066,6 +21066,876 @@
       "hash": "37019c45ad130e83",
       "summary_zh": "一个用 HTML 制作和渲染视频、动画及动态图形的智能体入口，适合将创作与编辑需求分配到对应工作流。",
       "translated_at": "2026-08-03T16:29:05.828Z"
+    },
+    "skill:fradser-dotclaude-hyperframes-animation": {
+      "hash": "75b0ff1c901f338c",
+      "summary_zh": "一套覆盖动效规则、场景编排与多运行时适配的知识库，适合设计、实现或审查各类动画效果。",
+      "translated_at": "2026-08-03T18:29:36.510Z"
+    },
+    "skill:fradser-dotclaude-hyperframes-cli": {
+      "hash": "1f013d47b606662f",
+      "summary_zh": "一套面向 HyperFrames 的全流程开发命令行工具，适合创建、检查、渲染、发布内容及排查构建故障。",
+      "translated_at": "2026-08-03T18:29:39.081Z"
+    },
+    "skill:fradser-dotclaude-hyperframes-core": {
+      "hash": "f37370b614c25de7",
+      "summary_zh": "一套可渲染项目的编排规范，用于统一合成结构与确定性渲染，适合编写和校验合成 HTML。",
+      "translated_at": "2026-08-03T18:29:39.252Z"
+    },
+    "skill:fradser-dotclaude-hyperframes-creative": {
+      "hash": "5aa0c5185b5248bb",
+      "summary_zh": "为视频提供非动画创意设计指导，适合规划画面风格、配色字体、旁白节奏、音频响应和品牌视觉。",
+      "translated_at": "2026-08-03T18:29:39.360Z"
+    },
+    "skill:fradser-dotclaude-hyperframes-registry": {
+      "hash": "ea6b35ed89e77363",
+      "summary_zh": "用于在 HyperFrames 项目中查找、安装并接入组件或区块，适合管理注册表配置、按标签批量安装及贡献新组件。",
+      "translated_at": "2026-08-03T18:29:41.435Z"
+    },
+    "skill:fradser-dotclaude-hyperframes-keyframes": {
+      "hash": "53514e9e832e66f1",
+      "summary_zh": "为 HyperFrames 合成提供可安全跳转的关键帧动画，适合制作 2D/3D、SVG、路径及时间线动效并排查问题。",
+      "translated_at": "2026-08-03T18:29:44.670Z"
+    },
+    "skill:fradser-dotclaude-implement": {
+      "hash": "bedc5ec6af7da8c7",
+      "summary_zh": "根据规格说明或工单编写代码，适合将已有方案快速落地为可执行实现。",
+      "translated_at": "2026-08-03T18:29:46.185Z"
+    },
+    "skill:fradser-dotclaude-improve-codebase-architecture": {
+      "hash": "ae55a926c82f5fe9",
+      "summary_zh": "扫描代码库并生成可视化报告，帮助发现架构改进与重构机会，并深入分析选定问题。",
+      "translated_at": "2026-08-03T18:29:47.298Z"
+    },
+    "skill:fradser-dotclaude-lark": {
+      "hash": "ea74af92b10aae14",
+      "summary_zh": "一个飞书/Lark 命令行路由工具，可按操作意图管理文档、消息、日历、任务及妙搭部署等工作区资源。",
+      "translated_at": "2026-08-03T18:29:48.465Z"
+    },
+    "skill:fradser-dotclaude-lark-note": {
+      "hash": "a8225f1a3f8fa86e",
+      "summary_zh": "用于在已知 note_id 时直查飞书会议纪要详情、关联文档及原始逐字稿，适合按明确 ID 获取纪要内容。",
+      "translated_at": "2026-08-03T18:30:08.955Z"
+    },
+    "skill:fradser-dotclaude-lark-skill-maker": {
+      "hash": "de04dd482f2994aa",
+      "summary_zh": "用于为 lark-cli 创建可复用的飞书操作技能，适合封装单个 API 或编排多步业务流程。",
+      "translated_at": "2026-08-03T18:30:10.929Z"
+    },
+    "skill:fradser-dotclaude-lark-vc": {
+      "hash": "1e57c8de745ec477",
+      "summary_zh": "用于查询飞书已结束的视频会议，可搜索历史记录、查看会议纪要和参会人信息，适合会后复盘与待办跟进。",
+      "translated_at": "2026-08-03T18:30:14.766Z"
+    },
+    "skill:fradser-dotclaude-lark-task": {
+      "hash": "bb0259d6ad2d9c24",
+      "summary_zh": "一款面向飞书的任务管理工具，适合创建待办、跟踪进度、协作分工，并管理任务智能体、附件和记录。",
+      "translated_at": "2026-08-03T18:30:15.380Z"
+    },
+    "skill:fradser-dotclaude-lark-slides": {
+      "hash": "8d809397603ff93e",
+      "summary_zh": "用于创建、读取和编辑飞书幻灯片，可管理单页内容，也支持通过 doubao.com 的幻灯片链接直接操作。",
+      "translated_at": "2026-08-03T18:30:16.501Z"
+    },
+    "skill:fradser-dotclaude-lark-whiteboard": {
+      "hash": "d8104950a4778b23",
+      "summary_zh": "用于查询、导出和编辑飞书云文档中的画板，适合预览画板、获取节点结构或批量更新画板内容。",
+      "translated_at": "2026-08-03T18:30:18.507Z"
+    },
+    "skill:fradser-dotclaude-lark-wiki": {
+      "hash": "79ce003747b1a845",
+      "summary_zh": "用于管理飞书知识库的工具，适合创建和查询空间、维护成员、浏览文档结构，以及移动或复制节点。",
+      "translated_at": "2026-08-03T18:30:19.228Z"
+    },
+    "skill:fradser-dotclaude-lark-vc-agent": {
+      "hash": "60fb7926851134e8",
+      "summary_zh": "让飞书应用机器人加入或离开进行中的会议，读取会中事件并发送消息或表情，适合实时了解发言、内容共享等情况。",
+      "translated_at": "2026-08-03T18:30:19.297Z"
+    },
+    "skill:fradser-dotclaude-lark-workflow-meeting-summary": {
+      "hash": "3ede1b8ef9512cd6",
+      "summary_zh": "自动汇总指定时间段内的会议纪要并生成结构化报告，适合制作会议周报或阶段性回顾。",
+      "translated_at": "2026-08-03T18:30:20.670Z"
+    },
+    "skill:fradser-dotclaude-lark-workflow-standup-report": {
+      "hash": "c562900f3d8577c1",
+      "summary_zh": "自动整合日历日程和未完成任务，生成指定日期的待办摘要，适合快速查看今天、明天或本周安排。",
+      "translated_at": "2026-08-03T18:30:21.420Z"
+    },
+    "skill:fradser-dotclaude-media-use": {
+      "hash": "35e9a5f1d84b22ad",
+      "summary_zh": "一套面向 HyperFrames 项目的媒体资源工具，可统一查找、生成、编辑和复用音频、图片、字幕等素材，减少跨工具操作。",
+      "translated_at": "2026-08-03T18:30:23.218Z"
+    },
+    "skill:fradser-dotclaude-mediabunny": {
+      "hash": "fe3b53533f48bd93",
+      "summary_zh": "一个用于处理音视频等多媒体内容的开发库，适合在应用中实现媒体解析、转换与操作。",
+      "translated_at": "2026-08-03T18:30:24.196Z"
+    },
+    "skill:fradser-dotclaude-music-to-video": {
+      "hash": "3c64aa67c7162670",
+      "summary_zh": "将音乐自动制作成卡点歌词视频、幻灯片或动态宣传片，无需素材也能生成，适合音乐可视化和短视频创作。",
+      "translated_at": "2026-08-03T18:30:25.594Z"
+    },
+    "skill:fradser-dotclaude-motion-graphics": {
+      "hash": "832e018471971058",
+      "summary_zh": "用于制作无旁白的短篇动态图形，将文字、数据、品牌或界面内容转成适合社媒传播的动画视频。",
+      "translated_at": "2026-08-03T18:30:25.772Z"
+    },
+    "skill:fradser-dotclaude-outline": {
+      "hash": "5ff04c6faca1c380",
+      "summary_zh": "一款为 STORM 文章生成提纲的工具，可结合已有知识和研究资料，快速起草并优化维基百科风格的文章结构。",
+      "translated_at": "2026-08-03T18:30:26.295Z"
+    },
+    "skill:fradser-dotclaude-polish": {
+      "hash": "7a7f41f6706b98ff",
+      "summary_zh": "用于完成 STORM 文章的最终润色，补充摘要、删除重复内容并检查引用完整性，适合发布前定稿。",
+      "translated_at": "2026-08-03T18:30:27.691Z"
+    },
+    "skill:fradser-dotclaude-pr-to-video": {
+      "hash": "f11864b8cf29caf3",
+      "summary_zh": "把 GitHub PR 的代码差异、提交和文件自动制作成变更说明视频，适合演示新功能、修复或重构过程。",
+      "translated_at": "2026-08-03T18:30:27.698Z"
+    },
+    "skill:fradser-dotclaude-product-launch-video": {
+      "hash": "36b964c2df946489",
+      "summary_zh": "将产品链接、文案或需求简介快速生成发布宣传视频，适合 SaaS 推广、功能展示、产品演示及网站导览。",
+      "translated_at": "2026-08-03T18:30:29.054Z"
+    },
+    "skill:fradser-dotclaude-prototype": {
+      "hash": "3f076c79c3fcca9b",
+      "summary_zh": "用于快速搭建一次性原型，验证状态模型、业务逻辑或界面设计是否合理，适合早期探索方案。",
+      "translated_at": "2026-08-03T18:30:29.853Z"
+    },
+    "skill:fradser-dotclaude-qa": {
+      "hash": "3fced2ff4f762af1",
+      "summary_zh": "一款对话式缺陷反馈工具，能结合代码库上下文理解问题并自动创建 GitHub Issue，适合测试和 QA 场景。",
+      "translated_at": "2026-08-03T18:30:31.471Z"
+    },
+    "skill:fradser-dotclaude-reflect-skills-from-memory": {
+      "hash": "c2de79def032f19b",
+      "summary_zh": "用于根据项目长期记忆审查技能代码，将积累的反馈转化为具体修复，并纠正已过时的记忆。",
+      "translated_at": "2026-08-03T18:30:31.573Z"
+    },
+    "skill:fradser-dotclaude-remotion": {
+      "hash": "f2922022e412b76f",
+      "summary_zh": "用 React 以代码方式制作和渲染视频，适合开发动画、字幕、动态图形及可在线编辑的视频生成服务。",
+      "translated_at": "2026-08-03T18:30:32.666Z"
+    },
+    "skill:fradser-dotclaude-remotion-best-practices": {
+      "hash": "156d69a4caaa949d",
+      "summary_zh": "一个 Remotion 最佳实践的兼容路由，用于将子技能请求转发到顶层路由，适合统一入口与避免路径失效。",
+      "translated_at": "2026-08-03T18:30:34.284Z"
+    },
+    "skill:fradser-dotclaude-remotion-captions": {
+      "hash": "56a111b914b37597",
+      "summary_zh": "用于在 Remotion 视频项目中处理字幕，适合制作带字幕的程序化视频。",
+      "translated_at": "2026-08-03T18:30:35.548Z"
+    },
+    "skill:fradser-dotclaude-remotion-create": {
+      "hash": "7ff4a7af4147532f",
+      "summary_zh": "一个快速创建 Remotion 视频项目的脚手架工具，适合用 React 开展程序化视频制作。",
+      "translated_at": "2026-08-03T18:30:37.880Z"
+    },
+    "skill:fradser-dotclaude-remotion-interactivity": {
+      "hash": "a8227ae7be93ef5d",
+      "summary_zh": "一套 Remotion 动画编写指南，让智能代理易于理解和操作，并能在 Studio 可视化模式中继续编辑。",
+      "translated_at": "2026-08-03T18:30:37.963Z"
+    },
+    "skill:fradser-dotclaude-remotion-markup": {
+      "hash": "55d730c325297f9a",
+      "summary_zh": "一套编写 Remotion React 标记代码的最佳实践，适合规范视频组件开发并提升可维护性。",
+      "translated_at": "2026-08-03T18:30:39.307Z"
+    },
+    "skill:fradser-dotclaude-remotion-render": {
+      "hash": "e061e407a95c2f95",
+      "summary_zh": "一套视频渲染最佳实践指南，帮助开发者提升渲染效率、稳定性和成片质量。",
+      "translated_at": "2026-08-03T18:30:40.919Z"
+    },
+    "skill:fradser-dotclaude-remotion-to-hyperframes": {
+      "hash": "2008140ed13bd89e",
+      "summary_zh": "将现有 Remotion（React）视频合成源码单向迁移为 HyperFrames HTML，适合明确要求转换已有项目的场景。",
+      "translated_at": "2026-08-03T18:30:41.326Z"
+    },
+    "skill:fradser-dotclaude-remotion-saas": {
+      "hash": "1c3ebafd65ccd52e",
+      "summary_zh": "一套用 Remotion 开发视频应用的实践指南，适合解决视频渲染和播放器集成问题。",
+      "translated_at": "2026-08-03T18:30:42.034Z"
+    },
+    "skill:fradser-dotclaude-request-refactor-plan": {
+      "hash": "be97c177f0860420",
+      "summary_zh": "通过问答梳理重构方案，将任务拆成可安全提交的小步骤，并生成 GitHub Issue，适合制定重构计划或 RFC。",
+      "translated_at": "2026-08-03T18:30:43.201Z"
+    },
+    "skill:fradser-dotclaude-research": {
+      "hash": "0da0519fd2094a11",
+      "summary_zh": "一个基于可信一手资料开展调研并生成 Markdown 报告的工具，适合查证文档、API 信息或委托后台代理搜集资料。",
+      "translated_at": "2026-08-03T18:30:44.870Z"
+    },
+    "skill:fradser-dotclaude-resolving-merge-conflicts": {
+      "hash": "8395d0092a7e60fb",
+      "summary_zh": "用于处理 Git 合并或变基过程中出现的冲突，适合快速恢复被中断的代码整合流程。",
+      "translated_at": "2026-08-03T18:30:46.796Z"
+    },
+    "skill:fradser-dotclaude-setup-matt-pocock-skills": {
+      "hash": "629381d43eecd85b",
+      "summary_zh": "用于初始化工程技能仓库配置，统一问题跟踪、分诊标签和领域文档结构，适合首次启用相关技能前使用。",
+      "translated_at": "2026-08-03T18:30:47.202Z"
+    },
+    "skill:fradser-dotclaude-review-pr": {
+      "hash": "8c64a963319964ed",
+      "summary_zh": "一款自动审查并持续跟进拉取请求的工具，可监控 CI 和评审意见、验证并修复问题，直到满足合并条件。",
+      "translated_at": "2026-08-03T18:30:47.512Z"
+    },
+    "skill:fradser-dotclaude-skills": {
+      "hash": "d46b584b662b9f8b",
+      "summary_zh": "一个营销任务路由工具，可按需求匹配对应技能，适合策划活动、创作内容、投放广告、增长优化与效果分析。",
+      "translated_at": "2026-08-03T18:30:49.995Z"
+    },
+    "skill:fradser-dotclaude-slideshow": {
+      "hash": "39911e638d0cc23d",
+      "summary_zh": "用于制作可交互、可分支跳转的演示文稿，也能把现有网页转成幻灯片，适合路演、汇报和带讲者备注的现场演示。",
+      "translated_at": "2026-08-03T18:30:50.832Z"
+    },
+    "skill:fradser-dotclaude-to-spec": {
+      "hash": "42b5fef36afffc17",
+      "summary_zh": "将当前对话直接整理成需求规格并发布到项目问题追踪器，适合快速生成 PRD 或沉淀讨论结论。",
+      "translated_at": "2026-08-03T18:30:58.688Z"
+    },
+    "skill:fradser-dotclaude-tropes": {
+      "hash": "560757b451d7d5e0",
+      "summary_zh": "一款检测并消除 AI 写作套路的工具，让文案、文档和代码注释更自然，适合内容生成与写作风格审查。",
+      "translated_at": "2026-08-03T18:30:59.787Z"
+    },
+    "skill:fradser-dotclaude-ubiquitous-language": {
+      "hash": "2e0661fe8ee4907f",
+      "summary_zh": "从当前对话中提炼 DDD 统一语言术语表，标记歧义并推荐标准用词，适合梳理领域模型和统一团队术语。",
+      "translated_at": "2026-08-03T18:31:00.775Z"
+    },
+    "skill:fradser-dotclaude-use-kicad-cli": {
+      "hash": "b41c965353c49b5d",
+      "summary_zh": "通过命令行自动导出 KiCad 原理图、PCB 和生产文件，并执行设计检查，适合硬件交付与 CI 流程。",
+      "translated_at": "2026-08-03T18:31:02.628Z"
+    },
+    "skill:fradser-dotclaude-use-openscad": {
+      "hash": "3c1b182d3c844fad",
+      "summary_zh": "通过编写并编译参数化 OpenSCAD 模型，生成 3D 打印件、激光切割图纸、预览图或批量导出多种 CAD 格式。",
+      "translated_at": "2026-08-03T18:31:03.340Z"
+    },
+    "skill:fradser-dotclaude-write": {
+      "hash": "c61649ca6f01153c",
+      "summary_zh": "用于按提纲并行撰写文章各章节，并结合研究资料添加文内引用，适合快速完成有可靠依据的初稿。",
+      "translated_at": "2026-08-03T18:31:04.780Z"
+    },
+    "skill:fvadicamo-dev-agent-skills-privacy-guard": {
+      "hash": "6abff90792012e69",
+      "summary_zh": "用于扫描并阻止主机名、内网地址、用户名等敏感信息泄露，适合公开仓库提交、文档编写和发布前检查。",
+      "translated_at": "2026-08-03T18:31:05.740Z"
+    },
+    "skill:gadievron-raptor-audit": {
+      "hash": "43a4d62a5079adbf",
+      "summary_zh": "一款以假设验证和工具实证为核心的安全审查工具，用于发现现有检测与防护中的覆盖盲区。",
+      "translated_at": "2026-08-03T18:31:07.056Z"
+    },
+    "skill:gadievron-raptor-code-understanding": {
+      "hash": "81913945f5b16697",
+      "summary_zh": "一款面向安全研究的代码理解工具，可梳理架构、追踪数据流并挖掘漏洞变体，为静态分析提供可靠依据。",
+      "translated_at": "2026-08-03T18:31:08.132Z"
+    },
+    "skill:gadievron-raptor-exploitability-validation": {
+      "hash": "1e28e20c94e85c15",
+      "summary_zh": "一套多阶段漏洞验证流水线，用于确认漏洞是否真实、可达且可利用，避免在误报、死代码或不现实前置条件上浪费精力。",
+      "translated_at": "2026-08-03T18:31:08.529Z"
+    },
+    "skill:gadievron-raptor-gcov-coverage": {
+      "hash": "bb20b9dfdb61ee71",
+      "summary_zh": "为 C/C++ 项目集成 gcov 代码覆盖率统计，适合分析测试覆盖情况并发现未被测试的代码。",
+      "translated_at": "2026-08-03T18:31:10.603Z"
+    },
+    "skill:gadievron-raptor-function-tracing": {
+      "hash": "9173568a7fbbb3ca",
+      "summary_zh": "一款基于编译器插桩的 C/C++ 函数调用追踪工具，可用 Perfetto 可视化执行流程，适合分析性能瓶颈和调用关系。",
+      "translated_at": "2026-08-03T18:31:10.971Z"
+    },
+    "skill:gadievron-raptor-frida": {
+      "hash": "95a1a218cd649c92",
+      "summary_zh": "一款动态插桩工具，可向本地、USB 或远程进程注入 JS Hook，便于采集运行事件并进行调试分析。",
+      "translated_at": "2026-08-03T18:31:10.974Z"
+    },
+    "skill:gadievron-raptor-github-commit-recovery": {
+      "hash": "2774b6e878918997",
+      "summary_zh": "一套找回 GitHub 已删除提交的工具，适合凭提交 SHA 恢复代码内容、差异或补丁。",
+      "translated_at": "2026-08-03T18:31:13.603Z"
+    },
+    "skill:gadievron-raptor-github-evidence-kit": {
+      "hash": "045fe30273f50bbe",
+      "summary_zh": "一套用于生成、存储、查询和验证 GitHub 取证证据的工具，适合安全调查与证据溯源。",
+      "translated_at": "2026-08-03T18:31:13.669Z"
+    },
+    "skill:gadievron-raptor-github-archive": {
+      "hash": "64ebe873d8b35e72",
+      "summary_zh": "基于不可篡改的公开事件数据调查 GitHub 安全事件，适合追溯删除记录、确认操作者并还原攻击时间线。",
+      "translated_at": "2026-08-03T18:31:14.043Z"
+    },
+    "skill:gadievron-raptor-github-wayback-recovery": {
+      "hash": "922bdae1fdea0d7b",
+      "summary_zh": "从网页存档中找回已删除的 GitHub 仓库、文件、议题、合并请求或 Wiki 页面，适合历史内容恢复场景。",
+      "translated_at": "2026-08-03T18:31:15.840Z"
+    },
+    "skill:gadievron-raptor-line-execution-checker": {
+      "hash": "f16b2ab0719fd60f",
+      "summary_zh": "基于 gcov 数据检查指定代码行是否被执行，适合验证测试覆盖情况和定位未覆盖逻辑。",
+      "translated_at": "2026-08-03T18:31:16.577Z"
+    },
+    "skill:gadievron-raptor-orchestration": {
+      "hash": "b4bc6743a6087fff",
+      "summary_zh": "用于公开 GitHub 仓库取证调查的多智能体协作工具，适合并行收集证据、验证推测并生成调查报告。",
+      "translated_at": "2026-08-03T18:31:16.922Z"
+    },
+    "skill:gadievron-raptor-rr-debugger": {
+      "hash": "311f8ec4c14207cc",
+      "summary_zh": "基于 rr 录制与回放实现确定性调试，适合排查崩溃、ASAN 错误及需要反向执行定位问题的场景。",
+      "translated_at": "2026-08-03T18:31:19.005Z"
+    },
+    "skill:ganyuanran-aegis-brainstorming": {
+      "hash": "7070b8e9d0d00679",
+      "summary_zh": "用于开发前梳理复杂或模糊需求，明确功能、交互与架构方案，并通过追问检验设计是否可靠。",
+      "translated_at": "2026-08-03T18:31:19.870Z"
+    },
+    "skill:ganyuanran-aegis-dispatching-parallel-agents": {
+      "hash": "90e26db4a3fb046c",
+      "summary_zh": "用于把两个以上互不依赖、无需共享状态的任务分派给多个智能体并行处理，适合加速独立任务。",
+      "translated_at": "2026-08-03T18:31:23.042Z"
+    },
+    "skill:ganyuanran-aegis-communicating-concisely": {
+      "hash": "be8bb5c2fb2e4c22",
+      "summary_zh": "一种压缩回答长度的沟通模式，适合用户要求极简、少字、少耗 token 或“穴居人式”回复时使用。",
+      "translated_at": "2026-08-03T18:31:25.009Z"
+    },
+    "skill:ganyuanran-aegis-anti-entropy-governance": {
+      "hash": "f9390e93ae9ce395",
+      "summary_zh": "一套代码治理决策指南，适合清理旧逻辑、合并重复职责或调整数据边界时，判断应删除旧路径、保留兼容还是暂停确认。",
+      "translated_at": "2026-08-03T18:31:26.033Z"
+    },
+    "skill:ganyuanran-aegis-executing-plans": {
+      "hash": "9ba108027a564ccf",
+      "summary_zh": "用于在独立会话中按书面实施计划推进任务，并在关键节点进行审查确认。",
+      "translated_at": "2026-08-03T18:31:28.137Z"
+    },
+    "skill:ganyuanran-aegis-establishing-project-context": {
+      "hash": "12f8948149f43cdd",
+      "summary_zh": "一套建立项目统一语言的语义建模方法，适合梳理含糊、冲突、更名或废弃的领域术语。",
+      "translated_at": "2026-08-03T18:31:29.252Z"
+    },
+    "skill:ganyuanran-aegis-first-principles-review": {
+      "hash": "75254188ece38a2f",
+      "summary_zh": "用于以第一性原理或奥卡姆剃刀审视复杂决策，适合排查反复修补、兜底膨胀、职责重叠及架构方向风险。",
+      "translated_at": "2026-08-03T18:31:30.511Z"
+    },
+    "skill:ganyuanran-aegis-goal-framing": {
+      "hash": "9dc47629c1d8d71f",
+      "summary_zh": "用于在任务开始前明确目标、成功标准、停止条件和边界，适合需要先对齐执行范围的场景。",
+      "translated_at": "2026-08-03T18:31:33.221Z"
+    },
+    "skill:ganyuanran-aegis-long-task-continuation": {
+      "hash": "16789c03e5c01063",
+      "summary_zh": "用于持续推进跨会话、多步骤或涉及子代理的复杂任务，避免上下文重置导致进度和状态丢失。",
+      "translated_at": "2026-08-03T18:31:33.526Z"
+    },
+    "skill:ganyuanran-aegis-finishing-a-development-branch": {
+      "hash": "776ee61192fdcda0",
+      "summary_zh": "这是一个开发分支收尾工具，适合在工作验证完成后处理 Aegis 分支或工作树的集成与清理。",
+      "translated_at": "2026-08-03T18:31:34.382Z"
+    },
+    "skill:ganyuanran-aegis-recording-architecture-decisions": {
+      "hash": "8018bb62cec4ca20",
+      "summary_zh": "用于创建、更新和评估架构决策记录，适合在架构变更后沉淀决策依据并同步基线。",
+      "translated_at": "2026-08-03T18:31:36.232Z"
+    },
+    "skill:ganyuanran-aegis-receiving-code-review": {
+      "hash": "3e33cde6da109817",
+      "summary_zh": "一套处理代码审查反馈的方法，适合在建议不清晰、有风险、存在争议或技术存疑时先验证再实施。",
+      "translated_at": "2026-08-03T18:31:36.725Z"
+    },
+    "skill:ganyuanran-aegis-requesting-code-review": {
+      "hash": "e8a107edae0f9c07",
+      "summary_zh": "一套发起独立代码审查的指南，适合阶段性开发完成、高风险合并前，或架构、兼容性及下线风险不明确时使用。",
+      "translated_at": "2026-08-03T18:31:39.948Z"
+    },
+    "skill:ganyuanran-aegis-systematic-debugging": {
+      "hash": "dfb8b6e1aeb43eed",
+      "summary_zh": "一套系统化调试方法，适合在遇到缺陷、测试失败或异常行为时先定位根因，再制定修复方案。",
+      "translated_at": "2026-08-03T18:31:40.913Z"
+    },
+    "skill:ganyuanran-aegis-subagent-driven-development": {
+      "hash": "39a2ec026ea88bec",
+      "summary_zh": "一种由子代理协同执行开发计划的工作流，适合在当前会话中并行处理彼此独立的实现任务。",
+      "translated_at": "2026-08-03T18:31:41.565Z"
+    },
+    "skill:ganyuanran-aegis-test-driven-development": {
+      "hash": "3f4a893230dad7b9",
+      "summary_zh": "一套严格遵循测试先行的开发流程，适合明确要求 TDD 或已采用严格 TDD 路线的编码场景。",
+      "translated_at": "2026-08-03T18:31:42.632Z"
+    },
+    "skill:ganyuanran-aegis-using-aegis": {
+      "hash": "281480aa56647858",
+      "summary_zh": "用于在对话开始或排查时检查 Aegis 的技能路由，确保请求被分配给合适的处理流程。",
+      "translated_at": "2026-08-03T18:31:44.290Z"
+    },
+    "skill:ganyuanran-aegis-update-aegis": {
+      "hash": "56affe648c1750de",
+      "summary_zh": "用于检查并升级已安装方法包的工具，适合确认当前版本是否最新或快速更新到最新版。",
+      "translated_at": "2026-08-03T18:31:44.488Z"
+    },
+    "skill:ganyuanran-aegis-using-git-worktrees": {
+      "hash": "4272e3db7d6481d4",
+      "summary_zh": "通过 Git 工作树创建并行检出目录，适合同时处理多个开发任务，或避免未提交改动阻碍安全切换分支。",
+      "translated_at": "2026-08-03T18:31:45.058Z"
+    },
+    "skill:ganyuanran-aegis-writing-plans": {
+      "hash": "8d5ec776774aa6b0",
+      "summary_zh": "用于在动手写代码前，将需求或规格整理成清晰的多步骤执行计划，适合复杂开发任务。",
+      "translated_at": "2026-08-03T18:31:47.104Z"
+    },
+    "skill:ganyuanran-aegis-writing-skills": {
+      "hash": "56dcd2094cf97ae7",
+      "summary_zh": "用于创建、编辑和验证技能配置，帮助开发者在部署前确认其功能是否正常。",
+      "translated_at": "2026-08-03T18:31:48.392Z"
+    },
+    "skill:ganyuanran-aegis-verification-before-completion": {
+      "hash": "98beb459bc771965",
+      "summary_zh": "一套任务完成前的验证流程，适合在提交、合并、发布或交付前确认工作确实已修复并通过检查，避免误报完成。",
+      "translated_at": "2026-08-03T18:31:48.621Z"
+    },
+    "skill:garrytan-gstack": {
+      "hash": "9c91a0daee92e4d4",
+      "summary_zh": "一个技能套件的统一路由工具，用于按需分发请求并调用合适的技能模块。",
+      "translated_at": "2026-08-03T18:31:49.418Z"
+    },
+    "skill:garrytan-gstack-benchmark-models": {
+      "hash": "c9fb4cb551a56db7",
+      "summary_zh": "用于横向评测不同模型在 gstack 技能上的表现，适合做能力对比和模型选型。",
+      "translated_at": "2026-08-03T18:31:52.404Z"
+    },
+    "skill:garrytan-gstack-autoplan": {
+      "hash": "047046f7a02f8909",
+      "summary_zh": "自动串联业务、设计、工程和开发体验评审，并依据统一原则自动决策，适合标准化项目审查流程。",
+      "translated_at": "2026-08-03T18:31:53.186Z"
+    },
+    "skill:garrytan-gstack-benchmark": {
+      "hash": "4b518c2848b7af38",
+      "summary_zh": "借助 browse 守护进程自动检测性能回退，适合在持续集成中发现版本更新导致的性能下降。",
+      "translated_at": "2026-08-03T18:31:54.587Z"
+    },
+    "skill:garrytan-gstack-browse": {
+      "hash": "341d1265d1909154",
+      "summary_zh": "一款用于质量测试和网站内部试用的高速无头浏览器，适合自动验证页面功能与体验。",
+      "translated_at": "2026-08-03T18:31:54.976Z"
+    },
+    "skill:garrytan-gstack-canary": {
+      "hash": "66c15525fd3729f6",
+      "summary_zh": "用于部署后进行金丝雀监控，帮助团队及时发现新版本上线后的异常与回归问题。",
+      "translated_at": "2026-08-03T18:31:56.299Z"
+    },
+    "skill:garrytan-gstack-careful": {
+      "hash": "6bc9dd608d9a39d4",
+      "summary_zh": "为高风险命令提供安全防护，避免误执行删除、覆盖等破坏性操作，适合终端和自动化任务。",
+      "translated_at": "2026-08-03T18:31:56.714Z"
+    },
+    "skill:garrytan-gstack-context-restore": {
+      "hash": "d38b11e48379345c",
+      "summary_zh": "用于恢复先前保存的工作上下文，适合中断后快速接续任务，减少重复梳理信息。",
+      "translated_at": "2026-08-03T18:31:58.546Z"
+    },
+    "skill:garrytan-gstack-codex": {
+      "hash": "363107e19bc0c65f",
+      "summary_zh": "一个提供三种运行模式的 OpenAI Codex 命令行封装，适合简化不同场景下的 AI 编程操作。",
+      "translated_at": "2026-08-03T18:31:59.489Z"
+    },
+    "skill:garrytan-gstack-context-save": {
+      "hash": "7d9f9643be943b85",
+      "summary_zh": "用于保存当前工作上下文，方便中断后快速恢复进度，适合频繁切换任务的场景。",
+      "translated_at": "2026-08-03T18:31:59.784Z"
+    },
+    "skill:garrytan-gstack-design-consultation": {
+      "hash": "cb8af94d72d4fa74",
+      "summary_zh": "一款产品设计咨询工具，能分析产品与行业趋势，生成涵盖字体、配色、布局、间距和动效的完整设计方案及预览。",
+      "translated_at": "2026-08-03T18:32:01.632Z"
+    },
+    "skill:garrytan-gstack-cso": {
+      "hash": "cd3215183ec2f175",
+      "summary_zh": "一种面向安全审查的 AI 工作模式，适合从首席安全官视角发现风险并提出改进建议。",
+      "translated_at": "2026-08-03T18:32:01.950Z"
+    },
+    "skill:garrytan-gstack-design-html": {
+      "hash": "f161321705d977c7",
+      "summary_zh": "一款设计定稿工具，可生成生产级的 Pretext 原生 HTML/CSS，适合将设计快速落地为高质量前端页面。",
+      "translated_at": "2026-08-03T18:32:03.252Z"
+    },
+    "skill:garrytan-gstack-design-shotgun": {
+      "hash": "37214dfe608ad25b",
+      "summary_zh": "一款批量生成多种 AI 设计方案并集中对比、收集结构化反馈的工具，适合快速评审和迭代设计。",
+      "translated_at": "2026-08-03T18:32:04.586Z"
+    },
+    "skill:garrytan-gstack-devex-review": {
+      "hash": "89a363a7ec8986fa",
+      "summary_zh": "一款实时审查开发者体验的工具，适合快速发现开发流程和工具链中的体验问题。",
+      "translated_at": "2026-08-03T18:32:06.618Z"
+    },
+    "skill:garrytan-gstack-design-review": {
+      "hash": "e7e46160c4a979d8",
+      "summary_zh": "一款界面视觉质检与修复工具，可发现并纠正风格、间距、层级、AI生成痕迹及交互迟缓等问题。",
+      "translated_at": "2026-08-03T18:32:08.091Z"
+    },
+    "skill:garrytan-gstack-diagram": {
+      "hash": "fd6908581527f36c",
+      "summary_zh": "一款把英文描述或 Mermaid 源码转成可编辑 Excalidraw 图表的工具，适合快速制作和迭代技术示意图。",
+      "translated_at": "2026-08-03T18:32:08.623Z"
+    },
+    "skill:garrytan-gstack-freeze": {
+      "hash": "249f6c090d606a7b",
+      "summary_zh": "一个会话级文件编辑限制工具，可将修改范围锁定在指定目录，适合防止误改其他文件。",
+      "translated_at": "2026-08-03T18:32:10.812Z"
+    },
+    "skill:garrytan-gstack-document-generate": {
+      "hash": "4495a7966efe0bd9",
+      "summary_zh": "从零为功能、模块或整个项目补齐缺失文档，适合快速完善项目说明与维护资料。",
+      "translated_at": "2026-08-03T18:32:11.078Z"
+    },
+    "skill:garrytan-gstack-document-release": {
+      "hash": "3f3979b60eb6f30d",
+      "summary_zh": "用于产品发布后更新文档，适合功能上线后快速补齐并同步相关说明。",
+      "translated_at": "2026-08-03T18:32:11.103Z"
+    },
+    "skill:garrytan-gstack-gstack-openclaw-investigate": {
+      "hash": "36da2bc42395e22a",
+      "summary_zh": "一款用于排查和修复软件故障的调试工具，适合分析报错、堆栈信息、异常行为及定位问题根因。",
+      "translated_at": "2026-08-03T18:32:13.122Z"
+    },
+    "skill:garrytan-gstack-gstack-openclaw-office-hours": {
+      "hash": "233e7d6ff3b35060",
+      "summary_zh": "一套产品构思与评估工具，适合在编码前梳理创意、判断开发价值并明确产品或设计方向。",
+      "translated_at": "2026-08-03T18:32:13.628Z"
+    },
+    "skill:garrytan-gstack-gstack-openclaw-ceo-review": {
+      "hash": "f90b4d5ac4ee3887",
+      "summary_zh": "一款以 CEO 视角评审方案的工具，适合挑战假设、发现漏洞，并判断计划该扩张还是收缩。",
+      "translated_at": "2026-08-03T18:32:14.032Z"
+    },
+    "skill:garrytan-gstack-gstack-openclaw-retro": {
+      "hash": "381d2dba5974c8eb",
+      "summary_zh": "一款每周工程复盘工具，通过分析提交记录、工作模式和代码质量趋势，总结团队产出及个人贡献与成长空间。",
+      "translated_at": "2026-08-03T18:32:15.674Z"
+    },
+    "skill:garrytan-gstack-gstack-upgrade": {
+      "hash": "7f70b53a5c767091",
+      "summary_zh": "用于将现有安装升级到最新版本的工具，适合快速完成版本更新。",
+      "translated_at": "2026-08-03T18:32:17.705Z"
+    },
+    "skill:garrytan-gstack-guard": {
+      "hash": "fd560a2acf5736c0",
+      "summary_zh": "一个命令行安全防护工具，可预警破坏性命令并限制编辑范围，适合降低误操作风险。",
+      "translated_at": "2026-08-03T18:32:18.260Z"
+    },
+    "skill:garrytan-gstack-hackernews-frontpage": {
+      "hash": "c3bebcf3cfab61fe",
+      "summary_zh": "一个抓取 Hacker News 首页标题、得分和评论数的工具，适合追踪热门技术话题和分析内容热度。",
+      "translated_at": "2026-08-03T18:32:18.681Z"
+    },
+    "skill:garrytan-gstack-health": {
+      "hash": "576c4d7315c92e03",
+      "summary_zh": "一款代码质量看板，用于集中查看和跟踪项目健康状况，适合团队日常评审与持续改进。",
+      "translated_at": "2026-08-03T18:32:20.295Z"
+    },
+    "skill:garrytan-gstack-ios-clean": {
+      "hash": "c3522e32660ca047",
+      "summary_zh": "用于清理 iOS 项目中的 DebugBridge 依赖及相关调试条件代码，适合移除临时调试配置。",
+      "translated_at": "2026-08-03T18:32:22.745Z"
+    },
+    "skill:garrytan-gstack-investigate": {
+      "hash": "dd88ae17b26f8211",
+      "summary_zh": "一款系统化调试工具，帮助开发者梳理故障线索并定位根因，适合排查复杂软件问题。",
+      "translated_at": "2026-08-03T18:32:23.439Z"
+    },
+    "skill:garrytan-gstack-ios-design-review": {
+      "hash": "450830ba86a2ba3a",
+      "summary_zh": "一款在真实 iOS 设备上审查应用视觉设计的工具，适合发现界面还原、布局和显示效果问题。",
+      "translated_at": "2026-08-03T18:32:24.341Z"
+    },
+    "skill:garrytan-gstack-ios-fix": {
+      "hash": "3f81ef2ee05b6718",
+      "summary_zh": "一款可自主定位并修复 iOS 应用缺陷的工具，适合加快排障和迭代开发。",
+      "translated_at": "2026-08-03T18:32:28.029Z"
+    },
+    "skill:garrytan-gstack-ios-qa": {
+      "hash": "e7b2d18218f82c43",
+      "summary_zh": "一款面向 SwiftUI 应用的真机 iOS 测试工具，适合在实际设备上快速发现和排查质量问题。",
+      "translated_at": "2026-08-03T18:32:28.319Z"
+    },
+    "skill:garrytan-gstack-ios-sync": {
+      "hash": "27160d639c86a2e2",
+      "summary_zh": "用于根据最新上游 gstack 模板重新生成 iOS 调试桥，适合保持调试工具同步与兼容。",
+      "translated_at": "2026-08-03T18:32:30.275Z"
+    },
+    "skill:garrytan-gstack-land-and-deploy": {
+      "hash": "fdaeda77871668d2",
+      "summary_zh": "一套用于合并代码并完成部署的工作流，适合需要规范发布流程的开发团队。",
+      "translated_at": "2026-08-03T18:32:32.300Z"
+    },
+    "skill:garrytan-gstack-learn": {
+      "hash": "9d43905d5d67a672",
+      "summary_zh": "用于集中记录和管理项目经验教训，适合团队沉淀知识、复盘过程并避免重复踩坑。",
+      "translated_at": "2026-08-03T18:32:34.747Z"
+    },
+    "skill:garrytan-gstack-make-pdf": {
+      "hash": "cbc7413208f0a586",
+      "summary_zh": "把 Markdown 文件转换成出版级 PDF，适合制作排版精美的文档、报告或电子书。",
+      "translated_at": "2026-08-03T18:32:36.231Z"
+    },
+    "skill:garrytan-gstack-landing-report": {
+      "hash": "c2f6ad4d8af8ad4b",
+      "summary_zh": "一个面向多工作区发布流程的只读队列看板，适合集中查看任务排队和执行状态。",
+      "translated_at": "2026-08-03T18:32:38.291Z"
+    },
+    "skill:garrytan-gstack-open-gstack-browser": {
+      "hash": "5d71c5ac168d2fbe",
+      "summary_zh": "一款内置侧边栏扩展、可由 AI 控制的 Chromium 浏览器，适合自动化网页操作和智能浏览。",
+      "translated_at": "2026-08-03T18:32:39.505Z"
+    },
+    "skill:garrytan-gstack-pair-agent": {
+      "hash": "4d303b477908ca91",
+      "summary_zh": "将远程 AI 助手接入浏览器，适合协助完成网页操作、信息检索和在线任务。",
+      "translated_at": "2026-08-03T18:32:42.543Z"
+    },
+    "skill:garrytan-gstack-plan-ceo-review": {
+      "hash": "82ae96a6bbd0f1a8",
+      "summary_zh": "一款以 CEO 或创始人视角审查项目计划的工具，适合发现战略偏差、执行风险和优先级问题。",
+      "translated_at": "2026-08-03T18:32:42.733Z"
+    },
+    "skill:garrytan-gstack-office-hours": {
+      "hash": "3fb124eb2469a7d9",
+      "summary_zh": "一款模拟 YC 办公时间的创业辅导工具，通过两种模式帮助创始人梳理产品思路和解决增长难题。",
+      "translated_at": "2026-08-03T18:32:43.163Z"
+    },
+    "skill:garrytan-gstack-plan-design-review": {
+      "hash": "4592188dfc545a74",
+      "summary_zh": "一款交互式方案评审工具，从设计、业务和工程视角审查计划，适合提前发现体验与落地问题。",
+      "translated_at": "2026-08-03T18:32:45.222Z"
+    },
+    "skill:garrytan-gstack-plan-devex-review": {
+      "hash": "470835c45609c540",
+      "summary_zh": "一个交互式开发者体验方案评审工具，适合在落地前发现流程、工具和使用体验中的问题。",
+      "translated_at": "2026-08-03T18:32:47.358Z"
+    },
+    "skill:garrytan-gstack-plan-eng-review": {
+      "hash": "45f6a6957288f810",
+      "summary_zh": "一款以工程经理视角审查技术方案的工具，适合提前发现计划中的风险、遗漏和执行问题。",
+      "translated_at": "2026-08-03T18:32:48.042Z"
+    },
+    "skill:garrytan-gstack-plan-tune": {
+      "hash": "f5266ba86cd7a8ab",
+      "summary_zh": "一款面向 gstack 的观察分析工具，可自动调整提问敏感度并理解开发者偏好，适合优化人机协作体验。",
+      "translated_at": "2026-08-03T18:32:49.471Z"
+    },
+    "skill:garrytan-gstack-qa": {
+      "hash": "be8b3bbe4e8db111",
+      "summary_zh": "用于系统化测试 Web 应用并修复发现的缺陷，适合上线前全面排查和解决问题。",
+      "translated_at": "2026-08-03T18:32:51.295Z"
+    },
+    "skill:garrytan-gstack-qa-only": {
+      "hash": "1400e617633ea0a5",
+      "summary_zh": "一个只生成问题报告、不改动代码的质量测试工具，适合集中发现并反馈应用缺陷。",
+      "translated_at": "2026-08-03T18:32:52.279Z"
+    },
+    "skill:garrytan-gstack-retro": {
+      "hash": "ab0cbe9abc5e4888",
+      "summary_zh": "一款面向工程团队的每周复盘工具，帮助回顾开发进展、总结问题并持续改进协作流程。",
+      "translated_at": "2026-08-03T18:32:52.776Z"
+    },
+    "skill:garrytan-gstack-review": {
+      "hash": "4a149540ec3034e9",
+      "summary_zh": "一款用于代码合并前审查 PR 的工具，帮助提前发现潜在问题并降低变更风险。",
+      "translated_at": "2026-08-03T18:32:54.729Z"
+    },
+    "skill:garrytan-gstack-scrape": {
+      "hash": "a5f7e7f6f79bfa20",
+      "summary_zh": "一个从网页中提取数据的工具，适合快速采集和整理页面内容。",
+      "translated_at": "2026-08-03T18:32:55.118Z"
+    },
+    "skill:garrytan-gstack-setup-browser-cookies": {
+      "hash": "781c81f43c53c04f",
+      "summary_zh": "将真实 Chromium 浏览器的 Cookie 导入无头浏览会话，适合复用登录状态进行自动化测试或网页操作。",
+      "translated_at": "2026-08-03T18:32:56.415Z"
+    },
+    "skill:garrytan-gstack-setup-deploy": {
+      "hash": "73d9d89c3c09ff7c",
+      "summary_zh": "一个为 /land-and-deploy 配置部署参数的工具，适合统一并简化项目上线前的设置。",
+      "translated_at": "2026-08-03T18:32:58.914Z"
+    },
+    "skill:garrytan-gstack-setup-gbrain": {
+      "hash": "6f6d1343104d5023",
+      "summary_zh": "一款为编程智能体配置记忆与工具接入的初始化工具，适合搭建本地或云端知识库并管理远程仓库信任策略。",
+      "translated_at": "2026-08-03T18:32:59.085Z"
+    },
+    "skill:garrytan-gstack-ship": {
+      "hash": "34add19badc2857f",
+      "summary_zh": "一款自动化发版工作流工具，可合并基准分支、测试并审查变更，更新版本与日志后提交代码并创建 PR。",
+      "translated_at": "2026-08-03T18:32:59.085Z"
+    },
+    "skill:garrytan-gstack-skillify": {
+      "hash": "9b7f998985490c2a",
+      "summary_zh": "将最近成功的网页抓取流程固化为可复用的浏览器技能，适合沉淀自动化操作并长期使用。",
+      "translated_at": "2026-08-03T18:33:02.081Z"
+    },
+    "skill:garrytan-gstack-spec": {
+      "hash": "eb6bfc53579099dc",
+      "summary_zh": "一套分五阶段梳理需求的工具，能把模糊想法转化为精准、可执行的开发规范。",
+      "translated_at": "2026-08-03T18:33:03.073Z"
+    },
+    "skill:garrytan-gstack-sync-gbrain": {
+      "hash": "ae0c141e3777f522",
+      "summary_zh": "一个带状态管理的代码同步工具，用于让 gbrain 跟进仓库代码，并自动更新 CLAUDE.md 中的智能体搜索指引。",
+      "translated_at": "2026-08-03T18:33:05.120Z"
+    },
+    "skill:garrytan-gstack-unfreeze": {
+      "hash": "6bfdbcc6a0655a07",
+      "summary_zh": "清除 /freeze 设置的冻结边界，恢复所有目录的编辑权限，适合需要解除目录限制时使用。",
+      "translated_at": "2026-08-03T18:33:07.316Z"
+    },
+    "skill:getsentry-sentry-migrate-container-queries": {
+      "hash": "151514c1e5516a98",
+      "summary_zh": "一份将前端响应式布局从视口媒体查询迁移到容器查询的指南，适合重构组件及统一布局实现。",
+      "translated_at": "2026-08-03T18:33:08.220Z"
+    },
+    "skill:getsentry-sentry-seer-embed": {
+      "hash": "dc5f7525fe5fbcef",
+      "summary_zh": "用于在 Seer 的 Markdown 输出中添加内嵌富组件，适合开发新控件并打通前后端生成流程。",
+      "translated_at": "2026-08-03T18:33:09.485Z"
+    },
+    "skill:getsentry-skills-blog-writing-guide": {
+      "hash": "7478933126ff063d",
+      "summary_zh": "一套面向 Sentry 工程博客和开发者内容的写作指南，适合撰写、审校和润色技术文章、产品公告及深度解析。",
+      "translated_at": "2026-08-03T18:33:10.748Z"
+    },
+    "skill:getsentry-skills-agents-md": {
+      "hash": "e15b63ff74dbf585",
+      "summary_zh": "用于创建和维护简洁的项目智能体说明文件，适合统一仓库编码约定并让指令保持精简、有据可查。",
+      "translated_at": "2026-08-03T18:33:11.355Z"
+    },
+    "skill:getsentry-skills-brand-guidelines": {
+      "hash": "1f017f5dcb3d3b01",
+      "summary_zh": "一套面向用户文案的写作规范，帮助统一界面提示、错误信息、引导流程、文档和营销内容的品牌语气。",
+      "translated_at": "2026-08-03T18:33:12.777Z"
+    },
+    "skill:getsentry-skills-code-review": {
+      "hash": "fef6cf022ef78251",
+      "summary_zh": "一套遵循 Sentry 工程规范的代码审查指南，适合评审合并请求和代码变更，发现安全、性能、测试与设计问题。",
+      "translated_at": "2026-08-03T18:33:14.057Z"
+    },
+    "skill:getsentry-skills-claude-settings-audit": {
+      "hash": "5bbe7eeaf9c9b996",
+      "summary_zh": "用于分析代码仓库并推荐 Claude Code 权限配置，适合新项目初始化、现有设置审计及安全放行只读命令。",
+      "translated_at": "2026-08-03T18:33:14.212Z"
+    },
+    "skill:getsentry-skills-code-simplifier": {
+      "hash": "8030fea9f9f8ca89",
+      "summary_zh": "在不改变功能的前提下简化和优化代码，提升可读性、一致性与可维护性，适合代码重构、清理及变更审查。",
+      "translated_at": "2026-08-03T18:33:15.513Z"
+    },
+    "skill:getsentry-skills-create-branch": {
+      "hash": "68c721abe97d765e",
+      "summary_zh": "按 Sentry 命名规范创建并切换 Git 分支，适合开始新任务或从默认分支开展工作。",
+      "translated_at": "2026-08-03T18:33:16.582Z"
+    },
+    "skill:getsentry-skills-commit": {
+      "hash": "668d18ecc20a78e3",
+      "summary_zh": "用于生成或提交符合 Sentry 规范的约定式提交信息，并自动关联问题编号，适合规范代码变更记录。",
+      "translated_at": "2026-08-03T18:33:17.088Z"
+    },
+    "skill:getsentry-skills-django-access-review": {
+      "hash": "74b492231db75855",
+      "summary_zh": "用于审查 Django 和 DRF 代码中的访问控制与对象权限，发现越权访问、IDOR 及租户隔离漏洞。",
+      "translated_at": "2026-08-03T18:33:18.159Z"
+    },
+    "skill:getsentry-skills-doc-coauthoring": {
+      "hash": "5cd22526090a4906",
+      "summary_zh": "通过结构化协作流程引导用户撰写和迭代文档，适合提案、技术规范、决策记录等内容创作。",
+      "translated_at": "2026-08-03T18:33:21.209Z"
+    },
+    "skill:getsentry-skills-document-api-endpoint": {
+      "hash": "7d11f63c5264f2d4",
+      "summary_zh": "用于完善 Sentry API 端点文档与类型的工具，适合补写 OpenAPI 定义、校准请求响应类型并验证生成规范。",
+      "translated_at": "2026-08-03T18:33:22.836Z"
+    },
+    "skill:getsentry-skills-django-perf-review": {
+      "hash": "6b9212ebe72d2856",
+      "summary_zh": "用于审查 Django 代码性能，可发现 N+1 查询、低效 QuerySet 和 ORM 数据库访问问题，适合性能优化与代码审计。",
+      "translated_at": "2026-08-03T18:33:23.337Z"
+    },
+    "skill:getsentry-skills-find-bugs": {
+      "hash": "4c7a1bde32df79b6",
+      "summary_zh": "用于审查当前分支的代码改动，快速发现缺陷、安全漏洞和代码质量问题，适合代码评审与安全审计。",
+      "translated_at": "2026-08-03T18:33:23.538Z"
+    },
+    "skill:getsentry-skills-gh-review-requests": {
+      "hash": "00dc2a926d1d4231",
+      "summary_zh": "用于筛选未读的 GitHub PR 审查通知，快速查看指定团队待审或团队成员提交的 PR。",
+      "translated_at": "2026-08-03T18:33:25.134Z"
+    },
+    "skill:getsentry-skills-gha-security-review": {
+      "hash": "c17c4aea4dfab0ac",
+      "summary_zh": "用于审计 GitHub Actions 工作流安全，识别表达式注入、凭据窃取和供应链攻击等可利用漏洞，并提供具体验证场景。",
+      "translated_at": "2026-08-03T18:33:25.849Z"
+    },
+    "skill:getsentry-skills-iterate-pr": {
+      "hash": "260b6b04854fa36d",
+      "summary_zh": "自动迭代修复拉取请求中的 CI 失败和中高优先级评审意见，适合持续处理代码直至达到可合并状态。",
+      "translated_at": "2026-08-03T18:33:26.449Z"
+    },
+    "skill:getsentry-skills-pr-link-issue": {
+      "hash": "ad41c14c22bc7fab",
+      "summary_zh": "自动在当前 PR 描述中补充 GitHub Issue 及关联的 Linear 工单链接，适合快速完善问题追踪引用。",
+      "translated_at": "2026-08-03T18:33:27.338Z"
+    },
+    "skill:getsentry-skills-pr-writer": {
+      "hash": "217e0070cd0ff515",
+      "summary_zh": "用于自动生成或更新面向评审者的 PR 标题和描述，适合提交代码或整理分支改动供审核时使用。",
+      "translated_at": "2026-08-03T18:33:28.331Z"
+    },
+    "skill:getsentry-skills-prompt-optimizer": {
+      "hash": "b210244cbf5705bd",
+      "summary_zh": "用于创建、优化和迭代提示词，让智能体与系统指令更稳定，并支持跨模型迁移和效果评估。",
+      "translated_at": "2026-08-03T18:33:30.560Z"
+    },
+    "skill:getsentry-skills-presentation-creator": {
+      "hash": "3f606646a316b7de",
+      "summary_zh": "一个用 React、Vite 和 Recharts 创建数据驱动演示文稿的工具，适合快速制作带图表、动画和 Sentry 品牌风格的单文件幻灯片。",
+      "translated_at": "2026-08-03T18:33:31.187Z"
+    },
+    "skill:getsentry-skills-replay-ux-research": {
+      "hash": "49a950ce2ebfb6d5",
+      "summary_zh": "通过分析 Sentry 会话回放，发现用户行为模式、操作路径和体验痛点，适合开展产品体验研究与审计。",
+      "translated_at": "2026-08-03T18:33:32.072Z"
+    },
+    "skill:getsentry-skills-security-review": {
+      "hash": "57d656a3182f8e58",
+      "summary_zh": "用于系统审查代码安全漏洞，适合排查注入、XSS、身份认证、权限控制和加密等问题，并按可信度输出结果。",
+      "translated_at": "2026-08-03T18:33:33.018Z"
+    },
+    "skill:getsentry-skills-skill-scanner": {
+      "hash": "ddfa3d2616e497c9",
+      "summary_zh": "用于扫描和审计智能体技能的安全工具，可在安装前发现提示注入、恶意脚本、权限过度、密钥泄露及供应链风险。",
+      "translated_at": "2026-08-03T18:33:33.611Z"
+    },
+    "skill:getsentry-skills-skill-writer": {
+      "hash": "ae101e6a912e8d49",
+      "summary_zh": "一款按 Agent Skills 规范创建、整合和持续优化智能体技能的工具，适合维护技能文档、注册信息并验证质量。",
+      "translated_at": "2026-08-03T18:33:34.322Z"
+    },
+    "skill:getsentry-skills-sred-project-organizer": {
+      "hash": "dc8053dfbde1c1f4",
+      "summary_zh": "将项目及相关文档整理成符合 SRED 规范的提交格式，适合批量准备和规范化申报材料。",
+      "translated_at": "2026-08-03T18:33:40.363Z"
     }
   }
 }

@@ -1,7 +1,7 @@
 {
   "id": "trailofbits-skills-dwarf-expert",
   "name": "dwarf-expert",
-  "description": "Provides expertise for analyzing DWARF debug files and understanding the DWARF debug format/standard (v3-v5). Triggers when understanding DWARF information, interacting with DWARF files, answering DWARF-related questions, or working with code that parses DWARF data.",
+  "description": "Analyzes DWARF debug information in compiled binaries. Use when inspecting .debug_* sections, DIE trees, or DW_TAG_/DW_AT_ entries with dwarfdump/llvm-dwarfdump or readelf, verifying debug info with llvm-dwarfdump --verify, answering DWARF standard questions, or writing code that parses DWARF (libdwarf, pyelftools, gimli).",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/trailofbits/skills/blob/main/plugins/dwarf-expert/skills/dwarf-expert/SKILL.md",
     "path": "plugins/dwarf-expert/skills/dwarf-expert/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-03T15:27:29.493Z",
-    "stars": 6415,
+    "discovered_at": "2026-08-03T17:31:44.888Z",
+    "stars": 6416,
     "language": "Python",
-    "pushed_at": "2026-08-03T15:04:54Z",
+    "pushed_at": "2026-08-03T16:49:21Z",
     "license": "CC-BY-SA-4.0"
-  },
-  "summary_zh": "专门帮你搞定DWARF调试文件与标准（v3-v5）的辅助工具。当你需要阅读调试信息、排查相关疑问，或开发解析代码时，它能提供专业指导，让你不再头疼复杂的调试数据。"
+  }
 }

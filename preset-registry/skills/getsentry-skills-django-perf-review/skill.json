@@ -16,10 +16,11 @@
     "url": "https://github.com/getsentry/skills/blob/main/skills/django-perf-review/SKILL.md",
     "path": "skills/django-perf-review/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-03T16:15:17.990Z",
+    "discovered_at": "2026-08-03T18:19:53.840Z",
     "stars": 897,
     "language": "Python",
     "pushed_at": "2026-08-03T09:16:55Z",
     "license": "Apache-2.0"
-  }
+  },
+  "summary_zh": "用于审查 Django 代码性能，可发现 N+1 查询、低效 QuerySet 和 ORM 数据库访问问题，适合性能优化与代码审计。"
 }
