@@ -578,4 +578,13 @@ export async function runTranslations(registryDir: string): Promise<void> {
   console.log(
     `[translate] done. items=${items.length} cache_hits=${hits} translated=${misses} failed=${failures} deferred=${deferred} | bundles=${bundleResult.total} hits=${bundleResult.hits} translated=${bundleResult.misses} failed=${bundleResult.failures} deferred=${bundleResult.deferred} budget_remaining=${formatBudget(budget.remaining())}`,
   );
+
+  const translated = misses + bundleResult.misses;
+  const failed = failures + bundleResult.failures;
+  const attempted = translated + failed;
+  if (attempted > 0 && translated === 0 && failed > 0) {
+    throw new Error(
+      `[translate] all ${attempted} attempted translations failed; check TRANSLATION_MODEL, API credentials, and base URL`,
+    );
+  }
 }

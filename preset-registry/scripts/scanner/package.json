@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "scan": "tsx index.ts",
-    "reclassify": "tsx reclassify-skills.ts"
+    "reclassify": "tsx reclassify-skills.ts",
+    "test": "tsx --test *.test.ts"
   },
   "dependencies": {
     "@octokit/plugin-throttling": "^9.0.0",

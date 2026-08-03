@@ -5,6 +5,10 @@ on:
     - cron: "17 * * * *"   # hourly at :17 (off the :00 spike)
   workflow_dispatch:
 
+concurrency:
+  group: scanner
+  cancel-in-progress: false
+
 jobs:
   scan:
     runs-on: ubuntu-latest
@@ -27,6 +31,10 @@ jobs:
         working-directory: preset-registry/scripts/scanner
         run: pnpm install --frozen-lockfile || pnpm install
 
+      - name: Test scanner
+        working-directory: preset-registry/scripts/scanner
+        run: pnpm test
+
       - name: Run scanner
         working-directory: preset-registry/scripts/scanner
         env:
@@ -45,6 +53,7 @@ jobs:
           TRANSLATION_MODEL: ${{ vars.TRANSLATION_MODEL || 'gpt-4o-mini' }}
           TRANSLATION_README_CHARS: ${{ vars.TRANSLATION_README_CHARS || '2000' }}
           TRANSLATION_CONCURRENCY: ${{ vars.TRANSLATION_CONCURRENCY || '3' }}
+          TRANSLATION_MAX_PER_RUN: ${{ vars.TRANSLATION_MAX_PER_RUN || '200' }}
         run: pnpm run scan
 
       - name: Commit changes
