@@ -1,0 +1,25 @@
+{
+  "id": "thedotmack-claude-mem-mode-creator",
+  "name": "mode-creator",
+  "description": "Interactively create, install, activate, and verify custom claude-mem modes, including domain-specific observation types, concept tags, optional Telegram alerts, bot setup, worker restart, and startup-context verification. Use this whenever someone asks to customize what claude-mem remembers, create or change a mode, track domain-specific notes, add observation types or tags, or send Telegram notifications for particular memories—even if they do not use the word \"mode.\"",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "thedotmack",
+  "install_path": ".claude/skills/mode-creator/SKILL.md",
+  "source": {
+    "repo": "thedotmack/claude-mem",
+    "url": "https://github.com/thedotmack/claude-mem/blob/main/plugin/skills/mode-creator/SKILL.md",
+    "path": "plugin/skills/mode-creator/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-03T22:05:45.467Z",
+    "stars": 89438,
+    "language": "JavaScript",
+    "pushed_at": "2026-08-03T21:28:04Z",
+    "license": "Apache-2.0"
+  }
+}
