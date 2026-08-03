@@ -1,6 +1,6 @@
 ---
 name: run-github-project
-description: Use when asked to reconcile GitHub Project epics or human checkpoints, triage Backlog work, plan and execute the next authorized issue, or drain authorized issues through implementation, review, merge, and reconciliation.
+description: Use when asked to set up or repair a repository's GitHub Project configuration, reconcile Project epics or human checkpoints, triage Backlog work, plan and execute the next authorized issue, or drain authorized issues through implementation, review, merge, and reconciliation.
 ---
 
 # Run GitHub Project
@@ -26,6 +26,35 @@ Run independent slot agents concurrently in `drain`. Keep claims, shared
 Project state, merges, and reconciliation in one controller lane while each
 ticket agent owns its worktree, branch, and non-merge PR mutations. Preserve
 context across one ticket's passes; never reuse it for another.
+
+## Select The Mode
+
+Select and record the mode before checking execution preconditions:
+
+- Use `setup` only when the user explicitly asks to set up, configure, validate,
+  or repair the repository binding without running Project work.
+- Use `next` by default for execution and process at most one selected issue.
+- Use `drain` only when the user explicitly asks to drain, run all, repeat, or
+  continue until empty.
+
+In `setup`, follow [Configure The Project](#configure-the-project) plus the
+read-only retry, pagination, unknown-state, and bounded-failure rules in
+[Handle GitHub Access Failures](#handle-github-access-failures). Discard a
+partial logical read and report `configuration-blocked` when a complete live
+configuration read cannot be established. Never apply mutation-reconciliation
+rules because setup permits no remote mutation.
+
+Perform the repository, authentication, Project, field, label, branch,
+automation, and cutover reads needed to produce and validate the configuration.
+Do not require `tdd`, `to-plan`, `triage`, review providers, merge authority,
+issue-close authority, an execution-clean worktree, or ticket-agent capacity.
+Never rank or claim work; assign or transition an issue; mutate a Project item,
+issue, or PR; create a ticket worktree; plan or implement a ticket; push; or
+merge. Finish `configuration-valid` only when the verified base contains the
+live-validated pair. Finish `configuration-ready-to-commit` when the validated
+pair is not on the verified base, whether it is uncommitted or committed only
+on another branch. Otherwise finish `configuration-blocked`. Never continue
+into [Check Preconditions](#check-preconditions).
 
 ## Configure The Project
 
@@ -63,8 +92,14 @@ and the minimal trusted-instruction reference together. Write both only after
 confirmation, preserving comments, formatting, and unrelated content. If
 either already exists, show and apply only the missing or stale portion.
 
-Creating or repairing either file pauses execution until both are committed to
-the verified base. Do not commit them implicitly. Continue the same invocation
+Creating or repairing either file pauses `next` or `drain` until both are
+committed to the verified base. Do not commit them implicitly. In `setup`,
+validate the written pair against live state and finish
+`configuration-ready-to-commit`; if the user explicitly authorizes a dedicated
+configuration commit, make only that commit and verify whether the base contains
+both files. Finish `configuration-valid` when it does; otherwise finish
+`configuration-ready-to-commit` with the exact commit and missing-base evidence.
+Do not run Project work. In `next` or `drain`, continue the same invocation only
 after the user commits them or explicitly authorizes a dedicated configuration
 commit and the base contains both.
 
@@ -97,12 +132,10 @@ both before every claim and merge. Stop and preserve work if either changes.
 9. Inspect repository automation that can change Project Status or archive Done
    items. Stop if it conflicts with the configured Backlog, Planning, Ready to
    implement, In progress, and Done lifecycle.
-10. Select and record a run mode. Use `next` by default and process at most one
-    selected issue. Allow `drain` only when the user explicitly asks to drain,
-    run all, repeat, or continue until empty. Run occupied slots concurrently
-    by default. Use two as both the default in-flight ticket count and ticket
-    agent concurrency limit. Accept any positive user-specified limit; impose
-    no skill-defined maximum.
+10. Require the previously selected mode to be `next` or `drain`. Run occupied
+    slots concurrently by default in `drain`. Use two as both the default
+    in-flight ticket count and ticket-agent concurrency limit. Accept any
+    positive user-specified limit; impose no skill-defined maximum.
 11. Before any execution claim, require explicit merge authority for the
    mode's scope: the one selected issue in `next`, or every eligible issue
    encountered in `drain`. Without it, stop before claiming execution; never
@@ -562,6 +595,14 @@ failed ticket automatically.
 
 ## Final Report
 
+For `setup`, report the repository and Project identity, configuration files
+read or changed, live validation performed, unresolved values, committed-base
+state, and exactly one terminal result: `configuration-valid`,
+`configuration-ready-to-commit`, or `configuration-blocked`. Stop there; omit
+queue, scheduler, authority, ticket, triage, and human-frontier reporting.
+
+For `next` or `drain`, report the following execution evidence.
+
 Report the run mode, slot limit, Project configuration digest, live queries,
 merge-authority outcome, scheduler result, peak ticket-agent concurrency,
 named resource-lock grants, waits, recoveries, triage provider result,
@@ -763,3 +804,20 @@ For each changed rule, establish RED by reverting it, then require GREEN. Add a 
     assigned human gate remains a human action rather than interrupted runner
     cleanup. Counterexample: an unassigned bare epic needs no next-action role
     label.
+36. RED lets `setup` fall through execution preconditions, trust a partial live
+    read, or skip bounded retries; GREEN applies read-only failure handling,
+    discovers, writes, and live-validates only the complete configuration pair,
+    then returns its configuration result without claims or remote mutations.
+    Novel case: a partial paginated field read is discarded and the complete
+    logical read is retried. Counterexamples: mutation reconciliation never
+    applies in `setup`, and missing `tdd` or merge authority does not block a
+    complete `configuration-ready-to-commit` result.
+37. RED leaves an authorized configuration commit without a terminal result
+    when it is not on the verified base; GREEN returns `configuration-valid`
+    only when the base contains both files and otherwise returns
+    `configuration-ready-to-commit` with the exact commit and missing-base
+    evidence. Novel case: a valid configuration commit on a feature branch
+    remains ready to land while `next` and `drain` stay paused. Counterexample:
+    a base that already contains the live-validated pair is valid, not ready to
+    commit. Discovering missing configuration during `next` never silently
+    switches modes or begins execution from uncommitted configuration.
