@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-03T08:56:33.893Z",
+  "updated_at": "2026-08-03T12:13:17.378Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -328,9 +328,9 @@
       "translated_at": "2026-05-19T20:21:31.044Z"
     },
     "skill:anthropics-skills-claude-api": {
-      "hash": "259c5296cd9496b3",
-      "summary_zh": "一份面向开发者的 Claude / Anthropic API 速查手册，覆盖模型 ID、价格、参数、流式输出、工具调用、缓存和迁移等细节，避免凭记忆瞎答或翻文档。",
-      "translated_at": "2026-06-07T20:48:27.566Z"
+      "hash": "32bb562a36b755c4",
+      "summary_zh": "一份面向 Claude API 与 Anthropic SDK 的速查指南，适合查询模型、价格、参数及工具调用等开发信息。",
+      "translated_at": "2026-08-03T12:12:37.692Z"
     },
     "skill:anthropics-skills-doc-coauthoring": {
       "hash": "5cd22526090a4906",
@@ -338,14 +338,14 @@
       "translated_at": "2026-05-19T20:21:57.250Z"
     },
     "skill:anthropics-skills-docx": {
-      "hash": "fc51d9e27a2291d6",
-      "summary_zh": "这是一个处理Word文档的工具，能帮你自动生成排版专业的文档，也适合需要提取重组内容、批量修改或替换图片等自动化处理文档的场景。",
-      "translated_at": "2026-05-19T20:21:51.360Z"
+      "hash": "d9afc4ce6a84b40c",
+      "summary_zh": "用于创建、读取和编辑 Word 文档或模板，适合排版专业文档、提取重组内容及批量替换文字和图片。",
+      "translated_at": "2026-08-03T12:12:38.178Z"
     },
     "skill:anthropics-skills-frontend-design": {
-      "hash": "b646b5a65086ada0",
-      "summary_zh": "这是个生成高质量前端界面代码的工具，适合开发网页或应用UI时使用，能帮你做出精致且不落俗套的设计，告别千篇一律的AI审美。",
-      "translated_at": "2026-05-19T20:22:13.782Z"
+      "hash": "c4eb175b0bbe9d06",
+      "summary_zh": "一套前端视觉设计指南，帮助新建或改造界面时明确美学方向、优化排版，避免千篇一律的模板感。",
+      "translated_at": "2026-08-03T12:12:39.956Z"
     },
     "skill:anthropics-skills-internal-comms": {
       "hash": "4f83e1499ff530dd",
@@ -368,9 +368,9 @@
       "translated_at": "2026-05-19T20:22:52.665Z"
     },
     "skill:anthropics-skills-pptx": {
-      "hash": "cc4ba3552c927b5d",
-      "summary_zh": "这是一个全能的幻灯片处理工具，只要工作涉及PPT文件，无论是读取提取、制作生成还是修改重组，它都能帮你轻松搞定。",
-      "translated_at": "2026-05-19T20:22:55.301Z"
+      "hash": "438bb85d5162d9fc",
+      "summary_zh": "用于创建、读取、编辑和拆分合并 PowerPoint 文件，适合处理演示文稿、模板、备注及内容提取。",
+      "translated_at": "2026-08-03T12:12:41.540Z"
     },
     "skill:anthropics-skills-slack-gif-creator": {
       "hash": "c6b3de65311a6864",
@@ -403,9 +403,9 @@
       "translated_at": "2026-05-19T20:39:01.479Z"
     },
     "skill:anthropics-skills-xlsx": {
-      "hash": "ed26a5165f8cc008",
-      "summary_zh": "这是一个处理电子表格的技能，能帮你轻松搞定各类表格文件的创建、编辑、修复与格式转换，只要涉及表格数据操作的场景都能派上用场。",
-      "translated_at": "2026-05-19T20:24:29.131Z"
+      "hash": "42f8508bce730e4f",
+      "summary_zh": "一款电子表格处理工具，适合读取、编辑、清洗、计算、制图、新建及转换各类表格文件。",
+      "translated_at": "2026-08-03T12:12:43.870Z"
     },
     "skill:cexll-myclaude-codeagent": {
       "hash": "48c9b7ac74b25cd3",
@@ -3388,9 +3388,9 @@
       "translated_at": "2026-05-19T20:11:00.561Z"
     },
     "skill:alirezarezvani-claude-skills-agent-designer": {
-      "hash": "28e565ca013e9322",
-      "summary_zh": "这是一个帮你设计多智能体系统的工具，专治多个智能体协同工作时架构怎么搭、怎么通信以及工作流怎么跑的难题。",
-      "translated_at": "2026-05-19T20:11:03.656Z"
+      "hash": "f96a1bc554754810",
+      "summary_zh": "用于设计多智能体架构与编排模式、生成工具定义，并分析运行日志中的成本、延迟和故障瓶颈。",
+      "translated_at": "2026-08-03T12:10:47.694Z"
     },
     "skill:alirezarezvani-claude-skills-agent-workflow-designer": {
       "hash": "7d0320b792cc2e5e",
@@ -3408,9 +3408,9 @@
       "translated_at": "2026-05-19T20:11:34.697Z"
     },
     "skill:alirezarezvani-claude-skills-agile-product-owner": {
-      "hash": "8aeb34f309ae4ca6",
-      "summary_zh": "这是一款敏捷产品管理辅助工具，专治需求梳理与迭代规划难题。当你要拆分史诗、写用户故事、排优先级，或做冲刺计划和工作量估算时，它都能帮你轻松搞定。",
-      "translated_at": "2026-05-19T20:11:47.751Z"
+      "hash": "019c82558d0f25fd",
+      "summary_zh": "一套敏捷产品管理指南，帮助产品负责人编写用户故事、拆分需求、规划迭代并跟踪进度，适合管理待办事项和推进冲刺执行。",
+      "translated_at": "2026-08-03T12:10:47.710Z"
     },
     "skill:alirezarezvani-claude-skills-ai-security": {
       "hash": "c732b924ef84e90a",
@@ -3438,9 +3438,9 @@
       "translated_at": "2026-05-19T20:12:33.954Z"
     },
     "skill:alirezarezvani-claude-skills-apple-hig-expert": {
-      "hash": "7e5d7544ca5bc301",
-      "summary_zh": "这是一份苹果人机界面设计的专家级指南，帮你快速搞懂最新的液态玻璃美学和无障碍规范，轻松打造符合苹果原生体验的应用。",
-      "translated_at": "2026-05-19T20:12:50.993Z"
+      "hash": "00043bda3c404eb3",
+      "summary_zh": "用于审查和设计苹果平台界面，检查规范合规性、对比度与点击区域，打造更原生易用的 UI。",
+      "translated_at": "2026-08-03T12:10:50.124Z"
     },
     "skill:alirezarezvani-claude-skills-app-store-optimization": {
       "hash": "91b8a7f6540d8a8d",
@@ -3478,9 +3478,9 @@
       "translated_at": "2026-05-19T20:14:18.230Z"
     },
     "skill:alirezarezvani-claude-skills-board": {
-      "hash": "38f65c66aa709585",
-      "summary_zh": "这是一个供智能体交流的留言板，能解决多智能体间的沟通与协作问题，适合需要多个智能体协同完成任务的场景。",
-      "translated_at": "2026-05-19T20:14:21.419Z"
+      "hash": "244791d586ba5808",
+      "summary_zh": "用于读写和浏览 AgentHub 的协作留言，适合多个智能体之间发布、查看和检查协调消息。",
+      "translated_at": "2026-08-03T12:10:52.713Z"
     },
     "skill:alirezarezvani-claude-skills-board-deck-builder": {
       "hash": "c093354cadc4aeb9",
@@ -3488,9 +3488,9 @@
       "translated_at": "2026-05-19T20:14:32.496Z"
     },
     "skill:alirezarezvani-claude-skills-board-meeting": {
-      "hash": "ea4e679b8985766e",
-      "summary_zh": "这是一个用于战略决策的多智能体董事会协议，让不同角色独立探讨、互相批评并提炼最终决策。适合遇到战略难题，需要多视角、结构化分析来拍板的场景。",
-      "translated_at": "2026-05-19T20:14:42.005Z"
+      "hash": "298da5ad55ab30e6",
+      "summary_zh": "一套多智能体董事会决策协议，通过分阶段独立研判、质疑与综合，适合对战略问题进行多视角审议并形成结论。",
+      "translated_at": "2026-08-03T12:10:55.342Z"
     },
     "skill:alirezarezvani-claude-skills-board-prep": {
       "hash": "80873d72b212d637",
@@ -3498,14 +3498,14 @@
       "translated_at": "2026-05-19T20:14:44.637Z"
     },
     "skill:alirezarezvani-claude-skills-boardroom": {
-      "hash": "8984f0a7bf5a36a7",
-      "summary_zh": "它能模拟高管团队进行多角色讨论，从不同视角深入分析商业议题，并直接输出专业的董事会备忘录，非常适合用来做商业决策评估和战略规划。",
-      "translated_at": "2026-05-19T20:14:58.042Z"
+      "hash": "184b8e8497862189",
+      "summary_zh": "模拟高管团队分阶段研讨，适合处理横跨财务、产品和市场的复杂决策，并生成董事会备忘录。",
+      "translated_at": "2026-08-03T12:10:57.343Z"
     },
     "skill:alirezarezvani-claude-skills-brief": {
-      "hash": "42d3f3b5ccb6e171",
-      "summary_zh": "能把零散的沟通记录快速整理成一页纸战略简报，帮你省去繁琐梳理、快速对齐思路，适合战略冲刺启动前的信息归拢。",
-      "translated_at": "2026-05-19T20:15:05.548Z"
+      "hash": "ffa12156629e699b",
+      "summary_zh": "把咨询中的战略问题整理成一页简报，明确选项、假设和成功标准，适合定价调整或市场进入等决策前讨论。",
+      "translated_at": "2026-08-03T12:10:57.558Z"
     },
     "skill:alirezarezvani-claude-skills-brand-guidelines": {
       "hash": "7be609b9e436eefb",
@@ -3518,9 +3518,9 @@
       "translated_at": "2026-05-19T20:15:22.043Z"
     },
     "skill:alirezarezvani-claude-skills-business-growth-skills": {
-      "hash": "17f0e20e1dccb829",
-      "summary_zh": "这是给AI编程助手装上的商务大脑，让AI能直接介入客户成功、售前和营收运营等商业环节，帮你搞定各类商务文书与数据分析，适合需要用AI驱动业务增长的团队。",
-      "translated_at": "2026-05-19T20:15:29.237Z"
+      "hash": "cedcf5ced8cdd72a",
+      "summary_zh": "一套业务增长任务路由工具，能按需求匹配客户成功、售前、营收运营或合同提案能力，适合快速选择处理方案。",
+      "translated_at": "2026-08-03T12:10:59.099Z"
     },
     "skill:alirezarezvani-claude-skills-browserstack": {
       "hash": "dc397d927532a719",
@@ -3528,9 +3528,9 @@
       "translated_at": "2026-05-19T20:15:31.223Z"
     },
     "skill:alirezarezvani-claude-skills-c-level-agents": {
-      "hash": "bc3cc8605d63115a",
-      "summary_zh": "这是一个专为创始人打造的虚拟高管团队，能模拟多角色进行战略商讨与决策。适合单人创业缺智囊、需要高管视角辅助，或需要董事会头脑风暴的场景。",
-      "translated_at": "2026-05-19T20:15:45.790Z"
+      "hash": "6a542b72c00ca937",
+      "summary_zh": "一套由多角色高管智能体组成的虚拟管理团队，适合创始人开展战略推演、跨部门决策与高管咨询。",
+      "translated_at": "2026-08-03T12:11:00.063Z"
     },
     "skill:alirezarezvani-claude-skills-business-investment-advisor": {
       "hash": "485aa6d29243204a",
@@ -3543,14 +3543,14 @@
       "translated_at": "2026-05-19T20:15:57.172Z"
     },
     "skill:alirezarezvani-claude-skills-c-level-skills": {
-      "hash": "270198399158be92",
-      "summary_zh": "给AI编程工具加的高管顾问插件，内置十个C级角色，能模拟董事会开会并给出结构化战略建议，专帮创始人解决缺乏高管视角的决策痛点。",
-      "translated_at": "2026-05-19T20:16:01.435Z"
+      "hash": "17ea239642b24fd3",
+      "summary_zh": "一套高管顾问能力索引与导航工具，适合快速了解各类管理角色，并为具体问题匹配合适的顾问能力和使用入口。",
+      "translated_at": "2026-08-03T12:11:00.531Z"
     },
     "skill:alirezarezvani-claude-skills-caio-review": {
-      "hash": "79dd35d53cfb0667",
-      "summary_zh": "这是一个模拟严苛首席AI官的审查工具。它能在你推进AI项目前，对方案进行全方位的灵魂拷问，帮你提前排查技术和商业风险，避免盲目投入踩坑。",
-      "translated_at": "2026-05-19T20:16:19.785Z"
+      "hash": "e804294bad0ca92c",
+      "summary_zh": "一款以首席 AI 官视角审查 AI 方案的工具，适合评估模型选型、风险合规、成本效益和 AI 招聘决策。",
+      "translated_at": "2026-08-03T12:11:04.147Z"
     },
     "skill:alirezarezvani-claude-skills-campaign-analytics": {
       "hash": "662114cb83c816da",
@@ -3558,9 +3558,9 @@
       "translated_at": "2026-05-19T20:16:22.316Z"
     },
     "skill:alirezarezvani-claude-skills-capa-officer": {
-      "hash": "4226db147df27755",
-      "summary_zh": "专为医疗器械质量管理体系打造的CAPA管理工具，帮你搞定从问题调查、整改追踪到效果验证的全流程闭环，适合需要规范CAPA流程和持续优化的场景。",
-      "translated_at": "2026-05-19T20:16:30.268Z"
+      "hash": "6cabf414c0a9646e",
+      "summary_zh": "一套面向医疗器械质量管理的 CAPA 系统，用于调查根因、跟踪纠正措施、验证效果并优化改进流程。",
+      "translated_at": "2026-08-03T12:11:03.498Z"
     },
     "skill:alirezarezvani-claude-skills-caveman": {
       "hash": "29dfb9a546fe3e08",
@@ -3578,9 +3578,9 @@
       "translated_at": "2026-05-19T20:16:51.167Z"
     },
     "skill:alirezarezvani-claude-skills-cco-review": {
-      "hash": "914c0613941296bf",
-      "summary_zh": "它模拟极度关注留存率的CCO来审查方案，适合在制定客户留存、分层或客服团队规模与招聘计划时使用，通过灵魂拷问帮你提前排雷。",
-      "translated_at": "2026-05-19T20:17:09.155Z"
+      "hash": "b9d85d951eedde16",
+      "summary_zh": "一个以客户留存为核心的方案审查工具，适合评估客户分层、续约风险及客户成功团队扩招决策。",
+      "translated_at": "2026-08-03T12:11:06.458Z"
     },
     "skill:alirezarezvani-claude-skills-ceo-advisor": {
       "hash": "ba057cdb26034a7f",
@@ -3588,9 +3588,9 @@
       "translated_at": "2026-05-19T20:17:17.252Z"
     },
     "skill:alirezarezvani-claude-skills-cdo-review": {
-      "hash": "4e750965b9995988",
-      "summary_zh": "这是一个模拟首席数据官视角的审查助手，能对涉及训练数据、架构、产品化或团队招聘的方案进行深度盘问，帮你发现逻辑漏洞，确保数据决策严谨可靠。",
-      "translated_at": "2026-05-19T20:17:23.124Z"
+      "hash": "f1736fea87343bab",
+      "summary_zh": "一款面向数据负责人的方案审查工具，适合验证训练数据权利、评估数据架构选型，以及数据产品化、招聘和并购估值决策。",
+      "translated_at": "2026-08-03T12:11:08.101Z"
     },
     "skill:alirezarezvani-claude-skills-cfo-advisor": {
       "hash": "69d8835504278343",
@@ -3613,14 +3613,14 @@
       "translated_at": "2026-05-19T20:18:14.778Z"
     },
     "skill:alirezarezvani-claude-skills-changelog-generator": {
-      "hash": "1016d600f8c0b4c1",
-      "summary_zh": "这是一款基于约定式提交生成更新日志的工具，让你在自动化发版时也能把控内容。适合发新版本、把Git历史转成CHANGELOG文件，或在CI中自动生成发版说明。",
-      "translated_at": "2026-05-19T20:18:23.159Z"
+      "hash": "67cd12b2202898fa",
+      "summary_zh": "基于约定式提交生成一致、可审计的发布说明，适合自动维护更新日志、判断语义化版本升级及规划热修复或回滚。",
+      "translated_at": "2026-08-03T12:11:09.290Z"
     },
     "skill:alirezarezvani-claude-skills-cfo-review": {
-      "hash": "8987af7a25a8ef06",
-      "summary_zh": "这是个扮演严苛CFO的审查助手，专门对涉及资金的商业计划进行挑刺式数据拷问。适合创业者在敲定规划前深扒财务隐患，避免盲目决策。",
-      "translated_at": "2026-05-19T20:18:38.108Z"
+      "hash": "29cecc835910ff91",
+      "summary_zh": "一款以财务视角审查重大支出计划的工具，适合评估招聘、融资或渠道预算中的单位经济、现金周期、股权稀释和资金配置风险。",
+      "translated_at": "2026-08-03T12:11:08.669Z"
     },
     "skill:alirezarezvani-claude-skills-channel-economics": {
       "hash": "3ecd34b6c2798308",
@@ -3688,9 +3688,9 @@
       "translated_at": "2026-05-19T20:20:51.117Z"
     },
     "skill:asklokesh-claudeskill-loki-mode": {
-      "hash": "5c73d9e53723acc6",
-      "summary_zh": "一套自动化的规格驱动开发系统，输入 PRD、GitHub issue 或 OpenAPI 文档，就能在几乎无人干预下交付可部署的产品，内置多重质量校验确保每步真正完成而非只是声称完成，适合想把需求文档直接跑成上线代码的团队。",
-      "translated_at": "2026-06-08T23:10:22.586Z"
+      "hash": "029b1c8d9c6bedb9",
+      "summary_zh": "这是一个按需求规格自主构建并部署产品的系统，通过多重验证确保真正完成，适合少人工介入的端到端开发场景。",
+      "translated_at": "2026-08-03T12:12:46.757Z"
     },
     "skill:asklokesh-claudeskill-loki-mode-checkpoint-mode": {
       "hash": "9dbd92df5178a388",
@@ -10078,9 +10078,9 @@
       "translated_at": "2026-08-03T04:59:48.713Z"
     },
     "bundle:fradser-dotclaude": {
-      "hash": "e0391a8a82262246",
-      "summary_zh": "一套面向 Claude 的全栈实战技能库，打通营销增长、产品设计、数据分析、自动化与协作开发，让复杂任务从规划到落地更高效。",
-      "translated_at": "2026-08-03T04:59:37.366Z"
+      "hash": "082387edd0073853",
+      "summary_zh": "一套面向 AI 助手的全栈技能库，覆盖产品、研发、设计与增长营销，让复杂任务可自动分流并协同执行。",
+      "translated_at": "2026-08-03T12:08:41.878Z"
     },
     "bundle:sethgammon-citadel": {
       "hash": "ccfc472396f8c5a3",
@@ -18611,6 +18611,891 @@
       "hash": "fd143ed7e5a0f0bd",
       "summary_zh": "用于撰写和润色生物医学论文讨论部分，帮助解读结果、联系既有研究、分析意外发现、说明临床意义与局限并形成结论。",
       "translated_at": "2026-08-03T08:56:33.893Z"
+    },
+    "skill:aipoch-medical-research-skills-gsea": {
+      "hash": "8946aaab2a6e951d",
+      "summary_zh": "一款基因集富集分析工具，可分析排序后的基因列表并生成富集结果表、运行得分及可视化图。",
+      "translated_at": "2026-08-03T12:08:44.845Z"
+    },
+    "skill:aipoch-medical-research-skills-grant-specific-aims-writer": {
+      "hash": "37e24d050c9b0f81",
+      "summary_zh": "用于撰写和修改科研基金申请的研究目标页，适合 NIH、NSF 等资助项目的内容组织与结构优化。",
+      "translated_at": "2026-08-03T12:08:44.888Z"
+    },
+    "skill:aipoch-medical-research-skills-graphical-abstract-generator": {
+      "hash": "7e860c7d570f5f5d",
+      "summary_zh": "将生物医学研究内容转成图文摘要，适合论文展示；无法直接生成图片时也能输出流程图或设计说明。",
+      "translated_at": "2026-08-03T12:08:46.512Z"
+    },
+    "skill:aipoch-medical-research-skills-gsva-analysis-and-visualization": {
+      "hash": "f2d9db7b1715fd88",
+      "summary_zh": "从批量表达矩阵和样本分组中开展GSVA或ssGSEA通路差异分析，并生成通路活性热图，适合KEGG、MSigDB等通路富集场景。",
+      "translated_at": "2026-08-03T12:08:48.253Z"
+    },
+    "skill:aipoch-medical-research-skills-hierarchical-clustering-plot": {
+      "hash": "0ff5e42a6b317d7c",
+      "summary_zh": "用于从批量表达矩阵和样本注释生成样本层级聚类树，适合样本质控、批次检查和相似性评估。",
+      "translated_at": "2026-08-03T12:08:49.035Z"
+    },
+    "skill:aipoch-medical-research-skills-immune-pathway-analysis": {
+      "hash": "36df4414221cd29b",
+      "summary_zh": "用于批量表达数据的免疫通路活性分析，适合比较两组样本并输出差异通路结果和热图。",
+      "translated_at": "2026-08-03T12:08:49.609Z"
+    },
+    "skill:aipoch-medical-research-skills-introduction-logic-builder": {
+      "hash": "6250ef619bed37da",
+      "summary_zh": "一款生物医学论文引言写作工具，帮助梳理背景、研究空白与目标，明确研究定位并构建严谨叙事。",
+      "translated_at": "2026-08-03T12:08:51.193Z"
+    },
+    "skill:aipoch-medical-research-skills-km-survival-curve": {
+      "hash": "07cfd4445dd8dc66",
+      "summary_zh": "用于从包含时间、事件状态和风险分组的表格数据生成生存曲线，适合命令行批量分析并导出 PDF 图表。",
+      "translated_at": "2026-08-03T12:08:53.012Z"
+    },
+    "skill:aipoch-medical-research-skills-introduction-section-writer": {
+      "hash": "30e58cffee574524",
+      "summary_zh": "一款生物医学论文引言写作工具，可依据明确的研究逻辑生成完整引言，同时避免证据越界和内容失焦。",
+      "translated_at": "2026-08-03T12:08:53.786Z"
+    },
+    "skill:aipoch-medical-research-skills-knn-imputation": {
+      "hash": "b600d127bf93b589",
+      "summary_zh": "用于批量表达矩阵的缺失值处理，可过滤高缺失基因并按单列分组用KNN填补，小样本组自动改用均值或中位数。",
+      "translated_at": "2026-08-03T12:08:55.686Z"
+    },
+    "skill:aipoch-medical-research-skills-lasso-logistics-analysis": {
+      "hash": "66caf7e10886f214",
+      "summary_zh": "用于组学特征矩阵二分类建模的工具，适合通过 LASSO 逻辑回归、交叉验证和系数路径图筛选关键特征。",
+      "translated_at": "2026-08-03T12:08:57.672Z"
+    },
+    "skill:aipoch-medical-research-skills-latex-manuscript-format-converter": {
+      "hash": "6bf35513c87924c4",
+      "summary_zh": "将现有论文转换成符合目标期刊、会议或指定模板的 LaTeX 格式，同时保留原意和结构。",
+      "translated_at": "2026-08-03T12:08:58.563Z"
+    },
+    "skill:aipoch-medical-research-skills-lay-summary-for-cross-disciplinary-teams": {
+      "hash": "6b267d764c02d94c",
+      "summary_zh": "将技术研究改写成结构清晰的通俗摘要，帮助跨专业团队快速理解研究结论、统一认知并采取行动。",
+      "translated_at": "2026-08-03T12:09:00.131Z"
+    },
+    "skill:aipoch-medical-research-skills-lightgbm-analysis": {
+      "hash": "d0900a9acba61bd8",
+      "summary_zh": "用于在 R 中训练表格数据的 LightGBM 模型，并生成评估指标、特征重要性排名和可视化图表。",
+      "translated_at": "2026-08-03T12:09:00.216Z"
+    },
+    "skill:aipoch-medical-research-skills-limitation-and-risk-writer": {
+      "hash": "eefc6905fc970e0c",
+      "summary_zh": "一款学术写作助手，能专业表述研究局限与风险，适合撰写论文讨论、基金评估和审稿回复。",
+      "translated_at": "2026-08-03T12:09:06.700Z"
+    },
+    "skill:aipoch-medical-research-skills-medical-english-precision-editor": {
+      "hash": "4b819eb3adb680b6",
+      "summary_zh": "一款医学英语精准润色工具，在不改变事实、证据边界和科学原意的前提下优化专业表达。",
+      "translated_at": "2026-08-03T12:09:06.817Z"
+    },
+    "skill:aipoch-medical-research-skills-lncrna-regulatory-network-construction-analysis": {
+      "hash": "1c2fb2d336317b97",
+      "summary_zh": "基于本地ceRNA参考库构建lncRNA-mRNA调控网络，适合从目标列表整合共享miRNA证据，不用于表达矩阵推断。",
+      "translated_at": "2026-08-03T12:09:09.630Z"
+    },
+    "skill:aipoch-medical-research-skills-model-calibration-curve": {
+      "hash": "2e36f91a8f046c56",
+      "summary_zh": "用于评估生存模型预测概率与实际结局的一致性，适合基于临床数据在多个时间点绘制自助法校准曲线。",
+      "translated_at": "2026-08-03T12:09:09.814Z"
+    },
+    "skill:aipoch-medical-research-skills-methods-section-writer": {
+      "hash": "155410613b710d59",
+      "summary_zh": "将研究方案和分析流程整理成可投稿的生物医学论文方法部分，适合按报告规范、结果内容及期刊要求撰写或修订。",
+      "translated_at": "2026-08-03T12:09:10.569Z"
+    },
+    "skill:aipoch-medical-research-skills-paper-sprint-review": {
+      "hash": "2d72245f56d601f8",
+      "summary_zh": "一套借鉴 Scrum 的论文评审与修订工具，适合中英文稿件审阅、返修意见处理及分阶段制定修改计划。",
+      "translated_at": "2026-08-03T12:09:12.943Z"
+    },
+    "skill:aipoch-medical-research-skills-pca-dimensionality-reduction": {
+      "hash": "103ffef6ce0f8a75",
+      "summary_zh": "用于对表格数值数据进行主成分分析降维，适合通过命令行快速筛选数值特征并导出处理结果。",
+      "translated_at": "2026-08-03T12:09:15.605Z"
+    },
+    "skill:aipoch-medical-research-skills-poster-storyline-builder": {
+      "hash": "b445d6e82d604b7e",
+      "summary_zh": "将论文内容重组为适合学术海报的叙事结构，帮助规划版块、标题层级、图表选择和现场讲解流程。",
+      "translated_at": "2026-08-03T12:09:16.269Z"
+    },
+    "skill:aipoch-medical-research-skills-ppi-network-analysis": {
+      "hash": "96c8a7ad383e5c4d",
+      "summary_zh": "一套标准化的 R 命令行流程，用本地基因列表和离线 STRING 缓存构建蛋白互作网络并导出可复现结果。",
+      "translated_at": "2026-08-03T12:09:17.891Z"
+    },
+    "skill:aipoch-medical-research-skills-reference-integrity-checker": {
+      "hash": "61c885e28231205c",
+      "summary_zh": "一款论文引用核查工具，用于判断参考文献是否准确支撑论述，避免引用范围失当、过度引申、误引或二手转引。",
+      "translated_at": "2026-08-03T12:09:19.142Z"
+    },
+    "skill:aipoch-medical-research-skills-reporting-guideline-compliance-checker": {
+      "hash": "db5b8118b7068fcf",
+      "summary_zh": "用于检查生物医学论文是否符合主流报告规范，帮助作者在投稿或修订前发现缺失、薄弱的内容。",
+      "translated_at": "2026-08-03T12:09:20.655Z"
+    },
+    "skill:aipoch-medical-research-skills-results-section-structurer": {
+      "hash": "085a3d659d029f4c",
+      "summary_zh": "用于整理生物医学图表、分析和结果内容，按证据与叙事逻辑构建清晰规范的论文结果章节。",
+      "translated_at": "2026-08-03T12:09:23.030Z"
+    },
+    "skill:aipoch-medical-research-skills-results-section-writer": {
+      "hash": "cc2d4b1fd36741fe",
+      "summary_zh": "一款生物医学论文写作工具，可根据结果结构、图表清单或分析摘要生成完整结果章节，并确保结论不超出证据范围、层次清晰。",
+      "translated_at": "2026-08-03T12:09:23.436Z"
+    },
+    "skill:aipoch-medical-research-skills-revision-strategy-planner": {
+      "hash": "1af69aaabb3dfe70",
+      "summary_zh": "一款论文修改规划工具，可按实验、分析、澄清、重构和措辞等类型整理审稿意见，并生成分优先级的大小修计划。",
+      "translated_at": "2026-08-03T12:09:26.793Z"
+    },
+    "skill:aipoch-medical-research-skills-rf-model-importance-analysis": {
+      "hash": "cc3c23f013532565",
+      "summary_zh": "一套标准化的 R 命令行流程，用于从表达矩阵训练二分类随机森林，并生成可复现的误差与变量重要性分析图。",
+      "translated_at": "2026-08-03T12:09:27.079Z"
+    },
+    "skill:aipoch-medical-research-skills-sample-correlation-analysis": {
+      "hash": "8514dea443e6e11f",
+      "summary_zh": "用于分析两个变量相关性的命令行工具，支持皮尔逊和斯皮尔曼方法，适合快速处理并导出相关性分析结果。",
+      "translated_at": "2026-08-03T12:09:29.904Z"
+    },
+    "skill:aipoch-medical-research-skills-nomogram-construction": {
+      "hash": "91f45ee14a0c54cb",
+      "summary_zh": "用于根据生存相关临床指标构建预后列线图，导出模型包、C指数表及PDF，适合生存结局预测建模。",
+      "translated_at": "2026-08-03T12:09:30.645Z"
+    },
+    "skill:aipoch-medical-research-skills-roc-diagnostic-performance": {
+      "hash": "d24c9d0c12f507de",
+      "summary_zh": "用于基于病例-对照表达数据评估诊断生物标志物表现，适合用逻辑回归和ROC曲线分析并导出结果。",
+      "translated_at": "2026-08-03T12:09:32.818Z"
+    },
+    "skill:aipoch-medical-research-skills-sample-group-sankey-plot": {
+      "hash": "b58bbe696294cd6c",
+      "summary_zh": "把样本注释表中的风险组、疗效、亚型等分类绘成桑基图或河流图，适合展示样本分组间的流转关系。",
+      "translated_at": "2026-08-03T12:09:34.387Z"
+    },
+    "skill:aipoch-medical-research-skills-slide-deck-for-lab-meeting": {
+      "hash": "40021a1a4ff1e21a",
+      "summary_zh": "将研究进展整理成重点明确、可执行的汇报幻灯片，适合实验室例会或项目评审，且不会虚构缺失内容。",
+      "translated_at": "2026-08-03T12:09:35.840Z"
+    },
+    "skill:aipoch-medical-research-skills-ssgsea-immune-infiltration-analysis": {
+      "hash": "4126ad83bdf04764",
+      "summary_zh": "用于从批量RNA测序表达矩阵估算免疫浸润，适合病例与对照比较及免疫评分可视化，不适用于单细胞或临床决策。",
+      "translated_at": "2026-08-03T12:09:38.155Z"
+    },
+    "skill:aipoch-medical-research-skills-svm-model-importance-analysis": {
+      "hash": "3b672f30c366c6ae",
+      "summary_zh": "用于表达矩阵二分类分析的标准化 R 命令行工具，可通过 SVM-RFE 排序特征，并依据交叉验证误差筛选特征数量、生成可复现图表。",
+      "translated_at": "2026-08-03T12:09:38.220Z"
+    },
+    "skill:aipoch-medical-research-skills-title-and-abstract-optimizer": {
+      "hash": "52e52a66b149919b",
+      "summary_zh": "一款生物医学论文写作优化工具，帮助提升标题和摘要的信息密度、事实准确性及期刊投稿匹配度。",
+      "translated_at": "2026-08-03T12:09:40.644Z"
+    },
+    "skill:aipoch-medical-research-skills-target-journal-matcher": {
+      "hash": "5eb9450805b52705",
+      "summary_zh": "根据研究主题、设计和证据强度匹配合适期刊，适合投稿选刊、比较影响因子与契合度，或退稿后寻找更现实的目标。",
+      "translated_at": "2026-08-03T12:09:41.407Z"
+    },
+    "skill:aipoch-medical-research-skills-table-narrative-writer": {
+      "hash": "d36ae5aff30b0f06",
+      "summary_zh": "将生物医学表格转成论文或演示叙述，突出关键规律与差异，避免堆砌数据和过度解读。",
+      "translated_at": "2026-08-03T12:09:43.268Z"
+    },
+    "skill:aitytech-agentkits-marketing-brand-building": {
+      "hash": "a2a1a08d37972f37",
+      "summary_zh": "用于梳理品牌战略、定位、视觉识别与表达风格，适合制定品牌指南、定位陈述及品牌架构。",
+      "translated_at": "2026-08-03T12:09:45.654Z"
+    },
+    "skill:aitytech-agentkits-marketing-analytics-attribution": {
+      "hash": "9a8d9e73d1888f83",
+      "summary_zh": "一套用于营销效果衡量、归因建模和投资回报分析的工具，适合搭建追踪体系、评估活动表现及生成营销报告。",
+      "translated_at": "2026-08-03T12:09:47.559Z"
+    },
+    "skill:aitytech-agentkits-marketing-competitor-alternatives": {
+      "hash": "a35ee3fd11eab827",
+      "summary_zh": "一套用于策划竞品对比和替代方案页面的方法，适合提升 SEO 表现并辅助销售转化。",
+      "translated_at": "2026-08-03T12:09:50.252Z"
+    },
+    "skill:aitytech-agentkits-marketing-content-strategy": {
+      "hash": "787392d2639c42de",
+      "summary_zh": "一套内容规划与分发方法，适合制定内容日历、搭建内容支柱、设计编辑策略及优化漏斗各阶段内容。",
+      "translated_at": "2026-08-03T12:09:50.384Z"
+    },
+    "skill:aitytech-agentkits-marketing-ab-test-setup": {
+      "hash": "b9073b8a2a2843f2",
+      "summary_zh": "用于规划、设计和实施 A/B 测试或多变量实验，适合验证产品改动、文案版本及业务假设。",
+      "translated_at": "2026-08-03T12:09:51.391Z"
+    },
+    "skill:aitytech-agentkits-marketing-copywriting": {
+      "hash": "2f2f52d5de19fa56",
+      "summary_zh": "用于撰写、改写和优化各类网页营销文案，适合提升标题、卖点和行动号召的表达效果。",
+      "translated_at": "2026-08-03T12:09:53.019Z"
+    },
+    "skill:aitytech-agentkits-marketing-copy-editing": {
+      "hash": "124cd2842aed29a4",
+      "summary_zh": "一套系统审校营销文案的工具，适合润色、校对和评审现有内容，让表达更清晰、更有说服力。",
+      "translated_at": "2026-08-03T12:09:53.277Z"
+    },
+    "skill:aitytech-agentkits-marketing-docx": {
+      "hash": "c02344fed00b195e",
+      "summary_zh": "用于创建、编辑和分析 Word 文档，支持修订、批注、格式保留和文本提取，适合处理各类专业文档任务。",
+      "translated_at": "2026-08-03T12:09:54.151Z"
+    },
+    "skill:aitytech-agentkits-marketing-email-marketing": {
+      "hash": "0b87b1bc0c503901",
+      "summary_zh": "一套用于规划、自动化和优化邮件营销的工具，适合设计邮件序列、提升送达率并改进营销效果。",
+      "translated_at": "2026-08-03T12:09:55.203Z"
+    },
+    "skill:aitytech-agentkits-marketing-email-sequence": {
+      "hash": "808363c311d005bd",
+      "summary_zh": "用于创建和优化自动化邮件流程，适合用户培育、欢迎引导、客户唤回及全生命周期营销等场景。",
+      "translated_at": "2026-08-03T12:09:56.050Z"
+    },
+    "skill:aitytech-agentkits-marketing-form-cro": {
+      "hash": "bf2662a882a961d7",
+      "summary_zh": "用于优化获客、联系、演示申请、调查或结账等表单，减少填写阻力并提升完成率与转化率。",
+      "translated_at": "2026-08-03T12:09:56.724Z"
+    },
+    "skill:aitytech-agentkits-marketing-free-tool-strategy": {
+      "hash": "0ba5fe08a7518402",
+      "summary_zh": "帮助创始人和技术营销人员策划、评估并打造免费工具，用于获客、提升搜索流量和品牌曝光。",
+      "translated_at": "2026-08-03T12:09:57.821Z"
+    },
+    "skill:aitytech-agentkits-marketing-launch-strategy": {
+      "hash": "134311ed8cef3d90",
+      "summary_zh": "一套产品发布策划工具，适合规划新品、功能更新或测试上线，制定分阶段发布、渠道推广和持续造势策略。",
+      "translated_at": "2026-08-03T12:09:59.005Z"
+    },
+    "skill:aitytech-agentkits-marketing-marketing-fundamentals": {
+      "hash": "8c9ed650eb973ada",
+      "summary_zh": "一套营销基础知识指南，帮助理解漏斗、客户旅程、市场定位、价值主张与用户心理，适合制定营销策略和入门学习。",
+      "translated_at": "2026-08-03T12:09:59.685Z"
+    },
+    "skill:aitytech-agentkits-marketing-marketing-ideas": {
+      "hash": "58d6b94617ac7802",
+      "summary_zh": "一套面向 SaaS 和软件产品的营销灵感库，适合快速寻找推广、增长和获客策略。",
+      "translated_at": "2026-08-03T12:09:59.971Z"
+    },
+    "skill:aitytech-agentkits-marketing-marketing-psychology": {
+      "hash": "8ed55be2b90c5a05",
+      "summary_zh": "一套面向营销的心理学方法库，帮助运用心智模型和行为科学理解消费者决策并提升说服效果。",
+      "translated_at": "2026-08-03T12:10:02.102Z"
+    },
+    "skill:aitytech-agentkits-marketing-onboarding-cro": {
+      "hash": "bd93699aa51856bc",
+      "summary_zh": "用于优化注册后的新手引导与首次使用体验，帮助用户更快发现产品价值并提升激活率。",
+      "translated_at": "2026-08-03T12:10:02.331Z"
+    },
+    "skill:aitytech-agentkits-marketing-page-cro": {
+      "hash": "7b7ac436bb9d735b",
+      "summary_zh": "用于优化首页、落地页、定价页等营销页面，帮助排查转化问题并提升访问者转化率。",
+      "translated_at": "2026-08-03T12:10:02.490Z"
+    },
+    "skill:aitytech-agentkits-marketing-paid-advertising": {
+      "hash": "fb61234fe5c916f2",
+      "summary_zh": "一套跨平台付费广告策略与优化工具，适合规划投放、提升广告效果、管理预算及配置渠道追踪。",
+      "translated_at": "2026-08-03T12:10:04.536Z"
+    },
+    "skill:aitytech-agentkits-marketing-pdf": {
+      "hash": "93e420fbcc2525f1",
+      "summary_zh": "一套完整的 PDF 处理工具，适合批量提取文本和表格、生成或拆分合并文档，以及自动填写表单。",
+      "translated_at": "2026-08-03T12:10:07.563Z"
+    },
+    "skill:aitytech-agentkits-marketing-paywall-upgrade-cro": {
+      "hash": "ae55d6f3d8d8bd21",
+      "summary_zh": "用于设计和优化应用内付费墙、升级提示及功能限制界面，帮助提升免费转付费和增购转化率。",
+      "translated_at": "2026-08-03T12:10:07.843Z"
+    },
+    "skill:aitytech-agentkits-marketing-popup-cro": {
+      "hash": "0c6a873c88b73d49",
+      "summary_zh": "用于创建和优化弹窗、浮层、侧滑框及横幅，适合提升线索收集、邮件订阅和活动转化效果。",
+      "translated_at": "2026-08-03T12:10:08.614Z"
+    },
+    "skill:aitytech-agentkits-marketing-pptx": {
+      "hash": "108184f526b94531",
+      "summary_zh": "用于创建、编辑和分析 PPTX 演示文稿，适合调整内容与版式、添加批注或演讲者备注等场景。",
+      "translated_at": "2026-08-03T12:10:09.960Z"
+    },
+    "skill:aitytech-agentkits-marketing-pricing-strategy": {
+      "hash": "09fe2689cac73a0e",
+      "summary_zh": "一套帮助产品制定定价、套餐和变现策略的实用方法，适合价格调研、分层设计及涨价决策等场景。",
+      "translated_at": "2026-08-03T12:10:10.369Z"
+    },
+    "skill:aitytech-agentkits-marketing-problem-solving": {
+      "hash": "bf7707beefd98ed0",
+      "summary_zh": "一套面向营销执行的系统化解题方法，帮助团队化简复杂活动、突破创意瓶颈，并应对受众规模不确定等难题。",
+      "translated_at": "2026-08-03T12:10:12.607Z"
+    },
+    "skill:aitytech-agentkits-marketing-referral-program": {
+      "hash": "c272240901f602d2",
+      "summary_zh": "用于设计、优化和分析推荐、联盟或口碑营销计划，适合搭建激励机制并提升裂变增长效果。",
+      "translated_at": "2026-08-03T12:10:13.231Z"
+    },
+    "skill:aitytech-agentkits-marketing-programmatic-seo": {
+      "hash": "5d2845f0a636ad99",
+      "summary_zh": "一个用模板和数据批量生成 SEO 页面的方法，适合搭建目录页、城市关键词页、对比页和集成页等场景。",
+      "translated_at": "2026-08-03T12:10:13.499Z"
+    },
+    "skill:aitytech-agentkits-marketing-schema-markup": {
+      "hash": "4a754838ccb4fdb5",
+      "summary_zh": "用于添加、修复和优化网站结构化数据，适合配置 JSON-LD、富摘要及商品、评价、FAQ 等 SEO 标记。",
+      "translated_at": "2026-08-03T12:10:15.023Z"
+    },
+    "skill:aitytech-agentkits-marketing-social-media": {
+      "hash": "74ad04f41f4cbf3b",
+      "summary_zh": "一套社交媒体运营工具，适合内容创作、互动策略制定、平台算法优化和社区建设。",
+      "translated_at": "2026-08-03T12:10:17.567Z"
+    },
+    "skill:aitytech-agentkits-marketing-seo-mastery": {
+      "hash": "340836e0d5318cd9",
+      "summary_zh": "一套用于提升自然搜索流量的 SEO 方法指南，适合内容优化、关键词研究、网站诊断和外链策略制定。",
+      "translated_at": "2026-08-03T12:10:17.594Z"
+    },
+    "skill:aitytech-agentkits-marketing-signup-flow-cro": {
+      "hash": "378bbab8cc767665",
+      "summary_zh": "用于优化注册、开户或试用开通流程，减少填写阻力和用户流失，提升注册转化率。",
+      "translated_at": "2026-08-03T12:10:17.853Z"
+    },
+    "skill:alirezarezvani-claude-code-skill-factory-app-store-optimization": {
+      "hash": "e19bd08826e42b71",
+      "summary_zh": "一套应用商店优化工具，帮助研究关键词、优化上架表现并跟踪应用在苹果和谷歌商店的运营效果。",
+      "translated_at": "2026-08-03T12:10:20.114Z"
+    },
+    "skill:aitytech-agentkits-marketing-xlsx": {
+      "hash": "6911a7e1be29aa1a",
+      "summary_zh": "用于创建、编辑和分析 Excel 等表格文件，支持保留与重算公式，适合数据处理、格式调整和可视化。",
+      "translated_at": "2026-08-03T12:10:20.354Z"
+    },
+    "skill:alirezarezvani-claude-code-skill-factory-agent-factory": {
+      "hash": "98942b059cf89060",
+      "summary_zh": "一个面向 Claude Code 的智能体生成系统，可快速创建自定义主、子智能体并配置工具权限与 MCP 集成。",
+      "translated_at": "2026-08-03T12:10:21.588Z"
+    },
+    "skill:alirezarezvani-claude-code-skill-factory-aws-solution-architect": {
+      "hash": "abe056ade527c4fa",
+      "summary_zh": "面向初创团队的 AWS 云架构方案，适合搭建无服务器、可扩展且成本可控的基础设施，并落地现代 DevOps 与基础设施即代码。",
+      "translated_at": "2026-08-03T12:10:22.622Z"
+    },
+    "skill:alirezarezvani-claude-code-skill-factory-claude-md-enhancer": {
+      "hash": "a854288950ace1c9",
+      "summary_zh": "用于分析、生成和优化项目的 CLAUDE.md 配置，适合新项目初始化、旧配置改进及建立 AI 辅助开发规范。",
+      "translated_at": "2026-08-03T12:10:23.306Z"
+    },
+    "skill:alirezarezvani-claude-code-skill-factory-codex-cli-bridge": {
+      "hash": "35d2b2c8de95e6d2",
+      "summary_zh": "连接 Claude Code 与 OpenAI Codex CLI 的桥接工具，适合迁移配置、辅助命令执行及协同使用两套编码工具。",
+      "translated_at": "2026-08-03T12:10:24.316Z"
+    },
+    "skill:alirezarezvani-claude-code-skill-factory-hook-factory": {
+      "hash": "7b0627d92439575c",
+      "summary_zh": "一款通过交互问答生成并自动安装 Claude Code 钩子的工具，适合快速搭建可靠的开发流程自动化。",
+      "translated_at": "2026-08-03T12:10:25.966Z"
+    },
+    "skill:alirezarezvani-claude-code-skill-factory-content-trend-researcher": {
+      "hash": "73b14553c8860a40",
+      "summary_zh": "一款跨平台内容趋势研究工具，结合用户意图与多渠道数据，帮助创作者发现热门选题并生成文章大纲。",
+      "translated_at": "2026-08-03T12:10:26.408Z"
+    },
+    "skill:alirezarezvani-claude-code-skill-factory-ms365-tenant-manager": {
+      "hash": "4fa39b2398c5b9a0",
+      "summary_zh": "面向全局管理员的 Microsoft 365 租户管理工具，用于简化配置、用户管理、安全策略和组织结构优化。",
+      "translated_at": "2026-08-03T12:10:27.192Z"
+    },
+    "skill:alirezarezvani-claude-code-skill-factory-scrum-master-agent": {
+      "hash": "a83de50ee07810fd",
+      "summary_zh": "一款智能 Scrum 助手，适合协助冲刺规划、待办梳理、复盘、产能评估和每日站会，并生成贴合上下文的报告。",
+      "translated_at": "2026-08-03T12:10:29.252Z"
+    },
+    "skill:alirezarezvani-claude-code-skill-factory-prompt-factory": {
+      "hash": "3bc1b1e096fda194",
+      "summary_zh": "一款通过七问引导生成生产级提示词的工具，适合各行业快速构建适配主流大模型的复杂任务指令。",
+      "translated_at": "2026-08-03T12:10:29.934Z"
+    },
+    "skill:alirezarezvani-claude-code-skill-factory-social-media-analyzer": {
+      "hash": "78623d58f7556f5b",
+      "summary_zh": "一款跨平台社交媒体营销分析工具，通过互动、投入产出和受众洞察，帮助评估活动效果并优化营销决策。",
+      "translated_at": "2026-08-03T12:10:31.553Z"
+    },
+    "skill:alirezarezvani-claude-code-skill-factory-slash-command-factory": {
+      "hash": "1c6140f677496d91",
+      "summary_zh": "通过智能问答生成可直接使用的 Claude Code 自定义斜杠命令，适合研究、内容分析、合规检查、API 集成及文档与流程自动化。",
+      "translated_at": "2026-08-03T12:10:31.917Z"
+    },
+    "skill:alirezarezvani-claude-code-skill-factory-tdd-guide": {
+      "hash": "9176ce3e9f0a3b06",
+      "summary_zh": "一份面向工程智能体的测试驱动开发指南，适合跨框架生成测试、分析覆盖率并规范开发流程。",
+      "translated_at": "2026-08-03T12:10:32.659Z"
+    },
+    "skill:alirezarezvani-claude-code-skill-factory-tech-stack-evaluator": {
+      "hash": "f7de9b2c366cd946",
+      "summary_zh": "面向工程团队的技术栈评估与对比工具，结合总拥有成本和安全分析，帮助选型并提供智能建议。",
+      "translated_at": "2026-08-03T12:10:33.754Z"
+    },
+    "skill:alirezarezvani-claude-code-tresor-api-documenter": {
+      "hash": "712158ba6c9d1e54",
+      "summary_zh": "从代码和注释自动生成 OpenAPI/Swagger 文档，适合接口频繁变更或新增端点时保持文档同步。",
+      "translated_at": "2026-08-03T12:10:34.921Z"
+    },
+    "skill:alirezarezvani-claude-code-tresor-code-reviewer": {
+      "hash": "0434101e31c1e911",
+      "summary_zh": "自动检查代码质量和最佳实践，适合在文件修改、保存或提交时发现风格问题、潜在缺陷及基础安全风险。",
+      "translated_at": "2026-08-03T12:10:35.101Z"
+    },
+    "skill:alirezarezvani-claude-code-tresor-dependency-auditor": {
+      "hash": "d363992eefa4e63c",
+      "summary_zh": "自动调用多种审计工具检查依赖中的已知漏洞，适合依赖变更或部署前进行安全排查并及时告警。",
+      "translated_at": "2026-08-03T12:10:36.631Z"
+    },
+    "skill:alirezarezvani-claude-code-tresor-git-commit-helper": {
+      "hash": "e8d0a7fc716fa4ea",
+      "summary_zh": "根据 Git 差异自动生成清晰规范的提交信息，适合提交代码或不确定如何描述改动时使用。",
+      "translated_at": "2026-08-03T12:10:37.327Z"
+    },
+    "skill:alirezarezvani-claude-code-tresor-readme-updater": {
+      "hash": "403d0f3d003a0b8b",
+      "summary_zh": "根据代码、依赖和项目结构变化自动建议更新 README，适合新增功能或调整安装说明时保持文档同步。",
+      "translated_at": "2026-08-03T12:10:38.694Z"
+    },
+    "skill:alirezarezvani-claude-code-tresor-secret-scanner": {
+      "hash": "30a9eac518f6771b",
+      "summary_zh": "一款代码敏感信息扫描工具，可在保存文件或提交代码时发现泄露的密钥、凭证和令牌，避免敏感数据被意外公开。",
+      "translated_at": "2026-08-03T12:10:40.234Z"
+    },
+    "skill:alirezarezvani-claude-code-tresor-test-generator": {
+      "hash": "5a6a130de6ea178c",
+      "summary_zh": "自动为新增函数和组件生成测试脚手架，适合开发新代码或补充测试时快速创建 Jest、Vitest、Pytest 测试。",
+      "translated_at": "2026-08-03T12:10:43.219Z"
+    },
+    "skill:alirezarezvani-claude-code-tresor-security-auditor": {
+      "hash": "fd56bc1600408b5d",
+      "summary_zh": "持续扫描代码中的 SQL 注入、XSS、密钥泄露和认证缺陷，适合代码审查、文件变更或部署前排查安全风险。",
+      "translated_at": "2026-08-03T12:10:43.758Z"
+    },
+    "skill:alirezarezvani-claude-skills-agent-decision-receipts": {
+      "hash": "814e74390b3ba85b",
+      "summary_zh": "为智能体的部署、删除、支付等关键操作生成防篡改、抗量子签名凭证，便于事后独立验证并满足合规留痕要求。",
+      "translated_at": "2026-08-03T12:10:44.091Z"
+    },
+    "skill:alirezarezvani-claude-skills-arquiteto-de-empresa": {
+      "hash": "e340d47f4c37cc94",
+      "summary_zh": "一款通过分阶段访谈搭建企业知识库的工具，适合创业者从零梳理战略、市场、财务及运营体系。",
+      "translated_at": "2026-08-03T12:10:51.862Z"
+    },
+    "skill:alirezarezvani-claude-skills-agent-harness": {
+      "hash": "7687de76377f2d7d",
+      "summary_zh": "把领域技能目录变成可控的智能体执行闭环，适合自动完成目标规划、执行与验收，并在重试超限时转交人工。",
+      "translated_at": "2026-08-03T12:10:52.668Z"
+    },
+    "skill:alterlab-ieu-alterlab-academic-skills-alterlab-alphafold": {
+      "hash": "3494e2d3134b1222",
+      "summary_zh": "基于 AlphaFold2 预测蛋白质单体或复合物三维结构，适合模型排序、置信度评估和设计自洽性检查。",
+      "translated_at": "2026-08-03T12:11:11.541Z"
+    },
+    "skill:alterlab-ieu-alterlab-academic-skills-alterlab-anndata": {
+      "hash": "278967edb84a3287",
+      "summary_zh": "用于构建、读写和整合 AnnData 数据，适合管理单细胞注释、批次、数据层及 .h5ad/Zarr 文件。",
+      "translated_at": "2026-08-03T12:11:11.550Z"
+    },
+    "skill:alterlab-ieu-alterlab-academic-skills-alterlab-bioservices": {
+      "hash": "ffeed63311a47015",
+      "summary_zh": "用统一的 Python 接口查询多种生物信息数据库，适合跨库检索、标识符映射和联合分析。",
+      "translated_at": "2026-08-03T12:11:14.612Z"
+    },
+    "skill:alterlab-ieu-alterlab-academic-skills-alterlab-biopython": {
+      "hash": "b150917d816d2582",
+      "summary_zh": "基于 Biopython 的生物信息处理工具，适合批量解析序列文件、自动化 BLAST、构建系统发育流程及查询 NCBI/PubMed 数据。",
+      "translated_at": "2026-08-03T12:11:14.637Z"
+    },
+    "skill:alterlab-ieu-alterlab-academic-skills-alterlab-arboreto": {
+      "hash": "d7d2be552e2c5396",
+      "summary_zh": "利用分布式树模型从表达矩阵推断基因调控网络，适合大规模RNA测序分析和SCENIC流程。",
+      "translated_at": "2026-08-03T12:11:15.283Z"
+    },
+    "skill:alterlab-ieu-alterlab-academic-skills-alterlab-boltz": {
+      "hash": "46ab9f71b6a2c8d6",
+      "summary_zh": "基于开放模型预测蛋白质与配体、核酸及多链复合物结构和结合亲和力，适合药物结合与生物大分子组装研究。",
+      "translated_at": "2026-08-03T12:11:18.226Z"
+    },
+    "skill:alterlab-ieu-alterlab-academic-skills-alterlab-blast": {
+      "hash": "624605a84de9d2dd",
+      "summary_zh": "用于在命令行进行核酸和蛋白序列检索，支持分类范围过滤、多线程及大规模蛋白快速比对。",
+      "translated_at": "2026-08-03T12:11:18.614Z"
+    },
+    "skill:alterlab-ieu-alterlab-academic-skills-alterlab-borzoi": {
+      "hash": "d71bf7206583fd8c",
+      "summary_zh": "一款从 DNA 序列预测功能基因组轨迹的模型，适合评估非编码调控变异对表达和染色质的影响，或进行位点突变模拟。",
+      "translated_at": "2026-08-03T12:11:19.202Z"
+    },
+    "skill:alterlab-ieu-alterlab-academic-skills-alterlab-cellxgene": {
+      "hash": "23bde2c92cc18234",
+      "summary_zh": "用于通过编程查询大型公共单细胞图谱，按组织、疾病或细胞类型提取数据，适合参考对照、群体分析和基准测试。",
+      "translated_at": "2026-08-03T12:11:21.686Z"
+    },
+    "skill:alterlab-ieu-alterlab-academic-skills-alterlab-chai": {
+      "hash": "ff06f0708b54fc2d",
+      "summary_zh": "一款开放的生物分子复合物结构预测工具，适合从单个FASTA折叠蛋白、配体和核酸组装体。",
+      "translated_at": "2026-08-03T12:11:22.736Z"
+    },
+    "skill:alterlab-ieu-alterlab-academic-skills-alterlab-citation-verifier": {
+      "hash": "85fa49ead758fd17",
+      "summary_zh": "一个参考文献真实性核验工具，可跨学术数据库匹配论文并识别撤稿或虚构引用，适合论文审查和AI内容查验。",
+      "translated_at": "2026-08-03T12:11:25.983Z"
+    },
+    "skill:alterlab-ieu-alterlab-academic-skills-alterlab-clinical-reports": {
+      "hash": "b1fe36c0af3eabd6",
+      "summary_zh": "一款合规的临床报告写作工具，适合起草病例、诊断、临床试验和患者病历文档，提升内容规范性与完整性。",
+      "translated_at": "2026-08-03T12:11:28.047Z"
+    },
+    "skill:alterlab-ieu-alterlab-academic-skills-alterlab-clinical-decision": {
+      "hash": "b57b53d12c1b31b9",
+      "summary_zh": "一款面向医药与临床研究的决策支持文档生成工具，可将队列数据、生物标志物和循证证据整合为合规的论文级分析与治疗建议报告。",
+      "translated_at": "2026-08-03T12:11:28.966Z"
+    },
+    "skill:alterlab-ieu-alterlab-academic-skills-alterlab-cobrapy": {
+      "hash": "fb7cda2fd6ed5487",
+      "summary_zh": "用于构建和分析全基因组代谢模型，可模拟代谢网络并预测生长、基因敲除表型，适合系统生物学和代谢工程研究。",
+      "translated_at": "2026-08-03T12:11:29.341Z"
+    },
+    "skill:alterlab-ieu-alterlab-academic-skills-alterlab-deep-research": {
+      "hash": "0bf94ef48a110afc",
+      "summary_zh": "一套由13个智能体协作的学术深度研究工具，适合文献综述、论文评审、事实核查及含元分析的系统评价。",
+      "translated_at": "2026-08-03T12:11:32.963Z"
+    },
+    "skill:alterlab-ieu-alterlab-academic-skills-alterlab-datamol": {
+      "hash": "094967cd8003ed95",
+      "summary_zh": "面向药物发现的化学信息学工具，将 RDKit 封装成易用的数据表接口，适合低代码批量处理分子和运行常见分析流程。",
+      "translated_at": "2026-08-03T12:11:33.148Z"
+    },
+    "skill:alterlab-ieu-alterlab-academic-skills-alterlab-deepchem": {
+      "hash": "11861841ea6e37bf",
+      "summary_zh": "一个开箱即用的分子机器学习工具，适合快速完成ADMET、毒性、溶解度预测及MoleculeNet基准实验。",
+      "translated_at": "2026-08-03T12:11:33.373Z"
+    },
+    "skill:alterlab-ieu-alterlab-academic-skills-alterlab-diffdock": {
+      "hash": "6d9b429863b01c1f",
+      "summary_zh": "基于蛋白质结构和分子式预测配体结合姿态及置信度，适合虚拟筛选和结构药物设计，但不用于预测结合亲和力。",
+      "translated_at": "2026-08-03T12:11:36.137Z"
+    },
+    "skill:alterlab-ieu-alterlab-academic-skills-alterlab-esm": {
+      "hash": "a4e017351f719adc",
+      "summary_zh": "用于本地或云端运行蛋白质语言模型，适合蛋白质设计、功能预测、嵌入生成、逆折叠及工程研究。",
+      "translated_at": "2026-08-03T12:11:36.379Z"
+    },
+    "skill:alterlab-ieu-alterlab-academic-skills-alterlab-deeptools": {
+      "hash": "4b97f35d4e215ab7",
+      "summary_zh": "一套深度测序数据处理与可视化工具，适合为 ChIP-seq、ATAC-seq 等生成覆盖轨道、完成质控归一化及绘制信号热图。",
+      "translated_at": "2026-08-03T12:11:36.992Z"
+    },
+    "skill:alterlab-ieu-alterlab-academic-skills-alterlab-etetoolkit": {
+      "hash": "392d4bdd524ec12d",
+      "summary_zh": "一个用于在 Python 中解析、编辑、分析和绘制系统发育树的工具，适合比较基因组研究及生成论文级树状图。",
+      "translated_at": "2026-08-03T12:11:39.233Z"
+    },
+    "skill:alterlab-ieu-alterlab-academic-skills-alterlab-gget": {
+      "hash": "8c997b3d4ce4fc35",
+      "summary_zh": "可通过命令行或 Python 快速查询多种生物信息数据库，适合交互检索基因、序列、蛋白结构和通路信息。",
+      "translated_at": "2026-08-03T12:11:40.415Z"
+    },
+    "skill:alterlab-ieu-alterlab-academic-skills-alterlab-flowio": {
+      "hash": "48b05ee2b97dbd54",
+      "summary_zh": "用于读写 FCS 2.0–3.1 流式细胞术文件，可提取事件、通道和元数据并转换格式，适合门控分析前的数据预处理。",
+      "translated_at": "2026-08-03T12:11:40.577Z"
+    },
+    "skill:alterlab-ieu-alterlab-academic-skills-alterlab-glycoengineering": {
+      "hash": "df2509f1b086cbe9",
+      "summary_zh": "用于分析和设计蛋白质糖基化，帮助定位潜在修饰位点并优化糖型，适合治疗性抗体、生物药和疫苗研发。",
+      "translated_at": "2026-08-03T12:11:44.570Z"
+    },
+    "skill:alterlab-ieu-alterlab-academic-skills-alterlab-histolab": {
+      "hash": "6e3ddd2a0d521197",
+      "summary_zh": "一款轻量级病理全切片图像预处理工具，可检测组织并提取图块，适合构建训练数据集、组织分割和快速阅片。",
+      "translated_at": "2026-08-03T12:11:45.240Z"
+    },
+    "skill:alterlab-ieu-alterlab-academic-skills-alterlab-iso13485": {
+      "hash": "533c4792a1250d40",
+      "summary_zh": "用于准备医疗器械 ISO 13485 质量体系认证材料，适合排查文档缺口、编写手册与流程并整理器械文件。",
+      "translated_at": "2026-08-03T12:11:45.933Z"
+    },
+    "skill:alterlab-ieu-alterlab-academic-skills-alterlab-lamindb": {
+      "hash": "6d0f39f24aad81c8",
+      "summary_zh": "一个用于管理、标注和追踪生物数据的开源框架，适合数据集检索、版本管理、谱系追踪及构建可复现工作流。",
+      "translated_at": "2026-08-03T12:11:47.410Z"
+    },
+    "skill:alterlab-ieu-alterlab-academic-skills-alterlab-ligandmpnn": {
+      "hash": "bbee8759ab101add",
+      "summary_zh": "一款考虑配体、金属和核酸环境的蛋白质序列设计工具，适合优化结合口袋、金属位点和酶活性中心。",
+      "translated_at": "2026-08-03T12:11:49.099Z"
+    },
+    "skill:alterlab-ieu-alterlab-academic-skills-alterlab-link-health": {
+      "hash": "9fa11f2b75e2d16a",
+      "summary_zh": "一款用于审计并修复 Markdown 链接的工具，适合在 GitHub Actions 中治理失效链接并防止修复后回归。",
+      "translated_at": "2026-08-03T12:11:50.034Z"
+    },
+    "skill:alterlab-ieu-alterlab-academic-skills-alterlab-matchms": {
+      "hash": "07388953327c886d",
+      "summary_zh": "一款基于 matchms 的代谢组学质谱比对工具，可计算谱图相似度并检索谱库，用于鉴定未知代谢物。",
+      "translated_at": "2026-08-03T12:11:51.340Z"
+    },
+    "skill:alterlab-ieu-alterlab-academic-skills-alterlab-molecular-dynamics": {
+      "hash": "17653b0d6fd6e4dd",
+      "summary_zh": "基于 OpenMM 和 MDAnalysis 的分子动力学模拟分析工具，适合蛋白质与配体研究、药物结合和生物物理场景。",
+      "translated_at": "2026-08-03T12:11:52.525Z"
+    },
+    "skill:alterlab-ieu-alterlab-academic-skills-alterlab-medchem": {
+      "hash": "0c221014c9a228c6",
+      "summary_zh": "一款药物化学筛选工具，用于评估候选分子的成药性、识别干扰或高反应性结构，并清理和筛选化合物库。",
+      "translated_at": "2026-08-03T12:11:52.746Z"
+    },
+    "skill:alterlab-ieu-alterlab-academic-skills-alterlab-neuropixels": {
+      "hash": "6c930c5ab6a46128",
+      "summary_zh": "用于分析 Neuropixels 细胞外电生理数据，适合完成信号预处理、运动校正、尖峰分类、质量评估与神经元筛选。",
+      "translated_at": "2026-08-03T12:11:55.516Z"
+    },
+    "skill:alterlab-ieu-alterlab-academic-skills-alterlab-neurokit2": {
+      "hash": "49eda314e8ecc2d2",
+      "summary_zh": "一款基于 Python 的生理信号分析工具，适合处理心电、脑电、呼吸等多模态数据及开展心理生理研究。",
+      "translated_at": "2026-08-03T12:11:56.416Z"
+    },
+    "skill:alterlab-ieu-alterlab-academic-skills-alterlab-molfeat": {
+      "hash": "b1d5b2c377092dd0",
+      "summary_zh": "将 SMILES 分子转换为机器学习特征向量的工具，适合 QSAR/QSPR、虚拟筛选及分子表征方案对比。",
+      "translated_at": "2026-08-03T12:11:58.106Z"
+    },
+    "skill:alterlab-ieu-alterlab-academic-skills-alterlab-nf-core-sarek": {
+      "hash": "467f5b78dedccba7",
+      "summary_zh": "基于 Nextflow 的 FASTQ 到 VCF 分析流程，自动完成比对、预处理与变异检测，适合生殖系和体细胞测序分析。",
+      "translated_at": "2026-08-03T12:12:00.400Z"
+    },
+    "skill:alterlab-ieu-alterlab-academic-skills-alterlab-pathml": {
+      "hash": "d77a2729acfa5dc0",
+      "summary_zh": "用于搭建端到端计算病理流程，适合处理全切片与多重荧光影像、细胞核分割及病理深度学习训练。",
+      "translated_at": "2026-08-03T12:12:01.258Z"
+    },
+    "skill:alterlab-ieu-alterlab-academic-skills-alterlab-phylogenetics": {
+      "hash": "02f4c5ab4ef1d711",
+      "summary_zh": "一套从原始序列自动完成比对、修剪、建树和可视化的流程，适合进化分析、微生物基因组及病毒传播研究。",
+      "translated_at": "2026-08-03T12:12:01.601Z"
+    },
+    "skill:alterlab-ieu-alterlab-academic-skills-alterlab-primekg": {
+      "hash": "39d0e24241fa78ab",
+      "summary_zh": "用于查询精准医学知识图谱中的基因、药物与疾病等关联，适合构建疾病子图、探索潜在联系及开展药物重定位分析。",
+      "translated_at": "2026-08-03T12:12:03.593Z"
+    },
+    "skill:alterlab-ieu-alterlab-academic-skills-alterlab-pydeseq2": {
+      "hash": "b058a3ee387f705b",
+      "summary_zh": "基于 PyDESeq2 的批量 RNA-seq 差异表达分析工具，适合从原始计数中识别不同条件间的差异基因并生成可视化结果。",
+      "translated_at": "2026-08-03T12:12:05.230Z"
+    },
+    "skill:alterlab-ieu-alterlab-academic-skills-alterlab-pydicom": {
+      "hash": "b0d46f88450b209f",
+      "summary_zh": "用于读写和处理 DICOM 医学影像的 Python 库，适合影像解析、脱敏、格式转换及放射科工作流。",
+      "translated_at": "2026-08-03T12:12:06.722Z"
+    },
+    "skill:alterlab-ieu-alterlab-academic-skills-alterlab-proteinmpnn": {
+      "hash": "0f7d50976153d5a5",
+      "summary_zh": "基于消息传递的蛋白质逆折叠工具，可为固定骨架设计序列，适合位点重设计、对称链约束及设计—折叠—评分流程。",
+      "translated_at": "2026-08-03T12:12:07.912Z"
+    },
+    "skill:alterlab-ieu-alterlab-academic-skills-alterlab-pyhealth": {
+      "hash": "f070ffcc831bfb7e",
+      "summary_zh": "基于医疗AI工具包开发、测试和部署临床机器学习模型，适合处理电子病历、临床预测、生理信号及医疗数据集。",
+      "translated_at": "2026-08-03T12:12:10.137Z"
+    },
+    "skill:alterlab-ieu-alterlab-academic-skills-alterlab-pysam": {
+      "hash": "db71dda37f022a6b",
+      "summary_zh": "一个用于读写和处理基因组比对、变异及序列文件的 Python 工具，适合构建 NGS 数据解析、过滤、索引和覆盖度计算流程。",
+      "translated_at": "2026-08-03T12:12:11.251Z"
+    },
+    "skill:alterlab-ieu-alterlab-academic-skills-alterlab-pyopenms": {
+      "hash": "bd0440ec17ff7611",
+      "summary_zh": "基于 pyOpenMS 的质谱工作流工具，适合搭建从特征检测、肽段鉴定到蛋白定量的完整 LC-MS/MS 分析流程。",
+      "translated_at": "2026-08-03T12:12:11.420Z"
+    },
+    "skill:alterlab-ieu-alterlab-academic-skills-alterlab-pytdc": {
+      "hash": "4a86bfb05b9de636",
+      "summary_zh": "用于加载标准化药物发现数据集、划分方案和评测基准，适合药物性质、毒性及靶点预测建模。",
+      "translated_at": "2026-08-03T12:12:14.354Z"
+    },
+    "skill:alterlab-ieu-alterlab-academic-skills-alterlab-rdkit": {
+      "hash": "9d777fe2b631df7e",
+      "summary_zh": "提供底层化学信息学能力，适合精细控制分子解析、描述符计算、结构检索、构象生成与反应处理。",
+      "translated_at": "2026-08-03T12:12:14.836Z"
+    },
+    "skill:alterlab-ieu-alterlab-academic-skills-alterlab-rnaseq-quant": {
+      "hash": "c5f6db2911c7dfe1",
+      "summary_zh": "一套批量 RNA-seq 转录本定量流程，可生成可靠的基因表达量并衔接差异表达分析。",
+      "translated_at": "2026-08-03T12:12:18.333Z"
+    },
+    "skill:alterlab-ieu-alterlab-academic-skills-alterlab-rfdiffusion": {
+      "hash": "c4b27bc425fee581",
+      "summary_zh": "基于扩散模型从零生成蛋白质骨架，适合功能基序支架、靶点结合蛋白及对称复合体设计，并可衔接序列设计与结构验证。",
+      "translated_at": "2026-08-03T12:12:18.837Z"
+    },
+    "skill:alterlab-ieu-alterlab-academic-skills-alterlab-qiime2-amplicon": {
+      "hash": "40e2e51f420638cf",
+      "summary_zh": "一套规范执行16S/ITS微生物组扩增子分析的QIIME 2流程，适合教学和可追溯的物种分类、多样性研究。",
+      "translated_at": "2026-08-03T12:12:22.849Z"
+    },
+    "skill:alterlab-ieu-alterlab-academic-skills-alterlab-rowan": {
+      "hash": "2517d06043678d0a",
+      "summary_zh": "通过 Python API 调用云端量子化学平台，适合免本地配置完成分子性质预测、结构优化和蛋白配体对接等计算化学任务。",
+      "translated_at": "2026-08-03T12:12:23.157Z"
+    },
+    "skill:alterlab-ieu-alterlab-academic-skills-alterlab-scanpy": {
+      "hash": "1134a78234dee3c7",
+      "summary_zh": "一套基于 Scanpy 的单细胞 RNA 测序分析工具，适合完成质控、降维聚类、细胞注释、差异表达和拟时序分析。",
+      "translated_at": "2026-08-03T12:12:25.414Z"
+    },
+    "skill:alterlab-ieu-alterlab-academic-skills-alterlab-scikit-bio": {
+      "hash": "74fd31741f2e67a4",
+      "summary_zh": "用于分析生物序列、系统发育和群落多样性，适合微生物组及群落生态的数据统计与可视化分析。",
+      "translated_at": "2026-08-03T12:12:25.780Z"
+    },
+    "skill:alterlab-ieu-alterlab-academic-skills-alterlab-scgpt": {
+      "hash": "18845bc895889281",
+      "summary_zh": "基于scGPT的单细胞分析工具，适合从AnnData进行细胞类型注释、嵌入、批次整合及扰动推断。",
+      "translated_at": "2026-08-03T12:12:25.960Z"
+    },
+    "skill:alterlab-ieu-alterlab-academic-skills-alterlab-scvelo": {
+      "hash": "c9cbbd2324e5058d",
+      "summary_zh": "基于 scVelo 的单细胞 RNA 速度分析工具，可推断细胞状态转变方向、潜在时间及分化驱动基因。",
+      "translated_at": "2026-08-03T12:12:29.049Z"
+    },
+    "skill:alterlab-ieu-alterlab-academic-skills-alterlab-tiledbvcf": {
+      "hash": "129cd1a8ef2b048d",
+      "summary_zh": "用于大规模存储和查询基因组变异数据，适合管理超大人群基因组数据集及按区域检索海量样本。",
+      "translated_at": "2026-08-03T12:12:31.889Z"
+    },
+    "skill:alterlab-ieu-alterlab-academic-skills-alterlab-scvi-tools": {
+      "hash": "c81bbf60035639c0",
+      "summary_zh": "用于单细胞组学深度生成建模，适合批次校正、多模态整合、参考映射及带不确定性的差异分析。",
+      "translated_at": "2026-08-03T12:12:32.815Z"
+    },
+    "skill:alterlab-ieu-alterlab-academic-skills-alterlab-squidpy-spatial": {
+      "hash": "5f4afd5698e07c88",
+      "summary_zh": "用于分析多平台空间转录组数据，自动匹配邻域构建方式，适合研究细胞空间分布、共现和配体受体互作。",
+      "translated_at": "2026-08-03T12:12:33.991Z"
+    },
+    "skill:alterlab-ieu-alterlab-academic-skills-alterlab-torchdrug": {
+      "hash": "4a6b37fcf983d363",
+      "summary_zh": "基于 PyTorch 和 TorchDrug 的分子与蛋白质图神经网络工具，适合开发自定义模型、预测蛋白性质及构建逆合成和药物重定位流程。",
+      "translated_at": "2026-08-03T12:12:35.332Z"
+    },
+    "skill:alterlab-ieu-alterlab-academic-skills-alterlab-treatment-plans": {
+      "hash": "f44aef445c602da6",
+      "summary_zh": "一款将临床信息整理成简洁、可执行的治疗计划并导出PDF的工具，适合各科室快速制定含量化目标的患者照护方案。",
+      "translated_at": "2026-08-03T12:12:41.655Z"
+    },
+    "skill:avelikiy-great-cto-anti-patterns": {
+      "hash": "49b9f5bcde5b59cd",
+      "summary_zh": "一套软件开发生命周期反模式目录，帮助评审智能体在架构、计划、代码和事故复盘中识别并拒绝常见错误做法。",
+      "translated_at": "2026-08-03T12:12:45.699Z"
+    },
+    "skill:avelikiy-great-cto-anydesign": {
+      "hash": "26a1254c76c7265d",
+      "summary_zh": "一款视觉设计分析工具，可从图片、网站或 Figma 提取设计规范，适合设计复刻、文档整理与风格审计。",
+      "translated_at": "2026-08-03T12:12:46.712Z"
+    },
+    "skill:avelikiy-great-cto-archetype-review-base": {
+      "hash": "715df8c32c97ec44",
+      "summary_zh": "一套供各领域审查工具统一遵循的共享框架，用来规范报告结构、风险分级和工作流，减少重复配置并保证结果一致。",
+      "translated_at": "2026-08-03T12:12:50.235Z"
+    },
+    "skill:avelikiy-great-cto-cost-model": {
+      "hash": "988da80e1793abfd",
+      "summary_zh": "一套技术方案成本估算框架，用于统一核算大模型、基础设施和人工监督成本，并生成接口可解析的结果。",
+      "translated_at": "2026-08-03T12:12:50.972Z"
+    },
+    "skill:avelikiy-great-cto-crystallize": {
+      "hash": "4b67a0ea1b36c78a",
+      "summary_zh": "一款从会话日志和经验文档中提炼重复模式的工具，适合积累十次以上会话后沉淀可复用技能。",
+      "translated_at": "2026-08-03T12:12:53.375Z"
+    },
+    "skill:avelikiy-great-cto-brainstorming": {
+      "hash": "3bd56fee13dd6670",
+      "summary_zh": "一款面向产品规划的创意决策工具，通过多模型角色辩论发散思路并形成建议，也适合架构设计探索。",
+      "translated_at": "2026-08-03T12:12:53.536Z"
+    },
+    "skill:avelikiy-great-cto-discovery": {
+      "hash": "4952b94453dac9e6",
+      "summary_zh": "一套架构设计前的结构化提问方法，帮助团队暴露未知信息和隐性约束，避免过早定方案。",
+      "translated_at": "2026-08-03T12:12:56.707Z"
+    },
+    "skill:avelikiy-great-cto-done-blocked": {
+      "hash": "d542058cc69d3875",
+      "summary_zh": "一套供自动化代理回传任务结果的通用协议，用统一证据格式明确标记完成或阻塞，避免含糊的执行结论。",
+      "translated_at": "2026-08-03T12:12:58.264Z"
+    },
+    "skill:avelikiy-great-cto-decision-eval": {
+      "hash": "2712a9e59956efc0",
+      "summary_zh": "一个自动评估架构决策方案的工具，可对多个候选方案加权打分并推荐最佳选择，适合 ADR 决策场景。",
+      "translated_at": "2026-08-03T12:12:59.307Z"
+    },
+    "skill:avelikiy-great-cto-great-cto": {
+      "hash": "d98f0dd6d1a86109",
+      "summary_zh": "一款面向 CTO 的研发流程编排工具，可根据项目类型自动推进需求、开发、测试到交付的完整流程。",
+      "translated_at": "2026-08-03T12:12:59.596Z"
+    },
+    "skill:avelikiy-great-cto-lifecycle-messaging": {
+      "hash": "d15a3ccfdabe767c",
+      "summary_zh": "面向中小企业产品的邮件短信生命周期与送达框架，适合规范提醒、回执和营销召回等消息的发送与合规。",
+      "translated_at": "2026-08-03T12:13:01.700Z"
+    },
+    "skill:avelikiy-great-cto-migration-ready-schema": {
+      "hash": "915ecc98e90d1762",
+      "summary_zh": "一套面向数据迁移的建模规范，确保系统从一开始就能导入旧平台数据，并支持来源追踪和批次回滚。",
+      "translated_at": "2026-08-03T12:13:03.839Z"
+    },
+    "skill:avelikiy-great-cto-local-seo": {
+      "hash": "757031a1e9b7eb02",
+      "summary_zh": "面向门店、餐饮、房产和本地服务网站的 SEO 框架，帮助提升本地搜索曝光并规范站点收录。",
+      "translated_at": "2026-08-03T12:13:04.429Z"
+    },
+    "skill:avelikiy-great-cto-observability-baseline": {
+      "hash": "1f5348430843e70a",
+      "summary_zh": "一套在项目脚手架阶段接入监控能力的基线方案，适合为生产应用预置错误追踪、结构化日志和健康检查，避免上线后成为监控盲区。",
+      "translated_at": "2026-08-03T12:13:05.366Z"
+    },
+    "skill:avelikiy-great-cto-outcome-roadmap": {
+      "hash": "1bf1a07a5b402afd",
+      "summary_zh": "将以功能清单为主的路线图改写为关注用户与业务影响的成果路线图，适合战略规划和明确成功标准。",
+      "translated_at": "2026-08-03T12:13:07.042Z"
+    },
+    "skill:avelikiy-great-cto-pm-planning": {
+      "hash": "9b83ac5c304496e1",
+      "summary_zh": "一种面向项目管理智能体的任务拆解方法，将架构文档转成含依赖、工期和验收标准的可执行任务清单。",
+      "translated_at": "2026-08-03T12:13:07.907Z"
+    },
+    "skill:avelikiy-great-cto-opportunity-solution-tree": {
+      "hash": "bdcb0b305bf968d8",
+      "summary_zh": "一款梳理产品探索思路的工具，将目标、用户机会、方案和实验串成树，适合方向不清或复杂功能立项前使用。",
+      "translated_at": "2026-08-03T12:13:08.306Z"
+    },
+    "skill:avelikiy-great-cto-pre-mortem": {
+      "hash": "9a55f8e3d1f98f74",
+      "summary_zh": "一款项目风险预演工具，通过假设项目已惨败并倒推原因，帮助团队在动工前识别最可能导致失败的具体风险。",
+      "translated_at": "2026-08-03T12:13:12.083Z"
+    },
+    "skill:avelikiy-great-cto-prose-style": {
+      "hash": "d7999f07755f7f5d",
+      "summary_zh": "一套供智能体复用的写作规范，让报告、架构文档等内容更直接、有据可查，避免营销话术和模糊表达。",
+      "translated_at": "2026-08-03T12:13:12.124Z"
+    },
+    "skill:avelikiy-great-cto-skeptical-triage": {
+      "hash": "2a9e5c7aad21ab81",
+      "summary_zh": "一种通过三轮自我质疑与仲裁来过滤误报的 LLM 判定模式，适合误拦截成本高于额外几轮推理开销的场景。",
+      "translated_at": "2026-08-03T12:13:12.276Z"
+    },
+    "skill:avelikiy-great-cto-stack-baseline": {
+      "hash": "91dda9680615230e",
+      "summary_zh": "一套面向中小企业产品开发的标准技术栈基线，统一新项目选型，避免团队重复决策和临时拼凑。",
+      "translated_at": "2026-08-03T12:13:17.377Z"
     }
   }
 }
