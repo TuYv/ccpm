@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-04T15:48:37.742Z",
+  "updated_at": "2026-08-04T18:09:06.992Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -17378,9 +17378,9 @@
       "translated_at": "2026-08-03T04:59:09.893Z"
     },
     "bundle:modu-ai-moai-adk": {
-      "hash": "0016e173b1b4d117",
-      "summary_zh": "面向开源项目全流程协作，把开发规范、版本发布、文档国际化和质量校验整合成可复用的智能体工具链。",
-      "translated_at": "2026-08-03T04:59:09.895Z"
+      "hash": "b8fab70eb9a18f9c",
+      "summary_zh": "面向开源项目全生命周期的智能开发工具集，将规范、质量、文档国际化、发布与自进化串成可复用的自动化协作体系。",
+      "translated_at": "2026-08-04T18:09:01.589Z"
     },
     "bundle:aaronontheweb-dotnet-skills": {
       "hash": "2a50d5841385267e",
@@ -28211,6 +28211,16 @@
       "hash": "0e837a4ebf755d7a",
       "summary_zh": "一套面向 SRC、众测和漏洞赏金的实战工作流，帮助安全人员系统完成目标侦察、漏洞挖掘、防护绕过与报告编写。",
       "translated_at": "2026-08-04T15:48:37.742Z"
+    },
+    "skill:modu-ai-moai-adk-hns-lsel-curator": {
+      "hash": "da7b110815d1cfdd",
+      "summary_zh": "一个本地经验日志清理与聚类引擎，用于过滤沙箱噪声、归并高频问题，为后续自动改进筛选候选项。",
+      "translated_at": "2026-08-04T18:09:06.313Z"
+    },
+    "skill:modu-ai-moai-adk-hns-lsel-applier": {
+      "hash": "c46ee11ccfabfa0a",
+      "summary_zh": "这是一个本地自进化流程的补丁执行器，用于安全回放已批准决策，在白名单校验后应用补丁并记录结果。",
+      "translated_at": "2026-08-04T18:09:06.991Z"
     }
   }
 }
