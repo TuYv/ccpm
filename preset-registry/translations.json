@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-03T23:02:16.732Z",
+  "updated_at": "2026-08-04T00:15:18.768Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -7288,19 +7288,19 @@
       "translated_at": "2026-05-19T22:24:56.475Z"
     },
     "skill:mattpocock-skills-grill-with-docs": {
-      "hash": "fd06c95b839aa3ad",
-      "summary_zh": "这是个帮你对计划做压力测试的工具，它会用现有领域模型挑战你的方案并理清术语，决策敲定时同步更新文档。适合检验新方案是否契合项目已有业务语言和决策记录。",
-      "translated_at": "2026-05-19T22:24:57.469Z"
+      "hash": "52c5fb4d137d7506",
+      "summary_zh": "一个通过持续追问打磨方案或设计的访谈工具，还能同步生成架构决策记录和术语表，适合规划评审与技术设计。",
+      "translated_at": "2026-08-04T00:12:18.236Z"
     },
     "skill:mattpocock-skills-grill-me": {
-      "hash": "70129c1f8f063687",
-      "summary_zh": "这是一个不断拷问你计划或设计的工具，深挖每个决策分支直到彻底理清思路，适合想要压力测试方案或需要挑刺设计的场景。",
-      "translated_at": "2026-05-19T22:25:01.095Z"
+      "hash": "c89ed3e7eaf26b8c",
+      "summary_zh": "通过高强度、持续追问来检验并打磨计划或设计，适合在落地前发现漏洞和盲点。",
+      "translated_at": "2026-08-04T00:12:17.134Z"
     },
     "skill:mattpocock-skills-improve-codebase-architecture": {
-      "hash": "9267efcd411dbf78",
-      "summary_zh": "这是一款结合项目上下文与架构决策记录来分析代码库的工具，适合需要优化架构、寻找重构点、解耦模块，或提升代码可测试性与AI可读性的场景。",
-      "translated_at": "2026-05-19T22:25:16.969Z"
+      "hash": "f128ec05db688329",
+      "summary_zh": "一款代码架构审查工具，可扫描潜在改进点并生成可视化 HTML 报告，帮助深入分析选中的问题。",
+      "translated_at": "2026-08-04T00:12:25.616Z"
     },
     "skill:mattpocock-skills-migrate-to-shoehorn": {
       "hash": "f6ef3b780fa7aafe",
@@ -7333,9 +7333,9 @@
       "translated_at": "2026-05-19T22:26:18.246Z"
     },
     "skill:mattpocock-skills-prototype": {
-      "hash": "ea4f7082c3f39143",
-      "summary_zh": "这是一款帮你快速搭一次性原型的工具，用于正式开发前验证想法。既能跑终端验证逻辑，也能切换多套UI对比，特别适合验证数据模型、模拟界面或试错设计思路。",
-      "translated_at": "2026-05-19T22:26:30.802Z"
+      "hash": "3f076c79c3fcca9b",
+      "summary_zh": "用于快速搭建一次性原型，验证状态模型或业务逻辑是否合理，并探索界面设计效果。",
+      "translated_at": "2026-08-04T00:12:25.553Z"
     },
     "skill:mattpocock-skills-setup-pre-commit": {
       "hash": "f1a2a188dc6fb009",
@@ -7343,24 +7343,24 @@
       "translated_at": "2026-05-19T22:26:43.006Z"
     },
     "skill:mattpocock-skills-tdd": {
-      "hash": "27d7d4cb687690a0",
-      "summary_zh": "帮你实践测试驱动开发的工具，遵循红绿重构循环。当你想用先写测试的方式开发新功能、修Bug或做集成测试时，用它就对了。",
-      "translated_at": "2026-05-19T22:26:52.917Z"
+      "hash": "b5cdb85203c4add5",
+      "summary_zh": "一套测试驱动开发方法，适合用“红—绿—重构”流程开发功能、修复缺陷或编写集成测试。",
+      "translated_at": "2026-08-04T00:12:34.316Z"
     },
     "skill:mattpocock-skills-to-prd": {
-      "hash": "edaba01f890238e6",
-      "summary_zh": "把当前对话内容直接转化为产品需求文档并发布到项目追踪系统，适合聊完需求后快速整理并落地开发任务的场景。",
-      "translated_at": "2026-05-19T22:27:11.625Z"
+      "hash": "159054570e7ec6c4",
+      "summary_zh": "将当前对话自动整理成产品需求文档并发布到项目问题追踪器，适合快速沉淀已讨论的需求。",
+      "translated_at": "2026-08-04T00:12:36.036Z"
     },
     "skill:mattpocock-skills-to-issues": {
-      "hash": "a5118edfc362e549",
-      "summary_zh": "它能把项目规划或需求文档拆解成独立可认领的开发任务，专治大需求落地难，适合需要把大计划拆成具体执行工单的场景。",
-      "translated_at": "2026-05-19T22:27:19.297Z"
+      "hash": "76fbc995b11d4772",
+      "summary_zh": "把计划、规格或 PRD 拆成可独立领取的纵向切片任务，便于在项目问题追踪器中分工推进。",
+      "translated_at": "2026-08-04T00:12:33.899Z"
     },
     "skill:mattpocock-skills-setup-matt-pocock-skills": {
-      "hash": "58c8049aadbc11d0",
-      "summary_zh": "这是一个为AI助手初始化项目上下文的工具，通过配置让AI掌握仓库的Issue、标签和文档结构，适合在首次调用其他技能前运行，解决AI缺乏项目背景的问题。",
-      "translated_at": "2026-05-19T22:27:38.973Z"
+      "hash": "225c81bf3f737a8c",
+      "summary_zh": "用于初始化工程技能仓库，配置问题追踪、分类标签和领域文档结构，适合首次使用其他工程技能前运行。",
+      "translated_at": "2026-08-04T00:12:31.408Z"
     },
     "skill:mattpocock-skills-ubiquitous-language": {
       "hash": "2e0661fe8ee4907f",
@@ -7368,9 +7368,9 @@
       "translated_at": "2026-05-19T22:27:41.416Z"
     },
     "skill:mattpocock-skills-triage": {
-      "hash": "75c364805922889b",
-      "summary_zh": "这是一个通过角色与状态机规范Issue分流的工具。适合团队需要集中审查和归类Bug与需求、推进问题处理，或给离线机器人派发任务时使用。",
-      "translated_at": "2026-05-19T22:27:55.094Z"
+      "hash": "dde68acc43c48c44",
+      "summary_zh": "一款用状态机管理问题和外部 PR 分诊的工具，可完成分类、核验、追问并生成智能体可执行的任务简报。",
+      "translated_at": "2026-08-04T00:12:41.119Z"
     },
     "skill:mattpocock-skills-write-a-skill": {
       "hash": "d17d088fd872a3b0",
@@ -7378,14 +7378,14 @@
       "translated_at": "2026-05-19T22:28:02.812Z"
     },
     "skill:mattpocock-skills-writing-beats": {
-      "hash": "209ad440fd46de6f",
-      "summary_zh": "把写文章变成互动式冒险，每次只写一节并提供后续走向选项，逐步推进。适合已有零散素材，想将其串联成连贯故事而非枯燥论述的场景。",
-      "translated_at": "2026-05-19T22:28:10.598Z"
+      "hash": "f457fba8171f362a",
+      "summary_zh": "一款将零散素材编排成连贯叙事节拍的写作工具，适合梳理概念铺垫和文章节奏。",
+      "translated_at": "2026-08-04T00:12:45.060Z"
     },
     "skill:mattpocock-skills-writing-fragments": {
-      "hash": "2dc0b8d10e3e896b",
-      "summary_zh": "这是一个通过提问挖掘碎片灵感的工具，能帮你在正式动笔前收集零散的想法和半成品思路，作为写文章的原始素材，适合前期发散构思时使用。",
-      "translated_at": "2026-05-19T22:28:15.358Z"
+      "hash": "b7275dd0b4336b56",
+      "summary_zh": "一个用于探索性写作和整理灵感碎片的工具，适合在尚无清晰结构时挖掘素材与思路。",
+      "translated_at": "2026-08-04T00:12:47.652Z"
     },
     "skill:mattpocock-skills-zoom-out": {
       "hash": "ca3a15c26dc80ea2",
@@ -7393,9 +7393,9 @@
       "translated_at": "2026-05-19T22:28:29.571Z"
     },
     "skill:mattpocock-skills-writing-shape": {
-      "hash": "eadd4f544e4e800b",
-      "summary_zh": "这是一款对话式写作助手，能通过逐段探讨和排版打磨，把杂乱的笔记或草稿变成可发布的成稿，适合手头只有零碎想法却不知如何成文的情况。",
-      "translated_at": "2026-05-19T22:28:30.221Z"
+      "hash": "afc920ac55c654d5",
+      "summary_zh": "一款辅助写作工具，可将零散素材逐段整理成结构清晰的文章，适合内容创作和初稿编写。",
+      "translated_at": "2026-08-04T00:12:48.541Z"
     },
     "skill:mhattingpete-claude-skills-marketplace-architecture-diagram-creator": {
       "hash": "edb3497fb1bf7887",
@@ -7508,9 +7508,9 @@
       "translated_at": "2026-05-19T22:31:59.636Z"
     },
     "skill:mksglu-claude-context-mode-ctx-insight": {
-      "hash": "aa01ba36a6e69729",
-      "summary_zh": "这是一个浏览器里的个人工作数据面板，能帮你追踪日常活动与项目专注度等指标，让你看清自身工作模式并获取优化建议，适合想复盘和提升效率的用户。",
-      "translated_at": "2026-05-19T22:32:00.619Z"
+      "hash": "4a4ac1d3596a5470",
+      "summary_zh": "面向 AI 辅助研发团队的托管分析看板，用于评估工程师产出、识别重试浪费与开发阻塞。",
+      "translated_at": "2026-08-04T00:13:52.036Z"
     },
     "skill:mksglu-claude-context-mode-ctx-purge": {
       "hash": "564885c332f0b989",
@@ -17523,9 +17523,9 @@
       "translated_at": "2026-08-03T05:00:36.289Z"
     },
     "preset:23blocks-os-ai-maestro": {
-      "hash": "d4fb55184a49c78c",
-      "summary_zh": "一个跨机器管理和协作多个 AI 智能体的平台，适合统一调度任务、共享记忆并减少人工传递上下文。",
-      "translated_at": "2026-08-03T22:57:58.242Z"
+      "hash": "2697732e86071ce2",
+      "summary_zh": "一个统一编排多台电脑上各类 AI 智能体的平台，适合集中管理协作、共享记忆并减少人工传递上下文。",
+      "translated_at": "2026-08-04T00:10:42.413Z"
     },
     "preset:milisp-codexia": {
       "hash": "5bd22ad69c6f54f0",
@@ -23821,6 +23821,936 @@
       "hash": "16ccfee884b92a55",
       "summary_zh": "一个将目标材料和研究证据转为标准化结论的处理工具，适合评估流程中的结果汇总与分析。",
       "translated_at": "2026-08-03T23:02:16.731Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-315-review-merge-worker": {
+      "hash": "c1fd4444e0137b57",
+      "summary_zh": "用于评估流程的结果整合工具，将研究、发现、文档和修复产出合并并验证，适合生成统一可信的最终结果。",
+      "translated_at": "2026-08-04T00:10:43.456Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-314-review-repair-worker": {
+      "hash": "7c4c0e6819eeb257",
+      "summary_zh": "用于处理已确认问题的有限范围修复，并生成结构化修复摘要，适合规范化审查整改流程。",
+      "translated_at": "2026-08-04T00:10:44.231Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-316-review-refinement-worker": {
+      "hash": "81e9a6ca4f34eee7",
+      "summary_zh": "用于评估任务的受控迭代优化工具，适合需要保留过程追踪与清理凭证的场景。",
+      "translated_at": "2026-08-04T00:10:45.530Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-32-dependency-upgrader": {
+      "hash": "f0260133c8ec032d",
+      "summary_zh": "一个支持多种包管理器的依赖升级工具，会调研破坏性变更并安全验证回滚，适合日常依赖维护。",
+      "translated_at": "2026-08-04T00:10:46.554Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-34-benchmark-comparator": {
+      "hash": "90612a4ef90e578a",
+      "summary_zh": "通过可复现的 A/B 负载、正确性校验和受控测量比较工具或实现，适合选型评估，不适用于优化已知瓶颈。",
+      "translated_at": "2026-08-04T00:10:48.681Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-33-code-modernizer": {
+      "hash": "284834ca951dcc03",
+      "summary_zh": "面向特定功能的代码现代化工具，用于淘汰过时的自定义机制，降低包体积和维护成本，适合收益明确的改造场景。",
+      "translated_at": "2026-08-04T00:10:50.726Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-400-story-executor": {
+      "hash": "b3c0f7073b0e445a",
+      "summary_zh": "一个按待审核、待返工、待办顺序执行用户故事任务的工具，适合已完成任务规划、准备进入实施阶段的场景。",
+      "translated_at": "2026-08-04T00:10:50.959Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-401-task-executor": {
+      "hash": "62c4ba62a7cc5edc",
+      "summary_zh": "一个按待办、开发中、待评审流程推进编码任务的执行工具，适合遵循 KISS/YAGNI 原则的实现工作，不用于测试任务。",
+      "translated_at": "2026-08-04T00:10:52.079Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-402-task-reviewer": {
+      "hash": "0feb8111facf1893",
+      "summary_zh": "用于自动审查待验收任务的实现质量、代码规范和测试覆盖率，并据此标记为完成或返工。",
+      "translated_at": "2026-08-04T00:10:53.436Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-403-task-rework": {
+      "hash": "5e9a8abc3d7057a7",
+      "summary_zh": "用于处理审核未通过的任务，根据评审意见完成修改后，将任务重新提交审核。",
+      "translated_at": "2026-08-04T00:10:53.853Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-41-test-strategy-planner": {
+      "hash": "820a274c168791dc",
+      "summary_zh": "一款基于风险制定测试策略并梳理场景优先级的规划工具，适合从需求生成测试计划，不用于审计或编写测试。",
+      "translated_at": "2026-08-04T00:10:56.994Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-404-test-executor": {
+      "hash": "503bbd04c1f87e55",
+      "summary_zh": "一款按风险限制将测试任务从待办推进到待评审的工具，适合执行标记为 tests 的任务，不用于开发实现。",
+      "translated_at": "2026-08-04T00:10:57.422Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-42-acceptance-test-builder": {
+      "hash": "e339ea36d0b47465",
+      "summary_zh": "用项目原生工具创建并运行可复现的验收测试，适合为明确需求提供可执行证据，不用于审计或修复产品问题。",
+      "translated_at": "2026-08-04T00:10:58.254Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-500-story-quality-gate": {
+      "hash": "c5696d1033a2f4b2",
+      "summary_zh": "面向用户故事验收的质量门禁，通过分级结论和评分判断是否达标，适合开发完成后的质量评估。",
+      "translated_at": "2026-08-04T00:10:59.528Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-51-opportunity-evaluator": {
+      "hash": "04fd79a1848ad056",
+      "summary_zh": "用于评估新产品方向的决策工具，综合需求、获客、竞争、经济性和验证证据，适合投入前判断机会，不用于排期或实施规划。",
+      "translated_at": "2026-08-04T00:11:00.030Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-511-code-quality-checker": {
+      "hash": "bf4a530bf702d6ca",
+      "summary_zh": "一款代码质量检查工具，通过量化评分评估 DRY、KISS、YAGNI 及架构规范，适合开发完成后的质量验收。",
+      "translated_at": "2026-08-04T00:11:02.481Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-512-tech-debt-cleaner": {
+      "hash": "9b3349e395a59345",
+      "summary_zh": "自动清理未使用导入、死代码和注释掉的代码，适合在审计后安全修复低风险技术债。",
+      "translated_at": "2026-08-04T00:11:02.698Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-510-quality-coordinator": {
+      "hash": "98f4f7a86b1ac967",
+      "summary_zh": "一套故事质量评估协调工具，适合需要强制调研、成果汇总、代理复审、回归验证和有限迭代的场景。",
+      "translated_at": "2026-08-04T00:11:04.132Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-514-test-log-analyzer": {
+      "hash": "3f1e494b884f563b",
+      "summary_zh": "一款应用日志分析工具，可分类错误、检查日志质量并将堆栈定位到源码，适合测试后复盘和开发排障。",
+      "translated_at": "2026-08-04T00:11:05.120Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-513-regression-checker": {
+      "hash": "533d988bebb39885",
+      "summary_zh": "通过运行现有测试套件检查代码改动是否引入回归，适合开发完成后验证功能稳定性，不会更改任务状态。",
+      "translated_at": "2026-08-04T00:11:05.350Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-520-test-planner": {
+      "hash": "0bb58b47ddcd72cb",
+      "summary_zh": "一款测试规划编排工具，整合调研、手工测试与自动化测试方案，适合为需求故事制定全面的测试覆盖计划。",
+      "translated_at": "2026-08-04T00:11:06.468Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-521-test-researcher": {
+      "hash": "141cdb7d0b974e52",
+      "summary_zh": "一款测试调研工具，用于梳理真实场景、竞品方案和用户投诉，帮助测试规划聚焦实际痛点。",
+      "translated_at": "2026-08-04T00:11:08.616Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-522-manual-tester": {
+      "hash": "706fbe5ed7266646",
+      "summary_zh": "通过可执行 Bash 脚本手动验证用户故事的验收标准，适合需要人工确认实现是否符合预期的场景。",
+      "translated_at": "2026-08-04T00:11:10.133Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-523-auto-test-planner": {
+      "hash": "27efa6f9905f2fcf",
+      "summary_zh": "基于手工测试结果和风险评估规划端到端、集成及单元测试，适合为需求生成按优先级排序的自动化测试任务。",
+      "translated_at": "2026-08-04T00:11:11.000Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-611-docs-structure-auditor": {
+      "hash": "f3d15faf3ad161af",
+      "summary_zh": "一款文档结构审计工具，用于检查层级、链接、单一事实源及规范合规性，适合排查过期内容和清理历史遗留文档。",
+      "translated_at": "2026-08-04T00:11:13.478Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-610-docs-auditor": {
+      "hash": "0f6f4db9f85c56e9",
+      "summary_zh": "用于通过评估平台系统审查项目文档，结合必要调研与多人协作，适合发现文档问题并形成结构化结论。",
+      "translated_at": "2026-08-04T00:11:13.642Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-61-skill-reviewer": {
+      "hash": "005734bc76304597",
+      "summary_zh": "用于发布前审查独立技能及其分发渠道配置，判断是否达到上线条件，不适合评审产品代码或实施方案。",
+      "translated_at": "2026-08-04T00:11:14.782Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-612-semantic-content-auditor": {
+      "hash": "617d6836c0714b76",
+      "summary_zh": "一款文档语义审计工具，用于检查内容是否符合项目范围与目标，发现覆盖缺口、跑题内容及单一事实来源冲突。",
+      "translated_at": "2026-08-04T00:11:16.213Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-613-code-comments-auditor": {
+      "hash": "455584dac7781ae1",
+      "summary_zh": "用于审查代码注释和文档字符串质量，发现只描述做什么、内容过时、密度不当或含禁用信息等问题。",
+      "translated_at": "2026-08-04T00:11:17.505Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-62-repository-publisher": {
+      "hash": "d21dd5b2181b28f5",
+      "summary_zh": "用于校验、提交、推送并远程确认已批准的仓库变更，适合代码发布，不适用于版本发行、包发布或公告。",
+      "translated_at": "2026-08-04T00:11:20.334Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-614-docs-fact-checker": {
+      "hash": "c3c2eec55fda6831",
+      "summary_zh": "一款文档事实核查工具，可对照代码库验证 Markdown 中的路径、版本、配置等信息，适合审计文档准确性并发现矛盾。",
+      "translated_at": "2026-08-04T00:11:21.675Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-620-codebase-auditor": {
+      "hash": "2acbd5a9595b08ff",
+      "summary_zh": "一套面向评估平台的代码库审计工具，适合需要前期调研、分领域协作并产出结构化结论的场景。",
+      "translated_at": "2026-08-04T00:11:22.076Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-621-security-boundary-auditor": {
+      "hash": "0d6c630fe19a08f3",
+      "summary_zh": "用于审计应用安全边界的工具，可排查密钥泄露、注入、XSS、输入校验缺陷及敏感环境变量默认值等可利用风险。",
+      "translated_at": "2026-08-04T00:11:23.176Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-622-build-delivery-gate-auditor": {
+      "hash": "702f5166908df204",
+      "summary_zh": "用于检查构建、代码规范、类型、测试及 CI 流程故障，适合评估项目能否稳定可靠地交付。",
+      "translated_at": "2026-08-04T00:11:24.067Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-623-duplication-overabstraction-auditor": {
+      "hash": "c9ca1051c9fdc30e",
+      "summary_zh": "一款代码审计工具，用证据识别重复实现、过度抽象和闲置扩展点，适合评估 DRY/KISS/YAGNI 风险。",
+      "translated_at": "2026-08-04T00:11:26.044Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-625-dependency-reuse-auditor": {
+      "hash": "399e0363303cc14a",
+      "summary_zh": "用于审计依赖健康度与复用风险，识别可由通用工具替代的自定义实现和集成。",
+      "translated_at": "2026-08-04T00:11:27.200Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-626-dead-code-pruning-auditor": {
+      "hash": "e263d8c7955c7302",
+      "summary_zh": "一款死代码清理审计工具，可找出无法执行、未使用、过时兼容及被注释的代码，适合重构时安全精简代码库。",
+      "translated_at": "2026-08-04T00:11:28.967Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-624-code-maintainability-hotspot-auditor": {
+      "hash": "7139ef23cb407eac",
+      "summary_zh": "一款本地代码可维护性审计工具，用于发现高复杂度、超长方法、模块臃肿及跨层命名不一致等代码热点。",
+      "translated_at": "2026-08-04T00:11:29.075Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-627-diagnosability-auditor": {
+      "hash": "19ed789237c63656",
+      "summary_zh": "用于审计系统故障诊断能力，检查日志、指标、链路追踪和关联 ID 是否足以支撑事故排查。",
+      "translated_at": "2026-08-04T00:11:30.811Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-629-runtime-lifecycle-config-auditor": {
+      "hash": "952471593d387968",
+      "summary_zh": "用于审核运行时生命周期与配置校验，覆盖启动、关停、探针、清理和环境同步，适合上线前检查服务就绪性。",
+      "translated_at": "2026-08-04T00:11:31.578Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-628-concurrency-correctness-auditor": {
+      "hash": "a801ede77b0bc736",
+      "summary_zh": "用于审计并发正确性的工具，可发现竞态、死锁、异步隐患、检查时序漏洞、阻塞式 I/O 和共享资源争用。",
+      "translated_at": "2026-08-04T00:11:33.902Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-63-release-publisher": {
+      "hash": "f30d729f2b55a2be",
+      "summary_zh": "根据仓库内容准备并发布带标签的 GitHub Release，适合明确的版本发布请求，不用于日常提交、包发布或社区动态。",
+      "translated_at": "2026-08-04T00:11:33.915Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-630-test-auditor": {
+      "hash": "0e8089ecfdaaf9eb",
+      "summary_zh": "一套面向评估平台的测试审计工具，适合协同分析测试覆盖情况并生成结构化结论。",
+      "translated_at": "2026-08-04T00:11:36.308Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-631-test-business-logic-auditor": {
+      "hash": "3d99e17e9ce9237f",
+      "summary_zh": "用于审查测试是否聚焦本地产品业务逻辑，识别那些只验证平台通用行为的无效测试。",
+      "translated_at": "2026-08-04T00:11:36.426Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-632-test-e2e-priority-auditor": {
+      "hash": "079ef468a584898e",
+      "summary_zh": "用于审查关键用户流程的端到端测试覆盖率，并识别价值低、浪费资源的测试，适合评估测试优先级。",
+      "translated_at": "2026-08-04T00:11:36.543Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-635-test-isolation-auditor": {
+      "hash": "9b5fb754f12a7914",
+      "summary_zh": "用于审计测试结果是否可信，可发现测试不稳定、隔离不足、外部依赖及时间、随机顺序或共享状态导致的问题。",
+      "translated_at": "2026-08-04T00:11:39.122Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-633-test-value-auditor": {
+      "hash": "9c0e4d8afc9fecf3",
+      "summary_zh": "按整体价值评估每个测试并给出去留、合并或重写建议，适合清理高成本测试套件。",
+      "translated_at": "2026-08-04T00:11:39.433Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-634-test-coverage-auditor": {
+      "hash": "2b60c915a5bd982d",
+      "summary_zh": "用于审计关键业务逻辑测试覆盖率的工具，可发现资金、认证、权限、数据完整性、算法和领域规则中的测试缺口。",
+      "translated_at": "2026-08-04T00:11:40.088Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-636-manual-test-auditor": {
+      "hash": "946b4d3913641476",
+      "summary_zh": "用于审查手工测试证据质量，确保测试可复现、失败及时、结果可核验且文档完整。",
+      "translated_at": "2026-08-04T00:11:41.276Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-64-community-announcer": {
+      "hash": "ff19475988869a73",
+      "summary_zh": "一款用于起草并发布经事实核查的 GitHub Discussions 公告工具，适合发布版本动态、项目更新和新闻。",
+      "translated_at": "2026-08-04T00:11:43.918Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-638-test-oracle-effectiveness-auditor": {
+      "hash": "002521578cb0c280",
+      "summary_zh": "用于审计测试断言和判定逻辑的工具，能发现只跑代码却难以验证真实缺陷的薄弱测试。",
+      "translated_at": "2026-08-04T00:11:44.416Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-637-test-structure-auditor": {
+      "hash": "7234e22b509afdaa",
+      "summary_zh": "用于审计测试套件的结构与可维护性，发现布局偏移、孤立或重复测试及源码映射混乱等问题。",
+      "translated_at": "2026-08-04T00:11:45.076Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-640-pattern-evolution-auditor": {
+      "hash": "70139965e883d0a5",
+      "summary_zh": "一款架构模式审计工具，结合最佳实践调研与协同评估，适合生成结构化审计结论。",
+      "translated_at": "2026-08-04T00:11:48.317Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-642-layer-ownership-boundary-auditor": {
+      "hash": "66d66b0920c701ac",
+      "summary_zh": "用于审计系统架构边界，检查分层、资源归属和编排职责是否清晰并得到落实。",
+      "translated_at": "2026-08-04T00:11:48.901Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-641-pattern-fitness-auditor": {
+      "hash": "0bae7caab83daed8",
+      "summary_zh": "用于审计已落地的架构模式是否符合项目需求与最佳实践，适合评估模式选型和实施效果。",
+      "translated_at": "2026-08-04T00:11:49.125Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-73-system-design-proposal-builder": {
+      "hash": "537893195c6ec810",
+      "summary_zh": "根据需求和约束生成可直接决策的目标系统设计，适合在制定实施计划前明确技术方案。",
+      "translated_at": "2026-08-04T00:11:51.557Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-71-system-design-baseline-builder": {
+      "hash": "e0e7167979dacb34",
+      "summary_zh": "用于梳理项目架构驱动因素与约束的基线工具，适合在设计或规划开始前统一认知。",
+      "translated_at": "2026-08-04T00:11:51.646Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-74-architecture-decision-recorder": {
+      "hash": "897b3c15b6a71186",
+      "summary_zh": "用于记录单项重要架构决策及其背景、备选方案、权衡和影响，适合沉淀关键选择，不用于整体设计或实施。",
+      "translated_at": "2026-08-04T00:11:53.984Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-75-architecture-diagram-builder": {
+      "hash": "db53554415daf4ca",
+      "summary_zh": "一款基于现有证据绘制当前或目标架构图的工具，适合以架构图为核心交付物的场景。",
+      "translated_at": "2026-08-04T00:11:57.841Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-76-architecture-migration-planner": {
+      "hash": "451b24cb9d3d9b10",
+      "summary_zh": "用于规划可逆的架构迁移，覆盖兼容、数据搬迁、灰度发布和回滚，适合从现有架构过渡到目标架构。",
+      "translated_at": "2026-08-04T00:11:58.896Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-72-current-architecture-documenter": {
+      "hash": "069423d2033f17a3",
+      "summary_zh": "从代码仓库证据梳理并记录现有系统架构，适合新人上手或建立迁移基线，不用于目标设计、审计结论或代码修改。",
+      "translated_at": "2026-08-04T00:11:59.662Z"
+    },
+    "skill:lum1104-understand-anything-understand-figma": {
+      "hash": "bf273d20f7939985",
+      "summary_zh": "通过 Figma API 分析设计文件并生成交互式知识图谱，适合梳理页面、组件、实例和设计规范间的关系。",
+      "translated_at": "2026-08-04T00:12:00.915Z"
+    },
+    "skill:makenotion-notion-cookbook-knowledge-capture": {
+      "hash": "4ff785203ec5a1e5",
+      "summary_zh": "将聊天和讨论自动整理成结构化的 Notion 文档，沉淀观点、决策与知识，适合搭建易检索的团队知识库。",
+      "translated_at": "2026-08-04T00:12:01.618Z"
+    },
+    "skill:makenotion-notion-cookbook-meeting-intelligence": {
+      "hash": "76c85fbe5cbc6824",
+      "summary_zh": "自动整合 Notion 上下文并结合 AI 调研，生成会前简报和对外议程，适合快速准备资料充分、结构清晰的会议。",
+      "translated_at": "2026-08-04T00:12:02.301Z"
+    },
+    "skill:makenotion-notion-cookbook-spec-to-implementation": {
+      "hash": "e421cffeffbdec25",
+      "summary_zh": "把产品或技术规格拆成可直接执行的 Notion 开发任务，适合用 Claude Code 按验收标准推进开发并跟踪进度。",
+      "translated_at": "2026-08-04T00:12:03.791Z"
+    },
+    "skill:makenotion-notion-cookbook-research-documentation": {
+      "hash": "d743a3019a779480",
+      "summary_zh": "一款 Notion 研究整理工具，可跨页面检索并整合零散信息，生成带引用和行动建议的结构化报告。",
+      "translated_at": "2026-08-04T00:12:03.801Z"
+    },
+    "skill:mattpocock-skills-ask-matt": {
+      "hash": "c20c5c06a7e97108",
+      "summary_zh": "一个根据当前情境自动推荐合适技能或流程的路由工具，适合不确定该用哪种方案时快速决策。",
+      "translated_at": "2026-08-04T00:12:04.451Z"
+    },
+    "skill:mattpocock-skills-batch-grill-me": {
+      "hash": "edbd9577f93140e4",
+      "summary_zh": "一款分轮次批量追问前沿问题的高强度面试工具，适合快速检验知识边界并查找认知盲区。",
+      "translated_at": "2026-08-04T00:12:08.679Z"
+    },
+    "skill:mattpocock-skills-code-review": {
+      "hash": "15d541e60764a229",
+      "summary_zh": "并行检查代码变更是否符合仓库规范与需求文档，适合审查分支、PR 或开发中的改动。",
+      "translated_at": "2026-08-04T00:12:09.889Z"
+    },
+    "skill:mattpocock-skills-claude-handoff": {
+      "hash": "c781bd3db4840e40",
+      "summary_zh": "可将当前对话无缝交给新的后台智能体继续处理，适合长任务换手或避免上下文负担。",
+      "translated_at": "2026-08-04T00:12:11.036Z"
+    },
+    "skill:mattpocock-skills-codebase-design": {
+      "hash": "91dd336d463e7ba5",
+      "summary_zh": "一套用于设计深层模块的通用方法，帮助优化接口与模块边界，让代码更易测试、维护和被 AI 理解。",
+      "translated_at": "2026-08-04T00:12:11.928Z"
+    },
+    "skill:mattpocock-skills-diagnosing-bugs": {
+      "hash": "45e5f825b0cbcba2",
+      "summary_zh": "用于定位棘手故障和性能退化的诊断流程，适合排查报错、功能异常、运行失败或速度变慢等问题。",
+      "translated_at": "2026-08-04T00:12:13.317Z"
+    },
+    "skill:mattpocock-skills-domain-modeling": {
+      "hash": "f298e302f66a9ff0",
+      "summary_zh": "用于构建和完善项目领域模型，统一业务术语与通用语言，并沉淀架构决策，适合需求梳理和持续维护。",
+      "translated_at": "2026-08-04T00:12:14.440Z"
+    },
+    "skill:mattpocock-skills-decision-mapping": {
+      "hash": "ed6fa1f454e5984b",
+      "summary_zh": "把模糊想法拆成有先后顺序的调查任务，并逐个推进解决，适合梳理复杂问题和决策流程。",
+      "translated_at": "2026-08-04T00:12:14.825Z"
+    },
+    "skill:mattpocock-skills-grilling": {
+      "hash": "7ec025bfe30ecb9a",
+      "summary_zh": "一款通过持续追问来审视计划、决策或想法的思维助手，适合查漏补缺、验证逻辑和预判风险。",
+      "translated_at": "2026-08-04T00:12:19.032Z"
+    },
+    "skill:mattpocock-skills-loop-me": {
+      "hash": "9afbae31055aa4ef",
+      "summary_zh": "一款通过持续追问梳理工作流需求的助手，适合在开发前补全规格、澄清目标和遗漏细节。",
+      "translated_at": "2026-08-04T00:12:22.983Z"
+    },
+    "skill:mattpocock-skills-implement": {
+      "hash": "d54008a027c50137",
+      "summary_zh": "根据规格说明或任务工单完成开发，适合将明确需求快速落地为可交付成果。",
+      "translated_at": "2026-08-04T00:12:26.517Z"
+    },
+    "skill:mattpocock-skills-research": {
+      "hash": "0da0519fd2094a11",
+      "summary_zh": "基于高可信一手资料调研问题并将结论保存为 Markdown，适合查证文档、API 信息或委派资料搜集任务。",
+      "translated_at": "2026-08-04T00:12:28.148Z"
+    },
+    "skill:mattpocock-skills-resolving-merge-conflicts": {
+      "hash": "8395d0092a7e60fb",
+      "summary_zh": "用于处理 Git 合并或变基过程中出现的冲突，适合快速恢复被冲突中断的代码整合流程。",
+      "translated_at": "2026-08-04T00:12:30.421Z"
+    },
+    "skill:mattpocock-skills-setup-ts-deep-modules": {
+      "hash": "e7d5026660ad958e",
+      "summary_zh": "为 TypeScript 仓库接入 dependency-cruiser，限制跨包引用只能经过入口文件，避免内部实现被直接依赖。",
+      "translated_at": "2026-08-04T00:12:32.964Z"
+    },
+    "skill:mattpocock-skills-to-questionnaire": {
+      "hash": "17d4016686cf5912",
+      "summary_zh": "把难以独自判断的决策整理成问卷，适合向他人收集信息和意见，辅助做出选择。",
+      "translated_at": "2026-08-04T00:12:36.163Z"
+    },
+    "skill:mattpocock-skills-to-spec": {
+      "hash": "dc3a94926d64987e",
+      "summary_zh": "将当前对话自动整理成需求规格并发布到项目问题追踪器，适合快速沉淀已讨论内容，无需额外访谈。",
+      "translated_at": "2026-08-04T00:12:37.326Z"
+    },
+    "skill:mattpocock-skills-to-tickets": {
+      "hash": "55633a355f1742a0",
+      "summary_zh": "把计划、规范或对话拆成带阻塞依赖的可执行工单，并发布到本地文件或项目跟踪系统。",
+      "translated_at": "2026-08-04T00:12:40.841Z"
+    },
+    "skill:mattpocock-skills-wayfinder": {
+      "hash": "78631e7352b4ac03",
+      "summary_zh": "一款将大型任务拆成问题追踪器中共享决策单的规划工具，适合跨多轮智能体会话逐步推进复杂项目。",
+      "translated_at": "2026-08-04T00:12:44.157Z"
+    },
+    "skill:mattpocock-skills-wizard": {
+      "hash": "94ce1951a3ca7bcf",
+      "summary_zh": "一个交互式 Bash 向导，用于引导完成第三方配置、一次性迁移等人工流程，并自动收集参数、写入环境变量和密钥。",
+      "translated_at": "2026-08-04T00:12:44.745Z"
+    },
+    "skill:mattpocock-skills-writing-great-skills": {
+      "hash": "a9646e2995b2809c",
+      "summary_zh": "一份编写和优化技能的参考指南，通过统一术语与设计原则，让技能行为更稳定、结果更可预期。",
+      "translated_at": "2026-08-04T00:12:47.766Z"
+    },
+    "skill:memodb-io-acontext-user-general-facts": {
+      "hash": "ee1c3e1e2f097bea",
+      "summary_zh": "按主题收集并整理用户的通用信息，适合构建用户画像和提供个性化服务。",
+      "translated_at": "2026-08-04T00:12:50.513Z"
+    },
+    "skill:memodb-io-acontext-daily-logs": {
+      "hash": "0411eafdabc7bf8b",
+      "summary_zh": "用于记录用户每日活动并生成摘要，适合在读取或编辑用户记忆时自动追踪和整理变更。",
+      "translated_at": "2026-08-04T00:12:51.017Z"
+    },
+    "skill:memodb-io-acontext-public": {
+      "hash": "7dca3d61b27d8412",
+      "summary_zh": "一款智能体项目初始化工具，可快速完成环境安装、账号登录和项目配置，并为智能体接入技能记忆。",
+      "translated_at": "2026-08-04T00:12:51.333Z"
+    },
+    "skill:microsoft-skills-for-fabric-activator-consumption-cli": {
+      "hash": "f8950c03f0d3c89c",
+      "summary_zh": "一个通过只读 REST 调用检查 Fabric 告警与自动化操作的命令行工具，适合排查告警触发原因及通知、规则和动作配置。",
+      "translated_at": "2026-08-04T00:12:54.170Z"
+    },
+    "skill:microsoft-skills-for-fabric-azmon-mirroredcatalogs-operations-cli": {
+      "hash": "a87b432c7c647bb8",
+      "summary_zh": "一款将 Azure Monitor 和 Application Insights 数据接入 Microsoft Fabric 的命令行工具，适合关联业务数据、实时分析并生成业务影响告警。",
+      "translated_at": "2026-08-04T00:12:56.136Z"
+    },
+    "skill:microsoft-skills-for-fabric-activator-authoring-cli": {
+      "hash": "070263e4fc6f5d83",
+      "summary_zh": "一个通过 REST API 和 az rest 管理 Fabric Activator 的命令行工具，适合创建或删除项目并配置规则、通知和自动化动作。",
+      "translated_at": "2026-08-04T00:12:58.220Z"
+    },
+    "skill:microsoft-skills-for-fabric-check-updates": {
+      "hash": "04b176909e7a706a",
+      "summary_zh": "用于检查已安装的 skills-for-fabric 插件包是否有更新，并查看版本、变更记录及对应环境的升级指引。",
+      "translated_at": "2026-08-04T00:12:59.866Z"
+    },
+    "skill:microsoft-skills-for-fabric-dataflows-authoring-cli": {
+      "hash": "928aa43175afcafc",
+      "summary_zh": "一个通过 Fabric API 管理 Dataflows Gen2 的命令行工具，适合自动化创建、更新、删除、刷新及配置数据流。",
+      "translated_at": "2026-08-04T00:13:02.035Z"
+    },
+    "skill:microsoft-skills-for-fabric-databricks-migration": {
+      "hash": "4c9d148bcb8e1453",
+      "summary_zh": "一套将 Databricks 笔记本和作业迁移到 Microsoft Fabric 的指南，适合解决接口、存储、密钥、依赖和目录结构的兼容改造。",
+      "translated_at": "2026-08-04T00:13:02.187Z"
+    },
+    "skill:microsoft-skills-for-fabric-e2e-fabric-cost-estimation": {
+      "hash": "d42414d29edae8e4",
+      "summary_zh": "一款微软 Fabric 迁移成本评估工具，可分析现有工作负载并推荐容量规格、计费模式及预留实例方案。",
+      "translated_at": "2026-08-04T00:13:05.387Z"
+    },
+    "skill:microsoft-skills-for-fabric-dataflows-save-as-authoring-cli": {
+      "hash": "c413ed82dbb9c9a7",
+      "summary_zh": "通过命令行调用 Power BI 和 Fabric API，适合跨工作区复制、升级 Gen1 数据流并重新绑定连接。",
+      "translated_at": "2026-08-04T00:13:05.696Z"
+    },
+    "skill:microsoft-skills-for-fabric-dataflows-consumption-cli": {
+      "hash": "d76cf5a7282c729c",
+      "summary_zh": "一款只读命令行工具，用于监控、检查和查询 Fabric Dataflows Gen2，适合排查刷新、参数、作业历史及数据去向问题。",
+      "translated_at": "2026-08-04T00:13:05.853Z"
+    },
+    "skill:microsoft-skills-for-fabric-eventhouse-consumption-cli": {
+      "hash": "c07b37ec836b9262",
+      "summary_zh": "通过命令行调用 Kusto API 查询 Fabric Eventhouse，适合探索表结构、分析实时与时序数据及监控数据摄取。",
+      "translated_at": "2026-08-04T00:13:08.899Z"
+    },
+    "skill:microsoft-skills-for-fabric-e2e-medallion-architecture": {
+      "hash": "cba6dee0b5ff3df8",
+      "summary_zh": "用于规划和落地 Microsoft Fabric 奖牌式湖仓平台，适合构建从数据摄取、分层治理到语义模型和分析的完整流程。",
+      "translated_at": "2026-08-04T00:13:09.034Z"
+    },
+    "skill:microsoft-skills-for-fabric-eventhouse-authoring-cli": {
+      "hash": "a2a4e02918f6f0ee",
+      "summary_zh": "通过命令行管理 Fabric Eventhouse 和 KQL 数据库，适合部署表结构、导入数据及配置策略与视图。",
+      "translated_at": "2026-08-04T00:13:09.192Z"
+    },
+    "skill:microsoft-skills-for-fabric-eventschemaset-consumption-cli": {
+      "hash": "6c5562e2f4540d4f",
+      "summary_zh": "一款用于查询和解析 Microsoft Fabric 事件架构集的命令行工具，适合搜索工作区目录、检查属性及汇总事件类型与消息架构。",
+      "translated_at": "2026-08-04T00:13:13.349Z"
+    },
+    "skill:microsoft-skills-for-fabric-eventstream-consumption-cli": {
+      "hash": "cedfb735d2976d90",
+      "summary_zh": "一款管理 Microsoft Fabric 实时事件流的命令行工具，可跨工作区检查和监控数据管道，排查拓扑连接与配置问题。",
+      "translated_at": "2026-08-04T00:13:13.841Z"
+    },
+    "skill:microsoft-skills-for-fabric-eventstream-authoring-cli": {
+      "hash": "caf904657764ae73",
+      "summary_zh": "通过 REST API 创建、连接并发布 Fabric 实时流拓扑，适合快速搭建多源采集、流式处理和数据分发管道。",
+      "translated_at": "2026-08-04T00:13:13.879Z"
+    },
+    "skill:microsoft-skills-for-fabric-fabriciq": {
+      "hash": "788e360d08b65a55",
+      "summary_zh": "通过自然语言查询现有 Power BI 报表和仪表盘，自动生成并执行 DAX，适合数据对比、排名、解释和汇总。",
+      "translated_at": "2026-08-04T00:13:17.070Z"
+    },
+    "skill:microsoft-skills-for-fabric-fabriciq-ontology-authoring-cli": {
+      "hash": "df7646b30da25216",
+      "summary_zh": "一款通过命令行创建和维护 Fabric IQ 本体的工具，适合建模实体关系并绑定湖仓或实时数据表。",
+      "translated_at": "2026-08-04T00:13:17.160Z"
+    },
+    "skill:microsoft-skills-for-fabric-fabriciq-ontology-consumption-cli": {
+      "hash": "3d09c2a94c104af8",
+      "summary_zh": "一款只读探索 Fabric IQ 本体的命令行工具，帮助智能体理解实体关系与数据源映射，并将查询路由到合适的数据引擎。",
+      "translated_at": "2026-08-04T00:13:20.097Z"
+    },
+    "skill:microsoft-skills-for-fabric-mlv-operations-cli": {
+      "hash": "3240404f78ffd2af",
+      "summary_zh": "通过 REST API 管理现有 Microsoft Fabric 物化湖视图的刷新计划和任务，适合安全执行自动或按需刷新。",
+      "translated_at": "2026-08-04T00:13:20.514Z"
+    },
+    "skill:microsoft-skills-for-fabric-hdinsight-migration": {
+      "hash": "ccfea3d33221bd76",
+      "summary_zh": "一款将 Azure HDInsight 的 Spark、Hive 和 Oozie 工作负载迁移到 Microsoft Fabric 的工具，适合旧数据平台现代化改造。",
+      "translated_at": "2026-08-04T00:13:20.953Z"
+    },
+    "skill:microsoft-skills-for-fabric-powerbi-report-authoring": {
+      "hash": "f29794d3f6cc0723",
+      "summary_zh": "通过命令行创建和修改 PBIR/PBIP 格式的 Power BI 报表，适合按既定方案编辑内容并验证渲染效果。",
+      "translated_at": "2026-08-04T00:13:24.555Z"
+    },
+    "skill:microsoft-skills-for-fabric-pipeline-migration": {
+      "hash": "58e59ecb95091e2b",
+      "summary_zh": "将 Synapse Data Factory 管道迁移到 Microsoft Fabric，自动转换连接、数据集、参数和笔记本活动，适合平台升级改造。",
+      "translated_at": "2026-08-04T00:13:27.045Z"
+    },
+    "skill:microsoft-skills-for-fabric-powerbi-report-management": {
+      "hash": "06f3f5652efc9f2a",
+      "summary_zh": "通过命令行调用 Fabric API 管理 Power BI 工作区报表，适合创建、发布、下载、更新、查询或删除报表。",
+      "translated_at": "2026-08-04T00:13:27.667Z"
+    },
+    "skill:microsoft-skills-for-fabric-powerbi-report-design": {
+      "hash": "f22afd96c4270855",
+      "summary_zh": "一套用于 Power BI 报表开发前视觉规划的工具，适合确定布局、图表、配色与无障碍方案，或重塑现有报表风格。",
+      "translated_at": "2026-08-04T00:13:27.902Z"
+    },
+    "skill:microsoft-skills-for-fabric-powerbi-report-planning": {
+      "hash": "b894c9a0280aa1be",
+      "summary_zh": "用于规划并落地新 Power BI 报表的引导式流程，适合先明确需求、设计与依赖，审批定稿后再开发。",
+      "translated_at": "2026-08-04T00:13:31.418Z"
+    },
+    "skill:microsoft-skills-for-fabric-search-consumption-cli": {
+      "hash": "d27bccafb5f97dc8",
+      "summary_zh": "用于跨工作区搜索 Microsoft Fabric 目录的命令行工具，可查找资源、定位所属工作区并获取后续调用所需的 ID。",
+      "translated_at": "2026-08-04T00:13:33.915Z"
+    },
+    "skill:microsoft-skills-for-fabric-semantic-model-authoring": {
+      "hash": "99e1146b40ca56dc",
+      "summary_zh": "面向 Power BI 语义模型开发与检查的工具，帮助在不同权限环境下高效完成建模、运维及 AI/Copilot 准备。",
+      "translated_at": "2026-08-04T00:13:34.187Z"
+    },
+    "skill:microsoft-skills-for-fabric-semantic-model-consumption": {
+      "hash": "5b1ebe4b7c8692d8",
+      "summary_zh": "通过 MCP 服务器执行原始 DAX 查询并查看 Power BI 语义模型元数据，适合已知 DAX 或需排查模型结构的场景。",
+      "translated_at": "2026-08-04T00:13:34.915Z"
+    },
+    "skill:microsoft-skills-for-fabric-spark-authoring-cli": {
+      "hash": "cf7eee15756d47a8",
+      "summary_zh": "用于编写和运行 Fabric Notebook、创建物化湖视图，适合 Spark 开发与作业状态跟踪。",
+      "translated_at": "2026-08-04T00:13:37.561Z"
+    },
+    "skill:microsoft-skills-for-fabric-spark-consumption-cli": {
+      "hash": "3291200dc547a00e",
+      "summary_zh": "通过 Fabric Lakehouse Livy 会话交互执行 PySpark，适合临时查询、跨湖分析和快速计算，无需编写或运行笔记本。",
+      "translated_at": "2026-08-04T00:13:38.838Z"
+    },
+    "skill:microsoft-skills-for-fabric-spark-operations-cli": {
+      "hash": "7f124e42a5772887",
+      "summary_zh": "面向 Microsoft Fabric 的只读 Spark 诊断工具，适合排查作业失败、Livy 会话异常及内存溢出、数据倾斜等问题。",
+      "translated_at": "2026-08-04T00:13:39.305Z"
+    },
+    "skill:microsoft-skills-for-fabric-sqldb-authoring-cli": {
+      "hash": "f971894620a0e4ae",
+      "summary_zh": "用于创建和管理 Fabric SQL 数据库，支持编写复杂表结构并自动化部署，适合数据库开发、版本控制和 CI/CD 场景。",
+      "translated_at": "2026-08-04T00:13:41.469Z"
+    },
+    "skill:microsoft-skills-for-fabric-sqldb-operations-cli": {
+      "hash": "e3cc3821ae57b610",
+      "summary_zh": "一款面向 Fabric SQL 数据库的性能诊断工具，用于定位慢查询、资源瓶颈、阻塞链、缺失索引和执行计划退化。",
+      "translated_at": "2026-08-04T00:13:43.344Z"
+    },
+    "skill:microsoft-skills-for-fabric-sqldb-consumption-cli": {
+      "hash": "66195b0333c9010b",
+      "summary_zh": "一个通过 sqlcmd 查询 Fabric SQL 数据库的命令行工具，适合探索表结构、向量检索、时态与 JSON 数据及安全策略。",
+      "translated_at": "2026-08-04T00:13:44.129Z"
+    },
+    "skill:microsoft-skills-for-fabric-sqldw-authoring-cli": {
+      "hash": "551faf18410ce020",
+      "summary_zh": "通过 MCP 在 Microsoft Fabric 数据仓库和 SQL 端点执行 T-SQL，适合建表、数据写入、模式变更及 ETL/ELT 等场景。",
+      "translated_at": "2026-08-04T00:13:44.563Z"
+    },
+    "skill:microsoft-skills-for-fabric-sqldw-consumption-cli": {
+      "hash": "90f1ef00662a7381",
+      "summary_zh": "一款通过 MCP 对 Fabric 数据仓库、湖仓和镜像数据库执行只读 T-SQL 的工具，适合查数、统计、探索表结构和监控 SQL。",
+      "translated_at": "2026-08-04T00:13:47.787Z"
+    },
+    "skill:microsoft-skills-for-fabric-sqldw-operations-cli": {
+      "hash": "e75ac956bea2c67a",
+      "summary_zh": "用于分析 Fabric 数据仓库性能的命令行工具，可定位慢查询、资源压力和冷缓存，并给出聚簇键优化建议。",
+      "translated_at": "2026-08-04T00:13:47.961Z"
+    },
+    "skill:microsoft-skills-for-fabric-synapse-migration": {
+      "hash": "cd766fff9771eadc",
+      "summary_zh": "用于将 Azure Synapse Spark 工作负载迁移到 Microsoft Fabric，自动转换工具调用并替换关联服务，适合迁移笔记本和作业定义。",
+      "translated_at": "2026-08-04T00:13:48.663Z"
+    },
+    "skill:modu-ai-moai-adk-harness-moaiadk-dev-reference": {
+      "hash": "37e815b7784bed05",
+      "summary_zh": "一份 Go 本地开发参考指南，适合处理版本发布、Shell 钩子开发及构建调试等特定任务。",
+      "translated_at": "2026-08-04T00:13:52.764Z"
+    },
+    "skill:modu-ai-moai-adk-harness-moaiadk-best-practices": {
+      "hash": "ca408ff9fa8c0ec0",
+      "summary_zh": "面向四类开发代理的 Go 最佳实践指南，用于规范测试、配置、工具调用和验证流程，减少 CI 与协作隐患。",
+      "translated_at": "2026-08-04T00:13:53.378Z"
+    },
+    "skill:modu-ai-moai-adk-harness-moaiadk-patterns": {
+      "hash": "8247166221b53199",
+      "summary_zh": "一套面向 moai-adk-go 专项代理的开发参考，帮助统一架构约定并高效完成模板、钩子、代理和规范开发。",
+      "translated_at": "2026-08-04T00:13:57.583Z"
+    },
+    "skill:modu-ai-moai-adk-hns-moaiadk-best-practices": {
+      "hash": "ca408ff9fa8c0ec0",
+      "summary_zh": "面向四类开发专家的 Go 最佳实践指南，统一测试隔离、配置管理、工具调用与验证规范，适合保障 CLI、工作流和 CI 质量。",
+      "translated_at": "2026-08-04T00:13:58.906Z"
+    },
+    "skill:modu-ai-moai-adk-hns-moaiadk-dev-reference": {
+      "hash": "37e815b7784bed05",
+      "summary_zh": "一份本地开发参考文档，帮助开发者处理版本发布、Shell 脚本钩子开发及构建调试等特定任务。",
+      "translated_at": "2026-08-04T00:14:03.004Z"
+    },
+    "skill:modu-ai-moai-adk-hns-oss-docs-i18n-rules": {
+      "hash": "8a97971b983e8113",
+      "summary_zh": "一套面向开源文档维护者的国际化规范，用于确保四语内容同步，并统一格式、链接、版本与部署配置。",
+      "translated_at": "2026-08-04T00:14:03.949Z"
+    },
+    "skill:modu-ai-moai-adk-hns-moaiadk-patterns": {
+      "hash": "8247166221b53199",
+      "summary_zh": "面向 Go 代码库维护者的领域模式参考，帮助专职代理按统一架构和流程开发模板、钩子、配置及规范。",
+      "translated_at": "2026-08-04T00:14:04.370Z"
+    },
+    "skill:modu-ai-moai-adk-hns-oss-docs-readme-sync": {
+      "hash": "e5099da3787facf1",
+      "summary_zh": "一套开源文档 README 多语言同步规范，帮助内容作者和译者统一中英日韩版本的结构、语言切换栏与人工校验流程。",
+      "translated_at": "2026-08-04T00:14:05.634Z"
+    },
+    "skill:modu-ai-moai-adk-hns-oss-docs-structure-map": {
+      "hash": "4852f0930dae358d",
+      "summary_zh": "一份开源文档站结构规范图，帮助维护者在修改导航或配置前找准文件并遵循多语言、图标和样式约束。",
+      "translated_at": "2026-08-04T00:14:08.490Z"
+    },
+    "skill:modu-ai-moai-adk-moai": {
+      "hash": "825536c03f4f0698",
+      "summary_zh": "面向自主开发的统一智能体编排器，可将自然语言指令分派给专用智能体，自动完成规划、开发、测试和修复。",
+      "translated_at": "2026-08-04T00:14:11.102Z"
+    },
+    "skill:modu-ai-moai-adk-moai-design-craft": {
+      "hash": "2ccea8f576ee401c",
+      "summary_zh": "一款意图优先的设计辅助工具，适合明确设计方向、沉淀领域语言，并在开发后审查实现是否符合设计原则。",
+      "translated_at": "2026-08-04T00:14:11.948Z"
+    },
+    "skill:modu-ai-moai-adk-hns-oss-docs-verify": {
+      "hash": "9c989c03d1ab43f2",
+      "summary_zh": "这是开源文档交付前的强制校验流程，用于检查构建、多语言一致性和内容规范，避免不合格文档发布。",
+      "translated_at": "2026-08-04T00:14:12.099Z"
+    },
+    "skill:modu-ai-moai-adk-moai-domain-backend": {
+      "hash": "1d59234662353c0c",
+      "summary_zh": "专注后端开发的工具，适合设计 API、集成数据库、搭建微服务，以及实现服务端逻辑和身份权限管理。",
+      "translated_at": "2026-08-04T00:14:15.398Z"
+    },
+    "skill:modu-ai-moai-adk-moai-design-tools": {
+      "hash": "341d0811b1b872d7",
+      "summary_zh": "一套设计工具集成方案，适合获取 Figma 设计上下文、渲染 Pencil 稿件并导出 React/Tailwind 代码。",
+      "translated_at": "2026-08-04T00:14:15.988Z"
+    },
+    "skill:modu-ai-moai-adk-moai-docs-generation": {
+      "hash": "94bba19002b556e6",
+      "summary_zh": "一套基于主流文档工具的生成方案，适合从代码产出技术文档、搭建文档站点并自动化维护流程。",
+      "translated_at": "2026-08-04T00:14:17.392Z"
+    },
+    "skill:modu-ai-moai-adk-moai-domain-brand-design": {
+      "hash": "811d7575e3d0b8d5",
+      "summary_zh": "面向 Web 项目的品牌视觉设计工具，可从品牌资料提取设计规范，统一页面风格并兼顾无障碍与性能。",
+      "translated_at": "2026-08-04T00:14:18.930Z"
+    },
+    "skill:modu-ai-moai-adk-moai-domain-copywriting": {
+      "hash": "507f93229ad2d1ab",
+      "summary_zh": "一款面向营销与产品文案的品牌写作工具，可统一品牌语气，生成结构化、多版本且便于智能体调用的页面文案。",
+      "translated_at": "2026-08-04T00:14:20.676Z"
+    },
+    "skill:modu-ai-moai-adk-moai-domain-database": {
+      "hash": "2aa4d8adfff6fc8a",
+      "summary_zh": "面向多种关系型、文档型、缓存及云数据库的专业工具，适合做架构设计、查询优化、索引规划、数据建模和云数据库选型。",
+      "translated_at": "2026-08-04T00:14:20.789Z"
+    },
+    "skill:modu-ai-moai-adk-moai-domain-design-handoff": {
+      "hash": "3f95f25101a29b80",
+      "summary_zh": "用于生成可直接交给 Claude Design 的设计交接包，适合缺少品牌资料或需局部重做交接内容的场景。",
+      "translated_at": "2026-08-04T00:14:22.879Z"
+    },
+    "skill:modu-ai-moai-adk-moai-domain-html-report": {
+      "hash": "768d2afcac19ed8c",
+      "summary_zh": "将 Markdown 渲染成单文件 HTML，并按报告类型和读者水平调整内容，适合状态汇报、事故复盘、方案说明等场景。",
+      "translated_at": "2026-08-04T00:14:24.871Z"
+    },
+    "skill:modu-ai-moai-adk-moai-domain-frontend": {
+      "hash": "35331f77c806e651",
+      "summary_zh": "面向现代 Web 前端开发的专业工具，适合构建组件化界面、优化性能并集成状态管理。",
+      "translated_at": "2026-08-04T00:14:25.385Z"
+    },
+    "skill:modu-ai-moai-adk-moai-domain-ideation": {
+      "hash": "9ec0683e2b5252e1",
+      "summary_zh": "面向产品创意与提案生成的领域工具，可辅助搭建精益画布、拆解需求，并通过发散与收敛流程形成可落地方案。",
+      "translated_at": "2026-08-04T00:14:27.183Z"
+    },
+    "skill:modu-ai-moai-adk-moai-domain-humanize": {
+      "hash": "9cbac965b58c4aaf",
+      "summary_zh": "一款多语言AI文本润色工具，可消除机器写作痕迹，在保留原意和数据的前提下让中英日韩内容更自然。",
+      "translated_at": "2026-08-04T00:14:28.512Z"
+    },
+    "skill:modu-ai-moai-adk-moai-domain-uiux": {
+      "hash": "45a60152265b152e",
+      "summary_zh": "一套面向 UI/UX 设计系统的专业工具，适合处理无障碍规范、图标、设计令牌、交互模式及深色主题适配。",
+      "translated_at": "2026-08-04T00:14:31.181Z"
+    },
+    "skill:modu-ai-moai-adk-moai-domain-svg-infographic": {
+      "hash": "3e6dfc885a905ac6",
+      "summary_zh": "一套可编辑的 SVG 技术信息图生成方案，适合制作架构、流程、对比和层级图，并稳定输出适配中文的高清图片。",
+      "translated_at": "2026-08-04T00:14:32.401Z"
+    },
+    "skill:modu-ai-moai-adk-moai-domain-research": {
+      "hash": "d17e5cd54e76c3bc",
+      "summary_zh": "面向 /moai brain 第三阶段的市场与生态研究助手，可并行检索多源信息并生成带引用和局限说明的结构化报告。",
+      "translated_at": "2026-08-04T00:14:33.111Z"
+    },
+    "skill:modu-ai-moai-adk-moai-foundation-cc": {
+      "hash": "1e3f9459519a3ec0",
+      "summary_zh": "一套 Claude Code 扩展开发与配置工具包，适合构建技能、子代理、插件及自动化工作流。",
+      "translated_at": "2026-08-04T00:14:33.709Z"
+    },
+    "skill:modu-ai-moai-adk-moai-foundation-context": {
+      "hash": "927cc7ed25b275b1",
+      "summary_zh": "用于多智能体工作流的上下文与会话管理，适合优化令牌预算、应对上下文限制及实现智能体间会话交接。",
+      "translated_at": "2026-08-04T00:14:35.341Z"
+    },
+    "skill:modu-ai-moai-adk-moai-foundation-core": {
+      "hash": "e4dec04950742522",
+      "summary_zh": "一套面向 AI 智能体开发的基础规范，适合统一质量评审、需求驱动流程、任务委派及上下文预算管理。",
+      "translated_at": "2026-08-04T00:14:35.911Z"
+    },
+    "skill:modu-ai-moai-adk-moai-foundation-philosopher": {
+      "hash": "a3636dc4b70baa7d",
+      "summary_zh": "一套融合第一性原理、设计思维与系统工程的战略思考框架，适合架构决策和根因分析。",
+      "translated_at": "2026-08-04T00:14:38.051Z"
+    },
+    "skill:modu-ai-moai-adk-moai-foundation-thinking": {
+      "hash": "fb4d1d04034bdea4",
+      "summary_zh": "一套融合创意框架、第一性原理和自适应思考的方法工具，适合复杂问题推演、战略分析与架构决策。",
+      "translated_at": "2026-08-04T00:14:38.508Z"
+    },
+    "skill:modu-ai-moai-adk-moai-foundation-quality": {
+      "hash": "b88bae6ee55cbc45",
+      "summary_zh": "基于 TRUST 5 原则的代码质量保障体系，适合用于代码审查、质量门禁、覆盖率检查与合规评估。",
+      "translated_at": "2026-08-04T00:14:39.135Z"
+    },
+    "skill:modu-ai-moai-adk-moai-harness-cli-template": {
+      "hash": "6fec2bab9362d646",
+      "summary_zh": "面向 Go 命令行工具开发的模板与知识库，适合快速搭建 Cobra 命令、嵌入式模板、YAML 配置和渲染流程。",
+      "translated_at": "2026-08-04T00:14:41.679Z"
+    },
+    "skill:modu-ai-moai-adk-moai-framework-electron": {
+      "hash": "525f005e6eb76523",
+      "summary_zh": "面向 Electron 33+ 的桌面应用开发框架，适合处理主进程与渲染进程架构、IPC 通信、自动更新及跨平台打包。",
+      "translated_at": "2026-08-04T00:14:41.882Z"
+    },
+    "skill:modu-ai-moai-adk-moai-harness-learner": {
+      "hash": "7e21062baf89031e",
+      "summary_zh": "用于协调学习子系统，生成自动更新提案并管理应用与回滚，适合处理待审批更新及其生命周期。",
+      "translated_at": "2026-08-04T00:14:42.601Z"
+    },
+    "skill:modu-ai-moai-adk-moai-meta-harness": {
+      "hash": "05da06cbc1b97fa2",
+      "summary_zh": "已弃用的旧版元流程入口，仅用于兼容旧调用并转向新版动态构建器，不适合创建新流程。",
+      "translated_at": "2026-08-04T00:14:44.877Z"
+    },
+    "skill:modu-ai-moai-adk-moai-platform-auth": {
+      "hash": "6f1c934ffd766591",
+      "summary_zh": "面向 Auth0、Clerk 和 Firebase Auth 的认证授权工具，适合实现多因素认证、单点登录、通行密钥及社交登录等安全功能。",
+      "translated_at": "2026-08-04T00:14:45.856Z"
+    },
+    "skill:modu-ai-moai-adk-moai-harness-patterns": {
+      "hash": "ac9e7c43eea871bd",
+      "summary_zh": "面向 moai-adk-go 的工程模式库，统一钩子与 CI 调度、规格工作流和 Go 质量门禁，适合搭建自动化开发与发布流程。",
+      "translated_at": "2026-08-04T00:14:47.417Z"
+    },
+    "skill:modu-ai-moai-adk-moai-platform-chrome-extension": {
+      "hash": "89f55073c71743bd",
+      "summary_zh": "面向 Chrome Manifest V3 的扩展开发工具，适合构建、调试并发布各类浏览器插件。",
+      "translated_at": "2026-08-04T00:14:47.709Z"
+    },
+    "skill:modu-ai-moai-adk-moai-platform-database-cloud": {
+      "hash": "4eeed48432faf1a8",
+      "summary_zh": "面向云数据库选型与搭建的专业工具，适合配置无服务器 PostgreSQL、实时数据库及支持离线同步的 NoSQL 服务。",
+      "translated_at": "2026-08-04T00:14:48.537Z"
+    },
+    "skill:modu-ai-moai-adk-moai-platform-deployment": {
+      "hash": "4ef76634cc7da9a6",
+      "summary_zh": "面向 Vercel、Railway 和 Convex 的应用部署与托管工具，适合配置边缘函数、持续部署及管理无服务器基础设施。",
+      "translated_at": "2026-08-04T00:14:49.752Z"
+    },
+    "skill:modu-ai-moai-adk-moai-ref-git-workflow": {
+      "hash": "21f08b3ec3d74a56",
+      "summary_zh": "一套面向智能代理的生产级 Git 工作流参考，适合规范分支策略、提交信息和合并请求流程。",
+      "translated_at": "2026-08-04T00:14:52.036Z"
+    },
+    "skill:modu-ai-moai-adk-moai-ref-llm-security": {
+      "hash": "89ab3b7d20303388",
+      "summary_zh": "面向大模型应用的防御安全参考与工程指南，适合加固提示词、智能体工具调用、输出校验及合规治理。",
+      "translated_at": "2026-08-04T00:14:54.583Z"
+    },
+    "skill:modu-ai-moai-adk-moai-ref-owasp-checklist": {
+      "hash": "7151d75dbaa4f768",
+      "summary_zh": "面向后端开发与安全审计的 OWASP 安全参考，涵盖身份认证、输入校验和 HTTP 安全头等生产级实践。",
+      "translated_at": "2026-08-04T00:14:54.622Z"
+    },
+    "skill:modu-ai-moai-adk-moai-ref-api-patterns": {
+      "hash": "01b2e89250d49068",
+      "summary_zh": "一套面向后端开发的生产级 API 设计参考，帮助在接口设计、实现和代码评审中统一规范、减少常见问题。",
+      "translated_at": "2026-08-04T00:14:58.082Z"
+    },
+    "skill:modu-ai-moai-adk-moai-ref-react-patterns": {
+      "hash": "7ae04b2a2a0dec61",
+      "summary_zh": "面向 React/Next.js 前端开发的设计参考，提供组件模式、状态管理和项目结构实践，适合构建生产级 Web 应用。",
+      "translated_at": "2026-08-04T00:14:58.503Z"
+    },
+    "skill:modu-ai-moai-adk-moai-ref-secops": {
+      "hash": "1936e962c5aa3c0c",
+      "summary_zh": "一套面向生产环境的 DevSecOps 防御实践指南，帮助后端、安全与平台团队加固流水线、容器、Kubernetes 和 API。",
+      "translated_at": "2026-08-04T00:14:58.978Z"
+    },
+    "skill:modu-ai-moai-adk-moai-ref-supply-chain": {
+      "hash": "e3e97aed52dcb1fd",
+      "summary_zh": "软件供应链防护参考方案，帮助后端、安全和发布团队排查恶意依赖、验证制品来源并加固构建发布流程。",
+      "translated_at": "2026-08-04T00:15:02.463Z"
+    },
+    "skill:modu-ai-moai-adk-moai-ref-seo": {
+      "hash": "8b382a4e709a2cd6",
+      "summary_zh": "一套面向网站开发与上线审查的 SEO 参考规范，帮助提升页面可抓取性、可索引性和结构化数据一致性。",
+      "translated_at": "2026-08-04T00:15:03.205Z"
+    },
+    "skill:modu-ai-moai-adk-moai-tool-svg": {
+      "hash": "00502b818f66ee66",
+      "summary_zh": "一款用于创建、优化和转换 SVG 的工具，适合制作矢量图、图标系统、数据可视化及 SVG 动画。",
+      "translated_at": "2026-08-04T00:15:06.537Z"
+    },
+    "skill:modu-ai-moai-adk-moai-ref-ui-polish": {
+      "hash": "aadbe4c9a0540b17",
+      "summary_zh": "一套面向前端与 UI 智能体的界面润色规范，用于完善视觉与交互细节，提升产品级界面质感。",
+      "translated_at": "2026-08-04T00:15:07.035Z"
+    },
+    "skill:modu-ai-moai-adk-moai-ref-testing-pyramid": {
+      "hash": "723844fcc400e9a1",
+      "summary_zh": "面向开发智能体的测试策略参考，用于制定覆盖率目标、生成测试并按生产级标准验证质量。",
+      "translated_at": "2026-08-04T00:15:08.916Z"
+    },
+    "skill:modu-ai-moai-adk-moai-workflow-ddd": {
+      "hash": "126d0d8557184052",
+      "summary_zh": "一套领域驱动开发工作流，通过分析、保留行为再改进代码，适合安全重构遗留系统和降低技术债。",
+      "translated_at": "2026-08-04T00:15:09.117Z"
+    },
+    "skill:modu-ai-moai-adk-moai-workflow-docs-claim-check": {
+      "hash": "be9d878282f4a859",
+      "summary_zh": "只读核验 README、发布说明和使用指南中的公开表述是否有证据支撑，适合发布前排查不实或缺乏依据的内容。",
+      "translated_at": "2026-08-04T00:15:12.251Z"
+    },
+    "skill:modu-ai-moai-adk-moai-workflow-design": {
+      "hash": "6e5a208982342ba8",
+      "summary_zh": "统一设计工作流工具，用于导入设计交付物、加载设计简报，并校验设计令牌与品牌规范优先级。",
+      "translated_at": "2026-08-04T00:15:12.504Z"
+    },
+    "skill:modu-ai-moai-adk-moai-workflow-ci-loop": {
+      "hash": "99f89039a85e9149",
+      "summary_zh": "用于 PR 创建后的 CI 监控与自动修复，可识别关键失败并安全重试，复杂语义问题则交由用户处理。",
+      "translated_at": "2026-08-04T00:15:13.779Z"
+    },
+    "skill:modu-ai-moai-adk-moai-workflow-gan-loop": {
+      "hash": "626d192ed089bda7",
+      "summary_zh": "通过构建与评估的对抗迭代持续提升设计质量，适合需要量化评分、停滞检测和异常升级的自动化设计流程。",
+      "translated_at": "2026-08-04T00:15:16.495Z"
+    },
+    "skill:modu-ai-moai-adk-moai-workflow-jit-docs": {
+      "hash": "a7196cdf4fc371c5",
+      "summary_zh": "一个按用户意图和项目上下文自动发现、加载并缓存相关文档的按需系统，适合快速获取特定资料。",
+      "translated_at": "2026-08-04T00:15:16.540Z"
+    },
+    "skill:modu-ai-moai-adk-moai-workflow-loop": {
+      "hash": "1008952c1a6a89eb",
+      "summary_zh": "一套结合 LSP 诊断与 AST-grep 的自动反馈循环工具，适合持续发现并修复代码问题、验证代码质量。",
+      "translated_at": "2026-08-04T00:15:18.767Z"
     }
   }
 }
