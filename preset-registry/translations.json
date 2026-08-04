@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-04T00:15:18.768Z",
+  "updated_at": "2026-08-04T04:03:56.568Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -2098,9 +2098,9 @@
       "translated_at": "2026-05-19T21:35:35.456Z"
     },
     "skill:mvanhorn-last30days-skill-last30days": {
-      "hash": "f3964610fb880dc9",
-      "summary_zh": "它能帮你快速摸清某个话题近30天在全网的真实讨论，聚合各大平台的帖子与互动数据。适合需要掌握近期大众反馈、做市场调研或热点追踪的场景。",
-      "translated_at": "2026-05-19T22:35:20.636Z"
+      "hash": "41bfc1e7283709d9",
+      "summary_zh": "一款聚合近30天多平台真实讨论与互动数据的调研工具，适合快速了解话题热度、观点和信息源状态。",
+      "translated_at": "2026-08-04T03:59:30.703Z"
     },
     "skill:wrsmith108-linear-claude-skill": {
       "hash": "cfc004d83739c910",
@@ -7593,9 +7593,9 @@
       "translated_at": "2026-06-05T21:16:31.596Z"
     },
     "skill:muratcankoylan-agent-skills-for-context-engineering-latent-briefing": {
-      "hash": "ff6b68ccf9019763",
-      "summary_zh": "这是一种多智能体上下文压缩方案，专治层级智能体协作时的token爆炸问题，让子智能体无需生成摘要即可共享记忆，大幅降低token消耗。",
-      "translated_at": "2026-05-19T22:34:33.180Z"
+      "hash": "b0802baaa79f54d7",
+      "summary_zh": "一种面向多智能体协作的上下文压缩工具，无需文本摘要即可共享记忆，减少层级代理的令牌消耗。",
+      "translated_at": "2026-08-04T03:59:24.126Z"
     },
     "skill:muratcankoylan-agent-skills-for-context-engineering-multi-agent-patterns": {
       "hash": "f5131a87086ba739",
@@ -7603,9 +7603,9 @@
       "translated_at": "2026-06-05T21:16:35.843Z"
     },
     "skill:muratcankoylan-agent-skills-for-context-engineering-memory-systems": {
-      "hash": "980646aa86f937ed",
-      "summary_zh": "为智能体打造可跨会话保留的语义记忆层，支持实体追踪、时效管理、图谱或向量检索以及记忆整合，适合需要长期记住用户和上下文的 Agent 应用。",
-      "translated_at": "2026-06-05T21:16:33.949Z"
+      "hash": "36190325d94c666a",
+      "summary_zh": "面向智能体的持久语义记忆方案，适合跨会话保留知识、追踪实体与时效，并支持记忆检索、整合和评测。",
+      "translated_at": "2026-08-04T03:59:26.067Z"
     },
     "skill:muratcankoylan-agent-skills-for-context-engineering-project-development": {
       "hash": "b7f89f59789b7b0e",
@@ -7748,14 +7748,14 @@
       "translated_at": "2026-05-19T22:38:27.705Z"
     },
     "skill:neolabhq-context-engineering-kit-do-in-steps": {
-      "hash": "8d3e5f76fc3d8be1",
-      "summary_zh": "它是一个AI任务编排工具，通过拆解复杂任务为多步子任务并依次执行，同时自动匹配模型与验证结果，专门解决单次难以搞定、需分步推进且要求高准确率的复杂工作流问题。",
-      "translated_at": "2026-05-19T22:38:35.244Z"
+      "hash": "d607b8a9c6729095",
+      "summary_zh": "将复杂任务拆成有依赖关系的步骤依次执行并传递上下文，适合需要逐步验证结果的工作流。",
+      "translated_at": "2026-08-04T03:59:49.373Z"
     },
     "skill:neolabhq-context-engineering-kit-do-in-parallel": {
-      "hash": "87fa5e04c0e89599",
-      "summary_zh": "这是一个并行调度多个AI智能体跨文件执行任务的工具，自带智能选模型与结果验证机制来保障产出质量，解决大批量并发任务容易粗制滥造的问题，适合高要求的批量处理场景。",
-      "translated_at": "2026-05-19T22:38:36.175Z"
+      "hash": "52b7545f33ce487c",
+      "summary_zh": "一个用多个子智能体并行处理独立文件或目标的工具，适合批量执行互不依赖的任务并自动验证结果。",
+      "translated_at": "2026-08-04T03:59:48.618Z"
     },
     "skill:neolabhq-context-engineering-kit-git-notes": {
       "hash": "db670cbd0c2939cd",
@@ -7763,9 +7763,9 @@
       "translated_at": "2026-05-19T22:38:49.477Z"
     },
     "skill:neolabhq-context-engineering-kit-implement-task": {
-      "hash": "cf5bcbd010980cab",
-      "summary_zh": "它能帮你执行任务，并在关键节点自动调用大模型当裁判做验证。解决复杂流程中缺乏自动把关的问题，适合需要大模型实时审查中间结果的工作流。",
-      "translated_at": "2026-05-19T22:38:53.831Z"
+      "hash": "e84fec9762d290ac",
+      "summary_zh": "一个用大模型逐步自动验证执行结果的任务实现工具，适合需要边做边检查质量的开发场景。",
+      "translated_at": "2026-08-04T03:59:53.855Z"
     },
     "skill:neolabhq-context-engineering-kit-git-worktrees": {
       "hash": "74cbc8a1245928c7",
@@ -7843,14 +7843,14 @@
       "translated_at": "2026-05-19T22:40:45.172Z"
     },
     "skill:neolabhq-context-engineering-kit-review-local-changes": {
-      "hash": "03dce97edf88e61c",
-      "summary_zh": "它用智能体全面审查本地未提交的代码修改，并给出改进建议，适合提交代码前做自查，帮你提前把关代码质量。",
-      "translated_at": "2026-05-19T22:40:55.112Z"
+      "hash": "e2d0e328a49161a3",
+      "summary_zh": "用于审查本地尚未提交的代码改动和未跟踪文件，在推送前给出可执行的改进建议。",
+      "translated_at": "2026-08-04T03:59:56.076Z"
     },
     "skill:neolabhq-context-engineering-kit-review-pr": {
-      "hash": "c981a8d1e991c8c7",
-      "summary_zh": "这是一款用专属智能体全面审查代码合并请求的工具，能帮你自动搞定繁琐的PR审查，适合想提升代码审查效率和质量的开发团队。",
-      "translated_at": "2026-05-19T22:40:58.145Z"
+      "hash": "15b3405cc3fdaf6e",
+      "summary_zh": "用于审查已打开的 GitHub PR，并直接在代码差异中添加行内评论，适合评审不在本地工作区的改动。",
+      "translated_at": "2026-08-04T03:59:55.992Z"
     },
     "skill:neolabhq-context-engineering-kit-setup-arxiv-mcp": {
       "hash": "acf4f33bfdc9f926",
@@ -7928,9 +7928,9 @@
       "translated_at": "2026-05-19T22:42:56.558Z"
     },
     "skill:neondatabase-mcp-server-neon-claimable-postgres": {
-      "hash": "1c47f65e2ce68165",
-      "summary_zh": "这是一款免注册免绑卡、秒开临时Postgres数据库的工具，适合写原型或做测试时急需用完即弃的数据库地址，让你立刻就能用上现成环境。",
-      "translated_at": "2026-05-19T22:43:03.088Z"
+      "hash": "6fc37e5b3ef76167",
+      "summary_zh": "无需注册或绑卡即可即时创建临时 PostgreSQL 数据库，适合快速原型、测试和临时获取数据库连接地址。",
+      "translated_at": "2026-08-04T03:59:58.473Z"
     },
     "skill:nextlevelbuilder-ui-ux-pro-max-skill-banner-design": {
       "hash": "5ac7f78e4c7ed333",
@@ -7973,9 +7973,9 @@
       "translated_at": "2026-05-19T22:45:11.468Z"
     },
     "skill:nextlevelbuilder-ui-ux-pro-max-skill-ui-ux-pro-max": {
-      "hash": "74a7057f87c10e23",
-      "summary_zh": "这是一个前端UI/UX设计智囊库，提供色彩、排版与交互规范，帮你从规划到落地搞定网站、App或SaaS的界面，解决开发时缺乏设计思路或审美不佳的问题。",
-      "translated_at": "2026-05-19T22:45:20.243Z"
+      "hash": "0de027eeee658c96",
+      "summary_zh": "面向 Web 和移动端的本地 UI/UX 设计知识库，适合在界面设计、开发和评审时快速查找风格、配色、字体与交互规范。",
+      "translated_at": "2026-08-04T03:59:59.583Z"
     },
     "skill:njbrake-agent-of-empires-openclaw-skill": {
       "hash": "3d89cbef11648902",
@@ -8158,9 +8158,9 @@
       "translated_at": "2026-05-19T22:50:19.239Z"
     },
     "skill:obra-superpowers-finishing-a-development-branch": {
-      "hash": "cdc31169559b5a91",
-      "summary_zh": "这是一个开发收尾指南，专门解决代码写完且测试通过后不知如何整合的问题，帮你理清直接合并、提PR还是清理分支的思路。",
-      "translated_at": "2026-05-19T22:50:28.714Z"
+      "hash": "26b15f107d80709d",
+      "summary_zh": "用于开发分支完成且测试通过后，帮助决定如何合并、提交评审或清理分支的工作流程。",
+      "translated_at": "2026-08-04T04:00:37.751Z"
     },
     "skill:obra-superpowers-receiving-code-review": {
       "hash": "2fc1917b7106ce52",
@@ -8193,9 +8193,9 @@
       "translated_at": "2026-05-19T22:51:05.766Z"
     },
     "skill:obra-superpowers-using-superpowers": {
-      "hash": "186005f06f2339d4",
-      "summary_zh": "这是一个对话初始化规则，强制AI在作答前必须先查找并调用可用技能。它能防止AI跳过工具直接回复，适合需要确保AI每次必先激活相关能力再回答的自动化场景。",
-      "translated_at": "2026-05-19T22:51:16.828Z"
+      "hash": "9c7048f53fec99b8",
+      "summary_zh": "一套对话启动规范，要求回复或追问前先查找并调用合适技能，适合确保智能助手按既定流程工作。",
+      "translated_at": "2026-08-04T04:00:36.662Z"
     },
     "skill:obra-superpowers-writing-plans": {
       "hash": "8d5ec776774aa6b0",
@@ -8298,14 +8298,14 @@
       "translated_at": "2026-05-19T22:53:58.850Z"
     },
     "skill:onmax-nuxt-skills-nuxt-content": {
-      "hash": "21cb3a46303a1a05",
-      "summary_zh": "这是 Nuxt 的专属内容管理模块，适合需要处理 Markdown 或搭建内容站的场景，能帮你轻松整合、查询和渲染本地与远程内容，让内容开发更简单。",
-      "translated_at": "2026-05-19T22:54:20.182Z"
+      "hash": "d106db1b5f684b36",
+      "summary_zh": "为 Nuxt 提供类型安全的内容管理能力，适合构建 Markdown 驱动的网站、内容检索及迁移旧版内容项目。",
+      "translated_at": "2026-08-04T04:01:26.892Z"
     },
     "skill:onmax-nuxt-skills-nuxt": {
-      "hash": "27c5765615b9ef3c",
-      "summary_zh": "专为 4+ 版本项目打造的开发参考，帮你搞定前后端与中间件的最新写法。适合编码时随时查阅最新配置和 API，避免用过时方案踩坑，轻松驾驭底层框架新特性。",
-      "translated_at": "2026-05-19T22:54:31.418Z"
+      "hash": "07c7a43b9fee456b",
+      "summary_zh": "用于开发和维护基于 Vue 的全栈应用，适合处理路由、数据获取、服务端渲染、接口、配置及测试等场景。",
+      "translated_at": "2026-08-04T04:01:25.559Z"
     },
     "skill:onmax-nuxt-skills-nuxt-better-auth": {
       "hash": "b221c02627861c88",
@@ -8323,9 +8323,9 @@
       "translated_at": "2026-05-19T22:54:56.662Z"
     },
     "skill:onmax-nuxt-skills-nuxt-studio": {
-      "hash": "855b68ce8dc9cf06",
-      "summary_zh": "专为Nuxt Content站点打造的自托管开源CMS，把代码编辑变成可视化操作与AI辅助写作，适合想自主掌控数据、轻松管理和发布内容的团队。",
-      "translated_at": "2026-05-19T22:55:06.896Z"
+      "hash": "10cb11be61cd4599",
+      "summary_zh": "一款面向 Nuxt Content 的自托管内容编辑器，适合搭建支持认证、媒体管理、草稿和 Git 发布的内容管理平台。",
+      "translated_at": "2026-08-04T04:01:33.066Z"
     },
     "skill:onmax-nuxt-skills-nuxt-ui": {
       "hash": "597ed197b1c30c8e",
@@ -8548,14 +8548,14 @@
       "translated_at": "2026-05-19T23:01:39.758Z"
     },
     "skill:openai-openai-agents-python-pr-draft-summary": {
-      "hash": "08be852b5cadc549",
-      "summary_zh": "这是一款在代码或文档发生实质性改动后，自动生成PR标题、摘要和草稿的工具，帮你省去手动编写的繁琐，轻松完成最终交接。",
-      "translated_at": "2026-05-19T23:01:41.383Z"
+      "hash": "41a182e3975a68f0",
+      "summary_zh": "一个自动生成 PR 摘要、分支建议、标题和草稿描述的工具，适合在代码或行为相关文档改动后快速整理提交信息。",
+      "translated_at": "2026-08-04T04:03:15.034Z"
     },
     "skill:openai-openai-agents-python-implementation-strategy": {
-      "hash": "03c422846c7e4398",
-      "summary_zh": "这是修改openai-agents-python时的变更策略指南。在改API或运行时前，帮你划定兼容边界，决定是加兼容层、做迁移还是直接改，防止盲目动代码破坏兼容性。",
-      "translated_at": "2026-05-19T23:01:47.729Z"
+      "hash": "c2b9b5f163aa4931",
+      "summary_zh": "一套运行时与 API 变更的兼容性决策方法，帮助开发者在实现和评审时判断该修补、重设计还是拒绝不支持的场景。",
+      "translated_at": "2026-08-04T04:03:11.143Z"
     },
     "skill:openai-openai-agents-python-prior-auth-packet-builder": {
       "hash": "232a0cb5caab0c5b",
@@ -8933,19 +8933,19 @@
       "translated_at": "2026-05-19T23:14:15.757Z"
     },
     "skill:peterkrueck-claude-code-development-kit-deploy": {
-      "hash": "288e8d9ffe482e9a",
-      "summary_zh": "这是一个可定制的流水线模板，能在部署前后自动测试把关，确保代码安全上线，适合需要搭建专属发布流程的场景。",
-      "translated_at": "2026-05-19T23:14:30.435Z"
+      "hash": "729380fbe1a6b8d0",
+      "summary_zh": "一个可定制的安全部署流程模板，支持上线前检查、影子部署与上线后验证，适合降低发布风险。",
+      "translated_at": "2026-08-04T04:03:19.225Z"
     },
     "skill:peterkrueck-claude-code-development-kit-second-opinion": {
-      "hash": "7517cfe7fcd9047e",
-      "summary_zh": "这是一个通过本地命令行调用 Gemini Pro 的工具。当你规划大型任务、陷入调试僵局、面临架构抉择或代码审查拿不准时，它能提供独立的 AI 视角帮你破局。",
-      "translated_at": "2026-05-19T23:14:55.653Z"
+      "hash": "0a3f9001e937a133",
+      "summary_zh": "一个调用本地 Codex CLI 获取独立意见的工具，适合重大任务规划、调试瓶颈、架构权衡和代码审查。",
+      "translated_at": "2026-08-04T04:03:22.240Z"
     },
     "skill:peterkrueck-claude-code-development-kit-review-work": {
-      "hash": "3675fd90fbaf7fb0",
-      "summary_zh": "它能调度多个分工明确的Claude子代理审查未提交代码，并按改动大小智能调整审查力度，适合在写完重要功能后，帮你快速揪出bug、安全漏洞、规范偏差和测试缺失。",
-      "translated_at": "2026-05-19T23:14:55.828Z"
+      "hash": "6782e89310214672",
+      "summary_zh": "一款用并行 Claude 子代理审查未提交代码的工具，适合在提交前发现缺陷、安全风险和规范偏差。",
+      "translated_at": "2026-08-04T04:03:22.199Z"
     },
     "skill:peterkrueck-claude-code-development-kit-update-docs": {
       "hash": "8049cbbdffb69b47",
@@ -8953,9 +8953,9 @@
       "translated_at": "2026-05-19T23:15:02.382Z"
     },
     "skill:product-on-purpose-pm-skills-define-hypothesis": {
-      "hash": "acfe3be8b1ec3de1",
-      "summary_zh": "帮你制定可测试的假设，并明确成功指标与验证方法。适合在提出待测假设、设计实验，或需要团队对齐成功标准时使用。",
-      "translated_at": "2026-05-19T23:15:14.782Z"
+      "hash": "9dee8a53eab2f8c8",
+      "summary_zh": "用于定义可验证的假设、成功指标和验证思路，适合实验前梳理待验证的假设并统一团队对成功标准的认知。",
+      "translated_at": "2026-08-04T04:03:32.919Z"
     },
     "skill:product-on-purpose-pm-skills-define-jtbd-canvas": {
       "hash": "c0df13d8a26cd748",
@@ -8963,9 +8963,9 @@
       "translated_at": "2026-05-19T23:15:32.913Z"
     },
     "skill:product-on-purpose-pm-skills-define-opportunity-tree": {
-      "hash": "5e3cfaa31c44593b",
-      "summary_zh": "它能将期望结果、潜在机会和解决方案串联成树状图，帮你理清思路。适合做结果导向的产品探索、需求优先级排序或对齐产品战略。",
-      "translated_at": "2026-05-19T23:15:39.592Z"
+      "hash": "f217ce9f637b3491",
+      "summary_zh": "用于构建“目标—客户机会—候选方案”机会树，避免过早锁定方案，适合梳理零散创意并说明路线图与业务目标的关联。",
+      "translated_at": "2026-08-04T04:03:34.265Z"
     },
     "skill:product-on-purpose-pm-skills-define-problem-statement": {
       "hash": "9f6b1ff5b57ec26e",
@@ -8973,19 +8973,19 @@
       "translated_at": "2026-05-19T23:15:42.438Z"
     },
     "skill:product-on-purpose-pm-skills-deliver-acceptance-criteria": {
-      "hash": "643d7d40e3129c5f",
-      "summary_zh": "帮你把产品需求自动转成结构化的Given/When/Then验收标准，覆盖主流程、边界和异常情况。适合开发与测试交接时，快速把需求拆解成清晰可测的场景。",
-      "translated_at": "2026-05-19T23:15:56.680Z"
+      "hash": "c8652c5b70d9aeeb",
+      "summary_zh": "将需求转成可测试的 Given/When/Then 验收标准，适合研发交接和 QA 验收。",
+      "translated_at": "2026-08-04T04:03:38.235Z"
     },
     "skill:product-on-purpose-pm-skills-deliver-edge-cases": {
-      "hash": "50496fe350bacfa2",
-      "summary_zh": "专门记录功能异常状态、边缘情况和恢复路径的文档工具。它能在写需求时帮你确保逻辑严密无遗漏，也能在测试规划时帮QA快速揪出潜在测试场景。",
-      "translated_at": "2026-05-19T23:15:59.433Z"
+      "hash": "aeab5d10d86c427d",
+      "summary_zh": "系统梳理功能边界、错误状态、竞态与恢复路径，适合需求设计和测试规划时排查遗漏与失败风险。",
+      "translated_at": "2026-08-04T04:03:38.302Z"
     },
     "skill:product-on-purpose-pm-skills-deliver-launch-checklist": {
-      "hash": "b080a6de8cc1ee87",
-      "summary_zh": "这是一个生成全面上线前检查清单的工具，帮你统筹各环节准备工作。在发布新功能、产品或大版本前用它查漏补缺，确保不遗漏任何细节。",
-      "translated_at": "2026-05-19T23:16:02.531Z"
+      "hash": "80009b47454e9ac0",
+      "summary_zh": "一款跨团队上线检查清单工具，帮助重大版本发布前明确各部门负责人、时间和放行标准，避免遗漏关键准备工作。",
+      "translated_at": "2026-08-04T04:03:41.664Z"
     },
     "skill:product-on-purpose-pm-skills-deliver-prd": {
       "hash": "e5f57de8f50922f5",
@@ -8993,9 +8993,9 @@
       "translated_at": "2026-05-19T23:16:18.823Z"
     },
     "skill:product-on-purpose-pm-skills-deliver-user-stories": {
-      "hash": "a458a3196f1af56e",
-      "summary_zh": "它能把产品需求或功能描述直接转化为带验收标准的用户故事，方便你在冲刺规划拆任务、写工单或给开发提需求时使用。",
-      "translated_at": "2026-05-19T23:16:23.296Z"
+      "hash": "1ecd99a529353433",
+      "summary_zh": "把产品需求或功能描述转成标准用户故事，适合拆分迭代任务、编写工单和向研发明确范围。",
+      "translated_at": "2026-08-04T04:03:44.614Z"
     },
     "skill:product-on-purpose-pm-skills-deliver-release-notes": {
       "hash": "d9bff62147491a3e",
@@ -9018,24 +9018,24 @@
       "translated_at": "2026-05-19T23:16:52.155Z"
     },
     "skill:product-on-purpose-pm-skills-develop-spike-summary": {
-      "hash": "3b7f72817904b8cd",
-      "summary_zh": "这是一个记录技术预研结果的文档模板。适合在限时技术或设计探索结束后使用，帮你沉淀团队的经验、发现和建议，解决预研成果难留存的问题。",
-      "translated_at": "2026-05-19T23:16:55.622Z"
+      "hash": "e207c18b687c8414",
+      "summary_zh": "用于记录限时技术或设计探索结论的文档模板，沉淀问题、证据和推进建议，避免团队反复讨论已验证事项。",
+      "translated_at": "2026-08-04T04:03:48.531Z"
     },
     "skill:product-on-purpose-pm-skills-discover-competitive-analysis": {
-      "hash": "491f7ebcc481b5b3",
-      "summary_zh": "这个工具能帮你生成结构化的竞品分析，全方位对比各家对手。适合在进入新市场、寻找差异化打法或摸清行业竞争格局时使用。",
-      "translated_at": "2026-05-19T23:17:06.443Z"
+      "hash": "da7e177114a762a8",
+      "summary_zh": "一款竞品分析工具，可对比3至5个对手的功能、定价和市场定位，适合入市评估、差异化规划或丢单复盘。",
+      "translated_at": "2026-08-04T04:03:48.877Z"
     },
     "skill:product-on-purpose-pm-skills-discover-interview-synthesis": {
-      "hash": "113b2219b40e52b4",
-      "summary_zh": "它能把用户访谈或客户沟通的记录，快速提炼成可落地的洞察与建议。适合在用研访谈、可用性测试或客户通话后使用，帮你省去繁琐的手动整理，轻松提取并传达核心发现。",
-      "translated_at": "2026-05-19T23:17:13.524Z"
+      "hash": "75560c5a2d697f23",
+      "summary_zh": "将多场用户访谈、客户沟通或可用性测试整合为有证据支撑的洞察、规律和行动建议。",
+      "translated_at": "2026-08-04T04:03:48.530Z"
     },
     "skill:product-on-purpose-pm-skills-discover-stakeholder-summary": {
-      "hash": "89df2c297d6599d6",
-      "summary_zh": "帮你梳理并记录项目利益相关者的需求、顾虑与影响力。适合在项目启动、处理复杂干系人关系，或需要跨团队拉齐认知时使用。",
-      "translated_at": "2026-05-19T23:17:24.001Z"
+      "hash": "77f6bd3ba1d168b4",
+      "summary_zh": "用于梳理项目利益相关方及其诉求、影响力和沟通策略，适合项目启动、交接或遇到阻力时使用。",
+      "translated_at": "2026-08-04T04:03:51.124Z"
     },
     "skill:product-on-purpose-pm-skills-foundation-lean-canvas": {
       "hash": "2896cafc9a875fa8",
@@ -9058,9 +9058,9 @@
       "translated_at": "2026-05-19T23:18:01.266Z"
     },
     "skill:product-on-purpose-pm-skills-foundation-meeting-recap": {
-      "hash": "6e0487cff0baa085",
-      "summary_zh": "这是一个会后纪要生成工具，能把杂乱录音或笔记按主题分段，提炼决策和待办，并与原定议程对比。适合需要从长会中快速抓取结论、跟进后续行动的职场人，告别低效整理。",
-      "translated_at": "2026-05-19T23:18:16.195Z"
+      "hash": "2f50749a178a68a7",
+      "summary_zh": "一款按议题整理会后纪要的工具，可从多种会议转录或手写笔记中提炼决策与行动项，并对照议程还原实际讨论。",
+      "translated_at": "2026-08-04T04:03:55.579Z"
     },
     "skill:product-on-purpose-pm-skills-foundation-persona": {
       "hash": "bae458f1254f7e44",
@@ -9078,9 +9078,9 @@
       "translated_at": "2026-05-19T23:18:41.399Z"
     },
     "skill:product-on-purpose-pm-skills-iterate-lessons-log": {
-      "hash": "71f5967e76e3868c",
-      "summary_zh": "帮团队生成结构化经验记录的工具。适合在项目结束、事故复盘或有重要收获时，把经验沉淀下来留给未来的团队，帮大家少走弯路。",
-      "translated_at": "2026-05-19T23:18:42.883Z"
+      "hash": "73abcc9c39d8eda8",
+      "summary_zh": "用于沉淀组织经验的结构化记录工具，适合在事故、项目结束或重大复盘后留存教训，供未来团队和项目参考。",
+      "translated_at": "2026-08-04T04:03:55.795Z"
     },
     "skill:product-on-purpose-pm-skills-foundation-stakeholder-update": {
       "hash": "34883db2494bd9f1",
@@ -16203,9 +16203,9 @@
       "translated_at": "2026-06-05T21:17:29.048Z"
     },
     "skill:obra-dotfiles-roborev-fix": {
-      "hash": "3d5765eac194e8a0",
-      "summary_zh": "一个自动修复代码评审意见的助手，适合在收到任务 ID 或被要求处理未关闭评审时使用，帮你批量定位并解决遗留问题。",
-      "translated_at": "2026-06-07T22:27:44.664Z"
+      "hash": "1cff1f695f33b586",
+      "summary_zh": "用于定位并修复未通过的代码审查任务，适合按指令或任务 ID 处理并关闭问题。",
+      "translated_at": "2026-08-04T04:00:32.905Z"
     },
     "skill:obra-dotfiles-roborev-refine": {
       "hash": "0e9b72b0137ff519",
@@ -16583,19 +16583,19 @@
       "translated_at": "2026-06-05T22:52:29.885Z"
     },
     "skill:product-on-purpose-pm-skills-define-x": {
-      "hash": "d03be3ee9d874e4b",
-      "summary_zh": "一套面向 AI 智能体的产品管理技能包，内置 65 个开箱即用的最佳实践模块，覆盖三钻流程、基础冲刺和设计冲刺等环节，并配套子代理、模板和工作流，适合想让 AI 协助打通产品全流程的团队。",
-      "translated_at": "2026-06-05T22:52:33.912Z"
+      "hash": "2df1e775db7e931c",
+      "summary_zh": "一套面向 AI 智能体的即插即用产品管理技能库，帮助团队用成熟方法完成产品探索、设计与交付。",
+      "translated_at": "2026-08-04T04:03:38.317Z"
     },
     "skill:product-on-purpose-pm-skills-deliver-y": {
-      "hash": "d03be3ee9d874e4b",
-      "summary_zh": "一套开箱即用的 AI 智能体产品管理技能包，涵盖三钻设计流程、基础冲刺等 65 项最佳实践，外加子智能体、模板和工作流，适合想让 AI 协助做产品规划与设计的团队。",
-      "translated_at": "2026-06-05T22:52:33.937Z"
+      "hash": "2df1e775db7e931c",
+      "summary_zh": "面向 AI 智能体的产品管理技能库，提供标准化方法、工作流与范例，适合快速搭建产品规划和设计冲刺能力。",
+      "translated_at": "2026-08-04T04:03:41.824Z"
     },
     "skill:product-on-purpose-pm-skills-discover-journey-map": {
-      "hash": "ebb0196eebba2199",
-      "summary_zh": "帮你梳理客户旅程图，覆盖各阶段触点、情绪曲线、痛点和关键时刻，输出带 mermaid 可视化的 markdown 文档，支持线性流程或循环互动场景，缺少调研数据时不会瞎编。",
-      "translated_at": "2026-06-05T22:52:34.551Z"
+      "hash": "e12e9851da952a9a",
+      "summary_zh": "将已有调研整理成可视化的客户旅程文档，适合分析全流程或单一阶段的体验与关键问题。",
+      "translated_at": "2026-08-04T04:03:52.688Z"
     },
     "skill:product-on-purpose-pm-skills-discover-market-sizing": {
       "hash": "797a37dac5a996d5",
@@ -17523,9 +17523,9 @@
       "translated_at": "2026-08-03T05:00:36.289Z"
     },
     "preset:23blocks-os-ai-maestro": {
-      "hash": "2697732e86071ce2",
-      "summary_zh": "一个统一编排多台电脑上各类 AI 智能体的平台，适合集中管理协作、共享记忆并减少人工传递上下文。",
-      "translated_at": "2026-08-04T00:10:42.413Z"
+      "hash": "cc9ac34eb9a7ead4",
+      "summary_zh": "一款多智能体编排平台，可统一管理跨电脑运行的 AI 智能体，并解决记忆共享、协作通信和任务调度问题。",
+      "translated_at": "2026-08-04T03:59:15.098Z"
     },
     "preset:milisp-codexia": {
       "hash": "5bd22ad69c6f54f0",
@@ -24751,6 +24751,821 @@
       "hash": "1008952c1a6a89eb",
       "summary_zh": "一套结合 LSP 诊断与 AST-grep 的自动反馈循环工具，适合持续发现并修复代码问题、验证代码质量。",
       "translated_at": "2026-08-04T00:15:18.767Z"
+    },
+    "skill:modu-ai-moai-adk-moai-workflow-project": {
+      "hash": "39784e6d15da4490",
+      "summary_zh": "一套集成式项目管理系统，统一处理文档生成、语言初始化、模板优化和按需加载，适合规范化项目工作流。",
+      "translated_at": "2026-08-04T03:59:12.430Z"
+    },
+    "skill:modu-ai-moai-adk-moai-workflow-spec": {
+      "hash": "f022b78ec8723b62",
+      "summary_zh": "一套面向 MoAI-ADK 的规范工作流，用于编写需求文档、定义验收标准并协调规划、执行与同步流程。",
+      "translated_at": "2026-08-04T03:59:13.791Z"
+    },
+    "skill:modu-ai-moai-adk-moai-workflow-tdd": {
+      "hash": "8ae4eedc664205e4",
+      "summary_zh": "一个基于“红灯—绿灯—重构”循环的测试驱动开发助手，适合从零开发新功能或按行为规范推进实现。",
+      "translated_at": "2026-08-04T03:59:15.552Z"
+    },
+    "skill:modu-ai-moai-adk-moai-workflow-templates": {
+      "hash": "0ff2ba39224c79c1",
+      "summary_zh": "用于统一管理代码样板、反馈模板和项目脚手架，适合快速生成基础文件并规范项目初始化与优化流程。",
+      "translated_at": "2026-08-04T03:59:16.903Z"
+    },
+    "skill:modu-ai-moai-adk-moai-workflow-thinking": {
+      "hash": "a120e58678f4c085",
+      "summary_zh": "一款支持深度思考标记的顺序推理工具，适合多步骤问题分析和架构决策。",
+      "translated_at": "2026-08-04T03:59:19.679Z"
+    },
+    "skill:modu-ai-moai-adk-moai-workflow-testing": {
+      "hash": "f44be70814214da5",
+      "summary_zh": "一套软件测试与质量保障工作流，适合编写测试、评估覆盖率、分析性能及开展代码审查验证。",
+      "translated_at": "2026-08-04T03:59:20.184Z"
+    },
+    "skill:modu-ai-moai-adk-moai-workflow-worktree": {
+      "hash": "bdea8afc60b9a9d7",
+      "summary_zh": "用于管理 Git worktree 的并行开发工具，可创建隔离工作区并自动登记分支，适合搭建多任务并行开发环境。",
+      "translated_at": "2026-08-04T03:59:21.114Z"
+    },
+    "skill:muratcankoylan-agent-skills-for-context-engineering-long-horizon-prompting": {
+      "hash": "4ae2ba3b449cfb9a",
+      "summary_zh": "用于设计和评估长期自主智能体启动提示词，明确成功与停止条件，并协调多智能体并行攻克复杂问题。",
+      "translated_at": "2026-08-04T03:59:26.353Z"
+    },
+    "skill:muthuishere-hand-drawn-diagrams": {
+      "hash": "b24b6023dd6169bf",
+      "summary_zh": "用于快速生成手绘风流程图、讲解图、线框图和页面原型，适合方案梳理、产品设计与直观演示。",
+      "translated_at": "2026-08-04T03:59:29.294Z"
+    },
+    "skill:muratcankoylan-agent-skills-for-context-engineering-self-improvement-loops": {
+      "hash": "81df0f8f0061e8f8",
+      "summary_zh": "用于构建能从失败中持续改进自身的智能体工作流，适合受控的递归优化、自动演化和自修改系统治理。",
+      "translated_at": "2026-08-04T03:59:30.738Z"
+    },
+    "skill:necmttn-ax-ax-add-ingest-stage": {
+      "hash": "2b2279c985970caf",
+      "summary_zh": "用于扩展 ax 数据摄取流程的开发指南，适合新增处理阶段或 SurrealDB 表时避免遗漏注册配置导致 CI 失败。",
+      "translated_at": "2026-08-04T03:59:33.785Z"
+    },
+    "skill:necmttn-ax-ax-repo": {
+      "hash": "5d92fdf0a5731d0e",
+      "summary_zh": "一个通过 gh CLI 代用户操作 GitHub 仓库的助手，适合一键收藏、提交问题或创建修复分支与 PR。",
+      "translated_at": "2026-08-04T03:59:35.284Z"
+    },
+    "skill:necmttn-ax-ax-extract-workflow": {
+      "hash": "eb34d2225c6c8331",
+      "summary_zh": "从历史会话中还原某个成果的完整产出流程，适合复盘功能上线、提炼成功经验或追溯特定版本的实现路径。",
+      "translated_at": "2026-08-04T03:59:35.440Z"
+    },
+    "skill:necmttn-ax-narrate": {
+      "hash": "9633f6331ae9fc34",
+      "summary_zh": "将开发会话整理成可审阅的变更故事，记录用户纠正、放弃尝试和工具失败，适合复盘未进入 PR 的过程。",
+      "translated_at": "2026-08-04T03:59:38.887Z"
+    },
+    "skill:necmttn-ax-dojo": {
+      "hash": "2557ca6f090f3a77",
+      "summary_zh": "利用剩余套餐额度让智能体持续自我训练的自动循环，适合夜间批量补全任务、回测路由并验证改进方案。",
+      "translated_at": "2026-08-04T03:59:40.609Z"
+    },
+    "skill:necmttn-ax-efficient-dispatch": {
+      "hash": "1441a137373b8a01",
+      "summary_zh": "一套大模型任务路由编排工具，让高端模型负责判断复核、低价模型执行机械任务，适合代码库等高令牌消耗场景优化成本。",
+      "translated_at": "2026-08-04T03:59:42.147Z"
+    },
+    "skill:necmttn-ax-release-announcement": {
+      "hash": "7099b1775b531837",
+      "summary_zh": "用于起草和润色版本发布公告及更新日志，结合 Git 变更与历史记录梳理版本演进和重要变化。",
+      "translated_at": "2026-08-04T03:59:42.698Z"
+    },
+    "skill:necmttn-ax-retro": {
+      "hash": "0b07f34584557f34",
+      "summary_zh": "用于复盘智能体实验闭环，引导处理待审提案与结论，并评估干预效果，适合持续改进智能体行为。",
+      "translated_at": "2026-08-04T03:59:44.258Z"
+    },
+    "skill:necmttn-ax-retro-meta": {
+      "hash": "34ab9b88c72d7db7",
+      "summary_zh": "由外部 AI 深度复盘历史记录和当前配置，挖掘遗漏的改进点，适合常规复盘建议不足或需要全面排查时使用。",
+      "translated_at": "2026-08-04T03:59:45.982Z"
+    },
+    "skill:necmttn-ax-setup": {
+      "hash": "73e36060c2abe506",
+      "summary_zh": "用于安装、配置并诊断 ax 命令行工具，适合首次部署、修复安装或检查服务运行状态。",
+      "translated_at": "2026-08-04T03:59:46.631Z"
+    },
+    "skill:necmttn-ax-ship-checklist": {
+      "hash": "69bd5226183a4ffa",
+      "summary_zh": "用于 ax 图谱功能上线前的完成度检查，确保新增写入能力配套查询、智能体读取及文档分发，避免功能只写不读。",
+      "translated_at": "2026-08-04T03:59:47.794Z"
+    },
+    "skill:neolabhq-context-engineering-kit-load-pr-comments": {
+      "hash": "bc70a453ba93d580",
+      "summary_zh": "将 PR 中未解决的审查意见汇总为任务文件，方便多个智能体并行修复代码问题。",
+      "translated_at": "2026-08-04T03:59:51.195Z"
+    },
+    "skill:neolabhq-context-engineering-kit-resolve-fixed-pr-comments": {
+      "hash": "0725b509c064d21a",
+      "summary_zh": "用于核查 PR 审查意见是否已在提交或本地改动中落实，并关闭已修复或不再相关的讨论线程。",
+      "translated_at": "2026-08-04T03:59:53.153Z"
+    },
+    "skill:neolabhq-context-engineering-kit-traiage-review": {
+      "hash": "44018192a33b6bdd",
+      "summary_zh": "用于筛选并优先标记代码库中必须由人工审查的变更，适合提升代码评审效率。",
+      "translated_at": "2026-08-04T03:59:58.610Z"
+    },
+    "skill:nowork-studio-notfair-backlink-audit": {
+      "hash": "431d1ea19cc2548e",
+      "summary_zh": "一款无需付费数据源的站外 SEO 审计工具，适合识别垃圾外链、锚文本风险并优化内链与外链建设。",
+      "translated_at": "2026-08-04T04:00:02.516Z"
+    },
+    "skill:nowork-studio-notfair-competitor-pages": {
+      "hash": "09d90441a7b4d22b",
+      "summary_zh": "一款竞品页面差距分析工具，可对比自家与高排名页面，找出内容、结构和SEO缺口，生成可执行的改进方案。",
+      "translated_at": "2026-08-04T04:00:03.797Z"
+    },
+    "skill:nowork-studio-notfair-ecommerce-seo": {
+      "hash": "c06ec326c70d3e5f",
+      "summary_zh": "面向各类网店的 SEO 审计工具，帮助排查商品与分类页、筛选分页、重复内容、收录及结构化数据等问题。",
+      "translated_at": "2026-08-04T04:00:04.584Z"
+    },
+    "skill:nowork-studio-notfair-hreflang-international": {
+      "hash": "8f51bdcd782a7105",
+      "summary_zh": "一款面向国际化网站的多语言 SEO 审计工具，用于排查 hreflang、canonical 及语言地区配置错误，避免影响搜索排名。",
+      "translated_at": "2026-08-04T04:00:07.606Z"
+    },
+    "skill:nowork-studio-notfair-image-seo": {
+      "hash": "f5b085ad6a34e815",
+      "summary_zh": "一款网站图片 SEO 审计工具，帮助提升 Google 图片收录与排名，并减少图片对页面性能的拖累。",
+      "translated_at": "2026-08-04T04:00:07.750Z"
+    },
+    "skill:nowork-studio-notfair-seo-drift": {
+      "hash": "2417144566286f88",
+      "summary_zh": "用于持续监控网站 SEO 状态并对比历史变化，及时发现排名下滑、页面掉索引及配置误改等回归问题。",
+      "translated_at": "2026-08-04T04:00:11.379Z"
+    },
+    "skill:nowork-studio-notfair-local-seo": {
+      "hash": "5d970f7a6cc0da3c",
+      "summary_zh": "一款本地搜索排名审计工具，可诊断商家为何进不了谷歌地图结果，并给出资料、口碑和页面优化方案。",
+      "translated_at": "2026-08-04T04:00:11.418Z"
+    },
+    "skill:nowork-studio-notfair-programmatic-seo": {
+      "hash": "d63f166bdc6d0ecd",
+      "summary_zh": "一套批量模板化SEO页面的规划与审计方法，适合规避重复、低质内容导致的降权和收录问题。",
+      "translated_at": "2026-08-04T04:00:11.670Z"
+    },
+    "skill:nowork-studio-notfair-sitemap-audit": {
+      "hash": "7b3af45cc3dcde3a",
+      "summary_zh": "一款 XML 站点地图审计工具，可发现结构、链接状态和页面遗漏等问题，减少抓取浪费并加快收录。",
+      "translated_at": "2026-08-04T04:00:15.996Z"
+    },
+    "skill:nowork-studio-notfair-sxo": {
+      "hash": "e2c6ddb5b3ab7ab1",
+      "summary_zh": "一款连接搜索优化与用户体验的全链路审计工具，帮助发现从搜索点击到页面转化过程中的用户流失问题。",
+      "translated_at": "2026-08-04T04:00:16.013Z"
+    },
+    "skill:nowork-studio-toprank-backlink-audit": {
+      "hash": "431d1ea19cc2548e",
+      "summary_zh": "一款站外 SEO 外链审计工具，可结合 Search Console 和第三方数据发现垃圾链接、锚文本风险及内链优化机会。",
+      "translated_at": "2026-08-04T04:00:16.092Z"
+    },
+    "skill:nowork-studio-toprank-competitor-pages": {
+      "hash": "09d90441a7b4d22b",
+      "summary_zh": "一款竞品页面差距分析工具，对比高排名页面与自身内容，生成具体优化建议，适合提升搜索排名和内容竞争力。",
+      "translated_at": "2026-08-04T04:00:19.995Z"
+    },
+    "skill:nowork-studio-toprank-ecommerce-seo": {
+      "hash": "c06ec326c70d3e5f",
+      "summary_zh": "面向各类网店的SEO审计工具，用于发现商品页、筛选导航、分页和结构化数据中的抓取、重复内容及收录问题。",
+      "translated_at": "2026-08-04T04:00:20.165Z"
+    },
+    "skill:nowork-studio-toprank-hreflang-international": {
+      "hash": "8f51bdcd782a7105",
+      "summary_zh": "一款面向多语言网站的国际SEO审计工具，可排查语言标签、规范链接及站点地图配置错误，适合诊断跨地区搜索排名问题。",
+      "translated_at": "2026-08-04T04:00:21.099Z"
+    },
+    "skill:nowork-studio-toprank-local-seo": {
+      "hash": "5d970f7a6cc0da3c",
+      "summary_zh": "一款本地搜索优化审计工具，可诊断商家在地图和附近搜索中排名不佳的原因，并给出改进方案。",
+      "translated_at": "2026-08-04T04:00:23.473Z"
+    },
+    "skill:nowork-studio-toprank-image-seo": {
+      "hash": "f5b085ad6a34e815",
+      "summary_zh": "一款网站图片 SEO 审计工具，帮助提升 Google 图片收录与排名，并优化加载性能和核心网页指标。",
+      "translated_at": "2026-08-04T04:00:24.405Z"
+    },
+    "skill:nowork-studio-toprank-programmatic-seo": {
+      "hash": "d63f166bdc6d0ecd",
+      "summary_zh": "面向批量模板页面的SEO规划与审计工具，适合拓展长尾流量并规避重复内容、门页和收录风险。",
+      "translated_at": "2026-08-04T04:00:25.409Z"
+    },
+    "skill:nowork-studio-toprank-seo-drift": {
+      "hash": "2417144566286f88",
+      "summary_zh": "一个网站 SEO 状态快照与回归监控工具，适合及时发现排名下滑、页面掉索引及元数据被误改等问题。",
+      "translated_at": "2026-08-04T04:00:27.630Z"
+    },
+    "skill:nowork-studio-toprank-sitemap-audit": {
+      "hash": "7b3af45cc3dcde3a",
+      "summary_zh": "一款 XML 站点地图审计工具，可发现无效、遗漏或配置不当的网址，减少抓取浪费并加快页面收录。",
+      "translated_at": "2026-08-04T04:00:28.101Z"
+    },
+    "skill:nowork-studio-toprank-sxo": {
+      "hash": "e2c6ddb5b3ab7ab1",
+      "summary_zh": "一款连接搜索优化与用户体验、转化优化的全链路审计工具，适合发现从搜索点击到页面转化中的问题。",
+      "translated_at": "2026-08-04T04:00:31.310Z"
+    },
+    "skill:obra-dotfiles-maintaining-documentation": {
+      "hash": "de106b9c296f59fd",
+      "summary_zh": "用于创建、检查和维护项目文档，确保内容与代码同步，适合发布前核验、术语规范及定期复查。",
+      "translated_at": "2026-08-04T04:00:33.279Z"
+    },
+    "skill:ogulcancelik-herdr": {
+      "hash": "88ccd6ec0a6d44c5",
+      "summary_zh": "一款面向编程智能体的终端复用控制工具，适合统一查看和管理窗格、标签页、工作区、命令及其他智能体。",
+      "translated_at": "2026-08-04T04:00:37.803Z"
+    },
+    "skill:ogulcancelik-herdr-herdr": {
+      "hash": "88ccd6ec0a6d44c5",
+      "summary_zh": "一个面向编程智能体的终端多路复用控制工具，适合管理和检查窗格、标签页、工作区、命令及其他智能体。",
+      "translated_at": "2026-08-04T04:00:39.629Z"
+    },
+    "skill:ogulcancelik-herdr-herdr-pre-release-audit": {
+      "hash": "d473d12207a3f33b",
+      "summary_zh": "用于发布前审查，对比基准版本后的提交与新版变更日志和文档，排查遗漏的议题引用并确认发布就绪。",
+      "translated_at": "2026-08-04T04:00:40.169Z"
+    },
+    "skill:ogulcancelik-herdr-writing-commit-messages": {
+      "hash": "5b96ce816b7cba3a",
+      "summary_zh": "用于自动撰写 Git 提交信息，适合需要快速生成清晰、规范提交说明的开发场景。",
+      "translated_at": "2026-08-04T04:00:42.843Z"
+    },
+    "skill:ogulcancelik-herdr-triage": {
+      "hash": "2dddaef556ac2c5f",
+      "summary_zh": "将 herdr 的未解决 GitHub Issue 整理成决策优先的表格，帮助快速判断关注重点和处理优先级。",
+      "translated_at": "2026-08-04T04:00:43.234Z"
+    },
+    "skill:ogulcancelik-herdr-herdr-throwaway-repro": {
+      "hash": "cfd4dc89ee9871a0",
+      "summary_zh": "可在现有会话中创建并控制一次性隔离会话，适合通过 CLI 或 API 复现运行时、终端、进程和代理问题，避免影响默认会话。",
+      "translated_at": "2026-08-04T04:00:43.950Z"
+    },
+    "skill:omnigent-ai-omnigent-antigravity-sdk-e2e-dev": {
+      "hash": "ec3bba585dff9fb2",
+      "summary_zh": "用于本地启动 Omnigent 服务并端到端测试 Gemini SDK，可调试智能体运行、认证、模型及工具桥接问题。",
+      "translated_at": "2026-08-04T04:00:45.741Z"
+    },
+    "skill:omnigent-ai-omnigent-antigravity-native-e2e-dev": {
+      "hash": "92970bfd7ef6b669",
+      "summary_zh": "用于在本地启动 Omnigent 服务并端到端测试、调试原生 Antigravity 终端交互工具的开发环境。",
+      "translated_at": "2026-08-04T04:00:45.875Z"
+    },
+    "skill:omnigent-ai-omnigent-api-docs": {
+      "hash": "576de94979a19a86",
+      "summary_zh": "从代码自动生成模块或公共接口文档，适合编写函数、类、命令行及接口的参考和使用说明。",
+      "translated_at": "2026-08-04T04:00:46.464Z"
+    },
+    "skill:omnigent-ai-omnigent-changelog": {
+      "hash": "f9a9677c8e20a1c4",
+      "summary_zh": "将一段提交记录或已合并的 PR 按变更类型整理成更新日志，适合生成发布说明或对比版本差异。",
+      "translated_at": "2026-08-04T04:00:48.947Z"
+    },
+    "skill:omnigent-ai-omnigent-build-omnigent": {
+      "hash": "b7922e4992f1867b",
+      "summary_zh": "一套生成规范化 Omnigent 智能体目录的模板与范式，适合创建项目文件时快速搭好合规结构。",
+      "translated_at": "2026-08-04T04:00:49.695Z"
+    },
+    "skill:omnigent-ai-omnigent-codex-e2e-xyz-count-b8d4e7": {
+      "hash": "3cc7f0c772908ad1",
+      "summary_zh": "用于端到端测试技能加载状态，通过检测输出中的唯一标识确认 Codex 是否成功加载指定技能。",
+      "translated_at": "2026-08-04T04:00:51.760Z"
+    },
+    "skill:omnigent-ai-omnigent-copilot-sdk-e2e-dev": {
+      "hash": "1286fa564768d063",
+      "summary_zh": "用于在本地启动服务并端到端验证 GitHub Copilot SDK，适合开发、测试和排查智能体执行、认证、模型及工具桥接问题。",
+      "translated_at": "2026-08-04T04:00:54.777Z"
+    },
+    "skill:omnigent-ai-omnigent-codex-e2e-xyz-greet-a3f9c2": {
+      "hash": "3a8526aabd4e27e1",
+      "summary_zh": "用于 Codex 技能端到端测试的问候工具，通过匹配唯一后缀验证代理是否成功加载指定技能。",
+      "translated_at": "2026-08-04T04:00:54.819Z"
+    },
+    "skill:omnigent-ai-omnigent-cli-setup-verify": {
+      "hash": "4b5cb67b32ab960d",
+      "summary_zh": "在隔离沙箱中验证命令行工具的安装引导、终端交互和关键流程，适合开发或评审 CLI 体验时做可复现的前后对比。",
+      "translated_at": "2026-08-04T04:00:56.095Z"
+    },
+    "skill:omnigent-ai-omnigent-debate": {
+      "hash": "00ab919fb59c19db",
+      "summary_zh": "让 Claude 和 GPT 多轮互评并综合结论，适合交叉检验不同观点、减少单一模型回答的偏差。",
+      "translated_at": "2026-08-04T04:01:01.236Z"
+    },
+    "skill:omnigent-ai-omnigent-cross-review": {
+      "hash": "30f8d0bf85789b9f",
+      "summary_zh": "用不同厂商的独立子代理审查代码变更，将阻塞问题转为修复任务并循环验证，直到代码通过。",
+      "translated_at": "2026-08-04T04:01:05.459Z"
+    },
+    "skill:omnigent-ai-omnigent-deep-research": {
+      "hash": "1cba9b5976523f0f",
+      "summary_zh": "一份面向 Archer 端到端测试夹具的研究清单与信源质量指南，适合规范调研流程并筛选可靠资料。",
+      "translated_at": "2026-08-04T04:01:05.881Z"
+    },
+    "skill:omnigent-ai-omnigent-cursor-sdk-e2e-dev": {
+      "hash": "faa87cbf627fa355",
+      "summary_zh": "一套在本地真实环境中端到端验证 Cursor SDK 的开发测试工具，适合构建智能体并排查执行链路和集成问题。",
+      "translated_at": "2026-08-04T04:01:06.049Z"
+    },
+    "skill:omnigent-ai-omnigent-detect-framework": {
+      "hash": "d8a94c6bbacea613",
+      "summary_zh": "用于识别现有 Python 代码中的智能体框架，并映射到对应执行器，适合快速接入已有智能体项目。",
+      "translated_at": "2026-08-04T04:01:08.286Z"
+    },
+    "skill:omnigent-ai-omnigent-docker": {
+      "hash": "582ff3fd64bc552f",
+      "summary_zh": "用于通过 Docker Compose 部署 Omnigent 服务与 Postgres，适合本地、VPS、EC2 等环境的搭建、调试和扩展。",
+      "translated_at": "2026-08-04T04:01:08.575Z"
+    },
+    "skill:omnigent-ai-omnigent-fanout": {
+      "hash": "3f6cf6f724fd5b7c",
+      "summary_zh": "并行处理独立开发任务，为每项任务创建隔离工作区和独立 PR，并自动交叉审查，适合多人协作式开发且由人工最终合并。",
+      "translated_at": "2026-08-04T04:01:10.750Z"
+    },
+    "skill:omnigent-ai-omnigent-harness-integration-guide": {
+      "hash": "58833ac34406f998",
+      "summary_zh": "一份用于开发 Omnigent 新工具链集成的参考指南，适合按不同接入方式快速选型并规范实现流程。",
+      "translated_at": "2026-08-04T04:01:12.222Z"
+    },
+    "skill:omnigent-ai-omnigent-migration-guide": {
+      "hash": "e80d1427e2911254",
+      "summary_zh": "将 API 改名、参数移除、默认值变更等破坏性改动转成含前后示例的升级步骤，适合迁移或适配新版本。",
+      "translated_at": "2026-08-04T04:01:13.321Z"
+    },
+    "skill:omnigent-ai-omnigent-investigate": {
+      "hash": "1029e59c73f3724c",
+      "summary_zh": "一个将只读调查、调试、审计和代码检索交给子代理，并基于结构化报告汇总结论的开发辅助工具。",
+      "translated_at": "2026-08-04T04:01:13.394Z"
+    },
+    "skill:omnigent-ai-omnigent-omnigent-knowledge": {
+      "hash": "d2129575df9f519a",
+      "summary_zh": "一份平台开发参考手册，详解配置格式、执行器及技能工具规范，适合查阅运行机制和开发约定。",
+      "translated_at": "2026-08-04T04:01:14.694Z"
+    },
+    "skill:omnigent-ai-omnigent-pi-e2e-xyz-greet-c4a8d5": {
+      "hash": "0c0e96c9d3fd9986",
+      "summary_zh": "用于端到端测试 Pi 技能加载，通过检测代理输出中的唯一后缀确认技能是否成功生效。",
+      "translated_at": "2026-08-04T04:01:17.349Z"
+    },
+    "skill:omnigent-ai-omnigent-pi-e2e-xyz-count-d2f6e1": {
+      "hash": "97c8b81edcfeaeba",
+      "summary_zh": "用于验证 Pi 技能端到端加载是否成功，通过检测唯一后缀确认代理已正确加载指定技能。",
+      "translated_at": "2026-08-04T04:01:20.151Z"
+    },
+    "skill:omnigent-ai-omnigent-pi-native-e2e-dev": {
+      "hash": "79e88e5b98958ae0",
+      "summary_zh": "用于在本地启动真实服务和命令行，端到端测试并调试原生 Pi 终端界面及其桥接、认证和模型交互。",
+      "translated_at": "2026-08-04T04:01:20.594Z"
+    },
+    "skill:omnigent-ai-omnigent-security-audit": {
+      "hash": "90f3cbf56bb32bd2",
+      "summary_zh": "用于审计代码库或目录中的安全漏洞，并生成结构化报告，适合代码安全评审与上线前风险排查。",
+      "translated_at": "2026-08-04T04:01:22.966Z"
+    },
+    "skill:omnigent-ai-omnigent-polly-e2e-dev": {
+      "hash": "90637008caa50341",
+      "summary_zh": "一套多智能体编程编排器的端到端测试工具，适合验证关键流程、工具调用、安全护栏及真实代理协作。",
+      "translated_at": "2026-08-04T04:01:23.625Z"
+    },
+    "skill:omnigent-ai-omnigent-run-load-test": {
+      "hash": "8896c7a1fd7643da",
+      "summary_zh": "用于对 Omnigent 进行并发压测和性能基准测试，模拟真实多轮会话并生成延迟分析报告。",
+      "translated_at": "2026-08-04T04:01:25.749Z"
+    },
+    "skill:onmax-nuxt-skills-nuxt-i18n": {
+      "hash": "63d428c3ade50364",
+      "summary_zh": "用于为 Nuxt 应用快速接入多语言，适合处理语言检测、文案与路由翻译、语言切换、按需加载及多语言 SEO。",
+      "translated_at": "2026-08-04T04:01:28.935Z"
+    },
+    "skill:openaccountants-openaccountants-ab-individual-return": {
+      "hash": "1bfeb112880fd1ce",
+      "summary_zh": "用于处理加拿大阿尔伯塔省个人所得税申报，适合计算省税、抵免及与联邦T1申报的衔接。",
+      "translated_at": "2026-08-04T04:01:31.866Z"
+    },
+    "skill:openaccountants-openaccountants-ae-corporate-tax": {
+      "hash": "76fdd573ad08bfe4",
+      "summary_zh": "面向阿联酋自由职业者和小企业的企业税助手，可用于估算税额、判断减免资格并指导申报注册。",
+      "translated_at": "2026-08-04T04:01:32.728Z"
+    },
+    "skill:openaccountants-openaccountants-ak-sales-tax": {
+      "hash": "82a289d1920ca0d1",
+      "summary_zh": "用于解答阿拉斯加州销售税与使用税问题，适合查询地方税、经济关联及远程卖家征税义务。",
+      "translated_at": "2026-08-04T04:01:35.166Z"
+    },
+    "skill:openaccountants-openaccountants-al-income-tax": {
+      "hash": "b988f11a2e466584",
+      "summary_zh": "面向阿拉巴马州个体经营者的所得税助手，适合查询报税、预缴税、税率、扣除及州税合规问题。",
+      "translated_at": "2026-08-04T04:01:35.456Z"
+    },
+    "skill:openaccountants-openaccountants-al-sales-tax": {
+      "hash": "be251cc3109c073a",
+      "summary_zh": "用于解答阿拉巴马州销售税与使用税问题，适合处理税务关联、申报、地方税及食品税合规。",
+      "translated_at": "2026-08-04T04:01:37.937Z"
+    },
+    "skill:openaccountants-openaccountants-albania-vat": {
+      "hash": "24b0a0861d5ff03e",
+      "summary_zh": "用于阿尔巴尼亚标准增值税纳税人整理、审核并分类发票和银行流水，辅助完成月度TVSH申报。",
+      "translated_at": "2026-08-04T04:01:38.905Z"
+    },
+    "skill:openaccountants-openaccountants-algeria-vat": {
+      "hash": "f0ade5ed239e60c4",
+      "summary_zh": "用于处理阿尔及利亚增值税申报，可从发票、银行流水等资料分类交易，并协助编制和复核G50申报表。",
+      "translated_at": "2026-08-04T04:01:39.851Z"
+    },
+    "skill:openaccountants-openaccountants-amazon-seller-integration": {
+      "hash": "91225bf8d4092052",
+      "summary_zh": "用于解析亚马逊卖家中心结算与日期范围报表，适合核对 FBA 回款、分析销售数据和处理卖家 CSV。",
+      "translated_at": "2026-08-04T04:01:41.282Z"
+    },
+    "skill:openaccountants-openaccountants-andorra-igi": {
+      "hash": "4d5bdd58940b2c9b",
+      "summary_zh": "用于准备、审核和分类安道尔IGI申报交易，适合处理当地间接税申报及合规工作。",
+      "translated_at": "2026-08-04T04:01:42.381Z"
+    },
+    "skill:openaccountants-openaccountants-americas-corridors": {
+      "hash": "a66215dfc6bfe4e3",
+      "summary_zh": "面向美洲跨境业务的国际税务与会计参考资料，适合查询跨国交易、申报及合规问题。",
+      "translated_at": "2026-08-04T04:01:42.483Z"
+    },
+    "skill:openaccountants-openaccountants-ar-income-tax": {
+      "hash": "75ca9dd593f0f8c3",
+      "summary_zh": "面向阿根廷自由职业者的所得税咨询工具，适合查询申报、个人扣除、预缴及税务身份选择等问题。",
+      "translated_at": "2026-08-04T04:01:44.729Z"
+    },
+    "skill:openaccountants-openaccountants-ar-sales-tax": {
+      "hash": "e3a0df89b0652307",
+      "summary_zh": "用于解答阿肯色州销售与使用税问题的知识技能，适合查询税率、食品税、法规及税务部门政策。",
+      "translated_at": "2026-08-04T04:01:47.387Z"
+    },
+    "skill:openaccountants-openaccountants-ar-monotributo": {
+      "hash": "59a0bb7cf16751b8",
+      "summary_zh": "用于查询阿根廷个体经营者简化税制，帮助理解月度统一缴费、税务分类门槛及申报义务。",
+      "translated_at": "2026-08-04T04:01:47.594Z"
+    },
+    "skill:openaccountants-openaccountants-ar-social-contributions": {
+      "hash": "ecb8de424e0238d7",
+      "summary_zh": "用于解答阿根廷个体经营者社保缴费问题，涵盖类别、养老医保费用计算及VEP缴纳指引。",
+      "translated_at": "2026-08-04T04:01:47.702Z"
+    },
+    "skill:openaccountants-openaccountants-argentina-references": {
+      "hash": "39b05ee262913bc6",
+      "summary_zh": "汇集阿根廷司法辖区的一手资料及相关开源项目，适合法律研究、政策查证和本地化开发参考。",
+      "translated_at": "2026-08-04T04:01:51.478Z"
+    },
+    "skill:openaccountants-openaccountants-argentina-iva": {
+      "hash": "c3773fa01afe9764",
+      "summary_zh": "用于处理阿根廷增值税申报、交易审核与分类，并协助解决税务登记、报税及AFIP合规问题。",
+      "translated_at": "2026-08-04T04:01:51.757Z"
+    },
+    "skill:openaccountants-openaccountants-ar-vat-return": {
+      "hash": "e7a49e7b93ef7217",
+      "summary_zh": "帮助阿根廷一般税制下的个体经营者计算增值税借贷税额，并按月完成申报，适合处理多档税率及代扣代征场景。",
+      "translated_at": "2026-08-04T04:01:51.793Z"
+    },
+    "skill:openaccountants-openaccountants-asia-pacific-corridors": {
+      "hash": "b1e0842d764a221f",
+      "summary_zh": "面向亚太地区跨境业务的税务与会计参考资料，适合查询国际交易中的税务和财会问题。",
+      "translated_at": "2026-08-04T04:01:54.024Z"
+    },
+    "skill:openaccountants-openaccountants-at-income-tax": {
+      "hash": "07bcc9b89c8e7204",
+      "summary_zh": "面向奥地利个体经营者的所得税助手，适合计算税款、判断可抵扣项目并完成E1申报。",
+      "translated_at": "2026-08-04T04:01:54.647Z"
+    },
+    "skill:openaccountants-openaccountants-armenia-vat": {
+      "hash": "092a5340967db8ad",
+      "summary_zh": "面向亚美尼亚标准增值税纳税人的月度申报工具，可整理、审核并分类交易，适合SRC申报场景。",
+      "translated_at": "2026-08-04T04:01:55.647Z"
+    },
+    "skill:openaccountants-openaccountants-at-svs-contributions": {
+      "hash": "8747d1ee3415b0c0",
+      "summary_zh": "用于解答奥地利个体经营者的SVS社保缴费、账单及养老、医疗和工伤保险义务问题。",
+      "translated_at": "2026-08-04T04:01:57.549Z"
+    },
+    "skill:openaccountants-openaccountants-au-crypto-tax": {
+      "hash": "77058f329b633473",
+      "summary_zh": "面向澳大利亚加密货币税务咨询的知识工具，适合解答资本利得、质押、空投、DeFi、NFT及成本基数等ATO税务问题。",
+      "translated_at": "2026-08-04T04:01:57.833Z"
+    },
+    "skill:openaccountants-openaccountants-au-freelance-intake": {
+      "hash": "d79db69c29d5849a",
+      "summary_zh": "用于受理澳大利亚自由职业者、个体经营者或合同工的报税需求，协助准备个人所得税申报及BAS。",
+      "translated_at": "2026-08-04T04:01:59.562Z"
+    },
+    "skill:openaccountants-openaccountants-au-individual-return": {
+      "hash": "97fa4942161d9149",
+      "summary_zh": "面向澳大利亚个体经营者的个人所得税助手，适合计算税款、申报退税及处理抵扣、医保税和助学贷款还款等问题。",
+      "translated_at": "2026-08-04T04:02:00.265Z"
+    },
+    "skill:openaccountants-openaccountants-au-medicare-levy": {
+      "hash": "d60405ddad253352",
+      "summary_zh": "用于解答澳大利亚医疗保险税及附加税问题，适合查询收入门槛、家庭减免、豁免和私人医保退税影响。",
+      "translated_at": "2026-08-04T04:02:01.378Z"
+    },
+    "skill:openaccountants-openaccountants-au-payg-instalments": {
+      "hash": "dc852b44b82a533b",
+      "summary_zh": "面向澳大利亚个体经营者的税务指南，用于处理BAS中的所得税预缴、分期计算、调整及逾期利息风险。",
+      "translated_at": "2026-08-04T04:02:02.116Z"
+    },
+    "skill:openaccountants-openaccountants-au-rental-property": {
+      "hash": "8d84b27dc844251d",
+      "summary_zh": "面向澳大利亚出租房税务咨询的助手，可解答租金收入、抵扣、折旧、负扣税及资本利得税等申报问题。",
+      "translated_at": "2026-08-04T04:02:04.324Z"
+    },
+    "skill:openaccountants-openaccountants-au-sole-trader-schedule": {
+      "hash": "9489752ae579517b",
+      "summary_zh": "面向澳大利亚个体经营者的报税日程工具，用于整理营业收入、可扣除费用、折旧及车辆和居家办公支出。",
+      "translated_at": "2026-08-04T04:02:05.770Z"
+    },
+    "skill:openaccountants-openaccountants-au-return-assembly": {
+      "hash": "067e5c94aa340a99",
+      "summary_zh": "用于整合澳大利亚居民个体经营者的报税资料，统一生成含申报表、工作表和核对结果的完整审核包。",
+      "translated_at": "2026-08-04T04:02:05.872Z"
+    },
+    "skill:openaccountants-openaccountants-au-super-guarantee": {
+      "hash": "4ddce4d2329a8726",
+      "summary_zh": "一款澳大利亚养老金缴费咨询工具，帮助雇主和个体经营者快速弄清缴费义务、额度上限、税费及优惠规则。",
+      "translated_at": "2026-08-04T04:02:08.891Z"
+    },
+    "skill:openaccountants-openaccountants-australia-bookkeeping": {
+      "hash": "d66c22645f20c7ae",
+      "summary_zh": "面向澳大利亚个体户、合伙企业和小公司的记账助手，适合处理GST、BAS申报、银行对账及财务报表等事务。",
+      "translated_at": "2026-08-04T04:02:09.729Z"
+    },
+    "skill:openaccountants-openaccountants-australia-financial-statements": {
+      "hash": "a1793fd9ffb6d94c",
+      "summary_zh": "用于编制、审核或咨询澳大利亚公司年度财务报表，帮助处理会计准则、ASIC申报及公司法合规问题。",
+      "translated_at": "2026-08-04T04:02:09.846Z"
+    },
+    "skill:openaccountants-openaccountants-australia-formation": {
+      "hash": "bb97b1c8fe1e82d8",
+      "summary_zh": "用于指导在澳大利亚注册公司或设立经营实体，适合查询实体类型、ASIC 注册及 ABN、ACN 等流程。",
+      "translated_at": "2026-08-04T04:02:13.360Z"
+    },
+    "skill:openaccountants-openaccountants-australia-gst": {
+      "hash": "f359fa27946cc2e9",
+      "summary_zh": "用于准备、审核澳大利亚GST申报及BAS，并从银行流水、发票等资料中分类涉税交易。",
+      "translated_at": "2026-08-04T04:02:13.946Z"
+    },
+    "skill:openaccountants-openaccountants-australia-payroll": {
+      "hash": "8c284692ecdbb559",
+      "summary_zh": "面向澳大利亚雇主的薪资合规助手，适合处理工资代扣、养老金、税务申报及雇佣义务问题。",
+      "translated_at": "2026-08-04T04:02:14.121Z"
+    },
+    "skill:openaccountants-openaccountants-australia-tax-optimization": {
+      "hash": "b01a59140908a748",
+      "summary_zh": "面向澳大利亚个人、个体户和小企业主的合法税务筹划助手，适合优化收入、资产与企业结构以降低税负。",
+      "translated_at": "2026-08-04T04:02:17.727Z"
+    },
+    "skill:openaccountants-openaccountants-australia-references": {
+      "hash": "39b05ee262913bc6",
+      "summary_zh": "汇集澳大利亚司法辖区的一手资料与相关开源项目，适合法律研究、政策查证和本地化开发参考。",
+      "translated_at": "2026-08-04T04:02:18.040Z"
+    },
+    "skill:openaccountants-openaccountants-australia-transfer-pricing": {
+      "hash": "3443fb9e7fd64d88",
+      "summary_zh": "用于解答澳大利亚转让定价规则、文档要求及税务局合规申报问题，适合处理关联交易定价场景。",
+      "translated_at": "2026-08-04T04:02:18.261Z"
+    },
+    "skill:openaccountants-openaccountants-az-sales-tax": {
+      "hash": "68ed79694a05ae9b",
+      "summary_zh": "用于处理亚利桑那州交易特权税、使用税及税务关联问题，适合查询和办理州级消费税合规。",
+      "translated_at": "2026-08-04T04:02:22.662Z"
+    },
+    "skill:openaccountants-openaccountants-austria-vat-return": {
+      "hash": "45603cc56bf5416b",
+      "summary_zh": "面向奥地利一般征税制度下个体户和小企业的增值税申报助手，可分类交易并准备或审核UVA及年度U1申报。",
+      "translated_at": "2026-08-04T04:02:25.292Z"
+    },
+    "skill:openaccountants-openaccountants-az-income-tax": {
+      "hash": "c8fead15885b51ab",
+      "summary_zh": "面向亚利桑那州个体经营者的所得税咨询工具，可解答报税、预缴、税率、扣除及合规问题。",
+      "translated_at": "2026-08-04T04:02:25.674Z"
+    },
+    "skill:openaccountants-openaccountants-azerbaijan-vat": {
+      "hash": "ac4dab7c231d83dc",
+      "summary_zh": "面向阿塞拜疆标准增值税纳税人的申报辅助工具，适合处理月度交易分类、复核与申报准备。",
+      "translated_at": "2026-08-04T04:02:27.019Z"
+    },
+    "skill:openaccountants-openaccountants-bahamas-vat": {
+      "hash": "15e8dbef08a270e4",
+      "summary_zh": "用于处理巴哈马增值税申报，可辅助整理、审核并分类交易，适合当地税务合规场景。",
+      "translated_at": "2026-08-04T04:02:28.447Z"
+    },
+    "skill:openaccountants-openaccountants-bahrain-vat": {
+      "hash": "5dd0b61b0bc1d545",
+      "summary_zh": "用于准备和审核巴林增值税申报，能从银行流水、发票等资料中分类交易并判断抵扣与反向征税。",
+      "translated_at": "2026-08-04T04:02:28.987Z"
+    },
+    "skill:openaccountants-openaccountants-bangladesh-pit": {
+      "hash": "0eec670a704aebfa",
+      "summary_zh": "面向孟加拉国个人所得税业务的辅助工具，适合交易分类、年度申报审核及税率、免税和投资退税咨询。",
+      "translated_at": "2026-08-04T04:02:29.441Z"
+    },
+    "skill:openaccountants-openaccountants-bangladesh-vat": {
+      "hash": "f7322a8260479c5a",
+      "summary_zh": "用于准备、审核孟加拉国增值税及营业税申报，并从银行流水、发票等资料中分类涉税交易。",
+      "translated_at": "2026-08-04T04:02:31.788Z"
+    },
+    "skill:openaccountants-openaccountants-bangladesh-references": {
+      "hash": "39b05ee262913bc6",
+      "summary_zh": "汇集孟加拉国相关的一手资料与开源项目，适合法律、政策及地区研究时快速查找可靠参考。",
+      "translated_at": "2026-08-04T04:02:32.067Z"
+    },
+    "skill:openaccountants-openaccountants-banking-sector": {
+      "hash": "6a30df57647dffba",
+      "summary_zh": "面向银行及持牌金融机构的专业知识工具，用于处理会计、税务、监管资本及巴塞尔协议合规问题。",
+      "translated_at": "2026-08-04T04:02:32.551Z"
+    },
+    "skill:openaccountants-openaccountants-barbados-vat": {
+      "hash": "3ce6c3de768910f6",
+      "summary_zh": "用于处理巴巴多斯增值税申报，可协助准备、审核和分类客户交易，适合向当地税务局报税的场景。",
+      "translated_at": "2026-08-04T04:02:34.396Z"
+    },
+    "skill:openaccountants-openaccountants-bd-crypto-tax": {
+      "hash": "fc38a6fe9b3348cb",
+      "summary_zh": "用于查询孟加拉国加密货币的合法性与税务政策，适合评估交易合规性和法律风险。",
+      "translated_at": "2026-08-04T04:02:37.055Z"
+    },
+    "skill:openaccountants-openaccountants-bd-bookkeeping": {
+      "hash": "dd7c6c45efba18a6",
+      "summary_zh": "面向孟加拉国个体户和小企业的记账指南，帮助规范发票、税务留档及IT出口外汇凭证管理。",
+      "translated_at": "2026-08-04T04:02:37.152Z"
+    },
+    "skill:openaccountants-openaccountants-bc-individual-return": {
+      "hash": "4e448f5cf16b5f62",
+      "summary_zh": "面向加拿大卑诗省个体经营者的报税助手，可查询省税税率、抵免与减免规则并估算个人所得税。",
+      "translated_at": "2026-08-04T04:02:37.594Z"
+    },
+    "skill:openaccountants-openaccountants-bd-einvoice": {
+      "hash": "2e20dcdfaf610c65",
+      "summary_zh": "一份孟加拉国电子发票与增值税合规指南，适合查询财税设备、Mushak表单及各类商家的开票要求。",
+      "translated_at": "2026-08-04T04:02:41.080Z"
+    },
+    "skill:openaccountants-openaccountants-bd-formation": {
+      "hash": "e65147ebb6471328",
+      "summary_zh": "一份孟加拉国创业合规指南，帮助自由职业者和小企业办理税号、营业执照、增值税登记并选择经营主体。",
+      "translated_at": "2026-08-04T04:02:42.300Z"
+    },
+    "skill:openaccountants-openaccountants-bd-financial-statements": {
+      "hash": "6193e3422bfc318c",
+      "summary_zh": "面向孟加拉国财务报表与会计申报的指南，适合查询个体户、公司报表、审计及RJSC申报要求。",
+      "translated_at": "2026-08-04T04:02:43.699Z"
+    },
+    "skill:openaccountants-openaccountants-bd-freelance-intake": {
+      "hash": "aad49716c48d77d5",
+      "summary_zh": "面向孟加拉自由职业者和个体经营者的税务咨询入口，用于识别报税需求并引导后续流程。",
+      "translated_at": "2026-08-04T04:02:45.110Z"
+    },
+    "skill:openaccountants-openaccountants-bd-it-freelancer-tax": {
+      "hash": "1fd1ba9644eee240",
+      "summary_zh": "帮助孟加拉自由职业者和IT出口商了解税收优惠到期后的境外收入纳税及汇款申报规则。",
+      "translated_at": "2026-08-04T04:02:46.626Z"
+    },
+    "skill:openaccountants-openaccountants-bd-payroll": {
+      "hash": "0c4c53b1cde0e34a",
+      "summary_zh": "面向雇主的孟加拉国薪酬合规指南，适合处理工资代扣税、公积金、离职金及月度申报。",
+      "translated_at": "2026-08-04T04:02:47.859Z"
+    },
+    "skill:openaccountants-openaccountants-bd-return-assembly": {
+      "hash": "fbd631c800d7f289",
+      "summary_zh": "为孟加拉国自由职业者整合所得税、增值税等结果，生成向税务局申报所需的表格、清单和截止日期。",
+      "translated_at": "2026-08-04T04:02:48.194Z"
+    },
+    "skill:openaccountants-openaccountants-bd-social-contributions": {
+      "hash": "af41bc7ae26dbb21",
+      "summary_zh": "面向孟加拉国社保与养老缴费咨询，适合查询雇员、自雇者和自由职业者的养老金、公积金及退休保障政策。",
+      "translated_at": "2026-08-04T04:02:50.019Z"
+    },
+    "skill:openagentsinc-openagents-effect": {
+      "hash": "0fe5ba42dcd20737",
+      "summary_zh": "一份面向生产级 TypeScript 应用的实践指南，适合用 Effect v4 构建工作流、服务、缓存、网络请求及测试。",
+      "translated_at": "2026-08-04T04:02:54.398Z"
+    },
+    "skill:openagentsinc-openagents-assurancespec-work": {
+      "hash": "b4449e88b59b520b",
+      "summary_zh": "一套依照已批准保障规范开展验证的工具，适合准确匹配验证对象、检查时效并规范提交证据的场景。",
+      "translated_at": "2026-08-04T04:02:54.666Z"
+    },
+    "skill:openagentsinc-openagents-assurancespec-authoring": {
+      "hash": "76b15cc03be7b485",
+      "summary_zh": "一套用于编写和完善确定性保障规范的工具，帮助团队明确验证责任、判定方式、失败条件和设计缺口。",
+      "translated_at": "2026-08-04T04:02:55.159Z"
+    },
+    "skill:openagentsinc-openagents-khala-fleet": {
+      "hash": "1f6b1aec03c4bd81",
+      "summary_zh": "用于安全管理 OpenAgents 编程智能体集群，适合并行分派任务、持续监控进度、验收结果及排查调度故障。",
+      "translated_at": "2026-08-04T04:02:57.222Z"
+    },
+    "skill:openagentsinc-openagents-promissory": {
+      "hash": "dbab17665fa7a56a",
+      "summary_zh": "用于推进未达标的产品承诺，可自动筛选优先目标并处理，或批量调度执行者清理积压任务。",
+      "translated_at": "2026-08-04T04:03:03.287Z"
+    },
+    "skill:openagentsinc-openagents-fast-follow": {
+      "hash": "5850b2124cfe1235",
+      "summary_zh": "一款项目研究与决策工具，帮助团队基于规范和一手资料评估差距、形成改进方案，避免盲从上游项目。",
+      "translated_at": "2026-08-04T04:03:03.300Z"
+    },
+    "skill:openagentsinc-openagents-productspec-work": {
+      "hash": "f255691cf1c32a19",
+      "summary_zh": "一款产品规格落地工具，可按依赖拆分验收任务、分派获授权工作并汇报证据，适合受控协作流程。",
+      "translated_at": "2026-08-04T04:03:05.403Z"
+    },
+    "skill:openagentsinc-openagents-public-nostr-chat": {
+      "hash": "aea68375ddbc3de3",
+      "summary_zh": "一个基于 NIP-29 的公开 Nostr 聊天工具，可用自己的密钥和 nak 命令行通过标准中继加入群聊。",
+      "translated_at": "2026-08-04T04:03:06.979Z"
+    },
+    "skill:openagentsinc-openagents-trace-ingest": {
+      "hash": "3918a50647fa789e",
+      "summary_zh": "将本地 Claude、Codex 或 OpenAgents 会话脱敏后发布为公开链接，适合批量分享对话记录。",
+      "translated_at": "2026-08-04T04:03:08.262Z"
+    },
+    "skill:openai-openai-agents-python-implementation-final-review": {
+      "hash": "8e3973a1521cb39a",
+      "summary_zh": "一套按风险分级的代码终审流程，用于交付前全面检查变更，发现需求偏差、兼容性、安全性和生命周期等遗漏。",
+      "translated_at": "2026-08-04T04:03:11.327Z"
+    },
+    "skill:openai-openai-agents-python-integration-tests": {
+      "hash": "75bcba0d8b2dc35c",
+      "summary_zh": "用于在干净的安装包和源码环境中运行 OpenAI Agents Python SDK 集成测试，适合发布验收、回归检查和兼容性验证。",
+      "translated_at": "2026-08-04T04:03:11.888Z"
+    },
+    "skill:openai-openai-agents-python-maintainer-review": {
+      "hash": "e3686f9f57a73d23",
+      "summary_zh": "以维护者视角分阶段评审 GitHub Issue 或 PR，判断问题真实性、优先级、现有方案及投入价值，辅助关闭或推进决策。",
+      "translated_at": "2026-08-04T04:03:14.593Z"
+    },
+    "skill:openai-openai-agents-python-sensitive-logging-audit": {
+      "hash": "6b4d9cdd401013b8",
+      "summary_zh": "用于审计并修复 Python 运行日志中的敏感数据泄露，适合排查异常、警告、调用链等诊断信息是否残留用户数据。",
+      "translated_at": "2026-08-04T04:03:16.224Z"
+    },
+    "skill:peterkrueck-claude-code-development-kit-context7-guidance": {
+      "hash": "e218f257c1c9d259",
+      "summary_zh": "通过 Context7 获取最新的库、框架、API 和 CLI 文档，适合配置、版本迁移及排查特定工具问题，避免依赖过时知识。",
+      "translated_at": "2026-08-04T04:03:17.881Z"
+    },
+    "skill:panniantong-agent-reach-skill": {
+      "hash": "c46552f00af6e9f7",
+      "summary_zh": "一款面向 AI 助手的联网调研工具，适合全网搜索资料、查找讨论并汇总评价。",
+      "translated_at": "2026-08-04T04:03:17.985Z"
+    },
+    "skill:peterkrueck-claude-code-development-kit-second-opinion-gemini": {
+      "hash": "a6dc3ec40be9e286",
+      "summary_zh": "通过本地 Gemini CLI 获取 Gemini Pro 的补充意见，适合明确要求询问 Gemini 或与默认引擎综合分析的场景。",
+      "translated_at": "2026-08-04T04:03:25.674Z"
+    },
+    "skill:pingdotgg-t3code-ios-simulator-browser": {
+      "hash": "eab09a7d03ebd12f",
+      "summary_zh": "把指定的 iOS 模拟器实时串流到应用内或代理浏览器，适合在 Apple 芯片 Mac 上观看验证过程或提供可见证据。",
+      "translated_at": "2026-08-04T04:03:26.629Z"
+    },
+    "skill:pingdotgg-t3code-ios-debugger-agent": {
+      "hash": "6609ff30ce2f889e",
+      "summary_zh": "一款基于 XcodeBuildMCP 的 iOS 调试工具，适合在 macOS 上构建应用、运行测试、自动操作界面并排查问题。",
+      "translated_at": "2026-08-04T04:03:27.054Z"
+    },
+    "skill:pingdotgg-t3code-test-t3-app": {
+      "hash": "9e1343363156c6e2",
+      "summary_zh": "用于在隔离环境中运行和测试 T3 Code 网页应用，适合界面联调、恢复登录配对及准备 SQLite 测试数据。",
+      "translated_at": "2026-08-04T04:03:30.265Z"
+    },
+    "skill:plasma-ai-wiki-wiki": {
+      "hash": "da859a02e4c9cec3",
+      "summary_zh": "一个面向智能体的知识库索引工具，可通过命令行快速检索和调用资料，适合构建本地知识与问答工作流。",
+      "translated_at": "2026-08-04T04:03:30.407Z"
+    },
+    "skill:pingdotgg-t3code-test-t3-mobile": {
+      "hash": "fd2661f3650a9b75",
+      "summary_zh": "用于在 iOS 或 Android 模拟器中连接隔离的本地环境，快速复现并验证移动端 UI、原生改动及设备行为。",
+      "translated_at": "2026-08-04T04:03:33.194Z"
+    },
+    "skill:product-on-purpose-pm-skills-demo-present": {
+      "hash": "2df1e775db7e931c",
+      "summary_zh": "一套面向 AI 智能体的即插即用产品管理技能库，适合快速搭建规范化的产品探索、设计与交付流程。",
+      "translated_at": "2026-08-04T04:03:45.595Z"
+    },
+    "skill:product-on-purpose-pm-skills-demo-noref": {
+      "hash": "2df1e775db7e931c",
+      "summary_zh": "一套可即插即用的 AI 智能体产品管理技能库，适合快速搭建覆盖调研、设计到交付的标准化工作流。",
+      "translated_at": "2026-08-04T04:03:45.878Z"
+    },
+    "skill:product-on-purpose-pm-skills-foundation-build-risk-review": {
+      "hash": "6d7f3af5b303ffc0",
+      "summary_zh": "一款开发前风险评审工具，能找出最可能导致失败的假设并给出决策建议，适合写PRD或投入研发前使用。",
+      "translated_at": "2026-08-04T04:03:52.755Z"
+    },
+    "skill:product-on-purpose-pm-skills-foundation-stakeholder-briefings": {
+      "hash": "2facc65ba739738f",
+      "summary_zh": "将规格、研究或笔记整理成统一主文档，并生成面向不同角色、内容一致且可追溯的简报，适合多方同步同一事项。",
+      "translated_at": "2026-08-04T04:03:56.568Z"
     }
   }
 }
