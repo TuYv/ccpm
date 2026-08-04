@@ -1,7 +1,7 @@
 {
   "id": "expo-skills-expo-skill-feedback",
   "name": "expo-skill-feedback",
-  "description": "Submit feedback on an Expo skill—or Expo itself—and control bundled anonymous usage telemetry (off by default / opt-in). Submit feedback with: npx --yes submit-expo-feedback@latest \"ACTIONABLE_FEEDBACK\". Optionally add either or both: --category \"CATEGORY\" and --subject \"SUBJECT\". Replace the uppercase placeholders before running. Use when a skill was useful, confusing, broken, missing context, or worth improving; when Expo, Expo CLI, EAS CLI, docs, or MCP worked well or fell short; or when the ",
+  "description": "Submit feedback on an Expo skill—or Expo itself—and control bundled anonymous usage telemetry (off by default / opt-in). Submit feedback with: npx --yes submit-expo-feedback@latest \"ACTIONABLE_FEEDBACK\". Optionally add either or both: --category \"CATEGORY\" and --subject \"SUBJECT\". Replace the uppercase placeholders before running. Use when a skill was useful, confusing, broken, missing context, or worth improving; when Expo, Expo CLI, EAS CLI, docs, or MCP worked well or fell short; when an AI a",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/expo/skills/blob/main/plugins/expo/skills/expo-skill-feedback/SKILL.md",
     "path": "plugins/expo/skills/expo-skill-feedback/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-04T12:29:30.991Z",
-    "stars": 2357,
+    "discovered_at": "2026-08-04T14:53:34.763Z",
+    "stars": 2358,
     "language": "Shell",
-    "pushed_at": "2026-08-04T08:07:35Z",
+    "pushed_at": "2026-08-04T12:32:25Z",
     "license": "MIT"
   },
-  "summary_zh": "一个向 Expo 生态提交使用反馈的命令行工具，适合报告体验问题、改进建议，并自主选择是否启用匿名遥测。"
+  "summary_zh": "一个用于向 Expo 生态提交可执行反馈并管理匿名使用遥测的命令行工具，适合反馈功能、文档或 AI 使用体验。"
 }

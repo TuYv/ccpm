@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-04T13:34:53.553Z",
+  "updated_at": "2026-08-04T15:48:37.742Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -9923,9 +9923,9 @@
       "translated_at": "2026-05-20T01:05:27.964Z"
     },
     "bundle:expo-skills": {
-      "hash": "ba3b79f887aa5f69",
-      "summary_zh": "一套面向 Expo 应用全生命周期的技能合集，打通原生开发、云端构建、发布托管、自动化与监控，让跨平台项目更快上线并稳定迭代。",
-      "translated_at": "2026-08-03T04:58:44.163Z"
+      "hash": "424d7ea3b6290c54",
+      "summary_zh": "面向 Expo 应用全生命周期的一站式技能合集，覆盖原生体验开发、云端构建、测试、发布、托管与线上质量监控。",
+      "translated_at": "2026-08-04T15:47:53.519Z"
     },
     "bundle:softaworks-agent-toolkit": {
       "hash": "d6cc12c1edf650d1",
@@ -20843,9 +20843,9 @@
       "translated_at": "2026-08-03T16:27:55.009Z"
     },
     "skill:expo-skills-expo-skill-feedback": {
-      "hash": "fe3615707f8f665b",
-      "summary_zh": "一个向 Expo 生态提交使用反馈的命令行工具，适合报告体验问题、改进建议，并自主选择是否启用匿名遥测。",
-      "translated_at": "2026-08-03T16:27:58.950Z"
+      "hash": "3e48dfabd2b4b38d",
+      "summary_zh": "一个用于向 Expo 生态提交可执行反馈并管理匿名使用遥测的命令行工具，适合反馈功能、文档或 AI 使用体验。",
+      "translated_at": "2026-08-04T15:47:57.471Z"
     },
     "skill:expo-skills-expo-ui": {
       "hash": "0d039d2b03f6b908",
@@ -28086,6 +28086,131 @@
       "hash": "d24beb1145d811ef",
       "summary_zh": "这是面向CTF沙箱的供应链排查工具，适合追踪依赖漂移、恶意包、构建发布篡改及运行时制品来源。",
       "translated_at": "2026-08-04T13:34:53.553Z"
+    },
+    "skill:zhaoxuya520-reverse-skill-competition-websocket-runtime": {
+      "hash": "17e6a2120c5a5935",
+      "summary_zh": "用于排查 CTF 沙箱中的 WebSocket/SSE 实时通信，分析握手、鉴权、订阅、消息帧、重连及状态变化。",
+      "translated_at": "2026-08-04T15:47:59.959Z"
+    },
+    "skill:zhaoxuya520-reverse-skill-competition-web-runtime": {
+      "hash": "f5a35248e8aa7b9e",
+      "summary_zh": "面向已建立沙箱环境的 CTF Web 调试工具，用于追踪请求、认证会话、上传任务和内部路由异常。",
+      "translated_at": "2026-08-04T15:48:02.064Z"
+    },
+    "skill:zhaoxuya520-reverse-skill-competition-windows-pivot": {
+      "hash": "b5f9a5e1008bf88d",
+      "summary_zh": "用于 CTF 沙箱中追踪 Windows 主机间横向移动，复现票据与凭据利用，并验证具体服务的接受情况。",
+      "translated_at": "2026-08-04T15:48:03.952Z"
+    },
+    "skill:zhaoxuya520-reverse-skill-ctf-sandbox-orchestrator": {
+      "hash": "8c9dab107f0243fb",
+      "summary_zh": "面向各类 CTF 挑战的沙箱编排入口，可识别题目资源并自动选择合适的分析流程。",
+      "translated_at": "2026-08-04T15:48:04.165Z"
+    },
+    "skill:zhaoxuya520-reverse-skill-database-security": {
+      "hash": "e430813fac83b9a2",
+      "summary_zh": "用于授权数据库安全评估，覆盖常见数据库的暴露面、权限控制、命令执行路径及配置风险排查。",
+      "translated_at": "2026-08-04T15:48:05.379Z"
+    },
+    "skill:zhaoxuya520-reverse-skill-digital-forensics": {
+      "hash": "3d2969c0737346be",
+      "summary_zh": "一套面向授权取证与应急响应的工具，用于分析内存、磁盘时间线和网络流量，并筛查、保全关键证据。",
+      "translated_at": "2026-08-04T15:48:06.935Z"
+    },
+    "skill:zhaoxuya520-reverse-skill-docs-generator": {
+      "hash": "bc6329b824abc15d",
+      "summary_zh": "用于生成由浅入深、面向任务的技术文档，适合编写 README、API 或架构说明，也可为安全分析和逆向任务输出正式报告。",
+      "translated_at": "2026-08-04T15:48:08.295Z"
+    },
+    "skill:zhaoxuya520-reverse-skill-diagram-generator": {
+      "hash": "d8b13ab22457e177",
+      "summary_zh": "一款将自然语言、代码、表格等内容生成并优化为图表的工具，适合快速绘制流程、架构、UML 和数据关系图。",
+      "translated_at": "2026-08-04T15:48:08.714Z"
+    },
+    "skill:zhaoxuya520-reverse-skill-dotnet-reverse": {
+      "hash": "259612e995b7e0dc",
+      "summary_zh": "面向 .NET/C# 二进制的逆向分析工具，适合反编译托管程序、还原混淆代码及排查加载器、窃密木马等恶意样本。",
+      "translated_at": "2026-08-04T15:48:12.506Z"
+    },
+    "skill:zhaoxuya520-reverse-skill-email-security": {
+      "hash": "1736c84972c05ad7",
+      "summary_zh": "用于授权邮件安全审查的分析工具，适合排查钓鱼邮件、验证邮件头身份、识别商务邮件诈骗及邮箱令牌滥用。",
+      "translated_at": "2026-08-04T15:48:12.804Z"
+    },
+    "skill:zhaoxuya520-reverse-skill-edr-bypass-re": {
+      "hash": "ec57bf711c7b42c8",
+      "summary_zh": "一套面向授权红队的终端防护逆向与规避研究方法，适合评估 EDR、杀软及系统监控的检测能力。",
+      "translated_at": "2026-08-04T15:48:15.436Z"
+    },
+    "skill:zhaoxuya520-reverse-skill-ghidra-reverse": {
+      "hash": "385e59cf6bec0605",
+      "summary_zh": "一套基于 Ghidra 的免费开源逆向分析工具，支持无界面或图形模式，适合无 IDA 时进行反编译、交叉引用分析及 MCP 工作流。",
+      "translated_at": "2026-08-04T15:48:18.529Z"
+    },
+    "skill:zhaoxuya520-reverse-skill-firmware-pentest": {
+      "hash": "d33fc3c0d7a8da1b",
+      "summary_zh": "一套面向固件与 IoT 设备的渗透测试方法和工具链，可完成提取、逆向、仿真与漏洞利用，适合设备审计、CVE 复现和 0day 挖掘。",
+      "translated_at": "2026-08-04T15:48:19.079Z"
+    },
+    "skill:zhaoxuya520-reverse-skill-hardware-security": {
+      "hash": "96bb76c8f1e89fae",
+      "summary_zh": "面向授权硬件与嵌入式安全研究，适合排查调试接口、分析安全启动及离线提取固件。",
+      "translated_at": "2026-08-04T15:48:21.904Z"
+    },
+    "skill:zhaoxuya520-reverse-skill-ida-reverse": {
+      "hash": "6d6224a72b945708",
+      "summary_zh": "一款面向 IDA Pro 的逆向分析辅助工具，适合反编译二进制、分析漏洞与恶意软件，以及排查各类可执行文件和固件。",
+      "translated_at": "2026-08-04T15:48:21.940Z"
+    },
+    "skill:zhaoxuya520-reverse-skill-go-rust-reverse": {
+      "hash": "73286ecab8c7e27e",
+      "summary_zh": "一款面向无符号 Go 和 Rust 二进制文件的逆向工具，可恢复运行时信息、关键元数据及更易读的反编译结果。",
+      "translated_at": "2026-08-04T15:48:22.091Z"
+    },
+    "skill:zhaoxuya520-reverse-skill-js-reverse": {
+      "hash": "e307d6552ec80e7d",
+      "summary_zh": "面向逆向工程、授权渗透测试和安全研究的 AI 技能路由工具，适合在多种代码客户端中按需搭建工具链并沉淀经验。",
+      "translated_at": "2026-08-04T15:48:24.875Z"
+    },
+    "skill:zhaoxuya520-reverse-skill-llm-security": {
+      "hash": "e307d6552ec80e7d",
+      "summary_zh": "面向授权渗透、逆向分析和安全研究的 AI 技能路由工具，可按任务自动配置工具链并沉淀经验，适配多种代码 AI 客户端。",
+      "translated_at": "2026-08-04T15:48:24.992Z"
+    },
+    "skill:zhaoxuya520-reverse-skill-malware-analysis": {
+      "hash": "e307d6552ec80e7d",
+      "summary_zh": "一套面向逆向工程、授权渗透测试和安全研究的 AI 技能路由工具，可按需搭建工具链并积累经验，适合配合代码 AI 客户端开展安全分析。",
+      "translated_at": "2026-08-04T15:48:26.568Z"
+    },
+    "skill:zhaoxuya520-reverse-skill-mobile-reverse": {
+      "hash": "e307d6552ec80e7d",
+      "summary_zh": "一套面向移动端逆向、授权渗透和安全研究的 AI 技能路由工具，适合按需搭建工具链并沉淀实战经验。",
+      "translated_at": "2026-08-04T15:48:27.427Z"
+    },
+    "skill:zhaoxuya520-reverse-skill-patch-diff-exploit": {
+      "hash": "d8f2c9001337fbd5",
+      "summary_zh": "一套通过补丁前后二进制差分定位漏洞并复现 PoC 的方法，适合 CVE 还原、补丁分析与红队安全验证。",
+      "translated_at": "2026-08-04T15:48:29.845Z"
+    },
+    "skill:zhaoxuya520-reverse-skill-pentest-tools": {
+      "hash": "ca530e03242e3b3c",
+      "summary_zh": "一套面向主动渗透测试的 AI 工具链，通过 MCP 整合 20 多种安全工具，适合自动完成信息收集、漏洞扫描与验证等安全任务。",
+      "translated_at": "2026-08-04T15:48:30.560Z"
+    },
+    "skill:zhaoxuya520-reverse-skill-pwn-chain": {
+      "hash": "197c63cd29f931e9",
+      "summary_zh": "一套将二进制漏洞从本地复现推进到远程稳定利用的工程化方法，适合栈、堆及内核漏洞利用开发。",
+      "translated_at": "2026-08-04T15:48:31.129Z"
+    },
+    "skill:zxkane-aws-skills-aws-sst-development": {
+      "hash": "d3003a9d297a5473",
+      "summary_zh": "面向 SST v4 的 AWS 基础设施即代码开发助手，适合编写配置、管理资源与权限，以及部署调试和故障排查。",
+      "translated_at": "2026-08-04T15:48:34.808Z"
+    },
+    "skill:zhaoxuya520-reverse-skill-src-hunter": {
+      "hash": "0e837a4ebf755d7a",
+      "summary_zh": "一套面向 SRC、众测和漏洞赏金的实战工作流，帮助安全人员系统完成目标侦察、漏洞挖掘、防护绕过与报告编写。",
+      "translated_at": "2026-08-04T15:48:37.742Z"
     }
   }
 }
