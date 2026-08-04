@@ -1,7 +1,7 @@
 {
   "id": "czlonkowski-n8n-skills-n8n-mcp-tools-expert",
   "name": "n8n-mcp-tools-expert",
-  "description": "Expert guide for using n8n-mcp MCP tools effectively. Use when searching for nodes, validating configurations, accessing templates, managing workflows, managing credentials, auditing instance security, or using any n8n-mcp tool. Provides tool selection guidance, parameter formats, and common patterns. IMPORTANT — Always consult this skill before calling any n8n-mcp tool — it prevents common mistakes like wrong nodeType formats, incorrect parameter structures, and inefficient tool usage. If the u",
+  "description": "Expert guide for using n8n-mcp MCP tools effectively. Use when searching for nodes, validating configurations, accessing templates, managing workflows, organizing workflows into folders, managing credentials, auditing instance security, or using any n8n-mcp tool. Provides tool selection guidance, parameter formats, and common patterns. IMPORTANT — Always consult this skill before calling any n8n-mcp tool — it prevents common mistakes like wrong nodeType formats, incorrect parameter structures, a",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/czlonkowski/n8n-skills/blob/main/skills/n8n-mcp-tools-expert/SKILL.md",
     "path": "skills/n8n-mcp-tools-expert/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-04T06:54:06.061Z",
-    "stars": 5972,
+    "discovered_at": "2026-08-04T10:01:33.172Z",
+    "stars": 5973,
     "language": "Shell",
-    "pushed_at": "2026-07-29T15:08:46Z",
+    "pushed_at": "2026-08-04T07:34:57Z",
     "license": "MIT"
   },
-  "summary_zh": "这是 n8n-mcp 工具的专家指南，在调用前提供选型与参数格式，帮你避开节点格式或参数结构错误，适合搜索节点、管理工作流及验证配置等场景。"
+  "summary_zh": "面向 n8n MCP 工具的实用指南，帮助正确选用工具和填写参数，适合搭建、管理及审计自动化工作流时避免常见错误。"
 }

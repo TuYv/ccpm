@@ -1,7 +1,7 @@
 {
   "id": "tomasz-tomczyk-crit-crit",
   "name": "crit",
-  "description": "Review code changes, a plan, a live page (running dev server), or a local HTML file with crit inline comments. Use when asked to review code, a plan, a diff, a running web app, or when you want structured human feedback on your work.",
+  "description": "Review code changes, a plan, a live page (running dev server), or a local HTML file with Crit inline comments and structured human feedback. Use only when the user explicitly invokes /crit or directly asks to use Crit; a generic review request does not count.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,11 @@
     "url": "https://github.com/tomasz-tomczyk/crit/blob/main/integrations/qwen/skills/crit/SKILL.md",
     "path": "integrations/qwen/skills/crit/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-04T07:47:32.382Z",
+    "discovered_at": "2026-08-04T10:21:09.986Z",
     "stars": 865,
     "language": "Go",
-    "pushed_at": "2026-08-02T22:29:46Z",
+    "pushed_at": "2026-08-04T09:54:19Z",
     "license": "MIT"
-  }
+  },
+  "summary_zh": "用于审查代码改动、方案、开发中页面或本地 HTML，并通过行内批注提供结构化人工反馈。"
 }
