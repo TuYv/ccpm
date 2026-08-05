@@ -1,0 +1,26 @@
+{
+  "id": "mattpocock-skills-writing-for-agents",
+  "name": "writing-for-agents",
+  "description": "Writing documents for agents. Use when creating or editing skills, or modifying AGENTS.md or CLAUDE.md.",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mattpocock",
+  "install_path": ".claude/skills/writing-for-agents/SKILL.md",
+  "source": {
+    "repo": "mattpocock/skills",
+    "url": "https://github.com/mattpocock/skills/blob/main/skills/productivity/writing-for-agents/SKILL.md",
+    "path": "skills/productivity/writing-for-agents/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-05T09:59:24.631Z",
+    "stars": 204043,
+    "language": "Shell",
+    "pushed_at": "2026-08-05T09:57:09Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于编写和编辑 AI 智能体文档，适合维护技能说明及 AGENTS.md、CLAUDE.md 等配置文件。"
+}

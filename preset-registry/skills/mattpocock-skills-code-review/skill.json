@@ -1,7 +1,7 @@
 {
   "id": "mattpocock-skills-code-review",
   "name": "code-review",
-  "description": "Review the changes since a fixed point (commit, branch, tag, or merge-base) along two axes — Standards (does the code follow this repo's documented coding standards?) and Spec (does the code match what the originating issue/PRD asked for?). Runs both reviews in parallel sub-agents and reports them side by side. Use when the user wants to review a branch, a PR, work-in-progress changes, or asks to \"review since X\".",
+  "description": "Review the changes since a fixed point (commit, branch, tag, or merge-base) along two axes — Standards (does the code follow this repo's documented coding standards?) and Spec (does the code match what the originating issue/spec asked for?). Runs both reviews in parallel sub-agents and reports them side by side. Use when the user wants to review a branch, a PR, work-in-progress changes, or asks to \"review since X\".",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/mattpocock/skills/blob/main/skills/engineering/code-review/SKILL.md",
     "path": "skills/engineering/code-review/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-05T06:50:30.105Z",
-    "stars": 203740,
+    "discovered_at": "2026-08-05T09:59:19.613Z",
+    "stars": 204043,
     "language": "Shell",
-    "pushed_at": "2026-08-04T19:25:42Z",
+    "pushed_at": "2026-08-05T09:57:09Z",
     "license": "MIT"
   },
-  "summary_zh": "并行检查代码变更是否符合仓库规范与需求文档，适合审查分支、PR 或开发中的改动。"
+  "summary_zh": "一个并行检查代码规范与需求符合度的审查工具，适合评审分支、PR、未完成改动或指定节点后的变更。"
 }
