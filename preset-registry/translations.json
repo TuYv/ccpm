@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-05T20:00:47.186Z",
+  "updated_at": "2026-08-05T21:53:02.727Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -9678,9 +9678,9 @@
       "translated_at": "2026-08-03T04:57:15.182Z"
     },
     "bundle:getsentry-sentry": {
-      "hash": "cab4f5c660f68f4b",
-      "summary_zh": "面向 Sentry 全栈开发与混合云演进，统一架构规范、功能实现、数据迁移和测试流程，提升协作效率与代码一致性。",
-      "translated_at": "2026-08-03T04:57:13.388Z"
+      "hash": "ac8b819e74b2cc1a",
+      "summary_zh": "面向 Sentry 全栈开发与架构演进，统一规范功能实现、数据迁移、测试和发布流程，提升协作效率与系统一致性。",
+      "translated_at": "2026-08-05T21:52:54.929Z"
     },
     "bundle:addyosmani-agent-skills": {
       "hash": "99ecfc3e6823dbc6",
@@ -28241,6 +28241,11 @@
       "hash": "1452f87dc9338702",
       "summary_zh": "将多种审计结果映射到代码图，适合结合影响范围、污点等预分析数据交叉研判安全风险。",
       "translated_at": "2026-08-05T15:39:36.161Z"
+    },
+    "skill:getsentry-sentry-feature-flags": {
+      "hash": "38df6533724a0f6c",
+      "summary_zh": "一套基于 FlagPole 控制 Sentry 功能灰度发布的开发指南，适合功能开关注册、前后端检查及测试配置。",
+      "translated_at": "2026-08-05T21:53:02.726Z"
     }
   }
 }
