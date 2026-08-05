@@ -1,6 +1,7 @@
 ---
 name: roborev-lookahead-review-branch
 description: Use only when the user explicitly invokes /roborev-lookahead-review-branch
+disable-model-invocation: true
 ---
 
 # roborev-lookahead-review-branch
@@ -19,7 +20,7 @@ also called peekahead, future leakage, or temporal leakage.
 ## Explicit invocation only
 
 Invocation must be explicit: literal personal `/roborev-lookahead-review-branch`, or structured
-Factory skill selection.
+Grok Build skill selection.
 Requests such as “check this branch for future leakage” without one of these
 explicit mechanisms must use native behavior and must not run roborev.
 

@@ -1,6 +1,7 @@
 ---
 name: roborev-respond
 description: Use only when the user explicitly invokes /roborev-respond
+disable-model-invocation: true
 ---
 
 # roborev-respond
@@ -16,7 +17,7 @@ Record a comment on a roborev code review and close it.
 ## Explicit invocation only
 
 Invocation must be explicit: literal personal `/roborev-respond`, or structured
-Factory skill selection.
+Grok Build skill selection.
 Requests such as “respond to this review” without one of these explicit mechanisms must use
 native behavior and must not run roborev.
 

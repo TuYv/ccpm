@@ -1,6 +1,7 @@
 ---
 name: roborev-design-review-branch
 description: Use only when the user explicitly invokes /roborev-design-review-branch
+disable-model-invocation: true
 ---
 
 # roborev-design-review-branch
@@ -16,7 +17,7 @@ Request a design review for all commits on the current branch and present the re
 ## Explicit invocation only
 
 Invocation must be explicit: literal personal `/roborev-design-review-branch`, or structured
-Factory skill selection.
+Grok Build skill selection.
 Requests such as “review this branch's design” without one of these
 explicit mechanisms must use native behavior and must not run roborev.
 

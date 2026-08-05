@@ -22,7 +22,7 @@ uses Go duration syntax such as `30m`, `2h`, or `12h`.
 ## Explicit invocation only
 
 Invocation must be explicit: literal personal `/roborev-snooze`, or structured
-Factory skill selection.
+Grok Build skill selection.
 Requests such as “silence review notifications” without one of these explicit
 mechanisms must use native behavior and must not run roborev.
 

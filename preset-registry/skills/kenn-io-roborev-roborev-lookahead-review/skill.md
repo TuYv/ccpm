@@ -1,6 +1,7 @@
 ---
 name: roborev-lookahead-review
 description: Use only when the user explicitly invokes /roborev-lookahead-review
+disable-model-invocation: true
 ---
 
 # roborev-lookahead-review
@@ -19,7 +20,7 @@ leakage, or temporal leakage.
 ## Explicit invocation only
 
 Invocation must be explicit: literal personal `/roborev-lookahead-review`, or structured
-Factory skill selection.
+Grok Build skill selection.
 Requests such as “check this commit for peekahead” without one of these explicit
 mechanisms must use native behavior and must not run roborev.
 
