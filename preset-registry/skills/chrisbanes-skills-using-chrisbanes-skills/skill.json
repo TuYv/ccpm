@@ -1,7 +1,7 @@
 {
   "id": "chrisbanes-skills-using-chrisbanes-skills",
   "name": "using-chrisbanes-skills",
-  "description": "Use when a Kotlin, Android, or Jetpack Compose task is too broad for any single focused skill to obviously apply, especially for general review, refactor, architecture, state, performance, testing, or UI API design work.",
+  "description": "Use when debugging, benchmarking, or profiling leads into Kotlin or Jetpack Compose source before the cause is known, or when a broad Kotlin or Compose review spans multiple design concerns.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/chrisbanes/skills/blob/main/skills/using-chrisbanes-skills/SKILL.md",
     "path": "skills/using-chrisbanes-skills/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-05T15:33:42.805Z",
+    "discovered_at": "2026-08-05T17:52:29.880Z",
     "stars": 886,
     "language": "Python",
-    "pushed_at": "2026-08-05T13:19:25Z",
+    "pushed_at": "2026-08-05T16:36:31Z",
     "license": "Apache-2.0"
   },
-  "summary_zh": "一套面向 Kotlin、Android 和 Compose 的通用开发技能，适合处理代码审查、重构、架构、性能、测试及 UI API 设计等综合任务。"
+  "summary_zh": "一套 Kotlin 与 Jetpack Compose 调试分析指南，适合根因未明的源码排查及跨设计维度的代码审查。"
 }

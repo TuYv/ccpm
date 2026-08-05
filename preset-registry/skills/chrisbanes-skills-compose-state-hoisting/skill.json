@@ -1,7 +1,7 @@
 {
   "id": "chrisbanes-skills-compose-state-hoisting",
   "name": "compose-state-hoisting",
-  "description": "Use when deciding where Jetpack Compose UI element state or UI logic should live: local remember state, hoisted composable parameters, a plain state holder class, or a screen-level ViewModel/component.",
+  "description": "Use when adding or refactoring interactive Jetpack Compose UI that introduces or moves remember state or coordinated UI logic, or when a screen mixes app dependencies or state holders with state or effect collection and layout.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/chrisbanes/skills/blob/main/skills/compose-state-hoisting/SKILL.md",
     "path": "skills/compose-state-hoisting/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-05T15:33:41.302Z",
+    "discovered_at": "2026-08-05T17:52:28.502Z",
     "stars": 886,
     "language": "Python",
-    "pushed_at": "2026-08-05T13:19:25Z",
+    "pushed_at": "2026-08-05T16:36:31Z",
     "license": "Apache-2.0"
   },
-  "summary_zh": "一套 Jetpack Compose 状态管理指南，帮你判断 UI 状态和逻辑该放在组件内部、状态类还是页面级 ViewModel 中。"
+  "summary_zh": "一套面向 Jetpack Compose 的状态提升指南，适合重构交互界面并理清依赖、状态、副作用与布局的职责边界。"
 }
