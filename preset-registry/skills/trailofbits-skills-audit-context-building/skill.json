@@ -1,7 +1,7 @@
 {
   "id": "trailofbits-skills-audit-context-building",
   "name": "audit-context-building",
-  "description": "Enables ultra-granular, line-by-line code analysis to build deep architectural context before vulnerability or bug finding.",
+  "description": "Understand a codebase before looking for bugs in it - what each function assumes, what it guarantees, and what it depends on elsewhere. Use when starting an audit, threat model, or architecture review on unfamiliar code, and before any vulnerability-hunting pass.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/trailofbits/skills/blob/main/plugins/audit-context-building/skills/audit-context-building/SKILL.md",
     "path": "plugins/audit-context-building/skills/audit-context-building/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-05T12:27:19.445Z",
-    "stars": 6443,
+    "discovered_at": "2026-08-05T14:43:35.097Z",
+    "stars": 6445,
     "language": "Python",
-    "pushed_at": "2026-08-05T12:26:19Z",
+    "pushed_at": "2026-08-05T13:50:09Z",
     "license": "CC-BY-SA-4.0"
   },
-  "summary_zh": "这是一款代码分析工具，能在排查漏洞或Bug前，通过逐行扫描帮你摸清深层架构脉络，让排错更有针对性。"
+  "summary_zh": "用于在漏洞排查前梳理陌生代码库中各函数的假设、保证与依赖，适合安全审计、威胁建模和架构评审。"
 }

@@ -1,0 +1,26 @@
+{
+  "id": "trailofbits-skills-audit-augmentation",
+  "name": "audit-augmentation",
+  "description": "> Augments Trailmark code graphs with external audit findings from SARIF static analysis results, weAudit annotation files, and version-gated Trailmark 0.4.x binary-analysis graph exports. Maps findings to graph nodes by file and line overlap, creates severity-based subgraphs, and enables cross-referencing findings with pre-analysis data (blast radius, taint, etc.). Use when projecting SARIF results onto a code graph, overlaying weAudit annotations, importing binary graph findings, cross-referen",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "trailofbits",
+  "install_path": ".claude/skills/audit-augmentation/SKILL.md",
+  "source": {
+    "repo": "trailofbits/skills",
+    "url": "https://github.com/trailofbits/skills/blob/main/plugins/trailmark/skills/audit-augmentation/SKILL.md",
+    "path": "plugins/trailmark/skills/audit-augmentation/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-05T14:43:43.249Z",
+    "stars": 6445,
+    "language": "Python",
+    "pushed_at": "2026-08-05T13:50:09Z",
+    "license": "CC-BY-SA-4.0"
+  },
+  "summary_zh": "将多种审计结果映射到代码图，适合结合影响范围、污点等预分析数据交叉研判安全风险。"
+}
