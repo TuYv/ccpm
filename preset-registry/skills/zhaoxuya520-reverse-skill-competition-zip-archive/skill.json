@@ -1,0 +1,26 @@
+{
+  "id": "zhaoxuya520-reverse-skill-competition-zip-archive",
+  "name": "competition-zip-archive",
+  "description": "Internal downstream skill for ctf-sandbox-orchestrator. CTF-sandbox workflow for ZIP and PKZIP archive challenges, legacy ZipCrypto identification, known-plaintext recovery with bkcrack, key-based decryption, and reproducible extraction. Use when the user asks to solve an encrypted ZIP challenge, inspect ZipCrypto metadata, recover keys from a known file prefix, or unlock an archive without starting with password brute force. Use only after `$ctf-sandbox-orchestrator` has already established san",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "zhaoxuya520",
+  "install_path": ".claude/skills/competition-zip-archive/SKILL.md",
+  "source": {
+    "repo": "zhaoxuya520/reverse-skill",
+    "url": "https://github.com/zhaoxuya520/reverse-skill/blob/main/CTF-Sandbox-Orchestrator/competition-zip-archive/SKILL.md",
+    "path": "CTF-Sandbox-Orchestrator/competition-zip-archive/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-05T12:35:06.462Z",
+    "stars": 18793,
+    "language": "PowerShell",
+    "pushed_at": "2026-08-05T10:05:07Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于 CTF 加密 ZIP 挑战的沙箱工作流，可识别旧版 ZipCrypto、利用已知明文恢复密钥并稳定解包，避免盲目爆破密码。"
+}

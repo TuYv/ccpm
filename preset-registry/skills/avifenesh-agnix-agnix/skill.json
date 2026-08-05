@@ -1,7 +1,7 @@
 {
   "id": "avifenesh-agnix-agnix",
   "name": "agnix",
-  "description": "Use when user asks to 'lint agent configs', 'validate skills', 'check CLAUDE.md', 'validate hooks', 'lint MCP'. Validates agent configuration files against 444 rules.",
+  "description": "Use when user asks to 'lint agent configs', 'validate skills', 'check CLAUDE.md', 'validate hooks', 'lint MCP'. Validates agent configuration files against 445 rules.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/avifenesh/agnix/blob/main/skills/agnix/SKILL.md",
     "path": "skills/agnix/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-05T10:27:37.612Z",
+    "discovered_at": "2026-08-05T12:56:00.017Z",
     "stars": 375,
     "language": "Rust",
-    "pushed_at": "2026-08-04T22:12:08Z",
+    "pushed_at": "2026-08-05T12:20:12Z",
     "license": "Apache-2.0"
   },
-  "summary_zh": "一款智能体配置检查工具，可按规则校验技能、CLAUDE.md、钩子和 MCP 配置，快速发现格式与配置问题。"
+  "summary_zh": "一款智能体配置检查工具，可校验技能、CLAUDE.md、钩子和 MCP 配置，帮助快速发现不规范或错误设置。"
 }
