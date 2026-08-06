@@ -16,10 +16,10 @@
     "url": "https://github.com/redis/agent-skills/blob/main/skills/redis-semantic-cache/SKILL.md",
     "path": "skills/redis-semantic-cache/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-06T07:33:54.080Z",
+    "discovered_at": "2026-08-06T10:25:31.908Z",
     "stars": 94,
     "language": "TypeScript",
-    "pushed_at": "2026-07-09T11:17:34Z",
+    "pushed_at": "2026-08-06T10:16:18Z",
     "license": "MIT"
   },
   "summary_zh": "基于 Redis 的 LLM 响应语义缓存方案，能把相似问题的回答缓存复用，帮你在调用 OpenAI、Anthropic 等大模型或做 RAG 时降低 API 成本和延迟，还能按任务类型拆分缓存、调相似度阈值平衡命中率与精度。"
