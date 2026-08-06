@@ -1,0 +1,26 @@
+{
+  "id": "jakubkrehel-skills-interface-review",
+  "name": "interface-review",
+  "description": ">- User-invoked interface review of a change rather than a screen: uncommitted work, the current branch, or a pull request. Resolves the change scope, expands it to the surfaces it affects, reads both sides of the diff, and classifies every finding as introduced, a regression, or pre-existing, then hands the review to better-interface for domain routing, severity, and the verdict. Covers interface quality, not correctness, tests, or security. Supports quick and full review modes. Triggers on int",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "jakubkrehel",
+  "install_path": ".claude/skills/interface-review/SKILL.md",
+  "source": {
+    "repo": "jakubkrehel/skills",
+    "url": "https://github.com/jakubkrehel/skills/blob/main/skills/interface-review/SKILL.md",
+    "path": "skills/interface-review/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-06T15:20:14.524Z",
+    "stars": 3168,
+    "language": null,
+    "pushed_at": "2026-08-06T12:36:31Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一款面向未提交改动、当前分支或 PR 的界面评审工具，可追踪受影响界面并区分新增、回归和遗留体验问题。"
+}
