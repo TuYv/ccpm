@@ -1,0 +1,26 @@
+{
+  "id": "getsentry-sentry-frontend-data-fetching",
+  "name": "frontend-data-fetching",
+  "description": "Fetch data in Sentry's frontend with TanStack Query and apiOptions. Use when adding or editing React code in static/ that calls the API — useQuery/useMutation/useInfiniteQuery, apiOptions, queryOptions/mutationOptions, fetchMutation, reading response headers/pagination, or conditional fetching. Trigger on \"fetch data\", \"add an API call\", \"useQuery\", \"useMutation\", \"apiOptions\", \"queryFn\", \"pagination headers\", \"X-Hits\", or \"why is my query type wrong\".",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "getsentry",
+  "install_path": ".claude/skills/frontend-data-fetching/SKILL.md",
+  "source": {
+    "repo": "getsentry/sentry",
+    "url": "https://github.com/getsentry/sentry/blob/master/.agents/skills/frontend-data-fetching/SKILL.md",
+    "path": ".agents/skills/frontend-data-fetching/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-08-07T16:17:05.569Z",
+    "stars": 44482,
+    "language": "Python",
+    "pushed_at": "2026-08-07T16:16:44Z",
+    "license": null
+  },
+  "summary_zh": "指导在 Sentry 前端 React 代码中用 TanStack Query 和 apiOptions 规范调用接口，适合处理查询、提交、分页及条件请求。"
+}

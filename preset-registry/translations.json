@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-07T15:22:49.753Z",
+  "updated_at": "2026-08-07T17:16:33.642Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -6133,9 +6133,9 @@
       "translated_at": "2026-05-19T21:44:55.337Z"
     },
     "skill:getsentry-sentry-setup-dev": {
-      "hash": "76fab50fe26aa39c",
-      "summary_zh": "这是一款基于devenv管理Sentry开发环境的工具，专门帮你搞定本地环境的初始化、服务启动以及各种跑不起来的疑难杂症。",
-      "translated_at": "2026-05-19T21:44:57.477Z"
+      "hash": "1ef10996e8a1b266",
+      "summary_zh": "用于搭建和管理 Sentry 开发环境，适合初始化、更新、启动服务、重置数据库及排查故障。",
+      "translated_at": "2026-08-07T17:16:33.642Z"
     },
     "skill:greensock-gsap-skills-gsap-plugins": {
       "hash": "32589968416aba75",
@@ -9678,9 +9678,9 @@
       "translated_at": "2026-08-03T04:57:15.182Z"
     },
     "bundle:getsentry-sentry": {
-      "hash": "ac8b819e74b2cc1a",
-      "summary_zh": "面向 Sentry 全栈开发与架构演进，统一规范功能实现、数据迁移、测试和发布流程，提升协作效率与系统一致性。",
-      "translated_at": "2026-08-05T21:52:54.929Z"
+      "hash": "6733206b4c2ec772",
+      "summary_zh": "面向 Sentry 全栈开发与架构演进，统一前后端实现规范、数据变更和功能交付流程，提升协作效率与代码质量。",
+      "translated_at": "2026-08-07T17:16:25.065Z"
     },
     "bundle:addyosmani-agent-skills": {
       "hash": "99ecfc3e6823dbc6",
@@ -10078,9 +10078,9 @@
       "translated_at": "2026-08-03T04:59:48.713Z"
     },
     "bundle:fradser-dotclaude": {
-      "hash": "ac7f13cbca6fa0c9",
-      "summary_zh": "一套覆盖产品、增长、设计、开发与自动化的 Claude 工作流技能合集，帮助团队把日常业务从分析策划到执行优化串成一体。",
-      "translated_at": "2026-08-07T10:23:40.140Z"
+      "hash": "013e9567b28f2d5a",
+      "summary_zh": "一套面向产品增长与数字化运营的 Claude 技能合集，将营销、设计、开发、数据分析和网页自动化串成可复用的 AI 工作流。",
+      "translated_at": "2026-08-07T17:16:26.651Z"
     },
     "bundle:sethgammon-citadel": {
       "hash": "ccfc472396f8c5a3",
@@ -28771,6 +28771,26 @@
       "hash": "2d2b4f9a0a89557c",
       "summary_zh": "用于连接 NotFair、Google 或 Meta 广告账户，建立可复用的品牌与投放上下文，适合新工作区配置广告或让智能代理安全开展投放。",
       "translated_at": "2026-08-07T10:24:10.866Z"
+    },
+    "skill:getsentry-sentry-frontend-data-fetching": {
+      "hash": "a918abfaef5cfc30",
+      "summary_zh": "指导在 Sentry 前端 React 代码中用 TanStack Query 和 apiOptions 规范调用接口，适合处理查询、提交、分页及条件请求。",
+      "translated_at": "2026-08-07T17:16:28.944Z"
+    },
+    "skill:getsentry-sentry-backend-conventions": {
+      "hash": "d9fb4cce4bd62557",
+      "summary_zh": "用于统一 Python 后端的日志、链路追踪、指标标签和配置读取写法，适合新增或修改监控埋点与异常日志时参考。",
+      "translated_at": "2026-08-07T17:16:28.999Z"
+    },
+    "skill:fradser-dotclaude-tdd": {
+      "hash": "b5cdb85203c4add5",
+      "summary_zh": "用于测试驱动开发，适合按“红-绿-重构”流程先写测试再实现功能、修复缺陷或补充集成测试。",
+      "translated_at": "2026-08-07T17:16:30.224Z"
+    },
+    "skill:getsentry-sentry-react-testing": {
+      "hash": "1064fa5ae424eda4",
+      "summary_zh": "用于编写和审查 Sentry 前端的 React/TypeScript 测试，适合组件、Hook、路由、接口请求及不稳定测试修复。",
+      "translated_at": "2026-08-07T17:16:32.807Z"
     }
   }
 }

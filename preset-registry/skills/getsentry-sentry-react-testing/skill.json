@@ -1,0 +1,26 @@
+{
+  "id": "getsentry-sentry-react-testing",
+  "name": "react-testing",
+  "description": "Write and review React/TypeScript tests for Sentry's frontend using Jest and React Testing Library. Use when adding or editing tests in static/ (*.spec.tsx), writing component/hook tests, mocking API responses with MockApiClient, testing routing or network requests, or when asked to \"write a frontend test\", \"add a React test\", \"test this component\", or \"fix a flaky RTL test\".",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "getsentry",
+  "install_path": ".claude/skills/react-testing/SKILL.md",
+  "source": {
+    "repo": "getsentry/sentry",
+    "url": "https://github.com/getsentry/sentry/blob/master/.agents/skills/react-testing/SKILL.md",
+    "path": ".agents/skills/react-testing/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-08-07T16:17:07.321Z",
+    "stars": 44482,
+    "language": "Python",
+    "pushed_at": "2026-08-07T16:16:44Z",
+    "license": null
+  },
+  "summary_zh": "用于编写和审查 Sentry 前端的 React/TypeScript 测试，适合组件、Hook、路由、接口请求及不稳定测试修复。"
+}

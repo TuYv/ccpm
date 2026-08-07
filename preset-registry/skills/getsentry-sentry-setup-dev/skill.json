@@ -1,7 +1,7 @@
 {
   "id": "getsentry-sentry-setup-dev",
   "name": "setup-dev",
-  "description": "Set up and manage the Sentry development environment using devenv. Handles fresh setup, updating existing environments, starting dev services, and troubleshooting. Use when asked to \"set up sentry\", \"setup dev environment\", \"get sentry running\", \"start dev server\", \"devenv setup\", \"devservices not working\", \"sentry won't start\", or any development environment issue.",
+  "description": "Set up and manage the Sentry development environment using devenv. Handles fresh setup, updating existing environments, starting dev services, resetting the database, per-worktree environment setup (each worktree needs its own devenv sync/.venv), and troubleshooting. Use when asked to \"set up sentry\", \"setup dev environment\", \"get sentry running\", \"start dev server\", \"devenv setup\", \"devservices not working\", \"sentry won't start\", \"reset the database\", \"new worktree venv/devenv setup\", or any de",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/getsentry/sentry/blob/master/.agents/skills/setup-dev/SKILL.md",
     "path": ".agents/skills/setup-dev/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-08-07T14:27:57.214Z",
+    "discovered_at": "2026-08-07T16:17:08.010Z",
     "stars": 44482,
     "language": "Python",
-    "pushed_at": "2026-08-07T14:26:41Z",
+    "pushed_at": "2026-08-07T16:16:44Z",
     "license": null
   },
-  "summary_zh": "这是一款基于devenv管理Sentry开发环境的工具，专门帮你搞定本地环境的初始化、服务启动以及各种跑不起来的疑难杂症。"
+  "summary_zh": "用于搭建和管理 Sentry 开发环境，适合初始化、更新、启动服务、重置数据库及排查故障。"
 }
