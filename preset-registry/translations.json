@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-07T18:24:51.568Z",
+  "updated_at": "2026-08-07T20:24:58.139Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -9773,9 +9773,9 @@
       "translated_at": "2026-08-03T04:57:43.562Z"
     },
     "bundle:jeffallan-claude-skills": {
-      "hash": "6e2cded9a7d3847a",
-      "summary_zh": "专为Claude打造的全栈开发技能包，覆盖从架构设计、代码编写、测试审查到文档生成的软件全流程，帮你一站式搞定复杂工程，让AI化身全能开发搭档。",
-      "translated_at": "2026-05-20T01:00:18.454Z"
+      "hash": "e38973564a6bcb9a",
+      "summary_zh": "面向软件研发全流程的 Claude 技能合集，覆盖架构设计、编码、云平台、测试与文档，让复杂项目开发更高效、更规范。",
+      "translated_at": "2026-08-07T20:24:08.602Z"
     },
     "bundle:voltagent-voltagent": {
       "hash": "ea2b842b3fdf726a",
@@ -17523,9 +17523,9 @@
       "translated_at": "2026-08-03T05:00:36.289Z"
     },
     "preset:23blocks-os-ai-maestro": {
-      "hash": "9fd5d15f928873ba",
-      "summary_zh": "面向 AI Agent 团队的统一编排平台，让 Claude、Codex 等代理共享记忆、互相通信并跨电脑协作，适合管理多代理开发流程。",
-      "translated_at": "2026-08-07T07:05:43.759Z"
+      "hash": "6475cea7891fde15",
+      "summary_zh": "这是一个AI代理编排平台，可统一管理多台设备上的代理，让它们共享记忆、查询代码图谱并彼此协作，适合组建多代理开发团队。",
+      "translated_at": "2026-08-07T20:24:58.139Z"
     },
     "preset:milisp-codexia": {
       "hash": "834ec407e2ccf1fb",
@@ -28796,6 +28796,11 @@
       "hash": "9547c452ce5502c6",
       "summary_zh": "一套 C#/.NET 可空引用类型实践指南，帮助团队规范标注与迁移旧代码，减少空引用异常并改进 API 设计。",
       "translated_at": "2026-08-07T18:24:51.401Z"
+    },
+    "skill:jeffallan-claude-skills-django-storages-s3": {
+      "hash": "7d7bbb83a5107992",
+      "summary_zh": "帮助 Django 使用 django-storages 和 boto3 将静态、媒体文件存储到 S3，适合配置权限、CloudFront、预签名 URL 及测试。",
+      "translated_at": "2026-08-07T20:24:57.314Z"
     }
   }
 }
