@@ -1,0 +1,26 @@
+{
+  "id": "k-dense-ai-scientific-agent-skills-deepspot-m",
+  "name": "deepspot-m",
+  "description": "Generate transcriptome-wide virtual spatial transcriptomics from H&E histology with DeepSpot-M. Use when you need spatial gene expression in log1p-CPM for 224x224 tiles at about 20x, want to query protein-coding genes by symbol instead of a fixed panel, or want to run prediction across a whole slide after tiling with histolab.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "K-Dense-AI",
+  "install_path": ".claude/skills/deepspot-m/SKILL.md",
+  "source": {
+    "repo": "K-Dense-AI/scientific-agent-skills",
+    "url": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/skills/deepspot-m/SKILL.md",
+    "path": "skills/deepspot-m/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-07T21:19:08.057Z",
+    "stars": 32921,
+    "language": "Python",
+    "pushed_at": "2026-08-07T20:35:16Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一种从H&E病理切片推断全转录组空间基因表达的工具，适合无固定基因面板需求或整张切片空间分析。"
+}

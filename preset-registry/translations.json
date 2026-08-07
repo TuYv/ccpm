@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-07T20:24:58.139Z",
+  "updated_at": "2026-08-07T22:16:36.029Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -17248,14 +17248,14 @@
       "translated_at": "2026-08-03T04:57:14.095Z"
     },
     "bundle:k-dense-ai-scientific-agent-skills": {
-      "hash": "e13a8e0b15b642ae",
-      "summary_zh": "面向科研智能体的一站式技能合集，打通文献检索、数据分析、实验设计与平台集成，加速从研究构想到成果落地。",
-      "translated_at": "2026-08-03T04:57:22.641Z"
+      "hash": "7bb3458997d09015",
+      "summary_zh": "面向科研全流程的智能工具集，串联文献检索、数据分析、实验设计与平台自动化，帮助科研人员更高效地完成研究任务。",
+      "translated_at": "2026-08-07T22:16:11.893Z"
     },
     "bundle:k-dense-ai-claude-scientific-skills": {
-      "hash": "088245a2847030fb",
-      "summary_zh": "面向科研人员的 Claude 技能合集，贯通文献检索、实验设计、数据分析与平台集成，让复杂研究流程更自动化、更易复用。",
-      "translated_at": "2026-08-03T04:57:23.426Z"
+      "hash": "20258ffc7ee12fe1",
+      "summary_zh": "面向科研全流程的智能工具集，串联文献检索、实验设计、数据分析与自动化，帮助研究者更高效地开展跨学科工作。",
+      "translated_at": "2026-08-07T22:16:32.791Z"
     },
     "bundle:decolua-9router": {
       "hash": "08c749295bd29766",
@@ -28801,6 +28801,16 @@
       "hash": "7d7bbb83a5107992",
       "summary_zh": "帮助 Django 使用 django-storages 和 boto3 将静态、媒体文件存储到 S3，适合配置权限、CloudFront、预签名 URL 及测试。",
       "translated_at": "2026-08-07T20:24:57.314Z"
+    },
+    "skill:k-dense-ai-scientific-agent-skills-deepspot-m": {
+      "hash": "28d4324aae5328b4",
+      "summary_zh": "一种从H&E病理切片推断全转录组空间基因表达的工具，适合无固定基因面板需求或整张切片空间分析。",
+      "translated_at": "2026-08-07T22:16:35.732Z"
+    },
+    "skill:k-dense-ai-claude-scientific-skills-deepspot-m": {
+      "hash": "28d4324aae5328b4",
+      "summary_zh": "基于H&E病理切片生成全转录组虚拟空间表达数据，适合按基因符号查询或对整张切片分块预测。",
+      "translated_at": "2026-08-07T22:16:36.028Z"
     }
   }
 }
