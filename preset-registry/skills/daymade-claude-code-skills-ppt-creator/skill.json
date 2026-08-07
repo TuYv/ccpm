@@ -1,7 +1,7 @@
 {
   "id": "daymade-claude-code-skills-ppt-creator",
   "name": "ppt-creator",
-  "description": "Create professional slide decks from topics or documents. Generates structured content with data-driven charts, speaker notes, and complete PPTX files. Applies persuasive storytelling principles (Pyramid Principle, assertion-evidence). Supports multiple formats (Marp, PowerPoint). Use for presentations, pitches, slide decks, or keynotes.",
+  "description": ">- 【DEPRECATED · 已废弃】本 skill 已于 2026-08-07 停止维护。对作者本机环境：其方法论已整体并入 deck-creator（私有仓 daymade-skills-pro 的 Route B · draft），装有 deck-creator 的环境不要调用本 skill。 对外部用户：这是最终版本，保留安装兼容，不再接收更新——你可以继续按本文档使用， 但请知悉上游已冻结。将在 daymade-docs v2.0.0 中物理移除。",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-docs/ppt-creator/SKILL.md",
     "path": "daymade-docs/ppt-creator/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-07T01:44:25.006Z",
+    "discovered_at": "2026-08-07T05:03:26.258Z",
     "stars": 1320,
     "language": "Python",
-    "pushed_at": "2026-08-07T01:35:21Z",
+    "pushed_at": "2026-08-07T03:42:37Z",
     "license": "MIT"
-  },
-  "summary_zh": "一款根据主题或文档自动生成专业演示文稿的工具，适合制作汇报、提案、路演和主题演讲。"
+  }
 }
