@@ -1,0 +1,26 @@
+{
+  "id": "nowork-studio-notfair-paid-ads-optimize",
+  "name": "paid-ads-optimize",
+  "description": "Diagnose wasted paid-ad spend, pacing, and allocation, then propose safe evidence-backed optimizations. Use for waste, negatives, budgets, bid changes, poor CPA or ROAS, underpacing, overspend, or scaling decisions.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "nowork-studio",
+  "install_path": ".claude/skills/paid-ads-optimize/SKILL.md",
+  "source": {
+    "repo": "nowork-studio/NotFair",
+    "url": "https://github.com/nowork-studio/NotFair/blob/main/paid-ads/paid-ads-optimize/SKILL.md",
+    "path": "paid-ads/paid-ads-optimize/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-07T09:26:34.329Z",
+    "stars": 3326,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-07T07:43:26Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于诊断付费广告浪费、预算节奏和投放分配问题，并给出有数据依据的安全优化建议，适合改善 CPA、ROAS 和扩量决策。"
+}
