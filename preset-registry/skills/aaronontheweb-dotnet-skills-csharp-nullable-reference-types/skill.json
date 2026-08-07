@@ -1,0 +1,26 @@
+{
+  "id": "aaronontheweb-dotnet-skills-csharp-nullable-reference-types",
+  "name": "csharp-nullable-reference-types",
+  "description": "Guidelines for introducing and using nullable reference types (NRT) and System.Diagnostics.CodeAnalysis nullable attributes in C# / .NET codebases. Covers the nullability model, flow analysis, the null-forgiving operator, API design rules, the full attribute catalog (AllowNull, DisallowNull, MaybeNull, NotNull, NotNullWhen, MaybeNullWhen, NotNullIfNotNull, MemberNotNull, MemberNotNullWhen, DoesNotReturn, DoesNotReturnIf), the C# 14 field keyword, incremental migration of legacy codebases, and a ",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "Aaronontheweb",
+  "install_path": ".claude/skills/csharp-nullable-reference-types/SKILL.md",
+  "source": {
+    "repo": "Aaronontheweb/dotnet-skills",
+    "url": "https://github.com/Aaronontheweb/dotnet-skills/blob/master/skills/csharp-nullable-reference-types/SKILL.md",
+    "path": "skills/csharp-nullable-reference-types/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-08-07T18:18:05.773Z",
+    "stars": 1097,
+    "language": "Shell",
+    "pushed_at": "2026-08-07T18:11:23Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一套 C#/.NET 可空引用类型实践指南，帮助团队规范标注与迁移旧代码，减少空引用异常并改进 API 设计。"
+}

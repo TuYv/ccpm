@@ -1,7 +1,7 @@
 {
   "id": "fradser-dotclaude-delegate",
   "name": "delegate",
-  "description": "Delegates a self-contained task to a Google Gemini Managed Agent (Antigravity) running in a remote sandbox with code execution, web search, and URL reading. This skill should be used when the user asks to \"delegate to Gemini\", \"offload to Antigravity\", \"run this in a remote sandbox\", or wants a task executed in an isolated Linux sandbox with Google Search and code execution, then the result read back. Invoked via \"/antigravity:delegate\".",
+  "description": "Delegates a coding task to pi (dev/pi), a minimal terminal coding harness. This skill should be used when the user asks to \"use pi\", \"run pi\", \"delegate to pi\", \"let pi handle this\", \"ask pi to\", \"have pi do\", or invokes /pi:delegate. It bridges the current Claude Code context to pi CLI for execution, passing relevant files, git state, and the task description.",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -13,14 +13,14 @@
   "install_path": ".claude/skills/delegate/SKILL.md",
   "source": {
     "repo": "FradSer/dotclaude",
-    "url": "https://github.com/FradSer/dotclaude/blob/main/antigravity/skills/delegate/SKILL.md",
-    "path": "antigravity/skills/delegate/SKILL.md",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/pi/skills/delegate/SKILL.md",
+    "path": "pi/skills/delegate/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-07T16:18:02.067Z",
+    "discovered_at": "2026-08-07T18:14:18.857Z",
     "stars": 576,
     "language": "JavaScript",
-    "pushed_at": "2026-08-07T15:07:57Z",
+    "pushed_at": "2026-08-07T16:19:06Z",
     "license": "MIT"
   },
-  "summary_zh": "将独立任务交给 Gemini 托管代理在远程 Linux 沙箱中执行，适合需要代码运行、网页搜索或隔离环境的场景。"
+  "summary_zh": "将当前编程上下文交给 pi 命令行执行，适合让它接手具体开发任务并同步相关文件与 Git 状态。"
 }
