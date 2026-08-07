@@ -1,0 +1,26 @@
+{
+  "id": "google-skills-gke-app-onboarding",
+  "name": "gke-app-onboarding",
+  "description": ">- Manages GKE application onboarding, covering containerization, deployment manifests, and migration. Use when onboarding or deploying an application to GKE for the first time, or containerizing an app for GKE. Don't use for general GKE cluster administration or upgrades (use gke-basics or gke-upgrades instead).",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/gke-app-onboarding/SKILL.md",
+  "source": {
+    "repo": "google/skills",
+    "url": "https://github.com/google/skills/blob/main/skills/cloud/gke-app-onboarding/SKILL.md",
+    "path": "skills/cloud/gke-app-onboarding/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-07T00:54:33.038Z",
+    "stars": 15776,
+    "language": "Python",
+    "pushed_at": "2026-08-06T21:24:27Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "用于将应用首次接入 GKE，协助完成容器化、部署清单配置和迁移，不适合处理集群日常管理或升级。"
+}

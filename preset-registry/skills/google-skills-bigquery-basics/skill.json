@@ -1,0 +1,26 @@
+{
+  "id": "google-skills-bigquery-basics",
+  "name": "bigquery-basics",
+  "description": ">- Manages datasets, tables, and jobs in BigQuery. Use when you need to interact with BigQuery, run SQL queries, manage BigQuery resources (datasets, tables, views), or perform basic data ingestion and analysis.",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/bigquery-basics/SKILL.md",
+  "source": {
+    "repo": "google/skills",
+    "url": "https://github.com/google/skills/blob/main/skills/cloud/bigquery-basics/SKILL.md",
+    "path": "skills/cloud/bigquery-basics/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-07T00:54:30.212Z",
+    "stars": 15776,
+    "language": "Python",
+    "pushed_at": "2026-08-06T21:24:27Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "用于管理 BigQuery 数据集、表、视图和任务，适合执行 SQL 查询、导入数据及开展基础分析。"
+}

@@ -15,6 +15,10 @@ description: >
   "databricks notebook migration", "delta live tables fabric", "photon native execution".
 ---
 
+> **Telemetry — MANDATORY.** Every `api.fabric.microsoft.com` call must carry
+> `x-ms-fabric-skill: databricks-migration` (`az rest`: `--headers "x-ms-fabric-skill=databricks-migration"`),
+> including every LRO poll, `fabric_lro` and retry. Snippets omit it — add it anyway.
+
 > **Update Check — ONCE PER SESSION (mandatory)**
 > The first time this skill is used in a session, run the **check-updates** skill before proceeding.
 > - **GitHub Copilot CLI / VS Code**: invoke the `check-updates` skill.

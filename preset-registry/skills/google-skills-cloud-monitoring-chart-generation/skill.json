@@ -1,0 +1,26 @@
+{
+  "id": "google-skills-cloud-monitoring-chart-generation",
+  "name": "cloud-monitoring-chart-generation",
+  "description": ">- Generates Google Cloud Monitoring Server-Driven UI (SDUI) Widget and XyChart Protocol Buffer textprotos from resolved PromQL queries. Use when: - Generating valid google.monitoring.dashboard.v1.Widget textprotos, containing PrometheusQuery datasets, for use with the Cloud Monitoring Dashboards API, gcloud CLI, or declarative dashboard definitions. - Synthesizing Server-Driven UI (SDUI) widget titles, axis labels, and plot types for Prometheus queries. Don't use for: - Metric discovery or Prom",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/cloud-monitoring-chart-generation/SKILL.md",
+  "source": {
+    "repo": "google/skills",
+    "url": "https://github.com/google/skills/blob/main/skills/cloud/cloud-monitoring-chart-generation/SKILL.md",
+    "path": "skills/cloud/cloud-monitoring-chart-generation/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-07T00:54:30.956Z",
+    "stars": 15776,
+    "language": "Python",
+    "pushed_at": "2026-08-06T21:24:27Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "将已解析的 PromQL 查询生成 Google Cloud Monitoring 图表配置，适合通过 API、gcloud 或声明式定义创建监控仪表盘。"
+}

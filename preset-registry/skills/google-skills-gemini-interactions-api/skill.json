@@ -1,0 +1,26 @@
+{
+  "id": "google-skills-gemini-interactions-api",
+  "name": "gemini-interactions-api",
+  "description": "Guides the usage of Gemini Interactions API on Gemini Enterprise Agent Platform. Use when the user wants to use the stateful, server-managed Interactions API for multi-turn conversations, background execution, streaming, structured output, and function calling on the Agent Platform.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/gemini-interactions-api/SKILL.md",
+  "source": {
+    "repo": "google/skills",
+    "url": "https://github.com/google/skills/blob/main/skills/cloud/gemini-interactions-api/SKILL.md",
+    "path": "skills/cloud/gemini-interactions-api/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-07T00:54:32.403Z",
+    "stars": 15776,
+    "language": "Python",
+    "pushed_at": "2026-08-06T21:24:27Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "一份企业智能体平台 API 使用指南，适合构建支持多轮对话、后台任务、流式响应和函数调用的应用。"
+}

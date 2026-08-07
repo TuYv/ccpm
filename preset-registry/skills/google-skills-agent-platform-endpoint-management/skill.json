@@ -1,0 +1,26 @@
+{
+  "id": "google-skills-agent-platform-endpoint-management",
+  "name": "agent-platform-endpoint-management",
+  "description": ">- Manages Agent Platform serving endpoints. Use when you need to create, list, describe, update, or delete serving endpoints for model deployment on Agent Platform. Also use when troubleshooting endpoint permission, quota, or resource busy errors. Don't use for deploying models to endpoints or for running model evaluations.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/agent-platform-endpoint-management/SKILL.md",
+  "source": {
+    "repo": "google/skills",
+    "url": "https://github.com/google/skills/blob/main/skills/cloud/agent-platform-endpoint-management/SKILL.md",
+    "path": "skills/cloud/agent-platform-endpoint-management/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-07T00:54:28.438Z",
+    "stars": 15776,
+    "language": "Python",
+    "pushed_at": "2026-08-06T21:24:27Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "用于管理智能体平台的模型服务端点，适合增删改查端点及排查权限、配额或资源占用问题，不负责模型部署和评测。"
+}

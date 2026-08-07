@@ -1,0 +1,26 @@
+{
+  "id": "google-skills-gemini-live-api",
+  "name": "gemini-live-api",
+  "description": ">- Generates a Gemini LiveAPI client service class in the user's chosen programming language. Use when the user wants to build, scaffold, or integrate a client that connects to the Gemini Enterprise LiveAPI websocket endpoint, handles session setup/resumption, bearer token refresh, and sending/receiving `ClientMessage`/`ServerMessage` protos. Don't use for general (non-live, non-bidirectional) Gemini API usage such as one-shot `generateContent`, embeddings, image/video generation, or fine-tuning",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/gemini-live-api/SKILL.md",
+  "source": {
+    "repo": "google/skills",
+    "url": "https://github.com/google/skills/blob/main/skills/cloud/gemini-live-api/SKILL.md",
+    "path": "skills/cloud/gemini-live-api/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-07T00:54:32.524Z",
+    "stars": 15776,
+    "language": "Python",
+    "pushed_at": "2026-08-06T21:24:27Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "用于生成指定语言的 Gemini 实时双向通信客户端，适合接入企业 WebSocket 服务并处理会话续接、令牌刷新和消息收发。"
+}

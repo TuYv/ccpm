@@ -1,0 +1,26 @@
+{
+  "id": "google-skills-agent-platform-troubleshooting",
+  "name": "agent-platform-troubleshooting",
+  "description": ">- Troubleshoots Google Cloud Gemini Enterprise Agent Platform issues (Agent Gateway, Registry, Identity, Policies, Model Armor, Identity-Aware Proxy (IAP)). Use when agent requests fail with 403 (especially unauthorized egress), Agent Runtime queries return 500, or gateway/IAP logs show permission errors. Don't use for general Google Cloud Identity and Access Management (IAM) debugging or networking issues unrelated to the Agent Platform stack.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/agent-platform-troubleshooting/SKILL.md",
+  "source": {
+    "repo": "google/skills",
+    "url": "https://github.com/google/skills/blob/main/skills/cloud/agent-platform-troubleshooting/SKILL.md",
+    "path": "skills/cloud/agent-platform-troubleshooting/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-07T00:54:29.552Z",
+    "stars": 15776,
+    "language": "Python",
+    "pushed_at": "2026-08-06T21:24:27Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "用于排查 Google Cloud Gemini 企业智能体平台故障，适合处理请求 403、运行时 500 及网关或 IAP 权限错误。"
+}

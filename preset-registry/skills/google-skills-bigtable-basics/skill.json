@@ -1,0 +1,26 @@
+{
+  "id": "google-skills-bigtable-basics",
+  "name": "bigtable-basics",
+  "description": ">- Assists in provisioning instances/tables, designing performant schemas, and querying data in Bigtable. Use when designing Bigtable row keys, configuring column families, writing SQL queries or client library code (Java, Go, Python) for Bigtable, or diagnosing performance/hotspotting issues. Also use when provisioning Bigtable clusters using gcloud or cbt CLIs. Don't use for generic Cloud SQL administration.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/bigtable-basics/SKILL.md",
+  "source": {
+    "repo": "google/skills",
+    "url": "https://github.com/google/skills/blob/main/skills/cloud/bigtable-basics/SKILL.md",
+    "path": "skills/cloud/bigtable-basics/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-07T00:54:30.477Z",
+    "stars": 15776,
+    "language": "Python",
+    "pushed_at": "2026-08-06T21:24:27Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "一套面向 Bigtable 的开发运维指南，适合实例建表、模式设计、数据查询、集群配置及性能热点排查。"
+}

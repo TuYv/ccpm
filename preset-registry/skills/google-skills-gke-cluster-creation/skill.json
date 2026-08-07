@@ -1,0 +1,26 @@
+{
+  "id": "google-skills-gke-cluster-creation",
+  "name": "gke-cluster-creation",
+  "description": ">- Plans and executes GKE cluster creation, provisioning, and production readiness audits using pre-defined templates (Autopilot, Standard Regional, GPU/AI Inference, AI Hypercompute). Use when creating GKE clusters, provisioning GKE environments, selecting cluster modes, or auditing GKE clusters. Don't use for application onboarding or deployment configuration (use gke-app-onboarding instead).",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/gke-cluster-creation/SKILL.md",
+  "source": {
+    "repo": "google/skills",
+    "url": "https://github.com/google/skills/blob/main/skills/cloud/gke-cluster-creation/SKILL.md",
+    "path": "skills/cloud/gke-cluster-creation/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-07T00:54:33.684Z",
+    "stars": 15776,
+    "language": "Python",
+    "pushed_at": "2026-08-06T21:24:27Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "用于按预设模板规划、创建和审计 GKE 集群，适合环境开通、模式选型及生产就绪检查。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "google-skills-cloud-monitoring-metric-selection",
+  "name": "cloud-monitoring-metric-selection",
+  "description": ">- Retrieve, query, and identify relevant Google Cloud Monitoring metric descriptors for a GCP service or resource (such as Compute Engine, Spanner, BigQuery, Cloud Run, Cloud SQL, Pub/Sub, Cloud Storage, etc.). Use when asked to find, list, search, or discover GCP metric types, names, kind/value schemas, or descriptors.",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/cloud-monitoring-metric-selection/SKILL.md",
+  "source": {
+    "repo": "google/skills",
+    "url": "https://github.com/google/skills/blob/main/skills/cloud/cloud-monitoring-metric-selection/SKILL.md",
+    "path": "skills/cloud/cloud-monitoring-metric-selection/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-07T00:54:31.079Z",
+    "stars": 15776,
+    "language": "Python",
+    "pushed_at": "2026-08-06T21:24:27Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "用于检索和筛选各类 GCP 服务的监控指标，适合查找指标名称、类型、数据结构及描述信息。"
+}

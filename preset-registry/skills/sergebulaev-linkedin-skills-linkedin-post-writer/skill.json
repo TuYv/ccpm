@@ -1,7 +1,7 @@
 {
   "id": "sergebulaev-linkedin-skills-linkedin-post-writer",
   "name": "linkedin-post-writer",
-  "description": "Draft a new LinkedIn post from scratch using one of 16 2026 hook formulas (anaphora, R.I.P., year-pivot, time-anchor, curiosity-gap, contrarian, emotional cold-open, named-gratitude, and more), picked by engagement goal (comments, reposts, likes, saves). Runs the humanizer pass and schedules via Publora on approval. Use when the user asks to write a post, needs a hook, or wants a proven format. Not for reviewing existing drafts (use linkedin-humanizer --mode audit).",
+  "description": "Draft a new LinkedIn post from scratch using one of 20 2026 hook formulas (anaphora, R.I.P., time-anchor, curiosity-gap, contrarian, controlled A/B, false-binary, and more) plus a founders-edition angle library, picked by engagement goal (comments, reposts, likes, saves). Runs the humanizer pass and schedules via Publora on approval. Use to write a post, find a hook or proven format, or get founder-specific angles. Not for reviewing existing drafts (use linkedin-humanizer --mode audit).",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/sergebulaev/linkedin-skills/blob/main/skills/linkedin-post-writer/SKILL.md",
     "path": "skills/linkedin-post-writer/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-06T15:29:51.018Z",
-    "stars": 497,
+    "discovered_at": "2026-08-07T01:50:03.552Z",
+    "stars": 500,
     "language": "Python",
-    "pushed_at": "2026-07-30T02:07:30Z",
+    "pushed_at": "2026-08-06T17:06:32Z",
     "license": "MIT"
   },
-  "summary_zh": "一个从零生成领英帖文的工具，可按互动目标设计高效开场，润色并确认后自动排期发布，适合缺少写作思路或成熟模板时使用。"
+  "summary_zh": "一款面向创始人的 LinkedIn 帖子创作工具，可按互动目标匹配开场和内容角度，润色后审批定时发布。"
 }

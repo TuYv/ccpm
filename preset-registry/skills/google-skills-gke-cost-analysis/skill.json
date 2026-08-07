@@ -1,0 +1,26 @@
+{
+  "id": "google-skills-gke-cost-analysis",
+  "name": "gke-cost-analysis",
+  "description": ">- Answer natural language questions and perform analysis on GKE cluster and workload costs using BigQuery billing exports, cost allocation data, and live cluster monitoring metrics. Use when querying GKE costs across projects, namespaces, or workloads, analyzing billing reports in BigQuery (`bq`), checking cluster cost budgets (`gcloud billing`), or diagnosing cost drivers like pod requests vs. actual utilization (`kubectl top`). Don't use for applying cost optimization changes, creating rights",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/gke-cost-analysis/SKILL.md",
+  "source": {
+    "repo": "google/skills",
+    "url": "https://github.com/google/skills/blob/main/skills/cloud/gke-cost-analysis/SKILL.md",
+    "path": "skills/cloud/gke-cost-analysis/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-07T00:54:33.942Z",
+    "stars": 15776,
+    "language": "Python",
+    "pushed_at": "2026-08-06T21:24:27Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "一款面向 GKE 的成本分析工具，可用自然语言查询各层级费用，并结合账单与监控数据定位成本异常和资源浪费。"
+}

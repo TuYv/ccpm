@@ -1,0 +1,26 @@
+{
+  "id": "microsoft-skills-for-fabric-git-integration-operations-cli",
+  "name": "git-integration-operations-cli",
+  "description": "> Automate the Microsoft Fabric Git integration lifecycle from CLI environments using the Fabric CLI (fab api), with az rest as a fallback. Use when the user wants to connect a workspace to Azure DevOps or GitHub, commit or update/pull workspace items, check Git sync status, resolve update conflicts, disconnect, automate Git sync with a service principal, or link a branch workspace to its base. Do NOT use for branch switching, for deployment tools (fab deploy, fabric-cicd, Bulk Import), for depl",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "microsoft",
+  "install_path": ".claude/skills/git-integration-operations-cli/SKILL.md",
+  "source": {
+    "repo": "microsoft/skills-for-fabric",
+    "url": "https://github.com/microsoft/skills-for-fabric/blob/main/plugins/fabric-skills/skills/git-integration-operations-cli/SKILL.md",
+    "path": "plugins/fabric-skills/skills/git-integration-operations-cli/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-07T01:45:20.561Z",
+    "stars": 946,
+    "language": "Python",
+    "pushed_at": "2026-08-06T19:47:08Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于在命令行自动管理 Microsoft Fabric 与 Azure DevOps 或 GitHub 的连接、同步、冲突处理及服务主体集成。"
+}

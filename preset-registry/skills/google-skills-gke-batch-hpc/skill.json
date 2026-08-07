@@ -1,0 +1,26 @@
+{
+  "id": "google-skills-gke-batch-hpc",
+  "name": "gke-batch-hpc",
+  "description": ">- Runs batch and HPC workloads on GKE, utilizing job queues and parallel processing. Use when running GKE batch jobs, configuring GKE HPC, or setting up GKE job queues. Don't use for standard web application deployments (use gke-app-onboarding instead).",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/gke-batch-hpc/SKILL.md",
+  "source": {
+    "repo": "google/skills",
+    "url": "https://github.com/google/skills/blob/main/skills/cloud/gke-batch-hpc/SKILL.md",
+    "path": "skills/cloud/gke-batch-hpc/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-07T00:54:33.441Z",
+    "stars": 15776,
+    "language": "Python",
+    "pushed_at": "2026-08-06T21:24:27Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "用于在 GKE 上通过任务队列和并行计算运行批处理及高性能计算任务，适合搭建作业调度场景。"
+}

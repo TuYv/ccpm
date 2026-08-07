@@ -1,0 +1,26 @@
+{
+  "id": "google-skills-ima-sdk-basics",
+  "name": "ima-sdk-basics",
+  "description": ">- Use this skill for Interactive Media Ads (IMA) SDK client-side ad insertion when you are requesting video ads client-side into websites, apps, TVs or other platforms with VAST or VMAP. Do not use for Dynamic Ad Insertion (DAI), SSAI, or SGAI (use the `ima-sdk-dai-basics` skill instead).",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/ima-sdk-basics/SKILL.md",
+  "source": {
+    "repo": "google/skills",
+    "url": "https://github.com/google/skills/blob/main/skills/ads/ima-sdk-basics/SKILL.md",
+    "path": "skills/ads/ima-sdk-basics/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-07T00:54:27.805Z",
+    "stars": 15776,
+    "language": "Python",
+    "pushed_at": "2026-08-06T21:24:27Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "用于在网站、应用、电视等平台通过 VAST 或 VMAP 实现客户端视频广告插入，不适用于服务端或动态广告插入。"
+}

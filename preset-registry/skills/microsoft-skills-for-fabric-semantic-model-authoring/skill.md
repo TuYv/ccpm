@@ -8,6 +8,10 @@ description: >
   Triggers: "create or edit a semantic model", "create or edit a DAX measure", "discover semantic model metadata", "list tables, columns, or measures in a semantic model", "refresh semantic model", "deploy semantic model to Fabric",  "prepare semantic model for AI/Copilot", "set semantic model permissions".
 ---
 
+> **Telemetry — MANDATORY.** Every `api.fabric.microsoft.com` call must carry
+> `x-ms-fabric-skill: semantic-model-authoring` (`az rest`: `--headers "x-ms-fabric-skill=semantic-model-authoring"`),
+> including every LRO poll, `fabric_lro` and retry. Snippets omit it — add it anyway.
+
 > **Update Check — ONCE PER SESSION (mandatory)**
 > The first time this skill is used in a session, run the **check-updates** skill before proceeding.
 > - **GitHub Copilot CLI / VS Code**: invoke the `check-updates` skill.

@@ -1,0 +1,26 @@
+{
+  "id": "microsoft-skills-for-fabric-activator-cli",
+  "name": "activator-cli",
+  "description": "Create and inspect Fabric Activator (Reflex) alerts end to end: author rules, sources and actions, or decode an existing ReflexEntities definition read-only. Streaming topology is eventstream-cli. Triggers:create alert,notify me when,take action when,show my alerts,list activators,get reflex definition",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "microsoft",
+  "install_path": ".claude/skills/activator-cli/SKILL.md",
+  "source": {
+    "repo": "microsoft/skills-for-fabric",
+    "url": "https://github.com/microsoft/skills-for-fabric/blob/main/plugins/fabric-skills/skills/activator-cli/SKILL.md",
+    "path": "plugins/fabric-skills/skills/activator-cli/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-07T01:45:18.847Z",
+    "stars": 946,
+    "language": "Python",
+    "pushed_at": "2026-08-06T19:47:08Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于创建、查看和解析 Microsoft Fabric Activator 告警，适合配置触发规则、数据源及通知或自动操作。"
+}

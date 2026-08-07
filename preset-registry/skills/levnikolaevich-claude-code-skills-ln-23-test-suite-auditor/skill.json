@@ -1,7 +1,7 @@
 {
   "id": "levnikolaevich-claude-code-skills-ln-23-test-suite-auditor",
   "name": "ln-23-test-suite-auditor",
-  "description": "Audits whether an existing test suite proves important product behavior with strong, isolated tests. Use when test confidence is uncertain; not to design or implement new tests.",
+  "description": "Audits whether an existing test suite proves important behavior as a sustainable portfolio. Use when test confidence or lifecycle control is uncertain; not to implement tests or review one delivery.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/codebase-audit-suite/skills/ln-23-test-suite-auditor/SKILL.md",
     "path": "plugins/codebase-audit-suite/skills/ln-23-test-suite-auditor/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-08-06T15:21:28.458Z",
+    "discovered_at": "2026-08-07T01:45:36.637Z",
     "stars": 529,
     "language": "HTML",
-    "pushed_at": "2026-08-06T08:23:59Z",
+    "pushed_at": "2026-08-06T20:37:36Z",
     "license": "MIT"
   },
-  "summary_zh": "用于审查现有测试套件能否以独立可靠的测试验证关键产品行为，适合测试可信度存疑时评估，不用于设计或编写新测试。"
+  "summary_zh": "用于审计现有测试套件能否长期、可靠地验证关键行为，适合测试信心不足或生命周期管理不明确的场景。"
 }

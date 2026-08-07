@@ -1,0 +1,26 @@
+{
+  "id": "google-skills-agent-platform-prompt-management",
+  "name": "agent-platform-prompt-management",
+  "description": ">- Manages and orchestrates prompts in Agent Platform. Use when you need to create, list, retrieve, version, or delete managed prompts in Agent Platform. Don't use for model training, model deployment to endpoints, or managing non-Agent Platform prompts.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/agent-platform-prompt-management/SKILL.md",
+  "source": {
+    "repo": "google/skills",
+    "url": "https://github.com/google/skills/blob/main/skills/cloud/agent-platform-prompt-management/SKILL.md",
+    "path": "skills/cloud/agent-platform-prompt-management/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-07T00:54:29.148Z",
+    "stars": 15776,
+    "language": "Python",
+    "pushed_at": "2026-08-06T21:24:27Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "用于统一管理和编排智能体平台中的提示词，适合创建、查询、版本控制及删除平台托管的提示词。"
+}

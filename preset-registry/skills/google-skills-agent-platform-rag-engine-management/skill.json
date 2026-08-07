@@ -1,0 +1,26 @@
+{
+  "id": "google-skills-agent-platform-rag-engine-management",
+  "name": "agent-platform-rag-engine-management",
+  "description": ">- Manage and query Agent Platform RAG Engine Corpora and retrieve grounded contexts using the Google GenAI SDK. Use when listing RAG corpora or files, inspecting a corpus, retrieving contexts, or generating content grounded in a RAG corpus. Do not use for standard database queries (use SQL/Spanner skills), Google Workspace RAG, or other RAG products like gRAG.",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/agent-platform-rag-engine-management/SKILL.md",
+  "source": {
+    "repo": "google/skills",
+    "url": "https://github.com/google/skills/blob/main/skills/cloud/agent-platform-rag-engine-management/SKILL.md",
+    "path": "skills/cloud/agent-platform-rag-engine-management/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-07T00:54:29.296Z",
+    "stars": 15776,
+    "language": "Python",
+    "pushed_at": "2026-08-06T21:24:27Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "用于管理和查询智能体平台的 RAG 语料库，可检索可靠上下文并生成基于语料的内容。"
+}

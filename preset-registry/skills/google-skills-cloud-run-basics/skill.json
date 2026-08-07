@@ -1,0 +1,26 @@
+{
+  "id": "google-skills-cloud-run-basics",
+  "name": "cloud-run-basics",
+  "description": ">- Manages Cloud Run services, jobs, and worker pools. Use when you need to deploy applications responding to HTTP requests (services), run event-triggered or scheduled tasks (jobs), or handle always-on pull-based background processing (worker pools).",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/cloud-run-basics/SKILL.md",
+  "source": {
+    "repo": "google/skills",
+    "url": "https://github.com/google/skills/blob/main/skills/cloud/cloud-run-basics/SKILL.md",
+    "path": "skills/cloud/cloud-run-basics/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-07T00:54:31.189Z",
+    "stars": 15776,
+    "language": "Python",
+    "pushed_at": "2026-08-06T21:24:27Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "用于管理和部署 Cloud Run 服务、任务与工作池，适合处理 HTTP 请求、定时或事件任务及常驻后台作业。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "google-skills-developer-device-platform-basics",
+  "name": "developer-device-platform-basics",
+  "description": ">- Provides guidance and instructions on managing remote devices on Developer Device Platform (DDP). Use when reserving remote Android devices, establishing connection tunnels, checking session status, or extending/cancelling leases. Don't use for iOS or local device/hardware inquiries.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/developer-device-platform-basics/SKILL.md",
+  "source": {
+    "repo": "google/skills",
+    "url": "https://github.com/google/skills/blob/main/skills/cloud/developer-device-platform-basics/SKILL.md",
+    "path": "skills/cloud/developer-device-platform-basics/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-07T00:54:31.793Z",
+    "stars": 15776,
+    "language": "Python",
+    "pushed_at": "2026-08-06T21:24:27Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "一套远程安卓设备管理指南，适合预约设备、建立连接隧道、查询会话状态及续租或取消租约。"
+}

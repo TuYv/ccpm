@@ -1,0 +1,26 @@
+{
+  "id": "google-skills-google-mobile-ads-rewarded",
+  "name": "google-mobile-ads-rewarded",
+  "description": "Provides instructions for implementing, integrating, or configuring Google Mobile Ads (GMA) SDK rewarded ads in Android or iOS mobile applications. Use this skill when the task involves setting up rewarded ads. Don't use for \"rewarded interstitial\" ads.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/google-mobile-ads-rewarded/SKILL.md",
+  "source": {
+    "repo": "google/skills",
+    "url": "https://github.com/google/skills/blob/main/skills/ads/google-mobile-ads-rewarded/SKILL.md",
+    "path": "skills/ads/google-mobile-ads-rewarded/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-07T00:54:27.680Z",
+    "stars": 15776,
+    "language": "Python",
+    "pushed_at": "2026-08-06T21:24:27Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "用于指导在 Android 或 iOS 应用中接入和配置 Google 移动广告 SDK 的激励广告，不适用于激励插页式广告。"
+}

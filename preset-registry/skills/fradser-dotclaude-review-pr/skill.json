@@ -1,7 +1,7 @@
 {
   "id": "fradser-dotclaude-review-pr",
   "name": "review-pr",
-  "description": "Reviews a pull request with the built-in /review skill, then persists a Monitor watch over CI results and incoming reviewer comments, triages each comment through an independent skeptical agent, applies only verified fixes, and commits+pushes via /git:commit-and-push until CI passes and no comments remain to adopt — then asks the user whether to merge. Use this skill when the user asks to \"review a PR\", \"monitor PR review comments\", \"address reviewer feedback on #123\", or \"watch CI on a pull req",
+  "description": "Reviews a pull request: runs its own baseline review of the PR diff, then a persistent Monitor watches CI and incoming reviewer comments, triages each comment through an independent skeptical agent, applies only verified fixes, and commits+pushes via /git:commit-and-push until CI passes and no comments remain to adopt — then asks whether to merge. Use this skill when the user asks to \"review a PR\", \"monitor PR review comments\", \"address reviewer feedback on #123\", or \"watch CI on a pull request\"",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/FradSer/dotclaude/blob/main/github/skills/review-pr/SKILL.md",
     "path": "github/skills/review-pr/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-06T14:56:10.774Z",
+    "discovered_at": "2026-08-07T00:56:43.507Z",
     "stars": 575,
     "language": "JavaScript",
-    "pushed_at": "2026-08-06T13:11:51Z",
+    "pushed_at": "2026-08-06T17:40:03Z",
     "license": "MIT"
   },
-  "summary_zh": "一款自动审查并持续跟进拉取请求的工具，可监控 CI 和评审意见、验证并修复问题，直到满足合并条件。"
+  "summary_zh": "一个自动审查并持续跟进拉取请求的工具，可监控 CI 和评审意见，验证后修复并推送代码，直至满足合并条件。"
 }

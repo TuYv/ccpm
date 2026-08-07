@@ -1,0 +1,26 @@
+{
+  "id": "google-skills-gemini-agents-api",
+  "name": "gemini-agents-api",
+  "description": "Manages custom Agent resources on Gemini Enterprise Agent Platform. Use when the user wants to programmatically create, configure, list, update, or delete stateful, server-managed Agent resources (including mounting files, skills, and tools) before executing conversations.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/gemini-agents-api/SKILL.md",
+  "source": {
+    "repo": "google/skills",
+    "url": "https://github.com/google/skills/blob/main/skills/cloud/gemini-agents-api/SKILL.md",
+    "path": "skills/cloud/gemini-agents-api/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-07T00:54:32.142Z",
+    "stars": 15776,
+    "language": "Python",
+    "pushed_at": "2026-08-06T21:24:27Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "用于在 Gemini 企业代理平台上以编程方式管理有状态智能体，适合在对话前统一配置和维护相关资源。"
+}

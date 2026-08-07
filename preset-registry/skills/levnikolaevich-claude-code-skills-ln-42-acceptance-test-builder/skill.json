@@ -1,7 +1,7 @@
 {
   "id": "levnikolaevich-claude-code-skills-ln-42-acceptance-test-builder",
   "name": "ln-42-acceptance-test-builder",
-  "description": "Creates and runs reproducible acceptance tests for stated requirements using project-native tooling. Use when executable acceptance evidence is needed; not for audits or product fixes.",
+  "description": "Creates, updates, consolidates, retires, and runs scoped acceptance tests using project-native tooling. Use when executable acceptance evidence must change; not for audits or product fixes.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/testing-suite/skills/ln-42-acceptance-test-builder/SKILL.md",
     "path": "plugins/testing-suite/skills/ln-42-acceptance-test-builder/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-08-06T15:21:31.879Z",
+    "discovered_at": "2026-08-07T01:45:38.576Z",
     "stars": 529,
     "language": "HTML",
-    "pushed_at": "2026-08-06T08:23:59Z",
+    "pushed_at": "2026-08-06T20:37:36Z",
     "license": "MIT"
   },
-  "summary_zh": "用项目原生工具创建并运行可复现的验收测试，适合为明确需求提供可执行证据，不用于审计或修复产品问题。"
+  "summary_zh": "一款用项目原生工具维护和运行限定范围验收测试的工具，适合需要调整可执行验收证据的场景，不用于审计或修复产品。"
 }

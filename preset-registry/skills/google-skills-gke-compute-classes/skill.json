@@ -1,0 +1,26 @@
+{
+  "id": "google-skills-gke-compute-classes",
+  "name": "gke-compute-classes",
+  "description": ">- Configures, optimizes, and troubleshoots GKE ComputeClasses. Use when configuring Spot VMs with on-demand fallback, targeting specific accelerators (GPUs/TPUs) or machine families, restricting ComputeClass access, or debugging pending pods related to node pool auto-creation. Do not use for cluster-level Node Auto Provisioning configuration or general GKE cluster creation.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/gke-compute-classes/SKILL.md",
+  "source": {
+    "repo": "google/skills",
+    "url": "https://github.com/google/skills/blob/main/skills/cloud/gke-compute-classes/SKILL.md",
+    "path": "skills/cloud/gke-compute-classes/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-07T00:54:33.803Z",
+    "stars": 15776,
+    "language": "Python",
+    "pushed_at": "2026-08-06T21:24:27Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "用于配置、优化和排查 GKE 计算类，适合设置 Spot 按需回退、指定 GPU/TPU 或机型，以及解决 Pod 挂起问题。"
+}

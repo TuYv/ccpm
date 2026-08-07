@@ -12,6 +12,10 @@ description: >
   "synapse linked service replacement", "port synapse notebooks", "synapse workspace migration".
 ---
 
+> **Telemetry — MANDATORY.** Every `api.fabric.microsoft.com` call must carry
+> `x-ms-fabric-skill: synapse-migration` (`az rest`: `--headers "x-ms-fabric-skill=synapse-migration"`),
+> including every LRO poll, `fabric_lro` and retry. Snippets omit it — add it anyway.
+
 > **Update Check — ONCE PER SESSION (mandatory)**
 > The first time this skill is used in a session, run the **check-updates** skill before proceeding.
 > - **GitHub Copilot CLI / VS Code**: invoke the `check-updates` skill.
@@ -291,8 +295,8 @@ Once data has landed in Fabric Lakehouses, use this sequence to validate and exp
 | Medallion architecture build-out | `e2e-medallion-architecture` | Structuring Bronze/Silver/Gold after lift-and-shift |
 | Warehouse performance monitoring | `sqldw-operations-cli` | Diagnosing slow queries on Fabric Warehouse |
 | Semantic model creation | `semantic-model-authoring` | Building Power BI models over migrated data |
-| Report consumption & DAX | `semantic-model-consumption` | Querying existing semantic models |
-| KQL analytics | `eventhouse-authoring-cli` / `eventhouse-consumption-cli` | If migrating real-time workloads to Eventhouse |
+| Report consumption & DAX | `fabriciq` | Querying existing semantic models |
+| KQL analytics | `eventhouse-cli` | If migrating real-time workloads to Eventhouse |
 
 ### Variable Library for Environment Promotion
 

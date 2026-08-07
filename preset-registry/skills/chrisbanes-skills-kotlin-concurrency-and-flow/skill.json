@@ -1,0 +1,26 @@
+{
+  "id": "chrisbanes-skills-kotlin-concurrency-and-flow",
+  "name": "kotlin-concurrency-and-flow",
+  "description": "Use when writing or reviewing Kotlin coroutine scope ownership, init launches, non-suspending launch APIs, runBlocking, cancellation, StateFlow, SharedFlow, Channel, stateIn, SharingStarted, state updates, or one-shot events.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "chrisbanes",
+  "install_path": ".claude/skills/kotlin-concurrency-and-flow/SKILL.md",
+  "source": {
+    "repo": "chrisbanes/skills",
+    "url": "https://github.com/chrisbanes/skills/blob/main/skills/kotlin-concurrency-and-flow/SKILL.md",
+    "path": "skills/kotlin-concurrency-and-flow/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-07T01:45:07.874Z",
+    "stars": 898,
+    "language": "Python",
+    "pushed_at": "2026-08-06T15:37:07Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "一套 Kotlin 协程与 Flow 实践指南，适合编写或审查并发、取消、状态管理及一次性事件处理代码。"
+}

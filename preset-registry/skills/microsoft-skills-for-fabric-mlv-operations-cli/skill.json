@@ -1,8 +1,8 @@
 {
   "id": "microsoft-skills-for-fabric-mlv-operations-cli",
   "name": "mlv-operations-cli",
-  "description": "> Manage refresh schedules and job execution for an EXISTING Microsoft Fabric Materialized Lake View (MLV) via REST APIs: create, update, and delete refresh schedules (interval-based: hourly, daily, weekly), trigger on-demand refreshes, monitor job status, and cancel running jobs. Uses human-in-the-loop confirmations for safety. This skill does NOT author or create the MLV definition: writing the CREATE MATERIALIZED LAKE VIEW / CREATE OR REPLACE SQL is `spark-authoring-cli`, not this skill. Note",
-  "category": "文档写作",
+  "description": "> Manage refresh schedules, selected-lineage execution definitions, and job execution for existing Microsoft Fabric Materialized Lake Views (MLVs) via REST APIs. Configure, update, and delete schedules and execution definitions; trigger on-demand refreshes; monitor job status; and cancel running jobs. Use `spark-authoring-cli` to author MLV definitions. Discovery, visual lineage, and data quality metrics require the Lakehouse UI. Triggers: \"schedule MLV refresh\", \"manage MLV refresh schedule\", \"",
+  "category": "数据分析",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,11 @@
     "url": "https://github.com/microsoft/skills-for-fabric/blob/main/plugins/fabric-skills/skills/mlv-operations-cli/SKILL.md",
     "path": "plugins/fabric-skills/skills/mlv-operations-cli/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-06T15:21:00.727Z",
-    "stars": 945,
+    "discovered_at": "2026-08-07T01:45:20.807Z",
+    "stars": 946,
     "language": "Python",
-    "pushed_at": "2026-07-30T17:15:57Z",
+    "pushed_at": "2026-08-06T19:47:08Z",
     "license": "MIT"
   },
-  "summary_zh": "通过 REST API 管理现有 Microsoft Fabric 物化湖视图的刷新计划和任务，适合安全执行自动或按需刷新。"
+  "summary_zh": "通过 REST API 管理 Fabric 物化湖视图刷新，适合自动配置调度、按需执行及监控或取消任务。"
 }

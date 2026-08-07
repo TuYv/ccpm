@@ -1,0 +1,26 @@
+{
+  "id": "chrisbanes-skills-compose-performance",
+  "name": "compose-performance",
+  "description": "Use when investigating Jetpack Compose recomposition cost, compiler stability reports, skippability, unstable parameters, frame-rate State reads, cross-phase snapshot back-writing, or @ReadOnlyComposable contracts.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "chrisbanes",
+  "install_path": ".claude/skills/compose-performance/SKILL.md",
+  "source": {
+    "repo": "chrisbanes/skills",
+    "url": "https://github.com/chrisbanes/skills/blob/main/skills/compose-performance/SKILL.md",
+    "path": "skills/compose-performance/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-07T01:45:07.397Z",
+    "stars": 898,
+    "language": "Python",
+    "pushed_at": "2026-08-06T15:37:07Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "一套 Jetpack Compose 性能诊断工具，适合排查重组开销、参数不稳定、帧率下降及状态读写异常等问题。"
+}

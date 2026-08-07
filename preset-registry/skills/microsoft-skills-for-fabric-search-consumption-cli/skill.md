@@ -6,11 +6,15 @@ description: >
   (2) list or discover items of a specific type across the tenant, (3) identify which workspace
   contains an item, (4) return item/workspace IDs for downstream API calls. Dataflow Gen1/Gen2
   items are not supported. For data queries after the item is known, use the workload-specific
-  consumption skill (`sqldw-consumption-cli`, `spark-consumption-cli`, `eventhouse-consumption-cli`, or `fabriciq`).
+  consumption skill (`sqldw-consumption-cli`, `spark-consumption-cli`, `eventhouse-cli`, or `fabriciq`).
   Triggers: "catalog search", "fabric catalog search", "catalog lookup",
   "cross workspace catalog", "tenant catalog discovery", "tenant catalog inventory",
   "tenant catalog identifiers", "workspace catalog discovery".
 ---
+
+> **Telemetry — MANDATORY.** Every `api.fabric.microsoft.com` call must carry
+> `x-ms-fabric-skill: search-consumption-cli` (`az rest`: `--headers "x-ms-fabric-skill=search-consumption-cli"`),
+> including every LRO poll, `fabric_lro` and retry. Snippets omit it — add it anyway.
 
 > **Update Check — ONCE PER SESSION (mandatory)**
 > The first time this skill is used in a session, run the **check-updates** skill before proceeding.
@@ -61,7 +65,7 @@ description: >
 ### AVOID
 
 - **Searching for workspaces** — the Catalog Search API returns items, not workspaces. Use `GET /v1/workspaces` instead (see [COMMON-CLI.md § Resolve Workspace Properties by Name](../../common/COMMON-CLI.md#resolve-workspace-properties-by-name)).
-- **Querying source data after the workspace/item is known** — route to the workload-specific consumption skill (`sqldw-consumption-cli`, `spark-consumption-cli`, `eventhouse-consumption-cli`, or `fabriciq`) instead of Catalog Search.
+- **Querying source data after the workspace/item is known** — route to the workload-specific consumption skill (`sqldw-consumption-cli`, `spark-consumption-cli`, `eventhouse-cli`, or `fabriciq`) instead of Catalog Search.
 - **Inventing filter syntax** — only `eq`, `ne`, `or`, and parentheses are supported.
 - **Assuming all item types are supported** — Dataflow (Gen1) and Dataflow (Gen2) are not returned yet.
 

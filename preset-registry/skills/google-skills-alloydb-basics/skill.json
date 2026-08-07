@@ -1,0 +1,26 @@
+{
+  "id": "google-skills-alloydb-basics",
+  "name": "alloydb-basics",
+  "description": ">- Manages clusters, instances, and backups for AlloyDB for PostgreSQL, and integrates with AlloyDB Model Context Protocol (MCP) tools for automated database operations. Use when creating, configuring, or administering AlloyDB databases. Do NOT use for general PostgreSQL instances (e.g. Cloud SQL) or other GCP databases.",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/alloydb-basics/SKILL.md",
+  "source": {
+    "repo": "google/skills",
+    "url": "https://github.com/google/skills/blob/main/skills/cloud/alloydb-basics/SKILL.md",
+    "path": "skills/cloud/alloydb-basics/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-07T00:54:29.950Z",
+    "stars": 15776,
+    "language": "Python",
+    "pushed_at": "2026-08-06T21:24:27Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "用于创建、配置和管理 AlloyDB 数据库集群、实例及备份，并支持通过 MCP 工具自动化运维。"
+}

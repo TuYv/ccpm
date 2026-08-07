@@ -3,6 +3,10 @@ name: azmon-mirroredcatalogs-operations-cli
 description: "Onboard Azure Monitor / Application Insights observability data into Microsoft Fabric and guide business-impact insights by correlating telemetry with business data, Eventhouse external delta tables, verified schemas, an optional Real-Time (KQL) dashboard, and opt-in Operations Agent instructions. Triggers: onboard Azure Monitor into Fabric, correlate App Insights telemetry with business data, build a Real-Time KQL dashboard over telemetry, build an Operations Agent for business-impact alerting, determine if availability or latency impacted bookings orders or revenue, connect a Log Analytics workspace to Fabric."
 ---
 
+> **Telemetry — MANDATORY.** Every `api.fabric.microsoft.com` call must carry
+> `x-ms-fabric-skill: azmon-mirroredcatalogs-operations-cli` (`az rest`: `--headers "x-ms-fabric-skill=azmon-mirroredcatalogs-operations-cli"`),
+> including every LRO poll, `fabric_lro` and retry. Snippets omit it — add it anyway.
+
 > **Update Check — ONCE PER SESSION (mandatory)**
 > The first time this skill is used in a session, run the **check-updates** skill before proceeding.
 > - **GitHub Copilot CLI / VS Code**: invoke the `check-updates` skill.
@@ -52,8 +56,8 @@ Before running this skill, read the shared common guidance:
 Application Insights / Log Analytics telemetry into Microsoft Fabric
 (mirroredCatalogs endpoint), correlating that telemetry with business data, and
 generating Operations Agent instructions. For general Eventhouse / KQL querying
-unrelated to Azure Monitor onboarding, use `eventhouse-consumption-cli`; for
-authoring Eventhouse items and databases, use `eventhouse-authoring-cli`.
+unrelated to Azure Monitor onboarding, use `eventhouse-cli` consumption mode;
+for authoring Eventhouse items and databases, use its authoring mode.
 
 ## Reference index
 
@@ -64,6 +68,8 @@ them wholesale into user responses — they are guidance for you, the agent.
 |-----------|-----------|
 | [references/azmon-fabric-api-reference.md](references/azmon-fabric-api-reference.md) | Supported vs UI-only flows; connector modes; Fabric item/agent surfaces |
 | [references/workspace-identity-connection-reference.md](references/workspace-identity-connection-reference.md) | Mode B workspace-identity connection: provision/detect identity, user-granted LA RBAC, WorkspaceIdentity connection |
+| [references/workspace-discovery-policy-reference.md](references/workspace-discovery-policy-reference.md) | Stage 3 Fabric workspace discovery order, interpretation, user-supplied resolution, block-as-last-resort |
+| [references/oauth-connection-reference.md](references/oauth-connection-reference.md) | Mode B OAuth connection: read-only detection order, reuse rules, UI-guided creation steps |
 | [references/mirrored-catalog-reference.md](references/mirrored-catalog-reference.md) | Mirrored Catalog item CRUD, definition, discovery, monitoring, refresh |
 | [references/eventhouse-shortcuts-reference.md](references/eventhouse-shortcuts-reference.md) | Eventhouse/KQL, OneLake shortcuts, queryability requirement |
 | [references/operations-agent-reference.md](references/operations-agent-reference.md) | Operations Agent instruction template, validation, troubleshooting |
@@ -403,61 +409,16 @@ here. Never expose raw API responses or tokens.
 ### Fabric Workspace Discovery & Capability Resolution Policy (REQUIRED)
 
 Fabric workspaces are **not** Azure Resource Manager resources, so absence of an
-automatic enumeration path does NOT mean no Fabric workspace exists. Before
-declaring Stage 3 blocked, the Skill MUST work through this policy in order and
-MUST NOT terminate the workflow early.
+automatic enumeration path does NOT mean no Fabric workspace exists. **Never
+terminate the workflow early**: if automatic discovery fails, ask the user for a
+Fabric Workspace **Name**, **ID**, or **URL**, validate it as far as the available
+capabilities allow, and continue. Never auto-select a workspace, never fabricate a
+workspace or a validation result, and mark Stage 3 BLOCKED only after every
+discovery mechanism AND every user-supplied resolution path has been exhausted.
 
-1. **Discover** all available Fabric workspace discovery mechanisms in the
-   current environment, in order, before asking the user to hand-provide a
-   workspace:
-   - Fabric REST APIs, if surfaced.
-   - Fabric Actions, if surfaced.
-   - Fabric / OneLake / Power BI execution capabilities, if surfaced.
-   - Authenticated Fabric REST **read-only** discovery via `az rest --method get`
-     against `https://api.fabric.microsoft.com/...`, if Azure CLI execution is
-     available and permitted under the read-only Fabric REST discovery exception
-     (GET-only, no modifications, no secret/token/header exposure, capability
-     path stated).
-   - Any other documented capability provider available to the agent
-     environment.
-
-   If workspace discovery succeeds, list the candidate workspaces, do NOT
-   auto-select, and ask the user to choose or confirm. Only if no supported
-   Fabric REST read-only discovery path is available, proceed to ask the user for
-   the workspace information below.
-
-2. **Interpret** the result of discovery. Automatic enumeration being
-   unavailable means one of two things — the Skill MUST distinguish them:
-   - No Fabric control-plane capability is available in this agent environment,
-     OR
-   - Automatic workspace enumeration is unavailable, but the workflow can still
-     continue using **user-provided** workspace information.
-
-3. **Do not terminate** if automatic discovery fails or no Fabric control-plane
-   capability is detected. Never assume Fabric workspaces do not exist just
-   because automatic discovery failed.
-
-4. **Ask the user** for workspace information. Explain the missing capability in
-   plain terms, then request **one** of:
-   - Fabric Workspace Name
-   - Fabric Workspace ID
-   - Fabric Workspace URL
-
-5. **Validate** any user-provided workspace as much as the available
-   tools/capabilities allow (e.g. confirm the id/name/URL resolves, or that the
-   caller can access it). Continue the workflow only when it is safe to do so.
-   Never fabricate a workspace, workspace id, or validation result, and never
-   claim a Fabric action succeeded when the required execution capability is
-   unavailable.
-
-6. **Block only as a last resort.** Mark Stage 3 as BLOCKED only after ALL
-   supported discovery mechanisms AND all user-supplied resolution paths
-   (Name / ID / URL) have been exhausted.
-
-UI-guided instructions for Fabric workspace selection are permitted ONLY as the
-final fallback, after every programmatic discovery path and every user-supplied
-resolution path above has failed. This is distinct from the general Portal
-Guidance Policy and does not relax any other stage's portal boundary.
+Follow the full discovery order, the interpretation rules, and the UI-guided
+last-resort boundary in
+[references/workspace-discovery-policy-reference.md](references/workspace-discovery-policy-reference.md).
 
 ## Stage 4 — Identity selection and validation
 
@@ -663,44 +624,15 @@ handling, but WAIT for their choice — never auto-select.
 
 ### Mode B — OAuth (UI-guided only, fallback)
 
-Use this mode only when Service Principal (Mode A) is unavailable or the user
-explicitly requests OAuth.
+Use this sub-branch when the user picked option 1 above, i.e. only when Service
+Principal (Mode A) is unavailable or the user explicitly requests OAuth. OAuth
+connector **creation** is UI-guided only (Fabric → Manage Connections) — the Skill
+never creates one through an API; it only **detects and reuses** an existing
+connection, read-only, and only when the Log Analytics workspace matches exactly.
 
-- OAuth connector **creation** is interactive, done once in **Fabric → Manage
-  Connections**. The Skill does **not** create OAuth connectors through any API.
-- The Skill **detects and reuses** an existing Azure Monitor OAuth connection for
-  this workspace (read-only, non-destructive).
-- Before classifying OAuth connection detection as "not verifiable", attempt the
-  available Fabric REST **read-only** connection discovery paths, in order:
-  1. A surfaced Fabric REST / Fabric Actions capability, if available.
-  2. Authenticated Fabric REST read-only discovery via `az rest --method get`
-     against `https://api.fabric.microsoft.com/...`, if Azure CLI execution is
-     available and permitted under the read-only Fabric REST discovery exception
-     (GET-only, no modifications, no secret/token/header exposure, capability
-     path stated). This detection is read-only; OAuth connector **creation**
-     remains UI-guided only.
-- Reuse a connection ONLY if it belongs to the **same** Log Analytics workspace
-  (exact data-source-path / LAW resource-id match). Any mismatch → treat as "no
-  matching connection".
-- If exactly one match → reuse automatically and continue.
-- If multiple matches → show display names and ask the user to choose (never
-  auto-pick).
-- If no match → guide the user with this message as **normal chat text (not a
-  code block)** and then WAIT:
-
-  I couldn’t find an existing Azure Monitor connection for this workspace.
-  Please create it once in Fabric → Manage Connections, then come back and
-  continue:
-
-  1. Open Fabric.
-  2. Go to Manage Connections.
-  3. Select New connection → Azure Monitor.
-  4. Sign in with your organizational account.
-  5. Use the same Log Analytics workspace.
-  6. When done, come back here and type **Done**.
-
-When the user resumes, re-detect and continue automatically ("Connection
-detected. Continuing setup.").
+Follow the full detection order, reuse rules, and user-facing wording in
+[references/oauth-connection-reference.md](references/oauth-connection-reference.md).
+Keep this strictly separate from Mode A.
 
 ### Mode B — Workspace identity (no secrets)
 

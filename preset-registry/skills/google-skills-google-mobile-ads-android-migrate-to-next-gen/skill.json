@@ -1,0 +1,26 @@
+{
+  "id": "google-skills-google-mobile-ads-android-migrate-to-next-gen",
+  "name": "google-mobile-ads-android-migrate-to-next-gen",
+  "description": "Migrates Android applications from the old, legacy Google Mobile Ads (GMA) SDK (com.google.android.gms:play-services-ads) to the new GMA Next-Gen SDK (com.google.android.libraries.ads.mobile.sdk:ads-mobile-sdk). Provides comprehensive mapping tables for imports, classes, and method signatures to help determine migration steps. Use when migrating an existing Android codebase from the old, legacy GMA SDK to GMA Next-Gen SDK.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/google-mobile-ads-android-migrate-to-next-gen/SKILL.md",
+  "source": {
+    "repo": "google/skills",
+    "url": "https://github.com/google/skills/blob/main/skills/ads/google-mobile-ads-android-migrate-to-next-gen/SKILL.md",
+    "path": "skills/ads/google-mobile-ads-android-migrate-to-next-gen/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-07T00:54:27.193Z",
+    "stars": 15776,
+    "language": "Python",
+    "pushed_at": "2026-08-06T21:24:27Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "一套帮助 Android 应用从旧版谷歌移动广告 SDK 迁移到新一代 SDK 的指南，适合改造现有广告代码。"
+}

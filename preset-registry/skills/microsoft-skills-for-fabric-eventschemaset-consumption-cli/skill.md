@@ -11,11 +11,15 @@ description: >
   its event types and message schemas, (4) verify schema formats and versions.
   Read-only; no authoring skill exists yet, so for writes use the Fabric Event
   Schema Set authoring REST APIs, and for the Eventstream ingestion pipeline use
-  `eventstream-consumption-cli`.
+  `eventstream-cli`.
   Triggers: "list Event Schema Sets", "show event schema sets", "inspect an event schema set",
   "describe an event schema set", "decode event schema set definition",
   "enumerate event types and schemas in an event schema set".
 ---
+
+> **Telemetry — MANDATORY.** Every `api.fabric.microsoft.com` call must carry
+> `x-ms-fabric-skill: eventschemaset-consumption-cli` (`az rest`: `--headers "x-ms-fabric-skill=eventschemaset-consumption-cli"`),
+> including every LRO poll, `fabric_lro` and retry. Snippets omit it — add it anyway.
 
 > **Update Check — ONCE PER SESSION (mandatory)**
 > The first time this skill is used in a session, run the **check-updates** skill before proceeding.
@@ -26,8 +30,8 @@ description: >
 > **CRITICAL NOTES**
 > 1. To find the workspace details (including its ID) from workspace name: list all workspaces and, then, use JMESPath filtering
 > 2. To find the item details (including its ID) from workspace ID, item type, and item name: list all items of that type in that workspace and, then, use JMESPath filtering
-> 3. Eventstream ≠ EventSchemaSet. Eventstream is a real-time event ingestion and routing pipeline. For operations concerning eventstreams, use `eventstream-authoring-cli` or `eventstream-consumption-cli`.
-> 4. Eventhouse ≠ EventSchemaSet. An Eventhouse is a workspace item (container) that holds one or more KQL databases for storing and analyzing large volumes of streaming/event data. For KQL database operations, use `eventhouse-authoring-cli` or `eventhouse-consumption-cli`.
+> 3. Eventstream ≠ EventSchemaSet. Eventstream is a real-time event ingestion and routing pipeline. For Eventstream authoring or inspection, use `eventstream-cli`.
+> 4. Eventhouse ≠ EventSchemaSet. An Eventhouse is a workspace item (container) that holds one or more KQL databases for storing and analyzing large volumes of streaming/event data. For KQL database operations, use `eventhouse-cli`.
 
 # Event Schema Set Consumption — CLI Skill
 

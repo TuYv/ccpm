@@ -1,0 +1,26 @@
+{
+  "id": "google-skills-agent-platform-inference",
+  "name": "agent-platform-inference",
+  "description": ">- Connects to and performs inference with Google Cloud Agent Platform GenAI models, including First-Party Gemini models and Third-Party OpenMaaS models (Llama, DeepSeek, Qwen, etc.). Use when you need to generate code for calling Gemini or OpenMaaS models, authenticate with GenAI SDK, OpenAI SDK, or legacy Agent Platform SDK, configure base URLs and global/regional endpoints, or troubleshoot 429 Resource Exhausted (DSQ), 400 User Validation, or 404 Not Found errors. Don't use for deploying mode",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/agent-platform-inference/SKILL.md",
+  "source": {
+    "repo": "google/skills",
+    "url": "https://github.com/google/skills/blob/main/skills/cloud/agent-platform-inference/SKILL.md",
+    "path": "skills/cloud/agent-platform-inference/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-07T00:54:28.714Z",
+    "stars": 15776,
+    "language": "Python",
+    "pushed_at": "2026-08-06T21:24:27Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "用于接入并调用 Google Cloud 上的 Gemini、Llama、DeepSeek 等模型，适合生成调用代码、配置鉴权与端点及排查常见接口错误。"
+}

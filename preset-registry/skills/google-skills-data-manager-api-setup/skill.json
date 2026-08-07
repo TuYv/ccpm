@@ -1,0 +1,26 @@
+{
+  "id": "google-skills-data-manager-api-setup",
+  "name": "data-manager-api-setup",
+  "description": ">- Guides developers through client library installation and authentication setup steps for the Data Manager API. Use this skill when a user is getting started with the Data Manager API and needs to setup their local environment, install the client library, or setup access to the API. Don't use for implementing audience or event ingestion logic (use the data-manager-api-audience-ingestion or data-manager-api-event-ingestion skills instead).",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/data-manager-api-setup/SKILL.md",
+  "source": {
+    "repo": "google/skills",
+    "url": "https://github.com/google/skills/blob/main/skills/ads/data-manager-api-setup/SKILL.md",
+    "path": "skills/ads/data-manager-api-setup/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-07T00:54:26.737Z",
+    "stars": 15776,
+    "language": "Python",
+    "pushed_at": "2026-08-06T21:24:27Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "一份开发环境配置指南，帮助首次使用 Data Manager API 的开发者安装客户端库并完成访问认证。"
+}

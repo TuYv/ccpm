@@ -1,19 +1,19 @@
 ---
 name: mlv-operations-cli
 description: >
-  Manage refresh schedules and job execution for an EXISTING Microsoft Fabric Materialized Lake
-  View (MLV) via REST APIs: create, update, and delete refresh schedules (interval-based: hourly,
-  daily, weekly), trigger on-demand refreshes, monitor job status, and cancel running jobs. Uses
-  human-in-the-loop confirmations for safety.
-  This skill does NOT author or create the MLV definition: writing the CREATE MATERIALIZED LAKE VIEW
-  / CREATE OR REPLACE SQL is `spark-authoring-cli`, not this skill.
-  Note: MLV discovery (list MLVs, lineage, data quality) requires UI as REST APIs are not yet available.
-  Triggers: "schedule MLV refresh", "manage MLV refresh", "MLV refresh schedule",
-  "schedule materialized lake view refresh",
-  "automate MLV refresh", "trigger MLV refresh", "monitor MLV refresh",
-  "MLV job status", "cancel MLV refresh", "refresh schedule",
-  "MLV automation", "refresh my materialized views"
+  Manage refresh schedules, selected-lineage execution definitions, and job execution for existing
+  Microsoft Fabric Materialized Lake Views (MLVs) via REST APIs. Configure, update, and delete
+  schedules and execution definitions; trigger on-demand refreshes; monitor job status; and cancel
+  running jobs. Use `spark-authoring-cli` to author MLV definitions. Discovery, visual lineage,
+  and data quality metrics require the Lakehouse UI.
+  Triggers: "schedule MLV refresh", "manage MLV refresh schedule", "trigger MLV refresh",
+  "MLV job status", "cancel MLV refresh", "monitor MLV refresh",
+  "recurring MLV refresh", "daily MLV refresh".
 ---
+
+> **Telemetry — MANDATORY.** Every `api.fabric.microsoft.com` call must carry
+> `x-ms-fabric-skill: mlv-operations-cli` (`az rest`: `--headers "x-ms-fabric-skill=mlv-operations-cli"`),
+> including every LRO poll, `fabric_lro` and retry. Snippets omit it — add it anyway.
 
 > **Update Check — ONCE PER SESSION (mandatory)**
 > The first time this skill is used in a session, run the **check-updates** skill before proceeding.
@@ -24,7 +24,7 @@ description: >
 > **CRITICAL NOTES**
 > 1. To find the workspace details (including its ID) from workspace name: list all workspaces and, then, use JMESPath filtering
 > 2. To find the lakehouse details (including its ID) from workspace ID and lakehouse name: list all lakehouses in that workspace and, then, use JMESPath filtering
-> 3. **MLV Discovery Gap**: REST APIs for listing MLVs in a lakehouse do not exist yet (GET /materializedLakeViews returns 404). For schedule CRUD/trigger/status, only workspace ID and lakehouse ID are needed (scheduling operates on the full lakehouse lineage). MLV table names are only needed if the user asks about specific view definitions.
+> 3. **MLV Discovery Gap**: No public REST API currently lists MLVs in a lakehouse. For schedule CRUD/trigger/status, only workspace ID and lakehouse ID are needed. To refresh a subset of the lineage, first create or reuse an MLV execution definition and pass its `mlvExecutionDefinitionId` in `executionData`.
 
 # MLV Operations — CLI Skill
 
@@ -41,33 +41,42 @@ Fabric has **three** materialized view concepts. Disambiguate by context:
 | Spark / Lakehouse | "CREATE MATERIALIZED LAKE VIEW" | MLV DDL (authoring) | `spark-authoring-cli` |
 | Spark / Lakehouse | "schedule my materialized view" | MLV scheduling | This skill |
 | Spark / Lakehouse | "refresh my views" | MLV on-demand refresh | This skill |
-| **KQL / Eventhouse** | "materialized view" | **KQL Materialized View** | `eventhouse-authoring-cli` |
+| **KQL / Eventhouse** | "materialized view" | **KQL Materialized View** | `eventhouse-cli` |
 | **SQL DW / Warehouse** | "materialized view" | **Not supported in Fabric** | Explain unsupported |
 
 **Disambiguation rule**: If the user mentions lakehouse, notebook, Spark, Delta, or MLV → it's a **Materialized Lake View** (this skill). If they mention KQL, Eventhouse, or Kusto → it's a KQL Materialized View (different skill). If they mention Warehouse or SQL DW → explain it's not supported.
 
 **Default**: If context is unclear (no mention of lakehouse, Spark, KQL, or Warehouse), ask the user: "Are you working with a Lakehouse (Materialized Lake View) or an Eventhouse (KQL Materialized View)?" before proceeding.
 
-Manage MLV refresh scheduling and monitoring using Fabric REST APIs. This skill provides **full scheduling API coverage (Preview)** for scheduling and monitoring operations, enabling full automation of MLV refresh workflows.
+Manage MLV refresh scheduling, execution definitions, and monitoring using Fabric REST APIs. This skill provides **public API coverage (Preview)** for scheduling, subset refresh configuration, and monitoring operations, enabling automation of MLV refresh workflows.
 
 ## What This Skill Can Do
 
-### ✅ Fully Supported (9 REST APIs)
+### ✅ Fully Supported (14 REST APIs)
 
-1. **Schedule Management** (per lakehouse — refreshes entire MLV lineage)
+1. **Schedule Management** (per lakehouse — refreshes entire MLV lineage by default)
    - Create refresh schedules (Cron interval, Daily, Weekly, Monthly)
    - List schedules for a lakehouse
    - Get schedule details by ID
    - Update existing schedules (change frequency, enabled state)
    - Delete schedules
+   - Attach an `executionData.mlvExecutionDefinitionId` to refresh a subset of the lineage
 
 2. **Job Execution**
    - Trigger on-demand refresh (immediate execution)
    - List job run history with filtering
    - Get job status and progress
    - Cancel running jobs
+   - Attach an `executionData.mlvExecutionDefinitionId` to refresh a subset of the lineage on demand
 
-3. **Safety & UX**
+3. **MLV Execution Definitions**
+   - Create reusable execution definitions for selected MLVs, selected upstream lakehouses, refresh mode, and Spark environment
+   - List execution definitions
+   - Get execution definition details
+   - Patch execution definitions (partial update; omitted fields retain existing values)
+   - Delete execution definitions; linked schedules are removed by the API
+
+4. **Safety & UX**
    - Human-in-the-loop confirmations before creating schedules or triggering refreshes
    - Step-by-step planning for complex multi-MLV operations
    - Iterative error handling with helpful suggestions
@@ -76,11 +85,11 @@ Manage MLV refresh scheduling and monitoring using Fabric REST APIs. This skill 
 ### ❌ Not Supported (Requires UI — No REST APIs)
 
 - **MLV Discovery**: Cannot list MLVs in a lakehouse (API returns 404)
-- **Lineage Inspection**: Cannot fetch dependency graphs (API returns 404)
+- **Visual Lineage Inspection**: Cannot fetch the portal dependency graph directly
 - **Data Quality Metrics**: Cannot retrieve DQ metrics (API returns 404)
 - **Schema Verification**: Cannot check if schemas are enabled (property missing)
 
-**Workaround**: User provides lakehouse ID and MLV table names explicitly. Use Fabric Lakehouse UI for discovery tasks.
+**Workaround**: User provides lakehouse ID and MLV table names explicitly. Use Fabric Lakehouse UI for discovery tasks, then encode selected MLV names and selected upstream lakehouses in an MLV execution definition.
 
 ## Table of Contents
 
@@ -97,7 +106,7 @@ Manage MLV refresh scheduling and monitoring using Fabric REST APIs. This skill 
 | Pagination Pattern | [COMMON-CLI.md § Pagination Pattern](../../common/COMMON-CLI.md#pagination-pattern) ||
 | Gotchas & Troubleshooting (CLI-Specific) | [COMMON-CLI.md § Gotchas & Troubleshooting (CLI-Specific)](../../common/COMMON-CLI.md#gotchas--troubleshooting-cli-specific) | `az rest` audience, shell escaping, token expiry |
 | Quick Reference: `az rest` Template | [COMMON-CLI.md § Quick Reference: az rest Template](../../common/COMMON-CLI.md#quick-reference-az-rest-template) ||
-| MLV Refresh API Reference | [MS Learn: Refresh Materialized Lake View](https://learn.microsoft.com/en-us/fabric/data-engineering/materialized-lake-views/refresh-materialized-lake-view) | Official documentation for refresh mechanics |
+| MLV Public API Reference | [MS Learn: Manage Fabric materialized lake views with public APIs](https://learn.microsoft.com/en-us/fabric/data-engineering/materialized-lake-views/materialized-lake-views-public-api) | Official documentation for schedules, on-demand refresh, job instances, and MLV execution definitions |
 
 > **Eval mode**: When the user prompt contains "I pre-approve" or "proceed without confirmation",
 > skip the human-in-the-loop gate and execute directly. This allows automated testing.
@@ -108,9 +117,11 @@ Manage MLV refresh scheduling and monitoring using Fabric REST APIs. This skill 
 
 **Before executing any operation, show a preview and ask for confirmation:**
 
-- **Creating schedules**: Show schedule type, interval/times, lakehouse ID, start/end time
-- **Triggering refreshes**: Show lakehouse ID, confirm "this refreshes the entire MLV lineage"
+- **Creating schedules**: Show schedule type, interval/times, lakehouse ID, start/end time, and full-lineage or execution-definition scope
+- **Creating execution definitions**: Show selected MLVs, selected upstream lakehouses, refresh mode, and Spark environment
+- **Triggering refreshes**: Show lakehouse ID and whether this refreshes the full lineage or a named execution definition subset
 - **Deleting schedules**: Show schedule ID and confirm deletion
+- **Deleting execution definitions**: Show definition ID and warn that linked schedules are also removed
 
 **Confirmation options**:
 - `Allow` — Execute this single operation
@@ -126,7 +137,7 @@ I'm about to create a refresh schedule:
   Time: 02:00 UTC
   Start: 2026-06-20
   End: 2027-06-20
-  Scope: Entire MLV lineage
+  Scope: Full MLV lineage (default)
 
 Proceed? [Allow / Decline / Allow in this thread]
 ```
@@ -135,7 +146,7 @@ Proceed? [Allow / Decline / Allow in this thread]
 
 **Base URL**: `https://api.fabric.microsoft.com/v1`
 
-**IMPORTANT**: All endpoints are **workspace + lakehouse scoped**. A schedule refreshes the **entire MLV lineage** — you cannot schedule individual tables.
+**IMPORTANT**: Schedule, on-demand trigger, execution-definition, and history-list endpoints are **workspace + lakehouse scoped**. An on-demand trigger returns an **item-scoped** `Location` URL for status polling and cancellation. A schedule or on-demand run refreshes the **entire MLV lineage by default**. To refresh selected MLVs or selected upstream lakehouses, create an MLV execution definition and pass its `mlvExecutionDefinitionId` in `executionData`.
 
 **Schedule endpoints:**
 - `POST   /workspaces/{workspaceId}/lakehouses/{lakehouseId}/jobs/refreshMaterializedLakeViews/schedules` — Create schedule
@@ -145,10 +156,19 @@ Proceed? [Allow / Decline / Allow in this thread]
 - `DELETE /workspaces/{workspaceId}/lakehouses/{lakehouseId}/jobs/refreshMaterializedLakeViews/schedules/{id}` — Delete schedule
 
 **Job instance endpoints:**
-- `POST   /workspaces/{workspaceId}/lakehouses/{lakehouseId}/jobs/refreshMaterializedLakeViews/instances` — Trigger on-demand refresh (no body; returns 202 + Location header with job ID)
+- `POST   /workspaces/{workspaceId}/lakehouses/{lakehouseId}/jobs/refreshMaterializedLakeViews/instances` — Trigger on-demand refresh (optional `executionData`; returns 202 + Location header with job ID)
 - `GET    /workspaces/{workspaceId}/lakehouses/{lakehouseId}/jobs/refreshMaterializedLakeViews/instances` — List job history
-- `GET    /workspaces/{workspaceId}/items/{lakehouseId}/jobs/instances/{jobInstanceId}` — Get job status
-- `POST   /workspaces/{workspaceId}/items/{lakehouseId}/jobs/instances/{jobInstanceId}/cancel` — Cancel running job
+- `GET    /workspaces/{workspaceId}/items/{lakehouseId}/jobs/instances/{jobInstanceId}` — Get job status from the trigger `Location`
+- `POST   /workspaces/{workspaceId}/items/{lakehouseId}/jobs/instances/{jobInstanceId}/cancel` — Cancel the running job
+
+**MLV execution definition endpoints:**
+- `POST   /workspaces/{workspaceId}/lakehouses/{lakehouseId}/mlvexecutiondefinitions` — Create selected-lineage execution definition
+- `GET    /workspaces/{workspaceId}/lakehouses/{lakehouseId}/mlvexecutiondefinitions` — List execution definitions
+- `GET    /workspaces/{workspaceId}/lakehouses/{lakehouseId}/mlvexecutiondefinitions/{mlvExecutionDefinitionId}` — Get execution definition
+- `PATCH  /workspaces/{workspaceId}/lakehouses/{lakehouseId}/mlvexecutiondefinitions/{mlvExecutionDefinitionId}` — Partially update execution definition
+- `DELETE /workspaces/{workspaceId}/lakehouses/{lakehouseId}/mlvexecutiondefinitions/{mlvExecutionDefinitionId}` — Delete execution definition and any linked schedules
+
+**Job type mismatch trap**: Job history can expose scheduled MLV runs as `jobType: "MaterializedLakeViews"`, but the public job scheduler path uses `refreshMaterializedLakeViews`. Do **not** copy the history value into `POST /workspaces/{workspaceId}/items/{lakehouseId}/jobs/instances?jobType=MaterializedLakeViews`; that item-level call returns `InvalidJobType`.
 
 **See**: [MS Learn: MLV Background Jobs](https://learn.microsoft.com/en-us/rest/api/fabric/lakehouse/background-jobs/create-refresh-materialized-lake-views-schedule)
 
@@ -156,9 +176,9 @@ Proceed? [Allow / Decline / Allow in this thread]
 
 All scheduling operations (create/update/delete, trigger, status, cancel) support both **User identity** (`az login`) and **Service Principal / Managed Identity**. Requires **Workspace Contributor or Admin role**.
 
-### 4. One schedule per lineage
+### 4. Lakehouse schedule limits and execution-definition scopes
 
-The API supports **one active refresh schedule per lakehouse lineage**. If the user asks for per-table scheduling, explain this limitation.
+The [Preview REST scheduler](https://learn.microsoft.com/en-us/rest/api/fabric/lakehouse/background-jobs/create-refresh-materialized-lake-views-schedule#limitations) supports refresh schedules at lakehouse scope. A lakehouse can have at most **20 schedules**, and an MLV lineage can have only **one active refresh schedule**. If the user asks for a subset schedule, create an **MLV execution definition** with selected MLVs/upstream lakehouses and pass its `mlvExecutionDefinitionId` in schedule or on-demand `executionData`. Execution definitions scope a refresh; they don't bypass scheduler limits.
 
 ### 5. MLV Discovery — User must provide names
 
@@ -184,6 +204,7 @@ When a user asks "why did my refresh fail?" or "show me run history", follow thi
 
 ## Prefer
 
+- **Lakehouse schedules for recurring refreshes** — for an interactive workflow, direct users to **Lakehouse → Materialized lake views → Manage → Schedules**. Use the REST API only when the user needs programmatic automation or CI/CD.
 - **Daily/Weekly types** for precise time-of-day scheduling (e.g., "2 AM daily")
 - **Cron type with interval** only for sub-daily frequencies (e.g., "every 60 minutes")
 - **Step-by-step planning** — clarify intent, propose schedule, show preview, execute on approval
@@ -193,11 +214,11 @@ When a user asks "why did my refresh fail?" or "show me run history", follow thi
 
 ## Avoid
 
-- **Per-table scheduling claims** — the API refreshes the entire lineage
+- **Per-table scheduling claims without an execution definition** — full-lineage is the default; selected subsets require a saved execution definition
 - **Cron string expressions** (e.g., `0 2 * * *`) — the API uses structured types, not cron strings
 - **Assuming JSON response from on-demand refresh** — returns 202 with job ID in Location header only
 - **Silent failures** — always explain errors
-- **Scheduling from notebooks** — route users here; SQL `REFRESH ... FULL` is for one-time manual use only
+- **Scheduling from notebooks or pipelines** — recurring MLV refresh belongs to Lakehouse schedules. SQL `REFRESH ... FULL` is for one-time manual troubleshooting only.
 
 ## Schedule Payload Structure
 
@@ -218,6 +239,23 @@ When a user asks "why did my refresh fail?" or "show me run history", follow thi
 }
 ```
 
+**Subset lineage schedule**: include `executionData` when the user wants to refresh only the MLVs/upstream lakehouses captured in an execution definition:
+```json
+{
+  "enabled": true,
+  "configuration": {
+    "type": "Cron",
+    "interval": 60,
+    "startDateTime": "2026-06-20T00:00:00",
+    "endDateTime": "2027-06-20T23:59:59",
+    "localTimeZoneId": "UTC"
+  },
+  "executionData": {
+    "mlvExecutionDefinitionId": "<mlvExecutionDefinitionId>"
+  }
+}
+```
+
 **Key fields:**
 - `enabled`: `true` to enable schedule on creation
 - `type`: One of `"Cron"`, `"Daily"`, `"Weekly"`, `"Monthly"`
@@ -227,8 +265,9 @@ When a user asks "why did my refresh fail?" or "show me run history", follow thi
 - `recurrence`: (Monthly only) Recurrence interval, e.g., `1` (every month)
 - `occurrence`: (Monthly only) e.g., `{"occurrenceType": "DayOfMonth", "dayOfMonth": 1}`
 - `localTimeZoneId`: Windows time zone names — `"UTC"`, `"Central Standard Time"`, `"India Standard Time"`, etc.
-- `startDateTime`: When schedule becomes active (ISO 8601 format, no Z suffix)
+- `startDateTime`: When schedule becomes active (ISO 8601 local time; `localTimeZoneId` supplies the time zone)
 - `endDateTime`: **REQUIRED** — When schedule expires
+- `executionData.mlvExecutionDefinitionId`: Optional; refreshes only the selected lineage captured in that execution definition
 
 **Daily example** (preferred for "2 AM every day"):
 ```json
@@ -266,19 +305,75 @@ When a user asks "why did my refresh fail?" or "show me run history", follow thi
 
 **Note**: The update API requires both `enabled` and a **complete** `configuration` (full replacement, not partial patch). Always send all fields.
 
+## MLV Execution Definitions
+
+Use execution definitions when the user wants to refresh **specific MLVs**, include **selected upstream lakehouses**, pin a **Spark environment**, or choose a **refresh mode** independently from the default full-lineage refresh.
+
+### Create MLV Execution Definition
+
+**Endpoint**: `POST /workspaces/{workspaceId}/lakehouses/{lakehouseId}/mlvexecutiondefinitions`
+
+```json
+{
+  "displayName": "Gold Chain - Sales",
+  "description": "Nightly refresh for selected gold-layer MLVs",
+  "settings": {
+    "environment": {
+      "referenceType": "ById",
+      "itemId": "<environmentId>",
+      "workspaceId": "<environmentWorkspaceId>"
+    },
+    "refreshMode": "Optimal"
+  },
+  "currentLakehouseExecutionContext": {
+    "mode": "Selected",
+    "selectedMlvs": [
+      "dbo.gold_sales_summary",
+      "dbo.gold_sales_daily"
+    ]
+  },
+  "extendedLineageExecutionContext": {
+    "mode": "All"
+  }
+}
+```
+
+**Execution context modes:**
+- `currentLakehouseExecutionContext.mode`: `"All"` or `"Selected"`; when `"Selected"`, provide `selectedMlvs` as fully qualified MLV names.
+- `extendedLineageExecutionContext.mode`: `"All"` or `"Selected"`; when `"Selected"`, provide `selectedLakehouses` objects with `referenceType`, `itemId`, and `workspaceId`.
+- `settings.refreshMode`: `"Optimal"` or `"Full"`.
+- `settings.environment`: Optional Spark environment reference by ID.
+
+**Update semantics**: `PATCH /mlvexecutiondefinitions/{id}` is a partial update. Only provided fields change; omitted fields retain their existing values. This differs from schedule PATCH, which requires `enabled` and a complete `configuration`.
+
+**Delete semantics**: `DELETE /mlvexecutiondefinitions/{id}` also removes schedules linked to that execution definition. Warn before deleting.
+
 ## Trigger On-Demand Refresh (POST /instances)
 
 **Endpoint**: `POST /workspaces/{workspaceId}/lakehouses/{lakehouseId}/jobs/refreshMaterializedLakeViews/instances`
 
-**Request body**: None (empty POST). Refreshes the entire MLV lineage in dependency order.
+**Request body**: None for full-lineage refresh. Refreshes the entire MLV lineage in dependency order.
+
+**Subset refresh body**:
+```json
+{
+  "executionData": {
+    "mlvExecutionDefinitionId": "<mlvExecutionDefinitionId>"
+  }
+}
+```
+
+**Do not use job history as the trigger contract**: recent runs may list `jobType: "MaterializedLakeViews"`, but that value is only a history/status label. For on-demand refresh, always call this lakehouse-scoped endpoint. Reusing the history label with the generic item job API (`POST /workspaces/{workspaceId}/items/{lakehouseId}/jobs/instances?jobType=MaterializedLakeViews`) is a known `InvalidJobType` dead end.
+
+The trigger response returns an item-scoped `Location` URL (`/items/{lakehouseId}/jobs/instances/{jobInstanceId}`). Use it as-is for polling and cancellation. The lakehouse-scoped GET (`/lakehouses/{lakehouseId}/jobs/instances/{jobInstanceId}`) is documented as an alternative and returns the same instance, but the service does not return that shape in the `Location` header today.
 
 **Response**: `202 Accepted` — job instance ID is in the `Location` response header:
 ```
-Location: https://api.fabric.microsoft.com/v1/workspaces/{wsId}/items/{lhId}/jobs/instances/{jobInstanceId}
+Location: https://api.fabric.microsoft.com/v1/workspaces/{wsId}/items/{lakehouseId}/jobs/instances/{jobInstanceId}
 Retry-After: 60
 ```
 
-**Poll for status** using the URL from the `Location` header:
+**Poll for status** using the URL from the `Location` header (or its lakehouse-scoped equivalent):
 ```
 GET /workspaces/{workspaceId}/items/{lakehouseId}/jobs/instances/{jobInstanceId}
 ```
@@ -294,7 +389,9 @@ GET /workspaces/{workspaceId}/items/{lakehouseId}/jobs/instances/{jobInstanceId}
 | `Cancelled` | Job was cancelled by user |
 | `Deduped` | Skipped because another refresh was already in progress |
 
-**Note**: Job instances returned by `GET /items/{id}/jobs/instances` use `jobType: "MaterializedLakeViews"` (live-tested) or `jobType: "RefreshMaterializedLakeViews"` (per MS Learn docs). Filter on either value when listing instances.
+**Note**: Job instances returned by public `GET /lakehouses/{id}/jobs/refreshMaterializedLakeViews/instances` use `jobType: "RefreshMaterializedLakeViews"` per MS Learn. Some item-level history surfaces have returned `jobType: "MaterializedLakeViews"` in live testing; filter on either value when diagnosing legacy history, but never use `MaterializedLakeViews` as an on-demand trigger `jobType`.
+
+**Status display limitation**: job instance status reflects Monitor hub status and can differ from the MLV run-history UI. For example, an MLV run-history **Skipped** status can appear as **Cancelled/Canceled** in Monitor hub APIs.
 
 **Schedule settings** (additional options via UI or API):
 - **Optimal Refresh** (default: On) — Fabric picks incremental or full refresh per MLV automatically
@@ -309,20 +406,21 @@ GET /workspaces/{workspaceId}/items/{lakehouseId}/jobs/instances/{jobInstanceId}
 **Agent steps**:
 1. Find workspace ID for "CustomerVoice" via `GET /workspaces` + JMESPath
 2. Find lakehouse ID via `GET /workspaces/{id}/lakehouses` + JMESPath
-3. Clarify scope: "Note: the schedule refreshes the **entire MLV lineage** in this lakehouse, not just `sales_monthly`."
-4. Show preview:
+3. Clarify scope: "Do you want the default full-lineage schedule, or should I create an MLV execution definition for only `sales_monthly`?"
+4. If the user chooses subset scope, create an execution definition with `currentLakehouseExecutionContext.mode = "Selected"` and `selectedMlvs = ["dbo.sales_monthly"]` (or the user's actual fully qualified MLV name), then include its `mlvExecutionDefinitionId` in schedule `executionData`.
+5. Show preview:
    ```
    Creating schedule:
      Lakehouse: CustomerVoice (ID: xyz-456-ghi)
-     Scope: Entire MLV lineage (all materialized lake views)
+     Scope: Full lineage OR execution definition <id>
      Type: Daily, Time: 02:00 UTC
      Start: Now
      End: 1 year from now
    
    Proceed? [Allow / Decline]
    ```
-5. On "Allow": POST schedule payload, return schedule ID
-6. Report: "✅ Schedule created (ID: sched-789). Entire lineage will refresh daily at 2 AM UTC."
+6. On "Allow": POST schedule payload, return schedule ID
+7. Report: "Schedule created (ID: sched-789). Scope: full lineage OR execution definition <id>."
 
 ### Workflow 2: Trigger Immediate Refresh
 
@@ -334,12 +432,12 @@ GET /workspaces/{workspaceId}/items/{lakehouseId}/jobs/instances/{jobInstanceId}
    ```
    Triggering on-demand refresh:
      Lakehouse ID: xyz-456-ghi
-     Scope: Entire MLV lineage (includes inventory_daily and all other MLVs)
+     Scope: Full lineage OR execution definition <id>
    
-   This refreshes ALL MLVs in dependency order. Proceed? [Allow / Decline]
+   Do you want the default full-lineage refresh, or only `inventory_daily` through an execution definition? Proceed? [Allow / Decline]
    ```
-3. On "Allow": POST /instances (no body), capture job ID from Location header
-4. Poll GET /items/{id}/jobs/instances/{jobId}, show progress
+3. If the user chooses a subset, create or reuse an execution definition for `inventory_daily` and send its ID in `executionData`; otherwise POST `/instances` with no body. Capture the job ID from the Location header.
+4. Poll using the item-scoped URL returned in the `Location` header, or its documented lakehouse-scoped equivalent `GET /workspaces/{workspaceId}/lakehouses/{lakehouseId}/jobs/instances/{jobId}`, and show progress.
 5. Report: "✅ Refresh completed in 2m 34s" or "❌ Refresh failed: [error message]"
 
 ### Workflow 3: User Asks for Per-MLV Scheduling (Explain Limitation)
@@ -349,18 +447,21 @@ GET /workspaces/{workspaceId}/items/{lakehouseId}/jobs/instances/{jobInstanceId}
 **Agent steps**:
 1. Explain limitation:
    ```
-   I can't schedule individual MLVs on different times — the API supports
-   one schedule per lakehouse lineage, and it refreshes ALL MLVs together
-   in dependency order.
-   
+   These views are a dependency chain, so schedule them as one lineage refresh
+   rather than at separate times. Lakehouse scheduling refreshes dependencies in
+   the required order.
+
    Options:
      1. Single Daily schedule at 2 AM (refreshes all 3 in order)
-     2. If they're in separate lakehouses, I can create one schedule per lakehouse
+     2. If the MLVs are independent, create separate execution definitions and
+        schedules within the lakehouse's 20-schedule limit
+     3. If they're in separate lakehouses, create one schedule per lakehouse
    
    Which would you prefer?
    ```
 2. If user picks option 1: Create one Daily schedule with `"times": ["02:00"]`
-3. If user picks option 2: Confirm lakehouse IDs for each, create schedules
+3. If user picks option 2: Confirm the MLVs are independent, then create the execution definitions and schedules
+4. If user picks option 3: Confirm lakehouse IDs for each, then create schedules
 
 ### Workflow 4: List and Delete Schedules
 
@@ -504,14 +605,17 @@ Valid time zones: Windows time zone names (e.g., `"Central Standard Time"`, `"Pa
 | Feature | Status | Workaround |
 |---------|--------|------------|
 | List MLVs in lakehouse | ❌ API returns 404 | User provides table names manually |
-| Get MLV lineage graph | ❌ API returns 404 | Use Fabric Lakehouse UI |
+| Refresh selected MLVs / subset lineage | ✅ Use MLV execution definitions | Create `/mlvexecutiondefinitions`, then pass `executionData.mlvExecutionDefinitionId` |
+| Get visual lineage graph | ❌ No public graph API | Use Fabric Lakehouse UI |
 | Check data quality metrics | ❌ API returns 404 | Use Fabric Lakehouse UI |
 | Verify schema support | ❌ Property missing | Assume schemas enabled if MLVs work |
 
-### What Works Today (full scheduling API coverage (Preview))
+### What Works Today (public MLV API coverage (Preview))
 
 - ✅ Create/list/update/delete schedules (5 APIs)
 - ✅ Trigger/monitor/cancel refresh jobs (4 APIs)
+- ✅ Create/list/get/update/delete MLV execution definitions (5 APIs)
+- ✅ Full-lineage or selected-lineage refresh via `executionData.mlvExecutionDefinitionId`
 - ✅ Full automation of refresh workflows
 - ✅ Human-in-the-loop safety confirmations
 - ✅ Iterative error handling
@@ -519,7 +623,7 @@ Valid time zones: Windows time zone names (e.g., `"Central Standard Time"`, `"Pa
 ### Planned (When REST APIs Ship)
 
 - **MLV Discovery**: Auto-list MLVs in a lakehouse
-- **Lineage Tracing**: Show dependency graphs
+- **Visual Lineage Tracing**: Show dependency graphs
 - **Data Quality**: Fetch DQ metrics programmatically
 - **Schema Verification**: Check `enableSchemas` property
 
@@ -527,7 +631,7 @@ Valid time zones: Windows time zone names (e.g., `"Central Standard Time"`, `"Pa
 
 ## Conclusion
 
-This skill provides **validated automation** for MLV refresh scheduling and monitoring using 100% REST API coverage. While MLV discovery requires UI workarounds today, scheduling and job execution work as documented.
+This skill provides **validated automation** for MLV refresh scheduling, execution definitions, and monitoring using public REST APIs. While MLV discovery and visual lineage inspection still require UI workarounds today, scheduling, selected-lineage execution definitions, and job execution work as documented.
 
 **Design philosophy** (inspired by Databricks Data Engineering Agent):
 - Human-in-the-loop confirmations for safety

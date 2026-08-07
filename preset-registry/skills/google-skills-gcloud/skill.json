@@ -1,0 +1,26 @@
+{
+  "id": "google-skills-gcloud",
+  "name": "gcloud",
+  "description": ">- Provides safety-critical validation, guardrails, and data reduction for gcloud CLI operations across Google Cloud Platform (GCP) services and infrastructure. Use when planning, generating, constructing, proposing, describing, or executing any gcloud CLI commands - including when answering questions about gcloud syntax, or formatting flags. Don't use when writing Google Cloud client library code or raw REST/gRPC API requests.",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/gcloud/SKILL.md",
+  "source": {
+    "repo": "google/skills",
+    "url": "https://github.com/google/skills/blob/main/skills/cloud/gcloud/SKILL.md",
+    "path": "skills/cloud/gcloud/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-07T00:54:32.018Z",
+    "stars": 15776,
+    "language": "Python",
+    "pushed_at": "2026-08-06T21:24:27Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "为 GCP 命令行操作提供安全校验、风险防护和结果精简，适合生成、检查或执行各类云资源命令。"
+}

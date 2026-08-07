@@ -1,19 +1,22 @@
 ---
 name: spark-authoring-cli
 description: >
-  Author Fabric notebook cell code; run a notebook by name and report its status; and author/create
-  Materialized Lake View (MLV) definitions (CREATE MATERIALIZED LAKE VIEW).
-  Use for writing notebook cell code (PySpark, Scala, SparkR, %%sql, %%configure) — a %%sql cell that
-  queries a lakehouse is authoring, not a T-SQL query — and running a notebook via the Jobs API
-  (RunNotebook), including on the success path.
-  Not for Livy sessions or ad-hoc calculations (use `spark-consumption-cli`); to refresh/schedule an
-  EXISTING MLV, use `mlv-operations-cli`; for plain T-SQL, use `sqldw-consumption-cli`; for a FAILED
-  notebook/job, use `spark-operations-cli`.
-  Triggers: "write notebook code", "notebook cell code", "%%sql cell", "run the notebook named",
-  "run notebook", "execute notebook", "notebookutils", "PySpark notebook", "%%configure",
-  "create a materialized lake view", "create MLV", "materialized lake view", "MLV",
-  "CREATE MATERIALIZED LAKE VIEW", "MLV incremental refresh"
+  Develop Microsoft Fabric Spark/data engineering workflows and write code in Fabric Notebook cells
+  with routing to resources. Provides workspace/lakehouse management, notebook
+  code authoring (PySpark, Scala, SparkR, SQL), and Materialized Lake View (MLV) authoring
+  (Spark SQL MLVs support incremental refresh; PySpark is full-refresh only). Routes to data
+  engineering patterns, development workflow, or infrastructure orchestration. For existing MLV
+  refresh or schedule management, use `mlv-operations-cli`.
+  Triggers: "develop notebook", "Delta Lake patterns", "Spark development", "lakehouse configuration",
+  "write notebook code", "notebookutils", "notebook cell", "PySpark notebook",
+  "%%sql cell", "%%configure", "fabric notebook", "run notebook", "notebook deployment",
+  "materialized lake view", "MLV", "CREATE MATERIALIZED LAKE VIEW",
+  "MLV incremental refresh", "review MLV for incremental refresh", "MLV refresh policy"
 ---
+
+> **Telemetry — MANDATORY.** Every `api.fabric.microsoft.com` call must carry
+> `x-ms-fabric-skill: spark-authoring-cli` (`az rest`: `--headers "x-ms-fabric-skill=spark-authoring-cli"`),
+> including every LRO poll, `fabric_lro` and retry. Snippets omit it — add it anyway.
 
 > **Update Check — ONCE PER SESSION (mandatory)**
 > The first time this skill is used in a session, run the **check-updates** skill before proceeding.

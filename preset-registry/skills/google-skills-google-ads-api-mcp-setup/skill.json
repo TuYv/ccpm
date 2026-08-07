@@ -1,0 +1,26 @@
+{
+  "id": "google-skills-google-ads-api-mcp-setup",
+  "name": "google-ads-api-mcp-setup",
+  "description": "Guides developers through downloading, configuring, and installing the official open-source Google Ads MCP Server. Use this skill when a user wants to connect their AI assistant (such as Gemini, Claude Code, or Cursor) to their Google Ads account to query campaigns or retrieve reporting metrics using natural language.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/google-ads-api-mcp-setup/SKILL.md",
+  "source": {
+    "repo": "google/skills",
+    "url": "https://github.com/google/skills/blob/main/skills/ads/google-ads-api-mcp-setup/SKILL.md",
+    "path": "skills/ads/google-ads-api-mcp-setup/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-07T00:54:26.956Z",
+    "stars": 15776,
+    "language": "Python",
+    "pushed_at": "2026-08-06T21:24:27Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "指导开发者安装配置 Google Ads MCP 服务，让 AI 助手通过自然语言查询广告活动和报表数据。"
+}

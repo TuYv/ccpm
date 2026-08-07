@@ -1,0 +1,26 @@
+{
+  "id": "google-skills-cloud-logging-query-generation",
+  "name": "cloud-logging-query-generation",
+  "description": ">- Generates Logging Query Language (LQL) queries for Google Cloud Logging from natural language. Use this skill when you need to query log data or when you are debugging issues. You can filter log data by Google Cloud service. Don't use this skill to query other databases, such as SQL or Cloud Spanner.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/cloud-logging-query-generation/SKILL.md",
+  "source": {
+    "repo": "google/skills",
+    "url": "https://github.com/google/skills/blob/main/skills/cloud/cloud-logging-query-generation/SKILL.md",
+    "path": "skills/cloud/cloud-logging-query-generation/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-07T00:54:30.832Z",
+    "stars": 15776,
+    "language": "Python",
+    "pushed_at": "2026-08-06T21:24:27Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "将自然语言转换为 Google Cloud Logging 查询语句，适合按云服务筛选日志和排查故障。"
+}

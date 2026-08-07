@@ -1,0 +1,26 @@
+{
+  "id": "chrisbanes-skills-kotlin-api-design",
+  "name": "kotlin-api-design",
+  "description": "Use when designing or reviewing Kotlin function ownership, member or extension functions, factories, single-field domain types, value classes, data classes, Kotlin Multiplatform expect/actual declarations, or platform service boundaries.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "chrisbanes",
+  "install_path": ".claude/skills/kotlin-api-design/SKILL.md",
+  "source": {
+    "repo": "chrisbanes/skills",
+    "url": "https://github.com/chrisbanes/skills/blob/main/skills/kotlin-api-design/SKILL.md",
+    "path": "skills/kotlin-api-design/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-07T01:45:07.757Z",
+    "stars": 898,
+    "language": "Python",
+    "pushed_at": "2026-08-06T15:37:07Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "一套 Kotlin API 设计与评审指南，适合处理函数归属、类型建模、跨平台声明和服务边界等问题。"
+}
