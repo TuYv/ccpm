@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-07T05:09:56.272Z",
+  "updated_at": "2026-08-07T07:05:54.018Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -17358,9 +17358,9 @@
       "translated_at": "2026-08-03T04:58:57.465Z"
     },
     "bundle:daymade-claude-code-skills": {
-      "hash": "f2bdc92a0ae1cc36",
-      "summary_zh": "这是面向 Claude Code 的综合技能库，覆盖开发协作、仓库管理、数据采集、内容处理与研究分析，帮助把日常工作自动化并串成高效流程。",
-      "translated_at": "2026-08-06T10:28:56.919Z"
+      "hash": "25c0560ca9b8b1f0",
+      "summary_zh": "面向 Claude Code 的综合技能合集，覆盖开发运维、数据采集、内容处理与自动化，让复杂任务更易搭建、执行和复用。",
+      "translated_at": "2026-08-07T07:05:34.967Z"
     },
     "bundle:specstoryai-getspecstory": {
       "hash": "c770b3a6c617c63e",
@@ -17378,9 +17378,9 @@
       "translated_at": "2026-08-03T04:59:09.893Z"
     },
     "bundle:modu-ai-moai-adk": {
-      "hash": "c6dc399cf153bd53",
-      "summary_zh": "这是一套面向开源项目研发的多智能体协作工具集，将编码规范、质量检查、自我演进、发布和多语言文档串成自动化工作流。",
-      "translated_at": "2026-08-05T12:58:51.153Z"
+      "hash": "a3beb8d33cc3ea78",
+      "summary_zh": "面向 moai-adk-go 开发与维护，整合规范、开发流程、自动化改进和多语言文档协作，提升工程交付的一致性与效率。",
+      "translated_at": "2026-08-07T07:05:35.810Z"
     },
     "bundle:aaronontheweb-dotnet-skills": {
       "hash": "2a50d5841385267e",
@@ -17523,9 +17523,9 @@
       "translated_at": "2026-08-03T05:00:36.289Z"
     },
     "preset:23blocks-os-ai-maestro": {
-      "hash": "d3c4d99972b16f6d",
-      "summary_zh": "统一调度多台电脑上的各类 AI 智能体，让它们共享记忆、互相协作，适合管理大规模 AI 开发团队。",
-      "translated_at": "2026-08-05T01:23:55.075Z"
+      "hash": "9fd5d15f928873ba",
+      "summary_zh": "面向 AI Agent 团队的统一编排平台，让 Claude、Codex 等代理共享记忆、互相通信并跨电脑协作，适合管理多代理开发流程。",
+      "translated_at": "2026-08-07T07:05:43.759Z"
     },
     "preset:milisp-codexia": {
       "hash": "5bd22ad69c6f54f0",
@@ -20408,9 +20408,9 @@
       "translated_at": "2026-08-03T16:25:58.502Z"
     },
     "skill:daymade-claude-code-skills-transcript-fixer": {
-      "hash": "ba9cee7788d1e06a",
-      "summary_zh": "一款语音转写纠错工具，结合词典和内置 AI 修正人名、同音词等错误，适合整理会议、访谈和字幕文本。",
-      "translated_at": "2026-08-03T16:26:00.276Z"
+      "hash": "3d3e4427255b0013",
+      "summary_zh": "用于修正语音转文字中的人名、同音词等错误，适合会议记录、字幕和日常口述整理，并会持续学习个人用词。",
+      "translated_at": "2026-08-07T07:05:44.742Z"
     },
     "skill:daymade-claude-code-skills-twitter-reader": {
       "hash": "4c6de3d1abfa29e2",
@@ -28626,6 +28626,11 @@
       "hash": "c2182619be606a7c",
       "summary_zh": "用于设计、查询和排查 Fabric SQL 数据库的命令行工具，适合建模部署及分析阻塞、查询性能等问题。",
       "translated_at": "2026-08-07T01:53:17.777Z"
+    },
+    "skill:modu-ai-moai-adk-moai-ref-cross-model-audit": {
+      "hash": "06f578548d0168b9",
+      "summary_zh": "这是一个跨模型代码审计参考规范，指导审计代理并行调用 Codex 与 GLM 复核、汇总分歧并纳入最终审计结果。",
+      "translated_at": "2026-08-07T07:05:54.018Z"
     }
   }
 }

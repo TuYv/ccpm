@@ -1,7 +1,7 @@
 {
   "id": "fradser-dotclaude-consolidate",
   "name": "consolidate",
-  "description": "This skill should be used when the user asks to \"consolidate memory\", \"tidy memory\", \"整理记忆\", \"consolidate memory\", \"rebuild MEMORY.md\", \"sync memory\", \"sync memories\", \"双向同步记忆\", \"push memory to repo\", \"pull memory from repo\", \"promote a memory to public\", \"publish a memory\", \"发布记忆\", \"公开某条记忆\", \"move memory to repo\", or wants to normalize, deduplicate, prune, rebuild, or sync project memory. Consolidates the project's memory — the private harness memory (~/.claude/projects/<escaped-cwd>/memory) an",
+  "description": "This skill should be used when the user asks to \"consolidate memory\", \"tidy memory\", \"整理记忆\", \"rebuild MEMORY.md\", or wants to normalize, deduplicate, prune, or rebuild project memory. Consolidates the project's memory as one unlayered store — the private harness memory (~/.claude/projects/<escaped-cwd>/memory) and the repo-local memory (docs/memory/).",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/FradSer/dotclaude/blob/main/memory/skills/consolidate/SKILL.md",
     "path": "memory/skills/consolidate/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-07T04:16:25.355Z",
+    "discovered_at": "2026-08-07T06:07:58.376Z",
     "stars": 575,
     "language": "JavaScript",
-    "pushed_at": "2026-08-06T17:40:03Z",
+    "pushed_at": "2026-08-07T05:56:52Z",
     "license": "MIT"
-  },
-  "summary_zh": "用于整理和同步项目记忆，可去重、清理、重建内容，并在本地私有记忆与代码仓库之间双向迁移。"
+  }
 }
