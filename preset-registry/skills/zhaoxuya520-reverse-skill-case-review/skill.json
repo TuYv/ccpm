@@ -1,0 +1,26 @@
+{
+  "id": "zhaoxuya520-reverse-skill-case-review",
+  "name": "case-review",
+  "description": "Reviews a reverse-skill case package for scope readiness, Evidence to Finding to Path traceability, work item coverage, timeline references, and optional artifact hash integrity before report handoff.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "zhaoxuya520",
+  "install_path": ".claude/skills/case-review/SKILL.md",
+  "source": {
+    "repo": "zhaoxuya520/reverse-skill",
+    "url": "https://github.com/zhaoxuya520/reverse-skill/blob/main/skills/case-review/SKILL.md",
+    "path": "skills/case-review/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-08T10:25:30.448Z",
+    "stars": 20829,
+    "language": "PowerShell",
+    "pushed_at": "2026-08-08T10:15:17Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于在报告交接前审查逆向分析案件材料，核验范围、证据链、工作项、时间线及可选的附件哈希完整性。"
+}
