@@ -2,7 +2,7 @@
   "id": "callstackincubator-agent-skills-react-native-brownfield-migration",
   "name": "react-native-brownfield-migration",
   "description": "Implements an accepted incremental brownfield migration from native iOS or Android to React Native or Expo using @callstack/react-native-brownfield. Use after the brownfield path has been selected, when setting up the integration, packaging XCFramework or AAR artifacts, or adding React Native surfaces to native hosts.",
-  "category": "数据分析",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/callstackincubator/agent-skills/blob/main/skills/react-native-brownfield-migration/SKILL.md",
     "path": "skills/react-native-brownfield-migration/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-08T04:15:34.421Z",
+    "discovered_at": "2026-08-08T05:23:52.978Z",
     "stars": 1589,
     "language": "Shell",
-    "pushed_at": "2026-08-08T04:14:26Z",
+    "pushed_at": "2026-08-08T04:42:24Z",
     "license": "MIT"
   },
   "summary_zh": "帮助原生 iOS/Android 应用渐进迁移到 React Native 或 Expo，适合集成框架、打包组件及嵌入跨端页面。"

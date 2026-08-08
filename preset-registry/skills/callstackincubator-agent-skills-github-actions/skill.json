@@ -2,7 +2,7 @@
   "id": "callstackincubator-agent-skills-github-actions",
   "name": "github-actions",
   "description": "GitHub Actions workflow patterns for React Native iOS simulator and Android emulator cloud builds with downloadable artifacts. Use when setting up CI build pipelines or downloading GitHub Actions artifacts via gh CLI and GitHub API.",
-  "category": "数据分析",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/callstackincubator/agent-skills/blob/main/skills/github-actions/SKILL.md",
     "path": "skills/github-actions/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-08T04:15:33.965Z",
+    "discovered_at": "2026-08-08T05:23:52.702Z",
     "stars": 1589,
     "language": "Shell",
-    "pushed_at": "2026-08-08T04:14:26Z",
+    "pushed_at": "2026-08-08T04:42:24Z",
     "license": "MIT"
   },
   "summary_zh": "这是一套React Native的iOS与安卓云构建工作流模板，能帮你快速搭建CI流水线，也适合需要通过命令行或API下载构建产物的场景。"
