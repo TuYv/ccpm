@@ -1,0 +1,26 @@
+{
+  "id": "fradser-dotclaude-migrate-to-shoehorn",
+  "name": "migrate-to-shoehorn",
+  "description": "Migrate test files from `as` type assertions to @total-typescript/shoehorn. Use when user mentions shoehorn, wants to replace `as` in tests, or needs partial test data.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "FradSer",
+  "install_path": ".claude/skills/migrate-to-shoehorn/SKILL.md",
+  "source": {
+    "repo": "FradSer/dotclaude",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/mattpocock/skills/misc/migrate-to-shoehorn/SKILL.md",
+    "path": "mattpocock/skills/misc/migrate-to-shoehorn/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-08T12:15:16.413Z",
+    "stars": 576,
+    "language": "JavaScript",
+    "pushed_at": "2026-08-08T10:48:48Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于将测试文件中的 as 类型断言迁移为 shoehorn，方便构造不完整的测试数据并提升类型安全性。"
+}

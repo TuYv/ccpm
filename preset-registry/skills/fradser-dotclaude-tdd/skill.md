@@ -1,13 +1,20 @@
 ---
 name: tdd
-description: Test-driven development. Use when the user wants to build features or fix bugs test-first, mentions "red-green-refactor", or wants integration tests.
+description: "BDD-driven test implementation: red-green loop mechanics, seams, mocking, and test quality under BDD Automation. Use when the user wants to write or improve tests during BDD implementation, needs guidance on test structure, or asks about test seams, mocking, or anti-patterns."
 ---
 
-# Test-Driven Development
+# BDD-Driven TDD (Automation)
 
-TDD is the red → green loop. This skill is the reference that makes that loop produce tests worth keeping: what a good test is, where tests go, the anti-patterns, and the rules of the loop. Every section applies on every cycle — consult them before and during the loop, not after.
+BDD cycles through three phases: **Discovery** (conversations → examples), **Formulation** (Gherkin scenarios), **Automation** (red-green-refactor, driven by BDD). This skill is the **BDD-driven Automation** reference — the how of test implementation, once `/mattpocock:bdd` has defined the what.
 
-When exploring the codebase, read `CONTEXT.md` (if it exists) so test names and interface vocabulary match the project's domain language, and respect ADRs in the area you're touching.
+When invoked during `/mattpocock:implement` or `/mattpocock:bdd`, use this skill as the test-writing authority. The `/mattpocock:bdd` skill governs the scenario design and Iron Law; this skill governs the test code quality under BDD discipline.
+
+## CRITICAL: BDD scenarios come first
+
+If you reached this skill directly (not via `/mattpocock:bdd` or `/mattpocock:implement`), stop and ask the user: **"Have you defined the Gherkin scenarios for this behavior yet?"**
+
+- If **no** → invoke `/mattpocock:bdd` first to define the scenarios via Discovery → Formulation, then return here for Automation.
+- If **yes** → confirm the scenarios are in `.feature` files or equivalent, then proceed with the red-green loop below.
 
 ## What a good test is
 
@@ -19,11 +26,11 @@ See [tests.md](tests.md) for examples and [mocking.md](mocking.md) for mocking g
 
 A **seam** is the public boundary you test at: the interface where you observe behavior without reaching inside. Tests live at seams, never against internals.
 
-**Test only at pre-agreed seams.** Before writing any test, write down the seams under test and confirm them with the user. No test is written at an unconfirmed seam. You can't test everything — agreeing the seams up front is how testing effort lands on the critical paths and complex logic instead of every edge case.
+**Test only at pre-agreed seams.** Before writing any test, write down the seams under test and confirm them with the user. No test is written at an unconfirmed seam. Not everything can be tested — agreeing the seams up front is how testing effort lands on the critical paths and complex logic instead of every edge case.
 
 Ask: "What's the public interface, and which seams should we test?"
 
-When the shape of that interface is itself in question — how deep the module is, where the seam belongs, what the interface should expose — use the `/codebase-design` skill for the vocabulary. It is the shared source of the module, interface, depth, seam, adapter, leverage and locality terms, and it is a reference to consult, not a session to run.
+When the shape of that interface is itself in question — how deep the module is, where the seam belongs, what the interface should expose — use the `/mattpocock:codebase-design` skill for the vocabulary. It is the shared source of the module, interface, depth, seam, adapter, leverage and locality terms, and it is a reference to consult, not a session to run.
 
 ## Anti-patterns
 
@@ -35,4 +42,25 @@ When the shape of that interface is itself in question — how deep the module i
 
 - **Red before green.** Write the failing test first, then only enough code to pass it. Don't anticipate future tests or add speculative features.
 - **One slice at a time.** One seam, one test, one minimal implementation per cycle.
-- **Refactoring is not part of the loop.** It belongs to the review stage (see the `code-review` skill), not the red → green implementation cycle.
+- **Refactoring is not part of the loop.** It belongs to the review stage (see `/mattpocock:code-review`), not the red → green implementation cycle.
+
+## CRITICAL: BDD-Driven — not standalone TDD
+
+This skill is the **Automation** phase of the BDD lifecycle. It always runs under `/mattpocock:bdd` or `/mattpocock:implement` as **BDD-driven TDD**. If invoked directly, see the CRITICAL check at the top of this file — confirm scenarios exist before writing test code.
+
+1. **Discovery** (what behavior matters) — owned by `/mattpocock:bdd` via Gherkin scenarios
+2. **Formulation** (scenario as specification) — owned by `/mattpocock:bdd` via `.feature` files
+3. **Automation** (this skill) — the red-green loop that makes the scenario pass
+
+## When to invoke
+
+Invoke this skill explicitly when:
+- The user asks "how should I test this?" during BDD implementation
+- The user asks about mocking, seams, or test structure
+- The user writes a test that looks implementation-coupled
+- The user asks about mocking strategy at system boundaries
+- The user is unsure whether a test is good or tautological
+
+When invoked directly, first check if Gherkin scenarios exist (see the CRITICAL check at the top). If not, redirect to `/mattpocock:bdd` before proceeding with Automation.
+
+The `/mattpocock:bdd` and `/mattpocock:implement` skills load this automatically during the Automation phase — you do not need to invoke it separately in those flows.

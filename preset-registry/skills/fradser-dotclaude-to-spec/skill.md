@@ -6,7 +6,7 @@ disable-model-invocation: true
 
 This skill takes the current conversation context and codebase understanding and produces a spec (you may know this document as a PRD). Do NOT interview the user — just synthesize what you already know.
 
-The issue tracker and triage label vocabulary should have been provided to you — run `/superdev:setup-matt-pocock-skills` if not.
+The issue tracker and triage label vocabulary should have been provided to you — run `/mattpocock:setup-matt-pocock-skills` if not.
 
 ## CRITICAL: No interview — synthesize what you already know
 
@@ -46,7 +46,7 @@ This list of user stories should be extremely extensive and cover all aspects of
 
 ## Scenarios
 
-Executable scenarios derived from the user stories above, written as Gherkin (Given/When/Then). Each scenario pins one behavior; collectively they are the executable specification the implementation is verified against. See `/superdev:bdd` for the scenario authoring guide and the `.feature` storage convention.
+Executable scenarios derived from the user stories above, written as Gherkin (Given/When/Then). Each scenario pins one behavior; collectively they are the executable specification the implementation is verified against. See `/mattpocock:bdd` for the scenario authoring guide and the `.feature` storage convention.
 
 ## Implementation Decisions
 

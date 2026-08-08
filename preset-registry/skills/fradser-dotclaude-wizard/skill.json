@@ -1,0 +1,25 @@
+{
+  "id": "fradser-dotclaude-wizard",
+  "name": "wizard",
+  "description": "Generates an interactive bash wizard that walks a human through steps only they can perform. Use when provisioning infrastructure, setting up credentials or CI secrets, walking an unfamiliar third-party dashboard, running a one-off migration or cutover, or the user says \"build a wizard\" or wants a scripted step-by-step setup. Don't invoke this for steps the agent can perform itself.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "FradSer",
+  "install_path": ".claude/skills/wizard/SKILL.md",
+  "source": {
+    "repo": "FradSer/dotclaude",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/mattpocock/skills/engineering/wizard/SKILL.md",
+    "path": "mattpocock/skills/engineering/wizard/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-08T12:15:15.442Z",
+    "stars": 576,
+    "language": "JavaScript",
+    "pushed_at": "2026-08-08T10:48:48Z",
+    "license": "MIT"
+  }
+}

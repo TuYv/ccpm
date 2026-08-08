@@ -1,0 +1,26 @@
+{
+  "id": "fradser-dotclaude-wayfinder",
+  "name": "wayfinder",
+  "description": "Plans a huge chunk of work — more than one agent session can hold — as a shared map of decision tickets on the issue tracker, resolved one at a time. Use when the user has a large ambiguous goal and wants the route charted.",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "FradSer",
+  "install_path": ".claude/skills/wayfinder/SKILL.md",
+  "source": {
+    "repo": "FradSer/dotclaude",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/mattpocock/skills/engineering/wayfinder/SKILL.md",
+    "path": "mattpocock/skills/engineering/wayfinder/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-08T12:15:15.349Z",
+    "stars": 576,
+    "language": "JavaScript",
+    "pushed_at": "2026-08-08T10:48:48Z",
+    "license": "MIT"
+  },
+  "summary_zh": "把大型、模糊的目标拆成 issue 中可逐项决策的路线图，适合跨多个智能体会话规划复杂工作。"
+}

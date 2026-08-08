@@ -1,0 +1,26 @@
+{
+  "id": "fradser-dotclaude-setup-pre-commit",
+  "name": "setup-pre-commit",
+  "description": "Set up Husky pre-commit hooks with lint-staged (Prettier), type checking, and tests in the current repo. Use when user wants to add pre-commit hooks, set up Husky, configure lint-staged, or add commit-time formatting/typechecking/testing.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "FradSer",
+  "install_path": ".claude/skills/setup-pre-commit/SKILL.md",
+  "source": {
+    "repo": "FradSer/dotclaude",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/mattpocock/skills/misc/setup-pre-commit/SKILL.md",
+    "path": "mattpocock/skills/misc/setup-pre-commit/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-08T12:15:16.627Z",
+    "stars": 576,
+    "language": "JavaScript",
+    "pushed_at": "2026-08-08T10:48:48Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于在当前仓库配置提交前检查，自动执行代码格式化、类型检查和测试，适合统一提交规范并提前发现问题。"
+}

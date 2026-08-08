@@ -1,0 +1,26 @@
+{
+  "id": "fradser-dotclaude-scaffold-exercises",
+  "name": "scaffold-exercises",
+  "description": "Create exercise directory structures with sections, problems, solutions, and explainers that pass linting. Use when user wants to scaffold exercises, create exercise stubs, or set up a new course section.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "FradSer",
+  "install_path": ".claude/skills/scaffold-exercises/SKILL.md",
+  "source": {
+    "repo": "FradSer/dotclaude",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/mattpocock/skills/misc/scaffold-exercises/SKILL.md",
+    "path": "mattpocock/skills/misc/scaffold-exercises/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-08T12:15:16.528Z",
+    "stars": 576,
+    "language": "JavaScript",
+    "pushed_at": "2026-08-08T10:48:48Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于快速搭建包含章节、题目、答案和讲解的练习目录结构，适合创建课程章节或生成符合规范的练习模板。"
+}

@@ -141,4 +141,6 @@ Required before declaring done:
 - [ ] Throwaway prototypes deleted (or moved to a clearly-marked debug location)
 - [ ] The hypothesis that turned out correct is stated in the commit / PR message — so the next debugger learns
 
-**Then use the AskUserQuestion tool to ask what would have prevented this bug** — options: no good test seam / tangled callers / hidden coupling / nothing worth changing, plus "Other" for anything else. If the answer involves architectural change (no good test seam, tangled callers, hidden coupling) hand off to the `/superdev:improve-codebase-architecture` skill with the specifics. Make the recommendation **after** the fix is in, not before — you have more information now than when you started.
+**Then use the AskUserQuestion tool to ask what would have prevented this bug** — options: no good test seam / tangled callers / hidden coupling / nothing worth changing, plus "Other" for anything else. If the answer involves architectural change (no good test seam, tangled callers, hidden coupling) hand off to the `/mattpocock:improve-codebase-architecture` skill with the specifics. Make the recommendation **after** the fix is in, not before — you have more information now than when you started.
+
+After the post-mortem, run `/mattpocock:code-review` over the fix — a bug fix without a two-axis review is not finished work.

@@ -1,7 +1,7 @@
 {
   "id": "fradser-dotclaude-bdd",
   "name": "bdd",
-  "description": "Behavior-driven development. Use when the user wants to build features or fix bugs test-first via Gherkin scenarios and the red-green-refactor loop, or mentions BDD/Gherkin/Executable Specifications.",
+  "description": "Behavior-driven development: Discovery → Formulation → Automation. Use when the user wants to build features or fix bugs via Gherkin scenarios and the BDD lifecycle, or mentions BDD/Gherkin/Executable Specifications. Delegates test implementation to /mattpocock:tdd.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -13,14 +13,13 @@
   "install_path": ".claude/skills/bdd/SKILL.md",
   "source": {
     "repo": "FradSer/dotclaude",
-    "url": "https://github.com/FradSer/dotclaude/blob/main/superdev/skills/engineering/bdd/SKILL.md",
-    "path": "superdev/skills/engineering/bdd/SKILL.md",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/mattpocock/skills/engineering/bdd/SKILL.md",
+    "path": "mattpocock/skills/engineering/bdd/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-08T10:22:25.996Z",
+    "discovered_at": "2026-08-08T12:15:13.533Z",
     "stars": 576,
     "language": "JavaScript",
-    "pushed_at": "2026-08-07T16:19:06Z",
+    "pushed_at": "2026-08-08T10:48:48Z",
     "license": "MIT"
-  },
-  "summary_zh": "一种行为驱动开发方法，通过 Gherkin 场景和红绿重构循环，以测试先行方式开发功能、修复缺陷。"
+  }
 }

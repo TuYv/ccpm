@@ -1,0 +1,26 @@
+{
+  "id": "fradser-dotclaude-triage",
+  "name": "triage",
+  "description": "Moves issues and external PRs through a state machine of triage roles — categorise, verify, grill, and write agent-ready briefs. Use when the user says \\\"triage this issue\\\" or wants agent-ready issue briefs.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "FradSer",
+  "install_path": ".claude/skills/triage/SKILL.md",
+  "source": {
+    "repo": "FradSer/dotclaude",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/mattpocock/skills/engineering/triage/SKILL.md",
+    "path": "mattpocock/skills/engineering/triage/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-08T12:15:15.235Z",
+    "stars": 576,
+    "language": "JavaScript",
+    "pushed_at": "2026-08-08T10:48:48Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一个帮助团队分流和审核 Issue、外部 PR，并整理成可直接交给 AI 代理处理的任务简报工具。"
+}

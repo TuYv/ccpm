@@ -1,7 +1,7 @@
 {
   "id": "fradser-dotclaude-tdd",
   "name": "tdd",
-  "description": "Test-driven development. Use when the user wants to build features or fix bugs test-first, mentions \"red-green-refactor\", or wants integration tests.",
+  "description": "BDD-driven test implementation: red-green loop mechanics, seams, mocking, and test quality under BDD Automation. Use when the user wants to write or improve tests during BDD implementation, needs guidance on test structure, or asks about test seams, mocking, or anti-patterns.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -13,14 +13,14 @@
   "install_path": ".claude/skills/tdd/SKILL.md",
   "source": {
     "repo": "FradSer/dotclaude",
-    "url": "https://github.com/FradSer/dotclaude/blob/main/superdev/skills/engineering/tdd/SKILL.md",
-    "path": "superdev/skills/engineering/tdd/SKILL.md",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/mattpocock/skills/engineering/tdd/SKILL.md",
+    "path": "mattpocock/skills/engineering/tdd/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-07T16:18:08.746Z",
+    "discovered_at": "2026-08-08T12:15:14.930Z",
     "stars": 576,
     "language": "JavaScript",
-    "pushed_at": "2026-08-07T15:07:57Z",
+    "pushed_at": "2026-08-08T10:48:48Z",
     "license": "MIT"
   },
-  "summary_zh": "用于测试驱动开发，适合按“红-绿-重构”流程先写测试再实现功能、修复缺陷或补充集成测试。"
+  "summary_zh": "用于在 BDD 开发中编写和改进测试，指导红绿循环、测试结构、代码接缝与 Mock，避免常见反模式。"
 }

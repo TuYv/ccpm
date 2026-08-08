@@ -6,14 +6,14 @@ disable-model-invocation: true
 
 Implement the work described by the user in the spec or tickets.
 
-Use /superdev:bdd where possible, at pre-agreed seams.
+Use /mattpocock:bdd where possible, at pre-agreed seams. During the Automation phase, load `/mattpocock:tdd` (BDD-driven) for test quality, seams, and mocking guidance.
 
 Run typechecking regularly, single test files regularly, and the full test suite once at the end.
 
-Once done, use /superdev:code-review to review the work.
+Once done, use /mattpocock:code-review to review the work.
 
 ## CRITICAL: BDD at pre-agreed seams, review before commit
 
-Use `/superdev:bdd` where possible, one red-green slice at a time at pre-agreed seams. When the work is done, run `/superdev:code-review` over it — a commit without the two-axis review is not finished work.
+Use `/mattpocock:bdd` where possible, one red-green slice at a time at pre-agreed seams. Load `/mattpocock:tdd` (BDD-driven) during the Automation phase for test quality, seams, and mocking guidance. When the work is done, run `/mattpocock:code-review` over it — a commit without the two-axis review is not finished work.
 
 Commit your work to the current branch.

@@ -1,0 +1,26 @@
+{
+  "id": "fradser-dotclaude-writing-shape",
+  "name": "writing-shape",
+  "description": "Exploit-phase writing — shapes raw material into an article paragraph by paragraph. Use when the user has a raw-material pile and wants the final article written.",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "FradSer",
+  "install_path": ".claude/skills/writing-shape/SKILL.md",
+  "source": {
+    "repo": "FradSer/dotclaude",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/mattpocock/skills/in-progress/writing-shape/SKILL.md",
+    "path": "mattpocock/skills/in-progress/writing-shape/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-08T12:15:16.210Z",
+    "stars": 576,
+    "language": "JavaScript",
+    "pushed_at": "2026-08-08T10:48:48Z",
+    "license": "MIT"
+  },
+  "summary_zh": "将零散素材逐段组织、打磨成完整文章，适合已有原始材料、需要直接完成写作的场景。"
+}

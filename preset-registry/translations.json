@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-08T11:18:49.728Z",
+  "updated_at": "2026-08-08T12:24:19.958Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -10078,9 +10078,9 @@
       "translated_at": "2026-08-03T04:59:48.713Z"
     },
     "bundle:fradser-dotclaude": {
-      "hash": "98806d533a85a20c",
-      "summary_zh": "面向产品、营销与研发团队的 Claude 技能库，将增长运营、设计协作、数据分析和自动化执行串成完整工作流。",
-      "translated_at": "2026-08-07T18:24:45.895Z"
+      "hash": "01a44b96b0634a9c",
+      "summary_zh": "一套面向增长、产品、设计与自动化工作的 Claude 技能合集，把分散的专业流程整合起来，帮助团队更快完成从策略到执行。",
+      "translated_at": "2026-08-08T12:23:26.338Z"
     },
     "bundle:sethgammon-citadel": {
       "hash": "ccfc472396f8c5a3",
@@ -20983,9 +20983,9 @@
       "translated_at": "2026-08-03T16:28:37.125Z"
     },
     "skill:fradser-dotclaude-delegate": {
-      "hash": "5e42dda71c714751",
-      "summary_zh": "将当前编程上下文交给 pi 命令行执行，适合让它接手具体开发任务并同步相关文件与 Git 状态。",
-      "translated_at": "2026-08-07T18:24:51.567Z"
+      "hash": "924c3284edb5f5af",
+      "summary_zh": "将任务交给运行在远程隔离 Linux 沙箱中的 Gemini 代理，适合需要联网搜索、读取网页或执行代码的工作。",
+      "translated_at": "2026-08-08T12:23:37.243Z"
     },
     "skill:fradser-dotclaude-design-an-interface": {
       "hash": "a64fea372f0dbd86",
@@ -28783,9 +28783,9 @@
       "translated_at": "2026-08-07T17:16:28.999Z"
     },
     "skill:fradser-dotclaude-tdd": {
-      "hash": "b5cdb85203c4add5",
-      "summary_zh": "用于测试驱动开发，适合按“红-绿-重构”流程先写测试再实现功能、修复缺陷或补充集成测试。",
-      "translated_at": "2026-08-07T17:16:30.224Z"
+      "hash": "e85f5a64e7e286be",
+      "summary_zh": "用于在 BDD 开发中编写和改进测试，指导红绿循环、测试结构、代码接缝与 Mock，避免常见反模式。",
+      "translated_at": "2026-08-08T12:24:02.004Z"
     },
     "skill:getsentry-sentry-react-testing": {
       "hash": "1064fa5ae424eda4",
@@ -28821,6 +28821,81 @@
       "hash": "9a59010f16c88a96",
       "summary_zh": "用于在报告交接前审查逆向分析案件材料，核验范围、证据链、工作项、时间线及可选的附件哈希完整性。",
       "translated_at": "2026-08-08T11:18:49.727Z"
+    },
+    "skill:fradser-dotclaude-batch-grill-me": {
+      "hash": "8beac1ff403ca49c",
+      "summary_zh": "一种分轮次穷追问题的设计访谈工具，适合系统梳理设计方案、挖掘边界条件并绘制决策树。",
+      "translated_at": "2026-08-08T12:23:30.589Z"
+    },
+    "skill:fradser-dotclaude-git-guardrails-claude-code": {
+      "hash": "32af2ae29f1e737f",
+      "summary_zh": "为 Claude Code 配置 Git 安全钩子，在执行推送、硬重置、强制删分支等危险操作前拦截，适合防止误删代码或误推送。",
+      "translated_at": "2026-08-08T12:23:42.841Z"
+    },
+    "skill:fradser-dotclaude-claude-handoff": {
+      "hash": "cdac1ebf3f06ea9b",
+      "summary_zh": "用于把当前对话交给新的后台智能体，让任务无需中断即可继续执行。",
+      "translated_at": "2026-08-08T12:23:46.347Z"
+    },
+    "skill:fradser-dotclaude-edit-article": {
+      "hash": "398d28c282299ea0",
+      "summary_zh": "用于编辑和优化文章草稿，通过重组结构、提升表达清晰度和精炼文字，让内容更流畅易读。",
+      "translated_at": "2026-08-08T12:23:47.064Z"
+    },
+    "skill:fradser-dotclaude-loop-me": {
+      "hash": "c2dac7c3987b4541",
+      "summary_zh": "通过持续追问梳理需求，帮助用户明确并产出可执行的工作流规格，适合设计新流程或搭建自动化工作流。",
+      "translated_at": "2026-08-08T12:23:49.473Z"
+    },
+    "skill:fradser-dotclaude-obsidian-vault": {
+      "hash": "84615986a3eacf5f",
+      "summary_zh": "用于搜索、创建和整理 Obsidian 笔记，支持维基链接与索引笔记，适合管理和组织知识库。",
+      "translated_at": "2026-08-08T12:23:52.354Z"
+    },
+    "skill:fradser-dotclaude-scaffold-exercises": {
+      "hash": "b5dafddcf3c3d019",
+      "summary_zh": "用于快速搭建包含章节、题目、答案和讲解的练习目录结构，适合创建课程章节或生成符合规范的练习模板。",
+      "translated_at": "2026-08-08T12:23:55.612Z"
+    },
+    "skill:fradser-dotclaude-setup-pre-commit": {
+      "hash": "f1a2a188dc6fb009",
+      "summary_zh": "用于在当前仓库配置提交前检查，自动执行代码格式化、类型检查和测试，适合统一提交规范并提前发现问题。",
+      "translated_at": "2026-08-08T12:23:57.221Z"
+    },
+    "skill:fradser-dotclaude-migrate-to-shoehorn": {
+      "hash": "f6ef3b780fa7aafe",
+      "summary_zh": "用于将测试文件中的 as 类型断言迁移为 shoehorn，方便构造不完整的测试数据并提升类型安全性。",
+      "translated_at": "2026-08-08T12:23:57.532Z"
+    },
+    "skill:fradser-dotclaude-setup-ts-deep-modules": {
+      "hash": "de637060e434be56",
+      "summary_zh": "为 TypeScript 仓库接入依赖关系检查，强制各包通过入口文件暴露功能、隐藏内部实现，适合规范深层模块结构。",
+      "translated_at": "2026-08-08T12:24:02.635Z"
+    },
+    "skill:fradser-dotclaude-to-tickets": {
+      "hash": "259817bec42e54b2",
+      "summary_zh": "将计划、规格或讨论拆成可独立交付的纵向切片任务，标明依赖关系并发布到指定任务跟踪系统。",
+      "translated_at": "2026-08-08T12:24:03.414Z"
+    },
+    "skill:fradser-dotclaude-triage": {
+      "hash": "af216a991a495dac",
+      "summary_zh": "一个帮助团队分流和审核 Issue、外部 PR，并整理成可直接交给 AI 代理处理的任务简报工具。",
+      "translated_at": "2026-08-08T12:24:08.680Z"
+    },
+    "skill:fradser-dotclaude-wayfinder": {
+      "hash": "1bee245b9fce4036",
+      "summary_zh": "把大型、模糊的目标拆成 issue 中可逐项决策的路线图，适合跨多个智能体会话规划复杂工作。",
+      "translated_at": "2026-08-08T12:24:13.399Z"
+    },
+    "skill:fradser-dotclaude-writing-fragments": {
+      "hash": "b3e1b23e9f82028e",
+      "summary_zh": "用于探索写作阶段的素材挖掘工具，帮助用户在确定文章结构前自由头脑风暴、收集零散想法。",
+      "translated_at": "2026-08-08T12:24:15.426Z"
+    },
+    "skill:fradser-dotclaude-writing-shape": {
+      "hash": "a32baa905f20502e",
+      "summary_zh": "将零散素材逐段组织、打磨成完整文章，适合已有原始材料、需要直接完成写作的场景。",
+      "translated_at": "2026-08-08T12:24:19.958Z"
     }
   }
 }

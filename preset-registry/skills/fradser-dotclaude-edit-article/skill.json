@@ -1,0 +1,26 @@
+{
+  "id": "fradser-dotclaude-edit-article",
+  "name": "edit-article",
+  "description": "Edit and improve articles by restructuring sections, improving clarity, and tightening prose. Use when user wants to edit, revise, or improve an article draft.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "FradSer",
+  "install_path": ".claude/skills/edit-article/SKILL.md",
+  "source": {
+    "repo": "FradSer/dotclaude",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/mattpocock/skills/personal/edit-article/SKILL.md",
+    "path": "mattpocock/skills/personal/edit-article/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-08T12:15:16.736Z",
+    "stars": 576,
+    "language": "JavaScript",
+    "pushed_at": "2026-08-08T10:48:48Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于编辑和优化文章草稿，通过重组结构、提升表达清晰度和精炼文字，让内容更流畅易读。"
+}

@@ -6,11 +6,11 @@ description: Review the changes since a fixed point (commit, branch, tag, or mer
 Two-axis review of the diff between `HEAD` and a fixed point the user supplies:
 
 - **Standards** — does the code conform to this repo's documented coding standards?
-- **Spec** — does the code faithfully implement the originating issue / PRD / spec?
+- **Spec** — does the code faithfully implement the originating issue / PRD / spec? If the spec contains Gherkin scenarios (from `/mattpocock:bdd`), those are the authoritative acceptance criteria.
 
 Both axes run as **parallel sub-agents** so they don't pollute each other's context, then this skill aggregates their findings.
 
-The issue tracker should have been provided to you — run `/superdev:setup-matt-pocock-skills` if `docs/agents/issue-tracker.md` is missing.
+The issue tracker should have been provided to you — run `/mattpocock:setup-matt-pocock-skills` if `docs/agents/issue-tracker.md` is missing.
 
 ## Process
 

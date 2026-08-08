@@ -1,0 +1,26 @@
+{
+  "id": "fradser-dotclaude-to-tickets",
+  "name": "to-tickets",
+  "description": "Breaks a plan, spec, or conversation into tracer-bullet tickets that declare their blocking edges, published to the configured tracker. Use when the user says \\\"break this into tickets\\\" or wants a plan decomposed into vertical slices.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "FradSer",
+  "install_path": ".claude/skills/to-tickets/SKILL.md",
+  "source": {
+    "repo": "FradSer/dotclaude",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/mattpocock/skills/engineering/to-tickets/SKILL.md",
+    "path": "mattpocock/skills/engineering/to-tickets/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-08T12:15:15.138Z",
+    "stars": 576,
+    "language": "JavaScript",
+    "pushed_at": "2026-08-08T10:48:48Z",
+    "license": "MIT"
+  },
+  "summary_zh": "将计划、规格或讨论拆成可独立交付的纵向切片任务，标明依赖关系并发布到指定任务跟踪系统。"
+}

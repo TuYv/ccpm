@@ -1,0 +1,26 @@
+{
+  "id": "fradser-dotclaude-git-guardrails-claude-code",
+  "name": "git-guardrails-claude-code",
+  "description": "Set up Claude Code hooks to block dangerous git commands (push, reset --hard, clean, branch -D, etc.) before they execute. Use when user wants to prevent destructive git operations, add git safety hooks, or block git push/reset in Claude Code.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "FradSer",
+  "install_path": ".claude/skills/git-guardrails-claude-code/SKILL.md",
+  "source": {
+    "repo": "FradSer/dotclaude",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/mattpocock/skills/misc/git-guardrails-claude-code/SKILL.md",
+    "path": "mattpocock/skills/misc/git-guardrails-claude-code/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-08T12:15:16.316Z",
+    "stars": 576,
+    "language": "JavaScript",
+    "pushed_at": "2026-08-08T10:48:48Z",
+    "license": "MIT"
+  },
+  "summary_zh": "为 Claude Code 配置 Git 安全钩子，在执行推送、硬重置、强制删分支等危险操作前拦截，适合防止误删代码或误推送。"
+}

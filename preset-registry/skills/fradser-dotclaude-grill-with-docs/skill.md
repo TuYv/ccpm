@@ -4,8 +4,8 @@ description: Runs a relentless interview that sharpens a plan or design and crea
 disable-model-invocation: true
 ---
 
-Run a `/superdev:grilling` session, using the `/superdev:domain-modeling` skill.
+Run a `/mattpocock:grilling` session, using the `/mattpocock:domain-modeling` skill.
 
 ## CRITICAL: Grill with the docs skills loaded
 
-Run the `/superdev:grilling` session with the `/superdev:domain-modeling` skill active. Every sharpened term and locked decision lands in `CONTEXT.md` or an ADR as it crystallises — the paper trail is what distinguishes this skill from `/superdev:grill-me`. Interview questions go through the AskUserQuestion tool, one per call, as `/superdev:grilling` dictates.
+Run the `/mattpocock:grilling` session with the `/mattpocock:domain-modeling` skill active. Every sharpened term and locked decision lands in `CONTEXT.md` or an ADR as it crystallises — the paper trail is what distinguishes this skill from `/mattpocock:grill-me`. Interview questions go through the AskUserQuestion tool, one per call, as `/mattpocock:grilling` dictates.
