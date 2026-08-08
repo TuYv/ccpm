@@ -1,7 +1,7 @@
 {
   "id": "tomasz-tomczyk-crit-crit-cli",
   "name": "crit-cli",
-  "description": "Use when an agent needs to author or reply to crit inline comments programmatically (including multi-agent workflows commenting on shared code/plans/docs/proposals), publish or unpublish a crit review with crit share, sync a crit review to or from a GitHub PR, or read/interpret a crit review JSON file. Covers crit comment, crit share, crit unpublish, crit pull, crit push, review file format, and resolution workflow. Not for invoking an interactive review loop — that's the `/crit` workflow.",
+  "description": "Use when an agent needs to author or reply to crit inline comments programmatically (including multi-agent workflows commenting on shared code/plans/docs/proposals), publish or unpublish a crit review with crit share, sync a crit review to or from a GitHub PR or GitLab MR, or read/interpret a crit review JSON file. Covers crit comment, crit share, crit unpublish, crit pull, crit push, review file format, and resolution workflow. Not for invoking an interactive review loop — that's the `/crit` wo",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/tomasz-tomczyk/crit/blob/main/integrations/windsurf/skills/crit-cli/SKILL.md",
     "path": "integrations/windsurf/skills/crit-cli/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-08T19:18:21.501Z",
+    "discovered_at": "2026-08-08T21:15:51.564Z",
     "stars": 874,
     "language": "Go",
-    "pushed_at": "2026-08-08T19:15:32Z",
+    "pushed_at": "2026-08-08T20:05:54Z",
     "license": "MIT"
   },
-  "summary_zh": "用于程序化管理代码、文档等内容的行内评审，适合多智能体协作及与 GitHub PR 同步评论和处理审阅流程。"
+  "summary_zh": "面向自动化代理的评审命令行工具，可读写行内评论、共享评审，并与 GitHub PR 或 GitLab MR 双向同步。"
 }
