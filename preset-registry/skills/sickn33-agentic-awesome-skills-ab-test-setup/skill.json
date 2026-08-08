@@ -1,0 +1,26 @@
+{
+  "id": "sickn33-agentic-awesome-skills-ab-test-setup",
+  "name": "ab-test-setup",
+  "description": "Structured guide for setting up A/B tests with mandatory gates for hypothesis, metrics, and execution readiness.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sickn33",
+  "install_path": ".claude/skills/ab-test-setup/SKILL.md",
+  "source": {
+    "repo": "sickn33/agentic-awesome-skills",
+    "url": "https://github.com/sickn33/agentic-awesome-skills/blob/main/plugins/agentic-awesome-skills-claude/skills/ab-test-setup/SKILL.md",
+    "path": "plugins/agentic-awesome-skills-claude/skills/ab-test-setup/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-08T18:24:11.541Z",
+    "stars": 44651,
+    "language": "Python",
+    "pushed_at": "2026-08-08T07:06:12Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一套搭建 A/B 测试的结构化指南，通过强制检查假设、指标和执行准备，降低实验设计与上线风险。"
+}

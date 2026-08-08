@@ -1,0 +1,26 @@
+{
+  "id": "higgsfield-ai-skills-higgsfield-brandkit",
+  "name": "higgsfield-brandkit",
+  "description": "| Create and extend complete visual brand systems through the Higgsfield CLI and bundled deterministic local tooling: palettes, SVG logo marks, typography, mockups, social graphics, packaging, signage, merchandise, posters, presentation decks, and editable PPTX/PDF brandbooks. Preserves official supplied assets, persists approvals locally, and regenerates only dependent outputs. Use when: \"create a brand kit\", \"make a visual identity\", \"design a logo and brandbook\", \"apply this logo to branded a",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "0.12.0",
+  "author": "higgsfield-ai",
+  "install_path": ".claude/skills/higgsfield-brandkit/SKILL.md",
+  "source": {
+    "repo": "higgsfield-ai/skills",
+    "url": "https://github.com/higgsfield-ai/skills/blob/main/higgsfield-brandkit/SKILL.md",
+    "path": "higgsfield-brandkit/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-08T19:15:02.947Z",
+    "stars": 676,
+    "language": "Python",
+    "pushed_at": "2026-08-07T17:24:24Z",
+    "license": "MIT"
+  },
+  "summary_zh": "通过命令行在本地创建和扩展完整视觉品牌体系，适合统一生成标志、品牌手册及各类宣传物料。"
+}

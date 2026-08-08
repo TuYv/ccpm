@@ -1,0 +1,26 @@
+{
+  "id": "higgsfield-ai-skills-higgsfield-marketplace-cards",
+  "name": "higgsfield-marketplace-cards",
+  "description": "| Generate marketplace product image cards through Higgsfield: compliant main image, secondary product images, and A+ style content modules. Use when the user asks for marketplace listing images, product detail cards, secondary product images, product infographics, lifestyle listing shots, A+ style content, marketplace image sets, or sales-ready product visuals. Backend owns marketplace compliance references and prompt templates; this skill only routes user intent to the CLI. NOT for generic bra",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "0.12.0",
+  "author": "higgsfield-ai",
+  "install_path": ".claude/skills/higgsfield-marketplace-cards/SKILL.md",
+  "source": {
+    "repo": "higgsfield-ai/skills",
+    "url": "https://github.com/higgsfield-ai/skills/blob/main/higgsfield-marketplace-cards/SKILL.md",
+    "path": "higgsfield-marketplace-cards/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-08T19:15:03.190Z",
+    "stars": 676,
+    "language": "Python",
+    "pushed_at": "2026-08-07T17:24:24Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于生成符合电商平台规范的商品主图、详情图和营销内容，适合快速制作可直接上架的商品视觉素材。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "sickn33-agentic-awesome-skills-agent-self-scheduling",
+  "name": "agent-self-scheduling",
+  "description": "Schedule AI agent runs with cron, loops, or external clocks while avoiding unsafe tight autonomous timers.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sickn33",
+  "install_path": ".claude/skills/agent-self-scheduling/SKILL.md",
+  "source": {
+    "repo": "sickn33/agentic-awesome-skills",
+    "url": "https://github.com/sickn33/agentic-awesome-skills/blob/main/plugins/agentic-awesome-skills-claude/skills/agent-self-scheduling/SKILL.md",
+    "path": "plugins/agentic-awesome-skills-claude/skills/agent-self-scheduling/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-08T18:24:14.975Z",
+    "stars": 44651,
+    "language": "Python",
+    "pushed_at": "2026-08-08T07:06:12Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一款面向 AI 智能体的安全调度工具，适合定时、循环或外部触发任务，避免失控的高频自主运行。"
+}

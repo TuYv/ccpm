@@ -1,0 +1,26 @@
+{
+  "id": "higgsfield-ai-skills-higgsfield-generate",
+  "name": "higgsfield-generate",
+  "description": "| Generate images/videos/3D assets/audio via Higgsfield AI. Defaults: GPT Image 2 for image/design/text, Seedance 2.0 for video, Nano Banana 2/Lite/Pro for character/reference images, Marketing Studio for ads, Seed Audio 1.0 for audio. Use when: \"generate an image\", \"make a video\", \"animate this photo\", \"image-to-video\", \"edit/stylize/remix this image\", \"reframe this video\", \"edit this video from a sketch\", \"create a 3D model/GLB\", \"create a sound effect\", \"make music\", \"text-to-audio\", \"create ",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "0.12.0",
+  "author": "higgsfield-ai",
+  "install_path": ".claude/skills/higgsfield-generate/SKILL.md",
+  "source": {
+    "repo": "higgsfield-ai/skills",
+    "url": "https://github.com/higgsfield-ai/skills/blob/main/higgsfield-generate/SKILL.md",
+    "path": "higgsfield-generate/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-08T19:15:03.077Z",
+    "stars": 676,
+    "language": "Python",
+    "pushed_at": "2026-08-07T17:24:24Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一款用 AI 生成和编辑图片、视频、3D 素材及音频的工具，适合内容创作、广告制作和多媒体处理。"
+}

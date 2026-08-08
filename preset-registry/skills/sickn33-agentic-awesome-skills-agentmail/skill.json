@@ -1,0 +1,26 @@
+{
+  "id": "sickn33-agentic-awesome-skills-agentmail",
+  "name": "agentmail",
+  "description": "Email infrastructure for AI agents. Create accounts, send/receive emails, manage webhooks, and check karma balance via the AgentMail API.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sickn33",
+  "install_path": ".claude/skills/agentmail/SKILL.md",
+  "source": {
+    "repo": "sickn33/agentic-awesome-skills",
+    "url": "https://github.com/sickn33/agentic-awesome-skills/blob/main/plugins/agentic-awesome-skills-claude/skills/agentmail/SKILL.md",
+    "path": "plugins/agentic-awesome-skills-claude/skills/agentmail/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-08T18:24:16.558Z",
+    "stars": 44651,
+    "language": "Python",
+    "pushed_at": "2026-08-08T07:06:12Z",
+    "license": "MIT"
+  },
+  "summary_zh": "面向 AI 智能体的邮件基础设施，可通过 API 创建邮箱、收发邮件并处理回调，适合需要自动化邮件交互的场景。"
+}

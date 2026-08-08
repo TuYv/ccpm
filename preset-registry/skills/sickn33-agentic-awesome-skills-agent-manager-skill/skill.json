@@ -1,0 +1,26 @@
+{
+  "id": "sickn33-agentic-awesome-skills-agent-manager-skill",
+  "name": "agent-manager-skill",
+  "description": "Manage multiple local CLI agents via tmux sessions (start/stop/monitor/assign) with cron-friendly scheduling.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sickn33",
+  "install_path": ".claude/skills/agent-manager-skill/SKILL.md",
+  "source": {
+    "repo": "sickn33/agentic-awesome-skills",
+    "url": "https://github.com/sickn33/agentic-awesome-skills/blob/main/plugins/agentic-awesome-skills-claude/skills/agent-manager-skill/SKILL.md",
+    "path": "plugins/agentic-awesome-skills-claude/skills/agent-manager-skill/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-08T18:24:14.188Z",
+    "stars": 44651,
+    "language": "Python",
+    "pushed_at": "2026-08-08T07:06:12Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一个基于 tmux 管理多个本地命令行智能体的工具，适合统一启停、监控、分配任务及定时调度。"
+}

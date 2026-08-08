@@ -1,0 +1,26 @@
+{
+  "id": "sickn33-agentic-awesome-skills-agenttrace-session-audit",
+  "name": "agenttrace-session-audit",
+  "description": "Audit local AI coding-agent sessions with agenttrace for cost, tool failures, latency, anomalies, health, diffs, and CI gates.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sickn33",
+  "install_path": ".claude/skills/agenttrace-session-audit/SKILL.md",
+  "source": {
+    "repo": "sickn33/agentic-awesome-skills",
+    "url": "https://github.com/sickn33/agentic-awesome-skills/blob/main/plugins/agentic-awesome-skills-claude/skills/agenttrace-session-audit/SKILL.md",
+    "path": "plugins/agentic-awesome-skills-claude/skills/agenttrace-session-audit/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-08T18:24:17.086Z",
+    "stars": 44651,
+    "language": "Python",
+    "pushed_at": "2026-08-08T07:06:12Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于审计本地 AI 编程代理会话，排查成本、工具失败、延迟和异常，并支持代码差异检查与 CI 质量门禁。"
+}

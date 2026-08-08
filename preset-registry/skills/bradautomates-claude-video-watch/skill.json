@@ -1,0 +1,26 @@
+{
+  "id": "bradautomates-claude-video-watch",
+  "name": "watch",
+  "description": "Watch a video (URL or local path). Downloads with yt-dlp, extracts auto-scaled frames with ffmpeg, pulls the transcript from captions (or Whisper API fallback), and hands the result to Claude so it can answer questions about what's in the video.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "0.2.0",
+  "author": "bradautomates",
+  "install_path": ".claude/skills/watch/SKILL.md",
+  "source": {
+    "repo": "bradautomates/claude-video",
+    "url": "https://github.com/bradautomates/claude-video/blob/main/skills/watch/SKILL.md",
+    "path": "skills/watch/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-08T18:24:56.411Z",
+    "stars": 14567,
+    "language": "Python",
+    "pushed_at": "2026-07-01T01:26:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一款让 AI 理解在线视频或本地视频内容的工具，可提取画面与字幕，方便直接针对视频内容提问。"
+}

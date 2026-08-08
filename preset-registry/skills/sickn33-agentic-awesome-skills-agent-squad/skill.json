@@ -1,0 +1,26 @@
+{
+  "id": "sickn33-agentic-awesome-skills-agent-squad",
+  "name": "agent-squad",
+  "description": "Main agent orchestrator that coordinates a specialized squad of agents",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0",
+  "author": "sickn33",
+  "install_path": ".claude/skills/agent-squad/SKILL.md",
+  "source": {
+    "repo": "sickn33/agentic-awesome-skills",
+    "url": "https://github.com/sickn33/agentic-awesome-skills/blob/main/plugins/agentic-awesome-skills-claude/skills/agent-squad/SKILL.md",
+    "path": "plugins/agentic-awesome-skills-claude/skills/agent-squad/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-08T18:24:16.038Z",
+    "stars": 44651,
+    "language": "Python",
+    "pushed_at": "2026-08-08T07:06:12Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于统一调度多个专业智能体协同工作，适合处理需要分工配合的复杂任务。"
+}

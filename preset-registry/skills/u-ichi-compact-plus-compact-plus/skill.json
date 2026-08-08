@@ -1,0 +1,26 @@
+{
+  "id": "u-ichi-compact-plus-compact-plus",
+  "name": "compact-plus",
+  "description": "| Save the current Claude Code or Codex session state to a temporary state file before running /compact. MANDATORY TRIGGERS: /compact-plus, compact-plus, compact plus, compaction plus handoff, pre-compact state save. DO NOT TRIGGER: post-compact recovery, ordinary progress updates, plan creation, or casual context-usage discussion.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "u-ichi",
+  "install_path": ".claude/skills/compact-plus/SKILL.md",
+  "source": {
+    "repo": "u-ichi/compact-plus",
+    "url": "https://github.com/u-ichi/compact-plus/blob/main/skills/compact-plus/SKILL.md",
+    "path": "skills/compact-plus/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-08T19:15:25.196Z",
+    "stars": 189,
+    "language": "Shell",
+    "pushed_at": "2026-07-27T13:47:42Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个在执行 /compact 前暂存 Claude Code 或 Codex 会话状态的工具，适合压缩上下文时保留交接信息。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "higgsfield-ai-skills-higgsfield-soul-id",
+  "name": "higgsfield-soul-id",
+  "description": "| Train a Soul Character — a personalized model on a person's face that Higgsfield uses for identity-faithful image and video generation. Use when: \"create my Soul\", \"train my face\", \"make my digital twin\", \"build me an avatar\", \"learn my appearance\", \"create a character of me\", \"set up identity for video\", \"I want my face in generated images\". Chain: train Soul (one-time, returns reference_id) → use in higgsfield-generate via `--soul-id <id>` with models like `text2image_soul_v2` or `soul_cinem",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "0.12.0",
+  "author": "higgsfield-ai",
+  "install_path": ".claude/skills/higgsfield-soul-id/SKILL.md",
+  "source": {
+    "repo": "higgsfield-ai/skills",
+    "url": "https://github.com/higgsfield-ai/skills/blob/main/higgsfield-soul-id/SKILL.md",
+    "path": "higgsfield-soul-id/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-08T19:15:03.399Z",
+    "stars": 676,
+    "language": "Python",
+    "pushed_at": "2026-08-07T17:24:24Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于训练个人面部模型，创建数字分身，让生成的图片和视频稳定还原本人长相。"
+}

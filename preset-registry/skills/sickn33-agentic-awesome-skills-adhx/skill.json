@@ -1,0 +1,26 @@
+{
+  "id": "sickn33-agentic-awesome-skills-adhx",
+  "name": "adhx",
+  "description": "Fetch any X/Twitter post as clean LLM-friendly JSON. Converts x.com, twitter.com, or adhx.com links into structured data with full article content, author info, and engagement metrics. No scraping or browser required.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sickn33",
+  "install_path": ".claude/skills/adhx/SKILL.md",
+  "source": {
+    "repo": "sickn33/agentic-awesome-skills",
+    "url": "https://github.com/sickn33/agentic-awesome-skills/blob/main/plugins/agentic-awesome-skills-claude/skills/adhx/SKILL.md",
+    "path": "plugins/agentic-awesome-skills-claude/skills/adhx/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-08T18:24:13.377Z",
+    "stars": 44651,
+    "language": "Python",
+    "pushed_at": "2026-08-08T07:06:12Z",
+    "license": "MIT"
+  },
+  "summary_zh": "将 X/Twitter 帖子链接转成适合大模型处理的结构化 JSON，便于获取正文、作者和互动数据，无需爬虫或浏览器。"
+}

@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-08T17:22:35.073Z",
+  "updated_at": "2026-08-08T19:21:34.960Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -28906,6 +28906,436 @@
       "hash": "7b31749a985d01b0",
       "summary_zh": "把零散素材整理成有节奏的文章脉络，并在使用术语前先交代清楚，适合将原始资料发展成易懂的文章。",
       "translated_at": "2026-08-08T16:18:37.265Z"
+    },
+    "bundle:worldflowai-everything-claude-code": {
+      "hash": "3c2235de6ad6870e",
+      "summary_zh": "面向 Claude Code 的全栈研发工具集，整合架构规范、测试、安全审查与经验沉淀，让 AI 辅助开发更高效、更可靠。",
+      "translated_at": "2026-08-08T19:19:38.311Z"
+    },
+    "bundle:higgsfield-ai-skills": {
+      "hash": "36b828d3f286fe1e",
+      "summary_zh": "面向品牌营销与内容生产的一站式 AI 创作工具集，贯通品牌设计、商品素材、音视频生成到网站应用上线。",
+      "translated_at": "2026-08-08T19:19:38.485Z"
+    },
+    "bundle:sickn33-agentic-awesome-skills": {
+      "hash": "582c2f4b8903c6d5",
+      "summary_zh": "面向复杂数字项目的一站式智能体技能库，把咨询规划、研发测试、安全合规与内容生产串成可复用的自动化工作流。",
+      "translated_at": "2026-08-08T19:19:39.543Z"
+    },
+    "preset:michaelliv-claude-quest": {
+      "hash": "2b96eb738a703d14",
+      "summary_zh": "把 Claude Code 的操作实时变成像素 RPG 动画，适合长时间编程、直播展示或想让 AI 协作更有趣的用户。",
+      "translated_at": "2026-08-08T19:19:42.571Z"
+    },
+    "preset:nanako0129-pilotfish": {
+      "hash": "d612f3610dbc9336",
+      "summary_zh": "一套面向 Claude Code 的多模型协作配置，让强模型负责规划和把关、低成本模型执行任务，适合兼顾开发质量与费用。",
+      "translated_at": "2026-08-08T19:19:42.959Z"
+    },
+    "skill:bradautomates-claude-video-watch": {
+      "hash": "45cc7cae1771ca90",
+      "summary_zh": "一款让 AI 理解在线视频或本地视频内容的工具，可提取画面与字幕，方便直接针对视频内容提问。",
+      "translated_at": "2026-08-08T19:19:43.495Z"
+    },
+    "skill:higgsfield-ai-skills-higgsfield-brandkit": {
+      "hash": "f682a1a215fc76ca",
+      "summary_zh": "通过命令行在本地创建和扩展完整视觉品牌体系，适合统一生成标志、品牌手册及各类宣传物料。",
+      "translated_at": "2026-08-08T19:19:46.550Z"
+    },
+    "skill:cosmtrek-mindwalk-verify": {
+      "hash": "a67bd37c29d8b707",
+      "summary_zh": "用于构建、启动并自动操作 Mindwalk 网页界面，适合开展端到端功能验证。",
+      "translated_at": "2026-08-08T19:19:47.187Z"
+    },
+    "skill:higgsfield-ai-skills-higgsfield-generate": {
+      "hash": "047811a5452f314a",
+      "summary_zh": "一款用 AI 生成和编辑图片、视频、3D 素材及音频的工具，适合内容创作、广告制作和多媒体处理。",
+      "translated_at": "2026-08-08T19:19:47.877Z"
+    },
+    "skill:higgsfield-ai-skills-higgsfield-marketplace-cards": {
+      "hash": "66febbe8141ed0f0",
+      "summary_zh": "用于生成符合电商平台规范的商品主图、详情图和营销内容，适合快速制作可直接上架的商品视觉素材。",
+      "translated_at": "2026-08-08T19:19:50.877Z"
+    },
+    "skill:higgsfield-ai-skills-higgsfield-soul-id": {
+      "hash": "ecad4faa511dc2cc",
+      "summary_zh": "用于训练个人面部模型，创建数字分身，让生成的图片和视频稳定还原本人长相。",
+      "translated_at": "2026-08-08T19:19:51.280Z"
+    },
+    "skill:higgsfield-ai-skills-higgsfield-product-photoshoot": {
+      "hash": "68d55a42974d6ae8",
+      "summary_zh": "一款基于 GPT Image 2 优化提示词的商品图生成工具，适合制作棚拍、场景图、广告素材和虚拟试穿等品牌视觉。",
+      "translated_at": "2026-08-08T19:19:51.796Z"
+    },
+    "skill:higgsfield-ai-skills-higgsfield-video-explainer": {
+      "hash": "ce54b13b8f44a965",
+      "summary_zh": "一款把主题或文档自动制成统一画风、带旁白的非写实动画视频工具，适合科普讲解、故事叙述和无真人出镜内容。",
+      "translated_at": "2026-08-08T19:19:54.961Z"
+    },
+    "skill:higgsfield-ai-skills-higgsfield-websites": {
+      "hash": "61f26fbf65d9fe91",
+      "summary_zh": "通过命令行构建、编辑并部署全栈网站、应用和实时多人游戏，适合在 Cloudflare 上快速完成开发上线。",
+      "translated_at": "2026-08-08T19:19:55.790Z"
+    },
+    "skill:higgsfield-ai-skills-higgsfield-youtube-thumbnail": {
+      "hash": "2b26a3708cba18a0",
+      "summary_zh": "一款通过命令行生成高点击率缩略图和竖屏视频封面的工具，适合快速制作真实吸睛的社媒视频封面。",
+      "translated_at": "2026-08-08T19:19:58.872Z"
+    },
+    "skill:sickn33-agentic-awesome-skills-00-andruia-consultant": {
+      "hash": "a39488ed738d5650",
+      "summary_zh": "面向西语用户的 AI 解决方案顾问，可诊断项目需求并规划合适的技术实施路线。",
+      "translated_at": "2026-08-08T19:19:59.691Z"
+    },
+    "skill:sickn33-agentic-awesome-skills-007": {
+      "hash": "872094f8c58ae0bf",
+      "summary_zh": "一套面向各类项目的安全审计与攻防工具，适合排查代码和基础设施风险、加固系统并应对安全事件。",
+      "translated_at": "2026-08-08T19:19:59.722Z"
+    },
+    "skill:sickn33-agentic-awesome-skills-2slides-ppt-generator": {
+      "hash": "6bab792bca9b920f",
+      "summary_zh": "基于 AI 将文本或文档快速生成指定风格的演示文稿，适合做汇报、提案和带语音解说的课件。",
+      "translated_at": "2026-08-08T19:20:03.297Z"
+    },
+    "skill:sickn33-agentic-awesome-skills-20-andruia-niche-intelligence": {
+      "hash": "bd235ec6dd03ca9a",
+      "summary_zh": "一款项目领域分析工具，可在明确细分方向后补充行业知识、法规和标准，适合增强项目的专业性与合规性。",
+      "translated_at": "2026-08-08T19:20:03.704Z"
+    },
+    "skill:sickn33-agentic-awesome-skills-10-andruia-skill-smith": {
+      "hash": "9c335f6bd85c72c3",
+      "summary_zh": "一个用于按“钻石标准”设计、编写并部署仓库技能的工程助手，适合规范化扩展智能体能力。",
+      "translated_at": "2026-08-08T19:20:05.895Z"
+    },
+    "skill:sickn33-agentic-awesome-skills-ab-test-setup": {
+      "hash": "a1dd4e6921c6b6a0",
+      "summary_zh": "一套搭建 A/B 测试的结构化指南，通过强制检查假设、指标和执行准备，降低实验设计与上线风险。",
+      "translated_at": "2026-08-08T19:20:07.216Z"
+    },
+    "skill:sickn33-agentic-awesome-skills-3d-web-experience": {
+      "hash": "3ff393c51ba25c66",
+      "summary_zh": "用于打造网页端交互式 3D 体验，适合开发产品配置器、沉浸式网站和 3D 作品集。",
+      "translated_at": "2026-08-08T19:20:07.362Z"
+    },
+    "skill:sickn33-agentic-awesome-skills-ab-testing": {
+      "hash": "ae298dad37034813",
+      "summary_zh": "用于规划、设计和实施 A/B 测试及增长实验，适合验证产品改动、文案变体或业务假设。",
+      "translated_at": "2026-08-08T19:20:08.894Z"
+    },
+    "skill:sickn33-agentic-awesome-skills-acceptance-orchestrator": {
+      "hash": "0cc050d159ab5ac7",
+      "summary_zh": "自动编排开发任务从需求接收到实现、评审、部署及验收验证的全流程，适合减少人工介入的端到端交付场景。",
+      "translated_at": "2026-08-08T19:20:10.521Z"
+    },
+    "skill:sickn33-agentic-awesome-skills-accesslint-audit": {
+      "hash": "c83adde1804f3133",
+      "summary_zh": "一款用于排查并修复 WCAG 2.2 无障碍问题的审计工具，适合网站代码扫描、生成整改报告或自动修复验证。",
+      "translated_at": "2026-08-08T19:20:11.545Z"
+    },
+    "skill:sickn33-agentic-awesome-skills-accesslint-diff": {
+      "hash": "ccbb469a352f2df0",
+      "summary_zh": "用于对比网页改动前后的无障碍问题，只报告新增和已修复项，适合在提交或分支合并前做增量检查。",
+      "translated_at": "2026-08-08T19:20:13.728Z"
+    },
+    "skill:sickn33-agentic-awesome-skills-accesslint-scan": {
+      "hash": "80de4826df3bb394",
+      "summary_zh": "用于扫描在线网页的无障碍问题，精准定位违反 WCAG 的元素，并生成基于选择器的修复清单，不会直接修改页面。",
+      "translated_at": "2026-08-08T19:20:15.013Z"
+    },
+    "skill:sickn33-agentic-awesome-skills-accessibility-compliance-accessibility-audit": {
+      "hash": "daf69c423c1d18d4",
+      "summary_zh": "面向网站和应用的无障碍合规审计助手，可发现使用障碍并提供符合 WCAG 的整改建议。",
+      "translated_at": "2026-08-08T19:20:15.151Z"
+    },
+    "skill:sickn33-agentic-awesome-skills-accint-solve": {
+      "hash": "cbdb068d179c574c",
+      "summary_zh": "一个基于评分记忆循环的目标求解工具，适合通过分步思考和持续反馈处理复杂规划与决策任务。",
+      "translated_at": "2026-08-08T19:20:20.725Z"
+    },
+    "skill:sickn33-agentic-awesome-skills-accint-commitments": {
+      "hash": "37ae971b0eccb7fb",
+      "summary_zh": "一款承诺跟踪工具，用于梳理 acc 的公开承诺，并依据真实执行结果给出结论、推动闭环。",
+      "translated_at": "2026-08-08T19:20:20.819Z"
+    },
+    "skill:sickn33-agentic-awesome-skills-accint-frames": {
+      "hash": "ce3c1a5cfe65ebab",
+      "summary_zh": "用于续跑并清空推理队列，适合恢复和处理无头运行中暂停或等待的思考检查点。",
+      "translated_at": "2026-08-08T19:20:21.766Z"
+    },
+    "skill:sickn33-agentic-awesome-skills-active-directory-attacks": {
+      "hash": "9cc63a1c99c78e32",
+      "summary_zh": "一套面向红队与渗透测试的 Active Directory 攻防技术指南，用于评估企业域环境的安全风险。",
+      "translated_at": "2026-08-08T19:20:24.722Z"
+    },
+    "skill:sickn33-agentic-awesome-skills-activecampaign-automation": {
+      "hash": "64f4bd17f12bf513",
+      "summary_zh": "通过 Rube MCP 自动管理 ActiveCampaign 的联系人、标签、订阅和营销流程，适合批量处理日常运营任务。",
+      "translated_at": "2026-08-08T19:20:25.211Z"
+    },
+    "skill:sickn33-agentic-awesome-skills-ad-campaign-analyzer": {
+      "hash": "4fb87b16a7872f39",
+      "summary_zh": "一款跨渠道广告分析工具，可量化数据不确定性，并基于证据设计预算测试，避免夸大因果关系。",
+      "translated_at": "2026-08-08T19:20:27.660Z"
+    },
+    "skill:sickn33-agentic-awesome-skills-ad-creative": {
+      "hash": "35c7e766258d178f",
+      "summary_zh": "用于生成和迭代多平台付费广告文案，适合批量制作素材变体并开展测试和效果优化。",
+      "translated_at": "2026-08-08T19:20:29.767Z"
+    },
+    "skill:sickn33-agentic-awesome-skills-add-app-clip": {
+      "hash": "b4d18aad54af057e",
+      "summary_zh": "为 Expo 应用添加 iOS App Clip，适合通过链接快速唤起轻量体验并与完整应用配套发布。",
+      "translated_at": "2026-08-08T19:20:29.767Z"
+    },
+    "skill:sickn33-agentic-awesome-skills-address-github-comments": {
+      "hash": "bbc6e009d5c8f27a",
+      "summary_zh": "通过 gh 命令行处理 GitHub 待合并请求中的代码审查或问题评论，适合快速跟进反馈并完成修改。",
+      "translated_at": "2026-08-08T19:20:30.871Z"
+    },
+    "skill:sickn33-agentic-awesome-skills-advanced-evaluation": {
+      "hash": "865602415ef1d620",
+      "summary_zh": "一套用大模型自动评估内容质量的工具，适合比较模型输出、设计评分标准并减少位置偏差等评测误差。",
+      "translated_at": "2026-08-08T19:20:32.259Z"
+    },
+    "skill:sickn33-agentic-awesome-skills-adhx": {
+      "hash": "c77c278f024ab947",
+      "summary_zh": "将 X/Twitter 帖子链接转成适合大模型处理的结构化 JSON，便于获取正文、作者和互动数据，无需爬虫或浏览器。",
+      "translated_at": "2026-08-08T19:20:36.231Z"
+    },
+    "skill:sickn33-agentic-awesome-skills-advogado-criminal": {
+      "hash": "342acc1fda9aced8",
+      "summary_zh": "面向巴西刑事案件的专业法律服务，适合处理家暴、杀害女性、保护令、警方调查及刑事诉讼等问题。",
+      "translated_at": "2026-08-08T19:20:36.539Z"
+    },
+    "skill:sickn33-agentic-awesome-skills-advogado-especialista": {
+      "hash": "8e2eee6ae997f460",
+      "summary_zh": "面向巴西法律事务的专业咨询助手，适合处理家庭、刑事、劳动、税务、消费及民商事等问题。",
+      "translated_at": "2026-08-08T19:20:37.016Z"
+    },
+    "skill:sickn33-agentic-awesome-skills-agent-framework-azure-ai-py": {
+      "hash": "2fc8422e2fe07d7f",
+      "summary_zh": "基于微软 Python SDK 在 Azure AI Foundry 上构建可持久运行的智能体，适合需要状态保存和持续交互的应用。",
+      "translated_at": "2026-08-08T19:20:39.939Z"
+    },
+    "skill:sickn33-agentic-awesome-skills-agent-evaluation": {
+      "hash": "9365bf0a28cd349e",
+      "summary_zh": "用于测试和评估大模型智能体，覆盖行为、能力、可靠性与线上监控，适合发现真实场景中的性能短板。",
+      "translated_at": "2026-08-08T19:20:40.778Z"
+    },
+    "skill:sickn33-agentic-awesome-skills-aegisops-ai": {
+      "hash": "81bf8b558ff93fab",
+      "summary_zh": "一款自主化 DevSecOps 与 FinOps 审计工具，适合检查 Linux 内核补丁、Terraform 成本漂移和 K8s 合规风险。",
+      "translated_at": "2026-08-08T19:20:41.069Z"
+    },
+    "skill:sickn33-agentic-awesome-skills-agent-memory-mcp": {
+      "hash": "579d02a2bf8f5226",
+      "summary_zh": "为 AI 智能体提供持久且可检索的混合记忆，适合管理架构、设计模式和决策等长期知识。",
+      "translated_at": "2026-08-08T19:20:43.543Z"
+    },
+    "skill:sickn33-agentic-awesome-skills-agent-memory": {
+      "hash": "f7b6fd5d8f692a97",
+      "summary_zh": "一个面向 AI 智能体的混合记忆系统，用于持久保存并快速检索知识，适合需要长期记忆和上下文延续的场景。",
+      "translated_at": "2026-08-08T19:20:45.295Z"
+    },
+    "skill:sickn33-agentic-awesome-skills-agent-manager-skill": {
+      "hash": "8eb72810c5644628",
+      "summary_zh": "一个基于 tmux 管理多个本地命令行智能体的工具，适合统一启停、监控、分配任务及定时调度。",
+      "translated_at": "2026-08-08T19:20:45.932Z"
+    },
+    "skill:sickn33-agentic-awesome-skills-agent-memory-systems": {
+      "hash": "0861c4dca3c9f70b",
+      "summary_zh": "一套智能体记忆架构指南，讲解短期与长期记忆的组织方式，适合构建能保留上下文和持续学习的智能体。",
+      "translated_at": "2026-08-08T19:20:46.643Z"
+    },
+    "skill:sickn33-agentic-awesome-skills-agent-orchestration-multi-agent-optimize": {
+      "hash": "ffd169fc5668c2ed",
+      "summary_zh": "用于优化多智能体系统，通过协同分析、负载分配和成本感知编排，提升性能、吞吐量与可靠性。",
+      "translated_at": "2026-08-08T19:20:48.886Z"
+    },
+    "skill:sickn33-agentic-awesome-skills-agent-orchestration-improve-agent": {
+      "hash": "d5c9c9c443dd41e2",
+      "summary_zh": "通过性能分析、提示词优化和持续迭代，系统提升现有智能体的效果，适合改进表现不佳或不稳定的智能体。",
+      "translated_at": "2026-08-08T19:20:50.604Z"
+    },
+    "skill:sickn33-agentic-awesome-skills-agent-orchestrator": {
+      "hash": "3001042a7ac693b8",
+      "summary_zh": "面向智能体生态的统一编排工具，可自动发现并匹配技能，协调多技能工作流和注册管理。",
+      "translated_at": "2026-08-08T19:20:50.611Z"
+    },
+    "skill:sickn33-agentic-awesome-skills-agent-squad": {
+      "hash": "6e9b66515184f6a7",
+      "summary_zh": "用于统一调度多个专业智能体协同工作，适合处理需要分工配合的复杂任务。",
+      "translated_at": "2026-08-08T19:20:53.292Z"
+    },
+    "skill:sickn33-agentic-awesome-skills-agent-self-scheduling": {
+      "hash": "33e24e72bf339921",
+      "summary_zh": "一款面向 AI 智能体的安全调度工具，适合定时、循环或外部触发任务，避免失控的高频自主运行。",
+      "translated_at": "2026-08-08T19:20:53.506Z"
+    },
+    "skill:sickn33-agentic-awesome-skills-agent-tool-builder": {
+      "hash": "b3f29289384b0bf4",
+      "summary_zh": "一套面向 AI 智能体的工具设计指南，涵盖接口定义与错误处理，适合减少幻觉、静默失败和无效令牌消耗。",
+      "translated_at": "2026-08-08T19:20:55.427Z"
+    },
+    "skill:sickn33-agentic-awesome-skills-agentflow": {
+      "hash": "aa92791e46e1cfb4",
+      "summary_zh": "通过看板编排自主 AI 开发流程，适合多任务协作、自动质检、代码审查、成本跟踪及稳定执行。",
+      "translated_at": "2026-08-08T19:20:56.017Z"
+    },
+    "skill:sickn33-agentic-awesome-skills-agentfolio": {
+      "hash": "5c94c1ac8f3eec0a",
+      "summary_zh": "一个用于发现和调研自主 AI 智能体、工具及生态的技能，适合快速筛选和了解相关项目。",
+      "translated_at": "2026-08-08T19:20:56.868Z"
+    },
+    "skill:sickn33-agentic-awesome-skills-agentic-actions-auditor": {
+      "hash": "ebaa6fc6c332655b",
+      "summary_zh": "用于审计 GitHub Actions 工作流的安全工具，可发现恶意输入传入 CI/CD 中 AI 智能体引发的攻击风险。",
+      "translated_at": "2026-08-08T19:20:59.823Z"
+    },
+    "skill:sickn33-agentic-awesome-skills-agentphone": {
+      "hash": "4a8ad60071549965",
+      "summary_zh": "一个用于构建 AI 电话助手的 API，适合处理自动呼叫、短信收发、号码管理、语音交互和通信事件回调等场景。",
+      "translated_at": "2026-08-08T19:20:59.824Z"
+    },
+    "skill:sickn33-agentic-awesome-skills-agentmail": {
+      "hash": "2c0c10dfaae92eea",
+      "summary_zh": "面向 AI 智能体的邮件基础设施，可通过 API 创建邮箱、收发邮件并处理回调，适合需要自动化邮件交互的场景。",
+      "translated_at": "2026-08-08T19:21:00.384Z"
+    },
+    "skill:sickn33-agentic-awesome-skills-agents-md": {
+      "hash": "1c6f42f4bff9fa6b",
+      "summary_zh": "用于创建和维护简洁有效的 AI 编程代理说明文档，适合统一项目指令并减少冗余信息。",
+      "translated_at": "2026-08-08T19:21:02.888Z"
+    },
+    "skill:sickn33-agentic-awesome-skills-agents-v2-py": {
+      "hash": "d16e04d63fcb872d",
+      "summary_zh": "基于 Azure AI Projects SDK 构建自定义容器镜像的托管智能体，适合在 Azure AI Foundry 中部署专用智能体。",
+      "translated_at": "2026-08-08T19:21:04.110Z"
+    },
+    "skill:sickn33-agentic-awesome-skills-agents-generator": {
+      "hash": "efb2143379dd0c7a",
+      "summary_zh": "一款分析代码库并生成项目专属 AGENTS.md 与配套规则的工具，适合快速建立或更新 AI 编程代理规范。",
+      "translated_at": "2026-08-08T19:21:04.132Z"
+    },
+    "skill:sickn33-agentic-awesome-skills-agenttrace-session-audit": {
+      "hash": "d4980e38505e93ad",
+      "summary_zh": "用于审计本地 AI 编程代理会话，排查成本、工具失败、延迟和异常，并支持代码差异检查与 CI 质量门禁。",
+      "translated_at": "2026-08-08T19:21:05.851Z"
+    },
+    "skill:sickn33-agentic-awesome-skills-ai-agents-architect": {
+      "hash": "9ec8f221d8b9e6e7",
+      "summary_zh": "用于设计和构建自主智能体的开发工具，适合处理工具调用、记忆、任务规划及多智能体协作等场景。",
+      "translated_at": "2026-08-08T19:21:07.018Z"
+    },
+    "skill:sickn33-agentic-awesome-skills-ai-dev-jobs-mcp": {
+      "hash": "fe7e4c10ac2e6c66",
+      "summary_zh": "一个用于搜索和匹配 AI、机器学习岗位的工具，可查看职位、雇主、薪资及就业市场数据。",
+      "translated_at": "2026-08-08T19:21:09.946Z"
+    },
+    "skill:sickn33-agentic-awesome-skills-ai-agent-development": {
+      "hash": "2748e56417bf1b2d",
+      "summary_zh": "一套 AI 智能体开发工作流，适合构建自主智能体、多智能体系统及复杂任务编排应用。",
+      "translated_at": "2026-08-08T19:21:11.151Z"
+    },
+    "skill:sickn33-agentic-awesome-skills-alex": {
+      "hash": "0bb60a7488fec1f9",
+      "summary_zh": "将需求转化为精确且理清依赖关系的实施计划，适合开发前拆解任务和安排执行顺序。",
+      "translated_at": "2026-08-08T19:21:11.718Z"
+    },
+    "skill:sickn33-agentic-awesome-skills-aria": {
+      "hash": "7ce2a50d71145463",
+      "summary_zh": "用于设计系统的数据模型、API 契约和整体架构基础，适合统一核心结构与接口规范。",
+      "translated_at": "2026-08-08T19:21:12.335Z"
+    },
+    "skill:sickn33-agentic-awesome-skills-dep": {
+      "hash": "112dfe0dac4a7436",
+      "summary_zh": "一款自动处理容器化、CI/CD 流水线和部署配置的工具，适合快速搭建应用交付流程。",
+      "translated_at": "2026-08-08T19:21:13.665Z"
+    },
+    "skill:sickn33-agentic-awesome-skills-luna": {
+      "hash": "5de8b1012d720af9",
+      "summary_zh": "一款自动化代码审查工具，用于发现正确性、安全性和可靠性问题，适合开发与上线前检查。",
+      "translated_at": "2026-08-08T19:21:14.532Z"
+    },
+    "skill:sickn33-agentic-awesome-skills-mason": {
+      "hash": "551ab500f5729c46",
+      "summary_zh": "一款按既定架构和检查清单生成整洁可用代码的工具，适合规范开发并减少实现偏差。",
+      "translated_at": "2026-08-08T19:21:16.746Z"
+    },
+    "skill:sickn33-agentic-awesome-skills-max": {
+      "hash": "af510eee5ddb2162",
+      "summary_zh": "在不改变程序行为的前提下清理并优化现有代码，适合日常重构和提升代码质量。",
+      "translated_at": "2026-08-08T19:21:17.248Z"
+    },
+    "skill:sickn33-agentic-awesome-skills-quinn": {
+      "hash": "0dabae257ed823d5",
+      "summary_zh": "一款自动编写并执行全面测试套件的验证工具，适合检查系统功能是否按预期运行。",
+      "translated_at": "2026-08-08T19:21:18.741Z"
+    },
+    "skill:sickn33-agentic-awesome-skills-rex": {
+      "hash": "47fbeac5e3ee2024",
+      "summary_zh": "将用户意图转化为准确、无歧义的规格和需求，适合需求分析与产品规划。",
+      "translated_at": "2026-08-08T19:21:20.223Z"
+    },
+    "skill:u-ichi-compact-plus-compact-plus": {
+      "hash": "3e87b62802402d2c",
+      "summary_zh": "这是一个在执行 /compact 前暂存 Claude Code 或 Codex 会话状态的工具，适合压缩上下文时保留交接信息。",
+      "translated_at": "2026-08-08T19:21:21.341Z"
+    },
+    "skill:worldflowai-everything-claude-code-backend-patterns": {
+      "hash": "90ac1c7a32674848",
+      "summary_zh": "一套面向 Node.js、Express 和 Next.js API 的后端实践指南，帮助优化架构设计、接口开发与数据库性能。",
+      "translated_at": "2026-08-08T19:21:21.710Z"
+    },
+    "skill:worldflowai-everything-claude-code-coding-standards": {
+      "hash": "6262db2a4b772b44",
+      "summary_zh": "一套面向 TypeScript、JavaScript、React 和 Node.js 的通用编码规范，帮助团队统一风格并提升代码质量与可维护性。",
+      "translated_at": "2026-08-08T19:21:24.227Z"
+    },
+    "skill:worldflowai-everything-claude-code-continuous-learning": {
+      "hash": "3694d1088c72e789",
+      "summary_zh": "自动从 Claude Code 会话中提炼可复用经验并保存为技能，适合沉淀工作模式、提升后续开发效率。",
+      "translated_at": "2026-08-08T19:21:24.493Z"
+    },
+    "skill:worldflowai-everything-claude-code-clickhouse-io": {
+      "hash": "00b11c14e273bebc",
+      "summary_zh": "面向高性能分析场景的 ClickHouse 实践指南，帮助优化查询、设计数据架构并提升分析型负载效率。",
+      "translated_at": "2026-08-08T19:21:25.124Z"
+    },
+    "skill:worldflowai-everything-claude-code-eval-harness": {
+      "hash": "9b6b6e8d85611c52",
+      "summary_zh": "一套面向 Claude Code 的开发工具包，通过智能体、命令和自动化规则提升 AI 辅助编程效率。",
+      "translated_at": "2026-08-08T19:21:26.852Z"
+    },
+    "skill:worldflowai-everything-claude-code-frontend-patterns": {
+      "hash": "9ac5c4e8a4748795",
+      "summary_zh": "一套面向 React 和 Next.js 的前端开发模式指南，适合规范状态管理、优化性能并改进 UI 实践。",
+      "translated_at": "2026-08-08T19:21:27.785Z"
+    },
+    "skill:worldflowai-everything-claude-code-project-guidelines-example": {
+      "hash": "9b6b6e8d85611c52",
+      "summary_zh": "一套面向 Claude Code 的开发工具集，帮助团队规范并提升 AI 辅助编程效率。",
+      "translated_at": "2026-08-08T19:21:27.836Z"
+    },
+    "skill:worldflowai-everything-claude-code-tdd-workflow": {
+      "hash": "ab57f9b92f78f0ad",
+      "summary_zh": "一套面向开发与重构的测试驱动工作流，通过单元、集成和端到端测试保障代码质量及 80% 以上覆盖率。",
+      "translated_at": "2026-08-08T19:21:30.735Z"
+    },
+    "skill:worldflowai-everything-claude-code-strategic-compact": {
+      "hash": "34cbfb1e344ad640",
+      "summary_zh": "在任务阶段切换等合理节点提醒手动压缩上下文，避免自动压缩时机不当导致关键信息丢失。",
+      "translated_at": "2026-08-08T19:21:31.152Z"
+    },
+    "skill:worldflowai-everything-claude-code-security-review": {
+      "hash": "bc34e5d7dc14e85a",
+      "summary_zh": "一套开发安全审查指南，适合在接入认证、处理用户输入与密钥、开发接口或支付等敏感功能时排查风险。",
+      "translated_at": "2026-08-08T19:21:31.335Z"
+    },
+    "skill:worldflowai-everything-claude-code-verification-loop": {
+      "hash": "9b6b6e8d85611c52",
+      "summary_zh": "一套面向 Claude Code 的开发工具包，通过智能体、命令和自动化规则提升 AI 辅助编程效率。",
+      "translated_at": "2026-08-08T19:21:34.959Z"
     }
   }
 }

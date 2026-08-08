@@ -1,0 +1,26 @@
+{
+  "id": "cosmtrek-mindwalk-verify",
+  "name": "verify",
+  "description": "Build, launch, and drive the mindwalk web UI end-to-end for verification.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "cosmtrek",
+  "install_path": ".claude/skills/verify/SKILL.md",
+  "source": {
+    "repo": "cosmtrek/mindwalk",
+    "url": "https://github.com/cosmtrek/mindwalk/blob/master/.claude/skills/verify/SKILL.md",
+    "path": ".claude/skills/verify/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-08-08T19:16:16.529Z",
+    "stars": 1151,
+    "language": "Go",
+    "pushed_at": "2026-08-07T03:41:39Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于构建、启动并自动操作 Mindwalk 网页界面，适合开展端到端功能验证。"
+}

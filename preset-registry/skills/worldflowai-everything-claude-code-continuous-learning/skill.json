@@ -1,0 +1,26 @@
+{
+  "id": "worldflowai-everything-claude-code-continuous-learning",
+  "name": "continuous-learning",
+  "description": "Automatically extract reusable patterns from Claude Code sessions and save them as learned skills for future use.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "WorldFlowAI",
+  "install_path": ".claude/skills/continuous-learning/SKILL.md",
+  "source": {
+    "repo": "WorldFlowAI/everything-claude-code",
+    "url": "https://github.com/WorldFlowAI/everything-claude-code/blob/main/skills/continuous-learning/SKILL.md",
+    "path": "skills/continuous-learning/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-08T18:26:53.602Z",
+    "stars": 1092,
+    "language": "JavaScript",
+    "pushed_at": "2026-01-23T12:42:00Z",
+    "license": null
+  },
+  "summary_zh": "自动从 Claude Code 会话中提炼可复用经验并保存为技能，适合沉淀工作模式、提升后续开发效率。"
+}

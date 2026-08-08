@@ -1,0 +1,26 @@
+{
+  "id": "sickn33-agentic-awesome-skills-dep",
+  "name": "dep",
+  "description": "Handles containerization, CI/CD pipelines, and deployment setup.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sickn33",
+  "install_path": ".claude/skills/dep/SKILL.md",
+  "source": {
+    "repo": "sickn33/agentic-awesome-skills",
+    "url": "https://github.com/sickn33/agentic-awesome-skills/blob/main/plugins/agentic-awesome-skills-claude/skills/agent-squad/dep/SKILL.md",
+    "path": "plugins/agentic-awesome-skills-claude/skills/agent-squad/dep/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-08T18:24:15.360Z",
+    "stars": 44651,
+    "language": "Python",
+    "pushed_at": "2026-08-08T07:06:12Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一款自动处理容器化、CI/CD 流水线和部署配置的工具，适合快速搭建应用交付流程。"
+}

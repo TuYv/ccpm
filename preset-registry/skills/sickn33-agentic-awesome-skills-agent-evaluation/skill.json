@@ -1,0 +1,26 @@
+{
+  "id": "sickn33-agentic-awesome-skills-agent-evaluation",
+  "name": "agent-evaluation",
+  "description": "Testing and benchmarking LLM agents including behavioral testing, capability assessment, reliability metrics, and production monitoring—where even top agents achieve less than 50% on real-world benchmarks",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sickn33",
+  "install_path": ".claude/skills/agent-evaluation/SKILL.md",
+  "source": {
+    "repo": "sickn33/agentic-awesome-skills",
+    "url": "https://github.com/sickn33/agentic-awesome-skills/blob/main/plugins/agentic-awesome-skills-claude/skills/agent-evaluation/SKILL.md",
+    "path": "plugins/agentic-awesome-skills-claude/skills/agent-evaluation/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-08T18:24:13.977Z",
+    "stars": 44651,
+    "language": "Python",
+    "pushed_at": "2026-08-08T07:06:12Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于测试和评估大模型智能体，覆盖行为、能力、可靠性与线上监控，适合发现真实场景中的性能短板。"
+}

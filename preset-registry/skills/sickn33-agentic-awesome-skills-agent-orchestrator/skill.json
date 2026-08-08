@@ -1,0 +1,26 @@
+{
+  "id": "sickn33-agentic-awesome-skills-agent-orchestrator",
+  "name": "agent-orchestrator",
+  "description": "Meta-skill que orquestra todos os agentes do ecossistema. Scan automatico de skills, match por capacidades, coordenacao de workflows multi-skill e registry management.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sickn33",
+  "install_path": ".claude/skills/agent-orchestrator/SKILL.md",
+  "source": {
+    "repo": "sickn33/agentic-awesome-skills",
+    "url": "https://github.com/sickn33/agentic-awesome-skills/blob/main/plugins/agentic-awesome-skills-claude/skills/agent-orchestrator/SKILL.md",
+    "path": "plugins/agentic-awesome-skills-claude/skills/agent-orchestrator/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-08T18:24:14.862Z",
+    "stars": 44651,
+    "language": "Python",
+    "pushed_at": "2026-08-08T07:06:12Z",
+    "license": "MIT"
+  },
+  "summary_zh": "面向智能体生态的统一编排工具，可自动发现并匹配技能，协调多技能工作流和注册管理。"
+}

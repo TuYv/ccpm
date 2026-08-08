@@ -1,0 +1,26 @@
+{
+  "id": "worldflowai-everything-claude-code-security-review",
+  "name": "security-review",
+  "description": "Use this skill when adding authentication, handling user input, working with secrets, creating API endpoints, or implementing payment/sensitive features. Provides comprehensive security checklist and patterns.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "WorldFlowAI",
+  "install_path": ".claude/skills/security-review/SKILL.md",
+  "source": {
+    "repo": "WorldFlowAI/everything-claude-code",
+    "url": "https://github.com/WorldFlowAI/everything-claude-code/blob/main/skills/security-review/SKILL.md",
+    "path": "skills/security-review/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-08T18:26:54.056Z",
+    "stars": 1092,
+    "language": "JavaScript",
+    "pushed_at": "2026-01-23T12:42:00Z",
+    "license": null
+  },
+  "summary_zh": "一套开发安全审查指南，适合在接入认证、处理用户输入与密钥、开发接口或支付等敏感功能时排查风险。"
+}

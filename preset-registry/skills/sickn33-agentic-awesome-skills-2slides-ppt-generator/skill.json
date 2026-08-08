@@ -1,0 +1,26 @@
+{
+  "id": "sickn33-agentic-awesome-skills-2slides-ppt-generator",
+  "name": "2slides-ppt-generator",
+  "description": "AI-powered presentation generation via the 2slides API — create slides from text, match a reference image style, summarize documents into decks, add AI voice narration, and export pages/audio. Use for any \\\"make slides\\\", \\\"create a deck\\\", or \\\"slides from this document\\\" request.",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sickn33",
+  "install_path": ".claude/skills/2slides-ppt-generator/SKILL.md",
+  "source": {
+    "repo": "sickn33/agentic-awesome-skills",
+    "url": "https://github.com/sickn33/agentic-awesome-skills/blob/main/plugins/agentic-awesome-skills-claude/skills/2slides-ppt-generator/SKILL.md",
+    "path": "plugins/agentic-awesome-skills-claude/skills/2slides-ppt-generator/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-08T18:24:11.335Z",
+    "stars": 44651,
+    "language": "Python",
+    "pushed_at": "2026-08-08T07:06:12Z",
+    "license": "MIT"
+  },
+  "summary_zh": "基于 AI 将文本或文档快速生成指定风格的演示文稿，适合做汇报、提案和带语音解说的课件。"
+}

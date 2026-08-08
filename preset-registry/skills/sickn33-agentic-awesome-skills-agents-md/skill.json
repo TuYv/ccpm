@@ -1,0 +1,26 @@
+{
+  "id": "sickn33-agentic-awesome-skills-agents-md",
+  "name": "agents-md",
+  "description": "This skill should be used when the user asks to \"create AGENTS.md\", \"update AGENTS.md\", \"maintain agent docs\", \"set up CLAUDE.md\", or needs to keep agent instructions concise. Enforces research-backed best practices for minimal, high-signal agent documentation.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sickn33",
+  "install_path": ".claude/skills/agents-md/SKILL.md",
+  "source": {
+    "repo": "sickn33/agentic-awesome-skills",
+    "url": "https://github.com/sickn33/agentic-awesome-skills/blob/main/plugins/agentic-awesome-skills-claude/skills/agents-md/SKILL.md",
+    "path": "plugins/agentic-awesome-skills-claude/skills/agents-md/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-08T18:24:16.878Z",
+    "stars": 44651,
+    "language": "Python",
+    "pushed_at": "2026-08-08T07:06:12Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于创建和维护简洁有效的 AI 编程代理说明文档，适合统一项目指令并减少冗余信息。"
+}

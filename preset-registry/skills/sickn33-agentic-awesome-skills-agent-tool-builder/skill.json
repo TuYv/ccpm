@@ -1,0 +1,26 @@
+{
+  "id": "sickn33-agentic-awesome-skills-agent-tool-builder",
+  "name": "agent-tool-builder",
+  "description": "Tools are how AI agents interact with the world. A well-designed tool is the difference between an agent that works and one that hallucinates, fails silently, or costs 10x more tokens than necessary. This skill covers tool design from schema to error handling.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sickn33",
+  "install_path": ".claude/skills/agent-tool-builder/SKILL.md",
+  "source": {
+    "repo": "sickn33/agentic-awesome-skills",
+    "url": "https://github.com/sickn33/agentic-awesome-skills/blob/main/plugins/agentic-awesome-skills-claude/skills/agent-tool-builder/SKILL.md",
+    "path": "plugins/agentic-awesome-skills-claude/skills/agent-tool-builder/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-08T18:24:16.152Z",
+    "stars": 44651,
+    "language": "Python",
+    "pushed_at": "2026-08-08T07:06:12Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一套面向 AI 智能体的工具设计指南，涵盖接口定义与错误处理，适合减少幻觉、静默失败和无效令牌消耗。"
+}

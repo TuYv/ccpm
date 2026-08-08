@@ -1,0 +1,26 @@
+{
+  "id": "worldflowai-everything-claude-code-tdd-workflow",
+  "name": "tdd-workflow",
+  "description": "Use this skill when writing new features, fixing bugs, or refactoring code. Enforces test-driven development with 80%+ coverage including unit, integration, and E2E tests.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "WorldFlowAI",
+  "install_path": ".claude/skills/tdd-workflow/SKILL.md",
+  "source": {
+    "repo": "WorldFlowAI/everything-claude-code",
+    "url": "https://github.com/WorldFlowAI/everything-claude-code/blob/main/skills/tdd-workflow/SKILL.md",
+    "path": "skills/tdd-workflow/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-08T18:26:54.276Z",
+    "stars": 1092,
+    "language": "JavaScript",
+    "pushed_at": "2026-01-23T12:42:00Z",
+    "license": null
+  },
+  "summary_zh": "一套面向开发与重构的测试驱动工作流，通过单元、集成和端到端测试保障代码质量及 80% 以上覆盖率。"
+}

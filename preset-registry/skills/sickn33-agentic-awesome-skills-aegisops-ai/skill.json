@@ -1,0 +1,26 @@
+{
+  "id": "sickn33-agentic-awesome-skills-aegisops-ai",
+  "name": "aegisops-ai",
+  "description": "Autonomous DevSecOps & FinOps Guardrails. Orchestrates Gemini 3 Flash to audit Linux Kernel patches, Terraform cost drifts, and K8s compliance.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sickn33",
+  "install_path": ".claude/skills/aegisops-ai/SKILL.md",
+  "source": {
+    "repo": "sickn33/agentic-awesome-skills",
+    "url": "https://github.com/sickn33/agentic-awesome-skills/blob/main/plugins/agentic-awesome-skills-claude/skills/aegisops-ai/SKILL.md",
+    "path": "plugins/agentic-awesome-skills-claude/skills/aegisops-ai/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-08T18:24:13.865Z",
+    "stars": 44651,
+    "language": "Python",
+    "pushed_at": "2026-08-08T07:06:12Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一款自主化 DevSecOps 与 FinOps 审计工具，适合检查 Linux 内核补丁、Terraform 成本漂移和 K8s 合规风险。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "higgsfield-ai-skills-higgsfield-websites",
+  "name": "higgsfield-websites",
+  "description": "| Build, edit, and deploy full-stack websites, apps and games via the Higgsfield CLI (`higgsfield website …`). Each is a React 19 + TanStack Start SSR app in one Cloudflare Worker (D1/R2/KV/DO/Containers). THREE product types, picked via `--type` on create: `website` (standalone, no Higgsfield integration — references/website-flow.md), `app` (Sign in with Higgsfield + fnf SDK, Quanta — references/app-flow.md), `game` (realtime multiplayer rooms — references/game-flow.md). Routes to the right flo",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "0.12.0",
+  "author": "higgsfield-ai",
+  "install_path": ".claude/skills/higgsfield-websites/SKILL.md",
+  "source": {
+    "repo": "higgsfield-ai/skills",
+    "url": "https://github.com/higgsfield-ai/skills/blob/main/higgsfield-websites/SKILL.md",
+    "path": "higgsfield-websites/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-08T19:15:03.624Z",
+    "stars": 676,
+    "language": "Python",
+    "pushed_at": "2026-08-07T17:24:24Z",
+    "license": "MIT"
+  },
+  "summary_zh": "通过命令行构建、编辑并部署全栈网站、应用和实时多人游戏，适合在 Cloudflare 上快速完成开发上线。"
+}
