@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-08T12:24:19.958Z",
+  "updated_at": "2026-08-08T14:20:11.267Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -13598,14 +13598,14 @@
       "translated_at": "2026-05-20T16:27:14.387Z"
     },
     "skill:yvgude-lean-ctx-lean-ctx": {
-      "hash": "382f24b7fa41f423",
-      "summary_zh": "面向 AI 智能体的上下文工程工具，适合读文件、搜代码和执行命令，可大幅压缩上下文并降低模型开销。",
-      "translated_at": "2026-08-04T13:33:32.501Z"
+      "hash": "cdbbb4ede61f650e",
+      "summary_zh": "面向 AI Agent 的上下文工程工具，适合读取文件、执行命令和搜索代码，显著压缩上下文并提升探索效率。",
+      "translated_at": "2026-08-08T14:19:58.283Z"
     },
     "skill:yvgude-lean-ctx-templates": {
-      "hash": "b726e1056fd4c7e4",
-      "summary_zh": "一套面向 AI 智能体的上下文工程工具，可在读文件、搜代码和执行命令时大幅压缩上下文，降低模型开销。",
-      "translated_at": "2026-08-04T13:33:35.988Z"
+      "hash": "44cf4d01be8fce20",
+      "summary_zh": "面向 AI Agent 的上下文管理工具，可在读文件、搜代码、执行命令和探索目录时大幅压缩上下文，减少 Token 消耗。",
+      "translated_at": "2026-08-08T14:20:11.267Z"
     },
     "skill:zebbern-claude-code-guide-api-fuzzing-bug-bounty": {
       "hash": "f0692669381caf74",
@@ -28896,6 +28896,11 @@
       "hash": "a32baa905f20502e",
       "summary_zh": "将零散素材逐段组织、打磨成完整文章，适合已有原始材料、需要直接完成写作的场景。",
       "translated_at": "2026-08-08T12:24:19.958Z"
+    },
+    "skill:fradser-dotclaude-wizard": {
+      "hash": "eaa51c06d1f861c4",
+      "summary_zh": "生成交互式 Bash 向导，引导用户完成基础设施配置、凭证设置、第三方后台操作及迁移切换等需人工执行的步骤。",
+      "translated_at": "2026-08-08T14:19:54.603Z"
     }
   }
 }
