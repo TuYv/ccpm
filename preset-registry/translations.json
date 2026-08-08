@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-08T01:18:42.484Z",
+  "updated_at": "2026-08-08T03:15:14.839Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -9713,9 +9713,9 @@
       "translated_at": "2026-06-05T16:53:38.210Z"
     },
     "bundle:openai-openai-agents-python": {
-      "hash": "d472e33a29cf0f9c",
-      "summary_zh": "这是一套面向 OpenAI Agents Python SDK 的研发维护工具集，覆盖变更规划、测试验证、文档同步与发布审查，帮助团队更稳妥地交付高质量版本。",
-      "translated_at": "2026-08-08T01:18:40.173Z"
+      "hash": "4fe55b0252ca15d1",
+      "summary_zh": "这套工具集覆盖 OpenAI Agents Python SDK 从开发决策、实现验证到文档、示例、集成测试和发布审查的完整工程闭环，帮助团队稳定高效地交付变更。",
+      "translated_at": "2026-08-08T03:15:11.223Z"
     },
     "bundle:nomenak-superclaude": {
       "hash": "e0bd9eeeb70c896e",
@@ -17378,9 +17378,9 @@
       "translated_at": "2026-08-03T04:59:09.893Z"
     },
     "bundle:modu-ai-moai-adk": {
-      "hash": "a3beb8d33cc3ea78",
-      "summary_zh": "面向 moai-adk-go 开发与维护，整合规范、开发流程、自动化改进和多语言文档协作，提升工程交付的一致性与效率。",
-      "translated_at": "2026-08-07T07:05:35.810Z"
+      "hash": "1cf849e23a5f8ec4",
+      "summary_zh": "面向 moai-adk-go 的开发与维护全流程工具集，把规范、脚手架、文档同步和本地自我演进串成可持续迭代的工程化协作体系。",
+      "translated_at": "2026-08-08T03:15:10.792Z"
     },
     "bundle:aaronontheweb-dotnet-skills": {
       "hash": "31be44600ae107c2",
@@ -24553,9 +24553,9 @@
       "translated_at": "2026-08-04T00:14:22.879Z"
     },
     "skill:modu-ai-moai-adk-moai-domain-html-report": {
-      "hash": "27749a4170b08f85",
-      "summary_zh": "将 Markdown 渲染为单文件 HTML 报告，适合按不同场景和受众快速生成可离线分享的专业文档。",
-      "translated_at": "2026-08-05T12:59:04.513Z"
+      "hash": "768d2afcac19ed8c",
+      "summary_zh": "把 Markdown 渲染成可按受众理解程度生成图表、示例与说明的单文件 HTML 报告，适合状态、事故、规划和财务等场景。",
+      "translated_at": "2026-08-08T03:15:14.839Z"
     },
     "skill:modu-ai-moai-adk-moai-domain-frontend": {
       "hash": "35331f77c806e651",
@@ -28811,6 +28811,11 @@
       "hash": "28d4324aae5328b4",
       "summary_zh": "基于H&E病理切片生成全转录组虚拟空间表达数据，适合按基因符号查询或对整张切片分块预测。",
       "translated_at": "2026-08-07T22:16:36.028Z"
+    },
+    "skill:openai-openai-agents-python-implementation-kickoff": {
+      "hash": "a8da5e0bcdbf9920",
+      "summary_zh": "用于在隔离工作区启动实现任务，完成同步主干、验证审查和生成可直接提交 PR 的本地交接。",
+      "translated_at": "2026-08-08T03:15:14.080Z"
     }
   }
 }

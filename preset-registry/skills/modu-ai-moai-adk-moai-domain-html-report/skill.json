@@ -1,7 +1,7 @@
 {
   "id": "modu-ai-moai-adk-moai-domain-html-report",
   "name": "moai-domain-html-report",
-  "description": "> Markdown-to-single-file-HTML report renderer. Six modes (status, incident, plan, explainer, financial, pr) selected by report type, crossed with three audience tiers (expert, basic, learn) derived from the active output style. All tiers emit mermaid structural diagrams; the basic and learn tiers additionally carry worked examples and plain-language primers, while the expert tier stays dense. Zero external JS/CSS framework dependencies — inline SVG charts, a font-CDN exception for Korean readab",
+  "description": "> Markdown-to-single-file-HTML report renderer. Six modes (status, incident, plan, explainer, financial, pr) selected by report type, crossed with three audience tiers (expert, basic, learn) derived from the active output style. The basic and learn tiers enrich the HTML with mermaid flowcharts, worked examples, and plain-language primers; the expert tier stays dense. Zero external JS/CSS framework dependencies — inline SVG charts, a font-CDN exception for Korean readability, and a tier-gated mer",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/modu-ai/moai-adk/blob/main/.claude/skills/moai-domain-html-report/SKILL.md",
     "path": ".claude/skills/moai-domain-html-report/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-08T00:25:18.359Z",
+    "discovered_at": "2026-08-08T02:21:33.963Z",
     "stars": 1161,
     "language": "Go",
-    "pushed_at": "2026-08-07T16:34:44Z",
+    "pushed_at": "2026-08-08T02:20:28Z",
     "license": "Apache-2.0"
   },
-  "summary_zh": "将 Markdown 渲染为单文件 HTML 报告，适合按不同场景和受众快速生成可离线分享的专业文档。"
+  "summary_zh": "把 Markdown 渲染成可按受众理解程度生成图表、示例与说明的单文件 HTML 报告，适合状态、事故、规划和财务等场景。"
 }
