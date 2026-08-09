@@ -4,7 +4,7 @@ description: 'Guided journey from a large aged codebase everyone fears to touch 
 license: MIT
 metadata:
   author: wondelai
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Remove Technical Debt
@@ -33,7 +33,7 @@ Take a large, aged, tangled codebase that everyone is afraid to touch and pay it
 1. **Resume first.** Before anything else, read `docs/REMOVE-TECHNICAL-DEBT-PLAN.md` and every artifact in the Journey Map. If the tracker exists, summarize the journey state in 3-5 lines and ask which phase to enter. Done when the user has confirmed an entry point. A journey with a tracker is resumed, never restarted.
 2. **Intake on first run only.** No tracker: run the Intake below, then create `docs/REMOVE-TECHNICAL-DEBT-PLAN.md` with every phase statused `pending | in-progress | awaiting-evidence | done | deferred: reason | skipped: reason`. Done when the tracker exists and the user has confirmed the phase plan.
 3. **Phase entry.** Announce: what the phase does, the decision it forces, the artifact it produces, rough effort. Offer proceed / skip / defer — phases marked GATE may be deferred, never skipped. Mark the phase `in-progress` on proceed. Done when the user chose.
-4. **Skill invocation and fallback.** Invoke the phase's skill by its slug. If it is not available, offer: `npx skills add wondelai/skills/<slug> --global`. If the user declines, run the phase from its Brief — the minimum viable method. State which mode you are in.
+4. **Skill invocation and fallback.** Load the phase's skill and use it: each phase's Invoke line names the skill by slug — use that skill to run the phase. If it is not available, offer: `npx skills add wondelai/skills/<slug> --global`. If the user declines, run the phase from its Brief — the minimum viable method. State which mode you are in.
 5. **In-phase decisions.** Ask every question under "Decide with the user" — with concrete options and your recommendation. Record the choice in the tracker's Key Decisions. A decision made silently is a defect.
 6. **Phase exit.** Present the draft artifact content for sign-off before writing. On approval: write or extend the docs/ files, update the tracker (status, Key Decisions, Next Actions). Done when the files are written and the phase row shows `done`.
 7. **Artifact discipline.** Read before writing; create a file only if missing, otherwise extend — add or update your sections, preserve everyone else's. Files are UPPERCASE in `docs/`. Every recommendation lands as a checkbox or a table row with owner and priority. See [references/artifact-templates.md](references/artifact-templates.md) when creating a docs/ file for the first time — create it from the full skeleton (all section headings), then fill the sections your phase names.
@@ -63,7 +63,7 @@ Done when `docs/REMOVE-TECHNICAL-DEBT-PLAN.md` exists with every phase statused 
 
 **Brief (fallback):** Legacy code is code without tests — cover and modify, never edit and pray. Run the Legacy Code Change Algorithm: identify change points, find test points, break dependencies with the least-invasive seam (Parameterize Constructor with a production default; Extract Interface), write characterization tests that pin actual behavior (assert something wrong, read the failure, pin the real value), then change. Bound blast radius with an effect sketch; find the pinch point where a few tests cover the most behavior. Urgent change you can't cover in time: Sprout/Wrap and track the untested host as debt.
 
-**Invoke:** `working-with-legacy-code` with the starting module chosen at intake. Ask for an effect sketch from the entry method, the pinch points, the seams to break, and the smallest characterization-test set that pins current behavior.
+**Invoke:** Use the `working-with-legacy-code` skill with the starting module chosen at intake. Ask for an effect sketch from the entry method, the pinch points, the seams to break, and the smallest characterization-test set that pins current behavior.
 
 **Decide with the user:** (1) Confirm the starting module by the three-axis heuristic — changing next, high churn (`git log`), core domain. (2) Bugs found while characterizing: pin the wrong behavior and file it in the Debt Ledger, never silently fix — callers may depend on the quirk. Confirm the user accepts this.
 
@@ -77,7 +77,7 @@ Done when `docs/REMOVE-TECHNICAL-DEBT-PLAN.md` exists with every phase statused 
 
 **Brief (fallback):** Refactoring is not rewriting: small behavior-preserving transformations, each backed by tests. Each smell maps to a named refactoring — Extract Method is the workhorse (if you'd write a comment to explain a block, extract it and name it after the comment). Also Replace Nested Conditional with Guard Clauses, Replace Conditional with Polymorphism, Introduce Parameter Object, Extract Class. Workflow: tests green, one transformation, tests green, commit; a red test means revert, not debug. Branch by Abstraction migrates large structures in production; Preparatory Refactoring makes the change easy first; Rule of Three guards against premature abstraction.
 
-**Invoke:** `refactoring-patterns` with a smelly module and the Phase 1 tests. Ask it to name each smell, cite the transformation, and apply one at a time with tests run between each; for a large migration ask for a Branch by Abstraction plan.
+**Invoke:** Use the `refactoring-patterns` skill with a smelly module and the Phase 1 tests. Ask it to name each smell, cite the transformation, and apply one at a time with tests run between each; for a large migration ask for a Branch by Abstraction plan.
 
 **Decide with the user:** Scope — which smells this pass; whether an upcoming feature warrants a Preparatory Refactoring at its insertion point first; and whether a big migration should go behind a Branch by Abstraction.
 
@@ -91,7 +91,7 @@ Done when `docs/REMOVE-TECHNICAL-DEBT-PLAN.md` exists with every phase statused 
 
 **Brief (fallback):** Code is read far more than written (10:1+). Names reveal intent (`elapsedTimeInDays`, not `d`); booleans read as predicates; one word per concept; functions do one thing at one level of abstraction with 0-2 arguments (a flag argument is two functions). Command-Query Separation: change state or return a value, never both. Error handling is where legacy incidents hide: prefer exceptions to return codes, catch specific types, never return or pass null (empty collection, Optional, Null Object), wrap noisy third-party APIs behind an adapter, put operation + state in every error. Boy Scout Rule: leave code cleaner than you found it.
 
-**Invoke:** `clean-code` with a target module. Ask for a 0-10 score across the six disciplines, the top ten fixes in priority order, and an error-handling audit (bare catches, null returns, contextless errors, unwrapped third-party SDKs).
+**Invoke:** Use the `clean-code` skill with a target module. Ask for a 0-10 score across the six disciplines, the top ten fixes in priority order, and an error-handling audit (bare catches, null returns, contextless errors, unwrapped third-party SDKs).
 
 **Decide with the user:** Which fixes to apply now versus log as debt, and the naming / error-handling conventions the team adopts going forward.
 
@@ -105,7 +105,7 @@ Done when `docs/REMOVE-TECHNICAL-DEBT-PLAN.md` exists with every phase statused 
 
 **Brief (fallback):** Complexity is the enemy; judge every change by whether it raises or lowers overall complexity. Symptoms: change amplification, cognitive load, unknown unknowns. Module depth = functionality ÷ interface complexity; deep modules hide machinery behind small interfaces, shallow ones don't (classitis) — merge shallow classes that always travel together. Watch information leakage (one decision reflected across many modules) and temporal decomposition (organizing by order-of-execution, not by knowledge). This is the tactical→strategic flip: invest 10-20% to keep the design clean.
 
-**Invoke:** `software-design-philosophy` with the module set touched so far. Ask which classes are shallow, where a design decision leaks across modules, and how to consolidate into deeper modules with simpler interfaces — with each change labeled as raising or lowering complexity.
+**Invoke:** Use the `software-design-philosophy` skill with the module set touched so far. Ask which classes are shallow, where a design decision leaks across modules, and how to consolidate into deeper modules with simpler interfaces — with each change labeled as raising or lowering complexity.
 
 **Decide with the user:** Which consolidations to make now versus defer, guarding against over-merging genuinely unrelated concerns.
 
@@ -119,7 +119,7 @@ Done when `docs/REMOVE-TECHNICAL-DEBT-PLAN.md` exists with every phase statused 
 
 **Brief (fallback):** The Dependency Rule: source dependencies point inward — Entities, Use Cases, Interface Adapters, Frameworks/Drivers; nothing inner names anything outer. Database and web are details, plugins to your rules. Enforce with Dependency Inversion: a Use Case owns a repository interface; the Postgres/Stripe implementation lives in an outer adapter. SOLID are the mid-level tools; Common Closure and Acyclic Dependencies find real boundaries. Microservices sharing one data model are a distributed monolith — apply the rule inside the monolith first.
 
-**Invoke:** `clean-architecture` with the current module map and the stack from intake. Ask it to map the dependency graph, list every violation where business logic imports the ORM or framework, pick the most-changed module first, and show the extraction to framework-free Use Cases behind owned interfaces.
+**Invoke:** Use the `clean-architecture` skill with the current module map and the stack from intake. Ask it to map the dependency graph, list every violation where business logic imports the ORM or framework, pick the most-changed module first, and show the extraction to framework-free Use Cases behind owned interfaces.
 
 **Decide with the user:** How far to push the boundary this pass; which vendors (payments, storage) to wrap first; and whether any proposed service split is a real boundary or would only add a distributed monolith.
 
@@ -133,7 +133,7 @@ Done when `docs/REMOVE-TECHNICAL-DEBT-PLAN.md` exists with every phase statused 
 
 **Brief (fallback):** Broken Window Theory: one unrepaired hack drops the bar for the next — fix immediately or board it up with a tracked ticket, never an untracked `// TODO`. DRY is about knowledge, not text — de-duplicate the same rule in two places (validation on client and server), leave coincidental look-alikes alone. Orthogonality: changing one component shouldn't affect another. Reversibility: wrap vendors behind your own interfaces. Design by Contract + crash early: guard preconditions and invariants at hardened boundaries so an invalid state fails loudly at the source.
 
-**Invoke:** `pragmatic-programmer` across the codebase. Ask it to flag duplicated knowledge (ignoring coincidental duplication), broken windows and untracked TODOs to board up, and the boundaries that need Design-by-Contract guard clauses.
+**Invoke:** Use the `pragmatic-programmer` skill across the codebase. Ask it to flag duplicated knowledge (ignoring coincidental duplication), broken windows and untracked TODOs to board up, and the boundaries that need Design-by-Contract guard clauses.
 
 **Decide with the user:** The debt budget per iteration and the broken-windows policy — what gets fixed now versus ticketed.
 
@@ -147,7 +147,7 @@ Done when `docs/REMOVE-TECHNICAL-DEBT-PLAN.md` exists with every phase statused 
 
 **Brief (fallback):** The software that passes QA is not what survives production. Integration points are the number-one killer — a slow response is worse than none. Non-negotiables: connect + read timeouts on every outbound call; a Circuit Breaker on failing dependencies (trips open, fails fast, half-open recovery); Bulkheads to isolate resource pools; Retry with exponential backoff + jitter; Steady State cleanup of accumulating cruft. Bound every query — unbounded result sets crash at scale, so add LIMITs and pagination. Decouple deploy from release with feature flags and expand-contract migrations; add deep health checks, RED metrics, symptom-based alerts.
 
-**Invoke:** `release-it` with the outbound dependencies from intake. Ask for an audit of calls with no timeout, unbounded queries and list endpoints, circuit-breaker + bulkhead placement, an expand-contract migration plan for a risky schema, and a deep health check + RED metrics + alert design.
+**Invoke:** Use the `release-it` skill with the outbound dependencies from intake. Ask for an audit of calls with no timeout, unbounded queries and list endpoints, circuit-breaker + bulkhead placement, an expand-contract migration plan for a risky schema, and a deep health check + RED metrics + alert design.
 
 **Decide with the user:** Breaker thresholds, which dependencies get dedicated pools, and the alert symptoms and thresholds (error rate, latency).
 
@@ -161,7 +161,7 @@ Done when `docs/REMOVE-TECHNICAL-DEBT-PLAN.md` exists with every phase statused 
 
 **Brief (fallback):** The model is the code. Start with Ubiquitous Language: rename technical-only names (`DataManager`, `Helper`) to domain terms; a concept hard to name signals a wrong model. Map Bounded Contexts (the same word can mean different things in different contexts) starting from what exists, aligned with team boundaries. The Anti-Corruption Layer lets a clean new context talk to the legacy core without the old model leaking in — the foundation of the Strangler Fig. Inside a context: small Aggregates with one root, reference others by ID, immutable Value Objects, past-tense Domain Events. Invest hardest in the Core Domain.
 
-**Invoke:** `domain-driven-design` with the tangled modules and the boundaries from Phase 5. Ask it to build a ubiquitous language, map current and target bounded contexts, design an anti-corruption layer for a new clean context, and shrink any god aggregate to its true consistency boundary.
+**Invoke:** Use the `domain-driven-design` skill with the tangled modules and the boundaries from Phase 5. Ask it to build a ubiquitous language, map current and target bounded contexts, design an anti-corruption layer for a new clean context, and shrink any god aggregate to its true consistency boundary.
 
 **Decide with the user:** Which context to carve first (the Core Domain where value lives); which boundaries align with team structure; and whether cross-context calls become Domain Events.
 
@@ -177,7 +177,7 @@ Done when `docs/REMOVE-TECHNICAL-DEBT-PLAN.md` exists with every phase statused 
 | ddia-systems | Data-layer decisions (isolation, replication, storage fit) are part of the debt | Extends docs/ARCHITECTURE.md (`## Data & Storage Decisions`) |
 | team-topologies | Debt clusters where team boundaries fight the architecture | Extends docs/OPERATIONS.md (`## Team Structure`) |
 
-Optional phases follow the same operating rules; insert where the Add-when condition first becomes true — the scaling and data phases after Phase 5, the team-topology phase alongside Phase 8's context boundaries.
+Optional phases follow the same operating rules — load and use each listed skill exactly as a core phase would; insert where the Add-when condition first becomes true — the scaling and data phases after Phase 5, the team-topology phase alongside Phase 8's context boundaries.
 
 ## Common Mistakes
 
@@ -200,4 +200,4 @@ Exit checklist — every box tied to an artifact:
 - [ ] The monolith has a current context map and at least one clean context behind an anti-corruption layer (ARCHITECTURE.md Bounded Contexts & Context Map).
 - [ ] No untracked hacks remain; the debt budget and broken-windows policy are written down (TECH-DEBT.md Debt Budget & Broken-Windows Policy).
 
-Close the tracker: every phase `done` or `skipped: reason`, with remaining Next Actions carried into the TECH-DEBT.md Debt Ledger so nothing is lost. Then route forward: when the starting point was a younger prototype and you want the production-readiness variant of this journey, continue with `improve-code-quality`; when code health is restored and the product experience is next, continue with `improve-app`.
+Close the tracker: every phase `done` or `skipped: reason`, with remaining Next Actions carried into the TECH-DEBT.md Debt Ledger so nothing is lost. Then route forward: when the starting point was a younger prototype and you want the production-readiness variant of this journey, continue with the `improve-code-quality` skill; when code health is restored and the product experience is next, continue with the `improve-app` skill.
