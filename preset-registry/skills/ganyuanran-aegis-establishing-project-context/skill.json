@@ -1,7 +1,7 @@
 {
   "id": "ganyuanran-aegis-establishing-project-context",
   "name": "establishing-project-context",
-  "description": "Use when the user asks to establish shared project language or project work exposes a resolved, vague, conflicting, renamed, or deprecated domain term that needs active semantic modeling.",
+  "description": "Use when the user asks to establish shared project language, or project work exposes a conflicting, renamed, or deprecated domain term that needs active semantic modeling. Routine small tasks stay on the fast path.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/GanyuanRan/Aegis/blob/main/skills/establishing-project-context/SKILL.md",
     "path": "skills/establishing-project-context/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-09T15:44:05.389Z",
-    "stars": 969,
+    "discovered_at": "2026-08-09T17:38:18.295Z",
+    "stars": 970,
     "language": "Python",
-    "pushed_at": "2026-08-09T12:07:19Z",
+    "pushed_at": "2026-08-09T15:50:08Z",
     "license": "MIT"
   },
-  "summary_zh": "一套建立项目统一语言的语义建模方法，适合梳理含糊、冲突、更名或废弃的领域术语。"
+  "summary_zh": "用于统一项目术语和语义上下文，适合处理领域词汇冲突、改名或弃用，减少团队沟通与建模偏差。"
 }

@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-09T15:48:00.985Z",
+  "updated_at": "2026-08-09T17:42:30.459Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -17403,9 +17403,9 @@
       "translated_at": "2026-08-03T04:59:20.613Z"
     },
     "bundle:ganyuanran-aegis": {
-      "hash": "f3dcad5ce4d94ae2",
-      "summary_zh": "一套面向复杂软件开发的智能协作工作流，串联目标澄清、规划执行、并行协作与质量收尾，让 AI 辅助开发更稳、更快、更可控。",
-      "translated_at": "2026-08-09T12:41:40.224Z"
+      "hash": "5aaf4fc7a3ce0119",
+      "summary_zh": "面向复杂软件开发的智能协作工作流，把目标、规划、并行执行、评审与收尾串成可持续、低熵的交付闭环。",
+      "translated_at": "2026-08-09T17:42:17.714Z"
     },
     "bundle:chrisbanes-skills": {
       "hash": "36ec0b427961e39e",
@@ -21403,9 +21403,9 @@
       "translated_at": "2026-08-09T12:41:43.996Z"
     },
     "skill:ganyuanran-aegis-dispatching-parallel-agents": {
-      "hash": "90e26db4a3fb046c",
-      "summary_zh": "用于把两个以上互不依赖、无需共享状态的任务分派给多个智能体并行处理，适合加速独立任务。",
-      "translated_at": "2026-08-03T18:31:23.042Z"
+      "hash": "66a8cde255e9f86c",
+      "summary_zh": "用于把两个以上互不依赖、无需共享状态的任务分派给多个智能体并行处理，适合临时任务提速。",
+      "translated_at": "2026-08-09T17:42:26.087Z"
     },
     "skill:ganyuanran-aegis-communicating-concisely": {
       "hash": "be8bb5c2fb2e4c22",
@@ -21418,19 +21418,19 @@
       "translated_at": "2026-08-03T18:31:26.033Z"
     },
     "skill:ganyuanran-aegis-executing-plans": {
-      "hash": "9ba108027a564ccf",
-      "summary_zh": "用于在独立会话中按书面实施计划推进任务，并在关键节点进行审查确认。",
-      "translated_at": "2026-08-03T18:31:28.137Z"
+      "hash": "585d4de5ea8a7d6f",
+      "summary_zh": "用于跨会话执行书面开发计划，并在关键节点安排评审，适合需要持续推进和阶段验收的任务。",
+      "translated_at": "2026-08-09T17:42:27.880Z"
     },
     "skill:ganyuanran-aegis-establishing-project-context": {
-      "hash": "12f8948149f43cdd",
-      "summary_zh": "一套建立项目统一语言的语义建模方法，适合梳理含糊、冲突、更名或废弃的领域术语。",
-      "translated_at": "2026-08-03T18:31:29.252Z"
+      "hash": "e33d5ddd51062c79",
+      "summary_zh": "用于统一项目术语和语义上下文，适合处理领域词汇冲突、改名或弃用，减少团队沟通与建模偏差。",
+      "translated_at": "2026-08-09T17:42:22.786Z"
     },
     "skill:ganyuanran-aegis-first-principles-review": {
-      "hash": "75254188ece38a2f",
-      "summary_zh": "用于以第一性原理或奥卡姆剃刀审视复杂决策，适合排查反复修补、兜底膨胀、职责重叠及架构方向风险。",
-      "translated_at": "2026-08-03T18:31:30.511Z"
+      "hash": "c8f60982ffb0297f",
+      "summary_zh": "一套基于第一性原理和奥卡姆剃刀的评审工具，适合分析多重约束、责任重叠或架构方向不明的高风险决策。",
+      "translated_at": "2026-08-09T17:42:30.458Z"
     },
     "skill:ganyuanran-aegis-goal-framing": {
       "hash": "9dc47629c1d8d71f",
@@ -21443,9 +21443,9 @@
       "translated_at": "2026-08-03T18:31:33.526Z"
     },
     "skill:ganyuanran-aegis-finishing-a-development-branch": {
-      "hash": "776ee61192fdcda0",
-      "summary_zh": "这是一个开发分支收尾工具，适合在工作验证完成后处理 Aegis 分支或工作树的集成与清理。",
-      "translated_at": "2026-08-03T18:31:34.382Z"
+      "hash": "1d1c0117fb7782eb",
+      "summary_zh": "这是一个开发分支收尾工作流，适合在任务验证完成后合并代码、创建 PR、清理工作树或管理分支生命周期。",
+      "translated_at": "2026-08-09T17:42:26.389Z"
     },
     "skill:ganyuanran-aegis-recording-architecture-decisions": {
       "hash": "8018bb62cec4ca20",
@@ -21468,9 +21468,9 @@
       "translated_at": "2026-08-03T18:31:40.913Z"
     },
     "skill:ganyuanran-aegis-subagent-driven-development": {
-      "hash": "39a2ec026ea88bec",
-      "summary_zh": "一种由子代理协同执行开发计划的工作流，适合在当前会话中并行处理彼此独立的实现任务。",
-      "translated_at": "2026-08-03T18:31:41.565Z"
+      "hash": "eb812cb81793479d",
+      "summary_zh": "一种让多个子代理按书面实施计划独立执行任务的开发方式，适合在当前会话中推进可拆分的开发工作。",
+      "translated_at": "2026-08-09T17:42:30.435Z"
     },
     "skill:ganyuanran-aegis-test-driven-development": {
       "hash": "3f4a893230dad7b9",

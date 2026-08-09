@@ -1,7 +1,7 @@
 {
   "id": "ganyuanran-aegis-executing-plans",
   "name": "executing-plans",
-  "description": "Use when you have a written implementation plan to execute in a separate session with review checkpoints",
+  "description": "Use when executing a written implementation plan across sessions or with review checkpoints. For same-session execution with independent tasks, use subagent-driven-development instead.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/GanyuanRan/Aegis/blob/main/skills/executing-plans/SKILL.md",
     "path": "skills/executing-plans/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-09T15:44:05.571Z",
-    "stars": 969,
+    "discovered_at": "2026-08-09T17:38:18.545Z",
+    "stars": 970,
     "language": "Python",
-    "pushed_at": "2026-08-09T12:07:19Z",
+    "pushed_at": "2026-08-09T15:50:08Z",
     "license": "MIT"
   },
-  "summary_zh": "用于在独立会话中按书面实施计划推进任务，并在关键节点进行审查确认。"
+  "summary_zh": "用于跨会话执行书面开发计划，并在关键节点安排评审，适合需要持续推进和阶段验收的任务。"
 }
