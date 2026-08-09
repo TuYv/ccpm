@@ -1,7 +1,7 @@
 {
   "id": "basicmachines-co-basic-memory-pythonic-code",
   "name": "pythonic-code",
-  "description": ">- Write, refactor, and review Python for clarity, explicit behavior, local reasoning, strong types, and minimal abstraction. Use when creating or changing nontrivial Python, simplifying object-heavy or helper-heavy code, evaluating whether code is Pythonic, or reviewing Python maintainability in Basic Memory repositories.",
+  "description": ">- Write, refactor, and review Python for clarity, explicit behavior, local reasoning, strong types, constructive domain modeling, and minimal abstraction. Use when creating or changing nontrivial Python, simplifying object-heavy, helper-heavy, or overly procedural code, evaluating whether code is Pythonic, or reviewing Python maintainability in Basic Memory repositories.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/basicmachines-co/basic-memory/blob/main/.agents/skills/pythonic-code/SKILL.md",
     "path": ".agents/skills/pythonic-code/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-09T16:44:53.503Z",
+    "discovered_at": "2026-08-09T18:36:23.309Z",
     "stars": 3611,
     "language": "Python",
-    "pushed_at": "2026-08-09T16:23:57Z",
+    "pushed_at": "2026-08-09T18:29:02Z",
     "license": "AGPL-3.0"
   },
-  "summary_zh": "一套 Python 编写、重构与审查指南，适合简化复杂代码并提升可读性、类型安全和可维护性。"
+  "summary_zh": "一套用于编写、重构和审查复杂 Python 代码的方法，帮助减少过度抽象与臃肿结构，提升清晰度和可维护性。"
 }
