@@ -1,7 +1,7 @@
 {
   "id": "talkstream-ru-text-ru-text",
   "name": "ru-text",
-  "description": "> Russian text quality. Triggers: вычитай, проверь текст, поправь, отредактируй, причеши, ru-text. Also any Russian output. Typography, info-style, editorial, UX writing, business correspondence, AI-text cleanup.",
+  "description": "> Russian text quality. Triggers: вычитай, проверь текст, поправь, отредактируй, причеши, ru-text. Typography silently on any Russian output; deeper editing on request. Info-style, editorial, UX writing, business correspondence, AI-text cleanup.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/talkstream/ru-text/blob/main/skills/ru-text/SKILL.md",
     "path": "skills/ru-text/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-09T18:36:10.489Z",
+    "discovered_at": "2026-08-09T19:49:07.810Z",
     "stars": 186,
     "language": "Shell",
-    "pushed_at": "2026-08-09T18:35:35Z",
+    "pushed_at": "2026-08-09T19:41:11Z",
     "license": "MIT"
   },
-  "summary_zh": "一款俄语文本润色工具，适合校对排版、编辑文案、优化商务沟通及去除 AI 写作痕迹。"
+  "summary_zh": "俄语文本校对与润色工具，可自动规范排版，并优化编辑文案、UX 文案、商务邮件和 AI 生成内容。"
 }
