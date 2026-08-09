@@ -1,7 +1,7 @@
 {
   "id": "ganyuanran-aegis-writing-plans",
   "name": "writing-plans",
-  "description": "Use when you have a spec or requirements for a multi-step task, before touching code",
+  "description": "Use when you have an approved spec or written requirements for a multi-step task that needs a durable plan document before touching code. Small, single-owner, or fast-path tasks do not need this skill.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/GanyuanRan/Aegis/blob/main/skills/writing-plans/SKILL.md",
     "path": "skills/writing-plans/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-09T05:39:08.056Z",
-    "stars": 958,
+    "discovered_at": "2026-08-09T07:37:00.741Z",
+    "stars": 959,
     "language": "Python",
-    "pushed_at": "2026-08-09T03:46:52Z",
+    "pushed_at": "2026-08-09T06:37:36Z",
     "license": "MIT"
   },
-  "summary_zh": "用于在动手写代码前，将需求或规格整理成清晰的多步骤执行计划，适合复杂开发任务。"
+  "summary_zh": "用于在开始编码前，把已确认的需求整理成可长期维护的执行计划，适合多步骤、复杂任务的协作与推进。"
 }

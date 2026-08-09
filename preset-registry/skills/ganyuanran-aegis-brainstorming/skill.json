@@ -1,7 +1,7 @@
 {
   "id": "ganyuanran-aegis-brainstorming",
   "name": "brainstorming",
-  "description": "Use when defining new features, product behavior, UI/component design, architecture choices, contract changes, or ambiguous medium/high-complexity work before implementation, or when the user asks to grill or pressure-test a plan or design.",
+  "description": "Use when defining ambiguous or high-complexity new features, product behavior, UI/component design, architecture choices, contract changes, or medium/high-complexity design work before implementation, or when the user asks to grill or pressure-test a plan or design. Low-complexity or routine small requests stay on the fast path and do not belong here.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/GanyuanRan/Aegis/blob/main/skills/brainstorming/SKILL.md",
     "path": "skills/brainstorming/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-09T05:39:05.827Z",
-    "stars": 958,
+    "discovered_at": "2026-08-09T07:36:56.769Z",
+    "stars": 959,
     "language": "Python",
-    "pushed_at": "2026-08-09T03:46:52Z",
+    "pushed_at": "2026-08-09T06:37:36Z",
     "license": "MIT"
   },
-  "summary_zh": "用于开发前梳理复杂或模糊需求，明确功能、交互与架构方案，并通过追问检验设计是否可靠。"
+  "summary_zh": "用于在实现前梳理复杂或模糊的功能、架构、界面与契约设计，并通过质疑方案降低决策风险。"
 }
