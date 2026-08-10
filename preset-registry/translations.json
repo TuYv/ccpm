@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-10T01:42:58.467Z",
+  "updated_at": "2026-08-10T03:41:07.585Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -9848,9 +9848,9 @@
       "translated_at": "2026-08-03T04:58:02.438Z"
     },
     "bundle:peonping-peon-ping": {
-      "hash": "e1f2a43be97ed121",
-      "summary_zh": "这套工具把终端变成你的专属语音陪练，不仅能随手记录运动打卡，还能自由切换角色语音和提醒，让枯燥的健身变成有趣的互动陪伴。",
-      "translated_at": "2026-05-20T01:02:45.994Z"
+      "hash": "4a2f24a7378b3a12",
+      "summary_zh": "为 Claude 编程会话提供可定制的角色语音提醒，统一管理音效包、通知开关与会话设置。",
+      "translated_at": "2026-08-10T03:40:49.747Z"
     },
     "bundle:zebbern-claude-code-guide": {
       "hash": "d28ccdb31ee6c919",
@@ -17403,9 +17403,9 @@
       "translated_at": "2026-08-03T04:59:20.613Z"
     },
     "bundle:ganyuanran-aegis": {
-      "hash": "5aaf4fc7a3ce0119",
-      "summary_zh": "面向复杂软件开发的智能协作工作流，把目标、规划、并行执行、评审与收尾串成可持续、低熵的交付闭环。",
-      "translated_at": "2026-08-09T17:42:17.714Z"
+      "hash": "03f0bdcc2f7a0f8c",
+      "summary_zh": "面向复杂软件开发任务，把目标澄清、方案规划、多代理执行、质量审查和长期上下文串成一套可持续交付流程。",
+      "translated_at": "2026-08-10T03:40:50.873Z"
     },
     "bundle:chrisbanes-skills": {
       "hash": "36ec0b427961e39e",
@@ -17528,9 +17528,9 @@
       "translated_at": "2026-08-07T20:24:58.139Z"
     },
     "preset:milisp-codexia": {
-      "hash": "834ec407e2ccf1fb",
-      "summary_zh": "为 Codex CLI 和 Claude Code 提供统一桌面工作台，适合管理多项目智能体任务、定时流程、Git 工作树及远程操控。",
-      "translated_at": "2026-08-07T18:24:48.034Z"
+      "hash": "4c9b1ff24e6697bc",
+      "summary_zh": "一款面向 Codex CLI 和 Claude Code 的轻量智能体工作台，适合统一调度任务、管理代码分支并远程操控开发流程。",
+      "translated_at": "2026-08-10T03:40:55.787Z"
     },
     "preset:nwiizo-cctx": {
       "hash": "7e7d53329714e832",
@@ -21403,9 +21403,9 @@
       "translated_at": "2026-08-09T12:41:43.996Z"
     },
     "skill:ganyuanran-aegis-dispatching-parallel-agents": {
-      "hash": "66a8cde255e9f86c",
-      "summary_zh": "用于把两个以上互不依赖、无需共享状态的任务分派给多个智能体并行处理，适合临时任务提速。",
-      "translated_at": "2026-08-09T17:42:26.087Z"
+      "hash": "06f51db0d3515dde",
+      "summary_zh": "一种并行委派多个智能体处理独立任务的方法，适合无共享状态、无先后依赖且未制定计划的多任务场景。",
+      "translated_at": "2026-08-10T03:40:55.109Z"
     },
     "skill:ganyuanran-aegis-communicating-concisely": {
       "hash": "be8bb5c2fb2e4c22",
@@ -21413,14 +21413,14 @@
       "translated_at": "2026-08-03T18:31:25.009Z"
     },
     "skill:ganyuanran-aegis-anti-entropy-governance": {
-      "hash": "f9390e93ae9ce395",
-      "summary_zh": "一套代码治理决策指南，适合清理旧逻辑、合并重复职责或调整数据边界时，判断应删除旧路径、保留兼容还是暂停确认。",
-      "translated_at": "2026-08-03T18:31:26.033Z"
+      "hash": "68d32e77f66e1ace",
+      "summary_zh": "一款代码治理工具，可自动发现旧逻辑清理、重复职责合并和数据边界调整机会，并在破坏性操作前要求确认。",
+      "translated_at": "2026-08-10T03:40:56.829Z"
     },
     "skill:ganyuanran-aegis-executing-plans": {
-      "hash": "585d4de5ea8a7d6f",
-      "summary_zh": "用于跨会话执行书面开发计划，并在关键节点安排评审，适合需要持续推进和阶段验收的任务。",
-      "translated_at": "2026-08-09T17:42:27.880Z"
+      "hash": "b4e1bd6456f75d77",
+      "summary_zh": "用于分阶段执行书面实施计划的工作流，适合跨会话推进或设有评审节点的复杂任务。",
+      "translated_at": "2026-08-10T03:40:58.649Z"
     },
     "skill:ganyuanran-aegis-establishing-project-context": {
       "hash": "e33d5ddd51062c79",
@@ -21468,9 +21468,9 @@
       "translated_at": "2026-08-03T18:31:40.913Z"
     },
     "skill:ganyuanran-aegis-subagent-driven-development": {
-      "hash": "eb812cb81793479d",
-      "summary_zh": "一种让多个子代理按书面实施计划独立执行任务的开发方式，适合在当前会话中推进可拆分的开发工作。",
-      "translated_at": "2026-08-09T17:42:30.435Z"
+      "hash": "953aa46e8b2abb7e",
+      "summary_zh": "一种子代理驱动的开发工作流，适合在当前会话中按既定计划分派多个独立任务，降低协作成本。",
+      "translated_at": "2026-08-10T03:41:07.585Z"
     },
     "skill:ganyuanran-aegis-test-driven-development": {
       "hash": "3f4a893230dad7b9",
@@ -29341,6 +29341,16 @@
       "hash": "66694c9140015a3a",
       "summary_zh": "一套整合多维健康数据的智能分析系统，可识别异常、预测风险，并生成个性化建议和健康报告。",
       "translated_at": "2026-08-08T21:18:14.166Z"
+    },
+    "skill:peonping-peon-ping-peon-ping-remix": {
+      "hash": "dcaf4c928a3d1fa2",
+      "summary_zh": "供评测服务器无头调用，用于按任务说明改写音效提示、重新渲染并记录变更，不适合用户直接运行。",
+      "translated_at": "2026-08-10T03:41:02.284Z"
+    },
+    "skill:peonping-peon-ping-peon-ping-create-pack": {
+      "hash": "f4d75ef1bf696faf",
+      "summary_zh": "供 peon create 内部调用的无头工具，可按指定风格自动生成并渲染完整的提示音草稿包。",
+      "translated_at": "2026-08-10T03:41:02.495Z"
     }
   }
 }

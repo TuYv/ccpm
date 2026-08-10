@@ -1,0 +1,26 @@
+{
+  "id": "peonping-peon-ping-peon-ping-remix",
+  "name": "peon-ping-remix",
+  "description": "Internal — invoked headlessly by the peon eval server; humans should run `peon eval <pack>` instead. Execute one PeonPing reroll job — invoked headlessly by the peon eval server as: \"Use the peon-ping-remix skill to execute the reroll job at <path>\". Reads the job JSON (scope, category, index, caption), rewrites the affected sound prompt(s) to honor the caption, re-renders via scripts/pack-render.py, and logs the change to eval-log.json.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "PeonPing",
+  "install_path": ".claude/skills/peon-ping-remix/SKILL.md",
+  "source": {
+    "repo": "PeonPing/peon-ping",
+    "url": "https://github.com/PeonPing/peon-ping/blob/main/skills/peon-ping-remix/SKILL.md",
+    "path": "skills/peon-ping-remix/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-10T03:36:28.610Z",
+    "stars": 4984,
+    "language": "Shell",
+    "pushed_at": "2026-08-10T01:08:32Z",
+    "license": "MIT"
+  },
+  "summary_zh": "供评测服务器无头调用，用于按任务说明改写音效提示、重新渲染并记录变更，不适合用户直接运行。"
+}

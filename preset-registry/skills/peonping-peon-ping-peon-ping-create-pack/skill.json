@@ -1,0 +1,26 @@
+{
+  "id": "peonping-peon-ping-peon-ping-create-pack",
+  "name": "peon-ping-create-pack",
+  "description": "Internal — invoked headlessly by `peon create`; humans should run `peon create` instead. Author and render a brand-new PeonPing draft pack — invoked headlessly as: \"Use the peon-ping-create-pack skill to draft a pack: name=<n> flavor=<f> vibe=<v> draft_root=<dir>. Follow the skill exactly.\" Authors all 7 CESP categories honoring the vibe, writes openpeon.json (draft-stamped) and prompts.json, renders every sound via scripts/pack-render.py, and always ends by telling the human to run `peon eval <",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "PeonPing",
+  "install_path": ".claude/skills/peon-ping-create-pack/SKILL.md",
+  "source": {
+    "repo": "PeonPing/peon-ping",
+    "url": "https://github.com/PeonPing/peon-ping/blob/main/skills/peon-ping-create-pack/SKILL.md",
+    "path": "skills/peon-ping-create-pack/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-10T03:36:28.355Z",
+    "stars": 4984,
+    "language": "Shell",
+    "pushed_at": "2026-08-10T01:08:32Z",
+    "license": "MIT"
+  },
+  "summary_zh": "供 peon create 内部调用的无头工具，可按指定风格自动生成并渲染完整的提示音草稿包。"
+}
