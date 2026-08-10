@@ -16,6 +16,21 @@ deliberation, 15% of all the thinking a run does, and the single longest uninter
 record — 421 seconds — sits there, before a claim had been read or a search issued. Read step 1,
 do step 1.
 
+**Two modes, and the user picks.** Default is **full** — every step below as written. Run **quick**
+only when the user asked for speed in this request ("quick check", "rough read", "gut check",
+"don't spend 20 minutes"); never choose it silently, and when in doubt, run full. Quick cuts
+**breadth, never depth** — measured on this exact corpus: capping follow-up searches bought no
+wall time at all and collapsed the confirm rate, because a claim that gets one search stalls at
+🟡 on evidence a second search would have settled. So a claim quick mode checks gets the full
+treatment, and the cuts are three, named at the point each applies below: only the five most
+consequential incidental claims are checked (the rest are ⚪ not checked), no `coverage-check`,
+and no hostile-reader section. **Everything else holds — especially the steelman before any ❌,
+because a fast false accusation is still a false accusation.** If your harness exposes a
+reasoning-effort setting, quick is the mode built to pair with a lower one — the run footer will
+carry both labels. A quick report discloses itself: `"mode": "quick"` in the run record and the
+**Mode: quick** line specified in [RUBRIC.md](RUBRIC.md) directly under the Checked line — the
+gate rejects a quick run that hides it.
+
 1. **Get the text.** If the input is a URL and the `fetch-content` skill is installed, use its script. Otherwise use your web fetch tool or ask the user to paste the content. Keep the metadata (views, author, date) — it feeds step 5.
 
    **Note the wall-clock time before you fetch.** The report ends with what the run cost, and the clock can only start here. Read the actual time; don't reconstruct it at the end.
@@ -81,15 +96,15 @@ do step 1.
    - **Search for what would refute it, not for more of what you have.** A fourth URL agreeing with the first three usually shares their origin and changes nothing. The follow-up search exists to find what would move the verdict.
    - **Cap it, and spend the budget where it changes conclusions.** Follow-up searches are the most expensive thing in a run, so they go to the claims the thesis rests on:
 
-     - **Load-bearing claims: up to three follow-ups.** These are the ones a reader's conclusion depends on, and the rule that an unchecked load-bearing premise means the thesis was not audited is unchanged.
-     - **Incidental claims: one search**, unless what comes back would *move the verdict* — a first result that contradicts the claim earns a second look before you rate it ❌, because the steelman rule asks for that anyway. "The first search was thin" is not a reason to spend two more on an aside.
+     - **Load-bearing claims: up to three follow-ups**, in both modes — quick mode cuts which claims get checked, never how well. These are the ones a reader's conclusion depends on, and the rule that an unchecked load-bearing premise means the thesis was not audited is unchanged.
+     - **Incidental claims: one search**, unless what comes back would *move the verdict* — a first result that contradicts the claim earns a second look before you rate it ❌, because the steelman rule asks for that anyway. "The first search was thin" is not a reason to spend two more on an aside. (Quick mode: check only the five most consequential incidental claims; every other incidental row is ⚪ not checked.)
      - **Promotion is allowed.** Load-bearing is judged before verification, and occasionally checking a claim reveals the argument leans on it harder than it looked. Re-classify it and give it the full budget rather than holding it to a call made in ignorance.
 
      Then stop. A claim that exhausts the budget is ❓ unverifiable **with the gap named** — "searched three angles; the underlying study was never located" tells a reader something a bare ❓ doesn't, and tells the next run where to start.
 
    **Counting origins is the normal path; running `coverage-check` is not.** You can nearly always produce the count from results already in hand, by RUBRIC.md's tells, and it costs nothing.
 
-   Reach for the `coverage-check` skill only when that fails: the claim rests on *breadth you cannot inspect* — "widely reported", "every outlet covered it" — and the results in front of you can't settle whether that breadth is real. **Run it on the single claim whose verdict most depends on the answer, two at the very most.**
+   Reach for the `coverage-check` skill only when that fails: the claim rests on *breadth you cannot inspect* — "widely reported", "every outlet covered it" — and the results in front of you can't settle whether that breadth is real. **Run it on the single claim whose verdict most depends on the answer, two at the very most.** (Quick mode: never — count origins from the results in hand and say the count is judged.)
 
    The reason for the cap is its cost. GDELT takes 11–15 seconds for a trivial one-day query and much longer for wide windows; the documented limit is one request per five seconds, but once tripped the throttle **persists for minutes** — four retries backing off 6s, 12s and 24s were all still refused. Five calls is a minute at best and a stalled run at worst. The tool exists to stop "everyone reported this" passing unexamined, and one measured count on the claim that matters does that.
 
@@ -98,8 +113,35 @@ do step 1.
    primary document, so the source hierarchy will happily rate it ✅ at tier 1 — see RUBRIC.md.
 
    If it returns exit 3, the measurement is unavailable — fall back to the tells and **say the count is an estimate**, so a reader can tell a measured origin count from a judged one. Assign a verdict (scale below) and cite what you found, naming the tier when it's doing the work. Never rate a claim `confirmed` or `false` on memory alone — verdicts need sources.
+
+   **Write each claim down as its verdict resolves — not at the end.** Decide the report's file
+   path now (step 7 names it), and append every finished claim as one JSON line to the claims
+   file beside it — same path, `.md` swapped for `.claims.jsonl`. The schema is in
+   [CLAIMS.md](CLAIMS.md); read it when you write the first line. This file is what step 6
+   renders the tables from, so a claim that never lands here never lands in the report. If your
+   harness has no shell to append with, skip the file and write the tables by hand in step 6 —
+   the report format is identical either way.
 5. **Scan for hype signals** using the checklist in [RUBRIC.md](RUBRIC.md).
-6. **Write the report card** using the template in [RUBRIC.md](RUBRIC.md), ending with the 0-10 BS score.
+6. **Write the report shell, not the tables.** Follow the template in [RUBRIC.md](RUBRIC.md) for
+   every prose section — header, source and checked lines (plus the Mode line on a quick run),
+   the 0-10 BS score, hype signals, incentive analysis, bottom line, what a hostile reader would
+   hit first (omitted on a quick run), and the Ambiguous line — but where the template shows the
+   two claims tables, the tally line and the run footer, put four markers instead:
+
+   ```
+   <!-- CLAIMS: load_bearing -->
+   <!-- CLAIMS: incidental -->
+   <!-- TALLY -->
+   <!-- RUN -->
+   ```
+
+   Those blocks are generated from the claims file and the run record in step 7 — the same
+   "a number that can be computed is never typed" rule that already owns the tally and run
+   lines, now owning the tables they count. Save the shell beside the report as
+   `<report>.shell.md`. **Fallback:** if you could not keep a claims file (no shell
+   available), write the full report card by hand from the template instead, tables
+   included — the finished artifact is identical, only the authorship of the mechanical
+   blocks differs.
 
 7. **Save it to a file, always.** The file is the artifact — it survives the session, it can be diffed against a later run, and it is what gets published.
 
@@ -168,6 +210,18 @@ do step 1.
    `--fix` also corrects the record's own derived counts — `claims.extracted`, `claims.checked`,
    `claims.dropped_ambiguous` and `wall_seconds` — from the table and your two timestamps, so those
    four are not worth getting exactly right by hand either. See [RUN-RECORD.md](RUN-RECORD.md).
+
+   **If you wrote a shell and a claims file, compose before you gate:**
+
+   ```bash
+   uv run <detector-skill-dir>/scripts/tally.py <report.md> --compose <report>.shell.md
+   ```
+
+   It renders the tables from the claims file, then counts the rendered rows with the same
+   parse the gate uses, so the tally line cannot disagree with the table above it. Exit 2
+   means a claim line is invalid — it names the line; fix the claims file and re-compose,
+   never the rendered report. Then run the `--fix` + `--source` gate on the composed report
+   exactly as described here.
 
    **Do not hand-write either line.** Both are pure functions of the claims table and the record —
    the tally line's buckets and the footer's `searches`, `tools`, `coverage`, wall clock and
