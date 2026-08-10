@@ -1,0 +1,26 @@
+{
+  "id": "google-skills-design",
+  "name": "design",
+  "description": ">- Processes cloud architectural design and local validation. Use when designing modular Terraform architectures, authoring local HCL, validating HCL via terraform validate, or planning HCL via terraform plan. Don't use for deploying templates, plan assessment, or troubleshooting deployment failures.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/design/SKILL.md",
+  "source": {
+    "repo": "google/skills",
+    "url": "https://github.com/google/skills/blob/main/skills/cloud/design-deploy/references/design/SKILL.md",
+    "path": "skills/cloud/design-deploy/references/design/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-10T20:55:33.193Z",
+    "stars": 17580,
+    "language": "Python",
+    "pushed_at": "2026-08-10T19:32:05Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "用于设计模块化 Terraform 云架构并在本地验证 HCL，适合部署前检查配置和规划变更。"
+}

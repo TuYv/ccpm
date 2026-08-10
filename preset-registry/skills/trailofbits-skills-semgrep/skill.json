@@ -1,7 +1,7 @@
 {
   "id": "trailofbits-skills-semgrep",
   "name": "semgrep",
-  "description": ">- Run Semgrep static analysis scan on a codebase using parallel subagents. Supports two scan modes — \"run all\" (full ruleset coverage) and \"important only\" (high-confidence security vulnerabilities). Automatically detects and uses Semgrep Pro for cross-file taint analysis when available. Use when asked to scan code for vulnerabilities, run a security audit with Semgrep, find bugs, or perform static analysis. Spawns parallel workers for multi-language codebases.",
+  "description": ">- Runs a Semgrep security scan over a codebase: detects languages, selects rulesets, presents the plan for explicit approval, then runs every approved ruleset through scripts/run-scans.sh, which batches the semgrep processes and writes scans.json, and merges the output to SARIF. Supports two scan modes, \"run all\" for full ruleset coverage and \"important only\" for security findings at medium-to-high confidence and impact. Uses Semgrep Pro for cross-file taint analysis when it is available. Use w",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/trailofbits/skills/blob/main/plugins/static-analysis/skills/semgrep/SKILL.md",
     "path": "plugins/static-analysis/skills/semgrep/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-10T19:05:14.905Z",
-    "stars": 6514,
+    "discovered_at": "2026-08-10T20:54:30.291Z",
+    "stars": 6516,
     "language": "Python",
-    "pushed_at": "2026-08-10T14:28:22Z",
+    "pushed_at": "2026-08-10T20:37:29Z",
     "license": "CC-BY-SA-4.0"
   },
-  "summary_zh": "这是一个支持并行扫描的静态代码分析工具，能快速揪出多语言代码库中的漏洞和Bug。特别适合做代码安全审计，无论是全面排查还是精准抓取高危漏洞，连跨文件追踪也能搞定。"
+  "summary_zh": "一款代码安全扫描工具，可自动识别语言并按规则批量检测漏洞，适合代码审计和持续集成场景。"
 }

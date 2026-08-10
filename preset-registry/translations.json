@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-10T20:04:07.554Z",
+  "updated_at": "2026-08-10T21:55:26.331Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -9823,9 +9823,9 @@
       "translated_at": "2026-08-03T04:57:53.991Z"
     },
     "bundle:trailofbits-skills": {
-      "hash": "b410737158e3948c",
-      "summary_zh": "面向代码与智能合约安全审计的工具合集，串联审计准备、上下文分析、模糊测试和漏洞扫描，提升自动化排查效率。",
-      "translated_at": "2026-08-05T15:39:31.411Z"
+      "hash": "05ae3709f9d6340e",
+      "summary_zh": "面向代码与智能合约安全审计的一站式技能集，串联审计准备、漏洞发现、模糊测试与结果分析，提升风险排查效率。",
+      "translated_at": "2026-08-10T21:55:16.960Z"
     },
     "bundle:czlonkowski-n8n-skills": {
       "hash": "c501b61219aece66",
@@ -12558,9 +12558,9 @@
       "translated_at": "2026-05-20T12:30:23.043Z"
     },
     "skill:trailofbits-skills-semgrep": {
-      "hash": "08d6e98a9c027a6b",
-      "summary_zh": "这是一个支持并行扫描的静态代码分析工具，能快速揪出多语言代码库中的漏洞和Bug。特别适合做代码安全审计，无论是全面排查还是精准抓取高危漏洞，连跨文件追踪也能搞定。",
-      "translated_at": "2026-05-20T12:30:26.723Z"
+      "hash": "bb3a0e3a225052cb",
+      "summary_zh": "一款代码安全扫描工具，可自动识别语言并按规则批量检测漏洞，适合代码审计和持续集成场景。",
+      "translated_at": "2026-08-10T21:55:26.331Z"
     },
     "skill:trailofbits-skills-semgrep-rule-variant-creator": {
       "hash": "c5aa9a691d81b317",
@@ -12593,9 +12593,9 @@
       "translated_at": "2026-08-05T15:39:36.448Z"
     },
     "skill:trailofbits-skills-supply-chain-risk-auditor": {
-      "hash": "b80d839b81acd087",
-      "summary_zh": "帮你揪出项目中易被攻击或恶意接管的高危依赖，适合在做供应链安全评估、检查依赖健康状况或开展安全审计时使用。",
-      "translated_at": "2026-05-20T12:31:40.051Z"
+      "hash": "c1b56953572495f5",
+      "summary_zh": "一款依赖供应链风险审计工具，可排查漏洞、弃用项目、发布者集中及安装脚本风险，适合上线或安全评估前使用。",
+      "translated_at": "2026-08-10T21:55:25.796Z"
     },
     "skill:trailofbits-skills-substrate-vulnerability-scanner": {
       "hash": "01eb776527c26ec4",
@@ -28253,9 +28253,9 @@
       "translated_at": "2026-08-06T15:30:27.955Z"
     },
     "bundle:google-skills": {
-      "hash": "d0270830abda5ca3",
-      "summary_zh": "面向 Google Cloud 智能体开发与运维，覆盖迁移、部署、推理、评测、监控和资源管理，打通从构建到持续优化的全流程。",
-      "translated_at": "2026-08-07T01:50:24.399Z"
+      "hash": "81453ec7e9fe03bc",
+      "summary_zh": "面向 Google Cloud 智能体全生命周期的一站式工具集，统一模型、提示词、知识库与服务治理，加速企业级 AI 应用从开发到稳定上线。",
+      "translated_at": "2026-08-10T21:55:19.127Z"
     },
     "skill:chrisbanes-skills-compose-performance": {
       "hash": "a79df9a1015c4e14",
@@ -29406,6 +29406,21 @@
       "hash": "4f10c77ddca645e1",
       "summary_zh": "一款在 Windows 上通过命令行调用 MT5 策略测试器的三轮筛选工具，适合批量回测、跨品种评估和参数优化，并按收益、回撤等指标筛选优质 EA。",
       "translated_at": "2026-08-10T20:04:07.553Z"
+    },
+    "skill:google-skills-design-deploy": {
+      "hash": "5a7975ed4843e8a2",
+      "summary_zh": "面向 GCP 的基础设施设计与部署工具，适合用 Terraform 校验配置、扫描方案、导入 ADC 模板及排查部署故障。",
+      "translated_at": "2026-08-10T21:55:22.544Z"
+    },
+    "skill:google-skills-design": {
+      "hash": "379ec677ef031489",
+      "summary_zh": "用于设计模块化 Terraform 云架构并在本地验证 HCL，适合部署前检查配置和规划变更。",
+      "translated_at": "2026-08-10T21:55:22.921Z"
+    },
+    "skill:google-skills-infra-deployment-debugging": {
+      "hash": "051f295526085efc",
+      "summary_zh": "一款基础设施部署故障排查工具，适合分析 ADC 应用部署失败或 Terraform 直接部署报错。",
+      "translated_at": "2026-08-10T21:55:24.039Z"
     }
   }
 }
