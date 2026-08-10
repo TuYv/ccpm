@@ -360,5 +360,5 @@ prerequisite for them.
 - Product Life Cycle strategy grid — marketing-mix levers by stage
 
 ### Provenance
-- Distilled from Dean Peters' GTM/EOL Strategy Workshop and the "Mastering Product End of Life
-  Strategy" webinar (Productside).
+- Distilled from practitioner experience running product lifecycle transitions and product
+  retirements across software, hardware, and regulated industries.
