@@ -1,7 +1,7 @@
 {
   "id": "fradser-dotclaude-generate-image",
   "name": "generate-image",
-  "description": "Generate or edit images via two backends: Google Gemini (gemini-3-pro-image) or any OpenAI-compatible endpoint (gpt-image-2, dall-e-3). Use when the user wants to create, draw, illustrate, or edit an image, icon, logo, poster, or concept art — triggers include \"generate an image\", \"draw me\", \"create an illustration\", \"生成图片\", \"画一张\".",
+  "description": "Generate or edit images via two backends: Google Gemini (gemini-3-pro-image) or any OpenAI-compatible endpoint (gpt-image-2, dall-e-3). Use when the user wants to create, draw, illustrate, or edit an image, icon, logo, poster, or concept art.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -13,14 +13,14 @@
   "install_path": ".claude/skills/generate-image/SKILL.md",
   "source": {
     "repo": "FradSer/dotclaude",
-    "url": "https://github.com/FradSer/dotclaude/blob/main/office/skills/generate-image/SKILL.md",
-    "path": "office/skills/generate-image/SKILL.md",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/generate-image/skills/generate-image/SKILL.md",
+    "path": "generate-image/skills/generate-image/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-08T10:22:21.723Z",
-    "stars": 576,
+    "discovered_at": "2026-08-10T14:04:35.752Z",
+    "stars": 577,
     "language": "JavaScript",
-    "pushed_at": "2026-08-07T16:19:06Z",
+    "pushed_at": "2026-08-10T12:27:32Z",
     "license": "MIT"
   },
-  "summary_zh": "一款调用 Gemini 或 OpenAI 兼容接口生成、编辑图片的工具，适合制作插画、图标、Logo、海报和概念图。"
+  "summary_zh": "一款通过 Gemini 或兼容 OpenAI 的接口生成、编辑图片的工具，适合制作图标、Logo、海报和概念图。"
 }
