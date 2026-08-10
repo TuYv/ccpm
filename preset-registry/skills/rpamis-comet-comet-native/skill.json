@@ -1,7 +1,7 @@
 {
   "id": "rpamis-comet-comet-native",
   "name": "comet-native",
-  "description": "Use when the user explicitly invokes /comet-native, asks to start or resume a Native change, or the entry router selects Native; clarify requirements, read state, and drive Shape → Build → Verify → Archive.",
+  "description": "Comet Native workflow. Use when the user explicitly invokes /comet-native, asks to start or resume a Native change, or the entry router selects Native.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/rpamis/comet/blob/master/assets/skills/comet-native/SKILL.md",
     "path": "assets/skills/comet-native/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-08-10T07:01:34.169Z",
+    "discovered_at": "2026-08-10T09:06:49.601Z",
     "stars": 2679,
     "language": "JavaScript",
-    "pushed_at": "2026-08-10T06:30:02Z",
+    "pushed_at": "2026-08-10T07:49:33Z",
     "license": "MIT"
   },
-  "summary_zh": "用于启动或继续原生开发变更，通过澄清需求、读取进度并推进设计、构建、验证和归档，适合规范化开发流程。"
+  "summary_zh": "一套原生变更工作流，用于启动或恢复 Native 修改任务，也可由入口路由自动触发。"
 }

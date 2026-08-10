@@ -1,0 +1,26 @@
+{
+  "id": "deanpeters-product-manager-skills-eol-readiness-advisor",
+  "name": "eol-readiness-advisor",
+  "description": "Run a go/no-go assessment for retiring a product or feature, then right-size the effort. Use when someone says \\\"we should probably kill this\\\" and nobody has made the call.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "deanpeters",
+  "install_path": ".claude/skills/eol-readiness-advisor/SKILL.md",
+  "source": {
+    "repo": "deanpeters/Product-Manager-Skills",
+    "url": "https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/eol-readiness-advisor/SKILL.md",
+    "path": "skills/eol-readiness-advisor/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-10T09:00:21.672Z",
+    "stars": 6364,
+    "language": "Shell",
+    "pushed_at": "2026-08-10T08:59:18Z",
+    "license": null
+  },
+  "summary_zh": "用于评估产品或功能是否应停止维护，并合理估算下线投入，适合团队迟迟无法做出去留决策时使用。"
+}

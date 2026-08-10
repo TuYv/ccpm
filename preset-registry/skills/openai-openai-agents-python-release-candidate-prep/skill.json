@@ -1,0 +1,26 @@
+{
+  "id": "openai-openai-agents-python-release-candidate-prep",
+  "name": "release-candidate-prep",
+  "description": "Prepare an OpenAI Agents Python release candidate locally from exact origin/main, freeze the released API contract, create one local release commit, run final release review, and produce release-specific PR text. Use only when explicitly invoked with a version. Never push, open a PR, or mutate GitHub.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openai",
+  "install_path": ".claude/skills/release-candidate-prep/SKILL.md",
+  "source": {
+    "repo": "openai/openai-agents-python",
+    "url": "https://github.com/openai/openai-agents-python/blob/main/.agents/skills/release-candidate-prep/SKILL.md",
+    "path": ".agents/skills/release-candidate-prep/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-10T09:02:37.610Z",
+    "stars": 28530,
+    "language": "Python",
+    "pushed_at": "2026-08-10T08:45:35Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于从最新 origin/main 在本地准备 OpenAI Agents Python 候选版，冻结 API 契约并完成提交、终审和 PR 文案，全程不改动远端。"
+}

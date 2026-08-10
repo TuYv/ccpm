@@ -2,7 +2,7 @@
   "id": "serhiikorniienko-bullshit-detector-coverage-check",
   "name": "coverage-check",
   "description": "Count how many independent origins are behind news coverage of a claim, instead of counting URLs. Queries GDELT for matching articles, collapses reprints and wire copy into single origins, and flags publication bursts that indicate syndication. Use when a claim appears to be confirmed by many outlets and you need to know whether that's many sources or one source many times.",
-  "category": "开发编程",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/SerhiiKorniienko/bullshit-detector/blob/main/skills/ingestion/coverage-check/SKILL.md",
     "path": "skills/ingestion/coverage-check/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-10T07:54:22.030Z",
+    "discovered_at": "2026-08-10T09:57:01.504Z",
     "stars": 125,
     "language": "Python",
-    "pushed_at": "2026-08-10T06:00:38Z",
+    "pushed_at": "2026-08-10T08:53:37Z",
     "license": "MIT"
   },
   "summary_zh": "一款新闻信源核查工具，可合并转载和通稿，判断多家报道来自独立信源还是同一消息的集中扩散。"

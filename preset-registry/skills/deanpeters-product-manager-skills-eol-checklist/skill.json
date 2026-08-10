@@ -1,0 +1,26 @@
+{
+  "id": "deanpeters-product-manager-skills-eol-checklist",
+  "name": "eol-checklist",
+  "description": "Build a phase-gated EOL checklist sized to the sunset, with a named owner on every item. Use when the decision to retire is made and you need the operational plan.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "deanpeters",
+  "install_path": ".claude/skills/eol-checklist/SKILL.md",
+  "source": {
+    "repo": "deanpeters/Product-Manager-Skills",
+    "url": "https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/eol-checklist/SKILL.md",
+    "path": "skills/eol-checklist/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-10T09:00:21.138Z",
+    "stars": 6364,
+    "language": "Shell",
+    "pushed_at": "2026-08-10T08:59:18Z",
+    "license": null
+  },
+  "summary_zh": "用于制定产品或系统下线计划，按阶段梳理任务并明确负责人，适合退役决定后的执行管理。"
+}

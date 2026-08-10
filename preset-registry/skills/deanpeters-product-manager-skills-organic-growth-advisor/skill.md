@@ -14,6 +14,8 @@ scenarios:
   - "Help me figure out which McKinsey growth level we should focus on"
   - "We have strong product-market fit but growth is stalling. Where should we look?"
   - "Which organic growth path fits our current situation?"
+theme: strategy-positioning
+estimated_time: "15-25 min"
 ---
 
 

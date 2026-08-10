@@ -1,7 +1,7 @@
 {
   "id": "deanpeters-product-manager-skills-incoming-request-advisor",
   "name": "incoming-request-advisor",
-  "description": "Decode an incoming message into a structured breakdown that separates the literal ask from the job-to-be-done. Use before replying to a loaded Slack ping, email, mandate, or escalation.",
+  "description": "Decode an incoming message into a structured breakdown separating the literal ask from the job-to-be-done. Use when a loaded Slack ping, email, mandate, or escalation needs a reply.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/incoming-request-advisor/SKILL.md",
     "path": "skills/incoming-request-advisor/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-10T06:55:05.702Z",
-    "stars": 6360,
+    "discovered_at": "2026-08-10T09:00:22.778Z",
+    "stars": 6364,
     "language": "Shell",
-    "pushed_at": "2026-08-09T17:56:55Z",
+    "pushed_at": "2026-08-10T08:59:18Z",
     "license": null
   },
-  "summary_zh": "一款请求分析工具，可拆解消息中的表面诉求与真实目标，适合处理棘手的 Slack 消息、邮件、指令或升级事件。"
+  "summary_zh": "一款来信意图分析工具，能拆解表面诉求与真实目标，适合处理复杂的 Slack 消息、邮件、指令或升级请求并组织回复。"
 }
