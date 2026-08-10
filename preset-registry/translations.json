@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-10T16:56:01.641Z",
+  "updated_at": "2026-08-10T18:06:09.052Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -9808,9 +9808,9 @@
       "translated_at": "2026-08-03T04:57:48.463Z"
     },
     "bundle:ethereum-ethereum-org-website": {
-      "hash": "7337a7bb3f65b032",
-      "summary_zh": "面向 ethereum.org 网站开发维护，统一数据、界面、国际化、视觉测试与性能优化流程，提升协作效率和交付质量。",
-      "translated_at": "2026-08-03T04:58:13.312Z"
+      "hash": "d1341de20ae11641",
+      "summary_zh": "面向 ethereum.org 的一站式开发协作指南，贯通页面搭建、设计规范、数据与国际化、性能优化及视觉验收，提升交付质量与效率。",
+      "translated_at": "2026-08-10T18:06:03.998Z"
     },
     "bundle:op7418-codepilot": {
       "hash": "ff1f3fbc6677642a",
@@ -29391,6 +29391,16 @@
       "hash": "36b18db4ac31b265",
       "summary_zh": "用于在独立工作树中预检并准备指定版本的 Python 发布候选，冻结 API、生成本地提交和 PR 文案，全程不改动远端。",
       "translated_at": "2026-08-10T11:54:39.025Z"
+    },
+    "skill:ethereum-ethereum-org-website-new-page": {
+      "hash": "76dad04d419e6d94",
+      "summary_zh": "一个通过问答引导为 ethereum.org 新增页面的脚手架工具，适合将 Figma 设计快速落地为可复用组件页面。",
+      "translated_at": "2026-08-10T18:06:07.459Z"
+    },
+    "skill:ethereum-ethereum-org-website-review-page": {
+      "hash": "e3e8e324fd95f64d",
+      "summary_zh": "一个面向以太坊网站成品页的自动审查工具，可对照 Figma 反复检查并修复文案与设计规范问题，直到通过复审。",
+      "translated_at": "2026-08-10T18:06:09.051Z"
     }
   }
 }
