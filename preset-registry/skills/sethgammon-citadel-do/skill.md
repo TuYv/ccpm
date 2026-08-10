@@ -32,51 +32,51 @@ Use `/do` when the user wants something done but doesn't know (or care) which to
 | `/do status` | Show full harness dashboard (/dashboard) |
 | `/do next` | Run the decision-first operator console for the next useful harness action |
 | `/do operator` | Show the operator console without executing repairs |
-| `/do preview <request>` | Show route, alternatives, boundary, and verification without executing |
+| `/do preview <request>` | Show exact resolution or generated candidates and their boundary without executing |
+| `/do --route /skill -- <request>` | Use an explicit validated route without bypassing activation or safety boundaries |
 | `/do continue` | Resolve and run the deterministic continuation action |
 | `/do --list` | Show all skills grouped by category with trigger keywords |
 | `/do setup` | First-run experience — configure the harness for this project |
 
 ## Protocol
 
-Classification runs top-to-bottom. First match wins. Each tier is cheaper than the next.
+Classification runs top-to-bottom. Exact commands resolve first. Natural-language requests use keyword matches only as candidate evidence for semantic classification.
 
 ### Step 0: Skill Registry Check (Cost: ~0 on hit | ~50 tokens on miss)
 
-Compare installed skill directories with `core/skills/routing-table.json`.
-If they match, continue without reading skill bodies. For each unknown skill,
-read only its frontmatter, use `name`, `description`, and `trigger_keywords` as
-session-local Tier 2 match targets, and report:
+Compare installed skill directories with `core/skills/routing-table.json`. If they
+match, continue without reading skill bodies. For each unknown skill, read only
+its frontmatter and use `name`, `description`, and `trigger_keywords` as session-local Tier 2 match targets, then report:
 `"Discovered {N} new skill(s): {names}. Run /do setup to regenerate routing."`
-Do not write registration fields into `harness.json`; schema-v2 config is exact
-and generated routing is a projection, not config authority.
+Do not write registration fields into `harness.json`; schema-v2 config is exact and generated routing is a projection, not config authority.
 
-### Tier 0: Pattern Match (Cost: ~0 tokens | Latency: <1ms)
+### Tier 0: Exact Command Match (Cost: ~0 tokens | Latency: <1ms)
 
-Regex/keyword on raw input. Catches trivial commands:
+Normalize case, apostrophes, and whitespace, then compare the **entire input**.
+Never match a Tier 0 command because its word appears inside a larger request.
 
-| Pattern | Action |
+<!-- BEGIN GENERATED: exact-command-table -->
+| Exact normalized input | Action |
 |---|---|
-| "typecheck" or "type check" | Run the project's typecheck command |
-| "build" | Run the project's build command |
-| "test" or "tests" | Run the project's test command |
-| "loop", "repeat until", "retry until", "until tests pass", "max attempts" | Run `/loop` for bounded foreground repetition |
-| "status", "dashboard", "what's happening", "what's going on", "show activity" | Show full harness dashboard (/dashboard) |
-| "next", "what should I do next", "fix harness state", "repair harness" | Run `node scripts/operator-console.js --run`; if it stops on a skill route or human-review action, report the boundary, risk, next command, and verification profile |
-| "operator", "operator console", "what's up", "what should happen next", "approval capsule" | Run `node scripts/operator-console.js`; report the decision, boundary, artifact freshness, and verification profile |
-| "preview route", "route preview", "dry run route", "what would /do do" | Run `node scripts/route-preview.js -- "<request>"`; report selected route, alternatives, boundary, and verification profile |
-| "continue" or "keep going" | Run `node scripts/continue-action.js --run`; invoke the returned skill route if it prints `/archon continue` or `/fleet continue` |
-| "setup" | Run `/do setup` first-run experience |
-| "deliver <intake-file>" | Run `node scripts/deliver.js --intake <file>` to create an evidence-backed delivery campaign |
-| "deliver intake" or "deliver next intake" | Run `node scripts/deliver.js --next` to create an evidence-backed delivery campaign from the highest-priority pending intake item |
-| "package delivery" or "review package" | Run `node scripts/package-delivery.js <campaign-slug>` to create a local review handoff and update campaign evidence |
-| "pr ready" or "ready for review" | Run `node scripts/pr-ready.js --pr <pull-request-url> --run-verification` to produce an approval-readiness handoff |
-| "--list" or "list" | Show all available skills |
-| "fix typo in X" or "rename X to Y" | Direct edit (no orchestrator needed) |
-| "commit" | Stage and commit changes |
-| "rollback", "undo phase", "restore checkpoint" | Find active campaign, read latest checkpoint ref, run git stash pop |
+| "status", "dashboard", "what's happening", "what's going on", "show activity" | `node scripts/dashboard.js` |
+| "next", "what should i do next", "fix harness state", "repair harness" | `node scripts/operator-console.js --run` |
+| "operator", "operator console", "approval capsule", "what's up", "what should happen next" | `node scripts/operator-console.js` |
+| "continue", "keep going" | `node scripts/continue-action.js --run` |
+| "setup", "first run", "configure harness" | `/do setup` |
+| "setup --express" | `/do setup --express` |
+| "--list", "list", "list skills" | `/do --list` |
+| "test", "tests", "run test", "run tests" | `npm run test` only when `package.json#scripts.test` exists; otherwise non-final |
+| "build", "run build" | `npm run build` only when `package.json#scripts.build` exists; otherwise non-final |
+| "typecheck", "type check", "run typecheck", "run type check" | `npm run typecheck` only when `package.json#scripts.typecheck` exists; otherwise non-final |
+<!-- END GENERATED: exact-command-table -->
 
-If matched → execute directly. Done.
+`/do preview <request>` strips the `preview` wrapper and reuses the shared exact command and built-in candidate preflight. It does **not** inspect Tier 1 active state,
+discover project-local custom skills, or run the Tier 3 LLM classifier. Therefore every natural-language preview is non-final, has no command, and stops at
+`semantic-classification-required`. `/do --route /skill -- <request>` passes the requested route through `scripts/route-preview.js --route`; an unknown route is rejected,
+and a valid override still goes through activation, worktree, and approval boundaries.
+
+If the whole input matches an exact command, execute it and stop. The `test`, `build`, and `typecheck` commands are final only when the target project's
+`package.json` declares the corresponding non-empty script. Otherwise they remain non-executable. Do not execute a command merely because its word appears inside a larger request; continue to active-state and semantic routing.
 
 ### Tier 1: Active State Short-Circuit (Cost: ~0 tokens | Latency: <100ms)
 
@@ -112,10 +112,11 @@ Check for active campaigns or fleet sessions that match the input scope:
 
 If matched → resume the active work. Done.
 
-### Tier 2: Skill Keyword Match (Cost: ~0 tokens | Latency: <10ms)
+### Tier 2: Skill Candidate Discovery (Cost: ~0 tokens | Latency: <10ms)
 
 Match input against installed skill keywords from Citadel's built-in skills
-and any project-level custom skills in `.claude/skills/`.
+and any project-level custom skills in `.claude/skills/`. These matches are
+candidate evidence, never the final routing decision by themselves.
 
 **Built-in skill triggers** (generated from each skill's `trigger_keywords` frontmatter; edit the frontmatter, then run `node scripts/generate-routing.js` to refresh this table):
 
@@ -181,15 +182,14 @@ and any project-level custom skills in `.claude/skills/`.
 | "next", "what should I do next", "repair harness", "fix harness state" | `node scripts/operator-console.js --run`; auto-runs deterministic local repairs and stops at skill/human routes with a console report |
 | "operator", "operator console", "what's up", "what should happen next", "approval capsule" | `node scripts/operator-console.js`; inspect-only decision cockpit |
 | "preview route", "route preview", "dry run route", "what would /do do" | `node scripts/route-preview.js -- "<request>"`; route preflight without execution |
-| "operation control", "cost-constrained operation", "quality target", "model fallback", "tool boundary" | Use `citadel operation init` to create explicit request/catalog inputs, then run `citadel operation plan`; do not execute until the plan and independent verifier are concrete |
 
-If ONE skill matches with high confidence → invoke it directly. Done.
-High confidence = evaluator assigns ≥ 0.85 probability to exactly one skill. Below 0.85, or multiple skills above 0.70, fall through to Tier 3.
-If MULTIPLE skills match → carry the candidate set to Tier 3. Tier 3 disambiguates between candidates only, not from scratch. Tie-break: prefer the candidate with fewer trigger keywords.
+Carry every matching route and the exact matched phrases to Tier 3. A single candidate narrows the semantic decision but does not turn substring evidence into execution authority.
+Multiple candidates are disambiguated semantically, not by generated-table order.
 
 ### Tier 3: LLM Complexity Classifier (Cost: ~500 tokens | Latency: ~1-2s)
 
-When Tiers 0-2 don't resolve, classify across 6 dimensions:
+For every non-exact request, classify intent across 6 dimensions. Use Tier 2
+candidates as evidence when present; when none match, classify from the request:
 
 ```
 SCOPE: single-file | single-domain | cross-domain | platform-wide
@@ -264,13 +264,14 @@ When 2+ independent tasks detected (non-overlapping scopes, complexity >= 3, not
    `node {citadelRoot}/scripts/citadel-config.js check route {bare-skill-name} --runtime {claude-code|codex} --json`.
    `enabled` and explicitly named `degraded` routes may continue. For
    `disabled`, `unavailable`, or `blocked`, show the returned reason and
-   activation plan; do not invoke the target. Enabling a bundle is a separate
-   plan-first config mutation and never happens silently.
+    activation plan; do not invoke the target. Enabling a bundle is a separate
+    plan-first config mutation and never happens silently.
+   An explicit `--route` override changes only route selection. It never skips
+   this activation preflight or any worktree, approval, or verification boundary.
 2. **Log routing decision** (fire-and-forget):
    `node .citadel/scripts/telemetry-log.cjs --event agent-complete --agent do-router --session routing --status success --meta '{"tier":N,"target":"[skill]","input_chars":M}'`
 
    Use `.citadel/scripts/telemetry-log.cjs` (the project-local copy). If it doesn't exist, skip logging silently — never block routing on telemetry failure.
-   Also run `node .citadel/scripts/activation-telemetry.js record --stage route_completed --status succeeded --runtime {claude-code|codex}` with the current runtime; skip failures silently.
 3. **Announce the routing decision**: "Routing to [target] because [one-sentence reason]"
 4. **Invoke the target** skill or orchestrator
 5. If the target fails or the user says "wrong tool", try the next tier up. If the target is already Tier 3 (marshal fails or user explicitly escalates from a failed marshal attempt): re-route to `/archon` with the original input as context, then repeat activation preflight for that route.
@@ -308,8 +309,6 @@ Output a grouped skill list drawn from the system reminder's available skills. G
 
 After routing and execution complete:
 - If the routed skill/orchestrator produces a HANDOFF, relay it to the user
-- If a routed workflow produces a HANDOFF with successful verification evidence, record `--stage verified_handoff --status succeeded` through `.citadel/scripts/activation-telemetry.js`.
-- If Tier 1 successfully resumed an existing campaign or fleet, record `--stage resume_completed --status succeeded` through `.citadel/scripts/activation-telemetry.js`.
 - If the task was trivial (Tier 0), just show the result
 - Do not add overhead to simple tasks
 - Telemetry is fire-and-forget — never surface telemetry errors to the user

@@ -250,16 +250,6 @@ Print the reference card using the canonical boxed layout at docs/SETUP_REFERENC
 
 ### Step 9: CLOSING LINE (all modes)
 
-Before printing the closing line, record successful setup as local activation evidence:
-
-```bash
-node .citadel/scripts/activation-telemetry.js record --stage setup_completed --status succeeded --runtime {claude-code|codex}
-```
-
-Use the current runtime. This is fire-and-forget. If the delegate is missing or recording fails,
-skip it silently and never fail setup. The next successful session start also records this milestone
-once when it finds a valid `.claude/harness.json`.
-
 ```
 Express:      Done. {N} hooks live, {N} skills registered.
               Type /do [anything] to start.
@@ -296,7 +286,7 @@ Use the plan-first `citadel-config.js initialize` flow above.
 ## Contextual Gates
 
 **Disclosure:** "Configuring Citadel for this project. Will preview a versioned config, reconcile the effective receipt, and install hooks owned by the selected bundles."
-**Reversibility:** amber — writes receipted config/hook state and creates `.planning/`; undo through `citadel adopt leave plan|apply`
+**Reversibility:** amber. Writes receipted config/hook state and creates `.planning/`; undo through `node scripts/adopt.js leave plan --target . --out ../citadel-leave.plan.json`, then apply that reviewed plan with its exact token
 **Trust gates:**
 - Any: first-run configuration; expected to modify settings and install hooks
 

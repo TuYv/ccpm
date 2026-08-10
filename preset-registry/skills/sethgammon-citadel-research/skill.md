@@ -145,8 +145,8 @@ Each angle must be:
 
 With explicit `--operation-graph`, assign 3-5 opaque angle IDs and initialize a graph plus bound operation:
 `node .citadel/scripts/operation-graph-runner.js research-init --project-root . --graph .planning/research/fleet-{slug}/operation-graph.json --operation .planning/research/fleet-{slug}/operation-spec.json --journal .planning/research/fleet-{slug}/graph-journal --run-id research-{slug} --angles {id1,id2,id3}`
-For each P2-P5 node, call `operation-graph-effects.js start` with the graph journal, `--effects .../effect-journal`, node ID, and payload digest before work; call `complete` with its evidence digest after verification. Keep prompts and findings outside graph state.
-On resume use effect-runner `status`; resolve blocked nonrepeatable work with reviewed evidence. After the arbiter passes, write `receipt` with the bound operation. Without the flag, create no graph state.
+For each P2-P5 node, call `node .citadel/scripts/operation-graph-effects.js start` with the graph journal, `--effects .../effect-journal`, node ID, and payload digest before work; call `node .citadel/scripts/operation-graph-effects.js complete` with its evidence digest after verification. Keep prompts and findings outside graph state.
+On resume run `node .citadel/scripts/operation-graph-effects.js status`; resolve blocked nonrepeatable work with reviewed evidence. After the arbiter passes, run `node .citadel/scripts/operation-graph-effects.js receipt` with the bound operation. Without the flag, create no graph state.
 
 ### Step P2: DEPLOY WAVE 1
 
