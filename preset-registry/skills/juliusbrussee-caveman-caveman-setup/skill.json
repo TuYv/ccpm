@@ -1,0 +1,26 @@
+{
+  "id": "juliusbrussee-caveman-caveman-setup",
+  "name": "caveman-setup",
+  "description": "> Wire the current repository through the Caveman Cloud gateway so every LLM request is measured — cost, tokens, latency — with zero behavior change. Use when the user pastes the Caveman setup prompt, says \"set up caveman\", or wants LLM spend observability added to an app. Requires the gateway URL and a Cave API key (the setup prompt carries both).",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "JuliusBrussee",
+  "install_path": ".claude/skills/caveman-setup/SKILL.md",
+  "source": {
+    "repo": "JuliusBrussee/caveman",
+    "url": "https://github.com/JuliusBrussee/caveman/blob/main/skills/caveman-setup/SKILL.md",
+    "path": "skills/caveman-setup/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-11T16:50:30.291Z",
+    "stars": 97474,
+    "language": "Go",
+    "pushed_at": "2026-08-11T16:02:03Z",
+    "license": null
+  },
+  "summary_zh": "通过云网关无侵入接管应用的 LLM 请求，统计成本、Token 和延迟，适合为项目快速补充大模型用量监控。"
+}

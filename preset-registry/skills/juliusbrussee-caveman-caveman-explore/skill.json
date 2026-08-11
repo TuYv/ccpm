@@ -1,0 +1,26 @@
+{
+  "id": "juliusbrussee-caveman-caveman-explore",
+  "name": "caveman-explore",
+  "description": "Read-only repository explorer. Use PROACTIVELY for cold-start exploration, broad cross-file localization, or when a direct search has failed and you need to find where something lives. Skip it when the issue already names the exact file or symbol, or a previous turn already returned usable file:line evidence. Returns only compact path:line citations; its reads and greps never enter the main conversation.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "JuliusBrussee",
+  "install_path": ".claude/skills/caveman-explore/SKILL.md",
+  "source": {
+    "repo": "JuliusBrussee/caveman",
+    "url": "https://github.com/JuliusBrussee/caveman/blob/main/skills/caveman-explore/SKILL.md",
+    "path": "skills/caveman-explore/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-11T16:50:29.316Z",
+    "stars": 97474,
+    "language": "Go",
+    "pushed_at": "2026-08-11T16:02:03Z",
+    "license": null
+  },
+  "summary_zh": "只读代码仓库探索工具，适合快速熟悉陌生项目、跨文件定位代码，或在常规搜索无果时查找实现位置。"
+}

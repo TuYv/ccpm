@@ -1,0 +1,26 @@
+{
+  "id": "juliusbrussee-caveman-verify-and-stop",
+  "name": "verify-and-stop",
+  "description": "Prove existing work meets acceptance conditions without expanding scope. Use for validation-only tasks, completion checks, focused gate runs, and last-mile proof.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "JuliusBrussee",
+  "install_path": ".claude/skills/verify-and-stop/SKILL.md",
+  "source": {
+    "repo": "JuliusBrussee/caveman",
+    "url": "https://github.com/JuliusBrussee/caveman/blob/main/skills/verify-and-stop/SKILL.md",
+    "path": "skills/verify-and-stop/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-11T16:50:31.421Z",
+    "stars": 97474,
+    "language": "Go",
+    "pushed_at": "2026-08-11T16:02:03Z",
+    "license": null
+  },
+  "summary_zh": "一款用于验证现有成果是否满足验收条件的工具，适合完成度检查、定向门禁测试和交付前最终确认，避免范围扩大。"
+}

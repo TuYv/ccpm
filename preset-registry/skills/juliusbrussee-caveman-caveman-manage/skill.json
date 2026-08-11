@@ -1,0 +1,26 @@
+{
+  "id": "juliusbrussee-caveman-caveman-manage",
+  "name": "caveman-manage",
+  "description": "> Inspect Caveman Cloud's eval-gated experiment lifecycle and block unsafe execution. Use when the user asks to start, approve, cancel, promote, or roll back a Caveman experiment, or asks what action an experiment's evidence supports. Read evidence first; do not execute lifecycle mutations until server-authoritative transition and evidence gates ship.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "JuliusBrussee",
+  "install_path": ".claude/skills/caveman-manage/SKILL.md",
+  "source": {
+    "repo": "JuliusBrussee/caveman",
+    "url": "https://github.com/JuliusBrussee/caveman/blob/main/skills/caveman-manage/SKILL.md",
+    "path": "skills/caveman-manage/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-11T16:50:29.869Z",
+    "stars": 97474,
+    "language": "Go",
+    "pushed_at": "2026-08-11T16:02:03Z",
+    "license": null
+  },
+  "summary_zh": "用于审查云端实验的评估证据和生命周期操作，判断是否支持启动、审批、晋级或回滚，并阻止不安全变更。"
+}

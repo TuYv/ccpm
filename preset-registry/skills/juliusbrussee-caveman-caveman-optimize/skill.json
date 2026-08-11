@@ -1,0 +1,26 @@
+{
+  "id": "juliusbrussee-caveman-caveman-optimize",
+  "name": "caveman-optimize",
+  "description": "> Turn Caveman's exact report-only repository observations into an operator-chosen optimization candidate with a paired baseline/candidate evaluation. Use when the user asks to inspect an optimization observation, evaluate a candidate change, or act on the current Caveman optimization report. Require a logged-in Caveman CLI connection and explicit approval; never infer money or actuation from a profile.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "JuliusBrussee",
+  "install_path": ".claude/skills/caveman-optimize/SKILL.md",
+  "source": {
+    "repo": "JuliusBrussee/caveman",
+    "url": "https://github.com/JuliusBrussee/caveman/blob/main/skills/caveman-optimize/SKILL.md",
+    "path": "skills/caveman-optimize/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-11T16:50:30.003Z",
+    "stars": 97474,
+    "language": "Go",
+    "pushed_at": "2026-08-11T16:02:03Z",
+    "license": null
+  },
+  "summary_zh": "将代码仓库的优化观察转成可执行候选方案，并与基线对比评估，适合审查和验证改动，需登录命令行并明确授权。"
+}

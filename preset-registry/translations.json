@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-11T15:47:52.101Z",
+  "updated_at": "2026-08-11T17:45:48.606Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -9658,9 +9658,9 @@
       "translated_at": "2026-08-03T04:57:00.242Z"
     },
     "bundle:juliusbrussee-caveman": {
-      "hash": "8c1c1d71f62187e8",
-      "summary_zh": "面向 AI 编程协作的极简沟通工具集，统一压缩上下文与开发反馈，在保留关键信息的同时显著节省 Token 和沟通成本。",
-      "translated_at": "2026-08-03T04:57:04.579Z"
+      "hash": "b04c7b8e1f87bd6c",
+      "summary_zh": "这套合集面向 AI 编程协作，串联仓库探索、任务委派、上下文压缩与成本评估，在保证质量和安全的同时降低 Token 消耗。",
+      "translated_at": "2026-08-11T17:45:26.716Z"
     },
     "bundle:thedotmack-claude-mem": {
       "hash": "105ab286d15d7dca",
@@ -28253,9 +28253,9 @@
       "translated_at": "2026-08-06T15:30:27.955Z"
     },
     "bundle:google-skills": {
-      "hash": "81453ec7e9fe03bc",
-      "summary_zh": "面向 Google Cloud 智能体全生命周期的一站式工具集，统一模型、提示词、知识库与服务治理，加速企业级 AI 应用从开发到稳定上线。",
-      "translated_at": "2026-08-10T21:55:19.127Z"
+      "hash": "ec1a710291fdd98f",
+      "summary_zh": "面向 Google Cloud AI 智能体全生命周期的一站式技能集，覆盖迁移、部署、推理、评测、监控与资源治理，帮助快速构建并稳定运营企业级应用。",
+      "translated_at": "2026-08-11T17:45:25.556Z"
     },
     "skill:chrisbanes-skills-compose-performance": {
       "hash": "a79df9a1015c4e14",
@@ -28388,9 +28388,9 @@
       "translated_at": "2026-08-07T01:51:27.240Z"
     },
     "skill:google-skills-cloud-monitoring-chart-generation": {
-      "hash": "6287a5793bf30d8a",
-      "summary_zh": "将已解析的 PromQL 查询生成 Google Cloud Monitoring 图表配置，适合通过 API、gcloud 或声明式定义创建监控仪表盘。",
-      "translated_at": "2026-08-07T01:51:29.704Z"
+      "hash": "5a0a92d7ab3053f0",
+      "summary_zh": "把 PromQL 或 ListTimeSeries 查询转成 Google Cloud Monitoring 图表组件配置，适合用 API、gcloud 或声明式文件搭建监控看板。",
+      "translated_at": "2026-08-11T17:45:37.226Z"
     },
     "skill:google-skills-cloud-monitoring-metric-selection": {
       "hash": "fbc85b0e4b7d2ad0",
@@ -29736,6 +29736,71 @@
       "hash": "ed1caf0868439075",
       "summary_zh": "用于初始化或优化 git-agent 配置，并根据提交历史和项目内容自动更新提交范围与 .gitignore 规则。",
       "translated_at": "2026-08-11T15:47:52.101Z"
+    },
+    "skill:juliusbrussee-caveman-caveman-evidence-review": {
+      "hash": "5b522f7140236b23",
+      "summary_zh": "用于只读审查大模型云端成本、质量、链路与性能数据，定位支出变化、异常工作流并验证节省效果。",
+      "translated_at": "2026-08-11T17:45:30.904Z"
+    },
+    "skill:juliusbrussee-caveman-caveman-discover": {
+      "hash": "b9c2bd27acadc6be",
+      "summary_zh": "自动识别并标注代码库中的 LLM 工作流，按实际用途归类模型开销，适合细分各业务流程的成本。",
+      "translated_at": "2026-08-11T17:45:32.162Z"
+    },
+    "skill:juliusbrussee-caveman-caveman-explore": {
+      "hash": "114b6cfc77958416",
+      "summary_zh": "只读代码仓库探索工具，适合快速熟悉陌生项目、跨文件定位代码，或在常规搜索无果时查找实现位置。",
+      "translated_at": "2026-08-11T17:45:34.499Z"
+    },
+    "skill:juliusbrussee-caveman-caveman-learn": {
+      "hash": "5281f6720ca6c70b",
+      "summary_zh": "用于分析智能体令牌消耗并逐项确认优化配置，适合精简 CLAUDE.md 或将重复上下文迁移到 cavemem。",
+      "translated_at": "2026-08-11T17:45:36.334Z"
+    },
+    "skill:juliusbrussee-caveman-caveman-manage": {
+      "hash": "f5b02c4bb6a12bf1",
+      "summary_zh": "用于审查云端实验的评估证据和生命周期操作，判断是否支持启动、审批、晋级或回滚，并阻止不安全变更。",
+      "translated_at": "2026-08-11T17:45:39.081Z"
+    },
+    "skill:juliusbrussee-caveman-caveman-optimize": {
+      "hash": "64fbfddf77839f19",
+      "summary_zh": "将代码仓库的优化观察转成可执行候选方案，并与基线对比评估，适合审查和验证改动，需登录命令行并明确授权。",
+      "translated_at": "2026-08-11T17:45:40.117Z"
+    },
+    "skill:juliusbrussee-caveman-caveman-setup": {
+      "hash": "15396c7a5ec84697",
+      "summary_zh": "通过云网关无侵入接管应用的 LLM 请求，统计成本、Token 和延迟，适合为项目快速补充大模型用量监控。",
+      "translated_at": "2026-08-11T17:45:40.259Z"
+    },
+    "skill:juliusbrussee-caveman-investigate-first": {
+      "hash": "318e49262cb551fe",
+      "summary_zh": "用于在动手修改前诊断模糊故障，适合排查未知原因、间歇性异常和性能退化，并按证据梳理可能原因。",
+      "translated_at": "2026-08-11T17:45:41.556Z"
+    },
+    "skill:juliusbrussee-caveman-migration": {
+      "hash": "cfd9e4c046466e5e",
+      "summary_zh": "用于实现可逆、兼容且可验证的迁移，适合数据库、API、协议、配置或依赖升级与回滚。",
+      "translated_at": "2026-08-11T17:45:43.679Z"
+    },
+    "skill:juliusbrussee-caveman-lean-build": {
+      "hash": "d615801e24ddfacc",
+      "summary_zh": "一套控制功能开发范围的工作流，适合新增行为、产品切片或集成场景，强调复用现有代码并及时止步，避免过度开发。",
+      "translated_at": "2026-08-11T17:45:44.493Z"
+    },
+    "skill:juliusbrussee-caveman-safe-refactor": {
+      "hash": "d26a5c8f2e6496b5",
+      "summary_zh": "在确保功能行为不变的前提下重构代码，适合代码提取、合并、归属迁移及需严格验证的清理场景。",
+      "translated_at": "2026-08-11T17:45:44.915Z"
+    },
+    "skill:juliusbrussee-caveman-surgical-patch": {
+      "hash": "ad52e129653ad7cc",
+      "summary_zh": "用于在最小影响范围内修复缺陷或微调行为，适合需防止回归、保持原有逻辑并验证相关测试的场景。",
+      "translated_at": "2026-08-11T17:45:46.348Z"
+    },
+    "skill:juliusbrussee-caveman-verify-and-stop": {
+      "hash": "b3ef0f5b01b717f2",
+      "summary_zh": "一款用于验证现有成果是否满足验收条件的工具，适合完成度检查、定向门禁测试和交付前最终确认，避免范围扩大。",
+      "translated_at": "2026-08-11T17:45:48.605Z"
     }
   }
 }

@@ -1,0 +1,26 @@
+{
+  "id": "juliusbrussee-caveman-safe-refactor",
+  "name": "safe-refactor",
+  "description": "Restructure code while preserving behavior. Use for extraction, consolidation, ownership moves, or cleanup where verification must bracket structural edits.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "JuliusBrussee",
+  "install_path": ".claude/skills/safe-refactor/SKILL.md",
+  "source": {
+    "repo": "JuliusBrussee/caveman",
+    "url": "https://github.com/JuliusBrussee/caveman/blob/main/skills/safe-refactor/SKILL.md",
+    "path": "skills/safe-refactor/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-11T16:50:31.140Z",
+    "stars": 97474,
+    "language": "Go",
+    "pushed_at": "2026-08-11T16:02:03Z",
+    "license": null
+  },
+  "summary_zh": "在确保功能行为不变的前提下重构代码，适合代码提取、合并、归属迁移及需严格验证的清理场景。"
+}

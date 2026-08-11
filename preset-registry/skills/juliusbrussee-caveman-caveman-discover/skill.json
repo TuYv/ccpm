@@ -1,0 +1,26 @@
+{
+  "id": "juliusbrussee-caveman-caveman-discover",
+  "name": "caveman-discover",
+  "description": "> Find every LLM workflow in the current repository and label it, so Caveman Cloud groups spend by what the code actually does (support-reply, nightly-digest) instead of one anonymous bucket. Use when the user pastes the Caveman discovery prompt, says \"discover workflows\", or asks to break LLM spend down by workflow. The repo should already route through the Caveman gateway (the caveman-setup skill does that part).",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "JuliusBrussee",
+  "install_path": ".claude/skills/caveman-discover/SKILL.md",
+  "source": {
+    "repo": "JuliusBrussee/caveman",
+    "url": "https://github.com/JuliusBrussee/caveman/blob/main/skills/caveman-discover/SKILL.md",
+    "path": "skills/caveman-discover/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-11T16:50:29.050Z",
+    "stars": 97474,
+    "language": "Go",
+    "pushed_at": "2026-08-11T16:02:03Z",
+    "license": null
+  },
+  "summary_zh": "自动识别并标注代码库中的 LLM 工作流，按实际用途归类模型开销，适合细分各业务流程的成本。"
+}

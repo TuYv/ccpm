@@ -1,0 +1,26 @@
+{
+  "id": "juliusbrussee-caveman-migration",
+  "name": "migration",
+  "description": "Implement reversible compatibility-safe transitions. Use for schema, data, API, protocol, configuration, or dependency migrations requiring rollback and preservation proof.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "JuliusBrussee",
+  "install_path": ".claude/skills/migration/SKILL.md",
+  "source": {
+    "repo": "JuliusBrussee/caveman",
+    "url": "https://github.com/JuliusBrussee/caveman/blob/main/skills/migration/SKILL.md",
+    "path": "skills/migration/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-11T16:50:30.982Z",
+    "stars": 97474,
+    "language": "Go",
+    "pushed_at": "2026-08-11T16:02:03Z",
+    "license": null
+  },
+  "summary_zh": "用于实现可逆、兼容且可验证的迁移，适合数据库、API、协议、配置或依赖升级与回滚。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "juliusbrussee-caveman-investigate-first",
+  "name": "investigate-first",
+  "description": "Diagnose ambiguous failures before editing. Use for unknown causes, intermittent behavior, performance regressions, or investigations needing evidence-ranked hypotheses.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "JuliusBrussee",
+  "install_path": ".claude/skills/investigate-first/SKILL.md",
+  "source": {
+    "repo": "JuliusBrussee/caveman",
+    "url": "https://github.com/JuliusBrussee/caveman/blob/main/skills/investigate-first/SKILL.md",
+    "path": "skills/investigate-first/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-11T16:50:30.719Z",
+    "stars": 97474,
+    "language": "Go",
+    "pushed_at": "2026-08-11T16:02:03Z",
+    "license": null
+  },
+  "summary_zh": "用于在动手修改前诊断模糊故障，适合排查未知原因、间歇性异常和性能退化，并按证据梳理可能原因。"
+}

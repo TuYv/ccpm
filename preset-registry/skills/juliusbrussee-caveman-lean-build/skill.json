@@ -1,0 +1,26 @@
+{
+  "id": "juliusbrussee-caveman-lean-build",
+  "name": "lean-build",
+  "description": "Build feature work with high overbuilding risk. Use for new behavior, product slices, or integrations where repository reuse, strict scope, and an explicit stop condition matter.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "JuliusBrussee",
+  "install_path": ".claude/skills/lean-build/SKILL.md",
+  "source": {
+    "repo": "JuliusBrussee/caveman",
+    "url": "https://github.com/JuliusBrussee/caveman/blob/main/skills/lean-build/SKILL.md",
+    "path": "skills/lean-build/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-11T16:50:30.846Z",
+    "stars": 97474,
+    "language": "Go",
+    "pushed_at": "2026-08-11T16:02:03Z",
+    "license": null
+  },
+  "summary_zh": "一套控制功能开发范围的工作流，适合新增行为、产品切片或集成场景，强调复用现有代码并及时止步，避免过度开发。"
+}
