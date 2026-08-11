@@ -1,0 +1,26 @@
+{
+  "id": "fradser-dotclaude-init",
+  "name": "init",
+  "description": "Initializes or optimizes git-agent configuration, regenerates commit scopes from git history, and re-derives .gitignore rules.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "FradSer",
+  "install_path": ".claude/skills/init/SKILL.md",
+  "source": {
+    "repo": "FradSer/dotclaude",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/git-agent/skills/init/SKILL.md",
+    "path": "git-agent/skills/init/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-11T14:55:37.662Z",
+    "stars": 577,
+    "language": "JavaScript",
+    "pushed_at": "2026-08-11T13:09:00Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于初始化或优化 git-agent 配置，并根据提交历史和项目内容自动更新提交范围与 .gitignore 规则。"
+}
