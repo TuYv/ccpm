@@ -1,7 +1,6 @@
 ---
 name: roborev-refine
 description: Use only when the user explicitly invokes /roborev-refine
-disable-model-invocation: true
 ---
 
 # roborev-refine
@@ -25,7 +24,7 @@ CLI. Do not simply shell out to `roborev refine`.
 ## Explicit invocation only
 
 Invocation must be explicit: literal personal `/roborev-refine`, or structured
-Grok Build skill selection.
+Factory skill selection.
 Requests such as “refine this change” without one of these explicit mechanisms must use native
 behavior and must not run roborev.
 
