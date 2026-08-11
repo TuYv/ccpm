@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-11T19:42:01.142Z",
+  "updated_at": "2026-08-11T20:55:39.002Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -5358,9 +5358,9 @@
       "translated_at": "2026-08-03T16:26:36.422Z"
     },
     "skill:earthtojake-text-to-cad-sdf": {
-      "hash": "50f1fdf5670c0546",
-      "summary_zh": "用于生成、校验 SDFormat 仿真模型与世界文件，处理 .sdf XML、模型链接关节、传感器物理插件等配置，方便对接 Gazebo 等仿真器，注意不涉及有向距离场几何。",
-      "translated_at": "2026-06-05T19:23:30.403Z"
+      "hash": "5a28f462d4a8cdee",
+      "summary_zh": "用于编写和校验 SDFormat 模型与仿真世界，并将其交付 Gazebo 等模拟器，适合审查和维护 .sdf 文件。",
+      "translated_at": "2026-08-11T20:55:32.106Z"
     },
     "skill:earthtojake-text-to-cad-sendcutsend": {
       "hash": "faf4320380b360bc",
@@ -5368,9 +5368,9 @@
       "translated_at": "2026-05-19T21:22:27.309Z"
     },
     "skill:earthtojake-text-to-cad-srdf": {
-      "hash": "aec27b73449d4ada",
-      "summary_zh": "用于创建和校验 MoveIt2 的 SRDF 文件，处理规划组、虚拟关节、末端执行器、碰撞禁用等规划语义配置，适合需要生成或调试机器人运动规划描述的场景。",
-      "translated_at": "2026-06-05T19:23:34.524Z"
+      "hash": "cc4132c3ab6bfe06",
+      "summary_zh": "一套面向 MoveIt2 的 SRDF 编写与校验工具，适合配置关节、规划组、末端执行器和碰撞规则，审查机器人规划语义。",
+      "translated_at": "2026-08-11T20:55:35.572Z"
     },
     "skill:earthtojake-text-to-cad-step-parts": {
       "hash": "1a1919c88e5daf9f",
@@ -5378,9 +5378,9 @@
       "translated_at": "2026-06-05T19:23:34.430Z"
     },
     "skill:earthtojake-text-to-cad-urdf": {
-      "hash": "e790eaf566b0ced2",
-      "summary_zh": "用于生成和校验机器人 URDF 描述文件的工具，支持编辑链接、关节、惯量、碰撞体和网格引用，适合在搭建或调试机器人模型时排查结构与坐标系问题。",
-      "translated_at": "2026-06-05T19:23:34.939Z"
+      "hash": "ea852875833c0d11",
+      "summary_zh": "用于编写、检查和调试机器人 URDF 描述文件，适合处理连杆、关节、惯性参数、碰撞模型及坐标系等问题。",
+      "translated_at": "2026-08-11T20:55:34.404Z"
     },
     "skill:ehmo-platform-design-skills-android": {
       "hash": "a606bed879c891c6",
@@ -9698,9 +9698,9 @@
       "translated_at": "2026-08-03T04:57:20.503Z"
     },
     "bundle:composiohq-composio": {
-      "hash": "b598c4700537534d",
-      "summary_zh": "面向多种框架快速构建可调用外部工具的 AI 智能体，统一解决工具接入、搜索、鉴权、上下文管理与沙箱执行。",
-      "translated_at": "2026-08-03T04:57:25.658Z"
+      "hash": "10a96a73202c622c",
+      "summary_zh": "面向多框架 AI 智能体开发，统一解决工具接入、搜索、鉴权、上下文管理、沙箱运行及调试维护。",
+      "translated_at": "2026-08-11T20:55:23.494Z"
     },
     "bundle:davila7-claude-code-templates": {
       "hash": "fd0d3546f75083be",
@@ -9823,9 +9823,9 @@
       "translated_at": "2026-08-03T04:57:53.991Z"
     },
     "bundle:trailofbits-skills": {
-      "hash": "05ae3709f9d6340e",
-      "summary_zh": "面向代码与智能合约安全审计的一站式技能集，串联审计准备、漏洞发现、模糊测试与结果分析，提升风险排查效率。",
-      "translated_at": "2026-08-10T21:55:16.960Z"
+      "hash": "ec1ebecf2bc5b687",
+      "summary_zh": "面向代码、智能合约和自动化流程的安全审计合集，整合模糊测试、漏洞扫描与审计辅助能力，提升排查效率和覆盖面。",
+      "translated_at": "2026-08-11T20:55:27.101Z"
     },
     "bundle:czlonkowski-n8n-skills": {
       "hash": "c501b61219aece66",
@@ -9868,9 +9868,9 @@
       "translated_at": "2026-08-03T04:58:12.391Z"
     },
     "bundle:earthtojake-text-to-cad": {
-      "hash": "abeefe75a707b2bf",
-      "summary_zh": "面向从文字构想到实物制造的全流程，统一完成参数化建模、格式校验、可视化审查及加工打印交付。",
-      "translated_at": "2026-08-03T04:57:48.174Z"
+      "hash": "0c1f442218b6c26c",
+      "summary_zh": "这是一套把自然语言创意转成可验证、可预览并可直接加工或打印的 CAD 制造工作流工具集。",
+      "translated_at": "2026-08-11T20:55:24.525Z"
     },
     "bundle:nowork-studio-toprank": {
       "hash": "d3a6c03e2857b6a8",
@@ -12393,9 +12393,9 @@
       "translated_at": "2026-05-20T12:25:00.883Z"
     },
     "skill:trailofbits-skills-codeql": {
-      "hash": "04b63c33e26663ef",
-      "summary_zh": "这是一款代码安全扫描工具，能通过数据流和污点追踪技术深度挖掘代码漏洞，适合开发团队在代码审计或CI流程中自动化排查安全隐患。",
-      "translated_at": "2026-05-20T12:25:08.522Z"
+      "hash": "ba17534c8811dd4c",
+      "summary_zh": "一款面向多语言代码库的静态安全分析工具，通过跨过程数据流和污点追踪发现潜在漏洞，适合代码审计与持续安全扫描。",
+      "translated_at": "2026-08-11T20:55:39.002Z"
     },
     "skill:trailofbits-skills-constant-time-analysis": {
       "hash": "934b5ae27debae1a",
@@ -14858,9 +14858,9 @@
       "translated_at": "2026-06-05T19:23:11.390Z"
     },
     "skill:earthtojake-text-to-cad-cad-viewer": {
-      "hash": "9df6c8d37b6de325",
-      "summary_zh": "一键启动可视化工具，在浏览器里查看 STEP、STL、G-code、URDF 等各种 CAD 和机器人模型文件，适合建模或代码生成后快速预览成果。",
-      "translated_at": "2026-06-05T19:23:15.580Z"
+      "hash": "3235c9c04d78f65d",
+      "summary_zh": "用于启动 CAD 查看器并生成审阅链接，适合在线检查多种 CAD 模型及机器人描述文件。",
+      "translated_at": "2026-08-11T20:55:30.505Z"
     },
     "skill:earthtojake-text-to-cad-gcode": {
       "hash": "42a61500c65c962e",
@@ -20563,9 +20563,9 @@
       "translated_at": "2026-08-03T16:26:34.258Z"
     },
     "skill:earthtojake-text-to-cad-dxf": {
-      "hash": "4deea9d851a755de",
-      "summary_zh": "一个用 Python 生成、重建和校验二维 DXF 图纸的工具，适合制作轮廓、模板及激光或水刀切割布局。",
-      "translated_at": "2026-08-03T16:26:35.259Z"
+      "hash": "c7ed6e4f6322aebe",
+      "summary_zh": "一个用 Python 生成、重建和校验二维 DXF 图纸的工具，适合制作轮廓、模板及激光切割等 CAD 加工文件。",
+      "translated_at": "2026-08-11T20:55:29.607Z"
     },
     "skill:eduardo-sl-go-agent-skills-go-api-design": {
       "hash": "448cc8a283744375",
@@ -28253,9 +28253,9 @@
       "translated_at": "2026-08-06T15:30:27.955Z"
     },
     "bundle:google-skills": {
-      "hash": "ec1a710291fdd98f",
-      "summary_zh": "面向 Google Cloud AI 智能体全生命周期的一站式技能集，覆盖迁移、部署、推理、评测、监控与资源治理，帮助快速构建并稳定运营企业级应用。",
-      "translated_at": "2026-08-11T17:45:25.556Z"
+      "hash": "b0fb66d430f50843",
+      "summary_zh": "面向 Google Cloud 智能体平台的一站式工具集，贯通模型管理、部署推理、RAG、评测与监控运维，加速企业级智能体全生命周期落地。",
+      "translated_at": "2026-08-11T20:55:25.425Z"
     },
     "skill:chrisbanes-skills-compose-performance": {
       "hash": "a79df9a1015c4e14",
@@ -29836,6 +29836,21 @@
       "hash": "d616c136eaaafa1b",
       "summary_zh": "面向 Solana 的数字资产开发工具集，适合创建和管理 NFT、代币、压缩 NFT、发行活动及链上智能体。",
       "translated_at": "2026-08-11T19:42:01.142Z"
+    },
+    "skill:composiohq-composio-composio": {
+      "hash": "b68989a19bcb08c3",
+      "summary_zh": "面向 AI 智能体的应用集成平台，可连接 Gmail、Slack、GitHub 等服务，适合配置工具调用、接入 SDK/MCP 及排查连接问题。",
+      "translated_at": "2026-08-11T20:55:31.455Z"
+    },
+    "skill:earthtojake-text-to-cad-smui": {
+      "hash": "bfb1e7c42234df03",
+      "summary_zh": "一个面向智能体的工程设计与制造技能库，适合自动化处理 CAD、CAE 和 CAM 相关任务。",
+      "translated_at": "2026-08-11T20:55:34.617Z"
+    },
+    "skill:google-skills-ima-sdk-client-side": {
+      "hash": "dfdb685e385e831b",
+      "summary_zh": "用于在网站、应用和电视等平台通过 VAST 或 VMAP 请求视频广告，实现客户端广告插入，不适用于服务端或动态广告插入。",
+      "translated_at": "2026-08-11T20:55:37.155Z"
     }
   }
 }

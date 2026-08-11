@@ -1,7 +1,7 @@
 {
   "id": "earthtojake-text-to-cad-dxf",
   "name": "dxf",
-  "description": "Generate, regenerate, and validate 2D DXF drawings from Python ezdxf sources. Use for DXF files, gen_dxf() sources, 2D profiles, outlines, templates, gaskets, panels, flat patterns, laser/plasma/waterjet cut layouts, and 2D drawing exports of CAD geometry.",
+  "description": "Generate, regenerate, and validate 2D DXF drawings from Python ezdxf sources. Use for DXF files, `.dxf.py` generators, gen_dxf() sources, 2D profiles, outlines, templates, gaskets, panels, flat patterns, laser/plasma/waterjet cut layouts, and 2D drawing exports of CAD geometry.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/earthtojake/text-to-cad/blob/main/skills/dxf/SKILL.md",
     "path": "skills/dxf/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-11T18:45:25.667Z",
-    "stars": 13272,
-    "language": "JavaScript",
-    "pushed_at": "2026-08-11T18:41:20Z",
+    "discovered_at": "2026-08-11T20:41:51.345Z",
+    "stars": 13271,
+    "language": "Python",
+    "pushed_at": "2026-08-11T20:15:00Z",
     "license": "MIT"
   },
-  "summary_zh": "一个用 Python 生成、重建和校验二维 DXF 图纸的工具，适合制作轮廓、模板及激光或水刀切割布局。"
+  "summary_zh": "一个用 Python 生成、重建和校验二维 DXF 图纸的工具，适合制作轮廓、模板及激光切割等 CAD 加工文件。"
 }

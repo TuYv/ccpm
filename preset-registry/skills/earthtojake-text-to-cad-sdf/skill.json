@@ -1,7 +1,7 @@
 {
   "id": "earthtojake-text-to-cad-sdf",
   "name": "sdf",
-  "description": "SDFormat/SDF model and world generation, validation, and simulator handoff. Use for `.sdf` files, SDFormat XML, Python `gen_sdf()` sources, models, worlds, links, joints, poses, frames, inertials, visual/collision geometry, mesh URIs, sensors, lights, physics, plugins, includes, Gazebo, static SDF review, or simulator-specific metadata. Do not use for signed-distance-field geometry.",
+  "description": "SDFormat/SDF model and world authoring, validation, and simulator handoff. Use for `.sdf` files, SDFormat XML, models, worlds, links, joints, poses, frames, inertials, visual/collision geometry, mesh URIs, sensors, lights, physics, plugins, includes, Gazebo, static SDF review, or simulator-specific metadata. Do not use for signed-distance-field geometry.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/earthtojake/text-to-cad/blob/main/skills/sdf/SKILL.md",
     "path": "skills/sdf/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-11T18:45:26.213Z",
-    "stars": 13272,
-    "language": "JavaScript",
-    "pushed_at": "2026-08-11T18:41:20Z",
+    "discovered_at": "2026-08-11T20:41:51.962Z",
+    "stars": 13271,
+    "language": "Python",
+    "pushed_at": "2026-08-11T20:15:00Z",
     "license": "MIT"
   },
-  "summary_zh": "用于生成、校验 SDFormat 仿真模型与世界文件，处理 .sdf XML、模型链接关节、传感器物理插件等配置，方便对接 Gazebo 等仿真器，注意不涉及有向距离场几何。"
+  "summary_zh": "用于编写和校验 SDFormat 模型与仿真世界，并将其交付 Gazebo 等模拟器，适合审查和维护 .sdf 文件。"
 }
