@@ -1,0 +1,26 @@
+{
+  "id": "jasoncolapietro-suede-creator-skills-suede-code",
+  "name": "suede-code",
+  "description": "Review and grade code in one pass: real findings, A-F ship verdict, auth/payment risk, OWASP checks, deploy safety, and fix briefs.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "JasonColapietro",
+  "install_path": ".claude/skills/suede-code/SKILL.md",
+  "source": {
+    "repo": "JasonColapietro/suede-creator-skills",
+    "url": "https://github.com/JasonColapietro/suede-creator-skills/blob/main/skills/suede-code/SKILL.md",
+    "path": "skills/suede-code/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-11T06:44:46.362Z",
+    "stars": 152,
+    "language": "JavaScript",
+    "pushed_at": "2026-08-11T05:48:37Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一款一次完成代码审查与评级的工具，适合排查认证、支付及常见安全风险，并给出上线结论和修复建议。"
+}

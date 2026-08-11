@@ -1,0 +1,26 @@
+{
+  "id": "jasoncolapietro-suede-creator-skills-suede-code-review",
+  "name": "suede-code-review",
+  "description": "Find the bugs a diff can actually ship: TypeScript, React, Next.js, OWASP, accessibility, SEO, database, and deploy-risk review. Return findings, not a grade.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "JasonColapietro",
+  "install_path": ".claude/skills/suede-code-review/SKILL.md",
+  "source": {
+    "repo": "JasonColapietro/suede-creator-skills",
+    "url": "https://github.com/JasonColapietro/suede-creator-skills/blob/main/skills/suede-code-review/SKILL.md",
+    "path": "skills/suede-code-review/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-11T06:44:46.177Z",
+    "stars": 152,
+    "language": "JavaScript",
+    "pushed_at": "2026-08-11T05:48:37Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一款面向代码变更的审查工具，可发现前端、安全、数据库、SEO及部署风险等可能进入生产环境的问题。"
+}

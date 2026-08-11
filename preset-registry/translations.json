@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-11T05:45:06.043Z",
+  "updated_at": "2026-08-11T07:45:31.046Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -29421,6 +29421,311 @@
       "hash": "051f295526085efc",
       "summary_zh": "一款基础设施部署故障排查工具，适合分析 ADC 应用部署失败或 Terraform 直接部署报错。",
       "translated_at": "2026-08-10T21:55:24.039Z"
+    },
+    "bundle:jasoncolapietro-suede-creator-skills": {
+      "hash": "8cf05b54cccf01d4",
+      "summary_zh": "面向创作者和产品团队的一站式技能合集，串联产品策划、开发上线、营销增长与运营优化，让复杂项目更快落地并持续迭代。",
+      "translated_at": "2026-08-11T07:43:38.543Z"
+    },
+    "skill:jasoncolapietro-suede-creator-skills-amazon-returns-recovery": {
+      "hash": "01f56782c29e21e2",
+      "summary_zh": "用于核查亚马逊退货退款和订阅扣费，发现少退、拒退或遗忘续费，并在取消、申诉前征求确认。",
+      "translated_at": "2026-08-11T07:43:42.925Z"
+    },
+    "skill:jasoncolapietro-suede-creator-skills-android-app-factory": {
+      "hash": "d385aa492194fe2a",
+      "summary_zh": "一套从产品构想到上架 Google Play 的原生安卓应用生产流程，适合开发、测试、发布、变现或现代化改造生产级应用。",
+      "translated_at": "2026-08-11T07:43:44.302Z"
+    },
+    "skill:jasoncolapietro-suede-creator-skills-johnny-suede-design": {
+      "hash": "bd863e7f051b64aa",
+      "summary_zh": "一套面向产品界面的设计与文案方法，适合快速打造易懂、精致的落地页、仪表盘和营销页面。",
+      "translated_at": "2026-08-11T07:43:44.486Z"
+    },
+    "skill:jasoncolapietro-suede-creator-skills-subscription-recovery": {
+      "hash": "722dac88b34f0027",
+      "summary_zh": "用于查找、核对、取消或申诉亚马逊以外的重复订阅扣费，适合管理应用商店、PayPal、健身房及流媒体等账单。",
+      "translated_at": "2026-08-11T07:43:51.022Z"
+    },
+    "skill:jasoncolapietro-suede-creator-skills-johnny-suede-write": {
+      "hash": "823cbe47044d0afd",
+      "summary_zh": "一款文案写作与润色工具，适合为产品传播和公共说明快速生成更精炼、有说服力的文字。",
+      "translated_at": "2026-08-11T07:43:52.130Z"
+    },
+    "skill:jasoncolapietro-suede-creator-skills-site-to-ios-app": {
+      "hash": "3368357413cf213b",
+      "summary_zh": "将网站、PWA、仪表盘或电商平台快速封装成 iOS 应用，并辅助完成 App Store 上架所需的策略、素材、元数据与发布审核。",
+      "translated_at": "2026-08-11T07:43:52.732Z"
+    },
+    "skill:jasoncolapietro-suede-creator-skills-suede-ab-testing": {
+      "hash": "4f62b6ecd6cf98c1",
+      "summary_zh": "一套规范化的 A/B 测试方法，用于制定假设、估算样本与周期、判断结果可信度并规划持续实验。",
+      "translated_at": "2026-08-11T07:43:54.585Z"
+    },
+    "skill:jasoncolapietro-suede-creator-skills-suede-ads": {
+      "hash": "3a44563d4953d68d",
+      "summary_zh": "一套付费获客运营工具，适合规划、审计和优化主流广告平台的渠道、投放结构、出价及预算策略。",
+      "translated_at": "2026-08-11T07:43:56.995Z"
+    },
+    "skill:jasoncolapietro-suede-creator-skills-suede-ad-creative": {
+      "hash": "50322932cb1247c9",
+      "summary_zh": "一套付费广告创意生产与迭代系统，可基于产品和受众信息快速生成适配平台、可直接测试的文案及视觉方案。",
+      "translated_at": "2026-08-11T07:43:58.619Z"
+    },
+    "skill:jasoncolapietro-suede-creator-skills-suede-agent-teams": {
+      "hash": "f2d7ff4f328c2ef2",
+      "summary_zh": "一套多智能体协作工作流，用于安全拆分、并行推进和验收复杂改动，适合共享代码变更及规模化开源贡献管理。",
+      "translated_at": "2026-08-11T07:43:59.365Z"
+    },
+    "skill:jasoncolapietro-suede-creator-skills-suede-ai-eval": {
+      "hash": "534310929a41828f",
+      "summary_zh": "用于设计 AI 评测体系，涵盖评分标准、测试用例和验收门槛，帮助团队在用户发现问题前捕捉模型回归。",
+      "translated_at": "2026-08-11T07:44:02.889Z"
+    },
+    "skill:jasoncolapietro-suede-creator-skills-suede-aso": {
+      "hash": "cdafb3e8d7b023ad",
+      "summary_zh": "一套应用商店优化工具，用于分析关键词、文案、截图、评分和竞品，提升应用搜索曝光与下载转化。",
+      "translated_at": "2026-08-11T07:44:03.661Z"
+    },
+    "skill:jasoncolapietro-suede-creator-skills-suede-campaign-in-a-box": {
+      "hash": "5a02fd8ea497e28e",
+      "summary_zh": "把歌曲或新作快速策划成完整艺人宣传活动，适合统一产出视觉、周边、文案、推广日程和粉丝互动方案。",
+      "translated_at": "2026-08-11T07:44:06.462Z"
+    },
+    "skill:jasoncolapietro-suede-creator-skills-suede-analytics": {
+      "hash": "8b19154c0d1eabe4",
+      "summary_zh": "一套统一管理埋点、转化与归因的分析规范，适合搭建、审计或修复网站、产品、广告及用户生命周期的数据追踪。",
+      "translated_at": "2026-08-11T07:44:06.572Z"
+    },
+    "skill:jasoncolapietro-suede-creator-skills-suede-churn-prevention": {
+      "hash": "ffff856e876a7705",
+      "summary_zh": "一套订阅用户流失诊断与留存干预方法，适合优化取消、暂停、支付失败挽回和用户召回流程。",
+      "translated_at": "2026-08-11T07:44:08.608Z"
+    },
+    "skill:jasoncolapietro-suede-creator-skills-suede-co-marketing": {
+      "hash": "b16c5a0e92e0faea",
+      "summary_zh": "一套联合营销协作方法，适合筛选契合伙伴、策划联名或交叉推广，并明确分工、渠道、效果衡量与归因。",
+      "translated_at": "2026-08-11T07:44:11.098Z"
+    },
+    "skill:jasoncolapietro-suede-creator-skills-suede-clip-to-guide": {
+      "hash": "6a638236fa8345bf",
+      "summary_zh": "一套将视频片段或访谈内容转化为长文指南的内容漏斗模板，适合团队规范发布、审批与效果复盘。",
+      "translated_at": "2026-08-11T07:44:12.103Z"
+    },
+    "skill:jasoncolapietro-suede-creator-skills-suede-code": {
+      "hash": "18ff9bd66f114557",
+      "summary_zh": "一款一次完成代码审查与评级的工具，适合排查认证、支付及常见安全风险，并给出上线结论和修复建议。",
+      "translated_at": "2026-08-11T07:44:14.875Z"
+    },
+    "skill:jasoncolapietro-suede-creator-skills-suede-code-grader": {
+      "hash": "caa430ab04366009",
+      "summary_zh": "一款代码变更上线评级工具，从正确性、安全、数据、体验、验证和部署准备度综合给出直观的 A-F 等级。",
+      "translated_at": "2026-08-11T07:44:15.939Z"
+    },
+    "skill:jasoncolapietro-suede-creator-skills-suede-ci-gate": {
+      "hash": "4ea136574f5d0c00",
+      "summary_zh": "一款 CI 合并门禁工具，可按路径触发构建、修复重复流水线，并确保分支保护与必需检查不造成合并死锁。",
+      "translated_at": "2026-08-11T07:44:15.952Z"
+    },
+    "skill:jasoncolapietro-suede-creator-skills-suede-code-review": {
+      "hash": "9aabf939912e24d1",
+      "summary_zh": "一款面向代码变更的审查工具，可发现前端、安全、数据库、SEO及部署风险等可能进入生产环境的问题。",
+      "translated_at": "2026-08-11T07:44:18.364Z"
+    },
+    "skill:jasoncolapietro-suede-creator-skills-suede-cold-email": {
+      "hash": "3e79f0435ce72007",
+      "summary_zh": "一套面向合格潜在客户的B2B冷邮件写作规范，适合撰写或优化个性化开发信及有限次数的跟进邮件。",
+      "translated_at": "2026-08-11T07:44:20.770Z"
+    },
+    "skill:jasoncolapietro-suede-creator-skills-suede-community-marketing": {
+      "hash": "256089069c762fe8",
+      "summary_zh": "一套产品社区增长方法，适合搭建、评估或扩大 Discord、Slack、论坛等用户社区。",
+      "translated_at": "2026-08-11T07:44:21.584Z"
+    },
+    "skill:jasoncolapietro-suede-creator-skills-suede-codex-fleet": {
+      "hash": "899755713f4e1c4f",
+      "summary_zh": "由 Claude 调度多个 Codex CLI 进程并行执行并审核结果，适合批量生成内容、测试代码和大规模重构等可拆分任务。",
+      "translated_at": "2026-08-11T07:44:22.284Z"
+    },
+    "skill:jasoncolapietro-suede-creator-skills-suede-competitor-profiling": {
+      "hash": "320464e489f91528",
+      "summary_zh": "一套基于公开信息和证据的竞品研究方法，适合梳理竞品定位、定价、产品与市场信号，或更新竞争格局。",
+      "translated_at": "2026-08-11T07:44:24.250Z"
+    },
+    "skill:jasoncolapietro-suede-creator-skills-suede-content-strategy": {
+      "hash": "57011459fbb0cf60",
+      "summary_zh": "一套内容战略决策框架，用于规划选题、优先级、发布节奏与渠道，帮助团队判断该发布什么并持续积累内容价值。",
+      "translated_at": "2026-08-11T07:44:26.679Z"
+    },
+    "skill:jasoncolapietro-suede-creator-skills-suede-copy": {
+      "hash": "4d853b628fe11ccf",
+      "summary_zh": "一款转化文案写作工具，适合快速优化落地页、邮件和行动号召，减少套话并提升点击率。",
+      "translated_at": "2026-08-11T07:44:32.199Z"
+    },
+    "skill:jasoncolapietro-suede-creator-skills-suede-customer-research": {
+      "hash": "f7ac1e464f1259a9",
+      "summary_zh": "一套客户研究方法，用于设计访谈、分析反馈并沉淀证据，帮助理解特定客群真实的言行、需求与顾虑。",
+      "translated_at": "2026-08-11T07:44:36.129Z"
+    },
+    "skill:jasoncolapietro-suede-creator-skills-suede-competitors": {
+      "hash": "34e7fd68a8a73a5b",
+      "summary_zh": "一套公开竞品对比页的策划与写作规范，帮助基于可靠证据客观定位产品，满足用户评估和搜索需求。",
+      "translated_at": "2026-08-11T07:44:38.485Z"
+    },
+    "skill:jasoncolapietro-suede-creator-skills-suede-deslop": {
+      "hash": "c095cb8e5f7b6cec",
+      "summary_zh": "一款清理文本中 AI 写作痕迹的润色工具，适合在文案、邮件、README 或文档发布前优化表达，使语言更自然。",
+      "translated_at": "2026-08-11T07:44:39.123Z"
+    },
+    "skill:jasoncolapietro-suede-creator-skills-suede-design": {
+      "hash": "0a404c5da7e0971c",
+      "summary_zh": "一套界面设计规范与质检工具，帮助团队统一视觉语言，提升成品页面的一致性、层次感和完成度。",
+      "translated_at": "2026-08-11T07:44:41.433Z"
+    },
+    "skill:jasoncolapietro-suede-creator-skills-suede-directory-submissions": {
+      "hash": "b19836bd323a330a",
+      "summary_zh": "一套目录投稿策略工具，适合为初创、SaaS、AI 等产品筛选平台、安排提交顺序、优化定位并跟踪外链效果。",
+      "translated_at": "2026-08-11T07:44:42.347Z"
+    },
+    "skill:jasoncolapietro-suede-creator-skills-suede-free-tools": {
+      "hash": "0a0f31e972012a5f",
+      "summary_zh": "一套免费互动工具的选题与评估方法，适合用计算器、评分器等吸引用户并引导其转化为付费客户。",
+      "translated_at": "2026-08-11T07:44:45.740Z"
+    },
+    "skill:jasoncolapietro-suede-creator-skills-suede-emails": {
+      "hash": "3f9814a7e5abd881",
+      "summary_zh": "一套生命周期邮件流程设计工具，适合规划欢迎、培育、召回、购后等邮件序列及发送节奏与效果衡量。",
+      "translated_at": "2026-08-11T07:44:46.576Z"
+    },
+    "skill:jasoncolapietro-suede-creator-skills-suede-full-send": {
+      "hash": "0080c399caf96ea6",
+      "summary_zh": "面向复杂授权任务的多智能体调度工具，可并行分工、对抗审查并推动任务端到端完成。",
+      "translated_at": "2026-08-11T07:44:47.854Z"
+    },
+    "skill:jasoncolapietro-suede-creator-skills-suede-image": {
+      "hash": "72bf157832b7dc8c",
+      "summary_zh": "一套通用营销图片制作工具，适合生成提示词、主视觉、社媒配图、产品样机及完成尺寸适配、压缩和预览。",
+      "translated_at": "2026-08-11T07:44:48.372Z"
+    },
+    "skill:jasoncolapietro-suede-creator-skills-suede-instagram-growth": {
+      "hash": "8939e89911920aee",
+      "summary_zh": "面向 Instagram 账号的增长运营工具，适合分析内容表现、规划日常创作，并将浏览量转化为关注、线索和销售。",
+      "translated_at": "2026-08-11T07:44:52.958Z"
+    },
+    "skill:jasoncolapietro-suede-creator-skills-suede-launch-packaging": {
+      "hash": "18785e30fbc8a4e6",
+      "summary_zh": "一套面向项目发布与交付的打包流程，帮助补齐文档、安装命令、验证记录和交接说明，让成果可直接使用。",
+      "translated_at": "2026-08-11T07:44:53.272Z"
+    },
+    "skill:jasoncolapietro-suede-creator-skills-suede-lead-magnets": {
+      "hash": "524a73eabb4b25ec",
+      "summary_zh": "一套获客资料设计方法，帮助规划电子书、清单或模板的内容深度、留资门槛、交付方式与转化衡量。",
+      "translated_at": "2026-08-11T07:44:55.292Z"
+    },
+    "skill:jasoncolapietro-suede-creator-skills-suede-marketing-council": {
+      "hash": "64339b92587ae20c",
+      "summary_zh": "通过多个明确标注的模拟顾问，从不同专家视角讨论具体营销问题，呈现分歧并形成决策建议。",
+      "translated_at": "2026-08-11T07:44:57.014Z"
+    },
+    "skill:jasoncolapietro-suede-creator-skills-suede-marketing-loops": {
+      "hash": "0d2ec080f09550df",
+      "summary_zh": "用于设计可重复执行的营销工作流，适合广告疲劳监测、内容更新、流失预警、排名下滑及周度复盘等场景。",
+      "translated_at": "2026-08-11T07:44:58.251Z"
+    },
+    "skill:jasoncolapietro-suede-creator-skills-suede-marketing-psychology": {
+      "hash": "21d91ba7db3dcff8",
+      "summary_zh": "一套将行为科学合规用于营销决策的方法，适合选择心理模型、设计有依据且可验证的营销假设。",
+      "translated_at": "2026-08-11T07:45:01.961Z"
+    },
+    "skill:jasoncolapietro-suede-creator-skills-suede-marketing-plan": {
+      "hash": "fe29d2292ef46911",
+      "summary_zh": "一套按团队、预算和发展阶段定制的全漏斗营销规划工具，适合制定90天增长计划、年度路线图或上市执行方案。",
+      "translated_at": "2026-08-11T07:45:03.025Z"
+    },
+    "skill:jasoncolapietro-suede-creator-skills-suede-marketing-ideas": {
+      "hash": "b5dd0f4761c437df",
+      "summary_zh": "一套结构化营销创意工具，适合卡思路时筛选并比较增长策略，为制定正式方案提供备选。",
+      "translated_at": "2026-08-11T07:45:04.471Z"
+    },
+    "skill:jasoncolapietro-suede-creator-skills-suede-mcp-qa": {
+      "hash": "40c7f3cb88a778b8",
+      "summary_zh": "一款用于发布前排查 MCP 实现偏差的质检工具，帮助确保接口、提示词、安装路径、协议行为与文档保持一致。",
+      "translated_at": "2026-08-11T07:45:08.536Z"
+    },
+    "skill:jasoncolapietro-suede-creator-skills-suede-offers": {
+      "hash": "33ffd15da13b4c44",
+      "summary_zh": "一套用于设计和诊断服务、课程、咨询及高客单B2B方案的工具，帮助优化价值呈现、风险保障与付款结构。",
+      "translated_at": "2026-08-11T07:45:10.511Z"
+    },
+    "skill:jasoncolapietro-suede-creator-skills-suede-onboarding": {
+      "hash": "e6eb6239231001df",
+      "summary_zh": "一套新用户引导与激活策略，适合优化首次使用流程，帮助注册用户更快感知产品价值并提升留存。",
+      "translated_at": "2026-08-11T07:45:10.631Z"
+    },
+    "skill:jasoncolapietro-suede-creator-skills-suede-paywalls": {
+      "hash": "14b681b3d0c5f645",
+      "summary_zh": "一套产品内付费转化设计指南，适合优化付费墙、功能限制、试用到期及用量提醒等升级场景。",
+      "translated_at": "2026-08-11T07:45:12.258Z"
+    },
+    "skill:jasoncolapietro-suede-creator-skills-suede-pricing": {
+      "hash": "aa4e2df2fe37d4d6",
+      "summary_zh": "一套产品定价与套餐设计方法，适合制定价格、划分档位、选择价值指标及规划涨价。",
+      "translated_at": "2026-08-11T07:45:14.189Z"
+    },
+    "skill:jasoncolapietro-suede-creator-skills-suede-product-marketing": {
+      "hash": "4492719e02ee1137",
+      "summary_zh": "一套统一维护产品营销背景资料的方法，适合团队沉淀受众、定位、客户反馈与目标，并持续协作更新。",
+      "translated_at": "2026-08-11T07:45:14.701Z"
+    },
+    "skill:jasoncolapietro-suede-creator-skills-suede-prospecting": {
+      "hash": "05a269b939c2930e",
+      "summary_zh": "一套销售线索挖掘与资格评估方法，适合定义理想客户、筛选潜在客户并寻找早期用户或设计合作伙伴。",
+      "translated_at": "2026-08-11T07:45:16.908Z"
+    },
+    "skill:jasoncolapietro-suede-creator-skills-suede-programmatic-seo": {
+      "hash": "957a3390f1b9b091",
+      "summary_zh": "一套程序化 SEO 规划方法，适合基于数据规模化设计关键词、地点、目录、集成和对比页面，并控制收录与上线质量。",
+      "translated_at": "2026-08-11T07:45:18.105Z"
+    },
+    "skill:jasoncolapietro-suede-creator-skills-suede-public-relations": {
+      "hash": "dbc938e4711c8656",
+      "summary_zh": "一套品牌媒体公关工作规范，适合整理媒体名单、打磨新闻角度、撰写记者邀约及处理采访需求。",
+      "translated_at": "2026-08-11T07:45:19.889Z"
+    },
+    "skill:jasoncolapietro-suede-creator-skills-suede-referrals": {
+      "hash": "d7e79fecb0f00b54",
+      "summary_zh": "一套推荐与联盟营销设计规范，适合规划老带新、伙伴激励、防作弊、归因返佣及裂变效果评估。",
+      "translated_at": "2026-08-11T07:45:22.468Z"
+    },
+    "skill:jasoncolapietro-suede-creator-skills-suede-release-linter": {
+      "hash": "cbc042eada6d22ce",
+      "summary_zh": "一款创意作品交付前的发布目录检查工具，用于排查元数据、文件结构、素材和版权等问题，确保符合平台上线要求。",
+      "translated_at": "2026-08-11T07:45:22.661Z"
+    },
+    "skill:jasoncolapietro-suede-creator-skills-suede-recommend-next-action": {
+      "hash": "fd2078645ec21d01",
+      "summary_zh": "根据当前项目进展判断最值得做的下一步，并生成可直接执行的提示词，适合卡住或不确定如何推进时使用。",
+      "translated_at": "2026-08-11T07:45:23.035Z"
+    },
+    "skill:jasoncolapietro-suede-creator-skills-suede-revops": {
+      "hash": "4dfd8444e10ec9b6",
+      "summary_zh": "一套营收运营规范，适合统一线索评分与分配、销售阶段、CRM治理及市场到销售的协作流程。",
+      "translated_at": "2026-08-11T07:45:25.858Z"
+    },
+    "skill:jasoncolapietro-suede-creator-skills-suede-rights-audit": {
+      "hash": "e7dcba5f0da7295f",
+      "summary_zh": "用于音乐项目发行前的版权审计，提前发现权属、授权、版税和元数据等问题，避免上线受阻。",
+      "translated_at": "2026-08-11T07:45:27.567Z"
+    },
+    "skill:jasoncolapietro-suede-creator-skills-suede-rights-passport": {
+      "hash": "27069a0af5e0b063",
+      "summary_zh": "将创意项目整理成有证据支撑的标准化权利交接包，适合版权授权、素材溯源、隐私合规与交付核验。",
+      "translated_at": "2026-08-11T07:45:30.373Z"
+    },
+    "skill:jasoncolapietro-suede-creator-skills-suede-sales-enablement": {
+      "hash": "034ffcc123ff5fa2",
+      "summary_zh": "一套销售赋能内容规范，适合制作推介材料、演示脚本、异议应对指南、提案及单笔交易的 ROI 分析。",
+      "translated_at": "2026-08-11T07:45:31.046Z"
     }
   }
 }

@@ -1,0 +1,26 @@
+{
+  "id": "jasoncolapietro-suede-creator-skills-suede-codex-fleet",
+  "name": "suede-codex-fleet",
+  "description": "Claude-directed parallel OpenAI Codex CLI worker fleet for bulk generation. Use when a job is high-volume, well-specified, and splits into independent worker-sized tasks (content batches, test generation, bulk refactors) and Codex CLI is installed and logged in. Claude decomposes, briefs, spawns codex exec runs in parallel, and review-gates every output. Workers are always codex exec processes billed to the user's OpenAI subscription — never substitute Claude subagent fan-out on any model, and h",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "JasonColapietro",
+  "install_path": ".claude/skills/suede-codex-fleet/SKILL.md",
+  "source": {
+    "repo": "JasonColapietro/suede-creator-skills",
+    "url": "https://github.com/JasonColapietro/suede-creator-skills/blob/main/skills/suede-codex-fleet/SKILL.md",
+    "path": "skills/suede-codex-fleet/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-11T06:44:46.603Z",
+    "stars": 152,
+    "language": "JavaScript",
+    "pushed_at": "2026-08-11T05:48:37Z",
+    "license": "MIT"
+  },
+  "summary_zh": "由 Claude 调度多个 Codex CLI 进程并行执行并审核结果，适合批量生成内容、测试代码和大规模重构等可拆分任务。"
+}

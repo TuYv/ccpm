@@ -1,0 +1,26 @@
+{
+  "id": "jasoncolapietro-suede-creator-skills-suede-agent-teams",
+  "name": "suede-agent-teams",
+  "description": "Split complex work into coordinated agent lanes with WIP checks, quality gates, rollback plans, and handoffs that prove what shipped. Use when one shared change needs safe parallel ownership or when running a repeatable public-repository contribution program with issue scoring, atomic task leases, isolated worktrees, independent review, neutral outward artifacts, and explicit publication authority.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "JasonColapietro",
+  "install_path": ".claude/skills/suede-agent-teams/SKILL.md",
+  "source": {
+    "repo": "JasonColapietro/suede-creator-skills",
+    "url": "https://github.com/JasonColapietro/suede-creator-skills/blob/main/skills/suede-agent-teams/SKILL.md",
+    "path": "skills/suede-agent-teams/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-11T06:44:44.499Z",
+    "stars": 152,
+    "language": "JavaScript",
+    "pushed_at": "2026-08-11T05:48:37Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一套多智能体协作工作流，用于安全拆分、并行推进和验收复杂改动，适合共享代码变更及规模化开源贡献管理。"
+}
