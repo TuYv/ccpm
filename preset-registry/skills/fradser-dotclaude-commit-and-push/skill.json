@@ -1,7 +1,7 @@
 {
   "id": "fradser-dotclaude-commit-and-push",
   "name": "commit-and-push",
-  "description": "Creates conventional git commits using git-agent and pushes to the remote repository. This skill should be used when the user asks to \"commit and push\", \"push my changes\", or wants to commit and immediately push to remote. The executing AI auto-derives its own co-author string from its runtime model identity (e.g., `Claude Opus 4.7 <noreply@anthropic.com>`, `Grok 4.5 <noreply@x.ai>`, `GLM-4.5 <noreply@zhipuai.cn>`) and passes it to `--co-author`. `$ARGUMENTS`, if provided, overrides the auto-der",
+  "description": "Creates clean conventional git commits using standard git and pushes changes to the remote repository. Use when the user asks to \"commit and push\", \"push changes\", or complete a commit followed by git push.",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/FradSer/dotclaude/blob/main/git/skills/commit-and-push/SKILL.md",
     "path": "git/skills/commit-and-push/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-11T11:48:12.765Z",
+    "discovered_at": "2026-08-11T13:42:15.741Z",
     "stars": 577,
     "language": "JavaScript",
-    "pushed_at": "2026-08-11T06:39:50Z",
+    "pushed_at": "2026-08-11T13:09:00Z",
     "license": "MIT"
   },
-  "summary_zh": "一个自动生成规范 Git 提交并推送到远程仓库的工具，适合快速提交和发布本地改动。"
+  "summary_zh": "用标准 Git 自动生成规范、整洁的提交并推送到远程仓库，适合快速完成提交和推送操作。"
 }
