@@ -1,0 +1,26 @@
+{
+  "id": "internet-court-internet-court-skill-jupiter-lend",
+  "name": "jupiter-lend",
+  "description": "Interact with Jupiter Lend Protocol. Read-only SDK (@jup-ag/lend-read) for querying liquidity pools, lending markets (jlTokens), and vaults. Write SDK (@jup-ag/lend) for lending (deposit/withdraw) and vault operations (deposit collateral, borrow, repay, manage positions).",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "0.1.3",
+  "author": "internet-court",
+  "install_path": ".claude/skills/jupiter-lend/SKILL.md",
+  "source": {
+    "repo": "internet-court/internet-court-skill",
+    "url": "https://github.com/internet-court/internet-court-skill/blob/main/vendored/jupiter/jupiter-lend/SKILL.md",
+    "path": "vendored/jupiter/jupiter-lend/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-11T18:47:12.730Z",
+    "stars": 1648,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-11T17:13:26Z",
+    "license": null
+  },
+  "summary_zh": "用于接入 Jupiter 借贷协议的 SDK，适合查询流动性池和市场，并实现存取款、抵押借款、还款及仓位管理。"
+}

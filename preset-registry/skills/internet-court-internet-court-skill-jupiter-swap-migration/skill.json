@@ -1,0 +1,26 @@
+{
+  "id": "internet-court-internet-court-skill-jupiter-swap-migration",
+  "name": "jupiter-swap-migration",
+  "description": "Migration guide from Jupiter Metis (v1) or Ultra to Swap API v2. Use when migrating existing Jupiter swap integrations, updating base URLs, or transitioning from quote+swap-instructions to the unified build endpoint.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "internet-court",
+  "install_path": ".claude/skills/jupiter-swap-migration/SKILL.md",
+  "source": {
+    "repo": "internet-court/internet-court-skill",
+    "url": "https://github.com/internet-court/internet-court-skill/blob/main/vendored/jupiter/jupiter-swap-migration/SKILL.md",
+    "path": "vendored/jupiter/jupiter-swap-migration/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-11T18:47:12.901Z",
+    "stars": 1648,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-11T17:13:26Z",
+    "license": null
+  },
+  "summary_zh": "面向现有 Jupiter 交易集成的迁移指南，帮助从 Metis v1 或 Ultra 平滑升级到 Swap API v2。"
+}

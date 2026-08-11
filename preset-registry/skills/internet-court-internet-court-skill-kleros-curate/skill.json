@@ -1,7 +1,7 @@
 {
   "id": "internet-court-internet-court-skill-kleros-curate",
   "name": "kleros-curate",
-  "description": "Interact with Kleros Curate registries — the decentralized token-curated list protocol for token lists, address tags, and policy-driven curation. Use this skill when the user mentions Curate, Light Curate, LightGeneralizedTCR, LGTCR, LightCurate, Stake Curate, PermanentGTCR, PGTCR, Scout, token-curated registry, TCR, curated list, decentralized registry, registry, token list, address tags, CDN tags, Goldsky, or Solidity functions addItem, removeItem, challengeItem, challengeRequest. Covers all t",
+  "description": "Interact with Kleros Curate registries across Ethereum Mainnet, Gnosis Chain, and Sepolia. Use when the user mentions Curate, Light Curate/LightGeneralizedTCR/LGTCR, Stake Curate/PermanentGTCR/PGTCR, Scout, token-curated registry/TCR, token lists, address/CDN tags, Goldsky, MetaEvidence, Verify Your List, or Curate calls such as addItem, removeItem, challengeItem, challengeRequest, and fundAppeal. Covers registry discovery and queries; policy/schema inspection; submissions, removals, challenges,",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/internet-court/internet-court-skill/blob/main/vendored/kleros/kleros-curate/SKILL.md",
     "path": "vendored/kleros/kleros-curate/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-11T16:53:34.504Z",
+    "discovered_at": "2026-08-11T18:47:13.228Z",
     "stars": 1648,
     "language": "TypeScript",
-    "pushed_at": "2026-07-10T04:27:35Z",
+    "pushed_at": "2026-08-11T17:13:26Z",
     "license": null
   },
-  "summary_zh": "用于操作去中心化策展注册表，适合管理代币列表、地址标签，以及按规则审核和挑战条目。"
+  "summary_zh": "用于跨以太坊主网、Gnosis Chain 和 Sepolia 管理去中心化策展注册表，适合查询、提交、移除和质疑条目及处理申诉。"
 }

@@ -1,0 +1,26 @@
+{
+  "id": "internet-court-internet-court-skill-metaplex",
+  "name": "metaplex",
+  "description": "Metaplex development on Solana — NFTs, tokens, compressed NFTs, candy machines, token launches, autonomous agents. Use when working with Token Metadata, Core, Bubblegum, Candy Machine, Genesis, Agent Registry, or the mplx CLI.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "internet-court",
+  "install_path": ".claude/skills/metaplex/SKILL.md",
+  "source": {
+    "repo": "internet-court/internet-court-skill",
+    "url": "https://github.com/internet-court/internet-court-skill/blob/main/vendored/metaplex/metaplex/SKILL.md",
+    "path": "vendored/metaplex/metaplex/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-11T18:47:14.227Z",
+    "stars": 1648,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-11T17:13:26Z",
+    "license": null
+  },
+  "summary_zh": "面向 Solana 的数字资产开发工具集，适合创建和管理 NFT、代币、压缩 NFT、发行活动及链上智能体。"
+}

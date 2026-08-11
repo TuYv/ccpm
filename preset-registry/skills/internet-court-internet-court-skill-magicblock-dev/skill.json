@@ -1,0 +1,26 @@
+{
+  "id": "internet-court-internet-court-skill-magicblock-dev",
+  "name": "magicblock",
+  "description": "Design, implement, and debug MagicBlock applications on Solana. Covers Ephemeral Rollups with delegated state; ER/PER architecture and settlement; private payments and token flows; oracles and randomness; scheduling and temporary authority; security and local validation. Use for MagicBlock product selection, integration, cross-product design, or production troubleshooting.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "internet-court",
+  "install_path": ".claude/skills/magicblock-dev/SKILL.md",
+  "source": {
+    "repo": "internet-court/internet-court-skill",
+    "url": "https://github.com/internet-court/internet-court-skill/blob/main/vendored/magicblock/magicblock-dev/SKILL.md",
+    "path": "vendored/magicblock/magicblock-dev/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-11T18:47:13.911Z",
+    "stars": 1648,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-11T17:13:26Z",
+    "license": null
+  },
+  "summary_zh": "面向 Solana 的应用开发与调试指南，适合设计临时 Rollup、隐私支付和代币流程，并解决集成、安全验证及生产故障。"
+}

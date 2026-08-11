@@ -1,7 +1,7 @@
 {
   "id": "internet-court-internet-court-skill-kleros-ipfs-upload",
   "name": "kleros-ipfs-upload",
-  "description": "Upload files to IPFS through the Kleros x402 payment gateway in exchange for $0.01 USDC on Base mainnet. Use this skill **specifically** when the user is uploading content destined for the Kleros ecosystem — dispute evidence, meta-evidence JSON, court / dispute / arbitrator policies, Curate item metadata, juror justifications, or any artifact a Kleros smart contract or subgraph will reference by IPFS CID. Trigger when the request mentions Kleros, a court / arbitrator / dispute / juror / curate /",
+  "description": "Upload one Kleros-ecosystem file per paid request to IPFS through the Kleros x402 gateway for $0.01 USDC on Base mainnet. Use for dispute evidence, MetaEvidence JSON, court/dispute/arbitrator policies, Curate item metadata, juror justifications, or any artifact a Kleros contract or subgraph will reference by CID. Trigger when the request mentions Kleros, court, arbitrator, dispute, juror, Curate, Proof of Humanity, evidence, meta-evidence, justification, explicitly names this gateway or skill, o",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/internet-court/internet-court-skill/blob/main/vendored/kleros/kleros-ipfs-upload/SKILL.md",
     "path": "vendored/kleros/kleros-ipfs-upload/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-11T16:53:34.644Z",
+    "discovered_at": "2026-08-11T18:47:13.393Z",
     "stars": 1648,
     "language": "TypeScript",
-    "pushed_at": "2026-07-10T04:27:35Z",
+    "pushed_at": "2026-08-11T17:13:26Z",
     "license": null
   },
-  "summary_zh": "通过 Kleros 支付网关将文件上传到 IPFS，适合发布仲裁证据、规则和元数据等链上引用内容。"
+  "summary_zh": "通过付费网关将仲裁证据、规则、元数据等文件上传到 IPFS，适合需用 CID 引用资料的 Kleros 生态场景。"
 }

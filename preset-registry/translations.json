@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-11T17:45:48.606Z",
+  "updated_at": "2026-08-11T19:42:01.142Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -10078,9 +10078,9 @@
       "translated_at": "2026-08-03T04:59:48.713Z"
     },
     "bundle:fradser-dotclaude": {
-      "hash": "0867b1c69e5604fe",
-      "summary_zh": "面向 AI 助手的一站式技能库，覆盖产品增长、营销设计、数据分析、开发协作与网页自动化，让复杂任务可按场景快速组合执行。",
-      "translated_at": "2026-08-11T15:47:47.163Z"
+      "hash": "b645559e14f04504",
+      "summary_zh": "面向 Claude 的全栈技能库，将营销增长、产品设计、开发协作与自动化串成可复用流程，帮助 AI 高效推进复杂项目。",
+      "translated_at": "2026-08-11T19:41:46.437Z"
     },
     "bundle:sethgammon-citadel": {
       "hash": "ccfc472396f8c5a3",
@@ -17348,9 +17348,9 @@
       "translated_at": "2026-08-03T04:58:53.789Z"
     },
     "bundle:internet-court-internet-court-skill": {
-      "hash": "4586bba1156fc084",
-      "summary_zh": "面向智能体间商业协作，整合身份、钱包、算力、托管结算与争议处理，构建可控可信的自动化交易基础设施。",
-      "translated_at": "2026-08-03T04:58:57.379Z"
+      "hash": "be0378d56b2be640",
+      "summary_zh": "面向智能体间商业协作，整合算力、钱包支付、托管结算、身份鉴权与争议裁决，打通安全可信的交易全流程。",
+      "translated_at": "2026-08-11T19:41:44.411Z"
     },
     "bundle:shpigford-chops": {
       "hash": "ed348df917043b3e",
@@ -21283,9 +21283,9 @@
       "translated_at": "2026-08-03T18:30:47.202Z"
     },
     "skill:fradser-dotclaude-review-pr": {
-      "hash": "525da5c9ad6e0596",
-      "summary_zh": "一个自动审查并持续跟进拉取请求的工具，可监控 CI 和评审意见，验证后修复并推送代码，直至满足合并条件。",
-      "translated_at": "2026-08-07T01:51:05.499Z"
+      "hash": "aa5329ed82dc333d",
+      "summary_zh": "一个自动审查并持续跟进拉取请求的工具，可核验评审意见、修复问题并监控 CI，直到满足合并条件。",
+      "translated_at": "2026-08-11T19:41:51.235Z"
     },
     "skill:fradser-dotclaude-skills": {
       "hash": "d46b584b662b9f8b",
@@ -22753,14 +22753,14 @@
       "translated_at": "2026-08-03T21:06:06.976Z"
     },
     "skill:internet-court-internet-court-skill-kleros-curate": {
-      "hash": "b635f4e96ca48383",
-      "summary_zh": "用于操作去中心化策展注册表，适合管理代币列表、地址标签，以及按规则审核和挑战条目。",
-      "translated_at": "2026-08-03T21:06:08.343Z"
+      "hash": "0cef784316ea901c",
+      "summary_zh": "用于跨以太坊主网、Gnosis Chain 和 Sepolia 管理去中心化策展注册表，适合查询、提交、移除和质疑条目及处理申诉。",
+      "translated_at": "2026-08-11T19:41:59.319Z"
     },
     "skill:internet-court-internet-court-skill-kleros-ipfs-upload": {
-      "hash": "1ab1e24505c8bc8a",
-      "summary_zh": "通过 Kleros 支付网关将文件上传到 IPFS，适合发布仲裁证据、规则和元数据等链上引用内容。",
-      "translated_at": "2026-08-03T21:06:09.838Z"
+      "hash": "8262dbafd61d2d9a",
+      "summary_zh": "通过付费网关将仲裁证据、规则、元数据等文件上传到 IPFS，适合需用 CID 引用资料的 Kleros 生态场景。",
+      "translated_at": "2026-08-11T19:41:57.602Z"
     },
     "skill:internet-court-internet-court-skill-lifi": {
       "hash": "8fea5ff3e7536a4e",
@@ -29801,6 +29801,41 @@
       "hash": "b3ef0f5b01b717f2",
       "summary_zh": "一款用于验证现有成果是否满足验收条件的工具，适合完成度检查、定向门禁测试和交付前最终确认，避免范围扩大。",
       "translated_at": "2026-08-11T17:45:48.605Z"
+    },
+    "skill:internet-court-internet-court-skill-dflow-phantom-connect": {
+      "hash": "58303086b199c636",
+      "summary_zh": "一套面向 Solana 的钱包接入与现货交易开发方案，适合实现签名、支付、NFT 铸造、代币门控及兑换行情流。",
+      "translated_at": "2026-08-11T19:41:50.977Z"
+    },
+    "skill:internet-court-internet-court-skill-integrating-jupiter": {
+      "hash": "9bf75394c19d08ec",
+      "summary_zh": "一套覆盖交易、借贷、行情等 API 的集成指南，帮助开发者选对接口、梳理调用流程并提升生产环境稳定性。",
+      "translated_at": "2026-08-11T19:41:52.165Z"
+    },
+    "skill:internet-court-internet-court-skill-jupiter-lend": {
+      "hash": "0718f6bcd0e80088",
+      "summary_zh": "用于接入 Jupiter 借贷协议的 SDK，适合查询流动性池和市场，并实现存取款、抵押借款、还款及仓位管理。",
+      "translated_at": "2026-08-11T19:41:53.549Z"
+    },
+    "skill:internet-court-internet-court-skill-jupiter-swap-migration": {
+      "hash": "30b9d6fada919be4",
+      "summary_zh": "面向现有 Jupiter 交易集成的迁移指南，帮助从 Metis v1 或 Ultra 平滑升级到 Swap API v2。",
+      "translated_at": "2026-08-11T19:41:54.661Z"
+    },
+    "skill:internet-court-internet-court-skill-jupiter-vrfd": {
+      "hash": "e306c782d629a860",
+      "summary_zh": "用于处理 Jupiter 代币快速验证流程，适合查询资格、支付验证费、提交申请或更新代币元数据。",
+      "translated_at": "2026-08-11T19:41:55.541Z"
+    },
+    "skill:internet-court-internet-court-skill-magicblock-dev": {
+      "hash": "cc701a138ee2ad3a",
+      "summary_zh": "面向 Solana 的应用开发与调试指南，适合设计临时 Rollup、隐私支付和代币流程，并解决集成、安全验证及生产故障。",
+      "translated_at": "2026-08-11T19:42:00.148Z"
+    },
+    "skill:internet-court-internet-court-skill-metaplex": {
+      "hash": "d616c136eaaafa1b",
+      "summary_zh": "面向 Solana 的数字资产开发工具集，适合创建和管理 NFT、代币、压缩 NFT、发行活动及链上智能体。",
+      "translated_at": "2026-08-11T19:42:01.142Z"
     }
   }
 }
