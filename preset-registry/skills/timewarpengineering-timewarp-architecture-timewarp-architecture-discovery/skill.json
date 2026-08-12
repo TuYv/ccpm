@@ -1,0 +1,26 @@
+{
+  "id": "timewarpengineering-timewarp-architecture-timewarp-architecture-discovery",
+  "name": "timewarp-architecture-discovery",
+  "description": "Locate agent-facing discovery surfaces on a TimeWarp.Architecture template host (llms.txt, auth.md, OpenAPI, MCP/A2A cards, Agent Skills index, markdown negotiation). Use when scanning or onboarding against this host.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "TimeWarpEngineering",
+  "install_path": ".claude/skills/timewarp-architecture-discovery/SKILL.md",
+  "source": {
+    "repo": "TimeWarpEngineering/timewarp-architecture",
+    "url": "https://github.com/TimeWarpEngineering/timewarp-architecture/blob/master/source/container-apps/web/projects/web-spa/wwwroot/.well-known/agent-skills/timewarp-architecture-discovery/SKILL.md",
+    "path": "source/container-apps/web/projects/web-spa/wwwroot/.well-known/agent-skills/timewarp-architecture-discovery/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-08-12T05:13:05.387Z",
+    "stars": 54,
+    "language": "C#",
+    "pushed_at": "2026-08-12T04:54:31Z",
+    "license": "Unlicense"
+  },
+  "summary_zh": "用于发现架构模板主机上供智能体访问的文档、接口和能力入口，适合主机扫描与接入上手。"
+}

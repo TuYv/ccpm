@@ -1,0 +1,26 @@
+{
+  "id": "timewarpengineering-timewarp-architecture-timewarp-identity",
+  "name": "timewarp-identity",
+  "description": "Register an ECDSA P-256 agent public key and issue short-lived scoped opaque bearer tokens on a TimeWarp.Architecture host. Use when onboarding a machine agent without a browser or human sponsor.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "TimeWarpEngineering",
+  "install_path": ".claude/skills/timewarp-identity/SKILL.md",
+  "source": {
+    "repo": "TimeWarpEngineering/timewarp-architecture",
+    "url": "https://github.com/TimeWarpEngineering/timewarp-architecture/blob/master/source/container-apps/web/projects/web-spa/wwwroot/.well-known/agent-skills/timewarp-identity/SKILL.md",
+    "path": "source/container-apps/web/projects/web-spa/wwwroot/.well-known/agent-skills/timewarp-identity/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-08-12T05:13:05.527Z",
+    "stars": 54,
+    "language": "C#",
+    "pushed_at": "2026-08-12T04:54:31Z",
+    "license": "Unlicense"
+  },
+  "summary_zh": "用于注册 ECDSA P-256 公钥并签发短期限定权限令牌，适合无浏览器或人工担保的机器代理接入。"
+}

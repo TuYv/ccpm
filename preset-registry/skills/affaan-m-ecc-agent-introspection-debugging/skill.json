@@ -1,7 +1,7 @@
 {
   "id": "affaan-m-ecc-agent-introspection-debugging",
   "name": "agent-introspection-debugging",
-  "description": "Structured self-debugging workflow for AI agent failures using capture, diagnosis, contained recovery, and introspection reports.",
+  "description": "Structured self-debugging workflow for AI agent failures using capture, diagnosis, contained recovery, and introspection reports. Use when an agent run fails and you need a reproducible diagnosis instead of a retry.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/affaan-m/ECC/blob/main/.agents/skills/agent-introspection-debugging/SKILL.md",
     "path": ".agents/skills/agent-introspection-debugging/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-12T02:58:19.161Z",
-    "stars": 239505,
+    "discovered_at": "2026-08-12T05:14:11.884Z",
+    "stars": 239528,
     "language": "JavaScript",
-    "pushed_at": "2026-08-11T23:36:48Z",
+    "pushed_at": "2026-08-12T04:43:59Z",
     "license": "MIT"
   },
-  "summary_zh": "一套面向 AI 智能体故障的结构化自调试流程，通过记录、诊断、隔离恢复和反思报告，帮助快速定位并修复异常。"
+  "summary_zh": "一套面向 AI 智能体故障的结构化自调试流程，适合在运行失败后定位原因并实现可复现的诊断与恢复。"
 }

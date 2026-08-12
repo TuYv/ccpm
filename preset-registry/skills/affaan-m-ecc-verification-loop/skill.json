@@ -1,7 +1,7 @@
 {
   "id": "affaan-m-ecc-verification-loop",
   "name": "verification-loop",
-  "description": "A comprehensive verification system for Claude Code sessions.",
+  "description": "A comprehensive verification system for Claude Code sessions. Use when verifying a Claude Code session's work before claiming it is complete.",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/affaan-m/ECC/blob/main/.agents/skills/verification-loop/SKILL.md",
     "path": ".agents/skills/verification-loop/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-12T02:58:24.920Z",
-    "stars": 239505,
+    "discovered_at": "2026-08-12T05:14:16.787Z",
+    "stars": 239528,
     "language": "JavaScript",
-    "pushed_at": "2026-08-11T23:36:48Z",
+    "pushed_at": "2026-08-12T04:43:59Z",
     "license": "MIT"
   },
-  "summary_zh": "一套面向 Claude Code 会话的完整验证系统，用于检查执行过程和结果是否可靠，适合需要质量保障的开发场景。"
+  "summary_zh": "用于全面核验 Claude Code 会话产出的系统，适合在任务交付前确认工作是否真正完成。"
 }
