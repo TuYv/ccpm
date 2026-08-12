@@ -1,0 +1,26 @@
+{
+  "id": "neeeophytee-finding-unknowns-skills-agent-interface-design",
+  "name": "agent-interface-design",
+  "description": "Design tools, scripts, and CLIs that an agent will call, so the interface teaches its own use instead of a wall of prose and examples. Use when building an MCP server or tool definition, writing an agent-facing script, or when an agent keeps misusing a tool it already has.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Neeeophytee",
+  "install_path": ".claude/skills/agent-interface-design/SKILL.md",
+  "source": {
+    "repo": "Neeeophytee/finding-unknowns-skills",
+    "url": "https://github.com/Neeeophytee/finding-unknowns-skills/blob/main/skills/agent-interface-design/SKILL.md",
+    "path": "skills/agent-interface-design/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-12T13:03:35.094Z",
+    "stars": 308,
+    "language": null,
+    "pushed_at": "2026-07-28T03:32:27Z",
+    "license": null
+  },
+  "summary_zh": "用于设计让智能体一看就会用的工具、脚本和命令行接口，适合开发 MCP 服务或解决智能体频繁误用工具的问题。"
+}

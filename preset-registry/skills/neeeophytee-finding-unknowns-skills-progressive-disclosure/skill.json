@@ -1,0 +1,26 @@
+{
+  "id": "neeeophytee-finding-unknowns-skills-progressive-disclosure",
+  "name": "progressive-disclosure",
+  "description": "Split an oversized skill, CLAUDE.md, or spec into an entry file plus files that load only when they're needed.",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Neeeophytee",
+  "install_path": ".claude/skills/progressive-disclosure/SKILL.md",
+  "source": {
+    "repo": "Neeeophytee/finding-unknowns-skills",
+    "url": "https://github.com/Neeeophytee/finding-unknowns-skills/blob/main/skills/progressive-disclosure/SKILL.md",
+    "path": "skills/progressive-disclosure/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-12T13:03:36.375Z",
+    "stars": 308,
+    "language": null,
+    "pushed_at": "2026-07-28T03:32:27Z",
+    "license": null
+  },
+  "summary_zh": "把过大的技能说明、CLAUDE.md 或规范拆成入口和按需加载文件，适合精简上下文并提升维护效率。"
+}

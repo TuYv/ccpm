@@ -1,0 +1,26 @@
+{
+  "id": "zilliztech-mfs-mfs-ingest",
+  "name": "mfs-ingest",
+  "description": ">- Register, update, or re-sync data sources for MFS so they become searchable — postgres / mysql / mongo / snowflake / bigquery, github / jira / linear / notion / hubspot / zendesk, slack / discord / gmail / feishu, s3 / gdrive / web / file. Use whenever the user wants to ADD a new data source to MFS, change an existing connector's config, re-ingest / re-index a source, list registered connectors, or troubleshoot a sync that's not picking up data. Trigger phrases include \"add X to MFS\", \"ingest",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "0.4.0",
+  "author": "zilliztech",
+  "install_path": ".claude/skills/mfs-ingest/SKILL.md",
+  "source": {
+    "repo": "zilliztech/mfs",
+    "url": "https://github.com/zilliztech/mfs/blob/main/skills/mfs-ingest/SKILL.md",
+    "path": "skills/mfs-ingest/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-12T13:04:05.845Z",
+    "stars": 119,
+    "language": "Python",
+    "pushed_at": "2026-07-31T06:49:03Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "用于管理 MFS 数据源接入与同步，让数据库、协作平台、云盘等内容可被统一搜索，适合配置连接、重建索引和排查同步问题。"
+}

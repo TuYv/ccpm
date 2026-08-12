@@ -1,0 +1,26 @@
+{
+  "id": "zilliztech-mfs-deep-research",
+  "name": "deep-research",
+  "description": ">- Answer a broad, open-ended, or multi-part question by iteratively searching MFS-indexed sources, following up on gaps, and synthesizing a cited report — the same \"reason and search over private data\" job zilliztech/deep-searcher does, but as a skill on top of `mfs-find` instead of a standalone framework. Use when the user asks for a report, a comprehensive/synthesized answer, a \"what do we know about X across everything we have\", or a question that can't be answered from a single search hit. ",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "zilliztech",
+  "install_path": ".claude/skills/deep-research/SKILL.md",
+  "source": {
+    "repo": "zilliztech/mfs",
+    "url": "https://github.com/zilliztech/mfs/blob/main/examples/deep-research-skill/deep-research/SKILL.md",
+    "path": "examples/deep-research-skill/deep-research/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-12T13:04:05.381Z",
+    "stars": 119,
+    "language": "Python",
+    "pushed_at": "2026-07-31T06:49:03Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "基于 mfs-find 的深度研究技能，可迭代检索私有数据并补齐信息缺口，生成带引用的综合报告，适合开放式或多部分问题。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "zilliztech-mfs-open-tag",
+  "name": "open-tag-admin",
+  "description": "Admin/control console for an Open Tag Slack tag-in workflow backed by MFS. Use to set up a new Open Tag bot from scratch, check what is currently running (backend, permitted MFS scopes, Slack channel), change settings, add or remove data sources, switch the CLI agent backend (claude -p / codex exec), invite or move the bot in Slack, run preflight checks, and troubleshoot thread context, retrieval, or task execution.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "zilliztech",
+  "install_path": ".claude/skills/open-tag/SKILL.md",
+  "source": {
+    "repo": "zilliztech/mfs",
+    "url": "https://github.com/zilliztech/mfs/blob/main/examples/open-tag-skill/open-tag/SKILL.md",
+    "path": "examples/open-tag-skill/open-tag/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-12T13:04:05.528Z",
+    "stars": 119,
+    "language": "Python",
+    "pushed_at": "2026-07-31T06:49:03Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "用于管理 Slack 标签触发机器人，可完成初始化、配置调整、数据源管理、后端切换、运行检查与故障排查。"
+}

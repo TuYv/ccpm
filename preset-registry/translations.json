@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-12T11:30:42.303Z",
+  "updated_at": "2026-08-12T13:29:08.921Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -1063,9 +1063,9 @@
       "translated_at": "2026-05-12T07:00:09.092Z"
     },
     "preset:agentseal-codeburn": {
-      "hash": "d8f1e4cd6a3b8949",
-      "summary_zh": "一款免费本地运行的 AI 编程成本追踪工具，可按模型、项目和任务统计多种工具的 Token 用量与费用。",
-      "translated_at": "2026-08-11T01:01:36.824Z"
+      "hash": "b27898787d1fcae8",
+      "summary_zh": "一款免费的本地统计工具，按模型、项目和任务追踪多种 AI 编程助手的 Token 用量与成本，适合分析和控制开发开支。",
+      "translated_at": "2026-08-12T13:07:04.544Z"
     },
     "preset:agricidaniel-claude-ads": {
       "hash": "2917aca02746e258",
@@ -13983,9 +13983,9 @@
       "translated_at": "2026-06-05T16:55:32.478Z"
     },
     "preset:getagentseal-codeburn": {
-      "hash": "d8f1e4cd6a3b8949",
-      "summary_zh": "一款本地免费的 AI 编程成本追踪工具，适合按模型、项目和任务统计多种编码助手的 Token 用量与费用。",
-      "translated_at": "2026-08-11T01:01:36.716Z"
+      "hash": "b27898787d1fcae8",
+      "summary_zh": "一款免费的本地工具，可按模型、项目和任务统计多种 AI 编程助手的 Token 用量与成本，适合追踪和优化开发开支。",
+      "translated_at": "2026-08-12T13:07:09.353Z"
     },
     "preset:phuryn-claude-usage": {
       "hash": "f979256a307a1bb3",
@@ -30026,6 +30026,251 @@
     "content:aaron-he-zhu-aaron-marketing-skills-list-growth-designer": {
       "hash": "817a5890340a116b",
       "translated_at": "2026-08-12T11:30:42.303Z"
+    },
+    "bundle:zilliztech-mfs": {
+      "hash": "6ad6cd4bf6962c6b",
+      "summary_zh": "面向多源知识检索与深度研究的一体化工具集，打通数据接入、统一搜索、综合分析和协作管理。",
+      "translated_at": "2026-08-12T13:07:00.866Z"
+    },
+    "bundle:neeeophytee-finding-unknowns-skills": {
+      "hash": "9f975c24b8a0c28b",
+      "summary_zh": "面向复杂开发与智能体协作，提前暴露盲点、澄清需求、验证方案并沉淀变更，让实现更可控，成果更易审查和交接。",
+      "translated_at": "2026-08-12T13:07:01.266Z"
+    },
+    "skill:neeeophytee-finding-unknowns-skills-agent-interface-design": {
+      "hash": "02b67066021dd629",
+      "summary_zh": "用于设计让智能体一看就会用的工具、脚本和命令行接口，适合开发 MCP 服务或解决智能体频繁误用工具的问题。",
+      "translated_at": "2026-08-12T13:07:05.216Z"
+    },
+    "skill:neeeophytee-finding-unknowns-skills-brainstorm-prototypes": {
+      "hash": "2ffa98c0316b0a9a",
+      "summary_zh": "快速生成多种差异明显的临时方案，适合在设计、交互、命名或文案方向不明确时，通过对比原型找准需求。",
+      "translated_at": "2026-08-12T13:07:08.148Z"
+    },
+    "skill:neeeophytee-finding-unknowns-skills-blindspot-pass": {
+      "hash": "e87ed64eca68f1ec",
+      "summary_zh": "一款开工前的盲点排查工具，适合进入陌生代码库或新领域时，提前发现未意识到的风险与知识缺口。",
+      "translated_at": "2026-08-12T13:07:08.551Z"
+    },
+    "skill:neeeophytee-finding-unknowns-skills-context-audit": {
+      "hash": "8e851020751039a5",
+      "summary_zh": "用于审查智能体上下文中的指令冲突、过度约束和重复内容，并给出精简建议，适合排查指令失效或配置膨胀问题。",
+      "translated_at": "2026-08-12T13:07:11.196Z"
+    },
+    "skill:neeeophytee-finding-unknowns-skills-implementation-notes": {
+      "hash": "07a529779dbb5a74",
+      "summary_zh": "用于开发过程中持续记录计划偏差和边界情况的文档方法，适合按既定方案执行或长时间自主开发时避免遗漏。",
+      "translated_at": "2026-08-12T13:07:12.064Z"
+    },
+    "skill:neeeophytee-finding-unknowns-skills-change-quiz": {
+      "hash": "5d507e5af89d6ca0",
+      "summary_zh": "自动总结工作内容并生成合并前测验，适合复盘大型改动并确认用户真正理解后再合并。",
+      "translated_at": "2026-08-12T13:07:13.162Z"
+    },
+    "skill:neeeophytee-finding-unknowns-skills-implementation-plan": {
+      "hash": "0c7c540a31043256",
+      "summary_zh": "一种实施计划编写方法，优先呈现用户最可能调整的决策，适合在构建前梳理方案并将机械性工作后置。",
+      "translated_at": "2026-08-12T13:07:14.478Z"
+    },
+    "skill:neeeophytee-finding-unknowns-skills-interview-me": {
+      "hash": "b820c416b1a0d5ab",
+      "summary_zh": "通过逐个提问澄清任务或需求中的遗留疑点，适合在规划完成但实施细节仍不明确时使用。",
+      "translated_at": "2026-08-12T13:07:14.897Z"
+    },
+    "skill:neeeophytee-finding-unknowns-skills-pitch-packager": {
+      "hash": "2e8ba2a13b2a9b2a",
+      "summary_zh": "把方案、原型和实现说明整合成一份易读文档，适合快速推动评审、获得认可或分享成果与设计思路。",
+      "translated_at": "2026-08-12T13:07:16.147Z"
+    },
+    "skill:neeeophytee-finding-unknowns-skills-reference-hunt": {
+      "hash": "beea6e057da6cfb9",
+      "summary_zh": "以现有源码为需求参考，帮助用户在说不清具体要求时，跨语言或技术栈复刻类似功能。",
+      "translated_at": "2026-08-12T13:07:17.561Z"
+    },
+    "skill:neeeophytee-finding-unknowns-skills-progressive-disclosure": {
+      "hash": "b07650568a192bd3",
+      "summary_zh": "把过大的技能说明、CLAUDE.md 或规范拆成入口和按需加载文件，适合精简上下文并提升维护效率。",
+      "translated_at": "2026-08-12T13:07:17.924Z"
+    },
+    "skill:zilliztech-mfs-deep-research": {
+      "hash": "89c36a0c8680265e",
+      "summary_zh": "基于 mfs-find 的深度研究技能，可迭代检索私有数据并补齐信息缺口，生成带引用的综合报告，适合开放式或多部分问题。",
+      "translated_at": "2026-08-12T13:07:19.958Z"
+    },
+    "skill:zilliztech-mfs-open-tag": {
+      "hash": "38cfc5c1f5758723",
+      "summary_zh": "用于管理 Slack 标签触发机器人，可完成初始化、配置调整、数据源管理、后端切换、运行检查与故障排查。",
+      "translated_at": "2026-08-12T13:07:22.685Z"
+    },
+    "skill:zilliztech-mfs-mfs-find": {
+      "hash": "bcb26a6726684d7d",
+      "summary_zh": "通过命令行统一搜索和读取已配置的代码库、文档、数据库及聊天记录，适合跨数据源快速定位信息。",
+      "translated_at": "2026-08-12T13:07:22.803Z"
+    },
+    "skill:zilliztech-mfs-mfs-ingest": {
+      "hash": "7f15eac6345170a3",
+      "summary_zh": "用于管理 MFS 数据源接入与同步，让数据库、协作平台、云盘等内容可被统一搜索，适合配置连接、重建索引和排查同步问题。",
+      "translated_at": "2026-08-12T13:07:23.142Z"
+    },
+    "content:aaron-he-zhu-aaron-marketing-skills-list-segment-builder": {
+      "hash": "f35e6dc4806db370",
+      "translated_at": "2026-08-12T13:08:38.984Z"
+    },
+    "content:aaron-he-zhu-aaron-marketing-skills-list-hygiene-monitor": {
+      "hash": "e2797f6b7860be33",
+      "translated_at": "2026-08-12T13:08:54.339Z"
+    },
+    "content:aaron-he-zhu-aaron-marketing-skills-message-house-builder": {
+      "hash": "6ddc97cd1e7de695",
+      "translated_at": "2026-08-12T13:09:28.734Z"
+    },
+    "content:aaron-he-zhu-aaron-marketing-skills-momentum-planner": {
+      "hash": "201665db29a7a9e1",
+      "translated_at": "2026-08-12T13:10:05.756Z"
+    },
+    "content:aaron-he-zhu-aaron-marketing-skills-newsletter-monetization-planner": {
+      "hash": "5b8f5fec9fc40bea",
+      "translated_at": "2026-08-12T13:10:56.415Z"
+    },
+    "content:aaron-he-zhu-aaron-marketing-skills-outreach-manager": {
+      "hash": "c3ab766c7bc2ef3d",
+      "translated_at": "2026-08-12T13:11:09.457Z"
+    },
+    "content:aaron-he-zhu-aaron-marketing-skills-paid-measurement-loop": {
+      "hash": "2b81fbc9c7a2fbca",
+      "translated_at": "2026-08-12T13:11:59.795Z"
+    },
+    "content:aaron-he-zhu-aaron-marketing-skills-performance-analyzer": {
+      "hash": "ed6f4e8c74701770",
+      "translated_at": "2026-08-12T13:12:15.097Z"
+    },
+    "content:aaron-he-zhu-aaron-marketing-skills-placement-exclusion-manager": {
+      "hash": "175996eebebcfcc3",
+      "translated_at": "2026-08-12T13:12:52.397Z"
+    },
+    "content:aaron-he-zhu-aaron-marketing-skills-preference-frequency-manager": {
+      "hash": "574712c374219d92",
+      "translated_at": "2026-08-12T13:13:38.179Z"
+    },
+    "content:aaron-he-zhu-aaron-marketing-skills-press-media-relations": {
+      "hash": "47439bea588fdefc",
+      "translated_at": "2026-08-12T13:14:12.801Z"
+    },
+    "content:aaron-he-zhu-aaron-marketing-skills-pricing-packaging-planner": {
+      "hash": "7d172d7b776cca81",
+      "translated_at": "2026-08-12T13:15:03.444Z"
+    },
+    "content:aaron-he-zhu-aaron-marketing-skills-product-feed-optimizer": {
+      "hash": "7181838185cd951b",
+      "translated_at": "2026-08-12T13:15:16.604Z"
+    },
+    "content:aaron-he-zhu-aaron-marketing-skills-report-generator": {
+      "hash": "b1a05cb91fb874d0",
+      "translated_at": "2026-08-12T13:15:55.878Z"
+    },
+    "content:aaron-he-zhu-aaron-marketing-skills-reactivation-specialist": {
+      "hash": "e1a6675cfbb61680",
+      "translated_at": "2026-08-12T13:16:31.635Z"
+    },
+    "content:aaron-he-zhu-aaron-marketing-skills-roi-calculator": {
+      "hash": "34585ec9513fb821",
+      "translated_at": "2026-08-12T13:17:07.981Z"
+    },
+    "content:aaron-he-zhu-aaron-marketing-skills-sales-enablement-kit": {
+      "hash": "5173b7ce58ff95bc",
+      "translated_at": "2026-08-12T13:17:48.028Z"
+    },
+    "content:aaron-he-zhu-aaron-marketing-skills-search-term-miner": {
+      "hash": "6819d44bc546b803",
+      "translated_at": "2026-08-12T13:18:18.586Z"
+    },
+    "content:aaron-he-zhu-aaron-marketing-skills-send-experiment-designer": {
+      "hash": "fed883bd7ff3c816",
+      "translated_at": "2026-08-12T13:19:32.257Z"
+    },
+    "content:aaron-he-zhu-aaron-marketing-skills-subject-line-lab": {
+      "hash": "a0a5ca3fb1589d02",
+      "translated_at": "2026-08-12T13:19:51.004Z"
+    },
+    "content:aaron-he-zhu-aaron-marketing-skills-trend-spotter": {
+      "hash": "fe221dc8d7473dfb",
+      "translated_at": "2026-08-12T13:20:24.376Z"
+    },
+    "content:aaron-he-zhu-seo-geo-claude-skills-alert-manager": {
+      "hash": "494ae848c3fbfb29",
+      "translated_at": "2026-08-12T13:20:27.197Z"
+    },
+    "content:aaron-he-zhu-seo-geo-claude-skills-backlink-analyzer": {
+      "hash": "fd46b8be72b1cbfd",
+      "translated_at": "2026-08-12T13:20:57.943Z"
+    },
+    "content:aaron-he-zhu-seo-geo-claude-skills-competitor-analysis": {
+      "hash": "f381c0dd218be984",
+      "translated_at": "2026-08-12T13:21:01.565Z"
+    },
+    "content:aaron-he-zhu-seo-geo-claude-skills-content-gap-analysis": {
+      "hash": "4ed8fc679d53ffc8",
+      "translated_at": "2026-08-12T13:21:32.895Z"
+    },
+    "content:aaron-he-zhu-seo-geo-claude-skills-content-refresher": {
+      "hash": "ff86c294dcb7962c",
+      "translated_at": "2026-08-12T13:22:14.155Z"
+    },
+    "content:aaron-he-zhu-seo-geo-claude-skills-content-quality-auditor": {
+      "hash": "dccd606d52f23aa3",
+      "translated_at": "2026-08-12T13:23:40.957Z"
+    },
+    "content:aaron-he-zhu-seo-geo-claude-skills-domain-authority-auditor": {
+      "hash": "27f34fd9da122ddf",
+      "translated_at": "2026-08-12T13:24:57.771Z"
+    },
+    "content:aaron-he-zhu-seo-geo-claude-skills-entity-optimizer": {
+      "hash": "26fb8992dc97322f",
+      "translated_at": "2026-08-12T13:24:58.519Z"
+    },
+    "content:aaron-he-zhu-seo-geo-claude-skills-internal-linking-optimizer": {
+      "hash": "03976dd7794821bd",
+      "translated_at": "2026-08-12T13:25:36.823Z"
+    },
+    "content:aaron-he-zhu-seo-geo-claude-skills-geo-content-optimizer": {
+      "hash": "e067049411ac592f",
+      "translated_at": "2026-08-12T13:25:42.466Z"
+    },
+    "content:aaron-he-zhu-seo-geo-claude-skills-keyword-research": {
+      "hash": "37b5b3bbf682e835",
+      "translated_at": "2026-08-12T13:26:11.235Z"
+    },
+    "content:aaron-he-zhu-seo-geo-claude-skills-meta-tags-optimizer": {
+      "hash": "8808a86f53e88cce",
+      "translated_at": "2026-08-12T13:26:35.740Z"
+    },
+    "content:aaron-he-zhu-seo-geo-claude-skills-memory-management": {
+      "hash": "be2d23812b9463be",
+      "translated_at": "2026-08-12T13:27:08.674Z"
+    },
+    "content:aaron-he-zhu-seo-geo-claude-skills-on-page-seo-auditor": {
+      "hash": "3b8befc512a1d34b",
+      "translated_at": "2026-08-12T13:27:41.056Z"
+    },
+    "content:aaron-he-zhu-seo-geo-claude-skills-performance-reporter": {
+      "hash": "8cca9585986bcaae",
+      "translated_at": "2026-08-12T13:27:56.620Z"
+    },
+    "content:aaron-he-zhu-seo-geo-claude-skills-rank-tracker": {
+      "hash": "1e6174d57859d3cf",
+      "translated_at": "2026-08-12T13:28:18.936Z"
+    },
+    "content:aaron-he-zhu-seo-geo-claude-skills-schema-markup-generator": {
+      "hash": "66968dbcfea9e114",
+      "translated_at": "2026-08-12T13:28:36.291Z"
+    },
+    "content:aaron-he-zhu-seo-geo-claude-skills-seo-content-writer": {
+      "hash": "8014ae5cb74e1174",
+      "translated_at": "2026-08-12T13:28:51.346Z"
+    },
+    "content:aaron-he-zhu-seo-geo-claude-skills-serp-analysis": {
+      "hash": "f8b52ba3b3c78347",
+      "translated_at": "2026-08-12T13:29:08.921Z"
     }
   }
 }

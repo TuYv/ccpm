@@ -1,0 +1,26 @@
+{
+  "id": "neeeophytee-finding-unknowns-skills-context-audit",
+  "name": "context-audit",
+  "description": "Audit the instructions an agent already carries — CLAUDE.md, AGENTS.md, skills, tool descriptions — for contradictions, over-constraint, and duplication, then propose a cut list. Use when an agent ignores its own instructions, when a CLAUDE.md has grown bloated, or when the user asks to audit or rightsize their agent context.",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Neeeophytee",
+  "install_path": ".claude/skills/context-audit/SKILL.md",
+  "source": {
+    "repo": "Neeeophytee/finding-unknowns-skills",
+    "url": "https://github.com/Neeeophytee/finding-unknowns-skills/blob/main/skills/context-audit/SKILL.md",
+    "path": "skills/context-audit/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-12T13:03:35.605Z",
+    "stars": 308,
+    "language": null,
+    "pushed_at": "2026-07-28T03:32:27Z",
+    "license": null
+  },
+  "summary_zh": "用于审查智能体上下文中的指令冲突、过度约束和重复内容，并给出精简建议，适合排查指令失效或配置膨胀问题。"
+}

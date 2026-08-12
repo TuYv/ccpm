@@ -1,0 +1,26 @@
+{
+  "id": "zilliztech-mfs-mfs-find",
+  "name": "mfs-find",
+  "description": ">- Search, grep, browse, and read across registered MFS data sources via the `mfs` CLI — codebases, docs, PDFs, web crawls, databases (postgres/mysql/mongo/snowflake/bigquery), issue trackers (jira/linear/github), CRMs (hubspot), chat (slack/discord/gmail/feishu), object stores (s3/gdrive). Use whenever the user asks to find, locate, look up, look across, or read something out of an already-configured MFS index. Trigger phrases include \"search the codebase for\", \"find anywhere about\", \"where is ",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "0.4.0",
+  "author": "zilliztech",
+  "install_path": ".claude/skills/mfs-find/SKILL.md",
+  "source": {
+    "repo": "zilliztech/mfs",
+    "url": "https://github.com/zilliztech/mfs/blob/main/skills/mfs-find/SKILL.md",
+    "path": "skills/mfs-find/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-12T13:04:05.702Z",
+    "stars": 119,
+    "language": "Python",
+    "pushed_at": "2026-07-31T06:49:03Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "通过命令行统一搜索和读取已配置的代码库、文档、数据库及聊天记录，适合跨数据源快速定位信息。"
+}

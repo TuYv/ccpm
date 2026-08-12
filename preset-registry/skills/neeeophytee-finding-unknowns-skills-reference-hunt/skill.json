@@ -1,0 +1,26 @@
+{
+  "id": "neeeophytee-finding-unknowns-skills-reference-hunt",
+  "name": "reference-hunt",
+  "description": "Use existing source code as the specification when the user can't describe what they want in words. Use when the user points at a library, module, folder, or site and says \"like this,\" even if it's in a different language or stack.",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Neeeophytee",
+  "install_path": ".claude/skills/reference-hunt/SKILL.md",
+  "source": {
+    "repo": "Neeeophytee/finding-unknowns-skills",
+    "url": "https://github.com/Neeeophytee/finding-unknowns-skills/blob/main/skills/reference-hunt/SKILL.md",
+    "path": "skills/reference-hunt/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-12T13:03:36.549Z",
+    "stars": 308,
+    "language": null,
+    "pushed_at": "2026-07-28T03:32:27Z",
+    "license": null
+  },
+  "summary_zh": "以现有源码为需求参考，帮助用户在说不清具体要求时，跨语言或技术栈复刻类似功能。"
+}
