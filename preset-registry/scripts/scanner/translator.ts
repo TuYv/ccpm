@@ -1,35 +1,50 @@
 // Translation backfill: generates Chinese `summary_zh` for every preset / skill / mcp
 // so the desktop app can show a quick "what is this and what's it for" line to CN users.
 //
+// Also generates a full-document Chinese translation of each English *skill*'s SKILL.md
+// (presets/mcps are out of scope — they don't ship an installable SKILL.md), written
+// next to it as `skill.zh.md`, so CN users can read the whole doc instead of just the
+// one-line summary. Large docs are split into paragraph-safe chunks (never breaking
+// inside a fenced code block) and translated chunk-by-chunk to keep each request small
+// and reliable; chunks are rejoined in order. A skill whose SKILL.md is already mostly
+// Chinese is left alone (no skill.zh.md is written).
+//
 // Persistence model: scanner overwrites per-item JSON on every run, so we cannot rely
 // on summary_zh living solely there. Source of truth is `<registryDir>/translations.json`,
 // keyed by `${type}:${id}` with a content hash. After translation we mirror the
 // summary into per-item JSONs and patch the three index.json files so the client
-// can read summary_zh without loading the cache.
+// can read summary_zh (and whether a full-content translation exists) without loading
+// the cache. The translated document body itself lives only in `skill.zh.md`, not in
+// the cache — the cache just tracks the hash of what was translated.
 //
 // Uses an OpenAI-compatible /chat/completions endpoint (built-in fetch, no SDK).
 //
 // Configuration (env):
-//   OPENAI_API_KEY           — required; if absent, this step is a no-op (logged). Falls back to ANTHROPIC_API_KEY.
-//   OPENAI_BASE_URL          — gateway base; `/v1` auto-appended if missing. Falls back to ANTHROPIC_BASE_URL.
-//   TRANSLATION_MODEL        — default "gpt-4o-mini"
-//   TRANSLATION_README_CHARS  — default 2000 (readme truncation, by character count)
-//   TRANSLATION_CONCURRENCY   — default 3 (parallel API calls)
-//   TRANSLATION_MAX_PER_RUN   — default 200 (new/stale translations per scanner run; <=0 means unlimited)
+//   OPENAI_API_KEY               — required; if absent, this step is a no-op (logged). Falls back to ANTHROPIC_API_KEY.
+//   OPENAI_BASE_URL              — gateway base; `/v1` auto-appended if missing. Falls back to ANTHROPIC_BASE_URL.
+//   TRANSLATION_MODEL            — default "gpt-4o-mini"
+//   TRANSLATION_README_CHARS     — default 2000 (readme truncation, by character count, for the *summary* prompt only)
+//   TRANSLATION_CONCURRENCY      — default 3 (parallel API calls for summaries/bundles)
+//   TRANSLATION_MAX_PER_RUN      — default 200 (new/stale summary translations per scanner run; <=0 means unlimited)
+//   CONTENT_TRANSLATION_MAX_PER_RUN   — default 40 (new/stale full-document translations per scanner run; <=0 means unlimited)
+//   CONTENT_TRANSLATION_CHUNK_CHARS   — default 3000 (max chars per chunk before splitting SKILL.md further)
+//   CONTENT_TRANSLATION_CONCURRENCY   — default 2 (parallel skills being full-document-translated; chunks within a skill run sequentially)
 //
-// On per-item API failure: log and continue. Never fails the workflow.
+// On per-item / per-chunk API failure: log and continue. Never fails the workflow. If any
+// chunk of a document fails, the whole document is skipped this run (no partial skill.zh.md
+// is written) so it retries in full next time the budget allows.
 
 import { createHash } from "node:crypto";
 import { existsSync } from "node:fs";
 import { mkdir, readFile, readdir, writeFile } from "node:fs/promises";
-import { join } from "node:path";
+import { dirname, join } from "node:path";
 import { classifyBundle, type SkillCategory } from "./classify.js";
 
 type EntryType = "preset" | "skill" | "mcp";
 
 interface CacheEntry {
   hash: string;
-  summary_zh: string;
+  summary_zh?: string;
   translated_at: string;
 }
 
@@ -54,6 +69,9 @@ interface RunOpts {
   readmeChars: number;
   concurrency: number;
   maxTranslationsPerRun: number;
+  contentChunkChars: number;
+  contentConcurrency: number;
+  maxContentTranslationsPerRun: number;
 }
 
 interface TranslationBudget {
@@ -65,6 +83,13 @@ function parseMaxTranslationsPerRun(value: string | undefined): number {
   if (!value) return 200;
   const parsed = Number(value);
   if (!Number.isFinite(parsed)) return 200;
+  return Math.floor(parsed);
+}
+
+function parseIntWithDefault(value: string | undefined, fallback: number): number {
+  if (!value) return fallback;
+  const parsed = Number(value);
+  if (!Number.isFinite(parsed)) return fallback;
   return Math.floor(parsed);
 }
 
@@ -95,6 +120,68 @@ const BUNDLE_PROMPT_SYSTEM =
   "你是一名技术写作者，帮助中文用户快速理解开源工具集的整体用途。" +
   "根据给定的英文项目信息（一组配合使用的技能/工具），输出一句中文摘要，描述「这套合集解决什么场景、组合起来的价值是什么」。" +
   "要求：80 字以内；不要前缀；不要 Markdown；不要罗列每个成员；保持自然口语，避免翻译腔；强调合集的整体定位而非单个成员。";
+
+const CONTENT_PROMPT_SYSTEM =
+  "你是一名技术文档译者，负责把英文的 Claude Skill 说明文档（SKILL.md）片段翻译成中文，供中文开发者阅读。" +
+  "你收到的是整篇文档中的一段（可能不是开头或结尾）。" +
+  "要求：只翻译自然语言正文；完整保留所有 Markdown 语法结构（标题层级、列表、表格、链接、加粗斜体等）；" +
+  "代码块（```...```）、行内代码、命令行、文件路径、变量名、YAML/JSON 字段名一律保持英文原样，一字不改；" +
+  "不要新增、删减或总结内容，不要添加解释说明，不要加『翻译：』『以下是译文』之类的前缀或后缀；" +
+  "直接输出该片段对应的中文翻译，格式与原文一一对应。";
+
+// Skip full-document translation when the SKILL.md is already mostly Chinese.
+function looksAlreadyChinese(text: string, threshold = 0.15): boolean {
+  const sample = text.slice(0, 2000);
+  if (!sample.trim()) return false;
+  const cjk = sample.match(/[一-鿿]/g)?.length ?? 0;
+  return cjk / sample.length > threshold;
+}
+
+// Splits off a leading YAML frontmatter block (`---\n...\n---`) so it's never
+// sent to the model — field names/values there drive tooling and must stay intact.
+function splitFrontmatter(md: string): { frontmatter: string; body: string } {
+  const match = md.match(/^---\r?\n[\s\S]*?\r?\n---\r?\n?/);
+  if (!match) return { frontmatter: "", body: md };
+  return { frontmatter: match[0], body: md.slice(match[0].length) };
+}
+
+// Splits `body` into chunks no larger than `maxChars`, only breaking at a blank
+// line, and never while inside a fenced code block — so no chunk boundary can
+// land mid-sentence or mid-fence.
+function splitIntoChunks(body: string, maxChars: number): string[] {
+  const lines = body.split("\n");
+  const chunks: string[] = [];
+  let current: string[] = [];
+  let currentLen = 0;
+  let inFence = false;
+
+  const flush = () => {
+    if (current.length) {
+      chunks.push(current.join("\n"));
+      current = [];
+      currentLen = 0;
+    }
+  };
+
+  for (const line of lines) {
+    if (/^\s*```/.test(line)) inFence = !inFence;
+    current.push(line);
+    currentLen += line.length + 1;
+    if (!inFence && currentLen >= maxChars && line.trim() === "") {
+      flush();
+    }
+  }
+  flush();
+  return chunks.length ? chunks : [body];
+}
+
+function skillMdPath(item: ItemSpec): string {
+  return join(dirname(item.filePath), "skill.md");
+}
+
+function skillZhMdPath(item: ItemSpec): string {
+  return join(dirname(item.filePath), "skill.zh.md");
+}
 
 interface BundleSpec {
   id: string;          // slug, e.g. "jimliu-baoyu-skills"
@@ -191,7 +278,12 @@ function chatEndpoint(baseURL: string): string {
   return /\/v\d+$/.test(b) ? `${b}/chat/completions` : `${b}/v1/chat/completions`;
 }
 
-async function chatComplete(opts: RunOpts, system: string, user: string): Promise<string> {
+async function chatComplete(
+  opts: RunOpts,
+  system: string,
+  user: string,
+  maxTokens = 200,
+): Promise<string> {
   const base = opts.baseURL ?? "https://api.openai.com/v1";
   const res = await fetch(chatEndpoint(base), {
     method: "POST",
@@ -201,7 +293,7 @@ async function chatComplete(opts: RunOpts, system: string, user: string): Promis
     },
     body: JSON.stringify({
       model: opts.model,
-      max_tokens: 200,
+      max_tokens: maxTokens,
       messages: [
         { role: "system", content: system },
         { role: "user", content: user },
@@ -220,6 +312,30 @@ async function chatComplete(opts: RunOpts, system: string, user: string): Promis
 
 async function translate(opts: RunOpts, item: ItemSpec, readmeChars: number): Promise<string> {
   return chatComplete(opts, PROMPT_SYSTEM, buildUserPrompt(item, readmeChars));
+}
+
+// Translates a whole SKILL.md body by splitting it into paragraph-safe chunks and
+// translating each one independently, then rejoining in order. Any chunk failure
+// aborts the whole document (caller skips writing skill.zh.md this run).
+async function translateSkillContent(opts: RunOpts, fullMd: string): Promise<string | null> {
+  const { frontmatter, body } = splitFrontmatter(fullMd);
+  if (!body.trim()) return null;
+
+  const chunks = splitIntoChunks(body, opts.contentChunkChars);
+  const translatedChunks: string[] = [];
+  for (const chunk of chunks) {
+    if (!chunk.trim()) {
+      translatedChunks.push(chunk);
+      continue;
+    }
+    const maxTokens = Math.min(4096, Math.ceil(chunk.length * 1.8) + 256);
+    const translated = await chatComplete(opts, CONTENT_PROMPT_SYSTEM, chunk, maxTokens);
+    if (!translated) {
+      throw new Error(`empty chunk translation (chunk ${translatedChunks.length + 1}/${chunks.length})`);
+    }
+    translatedChunks.push(translated);
+  }
+  return frontmatter + translatedChunks.join("\n\n");
 }
 
 async function runWithConcurrency<T>(
@@ -451,6 +567,67 @@ async function runBundleTranslations(
   return { total: bundles.length, hits, misses, failures, deferred };
 }
 
+async function runContentTranslations(
+  opts: RunOpts,
+  cache: TranslationsCache,
+  items: ItemSpec[],
+  budget: TranslationBudget,
+): Promise<{ total: number; hits: number; skippedZh: number; misses: number; failures: number; deferred: number }> {
+  const skillItems = items.filter((i) => i.type === "skill");
+  let hits = 0;
+  let skippedZh = 0;
+  let misses = 0;
+  let failures = 0;
+  let deferred = 0;
+
+  const tasks = skillItems.map((item) => async () => {
+    const key = `content:${item.id}`;
+    const mdPath = skillMdPath(item);
+    if (!existsSync(mdPath)) return;
+
+    const fullMd = await readFile(mdPath, "utf8").catch(() => "");
+    if (!fullMd.trim()) return;
+
+    if (looksAlreadyChinese(fullMd)) {
+      skippedZh++;
+      return;
+    }
+
+    const hash = createHash("sha256").update(fullMd).digest("hex").slice(0, 16);
+    const cached = cache.entries[key];
+    const zhPath = skillZhMdPath(item);
+    if (cached?.hash === hash && existsSync(zhPath)) {
+      hits++;
+      return;
+    }
+
+    if (!budget.tryTake()) {
+      deferred++;
+      return;
+    }
+
+    try {
+      const translated = await translateSkillContent(opts, fullMd);
+      if (!translated) {
+        failures++;
+        console.warn(`[translate] empty document translation for ${key}`);
+        return;
+      }
+      await writeFile(zhPath, translated);
+      cache.entries[key] = { hash, translated_at: new Date().toISOString() };
+      misses++;
+      console.log(`[translate] ${key} (${translated.length} chars)`);
+    } catch (e) {
+      failures++;
+      console.warn(`[translate] failed ${key}: ${(e as Error).message}`);
+    }
+  });
+
+  await runWithConcurrency(tasks, opts.contentConcurrency);
+
+  return { total: skillItems.length, hits, skippedZh, misses, failures, deferred };
+}
+
 async function patchIndex(
   registryDir: string,
   relPath: string,
@@ -475,6 +652,13 @@ async function patchIndex(
       entry.summary_zh = cached.summary_zh;
     } else if ("summary_zh" in entry) {
       delete entry.summary_zh;
+    }
+
+    const contentCached = cache.entries[`content:${entry.id}`];
+    if (contentCached) {
+      entry.has_translation = true;
+    } else if ("has_translation" in entry) {
+      delete entry.has_translation;
     }
   }
   await writeFile(indexPath, JSON.stringify(raw, null, 2));
@@ -509,9 +693,14 @@ export async function runTranslations(registryDir: string): Promise<void> {
     readmeChars: Number(process.env.TRANSLATION_README_CHARS ?? "2000"),
     concurrency: Number(process.env.TRANSLATION_CONCURRENCY ?? "3"),
     maxTranslationsPerRun: parseMaxTranslationsPerRun(process.env.TRANSLATION_MAX_PER_RUN),
+    contentChunkChars: parseIntWithDefault(process.env.CONTENT_TRANSLATION_CHUNK_CHARS, 3000),
+    contentConcurrency: parseIntWithDefault(process.env.CONTENT_TRANSLATION_CONCURRENCY, 2),
+    maxContentTranslationsPerRun: parseIntWithDefault(process.env.CONTENT_TRANSLATION_MAX_PER_RUN, 40),
   };
   const budget = createTranslationBudget(opts.maxTranslationsPerRun);
+  const contentBudget = createTranslationBudget(opts.maxContentTranslationsPerRun);
   console.log(`[translate] max new/stale translations this run: ${formatBudget(budget.remaining())}`);
+  console.log(`[translate] max new/stale document translations this run: ${formatBudget(contentBudget.remaining())}`);
 
   if (opts.baseURL) {
     console.log(`[translate] using custom base URL: ${opts.baseURL}`);
@@ -568,6 +757,8 @@ export async function runTranslations(registryDir: string): Promise<void> {
 
   await runWithConcurrency(tasks, opts.concurrency);
 
+  const contentResult = await runContentTranslations(opts, cache, items, contentBudget);
+
   cache.updated_at = new Date().toISOString();
   await writeFile(cachePath, JSON.stringify(cache, null, 2));
 
@@ -577,6 +768,9 @@ export async function runTranslations(registryDir: string): Promise<void> {
 
   console.log(
     `[translate] done. items=${items.length} cache_hits=${hits} translated=${misses} failed=${failures} deferred=${deferred} | bundles=${bundleResult.total} hits=${bundleResult.hits} translated=${bundleResult.misses} failed=${bundleResult.failures} deferred=${bundleResult.deferred} budget_remaining=${formatBudget(budget.remaining())}`,
+  );
+  console.log(
+    `[translate] documents done. items=${contentResult.total} cache_hits=${contentResult.hits} already_zh=${contentResult.skippedZh} translated=${contentResult.misses} failed=${contentResult.failures} deferred=${contentResult.deferred} budget_remaining=${formatBudget(contentBudget.remaining())}`,
   );
 
   const translated = misses + bundleResult.misses;

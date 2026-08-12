@@ -58,6 +58,11 @@ jobs:
           TRANSLATION_README_CHARS: ${{ vars.TRANSLATION_README_CHARS || '2000' }}
           TRANSLATION_CONCURRENCY: ${{ vars.TRANSLATION_CONCURRENCY || '3' }}
           TRANSLATION_MAX_PER_RUN: ${{ vars.TRANSLATION_MAX_PER_RUN || '200' }}
+          # Full SKILL.md -> skill.zh.md document translation (paced separately from
+          # the one-line summary_zh above; see translator.ts header comment).
+          CONTENT_TRANSLATION_MAX_PER_RUN: ${{ vars.CONTENT_TRANSLATION_MAX_PER_RUN || '40' }}
+          CONTENT_TRANSLATION_CHUNK_CHARS: ${{ vars.CONTENT_TRANSLATION_CHUNK_CHARS || '3000' }}
+          CONTENT_TRANSLATION_CONCURRENCY: ${{ vars.CONTENT_TRANSLATION_CONCURRENCY || '2' }}
         run: pnpm run scan
 
       - name: Commit changes
