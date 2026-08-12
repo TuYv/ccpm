@@ -2,7 +2,7 @@
   "id": "k-dense-ai-scientific-agent-skills-fluidsim",
   "name": "fluidsim",
   "description": "Plan, configure, inspect, restart, and analyze bounded FluidSim computational-fluid-dynamics simulations with explicit numerical-validity and HPC safety checks. Use for FluidSim solver selection, parameter review, FFT/MPI setup, output diagnostics, or restart compatibility.",
-  "category": "测试调试",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/skills/fluidsim/SKILL.md",
     "path": "skills/fluidsim/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-11T23:46:35.028Z",
-    "stars": 33238,
+    "discovered_at": "2026-08-12T01:41:39.669Z",
+    "stars": 33239,
     "language": "Python",
-    "pushed_at": "2026-08-11T18:02:29Z",
+    "pushed_at": "2026-08-12T00:44:57Z",
     "license": "MIT"
   },
   "summary_zh": "一款计算流体力学模拟管理工具，适合验证数值参数与并行计算配置，并安全诊断或续跑仿真任务。"

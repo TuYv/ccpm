@@ -2,7 +2,7 @@
   "id": "k-dense-ai-claude-scientific-skills-dask",
   "name": "dask",
   "description": "Distributed computing for larger-than-RAM pandas/NumPy workflows. Use when you need to scale existing pandas/NumPy code beyond memory or across clusters. Best for parallel file processing, distributed ML, integration with existing pandas code. For out-of-core analytics on single machine use vaex; for in-memory speed use polars.",
-  "category": "测试调试",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/K-Dense-AI/claude-scientific-skills/blob/main/skills/dask/SKILL.md",
     "path": "skills/dask/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-11T23:40:10.639Z",
-    "stars": 33238,
+    "discovered_at": "2026-08-12T00:55:15.124Z",
+    "stars": 33237,
     "language": "Python",
-    "pushed_at": "2026-08-11T18:02:29Z",
+    "pushed_at": "2026-08-12T00:44:57Z",
     "license": "MIT"
   },
   "summary_zh": "一个兼容 pandas 和 NumPy 的分布式计算框架，适合处理超出内存的数据、并行文件任务及跨集群机器学习。"

@@ -2,7 +2,7 @@
   "id": "k-dense-ai-scientific-agent-skills-aeon",
   "name": "aeon",
   "description": "This skill should be used for time series machine learning tasks including classification, regression, clustering, forecasting, anomaly detection, segmentation, and similarity search. Use when working with temporal data, sequential patterns, or time-indexed observations requiring specialized algorithms beyond standard ML approaches. Particularly suited for univariate and multivariate time series analysis with scikit-learn compatible APIs.",
-  "category": "测试调试",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/skills/aeon/SKILL.md",
     "path": "skills/aeon/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-11T23:46:29.194Z",
-    "stars": 33238,
+    "discovered_at": "2026-08-12T01:41:33.751Z",
+    "stars": 33239,
     "language": "Python",
-    "pushed_at": "2026-08-11T18:02:29Z",
+    "pushed_at": "2026-08-12T00:44:57Z",
     "license": "MIT"
   },
   "summary_zh": "一个兼容 scikit-learn 的时间序列机器学习工具，适合处理预测、分类、聚类、异常检测及相似性搜索等任务。"

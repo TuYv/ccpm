@@ -2,7 +2,7 @@
   "id": "k-dense-ai-claude-scientific-skills-anndata",
   "name": "anndata",
   "description": "Data structure for annotated matrices in single-cell analysis. Use when working with .h5ad files or integrating with the scverse ecosystem. This is the data format skill—for analysis workflows use scanpy; for probabilistic models use scvi-tools; for population-scale queries use cellxgene-census.",
-  "category": "测试调试",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/K-Dense-AI/claude-scientific-skills/blob/main/skills/anndata/SKILL.md",
     "path": "skills/anndata/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-11T23:40:05.015Z",
-    "stars": 33238,
+    "discovered_at": "2026-08-12T00:55:09.520Z",
+    "stars": 33237,
     "language": "Python",
-    "pushed_at": "2026-08-11T18:02:29Z",
+    "pushed_at": "2026-08-12T00:44:57Z",
     "license": "MIT"
   },
   "summary_zh": "用于单细胞分析的带注释矩阵数据结构，适合读写 .h5ad 文件及接入 scverse 生态。"

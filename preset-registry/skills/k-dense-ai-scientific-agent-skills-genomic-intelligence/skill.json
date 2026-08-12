@@ -2,7 +2,7 @@
   "id": "k-dense-ai-scientific-agent-skills-genomic-intelligence",
   "name": "genomic-intelligence",
   "description": "Predict regulatory features, gene structure, and expression directly from DNA sequence using Genomic Intelligence's hosted transformer DNA language models — no local GPU or model weights. Six tasks over a REST API and a hosted MCP server (keyless public demo): promoter regions, splice donor/acceptor sites, enhancer activity, chromatin state, sequence-to-expression (log TPM), and de-novo gene annotation, plus a composite find-genes-then-predict-expression workflow. Use when the user has a gene sy",
-  "category": "测试调试",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/skills/genomic-intelligence/SKILL.md",
     "path": "skills/genomic-intelligence/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-11T23:46:35.633Z",
-    "stars": 33238,
+    "discovered_at": "2026-08-12T01:41:40.310Z",
+    "stars": 33239,
     "language": "Python",
-    "pushed_at": "2026-08-11T18:02:29Z",
+    "pushed_at": "2026-08-12T00:44:57Z",
     "license": "MIT"
   },
   "summary_zh": "这是一个用托管DNA语言模型预测调控区域、基因结构和表达的服务，适合无需本地GPU的基因组分析。"

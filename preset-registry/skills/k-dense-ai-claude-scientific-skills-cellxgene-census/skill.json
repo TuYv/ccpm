@@ -2,7 +2,7 @@
   "id": "k-dense-ai-claude-scientific-skills-cellxgene-census",
   "name": "cellxgene-census",
   "description": "Query the CZ CELLxGENE Census programmatically for versioned public single-cell and spatial transcriptomics data. Use when you need population-scale cell metadata, gene expression slices, Census summary counts, source H5AD URIs/downloads, embeddings, spatial Census data, or reference atlas comparisons across organisms, tissues, diseases, assays, and cell types. For analyzing your own local single-cell data use scanpy, anndata, or scvi-tools.",
-  "category": "测试调试",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/K-Dense-AI/claude-scientific-skills/blob/main/skills/cellxgene-census/SKILL.md",
     "path": "skills/cellxgene-census/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-11T23:40:08.509Z",
-    "stars": 33238,
+    "discovered_at": "2026-08-12T00:55:12.981Z",
+    "stars": 33237,
     "language": "Python",
-    "pushed_at": "2026-08-11T18:02:29Z",
+    "pushed_at": "2026-08-12T00:44:57Z",
     "license": "MIT"
   },
   "summary_zh": "用于以编程方式查询版本化的公共单细胞与空间转录组数据，适合大规模细胞分析、参考图谱对比和数据下载。"

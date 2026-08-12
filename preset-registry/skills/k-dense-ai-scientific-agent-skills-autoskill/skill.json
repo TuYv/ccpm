@@ -2,7 +2,7 @@
   "id": "k-dense-ai-scientific-agent-skills-autoskill",
   "name": "autoskill",
   "description": "Observe the user's screen via screenpipe, detect repeated research workflows, match them against existing scientific-agent-skills, and draft new skills (or composition recipes that chain existing ones) for the patterns not yet covered. Use when the user asks to analyze their recent work and propose skills based on what they actually do. Requires the screenpipe daemon (https://github.com/screenpipe/screenpipe) running locally on port 3030 — the skill has no other data source and will refuse to ru",
-  "category": "测试调试",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/skills/autoskill/SKILL.md",
     "path": "skills/autoskill/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-11T23:46:30.093Z",
-    "stars": 33238,
+    "discovered_at": "2026-08-12T01:41:34.744Z",
+    "stars": 33239,
     "language": "Python",
-    "pushed_at": "2026-08-11T18:02:29Z",
+    "pushed_at": "2026-08-12T00:44:57Z",
     "license": "MIT"
   },
   "summary_zh": "通过本地屏幕记录识别重复科研流程，匹配现有能力并起草新技能或组合方案，适合按真实工作习惯完善自动化。"

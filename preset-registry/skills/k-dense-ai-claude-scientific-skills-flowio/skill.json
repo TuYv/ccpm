@@ -2,7 +2,7 @@
   "id": "k-dense-ai-claude-scientific-skills-flowio",
   "name": "flowio",
   "description": "Read, inspect, and write Flow Cytometry Standard (FCS) 2.0, 3.0, and 3.1 files with FlowIO. Use for low-level FCS metadata and channel inspection, NumPy event extraction, multi-dataset files, table export, and FCS 3.1 creation; use FlowKit for compensation, cytometry transforms, gating, or FlowJo workspaces.",
-  "category": "测试调试",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/K-Dense-AI/claude-scientific-skills/blob/main/skills/flowio/SKILL.md",
     "path": "skills/flowio/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-11T23:40:15.446Z",
-    "stars": 33238,
+    "discovered_at": "2026-08-12T00:55:19.923Z",
+    "stars": 33237,
     "language": "Python",
-    "pushed_at": "2026-08-11T18:02:29Z",
+    "pushed_at": "2026-08-12T00:44:57Z",
     "license": "MIT"
   },
   "summary_zh": "用于底层读写和检查 FCS 2.0–3.1 流式细胞术文件，适合提取事件数据、查看元数据与通道及导出表格。"

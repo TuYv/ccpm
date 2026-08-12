@@ -2,7 +2,7 @@
   "id": "k-dense-ai-claude-scientific-skills-datamol",
   "name": "datamol",
   "description": "Pythonic wrapper around RDKit with simplified interface and sensible defaults. Preferred for standard drug discovery including SMILES parsing, standardization, descriptors, fingerprints, clustering, 3D conformers, parallel processing. Returns native rdkit.Chem.Mol objects. For advanced control or custom parameters, use rdkit directly.",
-  "category": "测试调试",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/K-Dense-AI/claude-scientific-skills/blob/main/skills/datamol/SKILL.md",
     "path": "skills/datamol/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-11T23:40:11.239Z",
-    "stars": 33238,
+    "discovered_at": "2026-08-12T00:55:15.735Z",
+    "stars": 33237,
     "language": "Python",
-    "pushed_at": "2026-08-11T18:02:29Z",
+    "pushed_at": "2026-08-12T00:44:57Z",
     "license": "MIT"
   },
   "summary_zh": "一个简化 RDKit 操作的 Python 工具，适合药物发现中的分子解析、标准化、描述符计算、聚类和三维构象生成。"
