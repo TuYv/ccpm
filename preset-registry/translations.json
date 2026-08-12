@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-12T18:30:41.272Z",
+  "updated_at": "2026-08-12T20:25:51.976Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -1063,9 +1063,9 @@
       "translated_at": "2026-05-12T07:00:09.092Z"
     },
     "preset:agentseal-codeburn": {
-      "hash": "b27898787d1fcae8",
-      "summary_zh": "一款免费的本地统计工具，按模型、项目和任务追踪多种 AI 编程助手的 Token 用量与成本，适合分析和控制开发开支。",
-      "translated_at": "2026-08-12T13:07:04.544Z"
+      "hash": "a3ce5738710e3580",
+      "summary_zh": "一款免费的本地统计工具，可按模型、项目和任务追踪多种 AI 编程工具的 Token 用量与成本。",
+      "translated_at": "2026-08-12T20:07:50.219Z"
     },
     "preset:agricidaniel-claude-ads": {
       "hash": "2917aca02746e258",
@@ -13983,9 +13983,9 @@
       "translated_at": "2026-06-05T16:55:32.478Z"
     },
     "preset:getagentseal-codeburn": {
-      "hash": "b27898787d1fcae8",
-      "summary_zh": "一款免费的本地工具，可按模型、项目和任务统计多种 AI 编程助手的 Token 用量与成本，适合追踪和优化开发开支。",
-      "translated_at": "2026-08-12T13:07:09.353Z"
+      "hash": "a3ce5738710e3580",
+      "summary_zh": "一款免费的本地统计工具，可按模型、项目和任务追踪多种 AI 编程助手的 Token 用量与费用。",
+      "translated_at": "2026-08-12T20:07:52.128Z"
     },
     "preset:phuryn-claude-usage": {
       "hash": "f979256a307a1bb3",
@@ -17263,9 +17263,9 @@
       "translated_at": "2026-08-03T04:57:30.510Z"
     },
     "bundle:qwenlm-qwen-code": {
-      "hash": "a12cd4b23fb15c74",
-      "summary_zh": "面向代码智能体研发与维护的一站式工具集，打通分析、实现、测试、修复和协作流程，提升工程自动化效率与交付质量。",
-      "translated_at": "2026-08-05T07:46:47.118Z"
+      "hash": "44331ac29d7f5d35",
+      "summary_zh": "面向 Qwen Code 研发维护的一站式智能代理工具集，串联功能复刻、批量改码、缺陷修复、CI 排障与多代理协作，加速开发交付。",
+      "translated_at": "2026-08-12T20:07:46.437Z"
     },
     "bundle:ogulcancelik-herdr": {
       "hash": "a4c2ed572bd68cdb",
@@ -28253,9 +28253,9 @@
       "translated_at": "2026-08-06T15:30:27.955Z"
     },
     "bundle:google-skills": {
-      "hash": "b0fb66d430f50843",
-      "summary_zh": "面向 Google Cloud 智能体平台的一站式工具集，贯通模型管理、部署推理、RAG、评测与监控运维，加速企业级智能体全生命周期落地。",
-      "translated_at": "2026-08-11T20:55:25.425Z"
+      "hash": "cf5ebb788b6383e1",
+      "summary_zh": "面向在 Google Cloud 上构建和运营 AI 智能体，打通部署、推理、评测、监控及资源管理等全流程。",
+      "translated_at": "2026-08-12T20:07:43.738Z"
     },
     "skill:chrisbanes-skills-compose-performance": {
       "hash": "a79df9a1015c4e14",
@@ -28283,9 +28283,9 @@
       "translated_at": "2026-08-07T01:50:46.392Z"
     },
     "skill:google-skills-agent-platform-alert-configuration": {
-      "hash": "566abe08ec8f46b3",
-      "summary_zh": "基于 OpenTelemetry 为 AI 智能体配置告警，适合监控延迟、错误率、Token 成本与质量，其中质量告警仅支持 Vertex AI。",
-      "translated_at": "2026-08-07T01:50:50.514Z"
+      "hash": "1ce8d3a0d202fdb0",
+      "summary_zh": "基于 OpenTelemetry 指标生成 Terraform 告警配置，适合监控 AI 智能体的延迟、错误率、Token 成本及质量风险。",
+      "translated_at": "2026-08-12T20:07:50.028Z"
     },
     "skill:google-skills-agent-platform-deploy": {
       "hash": "3aaeb5377d46b0c4",
@@ -30747,6 +30747,167 @@
     "content:affaan-m-ecc-competitive-platform-analysis": {
       "hash": "060f50513003731e",
       "translated_at": "2026-08-12T18:30:41.272Z"
+    },
+    "skill:qwenlm-qwen-code-coordinate": {
+      "hash": "c8eb2ea8ed46b471",
+      "summary_zh": "用于协同最多三名通义代码助手，分离只读分析与写入操作，适合多人并行处理复杂开发任务。",
+      "translated_at": "2026-08-12T20:07:53.957Z"
+    },
+    "content:affaan-m-ecc-competitive-report-structure": {
+      "hash": "fe3ad1b5b6caa470",
+      "translated_at": "2026-08-12T20:09:07.457Z"
+    },
+    "content:affaan-m-ecc-content-engine": {
+      "hash": "057a610eab12e16b",
+      "translated_at": "2026-08-12T20:09:22.347Z"
+    },
+    "content:affaan-m-ecc-content-hash-cache-pattern": {
+      "hash": "a220916e9a8fc40a",
+      "translated_at": "2026-08-12T20:09:53.379Z"
+    },
+    "content:addyosmani-agent-skills-code-review-and-quality": {
+      "hash": "8f3cabca581bbf7c",
+      "translated_at": "2026-08-12T20:09:53.423Z"
+    },
+    "content:affaan-m-ecc-cpp-testing": {
+      "hash": "486ff8479ca5b81f",
+      "translated_at": "2026-08-12T20:10:46.787Z"
+    },
+    "content:affaan-m-ecc-crosspost": {
+      "hash": "ef25ac009f3486e4",
+      "translated_at": "2026-08-12T20:11:04.754Z"
+    },
+    "content:affaan-m-ecc-database-migrations": {
+      "hash": "1f02085fdd98f60b",
+      "translated_at": "2026-08-12T20:11:56.921Z"
+    },
+    "content:affaan-m-ecc-cpp-coding-standards": {
+      "hash": "70919980c635f66d",
+      "translated_at": "2026-08-12T20:12:11.740Z"
+    },
+    "content:affaan-m-ecc-deep-research": {
+      "hash": "5692b149b1b82748",
+      "translated_at": "2026-08-12T20:12:26.748Z"
+    },
+    "content:affaan-m-ecc-deployment-patterns": {
+      "hash": "5eadf086650586b4",
+      "translated_at": "2026-08-12T20:13:18.010Z"
+    },
+    "content:affaan-m-ecc-dmux-workflows": {
+      "hash": "09d10da399fb1888",
+      "translated_at": "2026-08-12T20:13:47.845Z"
+    },
+    "content:affaan-m-ecc-django-patterns": {
+      "hash": "267eb89f537a6626",
+      "translated_at": "2026-08-12T20:14:05.174Z"
+    },
+    "content:affaan-m-ecc-documentation-lookup": {
+      "hash": "89cc655f72a5e3a9",
+      "translated_at": "2026-08-12T20:14:18.464Z"
+    },
+    "content:affaan-m-ecc-e2e-testing": {
+      "hash": "5c2c7efc73e5c8cf",
+      "translated_at": "2026-08-12T20:14:51.203Z"
+    },
+    "content:affaan-m-ecc-eval-harness": {
+      "hash": "1db3ddbf6acee83c",
+      "translated_at": "2026-08-12T20:14:51.971Z"
+    },
+    "content:affaan-m-ecc-exa-search": {
+      "hash": "6802dcc7442da5f8",
+      "translated_at": "2026-08-12T20:15:21.441Z"
+    },
+    "content:affaan-m-ecc-everything-claude-code": {
+      "hash": "9a203e3828a390c5",
+      "translated_at": "2026-08-12T20:15:57.019Z"
+    },
+    "content:affaan-m-ecc-fal-ai-media": {
+      "hash": "2420f083fdf4eec3",
+      "translated_at": "2026-08-12T20:16:09.164Z"
+    },
+    "content:affaan-m-ecc-frontend-slides": {
+      "hash": "da378954096f5184",
+      "translated_at": "2026-08-12T20:16:48.307Z"
+    },
+    "content:affaan-m-ecc-investor-materials": {
+      "hash": "0541ac8ede8d39c5",
+      "translated_at": "2026-08-12T20:17:07.487Z"
+    },
+    "content:affaan-m-ecc-frontend-patterns": {
+      "hash": "8ee53fb139cd5bcd",
+      "translated_at": "2026-08-12T20:17:20.967Z"
+    },
+    "content:affaan-m-ecc-market-research": {
+      "hash": "7ef3fa13d6272fd2",
+      "translated_at": "2026-08-12T20:17:32.119Z"
+    },
+    "content:affaan-m-ecc-mcp-server-patterns": {
+      "hash": "8da7edb0647f1015",
+      "translated_at": "2026-08-12T20:17:55.986Z"
+    },
+    "content:affaan-m-ecc-nextjs-turbopack": {
+      "hash": "f65da15aabeb9dca",
+      "translated_at": "2026-08-12T20:18:23.472Z"
+    },
+    "content:affaan-m-ecc-plan-canvas": {
+      "hash": "ade500c538eed067",
+      "translated_at": "2026-08-12T20:19:21.076Z"
+    },
+    "content:affaan-m-ecc-product-capability": {
+      "hash": "ae6e95205fcdcb2f",
+      "translated_at": "2026-08-12T20:19:45.382Z"
+    },
+    "content:affaan-m-ecc-mle-workflow": {
+      "hash": "807417f116f3a3a3",
+      "translated_at": "2026-08-12T20:19:55.326Z"
+    },
+    "content:affaan-m-ecc-strategic-compact": {
+      "hash": "b63d2ca240099248",
+      "translated_at": "2026-08-12T20:20:30.430Z"
+    },
+    "content:affaan-m-ecc-security-review": {
+      "hash": "e60a179eac26386c",
+      "translated_at": "2026-08-12T20:21:00.389Z"
+    },
+    "content:affaan-m-ecc-unified-memory": {
+      "hash": "feca7507fef9d268",
+      "translated_at": "2026-08-12T20:21:43.385Z"
+    },
+    "content:affaan-m-ecc-tdd-workflow": {
+      "hash": "5a88684181704575",
+      "translated_at": "2026-08-12T20:21:50.051Z"
+    },
+    "content:affaan-m-ecc-verification-loop": {
+      "hash": "5989153028802964",
+      "translated_at": "2026-08-12T20:22:00.320Z"
+    },
+    "content:affaan-m-ecc-x-api": {
+      "hash": "dfa8ab9d533c7930",
+      "translated_at": "2026-08-12T20:22:38.441Z"
+    },
+    "content:affaan-m-ecc-video-editing": {
+      "hash": "1523f52a80063308",
+      "translated_at": "2026-08-12T20:22:49.546Z"
+    },
+    "content:agent-sh-agentsys-debate": {
+      "hash": "9ee542623d0a779c",
+      "translated_at": "2026-08-12T20:24:15.463Z"
+    },
+    "content:agent-sh-agentsys-deslop": {
+      "hash": "9d7e738da8791580",
+      "translated_at": "2026-08-12T20:24:54.695Z"
+    },
+    "content:agent-sh-agentsys-consult": {
+      "hash": "89b7349a4eddd8fa",
+      "translated_at": "2026-08-12T20:25:01.745Z"
+    },
+    "content:agent-sh-agentsys-discover-tasks": {
+      "hash": "bfcb39b2b6cc8132",
+      "translated_at": "2026-08-12T20:25:46.571Z"
+    },
+    "content:agent-sh-agentsys-drift-analysis": {
+      "hash": "86d7c61064dbe727",
+      "translated_at": "2026-08-12T20:25:51.975Z"
     }
   }
 }
