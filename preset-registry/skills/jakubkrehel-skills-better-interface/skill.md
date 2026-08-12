@@ -1,12 +1,12 @@
 ---
 name: better-interface
 description: >-
-  User-invoked, cross-discipline interface review that coordinates better-accessibility, better-layout, better-writing, better-typography, better-colors, and better-ui. Use when explicitly invoked for a holistic review of a screen, flow, feature, or product interface. Supports quick and full review modes. Triggers on better-interface, full interface review, holistic UI audit, cross-discipline design review, review the whole interface.
+  Cross-discipline interface review: routes a screen, flow, feature, or product interface to every `better-*` domain skill and consolidates one ranked verdict. Use when asked for a holistic review rather than a single domain, and when `interface-review` hands up a change to route. Triggers on better-interface, holistic interface review, review the whole screen.
 ---
 
 # Review the interface as one system
 
-A strong interface is not six independent audits stapled together. Review the whole experience, let each `better-*` skill own its domain rules, then consolidate the evidence into one prioritized verdict.
+A strong interface is not a stack of independent audits stapled together. Review the whole experience, let each `better-*` skill own its domain rules, then consolidate the evidence into one prioritized verdict.
 
 This skill owns orchestration only. Accessibility rules belong to `better-accessibility`; structure to `better-layout`; copy to `better-writing`; type to `better-typography`; color to `better-colors`; visual polish and motion to `better-ui`. Never duplicate or override their rules here. Change-scoped review of uncommitted work, branches, and pull requests belongs to `interface-review`, which resolves the scope and classifies findings before handing the review back here.
 
@@ -21,11 +21,13 @@ Infer the screen, flow, feature, or repository scope from the request and curren
 | Mode | Coverage | Finding cap |
 | --- | --- | --- |
 | `quick` | The primary path through the scope and the states it actually reaches; report only `HIGH` and `MEDIUM` issues | 5 |
-| `full` | Entire requested scope across all six domain skills, including empty, loading, error, and narrow-width states when present | 15 |
+| `full` | Entire requested scope across every domain skill listed in principle 3, including empty, loading, error, and narrow-width states when present | 15 |
 
 If the requested scope is too large to inspect credibly, narrow it to one complete flow: the one the request itself centers on, or failing that the entry path every user of the scope must pass through. State the boundary and what it excluded. Never imply uninspected surfaces were reviewed.
 
-When the request names a branch, pull request, commit range, or uncommitted changes, hand scope resolution to `interface-review`. It returns the resolved change scope, the affected surfaces, and a status for each finding; severity, consolidation, the cap, the output format, and the verdict stay here, under **Change-Scoped Reviews** below.
+When the request names a branch, pull request, commit range, or uncommitted changes, that is a change review, not a screen review. Say so and ask the user to run `interface-review`; it is user-invoked, so this skill cannot start it. Never resolve a change scope here: reading a diff, classifying findings, and expanding changed files to affected surfaces are all `interface-review`'s, and guessing at them produces a report whose scope nobody can check.
+
+`interface-review` hands the review back the other way. When it does, it supplies the resolved change scope, the affected surfaces, and a status for each finding; severity, consolidation, the cap, the output format, and the verdict stay here, under **Change-Scoped Reviews** below.
 
 ### 2. Recon Before Judgment
 
@@ -37,7 +39,7 @@ Read them for leverage, not permission. A documented convention is not evidence 
 
 ### 3. Use Domain Skills as the Sources of Truth
 
-Before reviewing, confirm that all six owning skills below are available. Load and apply every available owner. In `quick` mode, inspect all six domains but spend depth only where the primary flow has evidence. In `full` mode, complete each available domain review before consolidation.
+Before reviewing, confirm that every owning skill below is available. Load and apply every available owner. In `quick` mode, inspect every domain but spend depth only where the primary flow has evidence. In `full` mode, complete each available domain review before consolidation.
 
 Review in this order so foundational failures are not hidden by polish:
 
@@ -48,7 +50,7 @@ Review in this order so foundational failures are not hidden by polish:
 5. `better-colors`
 6. `better-ui`
 
-This skill owns the final response. When a domain skill is loaded through `better-interface`, apply its principles and references but ignore its standalone **Review Output Format**. Use the consolidated format, shared severity, and finding cap in this file instead.
+This skill owns the final response. When a domain skill is loaded through `better-interface`, apply its principles and references but ignore its **Reporting** section and the `review-output.md` it points at. Use the consolidated format, shared severity, and finding cap in this file instead.
 
 If an owning skill is unavailable, mark that domain `Not reviewed`, name the missing skill, and continue with the remaining domains. Do not recreate its rules from memory, substitute a neighboring skill, or claim holistic coverage.
 
@@ -129,7 +131,7 @@ State the mode, exact scope, stack and styling conventions, the project conventi
 | --- | --- | --- |
 | Accessibility | Files, components, states, or checks | Findings count or `Clear` |
 
-Include all six domains. `Clear` means inspected with no actionable finding; `Not reviewed` must explain why.
+Include every domain listed in principle 3. `Clear` means inspected with no actionable finding; `Not reviewed` must explain why.
 
 ### Findings
 

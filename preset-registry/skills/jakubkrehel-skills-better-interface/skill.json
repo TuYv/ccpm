@@ -1,8 +1,8 @@
 {
   "id": "jakubkrehel-skills-better-interface",
   "name": "better-interface",
-  "description": ">- User-invoked, cross-discipline interface review that coordinates better-accessibility, better-layout, better-writing, better-typography, better-colors, and better-ui. Use when explicitly invoked for a holistic review of a screen, flow, feature, or product interface. Supports quick and full review modes. Triggers on better-interface, full interface review, holistic UI audit, cross-discipline design review, review the whole interface.",
-  "category": "设计创意",
+  "description": ">- Cross-discipline interface review: routes a screen, flow, feature, or product interface to every `better-*` domain skill and consolidates one ranked verdict. Use when asked for a holistic review rather than a single domain, and when `interface-review` hands up a change to route. Triggers on better-interface, holistic interface review, review the whole screen.",
+  "category": "文档写作",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,11 @@
     "url": "https://github.com/jakubkrehel/skills/blob/main/skills/better-interface/SKILL.md",
     "path": "skills/better-interface/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-12T21:10:52.579Z",
-    "stars": 3672,
+    "discovered_at": "2026-08-12T23:05:15.071Z",
+    "stars": 3677,
     "language": "Markdown",
-    "pushed_at": "2026-08-12T21:07:35Z",
+    "pushed_at": "2026-08-12T21:36:56Z",
     "license": "MIT"
   },
-  "summary_zh": "一款跨领域界面评审工具，适合全面检查页面、流程或产品的无障碍、布局、文案和视觉设计问题。"
+  "summary_zh": "一个跨领域界面评审工具，可综合检查页面、流程或产品功能，并汇总成按优先级排序的改进建议。"
 }

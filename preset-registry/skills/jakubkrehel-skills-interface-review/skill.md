@@ -1,14 +1,15 @@
 ---
 name: interface-review
+disable-model-invocation: true
 description: >-
-  User-invoked interface review of a change rather than a screen: uncommitted work, the current branch, or a pull request. Resolves the change scope, expands it to the surfaces it affects, reads both sides of the diff, and classifies every finding as introduced, a regression, or pre-existing, then hands the review to better-interface for domain routing, severity, and the verdict. Covers interface quality, not correctness, tests, or security. Supports quick and full review modes. Triggers on interface-review, review my branch, review my PR, review the diff, review my changes, review before pushing, design regression check, changed files interface review.
+  Interface review of a change rather than a screen: uncommitted work, the current branch, or a pull request. Covers interface quality, not correctness, tests, or security.
 ---
 
 # Review the change, not just the code it left behind
 
 A diff is not a surface. The lines a change deletes matter as much as the lines it adds, and the file it touches is rarely the whole of what it affects.
 
-This skill owns change scope only: resolving the target, expanding changed files to affected surfaces, reading both sides of the diff, and classifying each finding. Domain rules belong to the six `better-*` skills. Mode, severity, consolidation, coverage, the cap, the output format, and the verdict belong to `better-interface`, which this skill hands the review to. Never duplicate or override their rules here.
+This skill owns change scope only: resolving the target, expanding changed files to affected surfaces, reading both sides of the diff, and classifying each finding. Domain rules belong to the `better-*` skills. Mode, severity, consolidation, coverage, the cap, the output format, and the verdict belong to `better-interface`, which this skill hands the review to. Never duplicate or override their rules here.
 
 Correctness, tests, security, and performance belong to the project's general code review. Name the concern once and move on.
 
@@ -51,9 +52,9 @@ An empty scope after exclusions is the same situation reached a different way. S
 
 ### 3. A Diff Is Not a Surface
 
-A changed file is evidence, not the review subject. Expand each one to the surfaces it renders in and review those.
+A changed file is evidence, not the review subject. Its **blast radius** is the set of surfaces it renders in; review those.
 
-Expand one hop by default: the direct importers and callers. Expand a second hop only for design tokens, theme values, and shared primitives, where one line reaches the whole product.
+Expand the blast radius one hop by default: the direct importers and callers. Expand a second hop only for design tokens, theme values, and shared primitives, where one line reaches the whole product.
 
 Review at most five consumers, ordered by [the rule in Scope Resolution](scope-resolution.md#expanding-to-consumers), and state how many you did not expand. An unbounded sweep produces coverage claims you cannot support; an unstated cutoff produces a report that looks complete and is not.
 
@@ -94,7 +95,7 @@ Do not report scope creep. Whether a change does too much is a process question,
 
 ### 7. Hand the Review to `better-interface`
 
-With the scope, the affected surfaces, and both sides of the diff in hand, hand the review to `better-interface` with the scope block and a status on every finding. It routes to the six domain skills, applies severity, consolidates, enforces the cap, and issues the verdict, including the change-scoped rules under its **Change-Scoped Reviews** section.
+With the scope, the affected surfaces, and both sides of the diff in hand, hand the review to `better-interface` with the scope block and a status on every finding. It routes to the domain skills, applies severity, consolidates, enforces the cap, and issues the verdict, including the change-scoped rules under its **Change-Scoped Reviews** section.
 
 If `better-interface` is unavailable, report the resolved scope and the file inventory, name it as the missing skill, and stop. Do not invent a severity scale, a cap, or a verdict.
 
