@@ -1,0 +1,110 @@
+---
+name: landing-optimizer
+slug: landing-optimizer
+displayName: "Landing Optimizer · 落地页优化"
+summary: "流量落地页转化优化:信息匹配、首屏、CTA 与信任要素"
+description: 'Use when the user asks to "optimize our landing page for influencer traffic", "fix our promo-code landing page", or "improve conversion from a creator campaign"; produces a message-match audit, page-structure and social-proof recommendations, a promo-code/CTA conversion plan, and an A/B test roadmap. Not for measuring campaign results after launch — use performance-analyzer. 落地页优化/达人流量转化提升'
+version: "19.2.0"
+license: Apache-2.0
+compatibility: "Claude Code and compatible agent-skill hosts"
+homepage: "https://github.com/aaron-he-zhu/aaron-marketing-skills"
+when_to_use: "Activate when the user wants to build or improve a landing page that receives influencer-driven traffic: message match between creator content and the page, dedicated creator pages, promo-code auto-apply, social-proof placement, mobile conversion fixes, friction reduction, or A/B test planning for influencer campaigns."
+argument-hint: "<landing page URL or campaign> [influencer handle] [promo code]"
+metadata: {"author": "aaron-he-zhu", "version": "19.2.0", "discipline": "influencer", "phase": "report", "geo-relevance": "low", "hermes": {"tags": ["marketing", "influencer", "report"], "category": "influencer"}, "openclaw": {"emoji": "📣", "homepage": "https://github.com/aaron-he-zhu/aaron-marketing-skills"}}
+---
+# 落地页优化器
+
+此技能可帮助你专门针对网红营销流量创建和优化落地页。当用户从网红的帖子点击进入时，落地页体验应与帖子保持连贯，并针对转化进行优化。
+
+> **跨领域（付费广告）：**这也是 **paid-ads** 的点击后技能——即 ROAS **Offer** 信息匹配中的页面部分（它与 [ad-creative-builder](../../../ad/orchestrate/ad-creative-builder/SKILL.md) 配合使用，后者负责广告部分）。同样的诊断与修复流程也适用于付费落地页；请将付费广告运行记录保存在 `memory/ad/landing-optimizer/` 下。在付费广告运行中，如果存在 [offer-claims-registry](../../../protocol/offer-claims-registry/SKILL.md) 台账，请将页面信息与之匹配：根据 `memory/claims/offers.md` 核对优惠条款、促销代码和日期，并根据 `memory/claims/claims-ledger.md` 中已批准的表述变体核对声明措辞。
+
+## 快速开始
+
+最简调用方式：
+
+```
+Optimize our landing page for traffic from [influencer campaign]
+```
+
+常见场景——诊断并修复转化率较低的创作者落地页：
+
+```
+Our influencer landing page has [X%] conversion rate. How can we improve it?
+```
+
+## 技能契约
+
+- **读取**：落地页 URL 和当前状态、转化率和目标、流量来源（网红账号、平台、内容类型）、网红的关键信息/引语、促销代码、受众人口统计特征。未连接工具时，输入由用户提供。
+- **写入**：将优化方案保存至 `memory/influencer/landing-optimizer/YYYY-MM-DD-<topic>.md`（信息匹配审计、结构和社会认同建议、转化/CTA 方案、A/B 测试路线图）。
+- **提升**：将持久性事实——当前活动名称、页面 URL、基准转化率、促销代码、主要创作者——提升至 `memory/hot-cache.md`。
+- **完成条件**：
+  - 已生成页面的信息匹配评分和明确的修复项。
+  - 已制定按优先级排序的转化方案（CTA、促销代码体验、阻力点、移动端），并包含预期影响。
+  - 已编写 A/B 测试路线图，其中至少包含一个假设和一项成功指标。
+- **主要后续技能**：[performance-analyzer](../performance-analyzer/SKILL.md)——衡量优化是否提升了转化率。
+
+### 交接摘要
+
+> 输出 [skill-contract.md §Handoff Summary Format](../../../references/skill-contract.md) 中规定的标准格式。
+
+## 数据源
+
+此技能系列不需要实时集成（Tier 1）。该技能通过询问用户获取页面 URL、当前转化率、网红传达的信息和促销代码，然后根据这些输入生成审计和方案。
+
+在可用时，以下可选连接器可以深化分析：
+
+- `~~analytics`——直接获取实时转化率、跳出率、滚动深度和加入购物车事件，而无需询问用户。
+- `~~A/B testing platform`——读取以往测试结果，并提供样本量/持续时间估算。
+- `~~CMS / landing page builder`——直接检查当前页面结构和文案。
+- `~~social platform analytics`——确认创作者实际传达的信息和受众。
+
+有关各类别经过验证的免费/免密钥方案，请参阅 [CONNECTORS.md](../../../CONNECTORS.md)。每个步骤都可平稳降级为使用用户提供的输入。
+
+## 说明
+
+当用户请求落地页方面的帮助时，请按以下步骤开展工作。每个步骤对应的填空模板、ASCII 布局和 HTML 代码片段均位于 [references/templates.md](references/templates.md) 中，并使用相同的步骤编号进行索引。
+
+1. **评估当前状态** — 记录营销活动、URL、流量来源、当前转化率、目标，以及流量背景（网红、平台、内容类型、核心信息、促销码、受众）。
+2. **评估信息匹配度** — 从信息、价值主张、优惠、产品和语气等方面，对比网红所说的内容与页面所展示的内容；给出信息匹配度评分（X/10）并列出具体的修复措施。不匹配会造成困惑和用户流失。对于付费投放，如果优惠台账存在，还要根据 `memory/claims/offers.md` 核实页面上的优惠/促销条款——只有在优惠记录仍然有效时，广告中“优惠 50%”的承诺才是真实的。
+3. **页面结构** — 推荐适合网红流量的布局（首屏 → 社会认同 → 产品 → 更多证明 → 常见问题 → 最终 CTA），并分别给出针对首屏/社会认同/产品部分的修复建议。
+4. **整合社会认同** — 将带来流量的创作者置于最突出的位置，然后按以下证明层级排列：其他网红 → 客户评价 → 信任指标。
+5. **转化优化** — 优化 CTA 文案和位置，设计促销码体验（通过 URL 参数自动应用、突出显示、提供确认反馈），减少阻力，并检查移动端体验（加载速度、便于拇指操作的 CTA、滚动深度）。
+6. **A/B 测试计划** — 根据影响和投入对测试进行排序，然后至少编写一个假设，包含变体、样本量、持续时间和成功指标。
+7. **网红专属页面** — 判断是否值得创建专门的 `/creator-name` 页面，以及需要个性化哪些内容。
+8. **效果跟踪** — 为加载时间、跳出率、CR、加购率、AOV 设定目标；定义用于归因的 UTM 参数和事件。
+
+将完成后的计划保存至 `memory/influencer/landing-optimizer/YYYY-MM-DD-<topic>.md`（付费投放保存至 `memory/ad/landing-optimizer/`），并将长期有效的事实提升至 `memory/hot-cache.md`。
+
+## 示例
+
+**用户**：“我们为 @fitnessanna 的蛋白粉营销活动制作的落地页转化率为 1.2%。该如何改进？”
+
+**输出**（节选——完整版本见 [references/templates.md](references/templates.md)）：
+
+- **诊断**：CR 为 1.2%，低于网红流量 2-3% 的基准水平。
+- **问题**：信息不匹配（Anna 强调“口感顺滑”，页面却以“高蛋白”为主打）；未展示 Anna 的内容；促销码 `ANNA20` 未自动应用；移动端 CTA 位于首屏以下。
+- **优先修复项**：在首屏展示 Anna 的视频（+0.5%）、自动应用促销优惠（+0.3%）、匹配标题信息（+0.3%）、在移动端首屏展示 CTA（+0.2%）→ 综合 CR 从 1.2% 提升至 2.5%。
+- **测试计划**：第 1 周调整首屏，第 2 周进行标题 A/B 测试，第 3 周测试 CTA 文案。
+
+## 参考资料
+
+- [templates.md](references/templates.md) — 所有步骤的填空模板、ASCII 布局、HTML 代码片段、完整的示例演练和技巧。
+
+- [skill-contract.md](../../../references/skill-contract.md) — 共享契约和 Handoff Summary 格式。
+- [state-model.md](../../../references/state-model.md) — 记忆层级和保存路径约定。
+- [CONNECTORS.md](../../../CONNECTORS.md) — 按连接器类别提供的免费且无需密钥的数据方案。
+- [conversion-quality.md](../../../references/scoring-rubrics/conversion-quality.md) — 用于对优化计划进行合理性检查的建议性转化质量评分标准（不具有否决权）。
+- 网红营销系列中的同级技能：
+  - [content-amplifier](../../activate/content-amplifier/SKILL.md) — 为落地页获取创作者内容，并为其引流。
+  - [brief-generator](../../target/brief-generator/SKILL.md) — 使创作者内容与落地页目标保持一致。
+
+## 下一最佳技能
+
+**首选**：[performance-analyzer](../performance-analyzer/SKILL.md) — 衡量优化是否确实提升了转化率、AOV 和归因效果。
+
+**备选**（同属报告系列）：
+
+- [content-amplifier](../../activate/content-amplifier/SKILL.md) — 当审查结果表明页面需要展示更多创作者内容时。
+- [roi-calculator](../roi-calculator/SKILL.md) — 当页面的转化效果已经过验证，并且你希望将其转化为 ROI 和回本周期计算时。
+
+**终止说明**：在本次会话中维护一个已访问集合。如果推荐的技能已经调用过，则停止并报告该链已完成，而不是再次运行它。链深度达到 3 时必须停止，以避免循环。
