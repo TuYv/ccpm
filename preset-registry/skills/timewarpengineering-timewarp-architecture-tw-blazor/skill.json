@@ -1,0 +1,26 @@
+{
+  "id": "timewarpengineering-timewarp-architecture-tw-blazor",
+  "name": "tw-blazor",
+  "description": "Razor file authoring — one @code at the top, markup, optional <style> last. Use when creating or editing .razor files, @code blocks, or in-file <style> tags. CSS placement: tw-blazor-css-strategy. App shell: tw-blazor-layout.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "TimeWarpEngineering",
+  "install_path": ".claude/skills/tw-blazor/SKILL.md",
+  "source": {
+    "repo": "TimeWarpEngineering/timewarp-architecture",
+    "url": "https://github.com/TimeWarpEngineering/timewarp-architecture/blob/master/skills/tw-blazor/SKILL.md",
+    "path": "skills/tw-blazor/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-08-13T10:54:28.612Z",
+    "stars": 54,
+    "language": "C#",
+    "pushed_at": "2026-08-13T09:31:30Z",
+    "license": "Unlicense"
+  },
+  "summary_zh": "用于规范 Blazor 的 Razor 文件结构，适合创建或编辑组件代码、页面标记及内嵌样式。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "rpamis-comet-comet-github-issue-triage",
+  "name": "comet-github-issue-triage",
+  "description": "对照当前仓库契约、源码、Runtime、测试和安装行为，验证并分类 Comet GitHub Issue。用户询问 Issue 是否真实、可复现、重复、已实现、属于配置问题，或是否适合后续处理时使用。",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "rpamis",
+  "install_path": ".claude/skills/comet-github-issue-triage/SKILL.md",
+  "source": {
+    "repo": "rpamis/comet",
+    "url": "https://github.com/rpamis/comet/blob/master/assets/skills-maintainer/comet-github-issue-triage/SKILL.md",
+    "path": "assets/skills-maintainer/comet-github-issue-triage/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-08-13T11:06:34.475Z",
+    "stars": 2712,
+    "language": "JavaScript",
+    "pushed_at": "2026-08-13T10:20:19Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一款 GitHub Issue 分诊工具，可结合仓库源码、运行环境、测试和安装行为，判断问题是否真实、可复现、重复、已实现或属于配置问题。"
+}

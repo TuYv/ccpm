@@ -1,0 +1,26 @@
+{
+  "id": "rpamis-comet-comet-github",
+  "name": "comet-github",
+  "description": "将 Comet GitHub 维护请求路由到基于证据的 PR 审阅、Issue 分诊、本地想法收集、CI 诊断或 Issue 实施流程。用户提到 Comet GitHub Issue/PR 但未指定流程，或询问下一步如何处理时使用。",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "rpamis",
+  "install_path": ".claude/skills/comet-github/SKILL.md",
+  "source": {
+    "repo": "rpamis/comet",
+    "url": "https://github.com/rpamis/comet/blob/master/assets/skills-maintainer/comet-github/SKILL.md",
+    "path": "assets/skills-maintainer/comet-github/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-08-13T11:06:34.912Z",
+    "stars": 2712,
+    "language": "JavaScript",
+    "pushed_at": "2026-08-13T10:20:19Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一个面向 GitHub 维护工作的智能路由工具，可自动匹配合适的处理流程，适合任务不明确或不确定下一步时使用。"
+}

@@ -1,7 +1,7 @@
 {
   "id": "timewarpengineering-timewarp-architecture-tw-feature-placement",
   "name": "tw-feature-placement",
-  "description": ">- **TIMEWARP SKILL** — feature-cohesive folder placement, per-use-case folders, and the filename grammar `<name>[-<function>]-<layer>.cs` for product code under `<family>/features/` and platform clusters under `<family>/platform/` (family-generic: web, api, grpc all share this machinery — worked examples below use web): which layer a file belongs to, what to name it and which folder it goes in, the registry that backs TWA0015/TWA0016, and the membership-guard build errors. Invoke before creatin",
+  "description": "**TIMEWARP SKILL** — feature-cohesive folder placement, per-use-case folders, and the filename grammar `<name>[-<function>]-<layer>.cs` for product code under `<family>/features/` and platform clusters under `<family>/platform/` (family-generic: web, api, grpc all share this machinery — worked examples below use web): which layer a file belongs to, what to name it and which folder it goes in, the registry that backs TWA0015/TWA0016, and the membership-guard build errors. Invoke before creating, ",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/TimeWarpEngineering/timewarp-architecture/blob/master/skills/tw-feature-placement/SKILL.md",
     "path": "skills/tw-feature-placement/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-08-13T04:00:12.540Z",
+    "discovered_at": "2026-08-13T10:54:28.808Z",
     "stars": 54,
     "language": "C#",
-    "pushed_at": "2026-08-13T03:47:47Z",
+    "pushed_at": "2026-08-13T09:31:30Z",
     "license": "Unlicense"
   },
-  "summary_zh": "一套面向 C# 产品代码的目录与命名规范，用于统一文件分层归属，并在构建时拦截放错位置的代码。"
+  "summary_zh": "一套面向 C# 项目的代码组织规范，帮助统一功能目录、分层命名与文件归属，减少错放和构建错误。"
 }

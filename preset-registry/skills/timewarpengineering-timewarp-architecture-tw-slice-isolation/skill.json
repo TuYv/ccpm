@@ -1,7 +1,7 @@
 {
   "id": "timewarpengineering-timewarp-architecture-tw-slice-isolation",
   "name": "tw-slice-isolation",
-  "description": ">- **TIMEWARP SKILL** — product slice placement and TWA0009 isolation (SliceRoot, namespaces, platform Applications, Components/contracts sharing, CrossSliceReference opt-out). Invoke before scaffolding a new feature/slice/page or when fixing TWA0009 / cross-slice references. WHEN: \"Add a new clients feature page\", \"Where does this state live?\", \"TWA0009 slice references another product slice\", \"CrossSliceReference\", \"new product area under features/\", greenfield slice scaffolding.",
+  "description": "**TIMEWARP SKILL** — product slice placement and TWA0009 isolation (SliceRoot, namespaces, platform Applications, Components/contracts sharing, CrossSliceReference opt-out). Invoke before scaffolding a new feature/slice/page or when fixing TWA0009 / cross-slice references. WHEN: Add a new clients feature page, Where does this state live?, TWA0009 slice references another product slice, CrossSliceReference, new product area under features/, greenfield slice scaffolding.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/TimeWarpEngineering/timewarp-architecture/blob/master/skills/tw-slice-isolation/SKILL.md",
     "path": "skills/tw-slice-isolation/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-08-13T04:00:12.948Z",
+    "discovered_at": "2026-08-13T10:54:29.222Z",
     "stars": 54,
     "language": "C#",
-    "pushed_at": "2026-08-13T03:47:47Z",
+    "pushed_at": "2026-08-13T09:31:30Z",
     "license": "Unlicense"
   },
-  "summary_zh": "一套面向 Timewarp 的产品切片隔离指南，适合新功能搭建、状态归属判断及修复跨切片引用问题。"
+  "summary_zh": "用于规范产品功能切片的目录放置与隔离，适合新建功能页、规划状态归属或修复跨切片引用问题。"
 }

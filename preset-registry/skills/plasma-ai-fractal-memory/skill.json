@@ -1,0 +1,26 @@
+{
+  "id": "plasma-ai-fractal-memory",
+  "name": "memory",
+  "description": "How to maintain node memory well -- the node's persistent knowledge store.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "plasma-ai",
+  "install_path": ".claude/skills/memory/SKILL.md",
+  "source": {
+    "repo": "plasma-ai/fractal",
+    "url": "https://github.com/plasma-ai/fractal/blob/main/fractal/_node/skills/memory/SKILL.md",
+    "path": "fractal/_node/skills/memory/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-13T11:14:28.210Z",
+    "stars": 691,
+    "language": "Python",
+    "pushed_at": "2026-08-06T15:25:40Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "一个用于维护节点持久化知识库的工具，适合长期保存、整理和管理节点记忆。"
+}

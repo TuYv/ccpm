@@ -1,7 +1,7 @@
 {
   "id": "timewarpengineering-timewarp-architecture-tw-mock-response-factory",
   "name": "tw-mock-response-factory",
-  "description": "> Add GetMockResponseFactory to API contracts and register factories in the SPA mock API service.",
+  "description": "Add GetMockResponseFactory to API contracts and register factories in the SPA mock API service.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/TimeWarpEngineering/timewarp-architecture/blob/master/skills/tw-mock-response-factory/SKILL.md",
     "path": "skills/tw-mock-response-factory/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-08-13T04:00:12.743Z",
+    "discovered_at": "2026-08-13T10:54:29.014Z",
     "stars": 54,
     "language": "C#",
-    "pushed_at": "2026-08-13T03:47:47Z",
+    "pushed_at": "2026-08-13T09:31:30Z",
     "license": "Unlicense"
   },
-  "summary_zh": "面向 SPA 开发的模拟响应工厂，可统一生成并注册 API 假数据，方便前端独立调试和测试。"
+  "summary_zh": "为 API 契约提供模拟响应工厂并接入 SPA 模拟服务，适合统一生成前端开发和测试所需的接口数据。"
 }

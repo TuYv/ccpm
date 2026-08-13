@@ -1,0 +1,26 @@
+{
+  "id": "zapier-zapier-mcp-zapier-explore",
+  "name": "zapier-explore",
+  "description": "Explore what Zapier MCP can do for the user — interview them about their role and the apps they live in, suggest specific use cases as on-demand prompts, then walk them through enabling the actions to make those use cases real. The natural next step after `zapier-demo`. Use when the user asks \"what else can Zapier do for me\", \"set up more tools\", \"add a starter pack for my role\", \"what should I enable next\", \"suggest workflows\", \"help me figure out what to do with Zapier\", \"I don't know where to",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "zapier",
+  "install_path": ".claude/skills/zapier-explore/SKILL.md",
+  "source": {
+    "repo": "zapier/zapier-mcp",
+    "url": "https://github.com/zapier/zapier-mcp/blob/main/plugins/zapier/skills/zapier-explore/SKILL.md",
+    "path": "plugins/zapier/skills/zapier-explore/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-13T11:13:42.628Z",
+    "stars": 377,
+    "language": null,
+    "pushed_at": "2026-07-29T21:42:17Z",
+    "license": "MIT"
+  },
+  "summary_zh": "通过了解用户的岗位和常用应用，推荐适合的自动化工作流，并引导启用所需操作，适合不知道下一步如何使用 Zapier 的人。"
+}

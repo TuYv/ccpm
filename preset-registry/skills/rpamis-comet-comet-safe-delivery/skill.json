@@ -1,0 +1,26 @@
+{
+  "id": "rpamis-comet-comet-safe-delivery",
+  "name": "comet-safe-delivery",
+  "description": "在保护无关脏改动、关联 worktree、子模块和用户明确边界的前提下，提交、推送、合并或完成范围明确的 Comet 变更。用户要求提交、推送、合并回目标分支、清理 worktree 或交付已准备好的改动时使用。",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "rpamis",
+  "install_path": ".claude/skills/comet-safe-delivery/SKILL.md",
+  "source": {
+    "repo": "rpamis/comet",
+    "url": "https://github.com/rpamis/comet/blob/master/assets/skills-maintainer/comet-safe-delivery/SKILL.md",
+    "path": "assets/skills-maintainer/comet-safe-delivery/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-08-13T11:06:35.516Z",
+    "stars": 2712,
+    "language": "JavaScript",
+    "pushed_at": "2026-08-13T10:20:19Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于安全交付范围明确的 Git 改动，可在保护无关修改、worktree 和子模块的同时完成提交、推送、合并与清理。"
+}

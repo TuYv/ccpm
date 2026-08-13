@@ -1,0 +1,26 @@
+{
+  "id": "zapier-zapier-mcp-zapier-demo",
+  "name": "zapier-demo",
+  "description": "Walk a new user through setting up their first Zapier action and running it live — the smallest possible win. Asks what app they use, recommends one read action to enable, guides them to mcp.zapier.com to add it, then demonstrates it working in the same chat. Use when the user asks \"show me how Zapier works\", \"set up my first action\", \"give me a quick demo\", \"I want to try it\", \"what's the fastest way to see this work\", \"minimal setup\", \"hello world\", or \"smallest example\".",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "zapier",
+  "install_path": ".claude/skills/zapier-demo/SKILL.md",
+  "source": {
+    "repo": "zapier/zapier-mcp",
+    "url": "https://github.com/zapier/zapier-mcp/blob/main/plugins/zapier/skills/zapier-demo/SKILL.md",
+    "path": "plugins/zapier/skills/zapier-demo/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-13T11:13:42.387Z",
+    "stars": 377,
+    "language": null,
+    "pushed_at": "2026-07-29T21:42:17Z",
+    "license": "MIT"
+  },
+  "summary_zh": "引导新用户用最少配置完成并现场运行首个 Zapier 操作，适合快速体验和入门演示。"
+}

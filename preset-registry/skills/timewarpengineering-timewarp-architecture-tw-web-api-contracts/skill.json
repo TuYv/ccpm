@@ -1,7 +1,7 @@
 {
   "id": "timewarpengineering-timewarp-architecture-tw-web-api-contracts",
   "name": "tw-web-api-contracts",
-  "description": ">- **TIMEWARP SKILL** — endpoint-centric Web.Contracts API contracts (Command, Query, ApiRoute, I*Details, Validator, serialization tests). Invoke before scaffolding or fixing contracts. WHEN: \"Add a CreateTodoItem command contract\", \"Scaffold a GetRole query with ApiRoute and IRoleDetails for the edit form\", \"Add a serialization round-trip test for my Command\".",
+  "description": "**TIMEWARP SKILL** — endpoint-centric Web.Contracts API contracts (Command, Query, ApiRoute, I*Details, Validator, serialization tests). Invoke before scaffolding or fixing contracts. WHEN: Add a CreateTodoItem command contract, Scaffold a GetRole query with ApiRoute and IRoleDetails for the edit form, Add a serialization round-trip test for my Command.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/TimeWarpEngineering/timewarp-architecture/blob/master/skills/tw-web-api-contracts/SKILL.md",
     "path": "skills/tw-web-api-contracts/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-08-13T04:00:13.190Z",
+    "discovered_at": "2026-08-13T10:54:29.430Z",
     "stars": 54,
     "language": "C#",
-    "pushed_at": "2026-08-13T03:47:47Z",
+    "pushed_at": "2026-08-13T09:31:30Z",
     "license": "Unlicense"
   },
-  "summary_zh": "用于生成和修复端点式 Web API 契约，适合快速搭建命令、查询及序列化测试等接口代码。"
+  "summary_zh": "一套以接口端点为中心的 Web API 契约规范，适合在搭建或修复命令、查询、路由及序列化测试时使用。"
 }

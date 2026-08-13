@@ -1,0 +1,26 @@
+{
+  "id": "zapier-zapier-mcp-zapier-status",
+  "name": "zapier-status",
+  "description": "Check the health of your Zapier MCP setup. Three modes — health check (dashboard view), audit (find waste and duplicates), diagnose (systematic troubleshooting). Use when asking \"is my MCP working?\", \"check my tools\", \"audit my setup\", \"what's broken?\", or \"zapier status\".",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "zapier",
+  "install_path": ".claude/skills/zapier-status/SKILL.md",
+  "source": {
+    "repo": "zapier/zapier-mcp",
+    "url": "https://github.com/zapier/zapier-mcp/blob/main/plugins/zapier/skills/zapier-status/SKILL.md",
+    "path": "plugins/zapier/skills/zapier-status/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-13T11:13:43.062Z",
+    "stars": 377,
+    "language": null,
+    "pushed_at": "2026-07-29T21:42:17Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于检查 Zapier MCP 配置健康状况，可排查故障、审计冗余与重复项，适合验证工具是否正常运行。"
+}

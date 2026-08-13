@@ -1,0 +1,26 @@
+{
+  "id": "heygen-com-hyperframes-hyperframes-audio",
+  "name": "hyperframes-audio",
+  "description": "> Use when audio already placed in a HyperFrames composition needs to be mixed: a music bed that fights a voiceover (voiceover carve), effects on a track (EQ, compressor, limiter, gate, saturation, delay, reverb, chorus, phaser, bitcrush), or automation envelopes drawn on a track's volume or any effect parameter. Don't use for sourcing or generating audio — finding BGM, SFX, or making a voiceover is `/media-use`. Don't use for clip timing or track layout, which is `/hyperframes-core`.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "heygen-com",
+  "install_path": ".claude/skills/hyperframes-audio/SKILL.md",
+  "source": {
+    "repo": "heygen-com/hyperframes",
+    "url": "https://github.com/heygen-com/hyperframes/blob/main/skills/hyperframes-audio/SKILL.md",
+    "path": "skills/hyperframes-audio/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-13T11:03:48.197Z",
+    "stars": 40803,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-13T11:03:10Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "用于混合已加入 HyperFrames 的音频，适合处理人声与配乐冲突、添加音效及制作音量或效果参数自动化。"
+}

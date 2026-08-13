@@ -1,0 +1,26 @@
+{
+  "id": "nowork-studio-notfair-search-console",
+  "name": "search-console",
+  "description": "Query and operate connected Google Search Console properties through NotFair MCP. Use for live GSC query or page performance, clicks, impressions, CTR, position, traffic changes, indexing status, URL inspection, sitemap reads or approved sitemap submission/removal, and Search Console MCP setup. Route full-site SEO audits to seo-analysis.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "nowork-studio",
+  "install_path": ".claude/skills/search-console/SKILL.md",
+  "source": {
+    "repo": "nowork-studio/NotFair",
+    "url": "https://github.com/nowork-studio/NotFair/blob/main/analytics/search-console/SKILL.md",
+    "path": "analytics/search-console/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-13T10:49:47.627Z",
+    "stars": 3350,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-13T05:40:58Z",
+    "license": "MIT"
+  },
+  "summary_zh": "通过 NotFair MCP 查询和管理 Google Search Console，适合监控流量、排名、收录状态及处理站点地图。"
+}

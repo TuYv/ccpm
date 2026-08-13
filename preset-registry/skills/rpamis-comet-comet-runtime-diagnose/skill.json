@@ -1,0 +1,26 @@
+{
+  "id": "rpamis-comet-comet-runtime-diagnose",
+  "name": "comet-runtime-diagnose",
+  "description": "通过区分过期配置与源码缺陷，并执行真实打包 Runtime 路径，诊断 Comet Hook、安装、路由、平台、生成 Runtime 或生命周期行为。Hook 或安装报告可能涉及配置、生成资产漂移、不支持的平台或跨项目归属问题时使用。",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "rpamis",
+  "install_path": ".claude/skills/comet-runtime-diagnose/SKILL.md",
+  "source": {
+    "repo": "rpamis/comet",
+    "url": "https://github.com/rpamis/comet/blob/master/assets/skills-maintainer/comet-runtime-diagnose/SKILL.md",
+    "path": "assets/skills-maintainer/comet-runtime-diagnose/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-08-13T11:06:35.312Z",
+    "stars": 2712,
+    "language": "JavaScript",
+    "pushed_at": "2026-08-13T10:20:19Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一款运行时诊断工具，通过真实打包路径区分配置过期与源码缺陷，适合排查 Hook、安装、路由、平台及生命周期异常。"
+}

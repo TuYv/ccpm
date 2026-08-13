@@ -1,0 +1,26 @@
+{
+  "id": "rpamis-comet-comet-github-pr-review",
+  "name": "comet-github-pr-review",
+  "description": "以只读、证据优先的方式审阅 Comet 社区 PR，包括最新 diff、关联 Issue、review thread 状态、可合并性和 CI。用户要求审阅 PR、判断评论是否仍然有效，或准备简洁的合并阻塞评论时使用。",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "rpamis",
+  "install_path": ".claude/skills/comet-github-pr-review/SKILL.md",
+  "source": {
+    "repo": "rpamis/comet",
+    "url": "https://github.com/rpamis/comet/blob/master/assets/skills-maintainer/comet-github-pr-review/SKILL.md",
+    "path": "assets/skills-maintainer/comet-github-pr-review/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-08-13T11:06:34.703Z",
+    "stars": 2712,
+    "language": "JavaScript",
+    "pushed_at": "2026-08-13T10:20:19Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一个只读、证据优先的 PR 审阅工具，适合核查变更、评论有效性、可合并性和 CI，并整理合并阻塞意见。"
+}

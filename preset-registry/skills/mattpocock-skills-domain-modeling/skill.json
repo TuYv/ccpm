@@ -1,8 +1,8 @@
 {
   "id": "mattpocock-skills-domain-modeling",
   "name": "domain-modeling",
-  "description": "Build and sharpen a project's domain model. Use when the user wants to pin down domain terminology or a ubiquitous language, record an architectural decision, or when another skill needs to maintain the domain model.",
-  "category": "开发编程",
+  "description": "Build and sharpen a project's domain model. Use when discussing codebase terminology, writing or editing a CONTEXT.md, or recording or editing an ADR.",
+  "category": "文档写作",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,11 @@
     "url": "https://github.com/mattpocock/skills/blob/main/skills/engineering/domain-modeling/SKILL.md",
     "path": "skills/engineering/domain-modeling/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-13T03:40:06.353Z",
-    "stars": 215292,
+    "discovered_at": "2026-08-13T10:50:58.155Z",
+    "stars": 215778,
     "language": "Shell",
-    "pushed_at": "2026-08-07T15:50:46Z",
+    "pushed_at": "2026-08-13T09:06:37Z",
     "license": "MIT"
   },
-  "summary_zh": "用于构建和完善项目领域模型，统一业务术语与通用语言，并沉淀架构决策，适合需求梳理和持续维护。"
+  "summary_zh": "用于梳理和完善项目领域模型，统一代码库术语，并辅助编写上下文文档或架构决策记录。"
 }

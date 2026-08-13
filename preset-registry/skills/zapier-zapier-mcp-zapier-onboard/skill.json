@@ -1,0 +1,26 @@
+{
+  "id": "zapier-zapier-mcp-zapier-onboard",
+  "name": "zapier-onboard",
+  "description": "Onboard a new user to Zapier MCP — introduce what it can do, walk through authentication, and route into the right flow based on the state of their setup. Use when getting started, troubleshooting connection issues, or when the user asks \"what is Zapier MCP\", \"how do I get started with Zapier\", \"set me up\", \"what can I do with Zapier\", or \"tell me about Zapier\".",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "zapier",
+  "install_path": ".claude/skills/zapier-onboard/SKILL.md",
+  "source": {
+    "repo": "zapier/zapier-mcp",
+    "url": "https://github.com/zapier/zapier-mcp/blob/main/plugins/zapier/skills/zapier-onboard/SKILL.md",
+    "path": "plugins/zapier/skills/zapier-onboard/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-13T11:13:42.854Z",
+    "stars": 377,
+    "language": null,
+    "pushed_at": "2026-07-29T21:42:17Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于引导新用户了解并接入 Zapier MCP，可完成身份验证、按配置状态推荐流程，也适合排查连接问题。"
+}
