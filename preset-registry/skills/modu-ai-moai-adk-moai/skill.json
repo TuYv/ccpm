@@ -1,7 +1,7 @@
 {
   "id": "modu-ai-moai-adk-moai",
   "name": "moai",
-  "description": "> MoAI unified orchestrator for autonomous development. Routes natural language or subcommands (plan, run, sync, project, fix, loop, mx, feedback, review, clean, codemaps, gate, e2e, harness, goal) to specialized agents.",
+  "description": "> MoAI unified orchestrator for autonomous development. Routes natural language or subcommands (plan, run, sync, project, fix, loop, mx, feedback, review, clean, codemaps, gate, e2e, harness, goal, todo) to specialized agents.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/modu-ai/moai-adk/blob/main/.claude/skills/moai/SKILL.md",
     "path": ".claude/skills/moai/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-13T19:14:36.564Z",
+    "discovered_at": "2026-08-13T21:10:27.756Z",
     "stars": 1167,
     "language": "Go",
-    "pushed_at": "2026-08-13T19:11:28Z",
+    "pushed_at": "2026-08-13T21:08:49Z",
     "license": "Apache-2.0"
   },
-  "summary_zh": "面向自主开发的统一智能体编排器，可将自然语言指令分派给专用智能体，自动完成规划、开发、测试和修复。"
+  "summary_zh": "一款面向自主开发的统一编排工具，可将自然语言指令分派给专业智能体，适合自动规划、执行、修复和评审开发任务。"
 }
