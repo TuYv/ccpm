@@ -7,16 +7,10 @@ description: "Author, inspect and upgrade Fabric Dataflow Gen2: connection and o
 > `x-ms-fabric-skill: dataflows-cli` (`az rest`: `--headers "x-ms-fabric-skill=dataflows-cli"`),
 > including every LRO poll, `fabric_lro` and retry. Snippets omit it — add it anyway.
 
-> **Update Check -- ONCE PER SESSION (mandatory)**
-> The first time this skill is used in a session, run the **check-updates** skill before proceeding.
-> - **GitHub Copilot CLI / VS Code**: invoke the `check-updates` skill.
-> - **Claude Code / Cowork / Cursor / Windsurf / Codex**: compare local vs remote package.json version.
-> - Skip if the check was already performed earlier in this session.
-
 > **CRITICAL NOTES**
 > 1. To find the workspace details (including its ID) from workspace name: list all workspaces and, then, use JMESPath filtering
 > 2. To find the item details (including its ID) from workspace ID, item type, and item name: list all items of that type in that workspace and, then, use JMESPath filtering
-> 3. **Skill disambiguation**: use `dataflows-cli` for every Fabric Dataflow Gen2 item and Power Query M concern. Synapse / ADF pipeline and dataset JSON translation is `pipeline-migration`; Spark notebook transformations are `spark-authoring-cli`; T-SQL transformations are `sqldw-authoring-cli`.
+> 3. **Skill disambiguation**: use `dataflows-cli` for every Fabric Dataflow Gen2 item and Power Query M concern. Synapse / ADF pipeline and dataset JSON translation is `pipeline-migration`; Spark notebook transformations are `spark-cli`; T-SQL transformations are `sqldw-cli`.
 
 # Fabric Dataflow Gen2 -- CLI Skill
 

@@ -1,0 +1,26 @@
+{
+  "id": "microsoft-skills-for-fabric-variable-library-cli",
+  "name": "variable-library-cli",
+  "description": "> Create, wire and operate Microsoft Fabric Variable Library items via Fabric REST API, az rest, curl, and jq. Use when the user wants to: (1) create or update a VariableLibrary definition, variables, settings.json, or valueSets/*.json overrides, (2) wire a Variable Library variable reference into a pipeline, notebook, Dataflow Gen2, copy job, shortcut, UDF, or Plan consumer, (3) read or set the active value set as item state per workspace or deployment stage, or (4) explain Variable Library CI/",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "microsoft",
+  "install_path": ".claude/skills/variable-library-cli/SKILL.md",
+  "source": {
+    "repo": "microsoft/skills-for-fabric",
+    "url": "https://github.com/microsoft/skills-for-fabric/blob/main/skills/variable-library-cli/SKILL.md",
+    "path": "skills/variable-library-cli/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-13T18:06:43.819Z",
+    "stars": 969,
+    "language": "Python",
+    "pushed_at": "2026-08-13T17:02:02Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于通过命令行和 REST API 管理 Microsoft Fabric 变量库，适合配置跨工作区变量引用、环境值切换及 CI/CD 部署。"
+}

@@ -19,12 +19,6 @@ description: >
 > `x-ms-fabric-skill: databricks-migration` (`az rest`: `--headers "x-ms-fabric-skill=databricks-migration"`),
 > including every LRO poll, `fabric_lro` and retry. Snippets omit it — add it anyway.
 
-> **Update Check — ONCE PER SESSION (mandatory)**
-> The first time this skill is used in a session, run the **check-updates** skill before proceeding.
-> - **GitHub Copilot CLI / VS Code**: invoke the `check-updates` skill.
-> - **Claude Code / Cowork / Cursor / Windsurf / Codex**: compare local vs remote package.json version.
-> - Skip if the check was already performed earlier in this session.
-
 > **CRITICAL NOTES**
 > 1. To find workspace details (including its ID) from a workspace name: list all workspaces, then use JMESPath filtering
 > 2. To find item details (including its ID) from workspace ID, item type, and item name: list all items of that type in that workspace, then use JMESPath filtering
@@ -44,8 +38,8 @@ Read these companion documents before executing migration tasks:
 - [COMMON-CLI.md](../../common/COMMON-CLI.md) — `az rest`, `az login`, token acquisition, Fabric REST via CLI
 - [SPARK-AUTHORING-CORE.md](../../common/SPARK-AUTHORING-CORE.md) — Notebook deployment, lakehouse creation, Spark job execution
 
-For notebook and Lakehouse creation, see [spark-authoring-cli](../spark-authoring-cli/SKILL.md).
-For Fabric Warehouse DDL/DML authoring, see [sqldw-authoring-cli](../sqldw-authoring-cli/SKILL.md).
+For notebook and Lakehouse creation, see [spark-cli](../spark-cli/SKILL.md).
+For Fabric Warehouse DDL/DML authoring, see [sqldw-cli](../sqldw-cli/SKILL.md).
 
 ---
 
@@ -147,7 +141,7 @@ The complete side-by-side API table is in [dbutils-to-notebookutils.md](resource
 | Job clusters per task | **Pool attached to SJD** | Each SJD can specify its Spark pool independently |
 | Databricks Workflows | **Fabric Data Pipelines** | Full DAG orchestration with conditions, loops, and failure branches |
 
-> **Delegate to `spark-authoring-cli`** for SJD creation and notebook deployment.
+> **Delegate to `spark-cli`** for SJD creation and notebook deployment.
 
 ---
 

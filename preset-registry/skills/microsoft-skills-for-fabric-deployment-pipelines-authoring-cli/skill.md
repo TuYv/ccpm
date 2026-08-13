@@ -16,12 +16,6 @@ description: >
 > `x-ms-fabric-skill: deployment-pipelines-authoring-cli` (`az rest`: `--headers "x-ms-fabric-skill=deployment-pipelines-authoring-cli"`),
 > including every LRO poll, `fabric_lro` and retry. Snippets omit it — add it anyway.
 
-> **Update Check — ONCE PER SESSION (mandatory)**
-> The first time this skill is used in a session, run the **check-updates** skill before proceeding.
-> - **GitHub Copilot CLI / VS Code**: invoke the `check-updates` skill (e.g., `/fabric-skills:check-updates`).
-> - **Claude Code / Cowork / Cursor / Windsurf / Codex**: read the local `package.json` version, then compare it against the remote version via `git fetch origin main --quiet && git show origin/main:package.json` (or the GitHub API). If the remote version is newer, show the changelog and update instructions.
-> - Skip if the check was already performed earlier in this session.
-
 > **CRITICAL NOTES**
 > 1. To find the workspace details (including its ID) from workspace name: list all workspaces and, then, use JMESPath filtering
 > 2. To find the item details (including its ID) from workspace ID, item type, and item name: list all items of that type in that workspace and, then, use JMESPath filtering
@@ -379,8 +373,7 @@ az rest --method POST --resource https://api.fabric.microsoft.com \
 **User:** "Promote my Sales dev workspace to the Test stage and tell me when it's done."
 
 **Assistant (behavior):**
-1. Runs the update check (once per session).
-2. Lists deployment pipelines → filters to the one whose Development stage holds the Sales dev workspace; captures `sourceStageId` (Development) and `targetStageId` (Test).
-3. Confirms the Test stage has an assigned workspace (or asks for a name + capacity to create one).
-4. POSTs `deploy` with a `note`, receives `202`, extracts the operation ID.
-5. Polls `/v1/operations/{operationId}` until terminal, then reports success and the list of deployed items (or the failure reason).
+1. Lists deployment pipelines → filters to the one whose Development stage holds the Sales dev workspace; captures `sourceStageId` (Development) and `targetStageId` (Test).
+2. Confirms the Test stage has an assigned workspace (or asks for a name + capacity to create one).
+3. POSTs `deploy` with a `note`, receives `202`, extracts the operation ID.
+4. Polls `/v1/operations/{operationId}` until terminal, then reports success and the list of deployed items (or the failure reason).

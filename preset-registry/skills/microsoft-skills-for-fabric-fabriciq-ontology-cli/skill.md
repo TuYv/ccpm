@@ -7,12 +7,6 @@ description: "Author and explore Fabric IQ Ontology items: entity and relationsh
 > `x-ms-fabric-skill: fabriciq-ontology-cli` (`az rest`: `--headers "x-ms-fabric-skill=fabriciq-ontology-cli"`),
 > including every LRO poll, `fabric_lro` and retry. Snippets omit it — add it anyway.
 
-> **Update Check -- ONCE PER SESSION (mandatory)**
-> The first time this skill is used in a session, run the **check-updates** skill before proceeding.
-> - **GitHub Copilot CLI / VS Code**: invoke the `check-updates` skill.
-> - **Claude Code / Cowork / Cursor / Windsurf / Codex**: compare local vs remote package.json version.
-> - Skip if the check was already performed earlier in this session.
-
 > **CRITICAL NOTES**
 > 1. To find the workspace details (including its ID) from workspace name: list all workspaces and, then, use JMESPath filtering
 > 2. To find the item details (including its ID) from workspace ID, item type, and item name: list all items of that type in that workspace and, then, use JMESPath filtering

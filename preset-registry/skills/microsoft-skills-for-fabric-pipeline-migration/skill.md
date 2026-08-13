@@ -20,13 +20,6 @@ description: >
 > `x-ms-fabric-skill: pipeline-migration` (`az rest`: `--headers "x-ms-fabric-skill=pipeline-migration"`),
 > including every LRO poll, `fabric_lro` and retry. Snippets omit it — add it anyway.
 
-> **Update Check — ONCE PER SESSION (mandatory for live migration runs)**
-> The first time this skill is used in a session, run the **check-updates** skill before proceeding.
-> - **GitHub Copilot CLI / VS Code**: invoke the `check-updates` skill.
-> - **Claude Code / Cowork / Cursor / Windsurf / Codex**: compare local vs remote package.json version.
-> - Skip if the check was already performed earlier in this session.
-> - **Skip in eval / guidance-only mode**: if the user's prompt explicitly forbids tool/API calls (e.g. *"Do not call any APIs or create any resources"*) or the skill is being invoked for offline JSON translation / eval, do **not** run the update check — answer the prompt directly. The check is only required for live-migration runs that will call Fabric or Synapse APIs.
-
 > **CRITICAL NOTES**
 > 1. To find workspace details (including its ID) from a workspace name: list all workspaces, then use JMESPath filtering
 > 2. To find item details (including its ID) from workspace ID, item type, and item name: list all items of that type in that workspace, then use JMESPath filtering
@@ -286,7 +279,7 @@ After pipeline migration, hand off to these companion skills and tools:
 | Schedule migrated pipelines | [COMMON-CLI.md § Job Scheduling](../../common/COMMON-CLI.md) |
 | Monitor pipeline runs | Fabric workspace → Monitor hub |
 | Build new Fabric pipelines | Refer to [ITEM-DEFINITIONS-CORE.md § DataPipeline](../../common/ITEM-DEFINITIONS-CORE.md) |
-| Explore migrated Lakehouse data post-pipeline run | `spark-consumption-cli` or `sqldw-consumption-cli` skill |
+| Explore migrated Lakehouse data post-pipeline run | `spark-cli` or `sqldw-cli` skill |
 
 ---
 

@@ -11,12 +11,6 @@ description: >
   "run a DAX query against a semantic model".
 ---
 
-> **Update Check — ONCE PER SESSION (mandatory)**
-> The first time this skill is used in a session, run the **check-updates** skill before proceeding.
-> - **GitHub Copilot CLI / VS Code**: invoke the `check-updates` skill.
-> - **Claude Code / Cowork / Cursor / Windsurf / Codex**: compare local vs remote package.json version.
-> - Skip if the check was already performed earlier in this session.
-
 > **CRITICAL NOTES**
 > 1. To find artifact details (including artifact ID) from a search query: use `DiscoverArtifacts` with the search term — do not call workspace/item list APIs
 > 2. To find the semantic model behind a report: call `GetReportMetadata` and extract the model GUID from the response

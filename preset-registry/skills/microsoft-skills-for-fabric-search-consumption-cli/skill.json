@@ -1,7 +1,7 @@
 {
   "id": "microsoft-skills-for-fabric-search-consumption-cli",
   "name": "search-consumption-cli",
-  "description": "> Search the Microsoft Fabric catalog across workspaces using the Fabric Catalog Search API. Use when the user wants to: (1) find an item by display name when the workspace is unknown, (2) list or discover items of a specific type across the tenant, (3) identify which workspace contains an item, (4) return item/workspace IDs for downstream API calls. Dataflow Gen1/Gen2 items are not supported. For data queries after the item is known, use the workload-specific consumption skill (`sqldw-consumpti",
+  "description": "> Search the Microsoft Fabric catalog across workspaces using the Fabric Catalog Search API. Use when the user wants to: (1) find an item by display name when the workspace is unknown, (2) list or discover items of a specific type across the tenant, (3) identify which workspace contains an item, (4) return item/workspace IDs for downstream API calls. Dataflow Gen1/Gen2 items are not supported. For data queries after the item is known, use the workload-specific consumption skill (`sqldw-cli`, `sp",
   "category": "数据分析",
   "compatible_tools": [
     "claude",
@@ -13,14 +13,14 @@
   "install_path": ".claude/skills/search-consumption-cli/SKILL.md",
   "source": {
     "repo": "microsoft/skills-for-fabric",
-    "url": "https://github.com/microsoft/skills-for-fabric/blob/main/plugins/fabric-skills/skills/search-consumption-cli/SKILL.md",
-    "path": "plugins/fabric-skills/skills/search-consumption-cli/SKILL.md",
+    "url": "https://github.com/microsoft/skills-for-fabric/blob/main/skills/search-consumption-cli/SKILL.md",
+    "path": "skills/search-consumption-cli/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-13T16:08:15.645Z",
+    "discovered_at": "2026-08-13T18:06:42.646Z",
     "stars": 969,
     "language": "Python",
-    "pushed_at": "2026-08-06T19:47:08Z",
+    "pushed_at": "2026-08-13T17:02:02Z",
     "license": "MIT"
   },
-  "summary_zh": "用于跨工作区搜索 Microsoft Fabric 目录的命令行工具，可查找资源、定位所属工作区并获取后续调用所需的 ID。"
+  "summary_zh": "用于跨工作区搜索 Microsoft Fabric 目录，适合按名称或类型查找资源、定位所属工作区并获取后续调用所需的 ID。"
 }

@@ -1,7 +1,7 @@
 {
   "id": "microsoft-skills-for-fabric-e2e-medallion-architecture",
   "name": "e2e-medallion-architecture",
-  "description": "> Plan and implement end-to-end Microsoft Fabric data platforms and Medallion Architecture (Bronze/Silver/Gold) lakehouse patterns using PySpark, Delta Lake, Lakehouse/Warehouse items, Fabric Pipelines, and semantic-model handoff. Use when the user wants to: (1) design a Bronze/Silver/Gold data lakehouse, (2) plan an ingestion-to-semantic-model Fabric data platform, (3) set up multi-layer workspaces with lakehouses for each tier, (4) build ingestion-to-analytics pipelines with data quality enfor",
+  "description": "> Plan and implement end-to-end Microsoft Fabric data platforms and Medallion Architecture (Bronze/Silver/Gold) lakehouse patterns using PySpark, Delta Lake, Lakehouse/Warehouse items, Fabric Pipelines, and semantic-model handoff. Use for multi-layer workspaces, ingestion-to-analytics pipelines, Bronze-to-Silver-to-Gold notebook orchestration, layer-specific Fabric Spark tuning, and Materialized Lake View versus notebook decisions for Silver and Gold. For natural-language questions over existing",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -13,14 +13,14 @@
   "install_path": ".claude/skills/e2e-medallion-architecture/SKILL.md",
   "source": {
     "repo": "microsoft/skills-for-fabric",
-    "url": "https://github.com/microsoft/skills-for-fabric/blob/main/plugins/fabric-skills/skills/e2e-medallion-architecture/SKILL.md",
-    "path": "plugins/fabric-skills/skills/e2e-medallion-architecture/SKILL.md",
+    "url": "https://github.com/microsoft/skills-for-fabric/blob/main/skills/e2e-medallion-architecture/SKILL.md",
+    "path": "skills/e2e-medallion-architecture/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-13T16:08:13.670Z",
+    "discovered_at": "2026-08-13T18:06:39.816Z",
     "stars": 969,
     "language": "Python",
-    "pushed_at": "2026-08-06T19:47:08Z",
+    "pushed_at": "2026-08-13T17:02:02Z",
     "license": "MIT"
   },
-  "summary_zh": "用于规划和落地 Microsoft Fabric 奖牌式湖仓平台，适合构建从数据摄取、分层治理到语义模型和分析的完整流程。"
+  "summary_zh": "用于规划和落地微软 Fabric 奖牌式湖仓架构，适合构建从数据摄取到分析的分层流水线。"
 }

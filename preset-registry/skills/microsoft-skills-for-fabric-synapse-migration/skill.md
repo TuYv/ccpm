@@ -16,12 +16,6 @@ description: >
 > `x-ms-fabric-skill: synapse-migration` (`az rest`: `--headers "x-ms-fabric-skill=synapse-migration"`),
 > including every LRO poll, `fabric_lro` and retry. Snippets omit it — add it anyway.
 
-> **Update Check — ONCE PER SESSION (mandatory)**
-> The first time this skill is used in a session, run the **check-updates** skill before proceeding.
-> - **GitHub Copilot CLI / VS Code**: invoke the `check-updates` skill.
-> - **Claude Code / Cowork / Cursor / Windsurf / Codex**: compare local vs remote package.json version.
-> - Skip if the check was already performed earlier in this session.
-
 > **CRITICAL NOTES**
 > 1. To find workspace details (including its ID) from a workspace name: list all workspaces, then use JMESPath filtering
 > 2. To find item details (including its ID) from workspace ID, item type, and item name: list all items of that type in that workspace, then use JMESPath filtering
@@ -37,7 +31,7 @@ These companion documents provide general Fabric REST patterns. **Do NOT read th
 - [COMMON-CORE.md](../../common/COMMON-CORE.md) — General Fabric REST API patterns, authentication & token audiences, item discovery via JMESPath
 - [COMMON-CLI.md](../../common/COMMON-CLI.md) — `az rest` / `az login` CLI patterns, authentication recipes
 - [SPARK-AUTHORING-CORE.md](../../common/SPARK-AUTHORING-CORE.md) — Notebook/lakehouse creation (already covered in [spark-item-migration.md](resources/spark-item-migration.md) and [lake-database-migration.md](resources/lake-database-migration.md))
-- [SQLDW-AUTHORING-CORE.md](../../common/SQLDW-AUTHORING-CORE.md) — Fabric Warehouse T-SQL (delegate to `sqldw-authoring-cli` skill)
+- [SQLDW-AUTHORING-CORE.md](../../common/SQLDW-AUTHORING-CORE.md) — Fabric Warehouse T-SQL (delegate to `sqldw-cli` skill)
 
 > **Auth, API endpoints, and item payloads are fully documented in this skill's own files.** The common docs above are fallback references only.
 
@@ -144,7 +138,7 @@ Use this table to determine the correct Fabric target for each Synapse component
 | Synapse Component | Fabric Target | Notes |
 |---|---|---|
 | **Spark Pool** (notebooks, jobs) | Fabric Spark (Lakehouse / Notebooks / SJD) | Starter Pool replaces on-demand pools for most workloads |
-| **Dedicated SQL Pool** | **Fabric Warehouse** | T-SQL surface area differences apply — see [§ T-SQL & Spark Configuration Differences](#t-sql--spark-configuration-differences). *Procedural migration guide not yet available — separate migration track. For T-SQL authoring, delegate to `sqldw-authoring-cli`.* |
+| **Dedicated SQL Pool** | **Fabric Warehouse** | T-SQL surface area differences apply — see [§ T-SQL & Spark Configuration Differences](#t-sql--spark-configuration-differences). *Procedural migration guide not yet available — separate migration track. For T-SQL authoring, delegate to `sqldw-cli`.* |
 | **Serverless SQL Pool** | **Lakehouse SQL Endpoint** | Read-only Delta/Parquet queries; no DDL required |
 | **Synapse Pipelines** | **Fabric Data Pipelines** | Activity types, triggers, and expressions are broadly compatible. *Pipeline migration resource not yet available — separate migration track.* |
 | **Synapse Link for Cosmos DB / SQL** | **Fabric Mirroring** | Native mirroring replaces the Synapse Link connector pattern. *Not covered by this skill.* |
@@ -169,7 +163,7 @@ Synapse Spark workload
 
 For detailed T-SQL surface area gaps (PolyBase → `COPY INTO`, distribution hints, result set caching) and Spark configuration mappings (pools, `%%configure`, runtime versions), see [feature-parity.md](resources/feature-parity.md).
 
-> **Key actions**: Remove `DISTRIBUTION = HASH(col)` hints, replace `CREATE EXTERNAL TABLE` with `COPY INTO`, replace `spark.read.synapsesql()` with OneLake shortcuts or JDBC. Delegate T-SQL authoring to `sqldw-authoring-cli`.
+> **Key actions**: Remove `DISTRIBUTION = HASH(col)` hints, replace `CREATE EXTERNAL TABLE` with `COPY INTO`, replace `spark.read.synapsesql()` with OneLake shortcuts or JDBC. Delegate T-SQL authoring to `sqldw-cli`.
 
 ---
 
@@ -278,10 +272,10 @@ After completing Phases 0–3 and validation, hand off to these companion skills
 
 Once data has landed in Fabric Lakehouses, use this sequence to validate and explore:
 
-1. **Discover** → List schemas, tables, and row counts via Lakehouse SQL Endpoint (`sqldw-consumption-cli`)
+1. **Discover** → List schemas, tables, and row counts via Lakehouse SQL Endpoint (`sqldw-cli`)
 2. **Sample** → `SELECT TOP 5` on migrated tables to verify data integrity
 3. **Validate** → Run validation checks from [validation-testing.md](resources/validation-testing.md) (V1–V6)
-4. **Explore** → Write Spark or T-SQL queries against migrated data using `spark-consumption-cli` or `sqldw-consumption-cli`
+4. **Explore** → Write Spark or T-SQL queries against migrated data using `spark-cli` or `sqldw-cli`
 5. **Build** → Create Gold-layer aggregations with `e2e-medallion-architecture` (Bronze → Silver → Gold)
 6. **Consume** → Build semantic models and reports with `semantic-model-authoring`
 
@@ -289,11 +283,11 @@ Once data has landed in Fabric Lakehouses, use this sequence to validate and exp
 
 | Post-Migration Task | Skill | When to Use |
 |---|---|---|
-| Interactive Lakehouse SQL queries | `sqldw-consumption-cli` | Exploring migrated data via SQL Endpoint |
-| Interactive PySpark exploration | `spark-consumption-cli` | Ad-hoc Spark queries on migrated Lakehouses |
-| Notebook & SJD authoring (new) | `spark-authoring-cli` | Creating new Spark items post-migration |
+| Interactive Lakehouse SQL queries | `sqldw-cli` | Exploring migrated data via SQL Endpoint |
+| Interactive PySpark exploration | `spark-cli` | Ad-hoc Spark queries on migrated Lakehouses |
+| Notebook & SJD authoring (new) | `spark-cli` | Creating new Spark items post-migration |
 | Medallion architecture build-out | `e2e-medallion-architecture` | Structuring Bronze/Silver/Gold after lift-and-shift |
-| Warehouse performance monitoring | `sqldw-operations-cli` | Diagnosing slow queries on Fabric Warehouse |
+| Warehouse performance monitoring | `sqldw-cli` | Diagnosing slow queries on Fabric Warehouse |
 | Semantic model creation | `semantic-model-authoring` | Building Power BI models over migrated data |
 | Report consumption & DAX | `fabriciq` | Querying existing semantic models |
 | KQL analytics | `eventhouse-cli` | If migrating real-time workloads to Eventhouse |

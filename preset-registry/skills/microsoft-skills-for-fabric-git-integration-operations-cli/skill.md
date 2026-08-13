@@ -22,12 +22,6 @@ metadata:
 > `x-ms-fabric-skill: git-integration-operations-cli` (`az rest`: `--headers "x-ms-fabric-skill=git-integration-operations-cli"`),
 > including every LRO poll, `fabric_lro` and retry. Snippets omit it — add it anyway.
 
-> **Update Check — ONCE PER SESSION (mandatory)**
-> The first time this skill is used in a session, run the **check-updates** skill before proceeding.
-> - **GitHub Copilot CLI / VS Code**: invoke the `check-updates` skill (e.g., `/fabric-skills:check-updates`).
-> - **Claude Code / Cowork / Cursor / Windsurf / Codex**: read the local `package.json` version, then compare it against the remote version via `git fetch origin main --quiet && git show origin/main:package.json` (or the GitHub API). If the remote version is newer, show the changelog and update instructions.
-> - Skip if the check was already performed earlier in this session.
-
 > **CRITICAL NOTES**
 > 1. To find a workspace ID from its name: list all workspaces, then filter by
 >    `displayName` with JMESPath. To find an item ID: list items of that type in the
@@ -580,9 +574,8 @@ itself parameterize values that must differ per stage (dev/test/prod) — connec
 strings, endpoints, capacity IDs, feature flags. That per-environment
 parameterization is the job of a **Variable Library**: define the variables once,
 provide a value set per stage, and have items resolve the stage-appropriate value.
-When a Git-synced workspace needs values that vary by environment, use a
-**Variable Library** skill (e.g. a planned `variable-library-authoring-cli`
-companion skill — not yet available in this repo) for the variable/value-set
+When a Git-synced workspace needs values that vary by environment, use the
+`variable-library-cli` companion skill for the variable/value-set
 modeling instead of hardcoding or duplicating that logic here — this skill owns
 the source-control lifecycle, the Variable Library skill owns the
 parameterization it feeds.

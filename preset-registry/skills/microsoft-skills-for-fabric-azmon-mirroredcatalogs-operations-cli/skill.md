@@ -7,12 +7,6 @@ description: "Onboard Azure Monitor / Application Insights observability data in
 > `x-ms-fabric-skill: azmon-mirroredcatalogs-operations-cli` (`az rest`: `--headers "x-ms-fabric-skill=azmon-mirroredcatalogs-operations-cli"`),
 > including every LRO poll, `fabric_lro` and retry. Snippets omit it — add it anyway.
 
-> **Update Check — ONCE PER SESSION (mandatory)**
-> The first time this skill is used in a session, run the **check-updates** skill before proceeding.
-> - **GitHub Copilot CLI / VS Code**: invoke the `check-updates` skill.
-> - **Claude Code / Cowork / Cursor / Windsurf / Codex**: compare local vs remote package.json version.
-> - Skip if the check was already performed earlier in this session.
-
 # azmon-mirroredcatalogs-operations-cli
 
 Guide a user end-to-end to (1) onboard Azure Monitor / Application Insights /
@@ -1096,4 +1090,4 @@ the Stage 16 "do we even want an agent?" gate).
 ### Example 2 — Out-of-scope authoring request
 **User:** "Create a new Spark notebook and build a Delta table pipeline to load my business dataset."
 
-**Skill behavior:** Declines the out-of-scope authoring request, creates nothing in Fabric, and directs the user to the appropriate authoring skill (for example `spark-authoring-cli`) rather than taking over the task.
+**Skill behavior:** Declines the out-of-scope authoring request, creates nothing in Fabric, and directs the user to the appropriate authoring mode in `spark-cli` rather than taking over the task.
