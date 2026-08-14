@@ -1,0 +1,26 @@
+{
+  "id": "nowork-studio-toprank-google-ads-audit",
+  "name": "google-ads-audit",
+  "description": "Google Ads account audit and business context setup. Run this first — it gathers business information, analyzes account health, and saves context that all other ads skills reuse. Trigger on \"audit my ads\", \"ads audit\", \"set up my ads\", \"onboard\", \"account overview\", \"how's my account\", \"ads health check\", \"what should I fix in my ads\", or when the user is new to NotFair and hasn't run an audit before. Also trigger proactively when other ads skills detect that business-context.json is missing.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "nowork-studio",
+  "install_path": ".claude/skills/google-ads-audit/SKILL.md",
+  "source": {
+    "repo": "nowork-studio/toprank",
+    "url": "https://github.com/nowork-studio/toprank/blob/main/skills/google-ads-audit/SKILL.md",
+    "path": "skills/google-ads-audit/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-14T09:04:29.755Z",
+    "stars": 3356,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-14T06:48:07Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于审查 Google Ads 账户，收集业务背景、评估投放健康度并建立可复用上下文，适合首次接入或排查优化方向。"
+}

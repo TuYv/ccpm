@@ -1,0 +1,26 @@
+{
+  "id": "daymade-claude-code-skills-devils-advocate",
+  "name": "devils-advocate",
+  "description": ">- 结构化压力测试一个论点（devil's advocate / 魔鬼代言人）：把论点拆成显性断言与隐性假设（A1/A2 编号）， 逐条在用户给定的证据材料里检索带出处的反方论证，标 High/Medium/Low 风险等级，补基础比率外部视角， 最后给出「可监测的证伪信号」清单；输出结构化 findings + 人读叙事双层结果。找不到反证时如实声明「未找到」， 绝不编造。复刻自 LinqAlpha（对冲基金 AI 产品）公开的 Devil's Advocate 架构，叠加 CIA 结构化分析技术与 RAND 假设规划。当用户要「压力测试 / 唱反调 / 找盲点 / 拆假设 / 挑战这个论点 / bear case / 红队这个方案 / 上投委会前过一遍 / pressure test my thesis」，或拿着投资论点、IC memo、研究结论、商业决策要人挑刺时， 用本 skill——即使用户没说出\"魔鬼代言人\"这个词。",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/devils-advocate/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-financial/devils-advocate/SKILL.md",
+    "path": "daymade-financial/devils-advocate/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-14T09:11:00.780Z",
+    "stars": 1334,
+    "language": "Python",
+    "pushed_at": "2026-08-14T07:43:24Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一款论点压力测试工具，可拆解假设、检索反方证据并标注风险，适合投资、研究和商业决策前的红队审查。"
+}
