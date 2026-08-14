@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-14T17:51:07.809Z",
+  "updated_at": "2026-08-14T19:45:45.689Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -1078,9 +1078,9 @@
       "translated_at": "2026-05-18T11:50:21.752Z"
     },
     "preset:aker-dev-microfolio": {
-      "hash": "d1aa88d564ddb0f1",
-      "summary_zh": "这是一款专为创作者打造的静态作品集生成器，只需Markdown和文件夹即可管理内容，无需折腾数据库，轻松搭建专业的项目展示站。",
-      "translated_at": "2026-05-12T07:01:10.916Z"
+      "hash": "8a3bdd8e74bb0ef3",
+      "summary_zh": "一款基于 SvelteKit 的静态作品集生成器，用 Markdown 管理内容，适合设计师和创意工作者快速搭建专业展示网站。",
+      "translated_at": "2026-08-14T19:09:09.324Z"
     },
     "preset:agricidaniel-claude-seo": {
       "hash": "3977664137a432bb",
@@ -17228,9 +17228,9 @@
       "translated_at": "2026-08-12T06:07:56.385Z"
     },
     "bundle:garrytan-gstack": {
-      "hash": "7be71ce5e045f800",
-      "summary_zh": "面向 AI 辅助软件开发的一站式工作流，串联规划、编码、评审、测试与上线监控，让团队更安全高效地交付产品。",
-      "translated_at": "2026-08-03T04:57:01.340Z"
+      "hash": "58eb719e52548e46",
+      "summary_zh": "面向软件研发全流程的智能工具集，把规划评审、编码协作、自动化测试、性能检测与上线监控串成一套高效可靠的工作流。",
+      "translated_at": "2026-08-14T19:09:03.766Z"
     },
     "bundle:egonex-ai-understand-anything": {
       "hash": "339d24a0fa2c5795",
@@ -17318,9 +17318,9 @@
       "translated_at": "2026-08-10T20:03:59.035Z"
     },
     "bundle:jakubkrehel-skills": {
-      "hash": "8b55672483cf6310",
-      "summary_zh": "一套面向 Web 产品的界面设计与评审技能集，系统提升可用性、无障碍、视觉一致性和交互文案质量。",
-      "translated_at": "2026-08-12T23:14:56.924Z"
+      "hash": "01c11f97c31fdaed",
+      "summary_zh": "一套面向 Web 产品的界面设计与评审技能集，系统提升可用性、无障碍、视觉一致性和文案体验。",
+      "translated_at": "2026-08-14T19:09:02.370Z"
     },
     "bundle:aaron-he-zhu-aaron-marketing-skills": {
       "hash": "3dace6e8520b671d",
@@ -22928,9 +22928,9 @@
       "translated_at": "2026-08-03T22:58:07.827Z"
     },
     "skill:jakubkrehel-skills-better-accessibility": {
-      "hash": "f4e6c8f0e32e8a2b",
-      "summary_zh": "面向产品界面的无障碍工程工具，适合开发或审查组件、表单和菜单，解决键盘操作、焦点管理及屏幕阅读器兼容问题。",
-      "translated_at": "2026-08-03T22:58:08.956Z"
+      "hash": "b0623a1a23b40088",
+      "summary_zh": "用于开发或审查无障碍界面，解决键盘导航、焦点管理、ARIA、表单及屏幕阅读器适配问题。",
+      "translated_at": "2026-08-14T19:09:12.199Z"
     },
     "skill:jakubkrehel-skills-better-interface": {
       "hash": "604abacafc03f11a",
@@ -22948,9 +22948,9 @@
       "translated_at": "2026-08-03T22:58:13.223Z"
     },
     "skill:jakubkrehel-skills-better-ui": {
-      "hash": "bc07e8914660b80e",
-      "summary_zh": "一套提升界面质感的设计工程原则，适合打磨组件、动效、图标及各种视觉细节。",
-      "translated_at": "2026-08-03T22:58:15.114Z"
+      "hash": "59617e1385196c8c",
+      "summary_zh": "一套提升界面质感的设计工程指南，适合打磨组件、动效、图标及阴影边框等前端视觉细节。",
+      "translated_at": "2026-08-14T19:09:14.258Z"
     },
     "skill:jakubkrehel-skills-better-typography": {
       "hash": "140a537394fd8e9e",
@@ -36262,6 +36262,164 @@
     "content:coreyhaines31-marketingskills-paywalls": {
       "hash": "d062c03f6b99e76f",
       "translated_at": "2026-08-14T17:51:07.809Z"
+    },
+    "skill:garrytan-gstack-beta": {
+      "hash": "5d3e6271f24b323d",
+      "summary_zh": "一款轻量的测试夹具工具技能，省去强制读取和模式表，适合简化测试配置与执行流程。",
+      "translated_at": "2026-08-14T19:09:09.661Z"
+    },
+    "skill:garrytan-gstack-alpha": {
+      "hash": "47ce395af2dd391f",
+      "summary_zh": "用于按模式表调度测试夹具，并强制读取相关引用，适合管理复杂测试中的依赖与运行模式。",
+      "translated_at": "2026-08-14T19:09:11.674Z"
+    },
+    "content:coreyhaines31-marketingskills-popups": {
+      "hash": "6c66e7f923c1eebc",
+      "translated_at": "2026-08-14T19:18:48.980Z"
+    },
+    "content:coreyhaines31-marketingskills-pricing": {
+      "hash": "80aaa7babefecc8f",
+      "translated_at": "2026-08-14T19:18:50.410Z"
+    },
+    "content:coreyhaines31-marketingskills-programmatic-seo": {
+      "hash": "15cb5979cab5263e",
+      "translated_at": "2026-08-14T19:19:31.158Z"
+    },
+    "content:coreyhaines31-marketingskills-product-marketing": {
+      "hash": "6dfd6bd485f62448",
+      "translated_at": "2026-08-14T19:19:48.331Z"
+    },
+    "content:coreyhaines31-marketingskills-public-relations": {
+      "hash": "d1aeff136f23e2bf",
+      "translated_at": "2026-08-14T19:20:33.206Z"
+    },
+    "content:coreyhaines31-marketingskills-prospecting": {
+      "hash": "beabb53a99b4df89",
+      "translated_at": "2026-08-14T19:21:29.981Z"
+    },
+    "content:coreyhaines31-marketingskills-referrals": {
+      "hash": "4ddd01713b7ef3c3",
+      "translated_at": "2026-08-14T19:21:38.204Z"
+    },
+    "content:coreyhaines31-marketingskills-revops": {
+      "hash": "bb27b16ad41c5c2d",
+      "translated_at": "2026-08-14T19:23:10.206Z"
+    },
+    "content:coreyhaines31-marketingskills-sales-enablement": {
+      "hash": "d83c3244dd8e2e64",
+      "translated_at": "2026-08-14T19:23:12.708Z"
+    },
+    "content:coreyhaines31-marketingskills-schema": {
+      "hash": "d8b7aa7bcd9727a8",
+      "translated_at": "2026-08-14T19:23:40.199Z"
+    },
+    "content:coreyhaines31-marketingskills-signup": {
+      "hash": "9395aabae64891eb",
+      "translated_at": "2026-08-14T19:24:52.771Z"
+    },
+    "content:coreyhaines31-marketingskills-seo-audit": {
+      "hash": "3b03a2e07578e996",
+      "translated_at": "2026-08-14T19:25:02.627Z"
+    },
+    "content:coreyhaines31-marketingskills-site-architecture": {
+      "hash": "a47f693c6a4f45db",
+      "translated_at": "2026-08-14T19:26:19.536Z"
+    },
+    "content:coreyhaines31-marketingskills-sms": {
+      "hash": "bf649cfac0e3851f",
+      "translated_at": "2026-08-14T19:27:20.652Z"
+    },
+    "content:coreyhaines31-marketingskills-social": {
+      "hash": "8cc93d9b361622cd",
+      "translated_at": "2026-08-14T19:28:22.067Z"
+    },
+    "content:cosmtrek-mindwalk-verify": {
+      "hash": "4652994237951969",
+      "translated_at": "2026-08-14T19:28:46.691Z"
+    },
+    "content:coreyhaines31-marketingskills-video": {
+      "hash": "3b6d4864bae49dd3",
+      "translated_at": "2026-08-14T19:28:57.915Z"
+    },
+    "content:csthink-dashmotion-dashmotion": {
+      "hash": "97b6239957196203",
+      "translated_at": "2026-08-14T19:30:22.920Z"
+    },
+    "content:czlonkowski-n8n-skills-n8n-agents": {
+      "hash": "31168e2118e4759e",
+      "translated_at": "2026-08-14T19:32:00.259Z"
+    },
+    "content:czlonkowski-n8n-skills-n8n-binary-and-data": {
+      "hash": "7c207909e3e8cc4b",
+      "translated_at": "2026-08-14T19:32:06.289Z"
+    },
+    "content:czlonkowski-n8n-skills-n8n-code-python": {
+      "hash": "cae740351f90d851",
+      "translated_at": "2026-08-14T19:33:48.072Z"
+    },
+    "content:czlonkowski-n8n-skills-n8n-code-javascript": {
+      "hash": "fba689826dd62fee",
+      "translated_at": "2026-08-14T19:34:19.062Z"
+    },
+    "content:czlonkowski-n8n-skills-n8n-code-tool": {
+      "hash": "57b3b0d3a222bf37",
+      "translated_at": "2026-08-14T19:35:29.275Z"
+    },
+    "content:czlonkowski-n8n-skills-n8n-error-handling": {
+      "hash": "0a2a0e4574e7ef69",
+      "translated_at": "2026-08-14T19:36:26.878Z"
+    },
+    "content:czlonkowski-n8n-skills-n8n-expression-syntax": {
+      "hash": "18d150e96bc08938",
+      "translated_at": "2026-08-14T19:37:26.580Z"
+    },
+    "content:czlonkowski-n8n-skills-n8n-multi-instance": {
+      "hash": "1995cb03cb8959ee",
+      "translated_at": "2026-08-14T19:38:44.870Z"
+    },
+    "content:czlonkowski-n8n-skills-n8n-mcp-tools-expert": {
+      "hash": "844322a5ef80f908",
+      "translated_at": "2026-08-14T19:38:46.047Z"
+    },
+    "content:czlonkowski-n8n-skills-n8n-self-hosting": {
+      "hash": "fe307277cab716a8",
+      "translated_at": "2026-08-14T19:40:00.082Z"
+    },
+    "content:czlonkowski-n8n-skills-n8n-node-configuration": {
+      "hash": "7f851b91dca19a0e",
+      "translated_at": "2026-08-14T19:40:26.084Z"
+    },
+    "content:czlonkowski-n8n-skills-n8n-subworkflows": {
+      "hash": "6e268e99010848b3",
+      "translated_at": "2026-08-14T19:42:09.792Z"
+    },
+    "content:czlonkowski-n8n-skills-n8n-validation-expert": {
+      "hash": "a0cb1ea68087bf4e",
+      "translated_at": "2026-08-14T19:42:24.662Z"
+    },
+    "content:czlonkowski-n8n-skills-using-n8n-mcp-skills": {
+      "hash": "29215a6571d378ab",
+      "translated_at": "2026-08-14T19:44:00.372Z"
+    },
+    "content:d-kimuson-claude-code-viewer-fix-schema": {
+      "hash": "095b9bdf23662651",
+      "translated_at": "2026-08-14T19:44:12.082Z"
+    },
+    "content:d-kimuson-claude-code-viewer-i18n": {
+      "hash": "5a573a724185b8da",
+      "translated_at": "2026-08-14T19:44:20.087Z"
+    },
+    "content:czlonkowski-n8n-skills-n8n-workflow-patterns": {
+      "hash": "3d7bc21580fdc595",
+      "translated_at": "2026-08-14T19:44:26.829Z"
+    },
+    "content:d-kimuson-claude-code-viewer-release": {
+      "hash": "425a04bc5de0c4ab",
+      "translated_at": "2026-08-14T19:44:48.725Z"
+    },
+    "content:daaain-claude-code-log-tool-renderer": {
+      "hash": "9db1e17182e5d537",
+      "translated_at": "2026-08-14T19:45:45.688Z"
     }
   }
 }

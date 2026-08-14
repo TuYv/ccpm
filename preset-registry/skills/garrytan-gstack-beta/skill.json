@@ -1,0 +1,26 @@
+{
+  "id": "garrytan-gstack-beta",
+  "name": "beta",
+  "description": "Clean fixture tool skill with no forced reads and no mode table.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "garrytan",
+  "install_path": ".claude/skills/beta/SKILL.md",
+  "source": {
+    "repo": "garrytan/gstack",
+    "url": "https://github.com/garrytan/gstack/blob/main/test/fixtures/context-bill/tree-a/beta/SKILL.md",
+    "path": "test/fixtures/context-bill/tree-a/beta/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-14T18:12:17.926Z",
+    "stars": 128021,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-14T16:28:56Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一款轻量的测试夹具工具技能，省去强制读取和模式表，适合简化测试配置与执行流程。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "garrytan-gstack-alpha",
+  "name": "alpha",
+  "description": "Fixture dispatcher with a mode table and forced-read references.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "garrytan",
+  "install_path": ".claude/skills/alpha/SKILL.md",
+  "source": {
+    "repo": "garrytan/gstack",
+    "url": "https://github.com/garrytan/gstack/blob/main/test/fixtures/context-bill/tree-a/alpha/SKILL.md",
+    "path": "test/fixtures/context-bill/tree-a/alpha/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-14T18:12:17.744Z",
+    "stars": 128021,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-14T16:28:56Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于按模式表调度测试夹具，并强制读取相关引用，适合管理复杂测试中的依赖与运行模式。"
+}

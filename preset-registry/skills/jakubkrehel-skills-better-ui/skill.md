@@ -1,6 +1,6 @@
 ---
 name: better-ui
-description: Design engineering principles for making interfaces feel polished. Use when building UI components, reviewing frontend code, implementing animations, hover states, shadows, borders, micro-interactions, enter/exit animations, choosing or reviewing icons, or any visual detail work. Triggers on UI polish, design details, "make it feel better", "feels off", stagger animations, border radius, optical alignment, image outlines, box shadows, icons, icon stroke weight, icon states, motion restraint.
+description: Design engineering principles for making interfaces feel polished. Use when building UI components, reviewing frontend code, implementing animations, hover states, shadows, borders, micro-interactions, enter/exit animations, choosing or reviewing icons, or any visual detail work. Triggers on UI polish, design details, "make it feel better", "feels off", stagger animations, theme switch transitions, border radius, optical alignment, image outlines, box shadows, icons, icon stroke weight, icon states, motion restraint.
 ---
 
 # Details that make interfaces feel better
@@ -18,7 +18,7 @@ Typography (text wrapping, font rendering, tabular numbers, spacing) is covered 
 | Category | When to Use |
 | --- | --- |
 | [Surfaces](surfaces.md) | Border radius, optical alignment, shadows, image outlines |
-| [Animations](animations.md) | Interruptible transitions, scale on press, skipping animation on page load, motion restraint |
+| [Animations](animations.md) | Interruptible transitions, scale on press, skipping animation on page load, theme switching, motion restraint |
 | [Enter & Exit](enter-exit.md) | Staged entrances, stagger timing, exit transitions |
 | [Icon Transitions](icon-transitions.md) | Cross-fading an icon on state change, with and without a motion library |
 | [Icons](icons.md) | Icon stroke weight, states via `currentColor`, outline vs fill, sizing, RTL flipping |
@@ -67,23 +67,27 @@ A subtle `scale(0.96)` on click gives buttons tactile feedback. Always use `0.96
 
 Use `initial={false}` on `AnimatePresence` to prevent enter animations on first render. Verify it doesn't break intentional entrance animations.
 
-### 11. Transition Only What Changes
+### 11. Suppress Transitions on Theme Switch
+
+A theme flip changes color, background, border, and shadow on nearly every element at once, so every transition on those properties fires together and the switch smears instead of snapping. Inject `*,*::before,*::after{transition:none !important}`, force a reflow, then remove it on the next frame. [Recipe](animations.md#suppress-transitions-on-theme-switch).
+
+### 12. Transition Only What Changes
 
 Always specify exact properties: `transition-property: scale, opacity`. Tailwind's `transition-transform` covers `transform, translate, scale, rotate`.
 
-### 12. Use `will-change` Sparingly
+### 13. Use `will-change` Sparingly
 
 Only for `transform`, `opacity`, `filter`, the properties the GPU can composite. Never use `will-change: all`. Only add when you notice first-frame stutter.
 
-### 13. Match Icon Stroke to Text Weight
+### 14. Match Icon Stroke to Text Weight
 
 An icon next to text carries the text's optical weight: `1.5px` stroke beside regular (400) text, `2px` beside semibold (600). One stroke weight per icon set; never mix libraries on one surface.
 
-### 14. One SVG, Recolored per State
+### 15. One SVG, Recolored per State
 
 Icons use `currentColor` and get their states (hover, selected, disabled) from CSS color and opacity, never from separate assets. Outline variant is the default; fill variant marks the active state.
 
-### 15. Motion Restraint
+### 16. Motion Restraint
 
 No custom animation on high-frequency interactions: the attention cost repeats on every trigger. Motion is never the only feedback channel; every animated state change also needs a static cue (color, icon, label).
 
@@ -96,6 +100,7 @@ No custom animation on high-frequency interactions: the attention cost repeats o
 | Border used only to fake elevation | Use layered `box-shadow` with transparency; keep structural and state borders |
 | Jarring staged entrance or contextual exit | Stagger infrequent entrances and keep context-preserving exits subtle |
 | Stateful icon or toggle animates its default state on page load | Add `initial={false}` to that `AnimatePresence`; preserve intentional page entrances |
+| Theme toggle crossfades the whole page | Disable transitions for the swap, force a reflow, restore on the next frame |
 | `transition: all` on elements | Specify exact properties |
 | First-frame animation stutter | Add `will-change: transform` (sparingly) |
 | Hairline icon beside bold text | Match the stroke width to the text weight |

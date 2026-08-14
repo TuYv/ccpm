@@ -1,6 +1,6 @@
 ---
 name: better-accessibility
-description: Accessibility engineering for product interfaces, from focus states and keyboard support to ARIA, forms, and screen readers. Use when building or reviewing UI components, modals, menus, forms, custom widgets, or when the user says "make this accessible" or reports keyboard or screen-reader issues. Triggers on accessibility, a11y, WCAG, aria, focus ring, focus-visible, focus trap, keyboard navigation, tab order, tabindex, screen reader, sr-only, aria-live, alt text, hit area, touch target, prefers-reduced-motion, autoplay, toast duration, skip link, semantic HTML, aria-label, form errors, disabled buttons, "not keyboard accessible".
+description: Accessibility engineering for product interfaces, from focus states and keyboard support to ARIA, forms, and screen readers. Use when building or reviewing UI components, modals, menus, forms, custom widgets, or when the user says "make this accessible" or reports keyboard or screen-reader issues. Triggers on accessibility, a11y, WCAG, aria, focus ring, focus-visible, focus trap, keyboard navigation, tab order, tabindex, screen reader, sr-only, aria-live, alt text, hit area, touch target, pointer-events, hover on touch, prefers-reduced-motion, autoplay, toast duration, skip link, semantic HTML, aria-label, form errors, disabled buttons, "not keyboard accessible".
 ---
 
 # Accessibility that comes with the craft
@@ -43,7 +43,7 @@ Modals set `inert` on the background content, move focus inside on open, and ret
 
 ### 5. Minimum Hit Area
 
-WCAG 2.5.8's Level AA baseline is a 24×24 CSS-pixel target or one of its defined spacing, equivalent-control, inline, user-agent, or essential exceptions. For easier activation, aim for 44×44px in touch contexts and 40×40px in desktop interfaces when density permits. Extend with a pseudo-element if the visible element should stay smaller. Never let extended hit areas overlap.
+WCAG 2.5.8's Level AA baseline is a 24×24 CSS-pixel target or one of its defined spacing, equivalent-control, inline, user-agent, or essential exceptions. For easier activation, aim for 44×44px in touch contexts and 40×40px in desktop interfaces when density permits. Extend with a pseudo-element if the visible element should stay smaller. Never let extended hit areas overlap, and give decorative layers `pointer-events: none` so a glow or gradient never swallows the clicks meant for the control beneath it.
 
 ### 6. Label and Type Every Control
 
@@ -95,6 +95,9 @@ The page must work at 200% zoom and reflow at 320px width without horizontal scr
 | `aria-hidden="true"` on a focusable element | Remove it or make the element non-focusable |
 | Functional icon alt describes the picture | Describe the action: `alt="Search"`, not `alt="magnifying glass"` |
 | Submit disabled until the form is valid | Keep it enabled; validate on submit and focus the first error |
+| Decorative glow or gradient swallowing clicks | `pointer-events: none` on the layer, plus `aria-hidden="true"` |
+| Hover treatment stuck after a tap on touch | Gate hover styling with `@media (hover: hover)` |
+| Tooltip on a natively `disabled` control | Persistent text beside it, or `aria-disabled` so it stays focusable |
 
 ## Reporting
 
