@@ -1,8 +1,8 @@
 {
   "id": "daymade-claude-code-skills-docs-cleaner",
   "name": "docs-cleaner",
-  "description": "Consolidates redundant documentation while preserving all valuable content. This skill should be used when users want to clean up documentation bloat, merge redundant docs, reduce documentation sprawl, or consolidate multiple files covering the same topic. Triggers include \"clean up docs\", \"consolidate documentation\", \"too many doc files\", \"merge these docs\", or when documentation exceeds 500 lines across multiple files covering similar topics.",
-  "category": "设计创意",
+  "description": ">- Consolidates redundant documentation while preserving all valuable content; keeps a doc set truthful after things change. Two modes. (1) POST-CHANGE GOVERNANCE — when code, scripts, config, env vars, ports, paths, deployment, auth, tests, or a documented procedure changed; also \"which docs are now wrong\", \"check docs for inconsistencies\", \"过时的命令/路径\", \"文档同步\". Use it even when the user mentions only the change and never the docs — updating them is part of the change, not optional cleanup. (2) C",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,11 @@
     "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-docs/docs-cleaner/SKILL.md",
     "path": "daymade-docs/docs-cleaner/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-14T14:14:31.833Z",
+    "discovered_at": "2026-08-14T16:09:21.047Z",
     "stars": 1335,
     "language": "Python",
-    "pushed_at": "2026-08-14T12:41:36Z",
+    "pushed_at": "2026-08-14T15:56:04Z",
     "license": "MIT"
   },
-  "summary_zh": "整合重复、分散的文档并保留有效内容，适合清理文档膨胀、合并同类文件和减少维护负担。"
+  "summary_zh": "一款文档治理工具，可合并重复内容，并在代码、配置或流程变更后排查和修正文档中的过时与不一致。"
 }
