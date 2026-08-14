@@ -1,7 +1,7 @@
 {
   "id": "addyosmani-agent-skills-security-and-hardening",
   "name": "security-and-hardening",
-  "description": "Hardens code against vulnerabilities. Use when handling user input, authentication, data storage, or external integrations. Use when building any feature that accepts untrusted data, manages user sessions, or interacts with third-party services.",
+  "description": "Hardens code against vulnerabilities. Use when handling user input, authentication, data storage, or external integrations. Use when building any feature that accepts untrusted data, manages user sessions, or interacts with third-party services. Use when personal data or privacy compliance (GDPR, CCPA) is involved.",
   "category": "数据分析",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/addyosmani/agent-skills/blob/main/skills/security-and-hardening/SKILL.md",
     "path": "skills/security-and-hardening/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-14T18:14:11.074Z",
-    "stars": 87223,
+    "discovered_at": "2026-08-14T20:06:54.832Z",
+    "stars": 87244,
     "language": "JavaScript",
-    "pushed_at": "2026-08-11T19:48:56Z",
+    "pushed_at": "2026-08-14T18:51:33Z",
     "license": "MIT"
   },
-  "summary_zh": "这是一个代码安全加固工具，帮你防范漏洞。在处理用户输入、身份验证、数据存储或对接第三方等涉及不可信数据的场景中，用它来保驾护航最合适。"
+  "summary_zh": "用于加固代码安全，防范不可信输入、认证会话、数据存储及第三方集成中的漏洞，适合涉及隐私合规的开发场景。"
 }

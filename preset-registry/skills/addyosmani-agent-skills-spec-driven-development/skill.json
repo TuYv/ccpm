@@ -1,8 +1,8 @@
 {
   "id": "addyosmani-agent-skills-spec-driven-development",
   "name": "spec-driven-development",
-  "description": "Creates specs before coding. Use when starting a new project, feature, or significant change and no specification exists yet. Use when requirements are unclear, ambiguous, or only exist as a vague idea.",
-  "category": "开发编程",
+  "description": "Creates specs before coding. Use when starting a new project, feature, or significant change and no specification exists yet. Use when requirements are unclear, ambiguous, or only exist as a vague idea. Use when a single requirement spans several independently testable capabilities and needs decomposing into a capability map of modules before specifying.",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,11 @@
     "url": "https://github.com/addyosmani/agent-skills/blob/main/skills/spec-driven-development/SKILL.md",
     "path": "skills/spec-driven-development/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-14T18:14:11.884Z",
-    "stars": 87223,
+    "discovered_at": "2026-08-14T20:06:55.348Z",
+    "stars": 87244,
     "language": "JavaScript",
-    "pushed_at": "2026-08-11T19:48:56Z",
+    "pushed_at": "2026-08-14T18:51:33Z",
     "license": "MIT"
   },
-  "summary_zh": "帮你在写代码前先生成规格说明的工具。适用于启动新项目或大改动时需求还不明确、甚至只是个模糊想法的场景，让你先理清思路再动手开发。"
+  "summary_zh": "一个先写规格再编码的开发工具，适合需求模糊的新项目、功能或重大改动，并能把复杂需求拆成可独立验证的模块。"
 }

@@ -1,0 +1,26 @@
+{
+  "id": "k-dense-ai-claude-scientific-skills-lab-hardware-cad",
+  "name": "lab-hardware-cad",
+  "description": "Design custom laboratory hardware as parametric build123d models and export fabrication-ready STEP, STL, and DXF files - microfluidic chips and molds, optomechanical mounts and breadboard adapters, cuvette and microplate holders, tube racks, animal-behavior rigs, and 3D-printed instrument fixtures. Use when a research task needs a physical part that must mate with standardized labware, an optical table, a cage system, or a printer, CNC, or laser process.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "K-Dense-AI",
+  "install_path": ".claude/skills/lab-hardware-cad/SKILL.md",
+  "source": {
+    "repo": "K-Dense-AI/claude-scientific-skills",
+    "url": "https://github.com/K-Dense-AI/claude-scientific-skills/blob/main/skills/lab-hardware-cad/SKILL.md",
+    "path": "skills/lab-hardware-cad/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-14T19:58:50.785Z",
+    "stars": 33514,
+    "language": "Python",
+    "pushed_at": "2026-08-14T19:39:05Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用参数化模型设计定制实验室硬件并导出可加工文件，适合制作需适配标准器材及3D打印、CNC或激光加工的零件。"
+}

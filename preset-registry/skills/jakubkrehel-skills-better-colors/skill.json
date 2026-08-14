@@ -1,7 +1,7 @@
 {
   "id": "jakubkrehel-skills-better-colors",
   "name": "better-colors",
-  "description": "OKLCH color space and color usage for web projects. Convert hex/rgb/hsl to oklch, generate palettes, check contrast, handle gamut boundaries, theme with Tailwind v4, and apply color with meaning. Triggers on oklch, color conversion, palette generation, contrast ratio, gamut, display p3, design tokens, semantic color tokens, hue drift, chroma, dark mode colors, accent color, color meaning, light and dark appearance, increased contrast.",
+  "description": "Color systems for digital products, from building and naming a palette to applying it with meaning and verifying contrast. Use when creating or extending a color palette, naming color tokens, theming light and dark appearances, auditing the colors in a codebase, or reviewing frontend code for color. Triggers on color palette, palette generation, color scale, color ramp, brand color, accent color, neutral palette, gray palette, status colors, design tokens, semantic color tokens, token naming, th",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/jakubkrehel/skills/blob/main/skills/better-colors/SKILL.md",
     "path": "skills/better-colors/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-14T18:20:03.225Z",
-    "stars": 3766,
+    "discovered_at": "2026-08-14T20:11:29.017Z",
+    "stars": 3769,
     "language": "Markdown",
-    "pushed_at": "2026-08-14T17:14:13Z",
+    "pushed_at": "2026-08-14T18:24:13Z",
     "license": "MIT"
   },
-  "summary_zh": "一套面向 Web 项目的 OKLCH 配色工具，适合转换颜色、生成色板、检查对比度并构建明暗主题。"
+  "summary_zh": "一套面向数字产品的配色方法指南，适合构建和命名色板、设计明暗主题、规范语义色彩，并检查对比度与前端用色。"
 }
