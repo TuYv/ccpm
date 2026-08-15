@@ -1,7 +1,7 @@
 {
   "id": "jasoncolapietro-suede-creator-skills-suede-analytics",
   "name": "suede-analytics",
-  "description": "Suede-owned measurement discipline for tracking plans, event and conversion instrumentation, UTMs, attribution, and verification of what actually fires. Use when setting up, auditing, or repairing analytics across web, product, paid, and lifecycle surfaces. NOT FOR: experiment design or significance decisions (use suede-ab-testing), campaign optimization (use suede-ads), or revenue-process architecture (use suede-revops).",
+  "description": "Suede-owned measurement discipline for tracking plans, event and conversion instrumentation, UTMs, attribution, and verification of what actually fires. Use when setting up, auditing, or repairing analytics across web, product, paid, and lifecycle surfaces. NOT FOR: experiment design or significance decisions (use suede-ab-testing), campaign optimization (use suede-ads), attribution modeling and reconciliation (use suede-attribution), or revenue-process architecture (use suede-revops).",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/JasonColapietro/suede-creator-skills/blob/main/skills/suede-analytics/SKILL.md",
     "path": "skills/suede-analytics/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-15T07:10:48.737Z",
+    "discovered_at": "2026-08-15T09:06:12.014Z",
     "stars": 151,
     "language": "JavaScript",
-    "pushed_at": "2026-08-15T07:06:49Z",
+    "pushed_at": "2026-08-15T08:14:12Z",
     "license": "MIT"
   },
-  "summary_zh": "一套统一管理埋点、转化与归因的分析规范，适合搭建、审计或修复网站、产品、广告及用户生命周期的数据追踪。"
+  "summary_zh": "一套数据分析追踪规范，用于搭建、审计和修复网站、产品、广告及用户生命周期中的埋点、UTM与转化追踪。"
 }
