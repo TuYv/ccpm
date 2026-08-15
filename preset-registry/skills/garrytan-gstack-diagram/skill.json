@@ -1,8 +1,8 @@
 {
   "id": "garrytan-gstack-diagram",
   "name": "diagram",
-  "description": "Turn an English description (or mermaid source) into a diagram triplet: the source, an editable .excalidraw file you can open (gstack)",
-  "category": "开发编程",
+  "description": "Turn an English description (or mermaid source) into a diagram triplet: the source, an editable .excalidraw file you can open on excalidraw.com, and rendered SVG + PNG. (gstack)",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,11 @@
     "url": "https://github.com/garrytan/gstack/blob/main/diagram/SKILL.md",
     "path": "diagram/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-15T03:03:49.937Z",
-    "stars": 128050,
+    "discovered_at": "2026-08-15T05:07:32.731Z",
+    "stars": 128056,
     "language": "TypeScript",
-    "pushed_at": "2026-08-14T16:28:56Z",
+    "pushed_at": "2026-08-15T05:02:07Z",
     "license": "MIT"
   },
-  "summary_zh": "一款把英文描述或 Mermaid 源码转成可编辑 Excalidraw 图表的工具，适合快速制作和迭代技术示意图。"
+  "summary_zh": "将英文描述或 Mermaid 源码转成可编辑图表，并导出 SVG、PNG，适合快速制作和迭代流程图。"
 }

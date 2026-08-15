@@ -1,7 +1,7 @@
 {
   "id": "garrytan-gstack-sync-gbrain",
   "name": "sync-gbrain",
-  "description": "Keep gbrain current with this repo's code and refresh agent search guidance in CLAUDE.md. Wraps the gstack-gbrain-sync orchestrator with state (gstack)",
+  "description": "Keep gbrain current with this repo's code and refresh agent search guidance in CLAUDE.md. (gstack)",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/garrytan/gstack/blob/main/sync-gbrain/SKILL.md",
     "path": "sync-gbrain/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-15T03:03:54.680Z",
-    "stars": 128050,
+    "discovered_at": "2026-08-15T05:07:37.681Z",
+    "stars": 128056,
     "language": "TypeScript",
-    "pushed_at": "2026-08-14T16:28:56Z",
+    "pushed_at": "2026-08-15T05:02:07Z",
     "license": "MIT"
   },
-  "summary_zh": "一个带状态管理的代码同步工具，用于让 gbrain 跟进仓库代码，并自动更新 CLAUDE.md 中的智能体搜索指引。"
+  "summary_zh": "一个代码同步与配置刷新工具，让智能代理知识与仓库代码保持一致，并更新 CLAUDE.md 中的搜索指引。"
 }

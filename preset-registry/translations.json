@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-15T04:52:28.837Z",
+  "updated_at": "2026-08-15T06:57:11.824Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -17228,9 +17228,9 @@
       "translated_at": "2026-08-12T06:07:56.385Z"
     },
     "bundle:garrytan-gstack": {
-      "hash": "58eb719e52548e46",
-      "summary_zh": "面向软件研发全流程的智能工具集，把规划评审、编码协作、自动化测试、性能检测与上线监控串成一套高效可靠的工作流。",
-      "translated_at": "2026-08-14T19:09:03.766Z"
+      "hash": "f95e84904257b4c3",
+      "summary_zh": "面向软件研发全流程的智能工具集，将规划评审、编码协作、自动化测试、性能回归和上线监控串成一体化工作流。",
+      "translated_at": "2026-08-15T06:06:24.234Z"
     },
     "bundle:egonex-ai-understand-anything": {
       "hash": "339d24a0fa2c5795",
@@ -21588,9 +21588,9 @@
       "translated_at": "2026-08-03T18:32:08.091Z"
     },
     "skill:garrytan-gstack-diagram": {
-      "hash": "fd6908581527f36c",
-      "summary_zh": "一款把英文描述或 Mermaid 源码转成可编辑 Excalidraw 图表的工具，适合快速制作和迭代技术示意图。",
-      "translated_at": "2026-08-03T18:32:08.623Z"
+      "hash": "b217fe951f8258ff",
+      "summary_zh": "将英文描述或 Mermaid 源码转成可编辑图表，并导出 SVG、PNG，适合快速制作和迭代流程图。",
+      "translated_at": "2026-08-15T06:06:29.654Z"
     },
     "skill:garrytan-gstack-freeze": {
       "hash": "249f6c090d606a7b",
@@ -21793,9 +21793,9 @@
       "translated_at": "2026-08-03T18:33:03.073Z"
     },
     "skill:garrytan-gstack-sync-gbrain": {
-      "hash": "ae0c141e3777f522",
-      "summary_zh": "一个带状态管理的代码同步工具，用于让 gbrain 跟进仓库代码，并自动更新 CLAUDE.md 中的智能体搜索指引。",
-      "translated_at": "2026-08-03T18:33:05.120Z"
+      "hash": "97016b578d8dccc7",
+      "summary_zh": "一个代码同步与配置刷新工具，让智能代理知识与仓库代码保持一致，并更新 CLAUDE.md 中的搜索指引。",
+      "translated_at": "2026-08-15T06:06:30.403Z"
     },
     "skill:garrytan-gstack-unfreeze": {
       "hash": "6bfdbcc6a0655a07",
@@ -36978,8 +36978,8 @@
       "translated_at": "2026-08-15T02:39:29.083Z"
     },
     "content:daymade-claude-code-skills-skill-creator": {
-      "hash": "2d43d2787d30bcee",
-      "translated_at": "2026-08-15T02:49:11.635Z"
+      "hash": "2c52a35b555972bf",
+      "translated_at": "2026-08-15T06:33:40.858Z"
     },
     "content:daymade-claude-code-skills-terraform-skill": {
       "hash": "34b139a0c885292a",
@@ -37116,6 +37116,138 @@
     "content:deanpeters-product-manager-skills-finance-based-pricing-advisor": {
       "hash": "76dfec64ffd55749",
       "translated_at": "2026-08-15T04:52:28.837Z"
+    },
+    "content:deanpeters-product-manager-skills-finance-metrics-quickref": {
+      "hash": "cc6289876c7d1e09",
+      "translated_at": "2026-08-15T06:26:03.607Z"
+    },
+    "content:deanpeters-product-manager-skills-incoming-request-advisor": {
+      "hash": "bff0bf0f48aff5aa",
+      "translated_at": "2026-08-15T06:27:25.480Z"
+    },
+    "content:deanpeters-product-manager-skills-intel-discipline-advisor": {
+      "hash": "667e021e2e2ea196",
+      "translated_at": "2026-08-15T06:28:39.460Z"
+    },
+    "content:deanpeters-product-manager-skills-intelligence-collection-disciplines": {
+      "hash": "bc247b338e4a6c3b",
+      "translated_at": "2026-08-15T06:31:36.010Z"
+    },
+    "content:deanpeters-product-manager-skills-jobs-to-be-done": {
+      "hash": "8677f17e76c98d8a",
+      "translated_at": "2026-08-15T06:33:06.208Z"
+    },
+    "content:deanpeters-product-manager-skills-lifecycle-play-advisor": {
+      "hash": "6d7854d8f9af350e",
+      "translated_at": "2026-08-15T06:35:36.948Z"
+    },
+    "content:deanpeters-product-manager-skills-lean-ux-canvas": {
+      "hash": "514f8debfeeab23a",
+      "translated_at": "2026-08-15T06:35:40.076Z"
+    },
+    "content:deanpeters-product-manager-skills-market-landscape-scan": {
+      "hash": "aa1f7c745c9c1726",
+      "translated_at": "2026-08-15T06:36:38.855Z"
+    },
+    "content:deanpeters-product-manager-skills-opportunity-solution-tree": {
+      "hash": "ecd7eb3f864118b2",
+      "translated_at": "2026-08-15T06:37:25.307Z"
+    },
+    "content:deanpeters-product-manager-skills-pestel-analysis": {
+      "hash": "78b9aea0238e7ef4",
+      "translated_at": "2026-08-15T06:38:43.355Z"
+    },
+    "content:deanpeters-product-manager-skills-organic-growth-advisor": {
+      "hash": "c52b9122882af7c7",
+      "translated_at": "2026-08-15T06:38:47.501Z"
+    },
+    "content:deanpeters-product-manager-skills-pestel-delta-monitor": {
+      "hash": "71e5fc801ab179b7",
+      "translated_at": "2026-08-15T06:39:41.585Z"
+    },
+    "content:deanpeters-product-manager-skills-pm-skill-creator": {
+      "hash": "f2d3f255de4681c3",
+      "translated_at": "2026-08-15T06:40:41.942Z"
+    },
+    "content:deanpeters-product-manager-skills-pol-probe": {
+      "hash": "575c87ca8d0029ed",
+      "translated_at": "2026-08-15T06:40:44.542Z"
+    },
+    "content:deanpeters-product-manager-skills-porters-five-forces": {
+      "hash": "eb24ecb628f42993",
+      "translated_at": "2026-08-15T06:41:47.918Z"
+    },
+    "content:deanpeters-product-manager-skills-positioning-statement": {
+      "hash": "44d46a65fa95871c",
+      "translated_at": "2026-08-15T06:42:51.981Z"
+    },
+    "content:deanpeters-product-manager-skills-pol-probe-advisor": {
+      "hash": "beeb07725be264b4",
+      "translated_at": "2026-08-15T06:43:02.633Z"
+    },
+    "content:deanpeters-product-manager-skills-positioning-workshop": {
+      "hash": "81554cbf6a1a932a",
+      "translated_at": "2026-08-15T06:44:49.887Z"
+    },
+    "content:deanpeters-product-manager-skills-prd-development": {
+      "hash": "27c34983656ef09b",
+      "translated_at": "2026-08-15T06:45:37.791Z"
+    },
+    "content:deanpeters-product-manager-skills-press-release": {
+      "hash": "1c972b1f2794b64b",
+      "translated_at": "2026-08-15T06:46:01.115Z"
+    },
+    "content:deanpeters-product-manager-skills-pricing-packaging-tracker": {
+      "hash": "9d8b32f578645d64",
+      "translated_at": "2026-08-15T06:46:40.165Z"
+    },
+    "content:deanpeters-product-manager-skills-prioritization-advisor": {
+      "hash": "effd2ff5c89dbf9e",
+      "translated_at": "2026-08-15T06:47:54.847Z"
+    },
+    "content:deanpeters-product-manager-skills-problem-framing-canvas": {
+      "hash": "e4c9402181639228",
+      "translated_at": "2026-08-15T06:48:20.168Z"
+    },
+    "content:deanpeters-product-manager-skills-problem-statement": {
+      "hash": "bd55dc2c0c1cca2c",
+      "translated_at": "2026-08-15T06:49:02.154Z"
+    },
+    "content:deanpeters-product-manager-skills-product-lifecycle-plays": {
+      "hash": "f917b60fa143cde8",
+      "translated_at": "2026-08-15T06:50:05.906Z"
+    },
+    "content:deanpeters-product-manager-skills-product-sense-interview-answer": {
+      "hash": "2171f3fe92120e58",
+      "translated_at": "2026-08-15T06:50:19.924Z"
+    },
+    "content:deanpeters-product-manager-skills-proto-persona": {
+      "hash": "0fbc24f3c1086f1d",
+      "translated_at": "2026-08-15T06:51:47.331Z"
+    },
+    "content:deanpeters-product-manager-skills-product-strategy-session": {
+      "hash": "617fd60be64e6da6",
+      "translated_at": "2026-08-15T06:52:07.373Z"
+    },
+    "content:deanpeters-product-manager-skills-recommendation-canvas": {
+      "hash": "bc06e2a209e2b4e8",
+      "translated_at": "2026-08-15T06:53:17.399Z"
+    },
+    "content:deanpeters-product-manager-skills-roadmap-planning": {
+      "hash": "7818444b9e307ec1",
+      "translated_at": "2026-08-15T06:54:18.678Z"
+    },
+    "content:deanpeters-product-manager-skills-saas-economics-efficiency-metrics": {
+      "hash": "a039f21725ac88fe",
+      "translated_at": "2026-08-15T06:56:20.251Z"
+    },
+    "content:deanpeters-product-manager-skills-skill-authoring-workflow": {
+      "hash": "9e84a341b895bd26",
+      "translated_at": "2026-08-15T06:57:07.079Z"
+    },
+    "content:deanpeters-product-manager-skills-saas-revenue-growth-metrics": {
+      "hash": "db11f14d62c3740c",
+      "translated_at": "2026-08-15T06:57:11.823Z"
     }
   }
 }
