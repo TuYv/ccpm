@@ -1,7 +1,7 @@
 {
   "id": "imbad0202-academic-research-skills-academic-paper-reviewer",
   "name": "academic-paper-reviewer",
-  "description": "Multi-perspective academic paper review with dynamic reviewer personas. Simulates 5 independent reviewers (Journal-Fit Reviewer + 3 peer reviewers + Devil's Advocate) with field-specific expertise. Supports full review, re-review (verification), quick assessment, methodology focus, Socratic guided, and calibration modes. Triggers on: review paper, peer review, manuscript review, referee report, review my paper, critique paper, simulate review, editorial review, calibrate reviewer, reviewer calib",
+  "description": "Multi-perspective academic paper review with dynamic reviewer personas. Runs a 5-seat, role-separated review panel (Journal-Fit Reviewer + 3 peer-review roles + Devil's Advocate) with field-specific expertise; role separation is not a claim of independent error processes. Supports full review, re-review (verification), quick assessment, methodology focus, Socratic guided, and calibration modes. Triggers on: review paper, peer review, manuscript review, referee report, review my paper, critique p",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/Imbad0202/academic-research-skills/blob/main/academic-paper-reviewer/SKILL.md",
     "path": "academic-paper-reviewer/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-15T05:08:57.638Z",
-    "stars": 42515,
+    "discovered_at": "2026-08-15T07:13:13.855Z",
+    "stars": 42527,
     "language": "Python",
-    "pushed_at": "2026-08-14T15:26:54Z",
+    "pushed_at": "2026-08-15T07:04:28Z",
     "license": null
   },
-  "summary_zh": "一款模拟多位领域审稿人从不同视角评审论文的工具，适合投稿前检查、复审验证和方法论改进。"
+  "summary_zh": "一款模拟多角色审稿委员会的论文评审工具，适合多视角检查论文质量、方法缺陷及期刊匹配度。"
 }
