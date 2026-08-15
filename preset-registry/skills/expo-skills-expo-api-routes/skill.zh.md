@@ -1,0 +1,367 @@
+---
+name: expo-api-routes
+description: Guidelines for creating API routes in Expo Router with EAS Hosting
+version: 1.0.0
+license: MIT
+---
+## 何时使用 API 路由
+
+在以下情况下使用 API 路由：
+
+- **服务器端密钥** — 绝不能发送到客户端的 API 密钥、数据库凭据或令牌
+- **数据库操作** — 不应暴露的直接数据库查询
+- **第三方 API 代理** — 调用外部服务（OpenAI、Stripe 等）时隐藏 API 密钥
+- **服务器端验证** — 在写入数据库之前验证数据
+- **Webhook 端点** — 接收来自 Stripe 或 GitHub 等服务的回调
+- **速率限制** — 在服务器层面控制访问
+- **高强度计算** — 将在移动设备上运行缓慢的处理任务卸载到服务器
+
+## 何时不应使用 API 路由
+
+在以下情况下避免使用 API 路由：
+
+- **数据已经公开** — 改为直接请求公共 API
+- **不需要密钥** — 静态数据或客户端可安全执行的操作
+- **需要实时更新** — 使用 WebSocket 或 Supabase Realtime 等服务
+- **简单的 CRUD** — 考虑使用 Firebase、Supabase 或 Convex 等托管后端
+- **文件上传** — 使用直接上传到存储服务的方式（S3 预签名 URL、Cloudflare R2）
+- **仅需身份验证** — 改用 Clerk、Auth0 或 Firebase Auth
+
+## 文件结构
+
+API 路由位于 `app` 目录中，并使用 `+api.ts` 后缀：
+
+```
+app/
+  api/
+    hello+api.ts          → GET /api/hello
+    users+api.ts          → /api/users
+    users/[id]+api.ts     → /api/users/:id
+  (tabs)/
+    index.tsx
+```
+
+## 基本 API 路由
+
+```ts
+// app/api/hello+api.ts
+export function GET(request: Request) {
+  return Response.json({ message: "Hello from Expo!" });
+}
+```
+
+## HTTP 方法
+
+为每种 HTTP 方法导出具名函数：
+
+```ts
+// app/api/items+api.ts
+export function GET(request: Request) {
+  return Response.json({ items: [] });
+}
+
+export async function POST(request: Request) {
+  const body = await request.json();
+  return Response.json({ created: body }, { status: 201 });
+}
+
+export async function PUT(request: Request) {
+  const body = await request.json();
+  return Response.json({ updated: body });
+}
+
+export async function DELETE(request: Request) {
+  return new Response(null, { status: 204 });
+}
+```
+
+## 动态路由
+
+```ts
+// app/api/users/[id]+api.ts
+export function GET(request: Request, { id }: { id: string }) {
+  return Response.json({ userId: id });
+}
+```
+
+## 请求处理
+
+### 查询参数
+
+```ts
+export function GET(request: Request) {
+  const url = new URL(request.url);
+  const page = url.searchParams.get("page") ?? "1";
+  const limit = url.searchParams.get("limit") ?? "10";
+
+  return Response.json({ page, limit });
+}
+```
+
+### 请求头
+
+```ts
+export function GET(request: Request) {
+  const auth = request.headers.get("Authorization");
+
+  if (!auth) {
+    return Response.json({ error: "Unauthorized" }, { status: 401 });
+  }
+
+  return Response.json({ authenticated: true });
+}
+```
+
+### JSON 请求体
+
+```ts
+export async function POST(request: Request) {
+  const { email, password } = await request.json();
+
+  if (!email || !password) {
+    return Response.json({ error: "Missing fields" }, { status: 400 });
+  }
+
+  return Response.json({ success: true });
+}
+```
+
+## 环境变量
+
+使用 `process.env` 获取服务端密钥：
+
+```ts
+// app/api/ai+api.ts
+export async function POST(request: Request) {
+  const { prompt } = await request.json();
+
+  const response = await fetch("https://api.openai.com/v1/chat/completions", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
+    },
+    body: JSON.stringify({
+      model: "gpt-4",
+      messages: [{ role: "user", content: prompt }],
+    }),
+  });
+
+  const data = await response.json();
+  return Response.json(data);
+}
+```
+
+设置环境变量：
+
+- **本地**：创建 `.env` 文件（切勿提交）
+- **EAS Hosting**：使用 `eas env:create` 或 Expo 控制面板
+
+## CORS 标头
+
+为 Web 客户端添加 CORS：
+
+```ts
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+  "Access-Control-Allow-Headers": "Content-Type, Authorization",
+};
+
+export function OPTIONS() {
+  return new Response(null, { headers: corsHeaders });
+}
+
+export function GET() {
+  return Response.json({ data: "value" }, { headers: corsHeaders });
+}
+```
+
+## 错误处理
+
+```ts
+export async function POST(request: Request) {
+  try {
+    const body = await request.json();
+    // Process...
+    return Response.json({ success: true });
+  } catch (error) {
+    console.error("API error:", error);
+    return Response.json({ error: "Internal server error" }, { status: 500 });
+  }
+}
+```
+
+## 本地测试
+
+启动支持 API 路由的开发服务器：
+
+```bash
+npx expo serve
+```
+
+这会在 `http://localhost:8081` 启动一个完全支持 API 路由的本地服务器。
+
+使用 curl 进行测试：
+
+```bash
+curl http://localhost:8081/api/hello
+curl -X POST http://localhost:8081/api/users -H "Content-Type: application/json" -d '{"name":"Test"}'
+```
+
+## 部署到 EAS Hosting
+
+### 前置条件
+
+```bash
+npm install -g eas-cli
+eas login
+```
+
+### 部署
+
+```bash
+eas deploy
+```
+
+这会构建 API 路由并将其部署到 EAS Hosting（Cloudflare Workers）。
+
+### 生产环境的环境变量
+
+```bash
+# Create a secret
+eas env:create --name OPENAI_API_KEY --value sk-xxx --environment production
+
+# Or use the Expo dashboard
+```
+
+### 自定义域名
+
+在 `eas.json` 或 Expo 控制面板中进行配置。
+
+## EAS Hosting 运行时（Cloudflare Workers）
+
+API 路由在 Cloudflare Workers 上运行。主要限制如下：
+
+### 缺失或受限的 API
+
+- **不支持 Node.js 文件系统** — `fs` 模块不可用
+- **不支持原生 Node 模块** — 请使用 Web API 或 polyfill
+- **执行时间有限** — CPU 密集型任务的超时时间为 30 秒
+- **不支持持久连接** — WebSocket 需要使用 Durable Objects
+- **fetch 可用** — 使用标准 fetch 发起 HTTP 请求
+
+### 改用 Web API
+
+```ts
+// Use Web Crypto instead of Node crypto
+const hash = await crypto.subtle.digest(
+  "SHA-256",
+  new TextEncoder().encode("data")
+);
+
+// Use fetch instead of node-fetch
+const response = await fetch("https://api.example.com");
+
+// Use Response/Request (already available)
+return new Response(JSON.stringify(data), {
+  headers: { "Content-Type": "application/json" },
+});
+```
+
+### 数据库选项
+
+由于文件系统不可用，请使用云数据库：
+
+- **Cloudflare D1** — 边缘 SQLite
+- **Turso** — 分布式 SQLite
+- **PlanetScale** — 无服务器 MySQL
+- **Supabase** — 提供 REST API 的 Postgres
+- **Neon** — 无服务器 Postgres
+
+使用 Turso 的示例：
+
+```ts
+// app/api/users+api.ts
+import { createClient } from "@libsql/client/web";
+
+const db = createClient({
+  url: process.env.TURSO_URL!,
+  authToken: process.env.TURSO_AUTH_TOKEN!,
+});
+
+export async function GET() {
+  const result = await db.execute("SELECT * FROM users");
+  return Response.json(result.rows);
+}
+```
+
+## 从客户端调用 API 路由
+
+```ts
+// From React Native components
+const response = await fetch("/api/hello");
+const data = await response.json();
+
+// With body
+const response = await fetch("/api/users", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ name: "John" }),
+});
+```
+
+## 常见模式
+
+### 身份验证中间件
+
+```ts
+// utils/auth.ts
+export async function requireAuth(request: Request) {
+  const token = request.headers.get("Authorization")?.replace("Bearer ", "");
+
+  if (!token) {
+    throw new Response(JSON.stringify({ error: "Unauthorized" }), {
+      status: 401,
+      headers: { "Content-Type": "application/json" },
+    });
+  }
+
+  // Verify token...
+  return { userId: "123" };
+}
+
+// app/api/protected+api.ts
+import { requireAuth } from "../../utils/auth";
+
+export async function GET(request: Request) {
+  const { userId } = await requireAuth(request);
+  return Response.json({ userId });
+}
+```
+
+### 代理外部 API
+
+```ts
+// app/api/weather+api.ts
+export async function GET(request: Request) {
+  const url = new URL(request.url);
+  const city = url.searchParams.get("city");
+
+  const response = await fetch(
+    `https://api.weather.com/v1/current?city=${city}&key=${process.env.WEATHER_API_KEY}`
+  );
+
+  return Response.json(await response.json());
+}
+```
+
+## 规则
+
+- 绝不要在客户端代码中暴露 API 密钥或机密信息
+- 始终验证并净化用户输入
+- 使用正确的 HTTP 状态码（200、201、400、401、404、500）
+- 使用 try/catch 妥善处理错误
+- 保持 API 路由职责单一——每个端点只负责一项功能
+- 使用 TypeScript 确保类型安全
+- 在服务端记录错误以便调试
