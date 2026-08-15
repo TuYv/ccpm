@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-15T13:37:05.796Z",
+  "updated_at": "2026-08-15T15:45:58.033Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -3748,9 +3748,9 @@
       "translated_at": "2026-05-19T20:25:54.996Z"
     },
     "skill:avifenesh-agnix-agnix": {
-      "hash": "1849aab32493a981",
-      "summary_zh": "用于检查智能体配置、技能、钩子和 MCP 文件，按 447 条规则发现格式或配置问题。",
-      "translated_at": "2026-08-09T00:21:07.750Z"
+      "hash": "842acd942d3adfb9",
+      "summary_zh": "一款智能体配置检查工具，可按数百条规则校验技能、钩子、CLAUDE.md 和 MCP 配置。",
+      "translated_at": "2026-08-15T15:10:26.689Z"
     },
     "skill:avifenesh-agnix-fork-with-instructions": {
       "hash": "2faae074539089f9",
@@ -10113,9 +10113,9 @@
       "translated_at": "2026-08-03T04:59:53.521Z"
     },
     "bundle:avifenesh-agnix": {
-      "hash": "702eb098d664758f",
-      "summary_zh": "一套面向 AI 编程代理配置的校验与测试工具集，统一检查技能、上下文、引用和钩子，在评审部署前发现问题。",
-      "translated_at": "2026-08-09T00:21:03.101Z"
+      "hash": "c017962df6655ead",
+      "summary_zh": "一套面向 AI 编程代理生态的配置检查与质量保障工具集，统一验证技能、上下文和流程，降低开发部署风险。",
+      "translated_at": "2026-08-15T15:10:23.364Z"
     },
     "bundle:bitwize-music-studio-claude-ai-music-skills": {
       "hash": "adc87db9da3e0fd6",
@@ -34640,8 +34640,8 @@
       "translated_at": "2026-08-13T23:31:59.499Z"
     },
     "content:avifenesh-agnix-agnix": {
-      "hash": "a011b3640138d475",
-      "translated_at": "2026-08-13T23:32:14.228Z"
+      "hash": "0c14477ff3648629",
+      "translated_at": "2026-08-15T15:14:07.564Z"
     },
     "content:avifenesh-agnix-argument-hint-no-args": {
       "hash": "1a2823eb57588630",
@@ -37802,6 +37802,134 @@
     "content:eduardo-sl-go-agent-skills-go-grpc": {
       "hash": "76c4cbcc405dab98",
       "translated_at": "2026-08-15T13:37:05.796Z"
+    },
+    "content:eduardo-sl-go-agent-skills-go-interface-design": {
+      "hash": "07a7e742c7050d28",
+      "translated_at": "2026-08-15T15:22:16.595Z"
+    },
+    "content:eduardo-sl-go-agent-skills-go-modernize": {
+      "hash": "0746f4df2180ffca",
+      "translated_at": "2026-08-15T15:22:51.222Z"
+    },
+    "content:eduardo-sl-go-agent-skills-go-observability": {
+      "hash": "d793d447ce3cb273",
+      "translated_at": "2026-08-15T15:23:42.292Z"
+    },
+    "content:eduardo-sl-go-agent-skills-go-performance-review": {
+      "hash": "c678cc04d37e0026",
+      "translated_at": "2026-08-15T15:24:25.259Z"
+    },
+    "content:eduardo-sl-go-agent-skills-go-project-layout": {
+      "hash": "8f7f1e3d35fd3abf",
+      "translated_at": "2026-08-15T15:24:59.948Z"
+    },
+    "content:eduardo-sl-go-agent-skills-go-refactoring": {
+      "hash": "838abe596d0bbc36",
+      "translated_at": "2026-08-15T15:25:31.071Z"
+    },
+    "content:eduardo-sl-go-agent-skills-go-security-audit": {
+      "hash": "0086ddb6767287fc",
+      "translated_at": "2026-08-15T15:26:24.332Z"
+    },
+    "content:eduardo-sl-go-agent-skills-go-semantic-tools": {
+      "hash": "75d2822412a2b019",
+      "translated_at": "2026-08-15T15:26:54.593Z"
+    },
+    "content:eduardo-sl-go-agent-skills-go-test-quality": {
+      "hash": "486d44cac7439ee6",
+      "translated_at": "2026-08-15T15:27:33.711Z"
+    },
+    "content:eduardo-sl-go-agent-skills-go-test-table-driven": {
+      "hash": "6b334d9cf18b4d60",
+      "translated_at": "2026-08-15T15:28:12.057Z"
+    },
+    "content:eduardo-sl-go-agent-skills-go-troubleshooting": {
+      "hash": "700f7111aa826bb4",
+      "translated_at": "2026-08-15T15:28:51.403Z"
+    },
+    "content:ehmo-platform-design-skills-android": {
+      "hash": "403458e7700c7aab",
+      "translated_at": "2026-08-15T15:32:04.712Z"
+    },
+    "content:ehmo-platform-design-skills-ios": {
+      "hash": "76260eaca00b70d0",
+      "translated_at": "2026-08-15T15:32:26.378Z"
+    },
+    "content:ehmo-platform-design-skills-ipados": {
+      "hash": "b430c292d5858e01",
+      "translated_at": "2026-08-15T15:34:42.134Z"
+    },
+    "content:ehmo-platform-design-skills-macos": {
+      "hash": "9fa44a38eee0138d",
+      "translated_at": "2026-08-15T15:36:14.615Z"
+    },
+    "content:ehmo-platform-design-skills-tvos": {
+      "hash": "249088f96e1c51e8",
+      "translated_at": "2026-08-15T15:36:36.546Z"
+    },
+    "content:ehmo-platform-design-skills-watchos": {
+      "hash": "4075957fb71f2f33",
+      "translated_at": "2026-08-15T15:38:21.780Z"
+    },
+    "content:ehmo-platform-design-skills-visionos": {
+      "hash": "13c206084fb566f8",
+      "translated_at": "2026-08-15T15:38:26.350Z"
+    },
+    "content:ericosiu-ai-marketing-skills-autoresearch": {
+      "hash": "4c7732e3ad0f4f70",
+      "translated_at": "2026-08-15T15:39:19.905Z"
+    },
+    "content:ericosiu-ai-marketing-skills-clone-site": {
+      "hash": "a2740f51c431e751",
+      "translated_at": "2026-08-15T15:39:36.073Z"
+    },
+    "content:ericosiu-ai-marketing-skills-closed-loop-analytics-upgrade": {
+      "hash": "a3c096bdf46f02fe",
+      "translated_at": "2026-08-15T15:40:04.458Z"
+    },
+    "content:ericosiu-ai-marketing-skills-content-eval": {
+      "hash": "5802d4526f85f171",
+      "translated_at": "2026-08-15T15:41:00.916Z"
+    },
+    "content:ericosiu-ai-marketing-skills-content-ops": {
+      "hash": "fe56ba3adc389c2a",
+      "translated_at": "2026-08-15T15:41:52.863Z"
+    },
+    "content:ericosiu-ai-marketing-skills-conversion-ops": {
+      "hash": "56934509a15f9237",
+      "translated_at": "2026-08-15T15:42:22.514Z"
+    },
+    "content:ehmo-platform-design-skills-web": {
+      "hash": "bbdf17699240a943",
+      "translated_at": "2026-08-15T15:42:31.656Z"
+    },
+    "content:ericosiu-ai-marketing-skills-deck-generator": {
+      "hash": "736216cd5a583370",
+      "translated_at": "2026-08-15T15:42:46.145Z"
+    },
+    "content:ericosiu-ai-marketing-skills-finance-ops": {
+      "hash": "83dc972a36f4faa2",
+      "translated_at": "2026-08-15T15:43:03.037Z"
+    },
+    "content:ericosiu-ai-marketing-skills-growth-engine": {
+      "hash": "c9c115ce18d60644",
+      "translated_at": "2026-08-15T15:43:17.265Z"
+    },
+    "content:ericosiu-ai-marketing-skills-lead-dossier": {
+      "hash": "207014e96190e89f",
+      "translated_at": "2026-08-15T15:43:41.775Z"
+    },
+    "content:ericosiu-ai-marketing-skills-net-new-video-editor": {
+      "hash": "87d82d1daae5785f",
+      "translated_at": "2026-08-15T15:43:43.253Z"
+    },
+    "content:ericosiu-ai-marketing-skills-outbound-engine": {
+      "hash": "d7e4d381b0256782",
+      "translated_at": "2026-08-15T15:44:22.830Z"
+    },
+    "content:ericosiu-ai-marketing-skills-personal-strategic-signal-intelligence": {
+      "hash": "95e38773b4521229",
+      "translated_at": "2026-08-15T15:45:58.032Z"
     }
   }
 }

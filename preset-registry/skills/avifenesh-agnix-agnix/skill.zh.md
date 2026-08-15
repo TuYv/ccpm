@@ -1,19 +1,19 @@
 ---
 name: agnix
-description: "Use when user asks to 'lint agent configs', 'validate skills', 'check CLAUDE.md', 'validate hooks', 'lint MCP'. Validates agent configuration files against 447 rules."
+description: "Use when user asks to 'lint agent configs', 'validate skills', 'check CLAUDE.md', 'validate hooks', 'lint MCP'. Validates agent configuration files against 448 rules."
 allowed-tools: Bash(agnix:*), Bash(cargo:*), Read, Glob, Grep
 ---
 # agnix
 
-在代理配置破坏你的工作流之前对其进行检查。可验证 Claude Code、Cursor、GitHub Copilot 和 Codex CLI 中的 Skills、Hooks、MCP、Memory 及 Plugins。
+在代理配置破坏你的工作流之前对其进行检查。验证 Claude Code、Cursor、GitHub Copilot 和 Codex CLI 中的技能、钩子、MCP、记忆和插件。
 
-## 使用时机
+## 使用场景
 
 当用户提出以下请求时调用：
 - “检查我的代理配置”
-- “验证我的 Skills”
+- “验证我的技能”
 - “检查我的 CLAUDE.md”
-- “验证 Hooks”
+- “验证钩子”
 - “检查 MCP 配置”
 - “修复代理配置问题”
 
@@ -21,14 +21,14 @@ allowed-tools: Bash(agnix:*), Bash(cargo:*), Read, Glob, Grep
 
 | 文件类型 | 示例 |
 |-----------|----------|
-| Skills | `SKILL.md` |
-| Memory | `CLAUDE.md`, `AGENTS.md` |
-| Hooks | `.claude/settings.json` |
+| 技能 | `SKILL.md` |
+| 记忆 | `CLAUDE.md`, `AGENTS.md` |
+| 钩子 | `.claude/settings.json` |
 | MCP | `*.mcp.json` |
 | Cursor | `.cursor/rules/*.mdc` |
 | Copilot | `.github/copilot-instructions.md` |
 
-## 执行步骤
+## 执行
 
 ### 1. 检查是否已安装 agnix
 
@@ -47,7 +47,7 @@ cargo install agnix-cli
 agnix .
 ```
 
-### 3. 如果发现问题且请求了 --fix
+### 3. 如果发现问题并请求了 --fix
 
 ```bash
 agnix --fix .
@@ -66,8 +66,8 @@ agnix .
 | `agnix .` | 验证当前项目 |
 | `agnix --fix .` | 自动修复问题 |
 | `agnix --strict .` | 将警告视为错误 |
-| `agnix --target claude-code .` | 仅应用 Claude Code 规则 |
-| `agnix --target cursor .` | 仅应用 Cursor 规则 |
+| `agnix --target claude-code .` | 仅使用 Claude Code 规则 |
+| `agnix --target cursor .` | 仅使用 Cursor 规则 |
 | `agnix --watch .` | 监视模式 |
 | `agnix --format json .` | JSON 输出 |
 
@@ -87,7 +87,7 @@ Found 1 error, 1 warning (2 fixable)
 
 | 问题 | 解决方案 |
 |-------|----------|
-| 无效的 Skill 名称 | 使用小写字母和连字符：`my-skill` |
+| 技能名称无效 | 使用带连字符的小写形式：`my-skill` |
 | 通用指令 | 删除“be helpful”“be accurate” |
 | 缺少触发短语 | 在描述中添加“Use when...” |
 | 目录与名称不匹配 | 重命名目录，使其与 `name:` 字段匹配 |
