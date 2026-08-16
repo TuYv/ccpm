@@ -2,7 +2,7 @@
   "id": "affaan-m-ecc-strategic-compact",
   "name": "strategic-compact",
   "description": "Suggests manual context compaction at logical intervals to preserve context through task phases rather than arbitrary auto-compaction. Use when a session is approaching a context limit and a task phase is a natural place to compact.",
-  "category": "通用其他",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/affaan-m/ECC/blob/main/.agents/skills/strategic-compact/SKILL.md",
     "path": ".agents/skills/strategic-compact/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-16T00:51:08.770Z",
-    "stars": 240301,
+    "discovered_at": "2026-08-16T02:16:09.334Z",
+    "stars": 240310,
     "language": "JavaScript",
-    "pushed_at": "2026-08-15T20:02:53Z",
+    "pushed_at": "2026-08-16T02:12:46Z",
     "license": "MIT"
   },
   "summary_zh": "一款上下文整理辅助工具，适合在任务阶段切换或接近上限时手动压缩，避免自动压缩导致关键信息丢失。"
