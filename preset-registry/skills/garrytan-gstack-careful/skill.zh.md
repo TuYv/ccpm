@@ -17,22 +17,23 @@ hooks:
           command: "bash $HOME/.claude/skills/gstack/careful/bin/check-careful.sh"
           statusMessage: "Checking for destructive commands..."
 ---
-<!-- 由 SKILL.md.tmpl 自动生成 — 请勿直接编辑 -->
-<!-- 重新生成：bun run gen:skill-docs -->
+<!-- AUTO-GENERATED from SKILL.md.tmpl — do not edit directly -->
+<!-- Regenerate: bun run gen:skill-docs -->
 
 
 ## 何时调用此技能
 
 在执行 rm -rf、DROP TABLE、
-强制推送、git reset --hard、kubectl delete 及类似破坏性操作前发出警告。
-用户可以覆盖每项警告。适用于操作生产环境、调试线上系统
-或在共享环境中工作时。当用户要求“be careful”“safety mode”
+强制推送、git reset --hard、kubectl delete 以及类似的破坏性操作之前发出警告。
+用户可以覆盖每个警告。在操作生产环境、调试线上系统
+或在共享环境中工作时使用。当用户要求“be careful”“safety mode”、
 “prod mode”或“careful mode”时使用。
 
-# /careful — 破坏性命令防护措施
+# /careful — 破坏性命令防护机制
 
 安全模式现已**启用**。每条 bash 命令在运行前都会接受破坏性
-模式检查。如果检测到破坏性命令，你将收到警告，并可以选择继续或取消。
+模式检查。如果检测到破坏性命令，你会收到警告，
+并可以选择继续或取消。
 
 ```bash
 mkdir -p ~/.gstack/analytics
@@ -59,10 +60,28 @@ echo '{"skill":"careful","ts":"'$(date -u +%Y-%m-%dT%H:%M:%SZ)'","repo":"'$(base
 
 ## 工作原理
 
-该钩子从工具输入 JSON 中读取命令，根据上述
-模式进行检查；如果发现匹配项，则返回一个包含
+该钩子从工具输入 JSON 中读取命令，依据上述
+模式进行检查；如果发现匹配项，则返回包含
 `permissionDecision: "ask"` 和警告原因的 `hookSpecificOutput` 载荷（该
-决定必须嵌套在 `hookSpecificOutput` 下——Claude Code 会忽略顶层的
-`permissionDecision`）。你始终可以覆盖警告并继续执行。
+决策必须嵌套在 `hookSpecificOutput` 下——Claude Code 会忽略顶层的
+`permissionDecision`）。你始终可以覆盖 MEDIUM 警告并
+继续执行。
 
-要停用此模式，请结束当前对话或开始新对话。钩子的作用域仅限当前会话。
+## HIGH 级别（硬性拒绝）
+
+两种灾难性命令形式会被**拒绝**，而不是询问：对
+`/`、`~` 或 `$HOME` 本身执行 `rm -r`/`-R`，以及强制推送到仓库的**默认分支**。仅限 SIMPLE
+命令（不得包含 `;`、`&&`、`||`、`|`、换行符）——复合命令形式会
+降级为 MEDIUM 询问；`--force-with-lease` 永远不会被归为 HIGH。这是一种尽力而为的
+建议性硬停止机制，而不是策略边界：其绕过方式是结束当前
+主动启用且作用域限定于会话的 /careful 会话。
+
+## 项目模式（只能添加）
+
+可在
+`~/.gstack/careful-patterns.txt`（全局）或
+`~/.gstack/projects/<slug>/careful-patterns.txt`（每个项目）中添加警告规则——每行一个 POSIX ERE，允许使用 `#` 注释。
+这些规则会在内置规则族之后进行检查，因此配置只能添加规则，绝不能禁止
+基线警告。无效的正则表达式行会被跳过。
+
+如需停用，请结束对话或开始一个新对话。钩子的作用域限定于会话。

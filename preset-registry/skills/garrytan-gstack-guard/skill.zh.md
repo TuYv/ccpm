@@ -28,20 +28,24 @@ hooks:
           command: "bash $HOME/.claude/skills/gstack/freeze/bin/check-freeze.sh"
           statusMessage: "Checking freeze boundary..."
 ---
-<!-- 来自 SKILL.md.tmpl 的自动生成内容 — 请勿直接编辑 -->
-<!-- 重新生成方式：bun run gen:skill-docs -->
+<!-- AUTO-GENERATED from SKILL.md.tmpl — do not edit directly -->
+<!-- Regenerate: bun run gen:skill-docs -->
 
 
-## 何时调用此 skill
+## 何时调用此技能
 
-将 `/careful`（在执行 `rm -rf`、`DROP TABLE`、`force-push` 等前发出警告）与 `/freeze`（限制在指定目录外无法编辑）结合起来。用于在触碰生产环境或调试在线系统时实现最高安全性。用户要求“guard mode”、“full safety”、“lock it down”或“maximum safety”时使用。
+结合了 /careful（在执行 rm -rf、DROP TABLE、强制推送等操作前发出警告）与
+/freeze（阻止对指定目录之外的内容进行编辑）。在操作生产环境或调试线上系统时，
+使用此技能可获得最高级别的安全保障。当用户要求启用“guard mode”、
+“full safety”、“lock it down”或“maximum safety”时使用。
 
-# /guard — 完全安全模式
+# /guard — 全面安全模式
 
-同时激活危险命令告警和目录作用域编辑限制。
-这是 `/careful` 与 `/freeze` 的单一组合命令。
+同时启用破坏性命令警告和限定目录范围的编辑限制。
+这是将 `/careful` + `/freeze` 合并到单个命令中的组合模式。
 
-**依赖说明：** 本 skill 引用了同级目录下 `/careful` 和 `/freeze` 的 hook 脚本。两者都必须已安装（它们会由 gstack 设置脚本一并安装）。
+**依赖说明：** 此技能会引用同级 `/careful`
+和 `/freeze` 技能目录中的钩子脚本。两者都必须已安装（gstack 设置脚本会同时安装它们）。
 
 ```bash
 mkdir -p ~/.gstack/analytics
@@ -50,10 +54,10 @@ echo '{"skill":"guard","ts":"'$(date -u +%Y-%m-%dT%H:%M:%SZ)'","repo":"'$(basena
 
 ## 设置
 
-向用户询问要限制编辑到哪个目录。使用 AskUserQuestion：
+询问用户要将编辑限制在哪个目录中。使用 AskUserQuestion：
 
-- 问题：“Guard mode：应将编辑限制在哪个目录？危险命令告警始终开启。所选路径外的文件将禁止编辑。”
-- 文本输入（非多选）——用户输入一个路径。
+- 问题：“守护模式：应将编辑限制在哪个目录中？破坏性命令警告将始终启用。对所选路径之外文件的编辑将被阻止。”
+- 文本输入（非多项选择）——用户输入一个路径。
 
 用户提供目录路径后：
 
@@ -63,7 +67,7 @@ FREEZE_DIR=$(cd "<user-provided-path>" 2>/dev/null && pwd)
 echo "$FREEZE_DIR"
 ```
 
-2. 确保以斜杠结尾并保存到冻结状态文件：
+2. 确保路径末尾带有斜杠，并将其保存到冻结状态文件中：
 ```bash
 FREEZE_DIR="${FREEZE_DIR%/}/"
 eval "$(~/.claude/skills/gstack/bin/gstack-paths)"
@@ -74,12 +78,12 @@ echo "Freeze boundary set: $FREEZE_DIR"
 ```
 
 告知用户：
-- “**Guard mode active.** Two protections are now running:”
-- “1. **Destructive command warnings** — rm -rf、DROP TABLE、force-push 等在执行前会发出警告（可覆盖）”
-- “2. **Edit boundary** — 文件编辑已限制在 `<path>/`。该目录外的编辑将被阻止。”
-- “To remove the edit boundary, run `/unfreeze`. To deactivate everything, end the session.”
+- “**守护模式已启用。** 现在有两项保护正在运行：”
+- “1. **破坏性命令防护** —— rm -rf、DROP TABLE、强制推送等命令在执行前会发出警告（可覆盖）；灾难性形式（递归删除 / 或 ~、强制推送到默认分支）将被强制拒绝”
+- “2. **编辑边界** —— 文件编辑仅限于 `<path>/`。对该目录之外内容的编辑将被阻止。”
+- “要移除编辑边界，请运行 `/unfreeze`。要停用所有保护，请结束会话。”
 
-## 受保护范围
+## 受保护的内容
 
-详见 `/careful` 获取完整的危险命令模式及安全例外列表。
-详见 `/freeze` 了解编辑边界执行机制。
+有关破坏性命令模式和安全例外的完整列表，请参阅 `/careful`。
+有关编辑边界强制执行方式的信息，请参阅 `/freeze`。
