@@ -17,44 +17,52 @@ hooks:
           command: "bash $HOME/.claude/skills/gstack/careful/bin/check-careful.sh"
           statusMessage: "Checking for destructive commands..."
 ---
-<!-- AUTO-GENERATED from SKILL.md.tmpl — do not edit directly -->
-<!-- Regenerate: bun run gen:skill-docs -->
+<!-- 由 SKILL.md.tmpl 自动生成 — 请勿直接编辑 -->
+<!-- 重新生成：bun run gen:skill-docs -->
 
 
 ## 何时调用此技能
 
-在执行 `rm -rf`、`DROP TABLE`、`force-push`、`git reset --hard`、`kubectl delete` 等类似破坏性操作前发出警告。
-用户可以覆盖每条警告。在触及生产环境、调试在线系统或在共享环境中工作时使用。若被要求“be careful”、“safety mode”、“prod mode”或“careful mode”时也应使用。
+在执行 rm -rf、DROP TABLE、
+强制推送、git reset --hard、kubectl delete 及类似破坏性操作前发出警告。
+用户可以覆盖每项警告。适用于操作生产环境、调试线上系统
+或在共享环境中工作时。当用户要求“be careful”“safety mode”
+“prod mode”或“careful mode”时使用。
 
-# /careful — 破坏性命令防护栏
+# /careful — 破坏性命令防护措施
 
-安全模式现已**激活**。每条 bash 命令都会在运行前检查是否包含破坏性模式。若检测到破坏性命令，你会收到警告并可选择继续执行或取消。
+安全模式现已**启用**。每条 bash 命令在运行前都会接受破坏性
+模式检查。如果检测到破坏性命令，你将收到警告，并可以选择继续或取消。
 
 ```bash
 mkdir -p ~/.gstack/analytics
 echo '{"skill":"careful","ts":"'$(date -u +%Y-%m-%dT%H:%M:%SZ)'","repo":"'$(basename "$(git rev-parse --show-toplevel 2>/dev/null)" 2>/dev/null || echo "unknown")'"}'  >> ~/.gstack/analytics/skill-usage.jsonl 2>/dev/null || true
 ```
 
-## 保护范围
+## 受保护的操作
 
-| Pattern | Example | Risk |
+| 模式 | 示例 | 风险 |
 |---------|---------|------|
 | `rm -rf` / `rm -r` / `rm --recursive` | `rm -rf /var/data` | 递归删除 |
 | `DROP TABLE` / `DROP DATABASE` | `DROP TABLE users;` | 数据丢失 |
 | `TRUNCATE` | `TRUNCATE orders;` | 数据丢失 |
-| `git push --force` / `-f` | `git push -f origin main` | 历史重写 |
-| `git reset --hard` | `git reset --hard HEAD~3` | 未提交工作丢失 |
-| `git checkout .` / `git restore .` | `git checkout .` | 未提交工作丢失 |
-| `kubectl delete` | `kubectl delete pod` | 生产环境影响 |
-| `docker rm -f` / `docker system prune` | `docker system prune -a` | 容器/镜像丢失 |
+| `git push --force` / `-f` | `git push -f origin main` | 重写历史记录 |
+| `git reset --hard` | `git reset --hard HEAD~3` | 丢失未提交的工作 |
+| `git checkout .` / `git restore .` | `git checkout .` | 丢失未提交的工作 |
+| `kubectl delete` | `kubectl delete pod` | 影响生产环境 |
+| `docker rm -f` / `docker system prune` | `docker system prune -a` | 丢失容器/镜像 |
 
 ## 安全例外
 
-这些模式不提示警告：
+以下模式无需警告即可执行：
 - `rm -rf node_modules` / `.next` / `dist` / `__pycache__` / `.cache` / `build` / `.turbo` / `coverage`
 
 ## 工作原理
 
-该钩子从工具输入 JSON 中读取命令，并与上述模式进行比对；若命中则返回 `permissionDecision: "ask"` 及警告信息。你始终可以覆盖该警告并继续执行。
+该钩子从工具输入 JSON 中读取命令，根据上述
+模式进行检查；如果发现匹配项，则返回一个包含
+`permissionDecision: "ask"` 和警告原因的 `hookSpecificOutput` 载荷（该
+决定必须嵌套在 `hookSpecificOutput` 下——Claude Code 会忽略顶层的
+`permissionDecision`）。你始终可以覆盖警告并继续执行。
 
-要停用，请结束当前对话或开启新对话。钩子按会话范围生效。
+要停用此模式，请结束当前对话或开始新对话。钩子的作用域仅限当前会话。

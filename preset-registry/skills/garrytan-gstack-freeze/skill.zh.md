@@ -23,17 +23,21 @@ hooks:
           command: "bash $HOME/.claude/skills/gstack/freeze/bin/check-freeze.sh"
           statusMessage: "Checking freeze boundary..."
 ---
-<!-- AUTO-GENERATED from SKILL.md.tmpl — do not edit directly -->
-<!-- Regenerate: bun run gen:skill-docs -->
+<!-- 由 SKILL.md.tmpl 自动生成 — 请勿直接编辑 -->
+<!-- 重新生成：bun run gen:skill-docs -->
+
 
 ## 何时调用此技能
 
-阻止对允许路径外的 `Edit` 和 `Write`。在调试时用于防止意外“修复”无关代码，或希望将改动范围限制到某个模块时。  
-当被要求“freeze”、“restrict edits”、“only edit this folder”或“lock down edits”时使用。
+阻止对允许路径之外的文件执行 Edit 和
+Write。可在调试时使用，以防意外“修复”无关代码；也可在希望将更改范围限定于某个模块时使用。
+当用户要求“冻结”“限制编辑”“仅编辑此文件夹”
+或“锁定编辑”时使用。
 
-# /freeze — 限制编辑到一个目录
+# /freeze — 将编辑限制在一个目录内
 
-将文件编辑锁定到特定目录。任何针对允许路径外文件的 `Edit` 或 `Write` 操作都将被**阻止**（不仅仅是警告）。
+将文件编辑锁定到指定目录。任何以允许路径之外的文件为目标的 Edit 或 Write 操作
+都将被**阻止**（而不仅仅是警告）。
 
 ```bash
 mkdir -p ~/.gstack/analytics
@@ -42,10 +46,10 @@ echo '{"skill":"freeze","ts":"'$(date -u +%Y-%m-%dT%H:%M:%SZ)'","repo":"'$(basen
 
 ## 设置
 
-询问用户要将编辑限制在哪个目录。使用 `AskUserQuestion`：
+询问用户要将编辑限制在哪个目录。使用 AskUserQuestion：
 
-- 问题：`Which directory should I restrict edits to? Files outside this path will be blocked from editing.`
-- 文本输入（非多选）——用户输入一个路径。
+- 问题：“要将编辑限制在哪个目录？对此路径之外的文件进行编辑将被阻止。”
+- 文本输入（非多项选择）— 用户输入一个路径。
 
 用户提供目录路径后：
 
@@ -55,7 +59,7 @@ FREEZE_DIR=$(cd "<user-provided-path>" 2>/dev/null && pwd)
 echo "$FREEZE_DIR"
 ```
 
-2. 确保有尾随 `/` 并保存到冻结状态文件：
+2. 确保路径末尾有斜杠，并保存到冻结状态文件：
 ```bash
 FREEZE_DIR="${FREEZE_DIR%/}/"
 eval "$(~/.claude/skills/gstack/bin/gstack-paths)"
@@ -65,17 +69,24 @@ echo "$FREEZE_DIR" > "$STATE_DIR/freeze-dir.txt"
 echo "Freeze boundary set: $FREEZE_DIR"
 ```
 
-告知用户：`Edits are now restricted to <path>/. Any Edit or Write outside this directory will be blocked. To change the boundary, run /freeze again. To remove it, run /unfreeze or end the session.`
+告知用户：“编辑现已限制在 `<path>/` 内。此目录之外的任何 Edit 或 Write
+操作都将被阻止。要更改边界，请再次运行 `/freeze`。
+要移除边界，请运行 `/unfreeze` 或结束会话。”
 
 ## 工作原理
 
-该 hook 从 `Edit`/`Write` 工具输入的 JSON 中读取 `file_path`，然后检查该路径是否以冻结目录开头。如果不是，则返回 `permissionDecision: "deny"` 以阻止该操作。
+钩子从 Edit/Write 工具输入 JSON 中读取 `file_path`，然后检查
+该路径是否以冻结目录开头。如果不是，则返回一个
+包含 `permissionDecision: "deny"` 的 `hookSpecificOutput` 有效载荷，以阻止该
+操作（嵌套在 `hookSpecificOutput` 下 — Claude Code 会忽略顶层的
+`permissionDecision`）。
 
-冻结边界通过状态文件在会话期间持久化。hook 脚本在每次 `Edit`/`Write` 调用时都会读取它。
+冻结边界通过状态文件在会话期间持续生效。钩子
+脚本会在每次调用 Edit/Write 时读取该文件。
 
-## 说明
+## 注意事项
 
-- 冻结目录上的尾随 `/` 可防止 `/src` 匹配 `/src-old`
-- Freeze 仅适用于 `Edit` 和 `Write` 工具——`Read`、`Bash`、`Glob`、`Grep` 不受影响
-- 这可防止意外编辑，而非安全边界——`sed` 等 `Bash` 命令仍可修改边界外的文件
-- 要停用，请运行 `/unfreeze` 或结束会话
+- 冻结目录末尾的 `/` 可防止 `/src` 匹配 `/src-old`
+- 冻结仅适用于 Edit 和 Write 工具 — Read、Bash、Glob、Grep 不受影响
+- 这用于防止意外编辑，并非安全边界 — `sed` 等 Bash 命令仍可修改边界之外的文件
+- 要停用，请运行 `/unfreeze` 或结束对话
