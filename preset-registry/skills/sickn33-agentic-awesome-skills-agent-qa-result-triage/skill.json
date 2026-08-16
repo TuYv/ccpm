@@ -1,0 +1,26 @@
+{
+  "id": "sickn33-agentic-awesome-skills-agent-qa-result-triage",
+  "name": "agent-qa-result-triage",
+  "description": "Triage failed Agent QA runs with MCP evidence, artifacts, logs, fixed failure categories, confidence, and actionable next steps.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sickn33",
+  "install_path": ".claude/skills/agent-qa-result-triage/SKILL.md",
+  "source": {
+    "repo": "sickn33/agentic-awesome-skills",
+    "url": "https://github.com/sickn33/agentic-awesome-skills/blob/main/plugins/agentic-awesome-skills-claude/skills/agent-qa-result-triage/SKILL.md",
+    "path": "plugins/agentic-awesome-skills-claude/skills/agent-qa-result-triage/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-16T10:21:21.582Z",
+    "stars": 45009,
+    "language": "Python",
+    "pushed_at": "2026-08-16T10:15:25Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于分析智能体 QA 失败结果，结合运行证据定位问题、判断失败类型，并给出可信的修复建议。"
+}

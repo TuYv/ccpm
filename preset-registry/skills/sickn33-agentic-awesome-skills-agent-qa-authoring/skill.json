@@ -1,0 +1,26 @@
+{
+  "id": "sickn33-agentic-awesome-skills-agent-qa-authoring",
+  "name": "agent-qa-authoring",
+  "description": "Create, edit, validate, and run Agent QA tests, suites, and hooks through MCP or CLI while preserving canonical IDs and schema contracts.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sickn33",
+  "install_path": ".claude/skills/agent-qa-authoring/SKILL.md",
+  "source": {
+    "repo": "sickn33/agentic-awesome-skills",
+    "url": "https://github.com/sickn33/agentic-awesome-skills/blob/main/plugins/agentic-awesome-skills-claude/skills/agent-qa-authoring/SKILL.md",
+    "path": "plugins/agentic-awesome-skills-claude/skills/agent-qa-authoring/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-16T10:21:21.201Z",
+    "stars": 45009,
+    "language": "Python",
+    "pushed_at": "2026-08-16T10:15:25Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一套通过 MCP 或命令行创建、编辑、校验和运行智能体测试的工具，适合统一管理测试套件与钩子并确保标识和结构规范。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "rpamis-comet-comet-review",
+  "name": "comet-review",
+  "description": "Manually review the implementation diff for the current Comet change without advancing the workflow.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "rpamis",
+  "install_path": ".claude/skills/comet-review/SKILL.md",
+  "source": {
+    "repo": "rpamis/comet",
+    "url": "https://github.com/rpamis/comet/blob/master/assets/skills/comet-review/SKILL.md",
+    "path": "assets/skills/comet-review/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-08-16T10:24:39.033Z",
+    "stars": 2723,
+    "language": "JavaScript",
+    "pushed_at": "2026-08-16T10:16:32Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于手动审查当前变更的实现差异，适合在不推进工作流的情况下检查代码改动。"
+}

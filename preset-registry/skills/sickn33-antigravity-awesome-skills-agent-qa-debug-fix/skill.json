@@ -1,0 +1,26 @@
+{
+  "id": "sickn33-antigravity-awesome-skills-agent-qa-debug-fix",
+  "name": "agent-qa-debug-fix",
+  "description": "Debug, patch, and verify failed Agent QA runs from MCP evidence, artifacts, logs, and local code without hiding product or infrastructure defects.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sickn33",
+  "install_path": ".claude/skills/agent-qa-debug-fix/SKILL.md",
+  "source": {
+    "repo": "sickn33/antigravity-awesome-skills",
+    "url": "https://github.com/sickn33/antigravity-awesome-skills/blob/main/plugins/agentic-awesome-skills-claude/skills/agent-qa-debug-fix/SKILL.md",
+    "path": "plugins/agentic-awesome-skills-claude/skills/agent-qa-debug-fix/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-16T10:21:38.759Z",
+    "stars": 45009,
+    "language": "Python",
+    "pushed_at": "2026-08-16T10:15:25Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一款用于排查、修复并验证智能体 QA 失败的工具，可结合 MCP 证据、日志和本地代码定位问题，且不掩盖产品或基础设施缺陷。"
+}
