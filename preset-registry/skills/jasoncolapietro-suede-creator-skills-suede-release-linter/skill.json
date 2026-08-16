@@ -1,7 +1,7 @@
 {
   "id": "jasoncolapietro-suede-creator-skills-suede-release-linter",
   "name": "suede-release-linter",
-  "description": "Audit creative release folders before handoff: metadata, file structure, artwork, lyrics, stems, rights blockers, and platform readiness.",
+  "description": "Suede Labs skill that lints a local music or media release folder and scores it for release readiness: missing files, weak or malformed metadata, artwork and stem problems, split gaps, rights blockers, and platform-delivery issues, produced by a bundled offline script as a scored markdown and JSON report. Use when a creator has one or more release folders of tracks, artwork, and stems and wants to know what is missing before distributing, delivering, or handing it off; when metadata quality or a",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/JasonColapietro/suede-creator-skills/blob/main/skills/suede-release-linter/SKILL.md",
     "path": "skills/suede-release-linter/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-15T21:09:58.627Z",
+    "discovered_at": "2026-08-15T23:04:12.178Z",
     "stars": 151,
     "language": "JavaScript",
-    "pushed_at": "2026-08-15T08:14:12Z",
+    "pushed_at": "2026-08-15T22:51:18Z",
     "license": "MIT"
   },
-  "summary_zh": "一款创意作品交付前的发布目录检查工具，用于排查元数据、文件结构、素材和版权等问题，确保符合平台上线要求。"
+  "summary_zh": "离线检查音乐或媒体发行文件夹，识别文件、元数据、封面、分轨及版权等问题，适合分发或交付前验收。"
 }

@@ -1,7 +1,7 @@
 {
   "id": "jasoncolapietro-suede-creator-skills-suede-deslop",
   "name": "suede-deslop",
-  "description": "Strip AI writing patterns from prose before anything goes public. Em dashes, filler openers, manufactured enthusiasm, false agency, passive voice, formulaic structures, all of it. Use when copy, a README, an email, a social post, or a doc is about to ship, after a long AI-assisted writing session, or when text sounds fine but feels generated. NOT FOR: writing new copy (use suede-copy); changing or certifying facts, which must be checked against primary evidence before publication.",
+  "description": "Suede Labs anti-slop pass: strip AI writing patterns from prose before anything goes public. Em dashes, filler openers, manufactured enthusiasm, false agency, passive voice, formulaic structures, all of it. Use when copy, a README, an email, a social post, or a doc is about to ship, after a long AI-assisted writing session, or when text sounds fine but feels generated. NOT FOR: writing new copy (use suede-copy); changing or certifying facts, which must be checked against primary evidence before ",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/JasonColapietro/suede-creator-skills/blob/main/skills/suede-deslop/SKILL.md",
     "path": "skills/suede-deslop/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-15T21:09:53.673Z",
+    "discovered_at": "2026-08-15T23:04:08.733Z",
     "stars": 151,
     "language": "JavaScript",
-    "pushed_at": "2026-08-15T08:14:12Z",
+    "pushed_at": "2026-08-15T22:51:18Z",
     "license": "MIT"
   },
-  "summary_zh": "一款清理文本中 AI 写作痕迹的润色工具，适合在文案、邮件、README 或文档发布前优化表达，使语言更自然。"
+  "summary_zh": "这是一款清理文本中 AI 写作痕迹的润色工具，适合发布前处理文案、邮件、README 和社交内容，但不负责事实核验。"
 }

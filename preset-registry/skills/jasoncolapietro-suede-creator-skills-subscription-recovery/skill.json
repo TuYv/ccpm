@@ -1,7 +1,7 @@
 {
   "id": "jasoncolapietro-suede-creator-skills-subscription-recovery",
   "name": "subscription-recovery",
-  "description": "Use when the user wants to find, audit, cancel, or dispute recurring charges billed outside Amazon, including App Store, Google Play, PayPal, direct-bill streaming, gyms, news, and SaaS. Discover charges from evidence the user directly provides or authenticated service pages, report findings first, and require confirmation before cancellation or refund contact. Never enter payment credentials or promise recovery. Requires Claude in Chrome for browser actions. NOT FOR: Amazon returns, restocking ",
+  "description": "Suede-owned recovery discipline for recurring charges billed outside Amazon: App Store, Google Play, PayPal, direct-bill streaming, gyms, news, and SaaS. Use when the user wants to find, audit, cancel, or dispute a subscription they may have forgotten, is being charged for twice, or no longer uses. Every cancellation and dispute requires the user to name the service first. Never enters payment credentials and never promises a refund. Requires Claude in Chrome for browser actions. NOT FOR: Amazon",
   "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/JasonColapietro/suede-creator-skills/blob/main/skills/subscription-recovery/SKILL.md",
     "path": "skills/subscription-recovery/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-15T21:09:48.596Z",
+    "discovered_at": "2026-08-15T23:04:05.097Z",
     "stars": 151,
     "language": "JavaScript",
-    "pushed_at": "2026-08-15T08:14:12Z",
+    "pushed_at": "2026-08-15T22:51:18Z",
     "license": "MIT"
   },
-  "summary_zh": "用于查找、核对、取消或申诉亚马逊以外的重复订阅扣费，适合管理应用商店、PayPal、健身房及流媒体等账单。"
+  "summary_zh": "一款处理非亚马逊渠道周期扣费的订阅管理助手，适合查找、核对、取消或申诉遗忘、重复扣费及闲置订阅。"
 }

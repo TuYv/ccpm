@@ -1,8 +1,8 @@
 {
   "id": "jasoncolapietro-suede-creator-skills-suede-code-grader",
   "name": "suede-code-grader",
-  "description": "Give a blunt A-F ship grade for a code change across correctness, security, data, UX, verification, and deploy readiness. Use for a grade, not a findings review.",
-  "category": "设计创意",
+  "description": "Suede Labs AI blunt A-F ship grade for a code change across correctness, security and permissions, data and state, domain truth, UX and release behavior, tests and verification, and deploy readiness, with Instant-F triggers and evidence-based grade caps on auth, payment, migration, and public-API surfaces. Use when asked to grade this, give it a letter, is this an A, how ready is this to ship, or should this merge — when the caller wants the verdict without a findings list. NOT FOR: findings, ev",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,11 @@
     "url": "https://github.com/JasonColapietro/suede-creator-skills/blob/main/skills/suede-code-grader/SKILL.md",
     "path": "skills/suede-code-grader/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-15T21:09:51.417Z",
+    "discovered_at": "2026-08-15T23:04:07.155Z",
     "stars": 151,
     "language": "JavaScript",
-    "pushed_at": "2026-08-15T08:14:12Z",
+    "pushed_at": "2026-08-15T22:51:18Z",
     "license": "MIT"
   },
-  "summary_zh": "一款代码变更上线评级工具，从正确性、安全、数据、体验、验证和部署准备度综合给出直观的 A-F 等级。"
+  "summary_zh": "一款为代码变更给出A-F上线评级的AI评审工具，适合快速判断改动是否可以合并或发布。"
 }
