@@ -746,6 +746,8 @@ A recording can be long but still fast-tier (two known speakers, plain language)
    - **A raw-verified in-document self-proof against the rule also clears the bar.** If the conversation's own raw-text occurrences show the speaker using the word correctly for the *other* entity — and the passage is about that entity, not merely co-occurring with it — the rule misfired here: revert, then retire or scope the rule per the false-positive path above, because it will keep firing. Two cautions make the proof real: the "correct occurrences elsewhere" must be checked against the **raw** text (if those occurrences were themselves written by the same upstream pass, judge and judged share a source and the proof is circular); and if *both* candidate words occur correctly in the passage, the proof is non-discriminating — fall back to phonetic minimality or the queue.
    - When even those checks leave it genuinely ambiguous which entity this conversation means, the move is the review queue (`kind: entity`), not a revert: the rule-backed form stays in the text while the question pends. This deliberately biases toward keeping rule-backed forms — the price is that a wrong rule's output survives in the delivered text until the queue resolves it. That direction is intended: a queued, visible wrong fix beats a fluent, silent wrong revert, and the queue forces the *rule* to be re-judged, not just this instance.
 
+   **The same conversation-support test runs one step earlier, at approval time — a deferred swap is a candidate, not a settled decision.** Safe mode defers exactly the risky name swaps to `*_needs_review.md` for a human or the native pass to judge, and "judge" does not mean pattern-matching the roster row. Before approving a person-name replacement — above all one sourced from the global people roster or a *different* project's domain — apply the revert bar's first bullet in the forward direction: **is this rule's referent supported by THIS conversation** (present, addressed, or topically referenced here)? The roster row being correct for the project it was curated in says nothing about who was in this room; common address forms (「X老师」「X总」) collide across projects precisely because they are common. (Real case 2026-08-17, the mirror of the revert case above: a transcript contained an address form that the global people roster maps to a contact curated from a *different* project line's sessions. The reviewer approved the swap on roster authority alone — the actual referent was a participant in this conversation's own project, and the user caught the misattribution live. The rule was not wrong; the approval skipped the conversation-support test.) If the referent cannot be evidenced inside this conversation, neither approve nor reject — enqueue `kind: entity` and leave the raw form in place. And when you `--add` a person's address-form variants to the roster or a domain, note the collision surface in the same breath: an address form shared with another project's contact needs a scope comment in the domain context file, or it will misfire on the next transcript that means the other person.
+
    **Why this needs its own test rather than your judgment: an upstream corrector optimizes for fluency, so everything it emits reads well — which makes "does the result make sense?" a check with zero discriminating power against exactly this failure.** You cannot read your way to catching it, and the smoother the pipeline, the more confident the wrong text looks. The diff is the only instrument that sees it. Two consequences worth planning around: run the diff *before* your own read-through, so upstream's edits arrive as candidates rather than as the text you are proof-reading; and when you do revert one, sweep whatever you have already written that quoted the corrupted form (step 9's derived-document sweep — notes and summaries written from the pre-revert text carry the same corruption, and unlike the transcript they carry no marker saying so).
 3. **Load the domain's priors, then read the entire transcript.** If `~/.transcript-fixer/contexts/<domain>.md` exists for this transcript's domain, read it first — it primes which homophone traps to suspect and names the authoritative sources for step 4's ladder (see "Domain Correction Contexts" above). Then read the **entire** transcript before proposing corrections — later context disambiguates earlier errors (a name garbled near the start often becomes obvious later). For large files, read in chunks but finish the whole thing before deciding anything
 4. **Triage each candidate error into one of three buckets** — this triage is the part that takes judgment. **First override three reflexes that repeatedly misfile names** (all three are real, recurring failures — they send a fixable name straight to "ask the user"):
@@ -950,7 +952,9 @@ load-bearing, settle it by ear through the path this skill already has: wire the
 transcript's `audio:` frontmatter (see "Wiring audio for a Feishu-minute
 transcript"), enqueue the number as a review item, and press `Q` in the review
 dashboard — it plays exactly the anchored utterance, so you hear the digits
-spoken instead of re-reading them.
+spoken instead of re-reading them. For names and terms rather than numbers, a
+photographed in-room artifact can stand in as the second system — see "In-room
+artifacts are another independent engine" below.
 
 **Numeric-slot damage — when a replacement overshoots into a number.** A
 distinct failure with the same symptom: a global replace aimed at something else
@@ -981,6 +985,76 @@ title's leading date, a timezone offset) stay silent. Run it with
 The false-positive *rate* behind those choices was measured on a private
 transcript corpus that cannot ship, so the rate is not reproducible here — the
 behaviour it bought is.
+
+### In-room artifacts are another independent engine (whiteboard and slide photos)
+
+The two-recordings rule above has a cross-modal sibling. When the meeting
+produced a written artifact — a whiteboard, a flip chart, a projected slide — a
+photo of it is an independent recognizer alongside the recording(s): the second
+engine when you have one recording, the third when you have two. Handwriting
+fails on strokes (illegible scrawl) and ASR fails on sounds (homophones), so in
+principle their errors are largely uncorrelated — that is the mechanism claim;
+the yield reported at the end is one observed case (n=1), not a measured rate.
+
+Ask for the artifact before triaging: does a photo of the board or slides
+exist? A minutes-pipeline transcript often has the meeting's attachments
+nearby; if the owner is not obvious, ask rather than guess. Then locate the
+segment where the artifact was **created** — search the transcript for the
+artifact's own phrases, falling back to photo-talk cues, the photo file's
+timestamp against the transcript timeline, or speaker-turn structure. A
+zero-hit grep for a board word is an instrument report, not absence: the
+board's words are exactly what ASR may have garbled. And note the photo you
+hold may have been taken later than any photo-talk in the text — the talk
+locates the writing moment, not necessarily this shot.
+
+Prefer phrase-matching and treat the timestamp fallback as the weakest of the
+four, because for relayed media it is not merely absent but *systematically
+wrong*: a photo forwarded through a chat app carries the **re-export** time,
+not the capture time. Measured on one WeChat-relayed board photo, both the
+filesystem creation date and the ms-epoch embedded in its `mmexport…`
+filename decoded to the same value — the moment it was re-downloaded, hours
+after the meeting it documented. Leaning on that would have placed the
+artifact *after* the discussion and argued against a pairing that
+phrase-matching then confirmed. So when the file's time says "later," treat
+that as unresolved rather than as evidence, and go find the phrases.
+
+**Work board-first, and remember a garbled name reads as fluent text, not as
+noise.** For each board token, find the moment it was written and ask what in
+that utterance corresponds to it. The ASR side of a name garble is usually a
+fluent, semantically unrelated phrase sitting in the right slot (a latin
+company name arriving as an ordinary two-word Chinese phrase) — so test the
+slot; scanning for gibberish finds nothing. Four outcomes:
+
+- **Speech garbled, board legible** — the board spelling wins *only when the
+  writer plausibly knows the canonical form* (their own org, their client, a
+  name they use daily). A name the writer first heard in that same meeting is
+  a same-source error — the writer may have misheard it too — not a second
+  engine: route it to the queue. Where this anchor holds and the raw text
+  confirms it, it discharges step 6's route-to-queue exception for that item;
+  absent it, step 6 stands.
+- **Board illegible, speech clear** — the spoken words resolve the scrawl.
+- **Both channels carry a plausible but different reading** of the same slot —
+  that is a disagreement, never a garble-resolution, even when one side looks
+  stronger. Enqueue it as an uncertain item (Native AI Correction step 7,
+  `kind: entity`); in a batch it also joins the batch strategy's step-7
+  shortlist below.
+- **Only one channel has the item at all** (a board word nobody spoke, a
+  spoken name never written) — single-source: a lead, not a confirmation.
+
+A fix anchored by both channels clears the bar two independent recognizers
+set — **but evidence strength does not change destination routing**. The
+Dictionary Addition matrix's real-word rules apply in full: real-name /
+real-brand rows stay ❌ no matter how well anchored; deterministic non-word
+fixes go to `--add` / the roster, context-dependent ones to the domain context
+file; the FROM-side collision check and corpus probe still run. When recording
+the fix, note which two channels anchored it in the destination itself (the
+context file's trap line or the roster's variant line — e.g. `双证:白板+口述
+2026-08`).
+
+Observed once (2026-08, one 8-minute write-while-talking segment × one phone
+photo): four transcript fixes anchored by the board — two of them company
+names neither engine had settled alone — plus three board scrawls resolved
+from speech, and one both-sides-plausible disagreement correctly left open.
 
 ### Efficient Batch Fix Strategy
 

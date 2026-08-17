@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-17T13:55:15.882Z",
+  "updated_at": "2026-08-17T16:35:30.223Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -938,9 +938,9 @@
       "translated_at": "2026-05-11T10:07:22.788Z"
     },
     "bundle:anthropics-skills": {
-      "hash": "79ce43145b328824",
-      "summary_zh": "一套面向 Claude 的通用工作技能合集，覆盖文档、设计、开发与沟通场景，让复杂任务按成熟流程高质量落地。",
-      "translated_at": "2026-08-03T04:57:02.959Z"
+      "hash": "2f31ca0690e88158",
+      "summary_zh": "面向 Claude 的通用技能合集，覆盖内容创作、文档办公、视觉设计与应用开发，让复杂任务按成熟流程高效落地。",
+      "translated_at": "2026-08-17T16:26:56.095Z"
     },
     "bundle:composiohq-awesome-claude-skills": {
       "hash": "687bc933c85e04cb",
@@ -1298,9 +1298,9 @@
       "translated_at": "2026-05-12T07:12:12.727Z"
     },
     "preset:drona23-claude-token-efficient": {
-      "hash": "80e633298903059e",
-      "summary_zh": "一个即插即用的 Claude 指令文件，用于精简回复、减少高频开发和自动化流程中的输出令牌消耗。",
-      "translated_at": "2026-08-03T05:00:45.090Z"
+      "hash": "eeae525fe7a4d70b",
+      "summary_zh": "一个即插即用的 Claude 配置文件，无需改代码即可压缩回复篇幅，适合高频、复杂工作流中节省 Token。",
+      "translated_at": "2026-08-17T16:26:59.224Z"
     },
     "preset:dvdsgl-claude-canvas": {
       "hash": "1a48349884ff8c51",
@@ -9823,9 +9823,9 @@
       "translated_at": "2026-08-03T04:57:53.991Z"
     },
     "bundle:trailofbits-skills": {
-      "hash": "ec1ebecf2bc5b687",
-      "summary_zh": "面向代码、智能合约和自动化流程的安全审计合集，整合模糊测试、漏洞扫描与审计辅助能力，提升排查效率和覆盖面。",
-      "translated_at": "2026-08-11T20:55:27.101Z"
+      "hash": "d2d86e576bd43a47",
+      "summary_zh": "面向代码与智能合约安全审计的一站式技能合集，串联审计准备、模糊测试、漏洞扫描与结果分析，提升自动化评估效率。",
+      "translated_at": "2026-08-17T16:26:56.036Z"
     },
     "bundle:czlonkowski-n8n-skills": {
       "hash": "c501b61219aece66",
@@ -12523,9 +12523,9 @@
       "translated_at": "2026-05-20T12:29:17.425Z"
     },
     "skill:trailofbits-skills-property-based-testing": {
-      "hash": "2e5e6e3f71f7b87e",
-      "summary_zh": "这是一份多语言与智能合约的属性测试指南，适合在写测试、审查序列化与解析代码、设计功能，或需要比示例测试更全面的覆盖率时参考使用。",
-      "translated_at": "2026-05-20T12:29:22.601Z"
+      "hash": "a8235b8f1e7fd88e",
+      "summary_zh": "用于编写、审查和调试属性测试，适合覆盖完整输入域，验证序列化、解析、排序及智能合约状态等不变量。",
+      "translated_at": "2026-08-17T16:27:03.866Z"
     },
     "skill:trailofbits-skills-mutation-testing": {
       "hash": "7f74aaffe746192e",
@@ -17308,9 +17308,9 @@
       "translated_at": "2026-08-03T04:58:31.053Z"
     },
     "bundle:rpamis-comet": {
-      "hash": "522d238302b1eb84",
-      "summary_zh": "面向规范驱动开发的一站式工作流，串联需求、设计、实施、验证、归档与双语文档，形成可恢复、可协作的工程闭环。",
-      "translated_at": "2026-08-17T13:23:39.758Z"
+      "hash": "11908544837592a5",
+      "summary_zh": "一套面向规范驱动开发的全流程工具集，串联需求、设计、实施、验证、归档与双语文档，让复杂变更更可控、更易协作交付。",
+      "translated_at": "2026-08-17T16:26:55.916Z"
     },
     "bundle:tradermonty-claude-trading-skills": {
       "hash": "2391070fc1f88e6b",
@@ -25873,9 +25873,9 @@
       "translated_at": "2026-08-04T07:51:20.473Z"
     },
     "skill:rpamis-comet-comet-verify": {
-      "hash": "c6bcb46cecc44d95",
-      "summary_zh": "用于验证代码变更、记录验证证据并推动问题修复闭环，适合自动化质量检查流程。",
-      "translated_at": "2026-08-17T13:23:44.078Z"
+      "hash": "bbdfa0d2999b1230",
+      "summary_zh": "用于在变更完成构建后验证实现，并处理验证失败和分支收尾，适合交付前检查。",
+      "translated_at": "2026-08-17T16:27:01.120Z"
     },
     "skill:rpamis-comet-dispatching-parallel-agents": {
       "hash": "90e26db4a3fb046c",
@@ -40407,6 +40407,75 @@
     "content:human-avatar-skills-for-humanity-s4h-creativity-concept-fan": {
       "hash": "d88e08858d51993b",
       "translated_at": "2026-08-17T13:55:15.881Z"
+    },
+    "skill:anthropics-skills-claude-academy-guide": {
+      "hash": "c66aa08fee11c0c7",
+      "summary_zh": "为 Claude 产品使用问题匹配官方课程、教程和案例，适合入门学习或查找具体功能指南。",
+      "translated_at": "2026-08-17T16:26:59.888Z"
+    },
+    "content:anthropics-skills-claude-academy-guide": {
+      "hash": "1df757c172f3988d",
+      "translated_at": "2026-08-17T16:27:46.425Z"
+    },
+    "content:human-avatar-skills-for-humanity-s4h-design-simplicity": {
+      "hash": "4e13246ceaaba598",
+      "translated_at": "2026-08-17T16:30:01.753Z"
+    },
+    "content:human-avatar-skills-for-humanity-s4h-design-iteration": {
+      "hash": "3b06f57eaf7a967a",
+      "translated_at": "2026-08-17T16:30:11.670Z"
+    },
+    "content:human-avatar-skills-for-humanity-s4h-ecology": {
+      "hash": "06165024a2003860",
+      "translated_at": "2026-08-17T16:30:42.761Z"
+    },
+    "content:human-avatar-skills-for-humanity-s4h-design-user-needs": {
+      "hash": "f84b32b25a4ca5be",
+      "translated_at": "2026-08-17T16:30:42.956Z"
+    },
+    "content:human-avatar-skills-for-humanity-s4h-ecology-carrying-capacity": {
+      "hash": "7776215b173760ea",
+      "translated_at": "2026-08-17T16:31:29.552Z"
+    },
+    "content:human-avatar-skills-for-humanity-s4h-ecology-interdependence": {
+      "hash": "b448a43368faa912",
+      "translated_at": "2026-08-17T16:31:34.515Z"
+    },
+    "content:human-avatar-skills-for-humanity-s4h-ecology-keystone-species": {
+      "hash": "decb08da4bc1e17b",
+      "translated_at": "2026-08-17T16:32:21.516Z"
+    },
+    "content:human-avatar-skills-for-humanity-s4h-ecology-succession": {
+      "hash": "6641646c7831c320",
+      "translated_at": "2026-08-17T16:32:31.786Z"
+    },
+    "content:human-avatar-skills-for-humanity-s4h-economics": {
+      "hash": "e9ed7cdea2d4aaa3",
+      "translated_at": "2026-08-17T16:33:06.139Z"
+    },
+    "content:human-avatar-skills-for-humanity-s4h-economics-coordination": {
+      "hash": "9f57dbaf8e3f6045",
+      "translated_at": "2026-08-17T16:33:32.179Z"
+    },
+    "content:human-avatar-skills-for-humanity-s4h-economics-externalities": {
+      "hash": "6db13cca8dc321a9",
+      "translated_at": "2026-08-17T16:34:03.988Z"
+    },
+    "content:human-avatar-skills-for-humanity-s4h-economics-incentive-mapping": {
+      "hash": "830e4484dfca5cd8",
+      "translated_at": "2026-08-17T16:34:17.658Z"
+    },
+    "content:human-avatar-skills-for-humanity-s4h-economics-margin": {
+      "hash": "b02f8e8e132c2bb8",
+      "translated_at": "2026-08-17T16:34:53.080Z"
+    },
+    "content:human-avatar-skills-for-humanity-s4h-economics-opportunity-cost": {
+      "hash": "52878412a59ae317",
+      "translated_at": "2026-08-17T16:35:04.601Z"
+    },
+    "content:human-avatar-skills-for-humanity-s4h-emotional-motivation-mapping": {
+      "hash": "75a323de628d0019",
+      "translated_at": "2026-08-17T16:35:30.223Z"
     }
   }
 }

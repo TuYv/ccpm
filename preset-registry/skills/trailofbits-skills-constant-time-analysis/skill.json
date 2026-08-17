@@ -2,7 +2,7 @@
   "id": "trailofbits-skills-constant-time-analysis",
   "name": "constant-time-analysis",
   "description": "Detects timing side-channel vulnerabilities in cryptographic code. Use when implementing or reviewing crypto code, encountering division on secrets, secret-dependent branches, or constant-time programming questions in C, C++, Go, Rust, Swift, Java, Kotlin, C#, PHP, JavaScript, TypeScript, Python, or Ruby.",
-  "category": "测试调试",
+  "category": "数据分析",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/trailofbits/skills/blob/main/plugins/constant-time-analysis/skills/constant-time-analysis/SKILL.md",
     "path": "plugins/constant-time-analysis/skills/constant-time-analysis/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-17T12:22:04.637Z",
+    "discovered_at": "2026-08-17T15:00:02.441Z",
     "stars": 6625,
     "language": "Python",
-    "pushed_at": "2026-08-17T07:50:42Z",
+    "pushed_at": "2026-08-17T12:34:27Z",
     "license": "CC-BY-SA-4.0"
   },
   "summary_zh": "一款检测密码代码时序侧信道漏洞的工具。在开发或审查加密代码时，用它排查敏感数据除法、依赖机密的分支等恒定时间编程问题很方便，支持多种语言。"

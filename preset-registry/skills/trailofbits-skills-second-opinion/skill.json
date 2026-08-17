@@ -2,7 +2,7 @@
   "id": "trailofbits-skills-second-opinion",
   "name": "second-opinion",
   "description": "Runs external LLM code reviews (OpenAI Codex or Google Gemini CLI) on uncommitted changes, branch diffs, or specific commits. Use when the user asks for a second opinion, external review, codex review, gemini review, or mentions /second-opinion.",
-  "category": "测试调试",
+  "category": "开发编程",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/trailofbits/skills/blob/main/plugins/second-opinion/skills/second-opinion/SKILL.md",
     "path": "plugins/second-opinion/skills/second-opinion/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-17T12:22:07.719Z",
+    "discovered_at": "2026-08-17T15:00:36.654Z",
     "stars": 6625,
     "language": "Python",
-    "pushed_at": "2026-08-17T07:50:42Z",
+    "pushed_at": "2026-08-17T12:34:27Z",
     "license": "CC-BY-SA-4.0"
   },
   "summary_zh": "这是一个调用外部大模型审查代码的工具，当你拿不准自己的代码改动、想要个第二意见时，可以让 AI 帮忙检查未提交的代码或分支差异。"

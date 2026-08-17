@@ -2,7 +2,7 @@
   "id": "trailofbits-skills-sarif-parsing",
   "name": "sarif-parsing",
   "description": ">- Parses and processes SARIF files from static analysis tools like CodeQL, Semgrep, or other scanners. Triggers on \"parse sarif\", \"read scan results\", \"aggregate findings\", \"deduplicate alerts\", or \"process sarif output\". Handles filtering, deduplication, format conversion, and CI/CD integration of SARIF data. Does NOT run scans — use the Semgrep or CodeQL skills for that.",
-  "category": "测试调试",
+  "category": "文档写作",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/trailofbits/skills/blob/main/plugins/static-analysis/skills/sarif-parsing/SKILL.md",
     "path": "plugins/static-analysis/skills/sarif-parsing/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-17T12:22:08.978Z",
+    "discovered_at": "2026-08-17T15:00:47.217Z",
     "stars": 6625,
     "language": "Python",
-    "pushed_at": "2026-08-17T07:50:42Z",
+    "pushed_at": "2026-08-17T12:34:27Z",
     "license": "CC-BY-SA-4.0"
   },
   "summary_zh": "专门处理静态扫描工具生成的SARIF报告。它能帮你清洗和转换扫描结果，方便接入CI/CD流水线，解决手动整理海量告警的麻烦。注意它只处理结果，不负责执行扫描。"

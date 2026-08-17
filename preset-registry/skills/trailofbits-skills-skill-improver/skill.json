@@ -2,7 +2,7 @@
   "id": "trailofbits-skills-skill-improver",
   "name": "skill-improver",
   "description": "Iteratively reviews and fixes Claude Code skill quality issues until they meet standards. Runs automated fix-review cycles using the skill-reviewer agent. Use to fix skill quality issues, improve skill descriptions, run automated skill review loops, or iteratively refine a skill. Triggers on 'fix my skill', 'improve skill quality', 'skill improvement loop'. NOT for one-time reviews—use /skill-reviewer directly.",
-  "category": "测试调试",
+  "category": "开发编程",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/trailofbits/skills/blob/main/plugins/skill-improver/skills/skill-improver/SKILL.md",
     "path": "plugins/skill-improver/skills/skill-improver/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-17T12:22:08.432Z",
+    "discovered_at": "2026-08-17T15:00:41.968Z",
     "stars": 6625,
     "language": "Python",
-    "pushed_at": "2026-08-17T07:50:42Z",
+    "pushed_at": "2026-08-17T12:34:27Z",
     "license": "CC-BY-SA-4.0"
   },
   "summary_zh": "它能自动循环审查和修复Claude Code技能的质量问题，反复打磨直到达标。适合需要深度优化技能描述或整体质量，而不是只做一次性审查的场景。"

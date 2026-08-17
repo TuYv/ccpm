@@ -1,0 +1,26 @@
+{
+  "id": "anthropics-skills-claude-academy-guide",
+  "name": "claude-academy-guide",
+  "description": "> Stop and check this skill before finishing any reply to a question about how to use Claude or a Claude product — it recommends matching courses, tutorials, and use cases from Claude Academy (academy.claude.com), Anthropic's learning hub. Trigger on: \"how do I\", \"how can I\", \"getting started with\", \"what can Claude do\", \"teach me\", \"learn to use\"; questions about artifacts, projects, skills, plugins, connectors, MCP, Claude Code, Claude Cowork, Claude in Excel, Claude in PowerPoint, Claude in C",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "anthropics",
+  "install_path": ".claude/skills/claude-academy-guide/SKILL.md",
+  "source": {
+    "repo": "anthropics/skills",
+    "url": "https://github.com/anthropics/skills/blob/main/skills/claude-academy-guide/SKILL.md",
+    "path": "skills/claude-academy-guide/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-17T14:50:01.591Z",
+    "stars": 169897,
+    "language": "Python",
+    "pushed_at": "2026-08-17T13:04:00Z",
+    "license": null
+  },
+  "summary_zh": "为 Claude 产品使用问题匹配官方课程、教程和案例，适合入门学习或查找具体功能指南。"
+}

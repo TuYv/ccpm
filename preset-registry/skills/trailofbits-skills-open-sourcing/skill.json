@@ -2,7 +2,7 @@
   "id": "trailofbits-skills-open-sourcing",
   "name": "open-sourcing",
   "description": "This skill should be used when the user asks to \"open source this project\", \"prepare this repository for public release\", \"make this repo public\", \"check open-source readiness\", \"choose a license for this project\", or \"set up release automation\" ahead of a public launch. Provides a release-readiness workflow covering secrets hygiene, licensing, documentation, CI, and language-specific packaging.",
-  "category": "测试调试",
+  "category": "自动化集成",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/trailofbits/skills/blob/main/plugins/open-sourcing/skills/open-sourcing/SKILL.md",
     "path": "plugins/open-sourcing/skills/open-sourcing/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-17T12:22:07.136Z",
+    "discovered_at": "2026-08-17T15:00:33.230Z",
     "stars": 6625,
     "language": "Python",
-    "pushed_at": "2026-08-17T07:50:42Z",
+    "pushed_at": "2026-08-17T12:34:27Z",
     "license": "CC-BY-SA-4.0"
   },
   "summary_zh": "一套项目开源发布准备工具，帮助检查密钥泄露、许可证、文档、CI 和打包流程，适合仓库公开前使用。"

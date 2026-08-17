@@ -1,7 +1,7 @@
 {
   "id": "rpamis-comet-comet-verify",
   "name": "comet-verify",
-  "description": "Phase 4 of Comet Classic — verify a change, record evidence, and drive repair loops.",
+  "description": "Use when Comet change 已完成 build 阶段，需要验证实现、处理验证失败决策或完成分支收尾。",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -13,14 +13,14 @@
   "install_path": ".claude/skills/comet-verify/SKILL.md",
   "source": {
     "repo": "rpamis/comet",
-    "url": "https://github.com/rpamis/comet/blob/master/assets/skills/comet-verify/SKILL.md",
-    "path": "assets/skills/comet-verify/SKILL.md",
+    "url": "https://github.com/rpamis/comet/blob/master/eval/local/skills/benchmarks/040-beta/comet-verify/SKILL.md",
+    "path": "eval/local/skills/benchmarks/040-beta/comet-verify/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-08-17T12:31:04.870Z",
-    "stars": 2758,
+    "discovered_at": "2026-08-17T16:08:12.937Z",
+    "stars": 2761,
     "language": "JavaScript",
-    "pushed_at": "2026-08-17T04:56:35Z",
+    "pushed_at": "2026-08-17T15:52:45Z",
     "license": "MIT"
   },
-  "summary_zh": "用于验证代码变更、记录验证证据并推动问题修复闭环，适合自动化质量检查流程。"
+  "summary_zh": "用于在变更完成构建后验证实现，并处理验证失败和分支收尾，适合交付前检查。"
 }

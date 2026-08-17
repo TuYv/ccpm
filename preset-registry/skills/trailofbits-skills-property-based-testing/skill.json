@@ -1,7 +1,7 @@
 {
   "id": "trailofbits-skills-property-based-testing",
   "name": "property-based-testing",
-  "description": "Provides guidance for property-based testing across multiple languages and smart contracts. Use when writing tests, reviewing code with serialization/validation/parsing patterns, designing features, or when property-based testing would provide stronger coverage than example-based tests.",
+  "description": "Writes, reviews, and debugs property-based tests — Hypothesis, fast-check, proptest, jqwik, rapid, and Echidna or Medusa for Solidity invariants. Use whenever tests should cover a whole input domain instead of a hand-picked list of examples: encode/decode and serialize/deserialize pairs, parsers, canonicalizers and normalizers, validators, numeric and Decimal types, comparators and sort order, data structures, and smart-contract state invariants. Also use when adding cases to an existing @given,",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/trailofbits/skills/blob/main/plugins/property-based-testing/skills/property-based-testing/SKILL.md",
     "path": "plugins/property-based-testing/skills/property-based-testing/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-17T12:22:07.322Z",
+    "discovered_at": "2026-08-17T15:00:34.233Z",
     "stars": 6625,
     "language": "Python",
-    "pushed_at": "2026-08-17T07:50:42Z",
+    "pushed_at": "2026-08-17T12:34:27Z",
     "license": "CC-BY-SA-4.0"
   },
-  "summary_zh": "这是一份多语言与智能合约的属性测试指南，适合在写测试、审查序列化与解析代码、设计功能，或需要比示例测试更全面的覆盖率时参考使用。"
+  "summary_zh": "用于编写、审查和调试属性测试，适合覆盖完整输入域，验证序列化、解析、排序及智能合约状态等不变量。"
 }
