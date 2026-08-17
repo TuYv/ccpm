@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-17T18:46:38.534Z",
+  "updated_at": "2026-08-17T20:28:27.061Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -938,9 +938,9 @@
       "translated_at": "2026-05-11T10:07:22.788Z"
     },
     "bundle:anthropics-skills": {
-      "hash": "2f31ca0690e88158",
-      "summary_zh": "面向 Claude 的通用技能合集，覆盖内容创作、文档办公、视觉设计与应用开发，让复杂任务按成熟流程高效落地。",
-      "translated_at": "2026-08-17T16:26:56.095Z"
+      "hash": "dec2c495a81611e8",
+      "summary_zh": "一套面向 Claude 的通用工作技能合集，覆盖创作、设计、文档、开发与沟通，让复杂任务按专业流程高质量落地。",
+      "translated_at": "2026-08-17T19:57:20.786Z"
     },
     "bundle:composiohq-awesome-claude-skills": {
       "hash": "687bc933c85e04cb",
@@ -40025,8 +40025,8 @@
       "translated_at": "2026-08-17T03:38:08.970Z"
     },
     "content:heygen-com-hyperframes-hyperframes-cli": {
-      "hash": "08b9e0f3b37bad52",
-      "translated_at": "2026-08-17T03:38:11.377Z"
+      "hash": "441434658757e838",
+      "translated_at": "2026-08-17T20:09:36.846Z"
     },
     "content:heygen-com-hyperframes-hyperframes-creative": {
       "hash": "c6023035afc137ac",
@@ -40045,8 +40045,8 @@
       "translated_at": "2026-08-17T03:40:09.205Z"
     },
     "content:heygen-com-hyperframes-hyperframes-registry": {
-      "hash": "ef608419290432f5",
-      "translated_at": "2026-08-17T03:40:47.401Z"
+      "hash": "8524d5914c58865b",
+      "translated_at": "2026-08-17T20:09:15.865Z"
     },
     "content:heygen-com-hyperframes-lottie": {
       "hash": "35551db7646402f6",
@@ -40597,6 +40597,135 @@
     "content:huytieu-cog-second-brain-generate-prd": {
       "hash": "a39c4fee4d3ba3a4",
       "translated_at": "2026-08-17T18:46:38.534Z"
+    },
+    "skill:anthropics-skills-discernment-nudge": {
+      "hash": "32245caa716bd2f4",
+      "summary_zh": "这是一个为 AI 回复追加针对性核验问题的技能，帮助用户检查关键事实、假设与风险，避免直接采纳建议或方案。",
+      "translated_at": "2026-08-17T19:57:27.870Z"
+    },
+    "content:anthropics-skills-discernment-nudge": {
+      "hash": "9191177c4a8ef11a",
+      "translated_at": "2026-08-17T19:58:31.110Z"
+    },
+    "content:huytieu-cog-second-brain-harvest": {
+      "hash": "4283540a0b5b2c41",
+      "translated_at": "2026-08-17T20:09:58.594Z"
+    },
+    "content:huytieu-cog-second-brain-generate-release-notes": {
+      "hash": "2cbbd5e8035ad29d",
+      "translated_at": "2026-08-17T20:10:22.005Z"
+    },
+    "content:huytieu-cog-second-brain-loop-engineering": {
+      "hash": "5da1701d5163152d",
+      "translated_at": "2026-08-17T20:11:01.201Z"
+    },
+    "content:huytieu-cog-second-brain-meeting-transcript": {
+      "hash": "971a413f9e4e4912",
+      "translated_at": "2026-08-17T20:11:54.325Z"
+    },
+    "content:huytieu-cog-second-brain-knowledge-consolidation": {
+      "hash": "b12f4b2c144615ad",
+      "translated_at": "2026-08-17T20:12:12.789Z"
+    },
+    "content:huytieu-cog-second-brain-memory-hygiene": {
+      "hash": "093c4f588f3a8289",
+      "translated_at": "2026-08-17T20:12:25.441Z"
+    },
+    "content:huytieu-cog-second-brain-museum-art": {
+      "hash": "696f91435245225b",
+      "translated_at": "2026-08-17T20:13:32.680Z"
+    },
+    "content:huytieu-cog-second-brain-no-ai-slop": {
+      "hash": "73f87f7f79bd3540",
+      "translated_at": "2026-08-17T20:13:34.758Z"
+    },
+    "content:huytieu-cog-second-brain-onboarding": {
+      "hash": "7423e46be1e2725a",
+      "translated_at": "2026-08-17T20:15:29.318Z"
+    },
+    "content:huytieu-cog-second-brain-publish-to-confluence": {
+      "hash": "ffb2588b13ff52f4",
+      "translated_at": "2026-08-17T20:16:18.950Z"
+    },
+    "content:huytieu-cog-second-brain-retro": {
+      "hash": "6e764819174252cc",
+      "translated_at": "2026-08-17T20:16:38.429Z"
+    },
+    "content:huytieu-cog-second-brain-review-cockpit": {
+      "hash": "eaa051ccef8d9c8f",
+      "translated_at": "2026-08-17T20:17:19.771Z"
+    },
+    "content:huytieu-cog-second-brain-scout": {
+      "hash": "1f298e95ae883bdf",
+      "translated_at": "2026-08-17T20:18:06.183Z"
+    },
+    "content:huytieu-cog-second-brain-product-ui-taste": {
+      "hash": "7473b42e95943cff",
+      "translated_at": "2026-08-17T20:20:47.664Z"
+    },
+    "content:huytieu-cog-second-brain-team-brief": {
+      "hash": "68c45890e15294af",
+      "translated_at": "2026-08-17T20:20:52.714Z"
+    },
+    "content:huytieu-cog-second-brain-ultragoal": {
+      "hash": "188741377e7799aa",
+      "translated_at": "2026-08-17T20:20:57.364Z"
+    },
+    "content:huytieu-cog-second-brain-update-cog": {
+      "hash": "297ea3e54ad2a9b1",
+      "translated_at": "2026-08-17T20:21:01.954Z"
+    },
+    "content:huytieu-cog-second-brain-update-knowledge-base": {
+      "hash": "860873472ec50e57",
+      "translated_at": "2026-08-17T20:21:07.257Z"
+    },
+    "content:huytieu-cog-second-brain-url-dump": {
+      "hash": "90456e080d1bad70",
+      "translated_at": "2026-08-17T20:21:12.636Z"
+    },
+    "content:huytieu-cog-second-brain-weekly-checkin": {
+      "hash": "04587a2e039f415b",
+      "translated_at": "2026-08-17T20:21:17.762Z"
+    },
+    "content:hyf0-vue-skills-create-adaptable-composable": {
+      "hash": "9d6c8822577020dd",
+      "translated_at": "2026-08-17T20:21:31.672Z"
+    },
+    "content:hyf0-vue-skills-vue-best-practices": {
+      "hash": "05b373713e6bbd21",
+      "translated_at": "2026-08-17T20:22:20.030Z"
+    },
+    "content:hyf0-vue-skills-vue-debug-guides": {
+      "hash": "c39cee74b0b6a4a8",
+      "translated_at": "2026-08-17T20:24:18.311Z"
+    },
+    "content:hyf0-vue-skills-vue-jsx-best-practices": {
+      "hash": "bd3487c0d6217ecd",
+      "translated_at": "2026-08-17T20:24:22.118Z"
+    },
+    "content:hyf0-vue-skills-vue-options-api-best-practices": {
+      "hash": "fd0a8c9e698a5d04",
+      "translated_at": "2026-08-17T20:24:33.437Z"
+    },
+    "content:hyf0-vue-skills-vue-pinia-best-practices": {
+      "hash": "70c5fae1e97d1df1",
+      "translated_at": "2026-08-17T20:24:40.522Z"
+    },
+    "content:hyf0-vue-skills-vue-router-best-practices": {
+      "hash": "33889faf631e80bf",
+      "translated_at": "2026-08-17T20:24:48.815Z"
+    },
+    "content:hyf0-vue-skills-vue-testing-best-practices": {
+      "hash": "376fd21d6adfd37f",
+      "translated_at": "2026-08-17T20:24:59.549Z"
+    },
+    "content:iamzhihuix-happy-claude-skills-1password": {
+      "hash": "4292b295dbaed1c6",
+      "translated_at": "2026-08-17T20:25:17.592Z"
+    },
+    "content:huytieu-cog-second-brain-taste-skill": {
+      "hash": "373af07e60bd8fd6",
+      "translated_at": "2026-08-17T20:28:27.061Z"
     }
   }
 }
