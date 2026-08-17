@@ -2,7 +2,7 @@
   "id": "daymade-claude-code-skills-debugging-network-issues",
   "name": "debugging-network-issues",
   "description": ">- Evidence-driven investigation for network, streaming, and protocol-layer bugs where symptoms don't match the obvious cause. Use when debugging connection resets (ECONNRESET, HTTP/2 RST_STREAM, INTERNAL_ERROR), SSE or long-polling stalls, fixed-time connection drops, CDN/proxy/CGNAT idle timeouts, client-side proxy/VPN/TUN misrouting, CNAME-based proxy rule overrides, or symptoms like \"socket closed unexpectedly\", \"stream interrupted\", \"fails after N seconds\", \"works sometimes but not always\",",
-  "category": "测试调试",
+  "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/daymade/claude-code-skills/blob/main/debugging-network-issues/SKILL.md",
     "path": "debugging-network-issues/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-17T04:23:17.282Z",
-    "stars": 1339,
+    "discovered_at": "2026-08-17T08:26:18.276Z",
+    "stars": 1340,
     "language": "Python",
-    "pushed_at": "2026-08-16T19:10:19Z",
+    "pushed_at": "2026-08-17T08:22:09Z",
     "license": "MIT"
   },
   "summary_zh": "一套以证据为导向的网络与协议故障排查方法，适合定位连接重置、流式传输卡顿、定时断线及代理误路由等疑难问题。"
