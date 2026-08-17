@@ -2,7 +2,7 @@
   "id": "trailofbits-skills-c-review",
   "name": "c-review",
   "description": "Performs comprehensive C/C++ security review for memory corruption, integer overflows, race conditions, and platform-specific vulnerabilities. Use when auditing native C/C++ applications, reviewing daemons or services for memory safety, or hunting integer overflow / use-after-free / race conditions in userspace code.",
-  "category": "开发编程",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,7 +16,7 @@
     "url": "https://github.com/trailofbits/skills/blob/main/plugins/c-review/skills/c-review/SKILL.md",
     "path": "plugins/c-review/skills/c-review/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-17T14:59:59.677Z",
+    "discovered_at": "2026-08-17T16:49:56.250Z",
     "stars": 6625,
     "language": "Python",
     "pushed_at": "2026-08-17T12:34:27Z",

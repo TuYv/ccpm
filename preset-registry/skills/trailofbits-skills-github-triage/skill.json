@@ -2,7 +2,7 @@
   "id": "trailofbits-skills-github-triage",
   "name": "github-triage",
   "description": "Triages a repository's open GitHub issues and pull requests via the gh CLI. Optionally reviews and merges ready PRs — incrementally merging passing automated/bot PRs and maintainer-approved ones, and spawning review subagents for never-reviewed ones — then closes already-resolved issues with comments citing the resolving PR or commit, cross-links issues with their pending fix PRs, and assigns local-only priority and change-size estimates for everything outstanding. Use when triaging, grooming, o",
-  "category": "开发编程",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,7 +16,7 @@
     "url": "https://github.com/trailofbits/skills/blob/main/plugins/github-triage/skills/github-triage/SKILL.md",
     "path": "plugins/github-triage/skills/github-triage/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-17T15:00:26.807Z",
+    "discovered_at": "2026-08-17T16:49:57.797Z",
     "stars": 6625,
     "language": "Python",
     "pushed_at": "2026-08-17T12:34:27Z",

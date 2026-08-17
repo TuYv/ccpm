@@ -2,7 +2,7 @@
   "id": "trailofbits-skills-supply-chain-risk-auditor",
   "name": "supply-chain-risk-auditor",
   "description": "Audits a project's dependencies for supply-chain risk: version-matched advisories for direct dependencies and the full lockfile tree, abandoned or archived upstreams, npm publisher concentration, and install-time script execution. Use when asked to audit dependencies, assess supply-chain or third-party package risk, or review a dependency tree before an engagement.",
-  "category": "通用其他",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,7 +16,7 @@
     "url": "https://github.com/trailofbits/skills/blob/main/plugins/supply-chain-risk-auditor/skills/supply-chain-risk-auditor/SKILL.md",
     "path": "plugins/supply-chain-risk-auditor/skills/supply-chain-risk-auditor/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-17T15:00:50.687Z",
+    "discovered_at": "2026-08-17T16:49:59.705Z",
     "stars": 6625,
     "language": "Python",
     "pushed_at": "2026-08-17T12:34:27Z",

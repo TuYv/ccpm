@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-17T16:35:30.223Z",
+  "updated_at": "2026-08-17T18:46:38.534Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -1298,9 +1298,9 @@
       "translated_at": "2026-05-12T07:12:12.727Z"
     },
     "preset:drona23-claude-token-efficient": {
-      "hash": "eeae525fe7a4d70b",
-      "summary_zh": "一个即插即用的 Claude 配置文件，无需改代码即可压缩回复篇幅，适合高频、复杂工作流中节省 Token。",
-      "translated_at": "2026-08-17T16:26:59.224Z"
+      "hash": "80e633298903059e",
+      "summary_zh": "一个即插即用的 Claude 指令文件，用更简洁直接的回复减少高频开发工作中的输出 Token 消耗，无需修改代码。",
+      "translated_at": "2026-08-17T18:02:29.679Z"
     },
     "preset:dvdsgl-claude-canvas": {
       "hash": "1a48349884ff8c51",
@@ -17408,9 +17408,9 @@
       "translated_at": "2026-08-10T03:40:50.873Z"
     },
     "bundle:chrisbanes-skills": {
-      "hash": "7efcde88e9bc6349",
-      "summary_zh": "面向 Jetpack Compose 开发与代码评审，系统覆盖组件设计、状态管理、动画、布局、焦点交互和性能优化，帮助团队统一实践并提升界面质量。",
-      "translated_at": "2026-08-16T11:15:41.728Z"
+      "hash": "e89eb56ad41b45b7",
+      "summary_zh": "面向 Jetpack Compose 开发与评审的一站式技能集，覆盖组件设计、交互动画、状态管理及性能优化，帮助系统提升界面质量与工程效率。",
+      "translated_at": "2026-08-17T18:02:26.701Z"
     },
     "bundle:tomasz-tomczyk-crit": {
       "hash": "e6ed17bd4a60a8b7",
@@ -32058,8 +32058,8 @@
       "translated_at": "2026-08-17T05:56:59.511Z"
     },
     "content:garrytan-gstack-codex": {
-      "hash": "25ac39313f6d8be8",
-      "translated_at": "2026-08-16T20:41:18.368Z"
+      "hash": "147ba688064cc8be",
+      "translated_at": "2026-08-17T18:40:46.759Z"
     },
     "content:garrytan-gstack-diagram": {
       "hash": "62faaed842b9f272",
@@ -34488,8 +34488,8 @@
       "translated_at": "2026-08-13T22:18:15.390Z"
     },
     "content:asklokesh-claudeskill-loki-mode": {
-      "hash": "d700fa17552643fb",
-      "translated_at": "2026-08-17T01:31:16.393Z"
+      "hash": "f01bcbf514921ebb",
+      "translated_at": "2026-08-17T18:05:46.868Z"
     },
     "content:asklokesh-claudeskill-loki-mode-checkpoint-mode": {
       "hash": "032b07b8e12aba02",
@@ -36978,8 +36978,8 @@
       "translated_at": "2026-08-15T02:39:29.083Z"
     },
     "content:daymade-claude-code-skills-skill-creator": {
-      "hash": "2c52a35b555972bf",
-      "translated_at": "2026-08-15T06:33:40.858Z"
+      "hash": "951b850c3b121073",
+      "translated_at": "2026-08-17T18:30:54.983Z"
     },
     "content:daymade-claude-code-skills-terraform-skill": {
       "hash": "34b139a0c885292a",
@@ -38133,8 +38133,8 @@
       "translated_at": "2026-08-15T18:34:37.919Z"
     },
     "content:daymade-claude-code-skills-transcript-fixer": {
-      "hash": "d9c2e7d8f41df38d",
-      "translated_at": "2026-08-17T13:44:52.170Z"
+      "hash": "ceb2adcbb6216c71",
+      "translated_at": "2026-08-17T18:27:34.099Z"
     },
     "content:eronred-aso-skills-screenshot-optimization": {
       "hash": "3347d82c1781799d",
@@ -40476,6 +40476,127 @@
     "content:human-avatar-skills-for-humanity-s4h-emotional-motivation-mapping": {
       "hash": "75a323de628d0019",
       "translated_at": "2026-08-17T16:35:30.223Z"
+    },
+    "skill:chrisbanes-skills-implement-with-subagents": {
+      "hash": "65d340e1548f70b9",
+      "summary_zh": "一个多智能体顺序执行工具，适合将工单或计划任务交给独立子智能体逐项实现，避免主控智能体代为编码。",
+      "translated_at": "2026-08-17T18:02:31.048Z"
+    },
+    "content:chrisbanes-skills-implement-with-subagents": {
+      "hash": "eec4898f22e03c69",
+      "translated_at": "2026-08-17T18:09:44.900Z"
+    },
+    "content:human-avatar-skills-for-humanity-s4h-creativity-lateral-thinking": {
+      "hash": "d739498e5de623f8",
+      "translated_at": "2026-08-17T18:31:29.285Z"
+    },
+    "content:human-avatar-skills-for-humanity-s4h-creativity-other-perspectives": {
+      "hash": "495180fb49d1ad06",
+      "translated_at": "2026-08-17T18:32:16.102Z"
+    },
+    "content:human-avatar-skills-for-humanity-s4h-creativity-plus-minus-interesting": {
+      "hash": "650a329a4e2caa35",
+      "translated_at": "2026-08-17T18:32:53.664Z"
+    },
+    "content:human-avatar-skills-for-humanity-s4h-creativity-provocation": {
+      "hash": "7371e8a114fc5fe6",
+      "translated_at": "2026-08-17T18:33:31.793Z"
+    },
+    "content:human-avatar-skills-for-humanity-s4h-creativity-random-entry": {
+      "hash": "54d7f23389a2a0ac",
+      "translated_at": "2026-08-17T18:34:08.694Z"
+    },
+    "content:human-avatar-skills-for-humanity-s4h-creativity-six-hats": {
+      "hash": "d47759fa7cae922a",
+      "translated_at": "2026-08-17T18:34:52.035Z"
+    },
+    "content:human-avatar-skills-for-humanity-s4h-creativity-water-logic": {
+      "hash": "0ee4a7c2160a2f2b",
+      "translated_at": "2026-08-17T18:35:29.939Z"
+    },
+    "content:human-avatar-skills-for-humanity-s4h-decision": {
+      "hash": "0ed63b6db050f2f7",
+      "translated_at": "2026-08-17T18:35:58.829Z"
+    },
+    "content:human-avatar-skills-for-humanity-s4h-decision-criteria-weighting": {
+      "hash": "baf02e63f7b43c6f",
+      "translated_at": "2026-08-17T18:36:31.815Z"
+    },
+    "content:human-avatar-skills-for-humanity-s4h-decision-option-mapping": {
+      "hash": "5da90a0bea255139",
+      "translated_at": "2026-08-17T18:37:06.888Z"
+    },
+    "content:human-avatar-skills-for-humanity-s4h-decision-premortem-analysis": {
+      "hash": "dd80d841badc9513",
+      "translated_at": "2026-08-17T18:37:38.519Z"
+    },
+    "content:human-avatar-skills-for-humanity-s4h-decision-reversibility-analysis": {
+      "hash": "e3001afb842c3251",
+      "translated_at": "2026-08-17T18:38:09.190Z"
+    },
+    "content:human-avatar-skills-for-humanity-s4h-design": {
+      "hash": "bb6b2718ab799c79",
+      "translated_at": "2026-08-17T18:38:41.678Z"
+    },
+    "content:human-avatar-skills-for-humanity-s4h-design-constraints": {
+      "hash": "cbd6c7e7bc48d0d5",
+      "translated_at": "2026-08-17T18:39:26.791Z"
+    },
+    "content:humanplane-homunculus-instinct-apply": {
+      "hash": "18b253d1bacbd3b1",
+      "translated_at": "2026-08-17T18:39:40.211Z"
+    },
+    "content:humanplane-homunculus-session-memory": {
+      "hash": "7394453da5466692",
+      "translated_at": "2026-08-17T18:39:54.042Z"
+    },
+    "content:huytieu-cog-second-brain-auto-research": {
+      "hash": "c4deba6c6e51cc12",
+      "translated_at": "2026-08-17T18:41:01.505Z"
+    },
+    "content:huytieu-cog-second-brain-closed-loop": {
+      "hash": "231a7fadcfff5914",
+      "translated_at": "2026-08-17T18:41:38.776Z"
+    },
+    "content:huytieu-cog-second-brain-braindump": {
+      "hash": "38d171eb1f96af00",
+      "translated_at": "2026-08-17T18:41:59.789Z"
+    },
+    "content:huytieu-cog-second-brain-content-factory": {
+      "hash": "d4c1df2acc6ac3e6",
+      "translated_at": "2026-08-17T18:42:40.712Z"
+    },
+    "content:huytieu-cog-second-brain-comprehensive-analysis": {
+      "hash": "93ff9b7651cc163d",
+      "translated_at": "2026-08-17T18:43:05.483Z"
+    },
+    "content:huytieu-cog-second-brain-create-user-story": {
+      "hash": "990b933492ec28f2",
+      "translated_at": "2026-08-17T18:43:30.119Z"
+    },
+    "content:huytieu-cog-second-brain-daily-journal": {
+      "hash": "8d7328f3bc34954b",
+      "translated_at": "2026-08-17T18:44:04.163Z"
+    },
+    "content:huytieu-cog-second-brain-daily-brief": {
+      "hash": "8a2d2cb0b0616e0c",
+      "translated_at": "2026-08-17T18:44:36.221Z"
+    },
+    "content:huytieu-cog-second-brain-data-forms": {
+      "hash": "d96b22d059ac3316",
+      "translated_at": "2026-08-17T18:44:47.056Z"
+    },
+    "content:huytieu-cog-second-brain-editorial-illustrations": {
+      "hash": "ba337b4a45ae844b",
+      "translated_at": "2026-08-17T18:45:42.170Z"
+    },
+    "content:huytieu-cog-second-brain-export-open-issues": {
+      "hash": "950c19b6825b34a1",
+      "translated_at": "2026-08-17T18:45:47.323Z"
+    },
+    "content:huytieu-cog-second-brain-generate-prd": {
+      "hash": "a39c4fee4d3ba3a4",
+      "translated_at": "2026-08-17T18:46:38.534Z"
     }
   }
 }
