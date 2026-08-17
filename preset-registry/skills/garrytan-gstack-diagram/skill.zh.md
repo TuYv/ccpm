@@ -22,10 +22,10 @@ triggers:
 
 ## 何时调用此技能
 
-SVG/PNG 采用简洁的 mermaid 风格；
-.excalidraw 则保留手绘美感。完全离线运行。
-当用户要求“制作图表”“绘制架构图”“创建流程图”
-“为此绘图”或“将此流程可视化”时使用。
+SVG/PNG 采用简洁的 Mermaid 风格；
+.excalidraw 则保留手绘美感。完全离线。
+当用户要求“制作图表”“绘制架构”“创建流程图”
+“用图表表示这个内容”或“可视化这个流程”时使用。
 
 ## 前置步骤（首先运行）
 
@@ -109,9 +109,11 @@ else
 fi
 ~/.claude/skills/gstack/bin/gstack-timeline-log '{"skill":"diagram","event":"started","branch":"'"$_BRANCH"'","session":"'"$_SESSION_ID"'"}' 2>/dev/null &
 _HAS_ROUTING="no"
-if [ -f CLAUDE.md ] && grep -q "## Skill routing" CLAUDE.md 2>/dev/null; then
-  _HAS_ROUTING="yes"
-fi
+for _RF in CLAUDE.md AGENTS.md; do
+  if [ -f "$_RF" ] && grep -q "## Skill routing" "$_RF" 2>/dev/null; then
+    _HAS_ROUTING="yes"
+  fi
+done
 _ROUTING_DECLINED=$(~/.claude/skills/gstack/bin/gstack-config get routing_declined 2>/dev/null || echo "false")
 echo "HAS_ROUTING: $_HAS_ROUTING"
 echo "ROUTING_DECLINED: $_ROUTING_DECLINED"
@@ -145,34 +147,34 @@ echo "GSTACK_PLAN_MODE: $GSTACK_PLAN_MODE"
 
 ## 计划模式下的安全操作
 
-在计划模式下，以下操作因用于辅助制定计划而被允许：`$B`、`$D`、`codex exec`/`codex review`、写入 `~/.gstack/`、写入计划文件，以及使用 `open` 打开生成的工件。
+在计划模式下，以下操作是允许的，因为它们可为计划提供信息：`$B`、`$D`、`codex exec`/`codex review`、写入 `~/.gstack/`、写入计划文件，以及使用 `open` 打开生成的产物。
 
 ## 计划模式下的 Skill 调用
 
-如果用户在计划模式下调用某个 skill，该 skill 优先于通用的计划模式行为。**应将 skill 文件视为可执行指令，而不是参考资料。** 从步骤 0 开始，逐步执行；skill 发起的任何 AskUserQuestion 都属于在计划模式内运行的工作流，并不违反计划模式——如果 skill 的指令本身解决了某个问题（例如计划模式下的自动选择），则可以合理地不询问该问题。AskUserQuestion（任意变体——`mcp__*__AskUserQuestion` 或原生版本；参见“AskUserQuestion 格式 → 工具解析”）满足计划模式的回合结束要求。如果 AskUserQuestion 不可用或调用失败，请遵循 AskUserQuestion 格式的失败回退方案：`headless` → BLOCKED；`interactive` → 使用文字回退方案（同样满足回合结束要求）。到达 STOP 点时，立即停止。不要继续执行工作流，也不要在那里调用 ExitPlanMode。标记为“计划模式例外——始终运行”的命令应予以执行。仅在 skill 工作流完成后，或用户要求你取消该 skill 或退出计划模式时，才调用 ExitPlanMode。
+如果用户在计划模式下调用某个 Skill，则该 Skill 优先于通用的计划模式行为。**请将 Skill 文件视为可执行指令，而不是参考资料。** 从步骤 0 开始，逐步遵循其中的指令；该 Skill 触发的任何 AskUserQuestion 都属于在计划模式内运行的工作流，并不违反计划模式——而且，如果某个 Skill 的指令本身解决了问题（例如计划模式下自动选择），它也完全可以不提出问题。AskUserQuestion（任何变体——`mcp__*__AskUserQuestion` 或原生版本；请参阅“AskUserQuestion 格式 → 工具解析”）满足计划模式对回合结束的要求。如果 AskUserQuestion 不可用或调用失败，请遵循 AskUserQuestion 格式中的失败回退规则：`headless` → BLOCKED；`interactive` → 文本回退（同样满足回合结束要求）。到达 STOP 点时，立即停止。不要继续执行工作流，也不要在那里调用 ExitPlanMode。标记为“PLAN MODE EXCEPTION — ALWAYS RUN”的命令应当执行。仅在 Skill 工作流完成后，或者用户要求你取消该 Skill 或退出计划模式时，才调用 ExitPlanMode。
 
-如果 `PROACTIVE` 为 `"false"`，不要自动调用或主动建议使用 skill。如果某个 skill 看起来可能有用，请询问：“我认为 /skillname 可能对此有帮助——要我运行它吗？”
+如果 `PROACTIVE` 为 `"false"`，不要自动调用或主动推荐 Skill。如果某个 Skill 看起来可能有用，请询问：“我认为 /skillname 在这里可能会有所帮助——要我运行它吗？”
 
-如果 `SKILL_PREFIX` 为 `"true"`，建议/调用 `/gstack-*` 名称。磁盘路径仍为 `~/.claude/skills/gstack/[skill-name]/SKILL.md`。
+如果 `SKILL_PREFIX` 为 `"true"`，请使用 `/gstack-*` 名称来推荐/调用 Skill。磁盘路径仍为 `~/.claude/skills/gstack/[skill-name]/SKILL.md`。
 
-如果 `UPDATE_CHECK` 为 `"false"`，跳过接下来的两行——在此模式下，更新检查二进制文件不会输出任何内容，因此不会有需要处理的 `UPGRADE_AVAILABLE` / `JUST_UPGRADED` 输出。
+如果 `UPDATE_CHECK` 为 `"false"`，跳过接下来的两行——在该模式下，更新检查二进制文件不会输出任何内容，因此也就没有需要处理的 `UPGRADE_AVAILABLE` / `JUST_UPGRADED` 输出。
 
-如果输出显示 `UPGRADE_AVAILABLE <old> <new>`：读取 `~/.claude/skills/gstack/gstack-upgrade/SKILL.md`，并遵循“内联升级流程”（如果已配置，则自动升级；否则通过 AskUserQuestion 提供 4 个选项；如果用户拒绝，则写入暂缓状态）。
+如果输出显示 `UPGRADE_AVAILABLE <old> <new>`：读取 `~/.claude/skills/gstack/gstack-upgrade/SKILL.md`，并遵循“内联升级流程”（如果已配置则自动升级，否则使用包含 4 个选项的 AskUserQuestion；如果用户拒绝，则写入延后提醒状态）。
 
-如果输出显示 `JUST_UPGRADED <from> <to>`：输出“正在运行 gstack v{to}（刚刚更新！）”。如果 `SPAWNED_SESSION` 为 true，则跳过功能发现。
+如果输出显示 `JUST_UPGRADED <from> <to>`：输出“正在运行 gstack v{to}（刚刚完成更新！）”。如果 `SPAWNED_SESSION` 为 true，则跳过功能发现。
 
 功能发现，每个会话最多提示一次：
-- 如果缺少 `~/.claude/skills/gstack/.feature-prompted-continuous-checkpoint`：使用 AskUserQuestion 询问是否启用持续检查点自动提交。如果接受，运行 `~/.claude/skills/gstack/bin/gstack-config set checkpoint_mode continuous`。无论如何都要创建标记文件。
-- 如果缺少 `~/.claude/skills/gstack/.feature-prompted-model-overlay`：告知“模型覆盖层已启用。MODEL_OVERLAY 会显示补丁。”无论如何都要创建标记文件。
+- 如果缺少 `~/.claude/skills/gstack/.feature-prompted-continuous-checkpoint`：使用 AskUserQuestion 询问是否启用持续检查点自动提交。如果接受，则运行 `~/.claude/skills/gstack/bin/gstack-config set checkpoint_mode continuous`。无论如何都要创建该标记文件。
+- 如果缺少 `~/.claude/skills/gstack/.feature-prompted-model-overlay`：告知“模型叠加层已启用。MODEL_OVERLAY 会显示补丁。”无论如何都要创建该标记文件。
 
-升级提示完成后，继续执行工作流。
+升级提示处理完毕后，继续执行工作流。
 
 如果 `WRITING_STYLE_PENDING` 为 `yes`：询问一次写作风格：
 
-> v1 提示更简单：首次使用术语时提供释义、以结果为导向的问题、更简短的文字。保留默认设置还是恢复简洁风格？
+> v1 提示词更加简洁：首次使用时解释术语、以结果为导向提出问题、文字更精炼。保留默认设置，还是恢复简练风格？
 
 选项：
-- A) 保留新的默认设置（推荐——良好的写作对所有人都有帮助）
+- A) 保留新的默认设置（推荐——良好的写作对每个人都有帮助）
 - B) 恢复 V0 文风——设置 `explain_level: terse`
 
 如果选择 A：保持 `explain_level` 未设置（默认为 `default`）。
@@ -186,18 +188,18 @@ touch ~/.gstack/.writing-style-prompted
 
 如果 `WRITING_STYLE_PENDING` 为 `no`，则跳过。
 
-如果 `LAKE_INTRO` 为 `no`：说明“gstack 遵循**煮沸整个海洋**原则——当 AI 使边际成本接近于零时，就把事情完整地做完。了解更多：https://garryslist.org/posts/boil-the-ocean” 并询问是否打开：
+如果 `LAKE_INTRO` 为 `no`：告知用户：“gstack 遵循 **Boil the Ocean** 原则——当 AI 让边际成本接近于零时，就把事情完整地做完。了解更多：https://garryslist.org/posts/boil-the-ocean” 并询问是否打开：
 
 ```bash
 open https://garryslist.org/posts/boil-the-ocean
 touch ~/.gstack/.completeness-intro-seen
 ```
 
-仅在用户同意时运行 `open`。始终运行 `touch`。
+仅在用户选择是时运行 `open`。始终运行 `touch`。
 
 如果 `TEL_PROMPTED` 为 `no` 且 `LAKE_INTRO` 为 `yes`：通过 AskUserQuestion 询问一次是否启用遥测：
 
-> 帮助 gstack 变得更好。仅分享使用数据：技能、持续时间、崩溃情况、稳定的设备 ID。不包含代码或文件路径。你的仓库名称仅记录在本地，并会在上传前移除。
+> 帮助 gstack 变得更好。仅分享使用数据：技能、持续时间、崩溃情况、稳定设备 ID。不包含代码或文件路径。你的仓库名称仅记录在本地，并会在上传前移除。
 
 选项：
 - A) 帮助 gstack 变得更好！（推荐）
@@ -225,11 +227,11 @@ touch ~/.gstack/.telemetry-prompted
 
 如果 `PROACTIVE_PROMPTED` 为 `no` 且 `TEL_PROMPTED` 为 `yes`：询问一次：
 
-> 是否允许 gstack 主动建议技能，例如针对“这个能正常工作吗？”建议 /qa，或针对错误建议 /investigate？
+> 是否允许 gstack 主动建议技能，例如在遇到“这个能用吗？”时建议 /qa，或在遇到 bug 时建议 /investigate？
 
 选项：
 - A) 保持开启（推荐）
-- B) 将其关闭——我会自己输入 /commands
+- B) 关闭——我会自己输入 /commands
 
 如果选择 A：运行 `~/.claude/skills/gstack/bin/gstack-config set proactive true`
 如果选择 B：运行 `~/.claude/skills/gstack/bin/gstack-config set proactive false`
@@ -241,23 +243,23 @@ touch ~/.gstack/.proactive-prompted
 
 如果 `PROACTIVE_PROMPTED` 为 `yes`，则跳过。
 
-## 首次运行指引（一次性）
+## 首次运行指引（仅一次）
 
-如果 `ACTIVATED` 为 `no`（这台机器上首次运行技能），且前置输出中包含一个非空的 `FIRST_TASK:` 值，并且该值不是 `nongit`：根据该标记显示一行简短的项目专属提示，然后继续执行用户实际请求的内容——不要中止其任务。标记映射：`greenfield` →“这是一个全新的仓库——先使用 `/spec` 或 `/office-hours` 确定其方向。” `code_node`/`code_python`/`code_rust`/`code_go`/`code_ruby`/`code_ios` →“这里有代码——使用 `/qa` 查看其运行效果，或在发现异常时使用 `/investigate`。” `branch_ahead` →“此分支上有尚未发布的工作——先执行 `/review`，再执行 `/ship`。” `dirty_default` →“有未提交的更改——提交前先执行 `/review`。” `clean_default` →“选择一项：`/spec`、`/investigate` 或 `/qa`。” 然后将 TASK_TOKEN 替换为你看到的标记并运行（尽力执行），再将其标记为已激活：
+如果 `ACTIVATED` 为 `no`（这是此机器上首次运行技能），并且前置输出中包含一个非空且不为 `nongit` 的 `FIRST_TASK:` 值：根据该标记显示一行简短且针对当前项目的提示，然后继续执行用户实际请求的内容——不要中止其任务。标记映射如下：`greenfield` → “这是一个全新的仓库——先使用 `/spec` 或 `/office-hours` 确定其方向。” `code_node`/`code_python`/`code_rust`/`code_go`/`code_ruby`/`code_ios` → “这里有代码——使用 `/qa` 查看它是否正常运行；如果有异常，则使用 `/investigate`。” `branch_ahead` → “此分支上有尚未发布的工作——依次使用 `/review` 和 `/ship`。” `dirty_default` → “存在未提交的更改——提交前使用 `/review`。” `clean_default` → “选择一个：`/spec`、`/investigate` 或 `/qa`。” 然后用你看到的标记替换 TASK_TOKEN 并运行（尽力而为），再将其标记为已激活：
 ```bash
 ~/.claude/skills/gstack/bin/gstack-telemetry-log --event-type first_task_scaffold_shown --skill "TASK_TOKEN" --outcome shown 2>/dev/null || true
 touch ~/.gstack/.activated 2>/dev/null || true
 ```
 
-如果 `ACTIVATED` 为 `no`，但 `FIRST_TASK:` 为空或为 `nongit`（无界面、非 Git 或没有可执行的操作）：不显示任何内容，只运行 `touch ~/.gstack/.activated 2>/dev/null || true`。
+如果 `ACTIVATED` 为 `no`，但 `FIRST_TASK:` 为空或为 `nongit`（无头模式、非 Git 项目或没有可执行的操作）：不显示任何内容，只运行 `touch ~/.gstack/.activated 2>/dev/null || true`。
 
-否则，如果 `ACTIVATED` 为 `yes` 且 `FIRST_LOOP_SHOWN` 为 `no`：仅提示一次以下信息（然后继续）：
+否则，如果 `ACTIVATED` 为 `yes` 且 `FIRST_LOOP_SHOWN` 为 `no`：仅提示一次以下内容（然后继续）：
 
-> 提示：当你完成一个完整循环——**规划 → 审查 → 发布**——时，gstack 才能充分发挥作用。常见的第一个循环是：使用 `/office-hours` 或 `/spec` 梳理内容，使用 `/plan-eng-review` 最终确定，然后使用 `/ship` 发布。
+> 提示：完成一个完整循环时，gstack 才能发挥最大价值——**规划 → 审查 → 发布**。常见的第一个循环是：使用 `/office-hours` 或 `/spec` 梳理思路，使用 `/plan-eng-review` 最终确定，然后使用 `/ship` 发布。
 
 然后运行 `touch ~/.gstack/.first-loop-tip-shown 2>/dev/null || true`。
 
-如果 `ACTIVATED` 和 `FIRST_LOOP_SHOWN` 均为 `yes`，则跳过此部分。
+如果 `ACTIVATED` 和 `FIRST_LOOP_SHOWN` 均为 `yes`，则跳过本节。
 
 如果 `HAS_ROUTING` 为 `no`，且 `ROUTING_DECLINED` 为 `false`，且 `PROACTIVE_PROMPTED` 为 `yes`：
 检查项目根目录中是否存在 CLAUDE.md 文件。如果不存在，则创建该文件。
@@ -296,13 +298,13 @@ Key routing rules:
 
 然后提交更改：`git add CLAUDE.md && git commit -m "chore: add gstack skill routing rules to CLAUDE.md"`
 
-如果选择 B：运行 `~/.claude/skills/gstack/bin/gstack-config set routing_declined true`，并告知用户可以使用 `gstack-config set routing_declined false` 重新启用。
+如果选择 B：运行 `~/.claude/skills/gstack/bin/gstack-config set routing_declined true`，并告知用户可使用 `gstack-config set routing_declined false` 重新启用。
 
 每个项目只会执行一次此操作。如果 `HAS_ROUTING` 为 `yes` 或 `ROUTING_DECLINED` 为 `true`，则跳过。
 
 如果 `VENDORED_GSTACK` 为 `yes`，除非 `~/.gstack/.vendoring-warned-$SLUG` 已存在，否则通过 AskUserQuestion 警告一次：
 
-> 此项目在 `.claude/skills/gstack/` 中内置了 gstack。内置方式已弃用。
+> 此项目已将 gstack 内置在 `.claude/skills/gstack/` 中。内置方式已弃用。
 > 是否迁移到团队模式？
 
 选项：
@@ -316,23 +318,23 @@ Key routing rules:
 4. 运行 `git add .claude/ .gitignore CLAUDE.md && git commit -m "chore: migrate gstack from vendored to team mode"`
 5. 告知用户：“完成。现在每位开发者都需运行：`cd ~/.claude/skills/gstack && ./setup --team`”
 
-如果选择 B：回复“好的，你需要自行确保内置副本保持最新。”
+如果选择 B：告知用户“好的，你需要自行负责让内置副本保持最新。”
 
-始终运行（无论选择哪一项）：
+无论选择什么，始终运行：
 ```bash
 eval "$(~/.claude/skills/gstack/bin/gstack-slug 2>/dev/null)" 2>/dev/null || true
 touch ~/.gstack/.vendoring-warned-${SLUG:-unknown}
 ```
 
-如果标记存在，则跳过。
+如果标记已存在，则跳过。
 
 如果 `SPAWNED_SESSION` 为 `"true"`，则表示你正在由 AI 编排器（例如 OpenClaw）生成的会话中运行。在生成的会话中：
 - 不要使用 AskUserQuestion 进行交互式提示。自动选择推荐选项。
 - 不要运行升级检查、遥测提示、路由注入或 lake 介绍。
 - 专注于完成任务，并通过文字输出报告结果。
-- 最后提供完成报告：交付了什么、做出了哪些决定，以及有哪些不确定之处。
+- 最后提供完成报告：交付了什么、做出了哪些决定，以及任何不确定之处。
 
-## 工件同步（技能启动时）
+## 产物同步（技能启动时）
 
 ```bash
 _GSTACK_HOME="${GSTACK_HOME:-$HOME/.gstack}"
@@ -379,10 +381,13 @@ _BRAIN_SYNC_MODE=$("$_BRAIN_CONFIG_BIN" get artifacts_sync_mode 2>/dev/null || e
 # Detect remote-MCP mode (Path 4 of /setup-gbrain). Local artifacts sync is
 # a no-op in remote mode; the brain server pulls from GitHub/GitLab on its
 # own cadence. Read claude.json directly to keep this preamble fast (no
-# subprocess to claude CLI on every skill start).
+# subprocess to claude CLI on every skill start). Both registration scopes
+# are read (#2499): user scope, then the nearest-ancestor project scope.
 _GBRAIN_MCP_MODE="none"
+_GBRAIN_MCP_ENTRY=""
 if command -v jq >/dev/null 2>&1 && [ -f "$HOME/.claude.json" ]; then
-  _GBRAIN_MCP_TYPE=$(jq -r '.mcpServers.gbrain.type // .mcpServers.gbrain.transport // empty' "$HOME/.claude.json" 2>/dev/null)
+  _GBRAIN_MCP_ENTRY=$(jq -c --arg cwd "$PWD" '.mcpServers.gbrain // ((.projects // {}) | to_entries | map(select((.key as $k | $cwd == $k or ($cwd | startswith($k + "/"))) and ((try .value.mcpServers.gbrain catch null) != null))) | sort_by(.key | length) | last | .value.mcpServers.gbrain) // empty' "$HOME/.claude.json" 2>/dev/null)
+  _GBRAIN_MCP_TYPE=$(printf '%s' "$_GBRAIN_MCP_ENTRY" | jq -r '.type // .transport // empty' 2>/dev/null)
   case "$_GBRAIN_MCP_TYPE" in
     url|http|sse) _GBRAIN_MCP_MODE="remote-http" ;;
     stdio) _GBRAIN_MCP_MODE="local-stdio" ;;
@@ -403,6 +408,7 @@ if [ -d "$_GSTACK_HOME/.git" ] && [ "$_BRAIN_SYNC_MODE" != "off" ]; then
   _BRAIN_DO_PULL=1
   if [ -f "$_BRAIN_LAST_PULL_FILE" ]; then
     _BRAIN_LAST=$(cat "$_BRAIN_LAST_PULL_FILE" 2>/dev/null || echo 0)
+    case "$_BRAIN_LAST" in ''|*[!0-9]*) _BRAIN_LAST=0 ;; esac
     _BRAIN_AGE=$(( _BRAIN_NOW - _BRAIN_LAST ))
     [ "$_BRAIN_AGE" -lt 86400 ] && _BRAIN_DO_PULL=0
   fi
@@ -416,7 +422,7 @@ fi
 if [ "$_GBRAIN_MCP_MODE" = "remote-http" ]; then
   # Remote-MCP mode: local artifacts sync is a no-op (brain admin's server
   # pulls from GitHub/GitLab). Show the user this is by design, not broken.
-  _GBRAIN_HOST=$(jq -r '.mcpServers.gbrain.url // empty' "$HOME/.claude.json" 2>/dev/null | sed -E 's|^https?://([^/:]+).*|\1|')
+  _GBRAIN_HOST=$(printf '%s' "${_GBRAIN_MCP_ENTRY:-}" | jq -r '.url // empty' 2>/dev/null | sed -E 's|^https?://([^/:]+).*|\1|' | head -1 | tr -cd 'A-Za-z0-9._-')
   echo "ARTIFACTS_SYNC: remote-mode (managed by brain server ${_GBRAIN_HOST:-remote})"
 elif [ -d "$_GSTACK_HOME/.git" ] && [ "$_BRAIN_SYNC_MODE" != "off" ]; then
   _BRAIN_QUEUE_DEPTH=0
@@ -429,14 +435,14 @@ else
 fi
 ```
 
-隐私停止关卡：如果输出显示 `ARTIFACTS_SYNC: off`，`artifacts_sync_mode_prompted` 为 `false`，并且 gbrain 位于 PATH 中或 `gbrain doctor --fast --json` 可以运行，则询问一次：
+隐私停止门：如果输出显示 `ARTIFACTS_SYNC: off`，`artifacts_sync_mode_prompted` 为 `false`，并且 gbrain 位于 PATH 中或 `gbrain doctor --fast --json` 可以运行，则询问一次：
 
-> gstack 可以将你的产物（CEO 计划、设计、报告）发布到一个私有 GitHub 仓库，供 GBrain 跨机器索引。需要同步多少内容？
+> gstack 可以将你的产物（CEO 计划、设计、报告）发布到一个私有 GitHub 仓库，供 GBrain 建立索引并在多台机器间使用。需要同步多少内容？
 
 选项：
 - A) 允许列表中的所有内容（推荐）
 - B) 仅产物
-- C) 拒绝，所有内容均保留在本地
+- C) 拒绝，所有内容保留在本地
 
 回答后：
 
@@ -456,37 +462,37 @@ fi
 ```
 
 
-## 模型特定行为补丁（claude）
+## 模型专用行为补丁（claude）
 
-以下提示针对 claude 模型系列进行了调整。它们**从属于**技能工作流、停止点、AskUserQuestion 关卡、计划模式安全要求以及 /ship 审查关卡。如果以下提示与技能指令冲突，以技能指令为准。将这些内容视为偏好，而非规则。
+以下提示针对 claude 模型系列进行了调整。它们**从属于**技能工作流、停止点、AskUserQuestion 门、计划模式安全要求以及 /ship 审查门。如果以下提示与技能说明冲突，以技能为准。将这些内容视为偏好，而不是规则。
 
-**待办事项列表纪律。** 执行多步骤计划时，每完成一项任务，就单独将其标记为完成。不要在最后批量标记完成。如果某项任务最终证明没有必要，将其标记为已跳过，并用一行说明原因。
+**待办事项列表纪律。** 执行多步骤计划时，每完成一项任务就单独将其标记为完成。不要在最后批量标记完成。如果某项任务最终不需要执行，请将其标记为已跳过，并用一行说明原因。
 
-**执行重大操作前先思考。** 对于复杂操作（重构、迁移、重要的新功能），执行前简要说明你的方案。这样用户可以低成本地纠正方向，而不必等到执行中途。
+**执行重大操作前先思考。** 对于复杂操作（重构、迁移、重要的新功能），请在执行前简要说明你的处理方法。这样用户可以低成本地修正方向，而不必等到执行中途。
 
-**优先使用专用工具而不是 Bash。** 优先使用 Read、Edit、Write、Glob、Grep，而不是对应的 shell 工具（cat、sed、find、grep）。专用工具成本更低，也更清晰。
+**优先使用专用工具，而非 Bash。** 优先使用 Read、Edit、Write、Glob、Grep，而不是对应的 shell 工具（cat、sed、find、grep）。专用工具成本更低，也更清晰。
 
 ## 表达风格
 
-直接、具体，像开发者之间交流。明确指出文件、函数、命令以及对用户可见的影响。不要说废话。
+直接、具体，以构建者之间交流的方式表达。明确指出文件、函数、命令以及用户可见的影响。不要使用填充内容。
 
-不要使用长破折号。不要使用这些 AI 腔词汇：delve、crucial、robust、comprehensive、nuanced、multifaceted。不要使用企业化或学术化表达。段落要短。以接下来要做的事结尾。
+不要使用长破折号。不要使用 AI 常用词汇：delve、crucial、robust、comprehensive、nuanced、multifaceted。切勿采用企业化或学术化表达。使用短段落。以接下来要做什么结尾。
 
-用户掌握你所不了解的上下文。不同模型得出一致结论只是一项建议，而不是决定。由用户决定。
+用户掌握你不知道的上下文。不同模型之间达成一致只是一项建议，而不是决定。由用户作出决定。
 
 ## 完成状态协议
 
 完成技能工作流时，使用以下状态之一报告：
 - **DONE** — 已完成，并提供证据。
-- **DONE_WITH_CONCERNS** — 已完成，但需列出顾虑。
-- **BLOCKED** — 无法继续；说明阻塞原因以及已尝试的操作。
-- **NEEDS_CONTEXT** — 缺少信息；准确说明需要哪些信息。
+- **DONE_WITH_CONCERNS** — 已完成，但需列出疑虑。
+- **BLOCKED** — 无法继续；说明阻碍因素以及已尝试的操作。
+- **NEEDS_CONTEXT** — 缺少信息；明确说明需要哪些信息。
 
-在尝试失败 3 次后、对安全敏感的更改存在不确定性时，或遇到无法验证的范围时，进行升级。格式：`STATUS`、`REASON`、`ATTEMPTED`、`RECOMMENDATION`。
+尝试失败 3 次后、对安全敏感型更改存在不确定性时，或无法验证范围时，进行升级处理。格式：`STATUS`、`REASON`、`ATTEMPTED`、`RECOMMENDATION`。
 
 ## 操作层面的自我改进
 
-完成前，如果你发现了可长期复用的项目特殊情况或命令修复方法，并且能在下次节省 5 分钟以上，请将其记录下来：
+完成前，如果你发现了可长期复用的项目特性或命令修复方法，并且能在下次节省 5 分钟以上，请将其记录下来：
 
 ```bash
 ~/.claude/skills/gstack/bin/gstack-learnings-log '{"skill":"SKILL_NAME","type":"operational","key":"SHORT_KEY","insight":"DESCRIPTION","confidence":N,"source":"observed"}'
@@ -496,10 +502,10 @@ fi
 
 ## 遥测（最后运行）
 
-工作流完成后，记录遥测。使用 frontmatter 中 skill 的 `name:`。OUTCOME 为 success/error/abort/unknown。
+工作流完成后，记录遥测数据。使用 frontmatter 中 skill 的 `name:`。OUTCOME 为 success/error/abort/unknown。
 
-**计划模式例外——始终运行：** 此命令会将遥测写入
-`~/.gstack/analytics/`，与前置分析数据的写入方式一致。
+**计划模式例外——始终运行：** 此命令会将遥测数据写入
+`~/.gstack/analytics/`，与前置分析数据写入的位置一致。
 
 运行以下 bash：
 
@@ -524,50 +530,50 @@ fi
 
 运行前替换 `SKILL_NAME`、`OUTCOME` 和 `USED_BROWSE`。
 将 `ERROR_MESSAGE` 替换为简短的错误描述（如果 outcome 为 error；
-否则使用空字符串 ""），并将 `FAILED_STEP` 替换为发生失败的步骤名称或编号
-（如果 outcome 为 error；否则使用空字符串 ""）。
+否则使用空字符串 `""`），并将 `FAILED_STEP` 替换为发生失败的步骤名称或编号
+（如果 outcome 为 error；否则使用空字符串 `""`）。
 
 ## 计划状态页脚
 
-运行计划审查的 skill（`/plan-*-review`、`/codex review`）会在 skill 末尾包含 EXIT PLAN MODE GATE 阻塞检查清单，用于在调用 ExitPlanMode 之前验证计划文件以 `## GSTACK REVIEW REPORT` 结尾。不运行计划审查的 skill（例如 `/ship`、`/qa`、`/review` 等操作型 skill）通常不在计划模式下运行，也没有需要验证的审查报告；此页脚对它们不起作用。写入计划文件是计划模式下唯一允许的编辑操作。
+运行计划审查的 skill（`/plan-*-review`、`/codex review`）会在 skill 末尾包含 EXIT PLAN MODE GATE 阻塞检查清单，用于在调用 ExitPlanMode 之前验证计划文件以 `## GSTACK REVIEW REPORT` 结尾。不运行计划审查的 skill（如 `/ship`、`/qa`、`/review` 等操作型 skill）通常不在计划模式下运行，也没有需要验证的审查报告；此页脚对它们不起任何作用。写入计划文件是计划模式下唯一允许的编辑操作。
 
 # /diagram — 输入英文，输出可编辑图表
 
-每次运行都会生成一个**三件套**，绝不会只输出无法编辑的像素图：
+每次运行都会生成一个**三件套**，绝不会只生成无用的像素图：
 
 | 产物 | 用途 |
 |---|---|
-| `<slug>.mmd` | Mermaid 源文件——对 LLM 友好的交换格式 |
-| `<slug>.excalidraw` | 可编辑场景——在 excalidraw.com 打开，移动方框，然后继续编辑 |
-| `<slug>.svg` + `<slug>.png` | 用于文档的清晰矢量图 + 用于聊天、issue 和 README 的栅格图 |
+| `<slug>.mmd` | mermaid 源文件——对 LLM 友好的交换格式 |
+| `<slug>.excalidraw` | 可编辑场景——在 excalidraw.com 中打开它，移动方框，然后继续编辑 |
+| `<slug>.svg` + `<slug>.png` | 用于文档的清晰矢量图 + 用于聊天、议题和 README 的光栅图 |
 
-渲染完全离线进行，使用 browse daemon 中的 diagram-render bundle
-（`lib/diagram-render/dist/diagram-render.html`）。无需 CDN，无需网络。
+渲染完全离线，通过浏览守护进程中的 diagram-render 包
+（`lib/diagram-render/dist/diagram-render.html`）完成。无 CDN，无网络。
 
-## 第 1 步——编写图表
+## 步骤 1 — 编写图表
 
-根据用户的请求编写 Mermaid。规则：
+根据用户的请求编写 mermaid。规则：
 
-- **流程图（`graph LR`/`graph TD`）**是最佳选择：它们可以转换为
-  完全可编辑的 Excalidraw 场景。管道/流程优先使用 `graph LR`，
+- **流程图（`graph LR`/`graph TD`）**是最合适的选择：它们可以转换为
+  完全可编辑的 excalidraw 场景。流水线/流程优先使用 `graph LR`，
   层级结构优先使用 `graph TD`。
-- 序列图、状态图、甘特图和其他 Mermaid 类型可以正常渲染为 SVG/PNG，但
+- 序列图、状态图、甘特图和其他 mermaid 类型可以正常渲染为 SVG/PNG，但
   官方转换器仅支持流程图——对于这些类型，会跳过
   `.excalidraw` 产物，并且你必须告知用户：
-  “序列图可以渲染，但目前还无法在 Excalidraw 中编辑（上游
-  转换器的限制——流程图可以编辑）。”
-- 保持节点标签简短；将细节放在边标签中。5-15 个节点是
-  易于阅读的范围。如果用户的请求需要更多节点，请拆分成多个图表
+  “序列图可以渲染，但目前还不能在 excalidraw 中编辑（上游
+  转换器的限制——流程图可以）。”
+- 保持节点标签简短；将详细信息放在边标签中。5–15 个节点是
+  易于阅读的范围。如果用户的需求需要更多节点，请拆分为多个图表
   并说明原因。
 
-确定输出目录：当 cwd 是 Git 仓库时使用 `./diagrams/`
+确定输出目录：当 cwd 是 git 仓库时使用 `./diagrams/`
 （用户可以提交这些产物），否则使用 `/tmp/gstack-diagrams/`。根据图表的主题生成
 `<slug>`（kebab-case，≤40 个字符）。
 
 ## 步骤 2 — 暂存渲染包（每个会话一次）
 
-暂存副本采用内容寻址（与 make-pdf 的预处理阶段使用相同约定），
-因此并发会话以及不同 gstack 版本之间绝不会相互覆盖：
+暂存副本按内容寻址（与 make-pdf 预处理阶段采用相同约定），
+因此并发会话和不同 gstack 版本绝不会相互覆盖：
 
 ```bash
 BUNDLE=""
@@ -586,18 +592,19 @@ $B wait '#done' --tab-id "$TAB"
 echo "RENDER_TAB_READY: tab $TAB"
 ```
 
-记住 `$TAB`——下文中的**每一个** `$B js` / `$B wait` / `$B closetab` 都必须传入
-`--tab-id $TAB`。如果不传，调用会作用于当前处于活动状态的任意标签页，而该标签页可能属于一个
-正在共享守护进程的实时 /qa 或 /scrape 会话。
+记住 `$TAB`——下方的**每一次** `$B js` / `$B wait` / `$B closetab` 调用都必须传入
+`--tab-id $TAB`。如果不传，调用将作用于当前处于活动状态的任意标签页，而该标签页可能是
+共享同一守护进程的实时 /qa 或 /scrape 会话。
 
-如果出现 `BUNDLE_MISSING`：停止操作并向用户显示构建命令。不要擅自采用
-CDN 回退方案——离线运行是既定约定。
+如果出现 `BUNDLE_MISSING`：停止并向用户显示构建命令。不要自行设计
+CDN 回退方案——离线是约定的一部分。
 
 ## 步骤 3 — 渲染三件套
 
-首先使用 Write 工具将 Mermaid 源码写入 `<outdir>/<slug>.mmd`。页面本身
-无法读取文件，因此请通过 **base64** 传入源码——绝不要将文件内容拼接到
-JS 模板字面量中（源码中的反引号、`${` 和反斜杠会被解释并导致内容损坏）：
+首先使用 Write 工具将 mermaid 源码写入 `<outdir>/<slug>.mmd`。页面
+本身无法读取文件，因此请通过 **base64** 传入源码——绝不要把
+文件内容拼接到 JS 模板字面量中（源码中的反引号、`${` 和反斜杠
+会被解释并导致内容损坏）：
 
 ```bash
 # SVG (always). atob() decodes the base64 inside the page.
@@ -613,24 +620,23 @@ $B js --tab-id "$TAB" "window.__scene" --out <outdir>/<slug>.excalidraw
 ```
 
 注意：`atob()` 会生成 Latin-1；对于标签中包含非 ASCII 字符的源码，请使用
-`decodeURIComponent(escape(atob('…')))` 来准确还原 UTF-8。
+`decodeURIComponent(escape(atob('…')))` 精确恢复 UTF-8。
 
-如果 Mermaid 渲染返回错误，请向用户显示解析错误、修复 Mermaid，然后重试——不要将
-损坏的源文件交给用户。如果 `__mermaidToExcalidraw` 在非流程图类型上失败，请跳过
-`.excalidraw` 产物，并交付其余产物，同时附上步骤 1 中的限制说明。
+如果 mermaid 渲染返回错误，请向用户显示解析错误，修复
+mermaid 后重试——不要把损坏的源文件交给用户。如果
+`__mermaidToExcalidraw` 在非流程图类型上失败，请跳过 `.excalidraw`
+产物，并在交付其余内容时附上步骤 1 中的限制说明。
 
 ## 第 4 步 — 展示并交付
 
-1. 使用 Read 工具读取 PNG，以便用户以内联方式查看图表。
+1. 使用 Read 工具读取 PNG，以便用户在行内查看图表。
 2. 列出三件套文件的路径。
-3. 一行可编辑性说明：“`.excalidraw` 文件可在 excalidraw.com 中打开
-   （文件 → 打开）— 可在那里编辑，我可以根据编辑后的场景重新渲染。”
-4. 如果用户希望进行更改，请编辑 `.mmd` 源文件并重新执行第 3 步 —
-   该源文件是唯一可信来源。
+3. 用一行说明可编辑性：“`.excalidraw` 文件可在 excalidraw.com 中打开
+   （File → Open）— 在那里编辑后，我可以根据编辑后的场景重新渲染。”
+4. 如果用户需要更改，请编辑 `.mmd` 源文件并重新执行第 3 步 — 该源文件是唯一事实来源。
 
-重新渲染编辑后的 `.excalidraw`（用户往返编辑流程）：加载场景文件
-并直接导出，不要修改 mermaid — 由于场景 JSON 中包含大量引号和反斜杠，
-因此再次使用 base64 传输：
+重新渲染编辑后的 `.excalidraw`（用户往返编辑）：加载场景文件并直接导出，
+无需改动 mermaid — 仍使用 base64 传输，因为场景 JSON 中包含大量引号和反斜杠：
 
 ```bash
 $B js --tab-id "$TAB" "window.__excalidrawToSvg(atob('$(base64 < <outdir>/<slug>.excalidraw | tr -d '\n')')).then(s => { window.__svg = s; return 'OK' })"
@@ -641,13 +647,11 @@ $B js --tab-id "$TAB" "window.__rasterize(window.__svg, 1950)" --out <outdir>/<s
 ## 规则
 
 - **绝不要在未渲染的情况下交付三件套文件。** 单独的 `.mmd` 文件并不是
-  图表。如果无法渲染（缺少 bundle、browse 不可用），请说明情况
-  并停止。
-- **清理：** 在当前对话的图表工作完成后关闭渲染标签页
-  (`$B closetab $TAB`)，不要在不同图表之间关闭。
+  图表。如果无法渲染（缺少 bundle、browse 不可用），请说明情况并停止。
+- **清理：** 在当前对话中的图表工作全部完成后关闭渲染标签页
+  （`$B closetab $TAB`），不要在处理多个图表之间关闭。
 - 对于要用于 PDF 的图表：提醒用户，`make-pdf` 可以原生渲染
-  ` ```mermaid ` 围栏 — 将 `.mmd` 嵌入其 markdown 中
-  比嵌入 PNG 更好。
+  ` ```mermaid ` 围栏 — 将 `.mmd` 嵌入其 markdown 中比嵌入 PNG 更好。
 
 ## 完成状态
 
