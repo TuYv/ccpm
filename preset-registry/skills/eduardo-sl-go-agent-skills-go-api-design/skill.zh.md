@@ -3,26 +3,26 @@ name: go-api-design
 description: >
   REST and gRPC API design patterns for Go services. Covers HTTP handlers,
   middleware, routing, request/response patterns, versioning, pagination,
-  graceful shutdown, and OpenAPI documentation.
-  Use when designing APIs, writing HTTP handlers, implementing middleware,
-  structuring REST endpoints, or setting up gRPC services.
-  Trigger examples: "design API", "REST endpoints", "HTTP handler",
-  "middleware pattern", "graceful shutdown", "gRPC service", "API versioning".
-  Do NOT use for general architecture (use go-architecture-review) or
-  concurrency in handlers (use go-concurrency-review).
+  graceful shutdown, and OpenAPI documentation. Use when designing APIs,
+  writing HTTP handlers, implementing middleware, structuring REST
+  endpoints, or setting up gRPC services. Trigger examples: "design API",
+  "REST endpoints", "HTTP handler", "middleware pattern", "graceful
+  shutdown", "gRPC service", "API versioning".
+  Not for: general architecture (go-architecture-review), concurrency in
+  handlers (go-concurrency-review).
 user-invocable: true
 license: MIT
 compatibility: Designed for Claude Code or similar AI coding agents working on Go projects. Requires the Go toolchain.
 allowed-tools: Read Edit Write Glob Grep Bash(go:*) Bash(gofmt:*)
 metadata:
   author: eduardo-sl
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 # Go API 设计
 
-API 是契约。一旦发布，就意味着承诺。请以维护十年的标准来设计它们——因为你很可能真的要维护这么久。
+API 是契约。一旦发布，就是承诺。设计它们时要假设你会维护十年——因为你很可能确实会这样做。
 
-## 1. HTTP 处理器结构
+## 1. HTTP Handler 结构
 
 ### 使用标准的 `http.Handler` 接口：
 
@@ -45,7 +45,7 @@ func (h *UserHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 }
 ```
 
-### 处理器函数签名模式：
+### Handler 函数签名模式：
 
 ```go
 // Handler methods return nothing — they write directly to ResponseWriter.
@@ -92,7 +92,7 @@ func (h *UserHandler) respondError(w http.ResponseWriter, status int, msg string
 
 ## 2. 中间件模式
 
-中间件用于包装处理器。使用标准的 `func(http.Handler) http.Handler` 签名：
+中间件会包装 Handler。使用标准的 `func(http.Handler) http.Handler` 签名：
 
 ```go
 func RequestID(next http.Handler) http.Handler {
@@ -125,13 +125,13 @@ func Recoverer(logger *slog.Logger) func(http.Handler) http.Handler {
 }
 ```
 
-### 中间件顺序（从外到内）：
+### 中间件顺序（外部 → 内部）：
 
 ```text
 Recoverer → RequestID → Logger → Auth → RateLimit → Handler
 ```
 
-Recover 必须位于最外层。Auth 应位于业务逻辑之前。Logger 用于记录耗时。
+Recover 必须位于最外层。Auth 位于业务逻辑之前。Logger 记录耗时。
 
 ## 3. 请求验证
 
@@ -176,9 +176,9 @@ GET    /api/v1/users/{id}/orders → list user orders (nested resource)
 
 规则：
 - 资源使用复数名词：`/users`，而不是 `/user`
-- 多单词路径使用 Kebab-case：`/order-items`
+- 多词路径使用 kebab-case：`/order-items`
 - JSON 字段使用 camelCase：`"createdAt"`、`"firstName"`
-- 在 URL 路径中指定版本：`/api/v1/...`
+- 在 URL 路径中包含版本：`/api/v1/...`
 - URL 中不使用动词：`/users/search?q=alice`，而不是 `/searchUsers`
 
 ## 5. 分页
@@ -197,7 +197,7 @@ type PageResponse[T any] struct {
 ```
 
 对于大型数据集，优先使用基于游标的分页，而不是 offset/limit。
-并发写入时，偏移量分页会失效。
+在并发写入的情况下，offset 分页会失效。
 
 ## 6. 优雅关闭
 
@@ -255,7 +255,7 @@ func (h *HealthHandler) handleReady(w http.ResponseWriter, r *http.Request) {
 
 ## 8. 错误响应格式
 
-整个 API 应采用一致的错误响应：
+确保整个 API 中的错误响应保持一致：
 
 ```json
 {
@@ -269,5 +269,5 @@ func (h *HealthHandler) handleReady(w http.ResponseWriter, r *http.Request) {
 }
 ```
 
-在处理程序边界处将内部错误映射为 HTTP 状态码。
-绝不应向客户端泄露内部错误。
+在处理器边界将内部错误映射为 HTTP 状态码。  
+内部错误绝不能泄露给客户端。

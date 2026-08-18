@@ -1,22 +1,24 @@
 ---
 name: go-grpc
 description: >
-  gRPC services in Go beyond the basics: proto design, status codes and error
-  details, interceptors, deadlines, streaming, health checks, and graceful
-  shutdown.
-  Use when: "gRPC service", "proto design", "gRPC error handling",
-  "interceptor", "gRPC streaming", "gRPC deadline", "grpc health check",
-  "gRPC status codes".
-  Do NOT use for: REST/HTTP handler design (use go-api-design), protobuf-agnostic
-  API layering (use go-architecture-review), or TLS hardening details
-  (use go-security-audit).
+  gRPC services in Go beyond the basics: proto design, status codes and
+  error details, interceptors, deadlines, streaming, health checks, and
+  graceful shutdown. Use when: "gRPC service", "proto design", "gRPC error
+  handling", "interceptor", "gRPC streaming", "gRPC deadline", "grpc health
+  check", "gRPC status codes".
+  Not for: REST handlers (go-api-design), protobuf-agnostic layering
+  (go-architecture-review), TLS hardening (go-security-audit).
+user-invocable: true
 license: MIT
+compatibility: Designed for Claude Code or similar AI coding agents working on Go projects. Requires the Go toolchain. Requires protoc or buf for code generation.
+allowed-tools: Read Edit Write Glob Grep Bash(go:*) Bash(gofmt:*) Bash(protoc:*) Bash(buf:*)
 metadata:
-  version: "1.0.0"
+  author: eduardo-sl
+  version: "1.1.1"
 ---
 # Go gRPC 服务
 
-只有将契约视为 API 来管理，gRPC 的契约优先模型才能真正发挥作用：采用版本化包、审慎设计错误码、处处设置截止时间，并通过拦截器处理所有横切关注点。
+只有将契约视为 API，gRPC 的契约优先模型才能真正发挥作用：使用带版本的包、经过审慎设计的错误码、无处不在的截止时间，以及处理所有横切关注点的拦截器。
 
 ## 1. Proto 设计规则
 
@@ -40,14 +42,14 @@ message CreatePaymentResponse {
 }
 ```
 
-- 在包中指定版本（`payment.v1`）；破坏性变更 = `payment.v2`。
-- 切勿复用字段标签或重新编号；对于已删除的字段，使用 `reserved 3, 7;`。
-- 为每个 RPC 使用专属的 Request/Response 消息——以后添加字段无需付出兼容性代价；修改共享消息则会破坏所有使用它的 RPC。
-- 在 `make generate` 中使用 buf 或固定版本的 protoc 生成代码；提交生成的代码，避免构建结果依赖工具链变化。
+- 在包名中包含版本（`payment.v1`）；破坏性变更使用 `payment.v2`。
+- 永远不要重新使用或重新编号字段标签；删除的字段使用 `reserved 3, 7;`。
+- 每个 RPC 使用专用的 Request/Response 消息——以后添加字段无需付出代价；修改共享消息会破坏使用该消息的每个 RPC。
+- 在 `make generate` 中使用 buf 或固定版本的 protoc 生成代码；将生成的代码提交到仓库，避免构建依赖工具链漂移。
 
-## 2. 错误：使用状态码，而非字符串
+## 2. 错误：使用状态码，而不是字符串
 
-返回 `status.Error`，并在唯一一处映射领域错误：
+返回 `status.Error`，并在一个地方统一映射领域错误：
 
 ```go
 func (s *Server) CreatePayment(ctx context.Context, req *pb.CreatePaymentRequest) (*pb.CreatePaymentResponse, error) {
@@ -72,9 +74,9 @@ func toStatus(err error) error {
 }
 ```
 
-需要重点关注的状态码语义：`InvalidArgument`（无论系统状态如何，请求本身无效）、`FailedPrecondition`（系统状态不满足要求）、`NotFound`、`AlreadyExists`、`Unauthenticated` 与 `PermissionDenied` 的区别、`Unavailable`（可重试）、`Internal`（程序缺陷）。客户端使用 `status.FromError(err)` 读取状态码——切勿解析错误消息。
+需要关注的代码语义：`InvalidArgument`（无论状态如何，请求本身无效）、`FailedPrecondition`（状态不正确）、`NotFound`、`AlreadyExists`、`Unauthenticated` 与 `PermissionDenied`、`Unavailable`（可重试）、`Internal`（程序缺陷）。客户端通过 `status.FromError(err)` 读取错误码——永远不要解析消息。
 
-## 3. 必须设置截止时间
+## 3. 截止时间是强制要求
 
 ```go
 // Client — every call gets a deadline
@@ -88,11 +90,11 @@ if err := ctx.Err(); err != nil {
 }
 ```
 
-服务器通过上下文继承客户端的截止时间。将 `ctx` 传入每个下游调用（数据库、其他 RPC），使取消信号能够端到端传播。
+服务器会通过上下文继承客户端的截止时间。将 `ctx` 传入每个下游调用（数据库、其他 RPC），使取消操作端到端地传播。
 
 ## 4. 使用拦截器处理横切关注点
 
-处理器只负责业务逻辑；异常恢复、身份验证、日志记录和指标监控由拦截器处理：
+处理程序只保留业务逻辑；恢复、身份验证、日志记录和指标等功能放在拦截器中：
 
 ```go
 srv := grpc.NewServer(
@@ -116,12 +118,15 @@ func loggingInterceptor(ctx context.Context, req any,
 }
 ```
 
-顺序很重要：恢复拦截器在最前（最外层），然后是可观测性拦截器，最后是认证拦截器。流式 RPC 需要对应的 `StreamInterceptor` 版本。
+顺序很重要：首先是 recovery（最外层），然后是可观测性，最后是
+auth。流式 RPC 需要对应的 `StreamInterceptor` 版本。
 
 ## 5. 流式传输
 
-- 对大型结果集使用**服务端流式传输**：在循环中调用 `stream.Send`，返回非 nil 错误以通过状态码中止。
-- 仅当协议确实需要时才使用**客户端/双向流式传输**——每个打开的流都会占用一个 goroutine 和流量控制状态。
+- 对于大型结果集使用**服务器流式传输**：在循环中调用 `stream.Send`，
+  返回非 nil 错误以通过状态中止。
+- 仅在协议确实需要时使用**客户端/双向流式传输** —
+  每个打开的流都会占用一个 goroutine 和流量控制状态。
 - 始终在 `ctx.Done()` 时终止：
 
 ```go
@@ -170,13 +175,13 @@ return srv.Serve(lis)
 
 ## 验证清单
 
-1. Proto 包已进行版本化（`*.v1`）；不重复使用标签；删除字段时使用 `reserved`
+1. Proto 包已进行版本控制（`*.v1`）；不得重复使用标签；移除内容使用 `reserved`
 2. 每个 RPC 都有专用的 Request/Response 消息
 3. 生成的代码由固定版本的工具（buf/protoc）生成并提交
-4. 所有处理程序错误均为 `status.Error`，且使用语义正确的状态码
+4. 所有处理程序错误均为带有语义正确代码的 `status.Error`
 5. `codes.Internal` 响应绝不泄露内部错误文本
-6. 每次客户端调用都有截止时间；ctx 贯穿所有层级进行传递
-7. 恢复、日志记录和认证均实现为链式拦截器（一元 + 流式）
-8. 流使用 select 监听 `stream.Context().Done()`
-9. 已注册健康检查服务；优雅停止并提供强制停止作为后备方案
-10. 针对运行中的服务器执行的 `grpcurl` 冒烟测试（或生成的客户端测试）通过
+6. 每次客户端调用都有截止时间；ctx 通过所有层级进行传递
+7. recovery、logging、auth 已作为链式拦截器实现（单向 + 流式）
+8. 流在 `stream.Context().Done()` 上执行 select
+9. 已注册健康检查服务；使用优雅停止，并带有强制停止回退机制
+10. 针对运行中服务器的 `grpcurl` 冒烟测试（或生成的客户端测试）通过

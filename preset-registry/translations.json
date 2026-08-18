@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-18T04:54:30.805Z",
+  "updated_at": "2026-08-18T07:17:19.152Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -20638,54 +20638,54 @@
       "translated_at": "2026-08-18T04:54:24.373Z"
     },
     "skill:eduardo-sl-go-agent-skills-go-documentation": {
-      "hash": "e794ca4409e74765",
-      "summary_zh": "一套 Go 文档编写规范，适合补充代码注释、包说明、可测试示例、弃用提示和文档链接。",
-      "translated_at": "2026-08-03T16:26:53.623Z"
+      "hash": "f0b5e893fa5c1575",
+      "summary_zh": "用于按 Go 社区规范补全文档注释、包说明、可测试示例、弃用提示和文档链接，适合完善代码级 API 文档。",
+      "translated_at": "2026-08-18T06:52:46.384Z"
     },
     "skill:eduardo-sl-go-agent-skills-go-grpc": {
-      "hash": "11000ac441a45b42",
-      "summary_zh": "面向 Go 的 gRPC 服务进阶实践指南，适合设计协议、处理错误、流式通信、超时控制、健康检查与优雅停机。",
-      "translated_at": "2026-08-03T16:26:55.704Z"
+      "hash": "ececf980781d61db",
+      "summary_zh": "面向 Go 的 gRPC 服务开发指南，适合处理协议设计、错误码、拦截器、流式通信、超时、健康检查与优雅停机场景。",
+      "translated_at": "2026-08-18T06:52:48.899Z"
     },
     "skill:eduardo-sl-go-agent-skills-go-error-handling": {
-      "hash": "6cfc3c4d1986b21c",
-      "summary_zh": "一套基于官方规范和生产实践的 Go 错误处理指南，适合设计错误类型、包装与排查错误链或审查相关代码。",
-      "translated_at": "2026-08-03T16:26:55.810Z"
+      "hash": "abe16ddc12141771",
+      "summary_zh": "面向 Go 开发的错误处理实践指南，适合设计错误类型、处理错误包装与链路排查，以及评审生产代码中的错误处理方式。",
+      "translated_at": "2026-08-18T06:52:46.552Z"
     },
     "skill:eduardo-sl-go-agent-skills-go-interface-design": {
-      "hash": "f37e6f941f6f3cdf",
-      "summary_zh": "一份 Go 接口设计指南，帮助合理定义契约、解耦包依赖，并提升代码的可测试性与可维护性。",
-      "translated_at": "2026-08-03T16:26:58.798Z"
+      "hash": "66d7fc5de9c37a71",
+      "summary_zh": "一份 Go 接口设计指南，适合在解耦包依赖、定义契约、代码评审和提升可测试性时参考。",
+      "translated_at": "2026-08-18T06:52:48.849Z"
     },
     "skill:eduardo-sl-go-agent-skills-go-observability": {
-      "hash": "cc2d4a0e09cc5b43",
-      "summary_zh": "一套面向 Go 服务的可观测性实践指南，适合接入结构化日志、分布式追踪和 Prometheus 指标。",
-      "translated_at": "2026-08-03T16:26:59.809Z"
+      "hash": "d8ede7b36df196b4",
+      "summary_zh": "面向 Go 服务的可观测性工具，帮助快速接入结构化日志、分布式追踪和 Prometheus 指标，适合排查问题与监控运行状态。",
+      "translated_at": "2026-08-18T06:52:53.547Z"
     },
     "skill:eduardo-sl-go-agent-skills-go-project-layout": {
-      "hash": "e440f60159c8a5cd",
-      "summary_zh": "用于搭建新的 Go 项目或服务，帮助规划目录结构、模块命名及入口代码，适合从零创建项目骨架。",
-      "translated_at": "2026-08-03T16:27:02.011Z"
+      "hash": "16a68d3b2e012346",
+      "summary_zh": "用于快速搭建 Go 项目和服务骨架，规范目录结构、模块命名及 main 包组织，适合新项目初始化。",
+      "translated_at": "2026-08-18T06:52:57.920Z"
     },
     "skill:eduardo-sl-go-agent-skills-go-performance-review": {
-      "hash": "5424313ccf456fad",
-      "summary_zh": "用于审查和优化 Go 代码性能，可定位慢代码与热点，减少内存分配，并辅助基准测试和性能分析。",
-      "translated_at": "2026-08-03T16:27:03.173Z"
+      "hash": "16c3267e74c0539c",
+      "summary_zh": "用于审查 Go 代码中的性能反模式，定位慢代码、减少内存分配，并通过基准测试和 pprof 优化热点路径。",
+      "translated_at": "2026-08-18T06:52:53.935Z"
     },
     "skill:eduardo-sl-go-agent-skills-go-modernize": {
-      "hash": "0af3d62918133571",
-      "summary_zh": "一款 Go 代码现代化工具，可将旧代码迁移到 1.21–1.23+ 的新语法与标准库，适合版本升级和淘汰过时写法。",
-      "translated_at": "2026-08-03T16:27:04.802Z"
+      "hash": "4ba794112ccb5e38",
+      "summary_zh": "用于将旧版 Go 代码升级为现代写法，适合迁移泛型、slog、迭代器等 Go 1.21+ 特性并替换过时 API。",
+      "translated_at": "2026-08-18T06:52:48.951Z"
     },
     "skill:eduardo-sl-go-agent-skills-go-refactoring": {
-      "hash": "db0d1d8e10786040",
-      "summary_zh": "一套面向 Go 项目的安全重构流程，适合在测试保障下完成全局重命名、拆包、解除循环依赖和渐进式迁移。",
-      "translated_at": "2026-08-03T16:27:05.289Z"
+      "hash": "5c583f61b117985d",
+      "summary_zh": "面向 Go 的安全重构工作流，在测试通过的前提下帮助无行为变化地重命名、拆包、解循环依赖和迁移调用方。",
+      "translated_at": "2026-08-18T06:52:58.746Z"
     },
     "skill:eduardo-sl-go-agent-skills-go-security-audit": {
-      "hash": "49e947c1e2c99c6c",
-      "summary_zh": "用于审查 Go 应用安全，发现输入校验、注入、认证授权、密钥和 TLS 等风险，适合漏洞排查与服务加固。",
-      "translated_at": "2026-08-03T16:27:05.353Z"
+      "hash": "25c3be6411bc1af5",
+      "summary_zh": "用于审查和加固 Go 应用安全，排查输入校验、SQL 注入、认证授权、密钥管理及 OWASP Top 10 等漏洞。",
+      "translated_at": "2026-08-18T06:53:01.788Z"
     },
     "skill:eduardo-sl-go-agent-skills-go-test-table-driven": {
       "hash": "1306432e9aa177a0",
@@ -20698,9 +20698,9 @@
       "translated_at": "2026-08-18T02:56:32.288Z"
     },
     "skill:eduardo-sl-go-agent-skills-go-semantic-tools": {
-      "hash": "41000349991e01eb",
-      "summary_zh": "基于 Go 工具链进行语义化代码导航与分析，适合查找调用、接口实现、引用及模块依赖。",
-      "translated_at": "2026-08-03T16:27:10.858Z"
+      "hash": "85aee009352f20a6",
+      "summary_zh": "一套基于 Go 工具链的代码语义分析方法，适合探索代码库、查找引用与调用关系、追踪依赖及接口实现。",
+      "translated_at": "2026-08-18T06:53:04.247Z"
     },
     "skill:egonex-ai-understand-anything-understand": {
       "hash": "bdffd542fdcba0ea",
@@ -20713,9 +20713,9 @@
       "translated_at": "2026-08-03T16:27:13.313Z"
     },
     "skill:eduardo-sl-go-agent-skills-go-troubleshooting": {
-      "hash": "5e69cdbafa492a24",
-      "summary_zh": "用于诊断 Go 程序运行时故障，适合排查崩溃、死锁、资源泄漏、内存溢出、竞态和程序卡死等问题。",
-      "translated_at": "2026-08-03T16:27:13.396Z"
+      "hash": "05b1c2ff8238ccd7",
+      "summary_zh": "用于诊断 Go 程序运行时故障，适合排查崩溃、死锁、协程或内存泄漏、OOM、竞态及程序卡死等问题。",
+      "translated_at": "2026-08-18T06:53:08.373Z"
     },
     "skill:egonex-ai-understand-anything-understand-domain": {
       "hash": "be87072d87b25124",
@@ -29423,9 +29423,9 @@
       "translated_at": "2026-08-10T21:55:24.039Z"
     },
     "bundle:jasoncolapietro-suede-creator-skills": {
-      "hash": "c7b7e98371b97f13",
-      "summary_zh": "一套面向数字产品全生命周期的 AI 创作与运营工具集，协同完成应用开发、内容设计、增长投放、实验优化和收入追回。",
-      "translated_at": "2026-08-16T00:04:21.187Z"
+      "hash": "5c1112df8ac0d051",
+      "summary_zh": "这是一套覆盖产品设计、开发发布、营销增长与收入追回的 AI 工作流合集，把复杂业务拆解协同，提升从构想到落地的效率与质量。",
+      "translated_at": "2026-08-18T06:52:43.335Z"
     },
     "skill:jasoncolapietro-suede-creator-skills-amazon-returns-recovery": {
       "hash": "a185ae1dce00e65e",
@@ -29448,9 +29448,9 @@
       "translated_at": "2026-08-16T00:04:31.550Z"
     },
     "skill:jasoncolapietro-suede-creator-skills-johnny-suede-write": {
-      "hash": "51e89f738075a9eb",
-      "summary_zh": "一套面向多渠道内容创作的写作工作流，可统一品牌语气并提升搜索与 AI 可见性，适合发布推广、跨平台文案和公开解说。",
-      "translated_at": "2026-08-16T00:04:30.292Z"
+      "hash": "386d5381ee97d57a",
+      "summary_zh": "一套覆盖文档、网页、邮件、社媒等场景的写作工具，可统一品牌语气、优化 SEO/AEO/AI 可发现性，并通过评分把文案打磨到可发布。",
+      "translated_at": "2026-08-18T06:53:12.343Z"
     },
     "skill:jasoncolapietro-suede-creator-skills-site-to-ios-app": {
       "hash": "77835433a875ef3b",
@@ -36730,8 +36730,8 @@
       "translated_at": "2026-08-15T00:27:31.415Z"
     },
     "content:daymade-claude-code-skills-claude-switch-models-setup": {
-      "hash": "b87b6ea307392a91",
-      "translated_at": "2026-08-15T00:27:54.910Z"
+      "hash": "2e4f333d8415378d",
+      "translated_at": "2026-08-18T07:06:01.680Z"
     },
     "content:daymade-claude-code-skills-cli-demo-generator": {
       "hash": "b699d8ecc6980bfa",
@@ -37736,116 +37736,116 @@
       "translated_at": "2026-08-15T13:32:01.784Z"
     },
     "content:eduardo-sl-go-agent-skills-git-commit": {
-      "hash": "7ef781d6015c7b85",
-      "translated_at": "2026-08-18T03:06:04.934Z"
+      "hash": "3a168da0f0558c0e",
+      "translated_at": "2026-08-18T07:03:34.044Z"
     },
     "content:eduardo-sl-go-agent-skills-go-api-design": {
-      "hash": "a7df4e9141fdf5ba",
-      "translated_at": "2026-08-18T03:06:44.605Z"
+      "hash": "89e29e981104965e",
+      "translated_at": "2026-08-18T07:04:21.425Z"
     },
     "content:eduardo-sl-go-agent-skills-go-architecture-review": {
-      "hash": "b3acf0eee46caa79",
-      "translated_at": "2026-08-18T03:07:07.034Z"
+      "hash": "27cdf1cbc8bfa440",
+      "translated_at": "2026-08-18T07:05:26.572Z"
     },
     "content:eduardo-sl-go-agent-skills-go-ci": {
-      "hash": "621408869e069f1e",
-      "translated_at": "2026-08-18T03:07:23.993Z"
+      "hash": "96df61638ac20d2c",
+      "translated_at": "2026-08-18T07:06:46.274Z"
     },
     "content:eduardo-sl-go-agent-skills-go-cli": {
-      "hash": "a345e021495d75eb",
-      "translated_at": "2026-08-18T03:07:49.597Z"
+      "hash": "13f00c3481716f69",
+      "translated_at": "2026-08-18T07:06:52.845Z"
     },
     "content:eduardo-sl-go-agent-skills-go-coding-standards": {
-      "hash": "63e9d86b5973b410",
-      "translated_at": "2026-08-15T13:34:02.070Z"
+      "hash": "d4d663f680b3e697",
+      "translated_at": "2026-08-18T07:07:46.543Z"
     },
     "content:eduardo-sl-go-agent-skills-go-code-review": {
-      "hash": "f25f7b16de3caa0f",
-      "translated_at": "2026-08-18T03:08:10.112Z"
+      "hash": "bfe2a4f374afd55e",
+      "translated_at": "2026-08-18T07:07:28.111Z"
     },
     "content:eduardo-sl-go-agent-skills-go-concurrency-review": {
-      "hash": "211006db935769c3",
-      "translated_at": "2026-08-15T13:34:46.617Z"
+      "hash": "1aa4e67faa20900c",
+      "translated_at": "2026-08-18T07:08:13.496Z"
     },
     "content:eduardo-sl-go-agent-skills-go-context": {
       "hash": "9eda148a93276c0e",
       "translated_at": "2026-08-15T13:34:49.489Z"
     },
     "content:eduardo-sl-go-agent-skills-go-database": {
-      "hash": "e5e35ec658413735",
-      "translated_at": "2026-08-15T13:35:21.304Z"
+      "hash": "7330e6a2a73a1f72",
+      "translated_at": "2026-08-18T07:08:41.719Z"
     },
     "content:eduardo-sl-go-agent-skills-go-data-structures": {
       "hash": "4411a5403505dd90",
       "translated_at": "2026-08-15T13:35:23.379Z"
     },
     "content:eduardo-sl-go-agent-skills-go-dependency-injection": {
-      "hash": "6037e5f3fbcb7e2a",
-      "translated_at": "2026-08-15T13:35:54.742Z"
+      "hash": "ce744d920547427e",
+      "translated_at": "2026-08-18T07:09:48.220Z"
     },
     "content:eduardo-sl-go-agent-skills-go-dependency-audit": {
-      "hash": "c43df4082f33c5f2",
-      "translated_at": "2026-08-15T13:35:56.189Z"
+      "hash": "af39eee291a5f984",
+      "translated_at": "2026-08-18T07:09:24.225Z"
     },
     "content:eduardo-sl-go-agent-skills-go-design-patterns": {
-      "hash": "5b22a24e42664a88",
-      "translated_at": "2026-08-15T13:36:26.432Z"
+      "hash": "fa809cc764875bce",
+      "translated_at": "2026-08-18T07:10:08.984Z"
     },
     "content:eduardo-sl-go-agent-skills-go-documentation": {
-      "hash": "68bb1c69eea030eb",
-      "translated_at": "2026-08-15T13:36:29.371Z"
+      "hash": "f6565f8d03e69c1b",
+      "translated_at": "2026-08-18T07:10:22.240Z"
     },
     "content:eduardo-sl-go-agent-skills-go-error-handling": {
-      "hash": "86a151580ed35384",
-      "translated_at": "2026-08-15T13:36:59.948Z"
+      "hash": "d852a78dee1e0d9c",
+      "translated_at": "2026-08-18T07:10:51.676Z"
     },
     "content:eduardo-sl-go-agent-skills-go-grpc": {
-      "hash": "76c4cbcc405dab98",
-      "translated_at": "2026-08-15T13:37:05.796Z"
+      "hash": "7345c0f9bb8f81f1",
+      "translated_at": "2026-08-18T07:11:30.017Z"
     },
     "content:eduardo-sl-go-agent-skills-go-interface-design": {
-      "hash": "07a7e742c7050d28",
-      "translated_at": "2026-08-15T15:22:16.595Z"
+      "hash": "78a0f0f27d62ba00",
+      "translated_at": "2026-08-18T07:12:09.776Z"
     },
     "content:eduardo-sl-go-agent-skills-go-modernize": {
-      "hash": "0746f4df2180ffca",
-      "translated_at": "2026-08-15T15:22:51.222Z"
+      "hash": "682450962ef78262",
+      "translated_at": "2026-08-18T07:12:43.666Z"
     },
     "content:eduardo-sl-go-agent-skills-go-observability": {
-      "hash": "d793d447ce3cb273",
-      "translated_at": "2026-08-15T15:23:42.292Z"
+      "hash": "79584919bae6e254",
+      "translated_at": "2026-08-18T07:12:44.190Z"
     },
     "content:eduardo-sl-go-agent-skills-go-performance-review": {
-      "hash": "c678cc04d37e0026",
-      "translated_at": "2026-08-15T15:24:25.259Z"
+      "hash": "66532534cfd185f0",
+      "translated_at": "2026-08-18T07:13:46.571Z"
     },
     "content:eduardo-sl-go-agent-skills-go-project-layout": {
-      "hash": "8f7f1e3d35fd3abf",
-      "translated_at": "2026-08-15T15:24:59.948Z"
+      "hash": "b2d508a2c8fd3593",
+      "translated_at": "2026-08-18T07:14:17.138Z"
     },
     "content:eduardo-sl-go-agent-skills-go-refactoring": {
-      "hash": "838abe596d0bbc36",
-      "translated_at": "2026-08-15T15:25:31.071Z"
+      "hash": "63ca69f767a28f20",
+      "translated_at": "2026-08-18T07:14:21.902Z"
     },
     "content:eduardo-sl-go-agent-skills-go-security-audit": {
-      "hash": "0086ddb6767287fc",
-      "translated_at": "2026-08-15T15:26:24.332Z"
+      "hash": "c599151d2eaab81f",
+      "translated_at": "2026-08-18T07:14:52.180Z"
     },
     "content:eduardo-sl-go-agent-skills-go-semantic-tools": {
-      "hash": "75d2822412a2b019",
-      "translated_at": "2026-08-15T15:26:54.593Z"
+      "hash": "a253ff1d6ecd97a7",
+      "translated_at": "2026-08-18T07:14:58.789Z"
     },
     "content:eduardo-sl-go-agent-skills-go-test-quality": {
-      "hash": "486d44cac7439ee6",
-      "translated_at": "2026-08-15T15:27:33.711Z"
+      "hash": "dadc3ce62171b202",
+      "translated_at": "2026-08-18T07:16:00.806Z"
     },
     "content:eduardo-sl-go-agent-skills-go-test-table-driven": {
-      "hash": "6b334d9cf18b4d60",
-      "translated_at": "2026-08-15T15:28:12.057Z"
+      "hash": "4af368ec413814de",
+      "translated_at": "2026-08-18T07:16:19.089Z"
     },
     "content:eduardo-sl-go-agent-skills-go-troubleshooting": {
-      "hash": "700f7111aa826bb4",
-      "translated_at": "2026-08-15T15:28:51.403Z"
+      "hash": "cfcfd92f810690bf",
+      "translated_at": "2026-08-18T07:16:37.168Z"
     },
     "content:ehmo-platform-design-skills-android": {
       "hash": "403458e7700c7aab",
@@ -41134,6 +41134,46 @@
       "hash": "5aee8860305941e8",
       "summary_zh": "一套 Go 防御式编程指南，帮助避免空指针崩溃、数据悄然损坏和运行时隐患，适合代码审查与接口设计。",
       "translated_at": "2026-08-18T04:54:22.286Z"
+    },
+    "skill:eduardo-sl-go-agent-skills-go-graphql": {
+      "hash": "d0fdeecc57cccb54",
+      "summary_zh": "面向 Go 的 GraphQL 服务开发指南，适合设计或审查 gqlgen API，解决解析器设计、N+1 查询、权限控制和查询复杂度限制等问题。",
+      "translated_at": "2026-08-18T06:52:46.492Z"
+    },
+    "skill:eduardo-sl-go-agent-skills-go-openapi": {
+      "hash": "0cf933bfd715098d",
+      "summary_zh": "一套基于 OpenAPI 的 Go REST 开发工具链，用于生成服务端接口和客户端、校验请求、做契约测试并发现接口变更，适合规范驱动开发。",
+      "translated_at": "2026-08-18T06:52:54.368Z"
+    },
+    "skill:eduardo-sl-go-agent-skills-go-skills-router": {
+      "hash": "97a4c87cd20c222e",
+      "summary_zh": "用于索引和路由 Go 技能，帮助在任务边界模糊、涉及多个方向或需要了解可用技能时选对对应技能。",
+      "translated_at": "2026-08-18T06:53:06.132Z"
+    },
+    "skill:modu-ai-moai-adk-moai-kanban-foreman": {
+      "hash": "916600bc5f757f6d",
+      "summary_zh": "一个无人值守的看板调度循环：从待办队列取出已选任务，交给隔离工作者执行并核验结果，适合自动化处理单轮任务。",
+      "translated_at": "2026-08-18T06:53:12.572Z"
+    },
+    "content:eduardo-sl-go-agent-skills-go-binary-size": {
+      "hash": "b096ec9e8d158b2d",
+      "translated_at": "2026-08-18T07:06:13.637Z"
+    },
+    "content:eduardo-sl-go-agent-skills-go-defensive-coding": {
+      "hash": "079704d3576c5091",
+      "translated_at": "2026-08-18T07:09:14.915Z"
+    },
+    "content:eduardo-sl-go-agent-skills-go-graphql": {
+      "hash": "20afd52fafdb7de2",
+      "translated_at": "2026-08-18T07:11:26.399Z"
+    },
+    "content:eduardo-sl-go-agent-skills-go-openapi": {
+      "hash": "399a4e7304baa62a",
+      "translated_at": "2026-08-18T07:13:37.524Z"
+    },
+    "content:eduardo-sl-go-agent-skills-go-skills-router": {
+      "hash": "4c463ee4ab54fd02",
+      "translated_at": "2026-08-18T07:15:45.456Z"
     }
   }
 }

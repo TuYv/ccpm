@@ -2,35 +2,39 @@
 name: go-error-handling
 description: >
   Go error handling patterns, wrapping, sentinel errors, custom error types,
-  and the errors package. Grounded in Effective Go, Go Code Review Comments, and production-proven idioms.
-  Use when implementing error handling, designing error types, debugging error chains,
-  or reviewing error handling patterns.
-  Trigger examples: "handle errors", "error wrapping", "custom error type",
-  "sentinel errors", "errors.Is", "errors.As".
-  Do NOT use for panic/recover patterns in middleware (use go-api-design)
-  or test assertion errors (use go-test-quality).
+  and the errors package. Grounded in Effective Go, Go Code Review Comments,
+  and production-proven idioms. Use when implementing error handling,
+  designing error types, debugging error chains, or reviewing error handling
+  patterns. Trigger examples: "handle errors", "error wrapping", "custom
+  error type", "sentinel errors", "errors.Is", "errors.As".
+  Not for: panic/recover in middleware (go-api-design), test assertions
+  (go-test-quality).
+user-invocable: true
 license: MIT
+compatibility: Designed for Claude Code or similar AI coding agents working on Go projects. Requires the Go toolchain.
+allowed-tools: Read Edit Write Glob Grep Bash(go:*) Bash(gofmt:*)
 metadata:
-  version: "1.1.0"
+  author: eduardo-sl
+  version: "1.2.1"
 ---
 # Go 错误处理
 
-Go 的显式错误处理是一项特性，而非限制。
-这些模式可确保错误信息清晰、可操作，并得到正确传播。
+Go 显式的错误处理是一项特性，而不是限制。  
+这些模式确保错误信息清晰、可操作，并得到正确传递。
 
 ## 1. 错误决策树
 
 创建或返回错误时，请遵循以下决策树：
 
-1. **错误简单，无需额外上下文？** → `errors.New("message")`
+1. **简单，不需要额外上下文？** → `errors.New("message")`
 2. **需要为现有错误添加上下文？** → `fmt.Errorf("doing X: %w", err)`
-3. **调用方需要识别此错误？** → 哨兵 `var` 或自定义类型
+3. **调用方需要检测此错误？** → Sentinel `var` 或自定义类型
 4. **错误携带结构化数据？** → 实现 `error` 的自定义类型
-5. **从下游传播错误？** → 使用 `%w` 包装并添加上下文
+5. **从下游传递错误？** → 使用 `%w` 包装并添加上下文
 
-## 2. 哨兵错误
+## 2. Sentinel 错误
 
-对于调用方需要检查的错误，请使用包级 `var`：
+对于调用方需要检查的错误，使用包级别的 `var`：
 
 ```go
 // ✅ Good — exported sentinel error
@@ -43,7 +47,7 @@ var (
 // Prefix with package context in the message
 ```
 
-调用方使用 `errors.Is` 进行检查：
+调用方使用 `errors.Is` 检查：
 
 ```go
 if errors.Is(err, user.ErrNotFound) {
@@ -51,7 +55,7 @@ if errors.Is(err, user.ErrNotFound) {
 }
 ```
 
-绝不要使用 `==` 比较错误。始终使用 `errors.Is()`。
+永远不要使用 `==` 比较错误。始终使用 `errors.Is()`。
 
 ## 3. 自定义错误类型
 
@@ -74,9 +78,18 @@ if errors.As(err, &valErr) {
 }
 ```
 
+调用方使用 `errors.As` 提取：
+
+```go
+var valErr *ValidationError
+if errors.As(err, &valErr) {
+    log.Printf("invalid field: %s", valErr.Field)
+}
+```
+
 ## 4. 错误包装
 
-向调用栈上层传播错误时，始终添加上下文。
+从调用栈向上传递错误时，始终添加上下文。  
 使用 `%w` 保留错误链：
 
 ```go
@@ -96,18 +109,18 @@ return nil, err
 return nil, fmt.Errorf("failed: %v", err)
 ```
 
-### 何时不应使用 `%w`
+### 不使用 `%w` 的情况
 
-当你明确希望**中断**错误链，防止调用方依赖内部实现错误时，请使用 `%v` 而不是 `%w`：
+当你明确希望**断开**错误链，避免调用方依赖内部实现错误时，使用 `%v` 而不是 `%w`：
 
 ```go
 // Intentionally hiding internal DB error from public API
 return nil, fmt.Errorf("user lookup failed: %v", err)
 ```
 
-## 5. 错误只处理一次
+## 5. 只处理错误一次
 
-一个错误应当要么被记录，要么被返回，绝不能两者同时进行：
+错误应该被记录或返回，绝不能两者兼有：
 
 ```go
 // ✅ Good — return the error, let caller decide
@@ -130,7 +143,7 @@ func loadConfig(path string) (*Config, error) {
 }
 ```
 
-规则是：由*决定如何处理*错误的组件记录错误或相关指标。其他所有组件只负责包装并返回错误。
+规则是：由决定如何处理错误的组件负责记录日志或指标。其他所有组件都只负责包装并返回错误。
 
 ## 6. 错误命名约定
 
@@ -150,10 +163,10 @@ fmt.Errorf("user: get by id %d: %w", id, err)
 
 ## 7. Panic 规则
 
-Panic 不是错误处理。仅在以下情况使用 panic：
-- 程序初始化失败且无法继续运行（`template.Must`、flag 解析）
-- 绝不应发生的程序员错误（违反不变量）
-- 表明存在 bug 而非运行时状况的 nil 解引用
+Panic **不是**错误处理。仅在以下情况下使用 panic：
+- 程序初始化失败且无法继续（`template.Must`、标志解析）
+- 不应发生的程序员错误（违反不变量）
+- 表明存在 bug 而非运行时条件的空指针解引用
 
 在测试中，使用 `t.Fatal` / `t.FailNow`，绝不要使用 `panic`。
 
@@ -190,8 +203,7 @@ return errors.Join(errs...)
 
 ## 可执行验证
 
-编写或审查错误处理后，运行能够验证上述规则的 linter
-（跳过任何未安装的 linter，并注明）：
+编写或审查错误处理后，运行能够验证上述规则的 lint 工具（跳过未安装的工具，并注明）：
 
 ```bash
 go vet ./...                                  # includes printf %w misuse
@@ -201,10 +213,10 @@ golangci-lint run --enable errcheck,errorlint # unchecked errors, %v-vs-%w,
 
 ## 验证清单
 
-1. 不使用 `_` 丢弃错误（除非通过注释明确说明理由）
-2. 每个用于包装错误的 `fmt.Errorf` 都使用 `%w`（或使用 `%v`，但需说明理由）
-3. 哨兵错误使用 `var Err...` 命名
+1. 没有使用 `_` 丢弃错误（除非通过注释明确说明理由）
+2. 每个用于包装错误的 `fmt.Errorf` 都使用 `%w`（或使用 `%v` 并记录说明理由）
+3. Sentinel 错误使用 `var Err...` 命名
 4. 自定义错误类型实现 `error` 接口
 5. 调用方使用 `errors.Is` / `errors.As`，绝不使用 `==` 或类型断言
-6. 不使用先记录日志再返回错误的模式
-7. 错误消息使用小写、包含上下文，并且便于形成错误链
+6. 不存在记录日志后返回的模式
+7. 错误消息使用小写、包含上下文且便于链式处理

@@ -1,26 +1,30 @@
 ---
 name: go-interface-design
 description: >
-  Go interface design patterns: implicit interfaces, consumer-side definition,
-  interface compliance verification, composition, the accept-interfaces-return-structs
-  principle, and common pitfalls.
-  Use when designing interfaces, decoupling packages, defining contracts,
-  reviewing interface usage, or refactoring for testability.
-  Trigger examples: "design interface", "accept interfaces return structs",
-  "interface compliance", "consumer-side interface", "interface composition".
-  Do NOT use for HTTP handler patterns (use go-api-design) or
-  general code review (use go-code-review).
+  Go interface design patterns: implicit interfaces, consumer-side
+  definition, interface compliance verification, composition, the
+  accept-interfaces-return-structs principle, and common pitfalls. Use when
+  designing interfaces, decoupling packages, defining contracts, reviewing
+  interface usage, or refactoring for testability. Trigger examples: "design
+  interface", "accept interfaces return structs", "interface compliance",
+  "consumer-side interface", "interface composition".
+  Not for: HTTP handler patterns (go-api-design), general review
+  (go-code-review).
+user-invocable: true
 license: MIT
+compatibility: Designed for Claude Code or similar AI coding agents working on Go projects. Requires the Go toolchain.
+allowed-tools: Read Edit Write Glob Grep Bash(go:*) Bash(gofmt:*)
 metadata:
-  version: "1.0.0"
+  author: eduardo-sl
+  version: "1.1.1"
 ---
 # Go 接口设计
 
-Go 接口是隐式实现的。这是该语言最重要的设计特性，而大多数来自 Java 或 C# 的开发者一开始都会理解错。
+Go 接口是隐式的。这是该语言最重要的设计特性，而从 Java 或 C# 转来的人大多一开始都会理解错。
 
-## 1. 核心原则：在消费方定义接口
+## 1. 首要原则：在消费者一侧定义接口
 
-行为的消费方负责定义接口，而不是提供方：
+由行为的消费者定义接口，而不是提供者：
 
 ```go
 // ❌ Wrong — producer defines interface (Java thinking)
@@ -53,15 +57,15 @@ func (s *PostgresStore) Create(ctx context.Context, user *domain.User) error { .
 // PostgresStore satisfies service.UserReader implicitly — no declaration needed
 ```
 
-这很重要，原因如下：
-- 消费方只依赖其实际使用的内容（接口隔离原则）。
-- 提供方可以添加方法，而不会破坏消费方。
-- 测试时只需实现消费方调用的方法。
-- 不会产生导入循环：消费方无需导入提供方所在的包。
+这很重要的原因：
+- 消费者只依赖它所使用的内容（接口隔离原则）。
+- 提供者可以添加方法，而不会破坏消费者。
+- 测试只需要实现消费者调用的方法。
+- 不会产生导入循环：消费者无需导入提供者的包。
 
-## 2. 保持接口精简
+## 2. 保持接口小巧
 
-接口越大，抽象能力越弱。
+接口越大，抽象就越弱。
 
 ```go
 // ✅ Good — focused, composable
@@ -91,7 +95,7 @@ type FileManager interface {
 }
 ```
 
-准则：接口最好包含 1～3 个方法。如果需要更多方法，请组合多个较小的接口。
+指导原则：1-3 个方法是理想情况。如果需要更多方法，就组合更小的接口。
 
 ## 3. 接受接口，返回结构体
 
@@ -107,11 +111,12 @@ func NewUserService(store UserReader) UserServiceInterface {
 }
 ```
 
-返回具体类型，以便调用方能够完整访问该类型的方法。只有当函数确实会根据输入返回不同的具体类型时（工厂模式），返回接口才有意义。
+返回具体类型，这样调用者就能完整访问该类型的方法。
+只有当函数确实会根据输入返回不同的具体类型时，返回接口才有意义（工厂模式）。
 
-## 4. 在编译时验证接口实现情况
+## 4. 在编译时验证接口的实现符合性
 
-使用空白标识符赋值尽早发现被破坏的契约：
+使用空白标识符赋值来尽早捕获契约损坏：
 
 ```go
 // Verify *PostgresStore implements service.UserReader at compile time
@@ -124,8 +129,7 @@ var _ http.Handler = (*LogHandler)(nil)
 var _ fmt.Stringer = Status(0)
 ```
 
-将这些赋值紧接着放在类型声明之后。它们在运行时没有任何开销，
-并且可以防止契约在不知不觉中被破坏。
+将这些内容紧接着放在类型声明之后。它们在运行时不会产生任何开销，并能防止契约悄然失效。
 
 ## 5. 不要使用指向接口的指针
 
@@ -138,15 +142,15 @@ func process(r io.Reader) { ... }
 ```
 
 接口值在内部由两个指针组成（类型 + 数据）。
-指向接口的指针就是指向指针的指针——这是不必要的间接寻址。
+指向接口的指针实际上是指向指针的指针，会造成不必要的间接寻址。
 
-唯一的例外是：当你需要替换接口值本身
-（在运行时切换实现）时，但这种情况极为少见。
+唯一的例外是：当你需要替换接口值本身时
+（在运行时交换实现），但这种情况极其少见。
 
 ## 6. 空接口
 
-`interface{}`（或 Go 1.18+ 中的 `any`）意味着你已经放弃了类型安全。
-应谨慎使用：
+`interface{}`（或 Go 1.18+ 中的 `any`）意味着你放弃了类型安全。
+请谨慎使用：
 
 ```go
 // ✅ Acceptable — generic container before generics / stdlib compatibility
@@ -159,10 +163,9 @@ func Map[T, U any](slice []T, fn func(T) U) []U { ... }
 func Process(data any) any { ... } // what does this even do?
 ```
 
-## 7. 函数式选项模式
+## 7. 函数选项模式
 
-当构造函数需要可选配置时，应使用函数式选项，
-而不是使用包含接口的配置结构体：
+当构造函数需要可选配置时，应使用函数选项，而不是带接口的配置结构体：
 
 ```go
 type Option func(*Server)
@@ -211,7 +214,7 @@ type Processor struct { ... }
 // Add interface when you have 2+ implementations or need testing seam
 ```
 
-“不要使用接口进行设计，而要在实践中发现接口。”——Rob Pike
+“不要用接口进行设计，要发现接口。”——Rob Pike
 
 ### 接口泛滥：
 
@@ -226,7 +229,7 @@ type PaymentServiceInterface interface { ... }
 // Each consumer declares only the methods IT needs
 ```
 
-### 将接口误用作枚举：
+### 将接口误用为枚举：
 
 ```go
 // ❌ Bad — interface used as enum/sum type
@@ -245,11 +248,11 @@ const (
 )
 ```
 
-## 决策检查清单
+## 决策清单
 
-1. **这里需要接口吗？** — 仅当你有 2 个以上的实现、
-   需要测试接缝，或正在跨越包边界时才需要。
-2. **应该在哪里定义接口？** — 在使用方，而不是提供方。
+1. **这里需要接口吗？** — 仅当你有 2 个或更多实现、
+   需要测试接缝，或正在跨越包边界时使用。
+2. **应该在哪里定义？** — 在消费者一侧，而不是生产者一侧。
 3. **应该有多少个方法？** — 越少越好。1-3 个最理想。
-4. **我是否正在返回接口？** — 很可能不应该。应返回具体类型。
-5. **我是否验证了接口实现关系？** — `var _ Interface = (*Type)(nil)`
+4. **我是否在返回接口？** — 可能不应该。返回具体类型。
+5. **我是否已验证合规性？** — `var _ Interface = (*Type)(nil)`

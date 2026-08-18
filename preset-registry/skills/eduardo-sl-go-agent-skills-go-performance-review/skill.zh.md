@@ -3,24 +3,27 @@ name: go-performance-review
 description: >
   Detect performance anti-patterns and apply optimization techniques in Go.
   Covers allocations, string handling, slice/map preallocation, sync.Pool,
-  benchmarking, and profiling with pprof.
-  Use when checking performance, finding slow code, reducing allocations,
-  profiling, or reviewing hot paths.
-  Trigger examples: "check performance", "find slow code", "reduce allocations",
-  "benchmark this", "profile", "optimize Go code".
-  Do NOT use for concurrency correctness (use go-concurrency-review) or
-  general code style (use go-coding-standards).
+  benchmarking, and profiling with pprof. Use when checking performance,
+  finding slow code, reducing allocations, profiling, or reviewing hot
+  paths. Trigger examples: "check performance", "find slow code", "reduce
+  allocations", "benchmark this", "profile", "optimize Go code".
+  Not for: concurrency correctness (go-concurrency-review), general style
+  (go-coding-standards).
+user-invocable: true
 license: MIT
+compatibility: Designed for Claude Code or similar AI coding agents working on Go projects. Requires the Go toolchain. benchstat is optional, for comparing benchmark runs.
+allowed-tools: Read Edit Write Glob Grep Bash(go:*) Bash(gofmt:*) Bash(benchstat:*)
 metadata:
-  version: "1.0.0"
+  author: eduardo-sl
+  version: "1.2.1"
 ---
-# Go 性能审查
+# Go 性能评审
 
-先进行性能分析，再进行优化。绝不要在没有基准测试证明问题存在的情况下进行优化。
+先进行性能分析，再进行优化。没有证明问题存在的基准测试，绝不进行优化。
 
-## 1. 减少内存分配
+## 1. 减少分配
 
-### 对于基本类型转换，优先使用 `strconv` 而非 `fmt`：
+### 对于基本类型转换，优先使用 `strconv` 而不是 `fmt`：
 
 ```go
 // ✅ Good — zero allocations for simple conversions
@@ -48,7 +51,7 @@ for _, s := range parts {
 }
 ```
 
-### 当大小已知时，预分配切片和映射：
+### 在大小已知时预分配切片和映射：
 
 ```go
 // ✅ Good — single allocation
@@ -64,7 +67,7 @@ lookup := make(map[string]User, len(users))
 var users []User // starts at 0, grows via doubling
 ```
 
-### 对频繁分配且生命周期较短的对象使用 `sync.Pool`：
+### 对于频繁分配且生命周期较短的对象，使用 `sync.Pool`：
 
 ```go
 var bufPool = sync.Pool{
@@ -105,10 +108,10 @@ func sum(vals []interface{}) int64 { ... }
 
 ### 避免在性能关键路径中使用 `reflect`：
 
-如果需要大规模实现类似反射的行为，请使用代码生成
-（`go generate`、`stringer`、protocol buffers）。
+如果需要在大规模场景下实现类似反射的行为，请使用代码生成
+（`go generate`、`stringer`、协议缓冲区）。
 
-### 减少指针追逐：
+### 减少指针追踪：
 
 ```go
 // ✅ Good — contiguous memory, cache-friendly
@@ -137,7 +140,7 @@ m := make(map[string]int, expectedSize)
 
 ## 4. 基准测试
 
-在优化前后始终编写基准测试：
+始终在优化前后编写基准测试：
 
 ```go
 func BenchmarkFoo(b *testing.B) {
@@ -154,7 +157,7 @@ func BenchmarkFoo(b *testing.B) {
 var result string
 ```
 
-运行带有内存分析的基准测试：
+使用内存分析运行基准测试：
 
 ```bash
 go test -bench=BenchmarkFoo -benchmem -count=5 ./...
@@ -169,40 +172,45 @@ go test -bench=. -count=10 > new.txt
 benchstat old.txt new.txt
 ```
 
-## 5. 性能剖析
+## 5. 性能分析
 
-### CPU 性能剖析：
+### CPU 性能分析：
 
 ```bash
 go test -cpuprofile=cpu.prof -bench=BenchmarkFoo .
 go tool pprof cpu.prof
 ```
 
-### 内存性能剖析：
+### 内存性能分析：
 
 ```bash
 go test -memprofile=mem.prof -bench=BenchmarkFoo .
 go tool pprof -alloc_space mem.prof
 ```
 
-### HTTP 服务器性能剖析（导入 net/http/pprof）：
+### HTTP 服务器性能分析（导入 net/http/pprof）：
 
 ```go
 import _ "net/http/pprof"
 
 // Access at http://localhost:6060/debug/pprof/
 go func() {
+    // Bind to loopback only — never the public listener.
     log.Println(http.ListenAndServe("localhost:6060", nil))
 }()
 ```
 
-## 6. 高吞吐量日志记录
+导入 `net/http/pprof` 会将其处理器注册到 `http.DefaultServeMux`。
+如果服务还通过 `DefaultServeMux` 提供公共流量，性能分析数据、
+命令行和 goroutine 堆栈将对全世界可读。始终为 pprof 提供独立的环回或内部网络监听器。
 
-对于大多数服务，`log/slog` 是合适的默认选择。但当基准测试表明
-日志记录已成为瓶颈时（高频热点路径，每秒超过 10 万行日志），
-应考虑零分配日志记录器。
+## 6. 高吞吐日志记录
 
-### 当 slog 无法满足需求时：
+对于大多数服务，`log/slog` 是正确的默认选择。但当基准测试表明
+日志记录已成为瓶颈时（高频热点路径、每秒超过 100k 条日志），
+可以考虑零分配日志记录器。
+
+### slog 不够用时：
 
 ```go
 // slog allocates per log call — fine for most services
@@ -226,10 +234,10 @@ logger.Info("request handled",
 | 场景 | 日志记录器 |
 |---|---|
 | 通用服务日志记录 | `log/slog`（标准库，零依赖） |
-| 高频热点路径（每秒超过 10 万行） | `go.uber.org/zap`（零分配） |
-| 使用 JSON 的极高吞吐量场景 | `github.com/rs/zerolog`（零分配 JSON） |
+| 高频热点路径（每秒超过 100k 条日志） | `go.uber.org/zap`（零分配） |
+| 使用 JSON 的极高吞吐量 | `github.com/rs/zerolog`（零分配 JSON） |
 
-### 两全其美——使用 zap 作为 slog 后端：
+### 两全其美——将 zap 用作 slog 后端：
 
 ```go
 // Use slog API everywhere, backed by zap's performance
@@ -265,28 +273,29 @@ for i, item := range millions {
 slog.Info("batch complete", slog.Int("count", len(millions)))
 ```
 
-如果没有基准测试证明有此必要，绝不要更换日志记录器。
-对于绝大多数 Go 服务，`slog` 的速度已经足够快。
+除非有基准测试证明确有必要，否则绝不要切换日志记录器。
+对于绝大多数 Go 服务来说，`slog` 已经足够快。
 
 ## 7. 常见反模式
 
-| 反模式 | 修复方式 |
+| 反模式 | 修复方案 |
 |---|---|
-| 使用 `fmt.Sprintf` 进行简单的整数→字符串转换 | `strconv.Itoa` |
-| 在循环中拼接字符串 | `strings.Builder` |
+| 使用 `fmt.Sprintf` 进行简单的 int→string 转换 | `strconv.Itoa` |
+| 在循环中进行字符串拼接 | `strings.Builder` |
 | 创建切片时不预分配容量 | `make([]T, 0, n)` |
 | 创建映射时不提供容量提示 | `make(map[K]V, n)` |
-| 在函数内部调用 `regexp.Compile` | 在包级别编译一次 |
-| 在热点路径中调用 `json.Marshal` | 使用代码生成工具（`easyjson`、`sonic`） |
+| 在函数内部调用 `regexp.Compile` | 在包级别只编译一次 |
+| 在热点路径中调用 `json.Marshal` | 使用代码生成（`easyjson`、`sonic`） |
 | 在紧密循环中记录日志 | 批量记录或采样记录 |
-| 在非常紧密的内层循环中使用 `defer` | 手动清理（极少需要，应先进行基准测试） |
+| 在非常紧密的内层循环中使用 `defer` | 手动清理（较少见，先进行基准测试） |
 
 ## 重要注意事项
 
-大多数 Go 代码对性能并不敏感。可读性和正确性**始终**优先于微优化。仅在满足以下条件时应用这些模式：
+大多数 Go 代码并不存在性能关键问题。可读性和正确性**始终**
+优先于微优化。仅在满足以下条件时应用这些模式：
 
-1. 基准测试证明该代码路径是性能瓶颈
+1. 基准测试证明该代码路径是瓶颈
 2. 优化效果显著（提升 >10%）
-3. 优化后的代码仍然具有良好的可读性和可维护性
+3. 优化后的代码仍然易于阅读和维护
 
-过早优化仍然是万恶之源，即使在 Go 中也是如此。
+过早优化仍然是万恶之源，即使是在 Go 中也是如此。

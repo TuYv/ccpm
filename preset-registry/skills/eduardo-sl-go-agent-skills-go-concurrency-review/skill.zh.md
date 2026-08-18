@@ -1,50 +1,62 @@
 ---
 name: go-concurrency-review
 description: >
-  Review and implement safe concurrency patterns in Go: goroutines, channels,
-  sync primitives, context propagation, and goroutine lifecycle management.
-  Use when writing concurrent code, reviewing async patterns, checking thread safety,
-  debugging race conditions, or designing producer/consumer pipelines.
-  Trigger examples: "check thread safety", "review goroutines", "race condition",
-  "channel patterns", "sync.Mutex", "context cancellation", "goroutine leak".
-  Do NOT use for general code style (use go-coding-standards) or
-  HTTP handler patterns (use go-api-design).
+  Review and implement safe concurrency patterns in Go: goroutines,
+  channels, sync primitives, context propagation, and goroutine lifecycle
+  management. Use when writing concurrent code, reviewing async patterns,
+  checking thread safety, debugging race conditions, or designing
+  producer/consumer pipelines. Trigger examples: "check thread safety",
+  "review goroutines", "race condition", "channel patterns", "sync.Mutex",
+  "context cancellation", "goroutine leak".
+  Not for: general style (go-coding-standards), HTTP handler patterns
+  (go-api-design).
+user-invocable: true
 license: MIT
+compatibility: Designed for Claude Code or similar AI coding agents working on Go projects. Requires the Go toolchain. Race detection requires cgo (CGO_ENABLED=1).
+allowed-tools: Read Edit Write Glob Grep Bash(go:*) Bash(gofmt:*)
 metadata:
-  version: "1.1.0"
+  author: eduardo-sl
+  version: "1.3.0"
 ---
 # Go 并发审查
 
-Go 的并发功能非常强大，但也很容易在不经意间出错。
-以下模式可防止 goroutine 泄漏、数据竞态和死锁。
+Go 中的并发功能强大，但很容易在不经意间出错。  
+这些模式可以防止 goroutine 泄漏、数据竞争和死锁。
 
-## 工作模式
+按需加载的详细参考材料：
 
-开始之前，请选择与请求相匹配的模式：
+- `references/channels.md` — 大小、信号传递、生产者关闭。
+- `references/mutex-and-atomics.md` — 互斥锁放置位置、锁的作用域、原子操作、
+  `sync.Once`。
 
-- **实现** — 编写新的并发代码。遵循下述模式，将其作为构建规则。
-- **差异审查**（默认）— 根据每个章节检查变更的代码，尤其关注新增的 `go` 语句和共享状态。
-- **泄漏/竞态排查** — 已经观察到相关症状（goroutine 数量不断增长、`-race` 报告、死锁）。从“审计大型代码库”和竞态检测章节开始定位问题。
+仅当下面的章节不足以解决问题时，才读取参考文件。
+
+## 操作模式
+
+开始前选择与请求匹配的模式：
+
+- **实现** — 编写新的并发代码。将下面的模式作为构造规则遵循。
+- **差异审查**（默认）— 根据每个章节检查变更后的代码，特别关注新增的 `go` 语句和共享状态。
+- **泄漏/竞争排查** — 已经观察到某种症状（goroutine 数量持续增长、`-race` 报告、死锁）。从“审计大型代码库”和竞态检测章节开始，以定位问题。
 
 ## 审计大型代码库
 
-对于完整的并发审计，应分别执行以下检查，而不是只进行一次线性阅读：
+进行完整的并发审计时，应执行以下相互独立的检查，而不是线性地通读代码：
 
-1. **Goroutine 生命周期：**查找每一条 `go` 语句
-   （`grep -rn "go func\|go [a-zA-Z]" --include="*.go"`），并验证每个 goroutine
+1. **Goroutine 生命周期：** 查找每个 `go` 语句
+   (`grep -rn "go func\|go [a-zA-Z]" --include="*.go"`) 并确认每个语句
    都有终止路径（context、已关闭的 channel、WaitGroup）。
-2. **共享状态：**查找由多个 goroutine 访问的包级变量和结构体字段；验证是否使用 mutex/atomic 进行保护。
-3. **Channel 拓扑：**梳理每个 channel 的生产者/消费者；验证 channel 只关闭一次，并且不存在向已关闭 channel 发送数据的路径。
-4. **Context 传播：**验证阻塞调用是否接受并遵循
-   `context.Context`。
+2. **共享状态：** 查找被多个 goroutine 访问的包级变量和结构体字段；确认其受到互斥锁/原子操作保护。
+3. **Channel 拓扑：** 梳理每个 channel 对应的生产者/消费者；确认恰好关闭一次，并且不存在向已关闭 channel 发送的路径。
+4. **Context 传递：** 确认阻塞调用能够接收并遵守 `context.Context`。
 
-如果你的环境支持将工作委派给并行子代理或任务，请为每项检查分别分配一个；否则，请按顺序执行。发现的问题必须引用 `file.go:line`。最后必须执行 `go test -race ./...`。
+如果你的环境支持将工作委派给并行子代理或任务，则为每项检查分配一个；否则按顺序执行。发现的问题必须注明 `file.go:line`。始终以 `go test -race ./...` 结束。
 
 ## 1. Goroutine 生命周期管理
 
-每个 goroutine 都必须有明确的终止路径。禁止启动后不管。
+每个 goroutine 都必须有明确的终止路径。禁止即发即忘。
 
-### 使用 `errgroup` 协调多个 goroutine：
+### 使用 `errgroup` 协调 goroutine：
 
 ```go
 g, ctx := errgroup.WithContext(ctx)
@@ -62,7 +74,7 @@ if err := g.Wait(); err != nil {
 }
 ```
 
-### 长时间运行的 goroutine 必须遵循 context：
+### 长时间运行的 goroutine 必须遵守 context：
 
 ```go
 func (w *Worker) Run(ctx context.Context) error {
@@ -79,7 +91,7 @@ func (w *Worker) Run(ctx context.Context) error {
 }
 ```
 
-### 在所有者中启动 goroutine，而不是在被调用者中启动：
+### 在所有者中启动 goroutine，而不是在被调用方中启动：
 
 ```go
 // ✅ Good — caller controls lifecycle
@@ -95,152 +107,26 @@ func NewWorker() *Worker {
 
 ## 2. Channel 模式
 
-### Channel 大小只能为 1 或不设置：
+- 大小只能是一个或零。无缓冲 channel 是同步点；容量为 1 的 buffer 用于交接。任何更大的 buffer 都需要注释说明为何使用该数值——随意设置为 `100` 是一个等待生产环境速度低于预发布环境那天才会暴露的 bug。
+- 信号 channel 携带 `struct{}`，而 `close(done)` 会同时向所有接收方广播。
+- 生产者拥有 channel，并且只有生产者负责关闭它，在生产 goroutine 中使用 `defer close(ch)`。每次发送都必须放在针对 `ctx.Done()` 的 `select` 中，否则消费者离开后，生产者就会泄漏。
 
-```go
-// Unbuffered — synchronization point
-ch := make(chan Result)
+`references/channels.md` 中的示例。
 
-// Buffered with size 1 — single-item handoff
-ch := make(chan Result, 1)
+## 3. 互斥锁与原子操作
 
-// Larger buffers need explicit justification with documented reasoning
-ch := make(chan Result, 100) // requires comment explaining why
-```
+- 零值的 `sync.Mutex` 和 `sync.RWMutex` 可直接使用。`*sync.Mutex` 字段始终是错误的。
+- 将互斥锁直接声明在其保护的字段上方，并添加注释说明二者的关系。一个保护“整个结构体”的互斥锁实际上没有明确保护任何内容。
+- 将临界区保持在最小范围内——持有一个锁时，绝不要调用外部服务，也不要再获取第二个锁。
+- 🔴 绝不要复制包含互斥锁的值（`c2 := *c1`）：副本会携带原始值的锁状态。`go vet` 可以捕获其中大多数问题；应当信任它。
+- 对计数器和标志使用 `sync/atomic` 类型，而不是使用互斥锁保护 `int64`。
+- 对于必须恰好执行一次的延迟初始化，使用 `sync.Once`。
 
-### 信号 channel 使用空结构体：
+`references/mutex-and-atomics.md` 中的示例。
 
-```go
-done := make(chan struct{})
-close(done) // broadcast signal to all receivers
-```
+## 4. Context 传递
 
-### 可干净关闭的生产者/消费者模式：
-
-```go
-func produce(ctx context.Context) <-chan Item {
-    ch := make(chan Item)
-    go func() {
-        defer close(ch)
-        for {
-            item, err := fetchNext(ctx)
-            if err != nil {
-                return
-            }
-            select {
-            case ch <- item:
-            case <-ctx.Done():
-                return
-            }
-        }
-    }()
-    return ch
-}
-```
-
-## 3. 互斥锁模式
-
-### 互斥锁的零值可直接使用：
-
-```go
-// ✅ Good — zero value works
-type Cache struct {
-    mu    sync.RWMutex
-    items map[string]Item
-}
-
-// ❌ Bad — unnecessary pointer
-type Cache struct {
-    mu    *sync.RWMutex // never do this
-}
-```
-
-### 互斥锁在结构体中的位置：
-
-```go
-type SafeMap struct {
-    mu sync.RWMutex // mutex guards the fields below
-    items map[string]string
-    count int
-}
-```
-
-互斥锁应直接放在其所保护的字段上方，
-并通过注释说明二者的关系。
-
-### 锁的作用域应尽可能小：
-
-```go
-// ✅ Good — minimal lock scope
-func (c *Cache) Get(key string) (Item, bool) {
-    c.mu.RLock()
-    item, ok := c.items[key]
-    c.mu.RUnlock()
-    return item, ok
-}
-
-// ✅ Also good — defer for methods that return early
-func (c *Cache) GetOrCreate(key string) Item {
-    c.mu.Lock()
-    defer c.mu.Unlock()
-
-    if item, ok := c.items[key]; ok {
-        return item
-    }
-    item := newItem(key)
-    c.items[key] = item
-    return item
-}
-```
-
-### 切勿复制互斥锁：
-
-```go
-// ❌ BLOCKER — copying a mutex copies its lock state
-cache2 := *cache1 // this copies the mutex!
-```
-
-## 4. 原子操作
-
-对于简单的计数器和标志，请使用 `sync/atomic` 或 `go.uber.org/atomic`：
-
-```go
-// ✅ Good — type-safe atomics
-import "go.uber.org/atomic"
-
-type Server struct {
-    running atomic.Bool
-    reqCount atomic.Int64
-}
-
-func (s *Server) HandleRequest() {
-    s.reqCount.Inc()
-    // ...
-}
-```
-
-## 5. 上下文传递
-
-### 规则：
-- 上下文始终是第一个参数。
-- 切勿将上下文存储在结构体字段中。
-- 为子操作派生子上下文：
-
-```go
-func (s *Service) Process(ctx context.Context, req Request) error {
-    // Derive context with timeout for external call
-    fetchCtx, cancel := context.WithTimeout(ctx, 5*time.Second)
-    defer cancel() // ALWAYS defer cancel
-
-    data, err := s.client.Fetch(fetchCtx, req.ID)
-    if err != nil {
-        return fmt.Errorf("fetch %s: %w", req.ID, err)
-    }
-    // ...
-}
-```
-
-### 在 `select` 中切勿忽略上下文取消：
+Context 始终是第一个参数，绝不能作为结构体字段，并且每个阻塞操作都要对 `ctx.Done()` 进行选择：
 
 ```go
 // ✅ Good
@@ -251,11 +137,13 @@ case <-ctx.Done():
     return nil, ctx.Err()
 }
 
-// ❌ Bad — blocks forever if context cancelled
+// ❌ Bad — blocks forever if the context is cancelled
 result := <-ch
 ```
 
-## 6. 避免可变的全局变量
+为每次外部调用派生一个具有独立超时的子 context，并立即执行 `defer cancel()`。完整规则见 `go-context` skill。
+
+## 5. 避免可变全局变量
 
 ```go
 // ❌ Bad — mutable global, not safe for concurrent access
@@ -267,41 +155,25 @@ type Server struct {
 }
 ```
 
-## 7. 使用 sync.Once 实现延迟初始化
-
-```go
-type Client struct {
-    initOnce sync.Once
-    conn     *grpc.ClientConn
-}
-
-func (c *Client) getConn() *grpc.ClientConn {
-    c.initOnce.Do(func() {
-        c.conn = dial()
-    })
-    return c.conn
-}
-```
-
 ## 竞态检测
 
-在 CI 中运行测试时，始终启用竞态检测器：
+在 CI 期间始终使用竞态检测器运行测试：
 
 ```bash
 go test -race ./...
 ```
 
-这一点没有商量余地。未使用 `-race` 即能通过的测试套件，并不能证明并发正确性。
+这是不可妥协的要求。不使用 `-race` 通过的测试套件无法证明并发正确性。
 
-## 危险信号检查清单
+## 高风险信号检查清单
 
-- 🔴 启动 Goroutine 时未提供关闭路径
-- 🔴 通道从未关闭（可能导致 Goroutine 泄漏）
+- 🔴 启动 goroutine 时没有关闭路径
+- 🔴 Channel 从未关闭（可能导致 goroutine 泄漏）
 - 🔴 按值复制互斥锁
-- 🔴 将上下文存储在结构体字段中
-- 🔴 在已有父上下文可用时使用 `context.Background()`
+- 🔴 将 Context 存储在结构体字段中
+- 🔴 在已有父 context 可用的情况下使用 `context.Background()`
 - 🔴 阻塞操作中的 `select` 没有 `ctx.Done()` 分支
-- 🔴 未经同步就访问共享 map/slice
-- 🟡 使用任意较大容量的缓冲通道
-- 🟡 使用 `time.Sleep` 进行同步，而不是使用正确的信号机制
-- 🟡 在 `init()` 或构造函数中启动 Goroutine，却没有生命周期控制
+- 🔴 访问共享 map/slice 时没有同步
+- 🟡 使用大小任意且过大的带缓冲 channel
+- 🟡 使用 `time.Sleep` 进行同步，而不是使用适当的信号传递
+- 🟡 在 `init()` 或构造函数中启动 goroutine，却没有生命周期控制
