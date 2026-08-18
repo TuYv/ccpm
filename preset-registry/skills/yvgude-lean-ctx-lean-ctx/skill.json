@@ -1,7 +1,7 @@
 {
   "id": "yvgude-lean-ctx-lean-ctx",
   "name": "lean-ctx",
-  "description": "Context Engineering for AI Agents — 79 MCP tools, 10 read modes, 95+ shell patterns, tree-sitter AST for 26 languages. Compresses LLM context by up to 99%. Use when reading files, running shell commands, searching code, or exploring directories. Auto-installs if not present.",
+  "description": "Context Engineering for AI Agents — 84 MCP tools, 10 read modes, 95+ shell patterns, tree-sitter AST for 26 languages. Compresses LLM context by up to 99%. Use when reading files, running shell commands, searching code, or exploring directories. Auto-installs if not present.",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/yvgude/lean-ctx/blob/main/skills/lean-ctx/SKILL.md",
     "path": "skills/lean-ctx/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-18T09:53:29.816Z",
+    "discovered_at": "2026-08-18T11:50:59.320Z",
     "stars": 3589,
     "language": "Rust",
-    "pushed_at": "2026-08-18T09:45:27Z",
+    "pushed_at": "2026-08-18T10:55:50Z",
     "license": "Apache-2.0"
   },
-  "summary_zh": "一款面向 AI 智能体的上下文工程工具，可在读文件、搜代码、执行命令和浏览目录时大幅压缩输入，降低模型上下文开销。"
+  "summary_zh": "面向 AI 智能体的上下文工程工具，帮助高效读取文件、搜索代码和执行命令，大幅压缩上下文，适合代码库探索与自动化开发。"
 }

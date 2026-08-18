@@ -1,7 +1,7 @@
 {
   "id": "chrisbanes-skills-shepherd",
   "name": "shepherd",
-  "description": "Use when asked to shepherd, babysit, monitor, or poll open pull requests or merge requests — including triaging review comments, detecting CI failures, fixing trivial CI issues, and keeping PRs/MRs moving without manual intervention.",
+  "description": "Use when asked to shepherd, babysit, monitor, or poll open pull requests or merge requests, including triaging review feedback, CI failures, and routine follow-up.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/chrisbanes/skills/blob/main/skills/shepherd/SKILL.md",
     "path": "skills/shepherd/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-18T09:51:34.944Z",
-    "stars": 932,
+    "discovered_at": "2026-08-18T11:02:17.767Z",
+    "stars": 933,
     "language": "Python",
-    "pushed_at": "2026-08-18T09:51:28Z",
+    "pushed_at": "2026-08-18T10:49:28Z",
     "license": "Apache-2.0"
   },
-  "summary_zh": "用于自动跟进和维护开放中的合并请求，处理评审意见、监控并修复简单的 CI 问题，适合减少人工盯进度。"
+  "summary_zh": "用于持续跟进和管理未合并的 Pull Request 或 Merge Request，处理评审意见、CI 失败及日常跟进，适合代码审查协作和合并前维护。"
 }
