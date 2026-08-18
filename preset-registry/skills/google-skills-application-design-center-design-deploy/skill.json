@@ -1,0 +1,26 @@
+{
+  "id": "google-skills-application-design-center-design-deploy",
+  "name": "application-design-center-design-deploy",
+  "description": ">- Processes GCP infrastructure design and deployment workflows within Application Design Center (ADC). Use when: - Designing GCP infrastructure with Terraform. - Validating local HCL. - Performing best-practice plan scans. - Importing templates to Application Design Center (ADC). - Deploying templates. - Troubleshooting deployment failures. Boundaries: - Only use for GCP-specific cloud infrastructure. - Only use for Terraform coding within the ADC context.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/application-design-center-design-deploy/SKILL.md",
+  "source": {
+    "repo": "google/skills",
+    "url": "https://github.com/google/skills/blob/main/skills/cloud/application-design-center-design-deploy/SKILL.md",
+    "path": "skills/cloud/application-design-center-design-deploy/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T19:04:08.487Z",
+    "stars": 18470,
+    "language": "Python",
+    "pushed_at": "2026-08-18T17:52:06Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "用于在应用设计中心中设计、校验和部署基于 Terraform 的 GCP 基础设施，并排查部署问题。"
+}
