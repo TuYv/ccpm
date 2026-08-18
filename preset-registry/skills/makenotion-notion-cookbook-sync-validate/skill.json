@@ -1,0 +1,26 @@
+{
+  "id": "makenotion-notion-cookbook-sync-validate",
+  "name": "sync-validate",
+  "description": "Review a sync capability for common bugs — cursor advancement, pagination termination, state persistence, bi-modal correctness, consistency buffers, and deletion handling",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "makenotion",
+  "install_path": ".claude/skills/sync-validate/SKILL.md",
+  "source": {
+    "repo": "makenotion/notion-cookbook",
+    "url": "https://github.com/makenotion/notion-cookbook/blob/main/workers/templates/duckdb-sync/.agents/skills/sync-validate/SKILL.md",
+    "path": "workers/templates/duckdb-sync/.agents/skills/sync-validate/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T00:55:03.910Z",
+    "stars": 192,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-18T00:52:00Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一套同步能力审查工具，用于排查游标、分页、状态持久化、全量与增量一致性及删除处理等常见问题。"
+}

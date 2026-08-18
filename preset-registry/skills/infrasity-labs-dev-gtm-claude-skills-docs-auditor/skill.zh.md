@@ -1,0 +1,1 @@
+请粘贴 `../../../skills/docs-auditor/SKILL.md` 中需要翻译的英文内容。

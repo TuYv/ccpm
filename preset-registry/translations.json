@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-18T00:19:09.302Z",
+  "updated_at": "2026-08-18T01:28:45.535Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -17473,9 +17473,9 @@
       "translated_at": "2026-08-03T05:00:14.482Z"
     },
     "bundle:makenotion-notion-cookbook": {
-      "hash": "0f88358956fe7b16",
-      "summary_zh": "面向 Notion 知识与研发协作，把讨论、研究、会议和需求串成可沉淀、可执行、可追踪的团队工作流。",
-      "translated_at": "2026-08-03T05:00:14.565Z"
+      "hash": "9ef169d1ca33cd41",
+      "summary_zh": "面向 Notion 自动化开发与知识协作，贯通认证、数据同步、内容沉淀、研究会议到任务落地，快速搭建可靠的智能工作流。",
+      "translated_at": "2026-08-18T00:58:05.264Z"
     },
     "bundle:infrasity-labs-dev-gtm-claude-skills": {
       "hash": "061a5dd0f10a6307",
@@ -17523,9 +17523,9 @@
       "translated_at": "2026-08-13T11:18:41.284Z"
     },
     "preset:23blocks-os-ai-maestro": {
-      "hash": "6475cea7891fde15",
-      "summary_zh": "这是一个AI代理编排平台，可统一管理多台设备上的代理，让它们共享记忆、查询代码图谱并彼此协作，适合组建多代理开发团队。",
-      "translated_at": "2026-08-07T20:24:58.139Z"
+      "hash": "b9852abb491ad9a9",
+      "summary_zh": "统一编排多台电脑上的各类 AI 智能体，让它们共享记忆、直接通信，适合管理大规模 AI 协作团队。",
+      "translated_at": "2026-08-18T00:58:08.691Z"
     },
     "preset:milisp-codexia": {
       "hash": "a78fc3864987f2ad",
@@ -34488,8 +34488,8 @@
       "translated_at": "2026-08-13T22:18:15.390Z"
     },
     "content:asklokesh-claudeskill-loki-mode": {
-      "hash": "f01bcbf514921ebb",
-      "translated_at": "2026-08-17T18:05:46.868Z"
+      "hash": "948b1642e5513db1",
+      "translated_at": "2026-08-18T01:01:33.412Z"
     },
     "content:asklokesh-claudeskill-loki-mode-checkpoint-mode": {
       "hash": "032b07b8e12aba02",
@@ -39030,8 +39030,8 @@
       "translated_at": "2026-08-16T05:29:19.175Z"
     },
     "content:gadievron-raptor-audit": {
-      "hash": "94c4d675d62c1586",
-      "translated_at": "2026-08-16T05:29:47.252Z"
+      "hash": "586fee65cdc624db",
+      "translated_at": "2026-08-18T01:11:54.994Z"
     },
     "content:gadievron-raptor-frida": {
       "hash": "b97af37fb6a1c516",
@@ -39042,8 +39042,8 @@
       "translated_at": "2026-08-16T07:15:13.009Z"
     },
     "content:gadievron-raptor-exploitability-validation": {
-      "hash": "19d065793a870f3c",
-      "translated_at": "2026-08-16T07:15:13.205Z"
+      "hash": "319e3d8b7ad38400",
+      "translated_at": "2026-08-18T01:12:36.098Z"
     },
     "content:gadievron-raptor-gcov-coverage": {
       "hash": "aacabdf497b197c3",
@@ -39058,8 +39058,8 @@
       "translated_at": "2026-08-16T07:17:40.699Z"
     },
     "content:gadievron-raptor-github-archive": {
-      "hash": "3604512f2d3b6811",
-      "translated_at": "2026-08-16T07:18:52.741Z"
+      "hash": "5f8471361011fb6f",
+      "translated_at": "2026-08-18T01:15:47.591Z"
     },
     "content:gadievron-raptor-line-execution-checker": {
       "hash": "bdf5f4e1d0dde3c5",
@@ -40978,6 +40978,152 @@
     "content:infrasity-labs-dev-gtm-claude-skills-blog-write": {
       "hash": "250045e157a2d0b8",
       "translated_at": "2026-08-18T00:19:09.302Z"
+    },
+    "skill:makenotion-notion-cookbook-auth-guide": {
+      "hash": "874011aa4a6f44fe",
+      "summary_zh": "一份为 Notion Worker 配置第三方认证的指南，适合安全接入外部 API 密钥、访问令牌或 OAuth。",
+      "translated_at": "2026-08-18T00:58:09.063Z"
+    },
+    "skill:makenotion-notion-cookbook-custom-blocks": {
+      "hash": "abff41af4e01b087",
+      "summary_zh": "一份自定义 Notion 区块开发指南，适合构建与 Notion 数据联动的交互式界面。",
+      "translated_at": "2026-08-18T00:58:10.405Z"
+    },
+    "skill:makenotion-notion-cookbook-sync-debug": {
+      "hash": "a69eca11f1fd934b",
+      "summary_zh": "用于排查同步任务异常的诊断工具，可获取运行日志、定位错误并结合代码分析原因，给出修复建议。",
+      "translated_at": "2026-08-18T00:58:11.926Z"
+    },
+    "skill:makenotion-notion-cookbook-sync": {
+      "hash": "ee51623da019e871",
+      "summary_zh": "通过引导配置数据源、同步模式、分页和游标策略，自动生成可运行的数据同步代码，适合快速搭建同步能力。",
+      "translated_at": "2026-08-18T00:58:13.162Z"
+    },
+    "skill:makenotion-notion-cookbook-sync-guide": {
+      "hash": "be6e9c3af806341f",
+      "summary_zh": "一份构建 Notion Workers 数据同步的实战指南，适合设计全量与增量同步、处理分页一致性及删除策略时参考。",
+      "translated_at": "2026-08-18T00:58:16.405Z"
+    },
+    "skill:makenotion-notion-cookbook-sync-validate": {
+      "hash": "3643a7de8d814605",
+      "summary_zh": "一套同步能力审查工具，用于排查游标、分页、状态持久化、全量与增量一致性及删除处理等常见问题。",
+      "translated_at": "2026-08-18T00:58:18.071Z"
+    },
+    "content:infrasity-labs-dev-gtm-claude-skills-brief-outline-generator": {
+      "hash": "f6b01a02bfd04ff2",
+      "translated_at": "2026-08-18T01:12:40.430Z"
+    },
+    "content:infrasity-labs-dev-gtm-claude-skills-business-design": {
+      "hash": "7376463456eb7333",
+      "translated_at": "2026-08-18T01:13:07.015Z"
+    },
+    "content:infrasity-labs-dev-gtm-claude-skills-capture": {
+      "hash": "2f11946bdfe2cc60",
+      "translated_at": "2026-08-18T01:14:36.226Z"
+    },
+    "content:infrasity-labs-dev-gtm-claude-skills-churn-prevention": {
+      "hash": "3b20b6171f551c6d",
+      "translated_at": "2026-08-18T01:16:36.748Z"
+    },
+    "content:infrasity-labs-dev-gtm-claude-skills-claude-md-starter": {
+      "hash": "989105fe7eb65388",
+      "translated_at": "2026-08-18T01:16:40.717Z"
+    },
+    "content:infrasity-labs-dev-gtm-claude-skills-cold-email": {
+      "hash": "022e67d155208e08",
+      "translated_at": "2026-08-18T01:17:28.860Z"
+    },
+    "content:infrasity-labs-dev-gtm-claude-skills-community-marketing": {
+      "hash": "0cf00fdaf429ea33",
+      "translated_at": "2026-08-18T01:17:32.246Z"
+    },
+    "content:infrasity-labs-dev-gtm-claude-skills-competitors": {
+      "hash": "5c249f74cd6a0924",
+      "translated_at": "2026-08-18T01:18:24.439Z"
+    },
+    "content:infrasity-labs-dev-gtm-claude-skills-competitor-profiling": {
+      "hash": "6b002ef024c687c7",
+      "translated_at": "2026-08-18T01:19:23.738Z"
+    },
+    "content:infrasity-labs-dev-gtm-claude-skills-content-brief": {
+      "hash": "0bc607563ee16132",
+      "translated_at": "2026-08-18T01:19:45.497Z"
+    },
+    "content:infrasity-labs-dev-gtm-claude-skills-copywriting": {
+      "hash": "5e3f8b5c4cc60fc2",
+      "translated_at": "2026-08-18T01:20:38.621Z"
+    },
+    "content:infrasity-labs-dev-gtm-claude-skills-content-strategy": {
+      "hash": "090c83631ecfc7f0",
+      "translated_at": "2026-08-18T01:20:47.834Z"
+    },
+    "content:infrasity-labs-dev-gtm-claude-skills-cro": {
+      "hash": "0011631f9c73f21b",
+      "translated_at": "2026-08-18T01:21:12.310Z"
+    },
+    "content:infrasity-labs-dev-gtm-claude-skills-docs-auditor": {
+      "hash": "9e5e8ce7286f1242",
+      "translated_at": "2026-08-18T01:21:17.858Z"
+    },
+    "content:infrasity-labs-dev-gtm-claude-skills-emails": {
+      "hash": "380aa09ac368070a",
+      "translated_at": "2026-08-18T01:22:13.798Z"
+    },
+    "content:infrasity-labs-dev-gtm-claude-skills-customer-research": {
+      "hash": "a9885e27f968f947",
+      "translated_at": "2026-08-18T01:22:24.716Z"
+    },
+    "content:infrasity-labs-dev-gtm-claude-skills-seo-ahrefs": {
+      "hash": "9222142fbff3d5ba",
+      "translated_at": "2026-08-18T01:22:39.891Z"
+    },
+    "content:infrasity-labs-dev-gtm-claude-skills-seo-bing": {
+      "hash": "964a27d6910ae9c0",
+      "translated_at": "2026-08-18T01:22:53.496Z"
+    },
+    "content:infrasity-labs-dev-gtm-claude-skills-free-tools": {
+      "hash": "6579777847ca93de",
+      "translated_at": "2026-08-18T01:23:04.506Z"
+    },
+    "content:infrasity-labs-dev-gtm-claude-skills-seo-firecrawl": {
+      "hash": "c20476af70f38f82",
+      "translated_at": "2026-08-18T01:24:04.430Z"
+    },
+    "content:infrasity-labs-dev-gtm-claude-skills-seo-dataforseo": {
+      "hash": "d3bd8684204e36d1",
+      "translated_at": "2026-08-18T01:24:39.553Z"
+    },
+    "content:infrasity-labs-dev-gtm-claude-skills-seo-profound": {
+      "hash": "8ab38b551db614b4",
+      "translated_at": "2026-08-18T01:24:52.424Z"
+    },
+    "content:infrasity-labs-dev-gtm-claude-skills-seo-image-gen": {
+      "hash": "9c414b2691a98b92",
+      "translated_at": "2026-08-18T01:25:00.768Z"
+    },
+    "content:infrasity-labs-dev-gtm-claude-skills-seo-seranking": {
+      "hash": "8a0a34ff6182b230",
+      "translated_at": "2026-08-18T01:25:07.276Z"
+    },
+    "content:infrasity-labs-dev-gtm-claude-skills-seo-unlighthouse": {
+      "hash": "1eebd5d027732459",
+      "translated_at": "2026-08-18T01:25:12.179Z"
+    },
+    "content:internet-court-internet-court-skill-0g-compute": {
+      "hash": "5af544f552f1bba0",
+      "translated_at": "2026-08-18T01:25:56.401Z"
+    },
+    "content:internet-court-internet-court-skill-agent-wallet": {
+      "hash": "bae0beab74b95f7c",
+      "translated_at": "2026-08-18T01:27:43.339Z"
+    },
+    "content:internet-court-internet-court-skill-agentic-wallet": {
+      "hash": "063480c1e450a626",
+      "translated_at": "2026-08-18T01:28:06.871Z"
+    },
+    "content:internet-court-internet-court-skill": {
+      "hash": "2b671f2c34bf7a56",
+      "translated_at": "2026-08-18T01:28:45.535Z"
     }
   }
 }

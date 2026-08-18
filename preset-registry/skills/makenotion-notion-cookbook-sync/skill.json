@@ -1,0 +1,26 @@
+{
+  "id": "makenotion-notion-cookbook-sync",
+  "name": "sync",
+  "description": "Scaffold a new sync capability with guided setup — asks about data source, mode, pagination, and cursor design, then generates working code",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "makenotion",
+  "install_path": ".claude/skills/sync/SKILL.md",
+  "source": {
+    "repo": "makenotion/notion-cookbook",
+    "url": "https://github.com/makenotion/notion-cookbook/blob/main/workers/templates/duckdb-sync/.agents/skills/sync/SKILL.md",
+    "path": "workers/templates/duckdb-sync/.agents/skills/sync/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T00:55:04.030Z",
+    "stars": 192,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-18T00:52:00Z",
+    "license": "MIT"
+  },
+  "summary_zh": "通过引导配置数据源、同步模式、分页和游标策略，自动生成可运行的数据同步代码，适合快速搭建同步能力。"
+}

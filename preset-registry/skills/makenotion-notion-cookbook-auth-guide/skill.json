@@ -1,0 +1,26 @@
+{
+  "id": "makenotion-notion-cookbook-auth-guide",
+  "name": "auth-guide",
+  "description": "Guide to setting up third-party authentication for a Notion Worker. Covers brokered credentials for external-service API keys / personal access tokens, OAuth, and plaintext environment secrets only when worker code needs the value. Use when the worker needs credentials for a non-Notion API, not for Notion API tokens or `ntn login`.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "makenotion",
+  "install_path": ".claude/skills/auth-guide/SKILL.md",
+  "source": {
+    "repo": "makenotion/notion-cookbook",
+    "url": "https://github.com/makenotion/notion-cookbook/blob/main/workers/templates/github-draft-release-tools/.agents/skills/auth-guide/SKILL.md",
+    "path": "workers/templates/github-draft-release-tools/.agents/skills/auth-guide/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T00:55:04.181Z",
+    "stars": 192,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-18T00:52:00Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一份为 Notion Worker 配置第三方认证的指南，适合安全接入外部 API 密钥、访问令牌或 OAuth。"
+}

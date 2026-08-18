@@ -1,0 +1,26 @@
+{
+  "id": "makenotion-notion-cookbook-custom-blocks",
+  "name": "custom-blocks",
+  "description": "Comprehensive guide to building Notion worker custom blocks - use when the user wants to build interactive UI connected to Notion data.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "makenotion",
+  "install_path": ".claude/skills/custom-blocks/SKILL.md",
+  "source": {
+    "repo": "makenotion/notion-cookbook",
+    "url": "https://github.com/makenotion/notion-cookbook/blob/main/workers/templates/custom-blocks/whiteboard/.agents/skills/custom-blocks/SKILL.md",
+    "path": "workers/templates/custom-blocks/whiteboard/.agents/skills/custom-blocks/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T00:55:02.262Z",
+    "stars": 192,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-18T00:52:00Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一份自定义 Notion 区块开发指南，适合构建与 Notion 数据联动的交互式界面。"
+}
