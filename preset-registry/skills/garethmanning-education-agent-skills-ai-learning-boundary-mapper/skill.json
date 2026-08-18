@@ -1,0 +1,26 @@
+{
+  "id": "garethmanning-education-agent-skills-ai-learning-boundary-mapper",
+  "name": "ai-learning-boundary-mapper",
+  "description": "Map which elements of an assignment benefit from AI assistance vs. which AI use undermines. Use when redesigning tasks for AI-age classrooms or setting defensible AI use policies for specific assignments.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0",
+  "author": "GarethManning",
+  "install_path": ".claude/skills/ai-learning-boundary-mapper/SKILL.md",
+  "source": {
+    "repo": "GarethManning/education-agent-skills",
+    "url": "https://github.com/GarethManning/education-agent-skills/blob/main/skills/ai-literacy/ai-learning-boundary-mapper/SKILL.md",
+    "path": "skills/ai-literacy/ai-learning-boundary-mapper/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T13:06:55.030Z",
+    "stars": 626,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-10T12:50:35Z",
+    "license": null
+  },
+  "summary_zh": "用于分析作业中哪些环节适合借助 AI、哪些使用方式会削弱学习效果，适合重设计 AI 时代的课堂任务或制定具体作业的 AI 使用规范。"
+}

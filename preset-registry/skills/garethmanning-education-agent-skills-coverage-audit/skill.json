@@ -1,0 +1,26 @@
+{
+  "id": "garethmanning-education-agent-skills-coverage-audit",
+  "name": "coverage-audit",
+  "description": "Takes a curriculum framework and a statutory or accreditation requirement list; produces a coverage table, gap summary, and CSV showing which framework content covers each requirement and where gaps exist.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0",
+  "author": "GarethManning",
+  "install_path": ".claude/skills/coverage-audit/SKILL.md",
+  "source": {
+    "repo": "GarethManning/education-agent-skills",
+    "url": "https://github.com/GarethManning/education-agent-skills/blob/main/skills/curriculum-alignment/coverage-audit/SKILL.md",
+    "path": "skills/curriculum-alignment/coverage-audit/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T13:06:56.017Z",
+    "stars": 626,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-10T12:50:35Z",
+    "license": null
+  },
+  "summary_zh": "将课程框架与法定或认证要求进行对照，生成覆盖情况表、缺口汇总和 CSV，适合课程合规审查与认证准备。"
+}

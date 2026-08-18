@@ -1,0 +1,26 @@
+{
+  "id": "garethmanning-education-agent-skills-prompt-literacy-sequence-designer",
+  "name": "prompt-literacy-sequence-designer",
+  "description": "Design a learning sequence teaching prompt quality — comparing vague vs. refined prompts to show why specificity and context transform AI output. Use when students use AI without understanding why output quality varies.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0",
+  "author": "GarethManning",
+  "install_path": ".claude/skills/prompt-literacy-sequence-designer/SKILL.md",
+  "source": {
+    "repo": "GarethManning/education-agent-skills",
+    "url": "https://github.com/GarethManning/education-agent-skills/blob/main/skills/ai-literacy/prompt-literacy-sequence-designer/SKILL.md",
+    "path": "skills/ai-literacy/prompt-literacy-sequence-designer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T13:06:55.825Z",
+    "stars": 626,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-10T12:50:35Z",
+    "license": null
+  },
+  "summary_zh": "用于设计提示词素养教学，通过对比模糊与完善的提问，帮助学生理解具体信息和上下文如何提升 AI 输出质量。"
+}

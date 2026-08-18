@@ -1,0 +1,26 @@
+{
+  "id": "garethmanning-education-agent-skills-academic-language-sentence-frame-generator",
+  "name": "academic-language-sentence-frame-generator",
+  "description": "Generate tiered sentence frames for academic tasks that scaffold language production across proficiency levels. Use when EAL students need structured language support for classroom discourse.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0",
+  "author": "GarethManning",
+  "install_path": ".claude/skills/academic-language-sentence-frame-generator/SKILL.md",
+  "source": {
+    "repo": "GarethManning/education-agent-skills",
+    "url": "https://github.com/GarethManning/education-agent-skills/blob/main/skills/eal-language-development/academic-language-sentence-frame-generator/SKILL.md",
+    "path": "skills/eal-language-development/academic-language-sentence-frame-generator/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T13:06:59.604Z",
+    "stars": 626,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-10T12:50:35Z",
+    "license": null
+  },
+  "summary_zh": "帮助英语非母语学生按语言水平生成分层学术句型框架，适合课堂讨论、表达和写作中的语言支架。"
+}

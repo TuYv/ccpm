@@ -1,0 +1,26 @@
+{
+  "id": "garethmanning-education-agent-skills-self-explanation-prompt-designer",
+  "name": "self-explanation-prompt-designer",
+  "description": "Create self-explanation prompts that deepen understanding of worked examples, texts, or diagrams. Use when students read material passively without engaging with underlying principles.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0",
+  "author": "GarethManning",
+  "install_path": ".claude/skills/self-explanation-prompt-designer/SKILL.md",
+  "source": {
+    "repo": "GarethManning/education-agent-skills",
+    "url": "https://github.com/GarethManning/education-agent-skills/blob/main/skills/ai-learning-science/self-explanation-prompt-designer/SKILL.md",
+    "path": "skills/ai-learning-science/self-explanation-prompt-designer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T13:06:54.219Z",
+    "stars": 626,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-10T12:50:35Z",
+    "license": null
+  },
+  "summary_zh": "用于设计自我解释提示语，帮助学生深入理解例题、文本和图表，避免被动阅读，适合需要掌握背后原理的学习场景。"
+}

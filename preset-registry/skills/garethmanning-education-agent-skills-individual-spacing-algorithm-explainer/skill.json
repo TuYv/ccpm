@@ -1,0 +1,26 @@
+{
+  "id": "garethmanning-education-agent-skills-individual-spacing-algorithm-explainer",
+  "name": "individual-spacing-algorithm-explainer",
+  "description": "Explain and configure individual spacing algorithms using student performance data and forgetting curves. Use when personalising retention schedules in adaptive learning platforms.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0",
+  "author": "GarethManning",
+  "install_path": ".claude/skills/individual-spacing-algorithm-explainer/SKILL.md",
+  "source": {
+    "repo": "GarethManning/education-agent-skills",
+    "url": "https://github.com/GarethManning/education-agent-skills/blob/main/skills/ai-learning-science/individual-spacing-algorithm-explainer/SKILL.md",
+    "path": "skills/ai-learning-science/individual-spacing-algorithm-explainer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T13:06:53.259Z",
+    "stars": 626,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-10T12:50:35Z",
+    "license": null
+  },
+  "summary_zh": "用于根据学生表现和遗忘曲线解释、配置个性化间隔算法，适合自适应学习平台制定复习计划。"
+}

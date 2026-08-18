@@ -1,0 +1,26 @@
+{
+  "id": "garethmanning-education-agent-skills-formative-assessment-loop-designer",
+  "name": "formative-assessment-loop-designer",
+  "description": "Design an adaptive assessment loop where each student response triggers the next instructional move. Use when building technology-enhanced formative assessment cycles.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0",
+  "author": "GarethManning",
+  "install_path": ".claude/skills/formative-assessment-loop-designer/SKILL.md",
+  "source": {
+    "repo": "GarethManning/education-agent-skills",
+    "url": "https://github.com/GarethManning/education-agent-skills/blob/main/skills/ai-learning-science/formative-assessment-loop-designer/SKILL.md",
+    "path": "skills/ai-learning-science/formative-assessment-loop-designer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T13:06:53.022Z",
+    "stars": 626,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-10T12:50:35Z",
+    "license": null
+  },
+  "summary_zh": "用于设计自适应形成性评估流程，根据每位学生的回答动态决定下一步教学策略，适合开发技术增强的课堂评估系统。"
+}

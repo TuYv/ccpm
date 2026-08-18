@@ -1,0 +1,26 @@
+{
+  "id": "garethmanning-education-agent-skills-ai-expertise-interrogation-designer",
+  "name": "ai-expertise-interrogation-designer",
+  "description": "Design a Funhouse Mirror activity where students use their own domain expertise to detect AI distortions, omissions, and overconfidence. Use when students know a subject well enough to evaluate AI claims about it.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0",
+  "author": "GarethManning",
+  "install_path": ".claude/skills/ai-expertise-interrogation-designer/SKILL.md",
+  "source": {
+    "repo": "GarethManning/education-agent-skills",
+    "url": "https://github.com/GarethManning/education-agent-skills/blob/main/skills/ai-literacy/ai-expertise-interrogation-designer/SKILL.md",
+    "path": "skills/ai-literacy/ai-expertise-interrogation-designer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T13:06:54.643Z",
+    "stars": 626,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-10T12:50:35Z",
+    "license": null
+  },
+  "summary_zh": "帮助熟悉某一领域的学生设计“哈哈镜”式活动，通过自身专业知识识别 AI 回答中的歪曲、遗漏和过度自信。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "tjboudreaux-cc-thinking-skills-thinking-kepner-tregoe",
+  "name": "thinking-kepner-tregoe",
+  "description": "Use when a selective defect needs IS/IS-NOT difference analysis or a consequential option choice needs must/want weighting and adverse-consequence comparison.",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tjboudreaux",
+  "install_path": ".claude/skills/thinking-kepner-tregoe/SKILL.md",
+  "source": {
+    "repo": "tjboudreaux/cc-thinking-skills",
+    "url": "https://github.com/tjboudreaux/cc-thinking-skills/blob/main/skills/thinking-kepner-tregoe/SKILL.md",
+    "path": "skills/thinking-kepner-tregoe/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T13:05:34.714Z",
+    "stars": 960,
+    "language": "JavaScript",
+    "pushed_at": "2026-08-07T18:53:22Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于分析特定缺陷的发生与不发生条件，或通过必要项、偏好项和不利后果权衡，辅助做出重要决策。"
+}

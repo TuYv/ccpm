@@ -1,0 +1,26 @@
+{
+  "id": "garethmanning-education-agent-skills-lesson-opening-designer",
+  "name": "lesson-opening-designer",
+  "description": "Design a lesson opening that activates prior knowledge and connects previous learning to today's content. Use when planning lesson starters, retrieval openers, or advance organisers.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0",
+  "author": "GarethManning",
+  "install_path": ".claude/skills/lesson-opening-designer/SKILL.md",
+  "source": {
+    "repo": "GarethManning/education-agent-skills",
+    "url": "https://github.com/GarethManning/education-agent-skills/blob/main/skills/explicit-instruction/lesson-opening-designer/SKILL.md",
+    "path": "skills/explicit-instruction/lesson-opening-designer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T13:07:02.194Z",
+    "stars": 626,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-10T12:50:35Z",
+    "license": null
+  },
+  "summary_zh": "用于设计课堂导入，通过激活学生已有知识，将旧知自然连接到当天的新内容，适合备课时规划复习提问、检索练习和先行组织活动。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "garethmanning-education-agent-skills-practice-problem-sequence-designer",
+  "name": "practice-problem-sequence-designer",
+  "description": "Generate a scaffolded sequence of practice problems with graduated difficulty and strategic variability. Use when creating worksheets, homework sets, or independent practice materials.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0",
+  "author": "GarethManning",
+  "install_path": ".claude/skills/practice-problem-sequence-designer/SKILL.md",
+  "source": {
+    "repo": "GarethManning/education-agent-skills",
+    "url": "https://github.com/GarethManning/education-agent-skills/blob/main/skills/explicit-instruction/practice-problem-sequence-designer/SKILL.md",
+    "path": "skills/explicit-instruction/practice-problem-sequence-designer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T13:07:02.405Z",
+    "stars": 626,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-10T12:50:35Z",
+    "license": null
+  },
+  "summary_zh": "用于设计由易到难、变化有策略的练习题序列，适合制作练习单、作业集和自主练习材料。"
+}

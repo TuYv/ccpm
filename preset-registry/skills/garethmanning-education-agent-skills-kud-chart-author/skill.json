@@ -1,0 +1,26 @@
+{
+  "id": "garethmanning-education-agent-skills-kud-chart-author",
+  "name": "kud-chart-author",
+  "description": "Authors or reviews Know/Understand/Do charts for competency-based learning targets across developmental bands. Handles seven input types from raw curriculum documents to existing LT sets. Routes to upstream skills when stronger inputs are available.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0",
+  "author": "GarethManning",
+  "install_path": ".claude/skills/kud-chart-author/SKILL.md",
+  "source": {
+    "repo": "GarethManning/education-agent-skills",
+    "url": "https://github.com/GarethManning/education-agent-skills/blob/main/skills/curriculum-alignment/kud-chart-author/SKILL.md",
+    "path": "skills/curriculum-alignment/kud-chart-author/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T13:06:56.633Z",
+    "stars": 626,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-10T12:50:35Z",
+    "license": null
+  },
+  "summary_zh": "用于编写或审阅不同发展阶段的知识、理解与实践目标，适合基于课程资料制定能力导向学习目标。"
+}

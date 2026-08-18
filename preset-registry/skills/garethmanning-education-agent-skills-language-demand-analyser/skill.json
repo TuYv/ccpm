@@ -1,0 +1,26 @@
+{
+  "id": "garethmanning-education-agent-skills-language-demand-analyser",
+  "name": "language-demand-analyser",
+  "description": "Analyse the language demands of a classroom task to identify barriers for EAL and multilingual learners. Use when adapting tasks, planning support, or assessing linguistic accessibility.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0",
+  "author": "GarethManning",
+  "install_path": ".claude/skills/language-demand-analyser/SKILL.md",
+  "source": {
+    "repo": "GarethManning/education-agent-skills",
+    "url": "https://github.com/GarethManning/education-agent-skills/blob/main/skills/eal-language-development/language-demand-analyser/SKILL.md",
+    "path": "skills/eal-language-development/language-demand-analyser/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T13:06:59.819Z",
+    "stars": 626,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-10T12:50:35Z",
+    "license": null
+  },
+  "summary_zh": "用于分析课堂任务的语言要求，找出EAL及多语学习者可能遇到的障碍，适合任务调整、支持规划和语言可及性评估。"
+}

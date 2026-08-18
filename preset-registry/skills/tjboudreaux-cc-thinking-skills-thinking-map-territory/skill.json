@@ -1,0 +1,26 @@
+{
+  "id": "tjboudreaux-cc-thinking-skills-thinking-map-territory",
+  "name": "thinking-map-territory",
+  "description": "When a claim, doc, test, metric, or assumption conflicts with observed behavior, stop theorizing from the map and verify the live code or data; let territory overrule.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tjboudreaux",
+  "install_path": ".claude/skills/thinking-map-territory/SKILL.md",
+  "source": {
+    "repo": "tjboudreaux/cc-thinking-skills",
+    "url": "https://github.com/tjboudreaux/cc-thinking-skills/blob/main/skills/thinking-map-territory/SKILL.md",
+    "path": "skills/thinking-map-territory/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T13:05:35.095Z",
+    "stars": 960,
+    "language": "JavaScript",
+    "pushed_at": "2026-08-07T18:53:22Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一种以实际代码和数据为准的排查方法，适合理论、文档或测试与真实行为不一致时快速定位问题。"
+}

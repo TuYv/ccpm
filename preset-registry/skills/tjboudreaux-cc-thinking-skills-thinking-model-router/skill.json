@@ -1,0 +1,26 @@
+{
+  "id": "tjboudreaux-cc-thinking-skills-thinking-model-router",
+  "name": "thinking-model-router",
+  "description": "When unsure which thinking skill fits, map domain and problem type, then return NONE or one primary skill by default (at most three complementary).",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tjboudreaux",
+  "install_path": ".claude/skills/thinking-model-router/SKILL.md",
+  "source": {
+    "repo": "tjboudreaux/cc-thinking-skills",
+    "url": "https://github.com/tjboudreaux/cc-thinking-skills/blob/main/skills/thinking-model-router/SKILL.md",
+    "path": "skills/thinking-model-router/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T13:05:35.697Z",
+    "stars": 960,
+    "language": "JavaScript",
+    "pushed_at": "2026-08-07T18:53:22Z",
+    "license": "MIT"
+  },
+  "summary_zh": "根据领域和问题类型匹配合适的思维方法，帮助你在不确定时选择主要思维技能，并可补充少量辅助方法。"
+}

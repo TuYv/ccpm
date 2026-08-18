@@ -1,0 +1,26 @@
+{
+  "id": "garethmanning-education-agent-skills-kud-knowledge-type-mapper",
+  "name": "kud-knowledge-type-mapper",
+  "description": "Classify curriculum content into Know, Understand, and Do categories to align teaching and assessment approaches. Use when planning units, writing objectives, or selecting assessment methods.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0",
+  "author": "GarethManning",
+  "install_path": ".claude/skills/kud-knowledge-type-mapper/SKILL.md",
+  "source": {
+    "repo": "GarethManning/education-agent-skills",
+    "url": "https://github.com/GarethManning/education-agent-skills/blob/main/skills/curriculum-assessment/kud-knowledge-type-mapper/SKILL.md",
+    "path": "skills/curriculum-assessment/kud-knowledge-type-mapper/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T13:06:58.779Z",
+    "stars": 626,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-10T12:50:35Z",
+    "license": null
+  },
+  "summary_zh": "将课程内容按“知道、理解、会做”分类，帮助教师规划单元、编写教学目标并选择匹配的评估方式。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "tjboudreaux-cc-thinking-skills-thinking-margin-of-safety",
+  "name": "thinking-margin-of-safety",
+  "description": "When provisioning, setting a limit, or committing an estimate under uncertainty, size a buffer to residual error and the cost of breach—not to the optimistic edge.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tjboudreaux",
+  "install_path": ".claude/skills/thinking-margin-of-safety/SKILL.md",
+  "source": {
+    "repo": "tjboudreaux/cc-thinking-skills",
+    "url": "https://github.com/tjboudreaux/cc-thinking-skills/blob/main/skills/thinking-margin-of-safety/SKILL.md",
+    "path": "skills/thinking-margin-of-safety/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T13:05:35.273Z",
+    "stars": 960,
+    "language": "JavaScript",
+    "pushed_at": "2026-08-07T18:53:22Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一种应对不确定性的决策方法：制定资源、限制或估算时，根据可能的剩余误差和超标代价设置缓冲，适合风险较高的规划场景。"
+}

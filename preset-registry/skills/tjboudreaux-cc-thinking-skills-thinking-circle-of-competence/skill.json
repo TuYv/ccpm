@@ -1,0 +1,26 @@
+{
+  "id": "tjboudreaux-cc-thinking-skills-thinking-circle-of-competence",
+  "name": "thinking-circle-of-competence",
+  "description": "Use when a specific claim may lack grounding. Check evidence boundary, size wrongness cost, then answer, fetch, or abstain — never confabulate.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tjboudreaux",
+  "install_path": ".claude/skills/thinking-circle-of-competence/SKILL.md",
+  "source": {
+    "repo": "tjboudreaux/cc-thinking-skills",
+    "url": "https://github.com/tjboudreaux/cc-thinking-skills/blob/main/skills/thinking-circle-of-competence/SKILL.md",
+    "path": "skills/thinking-circle-of-competence/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T13:05:33.602Z",
+    "stars": 960,
+    "language": "JavaScript",
+    "pushed_at": "2026-08-07T18:53:22Z",
+    "license": "MIT"
+  },
+  "summary_zh": "帮助你判断观点是否有充分依据，评估信息边界和出错代价，在回答、查证或暂不判断之间做出稳妥选择，避免凭空编造。"
+}

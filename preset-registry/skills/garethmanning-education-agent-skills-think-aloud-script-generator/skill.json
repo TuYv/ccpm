@@ -1,0 +1,26 @@
+{
+  "id": "garethmanning-education-agent-skills-think-aloud-script-generator",
+  "name": "think-aloud-script-generator",
+  "description": "Script a teacher think-aloud demonstrating expert reasoning processes for a specific task. Use when modelling problem-solving, writing, reading comprehension, or analytical processes.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0",
+  "author": "GarethManning",
+  "install_path": ".claude/skills/think-aloud-script-generator/SKILL.md",
+  "source": {
+    "repo": "GarethManning/education-agent-skills",
+    "url": "https://github.com/GarethManning/education-agent-skills/blob/main/skills/explicit-instruction/think-aloud-script-generator/SKILL.md",
+    "path": "skills/explicit-instruction/think-aloud-script-generator/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T13:07:02.584Z",
+    "stars": 626,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-10T12:50:35Z",
+    "license": null
+  },
+  "summary_zh": "用于编写教师示范专家思维过程的讲解脚本，适合展示解题、写作、阅读理解和分析任务的推理方法。"
+}

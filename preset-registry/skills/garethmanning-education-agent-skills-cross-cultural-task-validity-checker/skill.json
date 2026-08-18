@@ -1,0 +1,26 @@
+{
+  "id": "garethmanning-education-agent-skills-cross-cultural-task-validity-checker",
+  "name": "cross-cultural-task-validity-checker",
+  "description": "Check an educational practice or task for cultural bias, WEIRD assumptions, and cross-cultural validity. Use when adapting resources for diverse contexts or questioning universal claims.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0",
+  "author": "GarethManning",
+  "install_path": ".claude/skills/cross-cultural-task-validity-checker/SKILL.md",
+  "source": {
+    "repo": "GarethManning/education-agent-skills",
+    "url": "https://github.com/GarethManning/education-agent-skills/blob/main/skills/global-cross-cultural-pedagogies/cross-cultural-task-validity-checker/SKILL.md",
+    "path": "skills/global-cross-cultural-pedagogies/cross-cultural-task-validity-checker/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T13:07:03.048Z",
+    "stars": 626,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-10T12:50:35Z",
+    "license": null
+  },
+  "summary_zh": "用于检查教育活动或任务中的文化偏见与“西方、受教育、工业化、富裕、民主”假设，帮助将教学资源适配多元文化情境。"
+}

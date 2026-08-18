@@ -1,0 +1,26 @@
+{
+  "id": "tjboudreaux-cc-thinking-skills-thinking-red-team",
+  "name": "thinking-red-team",
+  "description": "For authorized security review of code, auth, or APIs you control, model the attacker, map the attack surface, and report only findings with a reproducible exploit path and verified mitigation.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tjboudreaux",
+  "install_path": ".claude/skills/thinking-red-team/SKILL.md",
+  "source": {
+    "repo": "tjboudreaux/cc-thinking-skills",
+    "url": "https://github.com/tjboudreaux/cc-thinking-skills/blob/main/skills/thinking-red-team/SKILL.md",
+    "path": "skills/thinking-red-team/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T13:05:36.663Z",
+    "stars": 960,
+    "language": "JavaScript",
+    "pushed_at": "2026-08-07T18:53:22Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于授权的代码、认证和 API 安全审查，从攻击者视角梳理攻击面，仅报告可复现且已有验证修复方案的问题。"
+}

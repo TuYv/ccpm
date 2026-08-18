@@ -1,0 +1,26 @@
+{
+  "id": "garethmanning-education-agent-skills-scope-and-sequence-designer",
+  "name": "scope-and-sequence-designer",
+  "description": "Design a scope and sequence showing vertical and horizontal curriculum coherence across a programme or year. Use when building new programmes, restructuring subjects, or ensuring progression.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.1",
+  "author": "GarethManning",
+  "install_path": ".claude/skills/scope-and-sequence-designer/SKILL.md",
+  "source": {
+    "repo": "GarethManning/education-agent-skills",
+    "url": "https://github.com/GarethManning/education-agent-skills/blob/main/skills/curriculum-assessment/scope-and-sequence-designer/SKILL.md",
+    "path": "skills/curriculum-assessment/scope-and-sequence-designer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T13:06:59.425Z",
+    "stars": 626,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-10T12:50:35Z",
+    "license": null
+  },
+  "summary_zh": "用于设计课程范围与进度，梳理不同年级和学科间的衔接与递进，适合开发新课程、调整学科结构或检查教学连贯性。"
+}

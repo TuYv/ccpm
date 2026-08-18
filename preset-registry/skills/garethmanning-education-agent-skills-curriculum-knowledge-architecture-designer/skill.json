@@ -1,0 +1,26 @@
+{
+  "id": "garethmanning-education-agent-skills-curriculum-knowledge-architecture-designer",
+  "name": "curriculum-knowledge-architecture-designer",
+  "description": "Map the epistemic structure of a subject to determine knowledge types and inform curriculum sequencing. Use when designing courses, restructuring programmes, or analysing knowledge architecture.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0",
+  "author": "GarethManning",
+  "install_path": ".claude/skills/curriculum-knowledge-architecture-designer/SKILL.md",
+  "source": {
+    "repo": "GarethManning/education-agent-skills",
+    "url": "https://github.com/GarethManning/education-agent-skills/blob/main/skills/curriculum-assessment/curriculum-knowledge-architecture-designer/SKILL.md",
+    "path": "skills/curriculum-assessment/curriculum-knowledge-architecture-designer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T13:06:57.669Z",
+    "stars": 626,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-10T12:50:35Z",
+    "license": null
+  },
+  "summary_zh": "用于梳理学科的知识结构与类型，辅助课程设计、培养方案重构和教学内容排序。"
+}

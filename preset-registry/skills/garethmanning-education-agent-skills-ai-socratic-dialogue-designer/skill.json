@@ -1,0 +1,26 @@
+{
+  "id": "garethmanning-education-agent-skills-ai-socratic-dialogue-designer",
+  "name": "ai-socratic-dialogue-designer",
+  "description": "Design a multi-round questioning sequence for interrogating AI chatbot answers, tracking how responses shift and distinguishing genuine updates from sycophantic capitulation. Use when teaching students to probe AI critically.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0",
+  "author": "GarethManning",
+  "install_path": ".claude/skills/ai-socratic-dialogue-designer/SKILL.md",
+  "source": {
+    "repo": "GarethManning/education-agent-skills",
+    "url": "https://github.com/GarethManning/education-agent-skills/blob/main/skills/ai-literacy/ai-socratic-dialogue-designer/SKILL.md",
+    "path": "skills/ai-literacy/ai-socratic-dialogue-designer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T13:06:55.464Z",
+    "stars": 626,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-10T12:50:35Z",
+    "license": null
+  },
+  "summary_zh": "用于设计多轮追问流程，检验聊天机器人是否真正修正观点而非迎合让步，适合教学中培养学生批判性探问 AI 的能力。"
+}

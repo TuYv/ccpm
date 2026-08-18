@@ -1,0 +1,26 @@
+{
+  "id": "garethmanning-education-agent-skills-backwards-design-unit-planner",
+  "name": "backwards-design-unit-planner",
+  "description": "Plan a unit using backwards design from desired outcomes through assessment evidence to learning activities. Use when starting a new unit or redesigning an existing one from standards.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0",
+  "author": "GarethManning",
+  "install_path": ".claude/skills/backwards-design-unit-planner/SKILL.md",
+  "source": {
+    "repo": "GarethManning/education-agent-skills",
+    "url": "https://github.com/GarethManning/education-agent-skills/blob/main/skills/curriculum-assessment/backwards-design-unit-planner/SKILL.md",
+    "path": "skills/curriculum-assessment/backwards-design-unit-planner/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T13:06:57.055Z",
+    "stars": 626,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-10T12:50:35Z",
+    "license": null
+  },
+  "summary_zh": "一款按“目标—评估—学习活动”逆向设计教学单元的工具，适合依据课程标准新建或重构单元。"
+}

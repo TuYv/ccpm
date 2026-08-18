@@ -1,0 +1,26 @@
+{
+  "id": "garethmanning-education-agent-skills-checking-for-understanding-protocol-designer",
+  "name": "checking-for-understanding-protocol-designer",
+  "description": "Design a checking-for-understanding protocol with specific techniques for each lesson stage. Use when planning systematic comprehension checks during explicit or direct instruction.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0",
+  "author": "GarethManning",
+  "install_path": ".claude/skills/checking-for-understanding-protocol-designer/SKILL.md",
+  "source": {
+    "repo": "GarethManning/education-agent-skills",
+    "url": "https://github.com/GarethManning/education-agent-skills/blob/main/skills/explicit-instruction/checking-for-understanding-protocol-designer/SKILL.md",
+    "path": "skills/explicit-instruction/checking-for-understanding-protocol-designer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T13:07:01.817Z",
+    "stars": 626,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-10T12:50:35Z",
+    "license": null
+  },
+  "summary_zh": "用于设计理解检查流程，为直接教学的各个阶段安排合适的检查方法，帮助教师系统掌握学生的理解情况。"
+}

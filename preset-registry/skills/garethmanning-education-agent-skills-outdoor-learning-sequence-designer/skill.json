@@ -1,0 +1,26 @@
+{
+  "id": "garethmanning-education-agent-skills-outdoor-learning-sequence-designer",
+  "name": "outdoor-learning-sequence-designer",
+  "description": "Design a structured outdoor learning sequence embedding curriculum objectives in an available outdoor space. Use when planning lessons in school grounds, parks, or local natural environments.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0",
+  "author": "GarethManning",
+  "install_path": ".claude/skills/outdoor-learning-sequence-designer/SKILL.md",
+  "source": {
+    "repo": "GarethManning/education-agent-skills",
+    "url": "https://github.com/GarethManning/education-agent-skills/blob/main/skills/environmental-experiential-learning/outdoor-learning-sequence-designer/SKILL.md",
+    "path": "skills/environmental-experiential-learning/outdoor-learning-sequence-designer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T13:07:01.455Z",
+    "stars": 626,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-10T12:50:35Z",
+    "license": null
+  },
+  "summary_zh": "用于在校园、社区公园等户外场地设计连贯的学习活动，将课程目标融入自然环境，适合规划户外教学课程。"
+}

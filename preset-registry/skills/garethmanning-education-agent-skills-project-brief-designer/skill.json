@@ -1,0 +1,26 @@
+{
+  "id": "garethmanning-education-agent-skills-project-brief-designer",
+  "name": "project-brief-designer",
+  "description": "Design a project-based learning brief with a driving question, milestones, and assessment criteria. Use when planning PBL units, inquiry projects, or extended investigations.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0",
+  "author": "GarethManning",
+  "install_path": ".claude/skills/project-brief-designer/SKILL.md",
+  "source": {
+    "repo": "GarethManning/education-agent-skills",
+    "url": "https://github.com/GarethManning/education-agent-skills/blob/main/skills/curriculum-assessment/project-brief-designer/SKILL.md",
+    "path": "skills/curriculum-assessment/project-brief-designer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T13:06:59.248Z",
+    "stars": 626,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-10T12:50:35Z",
+    "license": null
+  },
+  "summary_zh": "用于设计项目式学习方案，明确驱动性问题、实施里程碑和评价标准，适合规划探究项目、PBL课程或长期研究任务。"
+}

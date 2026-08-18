@@ -1,0 +1,26 @@
+{
+  "id": "garethmanning-education-agent-skills-disciplinary-ai-literacy-sequence-designer",
+  "name": "disciplinary-ai-literacy-sequence-designer",
+  "description": "Design a sequence where students compare AI's handling of the same question across disciplines, developing a mental model of where AI is reliable vs. distorting based on knowledge type.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0",
+  "author": "GarethManning",
+  "install_path": ".claude/skills/disciplinary-ai-literacy-sequence-designer/SKILL.md",
+  "source": {
+    "repo": "GarethManning/education-agent-skills",
+    "url": "https://github.com/GarethManning/education-agent-skills/blob/main/skills/ai-literacy/disciplinary-ai-literacy-sequence-designer/SKILL.md",
+    "path": "skills/ai-literacy/disciplinary-ai-literacy-sequence-designer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T13:06:55.644Z",
+    "stars": 626,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-10T12:50:35Z",
+    "license": null
+  },
+  "summary_zh": "用于设计跨学科教学序列，让学生比较AI处理同一问题的差异，理解它在哪些知识领域可靠或容易失真。"
+}

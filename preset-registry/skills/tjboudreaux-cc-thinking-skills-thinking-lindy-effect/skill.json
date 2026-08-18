@@ -1,0 +1,26 @@
+{
+  "id": "tjboudreaux-cc-thinking-skills-thinking-lindy-effect",
+  "name": "thinking-lindy-effect",
+  "description": "Use when longevity of a non-perishable option matters. Treat survival duration as a remaining-life prior, then check domain drift before favoring the proven.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tjboudreaux",
+  "install_path": ".claude/skills/thinking-lindy-effect/SKILL.md",
+  "source": {
+    "repo": "tjboudreaux/cc-thinking-skills",
+    "url": "https://github.com/tjboudreaux/cc-thinking-skills/blob/main/skills/thinking-lindy-effect/SKILL.md",
+    "path": "skills/thinking-lindy-effect/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T13:05:34.907Z",
+    "stars": 960,
+    "language": "JavaScript",
+    "pushed_at": "2026-08-07T18:53:22Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一种基于存续时间判断长期可靠性的决策方法，适合选择耐用方案，并结合领域变化避免盲目依赖经验。"
+}

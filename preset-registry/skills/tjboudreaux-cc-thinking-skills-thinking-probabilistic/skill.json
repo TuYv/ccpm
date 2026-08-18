@@ -1,0 +1,26 @@
+{
+  "id": "tjboudreaux-cc-thinking-skills-thinking-probabilistic",
+  "name": "thinking-probabilistic",
+  "description": "Use when forecasting, estimating, or sizing risk — anchor on base rates, give ranges, update prior→likelihood→posterior on evidence, and factor unmeasured quantities into order-of-magnitude bounds.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tjboudreaux",
+  "install_path": ".claude/skills/thinking-probabilistic/SKILL.md",
+  "source": {
+    "repo": "tjboudreaux/cc-thinking-skills",
+    "url": "https://github.com/tjboudreaux/cc-thinking-skills/blob/main/skills/thinking-probabilistic/SKILL.md",
+    "path": "skills/thinking-probabilistic/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T13:05:36.479Z",
+    "stars": 960,
+    "language": "JavaScript",
+    "pushed_at": "2026-08-07T18:53:22Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于预测、估算和风险评估，借助基准率、范围推断与证据更新，减少过度自信和数量级误判。"
+}

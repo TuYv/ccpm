@@ -1,0 +1,26 @@
+{
+  "id": "garethmanning-education-agent-skills-competency-unpacker",
+  "name": "competency-unpacker",
+  "description": "Unpack a broad standard or competency descriptor into specific, assessable success criteria and sub-skills. Use when interpreting curriculum standards or writing learning objectives.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0",
+  "author": "GarethManning",
+  "install_path": ".claude/skills/competency-unpacker/SKILL.md",
+  "source": {
+    "repo": "GarethManning/education-agent-skills",
+    "url": "https://github.com/GarethManning/education-agent-skills/blob/main/skills/curriculum-assessment/competency-unpacker/SKILL.md",
+    "path": "skills/curriculum-assessment/competency-unpacker/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T13:06:57.227Z",
+    "stars": 626,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-10T12:50:35Z",
+    "license": null
+  },
+  "summary_zh": "将宽泛的课程标准或能力描述拆解为具体、可评估的达成标准和子技能，适合解读课程要求或编写学习目标。"
+}

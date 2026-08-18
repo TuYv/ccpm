@@ -1,0 +1,26 @@
+{
+  "id": "garethmanning-education-agent-skills-adaptive-hint-sequence-designer",
+  "name": "adaptive-hint-sequence-designer",
+  "description": "Generate a cascading hint sequence for a problem type, revealing progressively without giving answers. Use when designing tutoring dialogues or scaffolded worksheets.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0",
+  "author": "GarethManning",
+  "install_path": ".claude/skills/adaptive-hint-sequence-designer/SKILL.md",
+  "source": {
+    "repo": "GarethManning/education-agent-skills",
+    "url": "https://github.com/GarethManning/education-agent-skills/blob/main/skills/ai-learning-science/adaptive-hint-sequence-designer/SKILL.md",
+    "path": "skills/ai-learning-science/adaptive-hint-sequence-designer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T13:06:51.809Z",
+    "stars": 626,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-10T12:50:35Z",
+    "license": null
+  },
+  "summary_zh": "用于设计循序渐进的提示序列，逐步引导学习者解决问题而不直接给出答案，适合辅导对话和分层练习。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "garethmanning-education-agent-skills-assessment-validity-checker",
+  "name": "assessment-validity-checker",
+  "description": "Audit a proposed assessment for construct validity, reliability, and alignment to learning objectives. Use when reviewing or quality-assuring assessments before deployment.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0",
+  "author": "GarethManning",
+  "install_path": ".claude/skills/assessment-validity-checker/SKILL.md",
+  "source": {
+    "repo": "GarethManning/education-agent-skills",
+    "url": "https://github.com/GarethManning/education-agent-skills/blob/main/skills/curriculum-assessment/assessment-validity-checker/SKILL.md",
+    "path": "skills/curriculum-assessment/assessment-validity-checker/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T13:06:56.825Z",
+    "stars": 626,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-10T12:50:35Z",
+    "license": null
+  },
+  "summary_zh": "用于在评估工具上线前检查其构念效度、可靠性及与学习目标的一致性，适合试卷、测验和课程作业的质量审核。"
+}

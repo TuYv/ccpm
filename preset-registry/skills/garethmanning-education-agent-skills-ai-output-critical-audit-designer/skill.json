@@ -1,0 +1,26 @@
+{
+  "id": "garethmanning-education-agent-skills-ai-output-critical-audit-designer",
+  "name": "ai-output-critical-audit-designer",
+  "description": "Design a structured protocol for auditing AI-generated text against Ennis's six CT standards. Use when students need to critically evaluate AI output in any subject.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0",
+  "author": "GarethManning",
+  "install_path": ".claude/skills/ai-output-critical-audit-designer/SKILL.md",
+  "source": {
+    "repo": "GarethManning/education-agent-skills",
+    "url": "https://github.com/GarethManning/education-agent-skills/blob/main/skills/ai-literacy/ai-output-critical-audit-designer/SKILL.md",
+    "path": "skills/ai-literacy/ai-output-critical-audit-designer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T13:06:55.223Z",
+    "stars": 626,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-10T12:50:35Z",
+    "license": null
+  },
+  "summary_zh": "用于按恩尼斯六项批判性思维标准系统审查 AI 生成文本，适合各学科学生评估内容质量与可信度。"
+}

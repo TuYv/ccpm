@@ -1,0 +1,26 @@
+{
+  "id": "garethmanning-education-agent-skills-intelligent-tutoring-dialogue-designer",
+  "name": "intelligent-tutoring-dialogue-designer",
+  "description": "Script a multi-turn tutoring dialogue with branching responses for anticipated student difficulties. Use when designing AI tutors, chatbot interactions, or structured one-to-one support scripts.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0",
+  "author": "GarethManning",
+  "install_path": ".claude/skills/intelligent-tutoring-dialogue-designer/SKILL.md",
+  "source": {
+    "repo": "GarethManning/education-agent-skills",
+    "url": "https://github.com/GarethManning/education-agent-skills/blob/main/skills/ai-learning-science/intelligent-tutoring-dialogue-designer/SKILL.md",
+    "path": "skills/ai-learning-science/intelligent-tutoring-dialogue-designer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T13:06:53.452Z",
+    "stars": 626,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-10T12:50:35Z",
+    "license": null
+  },
+  "summary_zh": "用于设计多轮智能辅导对话，预设学生可能遇到的困难并规划分支回应，适合开发 AI 家教、聊天机器人和一对一辅导脚本。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "garethmanning-education-agent-skills-criterion-referenced-rubric-generator",
+  "name": "criterion-referenced-rubric-generator",
+  "description": "Generate a criterion-referenced rubric with descriptive performance levels for a task or objective. Use for marking guides and general curriculum contexts. For Manning programmes where Competent = success, use coherent-rubric-logic-builder instead.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0",
+  "author": "GarethManning",
+  "install_path": ".claude/skills/criterion-referenced-rubric-generator/SKILL.md",
+  "source": {
+    "repo": "GarethManning/education-agent-skills",
+    "url": "https://github.com/GarethManning/education-agent-skills/blob/main/skills/curriculum-assessment/criterion-referenced-rubric-generator/SKILL.md",
+    "path": "skills/curriculum-assessment/criterion-referenced-rubric-generator/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T13:06:57.467Z",
+    "stars": 626,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-10T12:50:35Z",
+    "license": null
+  },
+  "summary_zh": "用于为任务或学习目标生成按标准评定的评分量规，适合制定评分指南和课程评价标准。"
+}

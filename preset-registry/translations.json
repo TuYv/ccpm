@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-18T12:32:29.749Z",
+  "updated_at": "2026-08-18T14:46:30.307Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -9713,9 +9713,9 @@
       "translated_at": "2026-06-05T16:53:38.210Z"
     },
     "bundle:openai-openai-agents-python": {
-      "hash": "ceab32ecdfa645ce",
-      "summary_zh": "面向 OpenAI Agents Python SDK 的全流程研发协作，串联方案设计、实现验证、文档同步、集成测试与发布审查，降低变更风险。",
-      "translated_at": "2026-08-10T23:52:02.655Z"
+      "hash": "0d75a7bc89ab6697",
+      "summary_zh": "这套合集覆盖 OpenAI Agents Python 的开发、测试、示例运行、文档同步与发布审核，帮助团队高效完成从实现到交付的完整流程。",
+      "translated_at": "2026-08-18T13:53:20.643Z"
     },
     "bundle:nomenak-superclaude": {
       "hash": "e0bd9eeeb70c896e",
@@ -35860,8 +35860,8 @@
       "translated_at": "2026-08-14T13:20:05.194Z"
     },
     "content:chrisbanes-skills-shepherd": {
-      "hash": "b8f3d27fcc6a6eba",
-      "translated_at": "2026-08-14T13:21:17.181Z"
+      "hash": "1c8538e89855c799",
+      "translated_at": "2026-08-18T14:02:55.096Z"
     },
     "content:chrisbanes-skills-to-plan": {
       "hash": "3cc4e69adc5e943b",
@@ -36978,8 +36978,8 @@
       "translated_at": "2026-08-15T02:39:29.083Z"
     },
     "content:daymade-claude-code-skills-skill-creator": {
-      "hash": "951b850c3b121073",
-      "translated_at": "2026-08-17T18:30:54.983Z"
+      "hash": "a11f2255dd9c40d8",
+      "translated_at": "2026-08-18T14:21:03.016Z"
     },
     "content:daymade-claude-code-skills-terraform-skill": {
       "hash": "34b139a0c885292a",
@@ -41488,6 +41488,581 @@
     "content:jakubkrehel-skills-better-writing": {
       "hash": "413b41c7ef5f9614",
       "translated_at": "2026-08-18T12:32:29.749Z"
+    },
+    "bundle:tjboudreaux-cc-thinking-skills": {
+      "hash": "c4667d5ce79d3ba6",
+      "summary_zh": "这套思维技能合集帮助你在复杂决策、问题分析和不确定性探索中选对方法，减少盲目推理，更快形成可靠行动方案。",
+      "translated_at": "2026-08-18T13:53:20.033Z"
+    },
+    "bundle:garethmanning-education-agent-skills": {
+      "hash": "62cf057609e9d0a8",
+      "summary_zh": "面向教育场景的AI教学技能合集，帮助教师设计学习活动、提示与反馈，规范AI使用并提升批判思维、协作学习和评估质量。",
+      "translated_at": "2026-08-18T13:53:21.597Z"
+    },
+    "skill:garethmanning-education-agent-skills-ai-expertise-interrogation-designer": {
+      "hash": "ef583d4fb02c8ac1",
+      "summary_zh": "帮助熟悉某一领域的学生设计“哈哈镜”式活动，通过自身专业知识识别 AI 回答中的歪曲、遗漏和过度自信。",
+      "translated_at": "2026-08-18T13:53:25.028Z"
+    },
+    "skill:garethmanning-education-agent-skills-adaptive-hint-sequence-designer": {
+      "hash": "ac86a219fc49db19",
+      "summary_zh": "用于设计循序渐进的提示序列，逐步引导学习者解决问题而不直接给出答案，适合辅导对话和分层练习。",
+      "translated_at": "2026-08-18T13:53:25.632Z"
+    },
+    "skill:garethmanning-education-agent-skills-ai-facilitated-collaborative-learning-designer": {
+      "hash": "a421c0cf3f1484d2",
+      "summary_zh": "用于设计由 AI 辅助的协作学习任务，优化小组互动，解决学生在团队作业中参与不足、协作不畅等问题。",
+      "translated_at": "2026-08-18T13:53:27.209Z"
+    },
+    "skill:garethmanning-education-agent-skills-ai-feedback-design-principles": {
+      "hash": "a690cc6165288903",
+      "summary_zh": "用于评估和改进数字学习工具中的 AI 自动反馈，优化反馈质量、时机与教学效果，适合设计或审核智能辅导系统。",
+      "translated_at": "2026-08-18T13:53:27.813Z"
+    },
+    "skill:garethmanning-education-agent-skills-academic-language-sentence-frame-generator": {
+      "hash": "657858a58bc028ca",
+      "summary_zh": "帮助英语非母语学生按语言水平生成分层学术句型框架，适合课堂讨论、表达和写作中的语言支架。",
+      "translated_at": "2026-08-18T13:53:28.201Z"
+    },
+    "skill:garethmanning-education-agent-skills-ai-hallucination-fact-check-protocol": {
+      "hash": "0c4e2cc2b2708550",
+      "summary_zh": "面向学生核验 AI 生成内容的事实与引用，基于 SIFT 改进出一套识别幻觉、检查来源可靠性的实用流程。",
+      "translated_at": "2026-08-18T13:53:29.227Z"
+    },
+    "skill:garethmanning-education-agent-skills-ai-learning-boundary-mapper": {
+      "hash": "21ac65b4fd85df65",
+      "summary_zh": "用于分析作业中哪些环节适合借助 AI、哪些使用方式会削弱学习效果，适合重设计 AI 时代的课堂任务或制定具体作业的 AI 使用规范。",
+      "translated_at": "2026-08-18T13:53:29.816Z"
+    },
+    "skill:garethmanning-education-agent-skills-ai-output-critical-audit-designer": {
+      "hash": "1292de4cac33837a",
+      "summary_zh": "用于按恩尼斯六项批判性思维标准系统审查 AI 生成文本，适合各学科学生评估内容质量与可信度。",
+      "translated_at": "2026-08-18T13:53:30.999Z"
+    },
+    "skill:garethmanning-education-agent-skills-assessment-validity-checker": {
+      "hash": "c0262e84e98aeff3",
+      "summary_zh": "用于在评估工具上线前检查其构念效度、可靠性及与学习目标的一致性，适合试卷、测验和课程作业的质量审核。",
+      "translated_at": "2026-08-18T13:53:33.070Z"
+    },
+    "skill:garethmanning-education-agent-skills-ai-socratic-dialogue-designer": {
+      "hash": "4e559e358641d7f0",
+      "summary_zh": "用于设计多轮追问流程，检验聊天机器人是否真正修正观点而非迎合让步，适合教学中培养学生批判性探问 AI 的能力。",
+      "translated_at": "2026-08-18T13:53:33.336Z"
+    },
+    "skill:garethmanning-education-agent-skills-biophilic-learning-environment-designer": {
+      "hash": "ed41409e0f48a115",
+      "summary_zh": "通过亲生物设计重塑学习空间，缓解课堂中的焦躁、注意力不集中和压力，营造更安静、专注且有助身心健康的环境。",
+      "translated_at": "2026-08-18T13:53:35.024Z"
+    },
+    "skill:garethmanning-education-agent-skills-backwards-design-unit-planner": {
+      "hash": "7ebf1dc1ce641c8f",
+      "summary_zh": "一款按“目标—评估—学习活动”逆向设计教学单元的工具，适合依据课程标准新建或重构单元。",
+      "translated_at": "2026-08-18T13:53:36.460Z"
+    },
+    "skill:garethmanning-education-agent-skills-checking-for-understanding-protocol-designer": {
+      "hash": "3458092cf75e95f3",
+      "summary_zh": "用于设计理解检查流程，为直接教学的各个阶段安排合适的检查方法，帮助教师系统掌握学生的理解情况。",
+      "translated_at": "2026-08-18T13:53:36.660Z"
+    },
+    "skill:garethmanning-education-agent-skills-cognitive-tutoring-architecture-designer": {
+      "hash": "d4ff04a2b005d1b2",
+      "summary_zh": "用于梳理知识组件与技能层级，帮助设计智能辅导系统和自适应学习平台。",
+      "translated_at": "2026-08-18T13:53:38.201Z"
+    },
+    "skill:garethmanning-education-agent-skills-competency-unpacker": {
+      "hash": "3ec872803074022b",
+      "summary_zh": "将宽泛的课程标准或能力描述拆解为具体、可评估的达成标准和子技能，适合解读课程要求或编写学习目标。",
+      "translated_at": "2026-08-18T13:53:38.812Z"
+    },
+    "skill:garethmanning-education-agent-skills-coverage-audit": {
+      "hash": "dc0688301816882e",
+      "summary_zh": "将课程框架与法定或认证要求进行对照，生成覆盖情况表、缺口汇总和 CSV，适合课程合规审查与认证准备。",
+      "translated_at": "2026-08-18T13:53:39.346Z"
+    },
+    "skill:garethmanning-education-agent-skills-criterion-referenced-rubric-generator": {
+      "hash": "1e9f078a4563150b",
+      "summary_zh": "用于为任务或学习目标生成按标准评定的评分量规，适合制定评分指南和课程评价标准。",
+      "translated_at": "2026-08-18T13:53:41.619Z"
+    },
+    "skill:garethmanning-education-agent-skills-cross-cultural-task-validity-checker": {
+      "hash": "aa1fa8cb0a63374d",
+      "summary_zh": "用于检查教育活动或任务中的文化偏见与“西方、受教育、工业化、富裕、民主”假设，帮助将教学资源适配多元文化情境。",
+      "translated_at": "2026-08-18T13:53:42.348Z"
+    },
+    "skill:garethmanning-education-agent-skills-cpa-sequence-designer": {
+      "hash": "23741d7bf22ddc95",
+      "summary_zh": "用于设计数学概念的具体—图像—抽象教学序列，适合新加坡数学教学或帮助难以理解抽象概念的学生。",
+      "translated_at": "2026-08-18T13:53:43.752Z"
+    },
+    "skill:garethmanning-education-agent-skills-curriculum-crosswalk": {
+      "hash": "c0c4076c55647bb1",
+      "summary_zh": "比较两个或多个按年级段标记的课程框架，生成跨框架的主题覆盖矩阵，帮助发现内容缺口；指定参考框架后，还能生成用于教师协作学习的对照文档。",
+      "translated_at": "2026-08-18T13:53:45.875Z"
+    },
+    "skill:garethmanning-education-agent-skills-culturally-responsive-teaching-designer": {
+      "hash": "73ac8863583f9b2a",
+      "summary_zh": "帮助教师重新设计课程，将学生的文化背景、社区知识和生活经验融入教学，让多元学生更有参与感和归属感。",
+      "translated_at": "2026-08-18T13:53:47.697Z"
+    },
+    "skill:garethmanning-education-agent-skills-differentiation-adapter": {
+      "hash": "6edf909784be1360",
+      "summary_zh": "帮助教师在保留核心学习目标的前提下，调整课堂任务以适应特殊教育、英语学习、资优、注意力缺陷、阅读障碍或焦虑学生的需求。",
+      "translated_at": "2026-08-18T13:53:49.830Z"
+    },
+    "skill:garethmanning-education-agent-skills-curriculum-knowledge-architecture-designer": {
+      "hash": "5f381612c33c031d",
+      "summary_zh": "用于梳理学科的知识结构与类型，辅助课程设计、培养方案重构和教学内容排序。",
+      "translated_at": "2026-08-18T13:53:50.364Z"
+    },
+    "skill:garethmanning-education-agent-skills-digital-worked-example-sequence": {
+      "hash": "70f016fd953b646d",
+      "summary_zh": "用于在线或混合式教学的交互式例题演示序列，逐步淡出提示，适合制作电子学习模块、LMS 内容和应用内教学。",
+      "translated_at": "2026-08-18T13:53:52.245Z"
+    },
+    "skill:garethmanning-education-agent-skills-disciplinary-ai-literacy-sequence-designer": {
+      "hash": "46874800974b3f5c",
+      "summary_zh": "用于设计跨学科教学序列，让学生比较AI处理同一问题的差异，理解它在哪些知识领域可靠或容易失真。",
+      "translated_at": "2026-08-18T13:53:52.900Z"
+    },
+    "skill:garethmanning-education-agent-skills-developmental-band-translator": {
+      "hash": "ea2bc7c665455c8e",
+      "summary_zh": "一个课程内容标注工具，按学校提供的发展阶段标准为 KUD、学习目标和评价标准匹配学段，同时保留原有表述和标签。",
+      "translated_at": "2026-08-18T13:53:53.564Z"
+    },
+    "skill:garethmanning-education-agent-skills-ecological-inquiry-anchor-designer": {
+      "hash": "395c2a13bfcf47fd",
+      "summary_zh": "帮助教师以花园、池塘或树篱等本地生态系统设计探究式学习流程，将科学或地理课程内容融入真实环境。",
+      "translated_at": "2026-08-18T13:53:55.362Z"
+    },
+    "skill:garethmanning-education-agent-skills-erroneous-example-designer": {
+      "hash": "a63a268a3380c75f",
+      "summary_zh": "用于设计有意出错的示例，帮助学生识别常见错误、提升纠错能力，适合针对性练习和加深理解。",
+      "translated_at": "2026-08-18T13:53:57.576Z"
+    },
+    "skill:garethmanning-education-agent-skills-discipline-specific-critical-thinking-task-designer": {
+      "hash": "44fd4110d150501f",
+      "summary_zh": "一个面向学科的批判性思维任务设计工具，帮助教师将高阶思维融入具体学科内容，避免停留在泛泛的思维训练上。",
+      "translated_at": "2026-08-18T13:53:58.012Z"
+    },
+    "skill:garethmanning-education-agent-skills-emergent-project-design-scaffold": {
+      "hash": "f991c2117663ffe8",
+      "summary_zh": "一个基于瑞吉欧理念的项目设计脚手架，帮助幼儿教师从孩子的兴趣出发，开展持续深入的探究活动。",
+      "translated_at": "2026-08-18T13:53:58.130Z"
+    },
+    "skill:garethmanning-education-agent-skills-experiential-learning-cycle-designer": {
+      "hash": "cf29cbeb976d0e7f",
+      "summary_zh": "将直接经验组织成完整学习闭环，适合设计研学旅行、模拟活动和实践任务，帮助学习者从体验与反思中提炼概念并迁移应用。",
+      "translated_at": "2026-08-18T13:53:59.921Z"
+    },
+    "skill:garethmanning-education-agent-skills-explicit-instruction-sequence-builder": {
+      "hash": "8cac8a767c4f0c0c",
+      "summary_zh": "用于设计从教师示范、引导练习到独立作业的完整教学流程，适合直接教授新技能、操作步骤或概念。",
+      "translated_at": "2026-08-18T13:54:00.548Z"
+    },
+    "skill:garethmanning-education-agent-skills-formative-assessment-loop-designer": {
+      "hash": "a3c8bf1dc6c250af",
+      "summary_zh": "用于设计自适应形成性评估流程，根据每位学生的回答动态决定下一步教学策略，适合开发技术增强的课堂评估系统。",
+      "translated_at": "2026-08-18T13:54:00.835Z"
+    },
+    "skill:garethmanning-education-agent-skills-formative-assessment-technique-selector": {
+      "hash": "22985fc94c49944c",
+      "summary_zh": "帮助教师根据教学时机、评估目的和学生年龄，选择合适的形成性评价方法，快速检查课堂内外的学习理解情况。",
+      "translated_at": "2026-08-18T13:54:01.922Z"
+    },
+    "skill:garethmanning-education-agent-skills-gap-analysis-from-student-work": {
+      "hash": "a32b32b17bbd9313",
+      "summary_zh": "用于对照学习目标分析学生作业，找出具体差距，适合批改反馈和诊断学习需求。",
+      "translated_at": "2026-08-18T13:54:03.321Z"
+    },
+    "skill:garethmanning-education-agent-skills-individual-spacing-algorithm-explainer": {
+      "hash": "3370f7247204e67c",
+      "summary_zh": "用于根据学生表现和遗忘曲线解释、配置个性化间隔算法，适合自适应学习平台制定复习计划。",
+      "translated_at": "2026-08-18T13:54:03.871Z"
+    },
+    "skill:garethmanning-education-agent-skills-intelligent-tutoring-dialogue-designer": {
+      "hash": "e8626461582e5f46",
+      "summary_zh": "用于设计多轮智能辅导对话，预设学生可能遇到的困难并规划分支回应，适合开发 AI 家教、聊天机器人和一对一辅导脚本。",
+      "translated_at": "2026-08-18T13:54:04.404Z"
+    },
+    "skill:garethmanning-education-agent-skills-interdisciplinary-real-world-connection-mapper": {
+      "hash": "102ec712f7599c99",
+      "summary_zh": "用于围绕真实问题或情境梳理不同学科的课程联系，适合设计跨学科项目和现实议题教学。",
+      "translated_at": "2026-08-18T13:54:06.585Z"
+    },
+    "skill:garethmanning-education-agent-skills-kud-chart-author": {
+      "hash": "682c7c0d5b30c478",
+      "summary_zh": "用于编写或审阅不同发展阶段的知识、理解与实践目标，适合基于课程资料制定能力导向学习目标。",
+      "translated_at": "2026-08-18T13:54:08.272Z"
+    },
+    "skill:garethmanning-education-agent-skills-language-demand-analyser": {
+      "hash": "d96b79b9e33951fc",
+      "summary_zh": "用于分析课堂任务的语言要求，找出EAL及多语学习者可能遇到的障碍，适合任务调整、支持规划和语言可及性评估。",
+      "translated_at": "2026-08-18T13:54:08.642Z"
+    },
+    "skill:garethmanning-education-agent-skills-learning-analytics-interpretation-guide": {
+      "hash": "88d643d32c83c3c9",
+      "summary_zh": "帮助教师解读学习分析数据，将学习平台、测验和参与度指标转化为具体可执行的教学决策。",
+      "translated_at": "2026-08-18T13:54:10.866Z"
+    },
+    "skill:garethmanning-education-agent-skills-learning-progression-builder": {
+      "hash": "fa41d7f873432701",
+      "summary_zh": "用于梳理目标技能从前置知识到熟练掌握的学习路径，适合课程排序、诊断学习情况和定位知识缺口。",
+      "translated_at": "2026-08-18T13:54:13.582Z"
+    },
+    "skill:garethmanning-education-agent-skills-kud-knowledge-type-mapper": {
+      "hash": "73bb573ed51c4b60",
+      "summary_zh": "将课程内容按“知道、理解、会做”分类，帮助教师规划单元、编写教学目标并选择匹配的评估方式。",
+      "translated_at": "2026-08-18T13:54:13.724Z"
+    },
+    "skill:garethmanning-education-agent-skills-outdoor-learning-sequence-designer": {
+      "hash": "f71213f1969d8e47",
+      "summary_zh": "用于在校园、社区公园等户外场地设计连贯的学习活动，将课程目标融入自然环境，适合规划户外教学课程。",
+      "translated_at": "2026-08-18T13:54:15.963Z"
+    },
+    "skill:garethmanning-education-agent-skills-lesson-opening-designer": {
+      "hash": "d04bf507dad84019",
+      "summary_zh": "用于设计课堂导入，通过激活学生已有知识，将旧知自然连接到当天的新内容，适合备课时规划复习提问、检索练习和先行组织活动。",
+      "translated_at": "2026-08-18T13:54:16.367Z"
+    },
+    "skill:garethmanning-education-agent-skills-phenomenon-based-unit-anchor": {
+      "hash": "c4d1fdc0303c8c29",
+      "summary_zh": "一种以真实世界现象为核心的跨学科单元设计工具，帮助教师整合不同学科视角，引导学生共同探究复杂问题。",
+      "translated_at": "2026-08-18T13:54:18.930Z"
+    },
+    "skill:garethmanning-education-agent-skills-place-based-inquiry-anchor": {
+      "hash": "64b36670a13e37fe",
+      "summary_zh": "一种以本地地点为核心的课程学习方法，适合将学科内容与学生的社区、文化、身份及生活环境联系起来。",
+      "translated_at": "2026-08-18T13:54:19.570Z"
+    },
+    "skill:garethmanning-education-agent-skills-metacognitive-monitoring-ai-contexts": {
+      "hash": "845b8452a2ca18bb",
+      "summary_zh": "用于设计元认知检查点，帮助使用 AI 学习的学生准确判断自己是否真正理解，避免高估掌握程度。",
+      "translated_at": "2026-08-18T13:54:19.693Z"
+    },
+    "skill:garethmanning-education-agent-skills-practice-problem-sequence-designer": {
+      "hash": "59b3689c40ea29e2",
+      "summary_zh": "用于设计由易到难、变化有策略的练习题序列，适合制作练习单、作业集和自主练习材料。",
+      "translated_at": "2026-08-18T13:54:21.264Z"
+    },
+    "skill:garethmanning-education-agent-skills-productive-failure-desirable-difficulty-designer": {
+      "hash": "6715a79bb1363c52",
+      "summary_zh": "帮助教师重设计直接讲授流程，在解释概念前加入有目的的尝试与失败，适合需要通过挑战和探索加深理解的教学场景。",
+      "translated_at": "2026-08-18T13:54:22.087Z"
+    },
+    "skill:garethmanning-education-agent-skills-project-brief-designer": {
+      "hash": "209c7eacc1725302",
+      "summary_zh": "用于设计项目式学习方案，明确驱动性问题、实施里程碑和评价标准，适合规划探究项目、PBL课程或长期研究任务。",
+      "translated_at": "2026-08-18T13:54:22.304Z"
+    },
+    "skill:garethmanning-education-agent-skills-prompt-literacy-sequence-designer": {
+      "hash": "f8db9b4a7d1abee8",
+      "summary_zh": "用于设计提示词素养教学，通过对比模糊与完善的提问，帮助学生理解具体信息和上下文如何提升 AI 输出质量。",
+      "translated_at": "2026-08-18T13:54:23.784Z"
+    },
+    "skill:garethmanning-education-agent-skills-scope-and-sequence-designer": {
+      "hash": "6234ec28c5156f0f",
+      "summary_zh": "用于设计课程范围与进度，梳理不同年级和学科间的衔接与递进，适合开发新课程、调整学科结构或检查教学连贯性。",
+      "translated_at": "2026-08-18T13:54:25.475Z"
+    },
+    "skill:garethmanning-education-agent-skills-self-explanation-prompt-designer": {
+      "hash": "27045a57ed538d45",
+      "summary_zh": "用于设计自我解释提示语，帮助学生深入理解例题、文本和图表，避免被动阅读，适合需要掌握背后原理的学习场景。",
+      "translated_at": "2026-08-18T13:54:25.863Z"
+    },
+    "skill:garethmanning-education-agent-skills-scaffolded-task-modifier": {
+      "hash": "7cf11e043bc52dd3",
+      "summary_zh": "帮助教师在不降低思维挑战的前提下，为不同英语水平的英语学习者调整课堂任务，提供合适的语言支架。",
+      "translated_at": "2026-08-18T13:54:27.027Z"
+    },
+    "skill:garethmanning-education-agent-skills-service-learning-project-designer": {
+      "hash": "4ade6b5285694e87",
+      "summary_zh": "帮助设计服务学习项目，把真实社区需求与课程学习结合起来，适合规划社区实践、公民参与或社会行动课程。",
+      "translated_at": "2026-08-18T13:54:27.226Z"
+    },
+    "skill:garethmanning-education-agent-skills-sheltered-instruction-lesson-modifier": {
+      "hash": "ec4938e8ec8141cb",
+      "summary_zh": "根据SIOP教学原则调整课程计划，帮助包含英语学习者的课堂在听说读写四项技能上获得更有针对性的支持。",
+      "translated_at": "2026-08-18T13:54:28.084Z"
+    },
+    "skill:garethmanning-education-agent-skills-vocabulary-tiering-tool": {
+      "hash": "b29a2a58e28c98d3",
+      "summary_zh": "将文本或主题中的词汇按日常、学术和专业类别分级，帮助教师预习词汇、确定教学重点并识别阅读障碍。",
+      "translated_at": "2026-08-18T13:54:29.075Z"
+    },
+    "skill:garethmanning-education-agent-skills-think-aloud-script-generator": {
+      "hash": "62b4a97601f29b77",
+      "summary_zh": "用于编写教师示范专家思维过程的讲解脚本，适合展示解题、写作、阅读理解和分析任务的推理方法。",
+      "translated_at": "2026-08-18T13:54:30.524Z"
+    },
+    "skill:garethmanning-education-agent-skills-worked-example-to-problem-solving-transition-designer": {
+      "hash": "b37008a38b367f6c",
+      "summary_zh": "帮助学习者依据专家逆转效应，从跟随示例逐步过渡到独立解题，适合解决“会看例题却不会做题”的教学场景。",
+      "translated_at": "2026-08-18T13:54:30.631Z"
+    },
+    "skill:openai-openai-agents-python-examples-run-analysis": {
+      "hash": "3ebb903be6d3daea",
+      "summary_zh": "用于分析手动示例运行产生的日志和源码，核验成功案例并归类失败、跳过及环境限制，适合排查示例测试结果但不执行示例。",
+      "translated_at": "2026-08-18T13:54:31.746Z"
+    },
+    "skill:tjboudreaux-cc-thinking-skills-thinking-circle-of-competence": {
+      "hash": "1ca3bc3182080c52",
+      "summary_zh": "帮助你判断观点是否有充分依据，评估信息边界和出错代价，在回答、查证或暂不判断之间做出稳妥选择，避免凭空编造。",
+      "translated_at": "2026-08-18T13:54:33.273Z"
+    },
+    "skill:tjboudreaux-cc-thinking-skills-thinking-bounded-rationality": {
+      "hash": "3c6d9ffd9a116889",
+      "summary_zh": "一种设定“够好”标准后及时停止搜索的决策方法，适合避免调查和方案比较无限延长。",
+      "translated_at": "2026-08-18T13:54:33.540Z"
+    },
+    "skill:tjboudreaux-cc-thinking-skills-thinking-effectuation": {
+      "hash": "31fd29c9c44ad009",
+      "summary_zh": "一种应对高度不确定性的行动方法：盘点现有资源，控制可承受损失，通过承诺推进实践，让目标在可控行动中逐步形成。",
+      "translated_at": "2026-08-18T13:54:35.289Z"
+    },
+    "skill:tjboudreaux-cc-thinking-skills-thinking-cynefin": {
+      "hash": "fc33fa0be20462ca",
+      "summary_zh": "在不确定该如何应对时，先判断问题所属的因果关系类型，再拆解混乱局面，帮助选择合适的处理方式。",
+      "translated_at": "2026-08-18T13:54:35.322Z"
+    },
+    "skill:tjboudreaux-cc-thinking-skills-thinking-first-principles": {
+      "hash": "f212bcc3e4e5fd43",
+      "summary_zh": "一种从第一性原理出发的思考方法：区分物理规律与惯例，剔除未经验证的假设，在真实约束下重建最简单可行的解决方案。",
+      "translated_at": "2026-08-18T13:54:35.915Z"
+    },
+    "skill:tjboudreaux-cc-thinking-skills-thinking-kepner-tregoe": {
+      "hash": "9a28f512cbe1fe9f",
+      "summary_zh": "用于分析特定缺陷的发生与不发生条件，或通过必要项、偏好项和不利后果权衡，辅助做出重要决策。",
+      "translated_at": "2026-08-18T13:54:38.358Z"
+    },
+    "skill:tjboudreaux-cc-thinking-skills-thinking-jobs-to-be-done": {
+      "hash": "98471397aa63ba72",
+      "summary_zh": "一种用于分析用户真实需求和采用失败原因的方法，帮助团队判断该做什么，并按目标结果和替代方案确定优先级。",
+      "translated_at": "2026-08-18T13:54:39.187Z"
+    },
+    "skill:tjboudreaux-cc-thinking-skills-thinking-five-whys-plus": {
+      "hash": "35831cf74cb39792",
+      "summary_zh": "用于故障近因已明确但系统性根因未明的场景，通过证据链追问、反事实验证和制定对策，定位真正根因并防止问题重现。",
+      "translated_at": "2026-08-18T13:54:40.797Z"
+    },
+    "skill:tjboudreaux-cc-thinking-skills-thinking-lindy-effect": {
+      "hash": "2cb294f8e296c2fa",
+      "summary_zh": "一种基于存续时间判断长期可靠性的决策方法，适合选择耐用方案，并结合领域变化避免盲目依赖经验。",
+      "translated_at": "2026-08-18T13:54:41.704Z"
+    },
+    "skill:tjboudreaux-cc-thinking-skills-thinking-map-territory": {
+      "hash": "591e00cd4c886117",
+      "summary_zh": "一种以实际代码和数据为准的排查方法，适合理论、文档或测试与真实行为不一致时快速定位问题。",
+      "translated_at": "2026-08-18T13:54:43.417Z"
+    },
+    "skill:tjboudreaux-cc-thinking-skills-thinking-model-combination": {
+      "hash": "f06a3a2d96ca9603",
+      "summary_zh": "针对跨领域或高风险问题，组合多个互补思维模型，明确各自职责并设定冲突处理规则，减少单一视角的盲区。",
+      "translated_at": "2026-08-18T13:54:44.566Z"
+    },
+    "skill:tjboudreaux-cc-thinking-skills-thinking-margin-of-safety": {
+      "hash": "3271f9640183df42",
+      "summary_zh": "一种应对不确定性的决策方法：制定资源、限制或估算时，根据可能的剩余误差和超标代价设置缓冲，适合风险较高的规划场景。",
+      "translated_at": "2026-08-18T13:54:45.465Z"
+    },
+    "skill:tjboudreaux-cc-thinking-skills-thinking-model-router": {
+      "hash": "258457a13269299f",
+      "summary_zh": "根据领域和问题类型匹配合适的思维方法，帮助你在不确定时选择主要思维技能，并可补充少量辅助方法。",
+      "translated_at": "2026-08-18T13:54:46.801Z"
+    },
+    "skill:tjboudreaux-cc-thinking-skills-thinking-pre-mortem": {
+      "hash": "edca7b7e87f2848e",
+      "summary_zh": "一种上线前的风险复盘方法，先假设计划已经失败，再倒推具体原因，提前制定缓解措施、决策门槛和止损检查。",
+      "translated_at": "2026-08-18T13:54:49.055Z"
+    },
+    "skill:tjboudreaux-cc-thinking-skills-thinking-opportunity-cost": {
+      "hash": "76962c3b8a4b99ff",
+      "summary_zh": "一种帮助决策者评估机会成本的方法，在投入稀缺的时间、人力或资金前，对比当前选择与最佳替代方案的价值差异。",
+      "translated_at": "2026-08-18T13:54:49.621Z"
+    },
+    "skill:tjboudreaux-cc-thinking-skills-thinking-ooda": {
+      "hash": "0ada863531c26d4d",
+      "summary_zh": "一种适用于高压多变场景的快速决策方法，在约七成把握时先行动，再通过持续观察及时调整。",
+      "translated_at": "2026-08-18T13:54:49.861Z"
+    },
+    "skill:tjboudreaux-cc-thinking-skills-thinking-probabilistic": {
+      "hash": "ef6a63f1e61a7905",
+      "summary_zh": "用于预测、估算和风险评估，借助基准率、范围推断与证据更新，减少过度自信和数量级误判。",
+      "translated_at": "2026-08-18T13:54:51.699Z"
+    },
+    "skill:tjboudreaux-cc-thinking-skills-thinking-reversibility": {
+      "hash": "59fb29a47d03e72f",
+      "summary_zh": "一种决策方法：先判断决定是否容易撤回，能改的快速执行，难改的分阶段推进，以保留选择空间。",
+      "translated_at": "2026-08-18T13:54:52.828Z"
+    },
+    "skill:tjboudreaux-cc-thinking-skills-thinking-scientific-method": {
+      "hash": "196d8fe4dc0bf276",
+      "summary_zh": "面对症状存在多种可能原因时，先按可证伪性排序假设，用最低成本的观察快速区分，再根据证据选择假设最少且匹配度最高的解释。",
+      "translated_at": "2026-08-18T13:54:53.796Z"
+    },
+    "skill:tjboudreaux-cc-thinking-skills-thinking-red-team": {
+      "hash": "431d36ca79c25a3d",
+      "summary_zh": "用于授权的代码、认证和 API 安全审查，从攻击者视角梳理攻击面，仅报告可复现且已有验证修复方案的问题。",
+      "translated_at": "2026-08-18T13:54:53.868Z"
+    },
+    "skill:tjboudreaux-cc-thinking-skills-thinking-second-order": {
+      "hash": "b87dd70159e2cd9d",
+      "summary_zh": "帮助你在做决定前分析改动对激励、规模和反馈的长期连锁影响，适合评估复杂方案与潜在风险。",
+      "translated_at": "2026-08-18T13:54:55.736Z"
+    },
+    "skill:tjboudreaux-cc-thinking-skills-thinking-socratic": {
+      "hash": "10b385122b0b9df5",
+      "summary_zh": "面对模糊、想当然或看似明确的需求，先通过关键追问澄清隐藏要求，适合降低误解和返工风险。",
+      "translated_at": "2026-08-18T13:54:56.641Z"
+    },
+    "skill:tjboudreaux-cc-thinking-skills-thinking-steel-manning": {
+      "hash": "2d402611d5376be4",
+      "summary_zh": "一种帮助人在拒绝或赞同提案前先构建最强反方论证、明确认同条件并理性决策的思考方法。",
+      "translated_at": "2026-08-18T13:54:56.737Z"
+    },
+    "skill:tjboudreaux-cc-thinking-skills-thinking-theory-of-constraints": {
+      "hash": "ce21e4d23392efda",
+      "summary_zh": "面向受流水线吞吐或延迟瓶颈影响的系统，帮助定位唯一关键约束并优化，适合性能调优和容量规划。",
+      "translated_at": "2026-08-18T13:54:58.866Z"
+    },
+    "skill:tjboudreaux-cc-thinking-skills-thinking-thought-experiment": {
+      "hash": "83dd58e6da540c5f",
+      "summary_zh": "通过受控反事实实验，在真实测试稀缺、成本高或不可逆时隔离变量、追踪因果链，评估结果可能意味着什么。",
+      "translated_at": "2026-08-18T13:54:58.903Z"
+    },
+    "skill:tjboudreaux-cc-thinking-skills-thinking-systems": {
+      "hash": "4521f5a4c0aea24e",
+      "summary_zh": "用于分析多组件交互产生的复杂行为，适合梳理边界、反馈回路和延迟，定位关键杠杆点，避免局部修复引发连锁问题。",
+      "translated_at": "2026-08-18T13:55:00.828Z"
+    },
+    "skill:tjboudreaux-cc-thinking-skills-thinking-via-negativa": {
+      "hash": "230800c390965698",
+      "summary_zh": "一种帮助团队克制增加功能、层次或流程的决策方法，先识别并移除有害或非必要部分，再通过不可逆操作检查降低误删风险。",
+      "translated_at": "2026-08-18T13:55:00.913Z"
+    },
+    "skill:tjboudreaux-cc-thinking-skills-thinking-triz": {
+      "hash": "7edd05d840800d3f",
+      "summary_zh": "用系统化方法拆解互相冲突的设计要求，识别矛盾并分离冲突状态，找到无需妥协的具体解决方案。",
+      "translated_at": "2026-08-18T13:55:01.016Z"
+    },
+    "content:garethmanning-education-agent-skills-academic-language-sentence-frame-generator": {
+      "hash": "152ee91b124a9ba3",
+      "translated_at": "2026-08-18T14:17:33.995Z"
+    },
+    "content:garethmanning-education-agent-skills-adaptive-hint-sequence-designer": {
+      "hash": "4f59e3a5e681dbeb",
+      "translated_at": "2026-08-18T14:19:09.775Z"
+    },
+    "content:garethmanning-education-agent-skills-ai-expertise-interrogation-designer": {
+      "hash": "15eb41bdcfeb6157",
+      "translated_at": "2026-08-18T14:20:50.962Z"
+    },
+    "content:garethmanning-education-agent-skills-ai-feedback-design-principles": {
+      "hash": "7a5306d9a9e72846",
+      "translated_at": "2026-08-18T14:22:51.646Z"
+    },
+    "content:garethmanning-education-agent-skills-ai-facilitated-collaborative-learning-designer": {
+      "hash": "06bf3fb287deb38e",
+      "translated_at": "2026-08-18T14:22:55.320Z"
+    },
+    "content:garethmanning-education-agent-skills-ai-hallucination-fact-check-protocol": {
+      "hash": "00a6622564fd94de",
+      "translated_at": "2026-08-18T14:24:37.746Z"
+    },
+    "content:garethmanning-education-agent-skills-ai-learning-boundary-mapper": {
+      "hash": "06c952800aa5430c",
+      "translated_at": "2026-08-18T14:24:37.805Z"
+    },
+    "content:garethmanning-education-agent-skills-ai-output-critical-audit-designer": {
+      "hash": "ff4f9b4fcadf6129",
+      "translated_at": "2026-08-18T14:26:32.863Z"
+    },
+    "content:garethmanning-education-agent-skills-ai-socratic-dialogue-designer": {
+      "hash": "25983f25bbad2feb",
+      "translated_at": "2026-08-18T14:26:42.768Z"
+    },
+    "content:garethmanning-education-agent-skills-assessment-validity-checker": {
+      "hash": "7cd36cbcd1f57d52",
+      "translated_at": "2026-08-18T14:28:06.276Z"
+    },
+    "content:garethmanning-education-agent-skills-backwards-design-unit-planner": {
+      "hash": "1436d874e706d5cb",
+      "translated_at": "2026-08-18T14:28:27.287Z"
+    },
+    "content:garethmanning-education-agent-skills-checking-for-understanding-protocol-designer": {
+      "hash": "a6a3f5452edece0c",
+      "translated_at": "2026-08-18T14:29:55.287Z"
+    },
+    "content:garethmanning-education-agent-skills-biophilic-learning-environment-designer": {
+      "hash": "eb6bdcc5d963e221",
+      "translated_at": "2026-08-18T14:30:09.260Z"
+    },
+    "content:garethmanning-education-agent-skills-competency-unpacker": {
+      "hash": "f7491dd4e9c38cf7",
+      "translated_at": "2026-08-18T14:31:24.332Z"
+    },
+    "content:garethmanning-education-agent-skills-cognitive-tutoring-architecture-designer": {
+      "hash": "84616a953bed8ee5",
+      "translated_at": "2026-08-18T14:32:22.839Z"
+    },
+    "content:garethmanning-education-agent-skills-coverage-audit": {
+      "hash": "464d31856c3b441e",
+      "translated_at": "2026-08-18T14:32:39.702Z"
+    },
+    "content:garethmanning-education-agent-skills-cpa-sequence-designer": {
+      "hash": "a941c9c7d8c8d91b",
+      "translated_at": "2026-08-18T14:34:13.369Z"
+    },
+    "content:garethmanning-education-agent-skills-criterion-referenced-rubric-generator": {
+      "hash": "b8f404c14ad9e33b",
+      "translated_at": "2026-08-18T14:34:18.594Z"
+    },
+    "content:garethmanning-education-agent-skills-culturally-responsive-teaching-designer": {
+      "hash": "abf5069c378c3f4b",
+      "translated_at": "2026-08-18T14:36:09.463Z"
+    },
+    "content:garethmanning-education-agent-skills-cross-cultural-task-validity-checker": {
+      "hash": "dee9dae43391d773",
+      "translated_at": "2026-08-18T14:36:18.352Z"
+    },
+    "content:garethmanning-education-agent-skills-curriculum-crosswalk": {
+      "hash": "c1cba6e18242ca76",
+      "translated_at": "2026-08-18T14:38:08.423Z"
+    },
+    "content:garethmanning-education-agent-skills-developmental-band-translator": {
+      "hash": "b1879a0422ba0c9e",
+      "translated_at": "2026-08-18T14:39:50.245Z"
+    },
+    "content:garethmanning-education-agent-skills-curriculum-knowledge-architecture-designer": {
+      "hash": "e3c6ea6c5c0786ee",
+      "translated_at": "2026-08-18T14:39:59.254Z"
+    },
+    "content:garethmanning-education-agent-skills-differentiation-adapter": {
+      "hash": "6545b55ca01e6eea",
+      "translated_at": "2026-08-18T14:41:13.707Z"
+    },
+    "content:garethmanning-education-agent-skills-digital-worked-example-sequence": {
+      "hash": "2bae9a7d85bf2e57",
+      "translated_at": "2026-08-18T14:41:41.295Z"
+    },
+    "content:garethmanning-education-agent-skills-disciplinary-ai-literacy-sequence-designer": {
+      "hash": "9539708990fdabd1",
+      "translated_at": "2026-08-18T14:42:57.213Z"
+    },
+    "content:garethmanning-education-agent-skills-discipline-specific-critical-thinking-task-designer": {
+      "hash": "0ff6183639481ed8",
+      "translated_at": "2026-08-18T14:44:30.830Z"
+    },
+    "content:garethmanning-education-agent-skills-ecological-inquiry-anchor-designer": {
+      "hash": "ed7ec7f699a4eb07",
+      "translated_at": "2026-08-18T14:44:51.074Z"
+    },
+    "content:garethmanning-education-agent-skills-erroneous-example-designer": {
+      "hash": "36691fc700df2041",
+      "translated_at": "2026-08-18T14:46:27.054Z"
+    },
+    "content:garethmanning-education-agent-skills-emergent-project-design-scaffold": {
+      "hash": "4e9abec96bbaad5b",
+      "translated_at": "2026-08-18T14:46:30.307Z"
     }
   }
 }

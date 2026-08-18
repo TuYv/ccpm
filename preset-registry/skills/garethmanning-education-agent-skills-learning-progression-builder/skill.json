@@ -1,0 +1,26 @@
+{
+  "id": "garethmanning-education-agent-skills-learning-progression-builder",
+  "name": "learning-progression-builder",
+  "description": "Build a learning progression showing prerequisite-to-mastery steps for a target skill or understanding. Use when sequencing content, designing diagnostics, or mapping prerequisite gaps.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0",
+  "author": "GarethManning",
+  "install_path": ".claude/skills/learning-progression-builder/SKILL.md",
+  "source": {
+    "repo": "GarethManning/education-agent-skills",
+    "url": "https://github.com/GarethManning/education-agent-skills/blob/main/skills/curriculum-assessment/learning-progression-builder/SKILL.md",
+    "path": "skills/curriculum-assessment/learning-progression-builder/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T13:06:58.973Z",
+    "stars": 626,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-10T12:50:35Z",
+    "license": null
+  },
+  "summary_zh": "用于梳理目标技能从前置知识到熟练掌握的学习路径，适合课程排序、诊断学习情况和定位知识缺口。"
+}

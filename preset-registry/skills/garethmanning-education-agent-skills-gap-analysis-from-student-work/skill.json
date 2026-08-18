@@ -1,0 +1,26 @@
+{
+  "id": "garethmanning-education-agent-skills-gap-analysis-from-student-work",
+  "name": "gap-analysis-from-student-work",
+  "description": "Analyse student work against criteria to identify specific gaps between current performance and learning objectives. Use when reviewing submissions, planning feedback, or diagnosing learning needs.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0",
+  "author": "GarethManning",
+  "install_path": ".claude/skills/gap-analysis-from-student-work/SKILL.md",
+  "source": {
+    "repo": "GarethManning/education-agent-skills",
+    "url": "https://github.com/GarethManning/education-agent-skills/blob/main/skills/curriculum-assessment/gap-analysis-from-student-work/SKILL.md",
+    "path": "skills/curriculum-assessment/gap-analysis-from-student-work/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T13:06:58.589Z",
+    "stars": 626,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-10T12:50:35Z",
+    "license": null
+  },
+  "summary_zh": "用于对照学习目标分析学生作业，找出具体差距，适合批改反馈和诊断学习需求。"
+}

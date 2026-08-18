@@ -1,0 +1,26 @@
+{
+  "id": "garethmanning-education-agent-skills-cpa-sequence-designer",
+  "name": "cpa-sequence-designer",
+  "description": "Design a Concrete-Pictorial-Abstract learning sequence for a mathematical concept using manipulatives. Use when teaching maths through Singapore method or when students struggle with abstraction.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0",
+  "author": "GarethManning",
+  "install_path": ".claude/skills/cpa-sequence-designer/SKILL.md",
+  "source": {
+    "repo": "GarethManning/education-agent-skills",
+    "url": "https://github.com/GarethManning/education-agent-skills/blob/main/skills/global-cross-cultural-pedagogies/cpa-sequence-designer/SKILL.md",
+    "path": "skills/global-cross-cultural-pedagogies/cpa-sequence-designer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T13:07:02.815Z",
+    "stars": 626,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-10T12:50:35Z",
+    "license": null
+  },
+  "summary_zh": "用于设计数学概念的具体—图像—抽象教学序列，适合新加坡数学教学或帮助难以理解抽象概念的学生。"
+}

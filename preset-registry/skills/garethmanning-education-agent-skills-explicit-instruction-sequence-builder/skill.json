@@ -1,0 +1,26 @@
+{
+  "id": "garethmanning-education-agent-skills-explicit-instruction-sequence-builder",
+  "name": "explicit-instruction-sequence-builder",
+  "description": "Build a complete explicit instruction sequence from teacher modelling through guided practice to independent work. Use when teaching new skills, procedures, or concepts through direct instruction.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0",
+  "author": "GarethManning",
+  "install_path": ".claude/skills/explicit-instruction-sequence-builder/SKILL.md",
+  "source": {
+    "repo": "GarethManning/education-agent-skills",
+    "url": "https://github.com/GarethManning/education-agent-skills/blob/main/skills/explicit-instruction/explicit-instruction-sequence-builder/SKILL.md",
+    "path": "skills/explicit-instruction/explicit-instruction-sequence-builder/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T13:07:02.003Z",
+    "stars": 626,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-10T12:50:35Z",
+    "license": null
+  },
+  "summary_zh": "用于设计从教师示范、引导练习到独立作业的完整教学流程，适合直接教授新技能、操作步骤或概念。"
+}

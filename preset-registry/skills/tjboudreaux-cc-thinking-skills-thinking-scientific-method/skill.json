@@ -1,0 +1,26 @@
+{
+  "id": "tjboudreaux-cc-thinking-skills-thinking-scientific-method",
+  "name": "thinking-scientific-method",
+  "description": "When a symptom has several plausible causes, rank falsifiable hypotheses and run the cheapest discriminating observation first; prefer least-assumptive survivors only after evidence fit.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tjboudreaux",
+  "install_path": ".claude/skills/thinking-scientific-method/SKILL.md",
+  "source": {
+    "repo": "tjboudreaux/cc-thinking-skills",
+    "url": "https://github.com/tjboudreaux/cc-thinking-skills/blob/main/skills/thinking-scientific-method/SKILL.md",
+    "path": "skills/thinking-scientific-method/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T13:05:37.031Z",
+    "stars": 960,
+    "language": "JavaScript",
+    "pushed_at": "2026-08-07T18:53:22Z",
+    "license": "MIT"
+  },
+  "summary_zh": "面对症状存在多种可能原因时，先按可证伪性排序假设，用最低成本的观察快速区分，再根据证据选择假设最少且匹配度最高的解释。"
+}

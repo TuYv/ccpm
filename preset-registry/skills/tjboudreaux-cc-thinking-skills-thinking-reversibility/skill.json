@@ -1,0 +1,26 @@
+{
+  "id": "tjboudreaux-cc-thinking-skills-thinking-reversibility",
+  "name": "thinking-reversibility",
+  "description": "Before heavy deliberation, classify the decision as cheap or costly to undo; decide two-way doors fast and stage one-way doors to preserve options.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tjboudreaux",
+  "install_path": ".claude/skills/thinking-reversibility/SKILL.md",
+  "source": {
+    "repo": "tjboudreaux/cc-thinking-skills",
+    "url": "https://github.com/tjboudreaux/cc-thinking-skills/blob/main/skills/thinking-reversibility/SKILL.md",
+    "path": "skills/thinking-reversibility/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T13:05:36.849Z",
+    "stars": 960,
+    "language": "JavaScript",
+    "pushed_at": "2026-08-07T18:53:22Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一种决策方法：先判断决定是否容易撤回，能改的快速执行，难改的分阶段推进，以保留选择空间。"
+}

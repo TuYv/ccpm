@@ -1,0 +1,26 @@
+{
+  "id": "garethmanning-education-agent-skills-sheltered-instruction-lesson-modifier",
+  "name": "sheltered-instruction-lesson-modifier",
+  "description": "Modify a lesson plan using SIOP sheltered instruction principles to support language learners across all four skills. Use when planning lessons for classes that include EAL students.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0",
+  "author": "GarethManning",
+  "install_path": ".claude/skills/sheltered-instruction-lesson-modifier/SKILL.md",
+  "source": {
+    "repo": "GarethManning/education-agent-skills",
+    "url": "https://github.com/GarethManning/education-agent-skills/blob/main/skills/eal-language-development/sheltered-instruction-lesson-modifier/SKILL.md",
+    "path": "skills/eal-language-development/sheltered-instruction-lesson-modifier/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T13:07:00.202Z",
+    "stars": 626,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-10T12:50:35Z",
+    "license": null
+  },
+  "summary_zh": "根据SIOP教学原则调整课程计划，帮助包含英语学习者的课堂在听说读写四项技能上获得更有针对性的支持。"
+}

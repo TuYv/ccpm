@@ -1,0 +1,26 @@
+{
+  "id": "garethmanning-education-agent-skills-formative-assessment-technique-selector",
+  "name": "formative-assessment-technique-selector",
+  "description": "Select the right formative assessment technique for a specific learning moment, purpose, and age group. Use when choosing how to check understanding during, between, or after lessons.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0",
+  "author": "GarethManning",
+  "install_path": ".claude/skills/formative-assessment-technique-selector/SKILL.md",
+  "source": {
+    "repo": "GarethManning/education-agent-skills",
+    "url": "https://github.com/GarethManning/education-agent-skills/blob/main/skills/curriculum-assessment/formative-assessment-technique-selector/SKILL.md",
+    "path": "skills/curriculum-assessment/formative-assessment-technique-selector/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T13:06:58.406Z",
+    "stars": 626,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-10T12:50:35Z",
+    "license": null
+  },
+  "summary_zh": "帮助教师根据教学时机、评估目的和学生年龄，选择合适的形成性评价方法，快速检查课堂内外的学习理解情况。"
+}

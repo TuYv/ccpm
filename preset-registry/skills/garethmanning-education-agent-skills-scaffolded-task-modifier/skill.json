@@ -1,0 +1,26 @@
+{
+  "id": "garethmanning-education-agent-skills-scaffolded-task-modifier",
+  "name": "scaffolded-task-modifier",
+  "description": "Modify a classroom task with language scaffolds that preserve cognitive demand for EAL learners. Use when adapting existing tasks for students at different English proficiency levels.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0",
+  "author": "GarethManning",
+  "install_path": ".claude/skills/scaffolded-task-modifier/SKILL.md",
+  "source": {
+    "repo": "GarethManning/education-agent-skills",
+    "url": "https://github.com/GarethManning/education-agent-skills/blob/main/skills/eal-language-development/scaffolded-task-modifier/SKILL.md",
+    "path": "skills/eal-language-development/scaffolded-task-modifier/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T13:07:00.023Z",
+    "stars": 626,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-10T12:50:35Z",
+    "license": null
+  },
+  "summary_zh": "帮助教师在不降低思维挑战的前提下，为不同英语水平的英语学习者调整课堂任务，提供合适的语言支架。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "tjboudreaux-cc-thinking-skills-thinking-bounded-rationality",
+  "name": "thinking-bounded-rationality",
+  "description": "Use when search or investigation could run forever. Set an explicit good-enough threshold first, then stop at the first option that clears it.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tjboudreaux",
+  "install_path": ".claude/skills/thinking-bounded-rationality/SKILL.md",
+  "source": {
+    "repo": "tjboudreaux/cc-thinking-skills",
+    "url": "https://github.com/tjboudreaux/cc-thinking-skills/blob/main/skills/thinking-bounded-rationality/SKILL.md",
+    "path": "skills/thinking-bounded-rationality/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T13:05:33.390Z",
+    "stars": 960,
+    "language": "JavaScript",
+    "pushed_at": "2026-08-07T18:53:22Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一种设定“够好”标准后及时停止搜索的决策方法，适合避免调查和方案比较无限延长。"
+}

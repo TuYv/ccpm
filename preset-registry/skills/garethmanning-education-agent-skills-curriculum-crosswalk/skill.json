@@ -1,0 +1,26 @@
+{
+  "id": "garethmanning-education-agent-skills-curriculum-crosswalk",
+  "name": "curriculum-crosswalk",
+  "description": "Compares two or more band-tagged frameworks and produces a framework-neutral topic matrix showing coverage and gaps across all inputs, plus an optional reference-centric PLC crosswalk document when a reference framework is supplied.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "2.0",
+  "author": "GarethManning",
+  "install_path": ".claude/skills/curriculum-crosswalk/SKILL.md",
+  "source": {
+    "repo": "GarethManning/education-agent-skills",
+    "url": "https://github.com/GarethManning/education-agent-skills/blob/main/skills/curriculum-alignment/curriculum-crosswalk/SKILL.md",
+    "path": "skills/curriculum-alignment/curriculum-crosswalk/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T13:06:56.201Z",
+    "stars": 626,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-10T12:50:35Z",
+    "license": null
+  },
+  "summary_zh": "比较两个或多个按年级段标记的课程框架，生成跨框架的主题覆盖矩阵，帮助发现内容缺口；指定参考框架后，还能生成用于教师协作学习的对照文档。"
+}

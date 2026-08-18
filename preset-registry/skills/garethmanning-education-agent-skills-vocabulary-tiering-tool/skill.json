@@ -1,0 +1,26 @@
+{
+  "id": "garethmanning-education-agent-skills-vocabulary-tiering-tool",
+  "name": "vocabulary-tiering-tool",
+  "description": "Tier vocabulary from a text or topic into everyday, academic, and technical categories with teaching priorities. Use when pre-teaching vocabulary or identifying language barriers in a text.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0",
+  "author": "GarethManning",
+  "install_path": ".claude/skills/vocabulary-tiering-tool/SKILL.md",
+  "source": {
+    "repo": "GarethManning/education-agent-skills",
+    "url": "https://github.com/GarethManning/education-agent-skills/blob/main/skills/eal-language-development/vocabulary-tiering-tool/SKILL.md",
+    "path": "skills/eal-language-development/vocabulary-tiering-tool/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T13:07:00.373Z",
+    "stars": 626,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-10T12:50:35Z",
+    "license": null
+  },
+  "summary_zh": "将文本或主题中的词汇按日常、学术和专业类别分级，帮助教师预习词汇、确定教学重点并识别阅读障碍。"
+}

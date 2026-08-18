@@ -1,0 +1,26 @@
+{
+  "id": "tjboudreaux-cc-thinking-skills-thinking-thought-experiment",
+  "name": "thinking-thought-experiment",
+  "description": "When a real test is too rare, large, or irreversible, run a controlled counterfactual: isolate one variable, fix conditions, trace the mechanistic chain, and bound what the result implies.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tjboudreaux",
+  "install_path": ".claude/skills/thinking-thought-experiment/SKILL.md",
+  "source": {
+    "repo": "tjboudreaux/cc-thinking-skills",
+    "url": "https://github.com/tjboudreaux/cc-thinking-skills/blob/main/skills/thinking-thought-experiment/SKILL.md",
+    "path": "skills/thinking-thought-experiment/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T13:05:38.135Z",
+    "stars": 960,
+    "language": "JavaScript",
+    "pushed_at": "2026-08-07T18:53:22Z",
+    "license": "MIT"
+  },
+  "summary_zh": "通过受控反事实实验，在真实测试稀缺、成本高或不可逆时隔离变量、追踪因果链，评估结果可能意味着什么。"
+}

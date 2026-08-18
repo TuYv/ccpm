@@ -1,0 +1,26 @@
+{
+  "id": "garethmanning-education-agent-skills-developmental-band-translator",
+  "name": "developmental-band-translator",
+  "description": "Tags harness-decomposed curriculum items (KUDs, LTs, criteria) with a school's developmental band metadata while preserving source voice and labels. Supply the band schema; the skill derives mapping rules from it.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0",
+  "author": "GarethManning",
+  "install_path": ".claude/skills/developmental-band-translator/SKILL.md",
+  "source": {
+    "repo": "GarethManning/education-agent-skills",
+    "url": "https://github.com/GarethManning/education-agent-skills/blob/main/skills/curriculum-alignment/developmental-band-translator/SKILL.md",
+    "path": "skills/curriculum-alignment/developmental-band-translator/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T13:06:56.385Z",
+    "stars": 626,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-10T12:50:35Z",
+    "license": null
+  },
+  "summary_zh": "一个课程内容标注工具，按学校提供的发展阶段标准为 KUD、学习目标和评价标准匹配学段，同时保留原有表述和标签。"
+}

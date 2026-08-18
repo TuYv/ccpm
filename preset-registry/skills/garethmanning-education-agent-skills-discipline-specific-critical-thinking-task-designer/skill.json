@@ -1,0 +1,26 @@
+{
+  "id": "garethmanning-education-agent-skills-discipline-specific-critical-thinking-task-designer",
+  "name": "discipline-specific-critical-thinking-task-designer",
+  "description": "Design discipline-specific critical thinking tasks grounded in knowledge-contingent reasoning rather than generic skills. Use when embedding higher-order thinking into subject content.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0",
+  "author": "GarethManning",
+  "install_path": ".claude/skills/discipline-specific-critical-thinking-task-designer/SKILL.md",
+  "source": {
+    "repo": "GarethManning/education-agent-skills",
+    "url": "https://github.com/GarethManning/education-agent-skills/blob/main/skills/curriculum-assessment/discipline-specific-critical-thinking-task-designer/SKILL.md",
+    "path": "skills/curriculum-assessment/discipline-specific-critical-thinking-task-designer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T13:06:58.170Z",
+    "stars": 626,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-10T12:50:35Z",
+    "license": null
+  },
+  "summary_zh": "一个面向学科的批判性思维任务设计工具，帮助教师将高阶思维融入具体学科内容，避免停留在泛泛的思维训练上。"
+}

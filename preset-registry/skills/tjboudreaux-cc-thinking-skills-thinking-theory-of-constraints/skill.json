@@ -1,0 +1,26 @@
+{
+  "id": "tjboudreaux-cc-thinking-skills-thinking-theory-of-constraints",
+  "name": "thinking-theory-of-constraints",
+  "description": "When throughput or latency is pipeline-limited, identify the single binding constraint and exploit, subordinate, elevate, then recheck—ignore non-constraints.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tjboudreaux",
+  "install_path": ".claude/skills/thinking-theory-of-constraints/SKILL.md",
+  "source": {
+    "repo": "tjboudreaux/cc-thinking-skills",
+    "url": "https://github.com/tjboudreaux/cc-thinking-skills/blob/main/skills/thinking-theory-of-constraints/SKILL.md",
+    "path": "skills/thinking-theory-of-constraints/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T13:05:37.962Z",
+    "stars": 960,
+    "language": "JavaScript",
+    "pushed_at": "2026-08-07T18:53:22Z",
+    "license": "MIT"
+  },
+  "summary_zh": "面向受流水线吞吐或延迟瓶颈影响的系统，帮助定位唯一关键约束并优化，适合性能调优和容量规划。"
+}

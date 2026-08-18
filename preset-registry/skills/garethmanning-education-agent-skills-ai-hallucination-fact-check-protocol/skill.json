@@ -1,0 +1,26 @@
+{
+  "id": "garethmanning-education-agent-skills-ai-hallucination-fact-check-protocol",
+  "name": "ai-hallucination-fact-check-protocol",
+  "description": "Design a fact-checking protocol for AI-generated text, extending SIFT with AI-specific adaptations for hallucination detection. Use when students need to verify AI claims and citations.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0",
+  "author": "GarethManning",
+  "install_path": ".claude/skills/ai-hallucination-fact-check-protocol/SKILL.md",
+  "source": {
+    "repo": "GarethManning/education-agent-skills",
+    "url": "https://github.com/GarethManning/education-agent-skills/blob/main/skills/ai-literacy/ai-hallucination-fact-check-protocol/SKILL.md",
+    "path": "skills/ai-literacy/ai-hallucination-fact-check-protocol/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T13:06:54.825Z",
+    "stars": 626,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-10T12:50:35Z",
+    "license": null
+  },
+  "summary_zh": "面向学生核验 AI 生成内容的事实与引用，基于 SIFT 改进出一套识别幻觉、检查来源可靠性的实用流程。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "garethmanning-education-agent-skills-metacognitive-monitoring-ai-contexts",
+  "name": "metacognitive-monitoring-ai-contexts",
+  "description": "Design metacognitive checkpoints that prevent AI-assisted learning from bypassing genuine understanding. Use when students use AI tools and may overestimate their own comprehension.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0",
+  "author": "GarethManning",
+  "install_path": ".claude/skills/metacognitive-monitoring-ai-contexts/SKILL.md",
+  "source": {
+    "repo": "GarethManning/education-agent-skills",
+    "url": "https://github.com/GarethManning/education-agent-skills/blob/main/skills/ai-learning-science/metacognitive-monitoring-ai-contexts/SKILL.md",
+    "path": "skills/ai-learning-science/metacognitive-monitoring-ai-contexts/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T13:06:53.819Z",
+    "stars": 626,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-10T12:50:35Z",
+    "license": null
+  },
+  "summary_zh": "用于设计元认知检查点，帮助使用 AI 学习的学生准确判断自己是否真正理解，避免高估掌握程度。"
+}

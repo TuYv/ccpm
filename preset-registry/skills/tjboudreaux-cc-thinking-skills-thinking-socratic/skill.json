@@ -1,0 +1,26 @@
+{
+  "id": "tjboudreaux-cc-thinking-skills-thinking-socratic",
+  "name": "thinking-socratic",
+  "description": "When a request is vague, assumption-laden, or \"obvious,\" ask the few load-bearing questions that expose hidden requirements before building or committing.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tjboudreaux",
+  "install_path": ".claude/skills/thinking-socratic/SKILL.md",
+  "source": {
+    "repo": "tjboudreaux/cc-thinking-skills",
+    "url": "https://github.com/tjboudreaux/cc-thinking-skills/blob/main/skills/thinking-socratic/SKILL.md",
+    "path": "skills/thinking-socratic/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T13:05:37.389Z",
+    "stars": 960,
+    "language": "JavaScript",
+    "pushed_at": "2026-08-07T18:53:22Z",
+    "license": "MIT"
+  },
+  "summary_zh": "面对模糊、想当然或看似明确的需求，先通过关键追问澄清隐藏要求，适合降低误解和返工风险。"
+}

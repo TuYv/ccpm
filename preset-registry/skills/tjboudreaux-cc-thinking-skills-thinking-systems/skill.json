@@ -1,0 +1,26 @@
+{
+  "id": "tjboudreaux-cc-thinking-skills-thinking-systems",
+  "name": "thinking-systems",
+  "description": "When behavior is emergent across components—fixes elsewhere break, loops/delays dominate—map boundary, stocks/flows, feedback, archetypes, then rank leverage.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tjboudreaux",
+  "install_path": ".claude/skills/thinking-systems/SKILL.md",
+  "source": {
+    "repo": "tjboudreaux/cc-thinking-skills",
+    "url": "https://github.com/tjboudreaux/cc-thinking-skills/blob/main/skills/thinking-systems/SKILL.md",
+    "path": "skills/thinking-systems/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T13:05:37.778Z",
+    "stars": 960,
+    "language": "JavaScript",
+    "pushed_at": "2026-08-07T18:53:22Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于分析多组件交互产生的复杂行为，适合梳理边界、反馈回路和延迟，定位关键杠杆点，避免局部修复引发连锁问题。"
+}
