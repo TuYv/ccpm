@@ -1,20 +1,32 @@
 ---
 name: go-context
 description: >
-  Correct usage of context.Context in Go: propagation, cancellation, timeouts,
-  deadlines, values, and common anti-patterns.
-  Use when: "context usage", "context.Context", "context cancellation", "timeout",
-  "context.WithTimeout", "context.WithCancel", "context values", "context propagation".
-  Do NOT use for: concurrency patterns beyond context (use go-concurrency-review),
-  HTTP middleware context (use go-api-design), or
-  error handling (use go-error-handling).
+  Correct usage of context.Context in Go: propagation, cancellation,
+  timeouts, deadlines, values, and common anti-patterns. Use when: "context
+  usage", "context.Context", "context cancellation", "timeout",
+  "context.WithTimeout", "context.WithCancel", "context values", "context
+  propagation".
+  Not for: concurrency beyond context (go-concurrency-review), HTTP
+  middleware (go-api-design), error handling (go-error-handling).
+user-invocable: true
 license: MIT
+compatibility: Designed for Claude Code or similar AI coding agents working on Go projects. Requires the Go toolchain.
+allowed-tools: Read Edit Write Glob Grep Bash(go:*) Bash(gofmt:*)
 metadata:
-  version: "1.0.0"
+  author: eduardo-sl
+  version: "1.2.0"
 ---
-# Go Context
+# Go 上下文
 
-`context.Context` 用于跨 API 边界控制取消、截止时间和请求范围内的值。误用它会导致 goroutine 泄漏、工作任务失去管控，以及难以察觉的生产环境 bug。
+`context.Context` 控制跨 API 边界的取消、截止时间和请求范围值。误用它会导致 goroutine 泄漏、孤立工作以及难以察觉的生产环境 bug。
+
+按需加载的详细参考资料：
+
+- `references/timeout-budgets.md` — 划分父上下文的剩余预算，读取 `ctx.Deadline()`。
+- `references/values.md` — 上下文键类型、访问器以及冲突陷阱。
+- `references/http-and-testing.md` — 处理程序和中间件中的请求上下文，以及取消测试。
+
+仅当以下部分不足以解决问题时，才读取参考文件。
 
 ## 1. 核心规则
 
@@ -30,7 +42,7 @@ func GetUser(id string, ctx context.Context) (*User, error)
 func Process(req Request, ctx context.Context) error
 ```
 
-### 绝不要将 context 存储在结构体中：
+### 永远不要将 context 存储在结构体中：
 
 ```go
 // ❌ Bad — context stored in struct
@@ -47,7 +59,7 @@ func (s *Server) Shutdown(ctx context.Context) error {
 
 Context 表示单次操作的生命周期，而不是对象的生命周期。
 
-### 绝不要传递 nil context：
+### 永远不要传递 nil context：
 
 ```go
 // ❌ Bad
@@ -72,7 +84,7 @@ defer cancel()
 result, err := longOperation(ctx)
 ```
 
-如果未调用 cancel，资源（计时器、goroutine）将一直泄漏，直到父 context 被取消。
+不调用 cancel 会导致资源（计时器、goroutine）泄漏，直到父 context 被取消。
 
 ### 使用 WithCancel 进行手动取消：
 
@@ -92,7 +104,7 @@ func (s *Supervisor) Run(ctx context.Context) error {
 }
 ```
 
-### 在循环中检查 context 是否已取消：
+### 在循环中检查 context 取消状态：
 
 ```go
 // ✅ Good — respects cancellation
@@ -117,9 +129,9 @@ func processItems(ctx context.Context, items []Item) error {
 }
 ```
 
-## 3. 超时和截止时间
+## 3. 超时与截止时间
 
-### 使用 WithTimeout 设置基于时长的限制：
+### 使用 WithTimeout 实现基于时长的限制：
 
 ```go
 func (c *Client) FetchUser(ctx context.Context, id string) (*User, error) {
@@ -141,7 +153,7 @@ func (c *Client) FetchUser(ctx context.Context, id string) (*User, error) {
 }
 ```
 
-### 使用 WithDeadline 设置绝对时间限制：
+### 使用 WithDeadline 实现绝对时间限制：
 
 ```go
 // Use when coordinating with external deadlines (SLAs, cron windows)
@@ -150,176 +162,49 @@ ctx, cancel := context.WithDeadline(ctx, deadline)
 defer cancel()
 ```
 
-### 超时预算——不要超过父级超时时间：
+### 超时预算
 
-```go
-// ✅ Good — child timeout shorter than parent
-func handler(ctx context.Context) error {
-    // Parent has 30s timeout (from HTTP server)
+子级超时会消耗父级的部分预算；它绝不会延长该预算。一个 30 秒请求处理器中的 5 秒数据库调用和 10 秒 API 调用共同构成预算。父级仅剩 5 秒时，设置一个 60 秒的子级会在父级截止时间静默触发，这在凌晨 3 点看来就像一个 bug。
 
-    // Give DB query 5s of the 30s budget
-    dbCtx, cancel := context.WithTimeout(ctx, 5*time.Second)
-    defer cancel()
-    data, err := db.QueryContext(dbCtx, query)
+在开始无法中断的工作之前，使用 `ctx.Deadline()` 读取剩余预算；如果时间过短，则快速失败。
 
-    // Give external API 10s of the remaining budget
-    apiCtx, cancel := context.WithTimeout(ctx, 10*time.Second)
-    defer cancel()
-    result, err := client.Call(apiCtx, data)
+示例见 `references/timeout-budgets.md`。
 
-    return nil
-}
+## 4. Context 值
 
-// ❌ Bad — child timeout exceeds parent (silently capped anyway)
-ctx, cancel := context.WithTimeout(parentCtx, 60*time.Second) // parent has 5s left
-// This timeout is 60s but will actually fire at parent's deadline
-```
+仅存储请求范围的元数据：请求 ID、追踪或 span ID、已认证用户、请求范围的日志记录器。绝不要存储数据库连接、配置，或函数本可将其作为显式参数接收的任何内容。
 
-### 检查是否存在截止时间：
+键必须是未导出的类型，绝不能是字符串——字符串键可能被进程中的任何其他包覆盖。导出访问器函数，使调用方永远不必自行对 `ctx.Value` 进行类型断言。
 
-```go
-if deadline, ok := ctx.Deadline(); ok {
-    remaining := time.Until(deadline)
-    if remaining < minRequired {
-        return fmt.Errorf("insufficient time remaining: %v", remaining)
-    }
-}
-```
+示例见 `references/values.md`。
 
-## 4. 上下文值
+## 5. HTTP 处理器和测试中的 Context
 
-### 谨慎使用——仅用于请求范围的元数据：
+处理器接收 `r.Context()` 并将其向下游传递。已取消的请求意味着客户端已断开连接：无需写入响应，直接返回。中间件使用 `r.WithContext(ctx)` 附加值。
 
-```go
-// ✅ Appropriate uses:
-// - Request ID
-// - Trace/span ID
-// - Authenticated user info
-// - Request-scoped logger
+测试使用 `context.WithTimeout` 包装被测调用，这样卡住时会使测试失败，而不是阻塞整个测试套件；并断言 `errors.Is(err,
+context.Canceled)`，以证明取消操作得到遵守。
 
-// ❌ Bad uses:
-// - Database connections (use dependency injection)
-// - Configuration (use struct fields)
-// - Function parameters (pass explicitly)
-```
+示例见 `references/http-and-testing.md`。
 
-### 使用未导出的键类型以防止冲突：
+## 6. context.Background() 与 context.TODO()
 
-```go
-// ✅ Good — unexported type prevents key collisions
-type contextKey struct{}
-
-var requestIDKey = contextKey{}
-
-func WithRequestID(ctx context.Context, id string) context.Context {
-    return context.WithValue(ctx, requestIDKey, id)
-}
-
-func RequestID(ctx context.Context) string {
-    id, _ := ctx.Value(requestIDKey).(string)
-    return id
-}
-```
-
-```go
-// ❌ Bad — string keys risk collisions across packages
-ctx = context.WithValue(ctx, "request_id", id) // any package could overwrite this
-```
-
-### 始终提供访问器函数——绝不要暴露键：
-
-```go
-// ✅ Good — clean API with accessors
-rid := middleware.RequestID(ctx)
-
-// ❌ Bad — exposes internal key type
-rid := ctx.Value(requestIDKey).(string) // caller needs key, risks panic on nil
-```
-
-## 5. HTTP 处理程序中的上下文
-
-### 使用 r.Context() 获取请求上下文：
-
-```go
-func (h *Handler) GetUser(w http.ResponseWriter, r *http.Request) {
-    ctx := r.Context() // carries cancellation when client disconnects
-
-    user, err := h.service.GetUser(ctx, id)
-    if err != nil {
-        if errors.Is(err, context.Canceled) {
-            return // client disconnected, no point writing response
-        }
-        // handle error...
-    }
-    // ...
-}
-```
-
-### 通过中间件附加值：
-
-```go
-func AuthMiddleware(next http.Handler) http.Handler {
-    return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-        user, err := authenticate(r)
-        if err != nil {
-            http.Error(w, "unauthorized", http.StatusUnauthorized)
-            return
-        }
-        ctx := WithUser(r.Context(), user)
-        next.ServeHTTP(w, r.WithContext(ctx))
-    })
-}
-```
-
-## 6. 测试中的 Context
-
-### 在测试中使用带超时的 context，以防止测试挂起：
-
-```go
-func TestSlowOperation(t *testing.T) {
-    ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
-    defer cancel()
-
-    result, err := slowOperation(ctx)
-    if err != nil {
-        t.Fatalf("unexpected error: %v", err)
-    }
-    // assert result...
-}
-```
-
-### 测试取消行为：
-
-```go
-func TestCancellation(t *testing.T) {
-    ctx, cancel := context.WithCancel(context.Background())
-    cancel() // cancel immediately
-
-    _, err := operation(ctx)
-    if !errors.Is(err, context.Canceled) {
-        t.Errorf("expected context.Canceled, got %v", err)
-    }
-}
-```
-
-## 7. context.Background() 与 context.TODO() 的对比
-
-| 函数 | 使用场景 |
+| 函数 | 何时使用 |
 |---|---|
-| `context.Background()` | 顶层：`main()`、`init()`、测试设置。作为明确使用的根 context。 |
-| `context.TODO()` | 尚不确定应使用哪个 context 时的占位符。表示“此处需要修复”。 |
+| `context.Background()` | 顶层：`main()`、`init()`、测试设置。有意创建的根 context。 |
+| `context.TODO()` | 当你尚不清楚该使用哪个 context 时的占位符。表示“这需要修复”。 |
 
-在生产代码中，`context.TODO()` 是一种代码异味——请在发布前将其替换。
+生产代码中的 `context.TODO()` 是一种代码异味——在发布前将其替换。
 
 ## 验证清单
 
-1. 在所有接受 `context.Context` 的函数中，它都是第一个参数
+1. 所有接受 `context.Context` 的函数均将其作为第一个参数
 2. 不在结构体字段中存储 context
 3. 在 `WithCancel`、`WithTimeout`、`WithDeadline` 之后立即调用 `defer cancel()`
-4. 长循环在迭代之间检查 `ctx.Err()`
-5. 子级超时时间不超过父级的超时预算
-6. Context 值使用未导出的键类型和访问器函数
-7. Context 值中仅存储请求范围内的元数据（而不是配置、连接）
-8. HTTP 处理程序使用 `r.Context()` 并将其向下游传递
+4. 长循环在每次迭代之间检查 `ctx.Err()`
+5. 子级超时不超过父级超时预算
+6. Context 值使用带有访问器函数的未导出键类型
+7. Context 值中仅存储请求范围的元数据（不包括配置、连接）
+8. HTTP 处理器使用 `r.Context()` 并将其向下游传递
 9. 不传递 `nil` context——使用 `context.TODO()` 或 `context.Background()`
-10. 测试使用 `context.WithTimeout` 以防止挂起
+10. 测试使用 `context.WithTimeout` 防止卡住
