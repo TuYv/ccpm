@@ -2,7 +2,7 @@
   "id": "modu-ai-moai-adk-hns-lsel-curator",
   "name": "hns-lsel-curator",
   "description": "> Local Self-Evolution Loop (LSEL) curator — the CLUSTER + drain engine for the GOOS-local PROPOSE→APPLY seam closure (SPEC-LSEL-LOCAL-EVOLUTION-001). Companion-offset drain of .moai/lessons-inbox.jsonl with a drain-side severity filter that drops the ~65% Bash-timeout/sandbox noise, event_key clustering with a frequency gate, and a Generative-Agents-style 1-10 importance score. Candidates stage at .moai/state/lsel/clusters.json. M1 = drain only (NO PROPOSE, NO APPLY, NO memory/ writes).",
-  "category": "开发编程",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/modu-ai/moai-adk/blob/main/.claude/skills/hns-lsel-curator/SKILL.md",
     "path": ".claude/skills/hns-lsel-curator/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-18T00:52:31.754Z",
+    "discovered_at": "2026-08-18T02:51:00.082Z",
     "stars": 1174,
     "language": "Go",
-    "pushed_at": "2026-08-18T00:51:40Z",
+    "pushed_at": "2026-08-18T02:07:45Z",
     "license": "Apache-2.0"
   },
   "summary_zh": "一个本地经验日志清理与聚类引擎，用于过滤沙箱噪声、归并高频问题，为后续自动改进筛选候选项。"

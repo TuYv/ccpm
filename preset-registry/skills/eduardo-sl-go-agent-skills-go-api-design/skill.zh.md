@@ -10,13 +10,17 @@ description: >
   "middleware pattern", "graceful shutdown", "gRPC service", "API versioning".
   Do NOT use for general architecture (use go-architecture-review) or
   concurrency in handlers (use go-concurrency-review).
+user-invocable: true
 license: MIT
+compatibility: Designed for Claude Code or similar AI coding agents working on Go projects. Requires the Go toolchain.
+allowed-tools: Read Edit Write Glob Grep Bash(go:*) Bash(gofmt:*)
 metadata:
-  version: "1.0.0"
+  author: eduardo-sl
+  version: "1.1.0"
 ---
 # Go API 设计
 
-API 是契约。一旦发布，就意味着承诺。设计 API 时，应假设你将维护它们十年——因为很可能确实如此。
+API 是契约。一旦发布，就意味着承诺。请以维护十年的标准来设计它们——因为你很可能真的要维护这么久。
 
 ## 1. HTTP 处理器结构
 
@@ -127,11 +131,11 @@ func Recoverer(logger *slog.Logger) func(http.Handler) http.Handler {
 Recoverer → RequestID → Logger → Auth → RateLimit → Handler
 ```
 
-Recover 必须位于最外层。Auth 必须位于业务逻辑之前。Logger 负责记录耗时。
+Recover 必须位于最外层。Auth 应位于业务逻辑之前。Logger 用于记录耗时。
 
 ## 3. 请求验证
 
-### 一步完成解码和验证：
+### 在一个步骤中完成解码和验证：
 
 ```go
 type CreateUserRequest struct {
@@ -172,8 +176,8 @@ GET    /api/v1/users/{id}/orders → list user orders (nested resource)
 
 规则：
 - 资源使用复数名词：`/users`，而不是 `/user`
-- 多单词路径使用短横线命名法：`/order-items`
-- JSON 字段使用驼峰命名法：`"createdAt"`、`"firstName"`
+- 多单词路径使用 Kebab-case：`/order-items`
+- JSON 字段使用 camelCase：`"createdAt"`、`"firstName"`
 - 在 URL 路径中指定版本：`/api/v1/...`
 - URL 中不使用动词：`/users/search?q=alice`，而不是 `/searchUsers`
 
@@ -193,7 +197,7 @@ type PageResponse[T any] struct {
 ```
 
 对于大型数据集，优先使用基于游标的分页，而不是 offset/limit。
-在并发写入时，偏移量分页会失效。
+并发写入时，偏移量分页会失效。
 
 ## 6. 优雅关闭
 
@@ -251,7 +255,7 @@ func (h *HealthHandler) handleReady(w http.ResponseWriter, r *http.Request) {
 
 ## 8. 错误响应格式
 
-在整个 API 中保持一致的错误响应：
+整个 API 应采用一致的错误响应：
 
 ```json
 {
@@ -265,5 +269,5 @@ func (h *HealthHandler) handleReady(w http.ResponseWriter, r *http.Request) {
 }
 ```
 
-在处理程序边界处将内部错误映射到 HTTP 状态码。
-内部错误绝不应泄露给客户端。
+在处理程序边界处将内部错误映射为 HTTP 状态码。
+绝不应向客户端泄露内部错误。

@@ -1,7 +1,7 @@
 {
   "id": "modu-ai-moai-adk-hns-oss-docs-readme-sync",
   "name": "hns-oss-docs-readme-sync",
-  "description": "> README 4-file synchronization procedure for the oss-docs harness: English README.md as primary source, ko/ja/zh derivation, the shared language-switcher header contract, section-order parity checklist, and the manual verification recipe (no linter exists for READMEs). Loaded by the content-author and locale-translator specialists for any README work.",
+  "description": "> README 4-file synchronization procedure for the oss-docs harness: Korean README.ko.md as primary source, en/ja/zh derivation, the shared language-switcher header contract, section-order parity checklist, and the manual verification recipe (no linter exists for READMEs). Loaded by the content-author and locale-translator specialists for any README work.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/modu-ai/moai-adk/blob/main/.claude/skills/hns-oss-docs-readme-sync/SKILL.md",
     "path": ".claude/skills/hns-oss-docs-readme-sync/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-18T00:52:32.369Z",
+    "discovered_at": "2026-08-18T02:51:00.658Z",
     "stars": 1174,
     "language": "Go",
-    "pushed_at": "2026-08-18T00:51:40Z",
+    "pushed_at": "2026-08-18T02:07:45Z",
     "license": "Apache-2.0"
   },
-  "summary_zh": "一套开源文档 README 多语言同步规范，帮助内容作者和译者统一中英日韩版本的结构、语言切换栏与人工校验流程。"
+  "summary_zh": "一套多语言 README 同步规范，用于从韩文主稿生成英日中文版本，并人工校验章节顺序与内容一致性。"
 }

@@ -2,7 +2,7 @@
   "id": "modu-ai-moai-adk-hns-lsel-applier",
   "name": "hns-lsel-applier",
   "description": "> Local Self-Evolution Loop (LSEL) APPLY engine — the playback-only consumer of approved decision.json records that drives `.moai/hooks/lsel-apply.sh` for the GOOS-local PROPOSE→APPLY seam closure (SPEC-LSEL-LOCAL-EVOLUTION-001 M3). Reads an approved decision.json, validates the target against the frozen allowlist (.claude/lsel/frozen-allowlist.json), mechanically refuses execution-meta targets lacking a synchronous-approval marker, applies the referenced diff.patch, appends an apply-ledger.json",
-  "category": "开发编程",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/modu-ai/moai-adk/blob/main/.claude/skills/hns-lsel-applier/SKILL.md",
     "path": ".claude/skills/hns-lsel-applier/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-18T00:52:31.634Z",
+    "discovered_at": "2026-08-18T02:50:59.951Z",
     "stars": 1174,
     "language": "Go",
-    "pushed_at": "2026-08-18T00:51:40Z",
+    "pushed_at": "2026-08-18T02:07:45Z",
     "license": "Apache-2.0"
   },
   "summary_zh": "这是一个本地自进化流程的补丁执行器，用于安全回放已批准决策，在白名单校验后应用补丁并记录结果。"

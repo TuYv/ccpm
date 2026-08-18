@@ -2,7 +2,7 @@
   "id": "modu-ai-moai-adk-moai-domain-humanize",
   "name": "moai-domain-humanize",
   "description": "> AI text humanization and 윤문 (post-editing) specialist that detects and removes AI tells while preserving meaning, facts, and figures. Covers Korean, English, Japanese, and Chinese with a shared severity model (S1/S2/S3), quality grades (A/B/C/D), and 30%/50% over-editing guardrails. Use to make AI-generated text read as human-authored without changing what it says (de-ai, naturalness pass).",
-  "category": "开发编程",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/modu-ai/moai-adk/blob/main/.claude/skills/moai-domain-humanize/SKILL.md",
     "path": ".claude/skills/moai-domain-humanize/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-18T00:52:33.329Z",
+    "discovered_at": "2026-08-18T02:51:01.650Z",
     "stars": 1174,
     "language": "Go",
-    "pushed_at": "2026-08-18T00:51:40Z",
+    "pushed_at": "2026-08-18T02:07:45Z",
     "license": "Apache-2.0"
   },
   "summary_zh": "一款多语言AI文本润色工具，可消除机器写作痕迹，在保留原意和数据的前提下让中英日韩内容更自然。"

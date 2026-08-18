@@ -9,9 +9,13 @@ description: >
   "prepare PR", "squash commits".
   Do NOT use for changelog generation (use changelog-generator) or
   code review (use go-code-review).
+user-invocable: true
 license: MIT
+compatibility: Designed for Claude Code or similar AI coding agents. Requires git.
+allowed-tools: Read Glob Grep Bash(git:*)
 metadata:
-  version: "1.0.0"
+  author: eduardo-sl
+  version: "1.2.0"
 ---
 
 # Git Commit Standards
@@ -189,14 +193,19 @@ git commit  # opens $EDITOR
 
 ### Interactive rebase before PR:
 
-```bash
-# Clean up commit history before opening PR
-git rebase -i main
+Interactive rebase opens `$EDITOR`, so an agent cannot drive it. Prepare
+fixups non-interactively, then hand the final step to the developer:
 
-# Squash fixup commits
-# Reword unclear messages
-# Reorder for logical flow
+```bash
+# Mark a commit as a fixup of an earlier one (no editor)
+git commit --fixup <sha>
+
+# Collapse them automatically (no editor with --autosquash + GIT_SEQUENCE_EDITOR)
+GIT_SEQUENCE_EDITOR=: git rebase -i --autosquash main
 ```
+
+For reordering or rewording, tell the developer to run `git rebase -i main`
+themselves rather than attempting it.
 
 ## 7. What NOT to Commit
 

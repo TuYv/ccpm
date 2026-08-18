@@ -1,7 +1,7 @@
 {
   "id": "eduardo-sl-go-agent-skills-go-test-quality",
   "name": "go-test-quality",
-  "description": "> Go testing patterns for production-grade code: subtests, test helpers, fixtures, golden files, httptest, testcontainers, property-based testing, and fuzz testing. Covers mocking strategies, test isolation, coverage analysis, and test design philosophy. Use when writing tests, improving coverage, reviewing test quality, setting up test infrastructure, or choosing a testing approach. Trigger examples: \"add tests\", \"improve coverage\", \"write tests for this\", \"test helpers\", \"mock this dependency\"",
+  "description": "> Go testing patterns for production-grade code: subtests, test helpers, fixtures, golden files, httptest, testcontainers, fuzz testing, and testing/synctest. Covers mocking strategies, test isolation, coverage analysis, and test design philosophy. Use when writing tests, improving coverage, reviewing test quality, setting up test infrastructure, or choosing a testing approach. Trigger examples: \"add tests\", \"improve coverage\", \"write tests for this\", \"test helpers\", \"mock this dependency\", \"int",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/eduardo-sl/go-agent-skills/blob/main/skills/(testing)/go-test-quality/SKILL.md",
     "path": "skills/(testing)/go-test-quality/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-18T00:32:16.762Z",
+    "discovered_at": "2026-08-18T02:00:27.803Z",
     "stars": 65,
     "language": "Shell",
-    "pushed_at": "2026-07-11T22:56:44Z",
+    "pushed_at": "2026-08-18T01:54:24Z",
     "license": "MIT"
   },
-  "summary_zh": "一套面向生产级 Go 代码的测试实践指南，适合编写与评审测试、提升覆盖率、搭建测试基础设施及选择测试方案。"
+  "summary_zh": "面向生产级 Go 项目的测试实践指南，适合编写测试、提升覆盖率、隔离依赖及评审测试质量。"
 }

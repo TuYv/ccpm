@@ -2,7 +2,7 @@
   "id": "modu-ai-moai-adk-moai-workflow-docs-claim-check",
   "name": "moai-workflow-docs-claim-check",
   "description": "> Read-only check of whether the claims a public-facing document makes (README, release notes, install and usage guides) are supported by user-supplied evidence. Runs Preflight, Claim Triage, and Validation, splits composite claims into atomic ones, and labels each. Runs no commands and writes no fixes.",
-  "category": "开发编程",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/modu-ai/moai-adk/blob/main/.claude/skills/moai-workflow-docs-claim-check/SKILL.md",
     "path": ".claude/skills/moai-workflow-docs-claim-check/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-18T00:52:35.638Z",
+    "discovered_at": "2026-08-18T02:51:04.270Z",
     "stars": 1174,
     "language": "Go",
-    "pushed_at": "2026-08-18T00:51:40Z",
+    "pushed_at": "2026-08-18T02:07:45Z",
     "license": "Apache-2.0"
   },
   "summary_zh": "只读核验 README、发布说明和使用指南中的公开表述是否有证据支撑，适合发布前排查不实或缺乏依据的内容。"

@@ -2,7 +2,7 @@
   "id": "modu-ai-moai-adk-moai-meta-harness",
   "name": "moai-meta-harness",
   "description": "> DEPRECATED — legacy 7-Phase meta-harness. Redirects to the v4 harness Builder (/moai:harness <natural-language request>) which replaces the static 7-Phase workflow with an orchestrator-direct 4-phase Builder (ANALYZE / PLAN / GENERATE / ACTIVATE) + a manifest-driven dynamic-workflow Runner. Retained as the redirect source for backward-compat invocation paths; the 7-Phase body below is preserved as historical reference, NOT for new harness creation.",
-  "category": "开发编程",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/modu-ai/moai-adk/blob/main/.claude/skills/moai-meta-harness/SKILL.md",
     "path": ".claude/skills/moai-meta-harness/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-18T00:52:34.155Z",
+    "discovered_at": "2026-08-18T02:51:02.515Z",
     "stars": 1174,
     "language": "Go",
-    "pushed_at": "2026-08-18T00:51:40Z",
+    "pushed_at": "2026-08-18T02:07:45Z",
     "license": "Apache-2.0"
   },
   "summary_zh": "已弃用的旧版元流程入口，仅用于兼容旧调用并转向新版动态构建器，不适合创建新流程。"

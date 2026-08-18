@@ -10,9 +10,13 @@ description: >
   "SQL injection", "input validation", "secrets management", "auth review".
   Do NOT use for dependency CVE scanning (use go-dependency-audit) or
   concurrency safety (use go-concurrency-review).
+user-invocable: true
 license: MIT
+compatibility: Designed for Claude Code or similar AI coding agents working on Go projects. Requires the Go toolchain. govulncheck, gosec and gitleaks are optional. Read-only: this skill reports findings, it does not edit code.
+allowed-tools: Read Glob Grep Bash(go:*) Bash(gofmt:*) Bash(govulncheck:*) Bash(gosec:*) Bash(gitleaks:*)
 metadata:
-  version: "1.2.0"
+  author: eduardo-sl
+  version: "1.3.0"
 ---
 
 # Go Security Audit
@@ -210,7 +214,7 @@ dbURL := os.Getenv("DATABASE_URL")
 secret, err := secretsManager.GetSecret(ctx, "api-key")
 
 // ❌ CRITICAL
-const apiKey = "sk-1234567890abcdef" // hardcoded secret
+const apiKey = "EXAMPLE-NOT-A-REAL-KEY" // hardcoded secret
 ```
 
 ### Use `.gitignore`:
