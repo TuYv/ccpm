@@ -1,0 +1,26 @@
+{
+  "id": "chrisbanes-skills-gradle-run",
+  "name": "gradle-run",
+  "description": "Use when planning to execute Gradle through `gradle`, `./gradlew`, or a custom `gradlew*` wrapper script, or diagnosing a Gradle build, check, test, lint, warning, or failure.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "chrisbanes",
+  "install_path": ".claude/skills/gradle-run/SKILL.md",
+  "source": {
+    "repo": "chrisbanes/skills",
+    "url": "https://github.com/chrisbanes/skills/blob/main/skills/gradle-run/SKILL.md",
+    "path": "skills/gradle-run/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T21:09:29.649Z",
+    "stars": 936,
+    "language": "Python",
+    "pushed_at": "2026-08-18T19:38:12Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "用于执行或诊断 Gradle 构建、检查、测试、代码检查及各类警告和失败问题。"
+}
