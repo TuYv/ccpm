@@ -1,7 +1,7 @@
 {
   "id": "eduardo-sl-go-agent-skills-go-design-patterns",
   "name": "go-design-patterns",
-  "description": "> Idiomatic Go design patterns: functional options, builder, factory, strategy, middleware chain, pub/sub, and other patterns adapted for Go's type system. Use when: \"design pattern\", \"functional options\", \"builder pattern\", \"factory pattern\", \"strategy pattern\", \"middleware chain\", \"option pattern\", \"how to structure this\". Do NOT use for: interface design principles (use go-interface-design), package layout (use go-architecture-review), or concurrency patterns (use go-concurrency-review).",
+  "description": "> Idiomatic Go design patterns: functional options, builder, factory, strategy, middleware chain, pub/sub, and other patterns adapted for Go's type system. Use when: \"design pattern\", \"functional options\", \"builder pattern\", \"factory pattern\", \"strategy pattern\", \"middleware chain\", \"option pattern\", \"how to structure this\". Not for: interface design (go-interface-design), package layout (go-architecture-review), concurrency patterns (go-concurrency-review).",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/eduardo-sl/go-agent-skills/blob/main/skills/(architecture)/go-design-patterns/SKILL.md",
     "path": "skills/(architecture)/go-design-patterns/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-18T02:00:25.821Z",
+    "discovered_at": "2026-08-18T03:55:20.552Z",
     "stars": 65,
     "language": "Shell",
-    "pushed_at": "2026-08-18T01:54:24Z",
+    "pushed_at": "2026-08-18T03:14:22Z",
     "license": "MIT"
   },
-  "summary_zh": "一套符合 Go 语言习惯的设计模式指南，适合解决功能选项、构建器、工厂、策略及中间件链等代码结构问题。"
+  "summary_zh": "一套面向 Go 的惯用设计模式实践，帮助你选择合适的代码组织方式，解决复杂模块的结构设计问题。"
 }

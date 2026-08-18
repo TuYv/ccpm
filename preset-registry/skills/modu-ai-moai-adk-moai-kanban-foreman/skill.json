@@ -1,0 +1,25 @@
+{
+  "id": "modu-ai-moai-adk-moai-kanban-foreman",
+  "name": "moai-kanban-foreman",
+  "description": "> One unattended kanban foreman iteration: watch the backlog queue, dispatch the next operator-picked card to an isolated worker, collect completion evidence on read (not on claims), and report. This is the body the project's loop.md driver invokes each iteration of a bare /loop; it can also be invoked directly to test one cycle by hand.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "modu-ai",
+  "install_path": ".claude/skills/moai-kanban-foreman/SKILL.md",
+  "source": {
+    "repo": "modu-ai/moai-adk",
+    "url": "https://github.com/modu-ai/moai-adk/blob/main/.claude/skills/moai-kanban-foreman/SKILL.md",
+    "path": ".claude/skills/moai-kanban-foreman/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T03:59:52.915Z",
+    "stars": 1174,
+    "language": "Go",
+    "pushed_at": "2026-08-18T03:44:00Z",
+    "license": "Apache-2.0"
+  }
+}

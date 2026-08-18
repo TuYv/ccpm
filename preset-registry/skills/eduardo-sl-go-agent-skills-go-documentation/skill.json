@@ -1,7 +1,7 @@
 {
   "id": "eduardo-sl-go-agent-skills-go-documentation",
   "name": "go-documentation",
-  "description": "> Go documentation conventions: godoc comments, package docs, testable Example functions, deprecation notices, and doc links. Use when: \"add godoc\", \"document this package\", \"write doc comments\", \"add examples to docs\", \"deprecate a function\", \"package documentation\", \"improve the docs\". Do NOT use for: commit messages (use git-commit), README-level project guides (plain writing task), or code style rules (use go-coding-standards).",
+  "description": "> Go documentation conventions: godoc comments, package docs, testable Example functions, deprecation notices, and doc links. Use when: \"add godoc\", \"document this package\", \"write doc comments\", \"add examples to docs\", \"deprecate a function\", \"package documentation\", \"improve the docs\". Not for: commit messages (git-commit), README-level guides (plain writing task), code style (go-coding-standards).",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/eduardo-sl/go-agent-skills/blob/main/skills/(code-quality)/go-documentation/SKILL.md",
     "path": "skills/(code-quality)/go-documentation/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-18T02:00:26.736Z",
+    "discovered_at": "2026-08-18T03:55:21.728Z",
     "stars": 65,
     "language": "Shell",
-    "pushed_at": "2026-08-18T01:54:24Z",
+    "pushed_at": "2026-08-18T03:14:22Z",
     "license": "MIT"
-  },
-  "summary_zh": "一套 Go 文档编写规范，适合补充代码注释、包说明、可测试示例、弃用提示和文档链接。"
+  }
 }

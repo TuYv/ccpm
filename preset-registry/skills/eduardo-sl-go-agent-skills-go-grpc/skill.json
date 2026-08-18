@@ -1,7 +1,7 @@
 {
   "id": "eduardo-sl-go-agent-skills-go-grpc",
   "name": "go-grpc",
-  "description": "> gRPC services in Go beyond the basics: proto design, status codes and error details, interceptors, deadlines, streaming, health checks, and graceful shutdown. Use when: \"gRPC service\", \"proto design\", \"gRPC error handling\", \"interceptor\", \"gRPC streaming\", \"gRPC deadline\", \"grpc health check\", \"gRPC status codes\". Do NOT use for: REST/HTTP handler design (use go-api-design), protobuf-agnostic API layering (use go-architecture-review), or TLS hardening details (use go-security-audit).",
+  "description": "> gRPC services in Go beyond the basics: proto design, status codes and error details, interceptors, deadlines, streaming, health checks, and graceful shutdown. Use when: \"gRPC service\", \"proto design\", \"gRPC error handling\", \"interceptor\", \"gRPC streaming\", \"gRPC deadline\", \"grpc health check\", \"gRPC status codes\". Not for: REST handlers (go-api-design), protobuf-agnostic layering (go-architecture-review), TLS hardening (go-security-audit).",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/eduardo-sl/go-agent-skills/blob/main/skills/(architecture)/go-grpc/SKILL.md",
     "path": "skills/(architecture)/go-grpc/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-18T02:00:25.927Z",
+    "discovered_at": "2026-08-18T03:55:20.830Z",
     "stars": 65,
     "language": "Shell",
-    "pushed_at": "2026-08-18T01:54:24Z",
+    "pushed_at": "2026-08-18T03:14:22Z",
     "license": "MIT"
-  },
-  "summary_zh": "面向 Go 的 gRPC 服务进阶实践指南，适合设计协议、处理错误、流式通信、超时控制、健康检查与优雅停机。"
+  }
 }

@@ -1,7 +1,7 @@
 {
   "id": "eduardo-sl-go-agent-skills-go-refactoring",
   "name": "go-refactoring",
-  "description": "> Safe refactoring workflow for Go: behavior-preserving steps, compiler-checked renames, extracting packages, breaking circular dependencies, and strangler migrations — always behind green tests. Use when: \"refactor this\", \"rename across the codebase\", \"extract a package\", \"break this circular dependency\", \"split this god package\", \"migrate callers\", \"clean up without changing behavior\". Do NOT use for: deciding the target architecture (use go-architecture-review), adopting new language features",
+  "description": "> Safe refactoring workflow for Go: behavior-preserving steps, compiler-checked renames, extracting packages, breaking circular dependencies, and strangler migrations — always behind green tests. Use when: \"refactor this\", \"rename across the codebase\", \"extract a package\", \"break this circular dependency\", \"split this god package\", \"migrate callers\", \"clean up without changing behavior\". Not for: choosing the target architecture (go-architecture-review), adopting new language features (go-modern",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/eduardo-sl/go-agent-skills/blob/main/skills/(workflow)/go-refactoring/SKILL.md",
     "path": "skills/(workflow)/go-refactoring/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-18T02:00:28.350Z",
+    "discovered_at": "2026-08-18T03:55:23.574Z",
     "stars": 65,
     "language": "Shell",
-    "pushed_at": "2026-08-18T01:54:24Z",
+    "pushed_at": "2026-08-18T03:14:22Z",
     "license": "MIT"
-  },
-  "summary_zh": "一套面向 Go 项目的安全重构流程，适合在测试保障下完成全局重命名、拆包、解除循环依赖和渐进式迁移。"
+  }
 }

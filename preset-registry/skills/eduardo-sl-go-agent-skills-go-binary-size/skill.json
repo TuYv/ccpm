@@ -1,0 +1,26 @@
+{
+  "id": "eduardo-sl-go-agent-skills-go-binary-size",
+  "name": "go-binary-size",
+  "description": "> Reduce the size of compiled Go binaries and container images: linker flags, inlining budget, CGO and build tags, embedded assets, dependency weight, and measuring what actually costs bytes. Use when a binary or image is too large, when shrinking a CLI for distribution, or when auditing what a dependency adds to the build. Trigger examples: \"binary is too big\", \"shrink the binary\", \"reduce image size\", \"strip symbols\", \"what is making my binary large\", \"ldflags -s -w\". Not for: runtime speed an",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "eduardo-sl",
+  "install_path": ".claude/skills/go-binary-size/SKILL.md",
+  "source": {
+    "repo": "eduardo-sl/go-agent-skills",
+    "url": "https://github.com/eduardo-sl/go-agent-skills/blob/main/skills/(workflow)/go-binary-size/SKILL.md",
+    "path": "skills/(workflow)/go-binary-size/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T03:55:23.213Z",
+    "stars": 65,
+    "language": "Shell",
+    "pushed_at": "2026-08-18T03:14:22Z",
+    "license": "MIT"
+  },
+  "summary_zh": "帮助分析并缩小 Go 编译产物和容器镜像，适合二进制过大、精简 CLI 或审查依赖体积来源的场景。"
+}

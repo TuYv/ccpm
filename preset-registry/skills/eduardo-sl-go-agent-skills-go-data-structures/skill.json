@@ -1,7 +1,7 @@
 {
   "id": "eduardo-sl-go-agent-skills-go-data-structures",
   "name": "go-data-structures",
-  "description": "> Correct use of Go's built-in data structures: slices (nil vs empty, append semantics, aliasing, preallocation), maps (comma-ok, sets, iteration order), arrays, and choosing between them. Use when: \"slice vs array\", \"nil slice\", \"empty slice\", \"preallocate\", \"map iteration\", \"use a set in Go\", \"slice aliasing\", \"append gotcha\", \"copy a slice\", \"sync.Map or mutex\". Do NOT use for: protecting structures shared across goroutines (use go-concurrency-review), allocation profiling (use go-performance",
+  "description": "> Correct use of Go's built-in data structures: slices (nil vs empty, append semantics, aliasing, preallocation), maps (comma-ok, sets, iteration order), arrays, and choosing between them. Use when: \"slice vs array\", \"nil slice\", \"empty slice\", \"preallocate\", \"map iteration\", \"use a set in Go\", \"slice aliasing\", \"append gotcha\", \"copy a slice\", \"sync.Map or mutex\". Not for: structures shared across goroutines (go-concurrency-review), allocation profiling (go-performance-review), generic containe",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/eduardo-sl/go-agent-skills/blob/main/skills/(code-quality)/go-data-structures/SKILL.md",
     "path": "skills/(code-quality)/go-data-structures/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-18T02:00:26.615Z",
+    "discovered_at": "2026-08-18T03:55:21.622Z",
     "stars": 65,
     "language": "Shell",
-    "pushed_at": "2026-08-18T01:54:24Z",
+    "pushed_at": "2026-08-18T03:14:22Z",
     "license": "MIT"
   },
-  "summary_zh": "一份 Go 内置数据结构使用指南，帮助正确选择和操作切片、映射与数组，避开别名、扩容和遍历顺序等常见坑。"
+  "summary_zh": "讲解 Go 切片、数组和映射的正确用法，帮助避开空值、别名、追加及并发使用陷阱，适合日常容器选型与编码。"
 }

@@ -1,7 +1,7 @@
 {
   "id": "eduardo-sl-go-agent-skills-go-context",
   "name": "go-context",
-  "description": "> Correct usage of context.Context in Go: propagation, cancellation, timeouts, deadlines, values, and common anti-patterns. Use when: \"context usage\", \"context.Context\", \"context cancellation\", \"timeout\", \"context.WithTimeout\", \"context.WithCancel\", \"context values\", \"context propagation\". Do NOT use for: concurrency patterns beyond context (use go-concurrency-review), HTTP middleware context (use go-api-design), or error handling (use go-error-handling).",
+  "description": "> Correct usage of context.Context in Go: propagation, cancellation, timeouts, deadlines, values, and common anti-patterns. Use when: \"context usage\", \"context.Context\", \"context cancellation\", \"timeout\", \"context.WithTimeout\", \"context.WithCancel\", \"context values\", \"context propagation\". Not for: concurrency beyond context (go-concurrency-review), HTTP middleware (go-api-design), error handling (go-error-handling).",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/eduardo-sl/go-agent-skills/blob/main/skills/(code-quality)/go-context/SKILL.md",
     "path": "skills/(code-quality)/go-context/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-18T02:00:26.503Z",
+    "discovered_at": "2026-08-18T03:55:21.514Z",
     "stars": 65,
     "language": "Shell",
-    "pushed_at": "2026-08-18T01:54:24Z",
+    "pushed_at": "2026-08-18T03:14:22Z",
     "license": "MIT"
   },
-  "summary_zh": "一份 Go 上下文使用指南，帮助正确处理传递、取消、超时、截止时间和值，并规避常见误用。"
+  "summary_zh": "一份 Go context.Context 使用指南，帮助正确处理上下文传递、取消、超时、截止时间和值，避免常见误用。"
 }

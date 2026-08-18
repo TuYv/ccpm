@@ -1,7 +1,7 @@
 {
   "id": "eduardo-sl-go-agent-skills-go-dependency-audit",
   "name": "go-dependency-audit",
-  "description": "> Audit Go module dependencies: detect outdated packages, check for known vulnerabilities, review go.mod hygiene, identify unused or redundant deps, and evaluate dependency quality. Use when auditing dependencies, checking for CVEs, cleaning up go.mod, upgrading modules, or evaluating third-party packages. Trigger examples: \"check dependencies\", \"audit deps\", \"go.mod review\", \"update modules\", \"vulnerability scan\", \"govulncheck\". Do NOT use for code-level security issues (use go-security-audit) ",
+  "description": "> Audit Go module dependencies: detect outdated packages, check for known vulnerabilities, review go.mod hygiene, identify unused or redundant deps, and evaluate dependency quality. Use when auditing dependencies, checking for CVEs, cleaning up go.mod, upgrading modules, or evaluating third-party packages. Trigger examples: \"check dependencies\", \"audit deps\", \"go.mod review\", \"update modules\", \"vulnerability scan\", \"govulncheck\". Not for: code-level security (go-security-audit), architecture rev",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/eduardo-sl/go-agent-skills/blob/main/skills/(workflow)/go-dependency-audit/SKILL.md",
     "path": "skills/(workflow)/go-dependency-audit/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-18T02:00:28.238Z",
+    "discovered_at": "2026-08-18T03:55:23.453Z",
     "stars": 65,
     "language": "Shell",
-    "pushed_at": "2026-08-18T01:54:24Z",
+    "pushed_at": "2026-08-18T03:14:22Z",
     "license": "MIT"
   },
-  "summary_zh": "用于审计 Go 模块依赖，可发现过期或有漏洞的包、清理 go.mod，并评估第三方依赖质量。"
+  "summary_zh": "用于审计 Go 模块依赖，发现过期或有漏洞的包、清理冗余依赖并检查 go.mod，适合升级模块和评估第三方库质量。"
 }

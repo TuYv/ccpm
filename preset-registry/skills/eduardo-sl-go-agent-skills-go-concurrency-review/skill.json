@@ -1,7 +1,7 @@
 {
   "id": "eduardo-sl-go-agent-skills-go-concurrency-review",
   "name": "go-concurrency-review",
-  "description": "> Review and implement safe concurrency patterns in Go: goroutines, channels, sync primitives, context propagation, and goroutine lifecycle management. Use when writing concurrent code, reviewing async patterns, checking thread safety, debugging race conditions, or designing producer/consumer pipelines. Trigger examples: \"check thread safety\", \"review goroutines\", \"race condition\", \"channel patterns\", \"sync.Mutex\", \"context cancellation\", \"goroutine leak\". Do NOT use for general code style (use ",
+  "description": "> Review and implement safe concurrency patterns in Go: goroutines, channels, sync primitives, context propagation, and goroutine lifecycle management. Use when writing concurrent code, reviewing async patterns, checking thread safety, debugging race conditions, or designing producer/consumer pipelines. Trigger examples: \"check thread safety\", \"review goroutines\", \"race condition\", \"channel patterns\", \"sync.Mutex\", \"context cancellation\", \"goroutine leak\". Not for: general style (go-coding-stand",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/eduardo-sl/go-agent-skills/blob/main/skills/(safety)/go-concurrency-review/SKILL.md",
     "path": "skills/(safety)/go-concurrency-review/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-18T02:00:27.204Z",
+    "discovered_at": "2026-08-18T03:55:22.209Z",
     "stars": 65,
     "language": "Shell",
-    "pushed_at": "2026-08-18T01:54:24Z",
+    "pushed_at": "2026-08-18T03:14:22Z",
     "license": "MIT"
   },
-  "summary_zh": "用于审查和实现 Go 安全并发模式，适合排查竞态、线程安全、协程泄漏及设计生产消费管道。"
+  "summary_zh": "用于审查和实现 Go 并发代码，帮助排查竞态、线程安全问题及协程泄漏，适合设计安全的异步流程和生产者消费者管道。"
 }

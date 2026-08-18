@@ -1,7 +1,7 @@
 {
   "id": "eduardo-sl-go-agent-skills-go-semantic-tools",
   "name": "go-semantic-tools",
-  "description": "> Navigate and analyze Go codebases semantically with the toolchain instead of text search: gopls (references, implementations, call hierarchy, rename), go list for the dependency graph, and go doc for APIs. Use when: \"find all callers\", \"who implements this interface\", \"where is this used\", \"trace the dependency graph\", \"explore this codebase\", \"find usages before changing\", \"map the module\". Do NOT use for: performing the refactor itself (use go-refactoring), judging the architecture found (us",
+  "description": "> Navigate and analyze Go codebases semantically with the toolchain instead of text search: gopls (references, implementations, call hierarchy, rename), go list for the dependency graph, and go doc for APIs. Use when: \"find all callers\", \"who implements this interface\", \"where is this used\", \"trace the dependency graph\", \"explore this codebase\", \"find usages before changing\", \"map the module\". Not for: performing the refactor (go-refactoring), judging the architecture (go-architecture-review), w",
   "category": "文档写作",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/eduardo-sl/go-agent-skills/blob/main/skills/(workflow)/go-semantic-tools/SKILL.md",
     "path": "skills/(workflow)/go-semantic-tools/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-18T02:00:28.462Z",
+    "discovered_at": "2026-08-18T03:55:23.689Z",
     "stars": 65,
     "language": "Shell",
-    "pushed_at": "2026-08-18T01:54:24Z",
+    "pushed_at": "2026-08-18T03:14:22Z",
     "license": "MIT"
-  },
-  "summary_zh": "基于 Go 工具链进行语义化代码导航与分析，适合查找调用、接口实现、引用及模块依赖。"
+  }
 }

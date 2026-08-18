@@ -1,0 +1,25 @@
+{
+  "id": "eduardo-sl-go-agent-skills-go-skills-router",
+  "name": "go-skills-router",
+  "description": "> Index and routing table for this repository's Go skills: maps a task to the skill that owns it, names the secondary skills worth loading alongside, and draws the boundary between skills whose triggers overlap. Use when it is unclear which Go skill applies, when a task spans several concerns at once, when two skills seem to cover the same ground, or when the user asks what Go skills are available. Trigger examples: \"which skill should I use\", \"what Go skills do you have\", \"is this concurrency o",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "eduardo-sl",
+  "install_path": ".claude/skills/go-skills-router/SKILL.md",
+  "source": {
+    "repo": "eduardo-sl/go-agent-skills",
+    "url": "https://github.com/eduardo-sl/go-agent-skills/blob/main/skills/(workflow)/go-skills-router/SKILL.md",
+    "path": "skills/(workflow)/go-skills-router/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T03:55:23.815Z",
+    "stars": 65,
+    "language": "Shell",
+    "pushed_at": "2026-08-18T03:14:22Z",
+    "license": "MIT"
+  }
+}

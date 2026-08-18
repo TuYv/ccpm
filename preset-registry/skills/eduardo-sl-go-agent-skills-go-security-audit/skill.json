@@ -1,7 +1,7 @@
 {
   "id": "eduardo-sl-go-agent-skills-go-security-audit",
   "name": "go-security-audit",
-  "description": "> Security review for Go applications: input validation, SQL injection, authentication/authorization, secrets management, TLS, OWASP Top 10, and secure coding patterns. Use when performing security reviews, checking for vulnerabilities, hardening Go services, or reviewing auth implementations. Trigger examples: \"security review\", \"check vulnerabilities\", \"OWASP\", \"SQL injection\", \"input validation\", \"secrets management\", \"auth review\". Do NOT use for dependency CVE scanning (use go-dependency-au",
+  "description": "> Security review for Go applications: input validation, SQL injection, authentication/authorization, secrets management, TLS, OWASP Top 10, and secure coding patterns. Use when performing security reviews, checking for vulnerabilities, hardening Go services, or reviewing auth implementations. Trigger examples: \"security review\", \"check vulnerabilities\", \"OWASP\", \"SQL injection\", \"input validation\", \"secrets management\", \"auth review\". Not for: dependency CVEs (go-dependency-audit), concurrency ",
   "category": "数据分析",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/eduardo-sl/go-agent-skills/blob/main/skills/(safety)/go-security-audit/SKILL.md",
     "path": "skills/(safety)/go-security-audit/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-18T02:00:27.575Z",
+    "discovered_at": "2026-08-18T03:55:22.653Z",
     "stars": 65,
     "language": "Shell",
-    "pushed_at": "2026-08-18T01:54:24Z",
+    "pushed_at": "2026-08-18T03:14:22Z",
     "license": "MIT"
-  },
-  "summary_zh": "用于审查 Go 应用安全，发现输入校验、注入、认证授权、密钥和 TLS 等风险，适合漏洞排查与服务加固。"
+  }
 }

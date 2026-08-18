@@ -1,7 +1,7 @@
 {
   "id": "eduardo-sl-go-agent-skills-git-commit",
   "name": "git-commit",
-  "description": "> Structured git commit messages following Conventional Commits format for Go projects. Generates well-scoped, atomic commits with clear descriptions. Use when committing changes, writing commit messages, preparing PRs, or reviewing commit history quality. Trigger examples: \"commit these changes\", \"create commit\", \"commit message\", \"prepare PR\", \"squash commits\". Do NOT use for changelog generation (use changelog-generator) or code review (use go-code-review).",
+  "description": "> Structured git commit messages following Conventional Commits format for Go projects. Generates well-scoped, atomic commits with clear descriptions. Use when committing changes, writing commit messages, preparing PRs, or reviewing commit history quality. Trigger examples: \"commit these changes\", \"create commit\", \"commit message\", \"prepare PR\", \"squash commits\". Not for: code review (go-code-review), changelog generation.",
   "category": "文档写作",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/eduardo-sl/go-agent-skills/blob/main/skills/(workflow)/git-commit/SKILL.md",
     "path": "skills/(workflow)/git-commit/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-18T02:00:28.025Z",
+    "discovered_at": "2026-08-18T03:55:23.089Z",
     "stars": 65,
     "language": "Shell",
-    "pushed_at": "2026-08-18T01:54:24Z",
+    "pushed_at": "2026-08-18T03:14:22Z",
     "license": "MIT"
   },
-  "summary_zh": "为 Go 项目生成符合 Conventional Commits 规范的原子化提交信息，适合提交代码、整理 PR 或优化提交历史。"
+  "summary_zh": "用于 Go 项目生成符合约定式提交规范的清晰、原子化提交信息，适合提交代码、准备 PR 或整理提交历史。"
 }

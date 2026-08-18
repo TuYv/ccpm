@@ -1,7 +1,7 @@
 {
   "id": "eduardo-sl-go-agent-skills-go-error-handling",
   "name": "go-error-handling",
-  "description": "> Go error handling patterns, wrapping, sentinel errors, custom error types, and the errors package. Grounded in Effective Go, Go Code Review Comments, and production-proven idioms. Use when implementing error handling, designing error types, debugging error chains, or reviewing error handling patterns. Trigger examples: \"handle errors\", \"error wrapping\", \"custom error type\", \"sentinel errors\", \"errors.Is\", \"errors.As\". Do NOT use for panic/recover patterns in middleware (use go-api-design) or t",
+  "description": "> Go error handling patterns, wrapping, sentinel errors, custom error types, and the errors package. Grounded in Effective Go, Go Code Review Comments, and production-proven idioms. Use when implementing error handling, designing error types, debugging error chains, or reviewing error handling patterns. Trigger examples: \"handle errors\", \"error wrapping\", \"custom error type\", \"sentinel errors\", \"errors.Is\", \"errors.As\". Not for: panic/recover in middleware (go-api-design), test assertions (go-te",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/eduardo-sl/go-agent-skills/blob/main/skills/(code-quality)/go-error-handling/SKILL.md",
     "path": "skills/(code-quality)/go-error-handling/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-18T02:00:26.855Z",
+    "discovered_at": "2026-08-18T03:55:21.847Z",
     "stars": 65,
     "language": "Shell",
-    "pushed_at": "2026-08-18T01:54:24Z",
+    "pushed_at": "2026-08-18T03:14:22Z",
     "license": "MIT"
-  },
-  "summary_zh": "一套基于官方规范和生产实践的 Go 错误处理指南，适合设计错误类型、包装与排查错误链或审查相关代码。"
+  }
 }

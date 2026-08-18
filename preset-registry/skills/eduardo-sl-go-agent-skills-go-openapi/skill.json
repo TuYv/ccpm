@@ -1,0 +1,25 @@
+{
+  "id": "eduardo-sl-go-agent-skills-go-openapi",
+  "name": "go-openapi",
+  "description": "> Spec-first REST development in Go with OpenAPI: generating server interfaces and clients with oapi-codegen, request validation middleware, RFC 9457 error bodies, contract testing, and detecting breaking API changes. Use when the API has or should have an OpenAPI document, when wiring code generation into the build, or when a hand-written handler has drifted from its published contract. Trigger examples: \"OpenAPI\", \"swagger spec\", \"oapi-codegen\", \"generate a client from the spec\", \"validate req",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "eduardo-sl",
+  "install_path": ".claude/skills/go-openapi/SKILL.md",
+  "source": {
+    "repo": "eduardo-sl/go-agent-skills",
+    "url": "https://github.com/eduardo-sl/go-agent-skills/blob/main/skills/(architecture)/go-openapi/SKILL.md",
+    "path": "skills/(architecture)/go-openapi/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T03:55:21.056Z",
+    "stars": 65,
+    "language": "Shell",
+    "pushed_at": "2026-08-18T03:14:22Z",
+    "license": "MIT"
+  }
+}

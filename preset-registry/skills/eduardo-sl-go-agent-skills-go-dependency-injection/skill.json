@@ -1,7 +1,7 @@
 {
   "id": "eduardo-sl-go-agent-skills-go-dependency-injection",
   "name": "go-dependency-injection",
-  "description": "> Dependency injection in Go: constructor injection, wiring in main, avoiding global state, and when frameworks (wire, fx, dig) earn their complexity. Use when: \"dependency injection\", \"wire up dependencies\", \"inject this\", \"remove global state\", \"singleton in Go\", \"use google/wire\", \"uber fx\", \"make this testable\". Do NOT use for: interface design principles (use go-interface-design), project directory structure (use go-project-layout), or test doubles and mocks (use go-test-quality).",
+  "description": "> Dependency injection in Go: constructor injection, wiring in main, avoiding global state, and when frameworks (wire, fx, dig) earn their complexity. Use when: \"dependency injection\", \"wire up dependencies\", \"inject this\", \"remove global state\", \"singleton in Go\", \"use google/wire\", \"uber fx\", \"make this testable\". Not for: interface design (go-interface-design), directory structure (go-project-layout), test doubles and mocks (go-test-quality).",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/eduardo-sl/go-agent-skills/blob/main/skills/(architecture)/go-dependency-injection/SKILL.md",
     "path": "skills/(architecture)/go-dependency-injection/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-18T02:00:25.708Z",
+    "discovered_at": "2026-08-18T03:55:20.418Z",
     "stars": 65,
     "language": "Shell",
-    "pushed_at": "2026-08-18T01:54:24Z",
+    "pushed_at": "2026-08-18T03:14:22Z",
     "license": "MIT"
   },
-  "summary_zh": "指导在 Go 中通过构造函数注入和依赖装配消除全局状态，提升代码可测试性，并判断何时引入 Wire、Fx 等框架。"
+  "summary_zh": "介绍 Go 中通过构造函数和主函数组装依赖，减少全局状态并提升可测试性，也帮助判断是否值得使用 Wire、Fx 或 Dig 等框架。"
 }

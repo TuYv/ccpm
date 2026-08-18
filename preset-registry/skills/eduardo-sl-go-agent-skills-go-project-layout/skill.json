@@ -1,7 +1,7 @@
 {
   "id": "eduardo-sl-go-agent-skills-go-project-layout",
   "name": "go-project-layout",
-  "description": "> Scaffold new Go projects and services: directory structure, cmd/ and internal/ conventions, when to use a flat layout, module naming, and main package wiring. Use when: \"new Go project\", \"scaffold a service\", \"create project structure\", \"start a Go module\", \"how do I organize a new service\", \"set up folder structure\". Do NOT use for: reviewing an existing architecture (use go-architecture-review), dependency injection wiring details (use go-dependency-injection), or CI pipeline setup (use go-c",
+  "description": "> Scaffold new Go projects and services: directory structure, cmd/ and internal/ conventions, when to use a flat layout, module naming, and main package wiring. Use when: \"new Go project\", \"scaffold a service\", \"create project structure\", \"start a Go module\", \"how do I organize a new service\", \"set up folder structure\". Not for: reviewing an existing architecture (go-architecture-review), DI wiring (go-dependency-injection), CI setup (go-ci).",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/eduardo-sl/go-agent-skills/blob/main/skills/(architecture)/go-project-layout/SKILL.md",
     "path": "skills/(architecture)/go-project-layout/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-18T02:00:26.164Z",
+    "discovered_at": "2026-08-18T03:55:21.167Z",
     "stars": 65,
     "language": "Shell",
-    "pushed_at": "2026-08-18T01:54:24Z",
+    "pushed_at": "2026-08-18T03:14:22Z",
     "license": "MIT"
-  },
-  "summary_zh": "用于搭建新的 Go 项目或服务，帮助规划目录结构、模块命名及入口代码，适合从零创建项目骨架。"
+  }
 }

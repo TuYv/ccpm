@@ -1,7 +1,7 @@
 {
   "id": "eduardo-sl-go-agent-skills-go-architecture-review",
   "name": "go-architecture-review",
-  "description": "> Review Go project architecture: package structure, dependency direction, layering, separation of concerns, domain modeling, and module boundaries. Use when reviewing architecture, designing package layout, evaluating dependency graphs, or refactoring monoliths into modules. Trigger examples: \"review architecture\", \"package structure\", \"project layout\", \"dependency direction\", \"clean architecture Go\", \"module boundaries\". Do NOT use for code-level style (use go-coding-standards) or API endpoint",
+  "description": "> Review Go project architecture: package structure, dependency direction, layering, separation of concerns, domain modeling, and module boundaries. Use when reviewing architecture, designing package layout, evaluating dependency graphs, or refactoring monoliths into modules. Trigger examples: \"review architecture\", \"package structure\", \"project layout\", \"dependency direction\", \"clean architecture Go\", \"module boundaries\". Not for: code-level style (go-coding-standards), endpoint design (go-api-",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/eduardo-sl/go-agent-skills/blob/main/skills/(architecture)/go-architecture-review/SKILL.md",
     "path": "skills/(architecture)/go-architecture-review/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-18T02:00:25.485Z",
+    "discovered_at": "2026-08-18T03:55:20.164Z",
     "stars": 65,
     "language": "Shell",
-    "pushed_at": "2026-08-18T01:54:24Z",
+    "pushed_at": "2026-08-18T03:14:22Z",
     "license": "MIT"
   },
-  "summary_zh": "用于审查和设计 Go 项目架构，适合优化包结构、依赖方向、分层与模块边界，以及将单体应用重构为模块。"
+  "summary_zh": "用于审查 Go 项目的包结构、依赖方向和模块边界，适合架构设计、项目重构及单体拆分。"
 }

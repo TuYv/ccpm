@@ -1,7 +1,7 @@
 {
   "id": "eduardo-sl-go-agent-skills-go-modernize",
   "name": "go-modernize",
-  "description": "> Modernize Go code to use current language features and standard library additions. Covers generics, log/slog, errors.Join, slices/maps packages, range-over-func, and iterators introduced in Go 1.21-1.23+. Use when: \"modernize\", \"update to modern Go\", \"use generics\", \"replace interface{}\", \"upgrade Go version\", \"slog\", \"errors.Join\", \"range over func\", \"iterators\". Do NOT use for: general code style (use go-coding-standards), error handling philosophy (use go-error-handling), or logging archite",
+  "description": "> Modernize Go code to use current language features and standard library additions. Covers generics, log/slog, errors.Join, slices/maps packages, range-over-func, and iterators introduced in Go 1.21-1.23+. Use when: \"modernize\", \"update to modern Go\", \"use generics\", \"replace interface{}\", \"upgrade Go version\", \"slog\", \"errors.Join\", \"range over func\", \"iterators\". Not for: general style (go-coding-standards), error philosophy (go-error-handling), logging architecture (go-observability).",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/eduardo-sl/go-agent-skills/blob/main/skills/(code-quality)/go-modernize/SKILL.md",
     "path": "skills/(code-quality)/go-modernize/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-18T02:00:26.980Z",
+    "discovered_at": "2026-08-18T03:55:21.966Z",
     "stars": 65,
     "language": "Shell",
-    "pushed_at": "2026-08-18T01:54:24Z",
+    "pushed_at": "2026-08-18T03:14:22Z",
     "license": "MIT"
-  },
-  "summary_zh": "一款 Go 代码现代化工具，可将旧代码迁移到 1.21–1.23+ 的新语法与标准库，适合版本升级和淘汰过时写法。"
+  }
 }

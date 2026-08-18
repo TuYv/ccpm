@@ -1,7 +1,7 @@
 {
   "id": "eduardo-sl-go-agent-skills-go-api-design",
   "name": "go-api-design",
-  "description": "> REST and gRPC API design patterns for Go services. Covers HTTP handlers, middleware, routing, request/response patterns, versioning, pagination, graceful shutdown, and OpenAPI documentation. Use when designing APIs, writing HTTP handlers, implementing middleware, structuring REST endpoints, or setting up gRPC services. Trigger examples: \"design API\", \"REST endpoints\", \"HTTP handler\", \"middleware pattern\", \"graceful shutdown\", \"gRPC service\", \"API versioning\". Do NOT use for general architectur",
+  "description": "> REST and gRPC API design patterns for Go services. Covers HTTP handlers, middleware, routing, request/response patterns, versioning, pagination, graceful shutdown, and OpenAPI documentation. Use when designing APIs, writing HTTP handlers, implementing middleware, structuring REST endpoints, or setting up gRPC services. Trigger examples: \"design API\", \"REST endpoints\", \"HTTP handler\", \"middleware pattern\", \"graceful shutdown\", \"gRPC service\", \"API versioning\". Not for: general architecture (go-",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/eduardo-sl/go-agent-skills/blob/main/skills/(architecture)/go-api-design/SKILL.md",
     "path": "skills/(architecture)/go-api-design/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-18T02:00:25.376Z",
+    "discovered_at": "2026-08-18T03:55:20.047Z",
     "stars": 65,
     "language": "Shell",
-    "pushed_at": "2026-08-18T01:54:24Z",
+    "pushed_at": "2026-08-18T03:14:22Z",
     "license": "MIT"
   },
-  "summary_zh": "一套面向 Go 服务的 REST 与 gRPC API 设计指南，适合规范接口结构、中间件、版本管理及优雅停机等实现。"
+  "summary_zh": "面向 Go 服务的 REST 与 gRPC API 设计指南，适合规范接口开发、处理版本演进并提升服务可维护性。"
 }

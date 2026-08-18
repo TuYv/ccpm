@@ -1,7 +1,7 @@
 {
   "id": "eduardo-sl-go-agent-skills-go-troubleshooting",
   "name": "go-troubleshooting",
-  "description": "> Diagnose runtime problems in Go programs: panics and stack traces, deadlocks, goroutine leaks, memory leaks, OOM kills, race reports, and debugging with delve and pprof. Use when: \"debug this panic\", \"read this stack trace\", \"deadlock\", \"memory leak\", \"goroutine count growing\", \"OOM\", \"program hangs\", \"race detector output\", \"use delve\". Do NOT use for: optimizing code that works (use go-performance-review), writing new concurrent code (use go-concurrency-review), or failing test design (use g",
+  "description": "> Diagnose runtime problems in Go programs: panics and stack traces, deadlocks, goroutine leaks, memory leaks, OOM kills, race reports, and debugging with delve and pprof. Use when: \"debug this panic\", \"read this stack trace\", \"deadlock\", \"memory leak\", \"goroutine count growing\", \"OOM\", \"program hangs\", \"race detector output\", \"use delve\". Not for: optimizing code that works (go-performance-review), writing new concurrent code (go-concurrency-review), failing test design (go-test-quality).",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/eduardo-sl/go-agent-skills/blob/main/skills/(safety)/go-troubleshooting/SKILL.md",
     "path": "skills/(safety)/go-troubleshooting/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-18T02:00:27.691Z",
+    "discovered_at": "2026-08-18T03:55:22.769Z",
     "stars": 65,
     "language": "Shell",
-    "pushed_at": "2026-08-18T01:54:24Z",
+    "pushed_at": "2026-08-18T03:14:22Z",
     "license": "MIT"
-  },
-  "summary_zh": "用于诊断 Go 程序运行时故障，适合排查崩溃、死锁、资源泄漏、内存溢出、竞态和程序卡死等问题。"
+  }
 }

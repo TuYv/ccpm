@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-18T03:08:12.838Z",
+  "updated_at": "2026-08-18T04:54:30.805Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -17378,9 +17378,9 @@
       "translated_at": "2026-08-03T04:59:09.893Z"
     },
     "bundle:modu-ai-moai-adk": {
-      "hash": "4f059abf12b71c96",
-      "summary_zh": "面向开源项目全流程开发的智能工具集，统一最佳实践、质量治理、发布与多语言文档，并通过本地自进化持续优化协作效率。",
-      "translated_at": "2026-08-18T02:56:28.069Z"
+      "hash": "76f2632ac347a437",
+      "summary_zh": "面向 moai-adk-go 开发与维护的智能工程工具集，整合规范、开发流程、自动化验证和本地自进化能力，提升交付效率与一致性。",
+      "translated_at": "2026-08-18T04:54:08.270Z"
     },
     "bundle:aaronontheweb-dotnet-skills": {
       "hash": "31be44600ae107c2",
@@ -17498,9 +17498,9 @@
       "translated_at": "2026-08-03T05:00:26.140Z"
     },
     "bundle:eduardo-sl-go-agent-skills": {
-      "hash": "5416584919e5ca13",
-      "summary_zh": "面向 Go 项目全生命周期的工程化技能合集，覆盖设计、开发、审查与交付，帮助团队统一规范并提升代码质量和协作效率。",
-      "translated_at": "2026-08-18T02:56:28.554Z"
+      "hash": "3662b7901e2c5474",
+      "summary_zh": "面向 Go 项目全生命周期的开发协作技能合集，覆盖设计、编码、审查、测试与交付，帮助团队更快构建可靠、易维护的服务和工具。",
+      "translated_at": "2026-08-18T04:54:07.668Z"
     },
     "bundle:alterlab-ieu-alterlab-academic-skills": {
       "hash": "6c22e7afc64a5d1b",
@@ -20568,74 +20568,74 @@
       "translated_at": "2026-08-11T20:55:29.607Z"
     },
     "skill:eduardo-sl-go-agent-skills-go-api-design": {
-      "hash": "448cc8a283744375",
-      "summary_zh": "一套面向 Go 服务的 REST 与 gRPC API 设计指南，适合规范接口结构、中间件、版本管理及优雅停机等实现。",
-      "translated_at": "2026-08-03T16:26:37.708Z"
+      "hash": "288ba918033fd92d",
+      "summary_zh": "面向 Go 服务的 REST 与 gRPC API 设计指南，适合规范接口开发、处理版本演进并提升服务可维护性。",
+      "translated_at": "2026-08-18T04:54:10.952Z"
     },
     "skill:eduardo-sl-go-agent-skills-go-architecture-review": {
-      "hash": "395fb5c905081e96",
-      "summary_zh": "用于审查和设计 Go 项目架构，适合优化包结构、依赖方向、分层与模块边界，以及将单体应用重构为模块。",
-      "translated_at": "2026-08-03T16:26:39.145Z"
+      "hash": "5bb743e5e3c1581a",
+      "summary_zh": "用于审查 Go 项目的包结构、依赖方向和模块边界，适合架构设计、项目重构及单体拆分。",
+      "translated_at": "2026-08-18T04:54:11.061Z"
     },
     "skill:eduardo-sl-go-agent-skills-git-commit": {
-      "hash": "b2ce16c43887dd7e",
-      "summary_zh": "为 Go 项目生成符合 Conventional Commits 规范的原子化提交信息，适合提交代码、整理 PR 或优化提交历史。",
-      "translated_at": "2026-08-03T16:26:40.164Z"
+      "hash": "dff9d42dc748cc96",
+      "summary_zh": "用于 Go 项目生成符合约定式提交规范的清晰、原子化提交信息，适合提交代码、准备 PR 或整理提交历史。",
+      "translated_at": "2026-08-18T04:54:10.979Z"
     },
     "skill:eduardo-sl-go-agent-skills-go-code-review": {
-      "hash": "6b012153be10dc4a",
-      "summary_zh": "一套面向 Go 项目的代码审查清单，适合检查代码质量、规范性、错误处理、项目结构和测试覆盖，辅助合并前评审。",
-      "translated_at": "2026-08-03T16:26:42.837Z"
+      "hash": "12759e1e5aa1a623",
+      "summary_zh": "面向 Go 项目代码审查的全面检查清单，帮助评估代码质量、惯用写法、错误处理、命名、包结构和测试覆盖率，适合审核代码、PR 或合并前检查。",
+      "translated_at": "2026-08-18T04:54:15.618Z"
     },
     "skill:eduardo-sl-go-agent-skills-go-cli": {
-      "hash": "6a7e8813963243f2",
-      "summary_zh": "一套用 Go 构建命令行工具的实践指南，适合处理参数解析、子命令、输入输出、退出码、信号响应及框架选型。",
-      "translated_at": "2026-08-03T16:26:44.790Z"
+      "hash": "265153480969554b",
+      "summary_zh": "一套用 Go 构建命令行工具的实践指南，涵盖参数解析、子命令、输入输出、退出码和 Ctrl+C 处理，适合开发 CLI。",
+      "translated_at": "2026-08-18T04:54:14.554Z"
     },
     "skill:eduardo-sl-go-agent-skills-go-ci": {
-      "hash": "9f9151b3fc140386",
-      "summary_zh": "一套面向 Go 项目的持续集成方案，适合快速搭建 GitHub Actions 流水线并提升检查、测试和构建效率。",
-      "translated_at": "2026-08-03T16:26:44.798Z"
+      "hash": "11363a6c8d826d52",
+      "summary_zh": "一套面向 Go 项目的持续集成方案，帮助搭建 GitHub Actions 流水线，统一完成测试、覆盖率、 lint、漏洞扫描和多版本构建。",
+      "translated_at": "2026-08-18T04:54:13.489Z"
     },
     "skill:eduardo-sl-go-agent-skills-go-coding-standards": {
-      "hash": "47c81076b2a4d2eb",
-      "summary_zh": "一套基于官方规范和生产实践的 Go 编码标准，适合统一代码风格、检查命名与格式并辅助代码评审。",
-      "translated_at": "2026-08-03T16:26:44.868Z"
+      "hash": "1b6cfbc15d8dba56",
+      "summary_zh": "一套基于 Go 社区实践的编码规范，适合编写或审查 Go 代码，统一风格并减少格式与命名问题。",
+      "translated_at": "2026-08-18T04:54:17.742Z"
     },
     "skill:eduardo-sl-go-agent-skills-go-context": {
-      "hash": "3e07147b2b7e4ae2",
-      "summary_zh": "一份 Go 上下文使用指南，帮助正确处理传递、取消、超时、截止时间和值，并规避常见误用。",
-      "translated_at": "2026-08-03T16:26:47.468Z"
+      "hash": "e7e5c95a79f4218f",
+      "summary_zh": "一份 Go context.Context 使用指南，帮助正确处理上下文传递、取消、超时、截止时间和值，避免常见误用。",
+      "translated_at": "2026-08-18T04:54:19.056Z"
     },
     "skill:eduardo-sl-go-agent-skills-go-concurrency-review": {
-      "hash": "85e284fba8b06df8",
-      "summary_zh": "用于审查和实现 Go 安全并发模式，适合排查竞态、线程安全、协程泄漏及设计生产消费管道。",
-      "translated_at": "2026-08-03T16:26:47.472Z"
+      "hash": "20d3fce512b88ff8",
+      "summary_zh": "用于审查和实现 Go 并发代码，帮助排查竞态、线程安全问题及协程泄漏，适合设计安全的异步流程和生产者消费者管道。",
+      "translated_at": "2026-08-18T04:54:18.364Z"
     },
     "skill:eduardo-sl-go-agent-skills-go-data-structures": {
-      "hash": "d7f220755f301861",
-      "summary_zh": "一份 Go 内置数据结构使用指南，帮助正确选择和操作切片、映射与数组，避开别名、扩容和遍历顺序等常见坑。",
-      "translated_at": "2026-08-03T16:26:48.473Z"
+      "hash": "2e1b45e33f97ddb0",
+      "summary_zh": "讲解 Go 切片、数组和映射的正确用法，帮助避开空值、别名、追加及并发使用陷阱，适合日常容器选型与编码。",
+      "translated_at": "2026-08-18T04:54:21.214Z"
     },
     "skill:eduardo-sl-go-agent-skills-go-dependency-audit": {
-      "hash": "dd78e0fbafd2b6d0",
-      "summary_zh": "用于审计 Go 模块依赖，可发现过期或有漏洞的包、清理 go.mod，并评估第三方依赖质量。",
-      "translated_at": "2026-08-03T16:26:49.823Z"
+      "hash": "2848d5bf6fb57ec5",
+      "summary_zh": "用于审计 Go 模块依赖，发现过期或有漏洞的包、清理冗余依赖并检查 go.mod，适合升级模块和评估第三方库质量。",
+      "translated_at": "2026-08-18T04:54:23.980Z"
     },
     "skill:eduardo-sl-go-agent-skills-go-database": {
-      "hash": "cf4cae8f096fadac",
-      "summary_zh": "一套面向 Go 服务的数据库开发指南，适合处理数据库访问、连接池、事务、迁移及 ORM 选型等场景。",
-      "translated_at": "2026-08-03T16:26:50.414Z"
+      "hash": "c6b8c52346339444",
+      "summary_zh": "面向 Go 服务的数据库访问实践指南，涵盖连接管理、事务、迁移及 sqlc、GORM、ent 等工具的使用。",
+      "translated_at": "2026-08-18T04:54:21.684Z"
     },
     "skill:eduardo-sl-go-agent-skills-go-design-patterns": {
-      "hash": "411052466dcb0187",
-      "summary_zh": "一套符合 Go 语言习惯的设计模式指南，适合解决功能选项、构建器、工厂、策略及中间件链等代码结构问题。",
-      "translated_at": "2026-08-03T16:26:52.118Z"
+      "hash": "1035f64ef2eec80d",
+      "summary_zh": "一套面向 Go 的惯用设计模式实践，帮助你选择合适的代码组织方式，解决复杂模块的结构设计问题。",
+      "translated_at": "2026-08-18T04:54:26.246Z"
     },
     "skill:eduardo-sl-go-agent-skills-go-dependency-injection": {
-      "hash": "135f79fb6d34b7b7",
-      "summary_zh": "指导在 Go 中通过构造函数注入和依赖装配消除全局状态，提升代码可测试性，并判断何时引入 Wire、Fx 等框架。",
-      "translated_at": "2026-08-03T16:26:53.347Z"
+      "hash": "dba864c28abf32d5",
+      "summary_zh": "介绍 Go 中通过构造函数和主函数组装依赖，减少全局状态并提升可测试性，也帮助判断是否值得使用 Wire、Fx 或 Dig 等框架。",
+      "translated_at": "2026-08-18T04:54:24.373Z"
     },
     "skill:eduardo-sl-go-agent-skills-go-documentation": {
       "hash": "e794ca4409e74765",
@@ -41124,6 +41124,16 @@
     "content:internet-court-internet-court-skill": {
       "hash": "2b671f2c34bf7a56",
       "translated_at": "2026-08-18T01:28:45.535Z"
+    },
+    "skill:eduardo-sl-go-agent-skills-go-binary-size": {
+      "hash": "75ee03558e8396a0",
+      "summary_zh": "帮助分析并缩小 Go 编译产物和容器镜像，适合二进制过大、精简 CLI 或审查依赖体积来源的场景。",
+      "translated_at": "2026-08-18T04:54:16.346Z"
+    },
+    "skill:eduardo-sl-go-agent-skills-go-defensive-coding": {
+      "hash": "5aee8860305941e8",
+      "summary_zh": "一套 Go 防御式编程指南，帮助避免空指针崩溃、数据悄然损坏和运行时隐患，适合代码审查与接口设计。",
+      "translated_at": "2026-08-18T04:54:22.286Z"
     }
   }
 }

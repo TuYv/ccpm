@@ -1,0 +1,26 @@
+{
+  "id": "eduardo-sl-go-agent-skills-go-defensive-coding",
+  "name": "go-defensive-coding",
+  "description": "> Prevent panics, silent corruption, and subtle runtime bugs in Go: typed-nil interfaces, slice aliasing, integer overflow on conversion, float comparison, defer in loops, defensive copying at API boundaries, and zero-value design. Use when hardening code against crashes, reviewing for nil-safety, converting between numeric types, or deciding what to copy at a package boundary. Trigger examples: \"nil pointer panic\", \"why is my error not nil\", \"slice aliasing\", \"integer overflow\", \"compare floats",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "eduardo-sl",
+  "install_path": ".claude/skills/go-defensive-coding/SKILL.md",
+  "source": {
+    "repo": "eduardo-sl/go-agent-skills",
+    "url": "https://github.com/eduardo-sl/go-agent-skills/blob/main/skills/(safety)/go-defensive-coding/SKILL.md",
+    "path": "skills/(safety)/go-defensive-coding/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T03:55:22.333Z",
+    "stars": 65,
+    "language": "Shell",
+    "pushed_at": "2026-08-18T03:14:22Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一套 Go 防御式编程指南，帮助避免空指针崩溃、数据悄然损坏和运行时隐患，适合代码审查与接口设计。"
+}

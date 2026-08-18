@@ -1,0 +1,25 @@
+{
+  "id": "eduardo-sl-go-agent-skills-go-graphql",
+  "name": "go-graphql",
+  "description": "> Build GraphQL servers in Go with gqlgen: schema-first generation, resolver structure, the N+1 problem and dataloaders, complexity and depth limits, error presentation, field-level authorization, and testing resolvers. Use when implementing or reviewing a GraphQL API, when a query fans out into hundreds of database calls, or when deciding what a resolver may expose. Trigger examples: \"GraphQL\", \"gqlgen\", \"resolver\", \"N+1 queries\", \"dataloader\", \"query complexity limit\", \"GraphQL schema\". Not fo",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "eduardo-sl",
+  "install_path": ".claude/skills/go-graphql/SKILL.md",
+  "source": {
+    "repo": "eduardo-sl/go-agent-skills",
+    "url": "https://github.com/eduardo-sl/go-agent-skills/blob/main/skills/(architecture)/go-graphql/SKILL.md",
+    "path": "skills/(architecture)/go-graphql/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T03:55:20.680Z",
+    "stars": 65,
+    "language": "Shell",
+    "pushed_at": "2026-08-18T03:14:22Z",
+    "license": "MIT"
+  }
+}

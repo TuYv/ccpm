@@ -1,7 +1,7 @@
 {
   "id": "eduardo-sl-go-agent-skills-go-observability",
   "name": "go-observability",
-  "description": "> Structured logging, distributed tracing, metrics, and health checks for Go services. Covers slog, OpenTelemetry, Prometheus, and observability best practices. Use when: \"add logging\", \"structured logs\", \"add tracing\", \"OpenTelemetry\", \"add metrics\", \"Prometheus\", \"observability\", \"instrument this code\". Do NOT use for: performance profiling with pprof (use go-performance-review), error handling patterns (use go-error-handling), or health check endpoints (use go-api-design).",
+  "description": "> Structured logging, distributed tracing, metrics, and health checks for Go services. Covers slog, OpenTelemetry, Prometheus, and observability best practices. Use when: \"add logging\", \"structured logs\", \"add tracing\", \"OpenTelemetry\", \"add metrics\", \"Prometheus\", \"observability\", \"instrument this code\". Not for: pprof profiling (go-performance-review), error handling (go-error-handling), health endpoints (go-api-design).",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/eduardo-sl/go-agent-skills/blob/main/skills/(safety)/go-observability/SKILL.md",
     "path": "skills/(safety)/go-observability/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-18T02:00:27.340Z",
+    "discovered_at": "2026-08-18T03:55:22.434Z",
     "stars": 65,
     "language": "Shell",
-    "pushed_at": "2026-08-18T01:54:24Z",
+    "pushed_at": "2026-08-18T03:14:22Z",
     "license": "MIT"
-  },
-  "summary_zh": "一套面向 Go 服务的可观测性实践指南，适合接入结构化日志、分布式追踪和 Prometheus 指标。"
+  }
 }
