@@ -1,7 +1,7 @@
 {
   "id": "heygen-com-hyperframes-hyperframes-keyframes",
   "name": "hyperframes-keyframes",
-  "description": "> Use when a HyperFrames composition needs seek-safe 2D/3D keyframes, GSAP timelines, CSS keyframes, Anime.js, WAAPI, FLIP, paths, masks, SVG morph/draw, text trails, 3D depth, or `hyperframes keyframes` diagnostics. Don't use for broad scene strategy, brand design, media sourcing, captions, or general video planning.",
+  "description": "> Use when a HyperFrames composition needs a punch-in, punch-out, zoom, reframe, Ken Burns treatment, camera move, visual match/whip handoff, or other seek-safe 2D/3D keyframes; also for GSAP, CSS keyframes, Anime.js, WAAPI, FLIP, paths, masks, SVG morph/draw, text trails, 3D depth, or `hyperframes keyframes` diagnostics. Don't use for broad scene strategy, brand design, media sourcing, captions, or general video planning.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/heygen-com/hyperframes/blob/main/skills/hyperframes-keyframes/SKILL.md",
     "path": "skills/hyperframes-keyframes/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-18T12:56:31.739Z",
-    "stars": 41489,
+    "discovered_at": "2026-08-18T15:09:27.509Z",
+    "stars": 41511,
     "language": "TypeScript",
-    "pushed_at": "2026-08-18T07:14:39Z",
+    "pushed_at": "2026-08-18T15:08:19Z",
     "license": "Apache-2.0"
   },
-  "summary_zh": "面向 HyperFrames 合成的关键帧动画工具，适合制作可安全跳转的 2D/3D、SVG、路径和时间轴动效，并排查关键帧问题。"
+  "summary_zh": "用于为 HyperFrames 合成制作可安全跳转的镜头推拉、变焦、重构、路径动画和 2D/3D 关键帧效果。"
 }

@@ -1,0 +1,26 @@
+{
+  "id": "wshobson-agents-avoid-ai-writing",
+  "name": "avoid-ai-writing",
+  "description": "Audit and rewrite prose so it stops reading as machine-generated. Use this skill when asked to remove AI-isms, clean up AI writing, edit a draft for AI tells, audit a README, changelog, release note, PR description, or blog post for machine-sounding prose, or make text sound less like AI. Supports a detect-only mode, a rewrite mode, and an edit-in-place mode, with optional voice and context profiles.",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "wshobson",
+  "install_path": ".claude/skills/avoid-ai-writing/SKILL.md",
+  "source": {
+    "repo": "wshobson/agents",
+    "url": "https://github.com/wshobson/agents/blob/main/plugins/avoid-ai-writing/skills/avoid-ai-writing/SKILL.md",
+    "path": "plugins/avoid-ai-writing/skills/avoid-ai-writing/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-18T15:06:50.075Z",
+    "stars": 38889,
+    "language": "Python",
+    "pushed_at": "2026-08-18T14:42:35Z",
+    "license": "MIT"
+  },
+  "summary_zh": "审查并改写机器感明显的文字，适合润色 README、博客、发布说明等内容，让表达更自然，支持检测、重写和原地编辑。"
+}
