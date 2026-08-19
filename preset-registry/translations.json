@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-18T22:26:29.097Z",
+  "updated_at": "2026-08-19T00:21:43.753Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -9923,9 +9923,9 @@
       "translated_at": "2026-05-20T01:05:27.964Z"
     },
     "bundle:expo-skills": {
-      "hash": "baae1ef2f98ca1ca",
-      "summary_zh": "面向 Expo 应用全生命周期的一站式技能合集，覆盖原生体验开发、云端构建、发布托管、自动化流程及上线监控。",
-      "translated_at": "2026-08-13T23:15:47.258Z"
+      "hash": "c1206d0dbb5ed147",
+      "summary_zh": "这是一套覆盖 Expo 应用开发、原生体验打磨、云端构建发布、托管运维与质量观察的实战工具集，帮助团队更顺畅地完成从开发到上线的全流程。",
+      "translated_at": "2026-08-18T23:57:58.272Z"
     },
     "bundle:softaworks-agent-toolkit": {
       "hash": "d6cc12c1edf650d1",
@@ -28253,9 +28253,9 @@
       "translated_at": "2026-08-12T23:15:02.118Z"
     },
     "bundle:google-skills": {
-      "hash": "467cde4383bceeb3",
-      "summary_zh": "面向 Google Cloud 上 AI 智能体与模型的全生命周期开发、部署、管理、评测和运维，帮助团队快速搭建并持续优化生产级应用。",
-      "translated_at": "2026-08-18T20:03:22.026Z"
+      "hash": "7d4e3b90319b4e13",
+      "summary_zh": "这是一套面向 Google Cloud 的 AI Agent 开发运维工具集，覆盖模型、提示词、RAG、部署、评测与监控，帮助团队把智能体从试验快速推进到可管理、可优化的生产环境。",
+      "translated_at": "2026-08-18T23:57:58.152Z"
     },
     "skill:chrisbanes-skills-compose-performance": {
       "hash": "a79df9a1015c4e14",
@@ -28578,9 +28578,9 @@
       "translated_at": "2026-08-07T01:52:47.721Z"
     },
     "skill:google-skills-google-mobile-ads-rewarded": {
-      "hash": "dad30221f6ae408a",
-      "summary_zh": "用于指导在 Android 或 iOS 应用中接入和配置 Google 移动广告 SDK 的激励广告，不适用于激励插页式广告。",
-      "translated_at": "2026-08-07T01:52:48.337Z"
+      "hash": "afe2a6bff0d60420",
+      "summary_zh": "面向 Android、iOS 和 Unity 的激励广告接入指南，适合在移动应用中配置 GMA SDK 并实现用户看广告领奖励。",
+      "translated_at": "2026-08-18T23:58:00.872Z"
     },
     "skill:levnikolaevich-claude-code-skills-ln-35-surgical-change-implementer": {
       "hash": "596525184a12095e",
@@ -39669,8 +39669,8 @@
       "translated_at": "2026-08-16T22:31:02.352Z"
     },
     "content:google-skills-google-mobile-ads-rewarded": {
-      "hash": "d2188730351c4eb8",
-      "translated_at": "2026-08-16T22:31:09.009Z"
+      "hash": "879dda6089b7f4c2",
+      "translated_at": "2026-08-19T00:12:02.113Z"
     },
     "content:google-skills-ima-dai-sdk": {
       "hash": "be916bf1758c7b0f",
@@ -42543,6 +42543,139 @@
     "content:jeffallan-claude-skills-fastapi-expert": {
       "hash": "73331cf09b52388e",
       "translated_at": "2026-08-18T22:26:29.097Z"
+    },
+    "skill:expo-skills-expo-animation": {
+      "hash": "a8b270b5a09d9878",
+      "summary_zh": "面向 React Native 与 Expo 的动画实现框架，适合快速处理手势、页面转场、底部弹层和触感反馈，并改善卡顿的交互动效。",
+      "translated_at": "2026-08-18T23:58:00.518Z"
+    },
+    "content:davila7-claude-code-templates-distributed-training-pytorch-fsdp": {
+      "hash": "414fcefc3d4fa5d6",
+      "translated_at": "2026-08-19T00:08:01.863Z"
+    },
+    "content:expo-skills-expo-animation": {
+      "hash": "95a8320fb586c73c",
+      "translated_at": "2026-08-19T00:09:52.234Z"
+    },
+    "content:jeffallan-claude-skills-feature-forge": {
+      "hash": "3c8b8c363767177e",
+      "translated_at": "2026-08-19T00:12:23.123Z"
+    },
+    "content:jeffallan-claude-skills-fine-tuning-expert": {
+      "hash": "da72ef468de313b0",
+      "translated_at": "2026-08-19T00:12:56.698Z"
+    },
+    "content:jeffallan-claude-skills-flutter-expert": {
+      "hash": "0fe1313754652dc7",
+      "translated_at": "2026-08-19T00:13:25.229Z"
+    },
+    "content:jeffallan-claude-skills-fullstack-guardian": {
+      "hash": "22a1c39c86be63fa",
+      "translated_at": "2026-08-19T00:13:49.094Z"
+    },
+    "content:jeffallan-claude-skills-game-developer": {
+      "hash": "89297efd2a6ba432",
+      "translated_at": "2026-08-19T00:14:15.540Z"
+    },
+    "content:jeffallan-claude-skills-golang-pro": {
+      "hash": "937bafb4bd14906e",
+      "translated_at": "2026-08-19T00:14:40.395Z"
+    },
+    "content:jeffallan-claude-skills-graphql-architect": {
+      "hash": "0a4e1eb5f4a3f1e4",
+      "translated_at": "2026-08-19T00:15:05.622Z"
+    },
+    "content:jeffallan-claude-skills-java-architect": {
+      "hash": "6e38cf7391e22488",
+      "translated_at": "2026-08-19T00:15:31.767Z"
+    },
+    "content:jeffallan-claude-skills-javascript-pro": {
+      "hash": "fb73d05454525647",
+      "translated_at": "2026-08-19T00:15:53.993Z"
+    },
+    "content:jeffallan-claude-skills-kotlin-specialist": {
+      "hash": "d27d8e173d521dc0",
+      "translated_at": "2026-08-19T00:16:00.825Z"
+    },
+    "content:jeffallan-claude-skills-kubernetes-specialist": {
+      "hash": "f84cb51c86968d39",
+      "translated_at": "2026-08-19T00:16:33.958Z"
+    },
+    "content:jeffallan-claude-skills-laravel-specialist": {
+      "hash": "eb3c286d02b4a314",
+      "translated_at": "2026-08-19T00:16:42.164Z"
+    },
+    "content:jeffallan-claude-skills-legacy-modernizer": {
+      "hash": "0d2258af837cc137",
+      "translated_at": "2026-08-19T00:17:02.547Z"
+    },
+    "content:jeffallan-claude-skills-microservices-architect": {
+      "hash": "d4a22ae7b850c047",
+      "translated_at": "2026-08-19T00:17:36.603Z"
+    },
+    "content:jeffallan-claude-skills-mcp-developer": {
+      "hash": "6c0adeb3e3626f45",
+      "translated_at": "2026-08-19T00:17:39.179Z"
+    },
+    "content:jeffallan-claude-skills-monitoring-expert": {
+      "hash": "dc69392186b8cc9b",
+      "translated_at": "2026-08-19T00:18:08.626Z"
+    },
+    "content:jeffallan-claude-skills-ml-pipeline": {
+      "hash": "8d6436c5f4ca75da",
+      "translated_at": "2026-08-19T00:18:12.540Z"
+    },
+    "content:jeffallan-claude-skills-nextjs-developer": {
+      "hash": "a8631cf7789732d8",
+      "translated_at": "2026-08-19T00:18:40.394Z"
+    },
+    "content:jeffallan-claude-skills-nestjs-expert": {
+      "hash": "7d2809fbc80586af",
+      "translated_at": "2026-08-19T00:18:46.845Z"
+    },
+    "content:jeffallan-claude-skills-pandas-pro": {
+      "hash": "4c026295382b0cc8",
+      "translated_at": "2026-08-19T00:19:13.191Z"
+    },
+    "content:jeffallan-claude-skills-php-pro": {
+      "hash": "6aa71a7bd4129ab0",
+      "translated_at": "2026-08-19T00:19:16.004Z"
+    },
+    "content:jeffallan-claude-skills-playwright-expert": {
+      "hash": "d6c5c04e570659a9",
+      "translated_at": "2026-08-19T00:19:40.595Z"
+    },
+    "content:jeffallan-claude-skills-postgres-pro": {
+      "hash": "e2f32f2fb3b4e640",
+      "translated_at": "2026-08-19T00:19:47.131Z"
+    },
+    "content:jeffallan-claude-skills-prompt-engineer": {
+      "hash": "1ab0f43e1c6d9150",
+      "translated_at": "2026-08-19T00:20:07.030Z"
+    },
+    "content:jeffallan-claude-skills-python-pro": {
+      "hash": "83acbb761bc372bb",
+      "translated_at": "2026-08-19T00:20:16.557Z"
+    },
+    "content:jeffallan-claude-skills-rag-architect": {
+      "hash": "1e9d3804a9288f9d",
+      "translated_at": "2026-08-19T00:20:45.672Z"
+    },
+    "content:jeffallan-claude-skills-rails-expert": {
+      "hash": "7484d4e55a6b7e1d",
+      "translated_at": "2026-08-19T00:20:46.420Z"
+    },
+    "content:jeffallan-claude-skills-react-expert": {
+      "hash": "542b344c6b4c3b80",
+      "translated_at": "2026-08-19T00:21:11.547Z"
+    },
+    "content:jeffallan-claude-skills-react-native-expert": {
+      "hash": "3cba7fabe2b7e9e1",
+      "translated_at": "2026-08-19T00:21:18.295Z"
+    },
+    "content:jeffallan-claude-skills-rust-engineer": {
+      "hash": "c8e11f71fa92c956",
+      "translated_at": "2026-08-19T00:21:43.753Z"
     }
   }
 }
