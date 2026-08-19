@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-19T03:37:29.585Z",
+  "updated_at": "2026-08-19T05:18:00.051Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -17273,9 +17273,9 @@
       "translated_at": "2026-08-03T04:57:35.633Z"
     },
     "bundle:zhaoxuya520-reverse-skill": {
-      "hash": "9b00776597b8a420",
-      "summary_zh": "面向授权安全评估、逆向分析与攻防实战的一体化工具集，覆盖移动端、二进制、云原生和自动化流程，帮助从侦察到验证快速形成完整闭环。",
-      "translated_at": "2026-08-08T11:18:44.323Z"
+      "hash": "d188cc3f757839e2",
+      "summary_zh": "面向授权安全测试与逆向分析的综合工具集，覆盖从侦察、代码审计到漏洞验证、样本分析和攻防演练的完整流程。",
+      "translated_at": "2026-08-19T05:00:44.791Z"
     },
     "bundle:chriswiles-claude-code-showcase": {
       "hash": "a17467d58b5f5b43",
@@ -17523,9 +17523,9 @@
       "translated_at": "2026-08-13T11:18:41.284Z"
     },
     "preset:23blocks-os-ai-maestro": {
-      "hash": "58a93586548b5516",
-      "summary_zh": "用于统一调度多台电脑上的 AI 编程代理，让它们共享记忆、直接通信和查询代码关系，适合多代理协作开发。",
-      "translated_at": "2026-08-19T03:03:59.013Z"
+      "hash": "f7284abf1c0191eb",
+      "summary_zh": "用于统一管理和编排多个 AI Agent，支持持久记忆、代码查询、智能体互通及跨设备协作，适合搭建和运营 AI 工程团队。",
+      "translated_at": "2026-08-19T05:00:48.446Z"
     },
     "preset:milisp-codexia": {
       "hash": "c7106a26df47601c",
@@ -42932,6 +42932,147 @@
     "content:jeremylongshore-claude-code-plugins-plus-skills-dispatch": {
       "hash": "5aab2c0b03b9cc82",
       "translated_at": "2026-08-19T03:37:29.585Z"
+    },
+    "skill:zhaoxuya520-reverse-skill-ctf-sandbox": {
+      "hash": "2a3c7d78b7dc34a2",
+      "summary_zh": "用于统一编排 CTF、AWD 和靶场等多类型任务，适合比赛题环境的快速调度与管理。",
+      "translated_at": "2026-08-19T05:00:49.000Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-crest": {
+      "hash": "4c81bb8594baa470",
+      "translated_at": "2026-08-19T05:07:27.776Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-draft": {
+      "hash": "d7b853171af4fe37",
+      "translated_at": "2026-08-19T05:07:38.337Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-draft-flow": {
+      "hash": "3a08d40904ec984a",
+      "translated_at": "2026-08-19T05:07:58.638Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-draft-ia": {
+      "hash": "44765a07ba605707",
+      "translated_at": "2026-08-19T05:08:49.112Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-draft-landing": {
+      "hash": "e88cb5a622a36ac1",
+      "translated_at": "2026-08-19T05:09:05.958Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-draft-patterns": {
+      "hash": "7ed1317f8ec17396",
+      "translated_at": "2026-08-19T05:09:18.176Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-draft-recon": {
+      "hash": "8603a00a1e42835d",
+      "translated_at": "2026-08-19T05:09:42.972Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-draft-review": {
+      "hash": "844778717aa9e7aa",
+      "translated_at": "2026-08-19T05:10:18.111Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-draft-wireframe": {
+      "hash": "b6262290f1c00db7",
+      "translated_at": "2026-08-19T05:11:25.880Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-echo": {
+      "hash": "01eadf4d33e7cf6b",
+      "translated_at": "2026-08-19T05:11:32.093Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-echo-feedback": {
+      "hash": "2b6e2e4ecad10596",
+      "translated_at": "2026-08-19T05:11:56.185Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-echo-interview": {
+      "hash": "55fd5aa09091b446",
+      "translated_at": "2026-08-19T05:12:40.628Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-echo-jobs": {
+      "hash": "ce093f357eebba0a",
+      "translated_at": "2026-08-19T05:13:23.869Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-echo-recon": {
+      "hash": "9b58bb834dfad88a",
+      "translated_at": "2026-08-19T05:13:49.069Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-echo-segment": {
+      "hash": "70b120e19475c65a",
+      "translated_at": "2026-08-19T05:14:18.739Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-flush": {
+      "hash": "7a2a74cd6a694596",
+      "translated_at": "2026-08-19T05:14:47.903Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-flux": {
+      "hash": "17c09ea9bab9d09b",
+      "translated_at": "2026-08-19T05:14:54.059Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-flux-health": {
+      "hash": "64abee69489f367c",
+      "translated_at": "2026-08-19T05:15:09.851Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-flux-pipeline": {
+      "hash": "93f179e63d815034",
+      "translated_at": "2026-08-19T05:15:28.557Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-flux-migrate": {
+      "hash": "d529c0f8b73ce127",
+      "translated_at": "2026-08-19T05:15:35.673Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-flux-query": {
+      "hash": "e20e0fd700ca7f9e",
+      "translated_at": "2026-08-19T05:15:44.002Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-flux-recon": {
+      "hash": "7ea96d08ee4456f8",
+      "translated_at": "2026-08-19T05:16:00.937Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-flux-schema": {
+      "hash": "1fb4b128c63899c4",
+      "translated_at": "2026-08-19T05:16:09.662Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-handoff": {
+      "hash": "376ad03531595681",
+      "translated_at": "2026-08-19T05:16:23.123Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-hyperflow-amplify": {
+      "hash": "3299d24a1b35ce6b",
+      "translated_at": "2026-08-19T05:16:39.031Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-hyperflow-audit": {
+      "hash": "86a505c0fb31baa4",
+      "translated_at": "2026-08-19T05:16:54.795Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-hyperflow-cache": {
+      "hash": "410e588f37eb7209",
+      "translated_at": "2026-08-19T05:17:04.435Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-hyperflow": {
+      "hash": "fa9efca886ce447b",
+      "translated_at": "2026-08-19T05:17:12.279Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-hyperflow-deploy": {
+      "hash": "2f8399b5ea0f6201",
+      "translated_at": "2026-08-19T05:17:18.487Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-hyperflow-design": {
+      "hash": "66f85b4b23ebc39b",
+      "translated_at": "2026-08-19T05:17:25.385Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-hyperflow-dispatch": {
+      "hash": "bdcb0fc985885189",
+      "translated_at": "2026-08-19T05:17:35.907Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-hyperflow-plan": {
+      "hash": "2793870e86313095",
+      "translated_at": "2026-08-19T05:17:46.035Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-hyperflow-scaffold": {
+      "hash": "530eb3ef77e432c6",
+      "translated_at": "2026-08-19T05:17:50.256Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-hyperflow-scope": {
+      "hash": "3d76e06d460d79e9",
+      "translated_at": "2026-08-19T05:18:00.051Z"
     }
   }
 }
