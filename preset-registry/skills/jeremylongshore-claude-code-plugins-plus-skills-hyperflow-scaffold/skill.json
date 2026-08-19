@@ -2,7 +2,7 @@
   "id": "jeremylongshore-claude-code-plugins-plus-skills-hyperflow-scaffold",
   "name": "hyperflow-scaffold",
   "description": "Hyperflow project setup. Use when starting hyperflow in a new project or refreshing its cache — \"init hyperflow\", \"set up hyperflow\", \"refresh hyperflow\", \"scaffold hyperflow\". One-shot setup of the .hyperflow/ project cache + memory and the .agent/workflows/hyperflow* slash commands. Does not start the plan → dispatch chain.",
-  "category": "设计创意",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/jeremylongshore/claude-code-plugins-plus-skills/blob/main/plugins/ai-agency/hyperflow/templates/antigravity/skills/hyperflow-scaffold/SKILL.md",
     "path": "plugins/ai-agency/hyperflow/templates/antigravity/skills/hyperflow-scaffold/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-18T23:02:05.901Z",
+    "discovered_at": "2026-08-19T00:58:48.394Z",
     "stars": 2651,
     "language": "Python",
-    "pushed_at": "2026-08-18T22:58:39Z",
+    "pushed_at": "2026-08-19T00:51:26Z",
     "license": "MIT"
   },
   "summary_zh": "用于在新项目中初始化或刷新 Hyperflow，一次性生成项目缓存、记忆及相关工作流命令，不会启动后续执行流程。"

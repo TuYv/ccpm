@@ -2,7 +2,7 @@
   "id": "jeremylongshore-claude-code-plugins-plus-skills-pr",
   "name": "pr",
   "description": "| Use when reviewing an incoming GitHub pull request — runs the multi-level (L1-L5) audit against the PR's real diff range, posts findings as one batched review (inline, summary, or local-only), offers the standard fix chain on NEEDS_FIX, and optionally merges. The maintainer-side counterpart to /hyperflow:issue. Trigger with /hyperflow:pr, \"review PR #N\", \"review this pull request <url>\", \"audit the PR\", \"check this contribution\".",
-  "category": "设计创意",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/jeremylongshore/claude-code-plugins-plus-skills/blob/main/plugins/ai-agency/hyperflow/skills/pr/SKILL.md",
     "path": "plugins/ai-agency/hyperflow/skills/pr/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-18T23:02:03.949Z",
+    "discovered_at": "2026-08-19T00:58:46.251Z",
     "stars": 2651,
     "language": "Python",
-    "pushed_at": "2026-08-18T22:58:39Z",
+    "pushed_at": "2026-08-19T00:51:26Z",
     "license": "MIT"
   },
   "summary_zh": "用于审查 GitHub 拉取请求的自动化工具，可按真实差异分级审计、集中反馈，并在修复后选择合并。"

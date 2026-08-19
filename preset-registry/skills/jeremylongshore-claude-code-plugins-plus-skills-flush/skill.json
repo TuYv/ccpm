@@ -2,7 +2,7 @@
   "id": "jeremylongshore-claude-code-plugins-plus-skills-flush",
   "name": "flush",
   "description": "| Use when the user wants to manually flush a deferred-commit queue from a prior or interrupted chain. Reads .hyperflow/commits-queue/manifest.json, fast-forwards the staging branch onto the user's branch, deletes staging, clears the queue. Recovery interface when a chain crashed before its Step 4 auto-flush ran. Trigger with /hyperflow:flush, \"flush pending commits\", \"flush queue\", \"apply staged commits\", \"where are my commits\".",
-  "category": "设计创意",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/jeremylongshore/claude-code-plugins-plus-skills/blob/main/plugins/ai-agency/hyperflow/skills/flush/SKILL.md",
     "path": "plugins/ai-agency/hyperflow/skills/flush/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-18T23:02:03.137Z",
+    "discovered_at": "2026-08-19T00:58:45.369Z",
     "stars": 2651,
     "language": "Python",
-    "pushed_at": "2026-08-18T22:58:39Z",
+    "pushed_at": "2026-08-19T00:51:26Z",
     "license": "MIT"
   },
   "summary_zh": "用于手动提交此前中断或残留的延迟提交队列，把暂存分支快进合并回当前分支并清理，适合在自动化流程崩溃、找不到已暂存提交时做兜底恢复。"

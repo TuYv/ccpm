@@ -2,7 +2,7 @@
   "id": "jeremylongshore-claude-code-plugins-plus-skills-hyperflow-audit",
   "name": "hyperflow-audit",
   "description": "Hyperflow code review. Use when the user wants the current diff, a commit, branch, or PR reviewed — verbs like audit, review, \"check for issues\", \"security check\", \"code review\". Multi-level review (L1 quick → L5 exhaustive), writes findings to .hyperflow/audits/, then a fix-gate.",
-  "category": "设计创意",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/jeremylongshore/claude-code-plugins-plus-skills/blob/main/plugins/ai-agency/hyperflow/templates/antigravity/skills/hyperflow-audit/SKILL.md",
     "path": "plugins/ai-agency/hyperflow/templates/antigravity/skills/hyperflow-audit/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-18T23:02:04.937Z",
+    "discovered_at": "2026-08-19T00:58:47.326Z",
     "stars": 2651,
     "language": "Python",
-    "pushed_at": "2026-08-18T22:58:39Z",
+    "pushed_at": "2026-08-19T00:51:26Z",
     "license": "MIT"
   },
   "summary_zh": "帮你对当前改动、提交、分支或 PR 做代码审查，可按 L1 快查到 L5 深审分级进行，自动把问题写入审计目录并把关修复，适合日常代码评审和安全检查。"

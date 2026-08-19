@@ -2,7 +2,7 @@
   "id": "jeremylongshore-claude-code-plugins-plus-skills-scaffold",
   "name": "scaffold",
   "description": "| Use when starting hyperflow in a new project, refreshing the .hyperflow/ cache, or installing auto-detection shims (AGENTS.md, CLAUDE.md). One-shot project setup; does not start the spec → scope → dispatch chain. Trigger with /hyperflow:scaffold, \"init hyperflow\", \"set up hyperflow\", \"refresh hyperflow\", \"install hyperflow shims\".",
-  "category": "设计创意",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/jeremylongshore/claude-code-plugins-plus-skills/blob/main/plugins/ai-agency/hyperflow/skills/scaffold/SKILL.md",
     "path": "plugins/ai-agency/hyperflow/skills/scaffold/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-18T23:02:04.143Z",
+    "discovered_at": "2026-08-19T00:58:46.429Z",
     "stars": 2651,
     "language": "Python",
-    "pushed_at": "2026-08-18T22:58:39Z",
+    "pushed_at": "2026-08-19T00:51:26Z",
     "license": "MIT"
   },
   "summary_zh": "一键在新项目里初始化 hyperflow 环境，刷新本地缓存或装上自动识别用的标记文件，适合刚接入或想重置配置时使用，不会触发后续的需求拆解流程。"

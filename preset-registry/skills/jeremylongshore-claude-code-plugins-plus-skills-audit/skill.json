@@ -2,7 +2,7 @@
   "id": "jeremylongshore-claude-code-plugins-plus-skills-audit",
   "name": "audit",
   "description": "| Use when the user wants a code review on recent changes — quality, spec, security, or performance feedback. Triggers a multi-level (L1-L5) review with a standalone Reviewer; on NEEDS_FIX, offers to apply findings via /hyperflow:plan. Trigger with /hyperflow:audit, \"review this change\", \"review my PR\", \"audit the diff\", \"code review\".",
-  "category": "设计创意",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/jeremylongshore/claude-code-plugins-plus-skills/blob/main/plugins/ai-agency/hyperflow/skills/audit/SKILL.md",
     "path": "plugins/ai-agency/hyperflow/skills/audit/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-18T23:02:01.909Z",
+    "discovered_at": "2026-08-19T00:58:44.157Z",
     "stars": 2651,
     "language": "Python",
-    "pushed_at": "2026-08-18T22:58:39Z",
+    "pushed_at": "2026-08-19T00:51:26Z",
     "license": "MIT"
   },
   "summary_zh": "用于审查近期代码改动，从质量、规范、安全和性能等方面发现问题，适合提交或合并前检查。"

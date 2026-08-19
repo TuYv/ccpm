@@ -2,7 +2,7 @@
   "id": "jeremylongshore-claude-code-plugins-plus-skills-hyperflow-sticky",
   "name": "hyperflow-sticky",
   "description": "Hyperflow auto-routing mode. Use to control how aggressively hyperflow auto-routes — \"make hyperflow sticky\", \"stop using hyperflow\", \"auto-route to hyperflow\", \"disable hyperflow auto-routing\". Sets on (every task-shaped message routes) / auto (intent-verb messages route — default) / off (no auto-routing).",
-  "category": "设计创意",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/jeremylongshore/claude-code-plugins-plus-skills/blob/main/plugins/ai-agency/hyperflow/templates/antigravity/skills/hyperflow-sticky/SKILL.md",
     "path": "plugins/ai-agency/hyperflow/templates/antigravity/skills/hyperflow-sticky/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-18T23:02:06.233Z",
+    "discovered_at": "2026-08-19T00:58:48.733Z",
     "stars": 2651,
     "language": "Python",
-    "pushed_at": "2026-08-18T22:58:39Z",
+    "pushed_at": "2026-08-19T00:51:26Z",
     "license": "MIT"
   },
   "summary_zh": "用来调节自动路由的灵敏度，可以设置为始终路由、按意图智能识别或完全关闭，适合想精细控制何时触发自动分发的场景。"
