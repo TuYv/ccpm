@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-19T07:20:51.993Z",
+  "updated_at": "2026-08-19T08:29:47.420Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -10138,9 +10138,9 @@
       "translated_at": "2026-05-20T01:14:43.407Z"
     },
     "bundle:whawkinsiv-claude-code-skills": {
-      "hash": "98043187da447bac",
-      "summary_zh": "这是一套为初创团队量身定制的AI全栈技能包，让AI不仅能写代码，还能包揽品牌营销、财务合规及社区运营等全流程工作，帮你用AI搞定从零到一的业务落地。",
-      "translated_at": "2026-05-20T01:14:43.547Z"
+      "hash": "ecd76998dce46ba0",
+      "summary_zh": "面向独立开发者和创业团队的一站式 AI 工作流，覆盖产品构建、品牌营销、数据运营与合规，让想法更快落地并持续增长。",
+      "translated_at": "2026-08-19T08:06:50.035Z"
     },
     "bundle:ognjengt-founder-skills": {
       "hash": "bba60d13a74d6989",
@@ -12883,9 +12883,9 @@
       "translated_at": "2026-05-20T12:40:58.938Z"
     },
     "skill:whawkinsiv-claude-code-skills-improve": {
-      "hash": "f7841e1e0b23953e",
-      "summary_zh": "这是一个能自动迭代优化其他技能的工具，它会自主测试并只保留真正有效的改进，原版需你批准才生效，适合独立开发者安全地持续打磨现有工具的效果。",
-      "translated_at": "2026-05-20T12:41:00.977Z"
+      "hash": "b80d3c287a1b0a81",
+      "summary_zh": "用于自动诊断和优化其他技能，通过实验与对比筛选改进方案，适合在保留原版的前提下提升技能效果。",
+      "translated_at": "2026-08-19T08:06:57.120Z"
     },
     "skill:whawkinsiv-claude-code-skills-integrations": {
       "hash": "11206484a584b1b4",
@@ -43162,6 +43162,90 @@
     "content:jeremylongshore-claude-code-plugins-plus-skills-trace": {
       "hash": "cf9da11a65a11ad9",
       "translated_at": "2026-08-19T07:20:51.993Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-keep-qbr": {
+      "hash": "35fdaed5cc26ed73",
+      "translated_at": "2026-08-19T08:09:58.012Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-keep-segment": {
+      "hash": "989f81e1d9f34dda",
+      "translated_at": "2026-08-19T08:10:08.588Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-pitch-landing": {
+      "hash": "1a005eaac8d7326c",
+      "translated_at": "2026-08-19T08:10:26.901Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-pitch-copy": {
+      "hash": "fa7a15afb59bc2a0",
+      "translated_at": "2026-08-19T08:10:42.301Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-pitch-message": {
+      "hash": "9c35023ceecc8750",
+      "translated_at": "2026-08-19T08:11:25.308Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-pitch-launch": {
+      "hash": "88ce3d24f075159f",
+      "translated_at": "2026-08-19T08:11:41.891Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-pr": {
+      "hash": "12b30897c699939e",
+      "translated_at": "2026-08-19T08:12:33.953Z"
+    },
+    "content:jimliu-baoyu-design-baoyu-design": {
+      "hash": "22535fd011b73a0d",
+      "translated_at": "2026-08-19T08:14:53.790Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-sticky": {
+      "hash": "cea734ebd0f2876a",
+      "translated_at": "2026-08-19T08:14:57.201Z"
+    },
+    "content:jimliu-baoyu-skills-baoyu-compress-image": {
+      "hash": "b14b2ac50b798aa7",
+      "translated_at": "2026-08-19T08:16:59.271Z"
+    },
+    "content:jimliu-baoyu-skills-baoyu-article-illustrator": {
+      "hash": "ce1c7bfe9b93e5af",
+      "translated_at": "2026-08-19T08:17:14.625Z"
+    },
+    "content:jimliu-baoyu-skills-baoyu-electron-extract": {
+      "hash": "3f8714f3030dd12e",
+      "translated_at": "2026-08-19T08:19:24.274Z"
+    },
+    "content:jimliu-baoyu-skills-baoyu-diagram": {
+      "hash": "55a2d050c3a2faea",
+      "translated_at": "2026-08-19T08:19:42.097Z"
+    },
+    "content:jimliu-baoyu-skills-baoyu-format-markdown": {
+      "hash": "39bd9eeb5373365c",
+      "translated_at": "2026-08-19T08:21:19.407Z"
+    },
+    "content:jimliu-baoyu-skills-baoyu-image-cards": {
+      "hash": "75a5286ee0dd3ebc",
+      "translated_at": "2026-08-19T08:23:27.040Z"
+    },
+    "content:jimliu-baoyu-skills-baoyu-infographic": {
+      "hash": "1572aaa294c5f754",
+      "translated_at": "2026-08-19T08:24:19.243Z"
+    },
+    "content:jimliu-baoyu-skills-baoyu-markdown-to-html": {
+      "hash": "f4a5bb1697f93875",
+      "translated_at": "2026-08-19T08:25:05.357Z"
+    },
+    "content:jimliu-baoyu-skills-baoyu-post-to-weibo": {
+      "hash": "afc5eb6d748f8d4f",
+      "translated_at": "2026-08-19T08:25:57.574Z"
+    },
+    "content:jimliu-baoyu-skills-baoyu-post-to-x": {
+      "hash": "6eca9de552dd0b7b",
+      "translated_at": "2026-08-19T08:27:47.383Z"
+    },
+    "content:jimliu-baoyu-skills-baoyu-slide-deck": {
+      "hash": "0e988f065a188622",
+      "translated_at": "2026-08-19T08:29:11.011Z"
+    },
+    "content:jimliu-baoyu-skills-baoyu-translate": {
+      "hash": "772f7170a61f1246",
+      "translated_at": "2026-08-19T08:29:47.420Z"
     }
   }
 }
