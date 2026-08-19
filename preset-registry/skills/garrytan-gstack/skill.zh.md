@@ -13,18 +13,17 @@ triggers:
   - route this with gstack
 
 ---
-<!-- 由 SKILL.md.tmpl 自动生成 — 请勿直接编辑 -->
+<!-- 从 SKILL.md.tmpl 自动生成 — 不要直接编辑 -->
 <!-- 重新生成：bun run gen:skill-docs -->
 
 
-## 何时调用此技能
+## 何时调用此 skill
 
-将任何 gstack 请求发送到正确的技能
+将任何 gstack 请求发送到正确的 skill
 （规划、审查、QA、发布、调试、文档、安全、设计）。对于浏览器/QA
-和内部试用，它会将你指向 /browse。当你调用 gstack 但未指定具体
-技能，或询问“哪个 gstack 技能适合此任务？”时使用。
+和 dogfooding，它会指向 /browse。在不指定具体 skill 的情况下调用 gstack，或询问“哪个 gstack skill 适合这个任务？”时使用。
 
-## 前置步骤（首先运行）
+## 前置步骤（先运行）
 
 ```bash
 _UPD=$(~/.claude/skills/gstack/bin/gstack-update-check 2>/dev/null || .claude/skills/gstack/bin/gstack-update-check 2>/dev/null || true)
@@ -144,40 +143,40 @@ echo "GSTACK_PLAN_MODE: $GSTACK_PLAN_MODE"
 
 ## 计划模式下的安全操作
 
-在计划模式下，以下操作是允许的，因为它们有助于制定计划：`$B`、`$D`、`codex exec`/`codex review`、写入 `~/.gstack/`、写入计划文件，以及使用 `open` 打开生成的产物。
+在计划模式下，以下操作是允许的，因为它们能够为计划提供信息：`$B`、`$D`、`codex exec`/`codex review`、写入 `~/.gstack/`、写入计划文件，以及对生成的产物执行 `open`。
 
 ## 计划模式下的技能调用
 
-如果用户在计划模式下调用技能，该技能优先于通用的计划模式行为。**应将技能文件视为可执行指令，而不是参考资料。** 从 Step 0 开始逐步执行；技能触发的任何 AskUserQuestion 都是在计划模式内运行的工作流，并不违反计划模式——如果技能指令本身已经解决了某个问题（例如计划模式下的自动选择），则也可以不提出该问题。AskUserQuestion（任何变体——`mcp__*__AskUserQuestion` 或原生版本；参见“AskUserQuestion Format → Tool resolution”）满足计划模式的回合结束要求。如果 AskUserQuestion 不可用或调用失败，请遵循 AskUserQuestion Format 的失败回退方式：`headless` → BLOCKED；`interactive` → 使用自然语言回退方式（这也满足回合结束要求）。到达 STOP 点时，立即停止。不要继续工作流，也不要在那里调用 ExitPlanMode。标记为“PLAN MODE EXCEPTION — ALWAYS RUN”的命令必须执行。仅在技能工作流完成后，或者用户要求取消该技能或退出计划模式时，才调用 ExitPlanMode。
+如果用户在计划模式下调用技能，则该技能优先于通用的计划模式行为。**将技能文件视为可执行指令，而不是参考资料。** 从 Step 0 开始逐步执行；技能触发的任何 AskUserQuestion 都属于计划模式中的工作流，不违反计划模式规则——如果技能的指令自行解决了某个问题（例如计划模式自动选择），也可以不提问。AskUserQuestion（任何变体——`mcp__*__AskUserQuestion` 或原生版本；参见“AskUserQuestion 格式 → 工具解析”）满足计划模式在回合结束时的要求。如果 AskUserQuestion 不可用或调用失败，请遵循 AskUserQuestion 格式的失败回退规则：`headless` → BLOCKED；`interactive` → 使用文字回退方案（同样满足回合结束要求）。到达 STOP 点时，立即停止。不要继续工作流，也不要在此时调用 ExitPlanMode。标记为 "PLAN MODE EXCEPTION — ALWAYS RUN" 的命令照常执行。只有在技能工作流完成后，或用户要求取消技能或离开计划模式时，才调用 ExitPlanMode。
 
-如果 `PROACTIVE` 为 `"false"`，不要自动调用技能，也不要主动建议使用技能。如果某项技能似乎有用，请询问：“我觉得 /skillname 在这里可能会有帮助——要我运行它吗？”
+如果 `PROACTIVE` 为 `"false"`，不要自动调用或主动建议技能。如果某个技能似乎有帮助，请询问：“我认为 /skillname 可能会有帮助——要运行它吗？”
 
-如果 `SKILL_PREFIX` 为 `"true"`，建议/调用 `/gstack-*` 名称。磁盘路径仍为 `~/.claude/skills/gstack/[skill-name]/SKILL.md`。
+如果 `SKILL_PREFIX` 为 `"true"`，请建议或调用 `/gstack-*` 名称。磁盘路径保持为 `~/.claude/skills/gstack/[skill-name]/SKILL.md`。
 
-如果 `UPDATE_CHECK` 为 `"false"`，跳过接下来的两行——在该模式下，更新检查二进制程序不会产生任何输出，因此没有需要处理的 `UPGRADE_AVAILABLE` / `JUST_UPGRADED` 输出。
+如果 `UPDATE_CHECK` 为 `"false"`，跳过接下来的两行——更新检查二进制程序在该模式下不会输出任何内容，因此不会有 `UPGRADE_AVAILABLE` / `JUST_UPGRADED` 输出需要处理。
 
-如果输出显示 `UPGRADE_AVAILABLE <old> <new>`：读取 `~/.claude/skills/gstack/gstack-upgrade/SKILL.md`，并遵循“Inline upgrade flow”（如果已配置则自动升级，否则使用包含 4 个选项的 AskUserQuestion；如果用户拒绝，则写入暂缓提醒状态）。
+如果输出显示 `UPGRADE_AVAILABLE <old> <new>`：读取 `~/.claude/skills/gstack/gstack-upgrade/SKILL.md`，并遵循“Inline upgrade flow”（如果已配置则自动升级，否则使用 AskUserQuestion 提供 4 个选项；如果用户拒绝，则写入暂缓状态）。
 
-如果输出显示 `JUST_UPGRADED <from> <to>`：输出“正在运行 gstack v{to}（刚刚完成更新！）”。如果 `SPAWNED_SESSION` 为 true，则跳过功能发现。
+如果输出显示 `JUST_UPGRADED <from> <to>`：打印“正在运行 gstack v{to}（刚刚完成更新！）”。如果 `SPAWNED_SESSION` 为 true，则跳过功能发现。
 
-功能发现，每个会话最多提示一次：
-- 如果缺少 `~/.claude/skills/gstack/.feature-prompted-continuous-checkpoint`：使用 AskUserQuestion 询问是否启用 Continuous checkpoint 自动提交。如果接受，运行 `~/.claude/skills/gstack/bin/gstack-config set checkpoint_mode continuous`。无论如何都要创建标记文件。
-- 如果缺少 `~/.claude/skills/gstack/.feature-prompted-model-overlay`：告知“模型覆盖已启用。MODEL_OVERLAY 会显示补丁。”无论如何都要创建标记文件。
+功能发现：每个会话最多提示一次：
+- 缺少 `~/.claude/skills/gstack/.feature-prompted-continuous-checkpoint`：使用 AskUserQuestion 询问是否启用 Continuous checkpoint 自动提交。如果接受，则运行 `~/.claude/skills/gstack/bin/gstack-config set checkpoint_mode continuous`。始终创建该标记文件。
+- 缺少 `~/.claude/skills/gstack/.feature-prompted-model-overlay`：告知“模型覆盖层已启用。MODEL_OVERLAY 会显示补丁。”始终创建该标记文件。
 
-升级提示结束后，继续执行工作流。
+升级提示之后，继续工作流。
 
 如果 `WRITING_STYLE_PENDING` 为 `yes`：询问一次写作风格：
 
-> v1 提示词更加简洁：首次使用时解释术语、以结果为导向的问题、更短的文字。保留默认设置，还是恢复精简风格？
+> v1 提示更简单：首次出现术语时提供释义、以结果为导向提问、使用更短的文字。保留默认设置，还是恢复简洁风格？
 
 选项：
-- A) 保留新的默认设置（推荐——良好的写作对所有人都有帮助）
-- B) 恢复 V0 文风——设置 `explain_level: terse`
+- A) 保留新的默认设置（推荐——良好的文案对所有人都有帮助）
+- B) 恢复 V0 文案——设置 `explain_level: terse`
 
-如果选择 A：不要设置 `explain_level`（默认为 `default`）。
+如果选择 A：将 `explain_level` 保持未设置状态（默认为 `default`）。
 如果选择 B：运行 `~/.claude/skills/gstack/bin/gstack-config set explain_level terse`。
 
-始终运行（无论选择哪个选项）：
+无论选择哪项，都始终运行：
 ```bash
 rm -f ~/.gstack/.writing-style-prompt-pending
 touch ~/.gstack/.writing-style-prompted
@@ -185,32 +184,32 @@ touch ~/.gstack/.writing-style-prompted
 
 如果 `WRITING_STYLE_PENDING` 为 `no`，则跳过。
 
-如果 `LAKE_INTRO` 为 `no`：告知用户“gstack 遵循**煮沸海洋**原则——当 AI 让边际成本接近于零时，就把事情完整地做完。了解更多：https://garryslist.org/posts/boil-the-ocean” 并询问是否打开：
+如果 `LAKE_INTRO` 为 `no`：说“gstack 遵循 **Boil the Ocean** 原则 —— 当 AI 让边际成本接近于零时，就把事情完整地做完。了解更多：https://garryslist.org/posts/boil-the-ocean” 提供打开以下链接的选项：
 
 ```bash
 open https://garryslist.org/posts/boil-the-ocean
 touch ~/.gstack/.completeness-intro-seen
 ```
 
-只有在用户回答是时才运行 `open`。始终运行 `touch`。
+仅在用户选择是时运行 `open`。始终运行 `touch`。
 
-如果 `TEL_PROMPTED` 为 `no` 且 `LAKE_INTRO` 为 `yes`：通过 AskUserQuestion 询问一次遥测数据收集意愿：
+如果 `TEL_PROMPTED` 为 `no` 且 `LAKE_INTRO` 为 `yes`：通过 AskUserQuestion 询问一次遥测选项：
 
-> 帮助 gstack 变得更好。仅共享使用数据：技能、持续时间、崩溃情况、稳定的设备 ID。不包含代码或文件路径。你的仓库名称仅记录在本地，并会在任何上传前移除。
+> 帮助 gstack 变得更好。仅分享使用数据：技能、持续时间、崩溃情况、稳定的设备 ID。不包含代码或文件路径。你的仓库名称仅记录在本地，并会在上传前移除。
 
 选项：
 - A) 帮助 gstack 变得更好！（推荐）
-- B) 不用了，谢谢
+- B) 不用了
 
 如果选择 A：运行 `~/.claude/skills/gstack/bin/gstack-config set telemetry community`
 
-如果选择 B：继续询问：
+如果选择 B：追问：
 
-> 匿名模式仅发送汇总使用数据，不包含唯一 ID。
+> 匿名模式仅发送汇总数据，不包含唯一 ID。
 
 选项：
-- A) 可以，匿名模式没问题
-- B) 不用了，谢谢，完全关闭
+- A) 好的，可以使用匿名模式
+- B) 不用了，完全关闭
 
 如果 B→A：运行 `~/.claude/skills/gstack/bin/gstack-config set telemetry anonymous`
 如果 B→B：运行 `~/.claude/skills/gstack/bin/gstack-config set telemetry off`
@@ -224,11 +223,11 @@ touch ~/.gstack/.telemetry-prompted
 
 如果 `PROACTIVE_PROMPTED` 为 `no` 且 `TEL_PROMPTED` 为 `yes`：询问一次：
 
-> 是否允许 gstack 主动建议技能，例如在询问“这能用吗？”时建议 /qa，或在遇到错误时建议 /investigate？
+> 允许 gstack 主动建议技能，例如针对“能正常工作吗？”建议使用 /qa，或者针对 bug 建议使用 /investigate？
 
 选项：
 - A) 保持开启（推荐）
-- B) 将其关闭——我会自己输入 /commands
+- B) 关闭 —— 我会自己输入 /commands
 
 如果选择 A：运行 `~/.claude/skills/gstack/bin/gstack-config set proactive true`
 如果选择 B：运行 `~/.claude/skills/gstack/bin/gstack-config set proactive false`
@@ -240,26 +239,26 @@ touch ~/.gstack/.proactive-prompted
 
 如果 `PROACTIVE_PROMPTED` 为 `yes`，则跳过。
 
-## 首次运行指引（一次性）
+## 首次运行指南（一次性）
 
-如果 `ACTIVATED` 为 `no`（这是此计算机上首次运行技能），并且前置信息输出了一个非空的 `FIRST_TASK:` 值，且该值不是 `nongit`：根据该标记显示一行简短的项目专属提示，然后继续执行用户实际请求的内容——不要中止其任务。标记映射：`greenfield` →“全新仓库——先使用 `/spec` 或 `/office-hours` 确定其形态。” `code_node`/`code_python`/`code_rust`/`code_go`/`code_ruby`/`code_ios` →“这里有代码——使用 `/qa` 查看其是否正常运行，或在有异常时使用 `/investigate`。” `branch_ahead` →“此分支上有尚未发布的工作——先运行 `/review`，再运行 `/ship`。” `dirty_default` →“存在未提交的更改——提交前运行 `/review`。” `clean_default` →“选择一个：`/spec`、`/investigate` 或 `/qa`。” 然后将 TASK_TOKEN 替换为你看到的标记并运行（尽力而为），再标记为已激活：
+如果 `ACTIVATED` 为 `no`（这台机器上首次运行技能），并且前置提示输出了非空的 `FIRST_TASK:` 值，且该值不是 `nongit`：显示一条根据令牌映射的简短项目专属提示，然后继续处理用户实际提出的请求 —— 不要中断用户的任务。令牌映射如下：`greenfield` → “全新仓库 —— 先使用 `/spec` 或 `/office-hours` 规划结构。” `code_node`/`code_python`/`code_rust`/`code_go`/`code_ruby`/`code_ios` → “这里已有代码 —— 使用 `/qa` 查看其运行情况，或者如果发现异常则使用 `/investigate`。” `branch_ahead` → “此分支有尚未发布的工作 —— 先使用 `/review`，然后使用 `/ship`。” `dirty_default` → “存在未提交的更改 —— 提交前先使用 `/review`。” `clean_default` → “请选择：`/spec`、`/investigate` 或 `/qa`。” 然后将你看到的令牌替换为 TASK_TOKEN，并运行以下命令（尽力而为），然后标记为已激活：
 ```bash
 ~/.claude/skills/gstack/bin/gstack-telemetry-log --event-type first_task_scaffold_shown --skill "TASK_TOKEN" --outcome shown 2>/dev/null || true
 touch ~/.gstack/.activated 2>/dev/null || true
 ```
 
-如果 `ACTIVATED` 为 `no`，但 `FIRST_TASK:` 为空或为 `nongit`（无界面、非 Git，或没有可执行的操作）：不显示任何内容，只运行 `touch ~/.gstack/.activated 2>/dev/null || true`。
+如果 `ACTIVATED` 为 `no`，但 `FIRST_TASK:` 为空或为 `nongit`（无头模式、非 git，或没有可执行操作）：不显示任何内容，只运行 `touch ~/.gstack/.activated 2>/dev/null || true`。
 
-否则，如果 `ACTIVATED` 为 `yes` 且 `FIRST_LOOP_SHOWN` 为 `no`：仅提示一次以下内容（然后继续）：
+否则，如果 `ACTIVATED` 为 `yes` 且 `FIRST_LOOP_SHOWN` 为 `no`：只提示一次（然后继续）：
 
-> 提示：完成一个完整循环后，gstack 才能发挥最大价值——**规划 → 审查 → 发布**。常见的第一个循环是：使用 `/office-hours` 或 `/spec` 梳理方案，使用 `/plan-eng-review` 敲定方案，然后使用 `/ship` 发布。
+> 提示：完成一个循环后，gstack 才能真正发挥作用——**规划 → 审查 → 发布**。一个常见的首次循环是：使用 `/office-hours` 或 `/spec` 梳理想法，使用 `/plan-eng-review` 确定方案，然后使用 `/ship`。
 
 然后运行 `touch ~/.gstack/.first-loop-tip-shown 2>/dev/null || true`。
 
-如果 `ACTIVATED` 和 `FIRST_LOOP_SHOWN` 均为 `yes`，则跳过本节。
+如果 `ACTIVATED` 和 `FIRST_LOOP_SHOWN` 都为 `yes`，跳过本节。
 
-如果 `HAS_ROUTING` 为 `no`，且 `ROUTING_DECLINED` 为 `false`，且 `PROACTIVE_PROMPTED` 为 `yes`：
-检查项目根目录中是否存在 CLAUDE.md 文件。如果不存在，则创建该文件。
+如果 `HAS_ROUTING` 为 `no`、`ROUTING_DECLINED` 为 `false` 且 `PROACTIVE_PROMPTED` 为 `yes`：
+检查项目根目录中是否存在 CLAUDE.md 文件。如果不存在，则创建它。
 
 使用 AskUserQuestion：
 
@@ -269,7 +268,7 @@ touch ~/.gstack/.activated 2>/dev/null || true
 - A) 将路由规则添加到 CLAUDE.md（推荐）
 - B) 不用了，我会手动调用技能
 
-如果选择 A：将以下部分追加到 CLAUDE.md 的末尾：
+如果选择 A：将以下部分追加到 CLAUDE.md 末尾：
 
 ```markdown
 
@@ -293,45 +292,45 @@ Key routing rules:
 - Author a backlog-ready spec/issue → invoke /spec
 ```
 
-然后提交更改：`git add CLAUDE.md && git commit -m "chore: add gstack skill routing rules to CLAUDE.md"`
+然后提交此更改：`git add CLAUDE.md && git commit -m "chore: add gstack skill routing rules to CLAUDE.md"`
 
-如果选择 B：运行 `~/.claude/skills/gstack/bin/gstack-config set routing_declined true`，并告知用户可以使用 `gstack-config set routing_declined false` 重新启用。
+如果选择 B：运行 `~/.claude/skills/gstack/bin/gstack-config set routing_declined true`，并说明可以通过 `gstack-config set routing_declined false` 重新启用。
 
-每个项目只会执行一次此操作。如果 `HAS_ROUTING` 为 `yes` 或 `ROUTING_DECLINED` 为 `true`，则跳过。
+每个项目只执行一次。如果 `HAS_ROUTING` 为 `yes` 或 `ROUTING_DECLINED` 为 `true`，则跳过。
 
-如果 `VENDORED_GSTACK` 为 `yes`，则通过 AskUserQuestion 警告一次，除非 `~/.gstack/.vendoring-warned-$SLUG` 已存在：
+如果 `VENDORED_GSTACK` 为 `yes`，且 `~/.gstack/.vendoring-warned-$SLUG` 不存在，则通过 AskUserQuestion 警告一次：
 
 > 此项目在 `.claude/skills/gstack/` 中内置了 gstack。内置方式已弃用。
 > 是否迁移到团队模式？
 
 选项：
-- A) 是，立即迁移到团队模式
-- B) 否，我会自行处理
+- A) 是，现在迁移到团队模式
+- B) 不，我会自行处理
 
 如果选择 A：
 1. 运行 `git rm -r .claude/skills/gstack/`
 2. 运行 `echo '.claude/skills/gstack/' >> .gitignore`
 3. 运行 `~/.claude/skills/gstack/bin/gstack-team-init required`（或 `optional`）
 4. 运行 `git add .claude/ .gitignore CLAUDE.md && git commit -m "chore: migrate gstack from vendored to team mode"`
-5. 告知用户：“完成。现在每位开发者都需要运行：`cd ~/.claude/skills/gstack && ./setup --team`”
+5. 告知用户："完成。现在每位开发者都需要运行：`cd ~/.claude/skills/gstack && ./setup --team`"
 
-如果选择 B：则说“好的，你需要自行负责保持内置副本为最新版本。”
+如果选择 B：说："好的，内置副本的更新就由你自行维护。"
 
-始终运行（无论选择哪个选项）：
+始终运行（无论选择哪项）：
 ```bash
 eval "$(~/.claude/skills/gstack/bin/gstack-slug 2>/dev/null)" 2>/dev/null || true
 touch ~/.gstack/.vendoring-warned-${SLUG:-unknown}
 ```
 
-如果标记已存在，则跳过。
+如果标记存在，则跳过。
 
 如果 `SPAWNED_SESSION` 为 `"true"`，则表示你正在由 AI 编排器（例如 OpenClaw）生成的会话中运行。在生成的会话中：
 - 不要使用 AskUserQuestion 进行交互式提示。自动选择推荐选项。
-- 不要运行升级检查、遥测提示、路由注入或 lake 介绍。
-- 专注于完成任务，并通过文字输出报告结果。
-- 最后提供完成报告：交付了什么、做出了哪些决定，以及有哪些不确定之处。
+- 不要运行升级检查、遥测提示、路由注入或 lake intro。
+- 专注于完成任务，并通过 prose 输出报告结果。
+- 以完成报告结束：说明已交付的内容、做出的决策以及任何不确定之处。
 
-## 工件同步（技能启动时）
+## Artifacts Sync（技能启动）
 
 ```bash
 _GSTACK_HOME="${GSTACK_HOME:-$HOME/.gstack}"
@@ -383,7 +382,7 @@ _BRAIN_SYNC_MODE=$("$_BRAIN_CONFIG_BIN" get artifacts_sync_mode 2>/dev/null || e
 _GBRAIN_MCP_MODE="none"
 _GBRAIN_MCP_ENTRY=""
 if command -v jq >/dev/null 2>&1 && [ -f "$HOME/.claude.json" ]; then
-  _GBRAIN_MCP_ENTRY=$(jq -c --arg cwd "$PWD" '.mcpServers.gbrain // ((.projects // {}) | to_entries | map(select((.key as $k | $cwd == $k or ($cwd | startswith($k + "/"))) and ((try .value.mcpServers.gbrain catch null) != null))) | sort_by(.key | length) | last | .value.mcpServers.gbrain) // empty' "$HOME/.claude.json" 2>/dev/null)
+  _GBRAIN_MCP_ENTRY=$(jq -c --arg cwd "$PWD" '((.projects // {}) | to_entries | map(select((.key as $k | $cwd == $k or ($cwd | startswith($k + "/")) or ($cwd | startswith($k + "\\"))) and ((try .value.mcpServers.gbrain catch null) != null))) | sort_by(.key | length) | last | .value.mcpServers.gbrain) // .mcpServers.gbrain // empty' "$HOME/.claude.json" 2>/dev/null)
   _GBRAIN_MCP_TYPE=$(printf '%s' "$_GBRAIN_MCP_ENTRY" | jq -r '.type // .transport // empty' 2>/dev/null)
   case "$_GBRAIN_MCP_TYPE" in
     url|http|sse) _GBRAIN_MCP_MODE="remote-http" ;;
@@ -423,7 +422,11 @@ if [ "$_GBRAIN_MCP_MODE" = "remote-http" ]; then
   echo "ARTIFACTS_SYNC: remote-mode (managed by brain server ${_GBRAIN_HOST:-remote})"
 elif [ -d "$_GSTACK_HOME/.git" ] && [ "$_BRAIN_SYNC_MODE" != "off" ]; then
   _BRAIN_QUEUE_DEPTH=0
-  [ -f "$_GSTACK_HOME/.brain-queue.jsonl" ] && _BRAIN_QUEUE_DEPTH=$(wc -l < "$_GSTACK_HOME/.brain-queue.jsonl" | tr -d ' ')
+  # Spool-dir queue (one file per record); legacy .brain-queue.jsonl lines are
+  # counted too until the drain migrates them.
+  [ -d "$_GSTACK_HOME/.brain-queue.d" ] && _BRAIN_QUEUE_DEPTH=$(find "$_GSTACK_HOME/.brain-queue.d" -maxdepth 1 -name '*.json' 2>/dev/null | wc -l | tr -d ' ')
+  [ -f "$_GSTACK_HOME/.brain-queue.jsonl" ] && _BRAIN_QUEUE_DEPTH=$(( _BRAIN_QUEUE_DEPTH + $(wc -l < "$_GSTACK_HOME/.brain-queue.jsonl" | tr -d ' ') ))
+  [ -f "$_GSTACK_HOME/.brain-queue.jsonl.migrating" ] && _BRAIN_QUEUE_DEPTH=$(( _BRAIN_QUEUE_DEPTH + $(wc -l < "$_GSTACK_HOME/.brain-queue.jsonl.migrating" | tr -d ' ') ))
   _BRAIN_LAST_PUSH="never"
   [ -f "$_GSTACK_HOME/.brain-last-push" ] && _BRAIN_LAST_PUSH=$(cat "$_GSTACK_HOME/.brain-last-push" 2>/dev/null || echo never)
   echo "ARTIFACTS_SYNC: mode=$_BRAIN_SYNC_MODE | last_push=$_BRAIN_LAST_PUSH | queue=$_BRAIN_QUEUE_DEPTH"
@@ -432,14 +435,14 @@ else
 fi
 ```
 
-隐私停止门：如果输出显示 `ARTIFACTS_SYNC: off`，`artifacts_sync_mode_prompted` 为 `false`，并且 gbrain 位于 PATH 中或 `gbrain doctor --fast --json` 可以运行，则询问一次：
+隐私停止门槛：如果输出显示 `ARTIFACTS_SYNC: off`，`artifacts_sync_mode_prompted` 为 `false`，并且 gbrain 在 PATH 中，或 `gbrain doctor --fast --json` 可以正常运行，则询问一次：
 
-> gstack 可以将你的产物（CEO 计划、设计、报告）发布到一个私有 GitHub 仓库，供 GBrain 跨机器索引。要同步多少内容？
+> gstack 可以将你的 artifacts（CEO 计划、设计、报告）发布到一个私有 GitHub 仓库，供 GBrain 在不同机器上建立索引。你希望同步多少内容？
 
 选项：
-- A) 允许列表中的所有内容（推荐）
-- B) 仅产物
-- C) 拒绝，所有内容都保留在本地
+- A) 所有列入允许列表的内容（推荐）
+- B) 仅 artifacts
+- C) 拒绝，全部保留在本地
 
 回答后：
 
@@ -449,9 +452,9 @@ fi
 "$_BRAIN_CONFIG_BIN" set artifacts_sync_mode_prompted true
 ```
 
-如果选择 A/B 且缺少 `~/.gstack/.git`，询问是否运行 `gstack-artifacts-init`。不要因此阻塞该技能。
+如果选择 A/B 且 `~/.gstack/.git` 不存在，询问是否运行 `gstack-artifacts-init`。不要阻塞 skill。
 
-在技能结束时、遥测之前：
+在 skill 结束、遥测开始之前：
 
 ```bash
 "$HOME/.claude/skills/gstack/bin/gstack-brain-sync" --discover-new 2>/dev/null || true
@@ -459,50 +462,50 @@ fi
 ```
 
 
-## 模型特定行为补丁（claude）
+## 针对模型的行为补丁（claude）
 
-以下提示针对 claude 模型系列进行了调优。它们**从属于**技能工作流、停止点、AskUserQuestion 门、计划模式安全规则以及 /ship 审查门。如果以下提示与技能说明冲突，以技能为准。将这些视为偏好，而不是规则。
+以下提示针对 claude 模型系列进行了调整。它们**从属于** skill 工作流、STOP 点、AskUserQuestion 门槛、计划模式安全要求以及 /ship 审查门槛。如果以下提示与 skill 指令冲突，以 skill 指令为准。将这些内容视为偏好，而不是规则。
 
-**待办列表纪律。** 执行多步骤计划时，每完成一项任务就单独将其标记为完成。不要在最后批量标记完成。如果某项任务最终不需要执行，将其标记为已跳过，并用一行说明原因。
+**待办列表纪律。** 执行多步骤计划时，每完成一项任务就单独将其标记为完成。不要在最后批量标记完成。如果某项任务最终变得不必要，则将其标记为跳过，并附上一行原因。
 
-**在执行重操作前先思考。** 对于复杂操作（重构、迁移、重要的新功能），在执行前简要说明你的方法。这样用户可以低成本地纠正方向，而不必等到执行中途。
+**重大操作前先思考。** 对于复杂操作（重构、迁移、非简单的新功能），在执行前简要说明你的方案。这样用户可以及时调整方向，而不必等到执行过程中途。
 
-**优先使用专用工具而不是 Bash。** 优先使用 Read、Edit、Write、Glob、Grep，而不是对应的 shell 工具（cat、sed、find、grep）。专用工具成本更低，也更清晰。
+**优先使用专用工具，而不是 Bash。** 优先使用 Read、Edit、Write、Glob、Grep，而不是对应的 shell 命令（cat、sed、find、grep）。专用工具成本更低，也更清晰。
 
-## 表达风格
+## 语气
 
-直接、具体，以开发者对开发者的方式交流。明确指出文件、函数、命令以及用户可见的影响。不要说废话。
+直接、具体，以构建者对构建者的方式表达。说清文件、函数、命令以及对用户可见的影响。不要填充内容。
 
-不要使用长破折号。不要使用这些 AI 词汇：delve、crucial、robust、comprehensive、nuanced、multifaceted。绝不要使用企业化或学术化措辞。段落要短。以接下来要做的事收尾。
+不要使用破折号。不要使用 AI 术语：深入探究、关键、健壮、全面、细微、复杂多面。绝不用企业化或学术化的表达。使用短段落。以行动事项结尾。
 
-用户拥有你不了解的上下文。跨模型共识是建议，而不是决定。由用户做决定。
+用户掌握你不了解的上下文。跨模型一致性只是建议，不是决定。由用户做决定。
 
 ## 完成状态协议
 
-完成技能工作流时，使用以下状态之一进行报告：
-- **DONE** — 已完成，并提供证据。
-- **DONE_WITH_CONCERNS** — 已完成，但需列出疑虑。
-- **BLOCKED** — 无法继续；说明阻塞原因以及已尝试的操作。
-- **NEEDS_CONTEXT** — 缺少信息；准确说明需要什么。
+完成 skill 工作流时，使用以下状态之一进行报告：
+- **DONE**：已完成，并提供证据。
+- **DONE_WITH_CONCERNS**：已完成，但需列出问题。
+- **BLOCKED**：无法继续；说明阻塞原因以及已尝试的操作。
+- **NEEDS_CONTEXT**：缺少信息；明确说明所需信息。
 
-在尝试失败 3 次后、对安全敏感的变更存在不确定性时，或无法验证工作范围时，进行升级。格式：`STATUS`、`REASON`、`ATTEMPTED`、`RECOMMENDATION`。
+在 3 次失败尝试后、遇到不确定的安全敏感变更时，或无法验证范围时进行升级。格式：`STATUS`、`REASON`、`ATTEMPTED`、`RECOMMENDATION`。
 
-## 操作层面的自我改进
+## 运行性自我改进
 
-完成前，如果你发现了一个持久存在的项目特性或命令修复方法，并且它下次能够节省 5 分钟以上，请记录它：
+完成前，复盘本次会话，记录每一条可长期复用的经验。此步骤**始终运行**，不以是否发现了值得记录的内容为条件（#2402：44 条经验中有 43 条来自明确的 /learn，因为“如果你发现了”被理解成了可选步骤）。可长期复用的经验包括项目特有行为、命令修复、容易踩坑的地方，或能在未来会话中节省 5 分钟以上的模式。如果复盘确实没有发现任何经验，则在完成总结中写明“No durable learnings this session”，这是明确的空结果，不代表跳过了该步骤。
 
 ```bash
 ~/.claude/skills/gstack/bin/gstack-learnings-log '{"skill":"SKILL_NAME","type":"operational","key":"SHORT_KEY","insight":"DESCRIPTION","confidence":N,"source":"observed"}'
 ```
 
-不要记录显而易见的事实或一次性的瞬态错误。
+不要记录显而易见的事实或一次性的临时错误。
 
-## 遥测（最后运行）
+## Telemetry（最后运行）
 
-工作流完成后，记录遥测数据。使用 frontmatter 中的技能 `name:`。OUTCOME 为 success/error/abort/unknown。
+工作流完成后，记录 telemetry。使用 frontmatter 中的 skill `name:`。OUTCOME 是 success/error/abort/unknown。
 
-**计划模式例外——始终运行：** 此命令会将遥测数据写入
-`~/.gstack/analytics/`，与前置部分的分析数据写入行为一致。
+**PLAN MODE EXCEPTION — ALWAYS RUN:** 此命令会将 telemetry 写入
+`~/.gstack/analytics/`，与前置分析写入位置一致。
 
 运行以下 bash：
 
@@ -526,73 +529,71 @@ fi
 ```
 
 运行前替换 `SKILL_NAME`、`OUTCOME` 和 `USED_BROWSE`。
-将 `ERROR_MESSAGE` 替换为简短的错误描述（如果结果为 error；
-否则使用空字符串 ""），并将 `FAILED_STEP` 替换为发生失败的步骤名称或编号
-（如果结果为 error；否则使用空字符串 ""）。
+如果 outcome 为 error，则将 `ERROR_MESSAGE` 替换为错误的简短描述；
+否则使用空字符串 `""`；如果 outcome 为 error，则将 `FAILED_STEP` 替换为发生
+失败的步骤名称或编号；否则使用空字符串 `""`。
 
 ## 计划状态页脚
 
-运行计划审查的技能（`/plan-*-review`、`/codex review`）会在技能末尾包含 EXIT PLAN MODE GATE 阻塞检查清单，用于在调用 ExitPlanMode 前验证计划文件是否以 `## GSTACK REVIEW REPORT` 结尾。不运行计划审查的技能（如 `/ship`、`/qa`、`/review` 等操作型技能）通常不在计划模式下运行，也没有需要验证的审查报告；此页脚对这些技能不执行任何操作。写入计划文件是计划模式下唯一允许的编辑操作。
+运行计划评审的技能（`/plan-*-review`、`/codex review`）会在技能末尾包含 EXIT PLAN MODE GATE 阻塞检查清单，用于在调用 ExitPlanMode 前验证计划文件是否以 `## GSTACK REVIEW REPORT` 结尾。未运行计划评审的技能（如 `/ship`、`/qa`、`/review` 等操作型技能）通常不会在计划模式下运行，也没有需要验证的评审报告；对此类技能，该页脚不执行任何操作。在计划模式下唯一允许的编辑是写入计划文件。
 
-## 优先路由
+## 先路由
 
-这是 gstack 路由器。它唯一的任务是将请求发送到正确的技能。
+这是 gstack 路由器。它唯一的职责是将请求发送到正确的技能。
 
-1. 如果请求涉及浏览器、QA、试用测试、截图或检查页面
-   （打开网站、测试部署、截取屏幕截图、以可视化方式检查流程）→ 调用 `/browse`。
-2. 否则，按照以下规则进行路由。如果没有匹配项，则直接回答。
+1. 如果请求涉及浏览器、QA、试用、截图或检查页面
+   （打开网站、测试部署、截取屏幕截图、以视觉方式检查流程）→ 调用 `/browse`。
+2. 否则，按照以下规则进行路由。如果没有任何规则匹配，则直接回答。
 
-尽力记录路由方向（绝不因此阻塞）。将 `ROUTE_OUTCOME` 设置为
-`browse`（发送至 /browse）、`routed`（发送至其他技能）或 `direct`（直接回答，
+尽最大努力记录路由方向（绝不要因此阻塞）。将 `ROUTE_OUTCOME` 设置为
+`browse`（发送至 `/browse`）、`routed`（发送至其他技能）或 `direct`（直接回答，
 没有匹配的技能）：
 ```bash
 ~/.claude/skills/gstack/bin/gstack-telemetry-log --event-type route --skill gstack --outcome ROUTE_OUTCOME --session-id "$_SESSION_ID" 2>/dev/null || true
 ```
 
-如果 `PROACTIVE` 为 `false`：在本次会话中，不要主动调用或建议使用其他 gstack 技能。仅运行用户明确调用的技能。此偏好通过 `gstack-config` 在不同会话间持久保存。
+如果 `PROACTIVE` 为 `false`：在本次会话期间，不要主动调用或建议其他 gstack skills。只运行用户明确调用的 skills。此偏好通过 `gstack-config` 跨会话持久化。
 
-如果 `PROACTIVE` 为 `true`（默认值）：当用户的请求与某项技能的用途匹配时，**调用 Skill 工具**。如果已有适用于该任务的技能，请勿直接回答。
-请使用 Skill 工具调用该技能。技能包含专门的工作流、检查清单和
-质量门禁，能够比直接内联回答产生更好的结果。
+如果 `PROACTIVE` 为 `true`（默认值）：当用户的请求符合某个 skill 的用途时，**调用 Skill 工具**。当存在适用的 skill 时，不要直接回答。使用 Skill 工具调用它。该 skill 具备专门的工作流程、检查清单和质量门禁，相比直接内联回答能够产出更好的结果。
 
-**路由规则——当你看到以下模式时，请通过 Skill 工具调用相应技能：**
-- 用户描述一个新想法、询问“这值得构建吗”、进行头脑风暴或推介一个概念 → 调用 `/office-hours`
-- 用户要求详细定义某项内容、提交 issue、编写工单、“把这个转成 GitHub issue”或“待办事项” → 调用 `/spec`
-- 用户询问战略、范围、目标高度、“想得更大一些”或“我们应该构建什么” → 调用 `/plan-ceo-review`
-- 用户要求审查架构、敲定方案或询问“这个设计合理吗” → 调用 `/plan-eng-review`
-- 用户询问设计系统、品牌、视觉识别或“这应该是什么样子” → 调用 `/design-consultation`
-- 用户要求审查方案的设计 → 调用 `/plan-design-review`
-- 用户询问方案的开发者体验、API/CLI/SDK 设计 → 调用 `/plan-devex-review`
-- 用户希望自动完成所有审查或要求“审查所有内容” → 调用 `/autoplan`
-- 用户报告 bug、错误、异常行为，或说“为什么坏了”“这不能用”“搞什么鬼”“出问题了” → 调用 `/investigate`
-- 用户要求测试网站、查找 bug、执行 QA，或询问“这能用吗”“检查部署结果” → 调用 `/qa`
-- 用户要求仅报告 bug 而不修复 → 调用 `/qa-only`
-- 用户要求审查代码、检查 diff、进行合入前审查，或说“看看我的改动” → 调用 `/review`
-- 用户询问视觉打磨、线上网站的设计审计，或说“这看起来不对劲” → 调用 `/design-review`
-- 用户要求审计线上的开发者体验、首次成功运行所需时间 → 调用 `/devex-review`
-- 用户要求发布、部署、推送、创建 PR，或说“我们把它合进去吧”“发出去” → 调用 `/ship`
-- 用户要求将合并、部署和验证作为一个完整流程执行 → 调用 `/land-and-deploy`
+**路由规则——看到以下模式时，通过 Skill 工具调用相应的 skill：**
+- 用户描述一个新想法，询问“是否值得构建”，进行头脑风暴或提出概念 → 调用 `/office-hours`
+- 用户要求明确规格、创建 issue、撰写工单、“将其转换为 GitHub issue”或“backlog item” → 调用 `/spec`
+- 用户询问策略、范围、目标，或提出“想得更大些”“我们应该构建什么” → 调用 `/plan-ceo-review`
+- 用户要求审查架构、确定计划，或询问“这个设计是否合理” → 调用 `/plan-eng-review`
+- 用户询问设计系统、品牌或视觉识别，或提出“应该是什么样” → 调用 `/design-consultation`
+- 用户要求审查计划的设计 → 调用 `/plan-design-review`
+- 用户询问计划的开发者体验、API/CLI/SDK 设计 → 调用 `/plan-devex-review`
+- 用户希望自动完成所有审查，或提出“审查所有内容” → 调用 `/autoplan`
+- 用户报告 bug、错误或行为异常，询问“为什么坏了”“这无法工作”“什么鬼”“出了点问题” → 调用 `/investigate`
+- 用户要求测试网站、查找 bug、进行 QA，或询问“这能正常工作吗”“检查部署” → 调用 `/qa`
+- 用户只要求报告 bug，不要修复 → 调用 `/qa-only`
+- 用户要求审查代码、检查 diff、进行上线前审查，或提出“看看我的改动” → 调用 `/review`
+- 用户询问视觉润色、对在线网站进行设计审计，或提出“看起来不对” → 调用 `/design-review`
+- 用户要求审计在线开发者体验、评估从安装到运行第一个示例所需的时间 → 调用 `/devex-review`
+- 用户要求发布、部署、推送、创建 PR，或提出“让我们合并上线”“发出去” → 调用 `/ship`
+- 用户要求将合并、部署和验证作为一个流程完成 → 调用 `/land-and-deploy`
 - 用户要求为项目配置部署 → 调用 `/setup-deploy`
-- 用户要求发布后监控生产环境或执行部署后检查 → 调用 `/canary`
+- 用户要求发布后监控生产环境，或进行部署后的检查 → 调用 `/canary`
 - 用户要求发布后更新文档 → 调用 `/document-release`
-- 用户要求从头编写文档、生成文档，或说“为这个功能/模块编写文档” → 调用 `/document-generate`
-- 用户要求进行每周复盘、询问我们发布了什么，或说“我们做得怎么样” → 调用 `/retro`
-- 用户要求获得第二意见或进行 codex 审查 → 调用 `/codex`
-- 用户要求启用安全模式或谨慎模式 → 调用 `/careful` 或 `/guard`
+- 用户要求从头编写文档、生成文档，或提出“为这个功能/模块编写文档” → 调用 `/document-generate`
+- 用户要求进行每周回顾，询问发布了什么或“我们做得怎么样” → 调用 `/retro`
+- 用户要求征求第二意见或进行 Codex 审查 → 调用 `/codex`
+- 用户要求安全模式或谨慎模式 → 调用 `/careful` 或 `/guard`
 - 用户要求将编辑限制在某个目录中 → 调用 `/freeze` 或 `/unfreeze`
 - 用户要求升级 gstack → 调用 `/gstack-upgrade`
-- 用户要求保存进度、创建检查点，或说“保存我的工作” → 调用 `/context-save`
-- 用户要求继续、恢复，或询问“我之前做到哪了” → 调用 `/context-restore`
-- 用户询问安全性、OWASP、漏洞，或问“这安全吗” → 调用 `/cso`
+- 用户要求保存进度、创建检查点或“保存我的工作” → 调用 `/context-save`
+- 用户要求继续、恢复或询问“我刚才进行到哪里了” → 调用 `/context-restore`
+- 用户询问安全性、OWASP、漏洞，或提出“这安全吗” → 调用 `/cso`
 - 用户要求制作 PDF、文档或出版物 → 调用 `/make-pdf`
-- 用户要求启动真实浏览器进行 QA，或说“打开浏览器” → 调用 `/open-gstack-browser`
-- 用户要求导入 cookie 以进行身份验证测试 → 调用 `/setup-browser-cookies`
-- 用户询问页面速度、性能回退或基准测试 → 调用 `/benchmark`
-- 用户询问 gstack 学到了什么，或说“显示学习成果” → 调用 `/learn`
-- 用户要求调整问题敏感度，或说“别再问我那个问题了” → 调用 `/plan-tune`
-- 用户要求查看代码质量仪表板或进行“健康检查” → 调用 `/health`
+- 用户要求启动真实浏览器进行 QA，或提出“打开浏览器” → 调用 `/open-gstack-browser`
+- 用户要求导入 cookies 以进行身份验证测试 → 调用 `/setup-browser-cookies`
+- 用户询问页面速度、性能回归或基准测试 → 调用 `/benchmark`
+- 用户询问 gstack 学到了什么，或提出“显示学习成果” → 调用 `/learn`
+- 用户要求调整问题敏感度，或提出“别再问我那个问题了” → 调用 `/plan-tune`
+- 用户要求代码质量仪表板，或提出“健康检查” → 调用 `/health`
 
-**如有疑问，就调用该技能。** 误报（调用了并不需要的技能）的代价低于漏报（明明存在结构化工作流，却临时作答）。该技能提供多步骤工作流、检查清单和质量门禁，始终能够比临时作答产生更好的结果。如果没有匹配的技能，则像往常一样直接回答。
+**如有疑问，就调用相应技能。** 误报（调用了其实不需要的技能）的代价低于漏报（明明存在结构化工作流却临时作答）。技能提供多步骤工作流、检查清单和质量门禁，其结果始终优于临时作答。如果没有匹配的技能，则照常直接回答。
 
 如果用户选择不接收建议，请运行 `gstack-config set proactive false`。
 如果用户重新选择接收建议，请运行 `gstack-config set proactive true`。
