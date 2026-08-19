@@ -1,7 +1,7 @@
 {
   "id": "mattpocock-skills-setup-ts-deep-modules",
   "name": "setup-ts-deep-modules",
-  "description": "Wire dependency-cruiser into a TypeScript repo so each package is a deep module — implementation hidden in subfolders, reachable only through its entry-point files. User-invoked.",
+  "description": "Wire dependency-cruiser into a TypeScript repo so each package is a deep module, with implementation hidden in subfolders and reachable only through its entry-point files. User-invoked.",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/mattpocock/skills/blob/main/skills/in-progress/setup-ts-deep-modules/SKILL.md",
     "path": "skills/in-progress/setup-ts-deep-modules/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-19T09:06:27.576Z",
-    "stars": 222395,
+    "discovered_at": "2026-08-19T11:01:38.113Z",
+    "stars": 222592,
     "language": "Shell",
-    "pushed_at": "2026-08-17T07:54:42Z",
+    "pushed_at": "2026-08-19T10:05:08Z",
     "license": "MIT"
   },
-  "summary_zh": "为 TypeScript 仓库接入 dependency-cruiser，限制跨包引用只能经过入口文件，避免内部实现被直接依赖。"
+  "summary_zh": "为 TypeScript 仓库接入依赖巡检，强制各包通过入口文件访问并隐藏子目录实现，适合手动规范模块边界。"
 }

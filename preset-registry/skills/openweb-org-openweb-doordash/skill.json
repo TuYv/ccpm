@@ -1,0 +1,26 @@
+{
+  "id": "openweb-org-openweb-doordash",
+  "name": "doordash",
+  "description": "Agent-native way to access any website. Bridging agent CLI and web GUI through API.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openweb-org",
+  "install_path": ".claude/skills/doordash/SKILL.md",
+  "source": {
+    "repo": "openweb-org/openweb",
+    "url": "https://github.com/openweb-org/openweb/blob/main/src/sites/doordash/SKILL.md",
+    "path": "src/sites/doordash/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-19T11:58:16.114Z",
+    "stars": 50,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-27T09:03:44Z",
+    "license": "MIT"
+  },
+  "summary_zh": "让智能体通过 API 连接网站网页界面，适合把命令行代理接入各类 Web 操作流程。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "openweb-org-openweb-coingecko",
+  "name": "coingecko",
+  "description": "Agent-native way to access any website. Bridging agent CLI and web GUI through API.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openweb-org",
+  "install_path": ".claude/skills/coingecko/SKILL.md",
+  "source": {
+    "repo": "openweb-org/openweb",
+    "url": "https://github.com/openweb-org/openweb/blob/main/src/sites/coingecko/SKILL.md",
+    "path": "src/sites/coingecko/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-19T11:58:14.319Z",
+    "stars": 50,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-27T09:03:44Z",
+    "license": "MIT"
+  },
+  "summary_zh": "让智能体通过 API 访问任意网站，打通命令行代理与网页界面，适合网页数据获取和自动化操作。"
+}

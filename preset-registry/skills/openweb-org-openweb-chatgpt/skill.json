@@ -1,0 +1,26 @@
+{
+  "id": "openweb-org-openweb-chatgpt",
+  "name": "chatgpt",
+  "description": "Agent-native way to access any website. Bridging agent CLI and web GUI through API.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openweb-org",
+  "install_path": ".claude/skills/chatgpt/SKILL.md",
+  "source": {
+    "repo": "openweb-org/openweb",
+    "url": "https://github.com/openweb-org/openweb/blob/main/src/sites/chatgpt/SKILL.md",
+    "path": "src/sites/chatgpt/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-19T11:58:13.812Z",
+    "stars": 50,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-27T09:03:44Z",
+    "license": "MIT"
+  },
+  "summary_zh": "面向智能体的通用网站访问工具，通过 API 打通命令行与网页界面，适合让智能体操作和调用各类网站。"
+}

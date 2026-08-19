@@ -1,7 +1,7 @@
 {
   "id": "mattpocock-skills-to-tickets",
   "name": "to-tickets",
-  "description": "Break a plan, spec, or the current conversation into a set of tracer-bullet tickets, each declaring its blocking edges, published to the configured tracker — edges as text in one file per ticket locally, or native blocking links on a real tracker.",
+  "description": "Break a plan, spec, or the current conversation into a set of tracer-bullet tickets, each declaring its blocking edges, published to the configured tracker (edges as text in one file per ticket locally, or native blocking links on a real tracker).",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/mattpocock/skills/blob/main/skills/engineering/to-tickets/SKILL.md",
     "path": "skills/engineering/to-tickets/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-19T09:06:26.959Z",
-    "stars": 222395,
+    "discovered_at": "2026-08-19T11:01:37.250Z",
+    "stars": 222592,
     "language": "Shell",
-    "pushed_at": "2026-08-17T07:54:42Z",
+    "pushed_at": "2026-08-19T10:05:08Z",
     "license": "MIT"
   },
-  "summary_zh": "把计划、规范或对话拆成带阻塞依赖的可执行工单，并发布到本地文件或项目跟踪系统。"
+  "summary_zh": "把计划、需求或对话拆成带阻塞关系的可追踪任务，并发布到项目管理工具，适合规划复杂工作和协作落地。"
 }

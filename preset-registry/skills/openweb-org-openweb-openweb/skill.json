@@ -1,0 +1,26 @@
+{
+  "id": "openweb-org-openweb-openweb",
+  "name": "openweb",
+  "description": "Typed JSON access to 90+ real websites — Google, Amazon, Reddit, YouTube, GitHub, Instagram, Bloomberg, Zillow, and more — across search, shopping, travel, finance, social, news, and dev tools. Use to read, search, post, comment, message, or otherwise interact with these sites (prices, products, articles, stock quotes, flights, posts, comments, DMs, etc.). Run `openweb sites` for the full list.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openweb-org",
+  "install_path": ".claude/skills/openweb/SKILL.md",
+  "source": {
+    "repo": "openweb-org/openweb",
+    "url": "https://github.com/openweb-org/openweb/blob/main/skills/openweb/SKILL.md",
+    "path": "skills/openweb/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-19T11:58:10.460Z",
+    "stars": 50,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-27T09:03:44Z",
+    "license": "MIT"
+  },
+  "summary_zh": "提供对90多个真实网站的类型化 JSON 访问，适合统一搜索、读取并交互处理购物、资讯、金融、社交和开发数据。"
+}

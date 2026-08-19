@@ -1,0 +1,26 @@
+{
+  "id": "openweb-org-openweb-ebay",
+  "name": "ebay",
+  "description": "Agent-native way to access any website. Bridging agent CLI and web GUI through API.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openweb-org",
+  "install_path": ".claude/skills/ebay/SKILL.md",
+  "source": {
+    "repo": "openweb-org/openweb",
+    "url": "https://github.com/openweb-org/openweb/blob/main/src/sites/ebay/SKILL.md",
+    "path": "src/sites/ebay/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-19T11:58:16.611Z",
+    "stars": 50,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-27T09:03:44Z",
+    "license": "MIT"
+  },
+  "summary_zh": "让命令行智能体通过 API 操作各类网站界面，适合自动化网页任务和打通 CLI 与 Web 流程。"
+}

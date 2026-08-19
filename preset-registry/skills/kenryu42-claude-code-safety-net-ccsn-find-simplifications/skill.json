@@ -1,0 +1,26 @@
+{
+  "id": "kenryu42-claude-code-safety-net-ccsn-find-simplifications",
+  "name": "ccsn-find-simplifications",
+  "description": "Use when working in the cc-safety-net repo to find non-obvious simplification candidates: dead, duplicated, speculative, over-built, or contract-exceeding surfaces in the analyzer, rules, guards, integrations, CLI, or GUI. Produces evidence-backed proposals for the maintainer, not a pile of guesses.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "kenryu42",
+  "install_path": ".claude/skills/ccsn-find-simplifications/SKILL.md",
+  "source": {
+    "repo": "kenryu42/claude-code-safety-net",
+    "url": "https://github.com/kenryu42/claude-code-safety-net/blob/main/.agents/skills/ccsn-find-simplifications/SKILL.md",
+    "path": ".agents/skills/ccsn-find-simplifications/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-19T11:11:03.161Z",
+    "stars": 1492,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-19T09:54:57Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于 cc-safety-net 仓库，系统找出分析器、规则及界面中隐蔽的冗余或过度设计，并提供有证据的精简建议。"
+}

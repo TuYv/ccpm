@@ -1,0 +1,26 @@
+{
+  "id": "openweb-org-openweb-producthunt",
+  "name": "producthunt",
+  "description": "Agent-native way to access any website. Bridging agent CLI and web GUI through API.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openweb-org",
+  "install_path": ".claude/skills/producthunt/SKILL.md",
+  "source": {
+    "repo": "openweb-org/openweb",
+    "url": "https://github.com/openweb-org/openweb/blob/main/src/sites/producthunt/SKILL.md",
+    "path": "src/sites/producthunt/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-19T11:58:24.779Z",
+    "stars": 50,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-27T09:03:44Z",
+    "license": "MIT"
+  },
+  "summary_zh": "面向智能代理的网站访问工具，通过 API 打通命令行与网页界面，让代理能够操作和利用各类网站。"
+}

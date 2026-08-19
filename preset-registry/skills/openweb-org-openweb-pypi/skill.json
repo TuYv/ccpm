@@ -1,0 +1,26 @@
+{
+  "id": "openweb-org-openweb-pypi",
+  "name": "pypi",
+  "description": "Agent-native way to access any website. Bridging agent CLI and web GUI through API.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openweb-org",
+  "install_path": ".claude/skills/pypi/SKILL.md",
+  "source": {
+    "repo": "openweb-org/openweb",
+    "url": "https://github.com/openweb-org/openweb/blob/main/src/sites/pypi/SKILL.md",
+    "path": "src/sites/pypi/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-19T11:58:25.033Z",
+    "stars": 50,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-27T09:03:44Z",
+    "license": "MIT"
+  },
+  "summary_zh": "为智能体提供访问任意网站的原生接口，打通命令行代理与网页界面，适合自动化操作和网页交互场景。"
+}

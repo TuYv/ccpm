@@ -1,0 +1,26 @@
+{
+  "id": "openweb-org-openweb-espn",
+  "name": "espn",
+  "description": "Agent-native way to access any website. Bridging agent CLI and web GUI through API.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openweb-org",
+  "install_path": ".claude/skills/espn/SKILL.md",
+  "source": {
+    "repo": "openweb-org/openweb",
+    "url": "https://github.com/openweb-org/openweb/blob/main/src/sites/espn/SKILL.md",
+    "path": "src/sites/espn/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-19T11:58:16.851Z",
+    "stars": 50,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-27T09:03:44Z",
+    "license": "MIT"
+  },
+  "summary_zh": "面向智能代理的网站访问工具，通过 API 打通命令行与网页界面，让代理能直接操作和获取任意网站内容。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "openweb-org-openweb-goodrx",
+  "name": "goodrx",
+  "description": "Agent-native way to access any website. Bridging agent CLI and web GUI through API.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openweb-org",
+  "install_path": ".claude/skills/goodrx/SKILL.md",
+  "source": {
+    "repo": "openweb-org/openweb",
+    "url": "https://github.com/openweb-org/openweb/blob/main/src/sites/goodrx/SKILL.md",
+    "path": "src/sites/goodrx/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-19T11:58:18.890Z",
+    "stars": 50,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-27T09:03:44Z",
+    "license": "MIT"
+  },
+  "summary_zh": "让智能代理通过 API 访问各类网站，打通命令行与网页界面，适合自动化操作和网页任务执行。"
+}

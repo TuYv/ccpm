@@ -1,0 +1,26 @@
+{
+  "id": "openweb-org-openweb-costco",
+  "name": "costco",
+  "description": "Agent-native way to access any website. Bridging agent CLI and web GUI through API.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openweb-org",
+  "install_path": ".claude/skills/costco/SKILL.md",
+  "source": {
+    "repo": "openweb-org/openweb",
+    "url": "https://github.com/openweb-org/openweb/blob/main/src/sites/costco/SKILL.md",
+    "path": "src/sites/costco/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-19T11:58:14.883Z",
+    "stars": 50,
+    "language": "TypeScript",
+    "pushed_at": "2026-06-27T09:03:44Z",
+    "license": "MIT"
+  },
+  "summary_zh": "为智能体提供访问任意网站的原生方式，通过 API 打通命令行与网页界面，适合自动化操作和网页任务集成。"
+}
