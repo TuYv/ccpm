@@ -1,0 +1,26 @@
+{
+  "id": "trailofbits-skills-goal-prompt",
+  "name": "goal-prompt",
+  "description": "Drafts copy-paste-ready /goal commands for goal mode in Claude Code and Codex. Use when the user asks to create, write, rewrite, improve, compress, clean up, or prepare a goal prompt, goal condition, /goal command, goal-mode objective, or copy-ready long-running task objective.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "trailofbits",
+  "install_path": ".claude/skills/goal-prompt/SKILL.md",
+  "source": {
+    "repo": "trailofbits/skills",
+    "url": "https://github.com/trailofbits/skills/blob/main/plugins/goal-prompt/skills/goal-prompt/SKILL.md",
+    "path": "plugins/goal-prompt/skills/goal-prompt/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-19T05:33:33.779Z",
+    "stars": 6655,
+    "language": "Python",
+    "pushed_at": "2026-08-19T05:07:40Z",
+    "license": "CC-BY-SA-4.0"
+  },
+  "summary_zh": "用于为 Claude Code 和 Codex 的目标模式生成可直接粘贴的 /goal 指令，适合整理、改写或压缩长期任务目标。"
+}

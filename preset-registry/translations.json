@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-19T05:18:00.051Z",
+  "updated_at": "2026-08-19T07:20:51.993Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -9823,9 +9823,9 @@
       "translated_at": "2026-08-03T04:57:53.991Z"
     },
     "bundle:trailofbits-skills": {
-      "hash": "d2d86e576bd43a47",
-      "summary_zh": "面向代码与智能合约安全审计的一站式技能合集，串联审计准备、模糊测试、漏洞扫描与结果分析，提升自动化评估效率。",
-      "translated_at": "2026-08-17T16:26:56.036Z"
+      "hash": "6ef3debf35db01fb",
+      "summary_zh": "面向软件与智能合约安全审计的工具技能合集，串联代码理解、漏洞扫描、模糊测试和审计流程，提升从准备到发现问题的整体效率。",
+      "translated_at": "2026-08-19T06:59:30.404Z"
     },
     "bundle:czlonkowski-n8n-skills": {
       "hash": "c501b61219aece66",
@@ -17263,9 +17263,9 @@
       "translated_at": "2026-08-03T04:57:30.510Z"
     },
     "bundle:qwenlm-qwen-code": {
-      "hash": "44331ac29d7f5d35",
-      "summary_zh": "面向 Qwen Code 研发维护的一站式智能代理工具集，串联功能复刻、批量改码、缺陷修复、CI 排障与多代理协作，加速开发交付。",
-      "translated_at": "2026-08-12T20:07:46.437Z"
+      "hash": "448aff275f91a037",
+      "summary_zh": "面向代码代理开发与维护的协作工具集，覆盖功能复现、批量改动、排障修复和 CI 治理，让复杂工程任务可并行推进、可验证收敛。",
+      "translated_at": "2026-08-19T06:59:32.021Z"
     },
     "bundle:ogulcancelik-herdr": {
       "hash": "a4c2ed572bd68cdb",
@@ -25728,9 +25728,9 @@
       "translated_at": "2026-08-04T07:50:28.975Z"
     },
     "skill:qwenlm-qwen-code-review": {
-      "hash": "f74b63b875855b17",
-      "summary_zh": "用于审查代码改动的工具，可发现正确性、安全、质量和性能问题，适合检查 PR 或指定文件并辅助修复。",
-      "translated_at": "2026-08-04T07:50:29.087Z"
+      "hash": "eec1f9f5e95234e2",
+      "summary_zh": "用于审查代码改动或 PR，帮助发现正确性、安全性、质量与性能问题，并可直接生成评论或修复建议。",
+      "translated_at": "2026-08-19T06:59:37.541Z"
     },
     "skill:qwenlm-qwen-code-simplify": {
       "hash": "e284f7c2d9b1f86f",
@@ -43073,6 +43073,95 @@
     "content:jeremylongshore-claude-code-plugins-plus-skills-hyperflow-scope": {
       "hash": "3d76e06d460d79e9",
       "translated_at": "2026-08-19T05:18:00.051Z"
+    },
+    "skill:trailofbits-skills-goal-prompt": {
+      "hash": "11f7f4e4544d630d",
+      "summary_zh": "用于为 Claude Code 和 Codex 的目标模式生成可直接粘贴的 /goal 指令，适合整理、改写或压缩长期任务目标。",
+      "translated_at": "2026-08-19T06:59:35.115Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-hyperflow-spec": {
+      "hash": "6e0585cb9a481ed7",
+      "translated_at": "2026-08-19T07:05:25.964Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-hyperflow-status": {
+      "hash": "fc96ebe832f20cdd",
+      "translated_at": "2026-08-19T07:05:34.863Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-hyperflow-sticky": {
+      "hash": "e78419014531b85e",
+      "translated_at": "2026-08-19T07:05:44.910Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-hyperflow-trace": {
+      "hash": "31e5fc907c5772d9",
+      "translated_at": "2026-08-19T07:05:59.028Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-ink-brief": {
+      "hash": "7f91608c1d7d442a",
+      "translated_at": "2026-08-19T07:06:43.250Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-ink-cluster": {
+      "hash": "59317666636bcb6c",
+      "translated_at": "2026-08-19T07:07:25.834Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-ink-distribute": {
+      "hash": "e8e683ddd9ba9380",
+      "translated_at": "2026-08-19T07:07:58.848Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-issue": {
+      "hash": "0f7fea844d69b627",
+      "translated_at": "2026-08-19T07:08:48.765Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-pitch-position": {
+      "hash": "e241d3233a1d931c",
+      "translated_at": "2026-08-19T07:10:09.166Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-pitch-recon": {
+      "hash": "878790be237ec39d",
+      "translated_at": "2026-08-19T07:10:25.465Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-scaffold": {
+      "hash": "42105434979c6fc8",
+      "translated_at": "2026-08-19T07:11:44.978Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-shipwright-pipeline": {
+      "hash": "fe2da930ca2aba73",
+      "translated_at": "2026-08-19T07:11:58.963Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-skill-adapter": {
+      "hash": "73fdceab3cf092de",
+      "translated_at": "2026-08-19T07:12:04.359Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-status": {
+      "hash": "9681067bdd33ae2f",
+      "translated_at": "2026-08-19T07:13:56.273Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-surge-activation": {
+      "hash": "141cf217ae99d86a",
+      "translated_at": "2026-08-19T07:14:37.498Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-surge-plg": {
+      "hash": "3a203eab5257c874",
+      "translated_at": "2026-08-19T07:16:32.892Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-surge-recon": {
+      "hash": "02ab083637803f4e",
+      "translated_at": "2026-08-19T07:17:21.446Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-spec": {
+      "hash": "66c9eb3f920b2d6d",
+      "translated_at": "2026-08-19T07:18:15.566Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-surge-retention": {
+      "hash": "427d5f9e4161cc88",
+      "translated_at": "2026-08-19T07:18:21.472Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-workflow": {
+      "hash": "2e05c565e183ad76",
+      "translated_at": "2026-08-19T07:19:21.831Z"
+    },
+    "content:jeremylongshore-claude-code-plugins-plus-skills-trace": {
+      "hash": "cf9da11a65a11ad9",
+      "translated_at": "2026-08-19T07:20:51.993Z"
     }
   }
 }
