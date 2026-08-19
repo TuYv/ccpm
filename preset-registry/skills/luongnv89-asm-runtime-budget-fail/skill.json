@@ -1,0 +1,26 @@
+{
+  "id": "luongnv89-asm-runtime-budget-fail",
+  "name": "runtime-budget-fail",
+  "description": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "luongnv89",
+  "install_path": ".claude/skills/runtime-budget-fail/SKILL.md",
+  "source": {
+    "repo": "luongnv89/asm",
+    "url": "https://github.com/luongnv89/asm/blob/main/src/eval/providers/skill-best-practice/v1/fixtures/runtime-budget-fail/SKILL.md",
+    "path": "src/eval/providers/skill-best-practice/v1/fixtures/runtime-budget-fail/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-19T13:58:42.952Z",
+    "stars": 874,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-19T13:55:39Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于在程序运行超出预设时间或资源预算时主动失败，适合 CI 和性能回归检查。"
+}

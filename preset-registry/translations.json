@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-19T12:48:14.698Z",
+  "updated_at": "2026-08-19T14:39:41.451Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -43752,6 +43752,252 @@
     "content:k-dense-ai-claude-scientific-skills-deeptools": {
       "hash": "2724906bdf23e60f",
       "translated_at": "2026-08-19T12:48:14.698Z"
+    },
+    "bundle:luongnv89-asm": {
+      "hash": "0254e1b3d3c5200a",
+      "summary_zh": "这是一套用于发现、验证和发布 Agent Skills 的工具集，帮助将零散能力整理成可安装、可复用的技能包。",
+      "translated_at": "2026-08-19T14:06:21.475Z"
+    },
+    "skill:luongnv89-asm-actual-dir-name": {
+      "hash": "cb2bea922c33b332",
+      "summary_zh": "用于验证技能配置或内容是否符合要求，适合提交前检查，避免误用于无关文档。",
+      "translated_at": "2026-08-19T14:06:26.506Z"
+    },
+    "skill:luongnv89-asm-find-me-skills": {
+      "hash": "3f66a78818a563b2",
+      "summary_zh": "帮助用户为尚未明确的目标发现合适的智能体技能，并导出可安装的技能包，适合项目选型与技能搭配。",
+      "translated_at": "2026-08-19T14:06:27.098Z"
+    },
+    "skill:luongnv89-asm-effort-xhigh-pass": {
+      "hash": "292d034dfcd36129",
+      "summary_zh": "用于在用户明确要求时校验某项技能或能力是否符合预期，避免被误用于无关文档。",
+      "translated_at": "2026-08-19T14:06:30.248Z"
+    },
+    "skill:luongnv89-asm-hello-world": {
+      "hash": "cda186cb8b266b77",
+      "summary_zh": "一个用于问候用户的极简测试技能，适合演示和验证 ASM 发布流程。",
+      "translated_at": "2026-08-19T14:06:31.329Z"
+    },
+    "skill:luongnv89-asm-invalid-effort": {
+      "hash": "292d034dfcd36129",
+      "summary_zh": "用于在用户提出请求时验证某项技能是否有效，适合做能力检查，不适用于无关文档。",
+      "translated_at": "2026-08-19T14:06:33.170Z"
+    },
+    "skill:luongnv89-asm-metadata-author-present-pass": {
+      "hash": "cb2bea922c33b332",
+      "summary_zh": "用于校验技能定义中的作者元数据是否完整，适合在提交或发布技能前自动检查格式规范。",
+      "translated_at": "2026-08-19T14:06:36.629Z"
+    },
+    "skill:luongnv89-asm-metadata-author-present-fail": {
+      "hash": "cb2bea922c33b332",
+      "summary_zh": "用于校验技能项目的元数据和作者信息是否完整，避免将检查误用于无关文档。",
+      "translated_at": "2026-08-19T14:06:37.637Z"
+    },
+    "skill:luongnv89-asm-metadata-version-present-fail": {
+      "hash": "cb2bea922c33b332",
+      "summary_zh": "用于验证技能元数据中的版本字段是否正确，适合技能开发和发布前检查，不适用于无关文档。",
+      "translated_at": "2026-08-19T14:06:39.507Z"
+    },
+    "skill:luongnv89-asm-metadata-version-present-pass": {
+      "hash": "cb2bea922c33b332",
+      "summary_zh": "用于校验技能元数据是否包含版本信息，适合在发布前检查格式完整性，避免误用于无关文档。",
+      "translated_at": "2026-08-19T14:06:42.723Z"
+    },
+    "skill:luongnv89-asm-metadata-version-semver-fail": {
+      "hash": "cb2bea922c33b332",
+      "summary_zh": "用于验证技能元数据中的版本号是否符合 SemVer 规范，适合在发布前检查版本格式，不应用于无关文档。",
+      "translated_at": "2026-08-19T14:06:46.776Z"
+    },
+    "skill:luongnv89-asm-metadata-version-semver-pass": {
+      "hash": "cb2bea922c33b332",
+      "summary_zh": "用于校验技能元数据中的版本号是否符合 SemVer 规范，适合技能发布或更新时检查版本格式。",
+      "translated_at": "2026-08-19T14:06:47.225Z"
+    },
+    "skill:luongnv89-asm-refresh-index": {
+      "hash": "6b292e1cd0dba229",
+      "summary_zh": "用于批量刷新已收录的技能仓库，重新索引并核验变更结果，适合维护现有索引来源，不用于新增仓库或改进单个技能。",
+      "translated_at": "2026-08-19T14:06:52.339Z"
+    },
+    "skill:luongnv89-asm-runtime-budget-fail": {
+      "hash": "241fc851097fa582",
+      "summary_zh": "用于在程序运行超出预设时间或资源预算时主动失败，适合 CI 和性能回归检查。",
+      "translated_at": "2026-08-19T14:06:52.937Z"
+    },
+    "skill:luongnv89-asm-missing-frontmatter": {
+      "hash": "c164ed259156c1f5",
+      "summary_zh": "面向 AI 编程代理的通用技能管理工具，用于统一组织、配置和调用代理技能，适合搭建可扩展的智能开发工作流。",
+      "translated_at": "2026-08-19T14:06:53.698Z"
+    },
+    "skill:luongnv89-asm-skill-auto-improver": {
+      "hash": "9f8c914cd61141be",
+      "summary_zh": "用于把外部、旧版或已偏离规范的 SKILL.md 校准到标准，并通过严格校验和可预测性审查发现问题。",
+      "translated_at": "2026-08-19T14:06:54.855Z"
+    },
+    "skill:luongnv89-asm-skill-index-updater": {
+      "hash": "99312e2c93712e68",
+      "summary_zh": "用于将 GitHub 技能仓库自动纳入 ASM 索引，适合批量审核、评估并生成目录后提交 PR 的入库场景。",
+      "translated_at": "2026-08-19T14:06:56.743Z"
+    },
+    "skill:luongnv89-asm-runtime-budget-pass": {
+      "hash": "150740f41cc72e64",
+      "summary_zh": "这是一个规范简短项目说明的工具，要求明确触发条件，避免内容被误用于无关文档。",
+      "translated_at": "2026-08-19T14:06:57.744Z"
+    },
+    "skill:luongnv89-asm-skill-creator": {
+      "hash": "adff3a734abe6e68",
+      "summary_zh": "用于创建、改进和评测技能，适合优化技能触发描述、运行测试并进行性能基准比较。",
+      "translated_at": "2026-08-19T14:06:59.851Z"
+    },
+    "skill:luongnv89-asm-well-formed": {
+      "hash": "2ea0c7d39844cc74",
+      "summary_zh": "用于在合并前检查拉取请求差异，及时发现代码异味、风格问题和潜在安全风险。",
+      "translated_at": "2026-08-19T14:07:01.689Z"
+    },
+    "skill:luongnv89-asm-skill-install-improved": {
+      "hash": "36a1ebddda6946e6",
+      "summary_zh": "用于从本地路径、仓库或名称获取技能，先在临时副本中自动改进，再安装优化后的版本。",
+      "translated_at": "2026-08-19T14:07:04.570Z"
+    },
+    "skill:luongnv89-asm-skill-upstream-pr": {
+      "hash": "90369743fa14d142",
+      "summary_zh": "用于改进开源 GitHub 技能并友好地向上游提交建议 PR，适合通过前后评测指标验证优化效果。",
+      "translated_at": "2026-08-19T14:07:06.954Z"
+    },
+    "content:k-dense-ai-claude-scientific-skills-dhdna-profiler": {
+      "hash": "c6df69b47176fd97",
+      "translated_at": "2026-08-19T14:14:46.148Z"
+    },
+    "content:k-dense-ai-claude-scientific-skills-diffdock": {
+      "hash": "42d9550fab2a1d00",
+      "translated_at": "2026-08-19T14:16:36.212Z"
+    },
+    "content:k-dense-ai-claude-scientific-skills-dnanexus-integration": {
+      "hash": "f246b3214762a473",
+      "translated_at": "2026-08-19T14:17:47.827Z"
+    },
+    "content:k-dense-ai-claude-scientific-skills-docx": {
+      "hash": "5b9ba52c1172b367",
+      "translated_at": "2026-08-19T14:18:32.380Z"
+    },
+    "content:k-dense-ai-claude-scientific-skills-esm": {
+      "hash": "439047e87cf744ef",
+      "translated_at": "2026-08-19T14:19:48.967Z"
+    },
+    "content:k-dense-ai-claude-scientific-skills-etetoolkit": {
+      "hash": "e9637685939b2e73",
+      "translated_at": "2026-08-19T14:21:03.791Z"
+    },
+    "content:k-dense-ai-claude-scientific-skills-exa-search": {
+      "hash": "1986353174a63bce",
+      "translated_at": "2026-08-19T14:21:20.179Z"
+    },
+    "content:k-dense-ai-claude-scientific-skills-experimental-design": {
+      "hash": "0a314eed103a4c75",
+      "translated_at": "2026-08-19T14:22:19.959Z"
+    },
+    "content:k-dense-ai-claude-scientific-skills-exploratory-data-analysis": {
+      "hash": "ed1c66ba8de6add4",
+      "translated_at": "2026-08-19T14:22:41.474Z"
+    },
+    "content:k-dense-ai-claude-scientific-skills-flowio": {
+      "hash": "2b92a5e59eddbff1",
+      "translated_at": "2026-08-19T14:23:25.152Z"
+    },
+    "content:k-dense-ai-claude-scientific-skills-fluidsim": {
+      "hash": "8e6c918819225c10",
+      "translated_at": "2026-08-19T14:24:01.602Z"
+    },
+    "content:k-dense-ai-claude-scientific-skills-generate-image": {
+      "hash": "ecb4d409924e72f0",
+      "translated_at": "2026-08-19T14:25:17.677Z"
+    },
+    "content:k-dense-ai-claude-scientific-skills-geniml": {
+      "hash": "937fa40113f38922",
+      "translated_at": "2026-08-19T14:25:23.545Z"
+    },
+    "content:k-dense-ai-claude-scientific-skills-genomic-coordinates": {
+      "hash": "afc6c6f220a860e9",
+      "translated_at": "2026-08-19T14:26:11.007Z"
+    },
+    "content:k-dense-ai-claude-scientific-skills-genomic-intelligence": {
+      "hash": "a76747245399bf60",
+      "translated_at": "2026-08-19T14:26:59.075Z"
+    },
+    "content:k-dense-ai-claude-scientific-skills-geomaster": {
+      "hash": "213ea4982a9af037",
+      "translated_at": "2026-08-19T14:27:30.311Z"
+    },
+    "content:k-dense-ai-claude-scientific-skills-geopandas": {
+      "hash": "2293810fa81a2355",
+      "translated_at": "2026-08-19T14:28:20.799Z"
+    },
+    "content:k-dense-ai-claude-scientific-skills-get-available-resources": {
+      "hash": "f9d65a3a81fffd09",
+      "translated_at": "2026-08-19T14:28:25.981Z"
+    },
+    "content:k-dense-ai-claude-scientific-skills-gget": {
+      "hash": "6888255d28ea5b34",
+      "translated_at": "2026-08-19T14:29:09.301Z"
+    },
+    "content:k-dense-ai-claude-scientific-skills-ginkgo-cloud-lab": {
+      "hash": "a42fd6891cadd577",
+      "translated_at": "2026-08-19T14:29:15.969Z"
+    },
+    "content:k-dense-ai-claude-scientific-skills-gtars": {
+      "hash": "fc98bc1cf9885208",
+      "translated_at": "2026-08-19T14:30:29.587Z"
+    },
+    "content:k-dense-ai-claude-scientific-skills-glycoengineering": {
+      "hash": "cfb906827d4d68b3",
+      "translated_at": "2026-08-19T14:30:46.001Z"
+    },
+    "content:k-dense-ai-claude-scientific-skills-histolab": {
+      "hash": "bb488555cc3b624d",
+      "translated_at": "2026-08-19T14:31:26.912Z"
+    },
+    "content:k-dense-ai-claude-scientific-skills-hugging-science": {
+      "hash": "4ed47bd25a70b02a",
+      "translated_at": "2026-08-19T14:31:47.117Z"
+    },
+    "content:k-dense-ai-claude-scientific-skills-hypogenic": {
+      "hash": "0552dd52a0ce9df9",
+      "translated_at": "2026-08-19T14:32:42.374Z"
+    },
+    "content:k-dense-ai-claude-scientific-skills-hypothesis-generation": {
+      "hash": "03988141652207b3",
+      "translated_at": "2026-08-19T14:33:09.841Z"
+    },
+    "content:k-dense-ai-claude-scientific-skills-infographics": {
+      "hash": "e1d8a7601c1d9421",
+      "translated_at": "2026-08-19T14:34:18.721Z"
+    },
+    "content:k-dense-ai-claude-scientific-skills-iso-13485-certification": {
+      "hash": "387bb35848a8bf6d",
+      "translated_at": "2026-08-19T14:35:29.460Z"
+    },
+    "content:k-dense-ai-claude-scientific-skills-imaging-data-commons": {
+      "hash": "27ceb36b3ee1d696",
+      "translated_at": "2026-08-19T14:35:46.626Z"
+    },
+    "content:k-dense-ai-claude-scientific-skills-iso-standards-readiness": {
+      "hash": "a08ce20a9aea0bf5",
+      "translated_at": "2026-08-19T14:37:05.595Z"
+    },
+    "content:k-dense-ai-claude-scientific-skills-lab-hardware-cad": {
+      "hash": "b89d796cfc8edcc8",
+      "translated_at": "2026-08-19T14:37:52.294Z"
+    },
+    "content:k-dense-ai-claude-scientific-skills-labarchive-integration": {
+      "hash": "bbad0eb5ed60fe67",
+      "translated_at": "2026-08-19T14:38:01.687Z"
+    },
+    "content:k-dense-ai-claude-scientific-skills-latchbio-integration": {
+      "hash": "ea302dff7ee20b82",
+      "translated_at": "2026-08-19T14:38:49.285Z"
+    },
+    "content:k-dense-ai-claude-scientific-skills-lamindb": {
+      "hash": "68822136d375fd36",
+      "translated_at": "2026-08-19T14:39:41.451Z"
     }
   }
 }

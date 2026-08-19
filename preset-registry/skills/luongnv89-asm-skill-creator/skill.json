@@ -1,0 +1,26 @@
+{
+  "id": "luongnv89-asm-skill-creator",
+  "name": "skill-creator",
+  "description": "Create, improve, evaluate, benchmark skills. Use when authoring a new skill, updating an existing one, running evals, or optimizing a skill's description for triggering. Don't use for invoking skills, writing prose, or scaffolding Python projects.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "luongnv89",
+  "install_path": ".claude/skills/skill-creator/SKILL.md",
+  "source": {
+    "repo": "luongnv89/asm",
+    "url": "https://github.com/luongnv89/asm/blob/main/skills/skill-creator/SKILL.md",
+    "path": "skills/skill-creator/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-19T13:58:40.357Z",
+    "stars": 874,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-19T13:55:39Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于创建、改进和评测技能，适合优化技能触发描述、运行测试并进行性能基准比较。"
+}

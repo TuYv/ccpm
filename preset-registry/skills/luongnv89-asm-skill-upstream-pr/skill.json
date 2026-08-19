@@ -1,0 +1,26 @@
+{
+  "id": "luongnv89-asm-skill-upstream-pr",
+  "name": "skill-upstream-pr",
+  "description": "Improve an open-source GitHub skill and open a friendly suggestion PR upstream: fork, run skill-auto-improver, attach asm eval before/after metrics. Don't use for local-only skills, authoring from scratch, bulk repos, or registry publish.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "luongnv89",
+  "install_path": ".claude/skills/skill-upstream-pr/SKILL.md",
+  "source": {
+    "repo": "luongnv89/asm",
+    "url": "https://github.com/luongnv89/asm/blob/main/skills/skill-upstream-pr/SKILL.md",
+    "path": "skills/skill-upstream-pr/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-19T13:58:40.921Z",
+    "stars": 874,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-19T13:55:39Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于改进开源 GitHub 技能并友好地向上游提交建议 PR，适合通过前后评测指标验证优化效果。"
+}

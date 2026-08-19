@@ -1,0 +1,26 @@
+{
+  "id": "luongnv89-asm-actual-dir-name",
+  "name": "a-different-name",
+  "description": "Validate a skill. Don't use for unrelated docs.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "luongnv89",
+  "install_path": ".claude/skills/actual-dir-name/SKILL.md",
+  "source": {
+    "repo": "luongnv89/asm",
+    "url": "https://github.com/luongnv89/asm/blob/main/src/eval/providers/skill-best-practice/v1/fixtures/actual-dir-name/SKILL.md",
+    "path": "src/eval/providers/skill-best-practice/v1/fixtures/actual-dir-name/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-19T13:58:41.112Z",
+    "stars": 874,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-19T13:55:39Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于验证技能配置或内容是否符合要求，适合提交前检查，避免误用于无关文档。"
+}

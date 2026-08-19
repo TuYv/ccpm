@@ -1,0 +1,26 @@
+{
+  "id": "luongnv89-asm-find-me-skills",
+  "name": "find-me-skills",
+  "description": "Find Agent Skills for a goal the user cannot name yet, then export an installable bundle. Use when they ask which skills fit a project. Don't use for installing named skills, authoring skills, or catalog maintenance.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "luongnv89",
+  "install_path": ".claude/skills/find-me-skills/SKILL.md",
+  "source": {
+    "repo": "luongnv89/asm",
+    "url": "https://github.com/luongnv89/asm/blob/main/skills/find-me-skills/SKILL.md",
+    "path": "skills/find-me-skills/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-19T13:58:39.270Z",
+    "stars": 874,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-19T13:55:39Z",
+    "license": "MIT"
+  },
+  "summary_zh": "帮助用户为尚未明确的目标发现合适的智能体技能，并导出可安装的技能包，适合项目选型与技能搭配。"
+}

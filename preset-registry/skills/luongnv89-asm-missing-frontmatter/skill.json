@@ -1,0 +1,26 @@
+{
+  "id": "luongnv89-asm-missing-frontmatter",
+  "name": "missing-frontmatter",
+  "description": "The universal skill manager for AI coding agents.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "luongnv89",
+  "install_path": ".claude/skills/missing-frontmatter/SKILL.md",
+  "source": {
+    "repo": "luongnv89/asm",
+    "url": "https://github.com/luongnv89/asm/blob/main/tests/fixtures/skills/missing-frontmatter/SKILL.md",
+    "path": "tests/fixtures/skills/missing-frontmatter/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-19T13:58:43.332Z",
+    "stars": 874,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-19T13:55:39Z",
+    "license": "MIT"
+  },
+  "summary_zh": "面向 AI 编程代理的通用技能管理工具，用于统一组织、配置和调用代理技能，适合搭建可扩展的智能开发工作流。"
+}

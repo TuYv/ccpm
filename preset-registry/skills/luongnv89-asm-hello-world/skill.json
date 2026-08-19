@@ -1,0 +1,26 @@
+{
+  "id": "luongnv89-asm-hello-world",
+  "name": "hello-world",
+  "description": "A minimal test skill that greets the user and demonstrates the ASM publish workflow.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "luongnv89",
+  "install_path": ".claude/skills/hello-world/SKILL.md",
+  "source": {
+    "repo": "luongnv89/asm",
+    "url": "https://github.com/luongnv89/asm/blob/main/skills/hello-world/SKILL.md",
+    "path": "skills/hello-world/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-19T13:58:39.469Z",
+    "stars": 874,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-19T13:55:39Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一个用于问候用户的极简测试技能，适合演示和验证 ASM 发布流程。"
+}
