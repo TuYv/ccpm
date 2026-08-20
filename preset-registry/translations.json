@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-20T05:40:37.553Z",
+  "updated_at": "2026-08-20T07:48:13.871Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -9923,9 +9923,9 @@
       "translated_at": "2026-05-20T01:05:27.964Z"
     },
     "bundle:expo-skills": {
-      "hash": "c1206d0dbb5ed147",
-      "summary_zh": "这是一套覆盖 Expo 应用开发、原生体验打磨、云端构建发布、托管运维与质量观察的实战工具集，帮助团队更顺畅地完成从开发到上线的全流程。",
-      "translated_at": "2026-08-18T23:57:58.272Z"
+      "hash": "43b820de111287c2",
+      "summary_zh": "面向 Expo 应用全生命周期，整合开发、原生体验、构建发布、云端托管、自动化与运行监控能力。",
+      "translated_at": "2026-08-20T07:10:18.715Z"
     },
     "bundle:softaworks-agent-toolkit": {
       "hash": "d6cc12c1edf650d1",
@@ -9968,9 +9968,9 @@
       "translated_at": "2026-08-03T04:59:01.603Z"
     },
     "bundle:kenryu42-claude-code-safety-net": {
-      "hash": "10d68581b3d5127b",
-      "summary_zh": "为 Claude Code 配置、定制并验证安全规则，帮助团队持续简化防护体系，降低误操作和项目维护风险。",
-      "translated_at": "2026-08-19T12:03:04.318Z"
+      "hash": "e397ef4fbd7bddbd",
+      "summary_zh": "面向 Claude Code 安全规则的全流程工具集，统一完成配置、校验、优化与发布，便于共享和持续维护。",
+      "translated_at": "2026-08-20T07:10:20.166Z"
     },
     "bundle:callstackincubator-agent-skills": {
       "hash": "38e61628cf6061c3",
@@ -20848,9 +20848,9 @@
       "translated_at": "2026-08-04T15:47:57.471Z"
     },
     "skill:expo-skills-expo-ui": {
-      "hash": "0d039d2b03f6b908",
-      "summary_zh": "一个让 Expo 或 React Native 通过 React 调用原生 SwiftUI 和 Jetpack Compose 的开源框架，适合构建跨平台原生界面。",
-      "translated_at": "2026-08-03T16:28:00.865Z"
+      "hash": "f68cf4577e7069e0",
+      "summary_zh": "一个用 SwiftUI 和 Jetpack Compose 构建原生跨平台界面的框架，适合开发表单、设置页及常用交互控件。",
+      "translated_at": "2026-08-20T07:10:24.400Z"
     },
     "skill:expo-skills-expo-web-to-native": {
       "hash": "24cf2c27b9f52394",
@@ -32230,8 +32230,8 @@
       "translated_at": "2026-08-19T23:25:58.159Z"
     },
     "content:garrytan-gstack-pair-agent": {
-      "hash": "7d817d9561a8e386",
-      "translated_at": "2026-08-19T22:45:13.225Z"
+      "hash": "9e1d674166048bf4",
+      "translated_at": "2026-08-20T07:33:22.850Z"
     },
     "content:garrytan-gstack-skillify": {
       "hash": "0c4885afa6c4aa49",
@@ -38273,8 +38273,8 @@
       "translated_at": "2026-08-15T20:30:52.376Z"
     },
     "content:expo-skills-expo-native-ui": {
-      "hash": "ed39bc3c516d7eae",
-      "translated_at": "2026-08-15T20:31:28.895Z"
+      "hash": "3af5c164a7f91336",
+      "translated_at": "2026-08-20T07:16:19.719Z"
     },
     "content:expo-skills-expo-project-structure": {
       "hash": "96fd0659067e6e44",
@@ -38293,8 +38293,8 @@
       "translated_at": "2026-08-15T20:33:41.244Z"
     },
     "content:expo-skills-expo-ui": {
-      "hash": "785535ef4089336c",
-      "translated_at": "2026-08-15T20:34:09.460Z"
+      "hash": "3d1bd7004e6556c2",
+      "translated_at": "2026-08-20T07:17:52.402Z"
     },
     "content:expo-skills-expo-ui-jetpack-compose": {
       "hash": "6330c87373fca0bc",
@@ -40764,12 +40764,12 @@
       "translated_at": "2026-08-17T22:08:31.056Z"
     },
     "content:imbad0202-academic-research-skills-academic-paper-reviewer": {
-      "hash": "fef4d0f83b8721c1",
-      "translated_at": "2026-08-17T22:12:19.670Z"
+      "hash": "771a784f2606b8dd",
+      "translated_at": "2026-08-20T07:37:05.938Z"
     },
     "content:imbad0202-academic-research-skills-academic-paper": {
-      "hash": "c850d75529de7dfe",
-      "translated_at": "2026-08-17T22:13:48.780Z"
+      "hash": "1b92fdab52942646",
+      "translated_at": "2026-08-20T07:36:46.543Z"
     },
     "content:imbad0202-academic-research-skills-deep-research": {
       "hash": "08c348a60248504c",
@@ -44366,6 +44366,128 @@
     "content:levnikolaevich-claude-code-skills-ln-221-story-creator": {
       "hash": "52c0a6afb6f58bd1",
       "translated_at": "2026-08-20T05:40:37.553Z"
+    },
+    "skill:expo-skills-expo-overview": {
+      "hash": "8ee0230562903989",
+      "summary_zh": "面向 Expo/EAS 开发的统一任务入口，可在编码前识别需求并路由到合适工具，适合移动应用设计、导航与页面实现。",
+      "translated_at": "2026-08-20T07:10:25.574Z"
+    },
+    "skill:kenryu42-claude-code-safety-net-release-notes": {
+      "hash": "de35f2f45d6f5843",
+      "summary_zh": "用于生成并发布简洁、可追溯的 GitHub Release 说明，适合更新最新已有发布版本的正文。",
+      "translated_at": "2026-08-20T07:10:27.722Z"
+    },
+    "content:expo-skills-expo-overview": {
+      "hash": "f991966e9fad88ce",
+      "translated_at": "2026-08-20T07:17:12.616Z"
+    },
+    "content:kenn-io-roborev-roborev-snooze": {
+      "hash": "3dfda67064e6621a",
+      "translated_at": "2026-08-20T07:37:18.238Z"
+    },
+    "content:kenn-io-roborev-roborev-review-branch": {
+      "hash": "6bbd703139332551",
+      "translated_at": "2026-08-20T07:37:20.006Z"
+    },
+    "content:kenryu42-claude-code-safety-net-cc-safety-net": {
+      "hash": "7e20ea9bddf598ea",
+      "translated_at": "2026-08-20T07:37:46.837Z"
+    },
+    "content:kenryu42-claude-code-safety-net-ccsn-find-simplifications": {
+      "hash": "478e33654adb00b8",
+      "translated_at": "2026-08-20T07:38:15.675Z"
+    },
+    "content:kenryu42-claude-code-safety-net-set-custom-rules": {
+      "hash": "1fe0c4032dfe94a4",
+      "translated_at": "2026-08-20T07:38:26.985Z"
+    },
+    "content:kenryu42-claude-code-safety-net-verify-custom-rules": {
+      "hash": "15276c07f16a6c50",
+      "translated_at": "2026-08-20T07:38:34.483Z"
+    },
+    "content:kenryu42-claude-code-safety-net-release-notes": {
+      "hash": "37f3181c7f9f1f66",
+      "translated_at": "2026-08-20T07:39:00.160Z"
+    },
+    "content:kubb-labs-kubb-changelog": {
+      "hash": "2617208a97379e57",
+      "translated_at": "2026-08-20T07:39:34.253Z"
+    },
+    "content:kubb-labs-kubb-coding-style": {
+      "hash": "40debc6e32a2562c",
+      "translated_at": "2026-08-20T07:40:04.097Z"
+    },
+    "content:kubb-labs-kubb-config": {
+      "hash": "9aea82acb5acc82b",
+      "translated_at": "2026-08-20T07:40:36.900Z"
+    },
+    "content:kubb-labs-kubb-deslop": {
+      "hash": "a4f3943b9be701e9",
+      "translated_at": "2026-08-20T07:40:49.572Z"
+    },
+    "content:kubb-labs-kubb-documentation": {
+      "hash": "06e4b56774edbb01",
+      "translated_at": "2026-08-20T07:41:19.616Z"
+    },
+    "content:kubb-labs-kubb-humanizer": {
+      "hash": "709b53271536aa2d",
+      "translated_at": "2026-08-20T07:41:34.324Z"
+    },
+    "content:kevin7qi-codex-collab": {
+      "hash": "d55c1c4f66cdea8e",
+      "translated_at": "2026-08-20T07:42:00.013Z"
+    },
+    "content:kubb-labs-kubb-jsdoc": {
+      "hash": "e0fe7afd4d09ab80",
+      "translated_at": "2026-08-20T07:42:07.506Z"
+    },
+    "content:kubb-labs-kubb-output": {
+      "hash": "82d9ae7eed402b13",
+      "translated_at": "2026-08-20T07:42:13.032Z"
+    },
+    "content:kubb-labs-kubb-pr": {
+      "hash": "8f5bda733f678801",
+      "translated_at": "2026-08-20T07:42:16.995Z"
+    },
+    "content:kubb-labs-kubb-spec-driven": {
+      "hash": "d6ec6cdde7198942",
+      "translated_at": "2026-08-20T07:42:23.813Z"
+    },
+    "content:kubb-labs-kubb-testing": {
+      "hash": "dc9723393e9cb633",
+      "translated_at": "2026-08-20T07:42:28.885Z"
+    },
+    "content:levnikolaevich-claude-code-skills-ln-222-story-replanner": {
+      "hash": "a216a12dfe478a9c",
+      "translated_at": "2026-08-20T07:42:55.904Z"
+    },
+    "content:levnikolaevich-claude-code-skills-ln-23-test-suite-auditor": {
+      "hash": "9ce184f206b404ab",
+      "translated_at": "2026-08-20T07:44:28.556Z"
+    },
+    "content:levnikolaevich-claude-code-skills-ln-1000-pipeline-orchestrator": {
+      "hash": "43dd81eda51ac9e6",
+      "translated_at": "2026-08-20T07:45:25.525Z"
+    },
+    "content:levnikolaevich-claude-code-skills-ln-230-story-prioritizer": {
+      "hash": "533acccb2a3581b7",
+      "translated_at": "2026-08-20T07:46:35.461Z"
+    },
+    "content:levnikolaevich-claude-code-skills-ln-24-architecture-auditor": {
+      "hash": "32ae618b82f59f17",
+      "translated_at": "2026-08-20T07:46:50.846Z"
+    },
+    "content:levnikolaevich-claude-code-skills-ln-25-persistence-auditor": {
+      "hash": "b4096dc9688d87ae",
+      "translated_at": "2026-08-20T07:47:43.001Z"
+    },
+    "content:levnikolaevich-claude-code-skills-ln-301-task-creator": {
+      "hash": "767c56163f0c7ae6",
+      "translated_at": "2026-08-20T07:48:13.033Z"
+    },
+    "content:levnikolaevich-claude-code-skills-ln-300-task-coordinator": {
+      "hash": "3874af56315f048f",
+      "translated_at": "2026-08-20T07:48:13.871Z"
     }
   }
 }

@@ -1,0 +1,26 @@
+{
+  "id": "expo-skills-expo-overview",
+  "name": "expo-overview",
+  "description": "Framework (OSS). Entry point and router for every Expo or EAS task. Load this skill first — before writing code and before choosing another expo-* / eas-* skill — when the request, PRD, or spec mentions Expo, EAS, Expo Go, or an expo-* package, or the project has an `expo` dependency in `package.json`. Within that gate it also covers app specs and designs to implement (tabs, stacks, maps, lists, navigation, building from a screenshot), and phrasings like 'implement a mobile app', 'make my app lo",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "expo",
+  "install_path": ".claude/skills/expo-overview/SKILL.md",
+  "source": {
+    "repo": "expo/skills",
+    "url": "https://github.com/expo/skills/blob/main/plugins/expo/skills/expo-overview/SKILL.md",
+    "path": "plugins/expo/skills/expo-overview/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-20T06:11:20.864Z",
+    "stars": 2438,
+    "language": "Shell",
+    "pushed_at": "2026-08-20T04:32:08Z",
+    "license": "MIT"
+  },
+  "summary_zh": "面向 Expo/EAS 开发的统一任务入口，可在编码前识别需求并路由到合适工具，适合移动应用设计、导航与页面实现。"
+}

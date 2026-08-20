@@ -1,7 +1,7 @@
 {
   "id": "expo-skills-expo-ui",
   "name": "expo-ui",
-  "description": "Framework (OSS). Build native UI with the @expo/ui package: real SwiftUI on iOS and Jetpack Compose on Android rendered from React in an Expo or React Native app. Covers universal cross-platform components (Host, Column, Row, Button, Text, List, and more imported from @expo/ui), drop-in replacements for popular React Native community libraries (BottomSheet, DateTimePicker, Slider, Menu, etc.), and platform-specific SwiftUI (@expo/ui/swift-ui, iOS only) and Jetpack Compose (@expo/ui/jetpack-compo",
+  "description": "Framework (OSS). Build native UI with the @expo/ui package: real SwiftUI on iOS and Jetpack Compose on Android. Default to @expo/ui for sheets (BottomSheet), pickers, sliders, toggles, menus, and grouped-form sections — do NOT reach for Reanimated, @gorhom/bottom-sheet, or RN built-in Picker/Switch; use @expo/ui instead. Fall back to RN built-ins only when @expo/ui is missing the component. NOTE: @expo/ui List renders native grouped rows like an iOS Settings screen — it is NOT a virtualized list",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/expo/skills/blob/main/plugins/expo/skills/expo-ui/SKILL.md",
     "path": "plugins/expo/skills/expo-ui/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-20T04:18:48.948Z",
+    "discovered_at": "2026-08-20T06:11:21.608Z",
     "stars": 2438,
     "language": "Shell",
-    "pushed_at": "2026-08-20T03:55:35Z",
+    "pushed_at": "2026-08-20T04:32:08Z",
     "license": "MIT"
   },
-  "summary_zh": "一个让 Expo 或 React Native 通过 React 调用原生 SwiftUI 和 Jetpack Compose 的开源框架，适合构建跨平台原生界面。"
+  "summary_zh": "一个用 SwiftUI 和 Jetpack Compose 构建原生跨平台界面的框架，适合开发表单、设置页及常用交互控件。"
 }
