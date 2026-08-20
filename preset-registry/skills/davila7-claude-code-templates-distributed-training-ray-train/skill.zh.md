@@ -5,11 +5,11 @@ version: 1.0.0
 author: Orchestra Research
 license: MIT
 tags: [Ray Train, Distributed Training, Orchestration, Ray, Hyperparameter Tuning, Fault Tolerance, Elastic Scaling, Multi-Node, PyTorch, TensorFlow]
-dependencies: [ray[train], torch, transformers]
+dependencies: ["ray[train]", torch, transformers]
 ---
 # Ray Train - 分布式训练编排
 
-## 快速开始
+## 快速入门
 
 Ray Train 只需极少的代码改动，即可将机器学习训练从单 GPU 扩展到多节点集群。
 
@@ -65,7 +65,7 @@ print(f"Final loss: {result.metrics['loss']}")
 - 分布式协调
 - GPU 分配
 - 容错
-- 检查点
+- 检查点保存
 - 指标聚合
 
 ## 常见工作流
@@ -84,7 +84,7 @@ for epoch in range(epochs):
         optimizer.step()
 ```
 
-**Ray Train 版本**（可扩展到多 GPU/多节点）：
+**Ray Train 版本**（可扩展至多 GPU/多节点）：
 ```python
 from ray.train.torch import TorchTrainer
 from ray import train
@@ -114,7 +114,7 @@ trainer = TorchTrainer(
 trainer.fit()
 ```
 
-**优势**：同一份代码既可在 1 个 GPU 上运行，也可在 1000 个 GPU 上运行
+**优势**：同一套代码可在 1 个 GPU 或 1000 个 GPU 上运行
 
 ### 工作流 2：HuggingFace Transformers 集成
 
@@ -285,27 +285,27 @@ ray start --head --port=6379
 ray start --address=<head-node-ip>:6379
 ```
 
-## 何时使用及替代方案
+## 何时使用及何时选择替代方案
 
-**以下情况使用 Ray Train**：
+**适合使用 Ray Train 的情况**：
 - 跨多台机器训练（多节点）
-- 需要大规模超参数调优
+- 需要进行大规模超参数调优
 - 需要容错能力（自动重启失败的工作进程）
-- 弹性扩缩容（在训练期间添加/移除节点）
-- 需要统一的框架（相同代码适用于 PyTorch/TF/HF）
+- 弹性伸缩（在训练期间添加/移除节点）
+- 需要统一框架（同一套代码适用于 PyTorch/TF/HF）
 
 **主要优势**：
-- **多节点编排**：最简便的多节点设置
+- **多节点编排**：最简单的多节点配置方式
 - **Ray Tune 集成**：一流的超参数调优
-- **容错能力**：从故障中自动恢复
+- **容错能力**：自动从故障中恢复
 - **弹性伸缩**：无需重启即可添加/移除节点
 - **框架无关**：PyTorch、TensorFlow、HuggingFace、XGBoost
 
-**以下情况改用替代方案**：
+**应改用替代方案的情况**：
 - **Accelerate**：单节点多 GPU，更简单
-- **PyTorch Lightning**：高级抽象、回调
-- **DeepSpeed**：最高性能，但设置复杂
-- **原生 DDP**：最大控制力，最小开销
+- **PyTorch Lightning**：高级抽象和回调机制
+- **DeepSpeed**：性能最大化，但配置复杂
+- **原生 DDP**：控制能力最强，开销最低
 
 ## 常见问题
 
@@ -367,14 +367,14 @@ def train_func(config):
             print(f"Data loading: {data_time:.3f}s")
 ```
 
-如果数据加载速度较慢，请增加工作进程数量：
+如果数据加载速度慢，请增加工作进程数量：
 ```python
 dataloader = DataLoader(dataset, num_workers=8)
 ```
 
 ## 高级主题
 
-**多节点设置**：有关在 AWS、GCP、Kubernetes 和 SLURM 上部署 Ray 集群的信息，请参阅 [references/multi-node.md](references/multi-node.md)。
+**多节点配置**：有关在 AWS、GCP、Kubernetes 和 SLURM 上部署 Ray 集群的信息，请参阅 [references/multi-node.md](references/multi-node.md)。
 
 **超参数调优**：有关 Ray Tune 集成、搜索算法（Optuna、HyperOpt）和基于种群的训练，请参阅 [references/hyperparameter-tuning.md](references/hyperparameter-tuning.md)。
 
@@ -383,8 +383,8 @@ dataloader = DataLoader(dataset, num_workers=8)
 ## 硬件要求
 
 - **单节点**：1 个或更多 GPU（或 CPU）
-- **多节点**：2 台或更多具有网络连接的机器
-- **云端**：AWS、GCP、Azure（Ray 自动扩缩容）
+- **多节点**：2 台或更多具备网络连接的机器
+- **云平台**：AWS、GCP、Azure（Ray 自动伸缩）
 - **本地部署**：Kubernetes、SLURM 集群
 
 **支持的加速器**：

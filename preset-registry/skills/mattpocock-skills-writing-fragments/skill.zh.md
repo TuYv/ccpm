@@ -1,21 +1,78 @@
 ---
 name: writing-fragments
-description: Writing, explore — mine raw fragments, no structure yet.
+description: "Writing, explore: mine raw fragments, no structure yet."
 disable-model-invocation: true
 ---
-已收到，我先按要求确认技能/插件加载清单。  
-请你先选定本轮要用的 **skill / plugin 整组**（可多选）：
+<what-to-do>
 
-- `agent-reach`
-- `baoyu-skills`
-- `delegate`
-- `lark`
-- `ljg-skills`
-- `local-tools`
-- `matt-pocock-skills`
-- `openspec`
-- `product-workflow`
-- `skill-creator`
-- `skills-ecosystem`
+这纯粹是**探索**：拓宽可能写作的空间，而不确定任何结构。确定结构属于_利用_，是另一项技能的工作。开展一场追问式访谈，围绕用户想写的任何内容不断深入提问，产出片段。划分阶段、拟定大纲或设计文章结构均不在此处的范围内。
 
-你也可以回复“暂不启用任何插件”，我会继续按你给定的翻译规则先产出对应中文片段。
+当对话任一方产生片段时，将它们追加到同一个 Markdown 文件中。
+
+如果用户没有提供路径，只询问一次文档的保存位置，然后在本次会话的其余过程中记住它。
+
+从用户说的第一句话开始捕捉片段，包括初始提示。
+
+首次写入时，只在顶部放置一个使用暂定标题的一级标题（之后可以修改），除此之外不放任何内容：不要元数据、不要目录、不要日期。
+
+</what-to-do>
+
+<supporting-info>
+
+## 什么是片段
+
+片段是任何可能保留到最终文章中的文本。它必须_能让作者读懂_（作者能够明白它的意思），但不需要定义其中的术语，也不必让毫无背景的读者理解。判断标准是“这是不是一段好的文字？”，而不是“这是不是一个自成一体的论点？”
+
+片段刻意保持异质性。以下内容都可以成为片段：
+
+- 一句你想用在某处、但还不知道该放在哪里的犀利句子。
+- 一个附有一句话论证的主张。
+- 一个小场景：发生过的事情、代码片段、情境或类比。
+- 一个尚未成形的想法：“关于 X 为何感觉像 Y 的某种想法，之后再把它想清楚。”
+- 一段引语、一句对话或偶然听到的话。
+- 一组凭感觉彼此关联的观察。
+- 一句抱怨、一则坦白或一个妙语。
+- 一个**引领词**：一种精炼的隐喻或新造词，整篇文章都可以围绕它展开（用一个术语为某种观念命名，就像 _tracer bullets_ 或 _fog of war_ 为一整套模式命名一样）。
+
+其中，引领词是最值得捕捉的片段。它承担着支撑作用：在探索阶段找到恰当的引领词，它便会塑造之后的结构、过渡和标题，并在整个利用阶段持续带来回报。当对话反复围绕某个观念打转时，推动用户为它创造一个词。
+
+小说家的日记就是这里的范本：多年积累的、未经组织的所见所感，日后可从中挖掘原始素材。片段就是所见所感。
+
+## 文件格式
+
+```markdown
+# Working title
+
+A first fragment lives here.
+
+It can be multiple paragraphs. It can include lists, code, quotes: whatever
+shape the fragment naturally takes.
+
+---
+
+A second fragment.
+
+---
+
+> A quoted line that the user wants to keep around.
+
+A reaction to it.
+
+---
+
+- A cluster of related observations
+- That hang together by feel
+- And want to be near each other
+```
+
+片段之间使用水平分隔线（`\n---\n`）分隔。正文内部不使用标题。不加标签。除了按添加顺序排列外，不采用其他顺序。
+
+## 写作节奏
+
+静默追加。不要为每个片段都请求许可。可以顺带提及你添加了什么（“把这点加进去”），但不要用保存对话框打断交谈。
+
+每次写入前：重新从磁盘读取文件。用户可能在两轮交互之间编辑、重新排序或删除片段，因此请保留其更改。绝不要覆盖文件；只能追加内容（或者，如果用户提出要求，则在原位置编辑特定片段）。
+
+用户可以随时说“删掉最后一个”“把那个重写得更犀利一些”“合并那两个”。请将这些视为一等指令。
+
+</supporting-info>

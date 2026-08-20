@@ -5,7 +5,7 @@ version: 1.0.0
 author: Orchestra Research
 license: MIT
 tags: [Data Processing, Ray Data, Distributed Computing, ML Pipelines, Batch Inference, ETL, Scalable, Ray, PyTorch, TensorFlow]
-dependencies: [ray[data], pyarrow, pandas]
+dependencies: ["ray[data]", pyarrow, pandas]
 ---
 # Ray Data - 可扩展的机器学习数据处理
 
@@ -14,7 +14,7 @@ dependencies: [ray[data], pyarrow, pandas]
 ## 何时使用 Ray Data
 
 **在以下情况下使用 Ray Data：**
-- 处理用于机器学习训练的大型数据集（>100GB）
+- 为机器学习训练处理大型数据集（>100GB）
 - 需要在集群中进行分布式数据预处理
 - 构建批量推理流水线
 - 加载多模态数据（图像、音频、视频）
@@ -26,8 +26,8 @@ dependencies: [ray[data], pyarrow, pandas]
 - **框架集成**：PyTorch、TensorFlow、HuggingFace
 - **多模态**：图像、Parquet、CSV、JSON、音频、视频
 
-**以下情况改用替代方案**：
-- **Pandas**：在单台机器上处理小型数据（<1GB）
+**以下情况改用其他方案**：
+- **Pandas**：在单机上处理小型数据（<1GB）
 - **Dask**：表格数据、类 SQL 操作
 - **Spark**：企业级 ETL、SQL 查询
 
@@ -120,7 +120,7 @@ ds = ray.data.from_pandas(df)
 
 ## 转换
 
-### 批量映射（向量化）
+### 批次映射（向量化）
 
 ```python
 # Batch transformation (fast)
@@ -149,7 +149,7 @@ ds = ds.map(process_row)
 ds = ds.filter(lambda row: row["value"] > 100)
 ```
 
-### 分组和聚合
+### 分组与聚合
 
 ```python
 # Group by column
@@ -255,7 +255,7 @@ ds = (
 )
 ```
 
-## 与机器学习框架集成
+## 与 ML 框架集成
 
 ### PyTorch
 
@@ -283,31 +283,31 @@ for features, labels in tf_ds:
 
 | 格式 | 读取 | 写入 | 使用场景 |
 |--------|------|-------|----------|
-| Parquet | ✅ | ✅ | 机器学习数据（推荐） |
+| Parquet | ✅ | ✅ | ML 数据（推荐） |
 | CSV | ✅ | ✅ | 表格数据 |
 | JSON | ✅ | ✅ | 半结构化数据 |
 | 图像 | ✅ | ❌ | 计算机视觉 |
 | NumPy | ✅ | ✅ | 数组 |
-| Pandas | ✅ | ❌ | DataFrame |
+| Pandas | ✅ | ❌ | DataFrames |
 
 ## 性能基准
 
-**扩展能力**（处理 100GB 数据）：
+**扩展性能**（处理 100GB 数据）：
 - 1 个节点（16 核）：约 30 分钟
 - 4 个节点（64 核）：约 8 分钟
 - 16 个节点（256 核）：约 2 分钟
 
 **GPU 加速**（图像预处理）：
-- 仅使用 CPU：1,000 张图像/秒
-- 1 个 GPU：5,000 张图像/秒
-- 4 个 GPU：18,000 张图像/秒
+- 仅使用 CPU：每秒 1,000 张图像
+- 1 个 GPU：每秒 5,000 张图像
+- 4 个 GPU：每秒 18,000 张图像
 
 ## 使用场景
 
 **生产部署**：
 - **Pinterest**：用于模型训练的最后一公里数据处理
-- **ByteDance**：扩展多模态大语言模型的离线推理
-- **Spotify**：用于批量推理的机器学习平台
+- **ByteDance**：使用多模态 LLM 扩展离线推理
+- **Spotify**：用于批量推理的 ML 平台
 
 ## 参考资料
 

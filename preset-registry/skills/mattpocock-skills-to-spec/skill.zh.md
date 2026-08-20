@@ -1,13 +1,74 @@
 ---
 name: to-spec
-description: Turn the current conversation into a spec and publish it to the project issue tracker — no interview, just synthesis of what you've already discussed.
+description: "Turn the current conversation into a spec and publish it to the project issue tracker: no interview, just synthesis of what you've already discussed."
 disable-model-invocation: true
 ---
-`$loadout-manager` 检测到你请求涉及的受管技能匹配如下，当前未加载：
+此 Skill 会结合当前对话上下文以及对代码库的理解来生成一份规格说明。不要访谈用户；只需综合你已经掌握的信息。
 
-- `setup-matt-pocock-skills`（插件组：`matt-pocock-skills`）
+问题跟踪器和分诊标签词汇应该已经提供给你。如果没有，请告知用户运行 `/setup-matt-pocock-skills`。
 
-在开始翻译前，请先确认是否加载：
-- 仅启用 `setup-matt-pocock-skills`
-- 启用整个 `matt-pocock-skills` 组
-- 先不启用，先只做浏览选择
+## 流程
+
+1. 如果你尚未探索仓库，请先进行探索，以了解代码库的当前状态。在整份规格说明中使用项目的领域术语表词汇，并遵循与你所涉及区域相关的所有 ADR。
+
+2. 梳理你计划用于测试该功能的接缝。应优先使用现有接缝，而不是创建新接缝。尽可能使用最高层级的接缝。如果需要新接缝，请在尽可能高的层级提出。代码库中的接缝越少越好——理想数量是一个。
+
+向用户确认这些接缝是否符合他们的预期。
+
+3. 使用下面的模板编写规格说明，然后将其发布到项目问题跟踪器。应用 `ready-for-agent` 分诊标签——无需进行其他分诊。
+
+<spec-template>
+
+## 问题陈述
+
+从用户的角度描述用户面临的问题。
+
+## 解决方案
+
+从用户的角度描述该问题的解决方案。
+
+## 用户故事
+
+一份很长的编号用户故事列表。每个用户故事都应采用以下格式：
+
+1. 作为一名<参与者>，我希望<功能>，以便<收益>
+
+<user-story-example>
+1. 作为一名手机银行客户，我希望查看账户余额，以便对自己的支出做出更明智的决定
+</user-story-example>
+
+这份用户故事列表应极其详尽，并涵盖该功能的所有方面。
+
+## 实现决策
+
+列出已经做出的实现决策。其中可以包括：
+
+- 将要构建或修改的模块
+- 将要修改的这些模块的接口
+- 开发者提供的技术澄清
+- 架构决策
+- Schema 变更
+- API 契约
+- 具体交互
+
+不要包含具体文件路径或代码片段。它们可能很快就会过时。
+
+例外情况：如果原型生成的代码片段能够比文字更精确地表达某项决策（状态机、reducer、schema、类型结构），请将其内联到相关决策中，并简要注明它来自原型。将其精简至包含关键决策的部分，不要提供可运行的演示，只保留重要内容。
+
+## 测试决策
+
+列出已经做出的测试决策。包括：
+
+- 对优质测试的描述（只测试外部行为，不测试实现细节）
+- 将测试哪些模块
+- 测试的既有范例（即代码库中类似类型的测试）
+
+## 范围之外
+
+描述不在本规格说明范围内的事项。
+
+## 补充说明
+
+有关该功能的任何其他说明。
+
+</spec-template>
