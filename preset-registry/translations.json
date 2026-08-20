@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-20T12:52:36.833Z",
+  "updated_at": "2026-08-20T14:47:44.972Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -17393,9 +17393,9 @@
       "translated_at": "2026-08-03T04:59:13.941Z"
     },
     "bundle:microsoft-skills-for-fabric": {
-      "hash": "4a71e91ffd20083b",
-      "summary_zh": "面向 Microsoft Fabric 数据与分析场景，整合开发、迁移、运维与监控能力，让全流程自动化管理更高效。",
-      "translated_at": "2026-08-13T18:15:09.894Z"
+      "hash": "c47749920bf9bcf4",
+      "summary_zh": "这套合集面向 Microsoft Fabric 开发与运维，统一打通数据迁移、资源配置、监控告警和自动化管理流程。",
+      "translated_at": "2026-08-20T14:15:04.713Z"
     },
     "bundle:getsentry-skills": {
       "hash": "dd8046cd06104dab",
@@ -24453,9 +24453,9 @@
       "translated_at": "2026-08-04T00:13:47.961Z"
     },
     "skill:microsoft-skills-for-fabric-synapse-migration": {
-      "hash": "cd766fff9771eadc",
-      "summary_zh": "用于将 Azure Synapse Spark 工作负载迁移到 Microsoft Fabric，自动转换工具调用并替换关联服务，适合迁移笔记本和作业定义。",
-      "translated_at": "2026-08-04T00:13:48.663Z"
+      "hash": "b186bc86ed44e8f7",
+      "summary_zh": "用于将 Azure Synapse 工作负载迁移到 Microsoft Fabric，适合转换 Spark 笔记本、数据库元数据和 SQL 架构代码。",
+      "translated_at": "2026-08-20T14:15:09.341Z"
     },
     "skill:modu-ai-moai-adk-harness-moaiadk-dev-reference": {
       "hash": "37e815b7784bed05",
@@ -44284,8 +44284,8 @@
       "translated_at": "2026-08-20T03:01:02.731Z"
     },
     "content:jakubkrehel-skills-explain-interface": {
-      "hash": "645e7a1fc211fb4d",
-      "translated_at": "2026-08-20T12:45:42.613Z"
+      "hash": "0820f18c57b3092a",
+      "translated_at": "2026-08-20T14:29:26.031Z"
     },
     "content:jakubkrehel-skills-variant": {
       "hash": "7a70bf310ee8f6c6",
@@ -44637,6 +44637,134 @@
     "content:levnikolaevich-claude-code-skills-ln-612-semantic-content-auditor": {
       "hash": "54de247fe909b11b",
       "translated_at": "2026-08-20T12:52:36.821Z"
+    },
+    "content:levnikolaevich-claude-code-skills-ln-614-docs-fact-checker": {
+      "hash": "1223a3644d35bb53",
+      "translated_at": "2026-08-20T14:30:48.475Z"
+    },
+    "content:levnikolaevich-claude-code-skills-ln-62-repository-publisher": {
+      "hash": "1373fb95125f6a84",
+      "translated_at": "2026-08-20T14:31:35.739Z"
+    },
+    "content:levnikolaevich-claude-code-skills-ln-620-codebase-auditor": {
+      "hash": "7f32c3bde497d533",
+      "translated_at": "2026-08-20T14:32:39.656Z"
+    },
+    "content:levnikolaevich-claude-code-skills-ln-621-security-boundary-auditor": {
+      "hash": "d17e18e57546c539",
+      "translated_at": "2026-08-20T14:33:41.757Z"
+    },
+    "content:levnikolaevich-claude-code-skills-ln-622-build-delivery-gate-auditor": {
+      "hash": "3782d589d04db488",
+      "translated_at": "2026-08-20T14:34:37.644Z"
+    },
+    "content:levnikolaevich-claude-code-skills-ln-623-duplication-overabstraction-auditor": {
+      "hash": "72fabfa60efd5b20",
+      "translated_at": "2026-08-20T14:35:17.266Z"
+    },
+    "content:levnikolaevich-claude-code-skills-ln-625-dependency-reuse-auditor": {
+      "hash": "85bcab858432148e",
+      "translated_at": "2026-08-20T14:36:21.412Z"
+    },
+    "content:levnikolaevich-claude-code-skills-ln-624-code-maintainability-hotspot-auditor": {
+      "hash": "ca0ae24b6f020e59",
+      "translated_at": "2026-08-20T14:36:24.593Z"
+    },
+    "content:levnikolaevich-claude-code-skills-ln-627-diagnosability-auditor": {
+      "hash": "0b545b2659c575b4",
+      "translated_at": "2026-08-20T14:37:08.598Z"
+    },
+    "content:levnikolaevich-claude-code-skills-ln-626-dead-code-pruning-auditor": {
+      "hash": "3d65d2d9dd74a0ee",
+      "translated_at": "2026-08-20T14:37:24.130Z"
+    },
+    "content:levnikolaevich-claude-code-skills-ln-629-runtime-lifecycle-config-auditor": {
+      "hash": "f520cef37e317d74",
+      "translated_at": "2026-08-20T14:38:19.307Z"
+    },
+    "content:levnikolaevich-claude-code-skills-ln-628-concurrency-correctness-auditor": {
+      "hash": "a106a7d02ee21014",
+      "translated_at": "2026-08-20T14:39:01.798Z"
+    },
+    "content:levnikolaevich-claude-code-skills-ln-63-release-publisher": {
+      "hash": "37d82a6d6364dbfc",
+      "translated_at": "2026-08-20T14:39:03.677Z"
+    },
+    "content:levnikolaevich-claude-code-skills-ln-630-test-auditor": {
+      "hash": "a848f31a54ed23b7",
+      "translated_at": "2026-08-20T14:39:36.258Z"
+    },
+    "content:levnikolaevich-claude-code-skills-ln-631-test-business-logic-auditor": {
+      "hash": "385360317ea383ba",
+      "translated_at": "2026-08-20T14:39:58.039Z"
+    },
+    "content:levnikolaevich-claude-code-skills-ln-632-test-e2e-priority-auditor": {
+      "hash": "25e47dde46e188d9",
+      "translated_at": "2026-08-20T14:40:35.951Z"
+    },
+    "content:levnikolaevich-claude-code-skills-ln-633-test-value-auditor": {
+      "hash": "6528eb1da7ef709f",
+      "translated_at": "2026-08-20T14:41:01.864Z"
+    },
+    "content:levnikolaevich-claude-code-skills-ln-634-test-coverage-auditor": {
+      "hash": "0958693500cd5b3c",
+      "translated_at": "2026-08-20T14:41:32.272Z"
+    },
+    "content:levnikolaevich-claude-code-skills-ln-635-test-isolation-auditor": {
+      "hash": "ca0d6ada537b0ffa",
+      "translated_at": "2026-08-20T14:42:20.881Z"
+    },
+    "content:levnikolaevich-claude-code-skills-ln-636-manual-test-auditor": {
+      "hash": "a4ef1c3a0bf3f678",
+      "translated_at": "2026-08-20T14:42:42.094Z"
+    },
+    "content:levnikolaevich-claude-code-skills-ln-638-test-oracle-effectiveness-auditor": {
+      "hash": "60e84629d52c6e16",
+      "translated_at": "2026-08-20T14:43:40.384Z"
+    },
+    "content:levnikolaevich-claude-code-skills-ln-637-test-structure-auditor": {
+      "hash": "96758fe864be2ed5",
+      "translated_at": "2026-08-20T14:43:48.232Z"
+    },
+    "content:levnikolaevich-claude-code-skills-ln-640-pattern-evolution-auditor": {
+      "hash": "dc0df72f6b76c94f",
+      "translated_at": "2026-08-20T14:44:24.537Z"
+    },
+    "content:levnikolaevich-claude-code-skills-ln-64-community-announcer": {
+      "hash": "8b3dca3969375c93",
+      "translated_at": "2026-08-20T14:44:25.754Z"
+    },
+    "content:levnikolaevich-claude-code-skills-ln-641-pattern-fitness-auditor": {
+      "hash": "a94e589d30fe0549",
+      "translated_at": "2026-08-20T14:45:13.621Z"
+    },
+    "content:levnikolaevich-claude-code-skills-ln-642-layer-ownership-boundary-auditor": {
+      "hash": "c63c15febc5fc8e1",
+      "translated_at": "2026-08-20T14:45:36.845Z"
+    },
+    "content:levnikolaevich-claude-code-skills-ln-71-system-design-baseline-builder": {
+      "hash": "e1c2c515f4a314f9",
+      "translated_at": "2026-08-20T14:45:59.434Z"
+    },
+    "content:levnikolaevich-claude-code-skills-ln-72-current-architecture-documenter": {
+      "hash": "716d39b5e0b95653",
+      "translated_at": "2026-08-20T14:46:16.748Z"
+    },
+    "content:levnikolaevich-claude-code-skills-ln-73-system-design-proposal-builder": {
+      "hash": "2ec260f1f1e8719f",
+      "translated_at": "2026-08-20T14:46:43.945Z"
+    },
+    "content:levnikolaevich-claude-code-skills-ln-74-architecture-decision-recorder": {
+      "hash": "daf78b06f9797a1e",
+      "translated_at": "2026-08-20T14:47:01.898Z"
+    },
+    "content:levnikolaevich-claude-code-skills-ln-75-architecture-diagram-builder": {
+      "hash": "3677408fe67c7bc6",
+      "translated_at": "2026-08-20T14:47:27.649Z"
+    },
+    "content:levnikolaevich-claude-code-skills-ln-76-architecture-migration-planner": {
+      "hash": "40a694a0bef707fd",
+      "translated_at": "2026-08-20T14:47:44.971Z"
     }
   }
 }
