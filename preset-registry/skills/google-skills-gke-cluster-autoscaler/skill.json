@@ -1,7 +1,7 @@
 {
   "id": "google-skills-gke-cluster-autoscaler",
   "name": "gke-cluster-autoscaler",
-  "description": ">- Trigger on mention of GKE cluster autoscaler,  node autoscaling, node pool auto-creation / node auto-provisioning. Provides guidance on enabling and optimizing cluster autoscaler, best practices, and troubleshooting issues such as nodes not scaling up or down, zonal stockouts, or capacity buffers. Do not use for ComputeClass-specific YAML generation or priority configuration (defer to gke-compute-classes skill).",
+  "description": ">- Trigger on mention of GKE cluster autoscaler, node autoscaling, node pool auto-creation / node auto-provisioning. Provides guidance on enabling and optimizing cluster autoscaler, best practices, and troubleshooting issues such as nodes not scaling up or down, zonal stockouts, or capacity buffers. Do not use for ComputeClass-specific YAML generation or priority configuration (defer to gke-compute-classes skill).",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/google/skills/blob/main/skills/cloud/gke-cluster-autoscaler/SKILL.md",
     "path": "skills/cloud/gke-cluster-autoscaler/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-19T21:06:09.764Z",
-    "stars": 18513,
+    "discovered_at": "2026-08-19T23:48:33.606Z",
+    "stars": 18520,
     "language": "Python",
-    "pushed_at": "2026-08-18T23:55:14Z",
+    "pushed_at": "2026-08-19T23:40:54Z",
     "license": "Apache-2.0"
   },
-  "summary_zh": "一套 GKE 集群节点自动伸缩指南，适合优化节点池扩缩容并排查扩缩失败、区域资源不足和容量缓冲问题。"
+  "summary_zh": "面向 GKE 集群节点自动伸缩的配置、优化与故障排查，适合处理扩缩容失效、区域容量不足和容量缓冲等问题。"
 }
