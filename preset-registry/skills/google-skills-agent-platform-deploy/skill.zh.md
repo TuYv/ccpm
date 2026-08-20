@@ -18,30 +18,32 @@ description: >-
   skill) or for running model evaluations (use the `agent-platform-eval-flywheel`
   skill).
 ---
-# Agent Platform Model Garden 部署 Skill
+# Agent Platform Model Garden 部署技能
 
-此 Skill 提供相关说明，用于将 Agent Platform Model Garden 中的开放模型部署到端点，以及随后取消部署这些模型以清理资源。
+此技能提供有关将 Agent Platform Model Garden 中的开放模型部署到端点，以及随后取消部署以清理资源的说明。
 
-## 1P 微调模型复制与部署
+## 1P 调优模型复制与部署
 
-如果需要将 **1P（第一方）微调模型**从源项目复制到目标区域或项目，并将其部署到新创建的端点，请参阅 [1P 微调模型复制与部署指南](references/copy_deploy_guide.md)。
+如果需要将一个 **1P（第一方）调优模型** 从源项目复制到目标区域或项目，并将其部署到新创建的端点，请参阅
+[1P 调优模型复制与部署指南](references/copy_deploy_guide.md)。
 
-## 安全与确认分级（关键）
+## 安全与确认级别（重要）
 
-在代表用户执行任何命令之前，你必须根据所请求的操作遵守以下安全分级：
+在代表用户执行任何命令之前，必须根据所请求的操作遵守以下安全级别：
 
-1.  **R 级：只读（`list`、`describe`、`list-deployment-config`）**
-    *   **规则**：无需确认。你可以立即执行这些命令，为用户收集信息。
-2.  **M 级：会产生变更且可逆（`deploy`、`undeploy-model`）**
-    *   **规则**：这需要用户明确确认。你必须向用户显示清晰的确认提示，说明拟执行的命令。你必须等待用户明确确认后再执行。对于 `undeploy-model`，你必须首先验证端点和已部署模型是否存在；如果 `describe` 或 `list` 返回 404 或空结果，你必须停止操作并告知用户，而不是尝试取消部署。
-3.  **D 级：破坏性且不可逆（`delete`）**
-    *   **规则**：这需要**明确输入确认文本**。你必须输出一条文本消息，说明删除端点或模型的操作不可逆，并要求用户输入 "I confirm" 或 "Yes, delete it"，然后才能执行删除命令。
+1.  **级别 R：只读（`list`、`describe`、`list-deployment-config`）**
+    *   **规则**：无需确认。可以立即执行这些命令来为用户收集信息。
+2.  **级别 M：可变更且可逆（`deploy`、`undeploy-model`）**
+    *   **规则**：需要用户明确确认。必须向用户显示清晰的确认提示，说明拟执行的命令。在执行前必须等待用户的明确确认。对于 `undeploy-model`，必须首先验证端点和已部署模型是否存在；如果 `describe` 或 `list` 返回 404 或空结果，必须停止并告知用户，不得尝试取消部署。
+    *   **同轮限制**：不得在显示确认提示的同一轮中运行命令。提出询问后必须结束当前轮次并等待用户回复；只有在获得明确批准后才能执行。先打印预览，然后在用户有机会回答之前调用工具，不算获得确认。
+3.  **级别 D：破坏性且不可逆（`delete`）**
+    *   **规则**：需要**明确的文本确认**。在执行删除命令前，必须输出一条消息，说明端点或模型删除的不可逆性，并要求用户输入 "I confirm" 或 "Yes, delete it"。
 
 ## 1. 前提条件
 
 部署前，请确保已设置正确的项目和区域。以下命令使用占位变量 `PROJECT_ID` 和 `LOCATION_ID`。
 
-确保你已完成身份验证：
+确保已完成身份验证：
 
 ```bash
 gcloud auth login
@@ -49,51 +51,52 @@ gcloud auth application-default login
 gcloud config set project $PROJECT_ID
 ```
 
-## 2. 查找可部署的模型
+## 2. 发现可部署模型
 
-你可以列出 Model Garden 中可用的模型，并检查它们是否支持自行部署。
+你可以列出 Model Garden 中可用的模型，并检查它们是否可以自行部署。
 
 ```bash
 gcloud ai model-garden models list
 ```
 
-要查看特定模型支持哪些机器类型和加速器，请传入从上述 `models list` 输出中获取的 `MODEL_ID`。将下面的 `<PUBLISHER>/<FAMILY>@<VERSION-ID>` 替换为目录输出中的确切字符串——该占位符有意不使用真实的模型 ID：
+若要查看特定模型支持的机器类型和加速器，请传入从上述 `models list` 输出中获取的 `MODEL_ID`。将下面的 `<PUBLISHER>/<FAMILY>@<VERSION-ID>` 替换为目录输出中的确切字符串——此占位符并非真实的模型 ID：
 
 ```bash
 gcloud ai model-garden models list-deployment-config \
     --model="<PUBLISHER>/<FAMILY>@<VERSION-ID>"
 ```
 
-> [!NOTE] 某些模型，尤其是 Hugging Face 模型，部署时可能需要 Hugging Face 访问令牌。
+> [!NOTE] 某些模型，尤其是 Hugging Face 模型，可能需要 Hugging
+> Face Access Token 才能进行部署。
 
-> [!TIP] **模型推荐说明：**每当你准备在回复中指出具体的模型版本时，不要凭记忆进行推荐。这适用于以下所有情况，而不仅限于直接部署请求：
+> [!TIP] **模型推荐说明：** 每当你准备在回复中提及某个特定模型版本时，切勿凭记忆进行推荐。以下所有情况均适用此要求，而不仅限于直接部署请求：
 >
-> *   用户要求部署模型，但未指定具体模型。
-> *   你在执行 `list`、`describe` 或 `undeploy` 操作后主动提出下一步建议（例如，“你希望我将 `<model>` 部署到此端点吗？”）。
-> *   用户提出一般性的“我应该使用什么？”/“适合 X 的优质模型是什么？”问题。
-> *   你正在用户可见的示例命令中填写 `MODEL_ID` 值，而不是使用类似 `<PUBLISHER>/<FAMILY>@<VERSION-ID>` 的占位符。
+> *   用户要求部署模型但未指定模型。
+> *   你在执行 `list`、`describe` 或 `undeploy` 操作后主动建议下一步操作（例如，“你希望我将 `<model>` 部署到此端点吗？”）。
+> *   用户提出一般性的“我该用什么？”/“有什么适合 X 的好模型？”问题。
+> *   你在向用户展示的示例命令中填写 `MODEL_ID` 值（而非使用 `<PUBLISHER>/<FAMILY>@<VERSION-ID>` 这样的占位符）。
 >
-> 新模型版本发布频繁，旧版本可能会被弃用，因此依赖训练语料库中有关现有模型的知识并不可靠。请遵循以下流程：
+> 新模型版本频繁发布，旧版本也可能被弃用，因此，训练语料中关于哪些模型存在的知识并不可靠。请遵循以下流程：
 >
-> 1.  如果上下文中尚未明确，请**澄清使用场景**（任务类型、质量与延迟及成本之间的优先级、硬件/配额限制、许可证限制）。如果用户已提供足够的信息，则跳过此步骤。
-> 2.  使用 `gcloud ai model-garden models list` **查询实时目录**。适当时使用 `--filter` 缩小范围（例如 `--filter="name~gemma"`、`--filter="name~llama"`、`--filter="name~qwen"`、`--filter="name~deepseek"`）。在你从此项目的目录输出中看到具体模型版本之前，绝不要向用户指出该版本。
-> 3.  在模型系列中**选择符合使用场景的最新正式可用版本**。如果存在多种大小变体，请选择符合用户硬件条件和成本承受能力的变体。除非较新的主要版本被标记为预览版/实验版，且用户明确要求稳定选项，否则应优先选择较新的主要版本，而不是较旧版本。
-> 4.  在回复中指出模型之前，使用 `gcloud ai model-garden models list-deployment-config --model="<publisher>/<family>@<version>"` **验证确切的模型 ID 是否可部署**。
-> 5.  在推荐中**逐字引用模型 ID**，与其在目录中显示的内容完全一致。不要改述为模型系列标签（“Gemma”、“Llama”）。
+> 1.  如果上下文尚未明确，**澄清使用场景**（任务类型、质量与延迟及成本之间的优先级、硬件/配额约束、许可证约束）。如果用户已提供足够的信息，则跳过此步骤。
+> 2.  使用 `gcloud ai model-garden models list` **查询实时目录**。适当时使用 `--filter` 缩小范围（例如 `--filter="name~gemma"`、`--filter="name~llama"`、`--filter="name~qwen"`、`--filter="name~deepseek"`）。在此项目的目录输出中看到某个特定模型版本之前，绝不可向用户提及它。
+> 3.  在符合使用场景的模型系列中，**选择最新的正式发布版本**。当存在多个不同大小的变体时，选择符合用户硬件/成本承受范围的版本。优先选择较新的主版本而非旧版本，除非其被标记为预览版/实验版，且用户明确要求稳定选项。
+> 4.  在回复中提及确切模型 ID 前，使用 `gcloud ai model-garden models list-deployment-config --model="<publisher>/<family>@<version>"` **验证该模型 ID 可部署**。
+> 5.  在推荐中**逐字引用模型 ID**，与其在目录中的显示完全一致。不要将其改述为模型系列标签（“Gemma”“Llama”）。
 >
-> 以下第 3 节示例中的 `MODEL_ID` 值有意使用不代表实际内容的占位符（`<PUBLISHER>/<FAMILY>@<VERSION-ID>`）。不要将它们替换为凭记忆得出的模型名称并作为面向用户的推荐——始终先重新执行第 2 至第 4 步，然后引用目录中的确切字符串。
+> §3 示例中的 `MODEL_ID` 值有意使用不具实质内容的占位符（`<PUBLISHER>/<FAMILY>@<VERSION-ID>`）。切勿为面向用户的推荐将其替换为凭记忆得出的模型名称——务必先重新执行步骤 2-4，然后引用目录中的确切字符串。
 
-## 2.1 发布方端点的区域可用性检查（Gemini + LoRA 基础模型）
+## 2.1 发布商端点的区域可用性检查（Gemini + LoRA 基础模型）
 
-> [!NOTE] 如果用户请求部署来自 Model Garden 的开放权重模型（Gemma、Llama、DeepSeek、Qwen 或任何用户提供的权重），**请跳过本节**——即通过 `gcloud ai model-garden models deploy` 部署到专用端点的任何模型。这些模型没有按区域划分的可用性限制；Model Garden 目录是全球性的。对于非常用区域，实际的失败原因是：(a) 该区域不提供所请求的加速器/机器类型，或 (b) 项目没有配额——这两种情况都会在部署时、任何资源预配之前以明确的错误形式呈现（§3 的成本确认关卡会捕获这些错误）。请直接转到 §3。
+> [!NOTE] 如果用户要求部署来自 Model Garden 的开放权重模型（Gemma、Llama、DeepSeek、Qwen 或任何用户提供的权重），即通过 `gcloud ai model-garden models deploy` 部署到专用端点的任何模型，**请跳过本节**。这些模型没有按区域划分的可用性限制；Model Garden 目录是全局的。非常规区域真正可能出现的失败原因是：(a) 该区域不提供所请求的加速器/机器类型，或 (b) 项目没有配额——这两种情况都会在部署时、任何资源配置之前以明确错误的形式出现（§3 的成本确认关卡会捕获它们）。请直接前往 §3。
 >
-> **仅当用户请求提供第一方托管 Gemini 模型**（`google/gemini-*`）或微调后的 Gemini LoRA 适配器时，**才应用本节**——这两者都通过发布方端点进行路由，而此类端点的区域可用性确实会有所不同。
+> 仅当用户要求提供第一方托管 Gemini 模型（`google/gemini-*`）或微调后的 Gemini LoRA 适配器时，**才应用本节**——二者都会经由发布商端点路由，而该端点的区域可用性确实会有所不同。
 
-在响应任何为第一方托管模型（`google/gemini-*`）或微调后的 Gemini LoRA 适配器指定了特定区域的部署请求之前，你**必须**通过实时 API 调用验证该模型在该区域是否实际可用。不要依赖 Google 搜索、训练语料知识或发布方文档来判断可用性——区域可用性经常变化，有出处依据的文本也可能已经过时或有误。
+在响应任何指定区域部署第一方托管模型（`google/gemini-*`）或经过微调的 Gemini LoRA 适配器的请求之前，你**必须**通过发起实时 API 调用，验证该模型确实在该区域可用。不要依赖 Google 搜索、训练语料知识或发布方文档来判断可用性——区域可用性经常变化，已有文本信息可能过时或错误。
 
-仅探测用户询问的确切模型和区域。不要探测其他模型作为“对照”——你无法根据模型 B 的状态推断模型 A 的可用性，因为另一个模型本身可能由于无关原因在参考区域中不可用。
+仅探测用户请求的确切模型和区域。不要将其他模型作为“对照”进行探测——不能从模型 B 的状态推断模型 A 的可用性，因为其他模型可能因无关原因而在参考区域不可用。
 
-对于第一方发布方模型（`google/*`），请使用最小有效负载执行真实的 `:generateContent` 调用进行探测：
+对于第一方发布方模型（`google/*`），请使用最小有效负载发起真实的 `:generateContent` 调用进行探测：
 
 ```bash
 curl -sS -o /dev/null -w "%{http_code}\n" \
@@ -103,35 +106,48 @@ curl -sS -o /dev/null -w "%{http_code}\n" \
     -d "{\"contents\":{\"role\":\"user\",\"parts\":{\"text\":\"${PROBE_TEXT:-hi}\"}}}"
 ```
 
-对于微调后的 Gemini LoRA 模型（在基础 Gemini 模型之上部署用户微调的适配器），请在目标区域使用上面相同的 `:generateContent` 调用探测**基础模型**，并将 `${MODEL_ID}` 设置为该基础模型（例如，如果适配器基于 `gemini-2.5-flash` 进行微调，则设置为 `gemini-2.5-flash`）。如果基础模型在某个区域不可用，LoRA 适配器也无法在该区域提供服务。
+对于经过微调的 Gemini LoRA 模型（在基础 Gemini 模型之上部署用户微调的适配器），请使用上方相同的 `:generateContent` 调用，在目标区域探测**基础模型**，并将 `${MODEL_ID}` 设为基础模型（例如，如果适配器是在 `gemini-2.5-flash` 上微调的，则使用 `gemini-2.5-flash`）。LoRA 适配器无法在其基础模型不可用的区域中提供服务。
 
-解释探测结果并采取相应操作：
+解读探测结果并采取相应行动：
 
--   **200** —— 模型在该区域可用。继续部署。
--   **404** —— 模型在该区域不可用。停止。明确告知用户该区域不提供此模型，并列出该模型可用的区域（通过不带 `--region` 的 `gcloud ai model-garden models list
-    --filter="name~$MODEL_NAME"` 获取）。不要静默切换区域。不要继续为不受支持的区域编写部署代码或 SDK 初始化代码。不要运行额外的“对照”探测来复核 404——目标区域的探测结果具有权威性。
--   **任何其他结果**（权限被拒绝、配额问题、暂时性故障等）——不要断定模型可用或不可用。用通俗语言解释根本原因（例如，“你的账号无权访问此项目的 Vertex AI API——请在控制台中启用该 API 或切换项目”）以及下一步应采取的具体操作。
+-   **200**——模型在该区域可用。继续部署。
+-   **404**——模型在该区域不可用。停止。直接告诉用户该模型未在该区域提供，并列出它可用的区域（通过不带 `--region` 的 `gcloud ai model-garden models list
+    --filter="name~$MODEL_NAME"` 获取）。不要静默切换区域。不要继续为不受支持的区域编写部署代码或 SDK 初始化代码。不要运行额外的“对照”探测来复核 404——目标区域探测结果具有权威性。
+-   **任何其他结果**（权限被拒绝、配额限制、瞬时故障等）——不要断定模型可用或不可用。请用通俗语言解释根本原因（例如：“你的账号无权访问此项目的 Vertex AI API——请在控制台中启用它或切换项目”），并给出明确的下一步操作。
+
 
 ## 3. 部署模型
 
-> [!WARNING] 部署模型（尤其是大型模型）会消耗大量
-> 计算资源并产生费用。
+> [!WARNING] 部署模型，尤其是大型模型，会消耗大量计算资源并产生费用。
 >
-> 1.  你**必须**参考
->     [Agent Platform 预测定价](https://cloud.google.com/products/gemini-enterprise-agent-platform/pricing?hl=en#prediction-and-explanation)，
->     根据请求的 `--machine-type` 和 `--accelerator-type`（以及数量）
->     计算粗略的费用估算。
-> 2.  你**必须**向用户提供此费用估算，并警告用户
->     这是**标价**，由于可能存在折扣或预留，其实际账单可能与此不同。
-> 3.  在执行任何 `deploy` 命令之前，你**始终必须**请求用户明确确认
->     同意估算的费用。
+> 1.  在提出部署建议之前，你**必须**为所请求的 `--machine-type` 计算每小时的美元费用估算。请按以下顺序尝试，并在任一步失败时继续后续方案（工具不可用、工具返回 `status !=
+>     "success"`、脚本以非零状态退出、脚本拒绝该机器类型）：
+>
+>     a. 如果 `estimate_cost` 工具可用且返回 `status ==
+>     "success"`，请使用其结果——它会从 `CostEstimationService` 返回实时、已解析 SKU 的价格（机器 + 加速器 + 总价），而不是硬编码的快照。在任何其他状态（包括 `error`）下，继续执行 (b)。
+>
+>     b. 否则，运行 `scripts/calculate_cost.py`。加速器类型和数量在 Model Garden 中按机器类型固定，并会自动推导。示例：
+>
+>     ```bash
+>     python3 scripts/calculate_cost.py \
+>         --machine-type=g2-standard-48
+>     ```
+>
+>     如果脚本以非零状态退出（未知的 `--machine-type`——这对于已在 Model Garden 目录中但尚未收录于价格快照的机器来说是常规状态，例如当前的 A4/B200），继续执行 (c)。不要编造价格。
+>
+>     c. 如果工具不可用且脚本不识别所请求的机器类型，则回退至
+>     [Agent Platform prediction pricing](https://cloud.google.com/products/gemini-enterprise-agent-platform/pricing?hl=en#prediction-and-explanation)。
+>     直接从该页面读取加速器和每小时费率，并在向用户提供的估算中引用该 URL。
+>
+> 2.  你**必须**向用户展示此成本估算，并警告他们这只是**标价**；由于可能存在折扣、预留实例或非 `us-central1` 区域，实际账单可能有所不同。
+> 3.  在执行任何 `deploy` 命令之前，你**必须始终**请求用户明确确认，同意该预估费用。
 
 要部署模型，请使用 `deploy` 命令。对于长时间运行的部署，强烈建议使用
 `--asynchronous` 标志，然后在必要时轮询状态。
 
 ### 示例：从 Model Garden 部署开放权重模型
 
-以下是一个用于部署模型的典型 bash 脚本。你可以直接运行此代码块。
+以下是用于部署模型的典型 bash 脚本。你可以直接运行此代码块。
 
 ```bash
 #!/bin/bash
@@ -167,9 +183,9 @@ echo "Deployment initiated asynchronously."
 
 ### 示例：部署自定义权重
 
-要使用自定义权重部署模型，可以使用完全相同的 `deploy`
-命令。请在 `--model` 标志中提供自定义权重文件夹的 Google
-Cloud Storage (GCS) URI，而不是 Model Garden 模型 ID。
+若要使用自定义权重部署模型，你可以使用完全相同的 `deploy`
+命令。不要提供模型花园模型 ID，而是在 `--model` 标志中提供指向自定义权重文件夹的 Google
+Cloud Storage (GCS) URI。
 
 ```bash
 #!/bin/bash
@@ -196,16 +212,19 @@ echo "Deployment initiated asynchronously."
 
 ## 4. 检查部署状态
 
-当你使用 `--asynchronous` 标志异步部署模型时，`deploy` 命令将返回一个操作 ID。你可以使用此 ID 检查部署的当前状态。
+当你使用 `--asynchronous` 标志异步部署模型时，
+`deploy` 命令将返回一个操作 ID。你可以使用此 ID 检查部署的
+进行中状态。
 
 ```bash
 gcloud ai operations describe YOUR_OPERATION_ID \
     --region=$LOCATION_ID
 ```
 
-> [!NOTE] 作为代理，如果用户提供了操作 ID，或者刚刚与你一起启动了部署，你也可以主动提出为用户检查部署状态。
+> [!NOTE] 作为代理，如果用户提供了操作 ID，或者他们刚刚在你的协助下发起了
+> 部署，你也可以主动提出为用户检查部署状态。
 
-或者，你可以列出端点以查看它是否已经出现，并在 Cloud Console 的“在线预测”标签页下进行检查。
+或者，您可以列出端点以查看它是否出现，并在 Cloud Console 的“在线预测”标签页下进行检查。
 
 ```bash
 gcloud ai endpoints list \
@@ -216,10 +235,10 @@ gcloud ai endpoints list \
 
 ### 验证部署
 
-如果模型已成功部署，请通过发起预测调用进行测试验证。由于 Model Garden 模型通常部署到专用端点，因此不应使用 `gcloud ai endpoints predict`。你必须获取端点的专用 DNS 名称，并发送 `curl` 请求。
+如果模型已成功部署，请通过发起预测调用进行测试以验证。由于 Model Garden 模型通常部署到专用端点，您不应使用 `gcloud ai endpoints predict`。相反，您必须获取端点的专用 DNS 名称并发送 `curl` 请求。
 
-> [!TIP] 请用户尝试使用自己的提示词查看结果。
-> 否则使用默认提示词。
+> [!TIP] 请用户尝试使用他们自己的提示词来查看结果。
+> 否则请使用默认提示词。
 
 使用以下脚本：
 
@@ -254,13 +273,13 @@ curl -X POST \
   }'
 ```
 
-## 5. 取消部署和清理
+## 5. 取消部署并清理
 
-要停止产生费用，你必须从端点取消部署模型。如果你还没有确切的端点 ID 和已部署模型 ID，则需要执行多个步骤。
+为避免继续产生费用，您必须从端点取消部署该模型。如果您尚未获得确切的端点和已部署模型 ID，这将是一个多步骤过程。
 
 ### 示例：查找并取消部署模型
 
-以下 bash 脚本演示了如何查找 ID 并取消部署模型。
+下面是一个 bash 脚本，演示如何查找 ID 并取消部署模型。
 
 ```bash
 #!/bin/bash
@@ -315,24 +334,23 @@ gcloud ai models delete $MODEL_ID \
 echo "Model deleted."
 ```
 
-> [!WARNING] 未取消部署模型将导致系统持续对已分配的计算资源收费，
-> 即使你没有发送预测请求也是如此。测试后务必清理资源。
+> [!WARNING] 未能取消部署模型将导致为已分配的计算资源持续收费，
+> 即使您没有发送预测请求也是如此。测试完成后务必进行清理。
 
 ## 6. 故障排除
 
-### 部署失败：配额或资源已耗尽
+### 部署失败：配额或资源耗尽
 
-如果部署由于 `QUOTA_EXCEEDED` 或 `RESOURCE_EXHAUSTED` 错误而失败（或一直处于错误状态），则请求的特定硬件（例如 `NVIDIA_L4`
-或 `g2-standard-24`）在你选择的区域中不可用，或超出了
-项目的配额限制。
+如果由于 `QUOTA_EXCEEDED` 或
+`RESOURCE_EXHAUSTED` 错误导致部署失败（或一直处于错误状态），则所请求的特定硬件（例如 `NVIDIA_L4`
+或 `g2-standard-24`）要么在您选择的区域中不可用，要么超出了您项目的配额限制。
 
 **解决方案：** 仔细查看返回的错误消息。它通常会
-建议当前有可用资源的其他区域或机器类型。
-**询问用户并获得确认**，然后使用建议的
+推荐当前有可用容量的替代区域或机器类型。
+**请向用户确认**是否使用建议的
 `--region` 或 `--machine-type` 参数重试部署。
 
 > [!WARNING] 如果替代建议涉及更改机器类型或
-> 加速器，你**必须**使用
-> [Agent Platform 预测定价](https://cloud.google.com/products/gemini-enterprise-agent-platform/pricing?hl=en#prediction-and-explanation)
-> 重新计算预估费用，提醒用户标价与实际账单金额可能存在差异，并在重试部署前
-> 获得用户对新费用的明确确认。
+> 加速器，您**必须**使用新参数重新运行
+> `scripts/calculate_cost.py` 来重新计算预估成本（参见 §3），向用户说明
+> 标价与实际账单之间的差异，并在重试部署前获得用户对新成本的明确确认。

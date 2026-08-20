@@ -1,0 +1,26 @@
+{
+  "id": "sickn33-antigravity-awesome-skills-agent-harness-fault-injection",
+  "name": "agent-harness-fault-injection",
+  "description": "Use when an agent workflow needs deterministic recovery evidence for sandbox, MCP/tool, worker, checkpoint, memory, or orchestration failures.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sickn33",
+  "install_path": ".claude/skills/agent-harness-fault-injection/SKILL.md",
+  "source": {
+    "repo": "sickn33/antigravity-awesome-skills",
+    "url": "https://github.com/sickn33/antigravity-awesome-skills/blob/main/plugins/agentic-awesome-skills-claude/skills/agent-harness-fault-injection/SKILL.md",
+    "path": "plugins/agentic-awesome-skills-claude/skills/agent-harness-fault-injection/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-20T02:08:19.485Z",
+    "stars": 45153,
+    "language": "Python",
+    "pushed_at": "2026-08-20T01:06:25Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于给智能体工作流注入可控故障，验证沙箱、工具调用、任务执行、检查点、记忆与编排异常后的恢复能力。"
+}
