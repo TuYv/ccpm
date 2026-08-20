@@ -5,17 +5,17 @@ description: Accessibility engineering for product interfaces. Use when building
 
 # Accessibility
 
-Most accessibility is free if you use the platform. Native elements ship with keyboard support, real labels announce themselves, and a visible focus ring is one CSS rule.
+Most accessibility is free if you use the platform. Native elements ship with keyboard support, real labels announce themselves and a visible focus ring is one CSS rule.
 
 Write every fix in the project's styling system, and use the exact values below rather than familiar-looking substitutes.
 
-Reviewing means two walks. Keyboard-only, where every flow completes without a mouse. Then screen-reader, where every control announces a name, a role, and its state. When unsure, take the platform default over a custom rebuild, and remove ARIA rather than add it.
+Reviewing means two walks. Keyboard-only, where every flow completes without a mouse. Then screen-reader, where every control announces a name, a role and its state. When unsure, take the platform default over a custom rebuild, and remove ARIA rather than add it.
 
 Contrast measurement and color fixes belong to `better-colors`. Text sizing and iOS input zoom belong to `better-typography`. Spatial RTL layout belongs to `better-layout`.
 
 ## Native elements first
 
-The first rule of ARIA: don't use ARIA when a native element exists. `<button>` for actions, `<a href>` for navigation, never `<div onClick>`. A real link must support Cmd/Ctrl/middle-click. No ARIA is better than bad ARIA. See [semantics-and-aria.md](semantics-and-aria.md) for landmarks, button-vs-link, and disabled states.
+The first rule of ARIA: don't use ARIA when a native element exists. `<button>` for actions, `<a href>` for navigation, never `<div onClick>`. A real link must support Cmd/Ctrl/middle-click. No ARIA is better than bad ARIA. See [semantics-and-aria.md](semantics-and-aria.md) for landmarks, button-vs-link and disabled states.
 
 ## Visible focus rings
 
@@ -31,11 +31,11 @@ Use only `tabindex="0"` to join the natural tab order and `tabindex="-1"` for pr
 
 ## Trap and restore focus
 
-Modals set `inert` on the background content, move focus inside on open, and return focus to the trigger on close. Add `overscroll-behavior: contain` so background content doesn't scroll.
+Modals set `inert` on the background content, move focus inside on open and return focus to the trigger on close. Add `overscroll-behavior: contain` so background content doesn't scroll.
 
 ## Minimum hit area
 
-WCAG 2.5.8's Level AA baseline is a 24×24 CSS-pixel target, or one of its spacing, equivalent-control, inline, user-agent, and essential exceptions. Aim for 44×44px on touch and 40×40px on desktop where density permits. Extend with a pseudo-element when the visible element should stay smaller.
+WCAG 2.5.8's Level AA baseline is a 24×24 CSS-pixel target, or one of its spacing, equivalent-control, inline, user-agent and essential exceptions. Aim for 44×44px on touch and 40×40px on desktop where density permits. Extend with a pseudo-element when the visible element should stay smaller.
 
 Never let extended hit areas overlap. Give decorative layers `pointer-events: none`, so a glow never swallows the clicks meant for the control beneath it. Sizes and collision rules are in [hit-areas.md](hit-areas.md).
 
@@ -43,13 +43,13 @@ Never let extended hit areas overlap. Give decorative layers `pointer-events: no
 
 Every input gets a `<label for>` or a wrapping `<label>`. A placeholder is never a label. Label and control share one hit target, with no dead zone between a checkbox and its text.
 
-Add `autocomplete` with a meaningful `name`, and the `type` and `inputmode` that summon the right keyboard. Never block paste; users paste passwords and one-time codes. See [forms.md](forms.md).
+Add `autocomplete` with a meaningful `name`, plus the `type` and `inputmode` that summon the right keyboard. Never block paste; users paste passwords and one-time codes. See [forms.md](forms.md).
 
 ## Errors that announce
 
-Keep submit enabled until the request starts, then disable with a spinner and the original label. Validate on submit. Mark failing fields `aria-invalid="true"`, point `aria-describedby` at the inline error text, and focus the first invalid field.
+Keep submit enabled until the request starts, then disable with a spinner and the original label. Validate on submit. Mark failing fields `aria-invalid="true"`, point `aria-describedby` at the inline error text and focus the first invalid field.
 
-Use native `disabled` when a control is genuinely unavailable. Reach for `aria-disabled="true"` only when it should stay focusable, then block pointer, keyboard, and form behavior in code and style the state explicitly.
+Use native `disabled` when a control is genuinely unavailable. Reach for `aria-disabled="true"` only when it should stay focusable, then block pointer, keyboard and form behavior in code and style the state explicitly.
 
 ## Accessible names everywhere
 
@@ -67,7 +67,7 @@ Two rules hold regardless of the preference. Autoplaying media needs a visible p
 
 ## Announce dynamic content
 
-Three mechanisms, three jobs. `aria-describedby` carries field-specific validation. A polite live region (`role="status"`) carries non-urgent updates not tied to a control, such as toasts and result counts. `role="alert"` carries urgent untied errors, and nothing else.
+Three mechanisms, three jobs. `aria-describedby` carries field-specific validation. A polite live region (`role="status"`) carries non-urgent updates not tied to a control, such as toasts and result counts. `role="alert"` carries urgent untied errors and nothing else.
 
 Repeated polite announcements need a stable empty region rendered before its text updates. Dynamically inserted alerts vary in support, so test them on the screen readers you target. See [screen-readers.md](screen-readers.md).
 
@@ -99,7 +99,7 @@ The page must work at 200% zoom and reflow at 320px width without horizontal scr
 
 **Severity.** `HIGH` prevents a task, hides content from assistive technology, or creates a systemic failure. `MEDIUM` makes an interaction meaningfully harder. `LOW` is isolated polish.
 
-**Verification.** Without a browser: accessible names on every interactive element, keyboard handlers on non-native controls, focus styles, `prefers-reduced-motion` guards, and form labels bound to their inputs. With one: tab the flow in order, read computed names and roles from the accessibility tree, confirm a visible focus indicator at every stop, and run an automated audit. Report every check you could not run as `Not verified`.
+**Verification.** Without a browser: accessible names on every interactive element, keyboard handlers on non-native controls, focus styles, `prefers-reduced-motion` guards and form labels bound to their inputs. With one: tab the flow in order, read computed names and roles from the accessibility tree, confirm a visible focus indicator at every stop and run an automated audit. Report every check you could not run as `Not verified`.
 
 **Format.** Group findings under the principle each violates, ordered by severity, one row per root cause listing every location it appears in:
 

@@ -3,17 +3,17 @@ name: better-interface
 description: >-
   Cross-discipline interface review. Routes a screen, flow, or feature to every `better-*`
   domain skill and consolidates one ranked verdict. Use when asked for a holistic review
-  rather than a single domain, and when `interface-review` hands up a change to route.
+  rather than a single domain and when `interface-review` hands up a change to route.
   Triggers on better-interface, holistic interface review, review the whole screen.
 ---
 
 # Interface review
 
-This skill runs a cross-discipline review. It routes the interface to each `better-*` skill, collects their evidence, and consolidates one ranked verdict.
+This skill runs a cross-discipline review. It routes the interface to each `better-*` skill, collects their evidence and consolidates one ranked verdict.
 
 Orchestration is all it owns. Accessibility rules belong to `better-accessibility`, structure to `better-layout`, copy to `better-writing`, type to `better-typography`, color to `better-colors`, visual polish and motion to `better-ui`. Never duplicate or override their rules here.
 
-Change-scoped review of uncommitted work, branches, and pull requests belongs to `interface-review`, which resolves the scope and classifies findings before handing the review back.
+Change-scoped review of uncommitted work, branches and pull requests belongs to `interface-review`, which resolves the scope and classifies findings before handing the review back.
 
 ## Evidence, not taste
 
@@ -27,7 +27,7 @@ So the bar for reporting is evidence, not taste. The bar for `Approve` is that y
 
 Infer the screen, flow, feature, or repository scope from the request and current workspace. State the resolved scope in the output.
 
-Cover all of it across every domain skill listed under **Use domain skills as the sources of truth**, including the empty, loading, error, and narrow-width states where they exist. Report at most 15 findings.
+Cover all of it across every domain skill listed under **Use domain skills as the sources of truth**, including the empty, loading, error and narrow-width states where they exist. Report at most 15 findings.
 
 When the scope is too large to inspect credibly, narrow it to one complete flow: the one the request centers on, or failing that the entry path every user must pass through. State the boundary and what it excluded. Never imply uninspected surfaces were reviewed.
 
@@ -35,13 +35,13 @@ When the scope is too large to inspect credibly, narrow it to one complete flow:
 
 A request naming a branch, pull request, commit range, or uncommitted changes is a change review, not a screen review. Say so and ask the user to run `interface-review`, which is user-invoked and cannot be started from here.
 
-Never resolve a change scope here. Reading a diff, classifying findings, and expanding changed files to affected surfaces belong to `interface-review`. Guess at them and the report has a scope nobody can check.
+Never resolve a change scope here. Reading a diff, classifying findings and expanding changed files to affected surfaces belong to `interface-review`. Guess at them and the report has a scope nobody can check.
 
-When `interface-review` hands a review back, it supplies the change scope, a status per finding, and the change-scoped report format. Severity, ranking, the cap, and the verdict stay here, and all three cover `Introduced` and `Regression` only.
+When `interface-review` hands a review back, it supplies the change scope, a status per finding and the change-scoped report format. Severity, ranking, the cap and the verdict stay here, and all three cover `Introduced` and `Regression` only.
 
 ### 3. Recon before judgment
 
-Identify the framework, styling system, component library, design tokens, supported viewports, and any preview or test command. Write every fix in the project's own idiom, so no finding arrives as a request to adopt a different stack. That governs the form of the fix, not whether the code is good enough.
+Identify the framework, styling system, component library, design tokens, supported viewports and any preview or test command. Write every fix in the project's own idiom, so no finding arrives as a request to adopt a different stack. That governs the form of the fix, not whether the code is good enough.
 
 Then read what the project has written about its own interface: `CONTRIBUTING.md`, `CODING_STANDARDS.md`, `AGENTS.md`, `CLAUDE.md`, a design-system doc, Storybook docs, interface ADRs. Name which you found, or that there are none.
 
@@ -60,9 +60,9 @@ Review in this order so foundational failures are not hidden by polish:
 5. `better-colors`
 6. `better-ui`
 
-From a domain skill loaded here, take its principles, its references, and its verification checks. Its severity ladder and its format are for standalone use; the consolidated format, shared severity, and finding cap in this file replace them.
+From a domain skill loaded here, take its principles, its references and its verification checks. Its severity ladder and its format are for standalone use; the consolidated format, shared severity and finding cap in this file replace them.
 
-If an owning skill is unavailable, mark that domain `Not reviewed`, name it, and continue with the rest. Do not recreate its rules from memory, substitute a neighbour, or claim holistic coverage.
+If an owning skill is unavailable, mark that domain `Not reviewed`, name it and continue with the rest. Do not recreate its rules from memory, substitute a neighbour, or claim holistic coverage.
 
 When two skills appear to cover one issue, assign it to the owner of the underlying rule and note secondary effects in the **Why** cell. Report it once.
 
@@ -138,4 +138,4 @@ Treat a review request as read-only. Do not edit source unless the user also ask
 
 ## Review output format
 
-The format lives in [review-format.md](review-format.md): scope and coverage, the findings table, verification, and the verdict. A review is not finished until its findings are reported there.
+The format lives in [review-format.md](review-format.md): scope and coverage, the findings table, verification and the verdict. A review is not finished until its findings are reported there.

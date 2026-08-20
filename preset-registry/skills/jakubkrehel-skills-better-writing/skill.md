@@ -14,7 +14,7 @@ How copy renders (capitalization via `text-transform`, truncation, smart punctua
 
 ## Recon the existing voice
 
-Before writing or reviewing, read the copy nearby. Note the product's terminology, its localization conventions, and any voice or content style guide.
+Before writing or reviewing, read the copy nearby. Note the product's terminology, its localization conventions and any voice or content style guide.
 
 A deliberate brand voice is not a defect. Raise a departure from plain language only when it creates inconsistency, ambiguity, translation risk, or a tone the stakes don't support.
 
@@ -61,7 +61,7 @@ A bare "Learn more" breaks down as soon as two appear on one page. Suffix each o
 
 ## One capitalization policy
 
-Pick title case or sentence case per element type, then apply it to every instance of that type. Sentence case is the safer default. It is calmer, has no per-word rules to remember, and localizes cleanly. "Save Changes" beside "Discard changes" reads as sloppiness.
+Pick title case or sentence case per element type, then apply it to every instance of that type. Sentence case is the safer default. It is calmer, has no per-word rules to remember and localizes cleanly. "Save Changes" beside "Discard changes" reads as sloppiness.
 
 ## Settings describe the ON state
 
@@ -83,7 +83,7 @@ No blame, no "oops", no exclamation marks. Phrase hints positively ("Use only le
 
 ## Empty states point forward
 
-An empty state says what this place is, how to fill it, and offers one clear next action:
+An empty state says what this place is, how to fill it and offers one clear next action:
 
 ```html
 <!-- Bad: a shrug -->
@@ -105,7 +105,7 @@ A placeholder shows the expected format: `name@example.com`, `DD/MM/YYYY`. It va
 
 **Severity.** `HIGH` misleads the user or hides how to recover from an error. `MEDIUM` breaks voice, terminology, or capitalization consistency. `LOW` is isolated wording polish.
 
-**Verification.** Source alone is enough here. Check every label against the action it invokes, every error for a stated fix, and terminology against the copy around it. No browser check is required.
+**Verification.** Source alone is enough here. Check every label against the action it invokes, every error for a stated fix and terminology against the copy around it. No browser check is required.
 
 **Format.** Group findings under the principle each violates, ordered by severity, one row per root cause listing every location it appears in:
 

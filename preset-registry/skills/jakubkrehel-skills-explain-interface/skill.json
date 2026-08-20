@@ -1,7 +1,7 @@
 {
   "id": "jakubkrehel-skills-explain-interface",
   "name": "explain-interface",
-  "description": "Answers \"how was this built?\" about an interface. Give it a URL and name the thing you're curious about, and it reads the layers that produce the effect. Reads the whole frontend instead when you don't name a thing. From a screenshot it reconstructs rather than reads, and says so.",
+  "description": "Answers \"how was this built?\" about an interface. Give it a URL and name the thing you're curious about, and it reads the layers that produce the effect. Reads the whole frontend instead when you don't name a thing. From a screenshot it reconstructs rather than reads and says so.",
   "category": "文档写作",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/jakubkrehel/skills/blob/main/skills/explain-interface/SKILL.md",
     "path": "skills/explain-interface/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-20T14:05:52.364Z",
-    "stars": 3944,
+    "discovered_at": "2026-08-20T15:23:43.684Z",
+    "stars": 3947,
     "language": "Markdown",
-    "pushed_at": "2026-08-20T12:51:06Z",
+    "pushed_at": "2026-08-20T14:59:36Z",
     "license": "MIT"
   },
-  "summary_zh": "这是一个前端界面分析工具，输入网址或截图即可追溯某个视觉效果的实现方式，适合拆解网页设计与调试 UI。"
+  "summary_zh": "一款用于拆解网页界面实现方式的工具，可分析指定元素或整个前端，也能从截图推测还原，适合学习和复刻交互效果。"
 }

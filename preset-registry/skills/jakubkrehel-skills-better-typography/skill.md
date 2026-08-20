@@ -5,13 +5,13 @@ description: Web typography. Use when picking or pairing typefaces, setting up a
 
 # Typography
 
-Typography is mostly restraint: a sensible scale, comfortable spacing, enough contrast. A label, a table cell, a marketing headline, and an article paragraph do not share one set of rules.
+Typography is mostly restraint: a sensible scale, comfortable spacing, enough contrast. A label, a table cell, a marketing headline and an article paragraph do not share one set of rules.
 
-When reviewing, read the rendered page instead of scanning the code. Bad wrapping, widows, and truncation only show up at real content lengths.
+When reviewing, read the rendered page instead of scanning the code. Bad wrapping, widows and truncation only show up at real content lengths.
 
 Write every fix in the project's styling system, and use the exact values below rather than familiar-looking equivalents. The [cheat sheet](css-cheat-sheet.md) maps each declaration to its Tailwind equivalent.
 
-The words themselves belong to `better-writing`. Semantic heading structure belongs to `better-accessibility`. Spatial RTL layout and logical properties belong to `better-layout`. Contrast measurement belongs to `better-colors`. This skill owns how text renders, wraps, and behaves in mixed-direction content.
+The words themselves belong to `better-writing`. Semantic heading structure belongs to `better-accessibility`. Spatial RTL layout and logical properties belong to `better-layout`. Contrast measurement belongs to `better-colors`. This skill owns how text renders, wraps and behaves in mixed-direction content.
 
 ## Serve the right format
 
@@ -27,7 +27,7 @@ Properties keep working when a non-variable fallback renders. Reserve raw tags f
 
 Browsers synthesize a weight or style the active family doesn't provide, distorting the real face. Load the faces the design uses.
 
-`font-synthesis: none` turns synthesis off, but it erases emphasis rather than reporting it. Set it only after checking every required bold, italic, small-cap, superscript, and subscript form stays distinct across the fallback stack.
+`font-synthesis: none` turns synthesis off, but it erases emphasis rather than reporting it. Set it only after checking every required bold, italic, small-cap, superscript and subscript form stays distinct across the fallback stack.
 
 ## Fewer fonts, sizes and weights
 
@@ -72,7 +72,7 @@ Skip `balance` and `pretty` in long-form text.
 
 ## Tabular numbers on changing values
 
-Digits have different widths by default, so timers, counters, and prices shift the layout as they update. Apply `font-variant-numeric: tabular-nums` to any value that changes.
+Digits have different widths by default, so timers, counters and prices shift the layout as they update. Apply `font-variant-numeric: tabular-nums` to any value that changes.
 
 ## Truncate without losing content
 
@@ -92,7 +92,7 @@ Use smart punctuation in rendered text:
 
 ## Underlines from the font
 
-Default underlines sit wherever the browser decides. Pull position and thickness from the font's own metrics with `text-underline-position: from-font` and `text-decoration-thickness: from-font`. Tune by hand with `text-decoration-thickness`, `text-underline-offset`, and `text-decoration-skip-ink`.
+Default underlines sit wherever the browser decides. Pull position and thickness from the font's own metrics with `text-underline-position: from-font` and `text-decoration-thickness: from-font`. Tune by hand with `text-decoration-thickness`, `text-underline-offset` and `text-decoration-skip-ink`.
 
 `text-decoration-style` draws the line dotted, dashed, or wavy. A dotted underline is a common hint that a word carries extra information, such as an abbreviation or a defined term.
 
@@ -111,7 +111,7 @@ Both recipes are in [details-and-accessibility.md](details-and-accessibility.md)
 
 Start long-form body text at `16px`, the browser default. Move off it only for a reason you can name: the typeface runs small, the measure is narrow, or the product is a dense professional tool.
 
-UI text can go smaller. `14px` is a useful starting point for inputs and menus, `13px` for captions, and rarely below `12px`. Inputs still need `16px` on mobile.
+UI text can go smaller. `14px` is a useful starting point for inputs and menus, `13px` for captions and rarely below `12px`. Inputs still need `16px` on mobile.
 
 When text looks low-contrast, use `better-colors` to measure the rendered pair and `better-accessibility` to classify the requirement. Leave the colors alone unless asked.
 
@@ -121,13 +121,13 @@ On macOS, text renders heavier than intended. Apply `-webkit-font-smoothing: ant
 
 ## Language and bidi behavior
 
-Set `lang` so browsers and assistive technology pick the right pronunciation, quotes, and hyphenation. Set `dir` at the document or at the content boundary where direction changes. Preserve digit order, and use `<bdi>` to isolate a mixed-direction value. Spatial mirroring and logical CSS properties belong to `better-layout`.
+Set `lang` so browsers and assistive technology pick the right pronunciation, quotes and hyphenation. Set `dir` at the document or at the content boundary where direction changes. Preserve digit order, and use `<bdi>` to isolate a mixed-direction value. Spatial mirroring and logical CSS properties belong to `better-layout`.
 
 ## Keep useful text selectable
 
 Keep text selectable by default. `::selection` can carry brand into the reading experience, as long as the selected combination stays legible.
 
-`user-select: none` belongs on a draggable or gesture-driven surface where accidental selection interferes. Never across the interface, and never because a button label can be highlighted.
+`user-select: none` belongs on a draggable or gesture-driven surface where accidental selection interferes. Never across the interface and never because a button label can be highlighted.
 
 ## Before you finish
 
@@ -150,7 +150,7 @@ Keep text selectable by default. `::selection` can carry brand into the reading 
 
 **Severity.** `HIGH` makes text unreadable or truncates content with no way to recover it. `MEDIUM` breaks the type system or the heading hierarchy. `LOW` is isolated polish.
 
-**Verification.** Without a browser: computed size and weight for each heading level, checked descending; declared line-height and measure; truncation rules against realistic string lengths. With one: resize the viewport to catch wrapping, widows, and truncation at real content lengths. Report every check you could not run as `Not verified`.
+**Verification.** Without a browser: computed size and weight for each heading level, checked descending; declared line-height and measure; truncation rules against realistic string lengths. With one: resize the viewport to catch wrapping, widows and truncation at real content lengths. Report every check you could not run as `Not verified`.
 
 **Format.** Group findings under the principle each violates, ordered by severity, one row per root cause listing every location it appears in:
 

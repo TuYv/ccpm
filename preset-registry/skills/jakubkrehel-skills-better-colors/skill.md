@@ -9,7 +9,7 @@ A color system is a small set of ramps, named by role and verified against the b
 
 Never report a contrast value you did not measure, and never estimate a color you could compute. Colors are one of the few interface concerns with an exact answer, so produce the exact answer.
 
-Contrast requirements belong to `better-accessibility`. Surfaces, shadows, and icon color belong to `better-ui`.
+Contrast requirements belong to `better-accessibility`. Surfaces, shadows and icon color belong to `better-ui`.
 
 ## Match the project's color system
 
@@ -19,7 +19,7 @@ For a new system, `oklch()` is the best default, because its numbers behave the 
 
 ## A system is ramps, not colors
 
-One neutral ramp, one accent ramp, and only the status ramps the product actually renders. A `warning` ramp nothing imports is maintenance for zero pixels. A second accent hue earns its place only when two things must be distinguishable at a glance.
+One neutral ramp, one accent ramp and only the status ramps the product actually renders. A `warning` ramp nothing imports is maintenance for zero pixels. A second accent hue earns its place only when two things must be distinguishable at a glance.
 
 ## Every step has a job
 
@@ -27,7 +27,7 @@ A ramp is not a gradient to pick from by eye. Each step exists because a role ne
 
 ## Name primitives by hue, semantics by role
 
-Primitives name a value (`--blue-500`) and are never applied in a component. Semantic tokens name a job (`--color-text-secondary`), point at a primitive, and are the only tier components reference.
+Primitives name a value (`--blue-500`) and are never applied in a component. Semantic tokens name a job (`--color-text-secondary`), point at a primitive and are the only tier components reference.
 
 That seam is what makes theming possible. Without it, dark mode means auditing every usage to work out which meant "the accent" and which just wanted blue ([token-naming.md](token-naming.md)).
 
@@ -58,7 +58,7 @@ Several colored backgrounds are fine when they encode distinct states or categor
 
 ## Measure the rendered pair, then report
 
-Measure a foreground against the background it actually renders on, not the page background. When a pair fails, report the pair, its measured value, and the threshold it misses, then leave the colors alone. They are a design decision. Change them only when asked, and remeasure after ([contrast.md](contrast.md)).
+Measure a foreground against the background it actually renders on, not the page background. When a pair fails, report the pair, its measured value and the threshold it misses, then leave the colors alone. They are a design decision. Change them only when asked, and remeasure after ([contrast.md](contrast.md)).
 
 ## Pick a gradient's interpolation space
 
@@ -84,7 +84,7 @@ See [color-usage.md](color-usage.md).
 | Ramp spaced evenly across the full range | Tighten the light end until `50` and `100` read as two surfaces |
 | Same saturation number reused across hues | Match the proportion of each hue's own maximum, not the raw value |
 | Status hue that collides with the accent hue | Move it until destructive and primary read apart side by side |
-| Dark mode made by mechanically reversing the light palette | Reverse as a starting point, then reduce vividness, widen the dark end, and recheck every pair |
+| Dark mode made by mechanically reversing the light palette | Reverse as a starting point, then reduce vividness, widen the dark end and recheck every pair |
 | `prefers-color-scheme` setting some tokens and a `.dark` class setting others | Pick one switching mechanism and use it throughout |
 | Contrast fixed by changing hue | Change lightness, the channel contrast responds to |
 | P3 color with no sRGB fallback | Declare the sRGB value first, then override inside `@media (color-gamut: p3)` |
@@ -93,7 +93,7 @@ See [color-usage.md](color-usage.md).
 
 **Severity.** `HIGH` makes content unreadable or assigns a misleading semantic color. `MEDIUM` is a noticeable theme, token, or gamut failure. `LOW` is isolated polish.
 
-**Verification.** Without a browser: token values, the gamut of every declared color, both theme blocks present, and contrast computed from the declared token pair. With one: the background actually rendered behind the text, including opacity and any image beneath it, measured in both light and dark. A failing pair is reported, not repainted. Report every check you could not run as `Not verified`.
+**Verification.** Without a browser: token values, the gamut of every declared color, both theme blocks present and contrast computed from the declared token pair. With one: the background actually rendered behind the text, including opacity and any image beneath it, measured in both light and dark. A failing pair is reported, not repainted. Report every check you could not run as `Not verified`.
 
 **Format.** Group findings under the principle each violates, ordered by severity, one row per root cause listing every location it appears in:
 

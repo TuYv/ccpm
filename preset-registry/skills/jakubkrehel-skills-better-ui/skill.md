@@ -9,23 +9,23 @@ Polish comes from a pile of small details that compound. This skill is the refer
 
 When reviewing, slow the interface down. What feels off at 10% speed is what is subtly wrong at full speed.
 
-Keep the project's component library, tokens, and density, and match its motion language except where a rule below prescribes an exact interaction.
+Keep the project's component library, tokens and density, and match its motion language except where a rule below prescribes an exact interaction.
 
-Every duration, curve, scale, and blur below is a specific value, not a range to approximate. `cubic-bezier(0.2, 0, 0, 1)` is not `cubic-bezier(0.4, 0, 0.2, 1)`, and `0.96` is not `0.95`. Use what is written.
+Every duration, curve, scale and blur below is a specific value, not a range to approximate. `cubic-bezier(0.2, 0, 0, 1)` is not `cubic-bezier(0.4, 0, 0.2, 1)`, and `0.96` is not `0.95`. Use what is written.
 
-Text wrapping, font rendering, tabular numbers, and text spacing belong to `better-typography`. Hit areas, focus, keyboard support, ARIA, and reduced motion belong to `better-accessibility`. Grouping, section spacing, breakpoints, and spatial RTL belong to `better-layout`.
+Text wrapping, font rendering, tabular numbers and text spacing belong to `better-typography`. Hit areas, focus, keyboard support, ARIA and reduced motion belong to `better-accessibility`. Grouping, section spacing, breakpoints and spatial RTL belong to `better-layout`.
 
 ## Concentric border radius
 
-Outer radius = inner radius + padding. Mismatched radii on nested elements is the most common thing that makes an interface feel off. Radius, shadow, and outline recipes are in [surfaces.md](surfaces.md).
+Outer radius = inner radius + padding. Mismatched radii on nested elements is the most common thing that makes an interface feel off. Radius, shadow and outline recipes are in [surfaces.md](surfaces.md).
 
 ## Optical over geometric alignment
 
-When geometric centering looks off, align optically. Buttons with icons, play triangles, and asymmetric icons all need a manual nudge.
+When geometric centering looks off, align optically. Buttons with icons, play triangles and asymmetric icons all need a manual nudge.
 
 ## Shadows for elevation, borders for structure
 
-Where a border exists only to create depth, prefer layered transparent `box-shadow` values. Keep borders that communicate structure or state: dividers, separators, and selected or focus states.
+Where a border exists only to create depth, prefer layered transparent `box-shadow` values. Keep borders that communicate structure or state: dividers, separators and selected or focus states.
 
 ## Interruptible animations
 
@@ -41,7 +41,7 @@ Use a small fixed `translateY` rather than full height. Exits should be softer t
 
 ## Contextual icon animations
 
-Animate icons with `opacity`, `scale`, and `blur` rather than toggling visibility. Use exactly these values: scale `0.25` to `1`, opacity `0` to `1`, blur `4px` to `0px`.
+Animate icons with `opacity`, `scale` and `blur` rather than toggling visibility. Use exactly these values: scale `0.25` to `1`, opacity `0` to `1`, blur `4px` to `0px`.
 
 With a motion library (`motion` or `framer-motion` in `package.json`), match that package's import path, or nearby imports where both exist. Use `transition: { type: "spring", duration: 0.3, bounce: 0 }`. Bounce is always `0`.
 
@@ -49,11 +49,11 @@ Without one, keep both icons in the DOM with one absolutely positioned, and cros
 
 ## Image outlines
 
-Give images a `1px` outline at low opacity for consistent depth. Pure black in light mode (`oklch(0 0 0 / 0.1)`), pure white in dark (`oklch(1 0 0 / 0.1)`). Never a near-black like slate or zinc, and never a tinted neutral. A tinted outline picks up the surface underneath and reads as dirt on the image edge.
+Give images a `1px` outline at low opacity for consistent depth. Pure black in light mode (`oklch(0 0 0 / 0.1)`), pure white in dark (`oklch(1 0 0 / 0.1)`). Never a near-black like slate or zinc and never a tinted neutral. A tinted outline picks up the surface underneath and reads as dirt on the image edge.
 
 ## Scale on press
 
-A `scale(0.96)` on click gives a button tactile feedback. Always `0.96`; anything below `0.95` feels exaggerated. Add a `static` prop to switch it off where motion would distract. See [recipes for CSS, Tailwind, and Motion](animations.md#scale-on-press).
+A `scale(0.96)` on click gives a button tactile feedback. Always `0.96`; anything below `0.95` feels exaggerated. Add a `static` prop to switch it off where motion would distract. See [recipes for CSS, Tailwind and Motion](animations.md#scale-on-press).
 
 ## Skip animation on page load
 
@@ -61,7 +61,7 @@ Use `initial={false}` on `AnimatePresence` to keep enter animations off the firs
 
 ## Suppress transitions on theme switch
 
-A theme flip changes color, background, border, and shadow on nearly every element at once. Every transition on those properties fires together and the switch smears instead of snapping. Inject `*,*::before,*::after{transition:none !important}`, force a reflow, then remove it on the next frame. See the [recipe](animations.md#suppress-transitions-on-theme-switch).
+A theme flip changes color, background, border and shadow on nearly every element at once. Every transition on those properties fires together and the switch smears instead of snapping. Inject `*,*::before,*::after{transition:none !important}`, force a reflow, then remove it on the next frame. See the [recipe](animations.md#suppress-transitions-on-theme-switch).
 
 ## Transition only what changes
 
@@ -69,15 +69,15 @@ Always name the exact properties: `transition-property: scale, opacity`. Tailwin
 
 ## Use `will-change` sparingly
 
-Only for `transform`, `opacity`, and `filter`, which the GPU can composite. Never `will-change: all`. Add it when you see first-frame stutter, not before. See [performance.md](performance.md).
+Only for `transform`, `opacity` and `filter`, which the GPU can composite. Never `will-change: all`. Add it when you see first-frame stutter, not before. See [performance.md](performance.md).
 
 ## Match icon stroke to text weight
 
-An icon next to text carries the text's optical weight: `1.5px` stroke beside regular (400) text, `2px` beside semibold (600). One stroke weight per icon set, and one icon library per surface. Sizing and RTL flipping are in [icons.md](icons.md).
+An icon next to text carries the text's optical weight: `1.5px` stroke beside regular (400) text, `2px` beside semibold (600). One stroke weight per icon set and one icon library per surface. Sizing and RTL flipping are in [icons.md](icons.md).
 
 ## One SVG, recolored per state
 
-Icons use `currentColor` and take hover, selected, and disabled states from CSS color and opacity, never from separate assets. Outline is the default variant; fill marks the active state.
+Icons use `currentColor` and take hover, selected and disabled states from CSS color and opacity, never from separate assets. Outline is the default variant; fill marks the active state.
 
 ## Motion restraint
 
