@@ -4,11 +4,12 @@ description: Compact the current conversation into a handoff document for anothe
 argument-hint: "What will the next session be used for?"
 disable-model-invocation: true
 ---
-收到，但我先按当前窗口要求先确认再动手：  
-请先告诉我本次要使用的 **skill / plugin**（可直接选一个组，或一组多项）：
+编写一份交接文档，总结当前对话，以便新的代理能够继续工作。将其保存到用户操作系统的临时目录中，而不是当前工作区。
 
-- 常用可选：`agent-reach`、`baoyu-skills`、`local-tools`、`browser`、`chrome`、`documents`、`presentations` 等  
-- 你也可以回复“**不加载任何新增 skill，仅按当前环境**”
-- 或列出要禁用的组（如有）
+在文档中包含一个“建议技能”部分，列出下一个代理应通过 Skill 工具调用的技能。
 
-我确认后再直接生成并写入用户系统临时目录的交接文档。
+不要重复其他产物（规范、计划、ADR、议题、提交、差异）中已经记录的内容。请通过路径或 URL 引用它们。
+
+对任何敏感信息进行脱敏，例如 API 密钥、密码或个人身份信息。
+
+如果用户传入了参数，请将其视为下一会话的工作重点描述，并据此调整文档内容。
