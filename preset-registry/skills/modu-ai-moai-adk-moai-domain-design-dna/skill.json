@@ -1,0 +1,26 @@
+{
+  "id": "modu-ai-moai-adk-moai-domain-design-dna",
+  "name": "moai-domain-design-dna",
+  "description": "> Reverse-engineer a reference design — a screenshot, an image set, or a live URL — into a portable Design DNA JSON across three dimensions (measurable tokens, qualitative style, special-rendering effects), then generate a new self-contained artifact from that JSON. Carries the extraction rules (dominance-based colour roles, relative radius measurement, multi-reference conflict resolution), a performance-tier technology map for Canvas / WebGL / shader / scroll effects, and a delivery gate coveri",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "modu-ai",
+  "install_path": ".claude/skills/moai-domain-design-dna/SKILL.md",
+  "source": {
+    "repo": "modu-ai/moai-adk",
+    "url": "https://github.com/modu-ai/moai-adk/blob/main/.claude/skills/moai-domain-design-dna/SKILL.md",
+    "path": ".claude/skills/moai-domain-design-dna/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-20T10:09:23.529Z",
+    "stars": 1178,
+    "language": "Go",
+    "pushed_at": "2026-08-20T09:11:16Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "把截图、图片或网页反向解析为可移植的设计规范 JSON，并生成独立页面，适合复刻视觉风格与特效。"
+}
