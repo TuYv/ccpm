@@ -1,0 +1,26 @@
+{
+  "id": "trailofbits-skills-modern-cpp",
+  "name": "modern-cpp",
+  "description": "Guides C++ code toward modern idioms (C++20/23/26). Use when writing new C++ code, modernizing legacy patterns, or working on security-critical C++. Replaces raw pointers with smart pointers, SFINAE with concepts, printf with std::print, error codes with std::expected.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "trailofbits",
+  "install_path": ".claude/skills/modern-cpp/SKILL.md",
+  "source": {
+    "repo": "trailofbits/skills",
+    "url": "https://github.com/trailofbits/skills/blob/main/plugins/modern-cpp/skills/modern-cpp/SKILL.md",
+    "path": "plugins/modern-cpp/skills/modern-cpp/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-21T14:43:29.708Z",
+    "stars": 6770,
+    "language": "Python",
+    "pushed_at": "2026-08-21T14:09:46Z",
+    "license": "CC-BY-SA-4.0"
+  },
+  "summary_zh": "引导 C++ 代码采用 C++20/23/26 的现代写法，适合新项目、旧代码改造及安全关键场景。"
+}
