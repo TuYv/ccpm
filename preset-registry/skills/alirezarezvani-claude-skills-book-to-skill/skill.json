@@ -1,0 +1,26 @@
+{
+  "id": "alirezarezvani-claude-skills-book-to-skill",
+  "name": "book-to-skill",
+  "description": "Converts books, documentation folders, and source collections (PDF, EPUB, DOCX, HTML, Markdown, RST, AsciiDoc, RTF, MOBI/AZW) into structured agent skills — extracting named frameworks, principles, techniques, and anti-patterns into a master SKILL.md plus on-demand chapter files, a glossary, a patterns file, and a decision cheatsheet. Use when the user wants to study a document with an agent, apply an author's frameworks while working, turn internal docs or standards into a reusable knowledge ba",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alirezarezvani",
+  "install_path": ".claude/skills/book-to-skill/SKILL.md",
+  "source": {
+    "repo": "alirezarezvani/claude-skills",
+    "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/book-to-skill/SKILL.md",
+    "path": ".gemini/skills/book-to-skill/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-21T06:06:37.913Z",
+    "stars": 24735,
+    "language": "Python",
+    "pushed_at": "2026-08-21T06:02:08Z",
+    "license": "MIT"
+  },
+  "summary_zh": "把书籍、文档和源码转成结构化智能体技能，适合辅助学习、复用方法论或沉淀内部规范。"
+}

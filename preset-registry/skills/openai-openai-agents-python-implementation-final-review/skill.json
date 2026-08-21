@@ -1,7 +1,7 @@
 {
   "id": "openai-openai-agents-python-implementation-final-review",
   "name": "implementation-final-review",
-  "description": "Perform a risk-tiered zero-base final review loop before an implementation is declared complete. Use only when the user explicitly invokes $implementation-final-review or repository instructions authorize automatic invocation after implementation. Audit the complete merge-base diff for requirement fit, contract-surface coverage, await-boundary and lifecycle gaps, released compatibility, security, protocol, and persistence boundaries, unnecessary complexity, package and generated public surfaces,",
+  "description": "Perform the repository's risk-tiered independent final review before implementation completion. Use only when explicitly invoked or when repository instructions require it after behavior-impacting implementation work; audit the complete task diff, supported contracts, lifecycle and security boundaries, complexity, and tests before final verification.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/openai/openai-agents-python/blob/main/.agents/skills/implementation-final-review/SKILL.md",
     "path": ".agents/skills/implementation-final-review/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-21T04:05:25.513Z",
-    "stars": 28810,
+    "discovered_at": "2026-08-21T06:03:11.594Z",
+    "stars": 28813,
     "language": "Python",
-    "pushed_at": "2026-08-20T20:55:48Z",
+    "pushed_at": "2026-08-21T05:14:09Z",
     "license": "MIT"
   },
-  "summary_zh": "一套按风险分级的代码终审流程，用于交付前全面检查变更，发现需求偏差、兼容性、安全性和生命周期等遗漏。"
+  "summary_zh": "用于开发收尾前对完整变更进行分级独立审查，排查契约、安全、复杂度和测试风险，适合行为改动后的最终验收。"
 }

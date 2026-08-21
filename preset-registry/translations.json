@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-21T05:39:56.249Z",
+  "updated_at": "2026-08-21T07:33:39.775Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -8578,9 +8578,9 @@
       "translated_at": "2026-05-19T23:02:41.809Z"
     },
     "skill:openai-openai-agents-python-runtime-behavior-probe": {
-      "hash": "d05f8189038262cc",
-      "summary_zh": "它是运行时行为探测工具，用于突破常规代码检查局限，深入验证真实运行状态。特别适合排查本地或线上环境中的边缘情况、未记录行为及常见故障，而非仅跑通常规测试。",
-      "translated_at": "2026-05-19T23:02:59.967Z"
+      "hash": "0650477f74e93cc3",
+      "summary_zh": "一款经明确授权后对本地或线上集成进行运行时探测的工具，适合验证代码审查和常规测试无法确认的行为。",
+      "translated_at": "2026-08-21T07:04:01.576Z"
     },
     "skill:openshift-rosa-rosa-docs-and-structure-tests": {
       "hash": "65730fc4fbe43cd3",
@@ -9713,9 +9713,9 @@
       "translated_at": "2026-06-05T16:53:38.210Z"
     },
     "bundle:openai-openai-agents-python": {
-      "hash": "0d75a7bc89ab6697",
-      "summary_zh": "这套合集覆盖 OpenAI Agents Python 的开发、测试、示例运行、文档同步与发布审核，帮助团队高效完成从实现到交付的完整流程。",
-      "translated_at": "2026-08-18T13:53:20.643Z"
+      "hash": "fc59c8ed8033a0ad",
+      "summary_zh": "面向 OpenAI Agents Python 的全流程研发合集，串联变更规划、实现验证、文档同步与发布审查，提升交付质量。",
+      "translated_at": "2026-08-21T07:03:52.034Z"
     },
     "bundle:nomenak-superclaude": {
       "hash": "e0bd9eeeb70c896e",
@@ -9743,9 +9743,9 @@
       "translated_at": "2026-08-03T04:57:41.870Z"
     },
     "bundle:alirezarezvani-claude-skills": {
-      "hash": "f68380d54cc244fa",
-      "summary_zh": "面向产品、营销、研发与智能体协作的一站式 Claude 技能库，把常见专业任务串成可执行、可验证的工作流。",
-      "translated_at": "2026-08-03T04:57:34.266Z"
+      "hash": "a974ed4d28744572",
+      "summary_zh": "面向产品、营销与研发团队的 Claude 技能合集，用统一工作流快速搭建、审查并落地可验证的智能代理与业务任务。",
+      "translated_at": "2026-08-21T07:03:50.794Z"
     },
     "bundle:lum1104-understand-anything": {
       "hash": "eb4f42044dce1bb9",
@@ -25488,9 +25488,9 @@
       "translated_at": "2026-08-04T04:03:08.262Z"
     },
     "skill:openai-openai-agents-python-implementation-final-review": {
-      "hash": "8e3973a1521cb39a",
-      "summary_zh": "一套按风险分级的代码终审流程，用于交付前全面检查变更，发现需求偏差、兼容性、安全性和生命周期等遗漏。",
-      "translated_at": "2026-08-04T04:03:11.327Z"
+      "hash": "483967cbc2cb328a",
+      "summary_zh": "用于开发收尾前对完整变更进行分级独立审查，排查契约、安全、复杂度和测试风险，适合行为改动后的最终验收。",
+      "translated_at": "2026-08-21T07:03:58.271Z"
     },
     "skill:openai-openai-agents-python-integration-tests": {
       "hash": "75bcba0d8b2dc35c",
@@ -25498,9 +25498,9 @@
       "translated_at": "2026-08-04T04:03:11.888Z"
     },
     "skill:openai-openai-agents-python-maintainer-review": {
-      "hash": "e3686f9f57a73d23",
-      "summary_zh": "以维护者视角分阶段评审 GitHub Issue 或 PR，判断问题真实性、优先级、现有方案及投入价值，辅助关闭或推进决策。",
-      "translated_at": "2026-08-04T04:03:14.593Z"
+      "hash": "427eb5bf0a406bcd",
+      "summary_zh": "这是一个面向开源维护者的评审助手，用于核查 Issue 或 PR 的实际价值与仓库适配度，并给出处置建议和可直接发布的回复。",
+      "translated_at": "2026-08-21T07:03:58.211Z"
     },
     "skill:openai-openai-agents-python-sensitive-logging-audit": {
       "hash": "6b4d9cdd401013b8",
@@ -26618,9 +26618,9 @@
       "translated_at": "2026-08-04T10:23:50.633Z"
     },
     "skill:superdesigndev-superdesign-skill-superdesign": {
-      "hash": "27d3e447893aba55",
-      "summary_zh": "一款集成多种主流 AI 模型的设计画布，适合快速生成、改版和对比界面，搭建设计系统、多页流程及营销素材。",
-      "translated_at": "2026-08-20T11:04:54.477Z"
+      "hash": "03ce207f7417e6d8",
+      "summary_zh": "一款支持多种主流 AI 模型的可视化设计工具，适合创建或改版界面、演示文稿、海报及多页面产品流程。",
+      "translated_at": "2026-08-21T07:04:02.221Z"
     },
     "skill:talkstream-ru-text-ru-check": {
       "hash": "997556e84cae523b",
@@ -45266,6 +45266,95 @@
     "content:modu-ai-moai-adk-moai-domain-design-handoff": {
       "hash": "4c7ae956e1cb30a1",
       "translated_at": "2026-08-21T05:39:56.248Z"
+    },
+    "skill:alirezarezvani-claude-skills-book-to-skill": {
+      "hash": "088fc5fa5db336fa",
+      "summary_zh": "把书籍、文档和源码转成结构化智能体技能，适合辅助学习、复用方法论或沉淀内部规范。",
+      "translated_at": "2026-08-21T07:03:58.896Z"
+    },
+    "content:alirezarezvani-claude-skills-book-to-skill": {
+      "hash": "ea8195653ada2575",
+      "translated_at": "2026-08-21T07:05:55.317Z"
+    },
+    "content:modu-ai-moai-adk-moai-domain-html-report": {
+      "hash": "6f476ef31c000cb8",
+      "translated_at": "2026-08-21T07:18:52.085Z"
+    },
+    "content:modu-ai-moai-adk-moai-domain-humanize": {
+      "hash": "c7ffa13aaa66c785",
+      "translated_at": "2026-08-21T07:20:59.452Z"
+    },
+    "content:modu-ai-moai-adk-moai-domain-research": {
+      "hash": "499aa255d9fd151a",
+      "translated_at": "2026-08-21T07:21:57.103Z"
+    },
+    "content:modu-ai-moai-adk-moai-domain-ideation": {
+      "hash": "8bc5f78d3fe3bc1b",
+      "translated_at": "2026-08-21T07:22:11.801Z"
+    },
+    "content:modu-ai-moai-adk-moai-domain-uiux": {
+      "hash": "e24d61ee727ef21c",
+      "translated_at": "2026-08-21T07:23:21.532Z"
+    },
+    "content:modu-ai-moai-adk-moai-domain-svg-infographic": {
+      "hash": "04e15e8246939a28",
+      "translated_at": "2026-08-21T07:23:29.813Z"
+    },
+    "content:modu-ai-moai-adk-moai-foundation-cc": {
+      "hash": "2a350cbd51027052",
+      "translated_at": "2026-08-21T07:24:41.084Z"
+    },
+    "content:modu-ai-moai-adk-moai-foundation-context": {
+      "hash": "24ee8386476bab3a",
+      "translated_at": "2026-08-21T07:24:48.266Z"
+    },
+    "content:modu-ai-moai-adk-moai-foundation-philosopher": {
+      "hash": "1e574710749293e3",
+      "translated_at": "2026-08-21T07:26:11.984Z"
+    },
+    "content:modu-ai-moai-adk-moai-foundation-core": {
+      "hash": "f9abe12668904cc9",
+      "translated_at": "2026-08-21T07:26:53.106Z"
+    },
+    "content:modu-ai-moai-adk-moai-foundation-quality": {
+      "hash": "10af2b7a9ec94a27",
+      "translated_at": "2026-08-21T07:27:19.085Z"
+    },
+    "content:modu-ai-moai-adk-moai-foundation-thinking": {
+      "hash": "c11cee93d9cb9432",
+      "translated_at": "2026-08-21T07:28:23.537Z"
+    },
+    "content:modu-ai-moai-adk-moai-framework-electron": {
+      "hash": "99c9c0794f95aea5",
+      "translated_at": "2026-08-21T07:28:44.415Z"
+    },
+    "content:modu-ai-moai-adk-moai-harness-cli-template": {
+      "hash": "7a68b1c54cbd9ba7",
+      "translated_at": "2026-08-21T07:28:49.806Z"
+    },
+    "content:modu-ai-moai-adk-moai-harness-learner": {
+      "hash": "74cf8664d908ea0d",
+      "translated_at": "2026-08-21T07:29:35.695Z"
+    },
+    "content:modu-ai-moai-adk-moai-harness-patterns": {
+      "hash": "85092c8583bb2ac6",
+      "translated_at": "2026-08-21T07:29:55.446Z"
+    },
+    "content:modu-ai-moai-adk-moai-kanban-foreman": {
+      "hash": "fdae87cb7228172e",
+      "translated_at": "2026-08-21T07:30:26.163Z"
+    },
+    "content:modu-ai-moai-adk-moai-platform-auth": {
+      "hash": "2e59b513ddb9ec67",
+      "translated_at": "2026-08-21T07:31:34.716Z"
+    },
+    "content:modu-ai-moai-adk-moai-meta-harness": {
+      "hash": "3f5bb6e219c04db0",
+      "translated_at": "2026-08-21T07:32:01.524Z"
+    },
+    "content:modu-ai-moai-adk-moai-platform-chrome-extension": {
+      "hash": "9f01002e5a1058a3",
+      "translated_at": "2026-08-21T07:33:39.775Z"
     }
   }
 }

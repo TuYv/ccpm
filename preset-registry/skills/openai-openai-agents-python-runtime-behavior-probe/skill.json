@@ -1,8 +1,8 @@
 {
   "id": "openai-openai-agents-python-runtime-behavior-probe",
   "name": "runtime-behavior-probe",
-  "description": "Plan and execute runtime-behavior investigations with temporary probe scripts, validation matrices, state controls, and findings-first reports. Use only when the user explicitly invokes this skill to verify actual runtime behavior beyond normal code-level checks, especially to uncover edge cases, undocumented behavior, or common failure modes in local or live integrations. A baseline smoke check is fine as an entry point, but do not stop at happy-path confirmation.",
-  "category": "开发编程",
+  "description": "Plan and, after explicit approval, execute runtime-behavior probes for local or live integrations. Use only when explicitly invoked to verify behavior that code review and normal tests cannot settle; define a controlled validation matrix and report observed evidence.",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,11 @@
     "url": "https://github.com/openai/openai-agents-python/blob/main/.agents/skills/runtime-behavior-probe/SKILL.md",
     "path": ".agents/skills/runtime-behavior-probe/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-21T04:05:26.466Z",
-    "stars": 28810,
+    "discovered_at": "2026-08-21T06:03:12.916Z",
+    "stars": 28813,
     "language": "Python",
-    "pushed_at": "2026-08-20T20:55:48Z",
+    "pushed_at": "2026-08-21T05:14:09Z",
     "license": "MIT"
   },
-  "summary_zh": "它是运行时行为探测工具，用于突破常规代码检查局限，深入验证真实运行状态。特别适合排查本地或线上环境中的边缘情况、未记录行为及常见故障，而非仅跑通常规测试。"
+  "summary_zh": "一款经明确授权后对本地或线上集成进行运行时探测的工具，适合验证代码审查和常规测试无法确认的行为。"
 }
