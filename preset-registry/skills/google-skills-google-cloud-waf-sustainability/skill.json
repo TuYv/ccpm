@@ -1,0 +1,26 @@
+{
+  "id": "google-skills-google-cloud-waf-sustainability",
+  "name": "google-cloud-waf-sustainability",
+  "description": ">- Generates sustainability-focused guidance for Google Cloud workloads based on the design principles and recommendations in the Google Cloud Well-Architected Framework (WAF). Use this skill to evaluate a workload, identify environmental impact requirements, and provide actionable recommendations to build, deploy, and manage the workload sustainably in Google Cloud.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/google-cloud-waf-sustainability/SKILL.md",
+  "source": {
+    "repo": "google/skills",
+    "url": "https://github.com/google/skills/blob/main/plugins/cloud/google-cloud-well-architected/skills/google-cloud-waf-sustainability/SKILL.md",
+    "path": "plugins/cloud/google-cloud-well-architected/skills/google-cloud-waf-sustainability/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-21T20:12:55.606Z",
+    "stars": 18585,
+    "language": "Python",
+    "pushed_at": "2026-08-21T20:12:37Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "一款面向 Google Cloud 工作负载的可持续性评估工具，适合识别环境影响需求并获取构建、部署和运维优化建议。"
+}

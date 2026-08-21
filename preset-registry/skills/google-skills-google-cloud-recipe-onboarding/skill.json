@@ -1,0 +1,26 @@
+{
+  "id": "google-skills-google-cloud-recipe-onboarding",
+  "name": "google-cloud-recipe-onboarding",
+  "description": ">- Guides a developer's first steps on Google Cloud, covering account creation, billing setup, project management, and deploying a first resource. Use when a new developer wants to initialize their first Google Cloud project, configure billing, and verify deployment. Don't use for enterprise organization setup (use Google Cloud Setup guided flow for that instead). Don't use for complex multi-project architectures.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/google-cloud-recipe-onboarding/SKILL.md",
+  "source": {
+    "repo": "google/skills",
+    "url": "https://github.com/google/skills/blob/main/plugins/cloud/google-cloud-core/skills/google-cloud-recipe-onboarding/SKILL.md",
+    "path": "plugins/cloud/google-cloud-core/skills/google-cloud-recipe-onboarding/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-21T20:12:54.407Z",
+    "stars": 18585,
+    "language": "Python",
+    "pushed_at": "2026-08-21T20:12:37Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "面向初次使用 Google Cloud 的开发者，指导完成账号、计费和项目配置，并部署首个资源进行验证。"
+}

@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-21T19:55:48.589Z",
+  "updated_at": "2026-08-21T21:42:38.544Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -9933,9 +9933,9 @@
       "translated_at": "2026-05-20T01:05:59.206Z"
     },
     "bundle:yvgude-lean-ctx": {
-      "hash": "4fafb7bf5e409980",
-      "summary_zh": "面向 AI Agent 的上下文工程工具集，整合高效代码阅读、结构分析与 Shell 操作能力，帮助智能体更准确地理解代码库并完成复杂开发任务。",
-      "translated_at": "2026-08-18T11:55:05.430Z"
+      "hash": "252c3bec0107f400",
+      "summary_zh": "面向 AI 智能体的上下文工程工具集，整合代码理解、灵活读取与命令执行能力，让代理更高效地掌握和利用项目上下文。",
+      "translated_at": "2026-08-21T21:14:27.120Z"
     },
     "bundle:kubb-labs-kubb": {
       "hash": "655d8cf12537910f",
@@ -13598,14 +13598,14 @@
       "translated_at": "2026-05-20T16:27:14.387Z"
     },
     "skill:yvgude-lean-ctx-lean-ctx": {
-      "hash": "29d2218bff3e177f",
-      "summary_zh": "面向 AI 智能体的上下文工程工具，帮助高效读取文件、搜索代码和执行命令，大幅压缩上下文，适合代码库探索与自动化开发。",
-      "translated_at": "2026-08-18T11:55:09.136Z"
+      "hash": "cdbbb4ede61f650e",
+      "summary_zh": "面向 AI 智能体的上下文压缩工具，适合读文件、搜代码、执行命令和浏览目录，可显著减少大模型上下文占用。",
+      "translated_at": "2026-08-21T21:14:40.323Z"
     },
     "skill:yvgude-lean-ctx-templates": {
-      "hash": "106d2d751c130b73",
-      "summary_zh": "面向 AI Agent 的上下文工程工具，适合读文件、搜代码和执行命令时压缩上下文，降低 Token 消耗。",
-      "translated_at": "2026-08-18T11:55:10.006Z"
+      "hash": "44cf4d01be8fce20",
+      "summary_zh": "面向 AI 智能体的上下文工程工具，适合读文件、搜代码、执行命令和浏览目录时压缩上下文，降低模型开销。",
+      "translated_at": "2026-08-21T21:14:40.750Z"
     },
     "skill:zebbern-claude-code-guide-api-fuzzing-bug-bounty": {
       "hash": "f0692669381caf74",
@@ -28253,9 +28253,9 @@
       "translated_at": "2026-08-12T23:15:02.118Z"
     },
     "bundle:google-skills": {
-      "hash": "4495934af9006178",
-      "summary_zh": "面向 Google Cloud 的 AI 智能体全生命周期工具集，把模型、提示词、RAG、部署、评测与监控串成可运营的生产闭环。",
-      "translated_at": "2026-08-20T00:45:21.653Z"
+      "hash": "f5430bc1659c3d11",
+      "summary_zh": "面向 Google Cloud AI 智能体开发与运维，覆盖迁移、部署、推理、评测、监控和资源治理，组合成一套端到端自动化工作流。",
+      "translated_at": "2026-08-21T21:14:18.283Z"
     },
     "skill:chrisbanes-skills-compose-performance": {
       "hash": "a79df9a1015c4e14",
@@ -46651,6 +46651,126 @@
     "content:neeeophytee-finding-unknowns-skills-context-audit": {
       "hash": "585463aca005382b",
       "translated_at": "2026-08-21T19:41:46.783Z"
+    },
+    "skill:google-skills-google-cloud-recipe-onboarding": {
+      "hash": "035a78ebd6f55cab",
+      "summary_zh": "面向初次使用 Google Cloud 的开发者，指导完成账号、计费和项目配置，并部署首个资源进行验证。",
+      "translated_at": "2026-08-21T21:14:30.141Z"
+    },
+    "skill:google-skills-google-cloud-recipe-auth": {
+      "hash": "fd0ec1121cb0734d",
+      "summary_zh": "一份谷歌云身份认证与授权指南，帮助开发者为用户和服务安全访问云服务及 API 选择合适方案。",
+      "translated_at": "2026-08-21T21:14:31.107Z"
+    },
+    "skill:google-skills-google-cloud-waf-cost-optimization": {
+      "hash": "30fa80286c6e6c67",
+      "summary_zh": "基于谷歌云良好架构框架评估工作负载，识别成本约束并提供构建、部署和运维阶段的降本建议。",
+      "translated_at": "2026-08-21T21:14:31.657Z"
+    },
+    "skill:google-skills-google-cloud-waf-performance-optimization": {
+      "hash": "c3a09be73a1ea43d",
+      "summary_zh": "基于 Google Cloud 架构最佳实践评估工作负载，识别性能需求并给出资源配置、模块化设计和弹性伸缩建议。",
+      "translated_at": "2026-08-21T21:14:34.044Z"
+    },
+    "skill:google-skills-google-cloud-waf-operational-excellence": {
+      "hash": "478466dbe4bd79a7",
+      "summary_zh": "一款基于 Google Cloud 架构最佳实践的运维评估工具，用于发现工作负载的运维需求，并优化部署、监控与故障响应。",
+      "translated_at": "2026-08-21T21:14:34.317Z"
+    },
+    "skill:google-skills-google-cloud-waf-reliability": {
+      "hash": "24b818ce7d5c9178",
+      "summary_zh": "基于 Google Cloud 架构最佳实践提供可靠性与容灾指导，适合评估、设计或改进云上业务的高可用和故障恢复能力。",
+      "translated_at": "2026-08-21T21:14:36.380Z"
+    },
+    "skill:google-skills-google-cloud-waf-security": {
+      "hash": "acd1c3158b5b37df",
+      "summary_zh": "用于评估 Google Cloud 工作负载安全性，并针对权限、网络、数据保护和运维风险提供可落地的改进建议。",
+      "translated_at": "2026-08-21T21:14:36.932Z"
+    },
+    "skill:google-skills-google-cloud-waf-sustainability": {
+      "hash": "b02307f485c9960d",
+      "summary_zh": "一款面向 Google Cloud 工作负载的可持续性评估工具，适合识别环境影响需求并获取构建、部署和运维优化建议。",
+      "translated_at": "2026-08-21T21:14:37.368Z"
+    },
+    "content:google-skills-google-cloud-recipe-auth": {
+      "hash": "0edd4ee0bca72b4a",
+      "translated_at": "2026-08-21T21:25:28.577Z"
+    },
+    "content:google-skills-google-cloud-recipe-onboarding": {
+      "hash": "ed91252f2d46566f",
+      "translated_at": "2026-08-21T21:26:34.114Z"
+    },
+    "content:google-skills-google-cloud-waf-cost-optimization": {
+      "hash": "3ff42b6532c35829",
+      "translated_at": "2026-08-21T21:27:25.577Z"
+    },
+    "content:google-skills-google-cloud-waf-operational-excellence": {
+      "hash": "519aaf57bfacf495",
+      "translated_at": "2026-08-21T21:27:55.151Z"
+    },
+    "content:google-skills-google-cloud-waf-performance-optimization": {
+      "hash": "03e6b3e523712cad",
+      "translated_at": "2026-08-21T21:28:35.636Z"
+    },
+    "content:google-skills-google-cloud-waf-reliability": {
+      "hash": "a8ebafc1aa138a5d",
+      "translated_at": "2026-08-21T21:29:13.854Z"
+    },
+    "content:google-skills-google-cloud-waf-security": {
+      "hash": "e5dc59635a2e6a3d",
+      "translated_at": "2026-08-21T21:30:31.805Z"
+    },
+    "content:google-skills-google-cloud-waf-sustainability": {
+      "hash": "f270005fb37adb04",
+      "translated_at": "2026-08-21T21:31:33.190Z"
+    },
+    "content:neeeophytee-finding-unknowns-skills-implementation-notes": {
+      "hash": "5de40a3d18c94e36",
+      "translated_at": "2026-08-21T21:35:53.966Z"
+    },
+    "content:neeeophytee-finding-unknowns-skills-implementation-plan": {
+      "hash": "725b8f2a7c8d38b3",
+      "translated_at": "2026-08-21T21:36:05.166Z"
+    },
+    "content:neeeophytee-finding-unknowns-skills-interview-me": {
+      "hash": "93d61e365a19d416",
+      "translated_at": "2026-08-21T21:36:14.586Z"
+    },
+    "content:neeeophytee-finding-unknowns-skills-pitch-packager": {
+      "hash": "674dff96cbbf5708",
+      "translated_at": "2026-08-21T21:36:28.909Z"
+    },
+    "content:neeeophytee-finding-unknowns-skills-progressive-disclosure": {
+      "hash": "5e2052f9f6126915",
+      "translated_at": "2026-08-21T21:36:32.394Z"
+    },
+    "content:neeeophytee-finding-unknowns-skills-reference-hunt": {
+      "hash": "880e9521c997f14d",
+      "translated_at": "2026-08-21T21:36:40.776Z"
+    },
+    "content:neolabhq-context-engineering-kit-actualize": {
+      "hash": "d3a3c9c4d019c308",
+      "translated_at": "2026-08-21T21:36:58.314Z"
+    },
+    "content:neolabhq-context-engineering-kit-add-task": {
+      "hash": "13dc01b3c855dd6a",
+      "translated_at": "2026-08-21T21:37:17.531Z"
+    },
+    "content:neolabhq-context-engineering-kit-analyse": {
+      "hash": "d1c1fe732089b5f5",
+      "translated_at": "2026-08-21T21:38:43.208Z"
+    },
+    "content:neolabhq-context-engineering-kit-analyse-problem": {
+      "hash": "9bc78dcde13ef890",
+      "translated_at": "2026-08-21T21:40:07.176Z"
+    },
+    "content:neolabhq-context-engineering-kit-analyze-issue": {
+      "hash": "5580e80765895970",
+      "translated_at": "2026-08-21T21:40:20.773Z"
+    },
+    "content:neolabhq-context-engineering-kit-agent-evaluation": {
+      "hash": "681e456d00509f1d",
+      "translated_at": "2026-08-21T21:42:38.544Z"
     }
   }
 }

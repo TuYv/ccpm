@@ -1,0 +1,26 @@
+{
+  "id": "google-skills-google-cloud-waf-cost-optimization",
+  "name": "google-cloud-waf-cost-optimization",
+  "description": "Generates cost optimization guidance for Google Cloud workloads based on the Google Cloud Well-Architected Framework (WAF). Use this skill to evaluate a workload, identify cost requirements and constraints, and provide actionable recommendations for build, deploy, and manage the workload cost-efficiently in Google Cloud.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/google-cloud-waf-cost-optimization/SKILL.md",
+  "source": {
+    "repo": "google/skills",
+    "url": "https://github.com/google/skills/blob/main/plugins/cloud/google-cloud-well-architected/skills/google-cloud-waf-cost-optimization/SKILL.md",
+    "path": "plugins/cloud/google-cloud-well-architected/skills/google-cloud-waf-cost-optimization/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-21T20:12:54.591Z",
+    "stars": 18585,
+    "language": "Python",
+    "pushed_at": "2026-08-21T20:12:37Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "基于谷歌云良好架构框架评估工作负载，识别成本约束并提供构建、部署和运维阶段的降本建议。"
+}
