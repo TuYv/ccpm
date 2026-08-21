@@ -1,0 +1,26 @@
+{
+  "id": "hoangnguyen0403-agent-skills-standard-common-documentation",
+  "name": "common-documentation",
+  "description": "Write effective code comments, READMEs, and technical documentation following intent-first principles. Use when adding comments, writing docstrings, creating READMEs, or updating any documentation.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "HoangNguyen0403",
+  "install_path": ".claude/skills/common-documentation/SKILL.md",
+  "source": {
+    "repo": "HoangNguyen0403/agent-skills-standard",
+    "url": "https://github.com/HoangNguyen0403/agent-skills-standard/blob/develop/.claude/skills/common/common-documentation/SKILL.md",
+    "path": ".claude/skills/common/common-documentation/SKILL.md",
+    "branch": "develop",
+    "discovered_at": "2026-08-21T10:04:57.863Z",
+    "stars": 545,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-21T09:05:08Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "一套以意图为先的技术文档写作指南，适合编写代码注释、文档字符串、README 及维护项目文档。"
+}

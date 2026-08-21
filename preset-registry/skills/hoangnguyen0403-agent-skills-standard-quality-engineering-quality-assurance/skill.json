@@ -1,0 +1,26 @@
+{
+  "id": "hoangnguyen0403-agent-skills-standard-quality-engineering-quality-assurance",
+  "name": "quality-engineering-quality-assurance",
+  "description": "Write or review manual Zephyr test cases with 1-condition-per-TC granularity, Module_Action on Screen when Condition naming, platform prefix rules, and High/Normal/Low priority classification. Use for test-case authoring and review; defer Jira traceability, linking, and pushing cases to Zephyr.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "HoangNguyen0403",
+  "install_path": ".claude/skills/quality-engineering-quality-assurance/SKILL.md",
+  "source": {
+    "repo": "HoangNguyen0403/agent-skills-standard",
+    "url": "https://github.com/HoangNguyen0403/agent-skills-standard/blob/develop/.agents/skills/quality-engineering/quality-engineering-quality-assurance/SKILL.md",
+    "path": ".agents/skills/quality-engineering/quality-engineering-quality-assurance/SKILL.md",
+    "branch": "develop",
+    "discovered_at": "2026-08-21T10:04:56.022Z",
+    "stars": 545,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-21T09:05:08Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "用于按统一粒度、命名和优先级规范编写或评审 Zephyr 手工测试用例，不涉及 Jira 追踪与用例推送。"
+}

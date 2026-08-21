@@ -1,0 +1,26 @@
+{
+  "id": "hoangnguyen0403-agent-skills-standard-common-operator-profile",
+  "name": "common-operator-profile",
+  "description": "Infer the requesting operator's technical fluency from message content (never ask directly) and adapt register — business, hybrid, or technical — across SDLC workflow output. Use when starting sdlc, brainstorm-feature, plan-feature, verify-work, publish-notes, or session-report, or whenever a request's phrasing signals a non-technical or cross-stack operator.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "HoangNguyen0403",
+  "install_path": ".claude/skills/common-operator-profile/SKILL.md",
+  "source": {
+    "repo": "HoangNguyen0403/agent-skills-standard",
+    "url": "https://github.com/HoangNguyen0403/agent-skills-standard/blob/develop/.agents/skills/common/common-operator-profile/SKILL.md",
+    "path": ".agents/skills/common/common-operator-profile/SKILL.md",
+    "branch": "develop",
+    "discovered_at": "2026-08-21T10:04:52.473Z",
+    "stars": 545,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-21T09:05:08Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "根据消息判断使用者的技术熟练度并自动调整表达方式，适合在需求、规划、验收和发布等研发流程中改善跨角色沟通。"
+}

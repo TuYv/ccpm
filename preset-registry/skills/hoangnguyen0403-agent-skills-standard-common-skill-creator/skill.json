@@ -1,0 +1,26 @@
+{
+  "id": "hoangnguyen0403-agent-skills-standard-common-skill-creator",
+  "name": "common-skill-creator",
+  "description": "Standardizes the creation and evaluation of high-density Agent Skills (Claude, Cursor, Windsurf). Ensures skills achieve high Activation (specificity/completeness) and Implementation (conciseness/actionability) scores. Use when: writing or auditing SKILL.md, improving trigger accuracy, or refactoring skills to reduce redundancy and maximize token ROI.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "HoangNguyen0403",
+  "install_path": ".claude/skills/common-skill-creator/SKILL.md",
+  "source": {
+    "repo": "HoangNguyen0403/agent-skills-standard",
+    "url": "https://github.com/HoangNguyen0403/agent-skills-standard/blob/develop/.agents/skills/common/common-skill-creator/SKILL.md",
+    "path": ".agents/skills/common/common-skill-creator/SKILL.md",
+    "branch": "develop",
+    "discovered_at": "2026-08-21T10:04:53.762Z",
+    "stars": 545,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-21T09:05:08Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "用于创建和评估 Claude、Cursor 等智能体技能，适合优化触发准确率、精简内容并提升指令可执行性。"
+}

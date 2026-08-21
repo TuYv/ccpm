@@ -1,0 +1,26 @@
+{
+  "id": "hoangnguyen0403-agent-skills-standard-common-owasp",
+  "name": "common-owasp",
+  "description": "OWASP Top 10 audit checklists for Web Applications (2021), APIs (2023), and Mobile (2024). Use when performing any security review, PR review, or codebase audit touching web, mobile, or API code.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "HoangNguyen0403",
+  "install_path": ".claude/skills/common-owasp/SKILL.md",
+  "source": {
+    "repo": "HoangNguyen0403/agent-skills-standard",
+    "url": "https://github.com/HoangNguyen0403/agent-skills-standard/blob/develop/.agents/skills/common/common-owasp/SKILL.md",
+    "path": ".agents/skills/common/common-owasp/SKILL.md",
+    "branch": "develop",
+    "discovered_at": "2026-08-21T10:04:52.608Z",
+    "stars": 545,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-21T09:05:08Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "面向 Web、API 和移动端的 OWASP Top 10 审计清单，适合安全评审、代码审查及项目漏洞排查。"
+}

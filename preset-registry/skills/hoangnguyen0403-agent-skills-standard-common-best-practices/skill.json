@@ -1,0 +1,26 @@
+{
+  "id": "hoangnguyen0403-agent-skills-standard-common-best-practices",
+  "name": "common-best-practices",
+  "description": "Enforce SOLID principles, guard-clause style, function size limits, and intention-revealing naming across all languages. Use when refactoring for readability, applying clean-code patterns, reviewing naming conventions, or reducing function complexity.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "HoangNguyen0403",
+  "install_path": ".claude/skills/common-best-practices/SKILL.md",
+  "source": {
+    "repo": "HoangNguyen0403/agent-skills-standard",
+    "url": "https://github.com/HoangNguyen0403/agent-skills-standard/blob/develop/.claude/skills/common/common-best-practices/SKILL.md",
+    "path": ".claude/skills/common/common-best-practices/SKILL.md",
+    "branch": "develop",
+    "discovered_at": "2026-08-21T10:04:57.000Z",
+    "stars": 545,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-21T09:05:08Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "一套跨语言代码规范，用于在重构和审查中落实 SOLID 原则、改善命名与可读性，并降低函数复杂度。"
+}

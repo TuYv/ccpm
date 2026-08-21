@@ -1,0 +1,26 @@
+{
+  "id": "hoangnguyen0403-agent-skills-standard-typescript-security",
+  "name": "typescript-security",
+  "description": "Secure server-side TypeScript input, auth tokens, and injection boundaries. Use for API/request validation, sanitization, secrets, and sensitive configuration; defer client-only React form validation and generic linting.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "HoangNguyen0403",
+  "install_path": ".claude/skills/typescript-security/SKILL.md",
+  "source": {
+    "repo": "HoangNguyen0403/agent-skills-standard",
+    "url": "https://github.com/HoangNguyen0403/agent-skills-standard/blob/develop/.agents/skills/typescript/typescript-security/SKILL.md",
+    "path": ".agents/skills/typescript/typescript-security/SKILL.md",
+    "branch": "develop",
+    "discovered_at": "2026-08-21T10:04:56.734Z",
+    "stars": 545,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-21T09:05:08Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "用于保障服务端 TypeScript 应用安全，适合处理接口校验、输入清洗、令牌鉴权、密钥配置及注入防护。"
+}

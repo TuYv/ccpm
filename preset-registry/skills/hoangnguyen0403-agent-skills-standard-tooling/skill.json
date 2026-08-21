@@ -1,0 +1,26 @@
+{
+  "id": "hoangnguyen0403-agent-skills-standard-tooling",
+  "name": "JavaScript Tooling",
+  "description": "Development tools, linting, and testing for JavaScript projects.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "HoangNguyen0403",
+  "install_path": ".claude/skills/tooling/SKILL.md",
+  "source": {
+    "repo": "HoangNguyen0403/agent-skills-standard",
+    "url": "https://github.com/HoangNguyen0403/agent-skills-standard/blob/develop/.agents/skills/javascript/tooling/SKILL.md",
+    "path": ".agents/skills/javascript/tooling/SKILL.md",
+    "branch": "develop",
+    "discovered_at": "2026-08-21T10:04:55.249Z",
+    "stars": 545,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-21T09:05:08Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "为 JavaScript 项目提供开发、代码检查和测试工具，适合提升代码质量与开发效率。"
+}

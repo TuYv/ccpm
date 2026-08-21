@@ -1,0 +1,26 @@
+{
+  "id": "hoangnguyen0403-agent-skills-standard-common-protocol-enforcement",
+  "name": "common-protocol-enforcement",
+  "description": "Enforce Red-Team verification and adversarial protocol audit. Use only when verifying completion, performing self-scans, or checking protocol violations; do not activate for ordinary implementation, configuration, or unit-test requests.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "HoangNguyen0403",
+  "install_path": ".claude/skills/common-protocol-enforcement/SKILL.md",
+  "source": {
+    "repo": "HoangNguyen0403/agent-skills-standard",
+    "url": "https://github.com/HoangNguyen0403/agent-skills-standard/blob/develop/.agents/skills/common/common-protocol-enforcement/SKILL.md",
+    "path": ".agents/skills/common/common-protocol-enforcement/SKILL.md",
+    "branch": "develop",
+    "discovered_at": "2026-08-21T10:04:53.167Z",
+    "stars": 545,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-21T09:05:08Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "用于在任务完成前执行红队验证、自检和对抗性协议审计，适合排查流程违规，不用于常规开发、配置或单元测试。"
+}

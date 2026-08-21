@@ -1,0 +1,26 @@
+{
+  "id": "hoangnguyen0403-agent-skills-standard-common-performance-engineering",
+  "name": "common-performance-engineering",
+  "description": "Enforce universal standards for high-performance development. Use when profiling bottlenecks, reducing latency, fixing memory leaks, improving throughput, or optimizing algorithm complexity in any language.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "HoangNguyen0403",
+  "install_path": ".claude/skills/common-performance-engineering/SKILL.md",
+  "source": {
+    "repo": "HoangNguyen0403/agent-skills-standard",
+    "url": "https://github.com/HoangNguyen0403/agent-skills-standard/blob/develop/.agents/skills/common/common-performance-engineering/SKILL.md",
+    "path": ".agents/skills/common/common-performance-engineering/SKILL.md",
+    "branch": "develop",
+    "discovered_at": "2026-08-21T10:04:52.878Z",
+    "stars": 545,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-21T09:05:08Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "一套通用性能工程规范，适合定位瓶颈、降低延迟、修复内存泄漏并优化吞吐量和算法复杂度。"
+}

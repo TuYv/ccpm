@@ -1,0 +1,26 @@
+{
+  "id": "hoangnguyen0403-agent-skills-standard-common-workflow-writing",
+  "name": "common-workflow-writing",
+  "description": "Rules for writing concise, token-efficient workflow and skill files. Prevents over-building that requires costly optimization passes. Use when creating or editing workflow files, SKILL.md files, or new skill definitions.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "HoangNguyen0403",
+  "install_path": ".claude/skills/common-workflow-writing/SKILL.md",
+  "source": {
+    "repo": "HoangNguyen0403/agent-skills-standard",
+    "url": "https://github.com/HoangNguyen0403/agent-skills-standard/blob/develop/.agents/skills/common/common-workflow-writing/SKILL.md",
+    "path": ".agents/skills/common/common-workflow-writing/SKILL.md",
+    "branch": "develop",
+    "discovered_at": "2026-08-21T10:04:54.851Z",
+    "stars": 545,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-21T09:05:08Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "一套编写精简、节省令牌的工作流与技能定义规范，适合创建或修改相关文件，避免过度设计和后续高成本优化。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "hoangnguyen0403-agent-skills-standard-common-security-standards",
+  "name": "common-security-standards",
+  "description": "Enforce universal security protocols for safe, resilient software. Use when implementing authentication, encryption, authorization, input validation, secret management, or any security-sensitive feature across any language or framework.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "HoangNguyen0403",
+  "install_path": ".claude/skills/common-security-standards/SKILL.md",
+  "source": {
+    "repo": "HoangNguyen0403/agent-skills-standard",
+    "url": "https://github.com/HoangNguyen0403/agent-skills-standard/blob/develop/.agents/skills/common/common-security-standards/SKILL.md",
+    "path": ".agents/skills/common/common-security-standards/SKILL.md",
+    "branch": "develop",
+    "discovered_at": "2026-08-21T10:04:53.441Z",
+    "stars": 545,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-21T09:05:08Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "一套通用安全规范，用于在各类语言和框架中落实认证、加密、权限控制等安全机制，提升软件的安全性与韧性。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "hoangnguyen0403-agent-skills-standard-common-context-optimization",
+  "name": "common-context-optimization",
+  "description": "Maximize context window efficiency, reduce latency, and prevent lost-in-middle issues through strategic masking and compaction. Use when token budgets are tight, tool outputs overflow the context, conversations drift from intent, or latency spikes from cache misses.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "HoangNguyen0403",
+  "install_path": ".claude/skills/common-context-optimization/SKILL.md",
+  "source": {
+    "repo": "HoangNguyen0403/agent-skills-standard",
+    "url": "https://github.com/HoangNguyen0403/agent-skills-standard/blob/develop/.claude/skills/common/common-context-optimization/SKILL.md",
+    "path": ".claude/skills/common/common-context-optimization/SKILL.md",
+    "branch": "develop",
+    "discovered_at": "2026-08-21T10:04:57.437Z",
+    "stars": 545,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-21T09:05:08Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "一套大模型上下文优化方案，通过策略性遮蔽与压缩节省令牌、降低延迟，适合长对话或工具输出过多的场景。"
+}

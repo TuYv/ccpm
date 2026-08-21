@@ -1,0 +1,26 @@
+{
+  "id": "hoangnguyen0403-agent-skills-standard-common-store-changelog",
+  "name": "common-store-changelog",
+  "description": "Generate user-facing release notes for the App Store and Google Play from git history (App Store <=4000 chars, Google Play <=500). Use when generating release notes, app store changelog, play store release, or \\\"what's new\\\" text for a mobile app.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "HoangNguyen0403",
+  "install_path": ".claude/skills/common-store-changelog/SKILL.md",
+  "source": {
+    "repo": "HoangNguyen0403/agent-skills-standard",
+    "url": "https://github.com/HoangNguyen0403/agent-skills-standard/blob/develop/.agents/skills/common/common-store-changelog/SKILL.md",
+    "path": ".agents/skills/common/common-store-changelog/SKILL.md",
+    "branch": "develop",
+    "discovered_at": "2026-08-21T10:04:54.039Z",
+    "stars": 545,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-21T09:05:08Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "根据 Git 历史自动生成符合应用商店字数限制的更新说明，适合移动应用发布新版本时使用。"
+}

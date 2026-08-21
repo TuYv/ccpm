@@ -1,0 +1,26 @@
+{
+  "id": "hoangnguyen0403-agent-skills-standard-common-code-review",
+  "name": "common-code-review",
+  "description": "Conduct high-quality, persona-driven code reviews. Use when reviewing PRs, critiquing code quality, or analyzing changes for team feedback.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "HoangNguyen0403",
+  "install_path": ".claude/skills/common-code-review/SKILL.md",
+  "source": {
+    "repo": "HoangNguyen0403/agent-skills-standard",
+    "url": "https://github.com/HoangNguyen0403/agent-skills-standard/blob/develop/.claude/skills/common/common-code-review/SKILL.md",
+    "path": ".claude/skills/common/common-code-review/SKILL.md",
+    "branch": "develop",
+    "discovered_at": "2026-08-21T10:04:57.276Z",
+    "stars": 545,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-21T09:05:08Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "一款基于不同角色视角开展高质量代码审查的工具，适合评审 PR、分析代码变更并为团队提供改进意见。"
+}

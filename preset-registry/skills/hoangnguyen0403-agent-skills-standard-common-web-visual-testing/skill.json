@@ -1,0 +1,26 @@
+{
+  "id": "hoangnguyen0403-agent-skills-standard-common-web-visual-testing",
+  "name": "common-web-visual-testing",
+  "description": "Standardizes visual audits, responsive design, and behavioral testing for web apps. Use to verify a web UI fix or cross-browser behavior; defer backend API refactors, Playwright installation/tooling setup, and Appium/mobile automation.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "HoangNguyen0403",
+  "install_path": ".claude/skills/common-web-visual-testing/SKILL.md",
+  "source": {
+    "repo": "HoangNguyen0403/agent-skills-standard",
+    "url": "https://github.com/HoangNguyen0403/agent-skills-standard/blob/develop/.agents/skills/common/common-web-visual-testing/SKILL.md",
+    "path": ".agents/skills/common/common-web-visual-testing/SKILL.md",
+    "branch": "develop",
+    "discovered_at": "2026-08-21T10:04:54.718Z",
+    "stars": 545,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-21T09:05:08Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "用于统一 Web 应用的视觉检查、响应式与交互测试，适合验证界面修复效果及跨浏览器兼容性。"
+}

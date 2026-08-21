@@ -1,0 +1,26 @@
+{
+  "id": "hoangnguyen0403-agent-skills-standard-common-system-design",
+  "name": "common-system-design",
+  "description": "Define module boundaries, dependency direction, data ownership, resilience, and distributed-system trade-offs. Use for architecture, service boundaries, coupling, scalability, or failure-cascade decisions; not generic project setup.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "HoangNguyen0403",
+  "install_path": ".claude/skills/common-system-design/SKILL.md",
+  "source": {
+    "repo": "HoangNguyen0403/agent-skills-standard",
+    "url": "https://github.com/HoangNguyen0403/agent-skills-standard/blob/develop/.agents/skills/common/common-system-design/SKILL.md",
+    "path": ".agents/skills/common/common-system-design/SKILL.md",
+    "branch": "develop",
+    "discovered_at": "2026-08-21T10:04:54.172Z",
+    "stars": 545,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-21T09:05:08Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "一套系统架构设计指南，用于划分模块与服务边界、明确依赖和数据归属，并权衡扩展性、容错及故障级联风险。"
+}

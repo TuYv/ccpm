@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-21T08:49:22.241Z",
+  "updated_at": "2026-08-21T10:34:51.307Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -38133,8 +38133,8 @@
       "translated_at": "2026-08-15T18:34:37.919Z"
     },
     "content:daymade-claude-code-skills-transcript-fixer": {
-      "hash": "18c96804b0b59205",
-      "translated_at": "2026-08-20T20:12:12.839Z"
+      "hash": "544d55bf74638ae7",
+      "translated_at": "2026-08-21T10:23:45.705Z"
     },
     "content:eronred-aso-skills-screenshot-optimization": {
       "hash": "3347d82c1781799d",
@@ -45815,6 +45815,388 @@
     "content:aeonfun-aeon-idea-forge": {
       "hash": "8b16fc222319719b",
       "translated_at": "2026-08-21T08:49:22.241Z"
+    },
+    "bundle:hoangnguyen0403-agent-skills-standard": {
+      "hash": "7c5dc16deef59d99",
+      "summary_zh": "面向 AI 编程代理的标准化技能合集，覆盖需求到交付全流程，统一工程规范并压缩上下文，提升协作效率、代码质量与安全性。",
+      "translated_at": "2026-08-21T10:11:34.714Z"
+    },
+    "skill:hoangnguyen0403-agent-skills-standard-best-practices": {
+      "hash": "19f02b09c0a50aee",
+      "summary_zh": "一套地道的 JavaScript 编码规范与实践，帮助团队写出更易读、易维护的代码。",
+      "translated_at": "2026-08-21T10:11:37.714Z"
+    },
+    "skill:hoangnguyen0403-agent-skills-standard-caveman-commit": {
+      "hash": "b31809158d879fe5",
+      "summary_zh": "一个超精简的提交信息生成器，适合根据暂存改动快速产出保留意图与原因的规范化提交说明。",
+      "translated_at": "2026-08-21T10:11:38.171Z"
+    },
+    "skill:hoangnguyen0403-agent-skills-standard-caveman": {
+      "hash": "d0dbc0ef01473f17",
+      "summary_zh": "一种超压缩表达模式，用极简短句保持技术准确性，可减少约75%令牌消耗，适合追求高效沟通或控制成本的场景。",
+      "translated_at": "2026-08-21T10:11:38.573Z"
+    },
+    "skill:hoangnguyen0403-agent-skills-standard-common-best-practices": {
+      "hash": "afac18a8d4a13960",
+      "summary_zh": "一套跨语言代码规范，用于在重构和审查中落实 SOLID 原则、改善命名与可读性，并降低函数复杂度。",
+      "translated_at": "2026-08-21T10:11:41.506Z"
+    },
+    "skill:hoangnguyen0403-agent-skills-standard-caveman-compress": {
+      "hash": "6dccb333e8dc5bc8",
+      "summary_zh": "将自然语言记忆文件压缩成精简格式，在保留代码、链接和结构的同时减少大模型输入令牌消耗。",
+      "translated_at": "2026-08-21T10:11:42.108Z"
+    },
+    "skill:hoangnguyen0403-agent-skills-standard-caveman-review": {
+      "hash": "5a9c3e9ce4be4571",
+      "summary_zh": "一款极简代码审查工具，把 PR 反馈压缩为“位置、问题、修复”单行建议，适合快速审查改动并减少无效信息。",
+      "translated_at": "2026-08-21T10:11:42.545Z"
+    },
+    "skill:hoangnguyen0403-agent-skills-standard-common-code-review": {
+      "hash": "2d038be5aa27ec9b",
+      "summary_zh": "一款基于不同角色视角开展高质量代码审查的工具，适合评审 PR、分析代码变更并为团队提供改进意见。",
+      "translated_at": "2026-08-21T10:11:44.910Z"
+    },
+    "skill:hoangnguyen0403-agent-skills-standard-common-business-requirements": {
+      "hash": "b833b40e54f642dc",
+      "summary_zh": "一套标准化业务需求梳理框架，适合编写需求文档、商业论证、项目立项、ROI说明及现状到目标范围。",
+      "translated_at": "2026-08-21T10:11:45.063Z"
+    },
+    "skill:hoangnguyen0403-agent-skills-standard-common-context-optimization": {
+      "hash": "bfcf7b8d9187c06b",
+      "summary_zh": "一套大模型上下文优化方案，通过策略性遮蔽与压缩节省令牌、降低延迟，适合长对话或工具输出过多的场景。",
+      "translated_at": "2026-08-21T10:11:46.763Z"
+    },
+    "skill:hoangnguyen0403-agent-skills-standard-common-dast-tooling": {
+      "hash": "daeb9a142bca2e48",
+      "summary_zh": "一套统一的动态应用安全测试工具链，适合在本地或预发布环境扫描后端接口、网页和移动端的安全漏洞。",
+      "translated_at": "2026-08-21T10:11:47.280Z"
+    },
+    "skill:hoangnguyen0403-agent-skills-standard-common-debugging": {
+      "hash": "706e345a0e7e2678",
+      "summary_zh": "一套用科学方法系统排查问题的调试指南，适合定位崩溃、异常、报错及非预期行为。",
+      "translated_at": "2026-08-21T10:11:47.968Z"
+    },
+    "skill:hoangnguyen0403-agent-skills-standard-common-documentation": {
+      "hash": "554b0bab5b1334f9",
+      "summary_zh": "一套以意图为先的技术文档写作指南，适合编写代码注释、文档字符串、README 及维护项目文档。",
+      "translated_at": "2026-08-21T10:11:50.207Z"
+    },
+    "skill:hoangnguyen0403-agent-skills-standard-common-exploit-verification": {
+      "hash": "6b23b04e934e8b70",
+      "summary_zh": "一套漏洞验证与证据收集规范，用于构造 PoC、过滤误报并撰写后端、前端和移动端渗透测试报告。",
+      "translated_at": "2026-08-21T10:11:50.441Z"
+    },
+    "skill:hoangnguyen0403-agent-skills-standard-common-feedback-reporter": {
+      "hash": "7245422138e306a8",
+      "summary_zh": "一款写入前代码审查工具，可按项目规则拦截反模式，适合编写 Flutter、Dart、TS 代码或修改技能配置时使用。",
+      "translated_at": "2026-08-21T10:11:52.437Z"
+    },
+    "skill:hoangnguyen0403-agent-skills-standard-common-git-collaboration": {
+      "hash": "e904d827c3336749",
+      "summary_zh": "用于规范 Git 协作流程的实践指南，覆盖提交、分支、合并、拉取请求及仓库安全，适合团队统一开发规范。",
+      "translated_at": "2026-08-21T10:11:53.081Z"
+    },
+    "skill:hoangnguyen0403-agent-skills-standard-common-llm-security": {
+      "hash": "24be9df89b3317ce",
+      "summary_zh": "一份面向大模型应用的安全审计清单，适合检查智能体、RAG、提示词、客户端代码及向量库中的常见风险。",
+      "translated_at": "2026-08-21T10:11:55.379Z"
+    },
+    "skill:hoangnguyen0403-agent-skills-standard-common-learning-log": {
+      "hash": "e8af61339e469aaa",
+      "summary_zh": "这是一个为 AI 代理自动记录错误与纠正经验的学习日志工具，适合在修复失误或收到用户纠正后沉淀经验。",
+      "translated_at": "2026-08-21T10:11:55.465Z"
+    },
+    "skill:hoangnguyen0403-agent-skills-standard-common-mobile-visual-testing": {
+      "hash": "da99588ae2e70ba1",
+      "summary_zh": "一套标准化的移动端视觉测试方案，用于统一检查界面、性能与滚动、RTL 适配及特定状态下的表现。",
+      "translated_at": "2026-08-21T10:11:55.790Z"
+    },
+    "skill:hoangnguyen0403-agent-skills-standard-common-owasp": {
+      "hash": "5e7807f6df681d38",
+      "summary_zh": "面向 Web、API 和移动端的 OWASP Top 10 审计清单，适合安全评审、代码审查及项目漏洞排查。",
+      "translated_at": "2026-08-21T10:11:58.485Z"
+    },
+    "skill:hoangnguyen0403-agent-skills-standard-common-operator-profile": {
+      "hash": "5158de92d83e4e3b",
+      "summary_zh": "根据消息判断使用者的技术熟练度并自动调整表达方式，适合在需求、规划、验收和发布等研发流程中改善跨角色沟通。",
+      "translated_at": "2026-08-21T10:11:59.495Z"
+    },
+    "skill:hoangnguyen0403-agent-skills-standard-common-pentest-methodology": {
+      "hash": "7847344968770b59",
+      "summary_zh": "一套遵循 PTES 的渗透测试方法论，适合规划后端、前端和移动端安全评估、梳理攻击面及构建威胁模型。",
+      "translated_at": "2026-08-21T10:12:01.004Z"
+    },
+    "skill:hoangnguyen0403-agent-skills-standard-common-performance-engineering": {
+      "hash": "3920f7923fff7c33",
+      "summary_zh": "一套通用性能工程规范，适合定位瓶颈、降低延迟、修复内存泄漏并优化吞吐量和算法复杂度。",
+      "translated_at": "2026-08-21T10:12:01.411Z"
+    },
+    "skill:hoangnguyen0403-agent-skills-standard-common-product-requirements": {
+      "hash": "5fc82bb767953dcd",
+      "summary_zh": "用于规范产品需求发现与文档编写，适合统一产品范围、用户目标、需求编号及验收标准。",
+      "translated_at": "2026-08-21T10:12:03.880Z"
+    },
+    "skill:hoangnguyen0403-agent-skills-standard-common-protocol-enforcement": {
+      "hash": "e5b15495912e7fe2",
+      "summary_zh": "用于在任务完成前执行红队验证、自检和对抗性协议审计，适合排查流程违规，不用于常规开发、配置或单元测试。",
+      "translated_at": "2026-08-21T10:12:04.024Z"
+    },
+    "skill:hoangnguyen0403-agent-skills-standard-common-security-audit": {
+      "hash": "2ab3c7c3c3c25540",
+      "summary_zh": "一款面向后端、前端和移动端代码的安全审计工具，适合排查硬编码密钥、注入风险、未授权路由及业务逻辑漏洞。",
+      "translated_at": "2026-08-21T10:12:04.654Z"
+    },
+    "skill:hoangnguyen0403-agent-skills-standard-common-security-standards": {
+      "hash": "0632234c956136b6",
+      "summary_zh": "一套通用安全规范，用于在各类语言和框架中落实认证、加密、权限控制等安全机制，提升软件的安全性与韧性。",
+      "translated_at": "2026-08-21T10:12:06.984Z"
+    },
+    "skill:hoangnguyen0403-agent-skills-standard-common-skill-creator": {
+      "hash": "67e99334143abda6",
+      "summary_zh": "用于创建和评估 Claude、Cursor 等智能体技能，适合优化触发准确率、精简内容并提升指令可执行性。",
+      "translated_at": "2026-08-21T10:12:07.879Z"
+    },
+    "skill:hoangnguyen0403-agent-skills-standard-common-session-retrospective": {
+      "hash": "c7d3e64367227c07",
+      "summary_zh": "这是一个会话复盘工具，能从用户纠正和返工中识别能力缺口，生成技能库维护任务并沉淀错误记录。",
+      "translated_at": "2026-08-21T10:12:09.574Z"
+    },
+    "skill:hoangnguyen0403-agent-skills-standard-common-store-changelog": {
+      "hash": "7aea9c45d33f929b",
+      "summary_zh": "根据 Git 历史自动生成符合应用商店字数限制的更新说明，适合移动应用发布新版本时使用。",
+      "translated_at": "2026-08-21T10:12:10.561Z"
+    },
+    "skill:hoangnguyen0403-agent-skills-standard-common-software-requirements": {
+      "hash": "38aa2a7ae661286e",
+      "summary_zh": "一套规范软件需求与功能规格的标准，适合统一系统行为、接口、数据契约、质量约束及验证映射。",
+      "translated_at": "2026-08-21T10:12:11.312Z"
+    },
+    "skill:hoangnguyen0403-agent-skills-standard-common-system-design": {
+      "hash": "d609d9c3604d5d82",
+      "summary_zh": "一套系统架构设计指南，用于划分模块与服务边界、明确依赖和数据归属，并权衡扩展性、容错及故障级联风险。",
+      "translated_at": "2026-08-21T10:12:12.703Z"
+    },
+    "skill:hoangnguyen0403-agent-skills-standard-common-telemetry": {
+      "hash": "47f835d653382fde",
+      "summary_zh": "一套会话成本遥测与执行信息上报规范，适合在工作流交接或结束时统一记录令牌、费用和运行数据。",
+      "translated_at": "2026-08-21T10:12:15.148Z"
+    },
+    "skill:hoangnguyen0403-agent-skills-standard-common-tdd": {
+      "hash": "f45d69a6120919be",
+      "summary_zh": "一套质量优先的 TDD 实践指南，适合开发新功能、修复缺陷和调整测试，以最小测试范围验证回归风险并完成红绿重构。",
+      "translated_at": "2026-08-21T10:12:16.020Z"
+    },
+    "skill:hoangnguyen0403-agent-skills-standard-common-ui-design": {
+      "hash": "735652d45ec857b9",
+      "summary_zh": "一套面向前端开发的 UI 设计方案，适合在各类框架中打造风格鲜明、可直接上线的组件、页面和应用。",
+      "translated_at": "2026-08-21T10:12:16.301Z"
+    },
+    "skill:hoangnguyen0403-agent-skills-standard-common-web-visual-testing": {
+      "hash": "e70c7f0aac5a22b5",
+      "summary_zh": "用于统一 Web 应用的视觉检查、响应式与交互测试，适合验证界面修复效果及跨浏览器兼容性。",
+      "translated_at": "2026-08-21T10:12:17.844Z"
+    },
+    "skill:hoangnguyen0403-agent-skills-standard-common-workflow-writing": {
+      "hash": "ed121f3bedbba55e",
+      "summary_zh": "一套编写精简、节省令牌的工作流与技能定义规范，适合创建或修改相关文件，避免过度设计和后续高成本优化。",
+      "translated_at": "2026-08-21T10:12:19.592Z"
+    },
+    "skill:hoangnguyen0403-agent-skills-standard-language": {
+      "hash": "984eeef7fe9c41a7",
+      "summary_zh": "一套面向 ES2022+ 的现代 JavaScript 编程模式，帮助开发者写出更简洁、易读且便于维护的代码。",
+      "translated_at": "2026-08-21T10:12:19.727Z"
+    },
+    "skill:hoangnguyen0403-agent-skills-standard-quality-engineering-appium-mcp": {
+      "hash": "602c8ccf63062442",
+      "summary_zh": "通过 Appium MCP 操控 iOS 和 Android 设备，适合复现移动端缺陷、执行端到端测试及使用云真机平台。",
+      "translated_at": "2026-08-21T10:12:20.364Z"
+    },
+    "skill:hoangnguyen0403-agent-skills-standard-quality-engineering-business-analysis": {
+      "hash": "6e20fd367156b3b1",
+      "summary_zh": "一套面向质量工程的需求分析方法，用于拆解验收标准、梳理角色权限和复杂逻辑，适合评审含功能开关或多市场差异的用户故事。",
+      "translated_at": "2026-08-21T10:12:23.765Z"
+    },
+    "skill:hoangnguyen0403-agent-skills-standard-quality-engineering-jira-integration": {
+      "hash": "ec275b8e7acb66ea",
+      "summary_zh": "用于按需连接 Jira 或 Zephyr，适合查询实时数据、检查和关联测试用例、更新标签及审计失效链接。",
+      "translated_at": "2026-08-21T10:12:23.820Z"
+    },
+    "skill:hoangnguyen0403-agent-skills-standard-quality-engineering-playwright-cli": {
+      "hash": "e21740771522f4c0",
+      "summary_zh": "一套基于 Playwright CLI 的低令牌浏览器自动化方案，适合网页验证、导航及抓取快照和日志。",
+      "translated_at": "2026-08-21T10:12:25.120Z"
+    },
+    "skill:hoangnguyen0403-agent-skills-standard-quality-engineering-zephyr-coverage-analysis": {
+      "hash": "2e1c10fc81fad955",
+      "summary_zh": "用于审计 Jira 故事或史诗的测试覆盖质量，识别缺失用例与质量债务，适合评估迭代或发布前的就绪度。",
+      "translated_at": "2026-08-21T10:12:28.323Z"
+    },
+    "skill:hoangnguyen0403-agent-skills-standard-quality-engineering-quality-assurance": {
+      "hash": "96495b497b5286a6",
+      "summary_zh": "用于按统一粒度、命名和优先级规范编写或评审 Zephyr 手工测试用例，不涉及 Jira 追踪与用例推送。",
+      "translated_at": "2026-08-21T10:12:28.917Z"
+    },
+    "skill:hoangnguyen0403-agent-skills-standard-quality-engineering-zephyr-test-generation": {
+      "hash": "20e22741a755b6bf",
+      "summary_zh": "从 Jira 故事的验收标准和业务规则自动生成 Zephyr 测试用例，并判断应更新现有用例还是新建。",
+      "translated_at": "2026-08-21T10:12:31.138Z"
+    },
+    "skill:hoangnguyen0403-agent-skills-standard-tooling": {
+      "hash": "154a98a4270ed2dd",
+      "summary_zh": "为 JavaScript 项目提供开发、代码检查和测试工具，适合提升代码质量与开发效率。",
+      "translated_at": "2026-08-21T10:12:31.241Z"
+    },
+    "skill:hoangnguyen0403-agent-skills-standard-typescript-best-practices": {
+      "hash": "a881c554e35ea33a",
+      "summary_zh": "一套地道的 TypeScript 编码实践，适合编写或重构类、函数、模块和异步逻辑，让代码更清晰易维护。",
+      "translated_at": "2026-08-21T10:12:31.495Z"
+    },
+    "skill:hoangnguyen0403-agent-skills-standard-typescript-tooling": {
+      "hash": "0c21e16e17926b95",
+      "summary_zh": "一套 TypeScript 开发工具与配置方案，适合统一 ESLint、Prettier、测试框架及构建流程。",
+      "translated_at": "2026-08-21T10:12:33.922Z"
+    },
+    "skill:hoangnguyen0403-agent-skills-standard-typescript-language": {
+      "hash": "95c38d8be6be272c",
+      "summary_zh": "一套现代 TypeScript 编码规范，用于提升类型安全与可维护性，适合类型设计及 tsconfig 配置场景。",
+      "translated_at": "2026-08-21T10:12:34.612Z"
+    },
+    "skill:hoangnguyen0403-agent-skills-standard-typescript-security": {
+      "hash": "0b7d8b6e3d459efe",
+      "summary_zh": "用于保障服务端 TypeScript 应用安全，适合处理接口校验、输入清洗、令牌鉴权、密钥配置及注入防护。",
+      "translated_at": "2026-08-21T10:12:35.165Z"
+    },
+    "content:aeonfun-aeon-inbox-triage": {
+      "hash": "41c948261843b3e0",
+      "translated_at": "2026-08-21T10:13:25.262Z"
+    },
+    "content:aeonfun-aeon-install-skill": {
+      "hash": "836ad1056f445bea",
+      "translated_at": "2026-08-21T10:13:31.565Z"
+    },
+    "content:aeonfun-aeon-last30": {
+      "hash": "5db6a9b95269ed3e",
+      "translated_at": "2026-08-21T10:16:06.472Z"
+    },
+    "content:aeonfun-aeon-malicious-curlperl": {
+      "hash": "f763982fd92dc2a8",
+      "translated_at": "2026-08-21T10:16:08.970Z"
+    },
+    "content:aeonfun-aeon-malicious-curlsh": {
+      "hash": "8888a4856cdebb6c",
+      "translated_at": "2026-08-21T10:16:20.051Z"
+    },
+    "content:aeonfun-aeon-malicious-exfil": {
+      "hash": "88d2a346985cb8fc",
+      "translated_at": "2026-08-21T10:16:23.191Z"
+    },
+    "content:aeonfun-aeon-malicious-exfil-query": {
+      "hash": "890ff2bc968de25c",
+      "translated_at": "2026-08-21T10:16:26.128Z"
+    },
+    "content:aeonfun-aeon-malicious-injection": {
+      "hash": "7260c33cc49104b4",
+      "translated_at": "2026-08-21T10:16:31.065Z"
+    },
+    "content:aeonfun-aeon-malicious-injection-keyword": {
+      "hash": "2c772008d10c6bf3",
+      "translated_at": "2026-08-21T10:16:35.065Z"
+    },
+    "content:aeonfun-aeon-malicious-injection-quoted": {
+      "hash": "e57cd4e961960034",
+      "translated_at": "2026-08-21T10:16:38.339Z"
+    },
+    "content:aeonfun-aeon-malicious-rce-procsub": {
+      "hash": "98783ce00f9e781a",
+      "translated_at": "2026-08-21T10:16:41.060Z"
+    },
+    "content:aeonfun-aeon-malicious-rce-source": {
+      "hash": "72f03655f31f2429",
+      "translated_at": "2026-08-21T10:16:43.585Z"
+    },
+    "content:aeonfun-aeon-investigation-report": {
+      "hash": "ea458a1bf6dd4210",
+      "translated_at": "2026-08-21T10:16:44.871Z"
+    },
+    "content:aeonfun-aeon-malicious-rmrf": {
+      "hash": "7729404de2b3714c",
+      "translated_at": "2026-08-21T10:16:47.482Z"
+    },
+    "content:aeonfun-aeon-malicious-rmrf-flags": {
+      "hash": "b734234bf4eeba2b",
+      "translated_at": "2026-08-21T10:16:47.594Z"
+    },
+    "content:aeonfun-aeon-malicious-rmrf-glob": {
+      "hash": "56de5bc8ffbf473a",
+      "translated_at": "2026-08-21T10:16:49.963Z"
+    },
+    "content:aeonfun-aeon-malicious-rmrf-quoted": {
+      "hash": "583c1287259aa4b7",
+      "translated_at": "2026-08-21T10:16:50.334Z"
+    },
+    "content:aeonfun-aeon-research-digest": {
+      "hash": "b81bd7ff83da1e47",
+      "translated_at": "2026-08-21T10:17:09.120Z"
+    },
+    "content:aeonfun-aeon-social-monitor": {
+      "hash": "485a54b7e9f83a4c",
+      "translated_at": "2026-08-21T10:17:20.163Z"
+    },
+    "content:hoangnguyen0403-agent-skills-standard-best-practices": {
+      "hash": "990a75fe88c66945",
+      "translated_at": "2026-08-21T10:24:20.067Z"
+    },
+    "content:hoangnguyen0403-agent-skills-standard-caveman": {
+      "hash": "f9c83a2b20fc3b35",
+      "translated_at": "2026-08-21T10:24:50.391Z"
+    },
+    "content:hoangnguyen0403-agent-skills-standard-caveman-commit": {
+      "hash": "9ea361c8617aaabb",
+      "translated_at": "2026-08-21T10:25:07.960Z"
+    },
+    "content:hoangnguyen0403-agent-skills-standard-caveman-compress": {
+      "hash": "1c7997b306c23a34",
+      "translated_at": "2026-08-21T10:25:39.939Z"
+    },
+    "content:hoangnguyen0403-agent-skills-standard-caveman-review": {
+      "hash": "9ef09065f26b9781",
+      "translated_at": "2026-08-21T10:25:56.168Z"
+    },
+    "content:hoangnguyen0403-agent-skills-standard-common-best-practices": {
+      "hash": "e714c24b066e1169",
+      "translated_at": "2026-08-21T10:26:05.803Z"
+    },
+    "content:hoangnguyen0403-agent-skills-standard-common-business-requirements": {
+      "hash": "03326df634c7270c",
+      "translated_at": "2026-08-21T10:26:19.687Z"
+    },
+    "content:hoangnguyen0403-agent-skills-standard-common-code-review": {
+      "hash": "3bf1d28ca94db148",
+      "translated_at": "2026-08-21T10:26:37.538Z"
+    },
+    "content:hoangnguyen0403-agent-skills-standard-common-context-optimization": {
+      "hash": "0c292b0274a1068e",
+      "translated_at": "2026-08-21T10:26:53.500Z"
+    },
+    "content:hoangnguyen0403-agent-skills-standard-common-dast-tooling": {
+      "hash": "b04824a5bb2d02dd",
+      "translated_at": "2026-08-21T10:27:18.514Z"
+    },
+    "content:hoangnguyen0403-agent-skills-standard-common-debugging": {
+      "hash": "9701906d15c35214",
+      "translated_at": "2026-08-21T10:27:34.258Z"
+    },
+    "content:hoangnguyen0403-agent-skills-standard-common-documentation": {
+      "hash": "6776809cdf947de0",
+      "translated_at": "2026-08-21T10:27:49.393Z"
+    },
+    "content:hoangnguyen0403-agent-skills-standard-common-exploit-verification": {
+      "hash": "39e9fa1756d8d7f1",
+      "translated_at": "2026-08-21T10:28:06.682Z"
+    },
+    "content:hoangnguyen0403-agent-skills-standard-common-feedback-reporter": {
+      "hash": "62bc5913c92f3b42",
+      "translated_at": "2026-08-21T10:28:32.483Z"
     }
   }
 }

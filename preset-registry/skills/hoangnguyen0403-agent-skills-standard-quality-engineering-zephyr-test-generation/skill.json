@@ -1,0 +1,26 @@
+{
+  "id": "hoangnguyen0403-agent-skills-standard-quality-engineering-zephyr-test-generation",
+  "name": "quality-engineering-zephyr-test-generation",
+  "description": "Generate Zephyr test cases from Jira stories: parse acceptance criteria and business rules, impact-analyze existing TCs (update vs. create new), and draft correctly named test cases. Use for AC-to-test generation; defer post-generation Jira linking and manual test-case quality review.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "HoangNguyen0403",
+  "install_path": ".claude/skills/quality-engineering-zephyr-test-generation/SKILL.md",
+  "source": {
+    "repo": "HoangNguyen0403/agent-skills-standard",
+    "url": "https://github.com/HoangNguyen0403/agent-skills-standard/blob/develop/.agents/skills/quality-engineering/quality-engineering-zephyr-test-generation/SKILL.md",
+    "path": ".agents/skills/quality-engineering/quality-engineering-zephyr-test-generation/SKILL.md",
+    "branch": "develop",
+    "discovered_at": "2026-08-21T10:04:56.322Z",
+    "stars": 545,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-21T09:05:08Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "从 Jira 故事的验收标准和业务规则自动生成 Zephyr 测试用例，并判断应更新现有用例还是新建。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "hoangnguyen0403-agent-skills-standard-quality-engineering-business-analysis",
+  "name": "quality-engineering-business-analysis",
+  "description": "Investigate requirements via atomic AC decomposition, actor/permission matrices, and truth-table edge cases; enforce User Story standards (scope fences, platform tags, toggles). Use when writing/reviewing Stories or AC with multi-condition logic, feature toggles, or market variants (VN/MY/SG).",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "HoangNguyen0403",
+  "install_path": ".claude/skills/quality-engineering-business-analysis/SKILL.md",
+  "source": {
+    "repo": "HoangNguyen0403/agent-skills-standard",
+    "url": "https://github.com/HoangNguyen0403/agent-skills-standard/blob/develop/.agents/skills/quality-engineering/quality-engineering-business-analysis/SKILL.md",
+    "path": ".agents/skills/quality-engineering/quality-engineering-business-analysis/SKILL.md",
+    "branch": "develop",
+    "discovered_at": "2026-08-21T10:04:55.586Z",
+    "stars": 545,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-21T09:05:08Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "一套面向质量工程的需求分析方法，用于拆解验收标准、梳理角色权限和复杂逻辑，适合评审含功能开关或多市场差异的用户故事。"
+}

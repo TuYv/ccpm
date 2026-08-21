@@ -1,0 +1,26 @@
+{
+  "id": "hoangnguyen0403-agent-skills-standard-common-security-audit",
+  "name": "common-security-audit",
+  "description": "Probe for hardcoded secrets, injection surfaces, unguarded routes, business logic flaws, and platform-specific weaknesses across backend (Node, Go, Java, Python, Rust), frontend (React, Angular, Vue), and mobile (iOS, Android, Flutter) codebases. Use when performing security audits, vulnerability scans, secrets detection, or penetration testing.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "HoangNguyen0403",
+  "install_path": ".claude/skills/common-security-audit/SKILL.md",
+  "source": {
+    "repo": "HoangNguyen0403/agent-skills-standard",
+    "url": "https://github.com/HoangNguyen0403/agent-skills-standard/blob/develop/.agents/skills/common/common-security-audit/SKILL.md",
+    "path": ".agents/skills/common/common-security-audit/SKILL.md",
+    "branch": "develop",
+    "discovered_at": "2026-08-21T10:04:53.297Z",
+    "stars": 545,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-21T09:05:08Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "一款面向后端、前端和移动端代码的安全审计工具，适合排查硬编码密钥、注入风险、未授权路由及业务逻辑漏洞。"
+}

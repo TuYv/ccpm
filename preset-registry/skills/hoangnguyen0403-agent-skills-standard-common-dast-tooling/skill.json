@@ -1,0 +1,26 @@
+{
+  "id": "hoangnguyen0403-agent-skills-standard-common-dast-tooling",
+  "name": "common-dast-tooling",
+  "description": "Standardize dynamic application security testing for backend APIs, frontend web apps, and mobile clients. Covers ZAP, Nuclei, Nikto, sqlmap, ffuf, browser automation, mobile proxy interception, and AI-driven curl probes. Use when advising on or running dynamic security scans on local/staging environments.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "HoangNguyen0403",
+  "install_path": ".claude/skills/common-dast-tooling/SKILL.md",
+  "source": {
+    "repo": "HoangNguyen0403/agent-skills-standard",
+    "url": "https://github.com/HoangNguyen0403/agent-skills-standard/blob/develop/.claude/skills/common/common-dast-tooling/SKILL.md",
+    "path": ".claude/skills/common/common-dast-tooling/SKILL.md",
+    "branch": "develop",
+    "discovered_at": "2026-08-21T10:04:57.588Z",
+    "stars": 545,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-21T09:05:08Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "一套统一的动态应用安全测试工具链，适合在本地或预发布环境扫描后端接口、网页和移动端的安全漏洞。"
+}
