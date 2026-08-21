@@ -1,0 +1,26 @@
+{
+  "id": "google-skills-gke-upgrades",
+  "name": "gke-upgrades",
+  "description": ">- Plans, executes, and validates Google Kubernetes Engine (GKE) cluster upgrades and maintenance operations for both Standard and Autopilot clusters. Produces upgrade plans, pre/post-upgrade checklists, maintenance runbooks with gcloud commands, release channel strategy, and troubleshooting guides. Handles node pool upgrade strategies (surge, blue-green), version compatibility, PDB management, and workload-specific concerns (stateful, GPU, operators). Use this skill whenever the user mentions G",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/gke-upgrades/SKILL.md",
+  "source": {
+    "repo": "google/skills",
+    "url": "https://github.com/google/skills/blob/main/plugins/cloud/google-cloud-gke/skills/gke-upgrades/SKILL.md",
+    "path": "plugins/cloud/google-cloud-gke/skills/gke-upgrades/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-21T22:06:50.644Z",
+    "stars": 18587,
+    "language": "Python",
+    "pushed_at": "2026-08-21T20:38:11Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "用于规划、执行和验证 GKE 集群升级与维护，适合制定升级策略、生成操作手册并排查兼容性及工作负载问题。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "google-skills-gke-inference",
+  "name": "gke-inference",
+  "description": ">- Deploys and optimizes AI/ML inference workloads on GKE, using GPUs, TPUs, and model servers. Use when deploying GKE inference servers, configuring GKE GPU resources for inference, or deploying LLMs on GKE. Don't use for generic batch jobs or HPC task queues (use gke-batch-hpc instead).",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/gke-inference/SKILL.md",
+  "source": {
+    "repo": "google/skills",
+    "url": "https://github.com/google/skills/blob/main/plugins/cloud/google-cloud-gke/skills/gke-inference/SKILL.md",
+    "path": "plugins/cloud/google-cloud-gke/skills/gke-inference/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-21T22:06:49.044Z",
+    "stars": 18587,
+    "language": "Python",
+    "pushed_at": "2026-08-21T20:38:11Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "用于在 GKE 上部署和优化 AI 推理服务，适合配置 GPU、TPU 资源及运行大语言模型。"
+}

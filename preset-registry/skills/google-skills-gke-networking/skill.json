@@ -1,0 +1,26 @@
+{
+  "id": "google-skills-gke-networking",
+  "name": "gke-networking",
+  "description": ">- Plans, configures, and manages core GKE cluster networking. Covers private clusters, VPC-native configurations, DNS, node egress, Dataplane V2, and IP planning. Use when designing GKE networking layouts, configuring private clusters, setting up Dataplane V2, planning GKE IP ranges, or managing VPC- native cluster modes. Don't use for application ingress, load balancing, or service networking (use gke-service-networking instead).",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/gke-networking/SKILL.md",
+  "source": {
+    "repo": "google/skills",
+    "url": "https://github.com/google/skills/blob/main/plugins/cloud/google-cloud-gke/skills/gke-networking/SKILL.md",
+    "path": "plugins/cloud/google-cloud-gke/skills/gke-networking/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-21T22:06:49.542Z",
+    "stars": 18587,
+    "language": "Python",
+    "pushed_at": "2026-08-21T20:38:11Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "用于规划、配置和管理 GKE 集群核心网络，适合私有集群、VPC 原生模式、DNS、节点出口及 IP 地址规划等场景。"
+}

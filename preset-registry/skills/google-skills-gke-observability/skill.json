@@ -1,0 +1,26 @@
+{
+  "id": "google-skills-gke-observability",
+  "name": "gke-observability",
+  "description": ">- Configures GKE observability, including Cloud Logging, Cloud Monitoring, and managed Prometheus. Use when configuring GKE monitoring, setting up GKE logging, or configuring Prometheus metrics collection. Don't use to configure local application logging frameworks or external APMs outside GKE.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/gke-observability/SKILL.md",
+  "source": {
+    "repo": "google/skills",
+    "url": "https://github.com/google/skills/blob/main/plugins/cloud/google-cloud-gke/skills/gke-observability/SKILL.md",
+    "path": "plugins/cloud/google-cloud-gke/skills/gke-observability/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-21T22:06:49.743Z",
+    "stars": 18587,
+    "language": "Python",
+    "pushed_at": "2026-08-21T20:38:11Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "用于配置 GKE 可观测性的工具，可快速接入云日志、云监控和托管 Prometheus，适合搭建集群监控与指标采集。"
+}

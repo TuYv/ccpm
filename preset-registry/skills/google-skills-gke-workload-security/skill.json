@@ -1,0 +1,26 @@
+{
+  "id": "google-skills-gke-workload-security",
+  "name": "gke-workload-security",
+  "description": ">- Audits, configures, and hardens workload-level security controls for Google Kubernetes Engine (GKE) applications and namespaces. Covers running cluster security audits (`audit_cluster.sh`), configuring Workload Identity Federation (impersonation, KSA/GSA binding, and pod setup), enforcing Network Policies (default-deny and Dataplane V2 logging), isolating high-risk pods inside GKE Sandbox (`gVisor`), enforcing Pod Security Standards (`restricted` labeling), and mounting Secret Manager secrets",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/gke-workload-security/SKILL.md",
+  "source": {
+    "repo": "google/skills",
+    "url": "https://github.com/google/skills/blob/main/plugins/cloud/google-cloud-gke/skills/gke-workload-security/SKILL.md",
+    "path": "plugins/cloud/google-cloud-gke/skills/gke-workload-security/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-21T22:06:50.962Z",
+    "stars": 18587,
+    "language": "Python",
+    "pushed_at": "2026-08-21T20:38:11Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "用于审计并加固 GKE 应用与命名空间的工作负载安全，适合统一落实身份、网络隔离、Pod 安全和密钥管理。"
+}

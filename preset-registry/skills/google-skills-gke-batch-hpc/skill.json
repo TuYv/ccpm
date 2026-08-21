@@ -13,13 +13,13 @@
   "install_path": ".claude/skills/gke-batch-hpc/SKILL.md",
   "source": {
     "repo": "google/skills",
-    "url": "https://github.com/google/skills/blob/main/skills/cloud/gke-batch-hpc/SKILL.md",
-    "path": "skills/cloud/gke-batch-hpc/SKILL.md",
+    "url": "https://github.com/google/skills/blob/main/plugins/cloud/google-cloud-gke/skills/gke-batch-hpc/SKILL.md",
+    "path": "plugins/cloud/google-cloud-gke/skills/gke-batch-hpc/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-21T18:15:30.109Z",
-    "stars": 18583,
+    "discovered_at": "2026-08-21T22:06:47.914Z",
+    "stars": 18587,
     "language": "Python",
-    "pushed_at": "2026-08-21T17:50:21Z",
+    "pushed_at": "2026-08-21T20:38:11Z",
     "license": "Apache-2.0"
   },
   "summary_zh": "用于在 GKE 上通过任务队列和并行计算运行批处理及高性能计算任务，适合搭建作业调度场景。"

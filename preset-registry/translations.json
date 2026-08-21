@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-21T21:42:38.544Z",
+  "updated_at": "2026-08-21T23:36:25.738Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -28253,9 +28253,9 @@
       "translated_at": "2026-08-12T23:15:02.118Z"
     },
     "bundle:google-skills": {
-      "hash": "f5430bc1659c3d11",
-      "summary_zh": "面向 Google Cloud AI 智能体开发与运维，覆盖迁移、部署、推理、评测、监控和资源治理，组合成一套端到端自动化工作流。",
-      "translated_at": "2026-08-21T21:14:18.283Z"
+      "hash": "9e7ee7e73f018046",
+      "summary_zh": "面向 Google Cloud 智能体全生命周期的一站式技能集，覆盖开发、部署、评测、运维与治理，帮助团队高效搭建可靠的企业级 AI 应用。",
+      "translated_at": "2026-08-21T23:08:44.862Z"
     },
     "skill:chrisbanes-skills-compose-performance": {
       "hash": "a79df9a1015c4e14",
@@ -39629,16 +39629,16 @@
       "translated_at": "2026-08-16T22:26:01.576Z"
     },
     "content:google-skills-gke-cost-analysis": {
-      "hash": "0c7f585ff39ea2cb",
-      "translated_at": "2026-08-16T22:26:47.347Z"
+      "hash": "0da1e702137b12d2",
+      "translated_at": "2026-08-21T23:23:13.650Z"
     },
     "content:google-skills-google-ads-api-account-diagnostics": {
       "hash": "6be64f0707e73c1a",
       "translated_at": "2026-08-16T22:27:35.912Z"
     },
     "content:google-skills-gke-compute-classes": {
-      "hash": "229307c017b3b58d",
-      "translated_at": "2026-08-16T22:27:47.892Z"
+      "hash": "596269e99808f5c3",
+      "translated_at": "2026-08-21T23:22:41.019Z"
     },
     "content:google-skills-google-ads-api-quickstart": {
       "hash": "54f4e4eac588e94c",
@@ -46771,6 +46771,177 @@
     "content:neolabhq-context-engineering-kit-agent-evaluation": {
       "hash": "681e456d00509f1d",
       "translated_at": "2026-08-21T21:42:38.544Z"
+    },
+    "skill:google-skills-gke-ai-troubleshooting-tpu-dynamic-slices-monitoring": {
+      "hash": "2c9ed2f9e7f983f7",
+      "summary_zh": "用于监控和排查 GKE TPU 动态切片，适合处理生命周期异常、供应失败、工作负载校验及终结器卡死等问题。",
+      "translated_at": "2026-08-21T23:08:47.925Z"
+    },
+    "skill:google-skills-gke-cost-optimization": {
+      "hash": "d484473303cf47ce",
+      "summary_zh": "用于优化 GKE 集群与工作负载成本，可调整资源规格，并配置 Spot 虚拟机、用量折扣、成本分摊和资源配额。",
+      "translated_at": "2026-08-21T23:08:48.073Z"
+    },
+    "skill:google-skills-gke-ai-troubleshooting-tpu-metrics-monitoring": {
+      "hash": "f7bbd08f480a010d",
+      "summary_zh": "基于 GKE 系统指标和 PromQL 的 TPU 监控排障方案，适合分析利用率、内存、节点可用性及中断恢复情况。",
+      "translated_at": "2026-08-21T23:08:49.507Z"
+    },
+    "skill:google-skills-gke-golden-path": {
+      "hash": "71c120163945cddd",
+      "summary_zh": "提供 GKE 集群推荐配置、默认模式和生产就绪检查，适合用于集群设计、上线评估及配置合规核验。",
+      "translated_at": "2026-08-21T23:08:51.206Z"
+    },
+    "skill:google-skills-gke-inference": {
+      "hash": "252d6e32cfe31f2f",
+      "summary_zh": "用于在 GKE 上部署和优化 AI 推理服务，适合配置 GPU、TPU 资源及运行大语言模型。",
+      "translated_at": "2026-08-21T23:08:51.663Z"
+    },
+    "skill:google-skills-gke-manifest-generation": {
+      "hash": "8def0c0c8bdebd99",
+      "summary_zh": "用于生成和更新适配 GKE 的安全生产级 Kubernetes 清单，适合常规部署、网关配置及 AI 模型推理场景。",
+      "translated_at": "2026-08-21T23:08:53.530Z"
+    },
+    "skill:google-skills-gke-multitenancy": {
+      "hash": "15ee7a594c27afb9",
+      "summary_zh": "用于规划和配置 GKE 多租户环境，适合实现团队权限、资源、网络隔离及成本分摊。",
+      "translated_at": "2026-08-21T23:08:53.852Z"
+    },
+    "skill:google-skills-gke-networking": {
+      "hash": "5f7856694bcd8b12",
+      "summary_zh": "用于规划、配置和管理 GKE 集群核心网络，适合私有集群、VPC 原生模式、DNS、节点出口及 IP 地址规划等场景。",
+      "translated_at": "2026-08-21T23:08:54.176Z"
+    },
+    "skill:google-skills-gke-observability": {
+      "hash": "fe664163c6064a7f",
+      "summary_zh": "用于配置 GKE 可观测性的工具，可快速接入云日志、云监控和托管 Prometheus，适合搭建集群监控与指标采集。",
+      "translated_at": "2026-08-21T23:08:57.440Z"
+    },
+    "skill:google-skills-gke-productionize": {
+      "hash": "9021be1188979ba4",
+      "summary_zh": "一套 GKE 上线前生产就绪评审工具，帮助全面审计集群与工作负载，发现稳定性、安全性和成本等风险。",
+      "translated_at": "2026-08-21T23:08:58.306Z"
+    },
+    "skill:google-skills-gke-platform-security": {
+      "hash": "a9572f8f215ad625",
+      "summary_zh": "一套用于规划和加固 GKE 集群平台安全的方案，适合强化控制面、权限管理、节点隔离和跨服务身份认证。",
+      "translated_at": "2026-08-21T23:08:59.125Z"
+    },
+    "skill:google-skills-gke-reliability": {
+      "hash": "80a7918cd17f385f",
+      "summary_zh": "用于提升 GKE 工作负载可靠性的配置指南，适合设置 PDB、健康探针和拓扑分布约束。",
+      "translated_at": "2026-08-21T23:09:00.586Z"
+    },
+    "skill:google-skills-gke-service-networking": {
+      "hash": "10ad189bab3042fb",
+      "summary_zh": "用于配置 GKE 边缘网络、流量路由、负载均衡和私有服务端点，适合管理网关、Ingress、WAF、NEG、PSC 及 SSL 证书。",
+      "translated_at": "2026-08-21T23:09:02.418Z"
+    },
+    "skill:google-skills-gke-workload-scaling": {
+      "hash": "137cd5dee93bc8ea",
+      "summary_zh": "用于管理 GKE 工作负载的水平与垂直自动伸缩，适合配置 HPA、VPA 及优化 Pod 扩缩容策略。",
+      "translated_at": "2026-08-21T23:09:05.087Z"
+    },
+    "skill:google-skills-gke-upgrades": {
+      "hash": "a26a9ebaa33cd878",
+      "summary_zh": "用于规划、执行和验证 GKE 集群升级与维护，适合制定升级策略、生成操作手册并排查兼容性及工作负载问题。",
+      "translated_at": "2026-08-21T23:09:05.369Z"
+    },
+    "skill:google-skills-gke-storage": {
+      "hash": "0145f406b02353d4",
+      "summary_zh": "用于管理 GKE 存储资源，适合配置持久卷、创建 PVC，以及在集群中接入 Filestore 或 GCS FUSE。",
+      "translated_at": "2026-08-21T23:09:05.833Z"
+    },
+    "skill:google-skills-gke-workload-troubleshooting": {
+      "hash": "7f3b6fc7b5a644c8",
+      "summary_zh": "用于诊断 GKE 工作负载启动失败、反复崩溃等问题，通过日志和事件定位 Pod 异常原因。",
+      "translated_at": "2026-08-21T23:09:07.790Z"
+    },
+    "skill:google-skills-google-agents-cli-onboarding": {
+      "hash": "ecb514e91883c3ae",
+      "summary_zh": "面向 Agent Platform 的智能体开发入口，适合使用 ADK 完成创建、调试、测试、部署、发布和监控全流程。",
+      "translated_at": "2026-08-21T23:09:08.632Z"
+    },
+    "skill:google-skills-gke-workload-security": {
+      "hash": "640648019bd044f6",
+      "summary_zh": "用于审计并加固 GKE 应用与命名空间的工作负载安全，适合统一落实身份、网络隔离、Pod 安全和密钥管理。",
+      "translated_at": "2026-08-21T23:09:09.094Z"
+    },
+    "content:google-skills-gke-ai-troubleshooting-tpu-dynamic-slices-monitoring": {
+      "hash": "ab0e95d89f6bc690",
+      "translated_at": "2026-08-21T23:19:50.048Z"
+    },
+    "content:google-skills-gke-ai-troubleshooting-tpu-metrics-monitoring": {
+      "hash": "c34be31a0069964e",
+      "translated_at": "2026-08-21T23:20:34.671Z"
+    },
+    "content:google-skills-gke-cost-optimization": {
+      "hash": "8d18022662d0e23f",
+      "translated_at": "2026-08-21T23:24:03.946Z"
+    },
+    "content:google-skills-gke-golden-path": {
+      "hash": "cde697d895551233",
+      "translated_at": "2026-08-21T23:24:34.429Z"
+    },
+    "content:google-skills-gke-inference": {
+      "hash": "050cda071d12fba3",
+      "translated_at": "2026-08-21T23:25:18.420Z"
+    },
+    "content:google-skills-gke-manifest-generation": {
+      "hash": "315636d307489f03",
+      "translated_at": "2026-08-21T23:26:32.047Z"
+    },
+    "content:google-skills-gke-multitenancy": {
+      "hash": "7f868beb75f778f2",
+      "translated_at": "2026-08-21T23:27:04.184Z"
+    },
+    "content:google-skills-gke-networking": {
+      "hash": "5e8361041f5c3bbd",
+      "translated_at": "2026-08-21T23:27:38.082Z"
+    },
+    "content:google-skills-gke-observability": {
+      "hash": "fd8db14c417d0d39",
+      "translated_at": "2026-08-21T23:28:52.417Z"
+    },
+    "content:google-skills-gke-platform-security": {
+      "hash": "45373badf6116a00",
+      "translated_at": "2026-08-21T23:29:43.866Z"
+    },
+    "content:google-skills-gke-productionize": {
+      "hash": "1090ccdfcd61d5a4",
+      "translated_at": "2026-08-21T23:30:12.974Z"
+    },
+    "content:google-skills-gke-reliability": {
+      "hash": "1c300cb14a2431a0",
+      "translated_at": "2026-08-21T23:30:22.643Z"
+    },
+    "content:google-skills-gke-storage": {
+      "hash": "aa0b9e7f6dfa831e",
+      "translated_at": "2026-08-21T23:30:51.764Z"
+    },
+    "content:google-skills-gke-service-networking": {
+      "hash": "faa379de2963a549",
+      "translated_at": "2026-08-21T23:31:01.999Z"
+    },
+    "content:google-skills-gke-workload-scaling": {
+      "hash": "cca5bf26a2d77628",
+      "translated_at": "2026-08-21T23:31:33.307Z"
+    },
+    "content:google-skills-gke-workload-security": {
+      "hash": "95054149f3b23dce",
+      "translated_at": "2026-08-21T23:32:12.540Z"
+    },
+    "content:google-skills-gke-upgrades": {
+      "hash": "0b84d23c065c704d",
+      "translated_at": "2026-08-21T23:32:49.735Z"
+    },
+    "content:google-skills-gke-workload-troubleshooting": {
+      "hash": "7d3d070a9450e6e8",
+      "translated_at": "2026-08-21T23:33:12.618Z"
+    },
+    "content:google-skills-google-agents-cli-onboarding": {
+      "hash": "fd48e52bd47e3b11",
+      "translated_at": "2026-08-21T23:33:14.171Z"
     }
   }
 }

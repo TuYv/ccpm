@@ -1,0 +1,26 @@
+{
+  "id": "google-skills-gke-ai-troubleshooting-tpu-metrics-monitoring",
+  "name": "gke-ai-troubleshooting-tpu-metrics-monitoring",
+  "description": ">- Monitors and troubleshoots GKE TPU workloads, nodes, and node pools using GKE system metrics and PromQL. Use when monitoring TensorCore duty cycle, TPU memory, node readiness, multi-host TPU node pool availability, host maintenance or preemption interruptions, and calculating MTTR or MTBI metrics for GKE TPUs. Don't use for general non-TPU GKE workload monitoring or non-metric TPU debugging.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/gke-ai-troubleshooting-tpu-metrics-monitoring/SKILL.md",
+  "source": {
+    "repo": "google/skills",
+    "url": "https://github.com/google/skills/blob/main/plugins/cloud/google-cloud-gke/skills/gke-ai-troubleshooting-tpu-metrics-monitoring/SKILL.md",
+    "path": "plugins/cloud/google-cloud-gke/skills/gke-ai-troubleshooting-tpu-metrics-monitoring/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-21T22:06:47.122Z",
+    "stars": 18587,
+    "language": "Python",
+    "pushed_at": "2026-08-21T20:38:11Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "基于 GKE 系统指标和 PromQL 的 TPU 监控排障方案，适合分析利用率、内存、节点可用性及中断恢复情况。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "google-skills-gke-cost-optimization",
+  "name": "gke-cost-optimization",
+  "description": ">- Optimizes GKE costs, rightsizes workloads, and configures Spot VMs, CUDs, cost allocation, and resource quotas. Use when optimizing GKE cluster or workload costs, configuring GKE cost allocation or quotas, rightsizing CPU/memory requests, or selecting Spot VMs and machine types. Don't use for general compute class provisioning or GPU Selection (use gke-compute-classes instead).",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/gke-cost-optimization/SKILL.md",
+  "source": {
+    "repo": "google/skills",
+    "url": "https://github.com/google/skills/blob/main/plugins/cloud/google-cloud-gke/skills/gke-cost-optimization/SKILL.md",
+    "path": "plugins/cloud/google-cloud-gke/skills/gke-cost-optimization/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-21T22:06:48.680Z",
+    "stars": 18587,
+    "language": "Python",
+    "pushed_at": "2026-08-21T20:38:11Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "用于优化 GKE 集群与工作负载成本，可调整资源规格，并配置 Spot 虚拟机、用量折扣、成本分摊和资源配额。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "google-skills-gke-multitenancy",
+  "name": "gke-multitenancy",
+  "description": ">- Plans and configures multi-tenancy on GKE. Covers namespace isolation, RBAC planning for teams, resource quotas, LimitRanges, network isolation, and cost allocation. Use when designing GKE multi-tenancy, configuring GKE namespaces, setting up resource quotas, or isolating GKE teams. Don't use for single-tenant cluster configuration or general deployment instructions (use gke-basics or gke-app-onboarding instead).",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/gke-multitenancy/SKILL.md",
+  "source": {
+    "repo": "google/skills",
+    "url": "https://github.com/google/skills/blob/main/plugins/cloud/google-cloud-gke/skills/gke-multitenancy/SKILL.md",
+    "path": "plugins/cloud/google-cloud-gke/skills/gke-multitenancy/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-21T22:06:49.394Z",
+    "stars": 18587,
+    "language": "Python",
+    "pushed_at": "2026-08-21T20:38:11Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "用于规划和配置 GKE 多租户环境，适合实现团队权限、资源、网络隔离及成本分摊。"
+}
