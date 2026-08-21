@@ -1,0 +1,26 @@
+{
+  "id": "earthtojake-text-to-cad-dfam-check",
+  "name": "dfam-check",
+  "description": "Measure mesh files against Design for Additive Manufacturing (DfAM) rules and report printability findings per process (FDM, SLS, SLA/DLP, metal PBF, MJF). Use when the user asks whether a part is printable, wants overhang/wall-thickness/support analysis of an `.stl`, `.obj`, `.ply`, or `.3mf` mesh, wants a build-orientation recommendation, or wants DfAM redesign guidance before slicing with `$gcode` or regenerating geometry with `$cad`.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "earthtojake",
+  "install_path": ".claude/skills/dfam-check/SKILL.md",
+  "source": {
+    "repo": "earthtojake/text-to-cad",
+    "url": "https://github.com/earthtojake/text-to-cad/blob/main/skills/dfam-check/SKILL.md",
+    "path": "skills/dfam-check/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-21T04:08:17.295Z",
+    "stars": 13729,
+    "language": "Python",
+    "pushed_at": "2026-08-21T03:09:30Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一款按不同增材制造工艺规则检测网格模型可打印性的工具，可在切片前分析悬垂、壁厚、支撑和成型方向并给出改型建议。"
+}
