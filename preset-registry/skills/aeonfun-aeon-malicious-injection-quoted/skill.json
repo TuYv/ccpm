@@ -1,0 +1,26 @@
+{
+  "id": "aeonfun-aeon-malicious-injection-quoted",
+  "name": "Malicious Injection Quoted",
+  "description": "The most autonomous AI agent framework: runs unattended on GitHub Actions, self-healing skills, drives Claude Code, Grok, Codex & more. No approval loops. Configure once, forget forever.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "aeonfun",
+  "install_path": ".claude/skills/malicious-injection-quoted/SKILL.md",
+  "source": {
+    "repo": "aeonfun/aeon",
+    "url": "https://github.com/aeonfun/aeon/blob/main/scripts/tests/skill-scan-fixtures/malicious-injection-quoted/SKILL.md",
+    "path": "scripts/tests/skill-scan-fixtures/malicious-injection-quoted/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-21T08:09:37.855Z",
+    "stars": 677,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-21T01:55:34Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一套可在 GitHub Actions 中无人值守运行的自治 AI 智能体框架，适合持续自动完成开发与维护任务。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "aeonfun-aeon-digest",
+  "name": "digest",
+  "description": "Generate and send a digest on a configurable topic, optionally pulling RSS/Atom feeds as an input source alongside web + X signal",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "aeonfun",
+  "install_path": ".claude/skills/digest/SKILL.md",
+  "source": {
+    "repo": "aeonfun/aeon",
+    "url": "https://github.com/aeonfun/aeon/blob/main/skills/digest/SKILL.md",
+    "path": "skills/digest/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-21T08:09:40.756Z",
+    "stars": 677,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-21T01:55:34Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一款按自定义主题汇总 RSS、网页和 X 动态并定期生成推送简报的工具，适合信息追踪与内容监测。"
+}

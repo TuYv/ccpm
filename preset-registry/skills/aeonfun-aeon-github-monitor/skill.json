@@ -1,0 +1,26 @@
+{
+  "id": "aeonfun-aeon-github-monitor",
+  "name": "github-monitor",
+  "description": "Watch your GitHub repos across four views - a combined urgency monitor (stale PRs, new issues, releases), a new-issue triage queue, a release upgrade digest, or your own opened-PR tracker.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "aeonfun",
+  "install_path": ".claude/skills/github-monitor/SKILL.md",
+  "source": {
+    "repo": "aeonfun/aeon",
+    "url": "https://github.com/aeonfun/aeon/blob/main/skills/github-monitor/SKILL.md",
+    "path": "skills/github-monitor/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-21T08:09:41.738Z",
+    "stars": 677,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-21T01:55:34Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一款 GitHub 仓库监控工具，集中跟踪待处理 PR、新问题和版本发布，适合日常维护与升级管理。"
+}

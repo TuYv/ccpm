@@ -1,0 +1,26 @@
+{
+  "id": "aeonfun-aeon-feature",
+  "name": "feature",
+  "description": "Build, enhance, or revive GitHub repos - ship one feature PR per watched repo (watched), make the best single enhancement on one external repo (external), or revive the top dormant repo (dormant).",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "aeonfun",
+  "install_path": ".claude/skills/feature/SKILL.md",
+  "source": {
+    "repo": "aeonfun/aeon",
+    "url": "https://github.com/aeonfun/aeon/blob/main/skills/feature/SKILL.md",
+    "path": "skills/feature/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-21T08:09:41.097Z",
+    "stars": 677,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-21T01:55:34Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一个自动改进 GitHub 仓库的工具，可提交功能 PR、优化外部项目，或挑选并复活长期停更的仓库。"
+}

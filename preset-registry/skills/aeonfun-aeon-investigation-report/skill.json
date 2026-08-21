@@ -1,0 +1,26 @@
+{
+  "id": "aeonfun-aeon-investigation-report",
+  "name": "investigation-report",
+  "description": "One-shot Base-token investigation - runs any subset of six onchain-security checks (rug-scan, contract-audit, deployer-trace, holder-concentration, honeypot, lp-lock) into one verdict. Keyless core.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "aeonfun",
+  "install_path": ".claude/skills/investigation-report/SKILL.md",
+  "source": {
+    "repo": "aeonfun/aeon",
+    "url": "https://github.com/aeonfun/aeon/blob/main/skills/investigation-report/SKILL.md",
+    "path": "skills/investigation-report/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-21T08:09:42.998Z",
+    "stars": 677,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-21T01:55:34Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一站式链上代币安全调查工具，整合跑路、合约、部署者、持仓、蜜罐和流动性锁定检查，快速给出风险结论。"
+}

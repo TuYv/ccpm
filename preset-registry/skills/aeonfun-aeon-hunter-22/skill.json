@@ -1,0 +1,26 @@
+{
+  "id": "aeonfun-aeon-hunter-22",
+  "name": "hunter-22",
+  "description": "Scan the ClawHunter agent bounty marketplace for opportunities that genuinely match this agent's real capabilities (code, security research, writing) and surface only real matches — never a raw unfiltered dump. When a match is real audit-shaped work with a linked GitHub repo, the notification carries a one-tap button to dispatch vuln-scanner at it directly.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "aeonfun",
+  "install_path": ".claude/skills/hunter-22/SKILL.md",
+  "source": {
+    "repo": "aeonfun/aeon",
+    "url": "https://github.com/aeonfun/aeon/blob/main/skills/hunter-22/SKILL.md",
+    "path": "skills/hunter-22/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-21T08:09:42.382Z",
+    "stars": 677,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-21T01:55:34Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一个智能悬赏筛选工具，专挑符合代码、安全研究和写作能力的真实任务，并支持一键扫描关联仓库的漏洞。"
+}

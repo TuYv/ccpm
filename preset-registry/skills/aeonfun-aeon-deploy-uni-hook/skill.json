@@ -1,0 +1,26 @@
+{
+  "id": "aeonfun-aeon-deploy-uni-hook",
+  "name": "deploy-uni-hook",
+  "description": "Generate, simulate, audit, and deploy a Uniswap v4 hook + test pool from a brief, on any Uniswap v4 chain (every testnet and mainnet) - pre-audited templates or a from-scratch freeform hook (flags auto-derived; static audit + dangerous-pattern scan + a behavioral forge test + fork sim gate the deploy). Dry-run by default; explicit arm: to broadcast; testnet default, mainnet behind a double opt-in; records the deploy to main.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "aeonfun",
+  "install_path": ".claude/skills/deploy-uni-hook/SKILL.md",
+  "source": {
+    "repo": "aeonfun/aeon",
+    "url": "https://github.com/aeonfun/aeon/blob/main/skills/deploy-uni-hook/SKILL.md",
+    "path": "skills/deploy-uni-hook/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-21T08:09:40.652Z",
+    "stars": 677,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-21T01:55:34Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一款用于生成、模拟、审计并部署 Uniswap v4 Hook 和测试池的工具，适合多链上线前完成风险扫描与验证。"
+}

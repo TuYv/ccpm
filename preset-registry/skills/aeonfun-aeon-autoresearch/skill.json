@@ -1,0 +1,26 @@
+{
+  "id": "aeonfun-aeon-autoresearch",
+  "name": "autoresearch",
+  "description": "Evolve a skill by generating variations, evaluating them, and updating the best version",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "aeonfun",
+  "install_path": ".claude/skills/autoresearch/SKILL.md",
+  "source": {
+    "repo": "aeonfun/aeon",
+    "url": "https://github.com/aeonfun/aeon/blob/main/skills/autoresearch/SKILL.md",
+    "path": "skills/autoresearch/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-21T08:09:39.667Z",
+    "stars": 677,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-21T01:55:34Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一个自动迭代优化技能的工具，通过生成并评估不同方案，持续保留最佳版本，适合自主试验与能力演进场景。"
+}

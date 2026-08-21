@@ -1,0 +1,26 @@
+{
+  "id": "aeonfun-aeon-crypto-tracker",
+  "name": "[REPLACE: SKILL_NAME]",
+  "description": "Price and volume tracker for [REPLACE: TOKEN_SYMBOL] with anomaly alerts above [REPLACE: ALERT_THRESHOLD_PCT]% movement",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "aeonfun",
+  "install_path": ".claude/skills/crypto-tracker/SKILL.md",
+  "source": {
+    "repo": "aeonfun/aeon",
+    "url": "https://github.com/aeonfun/aeon/blob/main/docs/examples/skill-templates/crypto-tracker/SKILL.md",
+    "path": "docs/examples/skill-templates/crypto-tracker/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-21T08:09:36.070Z",
+    "stars": 677,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-21T01:55:34Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于追踪 [REPLACE: TOKEN_SYMBOL] 的价格和成交量，并在波动超过 [REPLACE: ALERT_THRESHOLD_PCT]% 时发出异常提醒。"
+}

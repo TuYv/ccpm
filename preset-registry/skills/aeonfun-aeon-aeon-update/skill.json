@@ -1,0 +1,26 @@
+{
+  "id": "aeonfun-aeon-aeon-update",
+  "name": "aeon-update",
+  "description": "Pull framework updates from the upstream Aeon repo into this instance - 3-way merges canon's new commits into a PR, never clobbering operator config.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "aeonfun",
+  "install_path": ".claude/skills/aeon-update/SKILL.md",
+  "source": {
+    "repo": "aeonfun/aeon",
+    "url": "https://github.com/aeonfun/aeon/blob/main/skills/aeon-update/SKILL.md",
+    "path": "skills/aeon-update/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-21T08:09:39.139Z",
+    "stars": 677,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-21T01:55:34Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一个将上游框架更新以三方合并方式同步到当前实例并生成 PR 的工具，确保不覆盖运维配置。"
+}

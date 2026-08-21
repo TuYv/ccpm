@@ -1,0 +1,26 @@
+{
+  "id": "aeonfun-aeon-defi-overview",
+  "name": "defi-overview",
+  "description": "One-pass crypto read - tracked-protocol positions and health plus macro context, with regime take, DeFi verdict, biggest movers, yields, fees, breadth, Fear & Greed, and prediction markets.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "aeonfun",
+  "install_path": ".claude/skills/defi-overview/SKILL.md",
+  "source": {
+    "repo": "aeonfun/aeon",
+    "url": "https://github.com/aeonfun/aeon/blob/main/skills/defi-overview/SKILL.md",
+    "path": "skills/defi-overview/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-21T08:09:40.409Z",
+    "stars": 677,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-21T01:55:34Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一款一站式加密市场概览工具，汇总 DeFi 持仓健康度、收益、费用、市场情绪和宏观趋势，适合快速判断行情与风险。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "aeonfun-aeon-inbox-triage",
+  "name": "inbox-triage",
+  "description": "Daily GitHub notification inbox triage - surfaces aging vuln PR replies, security advisories, review requests, and mentions that need action",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "aeonfun",
+  "install_path": ".claude/skills/inbox-triage/SKILL.md",
+  "source": {
+    "repo": "aeonfun/aeon",
+    "url": "https://github.com/aeonfun/aeon/blob/main/skills/inbox-triage/SKILL.md",
+    "path": "skills/inbox-triage/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-21T08:09:42.732Z",
+    "stars": 677,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-21T01:55:34Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一款每日整理 GitHub 通知的工具，帮你及时发现待处理的漏洞修复回复、安全公告、评审请求和提及。"
+}

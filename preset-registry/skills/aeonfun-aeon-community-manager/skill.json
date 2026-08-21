@@ -1,0 +1,26 @@
+{
+  "id": "aeonfun-aeon-community-manager",
+  "name": "[REPLACE: SKILL_NAME]",
+  "description": "Summary of the [REPLACE: CHANNEL_PLATFORM] channel [REPLACE: CHANNEL_NAME] — top [REPLACE: TOP_N_THREADS] threads + open questions",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "aeonfun",
+  "install_path": ".claude/skills/community-manager/SKILL.md",
+  "source": {
+    "repo": "aeonfun/aeon",
+    "url": "https://github.com/aeonfun/aeon/blob/main/docs/examples/skill-templates/community-manager/SKILL.md",
+    "path": "docs/examples/skill-templates/community-manager/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-21T08:09:35.958Z",
+    "stars": 677,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-21T01:55:34Z",
+    "license": "MIT"
+  },
+  "summary_zh": "自动汇总指定频道的热门讨论和待解问题，适合快速掌握社区动态与重点话题。"
+}

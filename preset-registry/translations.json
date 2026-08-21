@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-21T07:33:39.775Z",
+  "updated_at": "2026-08-21T08:49:22.241Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -45355,6 +45355,466 @@
     "content:modu-ai-moai-adk-moai-platform-chrome-extension": {
       "hash": "9f01002e5a1058a3",
       "translated_at": "2026-08-21T07:33:39.775Z"
+    },
+    "bundle:aeonfun-aeon": {
+      "hash": "9df82b36a1fa818b",
+      "summary_zh": "一套可自由组合和持续进化的智能体技能框架，用于自动化研发、内容、运营与业务流程，并统一完成配置、诊断、更新和协作。",
+      "translated_at": "2026-08-21T08:12:09.454Z"
+    },
+    "skill:aeonfun-aeon-aeon": {
+      "hash": "f9980357cb9865b8",
+      "summary_zh": "用于搭建和管理智能代理，可将 Claude Code 中的重复任务转成可定时运行、灵活调整的自动化技能。",
+      "translated_at": "2026-08-21T08:12:13.303Z"
+    },
+    "skill:aeonfun-aeon-action-converter": {
+      "hash": "edea98dbe92e5ce8",
+      "summary_zh": "把悬而未决的事项转成5个具体可执行的现实行动，并按杠杆价值排序，适合摆脱空泛计划、快速推进任务。",
+      "translated_at": "2026-08-21T08:12:13.634Z"
+    },
+    "skill:aeonfun-aeon-aeon-doctor": {
+      "hash": "af5543ed15a01fa5",
+      "summary_zh": "静态配置正确性检查工具，能发现运行时健康检查遗漏的静默配置错误，适合提前排查实例故障。",
+      "translated_at": "2026-08-21T08:12:14.216Z"
+    },
+    "skill:aeonfun-aeon-aeon-update": {
+      "hash": "470c6f2162578773",
+      "summary_zh": "一个将上游框架更新以三方合并方式同步到当前实例并生成 PR 的工具，确保不覆盖运维配置。",
+      "translated_at": "2026-08-21T08:12:17.315Z"
+    },
+    "skill:aeonfun-aeon-auto-merge": {
+      "hash": "3439c5e9f7035ac7",
+      "summary_zh": "自动合并持续集成通过、无阻止性审查且不存在冲突的开放 PR，适合简化代码合并流程。",
+      "translated_at": "2026-08-21T08:12:18.264Z"
+    },
+    "skill:aeonfun-aeon-article": {
+      "hash": "3c1936174dba2f6a",
+      "summary_zh": "一款技术文章生成工具，可从热点、仓库趋势或特定视角产出可直接发布的长文，并按需生成头图。",
+      "translated_at": "2026-08-21T08:12:19.867Z"
+    },
+    "skill:aeonfun-aeon-auto-workflow": {
+      "hash": "e1a87208a1a204f4",
+      "summary_zh": "一个自动分析网址并生成技能启用方案与配置差异的工作流工具，还能批量启用技能并提交 PR。",
+      "translated_at": "2026-08-21T08:12:21.735Z"
+    },
+    "skill:aeonfun-aeon-autoresearch": {
+      "hash": "9ab111e94e2a640e",
+      "summary_zh": "一个自动迭代优化技能的工具，通过生成并评估不同方案，持续保留最佳版本，适合自主试验与能力演进场景。",
+      "translated_at": "2026-08-21T08:12:22.759Z"
+    },
+    "skill:aeonfun-aeon-base-mcp": {
+      "hash": "1e45f45b7707eb3c",
+      "summary_zh": "一个通过 MCP 服务器访问 Base 账户的工具，适合管理钱包资产、转账兑换、签名支付及查询交易记录。",
+      "translated_at": "2026-08-21T08:12:23.818Z"
+    },
+    "skill:aeonfun-aeon-bd-radar": {
+      "hash": "6888d4671e40a209",
+      "summary_zh": "一款面向产品矩阵的商业拓展工具，可追踪谁在使用、集成或提及你的产品，并筛出本周最值得联系的潜在客户。",
+      "translated_at": "2026-08-21T08:12:27.008Z"
+    },
+    "skill:aeonfun-aeon-benign-authcall": {
+      "hash": "1eaae95c091ac0d5",
+      "summary_zh": "一个可在 GitHub Actions 无人值守运行的自治 AI 智能体框架，适合自动驱动多种编程助手并自愈执行长期任务。",
+      "translated_at": "2026-08-21T08:12:27.506Z"
+    },
+    "skill:aeonfun-aeon-benign-cmdsub": {
+      "hash": "1eaae95c091ac0d5",
+      "summary_zh": "一款可在 GitHub Actions 中无人值守运行的 AI 智能体框架，适合自动修复任务并持续调用多种编程模型。",
+      "translated_at": "2026-08-21T08:12:28.163Z"
+    },
+    "skill:aeonfun-aeon-benign-defensive": {
+      "hash": "1eaae95c091ac0d5",
+      "summary_zh": "一个可在 GitHub Actions 中无人值守运行的自治 AI 智能体框架，适合持续执行、自动修复并推进各类开发任务。",
+      "translated_at": "2026-08-21T08:12:31.361Z"
+    },
+    "skill:aeonfun-aeon-benign-templatevar": {
+      "hash": "1eaae95c091ac0d5",
+      "summary_zh": "一个可在 GitHub Actions 无人值守运行的 AI 智能体框架，适合自动调度多种编程模型并持续完成开发任务。",
+      "translated_at": "2026-08-21T08:12:31.594Z"
+    },
+    "skill:aeonfun-aeon-changelog": {
+      "hash": "083fdef06c6cbef3",
+      "summary_zh": "根据关注仓库近期的提交和 PR 自动生成面向用户的更新日志，可写回原仓库或向文档、营销仓库发起汇总 PR。",
+      "translated_at": "2026-08-21T08:12:32.037Z"
+    },
+    "skill:aeonfun-aeon-competitor-monitor": {
+      "hash": "d9be53f4407da270",
+      "summary_zh": "定期监控竞品网页，自动对比价格、文案、页面增删等真实变化，只汇报有变动的内容。",
+      "translated_at": "2026-08-21T08:12:35.147Z"
+    },
+    "skill:aeonfun-aeon-code-reviewer": {
+      "hash": "798756db22ec9d43",
+      "summary_zh": "自动初审指定仓库中新建的 PR，给出结论、发布欢迎评论并添加标签，适合维护者快速处理贡献。",
+      "translated_at": "2026-08-21T08:12:35.633Z"
+    },
+    "skill:aeonfun-aeon-community-manager": {
+      "hash": "6e573ace8bfa36bd",
+      "summary_zh": "自动汇总指定频道的热门讨论和待解问题，适合快速掌握社区动态与重点话题。",
+      "translated_at": "2026-08-21T08:12:35.702Z"
+    },
+    "skill:aeonfun-aeon-crypto-tracker": {
+      "hash": "84756e8a3086d55b",
+      "summary_zh": "用于追踪 [REPLACE: TOKEN_SYMBOL] 的价格和成交量，并在波动超过 [REPLACE: ALERT_THRESHOLD_PCT]% 时发出异常提醒。",
+      "translated_at": "2026-08-21T08:12:39.326Z"
+    },
+    "skill:aeonfun-aeon-create-skill": {
+      "hash": "efcbaae1af9f31fb",
+      "summary_zh": "根据一句话需求自动生成完整技能，并以 PR 形式提交，适合快速扩展项目能力。",
+      "translated_at": "2026-08-21T08:12:39.509Z"
+    },
+    "skill:aeonfun-aeon-defi-overview": {
+      "hash": "f4a71e467398a700",
+      "summary_zh": "一款一站式加密市场概览工具，汇总 DeFi 持仓健康度、收益、费用、市场情绪和宏观趋势，适合快速判断行情与风险。",
+      "translated_at": "2026-08-21T08:12:40.932Z"
+    },
+    "skill:aeonfun-aeon-deploy-prototype": {
+      "hash": "8746196ccd17e30c",
+      "summary_zh": "用于快速生成轻量应用或小工具，并通过 API 自动部署到 Vercel，适合原型验证和快速上线。",
+      "translated_at": "2026-08-21T08:12:41.860Z"
+    },
+    "skill:aeonfun-aeon-deploy-uni-hook": {
+      "hash": "6fa0a9bb4b784c42",
+      "summary_zh": "一款用于生成、模拟、审计并部署 Uniswap v4 Hook 和测试池的工具，适合多链上线前完成风险扫描与验证。",
+      "translated_at": "2026-08-21T08:12:44.118Z"
+    },
+    "skill:aeonfun-aeon-digest": {
+      "hash": "520d2c9171181d49",
+      "summary_zh": "一款按自定义主题汇总 RSS、网页和 X 动态并定期生成推送简报的工具，适合信息追踪与内容监测。",
+      "translated_at": "2026-08-21T08:12:45.444Z"
+    },
+    "skill:aeonfun-aeon-deploy-watcher": {
+      "hash": "7945eb41c0a5950b",
+      "summary_zh": "用于监控指定 Vercel 项目的部署状态，并在最近指定时段出现目标情况时及时告警。",
+      "translated_at": "2026-08-21T08:12:46.872Z"
+    },
+    "skill:aeonfun-aeon-executor-mcp": {
+      "hash": "377115bb9f9b310b",
+      "summary_zh": "一个统一代理已接入工具的 MCP 服务，适合集中调用各类 API，并按工具配置放行、审批或拦截策略。",
+      "translated_at": "2026-08-21T08:12:48.810Z"
+    },
+    "skill:aeonfun-aeon-distribute-tokens": {
+      "hash": "888d9ea308b8969e",
+      "summary_zh": "一款按仓库合并 PR 排名规划分档奖励并链上发放的工具，适合安全、可重复地结算贡献者激励。",
+      "translated_at": "2026-08-21T08:12:48.873Z"
+    },
+    "skill:aeonfun-aeon-feature": {
+      "hash": "59df1280b17858a0",
+      "summary_zh": "一个自动改进 GitHub 仓库的工具，可提交功能 PR、优化外部项目，或挑选并复活长期停更的仓库。",
+      "translated_at": "2026-08-21T08:12:51.761Z"
+    },
+    "skill:aeonfun-aeon-fetch-tweets": {
+      "hash": "6a5d929eda65f71d",
+      "summary_zh": "一款 X/Twitter 内容检索与策展工具，可按关键词、话题或账号聚合推文并筛选高价值信息。",
+      "translated_at": "2026-08-21T08:12:52.276Z"
+    },
+    "skill:aeonfun-aeon-finance-district-mcp": {
+      "hash": "f4dc7db70bb3fab4",
+      "summary_zh": "一款多链非托管智能体钱包，适合安全查询资产、跨链转账兑换、获取 DeFi 收益及调用付费 API。",
+      "translated_at": "2026-08-21T08:12:52.982Z"
+    },
+    "skill:aeonfun-aeon-github-monitor": {
+      "hash": "a1505a5f4a87285c",
+      "summary_zh": "一款 GitHub 仓库监控工具，集中跟踪待处理 PR、新问题和版本发布，适合日常维护与升级管理。",
+      "translated_at": "2026-08-21T08:12:56.181Z"
+    },
+    "skill:aeonfun-aeon-fork-fleet": {
+      "hash": "5fd7c432fd9a2bde",
+      "summary_zh": "一款分叉差异监控工具，用于追踪活跃分叉相对上游的代码与配置变化，仅在真实变更时触发提醒。",
+      "translated_at": "2026-08-21T08:12:58.377Z"
+    },
+    "skill:aeonfun-aeon-fleet-control": {
+      "hash": "fb6d919cd89c35c4",
+      "summary_zh": "一款基于实例清单管理 Aeon 集群的运维工具，可完成健康检查、任务调度和状态快照，并评估用量、成本与可靠性。",
+      "translated_at": "2026-08-21T08:12:59.972Z"
+    },
+    "skill:aeonfun-aeon-github-trending": {
+      "hash": "a45421e4a854f121",
+      "summary_zh": "聚合 GitHub 与 Hugging Face 热门项目，智能筛选、归类并标注热度趋势，帮你快速发现值得关注的开源资源。",
+      "translated_at": "2026-08-21T08:13:00.483Z"
+    },
+    "skill:aeonfun-aeon-glim-mcp": {
+      "hash": "40773c22dbd14087",
+      "summary_zh": "一款实时信息调研工具，可聚合网页和主流平台内容并生成带引用的摘要，适合快速检索与事实核查。",
+      "translated_at": "2026-08-21T08:13:02.146Z"
+    },
+    "skill:aeonfun-aeon-higgsfield": {
+      "hash": "2eec3fa99f8ff634",
+      "summary_zh": "通过 MCP 调用百余种模型生成图片和视频，支持文生图、文生视频及可控运镜的图生视频，适合内容创作与原型制作。",
+      "translated_at": "2026-08-21T08:13:04.331Z"
+    },
+    "skill:aeonfun-aeon-heartbeat": {
+      "hash": "9adee16e2d05551d",
+      "summary_zh": "持续监测设备集群健康状况，自动提示异常，也可按需生成聚焦重点、紧迫原因和最新变化的优先简报。",
+      "translated_at": "2026-08-21T08:13:04.947Z"
+    },
+    "skill:aeonfun-aeon-hunter-22": {
+      "hash": "82c9134b4d5adcac",
+      "summary_zh": "一个智能悬赏筛选工具，专挑符合代码、安全研究和写作能力的真实任务，并支持一键扫描关联仓库的漏洞。",
+      "translated_at": "2026-08-21T08:13:05.700Z"
+    },
+    "skill:aeonfun-aeon-inbox-triage": {
+      "hash": "f00d4c18b5e23252",
+      "summary_zh": "一款每日整理 GitHub 通知的工具，帮你及时发现待处理的漏洞修复回复、安全公告、评审请求和提及。",
+      "translated_at": "2026-08-21T08:13:08.697Z"
+    },
+    "skill:aeonfun-aeon-idea-forge": {
+      "hash": "d0830583442c12b4",
+      "summary_zh": "一款创业点子孵化工具，能结合近期趋势与落地能力生成并评分创意、筛选可行性，还可撰写有证据支撑的创业备忘录。",
+      "translated_at": "2026-08-21T08:13:08.896Z"
+    },
+    "skill:aeonfun-aeon-idea-pipeline": {
+      "hash": "dfe9c5d644055c9c",
+      "summary_zh": "一款创业点子执行差距审计工具，通过比对创意库与现有技能、原型和代码成果，筛选出最值得优先落地的三个方向。",
+      "translated_at": "2026-08-21T08:13:10.221Z"
+    },
+    "skill:aeonfun-aeon-investigation-report": {
+      "hash": "87b949b0f08f54b0",
+      "summary_zh": "一站式链上代币安全调查工具，整合跑路、合约、部署者、持仓、蜜罐和流动性锁定检查，快速给出风险结论。",
+      "translated_at": "2026-08-21T08:13:12.541Z"
+    },
+    "skill:aeonfun-aeon-install-skill": {
+      "hash": "2f1072fa99ba7136",
+      "summary_zh": "从 GitHub 仓库将社区技能包安装到指定分支，并通过自动合并的 PR 完成集成，适合简化技能扩展流程。",
+      "translated_at": "2026-08-21T08:13:12.615Z"
+    },
+    "skill:aeonfun-aeon-last30": {
+      "hash": "547711c499fc426c",
+      "summary_zh": "跨平台舆情研究工具，聚合近30天多渠道讨论，适合快速了解某个话题的观点、趋势与市场预期。",
+      "translated_at": "2026-08-21T08:13:13.016Z"
+    },
+    "skill:aeonfun-aeon-malicious-curlperl": {
+      "hash": "1eaae95c091ac0d5",
+      "summary_zh": "一款可在 GitHub Actions 中无人值守运行的自主 AI 代理框架，适合持续执行并自动修复各类编程任务。",
+      "translated_at": "2026-08-21T08:13:16.971Z"
+    },
+    "skill:aeonfun-aeon-malicious-exfil": {
+      "hash": "1eaae95c091ac0d5",
+      "summary_zh": "一款可在 GitHub Actions 中无人值守运行的 AI 智能体框架，适合自动执行、修复并持续完成多模型编程任务。",
+      "translated_at": "2026-08-21T08:13:17.055Z"
+    },
+    "skill:aeonfun-aeon-malicious-curlsh": {
+      "hash": "1eaae95c091ac0d5",
+      "summary_zh": "一个可在 GitHub Actions 中无人值守运行的自主 AI 代理框架，适合持续执行编码任务并自动恢复故障，免去反复审批。",
+      "translated_at": "2026-08-21T08:13:18.542Z"
+    },
+    "skill:aeonfun-aeon-malicious-injection": {
+      "hash": "1eaae95c091ac0d5",
+      "summary_zh": "一套可在 GitHub Actions 中无人值守运行的 AI 智能体框架，适合自动调用多种编程模型并持续执行开发任务。",
+      "translated_at": "2026-08-21T08:13:21.196Z"
+    },
+    "skill:aeonfun-aeon-malicious-exfil-query": {
+      "hash": "1eaae95c091ac0d5",
+      "summary_zh": "一款可在 GitHub Actions 中无人值守运行的自主 AI 代理框架，适合自动驱动多种编程模型并持续自我修复。",
+      "translated_at": "2026-08-21T08:13:21.726Z"
+    },
+    "skill:aeonfun-aeon-malicious-injection-keyword": {
+      "hash": "1eaae95c091ac0d5",
+      "summary_zh": "一个可在 GitHub Actions 中无人值守运行的 AI 智能体框架，适合自动调度多种编程模型并持续修复任务。",
+      "translated_at": "2026-08-21T08:13:23.097Z"
+    },
+    "skill:aeonfun-aeon-malicious-rce-procsub": {
+      "hash": "1eaae95c091ac0d5",
+      "summary_zh": "一款可在 GitHub Actions 中无人值守运行的自主 AI 智能体框架，适合持续执行和自动修复开发任务。",
+      "translated_at": "2026-08-21T08:13:25.354Z"
+    },
+    "skill:aeonfun-aeon-malicious-injection-quoted": {
+      "hash": "1eaae95c091ac0d5",
+      "summary_zh": "一套可在 GitHub Actions 中无人值守运行的自治 AI 智能体框架，适合持续自动完成开发与维护任务。",
+      "translated_at": "2026-08-21T08:13:25.827Z"
+    },
+    "skill:aeonfun-aeon-malicious-rce-source": {
+      "hash": "1eaae95c091ac0d5",
+      "summary_zh": "一款可在 GitHub Actions 中无人值守运行的 AI 智能体框架，适合自动驱动多种编程模型并持续修复任务。",
+      "translated_at": "2026-08-21T08:13:27.666Z"
+    },
+    "skill:aeonfun-aeon-malicious-rmrf-flags": {
+      "hash": "1eaae95c091ac0d5",
+      "summary_zh": "一个可在 GitHub Actions 中无人值守运行的自主智能体框架，适合自动调用多种编程模型并持续完成开发任务。",
+      "translated_at": "2026-08-21T08:13:29.878Z"
+    },
+    "skill:aeonfun-aeon-malicious-rmrf": {
+      "hash": "1eaae95c091ac0d5",
+      "summary_zh": "可在 GitHub Actions 中无人值守运行的自主 AI 智能体框架，适合持续调用多种编码模型自动完成开发任务。",
+      "translated_at": "2026-08-21T08:13:31.048Z"
+    },
+    "skill:aeonfun-aeon-malicious-rmrf-glob": {
+      "hash": "1eaae95c091ac0d5",
+      "summary_zh": "一款可在 GitHub Actions 中无人值守运行的自主 AI 智能体框架，适合持续执行和自愈各类开发任务。",
+      "translated_at": "2026-08-21T08:13:31.766Z"
+    },
+    "skill:aeonfun-aeon-research-digest": {
+      "hash": "5e95819cd44af007",
+      "summary_zh": "一款从 RSS 和开放网络精选特定主题新文章的摘要工具，适合快速追踪领域动态。",
+      "translated_at": "2026-08-21T08:13:34.619Z"
+    },
+    "skill:aeonfun-aeon-malicious-rmrf-quoted": {
+      "hash": "1eaae95c091ac0d5",
+      "summary_zh": "一款可在 GitHub Actions 中无人值守运行的自主 AI 智能体框架，适合持续执行、修复和维护自动化开发任务。",
+      "translated_at": "2026-08-21T08:13:38.317Z"
+    },
+    "skill:aeonfun-aeon-social-monitor": {
+      "hash": "4a15fb1607062aad",
+      "summary_zh": "一款社交平台舆情扫描工具，用于追踪指定关键词的趋势、情绪变化和热门内容，适合品牌监测与热点研究。",
+      "translated_at": "2026-08-21T08:13:38.801Z"
+    },
+    "content:aeonfun-aeon-action-converter": {
+      "hash": "a13f89dd542776e9",
+      "translated_at": "2026-08-21T08:14:48.360Z"
+    },
+    "content:aeonfun-aeon-aeon-doctor": {
+      "hash": "b801bcf20983f3a7",
+      "translated_at": "2026-08-21T08:16:17.271Z"
+    },
+    "content:aeonfun-aeon-aeon": {
+      "hash": "d33d3a3f303cb1e9",
+      "translated_at": "2026-08-21T08:17:32.439Z"
+    },
+    "content:aeonfun-aeon-aeon-update": {
+      "hash": "40852bbefff47692",
+      "translated_at": "2026-08-21T08:18:56.269Z"
+    },
+    "content:aeonfun-aeon-auto-merge": {
+      "hash": "6d8df520a9fdaf9f",
+      "translated_at": "2026-08-21T08:19:55.590Z"
+    },
+    "content:aeonfun-aeon-article": {
+      "hash": "18c9d3ab8aa828e6",
+      "translated_at": "2026-08-21T08:21:28.965Z"
+    },
+    "content:aeonfun-aeon-autoresearch": {
+      "hash": "84e2d35e41195283",
+      "translated_at": "2026-08-21T08:22:06.280Z"
+    },
+    "content:aeonfun-aeon-base-mcp": {
+      "hash": "e5ebef132a4e24c6",
+      "translated_at": "2026-08-21T08:22:45.776Z"
+    },
+    "content:aeonfun-aeon-auto-workflow": {
+      "hash": "36db1f59e2384d65",
+      "translated_at": "2026-08-21T08:23:26.669Z"
+    },
+    "content:aeonfun-aeon-benign-authcall": {
+      "hash": "dcb0d5be04655435",
+      "translated_at": "2026-08-21T08:23:29.839Z"
+    },
+    "content:aeonfun-aeon-benign-cmdsub": {
+      "hash": "52e1f9dd85ffc344",
+      "translated_at": "2026-08-21T08:23:33.854Z"
+    },
+    "content:aeonfun-aeon-benign-defensive": {
+      "hash": "f9ede45c22d53fe5",
+      "translated_at": "2026-08-21T08:23:38.073Z"
+    },
+    "content:aeonfun-aeon-benign-templatevar": {
+      "hash": "9c55bc90a7b62d52",
+      "translated_at": "2026-08-21T08:23:41.745Z"
+    },
+    "content:aeonfun-aeon-bd-radar": {
+      "hash": "7cfcdc670fce031d",
+      "translated_at": "2026-08-21T08:24:05.799Z"
+    },
+    "content:aeonfun-aeon-code-reviewer": {
+      "hash": "5b9bc341a60c1616",
+      "translated_at": "2026-08-21T08:24:31.776Z"
+    },
+    "content:aeonfun-aeon-community-manager": {
+      "hash": "199bf8fb78c259f9",
+      "translated_at": "2026-08-21T08:25:04.960Z"
+    },
+    "content:aeonfun-aeon-changelog": {
+      "hash": "48ae451ff50ce7a5",
+      "translated_at": "2026-08-21T08:26:15.923Z"
+    },
+    "content:aeonfun-aeon-competitor-monitor": {
+      "hash": "ff2d1681a378aee7",
+      "translated_at": "2026-08-21T08:26:26.400Z"
+    },
+    "content:aeonfun-aeon-crypto-tracker": {
+      "hash": "ba349bc6aa5e26c3",
+      "translated_at": "2026-08-21T08:26:47.050Z"
+    },
+    "content:aeonfun-aeon-create-skill": {
+      "hash": "312b970cc90482bf",
+      "translated_at": "2026-08-21T08:27:59.912Z"
+    },
+    "content:aeonfun-aeon-deploy-prototype": {
+      "hash": "8bb7f04ace3e00b0",
+      "translated_at": "2026-08-21T08:29:37.560Z"
+    },
+    "content:aeonfun-aeon-defi-overview": {
+      "hash": "01e96f1e5657a573",
+      "translated_at": "2026-08-21T08:29:56.541Z"
+    },
+    "content:aeonfun-aeon-deploy-watcher": {
+      "hash": "77ba967c32399f6a",
+      "translated_at": "2026-08-21T08:30:29.324Z"
+    },
+    "content:aeonfun-aeon-deploy-uni-hook": {
+      "hash": "fb10149853a8222d",
+      "translated_at": "2026-08-21T08:31:33.416Z"
+    },
+    "content:aeonfun-aeon-digest": {
+      "hash": "aa2a7f38bf05182e",
+      "translated_at": "2026-08-21T08:32:19.399Z"
+    },
+    "content:aeonfun-aeon-executor-mcp": {
+      "hash": "a88fb71806ec0345",
+      "translated_at": "2026-08-21T08:32:48.925Z"
+    },
+    "content:aeonfun-aeon-distribute-tokens": {
+      "hash": "618743c19de3ff1d",
+      "translated_at": "2026-08-21T08:35:06.366Z"
+    },
+    "content:aeonfun-aeon-feature": {
+      "hash": "2a02d778f1650187",
+      "translated_at": "2026-08-21T08:35:59.912Z"
+    },
+    "content:aeonfun-aeon-finance-district-mcp": {
+      "hash": "38229bcc443cbadf",
+      "translated_at": "2026-08-21T08:36:30.736Z"
+    },
+    "content:aeonfun-aeon-fleet-control": {
+      "hash": "bb5a4421755cedd3",
+      "translated_at": "2026-08-21T08:39:01.614Z"
+    },
+    "content:aeonfun-aeon-fetch-tweets": {
+      "hash": "6c7929ff6df3b4a4",
+      "translated_at": "2026-08-21T08:39:34.454Z"
+    },
+    "content:aeonfun-aeon-fork-fleet": {
+      "hash": "17249aa9122f9cb1",
+      "translated_at": "2026-08-21T08:42:40.728Z"
+    },
+    "content:aeonfun-aeon-github-monitor": {
+      "hash": "63a6b87c0268fde5",
+      "translated_at": "2026-08-21T08:43:03.281Z"
+    },
+    "content:aeonfun-aeon-glim-mcp": {
+      "hash": "67ba319fffc2d153",
+      "translated_at": "2026-08-21T08:43:34.769Z"
+    },
+    "content:aeonfun-aeon-github-trending": {
+      "hash": "737e884def0b5bbd",
+      "translated_at": "2026-08-21T08:45:21.153Z"
+    },
+    "content:aeonfun-aeon-higgsfield": {
+      "hash": "61dc227c6e74a14e",
+      "translated_at": "2026-08-21T08:46:07.627Z"
+    },
+    "content:aeonfun-aeon-heartbeat": {
+      "hash": "bba1bdf722ce2218",
+      "translated_at": "2026-08-21T08:46:23.143Z"
+    },
+    "content:aeonfun-aeon-hunter-22": {
+      "hash": "6a878c97d9d6aa91",
+      "translated_at": "2026-08-21T08:46:45.189Z"
+    },
+    "content:aeonfun-aeon-idea-pipeline": {
+      "hash": "c02bffb0e44c3259",
+      "translated_at": "2026-08-21T08:48:08.685Z"
+    },
+    "content:aeonfun-aeon-idea-forge": {
+      "hash": "8b16fc222319719b",
+      "translated_at": "2026-08-21T08:49:22.241Z"
     }
   }
 }
