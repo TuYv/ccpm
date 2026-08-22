@@ -11,7 +11,7 @@ metadata:
 ---
 # GKE 应用接入
 
-本参考文档提供了首次将应用容器化并部署到 GKE 的工作流。
+本参考文档提供首次将应用容器化并部署到 GKE 的工作流。
 
 > **MCP 工具：** `apply_k8s_manifest`、`get_k8s_resource`、
 > `get_k8s_rollout_status`、`get_k8s_logs`、`describe_k8s_resource`
@@ -27,38 +27,29 @@ metadata:
 -   **配置**：应用如何配置？（环境变量、配置文件、密钥）
 -   **有状态性**：是否需要持久化存储？（数据库、文件存储）
 -   **网络**：端口映射和协议（HTTP、gRPC、TCP）
--   **健康检查端点**：应用是否公开健康检查端点？
+-   **健康检查端点**：应用是否提供健康检查端点？
 
 ### 2. 容器化
 
-创建容器镜像：
-
-**Dockerfile（推荐用于大多数应用）：**
-
-```dockerfile
-# Multi-stage build for smaller, more secure images
-FROM golang:1.22 AS builder
-WORKDIR /app
-COPY . .
-RUN CGO_ENABLED=0 go build -o server .
-
-FROM gcr.io/distroless/static:nonroot
-COPY --from=builder /app/server /server
-USER nonroot:nonroot
-EXPOSE 8080
-ENTRYPOINT ["/server"]
-```
+创建容器镜像。对于大多数应用，建议使用采用多阶段构建的 Dockerfile——有关完整示例，请参阅
+[`references/go-example.md`](./references/go-example.md) 中的 Go Dockerfile。
 
 **最佳实践：**
 
--   使用多阶段构建，使生产镜像保持精简
--   使用 distroless 或精简基础镜像以减少攻击面
+-   使用多阶段构建以减小生产镜像的体积
+-   使用 distroless 或精简基础镜像以缩小攻击面
 -   以非 root 用户身份运行
 -   将日志输出到 `stdout` 和 `stderr`，以便 Cloud Logging 收集
 
+[`assets/`](./assets/) 中提供了一个完整的 Node.js 示例：
+[`Dockerfile`](./assets/Dockerfile)（使用非 root `node` 用户）、
+[`index.js`](./assets/index.js)（实现相互独立的 `/healthz` 和 `/readyz`
+端点）、[`package.json`](./assets/package.json)，以及
+[`deployment.yaml`](./assets/deployment.yaml)（经过安全加固的 Deployment 和
+ClusterIP Service，探针分别连接到 `/healthz` 和 `/readyz`）。
+
 对于不希望编写 Dockerfile 的应用，可以使用
-[**Cloud Native Buildpacks**](https://buildpacks.io/) 自动检测
-语言并构建容器镜像：
+[**Cloud Native Buildpacks**](https://buildpacks.io/) 自动检测语言并构建容器镜像：
 
 ```bash
 pack build <image> --builder gcr.io/buildpacks/builder:latest
@@ -77,8 +68,7 @@ docker build -t <REGION>-docker.pkg.dev/<PROJECT>/<REPO>/<IMAGE>:<TAG> .
 docker push <REGION>-docker.pkg.dev/<PROJECT>/<REPO>/<IMAGE>:<TAG>
 ```
 
-**漏洞扫描**：在 Artifact Registry 中启用自动扫描，以
-检测基础镜像和依赖项中的问题。
+**漏洞扫描**：在 Artifact Registry 中启用自动扫描，以检测基础镜像和依赖项中的问题。
 
 ```bash
 # Check scan results
@@ -90,66 +80,26 @@ gcloud artifacts docker images describe \
 
 ### 4. 清单生成
 
-为应用生成 Kubernetes 清单：
+为应用生成 Kubernetes 清单。[`references/go-example.md`](./references/go-example.md)
+中提供了一个基准 Deployment + ClusterIP Service 清单（包含探针、资源请求/限制和 2 个副本）。
 
-```yaml
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: my-app
-  namespace: default
-spec:
-  replicas: 2
-  selector:
-    matchLabels:
-      app: my-app
-  template:
-    metadata:
-      labels:
-        app: my-app
-    spec:
-      containers:
-      - name: my-app
-        image: <REGION>-docker.pkg.dev/<PROJECT>/<REPO>/<IMAGE>:<TAG>
-        ports:
-        - containerPort: 8080
-        resources:
-          requests:
-            cpu: "250m"
-            memory: "256Mi"
-          limits:
-            cpu: "500m"
-            memory: "512Mi"
-        livenessProbe:
-          httpGet:
-            path: /healthz
-            port: 8080
-          initialDelaySeconds: 10
-        readinessProbe:
-          httpGet:
-            path: /readyz
-            port: 8080
-          initialDelaySeconds: 5
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: my-app
-spec:
-  selector:
-    app: my-app
-  ports:
-  - port: 80
-    targetPort: 8080
-  type: ClusterIP
-```
-
-**清单文件检查项：**
+**清单检查表：**
 
 -   已设置资源请求和限制
 -   已配置存活探针和就绪探针
 -   生产环境至少使用 2 个副本
--   使用适当的 Service 类型（内部服务使用 ClusterIP，外部服务使用 Gateway API）
+-   使用适当的 Service 类型（内部访问使用 ClusterIP，外部访问使用 Gateway API）
+
+请参阅 [`assets/deployment.yaml`](./assets/deployment.yaml)，其中提供了一个经过安全加固的完整示例。生产级安全加固的 Pod 规范必须包含以下**全部**配置：`runAsNonRoot:
+true`、`readOnlyRootFilesystem: true`、`allowPrivilegeEscalation: false`、
+`capabilities.drop: ["ALL"]`、`seccompProfile: {type: RuntimeDefault}`、
+`automountServiceAccountToken: false`（除非 Pod 需要该令牌——在这种情况下，请说明
+原因）、资源请求、通过摘要固定的镜像，以及 ClusterIP 服务。
+
+该检查清单是此处生成任何 Pod 规范时必须遵循的基准。对于超出此范围的清单工作
+——Gateway API 路由、GCS FUSE 和 Secret 卷挂载、`subPath`
+叠加、Spot VM 定向，或 AI/推理服务规范——请参阅
+`gke-manifest-generation`。
 
 ### 5. 部署
 
@@ -170,12 +120,27 @@ kubectl rollout status deployment/my-app
 kubectl get pods -l app=my-app
 ```
 
+## 黄金路径接入检查清单
+
+对于每个接入 GKE 的生产应用：
+
+1.  **容器安全**：非 root 用户（`runAsNonRoot: true`）、使用锁文件
+    安装、最小化/distroless 基础镜像。
+2.  **资源请求**：明确指定 CPU 和内存请求（GKE
+    Autopilot 强制要求）。
+3.  **健康探针**：同时配置存活探针（`livenessProbe`）和就绪
+    探针（`readinessProbe`）。
+4.  **可靠性与可用性**：至少 2 个副本，以及一个
+    `PodDisruptionBudget`（`minAvailable: 1` 或 `2`）。
+5.  **IAM 与 Workload Identity**：使用 Workload Identity
+    （`iam.gke.io/gcp-service-account`），而不是静态服务账号密钥。
+
 ## 后续步骤
 
 应用在 GKE 上运行后：
 
--   配置自动扩缩容——请参阅 `gke-workload-scaling` 技能
--   设置可观测性——请参阅 `gke-observability` 技能
--   加固安全性——请参阅 `gke-workload-security` 技能
+-   配置自动扩缩容——请参阅 `gke-workload-scaling` Skill
+-   设置可观测性——请参阅 `gke-observability` Skill
+-   强化安全性——请参阅 `gke-workload-security` Skill
 -   配置可靠性（PDB、拓扑分布）——请参阅 `gke-reliability`
-    技能
+    Skill
