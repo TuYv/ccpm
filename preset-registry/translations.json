@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-22T16:44:09.514Z",
+  "updated_at": "2026-08-22T18:46:07.066Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -17358,9 +17358,9 @@
       "translated_at": "2026-08-03T04:58:57.465Z"
     },
     "bundle:daymade-claude-code-skills": {
-      "hash": "08d2aae5796725d1",
-      "summary_zh": "面向 Claude Code 的综合技能合集，覆盖数据采集、内容处理、代码仓库与工作流管理，让研究分析、自动化开发和日常操作更高效顺畅。",
-      "translated_at": "2026-08-19T03:03:56.707Z"
+      "hash": "8812e0b6e2068405",
+      "summary_zh": "面向 Claude Code 的实用技能合集，覆盖信息采集、内容处理、开发运维与工作流自动化，让复杂任务能快速组合、稳定落地。",
+      "translated_at": "2026-08-22T18:17:16.458Z"
     },
     "bundle:specstoryai-getspecstory": {
       "hash": "c770b3a6c617c63e",
@@ -20053,9 +20053,9 @@
       "translated_at": "2026-08-03T14:05:59.608Z"
     },
     "skill:daymade-claude-code-skills-claude-code-history-files-finder": {
-      "hash": "46a2f9d4643acbd3",
-      "summary_zh": "用于跨配置目录和归档搜索、恢复 Claude Code 会话历史及文件快照，适合找回未知项目记录、编辑后内容和二进制文件。",
-      "translated_at": "2026-08-03T14:06:00.917Z"
+      "hash": "3c871a22e6d5750d",
+      "summary_zh": "一款跨配置目录和归档检索、恢复 AI 编程会话及文件快照的工具，适合找回未知项目中的历史消息和原始文件内容。",
+      "translated_at": "2026-08-22T18:17:22.091Z"
     },
     "skill:daymade-claude-code-skills-claude-skills-troubleshooting": {
       "hash": "41cbf0fe80d5aa0d",
@@ -20248,9 +20248,9 @@
       "translated_at": "2026-08-03T16:25:16.908Z"
     },
     "skill:daymade-claude-code-skills-local-conversation-history": {
-      "hash": "d77c1df122b61da6",
-      "summary_zh": "一个只读命令行工具，用于汇总、去重并筛选工作区内的 Claude Code 和 Codex 本地对话记录。",
-      "translated_at": "2026-08-03T16:25:18.042Z"
+      "hash": "850dd2da8617c396",
+      "summary_zh": "用一条只读命令汇总工作区内多个 AI 编程工具的近期对话，适合检索、去重和审计本地会话记录。",
+      "translated_at": "2026-08-22T18:17:22.549Z"
     },
     "skill:daymade-claude-code-skills-marketplace-dev": {
       "hash": "c4748f967cf4402c",
@@ -36706,8 +36706,8 @@
       "translated_at": "2026-08-14T22:43:39.142Z"
     },
     "content:daymade-claude-code-skills-claude-code-history-files-finder": {
-      "hash": "880f547414ae90eb",
-      "translated_at": "2026-08-15T00:21:58.037Z"
+      "hash": "7267dfb0141a49a9",
+      "translated_at": "2026-08-22T18:28:19.408Z"
     },
     "content:daymade-claude-code-skills-claude-export-txt-better": {
       "hash": "41da97b27d354022",
@@ -36862,8 +36862,8 @@
       "translated_at": "2026-08-15T02:17:51.620Z"
     },
     "content:daymade-claude-code-skills-local-conversation-history": {
-      "hash": "d2096a3af74cec05",
-      "translated_at": "2026-08-15T02:18:26.270Z"
+      "hash": "a5486e96f473c3af",
+      "translated_at": "2026-08-22T18:27:02.112Z"
     },
     "content:daymade-claude-code-skills-marketplace-dev": {
       "hash": "990155b170dfa49d",
@@ -47566,6 +47566,74 @@
     "content:nowork-studio-toprank-paid-ads-launch": {
       "hash": "8b601304bed5a3f7",
       "translated_at": "2026-08-22T16:44:09.513Z"
+    },
+    "content:nowork-studio-toprank-paid-ads-linkedin": {
+      "hash": "6be58b7ade000960",
+      "translated_at": "2026-08-22T18:36:30.521Z"
+    },
+    "content:nowork-studio-toprank-paid-ads-optimize": {
+      "hash": "93af4458502c63e3",
+      "translated_at": "2026-08-22T18:36:42.059Z"
+    },
+    "content:nowork-studio-toprank-paid-ads-review": {
+      "hash": "87fa720d0aa226af",
+      "translated_at": "2026-08-22T18:36:52.278Z"
+    },
+    "content:nowork-studio-toprank-paid-ads-setup": {
+      "hash": "8ea5898ee547903d",
+      "translated_at": "2026-08-22T18:37:05.681Z"
+    },
+    "content:nowork-studio-toprank-paid-ads-tiktok": {
+      "hash": "df16c1e166056b89",
+      "translated_at": "2026-08-22T18:37:16.466Z"
+    },
+    "content:nowork-studio-toprank-paid-ads-x": {
+      "hash": "f8bfe2f5573d7e24",
+      "translated_at": "2026-08-22T18:37:37.025Z"
+    },
+    "content:nowork-studio-toprank-programmatic-seo": {
+      "hash": "90cde0e1a3e7856f",
+      "translated_at": "2026-08-22T18:37:56.302Z"
+    },
+    "content:nowork-studio-toprank-schema-markup-generator": {
+      "hash": "feaf2e741e1f907e",
+      "translated_at": "2026-08-22T18:39:14.607Z"
+    },
+    "content:nowork-studio-toprank-search-console": {
+      "hash": "8df9e96efb59d5fc",
+      "translated_at": "2026-08-22T18:39:30.748Z"
+    },
+    "content:nowork-studio-toprank-seo-drift": {
+      "hash": "704ed1d68aa81e0c",
+      "translated_at": "2026-08-22T18:40:00.477Z"
+    },
+    "content:nowork-studio-toprank-seo-page": {
+      "hash": "22d890e4591d5c2a",
+      "translated_at": "2026-08-22T18:42:21.709Z"
+    },
+    "content:nowork-studio-toprank-setup-cms": {
+      "hash": "4ba0b9edbfc0d86c",
+      "translated_at": "2026-08-22T18:43:17.089Z"
+    },
+    "content:nowork-studio-toprank-sitemap-audit": {
+      "hash": "5c356f907b4e1dbe",
+      "translated_at": "2026-08-22T18:43:51.606Z"
+    },
+    "content:nowork-studio-toprank-sxo": {
+      "hash": "3db59b5b0373ec6d",
+      "translated_at": "2026-08-22T18:44:06.896Z"
+    },
+    "content:nowork-studio-toprank-toprank-improve-page": {
+      "hash": "5e26ca2117411edc",
+      "translated_at": "2026-08-22T18:44:16.622Z"
+    },
+    "content:nowork-studio-toprank-toprank-investigate-drop": {
+      "hash": "919e460c8cf46541",
+      "translated_at": "2026-08-22T18:44:26.479Z"
+    },
+    "content:nowork-studio-toprank-seo-analysis": {
+      "hash": "6ef290a5c766f229",
+      "translated_at": "2026-08-22T18:46:07.066Z"
     }
   }
 }
