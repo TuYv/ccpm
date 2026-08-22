@@ -1,0 +1,26 @@
+{
+  "id": "chrisbanes-skills-grounded-writing",
+  "name": "grounded-writing",
+  "description": "Use when drafting or revising prose longer than one paragraph that will be published or sent under Chris Banes's name.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "chrisbanes",
+  "install_path": ".claude/skills/grounded-writing/SKILL.md",
+  "source": {
+    "repo": "chrisbanes/skills",
+    "url": "https://github.com/chrisbanes/skills/blob/main/skills/grounded-writing/SKILL.md",
+    "path": "skills/grounded-writing/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-22T19:21:53.928Z",
+    "stars": 972,
+    "language": "Python",
+    "pushed_at": "2026-08-22T19:13:24Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "用于起草或修改将以 Chris Banes 名义发布或发送的多段落文章，确保内容符合其写作风格。"
+}
