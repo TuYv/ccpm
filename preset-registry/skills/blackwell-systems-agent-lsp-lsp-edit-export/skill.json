@@ -16,10 +16,10 @@
     "url": "https://github.com/blackwell-systems/agent-lsp/blob/main/skills/lsp-edit-export/SKILL.md",
     "path": "skills/lsp-edit-export/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-22T12:19:59.902Z",
+    "discovered_at": "2026-08-22T14:19:31.847Z",
     "stars": 114,
     "language": "Go",
-    "pushed_at": "2026-08-22T01:18:47Z",
+    "pushed_at": "2026-08-22T12:41:30Z",
     "license": "MIT"
   },
   "summary_zh": "在修改导出函数、公共类型等对外接口前，先借助 LSP 找出所有调用点，避免改完才发现破坏了其他模块，适合重构公共 API 时使用。"
