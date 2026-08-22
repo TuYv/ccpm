@@ -2,7 +2,7 @@
   "id": "openaccountants-openaccountants-au-return-assembly",
   "name": "au-return-assembly",
   "description": "Final orchestrator skill that assembles the complete Australian filing package for Australian-resident sole traders. Consumes outputs from all Australian content skills (australia-gst for BAS, au-individual-return for ITR, au-super-guarantee for voluntary contributions, au-medicare-levy for levy and surcharge, au-payg-instalments for instalment schedule) to produce a single unified reviewer package containing every worksheet, every form, every brief section, all cross-skill reconciliations, and ",
-  "category": "开发编程",
+  "category": "通用其他",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,8 +16,8 @@
     "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/au-return-assembly/SKILL.md",
     "path": "agent-skills/au-return-assembly/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-22T14:17:41.228Z",
-    "stars": 337,
+    "discovered_at": "2026-08-22T16:16:53.290Z",
+    "stars": 338,
     "language": "Python",
     "pushed_at": "2026-08-22T05:06:43Z",
     "license": "AGPL-3.0"
