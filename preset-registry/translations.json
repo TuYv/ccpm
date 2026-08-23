@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-23T01:44:37.519Z",
+  "updated_at": "2026-08-23T03:42:18.441Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -9933,9 +9933,9 @@
       "translated_at": "2026-05-20T01:05:59.206Z"
     },
     "bundle:yvgude-lean-ctx": {
-      "hash": "252c3bec0107f400",
-      "summary_zh": "面向 AI 智能体的上下文工程工具集，整合代码理解、灵活读取与命令执行能力，让代理更高效地掌握和利用项目上下文。",
-      "translated_at": "2026-08-21T21:14:27.120Z"
+      "hash": "8ab0165cc5248162",
+      "summary_zh": "为 AI 智能体提供本地上下文管理能力，统一完成筛选、整理、复用、恢复与检查，让任务执行更稳定高效。",
+      "translated_at": "2026-08-23T03:17:20.096Z"
     },
     "bundle:kubb-labs-kubb": {
       "hash": "655d8cf12537910f",
@@ -13598,14 +13598,14 @@
       "translated_at": "2026-05-20T16:27:14.387Z"
     },
     "skill:yvgude-lean-ctx-lean-ctx": {
-      "hash": "cdbbb4ede61f650e",
-      "summary_zh": "面向 AI 智能体的上下文压缩工具，适合读文件、搜代码、执行命令和浏览目录，可显著减少大模型上下文占用。",
-      "translated_at": "2026-08-21T21:14:40.323Z"
+      "hash": "d960b6953bdd8f45",
+      "summary_zh": "一套面向 AI 智能体的本地上下文工具，可在推理前整理、复用和检查文件、命令及代码搜索产生的信息。",
+      "translated_at": "2026-08-23T03:17:23.796Z"
     },
     "skill:yvgude-lean-ctx-templates": {
-      "hash": "44cf4d01be8fce20",
-      "summary_zh": "面向 AI 智能体的上下文工程工具，适合读文件、搜代码、执行命令和浏览目录时压缩上下文，降低模型开销。",
-      "translated_at": "2026-08-21T21:14:40.750Z"
+      "hash": "d960b6953bdd8f45",
+      "summary_zh": "一套面向 AI 智能体的本地上下文工具，适合在读文件、跑命令或搜代码时整理、复用和恢复推理所需信息。",
+      "translated_at": "2026-08-23T03:17:24.591Z"
     },
     "skill:zebbern-claude-code-guide-api-fuzzing-bug-bounty": {
       "hash": "f0692669381caf74",
@@ -47924,6 +47924,82 @@
     "content:omnigent-ai-omnigent-omnigent-knowledge": {
       "hash": "a34b76a4d655620f",
       "translated_at": "2026-08-23T01:44:37.518Z"
+    },
+    "content:omnigent-ai-omnigent-pi-e2e-xyz-greet-c4a8d5": {
+      "hash": "184e5c3d177fccb5",
+      "translated_at": "2026-08-23T03:35:02.025Z"
+    },
+    "content:omnigent-ai-omnigent-pi-native-e2e-dev": {
+      "hash": "8216b949de9eab2f",
+      "translated_at": "2026-08-23T03:36:35.529Z"
+    },
+    "content:omnigent-ai-omnigent-polly-e2e-dev": {
+      "hash": "2b077b2eb4062f08",
+      "translated_at": "2026-08-23T03:38:12.598Z"
+    },
+    "content:omnigent-ai-omnigent-run-load-test": {
+      "hash": "0840ffc56df43ccd",
+      "translated_at": "2026-08-23T03:38:47.327Z"
+    },
+    "content:omnigent-ai-omnigent-security-audit": {
+      "hash": "a5404bb1f9b276ea",
+      "translated_at": "2026-08-23T03:38:55.640Z"
+    },
+    "content:onmax-nuxt-skills-motion": {
+      "hash": "f0e7a7749a2eed53",
+      "translated_at": "2026-08-23T03:39:16.249Z"
+    },
+    "content:onmax-nuxt-skills-document-writer": {
+      "hash": "c1c97c1a73ae2788",
+      "translated_at": "2026-08-23T03:39:18.802Z"
+    },
+    "content:onmax-nuxt-skills-nuxt": {
+      "hash": "bd0a3a6f779fbca8",
+      "translated_at": "2026-08-23T03:39:33.190Z"
+    },
+    "content:onmax-nuxt-skills-nuxt-better-auth": {
+      "hash": "6f629ae40f059fa6",
+      "translated_at": "2026-08-23T03:39:45.656Z"
+    },
+    "content:onmax-nuxt-skills-nuxt-content": {
+      "hash": "d4b12c662fa5f91f",
+      "translated_at": "2026-08-23T03:39:48.422Z"
+    },
+    "content:onmax-nuxt-skills-nuxt-i18n": {
+      "hash": "6b1711c9ff5c98de",
+      "translated_at": "2026-08-23T03:39:59.331Z"
+    },
+    "content:onmax-nuxt-skills-nuxt-modules": {
+      "hash": "c658ddf775c683d8",
+      "translated_at": "2026-08-23T03:40:03.514Z"
+    },
+    "content:onmax-nuxt-skills-nuxt-studio": {
+      "hash": "9f02ea4b93e7d517",
+      "translated_at": "2026-08-23T03:40:15.753Z"
+    },
+    "content:onmax-nuxt-skills-nuxt-seo": {
+      "hash": "254b902fbdd467b0",
+      "translated_at": "2026-08-23T03:40:17.074Z"
+    },
+    "content:onmax-nuxt-skills-nuxt-ui": {
+      "hash": "bdbbb5e9f97bc1c0",
+      "translated_at": "2026-08-23T03:40:39.007Z"
+    },
+    "content:onmax-nuxt-skills-phaser-best-practices": {
+      "hash": "409c40b4d368263e",
+      "translated_at": "2026-08-23T03:41:36.442Z"
+    },
+    "content:onmax-nuxt-skills-nuxthub": {
+      "hash": "b49714ee652bee0a",
+      "translated_at": "2026-08-23T03:41:42.697Z"
+    },
+    "content:onmax-nuxt-skills-pnpm": {
+      "hash": "f8970ad5fe8c1db0",
+      "translated_at": "2026-08-23T03:42:00.457Z"
+    },
+    "content:onmax-nuxt-skills-reka-ui": {
+      "hash": "4ebe886a489381dc",
+      "translated_at": "2026-08-23T03:42:18.441Z"
     }
   }
 }
