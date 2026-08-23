@@ -1,7 +1,7 @@
 {
   "id": "juliusbrussee-caveman-caveman-learn",
   "name": "caveman-learn",
-  "description": "Close the loop on a Caveman learn report — review the ranked token sinks and apply cost-lowering fixes (trim config, offload recurring context to cavemem) with per-edit consent. Use when the user runs \"caveman learn\", asks to lower their agent's token cost, wants to trim a heavy CLAUDE.md, or wants to offload context they re-paste every session into cavemem.",
+  "description": "Close the loop on a Caveman learn report — review the ranked token sinks, apply cost-lowering fixes (trim config, offload recurring context to cavemem) with per-edit consent, and report what those fixes returned with their attribution. Use when the user runs \"caveman learn\", asks to lower their agent's token cost, asks what caveman has saved them, wants to trim a heavy CLAUDE.md, or wants to offload context they re-paste every session into cavemem.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/JuliusBrussee/caveman/blob/main/skills/caveman-learn/SKILL.md",
     "path": "skills/caveman-learn/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-23T08:13:27.812Z",
-    "stars": 100396,
+    "discovered_at": "2026-08-23T10:11:27.835Z",
+    "stars": 100405,
     "language": "Go",
-    "pushed_at": "2026-08-23T08:07:58Z",
+    "pushed_at": "2026-08-23T08:59:23Z",
     "license": null
   },
-  "summary_zh": "用于分析智能体令牌消耗并逐项确认优化配置，适合精简 CLAUDE.md 或将重复上下文迁移到 cavemem。"
+  "summary_zh": "分析智能体的高耗词元来源，经逐项确认后精简配置或迁移重复上下文，并量化节省效果，适合降低使用成本。"
 }

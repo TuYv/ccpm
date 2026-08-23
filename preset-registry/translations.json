@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-23T09:56:35.465Z",
+  "updated_at": "2026-08-23T10:51:08.334Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -9658,9 +9658,9 @@
       "translated_at": "2026-08-13T18:15:12.236Z"
     },
     "bundle:juliusbrussee-caveman": {
-      "hash": "b04c7b8e1f87bd6c",
-      "summary_zh": "这套合集面向 AI 编程协作，串联仓库探索、任务委派、上下文压缩与成本评估，在保证质量和安全的同时降低 Token 消耗。",
-      "translated_at": "2026-08-11T17:45:26.716Z"
+      "hash": "d29e6c7f1ce1b2de",
+      "summary_zh": "面向大模型开发工作流，通过压缩沟通、协同子代理和评估优化，持续降低令牌成本并提升执行效率与安全性。",
+      "translated_at": "2026-08-23T10:20:25.952Z"
     },
     "bundle:thedotmack-claude-mem": {
       "hash": "105ab286d15d7dca",
@@ -29753,9 +29753,9 @@
       "translated_at": "2026-08-11T17:45:34.499Z"
     },
     "skill:juliusbrussee-caveman-caveman-learn": {
-      "hash": "5281f6720ca6c70b",
-      "summary_zh": "用于分析智能体令牌消耗并逐项确认优化配置，适合精简 CLAUDE.md 或将重复上下文迁移到 cavemem。",
-      "translated_at": "2026-08-11T17:45:36.334Z"
+      "hash": "fde8614cf9cfafa2",
+      "summary_zh": "分析智能体的高耗词元来源，经逐项确认后精简配置或迁移重复上下文，并量化节省效果，适合降低使用成本。",
+      "translated_at": "2026-08-23T10:20:31.203Z"
     },
     "skill:juliusbrussee-caveman-caveman-manage": {
       "hash": "f5b02c4bb6a12bf1",
@@ -32306,8 +32306,8 @@
       "translated_at": "2026-08-13T08:35:49.446Z"
     },
     "content:juliusbrussee-caveman-caveman": {
-      "hash": "1eddf70556181538",
-      "translated_at": "2026-08-19T10:18:11.524Z"
+      "hash": "3edd677596cbf12f",
+      "translated_at": "2026-08-23T10:33:18.102Z"
     },
     "content:juliusbrussee-caveman-caveman-commit": {
       "hash": "58db7b8efab911a6",
@@ -32338,8 +32338,8 @@
       "translated_at": "2026-08-13T08:37:02.097Z"
     },
     "content:juliusbrussee-caveman-caveman-learn": {
-      "hash": "f46d1a4574797f35",
-      "translated_at": "2026-08-19T10:18:48.837Z"
+      "hash": "1d0597108fba2f38",
+      "translated_at": "2026-08-23T10:34:22.763Z"
     },
     "content:juliusbrussee-caveman-caveman-optimize": {
       "hash": "3c040f1fbe2a6a89",
@@ -39030,8 +39030,8 @@
       "translated_at": "2026-08-22T03:36:50.230Z"
     },
     "content:gadievron-raptor-audit": {
-      "hash": "80662809c90cfcb4",
-      "translated_at": "2026-08-22T03:37:34.570Z"
+      "hash": "f496c7ffe63f0230",
+      "translated_at": "2026-08-23T10:31:59.440Z"
     },
     "content:gadievron-raptor-frida": {
       "hash": "8f09e8e5ac113d4b",
@@ -48213,6 +48213,70 @@
     "content:openaccountants-openaccountants-austria-vat-return": {
       "hash": "53ccaab5054bdb26",
       "translated_at": "2026-08-23T09:56:35.465Z"
+    },
+    "content:openaccountants-openaccountants-az-sales-tax": {
+      "hash": "b2c23f8281b391ae",
+      "translated_at": "2026-08-23T10:42:31.895Z"
+    },
+    "content:openaccountants-openaccountants-bahamas-vat": {
+      "hash": "327a08d1c8502492",
+      "translated_at": "2026-08-23T10:44:01.566Z"
+    },
+    "content:openaccountants-openaccountants-azerbaijan-vat": {
+      "hash": "9050096db5beccb1",
+      "translated_at": "2026-08-23T10:44:07.255Z"
+    },
+    "content:openaccountants-openaccountants-bangladesh-pit": {
+      "hash": "3db9f7bc251545b6",
+      "translated_at": "2026-08-23T10:45:13.731Z"
+    },
+    "content:openaccountants-openaccountants-bangladesh-references": {
+      "hash": "cf7c75c57f879dd7",
+      "translated_at": "2026-08-23T10:45:31.730Z"
+    },
+    "content:openaccountants-openaccountants-bahrain-vat": {
+      "hash": "d2a599c087608e53",
+      "translated_at": "2026-08-23T10:46:09.941Z"
+    },
+    "content:openaccountants-openaccountants-banking-sector": {
+      "hash": "f0d078ea9ffd27c9",
+      "translated_at": "2026-08-23T10:47:41.915Z"
+    },
+    "content:openaccountants-openaccountants-barbados-vat": {
+      "hash": "35bb08cd7a7a119b",
+      "translated_at": "2026-08-23T10:49:02.320Z"
+    },
+    "content:openaccountants-openaccountants-bangladesh-vat": {
+      "hash": "e2c937b5a4a72efe",
+      "translated_at": "2026-08-23T10:49:16.646Z"
+    },
+    "content:openaccountants-openaccountants-bd-bookkeeping": {
+      "hash": "cf76d4eef0d8e814",
+      "translated_at": "2026-08-23T10:49:37.647Z"
+    },
+    "content:openaccountants-openaccountants-bd-crypto-tax": {
+      "hash": "996932c2ba2b9307",
+      "translated_at": "2026-08-23T10:49:57.781Z"
+    },
+    "content:openaccountants-openaccountants-bc-individual-return": {
+      "hash": "2f761e7da357090a",
+      "translated_at": "2026-08-23T10:50:18.089Z"
+    },
+    "content:openaccountants-openaccountants-bd-einvoice": {
+      "hash": "3867892208fc2b92",
+      "translated_at": "2026-08-23T10:50:23.401Z"
+    },
+    "content:openaccountants-openaccountants-bd-financial-statements": {
+      "hash": "c60cea280dead868",
+      "translated_at": "2026-08-23T10:50:47.116Z"
+    },
+    "content:openaccountants-openaccountants-bd-formation": {
+      "hash": "f7aecbd5dac320af",
+      "translated_at": "2026-08-23T10:50:48.753Z"
+    },
+    "content:openaccountants-openaccountants-bd-freelance-intake": {
+      "hash": "dd97008d2d116b44",
+      "translated_at": "2026-08-23T10:51:08.334Z"
     }
   }
 }
