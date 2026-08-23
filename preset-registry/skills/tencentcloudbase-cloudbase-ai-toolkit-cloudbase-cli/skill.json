@@ -1,0 +1,26 @@
+{
+  "id": "tencentcloudbase-cloudbase-ai-toolkit-cloudbase-cli",
+  "name": "cloudbase-cli",
+  "description": "CloudBase CLI (tcb, 云开发CLI, Tencent CloudBase命令行) resource management skill. Use when deploying cloud functions, CloudRun, storage, NoSQL/MySQL, static hosting, permissions, CORS/domains via tcb; for CI/CD and batch ops; when the user prefers CLI; or as the first-session fallback when CloudBase MCP tools are not loaded yet (after install/config, before IDE restart). Covers tcb login (device code for Tencent Cloud accounts; --cloudbase-api-key -e for environment API Key without an account; --apiK",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "2.31.0",
+  "author": "TencentCloudBase",
+  "install_path": ".claude/skills/cloudbase-cli/SKILL.md",
+  "source": {
+    "repo": "TencentCloudBase/CloudBase-AI-Toolkit",
+    "url": "https://github.com/TencentCloudBase/CloudBase-AI-Toolkit/blob/main/config/source/skills/cloudbase-cli/SKILL.md",
+    "path": "config/source/skills/cloudbase-cli/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-23T15:21:55.602Z",
+    "stars": 1075,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-23T03:15:24Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于通过命令行管理腾讯云开发资源，适合部署函数、数据库、存储与静态站点，以及 CI/CD 和批量运维。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "nowork-studio-notfair-plugin-paid-ads-integrations",
+  "name": "paid-ads-integrations",
+  "description": "Discover, connect, and verify NotFair paid-ad integrations and their actual capabilities. Use when asked to connect an ad account, configure an ads MCP, check available tools, troubleshoot access, or determine whether NotFair can read or change a platform.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "nowork-studio",
+  "install_path": ".claude/skills/paid-ads-integrations/SKILL.md",
+  "source": {
+    "repo": "nowork-studio/notfair-plugin",
+    "url": "https://github.com/nowork-studio/notfair-plugin/blob/main/paid-ads/paid-ads-integrations/SKILL.md",
+    "path": "paid-ads/paid-ads-integrations/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-23T15:21:44.945Z",
+    "stars": 3394,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-22T06:29:05Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于发现、连接并验证付费广告平台集成，适合配置广告账户、排查权限及确认平台读写能力。"
+}

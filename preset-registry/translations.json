@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-23T14:43:12.401Z",
+  "updated_at": "2026-08-23T16:40:26.041Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -48417,6 +48417,567 @@
     "content:openai-openai-agents-python-examples-run-analysis": {
       "hash": "10c31597127ad323",
       "translated_at": "2026-08-23T14:43:12.401Z"
+    },
+    "bundle:qoderai-better-harness": {
+      "hash": "da912af45cb51472",
+      "summary_zh": "面向编码智能体工程，统一串联工作流设计、变更追踪、故障复现、评审与交接，让开发过程更可控、可验证、可复用。",
+      "translated_at": "2026-08-23T16:16:04.728Z"
+    },
+    "bundle:nowork-studio-notfair-plugin": {
+      "hash": "ccda3d19d384b4d0",
+      "summary_zh": "面向增长营销的一站式工具集，打通广告投放、SEO审计、内容生产与竞品分析，让获客策略从诊断到执行更高效。",
+      "translated_at": "2026-08-23T16:16:04.929Z"
+    },
+    "bundle:tencentcloudbase-cloudbase-ai-toolkit": {
+      "hash": "288d7f66b1d6f3fd",
+      "summary_zh": "面向 Web、小程序和 Node.js 的云开发工具合集，打通 AI、认证、存储、云函数及部署调试，帮助应用快速落地 CloudBase。",
+      "translated_at": "2026-08-23T16:16:07.815Z"
+    },
+    "skill:nowork-studio-notfair-plugin-audit": {
+      "hash": "87b46f3faa193e38",
+      "summary_zh": "用于审计 Facebook 和 Instagram 广告账户，梳理业务背景与账户健康状况，适合首次接入或排查投放问题。",
+      "translated_at": "2026-08-23T16:16:10.938Z"
+    },
+    "skill:nowork-studio-notfair-plugin-assets": {
+      "hash": "ac9e1a635c8d1086",
+      "summary_zh": "用于规划、校验并安全发布 Google Ads 素材，适合制作广告附加信息、PMax 创意或开展素材审计。",
+      "translated_at": "2026-08-23T16:16:10.945Z"
+    },
+    "preset:furkankly-zoetrope": {
+      "hash": "d7b9ff6e48c9c073",
+      "summary_zh": "一款将 Claude Code 会话实时绘成流程图的可视化工具，适合在终端或浏览器中追踪代理、子代理及工具调用。",
+      "translated_at": "2026-08-23T16:16:11.902Z"
+    },
+    "skill:nowork-studio-notfair-plugin-broken-link-checker": {
+      "hash": "210b94e42c33eb32",
+      "summary_zh": "一款网站链接巡检工具，可抓取站内页面并定位失效的内外链及来源，适合排查 404、500 错误和网站健康检查。",
+      "translated_at": "2026-08-23T16:16:13.994Z"
+    },
+    "skill:nowork-studio-notfair-plugin-backlink-audit": {
+      "hash": "431d1ea19cc2548e",
+      "summary_zh": "一款无需付费服务的外链审计工具，可识别垃圾链接、锚文本风险，并发现内链优化和外链建设机会。",
+      "translated_at": "2026-08-23T16:16:16.328Z"
+    },
+    "skill:nowork-studio-notfair-plugin-competitor-pages": {
+      "hash": "09d90441a7b4d22b",
+      "summary_zh": "一款竞品页面差距分析工具，可对比高排名页面，找出内容、结构和 SEO 短板，并生成具体改进建议。",
+      "translated_at": "2026-08-23T16:16:16.721Z"
+    },
+    "skill:nowork-studio-notfair-plugin-content-planner": {
+      "hash": "cc73a218cd471a29",
+      "summary_zh": "一款基于搜索控制台真实数据的内容规划工具，可挖掘高点击潜力的 SEO 选题，并生成按日期和优先级排序的内容日历。",
+      "translated_at": "2026-08-23T16:16:18.536Z"
+    },
+    "skill:nowork-studio-notfair-plugin-copy": {
+      "hash": "212b529bc588c3e7",
+      "summary_zh": "用于生成和 A/B 测试 Google 广告文案，适合制作标题、描述及响应式搜索广告变体，优化广告信息并提升点击率。",
+      "translated_at": "2026-08-23T16:16:20.232Z"
+    },
+    "skill:nowork-studio-notfair-plugin-content-writer": {
+      "hash": "2653f9143772c04d",
+      "summary_zh": "一款遵循谷歌内容规范的 SEO 写作工具，适合撰写博客、落地页和产品文案，或优化现有页面以提升搜索排名。",
+      "translated_at": "2026-08-23T16:16:20.248Z"
+    },
+    "skill:nowork-studio-notfair-plugin-creative": {
+      "hash": "c9e3ef0a89cad7bd",
+      "summary_zh": "基于数据证据生成 Facebook 和 Instagram 广告创意简报、文案角度及可测试素材方案，适合策划新广告或迭代创意。",
+      "translated_at": "2026-08-23T16:16:21.575Z"
+    },
+    "skill:nowork-studio-notfair-plugin-gemini": {
+      "hash": "38058c5471b50d5a",
+      "summary_zh": "调用 Google Gemini 对广告投放、SEO 或代码改动进行复核、压力测试和咨询，适合需要跨模型第二意见的场景。",
+      "translated_at": "2026-08-23T16:16:23.936Z"
+    },
+    "skill:nowork-studio-notfair-plugin-ecommerce-seo": {
+      "hash": "c06ec326c70d3e5f",
+      "summary_zh": "一套面向各类网店的SEO审计方案，用于发现商品页、筛选导航、分页等问题，减少重复内容与搜索引擎抓取浪费。",
+      "translated_at": "2026-08-23T16:16:24.382Z"
+    },
+    "skill:nowork-studio-notfair-plugin-geo-optimizer": {
+      "hash": "1a2123b6e59116e4",
+      "summary_zh": "面向生成式搜索的内容优化工具，可审计并改写内容，提升在主流 AI 搜索回答中的排名和引用率。",
+      "translated_at": "2026-08-23T16:16:24.651Z"
+    },
+    "skill:nowork-studio-notfair-plugin-google-ads-audit": {
+      "hash": "6bab607202e9edb1",
+      "summary_zh": "用于审查 Google Ads 账户，结合业务背景分析投放健康度，并为后续广告优化建立可复用的上下文。",
+      "translated_at": "2026-08-23T16:16:27.923Z"
+    },
+    "skill:nowork-studio-notfair-plugin-google-ads": {
+      "hash": "e13b35c75984a1b9",
+      "summary_zh": "一款用于管理谷歌广告投放的工具，适合优化关键词、出价、预算和转化，批量调整广告系列并提升投放效果。",
+      "translated_at": "2026-08-23T16:16:28.325Z"
+    },
+    "skill:nowork-studio-notfair-plugin-google-ads-assets": {
+      "hash": "ac9e1a635c8d1086",
+      "summary_zh": "用于规划、校验并安全发布 Google Ads 广告素材，适合制作附加链接、宣传信息、图片及效果最大化广告创意。",
+      "translated_at": "2026-08-23T16:16:28.497Z"
+    },
+    "skill:nowork-studio-notfair-plugin-google-ads-copy": {
+      "hash": "212b529bc588c3e7",
+      "summary_zh": "用于生成和 A/B 测试 Google 广告文案，适合批量创作标题、描述及响应式搜索广告组件，优化广告信息与点击率。",
+      "translated_at": "2026-08-23T16:16:30.893Z"
+    },
+    "skill:nowork-studio-notfair-plugin-google-analytics": {
+      "hash": "b2094701982d0c53",
+      "summary_zh": "通过 NotFair MCP 分析 GA4 流量、获客、转化及电商表现，适合排查数据下滑、渠道归因和管理衡量配置。",
+      "translated_at": "2026-08-23T16:16:31.811Z"
+    },
+    "skill:nowork-studio-notfair-plugin-google-ads-landing": {
+      "hash": "79ae0028a83b63b0",
+      "summary_zh": "用于评估和诊断 Google Ads 落地页，排查高点击低转化、广告与页面不匹配及质量得分偏低等问题。",
+      "translated_at": "2026-08-23T16:16:34.249Z"
+    },
+    "skill:nowork-studio-notfair-plugin-hreflang-international": {
+      "hash": "8f51bdcd782a7105",
+      "summary_zh": "面向国际化和多语言网站的SEO审计工具，用于排查hreflang配置错误和信号冲突，适合出海网站优化搜索排名。",
+      "translated_at": "2026-08-23T16:16:35.925Z"
+    },
+    "skill:nowork-studio-notfair-plugin-image-seo": {
+      "hash": "f5b085ad6a34e815",
+      "summary_zh": "用于审查网站图片的 SEO 与性能问题，提升 Google 图片收录和排名，并改善核心网页指标。",
+      "translated_at": "2026-08-23T16:16:37.592Z"
+    },
+    "skill:nowork-studio-notfair-plugin-keyword-research": {
+      "hash": "2d00cc2c4df6537d",
+      "summary_zh": "一款从种子词或细分领域挖掘并评估关键词的工具，适合制定 SEO/GEO 内容策略和搭建主题集群。",
+      "translated_at": "2026-08-23T16:16:38.074Z"
+    },
+    "skill:nowork-studio-notfair-plugin-landing": {
+      "hash": "79ae0028a83b63b0",
+      "summary_zh": "用于评估和诊断 Google Ads 落地页，帮助定位高点击低转化、广告与页面不匹配及落地页体验评分低等问题。",
+      "translated_at": "2026-08-23T16:16:39.534Z"
+    },
+    "skill:nowork-studio-notfair-plugin-meta-tags-optimizer": {
+      "hash": "fb2b2440d58604f7",
+      "summary_zh": "一款网页元标签优化工具，可生成多组标题和描述方案并预览搜索与社交展示，适合提升点击率和开展 A/B 测试。",
+      "translated_at": "2026-08-23T16:16:42.566Z"
+    },
+    "skill:nowork-studio-notfair-plugin-local-seo": {
+      "hash": "5d970f7a6cc0da3c",
+      "summary_zh": "一款本地 SEO 与谷歌商家资料审计工具，用于诊断地图和本地搜索排名不佳的原因，并生成优化方案。",
+      "translated_at": "2026-08-23T16:16:42.671Z"
+    },
+    "skill:nowork-studio-notfair-plugin-manage": {
+      "hash": "b7109c195b6cdc0c",
+      "summary_zh": "一款管理 Facebook 和 Instagram 广告的工具，适合监控投放效果、优化预算与调整广告活动。",
+      "translated_at": "2026-08-23T16:16:42.878Z"
+    },
+    "skill:nowork-studio-notfair-plugin-paid-ads-amazon": {
+      "hash": "c33ff06b3287caf4",
+      "summary_zh": "一款亚马逊广告规划与复盘工具，通过利润导向的ACoS及商品、搜索词规则优化投放表现。",
+      "translated_at": "2026-08-23T16:16:46.195Z"
+    },
+    "skill:nowork-studio-notfair-plugin-paid-ads": {
+      "hash": "6da0967e24274dfc",
+      "summary_zh": "一套基于数据和安全规范的跨平台广告协作工具，适合制定投放策略、分配预算、评估效果并处理多渠道广告需求。",
+      "translated_at": "2026-08-23T16:16:46.843Z"
+    },
+    "skill:nowork-studio-notfair-plugin-notfair-upgrade-skill": {
+      "hash": "cf7292fd9769c1c9",
+      "summary_zh": "用于将 NotFair 插件升级到最新版，自动同步仓库、更新缓存与安装记录，并处理启动时的新版本提示。",
+      "translated_at": "2026-08-23T16:16:49.605Z"
+    },
+    "skill:nowork-studio-notfair-plugin-paid-ads-creative": {
+      "hash": "861aaec5395b05d7",
+      "summary_zh": "一款付费广告创意策划工具，可生成文案方向、素材构思和可量化测试方案，适合广告焕新及缓解创意疲劳。",
+      "translated_at": "2026-08-23T16:16:50.305Z"
+    },
+    "skill:nowork-studio-notfair-plugin-paid-ads-chatgpt": {
+      "hash": "c24cd346cead94b5",
+      "summary_zh": "用于规划和复盘 ChatGPT 广告实验，适合在缺少平台权限时设计对话广告方案，或基于已验证数据评估投放效果。",
+      "translated_at": "2026-08-23T16:16:50.430Z"
+    },
+    "skill:nowork-studio-notfair-plugin-paid-ads-launch": {
+      "hash": "5e03924c97edd97b",
+      "summary_zh": "用于规划和准备付费广告或跨渠道测试，适合在正式投放前完成广告搭建与预算分配。",
+      "translated_at": "2026-08-23T16:16:53.651Z"
+    },
+    "skill:nowork-studio-notfair-plugin-paid-ads-integrations": {
+      "hash": "dbfa7b8567296fa1",
+      "summary_zh": "用于发现、连接并验证付费广告平台集成，适合配置广告账户、排查权限及确认平台读写能力。",
+      "translated_at": "2026-08-23T16:16:54.383Z"
+    },
+    "skill:nowork-studio-notfair-plugin-paid-ads-guide": {
+      "hash": "964046c93b78aa15",
+      "summary_zh": "一份付费广告工具使用指南，帮助了解安装、账号连接、平台支持、功能限制及常见故障排查。",
+      "translated_at": "2026-08-23T16:16:54.410Z"
+    },
+    "skill:nowork-studio-notfair-plugin-paid-ads-optimize": {
+      "hash": "fe86859069c4ab15",
+      "summary_zh": "诊断付费广告中的预算浪费、投放节奏和分配问题，为降本、调价、扩量及改善转化效果提供稳妥建议。",
+      "translated_at": "2026-08-23T16:16:58.097Z"
+    },
+    "skill:nowork-studio-notfair-plugin-paid-ads-linkedin": {
+      "hash": "78360dbc6b3056e9",
+      "summary_zh": "一款领英广告审计与运营工具，适合诊断投放问题、优化定向和预算，并安全执行获批的广告调整。",
+      "translated_at": "2026-08-23T16:16:58.634Z"
+    },
+    "skill:nowork-studio-notfair-plugin-paid-ads-review": {
+      "hash": "8f2d6278472004a9",
+      "summary_zh": "用于汇总多平台或导出数据，生成只读且有数据依据的付费广告表现评估，适合周期报告、投放复盘及转化追踪检查。",
+      "translated_at": "2026-08-23T16:17:00.366Z"
+    },
+    "skill:nowork-studio-notfair-plugin-paid-ads-tiktok": {
+      "hash": "7b07a8b425bd602e",
+      "summary_zh": "用于规划和复盘 TikTok 广告创意实验，兼顾效果衡量、内容授权与转化规范，适合短视频投放及达人合作。",
+      "translated_at": "2026-08-23T16:17:01.710Z"
+    },
+    "skill:nowork-studio-notfair-plugin-paid-ads-x": {
+      "hash": "d777563114e2194d",
+      "summary_zh": "通过 NotFair MCP 审计和管理已连接的 X 广告账户，适合分析投放表现、诊断问题并安全调整预算、出价与定向。",
+      "translated_at": "2026-08-23T16:17:02.961Z"
+    },
+    "skill:nowork-studio-notfair-plugin-paid-ads-setup": {
+      "hash": "737a144c5037b21b",
+      "summary_zh": "一款付费广告环境配置工具，用于接入主流广告账户并复用品牌与投放上下文，适合新工作区初始化或安全启用广告代理。",
+      "translated_at": "2026-08-23T16:17:04.240Z"
+    },
+    "skill:nowork-studio-notfair-plugin-schema-markup-generator": {
+      "hash": "8f29c512a9875137",
+      "summary_zh": "用于生成并校验网页 JSON-LD 结构化数据，适合添加 FAQ、商品等标记以争取 Google 富媒体搜索结果。",
+      "translated_at": "2026-08-23T16:17:05.920Z"
+    },
+    "skill:nowork-studio-notfair-plugin-programmatic-seo": {
+      "hash": "d63f166bdc6d0ecd",
+      "summary_zh": "一套用于规划和审计规模化模板页面的SEO方法，适合批量覆盖长尾词并规避内容重复、低质及收录风险。",
+      "translated_at": "2026-08-23T16:17:06.027Z"
+    },
+    "skill:nowork-studio-notfair-plugin-search-console": {
+      "hash": "419bd446598ec60b",
+      "summary_zh": "通过 MCP 查询和管理 Google Search Console，适合分析页面流量与排名、检查收录状态及维护站点地图。",
+      "translated_at": "2026-08-23T16:17:08.174Z"
+    },
+    "skill:nowork-studio-notfair-plugin-seo-drift": {
+      "hash": "2417144566286f88",
+      "summary_zh": "一款网站 SEO 状态快照与回归监控工具，可持续对比排名、收录及页面配置变化，及时发现改版或发布导致的异常。",
+      "translated_at": "2026-08-23T16:17:09.853Z"
+    },
+    "skill:nowork-studio-notfair-plugin-seo-analysis": {
+      "hash": "2a503300cadffe77",
+      "summary_zh": "一套整合搜索控制台、性能指标与技术爬取数据的SEO审计工具，适合诊断流量下滑、发现优化机会并制定行动计划。",
+      "translated_at": "2026-08-23T16:17:12.200Z"
+    },
+    "skill:nowork-studio-notfair-plugin-seo-page": {
+      "hash": "08daa49bce2ea91b",
+      "summary_zh": "面向单个网页的 SEO 审计工具，可综合评估内容与技术表现，并生成评分和可执行的优化建议。",
+      "translated_at": "2026-08-23T16:17:13.552Z"
+    },
+    "skill:nowork-studio-notfair-plugin-setup-cms": {
+      "hash": "717b7a0399cb6ff2",
+      "summary_zh": "用于连接并配置主流 CMS 与 SEO 工具，自动验证连接并写入凭据，适合解决 SEO 报告缺少内容数据的问题。",
+      "translated_at": "2026-08-23T16:17:15.519Z"
+    },
+    "skill:nowork-studio-notfair-plugin-sxo": {
+      "hash": "e2c6ddb5b3ab7ab1",
+      "summary_zh": "一款连接SEO与用户体验、转化优化的全链路审计工具，帮助提升搜索点击、页面留存和转化，减少用户跳回搜索页。",
+      "translated_at": "2026-08-23T16:17:17.883Z"
+    },
+    "skill:nowork-studio-notfair-plugin-sitemap-audit": {
+      "hash": "7b3af45cc3dcde3a",
+      "summary_zh": "一款 XML 站点地图审计工具，用于发现浪费抓取预算、拖慢收录的问题，适合网站 SEO 排查与修复。",
+      "translated_at": "2026-08-23T16:17:18.267Z"
+    },
+    "skill:qoderai-better-harness-better-harness": {
+      "hash": "5cf7d4d1be177961",
+      "summary_zh": "一个通过斜杠命令调用的编码代理运行框架审查工具，适合优化任务生命周期、减少重复工作并规划和跟踪修复。",
+      "translated_at": "2026-08-23T16:17:20.113Z"
+    },
+    "skill:qoderai-better-harness-change-traceability-review": {
+      "hash": "bd986755ff6ad9b3",
+      "summary_zh": "一款变更追溯审查工具，用于串联需求、代码提交与测试证据，帮助识别评审风险并改进协作流程。",
+      "translated_at": "2026-08-23T16:17:23.263Z"
+    },
+    "skill:qoderai-better-harness-diagnose-backend-bug": {
+      "hash": "8f8b96f8583cdde6",
+      "summary_zh": "一款后端故障诊断工具，适合结合问题单、日志、链路和堆栈等信息定位服务、接口、队列或定时任务中的跨系统问题。",
+      "translated_at": "2026-08-23T16:17:23.575Z"
+    },
+    "skill:qoderai-better-harness-generate-harness-dsl": {
+      "hash": "bf9323fed39335be",
+      "summary_zh": "用于生成、修改和审查 Harness as Code 配置文件，确保智能体工作流、工具连接及部署配置可编译并正确解析。",
+      "translated_at": "2026-08-23T16:17:24.792Z"
+    },
+    "skill:qoderai-better-harness-handoff": {
+      "hash": "9bddaee1db80a2dd",
+      "summary_zh": "用于准备范围明确的任务交接内容，帮助团队清晰传递上下文和后续事项，适合协作换手场景。",
+      "translated_at": "2026-08-23T16:17:28.882Z"
+    },
+    "skill:qoderai-better-harness-harness-skill-creator": {
+      "hash": "741ba41a450726a6",
+      "summary_zh": "用于从现有仓库、工作流或评测语料构建精简可复用的智能体技能，并通过验证与前向测试保障可靠性。",
+      "translated_at": "2026-08-23T16:17:29.306Z"
+    },
+    "skill:qoderai-better-harness-intent-correlation-analysis": {
+      "hash": "02ca6eb7a49c603d",
+      "summary_zh": "一款意图关联分析工具，用证据串联用户输入、执行过程、代码提交和验证结果，帮助人工追溯编程智能体为何产生某项变更。",
+      "translated_at": "2026-08-23T16:17:32.137Z"
+    },
+    "skill:qoderai-better-harness-reproduce-frontend-bug": {
+      "hash": "abe200ea364f98cb",
+      "summary_zh": "将工单、截图或视频还原为可重复回放的前端缺陷现场，适合在诊断修复前保留浏览器或桌面界面问题证据。",
+      "translated_at": "2026-08-23T16:17:32.910Z"
+    },
+    "skill:qoderai-better-harness-skill-review": {
+      "hash": "057848bdca779774",
+      "summary_zh": "用于审查编程助手及仓库内技能的提示链，发现触发、流程、指令重复、输出可读性和验证等问题，并判断是否需要修改。",
+      "translated_at": "2026-08-23T16:17:33.227Z"
+    },
+    "skill:rindig-icm-architect": {
+      "hash": "d5a88c34d1cc800d",
+      "summary_zh": "把流程、知识或现有资料库重构为智能体可执行的文件夹工作区，适合沉淀重复工作流、整理散乱知识和搭建团队知识地图。",
+      "translated_at": "2026-08-23T16:17:37.172Z"
+    },
+    "skill:qoderai-better-harness-verify": {
+      "hash": "8f3fe6295a175ea7",
+      "summary_zh": "一个用于验证单个、范围明确变更的工具，适合快速确认局部修改是否符合预期。",
+      "translated_at": "2026-08-23T16:17:37.205Z"
+    },
+    "skill:qoderai-better-harness-triangulate-spec-review": {
+      "hash": "a573be786d6221a7",
+      "summary_zh": "这是一个用多个独立 AI 交叉审查架构规范和设计文档的工具，能统一风险分级并聚焦修复阻塞或高风险问题。",
+      "translated_at": "2026-08-23T16:17:38.392Z"
+    },
+    "skill:tencentcloudbase-cloudbase-ai-toolkit-ai-model-nodejs": {
+      "hash": "9788f691865c4818",
+      "summary_zh": "用于在 Node.js 后端接入文本大模型与图像生成，适合云函数、Serverless API、定时任务和模型代理等场景。",
+      "translated_at": "2026-08-23T16:17:41.563Z"
+    },
+    "skill:tencentcloudbase-cloudbase-ai-toolkit-ai-model-web": {
+      "hash": "2bfe7ee77c5e0976",
+      "summary_zh": "面向网页和前端应用的 AI 模型接入方案，可通过 CloudBase JS SDK 在浏览器中直接生成或流式输出文本，无需搭建 Node.js 代理。",
+      "translated_at": "2026-08-23T16:17:42.279Z"
+    },
+    "skill:tencentcloudbase-cloudbase-ai-toolkit-ai-model-wechat": {
+      "hash": "6085df471fcb3052",
+      "summary_zh": "面向微信及企业微信小程序的 AI 接入工具，帮助开发者通过云开发快速实现文本生成和流式对话。",
+      "translated_at": "2026-08-23T16:17:43.400Z"
+    },
+    "skill:tencentcloudbase-cloudbase-ai-toolkit-auth-nodejs-cloudbase": {
+      "hash": "2770a910bd315416",
+      "summary_zh": "面向 Node.js 服务端的云开发身份认证指南，适合识别调用者、查询用户信息，或将现有用户体系接入云开发。",
+      "translated_at": "2026-08-23T16:17:44.879Z"
+    },
+    "skill:tencentcloudbase-cloudbase-ai-toolkit-auth-tool-cloudbase": {
+      "hash": "0513604f29131e6d",
+      "summary_zh": "用于配置和检查 CloudBase 身份认证服务，确保登录方式、密钥及短信邮件发送等前置条件就绪，适合开发认证流程前使用。",
+      "translated_at": "2026-08-23T16:17:45.457Z"
+    },
+    "skill:tencentcloudbase-cloudbase-ai-toolkit-auth-web-cloudbase": {
+      "hash": "5105e151c2985bde",
+      "summary_zh": "一套面向前端的云开发 Web 认证接入指南，适合快速实现多种登录方式和完整的用户管理。",
+      "translated_at": "2026-08-23T16:17:47.660Z"
+    },
+    "skill:tencentcloudbase-cloudbase-ai-toolkit-auth-wechat-miniprogram": {
+      "hash": "a0a9a130737f58f4",
+      "summary_zh": "一份云开发微信小程序原生认证指南，适合处理用户身份、获取 OPENID/UNIONID 及理解 wx.cloud 自动登录机制。",
+      "translated_at": "2026-08-23T16:17:48.997Z"
+    },
+    "skill:tencentcloudbase-cloudbase-ai-toolkit-cloud-functions": {
+      "hash": "98ca337119a58376",
+      "summary_zh": "一份云开发函数运行时指南，帮助开发者构建、部署和调试事件函数或 HTTP 函数，适合编写云端应用逻辑。",
+      "translated_at": "2026-08-23T16:17:49.697Z"
+    },
+    "skill:tencentcloudbase-cloudbase-ai-toolkit-cloudbase": {
+      "hash": "b0deb56d540308ef",
+      "summary_zh": "面向腾讯云开发项目的全流程开发助手，适合跨端应用的设计、部署、调试、迁移及云端服务集成。",
+      "translated_at": "2026-08-23T16:17:53.008Z"
+    },
+    "skill:tencentcloudbase-cloudbase-ai-toolkit-cloudbase-agent": {
+      "hash": "6e4c6c0df52129e7",
+      "summary_zh": "一套用于构建和部署 AI 智能体的跨语言 SDK，适合接入主流框架并实现网页或小程序与智能体的流式交互。",
+      "translated_at": "2026-08-23T16:17:53.208Z"
+    },
+    "skill:tencentcloudbase-cloudbase-ai-toolkit-cloud-storage-web": {
+      "hash": "df1f72af72cf3aeb",
+      "summary_zh": "一份基于 Web SDK 使用 CloudBase 云存储的完整指南，适合实现文件上传下载、临时链接和文件管理。",
+      "translated_at": "2026-08-23T16:17:54.425Z"
+    },
+    "skill:tencentcloudbase-cloudbase-ai-toolkit-cloudbase-cli": {
+      "hash": "065695e50b1accff",
+      "summary_zh": "用于通过命令行管理腾讯云开发资源，适合部署函数、数据库、存储与静态站点，以及 CI/CD 和批量运维。",
+      "translated_at": "2026-08-23T16:17:57.028Z"
+    },
+    "skill:tencentcloudbase-cloudbase-ai-toolkit-cloudbase-document-database-in-wechat-miniprogram": {
+      "hash": "42bb816f47321ea8",
+      "summary_zh": "微信小程序中的云端文档数据库 SDK，适合实现数据增删改查、分页、聚合及地理位置查询。",
+      "translated_at": "2026-08-23T16:17:57.607Z"
+    },
+    "skill:tencentcloudbase-cloudbase-ai-toolkit-cloudbase-code-review": {
+      "hash": "5439b3e0313a4e95",
+      "summary_zh": "一款面向云开发项目的代码审查工具，适合上线前排查鉴权、数据库、存储配置和 SDK 调用等常见隐患。",
+      "translated_at": "2026-08-23T16:17:58.096Z"
+    },
+    "skill:tencentcloudbase-cloudbase-ai-toolkit-cloudbase-platform": {
+      "hash": "fcc0e9a5cdd870a1",
+      "summary_zh": "面向云开发用户的平台概览与路由指南，帮助理解核心能力、选择合适方案并快速定位控制台功能。",
+      "translated_at": "2026-08-23T16:18:00.617Z"
+    },
+    "skill:tencentcloudbase-cloudbase-ai-toolkit-cloudbase-wechat-integration": {
+      "hash": "d46c3464485f4372",
+      "summary_zh": "一套云开发接入微信生态的实践指南，适合开发、排查和扩展小程序、公众号及二维码支付与授权流程。",
+      "translated_at": "2026-08-23T16:18:01.501Z"
+    },
+    "skill:tencentcloudbase-cloudbase-ai-toolkit-cloudbase-document-database-web-sdk": {
+      "hash": "d14a7feba2597a89",
+      "summary_zh": "用于在 Web 端操作 CloudBase NoSQL 文档数据库，适合查询、新增、更新和删除集合数据，不适用于 PostgreSQL。",
+      "translated_at": "2026-08-23T16:18:02.301Z"
+    },
+    "skill:tencentcloudbase-cloudbase-ai-toolkit-http-api-cloudbase": {
+      "hash": "80e909f4c88b622b",
+      "summary_zh": "一份云开发平台 HTTP API 调用指南，适合后端、脚本或无 SDK 客户端直接对接平台接口。",
+      "translated_at": "2026-08-23T16:18:05.551Z"
+    },
+    "skill:tencentcloudbase-cloudbase-ai-toolkit-data-model-creation": {
+      "hash": "f329f53c7370e968",
+      "summary_zh": "已弃用的复杂数据建模辅助工具，旧环境可用于高级建模，新项目应改用对应的 MySQL 或 PostgreSQL 工具。",
+      "translated_at": "2026-08-23T16:18:05.959Z"
+    },
+    "skill:tencentcloudbase-cloudbase-ai-toolkit-miniprogram-development": {
+      "hash": "4ba04d9cc45e7e2b",
+      "summary_zh": "一套微信小程序开发技能，适合完成项目搭建、调试测试、真机预览、发布上线及性能优化推广。",
+      "translated_at": "2026-08-23T16:18:08.868Z"
+    },
+    "skill:tencentcloudbase-cloudbase-ai-toolkit-cloudrun-development": {
+      "hash": "1b35ec32580a3cb6",
+      "summary_zh": "一套云托管后端开发规范，适合部署长连接、多语言或自定义环境服务，并排查容器启动、探针及镜像拉取故障。",
+      "translated_at": "2026-08-23T16:18:09.101Z"
+    },
+    "skill:tencentcloudbase-cloudbase-ai-toolkit-minimal-web-baas-demo": {
+      "hash": "0442128c10b0661d",
+      "summary_zh": "一套基于 CloudBase 的极简全栈模板，用于快速搭建留言板、Todo、笔记、看板等以 CRUD 为主的 Web 演示。",
+      "translated_at": "2026-08-23T16:18:09.409Z"
+    },
+    "skill:tencentcloudbase-cloudbase-ai-toolkit-ops-inspector": {
+      "hash": "0e0a4b7c6f00770f",
+      "summary_zh": "面向 CloudBase 的智能巡检与诊断工具，适合排查健康状态、日志告警、流量指标及常见调用故障。",
+      "translated_at": "2026-08-23T16:18:12.895Z"
+    },
+    "skill:tencentcloudbase-cloudbase-ai-toolkit-py": {
+      "hash": "74070f2c4370e604",
+      "summary_zh": "用于构建生产级 AI 智能体后端的 Python SDK，适合开发聊天机器人、智能体服务及人工介入工作流。",
+      "translated_at": "2026-08-23T16:18:13.910Z"
+    },
+    "skill:tencentcloudbase-cloudbase-ai-toolkit-postgresql-development-cloudbase": {
+      "hash": "a4f0c480d4b74a11",
+      "summary_zh": "一套面向云开发 PostgreSQL 应用的开发调试方案，适合处理建表、数据读写、权限认证和后台管理。",
+      "translated_at": "2026-08-23T16:18:15.093Z"
+    },
+    "skill:tencentcloudbase-cloudbase-ai-toolkit-relational-database-mcp-cloudbase": {
+      "hash": "1f6b21b1a024fcee",
+      "summary_zh": "一套已弃用的 CloudBase MySQL 智能体操作规范，用于安全完成数据库创建、查询、销毁和权限管理，新环境应改用 PostgreSQL。",
+      "translated_at": "2026-08-23T16:18:20.005Z"
+    },
+    "skill:tencentcloudbase-cloudbase-ai-toolkit-skills": {
+      "hash": "272ba9dcc787cf51",
+      "summary_zh": "一套 CloudBase 应用的一站式执行指南，适合接手含待办或既有逻辑的项目，并将数据库与认证迁移到新架构。",
+      "translated_at": "2026-08-23T16:18:20.787Z"
+    },
+    "skill:tencentcloudbase-cloudbase-ai-toolkit-relational-database-web-cloudbase": {
+      "hash": "3d20eb2cc781c546",
+      "summary_zh": "已弃用的 Web 前端数据库接入方案，可在浏览器中执行 Supabase 风格查询，新项目应改用 PostgreSQL 的 app.rdb()。",
+      "translated_at": "2026-08-23T16:18:20.859Z"
+    },
+    "skill:tencentcloudbase-cloudbase-ai-toolkit-spec-workflow": {
+      "hash": "358c986e8a5dde09",
+      "summary_zh": "一套面向中大型改动的开发工作流，适合在编码前明确需求、技术方案和任务计划，尤其适用于多模块或验收标准不清的项目。",
+      "translated_at": "2026-08-23T16:18:24.252Z"
+    },
+    "skill:tencentcloudbase-cloudbase-ai-toolkit-ts": {
+      "hash": "40eef2b4402d1441",
+      "summary_zh": "一个基于 TypeScript 和 AG-UI 协议的 AI 智能体开发套件，适合快速部署服务并接入网页或微信小程序界面。",
+      "translated_at": "2026-08-23T16:18:24.396Z"
+    },
+    "skill:tencentcloudbase-cloudbase-ai-toolkit-ui-design": {
+      "hash": "a2536ef8f92ba7cb",
+      "summary_zh": "一款面向 Web 和小程序开发前期的 UI 设计工具，可梳理视觉方向、界面层级与布局，并快速产出规范和原型。",
+      "translated_at": "2026-08-23T16:18:25.402Z"
+    },
+    "skill:teng-lin-notebooklm-py": {
+      "hash": "f238840d9c6bba16",
+      "summary_zh": "为 Google NotebookLM 提供完整 API，适合自动创建笔记、导入资料并生成播客等多种内容。",
+      "translated_at": "2026-08-23T16:18:28.383Z"
+    },
+    "skill:tencentcloudbase-cloudbase-ai-toolkit-web-development": {
+      "hash": "a30dd6a0dc208c24",
+      "summary_zh": "用于产品方向明确后的 Web 前端开发，可协助实现、集成、调试、构建、部署和验证，适合 React、Vue、Vite 及 CloudBase 场景。",
+      "translated_at": "2026-08-23T16:18:29.222Z"
+    },
+    "content:nowork-studio-notfair-plugin-assets": {
+      "hash": "7fe241a327e052ff",
+      "translated_at": "2026-08-23T16:36:52.225Z"
+    },
+    "content:nowork-studio-notfair-plugin-audit": {
+      "hash": "8bea8165d11f4d13",
+      "translated_at": "2026-08-23T16:38:13.404Z"
+    },
+    "content:nowork-studio-notfair-plugin-backlink-audit": {
+      "hash": "ef839708e1df9cdd",
+      "translated_at": "2026-08-23T16:38:17.249Z"
+    },
+    "content:nowork-studio-notfair-plugin-broken-link-checker": {
+      "hash": "9d11b2471299c689",
+      "translated_at": "2026-08-23T16:38:22.348Z"
+    },
+    "content:nowork-studio-notfair-plugin-competitor-pages": {
+      "hash": "8369271e5d4ec592",
+      "translated_at": "2026-08-23T16:38:27.727Z"
+    },
+    "content:nowork-studio-notfair-plugin-content-planner": {
+      "hash": "79edfc7024a679c9",
+      "translated_at": "2026-08-23T16:38:31.075Z"
+    },
+    "content:nowork-studio-notfair-plugin-content-writer": {
+      "hash": "2d3cce65917fb44b",
+      "translated_at": "2026-08-23T16:38:35.094Z"
+    },
+    "content:nowork-studio-notfair-plugin-copy": {
+      "hash": "4c113e91fb08a15c",
+      "translated_at": "2026-08-23T16:39:47.733Z"
+    },
+    "content:nowork-studio-notfair-plugin-ecommerce-seo": {
+      "hash": "dba6537e1e99ac74",
+      "translated_at": "2026-08-23T16:40:04.394Z"
+    },
+    "content:nowork-studio-notfair-plugin-gemini": {
+      "hash": "375e0b2ca1ac8e9a",
+      "translated_at": "2026-08-23T16:40:08.913Z"
+    },
+    "content:nowork-studio-notfair-plugin-creative": {
+      "hash": "c498b1e6e880a6ad",
+      "translated_at": "2026-08-23T16:40:10.499Z"
+    },
+    "content:nowork-studio-notfair-plugin-geo-optimizer": {
+      "hash": "6996ccd2860159f2",
+      "translated_at": "2026-08-23T16:40:13.576Z"
+    },
+    "content:nowork-studio-notfair-plugin-google-ads": {
+      "hash": "1b0980bede0ecbb7",
+      "translated_at": "2026-08-23T16:40:14.982Z"
+    },
+    "content:nowork-studio-notfair-plugin-google-ads-assets": {
+      "hash": "bdb972adfcc58cad",
+      "translated_at": "2026-08-23T16:40:17.744Z"
+    },
+    "content:nowork-studio-notfair-plugin-google-ads-audit": {
+      "hash": "7b778da50fba0aff",
+      "translated_at": "2026-08-23T16:40:18.251Z"
+    },
+    "content:nowork-studio-notfair-plugin-google-ads-landing": {
+      "hash": "37f9c24fea338084",
+      "translated_at": "2026-08-23T16:40:21.532Z"
+    },
+    "content:nowork-studio-notfair-plugin-google-ads-copy": {
+      "hash": "7b3e028c1d929cb4",
+      "translated_at": "2026-08-23T16:40:22.444Z"
+    },
+    "content:nowork-studio-notfair-plugin-google-analytics": {
+      "hash": "b69605f7a5510e0a",
+      "translated_at": "2026-08-23T16:40:24.645Z"
+    },
+    "content:nowork-studio-notfair-plugin-hreflang-international": {
+      "hash": "eb9a23c523d72444",
+      "translated_at": "2026-08-23T16:40:26.041Z"
     }
   }
 }

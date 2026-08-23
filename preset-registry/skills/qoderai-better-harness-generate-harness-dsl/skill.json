@@ -1,0 +1,26 @@
+{
+  "id": "qoderai-better-harness-generate-harness-dsl",
+  "name": "generate-harness-dsl",
+  "description": "Generate, revise, or review complete Harness as Code `.harness` files when a coding-agent workflow, agent role, skill, tool contract, MCP connection, runtime, or deployment must be compiler-valid and resolvable with `@qoder-ai/harness`.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "QoderAI",
+  "install_path": ".claude/skills/generate-harness-dsl/SKILL.md",
+  "source": {
+    "repo": "QoderAI/better-harness",
+    "url": "https://github.com/QoderAI/better-harness/blob/main/packages/harness/skills/generate-harness-dsl/SKILL.md",
+    "path": "packages/harness/skills/generate-harness-dsl/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-23T16:11:18.385Z",
+    "stars": 1953,
+    "language": "JavaScript",
+    "pushed_at": "2026-08-23T13:59:56Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于生成、修改和审查 Harness as Code 配置文件，确保智能体工作流、工具连接及部署配置可编译并正确解析。"
+}

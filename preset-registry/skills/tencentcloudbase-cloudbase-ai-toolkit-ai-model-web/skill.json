@@ -1,0 +1,26 @@
+{
+  "id": "tencentcloudbase-cloudbase-ai-toolkit-ai-model-web",
+  "name": "ai-model-web",
+  "description": "Use this skill when a browser/Web app (React, Vue, Angular, Next, Nuxt, static sites, SPAs, dashboards, AI chat UI) needs AI models via @cloudbase/js-sdk. Default routing for page/页面/Web/前端/frontend/网页/H5 AI — call directly from browser, do NOT propose a Node.js proxy. Covers generateText and streamText. Models via ai.createModel with groups cloudbase, hunyuan-exp, or custom-*. Model IDs (deepseek-v4-flash, deepseek-v3.2, hunyuan-2.0-instruct-20251111, glm-5, kimi-k2.6) go in the model field. MU",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "2.31.0",
+  "author": "TencentCloudBase",
+  "install_path": ".claude/skills/ai-model-web/SKILL.md",
+  "source": {
+    "repo": "TencentCloudBase/CloudBase-AI-Toolkit",
+    "url": "https://github.com/TencentCloudBase/CloudBase-AI-Toolkit/blob/main/config/source/skills/ai-model-web/SKILL.md",
+    "path": "config/source/skills/ai-model-web/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-23T15:21:54.236Z",
+    "stars": 1075,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-23T03:15:24Z",
+    "license": "MIT"
+  },
+  "summary_zh": "面向网页和前端应用的 AI 模型接入方案，可通过 CloudBase JS SDK 在浏览器中直接生成或流式输出文本，无需搭建 Node.js 代理。"
+}

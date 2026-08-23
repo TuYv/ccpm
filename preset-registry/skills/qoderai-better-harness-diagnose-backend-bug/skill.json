@@ -1,0 +1,26 @@
+{
+  "id": "qoderai-better-harness-diagnose-backend-bug",
+  "name": "diagnose-backend-bug",
+  "description": "Diagnose a bounded backend or multi-service failure from GitHub Issues, Jira, Aone, user-provided exports, logs, traces, responses, stack traces, or job records. Use when a service, API, RPC, worker, queue, CLI, or scheduled job bug needs correlation through the project's existing observability route before repair; do not use for frontend-only defects or generic logging reviews.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "QoderAI",
+  "install_path": ".claude/skills/diagnose-backend-bug/SKILL.md",
+  "source": {
+    "repo": "QoderAI/better-harness",
+    "url": "https://github.com/QoderAI/better-harness/blob/main/case-studies/agent-customize/bug-diagnosis-skills/diagnose-backend-bug/SKILL.md",
+    "path": "case-studies/agent-customize/bug-diagnosis-skills/diagnose-backend-bug/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-23T16:11:18.093Z",
+    "stars": 1953,
+    "language": "JavaScript",
+    "pushed_at": "2026-08-23T13:59:56Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一款后端故障诊断工具，适合结合问题单、日志、链路和堆栈等信息定位服务、接口、队列或定时任务中的跨系统问题。"
+}

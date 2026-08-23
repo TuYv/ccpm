@@ -1,0 +1,26 @@
+{
+  "id": "tencentcloudbase-cloudbase-ai-toolkit-auth-nodejs-cloudbase",
+  "name": "auth-nodejs-cloudbase",
+  "description": "CloudBase Node SDK auth guide for server-side identity, user lookup, and custom login tickets. This skill should be used when Node.js code must read caller identity, inspect end users, or bridge an existing user system into CloudBase; not when configuring providers or building client login UI.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "2.31.0",
+  "author": "TencentCloudBase",
+  "install_path": ".claude/skills/auth-nodejs-cloudbase/SKILL.md",
+  "source": {
+    "repo": "TencentCloudBase/CloudBase-AI-Toolkit",
+    "url": "https://github.com/TencentCloudBase/CloudBase-AI-Toolkit/blob/main/config/source/skills/auth-nodejs-cloudbase/SKILL.md",
+    "path": "config/source/skills/auth-nodejs-cloudbase/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-23T15:21:54.482Z",
+    "stars": 1075,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-23T03:15:24Z",
+    "license": "MIT"
+  },
+  "summary_zh": "面向 Node.js 服务端的云开发身份认证指南，适合识别调用者、查询用户信息，或将现有用户体系接入云开发。"
+}

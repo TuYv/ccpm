@@ -1,0 +1,26 @@
+{
+  "id": "rindig-icm-architect",
+  "name": "icm-architect",
+  "description": "Design any process, idea, problem, or body of knowledge into an ICM (Interpretable Context Methodology) workspace — folder structure as agent architecture — or restructure an existing folder, repo, or vault into one. Use when the user wants to (1) turn a recurring workflow into an agent-runnable folder pipeline, (2) organize scattered notes, files, or knowledge into a library one AI agent can walk, (3) map a team or company as connected context (\"context map\", \"second brain\", \"team brain\", \"know",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "RinDig",
+  "install_path": ".claude/skills/./SKILL.md",
+  "source": {
+    "repo": "RinDig/icm-architect",
+    "url": "https://github.com/RinDig/icm-architect/blob/main/SKILL.md",
+    "path": "SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-23T15:20:14.319Z",
+    "stars": 1214,
+    "language": null,
+    "pushed_at": "2026-08-14T23:36:54Z",
+    "license": "MIT"
+  },
+  "summary_zh": "把流程、知识或现有资料库重构为智能体可执行的文件夹工作区，适合沉淀重复工作流、整理散乱知识和搭建团队知识地图。"
+}

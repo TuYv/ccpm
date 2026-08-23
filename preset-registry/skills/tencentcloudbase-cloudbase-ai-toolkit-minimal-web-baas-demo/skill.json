@@ -1,0 +1,26 @@
+{
+  "id": "tencentcloudbase-cloudbase-ai-toolkit-minimal-web-baas-demo",
+  "name": "minimal-web-baas-demo",
+  "description": "Fast path for a minimal CloudBase Web + database demo (最小前后端 / 最小可用 fullstack / Lovable-like BaaS). Defaults to @cloudbase/js-sdk client CRUD (NoSQL app.database / PG app.rdb), MCP-only schema, preview-first, and forbids cloud functions unless secrets, cron/background jobs, or logic that security rules/RLS cannot express. Use for 搭一套 demo、留言板、Todo、Notes、Kanban, or when users say 带云函数+云数据库 but only need CRUD. NOT for production multi-service backends, CloudRun, WeChat Mini Programs, or tasks that",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "2.31.0",
+  "author": "TencentCloudBase",
+  "install_path": ".claude/skills/minimal-web-baas-demo/SKILL.md",
+  "source": {
+    "repo": "TencentCloudBase/CloudBase-AI-Toolkit",
+    "url": "https://github.com/TencentCloudBase/CloudBase-AI-Toolkit/blob/main/config/source/skills/minimal-web-baas-demo/SKILL.md",
+    "path": "config/source/skills/minimal-web-baas-demo/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-23T15:21:56.672Z",
+    "stars": 1075,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-23T03:15:24Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一套基于 CloudBase 的极简全栈模板，用于快速搭建留言板、Todo、笔记、看板等以 CRUD 为主的 Web 演示。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "nowork-studio-notfair-plugin-gemini",
+  "name": "gemini",
+  "description": "> Cross-model second opinion from Google Gemini — a different AI reviewing the same changes, with deep Google ecosystem knowledge. Three modes: review (pass/fail gate for Google Ads campaigns, SEO metadata, or code), challenge (adversarial stress-test that tries to break your changes), and consult (open Q&A with Gemini on Google Ads strategy, SEO best practices, or implementation questions). Use when the user says \"gemini review\", \"ask gemini\", \"gemini challenge\", \"second opinion from gemini\", \"",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "nowork-studio",
+  "install_path": ".claude/skills/gemini/SKILL.md",
+  "source": {
+    "repo": "nowork-studio/notfair-plugin",
+    "url": "https://github.com/nowork-studio/notfair-plugin/blob/main/skills/gemini/SKILL.md",
+    "path": "skills/gemini/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-23T15:21:48.885Z",
+    "stars": 3394,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-22T06:29:05Z",
+    "license": "MIT"
+  },
+  "summary_zh": "调用 Google Gemini 对广告投放、SEO 或代码改动进行复核、压力测试和咨询，适合需要跨模型第二意见的场景。"
+}

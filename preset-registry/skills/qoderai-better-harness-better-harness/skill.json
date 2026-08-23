@@ -1,0 +1,26 @@
+{
+  "id": "qoderai-better-harness-better-harness",
+  "name": "better-harness",
+  "description": "Use when /better-harness reviews the outer coding-agent Harness for lifecycle controls, repeated work, project feedback, agent assets, session outcomes, repair planning, durable reports, finding-bound fixes, or manual direct fixes. Invoke only via slash command.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "QoderAI",
+  "install_path": ".claude/skills/better-harness/SKILL.md",
+  "source": {
+    "repo": "QoderAI/better-harness",
+    "url": "https://github.com/QoderAI/better-harness/blob/main/skills/better-harness/SKILL.md",
+    "path": "skills/better-harness/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-23T16:11:18.538Z",
+    "stars": 1953,
+    "language": "JavaScript",
+    "pushed_at": "2026-08-23T13:59:56Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一个通过斜杠命令调用的编码代理运行框架审查工具，适合优化任务生命周期、减少重复工作并规划和跟踪修复。"
+}

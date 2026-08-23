@@ -1,0 +1,26 @@
+{
+  "id": "nowork-studio-notfair-plugin-google-ads-audit",
+  "name": "google-ads-audit",
+  "description": "Google Ads account audit and business context setup. Run this first — it gathers business information, analyzes account health, and saves context that all other ads skills reuse. Trigger on \"audit my ads\", \"ads audit\", \"set up my ads\", \"onboard\", \"account overview\", \"how's my account\", \"ads health check\", \"what should I fix in my ads\", or when the user is new to NotFair and hasn't run an audit before. Also trigger proactively when other ads skills detect that business-context.json is missing.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "nowork-studio",
+  "install_path": ".claude/skills/google-ads-audit/SKILL.md",
+  "source": {
+    "repo": "nowork-studio/notfair-plugin",
+    "url": "https://github.com/nowork-studio/notfair-plugin/blob/main/skills/google-ads-audit/SKILL.md",
+    "path": "skills/google-ads-audit/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-23T15:21:49.192Z",
+    "stars": 3394,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-22T06:29:05Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于审查 Google Ads 账户，结合业务背景分析投放健康度，并为后续广告优化建立可复用的上下文。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "tencentcloudbase-cloudbase-ai-toolkit-web-development",
+  "name": "web-development",
+  "description": "Use when users need to implement, integrate, debug, build, deploy, or validate a Web frontend after the product direction is already clear, especially for React, Vue, Vite, browser flows, or CloudBase Web integration.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "2.31.0",
+  "author": "TencentCloudBase",
+  "install_path": ".claude/skills/web-development/SKILL.md",
+  "source": {
+    "repo": "TencentCloudBase/CloudBase-AI-Toolkit",
+    "url": "https://github.com/TencentCloudBase/CloudBase-AI-Toolkit/blob/main/config/.claude/skills/web-development/SKILL.md",
+    "path": "config/.claude/skills/web-development/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-23T15:21:53.858Z",
+    "stars": 1075,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-23T03:15:24Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于产品方向明确后的 Web 前端开发，可协助实现、集成、调试、构建、部署和验证，适合 React、Vue、Vite 及 CloudBase 场景。"
+}

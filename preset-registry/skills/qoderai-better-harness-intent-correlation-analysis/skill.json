@@ -1,0 +1,26 @@
+{
+  "id": "qoderai-better-harness-intent-correlation-analysis",
+  "name": "intent-correlation-analysis",
+  "description": "Analyze a bounded IntentCorrelationPacketV1 and propose reviewable links among user inputs, execution slices, change units, commits, artifacts, and validation outcomes. Use when reconstructing why an observed coding-agent change exists or when Studio needs evidence-backed Intent correlation. Do not use for raw transcript summaries, deterministic file-operation collection, or autonomous confirmation of inferred Intent.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "QoderAI",
+  "install_path": ".claude/skills/intent-correlation-analysis/SKILL.md",
+  "source": {
+    "repo": "QoderAI/better-harness",
+    "url": "https://github.com/QoderAI/better-harness/blob/main/skills/intent-correlation-analysis/SKILL.md",
+    "path": "skills/intent-correlation-analysis/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-23T16:11:18.658Z",
+    "stars": 1953,
+    "language": "JavaScript",
+    "pushed_at": "2026-08-23T13:59:56Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一款意图关联分析工具，用证据串联用户输入、执行过程、代码提交和验证结果，帮助人工追溯编程智能体为何产生某项变更。"
+}

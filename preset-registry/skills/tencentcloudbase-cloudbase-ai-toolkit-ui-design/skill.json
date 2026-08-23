@@ -1,0 +1,26 @@
+{
+  "id": "tencentcloudbase-cloudbase-ai-toolkit-ui-design",
+  "name": "ui-design",
+  "description": "Use when users need visual direction, interface hierarchy, layout decisions, design specifications, or prototypes before implementing a Web or mini program UI.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "2.31.0",
+  "author": "TencentCloudBase",
+  "install_path": ".claude/skills/ui-design/SKILL.md",
+  "source": {
+    "repo": "TencentCloudBase/CloudBase-AI-Toolkit",
+    "url": "https://github.com/TencentCloudBase/CloudBase-AI-Toolkit/blob/main/config/.claude/skills/ui-design/SKILL.md",
+    "path": "config/.claude/skills/ui-design/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-23T15:21:53.735Z",
+    "stars": 1075,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-23T03:15:24Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一款面向 Web 和小程序开发前期的 UI 设计工具，可梳理视觉方向、界面层级与布局，并快速产出规范和原型。"
+}

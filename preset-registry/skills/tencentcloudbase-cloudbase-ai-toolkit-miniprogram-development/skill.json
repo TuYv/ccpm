@@ -1,0 +1,26 @@
+{
+  "id": "tencentcloudbase-cloudbase-ai-toolkit-miniprogram-development",
+  "name": "miniprogram-development",
+  "description": "WeChat Mini Program development skill for building, debugging, previewing, testing, publishing, optimizing, and promoting mini program projects. This skill should be used when users ask to create, develop, modify, debug, preview, test, deploy, publish, launch, review, optimize, or promote WeChat Mini Programs, mini program pages, components, `tabBar`, routing, navigation, icon assets, project structure, project configuration, `project.config.json`, `appid` setup, device preview, real-device vali",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "2.31.0",
+  "author": "TencentCloudBase",
+  "install_path": ".claude/skills/miniprogram-development/SKILL.md",
+  "source": {
+    "repo": "TencentCloudBase/CloudBase-AI-Toolkit",
+    "url": "https://github.com/TencentCloudBase/CloudBase-AI-Toolkit/blob/main/config/source/skills/miniprogram-development/SKILL.md",
+    "path": "config/source/skills/miniprogram-development/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-23T15:21:56.787Z",
+    "stars": 1075,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-23T03:15:24Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一套微信小程序开发技能，适合完成项目搭建、调试测试、真机预览、发布上线及性能优化推广。"
+}

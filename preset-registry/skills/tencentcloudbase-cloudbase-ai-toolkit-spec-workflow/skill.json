@@ -1,0 +1,26 @@
+{
+  "id": "tencentcloudbase-cloudbase-ai-toolkit-spec-workflow",
+  "name": "spec-workflow",
+  "description": "Use when medium-to-large changes need explicit requirements, technical design, and task planning before implementation, especially for multi-module work, unclear acceptance criteria, or architecture-heavy requests.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "2.31.0",
+  "author": "TencentCloudBase",
+  "install_path": ".claude/skills/spec-workflow/SKILL.md",
+  "source": {
+    "repo": "TencentCloudBase/CloudBase-AI-Toolkit",
+    "url": "https://github.com/TencentCloudBase/CloudBase-AI-Toolkit/blob/main/config/source/skills/spec-workflow/SKILL.md",
+    "path": "config/source/skills/spec-workflow/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-23T15:21:57.594Z",
+    "stars": 1075,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-23T03:15:24Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一套面向中大型改动的开发工作流，适合在编码前明确需求、技术方案和任务计划，尤其适用于多模块或验收标准不清的项目。"
+}

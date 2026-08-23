@@ -1,0 +1,26 @@
+{
+  "id": "nowork-studio-notfair-plugin-paid-ads-amazon",
+  "name": "paid-ads-amazon",
+  "description": "Plan and review Amazon Ads with margin-aware ACoS, product, and search-term guardrails. Use for Amazon advertising, Sponsored Products, Sponsored Brands, Sponsored Display, ASIN targeting, Amazon ACoS, or Amazon Ads performance exports.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "nowork-studio",
+  "install_path": ".claude/skills/paid-ads-amazon/SKILL.md",
+  "source": {
+    "repo": "nowork-studio/notfair-plugin",
+    "url": "https://github.com/nowork-studio/notfair-plugin/blob/main/paid-ads/paid-ads-amazon/SKILL.md",
+    "path": "paid-ads/paid-ads-amazon/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-23T15:21:44.519Z",
+    "stars": 3394,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-22T06:29:05Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一款亚马逊广告规划与复盘工具，通过利润导向的ACoS及商品、搜索词规则优化投放表现。"
+}

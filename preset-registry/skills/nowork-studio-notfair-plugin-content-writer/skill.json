@@ -1,0 +1,26 @@
+{
+  "id": "nowork-studio-notfair-plugin-content-writer",
+  "name": "content-writer",
+  "description": "> Write SEO-optimized blog posts, landing pages, and content improvements following Google's E-E-A-T and Helpful Content guidelines. Handles new content creation from a keyword or topic, and improving existing pages. Use when asked to \"write a blog post\", \"create a landing page\", \"improve this page\", \"write content about X\", \"content for keyword X\", \"draft an article\", \"blog post about\", \"landing page for\", \"service page\", \"product page copy\", \"rewrite this page\", \"make this page rank better\", \"",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "nowork-studio",
+  "install_path": ".claude/skills/content-writer/SKILL.md",
+  "source": {
+    "repo": "nowork-studio/notfair-plugin",
+    "url": "https://github.com/nowork-studio/notfair-plugin/blob/main/skills/content-writer/SKILL.md",
+    "path": "skills/content-writer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-23T15:21:48.678Z",
+    "stars": 3394,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-22T06:29:05Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一款遵循谷歌内容规范的 SEO 写作工具，适合撰写博客、落地页和产品文案，或优化现有页面以提升搜索排名。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "nowork-studio-notfair-plugin-meta-tags-optimizer",
+  "name": "meta-tags-optimizer",
+  "description": "> Optimize title tags, meta descriptions, Open Graph, and Twitter cards for maximum click-through rate. Generates multiple A/B test variations with character counting and SERP preview. Use when asked to \"optimize title tag\", \"write meta description\", \"improve CTR\", \"Open Graph tags\", \"fix my meta tags\", \"social media preview\", \"my click rate is low\", \"title optimization\", or any meta tag task.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "nowork-studio",
+  "install_path": ".claude/skills/meta-tags-optimizer/SKILL.md",
+  "source": {
+    "repo": "nowork-studio/notfair-plugin",
+    "url": "https://github.com/nowork-studio/notfair-plugin/blob/main/seo/meta-tags-optimizer/SKILL.md",
+    "path": "seo/meta-tags-optimizer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-23T15:21:47.207Z",
+    "stars": 3394,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-22T06:29:05Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一款网页元标签优化工具，可生成多组标题和描述方案并预览搜索与社交展示，适合提升点击率和开展 A/B 测试。"
+}

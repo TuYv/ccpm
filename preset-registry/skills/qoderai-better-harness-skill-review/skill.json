@@ -1,0 +1,26 @@
+{
+  "id": "qoderai-better-harness-skill-review",
+  "name": "skill-review",
+  "description": "Use when reviewing Codex, Qoder, or repo-local skills and their prompt chains for trigger quality, workflow clarity, progressive disclosure, duplicated instructions, template ownership, output readability, validation gaps, or whether a skill should be edited.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "QoderAI",
+  "install_path": ".claude/skills/skill-review/SKILL.md",
+  "source": {
+    "repo": "QoderAI/better-harness",
+    "url": "https://github.com/QoderAI/better-harness/blob/main/.agents/skills/skill-review/SKILL.md",
+    "path": ".agents/skills/skill-review/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-23T16:11:17.840Z",
+    "stars": 1953,
+    "language": "JavaScript",
+    "pushed_at": "2026-08-23T13:59:56Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于审查编程助手及仓库内技能的提示链，发现触发、流程、指令重复、输出可读性和验证等问题，并判断是否需要修改。"
+}

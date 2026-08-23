@@ -1,0 +1,26 @@
+{
+  "id": "tencentcloudbase-cloudbase-ai-toolkit-http-api-cloudbase",
+  "name": "http-api-cloudbase",
+  "description": "CloudBase official HTTP API client guide. This skill should be used when backends, scripts, or non-SDK clients must call CloudBase platform APIs over raw HTTP instead of using a platform SDK or MCP management tool.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "2.31.0",
+  "author": "TencentCloudBase",
+  "install_path": ".claude/skills/http-api-cloudbase/SKILL.md",
+  "source": {
+    "repo": "TencentCloudBase/CloudBase-AI-Toolkit",
+    "url": "https://github.com/TencentCloudBase/CloudBase-AI-Toolkit/blob/main/config/source/skills/http-api-cloudbase/SKILL.md",
+    "path": "config/source/skills/http-api-cloudbase/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-23T15:21:56.564Z",
+    "stars": 1075,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-23T03:15:24Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一份云开发平台 HTTP API 调用指南，适合后端、脚本或无 SDK 客户端直接对接平台接口。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "qoderai-better-harness-reproduce-frontend-bug",
+  "name": "reproduce-frontend-bug",
+  "description": "Build a bounded, replayable browser or UI bug reproduction from GitHub Issues, Jira, Aone, user-provided exports, screenshots, videos, comments, or attachments. Use for browser, WebView, IDE or desktop UI, interaction, responsive, rendering, accessibility, or visual defects that need evidence-preserving reproduction before diagnosis or repair; do not use for ordinary implementation or backend-only failures.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "QoderAI",
+  "install_path": ".claude/skills/reproduce-frontend-bug/SKILL.md",
+  "source": {
+    "repo": "QoderAI/better-harness",
+    "url": "https://github.com/QoderAI/better-harness/blob/main/case-studies/agent-customize/bug-diagnosis-skills/reproduce-frontend-bug/SKILL.md",
+    "path": "case-studies/agent-customize/bug-diagnosis-skills/reproduce-frontend-bug/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-23T16:11:18.227Z",
+    "stars": 1953,
+    "language": "JavaScript",
+    "pushed_at": "2026-08-23T13:59:56Z",
+    "license": "MIT"
+  },
+  "summary_zh": "将工单、截图或视频还原为可重复回放的前端缺陷现场，适合在诊断修复前保留浏览器或桌面界面问题证据。"
+}

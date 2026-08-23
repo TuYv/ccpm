@@ -1,0 +1,26 @@
+{
+  "id": "tencentcloudbase-cloudbase-ai-toolkit-cloudbase-document-database-in-wechat-miniprogram",
+  "name": "cloudbase-document-database-in-wechat-miniprogram",
+  "description": "Use CloudBase document database WeChat MiniProgram SDK to query, create, update, and delete data. Supports complex queries, pagination, aggregation, and geolocation queries.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "2.31.0",
+  "author": "TencentCloudBase",
+  "install_path": ".claude/skills/cloudbase-document-database-in-wechat-miniprogram/SKILL.md",
+  "source": {
+    "repo": "TencentCloudBase/CloudBase-AI-Toolkit",
+    "url": "https://github.com/TencentCloudBase/CloudBase-AI-Toolkit/blob/main/config/source/skills/cloudbase-document-database-in-wechat-miniprogram/SKILL.md",
+    "path": "config/source/skills/cloudbase-document-database-in-wechat-miniprogram/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-23T15:21:55.824Z",
+    "stars": 1075,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-23T03:15:24Z",
+    "license": "MIT"
+  },
+  "summary_zh": "微信小程序中的云端文档数据库 SDK，适合实现数据增删改查、分页、聚合及地理位置查询。"
+}

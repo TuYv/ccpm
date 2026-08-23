@@ -1,0 +1,26 @@
+{
+  "id": "nowork-studio-notfair-plugin-google-analytics",
+  "name": "google-analytics",
+  "description": "Analyze connected Google Analytics 4 traffic, acquisition, engagement, landing pages, ecommerce, events, and conversions, and safely manage supported GA4 key events or custom dimensions through NotFair MCP. Use for GA4, Google Analytics, traffic or conversion drops, channel attribution, realtime activity, report requests, measurement configuration, or Analytics MCP setup.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "nowork-studio",
+  "install_path": ".claude/skills/google-analytics/SKILL.md",
+  "source": {
+    "repo": "nowork-studio/notfair-plugin",
+    "url": "https://github.com/nowork-studio/notfair-plugin/blob/main/skills/google-analytics/SKILL.md",
+    "path": "skills/google-analytics/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-23T15:21:49.637Z",
+    "stars": 3394,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-22T06:29:05Z",
+    "license": "MIT"
+  },
+  "summary_zh": "通过 NotFair MCP 分析 GA4 流量、获客、转化及电商表现，适合排查数据下滑、渠道归因和管理衡量配置。"
+}

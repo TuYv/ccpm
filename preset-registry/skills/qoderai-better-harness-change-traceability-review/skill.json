@@ -1,0 +1,26 @@
+{
+  "id": "qoderai-better-harness-change-traceability-review",
+  "name": "change-traceability-review",
+  "description": "Use for change traceability review across specs, commits, PRs, branches, local diffs, and git history, including Spec Preparation, Review Readiness Checks, and Review Retrospectives, to generate or verify Story-linked specs, commit-message evidence, test evidence, risk signals, AI involvement, and review-flow improvement suggestions.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "QoderAI",
+  "install_path": ".claude/skills/change-traceability-review/SKILL.md",
+  "source": {
+    "repo": "QoderAI/better-harness",
+    "url": "https://github.com/QoderAI/better-harness/blob/main/.agents/skills/change-traceability-review/SKILL.md",
+    "path": ".agents/skills/change-traceability-review/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-23T16:11:17.613Z",
+    "stars": 1953,
+    "language": "JavaScript",
+    "pushed_at": "2026-08-23T13:59:56Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一款变更追溯审查工具，用于串联需求、代码提交与测试证据，帮助识别评审风险并改进协作流程。"
+}

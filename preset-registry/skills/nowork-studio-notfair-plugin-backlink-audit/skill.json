@@ -1,0 +1,26 @@
+{
+  "id": "nowork-studio-notfair-plugin-backlink-audit",
+  "name": "backlink-audit",
+  "description": "> Backlink / off-page SEO audit. Works WITHOUT a paid tool by default — it uses the Google Search Console Links report (your top linking sites, most-linked pages, and anchor text) plus any backlink export the user provides (Ahrefs / Semrush / Majestic / DataForSEO CSV). Analyzes referring-domain profile, anchor-text distribution (over-optimized / spammy patterns), most-linked pages vs. money pages (internal-linking opportunity), toxic/spam link signals, and link-building priorities. Use this ski",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "nowork-studio",
+  "install_path": ".claude/skills/backlink-audit/SKILL.md",
+  "source": {
+    "repo": "nowork-studio/notfair-plugin",
+    "url": "https://github.com/nowork-studio/notfair-plugin/blob/main/skills/backlink-audit/SKILL.md",
+    "path": "skills/backlink-audit/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-23T15:21:48.220Z",
+    "stars": 3394,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-22T06:29:05Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一款无需付费服务的外链审计工具，可识别垃圾链接、锚文本风险，并发现内链优化和外链建设机会。"
+}

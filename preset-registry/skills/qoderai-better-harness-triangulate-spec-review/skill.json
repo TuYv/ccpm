@@ -1,0 +1,26 @@
+{
+  "id": "qoderai-better-harness-triangulate-spec-review",
+  "name": "triangulate-spec-review",
+  "description": "Review and improve architecture specs, ADRs, plugin or agent directory proposals, and other design documents by running multiple independent AI reviewers such as Claude, Qoder, Codex, or Cursor Agent against the same artifact, normalizing P1/P2/P3 findings, and iterating only on blocking or high-risk issues.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "QoderAI",
+  "install_path": ".claude/skills/triangulate-spec-review/SKILL.md",
+  "source": {
+    "repo": "QoderAI/better-harness",
+    "url": "https://github.com/QoderAI/better-harness/blob/main/.agents/skills/triangulate-spec-review/SKILL.md",
+    "path": ".agents/skills/triangulate-spec-review/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-23T16:11:17.963Z",
+    "stars": 1953,
+    "language": "JavaScript",
+    "pushed_at": "2026-08-23T13:59:56Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一个用多个独立 AI 交叉审查架构规范和设计文档的工具，能统一风险分级并聚焦修复阻塞或高风险问题。"
+}

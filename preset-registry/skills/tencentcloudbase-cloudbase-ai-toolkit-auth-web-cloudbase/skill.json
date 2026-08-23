@@ -1,0 +1,26 @@
+{
+  "id": "tencentcloudbase-cloudbase-ai-toolkit-auth-web-cloudbase",
+  "name": "auth-web-cloudbase",
+  "description": "CloudBase Web Authentication Quick Guide for frontend integration after auth-tool has already been checked. Provides concise and practical Web authentication solutions with multiple login methods and complete user management.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "2.31.0",
+  "author": "TencentCloudBase",
+  "install_path": ".claude/skills/auth-web-cloudbase/SKILL.md",
+  "source": {
+    "repo": "TencentCloudBase/CloudBase-AI-Toolkit",
+    "url": "https://github.com/TencentCloudBase/CloudBase-AI-Toolkit/blob/main/config/source/skills/auth-web-cloudbase/SKILL.md",
+    "path": "config/source/skills/auth-web-cloudbase/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-23T15:21:54.733Z",
+    "stars": 1075,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-23T03:15:24Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一套面向前端的云开发 Web 认证接入指南，适合快速实现多种登录方式和完整的用户管理。"
+}

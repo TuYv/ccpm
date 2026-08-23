@@ -1,0 +1,26 @@
+{
+  "id": "nowork-studio-notfair-plugin-sxo",
+  "name": "sxo",
+  "description": "> Search Experience Optimization (SXO) — the bridge between SEO and UX/CRO. Audits the full journey from the SERP click to the on-page goal: SERP click-through factors (title/meta/rich results that win the click), then post-click experience signals that keep users and drive conversions — above-the-fold relevance and intent match, page speed / Core Web Vitals as experience, readability and scannability, clear CTAs, mobile usability, and the things that cause pogo- sticking back to Google. Use thi",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "nowork-studio",
+  "install_path": ".claude/skills/sxo/SKILL.md",
+  "source": {
+    "repo": "nowork-studio/notfair-plugin",
+    "url": "https://github.com/nowork-studio/notfair-plugin/blob/main/seo/sxo/SKILL.md",
+    "path": "seo/sxo/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-23T15:21:48.081Z",
+    "stars": 3394,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-22T06:29:05Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一款连接SEO与用户体验、转化优化的全链路审计工具，帮助提升搜索点击、页面留存和转化，减少用户跳回搜索页。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "tencentcloudbase-cloudbase-ai-toolkit-relational-database-mcp-cloudbase",
+  "name": "relational-database-mcp-cloudbase",
+  "description": "[Deprecated] This is the required documentation for agents operating on the CloudBase Relational Database through MCP. It defines the canonical SQL management flow with `queryMysqlDatabase`, `manageMysqlDatabase`, `queryPermissions`, and `managePermissions`, including MySQL provisioning, destroy flow, async status checks, safe query execution, schema initialization, and permission updates. New environments should use PostgreSQL — see postgresql-development skill instead.",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "2.31.0",
+  "author": "TencentCloudBase",
+  "install_path": ".claude/skills/relational-database-mcp-cloudbase/SKILL.md",
+  "source": {
+    "repo": "TencentCloudBase/CloudBase-AI-Toolkit",
+    "url": "https://github.com/TencentCloudBase/CloudBase-AI-Toolkit/blob/main/config/source/skills/relational-database-mcp-cloudbase/SKILL.md",
+    "path": "config/source/skills/relational-database-mcp-cloudbase/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-23T15:21:57.188Z",
+    "stars": 1075,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-23T03:15:24Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一套已弃用的 CloudBase MySQL 智能体操作规范，用于安全完成数据库创建、查询、销毁和权限管理，新环境应改用 PostgreSQL。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "nowork-studio-notfair-plugin-competitor-pages",
+  "name": "competitor-pages",
+  "description": "> Competitor page gap analysis — take a query you want to win and the pages currently outranking you, and produce a concrete brief on what to add or change to compete. Compares content depth and coverage (subtopics they cover that you don't), structure (headings, format, tables, media), search-intent match, E-E-A-T signals, schema/rich-result eligibility, internal linking, and on-page optimization — across your page vs. the top-ranking competitors. Use this skill whenever the user wants to know ",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "nowork-studio",
+  "install_path": ".claude/skills/competitor-pages/SKILL.md",
+  "source": {
+    "repo": "nowork-studio/notfair-plugin",
+    "url": "https://github.com/nowork-studio/notfair-plugin/blob/main/skills/competitor-pages/SKILL.md",
+    "path": "skills/competitor-pages/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-23T15:21:48.451Z",
+    "stars": 3394,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-22T06:29:05Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一款竞品页面差距分析工具，可对比高排名页面，找出内容、结构和 SEO 短板，并生成具体改进建议。"
+}

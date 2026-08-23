@@ -1,0 +1,26 @@
+{
+  "id": "tencentcloudbase-cloudbase-ai-toolkit-skills",
+  "name": "cloudbase-all-in-one",
+  "description": "Unified CloudBase execution guide for all-in-one skill installs. Use this first for CloudBase app tasks, especially existing apps with TODOs, fixed pages, or active handlers. Routes PostgreSQL / CloudBase PG / app.rdb() / queryPgDatabase / managePgDatabase work away from legacy NoSQL and old auth patterns.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "2.21.1",
+  "author": "TencentCloudBase",
+  "install_path": ".claude/skills/skills/SKILL.md",
+  "source": {
+    "repo": "TencentCloudBase/CloudBase-AI-Toolkit",
+    "url": "https://github.com/TencentCloudBase/CloudBase-AI-Toolkit/blob/main/config/source/skills/SKILL.md",
+    "path": "config/source/skills/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-23T15:21:57.449Z",
+    "stars": 1075,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-23T03:15:24Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一套 CloudBase 应用的一站式执行指南，适合接手含待办或既有逻辑的项目，并将数据库与认证迁移到新架构。"
+}
