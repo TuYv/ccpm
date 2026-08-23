@@ -1,0 +1,26 @@
+{
+  "id": "basicmachines-co-basic-memory-cmux-workspace",
+  "name": "cmux-workspace",
+  "description": "Work inside the current cmux workspace and terminal. Use for cmux workspace, current workspace, caller surface, panes, surfaces, socket targeting, and non-interfering cmux automation.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "basicmachines-co",
+  "install_path": ".claude/skills/cmux-workspace/SKILL.md",
+  "source": {
+    "repo": "basicmachines-co/basic-memory",
+    "url": "https://github.com/basicmachines-co/basic-memory/blob/main/.agents/skills/cmux-workspace/SKILL.md",
+    "path": ".agents/skills/cmux-workspace/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-23T19:13:09.059Z",
+    "stars": 3731,
+    "language": "Python",
+    "pushed_at": "2026-08-23T18:02:11Z",
+    "license": "AGPL-3.0"
+  },
+  "summary_zh": "用于在当前 cmux 工作区和终端中操作窗格、界面及套接字，适合实现不干扰现有环境的自动化任务。"
+}

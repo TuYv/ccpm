@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-23T18:45:09.690Z",
+  "updated_at": "2026-08-23T20:52:08.271Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -13913,9 +13913,9 @@
       "translated_at": "2026-08-03T04:57:58.995Z"
     },
     "bundle:basicmachines-co-basic-memory": {
-      "hash": "3dc32f54c49bc47a",
-      "summary_zh": "这套合集为 AI 辅助开发建立可持续的工程记忆，把审查、决策、交接与团队共享串成可恢复、可追溯的协作流程。",
-      "translated_at": "2026-08-09T19:36:09.666Z"
+      "hash": "20681b52e0c4ddf7",
+      "summary_zh": "面向 AI 编程协作，把上下文、决策、评审和交接沉淀为可追溯记忆，让开发任务可恢复、可共享、持续推进。",
+      "translated_at": "2026-08-23T20:14:35.957Z"
     },
     "bundle:nowork-studio-notfair": {
       "hash": "1605db164c4011f0",
@@ -17358,9 +17358,9 @@
       "translated_at": "2026-08-03T04:58:57.465Z"
     },
     "bundle:daymade-claude-code-skills": {
-      "hash": "8812e0b6e2068405",
-      "summary_zh": "面向 Claude Code 的实用技能合集，覆盖信息采集、内容处理、开发运维与工作流自动化，让复杂任务能快速组合、稳定落地。",
-      "translated_at": "2026-08-22T18:17:16.458Z"
+      "hash": "91ba1a8d9804497b",
+      "summary_zh": "一套面向 Claude Code 的实用技能合集，覆盖开发运维、数据采集、内容处理与研究分析，让复杂任务能直接调用成熟流程自动完成。",
+      "translated_at": "2026-08-23T20:14:35.658Z"
     },
     "bundle:specstoryai-getspecstory": {
       "hash": "c770b3a6c617c63e",
@@ -20248,9 +20248,9 @@
       "translated_at": "2026-08-03T16:25:16.908Z"
     },
     "skill:daymade-claude-code-skills-local-conversation-history": {
-      "hash": "850dd2da8617c396",
-      "summary_zh": "用一条只读命令汇总工作区内多个 AI 编程工具的近期对话，适合检索、去重和审计本地会话记录。",
-      "translated_at": "2026-08-22T18:17:22.549Z"
+      "hash": "300836ade64e6ba3",
+      "summary_zh": "只读汇总工作区内 Claude Code、Codex 和 Kimi CLI 的近期对话，适合快速查找历史会话及识别被锁定的 Codex 会话。",
+      "translated_at": "2026-08-23T20:14:43.816Z"
     },
     "skill:daymade-claude-code-skills-marketplace-dev": {
       "hash": "c4748f967cf4402c",
@@ -36862,8 +36862,8 @@
       "translated_at": "2026-08-15T02:17:51.620Z"
     },
     "content:daymade-claude-code-skills-local-conversation-history": {
-      "hash": "a5486e96f473c3af",
-      "translated_at": "2026-08-22T18:27:02.112Z"
+      "hash": "2be21e6b1fe887e4",
+      "translated_at": "2026-08-23T20:24:23.077Z"
     },
     "content:daymade-claude-code-skills-marketplace-dev": {
       "hash": "990155b170dfa49d",
@@ -36978,8 +36978,8 @@
       "translated_at": "2026-08-15T02:39:29.083Z"
     },
     "content:daymade-claude-code-skills-skill-creator": {
-      "hash": "86a1a94fd79e86c3",
-      "translated_at": "2026-08-20T18:33:02.408Z"
+      "hash": "04e8aaadb35294e3",
+      "translated_at": "2026-08-23T20:43:48.055Z"
     },
     "content:daymade-claude-code-skills-terraform-skill": {
       "hash": "34b139a0c885292a",
@@ -49026,6 +49026,94 @@
     "content:nowork-studio-notfair-plugin-paid-ads-guide": {
       "hash": "33a741a42d53f0be",
       "translated_at": "2026-08-23T18:45:09.690Z"
+    },
+    "skill:basicmachines-co-basic-memory-cmux": {
+      "hash": "b1e91d2d20510312",
+      "summary_zh": "用于控制多窗格布局、焦点与路由，让自动化任务能稳定定位、移动和切换窗口及工作区。",
+      "translated_at": "2026-08-23T20:14:39.076Z"
+    },
+    "skill:basicmachines-co-basic-memory-cmux-markdown": {
+      "hash": "4158d572b86ad956",
+      "summary_zh": "在终端旁以富文本面板预览 Markdown，并实时刷新，适合边写边查看计划、文档或笔记。",
+      "translated_at": "2026-08-23T20:14:39.581Z"
+    },
+    "skill:basicmachines-co-basic-memory-cmux-settings": {
+      "hash": "c6bbe478f4890f2f",
+      "summary_zh": "用于查看和编辑 cmux 配置，可修改界面、通知、快捷键等偏好，并支持校验配置或查询可用设置项。",
+      "translated_at": "2026-08-23T20:14:40.957Z"
+    },
+    "skill:basicmachines-co-basic-memory-cmux-workspace": {
+      "hash": "05dd22c0e928a773",
+      "summary_zh": "用于在当前 cmux 工作区和终端中操作窗格、界面及套接字，适合实现不干扰现有环境的自动化任务。",
+      "translated_at": "2026-08-23T20:14:43.380Z"
+    },
+    "content:basicmachines-co-basic-memory-cmux": {
+      "hash": "f9343b1e05a2560c",
+      "translated_at": "2026-08-23T20:18:34.650Z"
+    },
+    "content:basicmachines-co-basic-memory-cmux-markdown": {
+      "hash": "6ca591db043b5dd3",
+      "translated_at": "2026-08-23T20:18:45.918Z"
+    },
+    "content:basicmachines-co-basic-memory-cmux-settings": {
+      "hash": "86cecd66eaa175e7",
+      "translated_at": "2026-08-23T20:19:19.225Z"
+    },
+    "content:basicmachines-co-basic-memory-cmux-workspace": {
+      "hash": "1c8e787a74c4694a",
+      "translated_at": "2026-08-23T20:20:01.890Z"
+    },
+    "content:nowork-studio-notfair-plugin-paid-ads-integrations": {
+      "hash": "54b9c30be37dbda0",
+      "translated_at": "2026-08-23T20:44:01.438Z"
+    },
+    "content:nowork-studio-notfair-plugin-paid-ads-launch": {
+      "hash": "8b601304bed5a3f7",
+      "translated_at": "2026-08-23T20:44:15.081Z"
+    },
+    "content:nowork-studio-notfair-plugin-paid-ads-linkedin": {
+      "hash": "6be58b7ade000960",
+      "translated_at": "2026-08-23T20:44:36.475Z"
+    },
+    "content:nowork-studio-notfair-plugin-paid-ads-optimize": {
+      "hash": "93af4458502c63e3",
+      "translated_at": "2026-08-23T20:44:47.617Z"
+    },
+    "content:nowork-studio-notfair-plugin-paid-ads-review": {
+      "hash": "87fa720d0aa226af",
+      "translated_at": "2026-08-23T20:44:57.719Z"
+    },
+    "content:nowork-studio-notfair-plugin-paid-ads-setup": {
+      "hash": "8ea5898ee547903d",
+      "translated_at": "2026-08-23T20:45:00.577Z"
+    },
+    "content:nowork-studio-notfair-plugin-paid-ads-tiktok": {
+      "hash": "df16c1e166056b89",
+      "translated_at": "2026-08-23T20:45:07.342Z"
+    },
+    "content:nowork-studio-notfair-plugin-paid-ads-x": {
+      "hash": "f8bfe2f5573d7e24",
+      "translated_at": "2026-08-23T20:45:22.499Z"
+    },
+    "content:nowork-studio-notfair-plugin-programmatic-seo": {
+      "hash": "90cde0e1a3e7856f",
+      "translated_at": "2026-08-23T20:45:24.104Z"
+    },
+    "content:nowork-studio-notfair-plugin-search-console": {
+      "hash": "8df9e96efb59d5fc",
+      "translated_at": "2026-08-23T20:45:42.011Z"
+    },
+    "content:nowork-studio-notfair-plugin-schema-markup-generator": {
+      "hash": "feaf2e741e1f907e",
+      "translated_at": "2026-08-23T20:46:43.256Z"
+    },
+    "content:nowork-studio-notfair-plugin-seo-drift": {
+      "hash": "704ed1d68aa81e0c",
+      "translated_at": "2026-08-23T20:46:58.574Z"
+    },
+    "content:nowork-studio-notfair-plugin-seo-analysis": {
+      "hash": "6ef290a5c766f229",
+      "translated_at": "2026-08-23T20:52:08.271Z"
     }
   }
 }

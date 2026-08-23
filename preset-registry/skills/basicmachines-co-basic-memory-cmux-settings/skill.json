@@ -1,0 +1,26 @@
+{
+  "id": "basicmachines-co-basic-memory-cmux-settings",
+  "name": "cmux-settings",
+  "description": "View and edit cmux settings in ~/.config/cmux/cmux.json. Use when the user wants to change cmux preferences (appearance, sidebar, notifications, automation, browser, shortcuts), set a value by JSON path, validate the file, open it in an editor, or look up which keys cmux recognizes. Triggers on '/cmux-settings', 'change cmux setting', 'set <something> in cmux', 'cmux config', 'cmux.json', or 'rebind a cmux shortcut'.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "basicmachines-co",
+  "install_path": ".claude/skills/cmux-settings/SKILL.md",
+  "source": {
+    "repo": "basicmachines-co/basic-memory",
+    "url": "https://github.com/basicmachines-co/basic-memory/blob/main/.agents/skills/cmux-settings/SKILL.md",
+    "path": ".agents/skills/cmux-settings/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-23T19:13:08.882Z",
+    "stars": 3731,
+    "language": "Python",
+    "pushed_at": "2026-08-23T18:02:11Z",
+    "license": "AGPL-3.0"
+  },
+  "summary_zh": "用于查看和编辑 cmux 配置，可修改界面、通知、快捷键等偏好，并支持校验配置或查询可用设置项。"
+}

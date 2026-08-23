@@ -1,0 +1,26 @@
+{
+  "id": "basicmachines-co-basic-memory-cmux-markdown",
+  "name": "cmux-markdown",
+  "description": "Open markdown files in a formatted viewer panel with live reload. Use when you need to display plans, documentation, or notes alongside the terminal with rich rendering (headings, code blocks, tables, lists).",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "basicmachines-co",
+  "install_path": ".claude/skills/cmux-markdown/SKILL.md",
+  "source": {
+    "repo": "basicmachines-co/basic-memory",
+    "url": "https://github.com/basicmachines-co/basic-memory/blob/main/.agents/skills/cmux-markdown/SKILL.md",
+    "path": ".agents/skills/cmux-markdown/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-23T19:13:08.675Z",
+    "stars": 3731,
+    "language": "Python",
+    "pushed_at": "2026-08-23T18:02:11Z",
+    "license": "AGPL-3.0"
+  },
+  "summary_zh": "在终端旁以富文本面板预览 Markdown，并实时刷新，适合边写边查看计划、文档或笔记。"
+}
