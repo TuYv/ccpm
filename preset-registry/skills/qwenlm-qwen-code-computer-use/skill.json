@@ -1,0 +1,26 @@
+{
+  "id": "qwenlm-qwen-code-computer-use",
+  "name": "computer-use",
+  "description": "Control local desktop applications through Computer Use for tasks that require reading or operating app UI. Prefer purpose-built connectors, APIs, or CLIs when available.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "QwenLM",
+  "install_path": ".claude/skills/computer-use/SKILL.md",
+  "source": {
+    "repo": "QwenLM/qwen-code",
+    "url": "https://github.com/QwenLM/qwen-code/blob/main/packages/core/src/skills/bundled/computer-use/SKILL.md",
+    "path": "packages/core/src/skills/bundled/computer-use/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-24T12:22:56.491Z",
+    "stars": 27334,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-24T12:22:21Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "通过识别并操作界面来控制本地桌面应用，适合缺少 API 或命令行入口的自动化任务。"
+}
