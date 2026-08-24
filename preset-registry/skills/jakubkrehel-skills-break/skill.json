@@ -1,0 +1,26 @@
+{
+  "id": "jakubkrehel-skills-break",
+  "name": "break",
+  "description": "Answers \"does this survive?\" for one component. Renders it on a throwaway page under the hostile inputs it can actually receive, and reports what visibly broke.",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "jakubkrehel",
+  "install_path": ".claude/skills/break/SKILL.md",
+  "source": {
+    "repo": "jakubkrehel/skills",
+    "url": "https://github.com/jakubkrehel/skills/blob/main/skills/break/SKILL.md",
+    "path": "skills/break/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-24T10:16:46.593Z",
+    "stars": 4210,
+    "language": "Markdown",
+    "pushed_at": "2026-08-24T09:35:23Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一个组件健壮性测试工具，会在临时页面注入真实可能遇到的极端输入，并报告界面哪里被破坏。"
+}

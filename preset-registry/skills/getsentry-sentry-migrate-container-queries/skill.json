@@ -1,7 +1,7 @@
 {
   "id": "getsentry-sentry-migrate-container-queries",
   "name": "migrate-container-queries",
-  "description": "Guide for migrating viewport media queries (@media, useMedia) to container queries in Sentry's frontend. Use when migrating responsive layout to container queries, replacing @media/useMedia, refactoring styled responsive components to Container/Flex/Grid primitives, or working on the DE container-query migration.",
+  "description": "Guide for migrating viewport media queries (@media, useMedia, and screen:-prefixed responsive props) to container queries in Sentry's frontend. Use when migrating responsive layout to container queries, replacing @media/useMedia/screen: breakpoints, refactoring styled responsive components to Container/Flex/Grid primitives, or working on the DE container-query migration.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/getsentry/sentry/blob/master/.agents/skills/migrate-container-queries/SKILL.md",
     "path": ".agents/skills/migrate-container-queries/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-08-24T08:13:43.113Z",
-    "stars": 44608,
+    "discovered_at": "2026-08-24T10:12:09.682Z",
+    "stars": 44609,
     "language": "Python",
-    "pushed_at": "2026-08-24T08:12:49Z",
+    "pushed_at": "2026-08-24T10:11:54Z",
     "license": null
   },
-  "summary_zh": "一份将前端响应式布局从视口媒体查询迁移到容器查询的指南，适合重构组件及统一布局实现。"
+  "summary_zh": "一份前端迁移指南，帮助将基于视口断点的响应式布局改造成容器查询，适合重构组件及推进相关迁移。"
 }

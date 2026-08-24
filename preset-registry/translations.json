@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-24T09:46:01.815Z",
+  "updated_at": "2026-08-24T11:45:26.564Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -9678,9 +9678,9 @@
       "translated_at": "2026-08-20T03:00:59.923Z"
     },
     "bundle:getsentry-sentry": {
-      "hash": "6733206b4c2ec772",
-      "summary_zh": "面向 Sentry 全栈开发与架构演进，统一前后端实现规范、数据变更和功能交付流程，提升协作效率与代码质量。",
-      "translated_at": "2026-08-07T17:16:25.065Z"
+      "hash": "965c43c6d13ed642",
+      "summary_zh": "面向 Sentry 全栈开发与架构演进，统一前后端实现规范和工程流程，帮助团队更安全高效地交付功能。",
+      "translated_at": "2026-08-24T11:12:49.839Z"
     },
     "bundle:addyosmani-agent-skills": {
       "hash": "e8e7acb8ab293495",
@@ -17318,9 +17318,9 @@
       "translated_at": "2026-08-10T20:03:59.035Z"
     },
     "bundle:jakubkrehel-skills": {
-      "hash": "77901803e6ff3400",
-      "summary_zh": "一套覆盖设计、实现、评审与方案对比的界面优化技能集，帮助团队系统提升产品的易用性、一致性和完成度。",
-      "translated_at": "2026-08-20T16:13:09.302Z"
+      "hash": "7bf70e719567f236",
+      "summary_zh": "一套面向产品界面设计与开发的技能集，系统审查并优化视觉、布局、文案与可访问性，同时验证改动在复杂场景下是否可靠。",
+      "translated_at": "2026-08-24T11:12:51.585Z"
     },
     "bundle:aaron-he-zhu-aaron-marketing-skills": {
       "hash": "3dace6e8520b671d",
@@ -21803,9 +21803,9 @@
       "translated_at": "2026-08-03T18:33:07.316Z"
     },
     "skill:getsentry-sentry-migrate-container-queries": {
-      "hash": "151514c1e5516a98",
-      "summary_zh": "一份将前端响应式布局从视口媒体查询迁移到容器查询的指南，适合重构组件及统一布局实现。",
-      "translated_at": "2026-08-03T18:33:08.220Z"
+      "hash": "6fb0fb0026fbe7aa",
+      "summary_zh": "一份前端迁移指南，帮助将基于视口断点的响应式布局改造成容器查询，适合重构组件及推进相关迁移。",
+      "translated_at": "2026-08-24T11:12:54.887Z"
     },
     "skill:getsentry-sentry-seer-embed": {
       "hash": "dc5f7525fe5fbcef",
@@ -39277,8 +39277,8 @@
       "translated_at": "2026-08-16T14:38:34.630Z"
     },
     "content:getsentry-sentry-migrate-container-queries": {
-      "hash": "de11066a2fe70b66",
-      "translated_at": "2026-08-16T14:38:49.324Z"
+      "hash": "baac301d75b4396d",
+      "translated_at": "2026-08-24T11:23:43.290Z"
     },
     "content:getsentry-sentry-notification-platform": {
       "hash": "ead2b145f6452bf7",
@@ -40636,8 +40636,8 @@
       "translated_at": "2026-08-17T20:13:32.680Z"
     },
     "content:huytieu-cog-second-brain-no-ai-slop": {
-      "hash": "73f87f7f79bd3540",
-      "translated_at": "2026-08-17T20:13:34.758Z"
+      "hash": "3961014d33a7d826",
+      "translated_at": "2026-08-24T11:25:15.140Z"
     },
     "content:huytieu-cog-second-brain-onboarding": {
       "hash": "cc6b2497168b71ec",
@@ -40776,8 +40776,8 @@
       "translated_at": "2026-08-17T22:17:29.772Z"
     },
     "content:imbad0202-academic-research-skills-academic-pipeline": {
-      "hash": "dbebcea1d77b200f",
-      "translated_at": "2026-08-24T09:31:25.731Z"
+      "hash": "5b9b92ad1df7a3a5",
+      "translated_at": "2026-08-24T11:31:06.552Z"
     },
     "content:infrasity-labs-dev-gtm-claude-skills-a-b-test-design": {
       "hash": "c6149ef56e74f141",
@@ -49572,6 +49572,67 @@
     "content:orchestra-research-ai-research-skills-gptq": {
       "hash": "ce19de416afa03a0",
       "translated_at": "2026-08-24T09:46:01.815Z"
+    },
+    "skill:jakubkrehel-skills-break": {
+      "hash": "370aacf4aa3b3eba",
+      "summary_zh": "一个组件健壮性测试工具，会在临时页面注入真实可能遇到的极端输入，并报告界面哪里被破坏。",
+      "translated_at": "2026-08-24T11:12:56.656Z"
+    },
+    "content:jakubkrehel-skills-break": {
+      "hash": "d922d9efab4a2683",
+      "translated_at": "2026-08-24T11:31:39.222Z"
+    },
+    "content:orchestra-research-ai-research-skills-grpo-rl-training": {
+      "hash": "c9b771c280840f12",
+      "translated_at": "2026-08-24T11:38:39.414Z"
+    },
+    "content:orchestra-research-ai-research-skills-hqq": {
+      "hash": "4feba64227f6db50",
+      "translated_at": "2026-08-24T11:39:07.197Z"
+    },
+    "content:orchestra-research-ai-research-skills-huggingface-tokenizers": {
+      "hash": "d2ff3f9eed2cb8e1",
+      "translated_at": "2026-08-24T11:40:21.262Z"
+    },
+    "content:orchestra-research-ai-research-skills-lambda-labs": {
+      "hash": "9d1dc3fcb83bf0de",
+      "translated_at": "2026-08-24T11:40:23.013Z"
+    },
+    "content:orchestra-research-ai-research-skills-llama-cpp": {
+      "hash": "d74caa45483f5b3c",
+      "translated_at": "2026-08-24T11:41:05.628Z"
+    },
+    "content:orchestra-research-ai-research-skills-llama-factory": {
+      "hash": "6adfd1babfbfe2f8",
+      "translated_at": "2026-08-24T11:41:18.722Z"
+    },
+    "content:orchestra-research-ai-research-skills-litgpt": {
+      "hash": "523f0b786c915af2",
+      "translated_at": "2026-08-24T11:41:35.094Z"
+    },
+    "content:orchestra-research-ai-research-skills-llamaguard": {
+      "hash": "80c5afb39cb153d8",
+      "translated_at": "2026-08-24T11:42:12.960Z"
+    },
+    "content:orchestra-research-ai-research-skills-mamba": {
+      "hash": "51ddf99c12a472a7",
+      "translated_at": "2026-08-24T11:43:02.248Z"
+    },
+    "content:orchestra-research-ai-research-skills-lm-evaluation-harness": {
+      "hash": "891b77bc09118393",
+      "translated_at": "2026-08-24T11:43:10.916Z"
+    },
+    "content:orchestra-research-ai-research-skills-miles": {
+      "hash": "cbf610faa37bfb97",
+      "translated_at": "2026-08-24T11:44:08.409Z"
+    },
+    "content:orchestra-research-ai-research-skills-megatron-core": {
+      "hash": "6e69257341b9ee01",
+      "translated_at": "2026-08-24T11:44:08.994Z"
+    },
+    "content:orchestra-research-ai-research-skills-ml-training-recipes": {
+      "hash": "1cb661b0d3bac57f",
+      "translated_at": "2026-08-24T11:45:26.564Z"
     }
   }
 }
