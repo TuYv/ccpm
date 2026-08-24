@@ -1,0 +1,26 @@
+{
+  "id": "mattpocock-skills-retro",
+  "name": "retro",
+  "description": "Conduct a retrospective on a coding session.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mattpocock",
+  "install_path": ".claude/skills/retro/SKILL.md",
+  "source": {
+    "repo": "mattpocock/skills",
+    "url": "https://github.com/mattpocock/skills/blob/main/skills/in-progress/retro/SKILL.md",
+    "path": "skills/in-progress/retro/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-24T15:24:32.614Z",
+    "stars": 234989,
+    "language": "Shell",
+    "pushed_at": "2026-08-24T14:20:17Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于复盘编程过程的工具，帮助总结得失、发现问题并改进后续开发方式。"
+}

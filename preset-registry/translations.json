@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-24T14:50:11.429Z",
+  "updated_at": "2026-08-24T16:48:34.140Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -9648,9 +9648,9 @@
       "translated_at": "2026-08-03T04:56:54.159Z"
     },
     "bundle:mattpocock-skills": {
-      "hash": "1e0040d51a20e523",
-      "summary_zh": "一套面向软件研发全流程的 AI 协作技能库，把需求梳理、方案设计、代码审查、故障诊断和任务交接串成可复用工作流。",
-      "translated_at": "2026-08-21T12:12:20.738Z"
+      "hash": "84b065ee9a409ba7",
+      "summary_zh": "一套面向复杂软件开发的 AI 工作流技能库，统一调度分析、设计、诊断与协作流程，让任务推进更系统高效。",
+      "translated_at": "2026-08-24T16:24:10.330Z"
     },
     "bundle:nextlevelbuilder-ui-ux-pro-max-skill": {
       "hash": "75ab5c5f6556115d",
@@ -17408,9 +17408,9 @@
       "translated_at": "2026-08-10T03:40:50.873Z"
     },
     "bundle:chrisbanes-skills": {
-      "hash": "be0d3cece22558f5",
-      "summary_zh": "面向 Jetpack Compose 开发与评审的技能合集，覆盖组件设计、状态管理、交互与性能优化，帮助团队统一实践并提升界面质量。",
-      "translated_at": "2026-08-23T12:25:20.582Z"
+      "hash": "5b2782227d84cbea",
+      "summary_zh": "面向 Jetpack Compose 开发与代码评审，系统覆盖组件设计、状态管理、交互体验和性能优化，帮助团队统一实践并提升 UI 质量。",
+      "translated_at": "2026-08-24T16:24:07.297Z"
     },
     "bundle:tomasz-tomczyk-crit": {
       "hash": "e6ed17bd4a60a8b7",
@@ -45341,8 +45341,8 @@
       "translated_at": "2026-08-21T07:29:55.446Z"
     },
     "content:modu-ai-moai-adk-moai-kanban-foreman": {
-      "hash": "fdae87cb7228172e",
-      "translated_at": "2026-08-21T07:30:26.163Z"
+      "hash": "5c7681e02186eabf",
+      "translated_at": "2026-08-24T16:40:11.734Z"
     },
     "content:modu-ai-moai-adk-moai-platform-auth": {
       "hash": "2e59b513ddb9ec67",
@@ -47636,13 +47636,13 @@
       "translated_at": "2026-08-22T18:46:07.066Z"
     },
     "skill:chrisbanes-skills-grounded-writing": {
-      "hash": "eaa84a504104e3bc",
-      "summary_zh": "用于起草或修改将以 Chris Banes 名义发布或发送的多段落文章，确保内容符合其写作风格。",
-      "translated_at": "2026-08-22T20:16:00.584Z"
+      "hash": "21a60ebc0134eca4",
+      "summary_zh": "一款写作辅助工具，适合起草或润色评论、回复及有依据的技术文章等待发布内容。",
+      "translated_at": "2026-08-24T16:24:14.303Z"
     },
     "content:chrisbanes-skills-grounded-writing": {
-      "hash": "d2d25281150aef24",
-      "translated_at": "2026-08-22T20:19:51.397Z"
+      "hash": "7c827b456b14d515",
+      "translated_at": "2026-08-24T16:28:05.467Z"
     },
     "content:nowork-studio-toprank-toprank-portfolio-review": {
       "hash": "8d4329b7513924cc",
@@ -49775,6 +49775,71 @@
     "content:orchestra-research-ai-research-skills-weights-and-biases": {
       "hash": "3cd5daa7cad70d97",
       "translated_at": "2026-08-24T14:50:11.429Z"
+    },
+    "skill:mattpocock-skills-retro": {
+      "hash": "a372590d142ff5f6",
+      "summary_zh": "用于复盘编程过程的工具，帮助总结得失、发现问题并改进后续开发方式。",
+      "translated_at": "2026-08-24T16:24:13.168Z"
+    },
+    "content:mattpocock-skills-retro": {
+      "hash": "264f3330f1e2382a",
+      "translated_at": "2026-08-24T16:34:17.160Z"
+    },
+    "content:peonping-peon-ping-peon-ping-config": {
+      "hash": "ed0fae72c01380bd",
+      "translated_at": "2026-08-24T16:44:56.240Z"
+    },
+    "content:peonping-peon-ping-peon-ping-log": {
+      "hash": "3cc60c94cec34477",
+      "translated_at": "2026-08-24T16:45:03.057Z"
+    },
+    "content:peonping-peon-ping-peon-ping-create-pack": {
+      "hash": "6ee1c3d74acc9101",
+      "translated_at": "2026-08-24T16:45:14.923Z"
+    },
+    "content:peonping-peon-ping-peon-ping-remix": {
+      "hash": "ca8b98d5f1f18979",
+      "translated_at": "2026-08-24T16:45:23.078Z"
+    },
+    "content:peonping-peon-ping-peon-ping-rename": {
+      "hash": "c5d3790a30f917bd",
+      "translated_at": "2026-08-24T16:45:29.576Z"
+    },
+    "content:peonping-peon-ping-peon-ping-toggle": {
+      "hash": "2380b400016c4813",
+      "translated_at": "2026-08-24T16:45:38.006Z"
+    },
+    "content:peonping-peon-ping-peon-ping-use": {
+      "hash": "a178aade0ae97e55",
+      "translated_at": "2026-08-24T16:45:59.142Z"
+    },
+    "content:peterkrueck-claude-code-development-kit-bg-remove": {
+      "hash": "605e5686e673518c",
+      "translated_at": "2026-08-24T16:46:13.595Z"
+    },
+    "content:peterkrueck-claude-code-development-kit-context7-guidance": {
+      "hash": "87990e6fbc064acc",
+      "translated_at": "2026-08-24T16:46:14.007Z"
+    },
+    "content:peterkrueck-claude-code-development-kit-image-edit": {
+      "hash": "99c8df81adfaae86",
+      "translated_at": "2026-08-24T16:46:43.770Z"
+    },
+    "content:peterkrueck-claude-code-development-kit-image-gen": {
+      "hash": "606239b2406b0b50",
+      "translated_at": "2026-08-24T16:47:17.333Z"
+    },
+    "content:peterkrueck-claude-code-development-kit-deploy": {
+      "hash": "d5110598cd294890",
+      "translated_at": "2026-08-24T16:47:38.296Z"
+    },
+    "content:peterkrueck-claude-code-development-kit-review-work": {
+      "hash": "c0a122dd0f1e7ed9",
+      "translated_at": "2026-08-24T16:48:29.439Z"
+    },
+    "content:peterkrueck-claude-code-development-kit-second-opinion": {
+      "hash": "27f9471ecba87ced",
+      "translated_at": "2026-08-24T16:48:34.140Z"
     }
   }
 }
