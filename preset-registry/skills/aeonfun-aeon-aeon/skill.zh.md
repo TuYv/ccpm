@@ -4,61 +4,62 @@ description: Set up and run an Aeon agent instance — get started from scratch,
 ---
 # Aeon
 
-Aeon 是一个通过 Actions 在用户自己的 GitHub 仓库中运行的代理。技能是一个 Markdown 文件（`skills/<name>/SKILL.md`）；`aeon.yml` 指定运行哪些技能以及何时运行。
+Aeon 是一个通过 Actions 运行在用户自己 GitHub 仓库中的代理。技能是一个 Markdown 文件（`skills/<name>/SKILL.md`）；`aeon.yml` 指定运行哪些技能以及何时运行。
 
-选择他们所请求的模式：
+选择他们所需要的模式：
 
 | | |
 |---|---|
-| **1 · 开始使用** | 尚无实例，或从头开始设置实例 |
-| **2 · 重新安排** | 更改时间、频率或技能的关注重点 |
-| **3 · 解除阻塞** | “它没有运行”/“什么都没发生” |
-| **4 · 对话 → 技能** | 将我们刚刚完成的工作转化为定时技能 |
-| **5 · 编辑技能** | 更改现有技能的行为 |
-| **6 · 启用哪些技能** | 选择技能、浏览技能包、安装更多技能 |
-| **7 · 策略与风格** | `STRATEGY.md` 和 `soul/`——指导方向与表达基调 |
-| **8 · 从历史记录中挖掘技能** | “我反复进行的哪些工作可以交给 Aeon？”——从过去的 Claude Code 对话中找出来 |
+| **1 · 开始** | 尚无实例，或从头开始设置 |
+| **2 · 重新安排** | 更改时间、频率，或技能关注的内容 |
+| **3 · 解除阻塞** | “它没有运行” / “什么也没发生” |
+| **4 · 对话 → 技能** | 将我们刚刚完成的工作变成一个定时运行的技能 |
+| **5 · 编辑技能** | 更改现有技能的功能 |
+| **6 · 选择启用什么** | 选择技能、浏览技能包、安装更多技能 |
+| **7 · 策略与语气** | `STRATEGY.md` 和 `soul/` —— 北极星与表达语气 |
+| **8 · 从历史记录 → 技能** | “我反复做的哪些工作可以交给 Aeon？”——从过去的 Claude Code 对话中找出这些工作 |
 
-## 前置检查（所有模式）
+## 预检（每种模式都要执行）
 
-1. 找到仓库：当前目录 → `gh repo set-default` → 询问。如果本地没有该仓库，则克隆它。
-2. **在执行任何写入命令之前，确认 `gh` 指向的是他们自己的实例。**
+1. 查找仓库：当前目录 → `gh repo set-default` → 询问用户。如果仓库不在本地，则将其克隆下来。
+2. **在执行任何会写入内容的命令之前，确认 `gh` 指向的是他们自己的实例。**
 
    ```bash
    gh repo view --json nameWithOwner -q .nameWithOwner
    ```
 
-   如果该命令输出 `aeonfun/aeon`，而他们并非正在上游仓库本身工作，请停止并运行 `gh repo set-default <owner>/<repo>`。如果没有固定默认仓库，`gh` 会优先选择 `upstream` 远程仓库而不是 `origin`，并且 Aeon 的每项写入操作（`auth`、`secrets set`、`skills run`、配置推送）都会调用 `gh -R <resolved>`——因此，它会毫不犹豫地把他们的 API 密钥放到上游仓库，并在那里触发运行。整个过程看起来像是成功的：没有错误，有真实的运行 ID，但技能就是永远不会在他们自己的实例上触发。
-3. `gh auth status`——所有操作都通过 `gh` 进行。如果失败，告诉他们运行 `gh auth login`，然后停止。
-4. 所有配置写入都使用 `./aeon` CLI。它会保留 `aeon.yml` 中的注释并执行验证。切勿手动编辑 YAML——只有一个例外：CLI 无法为全新的技能*创建*条目（参见模式 4 的第 4 步）。
+   如果输出的是 `aeonfun/aeon`，且他们并不是在上游仓库本身上工作，则停止操作并运行 `gh repo set-default <owner>/<repo>`。当没有固定默认仓库时，`gh` 会优先使用 `upstream` remote，而不是 `origin`；而每次 Aeon 写入操作（`auth`、`secrets set`、`skills run`、配置推送）都会调用 `gh -R <resolved>`，因此它会毫不犹豫地将他们的 API 密钥写入上游仓库，并在那里触发运行。表面上看一切都成功了：没有错误、有真实的运行 id，但技能就是不会在他们的实例上触发。
 
-**不要相信刚刚创建的技能所显示的“disabled”状态。** 读取逻辑会从磁盘列出技能，并对 `aeon.yml` 中缺少的条目默认设置 `enabled: false`，因此“未配置”和“已禁用”看起来完全相同。可以用一条命令区分两者：
+3. 运行 `gh auth status` —— 所有操作都会通过 `gh` 路由。如果失败，告知他们运行 `gh auth login`，然后停止。
+4. 使用 `./aeon` CLI 执行所有配置写入操作。它会保留 `aeon.yml` 中的注释并进行验证。绝不要手动编辑 YAML —— 有一个例外：CLI 无法为全新技能*创建*条目（见模式 4 第 4 步）。
+
+**不要相信刚刚创建的技能显示为“disabled”。** 读取路径会从磁盘列出技能，并将 `aeon.yml` 中缺失的条目默认为 `enabled: false`，因此“未配置”和“已禁用”看起来完全一样。下面的命令可以区分二者：
 
 ```bash
 comm -23 <(ls skills/*/SKILL.md | cut -d/ -f2 | sort) \
          <(grep -oE '^  [a-z0-9-]+:' aeon.yml | tr -d ' :' | sort)
 ```
 
-它输出的任何内容都表示该技能已存在于磁盘上，但尚未配置。**快速了解已安装的内容、已启用的内容，以及所有内容所在的位置：`references/layout.md`。**
+命令输出的任何内容，都是已存在于磁盘上但尚未配置的技能。**快速了解已安装什么、已启用什么，以及所有内容位于何处：`references/layout.md`。**
 
-**设置任何密钥或令牌时：** 阅读 `references/secrets.md`——其中列出了每个密钥和仓库变量，并提供了获取它们的确切页面。始终使用 `./aeon secrets set NAME --stdin` 设置密钥，绝不要将其作为命令参数传入。
+**设置任何密钥或令牌：**阅读 `references/secrets.md` —— 其中列出了每个 secret 和仓库变量，以及获取它们的确切页面。始终使用 `./aeon secrets set NAME --stdin` 设置 secrets，绝不要将其作为命令参数传入。
 
 ---
 
-## 模式 1——开始使用 Aeon
+## 模式 1 —— 在 Aeon 上开始使用
 
-目标：尽快让他们的手机收到一条真实通知。不要先配置计划。
+目标：尽快在他们的手机上收到一条真实通知。不要先配置计划任务。
 
-1. **获取一个仓库。在运行任何操作之前，询问他们要使用公开仓库还是私有仓库**——这会影响所使用的命令，而且之后切换意味着要迁移仓库。
+1. **获取一个仓库。在执行任何操作之前，先询问使用公开仓库还是私有仓库** —— 这会改变命令，而之后切换意味着需要迁移仓库。
 
-   **公开**（推荐）：Actions 分钟数免费，而且只需一条命令即可获取上游技能更新。
+   **公开仓库**（推荐）：Actions 分钟数免费，并且上游技能更新可以通过一条命令获取。
 
 ```bash
    gh repo fork aeonfun/aeon --clone && cd aeon
    gh repo set-default <owner>/aeon        # REQUIRED — see below
    ```
 
-   **私有实例**：公开仓库的复刻始终是公开的，因此私有实例是镜像，而不是复刻。
+   **私有**：公共仓库的 fork 始终是公开的，因此私有实例是镜像，而不是 fork。
 
    ```bash
    gh repo create <name> --private
@@ -69,37 +70,38 @@ comm -23 <(ls skills/*/SKILL.md | cut -d/ -f2 | sort) \
    gh repo set-default <owner>/<name>      # REQUIRED — see below
    ```
 
-   在他们选择私有实例之前，明确告知这两项成本：Actions 分钟数会计入账户配额（免费版每月 2,000 分钟——定时运行的技能会消耗这些分钟数），而且更新需要通过 `git fetch upstream && git merge upstream/main` 获取，而不是 `gh repo sync`。
+   在他们选择私有实例之前，务必把这两项成本都明确告知：Actions 分钟数会计入账户配额（Free 计划每月 2,000 分钟——定时运行的 skill 会消耗这些额度），更新需要使用 `git fetch upstream && git merge upstream/main`，而不是 `gh repo sync`。
 
-   **无论采用哪种方式，都要在执行任何其他命令之前固定默认仓库。** 两种方式最终都会有一个 `upstream` 远程仓库（`gh repo fork --clone` 会自动添加），而在没有固定默认仓库的情况下，**`gh` 会优先选择 `upstream` 而不是 `origin`**。Aeon 中的所有操作都会通过 `gh -R $(gh repo view …)` 路由，因此，未固定默认仓库的工作副本会悄无声息地将密钥写入 `aeonfun/aeon`，并针对它触发运行，而不是操作他们自己的实例——且不会出现错误，因为这些命令确实在错误的仓库上成功执行了。验证：
+   **在执行任何其他命令之前，先固定默认仓库——两条路径都必须如此。** 两种方式最终都会有一个 `upstream` 远程仓库（`gh repo fork --clone` 会自动添加），而如果没有固定默认仓库，**`gh` 会优先使用 `upstream` 而不是 `origin`**。Aeon 中的所有操作都会通过 `gh -R $(gh repo view …)` 路由，因此未固定默认仓库的 checkout 会悄悄地把密钥写入 `aeonfun/aeon`，并针对该仓库触发运行，而不是他们自己的实例——不会报错，因为这些命令确实在错误的仓库上成功执行了。请验证：
 
    ```bash
    gh repo view --json nameWithOwner -q .nameWithOwner   # must print THEIR repo
    ```
 
-   完成此步骤后，无论采用哪种方式，后续操作都完全相同。
-2. **为模型配置身份验证。** 至少需要配置一个模型。最快的方式是使用 `./aeon auth --oauth`（Claude Pro/Max，会打开浏览器），或使用 `./aeon auth --key <key>`，它会**根据密钥前缀**检测提供商——`sk-ant-oat`（OAuth）、`sk-or-`（OpenRouter）、`bk_`（Bankr）、`inf_`（Surplus）、`xai-`（Grok）；其他任何前缀都会归入 `ANTHROPIC_API_KEY`。
+   此步骤之后的所有操作都完全相同。
+2. **为模型配置身份验证。** 至少需要一个模型。最快的方法是 `./aeon auth --oauth`（Claude Pro/Max，会打开浏览器），或者使用 `./aeon auth --key <key>`；后者会**根据密钥前缀**检测提供商——`sk-ant-oat`（OAuth）、`sk-or-`（OpenRouter）、`bk_`（Bankr）、`inf_`（Surplus）、`xai-`（Grok）；其他任何值都会被写入 `ANTHROPIC_API_KEY`。
 
-   **UsePod 和 Venice 的密钥没有前缀**，因此无法检测；直接使用 `--key` 会将它们存为普通的 Anthropic 密钥，导致后续运行失败并出现令人困惑的身份验证错误。必须明确指定它们：
+   **UsePod 和 Venice 密钥没有前缀**，无法自动检测，因此直接使用 `--key` 会将其记录为普通 Anthropic 密钥，运行稍后会因令人困惑的身份验证错误而失败。必须明确指定：
 
    ```bash
    ./aeon auth --key <token> --provider usepod    # same for venice
    ```
 
-   `--dry-run` 会输出解析后的 `method=… → secret …`，而不会调用 `gh` 或 `claude`——只要对提供商有疑问，就值得先运行它。
+   `--dry-run` 会打印解析后的 `method=… → secret …`，不会调用 `gh` 或 `claude`——当提供商不确定时，值得运行一次。
 
-   **不要假设他们订阅了 Claude：**支持八家提供商，包括 OpenRouter、Grok 和使用加密货币结算的网关。请参阅“提供商和执行框架”。
-3. **接入一个渠道。** Telegram 是最快的选择：使用 @BotFather 创建一个机器人，然后执行 `./aeon secrets set TELEGRAM_BOT_TOKEN --stdin` 并设置 `TELEGRAM_CHAT_ID`。暂时跳过 Discord/Slack/电子邮件——一个渠道就足以证明它能够正常工作。
-4. **立即运行一个技能。** 使用模式 6 选择技能——询问他们想处理什么，并提出一个建议——然后执行 `./aeon skills run <name>`。等待运行完成，然后执行 `./aeon runs logs <id>`。他们应该会收到一条 Telegram 消息。
-5. **只有在此之后，才为它设置定时运行。** 执行 `./aeon skills enable <name>` 并设置时间（请参阅模式 2）。
+   **不要假设他们拥有 Claude 订阅：**共有八个提供商可用，其中包括 OpenRouter、Grok 和使用加密货币结算的网关。请参阅“提供商和 harness”。
 
-适合作为首个技能的选项：`digest`（主题简报）、`github-monitor`（监控他们的仓库）、`heartbeat`（默认已启用，仅在有事项需要关注时报告）。
+3. **接入一个渠道。** Telegram 是最快的方式：使用 @BotFather 创建一个 bot，然后执行 `./aeon secrets set TELEGRAM_BOT_TOKEN --stdin` 和 `TELEGRAM_CHAT_ID`。暂时跳过 Discord/Slack/电子邮件——一个渠道就足以验证其正常工作。
+4. **现在运行一个 skill。** 使用模式 6 选择它——询问他们希望处理什么，然后提出一个建议——接着执行 `./aeon skills run <name>`。等待其完成，然后执行 `./aeon runs logs <id>`。他们应该会收到一条 Telegram 消息。
+5. **只有在这之后，才进行定时运行。** 执行 `./aeon skills enable <name>` 并设置时间（请参阅模式 2）。
+
+好的首批 skill：`digest`（主题简报）、`github-monitor`（他们的仓库）、`heartbeat`（默认已启用，仅在有需要关注的事项时报告）。
 
 ---
 
-## 模式 2 — 重新安排 / 更改例行任务
+## 模式 2 — 重新安排 / 更改例程
 
-以用户**所在时区的时间线**展示其一天的安排，而不是配置文件：
+以**他们自己所在的时区**向他们展示当天的**时间线**，而不是配置文件：
 
 ```
 07:00  digest           "solana"
@@ -107,116 +109,116 @@ comm -23 <(ls skills/*/SKILL.md | cut -d/ -f2 | sort) \
 18:00  heartbeat        health check
 ```
 
-根据 `./aeon skills ls --enabled --json` 构建时间线。（`--enabled` 很重要：普通的 `ls` 也会为*已禁用*的技能输出 `SCHEDULE` 列——那只是它们在 `aeon.yml` 中的条目，并不能证明任何任务会实际触发。）没有 CLI，或者想查看原始文件？`references/layout.md` 中提供了仅使用 grep 的等效方法。然后接受自然语言形式的修改要求并应用：
+使用 `./aeon skills ls --enabled --json` 构建。（`--enabled` 很重要：普通的 `ls` 也会为*已禁用*的技能打印 `SCHEDULE` 列——那只是它们在 `aeon.yml` 中的条目，并不能证明任何内容会被触发。）没有 CLI，或者想要原始文件？`references/layout.md` 中提供了仅使用 grep 的等价方法。然后理解自然语言形式的修改并应用：
 
-| 用户说 | 你要做 |
+| 他们说 | 你执行 |
 |---|---|
-| “把摘要移到早上 7 点” | `./aeon skills schedule digest "0 6 * * *"` |
-| “仅工作日” | `... "0 6 * * 1-5"` |
-| “太频繁了，每周两次” | `... "0 6 * * 1,4"` |
-| “停止那个加密货币任务” | `./aeon skills disable token-movers` |
-| “改成关注 rust” | `./aeon skills set digest --var rust` |
+| “把 digest 改到早上 7 点” | `./aeon skills schedule digest "0 6 * * *"` |
+| “只在工作日执行” | `... "0 6 * * 1-5"` |
+| “太吵了，一周两次就好” | `... "0 6 * * 1,4"` |
+| “停止那个加密货币的” | `./aeon skills disable token-movers` |
+| “改成关于 rust 的” | `./aeon skills set digest --var rust` |
 
 规则：
-- **`aeon.yml` 中的所有 cron 均使用 UTC。**从用户所在时区进行转换，并明确说明：“巴黎时间早上 7 点 = UTC `0 6 * * *`（夏令时期间为早上 5 点——要固定为当地时间吗？）”目前没有使用当地时间的选项，因此如果夏令时很重要，请告知用户每年哪一半年会有一小时的偏差。
-- 每次更改后，使用用户所在时区确认**接下来的 3 次触发时间**。
+- **`aeon.yml` 中的所有 cron 都是 UTC。** 根据他们的时区进行转换，并明确说明：“巴黎时间早上 7 点 = UTC 的 `0 6 * * *`（夏季是早上 5 点——想要固定为当地时间吗？” 没有当地时间选项，因此如果夏令时很重要，要告诉他们哪半年会相差一小时。
+- 任何更改后，确认返回**他们所在时区中的接下来 3 次触发时间**。
 - 对任何有歧义的操作，先使用 `--dry-run`，展示差异，然后再应用。
-- 更改需要推送后才会生效。CLI 会执行推送；请确认推送已成功落地。
-- **然后检查输出的值是否带有引号**——每次都要执行一次 grep：
+- 更改需要推送后才会生效。CLI 会完成推送；确认推送已经成功。
+- **然后检查该值是否带引号**——每次都执行一次 grep：
 
   ```bash
   grep '^  <skill>:' aeon.yml
   ```
 
-  调度器只会读取**带双引号**的 `schedule: "…"`。CLI 在写入一个*新*键时不会添加引号，因此，此前没有 `schedule:` 的条目会变成 `schedule: 0 12 * * *`，导致该技能永远被跳过。详细信息见下文。
+  调度器只读取带有**双引号**的 `schedule: "…"`。CLI 会写入一个不带引号的*新*键，因此一个之前还没有 `schedule:` 的条目会变成 `schedule: 0 12 * * *`，该技能也就会永远被跳过。详情如下。
 
-带有 `schedule: workflow_dispatch` 的技能只能按需运行——它们永远不会通过 cron 触发。`reactive` 类型的技能根据条件触发，而不是按时间触发。
+带有 `schedule: workflow_dispatch` 的技能仅按需运行——它们永远不会由 cron 触发。`reactive` 技能会根据条件触发，而不是根据时间触发。
 
 ---
 
-## 模式 3 — 排除阻塞问题
+## 模式 3 — 解除阻塞
 
-“它没有运行。”按以下顺序检查，并在发现第一个问题时停止：
+“它没有运行。”按以下顺序检查，并在第一次发现问题时停止：
 
-1. **它启用了吗？**运行 `./aeon skills ls --enabled`——它是否在列表中？
-2. **是否存在重复键？**运行 `node scripts/validate-config.js`。`aeon.yml` 中重复的技能名称会悄无声息地遮蔽第一个条目。这种情况在手动编辑后很常见。
-3. **它真的是 cron 吗？**`workflow_dispatch` 和 `reactive` 永远不会按计划触发。
-4. **Actions 是否被禁用了？**运行 `gh api repos/{owner}/{repo}/actions/permissions`。仓库 60 天没有活动后，GitHub 会自动禁用计划工作流——这会悄无声息地导致 fork 中的任务失效，而 Aeon 中不会显示任何相关信息。请在仓库的 Settings 中重新启用。
-5. **计划值是否带引号？**运行 `grep '^  <skill>:' aeon.yml`——该值必须是 `schedule: "0 12 * * *"`，**并且带双引号**。
+1. **它是否已启用？** `./aeon skills ls --enabled` — 是否列在其中？
+2. **是否存在重复键？** `node scripts/validate-config.js`。`aeon.yml` 中重复的技能名称会静默遮蔽第一个条目。手动编辑后很常见。
+3. **它是否真的是 cron？** `workflow_dispatch` 和 `reactive` 永远不会按计划触发。
+4. **Actions 是否被禁用？** `gh api repos/{owner}/{repo}/actions/permissions`。GitHub 会在仓库连续 60 天没有活动后自动禁用计划工作流——这会静默地导致 fork 失效，而 Aeon 中没有任何地方会显示这一点。在仓库 Settings 中重新启用。
+5. **计划是否带引号？** `grep '^  <skill>:' aeon.yml` — 值必须是 `schedule: "0 12 * * *"`，**并且带双引号**。
 
    ```
    schedule: "0 12 * * *"   ✅ fires
    schedule: 0 12 * * *     ❌ never fires, no error anywhere
    ```
 
-   `scheduler.yml` 使用 bash 正则表达式 `schedule: *"([^"]+)"` 匹配计划。未加引号的值无法匹配，`$SCHED` 为空，匹配循环会执行 `[ -z "$SCHED" ] && continue`——每次轮询都会被悄无声息地跳过，永远如此。
+   `scheduler.yml` 使用 bash 正则表达式 `schedule: *"([^"]+)"` 匹配计划。未加引号的值无法匹配，`$SCHED` 为空，而匹配循环会执行 `[ -z "$SCHED" ] && continue`——静默跳过，每次 tick 都如此，永远如此。
 
-   出现这种情况的原因：CLI 通过一个 YAML 文档模型编辑 `aeon.yml`，该模型会保留*现有*节点的引号，但会以普通样式写入**新添加的**键。因此，在已有带引号 `schedule:` 的条目上执行 `./aeon skills schedule <name> "0 12 * * *"` 是安全的，但在此前没有该键的条目上执行则会悄无声息地破坏配置。首次使用 `--var` 时也是如此。
+   它变成这样的原因是：CLI 通过 YAML 文档模型编辑 `aeon.yml`，该模型会保留*现有的*带引号节点，但会以普通样式写入**新添加的**键。因此，`./aeon skills schedule <name> "0 12 * * *"` 对于已经存在带引号 `schedule:` 的条目是安全的，但对于之前没有该键的条目则会悄悄破坏。同样的情况也适用于首次使用 `--var`。
 
-**除此之外没有任何机制能检测到这个问题。** 该文件是有效的 YAML，`validate-config.js` 报告 CLEAN，`./aeon skills ls --enabled` 也会列出该技能及其调度配置——因为它们都会正确解析 YAML，只有调度器使用正则表达式。手动添加引号即可修复。
-6. **它是否运行后失败了？** 先运行 `./aeon runs ls`，再运行 `./aeon runs logs <id>`。失败的技能会在 30 分钟的冷却期后重试。
+**没有其他地方能检测到这一点。** 该文件是有效的 YAML，`validate-config.js` 报告 CLEAN，`./aeon skills ls --enabled` 也会列出该技能及其调度计划——因为它们都会正确解析 YAML，只有调度器使用正则表达式。手动添加引号即可修复。
+6. **它是否运行过但失败了？** 先运行 `./aeon runs ls`，然后运行 `./aeon runs logs <id>`。失败的技能会在 30 分钟冷却期后重试。
 
-如果上述检查均无问题，再检查以下三项：
+如果以上检查都没有问题，再检查下面三项：
 
-- **它针对错误的仓库运行了。** 明显的迹象是：某个命令报告成功并返回了运行 ID，但在他们的实例上执行 `./aeon runs ls` 却看不到任何记录。如果没有固定默认仓库，`gh` 会优先选择 `upstream` 而不是 `origin`，因此未固定默认仓库的检出会把所有写入操作都发送到 `aeonfun/aeon`。
+- **它针对的是错误的仓库。** 典型迹象是某条命令报告成功并给出了运行 id，但在他们的实例上运行 `./aeon runs ls` 却什么也没有。未固定默认仓库时，`gh` 会优先使用 `upstream` 而不是 `origin`，因此未固定的检出仓库会将每次写入都发送到 `aeonfun/aeon`。
 
   ```bash
   gh repo view --json nameWithOwner -q .nameWithOwner   # if this isn't their repo:
   gh repo set-default <owner>/<repo>
   ```
 
-  然后**清理误写入上游仓库的内容**——针对正确的仓库重新运行并不会撤销这些内容。指向错误仓库时设置的任何密钥，现在都成了别人仓库中的密钥：
+  然后**清理已经写入上游的内容**——针对正确仓库重新运行并不会撤销之前的操作。任何在指向错误仓库期间设置的密钥，现在都是别人仓库中的秘密：
 
   ```bash
   gh secret list -R aeonfun/aeon      # timestamps matching the misfire = theirs
   ```
 
-  **始终先在提供商处轮换密钥**——它曾存放在一个仓库中，而该仓库的协作者可以提交读取该密钥的工作流。然后使用 `./aeon secrets set NAME --stdin` 在他们的实例上重新设置它。
+  **始终先在提供方处轮换该密钥**——它曾存在于一个其协作者可以提交工作流并读取该密钥的仓库中。然后在他们的实例上使用 `./aeon secrets set NAME --stdin` 重新设置。
 
-  **不要直接盲目删除。** `gh secret list` 只显示*最后更新时间*，因此无法判断上游仓库是否原本就有该密钥，而误操作是否**覆盖**了它。删除前先询问：
-  - 上游仓库从未有过该密钥 → `gh secret delete <NAME> -R <upstream>`。
-  - 上游仓库原本有自己的密钥 → 删除会破坏*他们的*计划运行。所有者必须重新设置上游仓库自己的值；此次覆盖无法从这里撤销。
+  **不要盲目删除。** `gh secret list` 只显示*最后更新时间*，因此无法告诉你上游仓库之前是否已经有这个密钥，以及这次误操作是否**覆盖**了它。删除前先询问：
+  - 上游从未有过该密钥 → `gh secret delete <NAME> -R <upstream>`。
+  - 上游原本有自己的密钥 → 删除会破坏*他们*的定时运行。所有者必须重新设置上游自己的值；从这里无法撤销这次覆盖。
 
-  如果删除操作返回 403，说明他们从未拥有写入权限——实际上没有写入任何内容，之前的命令只是*看起来*正常，实际上已经失败。
-- **缺少密钥。** 技能会在 `requires:` 中声明密钥。使用 `./aeon secrets ls --set` 检查这些密钥。缺少可选密钥（`KEY?`）意味着功能会静默降级，而不是直接失败。
-- **“没有可用的 MCP 工具。”** 在 Claude 运行环境中，`.mcp.json` 里只要有一个无法解析的 `${VAR}`，就会对该次运行禁用**所有** MCP 服务器，而不只是有问题的那一个（`::warning::.mcp.json references secret(s) not set:` … `Skipping MCP this run.`）。Grok 则会按服务器分别降级。如果某个 OAuth 服务器之前工作正常，之后却导致运行失败，应怀疑轮换后的刷新令牌无法保存——参见 `references/mcp.md`。
-- **它运行了，但什么也没发送。** 这通常是正确行为。Aeon 的约定是在没有信号时保持静默——一次无异常的运行不会发送空报告，而是什么也不发送。
+  如果删除操作返回 403，说明他们从未拥有写入权限——实际上什么都没有写入，之前那条命令只是看起来成功，但在操作过程中失败了。
+- **缺少密钥。** 技能会在 `requires:` 中声明所需的密钥。将它们与 `./aeon secrets ls --set` 的结果进行对照。缺少可选密钥（`KEY?`）意味着功能会静默降级，而不是导致失败。
+- **“没有可用的 MCP 工具。”** 在 Claude harness 上，只要 `.mcp.json` 中有一个无法解析的 `${VAR}`，该次运行中的**所有** MCP 服务器都会被禁用，而不仅仅是有问题的那个（`::warning::.mcp.json references secret(s) not set:` … `Skipping MCP this run.`）。Grok 则会按服务器分别降级。如果某个 OAuth 服务器之前运行正常、后来却导致运行失败，请怀疑刷新令牌发生了轮换但未能保存——参见 `references/mcp.md`。
+- **它运行了，但什么也没发送。** 这通常是正确行为。Aeon 的约定是在没有信号时保持静默——一次干净的运行不会发送任何内容，而不是发送一份空报告。
 
-注意：GitHub 只会触发大约 10% 的 `*/5` cron 时点，因此调度器会补执行最长 12 小时内错过的时段。技能延迟 40 分钟触发是正常现象。
+注意：GitHub 只会触发约 `*/5` cron 时间点中的 10%，因此调度器会在最多 12 小时内补执行错过的时间点。某个技能晚 40 分钟触发是正常的。
 
 ---
 
-## 模式 4——将此聊天转换为技能
+## 模式 4 — 将本次聊天变成一个技能
 
-他们刚刚在 Claude Code 中完成了某项操作，并希望它按计划运行。
+他们刚刚在 Claude Code 中完成了某件事，并希望它按计划自动执行。
 
-1. **编写技能文件。** `skills/<name>/SKILL.md`——先写 frontmatter，再写提示词。根据会话中实际发生的情况生成：
-   - 提示词正文 = 他们提出的要求，加上已验证有效的步骤
-   - `mode:` = `read-only`，除非它需要提交代码或创建 PR
-   - `requires:` = 工作过程中使用的所有 API 密钥（如果没有该密钥也可以降级运行，则使用 `KEY?`）
-   - `category:` = `core evolution basics dev crypto productivity` 之一
-   - 如果他们喜欢输出结果，将经过精简的示例粘贴到正文中，作为格式规范
+1. **编写技能文件。** `skills/<name>/SKILL.md`——先写 frontmatter，然后写提示词。根据会话中实际发生的内容来提炼：
+   - 提示词正文 = 他们提出的要求，加上已经奏效的步骤
+   - `mode:` = `read-only`，除非需要提交或创建 PR
+   - `requires:` = 执行过程中用到的任何 API 密钥（如果没有该密钥也能降级，则使用 `KEY?`）
+   - `category:` = `core evolution basics dev crypto productivity` 中的一个
+   - 如果他们喜欢生成的结果，就将一份精简示例粘贴到正文中，作为格式规范
 
-2. **修复会导致无人值守运行失败的三个问题：**
-   - **现场没有人。** 之前任何需要向用户提问的地方，都必须改成默认值或规则。
-   - **无事时保持沉默。** 明确添加“如果没有值得报告的内容，则记录日志并退出，不发送通知。”否则一周后它就会被静音。
-   - **不要重复昨天的内容。** 添加“检查 `memory/logs/` 最近 3 天的记录，跳过任何已经报告过的内容。”
+2. **修复会导致无人值守运行中断的三件事：**
+   - **没人会在那里。** 任何你向他们提问的地方，都必须改成默认值或规则。
+   - **不要对任何情况保持沉默。** 明确添加“如果没有值得报告的内容，则记录日志并退出，不发送通知。”否则它一周后就会被静默。
+   - **不要重复昨天的内容。** 添加“检查 `memory/logs/` 最近 3 天的内容，并跳过任何已经报告过的事项。”
 
-3. **检查它在那里是否真的能运行。** 没有本地文件系统，也没有已登录的工具。如果会话读取了用户的主目录或使用了本地 MCP 服务器，请明确说明——除非将这部分配置为仓库密钥 / `.mcp.json`，否则它无法在无人值守模式下运行。为无人值守运行接入 MCP 服务器（控制面板中的 Connect、OAuth 刷新、采用轮换令牌的 PAT）：`references/mcp.md`。
+3. **检查它在那里确实能够运行。** 不能使用本地文件系统，也不能使用已登录的工具。如果该会话读取了他们的主目录或使用了本地 MCP 服务器，请明确说明——除非将其接入为仓库 secret / `.mcp.json`，否则那部分无法无人值守运行。为无人值守使用接入 MCP 服务器（dashboard Connect、OAuth 刷新、轮换 token 的 PAT）：`references/mcp.md`。
 
-4. **自行添加 `aeon.yml` 条目。** 磁盘上的新 Skill 没有对应条目，而 `./aeon skills enable|schedule` **不会创建条目**——它们只会切换已经存在的条目，并报告 `no change — already in that state`，但这是错误的。在备用的 `heartbeat:` 行之前，手动添加一个处于禁用状态的条目：
+4. **自行添加 `aeon.yml` 条目。** 磁盘上的新 skill 没有条目，而 `./aeon skills enable|schedule` **不会创建条目**——它们只会切换已经存在的条目，并报告 `no change — already in that state`，但这是错误的。手动添加该条目，并将其禁用，放在后备 `heartbeat:` 行之前：
 
    ```yaml
      my-skill: { enabled: false, schedule: "0 12 * * *" }
    ```
 
-   **即使它处于禁用状态，也要包含带引号的 `schedule:`——这些引号不可或缺。** 如果先写一个不带 `schedule:` 的 `{ enabled: false }`，之后再让 `./aeon skills schedule` 添加该键，就会生成一个*不带引号*的值，调度器无法读取它，Skill 也就永远不会触发（模式 3，检查项 5）。在这里预先放入一个带引号的节点，可确保之后每次通过 CLI 编辑时都保留引号。
+   **即使它处于禁用状态，也要包含带引号的 `schedule:`——这些引号是必需的。** 写成一个裸的 `{ enabled: false }`，再让 `./aeon skills schedule` 之后添加该键，会生成调度器无法读取的*未加引号*的值，导致该 skill 永远不会触发（模式 3，检查 5）。在这里预先写入一个带引号的节点，可以确保之后每次 CLI 编辑都保留引号。
 
-   与其他 61 个条目保持一致，使用单行内联的 `{ … }` 形式。`aeon.yml:367` 使用单行 grep 读取每个 Skill 的 `model:`/`harness:` 覆盖配置，因此拆分为多行的条目会改用全局默认值。
+   与其他 61 个条目使用的内联 `{ … }` 形式保持一致，写在一行中。`aeon.yml:367` 通过单行 grep 读取每个 skill 的 `model:`/`harness:` 覆盖配置，因此拆成多行的条目会采用全局默认值。
 
-   这是“绝不手动编辑 YAML”规则唯一获准的例外。之后执行验证：`node scripts/validate-config.js`——但请注意，它只检查结构，无法发现未加引号的值。
+   这是唯一获准违反“永远不要手动编辑 YAML”的例外。完成后进行验证：`node scripts/validate-config.js`——但请注意，它只检查结构，无法捕获未加引号的值。
 
-5. **重新生成两个目录文件，然后通过 PR 提交。** 新 Skill 会触发三个 CI 门禁。请在本地运行它们——**即使结果为红也没有任何机制阻止合并**，`main` 未受保护且没有规则集，因此未运行的门禁只会在事后失败：
+5. **重新生成两个 catalog，然后以 PR 形式提交。** 新 skill 会触发三个 CI 门禁。在本地运行它们——**没有任何机制会阻止红色状态下的合并**，`main` 未受保护，也没有 ruleset，因此未运行的门禁只会在事后失败：
 
    ```bash
    bash scripts/check-skill-categories.sh   # category is one of the six
@@ -224,11 +226,11 @@ comm -23 <(ls skills/*/SKILL.md | cut -d/ -f2 | sort) \
    bin/generate-packs-json                  # catalog/packs.json — NOT optional
    ```
 
-   `generate-packs-json` 是所有人都会忘记的那一个：`catalog/skills.json` 本身就是 `ci-packs-json` 的触发路径，因此如果只提交 Skill 目录而不提交 Pack 目录，一个你从未修改过的工作流就会变红。请提交这两个文件。
+   `generate-packs-json` 是所有人都会忘记的那个：`catalog/skills.json` 本身就是 `ci-packs-json` 的触发路径，因此只提交 skills catalog、而不提交 pack catalog，会导致一个你根本没有修改过的 workflow 变红。将两个文件都提交。
 
-   完整门禁列表、触发条件以及 `ci-tests` / `ci-apps` 命令：`references/ci.md`。
+   完整的门禁列表、触发条件，以及 `ci-tests` / `ci-apps` 命令：`references/ci.md`。
 
-6. **先运行一次**（`./aeon skills run <name>`），向用户展示输出，然后通过模式 2 为其设置调度。
+6. **运行一次**（`./aeon skills run <name>`），向他们展示输出，然后通过模式 2 为其设置计划。
 
 ### Skill 文件结构
 
@@ -250,7 +252,7 @@ metadata:
 Today is ${today}. <the prompt — plain instructions, including judgment calls>
 
 ## Steps
-1. <the procedure — 43 of 75 skills lead with this>
+1. <the procedure — 43 of 76 skills lead with this>
 
 ## Network note
 <curl / WebFetch / `./secretcurl` / `gh api` — how this skill fetches>
@@ -261,46 +263,46 @@ Send nothing if there's nothing worth reporting.
 Append what you did to `memory/logs/${today}.md` under a `### <skill-name>` heading.
 ```
 
-正文通常为 133–757 行（中位数约为 306 行）——skill 是用自然语言写成的提示词，而不是配置文件。`## Steps` / `## Network note` / `## Constraints` / `## Log` 是其惯用结构。
+正文长度为 133–757 行（中位数约为 306 行）——skill 是用散文写成的提示词，而不是配置文件。`## Steps` / `## Network note` / `## Constraints` / `## Log` 是标准结构。
 
-编写时有四个容易踩坑的地方——完整细节见 `references/skill-anatomy.md`：
+编写时有四件容易踩坑的事——完整细节见 `references/skill-anatomy.md`：
 
-- **`requires:` 是最小权限许可列表——运行时只会导出此处列出的键。** 行内形式（`requires: [KEY?]`）和块形式（`- KEY` 行）都能解析，既可以位于顶层，也可以嵌套在 `metadata:` 下。需要注意的是取值：只有匹配 `^[A-Z][A-Z0-9_]{2,}$` 的名称（末尾的 `?` 表示可选）才会被注入；小写或格式错误的条目会被静默丢弃。
-- **`mode:` 拼写错误会授予写权限。** 未知值会回退到 `write`，绝不会回退到更安全的权限级别。准确的字符串是 `read-only`。
-- **`${today}` / `${var}` 不会被模板化。** 不会有任何机制重写 `SKILL.md`；工作流会把日期和变量放入外围提示词中，由模型结合上下文解析。自行创造 `${my_thing}` 只会得到字面量 `${my_thing}`。
-- **绝不要把密钥放在命令行中。** 使用 `./secretcurl`，并在花括号中放置 `{ENV_NAME}` 占位符——Claude Code 的权限分析器会在运行时阻止 `$SECRET` 展开。
+- **`requires:` 是最小权限白名单——运行时只会导出此处命名的键。** 行内形式（`requires: [KEY?]`）和块形式（`- KEY` 行）都能解析，可以位于顶层，也可以嵌套在 `metadata:` 下。关键在于值：只有匹配 `^[A-Z][A-Z0-9_]{2,}$` 的名称（末尾的 `?` 表示可选）才会被注入；小写或格式错误的条目会被静默丢弃。
+- **`mode:` 拼写错误会授予写入权限。** 未知值会回退为 `write`，而不是更安全的层级。准确字符串是 `read-only`。
+- **`${today}` / `${var}` 不会被模板化。** 没有任何东西会重写 `SKILL.md`；工作流会将日期和 var 放入外围提示词中，由模型在上下文中解析。自行发明 `${my_thing}` 只会得到字面量 `${my_thing}`。
+- **绝不要将密钥放在命令行上。** 使用带有花括号占位符 `{ENV_NAME}` 的 `./secretcurl`——Claude Code 的权限分析器会在运行时阻止 `$SECRET` 展开。
 
-调度配置**不能**放在 `SKILL.md` 中——它们位于 `aeon.yml`。仍有 10 个上游 skill 在 frontmatter 中带有 `schedule:` 或 `cron:` 行；但**没有任何组件会读取它们**（`scheduler.yml` 只解析 `aeon.yml`）。不要照搬这种模式，也不要轻信你发现的此类配置——请检查 `aeon.yml`。
+计划任务**不**应放在 `SKILL.md` 中——它们位于 `aeon.yml`。尽管有 10 个上游 skill 仍然带有 `schedule:` 或 `cron:` frontmatter 行；**没有任何东西会读取它**（`scheduler.yml` 只解析 `aeon.yml`）。不要照搬这种模式，也不要相信你找到的任何此类配置——请检查 `aeon.yml`。
 
 ---
 
-## 模式 5——更改现有 skill 的行为
+## 模式 5 — 更改现有 skill 的行为
 
-“缩短摘要”“停止涵盖 X”“添加一个来源”。这比编写新 skill 更常见。
+“让摘要更短”、“停止涵盖 X”、“添加一个来源”。这比编写新 skill 更常见。
 
-**首先，确认这是否属于配置变更，而不是文件编辑。** 大多数 skill 通过 `var` 接收主题、过滤器或模式——修改正文之前，先阅读该 skill 的 `var:` 行及其 `aeon.yml` 条目中的注释。如果 `var` 可以满足需求，那就完成了：
+**首先，检查这是否是配置变更，而不是文件编辑。** 大多数 skill 会通过 `var` 接收主题、过滤条件或模式——在修改正文之前，先阅读该 skill 的 `var:` 行以及其 `aeon.yml` 条目上的注释。如果 `var` 已经涵盖了需求，就完成了：
 
 ```bash
 ./aeon skills set digest --var "rust"          # no file edit at all
 ```
 
-否则，编辑 `skills/<name>/SKILL.md`：
+否则编辑 `skills/<name>/SKILL.md`：
 
-1. **先通读完整正文。** 这些文件通常很长（200–750 行），其中包含判断规则、退出分类法和评分量表，针对性的编辑可能会在不易察觉的情况下与它们产生冲突。
-2. **不要删掉保障正常运行的机制。** 无论其他内容如何变化，skill 都必须保留：`./notify` 路径、无有效信号时静默退出、在 `### <skill-name>` 下追加到 `memory/logs/${today}.md` 的逻辑，以及所有已有的已报告内容去重机制。旨在“收紧”skill 的编辑经常会误删这些内容。健康检查循环会解析 `### <skill-name>` 标题，而去重规则会读取最近 3 天的日志——破坏其中任何一项，都会导致 skill 重复报告，直到被静音。相关约定见 `references/skill-anatomy.md`。
-3. **如果行为发生变化，请更新 frontmatter。** 新数据源需要密钥 → 将其添加到 `requires:`。现在会写入文件或创建 PR → `mode: write`。更改了 `description:`、`name:`、`category:` 或 `requires:` → 重新生成**两个**目录（`bin/generate-skills-json && bin/generate-packs-json`）并将二者都提交；`skills.json` 包含这些字段，并为 `packs.json` 提供数据。见 `references/ci.md`。
-4. **如果是上游 skill，请发出警告。** `aeonfun/aeon` 中发布的任何内容都会在下次执行 `git merge upstream/main` 时发生冲突。这没问题，但要明确说明——双仓库约定要求本地编辑必须有明确目的，并且数量尽可能少。
+1. **先完整阅读整个正文。** 这些文件很长（200–750 行），并包含判断规则、退出分类和评分标准；针对性编辑可能会在不知不觉中与它们矛盾。
+2. **不要删除维持运行所需的机制。** 无论其他内容如何变化，该 skill 都必须保留：`./notify` 路径、无信号时静默退出、在 `### <skill-name>` 下追加到 `memory/logs/${today}.md`，以及任何已经存在的去重逻辑。声称要“收紧” skill 的编辑经常会删除这些内容。`### <skill-name>` 标题会被健康循环解析，而去重规则会读取日志中最近 3 天的内容——破坏其中任何一项都会导致 skill 持续重复报告，直到被静音。相关约定见 `references/skill-anatomy.md`。
+3. **如果行为发生了变化，请更新 frontmatter。** 新增需要某个键的数据源 → 将其添加到 `requires:`。现在会写入文件或创建 PR → 设置 `mode: write`。如果更改了 `description:`、`name:`、`category:` 或 `requires:` → 重新生成**两个**目录（`bin/generate-skills-json && bin/generate-packs-json`）并提交两者；`skills.json` 包含这些字段，并为 `packs.json` 提供数据。参见 `references/ci.md`。
+4. **如果是上游 skill，请发出警告。** `aeonfun/aeon` 中随附的任何内容都会在下一次 `git merge upstream/main` 时发生冲突。这样做没问题，但要说明这一点——两个仓库的约定是让本地编辑保持有意为之且尽量少。
 5. **运行一次**（`./aeon skills run <name>`），并在结束前阅读输出。
 
-自动化替代方案：仓库内的 `autoresearch` 技能会生成四个经过评分的变体来演进目标技能，并将胜出版本作为 PR 提交。当需求是“让它变得更好”，而不是要求进行某项具体更改时，请使用它。
+自动化替代方案：仓库内的 `autoresearch` skill 会生成四个经过评分的变体，并将胜出的变体作为 PR 提交，从而迭代改进目标 skill。当用户的诉求是“让它变得更好”，而不是提出具体修改时，可以使用它。
 
 ---
 
-## 模式 6 —“我应该启用什么？”
+## 模式 6 ——“我应该启用什么？”
 
-这是引导配置期间真正应该首先提出的问题。**不要一股脑列出整个目录。**先问两三个问题，了解他们离开时真正希望系统处理什么，然后推荐**三个**技能，并为每个技能附上一行理由。
+这是新手引导期间真正的第一个问题。**不要把目录一股脑倒出来。** 先问两三个问题，了解他们希望在离开时由系统处理什么，然后提出 **三个** skill，并各用一句话说明理由。
 
-一次推荐三个，而不是十二个。每个启用的技能都会带来周期性通知，而毁掉一个实例最快的方式，就是从第一天起就让它吵个不停。`heartbeat` 已经启用，并且除非有事情需要关注，否则会保持静默。
+每次提供三个，而不是十二个。每个启用的 skill 都会产生周期性通知，而让实例在第一天就变得嘈杂，是最快的弃用方式。`heartbeat` 已经启用，只有在需要关注时才会保持静默。
 
 ```bash
 ./aeon skills ls                 # all skills — SKILL / ON / SCHEDULE / PACK / DESC
@@ -310,20 +312,20 @@ Append what you did to `memory/logs/${today}.md` under a `### <skill-name>` head
 ./aeon packs ls                  # the six first-party packs
 ```
 
-`ls` 的页脚会显示 `75 skills · 1 enabled`——在推荐任何内容之前，先把它读给他们听。首次运行会安装 CLI 运行时（tsx + yaml，约 12MB）；npm 产生的大量输出只会出现一次，属于正常现象。仅使用 grep 的等效方法：`references/layout.md`。
+读取 `ls` 输出底部类似 `76 skills · 1 enabled` 的统计信息——在提出任何建议前先读给他们听。首次运行会安装 CLI 运行时（tsx + yaml，约 12MB）；npm 输出的噪声只会出现一次，属于预期现象。仅使用 grep 的等效说明：`references/layout.md`。
 
-技能包只是可见性筛选器，并不是运行时开关——显示一个技能包不会运行任何内容。Core（12 个）、Evolution（9 个）和 Basics（17 个）默认显示；Dev（11 个）、Crypto（15 个）和 Productivity（11 个）则按需显示。
+Pack 是可见性筛选器，而不是运行时开关——显示某个 pack 不会运行任何内容。Core（12 个）、Evolution（9 个）和 Basics（18 个）默认显示；Dev（11 个）、Crypto（15 个）和 Productivity（11 个）按需显示。
 
-合理的初始组合：
+合理的起始组合：
 
-| 他们关心的内容 | 推荐 |
+| 他们关注的事项 | 建议 |
 |---|---|
-| 他们的仓库 | `github-monitor`、`pr-review`、`changelog` |
-| 某个主题/研究 | `digest`、`article`、`mention-radar` |
+| 他们的代码仓库 | `github-monitor`、`pr-review`、`changelog` |
+| 某个主题 / 研究 | `digest`、`article`、`mention-radar` |
 | 市场 | `token-movers`、`defi-overview`、`monitor-polymarket` |
-| 发布/增长势头 | `heartbeat`、`shiplog`、`bd-radar` |
+| 发布 / 增长 | `heartbeat`、`shiplog`、`bd-radar` |
 
-### 安装更多技能
+### 安装更多内容
 
 ```bash
 bin/install-skill-pack --list             # browse the community registry
@@ -331,21 +333,21 @@ bin/install-skill-pack <owner>/<repo>     # install a curated pack
 bin/add-skill <owner>/<repo> --list       # any repo containing SKILL.md files
 ```
 
-所有内容安装后都处于**禁用状态**，经过安全扫描，并在 `skills.lock` 中记录来源。
+所有内容都会以 **禁用** 状态安装，并经过安全扫描，来源信息记录在 `skills.lock` 中。
 
-**启用社区 SKILL.md 之前，请先阅读它。**安装技能包意味着运行陌生人编写的提示词，并向其中注入你的机密信息。扫描器使用的是正则表达式——它无法检测提示注入。请检查 `requires:` 是否与其声称的任务相符、`capabilities:` 是否如实描述，以及其中是否存在指示代理将数据发送到无关位置的内容。
+**启用社区 `SKILL.md` 之前先阅读它。** 安装 pack 意味着会在注入你的机密信息后运行陌生人的提示词。扫描器基于正则表达式——无法检测提示词注入。请检查 `requires:` 是否与所声明的工作相匹配，`capabilities:` 是否如实，以及是否有任何指示要求 agent 将数据发送到无关的地方。
 
-**启用任何会对现实世界产生广泛影响的技能前，必须明确确认：**`distribute-tokens`（发送 USDC）、`schedule-ads`（花费资金）、`send-email` 和 `vuln-scanner`（联系真实人员）、`deploy-prototype` 和 `feature`（向他人的仓库推送内容）。
+**在启用任何具有现实世界影响范围的内容之前，必须明确确认：** `distribute-tokens`（发送 USDC）、`schedule-ads`（花钱）、`send-email` 和 `vuln-scanner`（联系真实人员）、`deploy-prototype` 和 `feature`（推送到他人的代码仓库）。
 
 ---
 
-## 模式 7 — 策略与表达风格
+## 模式 7 ——策略与语气
 
-有两个文件会被带入**每一次**运行的上下文中。两者都不是必需的，开销都很低，而且它们对输出质量的提升超过任何针对单个技能的调优。
+有两个文件会被带入 **每一次**运行的上下文中。两者都不是必需的，成本也很低，但它们对输出质量的提升超过了针对单个 skill 的任何调优。
 
-### `STRATEGY.md` — 指路明灯
+### `STRATEGY.md` ——北极星
 
-它会被导入 `CLAUDE.md`，因此会出现在每个技能的上下文中：目标、优先级、受众和硬性约束。当某项选择无法通过其他方式确定时，它会作出最终取舍。内容要保持**精炼**（每次运行都会消耗 token）且**具体**（模糊的策略无法作出取舍）。
+它会被导入 `CLAUDE.md`，因此会出现在每个 skill 的上下文中：目标、优先事项、受众、硬性约束。当某个选择无法通过其他方式确定时，它可以打破平局。保持它**简洁**（每次运行都会消耗 token），并且**具体**（模糊的策略无法打破平局）。
 
 ```bash
 ./aeon strategy show
@@ -353,97 +355,98 @@ bin/add-skill <owner>/<repo> --list       # any repo containing SKILL.md files
 ./aeon strategy build "<one-line goal>"    # dispatches the strategy-builder skill
 ```
 
-`build` 会读取简报、仓库 README 和 `memory/MEMORY.md`，然后提交一份草稿。它以 Action 的形式运行，因此请在完成后拉取一次。无需 API 密钥。
+`build` 会读取简报以及仓库 README 和 `memory/MEMORY.md`，然后提交一个草稿。它会作为 Action 运行，因此完成后请执行 pull。无需 API 密钥。
 
-### `soul/` — 它听起来是什么样的
+### `soul/` — 它听起来是什么样
 
-默认情况下，Aeon 没有个性。每次运行时都会读取 `soul/SOUL.md`（身份、世界观、观点）和 `soul/STYLE.md`（语气、词汇、反模式），因此通知和内容听起来会像操作者本人。`soul/examples/` 包含 10–20 个校准样本。
+默认情况下，Aeon 没有个性。每次运行都会读取 `soul/SOUL.md`（身份、世界观、观点）和 `soul/STYLE.md`（语气、词汇、反模式），因此通知和内容听起来会像操作者本人。`soul/examples/` 中存放了 10–20 个校准样本。
 
 ```bash
 ./aeon soul show
 ./aeon soul build --handle <x-handle> --name "<Full Name>" --links <url,url>
 ```
 
-`XAI_API_KEY` 能够最充分地解读真实的 X 时间线；如果没有它，`soul-builder` 会回退到 Web 搜索。github.com/aeonfun/soul.md 上还有一个完整示例灵魂库，可以作为起点。
+`XAI_API_KEY` 能够对真实的 X 时间线进行最丰富的读取；没有它时，`soul-builder` 会退回到网页搜索。另有一个完整示例 soul 集合，位于 github.com/aeonfun/soul.md，可作为起点。
 
-**质量标准：具体到可能出错。** *“我认为大多数 AI 安全讨论都是自作聪明的自我安慰”*是有用的。*“我对 AI 安全有细致入微的看法”*则没有用。要追求前一种——一个无法冒犯任何人的灵魂，听起来也不会像任何人。
+**质量标准：具体到可能出错。** *“我认为大多数 AI 安全讨论都是自以为是的银河脑式自我安慰”* 是有用的。*“我对 AI 安全有着复杂而细腻的看法”* 则不是。应当追求第一种——一个不会冒犯任何人的 soul，不会听起来像任何人。
 
 ---
 
-## 模式 8 — 从历史记录中挖掘可自动化的技能
+## 模式 8——挖掘历史记录，寻找可自动化的技能
 
-“有哪些事情是我一遍又一遍手动完成，而 Aeon 完全可以代劳的？”模式 4 会把*当前*聊天转化为技能；模式 8 则会挖掘*过去*的聊天，找出哪些聊天值得转化为技能。它会读取操作者本地的 Claude Code 对话记录（`~/.claude/projects/*/*.jsonl`），因此只能在他们自己的机器上使用——绝不能在 Aeon 运行过程中使用。
+“我有哪些事情在一遍又一遍地手动做，而 Aeon 完全可以代劳？”模式 4 会把*当前*聊天转换为技能；模式 8 则会挖掘*过去*的聊天，找出哪些聊天值得转换为技能。它会读取操作者本地的 Claude Code transcript（`~/.claude/projects/*/*.jsonl`），因此只能在操作者自己的机器上运行——绝不能在 Aeon 运行过程中使用。
 
-1. **扫描。** 从实例仓库根目录运行挖掘器：
+1. **扫描。** 从实例仓库根目录运行 miner：
 
    ```bash
    node ${CLAUDE_PLUGIN_ROOT}/skills/aeon/scripts/mine-history.mjs --days 45 --top 15
    ```
 
-   它会解析时间窗口内的每个顶层会话（跳过子代理旁支会话），将 shell 命令规范化为 `binary subcommand`，对会话标题进行分组，并输出一份按**不同会话数 × 不同天数**排序的摘要——衡量的是重复性和周期性，而不是原始数量。参数：`--days N`（时间窗口，默认 120）、`--project SUBSTR`（仅包含 cwd 匹配的会话——将范围限定到某个仓库/主题）、`--top N`、`--min-sessions N`、`--json`。它没有依赖项，如果没有历史记录，会以清晰的错误退出。有关表格的深入解读和候选项评判标准，请参阅：`references/history-mining.md`。
+   它会解析时间窗口内的每个顶层会话（跳过子代理 sidechain），将 shell 命令规范化为 `binary subcommand`，对会话标题进行分组，并输出一份按**不重复的会话数 × 不重复的天数**排序的摘要——关注的是重复出现和发生频率，而不是原始数量。参数包括：`--days N`（时间窗口，默认 120）、`--project SUBSTR`（仅处理 cwd 匹配的会话——将范围限定到一个仓库或主题）、`--top N`、`--min-sessions N`、`--json`。它没有依赖项，如果没有历史记录，会返回干净的错误信息。关于如何更深入地阅读这些表格以及候选项评估标准，请参阅 `references/history-mining.md`。
 
-2. **像人一样阅读它。** 摘要只是原始信号，并非定论——判断权在你：
-   - **重复出现的命令工作流**——如果一个 `binary subcommand` 出现在许多会话中，*并且*横跨许多天，那它就是一种习惯。通用基础操作（`git status`、`gh auth`、单独的 `node`/`python3`）已经被过滤掉，但 `gh pr`/`gh api`/`npm run` 同样属于底层工具——它们到处都高频出现，作为技能创意的信号却很弱。要寻找的是*有辨识度的*重复调用：具名脚本、特定 CLI（`x-cli`、`langfuse`、`raindrop`），或固定而紧凑的 `gh api` 模式。
-   - **重复出现的任务主题**——分组后的会话标题是最强的信号。如果某个标题以大致固定的周期在许多天里反复出现（“检查 X”“审查 Y”“汇总 Z”），它几乎总是真正的自动化候选项。
-   - **工具 / 项目**——工作涉及哪些 MCP 服务器和仓库；这能告诉你一个技能需要接入哪些资源，以及应在哪里使用 `--project` 限定范围。
+2. **像人一样阅读。** 摘要只是原始信号，而不是结论——判断由你做出：
+   - **重复出现的命令工作流**——某个 `binary subcommand` 在许多会话和许多天中都出现，说明它是一种习惯。通用基础操作（`git status`、`gh auth`、裸用的 `node`/`python3`）已经被过滤掉，但 `gh pr`/`gh api`/`npm run` 也属于基础设施，在各处出现频率很高，作为技能创意的价值较弱。应寻找*具有辨识度的重复调用*：命名脚本、特定 CLI（`x-cli`、`langfuse`、`raindrop`），或紧凑的 `gh api` 模式。
+   - **重复出现的任务主题**——经过分组的会话标题是最强的信号。某个标题以大致固定的频率跨越多天出现（“检查 X”“审阅 Y”“汇总 Z”），几乎总是真正的自动化候选项。
+   - **工具链 / 项目**——工作所在的 MCP server 和仓库有哪些；这会告诉你技能需要接入什么，以及应当在哪里限定 `--project` 的范围。
 
-3. **筛选出真正的候选项。** 只有同时满足以下所有条件的条目才值得提出：
-   - **重复发生** — 跨越数天内的多个会话，而不是仅集中在某个忙碌的下午。
-   - **符合获取/计算/报告模式** — 获取或检查某些内容并进行报告。交互性强、需要大量决策或一次性的迁移工作并不适合自动化。
-   - **可安全无人值守运行** — 不依赖本地文件、已登录的桌面应用，也不需要人工在任务中途作答（模式 4 的步骤 2/3 涵盖加固工作）。
-   - **尚未成为 Skill。** 对照当前实例进行去重：`./aeon skills ls`。许多重复进行的 `gh pr` 工作已由 `pr-review`/`pr-check` 覆盖；定期研究工作也已有 `digest`/`mention-radar`。如果现有 Skill 已能覆盖，那么应采用模式 2（重新安排时间）或模式 5（编辑其 `var`），**而不是**创建新的 Skill。
+3. **筛选真正的候选项。** 只有同时满足以下所有条件的行，才值得提出：
+   - **具有周期性** —— 跨越数天的多个会话，而不是某个繁忙的下午。
+   - **符合获取/计算/报告的形态** —— 拉取或检查某些内容并进行报告。交互式、需要大量决策或一次性的迁移工作都*不应*自动化。
+   - **可安全无人值守运行** —— 不依赖本地文件、已登录的桌面应用，也不需要人在任务中途回答问题（Mode 4 的第 2/3 步会负责加固）。
+   - **尚未是一个 skill。** 对照实例去重：`./aeon skills ls`。许多周期性的 `gh pr` 工作已经由 `pr-review`/`pr-check` 覆盖；研究节奏已经由 `digest`/`mention-radar` 覆盖。如果已有 skill 能够覆盖该工作，应采用 Mode 2（重新安排）或 Mode 5（编辑其 `var`），**而不是**创建新的 skill。
 
-4. **提出三个候选项，并附上证据。** 不要直接倾倒摘要内容。列出**三个**候选项，每个都要以重复次数作为证据（“你在 D 天内的 N 个会话中执行了 X”）、提供一行 Skill 概述（它获取什么、发送什么）、给出建议的 `mode:`（如果它只进行获取和报告，则使用 `read-only`），并根据观察到的频率推断建议的 `schedule:`（约每天发生 → 每天；约每周发生 → 每周）。询问要构建哪一个。
+4. **提出三个候选项，并提供证据。** 不要倾倒整个摘要。请列出**三个**候选项，并为每个候选项提供其重复次数作为证据（“你在 D 天内的 N 个会话中执行了 X”）、一行 skill 草案（它获取什么、发送什么）、建议的 `mode:`（如果仅获取并报告，则使用 `read-only`），以及根据观察到的节奏推断出的建议 `schedule:`（大约每天一次 → daily；大约每周一次 → weekly）。询问用户要构建哪一个。
 
-5. **移交给模式 4** 来编写选定的 Skill——使用相同的 Skill 文件结构、无人值守加固、带引号的 `schedule:` 条目，以及双目录 CI。模式 8 发现工作；模式 4 将其交付。
+5. **交由 Mode 4 编写所选的 skill** —— 使用相同的 skill 文件结构、无人值守加固、带引号的 `schedule:` 条目，以及双目录 CI。Mode 8 负责发现工作；Mode 4 负责交付它。
 
-**隐私：** 会话记录仅在本地读取，对外只展示汇总摘要。不要将原始提示词正文或会话中的任何敏感内容粘贴到频道或已提交的文件中；次数和标题足以用来作出决定。
+**隐私：** 会话记录在本地读取，只有聚合摘要会被展示出来。不要将会话中的原始提示正文或任何敏感内容粘贴到频道中，也不要写入已提交的文件；用于决策的计数和标题已经足够。
 
 ---
 
-## 提供商与运行框架
+## 提供商与执行框架
 
-这是两个相互独立的维度。不要混淆：**网关**决定由哪个模型回答；**运行框架**决定由哪个 CLI 运行 Skill。
+这是两个相互独立的维度。不要混淆它们：**网关**决定由哪个模型回答；**执行框架**决定使用哪个 CLI 运行 skill。
 
-### 网关——为 Claude Code 提供支持的服务
+### 网关 — 为 Claude Code 提供支持的组件
 
-设置一个密钥即可启用。`aeon.yml` 默认包含 `gateway: { provider: auto }`，它会在运行时根据现有密钥，按以下优先顺序进行解析：
+设置好 secret 后即可生效。`aeon.yml` 自带 `gateway: { provider: auto }`，它会在运行时根据现有的密钥解析提供商，优先级顺序如下：
 
 ```
 claude → anthropic → openrouter → bankr → usepod → venice → surplus → grok
 ```
 
-`direct` **不是**这条链路中的一跳——它是在八个密钥均未设置时使用的占位符。它不需要任何内容，也不会配置任何内容，因此运行过程会继续使用环境中碰巧存在的 `ANTHROPIC_*` 环境变量，否则会在首次调用模型时失败。日志中的“已解析为 `direct`”意味着**未找到任何密钥**，而不是备用方案已成功生效。
+`direct` **不是**该链路中的一跳——当八个 secret 均未设置时，它只是占位符。它不需要任何东西，也不会配置任何东西，因此运行会继续使用现有的 `ANTHROPIC_*` 环境变量；如果不存在该变量，则会在第一次模型调用时失败。日志中“解析为 `direct`”意味着**未找到任何密钥**，而不是某个回退方案生效了。
 
-| 提供商 | 密钥 | 备注 |
+| 提供商 | Secret | 备注 |
 |---|---|---|
-| Claude 订阅 | `CLAUDE_CODE_OAUTH_TOKEN` | 一键式 OAuth，包含在 Pro/Max 套餐中 |
+| Claude 订阅 | `CLAUDE_CODE_OAUTH_TOKEN` | 一键 OAuth，包含在 Pro/Max 中 |
 | Anthropic API | `ANTHROPIC_API_KEY` | 按使用量付费 |
-| OpenRouter | `OPENROUTER_API_KEY` | `sk-or-…` · Anthropic 原生直通，风险最低 |
-| Bankr | `BANKR_LLM_KEY` | `bk_…` · 折扣价 Opus |
-| UsePod | `USEPOD_TOKEN` | 无前缀——传入 `--provider usepod`。令牌位于基础 URL 中，请妥善保密 |
-| Venice | `VENICE_API_KEY` | 无前缀——传入 `--provider venice`。隐私优先，通过 sidecar 进行桥接 |
-| Surplus | `SURPLUS_API_KEY` | `inf_…` · 在 Base 上以 USDC 结算——先为钱包充值并执行一次 `approve()` |
-| Grok (xAI) | `XAI_API_KEY` | `xai-…` · 直通 `api.x.ai` |
+| OpenRouter | `OPENROUTER_API_KEY` | `sk-or-…` · Anthropic 原生透传，风险最低 |
+| Bankr | `BANKR_LLM_KEY` | `bk_…` · 折扣 Opus |
+| UsePod | `USEPOD_TOKEN` | 无前缀——传入 `--provider usepod`。Token 位于基础 URL 中，请妥善保密 |
+| Venice | `VENICE_API_KEY` | 无前缀——传入 `--provider venice`。以隐私为先，通过 sidecar 桥接 |
+| Surplus | `SURPLUS_API_KEY` | `inf_…` · 在 Base 上结算 USDC——先为钱包充值并完成一次 `approve()` |
+| Grok (xAI) | `XAI_API_KEY` | `xai-…` · 透传至 `api.x.ai` |
 
-它以**级联**方式运行，而不是只做一次选择：优先级最高的密钥最先使用，一旦出现*任何*失败（额度不足、速率限制、服务中断、无效响应），该次运行就会故障转移到下一个已设置密钥的提供商。只有全部失败时才会报错。日志会在每一跳打印 `Routing attempt via '<provider>'`。
+它以**级联**方式运行，而不是单次选择：优先级最高的密钥先运行，如果出现*任何*失败（没有 credits、触发速率限制、服务中断、响应无效），本次运行就会转到下一个已设置密钥的提供商。只有所有提供商都失败时才会报错。日志会在每次切换时打印 `Routing attempt via '<provider>'`。
 
-- **重新排序：**仓库变量 `GATEWAY_ORDER`（名称以空格分隔）。
-- **固定使用一个提供商**（禁用故障转移）：`./aeon config set gateway <name>`。
-- **任何与 Anthropic 兼容的端点：**`ANTHROPIC_API_KEY` 加上仓库变量 `ANTHROPIC_BASE_URL`——例如 `https://api.deepseek.com/anthropic`。
+- **重新排序：** repo 变量 `GATEWAY_ORDER`（以空格分隔的名称）。
+- **固定一个**（禁用故障转移）：`./aeon config set gateway <name>`。
+- **任意兼容 Anthropic 的端点：** `ANTHROPIC_API_KEY` 加上 repo 变量 `ANTHROPIC_BASE_URL` — 例如 `https://api.deepseek.com/anthropic`。
 
-### 执行框架——由哪个 CLI 运行技能
+### Harness — 运行 skill 的 CLI
 
-`claude`（默认）或 `grok`。Grok 执行框架会运行 `grok` CLI，而不是 Claude Code，并且**完全绕过网关**——它有自己的身份验证机制。
+`claude`（默认）或 `grok`。Grok harness 会运行 `grok` CLI，而不是 Claude Code，并且**完全绕过 gateway** — 它有自己的身份验证方式。
 
-- **设置方式：**使用 `./aeon config set harness grok` 进行全局设置，或者在单个技能的 `aeon.yml` 条目中设置 `harness: "grok"`——**必须加引号，并写在该条目的单个内联行中**。每个技能的 `model:` 和 `harness:` 由仅匹配单行的 grep 读取，并且要求使用双引号（`aeon.yml:367`、`:380`），因此未加引号或拆分到多行的覆盖配置会被静默忽略，技能将继续使用全局默认值——不会报错，而且日志中的 `model=` 行看起来也完全正常。通过 CLI 设置任一项后，请重新查看该条目；如果缺少引号，请补上。
-- **身份验证：**使用 `XAI_API_KEY`，或通过控制面板中的**连接 X 账号**使用 X 账号（SuperGrok / X Premium+），这会存储 `GROK_CREDENTIALS`。X OAuth 流程没有 CLI 标志——这项操作应让用户前往 `./aeon`（控制面板）完成。
-- **模型：**`grok-4.5`（默认，推理模型）或 `grok-composer-2.5-fast`（价格低廉）。
-- **没有免费套餐。**
+- **设置方式：** 全局设置为 `./aeon config set harness grok`，或者在单个 skill 的 `aeon.yml` 条目中设置 `harness: "grok"` — **必须加引号，并且位于该条目唯一的内联行上**。每个 skill 的 `model:` 和 `harness:` 会由一个要求双引号的单行 grep 读取（`aeon.yml:367`、`:380`），因此未加引号或拆分到多行的覆盖设置会被静默忽略，skill 会继续运行全局默认值 — 不会报错，而且日志中的 `model=` 行看起来也正常。通过 CLI 设置任一项后，重新读取该条目；如果缺少引号，请补上。
+- **身份验证：** `XAI_API_KEY`，或者通过 dashboard 的 **Connect X account** 使用 X 账号（SuperGrok / X Premium+），该操作会存储 `GROK_CREDENTIALS`。X OAuth 流程没有 CLI 标志 — 只需将他们引导至 `./aeon`（dashboard）完成这一步。
+- **模型：** `grok-4.5`（默认，推理模型）或 `grok-composer-2.5-fast`（低成本）。
+- **没有免费层级。**
 
-请预先告知用户：
-- Grok 运行会报告 **0 个 token**——其 JSON 不包含 token 计数，因此成本跟踪读取到的是空值。这不是 bug。
-- X OAuth 会话会过期。如果无人值守运行开始因身份验证失败，请重新连接。
-- `mode: read-only` 仍然适用（映射到 `--sandbox read-only`），并且 MCP 可以正常工作。
+请事先告知他们：
 
-每个技能的 Grok 配置项位于 `SKILL.md` 的 frontmatter 中（在 Claude 执行框架下会被忽略）：`max_turns`（默认值为 60）、`best_of_n`、`verify` 和 `effort`（`low|medium|high|xhigh|max`——仅适用于推理模型；`grok-composer-2.5-fast` 不接受此配置）。
+- Grok 运行报告会显示 **0 tokens** — 它的 JSON 不携带 token 数量，因此成本跟踪会读取为空。这不是 bug。
+- X OAuth 会话会过期。如果无人值守的运行开始因身份验证失败，请重新连接。
+- `mode: read-only` 仍然适用（映射为 `--sandbox read-only`），MCP 也可用。
+
+每个 skill 的 grok 参数位于 `SKILL.md` frontmatter 中（Claude harness 会忽略这些参数）：`max_turns`（默认 60）、`best_of_n`、`verify` 和 `effort`（`low|medium|high|xhigh|max` — 仅推理模型支持；`grok-composer-2.5-fast` 不接受该参数）。
