@@ -1,0 +1,26 @@
+{
+  "id": "khazp-vibe-coding-prompt-template-vibe-prd",
+  "name": "vibe-prd",
+  "description": "Create a Product Requirements Document (PRD) for your MVP. Use when the user wants to define product requirements, create a PRD, or says \"help me write requirements\", \"create PRD\", or \"define my product\".",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "KhazP",
+  "install_path": ".claude/skills/vibe-prd/SKILL.md",
+  "source": {
+    "repo": "KhazP/vibe-coding-prompt-template",
+    "url": "https://github.com/KhazP/vibe-coding-prompt-template/blob/main/templates/.claude/skills/vibe-prd/SKILL.md",
+    "path": "templates/.claude/skills/vibe-prd/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-24T09:11:43.105Z",
+    "stars": 2864,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-21T09:54:43Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一款用于生成最小可行产品需求文档的工具，适合梳理产品需求、明确功能范围和完善产品构想。"
+}

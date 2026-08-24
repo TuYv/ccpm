@@ -1,0 +1,26 @@
+{
+  "id": "khazp-vibe-coding-prompt-template-vibe-techdesign",
+  "name": "vibe-techdesign",
+  "description": "Create a Technical Design Document for your MVP. Use when the user wants to plan architecture, choose tech stack, or says \"plan technical design\", \"choose tech stack\", or \"how should I build this\".",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "KhazP",
+  "install_path": ".claude/skills/vibe-techdesign/SKILL.md",
+  "source": {
+    "repo": "KhazP/vibe-coding-prompt-template",
+    "url": "https://github.com/KhazP/vibe-coding-prompt-template/blob/main/templates/.claude/skills/vibe-techdesign/SKILL.md",
+    "path": "templates/.claude/skills/vibe-techdesign/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-24T09:11:43.584Z",
+    "stars": 2864,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-21T09:54:43Z",
+    "license": "MIT"
+  },
+  "summary_zh": "帮你为 MVP 生成技术设计文档，适合规划系统架构、选择技术栈或梳理产品实现方案。"
+}

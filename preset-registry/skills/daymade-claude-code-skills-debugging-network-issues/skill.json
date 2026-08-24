@@ -1,7 +1,7 @@
 {
   "id": "daymade-claude-code-skills-debugging-network-issues",
   "name": "debugging-network-issues",
-  "description": ">- Evidence-driven investigation for network, streaming, and protocol-layer bugs where symptoms don't match the obvious cause. Use when debugging connection resets (ECONNRESET, HTTP/2 RST_STREAM, INTERNAL_ERROR), SSE or long-polling stalls, fixed-time connection drops, CDN/proxy/CGNAT idle timeouts, client-side proxy/VPN/TUN misrouting, CNAME-based proxy rule overrides, or symptoms like \"socket closed unexpectedly\", \"stream interrupted\", \"fails after N seconds\", \"works sometimes but not always\",",
+  "description": ">- Investigates network, streaming, and protocol failures with falsification-first layered experiments. Use for ECONNRESET, HTTP/2 RST_STREAM, SSE or long-polling stalls, fixed-time drops, CDN/proxy/CGNAT timeouts, client-side proxy/TUN misrouting, CNAME-rule surprises, certificate errors, generic throughput collapse where everything returns 200 but transfers crawl, or LAN identity/topology mysteries. Trigger phrases include \"socket closed unexpectedly\", \"stream interrupted\", \"fails after N seco",
   "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/daymade/claude-code-skills/blob/main/debugging-network-issues/SKILL.md",
     "path": "debugging-network-issues/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-24T06:18:30.371Z",
+    "discovered_at": "2026-08-24T08:18:25.666Z",
     "stars": 1348,
     "language": "Python",
-    "pushed_at": "2026-08-24T03:31:04Z",
+    "pushed_at": "2026-08-24T07:33:53Z",
     "license": "MIT"
   },
-  "summary_zh": "一套以证据为导向的网络与协议故障排查方法，适合定位连接重置、流式传输卡顿、定时断线及代理误路由等疑难问题。"
+  "summary_zh": "一套用分层证伪实验定位网络、流传输和协议故障的方法，适合排查连接重置、超时、代理误路由、证书异常及网速骤降。"
 }
