@@ -1,0 +1,26 @@
+{
+  "id": "qwenlm-qwen-code-find-simplifications",
+  "name": "find-simplifications",
+  "description": "Use for a periodic repo-wide sweep of qwen-code for accumulated excess surface — dead components and files, orphaned locale keys, exports nothing consumes, added-then-removed scaffolding — filing candidates on a tracking issue and landing only what a maintainer has said yes to. Repo-wide and evidence-first; every consumer is named before anything is deleted. Not for tidying a diff you just wrote (that is bundled `/simplify`) and not for defects (that is `/review`).",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "QwenLM",
+  "install_path": ".claude/skills/find-simplifications/SKILL.md",
+  "source": {
+    "repo": "QwenLM/qwen-code",
+    "url": "https://github.com/QwenLM/qwen-code/blob/main/.qwen/skills/find-simplifications/SKILL.md",
+    "path": ".qwen/skills/find-simplifications/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-24T14:17:11.683Z",
+    "stars": 27334,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-24T14:07:55Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "用于定期全仓扫描并清理无用组件、文件和本地化键，先确认没有消费者，再按维护者批准安全移除历史遗留代码。"
+}
