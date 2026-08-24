@@ -13,13 +13,13 @@
   "install_path": ".claude/skills/gke-workload-troubleshooting/SKILL.md",
   "source": {
     "repo": "google/skills",
-    "url": "https://github.com/google/skills/blob/main/plugins/cloud/google-cloud-gke/skills/gke-workload-troubleshooting/SKILL.md",
-    "path": "plugins/cloud/google-cloud-gke/skills/gke-workload-troubleshooting/SKILL.md",
+    "url": "https://github.com/google/skills/blob/main/plugins/cloud/google-cloud-gke-workloads/skills/gke-workload-troubleshooting/SKILL.md",
+    "path": "plugins/cloud/google-cloud-gke-workloads/skills/gke-workload-troubleshooting/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-24T19:16:47.428Z",
-    "stars": 18657,
+    "discovered_at": "2026-08-24T21:12:55.482Z",
+    "stars": 18662,
     "language": "Python",
-    "pushed_at": "2026-08-24T17:44:57Z",
+    "pushed_at": "2026-08-24T19:40:00Z",
     "license": "Apache-2.0"
   },
   "summary_zh": "用于诊断 GKE 工作负载启动失败、反复崩溃等问题，通过日志和事件定位 Pod 异常原因。"

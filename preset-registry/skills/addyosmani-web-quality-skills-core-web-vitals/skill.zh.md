@@ -1,33 +1,44 @@
 ---
 name: core-web-vitals
-description: Optimize Core Web Vitals (LCP, INP, CLS) for better page experience and search ranking. Use when asked to "improve Core Web Vitals", "fix LCP", "reduce CLS", "optimize INP", "page experience optimization", or "fix layout shifts".
+description: Optimize Core Web Vitals (LCP, INP, CLS) for better page experience using field and lab evidence. Use when asked to "improve Core Web Vitals", "fix LCP", "reduce CLS", "optimize INP", "page experience optimization", or "fix layout shifts".
 license: MIT
 metadata:
   author: web-quality-skills
-  version: "1.0"
+  version: "2.0"
 ---
 # Core Web Vitals 优化
 
-针对影响 Google 搜索排名和用户体验的三项 Core Web Vitals 指标进行专项优化。
+针对三项 Core Web Vitals 进行优化，使用现场数据识别对用户的影响，并使用浏览器跟踪诊断原因。
+
+## 优化前先测量
+
+当有可运行的 URL 时，请阅读[性能测量工作流](../performance/references/MEASUREMENT.md)。优先采用以下顺序：
+
+1. 检查页面级 CrUX p75 数据；当页面数据不可用时，使用来源级数据作为回退，并明确标注。
+2. 在说明的条件下记录浏览器性能跟踪。使用 Chrome DevTools MCP 时，跟踪摘要可以同时包含 CrUX 数据和观测到的实验室指标。
+3. 仅分析与不达标指标相关的洞察，然后检查涉及的代码和资源。
+4. 修复后，重新运行条件等效的实验室测量。不要声称现场指标会立即改善；CrUX 和第一方 RUM 需要新的用户访问数据。
+
+如果只有源代码，请识别可能的原因，但在没有运行时证据的情况下，不要声称 LCP、INP 或 CLS 不达标。
 
 ## 三项指标
 
-| 指标 | 衡量维度 | 良好 | 需要改进 | 较差 |
+| 指标 | 衡量内容 | 良好 | 需要改进 | 较差 |
 |--------|----------|------|------------|------|
 | **LCP** | 加载性能 | ≤ 2.5s | 2.5s – 4s | > 4s |
-| **INP** | 交互性能 | ≤ 200ms | 200ms – 500ms | > 500ms |
+| **INP** | 交互性 | ≤ 200ms | 200ms – 500ms | > 500ms |
 | **CLS** | 视觉稳定性 | ≤ 0.1 | 0.1 – 0.25 | > 0.25 |
 
-Google 以**第 75 百分位数**进行衡量——75% 的页面访问必须达到“良好”阈值。
+Google 使用**第 75 百分位数**进行衡量——75% 的页面访问必须达到“良好”阈值。
 
 ---
 
 ## LCP：最大内容绘制
 
-LCP 衡量最大可见内容元素完成渲染的时间。通常是：
-- 首屏主图或视频
+LCP 衡量最大可见内容元素完成渲染的时间。该元素通常是：
+- 首屏主视觉图片或视频
 - 大型文本块
-- 背景图像
+- 背景图片
 - `<svg>` 元素
 
 ### 常见 LCP 问题
@@ -50,13 +61,15 @@ Fix: CDN, caching, optimized backend, edge rendering
 
 **3. 资源加载时间过长**
 ```html
-<!-- ❌ No hints, discovered late -->
-<img src="/hero.jpg" alt="Hero">
+<!-- ❌ LCP image is discovered only after a stylesheet loads -->
+<div class="hero"></div>
 
-<!-- ✅ Preloaded with high priority -->
+<!-- ✅ Discoverable in initial HTML and prioritized -->
 <link rel="preload" href="/hero.webp" as="image" fetchpriority="high">
 <img src="/hero.webp" alt="Hero" fetchpriority="high">
 ```
+
+优先使用可被发现的 `<img>`，并设置 `fetchpriority="high"`。仅当跟踪显示该资源原本会被较晚发现时，才添加预加载；重复或推测性的预加载可能会争夺带宽。
 
 **4. 客户端渲染延迟**
 ```javascript
@@ -75,7 +88,7 @@ export async function getServerSideProps() {
 
 **5. 使用 Speculation Rules API 实现即时导航**
 
-对于大多数网站，用户实际体验到的 LCP 主要取决于*他们接下来导航到的页面*，而不是最初进入的页面。让浏览器在用户悬停时预渲染很可能接下来访问的页面，可以将该 LCP 降至约 0ms。
+对于具有可预测同源访问路径的网站，预渲染用户可能访问的下一个页面，可以显著加快后续成功导航的速度。应将其视为一种经过度量的导航优化手段，而不是修复当前页面 LCP 问题的替代方案。
 
 ```html
 <script type="speculationrules">
@@ -88,18 +101,27 @@ export async function getServerSideProps() {
 </script>
 ```
 
-`eagerness` 设置（开销最低 → 最激进）：`conservative`（在指针按下时开始）、`moderate`（悬停约 200ms 后开始）、`eager`（链接进入视口后立即开始）、`immediate`（页面加载时开始）。建议从 `moderate` 开始——它可以覆盖大多数导航，同时避免预渲染用户永远不会访问的页面。
+当前 Chrome 的行为已经足够明确，可用于指导选择：
+
+| `eagerness` | 触发条件 |
+|-------------|---------|
+| `conservative` | 指针或触摸按下 |
+| `moderate` | 桌面端：悬停 200ms，或更早发生指针按下；移动端：视口启发式规则 |
+| `eager` | Chrome 143+：桌面端悬停 10ms；移动端锚点进入视口 50ms 后 |
+| `immediate` | 规则一经发现便立即触发 |
+
+应从保守策略开始，并在扩展规则之前，度量预测命中率、传输字节数、服务器负载和导航性能提升。在硬编码对时序敏感的行为之前，请重新查阅 [Chrome 持续维护的 eagerness 文档](https://developer.chrome.com/docs/web-platform/prerender-pages#eagerness)。
 
 注意事项：
-- **带宽/CPU 开销。** 每次预渲染的开销大致相当于一次完整的页面加载。请谨慎限定 `where` 的范围（使用 `href_matches` 模式，并排除退出登录/结账页面），而且除非是小型网站，否则应避免使用 `immediate`。
-- **副作用会提前触发。** 分析、广告以及任何在加载时运行的代码都会在预渲染开始时触发，而不是在用户导航时触发。请通过 [`prerenderingchange` 事件](https://developer.chrome.com/docs/web-platform/prerender-pages#detect_when_a_page_is_prerendered_or_used_for_a_full_navigation)或 `document.prerendering` 控制副作用的触发。
-- **仅限 Chromium。** Safari 和 Firefox 会忽略该脚本——它属于渐进增强，绝不会导致体验退化。
+- **带宽/CPU 成本。** 每次预渲染大致相当于一次完整的页面加载。请谨慎限定 `where` 的范围（使用 `href_matches` 模式，并排除注销/结账页面），且除小型网站外应避免使用 `immediate`。
+- **副作用会提前触发。** 分析、广告以及任何在加载时运行的代码，都会在预渲染开始时触发，而不是在用户导航时触发。请根据 [`prerenderingchange` event](https://developer.chrome.com/docs/web-platform/prerender-pages#detect_when_a_page_is_prerendered_or_used_for_a_full_navigation) 或 `document.prerendering` 对副作用进行门控。
+- **仅限 Chromium。** Safari 和 Firefox 会忽略该脚本——这是一种渐进增强，绝不会造成体验倒退。
 
 ### LCP 优化检查清单
 
 ```markdown
 - [ ] TTFB < 800ms (use CDN, edge caching)
-- [ ] LCP image preloaded with fetchpriority="high"
+- [ ] LCP resource is discoverable in initial HTML and prioritized; preload only if the trace shows late discovery
 - [ ] LCP image optimized (WebP/AVIF, correct size)
 - [ ] Critical CSS inlined (< 14KB)
 - [ ] No render-blocking JavaScript in <head>
@@ -109,6 +131,9 @@ export async function getServerSideProps() {
 ```
 
 ### LCP 元素识别
+
+此代码片段用于诊断当前页面会话。它不是现场数据。
+
 ```javascript
 // Find your LCP element
 new PerformanceObserver((list) => {
@@ -123,316 +148,33 @@ new PerformanceObserver((list) => {
 
 ## INP：交互到下一次绘制
 
-INP 衡量一次页面访问期间所有交互（点击、轻触、按键）的响应速度。它报告最差的交互（对于高流量页面，取第 98 百分位数）。
+INP 衡量一次访问期间点击、轻触和按键操作的响应能力。应分别诊断其输入延迟、处理时间和呈现延迟；一次缓慢的交互可能涉及处理程序运行前的主线程争用、代价高昂的应用程序工作，或其后的渲染延迟。
 
-### INP 构成
-
-总 INP = **输入延迟** + **处理时间** + **呈现延迟**
-
-| 阶段 | 目标 | 优化方式 |
-|-------|--------|--------------|
-| 输入延迟 | < 50ms | 减少主线程阻塞 |
-| 处理 | < 100ms | 优化事件处理器 |
-| 呈现 | < 50ms | 尽量减少渲染工作 |
-
-### 常见 INP 问题
-
-**1. 长任务阻塞主线程**
-```javascript
-// ❌ Long synchronous task
-function processLargeArray(items) {
-  items.forEach(item => expensiveOperation(item));
-}
-
-// ✅ Break into chunks and yield to the scheduler. scheduler.yield() is the
-//    recommended modern API — its continuation is queued at a boosted
-//    priority so the rest of your work resumes ahead of unrelated tasks,
-//    while still letting the browser handle pending input first.
-async function processLargeArray(items) {
-  const CHUNK_SIZE = 100;
-  for (let i = 0; i < items.length; i += CHUNK_SIZE) {
-    items.slice(i, i + CHUNK_SIZE).forEach(expensiveOperation);
-
-    if ('scheduler' in window && 'yield' in scheduler) {
-      await scheduler.yield();
-    } else {
-      // Fallback for browsers without scheduler.yield (Safari, older Firefox).
-      // setTimeout(0) yields but loses priority — your continuation may run
-      // after unrelated tasks the browser picked up in between.
-      await new Promise(r => setTimeout(r, 0));
-    }
-  }
-}
-```
-
-**2. 繁重的事件处理器**
-```javascript
-// ❌ All work in handler
-button.addEventListener('click', () => {
-  // Heavy computation
-  const result = calculateComplexThing();
-  // DOM updates
-  updateUI(result);
-  // Analytics
-  trackEvent('click');
-});
-
-// ✅ Prioritize visual feedback, then yield before doing the heavy work
-button.addEventListener('click', async () => {
-  // 1. Immediate visual feedback (cheap DOM update)
-  button.classList.add('loading');
-
-  // 2. Yield so the browser can paint the loading state before we block
-  if ('scheduler' in window && 'yield' in scheduler) {
-    await scheduler.yield();
-  }
-
-  // 3. Now do the heavy work — the user already saw the click register
-  const result = calculateComplexThing();
-  updateUI(result);
-
-  // 4. Lowest-priority work last, when the main thread is idle
-  if ('requestIdleCallback' in window) {
-    requestIdleCallback(() => trackEvent('click'));
-  } else {
-    setTimeout(() => trackEvent('click'), 0);
-  }
-});
-```
-
-**3. 第三方脚本**
-```javascript
-// ❌ Eagerly loaded, blocks interactions
-<script src="https://heavy-widget.com/widget.js"></script>
-
-// ✅ Lazy loaded on interaction or visibility
-const loadWidget = () => {
-  import('https://heavy-widget.com/widget.js')
-    .then(widget => widget.init());
-};
-button.addEventListener('click', loadWidget, { once: true });
-```
-
-**4. 过度重新渲染（React/Vue）**
-```javascript
-// ❌ Re-renders entire tree
-function App() {
-  const [count, setCount] = useState(0);
-  return (
-    <div>
-      <Counter count={count} />
-      <ExpensiveComponent /> {/* Re-renders on every count change */}
-    </div>
-  );
-}
-
-// ✅ Memoized expensive components
-const MemoizedExpensive = React.memo(ExpensiveComponent);
-
-function App() {
-  const [count, setCount] = useState(0);
-  return (
-    <div>
-      <Counter count={count} />
-      <MemoizedExpensive />
-    </div>
-  );
-}
-```
-
-### INP 优化检查清单
-
-```markdown
-- [ ] No tasks > 50ms on main thread
-- [ ] Event handlers complete quickly (< 100ms)
-- [ ] Visual feedback provided immediately
-- [ ] Heavy work deferred with requestIdleCallback
-- [ ] Third-party scripts don't block interactions
-- [ ] Debounced input handlers where appropriate
-- [ ] Web Workers for CPU-intensive operations
-```
-
-### INP 调试
-```javascript
-// Identify slow interactions. durationThreshold: 40 matches what the
-// web-vitals library uses — 16 (one frame) fires on nearly every interaction
-// and drowns the console; 40 surfaces interactions that are starting to feel
-// sluggish without spamming.
-new PerformanceObserver((list) => {
-  for (const entry of list.getEntries()) {
-    if (entry.duration > 200) {
-      console.warn('Slow interaction:', {
-        type: entry.name,
-        duration: entry.duration,
-        processingStart: entry.processingStart,
-        processingEnd: entry.processingEnd,
-        target: entry.target
-      });
-    }
-  }
-}).observe({ type: 'event', buffered: true, durationThreshold: 40 });
-```
-
-要针对真实用户进行现场调试，建议使用 [web-vitals 库](https://github.com/GoogleChrome/web-vitals)的 `web-vitals/attribution` 构建版本——该构建版本中的 `onINP()` 会附加 `LoAF`（长动画帧）明细，指出耗时最长的脚本，以及耗尽时间预算的输入/处理/呈现阶段。
+当现场 INP 表现不佳或跟踪识别出缓慢交互时，请阅读 [INP 参考文档](references/INP.md)，了解跟踪解读、让出执行权的模式、第三方与渲染原因、单会话观察器以及第一方归因。
 
 ---
 
 ## CLS：累积布局偏移
 
-CLS 衡量意外的布局偏移。当可见元素在没有用户交互的情况下于帧之间发生位置变化时，就会出现偏移。
+CLS 衡量一次页面访问期间发生的意外布局偏移。使用现场归因或跟踪来识别发生偏移的节点和触发因素；不要假定可见的受影响元素就是偏移原因。
 
-**CLS 公式：** `impact fraction × distance fraction`
-
-### CLS 的常见原因
-
-**1. 未指定尺寸的图像**
-```html
-<!-- ❌ Causes layout shift when loaded -->
-<img src="photo.jpg" alt="Photo">
-
-<!-- ✅ Space reserved -->
-<img src="photo.jpg" alt="Photo" width="800" height="600">
-
-<!-- ✅ Or use aspect-ratio -->
-<img src="photo.jpg" alt="Photo" style="aspect-ratio: 4/3; width: 100%;">
-```
-
-**2. 广告、嵌入内容和 iframe**
-```html
-<!-- ❌ Unknown size until loaded -->
-<iframe src="https://ad-network.com/ad"></iframe>
-
-<!-- ✅ Reserve space with min-height -->
-<div style="min-height: 250px;">
-  <iframe src="https://ad-network.com/ad" height="250"></iframe>
-</div>
-
-<!-- ✅ Or use aspect-ratio container -->
-<div style="aspect-ratio: 16/9;">
-  <iframe src="https://youtube.com/embed/..." 
-          style="width: 100%; height: 100%;"></iframe>
-</div>
-```
-
-**3. 动态注入的内容**
-```javascript
-// ❌ Inserts content above viewport
-notifications.prepend(newNotification);
-
-// ✅ Insert below viewport or use transform
-const insertBelow = viewport.bottom < newNotification.top;
-if (insertBelow) {
-  notifications.prepend(newNotification);
-} else {
-  // Animate in without shifting
-  newNotification.style.transform = 'translateY(-100%)';
-  notifications.prepend(newNotification);
-  requestAnimationFrame(() => {
-    newNotification.style.transform = '';
-  });
-}
-```
-
-**4. Web 字体导致 FOUT**
-```css
-/* ❌ Font swap shifts text */
-@font-face {
-  font-family: 'Custom';
-  src: url('custom.woff2') format('woff2');
-}
-
-/* ✅ Optional font (no shift if slow) */
-@font-face {
-  font-family: 'Custom';
-  src: url('custom.woff2') format('woff2');
-  font-display: optional;
-}
-
-/* ✅ Or match fallback metrics */
-@font-face {
-  font-family: 'Custom';
-  src: url('custom.woff2') format('woff2');
-  font-display: swap;
-  size-adjust: 105%; /* Match fallback size */
-  ascent-override: 95%;
-  descent-override: 20%;
-}
-```
-
-**5. 触发布局变化的动画**
-```css
-/* ❌ Animates layout properties */
-.animate {
-  transition: height 0.3s, width 0.3s;
-}
-
-/* ✅ Use transform instead */
-.animate {
-  transition: transform 0.3s;
-}
-.animate.expanded {
-  transform: scale(1.2);
-}
-```
-
-### CLS 优化检查清单
-
-```markdown
-- [ ] All images have width/height or aspect-ratio
-- [ ] All videos/embeds have reserved space
-- [ ] Ads have min-height containers
-- [ ] Fonts use font-display: optional or matched metrics
-- [ ] Dynamic content inserted below viewport
-- [ ] Animations use transform/opacity only
-- [ ] No content injected above existing content
-```
-
-### CLS 调试
-```javascript
-// Track layout shifts
-new PerformanceObserver((list) => {
-  for (const entry of list.getEntries()) {
-    if (!entry.hadRecentInput) {
-      console.log('Layout shift:', entry.value);
-      entry.sources?.forEach(source => {
-        console.log('  Shifted element:', source.node);
-        console.log('  Previous rect:', source.previousRect);
-        console.log('  Current rect:', source.currentRect);
-      });
-    }
-  }
-}).observe({ type: 'layout-shift', buffered: true });
-```
+当现场 CLS 表现不佳或跟踪报告了偏移时，请阅读 [CLS 参考文档](references/CLS.md)，了解空间预留模式、动态内容、字体和动画修复方法、调试观察器以及验证清单。
 
 ---
 
-## 测量工具
+## 测量来源
 
-### 实验室测试
-- **Chrome DevTools** → Performance 面板、Lighthouse
-- **WebPageTest** → 详细的瀑布图、胶片视图
-- **Lighthouse CLI** → `npx lighthouse <url>`
+| 来源 | 用途 |
+|--------|-----|
+| 浏览器性能跟踪（Chrome DevTools MCP：`performance_start_trace`） | 观察一次加载或交互并诊断特定洞察；在可用时使用其中包含的 CrUX 上下文 |
+| CrUX 或 Search Console | 根据 p75 的真实用户聚合结果确定优先级 |
+| Lighthouse CLI 或 PageSpeed Insights | DevTools 工具不可用时的受控实验室环境备用方案 |
+| 第一方 RUM | 按路由、设备、版本和归因细分当前生产环境体验 |
+| 原始 `PerformanceObserver` | 在调试期间检查单个页面会话 |
 
-### 现场数据（真实用户）
-- **Chrome User Experience Report (CrUX)** → BigQuery 或 API
-- **Search Console** → Core Web Vitals 报告
-- **web-vitals library** → 发送到你的分析系统
+不要通过 Chrome DevTools MCP 的 `lighthouse_audit` 进行性能分析；该功能有意仅涵盖 Lighthouse 的非性能类别。不要将单个实验室环境数值直接与现场 p75 进行比较，仿佛它们是等价样本。
 
-```javascript
-import {onLCP, onINP, onCLS} from 'web-vitals';
-
-function sendToAnalytics({name, value, rating}) {
-  gtag('event', name, {
-    event_category: 'Web Vitals',
-    value: Math.round(name === 'CLS' ? value * 1000 : value),
-    event_label: rating
-  });
-}
-
-onLCP(sendToAnalytics);
-onINP(sendToAnalytics);
-onCLS(sendToAnalytics);
-```
+添加或审查生产环境数据采集时，请阅读 [第一方 RUM 参考文档](../performance/references/RUM.md)。优先使用 `web-vitals` 库，因为原始浏览器 API 本身并未实现每项 Core Web Vital 的所有生命周期和报告规则。
 
 ---
 
@@ -476,6 +218,9 @@ startTransition(() => setExpensiveState(newValue));
 
 ## 参考资料
 
+- [详细的 LCP 优化](references/LCP.md) — 当 LCP 跟踪指向发现延迟、加载延迟或渲染延迟时阅读
+- [详细的 INP 优化](references/INP.md) — 当跟踪或现场归因识别出缓慢交互时阅读
+- [详细的 CLS 优化](references/CLS.md) — 当跟踪或现场归因识别出意外偏移时阅读
 - [web.dev LCP](https://web.dev/articles/lcp)
 - [web.dev INP](https://web.dev/articles/inp)
 - [web.dev CLS](https://web.dev/articles/cls)

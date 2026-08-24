@@ -13,13 +13,13 @@
   "install_path": ".claude/skills/gke-ai-troubleshooting-jobset-interruption/SKILL.md",
   "source": {
     "repo": "google/skills",
-    "url": "https://github.com/google/skills/blob/main/plugins/cloud/google-cloud-gke/skills/gke-ai-troubleshooting-jobset-interruption/SKILL.md",
-    "path": "plugins/cloud/google-cloud-gke/skills/gke-ai-troubleshooting-jobset-interruption/SKILL.md",
+    "url": "https://github.com/google/skills/blob/main/plugins/cloud/google-cloud-gke-workloads/skills/gke-ai-troubleshooting-jobset-interruption/SKILL.md",
+    "path": "plugins/cloud/google-cloud-gke-workloads/skills/gke-ai-troubleshooting-jobset-interruption/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-24T19:16:41.800Z",
-    "stars": 18657,
+    "discovered_at": "2026-08-24T21:12:53.281Z",
+    "stars": 18662,
     "language": "Python",
-    "pushed_at": "2026-08-24T17:44:57Z",
+    "pushed_at": "2026-08-24T19:40:00Z",
     "license": "Apache-2.0"
   },
   "summary_zh": "用于自动诊断 GKE 上 AI/ML 训练任务的中断、重启、抢占及节点或协调器故障，适合排查 JobSet 异常。"

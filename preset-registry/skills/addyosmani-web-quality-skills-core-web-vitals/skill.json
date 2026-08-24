@@ -1,7 +1,7 @@
 {
   "id": "addyosmani-web-quality-skills-core-web-vitals",
   "name": "core-web-vitals",
-  "description": "Optimize Core Web Vitals (LCP, INP, CLS) for better page experience and search ranking. Use when asked to \"improve Core Web Vitals\", \"fix LCP\", \"reduce CLS\", \"optimize INP\", \"page experience optimization\", or \"fix layout shifts\".",
+  "description": "Optimize Core Web Vitals (LCP, INP, CLS) for better page experience using field and lab evidence. Use when asked to \"improve Core Web Vitals\", \"fix LCP\", \"reduce CLS\", \"optimize INP\", \"page experience optimization\", or \"fix layout shifts\".",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/addyosmani/web-quality-skills/blob/main/skills/core-web-vitals/SKILL.md",
     "path": "skills/core-web-vitals/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-24T19:24:11.019Z",
+    "discovered_at": "2026-08-24T21:18:19.678Z",
     "stars": 2691,
     "language": "Shell",
-    "pushed_at": "2026-08-24T18:15:40Z",
+    "pushed_at": "2026-08-24T21:07:36Z",
     "license": "MIT"
   },
-  "summary_zh": "这是一款网页性能优化工具，能帮你解决页面加载慢、交互卡顿和布局抖动等问题，从而提升用户体验与搜索排名。"
+  "summary_zh": "基于真实用户和实验室数据优化网页加载、交互与视觉稳定性，适合排查并改善 LCP、INP、CLS 等体验指标。"
 }

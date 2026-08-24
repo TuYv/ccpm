@@ -13,13 +13,13 @@
   "install_path": ".claude/skills/gke-compute-classes/SKILL.md",
   "source": {
     "repo": "google/skills",
-    "url": "https://github.com/google/skills/blob/main/plugins/cloud/google-cloud-gke/skills/gke-compute-classes/SKILL.md",
-    "path": "plugins/cloud/google-cloud-gke/skills/gke-compute-classes/SKILL.md",
+    "url": "https://github.com/google/skills/blob/main/plugins/cloud/google-cloud-gke-workloads/skills/gke-compute-classes/SKILL.md",
+    "path": "plugins/cloud/google-cloud-gke-workloads/skills/gke-compute-classes/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-24T19:16:43.935Z",
-    "stars": 18657,
+    "discovered_at": "2026-08-24T21:12:54.204Z",
+    "stars": 18662,
     "language": "Python",
-    "pushed_at": "2026-08-24T17:44:57Z",
+    "pushed_at": "2026-08-24T19:40:00Z",
     "license": "Apache-2.0"
   },
   "summary_zh": "用于配置、优化和排查 GKE 计算类，适合设置 Spot 按需回退、指定 GPU/TPU 或机型，以及解决 Pod 挂起问题。"

@@ -4,27 +4,38 @@ description: Audit and improve web accessibility following WCAG 2.2 guidelines. 
 license: MIT
 metadata:
   author: web-quality-skills
-  version: "1.1"
+  version: "2.0"
 ---
 # 无障碍（a11y）
 
-基于 WCAG 2.2 和 Lighthouse 无障碍审计的全面无障碍指南。目标：让包括残障人士在内的所有人都能使用内容。
+基于 WCAG 2.2 和 Lighthouse 无障碍审计的综合无障碍指南。目标：让所有人（包括残障人士）都能使用内容。
+
+## 以证据为依据的审计工作流
+
+当渲染后的页面可用时：
+
+1. 如果具备相应能力，请运行实时 Lighthouse 无障碍审计；使用 Chrome DevTools MCP 时，使用 `lighthouse_audit`。对于面向公众的常规页面，使用移动设备导航模式；如果重新加载会丢失已认证状态或用户创建的状态，则使用快照模式。
+2. 使用审计失败的节点来定位相关组件或模板，而不是在整个代码仓库中搜索通用模式。
+3. 检查渲染后的无障碍树快照，确认名称、角色、状态、地标和标题结构；使用 Chrome DevTools MCP 时，使用 `take_snapshot`。使用键盘操作受影响的流程。
+4. 修复源代码，然后重新运行相同的审计和手动交互测试。
+
+如果实时工具不可用，请使用 Lighthouse CLI 或 axe 进行自动化覆盖，并完成相同的手动检查。自动化工具只能检测一部分无障碍障碍：得分 100 并不代表符合 WCAG，低分也不能取代问题级别的证据。
 
 ## WCAG 原则：POUR
 
-| 原则 | 描述 |
+| 原则 | 说明 |
 |-----------|-------------|
-| **P** 可感知 | 内容可通过不同感官感知 |
-| **O** 可操作 | 所有用户都能操作界面 |
+| **P** 可感知 | 内容可通过不同感官被感知 |
+| **O** 可操作 | 所有用户都可以操作界面 |
 | **U** 可理解 | 内容和界面易于理解 |
-| **R** 健壮 | 内容可与辅助技术配合使用 |
+| **R** 健壮性 | 内容可与辅助技术配合使用 |
 
-## 符合性级别
+## 一致性级别
 
 | 级别 | 要求 | 目标 |
 |-------|-------------|--------|
 | **A** | 最低无障碍要求 | 必须通过 |
-| **AA** | 标准符合性 | 应当通过（在许多司法管辖区属于法律要求） |
+| **AA** | 标准一致性 | 应当通过（在许多司法管辖区属于法律要求） |
 | **AAA** | 增强无障碍要求 | 最好具备 |
 
 ---
@@ -86,12 +97,12 @@ metadata:
 }
 ```
 
-### 颜色对比度（1.4.3、1.4.6）
+### 颜色对比度 (1.4.3, 1.4.6)
 
 | 文本大小 | AA 最低要求 | AAA 增强要求 |
 |-----------|------------|--------------|
 | 普通文本（< 18px / 粗体 < 14px） | 4.5:1 | 7:1 |
-| 大号文本（≥ 18px / 粗体 ≥ 14px） | 3:1 | 4.5:1 |
+| 大文本（≥ 18px / 粗体 ≥ 14px） | 3:1 | 4.5:1 |
 | UI 组件和图形 | 3:1 | 3:1 |
 
 ```css
@@ -156,7 +167,7 @@ metadata:
 
 ### 键盘可访问 (2.1)
 
-**所有功能都必须可通过键盘访问。** 优先使用原生交互元素——`<button>`、`<a href>` 和表单控件无需额外处理即可支持 Enter/Space 激活、焦点以及辅助技术语义。只有在无法使用原生元素时，才手动添加键盘处理逻辑。
+**所有功能都必须可通过键盘访问。** 优先使用原生交互元素——`<button>`、`<a href>` 和表单控件无需额外处理即可支持 Enter/Space 激活、焦点和辅助技术语义。只有在无法使用原生元素时，才手动添加键盘处理。
 
 ```html
 <!-- ❌ Non-interactive element with click only: not focusable, no keyboard activation -->
@@ -205,9 +216,9 @@ button:focus-visible {
 }
 ```
 
-### 焦点不被遮挡 (2.4.11)——2.2 中新增
+### 焦点不被遮挡（2.4.11）— 2.2 新增
 
-当元素获得键盘焦点时，不得被其他由作者创建的内容（例如粘性页眉、页脚或重叠面板）完全遮挡。在 AAA 级别 (2.4.12)，获得焦点的元素不得有任何部分被遮挡。
+当元素获得键盘焦点时，不得被其他由作者创建的内容（如粘性页眉、页脚或重叠面板）完全遮挡。在 AAA 级（2.4.12）中，获得焦点的元素任何部分都不得被遮挡。
 
 ```css
 /* ✅ Account for sticky headers when scrolling to focused elements */
@@ -222,13 +233,13 @@ button:focus-visible {
 }
 ```
 
-### 跳过链接 (2.4.1)
+### 跳过链接（2.4.1）
 
-提供跳过链接，使键盘用户能够绕过重复的导航。有关完整的标记和样式，请参阅[跳过链接模式](references/A11Y-PATTERNS.md#skip-link)。
+提供跳过链接，使键盘用户可以绕过重复的导航。有关完整的标记和样式，请参阅[跳过链接模式](references/A11Y-PATTERNS.md#skip-link)。
 
-### 目标尺寸 (2.5.8) — 2.2 新增
+### 目标尺寸（2.5.8）— 2.2 新增
 
-交互式目标必须至少为 **24 × 24 CSS 像素**（AA）。例外情况包括：行内文本链接、尺寸由浏览器控制的元素，以及以边界框中心为圆心的 24px 圆不会与其他目标重叠的目标。
+交互目标必须至少为 **24 × 24 CSS 像素**（AA 级）。例外情况包括：行内文本链接、尺寸由浏览器控制的元素，以及以边界框为中心的 24px 圆不会与其他目标重叠的目标。
 
 ```css
 /* ✅ Minimum target size */
@@ -250,11 +261,11 @@ input[type="radio"] + label {
 }
 ```
 
-### 拖动操作 (2.5.7) — 2.2 新增
+### 拖动操作（2.5.7）— 2.2 新增
 
 任何需要拖动的操作都必须提供单指针替代方式（例如按钮、输入控件）。有关可排序列表示例，请参阅[拖动操作模式](references/A11Y-PATTERNS.md#dragging-movements)。
 
-### 时间限制 (2.2)
+### 时间限制（2.2）
 
 ```javascript
 // Allow users to extend time limits
@@ -271,7 +282,7 @@ function showSessionWarning() {
 }
 ```
 
-### 动效 (2.3)
+### 动效（2.3）
 
 ```css
 /* Respect reduced motion preference */
@@ -291,7 +302,7 @@ function showSessionWarning() {
 
 ## 可理解
 
-### 页面语言 (3.1.1)
+### 页面语言（3.1.1）
 
 ```html
 <!-- ❌ No language specified -->
@@ -304,7 +315,7 @@ function showSessionWarning() {
 <p>The French word for hello is <span lang="fr">bonjour</span>.</p>
 ```
 
-### 一致的导航 (3.2.3)
+### 一致的导航（3.2.3）
 
 ```html
 <!-- Navigation should be consistent across pages -->
@@ -317,9 +328,9 @@ function showSessionWarning() {
 </nav>
 ```
 
-### 一致的帮助机制 (3.2.6) — 2.2 新增
+### 一致的帮助（3.2.6）— 2.2 新增
 
-如果某种帮助机制（联系信息、聊天小组件、常见问题链接、自助选项）在多个页面中重复出现，则每次都必须以**相同的相对顺序**呈现。依赖固定位置的用户不应在每个页面上都要重新寻找帮助。
+如果某种帮助机制（联系信息、聊天小组件、常见问题链接、自助选项）在多个页面中重复出现，则每次都必须以**相同的相对顺序**出现。依赖一致位置的用户不应在每个页面上都费力寻找帮助。
 
 ### 表单标签 (3.3.2)
 
@@ -327,11 +338,11 @@ function showSessionWarning() {
 
 ### 错误处理 (3.3.1, 3.3.3)
 
-使用 `role="alert"` 或 `aria-live` 向屏幕阅读器播报错误，在无效字段上设置 `aria-invalid="true"`，并在提交时将焦点移至第一个错误。有关完整的标记和 JS，请参阅[错误处理模式](references/A11Y-PATTERNS.md#error-handling)。
+使用 `role="alert"` 或 `aria-live` 向屏幕阅读器播报错误，在无效字段上设置 `aria-invalid="true"`，并在提交时将焦点置于第一个错误处。有关完整的标记和 JS，请参阅[错误处理模式](references/A11Y-PATTERNS.md#error-handling)。
 
-### 避免重复输入 (3.3.7) — 2.2 新增
+### 冗余输入 (3.3.7) — 2.2 新增
 
-不要强迫用户重新输入他们在同一会话中已经提供的信息。应根据之前的步骤自动填充，或允许用户从先前输入的值中进行选择。例外情况包括：出于安全目的进行重新确认，以及内容已过期。
+不要强制用户重新输入他们在同一会话中已经提供的信息。应根据之前的步骤自动填充，或允许用户从之前输入的值中进行选择。例外情况：出于安全目的的重新确认以及已过期的内容。
 
 ```html
 <!-- ✅ Auto-fill shipping address from billing -->
@@ -382,17 +393,20 @@ function showSessionWarning() {
 <label><input type="checkbox"> Option</label>
 ```
 
-**需要使用 ARIA 时，**请使用正确的角色和状态。有关完整的选项卡列表示例，请参阅 [ARIA 选项卡模式](references/A11Y-PATTERNS.md#aria-tabs)。
+**需要使用 ARIA 时，**请使用正确的角色和状态。有关完整的标签列表实例，请参阅 [ARIA 标签页模式](references/A11Y-PATTERNS.md#aria-tabs)。
 
 ### 实时区域 (4.1.3)
 
-使用 `aria-live` 区域播报动态内容变化，而无需移动焦点。有关标记和 `showNotification()` 辅助函数，请参阅[实时区域模式](references/A11Y-PATTERNS.md#live-regions-and-notifications)。
+使用 `aria-live` 区域播报动态内容变化，而不移动焦点。有关标记和 `showNotification()` 辅助函数，请参阅[实时区域模式](references/A11Y-PATTERNS.md#live-regions-and-notifications)。
 
 ---
 
 ## 测试清单
 
 ### 自动化测试
+
+优先使用实时 Lighthouse 审计，以便将渲染后未通过检查的节点直接返回给智能体。使用 Chrome DevTools MCP 时，可使用 `lighthouse_audit`。否则：
+
 ```bash
 # Lighthouse accessibility audit
 npx lighthouse https://example.com --only-categories=accessibility
@@ -409,26 +423,26 @@ axe https://example.com
 - [ ] **缩放：**内容在缩放至 200% 时仍可使用
 - [ ] **高对比度：**使用 Windows 高对比度模式进行测试
 - [ ] **减少动态效果：**使用 `prefers-reduced-motion: reduce` 进行测试
-- [ ] **焦点顺序：**顺序合理且符合视觉顺序
-- [ ] **目标尺寸：**交互元素满足 24×24px 的最小尺寸要求
+- [ ] **焦点顺序：**顺序合乎逻辑并与视觉顺序一致
+- [ ] **目标尺寸：**交互式元素满足至少 24×24px 的要求
 
-有关 VoiceOver 和 NVDA 快捷键，请参阅[屏幕阅读器命令参考](references/A11Y-PATTERNS.md#screen-reader-commands)。
+有关 VoiceOver 和 NVDA 的快捷键，请参阅[屏幕阅读器命令参考](references/A11Y-PATTERNS.md#screen-reader-commands)。
 
 ---
 
-## 按影响程度划分的常见问题
+## 按影响程度分类的常见问题
 
 ### 严重（立即修复）
 1. 表单缺少标签
-2. 图像缺少替代文本
+2. 图片缺少替代文本
 3. 颜色对比度不足
 4. 键盘陷阱
-5. 缺少焦点指示器
+5. 无焦点指示器
 
-### 重要（发布前修复）
-1. 缺少页面语言
+### 重大（发布前修复）
+1. 缺少页面语言声明
 2. 缺少标题结构
-3. 链接文本描述不清
+3. 链接文本描述不明确
 4. 媒体自动播放
 5. 缺少跳转链接
 
@@ -436,13 +450,13 @@ axe https://example.com
 1. 图标缺少 ARIA 标签
 2. 导航不一致
 3. 缺少错误标识
-4. 限时操作缺少控制
+4. 限时操作缺少控制选项
 5. 缺少地标区域
 
 ## 参考资料
 
 - [WCAG 2.2 快速参考](https://www.w3.org/WAI/WCAG22/quickref/)
-- [WAI-ARIA 编写实践](https://www.w3.org/WAI/ARIA/apg/)
+- [WAI-ARIA 创作实践](https://www.w3.org/WAI/ARIA/apg/)
 - [Deque axe 规则](https://dequeuniversity.com/rules/axe/)
 - [Web 质量审计](../web-quality-audit/SKILL.md)
 - [WCAG 标准参考](references/WCAG.md)
