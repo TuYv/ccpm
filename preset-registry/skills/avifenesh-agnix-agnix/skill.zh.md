@@ -1,29 +1,29 @@
 ---
 name: agnix
-description: "Use when user asks to 'lint agent configs', 'validate skills', 'check CLAUDE.md', 'validate hooks', 'lint MCP'. Validates agent configuration files against 448 rules."
+description: "Use when user asks to 'lint agent configs', 'validate skills', 'check CLAUDE.md', 'validate hooks', 'lint MCP'. Validates agent configuration files against 451 rules."
 allowed-tools: Bash(agnix:*), Bash(cargo:*), Read, Glob, Grep
 ---
 # agnix
 
-在代理配置破坏你的工作流之前对其进行检查。验证 Claude Code、Cursor、GitHub Copilot 和 Codex CLI 中的技能、钩子、MCP、记忆和插件。
+在智能体配置破坏工作流之前对其进行 lint。验证 Claude Code、Cursor、GitHub Copilot 和 Codex CLI 中的 Skills、Hooks、MCP、Memory 和 Plugins。
 
-## 使用场景
+## 使用时机
 
-当用户提出以下请求时调用：
-- “检查我的代理配置”
-- “验证我的技能”
+当用户要求执行以下操作时调用：
+- “对我的智能体配置执行 lint”
+- “验证我的 skills”
 - “检查我的 CLAUDE.md”
-- “验证钩子”
-- “检查 MCP 配置”
-- “修复代理配置问题”
+- “验证 hooks”
+- “对 MCP 配置执行 lint”
+- “修复智能体配置问题”
 
 ## 支持的文件
 
 | 文件类型 | 示例 |
 |-----------|----------|
-| 技能 | `SKILL.md` |
-| 记忆 | `CLAUDE.md`, `AGENTS.md` |
-| 钩子 | `.claude/settings.json` |
+| Skills | `SKILL.md` |
+| Memory | `CLAUDE.md`、`AGENTS.md` |
+| Hooks | `.claude/settings.json` |
 | MCP | `*.mcp.json` |
 | Cursor | `.cursor/rules/*.mdc` |
 | Copilot | `.github/copilot-instructions.md` |
@@ -36,7 +36,7 @@ allowed-tools: Bash(agnix:*), Bash(cargo:*), Read, Glob, Grep
 agnix --version
 ```
 
-如果未找到，请安装：
+如果未找到，则安装：
 ```bash
 cargo install agnix-cli
 ```
@@ -47,7 +47,7 @@ cargo install agnix-cli
 agnix .
 ```
 
-### 3. 如果发现问题并请求了 --fix
+### 3. 如果发现问题且请求使用 --fix
 
 ```bash
 agnix --fix .
@@ -61,13 +61,13 @@ agnix .
 
 ## CLI 参考
 
-| 命令 | 说明 |
+| 命令 | 描述 |
 |---------|-------------|
 | `agnix .` | 验证当前项目 |
 | `agnix --fix .` | 自动修复问题 |
 | `agnix --strict .` | 将警告视为错误 |
-| `agnix --target claude-code .` | 仅使用 Claude Code 规则 |
-| `agnix --target cursor .` | 仅使用 Cursor 规则 |
+| `agnix --target claude-code .` | 仅应用 Claude Code 规则 |
+| `agnix --target cursor .` | 仅应用 Cursor 规则 |
 | `agnix --watch .` | 监视模式 |
 | `agnix --format json .` | JSON 输出 |
 
@@ -87,10 +87,10 @@ Found 1 error, 1 warning (2 fixable)
 
 | 问题 | 解决方案 |
 |-------|----------|
-| 技能名称无效 | 使用带连字符的小写形式：`my-skill` |
-| 通用指令 | 删除“be helpful”“be accurate” |
-| 缺少触发短语 | 在描述中添加“Use when...” |
-| 目录与名称不匹配 | 重命名目录，使其与 `name:` 字段匹配 |
+| 无效的 skill 名称 | 使用小写字母和连字符：`my-skill` |
+| 通用指令 | 移除 “be helpful”、“be accurate” |
+| 缺少触发短语 | 在描述中添加 “Use when...” |
+| 目录/名称不匹配 | 重命名目录，使其与 `name:` 字段匹配 |
 
 ## 链接
 
