@@ -1,7 +1,7 @@
 {
   "id": "qwenlm-qwen-code-coordinate",
   "name": "coordinate",
-  "description": "Coordinate up to three Qwen Code teammates with enforced read-only workers, an optional worktree-pinned writer, shared tasks, peer messages, and existing Agent View tabs. Invoke explicitly with /coordinate.",
+  "description": "Coordinate a small team of Qwen Code teammates with enforced read-only workers, an optional worktree-pinned writer, shared tasks, peer messages, and existing Agent View tabs. Invoke explicitly with /coordinate.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/QwenLM/qwen-code/blob/main/packages/core/src/skills/bundled/coordinate/SKILL.md",
     "path": "packages/core/src/skills/bundled/coordinate/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-25T11:12:24.196Z",
-    "stars": 27354,
+    "discovered_at": "2026-08-25T12:27:54.916Z",
+    "stars": 27353,
     "language": "TypeScript",
-    "pushed_at": "2026-08-25T11:08:42Z",
+    "pushed_at": "2026-08-25T12:27:07Z",
     "license": "Apache-2.0"
   },
-  "summary_zh": "用于协同最多三名通义代码助手，分离只读分析与写入操作，适合多人并行处理复杂开发任务。"
+  "summary_zh": "用于协同 Qwen Code 多个代理的小型团队工具，通过只读协作者、可选工作树写入者及共享任务消息，适合安全并行处理代码工作。"
 }
