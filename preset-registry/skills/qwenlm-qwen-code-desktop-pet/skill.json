@@ -1,26 +1,26 @@
 {
   "id": "qwenlm-qwen-code-desktop-pet",
   "name": "desktop-pet",
-  "description": "Create pixel-art desktop pet companions for OpenWork/Qwen Code. Generates a customized chibi spritesheet (1536×1872, 8×9 grid) for any character the user names — F1 drivers, anime characters, celebrities, fictional characters, animals, etc. Use when the user says \"桌面宠物\", \"desktop pet\", \"想要XXX当桌宠\", \"换个宠物\" or similar.",
+  "description": "Create pixel-art desktop pet companions for Qwen Code. Generates a customized chibi spritesheet (1536×1872, 8×9 grid) for any character the user names — F1 drivers, anime characters, celebrities, fictional characters, animals, etc. Use when the user says \"desktop pet\", \"桌宠\", \"桌面宠物\", \"想要XXX当桌宠\", \"换个宠物\", or similar.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
     "gemini"
   ],
-  "version": "1.0.0",
+  "version": "",
   "author": "QwenLM",
   "install_path": ".claude/skills/desktop-pet/SKILL.md",
   "source": {
     "repo": "QwenLM/qwen-code",
-    "url": "https://github.com/QwenLM/qwen-code/blob/main/packages/desktop/.agents/skills/desktop-pet/SKILL.md",
-    "path": "packages/desktop/.agents/skills/desktop-pet/SKILL.md",
+    "url": "https://github.com/QwenLM/qwen-code/blob/main/.qwen/skills/desktop-pet/SKILL.md",
+    "path": ".qwen/skills/desktop-pet/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-25T05:16:22.383Z",
-    "stars": 27342,
+    "discovered_at": "2026-08-25T07:15:47.286Z",
+    "stars": 27343,
     "language": "TypeScript",
-    "pushed_at": "2026-08-25T05:14:01Z",
+    "pushed_at": "2026-08-25T07:08:57Z",
     "license": "Apache-2.0"
   },
-  "summary_zh": "为 OpenWork/Qwen Code 生成任意角色的像素风桌面宠物，适合快速定制动漫人物、名人或动物桌宠。"
+  "summary_zh": "为 Qwen Code 生成可自定义的像素风桌面宠物，适合把喜欢的角色、人物或动物制作成专属桌宠。"
 }

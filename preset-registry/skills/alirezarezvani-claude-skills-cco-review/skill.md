@@ -64,13 +64,13 @@ The retention-obsessed CCO pressure-tests any plan that touches customer experie
 
 ```bash
 # 1. Retention decomposition (always start here)
-python ../../../skills/chief-customer-officer-advisor/scripts/retention_decomposition_analyzer.py cohorts.json
+python ../../../c-level-advisor/skills/chief-customer-officer-advisor/scripts/retention_decomposition_analyzer.py cohorts.json
 
 # 2. Segmentation audit
-python ../../../skills/chief-customer-officer-advisor/scripts/customer_segmentation_designer.py customers.json
+python ../../../c-level-advisor/skills/chief-customer-officer-advisor/scripts/customer_segmentation_designer.py customers.json
 
 # 3. Coverage sizing (if making CS team changes)
-python ../../../skills/chief-customer-officer-advisor/scripts/cs_coverage_calculator.py book.json
+python ../../../c-level-advisor/skills/chief-customer-officer-advisor/scripts/cs_coverage_calculator.py book.json
 ```
 
 ## Output Format
@@ -122,8 +122,8 @@ python ../../../skills/chief-customer-officer-advisor/scripts/cs_coverage_calcul
 ## Related
 
 - Agent: [`cs-cco-advisor`](../../agents/cs-cco-advisor.md)
-- Skill: [`chief-customer-officer-advisor`](../../../skills/chief-customer-officer-advisor/SKILL.md)
-- Adjacent: `../../../../business-growth/` (tactical CS execution)
+- Skill: [`chief-customer-officer-advisor`](../../../c-level-advisor/skills/chief-customer-officer-advisor/SKILL.md)
+- Adjacent: `../../../business-growth/` (tactical CS execution)
 
 ---
 

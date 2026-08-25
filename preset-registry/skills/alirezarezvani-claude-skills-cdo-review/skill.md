@@ -60,13 +60,13 @@ The decision-driven CDO pressure-tests any plan that touches data strategy. Six 
 
 ```bash
 # 1. AI training audit (if any ML / AI use case)
-python ../../../skills/chief-data-officer-advisor/scripts/ai_training_data_audit.py sources.json
+python ../../../c-level-advisor/skills/chief-data-officer-advisor/scripts/ai_training_data_audit.py sources.json
 
 # 2. Architecture decision (if changing the stack)
-python ../../../skills/chief-data-officer-advisor/scripts/data_product_strategy_picker.py profile.json
+python ../../../c-level-advisor/skills/chief-data-officer-advisor/scripts/data_product_strategy_picker.py profile.json
 
 # 3. Data asset valuation (if productizing or pre-M&A)
-python ../../../skills/chief-data-officer-advisor/scripts/data_asset_valuator.py corpus.json
+python ../../../c-level-advisor/skills/chief-data-officer-advisor/scripts/data_asset_valuator.py corpus.json
 ```
 
 ## Output Format
@@ -118,8 +118,8 @@ python ../../../skills/chief-data-officer-advisor/scripts/data_asset_valuator.py
 ## Related
 
 - Agent: [`cs-cdo-advisor`](../../agents/cs-cdo-advisor.md)
-- Skill: [`chief-data-officer-advisor`](../../../skills/chief-data-officer-advisor/SKILL.md)
-- Adjacent: `../../../skills/general-counsel-advisor/` (contractual constraints), `../../../skills/cto-advisor/` (architecture capacity)
+- Skill: [`chief-data-officer-advisor`](../../../c-level-advisor/skills/chief-data-officer-advisor/SKILL.md)
+- Adjacent: `../../../c-level-advisor/skills/general-counsel-advisor/` (contractual constraints), `../../../c-level-advisor/skills/cto-advisor/` (architecture capacity)
 
 ---
 
