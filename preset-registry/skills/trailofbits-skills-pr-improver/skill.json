@@ -1,0 +1,26 @@
+{
+  "id": "trailofbits-skills-pr-improver",
+  "name": "pr-improver",
+  "description": "Runs an autonomous review-and-fix improvement loop over the current branch's changes until a PR review comes back clean, scoped mechanically to the directories the branch touched. Reviews are performed by an installed PR-review skill (default: pr-review-toolkit's review-pr). Use to fix review findings on a branch before opening or updating a pull request ('clean up this branch', 'fix this PR until review passes', 'run review-and-fix on my changes'). NOT for a one-time review — run the PR-review ",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "trailofbits",
+  "install_path": ".claude/skills/pr-improver/SKILL.md",
+  "source": {
+    "repo": "trailofbits/skills",
+    "url": "https://github.com/trailofbits/skills/blob/main/plugins/code-improver/skills/pr-improver/SKILL.md",
+    "path": "plugins/code-improver/skills/pr-improver/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-25T00:31:47.322Z",
+    "stars": 6832,
+    "language": "Python",
+    "pushed_at": "2026-08-24T23:10:01Z",
+    "license": "CC-BY-SA-4.0"
+  },
+  "summary_zh": "自动循环审查并修复当前分支改动，直到 PR 评审通过，适合提交或更新 PR 前清理代码。"
+}

@@ -1,7 +1,7 @@
 {
   "id": "trailofbits-skills-skill-improver",
   "name": "skill-improver",
-  "description": "Iteratively reviews and fixes Claude Code skill quality issues until they meet standards. Runs automated fix-review cycles using the skill-reviewer agent. Use to fix skill quality issues, improve skill descriptions, run automated skill review loops, or iteratively refine a skill. Triggers on 'fix my skill', 'improve skill quality', 'skill improvement loop'. NOT for one-time reviews—use /skill-reviewer directly.",
+  "description": "Runs an autonomous review-and-fix improvement loop over a Claude Code skill until a review comes back clean, with a cross-round findings ledger, escalation when fixes stop converging, and a mechanical scope guard. Reviews are performed by the plugin-dev skill-reviewer agent. Use to fix skill quality issues, iteratively refine a skill, or resume a loop after an escalation ('fix my skill', 'improve this skill until it passes review', 'skill improvement loop'). NOT for a one-time review — use the p",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -13,14 +13,14 @@
   "install_path": ".claude/skills/skill-improver/SKILL.md",
   "source": {
     "repo": "trailofbits/skills",
-    "url": "https://github.com/trailofbits/skills/blob/main/plugins/skill-improver/skills/skill-improver/SKILL.md",
-    "path": "plugins/skill-improver/skills/skill-improver/SKILL.md",
+    "url": "https://github.com/trailofbits/skills/blob/main/plugins/code-improver/skills/skill-improver/SKILL.md",
+    "path": "plugins/code-improver/skills/skill-improver/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-24T21:11:33.580Z",
-    "stars": 6830,
+    "discovered_at": "2026-08-25T00:31:47.463Z",
+    "stars": 6832,
     "language": "Python",
-    "pushed_at": "2026-08-24T20:36:43Z",
+    "pushed_at": "2026-08-24T23:10:01Z",
     "license": "CC-BY-SA-4.0"
   },
-  "summary_zh": "它能自动循环审查和修复Claude Code技能的质量问题，反复打磨直到达标。适合需要深度优化技能描述或整体质量，而不是只做一次性审查的场景。"
+  "summary_zh": "这是一个让 Claude Code 技能自动反复审查并修复问题的工具，适合持续改进技能质量，直至通过评审。"
 }

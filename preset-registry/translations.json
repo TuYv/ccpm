@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-24T22:51:57.289Z",
+  "updated_at": "2026-08-25T02:36:03.939Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -9823,9 +9823,9 @@
       "translated_at": "2026-08-22T22:13:09.440Z"
     },
     "bundle:trailofbits-skills": {
-      "hash": "a599429e534137b4",
-      "summary_zh": "面向代码与智能合约安全审计的技能合集，串联审计准备、深度分析、模糊测试与漏洞验证，让自动化安全评估更系统高效。",
-      "translated_at": "2026-08-21T16:04:50.685Z"
+      "hash": "a3eb7249d0ee8461",
+      "summary_zh": "面向代码、智能合约与开发流程的安全审计工具集，结合代码理解、模糊测试和漏洞扫描，帮助团队更高效地发现并验证安全问题。",
+      "translated_at": "2026-08-25T02:12:35.099Z"
     },
     "bundle:czlonkowski-n8n-skills": {
       "hash": "c501b61219aece66",
@@ -12578,9 +12578,9 @@
       "translated_at": "2026-05-20T12:30:58.955Z"
     },
     "skill:trailofbits-skills-skill-improver": {
-      "hash": "5a1d928d095d6abe",
-      "summary_zh": "它能自动循环审查和修复Claude Code技能的质量问题，反复打磨直到达标。适合需要深度优化技能描述或整体质量，而不是只做一次性审查的场景。",
-      "translated_at": "2026-05-20T12:31:10.585Z"
+      "hash": "55c6df0113108895",
+      "summary_zh": "这是一个让 Claude Code 技能自动反复审查并修复问题的工具，适合持续改进技能质量，直至通过评审。",
+      "translated_at": "2026-08-25T02:12:42.412Z"
     },
     "skill:trailofbits-skills-solana-vulnerability-scanner": {
       "hash": "e5873b099330e759",
@@ -17318,9 +17318,9 @@
       "translated_at": "2026-08-10T20:03:59.035Z"
     },
     "bundle:jakubkrehel-skills": {
-      "hash": "7bf70e719567f236",
-      "summary_zh": "一套面向产品界面设计与开发的技能集，系统审查并优化视觉、布局、文案与可访问性，同时验证改动在复杂场景下是否可靠。",
-      "translated_at": "2026-08-24T11:12:51.585Z"
+      "hash": "05c072e8239c443d",
+      "summary_zh": "面向 Web 产品界面设计与开发的全流程工具集，整合布局、视觉、可访问性、文案和体验评审，帮助团队打造更一致、易用且经得起真实场景检验的 UI。",
+      "translated_at": "2026-08-25T02:12:34.552Z"
     },
     "bundle:aaron-he-zhu-aaron-marketing-skills": {
       "hash": "3dace6e8520b671d",
@@ -40033,8 +40033,8 @@
       "translated_at": "2026-08-20T09:25:26.572Z"
     },
     "content:heygen-com-hyperframes-hyperframes-core": {
-      "hash": "4ab1e4d7f1ac9111",
-      "translated_at": "2026-08-20T03:50:04.062Z"
+      "hash": "4dda519b1ed10ccb",
+      "translated_at": "2026-08-25T02:23:33.639Z"
     },
     "content:heygen-com-hyperframes-hyperframes-keyframes": {
       "hash": "924d038dc7eb20d1",
@@ -49574,13 +49574,13 @@
       "translated_at": "2026-08-24T09:46:01.815Z"
     },
     "skill:jakubkrehel-skills-break": {
-      "hash": "370aacf4aa3b3eba",
-      "summary_zh": "一个组件健壮性测试工具，会在临时页面注入真实可能遇到的极端输入，并报告界面哪里被破坏。",
-      "translated_at": "2026-08-24T11:12:56.656Z"
+      "hash": "8b3dc8d60225f2a2",
+      "summary_zh": "用于全面测试单个组件在真实使用状态下是否稳定，并生成可视化报告直观看出问题。",
+      "translated_at": "2026-08-25T02:12:38.273Z"
     },
     "content:jakubkrehel-skills-break": {
-      "hash": "d922d9efab4a2683",
-      "translated_at": "2026-08-24T11:31:39.222Z"
+      "hash": "32085787b925ec2c",
+      "translated_at": "2026-08-25T02:24:12.076Z"
     },
     "content:orchestra-research-ai-research-skills-grpo-rl-training": {
       "hash": "c9b771c280840f12",
@@ -49981,6 +49981,86 @@
     "content:phuryn-pm-skills-north-star-metric": {
       "hash": "00242397486a88bb",
       "translated_at": "2026-08-24T22:51:57.289Z"
+    },
+    "skill:trailofbits-skills-panel-review": {
+      "hash": "920928374fbdc6e0",
+      "summary_zh": "通过多个专业审计代理协同评审代码目标并合并报告，适合需要多角度检查代码质量、风险与潜在问题的场景。",
+      "translated_at": "2026-08-25T02:12:37.992Z"
+    },
+    "skill:trailofbits-skills-code-improver": {
+      "hash": "d186e4d51224c871",
+      "summary_zh": "用于让指定的审查代理自动循环检查并修复代码，适合持续改进模块、插件、技能或目录，直到审查通过。",
+      "translated_at": "2026-08-25T02:12:38.972Z"
+    },
+    "skill:trailofbits-skills-pr-improver": {
+      "hash": "5dad7f9e00916c68",
+      "summary_zh": "自动循环审查并修复当前分支改动，直到 PR 评审通过，适合提交或更新 PR 前清理代码。",
+      "translated_at": "2026-08-25T02:12:41.034Z"
+    },
+    "skill:trailofbits-skills-review-pr": {
+      "hash": "0db607edbfc2aa30",
+      "summary_zh": "用于模拟拉取请求审查当前分支改动，检查代码正确性、测试覆盖率和文档准确性，适合评审分支、差异或合并请求。",
+      "translated_at": "2026-08-25T02:12:41.071Z"
+    },
+    "content:phuryn-pm-skills-opportunity-solution-tree": {
+      "hash": "6b23e44a5ace86aa",
+      "translated_at": "2026-08-25T02:33:05.019Z"
+    },
+    "content:phuryn-pm-skills-outcome-roadmap": {
+      "hash": "3d2da8f82f4cbe4c",
+      "translated_at": "2026-08-25T02:33:22.856Z"
+    },
+    "content:phuryn-pm-skills-pestle-analysis": {
+      "hash": "6b264055b74a8632",
+      "translated_at": "2026-08-25T02:33:51.235Z"
+    },
+    "content:phuryn-pm-skills-positioning-ideas": {
+      "hash": "8864f284e66c8bb1",
+      "translated_at": "2026-08-25T02:34:04.869Z"
+    },
+    "content:phuryn-pm-skills-pre-mortem": {
+      "hash": "4e5cf10a46ac1d1c",
+      "translated_at": "2026-08-25T02:34:30.270Z"
+    },
+    "content:phuryn-pm-skills-porters-five-forces": {
+      "hash": "a010cd7e52e29456",
+      "translated_at": "2026-08-25T02:34:31.257Z"
+    },
+    "content:phuryn-pm-skills-pricing-strategy": {
+      "hash": "09321c5984f36540",
+      "translated_at": "2026-08-25T02:34:53.793Z"
+    },
+    "content:phuryn-pm-skills-prioritization-frameworks": {
+      "hash": "5dab45be9e46397e",
+      "translated_at": "2026-08-25T02:35:01.408Z"
+    },
+    "content:phuryn-pm-skills-prioritize-assumptions": {
+      "hash": "18160a0138c78879",
+      "translated_at": "2026-08-25T02:35:07.551Z"
+    },
+    "content:phuryn-pm-skills-prioritize-features": {
+      "hash": "d05c001ea9d71ccf",
+      "translated_at": "2026-08-25T02:35:14.568Z"
+    },
+    "content:phuryn-pm-skills-product-name": {
+      "hash": "16d715bbe6ab07b0",
+      "translated_at": "2026-08-25T02:35:19.081Z"
+    },
+    "content:phuryn-pm-skills-product-vision": {
+      "hash": "1414332e0f789396",
+      "translated_at": "2026-08-25T02:35:33.491Z"
+    },
+    "content:phuryn-pm-skills-product-strategy": {
+      "hash": "50d4bfe62ae71a32",
+      "translated_at": "2026-08-25T02:35:43.220Z"
+    },
+    "content:phuryn-pm-skills-release-notes": {
+      "hash": "b617edd39e721267",
+      "translated_at": "2026-08-25T02:35:47.584Z"
+    },
+    "content:phuryn-pm-skills-retro": {
+      "hash": "9ca1986756ce028a",
+      "translated_at": "2026-08-25T02:36:03.939Z"
     }
   }
 }

@@ -1,0 +1,26 @@
+{
+  "id": "trailofbits-skills-review-pr",
+  "name": "review-pr",
+  "description": "Reviews the current branch's changes against its base branch as a pull request: correctness of new and modified code, test coverage for it, and documentation accuracy. Use when asked to review a branch, a diff, or a pull request.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "trailofbits",
+  "install_path": ".claude/skills/review-pr/SKILL.md",
+  "source": {
+    "repo": "trailofbits/skills",
+    "url": "https://github.com/trailofbits/skills/blob/main/plugins/code-improver/tests/fixtures/pr-review-toolkit/skills/review-pr/SKILL.md",
+    "path": "plugins/code-improver/tests/fixtures/pr-review-toolkit/skills/review-pr/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-25T00:31:47.598Z",
+    "stars": 6832,
+    "language": "Python",
+    "pushed_at": "2026-08-24T23:10:01Z",
+    "license": "CC-BY-SA-4.0"
+  },
+  "summary_zh": "用于模拟拉取请求审查当前分支改动，检查代码正确性、测试覆盖率和文档准确性，适合评审分支、差异或合并请求。"
+}

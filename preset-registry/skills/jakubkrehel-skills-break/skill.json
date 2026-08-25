@@ -1,7 +1,7 @@
 {
   "id": "jakubkrehel-skills-break",
   "name": "break",
-  "description": "Answers \"does this survive?\" for one component. Renders it on a throwaway page under the hostile inputs it can actually receive, and reports what visibly broke.",
+  "description": "Answers \"does this survive?\" for one component. Renders it on a page in every state real use can put it in, and hands that page over as a visual report of what broke.",
   "category": "文档写作",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/jakubkrehel/skills/blob/main/skills/break/SKILL.md",
     "path": "skills/break/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-24T21:20:13.313Z",
-    "stars": 4246,
+    "discovered_at": "2026-08-25T01:16:12.328Z",
+    "stars": 4258,
     "language": "Markdown",
-    "pushed_at": "2026-08-24T09:35:23Z",
+    "pushed_at": "2026-08-24T22:30:14Z",
     "license": "MIT"
   },
-  "summary_zh": "一个组件健壮性测试工具，会在临时页面注入真实可能遇到的极端输入，并报告界面哪里被破坏。"
+  "summary_zh": "用于全面测试单个组件在真实使用状态下是否稳定，并生成可视化报告直观看出问题。"
 }

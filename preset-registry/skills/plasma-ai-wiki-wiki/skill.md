@@ -21,11 +21,13 @@ Maintain indexes as files are added and removed:
 
 - `wiki lint` — validate structure and flag issues
 - `wiki update` — sync index links with the filesystem
+- `wiki new` — create an indexed folder with an authored desc and content
 
 Browse structure, search across content, and read entries:
 
 - `wiki map` — print an indented tree overview
-- `wiki search` — search content with regex
+- `wiki search` — rank relevant pages with SQLite FTS5
+- `wiki match` — match content with regex
 - `wiki read` — read a named entry
 
 ## Usage
@@ -68,12 +70,17 @@ rather than authoring or auditing page by page yourself:
 - **`.wiki/` is the tool's namespace.** Every root carries a `.wiki/` directory
   holding `settings.json` — the file that declares the wiki root; `wiki init`
   writes it and `wiki update` restores a missing one — plus the derived
-  word-counts cache and the staged Obsidian config. Never author content there;
-  the walk skips dot-directories by construction.
+  word-counts and ranked-search caches and the staged Obsidian config. Never
+  author content there; the walk skips dot-directories by construction.
 - **Exclusions are configurable.** Beyond the built-ins (dot-paths, symlinks,
   `_index.md`), gitignore-style globs in `exclude.patterns` in
   `.wiki/settings.json` exclude whole subtrees from indexing — never walked,
-  scaffolded, or linted, though `wiki read` still serves them.
+  scaffolded, or linted, though `wiki read` still serves them. The enclosing git
+  repository's ignore rules fence the same way, with no configuration: what the
+  repo ignores is not wiki content, so a stray driver output beside tracked
+  pages is never adopted, minted an `_index.md`, or linked — delete or fence
+  residue rather than letting update sweep it in. A wiki whose own root is
+  gitignored is exempt.
 - **Name validation is configurable.** By default the wiki rejects only
   structural characters (`/`, `\`, `*`, `[`, `]`, `|`, `#`), a leading dot, and
   the reserved `_index` stem — spaces, dashes, and unicode all pass. Stricter
@@ -99,7 +106,7 @@ rather than authoring or auditing page by page yourself:
   `title: null` — update removes it, and lowercase `null` is the only reset
   spelling (`~`/`Null`/`NULL` render literally as the heading). Keep titles on a
   single line, quote a title containing `: `, and prefer plain text.
-  `wiki search --field title` matches only authored titles — an unset entry has
+  `wiki match --field title` matches only authored titles — an unset entry has
   no line to match. Setting `titles.required` to true in `.wiki/settings.json`
   demands a title everywhere: update seeds a `title: null` placeholder on every
   index and page missing one, and lint fails each placeholder until a value is
@@ -119,12 +126,20 @@ rather than authoring or auditing page by page yourself:
 - **Wikilinks stay inside the wiki.** A wikilink (`[[...]]`) must target another
   page in the same wiki. Files outside the wiki (source files, configs, another
   wiki's pages) can be referenced by name or in backticks, but never linked.
+- **Lint's output contract.** `wiki lint` prints issues to stdout and soft notes
+  to stderr; exit 1 means exactly "issues found" (0 clean, 2 a command error) —
+  notes never gate. A script must branch on the exit code or read
+  `wiki lint --json` (one JSON document on stdout carrying every finding typed:
+  an explicit `issue`/`note` severity, a machine `kind`, and per-kind payload
+  fields beside the prose `text`), never classify findings by scraping the prose
+  streams: a stderr note is not a blocking issue.
 - **Stale wikilinks are soft notes.** A `[[...]]` in index or page prose whose
   target no longer exists draws a stderr note from `wiki lint` without failing
   the run. Broken links in the generated index link block — the rows
-  `wiki update` maintains — stay hard issues (`--prune` removes them), as does a
-  prose wikilink naming a folder rather than the folder's index page: link
-  `[[folder/_index]]`, never `[[folder]]`.
+  `wiki update` maintains — are hard issues until the next update prunes them
+  (each removal announced, with the cause named when the target is merely
+  excluded rather than deleted), as is a prose wikilink naming a folder rather
+  than the folder's index page: link `[[folder/_index]]`, never `[[folder]]`.
 - **Descriptions end in a period.** `wiki lint` fails a `desc` (or an authored
   link description) that lacks a trailing period; the seeded `...` placeholder
   only draws a soft note. Author the desc in the child page's frontmatter —
@@ -138,7 +153,14 @@ rather than authoring or auditing page by page yourself:
   announces the batch in its condensed summary
   (`Created N new indexes (fill in their descs)`; run with `--full` for the
   per-path `New index:` lines). Fill in the desc right after the update — lint
-  soft-notes the placeholder until you do.
+  soft-notes the placeholder until you do. For a deliberate creation (an
+  adoption ceremony's mechanical step), prefer
+  `wiki new <folder> --desc ... --content ...`: it requires both authored inputs
+  — refusing blanks and placeholders outright, descs are never auto-stubbed —
+  and wires the folder's rows and the parent's new row in the same pass, so the
+  adoption lands lint-complete. The wiring is a scoped `wiki update` of the
+  parent subtree (the whole wiki for a top-level folder), so pending maintenance
+  in that scope — adoptions, prunes — lands in the same run.
 - **Bare pages are adopted loudly.** A page with no frontmatter gains it on the
   next `wiki update` — with `title:` seeded from its authored H1, while a page
   with no H1 gains the path-joined heading in its body, never a seeded title —
