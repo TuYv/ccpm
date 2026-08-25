@@ -1,0 +1,26 @@
+{
+  "id": "alirezarezvani-claude-skills-ar-status",
+  "name": "ar-status",
+  "description": "Show experiment dashboard with results, active loops, and progress. Use when the user runs /ar:ar-status or asks how an autoresearch experiment is going.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alirezarezvani",
+  "install_path": ".claude/skills/ar-status/SKILL.md",
+  "source": {
+    "repo": "alirezarezvani/claude-skills",
+    "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/ar-status/SKILL.md",
+    "path": ".gemini/skills/ar-status/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-25T08:26:09.958Z",
+    "stars": 24933,
+    "language": "Python",
+    "pushed_at": "2026-08-25T08:03:52Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于查看自动研究实验的结果、运行中的循环和整体进度，快速了解实验当前进展。"
+}

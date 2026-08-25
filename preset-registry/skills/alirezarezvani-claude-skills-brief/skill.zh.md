@@ -2,11 +2,11 @@
 name: "brief"
 description: "/cs:brief <topic> — Generate a one-page strategy brief from an office-hours intake. First step in the strategic sprint pipeline. Use when a strategic question needs to be framed before boardroom deliberation — e.g. locking options, assumptions, and success criteria for a pricing change or a market-entry decision."
 ---
-# /cs:brief — 单页战略简报
+# /cs:brief — 一页式战略简报
 
 **命令：** `/cs:brief <topic>` 或 `/cs:brief <office-hours-output>`
 
-将信息采集结果（原始问题或办公时间输出）转化为一份可供董事会审议的单页战略简报。这是战略冲刺流程的**第 1 步**。
+将输入内容（原始问题或 office-hours 输出）转化为一页式战略简报，供董事会讨论决策。这是战略冲刺流程的**第 1 步**。
 
 ## 流程位置
 
@@ -18,7 +18,7 @@ description: "/cs:brief <topic> — Generate a one-page strategy brief from an o
 ## 输入
 
 - 一个主题字符串，**或**
-- 一份办公时间简报（首选——更严谨）
+- 一份 office-hours 简报（推荐 — 更加严谨）
 - `~/.claude/company-context.md`（自动加载）
 
 ## 输出
@@ -87,30 +87,30 @@ description: "/cs:brief <topic> — Generate a one-page strategy brief from an o
 ## 工作流程
 
 1. 通过 context-engine 加载 company-context.md
-2. 如果输入是办公时间输出，则解析 6 个回答
-3. 如果输入是原始主题，则向创始人询问缺失的信息
-4. 起草 2–3 个选项（绝不能只有一个——每份简报都需要一个反事实选项）
-5. 明确列出假设和约束条件
-6. 确定受影响的角色 → 用于决定 `/cs:boardroom` 的评审小组构成
-7. 在决策**之前**编写成功标准和终止标准（这是体现严谨性的关键时刻）
+2. 如果输入是 office-hours 输出，解析其中的 6 个回答
+3. 如果输入是原始主题，提示创始人补充缺失信息
+4. 起草 2-3 个选项（绝不能只有一个 — 每份简报都需要一个反事实选项）
+5. 明确列出假设和约束
+6. 识别受影响的角色 → 决定 `/cs:boardroom` 的讨论小组构成
+7. 在决策**之前**写明成功标准和终止标准（这是严谨性的关键时刻）
 8. 保存到 `~/.claude/briefs/`
 
-## 此步骤存在的原因
+## 为什么需要这一步
 
-决策过程中最大的失败，是在尚未就问题达成一致之前便开始讨论实施方案。简报会锁定问题、选项和成功标准，使董事会能够在不发生范围蔓延的情况下进行审议。
+决策失败最常见的原因，是在尚未就问题达成一致之前就开始讨论实施方案。这份简报会锁定问题、选项和成功标准，让董事会能够在不发生范围蔓延的情况下进行讨论决策。
 
-这也是**制品交接**环节——下一个命令使用的是此文件，而不是你的记忆。
+这同时也是**成果交接环节**——下一条命令读取的是这个文件，而不是你的记忆。
 
 ## 路由
 
 - `/cs:boardroom <brief>` — 多角色审议
-- `/cs:cross-eval <brief>` — 董事会审议前的多模型合理性检查（适用于高风险事项）
-- `/cs:freeze <brief>` — 针对不可逆决策的冷静期锁定
+- `/cs:cross-eval <brief>` — 董事会会议前的多模型合理性检查（适用于高风险事项）
+- `/cs:freeze <brief>` — 不可逆决策的冷却锁定
 
 ## 相关内容
 
-- 智能体：[`cs-chief-of-staff`](../../agents/cs-chief-of-staff.md)
-- 技能：[`context-engine`](../../../skills/context-engine/SKILL.md)、[`board-meeting`](../../../skills/board-meeting/SKILL.md)
+- Agent：[`cs-chief-of-staff`](../../agents/cs-chief-of-staff.md)
+- Skills：[`context-engine`](../../../c-level-advisor/skills/context-engine/SKILL.md)、[`board-meeting`](../../../c-level-advisor/skills/board-meeting/SKILL.md)
 
 ---
 

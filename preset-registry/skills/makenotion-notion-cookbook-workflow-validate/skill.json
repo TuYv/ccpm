@@ -1,0 +1,26 @@
+{
+  "id": "makenotion-notion-cookbook-workflow-validate",
+  "name": "workflow-validate",
+  "description": "Review Notion Worker Workflows for trigger typing and retry safety.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "makenotion",
+  "install_path": ".claude/skills/workflow-validate/SKILL.md",
+  "source": {
+    "repo": "makenotion/notion-cookbook",
+    "url": "https://github.com/makenotion/notion-cookbook/blob/main/workers/agents/skills/workflow-validate/SKILL.md",
+    "path": "workers/agents/skills/workflow-validate/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-25T09:15:44.604Z",
+    "stars": 198,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-25T08:05:36Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于检查 Notion Worker 工作流的触发器类型和重试机制，帮助提前发现配置问题，提升任务执行的稳定性。"
+}
