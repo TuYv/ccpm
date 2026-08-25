@@ -1,0 +1,26 @@
+{
+  "id": "daymade-claude-code-skills-macos-watchdog",
+  "name": "macos-watchdog",
+  "description": ">- Design, deploy, and discipline macOS launchd watchdogs — LaunchAgents/LaunchDaemons that detect a recurring problem and auto-remediate it. Use whenever creating or editing a persistent background monitor / daemon / agent on macOS, writing a launchd plist, scheduling a self-healing script, or when a watchdog has become a disturbance itself: re-launching apps the user quit, firing repeated notifications, re-running its full repair ladder every few minutes on an unfixable network, or hammering t",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/macos-watchdog/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-macos/macos-watchdog/SKILL.md",
+    "path": "daymade-macos/macos-watchdog/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-25T10:20:48.108Z",
+    "stars": 1349,
+    "language": "Python",
+    "pushed_at": "2026-08-25T09:43:26Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于设计、部署和约束 macOS 的 launchd 守护监控，在后台问题反复出现时自动修复，并避免监控自身反复拉起应用、刷通知或无休止重试。"
+}

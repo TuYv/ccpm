@@ -1,780 +1,215 @@
 ---
 name: macos-cleaner
-description: Analyze and reclaim macOS disk space through intelligent cleanup recommendations. This skill should be used when users report disk space issues, need to clean up their Mac, or want to understand what's consuming storage. Focus on safe, interactive analysis with user confirmation before any deletions.
+description: >-
+  Diagnoses and safely reclaims macOS disk space. Use when a Mac is low on
+  storage, reports “Caching needs more space,” shows large Apple Content
+  Caching or AssetCacheManagerUtil usage, or needs analysis of caches, logs,
+  application remnants, large or duplicate files, Docker or OrbStack,
+  Homebrew, npm, pip,
+  Xcode, and other developer storage. Routes known suspects to targeted
+  read-only diagnosis before broad scans, distinguishes logical from physical
+  usage, requires an impact-and-recovery plan plus explicit confirmation before
+  state changes, and verifies disk space and co-resident services afterward.
 ---
-# macOS 清理工具
+# macOS 清理器
 
-## 概述
+诊断磁盘压力的实际来源，仅回收已批准的空间，并证明清理没有损坏用户数据或共存服务。
 
-智能分析 macOS 磁盘使用情况，并提供可执行的清理建议以释放存储空间。本技能遵循**安全第一的理念**：进行全面分析，清晰呈现分析结果，并在执行任何删除操作之前要求用户明确确认。
+## 入口路由
 
-**目标用户**：具备基本技术知识、了解文件系统，但需要指导以判断 macOS 上哪些内容可以安全删除的用户。
+选择能够回答请求的最窄路径：
 
-## 核心原则
+| 用户信号 | 路由 |
+|---|---|
+| Apple Content Caching、`AssetCacheManagerUtil`、`CacheUsed`、`ActualCacheUsed`、iCloud 缓存或“Caching needs more space” | 在进行探测或提出命令之前，完整阅读 `references/apple_content_caching.md` |
+| Docker、OrbStack、镜像、容器或卷 | 阅读 `references/docker_analysis.md`；检查每个对象，绝不使用 prune 系列命令 |
+| Docker 构建缓存 | 使用 `docker builder du` 进行度量；此 skill 会报告构建缓存，但不会删除，因为 Docker 提供的是按类别进行 prune 的控制，而不是按记录表达删除意图 |
+| 已经确定某个命名缓存、目录、应用程序或服务为可疑对象 | 首先检查该目标，并阅读 `references/cleanup_targets.md` 中匹配的语义；不要从主目录或整块磁盘扫描开始 |
+| 来源确实未知 | 使用下面的常规分析工作流；Mole 是可选项，并非通用的第一步 |
 
-1. **安全第一，绝不绕过**：在未获得用户明确确认的情况下，绝不执行危险命令（`rm -rf`、`mo clean` 等）。不得使用捷径或变通方法。
-2. **仅执行精确删除**：通过指定确切的对象 ID/名称进行删除。绝不使用批量清理命令。
-3. **列出每个对象**：报告必须展示每个具体的镜像、卷和容器，而不能只显示“12 GB 未使用的镜像”。
-4. **价值重于数字好看**：你的目标不是最大化已清理空间，而是识别哪些内容**确实无用**，哪些属于**有价值的缓存**。仅仅为了显示一个很大的数字而清除 50GB 有用缓存是有害的。
-5. **关注网络环境**：许多用户（尤其是中国用户）的网络速度较慢或不稳定。重新下载缓存可能需要数小时。能够节省 30 分钟下载时间的缓存值得保留。
-6. **必须进行影响分析**：每条清理建议都必须包含“删除后会发生什么”列。绝不能只列出项目而不解释后果。
-7. **删除前进行双重检查**：删除前，使用相互独立的交叉检查来验证每个 Docker 对象（参见 references/docker_analysis.md）。
-8. **耐心重于速度**：磁盘扫描可能需要 5 至 10 分钟。绝不能中断或跳过耗时较长的操作。应定期向用户报告进度。
-9. **由用户执行清理**：分析完成后，提供清理命令供用户自行运行。不要自动执行清理。
-10. **采用保守的默认策略**：如有疑问，就不要删除。宁可谨慎行事。
+用户提供的范围排除项优先于所有通用扫描建议。如果用户排除了个人目录、凭据、数据库、应用程序状态或无关服务，则不要检查这些内容。
 
-**绝对禁止事项：**
-- ❌ 绝不使用 `docker image prune`、`docker volume prune`、`docker system prune` 或任何 prune 系列命令（例外：`docker builder prune` 是安全的——构建缓存仅包含中间层，绝不包含用户数据）
-- ❌ 绝不使用 `docker container prune`——已停止的容器随时可能重新启动
-- ❌ 在未获得明确确认的情况下，绝不对用户目录运行 `rm -rf`
-- ❌ 在未先通过 `--dry-run` 预览的情况下，绝不运行 `mo clean`
-- ❌ 绝不为了节省时间而跳过分析步骤
-- ❌ 绝不在 Mole 命令后附加 `--help`（只有 `mo --help` 是安全的）
-- ❌ 绝不提供仅包含分类的清理报告——必须逐一列出每个对象
-- ❌ 绝不为了夸大清理数字而建议删除有用的缓存
+## 安全与授权契约
 
-## 工作流决策树
+1. **将观察与变更分开。** 首先完成只读诊断。在此阶段不要删除内容、停止服务、编辑设置、安装或升级工具，也不要运行可能在该阶段修改状态的清理预览。
+2. **确认确切目标。** 在远程 Mac 上，先记录当前主机身份，然后再进行任何其他操作。绝不要根据 IP、旧 PID、目录名称或之前的报告推断机器身份。
+3. **先制定计划，再请求授权。** 在进行任何状态变更之前，列出每条命令、它会进行的更改、预期实际回收的空间、影响、可恢复性和后置条件。如果用户要求仅制定计划，则在此处停止。
+4. **要求明确批准。** 如果用户提供了确切的确认短语，则必须要求该短语。否则，要求用户对所列命令和目标作出明确无误的批准。对一个计划的批准不授权执行备用方案或范围更大的清理。
+5. **使用精确且受支持的控制方式。** 优先使用应用程序支持的缓存管理命令或确切的对象 ID。如果不存在受支持的控制方式，则只有在验证其所有者、确认应用程序已停止或该目录处于非活动状态、说明重建/重新下载的影响并获得批准后，才能删除应用程序拥有的确切缓存目录。绝不要针对宽泛的缓存根目录或活动中的应用程序状态。
+6. **绝不使用 Docker prune 系列命令。** 这包括 image、container、volume、system、builder 和 buildx prune。按类别进行的宽泛删除无法表达用户对单个对象的意图。
+7. **避免宽泛的破坏性 shell 形式。** 不要建议或执行宽泛的 `rm -rf` 或通配符删除。对于已准确批准的普通文件，优先使用 Finder 废纸篓。内置的旧版辅助程序会永久删除内容，并且只有下文所述的有限保护措施；绝不要将其视为等同于废纸篓。
+8. **保留有价值的状态。** 绝不要仅为了增加报告中的节省空间，就将用户文档、凭据、SSH 材料、活动中的数据库、应用程序配置或运行中服务的状态作为目标。在删除任何文件之前，阅读 `references/safety_rules.md`。
+9. **根据用户授权执行。** 如果用户只要求分析，或希望自行运行命令，则将命令交给用户。如果用户要求代理修复机器，并明确确认了范围限定的计划，则执行确切的已批准命令并进行验证。无人值守的定期删除逻辑在写入或启用之前需要单独获得批准。
+10. **快速失败。** 如果命令返回非零状态、后置条件不匹配、目标异常或依赖发生变化，则停止清理。报告部分完成的状态；不要自行设计备用方案。
 
-```
-用户报告磁盘空间问题
-           ↓
-        快速诊断
-           ↓
-    ┌──────┴──────┐
-    │             │
- 立即清理      深度分析
-              （继续下方流程）
-    │             │
-    └──────┬──────┘
-           ↓
-      呈现分析结果
-           ↓
-       用户确认
-           ↓
-       执行清理
-           ↓
-       验证结果
-```
+## 阶段契约
 
-## 第 1 步：使用 Mole 快速诊断
+每次清理都使用以下状态机：
 
-**主要工具**：使用 Mole 进行磁盘分析。它能够提供全面且分类清晰的结果。
+1. **观察 — 只读。** 获取身份信息、磁盘基线、疑似子系统的状态和配置、物理分配情况，以及关键服务的健康状况。
+1b. **在无法避免时，为有状态检查授权。** 如果更深入的证据需要创建临时容器、拉取镜像、挂载卷或写入快照，请先完成仅元数据的观察，列出确切的检查命令及其副作用，并获得单独的批准。检查批准不等于清理批准。
+2. **计划 — 不进行变更。** 说明发现结果、命令、影响、恢复方式、预计释放空间和成功标准。在确认关卡处停止。
+3. **执行 — 仅限已批准的范围。** 在执行操作前立即重新读取实时状态，然后分别运行每条已批准的命令，并检查其退出状态和执行后条件。
+4. **验证 — 独立回读。** 再次测量磁盘空间和子系统状态，重新检查受保护的服务，并持续观察足够长的时间以检测是否立即再次占满。
 
-### 1.1 执行前检查
+不要将第 2 阶段和第 3 阶段压缩到同一条消息中。将计划打印在清理命令旁边并不构成确认关卡。
+
+## 阶段 1：只读诊断
+
+### 建立基线
+
+至少获取以下信息：
 
 ```bash
-# Check Mole installation and version
-which mo && mo --version
-
-# If not installed
-brew install tw93/tap/mole
-
-# Check for updates (Mole updates frequently)
-brew info tw93/tap/mole | head -5
-
-# Upgrade if outdated
-brew upgrade tw93/tap/mole
+/bin/date "+%F %T %Z %z"
+/usr/sbin/scutil --get ComputerName
+/usr/sbin/scutil --get LocalHostName
+/usr/bin/sw_vers
+/bin/df -k /System/Volumes/Data
+/bin/df -h /System/Volumes/Data
 ```
 
-### 1.2 选择分析方法
+使用 `df -k` 进行计算，使用 `df -h` 生成人类可读的报告。在实时命令确认之前，应将扩展名、标签或旧报告视为提示信息。
 
-**重要**：使用 `mo analyze` 作为主要分析工具，**不要**使用 `mo clean --dry-run`。
+在扫描未知来源之前，先确定成功目标。准确复制用户提供的可用空间或容量目标。如果用户未提供目标，则报告当前值，并要求其提供以 GiB、容量百分比或两者表示的目标；不要自行设定目标。命名的疑似对象诊断可以在没有清理目标的情况下继续，但有序的未知来源扫描在目标明确之前不能声称已达到停止条件。
 
-| 命令 | 用途 | 使用场景 |
-|---------|---------|----------|
-| `mo analyze` | 交互式磁盘使用情况浏览器（TUI 树状视图） | **主要方式**：了解哪些内容正在占用空间 |
-| `mo clean --dry-run` | 预览清理类别 | **辅助方式**：仅在运行 `mo analyze` 后用于查看清理预览 |
+保持第一阶段为只读。暂时不要运行 `scripts/cleanup_report.py`：它会创建本地状态目录和快照文件。应改为在报告中保留命令输出。在远程目标上，始终直接在该主机上运行 `df` 命令；本地辅助工具不得误测控制端 Mac。
 
-**优先使用 `mo analyze` 的原因：**
-- 专用磁盘分析工具，提供交互式树状导航
-- 可以深入查看特定目录
-- 显示实际的磁盘使用明细，而不只是清理类别
-- 对于了解存储空间占用情况更有帮助
+### 在进行广泛扫描之前，先跟进已命名的疑似对象
 
-### 1.3 通过 tmux 运行分析
+- 查询该子系统自身的状态和设置。
+- 仅当权限和用户范围允许时，才对确切的数据路径使用有界 `du` 来测量物理分配情况。
+- 区分逻辑内容大小、稀疏文件的表观大小、可清除空间和实际分配的字节数。
+- 对于疑似正在增长的日志，在两个或更多时间戳记录确切的文件大小。单个大文件或单个最近的 mtime 不能证明其在持续增长。
+- 获取用户标记为关键的任何共驻服务的当前进程、监听器、启动机制和受支持的健康探针。在每个检查点重新解析 PID。
 
-**重要**：Mole 需要 TTY。从 Claude Code 使用时，始终通过 tmux 运行。
+如果仅已知的可疑对象就能满足用户的可用空间目标，则不要“以防万一”扫描无关的个人目录或开发目录。
 
-**关键时间提示**：扫描主目录的速度很慢（对于大型目录，需要 5–10 分钟甚至更长时间）。请提前告知用户并耐心等待。
+### 源位置未知时的一般分析
+
+按最小化的有序序列执行，以识别足够的物理空间来满足目标。只有在具备受支持的确切操作、且有合理依据预期能够释放相应物理空间的候选项可以满足目标时，才停止。原始分配总量、逻辑缓存大小、共享的 Docker 层、移入废纸篓的操作，以及未经验证的“潜在节省空间”均不能满足停止条件。
+
+| 顺序 / 信号 | 只读操作 | 停止或继续 |
+|---|---|---|
+| 1. 始终执行 | 获取身份信息和 `df -k/-h`；盘点用户排除项 | 目标不匹配时停止 |
+| 2. 存在缓存/日志压力，且 `~/Library/Caches` 加上 `~/Library/Logs` 属于获准读取范围 | `uv run scripts/analyze_caches.py --user-only` | 当已测量的候选项可以满足目标时停止 |
+| 3. 存在开发者工具，且脚本的固定范围已获批准 | `uv run scripts/analyze_dev_env.py` 会读取 Docker/包管理器，以及现有的 `~/Projects`、`~/workspace`、`~/dev`、`~/src` 和 `~/code` 根目录 | 将 Docker/OrbStack 的发现结果交由其专用参考文档处理；如果任一固定根目录超出范围，则跳过此辅助脚本 |
+| 4. 卸载应用的残留具有可能性，且其固定根目录已获批准 | `uv run scripts/find_app_remnants.py` 会读取 `/Applications`、`~/Applications` 以及文档中列出的四个 `~/Library` 应用状态根目录 | 将每个结果都视为候选项，绝不能视为已确认不再使用；如果该范围未获批准，则跳过 |
+| 5. 某个包含内容的路径已获明确批准 | `uv run scripts/analyze_large_files.py --threshold 100MB --path "<approved-path>"` | 如果没有获批准的路径，不要用 `~`、Downloads、Documents 或数据卷根目录替代 |
+| 6. 在有限范围的检查后仍然未知，且用户明确批准了 Mole 固定的广泛扫描根目录 | 阅读 `references/mole_integration.md`，并通过 TTY 使用 `mo analyze` | Mole 不接受任意路径范围；如果批准范围比其文档所述的根目录更窄，则跳过 |
+
+`<approved-path>` 是用户指定的确切路径，或用户在其范围得到说明后明确接受的确切路径。如果不存在此类路径，则跳过大文件和重复内容扫描，说明此证据分支未获授权，并继续收集不包含内容的证据。除非用户另行授权，否则在只读阶段不要安装或升级 Mole。
+
+Mole 的分析器会扫描一组固定位置，其中包括主目录、应用数据、系统库、应用程序和卷。在结果中进行导航，并不会使底层扫描变为按路径限定。如果该广泛的读取范围未获批准，则不要运行 Mole；使用已经收集的有限证据停止，或在计划中请求缺失的扫描授权。
+
+对于已明确批准的重复文件调查，请阅读 `references/cleanup_targets.md` 中的“可选：重复文件”部分。该操作为只读，并且绝不使用自动删除选项。
+
+### Docker 和 OrbStack
+
+在报告 Docker 节省空间之前，先阅读 `references/docker_analysis.md`。逐项列出每个镜像、容器和卷；检查引用关系以及类似数据库的内容；使用实际的稀疏文件分配大小，而不是表观大小。被报告为 dangling 的资源并不能证明其中的数据毫无价值。支持测量构建缓存，但有意不包含删除构建缓存，因为可用的 Docker 控制项是 prune 系列操作。
+
+## 阶段 2：报告并在关卡处停止
+
+报告观察到的值，而不是推断出的属性。长篇布局请使用 `references/report_templates.md`，并为每个拟议操作包含以下字段：
+
+| 字段 | 必需内容 |
+|---|---|
+| 当前状态 | 时间戳、目标身份、磁盘已用空间/可用空间/容量，以及子系统状态 |
+| 证据 | 命令和观察到的值；说明该数字是逻辑值还是物理值 |
+| 确切命令 | 将改变状态的命令，以及确切的目标或对象 ID |
+| 变更 | 该命令会修改或删除的内容 |
+| 可恢复性 | 可逆命令、从废纸篓恢复、从备份恢复，或只能重新下载 |
+| 预计释放空间 | 物理空间估算值、单位及假设 |
+| 服务影响 | 用户可见的影响，以及受保护服务的不变量 |
+| 后置条件 | 在将操作视为成功之前必须为真的值 |
+
+按照后果而不是数字有多诱人来分类发现：
+
+- **可重建缓存：** 删除只会丢失本地副本，但要说明重新下载或重建的成本。
+- **需要用户决策：** 其价值取决于用户的工作流或对所有权的了解。
+- **保留：** 用户数据、凭据、数据库状态、活动配置，或任何作用不明确的内容。
+
+不要仅仅因为软件可以重新生成缓存，就称其为“绝对安全”。重新生成所需的时间、带宽、身份验证以及离线可用性都是真实成本。
+
+## 阶段 3：执行已确认的计划
+
+在第一个改变状态的命令执行前立即：
+
+1. 重新确认目标身份和当前磁盘状态。
+2. 重新查询对象或子系统状态；实时状态发生变化时，清理计划就会失效。
+3. 重新检查受保护服务的运行状况。
+4. 将已批准的命令与即将运行的命令进行比较。任何差异都需要重新获得批准。
+
+如果已批准的计划包含创建本地前后报告工件，请现在捕获清理前快照：在获得批准后、执行第一个清理命令之前：
 
 ```bash
-# Create tmux session
-tmux new-session -d -s mole -x 120 -y 40
-
-# Run disk analysis (PRIMARY tool - interactive TUI)
-tmux send-keys -t mole 'mo analyze' Enter
-
-# Wait for scan - BE PATIENT!
-# Home directory scanning typically takes 5-10 minutes
-# Report progress to user regularly
-sleep 60 && tmux capture-pane -t mole -p
-
-# Navigate the TUI with arrow keys
-tmux send-keys -t mole Down    # Move to next item
-tmux send-keys -t mole Enter   # Expand/select item
-tmux send-keys -t mole 'q'     # Quit when done
+uv run scripts/cleanup_report.py --snapshot before
 ```
 
-**替代方式：清理预览（在运行 mo analyze 之后使用）**
-```bash
-# Run dry-run preview (SAFE - no deletion)
-tmux send-keys -t mole 'mo clean --dry-run' Enter
+该命令会写入 `~/.macos-cleaner`，因此要在计划中列出此路径。它是可选的，并且仅适用于本地目标；直接读取 `df -k/-h` 的结果仍是事实来源。绝不要在控制器 Mac 上运行它来代替测量远程目标。
 
-# Wait for scan (report progress to user every 30 seconds)
-# Be patient! Large directories take 5-10 minutes
-sleep 30 && tmux capture-pane -t mole -p
-```
+一次只运行一个改变状态的命令。读取结果后，再发送下一个命令。每个命令执行后，运行能够区分成功与部分成功的后置条件。
 
-### 1.4 报告进度
-
-定期向用户报告扫描进度：
-
-```
-📊 Disk Analysis in Progress...
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-⏱️ Elapsed: 2 minutes
-
-Current status:
-✅ Applications: 49.5 GB (complete)
-✅ System Library: 10.3 GB (complete)
-⏳ Home: scanning... (this may take 5-10 minutes)
-⏳ App Library: pending
-
-I'm waiting patiently for the scan to complete.
-Will report again in 30 seconds...
-```
-
-### 1.5 展示最终结果
-
-扫描完成后，以结构化形式展示结果：
-
-```
-📊 Disk Space Analysis (via Mole)
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Free space: 27 GB
-
-🧹 Recoverable Space (dry-run preview):
-
-➤ User Essentials
-  • User app cache:     16.67 GB
-  • User app logs:      102.3 MB
-  • Trash:              642.9 MB
-
-➤ Browser Caches
-  • Chrome cache:       1.90 GB
-  • Safari cache:       4 KB
-
-➤ Developer Tools
-  • uv cache:           9.96 GB
-  • npm cache:          (detected)
-  • Docker cache:       (detected)
-  • Homebrew cache:     (detected)
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Total recoverable: ~30 GB
-
-⚠️ This was a dry-run preview. No files were deleted.
-```
-
-## 第 2 步：深度分析类别
-
-系统地检查以下类别。有关详细说明，请参阅 `references/cleanup_targets.md`。
-
-### 类别 1：系统与应用程序缓存
-
-**要分析的位置：**
-- `~/Library/Caches/*` - 用户应用程序缓存
-- `/Library/Caches/*` - 系统范围的缓存（需要 sudo）
-- `~/Library/Logs/*` - 应用程序日志
-- `/var/log/*` - 系统日志（需要 sudo）
-
-**分析脚本：**
-```bash
-scripts/analyze_caches.py --user-only
-```
-
-**安全级别**：🟢 通常可以安全删除（应用程序会重新生成缓存）
-
-**需要保留的例外项：**
-- 浏览器运行时的浏览器缓存
-- IDE 缓存（可能会导致下次启动变慢）
-- 包管理器缓存（Homebrew、pip、npm）
-
-### 类别 2：应用程序残留
-
-**要分析的位置：**
-- `~/Library/Application Support/*` - 应用程序数据
-- `~/Library/Preferences/*` - 偏好设置文件
-- `~/Library/Containers/*` - 沙盒应用程序数据
-
-**分析方法：**
-1. 列出 `/Applications` 中已安装的应用程序
-2. 与 `~/Library/Application Support` 进行交叉比对
-3. 识别孤立文件夹（应用程序已卸载，但数据仍然存在）
-
-**分析脚本：**
-```bash
-scripts/find_app_remnants.py
-```
-
-**安全级别**：🟡 需要谨慎
-- ✅ 安全：明确已卸载应用程序的文件夹
-- ⚠️ 先检查：很少使用的应用程序所对应的文件夹
-- ❌ 保留：正在使用的应用程序数据
-
-### 类别 3：大文件与重复文件
-
-**分析脚本：**
-```bash
-scripts/analyze_large_files.py --threshold 100MB --path ~
-```
-
-**查找重复文件（可选，资源消耗较大）：**
-```bash
-# Use fdupes if installed
-if command -v fdupes &> /dev/null; then
-  fdupes -r ~/Documents ~/Downloads
-fi
-```
-
-**呈现分析结果：**
-```
-📦 Large Files (>100MB):
-━━━━━━━━━━━━━━━━━━━━━━━━
-1. movie.mp4                    4.2 GB  ~/Downloads
-2. dataset.csv                  1.8 GB  ~/Documents/data
-3. old_backup.zip               1.5 GB  ~/Desktop
-...
-
-🔁 Duplicate Files:
-- screenshot.png (3 copies)     15 MB each
-- document_v1.docx (2 copies)   8 MB each
-```
-
-**安全级别**：🟡 需要用户自行判断
-
-### 类别 4：开发环境清理
-
-**清理目标：**
-- Docker：镜像、容器、卷、构建缓存
-- Homebrew：缓存、旧版本
-- Node.js：`node_modules`、npm 缓存
-- Python：pip 缓存、`__pycache__`、venv
-- Git：已归档项目中的 `.git` 文件夹
-
-**分析脚本：**
-```bash
-scripts/analyze_dev_env.py
-```
-
-**分析结果示例：**
-```
-🐳 Docker Resources:
-- Unused images:      12 GB
-- Stopped containers:  2 GB
-- Build cache:         8 GB
-- Orphaned volumes:    3 GB
-Total potential:      25 GB
-
-📦 Package Managers:
-- Homebrew cache:      5 GB
-- npm cache:           3 GB
-- pip cache:           1 GB
-Total potential:       9 GB
-
-🗂️  Old Projects:
-- archived-project-2022/.git  500 MB
-- old-prototype/.git          300 MB
-```
-
-**清理命令（需要确认）：**
-```bash
-# Homebrew cleanup (safe)
-brew cleanup -s
-
-# npm _npx only (safe - temporary packages)
-rm -rf ~/.npm/_npx
-
-# pip cache (use with caution)
-pip cache purge
-```
-
-**Docker 清理 - 需要特殊处理：**
-
-⚠️ **切勿使用以下命令：**
-```bash
-# ❌ DANGEROUS - deletes ALL volumes without confirmation
-docker volume prune -f
-docker system prune -a --volumes
-```
-
-✅ **正确方法 - 逐个卷确认：**
-```bash
-# 1. List all volumes
-docker volume ls
-
-# 2. Identify which projects each volume belongs to
-docker volume inspect <volume_name>
-
-# 3. Ask user to confirm EACH project they want to delete
-# Example: "Do you want to delete all volumes for 'ragflow' project?"
-
-# 4. Delete specific volumes only after confirmation
-docker volume rm ragflow_mysql_data ragflow_redis_data
-```
-
-**安全级别**：🟢 Homebrew/npm 清理，🔴 Docker 卷需要逐个项目确认
-
-### 步骤 2A-2C：Docker 深度分析
-
-对于大量使用 Docker 的系统，请遵循 `references/docker_analysis.md` 中详细的逐对象分析和验证协议（镜像/容器/卷检查、OrbStack 稀疏文件处理，以及数据库卷红线规则）。核心规则：删除前，须通过独立交叉检查验证每个 Docker 对象，并且绝不使用 prune 系列命令。
-
-## 步骤 3：与 Mole 集成
-
-**Mole**（https://github.com/tw93/Mole）是一款用于全面清理 macOS 的**命令行界面（CLI）**工具。它提供基于交互式终端的分析和清理功能，可用于处理缓存、日志、开发者工具等。
-
-**关键要求：**
-
-1. **TTY 环境**：Mole 的交互式命令需要 TTY。从 Claude Code 或脚本运行时，请使用 `tmux`。
-2. **版本检查**：使用前务必确认 Mole 已更新至最新版本。
-3. **安全的帮助命令**：只有 `mo --help` 是安全的。请勿在其他命令后附加 `--help`。
-
-**安装检查和升级：**
+对于确切的普通文件（不属于用户数据、应用状态、数据库或受保护路径），在用户确认确切路径后，优先使用可恢复的 Finder 废纸篓移动操作：
 
 ```bash
-# Check if installed and get version
-which mo && mo --version
-
-# If not installed
-brew install tw93/tap/mole
-
-# Check for updates
-brew info tw93/tap/mole | head -5
-
-# Upgrade if needed
-brew upgrade tw93/tap/mole
+/usr/bin/osascript \
+  -e 'on run argv' \
+  -e 'tell application "Finder" to delete (POSIX file (item 1 of argv))' \
+  -e 'end run' -- "<exact-path>"
 ```
 
-**通过 tmux 使用 Mole（Claude Code 必须如此）：**
+移到废纸篓通常不会立即释放物理空间，必须清空废纸篓后才会释放；应在计划中说明这一点。`scripts/safe_delete.py` 是一个用于永久删除的旧版辅助工具，带有交互式提示和有限的系统/凭据拒绝列表。它不会将文件移到废纸篓，不会检查每个用户数据根目录，不会检测打开的文件，也不会独立证明已回收的字节数。只有在明确批准了确切的非用户数据目标以及不可逆删除操作时，才能使用它：
 
 ```bash
-# Create tmux session for TTY environment
-tmux new-session -d -s mole -x 120 -y 40
-
-# Run analysis (safe, read-only)
-tmux send-keys -t mole 'mo analyze' Enter
-
-# Wait for scan (be patient - can take 5-10 minutes for large directories)
-sleep 60
-
-# Capture results
-tmux capture-pane -t mole -p
-
-# Cleanup when done
-tmux kill-session -t mole
+uv run scripts/safe_delete.py <exact-path> [<exact-path> ...]
 ```
 
-**可用命令（来自 `mo --help`）：**
+不要将此辅助工具用于用户文档、由应用程序管理的缓存（例如 Apple Content Caching）、数据库、凭据，或任何用途不确定的目标。
 
-| 命令 | 安全性 | 说明 |
-|---------|--------|-------------|
-| `mo --help` | ✅ 安全 | 查看所有命令（唯一安全的帮助命令） |
-| `mo analyze` | ✅ 安全 | 磁盘用量浏览器（只读） |
-| `mo status` | ✅ 安全 | 系统健康状况监视器 |
-| `mo clean --dry-run` | ✅ 安全 | 预览清理操作（不删除） |
-| `mo clean` | ⚠️ 危险 | 实际删除文件 |
-| `mo purge` | ⚠️ 危险 | 删除项目产物 |
-| `mo uninstall` | ⚠️ 危险 | 删除应用程序 |
+在不放宽上述排除范围的前提下，仍可使用以下两个范围受限的 Finder 废纸篓分支：
 
-**参考指南：**
-有关详细的 tmux 工作流程和故障排除方法，请参阅 `references/mole_integration.md`。
+- 对于一个确切的非活动应用程序缓存，如果没有经过验证的受支持管理控制，请遵循 `references/cleanup_targets.md` 中针对指定缓存的发现/使用中检查流程，解释重建成本，并获得对该确切缓存路径的明确批准。
+- 对于一个确切的、已批准的用户数据根目录中的重复文件，首先显示每组重复文件的大小/哈希值以及所有路径。用户必须指定要保留的副本和要移除的每个副本。仅将这些已确认的文件移到 Finder 废纸篓；绝不要使用永久删除辅助工具、自动选择重复项的标志、`all`、glob 或目录级目标。验证源路径对应的文件已移到废纸篓，并说明物理空间在单独检查并清空废纸篓之前不会释放。
 
-## 使用 Mole 进行多层深度探索
+## 阶段 4：验证与观察
 
-为了进行全面分析，请执行多层级探索（深入检查 Home、Library、.cache、.npm、Downloads 等），而不是只扫描顶层目录。完整的 TUI 导航演练、推荐的探索树、预计耗时和完整示例会话均记录在 `references/mole_integration.md` 中。
+验证必须覆盖已批准计划中的所有条款：
 
-## 反模式：不应删除的内容
+- 重新读取 `df -k` 和 `df -h`；根据前后读数计算回收的空间，而不是依据删除工具的声明。
+- 重新查询已清理子系统的激活状态、配置和物理使用量。
+- 重新解析每个受保护服务的 PID、监听器、启动机制和健康检查探针。磁盘状态健康并不能证明服务仍然正常运行。
+- 当 APFS 记账可能存在延迟，或源数据可能重新填充时，以有界时间间隔进行观察。记录每个时间戳和值。
+- 如果未达到可用空间目标，停止所有删除操作。开始第二次只读分析，并根据测得的物理分配量对剩余来源进行排序。
 
-**关键提醒**：以下项目经常被建议清理，但在大多数情况下不应删除。它们提供的重要价值超过了所占用的空间。
+仅当已知命令退出代码时，绝不要报告“已修复”。一次成功的清理必须同时满足预期状态和受保护的不变量。
 
-### 应保留的项目（反模式）
-
-| 项目 | 大小 | 不应删除的原因 | 删除后的实际影响 |
-|------|------|-------------------|------------------------|
-| **Xcode DerivedData** | 10+ GB | 构建缓存可为每次完整重新构建节省 10-30 分钟 | 下次构建将多花 10-30 分钟 |
-| **npm _cacache** | 5+ GB | 已下载的软件包缓存在本地 | `npm install` 会重新下载所有内容（在中国需要 30 分钟至 2 小时） |
-| **~/.cache/uv** | 10+ GB | Python 软件包缓存 | 每个 Python 项目都会从 PyPI 重新安装依赖项 |
-| **Playwright browsers** | 3-4 GB | 用于自动化测试的浏览器二进制文件 | 每次都要重新下载 2GB 以上的数据（30 分钟至 1 小时） |
-| **iOS DeviceSupport** | 2-3 GB | 设备调试所必需 | 连接设备时需从 Apple 重新下载 |
-| **Docker stopped containers** | <500 MB | 随时可能通过 `docker start` 重新启动 | 丢失容器状态，需要重新创建 |
-| **~/.cache/huggingface** | 大小不定 | AI 模型缓存 | 重新下载大型模型（需要数小时） |
-| **~/.cache/modelscope** | 大小不定 | AI 模型缓存（中国） | 同上 |
-| **JetBrains caches** | 1+ GB | IDE 索引和缓存 | IDE 需要 5-10 分钟重新建立索引 |
-
-### 为什么这很重要
-
-**虚荣陷阱**：展示“清理了 50GB！”让人感觉很好，但：
-- 用户接下来要花 2 小时重新下载 npm 软件包
-- 下次 Xcode 构建需要 30 分钟，而不是 30 秒
-- AI 项目因需要重新下载模型而失败
-
-**正确的思维方式**：“我发现了 50GB 的缓存。以下是其中大多数实际上很有价值、应该保留的原因……”
-
-### 实际上可以安全删除的内容
-
-| 项目 | 安全的原因 | 影响 |
-|------|----------|--------|
-| **Trash** | 用户已经删除了这些文件 | 无——这是用户的决定 |
-| **Homebrew old versions** | 已被较新的版本取代 | 极少见：无法回退到旧版本 |
-| **npm _npx** | 临时的 npx 执行内容 | 轻微：npx 会在下次使用时重新下载 |
-| **Orphaned app remnants** | 应用已经卸载 | 无——应用已不存在 |
-| **Specific unused Docker volumes** | 已确认项目被弃用 | 无——前提是确实已被弃用 |
-
-## 报告格式要求
-
-每份清理报告都必须遵循以下格式，并包含影响分析：
-
-```markdown
-## Disk Analysis Report
-
-### Classification Legend
-| Symbol | Meaning |
-|--------|---------|
-| 🟢 | **Absolutely Safe** - No negative impact, truly unused |
-| 🟡 | **Trade-off Required** - Useful cache, deletion has cost |
-| 🔴 | **Do Not Delete** - Contains valuable data or actively used |
-
-### Findings
-
-| Item | Size | Classification | What It Is | Impact If Deleted |
-|------|------|----------------|------------|-------------------|
-| Trash | 643 MB | 🟢 | Files you deleted | None |
-| npm _npx | 2.1 GB | 🟢 | Temp npx packages | Minor redownload |
-| npm _cacache | 5 GB | 🟡 | Package cache | 30min-2hr redownload |
-| DerivedData | 10 GB | 🟡 | Xcode build cache | 10-30min rebuild |
-| Docker volumes | 11 GB | 🔴 | Project databases | **DATA LOSS** |
-
-### Recommendation
-Only items marked 🟢 are recommended for cleanup.
-Items marked 🟡 require your judgment based on usage patterns.
-Items marked 🔴 require explicit confirmation per-item.
-```
-
-### Docker 报告：必须提供对象级详细信息
-
-Docker 报告必须列出每个单独的对象（每个镜像、容器和卷），而不能只列出类别。请参阅 `references/report_templates.md` 中的对象级表格模板。
-
-## 高质量报告模板
-
-完成多层探索后，使用 `references/report_templates.md` 中详细的填空模板呈现调查结果。
-
-### 报告质量检查清单
-
-在呈现报告之前，请确认：
-
-- [ ] 每一项都有“删除后的影响”说明
-- [ ] 🟢 项确实可以安全删除（废纸篓、_npx、旧版本）
-- [ ] 🟡 项需要用户决定（提供时间信息、使用模式）
-- [ ] 🔴 项说明了应当保留的原因
-- [ ] Docker 卷按项目列出，而不是笼统地执行清理
-- [ ] 已考虑网络环境（中国 = 重新下载速度慢）
-- [ ] 不要为了夸大可释放空间而建议删除有用的缓存
-- [ ] 提供清晰的操作项和准确的命令
-
-## 步骤 4：呈现建议
-
-将调查结果整理为带风险等级的可执行建议：
-
-```markdown
-# macOS Cleanup Recommendations
-
-## Summary
-Total space recoverable: ~XX GB
-Current usage: XX%
-
-## Recommended Actions
-
-### 🟢 Safe to Execute (Low Risk)
-These are safe to delete and will be regenerated as needed:
-
-1. **Empty Trash** (~12 GB)
-   - Location: ~/.Trash
-   - Command: `rm -rf ~/.Trash/*`
-
-2. **Clear System Caches** (~45 GB)
-   - Location: ~/Library/Caches
-   - Command: `rm -rf ~/Library/Caches/*`
-   - Note: Apps may be slightly slower on next launch
-
-3. **Remove Homebrew Cache** (~5 GB)
-   - Command: `brew cleanup -s`
-
-### 🟡 Review Recommended (Medium Risk)
-Review these items before deletion:
-
-1. **Large Downloads** (~38 GB)
-   - Location: ~/Downloads
-   - Action: Manually review and delete unneeded files
-   - Files: [list top 10 largest files]
-
-2. **Application Remnants** (~8 GB)
-   - Apps: [list detected uninstalled apps]
-   - Locations: [list paths]
-   - Action: Confirm apps are truly uninstalled before deleting data
-
-### 🔴 Keep Unless Certain (High Risk)
-Only delete if you know what you're doing:
-
-1. **Docker Volumes** (~3 GB)
-   - May contain important data
-   - Review with: `docker volume ls`
-
-2. **Time Machine Local Snapshots** (~XX GB)
-   - Automatic backups, will be deleted when space needed
-   - Command to check: `tmutil listlocalsnapshots /`
-```
-
-## 步骤 5：确认后执行
-
-**关键要求**：未经用户明确确认，绝不能执行删除操作。
-
-**交互式确认流程：**
-
-```python
-# Example from scripts/safe_delete.py
-def confirm_delete(path: str, size: str, description: str) -> bool:
-    """
-    Ask user to confirm deletion.
-
-    Args:
-        path: File/directory path
-        size: Human-readable size
-        description: What this file/directory is
-
-    Returns:
-        True if user confirms, False otherwise
-    """
-    print(f"\n🗑️  Confirm Deletion")
-    print(f"━━━━━━━━━━━━━━━━━━")
-    print(f"Path:        {path}")
-    print(f"Size:        {size}")
-    print(f"Description: {description}")
-
-    response = input("\nDelete this item? [y/N]: ").strip().lower()
-    return response == 'y'
-```
-
-**对于批量操作：**
-
-```python
-def batch_confirm(items: list) -> list:
-    """
-    Show all items, ask for batch confirmation.
-
-    Returns list of items user approved.
-    """
-    print("\n📋 Items to Delete:")
-    print("━━━━━━━━━━━━━━━━━━")
-    for i, item in enumerate(items, 1):
-        print(f"{i}. {item['path']} ({item['size']})")
-
-    print("\nOptions:")
-    print("  'all'    - Delete all items")
-    print("  '1,3,5'  - Delete specific items by number")
-    print("  'none'   - Cancel")
-
-    response = input("\nYour choice: ").strip().lower()
-
-    if response == 'none':
-        return []
-    elif response == 'all':
-        return items
-    else:
-        # Parse numbers
-        indices = [int(x.strip()) - 1 for x in response.split(',')]
-        return [items[i] for i in indices if 0 <= i < len(items)]
-```
-
-## 第 6 步：验证结果
-
-清理后，验证结果并进行报告：
+对于由辅助工具捕获了清理前快照的本地目标，请使用以下命令生成对比结果：
 
 ```bash
-# Compare before/after
-df -h /
-
-# Calculate space recovered
-# (handled by scripts/cleanup_report.py)
-```
-
-**报告格式：**
-
-```
-✅ Cleanup Complete!
-
-Before: 450 GB used (90%)
-After:  385 GB used (77%)
-━━━━━━━━━━━━━━━━━━━━━━━━
-Recovered: 65 GB
-
-Breakdown:
-- System caches:        45 GB
-- Downloads:            12 GB
-- Homebrew cache:        5 GB
-- Application remnants:  3 GB
-
-⚠️ Notes:
-- Some applications may take longer to launch on first run
-- Deleted items cannot be recovered unless you have Time Machine backup
-- Consider running this cleanup monthly
-
-💡 Maintenance Tips:
-- Set up automatic Homebrew cleanup: `brew cleanup` weekly
-- Review Downloads folder monthly
-- Enable "Empty Trash Automatically" in Finder preferences
-```
-
-## 附加内容：Dockerfile 优化发现
-
-当镜像分析发现镜像过大时，建议采用多阶段构建优化。有关优化前后的示例和关键技术，请参阅 `references/docker_analysis.md`。
-
-## ⚠️ 安全准则
-
-### 始终保留
-
-未经用户明确指示，切勿删除以下内容：
-- `~/Documents`、`~/Desktop`、`~/Pictures` 中的内容
-- 活跃项目目录
-- 数据库文件（*.db、*.sqlite）
-- 活跃应用的配置文件
-- SSH 密钥、凭据、证书
-- Time Machine 备份
-
-### ⚠️ 需要确认 Sudo 权限
-
-这些操作需要提升权限。请让用户手动运行命令：
-- 清理 `/Library/Caches`（系统范围）
-- 清理 `/var/log`（系统日志）
-- 清理 `/private/var/folders`（系统临时文件）
-
-提示示例：
-```
-⚠️ This operation requires administrator privileges.
-
-Please run this command manually:
-  sudo rm -rf /Library/Caches/*
-
-⚠️ You'll be asked for your password.
-```
-
-### 💡 备份建议
-
-在执行任何超过 10GB 的清理之前，建议：
-
-```
-💡 Safety Tip:
-Before cleaning XX GB, consider creating a Time Machine backup.
-
-Quick backup check:
-  tmutil latestbackup
-
-If no recent backup, run:
-  tmutil startbackup
-```
-
-## 故障排除
-
-### “Operation not permitted”错误
-
-由于 SIP（系统完整性保护），macOS 可能会阻止删除某些系统文件。
-
-**解决方案**：不要强行操作。这些保护机制是出于安全考虑而存在的。
-
-### 删除缓存后应用崩溃
-
-这种情况很少见，但有可能发生。**解决方案**：重启应用，它会重新生成必要的缓存。
-
-### Docker 清理操作移除了重要数据
-
-**预防措施**：清理前始终列出 Docker 卷：
-```bash
-docker volume ls
-docker volume inspect <volume_name>
+uv run scripts/cleanup_report.py --snapshot after --compare
 ```
 
 ## 资源
 
-### scripts/
+仅加载与当前任务相关的分支：
 
-- `analyze_caches.py` - 扫描缓存目录并进行分类
-- `find_app_remnants.py` - 检测孤立的应用程序数据
-- `analyze_large_files.py` - 通过智能筛选查找大文件
-- `analyze_dev_env.py` - 扫描开发环境资源
-- `safe_delete.py` - 通过确认进行交互式删除
-- `cleanup_report.py` - 生成清理前后报告
+- `references/apple_content_caching.md` — Apple Content Caching 诊断、单位解释、受支持的远程控制、确认计划和清理后验证。
+- `references/cleanup_targets.md` — 缓存、日志、应用程序、开发者、大文件和 Time Machine 目标语义。
+- `references/docker_analysis.md` — 按对象进行的 Docker 和 OrbStack 分析、数据库卷安全措施以及重新填充的根因诊断。
+- `references/mole_integration.md` — 交互式 Mole 分析和预览的 TTY 工作流。
+- `references/report_templates.md` — 长篇通用报告和 Docker 报告模板。
+- `references/safety_rules.md` — 阻止的路径、确认、恢复和文件删除安全检查。
+- `scripts/analyze_caches.py` — 有界缓存清单。
+- `scripts/find_app_remnants.py` — 应用程序残留候选项；读取其固定的 Applications 和 `~/Library` 根目录，因此必须先要求该范围。
+- `scripts/analyze_large_files.py` — 在已批准路径内发现大文件。
+- `scripts/analyze_dev_env.py` — Docker/包管理器清单以及固定常见项目根目录 `.git` 大小；必须先要求完整的读取范围。
+- `scripts/safe_delete.py` — 用于确切的、已批准的非用户数据目标的旧版受保护永久删除工具；它不是废纸篓或恢复工具。
+- `scripts/cleanup_report.py` — 默认针对 `/System/Volumes/Data` 的本地目标清理前/后报告，并支持显式的 `--volume` 覆盖。
 
-### references/
+## 不要在以下情况下使用此 skill
 
-- `cleanup_targets.md` - 每个清理目标的详细说明
-- `mole_integration.md` - 如何使用 Mole，以及多层 TUI 探索演练
-- `docker_analysis.md` - Docker 深度分析工作流（步骤 2A-2C）和 Dockerfile 优化
-- `report_templates.md` - 详细的报告模板（对象级 Docker 表格、完整报告布局）
-- `safety_rules.md` - 绝不能删除的内容的完整列表
-
-## 使用示例
-
-### 示例 1：快速清理缓存
-
-用户请求：“我的 Mac 快没空间了，可以帮帮我吗？”
-
-工作流：
-1. 运行快速诊断
-2. 将系统缓存确定为可快速释放空间的目标
-3. 展示发现：“`~/Library/Caches` 占用 45 GB”
-4. 解释：“这些内容可以安全删除，应用会重新生成它们”
-5. 请求确认
-6. 提供命令供用户自行运行：`rm -rf ~/Library/Caches/*`（根据核心原则 9，不要自动执行）
-7. 用户运行后，使用 `df -h /` 验证并报告：“已释放 45 GB”
-
-### 示例 2：清理开发环境
-
-用户请求：“我是一名开发者，我的磁盘已满”
-
-工作流：
-1. 运行 `scripts/analyze_dev_env.py`
-2. 展示 Docker + npm + Homebrew 的检查结果
-3. 解释每个类别
-4. 提供清理命令及相关说明
-5. 让用户执行（不要自动执行 Docker 清理）
-6. 验证结果
-
-### 示例 3：查找大文件
-
-用户请求：“是什么占用了这么多空间？”
-
-工作流：
-1. 运行 `scripts/analyze_large_files.py --threshold 100MB`
-2. 结合上下文展示最大的 20 个文件
-3. 分类：视频、数据集、归档文件、磁盘映像
-4. 让用户决定要删除哪些内容
-5. 提供删除命令供用户运行（或使用 `scripts/safe_delete.py` 对每个项目进行交互式确认）
-6. 建议归档到外部驱动器
-
-## 最佳实践
-
-1. **从保守操作开始**：先处理明显安全的目标（缓存、废纸篓）
-2. **解释所有内容**：用户应当了解自己正在删除什么
-3. **展示示例**：列出每个类别中的 3-5 个示例文件
-4. **尊重用户节奏**：不要仓促跳过确认步骤
-5. **记录结果**：始终展示清理前后的空间使用情况
-6. **提供指导**：在最终报告中加入维护建议
-7. **集成工具**：对于偏好 GUI 的用户，建议使用 Mole
-
-## 不应使用此 Skill 的情况
-
-- 用户希望自动/静默清理（违背安全优先原则）
-- 用户需要清理 Windows/Linux（此技能仅适用于 macOS）
-- 用户的磁盘使用率低于 10%（无需清理）
-- 用户希望清理需要禁用 SIP 才能处理的系统文件（存在安全风险）
-
-在这些情况下，请说明限制并建议替代方案。
+- 目标系统是 Windows 或 Linux。
+- 请求的操作需要禁用 SIP 或绕过 macOS 防护机制。
+- 用户要求在没有可审计范围和确认关卡的情况下静默或自动删除。
+- 任务仅用于调整应用程序行为，且没有磁盘空间诊断或恢复目标。

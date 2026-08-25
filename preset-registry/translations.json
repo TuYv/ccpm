@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-25T09:50:04.567Z",
+  "updated_at": "2026-08-25T11:40:32.524Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -17358,9 +17358,9 @@
       "translated_at": "2026-08-03T04:58:57.465Z"
     },
     "bundle:daymade-claude-code-skills": {
-      "hash": "7b0cd3c8fd39e1b3",
-      "summary_zh": "一套面向 Claude Code 的实用技能合集，覆盖信息采集、内容处理、开发运维与研究分析，让复杂任务能组合成自动化工作流。",
-      "translated_at": "2026-08-24T09:14:41.710Z"
+      "hash": "a26305e56b8b0ec7",
+      "summary_zh": "面向 Claude Code 的综合技能工具箱，覆盖开发、数据分析、信息检索与自动化，让复杂任务从调研、处理到执行都能一站式完成。",
+      "translated_at": "2026-08-25T11:16:53.927Z"
     },
     "bundle:specstoryai-getspecstory": {
       "hash": "c770b3a6c617c63e",
@@ -20243,9 +20243,9 @@
       "translated_at": "2026-08-03T16:25:15.427Z"
     },
     "skill:daymade-claude-code-skills-macos-cleaner": {
-      "hash": "1ae80ac9c8e9ffbe",
-      "summary_zh": "一款 macOS 磁盘空间分析与清理工具，可定位存储占用并提供安全清理建议，适合磁盘告急或想释放空间时使用。",
-      "translated_at": "2026-08-03T16:25:16.908Z"
+      "hash": "c763f33107b65d6c",
+      "summary_zh": "用于诊断并安全释放 macOS 磁盘空间，适合存储不足、缓存异常或开发工具占用过大时定位并清理文件。",
+      "translated_at": "2026-08-25T11:16:58.048Z"
     },
     "skill:daymade-claude-code-skills-local-conversation-history": {
       "hash": "300836ade64e6ba3",
@@ -32058,8 +32058,8 @@
       "translated_at": "2026-08-19T19:55:33.439Z"
     },
     "content:garrytan-gstack-codex": {
-      "hash": "147ba688064cc8be",
-      "translated_at": "2026-08-17T18:40:46.759Z"
+      "hash": "4a1a53dc5d31c2b0",
+      "translated_at": "2026-08-25T11:39:08.697Z"
     },
     "content:garrytan-gstack-diagram": {
       "hash": "b8617e0ccc49ee86",
@@ -36870,8 +36870,8 @@
       "translated_at": "2026-08-15T02:20:02.203Z"
     },
     "content:daymade-claude-code-skills-macos-cleaner": {
-      "hash": "bd1efcab34db4a9b",
-      "translated_at": "2026-08-15T02:20:43.781Z"
+      "hash": "2dd06264a3b3902d",
+      "translated_at": "2026-08-25T11:27:19.008Z"
     },
     "content:daymade-claude-code-skills-marketplace-health-check": {
       "hash": "bd792bae3be57ada",
@@ -50270,6 +50270,60 @@
     "content:plasma-ai-fractal-fractal": {
       "hash": "f5dc555c6769b78e",
       "translated_at": "2026-08-25T09:50:04.567Z"
+    },
+    "skill:daymade-claude-code-skills-developing-ios-apps": {
+      "hash": "cd4682b55b23f457",
+      "summary_zh": "用于开发和发布 iOS/macOS 应用，解决 Xcode 构建、依赖、签名、公证及 CI/CD 部署问题。",
+      "translated_at": "2026-08-25T11:16:57.150Z"
+    },
+    "skill:daymade-claude-code-skills-macos-watchdog": {
+      "hash": "5e14809427bb892c",
+      "summary_zh": "用于设计、部署和约束 macOS 的 launchd 守护监控，在后台问题反复出现时自动修复，并避免监控自身反复拉起应用、刷通知或无休止重试。",
+      "translated_at": "2026-08-25T11:16:59.204Z"
+    },
+    "content:daymade-claude-code-skills-developing-ios-apps": {
+      "hash": "d31dcc6abf0361da",
+      "translated_at": "2026-08-25T11:26:24.643Z"
+    },
+    "content:daymade-claude-code-skills-macos-watchdog": {
+      "hash": "a10fab9a5a5e4996",
+      "translated_at": "2026-08-25T11:27:22.883Z"
+    },
+    "content:product-on-purpose-pm-skills-define-problem-statement": {
+      "hash": "494fbd95caeac81b",
+      "translated_at": "2026-08-25T11:39:08.023Z"
+    },
+    "content:product-on-purpose-pm-skills-define-x": {
+      "hash": "435a736dd78f669f",
+      "translated_at": "2026-08-25T11:39:12.630Z"
+    },
+    "content:product-on-purpose-pm-skills-deliver-acceptance-criteria": {
+      "hash": "b36f3a14c660d261",
+      "translated_at": "2026-08-25T11:39:31.988Z"
+    },
+    "content:product-on-purpose-pm-skills-deliver-edge-cases": {
+      "hash": "36d1f89195972d49",
+      "translated_at": "2026-08-25T11:39:34.355Z"
+    },
+    "content:product-on-purpose-pm-skills-deliver-launch-checklist": {
+      "hash": "12e1baee7add28b6",
+      "translated_at": "2026-08-25T11:39:52.370Z"
+    },
+    "content:product-on-purpose-pm-skills-deliver-release-notes": {
+      "hash": "63d3337284e8e2e6",
+      "translated_at": "2026-08-25T11:40:13.021Z"
+    },
+    "content:product-on-purpose-pm-skills-deliver-prd": {
+      "hash": "04e945cdf76da22a",
+      "translated_at": "2026-08-25T11:40:15.968Z"
+    },
+    "content:product-on-purpose-pm-skills-deliver-y": {
+      "hash": "83ccede7cf8a1c4d",
+      "translated_at": "2026-08-25T11:40:20.866Z"
+    },
+    "content:product-on-purpose-pm-skills-demo-noref": {
+      "hash": "e2f542fbf46ea311",
+      "translated_at": "2026-08-25T11:40:26.901Z"
     }
   }
 }
