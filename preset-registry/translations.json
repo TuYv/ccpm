@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-25T15:29:02.263Z",
+  "updated_at": "2026-08-25T17:36:45.318Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -1288,9 +1288,9 @@
       "translated_at": "2026-05-12T07:11:49.722Z"
     },
     "preset:dmitrysolana-ralph-claude-code": {
-      "hash": "221ff83d1390956e",
-      "summary_zh": "这是一个AI代理控制室模板，帮你像操作系统一样统筹调度代理，告别零散混乱，适合需要从单体代理逐步扩展到专业团队与自动化协作的开发场景。",
-      "translated_at": "2026-05-18T16:41:34.905Z"
+      "hash": "b269949d8a31686e",
+      "summary_zh": "一个面向 AI 智能体的工具调用引擎，可串联多种工具并处理 Solana 付费信号，适合构建自动化开发与服务工作流。",
+      "translated_at": "2026-08-25T17:12:56.527Z"
     },
     "preset:disler-infinite-agentic-loop": {
       "hash": "0ce24f0e8b9d6771",
@@ -9823,9 +9823,9 @@
       "translated_at": "2026-08-22T22:13:09.440Z"
     },
     "bundle:trailofbits-skills": {
-      "hash": "a3eb7249d0ee8461",
-      "summary_zh": "面向代码、智能合约与开发流程的安全审计工具集，结合代码理解、模糊测试和漏洞扫描，帮助团队更高效地发现并验证安全问题。",
-      "translated_at": "2026-08-25T02:12:35.099Z"
+      "hash": "1546fd21a0b9ab6b",
+      "summary_zh": "面向代码与智能合约安全审计的技能合集，把漏洞发现、验证和结果整合串成可复用的自动化工作流。",
+      "translated_at": "2026-08-25T17:12:51.974Z"
     },
     "bundle:czlonkowski-n8n-skills": {
       "hash": "c501b61219aece66",
@@ -12358,9 +12358,9 @@
       "translated_at": "2026-08-05T15:39:35.239Z"
     },
     "skill:trailofbits-skills-audit-prep-assistant": {
-      "hash": "de5589786cb536b8",
-      "summary_zh": "这是一个专为代码安全审计做准备的工具，能自动搞定代码优化与文档生成等前置工作，让项目快速达到送审标准，省去繁琐的手动准备流程。",
-      "translated_at": "2026-05-20T12:24:02.130Z"
+      "hash": "5db9f4e26fec0d3b",
+      "summary_zh": "一款代码安全审计准备工具，帮助团队在外部评审前发现并修复问题，补齐测试和文档，让仓库达到可审计状态。",
+      "translated_at": "2026-08-25T17:13:00.613Z"
     },
     "skill:trailofbits-skills-burpsuite-project-parser": {
       "hash": "d77ecc7a337a4900",
@@ -12388,9 +12388,9 @@
       "translated_at": "2026-05-20T12:24:58.421Z"
     },
     "skill:trailofbits-skills-code-maturity-assessor": {
-      "hash": "72fde02b3aa981cc",
-      "summary_zh": "这是一个代码成熟度评估工具，能系统化审查代码的安全与质量，并生成带评分和改进建议的专业报告，适合在项目上线前评估代码健壮性或排查潜在风险。",
-      "translated_at": "2026-05-20T12:25:00.883Z"
+      "hash": "a64f2a37cf0d61db",
+      "summary_zh": "基于九类指标系统评估智能合约或区块链代码成熟度，生成有证据支撑的评分卡和改进路线图。",
+      "translated_at": "2026-08-25T17:13:01.173Z"
     },
     "skill:trailofbits-skills-codeql": {
       "hash": "ba17534c8811dd4c",
@@ -12468,14 +12468,14 @@
       "translated_at": "2026-05-20T12:27:28.983Z"
     },
     "skill:trailofbits-skills-gh-cli": {
-      "hash": "32ab9a10a4a5fe9c",
-      "summary_zh": "它强制用带身份验证的命令行替代未授权的请求方式，解决无权限访问GitHub数据的问题，适合需要安全调用API或处理PR和Issue的场景。",
-      "translated_at": "2026-05-20T12:27:48.011Z"
+      "hash": "6ea7a6b7283d2114",
+      "summary_zh": "一款强制通过已认证的 GitHub CLI 访问仓库与 API 的工具，适合处理链接、拉取请求和议题时避免未认证抓取。",
+      "translated_at": "2026-08-25T17:13:04.569Z"
     },
     "skill:trailofbits-skills-guidelines-advisor": {
-      "hash": "21cf77541257e727",
-      "summary_zh": "这是一款基于行业最佳实践的智能合约开发顾问，能帮你审查代码、排查安全与架构风险，并输出修改建议，适合开发者在编写或审计合约时用来保障代码质量与安全。",
-      "translated_at": "2026-05-20T12:27:57.292Z"
+      "hash": "2e535305d746a512",
+      "summary_zh": "一款智能合约开发审查工具，用于按行业最佳实践评估架构、升级模式、依赖与测试质量，并发现潜在风险。",
+      "translated_at": "2026-08-25T17:13:04.038Z"
     },
     "skill:trailofbits-skills-harness-writing": {
       "hash": "505be1f5f13be676",
@@ -12568,9 +12568,9 @@
       "translated_at": "2026-05-20T12:30:44.071Z"
     },
     "skill:trailofbits-skills-secure-workflow-guide": {
-      "hash": "91a64faa42e009b2",
-      "summary_zh": "这是一款智能合约安全开发向导，帮你系统化走完从代码扫描到漏洞审查的安全流程，避免检查遗漏，适合需要规范合约开发与审计环节的区块链开发者。",
-      "translated_at": "2026-05-20T12:30:45.386Z"
+      "hash": "e722e7a14a18a467",
+      "summary_zh": "一套智能合约全流程安全开发指南，适合持续检查、上线前审计、分析扫描报告及规划模糊测试与形式化验证。",
+      "translated_at": "2026-08-25T17:13:05.210Z"
     },
     "skill:trailofbits-skills-sharp-edges": {
       "hash": "1ca50740a3d90080",
@@ -12603,9 +12603,9 @@
       "translated_at": "2026-05-20T12:31:56.734Z"
     },
     "skill:trailofbits-skills-token-integration-analyzer": {
-      "hash": "a03807511116ccec",
-      "summary_zh": "基于Trail of Bits清单的代币安全分析工具，能排查代币合规性、异常机制与权限风险，帮协议安全接入非标代币，适合智能合约审计与代币集成场景。",
-      "translated_at": "2026-05-20T12:32:05.028Z"
+      "hash": "e57b3992287dabd2",
+      "summary_zh": "一款代币集成与实现风险分析工具，用于检查 ERC20/ERC721 兼容性、异常模式及权限风险，适合协议接入代币或审计时使用。",
+      "translated_at": "2026-08-25T17:13:09.046Z"
     },
     "skill:trailofbits-skills-testing-handbook-generator": {
       "hash": "6ae1812015c8e061",
@@ -17428,9 +17428,9 @@
       "translated_at": "2026-08-03T04:59:30.788Z"
     },
     "bundle:huytieu-cog-second-brain": {
-      "hash": "bb31104256ab4d6d",
-      "summary_zh": "面向知识工作者的 AI 第二大脑，将信息采集、深度研究、任务执行、复盘和内容产出串成可验证的闭环工作流。",
-      "translated_at": "2026-08-03T04:59:32.346Z"
+      "hash": "dda33cade21c819d",
+      "summary_zh": "这是一套面向知识工作者的 AI 第二大脑，把信息捕捉、深度研究、任务执行、内容生产与复盘串成可验证的工作闭环。",
+      "translated_at": "2026-08-25T17:12:51.823Z"
     },
     "bundle:aitytech-agentkits-marketing": {
       "hash": "329cd4e0e90cd7e8",
@@ -22098,9 +22098,9 @@
       "translated_at": "2026-08-03T21:02:43.253Z"
     },
     "skill:huytieu-cog-second-brain-closed-loop": {
-      "hash": "de5533e7ba44b015",
-      "summary_zh": "一套按 V 模型推进开发与验收的执行流程，适合需要独立验证、全量集成测试和需求证据可追溯的项目。",
-      "translated_at": "2026-08-03T21:02:44.963Z"
+      "hash": "abee38fb03e05e58",
+      "summary_zh": "这是一个按 V 模型推进任务的验证流程，通过独立验收和可追溯证据，适合需要严格质量把关的开发场景。",
+      "translated_at": "2026-08-25T17:12:57.477Z"
     },
     "skill:huytieu-cog-second-brain-create-user-story": {
       "hash": "5c052a5efdec6766",
@@ -22223,9 +22223,9 @@
       "translated_at": "2026-08-03T21:03:17.667Z"
     },
     "skill:huytieu-cog-second-brain-ultragoal": {
-      "hash": "81040d0228437887",
-      "summary_zh": "用于跨会话推进大型目标的 V 模型闭环工具，适合分阶段交付复杂项目并持续验证，直至最终验收。",
-      "translated_at": "2026-08-03T21:03:19.175Z"
+      "hash": "989aea593ba51121",
+      "summary_zh": "用于管理跨会话的长期复杂目标，按 V 模型分阶段推进并严格验证，确保大型项目最终完整交付。",
+      "translated_at": "2026-08-25T17:13:00.471Z"
     },
     "skill:huytieu-cog-second-brain-team-brief": {
       "hash": "a5647ca7e655ff4c",
@@ -40555,8 +40555,8 @@
       "translated_at": "2026-08-17T18:41:01.505Z"
     },
     "content:huytieu-cog-second-brain-closed-loop": {
-      "hash": "231a7fadcfff5914",
-      "translated_at": "2026-08-17T18:41:38.776Z"
+      "hash": "f3ff481d4fd3ce56",
+      "translated_at": "2026-08-25T17:24:23.007Z"
     },
     "content:huytieu-cog-second-brain-braindump": {
       "hash": "38d171eb1f96af00",
@@ -40608,8 +40608,8 @@
       "translated_at": "2026-08-17T19:58:31.110Z"
     },
     "content:huytieu-cog-second-brain-harvest": {
-      "hash": "4283540a0b5b2c41",
-      "translated_at": "2026-08-17T20:09:58.594Z"
+      "hash": "bd04412e64fe52d5",
+      "translated_at": "2026-08-25T17:24:40.679Z"
     },
     "content:huytieu-cog-second-brain-generate-release-notes": {
       "hash": "2cbbd5e8035ad29d",
@@ -40648,12 +40648,12 @@
       "translated_at": "2026-08-17T20:16:18.950Z"
     },
     "content:huytieu-cog-second-brain-retro": {
-      "hash": "6e764819174252cc",
-      "translated_at": "2026-08-17T20:16:38.429Z"
+      "hash": "db88ebb6c20ae2a7",
+      "translated_at": "2026-08-25T17:24:58.106Z"
     },
     "content:huytieu-cog-second-brain-review-cockpit": {
-      "hash": "eaa051ccef8d9c8f",
-      "translated_at": "2026-08-17T20:17:19.771Z"
+      "hash": "07908aff1e812139",
+      "translated_at": "2026-08-25T17:25:39.347Z"
     },
     "content:huytieu-cog-second-brain-scout": {
       "hash": "1f298e95ae883bdf",
@@ -40668,8 +40668,8 @@
       "translated_at": "2026-08-17T20:20:52.714Z"
     },
     "content:huytieu-cog-second-brain-ultragoal": {
-      "hash": "188741377e7799aa",
-      "translated_at": "2026-08-17T20:20:57.364Z"
+      "hash": "b95d29f0856c1542",
+      "translated_at": "2026-08-25T17:25:12.105Z"
     },
     "content:huytieu-cog-second-brain-update-cog": {
       "hash": "297ea3e54ad2a9b1",
@@ -45357,14 +45357,14 @@
       "translated_at": "2026-08-21T07:33:39.775Z"
     },
     "bundle:aeonfun-aeon": {
-      "hash": "9df82b36a1fa818b",
-      "summary_zh": "一套可自由组合和持续进化的智能体技能框架，用于自动化研发、内容、运营与业务流程，并统一完成配置、诊断、更新和协作。",
-      "translated_at": "2026-08-21T08:12:09.454Z"
+      "hash": "097f9d5d02b7cf69",
+      "summary_zh": "面向个人与团队的智能代理工具集，把配置运维、工作流自动化、内容生产和业务洞察串成可持续进化的执行系统。",
+      "translated_at": "2026-08-25T17:12:51.240Z"
     },
     "skill:aeonfun-aeon-aeon": {
-      "hash": "f9980357cb9865b8",
-      "summary_zh": "用于搭建和管理智能代理，可将 Claude Code 中的重复任务转成可定时运行、灵活调整的自动化技能。",
-      "translated_at": "2026-08-21T08:12:13.303Z"
+      "hash": "c7abc5f0b7f1a2b4",
+      "summary_zh": "一套智能代理自动化工具，可将重复开发任务转成可定时运行、灵活调整的技能。",
+      "translated_at": "2026-08-25T17:12:56.340Z"
     },
     "skill:aeonfun-aeon-action-converter": {
       "hash": "edea98dbe92e5ce8",
@@ -45665,8 +45665,8 @@
       "translated_at": "2026-08-21T08:16:17.271Z"
     },
     "content:aeonfun-aeon-aeon": {
-      "hash": "ee78e0c71e048c1b",
-      "translated_at": "2026-08-24T20:23:38.565Z"
+      "hash": "3afe986521b5a7bb",
+      "translated_at": "2026-08-25T17:17:04.710Z"
     },
     "content:aeonfun-aeon-aeon-update": {
       "hash": "40852bbefff47692",
@@ -50368,6 +50368,50 @@
     "content:product-on-purpose-pm-skills-discover-stakeholder-summary": {
       "hash": "26273010a18ad491",
       "translated_at": "2026-08-25T13:39:31.443Z"
+    },
+    "content:product-on-purpose-pm-skills-foundation-build-risk-review": {
+      "hash": "a1c3d14357ba829f",
+      "translated_at": "2026-08-25T17:31:19.335Z"
+    },
+    "content:product-on-purpose-pm-skills-foundation-lean-canvas": {
+      "hash": "f91b74a3ee2894aa",
+      "translated_at": "2026-08-25T17:32:01.145Z"
+    },
+    "content:product-on-purpose-pm-skills-foundation-meeting-agenda": {
+      "hash": "03f82bd0c2811267",
+      "translated_at": "2026-08-25T17:32:30.193Z"
+    },
+    "content:product-on-purpose-pm-skills-foundation-meeting-brief": {
+      "hash": "df8a47b9b52ae954",
+      "translated_at": "2026-08-25T17:32:50.942Z"
+    },
+    "content:product-on-purpose-pm-skills-foundation-meeting-recap": {
+      "hash": "334e54526f39d6cf",
+      "translated_at": "2026-08-25T17:33:36.583Z"
+    },
+    "content:product-on-purpose-pm-skills-foundation-meeting-synthesize": {
+      "hash": "aa3b57b9abead274",
+      "translated_at": "2026-08-25T17:33:47.935Z"
+    },
+    "content:product-on-purpose-pm-skills-foundation-persona": {
+      "hash": "7500254628f13b7c",
+      "translated_at": "2026-08-25T17:34:17.895Z"
+    },
+    "content:product-on-purpose-pm-skills-foundation-okr-writer": {
+      "hash": "039638446b5fa01e",
+      "translated_at": "2026-08-25T17:35:07.145Z"
+    },
+    "content:product-on-purpose-pm-skills-foundation-stakeholder-briefings": {
+      "hash": "b3fb2440eb277960",
+      "translated_at": "2026-08-25T17:35:56.711Z"
+    },
+    "content:product-on-purpose-pm-skills-foundation-prioritized-action-plan": {
+      "hash": "1d908c3712f0d2a3",
+      "translated_at": "2026-08-25T17:36:37.701Z"
+    },
+    "content:product-on-purpose-pm-skills-foundation-stakeholder-update": {
+      "hash": "ce252de6de7db7ca",
+      "translated_at": "2026-08-25T17:36:45.318Z"
     }
   }
 }

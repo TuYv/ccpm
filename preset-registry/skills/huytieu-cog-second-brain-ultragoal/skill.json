@@ -1,7 +1,7 @@
 {
   "id": "huytieu-cog-second-brain-ultragoal",
   "name": "ultragoal",
-  "description": "Run a large, multi-session goal (e.g. shipping a whole side product) through the full V-model closed loop, one phase at a time, with cross-session state and a final north-star acceptance gate. Ultragoals never downgrade the lane: every phase runs CP-1→CP-6 with adversarial verification. Use via /ultragoal.",
+  "description": "Run a large, multi-session goal (e.g. shipping a whole side product) through the full V-model closed loop, one phase at a time, with cross-session state and a final north-star acceptance gate. Ultragoals never downgrade the lane: every phase runs CP-1→CP-6 with adversarial verification. Opt-in: invoke with /ultragoal or by calling something a long-running goal. Ordinary work does not run this.",
   "category": "文档写作",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/huytieu/COG-second-brain/blob/main/.agents/skills/ultragoal/SKILL.md",
     "path": ".agents/skills/ultragoal/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-25T14:18:51.089Z",
-    "stars": 965,
+    "discovered_at": "2026-08-25T16:18:21.127Z",
+    "stars": 979,
     "language": "HTML",
-    "pushed_at": "2026-08-24T08:21:29Z",
+    "pushed_at": "2026-08-25T15:32:13Z",
     "license": "MIT"
   },
-  "summary_zh": "用于跨会话推进大型目标的 V 模型闭环工具，适合分阶段交付复杂项目并持续验证，直至最终验收。"
+  "summary_zh": "用于管理跨会话的长期复杂目标，按 V 模型分阶段推进并严格验证，确保大型项目最终完整交付。"
 }

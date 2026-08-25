@@ -1,7 +1,7 @@
 {
   "id": "trailofbits-skills-code-maturity-assessor",
   "name": "code-maturity-assessor",
-  "description": "Systematic code maturity assessment using Trail of Bits' 9-category framework. Analyzes codebase for arithmetic safety, auditing practices, access controls, complexity, decentralization, documentation, MEV risks, low-level code, and testing. Produces professional scorecard with evidence-based ratings and actionable recommendations.",
+  "description": "Systematic code maturity assessment using Trail of Bits' 9-category framework. Analyzes codebase for arithmetic safety, auditing practices, access controls, complexity, decentralization, documentation, MEV risks, low-level code, and testing, then produces a scorecard with evidence-based ratings and a priority-ordered roadmap. Use when assessing or scoring the maturity of a smart contract or blockchain codebase, producing a maturity scorecard or evaluation, or judging how mature, well-tested, or ",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/trailofbits/skills/blob/main/plugins/building-secure-contracts/skills/code-maturity-assessor/SKILL.md",
     "path": "plugins/building-secure-contracts/skills/code-maturity-assessor/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-25T13:51:25.482Z",
-    "stars": 6844,
+    "discovered_at": "2026-08-25T15:42:28.718Z",
+    "stars": 6846,
     "language": "Python",
-    "pushed_at": "2026-08-25T13:44:07Z",
+    "pushed_at": "2026-08-25T15:37:59Z",
     "license": "CC-BY-SA-4.0"
   },
-  "summary_zh": "这是一个代码成熟度评估工具，能系统化审查代码的安全与质量，并生成带评分和改进建议的专业报告，适合在项目上线前评估代码健壮性或排查潜在风险。"
+  "summary_zh": "基于九类指标系统评估智能合约或区块链代码成熟度，生成有证据支撑的评分卡和改进路线图。"
 }

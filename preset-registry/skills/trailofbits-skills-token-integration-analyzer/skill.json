@@ -1,7 +1,7 @@
 {
   "id": "trailofbits-skills-token-integration-analyzer",
   "name": "token-integration-analyzer",
-  "description": "Token integration and implementation analyzer based on Trail of Bits' token integration checklist. Analyzes token implementations for ERC20/ERC721 conformity, checks for 20+ weird token patterns, assesses contract composition and owner privileges, performs on-chain scarcity analysis, and evaluates how protocols handle non-standard tokens. Context-aware for both token implementations and token integrations.",
+  "description": "Token integration and implementation analyzer based on Trail of Bits' token integration checklist. Analyzes token implementations for ERC20/ERC721 conformity, checks for 20+ weird token patterns, assesses contract composition and owner privileges, performs on-chain scarcity analysis, and evaluates how protocols handle non-standard tokens. Use when integrating or accepting arbitrary ERC20/ERC721 tokens, auditing a token implementation for standards conformity, or assessing risk from weird tokens ",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/trailofbits/skills/blob/main/plugins/building-secure-contracts/skills/token-integration-analyzer/SKILL.md",
     "path": "plugins/building-secure-contracts/skills/token-integration-analyzer/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-25T13:51:26.309Z",
-    "stars": 6844,
+    "discovered_at": "2026-08-25T15:42:29.762Z",
+    "stars": 6846,
     "language": "Python",
-    "pushed_at": "2026-08-25T13:44:07Z",
+    "pushed_at": "2026-08-25T15:37:59Z",
     "license": "CC-BY-SA-4.0"
   },
-  "summary_zh": "基于Trail of Bits清单的代币安全分析工具，能排查代币合规性、异常机制与权限风险，帮协议安全接入非标代币，适合智能合约审计与代币集成场景。"
+  "summary_zh": "一款代币集成与实现风险分析工具，用于检查 ERC20/ERC721 兼容性、异常模式及权限风险，适合协议接入代币或审计时使用。"
 }

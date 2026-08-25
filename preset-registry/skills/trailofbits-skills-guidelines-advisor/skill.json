@@ -1,7 +1,7 @@
 {
   "id": "trailofbits-skills-guidelines-advisor",
   "name": "guidelines-advisor",
-  "description": "Smart contract development advisor based on Trail of Bits' best practices. Analyzes codebase to generate documentation/specifications, review architecture, check upgradeability patterns, assess implementation quality, identify pitfalls, review dependencies, and evaluate testing. Provides actionable recommendations.",
+  "description": "Smart contract development advisor based on Trail of Bits' best practices. Analyzes codebase to generate documentation/specifications, review architecture, check upgradeability patterns, assess implementation quality, identify pitfalls, review dependencies, and evaluate testing. Use when asking whether a smart contract project follows development best practices, reviewing on-chain/off-chain split, upgradeability, or delegatecall proxy patterns against guidelines, or seeking recommendations on co",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/trailofbits/skills/blob/main/plugins/building-secure-contracts/skills/guidelines-advisor/SKILL.md",
     "path": "plugins/building-secure-contracts/skills/guidelines-advisor/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-25T13:51:25.751Z",
-    "stars": 6844,
+    "discovered_at": "2026-08-25T15:42:29.055Z",
+    "stars": 6846,
     "language": "Python",
-    "pushed_at": "2026-08-25T13:44:07Z",
+    "pushed_at": "2026-08-25T15:37:59Z",
     "license": "CC-BY-SA-4.0"
   },
-  "summary_zh": "这是一款基于行业最佳实践的智能合约开发顾问，能帮你审查代码、排查安全与架构风险，并输出修改建议，适合开发者在编写或审计合约时用来保障代码质量与安全。"
+  "summary_zh": "一款智能合约开发审查工具，用于按行业最佳实践评估架构、升级模式、依赖与测试质量，并发现潜在风险。"
 }

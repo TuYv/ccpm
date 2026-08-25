@@ -1,7 +1,7 @@
 {
   "id": "huytieu-cog-second-brain-closed-loop",
   "name": "closed-loop",
-  "description": "> V-model execute: CP-2 plan → CP-3 build → CP-3v component verify → CP-4 integration verify (full) → CP-5 acceptance. Worker never grades its own homework; evidence rows trace back to AC-n. Use via /execute.",
+  "description": "> Run one task through the V-model verification loop: CP-2 plan → CP-3 build → CP-3v component verify → CP-4 integration verify (full lane) → CP-5 acceptance. The worker never grades its own homework; evidence rows trace back to AC-n. Opt-in: invoke with /closed-loop or by asking for the closed loop, proper verification, or an evidence trail. Ordinary work does not run this.",
   "category": "文档写作",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/huytieu/COG-second-brain/blob/main/.claude/skills/closed-loop/SKILL.md",
     "path": ".claude/skills/closed-loop/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-25T14:18:51.965Z",
-    "stars": 965,
+    "discovered_at": "2026-08-25T16:18:22.214Z",
+    "stars": 979,
     "language": "HTML",
-    "pushed_at": "2026-08-24T08:21:29Z",
+    "pushed_at": "2026-08-25T15:32:13Z",
     "license": "MIT"
   },
-  "summary_zh": "一套按 V 模型推进开发与验收的执行流程，适合需要独立验证、全量集成测试和需求证据可追溯的项目。"
+  "summary_zh": "这是一个按 V 模型推进任务的验证流程，通过独立验收和可追溯证据，适合需要严格质量把关的开发场景。"
 }

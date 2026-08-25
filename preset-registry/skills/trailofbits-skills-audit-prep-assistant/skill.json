@@ -1,7 +1,7 @@
 {
   "id": "trailofbits-skills-audit-prep-assistant",
   "name": "audit-prep-assistant",
-  "description": "Prepares codebases for security review using Trail of Bits' checklist. Helps set review goals, runs static analysis tools, increases test coverage, removes dead code, ensures accessibility, and generates documentation (flowcharts, user stories, inline comments).",
+  "description": "Prepares codebases for security review using Trail of Bits' checklist. Helps set review goals, runs static analysis tools, increases test coverage, removes dead code, ensures accessibility, and generates documentation (flowcharts, user stories, inline comments). Use when preparing your own codebase to be audited by someone else, getting a repository review-ready before an external security review, deciding what to fix before auditors start, or asking what assessors need from a project. For under",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/trailofbits/skills/blob/main/plugins/building-secure-contracts/skills/audit-prep-assistant/SKILL.md",
     "path": "plugins/building-secure-contracts/skills/audit-prep-assistant/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-25T13:51:25.129Z",
-    "stars": 6844,
+    "discovered_at": "2026-08-25T15:42:28.342Z",
+    "stars": 6846,
     "language": "Python",
-    "pushed_at": "2026-08-25T13:44:07Z",
+    "pushed_at": "2026-08-25T15:37:59Z",
     "license": "CC-BY-SA-4.0"
   },
-  "summary_zh": "这是一个专为代码安全审计做准备的工具，能自动搞定代码优化与文档生成等前置工作，让项目快速达到送审标准，省去繁琐的手动准备流程。"
+  "summary_zh": "一款代码安全审计准备工具，帮助团队在外部评审前发现并修复问题，补齐测试和文档，让仓库达到可审计状态。"
 }
