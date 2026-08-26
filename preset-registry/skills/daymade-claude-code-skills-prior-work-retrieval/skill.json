@@ -1,0 +1,26 @@
+{
+  "id": "daymade-claude-code-skills-prior-work-retrieval",
+  "name": "prior-work-retrieval",
+  "description": ">- Finds and verifies the user's existing successful work before producing a new implementation, plan, report, workflow, document, or external message. Use whenever the task may already have an answer in another project, repository, Skill, SOP, decision record, meeting transcript, WeChat archive, or prior Claude conversation; especially when the user says “以前做过”, “已有代码”, “历史经验”, “别重复造轮子”, “先看看项目最近进展”, “retrieve before produce”, or asks to generalize a previous solution. Produces an auditable ret",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/prior-work-retrieval/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-claude-code/prior-work-retrieval/SKILL.md",
+    "path": "daymade-claude-code/prior-work-retrieval/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-26T18:23:27.050Z",
+    "stars": 1354,
+    "language": "Python",
+    "pushed_at": "2026-08-26T18:12:30Z",
+    "license": "MIT"
+  },
+  "summary_zh": "它会先检索并验证历史项目、代码和决策中的可复用成果，避免重复劳动，适合产出新方案、文档或实现前查找已有经验。"
+}

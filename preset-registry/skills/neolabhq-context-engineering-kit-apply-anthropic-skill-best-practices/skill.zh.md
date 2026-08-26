@@ -1,46 +1,45 @@
 ---
 name: apply-anthropic-skill-best-practices
 description: Comprehensive guide for skill development based on Anthropic's official best practices - use for complex skills requiring detailed structure
-argument-hint: Optional skill name or path to skill being reviewed
 ---
-# Anthropic 官方技能编写最佳实践
+# Anthropic 的官方 Skill 编写最佳实践
 
-将 Anthropic 官方技能编写最佳实践应用于你的技能。
+将 Anthropic 的官方 Skill 编写最佳实践应用到你的 Skill 中。
 
-优秀的技能应当简洁、结构清晰，并经过实际使用测试。本指南提供实用的编写建议，帮助你编写 Claude 能够有效发现和使用的技能。
+优秀的 Skill 简洁、结构清晰，并经过真实使用测试。本指南提供了实用的编写决策，帮助你编写出 Claude 能够有效发现和使用的 Skill。
 
 ## 核心原则
 
-### 技能元数据
+### Skill 元数据
 
-技能中的每个词元并不会立即产生开销。启动时，只会预加载所有技能的元数据（名称和描述）。Claude 仅在技能变得相关时读取 SKILL.md，并且仅在需要时读取其他文件。不过，保持 SKILL.md 简洁仍然很重要：Claude 一旦加载它，其中的每个词元都会与对话历史及其他上下文争夺上下文空间。
+并非 Skill 中的每个 token 都会立即产生开销。在启动时，所有 Skill 的元数据（名称和描述）都会被预加载。Claude 只有在 Skill 变得相关时才会读取 SKILL.md，并且只会在需要时读取其他文件。不过，保持 SKILL.md 简洁仍然很重要：Claude 加载它后，其中的每个 token 都会与对话历史和其他上下文竞争。
 
-### 使用你计划采用的所有模型进行测试
+### 使用计划采用的所有模型进行测试
 
-技能是对模型能力的补充，因此其有效性取决于底层模型。请使用你计划搭配该技能使用的所有模型进行测试。
+Skill 作为模型的附加能力，其有效性取决于底层模型。请使用你计划采用的所有模型测试你的 Skill。
 
 **不同模型的测试注意事项**：
 
-- **Claude Haiku**（快速、经济）：该技能是否提供了足够的指导？
-- **Claude Sonnet**（均衡）：该技能是否清晰且高效？
-- **Claude Opus**（推理能力强）：该技能是否避免了过度解释？
+- **Claude Haiku**（快速、经济）：Skill 是否提供了足够的指导？
+- **Claude Sonnet**（均衡）：Skill 是否清晰且高效？
+- **Claude Opus**（强大的推理能力）：Skill 是否避免了过度解释？
 
-对 Opus 完美有效的内容，可能需要为 Haiku 提供更多细节。如果你计划在多个模型中使用该技能，应尽量编写适用于所有模型的说明。
+对 Opus 完美有效的内容，可能需要为 Haiku 提供更多细节。如果你计划在多个模型之间使用 Skill，应以适用于所有模型的指令为目标。
 
-## 技能结构
+## Skill 结构
 
 <Note>
-  **YAML 前置元数据**：SKILL.md 前置元数据支持两个字段：
+  **YAML Frontmatter**：SKILL.md 的 frontmatter 支持两个字段：
 
-- `name` - 技能的易读名称（最多 64 个字符）
-- `description` - 单行描述技能的用途及其适用时机（最多 1024 个字符）
+- `name` - Skill 的人类可读名称（最多 64 个字符）
+- `description` - 对 Skill 功能及使用时机的单行描述（最多 1024 个字符）
 
-  有关完整的技能结构详情，请参阅[技能概述](docs.claude.com/en/docs/agents-and-tools/agent-skills/overview#skill-structure)。
+  有关完整的 Skill 结构详情，请参阅 [Skills 概览](docs.claude.com/en/docs/agents-and-tools/agent-skills/overview#skill-structure)。
 </Note>
 
 ### 命名约定
 
-使用一致的命名模式，使技能更易于引用和讨论。我们建议技能名称使用**动名词形式**（动词 + -ing），因为这种形式能够清晰描述技能提供的活动或能力。
+使用一致的命名模式，让 Skill 更易于引用和讨论。我们建议使用**动名词形式**（动词 + -ing）命名 Skill，因为这能清晰地描述 Skill 提供的活动或能力。
 
 **良好的命名示例（动名词形式）**：
 
@@ -53,58 +52,59 @@ argument-hint: Optional skill name or path to skill being reviewed
 **可接受的替代形式**：
 
 - 名词短语："PDF 处理"、"电子表格分析"
-- 行动导向："处理 PDF"、"分析电子表格"
+- 面向操作："处理 PDF"、"分析电子表格"
 
-**应避免**：
+**避免使用**：
 
-- 含糊的名称："助手"、"实用工具"、"工具"
-- 过于宽泛的名称："文档"、"数据"、"文件"
-- 在技能集合中使用不一致的命名模式
+- 含义模糊的名称："Helper"、"Utils"、"Tools"
+- 过于通用的名称："Documents"、"Data"、"Files"
+- 在 Skill 集合中使用不一致的模式
 
-一致的命名可以让你更轻松地：
+一致的命名方式有助于：
 
-- 在文档和对话中引用技能
-- 一眼了解技能的作用
-- 组织和搜索多个技能
-- 维护专业且风格统一的技能库
+- 在文档和对话中引用 Skill
+- 一目了然地了解 Skill 的功能
+- 组织和搜索多个 Skill
+- 维护专业且协调统一的 Skill 库
 
 ### 编写有效的描述
 
-`description` 字段用于支持技能发现，应同时包含技能的作用及其适用时机。
+`description` 字段有助于发现 Skill，应同时包含 Skill 的功能以及使用时机。
 
 <Warning>
-  **始终使用第三人称进行编写**。描述会被注入系统提示词，不一致的叙述视角可能导致发现问题。
-
-- **推荐：**“处理 Excel 文件并生成报告”
-- **避免：**“我可以帮助你处理 Excel 文件”
-- **避免：**“你可以使用它来处理 Excel 文件”
+  **始终使用第三人称书写**。description 会被注入系统提示词，不一致的人称可能会导致发现问题。
 </Warning>
 
-**描述要具体，并包含关键术语**。既要说明 Skill 的功能，也要说明应在何种具体触发条件或场景下使用它。
+- **Good:** "处理 Excel 文件并生成报告"
+- **Avoid:** "我可以帮你处理 Excel 文件"
+- **Avoid:** "你可以使用此 Skill 处理 Excel 文件"
+</Warning>
 
-每个 Skill 只能有一个描述字段。描述对于 Skill 选择至关重要：Claude 使用它从可能多达 100 个以上的可用 Skill 中选择正确的 Skill。你的描述必须提供足够的细节，让 Claude 知道何时应选择此 Skill，而 SKILL.md 的其余部分则提供实现细节。
+**请具体说明并包含关键术语**。同时说明 Skill 的功能，以及何时使用它的具体触发条件/上下文。
+
+每个 Skill 都只有一个 description 字段。description 对 Skill 选择至关重要：Claude 会从可能超过 100 个可用 Skill 中选择合适的 Skill。你的 description 必须提供足够详细的信息，让 Claude 知道何时选择此 Skill，而 SKILL.md 的其余部分则提供实现细节。
 
 有效示例：
 
-**PDF 处理 Skill：**
+**PDF Processing skill:**
 
 ```yaml  theme={null}
 description: Extract text and tables from PDF files, fill forms, merge documents. Use when working with PDF files or when the user mentions PDFs, forms, or document extraction.
 ```
 
-**Excel 分析 Skill：**
+**Excel Analysis skill:**
 
 ```yaml  theme={null}
 description: Analyze Excel spreadsheets, create pivot tables, generate charts. Use when analyzing Excel files, spreadsheets, tabular data, or .xlsx files.
 ```
 
-**Git 提交助手 Skill：**
+**Git Commit Helper skill:**
 
 ```yaml  theme={null}
 description: Generate descriptive commit messages by analyzing git diffs. Use when the user asks for help writing commit messages or reviewing staged changes.
 ```
 
-避免使用如下模糊描述：
+避免使用以下这类含糊的 description：
 
 ```yaml  theme={null}
 description: Helps with documents
@@ -120,23 +120,23 @@ description: Does stuff with files
 
 ### 渐进式披露模式
 
-SKILL.md 用作概览，并根据需要将 Claude 引导至详细资料，就像入门指南中的目录一样。有关渐进式披露工作原理的说明，请参阅概览中的[Skill 的工作原理](docs.claude.com/en/docs/agents-and-tools/agent-skills/overview#how-skills-work)。
+SKILL.md 充当概览，根据需要将 Claude 引导至详细材料，就像入职指南中的目录一样。有关渐进式披露工作方式的说明，请参阅概览中的 [Skills 的工作方式](docs.claude.com/en/docs/agents-and-tools/agent-skills/overview#how-skills-work)。
 
 **实用指南：**
 
-- 为获得最佳性能，请将 SKILL.md 正文控制在 500 行以内
+- 为获得最佳性能，将 SKILL.md 正文控制在 500 行以内
 - 接近此限制时，将内容拆分到单独的文件中
-- 使用以下模式有效组织说明、代码和资源
+- 使用以下模式来有效组织说明、代码和资源
 
-#### 可视化概览：从简单到复杂
+#### 视觉概览：从简单到复杂
 
-一个基础 Skill 起初只包含一个具有元数据和说明的 SKILL.md 文件：
+基本的 Skill 只需一个包含元数据和说明的 SKILL.md 文件：
 
-<img src="https://mintcdn.com/anthropic-claude-docs/4Bny2bjzuGBK7o00/images/agent-skills-simple-file.png?fit=max&auto=format&n=4Bny2bjzuGBK7o00&q=85&s=87782ff239b297d9a9e8e1b72ed72db9" alt="显示 YAML 前置元数据和 Markdown 正文的简单 SKILL.md 文件" data-og-width="2048" width="2048" data-og-height="1153" height="1153" data-path="images/agent-skills-simple-file.png" data-optimize="true" data-opv="3" srcset="https://mintcdn.com/anthropic-claude-docs/4Bny2bjzuGBK7o00/images/agent-skills-simple-file.png?w=280&fit=max&auto=format&n=4Bny2bjzuGBK7o00&q=85&s=c61cc33b6f5855809907f7fda94cd80e 280w, https://mintcdn.com/anthropic-claude-docs/4Bny2bjzuGBK7o00/images/agent-skills-simple-file.png?w=560&fit=max&auto=format&n=4Bny2bjzuGBK7o00&q=85&s=90d2c0c1c76b36e8d485f49e0810dbfd 560w, https://mintcdn.com/anthropic-claude-docs/4Bny2bjzuGBK7o00/images/agent-skills-simple-file.png?w=840&fit=max&auto=format&n=4Bny2bjzuGBK7o00&q=85&s=ad17d231ac7b0bea7e5b4d58fb4aeabb 840w, https://mintcdn.com/anthropic-claude-docs/4Bny2bjzuGBK7o00/images/agent-skills-simple-file.png?w=1100&fit=max&auto=format&n=4Bny2bjzuGBK7o00&q=85&s=f5d0a7a3c668435bb0aee9a3a8f8c329 1100w, https://mintcdn.com/anthropic-claude-docs/4Bny2bjzuGBK7o00/images/agent-skills-simple-file.png?w=1650&fit=max&auto=format&n=4Bny2bjzuGBK7o00&q=85&s=0e927c1af9de5799cfe557d12249f6e6 1650w, https://mintcdn.com/anthropic-claude-docs/4Bny2bjzuGBK7o00/images/agent-skills-simple-file.png?w=2500&fit=max&auto=format&n=4Bny2bjzuGBK7o00&q=85&s=46bbb1a51dd4c8202a470ac8c80a893d 2500w" />
+<img src="https://mintcdn.com/anthropic-claude-docs/4Bny2bjzuGBK7o00/images/agent-skills-simple-file.png?fit=max&auto=format&n=4ny2bjzuGBK7o00&q=85&s=87782ff239b297d9a9e8e1b72ed72db9" alt="展示 YAML frontmatter 和 markdown 正文的简单 SKILL.md 文件" data-og-width="2048" width="2048" data-og-height="1153" height="1153" data-path="images/agent-skills-simple-file.png" data-optimize="true" data-opv="3" srcset="https://mintcdn.com/anthropic-claude-docs/4Bny2bjzuGBK7o00/images/agent-skills-simple-file.png?w=280&fit=max&auto=format&n=4ny2bjzuGBK7o00&q=85&s=c61cc33b6f5855809907f7fda94cd80e 280w, https://mintcdn.com/anthropic-claude-docs/4Bny2bjzuGBK7o00/images/agent-skills-simple-file.png?w=560&fit=max&auto=format&n=4ny2bjzuGBK7o00&q=85&s=90d2c0c1c76b36e8d485f49e0810dbfd 560w, https://mintcdn.com/anthropic-claude-docs/4Bny2bjzuGBK7o00/images/agent-skills-simple-file.png?w=840&fit=max&auto=format&n=4ny2bjzuGBK7o00&q=85&s=ad17d231ac7b0bea7e5b4d58fb4aeabb 840w, https://mintcdn.com/anthropic-claude-docs/4Bny2bjzuGBK7o00/images/agent-skills-simple-file.png?w=1100&fit=max&auto=format&n=4ny2bjzuGBK7o00&q=85&s=f5d0a7a3c668435bb0aee9a3a8f8c329 1100w, https://mintcdn.com/anthropic-claude-docs/4Bny2bjzuGBK7o00/images/agent-skills-simple-file.png?w=1650&fit=max&auto=format&n=4ny2bjzuGBK7o00&q=85&s=0e927c1af9de5799cfe557d12249f6e6 1650w, https://mintcdn.com/anthropic-claude-docs/4Bny2bjzuGBK7o00/images/agent-skills-simple-file.png?w=2500&fit=max&auto=format&n=4ny2bjzuGBK7o00&q=85&s=46bbb1a51dd4c8202a470ac8c80a893d 2500w" />
 
-随着 Skill 不断扩展，你可以将额外内容打包在其中，仅在需要时由 Claude 加载：
+随着你的 Skill 不断成长，你可以将其他内容一并打包，供 Claude 仅在需要时加载：
 
-<img src="https://mintcdn.com/anthropic-claude-docs/4Bny2bjzuGBK7o00/images/agent-skills-bundling-content.png?fit=max&auto=format&n=4Bny2bjzuGBK7o00&q=85&s=a5e0aa41e3d53985a7e3e43668a33ea3" alt="打包 reference.md 和 forms.md 等额外参考文件。" data-og-width="2048" width="2048" data-og-height="1327" height="1327" data-path="images/agent-skills-bundling-content.png" data-optimize="true" data-opv="3" srcset="https://mintcdn.com/anthropic-claude-docs/4Bny2bjzuGBK7o00/images/agent-skills-bundling-content.png?w=280&fit=max&auto=format&n=4Bny2bjzuGBK7o00&q=85&s=f8a0e73783e99b4a643d79eac86b70a2 280w, https://mintcdn.com/anthropic-claude-docs/4Bny2bjzuGBK7o00/images/agent-skills-bundling-content.png?w=560&fit=max&auto=format&n=4Bny2bjzuGBK7o00&q=85&s=dc510a2a9d3f14359416b706f067904a 560w, https://mintcdn.com/anthropic-claude-docs/4Bny2bjzuGBK7o00/images/agent-skills-bundling-content.png?w=840&fit=max&auto=format&n=4Bny2bjzuGBK7o00&q=85&s=82cd6286c966303f7dd914c28170e385 840w, https://mintcdn.com/anthropic-claude-docs/4Bny2bjzuGBK7o00/images/agent-skills-bundling-content.png?w=1100&fit=max&auto=format&n=4Bny2bjzuGBK7o00&q=85&s=56f3be36c77e4fe4b523df209a6824c6 1100w, https://mintcdn.com/anthropic-claude-docs/4Bny2bjzuGBK7o00/images/agent-skills-bundling-content.png?w=1650&fit=max&auto=format&n=4Bny2bjzuGBK7o00&q=85&s=d22b5161b2075656417d56f41a74f3dd 1650w, https://mintcdn.com/anthropic-claude-docs/4Bny2bjzuGBK7o00/images/agent-skills-bundling-content.png?w=2500&fit=max&auto=format&n=4Bny2bjzuGBK7o00&q=85&s=3dd4bdd6850ffcc96c6c45fcb0acd6eb 2500w" />
+<img src="https://mintcdn.com/anthropic-claude-docs/4Bny2bjzuGBK7o00/images/agent-skills-bundling-content.png?fit=max&auto=format&n=4Bny2bjzuGBK7o00&q=85&s=a5e0aa41e3d53985a7e3e43668a33ea3" alt="捆绑额外的参考文件，例如 reference.md 和 forms.md。" data-og-width="2048" width="2048" data-og-height="1327" height="1327" data-path="images/agent-skills-bundling-content.png" data-optimize="true" data-opv="3" srcset="https://mintcdn.com/anthropic-claude-docs/4Bny2bjzuGBK7o00/images/agent-skills-bundling-content.png?w=280&fit=max&auto=format&n=4Bny2bjzuGBK7o00&q=85&s=f8a0e73783e99b4a643d79eac86b70a2 280w, https://mintcdn.com/anthropic-claude-docs/4Bny2bjzuGBK7o00/images/agent-skills-bundling-content.png?w=560&fit=max&auto=format&n=4Bny2bjzuGBK7o00&q=85&s=dc510a2a9d3f14359416b706f067904a 560w, https://mintcdn.com/anthropic-claude-docs/4Bny2bjzuGBK7o00/images/agent-skills-bundling-content.png?w=840&fit=max&auto=format&n=4Bny2bjzuGBK7o00&q=85&s=82cd6286c966303f7dd914c28170e385 840w, https://mintcdn.com/anthropic-claude-docs/4Bny2bjzuGBK7o00/images/agent-skills-bundling-content.png?w=1100&fit=max&auto=format&n=4Bny2bjzuGBK7o00&q=85&s=56f3be36c77e4fe4b523df209a6824c6 1100w, https://mintcdn.com/anthropic-claude-docs/4Bny2bjzuGBK7o00/images/agent-skills-bundling-content.png?w=1650&fit=max&auto=format&n=4Bny2bjzuGBK7o00&q=85&s=d22b5161b2075656417d56f41a74f3dd 1650w, https://mintcdn.com/anthropic-claude-docs/4Bny2bjzuGBK7o00/images/agent-skills-bundling-content.png?w=2500&fit=max&auto=format&n=4Bny2bjzuGBK7o00&q=85&s=3dd4bdd6850ffcc96c6c45fcb0acd6eb 2500w" />
 
 完整的 Skill 目录结构可能如下所示：
 
@@ -152,7 +152,7 @@ pdf/
     └── validate.py       # Validation script
 ```
 
-#### 模式 1：包含参考资料的高层级指南
+#### 模式 1：包含参考资料的高级指南
 
 ````markdown  theme={null}
 ---
@@ -182,7 +182,7 @@ Claude 仅在需要时加载 FORMS.md、REFERENCE.md 或 EXAMPLES.md。
 
 #### 模式 2：按领域组织
 
-对于涉及多个领域的 Skill，应按领域组织内容，以避免加载无关的上下文。当用户询问销售指标时，Claude 只需读取与销售相关的 schema，而不需要读取财务或营销数据。这样可以减少 token 使用量，并使上下文保持聚焦。
+对于包含多个领域的 Skills，应按领域组织内容，以避免加载不相关的上下文。当用户询问销售指标时，Claude 只需读取与销售相关的架构，而不需要读取财务或营销数据。这样可以降低 token 使用量，并让上下文保持聚焦。
 
 ```
 bigquery-skill/
@@ -215,9 +215,9 @@ grep -i "api usage" reference/product.md
 ```
 ````
 
-#### 模式 3：条件性详细信息
+#### 模式 3：条件式详细内容
 
-显示基本内容，并链接到高级内容：
+展示基本内容，并链接到高级内容：
 
 ```markdown  theme={null}
 # DOCX Processing
@@ -234,15 +234,15 @@ For simple edits, modify the XML directly.
 **For OOXML details**: See [OOXML.md](OOXML.md)
 ```
 
-仅当用户需要这些功能时，Claude 才会读取 REDLINING.md 或 OOXML.md。
+Claude 仅在用户需要这些功能时才会读取 REDLINING.md 或 OOXML.md。
 
 ### 避免深层嵌套的引用
 
-当文件由其他被引用的文件引用时，Claude 可能只会读取部分内容。遇到嵌套引用时，Claude 可能会使用 `head -100` 等命令预览内容，而不是读取整个文件，从而导致获取的信息不完整。
+当文件是从其他被引用的文件中引用时，Claude 可能只读取部分内容。遇到嵌套引用时，Claude 可能会使用 `head -100` 等命令预览内容，而不是读取整个文件，从而导致信息不完整。
 
-**将引用保持在距离 SKILL.md 一层的位置**。所有引用文件都应直接从 SKILL.md 链接，以确保 Claude 在需要时读取完整文件。
+**让引用相对于 SKILL.md 保持一层深度**。所有引用文件都应直接从 SKILL.md 链接，以确保 Claude 在需要时读取完整文件。
 
-**错误示例：层级太深**：
+**反例：层级过深**：
 
 ```markdown  theme={null}
 # SKILL.md
@@ -255,7 +255,7 @@ See [details.md](details.md)...
 Here's the actual information...
 ```
 
-**正确示例：仅一层**：
+**正例：一层深度**：
 
 ```markdown  theme={null}
 # SKILL.md
@@ -266,9 +266,9 @@ Here's the actual information...
 **Examples**: See [examples.md](examples.md)
 ```
 
-### 使用目录组织较长的引用文件
+### 为较长的引用文件添加目录
 
-对于超过 100 行的引用文件，请在顶部添加目录。这样即使 Claude 通过部分读取进行预览，也能看到所有可用信息的完整范围。
+对于超过 100 行的引用文件，请在顶部加入目录。这样，即使通过部分读取进行预览，Claude 也能看到可用信息的完整范围。
 
 **示例**：
 
@@ -289,15 +289,13 @@ Here's the actual information...
 ...
 ```
 
-随后，Claude 可以根据需要读取完整文件或跳转到特定章节。
-
-有关这种基于文件系统的架构如何实现渐进式披露的详细信息，请参阅下方高级部分中的[运行时环境](#runtime-environment)章节。
+有关这种基于文件系统的架构如何实现渐进式披露的详细信息，请参阅下方高级部分中的 [Runtime environment](#runtime-environment) 章节。
 
 ## 工作流与反馈循环
 
 ### 对复杂任务使用工作流
 
-将复杂操作拆分为清晰、有序的步骤。对于特别复杂的工作流，提供一份 Claude 可以复制到响应中并随着进展逐项勾选的清单。
+将复杂操作拆分为清晰、按顺序执行的步骤。对于特别复杂的工作流，提供一份 Claude 可以复制到其响应中并在执行过程中逐项勾选的检查清单。
 
 **示例 1：研究综合工作流**（适用于不含代码的 Skills）：
 
@@ -339,7 +337,7 @@ Organize findings by theme. Include:
 Check that every claim references the correct source document. If citations are incomplete, return to Step 3.
 ````
 
-此示例说明了如何将工作流应用于不需要代码的分析任务。清单模式适用于任何复杂的多步骤流程。
+此示例展示了如何将工作流应用于不需要代码的分析任务。检查清单模式适用于任何复杂的多步骤流程。
 
 **示例 2：PDF 表单填写工作流**（适用于含代码的 Skills）：
 
@@ -384,15 +382,15 @@ Run: `python scripts/verify_output.py output.pdf`
 If verification fails, return to Step 2.
 ````
 
-清晰的步骤可以防止 Claude 跳过关键的验证环节。清单有助于 Claude 和你跟踪多步骤工作流的进展。
+清晰的步骤可以防止 Claude 跳过关键的验证环节。检查清单有助于 Claude 和你跟踪多步骤工作流的进展。
 
 ### 实现反馈循环
 
-**常见模式**：运行验证器 → 修复错误 → 重复
+**常见模式**：运行验证器 → 修复错误 → 重复执行
 
-此模式可以显著提高输出质量。
+此模式可以显著提升输出质量。
 
-**示例 1：风格指南合规性**（适用于不含代码的 Skills）：
+**示例 1：符合样式指南**（适用于不含代码的 Skills）：
 
 ```markdown  theme={null}
 ## Content review process
@@ -410,9 +408,9 @@ If verification fails, return to Step 2.
 5. Finalize and save the document
 ```
 
-这展示了使用参考文档而非脚本的验证循环模式。“验证器”是 STYLE\_GUIDE.md，Claude 通过阅读和比较来执行检查。
+这展示了使用参考文档而不是脚本的验证循环模式。“验证器”是 STYLE\_GUIDE.md，Claude 通过阅读和比较来执行检查。
 
-**示例 2：文档编辑流程**（适用于包含代码的 Skill）：
+**示例 2：文档编辑流程**（适用于包含代码的 Skills）：
 
 ```markdown  theme={null}
 ## Document editing process
@@ -428,7 +426,7 @@ If verification fails, return to Step 2.
 6. Test the output document
 ```
 
-验证循环能够及早发现错误。
+验证循环可以及早发现错误。
 
 ## 内容指南
 
@@ -436,14 +434,14 @@ If verification fails, return to Step 2.
 
 不要包含会过时的信息：
 
-**反面示例：具有时效性**（将变得不再正确）：
+**反面示例：时效性信息**（将会变得错误）：
 
 ```markdown  theme={null}
 If you're doing this before August 2025, use the old API.
 After August 2025, use the new API.
 ```
 
-**正面示例**（使用“旧模式”章节）：
+**正面示例**（使用“旧模式”部分）：
 
 ```markdown  theme={null}
 ## Current method
@@ -461,23 +459,23 @@ This endpoint is no longer supported.
 </details>
 ```
 
-旧模式章节能够提供历史背景，同时避免主内容显得杂乱。
+旧模式部分提供了历史背景，同时不会让主要内容变得杂乱。
 
 ### 使用一致的术语
 
-选择一个术语，并在整个 Skill 中始终使用它：
+选择一个术语，并在整个 Skill 中始终使用：
 
-**正面示例——一致**：
+**正面示例 - 保持一致**：
 
-- 始终使用“API 端点”
-- 始终使用“字段”
-- 始终使用“提取”
+- 始终使用“API endpoint”
+- 始终使用“field”
+- 始终使用“extract”
 
-**反面示例——不一致**：
+**反面示例 - 不一致**：
 
-- 混用“API 端点”“URL”“API 路由”“路径”
-- 混用“字段”“框”“元素”“控件”
-- 混用“提取”“拉取”“获取”“检索”
+- 混用“API endpoint”、“URL”、“API route”、“path”
+- 混用“field”、“box”、“element”、“control”
+- 混用“extract”、“pull”、“get”、“retrieve”
 
 一致性有助于 Claude 理解并遵循指令。
 
@@ -485,9 +483,9 @@ This endpoint is no longer supported.
 
 ### 模板模式
 
-为输出格式提供模板。根据你的需求选择相应的严格程度。
+为输出格式提供模板。根据需求匹配严格程度。
 
-**适用于严格要求**（例如 API 响应或数据格式）：
+**对于严格要求**（例如 API 响应或数据格式）：
 
 ````markdown  theme={null}
 ## Report structure
@@ -511,7 +509,7 @@ ALWAYS use this exact template structure:
 ```
 ````
 
-**适用于灵活指导**（有必要进行调整时）：
+**对于灵活指导**（适合需要调整的情况）：
 
 ````markdown  theme={null}
 ## Report structure
@@ -536,34 +534,34 @@ Adjust sections as needed for the specific analysis type.
 
 ### 示例模式
 
-对于输出质量取决于示例的 Skill，应像常规提示一样提供输入/输出对：
+对于输出质量取决于查看示例的 Skills，像常规提示一样提供输入/输出对：
 
 ````markdown  theme={null}
-## Commit message format
+## 提交消息格式
 
-Generate commit messages following these examples:
+按照以下示例生成提交消息：
 
-**Example 1:**
-Input: Added user authentication with JWT tokens
-Output:
+**示例 1：**
+输入：Added user authentication with JWT tokens
+输出：
 ```
 feat(auth): implement JWT-based authentication
 
 Add login endpoint and token validation middleware
 ```
 
-**Example 2:**
-Input: Fixed bug where dates displayed incorrectly in reports
-Output:
+**示例 2：**
+输入：Fixed bug where dates displayed incorrectly in reports
+输出：
 ```
 fix(reports): correct date formatting in timezone conversion
 
 Use UTC timestamps consistently across report generation
 ```
 
-**Example 3:**
-Input: Updated dependencies and refactored error handling
-Output:
+**示例 3：**
+输入：Updated dependencies and refactored error handling
+输出：
 ```
 chore: update dependencies and refactor error handling
 
@@ -571,14 +569,14 @@ chore: update dependencies and refactor error handling
 - Standardize error response format across endpoints
 ```
 
-Follow this style: type(scope): brief description, then detailed explanation.
+遵循此风格：type(scope): 简要描述，然后是详细说明。
 ````
 
-相比单纯的描述，示例能帮助 Claude 更清晰地理解所需的风格和详细程度。
+与单独的描述相比，示例能更清晰地帮助 Claude 理解所需的风格和详细程度。
 
-### 条件式工作流模式
+### 条件工作流模式
 
-引导 Claude 完成各个决策点：
+引导 Claude 完成决策点：
 
 ```markdown  theme={null}
 ## Document modification workflow
@@ -601,24 +599,24 @@ Follow this style: type(scope): brief description, then detailed explanation.
 ```
 
 <Tip>
-  如果工作流包含许多步骤，变得庞大或复杂，请考虑将其拆分到单独的文件中，并告诉 Claude 根据当前任务读取相应的文件。
+  如果工作流变得庞大或复杂，包含许多步骤，可以考虑将其移入单独的文件，并告诉 Claude 根据当前任务读取相应的文件。
 </Tip>
 
 ## 评估与迭代
 
 ### 先构建评估
 
-**在编写大量文档之前创建评估。** 这样可以确保你的 Skill 解决的是真实问题，而不是为设想出来的问题编写文档。
+**在编写大量文档之前创建评估。** 这样可以确保你的 Skill 解决的是实际问题，而不是记录臆想中的问题。
 
 **评估驱动开发：**
 
-1. **识别缺口**：在没有 Skill 的情况下，让 Claude 执行具有代表性的任务。记录具体的失败情况或缺失的上下文
-2. **创建评估**：构建三个用于测试这些缺口的场景
+1. **识别差距**：在没有 Skill 的情况下，让 Claude 执行具有代表性的任务。记录具体的失败或缺失的上下文
+2. **创建评估**：构建三个用于测试这些差距的场景
 3. **建立基线**：衡量 Claude 在没有 Skill 时的表现
-4. **编写最少量的说明**：仅创建足以弥补这些缺口并通过评估的内容
-5. **迭代**：执行评估，与基线进行比较并加以改进
+4. **编写最少量的指令**：创建刚好足以解决这些差距并通过评估的内容
+5. **迭代**：执行评估，与基线进行比较，并不断改进
 
-这种方法可确保你解决的是实际问题，而不是预先设想那些可能永远不会出现的需求。
+这种方法可以确保你解决的是实际问题，而不是预判可能永远不会出现的需求。
 
 **评估结构**：
 
@@ -636,86 +634,86 @@ Follow this style: type(scope): brief description, then detailed explanation.
 ```
 
 <Note>
-  此示例展示了一个使用简单测试标准的数据驱动评估。我们目前未提供运行这些评估的内置方式。用户可以创建自己的评估系统。评估是衡量 Skill 有效性的事实依据。
+  此示例展示了一个带有简单测试标准的数据驱动评估。我们目前不提供运行这些评估的内置方式。用户可以创建自己的评估系统。评估是衡量 Skill 有效性的事实依据。
 </Note>
 
-### 与 Claude 迭代开发 Skills
+### 使用 Claude 迭代开发 Skills
 
-最高效的 Skill 开发流程需要 Claude 本身参与其中。与一个 Claude 实例（“Claude A”）协作创建一个供其他实例（“Claude B”）使用的 Skill。Claude A 帮助你设计和完善指令，而 Claude B 则在实际任务中对其进行测试。这种方式之所以有效，是因为 Claude 模型既了解如何编写有效的智能体指令，也了解智能体需要哪些信息。
+最有效的 Skill 开发流程涉及 Claude 本身。使用一个 Claude 实例（“Claude A”）创建供其他实例（“Claude B”）使用的 Skill。Claude A 帮助你设计和完善指令，而 Claude B 则在实际任务中测试这些指令。之所以有效，是因为 Claude 模型既理解如何编写有效的智能体指令，也了解智能体需要哪些信息。
 
-**创建新的 Skill：**
+**创建新 Skill：**
 
-1. **在不使用 Skill 的情况下完成任务**：使用常规提示词与 Claude A 一起解决问题。在此过程中，你会自然而然地提供上下文、说明偏好并分享流程知识。留意哪些信息是你反复提供的。
+1. **在没有 Skill 的情况下完成任务**：使用常规提示词与 Claude A 一起解决问题。在这个过程中，你会自然地提供上下文、解释偏好并分享操作知识。注意观察自己反复提供了哪些信息。
 
-2. **识别可复用的模式**：完成任务后，确定你所提供的哪些上下文信息对未来的类似任务有用。
+2. **识别可复用的模式**：完成任务后，找出你提供的、对未来类似任务有用的上下文。
 
-   **示例**：如果你完成了一项 BigQuery 分析，你可能提供了表名、字段定义、筛选规则（例如“始终排除测试账户”）以及常用查询模式。
+   **示例**：如果你完成了一次 BigQuery 分析，你可能提供了表名、字段定义、筛选规则（例如“始终排除测试账户”）以及常见的查询模式。
 
-3. **让 Claude A 创建 Skill**：“创建一个 Skill，用于记录我们刚才使用的 BigQuery 分析模式。包括表结构、命名约定以及筛除测试账户的规则。”
+3. **请 Claude A 创建 Skill**： “创建一个 Skill，记录我们刚才使用的 BigQuery 分析模式。包括表结构、命名约定，以及筛选测试账户的规则。”
 
    <Tip>
-     Claude 模型原生理解 Skill 的格式和结构。你不需要特殊的系统提示词或“编写 Skills”的 Skill 来让 Claude 帮助创建 Skills。只需让 Claude 创建一个 Skill，它便会生成结构正确的 SKILL.md 内容，其中包含适当的 frontmatter 和正文内容。
+     Claude 模型原生理解 Skill 的格式和结构。你不需要特殊的系统提示词或“编写 skills”的 skill 来帮助 Claude 创建 Skills。只需让 Claude 创建一个 Skill，它就会生成结构规范、包含适当 frontmatter 和正文内容的 SKILL.md。
    </Tip>
 
-4. **检查是否简洁**：检查 Claude A 是否添加了不必要的解释。可以提出：“删除关于胜率含义的解释——Claude 已经知道这一点。”
+4. **检查简洁性**：确认 Claude A 没有添加不必要的解释。你可以要求：“删除关于胜率含义的解释——Claude 已经知道这一点。”
 
-5. **改进信息架构**：让 Claude A 更有效地组织内容。例如：“重新组织这些内容，将表结构放入单独的参考文件中。以后我们可能会添加更多表。”
+5. **改进信息架构**：请 Claude A 更有效地组织内容。例如：“将表结构整理到单独的 reference 文件中。我们以后可能会添加更多表。”
 
-6. **在类似任务中测试**：让 Claude B（一个已加载该 Skill 的全新实例）在相关用例中使用此 Skill。观察 Claude B 是否能找到正确的信息、正确应用规则并成功完成任务。
+6. **在类似任务上进行测试**：将 Skill 提供给 Claude B（一个已加载该 Skill 的全新实例），用于相关用例。观察 Claude B 是否能找到正确的信息、正确应用规则并成功处理任务。
 
-7. **根据观察结果迭代**：如果 Claude B 遇到困难或遗漏了某些内容，带着具体情况回到 Claude A：“Claude 使用这个 Skill 时，忘记按日期筛选第四季度的数据。我们是否应该添加一个关于日期筛选模式的章节？”
+7. **根据观察结果迭代**：如果 Claude B 遇到困难或遗漏了某些内容，带着具体情况回到 Claude A：“Claude 使用这个 Skill 时，忘记针对 Q4 按日期进行筛选。我们是否应该添加一个关于日期筛选模式的章节？”
 
 **迭代现有 Skills：**
 
-改进 Skills 时，同样的分层模式仍然适用。你需要在以下几项工作之间交替进行：
+改进 Skills 时，也会继续采用相同的分层模式。你需要在以下两者之间交替进行：
 
 - **与 Claude A 协作**（帮助完善 Skill 的专家）
 - **使用 Claude B 进行测试**（使用 Skill 执行实际工作的智能体）
-- **观察 Claude B 的行为**，并将获得的见解反馈给 Claude A
+- **观察 Claude B 的行为**，并将得到的洞察带回 Claude A
 
-1. **在实际工作流中使用 Skill**：向 Claude B（已加载该 Skill）提供真实任务，而不是测试场景
+1. **在真实工作流中使用 Skill**：为 Claude B（已加载该 Skill）提供实际任务，而不是测试场景
 
-2. **观察 Claude B 的行为**：记录它在哪些方面遇到困难、取得成功或做出意外选择
+2. **观察 Claude B 的行为**：记录它遇到困难、取得成功或做出意外选择的地方
 
-**观察示例**：“当我让 Claude B 生成区域销售报告时，它编写了查询，却忘记过滤测试账户，尽管 Skill 中提到了这条规则。”
+**示例观察**：“当我要求 Claude B 生成区域销售报告时，它写出了查询，却忘记排除测试账户，尽管 Skill 提到了这条规则。”
 
-3. **返回 Claude A 进行改进**：分享当前的 SKILL.md 并描述你观察到的情况。询问：“我注意到，当我要求 Claude B 生成区域报告时，它忘记过滤测试账户。Skill 提到了过滤要求，但也许不够醒目？”
+3. **返回 Claude A 进行改进**：分享当前的 SKILL.md，并描述你的观察结果。询问：“我注意到，当我要求 Claude B 生成区域报告时，它忘记排除测试账户。Skill 中提到了筛选规则，但也许这条规则还不够醒目？”
 
-4. **审查 Claude A 的建议**：Claude A 可能会建议重新组织内容，使规则更加醒目；使用“MUST filter”这样更强硬的措辞来代替“always filter”；或者重构工作流部分。
+4. **审阅 Claude A 的建议**：Claude A 可能会建议重新组织内容，使规则更加突出；使用比“always filter”更强的措辞，例如“MUST filter”；或者重构工作流部分。
 
-5. **应用并测试更改**：根据 Claude A 的改进建议更新 Skill，然后使用类似请求再次测试 Claude B
+5. **应用并测试更改**：根据 Claude A 的改进建议更新 Skill，然后再次使用类似请求在 Claude B 上进行测试。
 
-6. **根据使用情况重复迭代**：在遇到新场景时，继续执行这一观察—改进—测试循环。每次迭代都基于智能体的实际行为而非假设来改进 Skill。
+6. **根据使用情况重复迭代**：在遇到新的场景时，继续进行这种观察—改进—测试循环。每次迭代都基于真实的代理行为而非假设来改进 Skill。
 
 **收集团队反馈：**
 
-1. 与团队成员分享 Skills，并观察他们的使用情况
-2. 询问：Skill 是否会在预期情况下激活？说明是否清晰？还缺少什么？
-3. 整合反馈，以解决你自身使用模式中的盲点
+1. 与团队成员分享 Skills，并观察他们的使用方式
+2. 询问：Skill 是否会在预期情况下激活？指令是否清晰？还缺少什么？
+3. 纳入反馈，以弥补你自身使用模式中的盲点
 
-**这种方法为何有效**：Claude A 了解智能体的需求，你提供领域专业知识，Claude B 通过实际使用暴露不足，而迭代式改进则根据观察到的行为而非假设来完善 Skills。
+**这种方法为何有效**：Claude A 理解代理的需求，你提供领域专业知识，Claude B 通过实际使用暴露不足之处，而迭代改进则基于观察到的行为而非假设来提升 Skills。
 
-### 观察 Claude 如何浏览 Skills
+### 观察 Claude 如何使用 Skills
 
-在迭代改进 Skills 时，请留意 Claude 在实践中究竟如何使用它们。重点观察：
+在迭代 Skills 时，注意观察 Claude 在实践中究竟如何使用它们。留意以下情况：
 
-- **意外的探索路径**：Claude 是否以你未预料到的顺序读取文件？这可能表明你的结构并不像你想象的那样直观
-- **遗漏的关联**：Claude 是否没有沿着引用访问重要文件？你的链接可能需要更加明确或醒目
-- **过度依赖某些部分**：如果 Claude 反复读取同一个文件，请考虑是否应该将其中的内容放入主 SKILL.md
-- **被忽略的内容**：如果 Claude 从未访问某个随附文件，那么该文件可能没有必要，或者主说明中对它的提示不够明确
+- **意料之外的探索路径**：Claude 是否以你未预料的顺序读取文件？这可能表明你的结构并不像你想象的那样直观
+- **遗漏的关联**：Claude 是否无法继续追踪指向重要文件的引用？你的链接可能需要更加明确或醒目
+- **过度依赖某些部分**：如果 Claude 反复读取同一个文件，请考虑是否应该将其中的内容直接放入主 SKILL.md
+- **被忽略的内容**：如果 Claude 从未访问某个捆绑文件，该文件可能是不必要的，或者在主要指令中没有得到足够明确的提示
 
-应根据这些观察结果而非假设进行迭代。Skill 元数据中的 'name' 和 'description' 尤为关键。Claude 会使用它们来决定是否应针对当前任务触发该 Skill。请确保它们清楚地描述了该 Skill 的作用以及应在何时使用。
+应根据这些观察而非假设进行迭代。Skill 元数据中的“name”和“description”尤其关键。Claude 会在决定是否应针对当前任务触发 Skill 时使用这些字段。确保它们清楚地描述 Skill 的功能以及应在何时使用它。
 
 ## 应避免的反模式
 
 ### 避免使用 Windows 风格的路径
 
-在文件路径中始终使用正斜杠，即使是在 Windows 上：
+始终在文件路径中使用正斜杠，即使是在 Windows 上：
 
-- ✓ **良好**：`scripts/helper.py`、`reference/guide.md`
+- ✓ **推荐**：`scripts/helper.py`、`reference/guide.md`
 - ✗ **避免**：`scripts\helper.py`、`reference\guide.md`
 
-Unix 风格的路径可跨所有平台使用，而 Windows 风格的路径会在 Unix 系统上导致错误。
+Unix 风格的路径可以跨平台工作，而 Windows 风格的路径会在 Unix 系统上导致错误。
 
 ### 避免提供过多选项
 
@@ -734,13 +732,13 @@ import pdfplumber
 For scanned PDFs requiring OCR, use pdf2image with pytesseract instead."
 ````
 
-## 高级：包含可执行代码的技能
+## 高级：包含可执行代码的 Skills
 
-以下各节重点介绍包含可执行脚本的技能。如果你的技能仅使用 Markdown 指令，请跳至[高效技能检查清单](#checklist-for-effective-skills)。
+以下部分重点介绍包含可执行脚本的 Skills。如果你的 Skill 只使用 markdown 指令，请跳转至[高效 Skills 检查清单](#checklist-for-effective-skills)。
 
-### 解决问题，不要推给 Claude
+### 解决问题，而不是推给 Claude
 
-为技能编写脚本时，应自行处理错误情况，而不是将其推给 Claude。
+为 Skills 编写脚本时，应处理错误情况，而不是把问题推给 Claude。
 
 **良好示例：显式处理错误**：
 
@@ -770,9 +768,9 @@ def process_file(path):
     return open(path).read()
 ```
 
-配置参数也应有合理依据并进行说明，以避免出现“巫术常量”（Ousterhout 定律）。如果你自己都不知道正确的值，Claude 又如何确定它？
+还应对配置参数提供合理依据并记录说明，以避免出现“巫术常量”（Ousterhout 定律）。如果你不知道正确的值，Claude 又该如何确定它？
 
-**良好示例：自解释**：
+**良好示例：自说明**：
 
 ```python  theme={null}
 # HTTP requests typically complete within 30 seconds
@@ -791,40 +789,40 @@ TIMEOUT = 47  # Why 47?
 RETRIES = 5   # Why 5?
 ```
 
-### 提供实用工具脚本
+### 提供实用脚本
 
-即使 Claude 能够编写脚本，预先编写好的脚本仍具有以下优势：
+即使 Claude 能够编写脚本，预先准备好的脚本仍然具有以下优势：
 
-**实用工具脚本的优势**：
+**实用脚本的优势**：
 
 - 比生成的代码更可靠
-- 节省 token（无需在上下文中包含代码）
+- 节省 tokens（无需将代码包含在上下文中）
 - 节省时间（无需生成代码）
-- 确保不同使用场景下的一致性
+- 确保各次使用之间的一致性
 
-<img src="https://mintcdn.com/anthropic-claude-docs/4Bny2bjzuGBK7o00/images/agent-skills-executable-scripts.png?fit=max&auto=format&n=4Bny2bjzuGBK7o00&q=85&s=4bbc45f2c2e0bee9f2f0d5da669bad00" alt="将可执行脚本与指令文件捆绑在一起" data-og-width="2048" width="2048" data-og-height="1154" height="1154" data-path="images/agent-skills-executable-scripts.png" data-optimize="true" data-opv="3" srcset="https://mintcdn.com/anthropic-claude-docs/4Bny2bjzuGBK7o00/images/agent-skills-executable-scripts.png?w=280&fit=max&auto=format&n=4Bny2bjzuGBK7o00&q=85&s=9a04e6535a8467bfeea492e517de389f 280w, https://mintcdn.com/anthropic-claude-docs/4Bny2bjzuGBK7o00/images/agent-skills-executable-scripts.png?w=560&fit=max&auto=format&n=4Bny2bjzuGBK7o00&q=85&s=e49333ad90141af17c0d7651cca7216b 560w, https://mintcdn.com/anthropic-claude-docs/4Bny2bjzuGBK7o00/images/agent-skills-executable-scripts.png?w=840&fit=max&auto=format&n=4Bny2bjzuGBK7o00&q=85&s=954265a5df52223d6572b6214168c428 840w, https://mintcdn.com/anthropic-claude-docs/4Bny2bjzuGBK7o00/images/agent-skills-executable-scripts.png?w=1100&fit=max&auto=format&n=4Bny2bjzuGBK7o00&q=85&s=2ff7a2d8f2a83ee8af132b29f10150fd 1100w, https://mintcdn.com/anthropic-claude-docs/4Bny2bjzuGBK7o00/images/agent-skills-executable-scripts.png?w=1650&fit=max&auto=format&n=4Bny2bjzuGBK7o00&q=85&s=48ab96245e04077f4d15e9170e081cfb 1650w, https://mintcdn.com/anthropic-claude-docs/4Bny2bjzuGBK7o00/images/agent-skills-executable-scripts.png?w=2500&fit=max&auto=format&n=4Bny2bjzuGBK7o00&q=85&s=0301a6c8b3ee879497cc5b5483177c90 2500w" />
+<img src="https://mintcdn.com/anthropic-claude-docs/4Bny2bjzuGBK7o00/images/agent-skills-executable-scripts.png?fit=max&auto=format&n=4Bny2bjzuGBK7o00&q=85&s=4bbc45f2c2e0bee9f2f0d5da669bad00" alt="将可执行脚本与指令文件一起打包" data-og-width="2048" width="2048" data-og-height="1154" height="1154" data-path="images/agent-skills-executable-scripts.png" data-optimize="true" data-opv="3" srcset="https://mintcdn.com/anthropic-claude-docs/4Bny2bjzuGBK7o00/images/agent-skills-executable-scripts.png?w=280&fit=max&auto=format&n=4Bny2bjzuGBK7o00&q=85&s=9a04e6535a8467bfeea492e517de389f 280w, https://mintcdn.com/anthropic-claude-docs/4Bny2bjzuGBK7o00/images/agent-skills-executable-scripts.png?w=560&fit=max&auto=format&n=4Bny2bjzuGBK7o00&q=85&s=e49333ad90141af17c0d7651cca7216b 560w, https://mintcdn.com/anthropic-claude-docs/4Bny2bjzuGBK7o00/images/agent-skills-executable-scripts.png?w=840&fit=max&auto=format&n=4Bny2bjzuGBK7o00&q=85&s=954265a5df52223d6572b6214168c428 840w, https://mintcdn.com/anthropic-claude-docs/4Bny2bjzuGBK7o00/images/agent-skills-executable-scripts.png?w=1100&fit=max&auto=format&n=4Bny2bjzuGBK7o00&q=85&s=2ff7a2d8f2a83ee8af132b29f10150fd 1100w, https://mintcdn.com/anthropic-claude-docs/4Bny2bjzuGBK7o00/images/agent-skills-executable-scripts.png?w=1650&fit=max&auto=format&n=4Bny2bjzuGBK7o00&q=85&s=48ab96245e04077f4d15e9170e081cfb 1650w, https://mintcdn.com/anthropic-claude-docs/4Bny2bjzuGBK7o00/images/agent-skills-executable-scripts.png?w=2500&fit=max&auto=format&n=4Bny2bjzuGBK7o00&q=85&s=0301a6c8b3ee879497cc5b5483177c90 2500w" />
 
-上图展示了可执行脚本如何与指令文件协同工作。指令文件（forms.md）引用了该脚本，Claude 无需将脚本内容加载到上下文中即可执行它。
+上图展示了可执行脚本如何与指令文件协同工作。指令文件（forms.md）引用了该脚本，Claude 可以执行该脚本，而无需将其内容加载到上下文中。
 
-**重要区别**：请在指令中明确说明 Claude 应该：
+**重要区别**：务必在指令中明确说明 Claude 应该：
 
 - **执行脚本**（最常见）：“运行 `analyze_form.py` 以提取字段”
-- **将其作为参考阅读**（用于复杂逻辑）：“有关字段提取算法，请参阅 `analyze_form.py`”
+- **将脚本作为参考阅读**（适用于复杂逻辑）：“参见 `analyze_form.py` 了解字段提取算法”
 
-对于大多数实用工具脚本，首选执行方式，因为这种方式更可靠、更高效。有关脚本执行方式的详细信息，请参阅下文的[运行时环境](#runtime-environment)部分。
+对于大多数实用工具脚本，建议执行脚本，因为这样更可靠、更高效。有关脚本执行方式的详细信息，请参阅下方的 [运行时环境](#runtime-environment) 部分。
 
 **示例**：
 
 ````markdown  theme={null}
-## Utility scripts
+## 实用工具脚本
 
-**analyze_form.py**: Extract all form fields from PDF
+**analyze_form.py**：从 PDF 中提取所有表单字段
 
 ```bash
 python scripts/analyze_form.py input.pdf > fields.json
 ```
 
-Output format:
+输出格式：
 ```json
 {
   "field_name": {"type": "text", "x": 100, "y": 200},
@@ -832,14 +830,14 @@ Output format:
 }
 ```
 
-**validate_boxes.py**: Check for overlapping bounding boxes
+**validate_boxes.py**：检查边界框是否重叠
 
 ```bash
 python scripts/validate_boxes.py fields.json
-# Returns: "OK" or lists conflicts
+# 返回："OK" 或列出冲突
 ```
 
-**fill_form.py**: Apply field values to PDF
+**fill_form.py**：将字段值应用到 PDF
 
 ```bash
 python scripts/fill_form.py input.pdf fields.json output.pdf
@@ -851,15 +849,15 @@ python scripts/fill_form.py input.pdf fields.json output.pdf
 当输入可以渲染为图像时，让 Claude 对其进行分析：
 
 ````markdown  theme={null}
-## Form layout analysis
+## 表单布局分析
 
-1. Convert PDF to images:
+1. 将 PDF 转换为图像：
    ```bash
    python scripts/pdf_to_images.py form.pdf
    ```
 
-2. Analyze each page image to identify form fields
-3. Claude can see field locations and types visually
+2. 分析每页图像，以识别表单字段
+3. Claude 可以通过视觉识别字段的位置和类型
 ````
 
 <Note>
@@ -870,75 +868,75 @@ Claude 的视觉能力有助于理解布局和结构。
 
 ### 创建可验证的中间输出
 
-当 Claude 执行复杂的开放式任务时，可能会出错。“规划—验证—执行”模式通过让 Claude 先以结构化格式创建计划，再使用脚本验证该计划，最后执行，从而及早发现错误。
+当 Claude 执行复杂、开放式的任务时，可能会出错。“规划-验证-执行”模式可以通过让 Claude 先以结构化格式创建计划，然后使用脚本验证该计划，在执行之前及早发现错误。
 
-**示例**：假设你要求 Claude 根据电子表格更新 PDF 中的 50 个表单字段。如果不进行验证，Claude 可能会引用不存在的字段、创建相互冲突的值、遗漏必填字段，或者错误地应用更新。
+**示例**：假设要求 Claude 根据电子表格更新 PDF 中的 50 个表单字段。如果没有验证，Claude 可能会引用不存在的字段、创建相互冲突的值、遗漏必填字段，或错误地应用更新。
 
-**解决方案**：使用上文所示的工作流模式（填写 PDF 表单），但增加一个中间 `changes.json` 文件，在应用更改之前对其进行验证。工作流将变为：分析 → **创建计划文件** → **验证计划** → 执行 → 核验。
+**解决方案**：使用上文所示的工作流模式（PDF 表单填充），但增加一个在应用更改之前进行验证的中间 `changes.json` 文件。工作流变为：分析 → **创建计划文件** → **验证计划** → 执行 → 验证。
 
-**此模式有效的原因：**
+**该模式有效的原因：**
 
 - **及早发现错误**：验证会在应用更改之前发现问题
-- **可由机器验证**：脚本可提供客观验证
-- **可逆的规划过程**：Claude 可以反复修改计划，而不会触碰原始文件
-- **便于调试**：错误消息会指出具体问题
+- **可由机器验证**：脚本提供客观的验证结果
+- **可逆的规划**：Claude 可以迭代计划，而不会触碰原始文件
+- **清晰的调试过程**：错误消息会指出具体问题
 
-**适用场景**：批量操作、破坏性更改、复杂验证规则、高风险操作。
+**适用场景**：批量操作、破坏性更改、复杂的验证规则、高风险操作。
 
-**实现提示**：让验证脚本输出详细信息，并提供具体的错误消息，例如“未找到字段 'signature\_date'。可用字段：customer\_name、order\_total、signature\_date\_signed”，以帮助 Claude 修复问题。
+**实现提示**：让验证脚本输出包含具体错误信息的详细结果，例如“未找到字段 'signature\_date'。可用字段：customer\_name、order\_total、signature\_date\_signed”，以帮助 Claude 修复问题。
 
-### 软件包依赖项
+### 包依赖
 
-Skills 在代码执行环境中运行，并受到平台特定限制：
+技能在具有平台特定限制的代码执行环境中运行：
 
-- **claude.ai**：可以安装来自 npm 和 PyPI 的软件包，并从 GitHub 仓库拉取内容
-- **Anthropic API**：无法访问网络，也无法在运行时安装软件包
+- **claude.ai**：可以从 npm 和 PyPI 安装包，并从 GitHub 仓库拉取内容
+- **Anthropic API**：无法访问网络，也无法在运行时安装包
 
-请在你的 SKILL.md 中列出所需的软件包，并在[代码执行工具文档](docs.claude.com/en/docs/agents-and-tools/tool-use/code-execution-tool)中确认它们可用。
+在 SKILL.md 中列出所需的包，并在[代码执行工具文档](docs.claude.com/en/docs/agents-and-tools/tool-use/code-execution-tool)中验证这些包是否可用。
 
 ### 运行时环境
 
-Skills 在代码执行环境中运行，可以访问文件系统、执行 bash 命令和代码。有关此架构的概念性说明，请参阅概述中的 [Skills 架构](docs.claude.com/en/docs/agents-and-tools/agent-skills/overview#the-skills-architecture)。
+技能在具有文件系统访问权限、bash 命令和代码执行能力的代码执行环境中运行。如需了解此架构的概念性说明，请参阅概览中的[技能架构](docs.claude.com/en/docs/agents-and-tools/agent-skills/overview#the-skills-architecture)。
 
-**这会如何影响你的编写方式：**
+**这对编写技能的影响：**
 
-**Claude 如何访问 Skills：**
+**Claude 如何访问技能：**
 
-1. **预加载元数据**：启动时，所有 Skills 的 YAML frontmatter 中的名称和描述都会加载到系统提示词中
-2. **按需读取文件**：Claude 会在需要时使用 bash Read 工具访问文件系统中的 SKILL.md 和其他文件
-3. **高效执行脚本**：实用脚本可以通过 bash 执行，而无需将其完整内容加载到上下文中。只有脚本的输出会消耗 token
-4. **大文件不会造成上下文负担**：参考文件、数据或文档在被实际读取前不会消耗上下文 token
+1. **预先加载元数据**：启动时，所有技能的 YAML frontmatter 中的名称和描述都会加载到系统提示中
+2. **按需读取文件**：Claude 会在需要时使用 bash Read 工具从文件系统访问 SKILL.md 和其他文件
+3. **高效执行脚本**：实用工具脚本可以通过 bash 执行，而无需将其完整内容加载到上下文中。只有脚本的输出会消耗令牌
+4. **大文件不会产生上下文开销**：引用文件、数据或文档在实际读取之前不会消耗上下文令牌
 
-- **文件路径很重要**：Claude 会像浏览文件系统一样浏览你的 skill 目录。请使用正斜杠（`reference/guide.md`），不要使用反斜杠
-- **使用描述性文件名**：使用能够表明内容的名称：`form_validation_rules.md`，而不是 `doc2.md`
-- **以便于发现的方式组织内容**：按领域或功能组织目录结构
-  - 推荐：`reference/finance.md`、`reference/sales.md`
-  - 不推荐：`docs/file1.md`、`docs/file2.md`
-- **打包完整的资源**：包含完整的 API 文档、丰富的示例和大型数据集；在被访问前不会造成上下文负担
+- **文件路径很重要**：Claude 会像操作文件系统一样浏览技能目录。使用正斜杠（`reference/guide.md`），不要使用反斜杠
+- **使用描述性文件名**：文件名应表明文件内容：使用 `form_validation_rules.md`，不要使用 `doc2.md`
+- **便于发现地组织目录**：按领域或功能组织目录
+  - 好的示例：`reference/finance.md`、`reference/sales.md`
+  - 不好的示例：`docs/file1.md`、`docs/file2.md`
+- **打包完整的资源**：包含完整的 API 文档、大量示例和大型数据集；在访问之前不会产生上下文开销
 - **对于确定性操作，优先使用脚本**：编写 `validate_form.py`，而不是让 Claude 生成验证代码
 - **明确执行意图**：
   - “运行 `analyze_form.py` 以提取字段”（执行）
-  - “参阅 `analyze_form.py` 了解提取算法”（作为参考读取）
-- **测试文件访问模式**：通过真实请求进行测试，确认 Claude 能够浏览你的目录结构
+  - “参见 `analyze_form.py` 了解提取算法”（作为参考阅读）
+- **测试文件访问模式**：通过使用真实请求进行测试，验证 Claude 能够浏览你的目录结构
 
 **示例：**
 
 ```
 bigquery-skill/
-├── SKILL.md (overview, points to reference files)
+├── SKILL.md (概述，指向参考文件)
 └── reference/
-    ├── finance.md (revenue metrics)
-    ├── sales.md (pipeline data)
-    └── product.md (usage analytics)
+    ├── finance.md (收入指标)
+    ├── sales.md (销售管道)
+    └── product.md (使用情况分析)
 ```
 
-当用户询问收入相关问题时，Claude 会读取 SKILL.md，看到对 `reference/finance.md` 的引用，然后调用 bash，仅读取该文件。sales.md 和 product.md 文件会保留在文件系统中，在需要之前不会消耗任何上下文 token。这种基于文件系统的模型正是实现渐进式披露的基础。Claude 可以浏览文件，并根据每项任务的具体需求，有选择地加载所需的内容。
+当用户询问收入时，Claude 会读取 SKILL.md，看到其中对 `reference/finance.md` 的引用，然后调用 bash 仅读取该文件。sales.md 和 product.md 会保留在文件系统中，在需要之前不会消耗任何上下文令牌。这种基于文件系统的模型使渐进式披露成为可能。Claude 可以浏览并有选择地加载每项任务所确切需要的内容。
 
-有关技术架构的完整详细信息，请参阅 Skills 概述中的 [Skills 如何工作](docs.claude.com/en/docs/agents-and-tools/agent-skills/overview#how-skills-work)。
+如需了解技术架构的完整详细信息，请参阅技能概览中的[技能工作原理](docs.claude.com/en/docs/agents-and-tools/agent-skills/overview#how-skills-work)。
 
 ### MCP 工具引用
 
-如果你的 Skill 使用 MCP（Model Context Protocol，模型上下文协议）工具，请始终使用完全限定的工具名称，以避免出现“找不到工具”错误。
+如果你的 Skill 使用 MCP（Model Context Protocol）工具，请始终使用完全限定的工具名称，以避免出现“找不到工具”的错误。
 
 **格式**：`ServerName:tool_name`
 
@@ -952,19 +950,19 @@ Use the GitHub:create_issue tool to create issues.
 其中：
 
 - `BigQuery` 和 `GitHub` 是 MCP 服务器名称
-- `bigquery_schema` 和 `create_issue` 是这些服务器中的工具名称
+- `bigquery_schema` 和 `create_issue` 是服务器中的工具名称
 
-如果没有服务器前缀，Claude 可能无法找到该工具，尤其是在有多个 MCP 服务器可用时。
+如果没有服务器前缀，Claude 可能无法定位工具，尤其是在有多个 MCP 服务器可用时。
 
 ### 避免假设工具已安装
 
-不要假设软件包可用：
+不要假设相关软件包已经可用：
 
 ````markdown  theme={null}
-**Bad example: Assumes installation**:
+**反例：假设已安装**：
 "Use the pdf library to process the file."
 
-**Good example: Explicit about dependencies**:
+**正例：明确说明依赖项**：
 "Install required package: `pip install pypdf`
 
 Then use it:
@@ -978,43 +976,43 @@ reader = PdfReader("file.pdf")
 
 ### YAML frontmatter 要求
 
-SKILL.md frontmatter 仅包含 `name`（最多 64 个字符）和 `description`（最多 1024 个字符）字段。有关完整的结构详情，请参阅 [Skills 概述](docs.claude.com/en/docs/agents-and-tools/agent-skills/overview#skill-structure)。
+SKILL.md 的 frontmatter 仅包含 `name`（最多 64 个字符）和 `description`（最多 1024 个字符）字段。有关完整的结构细节，请参阅 [Skills 概览](docs.claude.com/en/docs/agents-and-tools/agent-skills/overview#skill-structure)。
 
 ### Token 预算
 
-为获得最佳性能，请将 SKILL.md 正文控制在 500 行以内。如果内容超出此限制，请使用前文所述的渐进式披露模式将其拆分到不同文件中。有关架构详情，请参阅 [Skills 概述](docs.claude.com/en/docs/agents-and-tools/agent-skills/overview#how-skills-work)。
+为获得最佳性能，请将 SKILL.md 正文控制在 500 行以内。如果内容超过此限制，请按照前文所述的渐进式披露模式拆分到单独的文件中。有关架构细节，请参阅 [Skills 概览](docs.claude.com/en/docs/agents-and-tools/agent-skills/overview#how-skills-work)。
 
-## 高效 Skill 检查清单
+## 有效 Skill 的检查清单
 
-在分享 Skill 之前，请确认：
+分享 Skill 之前，请确认：
 
 ### 核心质量
 
-- [ ] 描述具体且包含关键词
-- [ ] 描述同时说明了 Skill 的功能及其适用场景
+- [ ] 描述具体，并包含关键术语
+- [ ] 描述同时包含 Skill 的功能以及使用时机
 - [ ] SKILL.md 正文少于 500 行
-- [ ] 其他详细信息位于单独的文件中（如需要）
-- [ ] 不包含时效性信息（或将其放在“旧模式”部分）
-- [ ] 全文术语保持一致
+- [ ] 其他详细信息已放入单独的文件（如有需要）
+- [ ] 不包含时效性信息（或已放入“旧模式”部分）
+- [ ] 全文术语一致
 - [ ] 示例具体，而非抽象
-- [ ] 文件引用仅深入一层
-- [ ] 恰当地使用渐进式披露
-- [ ] 工作流具有清晰的步骤
+- [ ] 文件引用不超过一层
+- [ ] 适当地使用了渐进式披露
+- [ ] 工作流包含清晰的步骤
 
 ### 代码和脚本
 
-- [ ] 脚本能够解决问题，而不是将问题推给 Claude
+- [ ] 脚本用于解决问题，而不是把问题甩给 Claude
 - [ ] 错误处理明确且有帮助
-- [ ] 不存在“巫术常量”（所有值均有合理依据）
-- [ ] 说明中列出了必需的软件包，并确认其可用
-- [ ] 脚本具有清晰的文档
+- [ ] 不存在“巫术常量”（所有值都有合理说明）
+- [ ] 指令中列出了所需软件包，并验证其可用性
+- [ ] 脚本包含清晰的文档
 - [ ] 不使用 Windows 风格的路径（全部使用正斜杠）
-- [ ] 关键操作包含验证/核验步骤
-- [ ] 对质量至关重要的任务包含反馈循环
+- [ ] 对关键操作包含验证/核查步骤
+- [ ] 对质量要求高的任务包含反馈循环
 
 ### 测试
 
-- [ ] 至少创建了三个评估
-- [ ] 已使用 Haiku、Sonnet 和 Opus 进行测试
-- [ ] 已使用真实使用场景进行测试
-- [ ] 已采纳团队反馈（如适用）
+- [ ] 至少创建了三项评估
+- [ ] 使用 Haiku、Sonnet 和 Opus 进行了测试
+- [ ] 使用真实的场景进行了测试
+- [ ] 已纳入团队反馈（如适用）

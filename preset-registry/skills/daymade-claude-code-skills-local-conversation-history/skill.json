@@ -1,7 +1,7 @@
 {
   "id": "daymade-claude-code-skills-local-conversation-history",
   "name": "local-conversation-history",
-  "description": ">- Lists recent local Claude Code, OpenAI Codex, and Kimi CLI conversations for a workspace in one read-only command. Claude inventory combines active config homes with every archive registered in ~/.claude/history-sources.json, de-duplicates IDs, and uses internal timestamps instead of file mtime. Marks every in-scope Codex session whose canonical per-thread advisory lock is held, appending hits outside the recent limit; this proves lock state, not holder identity or liveness, and no marker doe",
+  "description": ">- Lists recent local Claude Code, OpenAI Codex, and Kimi CLI conversations, and extracts exact recent Codex user inputs grouped by session, through bundled read-only commands. Inventory covers registered Claude archives, internal timestamps, session IDs, provenance, archive/runtime markers, and positive-only Codex writer-lock evidence. Verbatim-input mode preserves the user's wording, duplicates, chronology, and session boundaries without thematic classification. Outputs Markdown or JSON. Use w",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-claude-code/local-conversation-history/SKILL.md",
     "path": "daymade-claude-code/local-conversation-history/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-26T16:22:59.675Z",
-    "stars": 1353,
+    "discovered_at": "2026-08-26T18:23:26.657Z",
+    "stars": 1354,
     "language": "Python",
-    "pushed_at": "2026-08-26T15:12:57Z",
+    "pushed_at": "2026-08-26T18:12:30Z",
     "license": "MIT"
   },
-  "summary_zh": "只读汇总工作区内 Claude Code、Codex 和 Kimi CLI 的近期对话，适合快速查找历史会话及识别被锁定的 Codex 会话。"
+  "summary_zh": "用于只读查看本地 Claude Code、OpenAI Codex 和 Kimi CLI 的近期对话，并按会话提取完整的 Codex 用户输入，适合审计、回溯和整理开发记录。"
 }

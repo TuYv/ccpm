@@ -1,24 +1,23 @@
 ---
 name: create-command
 description: Interactive assistant for creating new Claude commands with proper structure, patterns, and MCP tool integration
-argument-hint: Optional command name or description of command purpose
 ---
 # 命令创建助手
 
 <task>
-你是一名命令创建专家。通过理解需求、确定适当的模式并生成遵循 Scopecraft 规范且结构良好的命令，帮助创建新的 Claude 命令。
+你是一名命令创建专家。通过理解需求、确定适当的模式，并生成遵循 Scopecraft 约定、结构良好的命令，帮助创建新的 Claude 命令。
 </task>
 
 <context>
-关键：请先阅读命令创建指南：@/docs/claude-commands-guide.md
+关键：首先阅读命令创建指南：@/docs/claude-commands-guide.md
 
-此元命令通过以下步骤帮助创建其他命令：
+此元命令通过以下方式帮助创建其他命令：
 
 1. 理解命令的用途
 2. 确定其类别和模式
 3. 选择命令位置（项目级或用户级）
 4. 生成命令文件
-5. 创建配套资源
+5. 创建支持资源
 6. 更新文档
 </context>
 
@@ -26,7 +25,7 @@ argument-hint: Optional command name or description of command purpose
 
 1. **规划命令**（专用）
    - 功能构思、提案、PRD
-   - 具有不同阶段的复杂工作流
+   - 具有明确阶段的复杂工作流
    - 交互式、对话式风格
    - 创建文档产物
    - 示例：@/.claude/commands/01_brainstorm-feature.md
@@ -40,9 +39,9 @@ argument-hint: Optional command name or description of command purpose
    - 示例：@/.claude/commands/implement.md
 
 3. **分析命令**（专用）
-   - 审查、审核、分析
+   - 审查、审计、分析
    - 生成报告或洞察
-   - 以读取为主的操作
+   - 以阅读为主的操作
    - 提供建议
    - 示例：@/.claude/commands/review.md
 
@@ -53,17 +52,17 @@ argument-hint: Optional command name or description of command purpose
    - 跟踪进度
    - 示例：@/.claude/commands/04_feature-planning.md
 
-5. **实用工具命令**（通用或专用）
-   - 工具、辅助功能、维护
+5. **实用命令**（通用或专用）
+   - 工具、辅助程序、维护
    - 简单操作
    - 可能需要模式，也可能不需要
 </command_categories>
 
 <command_frontmatter>
 
-## 关键：每个命令都必须以 Frontmatter 开头
+## 关键：每个命令都必须以 Frontmatter 开始
 
-**所有命令文件都必须以 YAML frontmatter 开头**，并包含在 `---` 分隔符之间：
+**所有命令文件都必须以 YAML frontmatter 开始，并使用 `---` 分隔符包围：**
 
 ```markdown
 ---
@@ -76,7 +75,7 @@ argument-hint: Description of expected arguments (optional)
 
 1. **`description`**（必填）：
    - 对命令用途的单行概述
-   - 清晰、简洁、以行动为导向
+   - 清晰、简洁、以动作为导向
    - 示例："Guided feature development with codebase understanding and architecture focus"
 
 2. **`argument-hint`**（可选）：
@@ -114,12 +113,13 @@ description: Validates API documentation against OpenAPI standards
 argument-hint: Path to OpenAPI spec file
 ---
 ```
+</command_frontmatter>
 
 ### 放置位置
 
-- Frontmatter 必须是文件中的**第一项内容**
-- 开头的 `---` 之前不能有空行
-- 结尾的 `---` 之后、正文开始之前保留一个空行
+- Frontmatter MUST 是文件中的**第一段内容**
+- 开头的 `---` 之前不得有空行
+- 结束的 `---` 之后、内容开始之前必须有一个空行
 </command_frontmatter>
 
 <command_features>
@@ -128,13 +128,13 @@ argument-hint: Path to OpenAPI spec file
 
 ### 命名空间
 
-使用子目录对相关命令进行分组。子目录会出现在命令描述中，但不会影响命令名称。
+使用子目录对相关命令进行分组。子目录会显示在命令描述中，但不会影响命令名称。
 
 **示例：**
-- `.claude/commands/frontend/component.md` 会创建 `/component`，其描述为“(project:frontend)”
-- `~/.claude/commands/component.md` 会创建 `/component`，其描述为“(user)”
+- `.claude/commands/frontend/component.md` 创建 `/component`，描述为 "(project:frontend)"
+- `~/.claude/commands/component.md` 创建 `/component`，描述为 "(user)"
 
-**优先级：**如果项目命令和用户命令同名，则项目命令优先。
+**优先级：** 如果项目命令和用户命令具有相同名称，则项目命令优先。
 
 ### 参数
 
@@ -166,9 +166,9 @@ echo 'Review PR #$1 with priority $2 and assign to $3' > .claude/commands/review
 
 ### Bash 命令执行
 
-使用 `!` 前缀，在斜杠命令运行之前执行 bash 命令。输出会包含在命令上下文中。
+在斜杠命令运行之前，使用 `!` 前缀执行 bash 命令。命令输出会包含在命令上下文中。
 
-**注意：**必须在 `allowed-tools` 中包含 `Bash` 工具。
+**注意：** 必须将 `allowed-tools` 与 `Bash` 工具一同包含。
 
 ```markdown
 ---
@@ -201,13 +201,13 @@ Compare @src/old-version.js with @src/new-version.js
 
 | Frontmatter | 用途 | 默认值 |
 |-------------|---------|---------|
-| `allowed-tools` | 命令可以使用的工具列表 | 继承自对话 |
+| `allowed-tools` | 列出命令可以使用的工具 | 继承自对话 |
 | `argument-hint` | 用于自动补全的预期参数 | 无 |
-| `description` | 命令的简短描述 | 提示词的第一行 |
+| `description` | 命令的简要描述 | Prompt 的第一行 |
 | `model` | 指定的模型字符串 | 继承自对话 |
 | `disable-model-invocation` | 阻止 `Skill` 工具调用此命令 | false |
 
-**包含所有 frontmatter 选项的示例：**
+**包含所有 Frontmatter 选项的示例：**
 
 ```markdown
 ---
@@ -235,14 +235,14 @@ Create a git commit with message: $ARGUMENTS
    ls -la ~/.claude/commands/
    ```
 
-2. **阅读类似命令以了解其模式**：
+2. **阅读类似命令，了解其模式**：
    - 检查 frontmatter（description 和 argument-hint）
-   - 它们如何组织 <task> 章节？
+   - 它们如何组织 <task> 部分？
    - 它们使用哪些 MCP 工具？
    - 它们如何处理参数？
    - 它们引用了哪些文档？
 
-3. **需要查找的常见模式**：
+3. **需要留意的常见模式**：
 
    ```markdown
    # MCP tool usage for tasks
@@ -255,7 +255,7 @@ Create a git commit with message: $ARGUMENTS
    ✅ Use tool: mcp__scopecraft-cmd__task_list
    ```
 
-4. **需要包含的标准引用**：
+4. **应包含的标准引用**：
    - @/docs/organizational-structure-guide.md
    - @/docs/command-resources/{relevant-templates}
    - @/docs/claude-commands-guide.md
@@ -265,29 +265,29 @@ Create a git commit with message: $ARGUMENTS
 
 ## 阶段 1：了解用途
 
-“让我们创建一个新命令。首先，让我检查一下有哪些类似命令……”
+“让我们创建一个新命令。首先，我先检查一下有哪些类似命令……”
 
 *使用 Glob 查找目标类别中的现有命令*
 
 “根据现有模式，请描述：”
 
 1. 此命令解决什么问题？
-2. 谁会在何时使用它？
+2. 谁会在什么时候使用它？
 3. 预期输出是什么？
-4. 它是交互式还是批处理式的？
+4. 它是交互式的还是批处理式的？
 
 ## 阶段 2：类别分类
 
 根据回答和现有示例：
 
-- 这是否类似于现有的规划命令？（检查：brainstorm-feature、feature-proposal）
-- 这是否类似于实现命令？（检查：implement.md）
-- 它是否需要模式变体？
+- 它是否类似现有的规划命令？（检查：brainstorm-feature、feature-proposal）
+- 它是否类似实现命令？（检查：implement.md）
+- 它是否需要不同的模式？
 - 它是否应遵循分析模式？（检查：review.md）
 
 ## 阶段 3：模式选择
 
-**首先研究类似命令**：
+**先研究类似命令**：
 
 ```markdown
 # Read a similar command
@@ -307,22 +307,22 @@ Create a git commit with message: $ARGUMENTS
 
 **项目命令**（`/.claude/commands/`）
 
-- 特定于此项目的工作流
+- 专用于此项目的工作流
 - 使用项目约定
 - 引用项目文档
-- 与项目 MCP 工具集成
+- 集成项目 MCP 工具
 
 **用户命令**（`~/.claude/commands/`）
 
-- 通用工具
+- 通用实用工具
 - 可跨项目复用
-- 个人生产力工具
+- 个人效率工具
 - 不特定于某个项目
 
-询问：“它应该是：
+询问：“这应该是：
 
 1. 项目命令（特定于此代码库）
-2. 用户命令（在所有项目中可用）？”
+2. 用户命令（在所有项目中均可用）？”
 
 ## 阶段 5：资源规划
 
@@ -341,9 +341,9 @@ ls -la /docs/
 
 <generation_patterns>
 
-## 关键：复制类似命令的模式
+## 关键：从类似命令中复制模式
 
-生成之前，阅读类似命令并注意：
+生成之前，阅读类似命令并记录：
 
 1. **Frontmatter（必须位于最前面）**：
 
@@ -354,8 +354,8 @@ ls -la /docs/
    ---
    ```
 
-   - 开头的 `---` 之前不能有空行
-   - 结尾的 `---` 之后有一个空行
+   - 开头的 `---` 之前不得有空行
+   - 结束的 `---` 之后保留一个空行
    - `description` 是必需的
    - `argument-hint` 是可选的
 
@@ -368,7 +368,7 @@ ls -la /docs/
    Use mcp__scopecraft-cmd__phase_list
    ```
 
-3. **标准引用**：
+3. **标准参考**：
 
    ```markdown
    <context>
@@ -390,7 +390,7 @@ ls -la /docs/
    </task_updates>
    ```
 
-5. **人工审查部分**：
+5. **人工审核部分**：
 
    ```markdown
    <human_review_needed>
@@ -407,18 +407,18 @@ ls -la /docs/
 
 1. **创建命令文件**
    - 根据项目/用户选择确定位置
-   - 按照既有模式生成内容
+   - 遵循既有模式生成内容
    - 包含所有必需部分
 
 2. **创建支持文件**（如果是项目命令）
-   - `/docs/command-resources/` 中的模板
-   - 如果是通用命令，则创建模式指南
-   - 示例文档
+   - 在 `/docs/command-resources/` 中创建模板
+   - 如果是通用命令，创建模式指南
+   - 创建示例文档
 
 3. **更新文档**（如果是项目命令）
    - 添加到 claude-commands-guide.md
-   - 如果是工作流命令，则更新 feature-development-workflow.md
-   - 如果面向用户，则添加到 README
+   - 如果是工作流命令，更新 feature-development-workflow.md
+   - 如果面向用户，添加到 README
 
 4. **测试命令**
    - 创建示例使用场景
@@ -427,48 +427,48 @@ ls -la /docs/
 </implementation_steps>
 
 <creation_checklist>
-最终确定之前：
+定稿前：
 
-- [ ] **包含 YAML frontmatter**，其中含有 description（必需）和 argument-hint（可选）
-- [ ] Frontmatter 必须是最开始的内容（起始 `---` 前不能有空行）
-- [ ] 已研究同类别中的类似命令
+- [ ] **包含 YAML frontmatter**，其中包含 description（必需）和 argument-hint（可选）
+- [ ] Frontmatter 是第一部分内容（在开头的 `---` 之前没有空行）
+- [ ] 研究同类别中的类似命令
 - [ ] 命令遵循命名约定（有序工作流使用数字前缀）
-- [ ] 包含正确的任务/上下文结构
+- [ ] 包含适当的任务/上下文结构
 - [ ] 引用 @organizational-structure-guide.md
 - [ ] 使用 MCP 工具（而非 CLI）——检查现有模式
-- [ ] 包含人工审查部分
-- [ ] 像其他命令一样提供清晰的示例
-- [ ] 正确更新任务状态
+- [ ] 包含人工审核部分
+- [ ] 像其他命令一样包含清晰的示例
+- [ ] 适当更新任务状态
 - [ ] 创建适当的文档
-- [ ] 遵循类似命令中已建立的模式
+- [ ] 遵循类似命令中的既有模式
 - [ ] 使用正确的命令前缀（project: 或 user:）
 </creation_checklist>
 
 <example_session>
 用户：“我需要一个帮助验证 API 文档的命令”
 
-🔍 **调研**：让我检查一下现有的分析命令……
+🔍 **研究**：让我检查现有的分析命令……
 
-*使用 Read 工具查看：/.claude/commands/review.md*
+*使用 Read 工具检查：/.claude/commands/review.md*
 
 我注意到 review 命令：
 
 - 使用 MCP 工具执行任务操作
-- 包含人工审查部分
+- 包含人工审核部分
 - 引用组织结构
 - 具有清晰的输出格式
 
-🤔 **问题**：能否进一步说明此 API 文档验证的需求？
+🤔 **问题**：你能告诉我更多关于这个 API 文档验证的信息吗？
 
 - 文档采用什么格式？
-- 需要验证哪些方面？
-- 是否应该针对发现的问题创建任务？
+- 哪些方面需要验证？
+- 是否应该为发现的问题创建任务？
 
 用户：“这是 OpenAPI 规范，需要检查完整性和一致性”
 
 💡 **类别**：这是一个类似于“review”的分析命令。
 
-🔍 **模式检查**：查看 review.md，我看到它包含：
+🔍 **模式检查**：查看 `review.md` 后，我发现它是这样的：
 
 ```markdown
 <task>
@@ -482,16 +482,16 @@ Always use MCP tools:
 </mcp_usage>
 ```
 
-🎯 **位置问题**：它应该是：
+🎯 **位置问题**：这应该是：
 
-1. 项目命令（专用于这个 API 项目）
+1. 项目命令（针对该特定 API 项目）
 2. 用户命令（适用于你的所有 API 项目）
 
 用户：“项目命令——它需要引用我们特定的 API 标准”
 
-✅ 正在创建项目命令：`/.claude/commands/validate-api.md`
+✅ 创建项目命令：`/.claude/commands/validate-api.md`
 
-生成的命令（遵循 review.md 的模式）：
+生成的命令（遵循 `review.md` 的模式）：
 
 ```markdown
 ---
@@ -537,24 +537,25 @@ Flag for manual review:
 </example_session>
 
 <final_output>
-收集所有信息后：
+After gathering all information:
 
-1. **已创建的命令**：
-   - 位置：{所选位置}
-   - 名称：{命令名称}
-   - 类别：{类别}
-   - 模式：{专用/通用}
+1. **Command Created**:
+   - Location: {chosen location}
+   - Name: {command-name}
+   - Category: {category}
+   - Pattern: {specialized/generic}
 
-2. **已创建的资源**：
-   - 支持模板：{列表}
-   - 文档更新：{列表}
+2. **Resources Created**:
+   - Supporting templates: {list}
+   - Documentation updates: {list}
 
-3. **使用说明**：
-   - 命令：`/{prefix}:{name}`
-   - 示例：{使用示例}
+3. **Usage Instructions**:
+   - Command: `/{prefix}:{name}`
+   - Example: {example usage}
 
-4. **后续步骤**：
-   - 测试命令
-   - 根据使用情况进行优化
-   - 添加到命令文档
+4. **Next Steps**:
+   - Test the command
+   - Refine based on usage
+   - Add to command documentation
 </final_output>
+```

@@ -6,12 +6,12 @@ compatibility: Claude Code
 allowed-tools: Bash Read Write Edit Grep Glob WebFetch Agent
 effort: high
 metadata:
-  version: 1.3.0
+  version: 2.0.0
   author: luongnv89
 ---
 # Skill 索引更新器
 
-你正在向 ASM（Agent Skill Manager）精选索引添加新的 Skill 仓库源。该流水线为 https://luongnv.com/asm/ 上的 Skill 目录提供支持——你在此处添加的每个仓库都将可供数千名用户发现和安装。
+你正在向 ASM（Agent Skill Manager）精选索引添加新的 skill 仓库来源。这是驱动 skill 目录（https://luongnv.com/asm/）的流水线——你在此处添加的每个仓库都会被数千名用户发现并安装。
 
 ## 示例
 
@@ -35,7 +35,7 @@ git fetch origin
 git pull --rebase origin "$branch"
 ```
 
-如果工作树存在未提交的更改：先暂存更改，再进行同步，之后恢复暂存的更改。如果缺少 `origin` 或发生冲突：停止操作，并在继续之前询问用户。
+如果工作区不干净：先 stash，同步，然后 pop。如果缺少 `origin` 或发生冲突：停止操作并询问用户，然后再继续。
 
 ## 输入
 
@@ -44,23 +44,27 @@ git pull --rebase origin "$branch"
 - `https://github.com/owner/repo`
 - `github.com/owner/repo`
 - `github:owner/repo`
-- `owner/repo`（简写）
+- `owner/repo`（简写形式）
 
 规范化所有输入，以提取 `owner` 和 `repo`。
 
 ## 流水线
 
-按顺序执行以下步骤。每个步骤都有验证检查——如果验证失败，不要继续执行下一步。
+按顺序执行以下步骤。每个步骤都有验证检查——如果验证失败，不要继续下一步。
 
-### 步骤 1：解析并验证输入 URL
+你是**协调器**。第 2 步和第 3 步是主要工作步骤，需要将这两步委派出去：每个步骤都要说明其工作器所需的 `references/` 片段，并将该片段作为工作器的 `Input` 传入。在这两步中，你绝不能自行克隆仓库、读取 `SKILL.md` 或运行 `asm eval`，也绝不能打开两个契约文件——这些工作由工作器完成。（第 7 步的手动生成回退方案是唯一允许你直接调用 `asm eval` 的地方。）
 
-对于提供的每个 URL：
+**没有 Agent 工具？** 请优雅降级：自行读取 `references/discovery-contract.md` 和 `references/audit-eval-contract.md`，按顺序内联执行第 2 步和第 3 步，并在第 9 步摘要中说明这一点。流水线保持不变；改变的只是上下文成本。
+
+### 第 1 步：解析并验证输入 URL
+
+对于每个提供的 URL：
 
 1. 从 URL 中提取 `owner` 和 `repo`
-2. 通过检查 `https://api.github.com/repos/{owner}/{repo}` 验证仓库是否存在
-3. 检查该仓库是否已存在于 `data/skill-index-resources.json` 中——如果存在，则将其标记为**更新**而不是**添加**
+2. 通过检查 `https://api.github.com/repos/{owner}/{repo}`，验证仓库是否存在
+3. 检查仓库是否已存在于 `data/skill-index-resources.json` 中——如果存在，则将其标记为**更新**，而不是**添加**
 
-输出汇总表：
+输出摘要表：
 
 ```
 | # | Owner/Repo          | Status   | Notes                    |
@@ -70,64 +74,31 @@ git pull --rebase origin "$branch"
 | 3 | bad/repo            | INVALID  | 404 - repo not found     |
 ```
 
-如果所有仓库均无效，请停止并告知用户。
+如果所有仓库均无效，则停止并告知用户。
 
-### 步骤 2：发现每个仓库中的 Skill
+### 第 2 步：发现每个仓库中的 Skills（每个仓库一个工作器）
 
-对于每个有效仓库，将其克隆到临时目录，并扫描 SKILL.md 文件（最深 5 层）。这就是 ASM 工具内部所执行的操作，此处我们复现了该逻辑：
+为每个有效仓库启动一个发现工作器，**在同一轮中启动，以便并发运行**。每个工作器的契约如下：
 
-```bash
-# Clone to temp
-TEMP_DIR=$(mktemp -d)
-git clone --depth 1 "https://github.com/{owner}/{repo}.git" "$TEMP_DIR/{repo}"
+- 输入：`references/discovery-contract.md`，以及该仓库的 `owner` 和 `repo`
+- 输出：该契约中规定的固定 JSON — `{owner, repo, tempRoot, clonePath, status, error, skills[]}`，每个仓库一个对象
+- 不要自行读取 `references/discovery-contract.md`；由 worker 读取
 
-# Find SKILL.md files (max 5 levels deep, matching ASM's discoverSkills)
-find "$TEMP_DIR/{repo}" -maxdepth 5 -name "SKILL.md" -type f
-```
+保留每个 worker 的 `tempRoot` 和 `clonePath`：第 3 步针对克隆仓库运行，清理步骤会删除 `tempRoot`。你的 shell 中没有共享的 `$TEMP_DIR` —— 克隆操作是在各个 worker 中完成的。
 
-`discoverSkills`（由 `asm index ingest` 和预索引使用）会在存在**根目录** `SKILL.md` 时将其编入索引，**同时**继续扫描子目录以查找其他 Skill。同时包含根目录 Skill 和嵌套 Skill 的仓库应在索引条目中列出每个 Skill——而不只是根目录 Skill。
+报告每个仓库发现了多少个 skill。返回 `status: "no-skills"` 的仓库需要标记出来——询问用户是否仍要包含它（之后可能会添加 skill）。返回 `status: "clone-failed"` 的仓库将被跳过，并报告其 `error`；其他仓库继续处理。
 
-对于发现的每个 SKILL.md，解析 YAML frontmatter 以提取：
+### 第 3 步：审核并评估发现的 Skill（workers，每批一个）
 
-- `name`（必填）
-- `description`（必填）
-- `version`（默认为 "0.0.0"）
-- `license`
-- `creator`
-- `compatibility`
-- `allowed-tools` / `allowedTools`
+每个仓库启动一个审核 worker——对于大型仓库，也可以每约 20 个 skill 为一批启动一个 worker——同样在同一轮中执行。每个 worker 的契约：
 
-报告每个仓库中发现的技能数量。如果某个仓库中 **没有任何** SKILL.md 文件，请将其标记出来，并询问用户是否仍要将其纳入（该仓库以后可能会添加技能）。
+- 输入：`references/audit-eval-contract.md`、该仓库在第 2 步中的 `clonePath`，以及该批次的 `relPath` 列表
+- 输出：该契约中规定的固定 JSON 数组——每个 skill 一个对象，`{relPath, name, auditStatus, notes[], overallScore, grade}`
+- 不要自行读取 `references/audit-eval-contract.md`，并且任何 worker 都不重新克隆：它们针对第 2 步中的克隆仓库运行
 
-### 步骤 3：审计并评估发现的技能
+#### 合并报告
 
-对于每个发现的技能，执行两项检查——轻量级审计**以及**使用 `asm eval` 进行质量评估。两项检查都针对步骤 2 中的临时克隆运行；不要重新克隆。
-
-#### 3a. 轻量级审计
-
-1. **Frontmatter 完整性**：是否至少包含 `name` 和 `description`？
-2. **内容检查**：SKILL.md 是否包含有实际意义的指令内容（而不只是 frontmatter）？
-3. **安全扫描**：检查技能文件中是否存在可疑模式：
-   - Shell 执行（`exec`、`spawn`、`child_process`、`bash -c`）
-   - 网络访问（`curl`、`wget`、`fetch(`、`axios`）
-   - 凭据模式（`API_KEY=`、`SECRET_KEY=`、`PASSWORD=`）
-   - 混淆（`atob(`、base64 编码字符串、十六进制转义序列）
-
-这是一项轻量级检查——完整的安全审计会在用户通过 `asm install` 安装各个技能时运行。此处的目标是在将仓库添加到精选索引之前发现明显的危险信号。
-
-#### 3b. 使用 `asm eval` 进行质量评估
-
-对每个发现的技能目录运行 `asm eval`，并获取 JSON 报告。这能在仓库进入索引**之前**为审核者提供质量信号（结构、描述、提示工程、安全性、可测试性、命名），以便他们尽早发现明显的质量问题：
-
-```bash
-asm eval "$TEMP_DIR/{repo}/{relPath}" --json
-```
-
-JSON 报告包含 `overallScore`（0-100）、字母 `grade`（A/B/C/D/F），以及包含各类别分数的 `categories[]` 数组。建立索引时无需重新运行评估——`npm run preindex`（步骤 7）会通过提取器调用评估器，并自动将 `evalSummary` + `tokenCount` 写入 `data/skill-index/{owner}_{repo}.json`。此处的显式运行仅用于提供**提交前可见性**。
-
-#### 综合报告
-
-将两项检查合并到一张表中，使用户能够一目了然地查看质量和安全性：
+合并各 worker 的 JSON——不要重新读取任何 skill 文件——整理成一个表格，让用户可以一目了然地看到质量和安全性：
 
 ```
 Repo: owner/repo (N skills discovered)
@@ -137,44 +108,44 @@ Repo: owner/repo (N skills discovered)
   skill-name-3        FLAG   71 / C    contains shell execution patterns (exec, spawn)
 ```
 
-列：`audit status`、`eval overallScore / grade`、备注。
+列：`audit status`、`eval overallScore / grade`、notes。
 
-当前策略是**宽松的**——接受所有至少包含一个有效技能（具有 name + description）的仓库。安全警告和较低的评估分数仅供参考，不会阻止纳入；它们的作用是帮助审核者做出知情判断。如果用户询问“我们真的应该添加这个吗？”，请根据评估类别指出具体情况。此策略在未来版本中可能会变得更加严格。
+当前策略是**宽松的**——接受所有至少包含一个有效 skill（具有 name + description）的仓库。安全警告和较低的评估分数仅供参考，不会阻止纳入；它们用于帮助审核者做出知情判断。如果用户问“我们真的应该添加这个吗？”，请针对具体情况指出评估类别。未来版本可能会采用更严格的策略。
 
-#### 评估结果最终位于何处
+#### 评估结果的去向
 
-步骤 7 重新生成索引后，`data/skill-index/{owner}_{repo}.json` 中的每个技能条目都会新增两个派生字段：
+第 7 步重新生成索引后，`data/skill-index/{owner}_{repo}.json` 中的每个 skill 条目都会新增两个派生字段：
 
-- `tokenCount`：对 SKILL.md 正文 token 数量的启发式估算
+- `tokenCount`：对 SKILL.md 正文的启发式 token 数量估算
 - `evalSummary`：`{ overallScore, grade, categories[], evaluatedAt, evaluatedVersion }`
 
-这些字段为网站目录、TUI 和 `asm inspect` 中显示的“预估 token 数”和“评估分数”徽章提供数据。无需手动编辑——提取器会在 `preindex` 过程中填充它们。
+这些字段用于网站目录、TUI 和 `asm inspect` 中显示的“估算 tokens”和“评估分数”徽章。无需手动编辑——ingester 会在 `preindex` 过程中填充这些字段。
 
-### 第 4 步：检查需要更新的现有仓库
+### 第 4 步：检查现有仓库以进行更新
 
-对于索引中已存在的仓库（第 1 步中的 `EXISTS` 状态）：
+对于已经存在于索引中的仓库（第 1 步中的 `EXISTS` 状态）：
 
-1. 将现有索引文件（`data/skill-index/{owner}_{repo}.json`）与新发现的技能进行比较
-2. 报告发生的变化：
-   - 新增的技能
-   - 已移除的技能
-   - 元数据（版本、描述等）已更新的技能
+1. 将现有索引文件（`data/skill-index/{owner}_{repo}.json`）与新发现的 skill 进行比较
+2. 报告发生的变更：
+   - 新增的 skill
+   - 移除的 skill
+   - 元数据已更新的 skill（版本、描述等）
 
-在继续操作之前，请用户确认更新。
+在继续之前，请用户确认更新。
 
-### 第 5 步：创建功能分支
+### 步骤 5：创建功能分支
 
-仅当确实有新仓库需要添加或现有仓库需要更新时才继续。
+仅当确实有新的仓库需要添加或现有仓库需要更新时才继续。
 
 ```bash
 git checkout -b feat/index-add-{repo-names}
 ```
 
-使用描述清晰的分支名称。如果要添加多个仓库，请使用缩写形式：`feat/index-add-multiple-repos-{date}`。
+使用描述性分支名称。如果要添加多个仓库，请缩写为：`feat/index-add-multiple-repos-{date}`。
 
-### 第 6 步：更新 skill-index-resources.json
+### 步骤 6：更新 skill-index-resources.json
 
-对于每个新仓库，在 `data/skill-index-resources.json` 的 `repos` 数组中添加一个条目：
+对于每个新仓库，将一个条目添加到 `data/skill-index-resources.json` 的 `repos` 数组中：
 
 ```json
 {
@@ -188,18 +159,18 @@ git checkout -b feat/index-add-{repo-names}
 }
 ```
 
-同时，将顶层的 `updatedAt` 时间戳更新为当前 ISO 日期。
+同时将顶层的 `updatedAt` 时间戳更新为当前 ISO 日期。
 
-### 第 7 步：生成索引文件
+### 步骤 7：生成索引文件
 
-为每个仓库（新增和更新的仓库）生成索引 JSON 文件。尽可能使用项目内置的 `preindex` 脚本：
+为每个仓库（新仓库和已更新仓库）生成索引 JSON 文件。如果可能，请使用项目内置的 `preindex` 脚本：
 
 ```bash
 cd "$(git rev-parse --show-toplevel)"
 npm run preindex
 ```
 
-如果 `npm run preindex` 失败或耗时过长，请手动创建具有以下结构的 `data/skill-index/{owner}_{repo}.json`，以生成索引文件：
+如果 `npm run preindex` 失败或耗时过长，则通过创建 `data/skill-index/{owner}_{repo}.json` 手动生成索引文件，结构如下：
 
 ```json
 {
@@ -234,9 +205,9 @@ npm run preindex
 }
 ```
 
-`installUrl` 的格式非常重要——`asm install` 会通过它定位技能。对于单技能仓库（SKILL.md 位于根目录），请省略路径部分。对于多技能仓库，请包含技能目录的相对路径。
+`installUrl` 的格式很重要——`asm install` 通过它定位 skill。对于单 skill 仓库（根目录下有 SKILL.md），省略路径部分。对于多 skill 仓库，请包含 skill 目录的相对路径。
 
-如果回退到手动生成方式，可以对每个技能目录调用 `asm eval <path> --json`，并将 `overallScore`、`grade`、`categories`、`evaluatedAt` 字段提取到技能条目中，以填充 `tokenCount` 和 `evalSummary`。当 `preindex` 成功运行时，提取器会自动为你处理这些内容。
+如果需要手动生成，可以通过对每个 skill 目录调用 `asm eval <clonePath>/<relPath> --json` 来填充 `tokenCount` 和 `evalSummary` ——这两个值都来自该仓库步骤 2 worker 的结果；根目录级别的 skill 的 `relPath` 为空，因此其路径就是 `clonePath` ——然后将 `overallScore`、`grade`、`categories`、`evaluatedAt` 字段提取到 skill 条目中。如果 `preindex` 成功，ingester 会自动为你处理这些内容。
 
 ### 步骤 8：重新构建网站目录
 
@@ -249,18 +220,18 @@ npx tsx scripts/build-catalog.ts
 验证输出：
 
 - `website/catalog.json` 已更新
-- 技能总数有所增加（如果仅为更新，则也可能保持不变）
+- skill 总数增加（如果只是更新，则保持不变）
 - 构建输出中没有错误
 
 ### 步骤 9：验证所有内容
 
 执行最终检查：
 
-1. `data/skill-index-resources.json` 是有效的 JSON，并且包含新条目
-2. 每个新的 `data/skill-index/{owner}_{repo}.json` 均存在且为有效的 JSON
-3. 这些索引文件中的每个技能条目都已填充 `tokenCount`（数字）和 `evalSummary`（包含 `overallScore`、`grade`、`categories` 的对象）——如果缺少任何内容，请重新运行 `npm run preindex`，或按照步骤 7 中的说明回退到手动填充
-4. `website/catalog.json` 是有效的 JSON，并且包含新技能
-5. `git diff --stat` 显示仅有预期文件发生更改
+1. `data/skill-index-resources.json` 是有效的 JSON，并包含新增条目
+2. 每个新增的 `data/skill-index/{owner}_{repo}.json` 都存在且是有效的 JSON
+3. 这些索引文件中的每个技能条目都已填充 `tokenCount`（数字）和 `evalSummary`（包含 `overallScore`、`grade`、`categories` 的对象）——如果有任何字段缺失，请重新运行 `npm run preindex`，或按照步骤 7 中的说明手动填充
+4. `website/catalog.json` 是有效的 JSON，并包含新增技能
+5. `git diff --stat` 仅显示预期变更的文件
 
 向用户报告摘要：
 
@@ -276,7 +247,7 @@ Ready to commit and create PR.
 
 使用约定式提交格式暂存并提交：
 
-注意：`website/catalog.json` 已被 git 忽略，并由 CI（`deploy-website.yml`）在合并时重新构建。不要暂存该文件——仅暂存数据文件。
+注意：`website/catalog.json` 被 git 忽略，并由 CI（`deploy-website.yml`）在合并时重新构建。不要暂存它——只暂存 data 文件。
 
 ```bash
 git add data/skill-index-resources.json data/skill-index/*.json
@@ -322,27 +293,34 @@ EOF
 
 ## 边界情况与错误处理
 
-每一行都列出了条件、负责处理该条件的步骤以及所需的响应。如有疑问，应将问题告知用户，而不是静默丢弃仓库——审核策略是**宽松的**，但也是**透明的**。
+每一行都说明一种情况、负责处理该情况的步骤以及所需的响应。如有疑问，应将问题告知用户，而不是静默丢弃仓库——审核策略是**宽松但透明**的。
 
-| 条件                                                           | 响应                                                                                          |
-| ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| **仓库 URL 返回 404 / 私有仓库**                                | 在步骤 1 的表格中标记为 `INVALID` 并跳过；如果其他 URL 有效，则不要中止。                 |
-| **Git 克隆失败**                                                 | 跳过该仓库，报告错误，然后继续处理其他仓库。                                       |
-| **仓库中没有 SKILL.md 文件**                                    | 在步骤 2 中标记，并询问是否仍要包含（有些仓库最初为空，稍后才会添加技能）。 |
-| **仓库中有 50 个以上的 SKILL.md 文件**                                     | 继续处理，但警告运行时间——对大量技能执行 `asm eval` 会很慢。                         |
-| **仓库已在索引中，且未发生更改**                                | 报告 `EXISTS, no diff`，并跳过该仓库的索引重新生成。                               |
-| **仓库已在索引中，且存在破坏性更改**（技能被移除/重命名） | 在步骤 4 中显示差异，并要求用户明确确认后再覆盖。                  |
-| **`npm run preindex` 缺失或失败**                             | 按照步骤 7 回退到手动生成；不要阻止创建 PR。                                   |
-| **`npx tsx scripts/build-catalog.ts` 失败**                        | 在步骤 8 停止——这是结构性问题；不得合入目录损坏的 PR。                            |
-| **`gh` 未通过身份验证**                                          | 提示运行 `gh auth login`；未经身份验证，不要尝试推送。                                      |
-| **`gh pr create` 失败**（身份验证、网络、缺少远程仓库）            | 输出已提交的 SHA，以便用户手动推送并创建 PR。                            |
-| **非 GitHub URL**（GitLab、Bitbucket）                              | 在步骤 1 中拒绝——此技能仅为 github.com 编制索引。                                            |
-| **指向单个技能子目录的 URL**（`.../tree/main/skills/foo`） | 将其视为父仓库 URL；让步骤 2 的发现程序仅提取该技能。                    |
+| Condition                                                           | Response                                                                                                                               |
+| ------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| **Repo URL is a 404 / private repo**                                | Mark `INVALID` in the Step 1 table and skip; don't abort if other URLs are valid.                                                      |
+| **Git clone fails**                                                 | The Step 2 worker returns `status: clone-failed`; skip that repo, report its `error`, continue with the others.                        |
+| **Repo has zero SKILL.md files**                                    | The Step 2 worker returns `status: no-skills`; flag it and ask whether to include anyway (some repos seed empty and add skills later). |
+| **Repo has 50+ SKILL.md files**                                     | Keep going, but warn about runtime — `asm eval` over many skills is slow.                                                              |
+| **Repo already in index, unchanged**                                | Report `EXISTS, no diff` and skip index regeneration for that repo.                                                                    |
+| **Repo already in index, breaking changes** (skill removed/renamed) | Show a diff in Step 4 and require explicit user confirmation before overwriting.                                                       |
+| **`npm run preindex` missing or fails**                             | Fall back to manual generation per Step 7; do not block the PR.                                                                        |
+| **`npx tsx scripts/build-catalog.ts` fails**                        | Stop in Step 8 — structural; a PR with a broken catalog must not land.                                                                 |
+| **`gh` not authenticated**                                          | Prompt `gh auth login`; do not attempt to push without auth.                                                                           |
+| **`gh pr create` fails** (auth, network, missing remote)            | Print the committed SHA so the user can push and open the PR manually.                                                                 |
+| **Non-GitHub URL** (GitLab, Bitbucket)                              | Reject in Step 1 — this skill only indexes github.com.                                                                                 |
+| **URL to a single skill subdirectory** (`.../tree/main/skills/foo`) | Treat as the parent repo URL; let the Step 2 worker pick up just that skill.                                                           |
+| **Agent tool unavailable**                                          | Read both contract files yourself, run Steps 2 and 3 inline, and say so in the Step 9 summary.                                         |
 
 ## 清理
 
-完成后，删除用于克隆的所有临时目录：
+完成后，删除步骤 2 创建的每个临时目录。委派步骤 2 时，逐字使用每个 worker 返回的 `tempRoot`——克隆内容位于 worker 的临时目录中，因此你的 shell 中没有可供删除的 `$TEMP_DIR`。如果由于 Agent 工具不可用而在内联执行步骤 2，则 `mktemp -d` 创建的目录属于你自己：改为删除该目录。无论哪种情况，都不要从 `clonePath` 推导目标路径：
 
 ```bash
-rm -rf "$TEMP_DIR"
+# one per repo, the tempRoot from that repo's Step 2 result
+rm -rf "<tempRoot>"
 ```
+
+## 参考资料
+
+- `references/discovery-contract.md` — 步骤 2 worker 的工作范围：克隆、发现并将每个 SKILL.md 报告为固定 JSON（包括清理操作要删除的 `tempRoot`）
+- `references/audit-eval-contract.md` — 步骤 3 worker 的工作范围：轻量审计 + `asm eval`，以固定 JSON 行返回

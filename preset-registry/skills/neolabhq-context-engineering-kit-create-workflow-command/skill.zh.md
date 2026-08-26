@@ -1,12 +1,10 @@
 ---
 name: create-workflow-command
 description: Create a workflow command that orchestrates multi-step execution through sub-agents with file-based task prompts
-argument-hint: "[workflow-name] [description]"
-allowed-tools: Read, Write, Glob, Grep, Bash(mkdir:*)
 ---
 # 创建工作流命令
 
-创建一个命令，通过分派子代理并使用存储在单独文件中的任务专用指令，编排多步骤工作流。
+创建一个通过分派子代理来编排多步骤工作流的命令，并将特定于任务的指令存储在单独的文件中。
 
 ## 用户输入
 
@@ -15,51 +13,51 @@ Workflow Name: $1
 Description: $2
 ```
 
-## 架构概述
+## 架构概览
 
-工作流命令解决了**上下文膨胀问题**：不在主命令中嵌入详细的步骤指令（从而污染编排器上下文），而是将这些指令存储在单独的任务文件中，由子代理按需读取。
+工作流命令解决了**上下文膨胀问题**：不将详细的步骤指令嵌入主命令中（避免污染编排器上下文），而是将其存储在单独的任务文件中，供子代理按需读取。
 
 ```
 plugins/<plugin-name>/
 ├── commands/
-│   └── <workflow>.md          # Lean orchestrator (~50-100 tokens per step)
-├── agents/                     # Optional: reusable executor agents
-│   └── step-executor.md       # Custom agent with specific tools/behavior
-└── tasks/                      # All task instructions directly here
-    ├── step-1-<name>.md       # Full instructions (~500+ tokens each)
+│   └── <workflow>.md          # 精简的编排器（每个步骤约 50-100 个 token）
+├── agents/                     # 可选：可复用的执行代理
+│   └── step-executor.md       # 具有特定工具/行为的自定义代理
+└── tasks/                      # 所有任务指令直接存放于此
+    ├── step-1-<name>.md       # 完整指令（每个约 500+ 个 token）
     ├── step-2-<name>.md
     ├── step-3-<name>.md
-    └── common-context.md      # Shared context across workflows
+    └── common-context.md      # 跨工作流共享的上下文
 ```
 
 ## 核心原则
 
 ### 1. 上下文隔离
 
-每个子代理都有自己独立的上下文窗口。主编排器保持精简，而子代理则从文件中加载详细指令。
+每个子代理都会获得其自身隔离的上下文窗口。主编排器保持精简，而子代理则从文件中加载详细指令。
 
-| 组件 | 上下文成本 | 用途 |
+| 组件 | 上下文开销 | 用途 |
 |-----------|--------------|---------|
 | 编排器命令 | 每个步骤约 50-100 个 token | 分派和协调 |
-| 任务文件 | 约 500+ 个 token | 详细的步骤指令 |
-| 子代理基础开销 | 约 294 个 token | 系统提示词开销 |
+| 任务文件 | 500+ 个 token | 详细的步骤指令 |
+| 子代理基础部分 | 约 294 个 token | 系统提示开销 |
 
 ### 2. 子代理能力
 
 通过 Task 工具生成的子代理：
 
-| 能力 | 是否可用 | 备注 |
+| 能力 | 可用 | 备注 |
 |------------|-----------|-------|
 | Read 工具 | ✅ 是 | 可以读取任何文件 |
-| Write 工具 | ✅ 是 | 如果未受限制 |
+| Write 工具 | ✅ 是 | 除非受到限制 |
 | Grep/Glob | ✅ 是 | 用于代码搜索 |
-| Skills 加载 | ❌ 否 | Skills 不会在子代理中自动加载 |
+| 技能加载 | ❌ 否 | 技能不会在子代理中自动加载 |
 | 生成子代理 | ❌ 否 | 无法嵌套使用 Task 工具 |
 | 恢复上下文 | ✅ 是 | 通过 `resume` 参数 |
 
 ### 3. 文件引用模式
 
-在插件中使用 `${CLAUDE_PLUGIN_ROOT}` 实现可移植路径：
+在插件中使用 `${CLAUDE_PLUGIN_ROOT}` 来实现可移植路径：
 
 ```markdown
 Read ${CLAUDE_PLUGIN_ROOT}/tasks/step-1-workflow-name.md and execute.
@@ -71,11 +69,11 @@ Read ${CLAUDE_PLUGIN_ROOT}/tasks/step-1-workflow-name.md and execute.
 
 ### 步骤 1：收集需求
 
-询问用户（如果尚未提供）：
+如果用户未提供，则询问用户：
 
-1. **工作流名称**：kebab-case 标识符（例如 `feature-implementation`）
-2. **描述**：工作流要完成的任务
-3. **步骤**：离散步骤的列表，每个步骤包括：
+1. **工作流名称**：kebab-case 标识符（例如：`feature-implementation`）
+2. **描述**：该工作流完成的任务
+3. **步骤**：离散步骤列表，包括：
    - 步骤名称
    - 步骤目标
    - 所需工具
@@ -86,14 +84,14 @@ Read ${CLAUDE_PLUGIN_ROOT}/tasks/step-1-workflow-name.md and execute.
 ### 步骤 2：创建目录结构
 
 ```bash
-# Create tasks directory (if it doesn't exist)
+# 如果 tasks 目录不存在，则创建
 mkdir -p ${CLAUDE_PLUGIN_ROOT}/tasks
 
-# Optional: Create agents directory (if using custom agents)
+# 可选：如果使用自定义代理，则创建 agents 目录
 mkdir -p ${CLAUDE_PLUGIN_ROOT}/agents
 ```
 
-**注意**：所有任务文件（包括工作流专用步骤和共享上下文）都直接放置在 `tasks/` 中，不使用子目录。
+**注意**：所有任务文件（包括特定于工作流的步骤文件和共享上下文文件）都直接放置在 `tasks/` 中，不要创建子目录。
 
 ### 步骤 3：创建任务文件
 
@@ -128,9 +126,9 @@ You are executing step N of the <workflow-name> workflow.
 - [ ] <Measurable outcome>
 ```
 
-### 步骤 4：创建编排器命令
+### Step 4：创建编排器命令
 
-使用以下模式创建主命令文件：
+按照以下模式创建主命令文件：
 
 ```markdown
 ---
@@ -195,19 +193,19 @@ Summarize workflow results:
 |-------|---------|---------|
 | `description` | 工作流用途的简要描述 | 必填 |
 | `argument-hint` | 预期参数的描述 | 无 |
-| `allowed-tools` | 命令可以使用的工具 | 继承自对话 |
-| `model` | 指定的 Claude 模型（sonnet、opus、haiku） | 继承自对话 |
+| `allowed-tools` | 命令可以使用的工具 | 从对话继承 |
+| `model` | 指定的 Claude 模型（sonnet、opus、haiku） | 从对话继承 |
 
 **模型选择**：
-- `haiku` - 速度快、效率高，适用于简单工作流
-- `sonnet` - 性能均衡（推荐作为默认选择）
-- `opus` - 为复杂编排提供最强能力
+- `haiku` - 快速、高效，适用于简单工作流
+- `sonnet` - 性能均衡（推荐默认选项）
+- `opus` - 能力最强，适用于复杂编排
 
 ## 执行模式
 
 ### 模式 A：顺序步骤（默认）
 
-每个步骤都依赖前一步骤的输出：
+每个步骤都依赖上一步的输出：
 
 ```markdown
 ### Step 1: Analyze
@@ -238,7 +236,7 @@ Launch 3 agents simultaneously:
 Launch agent with all analysis results...
 ```
 
-### 模式 C：有状态多步骤（恢复）
+### 模式 C：有状态的多步骤（恢复）
 
 当步骤需要共享上下文时：
 
@@ -392,12 +390,12 @@ Return a structured research summary:
 
 ## 已知限制
 
-| 限制 | 影响 | 解决方法 |
+| 限制 | 影响 | 变通方案 |
 |------------|--------|------------|
 | 不支持嵌套子代理 | 子代理无法生成 Task 工具 | 将所有编排逻辑保留在主命令中 |
 | 不会自动加载技能 | 子代理不会触发技能 | 传递明确的文件路径或内联上下文 |
-| 每个代理都使用全新上下文 | 每次分派都从空上下文开始 | 使用恢复模式，或传递摘要 |
-| 文件读取延迟 | 每个步骤需要额外调用一次工具 | 为节省上下文而做出的可接受权衡 |
+| 每个代理使用全新上下文 | 每次调度都会从空白上下文开始 | 使用恢复模式，或传递摘要 |
+| 文件读取延迟 | 每个步骤都需要额外的工具调用 | 为节省上下文而接受这一权衡 |
 
 ## 验证清单
 
@@ -406,9 +404,9 @@ Return a structured research summary:
 - [ ] 每个步骤都有清晰、具体的目标
 - [ ] 任务文件是自包含的（子代理不需要外部上下文）
 - [ ] 文件路径使用 `${CLAUDE_PLUGIN_ROOT}` 以确保可移植性
-- [ ] 步骤之间传递的上下文保持最少（使用摘要，而非完整数据）
-- [ ] 编排器命令保持精简（每次步骤分派少于 100 个 token）
-- [ ] 已定义步骤失败时的错误处理
+- [ ] 步骤之间传递的上下文保持最少（使用摘要，而不是完整数据）
+- [ ] 编排器命令保持精简（每次步骤调度少于 100 个 token）
+- [ ] 为步骤失败定义错误处理方式
 - [ ] 每个步骤的成功标准都可衡量
 
 ## 创建工作流
@@ -416,15 +414,15 @@ Return a structured research summary:
 根据用户输入，创建：
 
 1. **目录**：
-   - `${CLAUDE_PLUGIN_ROOT}/tasks/` - 所有任务文件都直接存放在此处
+   - `${CLAUDE_PLUGIN_ROOT}/tasks/` - 所有任务文件直接放在此处
    - `${CLAUDE_PLUGIN_ROOT}/agents/` - （可选）自定义代理定义
 
-2. **任务文件**：在 `tasks/` 目录中创建，命名模式为 `step-N-<workflow>-<name>.md`
+2. **任务文件**：在 `tasks/` 目录中创建，命名格式为 `step-N-<workflow>-<name>.md`
    - 示例：`step-1-feature-impl-research.md`
    - 示例：`step-2-feature-impl-architecture.md`
    - 共享上下文：将 `common-context.md` 直接放在 `tasks/` 中
 
-3. **编排器命令**：在 `commands/<workflow-name>.md` 中编写精简的分派逻辑
+3. **编排器命令**：在 `commands/<workflow-name>.md` 中编写精简的调度逻辑
 
 4. **自定义代理**（可选）：如果工作流需要专门的代理行为，则在 `agents/` 中创建
 
