@@ -24,81 +24,19 @@ src/lib/data/
 
 ## 环境变量
 
-数据层使用位于 `src/data-layer/.env.local` 的**专用 `.env.local` 文件**，与主应用根目录中的 `.env.local` 相互独立。
-
-### 本地开发设置
-
-1. 复制示例文件：
-
-   ```bash
-   cp src/data-layer/.env.example src/data-layer/.env.local
-   ```
-
-2. 填写所需的 API 密钥（所有选项请参阅 `.env.example`）
-
-3. 在本地运行 Trigger.dev 任务：
-   ```bash
-   pnpm trigger:dev
-   ```
-
-### 变量类别
-
-- **与主应用共享**：`GITHUB_TOKEN_READ_ONLY`、Sentry 变量（需在两个文件中配置）
-- **仅供数据层使用**：API 密钥（CoinGecko、Beaconcha.in、Dune、Google 等）、Netlify Blobs 令牌、S3 凭据、Trigger.dev 配置
-
-### 生产环境（Trigger.dev Cloud）
-
-在 Trigger.dev 项目仪表板中配置环境变量。主应用与数据层在不同的环境中运行。
+数据层使用位于 `src/data-layer/.env.local` 的**专用 `.env.local`**，与根目录下的 `.env.local` 分开：执行 `cp src/data-layer/.env.example src/data-layer/.env.local`，填写各项密钥（所有选项请参见 `.env.example`），然后运行 `pnpm trigger:dev` 在本地执行任务。`GITHUB_TOKEN_READ_ONLY` 和 Sentry 变量与主应用共享（需在两个文件中配置）；其他所有内容（API 密钥、Netlify Blobs 令牌、S3 凭据、Trigger.dev 配置）仅供数据层使用。在生产环境中，请在 Trigger.dev 项目控制面板中配置变量——应用和数据层运行在相互独立的环境中。
 
 ## 关键文件
 
-### tasks.ts - 唯一事实来源
-
-定义所有任务键和定时作业：
-
-```typescript
-export const KEYS = {
-  ETH_PRICE: "fetch-eth-price",
-  L2BEAT: "fetch-l2beat",
-  // ...
-} as const
-
-const WEEKLY: TaskDef[] = [[KEYS.GITHUB_CONTRIBUTORS, fetchGitHubContributors]]
-
-const DAILY: TaskDef[] = [
-  [KEYS.APPS, fetchApps],
-  [KEYS.EVENTS, fetchEvents],
-]
-
-const HOURLY: TaskDef[] = [
-  [KEYS.ETH_PRICE, fetchEthPrice],
-  [KEYS.TOTAL_ETH_STAKED, fetchTotalEthStaked],
-]
-```
-
-### index.ts - 简单的 Getter 函数
-
-单行透传函数：
-
-```typescript
-export const getEthPrice = () => get<EthPriceData>(KEYS.ETH_PRICE)
-export const getL2beatData = () => get<L2beatData>(KEYS.L2BEAT)
-```
+`tasks.ts` 定义了 `KEYS` 常量以及 `WEEKLY`/`DAILY`/`HOURLY` 任务元组；`index.ts` 包含单行 getter——两者的示例请参见下方的“添加新的数据源”。
 
 ### storage.ts - 存储抽象
 
-简单的 get/set，会在 Netlify Blobs（生产环境）和本地 JSON 文件（开发环境）之间切换：
-
-```typescript
-export async function get<T>(key: string): Promise<T | null>
-export async function set(key: string, data: unknown): Promise<void>
-```
-
-本地开发使用 `USE_MOCK_DATA=true` 环境变量。
+`get<T>(key)` / `set(key, data)` 会在 Netlify Blobs（生产环境）和本地 mock JSON 文件之间切换（本地开发时使用 `USE_MOCK_DATA=true`）。
 
 ### s3.ts - 图片上传工具
 
-用于外部图片的集中式 S3 上传工具。Fetcher 使用它将外部图片上传至同一个 S3 存储桶，从而降低 Next.js `remotePatterns` 的复杂性。
+用于上传外部图片的集中式 S3 上传工具。Fetcher 使用此工具将外部图片上传到单个 S3 bucket，从而降低 Next.js `remotePatterns` 的复杂度。
 
 ```typescript
 // Upload single image
@@ -110,17 +48,17 @@ const s3Urls = await uploadManyToS3(urls, "apps/banners")
 
 主要特性：
 
-- **SSRF 防护** - 阻止访问私有/内部网络地址
-- **去重** - 使用源 URL 的 SHA256 哈希作为键
-- **存在性检查** - 如果已上传，则跳过
-- **5MB 大小限制** - 对于过大的图片返回 `null`
-- **Content-Type 检测** - 从响应头获取，或回退到根据 URL 扩展名判断
+- **SSRF 防护** - 阻止私有/内部网络地址
+- **去重** - 使用源 URL 的 SHA256 哈希作为 key
+- **存在性检查** - 如果已上传则跳过
+- **5MB 大小限制** - 对于较大的图片返回 `null`
+- **Content-Type 检测** - 从 header 获取，或回退到 URL 扩展名
 
 ## 规则
 
 ### 1. Getter 必须是纯透传
 
-不要在 `index.ts` 中进行转换——只需调用 `get<T>(KEYS.X)`：
+`index.ts` 中不得进行转换——只使用 `get<T>(KEYS.X)`：
 
 ```typescript
 // Correct
@@ -133,13 +71,13 @@ export const getEventsData = () => {
 }
 ```
 
-所有转换都应放在 fetcher（`src/data-layer/fetchers/`）中。
+所有转换都应放在 fetcher 中（`src/data-layer/fetchers/`）。
 
 ### 2. KEYS 是唯一事实来源
 
-所有任务 ID 都定义在 `tasks.ts` 的 `KEYS` 中。`index.ts` 中的 getter 与 `WEEKLY`/`DAILY`/`HOURLY` 中的任务元组必须使用相同的键。
+所有任务 ID 都在 `tasks.ts` 的 `KEYS` 中定义。`index.ts` 中的 getter 以及 `WEEKLY`/`DAILY`/`HOURLY` 中的任务元组必须使用相同的 key。
 
-### 3. 通过 lib/data 暴露以支持缓存
+### 3. 通过 lib/data 暴露以进行缓存
 
 在 `src/lib/data/index.ts` 中添加缓存包装器：
 
@@ -151,11 +89,11 @@ export const getEventsData = createCachedGetter(
 )
 ```
 
-`revalidate` 参数的类型为 `number | false`。传入 `false` 是一种有意采用的模式，用于让路由保持完全静态——设置有限的重新验证时间会让页面启用 ISR，而对于读取 `public/content/` 文件的页面，这在 Netlify 上会失败。例如：`src/lib/data/index.ts` 中的 `getStaticAppsData`，它由嵌入 MDX 页面中的组件使用（数据仅在部署时刷新）。
+`revalidate` 参数的类型为 `number | false`。传入 `false` 是一种有意采用的模式，用于使路由保持完全静态——有限的重新验证时间会使页面启用 ISR，而对于读取 `public/content/` 文件的页面，这在 Netlify 上会失败。示例：`src/lib/data/index.ts` 中的 `getStaticAppsData`，它由嵌入 MDX 页面的组件使用（数据仅在部署时刷新）。
 
-### 4. 对外部图片使用 S3
+### 4. 使用 S3 存储外部图片
 
-外部图片应在 fetcher 中上传至 S3，以集中管理图片域名：
+应在 fetcher 中将外部图片上传到 S3，以集中管理图片域名：
 
 ```typescript
 // In fetcher - correct
@@ -165,27 +103,27 @@ const logoUrl = await uploadToS3(event.logoImage, "events/logos")
 return { ...event, logoImage: logoUrl ?? "" }
 ```
 
-始终使用回退值/空字符串处理 `null` 返回值（上传失败）。
+始终处理 `null` 返回值（上传失败），并使用回退值/空字符串。
 
-### 5. 保持 fetcher 与应用隔离
+### 5. 使 fetcher 与应用保持隔离
 
-Fetcher 运行在 Trigger.dev 上——它与 Next.js 应用使用不同的运行时、部署和 bundle。Fetcher 不能假定应用的文件系统、环境或模块可用。
+Fetcher 运行在 Trigger.dev 上——其运行时、部署环境和 bundle 均与 Next.js 应用分离。不能假定应用的文件系统、环境或模块可用。
 
-任何延伸到 `src/data-layer/` 之外的导入或运行时依赖都应被视为警示信号。允许：类型（`@/lib/types`、`@/lib/interfaces`）、纯常量（`@/lib/constants`），以及不包含应用运行时依赖的纯工具函数。不允许：任何读取 `process.cwd()` 的内容、任何来自 `app/` 或 `public/` 的内容、任何来自 `src/components/` 的内容，或 `src/lib/data/`（它包装了数据层，并会产生循环依赖）。
+任何超出 `src/data-layer/` 范围的 import 或运行时依赖都是一个警示信号。允许使用：类型（`@/lib/types`、`@/lib/interfaces`）、纯常量（`@/lib/constants`）以及不依赖应用运行时的纯工具函数。不允许使用：任何读取 `process.cwd()` 的内容、来自 `app/` 或 `public/` 的任何内容、来自 `src/components/` 的任何内容，或来自 `src/lib/data/` 的任何内容（该目录包装了 data layer，会造成循环依赖）。
 
-如果 fetcher 需要应用中的数据——内容文件、frontmatter 等——应通过 GitHub API 经由网络获取，并将该仓库视为外部系统。有关此模式，请参阅 `fetchGitHubContributors.ts`。不要尝试在 `trigger.config.ts` 中使用 `additionalFiles` 来绕过此限制；将应用文件打包进数据层部署会重新引入这种耦合。
+如果 fetcher 需要应用中的数据——内容文件、frontmatter 等——请通过 GitHub API 经网络获取，并将仓库视为外部系统。请参阅 `fetchGitHubContributors.ts` 中的模式。不要使用 `trigger.config.ts` 中的 `additionalFiles` 规避这一限制；将应用文件打包进 data-layer 部署会重新产生这种耦合。
 
 ## 添加新的数据源
 
-1. **创建 fetcher**，位置为 `src/data-layer/fetchers/fetchNewData.ts`：
+1. **在 `src/data-layer/fetchers/fetchNewData.ts` 中创建 fetcher**：
 
-```typescript
+   ```typescript
    export async function fetchNewData(): Promise<YourDataType> {
      // Fetch and transform data here
    }
    ```
 
-2. **添加键**到 `src/data-layer/tasks.ts` 中的 `KEYS`：
+2. **在 `src/data-layer/tasks.ts` 的 `KEYS` 中添加 key**：
 
    ```typescript
    export const KEYS = {
@@ -194,7 +132,7 @@ Fetcher 运行在 Trigger.dev 上——它与 Next.js 应用使用不同的运�
    } as const
    ```
 
-3. **添加任务元组**到 `tasks.ts` 中的 `WEEKLY`、`DAILY` 或 `HOURLY`：
+3. **将 task tuple 添加到 `tasks.ts` 中的 `WEEKLY`、`DAILY` 或 `HOURLY`**（getter 和 tuple 必须使用相同的 `KEYS` 条目——规则 2）：
 
    ```typescript
    const DAILY: TaskDef[] = [
@@ -203,15 +141,15 @@ Fetcher 运行在 Trigger.dev 上——它与 Next.js 应用使用不同的运�
    ]
    ```
 
-4. **添加 getter** 到 `src/data-layer/index.ts`：
+4. **在 `src/data-layer/index.ts` 中添加 getter**：
 
    ```typescript
    export const getNewData = () => get<YourDataType>(KEYS.NEW_DATA)
    ```
 
-5. **添加 mock 文件** `src/data-layer/mocks/fetch-new-data.json`，用于本地开发
+5. **在 `src/data-layer/mocks/fetch-new-data.json` 中添加 mock 文件**（当 `USE_MOCK_DATA=true` 时读取）
 
-6. **添加缓存包装器**到 `src/lib/data/index.ts`：
+6. **在 `src/lib/data/index.ts` 中添加缓存包装器**：
    ```typescript
    export const getNewData = createCachedGetter(
      dataLayer.getNewData,
