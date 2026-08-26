@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-26T00:43:53.285Z",
+  "updated_at": "2026-08-26T02:41:14.243Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -9663,9 +9663,9 @@
       "translated_at": "2026-08-23T10:20:25.952Z"
     },
     "bundle:thedotmack-claude-mem": {
-      "hash": "105ab286d15d7dca",
-      "summary_zh": "一套围绕 Claude 持久记忆打造的开发协作工具，让它持续理解代码库、复用历史经验，并完成规划、执行、评审与知识同步。",
-      "translated_at": "2026-08-03T22:57:55.807Z"
+      "hash": "45bca082d4a6217b",
+      "summary_zh": "这套工具集为 Claude 提供跨会话记忆、代码库理解、方案规划到执行跟进的一体化工作流，提升长期协作与开发效率。",
+      "translated_at": "2026-08-26T02:16:20.890Z"
     },
     "bundle:ruvnet-claude-flow": {
       "hash": "397a8d193e80f241",
@@ -50183,8 +50183,8 @@
       "translated_at": "2026-08-25T05:45:28.572Z"
     },
     "content:product-on-purpose-pm-skills-define-prioritization-framework": {
-      "hash": "61a1992b70472418",
-      "translated_at": "2026-08-25T05:46:47.245Z"
+      "hash": "3adabe03243209d0",
+      "translated_at": "2026-08-26T02:32:06.503Z"
     },
     "skill:alirezarezvani-claude-skills-agent-memory": {
       "hash": "9465eab408a18c6b",
@@ -50314,8 +50314,8 @@
       "translated_at": "2026-08-25T11:40:13.021Z"
     },
     "content:product-on-purpose-pm-skills-deliver-prd": {
-      "hash": "11a336d167a8efb8",
-      "translated_at": "2026-08-25T18:38:10.786Z"
+      "hash": "2b48e0af712dafd8",
+      "translated_at": "2026-08-26T02:31:12.106Z"
     },
     "content:product-on-purpose-pm-skills-deliver-y": {
       "hash": "83ccede7cf8a1c4d",
@@ -50370,8 +50370,8 @@
       "translated_at": "2026-08-25T13:39:31.443Z"
     },
     "content:product-on-purpose-pm-skills-foundation-build-risk-review": {
-      "hash": "a1c3d14357ba829f",
-      "translated_at": "2026-08-25T17:31:19.335Z"
+      "hash": "fcdc0002763c698a",
+      "translated_at": "2026-08-26T02:33:01.149Z"
     },
     "content:product-on-purpose-pm-skills-foundation-lean-canvas": {
       "hash": "f91b74a3ee2894aa",
@@ -50394,8 +50394,8 @@
       "translated_at": "2026-08-25T17:33:47.935Z"
     },
     "content:product-on-purpose-pm-skills-foundation-persona": {
-      "hash": "7500254628f13b7c",
-      "translated_at": "2026-08-25T17:34:17.895Z"
+      "hash": "e11bba6aa2fa9690",
+      "translated_at": "2026-08-26T02:32:46.677Z"
     },
     "content:product-on-purpose-pm-skills-foundation-okr-writer": {
       "hash": "039638446b5fa01e",
@@ -50548,6 +50548,55 @@
     "content:product-on-purpose-pm-skills-utility-pm-skill-auditor": {
       "hash": "19fcd847a5acf93f",
       "translated_at": "2026-08-26T00:43:53.285Z"
+    },
+    "skill:thedotmack-claude-mem-mem-setup": {
+      "hash": "4ab40953d66905fa",
+      "summary_zh": "用于配置 claude-mem 在 Cowork 中的连接凭据，适合首次接入云端同步或绑定 cmem.ai 账号时使用。",
+      "translated_at": "2026-08-26T02:16:28.402Z"
+    },
+    "content:product-on-purpose-pm-skills-utility-pm-skill-iterate": {
+      "hash": "562d9195025024b3",
+      "translated_at": "2026-08-26T02:34:10.736Z"
+    },
+    "content:product-on-purpose-pm-skills-utility-pm-skill-builder": {
+      "hash": "0c701c97f37657f5",
+      "translated_at": "2026-08-26T02:34:27.948Z"
+    },
+    "content:product-on-purpose-pm-skills-utility-pm-skill-validate": {
+      "hash": "e1df54d032701336",
+      "translated_at": "2026-08-26T02:35:32.517Z"
+    },
+    "content:product-on-purpose-pm-skills-utility-update-pm-skills": {
+      "hash": "44a774459cfe1213",
+      "translated_at": "2026-08-26T02:35:58.146Z"
+    },
+    "content:prompt-security-clawsec-claw-release": {
+      "hash": "f6f326b1b91a0ce9",
+      "translated_at": "2026-08-26T02:36:27.919Z"
+    },
+    "content:prompt-security-clawsec-clawsec-clawhub-checker": {
+      "hash": "5f141ec44451e5b4",
+      "translated_at": "2026-08-26T02:36:40.064Z"
+    },
+    "content:prompt-security-clawsec-clawsec-nanoclaw": {
+      "hash": "cea564f48fdfe15e",
+      "translated_at": "2026-08-26T02:37:38.027Z"
+    },
+    "content:prompt-security-clawsec-clawsec-scanner": {
+      "hash": "f04e79268e626296",
+      "translated_at": "2026-08-26T02:39:23.741Z"
+    },
+    "content:prompt-security-clawsec-clawsec-feed": {
+      "hash": "7a83336219c40641",
+      "translated_at": "2026-08-26T02:39:24.884Z"
+    },
+    "content:prompt-security-clawsec-clawtributor": {
+      "hash": "41d856e79b2c6bd3",
+      "translated_at": "2026-08-26T02:40:26.569Z"
+    },
+    "content:prompt-security-clawsec-clawsec-suite": {
+      "hash": "f7742e452b7d94ee",
+      "translated_at": "2026-08-26T02:41:14.243Z"
     }
   }
 }
