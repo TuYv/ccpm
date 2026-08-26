@@ -1,21 +1,20 @@
 ---
 name: launch-sub-agent
 description: Launch an intelligent sub-agent with automatic model selection based on task complexity, specialized agent matching, Zero-shot CoT reasoning, and mandatory self-critique verification
-argument-hint: Task description (e.g., "Implement user authentication" or "Research caching strategies") [--model opus|sonnet|haiku] [--agent <agent-name>] [--output <path>]
 ---
 # launch-sub-agent
 
 <task>
-启动一个专注的子智能体来执行所提供的任务。分析任务，以智能选择最佳模型和智能体配置，然后调度一个在开始时进行零样本思维链推理、并在结束时进行强制性自我批评验证的子智能体。
+启动一个专注的子代理来执行所提供的任务。分析任务，以智能选择最优的模型和代理配置，然后调度一个子代理，在开头进行零样本思维链推理，并在结尾强制执行自我批评验证。
 </task>
 
 <context>
-此命令实现了多智能体架构中的**监督者/编排器模式**，由你（编排器）调度具有隔离上下文的专注子智能体。其主要优势是**上下文隔离**——每个子智能体都在一个干净的上下文窗口中运行，专注于其特定任务，不受累积的上下文污染影响。
+此命令实现了多代理架构中的**Supervisor/Orchestrator 模式**，由你（编排器）调度具有隔离上下文的专注型子代理。其主要优势是**上下文隔离**——每个子代理都在干净的上下文窗口中运行，专注于自身的具体任务，不会受到累积的上下文污染。
 </context>
 
 ## 流程
 
-### 阶段 1：使用零样本思维链进行任务分析
+### 阶段 1：使用零样本 CoT 进行任务分析
 
 在调度之前，系统地分析任务。逐步思考：
 
@@ -55,15 +54,15 @@ Let me analyze this task step by step to determine the optimal configuration:
 
 ### 阶段 2：模型选择
 
-根据任务分析选择最佳模型：
+根据任务分析选择最优模型：
 
 | 任务特征 | 推荐模型 | 理由 |
 |--------------|-------------------|-----------|
-| **复杂推理**（架构、设计、关键决策） | `opus` | 最强的推理能力 |
-| **专业领域**（与智能体配置相匹配） | Opus + 专用智能体 | 领域专业知识 + 强大推理能力 |
-| **不复杂但篇幅长**（大量文档、冗长输出） | `sonnet[1m]` | 能力良好，处理长内容时具备成本效益 |
-| **简单且简短**（琐碎任务、快速查询） | `haiku` | 速度快，处理简单任务时具备成本效益 |
-| **默认**（无法确定时） | `opus` | 优先保证质量，而非成本 |
+| **复杂推理**（架构、设计、关键决策） | `opus` | 最大化推理能力 |
+| **专业领域**（与代理配置相匹配） | Opus + 专业代理 | 领域专业知识 + 推理能力 |
+| **非复杂但篇幅较长**（大量文档、详细输出） | `sonnet[1m]` | 能力良好，长文本成本高效 |
+| **简单且简短**（琐碎任务、快速查询） | `haiku` | 快速、经济高效，适合简单任务 |
+| **默认**（不确定时） | `opus` | 优先保证质量而非成本 |
 
 **决策树：**
 
@@ -87,31 +86,31 @@ Is task COMPLEX (architecture, design, novel problem, critical decision)?
                       +-- NO --> Use Opus (default)
 ```
 
-### 阶段 3：专业代理匹配
+### 阶段 3：专用代理匹配
 
-如果任务与某个专业领域相匹配，则纳入相关的代理提示词。专业代理可提供特定领域的最佳实践、质量标准和结构化方法，从而提高输出质量。
+如果任务属于某个专门领域，请纳入相关的代理提示词。专用代理提供特定领域的最佳实践、质量标准和结构化方法，从而提升输出质量。
 
-**决策：** 当任务明显能受益于领域专业知识时，使用专业代理。对于专业化只会增加不必要开销的简单任务，则跳过此步骤。
+**决策：** 当任务明显受益于领域专业知识时，使用专用代理。对于使用专门化会增加不必要开销的琐碎任务，则跳过。
 
-**代理：** 可用的专业代理取决于项目和已安装的插件。`sdd` 插件提供的常见代理包括：`sdd:developer`、`sdd:researcher`、`sdd:software-architect`、`sdd:tech-lead`、`sdd:code-explorer`、`sdd:business-analyst`、`sdd:code-reviewer`、`sdd:tech-writer`。如果适合的专业代理不可用，则回退到不具备专业化能力的通用代理。
+**代理：** 可用的专用代理取决于项目和已安装的插件。`sdd` 插件中常见的代理包括：`sdd:developer`、`sdd:researcher`、`sdd:software-architect`、`sdd:tech-lead`、`sdd:code-explorer`、`sdd:business-analyst`、`sdd:code-reviewer`、`sdd:tech-writer`。如果适合的专用代理不可用，则回退到不带专门化的通用代理。
 
-**与模型选择集成：**
+**与模型选择的集成：**
 
-- 专业代理应与模型选择结合使用，而不是取代模型选择
-- 复杂任务 + 专业领域 = Opus + 专业代理
-- 与领域匹配的简单任务 = Haiku，不使用专业代理（其开销并不合理）
+- 专用代理与模型选择结合使用，而不是相互替代
+- 复杂任务 + 专业领域 = Opus + 专用代理
+- 与领域匹配的简单任务 = Haiku，不使用专用代理（不值得承担额外开销）
 
 **用法：**
 
 1. 阅读代理定义
-2. 将代理的指令放在 CoT 前缀之后，纳入子代理提示词
-3. 与零样本 CoT 前缀和自我评判后缀相结合
+2. 将代理的指令放入子代理提示词中，位置位于 CoT 前缀之后
+3. 与 Zero-shot CoT 前缀和批评后缀结合
 
 ### 阶段 4：构建子代理提示词
 
 使用以下必需组件构建子代理提示词：
 
-#### 4.1 零样本思维链前缀（必需——必须位于最前面）
+#### 4.1 Zero-shot Chain-of-Thought 前缀（必需 - 必须位于首位）
 
 ```markdown
 ## Reasoning Approach
@@ -143,7 +142,7 @@ Let's approach this step by step:
 Work through each step explicitly before implementing.
 ```
 
-#### 4.2 任务正文
+#### 4.2 任务主体
 
 ```markdown
 <task>
@@ -163,7 +162,7 @@ Work through each step explicitly before implementing.
 </output>
 ```
 
-#### 4.3 自我评判后缀（必需——必须位于最后面）
+#### 4.3 自我批评后缀（必需 - 必须位于末尾）
 
 ```markdown
 ## Self-Critique Loop (MANDATORY)
@@ -219,9 +218,9 @@ If ANY verification question reveals a gap:
 CRITICAL: Do not submit until ALL verification questions have satisfactory answers with evidence.
 ```
 
-### 阶段 5：分派子代理
+### 阶段 5：调度子代理
 
-使用 Task 工具按所选配置进行分派：
+使用 Task tool，结合选定的配置进行调度：
 
 ```
 Use Task tool:
@@ -230,7 +229,7 @@ Use Task tool:
 - model: {selected model - opus/sonnet/haiku}
 ```
 
-**上下文隔离提醒：** 仅传递与此特定任务相关的上下文。不要传递完整的对话历史记录。
+**上下文隔离提醒：**仅传递与此特定任务相关的上下文。不要传递完整的对话历史。
 
 ## 示例
 
@@ -242,12 +241,12 @@ Use Task tool:
 
 - 任务类型：架构 / 设计
 - 复杂度：高（性能要求、系统设计）
-- 输出篇幅：中等（设计文档）
-- 领域匹配：sdd:software-architect
+- 输出大小：中等（设计文档）
+- 领域匹配：`sdd:software-architect`
 
-**选择：** Opus + sdd:software-architect 代理
+**选择：** Opus + `sdd:software-architect` agent
 
-**分派：** 使用 Opus 模型、sdd:software-architect 提示词、CoT 前缀和 critique 后缀调用 Task 工具
+**调度：**使用 Opus 模型、`sdd:software-architect` prompt、CoT 前缀和批评后缀调用 Task tool
 
 ---
 
@@ -258,17 +257,17 @@ Use Task tool:
 **分析：**
 
 - 任务类型：文档（简单编辑）
-- 复杂度：低（单个文件、定义明确）
-- 输出篇幅：小（一个章节）
-- 领域匹配：无需匹配（任务过于简单）
+- 复杂度：低（单个文件，定义明确）
+- 输出大小：小（一个章节）
+- 领域匹配：不需要（任务过于简单）
 
-**选择：** Haiku（快速、经济，足以完成任务）
+**选择：** Haiku（快速、成本低，足以完成任务）
 
-**分派：** 使用 Haiku 模型、基础 CoT 前缀和基础 critique 后缀调用 Task 工具
+**调度：**使用 Haiku 模型、基础 CoT 前缀和基础批评后缀调用 Task tool
 
 ---
 
-### 示例 3：中等难度的实现任务（Sonnet + Developer）
+### 示例 3：中等实现任务（Sonnet + Developer）
 
 **输入：** `/launch-sub-agent Implement pagination for /users endpoint following patterns in /products`
 
@@ -276,12 +275,12 @@ Use Task tool:
 
 - 任务类型：代码实现
 - 复杂度：中等（遵循现有模式）
-- 输出篇幅：中等（实现 + 测试）
-- 领域匹配：sdd:developer
+- 输出大小：中等（实现 + 测试）
+- 领域匹配：`sdd:developer`
 
-**选择：** Sonnet + sdd:developer 代理（不复杂，但需要领域专业知识）
+**选择：** Sonnet + `sdd:developer` agent（任务不复杂，但需要领域专业知识）
 
-**分派：** 使用 Sonnet 模型、sdd:developer 提示词、CoT 前缀和 critique 后缀调用 Task 工具
+**调度：**使用 Sonnet 模型、`sdd:developer` prompt、CoT 前缀和批评后缀调用 Task tool
 
 ---
 
@@ -291,39 +290,39 @@ Use Task tool:
 
 **分析：**
 
-- 任务类型：研究 / 比较
-- 复杂度：高（比较分析、建议）
-- 输出篇幅：大（综合研究报告）
-- 领域匹配：sdd:researcher
+- 任务类型：研究 / 对比
+- 复杂度：高（比较分析、提出建议）
+- 输出大小：大（全面的研究）
+- 领域匹配：`sdd:researcher`
 
-**选择：** Opus + sdd:researcher 代理
+**选择：** Opus + `sdd:researcher` agent
 
-**分派：** 使用 Opus 模型、sdd:researcher 提示词、CoT 前缀和 critique 后缀调用 Task 工具
+**调度：**使用 Opus 模型、`sdd:researcher` prompt、CoT 前缀和批评后缀调用 Task tool
 
 ## 最佳实践
 
 ### 上下文隔离
 
 - 仅传递与特定任务相关的上下文
-- 避免传递完整的对话历史记录
-- 让子代理通过工具自行发现代码库中的模式
+- 避免传递完整的对话历史
+- 让子代理通过工具发现代码库中的模式
 - 使用文件路径和引用，而不是嵌入大量内容
 
 ### 模型选择
 
-- 如有疑问，使用 Opus（质量优先于成本）
-- 仅将 Haiku 用于真正简单的任务
-- 将 Sonnet 用于“繁重工作”——需要能力，但不需要天才般的表现
+- 不确定时，使用 Opus（质量优先于成本）
+- 仅对真正琐碎的任务使用 Haiku
+- 对于“苦力活”，使用 Sonnet——需要一定能力，但不需要天才级表现
 - 生产代码始终值得使用 Opus
 
-### 专业化代理
+### 专业代理
 
 - 当领域专业知识能够明显提升质量时使用
-- 与 CoT 和 critique 模式结合使用
-- 不要强行为通用任务指定专业化代理
+- 与 CoT 和批评模式结合使用
+- 不要强行让通用任务使用专业代理
 
 ### 质量门槛
 
-- 自我批判循环不可协商
-- 子代理必须先回答验证问题，然后才能完成任务
-- 接受前必须审查子代理的输出
+- 自我批评循环不可省略
+- 子代理必须先回答验证问题，然后才能完成
+- 接受子代理输出前先进行审核

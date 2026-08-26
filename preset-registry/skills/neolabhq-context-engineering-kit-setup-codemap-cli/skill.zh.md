@@ -1,7 +1,6 @@
 ---
 name: setup-codemap-cli
 description: Guide for setup Codemap CLI for intelligent codebase visualization and navigation
-argument-hint: Optional - specific configuration preferences or OS type
 ---
 用户输入：
 
@@ -17,22 +16,22 @@ $ARGUMENTS
 
 **选项：**
 
-1. **项目级（通过 git 共享）** - 配置由版本控制跟踪，并与团队共享
-   - CLAUDE.md 更新位置：`./CLAUDE.md`
-   - Hook 设置位置：`./.claude/settings.json`
+1. **项目级别（通过 git 共享）** - 配置纳入版本控制，与团队共享
+   - CLAUDE.md 更新至：`./CLAUDE.md`
+   - Hook 设置写入：`./.claude/settings.json`
 
-2. **项目级（个人偏好）** - 配置保留在本地，不由 git 跟踪
-   - CLAUDE.md 更新位置：`./CLAUDE.local.md`
-   - Hook 设置位置：`./.claude/settings.local.json`
-   - 验证这些文件是否已列入 `.gitignore`，如果没有，则将其添加进去
+2. **项目级别（个人偏好）** - 配置保留在本地，不纳入 git 跟踪
+   - CLAUDE.md 更新至：`./CLAUDE.local.md`
+   - Hook 设置写入：`./.claude/settings.local.json`
+   - 确认这些文件已列在 `.gitignore` 中，如未列出则添加
 
-3. **用户级（全局）** - 配置适用于该用户的所有项目
-   - CLAUDE.md 更新位置：`~/.claude/CLAUDE.md`
-   - Hook 设置位置：`~/.claude/settings.json`
+3. **用户级别（全局）** - 配置应用于该用户的所有项目
+   - CLAUDE.md 更新至：`~/.claude/CLAUDE.md`
+   - Hook 设置写入：`~/.claude/settings.json`
 
-保存用户的选择，并在后续步骤中使用相应的路径。
+保存用户的选择，并在后续步骤中使用相应路径。
 
-## 2. 检查是否已安装 Codemap
+## 2. 检查 Codemap 是否已安装
 
 运行 `codemap -help` 检查 codemap 是否已安装。
 
@@ -40,11 +39,11 @@ $ARGUMENTS
 
 ## 3. 加载 Codemap 文档
 
-阅读以下文档以了解 Codemap 的功能：
+阅读以下文档，以了解 Codemap 的功能：
 
-- 加载 <https://raw.githubusercontent.com/JordanCoin/codemap/refs/heads/main/README.md>，了解 Codemap 是什么及其功能
+- 加载 <https://raw.githubusercontent.com/JordanCoin/codemap/refs/heads/main/README.md>，了解 Codemap 是什么以及它具备哪些功能
 
-## 4. 指导用户完成安装
+## 4. 引导用户完成安装
 
 ### macOS/Linux（Homebrew）
 
@@ -69,7 +68,7 @@ codemap .
 
 ## 6. 更新 CLAUDE.md 文件
 
-使用步骤 1 中确定的路径。成功安装 Codemap 后，使用以下内容更新相应的 CLAUDE.md 文件：
+使用第 1 步确定的路径。Codemap 成功安装后，使用以下内容更新相应的 CLAUDE.md 文件：
 
 ```markdown
 ## Use Codemap CLI for Codebase Navigation
@@ -125,7 +124,7 @@ codemap --diff --ref develop
 
 ## 7. 更新 .gitignore 文件
 
-更新 .gitignore 文件以包含 `.codemap/` 目录：
+更新 .gitignore 文件，使其包含 `.codemap/` 目录：
 
 ```text
 .codemap/
@@ -133,14 +132,14 @@ codemap --diff --ref develop
 
 ## 8. 测试 Codemap
 
-运行快速测试以验证一切是否正常工作：
+运行快速测试以验证一切正常：
 
 ```bash
 codemap .
 codemap --diff
 ```
 
-## 9. 将钩子添加到设置文件
+## 9. 将 hooks 添加到设置文件
 
 - 使用步骤 1 中确定的设置路径。如果设置文件不存在，则创建该文件并添加以下内容：
 
@@ -156,21 +155,21 @@ codemap --diff
     - 使用 `codemap hook session-start --ref=master`，而不是常规的 `codemap hook session-start`
     - 对其余命令也添加 `--ref=master` 标志。
 
-- 询问用户是否要添加其他钩子，并提供带有说明的选项列表。添加用户要求的钩子。
+- 询问用户是否希望添加其他 hooks，并提供包含描述的选项列表。添加用户要求的 hooks。
 
-### 可用钩子
+### 可用的 Hooks
 
-| 命令 | 触发器 | 说明 |
+| 命令 | 触发条件 | 描述 |
 |---------|---------|-------------|
-| `codemap hook session-start` | SessionStart | 完整目录树、枢纽、分支差异、上次会话上下文 |
-| `codemap hook pre-edit` | PreToolUse (Edit\|Write) | 哪些文件导入了该文件，以及该文件导入了哪些枢纽 |
-| `codemap hook post-edit` | PostToolUse (Edit\|Write) | 更改的影响（与编辑前相同） |
-| `codemap hook prompt-submit` | UserPromptSubmit | 提及文件的枢纽上下文及会话进度 |
-| `codemap hook pre-compact` | PreCompact | 将枢纽状态保存到 .codemap/hubs.txt |
+| `codemap hook session-start` | SessionStart | 完整树结构、中心节点、分支差异、上次会话上下文 |
+| `codemap hook pre-edit` | PreToolUse (Edit\|Write) | 谁导入了该文件，以及该文件导入了哪些中心节点 |
+| `codemap hook post-edit` | PostToolUse (Edit\|Write) | 更改的影响（与 pre-edit 相同） |
+| `codemap hook prompt-submit` | UserPromptSubmit | 所提及文件的中心节点上下文 + 会话进度 |
+| `codemap hook pre-compact` | PreCompact | 将中心节点状态保存到 .codemap/hubs.txt |
 | `codemap hook session-stop` | SessionEnd | 包含行数和统计信息的编辑时间线 |
 
 
-### 包含完整钩子配置的文件示例
+### 包含完整 hooks 配置的文件示例
 
 ```json
 {

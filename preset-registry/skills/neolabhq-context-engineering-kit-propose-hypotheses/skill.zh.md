@@ -1,12 +1,10 @@
 ---
 name: propose-hypotheses
 description: Execute complete FPF cycle from hypothesis generation to decision
-argument-hint: "[problem-statement]"
-allowed-tools: Task, Read, Write, Bash, AskUserQuestion
 ---
 # 提出假设工作流
 
-执行第一性原理框架（FPF）循环：生成相互竞争的假设、验证逻辑、验证证据、审计可信度并作出决策。
+执行第一性原理框架（FPF）循环：生成相互竞争的假设、验证逻辑、验证证据、审计可信度，并作出决策。
 
 ## 用户输入
 
@@ -18,14 +16,14 @@ Problem Statement: $ARGUMENTS
 
 ### 步骤 1a：创建目录结构（主代理）
 
-如果 `.fpf/` 目录结构不存在，则创建该结构：
+如果 `.fpf/` 目录结构不存在，则创建：
 
 ```bash
 mkdir -p .fpf/{evidence,decisions,sessions,knowledge/{L0,L1,L2,invalid}}
 touch .fpf/{evidence,decisions,sessions,knowledge/{L0,L1,L2,invalid}}/.gitkeep
 ```
 
-**后置条件**：`.fpf/` 目录框架已存在。
+**后置条件**：`.fpf/` 目录骨架已存在。
 
 ---
 
@@ -33,7 +31,7 @@ touch .fpf/{evidence,decisions,sessions,knowledge/{L0,L1,L2,invalid}}/.gitkeep
 
 使用 sonnet[1m] 模型启动 fpf-agent：
 - **描述**："初始化 FPF 上下文"
-- **提示词**：
+- **提示**：
   ```
   Read ${CLAUDE_PLUGIN_ROOT}/tasks/init-context.md and execute.
 
@@ -48,7 +46,7 @@ touch .fpf/{evidence,decisions,sessions,knowledge/{L0,L1,L2,invalid}}/.gitkeep
 
 使用 sonnet[1m] 模型启动 fpf-agent：
 - **描述**："生成 L0 假设"
-- **提示词**：
+- **提示**：
   ```
   Read ${CLAUDE_PLUGIN_ROOT}/tasks/generate-hypotheses.md and execute.
 
@@ -68,19 +66,19 @@ touch .fpf/{evidence,decisions,sessions,knowledge/{L0,L1,L2,invalid}}/.gitkeep
 
 ### 步骤 3：呈现摘要（主代理）
 
-1. 从 `.fpf/knowledge/L0/` 读取所有 L0 假设文件
+1. 读取 `.fpf/knowledge/L0/` 中的所有 L0 假设文件
 2. 呈现代理响应中的摘要表格。
-3. 询问用户："你想添加自己的假设吗？（是/否）"
+3. 询问用户："您是否希望添加自己的假设？（是/否）"
 
 ---
 
 ### 步骤 4：添加用户假设（FPF 代理，条件循环）
 
-**条件**：用户表示要添加假设。
+**条件**：用户回答是，表示要添加假设。
 
 使用 sonnet[1m] 模型启动 fpf-agent：
 - **描述**："添加用户假设"
-- **提示词**：
+- **提示**：
   ```
   Read ${CLAUDE_PLUGIN_ROOT}/tasks/add-user-hypothesis.md and execute.
 
@@ -91,17 +89,17 @@ touch .fpf/{evidence,decisions,sessions,knowledge/{L0,L1,L2,invalid}}/.gitkeep
 
 **循环**：添加假设后返回步骤 3。
 
-**退出**：当用户表示不添加或拒绝继续添加时退出。
+**退出**：用户回答否或拒绝继续添加时退出。
 
 ---
 
 ### 步骤 5：验证逻辑（并行子代理）
 
-**条件**：用户已完成假设添加。
+**条件**：用户完成添加假设。
 
 对于 `.fpf/knowledge/L0/` 中的每个 L0 假设文件，使用 sonnet[1m] 模型并行启动 fpf-agent：
 - **描述**："验证假设：<hypothesis-id>"
-- **提示词**：
+- **提示**：
   ```
   Read ${CLAUDE_PLUGIN_ROOT}/tasks/verify-logic.md and execute.
 
@@ -119,7 +117,7 @@ touch .fpf/{evidence,decisions,sessions,knowledge/{L0,L1,L2,invalid}}/.gitkeep
 
 对于 `.fpf/knowledge/L1/` 中的每个 L1 假设文件，使用 sonnet[1m] 模型并行启动 fpf-agent：
 - **描述**："验证假设：<hypothesis-id>"
-- **提示词**：
+- **提示**：
   ```
   Read ${CLAUDE_PLUGIN_ROOT}/tasks/validate-evidence.md and execute.
 
@@ -129,15 +127,15 @@ touch .fpf/{evidence,decisions,sessions,knowledge/{L0,L1,L2,invalid}}/.gitkeep
   **Move**: After you complete validation, move the file to `.fpf/knowledge/L2/` or `.fpf/knowledge/invalid/`.
   ```
 
-**等待所有代理完成**，然后检查文件是否已移至 `.fpf/knowledge/L2/` 或 `.fpf/knowledge/invalid/`。
+**等待所有代理完成**，然后检查文件是否已移动到 `.fpf/knowledge/L2/` 或 `.fpf/knowledge/invalid/`。
 
 ---
 
 ### 步骤 7：审计可信度（并行子代理）
 
-针对 `.fpf/knowledge/L2/` 中的每个 L2 假设文件，使用 sonnet[1m] 模型并行启动 fpf-agent：
+对于 `.fpf/knowledge/L2/` 中的每个 L2 假设文件，使用 sonnet[1m] 模型并行启动 fpf-agent：
 - **描述**："审计可信度：<hypothesis-id>"
-- **提示词**：
+- **提示**：
   ```
   Read ${CLAUDE_PLUGIN_ROOT}/tasks/audit-trust.md and execute.
 
@@ -149,15 +147,15 @@ touch .fpf/{evidence,decisions,sessions,knowledge/{L0,L1,L2,invalid}}/.gitkeep
   **Reply**: with R_eff score and weakest link
   ```
 
-**等待所有代理完成**，然后检查审计报告是否已在 `.fpf/evidence/` 中创建。
+**等待所有代理完成**，然后检查审计报告是否已创建于 `.fpf/evidence/`。
 
 ---
 
 ### 步骤 8：做出决策（FPF 代理）
 
 使用 sonnet[1m] 模型启动 fpf-agent：
-- **描述**："创建设计决策记录"
-- **提示词**：
+- **描述**："创建决策记录"
+- **提示**：
   ```
   Read ${CLAUDE_PLUGIN_ROOT}/tasks/decide.md and execute.
 
@@ -178,35 +176,35 @@ touch .fpf/{evidence,decisions,sessions,knowledge/{L0,L1,L2,invalid}}/.gitkeep
   **Rationale**: <brief explanation>
   ```
 
-**等待代理完成**，然后检查决策记录是否已在 `.fpf/decisions/` 中创建。
+**等待代理完成**，然后检查决策记录是否已创建于 `.fpf/decisions/`。
 ---
 
-### 步骤 9：展示最终摘要（主代理）
+### 步骤 9：呈现最终摘要（主代理）
 
-1. 从 `.fpf/decisions/` 读取 DRR
-2. 展示代理响应中的结果。
-3. 展示后续步骤：
+1. 从 `.fpf/decisions/` 中读取 DRR
+2. 呈现代理响应中的结果。
+3. 呈现后续步骤：
    - 实施选定的假设
    - 使用 `/fpf:status` 检查 FPF 状态
    - 如果代码库发生变化，使用 `/fpf:actualize`
-4. 询问用户是否同意该决策；如果不同意，则从步骤 8 启动 fpf-agent，并指示其按照用户的要求修改决策。
+4. 询问用户是否同意该决策；如果不同意，则在步骤 8 启动 fpf-agent，并按照用户的要求修改决策。
 
 ---
 
 ## 完成条件
 
-满足以下条件时，工作流即告完成：
-- [ ] `.fpf/` 目录结构已存在
-- [ ] 上下文已记录在 `.fpf/context.md` 中
-- [ ] 假设已生成、核验、验证并审计
-- [ ] DRR 已在 `.fpf/decisions/` 中创建
-- [ ] 已向用户展示最终摘要
+满足以下条件时，工作流完成：
+- [ ] `.fpf/` 目录结构存在
+- [ ] 上下文已记录到 `.fpf/context.md`
+- [ ] 假设已生成、验证、校验并完成审计
+- [ ] DRR 已创建于 `.fpf/decisions/`
+- [ ] 已向用户呈现最终摘要
 
 **已创建的产物**：
 - `.fpf/context.md` - 问题上下文
 - `.fpf/knowledge/L0/*.md` - 初始假设
-- `.fpf/knowledge/L1/*.md` - 已核验的假设
-- `.fpf/knowledge/L2/*.md` - 已验证的假设
-- `.fpf/knowledge/invalid/*.md` - 已拒绝的假设
+- `.fpf/knowledge/L1/*.md` - 已验证的假设
+- `.fpf/knowledge/L2/*.md` - 已校验的假设
+- `.fpf/knowledge/invalid/*.md` - 被拒绝的假设
 - `.fpf/evidence/*.md` - 证据文件
-- `.fpf/decisions/*.md` - 设计原理记录
+- `.fpf/decisions/*.md` - 设计理由记录

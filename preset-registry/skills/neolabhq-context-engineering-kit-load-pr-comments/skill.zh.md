@@ -1,58 +1,62 @@
 ---
 name: load-pr-comments
 description: Use to load open/unresolved PR review comments then aggregate them as tasks in .specs/comments/*.md for parallel agents to fix.
-argument-hint: Optional PR number or URL - defaults to the PR of the current git branch
 ---
 # 将未解决的 PR 审查评论加载为并行任务
 
-仅加载处于开放/未解决状态的 PR 审查线程，并将其改写为分组的 Markdown 任务文件，保存到 `.specs/comments/*.md` 下，确保每个任务都可由不同的并行代理分别实现，且互不重叠。
+仅加载处于开放/未解决状态的 PR 审查线程，并将其重写为 `.specs/comments/*.md` 下的分组 markdown 任务文件，确保每个文件都可以由单独的并行代理实现，且彼此之间没有重叠。
 
-## 关键准则
+## 关键指南
 
-- 你必须仅加载 resolved 状态为 false 的线程。跳过已解决的线程。
-- 你必须将每条评论改写为可执行的任务要求，而不是摘要。原样保留其实质内容（代码建议、确切指令）。
-- 你绝不能在 GitHub 上发布、回复或修改任何内容。此 Skill 对 API 仅执行只读操作。
-- 你必须对评论进行分组，确保每个文件都可独立实现，并且文件之间不存在任何重复内容。
+- 你**必须仅加载 resolved state 为 false 的线程**。跳过已解决的线程。
+- 你**必须将每条评论重写为可执行的 TASK 要求**，而不是摘要。保留实质内容（代码建议、确切指令）不变。
+- 你**不得在 GitHub 上发布、回复或修改任何内容**。此 skill 仅对 API 执行只读操作。
+- 你**必须对评论进行分组**，使每个文件都可以独立实现，并且文件之间**不得有重复内容**。
 
-## 第 0 步：确认可用的工具
+## 步骤 0：验证有哪些工具可用
 
-1. 检查 GitHub CLI 是否已安装并完成身份验证：
+1. 检查是否已安装并完成身份验证的 GitHub CLI：
 
    ```bash
    gh auth status
    ```
 
-2. 检查 GitHub MCP 服务器是否可用：
+2. 检查 GitHub MCP server 是否可用：
 
    ```bash
    mcp__MCP_DOCKER__pull_request_read
    ```
    或者，如果是直接安装的，则使用不带 `MCP_DOCKER` 前缀的类似命令。
 
-- 如果两者都可用，可使用其中任意一种，只要其拥有访问该仓库所需的足够权限。
-- 如果 GitHub MCP 服务器可用，但结构不同，请进行调整以符合预期结构。
-- 如果两者均不可用，对于公开仓库，尝试直接通过 curl 加载。对于私有仓库，请用户安装 GitHub CLI 或 GitHub MCP 服务器。
-- 如果未安装 MCP 服务器，但已安装 GitHub CLI 且尚未完成身份验证，请用户运行 `gh auth login` 进行身份验证。
+- 如果两者都可用，使用对仓库具有足够访问权限的任意一个。
+- 如果 github mcp server 可用但结构不同，请进行调整以符合预期结构。
+- 如果两者都不可用，请尝试通过 curl 直接加载，前提是仓库为公开仓库。如果仓库为私有仓库，请要求用户安装 GitHub CLI 或 GitHub MCP server。
+- 如果未安装 MCP server，但已安装 github cli 且未完成身份验证，请要求用户运行 `gh auth login` 完成身份验证。
 
-## 第 1 步：确定目标 PR
+## 步骤 1：解析目标 PR
 
-- 显式指定的 PR 参数始终优先于当前分支解析。如果传入了 PR 编号或 URL，则使用它（例如 URL `https://github.com/{owner}/{repo}/pull/{n}` → 编号 `{n}`），并且不要查询当前分支。
-- 否则，默认使用当前分支对应的 PR：
+- 显式传入的 PR 参数**始终优先**于当前分支解析。如果传入了 PR 编号或 URL，则使用它（类似 `https://github.com/{owner}/{repo}/pull/{n}` 的 URL → 编号 `{n}`），并且**不要**查询当前分支。
+- 否则，默认使用**当前分支**对应的 PR：
 
 ```bash
-gh pr view --json number,url,headRefName   # current branch's PR
+gh pr view --json number,url,headRefName   # 当前分支的 PR
 ```
 
-- 解析仓库所有者/名称：`gh repo view --json owner,name`。
-- 如果当前分支不存在对应的 PR，`gh pr view` 会返回错误 `"no pull requests found"`——立即停止并报告该分支未关联任何 PR（请用户提供 PR 编号/URL）。
+- 解析仓库 owner/name：
 
-## 第 2 步：检索未解决的评论
+```bash
+gh repo view --json owner,name
+```
 
-已解决/未解决状态属于 GraphQL 的 `reviewThreads { isResolved }` 概念——REST 的 `/pulls/{n}/comments` 端点不会公开该状态。使用以下两种方法之一；如果首选方法不可用，则回退到另一种方法。
+- 如果当前分支不存在 PR，`gh pr view` 会报错 `"no pull requests found"` — **停止并报告该分支没有关联的 PR**（要求用户提供 PR 编号/URL）。
 
-### 首选方法：gh CLI（GraphQL）
+## 步骤 2：获取未解决的评论
 
-直接在 jq 中筛选 `isResolved == false`：
+已解决/未解决状态是 GraphQL 中的 `reviewThreads { isResolved }` 概念 — REST `/pulls/{n}/comments` 端点不会公开此信息。使用以下两种方法之一；如果主要方法不可用，则回退到另一种方法。
+
+### 主要方法：gh CLI（GraphQL）
+
+直接在 jq 中过滤 `isResolved == false`：
 
 ```bash
 gh api graphql -f query='
@@ -83,13 +87,13 @@ query($owner:String!,$repo:String!,$pr:Int!){
              | {author: .author.login, url, body, diffHunk}]}]'
 ```
 
-这会返回每个尚未解决的线程，包括其文件 `path`、`isOutdated` 标志、可用的 `line`，以及按顺序排列的评论（作者、正文、永久链接 `url`、`diffHunk`）。
+这会返回每个未解决线程及其文件 `path`、`isOutdated` 标志、可用的 `line`，以及按顺序排列的评论（作者、正文、永久链接 `url`、`diffHunk`）。
 
-重要提示：对于已过时的线程，`line` 为 `null`（差异位置已发生移动）。上面的 jq 已通过 `line // startLine // originalLine` 进行回退，因此只要存在任一锚点，`line` 就不会为 null。当这三个值全都为 null 时，请在模板中完全省略 `:<line>` 部分——绝不要渲染 `path:null`。
+IMPORTANT：对于 OUTDATED 线程，`line` 为 `null`（diff 已移动）。上面的 jq 已经回退到 `line // startLine // originalLine`，因此只要存在任何定位点，`line` 就不会为 null。当这三个值全部为 null 时，在模板中完全省略 `:<line>` 片段——绝不要渲染 `path:null`。
 
 ### 回退方案：GitHub MCP
 
-如果 GitHub MCP 服务器（`MCP_DOCKER`）可用，请使用 `mcp__MCP_DOCKER__pull_request_read` 工具，并将 `method` 设置为 `"get_review_comments"`：
+如果 GitHub MCP 服务器（`MCP_DOCKER`）可用，请使用 `mcp__MCP_DOCKER__pull_request_read` 工具，并设置 `method: "get_review_comments"`：
 
 ```
 mcp__MCP_DOCKER__pull_request_read
@@ -100,37 +104,37 @@ mcp__MCP_DOCKER__pull_request_read
   perPage: 100
 ```
 
-它会返回 `review_threads[]`，每个线程都包含 `is_resolved`、`is_outdated`、`is_collapsed`（全部采用 snake_case——已根据此工具的响应验证）和 `comments[]`（`body`、`path`、`author`、`html_url`）。仅保留 `is_resolved` 为 `false` 的线程。请注意，MCP 评论对象会提供 `path`，但不会提供行号，因此请使用 `html_url` 作为位置锚点。当 `pageInfo.hasNextPage` 为 true 时，使用 `after: <endCursor>` 进行分页。
+它会返回 `review_threads[]`，其中每个线程包含 `is_resolved`、`is_outdated`、`is_collapsed`（全部为 snake_case——已根据此工具的响应进行验证）以及 `comments[]`（`body`、`path`、`author`、`html_url`）。仅保留 `is_resolved` 为 `false` 的线程。请注意，MCP 评论对象提供 `path`，但不提供行号，因此应使用 `html_url` 作为位置锚点。当 `pageInfo.hasNextPage` 为 true 时，使用 `after: <endCursor>` 进行分页。
 
-## 第 3 步：分组并改写为任务
+## 步骤 3：分组并改写为任务
 
-将尚未解决的线程转换为适合并行代理处理的聚焦任务文件。
+将未解决的线程转换为面向并行代理的、重点明确的任务文件。
 
-首先去重（在分组之前）：如果两个或更多线程要求在同一个 `path`（以及相同或重叠的行）进行同一项更改，或者包含完全相同的修复建议，请将它们合并为一项要求。不要为每个重复线程分别生成一个列表项——这一点对挑剔意见文件尤其重要，因为重复的琐碎建议往往会集中出现。
+首先去重（分组之前）：如果两个或更多线程在同一个 `path` 的相同或重叠行上要求进行相同更改，或包含完全相同的建议修复，则将它们合并为一项需求。不要为每个重复线程分别输出一行——这在重复琐碎建议聚集的 nitpick 文件中尤其重要。
 
 每个线程的改写规则：
 
-- 去掉对话式措辞和作者姓名。输出任务，而不是对话记录。
-- 如果人类审阅者留下了反馈，请将该反馈写为要求。
-- 如果只有机器人/AI 建议（Claude、CodeRabbit、Copilot 等），请将该修复建议写为要求。
-- 保留实质内容——不要通过总结而丢失代码块、建议的差异或准确措辞。
-- 添加上下文：简短的问题描述，以及文件/行的链接（评论的 `url`/`html_url`，外加 `path:line`，如有）。如果 `line` 为 null（线程已过时或无法锚定），则只写 `path`，不添加 `:line` 部分，并注明该线程已过时。
+- 删除对话语境和作者姓名。输出任务，而不是对话记录。
+- 如果是 HUMAN reviewer 留下了反馈，将该反馈写成需求。
+- 如果只有 bot/AI 建议存在（Claude、CodeRabbit、Copilot 等），将该修复建议写成需求。
+- 保留实质内容——不要删去代码块、建议 diff 或精确措辞。
+- 添加上下文：简短的问题描述，以及指向文件/行的链接（评论的 `url`/`html_url`，并在可用时附上 `path:line`）。如果 `line` 为 null（已过时/无法锚定的线程），只写 `path`，不要添加 `:line` 片段，并注明它已过时。
 
-改写前后示例（务必遵循“改写为任务，不要总结”）：
+改写前/后示例（明确“改写为任务，而不是总结”）：
 
-- 原始线程（机器人）：“commands 不正确，实际的 commands 更像是 ```/add-task /plan-task /implement-task```”
-- 任务要求：“- [ ] 将列出的命令替换为正确的命令：`/add-task`、`/plan-task`、`/implement-task`”（逐字保留建议，去掉对话式措辞——而不是“修复命令”）。
+- 原始线程（bot）："commands is incorrect, real commands is more like ```/add-task /plan-task /implement-task```"
+- 任务需求："- [ ] 将列出的命令替换为正确的命令：`/add-task`、`/plan-task`、`/implement-task`"（原建议保持原样，删除对话语境——不是“修复命令”。）
 
 分组规则：
 
-- 按文件或功能分组，确保两个代理绝不会修改同一区域 → 不产生冲突、不重复工作。
-- 不要将同一条评论重复放入多个文件。
-- 将挑剔意见/琐碎的单行更改汇总到一个合并文件中（例如 `nitpicks.md`）。
-- 文件总数限制为 ≤5。不要过度合并无关的更改——每个文件都必须是一个单一、聚焦且可独立实施的工作单元。
+- 按文件或功能分组，使两个代理不会修改同一区域 → 无冲突、无重复工作。
+- 不要在多个文件中重复同一条评论。
+- 将 nitpick / 琐碎的一行修改汇总到一个组合文件中（例如 `nitpicks.md`）。
+- 总文件数上限为 ≤5 个。不要将不相关的更改过度合并——每个文件都必须是一个单一、重点明确且可独立实现的工作单元。
 
-## 步骤 4：处理 .gitignore
+## 步骤 4：处理 `.gitignore`
 
-确保生成的评论文件被忽略。此操作具有幂等性：仅在条目缺失时追加，并且如果 `.gitignore` 不存在，`>>` 会创建该文件。
+确保生成的评论文件会被忽略。此操作具有幂等性：仅当条目缺失时才追加，并且如果 `.gitignore` 不存在，`>>` 会创建它。
 
 ```bash
 grep -qF '.specs/comments/*.md' .gitignore 2>/dev/null || printf '\n.specs/comments/*.md\n' >> .gitignore
@@ -171,15 +175,15 @@ File: `<path>:<line>`
 
 ## 步骤 6：报告
 
-汇总以下内容：目标 PR（编号 + url）、加载的未解决线程数量、创建的文件及其主题，以及任何被跳过的线程（已解决）或遇到的限制（例如 MCP 不可用）。
+总结：目标 PR（编号 + URL）、已加载的未解决线程数量、创建的文件及其主题，以及任何被跳过的线程（已解决）或遇到的限制（例如 MCP 不可用）。
 
 ## 边界情况
 
 | 情况 | 处理方式 |
 |-----------|----------|
-| 当前分支没有 PR | `gh pr view` 报错 → 报告错误并请求提供 PR 编号/URL |
+| 当前分支没有 PR | `gh pr view` 报错 → 报告该情况并请求提供 PR 编号/URL |
 | 参数是 URL | 提取 `/pull/` 后面的末尾编号 |
-| 未解决线程数为零 | 不创建任何文件；报告“没有未解决的评论” |
-| 超过 100 个线程 | 分页（GraphQL `after` 游标 / MCP `after`） |
-| MCP 不可用 | 使用 gh GraphQL；如果两者都不可用，则报告限制 |
-| 仅存在已解决的线程 | 全部跳过；报告没有可执行项 |
+| 未解决线程数量为 0 | 不创建文件；报告“没有未解决的评论” |
+| 线程数量 >100 | 分页（GraphQL `after` 游标 / MCP `after`） |
+| MCP 不可用 | 使用 gh GraphQL；如果两者都不可用，则报告该限制 |
+| 仅存在已解决的线程 | 跳过全部线程；报告没有可处理的线程 |
