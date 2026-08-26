@@ -1,0 +1,26 @@
+{
+  "id": "chrisbanes-skills-implement",
+  "name": "implement",
+  "description": "Use when an implementation owner must deliver one supplied work item.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "chrisbanes",
+  "install_path": ".claude/skills/implement/SKILL.md",
+  "source": {
+    "repo": "chrisbanes/skills",
+    "url": "https://github.com/chrisbanes/skills/blob/main/evals/fixtures/workflow-subagents/.agents/skills/implement/SKILL.md",
+    "path": "evals/fixtures/workflow-subagents/.agents/skills/implement/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-26T23:15:00.138Z",
+    "stars": 992,
+    "language": "Python",
+    "pushed_at": "2026-08-26T21:08:35Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "面向实现负责人，用于承接并交付一个明确的工作项，适合任务范围清晰、需要单点落实的开发场景。"
+}

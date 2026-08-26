@@ -4,37 +4,37 @@ description: Python video composition with moviepy 2.x — overlaying determinis
 ---
 # 用于视频制作的 moviepy
 
-moviepy 是该工具包中用于**在 AI 生成的视频上叠加确定性文本**的首选库，也适合在不使用 Remotion 工具链的情况下构建简短、单文件的 Python 视频项目。
+moviepy 是该工具包首选的库，用于**在 AI 生成的视频上叠加确定性的文本**，以及在不使用 Remotion 工具链的情况下构建短小的单文件 Python 视频项目。
 
-其更深层的原则是**可信文本**：在任何文本*必须*清晰可读、准确且一致的类型中（无论出于法律、编辑还是商业原因），由 AI 渲染的画面内文本都是不可接受的，而使用 moviepy 进行叠加处理则是自然的解决方案。姓名的拼写必须正确。价格必须准确。来源标注必须达到像素级精确。AI 生成模型无法保证做到这些。
+更深层的原则是**值得信赖的文本**：任何必须确保文本*可读、准确且一致*的类型（无论出于法律、编辑还是商业原因），都不适合使用 AI 在画面中渲染文本，而应自然地采用 moviepy 叠加步骤来解决。姓名必须拼写正确。价格必须准确无误。来源署名必须做到像素级精确。AI 生成模型无法保证这些要求。
 
 ## 何时使用 moviepy，何时使用 Remotion
 
-| 在以下情况中使用 moviepy… | 在以下情况中使用 Remotion… |
-|----------------------------|-----------------------------|
-| 在 LTX-2 或 SadTalker 输出上叠加文本/标签 | 构建长篇迭代评审或产品演示 |
-| 在单个 `build.py` 中构建 30 秒以内的广告风格短片 | 多模板、多品牌、设计密集型工作 |
-| 合成数据驱动的视觉内容（matplotlib `FuncAnimation` → mp4） | 任何需要 React 组件或复用设计系统的内容 |
-| 对现有视频文件进行一次性转换 | 任何重视项目生命周期（规划 → 渲染）的工作 |
-| 希望完全不使用 Node.js，也不承担 React 的认知负担 | 希望在 Remotion Studio 中获得热重载预览 |
+| 在以下情况下使用 moviepy…… | 在以下情况下使用 Remotion…… |
+|-------------------|---------------------|
+| 在 LTX-2 或 SadTalker 的输出上叠加文本/标签 | 构建长篇 sprint review 或产品演示 |
+| 在单个 `build.py` 中构建时长少于 30 秒的广告风格短片 | 多模板、多品牌、设计密集型工作 |
+| 合成数据驱动的视觉内容（matplotlib `FuncAnimation` → mp4） | 任何需要 React 组件或设计系统复用的场景 |
+| 对现有视频文件进行一次性转换 | 任何需要关注项目生命周期（规划 → 渲染）的场景 |
+| 希望完全不使用 Node.js / 不承担 React 的心智负担 | 希望在 Remotion Studio 中使用热重载预览 |
 
-本技能涉及的所有内容都有两个可运行的参考示例，位于 `examples/` 中：
+该 skill 的所有内容都在 `examples/` 中提供了两个可运行的参考示例：
 
-- **`examples/quick-spot/build.py`** — 15 秒广告风格短片。音频锚定时间线、文本叠加、可选旁白和自动压低音量的音乐。无需任何外部资源，开箱即可渲染无声视频。
-- **`examples/data-viz-chart/build.py`** — 带有确定性标题和来源标注的动画时间序列图表。展示 matplotlib（数据）与 moviepy（可信文本）之间的分工。
+- **`examples/quick-spot/build.py`** — 15 秒的广告风格短片。基于音频的时间线、文本叠加、可选的 VO + 闪避处理后的音乐。无需任何外部资源即可直接渲染出无声视频。
+- **`examples/data-viz-chart/build.py`** — 带有确定性标题和来源署名的动画时间序列图表。演示 matplotlib（数据）+ moviepy（值得信赖的文本）的分工。
 
-两者都可通过 `python3 build.py` 运行，并立即生成真实的 `out.mp4`。请将它们与本技能文档对照阅读——下文中的每一种模式都在这些示例中展示了可正常运行的实现。
+两者都可以通过 `uv run build.py` 运行，并立即生成真正的 `out.mp4`。请结合本 skill 阅读这些示例——下面的每一种模式都在那里展示了实际用法。
 
-**依赖项。** `moviepy`、`Pillow` 和 `matplotlib` 已在 `tools/requirements.txt` 中声明，可通过该工具包的一行 Python 安装命令进行安装：`python3 -m pip install -r tools/requirements.txt`。如果运行示例时遇到 `Missing dependency`，请从仓库根目录运行该命令——示例中的 `build.py` 文件也会在错误消息中给出相同提示，并正常退出，而不是直接打印未处理的回溯信息。
+**依赖项。** `moviepy`、`Pillow` 和 `matplotlib` 已在根目录的 `pyproject.toml` 中声明，并通过工具包提供的一行式 Python 设置命令 `uv sync` 安装。如果运行示例时遇到 `Missing dependency`，请从仓库根目录运行该命令——示例中的 `build.py` 文件也会在错误消息中告诉你相同的信息，并在干净退出时避免打印一段无提示的 traceback。
 
-## 主要用例：在 AI 生成的视频上叠加文本
+## 主要使用场景：在 AI 生成的视频上添加文本
 
-LTX-2 和 SadTalker 输出的都只是纯视觉内容：
+LTX-2 和 SadTalker 的输出都是没有文字的纯视觉内容：
 
-- **LTX-2** 无法可靠地渲染可读文本（模型会臆造字形——请参阅 ltx2 技能中的“Bad Prompts”）。
-- **SadTalker** 输出的是不带字幕、标签、下三分之一字幕条或上下文信息的说话头像。
+- **LTX-2** 无法可靠地渲染可读文本（模型会幻觉式地产生字形——参见 ltx2 skill 中的“糟糕的提示词”）。
+- **SadTalker** 输出的是没有字幕、标签、下三分之一字幕或上下文信息的说话人头像。
 
-解决方法是先生成干净的视觉内容，再使用 moviepy 以确定性的方式在其上合成文本。这是该工具包中的标准模式：
+解决方法是先干净地生成视觉内容，然后使用 moviepy 以确定性的方式将文本合成到其上。这是该工具包中的规范模式：
 
 ```python
 from moviepy import VideoFileClip, ImageClip, CompositeVideoClip
@@ -55,38 +55,38 @@ final = CompositeVideoClip([bg, title], size=(1920, 1080))
 final.write_videofile("lugh_with_caption.mp4", fps=30, codec="libx264")
 ```
 
-常见形式如下：
+常见的应用形式：
 
 | 形式 | LTX-2 用法 | SadTalker 用法 |
 |-------|-----------|---------------|
-| 主画面上的标题卡 | 在电影感的 LTX-2 补充镜头上叠加“隆重推出 LONGARM” | n/a |
-| 下三分之一字幕 / 姓名条 | n/a | 在讲话者画面下方显示“Lugh — 古代战神” |
-| 引语字幕 | 在 LTX-2 角色客串画面上叠加“我要回家了。” | 同样叠加在 SadTalker 讲话者画面上 |
-| 品牌署名 | 在最后一秒淡入徽标 + URL | 同上 |
-| 用于增强对比度的着色叠加层 | 在文字后方添加深海军蓝半透明图层 | 同上 |
+| 英雄镜头上的标题卡 | 在电影感的 LTX-2 B-roll 上叠加“LONGARM 隆重推出” | 不适用 |
+| 下三分之一字幕 / 姓名牌 | 不适用 | 在人物头像下方显示“Lugh——古代战神” |
+| 引语字幕 | 在 LTX-2 角色客串镜头上叠加“我要回家了。” | 同上，叠加在 SadTalker 人物头像上 |
+| 品牌署名 | 在最后一秒叠加淡入的 Logo + URL | 同上 |
+| 用于增强对比度的着色叠层 | 在文字后方添加深海军蓝半透明图层 | 同上 |
 
-## 最适合采用这种方式的视频类型
+## 尤其适合的类型
 
-“AI 视觉画面 + 确定性文字叠加”模式是多种视频风格的自然制作流程。如果请求符合以下任一类型，默认使用 moviepy：
+“AI 视觉内容 + 确定性文字叠加”模式是多种视频风格的自然制作流程。如果请求符合以下某种类型，默认使用 moviepy：
 
-| 类型 | 叠加的内容 | 为什么 moviepy 是正确选择 |
+| 类型 | 叠加内容 | 为什么 moviepy 是正确选择 |
 |-------|------------------|-------------------------------|
-| **新闻 / 讲话者新闻报道** | 讲话者姓名条、地点栏、突发新闻横幅、来源署名、重点引语 | 姓名拼写必须正确（涉及编辑规范 / 法律要求）。这是数量最多的类别。 |
-| **纪录片片段** | 受访者下三分之一字幕、章节标题、档案来源说明、地点标记 | 与新闻具有相同的可信度要求。 |
-| **预告片 / 宣传短片** | 标题卡、演职员信息叠加（“来自……的导演”）、日期闪现、引语卡、行动号召 | 时序必须精准、文字密集，每一帧都至关重要。`q2-townhall-longarm-ad` 示例正是这种类型。 |
-| **社交媒体短视频（Reels、TikTok、Shorts）** | 逐字准确的字幕，供静音观看；话题标签叠加 | 大多数社交媒体视频都是静音观看的；字幕不可或缺。 |
-| **带标注的产品演示** | 在屏幕录制画面上叠加价格提示、功能标签、“点击此处”指示、前后对比标签 | 价格和产品名称必须准确无误。 |
-| **教程 / 解说视频** | 步骤编号叠加、终端命令字幕、键盘快捷键提示 | 步骤编号必须连续，命令必须可以直接复制粘贴。 |
+| **新闻 / 人物访谈式新闻** | 演讲者姓名牌、地点栏、突发新闻横幅、来源署名、引语 | 姓名必须拼写正确（涉及编辑和法律要求）。按数量计算，这是最大的类别。 |
+| **纪录片片段** | 受访者下三分之一字幕、章节标题、档案来源署名、地点标记 | 与新闻相同的信任要求。 |
+| **预告片 / 宣传短片** | 标题卡、演职员信息叠加（“来自……导演”）、日期闪现、引语卡片、CTA | 时间安排紧凑、文字密集，每一帧都很重要。`q2-townhall-longarm-ad` 示例正是这种情况。 |
+| **社交媒体短视频（Reels、TikTok、Shorts）** | 适合静音观看的逐字准确字幕、主题标签叠加 | 大多数社交媒体视频观看时没有声音；字幕是必需的。 |
+| **带注释的产品演示** | 价格提示、功能标签、屏幕录制上的“点击此处”指示、前后对比标签 | 价格和产品名称必须准确。 |
+| **教程 / 讲解视频** | 步骤编号叠加、终端命令字幕、键盘快捷键提示 | 步骤编号必须连续，命令必须可以复制粘贴。 |
 
-其他同样适用但相对少见的类型：音乐视频（歌词叠加）、反应视频（来源署名）、体育赛事回顾（比分叠加）、房地产看房视频（价格 / 平方英尺）、会议演讲（讲者 + 议题信息条）。
+较少见但确实适用的场景：音乐视频（歌词叠加）、反应视频（来源署名）、体育集锦（比分叠加）、房产参观视频（价格 / 平方英尺）、会议演讲（演讲者 + 场次信息牌）。
 
-**对于完整的 SRT 驱动字幕制作**（长视频、带时间码、多语言），moviepy 虽然可用，但并非理想选择——应使用带有 `subtitles` 滤镜的 `ffmpeg`，或专用字幕工具。moviepy 最适合手动放置叠加内容，而不是批量字幕轨道。
+**对于完整的 SRT 驱动字幕**（长视频、带时间码、多语言），moviepy 可以使用，但并非理想选择——应使用带有 `subtitles` filter 的 `ffmpeg`，或专用字幕工具。moviepy 最适合手动放置的叠加内容，而不是批量字幕轨道。
 
 ## 文字渲染——使用 PIL，而不是 `TextClip`
 
-**关键陷阱：**moviepy 2.x 的 `TextClip(method='label')` 存在紧边界框错误，会**裁切字母的上伸部和下伸部**（大写字母的顶部，以及 g/p/y 的尾部）。在 Apple Silicon 上，你会看到字符边缘像被切掉一样，却可能花上数小时也意识不到问题所在。
+**关键陷阱：**moviepy 2.x 的 `TextClip(method='label')` 存在紧致边界框 bug，会**裁剪字母的上伸部和下伸部**（大写字母的顶部，以及 g/p/y 的尾部）。在 Apple Silicon 上，你会看到字符边缘被切掉，却可能花上数小时都没意识到问题所在。
 
-**解决方法：**通过 PIL 将文字渲染成透明 PNG，然后将其作为 `ImageClip` 加载。按内容哈希缓存结果，这样重新构建就无需重复渲染。
+**解决方法：**通过 PIL 将文字渲染为透明 PNG，然后将其加载为 `ImageClip`。根据内容哈希缓存结果，这样重新构建时无需重复处理。
 
 ```python
 import hashlib
@@ -114,11 +114,11 @@ def render_text_png(txt, size, hex_color, cache_dir="./text_cache"):
     return str(path)
 ```
 
-完整的辅助函数（包含用于粗体、位置、淡入淡出和更简洁易用接口的 kwargs）位于 `examples/quick-spot/build.py` 中——请直接复制使用，而不要重新实现。
+完整的辅助函数（支持用于加粗、位置、淡入淡出以及更简洁易用性的 kwargs）位于 `examples/quick-spot/build.py` 中——请直接复制使用，不要重新实现。
 
-## 音频锚定时间线模式
+## 以音频为锚点的时间线模式
 
-对于每一帧都至关重要的广告式剪辑，请先为每个场景生成 VO，然后将每个视觉元素锚定到已知的绝对时间戳。这样可以彻底消除时序漂移。完整模式请参阅 **CLAUDE.md → 视频时序 → 音频锚定时间线**。简要版本如下：
+对于每一帧都至关重要的广告风格剪辑，先为每个场景生成 VO，再将所有视觉元素锚定到已知的绝对时间戳上。这样可以彻底消除时间漂移。完整模式请参阅 **CLAUDE.md → Video Timing → Audio-Anchored Timelines**。简要版本如下：
 
 ```python
 # Audio-anchored timeline (25s):
@@ -131,7 +131,7 @@ vo_clip("01_tired.mp3",   start=0.3)
 vo_clip("02_worries.mp3", start=4.0)
 ```
 
-## 常用方案
+## 常见配方
 
 ### 在单个 AI 生成的视频片段上添加文本
 
@@ -147,7 +147,7 @@ caption = (
 CompositeVideoClip([bg, caption], size=bg.size).write_videofile("captioned.mp4", fps=30)
 ```
 
-### 在 SadTalker 说话头像上添加下三分之一字幕条
+### 在 SadTalker 头像视频上添加下三分之一字幕
 
 ```python
 from moviepy import VideoFileClip, ImageClip, ColorClip, CompositeVideoClip
@@ -175,9 +175,9 @@ title = (
 CompositeVideoClip([talking, bar, name, title]).write_videofile("with_lower_third.mp4", fps=30)
 ```
 
-### 使用着色叠加层增强复杂画面上的文本对比度
+### 在繁杂画面上为文本添加有色叠加层以增强对比度
 
-LTX-2 的补充镜头通常在视觉上过于复杂，导致文本难以辨认。可在视频和文本之间添加一层半透明的海军蓝图层：
+LTX-2 的 B-roll 通常画面过于繁杂，难以保证文本清晰易读。在视频和文本之间添加一个半透明的海军蓝图层：
 
 ```python
 from moviepy import ColorClip
@@ -202,7 +202,7 @@ bg    = ColorClip((1920, 1080), color=(0, 0, 0)).with_duration(max(left.duration
 CompositeVideoClip([bg, left, right]).write_videofile("split.mp4", fps=30)
 ```
 
-### 将各场景的 VO 与降低音量的音乐混合
+### 将每个场景的 VO 与经过压低处理的音乐混音
 
 ```python
 from moviepy import AudioFileClip, CompositeAudioClip
@@ -222,30 +222,30 @@ vo = [
 final_audio = CompositeAudioClip([music] + vo)
 ```
 
-## 注意事项
+## 易错点
 
-- **moviepy 2.x 重命名了方法。** 请使用 `subclipped`（而不是 `subclip`）、`with_duration` / `with_start` / `with_position`（而不是 `set_duration` 等），并使用 `with_effects([...])` 替代 `.fadein()`/`.fadeout()`。网上许多教程仍在使用 1.x 语法，请谨慎辨别。
-- **`TextClip(method='label')` 会裁剪字母的上伸部和下伸部。** 请始终使用上文中的 PIL 变通方案。
-- **`OffthreadVideo` 仅适用于 Remotion。** moviepy 使用 `VideoFileClip`。不要混用两者。
-- **调整尺寸需要 Pillow ≥ 10.0**，以支持 LANCZOS 重采样。如果遇到 `ANTIALIAS` 错误，请升级 Pillow。
-- **`ColorClip` 接受 RGB 元组，而不是十六进制字符串。** 请使用 `(20, 24, 38)`，而不是 `"#141826"`。
-- **默认情况下，`VideoFileClip` 会加载音频。** 如果只需要画面，请调用 `.without_audio()`——在 `CompositeAudioClip` 中混入不需要的音频，会导致旁白音轨在没有提示的情况下丢失。
-- **务必在 `CompositeVideoClip` 上设置 `size=(W, H)`。** 如果不设置，输出尺寸将取决于第一个剪辑，而它可能小于目标尺寸。
+- **moviepy 2.x 重命名了方法。** 使用 `subclipped`（而不是 `subclip`）、`with_duration` / `with_start` / `with_position`（而不是 `set_duration` 等），使用 `with_effects([...])` 代替 `.fadein()`/`.fadeout()`。网上很多教程仍然展示 1.x 语法——请谨慎甄别。
+- **`TextClip(method='label')` 会裁剪字母的上伸部和下伸部。** 始终使用上文的 PIL 变通方案。
+- **`OffthreadVideo` 仅适用于 Remotion。** moviepy 使用 `VideoFileClip`。不要混用二者。
+- **调整大小需要 Pillow ≥ 10.0** 才能使用 LANCZOS 重采样。如果看到 `ANTIALIAS` 错误，请升级 Pillow。
+- **`ColorClip` 接受 RGB 元组，而不是十六进制字符串。** 使用 `(20, 24, 38)`，不要使用 `"#141826"`。
+- **`VideoFileClip` 默认会加载音频。** 如果只需要画面，请调用 `.without_audio()`——在 `CompositeAudioClip` 中合成不需要的音频会导致静默 VO 丢失。
+- **始终在 `CompositeVideoClip` 上设置 `size=(W, H)`。** 如果不设置，输出尺寸会跟随第一个片段，而该片段的尺寸可能小于你的目标尺寸。
 
-## 何时使用哪种工具
+## 何时使用什么
 
 | 任务 | 工具 |
 |------|------|
 | 为静态图像添加动画 | `tools/ltx2.py --input` |
-| 基于写实肖像生成口播人物 | `tools/sadtalker.py` |
-| 基于风格化角色生成口播人物 | `tools/ltx2.py --input`（参见 ltx2 skill） |
-| **为上述任一内容添加标签、字幕或下三分之一字幕条** | **moviepy + PIL（本 skill）** |
-| 转换、压缩现有文件或调整其尺寸 | `ffmpeg`（参见 ffmpeg skill） |
+| 根据写实肖像生成会说话的人像 | `tools/sadtalker.py` |
+| 根据风格化角色生成会说话的人像 | `tools/ltx2.py --input`（参见 ltx2 skill） |
+| **为上述任一内容添加标签/字幕/下三分之一字幕** | **moviepy + PIL（本 skill）** |
+| 转换 / 压缩 / 调整现有文件大小 | `ffmpeg`（参见 ffmpeg skill） |
 | 长篇、由设计系统驱动的视频 | Remotion（参见 remotion skill） |
 
 ## 参考资料
 
-- 可运行示例——短篇广告风格视频：`examples/quick-spot/build.py`
-- 可运行示例——带文本叠加的数据可视化：`examples/data-viz-chart/build.py`
-- 音频锚定时间线：`CLAUDE.md → Video Timing → Audio-Anchored Timelines`
-- 相关 skill：`ltx2`、`ffmpeg`、`remotion`
+- 可运行示例——短广告风格片段：`examples/quick-spot/build.py`
+- 可运行示例——带文字叠加的数据可视化：`examples/data-viz-chart/build.py`
+- 以音频为锚点的时间线：`CLAUDE.md → Video Timing → Audio-Anchored Timelines`
+- 相关 skills：`ltx2`、`ffmpeg`、`remotion`

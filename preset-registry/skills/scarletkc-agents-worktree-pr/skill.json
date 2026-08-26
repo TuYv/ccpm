@@ -2,7 +2,7 @@
   "id": "scarletkc-agents-worktree-pr",
   "name": "worktree-pr",
   "description": "Decide whether a task deserves its own git worktree and, if chosen, run it end to end: branch from the integration branch rather than the current tree, keep the main working copy untouched while the task runs, compare the result against the untouched baseline before declaring it done, and prepare it for a pull request instead of merging. Use when a request says to do the work in a new worktree or branch, when a change is large or risky enough that the main tree should stay usable, when several t",
-  "category": "设计创意",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/scarletkc/agents/blob/main/skills/worktree-pr/SKILL.md",
     "path": "skills/worktree-pr/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-26T20:30:14.291Z",
+    "discovered_at": "2026-08-26T23:20:56.945Z",
     "stars": 184,
     "language": "Python",
-    "pushed_at": "2026-08-24T18:03:59Z",
+    "pushed_at": "2026-08-26T22:52:22Z",
     "license": "Apache-2.0"
   },
   "summary_zh": "用于判断任务是否需要独立 Git worktree，并在隔离分支中完成开发、对比基线后准备提交 PR，适合大型或高风险改动。"

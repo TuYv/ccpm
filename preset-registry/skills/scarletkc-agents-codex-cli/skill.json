@@ -2,7 +2,7 @@
   "id": "scarletkc-agents-codex-cli",
   "name": "codex-cli",
   "description": "When handing work to the Codex CLI earns its cost, and how to size the run: second-model review, bounded implementation hand-offs, sandbox permissions, model and reasoning effort. Use when the user asks for Codex or `codex exec`, when a change is complex or high-stakes enough that an independent reviewer would change the outcome, or when a delegated run needs its model, effort, or permissions chosen. For agents other than Codex itself.",
-  "category": "设计创意",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/scarletkc/agents/blob/main/skills/codex-cli/SKILL.md",
     "path": "skills/codex-cli/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-26T20:30:13.238Z",
+    "discovered_at": "2026-08-26T23:20:56.139Z",
     "stars": 184,
     "language": "Python",
-    "pushed_at": "2026-08-24T18:03:59Z",
+    "pushed_at": "2026-08-26T22:52:22Z",
     "license": "Apache-2.0"
   },
   "summary_zh": "帮助其他智能体合理使用 Codex CLI，适用于复杂或高风险任务的代码委托、独立审查及模型、权限和推理强度选择。"

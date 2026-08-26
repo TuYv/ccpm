@@ -9,66 +9,38 @@ paths:
 
 ## 核心原则
 
-根据代码所需的决策进行路由，而不是根据提示中提到的 API 数量进行路由。当某个集群的共享流程负责处理该问题时，加载一个集群；只有当某个专项 skill 的独立行为会改变同一项工作时，才添加它。
+根据代码需要作出的决策进行路由，而不是根据提到的 API 数量进行路由。
+当某个共享流程能够负责该关注点时，加载一个集群；只有当某个专家技能的独立行为会改变同一项工作时，才添加该技能。
 
 ## 路由流程
 
-1. 阅读任务以及使代码设计问题具体化的 Kotlin 源代码。
-2. 如果某个聚焦的 skill 明确匹配，直接加载它并停止路由。
-3. 在加载 Compose skill 之前，指出所检查源代码中的具体 Compose API 或可组合项，或者确认任务明确要求创建或设计 Compose 代码。假设存在 UI 使用方不能作为依据。如果这两类依据都不存在，即使任务提到了 UI、路由或导航，也应留在 Kotlin 集群中。
-4. 否则，将观察到的每个代码信号与下表进行匹配，并加载能够覆盖该工作的最小 skill 集合。
-5. 仅当不同问题会影响同一项变更时才组合 skills；不要推测性地加载相邻的 skills。
-6. 当每个实质性问题都由一个聚焦的负责人覆盖，并且在提供建议或进行编辑前已加载这些 skills 时，结束路由。
+1. 阅读任务以及使该关注点具体化的 Kotlin 源代码。
+2. 如果某个聚焦技能明确匹配，则直接加载它并停止路由。
+3. 在加载 Compose 技能之前，必须指出所检查源码中的具体 Compose API 或可组合项，或指出明确要求创建或设计 Compose 代码的请求。假设存在某个 UI 使用者不能作为证据。如果两种证据都不存在，即使任务提到了 UI、路由或导航，也应停留在 Kotlin 集群中。
+4. 将每个观察到的代码信号与下表进行匹配。
+5. 只有当第二个技能负责同一项变更中的独立决策时，才添加该技能；不要推测性地加载相邻技能。
+6. 当每个实质性关注点都有一个专注的负责人，并且这些技能已在提供建议或进行编辑之前加载完成时，结束路由。
 
 ## 常见路由
 
-| 任务信号 | 从以下 skill 开始 |
+| 任务信号 | 从以下技能开始 |
 |---|---|
-| 广泛的 Compose 屏幕审查、本地或提升后的 UI 状态、屏幕状态持有者、effect API、导航 effect、snackbar、分析埋点、焦点请求，或事件 Flow 收集，且有 Compose API、可组合屏幕或明确的全新 Compose 请求作为依据 | [`compose-state-and-effects`](../compose-state-and-effects/SKILL.md) |
-| 重组、卡顿、编译器报告、可跳过性、不稳定参数、帧率级 State 读取、反向写入或 `@ReadOnlyComposable` | [`compose-performance`](../compose-performance/SKILL.md) |
-| Modifier 参数、根布局放置、可变视觉内容、基础内容参数、可选内容或布尔形态标志 | [`compose-component-design`](../compose-component-design/SKILL.md) |
-| Compose 可见性、值、颜色、尺寸、过渡、内容切换或动画 API 的选择 | [`compose-animations`](../compose-animations/SKILL.md) |
-| 键盘、TV、桌面端、方向键、`FocusRequester`、`focusProperties`、按键事件或初始焦点行为 | [`compose-focus-navigation`](../compose-focus-navigation/SKILL.md) |
-| Compose UI 测试、截图测试、预览、语义、伪造图片加载、键盘输入、焦点断言或交互状态测试 | [`compose-ui-testing-patterns`](../compose-ui-testing-patterns/SKILL.md) |
-| 协程作用域所有权、`init { launch }`、非挂起式启动 API、`runBlocking`、取消、`StateFlow`、`SharedFlow`、`Channel`、`stateIn` 或一次性事件 | [`kotlin-concurrency-and-flow`](../kotlin-concurrency-and-flow/SKILL.md) |
-| Kotlin 分支、`when` 表达式、守卫条件、密封类型穷尽性、智能类型转换、可空分支或复杂的 `if`/`else` 链 | [`kotlin-control-flow`](../kotlin-control-flow/SKILL.md) |
-| Kotlin 函数放置、成员函数与顶层函数或扩展函数的选择、工厂、单字段领域类型、值类、Kotlin Multiplatform 源集、expect/actual 或平台服务 | [`kotlin-api-design`](../kotlin-api-design/SKILL.md) |
-| 计划执行 Gradle、紧凑的 Gradle 工作流记录、重复出现的 Gradle 失败特征，或以 Gradle 为中心的构建、检查、警告清理或失败处理工作流，包括应在再次运行前停止的诊断 | [`gradle-run`](../gradle-run/SKILL.md) |
-| 一个已准备好的 GitHub issue 或聊天中的任务，需要在单独的实现会话之前进行结合仓库上下文的规划 | [`to-plan`](../to-plan/SKILL.md) |
-| 轮询或推进 PR/MR、分类处理审查意见、修复 CI 失败或持续推动审查进展 | [`shepherd`](../shepherd/SKILL.md) |
+| 有证据表明涉及 Compose 状态、效果、屏幕所有权或 UI 事件收集 | [`compose-state-and-effects`](../compose-state-and-effects/SKILL.md) |
+| 重组、稳定性、帧率读取、回写或 `@ReadOnlyComposable` | [`compose-performance`](../compose-performance/SKILL.md) |
+| 组件修饰符、调用方放置位置、插槽或公共内容形状 | [`compose-component-design`](../compose-component-design/SKILL.md) |
+| 可见性、值、过渡、内容替换或其他动效 API 的选择 | [`compose-animations`](../compose-animations/SKILL.md) |
+| 键盘、电视、D-pad、焦点目标、自定义遍历或按键事件 | [`compose-focus-navigation`](../compose-focus-navigation/SKILL.md) |
+| Compose UI、截图、语义、焦点/按键或交互状态测试 | [`compose-ui-testing-patterns`](../compose-ui-testing-patterns/SKILL.md) |
+| 协程所有权、取消、Flow 状态/事件、共享或重放 | [`kotlin-concurrency-and-flow`](../kotlin-concurrency-and-flow/SKILL.md) |
+| Kotlin 分类、`when`、守卫、穷举性、智能类型转换或 null 分支 | [`kotlin-control-flow`](../kotlin-control-flow/SKILL.md) |
+| Kotlin 函数所有权、领域类型、expect/actual 或平台接缝 | [`kotlin-api-design`](../kotlin-api-design/SKILL.md) |
+| 计划中的 Gradle 执行或以 Gradle 为中心的警告/失败工作流 | [`gradle-run`](../gradle-run/SKILL.md) |
+| 一个现成的 GitHub issue，或聊天中的任务需要了解仓库的规划 | [`to-plan`](../to-plan/SKILL.md) |
+| 轮询 PR/MR、审查评论、CI 失败或常规后续跟进 | [`shepherd`](../shepherd/SKILL.md) |
 
-## 组合技能
+## 组合边界
 
-- 对于组件中的 Compose 事件处理，使用 [`compose-state-and-effects`](../compose-state-and-effects/SKILL.md)；当事件传递语义很重要时，再添加 [`kotlin-concurrency-and-flow`](../kotlin-concurrency-and-flow/SKILL.md)。
-- 对于性能相关工作，从 [`compose-performance`](../compose-performance/SKILL.md) 开始。
-- 对于由状态触发的动画，使用 [`compose-animations`](../compose-animations/SKILL.md)；涉及所有权变更时添加 [`compose-state-and-effects`](../compose-state-and-effects/SKILL.md)，涉及帧率数值时添加 [`compose-performance`](../compose-performance/SKILL.md)。
-- 对于可复用的 UI 组件，使用 [`compose-component-design`](../compose-component-design/SKILL.md)。
-- 对于焦点行为相关的测试，先使用 [`compose-focus-navigation`](../compose-focus-navigation/SKILL.md)，再使用 [`compose-ui-testing-patterns`](../compose-ui-testing-patterns/SKILL.md) 确定测试结构。
-- 对于同时会改变分支结构的 Kotlin 状态、并发或平台边界相关工作，将相应技能集群与 [`kotlin-control-flow`](../kotlin-control-flow/SKILL.md) 组合使用。
-- 对于纯 Kotlin 导航传输加密封路由映射，将 [`kotlin-concurrency-and-flow`](../kotlin-concurrency-and-flow/SKILL.md) 与 [`kotlin-control-flow`](../kotlin-control-flow/SKILL.md) 组合使用。除非存在 Compose API 或状态/副作用所有权，或明确要求将其作为新代码，否则不要添加 [`compose-state-and-effects`](../compose-state-and-effects/SKILL.md)。
-- 不要根据潜在的 UI 使用方推断存在 Compose 关注点。应根据
-  已检查的源代码进行路由，而不是根据任务中未提供的使用方进行路由。
-- 如果没有计划执行 Gradle，也没有现有 Gradle 工作流的证据，则 Kotlin 或 Compose 建议不会加载
-  [`gradle-run`](../gradle-run/SKILL.md)。
-
-## RED/GREEN 智能体场景
-
-1. RED 为具有本地状态和 snackbar 的屏幕加载所有 Compose 技能。
-   GREEN 先加载 [`compose-state-and-effects`](../compose-state-and-effects/SKILL.md)，并且仅在有证据表明存在相应关注点时才添加其他技能。
-2. 新场景：一个可复用卡片存在 modifier 问题和高度动画。
-   GREEN 使用 [`compose-component-design`](../compose-component-design/SKILL.md) 加 [`compose-animations`](../compose-animations/SKILL.md)，而不是默认使用状态技能集群。
-3. 反例：请求只更改通用 Kotlin 中的一个守卫条件。
-   GREEN 加载 [`kotlin-control-flow`](../kotlin-control-flow/SKILL.md)，而不通过 API 设计进行路由。
-4. 新场景：同时审查纯 Kotlin 的一次性路由传递和密封数据路由
-   渲染器。GREEN 加载
-   [`kotlin-concurrency-and-flow`](../kotlin-concurrency-and-flow/SKILL.md) 和
-   [`kotlin-control-flow`](../kotlin-control-flow/SKILL.md)，而不是 Compose
-   状态技能集群；提及一个假设的 UI 收集器并不能作为存在 Compose
-   关注点的证据。
-5. 绿地场景：任务明确要求设计一个新的 composable，用于
-   收集一次性 Flow。即使该 composable 尚不存在，GREEN 也会加载
-   [`compose-state-and-effects`](../compose-state-and-effects/SKILL.md) 和
-   [`kotlin-concurrency-and-flow`](../kotlin-concurrency-and-flow/SKILL.md)。
-6. 停止场景：一份简洁的 Gradle 记录反复出现相同的主要源代码故障。
-   GREEN 加载 [`gradle-run`](../gradle-run/SKILL.md)，停止重复运行循环，并
-   明确指出在进行任何修复或执行任何命令之前，应先对相关源代码进行重点检查。
+- 只有在交付、重放、共享或取消构成独立关注点时，才将 [`kotlin-concurrency-and-flow`](../kotlin-concurrency-and-flow/SKILL.md) 添加到 Compose 状态工作中。只有当动效工作也改变状态所有权或性能这一关注点时，才添加状态所有权或性能技能。
+- 当任务还需要测试形式时，将焦点导航与 UI 测试配对。
+- 当 Kotlin 关注点还会改变分支逻辑时，添加 [`kotlin-control-flow`](../kotlin-control-flow/SKILL.md)。普通的 Kotlin 路由交付加上 sealed 映射仍停留在 Kotlin 集群中；如果没有第 3 步要求的证据，不要添加 Compose。
+- 仅在计划执行 Gradle 或已有 Gradle 工作流时加载 [`gradle-run`](../gradle-run/SKILL.md)，不要因为附带的 Kotlin 或 Compose 建议而加载它。
