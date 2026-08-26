@@ -1,7 +1,7 @@
 {
   "id": "trailofbits-skills-harness-writing",
   "name": "harness-writing",
-  "description": "> Techniques for writing effective fuzzing harnesses across languages. Use when creating new fuzz targets or improving existing harness code.",
+  "description": "Designs and improves fuzzing harnesses for C/C++ and Rust. Covers mapping raw bytes onto a target API, generating structured inputs, avoiding non-determinism and false crashes, and deciding what to fuzz together. Use when writing a first LLVMFuzzerTestOneInput or fuzz_target! harness, when a campaign finds nothing or reports crashes that will not reproduce, or when the target API needs structured rather than raw input.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/trailofbits/skills/blob/main/plugins/testing-handbook-skills/skills/harness-writing/SKILL.md",
     "path": "plugins/testing-handbook-skills/skills/harness-writing/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-26T14:15:55.934Z",
-    "stars": 6860,
+    "discovered_at": "2026-08-26T16:13:13.637Z",
+    "stars": 6862,
     "language": "Python",
-    "pushed_at": "2026-08-26T13:56:41Z",
+    "pushed_at": "2026-08-26T14:18:45Z",
     "license": "CC-BY-SA-4.0"
   },
-  "summary_zh": "分享跨语言编写高效模糊测试驱动的技巧，适合需要从零创建测试目标或改进现有测试代码的开发者参考。"
+  "summary_zh": "用于设计和优化 C/C++、Rust 模糊测试入口，解决输入构造、非确定性、误报崩溃及测试目标组合问题。"
 }

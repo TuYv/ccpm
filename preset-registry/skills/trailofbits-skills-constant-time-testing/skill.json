@@ -1,7 +1,7 @@
 {
   "id": "trailofbits-skills-constant-time-testing",
   "name": "constant-time-testing",
-  "description": "> Constant-time testing detects timing side channels in cryptographic code. Use when auditing crypto implementations for timing vulnerabilities.",
+  "description": "Measures timing side channels in cryptographic implementations by running them, using dudect for statistical analysis and Timecop over Valgrind for dynamic tracing. Covers the formal, symbolic, dynamic, and statistical tool categories and how to read a result. Use when testing whether a running implementation is constant-time, measuring timing variance on a compiled binary, or investigating a suspected timing attack. Not for statically inspecting compiler output — the constant-time-analysis plug",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/trailofbits/skills/blob/main/plugins/testing-handbook-skills/skills/constant-time-testing/SKILL.md",
     "path": "plugins/testing-handbook-skills/skills/constant-time-testing/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-26T14:15:55.405Z",
-    "stars": 6860,
+    "discovered_at": "2026-08-26T16:13:12.881Z",
+    "stars": 6862,
     "language": "Python",
-    "pushed_at": "2026-08-26T13:56:41Z",
+    "pushed_at": "2026-08-26T14:18:45Z",
     "license": "CC-BY-SA-4.0"
   },
-  "summary_zh": "专门检测加密代码中的计时侧信道漏洞，适合在审计密码学实现时使用，帮你找出因执行时间差异而引发的安全隐患。"
+  "summary_zh": "用于检测密码学实现是否存在时序侧信道，适合评估编译后二进制的恒定时间特性或排查疑似时序攻击。"
 }

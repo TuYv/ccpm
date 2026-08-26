@@ -1,7 +1,7 @@
 {
   "id": "trailofbits-skills-libfuzzer",
   "name": "libfuzzer",
-  "description": "> Coverage-guided fuzzer built into LLVM for C/C++ projects. Use for fuzzing C/C++ code that can be compiled with Clang.",
+  "description": "Sets up and runs libFuzzer, the coverage-guided fuzzer built into LLVM, on C/C++ code that compiles with Clang. Covers harness structure, -fsanitize=fuzzer builds, corpus and dictionary management, sanitizer integration, and campaign triage. Use when writing or debugging an LLVMFuzzerTestOneInput harness, starting fuzzing on a C/C++ library, choosing between libFuzzer and AFL++, or working out why a libFuzzer run finds nothing.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/trailofbits/skills/blob/main/plugins/testing-handbook-skills/skills/libfuzzer/SKILL.md",
     "path": "plugins/testing-handbook-skills/skills/libfuzzer/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-26T14:15:56.181Z",
-    "stars": 6860,
+    "discovered_at": "2026-08-26T16:13:13.972Z",
+    "stars": 6862,
     "language": "Python",
-    "pushed_at": "2026-08-26T13:56:41Z",
+    "pushed_at": "2026-08-26T14:18:45Z",
     "license": "CC-BY-SA-4.0"
   },
-  "summary_zh": "这是集成在LLVM里的覆盖率引导模糊测试工具，专门给能拿Clang编译的C/C++代码找漏洞和抓崩溃。"
+  "summary_zh": "用于在 Clang 编译的 C/C++ 代码上进行覆盖率引导模糊测试，适合编写调试测试入口、发现漏洞及分析为何 fuzz 无结果。"
 }

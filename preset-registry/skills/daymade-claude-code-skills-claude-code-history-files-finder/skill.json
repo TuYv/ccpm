@@ -1,7 +1,7 @@
 {
   "id": "daymade-claude-code-skills-claude-code-history-files-finder",
   "name": "claude-code-history-files-finder",
-  "description": ">- Searches and recovers Claude Code JSONL history across all active config homes and archives registered in ~/.claude/history-sources.json. Use --all-projects when the project is unknown, --codex to include Codex rollout search, and --kimi to include Kimi CLI (kimi-code) session search. Uses internal timestamps and searches messages, thinking, tool inputs/results, queues, attachments, summaries, titles, and file-history paths. Recovers exact captured bytes from Claude file-history snapshots, in",
+  "description": ">- Searches and recovers Claude Code JSONL history across active config homes and registered archives. Use --all-projects when the project is unknown, --codex for Codex rollouts, and --kimi for Kimi CLI sessions. Uses internal timestamps and searches messages, thinking, tool inputs/results, queues, attachments, summaries, titles, and file-history paths. Recovers exact bytes from Claude file-history snapshots, including post-Write edits and binary files; otherwise labels Write checkpoints lower f",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-claude-code/claude-code-history-files-finder/SKILL.md",
     "path": "daymade-claude-code/claude-code-history-files-finder/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-26T14:23:09.124Z",
+    "discovered_at": "2026-08-26T16:22:58.004Z",
     "stars": 1353,
     "language": "Python",
-    "pushed_at": "2026-08-26T14:02:50Z",
+    "pushed_at": "2026-08-26T15:12:57Z",
     "license": "MIT"
   },
-  "summary_zh": "一款跨配置目录和归档检索、恢复 AI 编程会话及文件快照的工具，适合找回未知项目中的历史消息和原始文件内容。"
+  "summary_zh": "用于跨配置目录和归档搜索、恢复 Claude Code 等工具的会话历史，适合找回未知项目记录及文件编辑快照。"
 }

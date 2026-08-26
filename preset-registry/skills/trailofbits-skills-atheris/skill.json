@@ -1,7 +1,7 @@
 {
   "id": "trailofbits-skills-atheris",
   "name": "atheris",
-  "description": "> Atheris is a coverage-guided Python fuzzer based on libFuzzer. Use for fuzzing pure Python code and Python C extensions.",
+  "description": "Sets up and runs Atheris, the coverage-guided Python fuzzer built on libFuzzer. Covers TestOneInput harnesses, FuzzedDataProvider, instrumenting both pure Python and native C extensions, and running under AddressSanitizer. Use when fuzzing a Python package, hunting memory corruption in a Python C extension, or choosing between Atheris and Hypothesis for a Python target.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/trailofbits/skills/blob/main/plugins/testing-handbook-skills/skills/atheris/SKILL.md",
     "path": "plugins/testing-handbook-skills/skills/atheris/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-26T14:15:55.063Z",
-    "stars": 6860,
+    "discovered_at": "2026-08-26T16:13:12.534Z",
+    "stars": 6862,
     "language": "Python",
-    "pushed_at": "2026-08-26T13:56:41Z",
+    "pushed_at": "2026-08-26T14:18:45Z",
     "license": "CC-BY-SA-4.0"
   },
-  "summary_zh": "这是一个基于libFuzzer的Python模糊测试工具，专门给纯Python代码和C扩展找bug，帮你快速挖出隐藏的崩溃和漏洞。"
+  "summary_zh": "基于 libFuzzer 的 Python 覆盖率引导模糊测试工具，适合测试 Python 包、排查 C 扩展内存破坏问题。"
 }

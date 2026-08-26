@@ -1,7 +1,7 @@
 {
   "id": "trailofbits-skills-fuzzing-dictionary",
   "name": "fuzzing-dictionary",
-  "description": "> Fuzzing dictionaries guide fuzzers with domain-specific tokens. Use when fuzzing parsers, protocols, or format-specific code.",
+  "description": "Builds and applies fuzzing dictionaries so a fuzzer can produce the keywords, magic bytes, and tokens a target expects. Covers extracting tokens from source, headers, binaries, and specifications, dictionary syntax, and wiring one into libFuzzer or AFL++. Use when fuzzing a parser, protocol, or file format, when coverage stalls at input validation, or when a target compares against fixed strings.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/trailofbits/skills/blob/main/plugins/testing-handbook-skills/skills/fuzzing-dictionary/SKILL.md",
     "path": "plugins/testing-handbook-skills/skills/fuzzing-dictionary/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-26T14:15:55.694Z",
-    "stars": 6860,
+    "discovered_at": "2026-08-26T16:13:13.250Z",
+    "stars": 6862,
     "language": "Python",
-    "pushed_at": "2026-08-26T13:56:41Z",
+    "pushed_at": "2026-08-26T14:18:45Z",
     "license": "CC-BY-SA-4.0"
   },
-  "summary_zh": "这是一套模糊测试专用的语料库，通过提供特定领域的特征词来引导测试工具，特别适合在测试解析器、协议或特定格式代码时使用。"
+  "summary_zh": "为模糊测试构建并应用关键词、魔数和令牌字典，帮助解析器、协议或文件格式测试突破输入校验瓶颈。"
 }

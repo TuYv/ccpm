@@ -1,7 +1,7 @@
 {
   "id": "trailofbits-skills-aflpp",
   "name": "aflpp",
-  "description": "> AFL++ is a fork of AFL with better fuzzing performance and advanced features. Use for multi-core fuzzing of C/C++ projects.",
+  "description": "Sets up and runs AFL++ for multi-core fuzzing of C/C++ projects built with afl-clang-fast or afl-gcc-fast. Covers instrumentation modes, parallel main and secondary campaigns, persistent mode, corpus minimization, and crash triage. Use when scaling fuzzing across cores, fuzzing a mature C/C++ codebase, reading the afl-fuzz status screen, or moving on after libFuzzer has plateaued.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/trailofbits/skills/blob/main/plugins/testing-handbook-skills/skills/aflpp/SKILL.md",
     "path": "plugins/testing-handbook-skills/skills/aflpp/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-26T14:15:54.947Z",
-    "stars": 6860,
+    "discovered_at": "2026-08-26T16:13:12.337Z",
+    "stars": 6862,
     "language": "Python",
-    "pushed_at": "2026-08-26T13:56:41Z",
+    "pushed_at": "2026-08-26T14:18:45Z",
     "license": "CC-BY-SA-4.0"
   },
-  "summary_zh": "一款性能更强的模糊测试工具分支，适合在多核环境下高效挖掘C/C++项目的安全漏洞。"
+  "summary_zh": "用于为 C/C++ 项目搭建 AFL++ 多核模糊测试流程，适合扩大测试规模、优化语料库并定位崩溃问题。"
 }

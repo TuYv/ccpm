@@ -1,7 +1,7 @@
 {
   "id": "trailofbits-skills-fuzzing-obstacles",
   "name": "fuzzing-obstacles",
-  "description": "> Techniques for patching code to overcome fuzzing obstacles. Use when checksums, global state, or other barriers block fuzzer progress.",
+  "description": "Patches past the barriers that stop a fuzzer making progress — checksum and hash verification, magic-value validation, time-based seeds, and other non-deterministic global state. Covers locating the blocking check, neutering it behind a fuzzing build flag, and avoiding the false positives a patch can introduce. Use when a fuzzer is stuck at validation, when coverage shows large regions behind a checksum, or when valid inputs are impractical to generate.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/trailofbits/skills/blob/main/plugins/testing-handbook-skills/skills/fuzzing-obstacles/SKILL.md",
     "path": "plugins/testing-handbook-skills/skills/fuzzing-obstacles/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-26T14:15:55.815Z",
-    "stars": 6860,
+    "discovered_at": "2026-08-26T16:13:13.458Z",
+    "stars": 6862,
     "language": "Python",
-    "pushed_at": "2026-08-26T13:56:41Z",
+    "pushed_at": "2026-08-26T14:18:45Z",
     "license": "CC-BY-SA-4.0"
   },
-  "summary_zh": "这套代码修补技术专门用来扫清模糊测试的障碍，当校验和或全局状态等机制卡住测试进度时，用它就能轻松绕过继续跑。"
+  "summary_zh": "帮助定位并绕过校验和、魔数、时间种子等阻碍模糊测试推进的检查，适合卡在验证环节或难以构造有效输入时使用。"
 }

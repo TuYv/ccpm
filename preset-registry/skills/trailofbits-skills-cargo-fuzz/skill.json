@@ -1,7 +1,7 @@
 {
   "id": "trailofbits-skills-cargo-fuzz",
   "name": "cargo-fuzz",
-  "description": "> cargo-fuzz is the de facto fuzzing tool for Rust projects using Cargo. Use for fuzzing Rust code with libFuzzer backend.",
+  "description": "Sets up and runs cargo-fuzz, the standard fuzzing tool for Cargo-based Rust projects. Covers cargo fuzz init, the nightly toolchain requirement, fuzz_target! harnesses, Arbitrary-derived structured inputs, sanitizer options, cargo fuzz coverage, and reproducing a crash artifact. Use when fuzzing a Rust crate, writing a fuzz_target!, exercising unsafe blocks or FFI in Rust, or triaging a cargo fuzz crash.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/trailofbits/skills/blob/main/plugins/testing-handbook-skills/skills/cargo-fuzz/SKILL.md",
     "path": "plugins/testing-handbook-skills/skills/cargo-fuzz/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-26T14:15:55.233Z",
-    "stars": 6860,
+    "discovered_at": "2026-08-26T16:13:12.695Z",
+    "stars": 6862,
     "language": "Python",
-    "pushed_at": "2026-08-26T13:56:41Z",
+    "pushed_at": "2026-08-26T14:18:45Z",
     "license": "CC-BY-SA-4.0"
   },
-  "summary_zh": "专为 Rust 代码打造的模糊测试工具，能自动向程序输入海量随机数据，帮你揪出隐藏的崩溃和漏洞，适合排查代码的安全与稳定性。"
+  "summary_zh": "面向 Rust Cargo 项目的标准模糊测试工具，用于发现不安全代码或 FFI 中的崩溃与漏洞，并复现分析问题。"
 }

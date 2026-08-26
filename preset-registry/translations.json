@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-26T15:26:04.444Z",
+  "updated_at": "2026-08-26T17:29:31.644Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -9823,9 +9823,9 @@
       "translated_at": "2026-08-22T22:13:09.440Z"
     },
     "bundle:trailofbits-skills": {
-      "hash": "505377a6ad61307e",
-      "summary_zh": "面向软件、智能合约与自动化流程的安全审计与模糊测试，整合代码理解、漏洞发现和验证能力，提升安全评估效率与覆盖面。",
-      "translated_at": "2026-08-26T15:18:09.016Z"
+      "hash": "686f1ec32ab5168d",
+      "summary_zh": "这是一套面向代码、智能合约与开发流程的安全审计工具集，结合代码理解、静态分析、模糊测试和漏洞扫描，提升漏洞发现与修复效率。",
+      "translated_at": "2026-08-26T17:18:34.599Z"
     },
     "bundle:czlonkowski-n8n-skills": {
       "hash": "c501b61219aece66",
@@ -12323,14 +12323,14 @@
       "translated_at": "2026-08-04T10:24:11.221Z"
     },
     "skill:trailofbits-skills-address-sanitizer": {
-      "hash": "695dc178596b914c",
-      "summary_zh": "这是款内存错误检测工具，适合在模糊测试C/C++代码时使用，帮你揪出缓冲区溢出和释放后使用等内存漏洞。",
-      "translated_at": "2026-05-20T12:22:41.960Z"
+      "hash": "4afb063b18c3cd8e",
+      "summary_zh": "用于在测试或模糊测试中检测 C/C++、Rust 的缓冲区溢出、释放后使用等内存错误，适合定位内存崩溃与分析崩溃堆栈。",
+      "translated_at": "2026-08-26T17:18:42.254Z"
     },
     "skill:trailofbits-skills-aflpp": {
-      "hash": "a610bf8f7c09e1b6",
-      "summary_zh": "一款性能更强的模糊测试工具分支，适合在多核环境下高效挖掘C/C++项目的安全漏洞。",
-      "translated_at": "2026-05-20T12:22:52.604Z"
+      "hash": "e2db5ff23ea4bfbf",
+      "summary_zh": "用于为 C/C++ 项目搭建 AFL++ 多核模糊测试流程，适合扩大测试规模、优化语料库并定位崩溃问题。",
+      "translated_at": "2026-08-26T17:18:43.034Z"
     },
     "skill:trailofbits-skills-algorand-vulnerability-scanner": {
       "hash": "057b103624ac173e",
@@ -12348,9 +12348,9 @@
       "translated_at": "2026-05-20T12:23:18.382Z"
     },
     "skill:trailofbits-skills-atheris": {
-      "hash": "3749b6560b621f85",
-      "summary_zh": "这是一个基于libFuzzer的Python模糊测试工具，专门给纯Python代码和C扩展找bug，帮你快速挖出隐藏的崩溃和漏洞。",
-      "translated_at": "2026-05-20T12:23:38.776Z"
+      "hash": "df85573d9c282a23",
+      "summary_zh": "基于 libFuzzer 的 Python 覆盖率引导模糊测试工具，适合测试 Python 包、排查 C 扩展内存破坏问题。",
+      "translated_at": "2026-08-26T17:18:45.964Z"
     },
     "skill:trailofbits-skills-audit-context-building": {
       "hash": "f47c813eeb74455d",
@@ -12368,9 +12368,9 @@
       "translated_at": "2026-05-20T12:24:02.506Z"
     },
     "skill:trailofbits-skills-cargo-fuzz": {
-      "hash": "cfe427322232b4c4",
-      "summary_zh": "专为 Rust 代码打造的模糊测试工具，能自动向程序输入海量随机数据，帮你揪出隐藏的崩溃和漏洞，适合排查代码的安全与稳定性。",
-      "translated_at": "2026-05-20T12:24:20.409Z"
+      "hash": "9cb510f4aa8492b2",
+      "summary_zh": "面向 Rust Cargo 项目的标准模糊测试工具，用于发现不安全代码或 FFI 中的崩溃与漏洞，并复现分析问题。",
+      "translated_at": "2026-08-26T17:18:48.455Z"
     },
     "skill:trailofbits-skills-cairo-vulnerability-scanner": {
       "hash": "993b4a141d19cc61",
@@ -12403,14 +12403,14 @@
       "translated_at": "2026-05-20T12:25:23.051Z"
     },
     "skill:trailofbits-skills-constant-time-testing": {
-      "hash": "add80db56bfed902",
-      "summary_zh": "专门检测加密代码中的计时侧信道漏洞，适合在审计密码学实现时使用，帮你找出因执行时间差异而引发的安全隐患。",
-      "translated_at": "2026-05-20T12:25:28.496Z"
+      "hash": "ffe0bf595a871276",
+      "summary_zh": "用于检测密码学实现是否存在时序侧信道，适合评估编译后二进制的恒定时间特性或排查疑似时序攻击。",
+      "translated_at": "2026-08-26T17:18:46.528Z"
     },
     "skill:trailofbits-skills-coverage-analysis": {
-      "hash": "93d13c93612e1d31",
-      "summary_zh": "它能统计模糊测试的代码覆盖率，适合用来评估测试程序的有效性，或找出阻碍测试推进的卡点。",
-      "translated_at": "2026-05-20T12:25:46.088Z"
+      "hash": "8f6e9b83d9f9aafc",
+      "summary_zh": "分析模糊测试实际覆盖的代码范围，定位未触达区域，帮助优化测试入口、种子和字典，适合排查覆盖率停滞或评估测试效果。",
+      "translated_at": "2026-08-26T17:18:49.672Z"
     },
     "skill:trailofbits-skills-cosmos-vulnerability-scanner": {
       "hash": "196e9564efd49df8",
@@ -12433,9 +12433,9 @@
       "translated_at": "2026-05-20T12:26:32.827Z"
     },
     "skill:trailofbits-skills-differential-review": {
-      "hash": "6bb3a67ccbbc8b26",
-      "summary_zh": "这是一款专注安全的代码变更审查工具，能在审查提交或代码合并前自动评估风险，帮你拦截安全漏洞回归，非常适合团队做日常安全把关。",
-      "translated_at": "2026-05-20T12:26:36.815Z"
+      "hash": "dd43ab3dceb8f750",
+      "summary_zh": "面向安全的代码变更审查工具，可评估漏洞、回归风险、影响范围和测试覆盖，适合检查 PR、提交或代码差异。",
+      "translated_at": "2026-08-26T17:18:51.620Z"
     },
     "skill:trailofbits-skills-dwarf-expert": {
       "hash": "5d1681f44f483313",
@@ -12458,14 +12458,14 @@
       "translated_at": "2026-08-04T10:27:24.847Z"
     },
     "skill:trailofbits-skills-fuzzing-obstacles": {
-      "hash": "7340b5aacfdcf150",
-      "summary_zh": "这套代码修补技术专门用来扫清模糊测试的障碍，当校验和或全局状态等机制卡住测试进度时，用它就能轻松绕过继续跑。",
-      "translated_at": "2026-05-20T12:27:28.810Z"
+      "hash": "a9a2f862744465af",
+      "summary_zh": "帮助定位并绕过校验和、魔数、时间种子等阻碍模糊测试推进的检查，适合卡在验证环节或难以构造有效输入时使用。",
+      "translated_at": "2026-08-26T17:18:52.593Z"
     },
     "skill:trailofbits-skills-fuzzing-dictionary": {
-      "hash": "3cc977516855e53c",
-      "summary_zh": "这是一套模糊测试专用的语料库，通过提供特定领域的特征词来引导测试工具，特别适合在测试解析器、协议或特定格式代码时使用。",
-      "translated_at": "2026-05-20T12:27:28.983Z"
+      "hash": "4afd77bff64eb7dc",
+      "summary_zh": "为模糊测试构建并应用关键词、魔数和令牌字典，帮助解析器、协议或文件格式测试突破输入校验瓶颈。",
+      "translated_at": "2026-08-26T17:18:51.508Z"
     },
     "skill:trailofbits-skills-gh-cli": {
       "hash": "6ea7a6b7283d2114",
@@ -12478,9 +12478,9 @@
       "translated_at": "2026-08-25T17:13:04.038Z"
     },
     "skill:trailofbits-skills-harness-writing": {
-      "hash": "505be1f5f13be676",
-      "summary_zh": "分享跨语言编写高效模糊测试驱动的技巧，适合需要从零创建测试目标或改进现有测试代码的开发者参考。",
-      "translated_at": "2026-05-20T12:28:02.528Z"
+      "hash": "3ad7b6f87777ecf6",
+      "summary_zh": "用于设计和优化 C/C++、Rust 模糊测试入口，解决输入构造、非确定性、误报崩溃及测试目标组合问题。",
+      "translated_at": "2026-08-26T17:18:54.657Z"
     },
     "skill:trailofbits-skills-git-cleanup": {
       "hash": "740a3d7418cd5beb",
@@ -12508,14 +12508,14 @@
       "translated_at": "2026-05-20T12:28:58.855Z"
     },
     "skill:trailofbits-skills-libfuzzer": {
-      "hash": "a6da236b60783c1b",
-      "summary_zh": "这是集成在LLVM里的覆盖率引导模糊测试工具，专门给能拿Clang编译的C/C++代码找漏洞和抓崩溃。",
-      "translated_at": "2026-05-20T12:28:59.056Z"
+      "hash": "cce4925638258258",
+      "summary_zh": "用于在 Clang 编译的 C/C++ 代码上进行覆盖率引导模糊测试，适合编写调试测试入口、发现漏洞及分析为何 fuzz 无结果。",
+      "translated_at": "2026-08-26T17:18:55.470Z"
     },
     "skill:trailofbits-skills-libafl": {
-      "hash": "616838387137553d",
-      "summary_zh": "这是一个模块化的模糊测试库，帮你拼装专属的测试器。当标准工具搞不定高级需求、需要定制变异器或测试非标目标时用它最合适。",
-      "translated_at": "2026-05-20T12:29:03.328Z"
+      "hash": "b85b38d6fe935d2b",
+      "summary_zh": "一个模块化的 Rust 模糊测试库，适合为特殊目标或架构定制模糊器、变异器，开展研究实验。",
+      "translated_at": "2026-08-26T17:18:54.877Z"
     },
     "skill:trailofbits-skills-ossfuzz": {
       "hash": "7dc2dce53a483c74",
@@ -17358,9 +17358,9 @@
       "translated_at": "2026-08-03T04:58:57.465Z"
     },
     "bundle:daymade-claude-code-skills": {
-      "hash": "5c80af0aa5d606ad",
-      "summary_zh": "这是一套面向 Claude Code 的实用技能合集，覆盖开发协作、数据采集、内容处理与自动化运维，让复杂任务能快速接入工具并稳定落地。",
-      "translated_at": "2026-08-25T13:17:37.962Z"
+      "hash": "2e1ac57e8e4a5043",
+      "summary_zh": "这套技能合集面向 Claude Code 的开发、研究与信息处理场景，把数据采集、内容分析、仓库维护和自动化工作流串起来，提升复杂任务的执行效率。",
+      "translated_at": "2026-08-26T17:18:35.099Z"
     },
     "bundle:specstoryai-getspecstory": {
       "hash": "c770b3a6c617c63e",
@@ -20053,9 +20053,9 @@
       "translated_at": "2026-08-03T14:05:59.608Z"
     },
     "skill:daymade-claude-code-skills-claude-code-history-files-finder": {
-      "hash": "3c871a22e6d5750d",
-      "summary_zh": "一款跨配置目录和归档检索、恢复 AI 编程会话及文件快照的工具，适合找回未知项目中的历史消息和原始文件内容。",
-      "translated_at": "2026-08-22T18:17:22.091Z"
+      "hash": "84d97cb721410a51",
+      "summary_zh": "用于跨配置目录和归档搜索、恢复 Claude Code 等工具的会话历史，适合找回未知项目记录及文件编辑快照。",
+      "translated_at": "2026-08-26T17:18:38.409Z"
     },
     "skill:daymade-claude-code-skills-claude-skills-troubleshooting": {
       "hash": "41cbf0fe80d5aa0d",
@@ -47028,8 +47028,8 @@
       "translated_at": "2026-08-22T04:00:52.574Z"
     },
     "content:neolabhq-context-engineering-kit-do-in-parallel": {
-      "hash": "1c220185d2de9d6a",
-      "translated_at": "2026-08-22T04:01:05.125Z"
+      "hash": "2cfb668b9e8ce61e",
+      "translated_at": "2026-08-26T17:29:31.644Z"
     },
     "content:neolabhq-context-engineering-kit-git-worktrees": {
       "hash": "483019f2a6d2a1e8",
@@ -50815,6 +50815,21 @@
       "hash": "8a941d6c9651077a",
       "summary_zh": "一种用于判定代码变更边界的规则，适合范围模糊或涉及兼容、迁移等方案时，确保只修改必要位置，避免越界扩散。",
       "translated_at": "2026-08-26T15:18:30.450Z"
+    },
+    "skill:scarletkc-agents-talk-like-scarletkc": {
+      "hash": "e1711f954f27429c",
+      "summary_zh": "一套模拟特定作者自然语气的写作助手，适合润色、翻译和撰写社交媒体、技术文档及正式沟通内容。",
+      "translated_at": "2026-08-26T17:18:38.946Z"
+    },
+    "skill:scarletkc-agents-ux-writing": {
+      "hash": "9870f4ab6f1dc90f",
+      "summary_zh": "一套规范用户可见文案与文档的判断规则，适合编写命令行提示、错误信息、README、注释及报告，避免信息重复或归属混乱。",
+      "translated_at": "2026-08-26T17:18:39.424Z"
+    },
+    "skill:scarletkc-agents-worktree-pr": {
+      "hash": "bab928f1df186237",
+      "summary_zh": "用于判断任务是否需要独立 Git worktree，并在隔离分支中完成开发、对比基线后准备提交 PR，适合大型或高风险改动。",
+      "translated_at": "2026-08-26T17:18:42.148Z"
     }
   }
 }

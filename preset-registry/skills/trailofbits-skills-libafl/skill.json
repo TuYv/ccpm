@@ -1,7 +1,7 @@
 {
   "id": "trailofbits-skills-libafl",
   "name": "libafl",
-  "description": "> LibAFL is a modular fuzzing library for building custom fuzzers. Use for advanced fuzzing needs, custom mutators, or non-standard fuzzing targets.",
+  "description": "Builds custom fuzzers with LibAFL, the modular Rust fuzzing library. Covers composing observers, feedbacks, mutators, schedulers, and executors into a fuzzer for targets the standard tools do not fit. Use when writing a bespoke fuzzer or mutator, fuzzing a non-standard target or architecture, implementing a fuzzing research idea, or when libFuzzer and AFL++ lack the control you need.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/trailofbits/skills/blob/main/plugins/testing-handbook-skills/skills/libafl/SKILL.md",
     "path": "plugins/testing-handbook-skills/skills/libafl/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-26T14:15:56.065Z",
-    "stars": 6860,
+    "discovered_at": "2026-08-26T16:13:13.810Z",
+    "stars": 6862,
     "language": "Python",
-    "pushed_at": "2026-08-26T13:56:41Z",
+    "pushed_at": "2026-08-26T14:18:45Z",
     "license": "CC-BY-SA-4.0"
   },
-  "summary_zh": "这是一个模块化的模糊测试库，帮你拼装专属的测试器。当标准工具搞不定高级需求、需要定制变异器或测试非标目标时用它最合适。"
+  "summary_zh": "一个模块化的 Rust 模糊测试库，适合为特殊目标或架构定制模糊器、变异器，开展研究实验。"
 }

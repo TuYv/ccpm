@@ -16,10 +16,11 @@
     "url": "https://github.com/scarletkc/agents/blob/main/skills/worktree-pr/SKILL.md",
     "path": "skills/worktree-pr/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-26T15:15:39.595Z",
+    "discovered_at": "2026-08-26T17:15:10.684Z",
     "stars": 183,
     "language": "Python",
     "pushed_at": "2026-08-24T18:03:59Z",
     "license": "Apache-2.0"
-  }
+  },
+  "summary_zh": "用于判断任务是否需要独立 Git worktree，并在隔离分支中完成开发、对比基线后准备提交 PR，适合大型或高风险改动。"
 }

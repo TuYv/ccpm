@@ -1,7 +1,7 @@
 {
   "id": "trailofbits-skills-coverage-analysis",
   "name": "coverage-analysis",
-  "description": "> Coverage analysis measures code exercised during fuzzing. Use when assessing harness effectiveness or identifying fuzzing blockers.",
+  "description": "Measures and interprets what a fuzzing campaign actually reaches, using llvm-cov, lcov, or a fuzzer's own coverage output. Covers baselining a new campaign, reading coverage reports, and turning uncovered regions into harness, seed, or dictionary work. Use when a fuzzer plateaus, when judging whether a harness is effective, after changing a harness, or when asking why some code is never reached.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/trailofbits/skills/blob/main/plugins/testing-handbook-skills/skills/coverage-analysis/SKILL.md",
     "path": "plugins/testing-handbook-skills/skills/coverage-analysis/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-26T14:15:55.572Z",
-    "stars": 6860,
+    "discovered_at": "2026-08-26T16:13:13.053Z",
+    "stars": 6862,
     "language": "Python",
-    "pushed_at": "2026-08-26T13:56:41Z",
+    "pushed_at": "2026-08-26T14:18:45Z",
     "license": "CC-BY-SA-4.0"
   },
-  "summary_zh": "它能统计模糊测试的代码覆盖率，适合用来评估测试程序的有效性，或找出阻碍测试推进的卡点。"
+  "summary_zh": "分析模糊测试实际覆盖的代码范围，定位未触达区域，帮助优化测试入口、种子和字典，适合排查覆盖率停滞或评估测试效果。"
 }

@@ -1,7 +1,7 @@
 {
   "id": "trailofbits-skills-address-sanitizer",
   "name": "address-sanitizer",
-  "description": "> AddressSanitizer detects memory errors during fuzzing. Use when fuzzing C/C++ code to find buffer overflows and use-after-free bugs.",
+  "description": "Builds and runs code under AddressSanitizer to catch buffer overflows, use-after-free, and other memory errors during fuzzing or tests. Covers -fsanitize=address builds, ASAN_OPTIONS, reading the crash report, LeakSanitizer, and the overhead and platform trade-offs. Use when fuzzing C/C++ or Rust that has unsafe blocks or FFI, when debugging a memory corruption crash, or when reading an ASan stack trace.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/trailofbits/skills/blob/main/plugins/testing-handbook-skills/skills/address-sanitizer/SKILL.md",
     "path": "plugins/testing-handbook-skills/skills/address-sanitizer/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-26T14:15:54.831Z",
-    "stars": 6860,
+    "discovered_at": "2026-08-26T16:13:12.162Z",
+    "stars": 6862,
     "language": "Python",
-    "pushed_at": "2026-08-26T13:56:41Z",
+    "pushed_at": "2026-08-26T14:18:45Z",
     "license": "CC-BY-SA-4.0"
   },
-  "summary_zh": "这是款内存错误检测工具，适合在模糊测试C/C++代码时使用，帮你揪出缓冲区溢出和释放后使用等内存漏洞。"
+  "summary_zh": "用于在测试或模糊测试中检测 C/C++、Rust 的缓冲区溢出、释放后使用等内存错误，适合定位内存崩溃与分析崩溃堆栈。"
 }
