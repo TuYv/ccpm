@@ -1,7 +1,7 @@
 {
   "id": "neolabhq-context-engineering-kit-implement-task",
   "name": "implement-task",
-  "description": "Implement a task with automated LLM-as-Judge verification per step",
+  "description": "Implement a task step by step with automated LLM-as-Judge verification at the end of each phase",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -13,14 +13,14 @@
   "install_path": ".claude/skills/implement-task/SKILL.md",
   "source": {
     "repo": "NeoLabHQ/context-engineering-kit",
-    "url": "https://github.com/NeoLabHQ/context-engineering-kit/blob/master/plugins/sdd/skills/implement-task/SKILL.md",
-    "path": "plugins/sdd/skills/implement-task/SKILL.md",
+    "url": "https://github.com/NeoLabHQ/context-engineering-kit/blob/master/antigravity/skills/implement-task/SKILL.md",
+    "path": "antigravity/skills/implement-task/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-06-20T22:29:49.194Z",
-    "stars": 1149,
+    "discovered_at": "2026-08-26T14:16:25.377Z",
+    "stars": 1398,
     "language": "TypeScript",
-    "pushed_at": "2026-06-20T20:50:20Z",
+    "pushed_at": "2026-08-26T12:58:58Z",
     "license": "GPL-3.0"
   },
-  "summary_zh": "一个用大模型逐步自动验证执行结果的任务实现工具，适合需要边做边检查质量的开发场景。"
+  "summary_zh": "用于分阶段执行任务，并在每阶段结束时通过自动化大模型评审验证结果，适合需要过程质检和可靠交付的复杂任务。"
 }

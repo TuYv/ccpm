@@ -1,49 +1,47 @@
 ---
 name: attach-review-to-pr
 description: Add line-specific review comments to pull requests using GitHub CLI API
-argument-hint: PR number or URL (optional - can work with current branch)
-allowed-tools: Bash(gh api:*), Bash(gh auth:*), Bash(gh pr:*), mcp__github_inline_comment__create_inline_comment
 ---
-# 如何在拉取请求中添加针对特定行的审查评论
+# 如何将特定行的审查评论添加到拉取请求
 
-本指南介绍如何使用 GitHub CLI（`gh`）API，或者在其不可用时使用 `mcp__github_inline_comment__create_inline_comment`，向拉取请求添加针对特定行的审查评论，类似于 GitHub UI 中对特定代码行发表评论的方式。
+本指南介绍如何使用 GitHub CLI（`gh`）API 或 `mcp__github_inline_comment__create_inline_comment`（如果前者不可用）向拉取请求添加特定行的审查评论，类似于 GitHub UI 允许针对特定代码行发表评论的方式。
 
-## 首选方式：使用 MCP GitHub 工具
+## 首选方法：使用 MCP GitHub 工具
 
-**如果可用**，请使用 `mcp__github_inline_comment__create_inline_comment` MCP 工具在拉取请求中发布针对特定行的内联评论。这种方式与 GitHub UI 的集成更好，也是推荐的方法。
+**如果可用**，请使用 `mcp__github_inline_comment__create_inline_comment` MCP 工具，在拉取请求上发布特定行的内联评论。这种方法与 GitHub 的 UI 集成得更好，也是推荐的方法。
 
-**备用方案**：如果 MCP 工具不可用，请使用下文所述的 GitHub CLI（`gh`）API 方法：
+**备用方法**：如果 MCP 工具不可用，请使用下文所述的 GitHub CLI（`gh`）API 方法：
 
-- 对于单条评论：使用 `/comments` 端点（参见[添加单条针对特定行的评论](#adding-a-single-line-specific-comment)）
-- 对于多条评论：使用 `/reviews` 端点（参见[同时添加多条针对特定行的评论](#adding-multiple-line-specific-comments-together)）
+- 对于单条评论：使用 `/comments` 端点（参见[添加单条特定行评论](#添加单条特定行评论)）
+- 对于多条评论：使用 `/reviews` 端点（参见[一次添加多条特定行评论](#一次添加多条特定行评论)）
 
 ## 概述
 
-虽然 `gh pr review` 提供了基本的审查功能（批准、请求更改、一般评论），但它**不直接支持针对特定行的评论**。要对特定代码行发表评论，必须使用更底层的 `gh api` 命令直接调用 GitHub 的 REST API。
+虽然 `gh pr review` 提供了基本的审查功能（批准、请求更改、一般评论），但它**不直接支持特定行的评论**。要针对特定代码行添加评论，必须使用较底层的 `gh api` 命令直接调用 GitHub 的 REST API。
 
 ## 前提条件
 
-1. 已安装 GitHub CLI 并完成身份验证：
+1. 已安装并完成身份验证的 GitHub CLI：
 
    ```bash
    gh auth status
    ```
 
-2. 拥有要审查的仓库和拉取请求的访问权限
+2. 对要审查的仓库和拉取请求具有访问权限
 
 ## 了解 GitHub 的审查评论系统
 
-GitHub 中有两种 PR 评论：
+GitHub 有两种 PR 评论：
 
-1. **议题评论** - 针对 PR 对话的一般评论
-2. **审查评论** - 针对代码变更中特定行的评论
+1. **Issue 评论** - PR 对话中的一般评论
+2. **审查评论** - 针对代码更改中特定行的评论
 
-可以通过两种方式添加审查评论：
+可以通过以下两种方式添加审查评论：
 
 - **单条评论** - 使用 `/pulls/{pr}/comments` 端点
 - **包含多条评论的审查** - 使用 `/pulls/{pr}/reviews` 端点
 
-## 添加单条针对特定行的评论
+## 添加单条特定行评论
 
 ### 基本语法
 
@@ -58,15 +56,15 @@ gh api repos/{owner}/{repo}/pulls/{pr_number}/comments \
 
 ### 参数说明
 
-| 参数 | 类型 | 必需 | 说明 |
+| 参数 | 类型 | 必填 | 说明 |
 |-----------|------|----------|-------------|
 | `body` | string | 是 | 审查评论的文本（支持 Markdown） |
-| `commit_id` | string | 是 | 要发表评论的提交 SHA |
-| `path` | string | 是 | 要发表评论的文件的相对路径 |
-| `line` | integer | 是 | diff 中的行号（对整数使用 `-F`） |
-| `side` | string | 是 | 对新增或修改的行使用 `RIGHT`，对删除的行使用 `LEFT` |
-| `start_line` | integer | 否 | 对于多行评论，表示起始行 |
-| `start_side` | string | 否 | 对于多行评论，表示起始侧 |
+| `commit_id` | string | 是 | 要发表评论的提交的 SHA |
+| `path` | string | 是 | 被评论文件的相对路径 |
+| `line` | integer | 是 | diff 中的行号（整数请使用 `-F`） |
+| `side` | string | 是 | 新增/修改行使用 `RIGHT`，删除行使用 `LEFT` |
+| `start_line` | integer | 否 | 用于多行评论，表示起始行 |
+| `start_side` | string | 否 | 用于多行评论，表示起始侧 |
 
 ### 参数标志
 
@@ -90,15 +88,15 @@ gh api repos/NeoLabHQ/learning-platform-app/pulls/4/comments \
 
 ### 理解行号
 
-`line` 参数指的是 **diff 中的位置**，而不是文件中的绝对行号：
+`line` 参数指的是 **差异中的位置**，而不是文件中的绝对行号：
 
 - 对于**新文件**：行号与文件中的行号一致
-- 对于**修改过的文件**：使用 "Files changed" 标签页中显示的行号
+- 对于**已修改的文件**：使用“Files changed”选项卡中显示的行号
 - 对于**多行评论**：使用 `start_line` 和 `line` 指定范围
 
 ### 响应
 
-成功时，返回一个包含评论详细信息的 JSON 对象：
+成功时，返回包含评论详细信息的 JSON 对象：
 
 ```json
 {
@@ -112,16 +110,16 @@ gh api repos/NeoLabHQ/learning-platform-app/pulls/4/comments \
 }
 ```
 
-## 一次添加多条针对特定行的评论
+## 一起添加多个特定行评论
 
-要在单次评审中为不同文件添加多条评论，请通过 JSON 输入使用 `/reviews` 端点。
+若要在一次审查中跨不同文件添加多个评论，请使用 `/reviews` 端点并传入 JSON。
 
-### 为什么要使用评审来添加多条评论？
+### 为什么要对多个评论使用 Reviews？
 
-- **原子操作** - 所有评论会一起添加
-- **单次通知** - 不会因多次通知而造成打扰
-- **更好的用户体验** - 显示为一次完整连贯的评审
-- **与 GitHub UI 使用相同的机制** - "Start a review" → "Finish review"
+- **原子操作** - 一次性添加所有评论
+- **单条通知** - 不会发送多条通知造成打扰
+- **更好的用户体验** - 显示为一条完整的审查
+- **与 GitHub UI 使用相同的机制** - “Start a review” → “Finish review”
 
 ### 基本语法
 
@@ -148,13 +146,13 @@ cat <<'EOF' | gh api repos/{owner}/{repo}/pulls/{pr_number}/reviews --input -
 EOF
 ```
 
-### 评审事件类型
+### 审查事件类型
 
-| 事件 | 描述 | 使用场景 |
+| Event | Description | When to Use |
 |-------|-------------|-------------|
-| `COMMENT` | 一般评审评论 | 只留下反馈，不表示批准 |
-| `APPROVE` | 批准 PR | 变更看起来没有问题，可以合并 |
-| `REQUEST_CHANGES` | 请求更改 | 存在合并前必须修复的问题 |
+| `COMMENT` | 常规审查评论 | 仅留下反馈而不批准时 |
+| `APPROVE` | 批准 PR | 修改看起来没有问题，可以合并时 |
+| `REQUEST_CHANGES` | 请求修改 | 存在必须在合并前修复的问题时 |
 
 ### 完整示例
 
@@ -199,18 +197,18 @@ EOF
 }
 ```
 
-## 常见问题及解决方案
+## 常见问题与解决方案
 
-### 问题 1：“user_id can only have one pending review per pull request”
+### 问题 1：“每个 pull request 中，`user_id` 只能有一个待处理审查”
 
 **错误消息：**
 
-```
+```bash
 gh: Validation Failed (HTTP 422)
 {"message":"Validation Failed","errors":[{"resource":"PullRequestReview","code":"custom","field":"user_id","message":"user_id can only have one pending review per pull request"}]}
 ```
 
-**原因：** GitHub 只允许每位用户对每个 PR 有一个待处理（未提交）的审查。如果你之前通过 UI 或 API 发起了审查但未提交，就会阻止创建新的审查。
+**原因：** GitHub 只允许每个用户在每个 PR 中拥有一个待处理（未提交）的审查。如果你之前通过 UI 或 API 开始了一次审查但没有提交，就会阻止创建新的审查。
 
 **解决方案 1：提交待处理的审查**
 
@@ -233,7 +231,7 @@ gh api repos/{owner}/{repo}/pulls/{pr_number}/comments \
   -f side='RIGHT'
 ```
 
-### 问题 2：数组语法无法与 --raw-field 配合使用
+### 问题 2：`--raw-field` 的数组语法不起作用
 
 **失败的尝试：**
 
@@ -248,11 +246,11 @@ gh api repos/{owner}/{repo}/pulls/{pr}/reviews \
 
 **错误：**
 
-```
+```text
 Invalid request. For 'properties/comments', {"0" => {...}, "1" => {...}} is not an array.
 ```
 
-**解决方案：** 通过 heredoc 使用 JSON 输入：
+**解决方案：** 使用 heredoc 通过 JSON 输入：
 
 ```bash
 cat <<'EOF' | gh api repos/{owner}/{repo}/pulls/{pr}/reviews --input -
@@ -266,23 +264,23 @@ EOF
 
 **错误消息：**
 
-```
+```text
 Pull request review thread line must be part of the diff
 ```
 
-**原因：** 此文件的差异中不存在该行号。
+**原因：** 该行号在此文件的 diff 中不存在。
 
 **解决方案：**
 
-- 验证此文件是否确实在该 PR 中被更改
-- 查看“Files changed”选项卡，确认差异中的实际行号
-- 确保使用了正确的 `commit_id`（PR 中的最新提交）
+- 确认该文件确实在此 PR 中发生了更改
+- 检查“Files changed”选项卡，以查看 diff 中的实际行号
+- 确保使用正确的 `commit_id`（PR 中的最新提交）
 
-### 问题 4：commit_id 错误
+### 问题 4：`commit_id` 错误
 
 **错误消息：**
 
-```
+```text
 commit_sha is not part of the pull request
 ```
 
@@ -296,7 +294,7 @@ gh api repos/{owner}/{repo}/pulls/{pr_number} --jq '.head.sha'
 
 ### 1. 首先获取 PR 信息
 
-添加评论之前，先收集必要的信息：
+在添加评论之前，收集必要的信息：
 
 ```bash
 # Get PR details
@@ -319,29 +317,27 @@ gh api repos/{owner}/{repo}/pulls/{pr_number}/reviews \
 
 ### 3. 使用有意义的评论文本
 
-- 内容要具体且具有建设性
+- 具体且具有建设性
 - 引用文档或最佳实践
-- 请求更改时提供替代方案
-- 使用代码块提供代码建议：
+- 请求修改时提出替代方案
+- 对代码建议使用代码块：
 
-```markdown
-Consider using async/await:
+考虑使用 async/await：
 
-\`\`\`typescript
+```typescript
 async function getData() {
   const result = await fetch(url);
   return result.json();
 }
-\`\`\`
 ```
 
-### 4. 将相关评论分组
+### 4. 批量处理相关评论
 
-使用评审端点将相关评论分组：
+使用 review 端点将相关评论分组：
 
-- 针对单个文件/区域的所有评论
-- 针对特定关注点（安全性、性能等）的所有评论
-- 完整的评审会话
+- 单个文件/区域的所有评论
+- 针对特定问题（安全性、性能等）的所有评论
+- 完整的审查会话
 
 ### 5. 选择正确的事件类型
 
@@ -378,7 +374,7 @@ gh api repos/$OWNER/$REPO/pulls/$PR/comments \
   -f side='RIGHT'
 ```
 
-### 示例 2：全面评审
+### 示例 2：全面审查
 
 ```bash
 #!/bin/bash
@@ -431,7 +427,7 @@ gh api repos/$OWNER/$REPO/pulls/$PR/comments \
 
 ## 实用辅助脚本
 
-### 获取 PR 文件和行数
+### 获取 PR 文件及行数
 
 ```bash
 #!/bin/bash
@@ -444,7 +440,7 @@ PR="$3"
 gh api repos/$OWNER/$REPO/pulls/$PR/files --jq '.[] | "\(.filename): +\(.additions)/-\(.deletions)"'
 ```
 
-### 检查评审状态
+### 检查审查状态
 
 ```bash
 #!/bin/bash
@@ -463,8 +459,8 @@ gh api repos/$OWNER/$REPO/pulls/$PR/reviews --jq '.[] | select(.state=="PENDING"
 
 ## 相关文档
 
-- [GitHub API：拉取请求审查评论](https://docs.github.com/rest/pulls/comments)
-- [GitHub API：拉取请求审查](https://docs.github.com/rest/pulls/reviews)
+- [GitHub API：Pull Request 审查评论](https://docs.github.com/rest/pulls/comments)
+- [GitHub API：Pull Request 审查](https://docs.github.com/rest/pulls/reviews)
 - [GitHub CLI 手册](https://cli.github.com/manual/)
 - [创建 PR 命令](./create-pr.md)
 - [提交命令](./commit.md)
@@ -482,14 +478,14 @@ gh api repos/$OWNER/$REPO/pulls/$PR/reviews --jq '.[] | select(.state=="PENDING"
 - `body`（字符串，必需）：评论文本
 - `commit_id`（字符串，必需）：提交的 SHA
 - `path`（字符串，必需）：相对文件路径
-- `line`（整数，必需）：diff 中的行号
+- `line`（整数，必需）：差异中的行号
 - `side`（字符串，必需）："LEFT" 或 "RIGHT"
 - `start_line`（整数，可选）：多行评论的起始行
 - `start_side`（字符串，可选）：多行评论的起始侧
 
 ### POST /repos/{owner}/{repo}/pulls/{pull_number}/reviews
 
-创建审查，并可选择包含针对特定行的评论。
+创建包含可选的特定行评论的审查。
 
 **端点：** `https://api.github.com/repos/{owner}/{repo}/pulls/{pull_number}/reviews`
 
@@ -504,7 +500,7 @@ gh api repos/$OWNER/$REPO/pulls/$PR/reviews --jq '.[] | select(.state=="PENDING"
 
 - `path`（字符串，必需）：相对文件路径
 - `body`（字符串，必需）：评论文本
-- `line`（整数，必需）：diff 中的行号
+- `line`（整数，必需）：差异中的行号
 - `side`（字符串，必需）："LEFT" 或 "RIGHT"
 - `start_line`（整数，可选）：多行评论的起始行
 - `start_side`（字符串，可选）：多行评论的起始侧

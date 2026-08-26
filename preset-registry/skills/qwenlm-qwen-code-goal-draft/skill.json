@@ -1,0 +1,26 @@
+{
+  "id": "qwenlm-qwen-code-goal-draft",
+  "name": "goal-draft",
+  "description": "Turn a fuzzy intention into a /goal objective the Goal verifier can actually judge - one outcome, numbered binary \"Done when\" checks that leave evidence in the transcript, guardrails, a budget, and a block protocol. Use when the user wants to set or define a goal, asks whether a goal is good enough, or says \"keep going until X\". Usage - /goal-draft <what you want done>, or /goal-draft <existing goal> to tighten it. This skill only writes the objective; it never starts the work.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "QwenLM",
+  "install_path": ".claude/skills/goal-draft/SKILL.md",
+  "source": {
+    "repo": "QwenLM/qwen-code",
+    "url": "https://github.com/QwenLM/qwen-code/blob/main/packages/core/src/skills/bundled/goal-draft/SKILL.md",
+    "path": "packages/core/src/skills/bundled/goal-draft/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-26T15:13:48.993Z",
+    "stars": 27400,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-26T15:07:45Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "将模糊意图整理成可验证的目标，适合定义目标、检查目标是否清晰，或明确“持续完成直到达成”的标准。"
+}

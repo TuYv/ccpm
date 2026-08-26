@@ -1,0 +1,25 @@
+{
+  "id": "scarletkc-agents-worktree-pr",
+  "name": "worktree-pr",
+  "description": "Decide whether a task deserves its own git worktree and, if chosen, run it end to end: branch from the integration branch rather than the current tree, keep the main working copy untouched while the task runs, compare the result against the untouched baseline before declaring it done, and prepare it for a pull request instead of merging. Use when a request says to do the work in a new worktree or branch, when a change is large or risky enough that the main tree should stay usable, when several t",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "scarletkc",
+  "install_path": ".claude/skills/worktree-pr/SKILL.md",
+  "source": {
+    "repo": "scarletkc/agents",
+    "url": "https://github.com/scarletkc/agents/blob/main/skills/worktree-pr/SKILL.md",
+    "path": "skills/worktree-pr/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-26T15:15:39.595Z",
+    "stars": 183,
+    "language": "Python",
+    "pushed_at": "2026-08-24T18:03:59Z",
+    "license": "Apache-2.0"
+  }
+}

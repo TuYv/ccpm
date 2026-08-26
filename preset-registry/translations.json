@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-26T13:44:16.491Z",
+  "updated_at": "2026-08-26T15:26:04.444Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -7763,9 +7763,9 @@
       "translated_at": "2026-05-19T22:38:49.477Z"
     },
     "skill:neolabhq-context-engineering-kit-implement-task": {
-      "hash": "e84fec9762d290ac",
-      "summary_zh": "一个用大模型逐步自动验证执行结果的任务实现工具，适合需要边做边检查质量的开发场景。",
-      "translated_at": "2026-08-04T03:59:53.855Z"
+      "hash": "be7ba2bf1fb7b36d",
+      "summary_zh": "用于分阶段执行任务，并在每阶段结束时通过自动化大模型评审验证结果，适合需要过程质检和可靠交付的复杂任务。",
+      "translated_at": "2026-08-26T15:18:22.710Z"
     },
     "skill:neolabhq-context-engineering-kit-git-worktrees": {
       "hash": "74cbc8a1245928c7",
@@ -7813,9 +7813,9 @@
       "translated_at": "2026-05-19T22:40:06.337Z"
     },
     "skill:neolabhq-context-engineering-kit-plan-task": {
-      "hash": "879585e4dffdeecc",
-      "summary_zh": "把粗糙的任务草稿打磨成清晰、随时可执行的落地计划，帮你理清步骤、拆分并行任务并验证可行性，特别适合项目初期把模糊想法变成靠谱方案。",
-      "translated_at": "2026-05-19T22:40:13.268Z"
+      "hash": "3815f137d06882fe",
+      "summary_zh": "帮助将粗略任务需求细化为可直接开发的执行方案，适合明确验收标准、架构设计和分阶段实施步骤。",
+      "translated_at": "2026-08-26T15:18:21.784Z"
     },
     "skill:neolabhq-context-engineering-kit-prompt-engineering": {
       "hash": "dc5a02ca8c13c226",
@@ -9678,9 +9678,9 @@
       "translated_at": "2026-08-20T03:00:59.923Z"
     },
     "bundle:getsentry-sentry": {
-      "hash": "965c43c6d13ed642",
-      "summary_zh": "面向 Sentry 全栈开发与架构演进，统一前后端实现规范和工程流程，帮助团队更安全高效地交付功能。",
-      "translated_at": "2026-08-24T11:12:49.839Z"
+      "hash": "8cc13a98fca0a068",
+      "summary_zh": "这套工具集面向 Sentry 的全栈开发，统一前后端架构、数据、界面与工程规范，让功能从设计到落地更高效、更一致。",
+      "translated_at": "2026-08-26T15:18:09.250Z"
     },
     "bundle:addyosmani-agent-skills": {
       "hash": "e8e7acb8ab293495",
@@ -9823,9 +9823,9 @@
       "translated_at": "2026-08-22T22:13:09.440Z"
     },
     "bundle:trailofbits-skills": {
-      "hash": "1546fd21a0b9ab6b",
-      "summary_zh": "面向代码与智能合约安全审计的技能合集，把漏洞发现、验证和结果整合串成可复用的自动化工作流。",
-      "translated_at": "2026-08-25T17:12:51.974Z"
+      "hash": "505377a6ad61307e",
+      "summary_zh": "面向软件、智能合约与自动化流程的安全审计与模糊测试，整合代码理解、漏洞发现和验证能力，提升安全评估效率与覆盖面。",
+      "translated_at": "2026-08-26T15:18:09.016Z"
     },
     "bundle:czlonkowski-n8n-skills": {
       "hash": "c501b61219aece66",
@@ -10008,9 +10008,9 @@
       "translated_at": "2026-08-03T04:58:46.056Z"
     },
     "bundle:neolabhq-context-engineering-kit": {
-      "hash": "51798aa4b316c05e",
-      "summary_zh": "面向 AI 辅助开发的上下文工程工具集，把需求分析、任务规划、实现评审和智能体优化串成可复用的工程流程。",
-      "translated_at": "2026-08-03T04:59:03.062Z"
+      "hash": "e34a670278d26279",
+      "summary_zh": "这套工具集面向 Claude Code 的上下文工程与研发协作，串联需求分析、任务规划、实现评审和持续改进，让复杂项目开发更规范高效。",
+      "translated_at": "2026-08-26T15:18:13.506Z"
     },
     "bundle:prompt-security-clawsec": {
       "hash": "bf34e2c550e6933c",
@@ -17263,9 +17263,9 @@
       "translated_at": "2026-08-03T04:57:30.510Z"
     },
     "bundle:qwenlm-qwen-code": {
-      "hash": "389002fba59352c8",
-      "summary_zh": "这套技能集为 Qwen Code 提供从功能复现、代码分析到修复验证和协作自动化的一站式开发工作流，提升工程效率与交付可靠性。",
-      "translated_at": "2026-08-25T13:17:37.891Z"
+      "hash": "f35b9996024ef49f",
+      "summary_zh": "这套合集覆盖从需求复现、代码分析到修复验证和协作交付的完整流程，让 Qwen Code 开发更高效、更可靠。",
+      "translated_at": "2026-08-26T15:18:08.741Z"
     },
     "bundle:ogulcancelik-herdr": {
       "hash": "a4c2ed572bd68cdb",
@@ -46753,20 +46753,20 @@
       "translated_at": "2026-08-21T21:36:58.314Z"
     },
     "content:neolabhq-context-engineering-kit-add-task": {
-      "hash": "13dc01b3c855dd6a",
-      "translated_at": "2026-08-21T21:37:17.531Z"
+      "hash": "521e000257ede06c",
+      "translated_at": "2026-08-26T15:21:13.093Z"
     },
     "content:neolabhq-context-engineering-kit-analyse": {
-      "hash": "d1c1fe732089b5f5",
-      "translated_at": "2026-08-21T21:38:43.208Z"
+      "hash": "e0798026b16df116",
+      "translated_at": "2026-08-26T15:22:38.897Z"
     },
     "content:neolabhq-context-engineering-kit-analyse-problem": {
-      "hash": "9bc78dcde13ef890",
-      "translated_at": "2026-08-21T21:40:07.176Z"
+      "hash": "4139ed798371ebc0",
+      "translated_at": "2026-08-26T15:23:13.182Z"
     },
     "content:neolabhq-context-engineering-kit-analyze-issue": {
-      "hash": "5580e80765895970",
-      "translated_at": "2026-08-21T21:40:20.773Z"
+      "hash": "a89807bafd747f80",
+      "translated_at": "2026-08-26T15:22:52.171Z"
     },
     "content:neolabhq-context-engineering-kit-agent-evaluation": {
       "hash": "681e456d00509f1d",
@@ -46948,8 +46948,8 @@
       "translated_at": "2026-08-22T01:31:10.415Z"
     },
     "content:neolabhq-context-engineering-kit-attach-review-to-pr": {
-      "hash": "4a9c20eb4bd5eb42",
-      "translated_at": "2026-08-22T01:32:42.811Z"
+      "hash": "c58a112a8a22eb6b",
+      "translated_at": "2026-08-26T15:24:43.899Z"
     },
     "content:neolabhq-context-engineering-kit-brainstorm": {
       "hash": "d2cca42f71f91615",
@@ -47000,8 +47000,8 @@
       "translated_at": "2026-08-22T01:55:59.802Z"
     },
     "content:neolabhq-context-engineering-kit-critique": {
-      "hash": "674da898a5c360b1",
-      "translated_at": "2026-08-22T01:57:16.876Z"
+      "hash": "08deffde3dcdf484",
+      "translated_at": "2026-08-26T15:26:04.444Z"
     },
     "content:neolabhq-context-engineering-kit-decay": {
       "hash": "0dd66c46af587115",
@@ -50765,6 +50765,56 @@
     "content:qwenlm-qwen-code-extension-creator": {
       "hash": "dd8584149a186e87",
       "translated_at": "2026-08-26T13:44:16.491Z"
+    },
+    "bundle:scarletkc-agents": {
+      "hash": "5aab3c372d7ee82a",
+      "summary_zh": "这套合集服务于从代码修改、协作审查到产品文案与用户沟通的完整开发流程，让 AI 工作更有边界、更贴合个人风格，也更易落地。",
+      "translated_at": "2026-08-26T15:18:14.179Z"
+    },
+    "skill:getsentry-sentry-remove-option-or-flag": {
+      "hash": "32663cf5f782b655",
+      "summary_zh": "用于按正确顺序跨仓库移除已完成发布的 Sentry 配置项或功能开关，并处理自动化清理与未注册选项问题。",
+      "translated_at": "2026-08-26T15:18:18.008Z"
+    },
+    "skill:neolabhq-context-engineering-kit-fix-tests": {
+      "hash": "825941af74576eb9",
+      "summary_zh": "用于在业务逻辑变更或重构后系统性修复失败测试，适合快速恢复测试通过状态。",
+      "translated_at": "2026-08-26T15:18:18.763Z"
+    },
+    "skill:neolabhq-context-engineering-kit-design-testing-strategy": {
+      "hash": "12341420ac442447",
+      "summary_zh": "这是一套测试设计指南，帮助你在编写各种测试前，通过明确的决策流程、规范和示例制定可靠方案。",
+      "translated_at": "2026-08-26T15:18:19.432Z"
+    },
+    "skill:neolabhq-context-engineering-kit-test-coverage": {
+      "hash": "c1f70805a217b09c",
+      "summary_zh": "一份测试覆盖率分析指南，帮助你在写完测试后从结构、变异、需求和接口集成等维度评估测试质量。",
+      "translated_at": "2026-08-26T15:18:22.723Z"
+    },
+    "skill:neolabhq-context-engineering-kit-test-driven-development": {
+      "hash": "cd7d9c62900c81ca",
+      "summary_zh": "一种先写测试、确认测试失败再实现代码的开发方法，适合功能开发和修复缺陷，确保测试真正验证了预期行为。",
+      "translated_at": "2026-08-26T15:18:24.940Z"
+    },
+    "skill:scarletkc-agents-codex-cli": {
+      "hash": "1bfef608f076018f",
+      "summary_zh": "帮助其他智能体合理使用 Codex CLI，适用于复杂或高风险任务的代码委托、独立审查及模型、权限和推理强度选择。",
+      "translated_at": "2026-08-26T15:18:26.520Z"
+    },
+    "skill:qwenlm-qwen-code-goal-draft": {
+      "hash": "135a7bffe7636735",
+      "summary_zh": "将模糊意图整理成可验证的目标，适合定义目标、检查目标是否清晰，或明确“持续完成直到达成”的标准。",
+      "translated_at": "2026-08-26T15:18:27.616Z"
+    },
+    "skill:scarletkc-agents-marketing-copy": {
+      "hash": "8b7a9c81ef60b82a",
+      "summary_zh": "帮助为产品或项目撰写可信的对外宣传文案，适合发布动态、商店介绍、落地页、新闻稿及海外市场命名。",
+      "translated_at": "2026-08-26T15:18:29.105Z"
+    },
+    "skill:scarletkc-agents-scoped-change": {
+      "hash": "8a941d6c9651077a",
+      "summary_zh": "一种用于判定代码变更边界的规则，适合范围模糊或涉及兼容、迁移等方案时，确保只修改必要位置，避免越界扩散。",
+      "translated_at": "2026-08-26T15:18:30.450Z"
     }
   }
 }

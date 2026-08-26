@@ -1,7 +1,7 @@
 {
   "id": "trailofbits-skills-differential-review",
   "name": "differential-review",
-  "description": "> Performs security-focused differential review of code changes (PRs, commits, diffs). Adapts analysis depth to codebase size, uses git history for context, calculates blast radius, checks test coverage, and generates comprehensive markdown reports. Automatically detects and prevents security regressions.",
+  "description": "Performs security-focused differential review of code changes. Adapts analysis depth to codebase size, uses git blame for context, calculates blast radius by counting callers, checks test coverage of modified code, and generates a markdown report. Use when reviewing a PR, commit, or diff for security vulnerabilities, checking whether a change re-introduces a previously fixed bug, asking what else a change could break, or finding which modified code has no test covering it.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/trailofbits/skills/blob/main/plugins/differential-review/skills/differential-review/SKILL.md",
     "path": "plugins/differential-review/skills/differential-review/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-26T12:18:31.929Z",
-    "stars": 6859,
+    "discovered_at": "2026-08-26T14:15:51.571Z",
+    "stars": 6860,
     "language": "Python",
-    "pushed_at": "2026-08-25T19:41:16Z",
+    "pushed_at": "2026-08-26T13:56:41Z",
     "license": "CC-BY-SA-4.0"
-  },
-  "summary_zh": "这是一款专注安全的代码变更审查工具，能在审查提交或代码合并前自动评估风险，帮你拦截安全漏洞回归，非常适合团队做日常安全把关。"
+  }
 }

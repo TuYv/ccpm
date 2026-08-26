@@ -1,0 +1,26 @@
+{
+  "id": "neolabhq-context-engineering-kit-design-testing-strategy",
+  "name": "design-testing-strategy",
+  "description": "Use before writing any type of tests. Distills 14 industry sources into deterministic decision gates, schemas, and worked test examples.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "NeoLabHQ",
+  "install_path": ".claude/skills/design-testing-strategy/SKILL.md",
+  "source": {
+    "repo": "NeoLabHQ/context-engineering-kit",
+    "url": "https://github.com/NeoLabHQ/context-engineering-kit/blob/master/antigravity/skills/design-testing-strategy/SKILL.md",
+    "path": "antigravity/skills/design-testing-strategy/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-08-26T14:16:24.229Z",
+    "stars": 1398,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-26T12:58:58Z",
+    "license": "GPL-3.0"
+  },
+  "summary_zh": "这是一套测试设计指南，帮助你在编写各种测试前，通过明确的决策流程、规范和示例制定可靠方案。"
+}

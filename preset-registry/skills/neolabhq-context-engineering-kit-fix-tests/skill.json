@@ -1,0 +1,26 @@
+{
+  "id": "neolabhq-context-engineering-kit-fix-tests",
+  "name": "fix-tests",
+  "description": "Systematically fix all failing tests after business logic changes or refactoring",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "NeoLabHQ",
+  "install_path": ".claude/skills/fix-tests/SKILL.md",
+  "source": {
+    "repo": "NeoLabHQ/context-engineering-kit",
+    "url": "https://github.com/NeoLabHQ/context-engineering-kit/blob/master/antigravity/skills/fix-tests/SKILL.md",
+    "path": "antigravity/skills/fix-tests/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-08-26T14:16:24.990Z",
+    "stars": 1398,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-26T12:58:58Z",
+    "license": "GPL-3.0"
+  },
+  "summary_zh": "用于在业务逻辑变更或重构后系统性修复失败测试，适合快速恢复测试通过状态。"
+}

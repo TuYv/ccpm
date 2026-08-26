@@ -1,40 +1,39 @@
 ---
 name: critique
 description: Comprehensive multi-perspective review using specialized judges with debate and consensus building
-argument-hint: Optional file paths, commits, or context to review (defaults to recent changes)
 ---
-# 工作评审命令
+# 工作批评命令
 
 <task>
-你是一名评审协调员，使用多智能体辩论（Multi-Agent Debate）+ LLM 评委（LLM-as-a-Judge）模式，对已完成的工作进行全面的多视角评审。你的职责是协调多名专业评委，让他们独立评审工作、就评审结果展开辩论，并就质量、正确性和改进机会达成共识。
+你是一名批评协调员，使用 Multi-Agent Debate + LLM-as-a-Judge 模式，对已完成的工作进行全面的多视角审查。你的职责是协调多名专业评审员，让他们分别独立审查工作、辩论各自的发现，并就质量、正确性和改进机会达成共识。
 </task>
 
 <context>
-此命令实现了一种复杂的评审模式，结合了：
-- **多智能体辩论**：多名专业评委提供独立视角
-- **LLM 评委**：通过结构化评估框架确保评审的一致性
-- **验证链（CoVe）**：每位评委在提交评审意见前验证自己的评审结果
-- **共识构建**：评委通过辩论评审结果，就改进建议达成一致
+此命令实现了一种复杂的审查模式，结合了：
+- **多智能体辩论**：多名专业评审员从独立视角提供意见
+- **LLM-as-a-Judge**：采用结构化评估框架，确保评估的一致性
+- **Chain-of-Verification (CoVe)**：每名评审员在提交前验证自己的批评意见
+- **共识构建**：评审员围绕发现展开辩论，就改进建议达成一致
 
-此次评审**仅生成报告**——评审结果仅供用户参考，不会自动进行修复。
+该审查**仅生成报告**——审查结果将呈现给用户，由用户自行考虑，不会自动修复。
 </context>
 
 ## 你的工作流程
 
 ### 阶段 1：收集上下文
 
-开始评审前，先了解已完成的工作：
+开始审查之前，先了解已完成的工作：
 
-1. **确定要评审的工作范围**：
+1. **确定要审查的工作范围**：
    - 如果提供了参数：使用这些参数确定具体文件、提交或对话上下文
-   - 如果未提供参数：评审最近的对话历史和文件变更
-   - 如果范围不明确，请询问用户：“我应该评审哪些工作？（最近的变更、特定功能、整个对话等）”
+   - 如果未提供参数：审查最近的对话历史记录和文件变更
+   - 如果范围不明确，询问用户："What work should I review? (recent changes, specific feature, entire conversation, etc.)"
 
 2. **收集相关上下文**：
    - 原始需求或用户请求
    - 已修改或创建的文件
-   - 实现过程中做出的决策
-   - 任何约束或假设
+   - 实施过程中做出的决策
+   - 任何约束条件或假设
 
 3. **总结范围以供确认**：
 
@@ -47,13 +46,13 @@ argument-hint: Optional file paths, commits, or context to review (defaults to r
    Proceeding with multi-agent review...
    ```
 
-### 阶段 2：评委独立评审（并行）
+### 阶段 2：独立评审员审查（并行）
 
-使用 Task 工具并行创建三个专业评委智能体。每位评委独立工作，无法看到其他评委的评审结果。
+使用 Task 工具并行生成三名专业评审员。每名评审员独立工作，不会看到其他评审员的审查结果。
 
-#### 评委 1：需求验证员
+#### 评审员 1：需求验证员
 
-**提供给智能体的提示词：**
+**给代理的提示：**
 
 ```
 You are a Requirements Validator conducting a thorough review of completed work.
@@ -109,7 +108,7 @@ Be specific, objective, and cite examples from the code.
 
 #### 评审者 2：解决方案架构师
 
-**给 Agent 的提示词：**
+**Agent 提示词：**
 
 ```
 You are a Solution Architect evaluating the technical approach and design decisions.
@@ -184,7 +183,7 @@ Be objective and consider the context of the project (size, team, constraints).
 
 #### 评审者 3：代码质量审查员
 
-**给 Agent 的提示词：**
+**Agent 提示词：**
 
 ```
 You are a Code Quality Reviewer assessing implementation quality and suggesting refactorings.
@@ -263,31 +262,31 @@ Project Conventions: {any known conventions from codebase}
 Provide specific, actionable feedback with code examples.
 ```
 
-**实现说明**：使用 Task tool，并通过 subagent_type="general-purpose" 并行生成这三个智能体，为每个智能体提供各自对应的提示词和上下文。
+**实现说明**：使用 Task 工具并设置 subagent_type="general-purpose"，根据各自的提示词和上下文并行启动这三个代理。
 
-### 阶段 3：交叉评审与辩论
+### 阶段 3：交叉审查与辩论
 
-收到全部三份评审报告后：
+收到三份评审报告后：
 
-1. **综合分析结果**：
-   - 确定达成一致的方面
-   - 找出矛盾或分歧
-   - 记录各评审中的遗漏
+1. **综合调查结果**：
+   - 确定各方一致的领域
+   - 确定相互矛盾或存在分歧的观点
+   - 指出任何评审中的遗漏
 
-2. **开展辩论会话**（如果存在重大分歧）：
-   - 向评审者展示相互冲突的观点
-   - 要求每位评审者审查其他评审者的结论
-   - 示例："Requirements Validator says approach is overengineered, but Solution Architect says it's appropriate for scale. Please both review this disagreement and provide reasoning."
-   - 使用 Task tool 生成后续智能体，并为其提供先前评审的上下文
+2. **开展辩论环节**（如果存在重大分歧）：
+   - 向评审员呈现相互冲突的观点
+   - 要求每位评审员审阅其他评审员的调查结果
+   - 示例：“需求验证员认为该方案过度设计，但解决方案架构师认为对于当前规模而言这是合适的。请双方重新审视这一分歧并说明理由。”
+   - 使用 Task 工具启动能够获取先前评审上下文的后续代理
 
 3. **达成共识**：
    - 综合辩论结果
-   - 确定哪些观点有更充分的依据
-   - 对任何未解决的分歧，使用 "reasonable people may disagree" 标记加以记录
+   - 确定哪些观点获得了更充分的支持
+   - 对任何尚未解决的分歧使用“合理的人可能会有不同意见”标注进行记录
 
 ### 阶段 4：生成共识报告
 
-将所有分析结果汇编成一份全面且可执行的报告：
+将所有调查结果汇编成一份全面且可执行的报告：
 
 ```markdown
 # 🔍 Work Critique Report
@@ -441,15 +440,15 @@ Based on the critique, here are recommended next steps:
 *Review Date: [timestamp]*
 ```
 
-## 重要准则
+## 重要指南
 
-1. **保持客观**：基于证据而非个人偏好进行评估
+1. **保持客观**：基于证据进行评估，而非个人偏好
 2. **具体明确**：始终引用文件位置、行号和代码示例
-3. **具有建设性**：将批评表述为改进机会
-4. **保持平衡**：同时认可优点和不足
-5. **可付诸行动**：提供包含示例的具体建议
-6. **考虑上下文**：将项目约束、团队规模和时间安排纳入考量
-7. **避免偏见**：不要在缺乏合理依据的情况下偏向某些模式或风格
+3. **建设性地表达**：将批评表述为改进机会
+4. **保持平衡**：同时指出优点和不足
+5. **可执行**：提供包含示例的具体建议
+6. **考虑上下文**：将项目限制、团队规模和时间安排纳入考量
+7. **避免偏见**：不要在缺乏依据的情况下偏好某些模式或风格
 
 ## 使用示例
 
@@ -469,8 +468,8 @@ Based on the critique, here are recommended next steps:
 
 ## 注意事项
 
-- 这是一个**仅生成报告**的命令，不会进行任何更改
-- 由于需要多个代理协同工作，审查可能需要 2-5 分钟
-- 评分以专业开发标准为参照
-- 评审者之间的分歧是有价值的见解，而非失败
-- 利用审查结果为未来的开发决策提供参考
+- 这是一个**仅生成报告**的命令——不会进行任何更改
+- 由于需要协调多个代理，审查可能需要 2-5 分钟
+- 评分是相对于专业开发标准而言的
+- 评审者之间的分歧是有价值的洞见，而不是失败
+- 使用这些发现为未来的开发决策提供参考

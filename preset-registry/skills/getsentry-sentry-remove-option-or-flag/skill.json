@@ -1,0 +1,26 @@
+{
+  "id": "getsentry-sentry-remove-option-or-flag",
+  "name": "remove-option-or-flag",
+  "description": "Remove a Sentry option or FlagPole feature flag whose rollout is finished, in the correct PR order across sentry, getsentry, and sentry-options-automator. Use when deleting an option from defaults.py, removing a flag from temporary.py, cleaning up a flag that reached 100%, unsetting a value in the options automator, or diagnosing an automator run that reports an unregistered option. Trigger on \"remove this feature flag\", \"delete this option\", \"clean up the flag\", \"the flag is fully rolled out\", ",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "getsentry",
+  "install_path": ".claude/skills/remove-option-or-flag/SKILL.md",
+  "source": {
+    "repo": "getsentry/sentry",
+    "url": "https://github.com/getsentry/sentry/blob/master/.agents/skills/remove-option-or-flag/SKILL.md",
+    "path": ".agents/skills/remove-option-or-flag/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-08-26T14:19:04.412Z",
+    "stars": 44621,
+    "language": "Python",
+    "pushed_at": "2026-08-26T14:17:50Z",
+    "license": null
+  },
+  "summary_zh": "用于按正确顺序跨仓库移除已完成发布的 Sentry 配置项或功能开关，并处理自动化清理与未注册选项问题。"
+}
