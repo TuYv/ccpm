@@ -1,20 +1,6 @@
 ---
 name: synapse-migration
-description: >
-  Port Azure Synapse Analytics workloads to Microsoft Fabric.
-  Provides distinct migration patterns for Spark workloads, Lake Database metadata,
-  and Dedicated SQL Pool schema and executable code to Fabric Lakehouse.
-  Translates mssparkutils calls to notebookutils (including the env→runtime namespace change),
-  replaces Linked Services with Fabric Data Connections and OneLake Shortcuts.
-  Use when the user wants to:
-  (1) port Synapse Spark notebooks to Fabric Lakehouse or Spark Job Definitions,
-  (2) replace mssparkutils or Linked Services in Synapse code,
-  (3) migrate Dedicated SQL Pool schema and executable code to Fabric Lakehouse using
-  T-SQL to Spark SQL notebook conversion without moving source table rows.
-  Triggers: "migrate from synapse", "synapse to fabric", "mssparkutils to notebookutils",
-  "synapse linked service replacement", "port synapse notebooks", "synapse workspace migration",
-  "synapse dedicated pool to lakehouse", "synapse T-SQL to Spark SQL",
-  "assess synapse dedicated pool migration risk".
+description: "Ports Azure Synapse workloads to Fabric, converting mssparkutils to notebookutils including the env to runtime namespace change, Linked Services to Fabric connections and OneLake shortcuts, and Spark Pools, Lake Databases and Spark Job Definitions to their equivalents. Also migrates Dedicated SQL Pool schema and code to a Lakehouse via T-SQL to Spark SQL, without moving source rows. For Synapse pipelines use pipeline-migration."
 ---
 
 > **Telemetry — MANDATORY.** Every `api.fabric.microsoft.com` call must carry

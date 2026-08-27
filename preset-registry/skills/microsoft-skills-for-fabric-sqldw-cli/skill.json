@@ -1,7 +1,7 @@
 {
   "id": "microsoft-skills-for-fabric-sqldw-cli",
   "name": "sqldw-cli",
-  "description": "Author, query and diagnose Fabric Warehouse, Lakehouse SQL endpoints and Mirrored Databases: DDL/DML and COPY INTO ingestion, read-only T-SQL SELECT and row counts over lakehouse tables, and queryinsights performance triage. Fabric SQL database (OLTP) is sqldb-*-cli. Triggers:query warehouse,count rows lakehouse,SELECT lakehouse,create warehouse table,COPY INTO,warehouse MERGE,slowest warehouse queries,queryinsights CPU",
+  "description": "Manages Fabric Warehouse, Lakehouse SQL analytics endpoints, and Mirrored Databases, including DDL and DML, COPY INTO ingestion, read-only T-SQL SELECT and row counts over lakehouse tables, and queryinsights performance triage. Use to query these items or count rows in a table. A Fabric SQL database, the OLTP engine, belongs to sqldb-cli.",
   "category": "数据分析",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/microsoft/skills-for-fabric/blob/main/skills/sqldw-cli/SKILL.md",
     "path": "skills/sqldw-cli/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-27T04:20:25.087Z",
+    "discovered_at": "2026-08-27T15:20:19.894Z",
     "stars": 1025,
     "language": "Python",
-    "pushed_at": "2026-08-26T10:26:59Z",
+    "pushed_at": "2026-08-27T15:15:30Z",
     "license": "MIT"
-  },
-  "summary_zh": "面向 Microsoft Fabric 的命令行工具，可管理和查询数仓、湖仓 SQL 端点及镜像数据库，并排查慢查询和性能问题。"
+  }
 }

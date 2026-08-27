@@ -1,8 +1,8 @@
 {
   "id": "microsoft-skills-for-fabric-synapse-migration",
   "name": "synapse-migration",
-  "description": "> Port Azure Synapse Analytics workloads to Microsoft Fabric. Provides distinct migration patterns for Spark workloads, Lake Database metadata, and Dedicated SQL Pool schema and executable code to Fabric Lakehouse. Translates mssparkutils calls to notebookutils (including the env→runtime namespace change), replaces Linked Services with Fabric Data Connections and OneLake Shortcuts. Use when the user wants to: (1) port Synapse Spark notebooks to Fabric Lakehouse or Spark Job Definitions, (2) repl",
-  "category": "文档写作",
+  "description": "Ports Azure Synapse workloads to Fabric, converting mssparkutils to notebookutils including the env to runtime namespace change, Linked Services to Fabric connections and OneLake shortcuts, and Spark Pools, Lake Databases and Spark Job Definitions to their equivalents. Also migrates Dedicated SQL Pool schema and code to a Lakehouse via T-SQL to Spark SQL, without moving source rows. For Synapse pipelines use pipeline-migration.",
+  "category": "数据分析",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,10 @@
     "url": "https://github.com/microsoft/skills-for-fabric/blob/main/skills/synapse-migration/SKILL.md",
     "path": "skills/synapse-migration/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-27T04:20:25.228Z",
+    "discovered_at": "2026-08-27T15:20:20.107Z",
     "stars": 1025,
     "language": "Python",
-    "pushed_at": "2026-08-26T10:26:59Z",
+    "pushed_at": "2026-08-27T15:15:30Z",
     "license": "MIT"
-  },
-  "summary_zh": "用于将 Azure Synapse 工作负载迁移到 Microsoft Fabric，适合转换 Spark 笔记本、数据库元数据和 SQL 架构代码。"
+  }
 }

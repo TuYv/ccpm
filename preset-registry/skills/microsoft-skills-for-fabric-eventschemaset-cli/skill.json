@@ -1,7 +1,7 @@
 {
   "id": "microsoft-skills-for-fabric-eventschemaset-cli",
   "name": "eventschemaset-cli",
-  "description": "Author and inspect Microsoft Fabric Event Schema Sets (centralized catalogs of event types and message schemas) via the Fabric Items REST API with az rest: create, rename, override the definition or delete one; or list, inspect and base64-decode definitions read-only. Not the Eventstream ingestion pipeline (eventstream-*) nor Eventhouse/KQL (eventhouse-cli). Triggers:create event schema set,update event schema set definition,add event type to an event schema set,delete event schema set,list even",
+  "description": "Governs Event Schema Sets, the Fabric registries of event types and message payload schemas. Covers create, rename, update and delete of a definition, and listing, property reads or base64 decoding. Every Event Schema Set task belongs here. Ingestion pipelines are eventstream-cli.",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/microsoft/skills-for-fabric/blob/main/skills/eventschemaset-cli/SKILL.md",
     "path": "skills/eventschemaset-cli/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-27T04:20:22.902Z",
+    "discovered_at": "2026-08-27T15:20:16.832Z",
     "stars": 1025,
     "language": "Python",
-    "pushed_at": "2026-08-26T10:26:59Z",
+    "pushed_at": "2026-08-27T15:15:30Z",
     "license": "MIT"
   },
-  "summary_zh": "用于通过命令行创建、更新和检查 Microsoft Fabric 事件架构集，适合集中管理事件类型与消息架构。"
+  "summary_zh": "用于管理 Fabric 中事件类型与消息载荷结构的注册表，支持定义的增删改查及字段读取，适合维护事件数据规范。"
 }

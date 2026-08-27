@@ -1,14 +1,14 @@
 {
   "id": "tzachbon-smart-ralph-interview-framework",
   "name": "interview-framework",
-  "description": "This skill should be used when running an interactive interview before a spec phase, gathering requirements through dialogue, asking the user clarifying questions before delegating to a subagent, or when any Ralph phase command (research, requirements, design, tasks) needs adaptive brainstorming dialogue. Covers the 3-phase algorithm (Understand, Propose Approaches, Confirm and Store).",
+  "description": "This skill should be used when running any normal-mode interview before a spec phase, grilling the user to reach shared understanding, gathering requirements through dialogue, or resolving design decisions before delegating to a Ralph subagent. Covers fact-first discovery, design-tree frontier rounds, recommendations, domain language, and confirmation.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
     "gemini"
   ],
-  "version": "0.2.0",
+  "version": "0.3.0",
   "author": "tzachbon",
   "install_path": ".claude/skills/interview-framework/SKILL.md",
   "source": {
@@ -16,11 +16,10 @@
     "url": "https://github.com/tzachbon/smart-ralph/blob/main/plugins/ralph-specum/skills/interview-framework/SKILL.md",
     "path": "plugins/ralph-specum/skills/interview-framework/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-27T04:22:17.143Z",
+    "discovered_at": "2026-08-27T15:23:02.810Z",
     "stars": 527,
     "language": "Shell",
-    "pushed_at": "2026-07-23T10:59:20Z",
+    "pushed_at": "2026-08-27T15:02:15Z",
     "license": "MIT"
-  },
-  "summary_zh": "一个用于规格设计前交互访谈的对话框架，通过提问澄清需求、探索方案并确认记录，适合研究、需求、设计和任务规划阶段。"
+  }
 }

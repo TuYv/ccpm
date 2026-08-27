@@ -1,18 +1,6 @@
 ---
 name: git-integration-operations-cli
-description: >
-  Automate the Microsoft Fabric Git integration lifecycle from CLI environments
-  using the Fabric CLI (fab api), with az rest as a fallback. Use when the user
-  wants to connect a workspace to Azure DevOps or GitHub, commit or update/pull
-  workspace items, check Git sync status, resolve update conflicts, disconnect,
-  automate Git sync with a service principal, or link a branch workspace to its
-  base. Do NOT use for branch switching, for deployment tools (fab deploy,
-  fabric-cicd, Bulk Import), for deployment-pipeline runtime, or for
-  cross-workspace reference rebinding after promotion (a property of the item
-  definition format, not the Git lifecycle). Triggers: "connect workspace to
-  git", "commit fabric to git", "update workspace from git", "fabric git
-  status", "resolve git conflict fabric", "service principal git sync", "link
-  branch to base".
+description: "Runs the Fabric Git integration lifecycle through fab api or az rest, including connecting a workspace to Azure DevOps or GitHub, committing, updating from Git, reading sync status, resolving conflicts, disconnecting a connected workspace, and automating sync with a service principal. For stage promotion use deployment-pipelines-authoring-cli. Branch switching, fab deploy, fabric-cicd and cross-workspace rebinding are out of scope."
 metadata:
   maturity: experimental
   owner: yaron

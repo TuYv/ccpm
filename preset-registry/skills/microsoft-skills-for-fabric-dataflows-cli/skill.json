@@ -1,8 +1,8 @@
 {
   "id": "microsoft-skills-for-fabric-dataflows-cli",
   "name": "dataflows-cli",
-  "description": "Author, inspect and upgrade Fabric Dataflow Gen2: connection and output setup, M preview via executeQuery, saved definition and refresh-history inspection, and Gen1-to-Gen2 save-as upgrades. Pipeline JSON is pipeline-migration. Triggers:executeQuery preview,updateDefinition,getDefinition,dataflow refresh history,saveAsNativeArtifact,Gen1 Gen2 readiness",
-  "category": "开发编程",
+  "description": "Manages Fabric Dataflow Gen2 items, including creation, M editing, connections, output destinations, getDefinition and updateDefinition inspection, executeQuery, refresh history, and Gen1-to-Gen2 save-as upgrades via saveAsNativeArtifact. Use for Dataflow items or Power Query M definitions. For pipeline JSON use pipeline-migration; for Spark or Warehouse transformations use their own skills.",
+  "category": "文档写作",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,11 @@
     "url": "https://github.com/microsoft/skills-for-fabric/blob/main/skills/dataflows-cli/SKILL.md",
     "path": "skills/dataflows-cli/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-27T04:20:22.160Z",
+    "discovered_at": "2026-08-27T15:20:15.785Z",
     "stars": 1025,
     "language": "Python",
-    "pushed_at": "2026-08-26T10:26:59Z",
+    "pushed_at": "2026-08-27T15:15:30Z",
     "license": "MIT"
   },
-  "summary_zh": "用于管理和迁移 Fabric Dataflow Gen2 的命令行工具，可配置连接与输出、预览查询、检查定义和刷新记录，并将 Gen1 升级到 Gen2。"
+  "summary_zh": "用于管理 Fabric Dataflow Gen2 数据流及 Power Query M 定义，支持创建、编辑、查询、刷新和从 Gen1 升级，适合数据集成与迁移场景。"
 }

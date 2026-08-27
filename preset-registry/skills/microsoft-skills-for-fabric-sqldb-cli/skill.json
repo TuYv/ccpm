@@ -1,8 +1,8 @@
 {
   "id": "microsoft-skills-for-fabric-sqldb-cli",
   "name": "sqldb-cli",
-  "description": "Design, read and troubleshoot a Fabric SQL database item (OLTP, SQL Server engine): schema with constraints, indexes and vector columns; sqlcmd lookups including temporal and similarity search; Query Store, blocking and regressed-plan investigation. Warehouse items belong to sqldw-cli. Triggers:create sqldb table,sqldb foreign key,dacpac deploy,sqldb sys.tables,vector similarity sqldb,sqldb query store,sql database blocked sessions",
-  "category": "设计创意",
+  "description": "Manages a Fabric SQL database item, the OLTP SQL Server engine, including running T-SQL through sqlcmd, temporal and vector similarity search, schema and sys.tables inspection, dacpac deployment, and Query Store, blocked sessions and regressed-plan investigation. Use for any query or change against a SQL database item. Warehouse, lakehouse SQL endpoint and mirrored items belong to sqldw-cli.",
+  "category": "数据分析",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,10 @@
     "url": "https://github.com/microsoft/skills-for-fabric/blob/main/skills/sqldb-cli/SKILL.md",
     "path": "skills/sqldb-cli/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-27T04:20:24.936Z",
+    "discovered_at": "2026-08-27T15:20:19.663Z",
     "stars": 1025,
     "language": "Python",
-    "pushed_at": "2026-08-26T10:26:59Z",
+    "pushed_at": "2026-08-27T15:15:30Z",
     "license": "MIT"
-  },
-  "summary_zh": "用于设计、查询和排查 Fabric SQL 数据库的命令行工具，适合建模部署及分析阻塞、查询性能等问题。"
+  }
 }

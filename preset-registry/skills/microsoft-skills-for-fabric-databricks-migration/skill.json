@@ -1,7 +1,7 @@
 {
   "id": "microsoft-skills-for-fabric-databricks-migration",
   "name": "databricks-migration",
-  "description": "> Port Databricks notebooks and jobs to Microsoft Fabric. Provides an exhaustive dbutils to notebookutils substitution table: fs operations (runtime mounts or OneLake Shortcuts), secret scope to Key Vault URL conversion, notebook run and exit, widget replacement with parameter-tagged cells, and library install replacement with Fabric Environments. Covers Unity Catalog three-level namespace reduction to Lakehouse two-level schemas, DBFS path conversion to OneLake, Databricks Jobs to Spark Job Def",
+  "description": "Ports existing Databricks notebooks and jobs to Fabric, covering dbutils to notebookutils, secret scopes to Key Vault, DBFS to OneLake, Unity Catalog mapping to schema-enabled Lakehouses, Jobs and Delta Live Tables to Spark Job Definitions and Pipelines, and Photon to the Native Execution Engine. Use whenever Databricks code has to be converted. For Fabric notebook code that is not being migrated, use spark-cli.",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/microsoft/skills-for-fabric/blob/main/skills/databricks-migration/SKILL.md",
     "path": "skills/databricks-migration/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-27T04:20:22.026Z",
+    "discovered_at": "2026-08-27T15:20:15.561Z",
     "stars": 1025,
     "language": "Python",
-    "pushed_at": "2026-08-26T10:26:59Z",
+    "pushed_at": "2026-08-27T15:15:30Z",
     "license": "MIT"
   },
-  "summary_zh": "一套将 Databricks 笔记本和作业迁移到 Microsoft Fabric 的指南，适合解决接口、存储、密钥、依赖和目录结构的兼容改造。"
+  "summary_zh": "用于将 Databricks 笔记本和作业迁移到 Microsoft Fabric，适合转换代码、存储、权限及数据管道等组件。"
 }

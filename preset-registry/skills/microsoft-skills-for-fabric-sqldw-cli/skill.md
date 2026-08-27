@@ -1,6 +1,6 @@
 ---
 name: sqldw-cli
-description: "Author, query and diagnose Fabric Warehouse, Lakehouse SQL endpoints and Mirrored Databases: DDL/DML and COPY INTO ingestion, read-only T-SQL SELECT and row counts over lakehouse tables, and queryinsights performance triage. Fabric SQL database (OLTP) is sqldb-*-cli. Triggers:query warehouse,count rows lakehouse,SELECT lakehouse,create warehouse table,COPY INTO,warehouse MERGE,slowest warehouse queries,queryinsights CPU"
+description: "Manages Fabric Warehouse, Lakehouse SQL analytics endpoints, and Mirrored Databases, including DDL and DML, COPY INTO ingestion, read-only T-SQL SELECT and row counts over lakehouse tables, and queryinsights performance triage. Use to query these items or count rows in a table. A Fabric SQL database, the OLTP engine, belongs to sqldb-cli."
 ---
 
 > **Telemetry — MANDATORY.** Every `api.fabric.microsoft.com` call must carry
@@ -11,7 +11,7 @@ description: "Author, query and diagnose Fabric Warehouse, Lakehouse SQL endpoin
 > **CRITICAL NOTES**
 > 1. To find the workspace details (including its ID) from workspace name: list all workspaces and, then, use JMESPath filtering
 > 2. To find the item details (including its ID) from workspace ID, item type, and item name: list all items of that type in that workspace and, then, use JMESPath filtering
-> 3. **Skill disambiguation**: use `sqldw-cli` for any T-SQL sent to a Warehouse, a Lakehouse SQL analytics endpoint or a Mirrored Database — including plain Lakehouse table SELECT, row-count, filtering and aggregation requests. Any notebook-cell or PySpark DataFrame work is `spark-cli`; a Fabric SQL database (OLTP) is the `sqldb-*-cli` family — `sqldb-authoring-cli`, `sqldb-consumption-cli` and `sqldb-operations-cli`.
+> 3. **Skill disambiguation**: use `sqldw-cli` for any T-SQL sent to a Warehouse, a Lakehouse SQL analytics endpoint or a Mirrored Database — including plain Lakehouse table SELECT, row-count, filtering and aggregation requests. Any notebook-cell or PySpark DataFrame work is `spark-cli`; a Fabric SQL database (OLTP) is `sqldb-cli`.
 
 # Fabric Warehouse and SQL Endpoints — CLI Skill
 

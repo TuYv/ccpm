@@ -1,7 +1,7 @@
 {
   "id": "microsoft-skills-for-fabric-azmon-mirroredcatalogs-operations-cli",
   "name": "azmon-mirroredcatalogs-operations-cli",
-  "description": "Onboard Azure Monitor / Application Insights observability data into Microsoft Fabric and guide business-impact insights by correlating telemetry with business data, Eventhouse external delta tables, verified schemas, an optional Real-Time (KQL) dashboard, and opt-in Operations Agent instructions. Triggers: onboard Azure Monitor into Fabric, correlate App Insights telemetry with business data, build a Real-Time KQL dashboard over telemetry, build an Operations Agent for business-impact alerting,",
+  "description": "Brings Azure Monitor, Application Insights, and Log Analytics telemetry into Fabric as Eventhouse external delta tables and correlates it with business data. Use to onboard observability data, judge whether latency or availability affected revenue, or build a Real-Time dashboard and Operations Agent over it.",
   "category": "数据分析",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/microsoft/skills-for-fabric/blob/main/skills/azmon-mirroredcatalogs-operations-cli/SKILL.md",
     "path": "skills/azmon-mirroredcatalogs-operations-cli/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-27T04:20:21.886Z",
+    "discovered_at": "2026-08-27T15:20:15.385Z",
     "stars": 1025,
     "language": "Python",
-    "pushed_at": "2026-08-26T10:26:59Z",
+    "pushed_at": "2026-08-27T15:15:30Z",
     "license": "MIT"
   },
-  "summary_zh": "一款将 Azure Monitor 和 Application Insights 数据接入 Microsoft Fabric 的命令行工具，适合关联业务数据、实时分析并生成业务影响告警。"
+  "summary_zh": "将 Azure 监控、应用洞察和日志数据接入 Fabric，关联业务数据分析延迟或可用性对收入的影响，并构建实时运营看板和智能代理。"
 }

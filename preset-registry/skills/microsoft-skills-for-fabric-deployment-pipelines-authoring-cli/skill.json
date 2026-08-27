@@ -1,7 +1,7 @@
 {
   "id": "microsoft-skills-for-fabric-deployment-pipelines-authoring-cli",
   "name": "deployment-pipelines-authoring-cli",
-  "description": "> Automate Microsoft Fabric deployment pipelines (ALM promotion across dev/test/prod stages) via the Fabric core REST API from agentic CLI environments. Use when the user wants to: (1) create or update a deployment pipeline and its stages, (2) assign or unassign a workspace to a stage, (3) deploy content from one stage to the next (forward or backward) including selective item deploys, (4) track a deployment as a long-running operation, (5) manage deployment pipeline role assignments. Triggers: ",
+  "description": "Manages Fabric deployment pipelines for ALM promotion across dev, test, and prod stages, including stage creation, workspace assignment, selective forward or backward deploys, operation polling, stage role assignments, and the pipeline and workspace permissions each action requires. For Git sync use git-integration-operations-cli.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/microsoft/skills-for-fabric/blob/main/skills/deployment-pipelines-authoring-cli/SKILL.md",
     "path": "skills/deployment-pipelines-authoring-cli/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-27T04:20:22.318Z",
+    "discovered_at": "2026-08-27T15:20:16.015Z",
     "stars": 1025,
     "language": "Python",
-    "pushed_at": "2026-08-26T10:26:59Z",
+    "pushed_at": "2026-08-27T15:15:30Z",
     "license": "MIT"
   },
-  "summary_zh": "通过命令行自动管理 Microsoft Fabric 部署流水线，适合开发、测试、生产环境间的内容发布、进度跟踪与权限管理。"
+  "summary_zh": "用于管理 Fabric 部署流水线，支持开发、测试、生产环境间的选择性发布与回滚，适合自动化 ALM 流程。"
 }

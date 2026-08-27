@@ -1,7 +1,7 @@
 {
   "id": "microsoft-skills-for-fabric-search-consumption-cli",
   "name": "search-consumption-cli",
-  "description": "> Search the Microsoft Fabric catalog across workspaces using the Fabric Catalog Search API. Use when the user wants to: (1) find an item by display name when the workspace is unknown, (2) list or discover items of a specific type across the tenant, (3) identify which workspace contains an item, (4) return item/workspace IDs for downstream API calls. Dataflow Gen1/Gen2 items are not supported. For data queries after the item is known, use the workload-specific consumption skill (`sqldw-cli`, `sp",
+  "description": "Finds Fabric items across every workspace with the Catalog Search API when the workspace is unknown, locating an item by display name, inventorying one item type tenant-wide, and returning the workspace and item IDs later calls need. Dataflow Gen1 and Gen2 items are not supported. Use only to locate items; once found, query them with the owning item skill such as sqldw-cli, spark-cli, eventhouse-cli or fabriciq.",
   "category": "数据分析",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/microsoft/skills-for-fabric/blob/main/skills/search-consumption-cli/SKILL.md",
     "path": "skills/search-consumption-cli/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-27T04:20:24.521Z",
+    "discovered_at": "2026-08-27T15:20:19.022Z",
     "stars": 1025,
     "language": "Python",
-    "pushed_at": "2026-08-26T10:26:59Z",
+    "pushed_at": "2026-08-27T15:15:30Z",
     "license": "MIT"
-  },
-  "summary_zh": "用于跨工作区搜索 Microsoft Fabric 目录，适合按名称或类型查找资源、定位所属工作区并获取后续调用所需的 ID。"
+  }
 }

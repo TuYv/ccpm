@@ -1,7 +1,7 @@
 {
   "id": "microsoft-skills-for-fabric-fabriciq-ontology-cli",
   "name": "fabriciq-ontology-cli",
-  "description": "Author and explore Fabric IQ Ontology items: entity and relationship types, data bindings and definition updates, or schema, lineage, grounding and graph-walk exploration. Power BI report Q&A is fabriciq. Triggers:create ontology item,bind entity type,update ontology definition,entity types,ground query,ontology lineage",
+  "description": "Manages Fabric IQ Ontology items, including entity and relationship types, data bindings, and definition updates, plus schema, lineage, grounding, and graph-walk exploration. Use for ontology modelling and traversal. For natural-language questions over a Power BI report use fabriciq.",
   "category": "数据分析",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/microsoft/skills-for-fabric/blob/main/skills/fabriciq-ontology-cli/SKILL.md",
     "path": "skills/fabriciq-ontology-cli/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-27T04:20:23.203Z",
+    "discovered_at": "2026-08-27T15:20:17.260Z",
     "stars": 1025,
     "language": "Python",
-    "pushed_at": "2026-08-26T10:26:59Z",
+    "pushed_at": "2026-08-27T15:15:30Z",
     "license": "MIT"
   },
-  "summary_zh": "用于创建和探索 Fabric IQ 本体，适合管理实体关系、数据绑定与定义，并查询架构、血缘和图谱路径。"
+  "summary_zh": "用于管理 Fabric IQ 本体中的实体、关系和数据绑定，支持定义更新、血缘分析及图遍历，适合本体建模与关系探索。"
 }

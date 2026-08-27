@@ -1,7 +1,7 @@
 {
   "id": "qwenlm-qwen-code-desktop-brand-builder",
   "name": "desktop-brand-builder",
-  "description": "Generate a branded qwen-code desktop package from a minimal brandId and logo. Use when the user wants a custom, white-label, rebranded, ModelStudio/OpenWork/Qwen Code desktop client, installer, DMG/EXE/AppImage, or one-click brand build.",
+  "description": "Generate a branded Qwen Code desktop package from the Tauri desktop shell using a minimal brandId and logo. Use when the user wants a custom, white-label, or rebranded desktop client, installer, DMG/EXE/AppImage/deb, or one-click brand build on top of packages/desktop-shell.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -13,14 +13,13 @@
   "install_path": ".claude/skills/desktop-brand-builder/SKILL.md",
   "source": {
     "repo": "QwenLM/qwen-code",
-    "url": "https://github.com/QwenLM/qwen-code/blob/main/packages/desktop/.agents/skills/desktop-brand-builder/SKILL.md",
-    "path": "packages/desktop/.agents/skills/desktop-brand-builder/SKILL.md",
+    "url": "https://github.com/QwenLM/qwen-code/blob/main/packages/desktop-shell/.agents/skills/desktop-brand-builder/SKILL.md",
+    "path": "packages/desktop-shell/.agents/skills/desktop-brand-builder/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-25T05:16:22.131Z",
-    "stars": 27342,
+    "discovered_at": "2026-08-27T15:23:43.566Z",
+    "stars": 27417,
     "language": "TypeScript",
-    "pushed_at": "2026-08-25T05:14:01Z",
+    "pushed_at": "2026-08-27T15:21:51Z",
     "license": "Apache-2.0"
-  },
-  "summary_zh": "用品牌标识和 Logo 一键生成定制版 Qwen Code 桌面客户端及安装包，适合白标和品牌化发布。"
+  }
 }

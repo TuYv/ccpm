@@ -1,8 +1,8 @@
 {
   "id": "microsoft-skills-for-fabric-fabriciq",
   "name": "fabriciq",
-  "description": "> Answer natural-language business questions over existing Power BI reports and semantic models through the FabricIQ MCP endpoint. Orchestrates artifact discovery, schema inspection, entity resolution, DAX generation, and query execution to return plain-language answers. Use when the user asks what, which, compare, rank, explain, or summarize questions about the data in a Power BI report or semantic model, including asking for a DAX query to be run against a named model. Triggers: \"ask power bi\"",
-  "category": "文档写作",
+  "description": "Answers natural-language business questions over existing Power BI reports and semantic models through the FabricIQ MCP endpoint, discovering artifacts, resolving entities, generating the DAX itself, and returning a plain-language answer. Use when the user asks a data question, including one that says to query the model directly. For DAX the user supplies, or measures to save, use semantic-model-authoring.",
+  "category": "数据分析",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,11 @@
     "url": "https://github.com/microsoft/skills-for-fabric/blob/main/skills/fabriciq/SKILL.md",
     "path": "skills/fabriciq/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-27T04:20:23.353Z",
+    "discovered_at": "2026-08-27T15:20:17.445Z",
     "stars": 1025,
     "language": "Python",
-    "pushed_at": "2026-08-26T10:26:59Z",
+    "pushed_at": "2026-08-27T15:15:30Z",
     "license": "MIT"
   },
-  "summary_zh": "通过自然语言查询现有 Power BI 报表和语义模型，自动生成并执行 DAX，适合数据对比、排名、解释和汇总分析。"
+  "summary_zh": "通过 FabricIQ MCP 接口，让用户用自然语言查询 Power BI 报表和语义模型，自动生成 DAX 并返回易懂答案，适合快速分析业务数据。"
 }

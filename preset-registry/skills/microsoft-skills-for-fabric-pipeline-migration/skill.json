@@ -1,7 +1,7 @@
 {
   "id": "microsoft-skills-for-fabric-pipeline-migration",
   "name": "pipeline-migration",
-  "description": "> Migrate Synapse Data Factory pipeline artifacts to Microsoft Fabric Data Factory. Handles: linked services → Fabric connections, dataset definitions inlined into pipeline activities, global parameters → Variable Libraries, SynapseNotebook activities → TridentNotebook. SSIS, SHIR-only, and Databricks activities are parked. Use when: (1) migrating Synapse pipelines to Fabric Data Factory, (2) converting SynapseNotebook activities to TridentNotebook, (3) translating linked services to Fabric conn",
+  "description": "Migrates Synapse Data Factory pipelines to Fabric Data Factory, turning linked services into Fabric connections, inlining datasets into activities, converting global parameters to Variable Libraries, and mapping SynapseNotebook to TridentNotebook. Use for pipeline JSON. For Synapse Spark notebook code use synapse-migration.",
   "category": "数据分析",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/microsoft/skills-for-fabric/blob/main/skills/pipeline-migration/SKILL.md",
     "path": "skills/pipeline-migration/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-27T04:20:23.790Z",
+    "discovered_at": "2026-08-27T15:20:17.981Z",
     "stars": 1025,
     "language": "Python",
-    "pushed_at": "2026-08-26T10:26:59Z",
+    "pushed_at": "2026-08-27T15:15:30Z",
     "license": "MIT"
-  },
-  "summary_zh": "将 Synapse Data Factory 管道迁移到 Microsoft Fabric，自动转换连接、数据集、参数和笔记本活动，适合平台升级改造。"
+  }
 }

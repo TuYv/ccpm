@@ -1,8 +1,8 @@
 {
   "id": "microsoft-skills-for-fabric-spark-cli",
   "name": "spark-cli",
-  "description": "Author, run and diagnose Fabric Spark: notebook cell code (%%configure, %%sql, PySpark, notebookutils), named notebook runs, Livy-session ad-hoc calculations, Spark failure triage, and the whole Materialized Lake View lifecycle -- definition, incremental-refresh readiness review, schedules, refresh jobs, run history and refresh-failure diagnosis. KQL materialized views are eventhouse-cli. Triggers:write notebook code,run notebook,notebookutils,create a Livy session,failed notebook,Spark OOM,crea",
-  "category": "开发编程",
+  "description": "Manages Fabric Spark work, including notebook cell code with %%configure, %%sql, PySpark and notebookutils, named notebook runs, Livy sessions, triage of failed or OOM notebook and pipeline Spark runs, and the Materialized Lake View (MLV) lifecycle. Load it before writing MLV SQL, since CREATE MATERIALIZED LAKE VIEW and its CONSTRAINT clause are Fabric-only. KQL materialized views belong to eventhouse-cli.",
+  "category": "文档写作",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,10 @@
     "url": "https://github.com/microsoft/skills-for-fabric/blob/main/skills/spark-cli/SKILL.md",
     "path": "skills/spark-cli/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-27T04:20:24.798Z",
+    "discovered_at": "2026-08-27T15:20:19.449Z",
     "stars": 1025,
     "language": "Python",
-    "pushed_at": "2026-08-26T10:26:59Z",
+    "pushed_at": "2026-08-27T15:15:30Z",
     "license": "MIT"
-  },
-  "summary_zh": "一款面向 Microsoft Fabric Spark 的命令行工具，适合统一处理计算开发、任务运行、故障排查和物化湖视图运维。"
+  }
 }

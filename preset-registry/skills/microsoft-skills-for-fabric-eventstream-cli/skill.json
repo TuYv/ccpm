@@ -1,7 +1,7 @@
 {
   "id": "microsoft-skills-for-fabric-eventstream-cli",
   "name": "eventstream-cli",
-  "description": "Build and inspect Fabric Eventstream topologies: sources, operators, destinations and stream routing, plus read-only topology, retention, throughput and connection-string inspection. Querying landed events uses eventhouse-cli consumption mode. Triggers:create eventstream,add filter operator,CDC source,inspect eventstream topology,eventstream retention,list eventstreams",
+  "description": "Owns Fabric Eventstream items end to end: sources, operators, destinations, routing, retention, throughput and connection strings, plus read-only topology checks. Pick it for anything that names an Eventstream, creating and listing included. Where the rows finally land is eventhouse-cli.",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/microsoft/skills-for-fabric/blob/main/skills/eventstream-cli/SKILL.md",
     "path": "skills/eventstream-cli/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-27T04:20:23.067Z",
+    "discovered_at": "2026-08-27T15:20:17.087Z",
     "stars": 1025,
     "language": "Python",
-    "pushed_at": "2026-08-26T10:26:59Z",
+    "pushed_at": "2026-08-27T15:15:30Z",
     "license": "MIT"
   },
-  "summary_zh": "用于构建和检查 Fabric 事件流拓扑的命令行工具，适合配置数据源、过滤与路由，并排查保留、吞吐量和连接问题。"
+  "summary_zh": "用于端到端管理 Fabric Eventstream 的数据源、处理、路由和目标，适合创建、查询及检查事件流拓扑；数据最终落地请用 eventhouse-cli。"
 }

@@ -1,7 +1,7 @@
 {
   "id": "microsoft-skills-for-fabric-eventhouse-cli",
   "name": "eventhouse-cli",
-  "description": "Author and query Fabric Eventhouse / KQL databases: create tables, functions, policies, materialized views and ingestion, or run read-only KQL for real-time and time-series analytics. Ingestion topology is eventstream-cli. Triggers:kql query,query eventhouse,create kql table,kql ingestion,kql retention policy,materialized view kql",
+  "description": "Authors and queries Fabric Eventhouse and KQL databases: tables, functions, policies, materialized views, ingestion, and read-only KQL for real-time and time-series analytics. All KQL database work belongs here, table creation and simple queries included. An Eventstream item is eventstream-cli; an Event Schema Set is eventschemaset-cli.",
   "category": "数据分析",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/microsoft/skills-for-fabric/blob/main/skills/eventhouse-cli/SKILL.md",
     "path": "skills/eventhouse-cli/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-27T04:20:22.743Z",
+    "discovered_at": "2026-08-27T15:20:16.686Z",
     "stars": 1025,
     "language": "Python",
-    "pushed_at": "2026-08-26T10:26:59Z",
+    "pushed_at": "2026-08-27T15:15:30Z",
     "license": "MIT"
   },
-  "summary_zh": "用于管理和查询 Fabric Eventhouse/KQL 数据库的命令行工具，适合搭建实时与时序分析的数据结构、摄取策略并执行查询。"
+  "summary_zh": "用于管理和查询 Fabric Eventhouse 与 KQL 数据库，适合实时数据及时间序列分析场景。"
 }

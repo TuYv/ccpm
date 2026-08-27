@@ -1,7 +1,7 @@
 {
   "id": "microsoft-skills-for-fabric-e2e-fabric-cost-estimation",
   "name": "e2e-fabric-cost-estimation",
-  "description": "> Estimate Microsoft Fabric capacity costs before migration by analyzing existing workload profiles (Spark, SQL, Power BI, Real-Time Intelligence) and recommending optimal SKU sizing, billing modes, and Reserved Instance strategies. Use when the user wants to: (1) estimate Fabric costs for a migration, (2) size a Fabric capacity SKU, (3) compare Fabric pricing tiers, (4) calculate storage/compute/network costs, (5) recommend Reserved vs. Pay-As-You-Go vs. Autoscale billing. Trigger phrases are s",
+  "description": "Estimates Fabric capacity cost before a migration by profiling Spark, SQL, Power BI, and Real-Time workloads, then recommending SKU size and comparing Reserved, Pay-As-You-Go, and Autoscale billing. Use only for capacity sizing and pricing questions, not for general migration or connectivity work.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/microsoft/skills-for-fabric/blob/main/skills/e2e-fabric-cost-estimation/SKILL.md",
     "path": "skills/e2e-fabric-cost-estimation/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-27T04:20:22.463Z",
+    "discovered_at": "2026-08-27T15:20:16.272Z",
     "stars": 1025,
     "language": "Python",
-    "pushed_at": "2026-08-26T10:26:59Z",
+    "pushed_at": "2026-08-27T15:15:30Z",
     "license": "MIT"
   },
-  "summary_zh": "一款微软 Fabric 迁移成本评估工具，可分析现有工作负载并推荐容量规格、计费模式及预留实例方案。"
+  "summary_zh": "一款用于迁移前评估 Microsoft Fabric 容量成本的工具，可分析多类工作负载并推荐 SKU、比较不同计费方案。"
 }

@@ -1,7 +1,7 @@
 {
   "id": "microsoft-skills-for-fabric-hdinsight-migration",
   "name": "hdinsight-migration",
-  "description": "> Port Azure HDInsight Spark clusters and Hive workloads to Microsoft Fabric. Replaces legacy HiveContext and standalone SparkContext constructors with the pre-instantiated SparkSession. Converts WASB and ABFS storage paths to OneLake abfss URLs via Shortcuts. Transforms Hive DDL (STORED AS ORC, external tables) to Delta Lake schemas inside Fabric Lakehouse. Maps Oozie workflow actions — spark, hive, shell, sqoop, coordinator — to Fabric Pipeline activities and schedule triggers. Introduces note",
+  "description": "Ports HDInsight Spark and Hive workloads to Fabric, converting HiveContext and SparkContext to SparkSession, WASB and ABFS paths to OneLake shortcuts, Hive DDL to Delta tables in a Lakehouse, and Oozie coordinators and actions to pipeline activities and triggers. Use when the source workload is HDInsight.",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/microsoft/skills-for-fabric/blob/main/skills/hdinsight-migration/SKILL.md",
     "path": "skills/hdinsight-migration/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-27T04:20:23.654Z",
+    "discovered_at": "2026-08-27T15:20:17.817Z",
     "stars": 1025,
     "language": "Python",
-    "pushed_at": "2026-08-26T10:26:59Z",
+    "pushed_at": "2026-08-27T15:15:30Z",
     "license": "MIT"
-  },
-  "summary_zh": "一款将 Azure HDInsight 的 Spark、Hive 和 Oozie 工作负载迁移到 Microsoft Fabric 的工具，适合旧数据平台现代化改造。"
+  }
 }

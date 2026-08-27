@@ -1,11 +1,6 @@
 ---
 name: semantic-model-authoring
-description: >  
-  Author and inspect Power BI semantic models and their metadata: list tables, columns, measures, relationships; create, edit, deploy, refresh, and manage models; optimize DAX; build Import, DirectQuery, and Direct Lake models; configure data sources, permissions, connections; and prepare for AI/Copilot.
-  Load this skill before acting on any semantic model authoring, metadata, or read-only inspection request: it picks the correct tool and method for the environment and permissions.
-  Authoring-scoped: does not answer natural-language or data questions about a model's data.
-  Does NOT author report visuals, manage workspaces, or manage RLS/OLS roles.
-  Triggers: "create or edit a semantic model", "create or edit a DAX measure", "discover semantic model metadata", "list tables, columns, or measures in a semantic model", "refresh semantic model", "deploy semantic model to Fabric",  "prepare semantic model for AI/Copilot", "set semantic model permissions".
+description: "Manages Power BI semantic models, including tables, columns, measures, relationships, DAX authoring and tuning, Import, DirectQuery and Direct Lake designs, sources, connections, permissions, refresh, and deployment. Load this skill before acting on a semantic model, unless it is part of publishing a PBIP project, which powerbi-report-management owns. For natural-language data questions use fabriciq; for visuals use powerbi-report-authoring."
 ---
 
 > **Telemetry — MANDATORY.** Every `api.fabric.microsoft.com` call must carry

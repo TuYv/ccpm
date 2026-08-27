@@ -1,8 +1,8 @@
 {
   "id": "microsoft-skills-for-fabric-semantic-model-authoring",
   "name": "semantic-model-authoring",
-  "description": "> Author and inspect Power BI semantic models and their metadata: list tables, columns, measures, relationships; create, edit, deploy, refresh, and manage models; optimize DAX; build Import, DirectQuery, and Direct Lake models; configure data sources, permissions, connections; and prepare for AI/Copilot. Load this skill before acting on any semantic model authoring, metadata, or read-only inspection request: it picks the correct tool and method for the environment and permissions. Authoring-scop",
-  "category": "数据分析",
+  "description": "Manages Power BI semantic models, including tables, columns, measures, relationships, DAX authoring and tuning, Import, DirectQuery and Direct Lake designs, sources, connections, permissions, refresh, and deployment. Load this skill before acting on a semantic model, unless it is part of publishing a PBIP project, which powerbi-report-management owns. For natural-language data questions use fabriciq; for visuals use powerbi-report-authoring.",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,10 @@
     "url": "https://github.com/microsoft/skills-for-fabric/blob/main/skills/semantic-model-authoring/SKILL.md",
     "path": "skills/semantic-model-authoring/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-27T04:20:24.667Z",
+    "discovered_at": "2026-08-27T15:20:19.269Z",
     "stars": 1025,
     "language": "Python",
-    "pushed_at": "2026-08-26T10:26:59Z",
+    "pushed_at": "2026-08-27T15:15:30Z",
     "license": "MIT"
-  },
-  "summary_zh": "面向 Power BI 语义模型开发与检查的工具，帮助在不同权限环境下高效完成建模、运维及 AI/Copilot 准备。"
+  }
 }

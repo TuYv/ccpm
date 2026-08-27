@@ -1,7 +1,7 @@
 {
   "id": "chrisbanes-skills-run-github-project",
   "name": "run-github-project",
-  "description": "Use when asked to set up or repair a repository's GitHub Project configuration, reconcile Project epics or human checkpoints, triage Backlog work, plan and execute the next authorized issue, or drain authorized issues through implementation, review, merge, and reconciliation.",
+  "description": "Use when asked to set up, review, or operate a repository's GitHub Project workflow, including ready claims, human-owned Planning work, unknown remote mutation outcomes, Backlog triage, epics, checkpoints, next-issue execution, or an authorized drain.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/chrisbanes/skills/blob/main/skills/run-github-project/SKILL.md",
     "path": "skills/run-github-project/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-27T04:20:10.278Z",
-    "stars": 992,
+    "discovered_at": "2026-08-27T15:19:59.318Z",
+    "stars": 993,
     "language": "Python",
-    "pushed_at": "2026-08-26T21:08:35Z",
+    "pushed_at": "2026-08-27T15:15:46Z",
     "license": "Apache-2.0"
   },
-  "summary_zh": "用于维护仓库的 GitHub 项目配置，梳理待办与里程碑，并推进已授权任务从实现、评审到合并闭环。"
+  "summary_zh": "用于管理和执行仓库的 GitHub Project 工作流，适合处理待办分流、规划任务、史诗拆解、检查点及后续 issue。"
 }
