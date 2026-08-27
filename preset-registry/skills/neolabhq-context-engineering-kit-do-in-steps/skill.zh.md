@@ -1,145 +1,144 @@
 ---
 name: do-in-steps
 description: Execute one complex task as ordered, dependent steps run sequentially, passing context from each step to the next, with per-step LLM-as-a-judge verification. Use when later steps depend on the results of earlier ones.
-argument-hint: Task description [--model haiku|sonnet|opus] [--strict] (e.g., "Refactor UserService class and update all consumers")
 ---
 # do-in-steps
 
 <task>
-通过将复杂任务分解为一系列连续的子任务，并协调多个子代理按顺序完成每个步骤，从而执行该任务。自动分析任务以识别依赖关系，为每个子任务选择规模合适的模型，将已完成步骤的相关上下文传递给后续步骤，并在继续执行前使用独立评审器（采用元评审器评估规范）验证每个步骤。
+通过将复杂任务分解为按顺序执行的子任务，并协调子代理按顺序完成每个步骤，来执行复杂任务。自动分析任务以识别依赖关系，为每个子任务选择合适规模的模型，将已完成步骤中的相关上下文传递给后续步骤，并在继续之前使用元评判评估规范让独立评判验证每个步骤。
 </task>
 
 <context>
-此命令实现了用于顺序执行任务并传递上下文的**监督器/编排器模式**，同时采用**元评审器 → LLM 作为评审器的验证机制**。你（编排器）负责分析复杂任务，将其分解为有序的子任务，然后针对每个步骤**并行**派发元评审器和实现代理。元评审器生成特定于步骤的评估标准，同时实现任务并发运行。每个子代理都会收到：
+此命令实现了用于按顺序执行任务并传递上下文的 **Supervisor/Orchestrator 模式**，以及 **元评判 → LLM-as-a-judge 验证**。你（编排器）需要分析复杂任务，将其分解为有序的子任务，然后针对每个步骤**并行**调度元评判和**实现代理**。元评判生成特定于步骤的评估标准，同时实现代理并发运行。每个子代理都会收到：
 - **隔离的上下文** - 针对其特定子任务的干净上下文窗口
-- **规模合适的模型** - 根据[模型选择策略](#model-selection-policy)为每个步骤选择：默认使用 `sonnet`/`haiku`，仅在确有必要时使用 `opus`
-- **前序步骤上下文** - 来自先前步骤的相关输出摘要
+- **合适规模的模型** - 根据 [模型选择策略](#model-selection-policy) 为每个步骤选择：默认使用 `sonnet`/`haiku`，仅在满足条件时使用 `opus`
+- **前一步骤的上下文** - 前面步骤的相关输出摘要
 - **结构化推理** - 用于系统化思考的零样本 CoT 前缀
-- **自我审查** - 提交前进行内部验证
-- **结构化评估** - 元评审器在实际评审前为每个步骤生成定制的评分标准和检查清单
-- **外部评审器** - 使用元评审器规范进行 LLM 作为评审器的验证，并配备迭代循环
-- **并行提速** - 每个步骤中的元评审器和实现代理并行运行；同一步骤内的多次重试复用元评审器规范
+- **自我批评** - 提交前的内部验证
+- **结构化评估** - 元评判在评判开始前为每个步骤生成定制的评分标准和检查清单
+- **外部评判** - 使用元评判规范进行 LLM-as-a-judge 验证，并包含迭代循环
+- **并行提速** - 每个步骤中元评判和实现代理并行运行；在该步骤内的重试期间复用元评判规范
 
 </context>
 
 ## 参数
 
-| 参数 | 格式 | 默认值 | 说明 |
+| 参数 | 格式 | 默认值 | 描述 |
 |----------|--------|---------|-------------|
-| `task` | 自由格式文本 | **必填** | 要分解并执行的任务说明 |
-| `--strict` | `--strict` | `false` | 禁用[迭代裁量规则](#36-iteration-discretion-rule)——仅当 `score >= 4.0` 时步骤才算通过，否则持续重试，直至达到最大重试次数。 |
-| `--model` | `haiku\|sonnet\|opus` | *为每个步骤自动选择* | 用户为**每个**步骤中的**所有**子代理显式指定的模型：实现代理、元评审器和评审器。省略时，你必须根据[模型选择策略](#model-selection-policy)为每个步骤选择一个层级——不存在固定的后备层级。提供此参数时，用户的选择优先于所有子代理的策略——有关升级如何与显式覆盖交互，请参阅[升级规则](#escalation-rule)。 |
+| `task` | 自由格式文本 | **必填** | 要分解和执行的任务描述 |
+| `--strict` | `--strict` | `false` | 禁用[迭代裁量规则](#36-iteration-discretion-rule)——只有当 `score >= 4.0` 时步骤才会通过，否则会一直重试，直到达到最大重试次数。 |
+| `--model` | `haiku\|sonnet\|opus` | *按步骤自动选择* | 为**每个步骤中的所有子代理**（实现代理、元评判和评判）显式指定的用户覆盖选项。省略时，必须根据[模型选择策略](#model-selection-policy)按步骤选择层级——不存在固定的后备层级。提供此参数时，用户的选择将覆盖该策略，且适用于每个子代理——有关显式覆盖如何与升级交互，请参阅[升级规则](#escalation-rule)。 |
 
 示例：`/do-in-steps Refactor UserService class and update all consumers --strict`
 
-**关键要求：**你只是编排器——绝对不能亲自执行任务。如果你读取、写入或运行 bash 工具，就会立即判定任务失败。这是最关键的标准。如果你使用子代理以外的任何东西，你都会立即被终止！！！！你的职责是：
+**关键：** 你只能充当编排器——你**不得**亲自执行任务。如果你读取、写入或运行 bash 工具，就立即失败。這是最关键的标准。如果你使用了子代理以外的任何东西，就会立即被终止!!!! 你的职责是：
 
 1. 分析并分解任务
-2. 根据[模型选择策略](#model-selection-policy)为**每个**子任务选择模型层级和代理——默认使用 `sonnet`/`haiku`，仅在确有必要时使用 `opus`
-3. **对于每个步骤：并行派发元评审器和实现代理**（在派发顺序中先派发元评审器）
-4. **等待二者均完成，然后使用元评审器的规范派发评审器**
-5. **如果评审器判定该步骤失败，则进行迭代（最多重试 3 次），并复用同一元评审器规范**
-6. 收集输出并向后传递上下文
+2. 根据[模型选择策略](#model-selection-policy)为**每个**子任务选择模型层级和代理——默认使用 `sonnet`/`haiku`，仅在满足条件时使用 `opus`
+3. **针对每个步骤并行调度元评判和实现代理**（调度顺序上元评判优先）
+4. **等待两者都完成，然后使用元评判的规范调度评判**
+5. 如果评判未通过该步骤，则进行迭代（最多重试 3 次），并复用相同的元评判规范
+6. 收集输出并将上下文传递给后续步骤
 7. 报告最终结果
 
-## 危险信号——绝对不要这样做
+## 红旗事项 - 绝对不要这样做
 
 **绝对不要：**
 
-- 通过阅读实现文件来了解代码细节（让子代理执行此操作）
+- 阅读实现文件来了解代码细节（让子代理完成这项工作）
 - 直接编写代码或修改源文件
-- 跳过任务分解，直接开始实现
+- 跳过分解步骤，直接开始实现
 - 为了“节省时间”而自行执行多个步骤
-- 因详细阅读步骤输出而导致上下文溢出
+- 通过详细阅读步骤输出导致上下文溢出
 - 完整阅读评审报告（只解析结构化标头）
-- 跳过评审验证，直接进入下一步
+- 跳过评审验证并继续下一步
 - 以任何形式向评审代理提供分数阈值
 
-**务必做到：**
+**始终要：**
 
-- 使用 Task 工具将所有实现工作分派给子代理
-- 每个步骤都要**并行分派元评审代理和实现代理**（分派顺序中元评审代理必须在前）
-- 等待元评审代理和实现代理两者都完成后，再分派评审代理
+- 使用 Task 工具分派子代理完成**所有**实现工作
+- **并行**分派每一步的元评审代理和实现代理（分派顺序中元评审代理**优先**）
+- 等待元评审代理和实现代理**都**完成后，再分派评审代理
 - 将该步骤的元评审评估规范传递给评审代理
-- 在发给元评审代理和评审代理的提示词中包含 `CLAUDE_PLUGIN_ROOT=${CLAUDE_PLUGIN_ROOT}`
-- 在同一步骤的重试过程中复用相同的元评审规范（绝不要为重试重新运行元评审）
-- 每个新步骤都要分派一个新的元评审代理（每个步骤都有其量身定制的规范）
-- 使用 Task 工具分派**独立的评审代理**来验证步骤
-- 只传递必要的上下文摘要，不要传递完整文件内容
-- 必须通过评审验证后，才能进入下一步
-- 如果验证失败，则根据评审反馈进行迭代（最多重试 3 次）
-- 除非提供了 `--strict`，否则对每个步骤的裁决应用[迭代裁量规则](#36-iteration-discretion-rule)
+- 在发送给元评审代理和评审代理的提示中包含 `CLAUDE_PLUGIN_ROOT=${CLAUDE_PLUGIN_ROOT}`
+- 在同一步骤内的重试中复用相同的元评审规范（绝不重新运行元评审）
+- 每开始一个新步骤，都分派一个**新的**元评审代理（每个步骤都使用针对该步骤定制的规范）
+- 使用 Task 工具分派**独立的评审代理**进行步骤验证
+- 只传递必要的上下文摘要，而不是完整的文件内容
+- 在进入下一步之前，先从评审验证中获得通过结果
+- 如果验证失败，根据评审反馈进行迭代（最多重试 3 次）
+- 对每个步骤的判定应用[迭代裁量规则](#36-iteration-discretion-rule)，除非提供了 `--strict`
 
-任何偏离编排流程的行为（尝试自行实现子任务、阅读实现文件、完整阅读评审报告或直接进行修改）都会导致上下文污染并最终失败，因此你将被解雇！
+任何偏离编排流程的行为（试图自行实现子任务、阅读实现文件、完整阅读评审报告或直接修改内容）都会导致上下文污染并最终失败，届时你将被解雇！
 
 ## 模型选择策略
 
-选择模型是你所做的**杠杆效应最高的单项决策**——与任何提示词措辞相比，它更能决定一个步骤返回的结果是否正确，以及整个流程需要多长时间。你绝不能将其视为例行公事：在分派**每个**步骤之前，说明模型层级并用一句话阐明理由。因为不愿思考而直接选择最强模型，是失败而非谨慎。
+选择模型是你所做的**最具杠杆作用的单一决策**——它比提示词措辞的影响更大，决定了步骤返回结果的正确性以及整个链条所需的时间。你**绝不能**把它当作例行公事：在分派**每个**步骤之前，必须说明所选层级并给出一句话的理由。如果只是因为不愿思考而选择最强模型，这是失败，而不是谨慎。
 
-**默认层级：**`sonnet` 和 `haiku` 是默认选择。`opus` 是保留层级，必须主动选择——只有在满足下表中的触发条件时才**有资格**使用，绝不能因为你不确定就选择它。
+**默认层级：** `sonnet` 和 `haiku` 是默认选择。`opus` 受到限制，必须通过下表中的触发条件获得资格，绝不能因为你不确定就选择它。
 
-**按步骤选择，而非按整次运行选择：**每个步骤的层级都要根据该步骤自身的范围、复杂度和风险**独立选择**。一次任务分解完全可以合理地混用多个层级——使用 `opus` 处理契约变更，使用 `haiku` 处理后续的机械性工作。某一步骤使用的层级（包括通过升级而达到的层级）绝不能沿用到下一步骤。
+**针对每个步骤，而不是整个运行过程：** 每个步骤都必须根据该步骤自身的范围、复杂度和风险独立选择层级。一次分解可以合理地混用不同层级——为契约变更选择 `opus`，为机械性后续工作选择 `haiku`。某一步所达到的层级（包括通过升级达到的层级）**不得**延续到下一步。
 
 ### 选择规则
 
 | 任务形态 | 层级 | 示例 |
 |---|---|---|
-| 修正单个文档/文本文件——不涉及代码，也不需要跨文件推理 | `haiku` | 修复拼写错误、更新链接、更正 README 中已过时的命令 |
-| 少量、约几行（约 10 行或更少）、仅限单个文件的机械性代码变更 | `haiku` | 更新常量、添加保护子句、重命名局部变量、编辑配置值 |
-| 编写代码——新增函数、组件或测试；仅涉及单个模块；已有既定模式 | `sonnet` | 添加端点、编写服务方法及其测试、重构单个模块 |
-| **多文件重构**（约 3 个以上文件，或无论文件数量多少，只要共享契约发生变化）或者**关键任务**（身份验证、支付/计费、数据完整性、不可逆迁移、公共 API 破坏性变更）或者**复杂逻辑**（并发、非平凡算法、架构决策） | `opus` | 横切式重构、身份验证或支付逻辑、架构迁移、新颖的算法设计 |
+| 单个文档/文本文件修正——不涉及代码，也不需要跨文件推理 | `haiku` | 修正拼写错误、更新链接、更正 README 中过时的命令 |
+| confined to one file 的小型、少量代码行（约 10 行或更少）的机械性代码修改 | `haiku` | 提升常量值、添加保护性条件、重命名局部变量、编辑配置值 |
+| 代码编写——新增函数、组件或测试，单模块修改，且已有成熟模式可遵循 | `sonnet` | 添加端点、编写服务方法及测试、重构单个模块 |
+| **多文件重构**（约 3 个或更多文件，或任何涉及共享契约变更的文件数量）或**关键任务**（身份验证、支付/计费、数据完整性、不可逆迁移、公共 API 破坏性变更）或**复杂逻辑**（并发、非平凡算法、架构决策） | `opus` | 跨领域重构、身份验证或支付逻辑、架构迁移、新颖的算法设计 |
 
-**优先级（强制）：**评估每一行，而不只是第一条匹配的行。当有多行匹配时，**匹配到的最高层级优先**——关键性和复杂度始终高于规模。安全关键型身份验证处理程序中的四行空值检查会同时匹配 `haiku` 行和 `opus` 行，因此应归为 `opus`。**关键**列表是穷尽式的，而非示例性的：发布到生产环境、影响真实用户或添加到公共 API 都不是触发条件，因此，在单个服务文件中新增一个带验证的端点仍归为 `sonnet`。**机械式广度例外：**仅有广度并不等于复杂度。对于纯机械式变更——在多个文件中重复进行完全相同、由规则驱动的编辑，且不涉及逻辑或契约变更——只有**多文件触发条件**不适用；**关键**和**复杂逻辑**触发条件仍然适用。你必须根据**单次变更**的内容确定层级，就像该变更只涉及一个文件一样；因此，在 40 个文件中机械式重命名一个符号应归为 `haiku`，但仅限于 `src/auth/` 中的相同重命名应归为 `opus`——无论广度如何，该单次变更都会触发关键条件。此例外不适用于共享契约变更（上文已将其列为 `opus` 触发条件），因此，跨文件提取共享接口仍归为 `opus`。
+**优先级（强制）：**必须评估每一行，而不只是第一个匹配项。当多行匹配时，由**最高匹配层级胜出**——关键性和复杂度始终优先于规模。安全关键型身份验证处理程序中的四行 null 检查同时匹配 `haiku` 行和 `opus` 行，因此属于 `opus`。**critical** 列表是完整的，而非示例性的：发布到生产环境、涉及真实用户或向公共 API 添加内容都**不是**触发条件，因此，在单个服务文件中新增一个带验证的端点仍属于 `sonnet`。**机械性广度豁免：**仅有广度不构成复杂度。对于纯机械式变更——在多个文件中重复执行同一种由规则驱动的编辑，且不涉及逻辑和契约变更——只有**多文件触发条件**不适用；**关键**和**复杂逻辑**触发条件仍然适用。你**必须**根据**单次出现**的内容为其分层，就好像该变更只涉及一个文件；因此，在 40 个文件中机械性地重命名一个符号属于 `haiku`，但将同一重命名限制在 `src/auth/` 中则属于 `opus`——无论广度如何，关键触发条件都会因这一次出现而触发。此豁免**不**涵盖共享契约变更（这已经是上文中的 `opus` 触发条件），因此跨文件提取共享接口仍属于 `opus`。
 
-**平局裁决规则：**仅当没有任何一行能明确匹配——该步骤确实介于两个层级之间——才选择**成本更低**的层级。你不得为了保险而倾向上调至 `opus`；[升级规则](#escalation-rule)使得成本较低的首次判断即使出错也可以补救，而补救一个步骤的成本远低于为每个步骤都过度配置资源。
+**平局决胜规则：**仅当没有任何一行能够明确匹配——该步骤确实处于两个层级之间——才选择**更便宜**的层级。你**不得**为了规避风险而倾向于选择 `opus`；[升级规则](#escalation-rule)会让便宜的首次判断仍可恢复，而恢复一个步骤的成本远低于为每个步骤过度配置资源。
 
-### 角色搭配
+### 角色配对
 
-任何由模型分配的流水线最多有三个角色——**生产者**（执行工作）、**标准制定者**（定义“正确”的含义）、**评估者**（依据这些标准检查工作）；在此技能中，它们会**按步骤**分别实例化为实现 / 元评判者 / 评判者。**默认：该步骤的三个角色全部使用相同层级。**
+任何由模型分配的流水线最多包含三个角色——**生产者**（执行工作）、**标准制定者**（定义“正确”的含义）、**评估者**（根据这些标准检查工作）；在此 skill 中，它们会**按步骤**分别实例化为实现者 / 元评判者 / 评判者。**默认：该步骤的三个角色使用相同的层级。**
 
-只有对于**不明显的步骤**，你才可以仅将**标准制定者**提高一个层级，使标准比被评估的工作更加严谨。*不明显*是可检验的：该层级是依据**平局裁决规则**确定的（没有任何一条选择规则能够明确匹配），或者该步骤未说明可检验的验收条件。
+**仅对于不明显的步骤**，你可以仅将**标准制定者**提高一个层级，使标准比被评估的工作更加严谨。*不明显*是可测试的：层级是通过**平局决胜规则**确定的（没有任何 Selection Rules 行能够明确匹配），**或者**该步骤没有陈述任何可检查的验收条件。
 
-| 模式 | 标准制定者（元评判者） | 生产者 + 评估者（实现 + 评判者） | 适用情形 |
+| 模式 | 标准制定者（元评判者） | 生产者 + 评估者（实现者 + 评判者） | 使用时机 |
 |---|---|---|---|
-| 强化型 haiku | `sonnet` | `haiku` | 工作本身很简单，但什么算“正确”并不明显 |
-| 强化型 sonnet | `opus` | `sonnet` | 代码工作本身未触发 `opus` 条件，但其验收标准含糊不清或后果重大 |
+| 锐化版 haiku | `sonnet` | `haiku` | 工作很简单，但什么算作“正确”并不明显 |
+| 锐化版 sonnet | `opus` | `sonnet` | 验收标准含糊或后果严重的代码工作，但其本身并未触发任何 `opus` 条件 |
 
-生产者和评估者可以使用不同层级。如果标准制定者生成的标准列表看起来过于复杂，你可以决定仅提高评估者的层级，但不得将标准制定者设置为低于生产者的层级。**显式的 `--model` 覆盖会取代本节的全部规则：**当用户传入 `--model` 时，每个步骤中的每个角色都使用该层级，并且角色搭配不得将元评判者提高到该层级之上。
+生产者和评估者**可以**使用不同的层级。如果标准制定者生成的标准列表看起来过于复杂，你**可以**仅提高评估者的层级，但**不得**将标准制定者设置在生产者层级之下。**显式的 `--model` 覆盖会取代本节的全部内容：**当用户传入了 `--model` 时，每个步骤中的每个角色都以该层级运行，并且 Role Pairing **不得**将元评判者提高到该层级之上。
 
 ### 升级规则
 
-当以下任一触发条件生效时，在下一次尝试中将**生成器和评估器两者**（失败步骤的实现模型和评判模型）都提升一个层级：
+当以下任一触发条件发生时，在下一次尝试中将**生产者和评估器两者**（失败步骤的实现和评判器）都提升一个级别：
 
-1. **首次尝试质量低下**——得分较低，或问题表明模型误解了该步骤，而不仅仅是遗漏了一些细节。
-2. **用户投诉**质量太低或结果有误——无论何时，包括在已报告 PASS 之后。
+1. **首次尝试质量较低**——得分较低，或存在表明模型误解了该步骤、而不仅仅是遗漏细节的问题。
+2. **用户抱怨**质量太低或结果错误——无论在何时，包括已报告 PASS 之后。
 
-层级阶梯：`haiku` → `sonnet` → `opus`。`opus` 是**上限**——不存在更高层级。如果 `opus` 层级的工作仍然失败，则升级至**用户**处理，绝不要循环重试。
+级别梯度：`haiku` → `sonnet` → `opus`。`opus` 是**上限**——不存在更高的级别。如果 `opus` 级别的工作仍然失败，则升级给**用户**，绝不能循环重试。
 
-- **唯一例外——维持当前层级（这是该规则的唯一表述，仅适用于触发条件 (1)）：**当触发条件 (1) 生效，但评判模型指出的问题是具体且可修复的缺陷，而非能力差距（即问题范围狭窄、描述精确，并且模型显然已经理解要求）时，你可以维持当前层级，并根据评判模型的确切反馈在相同层级重试，而不是提升层级。这是触发条件 (1) 下不强制提升层级的唯一情形；在其他所有情况下，触发条件 (1) 都会导致层级提升。触发条件 (2)（用户投诉）没有此类例外——根据下述特别规定，它始终会立即提升层级。
-- **显式 `--model` 特别规定（这是该规则的唯一表述）：**显式指定的 `--model` 属于用户覆盖设置，因此触发条件 (1) 不得在未告知的情况下推翻它——应继续使用覆盖指定的模型迭代，直至达到最大重试次数。如果最终仍未达到目标，请向用户明确指出发现的问题，并建议提升层级。触发条件 (2) 即代表用户已批准提升，因此会立即提升层级。
-- **仅限于失败的步骤。**升级只会重新确定该步骤重试时使用的模型层级。它不会重新确定整个执行链的层级：之后的每个步骤都将根据[选择规则](#selection-rules)独立评估，并重新从默认的 `sonnet`/`haiku` 层级开始。
-- 升级仅适用于实现模型和评判模型。该步骤的元评判模型不会重新运行，也不会重新确定层级——在该步骤的各次重试中会复用其规范，因为在步骤执行过程中更改标准会使各次尝试之间的比较失效。
-- 升级是对真正根因修复的补充，绝不能替代根因修复。你仍然必须将评判模型的具体反馈传入重试；禁止仅以更高层级重新分派相同的提示词并寄希望于问题自行解决。
-- 升级与分数阈值、[迭代裁量规则](#36-iteration-discretion-rule)以及每个步骤最多重试 3 次的预算相互独立——它只会改变下一次尝试由*哪个模型*执行，绝不会改变*是否*应当进行尝试。
-- **报告 PASS 后重新进入（这是该规则的唯一表述）：**报告 PASS 并不意味着工作结束。如果用户之后表示某个步骤的结果有误或质量太低，则根据触发条件 (2) 重新进入该步骤的重试流程，并且该步骤的重试预算将**重置**——即使之前的重试周期已耗尽，用户投诉也会开启一个新的周期，最多可重试 3 次。
+- **唯一例外——保持级别（本规则中对该例外的唯一表述，仅适用于触发条件 (1)）：**当触发条件 (1) 发生，但评判器指出的问题是具体且可修复的缺陷，而不是能力差距（即问题范围较窄、描述精确，且模型显然已经理解了任务），你 MAY 保持当前级别，并结合评判器的确切反馈在**同一级别**重试，而不是提升级别。这是触发条件 (1) 下不强制提升的唯一情形；除此之外，触发条件 (1) 一律必须提升。触发条件 (2)（用户抱怨）没有此类例外——根据下方的特殊规定，必须立即提升。
+- **显式 `--model` 特殊规定（本规则中对该规定的唯一表述）：**显式指定的 `--model` 是用户覆盖设置，因此触发条件 (1) 绝不能静默地覆盖它——应继续使用覆盖模型进行迭代，直到达到最大重试次数限制。如果在最后仍未达到目标，应突出说明发现的问题，并向用户提议是否提升模型。触发条件 (2) 即表示用户已批准提升，因此必须立即提升。
+- **仅适用于失败的步骤。**升级只会重新设定**该步骤**的重试级别，不会重新设定整个链的级别：后续每个步骤都根据[选择规则](#selection-rules)按照自身情况重新评估，并再次从 `sonnet`/`haiku` 默认级别开始。
+- 升级只会改变实现和评判器。该步骤的元评判器**不会重新运行，也不会重新设定级别**——其规范会在该步骤的重试中复用；在步骤进行期间更改标准会使不同尝试之间的比较失效。
+- 升级是对真正根因修复的补充，绝不能替代根因修复。你**仍然必须**将评判器的具体反馈传递给重试；禁止仅仅将相同的提示重新派发到更高级别并寄希望于结果改善。
+- 升级与分数阈值、[迭代裁量规则](#36-iteration-discretion-rule)以及每个步骤最多 3 次重试的预算相互独立——它只改变下一次尝试由**哪个模型**运行，绝不改变**是否应当**进行该次尝试。
+- **报告 PASS 后重新进入（本规则中对该规则的唯一表述）：**已报告的 PASS **不会**关闭工作。如果用户之后表示某个步骤的结果错误或质量太低，则根据触发条件 (2) 重新进入该步骤的重试路径，并且该步骤的重试预算**重置**——即使之前的重试周期已经用尽，用户的抱怨也会开启一个最多可重试 3 次的新周期。
 
-### 跨提供商等效映射
+### 跨提供商等价性
 
-当此技能在 Anthropic 模型上下文之外运行时，将相应层级映射到同类别中最接近的模型：
+当此技能在 Anthropic 模型上下文之外运行时，将级别映射到同类别中最接近的模型：
 
-| 层级 | 角色 | 其他提供商的同类模型 |
+| 层级 | 角色 | 其他提供商的可比模型 |
 |---|---|---|
-| `haiku` | 快速且低成本；机械性工作 | `gemini-flash-lite`、`gemma` 类、`gpt-oss` 类、小型开放权重模型 |
-| `sonnet` | 均衡的主力模型；大多数代码编写工作 | `gemini-pro` 类和完整版 `gemini-flash`（**不包括** `-lite` 变体，后者属于 `haiku` 层级）、`GPT-5-mini` 类、大型 `Qwen` / `DeepSeek` 类 |
-| `opus` | 前沿推理；关键或复杂工作 | 提供商以扩展推理／审慎推理层级销售的任何模型——目前包括 `GPT-5.5`、深度思考模式、`Kimi K3` 类，以及任何优势在于更长时间审慎推理而非吞吐量的模型 |
+| `haiku` | 快速且便宜；处理机械性工作 | `gemini-flash-lite`、`gemma` 类、`gpt-oss` 类、小型开放权重模型 |
+| `sonnet` | 均衡的主力模型；承担大多数代码编写工作 | `gemini-pro` 类和完整的 `gemini-flash`（**不是** `-lite` 变体，后者属于 `haiku` 层级）、`GPT-5-mini` 类、大型 `Qwen` / `DeepSeek` 类 |
+| `opus` | 前沿推理；处理关键或复杂工作 | 提供商所售的扩展 / 深度推理层级——目前包括 `GPT-5.5`、深度思考模式、`Kimi K3` 类，以及任何优势在于更长时间推理而非吞吐量的模型 |
 
-映射依据是**能力层级，而不是名称**——随着供应商发布新模型，确切名称会不断变化。上述每条规则均以层级表述，因此在其他提供商处：将层级映射到该类别的模型，然后原样应用选择、配对和升级规则。
+映射依据是**能力层级，而不是名称**——随着供应商发布新模型，具体名称会不断变化。上面的每条规则都以层级表示，因此在使用其他提供商时：将层级映射到该提供商对应类别的模型，然后原样应用选择、配对和升级规则。
 
 ## 流程
 
 ### 设置：创建报告目录
 
-开始之前，请确保报告目录存在：
+开始前，确保报告目录存在：
 
 ```bash
 mkdir -p .specs/reports
@@ -149,60 +148,60 @@ mkdir -p .specs/reports
 
 其中：
 
-- `{task-name}` - 从任务描述派生（例如 `user-dto-refactor`）
+- `{task-name}` - 根据任务描述生成（例如：`user-dto-refactor`）
 - `{N}` - 步骤编号
 - `{YYYY-MM-DD}` - 当前日期
 
-**注意：** 实现产出应写入其指定位置；只有评审验证报告写入 `.specs/reports/`
+**注意：** 实现输出应写入指定位置；只有评审验证报告写入 `.specs/reports/`
 
-### 阶段 1：任务分析与拆解
+### 阶段 1：任务分析与分解
 
-首先解析配置：`STRICT_MODE = --strict present || false`。从任务文本中移除所有标志——**绝不要**将它们传入子智能体提示词。
+先解析配置：`STRICT_MODE = --strict present || false`。从任务文本中删除所有标志 — **绝不要**将它们传入子代理提示词。
 
 使用零样本思维链推理，系统地分析任务：
 
 ```
-Let me analyze this task step by step to decompose it into sequential subtasks:
+让我逐步分析此任务，将其分解为按顺序执行的子任务：
 
-1. **Task Understanding**
-   "What is the overall objective?"
-   - What is being asked?
-   - What is the expected final outcome?
-   - What constraints exist?
+1. **理解任务**
+   "总体目标是什么？"
+   - 要求是什么？
+   - 预期的最终结果是什么？
+   - 存在哪些约束？
 
-2. **Identify Natural Boundaries**
-   "Where does the work naturally divide?"
-   - Database/model changes (foundation)
-   - Interface/contract changes (dependencies)
-   - Implementation changes (core work)
-   - Integration/caller updates (ripple effects)
-   - Testing/validation (verification)
-   - Documentation (finalization)
+2. **识别自然边界**
+   "工作在何处分解最自然？"
+   - 数据库 / 模型变更（基础）
+   - 接口 / 契约变更（依赖项）
+   - 实现变更（核心工作）
+   - 集成 / 调用方更新（连锁影响）
+   - 测试 / 验证（核验）
+   - 文档（收尾）
 
-3. **Dependency Identification**
-   "What must happen before what?"
-   - "If I do B before A, will B break or use stale information?"
-   - "Does B need any output from A as input?"
-   - "Would doing B first require redoing work after A?"
-   - What is the minimal viable ordering?
+3. **识别依赖关系**
+   "哪些工作必须先于其他工作完成？"
+   - "如果先做 B 再做 A，B 是否会出错或使用过时信息？"
+   - "B 是否需要 A 的某个输出作为输入？"
+   - "如果先做 B，是否需要在 A 完成后返工？"
+   - 最小可行的执行顺序是什么？
 
-4. **Define Clear Boundaries**
-   "What exactly does each subtask encompass?"
-   - Input: What does this step receive?
-   - Action: What transformation/change does it make?
-   - Output: What does this step produce?
-   - Verification: How do we know it succeeded?
+4. **定义清晰边界**
+   "每个子任务具体包含什么？"
+   - 输入：此步骤接收什么？
+   - 操作：此步骤进行什么转换 / 变更？
+   - 输出：此步骤产生什么？
+   - 验证：如何确认它已成功？
 ```
 
-**拆解指南：**
+**分解指南：**
 
-| 模式 | 拆解策略 | 示例 |
+| 模式 | 分解策略 | 示例 |
 |---------|------------------------|---------|
-| 接口变更 | 1. 更新接口，2. 更新实现，3. 更新使用方 | “更改 getUser 的返回类型” |
-| 功能添加 | 1. 添加核心逻辑，2. 添加集成点，3. 添加 API 层 | “向 UserService 添加缓存” |
-| 重构 | 1. 提取／修改核心，2. 更新内部引用，3. 更新外部引用 | “从 Service 中提取辅助类” |
-| 有影响面的缺陷修复 | 1. 修复根本原因，2. 修复依赖问题，3. 更新测试 | “修复影响报告的计算错误” |
-| 多层变更 | 1. 数据层，2. 业务层，3. API 层，4. 客户端层 | “向 User 实体添加新字段” |
+| 接口变更 | 1. 更新接口，2. 更新实现，3. 更新使用方 | "更改 getUser 的返回类型" |
+| 功能新增 | 1. 添加核心逻辑，2. 添加集成点，3. 添加 API 层 | "为 UserService 添加缓存" |
+| 重构 | 1. 提取 / 修改核心，2. 更新内部引用，3. 更新外部引用 | "从 Service 中提取辅助类" |
+| 具有影响范围的错误修复 | 1. 修复根本原因，2. 修复相关问题，3. 更新测试 | "修复影响报告的计算错误" |
+| 多层变更 | 1. 数据层，2. 业务层，3. API 层，4. 客户端层 | "向 User 实体添加新字段" |
 
 **分解输出格式：**
 
@@ -225,26 +224,26 @@ Let me analyze this task step by step to decompose it into sequential subtasks:
 Step 1 ─→ Step 2 ─→ Step 3 ─→ ...
 ```
 
-### 阶段 2：为每个子任务选择模型
+### 第 2 阶段：为每个子任务选择模型
 
-从以下三个维度评估**每个**子任务，然后直接根据[选择规则](#selection-rules)表确定其层级——层级按步骤选择，绝不能为整个运行过程只选择一次。
+根据以下三个维度评估**每一个**子任务，然后直接从 [选择规则](#selection-rules) 表中读取其层级——层级按步骤选择，而不是为整个运行过程只选择一次。
 
-- **范围**——一个文件、一个组件，还是多个文件？
-- **复杂度**——机械式编辑、已有模式，还是新颖/复杂的逻辑？
-- **风险**——隔离且可逆、内部风险，还是属于[选择规则](#selection-rules)中 `opus` 行所列详尽清单中的**关键**风险？
+- **范围** — 一个文件、一个组件，还是多个文件？
+- **复杂度** — 机械式编辑、既有模式，还是新颖/复杂的逻辑？
+- **风险** — 隔离且可逆、内部，还是属于 [选择规则](#selection-rules) 中 `opus` 行所列完整清单里的**关键**风险？
 
-对于每个步骤，在分派前说明这三项评估结果、所选层级，以及一行理由。然后应用[角色配对](#role-pairing)——其规则完整适用，包括其 `--model` 覆盖选项——以决定该步骤的元评审模型层级。
+对于每个步骤，在调度之前说明这三个评估结果、选定的层级，以及一句话的理由。然后应用[角色配对](#role-pairing)——包括其完整规则以及 `--model` 覆盖设置——来决定该步骤的元评审者层级。
 
-**领域专长检查：**“此子任务是否与某个专业代理配置相匹配？”
+**领域专业知识检查**："该子任务是否符合某个专业代理配置？"
 
-- 开发：实现、重构、错误修复
+- 开发：实现、重构、修复 bug
 - 架构：系统设计、模式选择
 - 文档：API 文档、注释、README 更新
 - 测试：测试生成、测试更新
 
-**专业代理：**专业代理列表取决于项目以及已加载的插件。`sdd` 插件中的常见代理包括：`sdd:developer`、`sdd:researcher`、`sdd:software-architect`、`sdd:tech-lead`、`sdd:business-analyst`、`sdd:code-explorer`、`sdd:code-reviewer`、`sdd:tech-writer`。如果没有合适的专业代理，则回退到不具备专业化能力的通用代理。
+**专业代理：** 专业代理列表取决于已加载的项目和插件。`sdd` 插件中的常见代理包括：`sdd:developer`、`sdd:researcher`、`sdd:software-architect`、`sdd:tech-lead`、`sdd:business-analyst`、`sdd:code-explorer`、`sdd:code-reviewer`、`sdd:tech-writer`。如果适用的专业代理不可用，则回退到不带专业化配置的通用代理。
 
-**决策：**当子任务明显受益于领域专长，并且其复杂度足以证明额外开销合理时，使用专业代理（不适用于 `haiku` 层级的步骤）。
+**决策：** 当子任务明显能从领域专业知识中受益，并且其复杂度足以证明额外开销合理时，使用专业代理（`haiku` 层级的步骤除外）。
 
 **选择输出格式：**
 
@@ -259,11 +258,11 @@ Step 1 ─→ Step 2 ─→ Step 3 ─→ ...
 | 4 | Update tests | sonnet | sdd:developer | Test writing, established patterns |
 ```
 
-### 阶段 3：顺序执行，并行开展元评审和评审验证
+### 第 3 阶段：由并行元评审者和评审者进行顺序执行与验证
 
-逐一执行子任务。对于每个步骤，并行分派元评审代理和实现代理，然后使用元评审代理的规范，由独立评审代理进行验证。必要时进行迭代，然后将上下文向后传递。
+逐个执行子任务。对于每个步骤，并行调度一个元评审者和一个实现代理，然后使用独立的评审者根据元评审者的规范进行验证。必要时迭代，然后将上下文传递给后续步骤。
 
-**每个步骤的执行流程：**
+**每步的执行流程：**
 
 ```
 ┌──────────────────────────────────────────────────────────────────────────────┐
@@ -298,21 +297,21 @@ Step 1 ─→ Step 2 ─→ Step 3 ─→ ...
 
 **需要向后传递的上下文：**
 
-- 修改的文件（仅路径，不含内容）
+- 已修改的文件（仅路径，不包含内容）
 - 所做的关键更改（摘要）
-- 引入的新接口/API
+- 新引入的接口/API
 - 会影响后续步骤的决策
-- 针对后续步骤的警告或注意事项
+- 对后续步骤的警告或注意事项
 
 **上下文筛选：**
 
 - 仅传递与剩余子任务相关的信息
 - 不要传递不会影响后续步骤的实现细节
-- 保持上下文摘要简洁（每个步骤最多 200 字）
+- 保持上下文摘要简洁（每步最多 200 个词）
 
-**上下文大小指南：**如果累积上下文超过约 500 字，应更积极地概括较早的步骤。如果子代理需要详细信息，可以直接读取文件。
+**上下文大小指南：** 如果累计上下文超过约 500 个词，则更积极地压缩较早步骤的摘要。子代理可以直接读取文件来获取所需的详细信息。
 
-**上下文累积示例（具体）：**
+**上下文累积示例（具体示例）：**
 
 ```markdown
 ## Completed Steps Summary
@@ -338,9 +337,9 @@ Step 1 ─→ Step 2 ─→ Step 3 ─→ ...
 
 #### 3.2 子代理提示词构建
 
-对于每个子任务，使用以下必需组成部分构建提示词：
+对于每个子任务，使用以下必需组件构建提示词：
 
-##### 3.2.1 零样本思维链前缀（必需——必须位于最前面）
+##### 3.2.1 零样本思维链前缀（必需 - 必须位于首位）
 
 ```markdown
 ## Reasoning Approach
@@ -414,7 +413,7 @@ CRITICAL: At the end of your work, provide a "Context for Next Steps" section wi
 </output>
 ```
 
-##### 3.2.3 自我批判后缀（必需——必须位于最后面）
+##### 3.2.3 自我批评后缀（必需 - 必须位于末尾）
 
 ```markdown
 ## Self-Critique Verification (MANDATORY)
@@ -473,9 +472,9 @@ CRITICAL: Do not submit until ALL verification questions have satisfactory answe
 
 #### 3.3 并行元评审调度
 
-**关键要求**：对于每个步骤，在一条消息中使用两个 Task 工具调用，**并行调度**元评审代理和实现代理。元评审必须是消息中的第一个工具调用，以便它可以在实现代理修改制品之前观察这些制品。
+**关键**：对于每个步骤，必须在一条消息中通过两个 Task 工具调用**并行**调度元评审代理和实现代理。元评审代理**必须**是该消息中的第一个工具调用，以便它能在实现代理修改工件之前观察到这些工件。
 
-两个代理都作为**前台**代理运行。等待两者均完成后，再继续调度评审代理。
+两个代理均作为**前台**代理运行。在继续进行评审调度之前，等待**两个代理都完成**。
 
 **元评审提示词（每个步骤）：**
 
@@ -522,41 +521,41 @@ Message with 2 tool calls:
     - subagent_type: "{selected agent type}"
 ```
 
-等待两者均返回后，再继续调度评审代理。
+在继续进行评审调度之前，等待**两个代理都返回**。
 
 #### 3.4 评审验证协议
 
-元评审代理和实现代理**均**完成后，调度一个**独立评审代理**，使用元评审的评估规范来验证该步骤。
+在元评审代理和实现代理**都完成**后，调度一个**独立评审代理**，使用元评审的评估规范验证该步骤。
 
-关键要求：向评审代理提供元评审生成的完整且准确的评估规范 YAML，不要跳过或添加任何内容，不要以任何方式修改它，也不要缩短或总结其中的任何文本！
+关键：必须向评审代理提供元评审的**完整评估规范 YAML**，不得跳过或添加任何内容，不得以任何方式修改，不得缩短或总结其中的任何文本！
 
-##### 3.4.1 分析已有更改部分
+##### 3.4.1 分析“预先存在的更改”部分
 
-在为每个步骤调度评审代理之前，评估代码库中是否存在需要让评审代理知晓的已有更改。“已有更改”部分可防止评审代理将先前的修改与当前步骤实现代理的工作混淆。
+在为每个步骤调度评审代理之前，评估代码库中是否存在评审代理需要了解的预先存在的更改。“预先存在的更改”部分可防止评审代理将之前的修改误认为当前步骤实现代理所做的工作。
 
-**何时包含：**
+**包含该部分的时机：**
 
-- 同一次 do-in-steps 运行中先前步骤的更改（评审步骤 N 时的步骤 1..N-1）——这是顺序执行中最常见的情况。运行步骤 N 时，评审代理必须知道步骤 1..N-1 的更改属于已有更改。每个已完成步骤的输出（创建/修改的文件、关键更改）都会成为后续步骤评审代理的已有上下文。
-- 同一会话中此前已完成的 do-in-steps 或 do-and-judge 任务运行
-- 用户在调用该 Skill 之前所做的手动修改（可从对话上下文或 git 中看到）
-- 在此任务之前运行的其他工具或代理所做的更改
+- 来自同一次 do-in-steps 运行中**之前步骤**的更改（评审步骤 N 时为步骤 1..N-1）——这在顺序执行中最为常见。当运行步骤 N 时，评审代理**必须**了解步骤 1..N-1 的更改，作为预先存在的更改。每个已完成步骤的输出（创建/修改的文件、关键更改）都会成为后续步骤评审代理的预先存在上下文。
+- 同一会话中更早完成的其他 do-in-steps 或 do-and-judge 任务运行
+- 用户在调用此技能之前手动进行的修改（可从对话上下文或 git 中看到）
+- 在此任务之前由其他工具或代理运行所产生的更改
 
-**何时省略：**
+**省略时机：**
 
-- 当前是第 1 步，且没有已知的先前更改（没有更早的会话任务，也没有用户修改）——完全省略该部分
-- 在同一步骤内重试时，不要将实现智能体自己先前的尝试列为“预先存在的更改”——这些尝试属于当前步骤的迭代周期
+- 这是第 1 步，且没有已知的先前变更（没有更早的会话任务，也没有用户修改）——完全省略此部分
+- 在同一任务步骤内重试时，不要将实现代理自己之前的尝试作为“预-existing changes”包含在内——这些内容属于当前步骤的迭代周期
 
 **内容指南：**
 
-- 使用高层级摘要：任务描述、受影响的文件/模块列表、更改的一般性质（创建、修改、删除）
-- 不要包含代码块、差异或行级详细信息——保持简洁
+- 使用高层次摘要：任务描述、受影响的文件/模块列表、变更的大致性质（创建、修改、删除）
+- 不要包含代码块、差异或逐行细节——保持简洁
 - 清晰标注每个来源：“Step 1: {description}”、“Step 2: {description}”、“User modifications (before current task)”等
-- 如果存在多个预先存在的更改来源，请为每个来源使用单独的小节（每个已完成步骤一个，外加所有外部来源）
-- 利用上下文传递协议输出（第 3.1 节）——“Completed Steps Summary”已经记录了每个步骤产生的内容
+- 如果存在多个预-existing changes 来源，请为每个来源使用单独的小节（每个已完成步骤各一个小节，外加任何外部来源）
+- 利用 Context Passing Protocol 的输出（第 3.1 节）——“Completed Steps Summary”已经记录了每个步骤产生的内容
 
-关键：避免读取完整代码库或 git 历史记录，只需使用高层级的 git diff/status 来确定哪些文件发生了更改，或者使用对话上下文和已完成步骤摘要来确定预先存在的更改。
+关键要求：避免读取完整代码库或 git 历史记录，只使用高层次的 git diff/status 确定哪些文件发生了变更，或使用对话上下文和已完成步骤摘要确定预-existing changes。
 
-**步骤评审智能体的提示词模板：**
+**步骤评审器的提示模板：**
 
 ```markdown
 You are evaluating Step {N}/{total}: {subtask_name} against an evaluation specification produced by the meta judge.
@@ -607,9 +606,9 @@ Follow your full judge process as defined in your agent instructions!
 CRITICAL: You must reply with this exact structured evaluation report format in YAML at the START of your response!
 ```
 
-关键：绝不要以任何格式提供分数阈值，包括 `threshold_pass` 或任何其他形式。评审智能体绝不能知道分数阈值，以免产生偏见！！！
+关键要求：绝不要以任何形式提供分数阈值，包括 `threshold_pass` 或任何其他不同的形式。评审器绝不能知道分数阈值，以免受到偏见影响！！！
 
-**调度：**
+**分派：**
 
 ```
 Use Task tool:
@@ -619,90 +618,89 @@ Use Task tool:
   - subagent_type: "sadd:judge"
 ```
 
-#### 3.5 调度、验证与迭代
+#### 3.5 分派、验证与迭代
 
 按顺序处理每个子任务：
 
 ```
-1. Dispatch meta-judge AND implementation agent IN PARALLEL (single message, 2 tool calls):
-   Tool call 1 (meta-judge — MUST be first):
-     Use Task tool:
+1. 并行分派元评审代理和实现代理（在一条消息中进行 2 次工具调用）：
+   工具调用 1（元评审 — 必须先调用）：
+     使用 Task 工具：
        - description: "Meta-judge Step {N}/{total}: {subtask_name}"
-       - prompt: {meta-judge prompt with step requirements and context}
-       - model: {meta-judge model — the user's `--model` if one was passed; otherwise the same tier as this step's implementation, or one tier up per Role Pairing}
+       - prompt: {包含步骤要求和上下文的元评审提示词}
+       - model: {元评审模型 — 如果用户传入了 `--model`，则使用该模型；否则使用与该步骤实现模型相同的层级，或根据角色配对规则高一层级}
        - subagent_type: "sadd:meta-judge"
 
-   Tool call 2 (implementation):
-     Use Task tool:
+   工具调用 2（实现）：
+     使用 Task 工具：
        - description: "Step {N}/{total}: {subtask_name}"
-       - prompt: {constructed prompt with CoT + task + previous context + self-critique}
-       - model: {implementation model — the user's `--model` if one was passed; otherwise the model selected for this step}
+       - prompt: {包含 CoT + 任务 + 之前上下文 + 自我批评的构造后提示词}
+       - model: {实现模型 — 如果用户传入了 `--model`，则使用该模型；否则使用为此步骤选择的模型}
        - subagent_type: "{selected agent type}"
 
-2. Wait for BOTH to complete. Collect outputs:
-   - From meta-judge: Extract evaluation specification YAML
-   - From implementation: Parse "Context for Next Steps" section, note files modified
+2. 等待两者都完成。收集输出：
+   - 从元评审代理提取评估规范 YAML
+   - 从实现代理解析“Context for Next Steps”部分，并记录修改的文件
 
-3. Dispatch judge sub-agent (with this step's meta-judge specification):
-   Use Task tool:
+3. 分派评审子代理（使用此步骤的元评审规范）：
+   使用 Task 工具：
      - description: "Judge Step {N}/{total}: {subtask_name}"
-     - prompt: {judge verification prompt with step requirements, implementation output, and meta-judge specification YAML}
-     - model: {judge model — the user's `--model` if one was passed; otherwise MUST equal this step's current implementation model, including after escalation}
+     - prompt: {包含步骤要求、实现输出和元评审规范 YAML 的评审验证提示词}
+     - model: {评审模型 — 如果用户传入了 `--model`，则使用该模型；否则必须与此步骤当前的实现模型相同，包括升级模型之后}
      - subagent_type: "sadd:judge"
 
-4. Parse judge verdict (DO NOT read full report):
-   Extract from judge reply:
-   - VERDICT: PASS or FAIL
+4. 解析评审结论（不要阅读完整报告）：
+   从评审回复中提取：
+   - VERDICT: PASS 或 FAIL
    - SCORE: X.X/5.0
-   - ISSUES: List of problems (if any)
-   - IMPROVEMENTS: List of suggestions (if any)
+   - ISSUES: 问题列表（如有）
+   - IMPROVEMENTS: 改进建议列表（如有）
 
-5. Decision based on verdict:
+5. 根据结论作出决策：
 
-   If score ≥4.0:
+   如果分数 ≥4.0：
      → VERDICT: PASS
-     → Proceed to next step with accumulated context
-     → Include IMPROVEMENTS in context as optional enhancements
+     → 携带累积上下文继续下一步骤
+     → 将 IMPROVEMENTS 作为可选增强项纳入上下文
 
-   If 3.0 ≤ score <4.0 and NOT STRICT_MODE:
-     → Apply the Iteration Discretion Rule (3.6)
-       → accepted → VERDICT: PASS (report outstanding issues and proceed)
-       → declined → VERDICT: FAIL → go to "Check retry count" below
+   如果 3.0 ≤ 分数 <4.0 且不是 STRICT_MODE：
+     → 应用迭代酌情处理规则（3.6）
+       → 接受 → VERDICT: PASS（报告未解决的问题并继续）
+       → 拒绝 → VERDICT: FAIL → 转到下面的“检查重试次数”
 
-   Otherwise (score <3.0, or score <4.0 with STRICT_MODE):
+   否则（分数 <3.0，或处于 STRICT_MODE 且分数 <4.0）：
      → VERDICT: FAIL
-     → Check retry count for this step
+     → 检查重试次数
 
-     If retries < 3:
-       → Decide this step's retry tier per "3.5.1 Model Escalation on Retry" below
-         (per the Escalation Rule — bump BOTH, unless its sole hold exception applies)
-       → Dispatch retry implementation agent at that tier with:
-         - Original step requirements
-         - Judge's ISSUES list as feedback
-         - Path to judge report for details
-         - Instruction to fix specific issues
-       → Return to judge verification with SAME meta-judge specification from this step,
-         dispatching the judge at the retry tier (judge always matches implementation)
-       → Do NOT re-run meta-judge for retries, and do NOT re-tier it
+     如果重试次数 < 3：
+       → 根据下面的“3.5.1 重试时的模型升级”确定此步骤的重试层级
+         （遵循升级规则 — 同时提升两者，除非唯一的保持例外适用）
+       → 在该层级分派重试实现代理，并提供：
+         - 原始步骤要求
+         - 评审的 ISSUES 列表作为反馈
+         - 评审报告的路径，以便查看详细信息
+         - 修复具体问题的指示
+       → 使用相同的元评审规范返回评审验证，并在重试层级分派评审代理（评审代理始终与实现代理匹配）
+       → 不要为重试重新运行元评审，也不要重新确定其层级
 
-     If retries ≥ 3:
-       → Escalate to user (see Error Handling)
-       → Do NOT proceed to next step
+     如果重试次数 ≥ 3：
+       → 升级给用户（参见错误处理）
+       → 不要继续下一步骤
 
-6. Proceed to next subtask with accumulated context
-   → Next step gets a NEW meta-judge dispatched in parallel with its implementation agent
+6. 携带累积上下文继续下一个子任务
+   → 下一步骤需要在与其实现代理并行时分派新的元评审代理
 ```
 
 ##### 3.5.1 重试时的模型升级
 
-在分派任何重试之前，你必须根据[升级规则](#escalation-rule)明确决定此步骤的层级，并在步骤报告中说明该决定——该规则完整适用，包括其中唯一的保持层级例外。在此基础上，还需遵循以下针对重试的约束：
+在分派任何重试之前，你 MUST 根据 [升级规则](#escalation-rule) 明确决定此步骤的层级——该规则完整适用，包括其唯一的保持不变例外——并在步骤报告中说明该决定。在此基础上，重试还需遵循以下特定依据：
 
-- 此处的**触发条件 (1) 明确为 `score < 3.0`**（或者问题表明模型误解了该步骤，而不只是遗漏了细节）。
-- 重试的评审必须使用与重试实现相同的层级进行分派；该步骤的元评审既不重新运行，也不重新确定层级。
-- 升级后的层级**仅适用于此步骤的剩余尝试**——下一个步骤将根据[阶段 2](#phase-2-model-selection-for-each-subtask)从头重新评估。
-- 如果 `opus` 仍然失败，则根据[错误处理](#if-step-fails-after-max-retries)升级给用户处理。
+- **触发条件 (1) 在此处固定为 `score < 3.0`**（或出现表明模型误解了步骤、而不仅仅是遗漏细节的问题）。
+- 重试的评审器 MUST 以与重试实现相同的层级进行分派；该步骤的元评审器既不会重新运行，也不会重新分级。
+- 升级后的层级仅适用于**此步骤剩余的尝试**——下一步骤将根据 [阶段 2](#phase-2-model-selection-for-each-subtask) 从头重新评估。
+- 如果 `opus` 仍然失败，则根据[错误处理](#if-step-fails-after-max-retries)向用户升级。
 
-**实现代理的重试提示词模板：**
+**实现代理的重试提示模板：**
 
 ```markdown
 ## Retry Required: Step {N}/{total}
@@ -741,76 +739,28 @@ CRITICAL: Focus on fixing the specific issues identified. Do not rewrite everyth
 
 #### 3.6 迭代裁量规则
 
-你的主要任务是在目标质量范围内完成任务，并且迭代工作量必须与每个步骤的规模相称。以下两种失败模式同样真实存在：
+你的主要任务是在目标质量范围内**完成**任务，且迭代投入 MUST 与每个步骤的规模相称。以下两种失败模式同样真实：
 
-- 将重试次数和上下文耗费在吹毛求疵的问题上，导致整体任务始终无法完成 → **任务失败**。
-- 接受一个质量确实太差、无法视为已完成的步骤 → **更严重的失败**。
+- 在细枝末节上耗尽重试次数和上下文，导致整个任务始终无法完成 → **任务失败**。
+- 接受一个质量确实过低、不能被视为已完成的步骤 → **更严重的失败**。
 
-对每个评审分数应用以下规则：
+对每个评审得分应用以下规则：
 
-- **`score < 3.0` → 无条件失败。不得裁量。** 根据评审反馈进行重试，直到该步骤通过或达到最大重试次数。
-- **`3.0 <= score < 4.0` → 裁量区间。** 只有在此区间内，你才可以决定接受一个未达到 `4.0` 目标的步骤。固定的 `4.0` 目标将实际下限设为 `3.0`，因此无需另设有界降级防护规则。
-- 在此区间内，当未解决的问题仅为低/中优先级（任何高或严重级别的问题都会完全取消裁量权），并且其中没有任何问题违反该步骤的目标要求或造成实质性缺陷（即这些问题只是吹毛求疵）时，你必须先进行推理——在分派重试之前——判断再次尝试是否值得付出时间和上下文成本。
-- **由吹毛求疵问题驱动的重试最多一次**，并且该次重试计入重试预算。如果重试后仍然只出现吹毛求疵的问题，你必须将该步骤标记为通过（`ACCEPTED`），将未解决的问题记录到累积上下文中，在最终摘要中报告这些问题，然后继续下一个步骤。如果重试后的分数低于 `3.0`，则改为应用无条件失败规则。
-- 你必须严格评判，不能宽松。未达到目标就停止必须是一项有意为之的决定，其依据是不存在真正违反要求的问题——后续步骤会基于此步骤继续构建。如果某个真正的阻塞性问题导致无法在最大重试次数内完成该步骤，则必须将其升级为失败，绝不能掩饰过去。
-- **如果 `STRICT_MODE` 为 true，则整条规则均被禁用**：仅当 `score >= 4.0` 或达到最大重试次数时才停止。`--strict` 不会改变其他任何行为——`4.0` 目标、最大重试次数、`< 3.0` 无条件失败规则以及元评审/评审分派均不受影响。
+- **`score < 3.0` → 无条件 FAIL。不得裁量。** 根据评审反馈进行重试，直到该步骤通过或达到最大重试次数。
+- **`3.0 <= score < 4.0` → 裁量区间。** 只有在此区间内，你 MAY 决定接受一个低于 `4.0` 目标的步骤。固定的 `4.0` 目标使有效下限为 `3.0`，因此不需要单独的有界下降保护规则。
+- 在该区间内，只有当遗留问题**全部**属于低/中优先级（任何 High 或 Critical 级别的发现都会完全取消裁量权），且这些问题都没有违反该步骤的目标要求或造成有意义的缺陷（即它们只是细枝末节）时，你 MUST 在分派重试之前**先行判断**另一次尝试是否值得付出时间和上下文成本。
+- **最多进行一次由细枝末节驱动的重试**，且该次重试计入重试额度。如果这次重试仍然只发现细枝末节问题，你 MUST 将该步骤标记为 PASS（`ACCEPTED`），在累计上下文中继续传递遗留问题，在最终摘要中报告这些问题，然后继续下一步骤。如果返回低于 `3.0` 的得分，则适用无条件 FAIL 规则。
+- 你 MUST 保持批判性，**不得宽松处理**。停止在目标分数之前必须是基于不存在真实的、会破坏要求的问题而作出的有意决定——后续步骤将建立在此步骤之上。阻碍在最大重试次数内完成该步骤的真实问题必须升级为失败，绝不能掩盖了事。
+- **如果 `STRICT_MODE` 为 true，则整条规则被禁用**：只有在 `score >= 4.0` 或达到最大重试次数时才停止。`--strict` 不会改变其他任何内容——`4.0` 目标、最大重试次数限制、`< 3.0` 无条件 FAIL，以及元评审器/评审器的分派均不受影响。
 
-### 阶段 4：最终总结与报告
-
-所有子任务完成并通过验证后，回复一份综合报告：
-
-```markdown
-## Sequential Execution Summary
-
-**Overall Task:** {original task description}
-**Total Steps:** {count}
-**Total Agents:** {meta_judges(one per step) + implementation_agents + judge_agents + retry_agents}
-**Strict Mode:** {STRICT_MODE}
-
-### Step-by-Step Results
-
-| Step | Subtask | Model | Judge Score | Retries | Status |
-|------|---------|-------|-------------|---------|--------|
-| 1 | {name} | {model} | {X.X}/5.0 | {0-3} | PASS |
-| 2 | {name} | {model} | {X.X}/5.0 | {0-3} | PASS |
-| ... | ... | ... | ... | ... | ... |
-
-Status is `PASS` (score >= 4.0), `ACCEPTED` (below target per the [Iteration Discretion Rule](#36-iteration-discretion-rule) — list the outstanding nitpicks under Follow-up Recommendations), or `FAILED`.
-
-**Model** is the tier the step finished at; when [escalation](#351-model-escalation-on-retry) fired, record it as `{starting tier} → {final tier}`.
-
-### Files Modified (All Steps)
-- {file1}: {what changed, which step}
-- {file2}: {what changed, which step}
-...
-
-### Key Decisions Made
-- Step 1: {decision and rationale}
-- Step 2: {decision and rationale}
-...
-
-### Integration Points
-{How the steps connected and built upon each other}
-
-### Judge Verification Summary
-| Step | Initial Score | Final Score | Issues Fixed |
-|------|---------------|-------------|--------------|
-| 1 | {X.X} | {X.X} | {count or "None"} |
-| 2 | {X.X} | {X.X} | {count or "None"} |
-
-### Meta-Judge Specifications
-One evaluation specification generated per step (in parallel with implementation), reused across retries within each step.
-
-
-### Follow-up Recommendations
-{Any improvements suggested by judges, tests to run, or manual verification needed}
-```
+### 后续建议
+{Judge 提出的任何改进建议、需要运行的测试或所需的手动验证}
 
 ## 错误处理
 
-### 如果裁判验证失败（分数 <4.0）
+### 如果 Judge 验证失败（评分 <4.0）
 
-经裁判验证的迭代循环会自动处理大多数失败情况（仅当[迭代裁量规则](#36-iteration-discretion-rule)拒绝接受时，`3.0..4.0` 范围内的分数才会被视为 FAIL）：
+Judge 验证的迭代循环会自动处理大多数失败情况（只有在[迭代裁量规则](#36-iteration-discretion-rule)拒绝接受 `3.0..4.0` 的评分后，该评分才会被判定为 FAIL）：
 
 ```
 Judge FAIL (Retry Available):
@@ -822,20 +772,20 @@ Judge FAIL (Retry Available):
 
 ### 如果步骤在达到最大重试次数后仍然失败
 
-当某个步骤连续三次未通过裁判验证时：
+当某个步骤连续三次未通过 Judge 验证时：
 
-1. **停止** - 不要在基础存在问题的情况下继续
-2. **报告** - 提供失败分析：
+1. **停止**——不要在基础环节已损坏的情况下继续执行
+2. **报告**——提供失败分析：
    - 原始步骤要求
-   - 所有裁判结论和分数
-   - 多次重试后仍然存在的问题
-3. **升级** - 向用户提供以下选项：
-   - 提供额外的上下文/指导以供重试
-   - 使用更高一级的模型层级重新运行此步骤（如果该步骤已达到 `opus`，则省略此选项）
+   - 所有 Judge 判定结果和评分
+   - 各次重试中持续存在的问题
+3. **升级**——向用户提供以下选项：
+   - 提供额外上下文/指导后重试
+   - 在更高的模型层级上重新运行此步骤（如果该步骤已经达到 `opus`，则省略此选项）
    - 修改步骤要求
-   - 跳过该步骤（如果为可选步骤）
-   - 中止并报告部分进展
-4. **等待** - 未经用户决定，不得继续
+   - 跳过步骤（如果该步骤是可选的）
+   - 中止并报告部分进度
+4. **等待**——未经用户决定不得继续执行
 
 **升级报告格式：**
 
@@ -872,26 +822,26 @@ Judge FAIL (Retry Available):
 Awaiting your decision...
 ```
 
-**绝不要：**
+**绝不：**
 
-- 在达到最大重试次数后，仍越过失败的步骤继续执行
+- 在步骤达到最大重试次数后继续执行
 - 为了“节省时间”而跳过评审验证
 - 忽略多次重试中持续存在的问题
-- 对哪些内容可能已经生效作出假设
+- 臆测哪些做法可能奏效
 
-### 如果上下文缺失
+### 如果缺少上下文
 
-1. **不要猜测**前序步骤生成了什么
-2. **重新检查**前序步骤的输出，查找缺失的信息
-3. **检查评审报告**——其中可能已经指出缺失的元素
-4. 如有需要，**派遣澄清子代理**以提取缺失的上下文
-5. **更新上下文传递方式**，以供未来的类似任务使用
+1. **不要猜测**之前的步骤产生了什么
+2. **重新检查**之前步骤的输出，以查找缺失的信息
+3. **检查评审报告**——其中可能记录了缺失的元素
+4. 如果需要，**调度澄清子代理**以提取缺失的上下文
+5. **更新上下文传递**，以便未来处理类似任务
 
-### 如果步骤发生冲突
+### 如果步骤之间存在冲突
 
 1. 在冲突点**停止执行**
-2. **分析：**任务分解是否有误？这些步骤实际上是否存在依赖关系？
-3. **检查评审反馈**——评审可能已经指出集成问题
+2. **分析：**分解是否不正确？这些步骤实际上是否存在依赖关系？
+3. **检查评审反馈**——评审者可能已标记集成问题
 4. **选项：**
    - 如果遗漏了依赖关系，则重新排列步骤
    - 将相互冲突的步骤合并为一个步骤
@@ -899,7 +849,7 @@ Awaiting your decision...
 
 ## 示例
 
-### 示例 1：相互承接的顺序步骤（基于前序步骤中已存在的更改）
+### 示例 1：相互构建的顺序步骤（前序步骤已有的更改）
 
 **输入：**
 
@@ -909,21 +859,21 @@ Awaiting your decision...
 
 **阶段 1——分解：**
 
-| 步骤 | 子任务 | 依赖于 | 复杂度 | 类型 | 输出 |
+| Step | Subtask | Depends On | Complexity | Type | Output |
 |------|---------|------------|------------|------|--------|
-| 1 | 创建 User 模型和数据库架构 | - | 中等 | 实现 | User 模型、迁移文件 |
-| 2 | 为用户添加 CRUD 端点 | 步骤 1 | 中等 | 实现 | REST API 路由、控制器 |
-| 3 | 添加身份验证集成 | 步骤 1、2 | 高 | 实现 | 身份验证中间件、JWT 处理 |
+| 1 | Create User model and database schema | - | Medium | Implementation | User model, migration files |
+| 2 | Add CRUD endpoints for users | Step 1 | Medium | Implementation | REST API routes, controller |
+| 3 | Add authentication integration | Steps 1,2 | High | Implementation | Auth middleware, JWT handling |
 
 **阶段 2——模型选择：**
 
-| 步骤 | 子任务 | 模型 | 理由 |
+| Step | Subtask | Model | Rationale |
 |------|---------|-------|-----------|
-| 1 | 创建 User 模型和架构 | sonnet | 按既有模式编写代码；全新的 `users` 表可回滚，因此不会触发不可逆迁移条件 |
-| 2 | 添加 CRUD 端点 | sonnet | 在单个模块中编写代码；“添加到公共 API”**不在**详尽的关键事项列表中 |
-| 3 | 添加身份验证集成 | opus | 使用 opus 理据充分——身份验证（JWT 签发和路由保护）触发了关键条件 |
+| 1 | Create User model and schema | sonnet | Code writing on an established pattern; the greenfield `users` table is reversible, so the irreversible-migration trigger does not fire |
+| 2 | Add CRUD endpoints | sonnet | Code writing in one module; "adding to a public API" is NOT on the exhaustive critical list |
+| 3 | Add authentication integration | opus | opus is EARNED — the critical trigger fires on auth (JWT issuance and route protection) |
 
-**阶段 3 - 执行并累积既有变更：**
+**第 3 阶段——累积已有变更的执行：**
 
 ```
 Step 1: Create User model and database schema
@@ -1100,20 +1050,20 @@ Step 3: Add authentication integration
 
 **最终总结：**
 
-- Agent 总数：10（3 个元评审 + 3 个实现 Agent + 0 次重试 + 3 个评审）
-- 预先存在的更改演进：
+- Agent 总数：10（3 个元评审 + 3 个实现 + 0 次重试 + 3 个评审）
+- 预先存在的变更进展：
   - 第 1 步评审：无
   - 第 2 步评审：第 1 步输出（2 个文件）
   - 第 3 步评审：第 1+2 步输出（5 个文件）
-- 所有评审得分：4.2、4.4、4.1
+- 所有评审评分：4.2、4.4、4.1
 
 ---
 
-### 示例 2：用户修改过的代码库 + 顺序执行的步骤（混合来源的预先存在更改）
+### 示例 2：用户修改过的代码库 + 顺序执行步骤（混合预先存在的变更来源）
 
 **场景：**
 
-在对话期间，用户一直在开发一个支付处理模块。在调用 do-in-steps 之前，他们修改了多个文件（添加了新的 PaymentGateway 接口并更新了配置）。
+用户在对话期间一直在处理一个支付处理模块。在调用 do-in-steps 之前，他们修改了多个文件（新增了一个 PaymentGateway 接口，更新了配置）。
 
 **输入：**
 
@@ -1121,177 +1071,37 @@ Step 3: Add authentication integration
 /do-in-steps fix and improve payment processing
 ```
 
-**阶段 1 - 分解：**
+**阶段 1 - 任务分解：**
 
 | 步骤 | 子任务 | 依赖项 | 复杂度 | 类型 | 输出 |
 |------|---------|------------|------------|------|--------|
-| 1 | 修复支付验证缺陷 | - | 中等 | 缺陷修复 | 修正后的验证逻辑 |
-| 2 | 为失败的支付添加重试逻辑 | 第 1 步 | 高 | 实现 | 带退避机制的重试功能 |
+| 1 | 修复支付验证漏洞 | - | 中等 | Bug 修复 | 修正后的验证逻辑 |
+| 2 | 为失败的支付添加重试逻辑 | 第 1 步 | 高 | 实现 | 带退避机制的重试机制 |
 
 **阶段 2 - 模型选择：**
 
 | 步骤 | 子任务 | 模型 | 理由 |
 |------|---------|-------|-----------|
-| 1 | 修复支付验证缺陷 | opus | opus 是合理选择——范围虽小，但优先级使关键性高于规模：支付位于关键事项列表中 |
-| 2 | 为失败的支付添加重试逻辑 | opus | opus 是合理选择——支付（关键事项）加上围绕资金流转的重试/退避时序（复杂逻辑） |
+| 1 | 修复支付验证漏洞 | opus | opus 是 EARNED — 范围虽小，但优先级会使关键性覆盖规模：支付位于关键列表中 |
+| 2 | 为失败的支付添加重试逻辑 | opus | opus 是 EARNED — 支付（关键领域）加上围绕资金转移的重试/退避编排（复杂逻辑） |
 
-两个步骤都采用 `opus`，是因为其*领域*足以支持这一选择，而不是因为整个执行过程如此——有关混合使用不同层级模型的链，请参见示例 3。
+两个步骤都使用 `opus`，原因在于*领域本身获得了该模型*，而不是因为本次运行获得了该模型 — 关于混合不同层级的链路，请参见示例 3。
 
-**阶段 3 - 使用混合来源的预先存在更改执行：**
+**阶段 3 - 使用混合预先存在的变更执行：**
 
-```
-Step 1: Fix payment validation bugs
-  Parallel dispatch: Meta-judge + Implementation (both Opus — critical trigger)
-  Judge Verification (Opus, with step 1 meta-judge spec):
-    NOTE: Pre-existing changes detected from USER modifications.
-    The user modified payment files before this task — include those
-    so the judge focuses only on the bug fix, not the user's prior work.
-
-    Judge prompt sent:
-    ┌─────────────────────────────────────────────────────────
-    │ You are evaluating Step 1/2: Fix payment validation
-    │ bugs against an evaluation specification produced by
-    │ the meta judge.
-    │
-    │ CLAUDE_PLUGIN_ROOT=...
-    │
-    │ ## Original Task
-    │ Fix and improve payment processing
-    │
-    │ ## Step Requirements
-    │ Fix validation bugs in payment amount and currency
-    │ checks that allow invalid transactions to proceed.
-    │
-    │ ## Previous Steps Context
-    │ None (first step)
-    │
-    │ ## Pre-existing Changes (Context Only)
-    │
-    │ The following changes were made BEFORE the current
-    │ step's implementation agent started working. They are
-    │ NOT part of the current step's output. Focus your
-    │ evaluation on the current step's changes. Only verify
-    │ pre-existing changed files/logic if they directly
-    │ relate to the current step's requirements.
-    │
-    │ ### User modifications (before current task)
-    │ The user made changes to the following files/modules
-    │ before this task was started:
-    │ - src/payments/PaymentGateway.ts (new) - Payment
-    │   gateway interface definition
-    │ - src/payments/StripeAdapter.ts (modified) - Updated
-    │   to implement new PaymentGateway interface
-    │ - src/config/payment.config.ts (modified) - Added
-    │   gateway configuration settings
-    │
-    │ The current task focuses on fixing validation bugs.
-    │ Pre-existing changes to payment files may overlap with
-    │ the current step's scope — evaluate whether the
-    │ implementation agent's changes correctly fix the bugs
-    │ without breaking the pre-existing modifications.
-    │
-    │ ## Evaluation Specification
-    │ ```yaml
-    │ {meta-judge's evaluation specification YAML}
-    │ ```
-    │
-    │ ## Implementation Output
-    │ Files: src/payments/PaymentValidator.ts (modified),
-    │        tests/payments/PaymentValidator.test.ts (modified)
-    │ Key changes: Fixed amount validation to reject negative
-    │ values, added currency code format check...
-    │
-    │ ## Instructions
-    │ Follow your full judge process...
-    └─────────────────────────────────────────────────────────
-
-  → VERDICT: PASS, SCORE: 4.3/5.0
-  → Context passed forward: Validation fixes, affected files
-
-Step 2: Add retry logic for failed payments
-  Parallel dispatch: Meta-judge + Implementation (both Opus — critical trigger)
-  Judge Verification (Opus, with step 2 meta-judge spec):
-    NOTE: Pre-existing changes now include BOTH the user's modifications
-    AND Step 1's output. The judge needs both sources to correctly
-    attribute changes.
-
-    Judge prompt sent:
-    ┌─────────────────────────────────────────────────────────
-    │ You are evaluating Step 2/2: Add retry logic for failed
-    │ payments against an evaluation specification produced by
-    │ the meta judge.
-    │
-    │ CLAUDE_PLUGIN_ROOT=...
-    │
-    │ ## Original Task
-    │ Fix and improve payment processing
-    │
-    │ ## Step Requirements
-    │ Add retry mechanism with exponential backoff for failed
-    │ payment transactions, with configurable max retries.
-    │
-    │ ## Previous Steps Context
-    │ Step 1 fixed payment validation bugs in
-    │ PaymentValidator.ts (amount and currency checks).
-    │
-    │ ## Pre-existing Changes (Context Only)
-    │
-    │ The following changes were made BEFORE the current
-    │ step's implementation agent started working. They are
-    │ NOT part of the current step's output. Focus your
-    │ evaluation on the current step's changes. Only verify
-    │ pre-existing changed files/logic if they directly
-    │ relate to the current step's requirements.
-    │
-    │ ### User modifications (before current task)
-    │ - src/payments/PaymentGateway.ts (new) - Payment
-    │   gateway interface definition
-    │ - src/payments/StripeAdapter.ts (modified) - Updated
-    │   to implement new PaymentGateway interface
-    │ - src/config/payment.config.ts (modified) - Added
-    │   gateway configuration settings
-    │
-    │ ### Step 1: "Fix payment validation bugs"
-    │ - src/payments/PaymentValidator.ts (modified) - Fixed
-    │   amount validation and currency code format checks
-    │ - tests/payments/PaymentValidator.test.ts (modified) -
-    │   Added regression tests for validation fixes
-    │
-    │ These files exist in the codebase and may be modified
-    │ by the current step, but evaluate only the changes made
-    │ by Step 2's implementation agent.
-    │
-    │ ## Evaluation Specification
-    │ ```yaml
-    │ {meta-judge's evaluation specification YAML}
-    │ ```
-    │
-    │ ## Implementation Output
-    │ Files: src/payments/PaymentRetryService.ts (new),
-    │        src/payments/StripeAdapter.ts (modified),
-    │        src/config/payment.config.ts (modified),
-    │        tests/payments/PaymentRetryService.test.ts (new)
-    │ Key changes: Added PaymentRetryService with exponential
-    │ backoff, integrated into StripeAdapter...
-    │
-    │ ## Instructions
-    │ Follow your full judge process...
-    └─────────────────────────────────────────────────────────
-
-  → VERDICT: PASS, SCORE: 4.5/5.0
-```
+代码块内容保持不变。
 
 **最终总结：**
 
-- 智能体总数：7（2 个元评审 + 2 个实现 + 0 次重试 + 2 个评审）
-- 预先存在的更改演进：
+- Agent 总数：7（2 个元评审 + 2 个实现 + 0 次重试 + 2 个评审）
+- 既有变更进展：
   - 第 1 步评审：用户修改（3 个文件）
   - 第 2 步评审：用户修改（3 个文件）+ 第 1 步输出（2 个文件）
 - 所有评审得分：4.3、4.5
 
 ---
 
-### 示例 3：带升级机制的多文件重构
+### 示例 3：通过升级机制进行多文件重构
 
 **输入：**
 
@@ -1299,7 +1109,7 @@ Step 2: Add retry logic for failed payments
 /do-in-steps Rename 'userId' to 'accountId' across the codebase - this affects interfaces, implementations, and callers
 ```
 
-**阶段 1——分解：**
+**阶段 1——任务分解：**
 
 | 步骤 | 子任务 | 依赖项 | 复杂度 | 类型 | 输出 |
 |------|---------|------------|------------|------|--------|
@@ -1313,13 +1123,13 @@ Step 2: Add retry logic for failed payments
 
 | 步骤 | 子任务 | 模型 | 理由 |
 |------|---------|-------|-----------|
-| 1 | 更新接口 | opus | opus 是应得的——共享契约发生更改，无论涉及多少文件，这都是一个 `opus` 触发条件 |
-| 2 | 更新实现 | haiku | 机械式广度特例：逐文件重复一次规则驱动的重命名，并根据单次出现进行分级 |
-| 3 | 更新调用方 | haiku | 同一特例——机械式重命名，不涉及逻辑或契约更改 |
-| 4 | 更新测试 | haiku | 与重命名对应的机械式测试修复 |
-| 5 | 更新文档 | haiku | 单一用途的文本修正，不涉及代码 |
+| 1 | 更新接口 | opus | opus 已获使用资格——共享契约发生变更，无论文件数量多少，这都是 `opus` 的触发条件 |
+| 2 | 更新实现 | haiku | 机械化大范围修改豁免：每个文件中重复执行一个基于规则的重命名，按单次出现进行分层 |
+| 3 | 更新调用方 | haiku | 同样适用该豁免——机械化重命名，不涉及逻辑或契约变更 |
+| 4 | 更新测试 | haiku | 反映该重命名的机械化测试修复 |
+| 5 | 更新文档 | haiku | 单一目的的文本修正，不涉及代码 |
 
-**阶段 3——带升级机制的执行（每个步骤均并行运行元评审和实现）：**
+**阶段 3——执行与升级（每个步骤都包含并行的元评审和实现）：**
 
 ```
 Step 1: Update interfaces
@@ -1366,7 +1176,7 @@ Step 4-5: Each with parallel meta-judge + implementation, complete without issue
   re-assessed from scratch and both run at Haiku.
 ```
 
-智能体总数：20（5 个元评审智能体 + 5 个实现智能体 + 5 个重试智能体 + 5 个评审智能体）
+总代理数：20（5 个元评审 + 5 个实现代理 + 5 个重试代理 + 5 个评审代理）
 
 ---
 
@@ -1375,65 +1185,65 @@ Step 4-5: Each with parallel meta-judge + implementation, complete without issue
 ### 任务分解
 
 - **明确具体：** 每个子任务都应有清晰、可验证的结果
-- **定义验证点：** 评审智能体应检查每个步骤的哪些内容？
-- **尽量减少步骤：** 合并相关工作；不要过度分解
-- **验证依赖关系：** 确保每个步骤都能从之前的步骤中获得所需内容
-- **规划上下文：** 确定步骤之间需要传递哪些上下文
+- **定义验证点：** 评审代理应检查每个步骤的哪些内容？
+- **尽量减少步骤：** 合并相关工作；不要过度拆分
+- **验证依赖关系：** 确保每个步骤都具备完成任务所需的前置条件
+- **规划上下文：** 确定哪些上下文需要在步骤之间传递
 
 ### 模型选择
 
-相关规则以[模型选择策略](#model-selection-policy)为准；以下习惯有助于确保这些规则得到落实：
+规则由[模型选择策略](#model-selection-policy)规定；以下习惯有助于贯彻这些规则：
 
-- **每个步骤都要明确说明理由** - 在分派每个步骤之前，说明其范围、复杂度和风险，以及由此确定的层级；这是整个运行过程中影响最大的决策
-- **`opus` 必须凭实力获得，绝不能作为保险选择** - 对于每个重叠或难分高下的情况，都应按照[选择规则](#selection-rules)中的优先顺序和决胜规则来决定，绝不能凭直觉
-- **根据每个步骤自身的实际情况确定层级** - 一条任务链可以混用不同层级；相邻步骤的层级（或升级后的层级）不能作为当前步骤的判断依据
-- **各角色统一使用同一层级** - 仅在步骤并非显而易见时提高标准制定者（元评审智能体）的层级（参见[角色配对](#role-pairing)）
-- **根据证据升级** - 当某次尝试的层级明显过低，或用户对质量提出投诉时（参见[升级规则](#escalation-rule)），仅针对失败的步骤进行升级
+- **逐步骤大声说明理由**——在分派每个步骤之前，说明范围、复杂度和风险，以及由此确定的层级；这是运行过程中影响最大的决策
+- **`opus` 只能凭实力获得，绝不能作为保险**——按照[选择规则](#selection-rules)中的优先级和决胜规则解决所有重叠和僵局，绝不能凭直觉决定
+- **根据每个步骤自身的情况确定层级**——一个链路可以混合使用不同层级；相邻步骤的层级（或已升级的层级）不能作为该步骤的依据
+- **各角色使用同一层级**——只提升标准制定者（元评审）的层级，并且仅针对不明显的步骤（[角色配对](#role-pairing)）
+- **根据证据进行升级**——明确过低质量的尝试或用户质量投诉（[升级规则](#escalation-rule)）应针对失败的步骤处理
 
 ### 上下文传递指南
 
-| 场景 | 应传递的内容 | 应省略的内容 |
+| 场景 | 需要传递的内容 | 需要省略的内容 |
 |----------|--------------|--------------|
-| 在步骤 1 中定义接口 | 完整的接口定义 | 实现细节 |
-| 在步骤 2 中进行实现 | 关键模式、文件位置 | 内部逻辑 |
-| 在步骤 3 中进行集成 | 使用模式、入口点 | 步骤 2 的内部细节 |
-| 为重试提供评审反馈 | ISSUES 列表、报告路径 | 报告的完整内容 |
+| 步骤 1 中定义接口 | 完整的接口定义 | 实现细节 |
+| 步骤 2 中实现功能 | 关键模式、文件位置 | 内部逻辑 |
+| 步骤 3 中进行集成 | 使用模式、入口点 | 步骤 2 的内部细节 |
+| 重试时传递评审反馈 | ISSUES 列表、报告路径 | 完整的报告内容 |
 
 **保持上下文聚焦：**
 
-- 传递下一步骤在前一步基础上开展工作时所必需的内容
+- 传递下一步骤构建所需的内容
 - 省略不会影响后续步骤的内部细节
-- 突出显示应保持一致的模式/约定
-- 将评审智能体的 IMPROVEMENTS 作为可选增强项包含在内
-- **跟踪既有变更** - 向评审智能体传递先前修改（包括之前步骤所做修改）的相关上下文，以避免归因混淆
+- 突出需要保持一致的模式/约定
+- 将评审代理提出的 IMPROVEMENTS 作为可选增强项纳入
+- **跟踪预先存在的更改**——向评审代理传递之前修改的上下文（包括之前步骤中的修改），以避免归因混淆
 
-### 元评审智能体 + 评审智能体验证
+### 元评审 + 评审验证
 
-- **绝不能跳过元评审智能体** - 定制化评估标准能够带来比通用标准更好的评审效果
-- **每个步骤配备一个元评审智能体** - 每个步骤都应有自己的元评审智能体，并与实现工作并行分派
-- **在同一步骤的重试中复用元评审智能体规范** - 重试时，复用该步骤的同一份元评审智能体规范；不要重新运行元评审智能体
-- **每个新步骤都使用新的元评审智能体** - 不同步骤有不同要求，因此每个步骤都应配备新的元评审智能体
-- **并行分派时元评审智能体优先** - 必须始终将其作为消息中的第一个工具调用
-- **仅解析评审智能体输出的标题字段** - 不要读取完整报告，以免污染上下文
-- **包含 CLAUDE_PLUGIN_ROOT** - 元评审智能体和评审智能体都需要解析后的插件根路径
-- **元评审智能体 YAML** - 仅将元评审智能体 YAML 传递给评审智能体，不要添加任何额外文本或注释！
-- **在自我审查之后：** 评审智能体审查已经通过内部验证的工作
-- **独立验证：** 评审智能体与实现智能体必须是不同的智能体
+- **绝不要跳过元评审**——量身定制的评估标准比通用标准能产生更好的评审结果
+- **每个步骤对应一个元评审**——每个步骤都应在实现代理并行分派时，同时分派其专属的元评审代理
+- **在同一个步骤的重试中复用元评审规范**——重试时，复用该步骤原有的元评审规范；不要重新运行元评审
+- **每个新步骤都使用新的元评审**——不同步骤有不同要求，因此每个步骤都应使用全新的元评审
+- **并行分派时优先调用元评审**——消息中的工具调用始终应以元评审作为第一个工具调用
+- **仅解析评审代理的标题**——不要读取完整报告，以避免上下文污染
+- **包含 CLAUDE_PLUGIN_ROOT**——元评审代理和评审代理都需要已解析的插件根路径
+- **元评审 YAML**——只将元评审 YAML 传递给评审代理，不要向其中添加任何额外文本或注释！
+- **自我批评之后：** 评审代理应评审已经通过内部验证的工作
+- **独立验证：** 评审代理应与实现代理不同
 - **结构化输出：** 始终从回复中解析 VERDICT/SCORE，而不是完整报告
-- **最大重试次数：** 尝试 3 次后向用户升级
-- **反馈循环：** 将评审智能体的 ISSUES 传递给负责重试的实现智能体
-- **重试时使用同一步骤的元评审智能体规范，重新进行评审验证**
+- **最大重试次数：** 在向用户升级之前，最多尝试 3 次
+- **反馈闭环：** 将评审代理的 ISSUES 传递给重试实现代理
+- **返回评审验证时，使用同一个步骤的元评审规范**
 
 ### 质量保证
 
-- **双层验证：** 自我审查（内部）+ 评审者（外部）
-- **先进行自我审查：** 实现代理在提交前验证自己的工作
-- **再进行外部评审：** 独立评审者发现自我审查遗漏的盲点
-- **迭代循环：** 根据反馈重试，直至通过或达到最大重试次数
-- **适度迭代：** 应用[迭代裁量规则](#36-iteration-discretion-rule)——由吹毛求疵的问题驱动的重试最多一次，评分绝不低于 `3.0`，使用 `--strict` 时禁用
-- **链式验证：** 评审者检查与之前步骤的集成情况
-- **升级处理：** 不要越过失败的步骤继续执行——应获取用户输入
-- **最终集成测试：** 所有步骤完成后，验证完整变更能否协同工作
+- **双层验证：** 自我批评（内部）+ 评审者（外部）
+- **先进行自我批评：** 实现代理在提交前验证自己的工作
+- **后进行外部评审：** 独立评审者发现自我批评遗漏的盲点
+- **迭代循环：** 根据反馈重试，直到通过或达到最大重试次数
+- **适度迭代：** 应用 [迭代裁量规则](#36-iteration-discretion-rule)——最多进行一次由细枝末节问题驱动的重试，评分绝不低于 `3.0`，使用 `--strict` 时禁用
+- **链式验证：** 评审者检查与前序步骤的集成情况
+- **升级处理：** 不要在步骤失败后继续推进——获取用户输入
+- **最终集成测试：** 所有步骤完成后，验证完整变更能够协同工作
 
 ## 上下文格式参考
 
@@ -1498,4 +1308,4 @@ IMPROVEMENTS:
 ---
 ```
 
-**关键洞见：** 对于具有依赖关系的复杂任务，顺序执行能够带来益处：每个步骤都在全新的上下文中运行，同时只接收之前步骤的相关输出。**逐步骤元评审者评估规范**可确保评估标准针对每个步骤的具体要求量身定制，同时与实现并行运行以提高速度。**外部评审者验证**能够发现自我审查遗漏的盲点，而**迭代循环**（复用同一步骤的元评审者规范）则可确保在继续执行之前达到质量要求。这可以同时防止上下文污染和错误传播。
+**关键洞见：** 具有依赖关系的复杂任务适合采用顺序执行方式：每个步骤都在全新的上下文中运行，同时仅接收前序步骤的相关输出。**针对每个步骤的元评审规范**可确保根据该步骤的要求制定定制化的评估标准，并与实现并行运行以提升速度。**外部评审者验证**能够发现自我批评遗漏的盲点，而**迭代循环**（重复使用同一 `步骤` 的元评审规范）则确保在继续推进前达到质量要求。这样既能防止上下文污染，也能避免错误传播。

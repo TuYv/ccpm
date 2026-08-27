@@ -1,0 +1,26 @@
+{
+  "id": "fvadicamo-dev-agent-skills-decision-records",
+  "name": "decision-records",
+  "description": "Creates, supersedes and validates decision records (ADRs) against the convention a collection already follows, instead of imposing a published one. Use when the user wants to record a decision, write an ADR, supersede an existing decision, audit or lint a decisions folder, check that an ADR index is in sync, or asks \"why did we decide X\". Deduces the filename scheme, section set and status vocabulary from the records already there; ships a validator with an exit code, so the audit is a check and",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "fvadicamo",
+  "install_path": ".claude/skills/decision-records/SKILL.md",
+  "source": {
+    "repo": "fvadicamo/dev-agent-skills",
+    "url": "https://github.com/fvadicamo/dev-agent-skills/blob/main/plugins/decision-records/skills/decision-records/SKILL.md",
+    "path": "plugins/decision-records/skills/decision-records/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-27T04:24:01.039Z",
+    "stars": 71,
+    "language": "Shell",
+    "pushed_at": "2026-08-26T23:28:51Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于管理架构决策记录（ADR），遵循现有文档约定创建、替换和校验记录，适合审计决策目录、同步索引及追溯决策原因。"
+}
