@@ -1,0 +1,26 @@
+{
+  "id": "pydantic-genai-prices-add-provider",
+  "name": "add-provider",
+  "description": "Add a new inference provider to genai-prices, including provider data, matching, usage extractors, update automation, cassettes, agentic checks, generated artifacts, and Python/JavaScript parity tests. Use for a new provider, not a new model on an existing provider.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "pydantic",
+  "install_path": ".claude/skills/add-provider/SKILL.md",
+  "source": {
+    "repo": "pydantic/genai-prices",
+    "url": "https://github.com/pydantic/genai-prices/blob/main/.claude/skills/add-provider/SKILL.md",
+    "path": ".claude/skills/add-provider/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-28T00:04:50.691Z",
+    "stars": 359,
+    "language": "Python",
+    "pushed_at": "2026-08-27T20:46:49Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于为 genai-prices 接入新的推理服务商，完善数据、用量解析和自动化测试，不适合仅新增已有服务商的模型。"
+}

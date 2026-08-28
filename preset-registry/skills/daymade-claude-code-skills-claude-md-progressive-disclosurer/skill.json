@@ -1,7 +1,7 @@
 {
   "id": "daymade-claude-code-skills-claude-md-progressive-disclosurer",
   "name": "claude-md-progressive-disclosurer",
-  "description": "| Optimize / slim down / restructure a CLAUDE.md (or AGENTS.md) using progressive disclosure — move low-frequency detail to Level 2 references while keeping Level 1 lean, WITHOUT losing information. Use this whenever the user asks to optimize / 精简 / 瘦身 / 重构 CLAUDE.md, asks \"CLAUDE.md 是不是太大了 / 太长了\" (is my CLAUDE.md too big / too long / bloated), wants to 把内容拆到 reference / 外部 / Level 2, do 整段外移 / 渐进式披露 / progressive disclosure, or whenever a CLAUDE.md duplicates info across files or the LLM keeps ",
+  "description": ">- Optimize, slim, or restructure CLAUDE.md/AGENTS.md with progressive disclosure and zero information loss. Use when the user explicitly asks to audit, 精简, 瘦身, 重构, split, or diagnose adherence problems in instruction files. Profiles the whole resident startup surface, allocates rules among prose, path rules, Skills, hooks, and references, then moves low-frequency sections verbatim with content-integrity checks. Also use when an active task starts moving or compressing instruction sections. Not ",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-claude-code/claude-md-progressive-disclosurer/SKILL.md",
     "path": "daymade-claude-code/claude-md-progressive-disclosurer/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-27T15:18:41.935Z",
-    "stars": 1354,
+    "discovered_at": "2026-08-28T00:50:20.619Z",
+    "stars": 1355,
     "language": "Python",
-    "pushed_at": "2026-08-27T15:18:07Z",
+    "pushed_at": "2026-08-27T16:33:18Z",
     "license": "MIT"
   },
-  "summary_zh": "用渐进式披露精简和重构 AI 编程指南，将低频细节移至外部引用，在不丢信息的前提下降低上下文负担。"
+  "summary_zh": "用于审计、精简和重构智能体指令文件，通过渐进式披露降低启动负担，同时确保信息不丢失。"
 }

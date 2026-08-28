@@ -1,7 +1,7 @@
 {
   "id": "google-skills-cloud-monitoring-list-time-series-request",
   "name": "cloud-monitoring-list-time-series-request",
-  "description": ">- Generate valid Cloud Monitoring ListTimeSeries requests and aggregation specifications from metric descriptors and resource parameters. Use when asked to create, generate, format, or build ListTimeSeries requests, JSON payloads, filter expressions, or aligner/reducer aggregations for Cloud Monitoring metrics and charts. Don't use for metric discovery or metric selection.",
+  "description": ">- Generates valid Cloud Monitoring ListTimeSeries requests and aggregation specifications from metric descriptors and resource parameters. Use when asked to create, generate, format, or build ListTimeSeries requests, JSON payloads, filter expressions, or aligner/reducer aggregations for Cloud Monitoring metrics and charts. Don't use for metric discovery or metric selection.",
   "category": "文档写作",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/google/skills/blob/main/skills/cloud/cloud-monitoring-list-time-series-request/SKILL.md",
     "path": "skills/cloud/cloud-monitoring-list-time-series-request/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-21T20:13:03.373Z",
-    "stars": 18585,
+    "discovered_at": "2026-08-28T00:02:37.261Z",
+    "stars": 18822,
     "language": "Python",
-    "pushed_at": "2026-08-21T20:12:37Z",
+    "pushed_at": "2026-08-27T22:49:55Z",
     "license": "Apache-2.0"
   },
-  "summary_zh": "根据指标描述和资源参数生成有效的云监控时序查询、过滤条件及聚合配置，适合构建监控图表请求。"
+  "summary_zh": "根据指标描述和资源参数生成有效的云监控时序查询请求、过滤条件及聚合配置，适合构建监控图表和查询载荷。"
 }

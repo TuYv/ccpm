@@ -8,26 +8,26 @@ description: >-
 使用两阶段循环：
 
 1. 阶段 1 应用确定性的、已知的修正。
-2. 原生 AI 校正读取完整转录文本，修正一次性错误，核实不确定的实体，并沉淀可复用的修正。
+2. 原生 AI 修正读取完整转录内容，修复一次性错误，核实不确定的实体，并累积可复用的修正。
 
-**默认使用原生 AI 校正。仅运行阶段 1 是不完整的。** 阶段 3 API 仅适用于没有 Claude/Codex 智能体可用的自动化场景。
+**原生 AI 修正是默认方式。仅执行阶段 1 是不完整的。** 阶段 3 API 仅用于没有可用 Claude/Codex agent 的自动化场景。
 
 ## 操作约定
 
-- 完成阶段 1 → 原生 AI 校正 → 沉淀已确认的重复性修正。不要仅在阶段 1 完成后就报告转录文本无误。
-- 仅当人工明确将本次运行限制为字典处理，或有带日期的产物证明已对这份完全相同的转录文本运行过原生 AI 校正时，才跳过原生 AI。
-- 在 Claude Code 或 Codex 中，不要运行阶段 3。请使用阶段 1 加原生工作流。
-- 切勿为了提升流畅度而改写发言。每项修正都必须能够解释为合理的 ASR 错误，并保留每句话的实际发言者。
-- 切勿推断或重新分配发言者身份。保留发言者标签行；经人工确认的标签和用户裁定具有最高权威性。
-- 对无法确定的文本保持原样，并将其加入队列。明显的乱码比流畅但错误的猜测更安全。
-- 将单行 `asr_note` 值视为修正来源记录：它会有意引用旧形式，因此不会参与匹配。多行 YAML 台账值不会被屏蔽；关键词、标题、其他源自 ASR 的元数据以及正文文本仍属于修正范围。
-- 在执行原生校正之前，完整阅读 [references/native_ai_full_workflow.md](references/native_ai_full_workflow.md)。在执行下文所述的相应操作之前，阅读对应的任务专用参考资料。
+- 完成阶段 1 → 原生 AI 修正 → 累积已确认的重复出现修正。不要仅在阶段 1 后就报告转录内容已清理完毕。
+- 仅当人工明确将本次运行限制为词典处理，或带日期的产物证明原生 AI 已经处理过这一确切转录内容时，才跳过原生 AI。
+- 在 Claude Code 或 Codex 中，不要运行阶段 3。使用阶段 1 加原生工作流。
+- 绝不要为了语言流畅而改写发言。修正必须能够解释合理的 ASR 错误，并保留谁说了什么。
+- 绝不要推断或重新分配说话者身份。保留说话者标签行；人工确认的标签和用户裁决具有权威性。
+- 对未解决的文本保持不变并将其加入队列。明显的乱码比流畅但错误的猜测更安全。
+- 将单行 `asr_note` 值视为修正溯源信息：它会有意引用旧形式，并被排除在匹配范围之外。多行 YAML ledger 值不会被屏蔽；关键词、标题、其他源自 ASR 的元数据以及正文仍在修正范围内。
+- 在执行原生处理之前，完整阅读 [references/native_ai_full_workflow.md](references/native_ai_full_workflow.md)。在执行相应操作之前，阅读下方指定的任务专用参考资料。
 
 ## 运行上下文
 
-通过 `uv run` 运行每个入口点；需要第三方 Python 包的入口点会使用 PEP 723 声明依赖，而仅使用标准库/内部依赖的实用程序可以省略元数据块。请从调用此技能时显示的技能目录执行命令，或者在每个脚本路径前加上该目录。不要依赖 `$CLAUDE_SKILL_DIR`；它并非在所有运行环境中都可用。
+通过 `uv run` 运行每个入口点；需要第三方 Python 包的入口点使用 PEP 723 声明这些依赖，而仅使用标准库/内部代码的工具可以省略元数据块。从调用此 skill 时输出的 skill 目录执行命令，或在每个脚本路径前加上该目录。不要依赖 `$CLAUDE_SKILL_DIR`；并非每个 harness 都提供该变量。
 
-如果确实不知道软件包位置，请使用 [references/installation_setup.md](references/installation_setup.md) 中的安装解析流程。不要从宽泛的 `find` 结果中选择第一项：缓存、备份和旧版本可能同时存在。
+如果确实不知道 bundle 的位置，请使用 [references/installation_setup.md](references/installation_setup.md) 中的安装解析流程。不要从宽泛的 `find` 结果中选择第一个结果：缓存、备份和旧版本可能同时存在。
 
 ## 快速开始
 
@@ -56,9 +56,9 @@ uv run scripts/fix_transcription.py --scan-traps \
   --input meeting.md
 ~~~
 
-安全模式是阶段 1 的默认模式：应用低风险规则；中/高风险匹配项会推迟到 `*_needs_review.md` 和持久化审核队列中处理。`Applied: 0` 是有效结果，并不能证明转录文本没有问题。
+安全模式是 Stage 1 的默认模式：应用低风险规则；中风险/高风险匹配项将转入 `*_needs_review.md` 和持久化审核队列。`Applied: 0` 是有效结果，并不能证明转录内容没有问题。
 
-阶段 1 的 JSON 约定如下：
+Stage 1 的 JSON 契约如下：
 
 ~~~json
 {
@@ -75,41 +75,43 @@ uv run scripts/fix_transcription.py --scan-traps \
 }
 ~~~
 
-请读取全部十个字段。`stage1_only_incomplete` 是在原有六字段调用方约定基础上新增的字段，并且在运行阶段 1 脚本时必须保持为 true；只有调用方可以通过运行原生 AI，或明确选择无代理的阶段 2/3 路径来将其关闭。三个 `stage2_*` 遥测字段始终存在：阶段 1 报告 `0`、`0` 和 `false`；阶段 2/3 会将它们替换为实际的 API 结果。不要根据辅助文件是否存在来推断未执行任何操作或执行成功。
+读取全部十个字段。`stage1_only_incomplete` 是对原始六字段调用方契约的补充；对于 Stage 1 脚本运行，该字段必须保持为 true。只有调用方运行 Native AI，或明确选择无代理的 Stage 2/3 路径，才能将其关闭。三个 `stage2_*` 遥测字段始终存在：Stage 1 报告 `0`、`0` 和 `false`；Stage 2/3 则将其替换为实际的 API 结果。不要根据是否存在 sidecar 来推断无操作或成功。
 
-有关原生端到端示例，请阅读 [references/example_session_dji_minutes.md](references/example_session_dji_minutes.md)。
+如需查看原生端到端示例，请阅读 [references/example_session_dji_minutes.md](references/example_session_dji_minutes.md)。
 
 ## 选择路径
 
-| 路径 | 适用场景 | 必读内容 |
+| 路径 | 适用情况 | 必需阅读内容 |
 |---|---|---|
-| 快速原生 | 转录文本简短/直白、说话者已知、风险较低 | 本文件 + [native_ai_full_workflow.md](references/native_ai_full_workflow.md) |
-| 完整原生 | 涉及大量领域知识、陌生实体、3 位以上说话者，或转录文本很长或承载决策 | [native_ai_full_workflow.md](references/native_ai_full_workflow.md)，以及下方的队列和证据参考资料 |
-| 调用方集成 | 由其他技能或采集流水线调用阶段 1 | 下方的 `Cross-skill caller contract` |
-| 审核队列/仪表板 | 任何条目存在不确定性或需要音频 | [review_queue_dashboard.md](references/review_queue_dashboard.md) |
-| 无代理 API | 没有可用代理时的 CI/批处理自动化 | [glm_api_setup.md](references/glm_api_setup.md) 和 [workflow_guide.md](references/workflow_guide.md) |
-| 多文件批处理 | 多个相关的转录文件；尤其是 10 个以上文件时 | [advanced_correction_evidence.md](references/advanced_correction_evidence.md) |
+| 快速原生 | 简短/普通转录、说话人已知、风险较低 | 本文件 + [native_ai_full_workflow.md](references/native_ai_full_workflow.md) |
+| 完整原生 | 领域内容较重、实体不熟悉、3 位及以上说话人、较长或涉及决策的转录 | [native_ai_full_workflow.md](references/native_ai_full_workflow.md)，以及下方的队列和证据参考文档 |
+| 调用方集成 | 其他 skill 或摄取管道调用 Stage 1 | 下方的 `Cross-skill caller contract` |
+| 审核队列/仪表板 | 任意项目存在不确定性或需要音频 | [review_queue_dashboard.md](references/review_queue_dashboard.md) |
+| 无代理 API | 没有可用代理的 CI/批处理自动化 | [glm_api_setup.md](references/glm_api_setup.md) 和 [workflow_guide.md](references/workflow_guide.md) |
+| 多文件批处理 | 多个相关转录；尤其是 10 个及以上文件 | [advanced_correction_evidence.md](references/advanced_correction_evidence.md) |
 
-将词汇和风险作为主要分级信号；仅将长度用作平局时的判定依据。一段五分钟的医疗访谈可能需要完整级别，而一份很长但内容直白的双人备忘录可以使用快速级别。
+以词汇和风险级别作为主要分层信号；仅在无法区分时才使用长度作为决胜因素。一次五分钟的医疗访谈可能需要完整层级，而一份较长的普通双人备忘录可以使用快速层级。
 
-## 原生纠正检查清单
+## 原生校正检查清单
 
-1. **在阶段 1 之前为文件指定最终名称。** 队列锚点存储绝对路径。在任何推迟项可能入队之前，请使用人类可读的项目文件名。当输入是尚无文件的内联文本（例如斜杠命令参数或粘贴的文本块）时，首先将其写入文件；`--input` 和队列锚点都需要路径，如果下游不会归档该文件，使用临时位置即可。没有提供 `--domain`，且无法从上下文中明显判断领域？省略该标志本身就会默认搜索所有领域（即 `--domain` 自身的默认值），因此不要因选择领域而停滞——直接运行阶段 1，让安全模式控制自动应用的内容。如果仍需解析某个特定候选项，即使在快速级别，验证阶梯中的一个步骤成本也足够低，值得保留，尽管其余步骤并非如此：即 native_ai_full_workflow.md 步骤 4 的第 1 级，执行一次跨领域 `corrections.db` 查询——不是分级表要求你跳过的完整验证阶梯，只是这一项查询。
-2. **在阅读预先纠正过的转录文本之前恢复原始基线。** 如果采集流水线或之前的 API 处理已经修改过文本，请先与原始来源进行差异比较。将上游修改视为修改，而不是事实依据。
-3. **加载项目先验信息并阅读完整转录文本。** 如果存在 `~/.transcript-fixer/contexts/<domain>.md`，请先阅读该文件，然后通读整个文件，再判断前文中的歧义。
-4. **运行阶段 1 并检查实际结果。** 优先使用明确的项目领域以及 `--apply-domain --json`。读取 `deferred` 和 `review_enqueued`；绝不要悄无声息地丢弃辅助文件或忽略队列缺口。
-5. **比较阶段 1 与原始文本之间的差异。** 如果某条规则修改了原本正确的话语，请以原始文本为准，使用 `--report-false-positive "<from>" "<to>" --domain <domain>` 停用已存储的纠正对，并验证它不会再次触发。
-6. **对每个候选项进行分类处置。**
-   - 确信：语音变化合理，并且上下文或权威的本地来源能够确定结果。
-   - 需要验证：涉及人员、公司、产品、型号、股票代码、地点、数字或其他关键术语，但没有来源。
-   - 不确定：证据无法确定结果；保留原文并将其加入队列。
-7. **应用能够解释该语音的最小修改。** 不要添加说话者没有说过的词。也要纠正由 ASR 生成的元数据，同时保持 `asr_note` 不变。
-8. **执行第二轮检查。**
-   - 所有级别：运行 `--scan-traps`，并检查命中项和 `unparsed`。
-   - 完整级别：使用全新上下文的审核器，仅审核一个已纠正文件。要求其提供紧凑的残留问题表，或明确返回 `no new residuals`；空响应或截断响应均视为审核失败。
-9. **将每个未解决的条目加入队列。** 遵循下方的 `Review queue safety` 和 [review_queue_dashboard.md](references/review_queue_dashboard.md)。
-10. **验证并完成处理。** 比较实际编辑文件的差异；当数字很重要时，运行数值一致性检查；重新运行普通阶段 1；再次搜索已知纠正项；并确认每项更改都可以追溯到相应的分类处置决定。
-11. **在同一轮处理中沉淀学习成果。** 将每个稳定模式归入正确的位置；不要让已确认的修正仅停留在聊天中。原生处理中的修改绝不会进入阶段 1 的纠正历史，因此请在最终差异比较后立即以机械化方式收集这些修改：
+1. **在 Stage 1 之前为文件确定最终名称。** 队列锚点保存绝对路径。在任何延迟操作可能将其加入队列之前，先使用便于人类阅读的项目文件名。当输入是尚未保存为文件的内联文本时——例如斜杠命令参数或粘贴的文本块——先将其写入文件，再进行其他操作；`--input` 和队列锚点都需要路径，而当下游不会归档时，使用临时位置也可以。未提供 `--domain` 且上下文中也没有明显领域？省略该标志本身就会默认搜索所有领域（`--domain` 自身的默认值），因此不要因为选择领域而阻塞——直接裸运行 Stage 1，让安全模式控制哪些内容可自动应用。如果仍需解析某个具体候选项，即使在快速层级，也可以保留梯子中的一步，尽管不执行其余步骤：native_ai_full_workflow.md 第 4 步第 1 档，即进行一次跨领域 `corrections.db` 查询——不是层级表要求你跳过的完整验证梯子，只是这一个查询。
+2. **在阅读预校正转录之前，恢复原始基线。** 如果摄取管道或之前的 API 处理已经接触过文本，先与原始来源进行差异比较。将上游编辑视为编辑，而不是事实依据。
+3. **加载项目先验信息并阅读完整转录。** 如果存在，请阅读 `~/.transcript-fixer/contexts/<domain>.md`，然后在提前判断模糊项之前阅读完整文件。
+4. **运行 Stage 1 并检查实际结果。** 优先使用明确的项目领域以及 `--apply-domain --json`。读取 `deferred` 和 `review_enqueued`；绝不要默默丢弃 sidecar 或队列缺口。
+5. **将 Stage 1 与原始/初始版本进行差异比较。** 如果某条规则更改了正确的语音内容，则从原始版本开始处理，使用 `--report-false-positive "<from>" "<to>" --domain <domain>` 撤回已存储的词对，并验证该规则不再触发。
+6. **对每个候选项进行分流。**
+   - 确信：语音变化合理，并且上下文或权威的本地来源已经确定了结果。
+   - 需要验证：某个人、公司、产品、型号、股票代码、地点、数字或其他具有关键作用的术语缺少来源。
+   - 不确定：证据无法确定；保留原文并加入队列。
+   - 多通道实体分叉：当独立转录在某个人名或其他专有名词上存在分歧，且没有本地权威来源能够确定时，收集未解决的分叉并一次性询问人类。不要猜测，也不要将多数票视为身份依据。
+7. **应用能够解释该语音的最小编辑。** 不要添加说话人没有说出的词。也要校正 ASR 派生的元数据，同时保留 `asr_note` 不变。
+8. **运行第二遍处理。**
+   - 所有层级：运行 `--scan-traps`，并检查命中项和 `unparsed`。
+   - 完整层级：使用新上下文审核者，仅针对一个已校正文件进行审核。要求提供紧凑的残留项表格，或明确写出 `no new residuals`；空响应或截断响应都表示审核失败。
+   - 高风险多录音场景：抽样片段只能确定与其锚定的那一项。如果用户要求更高质量或完整的转录，并且存在基线音频，则加载 **`/daymade-audio:asr-transcribe-to-text`**，并在完整且最清晰/规范的录音上运行其完整文件转录路径，然后才能声称覆盖整篇转录；否则应报告 `sampled cross-check only — incomplete`。优先使用与规范正文生成者不同的识别器。如果只有同一个识别器可用，则该运行证明覆盖了完整来源，但不构成独立的跨识别器佐证；应明确说明这一边界。
+9. **将每个未解决项目加入队列，并且只打开此文件。** 遵循下方的 `Review queue safety` 和 [review_queue_dashboard.md](references/review_queue_dashboard.md)。检测和加入队列并不等于校正：若要提出更高质量/最终版本的声明，锚定到该确切文件的每一行队列记录都必须离开 `pending` 状态。使用 `uv run scripts/review-dashboard/server.py --file "<absolute-canonical-file>"` 启动仪表板；添加 `--item <id>` 可直接定位到某个分叉。如果人类审核者不可用，则明确将产物标记为 `draft / unresolved — incomplete` 并列出各行记录；不要在声称已完成质量处理的情况下交付包含可疑原文的文件。
+10. **读回人类审核状态，然后完成定稿。** 当人类说他们已经在仪表板中完成标记时，不要重新运行 ASR，也不要再次提出相同的问题。先运行 `uv run scripts/fix_transcription.py --list-review --review-file "<absolute-canonical-file>" --review-status all --json`，应用由此产生的文件状态，并要求对于该确切路径满足 `stats.pending_total == 0`；在提出高质量/最终版本的声明之前，必须确保待处理记录数为零。然后对实际编辑过的文件进行差异比较，在数字重要时运行数字一致性检查，重新运行普通 Stage 1，再次搜索已知校正项，并确认每项更改都能追溯到一次分流决策。全局队列计数不能关闭或重新打开该文件的质量声明。
+11. **在同一轮中沉淀这些经验。** 将每种稳定模式归入正确位置；不要只把已确认的修复留在聊天中。原生处理阶段的编辑不会进入 Stage 1 的校正历史，因此应在最终差异比较之后立即机械地收集这些编辑：
 
 ~~~bash
     # Diff raw vs corrected into parseable trap candidates (review artifact —
@@ -119,19 +121,19 @@ uv run scripts/fix_transcription.py --scan-traps \
       --context-file ~/.transcript-fixer/contexts/<domain>.md
     ~~~
 
-    每个输出的项目符号在打印前，都会通过实际的陷阱解析器进行往返验证；上下文文件中已有记录的配对会被跳过。高频候选项很可能是有效陷阱；仅出现一次的候选项需要人工判断——这就是 `--write` 默认将其排除的原因——并且 ⚠️ 裸形候选项永远不会被自动写入。这取代了凭记忆手动编写陷阱项目符号的做法。
-12. **有意识地传播实体修正。** 仅搜索归属项目派生出的笔记/摘要，审查每个匹配项，并排除原始 ASR 和校正伴随文件，因为它们保留了证据链。
+    每个输出的项目在打印前都会通过真实的 trap parser 进行往返验证，并且上下文文件中已经记录的配对会被跳过。高频候选是强陷阱；单次出现的候选需要人工判断——这就是为什么 `--write` 默认会将其排除在外——而 ⚠️ 裸形候选绝不会被自动写入。这取代了凭记忆手动编写 trap 项目。
+12. **有意地传播实体修复。** 只搜索所属项目的派生笔记/摘要，检查每个命中项，并排除原始 ASR 和修正 sidecar，因为它们需要保留证据链。
 
-详细的来源追溯标准、本地优先实体阶梯、第二轮提示词、队列载荷和最终处理规则，请参阅 [references/native_ai_full_workflow.md](references/native_ai_full_workflow.md)。
+详细的溯源标准、本地优先的实体阶梯、第二轮提示词、队列负载以及最终化规则，请参见 [references/native_ai_full_workflow.md](references/native_ai_full_workflow.md)。
 
-## 跨 Skill 调用方契约
+## 跨 skill 调用方契约
 
 调用方流水线有两项相互独立的义务：
 
-1. 使用显式配置的项目领域、`--apply-domain` 和 `--json` 运行阶段 1。如果 `deferred > review_enqueued`，则将审查伴随文件持久化到任何临时目录之外，或将该缺口作为失败暴露出来。
-2. 在加载此 Skill 的情况下运行原生 AI，或者报告 `Stage 1 only — incomplete`。无智能体自动化可以改用阶段 3。
+1. 使用明确配置的项目域、`--apply-domain` 和 `--json` 运行 Stage 1。如果 `deferred > review_enqueued`，则必须将 review sidecar 持久化到临时目录之外，或将该缺口报告为失败。
+2. 在加载此 skill 的情况下运行 Native AI，或报告 `Stage 1 only — incomplete`。不依赖代理的自动化可以改用 Stage 3。
 
-规范调用方式：
+规范调用：
 
 ~~~bash
 uv run scripts/fix_transcription.py \
@@ -139,31 +141,32 @@ uv run scripts/fix_transcription.py \
   --domain "$domains" --apply-domain --json
 ~~~
 
-仅接入脚本路径的调用方永远不会加载此契约。因此，仅通过脚本路径进行集成只是阶段 1 预筛选，而不是转录校正。
+只接入脚本路径的调用方不会加载此契约。因此，仅集成脚本路径只是 Stage 1 预筛选，而不是转录修正。
 
-保持项目领域持续更新：原生处理阶段确认的每个重复修正都必须添加回正确的项目领域、人员名册或上下文文件。
+保持项目域处于最新状态：Native pass 确认的每个重复修正都必须添加回正确的项目域、名册或上下文文件。
 
 ## 词典与身份安全
 
-添加规则之前，请阅读 [references/false_positive_guide.md](references/false_positive_guide.md) 和 [references/dictionary_identity_and_context.md](references/dictionary_identity_and_context.md)。
+在添加规则之前，请阅读 [references/false_positive_guide.md](references/false_positive_guide.md) 和 [references/dictionary_identity_and_context.md](references/dictionary_identity_and_context.md)。
 
 | 模式 | 目标位置 |
 |---|---|
-| 稳定的非单词或唯一乱码 → 规范术语 | `--add ... --domain <project>` |
-| 重要且反复出现的人物及观察到的 ASR 变体 | 人员名册 |
-| 仅在特定提示条件下错误的常见词/真实词 | 领域上下文陷阱，绝不能使用裸规则 |
-| 真实姓名 → 另一个真实姓名 | 领域上下文 + 人工/音频验证，绝不能使用裸规则 |
-| 已确认正确但反复被重新质疑的实体 | 已确认正确的上下文记录 |
-| 仅出现一次、只适用于句子局部的措辞 | 仅编辑；不要添加 |
+| 稳定的非单词或独特乱码 → 规范术语 | `--add ... --domain <project>` |
+| 重要的重复出现的人名及其观测到的 ASR 变体 | 人员名册 |
+| 只有在特定提示下才会出错的常见词/真实词 | 域上下文陷阱，绝不使用裸规则 |
+| 真实姓名 → 另一个真实姓名 | 域上下文 + 人工/音频验证，绝不使用裸规则 |
+| 反复被重新打开但已确认正确的实体 | 已确认正确的上下文记录 |
+| 一次性的句子局部措辞 | 仅编辑；不要添加 |
 
-上下文陷阱是一种提示，而不是允许盲目替换。`--scan-traps` 支持规范的 `→` 映射和旧版 `≈` 映射，两者遵循相同的方向约定：左侧是观察到的 ASR，右侧是预期文本。对于包含空格的精确 FROM 短语，请用反引号包裹：
+上下文陷阱是提示，而不是允许盲目替换。`--scan-traps` 支持规范的 `→` 和旧版的 `≈` 映射，并遵循相同的方向契约：左侧是观测到的 ASR，右侧是预期文本。将包含空格的精确 FROM 短语包裹在反引号中：
 
-- **`CC 思维链`/`CC 思维连` → 目标术语** — 仅在该领域记录的提示条件下生效
+~~~markdown
+- **`CC 思维链`/`CC 思维连` → 目标术语** — 仅在该领域已记录的提示语下使用
 ~~~
 
-这展示的是一个精确的 ASR 短语候选项，而不是人名候选项。领域上下文仍然是实际目标和提示条件的权威依据；扫描器只负责定位字面上的 FROM 形式。
+这展示的是一个精确的 ASR 短语候选，而不是人名候选。领域上下文仍然是确定实际目标和提示语的依据；扫描器只负责定位字面上的 FROM 形式。
 
-在添加任何形似真实词语的规则之前，请先测量项目语料库：
+在添加任何形似真实词语的规则之前，先测量项目语料库：
 
 ~~~bash
 uv run scripts/fix_transcription.py \
@@ -174,11 +177,11 @@ uv run scripts/fix_transcription.py \
   --check-corpus --corpus /path/to/project-transcripts/
 ~~~
 
-用户判定会立即累积生效：修复文件、更新正确的目标位置，并记录经确认无误的结果，以便后续运行时不再询问。
+用户的判定会立即确定该出现位置，但不会使替换规则可复用。先修复文件，然后将结果按上表归类：只有稳定且反复出现的模式才进入词典/名册/上下文；罕见的、仅限于某个句子的误听则只保留在文件中。当用户确认两个合法姓名或昵称指向同一个人时，保留实际说出的形式，并将这种身份关系作为上下文存储，而不是作为替换规则。
 
 ## 审核队列安全
 
-在入队或解决项目之前，请阅读 [references/review_queue_dashboard.md](references/review_queue_dashboard.md)。
+在入队或解决问题之前，阅读 [references/review_queue_dashboard.md](references/review_queue_dashboard.md)。
 
 最小项目：
 
@@ -198,34 +201,37 @@ uv run scripts/fix_transcription.py \
 
 安全规则：
 
-- 此工作流必须提供 `file`。如果缺少该字段，接受操作可能只记录判定结果，而不会编辑转录文件。
-- `original` 只包含可疑词元/片段；切勿将整个句子放入其中。
-- `context` 应逐字复制；正确的键是 `line`，而不是 `line_hint`。
-- 正确的键是 `suggested`，而不是 `suggestion`。应使用 `actions`，而不是 `action_pack`。
-- 每次只解决一个出现位置；只有在整个批次都解决后，才扫描同一实体的其他出现位置。
-- 覆盖后读取 `resolved_text`；列表仍可能显示已被拒绝的建议。
-- 如果文件已移动或内容发生偏移，请运行 `--reanchor-review`。在要求时添加 `--reanchor-root` 或 `--reanchor-to`。不要通过手动编辑来绕过待处理项目。
-- 根据含义落实每条 `decision_note`；仅存储备注不会改变字典、名册、上下文或误报状态。
+- `file` 对此工作流是必需的。没有它，接受操作可能会记录判定，却无法编辑转录稿。
+- `original` 只能是可疑的词元/片段；绝不能在其中放入完整句子。
+- `context` 按原样复制；关键字段是 `line`，而不是 `line_hint`。
+- `suggested` 是关键字段，而不是 `suggestion`。使用 `actions`，而不是 `action_pack`。
+- 一次只解决一个出现位置；只有在整个批次解决后，才能批量处理同一实体的其他出现位置。
+- 对高质量/最终转录稿而言，`pending` 行是一种阻塞状态，并不表示问题已经得到处理。仅将检测结果加入队列，而没有人工/证据判定，会使产物处于不完整状态。
+- 覆盖后读取 `resolved_text`；列表中仍可能显示已被拒绝的建议。
+- 如果文件已移动或内容发生漂移，运行 `--reanchor-review`。在有要求时添加 `--reanchor-root` 或 `--reanchor-to`。不要围绕待处理项目手动编辑。
+- 按含义落实每一条 `decision_note`；存储备注不会改变词典、名册、上下文或误报状态。
 
 核心命令：
 
 ~~~bash
 uv run scripts/fix_transcription.py --enqueue-review items.json
-uv run scripts/fix_transcription.py --list-review --review-status all --json
+uv run scripts/fix_transcription.py \
+  --list-review --review-file "<absolute-canonical-file>" \
+  --review-status all --json
 uv run scripts/fix_transcription.py --show-review <id> --json
 uv run scripts/fix_transcription.py --reanchor-review <id>
 uv run scripts/fix_transcription.py \
   --resolve-review <id> --decision accepted --by reviewer
 ~~~
 
-## 数字、材料和批次
+## 数字、工件与批次
 
-当满足以下任一条件时，请阅读 [references/advanced_correction_evidence.md](references/advanced_correction_evidence.md)：
+在满足以下任一条件时，阅读 [references/advanced_correction_evidence.md](references/advanced_correction_evidence.md)：
 
-- 某个数字、上下限、价格、份额、截止日期或量级会影响决策。
-- 同一场会议存在两份录音。
-- 白板、幻灯片或拍摄的书面材料可以独立确认某个名称/术语。
-- 多个相关文件应共用一份纠正列表。
+- 数字、界限、价格、份额、截止时间或量级会影响决策。
+- 同一会议存在两份录音。
+- 白板、幻灯片或拍摄的书面材料可以独立确定名称/术语。
+- 多个相关文件应共享同一份修正列表。
 - 正在委派一个包含 10 个以上文件的批次。
 
 数字槽位扫描：
@@ -234,18 +240,18 @@ uv run scripts/fix_transcription.py \
 uv run scripts/scan_numeric_consistency.py transcript.md --domain myproject
 ~~~
 
-其输出始终是候选项，绝不会自动编辑。对于单个起关键作用的数字，请关联原始音频，并通过审查仪表板靠听觉判断。
+其输出是候选项，不会自动编辑。对于单个承载关键意义的数字，将原始音频接入评审仪表板，通过听辨做出决定。
 
-对于委派的批处理任务，每个代理仅负责一个文件，不得跨文件替换，并返回残留问题列表。之后，将 `git diff --name-only` 与明确的文件列表进行比较，并按照仓库的工作树安全规则检查每个非预期文件。
+对于委派的批次，每个代理负责一个文件，不得跨文件替换，并返回残留列表。之后，将 `git diff --name-only` 与明确的文件列表进行比较，并根据仓库工作树安全规则检查每个意外出现的文件。
 
-## 最终处理
+## 最终化
 
-- 原生模式会直接编辑原始文件。重新运行普通的 `--stage 1` 进行确认；如果是没有任何更改的干净操作，则不会写入 Stage 1 辅助文件。
-- 当存在更新的 `*_stage1.md`，且原始文件在此之后未被编辑时，普通的 Stage 1 重新运行会以原子方式将其提升为正式文件，并删除一次性辅助文件。它会保留 `*_changes.md` 和 `*_needs_review.md`，因为只有审查者才能确认所有相关决策均已完结。`--apply-all` 绝不会采用此提升路径。
-- 不要将输出文件是否存在作为成功信号；请读取 JSON/退出状态，并独立读取最终文件。
-- 在所有相关决策完结之前，保留原始转录、`*_changes.md` 和 `*_needs_review.md` 作为证据。
-- 在最终文件中重新 grep 一个已知的修正形式，并确认不存在仅保留在 `asr_note` 或辅助文件中的修正。
-- 如果某个排队项因重命名而丢失，请使用 `--reanchor-review` 修复，而不是用虚假的终结裁定将其标记为已解决。
+- 原生模式会直接编辑原始文件。重新运行普通的 `--stage 1` 进行确认；干净的无操作运行不会写入 Stage 1 sidecar。
+- 当较新的 `*_stage1.md` 存在，且原始文件在该文件生成后未被编辑时，普通的 Stage 1 重新运行会以原子方式将其提升，并移除临时 sidecar。它会保留 `*_changes.md` 和 `*_needs_review.md`，因为只有审阅者才能知道每个相关决策是否都已关闭。`--apply-all` 永远不会走这条提升路径。
+- 不要将输出文件是否存在作为成功信号；应读取 JSON/退出状态，并独立读取最终文件。
+- 在每个相关决策都关闭之前，保留原始转录、`*_changes.md` 和 `*_needs_review.md` 作为证据。
+- 在最终文件中重新搜索已知的修正形式，并确认没有任何修正只存在于 `asr_note` 或 sidecar 中。
+- 如果某个排队项目被重命名移走，请使用 `--reanchor-review` 修复它，而不是用虚假的终态判定将其解决。
 
 ## 无代理 API 路径
 
@@ -256,11 +262,9 @@ export GLM_API_KEY="<api-key>"
 uv run scripts/fix_transcript_enhanced.py input.md --output ./corrected
 ~~~
 
-请阅读 [references/glm_api_setup.md](references/glm_api_setup.md)、[references/installation_setup.md](references/installation_setup.md)，以及 [references/workflow_guide.md](references/workflow_guide.md) 中明确面向 API 的部分。当某个分块在重试后仍失败时，API 路径会逐字节保留该分块及其原始的前后分隔符，并输出警告；如果所有分块均失败，则完整输出与输入相同。对于 `fix_transcription.py --stage 2|3 --json`，请读取新增的 `stage2_total_chunks`、`stage2_failed_chunks` 和 `stage2_degraded` 字段：即使已输出安全保留的产物，`stage2_degraded: true` 也不代表这是一次完全修正的运行。当任何 Stage 2 分块发生降级时，增强包装器会在写入该保留产物后以非零状态退出。请验证输出，而不要仅凭警告就假定已存在修正后的结果。
+阅读 [references/glm_api_setup.md](references/glm_api_setup.md)、[references/installation_setup.md](references/installation_setup.md) 以及 [references/workflow_guide.md](references/workflow_guide.md) 中明确面向 API 的部分。当某个分块在重试后失败时，API 路径会逐字节保留该分块及其原始周围分隔符，并打印警告；如果所有分块都失败，完整输出将等于输入。对于 `fix_transcription.py --stage 2|3 --json`，读取新增的 `stage2_total_chunks`、`stage2_failed_chunks` 和 `stage2_degraded` 字段：即使安全保留的工件已生成，`stage2_degraded: true` 也表示这不是一次完全修正的运行。任何 Stage 2 分块发生降级后，增强封装器会在写入该保留工件后以非零状态退出。请验证输出，不要想当然地认为警告意味着已生成修正结果。
 
-增强型 API 包装器还可以添加段落分隔、减少重复的填充词，
-并呈现修正内容以供交互式审查。这些是 API 包装器的功能；
-它们并不授权原生 AI 为提升流畅度而改写措辞。
+增强版 API 包装器还可以添加段落分隔、减少重复的填充内容，并提供修正结果以供交互式审核。这些属于 API 包装器的功能；它们并不授权 Native AI 为了使措辞更加流畅而重写文本。
 
 ## 实用命令
 
@@ -297,31 +301,31 @@ uv run scripts/generate_diff_report.py \
 uv run scripts/fix_transcription.py --validate
 ~~~
 
-使用不常用的标志前，请阅读 [references/script_parameters.md](references/script_parameters.md)。编写自定义 SQL 前，请阅读 [references/database_schema.md](references/database_schema.md)；纠错列为 `from_text` 和 `to_text`。
+在使用不常见的标志之前，请阅读 [references/script_parameters.md](references/script_parameters.md)。在使用自定义 SQL 之前，请阅读 [references/database_schema.md](references/database_schema.md)；修正列为 `from_text` 和 `to_text`。
 
 ## 参考资料索引
 
-所有参考资料都位于此文件的下一级目录中。
+所有参考资料都位于此文件下一级目录中。
 
 | 需求 | 阅读 |
 |---|---|
-| 完整的原生纠错流程 | [native_ai_full_workflow.md](references/native_ai_full_workflow.md) |
-| 词典、人员名册、领域上下文 | [dictionary_identity_and_context.md](references/dictionary_identity_and_context.md) |
-| 误报处理策略 | [false_positive_guide.md](references/false_positive_guide.md) |
+| 完整的原生修正流程 | [native_ai_full_workflow.md](references/native_ai_full_workflow.md) |
+| 词典、人员名单、领域上下文 | [dictionary_identity_and_context.md](references/dictionary_identity_and_context.md) |
+| 误报策略 | [false_positive_guide.md](references/false_positive_guide.md) |
 | 队列、仪表板、音频、重新锚定 | [review_queue_dashboard.md](references/review_queue_dashboard.md) |
-| 数字、照片、多份录音、批处理 | [advanced_correction_evidence.md](references/advanced_correction_evidence.md) |
+| 数字、照片、多录音、批处理 | [advanced_correction_evidence.md](references/advanced_correction_evidence.md) |
 | 上下文文件语法/模板 | [domain_context_guide.md](references/domain_context_guide.md) |
-| CLI 标志和审阅项模式 | [script_parameters.md](references/script_parameters.md) |
-| 数据库模式和查询 | [database_schema.md](references/database_schema.md)、[sql_queries.md](references/sql_queries.md) |
-| 快速命令查询 | [quick_reference.md](references/quick_reference.md)、[dictionary_guide.md](references/dictionary_guide.md) |
+| CLI 标志和审核项目架构 | [script_parameters.md](references/script_parameters.md) |
+| 数据库架构和查询 | [database_schema.md](references/database_schema.md)、[sql_queries.md](references/sql_queries.md) |
+| 简短命令查找 | [quick_reference.md](references/quick_reference.md)、[dictionary_guide.md](references/dictionary_guide.md) |
 | 学习循环 | [iteration_workflow.md](references/iteration_workflow.md) |
 | 原生示例 | [example_session_dji_minutes.md](references/example_session_dji_minutes.md) |
 | 无代理 API 示例/配置 | [example_session.md](references/example_session.md)、[glm_api_setup.md](references/glm_api_setup.md)、[installation_setup.md](references/installation_setup.md) |
 | 架构和格式 | [architecture.md](references/architecture.md)、[file_formats.md](references/file_formats.md) |
-| 操作指南 | [best_practices.md](references/best_practices.md)、[troubleshooting.md](references/troubleshooting.md)、[team_collaboration.md](references/team_collaboration.md)、[workflow_guide.md](references/workflow_guide.md) |
+| 运维指南 | [best_practices.md](references/best_practices.md)、[troubleshooting.md](references/troubleshooting.md)、[team_collaboration.md](references/team_collaboration.md)、[workflow_guide.md](references/workflow_guide.md) |
 
-捆绑的脚本会被执行，而不会加载到上下文中。主要入口点包括 `fix_transcription.py`、`scan_numeric_consistency.py`、`fetch_minute_audio.py`、`review-dashboard/server.py`，以及上面列出的差异比较、时间戳和拆分工具。
+捆绑脚本会被执行，而不会加载到上下文中。主要入口点包括 `fix_transcription.py`、`scan_numeric_consistency.py`、`fetch_minute_audio.py`、`review-dashboard/server.py`，以及上文列出的差异、时间戳和切分工具。
 
-## 移交
+## 交接
 
-校正后，仅当用户需要结构化摘要时，才移交给 `/daymade-audio:meeting-minutes-taker`。不要自动创建会议纪要：转写校正与摘要生成属于不同的任务范围。
+完成校正后，仅当用户希望获得结构化摘要时，才交接给 `/daymade-audio:meeting-minutes-taker`。不要自动创建会议纪要：转录校正和摘要属于不同的范围。

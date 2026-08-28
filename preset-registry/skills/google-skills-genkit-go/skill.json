@@ -1,0 +1,26 @@
+{
+  "id": "google-skills-genkit-go",
+  "name": "developing-genkit-go",
+  "description": "Develop AI-powered applications using Genkit in Go. Use when the user asks to build AI features, agents, flows, or tools in Go using Genkit, or when working with Genkit Go code involving generation, prompts, streaming, tool calling, or model providers.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/genkit-go/SKILL.md",
+  "source": {
+    "repo": "google/skills",
+    "url": "https://github.com/google/skills/blob/main/skills/cloud/genkit-go/SKILL.md",
+    "path": "skills/cloud/genkit-go/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-28T00:02:40.094Z",
+    "stars": 18822,
+    "language": "Python",
+    "pushed_at": "2026-08-27T22:49:55Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "用于在 Go 中开发生成式 AI 应用，适合构建智能体、工作流、工具调用及流式生成等功能。"
+}
