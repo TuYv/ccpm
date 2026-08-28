@@ -1,7 +1,7 @@
 {
   "id": "daymade-claude-code-skills-skill-governance",
   "name": "skill-governance",
-  "description": ">- Enforce source-of-truth discipline for Claude Code skill marketplaces, caches, suite migrations, and loose userSettings skills. Use whenever the user says \"check skill drift\", \"检查 skill 漂移\", \"sync skills from source\", \"以源码为准同步 skill 缓存\", \"reconcile installs after a suite migration\", \"清理旧 standalone skill 安装\", \"clean old skill cache versions\", \"清理 skill 缓存旧版本\", \"switch marketplace to local source\", \"marketplace 切到本地源码\", \"thin skills\", \"薄 skill\", \"loose skills\", \"清理 user skills\", or reports sta",
+  "description": ">- Govern the real Claude Code and Codex Skill surface without losing cold capability. Use when users ask how many Skills are loaded, why the catalog is huge or descriptions are truncated, want only routers visible while gstack/Lark/IMA/UiPath stay on disk, or need to reconcile source/install/cache drift, `.agents/skills`/`.claude/skills`/legacy `.codex/skills`, loose or duplicate Skills, discovery policy, marketplace sources, suite migrations, superseded plugins, or old cache versions. Verifies",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-skill/skill-governance/SKILL.md",
     "path": "daymade-skill/skill-governance/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-28T00:50:27.337Z",
-    "stars": 1355,
+    "discovered_at": "2026-08-28T12:22:15.795Z",
+    "stars": 1356,
     "language": "Python",
-    "pushed_at": "2026-08-27T16:33:18Z",
+    "pushed_at": "2026-08-28T10:32:04Z",
     "license": "MIT"
   },
-  "summary_zh": "用于治理 Claude Code 的 skill 来源、缓存和安装状态，适合同步源码、迁移套件及清理旧版本或游离 skill。"
+  "summary_zh": "一套 Claude Code 与 Codex 技能治理工具，可精简可见目录并排查安装、缓存、重复项和版本漂移。"
 }

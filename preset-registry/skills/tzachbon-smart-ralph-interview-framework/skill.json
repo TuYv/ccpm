@@ -1,7 +1,7 @@
 {
   "id": "tzachbon-smart-ralph-interview-framework",
   "name": "interview-framework",
-  "description": "This skill should be used when running any normal-mode interview before a spec phase, grilling the user to reach shared understanding, gathering requirements through dialogue, or resolving design decisions before delegating to a Ralph subagent. Covers fact-first discovery, design-tree frontier rounds, recommendations, domain language, and confirmation.",
+  "description": "This skill should be used when a Ralph phase must identify critical user decisions, run a layered grill, persist partial answers, obtain explicit approval, or resume an interrupted phase interview before delegating artifact work.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/tzachbon/smart-ralph/blob/main/plugins/ralph-specum/skills/interview-framework/SKILL.md",
     "path": "plugins/ralph-specum/skills/interview-framework/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-28T00:54:11.053Z",
+    "discovered_at": "2026-08-28T12:24:56.989Z",
     "stars": 527,
     "language": "Shell",
-    "pushed_at": "2026-08-28T00:35:02Z",
+    "pushed_at": "2026-08-28T11:40:24Z",
     "license": "MIT"
   },
-  "summary_zh": "一套用于规格设计前需求访谈的对话框架，帮助厘清事实、统一理解并解决关键设计决策。"
+  "summary_zh": "用于在任务阶段开展结构化访谈，逐层确认关键决策、保存未完成回答并支持中断续问，适合交付产物前完成用户确认。"
 }

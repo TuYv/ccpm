@@ -1,0 +1,26 @@
+{
+  "id": "daymade-claude-code-skills-interaction-design-board",
+  "name": "interaction-design-board",
+  "description": ">- Generate several genuinely different, runnable HTML interaction prototypes for one product surface, combine them in an interactive Design Board, collect structured selection/remix feedback, and only then hand the approved behavior to production implementation. Use when a user asks for multiple clickable UI versions, interaction alternatives, progressive-disclosure options, a Design Board, HTML prototypes, test-time scaling for product design, or says the visual styling is acceptable but the h",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/interaction-design-board/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-codex/interaction-design-board/SKILL.md",
+    "path": "daymade-codex/interaction-design-board/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-28T12:22:12.927Z",
+    "stars": 1356,
+    "language": "Python",
+    "pushed_at": "2026-08-28T10:32:04Z",
+    "license": "MIT"
+  },
+  "summary_zh": "为同一产品界面生成多套可运行的 HTML 交互原型，集中对比并收集选择和混搭反馈，适合上线前验证交互方案。"
+}

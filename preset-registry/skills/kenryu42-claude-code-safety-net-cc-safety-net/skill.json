@@ -1,7 +1,7 @@
 {
   "id": "kenryu42-claude-code-safety-net-cc-safety-net",
   "name": "cc-safety-net",
-  "description": "Configure CC Safety Net rulebooks for user, project, or shareable GitHub scope.",
+  "description": "Operate CC Safety Net: explain why a command was blocked, triage false positives, configure custom rulebooks, manage agent CLI integrations, and diagnose protection.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/kenryu42/claude-code-safety-net/blob/main/skills/cc-safety-net/SKILL.md",
     "path": "skills/cc-safety-net/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-28T00:53:13.150Z",
-    "stars": 1508,
+    "discovered_at": "2026-08-28T12:24:14.461Z",
+    "stars": 1509,
     "language": "TypeScript",
-    "pushed_at": "2026-08-27T14:26:45Z",
+    "pushed_at": "2026-08-28T11:37:55Z",
     "license": "MIT"
   },
-  "summary_zh": "用于在用户、项目或可共享的 GitHub 范围下配置 Claude Code 的安全规则手册，帮助团队统一管理 AI 编码助手的行为边界。"
+  "summary_zh": "面向智能体命令行的安全防护工具，适合拦截并排查危险命令、处理误报和自定义防护规则。"
 }

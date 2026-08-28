@@ -1,7 +1,7 @@
 {
   "id": "tzachbon-smart-ralph-ralph-specum",
   "name": "ralph-specum",
-  "description": "Use only when the user explicitly invokes `$ralph-specum`, requests Ralph Specum in Codex, asks Ralph Specum to handle a named phase, or explicitly requests autonomous or quick mode or continuation without pauses.",
+  "description": "Use only when the user explicitly invokes `$ralph-specum`, requests Ralph Specum in Codex, or asks Ralph Specum to handle a named phase.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/tzachbon/smart-ralph/blob/main/plugins/ralph-specum-codex/skills/ralph-specum/SKILL.md",
     "path": "plugins/ralph-specum-codex/skills/ralph-specum/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-28T00:54:10.731Z",
+    "discovered_at": "2026-08-28T12:24:56.720Z",
     "stars": 527,
     "language": "Shell",
-    "pushed_at": "2026-08-28T00:35:02Z",
+    "pushed_at": "2026-08-28T11:40:24Z",
     "license": "MIT"
   },
-  "summary_zh": "这是一个让 Codex 按指定阶段执行任务的自动化工具，适合需要快速、自主运行或无停顿续作的场景。"
+  "summary_zh": "用于在 Codex 中按明确指令接管指定阶段，适合需要手动触发分阶段任务处理的场景。"
 }

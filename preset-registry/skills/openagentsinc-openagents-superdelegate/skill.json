@@ -1,0 +1,26 @@
+{
+  "id": "openagentsinc-openagents-superdelegate",
+  "name": "superdelegate",
+  "description": "How to hand work to another agent and work through an issue backlog with safe parallelism. Loaded into every session.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "OpenAgentsInc",
+  "install_path": ".claude/skills/superdelegate/SKILL.md",
+  "source": {
+    "repo": "OpenAgentsInc/openagents",
+    "url": "https://github.com/OpenAgentsInc/openagents/blob/main/skills/superdelegate/SKILL.md",
+    "path": "skills/superdelegate/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-28T11:34:54.764Z",
+    "stars": 447,
+    "language": "Rust",
+    "pushed_at": "2026-08-28T07:33:45Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "一套多智能体任务委派与协作机制，适合安全并行处理问题积压，提升复杂任务推进效率。"
+}

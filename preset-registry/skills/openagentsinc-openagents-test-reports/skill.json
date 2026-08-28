@@ -1,0 +1,26 @@
+{
+  "id": "openagentsinc-openagents-test-reports",
+  "name": "test-reports",
+  "description": "Canonical structured-report invocations for suite runners, so failure names are read from a file instead of recovered by re-running a suite. Use whenever a test run might fail, or whenever you need the list of failing tests from a run you already paid for.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "OpenAgentsInc",
+  "install_path": ".claude/skills/test-reports/SKILL.md",
+  "source": {
+    "repo": "OpenAgentsInc/openagents",
+    "url": "https://github.com/OpenAgentsInc/openagents/blob/main/skills/test-reports/SKILL.md",
+    "path": "skills/test-reports/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-28T11:34:54.887Z",
+    "stars": 447,
+    "language": "Rust",
+    "pushed_at": "2026-08-28T07:33:45Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "为测试运行器提供统一的结构化报告，让失败用例可直接从文件读取，避免重复运行测试，适合排查失败或复用已有测试结果。"
+}

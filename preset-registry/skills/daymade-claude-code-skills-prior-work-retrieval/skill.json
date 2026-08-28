@@ -1,8 +1,8 @@
 {
   "id": "daymade-claude-code-skills-prior-work-retrieval",
   "name": "prior-work-retrieval",
-  "description": ">- Only for explicit prior-work/reuse/history requests; never for read-only status or inspection. Finds and verifies existing successful work before substantial new production when reuse is materially plausible. Use when the user explicitly references earlier work, existing code/SOPs, history, prior decisions, another project, or says 以前做过, 已有代码, 别重复造轮子, reuse, or retrieve before produce. Also use when a genuinely new implementation would likely duplicate a known artifact. Do not invoke for read",
-  "category": "设计创意",
+  "description": ">- Only for explicit prior-work/reuse/history requests; never for read-only status or inspection. Finds and verifies existing successful work before substantial new production when reuse is materially plausible. Use when the user explicitly references earlier work, existing code/SOPs, history, prior decisions, another project, or says 以前做过, 已有代码, 别重复造轮子, reuse, or retrieve before produce. A mention of current/现有 tests, README, files, implementation, behavior, or validation is not a prior-work re",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,11 @@
     "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-claude-code/prior-work-retrieval/SKILL.md",
     "path": "daymade-claude-code/prior-work-retrieval/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-28T00:50:21.915Z",
-    "stars": 1355,
+    "discovered_at": "2026-08-28T12:22:11.857Z",
+    "stars": 1356,
     "language": "Python",
-    "pushed_at": "2026-08-27T16:33:18Z",
+    "pushed_at": "2026-08-28T10:32:04Z",
     "license": "MIT"
   },
-  "summary_zh": "这是一个历史成果检索与验证工具，适合在开发前查找可复用的代码、流程或既有决策，避免重复造轮子。"
+  "summary_zh": "用于检索并核实现有代码、流程或历史决策，适合明确要求复用旧成果、避免重复开发的场景。"
 }
