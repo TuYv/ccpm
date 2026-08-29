@@ -16,30 +16,26 @@ description: >
 ---
 # 公司估值
 
-通过三种方法对内在价值进行交叉验证，然后将其加权合并为隐含股价：
+通过三种方法交叉测算内在价值，然后将结果综合为隐含股价：
 
-1. **DCF** — 5 年期 FCFF 预测，按 WACC 折现，并计算终值。
-2. **相对估值** — 应用可比公司 P/E、EV/Revenue、EV/EBITDA 的中位数。
-3. **SOTP** — 当存在 2 个以上不同的报告分部时，使用纯业务可比公司的估值倍数分别评估各分部价值。
+1. **DCF** — 预测 5 年 FCFF，按 WACC 折现，并计算终值。
+2. **Relative** — 应用同行中位数 P/E、EV/Revenue、EV/EBITDA。
+3. **SOTP** — 当存在 2 个或以上不同的报告分部时，按纯业务同行倍数分别对各分部估值。
 
-始终提供 WACC × 永续增长率敏感性分析表，以及牛市/基准/熊市场景。
+始终提供 WACC × 终值增长率敏感性表，以及 Bull/Base/Bear 情景。
 
-**免责声明**：本输出仅用于研究/教育目的。不构成财务建议。
+**免责声明**：研究/教育用途输出。不构成投资建议。
 
 ---
 
-## 步骤 1：检测流程
+## 第 1 步：检测流程
 
-检测数据源和运行时依赖项。该技能支持 3 种方法路径——选择其中可用信息最丰富的路径。
+检测数据源和运行时依赖项。该技能支持 2 条方法路径——选择当前可用的最完整路径。
 
 **环境状态：**
 
 ```
 !`python3 -c "exec('try:\n import yfinance, numpy, pandas\n print(\'YFIN_OK\')\nexcept Exception:\n print(\'YFIN_MISSING\')')"`
-```
-
-```
-!`(command -v funda && funda --version) 2>/dev/null || echo "FUNDA_CLI_MISSING"`
 ```
 
 ```
@@ -50,55 +46,54 @@ description: >
 
 | 条件 | 方法路径 |
 |---|---|
-| `YFIN_OK` | **路径 A**（主要）：使用 yfinance 获取财务数据和可比公司估值倍数 |
-| `YFIN_MISSING`，但未设置 `FUNDA_CLI_MISSING` | **路径 B**：委托 `finance-data-providers:funda-data` 技能获取基本面数据 |
-| 两者均缺失 | **路径 C**：通过 pip 安装 yfinance，然后执行路径 A。`python3 -m pip install -q yfinance numpy pandas` |
-| `RF_FETCH_FAIL` | 使用默认值 `rf = 0.045`，并在输出中注明无风险利率可能已过时 |
+| `YFIN_OK` | **路径 A**（主要路径）：使用 yfinance 获取财务数据和同行倍数 |
+| `YFIN_MISSING` | **路径 B**：pip 安装 yfinance，然后执行路径 A。`python3 -m pip install -q yfinance numpy pandas` |
+| `RF_FETCH_FAIL` | 使用默认值 `rf = 0.045`，并在输出中注明无风险利率已过时的风险 |
 
-如果打印了 `RF_10Y=`，则在步骤 4d 中使用该值作为 `rf`，而不是硬编码的 4.5%。
+如果打印出 `RF_10Y=`，则在第 4d 步中使用该值作为 `rf`，而不是使用硬编码的 4.5%。
 
 ---
 
-## 步骤 2：选择方法并设置默认值
+## 第 2 步：选择方法并设置默认值
 
 ### 方法适用性
 
-| 公司类型 | DCF | 相对估值 | SOTP | 备选方法 |
+| 公司类型 | DCF | Relative | SOTP | 备用方案 |
 |---|---|---|---|---|
-| 成熟现金流型（CPG、电信、公用事业） | ✅ 主要方法 | ✅ | ❌ | — |
-| 高增长 SaaS / 软件 | ✅，需谨慎 | ✅ 主要方法 | ❌ | 使用 EV/Revenue + 40 法则 |
-| 多分部综合企业 | ✅ | ✅ | ✅ 主要方法 | 参见 `references/sotp.md` |
+| 成熟型现金流公司（CPG、电信、公用事业） | ✅ 主要方法 | ✅ | ❌ | — |
+| 高增长 SaaS / 软件 | ✅ 谨慎使用 | ✅ 主要方法 | ❌ | 使用 EV/Revenue + Rule of 40 |
+| 多分部企业集团 | ✅ | ✅ | ✅ 主要方法 | 参见 `references/sotp.md` |
 | 银行 / 保险 | ❌ | ✅（P/B、P/TBV） | ❌ | DDM 或超额收益法；在输出中注明 |
-| 尚无收入 | ❌ | 仅使用 EV/Revenue | ❌ | 标记为低置信度 |
+| 尚未产生收入 | ❌ | 仅 EV/Revenue | ❌ | 标记为低置信度 |
 | REITs | ❌ | ✅（P/FFO、P/AFFO） | ❌ | 基于 NAV |
-| 周期性行业（能源、半导体、工业） | ✅，基于周期中值 | ✅ | 有时适用 | 按完整周期进行标准化 |
+| 周期性行业（能源、半导体、工业） | ✅ 基于中周期水平 | ✅ | 有时适用 | 按完整周期进行正常化 |
 
 ### 默认值表
 
-在进入步骤 3 之前，以下每个参数都必须有值。除非用户另有指定，否则使用这些默认值。
+以下每个参数在进入第 3 步之前都 MUST 具有一个值。除非用户另行指定，否则使用以下值。
 
 | 参数 | 默认值 | 理由 |
 |---|---|---|
-| 预测期 | 5 年 | 标准显式预测窗口 |
-| 永续增长率 `g` | 2.5% | 约等于美国长期 GDP 增长率 |
-| 无风险利率 `rf` | 使用步骤 1 获取的实时 10 年期美国国债收益率，否则为 4.5% | 当前资本成本基准 |
-| 股权风险溢价 `erp` | 5.5% | Damodaran 中间区间 |
-| Beta | 来自 yfinance 的 `info['beta']` | 市场观测到的杠杆 Beta |
-| 债务成本 `kd` | `interest_expense / total_debt`，否则为 5.5% | 实际利率；若不可用，则使用 IG 利差作为备选 |
-| 税率 | 3 年有效税率中位数，下限为 15%，上限为 30% | 剔除一次性因素 |
+| 预测期限 | 5 年 | 标准的明确预测期 |
+| 终值增长率 `g` | 2.5% | 约等于美国长期 GDP 增速 |
+| 无风险利率 `rf` | 第 1 步获取的实时 10 年期美国国债利率，否则为 4.5% | 当前资本成本的锚点 |
+| 股权风险溢价 `erp` | 5.5% | Damodaran 的中间区间 |
+| Beta | 来自 yfinance 的 `info['beta']` | 市场观察到的杠杆 Beta |
+| 债务成本 `kd` | `interest_expense / total_debt`，否则为 5.5% | 有效利率；备用值为投资级信用利差 |
+| 税率 | 3 年有效税率中位数，下限 15%，上限 30% | 剔除一次性因素 |
 | 利润率假设 | 各项比率的 3 年中位数 | 平滑周期性噪声 |
-| SBC 处理 | 对软件/SaaS 视为现金支出；对工业/CPG 视为非现金支出 | 行业惯例 |
-| 可比公司数量 | 4-6 | 平衡信号与噪声 |
-| 可比公司估值倍数 | 中位数（而非平均数） | 对异常值更稳健 |
-| 方法权重（无 SOTP） | DCF 50% / 相对估值 50% | 等权交叉验证 |
-| 方法权重（含 SOTP） | DCF 40% / 相对估值 30% / SOTP 30% | 在适用时赋予 SOTP 权重 |
-| 敏感性分析网格 | WACC 以 0.5% 为步长上下浮动 1% × g 从 1.5-3.5%，步长为 0.5% | 5×5 矩阵 |
+| SBC 处理 | 软件/SaaS 视为现金；工业/CPG 视为非现金 | 行业惯例 |
+| 同行数量 | 4-6 家 | 在信号与噪声之间取得平衡 |
+| 同行倍数 | 中位数（而非平均数） | 对异常值更稳健 |
+| 方法权重（无 SOTP） | DCF 50% / Relative 50% | 等权交叉测算 |
+| 方法权重（有 SOTP） | DCF 40% / Relative 30% / SOTP 30% | 在适用时赋予 SOTP 权重 |
+| 敏感性网格 | WACC 以 ±1% 为范围、每 0.5% 一档 × g 从 1.5% 至 3.5%、每 0.5% 一档 | 5×5 矩阵 |
 
-有关当前无风险利率、ERP 表格和行业 WACC 基准，请参阅 `references/wacc_erp_rates.md`。
+请参阅 `references/wacc_erp_rates.md`，了解当前无风险利率、ERP 表格和行业 WACC 基准。
 
 ---
 
-## 步骤 3：获取数据
+## 步骤 3：提取数据
 
 ```python
 import yfinance as yf
@@ -130,21 +125,21 @@ industry    = info.get("industry")
 
 关键财务报表行（yfinance 标签）：
 
-| 所需数据 | 行 |
+| 需求 | 行 |
 |---|---|
-| 营收 | `Total Revenue` |
+| 收入 | `Total Revenue` |
 | EBIT | `Operating Income` |
 | 净利润 | `Net Income` |
-| 折旧与摊销 | `Depreciation And Amortization`（在现金流量表中） |
-| 资本支出 | `Capital Expenditure`（负值） |
-| 营运资本变动 | `Change In Working Capital`（现金流量表） |
-| 股份支付 | `Stock Based Compensation`（现金流量表） |
+| D&A | `Depreciation And Amortization`（在 cashflow 中） |
+| CapEx | `Capital Expenditure`（负值） |
+| ΔNWC | `Change In Working Capital`（cashflow） |
+| SBC | `Stock Based Compensation`（cashflow） |
 
 ---
 
 ## 步骤 4：构建 DCF
 
-完整方法及针对特定行业的调整见 `references/dcf.md`。快速框架：
+完整方法和行业特定调整见 `references/dcf.md`。快速框架：
 
 ```python
 # 4a. Revenue growth path — fade from Y1 (consensus or hist CAGR) to terminal g
@@ -189,13 +184,13 @@ equity  = ev + cash - total_debt
 implied_price_dcf = equity / shares_out
 ```
 
-**门槛条件：** (a) 如果 `wacc <= g_terminal` → 停止，g 过于激进；(b) 如果 `pv_tv / ev > 0.85` 或 `< 0.45` → 标记并展示两种 TV 方法；(c) 如果 `wacc` 超出 `references/wacc_erp_rates.md` 中行业合理性区间 → 注明。
+**门槛条件：** (a) 如果 `wacc <= g_terminal` → 停止，g 过于激进；(b) 如果 `pv_tv / ev > 0.85` 或 `< 0.45` → 标记并展示两种 TV 计算方法；(c) 如果 `wacc` 超出 `references/wacc_erp_rates.md` 中的行业合理性区间 → 注明。
 
 ---
 
-## 第 5 步：相对估值
+## 步骤 5：相对估值
 
-选择 4-6 家可比公司。可比公司图谱和调整规则见 `references/relative_valuation.md`。
+选择 4-6 家可比公司。可比公司映射和调整规则见 `references/relative_valuation.md`。
 
 ```python
 PEERS = ["MSFT", "ORCL", "CRM", "NOW", "SAP", "WDAY"]  # pick by industry
@@ -223,23 +218,23 @@ implied_ev_ebit  = (med_ev_eb  * ebitda_ttm - net_debt) / shares_out
 implied_price_rel = np.nanmedian([implied_pe, implied_ev_rev, implied_ev_ebit])
 ```
 
-如果目标公司的增长或利润率状况与可比公司存在重大差异，则将可比公司中位数调整 ±10-30%。务必说明调整幅度及原因。SaaS 的 40 法则基准见 `references/relative_valuation.md`。
+如果目标公司的增长或利润率特征存在重大差异，则将可比公司中位数调整 ±10-30%。始终说明调整幅度及原因。SaaS 的 Rule of 40 基准见 `references/relative_valuation.md`。
 
 ---
 
-## 第 6 步：分部加总估值（仅适用于多业务分部公司）
+## 步骤 6：SOTP（仅适用于多业务分部公司）
 
-除非 10-K 报告了 2 个或更多具有不同经济特征的经营分部，否则跳过。yfinance 不提供分部数据——用户必须自行提供或从申报文件中解析。完整方法见 `references/sotp.md`：
-- 识别各分部，并为每个分部选择纯业务可比公司
-- 应用可比公司 EV/EBITDA 中位数（增长型分部则使用 EV/Rev）
-- 扣除未分摊的公司成本（如未知，则上限设为收入的 2-5%）
-- 扣除净债务和少数股东权益；再除以股份数
+除非 10-K 报告了 2+ 个具有不同经济特征的经营分部，否则跳过。yfinance 不会提供分部数据 — 用户必须提供数据或从申报文件中解析。完整方法见 `references/sotp.md`：
+- 识别各分部 + 为每个分部选择纯业务可比公司
+- 应用可比公司的 EV/EBITDA 中位数（增长型分部则使用 EV/Rev）
+- 扣除未分配的公司层面成本（如果未知，则按收入的 2-5% 设置上限）
+- 扣除净债务、少数股东权益；除以股数
 
-SOTP 折价 =（SOTP 价格 − 市场价格）/ SOTP 价格。如果 >20%，则标记为集团折价。
+SOTP 折价 = (SOTP price − market price) / SOTP price。如果 >20%，则标记（集团折价）。
 
 ---
 
-## 第 7 步：交叉验证、敏感性分析与情景分析
+## 步骤 7：三角验证、敏感性分析、情景分析
 
 ```python
 # Blended implied price
@@ -259,47 +254,48 @@ for w in wacc_grid:
         sens[(w,g)] = (pv + cash - total_debt) / shares_out
 ```
 
-还需给出牛市 / 基准 / 熊市情景：收入增长率调整 ±300 个基点，EBIT 利润率调整 ±200 个基点，WACC 调整 ∓100 个基点，终值增长率分别为 3.0% / 2.5% / 1.5%。
+此外，还需生成 Bull / Base / Bear 情景：收入增长率分别调整 ±300bps，EBIT 利润率分别调整 ±200bps，WACC 分别调整 ∓100bps，终值 g 分别设为 3.0% / 2.5% / 1.5%。
 
 ---
 
-## 第 8 步：回复用户
+## 步骤 8：回复用户
 
 按以下顺序输出：
 
-1. **核心结论** — 一句话说明：综合公允价值、与当前价格的对比、上涨/下跌空间百分比，以及最乐观/最悲观的估值方法。示例：“AAPL 综合公允价值约为 $215，当前价格为 $198 → 约有 9% 的上涨空间；DCF 最为乐观，估值为 $228。”
-2. **概览** — 板块、行业、市值、当前价格、3 个月 / 12 个月价格变动、LTM 营收增长率。
-3. **三种方法汇总** — 3 列表格：方法 | 隐含价格 | 权重 | 简要理由。
-4. **DCF 构建** — 假设表（增长路径、利润率、WACC 构成、终值法）+ 5 年 FCFF 预测表 + 企业价值到股权价值的调节表。
-5. **可比公司比较** — 可比公司表格，包含预期市盈率、企业价值/营收、企业价值/EBITDA、毛利率、营收增长率；最后一行 = 中位数；标明目标公司的溢价/折价。
-6. **SOTP**（如适用）— 分部表 + 调整项 + 股权价值。
+1. **核心结论** — 用一句话说明：综合公允价值、相较当前价格、上涨/下跌百分比、最看涨/看跌的方法。示例：“AAPL 的公允价值约为 215 美元（综合），相较当前价格 198 美元 → 上涨约 9%；DCF 最为看涨，估值为 228 美元。”
+2. **概览** — 板块、行业、市值、当前价格、3 个月 / 12 个月价格变化、LTM 收入增长率。
+3. **三种方法汇总** — 3 列表格：方法 | 隐含价格 | 权重 | 简要依据。
+4. **DCF 构建** — 假设表（增长路径、利润率、WACC 组成部分、终值方法）+ 5 年 FCFF 预测表 + EV-to-equity 桥接。
+5. **可比公司比较** — 包含同行公司的 P/E fwd、EV/Rev、EV/EBITDA、毛利率、收入增长率的表格；底部一行为中位数；标记目标公司的溢价/折价。
+6. **SOTP**（如适用）— 分部表格 + 调整项 + 股权价值。
 7. **敏感性矩阵** — WACC × g 网格（5×5），突出显示基准情景。
-8. **情景分析** — 乐观 / 基准 / 悲观情景表，包含关键驱动因素 + 隐含价格。
-9. **主要风险** — 3-5 个要点：哪个假设对结果影响最大；哪些因素可能使投资逻辑失效。
+8. **情景分析** — Bull / Base / Bear 表格，包含驱动因素 + 隐含价格。
+9. **关键风险** — 3-5 个要点：哪个假设对结果影响最大；哪些因素可能导致投资逻辑失效。
 
 ### 错误处理
 
-| 缺失 / 边缘情况 | 处理方式 |
+| 缺失 / 边缘情况 | 操作 |
 |---|---|
-| yfinance 返回的 `beta` 为 `None` | 使用 `references/wacc_erp_rates.md` 中的板块默认 beta |
-| LTM EBITDA 为负 | 跳过企业价值/EBITDA 倍数；依赖企业价值/营收 + DCF |
-| LTM EPS 为负 | 跳过市盈率倍数；如果预期市盈率为正，则使用预期市盈率，否则跳过 |
-| Gordon 模型中的增长率 > WACC | 将 `g = wacc − 0.5%` 设为上限并予以标注 |
-| 历史数据少于 3 年 | 使用现有数据；将数据置信度标记为“低” |
-| 可比公司数据获取失败 | 从中位数计算中剔除该可比公司；在输出中注明 |
-| 没有用于 SOTP 的分部数据 | 跳过第 6 节；继续使用 DCF + 相对估值 |
+| yfinance returns `None` for beta | 使用 `references/wacc_erp_rates.md` 中的行业默认 beta |
+| Negative LTM EBITDA | 跳过 EV/EBITDA 倍数；依靠 EV/Revenue + DCF |
+| Negative LTM EPS | 跳过 P/E 倍数；如果 forward P/E 为正则使用，否则跳过 |
+| Growth > WACC in Gordon | 将 `g = wacc − 0.5%` 设为上限并标记 |
+| Fewer than 3 years history | 使用现有数据；将数据置信度标记为 "low" |
+| Peer data fetch fails | 从中位数计算中删除该同行；在输出中注明 |
+| No segment data for SOTP | 跳过第 6 节；继续使用 DCF + Relative |
 
-### 需要包含的注意事项
-- TTM 数据相对实时情况存在滞后；可比公司倍数反映市场情绪（可能出现过度反应）
-- DCF 的结果取决于输入质量；敏感性分析比单点估值更重要
-- yfinance 数据并非官方数据；任何决策都应与一手申报文件交叉核对
-- 不构成财务建议
+### 需包含的注意事项
+
+- TTM 数据滞后于实时数据；同行公司的倍数反映市场情绪（可能出现过度偏离）
+- DCF 取决于输入数据的质量；敏感性分析比单点估值更重要
+- yfinance 数据为非官方数据；任何决策都应通过主要监管文件进行交叉核对
+- 不构成投资建议
 
 ---
 
 ## 参考文件
 
-- `references/dcf.md` — DCF 方法论 + 针对特定行业的指引（软件、零售、金融、医疗保健、能源、制造、CPG、电信、REITs、流媒体）
-- `references/relative_valuation.md` — 可比公司选择、倍数调整规则、40 法则、按主题划分的可比公司组
-- `references/sotp.md` — 分部加总估值方法、集团折价识别、催化剂
-- `references/wacc_erp_rates.md` — 无风险利率、股权风险溢价、板块 WACC 基准、板块默认 beta
+- `references/dcf.md` — DCF 方法论 + 行业特定指引（软件、零售、金融、医疗保健、能源、制造业、CPG、电信、REITs、流媒体）
+- `references/relative_valuation.md` — 同行公司选择、倍数调整规则、Rule of 40、按主题划分的同行公司集合
+- `references/sotp.md` — 分部加总方法论、企业集团折价识别、催化剂
+- `references/wacc_erp_rates.md` — 无风险利率、股权风险溢价、行业 WACC 基准、行业默认 beta

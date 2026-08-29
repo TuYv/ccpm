@@ -19,119 +19,118 @@ description: >
 ---
 # TradingView MCP（无头市场数据）
 
-通过内置的 [`tradingview` MCP 服务器](https://github.com/atilaahmettaner/tradingview-mcp)获取市场数据——通过 MCP 提供 TradingView 的公共扫描器 API 及 Yahoo Finance 数据。**无需 TradingView 桌面应用或账户。**大多数工具不需要 API 密钥。该服务器随此插件（`.mcp.json`）一同提供并自动启动；其 37 个工具位于插件的 `tradingview` MCP 命名空间下（必要时通过客户端的延迟工具机制加载）。
+通过捆绑的 [`tradingview` MCP server](https://github.com/atilaahmettaner/tradingview-mcp) 获取市场数据——TradingView 的公开扫描器 API 加上 Yahoo Finance，通过 MCP 提供服务。**无需 TradingView 桌面应用或账户。**大多数工具无需 API 密钥。该服务器随此插件（`.mcp.json`）一同提供，并会自动启动；其 37 个工具显示在插件的 `tradingview` MCP 命名空间下（必要时通过客户端的延迟工具机制加载）。
 
-**只读。**此处的任何功能都不会下单或修改任何账户。
+**只读。**此处的任何操作都不会下单或修改账户。
 
 ## 何时使用此技能，何时使用其他数据技能
 
 | 需求 | 技能 |
 |---|---|
-| 行情、技术分析读数、指标评级、多时间周期一致性 | **此技能** |
-| 全交易所扫描：挤压 / 成交量突破 / 涨幅榜 / 跌幅榜 | **此技能** |
-| 期货（NQ、ES、CL、GC……）概览、异动品种、分类行情 | **此技能** |
+| 报价、技术分析读数、指标评级、多时间框架一致性 | **此技能** |
+| 全交易所扫描：挤压 / 放量突破 / 涨幅榜 / 跌幅榜 | **此技能** |
+| 期货（NQ、ES、CL、GC……）概览、异动、分类报价 | **此技能** |
 | 盘前 / 盘后价格 | **此技能** |
-| 期权链快速查看（买价/卖价/隐含波动率/未平仓量，**无希腊字母指标**）、异常活动 | **此技能**（备用方案 / 头寸扫描） |
-| 包含**希腊字母指标**（delta/gamma/theta/vega）的期权链、隐含波动率偏斜、包含合约数量的到期日 | `tradingview-reader`（桌面应用） |
-| 自选列表、提醒、TV 新闻、图表状态 / 截图、自定义列扫描器 | `tradingview-reader`（桌面应用） |
-| 基本面、申报文件、电话会议记录、预期数据、期权权利金流向 / GEX、供应链、市场情绪、经济数据 | `funda-data` |
+| 快速查看期权链（买价/卖价/IV/OI、**无希腊值**）、异常活动 | **此技能**（备用 / 持仓扫描） |
+| **包含希腊值的**期权链（delta/gamma/theta/vega）、IV skew、带合约数量的到期日 | `tradingview-reader`（桌面应用） |
+| 自选列表、提醒、TV 新闻、图表状态 / 截图、自定义列筛选器 | `tradingview-reader`（桌面应用） |
 
-经验法则：对于任何与价格/技术分析/扫描相关的需求，优先使用此技能——它无需任何设置，也不会强制通过 CDP 重新启动用户的 TradingView 应用。仅在需要希腊字母指标或账户关联数据（自选列表、提醒、图表）时，才改用 `tradingview-reader`。对于任何基本面或资金流相关需求，改用 `funda-data`。
+经验法则：凡是与价格 / 技术分析 / 扫描相关的问题，优先使用此技能——它无需任何设置，也不会强制重启用户的 TradingView 应用的 CDP。只有在需要希腊值或账户绑定数据（自选列表、提醒、图表）时，才切换到 `tradingview-reader`。
 
 ## 第 1 步：检查要求
 
-- 已安装 `uv`（`brew install uv`）——服务器通过 `uvx` 运行，并会在首次启动时自行安装（首次调用请预留约 30 秒）。
-- Python 3.10–3.13。当前固定版本的上游依赖不支持 Python 3.14。
-- 可选：`MARKETAUX_API_TOKEN` 可启用 `market_sentiment`、`financial_news` 以及综合分析中的新闻部分。如果没有该令牌，请使用 `funda-data` 获取新闻和情绪数据。
+- 已安装 `uv`（`brew install uv`）——服务器通过 `uvx` 运行，并会在首次启动时自动安装（首次调用请预留约 30 秒）。
+- Python 3.10–3.13。当前固定版本的上游依赖暂不支持 Python 3.14。
+- 可选：`MARKETAUX_API_TOKEN` 可启用 `market_sentiment`、`financial_news` 以及组合分析中的新闻部分。
 
-如果缺少 MCP 工具，请让用户在启用插件后重启代理。不要悄悄用虚构值替代市场数据。
+如果 MCP 工具缺失，请让用户在启用插件后重启代理。不要悄悄用臆造的数据替代市场数据。
 
-## 第 2 步：选择最精简且实用的工具集
+## 第 2 步：选择最小且有用的工具集
 
-对于简单问题，优先进行一次针对性调用。对于研究简报，仅组合真正重要的独立视角：价格/快照、技术分析、成交量，以及可选的新闻。不要仅仅为了生成更多输出而调用多个功能重叠的技术分析工具。
+对于简单问题，优先使用一次专注的调用。对于研究简报，只组合真正重要的独立视角：价格 / 快照、技术分析、成交量，以及可选的新闻。避免仅仅为了生成更多输出而调用多个功能重叠的技术分析工具。
 
-### 行情与快照
+### 报价与快照
 
 | 工具 | 用途 |
 |---|---|
-| `stock_prices(tickers)` | 批量行情。`tickers` 是以逗号分隔的 `EXCHANGE:SYMBOL`（例如 `"NASDAQ:NVDA,NYSE:DELL"`），单次调用最多返回 1,000 行。开盘价、最高价、最低价、收盘价 + 涨跌幅。 |
-| `yahoo_price(symbol)` | 单一行情，使用 Yahoo 符号格式：`AAPL`、`BTC-USD`、`SPY`、`^GSPC`、`^VIX`、`EURUSD=X`、`THYAO.IS`。 |
-| `stock_extended_hours(symbol)` | 获取美国证券的盘前 / 盘后价格——用于财报反应和隔夜走势。 |
-| `market_snapshot()` | 全球市场一次性快照：主要指数、热门加密货币、外汇、关键 ETF。 |
+| `stock_prices(tickers)` | 批量报价。`tickers` 为逗号分隔的 `EXCHANGE:SYMBOL`（例如 `"NASDAQ:NVDA,NYSE:DELL"`），一次调用最多返回 1,000 行。OHLC + 涨跌幅%。 |
+| `yahoo_price(symbol)` | 单个报价，使用 Yahoo 代码：`AAPL`、`BTC-USD`、`SPY`、`^GSPC`、`^VIX`、`EURUSD=X`、`THYAO.IS`。 |
+| `stock_extended_hours(symbol)` | 获取美国股票的盘前 / 盘后价格——用于分析财报反应、隔夜走势。 |
+| `market_snapshot()` | 全球一站式概览：主要指数、主要加密货币、外汇、关键 ETF。 |
 | `bitcoin_market_pulse()` | BTC 价格 + 市占率 + 总市值风险框架——分析任何加密货币前调用。 |
 
-### 技术分析（单一标的）
+### 技术分析（单个标的）
 
 | 工具 | 用途 |
 |---|---|
-| `coin_analysis(symbol, exchange, timeframe)` | 单只股票或加密货币的**标准技术分析结果**——RSI、MACD、布林带评级、指标汇总。尽管名称如此，它也支持股票：`coin_analysis("NVDA", "NASDAQ", "1D")`。 |
-| `multi_timeframe_analysis(symbol, exchange)` | 周线 → 日线 → 4 小时 → 1 小时 → 15 分钟趋势一致性分析。 |
-| `combined_analysis(symbol, exchange, timeframe)` | 一次调用即可获取技术分析 + 新闻 + 情绪分析（新闻部分需要 `MARKETAUX_API_TOKEN`）。 |
-| `multi_agent_analysis(symbol, exchange, timeframe)` | 技术面、情绪面与风险之间的“辩论”摘要。 |
-| `volume_confirmation_analysis(symbol, exchange, timeframe)` | 行情走势是否得到成交量确认？ |
+| `coin_analysis(symbol, exchange, timeframe)` | **单只股票或加密货币的标准 TA 读数**——RSI、MACD、布林带评级、指标摘要。尽管名称中包含 coin，它同样支持股票：`coin_analysis("NVDA", "NASDAQ", "1D")`。 |
+| `multi_timeframe_analysis(symbol, exchange)` | 周线 → 日线 → 4H → 1H → 15m 的趋势一致性。 |
+| `combined_analysis(symbol, exchange, timeframe)` | 在一次调用中完成 TA + 新闻 + 情绪分析（新闻部分需要 `MARKETAUX_API_TOKEN`）。 |
+| `multi_agent_analysis(symbol, exchange, timeframe)` | 技术面 vs 情绪面 vs 风险的“辩论式”摘要。 |
+| `volume_confirmation_analysis(symbol, exchange, timeframe)` | 判断行情变动是否获得成交量确认。 |
 
 ### 全交易所扫描
 
 | 工具 | 用途 |
 |---|---|
-| `top_gainers` / `top_losers(exchange, timeframe, limit)` | 单个交易所中的涨跌幅异动标的。 |
-| `bollinger_scan(exchange, timeframe, bbw_threshold, limit)` | 低 BBW 的波动收窄候选标的。 |
-| `rating_filter(exchange, timeframe, rating, limit)` | 按布林带评级筛选：−3（强力卖出）……+3（强力买入）。 |
-| `volume_breakout_scanner` / `smart_volume_scanner` | 成交量 + 价格突破检测。 |
+| `top_gainers` / `top_losers(exchange, timeframe, limit)` | 单个交易所上的涨跌幅榜。 |
+| `bollinger_scan(exchange, timeframe, bbw_threshold, limit)` | 低 BBW 挤压候选标的。 |
+| `rating_filter(exchange, timeframe, rating, limit)` | 按 BB 评级筛选：−3（强力卖出）… +3（强力买入）。 |
+| `volume_breakout_scanner` / `smart_volume_scanner` | 检测成交量 + 价格突破。 |
 | `consecutive_candles_scan` / `advanced_candle_pattern` | K 线形态扫描。 |
-| `stock_screener(country, stock_type, limit, …)` | 按国家/地区（`america`、`japan`……）筛选普通股/优先股，并按市值排名。 |
+| `stock_screener(country, stock_type, limit, …)` | 按国家（`america`、`japan` 等）筛选普通股/优先股，并按市值排名。 |
 
 ### 期货（夜盘 / 隔夜）
 
 | 工具 | 用途 |
 |---|---|
-| `futures_market_overview(category, exchanges, limit)` | 按成交量列出头部合约。`category`：all / equity_index / energy / metals / agriculture / rates / forex / crypto_futures；`exchanges`：us / global。 |
-| `futures_top_movers(direction, exchanges, limit)` | 当日百分比涨跌幅最大的标的。 |
-| `futures_category_snapshot(category)` | 获取一个类别中所有近月合约的 OHLCV——例如 `equity_index` → NQ、ES、YM、RTY。 |
-| `futures_watchlist()` | 各类别的标准近月合约代码列表。 |
+| `futures_market_overview(category, exchanges, limit)` | 按成交量排名的主要合约。`category`：all / equity_index / energy / metals / agriculture / rates / forex / crypto_futures；`exchanges`：us / global。 |
+| `futures_top_movers(direction, exchanges, limit)` | 今日涨跌幅最大的标的。 |
+| `futures_category_snapshot(category)` | 获取某一类别中所有近月合约的 OHLCV——例如 `equity_index` → NQ、ES、YM、RTY。 |
+| `futures_watchlist()` | 各类别标准近月合约代码列表。 |
 
 ### 期权（美国股票——无希腊字母指标）
 
 | 工具 | 用途 |
 |---|---|
-| `stock_options_chain(symbol, expiry)` | 获取一个到期日的看涨期权 + 看跌期权（`YYYY-MM-DD`；省略 → 最近到期日）。返回行权价、最新价、买价/卖价、成交量、未平仓量、隐含波动率、价内标记，以及完整的 `available_expiries` 列表。数据来源：Yahoo。**不提供 delta/gamma/theta/vega**——请使用 `tradingview-reader` 获取希腊字母指标。 |
-| `stock_options_unusual_activity(symbol, top_n, min_volume, expiries)` | 在最近的多个到期日中，按成交量/未平仓量比率列出排名靠前的行权价——用于财报发布前的持仓布局扫描。 |
+| `stock_options_chain(symbol, expiry)` | 获取某一到期日的看涨期权 + 看跌期权（`YYYY-MM-DD`；省略则使用最近到期日）。返回行权价、最新价、买卖价、成交量、未平仓量、IV、价内标记，以及完整的 `available_expiries` 列表。来源：Yahoo。**不提供 delta/gamma/theta/vega**——如需希腊字母指标，请使用 `tradingview-reader`。 |
+| `stock_options_unusual_activity(symbol, top_n, min_volume, expiries)` | 跨最近的到期日，按成交量/未平仓量比率返回排名靠前的行权价——用于财报前的持仓扫描。 |
 
 ### 回测
 
 | 工具 | 用途 |
 |---|---|
-| `backtest_strategy(symbol, strategy, period, interval, …)` | 回测单一策略（`rsi`、`bollinger`、`macd`、`ema_cross`、`supertrend`、`donchian`、`rsi_pullback`、`keltner_breakout`、`triple_ema`），提供夏普比率、最大回撤、胜率以及与买入并持有策略的对比。使用 Yahoo 标的代码格式。 |
+| `backtest_strategy(symbol, strategy, period, interval, …)` | 对单个策略（`rsi`、`bollinger`、`macd`、`ema_cross`、`supertrend`、`donchian`、`rsi_pullback`、`keltner_breakout`、`triple_ema`）进行回测，并提供 Sharpe、最大回撤、胜率以及相对于买入并持有的表现。使用 Yahoo 代码体系。 |
 | `compare_strategies(symbol, period, …)` | 对全部 9 种策略进行排名。 |
-| `walk_forward_backtest_strategy(…)` | 使用训练集/测试集拆分，并给出过拟合判定。 |
+| `walk_forward_backtest_strategy(…)` | 采用训练集/测试集划分，并给出过拟合判定。 |
 
-### 新闻与情绪分析（需要 `MARKETAUX_API_TOKEN`）
+### 新闻与情绪（需要 `MARKETAUX_API_TOKEN`）
 
-`market_sentiment(symbol, category)` · `financial_news(symbol, category, limit)`——可用时优先使用 `funda-data`。
+`market_sentiment(symbol, category)` · `financial_news(symbol, category, limit)`
 
-### 区域性附加工具
+### 区域性额外内容
 
-`egx_*`（埃及交易所工具套件）——很少会用到；扫描工具还支持通过 `exchange` 参数指定 BIST、HKEX、SSE、SZSE、TWSE。
+`egx_*`（埃及交易所套件）——很少相关；此外还支持 BIST、HKEX、SSE、SZSE、TWSE，可通过扫描工具上的 `exchange` 参数使用。
 
 ## 第 3 步：规范化输入
 
-1. **在大多数扫描/技术分析工具中，`exchange` 默认值为 `KUCOIN`（加密货币！）**——对于美国股票，始终显式传入 `NASDAQ` / `NYSE`。
-2. **三种代码体系并存**：扫描工具使用不带交易所前缀的代码 + `exchange` 参数；`stock_prices` 使用 `EXCHANGE:SYMBOL`；基于 Yahoo 的工具（`yahoo_price`、回测、期权）使用 Yahoo 代码（`BTC-USD`、`^VIX`、`THYAO.IS`）。
-3. **时间周期**：`5m, 15m, 1h, 4h, 1D, 1W, 1M`。证券交易所的日内扫描结果可能较少——股票优先使用 `1D`。
-4. **工具名称**以此处列出的规范名称为准。使用 `coin_analysis` 和 `multi_timeframe_analysis`，不要使用 README 风格的别名，例如 `get_technical_analysis`。
+1. 大多数扫描/TA 工具中的 **`exchange` 默认值为 `KUCOIN`（加密货币！）**——对于美国股票，始终显式传入 `NASDAQ` / `NYSE`。
+2. **三种证券代码体系并存**：扫描器工具接受不带交易所前缀的代码 + `exchange` 参数；`stock_prices` 接受 `EXCHANGE:SYMBOL`；基于 Yahoo 的工具（`yahoo_price`、回测、期权）接受 Yahoo 代码（`BTC-USD`、`^VIX`、`THYAO.IS`）。
+3. **时间周期**：`5m, 15m, 1h, 4h, 1D, 1W, 1M`。股票交易所的日内扫描结果可能较为稀疏——对于股票，优先使用 `1D`。
+4. **工具名称**以此处列出的为准。使用 `coin_analysis` 和 `multi_timeframe_analysis`，不要使用 README 风格的别名，例如 `get_technical_analysis`。
 
 ## 第 4 步：验证并解读结果
 
 1. 在得出结论之前，检查时间戳、交易所、代码、交易时段和货币。
-2. 将返回的错误封装视为错误，而不是空结果。利用其中的可重试性信息和代码建议；仅在标记为可重试时重试，且最多重试一次。
-3. 将范围较大的扫描结果筛选至约 10 行，并仅保留与问题相关的列。
-4. Yahoo 期权隐含波动率适合用于分析期权链形态以及未平仓量/成交量分布，不适合用于精确的隐含波动率排名或偏斜分析。对于隐含波动率敏感型分析，应使用 `tradingview-reader` 或 `funda-data` 进行交叉核验。
-5. 回测是历史模拟。应报告周期、时间间隔、成本、样本量、基准，以及可用时的滚动前向结果；不要将其表述为预测。
+2. 将返回的错误封装视为错误，而不是空结果。使用其中的可重试信息和代码建议；仅在标记为可重试时最多重试一次。
+3. 将范围过宽的扫描结果筛选为大约 10 行，并仅保留与问题相关的列。
+4. 将 Yahoo 期权 IV 视为适合分析期权链形态以及 OI/成交量持仓分布的数据，而不是精确的 IV 排名或偏斜数据。对于对 IV 敏感的分析，使用 `tradingview-reader` 进行交叉核验。
+5. 回测是历史模拟。若可用，应报告区间、周期、成本、样本量、基准以及滚动前向测试结果；不要将其呈现为预测。
 
 ## 第 5 步：回复用户
 
-先给出答案，然后提供一份简洁的证据表。注明数据截至时间和数据来源，指出任何缺失或陈旧的字段，并将观察到的事实与解读分开。对于交易类请求，回复应保持分析性且仅限只读：讨论风险和情景，不执行或表示可以执行交易。
+先给出答案，然后展示一张精简的证据表。包含截至时间戳和数据来源，指出任何缺失或过时的字段，并将观测事实与解读分开。对于具有交易特征的请求，保持分析性和只读性质：讨论风险和情景，不要执行或提出执行交易。
 
 ## 维护者说明
 
-服务器固定到 `.mcp.json` 中一个不可变的上游提交。若要升级，请选择经过审查的 SHA，更新固定版本，执行真实的 MCP initialize + `tools/list` 握手，确认所有工具仍保持只读，并核对此目录与已注册的工具名称和架构是否一致。
+服务器在 `.mcp.json` 中固定到不可变的上游提交。若要升级，应选择一个经过审核的 SHA，更新固定值，执行一次真实的 MCP initialize + `tools/list` 握手，确认所有工具仍然是只读的，并将此目录与已注册的工具名称和 schema 进行核对。
