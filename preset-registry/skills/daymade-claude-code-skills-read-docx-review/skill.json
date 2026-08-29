@@ -1,0 +1,26 @@
+{
+  "id": "daymade-claude-code-skills-read-docx-review",
+  "name": "read-docx-review",
+  "description": ">- 读取 Word/WPS 审阅后的 docx，把批注（comments）与修订（track changes）提取成可逐条裁决的 markdown 对账表或 JSON。触发场景：对方批注完的合同/协议/书稿/报告回来了要读意见；「提取 docx 批注」「审阅意见对账」「读一下修订」「谁批了什么、批在哪」；WPS 云文档/Word 在线协作 导出的审阅稿；收到带修订模式改动的回稿要看对方改了什么。核心保证：修订感知——python-docx 裸读会漏掉修订插入（w:ins）的内容、认不出整段删除（w:del），本 skill 走 OpenXML SDK 引擎 不漏。只读，不改对方文件。边界：生成/排版 docx → docx-creator 或 minimax-docx；PDF 批注不在范围。",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/read-docx-review/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-docs/read-docx-review/SKILL.md",
+    "path": "daymade-docs/read-docx-review/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-28T23:18:18.220Z",
+    "stars": 1358,
+    "language": "Python",
+    "pushed_at": "2026-08-28T20:23:16Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于读取 Word/WPS 审阅稿，完整提取批注与修订为 Markdown 对账表或 JSON，方便逐条核对和裁决修改意见。"
+}

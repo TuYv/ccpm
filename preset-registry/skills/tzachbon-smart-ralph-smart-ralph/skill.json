@@ -1,7 +1,7 @@
 {
   "id": "tzachbon-smart-ralph-smart-ralph",
   "name": "smart-ralph",
-  "description": "This skill should be used when the user asks about \"ralph arguments\", \"quick mode\", \"commit spec\", \"max iterations\", \"ralph state file\", \"execution modes\", \"ralph loop\", \"coordinator behavior\", \"delegate to subagent\", or needs guidance on Ralph plugin arguments, state management, delegation patterns, or execution loop behavior. Core behavioral skill for all Ralph Specum operations.",
+  "description": "This skill should be used when the user asks about \"ralph arguments\", \"quick mode\", \"commit spec\", \"max iterations\", \"ralph state file\", \"prototype overlay\", \"execution modes\", \"ralph loop\", \"coordinator behavior\", \"delegate to subagent\", or needs guidance on Ralph plugin arguments, state management, delegation patterns, or execution loop behavior. Core behavioral skill for all Ralph Specum operations.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/tzachbon/smart-ralph/blob/main/plugins/ralph-specum/skills/smart-ralph/SKILL.md",
     "path": "plugins/ralph-specum/skills/smart-ralph/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-28T12:24:57.249Z",
+    "discovered_at": "2026-08-28T23:21:01.004Z",
     "stars": 527,
     "language": "Shell",
-    "pushed_at": "2026-08-28T11:40:24Z",
+    "pushed_at": "2026-08-28T15:22:43Z",
     "license": "MIT"
   },
-  "summary_zh": "用于规范插件参数、状态管理、任务委派和执行循环的核心技能，适合配置并协调各类自动化任务。"
+  "summary_zh": "用于规范智能代理执行流程的核心技能，适合配置运行参数、管理状态及协调子代理循环任务。"
 }

@@ -1,0 +1,26 @@
+{
+  "id": "tzachbon-smart-ralph-ralph-specum-prototype",
+  "name": "ralph-specum-prototype",
+  "description": "This skill should be used only when the user explicitly invokes `$ralph-specum-prototype`, or explicitly asks Ralph Specum in Codex to run, resume, quick-run, or cancel an optional prototype.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tzachbon",
+  "install_path": ".claude/skills/ralph-specum-prototype/SKILL.md",
+  "source": {
+    "repo": "tzachbon/smart-ralph",
+    "url": "https://github.com/tzachbon/smart-ralph/blob/main/plugins/ralph-specum-codex/skills/ralph-specum-prototype/SKILL.md",
+    "path": "plugins/ralph-specum-codex/skills/ralph-specum-prototype/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-28T23:20:59.643Z",
+    "stars": 527,
+    "language": "Shell",
+    "pushed_at": "2026-08-28T15:22:43Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一个用于在 Codex 中按需运行和管理可选原型的技能，适合启动、续跑、快速执行或取消原型任务。"
+}

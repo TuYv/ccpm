@@ -10,6 +10,8 @@ metadata:
 
 You are a **coordinator, not a task planner** -- delegate ALL work to a `task-planner` sub-agent.
 
+Derive `RALPH_CODEX_PLUGIN_ROOT` from this loaded skill by resolving two parent directories from the `SKILL.md` directory. Never derive it from the project working directory.
+
 ## Contract
 
 - Resolve the active spec by explicit path, exact name, or `.current-spec`
@@ -21,21 +23,29 @@ You are a **coordinator, not a task planner** -- delegate ALL work to a `task-pl
 
 1. Resolve the active spec. If none exists, stop.
 2. Require `requirements.md` and `design.md`. Read `research.md` when present, `.progress.md`, and current state.
-3. Run `scripts/phase_gate.py mode STATE` with exact `--quick`, exact `--interactive`, or no flag. Reject both, `-q`, variants, and natural-language substitutes.
+3. Run `phase_gate.py mode` through `"$RALPH_CODEX_PLUGIN_ROOT/scripts/phase_gate.py"` with `STATE` and exact `--quick`, exact `--interactive`, or no flag. Reject both, `-q`, variants, and natural-language substitutes.
 4. In interactive mode, require artifact approval for the current `design.md` before starting tasks. Exact quick mode continues with the validated artifact.
-5. Respect `granularity` from state. Allow `--tasks-size fine|coarse` to override it. Treat task sizing as administration, not an interview question. In exact quick mode, default unset granularity to `fine`.
-6. When `research.md` exists, require skill discovery pass 2 against the goal plus final research. When it is absent, require pass 1 against the goal alone. Run the applicable pass when the state lacks its revision. Select explicitly named skills and record harness-shadowed duplicates.
-7. Load `skills/interview-framework-codex/SKILL.md`, its required algorithm and domain-modeling references, and all selected domain contracts in both interactive and quick mode. In interactive mode, follow the algorithm for critical delivery slicing, dependency order, rollout risk, and verification thresholds. Inspect commands, file layout, and existing test tools instead of asking.
-8. In interactive mode, require explicit `approve and delegate`; in exact quick mode, record `bypassed_quick`. In both modes, run `phase_gate.py check-delegation` with the current loaded-manifest identity before creating the child.
-9. **Delegate** task planning to a `task-planner` sub-agent. Pass the absolute helper path, state path, identity tuple, unique teammate dispatch identity, verbatim manifest, requirements, design, research, and interview context. The child reloads and records the manifest, passes `check-agent-write` with that unique identity, and writes `tasks.md`. Do NOT write tasks.md yourself.
-10. Read the sub-agent's output and validate it exists.
-11. Count tasks and merge state with:
+5. Run prototype record selection with the resolved `basePath` before generation:
+   ```bash
+   python3 "$RALPH_CODEX_PLUGIN_ROOT/scripts/prototype_records.py" select-downstream --base-path "$BASE_PATH" --state "$BASE_PATH/.ralph-state.json"
+   ```
+6. Include only affected, valid, `gateApproved: true`, non-superseded records returned by the selector. Exclude malformed, superseded, skipped, failed, inconclusive, cancelled, and normal-mode excluded records.
+7. Stop before generation when selection reports an `activePrototypes` blocker for tasks. Name the active ID and route resume through `$ralph-specum-prototype`. Allow proven unrelated prototypes when the selector reports no task dependency.
+8. Stop when selection reports stale `design.md`, stale task indexes, or a stale upstream artifact that design depends on. Route to the earliest stale phase and do not plan from stale design.
+9. Clear any prior approval gate by merging `awaitingApproval: false` before generation.
+10. Respect `granularity` from state. Allow `--tasks-size fine|coarse` to override it. Treat task sizing as administration, not an interview question. In exact quick mode, default unset granularity to `fine`.
+11. When `research.md` exists, require skill discovery pass 2 against the goal plus final research. When it is absent, require pass 1 against the goal alone. Run the applicable pass when the state lacks its revision. Select explicitly named skills and record harness-shadowed duplicates.
+12. Load `"$RALPH_CODEX_PLUGIN_ROOT/skills/interview-framework-codex/SKILL.md"`, its required algorithm and domain-modeling references, and all selected domain contracts in both interactive and quick mode. In interactive mode, follow the algorithm for critical delivery slicing, dependency order, rollout risk, and verification thresholds. Inspect commands, file layout, and existing test tools instead of asking.
+13. In interactive mode, require explicit `approve and delegate`; in exact quick mode, record `bypassed_quick`. In both modes, run `phase_gate.py check-delegation` with the current loaded-manifest identity before creating the child.
+14. **Delegate** task planning to a `task-planner` sub-agent. Pass the absolute helper path, state path, identity tuple, unique teammate dispatch identity, verbatim manifest, requirements, design, research, selected prototype evidence, the clean blocker/stale-gate result, and interview context. The child reloads and records the manifest, passes `check-agent-write` with that unique identity, and writes `tasks.md`. Do NOT write tasks.md yourself.
+15. Read the sub-agent's output and validate it exists.
+16. Count tasks and merge state with:
    - `phase: "tasks"`
    - `awaitingApproval: true` (or `false` when `--quick` is active)
    - `taskIndex: first incomplete or totalTasks`
    - `totalTasks: counted tasks`
-12. Update `.progress.md` with the phase breakdown, next milestone, blockers, next step, chosen granularity, skill discovery, and verification strategy.
-13. If spec commits are enabled, commit only the spec artifacts.
+17. Update `.progress.md` with the phase breakdown, next milestone, blockers, next step, chosen granularity, skill discovery, and verification strategy.
+18. If spec commits are enabled, commit only the spec artifacts.
 
 ### Stop Behavior
 
