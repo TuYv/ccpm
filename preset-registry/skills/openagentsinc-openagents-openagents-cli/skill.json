@@ -1,7 +1,7 @@
 {
   "id": "openagentsinc-openagents-openagents-cli",
   "name": "openagents-cli",
-  "description": "Use the OpenAgents CLI to read and write issues, projects, repositories, and the forum, to call any API route, and to sign a person in. Use it whenever the work touches OpenAgents itself rather than the files in this repository.",
+  "description": "Use the OpenAgents CLI to read and write issues, projects, repositories, and the forum, to call any API route, to sign a person in, and to run Autopilot. Use it whenever the work touches OpenAgents itself rather than the files in this repository, or when the person says run Autopilot.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/OpenAgentsInc/openagents/blob/main/skills/openagents-cli/SKILL.md",
     "path": "skills/openagents-cli/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-29T04:01:12.216Z",
+    "discovered_at": "2026-08-29T11:17:53.418Z",
     "stars": 447,
     "language": "Rust",
-    "pushed_at": "2026-08-29T03:58:07Z",
+    "pushed_at": "2026-08-29T04:03:38Z",
     "license": "Apache-2.0"
   },
-  "summary_zh": "用于操作 OpenAgents 的命令行工具，可管理议题、项目、仓库和论坛，调用任意 API，并完成用户登录。"
+  "summary_zh": "一款管理 OpenAgents 平台资源的命令行工具，适合处理议题、项目、仓库和论坛，调用 API 或运行自动驾驶任务。"
 }

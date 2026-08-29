@@ -1,7 +1,7 @@
 {
   "id": "decolua-9router-9router-web-search",
   "name": "9router-web-search",
-  "description": "Web search via 9Router /v1/search using Tavily / Exa / Brave / Serper / SearXNG / Google PSE / Linkup / SearchAPI / You.com / Perplexity. Use when the user wants to search the web, look up information, find articles, or query a search engine.",
+  "description": "Web and X search via 9Router /v1/search using Tavily / Exa / Brave / Serper / SearXNG / Google PSE / Linkup / SearchAPI / You.com / Perplexity / Xquik. Use when the user wants to search the web, find articles, or search public X posts.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/decolua/9router/blob/master/skills/9router-web-search/SKILL.md",
     "path": "skills/9router-web-search/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-08-29T04:50:33.116Z",
-    "stars": 26584,
+    "discovered_at": "2026-08-29T12:08:18.839Z",
+    "stars": 26603,
     "language": "JavaScript",
-    "pushed_at": "2026-08-14T10:08:34Z",
+    "pushed_at": "2026-08-29T11:00:38Z",
     "license": "MIT"
   },
-  "summary_zh": "一个聚合多种搜索服务的网页检索工具，适合联网查资料、找文章或快速获取最新信息。"
+  "summary_zh": "一个聚合多种搜索服务的网页与 X 搜索工具，适合查找网络资料、文章和公开帖子。"
 }

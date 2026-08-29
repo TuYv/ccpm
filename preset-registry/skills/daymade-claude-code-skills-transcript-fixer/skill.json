@@ -1,7 +1,7 @@
 {
   "id": "daymade-claude-code-skills-transcript-fixer",
   "name": "transcript-fixer",
-  "description": ">- Corrects speech-to-text transcription errors using dictionary rules and Claude's built-in AI (no external API key required — Native AI Correction is the DEFAULT). Stage 1 alone is not the job. Stage 3 API is a backup for automation without Claude Code. Builds personalized correction databases that learn from each fix, auto-loads person-name ASR variants from your people roster, and reads per-domain context files that prime the AI pass for context-dependent homophones. Triggers when working wi",
+  "description": ">- Corrects speech-to-text transcription errors with dictionary rules and Claude's built-in AI (no external API key required); Native AI Correction is the default, Stage 1 alone is incomplete, and Stage 3 API is only for automation without Claude Code. Builds personalized correction databases, loads person-name ASR variants from the configured global people roster, and reads per-domain contexts for homophones. Before correcting a person name, the agent must consult both the global roster and the",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-audio/transcript-fixer/SKILL.md",
     "path": "daymade-audio/transcript-fixer/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-29T04:46:18.102Z",
+    "discovered_at": "2026-08-29T12:05:19.287Z",
     "stars": 1358,
     "language": "Python",
-    "pushed_at": "2026-08-28T20:23:16Z",
+    "pushed_at": "2026-08-29T12:01:28Z",
     "license": "MIT"
   },
-  "summary_zh": "用于修正语音转文字中的人名、同音词等错误，适合会议记录、字幕和日常口述整理，并会持续学习个人用词。"
+  "summary_zh": "一款结合词典规则与Claude原生AI的语音转写纠错工具，适合修正人名、同音词等识别错误并沉淀个性化词库。"
 }

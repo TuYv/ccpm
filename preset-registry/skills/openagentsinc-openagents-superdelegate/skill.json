@@ -1,7 +1,7 @@
 {
   "id": "openagentsinc-openagents-superdelegate",
   "name": "superdelegate",
-  "description": "How to hand work to another agent and work through an issue backlog with safe parallelism. Loaded into every session.",
+  "description": "How to hand work to another agent, run Autopilot, and work through an issue backlog with safe parallelism. Loaded into every session.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/OpenAgentsInc/openagents/blob/main/skills/superdelegate/SKILL.md",
     "path": "skills/superdelegate/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-29T04:01:12.363Z",
+    "discovered_at": "2026-08-29T11:17:53.537Z",
     "stars": 447,
     "language": "Rust",
-    "pushed_at": "2026-08-29T03:58:07Z",
+    "pushed_at": "2026-08-29T04:03:38Z",
     "license": "Apache-2.0"
   },
-  "summary_zh": "一套多智能体任务委派与协作机制，适合安全并行处理问题积压，提升复杂任务推进效率。"
+  "summary_zh": "一套智能体协作工作流，用于安全并行委派任务、自动执行流程并高效清理问题积压。"
 }

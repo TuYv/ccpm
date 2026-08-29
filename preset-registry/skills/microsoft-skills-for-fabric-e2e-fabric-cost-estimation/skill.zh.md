@@ -1,43 +1,32 @@
 ---
 name: e2e-fabric-cost-estimation
-description: >
-  Estimate Microsoft Fabric capacity costs before migration by analyzing existing workload
-  profiles (Spark, SQL, Power BI, Real-Time Intelligence) and recommending optimal SKU sizing,
-  billing modes, and Reserved Instance strategies. Use when the user wants to:
-  (1) estimate Fabric costs for a migration, (2) size a Fabric capacity SKU,
-  (3) compare Fabric pricing tiers, (4) calculate storage/compute/network costs,
-  (5) recommend Reserved vs. Pay-As-You-Go vs. Autoscale billing.
-  Trigger phrases are scoped to Fabric capacity cost/sizing to avoid over-routing on generic
-  cost, migration, or connection questions.
-  Triggers: "estimate fabric cost", "fabric capacity sizing", "fabric sku recommendation",
-  "fabric cost estimate", "fabric reserved instance", "fabric capacity pay-as-you-go",
-  "fabric autoscale billing".
+description: "Estimates Fabric capacity cost before a migration by profiling Spark, SQL, Power BI, and Real-Time workloads, then recommending SKU size and comparing Reserved, Pay-As-You-Go, and Autoscale billing. Use only for capacity sizing and pricing questions, not for general migration or connectivity work."
 ---
-> **遥测 — 强制要求。** 每个对 `api.fabric.microsoft.com` 的调用都必须携带
+> **Telemetry — 必须遵守。** 每次 `api.fabric.microsoft.com` 调用都必须携带
 > `x-ms-fabric-skill: e2e-fabric-cost-estimation`（`az rest`：`--headers "x-ms-fabric-skill=e2e-fabric-cost-estimation"`），
-> 包括每次 LRO 轮询、`fabric_lro` 调用和重试。代码片段中可能省略了它，但仍须添加。
+> 包括每次 LRO 轮询、`fabric_lro` 和重试。代码片段中省略了该标头——但仍必须添加。
 
-> **关键说明**
-> 1. 要根据工作区名称查找工作区详细信息（包括其 ID）：列出所有工作区，然后使用 JMESPath 筛选
-> 2. 要根据工作区 ID、项目类型和项目名称查找项目详细信息（包括其 ID）：列出该工作区中该类型的所有项目，然后使用 JMESPath 筛选
-> 3. **定价因区域而异。** 在查询任何价格之前，始终解析容量所在的 Azure 区域（通过 Fabric REST `GET /v1/capacities`，其返回 `region`/`sku`/`state`，或通过 ARM），或者询问用户；并在每个报价数字旁注明区域。
+> **重要说明**
+> 1. 要根据工作区名称查找工作区详细信息（包括其 ID）：列出所有工作区，然后使用 JMESPath 进行筛选
+> 2. 要根据工作区 ID、项目类型和项目名称查找项目详细信息（包括其 ID）：列出该工作区中该类型的所有项目，然后使用 JMESPath 进行筛选
+> 3. **定价因区域而异。** 在进行任何价格查询之前，始终解析容量所在的 Azure 区域（通过 Fabric REST `GET /v1/capacities`，该接口会返回 `region`/`sku`/`state`，或通过 ARM），或者在此之前询问用户，并在每个报价数字中注明区域。
 
-> **🔴 强制获取实时报价 — 只要回答中包含美元金额，就必须执行。**
-> 在提供**任何**美元金额、成本、盈亏平衡点、计费模式比较、RI 与 PAYG 分析、迁移成本或成本工作表之前，你都**必须**运行一个调用 Azure 零售价格 API `https://prices.azure.com/api/retail/prices` 的 shell 命令（`bash`/`powershell`）。此要求无一例外地适用于每个*涉及价格的*回答——Databricks/Synapse 迁移成本、**自动缩放与基础 SKU 的盈亏平衡分析**、RI 与 PAYG 的盈亏平衡分析、成本工作表以及计费模式策略。必须**先**获取实时的每 CU 小时 PAYG 费率（`priceType eq 'Consumption'`、`* Capacity Usage CU` 计量项）、预留期限总价以及 `autoscale for Spark Capacity Usage CU` 费率，然后再进行计算。绝不能使用记忆中的费率或硬编码费率回答涉及价格的问题，也绝不能仅根据公式推算盈亏平衡点。如果计量项查询未返回任何行，请向用户说明——**绝不能**静默回退到硬编码费率（例如，不得假设自动缩放费率为 `$0.18/CU-hr`；自动缩放计量项具有独立费率，必须获取该费率）。
-> **例外——纯容量规模估算：** 如果问题可以纯粹以**容量单位**回答且*不包含美元金额*（例如，“哪个 SKU 适合 80 个 CU？”或“P2 对应多少个 CU？”），则属于 CU 计算而非定价，无需获取价格。一旦为该规模估算答案附加美元金额，就必须获取价格。
+> **🔴 必须获取实时价格——只要回答中包含美元数字，就必须执行。**
+> 在提供**任何**美元金额、成本、盈亏平衡点、计费模式比较、RI 与 PAYG 分析、迁移成本或成本工作表之前，**必须**运行一个 shell 命令（`bash`/`powershell`），调用 Azure Retail Prices API：`https://prices.azure.com/api/retail/prices`。这项要求无一例外地适用于每个涉及价格的回答——Databricks/Synapse 迁移成本、**Autoscale 与基础 SKU 的盈亏平衡点**、RI 与 PAYG 的盈亏平衡点、成本工作表以及计费模式策略。必须**先**获取实时的每 CU 小时 PAYG 费率（`priceType eq 'Consumption'`、`* Capacity Usage CU` 计量项）、预留期限总价以及 `autoscale for Spark Capacity Usage CU` 费率，然后再进行计算。回答涉及价格的问题时，绝不能使用记忆中的费率或硬编码费率，也绝不能仅根据公式推理盈亏平衡点。如果计量项查询未返回任何行，必须将此情况告知用户——**绝不能**静默回退到硬编码费率（例如，不要假定 Autoscale 为 `$0.18/CU-hr`；Autoscale 计量项是独立的费率，必须获取该费率）。
+> **例外——纯容量规模评估：** 如果问题完全以容量单位回答，且**不包含美元数字**（例如“哪个 SKU 适合 80 CUs？”或“P2 对应多少个 CUs？”），则这是 CU 计算，而非定价，不需要获取价格。只要在该容量评估回答中附加美元金额，就必须获取实时价格。
 
 > **🟠 先澄清，再执行——不要假设默认值。**
-> 涉及价格的请求需要两个输入，之后才能获取价格或进行计算：**Azure 区域**和**工作负载配置**（例如，每日 CU 小时数、节点/作业详细信息，或迁移所涉及的源集群规模）。如果缺少其中**任何一项**，你的**首次**回复必须**向用户询问缺少的输入并停止**——不要选择默认区域（绝不能为了“先开始”而假设 `East US` 或任何其他区域），不要调用定价 API，也不要根据假设值生成估算。只有在用户提供缺少的输入后，才能获取实时价格并进行计算。即使强制获取价格规则适用于*最终*涉及价格的回答，先询问仍然是正确的做法。
+> 涉及价格的请求需要两个输入，之后才能获取价格或进行计算：**Azure 区域**和**工作负载配置**（例如每天的 CU 小时数、节点/作业详细信息，或迁移源集群的规模）。如果缺少其中任何一项，你的**第一条**回复必须**询问用户提供缺失的输入，并停止执行**——不要选择默认区域（绝不能假定 `East US` 或任何其他区域来“先开始”，不要调用价格 API，也不要根据假设值生成估算。只有在用户提供缺失的输入后，才能获取实时价格并进行计算。即使强制获取价格的规则适用于最终的价格回答，先询问用户仍然是正确的行为。
 
-> **🔴 自动缩放费率是一个独立的计量项——绝不能为其复用基础/PAYG 费率。**
-> `autoscale for Spark Capacity Usage CU` 计量项的价格与基础 `* Capacity Usage CU` PAYG 费率**相互独立**。你**必须**通过单独的 API 调用获取该价格，并读取返回的 `retailPrice`。将基础/PAYG 费率（或记忆中的数值，例如 `0.18`）赋给自动缩放变量属于正确性缺陷——例如，**禁止**使用 `autoscaleRate = paygRate` 或 `autoscaleRate = 0.18`。如果自动缩放计量项查询未返回任何行，请列出该区域的所有 Fabric Spark 计量项并将其呈现给用户；绝不能用基础费率替代。
+> **🔴 自动缩放费率是一个独立计费项 — 切勿重复使用基础/PAYG 费率。**
+> `autoscale for Spark Capacity Usage CU` 计量项的价格与基础 `* Capacity Usage CU` PAYG 费率**完全独立**。你**必须**通过单独的 API 调用获取该费率，并读取返回的 `retailPrice`。将基础/PAYG 费率（或记忆中的数值，例如 `0.18`）赋值给自动缩放变量属于正确性错误 — 例如，`autoscaleRate = paygRate` 或 `autoscaleRate = 0.18` 都是**禁止的**。如果自动缩放计量项查询未返回任何行，请列出该区域的所有 Fabric Spark 计量项，并将结果呈现给用户；绝不能使用基础费率进行替代。
 
 # Fabric 成本估算
 
 ## 前置知识
 
-- [COMMON-CORE.md](../../common/COMMON-CORE.md) — Fabric 拓扑、容量概念、身份验证和令牌受众
-- [COMMON-CLI.md](../../common/COMMON-CLI.md) — 用于容量发现的 CLI 模式、身份验证方法（`az login`、令牌获取）
+- [COMMON-CORE.md](../../common/COMMON-CORE.md) — Fabric 拓扑、容量概念、身份验证与令牌受众
+- [COMMON-CLI.md](../../common/COMMON-CLI.md) — 容量发现的 CLI 模式、身份验证步骤（`az login`、令牌获取）
 
 ---
 
@@ -46,7 +35,7 @@ description: >
 | 主题 | 章节 |
 |---|---|
 | Fabric 计费模型概述 | [§ 计费模型](#fabric-billing-model) |
-| 容量单位（CU）参考 | [§ CU 参考](#capacity-unit-reference) |
+| 容量单位 (CU) 参考 | [§ CU 参考](#capacity-unit-reference) |
 | 工作负载成本估算 | [§ 工作负载估算](#workload-cost-estimation) |
 | 存储定价 | [§ 存储](#storage-pricing) |
 | 网络定价 | [§ 网络](#network-egress-pricing) |
@@ -54,64 +43,64 @@ description: >
 | SKU 规模选择决策树 | [§ SKU 规模选择](#sku-sizing-decision-tree) |
 | 迁移成本工作表 | [§ 工作表](#migration-cost-worksheet) |
 | 定价 API 参考 | [pricing-api-reference.md](resources/pricing-api-reference.md) |
-| 必须 / 建议 / 避免 | [§ 必须 / 建议 / 避免](#must--prefer--avoid) |
+| 必须 / 首选 / 避免 | [§ 必须 / 首选 / 避免](#must--prefer--avoid) |
 ---
 
 ## Fabric 计费模型
 
-Microsoft Fabric 使用**统一容量模型**，所有工作负载共享一个**容量单位（CU）**池。需要了解的计费维度如下：
+Microsoft Fabric 使用**统一容量模型**，所有工作负载共享一个**容量单位 (CU)** 池。了解以下计费维度：
 
-| 维度 | 说明 | 计费机制 |
+| 维度 | 描述 | 计费机制 |
 |---|---|---|
-| **计算（CU 秒）** | 查询、Spark 作业和管道所消耗的处理能力 | 从容量 SKU 中扣除 CU 消耗量 |
-| **存储（GB/月）** | 用于 Delta 表、文件和快捷方式的 OneLake 存储 | 按 GB 收取月度费用 |
-| **网络出站（GB）** | 离开 Azure 区域的数据 | 按 GB 收取出站费用 |
-| **容量预留** | 基础 SKU 承诺（F2–F8192） | 月度或年度承诺 |
+| **计算 (CU-seconds)** | 查询、Spark 作业、管道消耗的处理能力 | 根据容量 SKU 计算 CU 消耗 |
+| **存储 (GB/month)** | Delta 表、文件、快捷方式使用的 OneLake 存储 | 按 GB 计收月费 |
+| **网络出口 (GB)** | 离开 Azure 区域的数据 | 按 GB 收取出口费用 |
+| **容量预留** | 基础 SKU 承诺（F2–F8192） | 按月或按年承诺 |
 
 ### 计费模式
 
-| 模式 | 说明 | 最适合 |
+| 模式 | 描述 | 最适用于 |
 |---|---|---|
-| **预留实例（RI）** | 1 年或 3 年承诺；可享受大幅折扣（通过实时 API 计算） | 稳态基础负载 |
-| **即用即付（PAYG）** | 按小时计费；无承诺；按完整标价收费 | 测试、不可预测的工作负载 |
-| **Spark 自动缩放计费** | 可选择启用的无服务器模型；Spark 作业从容量中卸载，并按 Spark CU 小时计费。Spark 的突发和消峰平滑功能将被禁用；不消耗容量 CU | 将可变的 Spark 支出与稳态容量隔离 |
-| **Fabric 试用版** | 试用容量（大小因租户/资格而异——通常最高为 F64，可使用 60 天）；使用前请核实当前试用条款；绝不能据此确定生产环境的容量规模 | 仅用于评估 |
+| **预留实例 (RI)** | 承诺 1 年或 3 年；可享受大幅折扣（计算费用需通过实时 API 获取） | 稳定的基础负载 |
+| **即用即付 (PAYG)** | 按小时计费；无承诺；完整列表价格 | 测试、不可预测的工作负载 |
+| **Spark 自动缩放计费** | 可选择的无服务器模型；Spark 作业从容量中卸载，并按每 Spark CU 小时计费。Spark 不启用突发与平滑处理；不会消耗容量 CU | 将可变 Spark 支出与稳定的容量支出隔离 |
+| **Fabric 试用版** | 试用容量（大小因租户/资格而异 — 通常在 60 天内最高可达 F64）；使用前请核实当前试用条款；绝不要据此确定生产环境规模 | 仅用于评估 |
 
-### 容量 SKU 层级 — 实时价格查询
+### 容量 SKU 层级 — 实时定价查询
 
-**切勿使用硬编码价格。** 始终在运行时从 Azure Retail Prices API 获取当前价格。
+**不要使用硬编码价格。** 始终在运行时从 Azure Retail Prices API 获取当前定价。
 
-#### 第 1 步：检测客户区域
+#### 步骤 1：检测客户区域
 
-如果客户已有 Fabric 容量，请通过核心 Fabric REST API 获取其区域、SKU 和状态 — `GET https://api.fabric.microsoft.com/v1/capacities` 会返回每个容量的 `region`、`sku` 和 `state`。Azure Resource Manager（`az resource list`）可作为等效的备用方案；只有 Fabric **Admin** API（`/v1/admin/capacities`）会省略区域。请参阅 [`resources/pricing-api-reference.md`](resources/pricing-api-reference.md#3-fabric-capacity-discovery-fabric-rest--arm) 中的模板。
+如果客户已经拥有 Fabric 容量，请从核心 Fabric REST API 获取其区域、SKU 和状态 — `GET https://api.fabric.microsoft.com/v1/capacities` 会返回每个容量的 `region`、`sku` 和 `state`。Azure Resource Manager（`az resource list`）是等效的备用方案；只有 Fabric **Admin** API（`/v1/admin/capacities`）不会返回区域。请参阅 [`resources/pricing-api-reference.md`](resources/pricing-api-reference.md#3-fabric-capacity-discovery-fabric-rest--arm) 中的模板。
 
-如果尚不存在容量，请询问用户计划部署到哪个 Azure 区域。
+如果尚不存在容量，请询问用户计划在哪个 Azure 区域进行部署。
 
-#### 第 2 步：获取实时 Fabric 价格
+#### 步骤 2：获取实时 Fabric 定价
 
-查询 **Azure Retail Prices API**（公共 API，无需身份验证）。**对于每个涉及价格的问题 — 包括自动缩放与基础容量的盈亏平衡分析，以及计费模式（PAYG/RI/暂停-恢复）策略 — 在进行任何计算之前，你的第一个操作必须是在 shell（`bash`/`powershell`）中实际运行此获取命令。** 不要仅根据公式推断盈亏平衡点或计费方案之间的权衡；请先运行命令，然后使用返回的 `retailPrice` 行进行计算：
+查询 **Azure Retail Prices API**（公开 API，无需身份验证）。**对于每个定价问题 — 包括 Autoscale 与基础容量的盈亏平衡点，以及计费模式（PAYG/RI/暂停-恢复）策略 — 第一个操作都必须是在 shell（`bash`/`powershell`）中实际运行此获取命令，然后才能进行任何计算。** 不要仅根据公式推理盈亏平衡点或计费权衡；先运行命令，然后根据返回的 `retailPrice` 行进行计算：
 
 ```bash
 curl -s "https://prices.azure.com/api/retail/prices?api-version=2023-01-01-preview&\$filter=serviceName%20eq%20'Microsoft%20Fabric'%20and%20armRegionName%20eq%20'<region>'" | jq '.Items[] | {meterName, retailPrice, unitOfMeasure, type, reservationTerm}'
 ```
 
-使用 [`resources/pricing-api-reference.md`](resources/pricing-api-reference.md#pagination) 中的参考模板对 `NextPageLink` 结果进行分页，然后筛选所选区域的 **Fabric 容量计量项**。Retail Prices API **不会**为每个 F-SKU 返回一行数据 — 使用 `^F\d+` 匹配 `skuName`/`armSkuName` 不会返回任何结果。**PAYG** 每 CU 小时费用现在通过按工作负载划分的 Consumption 计量项计费，这些计量项的 `meterName` 以 `Capacity Usage CU` 结尾（`priceType eq 'Consumption'`、`unitOfMeasure eq '1 Hour'`）；取这些计量项中 `retailPrice` 的**众数**作为基础计算费率（这是一个较低的每 CU 小时数值 — 始终使用 API 返回的值；**不要**复制此 skill 中的任何示例数字）。**Reservations** 来自 `meterName eq 'Fabric Capacity CU'`（旧版统一计量项现在仅用于预留）。从这些行中读取每 CU 费率。
+使用 [`resources/pricing-api-reference.md`](resources/pricing-api-reference.md#pagination) 中的参考模板，对 `NextPageLink` 结果进行分页，然后筛选所选区域的 **Fabric 容量计量项**。Retail Prices API 不会为每个 F-SKU 返回一行数据 — 对 `skuName`/`armSkuName` 使用 `^F\d+` 进行匹配不会返回任何结果。**PAYG** 每 CU 小时的费用现在通过每个工作负载的 Consumption 计量项计费，这些计量项的 `meterName` 以 `Capacity Usage CU` 结尾（`priceType eq 'Consumption'`、`unitOfMeasure eq '1 Hour'`）；从这些计量项中取 `retailPrice` 的**众数**，作为基础计算费率（这是一个较低的每 CU 小时数值 — 始终使用 API 返回的值；**不要**复制此 skill 中的任何示例数值）。**预留**来自 `meterName eq 'Fabric Capacity CU'` 的计量项（旧版扁平计量项现在仅用于预留）。从这些行中读取每 CU 费率。
 
-#### 第 3 步：构建价格表
+#### 步骤 3：构建定价表
 
-API 提供的是**每 CU 费率**，而不是每 SKU 价格。请将每 CU 费率乘以文档化的 SKU→CU 映射中每个 SKU 的 CU 数量，以构建每 SKU 价格表（`F`*n* = *n* 个 CU，例如 F64 = 64、F128 = 128、F256 = 256、F512 = 512、F1024 = 1024、F2048 = 2048、F4096 = 4096、F8192 = 8192）。
+API 提供的是**每 CU 费率**，而不是每个 SKU 的价格。通过将每 CU 费率乘以文档化的 SKU→CU 映射中各 SKU 的 CU 数量，构建每个 SKU 的价格表（`F`*n* = *n* 个 CU，例如 F64 = 64、F128 = 128、F256 = 256、F512 = 512、F1024 = 1024、F2048 = 2048、F4096 = 4096、F8192 = 8192）。
 
-将每个 `reservationTerm` 分组正确换算为**月度**金额（预留行表示的是**整个期限的总额**，而不是小时费率）：
+正确地将每个 `reservationTerm` 桶转换为**每月**数值（预留行是**期限总价**，而不是每小时费率）：
 
 - **PAYG 月度费用** = `consumptionCuHourRate × skuCUs × 730`（Consumption 行，`priceType eq 'Consumption'`，`meterName` 类似于 `* Capacity Usage CU`）
-- **1 年期 RI 月度费用** = `reservationRetailPrice × skuCUs ÷ 12`（**不要**乘以 730）
-- **3 年期 RI 月度费用** = `reservationRetailPrice × skuCUs ÷ 36`
+- **1 年 RI 月度费用** = `reservationRetailPrice × skuCUs ÷ 12`（**不要**乘以 730）
+- **3 年 RI 月度费用** = `reservationRetailPrice × skuCUs ÷ 36`
 
-请参阅 [`resources/pricing-api-reference.md`](resources/pricing-api-reference.md#monthly-cost-calculation) 中的月度成本换算指南。
+请参阅 [`resources/pricing-api-reference.md`](resources/pricing-api-reference.md#monthly-cost-calculation) 中的月度转换指南。
 
-#### 第 4 步：向用户展示
+#### 步骤 4：呈现给用户
 
-展示定价表，并明确注明区域：
+呈现定价表，并明确注明区域：
 
 ```text
 Fabric Capacity Pricing — Region: [detected_region] (live as of [today's date])
@@ -119,12 +108,12 @@ Fabric Capacity Pricing — Region: [detected_region] (live as of [today's date]
 | SKU | CUs | Monthly PAYG | 1-Year RI | 3-Year RI | RI Savings |
 |-----|-----|-------------|-----------|-----------|------------|
 | F4  | 4   | $[live]     | $[live]   | $[live]   | [calc]%    |
-| ... | ... | ...         | ...       | ...       | ...        |
+| ... | ... | $[live]     | $[live]   | $[live]   | ...        |
 
 Source: Azure Retail Prices API (prices.azure.com)
 ```
 
-> **重要**：如果无法访问该 API，请告知用户并引导他们使用 [Azure 定价计算器](https://azure.microsoft.com/pricing/calculator/)。切勿回退到硬编码价格——这些价格会过时。
+> **重要**：如果 API 无法访问，请告知用户，并引导其使用 [Azure 定价计算器](https://azure.microsoft.com/pricing/calculator/)。绝不要回退到硬编码价格——它们会逐渐过时。
 
 ---
 
@@ -134,43 +123,43 @@ Source: Azure Retail Prices API (prices.azure.com)
 
 | 工作负载 | CU 消耗模型 | 关键指标 |
 |---|---|---|
-| **Spark**（笔记本、SJD） | 活跃 Spark 会话期间的 CU 秒数 | vCores × 持续时间 |
-| **SQL DW**（仓库查询） | 每次查询的 CU 秒数 | 查询复杂度 × 扫描的数据量 |
-| **Power BI**（语义模型、报表） | 每次查询/刷新的 CU 秒数 | 数据集大小、刷新频率、DAX 复杂度 |
-| **数据管道** | 每次活动执行的 CU 秒数 | 活动类型、移动的数据量 |
-| **Eventhouse / KQL** | 每次查询及引入的 CU 秒数 | 引入速率、查询频率 |
-| **Dataflows Gen2** | 每次刷新的 CU 秒数 | 转换复杂度、数据量 |
-| **OneLake** | 仅存储（静态数据不消耗 CU） | 存储的 GB 数 |
+| **Spark**（笔记本、SJD） | 活动 Spark 会话期间的 CU-秒数 | vCore 数量 × 持续时间 |
+| **SQL DW**（数据仓库查询） | 每个查询的 CU-秒数 | 查询复杂度 × 扫描的数据量 |
+| **Power BI**（语义模型、报表） | 每个查询/刷新的 CU-秒数 | 数据集大小、刷新频率、DAX 复杂度 |
+| **数据管道** | 每次活动执行的 CU-秒数 | 活动类型、移动的数据量 |
+| **Eventhouse / KQL** | 查询 + 数据引入的 CU-秒数 | 数据引入速率、查询频率 |
+| **Dataflows Gen2** | 每次刷新的 CU-秒数 | 转换复杂度、数据量 |
+| **OneLake** | 仅存储（静态存储不消耗 CU） | 存储的 GB 数 |
 
-### Spark CU 映射（对迁移至关重要）
+### Spark CU 映射（迁移的关键）
 
-> **已记录的换算关系**：**1 个 Fabric CU = 2 个 Spark vCores**（[Fabric Spark 并发限制](https://learn.microsoft.com/en-us/fabric/data-engineering/spark-job-concurrency-and-queueing)）。因此，节点的 CU 等价值为 `vCores ÷ 2`。下方的 vCore 数量是池节点的默认值；在确定 SKU 规模之前，始终应通过试点验证实际消耗量。
+> **文档所述转换关系**：**1 Fabric CU = 2 个 Spark vCore**（[Fabric Spark 并发限制](https://learn.microsoft.com/en-us/fabric/data-engineering/spark-job-concurrency-and-queueing)）。因此，节点的 CU 等效值为 `vCores ÷ 2`。以下 vCore 数量是池节点的默认值；在确定 SKU 大小之前，始终应通过试点验证实际消耗。
 
-| Spark 池节点大小 | vCores | 内存 | 每节点的 CU 等价值（vCores ÷ 2） |
+| Spark 池节点大小 | vCore 数量 | 内存 | 每个节点的 CU 等效值（vCores ÷ 2） |
 |---|---|---|---|
-| 小型 | 4 vCores | 32 GB | 2 CUs |
-| 中型 | 8 vCores | 64 GB | 4 CUs |
-| 大型 | 16 vCores | 128 GB | 8 CUs |
-| 超大型 | 32 vCores | 256 GB | 16 CUs |
-| 超超大型 | 64 vCores | 512 GB | 32 CUs |
+| Small | 4 vCores | 32 GB | 2 CUs |
+| Medium | 8 vCores | 64 GB | 4 CUs |
+| Large | 16 vCores | 128 GB | 8 CUs |
+| X-Large | 32 vCores | 256 GB | 16 CUs |
+| XX-Large | 64 vCores | 512 GB | 32 CUs |
 
-F64 容量可提供基础 128 个 Spark vCores，并可通过标准（按容量计费）模型中的 Spark 突发扩展至最高 3 倍（384 个 vCores）。
+F64 容量在基础配置下提供 128 个 Spark vCore，并且在标准（按容量计费）模型下，可通过 Spark 突发扩展至 3 倍（384 个 vCore）。
 
-**Spark 计费有两种不同的模型**——请将二者区分开来：
+**Spark 计费有两种不同的模型**——请将它们分开处理：
 
-1. **标准（按容量计费）Spark**：Spark 作业消耗容量 SKU 中的 CU。支持突发（最高 3 倍）和平滑处理。消耗的 CU 小时 = `nodes × CU-per-node × active-seconds / 3600`，并计入该容量的账单。
-2. **Spark 自动缩放计费（选择启用、无服务器）**：这是一种独立的计费模型，其中 Spark 作业会**从容量中卸载**，并按照 `autoscale for Spark Capacity Usage CU` 计量项，以每 Spark CU 小时计费。在此模型下，Spark 作业**不会**消耗容量 CU，并且 **Spark 的突发和平滑处理会被禁用**。你可以设置 Spark CU 上限；仅对会话的活跃时间计费。使用此模型可将可变的 Spark 支出与稳态容量隔离开来——它**并不是**同一 SKU 上“超出基础容量的突发”。
+1. **标准（按容量计费）Spark**：Spark 作业从容量 SKU 中消耗 CU。突发（最高 3 倍）和消峰计费适用。消耗的 CU-小时 = `nodes × CU-per-node × active-seconds / 3600`，并从容量中计费。
+2. **Spark 自动缩放计费（选择加入、无服务器）**：一种独立的计费模型，Spark 作业会从**容量中卸载**，并按照 `autoscale for Spark Capacity Usage CU` 计量单位，以每个 Spark CU-小时计费。在此模型下，Spark 作业**不会消耗容量 CU**，并且 **Spark 不适用突发和消峰计费**。你可以设置 Spark CU 上限；系统仅对活动会话时间计费。使用此模型可以将可变的 Spark 支出与稳定状态下的容量支出分离——它**不是**同一 SKU 上“超出基础容量的突发”。
 
-### Databricks 到 Fabric Spark 的映射
+### Databricks 到 Fabric Spark 映射
 
-> **⚠️ 未经验证的启发式估算**：这些映射仅为近似值，Microsoft 尚未正式发布相关文档。在确定容量规模之前，请通过试点工作负载进行验证。
+> **⚠️未经验证的经验性估算**：这些映射是近似值，并非 Microsoft 的官方文档说明。在确定容量规模之前，请通过试点工作负载进行验证。
 
-| Databricks 群集配置 | Fabric 等效配置 | CU 估算 |
+| Databricks 集群配置 | Fabric 等效配置 | CU 估算 |
 |---|---|---|
-| 2× Standard_D4ds_v5（每个 4 个 vCore） | 2× Small 节点 | 峰值约 4 CU |
-| 4× Standard_D8ds_v5（每个 8 个 vCore） | 4× Medium 节点 | 峰值约 16 CU |
-| 8× Standard_D16s_v5（每个 16 个 vCore） | 8× Large 节点 | 峰值约 64 CU |
-| 自动缩放 2–10 个工作节点（D4s） | 自动缩放 2–10 个 Small 节点 | 突发时约 4–20 CU |
+| 2× Standard_D4ds_v5（每个 4 个 vCore） | 2× Small 节点 | 峰值约 4 CUs |
+| 4× Standard_D8ds_v5（每个 8 个 vCore） | 4× Medium 节点 | 峰值约 16 CUs |
+| 8× Standard_D16s_v5（每个 16 个 vCore） | 8× Large 节点 | 峰值约 64 CUs |
+| 自动缩放 2–10 个工作节点（D4s） | 自动缩放 2–10 个 Small 节点 | 突发约 4–20 CUs |
 
 ---
 
@@ -178,27 +167,27 @@ F64 容量可提供基础 128 个 Spark vCores，并可通过标准（按容量�
 
 ### 步骤 0：检测当前支出（源平台）
 
-在估算 Fabric 成本之前，请使用 Azure 成本管理获取客户当前的实际支出。使用 [`resources/pricing-api-reference.md § Azure Cost Management API`](resources/pricing-api-reference.md#2-azure-cost-management-api-auth-required) 中的查询模板和 CLI 模式：
+在估算 Fabric 成本之前，使用 Azure Cost Management 获取客户当前的实际支出。使用 [`resources/pricing-api-reference.md § Azure Cost Management API`](resources/pricing-api-reference.md#2-azure-cost-management-api-auth-required) 中的查询模板和 CLI 模式：
 
-- **上月按服务统计**（按 `ServiceName` 分组，筛选 Databricks / Synapse / HDInsight / Power BI / Microsoft Fabric）：确定各产品的基准支出
-- **每日趋势**（粒度为 `Daily`，按 `ServiceName` 分组）：揭示峰值日期，这些日期对应峰值 CU 需求
+- **按服务统计上个月的支出**（按 `ServiceName` 分组，并筛选 Databricks / Synapse / HDInsight / Power BI / Microsoft Fabric）：确定每种产品的基线
+- **每日趋势**（粒度为 `Daily`，按 `ServiceName` 分组）：揭示支出峰值日期，这些日期对应峰值 CU 需求
 
 解析响应以提取：
-- 按服务划分的**上月总支出**（Databricks、Synapse、HDInsight、Power BI）
-- **资源明细**（计算与存储及网络）
-- **峰值与平均值**的每日成本模式
+- 各服务（Databricks、Synapse、HDInsight、Power BI）**上个月的总支出**
+- **资源明细**（计算、存储、网络）
+- **峰值与平均值**每日成本模式
 
 #### 非 Azure 源平台（AWS、GCP、Databricks、Snowflake、Teradata）
 
-当源平台不在 Azure 上时，请从该平台实时获取当前支出——**切勿硬编码或猜测源端价格**。优先使用客户的**实际账单/用量**；仅在存在公开标价 API 时才使用该 API；否则使用官方定价页面或发票，并注明来源和日期。有关经过验证的端点（AWS Price List、GCP Cloud Billing Catalog）以及 Databricks/Snowflake 的实际用量查询，请参阅 [`resources/pricing-api-reference.md § Source Platform Pricing (Multi-Cloud)`](resources/pricing-api-reference.md#4-source-platform-pricing-multi-cloud)。
+当源平台不在 Azure 上时，从该平台实时获取当前支出——**绝不要硬编码或猜测源平台价格**。优先使用客户的**实际计费/消耗数据**；仅在存在公开目录价格 API 时使用该 API；否则使用官方定价页面或发票，并说明来源和日期。有关已验证的端点（AWS Price List、GCP Cloud Billing Catalog）以及 Databricks/Snowflake 的实际使用量查询，请参阅 [`resources/pricing-api-reference.md § Source Platform Pricing (Multi-Cloud)`](resources/pricing-api-reference.md#4-source-platform-pricing-multi-cloud)。
 
-#### Databricks 专项：获取群集利用率
+#### Databricks 特定操作：获取集群利用率
 
-请参阅 [pricing-api-reference.md § Databricks Clusters API](resources/pricing-api-reference.md#databricks-clusters-api)。按照 [COMMON-CLI.md](../../common/COMMON-CLI.md) 获取令牌，并调用 `GET /api/2.0/clusters/list`。关键字段：`cluster_name`、`node_type_id`、`num_workers`、`autoscale`。
+请参阅 [pricing-api-reference.md § Databricks Clusters API](resources/pricing-api-reference.md#databricks-clusters-api)。根据 [COMMON-CLI.md](../../common/COMMON-CLI.md) 获取令牌，并调用 `GET /api/2.0/clusters/list`。关键字段：`cluster_name`、`node_type_id`、`num_workers`、`autoscale`。
 
-#### Synapse 专项：获取池配置
+#### Synapse 特定操作：获取池配置
 
-有关 `az synapse sql pool` 和 `az synapse spark pool` CLI 命令，请参阅 [pricing-api-reference.md § Synapse Pools](resources/pricing-api-reference.md#synapse-pools)。
+有关 `az synapse sql pool` 和 `az synapse spark pool` CLI 命令，请参阅 [pricing-api-reference.md § Synapse Pools](pricing-api-reference.md#synapse-pools)。
 
 ### 步骤 1：分析现有工作负载
 
@@ -206,18 +195,18 @@ F64 容量可提供基础 128 个 Spark vCores，并可通过标准（按容量�
 
 | 源平台 | 要收集的指标 | 查找位置 |
 |---|---|---|
-| **Databricks** | 群集小时数/天、DBU 消耗量、工作节点数、节点类型 | 群集指标、账单控制台 |
-| **Synapse Spark** | 池运行时长、节点数、节点大小 | Synapse Studio → 监视 → Apache Spark 池 |
-| **Synapse SQL** | DWU 小时数/天、查询数、数据扫描量 | DMV、Azure Monitor |
-| **Azure SQL/SQLDB** | DTU/vCore 小时数、查询模式 | Performance Insights |
+| **Databricks** | 集群小时数/天、DBU 消耗量、工作节点数、节点类型 | 集群指标、计费控制台 |
+| **Synapse Spark** | 池运行小时数、节点数、节点大小 | Synapse Studio → 监视 → Apache Spark 池 |
+| **Synapse SQL** | DWU 小时数/天、查询数量、扫描的数据量 | DMV、Azure Monitor |
+| **Azure SQL/SQLDB** | DTU/vCore 小时数、查询模式 | 性能见解 |
 | **Power BI Premium** | P-SKU 大小、刷新频率、用户数 | Power BI 管理门户 |
-| **HDInsight** | VM 小时数、群集大小、HDFS 存储 | Azure 账单 |
-| **AWS Redshift / EMR** | 节点类型、节点数、群集运行时长、存储空间（GB） | AWS Cost Explorer；通过 AWS CLI 获取群集配置 |
+| **HDInsight** | VM 小时数、集群大小、HDFS 存储 | Azure 计费 |
+| **AWS Redshift / EMR** | 节点类型、节点数、集群运行小时数、存储 GB | AWS Cost Explorer；通过 AWS CLI 获取集群配置 |
 | **Google BigQuery / Dataproc** | 槽位数或按需扫描的 TB 数；Dataproc vCPU 小时数 | Cloud Billing 导出；GCP 控制台 |
-| **Snowflake** | 仓库大小、每日消耗的额度、存储空间（TB） | `ACCOUNT_USAGE.METERING_DAILY_HISTORY` |
-| **Teradata Vantage** | 节点/AMP 数、TCore、存储空间；或市场按量计费单位 | 客户发票/云市场计量 |
+| **Snowflake** | 仓库大小、每天消耗的 credits、存储 TB | `ACCOUNT_USAGE.METERING_DAILY_HISTORY` |
+| **Teradata Vantage** | 节点/AMP 数量、TCore、存储；或市场中的计量单位 | 客户发票 / 云市场计量 |
 
-### 步骤 2：映射到 Fabric CU 需求
+### 第 2 步：映射到 Fabric CU 需求
 
 **Spark 工作负载**（最常见的迁移场景）：
 
@@ -234,9 +223,9 @@ Example:
 - Peak concurrent: 32 CUs (Job 1 or Job 3)
 ```
 
-**SQL 仓库工作负载**（Synapse Dedicated SQL / DW）：
+**SQL warehouse 工作负载**（Synapse Dedicated SQL / DW）：
 
-请**勿**根据 DWU 到 CU 的公式进行容量估算——Microsoft 并未发布官方换算方式，因此任何 `DWU ÷ 2` 数值都无法用于确定承诺型 SKU。应改为根据客户的**实际计费数据**进行估算，并通过试点加以验证：
+不要根据 DWU-to-CU 公式进行规模测算——Microsoft 未发布官方换算关系，因此任何 `DWU ÷ 2` 数值对于已承诺的 SKU 都无法实际用于决策。相反，应根据客户的**实际计费信号**驱动估算，并通过试点进行验证：
 
 ```text
 Workflow (measured, not heuristic):
@@ -249,7 +238,7 @@ Workflow (measured, not heuristic):
 4. Present the number as pilot-validated, never as a formula output.
 ```
 
-> **⚠️ 未经试点验证，不得做出承诺型容量估算。** 如果目前还无法开展试点，请将 DWU-hours 列为*有待测量的输入*，并注明该估算因缺少试点数据而受阻——不得将通过 DWU ÷ 2 得出的 CU 数值作为交付结果。
+> **⚠️ 未完成试点时不得进行已承诺的规模测算。** 如果目前还无法进行试点，应将 DWU-hours 作为*待测量的输入*，并标记该估算受阻于试点数据——不要将 DWU ÷ 2 CU 数值作为交付结果。
 
 **Power BI 工作负载**：
 
@@ -272,7 +261,7 @@ Example — single Power BI P-SKU, like-for-like migration:
   demand, so 128 × 1.2 → F256 double-counts headroom and over-provisions.
 ```
 
-### 步骤 3：聚合并确定容量
+### 第 3 步：汇总并确定规模
 
 ```text
 Sized CU = max over time of (Σ concurrent CU across all workloads in that window) + headroom
@@ -294,7 +283,7 @@ Two billing options for Spark:
      Spark is offloaded and billed separately (does not consume capacity CUs).
 ```
 
-注意：容量平滑可以重新分配*短时*突发负载（交互式负载约 5–64 分钟，后台负载最长 24 小时），但不会降低稳态并发总量——请按照持续并发需求确定容量大小。
+注意：容量平滑会重新分配*短时*突发负载（交互式约 5–64 分钟，后台最长 24 小时），但不会降低稳态并发总量——请根据持续并发需求进行容量规划。
 
 ---
 
@@ -302,49 +291,49 @@ Two billing options for Spark:
 
 ### 实时查询：OneLake 存储费率
 
-从 Azure 零售价格 API 获取客户所在区域的 OneLake 存储费率。OneLake 存储采用**分层定价**——不存在单一的 `OneLake Storage` 计量项（使用该筛选条件会返回零行）。请使用分层计量项名称，并选择与数据访问模式匹配的层级：`OneLake Storage Hot Data Stored`、`OneLake Storage Cool Data Stored`、`OneLake Storage Cold Data Stored`，以及用于镜像副本的 `Storage Mirroring Data Stored`（筛选条件：`serviceName eq 'Microsoft Fabric' and armRegionName eq '<region>'`，忽略包含 `reservationTerm` 的行）。如果筛选条件返回零行，请列出该区域的所有 Fabric 存储计量项并向用户展示——绝不能在无提示的情况下使用硬编码费率。请参阅 [`resources/pricing-api-reference.md`](resources/pricing-api-reference.md#storage-egress-and-serverless-rate-lookups) 中的可运行模板。
+通过 Azure Retail Prices API 获取客户所在区域的 OneLake 存储费率。OneLake 存储采用**分层定价**——不存在单一的 `OneLake Storage` 计量项（该筛选条件会返回零行）。请使用分层计量项名称，并选择与数据访问模式匹配的层级：`OneLake Storage Hot Data Stored`、`OneLake Storage Cool Data Stored`、`OneLake Storage Cold Data Stored`，以及用于镜像副本的 `Storage Mirroring Data Stored`（筛选条件：`serviceName eq 'Microsoft Fabric' and armRegionName eq '<region>'`，忽略包含 `reservationTerm` 的行）。如果筛选条件返回零行，请列出该区域的所有 Fabric 存储计量项并展示给用户——绝不能默默使用硬编码费率。请参阅 [`resources/pricing-api-reference.md`](resources/pricing-api-reference.md#storage-egress-and-serverless-rate-lookups) 中可运行的模板。
 
 ### 存储类型和定价模型
 
-| 存储类型 | 定价查询筛选条件 | 说明 |
+| 存储类型 | 定价查询筛选条件 | 备注 |
 |---|---|---|
-| **OneLake（托管 Delta/Parquet）** | `meterName eq 'OneLake Storage Hot Data Stored'`（或 Cool/Cold） | Fabric 的主要存储；按访问模式分层 |
+| **OneLake（托管 Delta/Parquet）** | `meterName eq 'OneLake Storage Hot Data Stored'`（或 Cool/Cold） | 主要的 Fabric 存储；根据访问模式分层 |
 | **OneLake 快捷方式（不复制）** | $0（仅快捷方式元数据） | 源存储费用仍然适用 |
-| **ADLS Gen2（源，通过快捷方式访问）** | `serviceName eq 'Storage' and skuName eq 'Hot LRS'` | 现有存储；不产生数据副本 |
+| **ADLS Gen2（源，通过快捷方式访问）** | `serviceName eq 'Storage' and skuName eq 'Hot LRS'` | 现有存储；不会产生重复副本 |
 | **镜像存储** | `meterName eq 'Storage Mirroring Data Stored'` | OneLake 中的 Delta 副本 |
 
 ### 根据现有平台估算存储量
 
-| 来源 | 指标 | Fabric 对应项 |
+| 源平台 | 指标 | Fabric 对应项 |
 |---|---|---|
-| Databricks DBFS / 托管表 | Delta 表总大小（GB） | 与 OneLake Tables/ 中的大小相同 |
+| Databricks DBFS / 托管表 | Delta 表总大小（GB） | OneLake Tables/ 中的大小相同 |
 | Synapse Spark 托管表 | ADLS Gen2 synfs 容器大小 | 迁移或使用快捷方式；大小相同 |
 | Synapse SQL DW 存储 | `DBCC PDW_SHOWSPACEUSED` | 大致相同（Delta 格式） |
-| Power BI 数据集 | 模型大小（压缩后、内存中） | 数据集导入量 = 压缩后大小 × 2–4，得到未压缩 Delta 大小 |
-| HDInsight HDFS | HDFS `du` 输出 | 转换为 Delta；与原始数据相比，压缩率通常为 30–60% |
+| Power BI 数据集 | 模型大小（压缩后、内存中） | 数据集导入 = 未压缩 Delta 大小的压缩后 × 2–4 |
+| HDInsight HDFS | HDFS `du` 输出 | 转换为 Delta；相较于原始数据通常可压缩 30–60% |
 
 ---
 
-## 网络出站流量定价
+## 网络出口定价
 
-### 实时查询：出站流量费率
+### 实时查询：出口费率
 
-使用筛选条件 `serviceName eq 'Bandwidth' and armRegionName eq '<region>' and meterName eq 'Standard Data Transfer Out'` 获取客户所在区域的带宽/出站流量费率（忽略包含 `reservationTerm` 的行）。请参阅 [`resources/pricing-api-reference.md`](resources/pricing-api-reference.md#storage-egress-and-serverless-rate-lookups) 中的可运行模板。
+使用筛选条件 `serviceName eq 'Bandwidth' and armRegionName eq '<region>' and meterName eq 'Standard Data Transfer Out'` 获取客户所在区域的带宽/出口费率（忽略包含 `reservationTerm` 的行）。请参阅 [`resources/pricing-api-reference.md`](resources/pricing-api-reference.md#storage-egress-and-serverless-rate-lookups) 中可运行的模板。
 
-### 出站流量成本模型
+### 出口成本模型
 
-Azure 出站流量采用**分层定价**，并且数据源决定适用的计量项。绝不能应用单一的每 GB 固定费率——请先确定层级和数据源，再查询实时费率。
+Azure 出口采用**分层定价**，数据来源不同，适用的计量项也不同。绝不能套用单一的固定每 GB 费率——请先确定层级和来源，再查询实时费率。
 
 | 场景 | 定价来源 | 缓解措施 |
 |---|---|---|
-| 同一区域（区域内） | 免费 | 将容量和存储部署在同一区域 |
-| 互联网出站流量的第一层级 | 带宽 API：每月前 100 GB 免费（`meterName eq 'Standard Data Transfer Out'`），之后采用分层定价 | 对小规模传输进行批处理，使其控制在免费额度以内 |
-| 互联网出站流量（超出免费层级） | 带宽 API：根据每月流量分层——GB 数量越大，费率越低 | 尽量减少公共下载；分别计算每个层级区间的价格 |
-| 跨区域（区域间） | 带宽 API：`meterName eq 'Inter Region Data Transfer Out'` | 使用 OneLake 区域快捷方式 |
-| 跨云源（AWS/GCP → Fabric） | **源云平台的**出站流量计量项（AWS Data Transfer Out / GCP Network Egress），而非 Azure | 通过同一云平台的快捷方式暂存；出站流量由源云平台计费 |
-| Private Link / Private Endpoint | 标准出站流量费**加上** PE 小时费用**再加上**每 GB 的 PE 数据处理费用 | 用于满足合规要求；为全部三个组成部分编制预算 |
+| 同一区域（区域内） | 免费 | 让容量和存储保持共置 |
+| 互联网出口的第一层 | Bandwidth API：每月前 100 GB 免费（`meterName eq 'Standard Data Transfer Out'`），之后分层计费 | 将小型传输批处理到免费额度内 |
+| 互联网出口（超过免费层级） | Bandwidth API：根据每月用量分层——GB 数量越高，费率逐级降低 | 尽量减少公共下载；分别计算每个层级区间的价格 |
+| 跨区域（区域间） | Bandwidth API：`meterName eq 'Inter Region Data Transfer Out'` | 使用 OneLake 区域快捷方式 |
+| 跨云源（AWS/GCP → Fabric） | **源云**的出口计量项（AWS Data Transfer Out / GCP Network Egress），而非 Azure | 通过同云快捷方式进行暂存；出口费用由源云计收 |
+| Private Link / Private Endpoint | 标准出口费用 **加上** PE 小时费用 **加上**按 GB 计的 PE 数据处理费用 | 用于满足合规要求；需要为这三个组成部分全部编制预算 |
 
-**迁移出站流量估算**：对于一次性迁移，请按照当前各层级费率，将迁移的数据量拆分到适用的层级区间（免费 → 层级 1 → 层级 2……）中；从 AWS/GCP 迁移时，还需加上**源云平台**的出站流量费用。在 Azure 内同一区域间迁移：$0。
+**迁移出站流量估算**：对于一次性迁移，按迁移时实时的各层级费率，将迁移量分摊到适用的层级区间（免费层 → 第 1 层 → 第 2 层……），并在从 AWS/GCP 迁移时，加上**源云**的出站流量费用。同一区域内的 Azure 内部移动：$0。
 
 ---
 
@@ -373,20 +362,20 @@ Azure 出站流量采用**分层定价**，并且数据源决定适用的计量�
 └─────────────────────────────────────────────────────────────┘
 ```
 
-### Spark 密集型工作负载：Spark 自动缩放计费与标准容量对比
+### Spark 密集型工作负载：Spark 自动缩放计费与标准容量
 
-Spark 有**两种不同的计费模型**——请选择其中一种；它们不会在同一个 Spark 作业上叠加：
+Spark 有**两种不同的计费模式**——请选择其中一种；同一个 Spark 作业不能同时采用这两种模式计费：
 
-- **标准模式（按容量计费）**：Spark 从容量 SKU 中消耗 CU（支持 3 倍突发和用量平滑）。应根据一段时间内*所有*工作负载（SQL + PBI + Pipelines + Spark）的并发 CU 总和确定单个 SKU 的大小。
-- **Spark 自动缩放计费（选择加入的无服务器模式）**：Spark 作业会**从容量中卸载**，并按 Spark CU 小时通过 `autoscale for Spark Capacity Usage CU` 计量器单独计费。Spark 的突发和用量平滑功能将被**禁用**，且这些作业**不会**消耗容量 CU。这样，你便可以根据非 Spark 稳态工作负载（SQL DW + Power BI + Pipelines）确定基础容量的大小，并为 Spark 单独付费，同时设置 Spark CU 上限。
+- **标准模式（按容量计费）**：Spark 从容量 SKU 中消耗 CU（支持 3× 突发和均衡处理）。应将一个 SKU 的大小设置为能够随时间覆盖*所有*工作负载（SQL + PBI + Pipelines + Spark）的并发 CU 总和。
+- **Spark 自动缩放计费（选择加入的无服务器模式）**：Spark 作业会**从容量中卸载**，并按照 `autoscale for Spark Capacity Usage CU` 计量器，以每 Spark CU 小时单独计费。Spark 不支持突发和均衡处理，这些作业也**不会消耗容量 CU**。这样，你可以根据非 Spark 稳态工作负载（SQL DW + Power BI + Pipelines）来确定基础容量的大小，并通过设置 Spark CU 上限来独立支付 Spark 费用。
 
-请实时获取自动缩放 Spark 费率（`$/CU-hour`）——**不要重复使用基础/PAYG 费率，也绝不要硬编码费率值。**对于任何自动缩放或盈亏平衡问题，你的第一步都必须是在 shell 中运行以下获取命令，并读取 API 返回的 `retailPrice`：
+实时获取自动缩放 Spark 费率（`$/CU-hour`）——**不要重复使用基础/PAYG 费率，也绝不要硬编码数值。**对于任何自动缩放/盈亏平衡问题，你的第一步都必须是在 shell 中运行以下获取命令，并读取 API 返回的 `retailPrice`：
 
 ```bash
-curl -s "https://prices.azure.com/api/retail/prices?api-version=2023-01-01-preview&\$filter=serviceName%20eq%20'Microsoft%20Fabric'%20and%20armRegionName%20eq%20'<region>'%20and%20meterName%20eq%20'autoscale%20for%20Spark%20Capacity%20Usage%20CU'" | jq '.Items[] | select(.reservationTerm == null) | {meterName, retailPrice, unitOfMeasure, armRegionName}'
+curl -s "https://prices.azure.com/api/retail/prices?api-version=2023-01-01-preview&\$filter=serviceName%20eq%20'Microsoft Fabric'%20and%20armRegionName%20eq%20'<region>'%20and%20meterName%20eq%20'autoscale for Spark Capacity Usage CU'" | jq '.Items[] | select(.reservationTerm == null) | {meterName, retailPrice, unitOfMeasure, armRegionName}'
 ```
 
-使用返回行中的 `retailPrice` 值作为自动缩放费率。如果该区域未返回任何行，请列出并展示该区域的所有 Fabric Spark 计量器——**不要**假定、复制或重复使用基础费率。请参阅 [`resources/pricing-api-reference.md`](resources/pricing-api-reference.md#storage-egress-and-serverless-rate-lookups) 中的可运行模板。
+使用返回结果中对应行的 `retailPrice` 值作为自动缩放费率。如果该区域没有返回任何行，则列出该区域的所有 Fabric Spark 计量器并展示出来——**不要**假设、复制或重复使用基础费率。请参阅 [`resources/pricing-api-reference.md`](resources/pricing-api-reference.md#storage-egress-and-serverless-rate-lookups) 中可运行的模板。
 
 **估算公式**（Autoscale Billing 模型，使用实时费率）：
 
@@ -422,24 +411,24 @@ breakEvenHoursPerMonth          = monthlyAmortizedReservationCost ÷ (skuCUs × 
 → Express RI savings as (paygMonthlyAtFullUse − monthlyAmortizedReservationCost) ÷ paygMonthlyAtFullUse.
 ```
 
-`reservationRetailPrice`（期限总价）和 `paygCuHourRate`（`priceType eq 'Consumption'`，来自 `* Capacity Usage CU` 计量项）均来自 Retail Prices API。对于高度波动或季节性的需求，可将规模较小的 RI 基础容量与 PAYG 搭配使用，或针对可变部分使用 Spark 的 Autoscale Billing。
+`reservationRetailPrice`（期限总价）和 `paygCuHourRate`（`priceType eq 'Consumption'`，来自 `* Capacity Usage CU` 计量器）均来自 Retail Prices API。对于高度可变或具有季节性的需求，可将较小的 RI 基础容量与 PAYG 搭配使用，或针对 Spark 的可变部分使用 Autoscale Billing。
 
 ---
 
-## SKU 规模选择决策树
+## SKU 大小选择决策树
 
 ### 输入变量
 
-从用户处收集：
+向用户收集：
 
-1. 所有工作负载的**并发 CU 峰值需求**
-2. **每日平均 CU 小时数**消耗量
-3. **工作负载构成**（Spark、SQL、PBI 和其他工作负载各自所占百分比）
-4. **增长预测**（未来 12 个月预测）
+1. **所有工作负载的峰值并发 CU 需求**
+2. **每日消耗的平均 CU-hours**
+3. **工作负载构成**（Spark、SQL、PBI 及其他所占比例）
+4. **增长预测**（12 个月预测）
 5. **合规要求**（Private Link、专用容量）
-6. **预算约束**（每月上限）
+6. **预算约束**（月度上限）
 
-### 规模选择算法
+### 大小选择算法
 
 ```text
 1. Build a time-bucketed concurrent-demand curve; concurrent_CU = Σ workload CU per bucket
@@ -464,81 +453,81 @@ breakEvenHoursPerMonth          = monthlyAmortizedReservationCost ÷ (skuCUs × 
 8. If budget exceeded: recommend workload optimization or phased migration
 ```
 
-### 快速参考 SKU 选择器
+### SKU 快速参考选择器
 
-将**调整后的 CU** 代入此表——即先执行容量估算算法的第 1–5 步，计算 `sized_CU = peak_CU × (1 + growth_rate) × 1.2`，然后将该值（而非未经调整的峰值需求）映射到相应层级。安全系数和增长率已计入左侧列，因此不要再次应用。
+将 **sized CU** 输入此表——即先运行 Sizing Algorithm 的第 1–5 步，计算 `sized_CU = peak_CU × (1 + growth_rate) × 1.2`，然后将该值（**而不是**原始峰值需求）映射到相应层级。安全系数和增长率已经包含在左列中，因此不要重复应用。
 
-| 调整后的 CU（计入增长率和 1.2× 安全系数后） | 推荐的基础 SKU | 备注 |
+| Sized CU (after growth + 1.2× safety) | Recommended Base SKU | Notes |
 |---|---|---|
-| ≤ 2 CUs | F2 | 试用/超小型开发环境 |
-| 3–4 CUs | F4 | 开发/测试、小型团队 |
+| ≤ 2 CUs | F2 | 试用 / 极小型开发 |
+| 3–4 CUs | F4 | 开发/测试，小型团队 |
 | 5–8 CUs | F8 | 小型生产环境 |
 | 9–16 CUs | F16 | 中型生产环境 |
 | 17–32 CUs | F32 | 标准生产环境 |
-| 33–64 CUs | F64 | 大型生产环境、多个团队 |
+| 33–64 CUs | F64 | 大型生产环境，多团队 |
 | 65–128 CUs | F128 | 企业级 |
 | 129–256 CUs | F256 | 大型企业 |
 | 257–512 CUs | F512 | 超大型企业 |
 | 513–1024 CUs | F1024 | 多团队企业平台 |
-| 1025–2048 CUs | F2048 | 超大规模资源体系 |
-| 2049–4096 CUs | F4096 | 超大规模资源体系 |
-| 4097–8192 CUs | F8192 | 最大的单容量层级 |
-| > 8192 CUs | 多个容量 | 讨论多容量架构/工作区分区 |
+| 1025–2048 CUs | F2048 | 超大型环境 |
+| 2049–4096 CUs | F4096 | 超大规模环境 |
+| 4097–8192 CUs | F8192 | 最大单容量层级 |
+| > 8192 CUs | Multiple capacities | 讨论多容量架构 / 工作区分区 |
 
 ---
 
 ## 迁移成本工作表
 
-### 模板：向用户展示
+### 模板：呈现给用户
 
-估算迁移成本时，请使用上述 API 提供的实时数据。生成一份涵盖以下关键部分的工作表：
+估算迁移成本时，使用上述 API 中的实时数据。生成一份工作表，涵盖以下关键部分：
 
-- **标题信息**——客户/项目名称、区域、定价日期、数据源
-- **当前支出**——通过成本管理 API 获取各平台（Databricks、Synapse SQL/Spark、Power BI Premium、Storage）的实时月度成本
-- **源工作负载概况**——每日 Spark 作业数、每日 SQL DWU 小时数、Power BI SKU 利用率、管道运行次数、存储 TB 数
-- **Fabric CU 需求**——按工作负载类型划分的峰值和平均 CU 估算值及总计
-- **推荐配置**——基础 SKU（F 层级）、Spark 计费模式、RI 期限
-- **月度成本明细**——根据实时 API 价格计算的容量、Spark 自动缩放、存储和网络出口流量成本
-- **相比当前支出的节省额**——差额和百分比变化
+- **Header** — 客户/项目名称、区域、定价日期、数据来源
+- **Current Spend** — 通过 Cost Management API 获取各平台（Databricks、Synapse SQL/Spark、Power BI Premium、Storage）的实时月度成本
+- **Source Workload Profile** — 每日 Spark 作业数、每日 SQL DWU-hours、Power BI SKU 利用率、管道运行次数、存储 TB
+- **Fabric CU Demand** — 按工作负载类型及总体计算峰值和平均 CU 估算值
+- **Recommended Configuration** — 基础 SKU（F-tier）、Spark 计费模式、RI 期限
+- **Monthly Cost Breakdown** — 根据实时 API 价格计算容量、Spark autoscale、存储和网络出口的月度成本明细
+- **Savings vs. Current** — 差额和百分比变化
 
-完整的可打印模板请参阅 [`resources/cost-estimation-worksheet.md`](resources/cost-estimation-worksheet.md)。
+完整的可打印模板请参见 [`resources/cost-estimation-worksheet.md`](resources/cost-estimation-worksheet.md)。
 
 ---
 
-## 必须 / 建议 / 避免
+## 必须 / 优先 / 避免
 
-### 必须执行
-- **始终获取比较双方的实时价格。**目标（Fabric）价格来自 Azure 零售价格 API（`prices.azure.com`）；源平台价格来自该平台的实时计费/价格 API 或客户的实际账单。切勿为任一方硬编码金额。
-- **切勿仅根据启发式转换就最终确定 SKU 或承诺成本。**将所有*跨平台* vCore→CU 和 DWU→CU 映射仅视为*试点验证输入*（Fabric 内部的 1 CU = 2 Spark vCores 比率已有文档说明，但源引擎与 Fabric 之间的等效关系并无文档依据）。将通过启发式方法得出的数值标记为初步估算，并要求先运行试点工作负载（使用容量指标应用测量 CU 消耗量），再确定任何最终容量规格或购买 RI。
-- **检测客户所在区域**，可从其现有 Fabric 容量中获取，或明确询问——价格因区域而异
-- 当客户拥有 Azure 订阅访问权限时，**通过 Azure 成本管理 API 获取当前支出**——以此建立比较基准
-- 估算前**始终询问源工作负载概况**——切勿假设工作负载规模
-- **包括所有成本维度**——计算（CU）、存储、网络出口流量以及所有高级功能（Private Link、BCDR）
-- **明确说明数据源**——区域、货币、API 查询日期，以及用于验证的 Azure 定价计算器链接
-- 当 Spark 占 CU 需求的 50% 以上时，**单独计算 Spark 自动缩放计费**——在该模式下，Spark 将从容量中卸载并单独计费；不要将其合并到基础容量中
-- 在选择 SKU 前，对峰值 CU 需求**应用 1.2× 安全系数**
-- **包括预留实例分析**——针对推荐的 SKU 展示 PAYG 与 1 年期、3 年期方案的比较
-- **展示成本工作表模板**，其中所有行项目均使用实时数据填写
+### 必须做到
+- **始终获取实时定价——比较双方都要获取。** 目标平台（Fabric）的价格来自 Azure Retail Prices API（`prices.azure.com`）；源平台的价格来自该平台的实时计费/价格 API 或客户的实际发票。绝不要为任一方硬编码美元金额。
+- **绝不要仅根据启发式换算最终确定 SKU 或承诺成本。** 将所有*跨平台* vCore→CU 和 DWU→CU 映射视为*仅用于试点验证的输入*（Fabric 内部的 1 CU = 2 Spark vCores 比率已有文档记录，但源引擎 → Fabric 的等价关系尚未确定）。将基于启发式方法得出的数字标记为初步估算，并要求使用试点工作负载（通过 Capacity Metrics 应用测量 CU 消耗），然后再进行任何最终规模确定或 RI 购买。
+- **从客户现有的 Fabric capacity 中检测客户所在区域，或明确询问客户**——价格因区域而异
+- **当客户拥有 Azure 订阅访问权限时，通过 Azure Cost Management API 获取当前支出**——为比较建立基线
+- **在进行估算前始终询问源工作负载配置**——绝不要假设工作负载规模
+- **包含所有成本维度**——计算（CU）、存储、网络出口，以及任何高级功能（Private Link、BCDR）
+- **明确说明数据来源**——区域、货币、API 查询日期，并提供 Azure Pricing Calculator 链接以供验证
+- **当 Spark 占 CU 需求超过 50% 时，单独核算 Autoscale Billing for Spark**——在该模型下，Spark 会从容量中卸载出来并单独计费；不要将其计入基础容量
+- **在选择 SKU 前，将峰值 CU 需求乘以 1.2 的安全系数**
+- **包含 Reserved Instance 分析**——针对推荐 SKU，展示 PAYG、1-year 和 3-year 的比较
+- **提供迁移成本工作表模板**，并使用实时数据填写所有明细项目
 
-### 推荐
-- **对于以 Spark 为主的工作负载，使用 Autoscale Billing for Spark** — 将 Spark 从容量中卸载并单独计费，避免为了突发式 Spark 作业而过度预配基础 SKU（在此模型下，Spark 会禁用突发与平滑机制）
-- **预留实例基础容量 + Autoscale Billing for Spark**，将其作为以 Spark 为主的混合工作负载的默认建议
-- **对于现有 ADLS Gen2 数据，优先使用 OneLake 快捷方式而非复制数据** — 避免产生双重存储成本
-- **将容量和存储部署在同一 Azure 区域** — 消除跨区域出站流量费用
-- **存在预算限制时采用分阶段迁移** — 从 F8/F16 开始，并逐步扩容
-- **迁移后每月监控利用率** — 仅在获得 30 天以上的实际使用数据后才建议使用 RI
-- **在估算中考虑工作负载平滑机制** — Fabric 会在约 5–64 分钟内平滑交互式突发负载，并在最长 24 小时内平滑后台作业；使用 Autoscale Billing 时，Spark 会**禁用平滑机制**。该机制会重新分配突发负载，但不会降低稳定状态下的并发需求。
+### 优先
+- **针对以 Spark 为主的工作负载使用 Autoscale Billing for Spark** — 将 Spark 从容量中卸载出来并单独计费，避免为了突发性 Spark 作业而过度预配基础 SKU（在此模型下，Spark 禁用突发和负载平滑）
+- 对于混合型、以 Spark 为主的工作负载，默认建议使用 **Reserved Instance 基础容量 + Autoscale Billing for Spark**
+- 对现有 ADLS Gen2 数据，优先使用 **OneLake Shortcuts 而非复制数据** — 避免双重存储成本
+- **将容量和存储置于同一 Azure 区域** — 消除跨区域出口流量
+- 在预算受限时采用**分阶段迁移**方案 — 从 F8/F16 开始，然后逐步扩展
+- 迁移后进行**每月利用率监控** — 只有在获得 30 天以上的实际使用数据后，才建议使用 RI
+- 在估算中考虑**工作负载平滑** — Fabric 会将交互式突发负载平滑到约 5–64 分钟内，并将后台作业平滑到最长 24 小时；**Autoscale Billing 下的 Spark 禁用平滑**。它会重新分配突发负载，但不会降低稳态下的并发需求。
 
 ### 避免
-- **不要硬编码价格** — 始终使用实时来源（Fabric 使用 Azure Retail Prices API；源平台使用其价格 API 或实际账单来确定当前支出）；硬编码值会过时
-- **不要为没有公开价格 API 的平台虚构价格**（Databricks DBU、Snowflake credits、Teradata）— 使用客户的实际用量/账单或官方定价页面，并注明来源
-- **不要在未说明来源和日期的情况下引用价格** — 始终注明“来自截至 [date] 的 Azure Retail Prices API”
-- **在稳定状态尚未确定前，不要建议 3 年期 RI** — 等待工作负载模式得到验证（至少 3 个月）
-- **不要仅根据 Spark 峰值来确定容量大小** — 要么将 Spark 纳入并发 CU 总量（标准模式），要么通过 Autoscale Billing for Spark 将其卸载；基础 SKU 用于承载非 Spark 的稳定状态负载
-- **不要忽略 Power BI 的 CU 消耗** — 语义模型刷新和交互式查询会消耗大量 CU
-- **不要遗漏多区域或混合架构的网络出站流量费用**
-- **不要混淆 CU 和 vCore** — CU 是 Fabric 的统一计费单位；vCore 是 Spark 执行资源。在 Fabric Spark 中，vCore→CU 比率已有*文档说明*（1 CU = 2 Spark vCores，请参阅 Spark CU 映射部分），因此从 Fabric 池节点到 CU 的换算是确定的。需要采用启发式方法的是**跨平台**等效换算，即将源引擎（Databricks/Synapse/EMR）的 vCore 映射为 Fabric CU；在确定 SKU 大小之前，必须通过试点验证该映射
-- **不要跳过 Cost Management API 检查** — 如果用户拥有 Azure 访问权限，应始终以编程方式确定其当前的基准支出
+- **不要硬编码价格** — 始终使用实时数据源（Fabric 使用 Azure Retail Prices API；当前支出使用源平台的价格 API 或实际账单）；硬编码的值会过时
+- **不要为没有公开价格 API 的平台虚构价格**（Databricks DBU、Snowflake credits、Teradata）— 使用客户的实际使用数据/账单或官方定价页面，并注明来源
+- **不要在未注明来源和日期的情况下引用价格** — 始终包含 "from Azure Retail Prices API as of [date]"
+- **不要在稳态工作负载尚未建立的情况下推荐 3-year RI** — 等待工作负载模式得到验证（至少 3 个月）
+- **不要仅根据 Spark 峰值来确定容量大小** — 要么将 Spark 纳入并发 CU 总和（标准方式），要么通过 Autoscale Billing for Spark 将其卸载；基础 SKU 覆盖非 Spark 的稳态需求
+- **不要忽略 Power BI CU 消耗** — 语义模型刷新和交互式查询会消耗大量 CU
+- **不要忘记多区域或混合架构中的网络出口流量**
+- **不要混淆 CU 和 vCore** — CU 是 Fabric 的统一计费单位；vCore 是 Spark 的执行资源。在 Fabric Spark 中，vCore→CU 的比例是**有文档说明的**（1 CU = 2 Spark vCore，参见 Spark CU Mapping 部分），因此 Fabric 池节点 → CU 的换算是确定性的。具有启发性的是**跨平台**等效关系 — 将源引擎的 vCore（Databricks/Synapse/EMR）映射为 Fabric CU — 在确定 SKU 大小之前，必须通过试点进行验证
+- **不要跳过 Cost Management API 检查** — 如果用户拥有 Azure 访问权限，始终通过编程方式确定其当前基线支出
 
 ---
 
@@ -546,13 +535,13 @@ breakEvenHoursPerMonth          = monthlyAmortizedReservationCost ÷ (skuCUs × 
 
 ### 示例 1：Databricks 迁移成本估算
 
-**用户提示词**：“我有 5 个 Databricks Spark 作业，每天在 4×D8s_v5 集群上各运行约 3 小时，此外还有一个 Power BI P1 和 2TB 的 Delta 表。迁移到 Fabric 后需要多少费用？”
+**用户提示**：“我每天运行 5 个 Databricks Spark 作业，每个作业使用 4×D8s_v5 集群运行约 3 小时，此外还有一个 Power BI P1 和 2TB Delta 表。在 Fabric 中这需要多少成本？”
 
-**智能体工作流**：
-1. 检测区域（询问用户，或通过 `GET /v1/capacities` 或 ARM 检查现有容量 — 请参阅 [§ Fabric 容量发现](resources/pricing-api-reference.md#3-fabric-capacity-discovery-fabric-rest--arm)）
+**代理工作流**：
+1. 检测区域（询问用户，或通过 `GET /v1/capacities` 或 ARM 检查现有容量 — 参见 [§ Fabric capacity discovery](resources/pricing-api-reference.md#3-fabric-capacity-discovery-fabric-rest--arm)）
 2. 通过 [Cost Management API](resources/pricing-api-reference.md#2-azure-cost-management-api-auth-required) 获取当前 Databricks 支出
-3. 使用 [Retail Prices 分页模式](resources/pricing-api-reference.md#pagination)获取实时 Fabric 定价
-4. 计算 CU 需求并提供工作表
+3. 使用 [Retail Prices 分页模式](resources/pricing-api-reference.md#pagination) 获取实时 Fabric 定价
+4. 计算 CU 需求并展示工作表
 
 **CU 计算逻辑**：
 ```text
@@ -568,15 +557,15 @@ Recommended config (Autoscale Billing for Spark option):
   Total = (Base RI ÷ 12) + Spark Autoscale + Storage
 ```
 
-**价格查询**：使用 `armSkuName eq 'Fabric_Capacity_CU_Hour'` + `armRegionName eq '<region>'` + `meterName eq 'Fabric Capacity CU'` 筛选零售价格 API。`reservationTerm` **是**可筛选的 OData 字段，因此可以直接使用 `reservationTerm eq '1 Year'` 获取 1 年期数据行（或者从返回的每一行中读取该字段）——将该期限总价 ÷ 12 × 64 CUs 进行摊销。Spark 费率使用 `meterName eq 'autoscale for Spark Capacity Usage CU'`，存储费率使用 `meterName eq 'OneLake Storage Hot Data Stored'`。有关完整的分页和筛选模式，请参阅 [pricing-api-reference.md](resources/pricing-api-reference.md)。
+**价格查询**：使用 `armSkuName eq 'Fabric_Capacity_CU_Hour'` + `armRegionName eq '<region>'` + `meterName eq 'Fabric Capacity CU'` 对 Retail Prices API 进行筛选。`reservationTerm` **是**可筛选的 OData 字段，因此可以直接使用 `reservationTerm eq '1 Year'` 拉取 1 年期记录（或者从每条返回的记录中读取该字段）——将该期限总价 ÷ 12 × 64 CUs 进行摊销。对于 Spark 费率，使用 `meterName eq 'autoscale for Spark Capacity Usage CU'`；对于存储，使用 `meterName eq 'OneLake Storage Hot Data Stored'`。完整的分页和筛选模式请参阅 [pricing-api-reference.md](resources/pricing-api-reference.md)。
 
 ### 示例 2：Synapse SQL DW 迁移
 
-**用户提示**：“我们每天运行 Synapse DW1000c 18 小时，并拥有 5TB 的数据仓库数据。”
+**用户提示**："我们每天运行 Synapse DW1000c 18 小时，并且有 5TB 的仓库数据。"
 
-**代理工作流**：
+**Agent 工作流**：
 1. 通过 [成本管理 API](resources/pricing-api-reference.md#2-azure-cost-management-api-auth-required) 获取当前 Synapse 支出（筛选条件：`"Azure Synapse Analytics"`）
-2. 使用客户所在区域的[零售价格分页模式](resources/pricing-api-reference.md#pagination)获取实时 Fabric 定价
+2. 使用适用于客户所在区域的 [Retail Prices 分页模式](resources/pricing-api-reference.md#pagination) 获取实时 Fabric 定价
 3. 计算 CU 需求并推荐 SKU
 
 **CU 计算逻辑**：
