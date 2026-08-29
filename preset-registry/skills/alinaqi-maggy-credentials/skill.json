@@ -1,0 +1,25 @@
+{
+  "id": "alinaqi-maggy-credentials",
+  "name": "credentials",
+  "description": "Centralized API key management from Access.txt",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alinaqi",
+  "install_path": ".claude/skills/credentials/SKILL.md",
+  "source": {
+    "repo": "alinaqi/maggy",
+    "url": "https://github.com/alinaqi/maggy/blob/main/skills/credentials/SKILL.md",
+    "path": "skills/credentials/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-29T16:43:17.665Z",
+    "stars": 705,
+    "language": "Python",
+    "pushed_at": "2026-08-18T06:59:51Z",
+    "license": "MIT"
+  }
+}

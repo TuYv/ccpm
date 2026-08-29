@@ -1,0 +1,25 @@
+{
+  "id": "alinaqi-maggy-database-schema",
+  "name": "database-schema",
+  "description": "Schema awareness - read before coding, type generation, prevent column errors",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alinaqi",
+  "install_path": ".claude/skills/database-schema/SKILL.md",
+  "source": {
+    "repo": "alinaqi/maggy",
+    "url": "https://github.com/alinaqi/maggy/blob/main/skills/database-schema/SKILL.md",
+    "path": "skills/database-schema/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-29T16:43:17.936Z",
+    "stars": 705,
+    "language": "Python",
+    "pushed_at": "2026-08-18T06:59:51Z",
+    "license": "MIT"
+  }
+}

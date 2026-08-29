@@ -1,0 +1,26 @@
+{
+  "id": "alinaqi-maggy-cloudflare-d1",
+  "name": "cloudflare-d1",
+  "description": "Cloudflare D1 SQLite database with Workers, Drizzle ORM, migrations",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alinaqi",
+  "install_path": ".claude/skills/cloudflare-d1/SKILL.md",
+  "source": {
+    "repo": "alinaqi/maggy",
+    "url": "https://github.com/alinaqi/maggy/blob/main/skills/cloudflare-d1/SKILL.md",
+    "path": "skills/cloudflare-d1/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-29T16:43:16.704Z",
+    "stars": 705,
+    "language": "Python",
+    "pushed_at": "2026-08-18T06:59:51Z",
+    "license": "MIT"
+  },
+  "summary_zh": "面向 Cloudflare Workers 的托管 SQLite 数据库，适合用 Drizzle ORM 管理数据和迁移，快速构建边缘应用。"
+}

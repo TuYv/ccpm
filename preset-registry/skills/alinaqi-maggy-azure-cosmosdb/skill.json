@@ -1,0 +1,26 @@
+{
+  "id": "alinaqi-maggy-azure-cosmosdb",
+  "name": "azure-cosmosdb",
+  "description": "Azure Cosmos DB partition keys, consistency levels, change feed, SDK patterns",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alinaqi",
+  "install_path": ".claude/skills/azure-cosmosdb/SKILL.md",
+  "source": {
+    "repo": "alinaqi/maggy",
+    "url": "https://github.com/alinaqi/maggy/blob/main/skills/azure-cosmosdb/SKILL.md",
+    "path": "skills/azure-cosmosdb/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-29T16:43:16.322Z",
+    "stars": 705,
+    "language": "Python",
+    "pushed_at": "2026-08-18T06:59:51Z",
+    "license": "MIT"
+  },
+  "summary_zh": "这是一套面向 Azure Cosmos DB 的开发实践指南，帮助开发者合理设计分区键、选择一致性级别并利用变更源构建高性能、可扩展的应用。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "alinaqi-maggy-aeo-optimization",
+  "name": "aeo-optimization",
+  "description": "AI Engine Optimization - semantic triples, page templates, content clusters for AI citations",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alinaqi",
+  "install_path": ".claude/skills/aeo-optimization/SKILL.md",
+  "source": {
+    "repo": "alinaqi/maggy",
+    "url": "https://github.com/alinaqi/maggy/blob/main/skills/aeo-optimization/SKILL.md",
+    "path": "skills/aeo-optimization/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-29T16:43:15.289Z",
+    "stars": 705,
+    "language": "Python",
+    "pushed_at": "2026-08-18T06:59:51Z",
+    "license": "MIT"
+  },
+  "summary_zh": "面向 AI 引擎优化的内容策划工具，通过语义三元组、页面模板和内容集群，帮助网站提升被 AI 理解和引用的机会。"
+}

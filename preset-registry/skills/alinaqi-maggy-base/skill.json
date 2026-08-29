@@ -1,0 +1,26 @@
+{
+  "id": "alinaqi-maggy-base",
+  "name": "base",
+  "description": "Universal coding patterns, constraints, TDD workflow, atomic todos",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alinaqi",
+  "install_path": ".claude/skills/base/SKILL.md",
+  "source": {
+    "repo": "alinaqi/maggy",
+    "url": "https://github.com/alinaqi/maggy/blob/main/skills/base/SKILL.md",
+    "path": "skills/base/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-29T16:43:16.441Z",
+    "stars": 705,
+    "language": "Python",
+    "pushed_at": "2026-08-18T06:59:51Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一套通用的编码规范与约束，结合 TDD 流程和原子化任务，帮助开发者更稳定、高效地完成软件开发。"
+}

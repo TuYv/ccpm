@@ -1,0 +1,25 @@
+{
+  "id": "alinaqi-maggy-posthog-analytics",
+  "name": "posthog-analytics",
+  "description": "PostHog analytics, event tracking, feature flags, dashboards",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alinaqi",
+  "install_path": ".claude/skills/posthog-analytics/SKILL.md",
+  "source": {
+    "repo": "alinaqi/maggy",
+    "url": "https://github.com/alinaqi/maggy/blob/main/skills/posthog-analytics/SKILL.md",
+    "path": "skills/posthog-analytics/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-29T16:43:20.005Z",
+    "stars": 705,
+    "language": "Python",
+    "pushed_at": "2026-08-18T06:59:51Z",
+    "license": "MIT"
+  }
+}

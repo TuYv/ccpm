@@ -1,0 +1,25 @@
+{
+  "id": "alinaqi-maggy-ticket-craft",
+  "name": "ticket-craft",
+  "description": "Create Jira/Asana/Linear tickets optimized for Claude Code execution - AI-native ticket writing",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alinaqi",
+  "install_path": ".claude/skills/ticket-craft/SKILL.md",
+  "source": {
+    "repo": "alinaqi/maggy",
+    "url": "https://github.com/alinaqi/maggy/blob/main/skills/ticket-craft/SKILL.md",
+    "path": "skills/ticket-craft/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-29T16:43:21.977Z",
+    "stars": 705,
+    "language": "Python",
+    "pushed_at": "2026-08-18T06:59:51Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "alinaqi-maggy-maggy",
+  "name": "maggy",
+  "description": "Maggy is a local AI engineering command center. AI-prioritized inbox across issue trackers (GitHub Issues/Asana), one-click TDD execute with iCPG context enrichment, daily competitor intelligence briefing.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alinaqi",
+  "install_path": ".claude/skills/maggy/SKILL.md",
+  "source": {
+    "repo": "alinaqi/maggy",
+    "url": "https://github.com/alinaqi/maggy/blob/main/skills/maggy/SKILL.md",
+    "path": "skills/maggy/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-29T16:43:19.023Z",
+    "stars": 705,
+    "language": "Python",
+    "pushed_at": "2026-08-18T06:59:51Z",
+    "license": "MIT"
+  }
+}

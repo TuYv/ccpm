@@ -1,0 +1,26 @@
+{
+  "id": "alinaqi-maggy-aws-aurora",
+  "name": "aws-aurora",
+  "description": "AWS Aurora Serverless v2, RDS Proxy, Data API, connection pooling",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alinaqi",
+  "install_path": ".claude/skills/aws-aurora/SKILL.md",
+  "source": {
+    "repo": "alinaqi/maggy",
+    "url": "https://github.com/alinaqi/maggy/blob/main/skills/aws-aurora/SKILL.md",
+    "path": "skills/aws-aurora/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-29T16:43:16.051Z",
+    "stars": 705,
+    "language": "Python",
+    "pushed_at": "2026-08-18T06:59:51Z",
+    "license": "MIT"
+  },
+  "summary_zh": "面向 AWS Aurora Serverless v2 的数据库访问与连接管理方案，适合弹性扩缩容和高并发应用。"
+}

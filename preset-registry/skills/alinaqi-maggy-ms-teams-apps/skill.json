@@ -1,0 +1,25 @@
+{
+  "id": "alinaqi-maggy-ms-teams-apps",
+  "name": "ms-teams-apps",
+  "description": "Microsoft Teams bots and AI agents - Claude/OpenAI, Adaptive Cards, Graph API",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alinaqi",
+  "install_path": ".claude/skills/ms-teams-apps/SKILL.md",
+  "source": {
+    "repo": "alinaqi/maggy",
+    "url": "https://github.com/alinaqi/maggy/blob/main/skills/ms-teams-apps/SKILL.md",
+    "path": "skills/ms-teams-apps/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-29T16:43:19.574Z",
+    "stars": 705,
+    "language": "Python",
+    "pushed_at": "2026-08-18T06:59:51Z",
+    "license": "MIT"
+  }
+}

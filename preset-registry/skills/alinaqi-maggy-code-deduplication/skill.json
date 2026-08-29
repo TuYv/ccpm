@@ -1,0 +1,26 @@
+{
+  "id": "alinaqi-maggy-code-deduplication",
+  "name": "code-deduplication",
+  "description": "Prevent semantic code duplication with capability index and check-before-write",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alinaqi",
+  "install_path": ".claude/skills/code-deduplication/SKILL.md",
+  "source": {
+    "repo": "alinaqi/maggy",
+    "url": "https://github.com/alinaqi/maggy/blob/main/skills/code-deduplication/SKILL.md",
+    "path": "skills/code-deduplication/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-29T16:43:16.804Z",
+    "stars": 705,
+    "language": "Python",
+    "pushed_at": "2026-08-18T06:59:51Z",
+    "license": "MIT"
+  },
+  "summary_zh": "通过能力索引在写代码前检查已有实现，避免语义重复，适合规范团队协作和提升代码复用率。"
+}

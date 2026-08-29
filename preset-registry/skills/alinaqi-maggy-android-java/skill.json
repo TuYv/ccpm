@@ -1,0 +1,26 @@
+{
+  "id": "alinaqi-maggy-android-java",
+  "name": "android-java",
+  "description": "Android Java development with MVVM, ViewBinding, and Espresso testing",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alinaqi",
+  "install_path": ".claude/skills/android-java/SKILL.md",
+  "source": {
+    "repo": "alinaqi/maggy",
+    "url": "https://github.com/alinaqi/maggy/blob/main/skills/android-java/SKILL.md",
+    "path": "skills/android-java/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-29T16:43:15.723Z",
+    "stars": 705,
+    "language": "Python",
+    "pushed_at": "2026-08-18T06:59:51Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于采用 MVVM 架构和 ViewBinding 开发 Android 应用，并支持通过 Espresso 编写 UI 测试，适合需要规范架构与可靠测试的 Java 项目。"
+}

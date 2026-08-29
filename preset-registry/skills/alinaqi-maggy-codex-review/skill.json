@@ -1,0 +1,25 @@
+{
+  "id": "alinaqi-maggy-codex-review",
+  "name": "codex-review",
+  "description": "OpenAI Codex CLI code review with GPT-5.2-Codex, CI/CD integration",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alinaqi",
+  "install_path": ".claude/skills/codex-review/SKILL.md",
+  "source": {
+    "repo": "alinaqi/maggy",
+    "url": "https://github.com/alinaqi/maggy/blob/main/skills/codex-review/SKILL.md",
+    "path": "skills/codex-review/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-29T16:43:17.157Z",
+    "stars": 705,
+    "language": "Python",
+    "pushed_at": "2026-08-18T06:59:51Z",
+    "license": "MIT"
+  }
+}

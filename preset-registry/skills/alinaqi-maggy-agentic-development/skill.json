@@ -1,0 +1,26 @@
+{
+  "id": "alinaqi-maggy-agentic-development",
+  "name": "agentic-development",
+  "description": "Build AI agents with Pydantic AI (Python) and Claude SDK (Node.js)",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alinaqi",
+  "install_path": ".claude/skills/agentic-development/SKILL.md",
+  "source": {
+    "repo": "alinaqi/maggy",
+    "url": "https://github.com/alinaqi/maggy/blob/main/skills/agentic-development/SKILL.md",
+    "path": "skills/agentic-development/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-29T16:43:15.511Z",
+    "stars": 705,
+    "language": "Python",
+    "pushed_at": "2026-08-18T06:59:51Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于基于 Pydantic AI 和 Claude SDK 构建 Python、Node.js AI 智能体，适合开发自动化任务和智能应用。"
+}

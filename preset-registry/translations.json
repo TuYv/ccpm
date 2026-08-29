@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-29T12:57:17.947Z",
+  "updated_at": "2026-08-29T16:46:31.350Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -9783,9 +9783,9 @@
       "translated_at": "2026-05-20T01:00:19.684Z"
     },
     "bundle:orchestra-research-ai-research-skills": {
-      "hash": "34d510b3a2a81623",
-      "summary_zh": "专为AI研发全流程打造的一站式工具箱，打通从大模型训练、微调、压缩、评估对齐到多智能体协作的完整链路，让自主研究与模型落地更高效自动化。",
-      "translated_at": "2026-05-20T01:00:26.767Z"
+      "hash": "ab3c9c1dd53bcd10",
+      "summary_zh": "面向大模型研究与智能体开发，覆盖训练、量化、评测和协作编排，帮助团队快速搭建并迭代完整的 AI 研究流程。",
+      "translated_at": "2026-08-29T16:45:53.708Z"
     },
     "bundle:zechenzhangagi-ai-research-skills": {
       "hash": "dc15c7f7aa5564f5",
@@ -17313,9 +17313,9 @@
       "translated_at": "2026-08-17T16:26:55.916Z"
     },
     "bundle:tradermonty-claude-trading-skills": {
-      "hash": "2391070fc1f88e6b",
-      "summary_zh": "面向股票、期货和加密市场的一站式交易研究合集，串联选股、行情研判、策略回测与风控，帮助系统化发现并验证交易机会。",
-      "translated_at": "2026-08-10T20:03:59.035Z"
+      "hash": "02af8f41dd0f4d8a",
+      "summary_zh": "这是一套面向美股、加密货币和量化交易的研究与决策工具集，覆盖筛选、回测、风险控制和市场研判，帮助交易者把分散分析串成完整流程。",
+      "translated_at": "2026-08-29T16:45:53.568Z"
     },
     "bundle:jakubkrehel-skills": {
       "hash": "05c072e8239c443d",
@@ -17493,9 +17493,9 @@
       "translated_at": "2026-08-03T05:00:23.574Z"
     },
     "bundle:avelikiy-great-cto": {
-      "hash": "e47f236da95f4189",
-      "summary_zh": "一套面向CTO的全流程研发决策与协作工具集，把需求澄清、架构评审、成本评估到交付复盘串成可控、可复用的工程流程。",
-      "translated_at": "2026-08-03T05:00:26.140Z"
+      "hash": "1ab0d866d5e9f5c4",
+      "summary_zh": "面向 CTO 的全流程工程决策合集，把需求从探索、设计推进到架构评审与成本落地，降低风险并提升交付质量。",
+      "translated_at": "2026-08-29T16:46:00.899Z"
     },
     "bundle:eduardo-sl-go-agent-skills": {
       "hash": "3662b7901e2c5474",
@@ -43754,9 +43754,9 @@
       "translated_at": "2026-08-19T12:48:14.698Z"
     },
     "bundle:luongnv89-asm": {
-      "hash": "0254e1b3d3c5200a",
-      "summary_zh": "这是一套用于发现、验证和发布 Agent Skills 的工具集，帮助将零散能力整理成可安装、可复用的技能包。",
-      "translated_at": "2026-08-19T14:06:21.475Z"
+      "hash": "807161abf7f2e7bf",
+      "summary_zh": "这是一套围绕 Agent Skills 发现、编写、校验与发布的工具集，帮助快速组装可安装的技能包，并验证其规范与发布流程。",
+      "translated_at": "2026-08-29T16:45:53.324Z"
     },
     "skill:luongnv89-asm-actual-dir-name": {
       "hash": "cb2bea922c33b332",
@@ -51090,6 +51090,81 @@
     "content:jasoncolapietro-suede-creator-skills-suede-ops-assessment": {
       "hash": "2fe1d931526203e1",
       "translated_at": "2026-08-29T12:40:21.867Z"
+    },
+    "bundle:alinaqi-maggy": {
+      "hash": "334fb54255644468",
+      "summary_zh": "这是一套面向 AI 原生软件开发的全栈技能合集，覆盖从需求、编码、测试到云端部署与增长优化，帮助团队用统一规范更快交付可靠产品。",
+      "translated_at": "2026-08-29T16:45:57.277Z"
+    },
+    "skill:alinaqi-maggy-agent-teams": {
+      "hash": "4ae6348d382d9479",
+      "summary_zh": "为 Claude Code 提供团队协作式开发能力，强制执行严格的 TDD 流程，适合多人或多智能体协同编程。",
+      "translated_at": "2026-08-29T16:46:03.872Z"
+    },
+    "skill:alinaqi-maggy-aeo-optimization": {
+      "hash": "6a4b8e2822752273",
+      "summary_zh": "面向 AI 引擎优化的内容策划工具，通过语义三元组、页面模板和内容集群，帮助网站提升被 AI 理解和引用的机会。",
+      "translated_at": "2026-08-29T16:46:04.994Z"
+    },
+    "skill:alinaqi-maggy-agentic-development": {
+      "hash": "25aafd1865d27285",
+      "summary_zh": "用于基于 Pydantic AI 和 Claude SDK 构建 Python、Node.js AI 智能体，适合开发自动化任务和智能应用。",
+      "translated_at": "2026-08-29T16:46:06.519Z"
+    },
+    "skill:alinaqi-maggy-ai-models": {
+      "hash": "9948ee13dc66348e",
+      "summary_zh": "汇总 Claude、OpenAI、Gemini、ElevenLabs、Replicate 等最新 AI 模型信息，方便开发者选型和接入。",
+      "translated_at": "2026-08-29T16:46:06.574Z"
+    },
+    "skill:alinaqi-maggy-android-kotlin": {
+      "hash": "6f5c63081e8282f1",
+      "summary_zh": "用于构建现代 Android 应用的 Kotlin 开发项目，适合采用协程、Jetpack Compose、Hilt 和 MockK 完成高效开发与测试。",
+      "translated_at": "2026-08-29T16:46:08.432Z"
+    },
+    "skill:alinaqi-maggy-android-java": {
+      "hash": "4e4d71088f7e1177",
+      "summary_zh": "用于采用 MVVM 架构和 ViewBinding 开发 Android 应用，并支持通过 Espresso 编写 UI 测试，适合需要规范架构与可靠测试的 Java 项目。",
+      "translated_at": "2026-08-29T16:46:08.805Z"
+    },
+    "skill:alinaqi-maggy-autonomous-testing": {
+      "hash": "d046341adae87cbe",
+      "summary_zh": "这是一个面向 Claude Code 的自主式 AI 工程指挥中心，适合搭建和管理自动化软件测试与开发流程。",
+      "translated_at": "2026-08-29T16:46:11.209Z"
+    },
+    "skill:alinaqi-maggy-aws-aurora": {
+      "hash": "094cbd3495eeaf75",
+      "summary_zh": "面向 AWS Aurora Serverless v2 的数据库访问与连接管理方案，适合弹性扩缩容和高并发应用。",
+      "translated_at": "2026-08-29T16:46:11.349Z"
+    },
+    "skill:alinaqi-maggy-aws-dynamodb": {
+      "hash": "58535cb351de20cc",
+      "summary_zh": "这是一个面向 AWS DynamoDB 的单表设计与 GSI 实践项目，帮助开发者用 TypeScript 或 Python SDK v3 构建高效、可扩展的数据访问方案。",
+      "translated_at": "2026-08-29T16:46:12.615Z"
+    },
+    "skill:alinaqi-maggy-base": {
+      "hash": "806a2179322aa2e0",
+      "summary_zh": "一套通用的编码规范与约束，结合 TDD 流程和原子化任务，帮助开发者更稳定、高效地完成软件开发。",
+      "translated_at": "2026-08-29T16:46:14.582Z"
+    },
+    "skill:alinaqi-maggy-azure-cosmosdb": {
+      "hash": "da81e410efc50032",
+      "summary_zh": "这是一套面向 Azure Cosmos DB 的开发实践指南，帮助开发者合理设计分区键、选择一致性级别并利用变更源构建高性能、可扩展的应用。",
+      "translated_at": "2026-08-29T16:46:14.741Z"
+    },
+    "skill:alinaqi-maggy-build-in-public": {
+      "hash": "d046341adae87cbe",
+      "summary_zh": "一套基于 Claude Code 的自主式 AI 工程指挥中心，适合自动化管理和协作开发任务。",
+      "translated_at": "2026-08-29T16:46:15.558Z"
+    },
+    "skill:alinaqi-maggy-code-deduplication": {
+      "hash": "ffc1a7a9ee9ae5b8",
+      "summary_zh": "通过能力索引在写代码前检查已有实现，避免语义重复，适合规范团队协作和提升代码复用率。",
+      "translated_at": "2026-08-29T16:46:17.047Z"
+    },
+    "skill:alinaqi-maggy-cloudflare-d1": {
+      "hash": "df82e8319eaba0f0",
+      "summary_zh": "面向 Cloudflare Workers 的托管 SQLite 数据库，适合用 Drizzle ORM 管理数据和迁移，快速构建边缘应用。",
+      "translated_at": "2026-08-29T16:46:17.241Z"
     }
   }
 }

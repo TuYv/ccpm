@@ -1,0 +1,25 @@
+{
+  "id": "alinaqi-maggy-code-review",
+  "name": "code-review",
+  "description": "Mandatory code reviews via /code-review before commits and deploys",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alinaqi",
+  "install_path": ".claude/skills/code-review/SKILL.md",
+  "source": {
+    "repo": "alinaqi/maggy",
+    "url": "https://github.com/alinaqi/maggy/blob/main/skills/code-review/SKILL.md",
+    "path": "skills/code-review/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-29T16:43:17.044Z",
+    "stars": 705,
+    "language": "Python",
+    "pushed_at": "2026-08-18T06:59:51Z",
+    "license": "MIT"
+  }
+}

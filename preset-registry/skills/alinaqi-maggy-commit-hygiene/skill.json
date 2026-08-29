@@ -1,0 +1,25 @@
+{
+  "id": "alinaqi-maggy-commit-hygiene",
+  "name": "commit-hygiene",
+  "description": "Atomic commits, PR size limits, commit thresholds, stacked PRs",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alinaqi",
+  "install_path": ".claude/skills/commit-hygiene/SKILL.md",
+  "source": {
+    "repo": "alinaqi/maggy",
+    "url": "https://github.com/alinaqi/maggy/blob/main/skills/commit-hygiene/SKILL.md",
+    "path": "skills/commit-hygiene/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-29T16:43:17.275Z",
+    "stars": 705,
+    "language": "Python",
+    "pushed_at": "2026-08-18T06:59:51Z",
+    "license": "MIT"
+  }
+}

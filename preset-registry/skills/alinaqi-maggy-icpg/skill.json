@@ -1,0 +1,25 @@
+{
+  "id": "alinaqi-maggy-icpg",
+  "name": "icpg",
+  "description": "Intent-Augmented Code Property Graph — tracks WHY code exists via ReasonNodes with formal contracts, 6-dimension drift detection, and 3 canonical pre-task queries for autonomous development",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alinaqi",
+  "install_path": ".claude/skills/icpg/SKILL.md",
+  "source": {
+    "repo": "alinaqi/maggy",
+    "url": "https://github.com/alinaqi/maggy/blob/main/skills/icpg/SKILL.md",
+    "path": "skills/icpg/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-29T16:43:18.576Z",
+    "stars": 705,
+    "language": "Python",
+    "pushed_at": "2026-08-18T06:59:51Z",
+    "license": "MIT"
+  }
+}

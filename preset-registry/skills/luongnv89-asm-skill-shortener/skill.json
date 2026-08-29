@@ -1,0 +1,25 @@
+{
+  "id": "luongnv89-asm-skill-shortener",
+  "name": "skill-shortener",
+  "description": "Refactor a too-long SKILL.md by progressive disclosure: measure token cost, classify every section KEEP/CUT/MOVE, shorten the body into references/ and scripts/, verify nothing was lost. Don't use for authoring new skills, eval retrofits, or prose.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "luongnv89",
+  "install_path": ".claude/skills/skill-shortener/SKILL.md",
+  "source": {
+    "repo": "luongnv89/asm",
+    "url": "https://github.com/luongnv89/asm/blob/main/skills/skill-shortener/SKILL.md",
+    "path": "skills/skill-shortener/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-29T16:41:37.402Z",
+    "stars": 902,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-29T15:19:24Z",
+    "license": "MIT"
+  }
+}

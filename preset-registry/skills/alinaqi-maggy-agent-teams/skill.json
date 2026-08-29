@@ -1,0 +1,26 @@
+{
+  "id": "alinaqi-maggy-agent-teams",
+  "name": "agent-teams",
+  "description": "Claude Code Agent Teams - default team-based development with strict TDD pipeline enforcement",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alinaqi",
+  "install_path": ".claude/skills/agent-teams/SKILL.md",
+  "source": {
+    "repo": "alinaqi/maggy",
+    "url": "https://github.com/alinaqi/maggy/blob/main/skills/agent-teams/SKILL.md",
+    "path": "skills/agent-teams/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-29T16:43:15.398Z",
+    "stars": 705,
+    "language": "Python",
+    "pushed_at": "2026-08-18T06:59:51Z",
+    "license": "MIT"
+  },
+  "summary_zh": "为 Claude Code 提供团队协作式开发能力，强制执行严格的 TDD 流程，适合多人或多智能体协同编程。"
+}

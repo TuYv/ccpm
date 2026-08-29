@@ -1,0 +1,26 @@
+{
+  "id": "alinaqi-maggy-ai-models",
+  "name": "ai-models",
+  "description": "Latest AI models reference - Claude, OpenAI, Gemini, Eleven Labs, Replicate",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alinaqi",
+  "install_path": ".claude/skills/ai-models/SKILL.md",
+  "source": {
+    "repo": "alinaqi/maggy",
+    "url": "https://github.com/alinaqi/maggy/blob/main/skills/ai-models/SKILL.md",
+    "path": "skills/ai-models/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-29T16:43:15.619Z",
+    "stars": 705,
+    "language": "Python",
+    "pushed_at": "2026-08-18T06:59:51Z",
+    "license": "MIT"
+  },
+  "summary_zh": "汇总 Claude、OpenAI、Gemini、ElevenLabs、Replicate 等最新 AI 模型信息，方便开发者选型和接入。"
+}

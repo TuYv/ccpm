@@ -1,0 +1,25 @@
+{
+  "id": "alinaqi-maggy-cross-agent-delegation",
+  "name": "cross-agent-delegation",
+  "description": "Cross-agent task routing — Codex auto-review, Kimi delegation by complexity score (iCPG + Claude reasoning), iCPG + Mnemos mandatory for all agents",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alinaqi",
+  "install_path": ".claude/skills/cross-agent-delegation/SKILL.md",
+  "source": {
+    "repo": "alinaqi/maggy",
+    "url": "https://github.com/alinaqi/maggy/blob/main/skills/cross-agent-delegation/SKILL.md",
+    "path": "skills/cross-agent-delegation/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-29T16:43:17.789Z",
+    "stars": 705,
+    "language": "Python",
+    "pushed_at": "2026-08-18T06:59:51Z",
+    "license": "MIT"
+  }
+}

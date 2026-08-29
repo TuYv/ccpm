@@ -1,0 +1,25 @@
+{
+  "id": "alinaqi-maggy-code-graph",
+  "name": "code-graph",
+  "description": "AST-based code graph for fast symbol lookup, dependency analysis, and blast radius via codebase-memory-mcp MCP server",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alinaqi",
+  "install_path": ".claude/skills/code-graph/SKILL.md",
+  "source": {
+    "repo": "alinaqi/maggy",
+    "url": "https://github.com/alinaqi/maggy/blob/main/skills/code-graph/SKILL.md",
+    "path": "skills/code-graph/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-29T16:43:16.931Z",
+    "stars": 705,
+    "language": "Python",
+    "pushed_at": "2026-08-18T06:59:51Z",
+    "license": "MIT"
+  }
+}

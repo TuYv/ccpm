@@ -1,0 +1,26 @@
+{
+  "id": "alinaqi-maggy-build-in-public",
+  "name": "build-in-public",
+  "description": "What started as an opinionated Claude Code setup kit is now an autonomous AI engineering command center",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alinaqi",
+  "install_path": ".claude/skills/build-in-public/SKILL.md",
+  "source": {
+    "repo": "alinaqi/maggy",
+    "url": "https://github.com/alinaqi/maggy/blob/main/skills/build-in-public/SKILL.md",
+    "path": "skills/build-in-public/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-29T16:43:16.573Z",
+    "stars": 705,
+    "language": "Python",
+    "pushed_at": "2026-08-18T06:59:51Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一套基于 Claude Code 的自主式 AI 工程指挥中心，适合自动化管理和协作开发任务。"
+}
