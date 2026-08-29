@@ -1,8 +1,8 @@
 {
   "id": "jakubkrehel-skills-break",
   "name": "break",
-  "description": "Answers \"does this survive?\" for one component. Renders it on a page in every state real use can put it in, and hands that page over as a visual report of what broke.",
-  "category": "文档写作",
+  "description": "Renders a component you choose in every state and scenario on a temporary page and stress tests it.",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,11 @@
     "url": "https://github.com/jakubkrehel/skills/blob/main/skills/break/SKILL.md",
     "path": "skills/break/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-29T16:39:51.018Z",
-    "stars": 4598,
+    "discovered_at": "2026-08-29T20:27:19.453Z",
+    "stars": 4602,
     "language": "Markdown",
-    "pushed_at": "2026-08-29T15:55:00Z",
+    "pushed_at": "2026-08-29T17:01:49Z",
     "license": "MIT"
   },
-  "summary_zh": "用于全面测试单个组件在真实使用状态下是否稳定，并生成可视化报告直观看出问题。"
+  "summary_zh": "一个组件压力测试工具，可在临时页面模拟所选组件的各种状态和场景，方便发现异常与边界问题。"
 }
