@@ -1,8 +1,8 @@
 {
   "id": "agricidaniel-banana-claude-banana",
   "name": "banana",
-  "description": "AI image generation Creative Director powered by Google Gemini Nano Banana models. Use this skill for ANY request involving image creation, editing, visual asset production, or creative direction. Triggers on: generate an image, create a photo, edit this picture, design a logo, make a banner, visual for my anything, and all /banana commands. Handles text-to-image, image editing, multi-turn creative sessions, batch workflows, and brand presets.",
-  "category": "设计创意",
+  "description": "Direct, generate, edit, compare, and review visual assets with current Google Gemini image models. Use for image creation, image editing, reference-based consistency, product and character visuals, text-bearing graphics, grounded diagrams, video-derived images, and multi-model image portfolios.",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,11 @@
     "url": "https://github.com/AgriciDaniel/banana-claude/blob/main/skills/banana/SKILL.md",
     "path": "skills/banana/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-29T23:41:48.025Z",
+    "discovered_at": "2026-08-30T02:19:20.741Z",
     "stars": 999,
     "language": "Python",
-    "pushed_at": "2026-04-13T22:21:27Z",
+    "pushed_at": "2026-08-30T01:31:44Z",
     "license": "MIT"
   },
-  "summary_zh": "基于 Gemini 的 AI 视觉创作助手，适合生成和编辑图片、设计品牌素材，并支持多轮创意与批量制作。"
+  "summary_zh": "基于 Google Gemini 图像模型，直接生成、编辑和审阅图片，适合产品、角色、图表及视频素材等视觉创作场景。"
 }

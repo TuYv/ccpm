@@ -1,7 +1,7 @@
 {
   "id": "daymade-claude-code-skills-local-conversation-history",
   "name": "local-conversation-history",
-  "description": ">- Lists recent local Claude Code, OpenAI Codex, and Kimi CLI conversations, and extracts exact recent Codex user inputs grouped by session, through bundled read-only commands. Inventory covers registered Claude archives, internal timestamps, session IDs, provenance, archive/runtime markers, and positive-only Codex writer-lock evidence. Verbatim-input mode preserves the user's wording, duplicates, chronology, and session boundaries without thematic classification. Outputs Markdown or JSON. Use w",
+  "description": ">- Entry point for local AI conversation history across providers. Routes a request to the one skill that owns it, by platform (Claude Code, OpenAI Codex, Kimi CLI) and action (read evidence vs continue interrupted work), and owns the one job none of them own alone: a single inventory spanning all three providers. Use when the provider is unknown or plural (\"our history\", \"what have I been working on\", \"which chats did I have\"), when the user wants Kimi CLI history at all, when it is unclear whe",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-claude-code/local-conversation-history/SKILL.md",
     "path": "daymade-claude-code/local-conversation-history/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-26T20:21:37.629Z",
-    "stars": 1354,
+    "discovered_at": "2026-08-30T02:17:54.874Z",
+    "stars": 1361,
     "language": "Python",
-    "pushed_at": "2026-08-26T19:14:32Z",
+    "pushed_at": "2026-08-30T00:45:49Z",
     "license": "MIT"
   },
-  "summary_zh": "用于只读查看本地 Claude Code、OpenAI Codex 和 Kimi CLI 的近期对话，并按会话提取完整的 Codex 用户输入，适合审计、回溯和整理开发记录。"
+  "summary_zh": "统一管理 Claude Code、OpenAI Codex 和 Kimi CLI 的本地对话记录，适合跨平台查找历史、了解近期工作或继续中断的任务。"
 }
