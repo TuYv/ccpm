@@ -1,7 +1,7 @@
 {
   "id": "luongnv89-asm-refresh-index",
   "name": "refresh-index",
-  "description": "Re-ingest every already-enabled repo in data/skill-index-resources.json: sync the working tree, run preindex, rebuild the catalog for verification, summarize updated/unchanged/failed/skipped, then gate commit + PR behind explicit confirmation. Use when asked to refresh the index, re-ingest indexed repos, or batch-maintain already-indexed skill sources. Don't use for adding new repos (use skill-index-updater), improving a single skill (use skill-auto-improver), or installing/updating skills on th",
+  "description": "Sync every enabled repo in the curated skill index and open a confirmation-gated PR. Use when refreshing already-indexed sources. Don't use for adding new repos, improving a single skill, or installing skills locally.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/luongnv89/asm/blob/main/skills/refresh-index/SKILL.md",
     "path": "skills/refresh-index/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-30T18:32:45.927Z",
+    "discovered_at": "2026-08-30T22:06:18.062Z",
     "stars": 902,
     "language": "TypeScript",
-    "pushed_at": "2026-08-29T20:15:49Z",
+    "pushed_at": "2026-08-30T21:53:29Z",
     "license": "MIT"
   },
-  "summary_zh": "用于批量刷新已收录的技能仓库，重新索引并核验变更结果，适合维护现有索引来源，不用于新增仓库或改进单个技能。"
+  "summary_zh": "用于同步精选技能索引中已启用的仓库，并在确认后提交更新 PR，适合批量刷新现有来源。"
 }

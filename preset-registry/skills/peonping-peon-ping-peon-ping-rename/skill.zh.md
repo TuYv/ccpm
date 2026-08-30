@@ -1,7 +1,7 @@
 ---
 name: peon-ping-rename
 description: Rename the current Claude session for peon-ping notifications and terminal tab title. Use when user wants to give this session a custom name like "/peon-ping-rename Auth Refactor". Call with no argument to reset to auto-detect.
-user_invocable: true
+user-invocable: true
 license: MIT
 metadata:
   author: PeonPing
@@ -17,12 +17,12 @@ metadata:
 
 1. 提取会话 ID 和名称
 2. 将 `session_names[session_id] = name` 写入 `.state.json`
-3. 立即通过 ANSI 转义序列更新终端标签页标题
+3. 通过 ANSI 转义序列立即更新终端标签页标题
 4. 返回确认信息（使用 0 个 token）
 
-在之后的每个钩子事件中，peon.sh 都会读取 `session_names[session_id]`，将其作为优先级最高的项目名称。同一代码仓库中的多个标签页各自拥有独立的名称。
+在后续每个 hook 事件中，peon.sh 都会将 `session_names[session_id]` 作为优先级最高的项目名称。同一仓库中的多个标签页各自拥有独立的名称。
 
-## 使用方法
+## 用法
 
 ```
 /peon-ping-rename Auth Refactor
@@ -30,9 +30,9 @@ metadata:
 /peon-ping-rename          ← 重置为自动检测
 ```
 
-名称长度上限为 50 个字符。允许使用：字母、数字、空格、点号、连字符、下划线。
+名称长度上限为 50 个字符。允许使用：字母、数字、空格、点、连字符、下划线。
 
-## 手动备用方法（如果钩子失败）
+## 手动备用方案（如果 hook 失败）
 
 ### 1. 获取会话 ID
 
@@ -55,7 +55,7 @@ json.dump(state, open(state_path, 'w'), indent=2)
 "
 ```
 
-### 3. 触发钩子事件以刷新标签页标题
+### 3. 触发 hook 事件以刷新标签页标题
 
 提交任意提示 — peon.sh 会在下一次 `UserPromptSubmit` 或 `Stop` 事件中获取新名称。
 
@@ -65,7 +65,7 @@ json.dump(state, open(state_path, 'w'), indent=2)
 /peon-ping-rename
 ```
 
-或者直接从 `.state.json` 中的 `session_names` 移除该会话 ID。
+或者直接从 `.state.json` 中的 `session_names` 移除会话 ID。
 
 ## 优先级
 
