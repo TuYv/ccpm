@@ -1,0 +1,26 @@
+{
+  "id": "hoangnguyen0403-agent-skills-standard-system-design-diagramming",
+  "name": "system-design-diagramming",
+  "description": "Draw system diagrams in the Archify visual language: a typed JSON spec rendered as dark-canvas SVG with numbered lanes, semantic node colors, masked edge labels, and a legend. Covers architecture, workflow, sequence, dataflow, and lifecycle views. Use for any design-session diagram.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "HoangNguyen0403",
+  "install_path": ".claude/skills/system-design-diagramming/SKILL.md",
+  "source": {
+    "repo": "HoangNguyen0403/agent-skills-standard",
+    "url": "https://github.com/HoangNguyen0403/agent-skills-standard/blob/develop/.agents/skills/system-design/system-design-diagramming/SKILL.md",
+    "path": ".agents/skills/system-design/system-design-diagramming/SKILL.md",
+    "branch": "develop",
+    "discovered_at": "2026-08-30T18:31:20.932Z",
+    "stars": 548,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-30T16:18:24Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用类型化 JSON 生成统一视觉风格的系统设计图，适合架构、流程、时序、数据流和生命周期等设计讨论场景。"
+}

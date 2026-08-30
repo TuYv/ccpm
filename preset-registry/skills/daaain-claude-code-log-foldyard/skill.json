@@ -1,0 +1,26 @@
+{
+  "id": "daaain-claude-code-log-foldyard",
+  "name": "foldyard",
+  "description": "Orient yourself in a foldyard dev box and drive it — the host/box split, what the box structurally cannot do, posture modes for credentials, egress and the proxy, worktrees, and why a config or compose change might not have taken effect. Use whenever `fy`/`foldyard` commands appear, when something needs a credential or network access it doesn't have, when a change \"doesn't take\", or when asked to work on the dev environment itself.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daaain",
+  "install_path": ".claude/skills/foldyard/SKILL.md",
+  "source": {
+    "repo": "daaain/claude-code-log",
+    "url": "https://github.com/daaain/claude-code-log/blob/main/.claude/skills/foldyard/SKILL.md",
+    "path": ".claude/skills/foldyard/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-30T18:32:39.122Z",
+    "stars": 1201,
+    "language": "Python",
+    "pushed_at": "2026-08-30T15:30:01Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一套隔离开发箱的操作指南，适合排查凭据、网络代理、工作树及配置变更未生效等问题。"
+}

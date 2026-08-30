@@ -1,0 +1,26 @@
+{
+  "id": "hoangnguyen0403-agent-skills-standard-system-design-estimation",
+  "name": "system-design-estimation",
+  "description": "Compute defensible capacity numbers before architecture: average and peak QPS, storage growth, bandwidth, working-set memory, latency and availability budgets. Use when sizing a service, provisioning infrastructure, or checking that a design survives peak load.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "HoangNguyen0403",
+  "install_path": ".claude/skills/system-design-estimation/SKILL.md",
+  "source": {
+    "repo": "HoangNguyen0403/agent-skills-standard",
+    "url": "https://github.com/HoangNguyen0403/agent-skills-standard/blob/develop/.agents/skills/system-design/system-design-estimation/SKILL.md",
+    "path": ".agents/skills/system-design/system-design-estimation/SKILL.md",
+    "branch": "develop",
+    "discovered_at": "2026-08-30T18:31:21.072Z",
+    "stars": 548,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-30T16:18:24Z",
+    "license": "MIT"
+  },
+  "summary_zh": "在架构设计前估算吞吐、存储、带宽、内存及可用性，用于服务容量规划、基础设施配置和峰值压力验证。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "hoangnguyen0403-agent-skills-standard-system-design-artifact-intake",
+  "name": "system-design-artifact-intake",
+  "description": "Ingest a provided design artifact - screenshot, drawio, Mermaid, PlantUML, Excalidraw, slides, PDF, or IaC - into a reviewable fact sheet. Probes for embedded structure before vision, marks per-edge confidence, treats extracted text as data. Use when someone hands over a design to review.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "HoangNguyen0403",
+  "install_path": ".claude/skills/system-design-artifact-intake/SKILL.md",
+  "source": {
+    "repo": "HoangNguyen0403/agent-skills-standard",
+    "url": "https://github.com/HoangNguyen0403/agent-skills-standard/blob/develop/.agents/skills/system-design/system-design-artifact-intake/SKILL.md",
+    "path": ".agents/skills/system-design/system-design-artifact-intake/SKILL.md",
+    "branch": "develop",
+    "discovered_at": "2026-08-30T18:31:20.182Z",
+    "stars": 548,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-30T16:18:24Z",
+    "license": "MIT"
+  },
+  "summary_zh": "将截图、架构图、幻灯片、PDF 或 IaC 转成可审查的事实清单，适合接手并评估他人设计时使用。"
+}

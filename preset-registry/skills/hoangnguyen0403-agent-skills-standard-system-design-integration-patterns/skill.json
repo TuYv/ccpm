@@ -1,0 +1,26 @@
+{
+  "id": "hoangnguyen0403-agent-skills-standard-system-design-integration-patterns",
+  "name": "system-design-integration-patterns",
+  "description": "Choose distributed integration and evolution patterns by the constraint each removes: outbox, CQRS, event sourcing, saga orchestration or choreography, leader election, sidecar, anti-corruption layer, and strangler-fig migration. Use when services must stay consistent across a boundary.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "HoangNguyen0403",
+  "install_path": ".claude/skills/system-design-integration-patterns/SKILL.md",
+  "source": {
+    "repo": "HoangNguyen0403/agent-skills-standard",
+    "url": "https://github.com/HoangNguyen0403/agent-skills-standard/blob/develop/.agents/skills/system-design/system-design-integration-patterns/SKILL.md",
+    "path": ".agents/skills/system-design/system-design-integration-patterns/SKILL.md",
+    "branch": "develop",
+    "discovered_at": "2026-08-30T18:31:21.221Z",
+    "stars": 548,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-30T16:18:24Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一份分布式系统集成与演进模式指南，适合解决跨服务一致性、协作和渐进式迁移问题。"
+}

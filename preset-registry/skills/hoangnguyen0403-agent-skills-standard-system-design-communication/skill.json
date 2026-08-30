@@ -1,0 +1,26 @@
+{
+  "id": "hoangnguyen0403-agent-skills-standard-system-design-communication",
+  "name": "system-design-communication",
+  "description": "Select how services talk: REST, gRPC, GraphQL, WebSocket, SSE, or webhook per hop, sync versus async per flow, service discovery mode, and DNS/edge routing. Use when choosing a protocol or API paradigm; defer REST contract detail (status codes, pagination, OpenAPI) to common-api-design.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "HoangNguyen0403",
+  "install_path": ".claude/skills/system-design-communication/SKILL.md",
+  "source": {
+    "repo": "HoangNguyen0403/agent-skills-standard",
+    "url": "https://github.com/HoangNguyen0403/agent-skills-standard/blob/develop/.agents/skills/system-design/system-design-communication/SKILL.md",
+    "path": ".agents/skills/system-design/system-design-communication/SKILL.md",
+    "branch": "develop",
+    "discovered_at": "2026-08-30T18:31:20.614Z",
+    "stars": 548,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-30T16:18:24Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一套服务通信方案选型指南，适合按链路与数据流确定协议、同步异步模式，以及服务发现和路由方式。"
+}

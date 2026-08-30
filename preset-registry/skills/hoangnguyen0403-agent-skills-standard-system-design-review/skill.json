@@ -1,0 +1,26 @@
+{
+  "id": "hoangnguyen0403-agent-skills-standard-system-design-review",
+  "name": "system-design-review",
+  "description": "Audit an existing or proposed architecture and return a scored verdict across eight axes, from requirements and capacity evidence to observability and rollout, then convert gaps into a prioritized roadmap. Use when reviewing a design doc, auditing a running system, or gating a design.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "HoangNguyen0403",
+  "install_path": ".claude/skills/system-design-review/SKILL.md",
+  "source": {
+    "repo": "HoangNguyen0403/agent-skills-standard",
+    "url": "https://github.com/HoangNguyen0403/agent-skills-standard/blob/develop/.agents/skills/system-design/system-design-review/SKILL.md",
+    "path": ".agents/skills/system-design/system-design-review/SKILL.md",
+    "branch": "develop",
+    "discovered_at": "2026-08-30T18:31:21.821Z",
+    "stars": 548,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-30T16:18:24Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一款系统架构评审工具，可从八个维度量化设计质量，发现关键缺口并生成改进路线图，适合方案评审、运行审计和设计准入。"
+}

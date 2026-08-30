@@ -1,0 +1,26 @@
+{
+  "id": "hoangnguyen0403-agent-skills-standard-system-design-resilience-ops",
+  "name": "system-design-resilience-ops",
+  "description": "Make a design survivable and operable: eliminate single points of failure, pick failover topology, set RPO/RTO, define readiness signals and observability, choose a deployment and rollback strategy. Use when reviewing availability, planning DR, or deciding rollout mechanics.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "HoangNguyen0403",
+  "install_path": ".claude/skills/system-design-resilience-ops/SKILL.md",
+  "source": {
+    "repo": "HoangNguyen0403/agent-skills-standard",
+    "url": "https://github.com/HoangNguyen0403/agent-skills-standard/blob/develop/.agents/skills/system-design/system-design-resilience-ops/SKILL.md",
+    "path": ".agents/skills/system-design/system-design-resilience-ops/SKILL.md",
+    "branch": "develop",
+    "discovered_at": "2026-08-30T18:31:21.683Z",
+    "stars": 548,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-30T16:18:24Z",
+    "license": "MIT"
+  },
+  "summary_zh": "指导系统提升可用性与可运维性，适合评审高可用架构、规划容灾方案及制定发布回滚策略。"
+}
