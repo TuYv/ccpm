@@ -1,44 +1,40 @@
 ---
 name: caveman-discover
 description: >
-  Find every LLM workflow in the current repository and label it, so Caveman
-  Cloud groups spend by what the code actually does (support-reply,
-  nightly-digest) instead of one anonymous bucket. Use when the user pastes
-  the Caveman discovery prompt, says "discover workflows", or asks to break
-  LLM spend down by workflow. The repo should already route through the
-  Caveman gateway (the caveman-setup skill does that part).
+  Find and label every LLM workflow in the repository so Caveman Cloud groups
+  spend by workflow instead of one bucket. Use for "discover workflows" or
+  breaking LLM spend down by workflow.
 ---
-你正在为 Caveman Cloud 标注该仓库的 LLM 工作流。*workflow* 是代码实际执行的一项工作——例如“回复工单”、 “生成夜间摘要”、 “运行评测套件”——而不是某种技术。每个网关请求都可以携带工作流标签；未标注的流量全部落入 `unlabeled-workflow` 分组。你的任务是：找出工作流、为其取好名字、接入标签，并验证没有破坏任何东西。
+你正在为 Caveman Cloud 标注此仓库的 LLM 工作流。*工作流* 是代码执行的一项任务——“回答支持工单”、“构建每日摘要”、“运行评估套件”——而不是某种技术。每个网关请求都可以携带一个工作流标签；未标记的流量都会归入一个 `unlabeled-workflow` bucket。你的任务是：找出工作流，为它们命名，接入标签，并验证没有任何内容被破坏。
 
-这会修改代码，因此会经过用户的常规审核流程：**先给出提案表，待用户同意后再应用**。对一个已标注的仓库重复执行时必须不产生变化（幂等）。
+这会修改代码，因此需要经过用户正常的审查流程：**先提出表格，用户同意后再应用。** 对已经完成标记的仓库重新运行时不得产生任何更改（幂等）。
 
-该技能由操作员触发。`unlabeled-traffic` 的 Cave Plan 观测仅用于审核，不会创建 advisory 文件、提案或 Draft PR。不要据此推断遥测已选定某个调用点或授权了编辑。应独立清点仓库、提交标注表，并在修改代码前等待用户批准。
+此技能由操作员调用。`unlabeled-traffic` Cave Plan observation 仅供审查，不会创建 advisory 文件、proposal 或 Draft PR。不要推断遥测数据选择了某个调用点，也不要推断其授权了编辑。请独立盘点仓库，展示标记表，并在修改代码前等待用户批准。
 
 ## 第 1 步 — 盘点工作流
 
-从入口点遍历仓库，而不是从 import：
+从仓库的入口点开始遍历，而不是从导入关系开始：
 
-- 调用 LLM 的 HTTP/RPC 处理器（直接调用或经多层封装）
-- 定时任务：cron 定义、队列消费者、worker、调用 LLM 代码的 GitHub Actions
-- CLI 命令与脚本（`scripts/`、`bin/`、`package.json` 脚本）
-- 消耗真实 token 的评测 / 测试框架
-- 框架内的独立代理或链路（每个 LangGraph 图、每个 crew、每个代理定义通常各自是一个工作流）
+- 调用 LLM 的 HTTP/RPC 处理器（直接调用或通过多层封装调用）
+- 定时任务：调用 LLM 代码的 cron 定义、队列消费者、worker、GitHub Actions
+- CLI 命令和脚本（`scripts/`、`bin/`、package.json scripts）
+- 会消耗真实 token 的评估 / 测试 harness
+- 框架中的不同 agent 或 chain（每个 LangGraph graph、每个 crew、每个 agent definition 通常都是独立的工作流）
 
-一个工作流 = 一个人会命名的任务。十个调用点在同一个请求处理器内仍属于同一个工作流；一个供三项任务共用的 `llm.ts` helper 也对应三个工作流（应在调用者处打标，而不是在共享 helper 处）。
+一个工作流 = 一项人类会单独命名的任务。同一个请求处理器中的十个调用点属于一个工作流；三个任务共用的 `llm.ts` helper 则属于三个工作流（在调用方添加标签，绝不要在共享 helper 上添加）。
 
 ## 第 2 步 — 命名
 
-Slug 规则（网关强制）：小写 `[a-z0-9_-]`，1–96 个字符。  
-命名要按工作内容，而非按技术：
+Slug 语法（网关会强制执行）：小写 `[a-z0-9_-]`，长度为 1–96 个字符。命名应针对任务，而不是技术：
 
-- 合法：`support-reply`、`nightly-digest`、`pr-review`、`eval-suite`、`onboarding-email`
-- 不合法：`openai-calls`（按技术）、`main`（含义不明）、`SupportReply`（非法）、`johns-test-3`（不具可持续性）
+- 好例子：`support-reply`、`nightly-digest`、`pr-review`、`eval-suite`、`onboarding-email`
+- 反例：`openai-calls`（技术）、`main`（没有表达任何含义）、`SupportReply`（无效）、`johns-test-3`（无法长期适用）
 
-名称具有近似永久性——后续重命名会导致消耗记录被拆分。当代码无法清晰反映任务目的时，按文件名推导 slug，并在表中标记为 `review`，不要凭空编造用途。
+名称具有近乎永久的性质——之后重命名会拆分支出历史。当无法从代码中明确判断任务目的时，请根据文件名推导 slug，并在表格中将其标记为 `review`，不要凭空臆造任务目的。
 
-## 第 3 步 — 先提案，再应用
+## 第 3 步 — 提出方案，然后应用
 
-先给出此表并询问是否继续：
+展示下表并询问是否继续：
 
 ```
 | workflow | job | where | how it gets labeled |
@@ -48,20 +44,20 @@ Slug 规则（网关强制）：小写 `[a-z0-9_-]`，1–96 个字符。
 | eval-suite (review) | scripts/eval.ts:8 — purpose inferred from filename | scripts/eval.ts:8 | env override at invocation |
 ```
 
-然后按调用点采用最轻量的方式接入各标签：
+然后在每个调用点使用可用的最轻量机制接入相应标签：
 
-- **@caveman-ai/sdk / caveman_cloud SDK**：在每条 trace 上使用 `workflow` 选项，或在单一作业服务构建的客户端上使用 `defaultWorkflow`。
-- **原始服务商 SDK**（OpenAI/Anthropic/LangChain/LiteLLM/Vercel）：在已携带 `x-cave-api-key` 的同一 `defaultHeaders` / `default_headers` / `extra_headers` 区块中新增 `"x-cave-workflow": "<slug>"`。若是多个工作流共用同一客户端，则按调用逐条传入头部（上述每个 SDK 都支持按请求覆盖头部），或为每个工作流提供各自的轻量客户端。
-- **封装的编码代理**（`caveman wrap`）：在调用处（cron 行、CI 步骤）使用 `--workflow <slug>` 参数或 `CAVE_WORKFLOW=<slug>` 环境变量。
-- **原始 HTTP**：向请求中添加 `x-cave-workflow` 头。
+- **@caveman-ai/sdk / caveman_cloud SDK**：使用每条 trace 的 `workflow` 选项，或在单一任务服务构造的 client 上设置 `defaultWorkflow`。
+- **原始 provider SDK**（OpenAI/Anthropic/LangChain/LiteLLM/Vercel）：在已经携带 `x-cave-api-key` 的同一个 `defaultHeaders` / `default_headers` / `extra_headers` 块中添加 `"x-cave-workflow": "<slug>"`。多个任务共用的 client → 按调用传递 header（以上每个 SDK 都支持按请求覆盖 header），或者为每个任务提供一个轻量 client。
+- **封装的 coding agent**（`caveman wrap`）：在调用位置（cron 行、CI 步骤）使用 `--workflow <slug>` flag 或 `CAVE_WORKFLOW=<slug>` env。
+- **原始 HTTP**：向请求添加 `x-cave-workflow` header。
 
-对调用者打标，保持最小改动并贴合仓库风格。如果某调用点没有经过 Caveman 网关，不要打标——在报告中列为“未接入”；标签只会随网关流量传递，是否接入由 caveman-setup 技能负责。
+标记调用方，使差异保持最小，并遵循仓库的风格。如果某个调用点完全没有通过 Caveman 网关路由，就不要为其添加标记——将其列在报告的“未接入”下（标签只会通过网关流转；接线是 caveman-setup skill 的职责）。
 
-## 第 4 步 — 验证
+## 步骤 4 — 验证
 
-运行仓库已有流程中的任一已标记路径（测试、开发脚本、一次 curl）进行验证。然后确认：请求仍能成功（网关对无效标签会以 400 `cave_invalid_request_header` 拒绝——若出现则修正 slug）。已标记的消耗会在 `/activity?tab=workflows` 仪表盘中，随着每次工作流运行显示；定时任务会在其触发时出现，这一点请在报告中如实说明，而不要声称它们是“持续在线”的。
+运行仓库现有的、用于执行一条已标记路径的方式（测试、开发脚本或一次 curl）。然后确认：请求仍然成功（网关会以 400 `cave_invalid_request_header` 拒绝无效标签——如果出现这种情况，请修正 slug）。当每个工作流下次运行时，带标签的支出会显示在 `/activity?tab=workflows` 的仪表板上；按计划运行的任务会在计划触发时显示，这一点应在报告中明确说明，而不要假装它们是实时的。
 
-## 第 5 步 — 报告
+## 步骤 5 — 报告
 
 ```
 ## Workflows labeled
@@ -78,4 +74,4 @@ Not wired (no gateway routing, so no label): <list or "none">
 Marked review: <slugs whose purpose was inferred from filenames, or "none">
 ```
 
-若你完全没有发现 LLM 入口点：请准确说明这一点，并指向设置技能（`<docs origin>/docs/agent-setup.md`），不要编造表格。
+如果完全没有找到 LLM 入口：请准确说明这一点，并指向设置 skill（`<docs origin>/docs/agent-setup.md`），不要凭空编造表格。

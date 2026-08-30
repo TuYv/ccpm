@@ -1,30 +1,28 @@
 ---
 name: caveman-evidence-review
 description: >
-  Review Caveman Cloud evidence read-only: costs, Cave Score, Cave Plan,
-  workflows, traces, latency, errors, compression, routing, and verified
-  savings. Use when the user asks what Caveman found, where LLM spend goes,
-  why cost or quality changed, which workflows need attention, or asks for a
-  trace or analytics review. Prefer Caveman MCP tools; fall back to CLI JSON.
+  Read-only review of Caveman Cloud evidence: cost, Cave Score, workflows,
+  traces, latency, errors, routing, savings. Use when asked what Caveman found
+  or where LLM spend goes.
 ---
-# Caveman 证据审查
+# 审查 Caveman 证据
 
-以只读操作员身份行事。基于当前 Caveman 数据得出结论，而不是基于仓库猜测。不要从该技能中发起、批准、取消或回滚实验。
+作为只读操作员。基于当前的 Caveman 数据得出结论，而不是基于对仓库的猜测。绝不要通过此 skill 启动、批准、取消或回滚实验。
 
-## 硬规则
+## 硬性规则
 
-1. 保持这些分桶独立：
-   - 已测量的 provider-complete 列表价成本；
-   - `inferred` 每日可推断空余；
+1. 将以下类别分开：
+   - 已测量的提供商完整列表价成本；
+   - `inferred` 每日余量；
    - `verified` 账本节省；
-   - 证据成本。  
-   不要添加或重命名它们。
-2. 除非用户明确要求载荷审查，否则不要获取 prompt、completion、tool 或 artifact 载荷。元数据、span、时间、模型、token 计数、状态和优化器归因就足以进行默认审阅。
-3. 将每次读取范围限定为 Caveman 上下文所选项目。切勿提供组织 ID。
-4. 空结果意味着没有当前信号，而不是零成本或零风险。
-5. 引用使用的 trace id 和精确时间窗口。不要仅凭聚合结果断言因果关系。
+   - 证据成本。
+   绝不要将它们相加或重新标记。
+2. 除非用户明确要求审查 payload，否则不要获取 prompt、completion、tool 或 artifact payload。对于默认审查，元数据、span、计时、模型、token 数量、状态和优化器归因已经足够。
+3. 将每次读取限定在 Caveman 上下文所选的项目内。绝不要提供 organization id。
+4. 空结果表示当前没有信号，而不是零成本或零风险。
+5. 引用所使用的 trace id 和确切时间窗口。不要仅根据聚合结果声称某个原因。
 
-## 步骤 1 — 加载上下文
+## 第 1 步 — 加载上下文
 
 优先使用 MCP：
 
@@ -32,16 +30,17 @@ description: >
 caveman_context {}
 ```
 
-CLI 回退：
+CLI 备用方案：
 
 ```bash
 caveman cloud whoami
 caveman cloud projects list
 ```
 
-若登录或项目选择缺失则停止。要求用户运行 `caveman login` 或选择项目；不要猜测。
+如果缺少登录或项目选择，则停止。要求用户运行
+`caveman login` 或选择一个项目；绝不要猜测。
 
-## 步骤 2 — 建立基线
+## 第 2 步 — 建立基线
 
 使用 `caveman_report` 获取：
 
@@ -51,9 +50,9 @@ caveman cloud projects list
 - `workflows`
 - `verified_savings`
 
-然后使用 `caveman_plan` 获取按优先级排序的每日头部空间。若问题范围较窄，请跳过无关报告。读取能够回答问题的最短集合。
+然后使用 `caveman_plan` 获取按排名排列的每日余量。如果问题范围较窄，则跳过无关报告。读取能够回答问题的最短报告集合。
 
-CLI 回退：
+CLI 备用方案：
 
 ```bash
 caveman cloud costs
@@ -61,23 +60,24 @@ caveman cloud score
 caveman cloud plan --json
 ```
 
-在解读方向前先说明报告窗口和依据。
+在解读趋势之前，说明报告窗口和依据。
 
-## 步骤 3 — 用追踪验证主导解释
+## 第 3 步 — 使用 traces 验证主要解释
 
-使用 `caveman_trace_search`。选择一个有界窗口和封闭过滤器：  
-workflow、agent、model、provider、error code、runtime mode、cache status、optimization id、status class、token/cost/latency 范围、compression 或 monitor verdict。
+使用 `caveman_trace_search`。选择一个有界窗口和封闭过滤条件：workflow、agent、model、provider、error code、runtime mode、cache status、
+optimization id、status class、token/cost/latency bounds、compression 或
+monitor verdict。
 
 有用的分组方式：
 
-- `workflow` — 找出推动成本或失败的作业；
-- `model` — 比较模型组合；
-- `session` — 隔离重试或循环行为；
-- ungrouped — 识别具体 trace。
+- `workflow` — 找出推高成本或失败的作业；
+- `model` — 比较模型构成；
+- `session` — 定位重试或循环行为；
+- 不分组 — 识别确切的 traces。
 
-将疑似人群与对照人群或更早的有界窗口进行比较。不要从单个高成本 trace 推断因果关系。
+将可疑 cohort 与控制 cohort 或更早的有界窗口进行比较。不要根据单个高成本 trace 推断因果关系。
 
-CLI 回退：
+CLI 备用方案：
 
 ```bash
 caveman cloud traces search \
@@ -89,40 +89,40 @@ caveman cloud traces search \
   --limit 25
 ```
 
-## 步骤 4 — 检查代表性 traces
+## 第 4 步 — 检查代表性 traces
 
-对少量高信号 trace id 调用 `caveman_trace_get`。检查 request 和 span 元数据、延迟、状态、token 计数、缓存状态、应用的优化器以及模型路由。保持载荷检索关闭。
+针对少量高信号 trace ids 调用 `caveman_trace_get`。检查 request 和 span 元数据、延迟、状态、token 数量、缓存状态、已应用的优化器以及模型路由。保持 payload 获取关闭。
 
-CLI 回退：
+CLI 备用方案：
 
 ```bash
 caveman cloud traces show <trace-id> --spans
 ```
 
-## 步骤 5 — 报告
+## 第 5 步 — 报告
 
-使用以下格式：
+使用以下结构：
 
 ```text
-## Caveman evidence review
+## Caveman 证据审查
 
-Scope: <project> · <from> to <to>
-Measured cost: <value and basis>
-Verified savings: <ledger value, kept separate>
-Inferred headroom: <per-day band, kept separate>
+范围：<project> · <from> 到 <to>
+已测量成本：<value and basis>
+已验证节省：<ledger value, kept separate>
+推断余量：<per-day band, kept separate>
 
-Findings:
+发现：
 1. <finding> — <aggregate evidence> — traces <ids>
 2. <finding> — <aggregate evidence> — traces <ids>
 
-Unproven:
+尚未证实：
 - <plausible explanation lacking a control, trace, or eval>
 
-Next read-only check:
+下一项只读检查：
 - <one bounded query>
 
-Possible action:
+可能的操作：
 - <proposal only; use caveman-manage for read-only lifecycle review and safety gate>
 ```
 
-若数据缺失，请注明缺失的信号，并停留在最有力的支持性结论上。切勿将目录小计当作发票或将实验结果当作验证过的节省。
+如果数据缺失，请指出缺失的信号，并将表述停留在证据能够支持的最强结论上。绝不要把目录小计当成发票，也不要把实验结果当成经验证实的节省额。
