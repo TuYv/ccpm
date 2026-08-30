@@ -1,7 +1,7 @@
 {
   "id": "juliusbrussee-caveman-caveman-discover",
   "name": "caveman-discover",
-  "description": "> Find every LLM workflow in the current repository and label it, so Caveman Cloud groups spend by what the code actually does (support-reply, nightly-digest) instead of one anonymous bucket. Use when the user pastes the Caveman discovery prompt, says \"discover workflows\", or asks to break LLM spend down by workflow. The repo should already route through the Caveman gateway (the caveman-setup skill does that part).",
+  "description": "> Find and label every LLM workflow in the repository so Caveman Cloud groups spend by workflow instead of one bucket. Use for \"discover workflows\" or breaking LLM spend down by workflow.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/JuliusBrussee/caveman/blob/main/skills/caveman-discover/SKILL.md",
     "path": "skills/caveman-discover/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-29T19:42:07.554Z",
-    "stars": 101743,
+    "discovered_at": "2026-08-29T22:53:05.893Z",
+    "stars": 101755,
     "language": "Go",
-    "pushed_at": "2026-08-27T13:59:59Z",
+    "pushed_at": "2026-08-29T22:17:17Z",
     "license": null
   },
-  "summary_zh": "自动识别并标注代码库中的 LLM 工作流，按实际用途归类模型开销，适合细分各业务流程的成本。"
+  "summary_zh": "自动发现并标注代码库中的大模型工作流，适合按工作流拆分和归类大模型调用成本。"
 }

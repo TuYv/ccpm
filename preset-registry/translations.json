@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-08-29T21:01:22.019Z",
+  "updated_at": "2026-08-30T00:38:10.027Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -7143,34 +7143,34 @@
       "translated_at": "2026-05-19T22:17:34.899Z"
     },
     "skill:juliusbrussee-caveman-caveman-commit": {
-      "hash": "b31809158d879fe5",
-      "summary_zh": "这是一个极简的提交信息生成器，帮你去除冗余内容只保留修改意图与原因，适合想保持提交历史干净规范、又不想写长篇说明的开发者。",
-      "translated_at": "2026-05-19T22:21:20.752Z"
+      "hash": "f2e29c38c1951b2e",
+      "summary_zh": "一个将改动意图压缩成规范提交信息的工具，适合快速编写简洁统一的 Git 提交说明。",
+      "translated_at": "2026-08-29T23:47:37.158Z"
     },
     "skill:juliusbrussee-caveman-caveman": {
-      "hash": "4332f118eb4cb038",
-      "summary_zh": "一种超压缩沟通模式，用精简表达降低约65%的输出量，适合需要准确技术回答又想节省令牌的场景。",
-      "translated_at": "2026-08-03T22:58:41.135Z"
+      "hash": "736deb65622b5d89",
+      "summary_zh": "一种超精简沟通模式，在保持技术准确性的同时压缩输出，适合需要简短回答、节省令牌的场景。",
+      "translated_at": "2026-08-29T23:47:54.608Z"
     },
     "skill:juliusbrussee-caveman-caveman-help": {
-      "hash": "efa8b2b60c4ff662",
-      "summary_zh": "这是一个一次性弹出的速查卡片，帮你快速查阅所有模式、技能和指令。当你忘了怎么操作，一句话触发就能立刻看一眼，用完即走不占界面，特别适合随时查指令的场景。",
-      "translated_at": "2026-05-19T22:21:48.173Z"
+      "hash": "2f13fe6ffce30342",
+      "summary_zh": "用于快速查询 Caveman 的模式、技能和命令，适合忘记用法时随时唤出参考。",
+      "translated_at": "2026-08-29T23:47:48.283Z"
     },
     "skill:juliusbrussee-caveman-caveman-compress": {
-      "hash": "b459a98fb6752f3c",
-      "summary_zh": "这是一个把AI记忆文件压缩成极简格式的工具，能在保留代码和链接等核心技术细节的同时大幅节省输入token，适合需要精简上下文来降低AI调用成本的场景。",
-      "translated_at": "2026-05-19T22:21:48.463Z"
+      "hash": "2a36d75da64363c2",
+      "summary_zh": "将记忆文件或待办清单压缩成简短易懂的原始人式文本，在保留可读备份的同时节省输入令牌。",
+      "translated_at": "2026-08-29T23:47:41.319Z"
     },
     "skill:juliusbrussee-caveman-cavecrew": {
-      "hash": "4514501ea45089bd",
-      "summary_zh": "它是指导主线程何时分派子代理去查代码、改文件或做审查的调度工具。它能压缩子代理返回结果以节省约60%的上下文，非常适合长会话开发，防止主线程上下文过快耗尽。",
-      "translated_at": "2026-05-19T22:21:58.630Z"
+      "hash": "f9d96c313a74d71b",
+      "summary_zh": "一套代码任务分工工具，可委派代码定位、小范围修改和差异审查，并压缩结果以节省主对话上下文。",
+      "translated_at": "2026-08-29T23:47:38.099Z"
     },
     "skill:juliusbrussee-caveman-caveman-stats": {
-      "hash": "3b7a19063e183325",
-      "summary_zh": "这是一个Claude Code的统计小工具，能直接读取日志精准显示当前对话的真实token用量和省钱情况，适合需要精打细算API开销的开发者。",
-      "translated_at": "2026-05-19T22:22:04.065Z"
+      "hash": "19bf118a80955369",
+      "summary_zh": "一个从会话日志读取数据的统计工具，可查看当前会话的真实 Token 用量和预计节省量。",
+      "translated_at": "2026-08-29T23:47:58.765Z"
     },
     "skill:kenryu42-claude-code-safety-net-set-custom-rules": {
       "hash": "211b25845f0d36cf",
@@ -7178,9 +7178,9 @@
       "translated_at": "2026-05-19T22:22:09.411Z"
     },
     "skill:juliusbrussee-caveman-caveman-review": {
-      "hash": "5a9c3e9ce4be4571",
-      "summary_zh": "这是一个极简代码审查助手，专门解决PR反馈废话太多的问题。它自动把审查意见压缩成纯干货的一行式反馈，直指问题并给出修改建议，适合需要快速搞定代码审查的场景。",
-      "translated_at": "2026-05-19T22:22:10.444Z"
+      "hash": "3ff5d8d44d8cb9a1",
+      "summary_zh": "一款精简代码审查工具，适合快速定位 PR 或差异中的问题并获取修复建议。",
+      "translated_at": "2026-08-29T23:47:55.413Z"
     },
     "skill:kenryu42-claude-code-safety-net-verify-custom-rules": {
       "hash": "d68c183e267d13eb",
@@ -9658,9 +9658,9 @@
       "translated_at": "2026-08-27T15:30:21.262Z"
     },
     "bundle:juliusbrussee-caveman": {
-      "hash": "d29e6c7f1ce1b2de",
-      "summary_zh": "面向大模型开发工作流，通过压缩沟通、协同子代理和评估优化，持续降低令牌成本并提升执行效率与安全性。",
-      "translated_at": "2026-08-23T10:20:25.952Z"
+      "hash": "b8029440e3cec0ba",
+      "summary_zh": "面向AI辅助开发的全流程工具集，串联代码探索、任务协作、上下文压缩与成本评估，在保证准确性的同时降低Token消耗。",
+      "translated_at": "2026-08-29T23:47:33.915Z"
     },
     "bundle:thedotmack-claude-mem": {
       "hash": "f59ece1d10509c88",
@@ -10003,9 +10003,9 @@
       "translated_at": "2026-06-05T16:54:48.138Z"
     },
     "bundle:wondelai-skills": {
-      "hash": "bce2c83a049c3fb7",
-      "summary_zh": "面向从创意验证到开发上线和增长优化的产品团队，把商业策略、用户洞察与工程实践串成一套可复用的实战工作流。",
-      "translated_at": "2026-08-28T23:25:30.684Z"
+      "hash": "1ddff856ff3e3a26",
+      "summary_zh": "面向产品从创意验证到开发增长的全流程方法合集，融合商业策略、用户洞察与工程实践，帮助团队更快做对、做好并持续优化。",
+      "translated_at": "2026-08-29T23:47:31.303Z"
     },
     "bundle:neolabhq-context-engineering-kit": {
       "hash": "e34a670278d26279",
@@ -29738,39 +29738,39 @@
       "translated_at": "2026-08-11T15:47:52.101Z"
     },
     "skill:juliusbrussee-caveman-caveman-evidence-review": {
-      "hash": "5b522f7140236b23",
-      "summary_zh": "用于只读审查大模型云端成本、质量、链路与性能数据，定位支出变化、异常工作流并验证节省效果。",
-      "translated_at": "2026-08-11T17:45:30.904Z"
+      "hash": "725b263b3293121a",
+      "summary_zh": "用于只读审查云端大模型调用证据，快速定位成本去向、性能问题及可优化的节省空间。",
+      "translated_at": "2026-08-29T23:47:44.829Z"
     },
     "skill:juliusbrussee-caveman-caveman-discover": {
-      "hash": "b9c2bd27acadc6be",
-      "summary_zh": "自动识别并标注代码库中的 LLM 工作流，按实际用途归类模型开销，适合细分各业务流程的成本。",
-      "translated_at": "2026-08-11T17:45:32.162Z"
+      "hash": "bc77ad8642417549",
+      "summary_zh": "自动发现并标注代码库中的大模型工作流，适合按工作流拆分和归类大模型调用成本。",
+      "translated_at": "2026-08-29T23:47:40.593Z"
     },
     "skill:juliusbrussee-caveman-caveman-explore": {
-      "hash": "114b6cfc77958416",
-      "summary_zh": "只读代码仓库探索工具，适合快速熟悉陌生项目、跨文件定位代码，或在常规搜索无果时查找实现位置。",
-      "translated_at": "2026-08-11T17:45:34.499Z"
+      "hash": "06fcd9bbf649440b",
+      "summary_zh": "一个只读代码仓库探索工具，适合快速了解陌生项目、跨文件定位代码，或在直接搜索无果时查找线索。",
+      "translated_at": "2026-08-29T23:47:45.336Z"
     },
     "skill:juliusbrussee-caveman-caveman-learn": {
-      "hash": "fde8614cf9cfafa2",
-      "summary_zh": "分析智能体的高耗词元来源，经逐项确认后精简配置或迁移重复上下文，并量化节省效果，适合降低使用成本。",
-      "translated_at": "2026-08-23T10:20:31.203Z"
+      "hash": "627f9a96cdad23f2",
+      "summary_zh": "根据分析报告定位高耗 Token 内容，经逐项确认后优化并统计节省量，适合精简 CLAUDE.md 或迁移重复上下文。",
+      "translated_at": "2026-08-29T23:47:49.041Z"
     },
     "skill:juliusbrussee-caveman-caveman-manage": {
-      "hash": "f5b02c4bb6a12bf1",
-      "summary_zh": "用于审查云端实验的评估证据和生命周期操作，判断是否支持启动、审批、晋级或回滚，并阻止不安全变更。",
-      "translated_at": "2026-08-11T17:45:39.081Z"
+      "hash": "ee2b183d27bd06db",
+      "summary_zh": "用于检查 Caveman Cloud 实验生命周期并拦截危险操作，适合启动、审批、取消、上线或回滚实验。",
+      "translated_at": "2026-08-29T23:47:53.161Z"
     },
     "skill:juliusbrussee-caveman-caveman-optimize": {
-      "hash": "64fbfddf77839f19",
-      "summary_zh": "将代码仓库的优化观察转成可执行候选方案，并与基线对比评估，适合审查和验证改动，需登录命令行并明确授权。",
-      "translated_at": "2026-08-11T17:45:40.117Z"
+      "hash": "174c599a04013537",
+      "summary_zh": "用于审查优化报告，将观察结果转为人工选定的候选方案，并与基线配对评估，执行前需明确批准。",
+      "translated_at": "2026-08-29T23:47:52.031Z"
     },
     "skill:juliusbrussee-caveman-caveman-setup": {
-      "hash": "15396c7a5ec84697",
-      "summary_zh": "通过云网关无侵入接管应用的 LLM 请求，统计成本、Token 和延迟，适合为项目快速补充大模型用量监控。",
-      "translated_at": "2026-08-11T17:45:40.259Z"
+      "hash": "1f779cd5ca5ed92e",
+      "summary_zh": "通过云网关接入代码仓库，在不改变 LLM 调用行为的前提下统计请求与成本，适合监控 AI 应用支出。",
+      "translated_at": "2026-08-29T23:47:56.309Z"
     },
     "skill:juliusbrussee-caveman-investigate-first": {
       "hash": "318e49262cb551fe",
@@ -32046,20 +32046,20 @@
       "translated_at": "2026-08-16T18:22:02.241Z"
     },
     "content:garrytan-gstack-canary": {
-      "hash": "27e90fbe67a53fdc",
-      "translated_at": "2026-08-29T00:00:40.467Z"
+      "hash": "13c69b4170ab599d",
+      "translated_at": "2026-08-30T00:31:52.975Z"
     },
     "content:garrytan-gstack-context-restore": {
-      "hash": "fe7aeaec4e91b519",
-      "translated_at": "2026-08-28T01:34:21.287Z"
+      "hash": "472bad1f4e1f0ef3",
+      "translated_at": "2026-08-30T00:37:51.994Z"
     },
     "content:garrytan-gstack-context-save": {
       "hash": "1c86ac692d97a967",
       "translated_at": "2026-08-28T01:38:28.634Z"
     },
     "content:garrytan-gstack-codex": {
-      "hash": "cb479de829d26639",
-      "translated_at": "2026-08-28T01:34:42.495Z"
+      "hash": "87a81cece6cd5b69",
+      "translated_at": "2026-08-30T00:38:10.027Z"
     },
     "content:garrytan-gstack-diagram": {
       "hash": "9e68edf070401d63",
@@ -32246,8 +32246,8 @@
       "translated_at": "2026-08-29T00:05:56.623Z"
     },
     "content:garrytan-gstack-autoplan": {
-      "hash": "043d2d876e07dc8a",
-      "translated_at": "2026-08-28T01:26:36.173Z"
+      "hash": "3831936d60b488a0",
+      "translated_at": "2026-08-30T00:33:53.561Z"
     },
     "content:garrytan-gstack-gstack-openclaw-office-hours": {
       "hash": "a98c457ce55cc5ad",
@@ -35000,8 +35000,8 @@
       "translated_at": "2026-08-14T03:20:51.106Z"
     },
     "content:basicmachines-co-basic-memory-skill": {
-      "hash": "f5e7ac562b8127fe",
-      "translated_at": "2026-08-14T03:21:14.103Z"
+      "hash": "94100f765ec9c8a1",
+      "translated_at": "2026-08-30T00:10:16.668Z"
     },
     "content:bitwize-music-studio-claude-ai-music-skills-album-art-director": {
       "hash": "31d45d3e39ea2bfd",
@@ -36120,8 +36120,8 @@
       "translated_at": "2026-08-14T17:12:57.177Z"
     },
     "content:conorbronsdon-avoid-ai-writing": {
-      "hash": "93b1851f58e5142c",
-      "translated_at": "2026-08-28T23:40:20.479Z"
+      "hash": "28272be8448f0420",
+      "translated_at": "2026-08-30T00:21:05.264Z"
     },
     "content:conorbronsdon-avoid-ai-writing-avoid-ai-writing": {
       "hash": "28272be8448f0420",
@@ -36346,8 +36346,8 @@
       "translated_at": "2026-08-14T19:30:22.920Z"
     },
     "content:czlonkowski-n8n-skills-n8n-agents": {
-      "hash": "31168e2118e4759e",
-      "translated_at": "2026-08-14T19:32:00.259Z"
+      "hash": "58f1425f041a2edb",
+      "translated_at": "2026-08-30T00:14:48.165Z"
     },
     "content:czlonkowski-n8n-skills-n8n-binary-and-data": {
       "hash": "7c207909e3e8cc4b",
@@ -36378,28 +36378,28 @@
       "translated_at": "2026-08-14T19:38:44.870Z"
     },
     "content:czlonkowski-n8n-skills-n8n-mcp-tools-expert": {
-      "hash": "844322a5ef80f908",
-      "translated_at": "2026-08-14T19:38:46.047Z"
+      "hash": "14836b4d7a9b43c9",
+      "translated_at": "2026-08-30T00:18:10.590Z"
     },
     "content:czlonkowski-n8n-skills-n8n-self-hosting": {
       "hash": "78fe6b10d383d8e5",
       "translated_at": "2026-08-20T12:34:01.087Z"
     },
     "content:czlonkowski-n8n-skills-n8n-node-configuration": {
-      "hash": "7f851b91dca19a0e",
-      "translated_at": "2026-08-14T19:40:26.084Z"
+      "hash": "5d3df21fab65715f",
+      "translated_at": "2026-08-30T00:19:56.212Z"
     },
     "content:czlonkowski-n8n-skills-n8n-subworkflows": {
-      "hash": "6e268e99010848b3",
-      "translated_at": "2026-08-14T19:42:09.792Z"
+      "hash": "00eeee94733fdbbb",
+      "translated_at": "2026-08-30T00:22:09.015Z"
     },
     "content:czlonkowski-n8n-skills-n8n-validation-expert": {
-      "hash": "a0cb1ea68087bf4e",
-      "translated_at": "2026-08-14T19:42:24.662Z"
+      "hash": "1b81cfd31b4f599b",
+      "translated_at": "2026-08-30T00:23:19.206Z"
     },
     "content:czlonkowski-n8n-skills-using-n8n-mcp-skills": {
-      "hash": "29215a6571d378ab",
-      "translated_at": "2026-08-14T19:44:00.372Z"
+      "hash": "de4ad06ed79d8fc8",
+      "translated_at": "2026-08-30T00:23:53.974Z"
     },
     "content:d-kimuson-claude-code-viewer-fix-schema": {
       "hash": "095b9bdf23662651",
@@ -36890,8 +36890,8 @@
       "translated_at": "2026-08-15T02:22:39.563Z"
     },
     "content:daymade-claude-code-skills-pdf-creator": {
-      "hash": "edea1efe2bad9358",
-      "translated_at": "2026-08-15T02:24:02.178Z"
+      "hash": "72688f7915178203",
+      "translated_at": "2026-08-30T00:25:36.493Z"
     },
     "content:daymade-claude-code-skills-pdf-to-html": {
       "hash": "aad8bb703234fb03",
@@ -38133,8 +38133,8 @@
       "translated_at": "2026-08-15T18:34:37.919Z"
     },
     "content:daymade-claude-code-skills-transcript-fixer": {
-      "hash": "bbde1f03137688e4",
-      "translated_at": "2026-08-29T12:32:11.811Z"
+      "hash": "9afda989a724fbde",
+      "translated_at": "2026-08-30T00:26:55.100Z"
     },
     "content:eronred-aso-skills-screenshot-optimization": {
       "hash": "3347d82c1781799d",
@@ -51570,6 +51570,79 @@
     "content:alinaqi-maggy-playwright-testing": {
       "hash": "9158ef61ff34cdfe",
       "translated_at": "2026-08-29T21:01:22.019Z"
+    },
+    "skill:wondelai-skills-technical-documentation": {
+      "hash": "981c7ebb49fc1524",
+      "summary_zh": "按谷歌技术写作规范审查、撰写和优化开发者文档，适合 README、教程、API 参考及发布说明等场景。",
+      "translated_at": "2026-08-29T23:47:59.260Z"
+    },
+    "content:alinaqi-maggy-project-tooling": {
+      "hash": "68a7b8747fc7780c",
+      "translated_at": "2026-08-29T23:48:57.824Z"
+    },
+    "content:alinaqi-maggy-posthog-analytics": {
+      "hash": "0343699b60c82d45",
+      "translated_at": "2026-08-29T23:49:55.084Z"
+    },
+    "content:alinaqi-maggy-python": {
+      "hash": "8a8ee840718a62ae",
+      "translated_at": "2026-08-29T23:50:22.664Z"
+    },
+    "content:alinaqi-maggy-react-native": {
+      "hash": "a42eb3117cc73a69",
+      "translated_at": "2026-08-29T23:50:56.423Z"
+    },
+    "content:alinaqi-maggy-pwa-development": {
+      "hash": "16e56227d54b1ad9",
+      "translated_at": "2026-08-29T23:51:09.827Z"
+    },
+    "content:alinaqi-maggy-react-web": {
+      "hash": "4bc79141832699b0",
+      "translated_at": "2026-08-29T23:52:14.304Z"
+    },
+    "content:alinaqi-maggy-reddit-api": {
+      "hash": "799411567a5a9520",
+      "translated_at": "2026-08-29T23:53:30.479Z"
+    },
+    "content:alinaqi-maggy-security": {
+      "hash": "98d61936d8e08d54",
+      "translated_at": "2026-08-29T23:54:45.626Z"
+    },
+    "content:alinaqi-maggy-session-management": {
+      "hash": "2fc04c41efebc5d7",
+      "translated_at": "2026-08-29T23:56:03.604Z"
+    },
+    "content:alinaqi-maggy-reddit-ads": {
+      "hash": "84fa083204a4a887",
+      "translated_at": "2026-08-29T23:56:19.568Z"
+    },
+    "content:alinaqi-maggy-shopify-apps": {
+      "hash": "0872612f302eda6a",
+      "translated_at": "2026-08-29T23:58:09.370Z"
+    },
+    "content:alinaqi-maggy-site-architecture": {
+      "hash": "9e7209b200e7e06f",
+      "translated_at": "2026-08-29T23:58:26.935Z"
+    },
+    "content:alinaqi-maggy-supabase": {
+      "hash": "a7e386e6acd7db5a",
+      "translated_at": "2026-08-29T23:59:06.709Z"
+    },
+    "content:alinaqi-maggy-typescript": {
+      "hash": "6fc3b62209f40e91",
+      "translated_at": "2026-08-30T00:02:55.834Z"
+    },
+    "content:alinaqi-maggy-ticket-craft": {
+      "hash": "6d16b6238bc10f36",
+      "translated_at": "2026-08-30T00:04:34.303Z"
+    },
+    "content:alinaqi-maggy-ui-mobile": {
+      "hash": "a8d22e8a60298a54",
+      "translated_at": "2026-08-30T00:04:48.794Z"
+    },
+    "content:avelikiy-great-cto-vertical-fintech-mobile": {
+      "hash": "9427eaa51ea22f05",
+      "translated_at": "2026-08-30T00:08:59.215Z"
     }
   }
 }

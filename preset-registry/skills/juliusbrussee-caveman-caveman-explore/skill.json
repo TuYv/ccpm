@@ -1,7 +1,7 @@
 {
   "id": "juliusbrussee-caveman-caveman-explore",
   "name": "caveman-explore",
-  "description": "Read-only repository explorer. Use PROACTIVELY for cold-start exploration, broad cross-file localization, or when a direct search has failed and you need to find where something lives. Skip it when the issue already names the exact file or symbol, or a previous turn already returned usable file:line evidence. Returns only compact path:line citations; its reads and greps never enter the main conversation.",
+  "description": "Read-only repository explorer for cold-start orientation, broad cross-file localization, or when a direct search failed. Skip it when the exact file or symbol is already named. Returns path:line citations only; its reads stay out of main context.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/JuliusBrussee/caveman/blob/main/skills/caveman-explore/SKILL.md",
     "path": "skills/caveman-explore/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-29T19:42:07.842Z",
-    "stars": 101743,
+    "discovered_at": "2026-08-29T22:53:06.111Z",
+    "stars": 101755,
     "language": "Go",
-    "pushed_at": "2026-08-27T13:59:59Z",
+    "pushed_at": "2026-08-29T22:17:17Z",
     "license": null
   },
-  "summary_zh": "只读代码仓库探索工具，适合快速熟悉陌生项目、跨文件定位代码，或在常规搜索无果时查找实现位置。"
+  "summary_zh": "一个只读代码仓库探索工具，适合快速了解陌生项目、跨文件定位代码，或在直接搜索无果时查找线索。"
 }

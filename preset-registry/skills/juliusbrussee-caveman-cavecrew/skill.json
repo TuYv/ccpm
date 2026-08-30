@@ -1,7 +1,7 @@
 {
   "id": "juliusbrussee-caveman-cavecrew",
   "name": "cavecrew",
-  "description": "> Decision guide for delegating to caveman-style subagents. Tells the main thread WHEN to spawn `cavecrew-investigator` (locate code), `cavecrew-builder` (1-2 file edit), or `cavecrew-reviewer` (diff review) instead of doing the work inline or using vanilla `Explore`. Subagent output is caveman-compressed so the tool-result injected back into main context is ~60% smaller — main context lasts longer across long sessions. Trigger: \"delegate to subagent\", \"use cavecrew\", \"spawn investigator/builder",
+  "description": "> When to delegate to `cavecrew-investigator` (locate code), `cavecrew-builder` (1-2 file edit) or `cavecrew-reviewer` (diff review) instead of working inline or using `Explore`. Their output is compressed, so main context lasts longer.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/JuliusBrussee/caveman/blob/main/skills/cavecrew/SKILL.md",
     "path": "skills/cavecrew/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-29T19:42:07.119Z",
-    "stars": 101743,
+    "discovered_at": "2026-08-29T22:53:05.610Z",
+    "stars": 101755,
     "language": "Go",
-    "pushed_at": "2026-08-27T13:59:59Z",
+    "pushed_at": "2026-08-29T22:17:17Z",
     "license": null
   },
-  "summary_zh": "它是指导主线程何时分派子代理去查代码、改文件或做审查的调度工具。它能压缩子代理返回结果以节省约60%的上下文，非常适合长会话开发，防止主线程上下文过快耗尽。"
+  "summary_zh": "一套代码任务分工工具，可委派代码定位、小范围修改和差异审查，并压缩结果以节省主对话上下文。"
 }

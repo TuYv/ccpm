@@ -1,7 +1,7 @@
 {
   "id": "juliusbrussee-caveman-caveman-help",
   "name": "caveman-help",
-  "description": "> Quick-reference card for all caveman modes, skills, and commands. One-shot display, not a persistent mode. Trigger: /caveman-help, \"caveman help\", \"what caveman commands\", \"how do I use caveman\".",
+  "description": "> Quick-reference card for caveman modes, skills and commands. Trigger: /caveman-help or \"caveman help\".",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/JuliusBrussee/caveman/blob/main/skills/caveman-help/SKILL.md",
     "path": "skills/caveman-help/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-29T19:42:08.066Z",
-    "stars": 101743,
+    "discovered_at": "2026-08-29T22:53:06.202Z",
+    "stars": 101755,
     "language": "Go",
-    "pushed_at": "2026-08-27T13:59:59Z",
+    "pushed_at": "2026-08-29T22:17:17Z",
     "license": null
   },
-  "summary_zh": "这是一个一次性弹出的速查卡片，帮你快速查阅所有模式、技能和指令。当你忘了怎么操作，一句话触发就能立刻看一眼，用完即走不占界面，特别适合随时查指令的场景。"
+  "summary_zh": "用于快速查询 Caveman 的模式、技能和命令，适合忘记用法时随时唤出参考。"
 }

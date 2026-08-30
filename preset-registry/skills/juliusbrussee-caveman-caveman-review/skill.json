@@ -1,7 +1,7 @@
 {
   "id": "juliusbrussee-caveman-caveman-review",
   "name": "caveman-review",
-  "description": "> Ultra-compressed code review comments. Cuts noise from PR feedback while preserving the actionable signal. Each comment is one line: location, problem, fix. Use when user says \"review this PR\", \"code review\", \"review the diff\", \"/review\", or invokes /caveman-review. Auto-triggers when reviewing pull requests.",
+  "description": "> Compressed code review - one line per finding with location, problem and fix. Use for /caveman-review, \"review this PR\", or \"review the diff\".",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/JuliusBrussee/caveman/blob/main/skills/caveman-review/SKILL.md",
     "path": "skills/caveman-review/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-29T19:42:08.817Z",
-    "stars": 101743,
+    "discovered_at": "2026-08-29T22:53:06.692Z",
+    "stars": 101755,
     "language": "Go",
-    "pushed_at": "2026-08-27T13:59:59Z",
+    "pushed_at": "2026-08-29T22:17:17Z",
     "license": null
   },
-  "summary_zh": "这是一个极简代码审查助手，专门解决PR反馈废话太多的问题。它自动把审查意见压缩成纯干货的一行式反馈，直指问题并给出修改建议，适合需要快速搞定代码审查的场景。"
+  "summary_zh": "一款精简代码审查工具，适合快速定位 PR 或差异中的问题并获取修复建议。"
 }

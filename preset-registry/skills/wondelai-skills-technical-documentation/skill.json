@@ -1,0 +1,26 @@
+{
+  "id": "wondelai-skills-technical-documentation",
+  "name": "technical-documentation",
+  "description": "Audit, write, and improve developer documentation using Google''s Developer Documentation Style Guide and Technical Writing courses. Use this skill for any documentation work, even when the user names no style guide: \"audit our docs\", \"review this README\", \"write a README\", \"getting started guide\", \"how-to or tutorial\", \"API reference\", \"docstrings\", \"CLI help text\", \"changelog or release notes\", \"migration guide\", or \"our docs are confusing\". Also use it when writing docs from code, rewriting a",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "wondelai",
+  "install_path": ".claude/skills/technical-documentation/SKILL.md",
+  "source": {
+    "repo": "wondelai/skills",
+    "url": "https://github.com/wondelai/skills/blob/main/plugins/code-craftsmanship/skills/technical-documentation/SKILL.md",
+    "path": "plugins/code-craftsmanship/skills/technical-documentation/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-29T22:50:56.017Z",
+    "stars": 2057,
+    "language": "Shell",
+    "pushed_at": "2026-08-29T21:18:08Z",
+    "license": "MIT"
+  },
+  "summary_zh": "按谷歌技术写作规范审查、撰写和优化开发者文档，适合 README、教程、API 参考及发布说明等场景。"
+}

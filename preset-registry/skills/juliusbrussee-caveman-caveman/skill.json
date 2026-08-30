@@ -1,7 +1,7 @@
 {
   "id": "juliusbrussee-caveman-caveman",
   "name": "caveman",
-  "description": "> Ultra-compressed communication mode. Cuts output tokens 65% (measured) by speaking like caveman while keeping full technical accuracy. Supports intensity levels: lite, full (default), ultra, wenyan-lite, wenyan-full, wenyan-ultra. Use when user says \"caveman mode\", \"talk like caveman\", \"use caveman\", \"less tokens\", \"be brief\", or invokes /caveman. Also auto-triggers when token efficiency is requested.",
+  "description": "> Ultra-compressed communication mode that cuts output tokens while keeping technical accuracy. Levels: lite, full, ultra and the wenyan variants. Use for /caveman, \"caveman mode\", \"talk like caveman\", \"be brief\" or \"less tokens\".",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/JuliusBrussee/caveman/blob/main/skills/caveman/SKILL.md",
     "path": "skills/caveman/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-29T19:42:09.237Z",
-    "stars": 101743,
+    "discovered_at": "2026-08-29T22:53:06.975Z",
+    "stars": 101755,
     "language": "Go",
-    "pushed_at": "2026-08-27T13:59:59Z",
+    "pushed_at": "2026-08-29T22:17:17Z",
     "license": null
   },
-  "summary_zh": "一种超压缩沟通模式，用精简表达降低约65%的输出量，适合需要准确技术回答又想节省令牌的场景。"
+  "summary_zh": "一种超精简沟通模式，在保持技术准确性的同时压缩输出，适合需要简短回答、节省令牌的场景。"
 }

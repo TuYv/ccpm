@@ -1,7 +1,7 @@
 {
   "id": "juliusbrussee-caveman-caveman-compress",
   "name": "caveman-compress",
-  "description": "> Compress natural language memory files (CLAUDE.md, todos, preferences) into caveman format to save input tokens. Preserves all technical substance, code, URLs, and structure. Compressed version overwrites the original file. Human-readable backup saved as FILE.original.md. Trigger: /caveman-compress FILEPATH or \"compress memory file\"",
+  "description": "> Compress a memory file such as CLAUDE.md or a todo list into caveman format to save input tokens, keeping a readable backup. Trigger: /caveman-compress.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/JuliusBrussee/caveman/blob/main/skills/caveman-compress/SKILL.md",
     "path": "skills/caveman-compress/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-29T19:42:07.393Z",
-    "stars": 101743,
+    "discovered_at": "2026-08-29T22:53:05.796Z",
+    "stars": 101755,
     "language": "Go",
-    "pushed_at": "2026-08-27T13:59:59Z",
+    "pushed_at": "2026-08-29T22:17:17Z",
     "license": null
   },
-  "summary_zh": "这是一个把AI记忆文件压缩成极简格式的工具，能在保留代码和链接等核心技术细节的同时大幅节省输入token，适合需要精简上下文来降低AI调用成本的场景。"
+  "summary_zh": "将记忆文件或待办清单压缩成简短易懂的原始人式文本，在保留可读备份的同时节省输入令牌。"
 }
