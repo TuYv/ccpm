@@ -1,0 +1,26 @@
+{
+  "id": "avelikiy-great-cto-quant-validation",
+  "name": "quant-validation",
+  "description": "The methods a financial-ML result has to survive before it is evidence — purged cross-validation with an embargo, triple-barrier labelling, sample uniqueness under overlapping labels, fractional differentiation, meta-labelling, and multiple-testing correction. Written because the invariants were required of quant-researcher and nothing in the project explained how to satisfy them: a rule without a method produces either an invention or a block. Applied whenever a backtest, a feature or a label i",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "avelikiy",
+  "install_path": ".claude/skills/quant-validation/SKILL.md",
+  "source": {
+    "repo": "avelikiy/great_cto",
+    "url": "https://github.com/avelikiy/great_cto/blob/main/skills/quant-validation/SKILL.md",
+    "path": "skills/quant-validation/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-31T20:17:54.024Z",
+    "stars": 86,
+    "language": "JavaScript",
+    "pushed_at": "2026-08-31T18:09:14Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一套金融机器学习验证方法，用于检验回测、特征和标签是否经得住数据泄漏、重叠样本与多重测试等风险。"
+}

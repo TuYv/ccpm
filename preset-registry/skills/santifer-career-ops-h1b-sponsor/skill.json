@@ -1,0 +1,26 @@
+{
+  "id": "santifer-career-ops-h1b-sponsor",
+  "name": "h1b-sponsor",
+  "description": "Open-source AI job search: scan job portals, evaluate listings into a structured A-H report with a global 1-5 score, tailor your CV, track applications — runs locally in your AI coding CLI (Claude Code, Codex, OpenCode, Antigravity…)",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "santifer",
+  "install_path": ".claude/skills/h1b-sponsor/SKILL.md",
+  "source": {
+    "repo": "santifer/career-ops",
+    "url": "https://github.com/santifer/career-ops/blob/main/plugins/h1b-sponsor/skill.md",
+    "path": "plugins/h1b-sponsor/skill.md",
+    "branch": "main",
+    "discovered_at": "2026-08-31T20:18:07.761Z",
+    "stars": 69608,
+    "language": "JavaScript",
+    "pushed_at": "2026-08-31T18:09:16Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一款运行在本地 AI 编程命令行中的开源求职助手，帮你筛选职位、优化简历并高效管理求职进度。"
+}
