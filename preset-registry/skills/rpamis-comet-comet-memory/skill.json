@@ -1,0 +1,26 @@
+{
+  "id": "rpamis-comet-comet-memory",
+  "name": "comet-memory",
+  "description": "Use when Comet must decide whether a bounded semantic review packet contains a personal memory worth creating, updating, forgetting, or skipping.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "rpamis",
+  "install_path": ".claude/skills/comet-memory/SKILL.md",
+  "source": {
+    "repo": "rpamis/comet",
+    "url": "https://github.com/rpamis/comet/blob/master/assets/skills/comet-memory/SKILL.md",
+    "path": "assets/skills/comet-memory/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-08-31T14:45:11.741Z",
+    "stars": 2879,
+    "language": "JavaScript",
+    "pushed_at": "2026-08-31T10:15:10Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于让 Comet 从有限的语义审查内容中识别值得保留或调整的个人记忆，适合管理对话中的长期记忆。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "the-vibe-company-companion-ship-pr-dev",
+  "name": "ship-pr-dev",
+  "description": "\"Ship PR: credit-aware autonomous pull request readiness workflow. Use when the user asks to ship work, prepare a branch for review, create or update a PR, make CI green, clean up a branch before PR, or produce a PR a human can confidently merge. This skill may edit code, run checks, commit, push, create/update a PR, and iterate on CI, but it keeps Git ownership in the coordinator, delegates bounded work to cheaper host-native workers, uses review-code-dev as the only independent read-only revie",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "The-Vibe-Company",
+  "install_path": ".claude/skills/ship-pr-dev/SKILL.md",
+  "source": {
+    "repo": "The-Vibe-Company/companion",
+    "url": "https://github.com/The-Vibe-Company/companion/blob/main/.claude/skills/ship-pr-dev/SKILL.md",
+    "path": ".claude/skills/ship-pr-dev/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-31T14:48:45.325Z",
+    "stars": 2397,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-31T14:36:47Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于自主完成分支整理、代码检查、提交推送及创建或更新 PR，让代码通过 CI 并达到可放心合并的状态。"
+}

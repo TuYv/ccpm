@@ -1,0 +1,26 @@
+{
+  "id": "the-vibe-company-companion-incident-summary",
+  "name": "incident-summary",
+  "description": "Summarize an incident timeline from logs into a concise postmortem draft.",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "The-Vibe-Company",
+  "install_path": ".claude/skills/incident-summary/SKILL.md",
+  "source": {
+    "repo": "The-Vibe-Company/companion",
+    "url": "https://github.com/The-Vibe-Company/companion/blob/main/examples/skills/incident-summary/SKILL.md",
+    "path": "examples/skills/incident-summary/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-31T14:48:45.707Z",
+    "stars": 2397,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-31T14:36:47Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于根据日志还原并总结故障时间线，快速生成简洁的事故复盘初稿。"
+}

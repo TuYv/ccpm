@@ -1,0 +1,26 @@
+{
+  "id": "the-vibe-company-companion-capture-learning-tools",
+  "name": "capture-learning-tools",
+  "description": "\"Turn technical conversations, bugs, CI failures, review comments, and repeated agent mistakes into durable project improvements. Use when the user asks what should be automated, documented, tested, added to AGENTS.md/CLAUDE.md, wired into CI, or changed so the same issue does not happen again. This skill is for both non-technical and technical users: it explains the learning in plain English, inspects the repository, chooses the right prevention layer, proposes changes first, and only edits pro",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "The-Vibe-Company",
+  "install_path": ".claude/skills/capture-learning-tools/SKILL.md",
+  "source": {
+    "repo": "The-Vibe-Company/companion",
+    "url": "https://github.com/The-Vibe-Company/companion/blob/main/.claude/skills/capture-learning-tools/SKILL.md",
+    "path": ".claude/skills/capture-learning-tools/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-08-31T14:48:44.612Z",
+    "stars": 2397,
+    "language": "TypeScript",
+    "pushed_at": "2026-08-31T14:36:47Z",
+    "license": "MIT"
+  },
+  "summary_zh": "把技术对话、故障和重复错误沉淀为项目改进，帮助判断应补文档、测试、自动化或 CI，避免同类问题反复发生。"
+}

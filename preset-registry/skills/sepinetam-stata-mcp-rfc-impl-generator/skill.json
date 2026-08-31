@@ -2,7 +2,7 @@
   "id": "sepinetam-stata-mcp-rfc-impl-generator",
   "name": "rfc-impl-generator",
   "description": "Generate RFC and IMPL documents from a user-provided feature/fix description. Use when the user says something like \"I want to add a feature with codex\", \"Implement this\", \"Write an RFC for...\", or provides a short idea that needs to be formalized into the ai-driven/rfc + ai-driven/impl pipeline.",
-  "category": "设计创意",
+  "category": "数据分析",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/SepineTam/stata-mcp/blob/master/.claude/skills/rfc-impl-generator/SKILL.md",
     "path": ".claude/skills/rfc-impl-generator/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-08-31T05:44:20.095Z",
+    "discovered_at": "2026-08-31T13:58:08.933Z",
     "stars": 253,
     "language": "Python",
-    "pushed_at": "2026-08-30T12:40:54Z",
+    "pushed_at": "2026-08-31T09:24:37Z",
     "license": "AGPL-3.0"
   },
   "summary_zh": "它能根据你的简短想法或需求，自动生成正式的 RFC 提案和 IMPL 实施文档。帮你把零散的点子快速变成标准化的研发流程，适合需要把新功能或修复需求规范化落地的场景。"
