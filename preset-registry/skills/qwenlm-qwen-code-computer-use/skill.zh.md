@@ -5,20 +5,20 @@ description: Control local desktop applications through Computer Use for tasks t
 ## `node_repl` + `@qwen-code/cua-sdk`（计算机操作）
 
 - 所有计算机操作均使用 `node_repl`（JavaScript）。
-- 除非用户明确要求，否则不要使用 `node_repl` 以外的其他技术进行计算机交互。这包括 AppleScript、
-  `osascript`、JXA、System Events 和合成输入。
-- 如果专用插件或技能可以完成任务，优先使用专用插件或技能；对于没有通过更具体接口暴露的应用程序交互，再使用计算机操作。
-- 仅使用类型化的 `ComputerUse` API。不要使用通用 SDK `callTool`、直接导入 `CuaDriver` 或 Qwen 全局桥接。
-- `node_repl` 状态会在各次调用之间持续存在。
+- 除非用户明确要求，否则不要使用 `node_repl` 以外的其他技术进行计算机交互。
+  这包括 AppleScript、`osascript`、JXA、System Events 以及合成输入。
+- 如果专用插件或技能可以完成任务，优先使用专用插件或技能；对于没有通过更具体接口公开的应用交互，使用计算机操作。
+- 只能使用类型化的 `ComputerUse` API。不要使用通用 SDK 的 `callTool`、直接导入 `CuaDriver`，也不要使用 Qwen 全局桥接。
+- `node_repl` 状态会在多次调用之间持久保留。
 - 使用 `nodeRepl.write(...)` 输出文本。它接收字符串，因此请使用 `JSON.stringify(...)` 包装对象。
 
 ## 自动安装
 
-运行 `qwen mcp list`，检查是否已配置 `node-repl` 服务器。如果尚未配置，请自行运行以下两个命令：
+运行 `qwen mcp list`，检查是否已配置 `node-repl` 服务器。如果未配置，请自行运行以下两个命令：
 
 ```bash
-qwen mcp add --scope user node-repl npx -y @qwen-code/node-repl-mcp@0.1.0
-npm install --no-save --package-lock=false @qwen-code/cua-sdk@0.20.0
+qwen mcp add --scope user node-repl npx -y @qwen-code/node-repl-mcp@0.1.1
+npm install --no-save --package-lock=false @qwen-code/cua-sdk@0.20.2
 ```
 
 添加 MCP 服务器后，告知用户重启 Qwen Code，然后停止。不要要求用户复制或运行这些命令。
@@ -26,7 +26,7 @@ npm install --no-save --package-lock=false @qwen-code/cua-sdk@0.20.0
 如果 `node_repl` 可用，但 SDK 导入失败，请在当前工作区中自行运行 SDK 安装命令，然后重试导入：
 
 ```bash
-npm install --no-save --package-lock=false @qwen-code/cua-sdk@0.20.0
+npm install --no-save --package-lock=false @qwen-code/cua-sdk@0.20.2
 ```
 
 ## 引导初始化
@@ -128,7 +128,7 @@ type ComputerUse = {
 
 ### 1. 初始化
 
-解析任务中指定的确切运行中应用程序和窗口名称。在 `node_repl` 内进行筛选；不要打印完整的应用程序列表：
+解析任务中指定的确切运行应用程序和窗口。在 `node_repl` 内进行筛选；不要打印完整的应用程序列表：
 
 ```js
 var apps = await computer.listApps();
@@ -146,7 +146,7 @@ var windows = await computer.listWindows({ pid });
 nodeRepl.write(JSON.stringify(windows));
 ```
 
-从返回的元数据中选择窗口，然后获取其当前的辅助功能状态：
+从返回的元数据中选择窗口，然后获取其当前的可访问性状态：
 
 ```js
 var target = { pid, windowId: windows[0].window_id };
@@ -154,11 +154,11 @@ var state = await computer.observeWindow({ ...target, forceFull: true });
 nodeRepl.write(state.text);
 ```
 
-绝不要猜测 PID、窗口 ID、坐标或元素令牌。`ComputerUse` 可以发现正在运行的应用程序，但不会启动应用程序；如有必要，可从 `node_repl` 使用普通的 Node.js 进程 API 启动应用程序，然后刷新应用程序和窗口列表。
+绝不要猜测 PID、窗口 ID、坐标或元素令牌。`ComputerUse` 能发现正在运行的应用程序，但不会启动应用程序；如有必要，可使用普通的 Node.js 进程 API 从 `node_repl` 启动应用程序，然后刷新应用程序和窗口列表。
 
 ### 2. 执行操作并获取最新状态
 
-仅选择完成用户任务所需的操作。优先使用当前的 `element_token` 值，而不是坐标。将观察到的 `element_token` 作为驼峰命名的 `elementToken` 操作字段传入：
+仅选择完成用户任务所需的操作。优先使用当前的 `element_token` 值，而不是坐标。将观察到的 `element_token` 作为驼峰形式的 `elementToken` 操作字段传入：
 
 ```js
 await computer.setValue({
@@ -174,9 +174,9 @@ state = await computer.observeWindow({
 nodeRepl.write(state.text);
 ```
 
-执行一个或多个操作后，在决定下一步操作之前，始终观察确切的窗口。如果更新后的状态显示已得到请求的结果，则停止操作、完成清理并回答用户。如果 UI 未按预期运行，则获取最新的完整状态，然后再选择其他操作。
+执行一个或多个操作后，始终先观察确切的窗口，再决定下一步操作。如果更新后的状态显示已达到请求的结果，则停止操作、完成清理并回答用户。如果 UI 未按预期运行，则获取最新的完整状态，然后再选择其他操作。
 
-仅当当前辅助功能状态明确提供了某个确切操作时，才使用次要操作。为提高效率，优先使用辅助功能文本；当辅助功能文本不完整或需要关注视觉布局时，再使用屏幕截图。
+仅当当前可访问性状态明确提供了某个确切操作时，才使用辅助操作。为提高效率，优先使用可访问性文本；当可访问性文本不完整或视觉布局很重要时，使用屏幕截图。
 
 ## 读取屏幕截图
 

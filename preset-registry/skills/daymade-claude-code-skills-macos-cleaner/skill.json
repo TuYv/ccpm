@@ -1,7 +1,7 @@
 {
   "id": "daymade-claude-code-skills-macos-cleaner",
   "name": "macos-cleaner",
-  "description": ">- Diagnoses and safely reclaims macOS disk space. Use when a Mac is low on storage, reports “Caching needs more space,” shows large Apple Content Caching or AssetCacheManagerUtil usage, or needs analysis of caches, logs, application remnants, large or duplicate files, Docker or OrbStack, Homebrew, npm, pip, Xcode, and other developer storage. Routes known suspects to targeted read-only diagnosis before broad scans, distinguishes logical from physical usage, requires an impact-and-recovery plan ",
+  "description": ">- Diagnoses and safely reclaims macOS disk space. Use when a Mac is low on storage, reports “Caching needs more space,” shows large Apple Content Caching or AssetCacheManagerUtil usage, or needs analysis of caches, logs, application remnants, large or duplicate files, Docker or OrbStack, Chromium code-sign clones, Homebrew, npm, pip, Xcode, and other developer storage. Routes known suspects to targeted read-only diagnosis before broad scans, distinguishes nominal path accounting from physical r",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-macos/macos-cleaner/SKILL.md",
     "path": "daymade-macos/macos-cleaner/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-30T22:04:00.389Z",
+    "discovered_at": "2026-08-31T00:30:09.282Z",
     "stars": 1362,
     "language": "Python",
-    "pushed_at": "2026-08-30T21:05:32Z",
+    "pushed_at": "2026-08-30T23:49:02Z",
     "license": "MIT"
   },
-  "summary_zh": "用于诊断并安全释放 macOS 磁盘空间，适合存储不足、缓存异常或开发工具占用过大时定位并清理文件。"
+  "summary_zh": "用于诊断并安全释放 macOS 磁盘空间，适合排查缓存、开发工具残留、大文件和重复文件等存储占用问题。"
 }
