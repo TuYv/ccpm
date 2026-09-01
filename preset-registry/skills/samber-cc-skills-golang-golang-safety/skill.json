@@ -1,7 +1,7 @@
 {
   "id": "samber-cc-skills-golang-golang-safety",
   "name": "golang-safety",
-  "description": "Defensive Golang coding to prevent panics, silent data corruption, and subtle runtime bugs. Use when encountering nil panics, append aliasing, map concurrent access, float comparison pitfalls, or zero-value design questions. Also use when reviewing code for nil-safety, numeric conversion overflow, resource lifecycle issues (defer in loops), or defensive copying of slices and maps.",
+  "description": "Defensive Golang coding against accidental bugs — nil panics, typed-nil interfaces, `append` backing-array aliasing, silent int64-to-int32 truncation, float `==` comparison, `defer` inside loops, defensive copies of slices and maps, and usable zero values. Use when a Go program panics on a nil map write or nil pointer dereference, when reviewing code for nil-safety, numeric conversion overflow, or resource lifecycle, or when designing a type whose zero value must be safe. Not for designing concu",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/samber/cc-skills-golang/blob/main/skills/golang-safety/SKILL.md",
     "path": "skills/golang-safety/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-01T06:05:27.297Z",
-    "stars": 3124,
+    "discovered_at": "2026-09-01T11:05:30.875Z",
+    "stars": 3128,
     "language": "Go",
-    "pushed_at": "2026-09-01T01:16:42Z",
+    "pushed_at": "2026-09-01T09:45:27Z",
     "license": "MIT"
-  },
-  "summary_zh": "一套 Go 防御性编程实践，用于避免空指针崩溃、数据悄然损坏、并发访问及资源管理等隐蔽运行时问题。"
+  }
 }

@@ -1,7 +1,7 @@
 {
   "id": "samber-cc-skills-golang-golang-troubleshooting",
   "name": "golang-troubleshooting",
-  "description": "Troubleshoot Golang programs systematically - find and fix the root cause. Use when encountering bugs, crashes, deadlocks, or unexpected behavior in Go code. Covers debugging methodology, common Go pitfalls, test-driven debugging, pprof setup and capture, Delve debugger, race detection, GODEBUG tracing, and production debugging. Start here for any 'something is wrong' situation. Not for interpreting profiles or benchmarking (→ See `samber/cc-skills-golang@golang-benchmark` skill) or applying opt",
+  "description": "Troubleshoot Golang programs systematically - find and fix the root cause. Use when encountering bugs, crashes, deadlocks, races, or unexpected behavior in Go code. Covers debugging methodology, common Go pitfalls, test-driven debugging, pprof setup and capture, Delve, race detection, GODEBUG tracing, and production debugging. Start here for any 'something is wrong' situation. Not for interpreting profiles or benchmarking (→ See `samber/cc-skills-golang@golang-benchmark` skill), applying optimiz",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/samber/cc-skills-golang/blob/main/skills/golang-troubleshooting/SKILL.md",
     "path": "skills/golang-troubleshooting/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-01T06:05:30.484Z",
-    "stars": 3124,
+    "discovered_at": "2026-09-01T11:05:33.570Z",
+    "stars": 3128,
     "language": "Go",
-    "pushed_at": "2026-09-01T01:16:42Z",
+    "pushed_at": "2026-09-01T09:45:27Z",
     "license": "MIT"
-  },
-  "summary_zh": "一套系统排查 Go 程序故障的指南，适合定位并修复崩溃、死锁、竞态及异常行为的根因。"
+  }
 }

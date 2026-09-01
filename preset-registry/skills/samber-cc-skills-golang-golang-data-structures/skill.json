@@ -1,7 +1,7 @@
 {
   "id": "samber-cc-skills-golang-golang-data-structures",
   "name": "golang-data-structures",
-  "description": "Golang data structures — slices (internals, capacity growth, preallocation, slices package), maps (internals, hash buckets, maps package), arrays, container/list/heap/ring, strings.Builder vs bytes.Buffer, generic collections, pointers (unsafe.Pointer, weak.Pointer), and copy semantics. Use when choosing or optimizing Go data structures, implementing generic containers, using container/ packages, unsafe or weak pointers, or questioning slice/map internals.",
+  "description": "Golang data structures — slices (internals, capacity growth, preallocation, slices package), maps (internals, hash buckets, maps package), arrays, container/list/heap/ring, strings.Builder vs bytes.Buffer, generic collections, pointers (unsafe.Pointer, weak.Pointer), and copy semantics. Use when choosing or optimizing Go data structures, implementing generic containers, using container/ packages, unsafe or weak pointers, or questioning slice/map internals. Not for applying optimization patterns ",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/samber/cc-skills-golang/blob/main/skills/golang-data-structures/SKILL.md",
     "path": "skills/golang-data-structures/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-01T06:05:23.715Z",
-    "stars": 3124,
+    "discovered_at": "2026-09-01T11:05:27.268Z",
+    "stars": 3128,
     "language": "Go",
-    "pushed_at": "2026-09-01T01:16:42Z",
+    "pushed_at": "2026-09-01T09:45:27Z",
     "license": "MIT"
   },
-  "summary_zh": "一份深入讲解 Go 数据结构原理与用法的指南，适合选型、性能优化及实现泛型容器。"
+  "summary_zh": "这是 Go 数据结构与底层机制指南，帮助你选择和优化数据结构、实现泛型容器，并理解切片、映射及指针语义。"
 }

@@ -1,7 +1,7 @@
 {
   "id": "samber-cc-skills-golang-golang-popular-libraries",
   "name": "golang-popular-libraries",
-  "description": "Recommends production-ready Golang libraries and frameworks. Apply when the user explicitly asks for library suggestions, wants to compare alternatives, needs to choose a library for a specific task, or when a new dependency is being added to the project.",
+  "description": "Golang library and framework selection — vetted production-ready options by category (web, database, testing, logging, messaging), new and experimental stdlib packages, standard-library-first tradeoffs, and maturity signals (maintenance, license, importer counts). Apply when the user asks for library suggestions, wants to compare alternatives, needs to choose a library for a specific task, or when a new dependency is being added to the project. Not for a specific library's API once chosen (→ See",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/samber/cc-skills-golang/blob/main/skills/golang-popular-libraries/SKILL.md",
     "path": "skills/golang-popular-libraries/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-01T06:05:26.782Z",
-    "stars": 3124,
+    "discovered_at": "2026-09-01T11:05:30.445Z",
+    "stars": 3128,
     "language": "Go",
-    "pushed_at": "2026-09-01T01:16:42Z",
+    "pushed_at": "2026-09-01T09:45:27Z",
     "license": "MIT"
-  },
-  "summary_zh": "一份面向生产环境的 Go 库与框架选型指南，适合依赖推荐、方案对比和特定任务的技术选型。"
+  }
 }

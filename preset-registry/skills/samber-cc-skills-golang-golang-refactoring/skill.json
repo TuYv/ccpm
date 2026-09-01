@@ -1,7 +1,7 @@
 {
   "id": "samber-cc-skills-golang-golang-refactoring",
   "name": "golang-refactoring",
-  "description": "Golang refactoring — the safe, at-scale process for restructuring existing Go code: a coverage-adaptive safety net, tool-driven behavior-preserving transforms (gopls Rename/Inline/Extract, `gofmt -r`, `eg`, `gopatch`, `go/analysis` fixers), the Fowler catalog mapped to Go, breaking import cycles, moving types across packages, and a human-in-the-loop workflow of small stacked PRs on a refactoring branch. Apply when code is hard to maintain, a function/type has grown too large, a code smell needs ",
+  "description": "Golang refactoring — safe, at-scale restructuring of existing Go code: a coverage-adaptive safety net, behavior-preserving transforms (gopls Rename/Extract, `gofmt -r`, `gopatch`), the Fowler catalog mapped to Go, breaking import cycles, and small stacked PRs. Apply when a function or type has grown too large, a code smell blocks a feature, or the user asks to refactor Go code — also for renaming at scale, extracting functions or interfaces, moving code between packages, or planning a multi-step",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/samber/cc-skills-golang/blob/main/skills/golang-refactoring/SKILL.md",
     "path": "skills/golang-refactoring/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-01T06:05:27.114Z",
-    "stars": 3124,
+    "discovered_at": "2026-09-01T11:05:30.733Z",
+    "stars": 3128,
     "language": "Go",
-    "pushed_at": "2026-09-01T01:16:42Z",
+    "pushed_at": "2026-09-01T09:45:27Z",
     "license": "MIT"
-  },
-  "summary_zh": "一套面向 Go 代码库的安全重构方法，借助自动化工具和小步审查，在保持行为不变的前提下治理代码异味、拆分复杂结构和解除循环依赖。"
+  }
 }

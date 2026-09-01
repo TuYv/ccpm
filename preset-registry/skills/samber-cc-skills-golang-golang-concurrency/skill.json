@@ -1,7 +1,7 @@
 {
   "id": "samber-cc-skills-golang-golang-concurrency",
   "name": "golang-concurrency",
-  "description": "Golang concurrency patterns. Use when writing or reviewing concurrent Go code involving goroutines, channels, select, locks, sync primitives, errgroup, singleflight, worker pools, or fan-out/fan-in pipelines. Also triggers when you detect goroutine leaks, race conditions, channel ownership issues, or need to choose between channels and mutexes.",
+  "description": "Golang concurrency design — goroutine lifecycle and leak prevention, channels and `select`, channel ownership and direction, `sync.Mutex`/`RWMutex`/`sync.Map`/`sync.Once`/atomics, `errgroup`, `singleflight`, worker pools, and fan-out/fan-in pipelines. Use when writing or reviewing concurrent Go code, when choosing between channels and mutexes, when protecting a shared map or counter, or when a goroutine has no clear exit. Not for defensive coding unrelated to concurrency such as nil panics, slic",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/samber/cc-skills-golang/blob/main/skills/golang-concurrency/SKILL.md",
     "path": "skills/golang-concurrency/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-01T06:05:23.147Z",
-    "stars": 3124,
+    "discovered_at": "2026-09-01T11:05:26.776Z",
+    "stars": 3128,
     "language": "Go",
-    "pushed_at": "2026-09-01T01:16:42Z",
+    "pushed_at": "2026-09-01T09:45:27Z",
     "license": "MIT"
   },
-  "summary_zh": "一套 Go 并发编程模式指南，适合编写或审查并发代码，排查协程泄漏、竞态和通道管理问题。"
+  "summary_zh": "一份 Go 并发设计指南，帮助编写和审查 goroutine、通道、锁及并发流程，避免资源泄漏并正确保护共享数据。"
 }

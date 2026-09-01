@@ -1,0 +1,26 @@
+{
+  "id": "oliver-zehentleitner-keep-the-why-keep-the-why",
+  "name": "keep-the-why",
+  "description": "Preserves or recovers the reasoning behind a codebase - architectural decisions, rejected alternatives, workarounds, incident learnings, operational constraints, and historical context the code itself cannot explain. Use when implementing or reviewing a non-trivial change involving a design decision, workaround, incident fix, operational constraint, rejected alternative, or changed assumption; when documenting an existing or legacy codebase; during onboarding or a maintainer handover; or when in",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "oliver-zehentleitner",
+  "install_path": ".claude/skills/keep-the-why/SKILL.md",
+  "source": {
+    "repo": "oliver-zehentleitner/keep-the-why",
+    "url": "https://github.com/oliver-zehentleitner/keep-the-why/blob/main/skills/keep-the-why/SKILL.md",
+    "path": "skills/keep-the-why/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-01T11:13:43.798Z",
+    "stars": 146,
+    "language": "Python",
+    "pushed_at": "2026-09-01T11:07:29Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于记录和找回代码背后的架构取舍、事故教训与历史背景，适合复杂改动、遗留系统维护及团队交接。"
+}

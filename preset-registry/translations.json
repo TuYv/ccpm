@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-09-01T06:36:41.492Z",
+  "updated_at": "2026-09-01T11:17:21.496Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -17303,9 +17303,9 @@
       "translated_at": "2026-08-03T04:58:28.906Z"
     },
     "bundle:samber-cc-skills-golang": {
-      "hash": "d376eb59eca6c342",
-      "summary_zh": "面向 Go 项目全生命周期的工程实践合集，覆盖开发、性能、并发、数据访问与交付，帮助团队统一规范并提升质量和效率。",
-      "translated_at": "2026-08-03T04:58:31.053Z"
+      "hash": "8ee55bd374bd2e11",
+      "summary_zh": "面向 Go 项目全生命周期的开发工具集，覆盖设计、编码、并发、数据、测试、性能与 CI/CD，组合使用可更快构建可靠、易维护的生产级应用。",
+      "translated_at": "2026-09-01T11:17:02.773Z"
     },
     "bundle:rpamis-comet": {
       "hash": "1db558774b507f92",
@@ -26023,9 +26023,9 @@
       "translated_at": "2026-08-04T07:52:25.978Z"
     },
     "skill:samber-cc-skills-golang-golang-concurrency": {
-      "hash": "9f919fca7717d298",
-      "summary_zh": "一套 Go 并发编程模式指南，适合编写或审查并发代码，排查协程泄漏、竞态和通道管理问题。",
-      "translated_at": "2026-08-04T07:52:26.490Z"
+      "hash": "91c947f3abe2f29f",
+      "summary_zh": "一份 Go 并发设计指南，帮助编写和审查 goroutine、通道、锁及并发流程，避免资源泄漏并正确保护共享数据。",
+      "translated_at": "2026-09-01T11:17:10.852Z"
     },
     "skill:samber-cc-skills-golang-golang-context": {
       "hash": "90bc73cc9409de82",
@@ -26033,14 +26033,14 @@
       "translated_at": "2026-08-04T07:52:26.689Z"
     },
     "skill:samber-cc-skills-golang-golang-continuous-integration": {
-      "hash": "c1b9fd7ebcb3cffd",
-      "summary_zh": "一套面向 Go 项目的 GitHub Actions 持续集成与发布配置，适合自动化测试、安全扫描、依赖更新和质量检查。",
-      "translated_at": "2026-08-04T07:52:28.605Z"
+      "hash": "b249031a24652298",
+      "summary_zh": "一套适用于 Go 项目的 CI/CD 配置模板，帮助快速搭建测试、代码检查、安全扫描、依赖更新、发布和镜像构建流程。",
+      "translated_at": "2026-09-01T11:17:09.501Z"
     },
     "skill:samber-cc-skills-golang-golang-data-structures": {
-      "hash": "a8c14e604d249858",
-      "summary_zh": "一份深入讲解 Go 数据结构原理与用法的指南，适合选型、性能优化及实现泛型容器。",
-      "translated_at": "2026-08-04T07:52:29.103Z"
+      "hash": "533ff3261a4ad06c",
+      "summary_zh": "这是 Go 数据结构与底层机制指南，帮助你选择和优化数据结构、实现泛型容器，并理解切片、映射及指针语义。",
+      "translated_at": "2026-09-01T11:17:10.791Z"
     },
     "skill:samber-cc-skills-golang-golang-database": {
       "hash": "72c99e61ff0fb9e6",
@@ -26048,14 +26048,14 @@
       "translated_at": "2026-08-04T07:52:29.741Z"
     },
     "skill:samber-cc-skills-golang-golang-dependency-management": {
-      "hash": "90ef47906c854ae2",
-      "summary_zh": "一套 Go 项目依赖管理指南，适合处理包升级、版本冲突、安全审计、自动更新及多模块协作。",
-      "translated_at": "2026-08-04T07:52:32.613Z"
+      "hash": "ce58c0118f82aa42",
+      "summary_zh": "帮助 Go 项目管理和审计依赖，适合新增、升级或移除包、解决版本冲突及评估依赖风险。",
+      "translated_at": "2026-09-01T11:17:13.392Z"
     },
     "skill:samber-cc-skills-golang-golang-design-patterns": {
-      "hash": "ef5233ce346d6e7e",
-      "summary_zh": "一套符合 Go 习惯的设计模式指南，适合解决 API 设计、资源管理、优雅停机、容错与架构选型等问题。",
-      "translated_at": "2026-08-04T07:52:32.786Z"
+      "hash": "eeebf9e3ac798e11",
+      "summary_zh": "一套面向 Go 的惯用设计模式指南，帮助你在架构选型、API 设计、资源管理、容错和优雅停机等场景中写出稳健代码。",
+      "translated_at": "2026-09-01T11:17:14.713Z"
     },
     "skill:samber-cc-skills-golang-golang-dependency-injection": {
       "hash": "205efa998168533d",
@@ -26093,9 +26093,9 @@
       "translated_at": "2026-08-04T07:52:43.526Z"
     },
     "skill:samber-cc-skills-golang-golang-lint": {
-      "hash": "0fbbfccd1fed0370",
-      "summary_zh": "一套 Go 项目代码检查实践指南，适合配置 golangci-lint、选择检查器、解读告警及规范使用 nolint。",
-      "translated_at": "2026-08-04T07:52:44.722Z"
+      "hash": "a71ce988ac4cbd1f",
+      "summary_zh": "面向 Go 项目的代码检查与 golangci-lint 配置指南，帮助规范代码质量、理解警告并选择合适的静态检查器。",
+      "translated_at": "2026-09-01T11:17:13.316Z"
     },
     "skill:samber-cc-skills-golang-golang-gopls": {
       "hash": "f4b61d8b73b6eb67",
@@ -29423,9 +29423,9 @@
       "translated_at": "2026-08-10T21:55:24.039Z"
     },
     "bundle:jasoncolapietro-suede-creator-skills": {
-      "hash": "755cead6789712c0",
-      "summary_zh": "面向数字产品从创意到上线与增长的一站式技能合集，将设计、开发、内容、投放和营收优化串成自动化协作流程。",
-      "translated_at": "2026-08-30T07:48:26.746Z"
+      "hash": "3e32239b5817a480",
+      "summary_zh": "这是一套覆盖产品设计、开发、增长与运营的 AI 工作流合集，把复杂业务拆解协同，快速从创意落地到上线、获客和收入回收。",
+      "translated_at": "2026-09-01T11:17:02.262Z"
     },
     "skill:jasoncolapietro-suede-creator-skills-amazon-returns-recovery": {
       "hash": "a185ae1dce00e65e",
@@ -29573,9 +29573,9 @@
       "translated_at": "2026-08-11T07:44:38.485Z"
     },
     "skill:jasoncolapietro-suede-creator-skills-suede-deslop": {
-      "hash": "f4ee45918d6b352c",
-      "summary_zh": "这是一款清理文本中 AI 写作痕迹的润色工具，适合发布前处理文案、邮件、README 和社交内容，但不负责事实核验。",
-      "translated_at": "2026-08-16T00:04:57.357Z"
+      "hash": "feb1a5762dd87693",
+      "summary_zh": "面向成稿的语境感知反套话工具，可清理空泛填充、刻意强调和公式化结构，适合发布前润色或辅助写作后的文本审查。",
+      "translated_at": "2026-09-01T11:17:06.825Z"
     },
     "skill:jasoncolapietro-suede-creator-skills-suede-design": {
       "hash": "13ff580b8884bc4f",
@@ -52029,6 +52029,16 @@
     "content:raintree-technology-claude-starter-claude-code": {
       "hash": "5b00dfbac96892fe",
       "translated_at": "2026-09-01T06:36:41.492Z"
+    },
+    "skill:oliver-zehentleitner-keep-the-why-keep-the-why": {
+      "hash": "0a8327dccd0b2d22",
+      "summary_zh": "用于记录和找回代码背后的架构取舍、事故教训与历史背景，适合复杂改动、遗留系统维护及团队交接。",
+      "translated_at": "2026-09-01T11:17:06.709Z"
+    },
+    "skill:oomol-lab-open-connector-add-provider": {
+      "hash": "bc2b747822c9bfaa",
+      "summary_zh": "用于在 OOMOL Connect 中新增或扩展开源服务连接器，适合接入新服务并完善动作、凭据校验和目录配置。",
+      "translated_at": "2026-09-01T11:17:06.818Z"
     }
   }
 }

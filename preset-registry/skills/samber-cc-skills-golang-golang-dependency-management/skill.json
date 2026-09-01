@@ -1,7 +1,7 @@
 {
   "id": "samber-cc-skills-golang-golang-dependency-management",
   "name": "golang-dependency-management",
-  "description": "Dependency management strategies for Golang projects — go.mod management, installing/upgrading packages, Minimal Version Selection, vulnerability scanning, outdated dependency tracking, binary size analysis, Dependabot/Renovate setup, conflict resolution, and go.work workspaces. Use when adding, removing, or upgrading Go dependencies, auditing vulnerabilities, resolving version conflicts, or setting up automated dependency updates.",
+  "description": "Dependency management for Golang projects — go.mod and go.sum, `go get` install and upgrade flows, Minimal Version Selection, conflict resolution with replace/exclude/retract, `govulncheck` scanning of the module tree, outdated dependency and binary size auditing, vendoring, `tool` directives, and go.work workspaces. Use when adding, removing, or upgrading Go dependencies, deciding whether to take on a package, resolving version conflicts, or auditing what a module pulls in. Covers choosing and ",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/samber/cc-skills-golang/blob/main/skills/golang-dependency-management/SKILL.md",
     "path": "skills/golang-dependency-management/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-01T06:05:24.276Z",
-    "stars": 3124,
+    "discovered_at": "2026-09-01T11:05:27.774Z",
+    "stars": 3128,
     "language": "Go",
-    "pushed_at": "2026-09-01T01:16:42Z",
+    "pushed_at": "2026-09-01T09:45:27Z",
     "license": "MIT"
   },
-  "summary_zh": "一套 Go 项目依赖管理指南，适合处理包升级、版本冲突、安全审计、自动更新及多模块协作。"
+  "summary_zh": "帮助 Go 项目管理和审计依赖，适合新增、升级或移除包、解决版本冲突及评估依赖风险。"
 }

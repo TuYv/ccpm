@@ -1,7 +1,7 @@
 {
   "id": "samber-cc-skills-golang-golang-design-patterns",
   "name": "golang-design-patterns",
-  "description": "Idiomatic Golang design patterns — functional options, constructors, error flow and cascading, resource management and lifecycle, graceful shutdown, resilience, architecture, dependency injection, data handling, streaming, and more. Apply when explicitly choosing between architectural patterns, implementing functional options, designing constructor APIs, setting up graceful shutdown, applying resilience patterns, or asking which idiomatic Go pattern fits a specific problem.",
+  "description": "Idiomatic Golang design patterns — functional options, constructor APIs, `init()` and global-state avoidance, enums, panic vs error decisions, resource management and lifecycle, graceful shutdown, timeouts and retries, streaming and iterators, and architecture styles (clean, hexagonal, DDD, flat). Apply when choosing between architectural patterns, implementing functional options, designing constructor APIs, setting up graceful shutdown, applying resilience patterns, or asking which idiomatic Go",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/samber/cc-skills-golang/blob/main/skills/golang-design-patterns/SKILL.md",
     "path": "skills/golang-design-patterns/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-01T06:05:24.410Z",
-    "stars": 3124,
+    "discovered_at": "2026-09-01T11:05:28.021Z",
+    "stars": 3128,
     "language": "Go",
-    "pushed_at": "2026-09-01T01:16:42Z",
+    "pushed_at": "2026-09-01T09:45:27Z",
     "license": "MIT"
   },
-  "summary_zh": "一套符合 Go 习惯的设计模式指南，适合解决 API 设计、资源管理、优雅停机、容错与架构选型等问题。"
+  "summary_zh": "一套面向 Go 的惯用设计模式指南，帮助你在架构选型、API 设计、资源管理、容错和优雅停机等场景中写出稳健代码。"
 }

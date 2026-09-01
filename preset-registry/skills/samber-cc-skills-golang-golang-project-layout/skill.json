@@ -1,7 +1,7 @@
 {
   "id": "samber-cc-skills-golang-golang-project-layout",
   "name": "golang-project-layout",
-  "description": "Provides a guide for setting up Golang project layouts and workspaces. Use when starting a new Go project, organizing an existing codebase, setting up a monorepo with multiple packages, creating CLI tools with multiple main packages, deciding between cmd/internal/pkg directory conventions, or discussing package restructuring, package splits, or module splits.",
+  "description": "Golang project layout and workspace setup — cmd/internal/pkg directory conventions, module and package naming, go.work workspaces, and essential configuration files. Use when starting a new Go project, organizing an existing codebase, setting up a monorepo with multiple packages, creating CLI tools with multiple main packages, or discussing package restructuring, package splits, or module splits. Not for restructuring existing code without a layout change (→ See `samber/cc-skills-golang@golang-r",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/samber/cc-skills-golang/blob/main/skills/golang-project-layout/SKILL.md",
     "path": "skills/golang-project-layout/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-01T06:05:26.960Z",
-    "stars": 3124,
+    "discovered_at": "2026-09-01T11:05:30.602Z",
+    "stars": 3128,
     "language": "Go",
-    "pushed_at": "2026-09-01T01:16:42Z",
+    "pushed_at": "2026-09-01T09:45:27Z",
     "license": "MIT"
-  },
-  "summary_zh": "一套 Go 项目目录与工作区组织指南，适合新建或重构项目、搭建多包仓库及规划模块拆分。"
+  }
 }

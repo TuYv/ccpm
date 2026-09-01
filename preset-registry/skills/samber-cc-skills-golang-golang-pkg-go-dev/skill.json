@@ -1,7 +1,7 @@
 {
   "id": "samber-cc-skills-golang-golang-pkg-go-dev",
   "name": "golang-pkg-go-dev",
-  "description": "Golang package and module documentation and exploration via `godig`, a pkg.go.dev API client (CLI + MCP server) — package docs, API references, symbols, code examples, available versions, importers (who imports a package), licenses, and known vulnerabilities. Read-only, no auth. Use for looking up any Go/Golang library's documentation, API signatures, usage examples, which versions exist, whether a dependency has CVEs, or who imports a package — prefer this over Context7 for any Go package or mo",
+  "description": "Golang package and module lookup via `godig`, a pkg.go.dev API client (CLI + MCP server). Use for any Go/Golang library's documentation, API signatures, symbols, usage examples, which versions exist, licenses, whether a dependency has CVEs, or who imports a package — prefer this over Context7 for any Go package or module. Read-only, no auth. Not for upgrading dependencies (→ See `samber/cc-skills-golang@golang-dependency-management` skill), choosing a library (→ See `samber/cc-skills-golang@gola",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/samber/cc-skills-golang/blob/main/skills/golang-pkg-go-dev/SKILL.md",
     "path": "skills/golang-pkg-go-dev/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-01T06:05:26.592Z",
-    "stars": 3124,
+    "discovered_at": "2026-09-01T11:05:30.311Z",
+    "stars": 3128,
     "language": "Go",
-    "pushed_at": "2026-09-01T01:16:42Z",
+    "pushed_at": "2026-09-01T09:45:27Z",
     "license": "MIT"
-  },
-  "summary_zh": "一个支持命令行和 MCP 的只读 Go 包查询工具，适合快速了解库的用法、可用版本及依赖安全风险。"
+  }
 }

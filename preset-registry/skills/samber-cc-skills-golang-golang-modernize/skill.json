@@ -1,7 +1,7 @@
 {
   "id": "samber-cc-skills-golang-golang-modernize",
   "name": "golang-modernize",
-  "description": "Modernize Golang code to use recent language features, standard library improvements, and idiomatic patterns. Trigger proactively when writing or reviewing Go code and old-style patterns are detected, or when encountering a deprecation warning. Also use when the user explicitly asks for modernization, a Go version upgrade, or a CI/tooling refresh.",
+  "description": "Modernize Golang code to use recent language features, standard library improvements, and idiomatic patterns. Trigger proactively when writing or reviewing Go code and old-style patterns are detected, or when encountering a deprecation warning. Also use when the user explicitly asks for modernization, a Go version upgrade, or a CI/tooling refresh. Not for structural refactors, extracting functions, or moving code between packages (→ See `samber/cc-skills-golang@golang-refactoring` skill).",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/samber/cc-skills-golang/blob/main/skills/golang-modernize/SKILL.md",
     "path": "skills/golang-modernize/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-01T06:05:25.887Z",
-    "stars": 3124,
+    "discovered_at": "2026-09-01T11:05:29.573Z",
+    "stars": 3128,
     "language": "Go",
-    "pushed_at": "2026-09-01T01:16:42Z",
+    "pushed_at": "2026-09-01T09:45:27Z",
     "license": "MIT"
-  },
-  "summary_zh": "用于自动识别并改造过时的 Go 代码，适合版本升级、处理弃用警告及更新 CI 工具链。"
+  }
 }

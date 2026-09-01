@@ -1,7 +1,7 @@
 {
   "id": "samber-cc-skills-golang-golang-continuous-integration",
   "name": "golang-continuous-integration",
-  "description": "CI/CD pipeline configuration using GitHub Actions for Golang projects — testing, linting, SAST, security scanning, code coverage, Dependabot, Renovate, GoReleaser, code review automation, and release pipelines. Use when setting up or improving Go project CI, configuring GitHub Actions workflows, adding linters or security scanners, automating dependency updates, or adding quality gates.",
+  "description": "GitHub Actions CI/CD pipeline configuration for Golang projects — workflow files for test, lint, SAST, coverage and vulnerability-scan jobs, Dependabot and Renovate config files, GoReleaser release pipelines, Docker build/push, repository security settings, and AI-driven PR review. Use when setting up or improving Go project CI, writing or fixing `.github/workflows/*.yml`, adding a linter or security scanner as a pipeline job, wiring automated dependency-update bots, or adding quality gates. Cov",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/samber/cc-skills-golang/blob/main/skills/golang-continuous-integration/SKILL.md",
     "path": "skills/golang-continuous-integration/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-01T06:05:23.525Z",
-    "stars": 3124,
+    "discovered_at": "2026-09-01T11:05:27.112Z",
+    "stars": 3128,
     "language": "Go",
-    "pushed_at": "2026-09-01T01:16:42Z",
+    "pushed_at": "2026-09-01T09:45:27Z",
     "license": "MIT"
   },
-  "summary_zh": "一套面向 Go 项目的 GitHub Actions 持续集成与发布配置，适合自动化测试、安全扫描、依赖更新和质量检查。"
+  "summary_zh": "一套适用于 Go 项目的 CI/CD 配置模板，帮助快速搭建测试、代码检查、安全扫描、依赖更新、发布和镜像构建流程。"
 }
