@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-09-01T11:17:21.496Z",
+  "updated_at": "2026-09-01T16:23:07.303Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -12548,9 +12548,9 @@
       "translated_at": "2026-05-20T12:29:55.400Z"
     },
     "skill:trailofbits-skills-second-opinion": {
-      "hash": "ef093fa2868d9de3",
-      "summary_zh": "这是一个调用外部大模型审查代码的工具，当你拿不准自己的代码改动、想要个第二意见时，可以让 AI 帮忙检查未提交的代码或分支差异。",
-      "translated_at": "2026-05-20T12:30:01.800Z"
+      "hash": "46ae5541907a2244",
+      "summary_zh": "调用外部大模型审查未提交改动、分支差异或指定提交，适合需要第二意见和代码质量检查的场景。",
+      "translated_at": "2026-09-01T16:03:29.034Z"
     },
     "skill:trailofbits-skills-semgrep-rule-creator": {
       "hash": "984c79b931333973",
@@ -17493,9 +17493,9 @@
       "translated_at": "2026-08-03T05:00:23.574Z"
     },
     "bundle:avelikiy-great-cto": {
-      "hash": "f59ce41fdb332cad",
-      "summary_zh": "面向软件研发全流程的 AI CTO 工具集，把需求探索、架构决策、评审、成本估算与经验沉淀串成可复用的交付闭环。",
-      "translated_at": "2026-08-31T21:14:11.753Z"
+      "hash": "c2778fa601efe421",
+      "summary_zh": "面向 AI 辅助软件研发的完整 CTO 工作流，覆盖需求探索、设计架构、成本决策与质量审查，让团队更稳、更快地交付产品。",
+      "translated_at": "2026-09-01T16:02:31.802Z"
     },
     "bundle:eduardo-sl-go-agent-skills": {
       "hash": "3662b7901e2c5474",
@@ -26108,9 +26108,9 @@
       "translated_at": "2026-08-04T07:52:48.128Z"
     },
     "skill:samber-cc-skills-golang-golang-modernize": {
-      "hash": "629743abc334a091",
-      "summary_zh": "用于自动识别并改造过时的 Go 代码，适合版本升级、处理弃用警告及更新 CI 工具链。",
-      "translated_at": "2026-08-04T07:52:50.006Z"
+      "hash": "c472a1863af5c7ce",
+      "summary_zh": "帮助将 Go 代码升级为现代语言特性、标准库和惯用写法，适合处理旧式代码、废弃警告及 Go 版本或工具链升级。",
+      "translated_at": "2026-09-01T16:02:58.818Z"
     },
     "skill:samber-cc-skills-golang-golang-observability": {
       "hash": "6d24e7e6121d1cff",
@@ -26118,9 +26118,9 @@
       "translated_at": "2026-08-04T07:52:52.326Z"
     },
     "skill:samber-cc-skills-golang-golang-popular-libraries": {
-      "hash": "6e6425861623952b",
-      "summary_zh": "一份面向生产环境的 Go 库与框架选型指南，适合依赖推荐、方案对比和特定任务的技术选型。",
-      "translated_at": "2026-08-04T07:52:54.968Z"
+      "hash": "34d6f134aee7bf48",
+      "summary_zh": "面向 Go 项目选型的生产级库与框架指南，涵盖常用类别、标准库优先取舍及维护度、许可证等成熟度信号，适合比较方案和评估新依赖。",
+      "translated_at": "2026-09-01T16:03:31.407Z"
     },
     "skill:samber-cc-skills-golang-golang-performance": {
       "hash": "dbb0fe2ac23b873e",
@@ -26128,24 +26128,24 @@
       "translated_at": "2026-08-04T07:52:56.269Z"
     },
     "skill:samber-cc-skills-golang-golang-pkg-go-dev": {
-      "hash": "92a45f33154e1123",
-      "summary_zh": "一个支持命令行和 MCP 的只读 Go 包查询工具，适合快速了解库的用法、可用版本及依赖安全风险。",
-      "translated_at": "2026-08-04T07:52:56.368Z"
+      "hash": "3f87e61e9644d83a",
+      "summary_zh": "面向 Go 包和模块的只读查询工具，可查文档、API、示例、版本、许可证、CVE 及引用关系，适合开发查阅和依赖安全核查。",
+      "translated_at": "2026-09-01T16:03:03.371Z"
     },
     "skill:samber-cc-skills-golang-golang-project-layout": {
-      "hash": "3f304810422d2fa5",
-      "summary_zh": "一套 Go 项目目录与工作区组织指南，适合新建或重构项目、搭建多包仓库及规划模块拆分。",
-      "translated_at": "2026-08-04T07:52:57.672Z"
+      "hash": "079cddcc1d26e2c4",
+      "summary_zh": "介绍 Go 项目目录、模块与工作区的组织规范，适合新建项目、整理代码库、搭建多模块仓库或开发多命令行工具。",
+      "translated_at": "2026-09-01T16:03:05.709Z"
     },
     "skill:samber-cc-skills-golang-golang-safety": {
-      "hash": "3f33864b3dfbcc40",
-      "summary_zh": "一套 Go 防御性编程实践，用于避免空指针崩溃、数据悄然损坏、并发访问及资源管理等隐蔽运行时问题。",
-      "translated_at": "2026-08-04T07:52:59.418Z"
+      "hash": "1e88c551a42eb870",
+      "summary_zh": "一套 Go 防御式编码指南，帮助避免空指针、类型转换溢出、切片别名和资源释放等隐蔽 bug，适合代码审查与安全设计。",
+      "translated_at": "2026-09-01T16:03:13.103Z"
     },
     "skill:samber-cc-skills-golang-golang-refactoring": {
-      "hash": "bbbd025f617a00e4",
-      "summary_zh": "一套面向 Go 代码库的安全重构方法，借助自动化工具和小步审查，在保持行为不变的前提下治理代码异味、拆分复杂结构和解除循环依赖。",
-      "translated_at": "2026-08-04T07:53:01.140Z"
+      "hash": "ebb92b856e9b74cf",
+      "summary_zh": "一套面向 Go 的安全重构方法与工具，适合大规模改名、拆分函数、移动代码及消除导入循环。",
+      "translated_at": "2026-09-01T16:03:09.268Z"
     },
     "skill:samber-cc-skills-golang-golang-samber-do": {
       "hash": "213f24c752d0cbd2",
@@ -26153,9 +26153,9 @@
       "translated_at": "2026-08-04T07:53:01.985Z"
     },
     "skill:samber-cc-skills-golang-golang-samber-mo": {
-      "hash": "8abc7a4328389b89",
-      "summary_zh": "为 Go 提供单子类型和函数式组合能力，适合以类型安全的方式处理空值、错误、异步任务与状态。",
-      "translated_at": "2026-08-04T07:53:04.360Z"
+      "hash": "68dea3057f527070",
+      "summary_zh": "基于 samber/mo 为 Go 提供 Option、Result 等单子类型，帮助安全处理空值、错误和异步流程，适合函数式编程与复杂流程组合。",
+      "translated_at": "2026-09-01T16:03:15.985Z"
     },
     "skill:samber-cc-skills-golang-golang-samber-oops": {
       "hash": "15faeae4b10f3033",
@@ -26183,9 +26183,9 @@
       "translated_at": "2026-08-04T07:53:12.563Z"
     },
     "skill:samber-cc-skills-golang-golang-security": {
-      "hash": "4eb4d5a2a3cfdc6d",
-      "summary_zh": "一套 Go 安全开发实践指南，帮助在编写、审查和审计代码时预防注入、密钥泄露及不安全输入输出等漏洞。",
-      "translated_at": "2026-08-04T07:53:15.287Z"
+      "hash": "d223c17cf687a245",
+      "summary_zh": "面向 Go 开发的安全实践指南，帮助编写、审查和审计涉及用户输入、网络、文件、加密及认证的代码，预防常见漏洞。",
+      "translated_at": "2026-09-01T16:03:18.548Z"
     },
     "skill:samber-cc-skills-golang-golang-spf13-cobra": {
       "hash": "b5c0a31702331a76",
@@ -26203,9 +26203,9 @@
       "translated_at": "2026-08-04T07:53:18.370Z"
     },
     "skill:samber-cc-skills-golang-golang-stay-updated": {
-      "hash": "20ad436a8b23f814",
-      "summary_zh": "汇总 Go 语言资讯、学习资源、社区和开发者动态，适合发现新库并跟进版本更新。",
-      "translated_at": "2026-08-04T07:53:20.772Z"
+      "hash": "b82d7f2ffa72c6c8",
+      "summary_zh": "这是一个 Go 生态信息追踪清单，汇总官方资料、社区、博客、会议和贡献者，适合学习 Go、发现库工具并获取行业动态。",
+      "translated_at": "2026-09-01T16:03:22.030Z"
     },
     "skill:samber-cc-skills-golang-golang-structs-interfaces": {
       "hash": "714576558810ed2a",
@@ -26233,9 +26233,9 @@
       "translated_at": "2026-08-04T07:53:29.067Z"
     },
     "skill:samber-cc-skills-golang-golang-troubleshooting": {
-      "hash": "77f9f339eedd583f",
-      "summary_zh": "一套系统排查 Go 程序故障的指南，适合定位并修复崩溃、死锁、竞态及异常行为的根因。",
-      "translated_at": "2026-08-04T07:53:29.125Z"
+      "hash": "c496c0ed81a4681f",
+      "summary_zh": "调试 Go 程序的系统方法，适合排查并修复 bug、崩溃、死锁、竞态和生产环境中的异常行为。",
+      "translated_at": "2026-09-01T16:03:26.532Z"
     },
     "skill:samber-cc-skills-golang-golang-uber-fx": {
       "hash": "92882e58d5579d78",
@@ -39118,8 +39118,8 @@
       "translated_at": "2026-08-16T07:24:22.913Z"
     },
     "content:ganyuanran-aegis-long-task-continuation": {
-      "hash": "34018b96fee1499b",
-      "translated_at": "2026-08-16T07:24:46.480Z"
+      "hash": "0c78c67de20a6d4a",
+      "translated_at": "2026-09-01T16:11:59.523Z"
     },
     "content:ganyuanran-aegis-recording-architecture-decisions": {
       "hash": "188c327973056ff7",
@@ -39134,8 +39134,8 @@
       "translated_at": "2026-08-16T07:25:48.753Z"
     },
     "content:ganyuanran-aegis-systematic-debugging": {
-      "hash": "f18e74e92c1fa984",
-      "translated_at": "2026-08-31T15:03:27.878Z"
+      "hash": "f54b9e1f185f200d",
+      "translated_at": "2026-09-01T16:12:44.269Z"
     },
     "content:ganyuanran-aegis-update-aegis": {
       "hash": "da3128e1b0aba188",
@@ -39154,8 +39154,8 @@
       "translated_at": "2026-08-27T04:37:24.616Z"
     },
     "content:ganyuanran-aegis-verification-before-completion": {
-      "hash": "de0c33c532cf8f6c",
-      "translated_at": "2026-08-23T07:27:10.185Z"
+      "hash": "34d566a07ed5185a",
+      "translated_at": "2026-09-01T16:12:51.634Z"
     },
     "content:ganyuanran-aegis-writing-plans": {
       "hash": "e0794871f90973f3",
@@ -52039,6 +52039,44 @@
       "hash": "bc2b747822c9bfaa",
       "summary_zh": "用于在 OOMOL Connect 中新增或扩展开源服务连接器，适合接入新服务并完善动作、凭据校验和目录配置。",
       "translated_at": "2026-09-01T11:17:06.818Z"
+    },
+    "skill:avelikiy-great-cto-aesthetic-instrument": {
+      "hash": "57d11bf3884ad03d",
+      "summary_zh": "一套统一界面审美与设计规范，帮助构建或扩展 great_cto 的面板、网站、报告和分享页，保持视觉与信息表达一致。",
+      "translated_at": "2026-09-01T16:02:55.972Z"
+    },
+    "skill:avelikiy-great-cto-committed-aesthetic": {
+      "hash": "f04db2ce8485cbda",
+      "summary_zh": "一种让设计代理坚持单一视觉风格并按可检查规则执行的方法，适合摆脱平庸设计、从零建立品牌界面或统一复用团队风格。",
+      "translated_at": "2026-09-01T16:02:57.292Z"
+    },
+    "content:avelikiy-great-cto-aesthetic-instrument": {
+      "hash": "5e4db10224c49f64",
+      "translated_at": "2026-09-01T16:04:30.565Z"
+    },
+    "content:avelikiy-great-cto-committed-aesthetic": {
+      "hash": "d89dae2f252d9f82",
+      "translated_at": "2026-09-01T16:05:47.794Z"
+    },
+    "content:raintree-technology-claude-starter-claude-command-builder": {
+      "hash": "4a0269febba0d210",
+      "translated_at": "2026-09-01T16:20:00.738Z"
+    },
+    "content:raintree-technology-claude-starter-claude-hook-builder": {
+      "hash": "cd8120ceb4bc47fe",
+      "translated_at": "2026-09-01T16:20:08.009Z"
+    },
+    "content:raintree-technology-claude-starter-claude-settings-expert": {
+      "hash": "fda9518d7c376614",
+      "translated_at": "2026-09-01T16:21:38.773Z"
+    },
+    "content:raintree-technology-claude-starter-claude-skill-builder": {
+      "hash": "44f6a83e76b4a4a0",
+      "translated_at": "2026-09-01T16:22:38.815Z"
+    },
+    "content:raintree-technology-claude-starter-cleanup-all": {
+      "hash": "fb0b9e1a737a1c48",
+      "translated_at": "2026-09-01T16:23:07.303Z"
     }
   }
 }
