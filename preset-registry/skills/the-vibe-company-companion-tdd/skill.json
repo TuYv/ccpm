@@ -1,0 +1,25 @@
+{
+  "id": "the-vibe-company-companion-tdd",
+  "name": "tdd",
+  "description": "Test-driven development. Use when the user wants to build features or fix bugs test-first, mentions \"red-green-refactor\", or wants integration tests.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "The-Vibe-Company",
+  "install_path": ".claude/skills/tdd/SKILL.md",
+  "source": {
+    "repo": "The-Vibe-Company/companion",
+    "url": "https://github.com/The-Vibe-Company/companion/blob/main/.claude/skills/tdd/SKILL.md",
+    "path": ".claude/skills/tdd/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-01T22:50:06.571Z",
+    "stars": 2397,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-01T21:55:44Z",
+    "license": "MIT"
+  }
+}

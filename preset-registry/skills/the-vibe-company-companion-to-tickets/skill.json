@@ -1,0 +1,25 @@
+{
+  "id": "the-vibe-company-companion-to-tickets",
+  "name": "to-tickets",
+  "description": "Break a plan, spec, or the current conversation into a set of tracer-bullet tickets, each declaring its blocking edges, published to the configured tracker (edges as text in one file per ticket locally, or native blocking links on a real tracker).",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "The-Vibe-Company",
+  "install_path": ".claude/skills/to-tickets/SKILL.md",
+  "source": {
+    "repo": "The-Vibe-Company/companion",
+    "url": "https://github.com/The-Vibe-Company/companion/blob/main/.claude/skills/to-tickets/SKILL.md",
+    "path": ".claude/skills/to-tickets/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-01T22:50:07.616Z",
+    "stars": 2397,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-01T21:55:44Z",
+    "license": "MIT"
+  }
+}

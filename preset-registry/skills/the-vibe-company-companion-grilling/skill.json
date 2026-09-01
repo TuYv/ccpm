@@ -1,0 +1,26 @@
+{
+  "id": "the-vibe-company-companion-grilling",
+  "name": "grilling",
+  "description": "Grill the user relentlessly about a plan, decision, or idea. Use when the user wants to stress-test their thinking, or uses any 'grill' trigger phrases.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "The-Vibe-Company",
+  "install_path": ".claude/skills/grilling/SKILL.md",
+  "source": {
+    "repo": "The-Vibe-Company/companion",
+    "url": "https://github.com/The-Vibe-Company/companion/blob/main/.claude/skills/grilling/SKILL.md",
+    "path": ".claude/skills/grilling/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-01T22:50:04.379Z",
+    "stars": 2397,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-01T21:55:44Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一种通过连续追问来严苛检验计划、决策或想法的工具，适合发现盲点、澄清假设并提升方案可靠性。"
+}

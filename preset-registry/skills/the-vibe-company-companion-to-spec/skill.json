@@ -1,0 +1,25 @@
+{
+  "id": "the-vibe-company-companion-to-spec",
+  "name": "to-spec",
+  "description": "Turn the current conversation into a spec and publish it to the project issue tracker: no interview, just synthesis of what you've already discussed.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "The-Vibe-Company",
+  "install_path": ".claude/skills/to-spec/SKILL.md",
+  "source": {
+    "repo": "The-Vibe-Company/companion",
+    "url": "https://github.com/The-Vibe-Company/companion/blob/main/.claude/skills/to-spec/SKILL.md",
+    "path": ".claude/skills/to-spec/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-01T22:50:07.499Z",
+    "stars": 2397,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-01T21:55:44Z",
+    "license": "MIT"
+  }
+}

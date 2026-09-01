@@ -1,0 +1,25 @@
+{
+  "id": "the-vibe-company-companion-handoff",
+  "name": "handoff",
+  "description": "Compact the current conversation into a handoff document for another agent to pick up.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "The-Vibe-Company",
+  "install_path": ".claude/skills/handoff/SKILL.md",
+  "source": {
+    "repo": "The-Vibe-Company/companion",
+    "url": "https://github.com/The-Vibe-Company/companion/blob/main/.claude/skills/handoff/SKILL.md",
+    "path": ".claude/skills/handoff/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-01T22:50:04.559Z",
+    "stars": 2397,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-01T21:55:44Z",
+    "license": "MIT"
+  }
+}

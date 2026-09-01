@@ -1,0 +1,25 @@
+{
+  "id": "the-vibe-company-companion-wayfinder",
+  "name": "wayfinder",
+  "description": "Plan a huge chunk of work (more than one agent session can hold) as a shared map of decision tickets on your issue tracker, and resolve them one at a time until the way to the destination is clear.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "The-Vibe-Company",
+  "install_path": ".claude/skills/wayfinder/SKILL.md",
+  "source": {
+    "repo": "The-Vibe-Company/companion",
+    "url": "https://github.com/The-Vibe-Company/companion/blob/main/.agents/skills/wayfinder/SKILL.md",
+    "path": ".agents/skills/wayfinder/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-01T22:50:02.566Z",
+    "stars": 2397,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-01T21:55:44Z",
+    "license": "MIT"
+  }
+}

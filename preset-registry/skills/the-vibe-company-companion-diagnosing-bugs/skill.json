@@ -1,0 +1,25 @@
+{
+  "id": "the-vibe-company-companion-diagnosing-bugs",
+  "name": "diagnosing-bugs",
+  "description": "Diagnosis loop for hard bugs and performance regressions. Use when the user says \"diagnose\"/\"debug this\", or reports something broken/throwing/failing/slow.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "The-Vibe-Company",
+  "install_path": ".claude/skills/diagnosing-bugs/SKILL.md",
+  "source": {
+    "repo": "The-Vibe-Company/companion",
+    "url": "https://github.com/The-Vibe-Company/companion/blob/main/.claude/skills/diagnosing-bugs/SKILL.md",
+    "path": ".claude/skills/diagnosing-bugs/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-01T22:50:03.831Z",
+    "stars": 2397,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-01T21:55:44Z",
+    "license": "MIT"
+  }
+}
