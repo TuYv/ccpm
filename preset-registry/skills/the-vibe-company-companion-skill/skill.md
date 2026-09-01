@@ -39,10 +39,11 @@ Pi turn. Their hosted operating brief uses terse delivery semantics: one short
 sentence for an update, one word for an acknowledgement, and no process narration or filler; the
 owner's persona still owns voice. Consecutive attachment-free notify returns from one routine may be
 collapsed by the thread projection while their durable entries and routine history remain complete.
-Hosted runtime protocol 5 never replays a prompt whose dispatch outcome is ambiguous. It recycles
-only the affected Pi invocation through automatic idempotent recovery, preserves the original
-interruption, marks that occurrence `auto_abandoned`, and continues its execution lane without a
-human Retry/Cancel gate. Main chat stays available while an isolated routine recovers. First-party
+Hosted runtime protocol 7 never replays a prompt whose dispatch outcome is ambiguous. It retries a
+resource-independent durable cleanup that terminates only the captured Pi invocation, preserves the
+original interruption, then marks that occurrence `auto_abandoned` and releases its execution lane.
+There is no human Retry/Cancel gate; later work continues automatically after exact cleanup proof.
+First-party
 clients bootstrap only the newest bounded thread window, apply monotonic entry deltas, and page
 older durable history; they never truncate the thread or reset the persistent Box/Pi session.
 Agent Auth clients cannot call this runtime-only MCP.
@@ -1391,7 +1392,7 @@ skills view shows the correct status and version. Report the version from this s
 `companion.json.version`:
 
 ```sh
-printf '%s' '{"action":"api","method":"POST","path":"/local-skills/companion/installed","body":{"version":"1.103.1","agent":"<your assistant name>"}}' \
+printf '%s' '{"action":"api","method":"POST","path":"/local-skills/companion/installed","body":{"version":"1.104.1","agent":"<your assistant name>"}}' \
   | node scripts/companion-agent-client.mjs
 ```
 
