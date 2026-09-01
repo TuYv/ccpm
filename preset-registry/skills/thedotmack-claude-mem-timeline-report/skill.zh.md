@@ -4,14 +4,14 @@ description: Generate a "Journey Into [Project]" narrative report analyzing a pr
 ---
 # 时间线报告
 
-使用 claude-mem 的持久化记忆时间线生成项目整个开发历史的综合叙事分析。
+使用 claude-mem 的持久记忆时间线，生成对项目完整开发历史的全面叙事分析。
 
 ## 何时使用
 
-在用户提出以下需求时使用：
+当用户提出以下要求时使用：
 
 - “编写时间线报告”
-- “Journey into [项目]”
+- “深入探索 [project]”
 - “分析我的项目历史”
 - “完整项目报告”
 - “总结整个开发历史”
@@ -19,23 +19,23 @@ description: Generate a "Journey Into [Project]" narrative report analyzing a pr
 
 ## 前置条件
 
-claude-mem worker 必须正在运行。项目必须有记录的 claude-mem 观察数据。
+claude-mem worker 必须正在运行。项目必须已有记录的 claude-mem observations。
 
-**解析 worker 端口**（在开始时执行一次，并在下面所有 `curl` 调用中复用 `$WORKER_PORT`）：
+**解析 worker 端口**（在开始时执行一次，并在下方每次 curl 调用中复用 `$WORKER_PORT`）：
 
 ```bash
 WORKER_PORT="${CLAUDE_MEM_WORKER_PORT:-$(node -e "const fs=require('fs'),p=require('path'),os=require('os');const uid=(typeof process.getuid==='function'?process.getuid():77);const fallback=String(37700+(uid%100));try{const s=JSON.parse(fs.readFileSync(p.join(os.homedir(),'.claude-mem','settings.json'),'utf-8'));process.stdout.write(String(s.CLAUDE_MEM_WORKER_PORT||fallback));}catch{process.stdout.write(fallback);}" 2>/dev/null)}"
 ```
 
-这会优先使用 `CLAUDE_MEM_WORKER_PORT` 环境变量，然后读取 `~/.claude-mem/settings.json`，最后回退到每用户默认值 `37700 + (uid % 100)`——与 worker 本身选择端口的方式一致。多账号环境（#2101）以及任何覆盖默认端口的用户（#2103）都需要此设置。
+此逻辑会优先使用 `CLAUDE_MEM_WORKER_PORT` 环境变量，其次是 `~/.claude-mem/settings.json`，最后回退到按 UID 计算的默认值 `37700 + (uid % 100)`——与 worker 自身选择端口的方式一致。多账号环境（#2101）以及任何已覆盖默认端口的用户（#2103）都需要此步骤。
 
-## 工作流
+## 工作流程
 
 ### 第 1 步：确定项目名称
 
-如果上下文不够明确，请向用户询问要分析的项目。项目名称通常是项目的目录名（例如 `"tokyo"`、`"my-app"`）。如果用户说“这个项目”，则使用当前工作目录的基名。
+如果上下文中不明显，询问用户要分析哪个项目。项目名称通常是项目目录的名称（例如 "tokyo"、"my-app"）。如果用户说“这个项目”，使用当前工作目录的 basename。
 
-**工作树检测：** 在使用目录基名之前，先检查当前目录是否为 git worktree。在 worktree 中，数据源是**父项目**，而不是 worktree 目录本身。执行：
+**Worktree 检测：** 在使用目录 basename 之前，检查当前目录是否是 git worktree。在 worktree 中，数据源是**父项目**，而不是 worktree 目录本身。运行：
 
 ```bash
 git_dir=$(git rev-parse --git-dir 2>/dev/null)
@@ -50,9 +50,9 @@ fi
 echo "$parent_project"
 ```
 
-如果检测到 worktree，请在所有 API 调用中使用 `$parent_project`（父仓库的基名）作为项目名。向用户说明：`Detected git worktree. Using parent project '[name]' as the data source.`
+如果检测到 worktree，则在所有 API 调用中使用 `$parent_project`（父仓库的 basename）作为项目名称。告知用户：“检测到 git worktree。将使用父项目 ‘[name]’ 作为数据源。”
 
-### 第 2 步：抓取完整时间线
+### 第 2 步：获取完整时间线
 
 使用 Bash 从 claude-mem worker API 获取完整时间线：
 
@@ -60,18 +60,18 @@ echo "$parent_project"
 curl -s "http://localhost:${WORKER_PORT}/api/context/inject?project=PROJECT_NAME&full=true"
 ```
 
-这会返回完整的压缩时间线——项目完整历史中的每一条观察、会话边界和摘要。返回内容是为 LLM 消费优化的预格式化 Markdown。
+这会返回整个压缩后的时间线——包含项目完整历史中的每一条 observation、会话边界和摘要。该响应是已格式化的 Markdown，专门为 LLM 消费优化。
 
-**Token 预估：** 时间线大小取决于项目历史规模：
-- 小型项目（少于 1,000 条观察）：约 20-50K token
-- 中型项目（1,000-10,000 条观察）：约 50-300K token
-- 大型项目（10,000-35,000 条观察）：约 300-750K token
+**Token 估算：** 完整时间线的大小取决于项目历史：
+- 小型项目（少于 1,000 条 observations）：约 20-50K tokens
+- 中型项目（1,000-10,000 条 observations）：约 50-300K tokens
+- 大型项目（10,000-35,000 条 observations）：约 300-750K tokens
 
-如果响应为空或返回错误，worker 可能未运行，或项目名错误。尝试执行 `curl -s "http://localhost:${WORKER_PORT}/api/search?query=*&limit=1"` 来确认 worker 是否健康。
+如果响应为空或返回错误，worker 可能没有运行，或项目名称可能不正确。可尝试 `curl -s "http://localhost:${WORKER_PORT}/api/search?query=*&limit=1"` 来验证 worker 是否健康。
 
-### 第 3 步：估算 Token 数
+### 第 3 步：估算 Token 数量
 
-在继续之前，先估算已抓取时间线的 token 数（约每 4 个字符算 1 个 token），并将结果报告给用户：
+在继续之前，估算所获取时间线的 token 数量（大约每 4 个字符 1 个 token）。向用户报告：
 
 ```
 Timeline fetched: ~X observations, estimated ~Yk tokens.
@@ -79,15 +79,15 @@ This analysis will consume approximately Yk input tokens + ~5-10k output tokens.
 Proceed? (y/n)
 ```
 
-如果时间线超过 100K token，请在继续前等待用户确认。
+如果时间线超过 100K tokens，等待用户确认后再继续。
 
 ### 第 4 步：使用子代理分析
 
-使用 Task 工具部署一个 Agent，并提供完整时间线与以下分析提示。将整条时间线全部作为上下文传入 agent。该 agent 还应被指示查询 `~/.claude-mem/claude-mem.db` 中的 SQLite 数据库，用于“Token Economics”部分。
+部署一个 Agent（使用 Task 工具），并向其提供完整时间线以及以下分析提示词。将完整时间线作为上下文传递给该代理。还应指示代理查询位于 `~/.claude-mem/claude-mem.db` 的 SQLite 数据库，以完成 Token Economics 部分。
 
 **Agent 提示词：**
 
-```md
+```
 You are a technical historian analyzing a software project's complete development timeline from claude-mem's persistent memory system. The timeline below contains every observation, session boundary, and summary recorded across the project's entire history.
 
 You also have access to the claude-mem SQLite database at ~/.claude-mem/claude-mem.db. Use it to run queries for the Token Economics & Memory ROI section. The database has an "observations" table with columns: id, memory_session_id, project, text, type, title, subtitle, facts, narrative, concepts, files_read, files_modified, prompt_number, discovery_tokens, created_at, created_at_epoch, source_tool, source_input_summary.
@@ -128,4 +128,83 @@ Write a comprehensive narrative report titled "Journey Into [PROJECT_NAME]" that
    -- Total discovery tokens
    SELECT SUM(discovery_tokens) FROM observations WHERE project = 'PROJECT_NAME';
 
-`$loadout-manager` 已确认需要先配置。请先告诉我当前任务要启用哪些具体 skill 或 plugin 组（可选：`agent-reach`、`baoyu-skills`、`delegate`、`lark`、`ljg-skills`、`local-tools`、`matt-pocock-skills`、`openspec`、`product-workflow`、`skill-creator`、`skills-ecosystem`，或回答“全部默认”）。确认后我再直接给你逐字对应的中文译文。
+-- Sessions with context available (not the first session)
+   SELECT COUNT(DISTINCT memory_session_id) FROM observations WHERE project = 'PROJECT_NAME';
+
+   -- Average tokens per observation
+   SELECT AVG(discovery_tokens) as avg_discovery, AVG(LENGTH(title || COALESCE(subtitle,'') || COALESCE(narrative,'') || COALESCE(facts,'')) / 4) as avg_read FROM observations WHERE project = 'PROJECT_NAME' AND discovery_tokens > 0;
+
+   -- Top 5 most expensive observations (highest-value memories)
+   SELECT id, title, discovery_tokens FROM observations WHERE project = 'PROJECT_NAME' ORDER BY discovery_tokens DESC LIMIT 5;
+
+   -- Monthly breakdown
+   SELECT strftime('%Y-%m', created_at) as month, COUNT(*) as obs, SUM(discovery_tokens) as total_discovery, COUNT(DISTINCT memory_session_id) as sessions FROM observations WHERE project = 'PROJECT_NAME' GROUP BY month ORDER BY month;
+
+   -- Explicit recall events
+   SELECT COUNT(*) FROM observations WHERE project = 'PROJECT_NAME' AND (source_tool LIKE '%search%' OR source_tool LIKE '%timeline%' OR source_tool LIKE '%get_observations%' OR narrative LIKE '%recalled%' OR narrative LIKE '%from memory%' OR narrative LIKE '%previous session%');
+   ```
+
+9. **时间线统计** -- 定量摘要：
+   - 日期范围（从第一条观察到最后一条）
+   - 总观察数和会话数
+   - 按观察类型细分（功能、缺陷修复、发现、决策、变更）
+   - 最活跃的天/周
+   - 最长的调试会话
+
+10. **经验与元观察** -- 从完整历史中浮现出哪些模式？新开发者阅读时间线后会对这个代码库有哪些了解？有哪些反复出现的主题或原则指导了开发？
+
+## 写作风格
+
+- 以技术叙事的形式撰写，而不是项目符号列表
+- 引用事件时使用具体的观察 ID 和时间戳（例如：“在 12 月 14 日（#26766），根本原因终于被识别……”）
+- 跨时间连接事件——展示早期决策如何产生后续影响
+- 如实记录挣扎和死胡同，而不仅是成功
+- 根据项目规模，目标字数为 3,000-6,000 个词
+- 适当使用 Markdown 格式，包括标题、强调和代码引用
+
+## 重要
+
+- 按时间顺序分析整个时间线——不要跳过早期历史
+- 寻找叙事弧线：问题 -> 调查 -> 解决方案
+- 识别项目方向发生根本变化的转折点
+- 注意对开发过程本身的观察（工具、工作流、协作模式）
+
+以下是完整的项目时间线：
+
+[TIMELINE CONTENT GOES HERE]
+```
+
+### 第 5 步：保存报告
+
+将代理的输出保存为 Markdown 文件。默认位置：
+
+```
+./journey-into-PROJECT_NAME.md
+```
+
+或者，如果用户指定了不同的输出路径，则使用该路径。
+
+### 第 6 步：报告完成
+
+告诉用户：
+- 报告保存到了哪里
+- 大致 token 成本（输入时间线 + 输出报告）
+- 覆盖的日期范围
+- 分析的观察数量
+
+## 错误处理
+
+- **空时间线：** “未找到项目 ‘X’ 的观察。请使用以下命令检查项目名称：`curl -s \"http://localhost:${WORKER_PORT}/api/search?query=*&limit=1\"`”
+- **Worker 未运行：** “claude-mem worker 未在端口 ${WORKER_PORT} 上响应。请使用你通常的方法启动它，或检查 `ps aux | grep worker-service`。”
+- **时间线过大：** 对于有 50,000+ 条观察的项目，时间线可能超出上下文限制。建议使用日期范围过滤：`curl -s "http://localhost:${WORKER_PORT}/api/context/inject?project=X&full=true"` —— 当前端点会返回所有观察；对于极其庞大的项目，用户可能需要按时间窗口分段分析。
+
+## 示例
+
+用户：“为 tokyo 项目撰写一份旅程报告”
+
+1. 获取：`curl -s "http://localhost:${WORKER_PORT}/api/context/inject?project=tokyo&full=true"`
+2. 估算：“已获取时间线：约 34,722 条观察，预计约 718K token。是否继续？”
+3. 用户确认
+4. 使用完整时间线部署分析代理
+5. 保存到 `./journey-into-tokyo.md`
+6. 报告：“报告已保存。分析了 34,722 条观察，时间范围为 2025 年 10 月至 2026 年 3 月（约 718K 输入 token，约 8K 输出 token）。”

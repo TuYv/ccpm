@@ -4,15 +4,15 @@ description: Agent skill for code-review-swarm - invoke with $agent-code-review-
 ---
 ---
 name: code-review-swarm
-description: 部署专用 AI 智能体，执行超越传统静态分析的综合智能代码审查
+description: 部署专门化的 AI 代理执行全面且智能的代码评审，超越传统静态分析
 tools: mcp__claude-flow__swarm_init, mcp__claude-flow__agent_spawn, mcp__claude-flow__task_orchestrate, Bash, Read, Write, TodoWrite
 color: blue
 type: development
 capabilities:
-  - 自动化多智能体代码审查
+  - 自动化多智能体代码评审
   - 安全漏洞分析
   - 性能瓶颈检测
-  - 架构模式校验
+  - 架构模式验证
   - 风格与规范执行
 priority: high
 hooks:
@@ -26,14 +26,14 @@ hooks:
     echo "Quality gates evaluated"
 ---
 
-# Code Review Swarm - 使用 AI 智能体的自动化代码审查
+# 代码评审群 - 使用 AI 代理进行自动化代码评审
 
 ## 概览
-部署专用 AI 智能体，执行超越传统静态分析的综合智能代码审查。
+部署专门化的 AI 代理，执行全面且智能的代码评审，超越传统静态分析。
 
 ## 核心功能
 
-### 1. 多智能体审查系统
+### 1. 多智能体评审系统
 ```bash
 # Initialize code review swarm with gh CLI
 # Get PR details
@@ -52,9 +52,9 @@ npx ruv-swarm github review-init \
 gh pr comment 123 --body "🔍 Multi-agent code review initiated"
 ```
 
-### 2. 专用审查智能体
+### 2. 专用评审代理
 
-#### 安全智能体
+#### 安全代理
 ```bash
 # Security-focused review with gh CLI
 # Get changed files
@@ -79,7 +79,7 @@ else
 fi
 ```
 
-#### 性能智能体
+#### 性能代理
 ```bash
 # Performance analysis
 npx ruv-swarm github review-performance \
@@ -89,7 +89,7 @@ npx ruv-swarm github review-performance \
   --suggest-optimizations
 ```
 
-#### 架构智能体
+#### 架构代理
 ```bash
 # Architecture review
 npx ruv-swarm github review-architecture \
@@ -99,7 +99,7 @@ npx ruv-swarm github review-architecture \
   --suggest-refactoring
 ```
 
-### 3. 审查配置
+### 3. 评审配置
 ```yaml
 # .github$review-swarm.yml
 version: 1
@@ -134,9 +134,9 @@ review:
       - follow-patterns
 ```
 
-## 审查智能体
+## 评审代理
 
-### 安全审查智能体
+### 安全评审代理
 ```javascript
 // Security checks performed
 {
@@ -159,7 +159,7 @@ review:
 }
 ```
 
-### 性能审查智能体
+### 性能评审代理
 ```javascript
 // Performance analysis
 {
@@ -181,7 +181,7 @@ review:
 }
 ```
 
-### 风格与规范智能体
+### 风格与规范代理
 ```javascript
 // Style enforcement
 {
@@ -203,7 +203,7 @@ review:
 }
 ```
 
-### 架构审查智能体
+### 架构评审代理
 ```javascript
 // Architecture analysis
 {
@@ -225,9 +225,9 @@ review:
 }
 ```
 
-## 高级审查功能
+## 高级评审功能
 
-### 1. 上下文感知审查
+### 1. 上下文感知评审
 ```bash
 # Review with full context
 npx ruv-swarm github review-context \
@@ -257,9 +257,9 @@ npx ruv-swarm github review-batch \
   --combined-impact
 ```
 
-## 审查自动化
+## 评审自动化
 
-### 推送时自动审查
+### 推送时自动评审
 ```yaml
 # .github$workflows$auto-review.yml
 name: Automated Code Review
@@ -301,7 +301,7 @@ jobs:
           fi
 ```
 
-### 审查触发器
+### 评审触发器
 ```javascript
 // Custom review triggers
 {
@@ -325,7 +325,7 @@ jobs:
 }
 ```
 
-## 审查评论
+## 评审评论
 
 ### 智能评论生成
 ```bash
@@ -360,10 +360,183 @@ echo "$COMMENTS" | jq -c '.[]' | while read -r comment; do
 done
 ```
 
-已收到。按要求先确认 loadout：请先告知本项目当前要启用的 **skill 或 plugin 整组**（需在处理原任务前确认）。
+### 评论模板
+```markdown
+<!-- 安全问题模板 -->
+🔒 **安全问题: [类型]**
 
-可用列表（你可选其一或组合）：
-- 整组：`agent-reach`, `baoyu-skills`, `delegate`, `lark`, `ljg-skills`, `local-tools`, `matt-pocock-skills`, `openspec`, `product-workflow`, `skill-creator`, `skills-ecosystem`
-- 若无额外需求，我也可以先按最小化仅保留文档翻译所需，后续不加载额外组。  
+**严重程度**: 🔴 Critical / 🟡 High / 🟢 Low
 
-我先执行 `$loadout-manager` 逻辑确认，等你回复后再继续翻译。
+**描述**: 
+[对安全问题的清晰说明]
+
+**影响**:
+[如果未修复可能产生的后果]
+
+**建议修复**:
+```language
+[修复的代码示例]
+```
+
+**参考资料**:
+- [OWASP Guide](link)
+- [Security Best Practices](link)
+```
+
+### 批量评论管理
+```bash
+# 高效管理审查评论
+npx ruv-swarm github review-comments \
+  --pr 123 \
+  --group-by "agent,severity" \
+  --summarize \
+  --resolve-outdated
+```
+
+## 与 CI/CD 集成
+
+### 状态检查
+```yaml
+# Required status checks
+protection_rules:
+  required_status_checks:
+    contexts:
+      - "review-swarm$security"
+      - "review-swarm$performance"
+      - "review-swarm$architecture"
+```
+
+### 质量门禁
+```bash
+# Define quality gates
+npx ruv-swarm github quality-gates \
+  --define '{
+    "security": {"threshold": "no-critical"},
+    "performance": {"regression": "<5%"},
+    "coverage": {"minimum": "80%"},
+    "architecture": {"complexity": "<10"}
+  }'
+```
+
+### 审查指标
+```bash
+# Track review effectiveness
+npx ruv-swarm github review-metrics \
+  --period 30d \
+  --metrics "issues-found,false-positives,fix-rate" \
+  --export-dashboard
+```
+
+## 最佳实践
+
+### 1. 审查配置
+- 定义清晰的审查标准
+- 设置合适的阈值
+- 配置 Agent 专业化
+- 建立覆盖流程
+
+### 2. 评论质量
+- 提供可执行的反馈
+- 包含代码示例
+- 参考文档
+- 保持语气礼貌
+
+### 3. 性能
+- 缓存分析结果
+- 对大型 PR 进行增量审查
+- 并行执行 Agents
+- 智能聚合评论
+
+## 高级功能
+
+### 1. AI 学习
+```bash
+# Train on your codebase
+npx ruv-swarm github review-train \
+  --learn-patterns \
+  --adapt-to-style \
+  --improve-accuracy
+```
+
+### 2. 自定义审查 Agent
+```javascript
+// Create custom review agent
+class CustomReviewAgent {
+  async review(pr) {
+    const issues = [];
+    
+    // Custom logic here
+    if (await this.checkCustomRule(pr)) {
+      issues.push({
+        severity: 'warning',
+        message: 'Custom rule violation',
+        suggestion: 'Fix suggestion'
+      });
+    }
+    
+    return issues;
+  }
+}
+```
+
+### 3. 审查编排
+```bash
+# Orchestrate complex reviews
+npx ruv-swarm github review-orchestrate \
+  --strategy "risk-based" \
+  --allocate-time-budget \
+  --prioritize-critical
+```
+
+## 示例
+
+### 安全关键 PR
+```bash
+# Auth system changes
+npx ruv-swarm github review-init \
+  --pr 456 \
+  --agents "security,authentication,audit" \
+  --depth "maximum" \
+  --require-security-approval
+```
+
+### 性能敏感 PR
+```bash
+# Database optimization
+npx ruv-swarm github review-init \
+  --pr 789 \
+  --agents "performance,database,caching" \
+  --benchmark \
+  --profile
+```
+
+### UI 组件 PR
+```bash
+# New component library
+npx ruv-swarm github review-init \
+  --pr 321 \
+  --agents "accessibility,style,i18n,docs" \
+  --visual-regression \
+  --component-tests
+```
+
+## 监控与分析
+
+### 审查仪表盘
+```bash
+# Launch review dashboard
+npx ruv-swarm github review-dashboard \
+  --real-time \
+  --show "agent-activity,issue-trends,fix-rates"
+```
+
+### 审查报告
+```bash
+# Generate review reports
+npx ruv-swarm github review-report \
+  --format "markdown" \
+  --include "summary,details,trends" \
+  --email-stakeholders
+```
+
+也可参见: [swarm-pr.md](.$swarm-pr.md), [workflow-automation.md](.$workflow-automation.md)

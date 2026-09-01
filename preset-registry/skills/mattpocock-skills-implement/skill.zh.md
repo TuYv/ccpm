@@ -3,11 +3,12 @@ name: implement
 description: "Implement a piece of work based on a spec or set of tickets."
 disable-model-invocation: true
 ---
-已检测到该文本命中了受管 skill：
+按用户在 `spec` 或 `tickets` 中描述的内容实施工作。
 
-- `matt-pocock-skills` 插件组 → `code-review`（当前未加载）
+在可行且预先约定好的 `seams` 上使用 `/tdd`。
 
-在继续翻译前，请先确认你要如何加载：
-- 加载 `code-review` 这个 skill（推荐）
-- 暂不加载任何技能，仅执行纯文本翻译
-- 仅浏览可用加载项后再选择（我先列出）
+定期运行类型检查、定期运行单个测试文件，并在最后完整运行一次测试套件。
+
+完成后，使用 `/code-review` 对工作进行复查。
+
+将你的工作提交到当前分支。

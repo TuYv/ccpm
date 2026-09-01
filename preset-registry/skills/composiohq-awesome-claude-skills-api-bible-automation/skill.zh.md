@@ -4,19 +4,87 @@ description: "Automate API Bible tasks via Rube MCP (Composio). Always search to
 requires:
   mcp: [rube]
 ---
-收到。先按流程确认：请先告诉我本次要启用哪些 `skill` / `plugin` 组（可留空直接默认不启用）？
+# 通过 Rube MCP 实现 API Bible 自动化
 
-可选组（本项目当前可见）：
-- `agent-reach`
-- `baoyu-skills`
-- `delegate`
-- `lark`
-- `ljg-skills`
-- `local-tools`
-- `matt-pocock-skills`
-- `openspec`
-- `product-workflow`
-- `skill-creator`
-- `skills-ecosystem`
+通过 Rube MCP 使用 Composio 的 API Bible 工具包自动化 API Bible 操作。
 
-确认后我再给你输出该段中文翻译。
+**工具包文档**: [composio.dev/toolkits/api_bible](https://composio.dev/toolkits/api_bible)
+
+## 前置条件
+
+- 必须连接 Rube MCP（`RUBE_SEARCH_TOOLS` 可用）
+- 使用工具包 `api_bible` 通过 `RUBE_MANAGE_CONNECTIONS` 建立活动的 API Bible 连接
+- 始终先调用 `RUBE_SEARCH_TOOLS` 以获取当前工具 schema
+
+## 设置
+
+**获取 Rube MCP**：在你的客户端配置中将 `https://rube.app/mcp` 添加为 MCP 服务器。无需 API 密钥——只需添加端点即可使用。
+
+1. 通过确认 `RUBE_SEARCH_TOOLS` 有响应来验证 Rube MCP 可用
+2. 使用工具包 `api_bible` 调用 `RUBE_MANAGE_CONNECTIONS`
+3. 如果连接不是 ACTIVE，请按照返回的授权链接完成设置
+4. 在运行任何工作流之前，确认连接状态显示为 ACTIVE
+
+## 工具发现
+
+执行工作流前始终先发现可用工具：
+
+```
+RUBE_SEARCH_TOOLS
+queries: [{use_case: "API Bible operations", known_fields: ""}]
+session: {generate_id: true}
+```
+
+这将返回可用工具 slug、输入 schema、推荐执行计划和已知陷阱。
+
+## 核心工作流模式
+
+### 第 1 步：发现可用工具
+
+```
+RUBE_SEARCH_TOOLS
+queries: [{use_case: "your specific API Bible task"}]
+session: {id: "existing_session_id"}
+```
+
+### 第 2 步：检查连接
+
+```
+RUBE_MANAGE_CONNECTIONS
+toolkits: ["api_bible"]
+session_id: "your_session_id"
+```
+
+### 第 3 步：执行工具
+
+```
+RUBE_MULTI_EXECUTE_TOOL
+tools: [{
+  tool_slug: "TOOL_SLUG_FROM_SEARCH",
+  arguments: {/* schema-compliant args from search results */}
+}]
+memory: {}
+session_id: "your_session_id"
+```
+
+## 常见陷阱
+
+- **始终先搜索**：工具 schema 会发生变化。不要在不调用 `RUBE_SEARCH_TOOLS` 的情况下硬编码工具 slug 或参数
+- **检查连接**：执行工具前请先验证 `RUBE_MANAGE_CONNECTIONS` 显示为 ACTIVE 状态
+- **Schema 合规**：使用来自搜索结果的完全一致字段名和类型
+- **memory 参数**：始终在 `RUBE_MULTI_EXECUTE_TOOL` 调用中包含 `memory`，即使为空也要传入 (`{}`)
+- **会话复用**：在同一工作流内复用会话 ID。为新工作流生成新会话 ID
+- **分页**：检查响应中的分页标记，并持续获取直至完整
+
+## 快速参考
+
+| 操作 | 方法 |
+|-----------|----------|
+| 查找工具 | 使用 API Bible 特定用例的 `RUBE_SEARCH_TOOLS` |
+| 连接 | 使用工具包 `api_bible` 的 `RUBE_MANAGE_CONNECTIONS` |
+| 执行 | 使用已发现的工具 slug 调用 `RUBE_MULTI_EXECUTE_TOOL` |
+| 批量操作 | 使用 `RUBE_REMOTE_WORKBENCH` 与 `run_composio_tool()` |
+| 完整 schema | 对于带有 `schemaRef` 的工具使用 `RUBE_GET_TOOL_SCHEMAS` |
+
+---
+*由 [Composio](https://composio.dev) 提供*

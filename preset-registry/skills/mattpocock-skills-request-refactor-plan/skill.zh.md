@@ -2,18 +2,66 @@
 name: request-refactor-plan
 description: Create a detailed refactor plan with tiny commits via user interview, then file it as a GitHub issue. Use when user wants to plan a refactor, create a refactoring RFC, or break a refactor into safe incremental steps.
 ---
-为保证按当前环境流程继续，我先确认一下：  
-请先告诉我本次要启用的 skill 或 plugin 整组（可多个），否则我先不处理正文。可用方式示例：
+当用户想要创建重构请求时，将调用此技能。你应按照以下步骤进行。如果你认为某些步骤不必要，可以跳过。
 
-- 启用 `agent-reach`
-- 启用 `baoyu-skills`
-- 启用 `delegate`
-- 启用 `lark`
-- 启用 `ljg-skills`
-- 启用 `local-tools`
-- 启用 `matt-pocock-skills`
-- 启用 `openspec`
-- 启用 `product-workflow`
-- 启用 `skill-creator`
-- 启用 `skills-ecosystem`
-- 不启用任何插件，直接按原始翻译任务进行
+1. 请用户提供一份长而详细的问题描述，说明他们想解决的问题以及任何可能的解决方案想法。
+
+2. 探索仓库，以验证他们的说法并了解代码库的当前状态。
+
+3. 询问他们是否考虑过其他选项，并向他们展示其他选项。
+
+4. 与用户面谈实现细节。要极其详细和彻底。
+
+5. 敲定实现的确切范围。明确你计划更改什么以及不计划更改什么。
+
+6. 在代码库中检查该部分代码的测试覆盖情况。如果测试覆盖不足，请询问用户的测试计划。
+
+7. 将实现拆分为一个由微小提交组成的计划。记住 Martin Fowler 的建议：“让每个重构步骤尽可能小，以便你始终能看到程序正常工作。”
+
+8. 创建一个包含重构计划的 GitHub issue。请在 issue 描述中使用以下模板：
+
+<refactor-plan-template>
+
+## 问题陈述
+
+开发者所面临的问题，以开发者的视角描述。
+
+## 解决方案
+
+问题的解决方案，以开发者的视角描述。
+
+## 提交
+
+一份长而详细的实现计划。用平实的英文撰写该计划，将实现拆分为尽可能小的提交。每个提交都应让代码库保持可工作状态。
+
+## 决策文档
+
+已做出的实现决策列表。可以包括：
+
+- 将构建/修改的模块
+- 将修改的这些模块接口
+- 来自开发者的技术澄清
+- 架构决策
+- Schema 变更
+- API 契约
+- 具体交互
+
+不要包含具体文件路径或代码片段。它们可能很快就会过时。
+
+## 测试决策
+
+已做出的测试决策列表。包括：
+
+- 对什么才算好测试的描述（只测试外部行为，而非实现细节）
+- 将测试哪些模块
+- 测试的先前范例（即代码库中类似类型的测试）
+
+## 范围之外
+
+本次重构中不在范围内的事项描述。
+
+## 补充说明（可选）
+
+关于本次重构的任何补充说明。
+
+</refactor-plan-template>
