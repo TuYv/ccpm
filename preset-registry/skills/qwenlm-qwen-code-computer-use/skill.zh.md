@@ -2,192 +2,57 @@
 name: computer-use
 description: Control local desktop applications through Computer Use for tasks that require reading or operating app UI. Prefer purpose-built connectors, APIs, or CLIs when available.
 ---
-## `node_repl` + `@qwen-code/cua-sdk`（计算机操作）
+# 使用 CUA SDK 进行 Computer Use
 
-- 所有计算机操作均使用 `node_repl`（JavaScript）。
-- 除非用户明确要求，否则不要使用 `node_repl` 以外的其他技术进行计算机交互。
-  这包括 AppleScript、`osascript`、JXA、System Events 以及合成输入。
-- 如果专用插件或技能可以完成任务，优先使用专用插件或技能；对于没有通过更具体接口公开的应用交互，使用计算机操作。
-- 只能使用类型化的 `ComputerUse` API。不要使用通用 SDK 的 `callTool`、直接导入 `CuaDriver`，也不要使用 Qwen 全局桥接。
-- `node_repl` 状态会在多次调用之间持久保留。
-- 使用 `nodeRepl.write(...)` 输出文本。它接收字符串，因此请使用 `JSON.stringify(...)` 包装对象。
+- 优先使用专用连接器或 API。仅在专用接口未公开相应的 UI 状态或交互时，才使用 Computer Use。
+- 通过 `node_repl` 和类型化的 `ComputerUse` API 执行 Computer Use。不要使用通用的 `callTool`、直接导入驱动程序、AppleScript、JXA 或合成输入工具。
+- 操作前观察当前的确切窗口。优先使用当前元素令牌，而不是截图坐标；仅当辅助功能信息不完整且截图提供了目标时，才使用坐标。
+- 将操作结果视为操作已发送的证据，而不是任务完成的证据。根据最新状态做出判断，并要求有稳定的后置条件证据。
 
-## 自动安装
+## 设置
 
-运行 `qwen mcp list`，检查是否已配置 `node-repl` 服务器。如果未配置，请自行运行以下两个命令：
+如果 `node_repl` 不可用，请自行运行以下命令：
 
 ```bash
-qwen mcp add --scope user node-repl npx -y @qwen-code/node-repl-mcp@0.1.1
-npm install --no-save --package-lock=false @qwen-code/cua-sdk@0.20.2
+qwen mcp add --scope user node-repl npx -y @qwen-code/node-repl-mcp@0.1.2
+npm install --no-save --package-lock=false @qwen-code/cua-sdk@0.20.3
 ```
 
-添加 MCP 服务器后，告知用户重启 Qwen Code，然后停止。不要要求用户复制或运行这些命令。
+告知用户重启 Qwen Code，然后停止。如果仅缺少 SDK 导入，请运行第二条命令并重试。
 
-如果 `node_repl` 可用，但 SDK 导入失败，请在当前工作区中自行运行 SDK 安装命令，然后重试导入：
-
-```bash
-npm install --no-save --package-lock=false @qwen-code/cua-sdk@0.20.2
-```
-
-## 引导初始化
-
-每个全新的 `node_repl` 内核中导入一次 SDK：
+每个 REPL 内核创建一个持久客户端：
 
 ```js
 globalThis.computer = await (
   await import('@qwen-code/cua-sdk/computer-use')
 ).ComputerUse.create();
+globalThis.cuaRevisions ??= new Map();
 ```
 
-## API 接口
+## 定位和观察
 
-```ts
-type WindowTarget = { pid: number; windowId: number };
-type ElementTarget = {
-  pid: number;
-  windowId?: number;
-  elementToken: string;
-};
-type CoordinateTarget = WindowTarget & { x: number; y: number };
-type PointOrElementTarget = CoordinateTarget | ElementTarget;
-type App = {
-  name?: string;
-  bundle_id?: string;
-  pid?: number;
-  running?: boolean;
-  launch_path?: string;
-};
-type Window = {
-  window_id: number;
-  title?: string;
-  is_on_screen?: boolean;
-  on_current_space?: boolean;
-};
-type Element = {
-  element_token?: string;
-  role?: string;
-  label?: string;
-  value?: unknown;
-  actions?: string[];
-};
+使用 `listApps({signal:nodeRepl.signal})` 并在 JavaScript 中进行筛选；只打印可能匹配的项。选择真实 PID 后，调用 `listWindows({pid,signal:nodeRepl.signal})`，并从返回的元数据中进行选择。绝不要猜测 PID、窗口 ID、元素令牌或坐标。如果应用未运行，请使用普通的 Node.js 进程 API 启动它，并刷新列表。
 
-type ComputerUse = {
-  listApps: () => Promise<App[]>;
-  listWindows: (args?: {
-    pid?: number;
-    onScreenOnly?: boolean;
-  }) => Promise<Window[]>;
-  observeWindow: (
-    args: WindowTarget & {
-      baseRevisionId?: string;
-      forceFull?: boolean;
-      includeScreenshot?: boolean;
-    },
-  ) => Promise<{
-    text: string;
-    elements: Element[];
-    revisionId?: string;
-    screenshot?: { images: object[] };
-  }>;
-  click: (
-    args: PointOrElementTarget & {
-      button?: 'left' | 'right' | 'middle';
-      count?: number;
-    },
-  ) => Promise<object>;
-  doubleClick: (args: PointOrElementTarget) => Promise<object>;
-  rightClick: (args: PointOrElementTarget) => Promise<object>;
-  setValue: (args: ElementTarget & { value: string }) => Promise<object>;
-  typeText: (args: WindowTarget & { text: string }) => Promise<object>;
-  pressKey: (args: WindowTarget & { key: string }) => Promise<object>;
-  hotkey: (args: WindowTarget & { keys: string[] }) => Promise<object>;
-  scroll: (
-    args: PointOrElementTarget & {
-      direction: 'up' | 'down' | 'left' | 'right';
-      by?: 'line' | 'page';
-      amount?: number;
-    },
-  ) => Promise<object>;
-  drag: (
-    args: WindowTarget & {
-      fromX: number;
-      fromY: number;
-      toX: number;
-      toY: number;
-      deliveryMode?: 'background' | 'foreground';
-    },
-  ) => Promise<object>;
-  performSecondaryAction: (
-    args: ElementTarget & { action: string },
-  ) => Promise<object>;
-  close: () => Promise<void>;
+为每个窗口表面维护一个修订游标。第一次观察没有基准；后续观察仅使用同一表面实际消费的上一个修订：
+
+```js
+globalThis.observeCuaWindow = async (target, options = {}) => {
+  const key = `${target.pid}:${target.windowId}`;
+  const state = await computer.observeWindow({
+    ...target,
+    ...options,
+    baseRevisionId: cuaRevisions.get(key),
+    signal: nodeRepl.signal,
+  });
+  if (state.revisionId) cuaRevisions.set(key, state.revisionId);
+  return state;
 };
 ```
 
-## 工作流
-
-### 1. 初始化
-
-解析任务中指定的确切运行应用程序和窗口。在 `node_repl` 内进行筛选；不要打印完整的应用程序列表：
+使用辅助功能文本来高效地做出决策。当元素树不完整、视觉布局很重要，或操作证据与元素树冲突时，请求截图。仅输出与决策相关的图像：
 
 ```js
-var apps = await computer.listApps();
-var matches = apps.filter(
-  (app) => app.name === 'Target App' || app.bundle_id === 'com.example.target',
-);
-nodeRepl.write(JSON.stringify(matches));
-```
-
-从返回的元数据中选择应用程序后，仅列出其窗口：
-
-```js
-var pid = matches[0].pid;
-var windows = await computer.listWindows({ pid });
-nodeRepl.write(JSON.stringify(windows));
-```
-
-从返回的元数据中选择窗口，然后获取其当前的可访问性状态：
-
-```js
-var target = { pid, windowId: windows[0].window_id };
-var state = await computer.observeWindow({ ...target, forceFull: true });
-nodeRepl.write(state.text);
-```
-
-绝不要猜测 PID、窗口 ID、坐标或元素令牌。`ComputerUse` 能发现正在运行的应用程序，但不会启动应用程序；如有必要，可使用普通的 Node.js 进程 API 从 `node_repl` 启动应用程序，然后刷新应用程序和窗口列表。
-
-### 2. 执行操作并获取最新状态
-
-仅选择完成用户任务所需的操作。优先使用当前的 `element_token` 值，而不是坐标。将观察到的 `element_token` 作为驼峰形式的 `elementToken` 操作字段传入：
-
-```js
-await computer.setValue({
-  ...target,
-  elementToken,
-  value: 'hello',
-});
-
-state = await computer.observeWindow({
-  ...target,
-  baseRevisionId: state.revisionId,
-});
-nodeRepl.write(state.text);
-```
-
-执行一个或多个操作后，始终先观察确切的窗口，再决定下一步操作。如果更新后的状态显示已达到请求的结果，则停止操作、完成清理并回答用户。如果 UI 未按预期运行，则获取最新的完整状态，然后再选择其他操作。
-
-仅当当前可访问性状态明确提供了某个确切操作时，才使用辅助操作。为提高效率，优先使用可访问性文本；当可访问性文本不完整或视觉布局很重要时，使用屏幕截图。
-
-## 读取屏幕截图
-
-```js
-var state = await computer.observeWindow({
-  ...target,
-  forceFull: true,
-  includeScreenshot: true,
-});
-
-for (var image of state.screenshot?.images ?? []) {
+for (const image of state.screenshot?.images ?? []) {
   if (image?.dataBase64 && image?.mimeType) {
     await nodeRepl.emitImage(
       `data:${image.mimeType};base64,${image.dataBase64}`,
@@ -196,13 +61,71 @@ for (var image of state.screenshot?.images ?? []) {
 }
 ```
 
-## 完成
+如果 SDK 明确报告缺少/无效基准或谱系过期，请使用 `forceFull: true` 执行一次观察，替换该表面的游标，然后恢复使用常规辅助函数。不要将完整观察作为默认方式。
 
-任务完成后，关闭 SDK 客户端：
+## 操作和验证
+
+选择当前状态所支持的最精确操作。将观察到的 `element_token` 作为 `elementToken` 传入。仅当该精确操作出现在元素当前的 `actions` 列表中时，才使用 `performSecondaryAction`。
+
+执行操作前，先声明一个具体且可观察的后置条件。对于可表达为窗口或元素状态的后置条件，请使用带有 `verifyState` 的 `actAndVerify`：
+
+```js
+try {
+  globalThis.lastCuaOutcome = await computer.actAndVerify({
+    action: () =>
+      computer.setValue({
+        ...target,
+        elementToken,
+        value: expectedValue,
+        signal: nodeRepl.signal,
+      }),
+    verify: () =>
+      computer.verifyState({
+        ...target,
+        expect: [
+          {
+            element: {
+              selector: { role: expectedRole, label_contains: expectedLabel },
+              value_equals: expectedValue,
+            },
+          },
+        ],
+        stableSamples: 2,
+        signal: nodeRepl.signal,
+      }),
+  });
+  nodeRepl.write(JSON.stringify(lastCuaOutcome));
+} catch (error) {
+  nodeRepl.write(JSON.stringify(error?.details ?? { message: String(error) }));
+  throw error;
+}
+```
+
+`verifyState.expect` 接受一至八个通过 AND 组合的谓词：
+
+- `{window:{exists, bounds?}}`
+- `{element:{selector:{role?, label_contains?}, exists:true?,
+value_equals?, enabled?, selected?}}`
+
+无法证明元素不存在。`unknown` 和 `stable:false` 都不算成功。
+当后置条件是视觉上的，或不受支持时，请使用屏幕截图再次观察确切窗口，并在做出判断前检查最新结果。如果状态出乎预期，请再次观察，而不是盲目重复操作。
+
+读取每个操作结果。`effect` 的值为 `confirmed`、`partial`、`unverifiable`、`suspected_noop` 或 `refused`；`route`、`delivery`、`evidence`、`escalation` 和 `operation` 会说明实际发生了什么。已提交的操作仍可能具有 `cancellationRequested:true`，因此仍然需要验证。只有在最新状态表明确实需要时，才遵循所声明的升级路径。
+
+## 交互细节
+
+- 在导航、对话框、菜单或其他界面发生变化后，刷新相关窗口列表，并观察新的确切界面。
+- 使用返回的状态来确定文本字段的行为；不要假定输入会替换现有文本。需要替换时，请使用适合该平台的全选操作。
+- 优先使用后台传递。只有当操作结果或最新状态表明后台路径不可用或无效时，才使用 `deliveryMode:'foreground'`。
+- 请求的后置条件一旦稳定满足，就立即停止。不要添加可能撤销结果的额外清理操作。
+
+## 完成
 
 ```js
 await computer.close();
 globalThis.computer = undefined;
+globalThis.cuaRevisions = undefined;
+globalThis.observeCuaWindow = undefined;
 ```
 
-不再需要其他 REPL 状态时，调用 `node_repl_reset`。
+仅当不再需要其他持久状态时，才重置 REPL。
