@@ -1,8 +1,8 @@
 {
   "id": "sickn33-antigravity-awesome-skills-agents-md",
   "name": "agents-md",
-  "description": "This skill should be used when the user asks to \"create AGENTS.md\", \"update AGENTS.md\", \"maintain agent docs\", \"set up CLAUDE.md\", or needs to keep agent instructions concise. Enforces research-backed best practices for minimal, high-signal agent documentation.",
-  "category": "开发编程",
+  "description": "Create, revise, or audit AGENTS.md files from repository evidence, verified commands, and correctly scoped instructions without overwriting maintainer intent.",
+  "category": "文档写作",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,11 @@
     "url": "https://github.com/sickn33/antigravity-awesome-skills/blob/main/plugins/agentic-awesome-skills-claude/skills/agents-md/SKILL.md",
     "path": "plugins/agentic-awesome-skills-claude/skills/agents-md/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-02T09:51:33.017Z",
-    "stars": 45854,
+    "discovered_at": "2026-09-02T14:47:01.147Z",
+    "stars": 45855,
     "language": "Python",
-    "pushed_at": "2026-09-02T09:48:21Z",
+    "pushed_at": "2026-09-02T10:49:22Z",
     "license": "MIT"
   },
-  "summary_zh": "帮你生成和维护 AI 智能体说明文档（如 AGENTS.md），按最佳实践精简指令内容，提高信息密度，适合需要编写或优化智能体提示词文档的场景。"
+  "summary_zh": "根据仓库证据和已验证命令，创建、修订或审查 AGENTS.md，帮助维护者编写范围准确且不违背原有意图的项目指南。"
 }

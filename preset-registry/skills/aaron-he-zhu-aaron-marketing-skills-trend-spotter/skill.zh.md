@@ -4,17 +4,17 @@ slug: trend-spotter
 displayName: "Trend Spotter · 趋势侦察"
 summary: "排名化趋势报告:品牌契合评分、rising/peak/declining 判断与 go/skip 建议"
 description: 'Use when the user asks to "find trending topics", "what trends should my brand jump on", or "time a campaign around a cultural moment"; produces a ranked trend report with brand-fit scores, format calls (rising/peak/declining), a cultural calendar, and go/skip recommendations. Not for finding the creators to run those trends — use influencer-discovery; not for building the brand posting calendar from a go verdict — use social-calendar-builder. 热点趋势洞察/借势营销'
-version: "20.0.0"
+version: "20.1.0"
 license: Apache-2.0
 compatibility: "Claude Code and compatible agent-skill hosts"
 homepage: "https://github.com/aaron-he-zhu/aaron-marketing-skills"
 when_to_use: "Use when planning campaign timing and themes, deciding whether to join a hashtag, sound, or challenge, scouting trending content formats on a platform, mapping upcoming cultural moments to lead times, or checking which trends competitors have adopted or missed. Auto-activate when the request is about what is trending, what to post around, or when to act."
 argument-hint: "<brand or industry> [platform] [time horizon]"
-metadata: {"author": "aaron-he-zhu", "version": "20.0.0", "discipline": "influencer", "phase": "scout", "geo-relevance": "low", "hermes": {"tags": ["marketing", "influencer", "scout"], "category": "influencer"}, "openclaw": {"emoji": "📣", "homepage": "https://github.com/aaron-he-zhu/aaron-marketing-skills"}}
+metadata: {"author": "aaron-he-zhu", "version": "20.1.0", "discipline": "influencer", "phase": "scout", "geo-relevance": "low", "hermes": {"tags": ["marketing", "influencer", "scout"], "category": "influencer"}, "openclaw": {"emoji": "📣", "homepage": "https://github.com/aaron-he-zhu/aaron-marketing-skills"}}
 ---
 # 趋势洞察
 
-此技能可帮助你识别对受众有意义的趋势，并利用这些趋势创造价值。它会监测社交讨论、新兴话题、病毒式传播的内容形式和文化热点，为影响者营销活动的时机选择和内容策略提供依据。
+此技能帮助您识别并把握对受众重要的趋势。它会监测社交对话、新兴话题、病毒式传播的内容形式和文化时刻，以指导影响者营销活动时机和内容策略。
 
 ## 快速开始
 
@@ -24,7 +24,7 @@ metadata: {"author": "aaron-he-zhu", "version": "20.0.0", "discipline": "influen
 What trends are relevant for [brand/industry] right now?
 ```
 
-常见场景——在决定投入之前分析某个特定趋势：
+常见场景 — 在投入前分析某个具体趋势：
 
 ```
 Should [brand] participate in [trend/challenge]? Score the brand fit and give a go/skip call.
@@ -32,68 +32,70 @@ Should [brand] participate in [trend/challenge]? Score the brand fit and give a 
 
 ## 技能契约
 
-- **读取**：品牌/行业、目标平台、受众、地理区域重点、时间范围、内容类别；以及 `memory/influencer/` 中已有的受众和细分领域分析结果（如有）。
-- **写入**：将趋势报告（趋势排名、品牌契合度评分、内容形式建议、文化日历、参与/跳过建议）写入 `memory/influencer/trend-spotter/YYYY-MM-DD-<topic>.md`。
-- **提升**：将持久有效的信息（当前应把握的热门趋势、应避免的趋势、下次审查日期）提升至 `memory/hot-cache.md`。
+- **读取**：品牌/行业、目标平台、受众、地域重点、时间范围、内容类别；如存在，还会读取 `memory/influencer/` 中先前的受众和细分领域发现。
+- **写入**：默认以内联方式返回趋势报告；仅在获得对该 WARM 路径的明确授权后，才将其保存至 `memory/influencer/trend-spotter/YYYY-MM-DD-<topic>.md`。
+- **提升**：仅在获得单独的明确授权后，才将持久事实（当前应采取行动的热门趋势、应避免的趋势、下次复查日期）提升至 `memory/hot-cache.md`。
 - **完成条件**：
-  1. 每个候选趋势都有品牌契合度评分，以及参与 / 谨慎 / 跳过的判断。
-  2. 报告列出当前最值得采取行动的 3 个趋势，以及观察列表和避免列表。
-  3. 行动项包含执行时间窗口和内容形式建议。
-- **主要后续技能**：[影响者发现](../influencer-discovery/SKILL.md)——寻找能够执行所选趋势的创作者。
+  1. 每个具名的当前趋势、热度/增长/状态声明、文化时刻及竞争对手采用声明，都具有带日期的来源引用，以及所请求的平台、地域、观察窗口、指标定义和动量对比。
+  2. 对于在该确切范围内具备完整当前证据的每个候选趋势，均给出品牌契合度评分以及执行 / 谨慎 / 跳过的结论；仅凭 RSS/标题重叠的仍属于 `Proxy candidate`，并保持 `score_state: NOT_SCORED`。
+  3. 仅当当前证据支持时，报告才列出前 3 个趋势、观察列表和避免列表；否则返回 `NEEDS_INPUT` 以及精确的查询/收集计划。
+- **主要后续技能**：[influencer-discovery](../influencer-discovery/SKILL.md) — 寻找能够执行所选趋势的创作者。
 
 ### 交接摘要
 
-> 输出 [skill-contract.md §交接摘要格式](../../../references/skill-contract.md) 中规定的标准结构。
+> 按照 [skill-contract.md §Handoff Summary Format](../../../references/skill-contract.md) 中的标准格式输出。
 
-## 数据源
+## 数据来源
 
-此技能无需实时集成（第 1 层级）即可运行：向用户询问品牌、平台、受众和时间范围，然后根据这些输入进行推理。如果某项工具能够提高判断的准确性，请使用 `~~` 连接器占位符：
+接收信息和查询计划无需实时集成即可运行。但有关当前情况的报告则不行：它需要针对所请求的平台、地域和时间范围，由用户提供的带日期证据、公开获取的数据，或实时连接器结果。仅凭品牌输入可支持搜索词和评估标准，不能支持趋势名称、计数、增长、上升/峰值/下降判断，或执行/跳过建议。没有当前证据时，返回 `NEEDS_INPUT` 以及需收集的精确查询和字段。在工具提供读取能力的场景中，使用 `~~` 连接器占位符：
 
-- `~~social platform analytics`——各平台的热门话题标签、声音和观看次数。
-- `~~trend database`——新兴话题、挑战参与度和增长率。
-- `~~social listening`——围绕某个话题的文化讨论和情感倾向。
-- `~~competitor tracking`——竞争品牌采用了哪些趋势及其表现。
+- `~~social platform analytics` — 各平台的热门标签、音频和观看次数。
+- `~~trend database` — 新兴话题、挑战参与情况和增长率。
+- `~~social listening` — 围绕某个话题的文化对话和情绪。
+- `~~competitor tracking` — 竞争品牌采用了哪些趋势，以及这些趋势的表现。
 
-无需任何连接器也能生成有用的报告。有关各类别无需密钥的免费方案，请参阅 [CONNECTORS.md](../../../CONNECTORS.md)。
+无需连接器即可生成有用的**查询计划**。具名的当前趋势报告需要上述来源记录。请参阅 [CONNECTORS.md](../../../CONNECTORS.md)，了解每个类别的免费/无需密钥方案。
 
-如需以无需密钥的方式使用真实信号填充趋势表，请运行多源趋势侦察工具——Google Trends RSS + Hacker News + Reddit + YouTube 异常热视频，并通过捆绑的标准库 `rss_monitor.py` 根据品牌所属垂直领域进行评分（无需新增依赖）：[references/trend-scout-recipe.md](references/trend-scout-recipe.md)。这是 `~~trend database`（Google Trends RSS）背后的第 1 层级方案。
+如果要用一种无需密钥的方式发现值得衡量的话题，请运行 multi-source candidate scout ——通过内置的 stdlib `rss_monitor.py` 聚合 Google Trends RSS + Hacker News + Reddit + YouTube 上传标题（无需新增依赖）：[references/trend-scout-recipe.md](references/trend-scout-recipe.md)。RSS/标题重叠只算 `Proxy candidate`，并保持 `NOT_SCORED`；它不能证明平台趋势、观看量异常值、生命周期状态，也不能作为立即行动建议。这是 `~~trend database`（Google Trends RSS）背后的 Tier-1 候选配方。
 
-**无需密钥的新闻脉搏（Tavily）**：`python3 "${CLAUDE_PLUGIN_ROOT}/scripts/connectors/tavily.py" search "<vertical or candidate trend>" --topic news --time-range w --limit 10` 可将经过时效性筛选、并附带单条结果相关性评分的新闻分析添加到侦察信号组合中——这是第二个无需密钥的数据源，可在将某个 RSS 峰值判定为上升趋势之前对其进行交叉验证。对于单一来源的信号，继续标记为**估算**；两个独立来源得出一致结论时，仅提升置信度说明，而不更改该标签。
+**Keyless news pulse (Tavily)**: `python3 "${CLAUDE_PLUGIN_ROOT}/scripts/connectors/tavily.py" search "<vertical or candidate trend>" --topic news --time-range w --limit 10` 会增加带有时效过滤的发现参考。与 RSS 标题一致可能提高查询优先级，但它仍然是 `Proxy candidate/NOT_SCORED`；新闻重叠并不能证明 TikTok、Reels、YouTube 或其他所请求平台上的动量。
 
-**无密钥趋势动量增强器**：`python3 "${CLAUDE_PLUGIN_ROOT}/scripts/connectors/pageviews.py" "<Topic_Article>" --granularity daily --days 30` 可显示某个主题在维基百科上的关注度是否确实正在上升——为采用上升期 / 高峰期 / 衰退期的判断格式提供量化证据——而 Hacker News Algolia API（`https://hn.algolia.com/api/v1/search?query=<topic>`，无需密钥）则使用可作为热度分数的得分和评论数，增强对 HN RSS 的分析。
+**Keyless source-specific sharpeners**: `python3 "${CLAUDE_PLUGIN_ROOT}/scripts/connectors/pageviews.py" "<Topic_Article>" --granularity daily --days 30` 测量 Wikipedia 页面关注度，而 Hacker News Algolia API（`https://hn.algolia.com/api/v1/search?query=<topic>`，无需密钥）测量 HN 的 points/comments。这些数值仅针对其命名来源和窗口进行 `Measured`。把它们视为另一所请求平台的 `Proxy`；在给出任何 rising / peak / declining 或 act-now 结论前，必须先获得来自精确平台/地理范围/时间窗口的带日期动量。
 
-## 说明
+## Instructions
 
-当用户请求趋势分析时，执行以下步骤。每个步骤在 [references/templates.md](references/templates.md) 中都有一个填空模板——复制匹配的区块并填写内容。
+当用户请求趋势分析时，按以下步骤执行。每一步都有一个可填充模板，见 [references/templates.md](references/templates.md) —— 复制对应区块并填入内容。
 
-1. **定义趋势参数**——记录品牌/行业、平台、受众、地理重点、时间范围和内容类别。（模板：步骤 1。）
-2. **识别当前趋势**——记录热门话题、标签、音频/声音和挑战，并注明规模、增长率、生命周期和品牌安全标记。（模板：步骤 2。）
-3. **分析内容形式趋势**——按平台列出热门、新兴和衰退中的内容形式，并附上调整适配说明。（模板：步骤 3。）
-4. **追踪文化热点时刻**——构建文化日历（事件 + 提前准备时间），确定应参与和应避开的讨论，以及季节性机会。（模板：步骤 4。）
-5. **评估趋势相关性**——针对每个候选趋势，从受众契合度、品牌价值契合度、内容适配性、风险和时机方面评分（X/25），并给出 ✅ 参与 / ⚠️ 谨慎 / ❌ 跳过的结论。（模板：步骤 5。）
-6. **监测竞争对手对趋势的采用情况**——记录竞争对手采用了哪些趋势、错过了哪些机会，以及过度使用了哪些趋势。（模板：步骤 6。）
-7. **生成趋势报告**——汇总最应立即行动的 3 个趋势、观察列表、避开列表、定时行动项、内容形式和标签策略，以及下次复盘日期。保存至 `memory/influencer/trend-spotter/YYYY-MM-DD-<topic>.md`，并将长期有效的事实提升至 `memory/hot-cache.md`。（模板：步骤 7。）
+1. **定义趋势参数** —— 捕捉品牌/行业、平台、受众、地理焦点、时间跨度和内容类别。（模板：Step 1。）
+2. **确认当前证据** —— 对每个候选主题、标签、音频、挑战、格式、文化时刻和竞品观察，保留来源引用、观察/检索日期、测量窗口、平台/地理范围、指标定义、当前值和可比的先前值。仅 RSS/标题重叠保持为 `Proxy candidate/NOT_SCORED`。缺少当前证据会停止事实输出并返回查询计划。（模板：Step 2。）
+3. **分析内容格式趋势** —— 仅基于精确请求的平台/地理范围/时间窗口上的带日期动量序列，列出上升/峰值/下降的格式；解释只能标注为 observed association 或 hypothesis，不能给出未经支持的因果关系。（模板：Step 3。）
+4. **追踪文化时刻** —— 提供来源日期和当前讨论/情绪声明；否则将日历/搜索字段返回为 `TBD`。（模板：Step 4。）
+5. **评估趋势相关性** —— 只对有证据支撑的候选项按受众契合度、品牌价值匹配度、内容适配性、风险和时机进行评分（X/25）。无依据的候选项保持 `NOT_SCORED`，不做 go/caution/skip 判断。（模板：Step 5。）
+6. **监测竞品趋势采用** —— 需要带日期的帖子/活动证据；不要从一般品牌认知推断采用情况、表现、差距或过度使用。
+7. **生成趋势报告** —— 仅对通过完整当前证据门槛、且对应精确平台/地理范围/时间窗口的候选项，填写 top-3-act-now、watch、avoid、timed action、format 和 hashtag 区块；否则将这些区块留为 `TBD` 并返回 `NEEDS_INPUT` 以及采集计划。将结果内联返回；先提供精确的 WARM 保存路径，然后在任何 HOT 升级前单独询问。 （模板：Step 7。）
+
+用于可重复的监控，请先以内联计划的形式返回任何拟议的 ledger 写入。在用户分别给出一个明确授权之前，不要运行 `ledger.py record`；该授权必须命名规范化的 ledger 路径、`record` 操作，以及精确的 source/topic/platform/geography/window 范围。report-save 或 HOT-promotion 授权绝不覆盖该写入。
 
 ## 示例
 
-**用户**：“健身品牌目前应该采用哪些 TikTok 趋势？”
+**User**: "What TikTok trends should a fitness brand run right now?"
 
-输出应指出当前最值得立即采用的趋势——例如“Hot Girl Walk”演变趋势（23 亿次观看，仍在增长，通过“walk with me”内容推广服装/补充剂的适配度为 ⭐⭐⭐⭐⭐）、“75 Hard”挑战内容（⭐⭐⭐⭐，赞助正在挑战过程中的创作者），以及 GRWM 健身房版（早期增长阶段，具有先发优势，⭐⭐⭐⭐⭐）——并给出 15-30 秒的内容形式建议（前 2 秒设置吸引点、使用热门音频、添加文字叠加、快速剪辑）、标签（#FitTok、#GymTok），以及本周行动项：向创作者简要说明 GRWM 健身房版的创作要求。完整版本：[references/templates.md](references/templates.md#extended-example--tiktok-fitness-trends)。
+输出为 `NEEDS_INPUT`，因为该提示没有提供带日期的 TikTok 证据。它会返回针对 topic、hashtag、sound、format、safety 和 competitor-adoption records 的 platform/geography/window-specific queries，并包含字段 `source_ref`、`observed_at` 和 `measurement_window`。在这些 records 到来之前，它不会命名任何 trend、count、status、hashtag、format winner 或 this-week action。完整版本：[references/templates.md](references/templates.md#extended-example--tiktok-fitness-trends)。
 
-## 参考资料
+## 参考材料
 
-- [references/templates.md](references/templates.md)——每个步骤的填空模板、完整的实践示例和执行技巧。
+- [references/templates.md](references/templates.md) — 每个步骤的填充模板、完整的带注释示例，以及执行提示。
 
-- [skill-contract.md](../../../references/skill-contract.md)——共享契约和交接摘要格式。
-- [state-model.md](../../../references/state-model.md)——HOT/WARM/COLD 记忆层级和保存路径。
-- [CONNECTORS.md](../../../CONNECTORS.md)——按连接器类别划分的免费/无密钥数据方案。
-- [references/star-benchmark.md](../../../references/star-benchmark.md) 中的 STAR 基准评分——用于下游趋势驱动型创意输出的评级。
-- 侦察阶段的同级技能：[audience-mapper](../audience-mapper/SKILL.md)、[influencer-discovery](../influencer-discovery/SKILL.md)、[fit-scorer](../fit-scorer/SKILL.md)。
+- [skill-contract.md](../../../references/skill-contract.md) — 共享契约和 Handoff Summary 格式。
+- [state-model.md](../../../references/state-model.md) — HOT/WARM/COLD memory 层级和保存路径。
+- [CONNECTORS.md](../../../CONNECTORS.md) — 按 connector 类别划分的免费/无密钥数据方案。
+- [references/star-benchmark.md](../../../references/star-benchmark.md) 中的 STAR benchmark 评分 — 用于后续对趋势驱动的创意输出进行评分。
+- scout 阶段的同级技能： [audience-mapper](../audience-mapper/SKILL.md)、[influencer-discovery](../influencer-discovery/SKILL.md)、[fit-scorer](../fit-scorer/SKILL.md)。
 
-## 下一最佳技能
+## 下一个最佳技能
 
-- **主要**：[influencer-discovery](../influencer-discovery/SKILL.md) — 将选定的趋势转化为一份能够将其付诸实践的创作者候选名单。
-- **备选**：[audience-mapper](../audience-mapper/SKILL.md) — 在做出决定前，确认哪些趋势真正能引起受众共鸣。
-- **备选**：[fit-scorer](../fit-scorer/SKILL.md) — 在做出决定前，评估哪些创作者与选定趋势及品牌最契合。
+- **Primary**: [influencer-discovery](../influencer-discovery/SKILL.md) — 将选定的 trends 转化为一份能够执行它们的 creator shortlist。
+- **Alternate**: [audience-mapper](../audience-mapper/SKILL.md) — 在投入之前确认哪些 trends  वास्तव上会与你的 audience 产生共鸣。
+- **Alternate**: [fit-scorer](../fit-scorer/SKILL.md) — 评分哪些 creators 与选定的 trends 和品牌最匹配，再决定是否投入。
 
-终止条件：维护一个本次会话中已调用技能的访问集合。如果主要的下一技能在本轮中已经运行，则停止并报告该调用链已完成，而不是再次调用。最大移交深度为 3；达到该深度后，进行总结并将控制权交还给用户。
+Termination: 保持本次会话中已调用 skill 的 visited-set。若 primary next skill 已在本轮运行过，则停止并报告 chain complete，而不要再次调用。最大 handoff depth 为 3；一旦达到上限，进行总结并将控制权交回用户。
