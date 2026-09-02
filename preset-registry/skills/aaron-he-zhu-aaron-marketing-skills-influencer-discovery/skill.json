@@ -1,14 +1,14 @@
 {
   "id": "aaron-he-zhu-aaron-marketing-skills-influencer-discovery",
   "name": "influencer-discovery",
-  "description": "Use when the user asks to \"find influencers\", \"build an influencer list\", or \"discover creators in [niche]\"; produces a multi-platform candidate pool, per-influencer profiles, authenticity red-flag screening, and a tiered shortlist with preliminary triage signals. Not for STAR scoring or ranking a known shortlist — use fit-scorer. 达人挖掘/找达人/创作者名单",
+  "description": "Use when the user asks to \"find influencers\", \"build an influencer list\", or \"discover creators in [niche]\"; produces a multi-platform candidate pool, per-influencer evidence profiles, authenticity red-flag screening, and a Fit-readiness queue without action ranking. Not for STAR scoring or ranking a known shortlist — use fit-scorer. 达人挖掘/找达人/创作者名单",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
     "codex",
     "gemini"
   ],
-  "version": "20.0.0",
+  "version": "20.1.0",
   "author": "aaron-he-zhu",
   "install_path": ".claude/skills/influencer-discovery/SKILL.md",
   "source": {
@@ -16,11 +16,11 @@
     "url": "https://github.com/aaron-he-zhu/aaron-marketing-skills/blob/main/influencer/scout/influencer-discovery/SKILL.md",
     "path": "influencer/scout/influencer-discovery/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-01T22:51:15.045Z",
-    "stars": 2712,
+    "discovered_at": "2026-09-02T01:20:59.560Z",
+    "stars": 2713,
     "language": "Python",
-    "pushed_at": "2026-09-01T20:25:34Z",
+    "pushed_at": "2026-09-02T00:47:14Z",
     "license": "Apache-2.0"
   },
-  "summary_zh": "一款跨平台达人挖掘工具，适合按细分领域建立候选名单，并初筛账号真实性与合作潜力。"
+  "summary_zh": "用于跨平台挖掘特定领域达人，汇总候选名单与背景证据，筛查真实性风险，适合品牌前期建联和达人池准备。"
 }

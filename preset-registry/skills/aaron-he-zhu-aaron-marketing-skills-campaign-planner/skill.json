@@ -1,14 +1,14 @@
 {
   "id": "aaron-he-zhu-aaron-marketing-skills-campaign-planner",
   "name": "campaign-planner",
-  "description": "Use when the user asks to \"plan an influencer campaign\", \"build a campaign blueprint\", or \"launch a product with creators\"; produces campaign objectives, platform and influencer-tier strategy, content requirements, a phased timeline, budget allocation, and KPI targets. Not for writing individual creator briefs — use brief-generator; not for the overall product-launch plan (tiering, calendar, press, community day) — use launch-tier-planner, which hands this skill the creator lane. A launch reques",
-  "category": "文档写作",
+  "description": "Use when the user asks to \"plan an influencer campaign\", \"build a campaign blueprint\", \"track or close a creator campaign\", or \"record a late campaign correction\"; produces the plan and, when requested, a non-canonical evidence tracker with scoped identity, publication, reconciliation, close, and reopen receipts. Not for individual creator briefs — use brief-generator; not for overall product launches without creators — use launch-tier-planner; not for sending, publishing, amplifying, or paying ",
+  "category": "开发编程",
   "compatible_tools": [
     "claude",
     "codex",
     "gemini"
   ],
-  "version": "20.0.0",
+  "version": "20.1.0",
   "author": "aaron-he-zhu",
   "install_path": ".claude/skills/campaign-planner/SKILL.md",
   "source": {
@@ -16,11 +16,11 @@
     "url": "https://github.com/aaron-he-zhu/aaron-marketing-skills/blob/main/influencer/target/campaign-planner/SKILL.md",
     "path": "influencer/target/campaign-planner/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-01T22:51:15.521Z",
-    "stars": 2712,
+    "discovered_at": "2026-09-02T01:21:00.290Z",
+    "stars": 2713,
     "language": "Python",
-    "pushed_at": "2026-09-01T20:25:34Z",
+    "pushed_at": "2026-09-02T00:47:14Z",
     "license": "Apache-2.0"
   },
-  "summary_zh": "一款达人营销活动策划工具，可生成平台策略、内容要求、时间线、预算和KPI，适合新品创作者推广。"
+  "summary_zh": "用于规划和跟进达人营销活动，生成活动蓝图，并记录发布、核验、结案及重开等凭证。"
 }
