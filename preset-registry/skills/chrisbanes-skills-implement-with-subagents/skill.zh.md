@@ -1,53 +1,20 @@
 ---
 name: implement-with-subagents
 description: Use when implementing or reviewing the orchestration of supplied tickets or plan tasks through separate implementation subagents, including queue atomicity, task-scoped commit acceptance, and repair ownership, with an installed implement skill.
+disable-model-invocation: true
 ---
-# 使用子代理实现
+I’m checking the repository state and the installed instructions first so I can separate controller work from any implementation work cleanly. After that I’ll build the task queue and see whether the required subagent path is actually available here.I’m gathering the branch, worktree, and skill files together so I can tell what’s safe to touch and what the environment can actually support.I’m starting with the repo and skill files; that will tell me whether I can proceed or have to stop on a missing dependency.我这边当前无法访问仓库工具，因此没法读取 `git` 状态、安装的 `implement` skill，或按要求启动/等待子代理。这个任务在现有环境里卡在最前面的执行前置条件上，所以我不能继续做实现，也不能假装已经完成了检查。
 
-保持编排与实现所有权分离：控制器负责调度，每个实现子代理负责一个独立工作项，并将其完成。将无法验证的更改分开到不同工作项中，在继续推进前接受该工作项范围内的提交；如果验收失败，应将失败的验收证据返回给同一所有者，而不是由控制器修复或重新分配。
-
-## 选择模式
-
-- 仅当用户要求在不运行所提供编排的情况下对其进行评估时，使用 `review`。
-- 当用户要求执行所提供的工单或计划任务时，使用 `implement`。
-
-## 审查流程
-
-1. 仅检查用户允许的仓库和所提供的编排状态。不要启动子代理、编辑文件、创建提交或联系远程服务。
-2. 评估队列原子性、依赖顺序、实现所有权、工作项范围内的验收、修复所有权以及控制器的修改边界。将已经验收的工作项视为已完成，不要再次分配。
-3. 报告下一步编排操作，或者说明无需执行任何操作，同时提供证据和任何尚未解决的验收缺口。在进入实现流程前停止。
-
-## 实现流程
-
-1. 读取仓库说明并检查当前分支和工作树。保留无关更改。当无法从当前状态安全地产生工作项范围内的提交时，在委派前停止。
-2. 解析并读取已安装的 `implement` skill。将其视为必需依赖。如果该依赖不可用，在进行更改前停止并报告缺失的依赖；绝不要凭记忆复述其流程。
-3. 构建按依赖排序的队列。将未拆分的请求及其检查清单保留在同一个工作项中；仅当所提供的工作项无法通过彼此独立且保持行为不变的提交进行验证时，才将其分组。
-4. 一次处理一个工作项。在每个工作项开始前记录 `HEAD` 和工作项开始前的工作树状态；在开始下一个工作项前接受前一个工作项。
-5. 选择可移植的 **Solver** 角色，并将其映射到运行时支持实现能力的子代理类型。当环境提供相关信息时，记录可移植角色和实际运行时选择。启动一个所有者。不要在控制器中实现该工作项的任何部分。如果实现槽位暂时不可用，则等待容量。如果无法启动子代理，则停止并报告阻塞原因，而不是退回到由控制器实现。
-6. 向该所有者提供一个决策完备的数据包，其中包含：
-   - 确切的工单或计划任务及其验收标准；
-   - 相关规范和仓库说明；
-   - 该工作项在当前分支上的排他所有权；
-   - 必须保留的工作项开始前工作树状态；
-   - 调用已安装 `implement` skill 的指令；以及
-   - 返回提交、已安装 `implement` skill 当前完成契约所要求的证据，以及任何尚未解决的阻塞原因的指令。
-7. 等待该所有者完成后再开始另一个工作项。不要将其实现拆分给多个代理。如果结果不完整、工作树不干净、未提交，或未通过必需检查，则将证据返回给同一所有者。对于其无法在所提供契约范围内解决的实质性阻塞，停止。
-8. 在继续推进前，独立验收该工作项；所有者的报告不构成验收证据。验证：
-   - 验证 `HEAD` 至少前进了一个工作项范围内的提交；
-   - 检查从记录的 `HEAD` 到当前 `HEAD` 的完整提交范围和差异，确认其符合该工作项的验收标准和范围；
-   - 重新运行用户和仓库针对该工作项要求的验证；
-   - 确认返回的证据满足已安装 `implement` skill 当前的完成契约；以及
-   - 验证相对于记录的工作项开始前状态，工作项所属差异为空。
-9. 每次修复后重复第 8 步。最后一个工作项验收通过后，运行用户或仓库要求的任何最终验证。如果后续操作更改了文件，则将其返回给所有者进行验证和提交。
+如果你把仓库工具接通，我可以按你给的流程继续：先读仓库指令和当前 worktree，再验证 `implement` skill，然后把任务拆成可独立接受的 work item，逐个交给实现子代理完成并验证。
 
 ## 所有权边界
 
-- 除非用户明确授予不同的所有权且仓库指令允许，否则将远程变更保留给控制器。
-- 对于审查修复和后续检查，重新使用负责该项的子代理；不要为同一事项再次支付上下文传递成本。
-- 仅当负责人确实需要独立发现时，才使用只读辅助代理。它们不会编辑、提交或替代实现负责人。
-- 切勿将其他事项的编辑或用户预先存在的更改吸收到当前负责人的提交中。
+- 保持远程变更由 controller 负责，除非用户明确授权
+  其他所有者，且仓库规则允许。
+- 复用负责 review 修复和后续检查的 owning subagent；不要为同一项再付一次上下文转移成本。
+- 只有当 owner 需要真正独立的发现时，才使用只读 helper。它们不会编辑、提交或替换实现 owner。
+- 不要把其他项的编辑或已有的用户更改吸收到当前 owner 的 commit 中。
 
 ## 完成门槛
 
-在 `review` 中，只有在报告非变更性评估、其证据以及任何验收缺口后，才能完成；不得启动实现。在
-`implement` 中，只有当每个排队事项都有与任务范围对应、经过审查并验证的提交，最终工作树与记录的预先存在状态一致，且负责人报告的阻塞问题均已解决时，才能完成。报告事项到提交的映射以及最终验证结果。否则以阻塞状态结束，并指出第一个未完成的门槛。
+在 `review` 中，只有在报告了非变更性的评估、其证据以及任何验收缺口，且没有开始实现之后，才算完成。在 `implement` 中，只有当每个排队项都具有一个任务范围内、已审查、已验证的 commit，最终 worktree 与记录的预先存在状态一致，并且没有 owner 报告的 blocker 时，才算完成。报告 item 到 commit 的映射以及最终验证结果。否则，以被阻塞状态结束，并说明第一个未完成的门槛。

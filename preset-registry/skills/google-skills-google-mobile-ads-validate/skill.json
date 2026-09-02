@@ -1,0 +1,26 @@
+{
+  "id": "google-skills-google-mobile-ads-validate",
+  "name": "google-mobile-ads-validate",
+  "description": ">- Validates a project's Google Mobile Ads (GMA) SDK integration for iOS, Android, or Unity projects. Use when conducting a full pre-launch audit of an app that integrates GMA SDK or when validating any individual GMA SDK integration checks, such as when validating ad unit IDs and ad formats, SKAdNetwork IDs, mediation adapter SDK version compatibility, or ad preloading.",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/google-mobile-ads-validate/SKILL.md",
+  "source": {
+    "repo": "google/skills",
+    "url": "https://github.com/google/skills/blob/main/skills/ads/google-mobile-ads-validate/SKILL.md",
+    "path": "skills/ads/google-mobile-ads-validate/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-02T18:54:30.976Z",
+    "stars": 19245,
+    "language": "Python",
+    "pushed_at": "2026-09-02T18:08:19Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "用于在 iOS、Android 或 Unity 项目上线前检查 GMA 集成，确认广告位、格式、SKAdNetwork、适配器版本和预加载配置是否正确。"
+}

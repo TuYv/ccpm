@@ -18,7 +18,11 @@ Delegate only after all of these conditions hold for one identity tuple:
 - The phase interview has status `complete` or `skipped` after explicit final approval.
 - `phase_gate.py check-delegation` succeeds.
 
-Quick mode uses the same identity tuple. It requires a current `complete` or `partial_warned` manifest plus an interview receipt with status `bypassed_quick` and `quickAuthorization.source: "--quick"`. Quick mode bypasses interview questions only. Discovery, contract load, parent delegation provenance, artifact-agent reload, and `check-agent-write` still apply.
+## Hard-transition invariant
+
+Run the current `check-delegation` immediately before each affected phase transition or child dispatch. A failed `check-delegation` in either mode stops this invocation before state transition, child dispatch, or target-artifact write. After a normal-mode failure, the next explicit invocation uses a fresh manifest/interview identity. After an exact `--quick` delegation failure, the next explicit invocation reruns discovery, records a fresh `phaseSkillLoad` and interview identity, and does not reuse a terminal `bypassed_quick` interview or its discovery revision. Only a matching in-progress `collecting` or `awaiting_confirmation` interview is resumable. A matching in-progress interview that has not reached a failed delegation boundary remains valid for resume.
+
+Exact `--quick` preserves discovery, manifest, parent-delegation provenance, `check-delegation`, receipt recording, and `check-agent-write`. Quick mode bypasses interview questions only. Exact `--quick` separately bypasses final approval. It still runs `check-delegation` immediately before dispatch, uses the same identity tuple, requires a current `complete` or `partial_warned` manifest plus an interview receipt with status `bypassed_quick` and `quickAuthorization.source: "--quick"`, and has no other bypass.
 
 ## Hard boundaries
 
