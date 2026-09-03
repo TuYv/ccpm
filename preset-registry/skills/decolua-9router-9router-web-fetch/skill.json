@@ -1,7 +1,7 @@
 {
   "id": "decolua-9router-9router-web-fetch",
   "name": "9router-web-fetch",
-  "description": "Fetch URL → markdown / text / HTML via 9Router /v1/web/fetch using Firecrawl / Jina Reader / Tavily Extract / Exa Contents. Use when the user wants to scrape a webpage, extract URL content, read article, or convert a URL to markdown.",
+  "description": "Fetch URL → markdown / text / HTML via 9Router /v1/web/fetch using Ollama Cloud / Firecrawl / Jina Reader / Tavily Extract / Exa Contents. Use when the user wants to scrape a webpage, extract URL content, read article, or convert a URL to markdown.",
   "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/decolua/9router/blob/master/skills/9router-web-fetch/SKILL.md",
     "path": "skills/9router-web-fetch/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-09-03T01:21:30.071Z",
-    "stars": 26941,
+    "discovered_at": "2026-09-03T05:31:41.936Z",
+    "stars": 26957,
     "language": "JavaScript",
-    "pushed_at": "2026-08-29T11:00:38Z",
+    "pushed_at": "2026-09-03T04:03:18Z",
     "license": "MIT"
   },
-  "summary_zh": "一个通过统一接口抓取网页并转为 Markdown、纯文本或 HTML 的工具，适合提取文章和解析链接内容。"
+  "summary_zh": "通过 9Router 统一调用多种网页抓取服务，将 URL 转换为 Markdown、纯文本或 HTML，适合网页采集、文章阅读和内容提取。"
 }
