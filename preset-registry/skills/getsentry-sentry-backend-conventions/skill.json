@@ -1,7 +1,7 @@
 {
   "id": "getsentry-sentry-backend-conventions",
   "name": "backend-conventions",
-  "description": "Sentry backend conventions for logging, tracing/spans, metrics tags, and the options system. Use when adding or editing Python in src/ that logs (logger.info/exception), records metrics (metrics.incr/timing with tags), instruments spans/transactions, or reads registered options with options.get(). Trigger on \"add logging\", \"log an error\", \"add a metric\", \"add a span\", \"instrument tracing\", \"read an option\", \"LOG005\", \"LOG011\", or metrics tag cardinality questions.",
+  "description": "Sentry backend conventions for logging, tracing/spans, span/tag attribute naming, metrics tags, and the options system. Use when adding or editing Python in src/ that logs (logger.info/exception), records metrics (metrics.incr/timing with tags), instruments spans/transactions, calls sentry_sdk.set_tag/set_attribute or set_span_tag/set_span_data, or reads registered options with options.get(). Trigger on \"add logging\", \"log an error\", \"add a metric\", \"add a span\", \"instrument tracing\", \"set an at",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/getsentry/sentry/blob/master/.agents/skills/backend-conventions/SKILL.md",
     "path": ".agents/skills/backend-conventions/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-09-03T14:52:56.966Z",
-    "stars": 44718,
+    "discovered_at": "2026-09-03T18:57:57.212Z",
+    "stars": 44720,
     "language": "Python",
-    "pushed_at": "2026-09-03T14:49:14Z",
+    "pushed_at": "2026-09-03T18:57:06Z",
     "license": null
   },
-  "summary_zh": "用于统一 Python 后端的日志、链路追踪、指标标签和配置读取写法，适合新增或修改监控埋点与异常日志时参考。"
+  "summary_zh": "一套 Sentry 后端开发规范，统一日志、追踪、指标标签及配置项的写法，适合维护或新增 Python 后端代码时保持可观测性一致。"
 }

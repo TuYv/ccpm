@@ -1,6 +1,6 @@
 ---
 name: backend-conventions
-description: Sentry backend conventions for logging, tracing/spans, metrics tags, and the options system. Use when adding or editing Python in src/ that logs (logger.info/exception), records metrics (metrics.incr/timing with tags), instruments spans/transactions, or reads registered options with options.get(). Trigger on "add logging", "log an error", "add a metric", "add a span", "instrument tracing", "read an option", "LOG005", "LOG011", or metrics tag cardinality questions.
+description: Sentry backend conventions for logging, tracing/spans, span/tag attribute naming, metrics tags, and the options system. Use when adding or editing Python in src/ that logs (logger.info/exception), records metrics (metrics.incr/timing with tags), instruments spans/transactions, calls sentry_sdk.set_tag/set_attribute or set_span_tag/set_span_data, or reads registered options with options.get(). Trigger on "add logging", "log an error", "add a metric", "add a span", "instrument tracing", "set an attribute", "add a tag", "read an option", "LOG005", "LOG011", or metrics tag cardinality questions.
 ---
 # 后端约定：日志、追踪、指标、选项
 
@@ -18,7 +18,7 @@ batch_size = options.get("deletions.group-hash-metadata.batch-size")
 batch_size = options.get("deletions.group-hash-metadata.batch-size", 1000)
 ```
 
-**重要**：切勿向 `options.get()` 调用添加默认值。所有选项都通过 `defaults.py` 中的 `register()` 注册，而该函数要求提供默认值。如果没有设置值，选项系统始终会返回已注册的默认值，因此第二个默认值参数不仅多余，还可能导致不一致。
+**重要**：绝不要在 `options.get()` 调用中添加默认值。所有选项都通过 `defaults.py` 中的 `register()` 注册，并且必须提供默认值。如果未设置值，选项系统始终会返回已注册的默认值，因此额外的默认参数是多余的，并且可能导致不一致。
 
 ## 日志记录模式
 
@@ -77,10 +77,10 @@ analytics.record(
 
 ## 追踪 / Span
 
-请使用 `sentry.utils.tracing` 中的封装函数，而不是直接调用 SDK。在我们内部试用流式追踪生命周期（Span First rollout）期间，这是必需的。
+请使用 `sentry.utils.tracing` 中的封装，而不是直接调用 SDK。由于我们正在试用流式追踪生命周期（Span First rollout），这是必需的。
 
-| 不要使用                         | 应使用                                           |
-| -------------------------------- | ------------------------------------------------ |
+| 不要使用 | 应使用 |
+| -------------------------------- | -------------------------------- |
 | `sentry_sdk.start_span()`        | `start_span(name=..., op=...)`                   |
 | `sentry_sdk.start_transaction()` | `start_span(name=..., op=..., transaction=True)` |
 | `span.set_tag(key, value)`       | `set_span_tag(span, key, value)`                 |
@@ -103,18 +103,34 @@ with start_span(name="monitors.consumer", op="process", transaction=True):
     process_batch()
 ```
 
-## 指标标签
+## Span / Tag 属性名称
 
-每种不同的标签和值组合都是一个独立的时间序列，因此应确保标签**低基数、有意义且精简**：
+在为 `sentry_sdk.set_tag`/`set_attribute`、`set_span_tag` 或 `set_span_data` 发明键之前，请检查 OTel 或 Sentry 是否已在 `sentry_conventions.attributes.ATTRIBUTE_NAMES` 中提供了标准名称。复用约定名称可以确保该属性可查询，并与其他生产者（SDK、Relay）针对同一概念发出的属性保持一致；自定义名称会使同一数据分散到两个键中。
 
-- 仅当你确实会按某个标签进行筛选或分组时，才添加该标签。越少越好。
-- 标签值必须是有界的/可枚举的（例如 `status`、`platform`、`reason`）——绝不能使用无界标识符（ID、电子邮件地址、URL、自由文本）。
+```python
+from sentry_conventions.attributes import ATTRIBUTE_NAMES
 
-中间件（`src/sentry/metrics/middleware.py`）通过拒绝标签键来强制执行此规则：标签键**以 `_id` 结尾**，或者恰好为 **`event`/`project`/`group`** 时，都会被拒绝。此类标签**将不起作用**：默认情况下会被静默移除，而在启用 `SENTRY_METRICS_DISALLOW_BAD_TAGS` 时（例如在 CI 中）则会引发 `BadMetricTags`——因此，一个在本地看起来正常的指标可能会在其他环境中失败。
+# WRONG: inventing a name for a concept the conventions already cover
+sentry_sdk.set_attribute("request_user_agent", user_agent)
+
+# RIGHT: use the existing convention name
+sentry_sdk.set_attribute(ATTRIBUTE_NAMES.USER_AGENT_ORIGINAL, user_agent)
+```
+
+`ATTRIBUTE_NAMES` 根据 OTel 语义约定以及 Sentry 自有模型生成（`.venv/lib/python*/site-packages/sentry_conventions/attributes.py`）；在添加新名称之前，先在其中 grep 候选关键词。只有当某个概念确实没有对应约定时，才回退到自定义键，并且应优先使用带命名空间且描述性明确的名称。在功能尚未发布期间，将某个键保留在 `_test`/POC 后缀之后，是一种独立且有意为之的做法；这涉及隐藏字段，而不是选择字段名称。
+
+## Metrics 标签
+
+每一种不同的标签值组合都是一个独立的时间序列，因此请保持标签**低基数、有意义且最少化**：
+
+- 仅在确实需要通过该标签进行筛选或分组时添加它。越少越好。
+- 标签值必须是有界且可枚举的（例如 `status`、`platform`、`reason`），绝不能使用无界标识符（ID、电子邮件、URL、自由文本）。
+
+中间件（`src/sentry/metrics/middleware.py`）通过拒绝标签键来强制执行这一点：标签键以 `_id` 结尾，或完全等于 **`event`/`project`/`group`** 时会被拒绝。此类标签**无法正常工作**：默认情况下会被静默移除；启用 `SENTRY_METRICS_DISALLOW_BAD_TAGS` 后（例如在 CI 中）则会引发 `BadMetricTags`，因此某个指标可能在本地看起来正常，却在其他环境中失败。
 
 ```python
 metrics.incr("my.metric", tags={"project_id": project.id})   # WRONG: stripped / raises
 metrics.incr("my.metric", tags={"platform": project.platform})  # RIGHT: bounded values
 ```
 
-尽管存在上述规则，仍有少数键被列入允许列表（参见 `_NOT_BAD_TAGS`）；不要为了绕过此限制而扩展该列表——应改用低基数标签。
+尽管有上述规则，仍有少数键被列入允许列表（参见 `_NOT_BAD_TAGS`）；不要通过扩展允许列表来规避这一约束，而应选择低基数的标签。
