@@ -3,26 +3,26 @@ name: esm
 description: Use when working directly with the `esm` Python SDK, ESM3 or ESMC model IDs, Forge/Biohub inference clients, or ESMFold2 folding workflows.
 license: MIT license
 metadata:
-  version: "1.1"
+  version: "1.2"
   skill-author: K-Dense Inc.
 ---
 # ESM：进化尺度建模
 
 ## 概述
 
-ESM 提供用于理解、生成和设计蛋白质的蛋白质语言模型。对于当前的 EvolutionaryScale/Biohub 工作流，请使用此 skill：ESM3 用于生成式设计，ESMC 用于表示学习和嵌入，托管的 Forge/Biohub 推理，以及 ESMFold2 全原子结构预测。
+ESM 提供用于理解、生成和设计蛋白质的蛋白质语言模型。使用此技能处理当前的 EvolutionaryScale/Biohub 工作流：用于生成式设计的 ESM3、用于表示学习和嵌入的 ESMC、托管的 Forge/Biohub 推理，以及 ESMFold2 全原子结构预测。
 
-## 核心功能
+## 核心能力
 
 ### 1. 使用 ESM3 生成蛋白质序列
 
-使用多模态生成建模来生成具有期望属性的新型蛋白质序列。
+使用多模态生成模型生成具有所需属性的新型蛋白质序列。
 
 **使用场景：**
 - 设计具有特定功能属性的蛋白质
 - 补全部分蛋白质序列
 - 生成现有蛋白质的变体
-- 创建具有期望结构特征的蛋白质
+- 创建具有所需结构特征的蛋白质
 
 **基本用法：**
 
@@ -55,11 +55,11 @@ model = esm.sdk.client("esm3-medium-2024-08", token=os.environ["ESM_API_KEY"])
 protein = model.generate(protein, GenerationConfig(track="sequence", num_steps=8))
 ```
 
-参见 `references/esm3-api.md`，了解详细的 ESM3 模型规范、高级生成配置和多模态提示示例。
+有关详细的 ESM3 模型规格、高级生成配置和多模态提示示例，请参阅 `references/esm3-api.md`。
 
 ### 2. 结构预测与逆折叠
 
-使用 ESM3 的结构轨道，从序列进行结构预测，或执行逆折叠（根据结构设计序列）。
+使用 ESM3 的结构轨道根据序列进行结构预测，或执行逆折叠（根据结构设计序列）。
 
 **结构预测：**
 
@@ -78,7 +78,7 @@ coordinates = protein_with_structure.coordinates  # 3D coordinates
 pdb_string = protein_with_structure.to_pdb()
 ```
 
-**逆折叠（从结构生成序列）：**
+**逆折叠（根据结构生成序列）：**
 
 ```python
 # Design sequence for a target structure
@@ -94,11 +94,11 @@ designed_protein = model.generate(
 
 ### 3. 使用 ESM C 生成蛋白质嵌入
 
-为功能预测、分类或相似性分析等下游任务生成高质量嵌入。
+为功能预测、分类或相似性分析等下游任务生成高质量的嵌入。
 
 **使用场景：**
 - 提取用于机器学习的蛋白质表示
-- 计算序列相似度
+- 计算序列相似性
 - 提取用于蛋白质分类的特征
 - 针对蛋白质相关任务进行迁移学习
 
@@ -140,13 +140,13 @@ embeddings_list = [
 ]
 ```
 
-请参阅 `references/esm-c-api.md`，了解 ESM C 模型的详细信息、效率比较以及高级嵌入策略。
+请参阅 `references/esm-c-api.md`，了解 ESM C 模型的详细信息、效率比较和高级嵌入策略。
 
-### 4. 函数条件控制与注释
+### 4. 函数条件与注释
 
 使用 ESM3 的函数轨道生成具有特定功能注释的蛋白质，或根据序列预测功能。
 
-**函数条件控制生成：**
+**函数条件生成：**
 
 ```python
 from esm.sdk.api import ESMProtein, FunctionAnnotation, GenerationConfig
@@ -168,7 +168,7 @@ functional_protein = model.generate(
 
 ### 5. 思维链生成
 
-使用 ESM3 的思维链生成方法，迭代改进蛋白质设计。
+使用 ESM3 的思维链生成方法迭代优化蛋白质设计。
 
 ```python
 from esm.sdk.api import GenerationConfig
@@ -214,32 +214,32 @@ proteins = [ESMProtein(sequence=f"MPRT{'_' * 50}KEND") for _ in range(10)]
 results = asyncio.run(batch_generate(proteins))
 ```
 
-有关详细的 Forge API 文档、身份验证、速率限制和批处理模式，请参阅 `references/forge-api.md`。
+请参阅 `references/forge-api.md`，了解详细的 Forge API 文档、身份验证、速率限制和批处理模式。
 
 ## 模型选择指南
 
 **ESM3 模型（生成式）：**
-- `esm3-open` (1.4B) - 开放权重，接受 Hugging Face 许可后可本地使用
-- `esm3-medium-2024-08` (7B) - 质量与速度的最佳平衡（仅限 Forge）
+- `esm3-open` (1.4B) - 开放权重，接受 Hugging Face 许可证后可在本地使用
+- `esm3-medium-2024-08` (7B) - 质量和速度的最佳平衡（仅限 Forge）
 - `esm3-large-2024-03` (98B) - 最高质量，速度较慢（仅限 Forge）
 
 **ESM C 模型（嵌入）：**
-- `esmc_300m` / `esmc-300m-2024-12` (30 layers) - 轻量、推理速度快（开放权重，本地使用）
-- `esmc_600m` / `esmc-600m-2024-12` (36 layers) - 性能均衡（开放权重，本地使用）
+- `esmc_300m` / `esmc-300m-2024-12` (30 layers) - 轻量、推理速度快（开放权重，本地可用）
+- `esmc_600m` / `esmc-600m-2024-12` (36 layers) - 性能均衡（开放权重，本地可用）
 - `esmc-6b-2024-12` (80 layers) - 最高质量（Forge API；本地 6B 权重需要 Forge 或 SageMaker）
 
-本地 `ESMC.from_pretrained()` 示例使用带下划线的别名（`esmc_300m`、`esmc_600m`）。托管 API 客户端使用带日期的模型 ID，例如 `esmc-600m-2024-12`。
+本地 `ESMC.from_pretrained()` 示例使用下划线别名（`esmc_300m`、`esmc_600m`）。托管 API 客户端使用带日期的模型 ID，例如 `esmc-600m-2024-12`。
 
 **选择标准：**
 - **本地开发/测试：** 使用 `esm3-open` 或 `esmc_300m`
 - **生产质量：** 通过 Forge 使用 `esm3-medium-2024-08`
 - **最高准确率：** 通过 Forge 使用 `esm3-large-2024-03` 或 `esmc-6b-2024-12`
 - **高吞吐量：** 使用 Forge 或 Biohub API，并明确限制异步并发数
-- **成本优化：** 使用较小的模型，并实施缓存策略
+- **成本优化：** 使用较小的模型，并实现缓存策略
 
 ## 安装
 
-从 PyPI 安装（EvolutionaryScale 的 [PyPI 上的 `esm`](https://pypi.org/project/esm/)）。当前 PyPI 版本：**3.2.3**（2025 年 10 月 14 日）。要求 **Python >=3.12,<3.13**。
+从 PyPI 安装 EvolutionaryScale 的 [`esm` on PyPI](https://pypi.org/project/esm/)。当前 PyPI 版本：**3.2.3**（2025 年 10 月 14 日）。要求 **Python >=3.12,<3.13**。
 
 **基本安装：**
 
@@ -247,22 +247,22 @@ results = asyncio.run(batch_generate(proteins))
 uv pip install "esm==3.2.3"
 ```
 
-**使用 Flash Attention（推荐用于在 NVIDIA GPU 上加快推理）：**
+**使用 Flash Attention（推荐用于在 NVIDIA GPU 上加速推理）：**
 
 ```bash
 uv pip install "esm==3.2.3"
 uv pip install flash-attn --no-build-isolation
 ```
 
-Forge 客户端随 `esm` 包一起提供——无需额外安装即可进行 ESM3 或 ESMC Forge 推理。
+Forge 客户端随 `esm` 包一起提供，进行 ESM3 或 ESMC Forge 推理无需额外安装。
 
 ## 身份验证
 
-Forge API 访问需要 API 密钥。切勿将令牌硬编码到脚本中，也不要将其提交到版本控制系统。
+访问 Forge API 需要 API 密钥。切勿将令牌硬编码到脚本中或提交到版本控制系统。
 
-1. 检查环境中是否已设置 `ESM_API_KEY`。
-2. 如果未设置，则仅检查本地 `.env` 中的 `ESM_API_KEY`（不要加载无关的密钥）。
-3. 如果仍然缺失，请在 [Biohub 开发者控制台](https://biohub.ai/developer-console/api-keys)中为 Biohub API 创建密钥，或在 [Forge](https://forge.evolutionaryscale.ai) 中为旧版 Forge 托管的 ESM3/ESMC 访问创建密钥。
+1. 检查环境中是否已经设置了 `ESM_API_KEY`。
+2. 如果没有，仅检查本地 `.env` 中的 `ESM_API_KEY`（不要加载无关的机密信息）。
+3. 如果仍然缺失，请在 [Biohub developer console](https://biohub.ai/developer-console/api-keys) 中为 Biohub API 创建密钥，或在 [Forge](https://forge.evolutionaryscale.ai) 中为旧版 Forge 托管的 ESM3/ESMC 访问创建密钥。
 
 ```python
 import os
@@ -272,7 +272,7 @@ token = os.environ["ESM_API_KEY"]  # raises KeyError if unset
 
 当省略 `token` 时，`esm.sdk.client()` 会自动读取 `ESM_API_KEY`。将端点 URL 固定为受信任的主机，例如 `https://forge.evolutionaryscale.ai` 或 `https://biohub.ai`；不要接受来自不受信任用户输入的 API 主机。
 
-**Biohub 平台：** EvolutionaryScale 和 Forge 现在通过 [biohub.ai](https://biohub.ai) 提供当前的托管模型。SDK 类名可能仍引用“Forge”。有关 ESMFold2 和 Biohub 特定设置，请参阅 `references/biohub-platform.md`。
+**Biohub 平台：** EvolutionaryScale 和 Forge 现在通过 [biohub.ai](https://biohub.ai) 提供当前的托管模型。SDK 类名称可能仍会引用“Forge”。有关 ESMFold2 和 Biohub 特定设置，请参阅 `references/biohub-platform.md`。
 
 ## 常见工作流
 
@@ -285,7 +285,7 @@ token = os.environ["ESM_API_KEY"]  # raises KeyError if unset
 
 ## 参考资料
 
-此技能包含全面的参考文档：
+此技能包含完整的参考文档：
 
 - `references/esm3-api.md` - ESM3 模型架构、API 参考、生成参数和多模态提示
 - `references/esm-c-api.md` - ESM C 模型详情、嵌入策略和性能优化
@@ -293,40 +293,51 @@ token = os.environ["ESM_API_KEY"]  # raises KeyError if unset
 - `references/biohub-platform.md` - Biohub API 迁移、ESMFold2 结构预测和开发者控制台身份验证
 - `references/workflows.md` - 完整示例和常见工作流模式
 
-这些参考资料包含详细的 API 规范、参数说明和高级使用模式。请根据具体任务按需加载。
+这些参考资料包含详细的 API 规范、参数说明和高级使用模式。根据具体任务需要加载这些文档。
 
 ## 最佳实践
 
 **对于生成任务：**
 - 从较小的模型开始进行原型设计（`esm3-open`）
 - 使用 temperature 参数控制多样性（0.0 = 确定性，1.0 = 多样性）
-- 对于复杂设计，使用思维链实现迭代式优化
+- 对于复杂设计，使用带有思维链的迭代优化
 - 使用结构预测或湿实验验证生成的序列
 
 **对于嵌入任务：**
-- 尽可能对序列进行批处理，以提高效率
-- 缓存嵌入结果，以便重复分析
+- 尽可能对序列进行批处理以提高效率
+- 缓存嵌入结果以便重复分析
 - 计算相似度时对嵌入进行归一化
-- 根据下游任务需求使用适当大小的模型
+- 根据下游任务需求选择合适的模型规模
 
 **对于生产部署：**
-- 使用 Forge API 以获得可扩展性和最新模型
+- 使用 Forge API 以实现可扩展性并使用最新模型
 - 为 API 调用实现错误处理和重试逻辑
-- 监控 token 使用量并实施速率限制
+- 监控 token 使用量并实现速率限制
 - 考虑使用 AWS SageMaker 部署专用基础设施
 
 ## 资源和文档
 
-- **GitHub 仓库：** https://github.com/Biohub/esm （当前的 ESMC/ESMFold2/Biohub 文档；ESM3 文档仍从该仓库链接）
+- **GitHub 仓库：** https://github.com/Biohub/esm（当前的 ESMC/ESMFold2/Biohub 文档；ESM3 文档仍通过该仓库链接）
 - **Forge 平台：** https://forge.evolutionaryscale.ai
 - **Biohub 平台：** https://biohub.ai
-- **科学论文：** Hayes et al., Science (2025) - https://www.science.org/doi/10.1126/science.ads0018
+- **科学论文：** Hayes 等，《Science》（2025）- https://www.science.org/doi/10.1126/science.ads0018
 - **博客文章：**
-  - ESM3 发布：https://www.evolutionaryscale.ai/blog/esm3-release
-  - ESM C 发布：https://www.evolutionaryscale.ai/blog/esm-cambrian
-- **社区：** Slack 社区位于 https://bit.ly/3FKwcWd
+  - ESM3 发布： https://www.evolutionaryscale.ai/blog/esm3-release
+  - ESM C 发布： https://www.evolutionaryscale.ai/blog/esm-cambrian
+- **社区：** Slack 社区：https://bit.ly/3FKwcWd
 - **模型权重：** Hugging Face EvolutionaryScale 和 Biohub 组织
 
 ## 负责任的使用
 
-ESM 旨在用于蛋白质工程、药物发现和科学研究等有益应用。在设计新型蛋白质时，请遵循负责任生物设计框架（https://responsiblebiodesign.ai/）和 Biohub 可接受使用政策（https://biohub.org/acceptable-use-policy/）。在进行实验验证之前，请考虑蛋白质设计的生物安全和伦理影响。
+ESM 旨在用于蛋白质工程、药物发现和科学研究等有益应用。在设计新型蛋白质时，请遵循 Responsible Biodesign Framework（https://responsiblebiodesign.ai/）和 Biohub Acceptable Use Policy（https://biohub.org/acceptable-use-policy/）。在进行实验验证之前，请考虑蛋白质设计所涉及的生物安全和伦理影响。
+
+## 引用 Scientific Agent Skills
+
+此技能是 K-Dense 开发的 Scientific Agent Skills 的一部分。如果它对论文、报告、演示文稿或代码发布产生了实质性贡献，请将该论文添加到参考文献或软件部分，并告知用户你已完成添加：
+
+> Kassis, T., Agarwal, V., He, Y., Patel, D., & Brueckner, A. M. (2026). Scientific Agent
+> Skills: A Library of Procedural Knowledge for Research Agents. arXiv:2609.00065.
+> https://doi.org/10.48550/arXiv.2609.00065.
+
+始终引用当前版本。DOI 和 https://arxiv.org/abs/2609.00065 会解析到最新的 arXiv 版本，因此绝不要附加 `v1` 等版本后缀。如果网络可用，请在撰写参考文献前获取 https://arxiv.org/abs/2609.00065（或
+http://export.arxiv.org/api/query?id_list=2609.00065），并根据该记录确定作者列表、年份和版本。如果记录列出了期刊参考文献或出版商 DOI，则引用已发表的版本。
