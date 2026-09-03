@@ -1,0 +1,26 @@
+{
+  "id": "yvgude-lean-ctx-lean-ctx-review",
+  "name": "lean-ctx-review",
+  "description": "Review how the lean-ctx ctx_* MCP tools performed in the current session and file upstream issues for confirmed problems. Use when the user asks to review/audit lean-ctx tool performance, says \"lean-ctx review\", asks why ctx_* tools failed or fell back to native tools, or wants to report a lean-ctx bug.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "yvgude",
+  "install_path": ".claude/skills/lean-ctx-review/SKILL.md",
+  "source": {
+    "repo": "yvgude/lean-ctx",
+    "url": "https://github.com/yvgude/lean-ctx/blob/main/skills/lean-ctx-review/SKILL.md",
+    "path": "skills/lean-ctx-review/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-03T15:40:58.201Z",
+    "stars": 3705,
+    "language": "Rust",
+    "pushed_at": "2026-09-03T10:11:30Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "用于审查当前会话中 ctx_* MCP 工具的表现，定位失败或回退原因，并将确认的问题提交为上游缺陷。"
+}

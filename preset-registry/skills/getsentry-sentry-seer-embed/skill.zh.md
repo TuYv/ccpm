@@ -2,17 +2,17 @@
 name: seer-embed
 description: Add a new Seer embed widget — a rich component rendered inline in Seer's markdown output via tag syntax. Covers schema, component, registration, and backend codegen. Use when asked to "add an embed", "new seer embed", "create a seer widget", "add a markdown widget", "new seer tag", or "embed widget".
 ---
-# 添加 Seer 嵌入组件
+# 添加 Seer Embed
 
-Seer 嵌入组件是使用 Markdoc 风格标签语法（`{% name %}{ ... }{% /name %}`）在 Seer 的 Markdown 输出中内联渲染的富交互组件。每个嵌入组件都有一个 Zod schema、一个 React 组件和一个注册表条目。
+Seer embed 是使用 Markdoc 风格标签语法（`{% name %}{ ... }{% /name %}`）以内联方式渲染在 Seer Markdown 输出中的富交互组件。每个 embed 都包含一个 Zod schema、一个 React 组件和一个注册表条目。
 
 ## 开始之前
 
-1. 阅读 `static/app/components/seer/markdown/embeds/schemas.ts`，查看现有 schema。
-2. 阅读 `static/app/components/seer/markdown/embeds/index.ts`，查看已注册的嵌入组件。
-3. 确认该嵌入组件名称尚不存在。
+1. 阅读 `static/app/components/seer/markdown/embeds/schemas.ts`，了解现有 schema。
+2. 阅读 `static/app/components/seer/markdown/embeds/index.ts`，了解已注册的 embed。
+3. 确认该 embed 名称尚不存在。
 
-## 第 1 步：添加 Schema
+## 步骤 1：添加 Schema
 
 在 `static/app/components/seer/markdown/embeds/schemas.ts` 中，向 `SEER_EMBED_SCHEMAS` 添加一个条目：
 
@@ -37,13 +37,13 @@ export const SEER_EMBED_SCHEMAS = {
 
 **关键决策：**
 
-- **`description`**：面向 LLM 编写——它会据此决定何时输出该嵌入组件。请具体说明使用场景。
-- **`level`**：对于需要随文本流动的小组件（时间戳、徽章），使用 `['inline']`。对于需要独占一行的小组件（卡片、图表），使用 `['block']`。如果嵌入组件能够自适应，则两者都使用。
-- **`schema`**：使用 Zod。保持扁平且简单——LLM 必须生成有效的 JSON。对于具有合理默认值的可选字段，使用 `.default()`。使用 `.enum()` 约束字符串值。
-- **`examples`**：由 `{label, data, level?}` 对象组成的数组。每个 `data` 都必须通过 schema 验证。这些示例会作为少样本示例包含在发送给 LLM 的生成 JSON 中。在 stories 页面中，一个嵌入组件的所有示例会被组合成一个 Markdown 块，并通过单个 `<SeerMarkdown>` 渲染——内联示例会被包裹在正文文本中，块级示例则会追加到末尾。使用多个示例来展示不同的 prop 组合或块级与内联渲染方式。仅当某个示例的层级与 schema 的默认层级（`level` 中的第一项）不同时，才在该示例上设置 `level`。
-- **`featureFlag`**：设置此项可通过功能开关控制该嵌入组件。当功能开关关闭时，后端会将其从发送给 LLM 的 schema 中过滤掉。
+- **`description`**：面向 LLM 编写，LLM 会根据它决定何时生成该 embed。请具体说明适用场景。
+- **`level`**：对于在文本中随内容流动的组件（时间戳、徽章），使用 `['inline']`。对于需要独占一行的组件（卡片、图表），使用 `['block']`。如果 embed 能够适应两种场景，则同时使用两者。
+- **`schema`**：使用 Zod。保持扁平且简单，因为 LLM 必须生成有效的 JSON。对于具有合理默认值的可选字段，使用 `.default()`。使用 `.enum()` 限制字符串值。
+- **`examples`**：这是一个由 `{label, data, level?}` 对象组成的数组。每个 `data` 都必须符合 schema。生成的 JSON 会发送给 LLM，并将这些示例作为少样本示例。在 stories 页面中，一个 embed 的所有示例会组合成一个 Markdown 块，并通过单个 `<SeerMarkdown>` 渲染：inline 示例会用段落文本包裹，block 示例会追加到末尾。使用多个示例来展示不同的 prop 组合，或展示 block 与 inline 渲染方式。当某个示例的级别与 schema 的默认级别（`level` 的第一个条目）不同时，才在该示例上设置 `level`。
+- **`featureFlag`**：设置此项可通过 feature flag 控制 embed。该 flag 关闭时，后端会将其从发送给 LLM 的 schema 中过滤掉。
 
-## 第 2 步：创建组件
+## 步骤 2：创建组件
 
 创建 `static/app/components/seer/markdown/embeds/components/<name>.tsx`：
 
@@ -59,23 +59,65 @@ export const MyEmbed = defineSeerEmbed({
 });
 ```
 
-**`defineSeerEmbed` 为你完成的工作：**
+**`defineSeerEmbed` 会为你完成以下工作：**
 
 - 按名称查找 Zod schema
-- 使用它对 `data` prop 执行 `safeParse`
-- 对于无效数据返回 `null`（在开发环境中记录警告）
-- 在组件上设置 `displayName`（供注册表使用）
+- 根据该 schema 对 `data` prop 执行 `safeParse`
+- 对无效数据返回 `null`（在开发环境中记录警告）
+- 设置组件的 `displayName`（注册表会使用它）
 
 **规则：**
 
 - `name` 参数**必须**与 `SEER_EMBED_SCHEMAS` 中的键完全匹配。
-- `render` 函数接收 Zod 输出类型——props 已完成解析和验证。
-- 保持组件简单。请导入现有的 Sentry 组件（`DateTime`、`TimeSince`、`Link` 等），而不是从头构建。
-- 组件不会收到有关其出现位置的任何上下文——它只能获取标签正文中的数据。
+- `render` 函数将 Zod 输出类型作为第一个参数接收，props 已经过解析和验证。
+- 如果 schema 的 `level` 同时包含 `'inline'` 和 `'block'`，`render` 会接收第二个参数，告知当前正在渲染哪一种。使用它进行分支判断：当 block 侧具有实际内容后，请参阅步骤 2b 中的模式。
+- 保持组件简单。导入现有的 Sentry 组件（`DateTime`、`TimeSince`、`Link` 等），不要从头构建。
+- 组件不会收到关于自身出现位置的上下文，它只能获取标签正文中的数据。
+
+## 步骤 2b：当 Embed 超出单个文件的范围时进行拆分
+
+仅包含链接的 embed 保持为单个文件。一旦 embed 开始渲染 block 预览，例如需要
+获取数据、延迟加载较重的视图，或根据子类型进行分支，就应当改用目录，以便审阅者可以
+一次阅读一个关注点：
+
+```
+components/monitor/
+  monitor.tsx          # defineSeerEmbed only: inline link vs lazily imported block
+  monitorLink.tsx      # the inline level
+  monitorBlock.tsx     # default export: fetch, card chrome, dispatch
+  monitorTypes/        # one file per subtype, when the embed has subtypes
+    cron.tsx
+    uptime.tsx
+  monitor.spec.tsx     # colocated, not in resourceEmbeds.spec.tsx
+```
+
+`<name>.tsx` 入口文件只负责选择要渲染的层级，使用步骤 2 中 `render` 的第二个参数：
+
+```tsx
+const LazyMonitorBlock = lazy(() => import('./monitorBlock'));
+
+export const Monitor = defineSeerEmbed({
+  name: 'monitor',
+  render(props, level) {
+    if (level === 'block') {
+      return <LazyLoad LazyComponent={LazyMonitorBlock} {...props} />;
+    }
+    return <MonitorLink {...props} />;
+  },
+});
+```
+
+**规则：**
+
+- 目录中没有 `index.tsx`。入口文件应以 embed 命名（`monitor/monitor.tsx`），并在 `embeds/index.ts` 中显式导入。
+- `<name>.tsx` 只包含 `defineSeerEmbed`，并像上面这样根据 `level` 进行分发。block 所需的全部内容都必须放在 `lazy(() => import('./<name>Block'))` 后面，其中 block 应为 `default` 导出（这是 `lazy()` 所要求的），这样资源的 inline mention 就不会将 block 引入 bundle。`dashboard` 和 `monitor` 都遵循这一模式。
+- 当 block 根据子类型（检测器类型、widget 类型）进行分支时，每个分支都应放在以变化维度命名的同级目录中的独立文件内（使用 `monitorTypes/`，而不是 `types/`，后者看起来像 TypeScript 类型），block 中的分发器则使用单个 `switch`。添加子类型应当只需新增文件并添加一个 case，而不应再像该约定所取代的旧单体模块那样，编辑分散在长模块中的两个 switch。
+- 在 block 中只推导一次共享条件，并将其作为 props 传递下去，而不是在每个变体中重新推导。正是每个子类型文件中的重复推导，使旧单体模块中的 switch 难以保持同步。
+- 将 spec 与代码放在一起，命名为 `<name>.spec.tsx`，并使用 `embeds/testUtils.tsx` 中共享的 `renderEmbed` / `hrefFor` 辅助函数。`resourceEmbeds.spec.tsx` 仅用于链接级 embed，它由所有 embed 共享，因此 block embed 向其中添加用例时会频繁产生冲突。
 
 ## 第 3 步：注册组件
 
-在 `static/app/components/seer/markdown/embeds/index.ts` 中，导入组件并将其添加到 `embeds` 数组：
+在 `static/app/components/seer/markdown/embeds/index.ts` 中导入组件，并将其添加到 `embeds` 数组中：
 
 ```ts
 import {MyEmbed} from './components/myEmbed';
@@ -88,7 +130,7 @@ for (const embed of embeds) {
 }
 ```
 
-注册时使用 `displayName`（由 `defineSeerEmbed` 设置）作为注册表的键。
+注册使用 `displayName`（由 `defineSeerEmbed` 设置）作为注册表键。
 
 ## 第 4 步：重新生成后端 Schema
 
@@ -98,31 +140,32 @@ for (const embed of embeds) {
 pnpm gen:embed-widgets
 ```
 
-该命令会写入 `src/sentry/seer/agent/embed_widgets.generated.json`。**请提交这个生成的文件**——它已纳入版本控制，并未被 gitignore 忽略。
+该命令会写入 `src/sentry/seer/agent/embed_widgets.generated.json`。**请提交此生成文件**，它已纳入版本控制，并未被 gitignore。
 
 ## 第 5 步：验证
 
 1. **Lint**：对新文件运行 `pnpm run lint:js`。
-2. **类型**：运行 `pnpm run typecheck`，确认 schema 类型能够正确传递。
-3. **手动测试**：在 Seer Explorer 中触发一个会使用该嵌入组件的响应。也可以直接测试：
+2. **类型检查**：运行 `pnpm run typecheck`，确认 schema 类型能够正确传递。
+3. **手动测试**：在 Seer Explorer 中触发一个会使用该 embed 的响应。或者直接进行测试：
 
 ```tsx
 <SeerMarkdown raw={`{% myEmbed %}{"someField":"hello"}{% /myEmbed %}`} />
 ```
 
-## 文件汇总
+## 文件摘要
 
-| 文件                                                               | 操作                                    |
-| ------------------------------------------------------------------ | --------------------------------------- |
-| `static/app/components/seer/markdown/embeds/schemas.ts`            | 添加 Zod schema 条目                    |
-| `static/app/components/seer/markdown/embeds/components/<name>.tsx` | 使用 `defineSeerEmbed` 创建组件         |
-| `static/app/components/seer/markdown/embeds/index.ts`              | 导入并注册                              |
-| `src/sentry/seer/agent/embed_widgets.generated.json`               | 由 `pnpm gen:embed-widgets` 重新生成     |
+| 文件                                                               | 操作                                           |
+| ------------------------------------------------------------------ | ---------------------------------------------- |
+| `static/app/components/seer/markdown/embeds/schemas.ts`            | 添加 Zod schema 条目                            |
+| `static/app/components/seer/markdown/embeds/components/<name>.tsx` | 使用 `defineSeerEmbed` 创建组件                 |
+| `static/app/components/seer/markdown/embeds/components/<name>/`    | 一旦渲染为块级内容，则改用目录                   |
+| `static/app/components/seer/markdown/embeds/index.ts`              | 导入并注册                                     |
+| `src/sentry/seer/agent/embed_widgets.generated.json`               | 由 `pnpm gen:embed-widgets` 重新生成             |
 
 ## 可选：Feature Flag
 
-如果该嵌入组件需要受 Feature Flag 控制：
+如果该 embed 应受控于 feature flag：
 
 1. 在 schema 条目中添加 `featureFlag: 'organizations:seer-explorer-<name>'`。
-2. 在 `src/sentry/features/temporary.py` 中注册该 Feature Flag。
-3. 后端（`src/sentry/seer/agent/embed_widgets.py`）会使用 `features.has()` 自动过滤受 Feature Flag 控制的嵌入组件。
+2. 在 `src/sentry/features/temporary.py` 中注册该 flag。
+3. 后端 (`src/sentry/seer/agent/embed_widgets.py`) 会使用 `features.has()` 自动过滤受 flag 控制的 embed。

@@ -1,0 +1,26 @@
+{
+  "id": "qwenlm-qwen-code-workflow-creator",
+  "name": "workflow-creator",
+  "description": "Create or update reusable Dynamic Workflow JavaScript files under .qwen/workflows. Use when the user asks to create, save, edit, or reuse a Dynamic Workflow, including requests started from the Web Shell Workflows page.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "QwenLM",
+  "install_path": ".claude/skills/workflow-creator/SKILL.md",
+  "source": {
+    "repo": "QwenLM/qwen-code",
+    "url": "https://github.com/QwenLM/qwen-code/blob/main/packages/core/src/skills/bundled/workflow-creator/SKILL.md",
+    "path": "packages/core/src/skills/bundled/workflow-creator/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-03T15:40:56.934Z",
+    "stars": 27613,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-03T15:39:05Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "用于创建、更新和复用 `.qwen/workflows` 下的动态工作流 JavaScript 文件，适合在 Web Shell 中管理自动化流程。"
+}

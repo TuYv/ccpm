@@ -1,0 +1,26 @@
+{
+  "id": "manavarya09-design-extract-extract-design",
+  "name": "extract-design",
+  "description": "Extract the full design language from any website URL. Produces 8 output files including AI-optimized markdown, visual HTML preview, Tailwind config, React theme, shadcn/ui theme, Figma variables, W3C design tokens, and CSS variables. Also runs WCAG accessibility scoring. Use when user says 'extract design', 'get design system', 'design language', 'design tokens', 'what colors/fonts does this site use', or '/extract-design'.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Manavarya09",
+  "install_path": ".claude/skills/extract-design/SKILL.md",
+  "source": {
+    "repo": "Manavarya09/design-extract",
+    "url": "https://github.com/Manavarya09/design-extract/blob/main/skills/extract-design/SKILL.md",
+    "path": "skills/extract-design/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-03T15:33:52.993Z",
+    "stars": 4014,
+    "language": "HTML",
+    "pushed_at": "2026-08-31T06:14:52Z",
+    "license": "MIT"
+  },
+  "summary_zh": "可从任意网站提取完整设计语言，生成多格式设计令牌与主题文件，并评估无障碍表现，适合复刻或分析站点视觉规范。"
+}

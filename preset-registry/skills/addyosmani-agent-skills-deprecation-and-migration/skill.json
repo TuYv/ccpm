@@ -1,7 +1,7 @@
 {
   "id": "addyosmani-agent-skills-deprecation-and-migration",
   "name": "deprecation-and-migration",
-  "description": "Manages deprecation and migration. Use when removing old systems, APIs, or features. Use when migrating users from one implementation to another. Use when deciding whether to maintain or sunset existing code.",
+  "description": "Manages deprecation and migration. Use when removing old systems, APIs, or features. Use when migrating users from one implementation to another. Use when migrating a database schema in production, such as renaming or dropping a column without downtime (expand/contract). Use when deciding whether to maintain or sunset existing code.",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/addyosmani/agent-skills/blob/main/skills/deprecation-and-migration/SKILL.md",
     "path": "skills/deprecation-and-migration/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-03T04:39:43.867Z",
-    "stars": 91761,
+    "discovered_at": "2026-09-03T14:54:57.572Z",
+    "stars": 91886,
     "language": "JavaScript",
-    "pushed_at": "2026-08-28T23:31:50Z",
+    "pushed_at": "2026-09-03T06:36:52Z",
     "license": "MIT"
   },
-  "summary_zh": "一款管理代码废弃与迁移的工具，适合在淘汰旧系统或API、引导用户切换新方案，以及评估老代码存废时使用。"
+  "summary_zh": "用于规划旧系统、接口和功能的弃用与迁移，尤其适合生产环境数据库无停机变更及存量代码下线决策。"
 }

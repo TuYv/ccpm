@@ -1,0 +1,25 @@
+{
+  "id": "zhaoxuya520-reverse-skill-reverse-skill-router",
+  "name": "reverse-skill-router",
+  "description": "Use the reverse-skill repository from Codex for authorized reverse engineering, security analysis, CTF, and defensive testing tasks. Requires the reverse-skill repository to be available as the current workspace or an explicitly supplied local path.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "zhaoxuya520",
+  "install_path": ".claude/skills/reverse-skill-router/SKILL.md",
+  "source": {
+    "repo": "zhaoxuya520/reverse-skill",
+    "url": "https://github.com/zhaoxuya520/reverse-skill/blob/main/plugins/reverse-skill/skills/reverse-skill-router/SKILL.md",
+    "path": "plugins/reverse-skill/skills/reverse-skill-router/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-03T15:34:58.967Z",
+    "stars": 34322,
+    "language": "PowerShell",
+    "pushed_at": "2026-09-03T12:25:52Z",
+    "license": "MIT"
+  }
+}
