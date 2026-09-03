@@ -1,0 +1,26 @@
+{
+  "id": "thedotmack-claude-mem-install",
+  "name": "claude-mem-install",
+  "description": ">- Use this when setting up claude-mem on Grok Bot: local worker plus CMEM Pro observer (default), optional host-login observer, or remote cmem.ai. No Cursor required.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "thedotmack",
+  "install_path": ".claude/skills/install/SKILL.md",
+  "source": {
+    "repo": "thedotmack/claude-mem",
+    "url": "https://github.com/thedotmack/claude-mem/blob/main/claude-mem-grok-bot/skills/install/SKILL.md",
+    "path": "claude-mem-grok-bot/skills/install/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-02T22:03:57.930Z",
+    "stars": 93027,
+    "language": "JavaScript",
+    "pushed_at": "2026-09-02T19:00:03Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "用于在 Grok Bot 中部署 claude-mem，连接本地工作进程与 CMEM Pro 观察器，也支持主机登录或远程服务，适合无需 Cursor 的记忆功能配置。"
+}
