@@ -4,11 +4,11 @@ description: Generates professional animated CLI demos as GIFs using VHS termina
 ---
 # CLI 演示生成器
 
-创建专业的 CLI 动画演示。提供四种方式，从完全自动化到像素级精确的手动控制。
+创建专业的动画 CLI 演示。提供四种方案，从全自动到像素级精确的手动控制。
 
 ## 快速开始
 
-**最简单的方式**——提供命令，即可获得 GIF：
+**最简单的方式** — 提供命令，获取 GIF：
 
 ```bash
 python3 ${CLAUDE_SKILL_DIR}/scripts/auto_generate_demo.py \
@@ -17,7 +17,7 @@ python3 ${CLAUDE_SKILL_DIR}/scripts/auto_generate_demo.py \
   -o demo.gif
 ```
 
-**自举式演示**——适用于可重复录制，并能自行清理状态：
+**自启动演示** — 适用于可重复录制且能自行清理状态的演示：
 
 ```bash
 python3 ${CLAUDE_SKILL_DIR}/scripts/auto_generate_demo.py \
@@ -28,9 +28,9 @@ python3 ${CLAUDE_SKILL_DIR}/scripts/auto_generate_demo.py \
   --speed 2
 ```
 
-## 重要：VHS 解析器的限制
+## 关键：VHS 解析器的限制
 
-VHS `Type` 字符串不能包含 `$`、`\"` 或反引号。它们会导致解析错误：
+VHS 的 `Type` 字符串不能包含 `$`、`\"` 或反引号。这些字符会导致解析错误：
 
 ```tape
 # FAILS — VHS parser rejects special chars
@@ -38,7 +38,7 @@ Type "echo \"hello $USER\""
 Type "claude() { command claude \"$@\"; }"
 ```
 
-**解决方法：对命令进行 base64 编码**，并在运行时解码：
+**解决方法：对命令进行 base64 编码**，在运行时解码：
 
 ```bash
 # 1. Encode your complex command
@@ -49,9 +49,9 @@ echo 'claude() { command claude "$@" 2>&1 | grep -v "noise"; }' | base64
 Type "echo Y2xhdWRlKCkgey4uLn0K | base64 -d > /tmp/wrapper.sh && source /tmp/wrapper.sh"
 ```
 
-这种模式对于输出过滤、函数定义以及任何包含 shell 特殊字符的命令都至关重要。
+对于输出过滤、函数定义以及任何包含 shell 特殊字符的命令，这种模式都是必需的。
 
-## 方式
+## 方案
 
 ### 1. 自动生成（推荐）
 
@@ -65,25 +65,25 @@ python3 ${CLAUDE_SKILL_DIR}/scripts/auto_generate_demo.py \
   --width 1400 --height 600
 ```
 
-| 标志 | 默认值 | 说明 |
+| Flag | Default | Description |
 |------|---------|-------------|
-| `-c` | 必填 | 要包含的命令（可重复指定） |
-| `-o` | 必填 | 输出 GIF 路径 |
-| `--title` | 无 | 开始时显示的标题 |
+| `-c` | required | 要包含的命令（可重复指定） |
+| `-o` | required | 输出 GIF 路径 |
+| `--title` | none | 开始时显示的标题 |
 | `--theme` | Dracula | VHS 主题名称 |
-| `--font-size` | 16 | 字体大小，单位为 pt |
+| `--font-size` | 16 | 字号，单位为 pt |
 | `--width` | 1400 | 终端宽度，单位为 px |
 | `--height` | 700 | 终端高度，单位为 px |
-| `--bootstrap` | 无 | 隐藏的设置命令（可重复指定） |
-| `--filter` | 无 | 从输出中过滤掉的正则表达式模式 |
+| `--bootstrap` | none | 隐藏的设置命令（可重复指定） |
+| `--filter` | none | 用于过滤输出内容的正则表达式 |
 | `--speed` | 1 | 播放速度倍数（使用 gifsicle） |
-| `--no-execute` | false | 仅生成 .tape 文件 |
+| `--no-execute` | false | 仅生成 `.tape` 文件 |
 
 智能计时：`install`/`build`/`test`/`deploy` → 3 秒，`ls`/`pwd`/`echo` → 1 秒，其他命令 → 2 秒。
 
 ### 2. 批量生成
 
-通过一个配置创建多个演示：
+使用一个配置文件创建多个演示：
 
 ```yaml
 # demos.yaml
@@ -111,21 +111,21 @@ bash ${CLAUDE_SKILL_DIR}/scripts/record_interactive.sh output.gif --theme "Catpp
 
 需要 asciinema（`brew install asciinema`）。
 
-### 4. 手动编写 Tape 文件
+### 4. 手动 Tape 文件
 
-如需最大程度的控制，可直接编写 tape。模板位于 `assets/templates/`：
+如需最大程度的控制，可直接编写 tape 文件。模板位于 `assets/templates/`：
 
-- `basic.tape` — 简单的命令序列
+- `basic.tape` — 简单命令序列
 - `interactive.tape` — 输入模拟
-- `self-bootstrap.tape` — **带隐藏设置的自清理演示**（推荐用于可重复演示）
+- `self-bootstrap.tape` — **带隐藏设置的自清理演示**（推荐用于可重复的演示）
 
 ## 高级模式
 
-这些模式源自生产环境中的实践。完整详情请参阅 `references/advanced_patterns.md`。
+这些模式源自生产环境中的使用实践。完整详情请参阅 `references/advanced_patterns.md`。
 
-### 自举式演示
+### 自举演示
 
-清理先前状态、设置环境，并向观看者隐藏所有这些操作的演示：
+清理之前的状态、设置环境，并将所有这些操作对观看者隐藏的演示：
 
 ```tape
 Hide
@@ -142,11 +142,11 @@ Enter
 Sleep 3s
 ```
 
-`Hide` → 命令 → `clear` → `Show` 这一序列至关重要。`clear` 会清除终端缓冲区，避免隐藏的命令泄露到 GIF 中。
+`Hide` → 命令 → `clear` → `Show` 的顺序至关重要。`clear` 会清除终端缓冲区，因此隐藏的命令不会泄漏到 GIF 中。
 
 ### 输出噪声过滤
 
-过滤那些会产生冗长输出的命令中的嘈杂进度行：
+过滤会产生详细输出的命令中的嘈杂进度行：
 
 ```tape
 # Hidden: create a wrapper function that filters noise
@@ -177,9 +177,9 @@ ffmpeg -i demo.gif -vf "select=eq(n\,100)" -frames:v 1 /tmp/frame.png -y 2>/dev/
 # Use Read tool on /tmp/frame.png to verify content
 ```
 
-### 后期处理加速
+### 后处理加速
 
-使用 gifsicle 加速录制结果，无需重新录制：
+使用 gifsicle 加速录制内容，无需重新录制：
 
 ```bash
 # 2x speed (halve frame delay)
@@ -191,7 +191,7 @@ gifsicle -d4 original.gif "#0-" > faster.gif
 
 ### 模板占位符模式
 
-使用占位符保持 tape 文件的通用性，并在构建时进行替换：
+使用占位符使 tape 文件保持通用，在构建时替换：
 
 ```tape
 # In tape file
@@ -202,14 +202,14 @@ sed "s|MARKETPLACE_REPO|$DETECTED_REPO|g" template.tape > rendered.tape
 vhs rendered.tape
 ```
 
-## 时间与尺寸参考
+## 时长与尺寸参考
 
 | 场景 | 宽度 | 高度 | 字体 | 时长 |
 |---------|-------|--------|------|----------|
 | README/文档 | 1400 | 600 | 16-20 | 10-20s |
 | 演示文稿 | 1800 | 900 | 24 | 15-30s |
-| 紧凑型嵌入 | 1200 | 600 | 14-16 | 10-15s |
-| 宽幅输出 | 1600 | 800 | 16 | 15-30s |
+| 紧凑嵌入 | 1200 | 600 | 14-16 | 10-15s |
+| 宽屏输出 | 1600 | 800 | 16 | 15-30s |
 
 详细指南请参阅 `references/best_practices.md`。
 
@@ -220,10 +220,15 @@ vhs rendered.tape
 | 未安装 VHS | `brew install charmbracelet/tap/vhs` |
 | 未安装 gifsicle | `brew install gifsicle` |
 | GIF 过大 | 减小尺寸、缩短休眠时间，或使用 `--speed 2` |
-| 文本换行/断行 | 增大 `--width` 或减小 `--font-size` |
-| VHS 在 `$` 或 `\"` 处出现解析错误 | 使用 base64 编码（参见上面的“关键事项”部分） |
-| 隐藏命令泄露到 GIF 中 | 在 `Show` 前添加 `clear` + `Sleep 500ms` |
-| 命令在上一条命令完成前执行 | 增加 `Sleep` 时长 |
+| 文本换行或显示异常 | 增大 `--width` 或减小 `--font-size` |
+| VHS 在 `$` 或 `\"` 处解析错误 | 使用 base64 编码（参见上面的关键部分） |
+| 隐藏命令泄漏到 GIF 中 | 在 `Show` 前添加 `clear` + `Sleep 500ms` |
+| 前一个命令完成前就执行了后续命令 | 增加 `Sleep` 时长 |
+
+## Tape 文件语法
+
+`references/vhs_syntax.md` 是完整的 VHS tape 文件参考，其中包含每个命令、
+设置和按键名称，以及它们所接受的参数形式。在手动编写 tape、tape 能够解析但行为出乎意料，或需要使用本 `SKILL.md` 未提供示例的命令时，请阅读该文件。
 
 ## 依赖项
 

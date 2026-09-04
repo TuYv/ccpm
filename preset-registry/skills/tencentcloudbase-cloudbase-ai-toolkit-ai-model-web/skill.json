@@ -1,14 +1,14 @@
 {
   "id": "tencentcloudbase-cloudbase-ai-toolkit-ai-model-web",
   "name": "ai-model-web",
-  "description": "Use this skill when a browser/Web app (React, Vue, Angular, Next, Nuxt, static sites, SPAs, dashboards, AI chat UI) needs AI models via @cloudbase/js-sdk. Default routing for page/页面/Web/前端/frontend/网页/H5 AI — call directly from browser, do NOT propose a Node.js proxy. Covers generateText and streamText. Models via ai.createModel with groups cloudbase, hunyuan-exp, or custom-*. Model IDs (deepseek-v4-flash, deepseek-v3.2, hunyuan-2.0-instruct-20251111, glm-5, kimi-k2.6) go in the model field. MU",
+  "description": "Use this skill when a browser/Web app (React, Vue, Next, Nuxt, static sites, SPAs, dashboards, AI chat UI, 页面, 前端, 网页) needs AI models via @cloudbase/js-sdk. Default routing for Web/frontend AI — call directly from the browser, do NOT propose a Node.js proxy. Covers generateText and streamText; models via ai.createModel with groups cloudbase, hunyuan-exp, or custom-*, model id in the `model` field. MUST run two-step preflight before code — see body. NOT for Node.js backend (use ai-model-nodejs),",
   "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
     "codex",
     "gemini"
   ],
-  "version": "2.32.5",
+  "version": "2.33.0",
   "author": "TencentCloudBase",
   "install_path": ".claude/skills/ai-model-web/SKILL.md",
   "source": {
@@ -16,11 +16,11 @@
     "url": "https://github.com/TencentCloudBase/CloudBase-AI-Toolkit/blob/main/config/source/skills/ai-model-web/SKILL.md",
     "path": "config/source/skills/ai-model-web/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-04T01:09:49.397Z",
-    "stars": 1091,
+    "discovered_at": "2026-09-04T15:24:36.303Z",
+    "stars": 1092,
     "language": "TypeScript",
-    "pushed_at": "2026-09-03T14:59:38Z",
+    "pushed_at": "2026-09-04T11:45:42Z",
     "license": "MIT"
   },
-  "summary_zh": "面向网页和前端应用的 AI 模型接入方案，可通过 CloudBase JS SDK 在浏览器中直接生成或流式输出文本，无需搭建 Node.js 代理。"
+  "summary_zh": "面向网页和前端应用的 AI 模型调用方案，可通过 CloudBase SDK 在浏览器中直接实现文本生成与流式对话。"
 }

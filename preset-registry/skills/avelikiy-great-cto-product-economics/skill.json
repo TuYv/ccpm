@@ -1,0 +1,26 @@
+{
+  "id": "avelikiy-great-cto-product-economics",
+  "name": "product-economics",
+  "description": "Does this product make money at a price someone will pay? Forces contribution margin, a price with a stated basis, and a bottom-up market size — each number labelled measured / assumed / unknown, so a guess can never be read as a calculation.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "avelikiy",
+  "install_path": ".claude/skills/product-economics/SKILL.md",
+  "source": {
+    "repo": "avelikiy/great_cto",
+    "url": "https://github.com/avelikiy/great_cto/blob/main/skills/product-economics/SKILL.md",
+    "path": "skills/product-economics/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-04T14:34:14.988Z",
+    "stars": 89,
+    "language": "JavaScript",
+    "pushed_at": "2026-09-04T07:19:41Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于评估产品在用户愿意支付的价格下能否盈利，适合早期定价、单位经济和市场规模测算。"
+}

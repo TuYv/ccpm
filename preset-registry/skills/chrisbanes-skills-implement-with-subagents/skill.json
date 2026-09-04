@@ -1,7 +1,7 @@
 {
   "id": "chrisbanes-skills-implement-with-subagents",
   "name": "implement-with-subagents",
-  "description": "Use when implementing or reviewing the orchestration of supplied tickets or plan tasks through separate implementation subagents, including queue atomicity, task-scoped commit acceptance, and repair ownership, with an installed implement skill.",
+  "description": "Use when implementing or reviewing the orchestration of supplied tickets or plan tasks through separate implementation subagents, including queue atomicity, task-scoped commit acceptance, and repair ownership.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/chrisbanes/skills/blob/main/skills/implement-with-subagents/SKILL.md",
     "path": "skills/implement-with-subagents/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-04T01:08:31.695Z",
+    "discovered_at": "2026-09-04T15:23:28.852Z",
     "stars": 1009,
     "language": "Python",
-    "pushed_at": "2026-09-03T22:06:27Z",
+    "pushed_at": "2026-09-04T08:25:49Z",
     "license": "Apache-2.0"
   },
-  "summary_zh": "用于通过独立子代理执行或审查任务编排，适合管理任务队列原子性、按任务验收提交及修复责任分配。"
+  "summary_zh": "用于通过独立子代理编排实现或审查任务，适合处理队列原子性、按任务接收提交及修复责任划分等场景。"
 }

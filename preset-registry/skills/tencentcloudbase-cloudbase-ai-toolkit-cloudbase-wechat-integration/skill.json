@@ -1,14 +1,14 @@
 {
   "id": "tencentcloudbase-cloudbase-ai-toolkit-cloudbase-wechat-integration",
   "name": "cloudbase-wechat-integration",
-  "description": "CloudBase WeChat integration guide for Mini Program WeChat Pay, Official Account JSAPI Pay, Native QR-code Pay, Official Account OAuth, openid handling, payment callbacks, and CloudBase Integration Center generated functions. This skill should be used when users ask to add, debug, or extend WeChat payment or official-account flows on CloudBase.",
+  "description": "CloudBase WeChat integration guide for Mini Program WeChat Pay, Mini Program virtual payment (虚拟支付, wx.requestVirtualPayment), Official Account JSAPI Pay, Native QR-code Pay, Official Account OAuth, openid handling, payment callbacks, and CloudBase Integration Center generated functions. This skill should be used when users ask to add, debug, or extend WeChat payment, virtual payment, or official-account flows on CloudBase.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
     "gemini"
   ],
-  "version": "2.32.5",
+  "version": "2.33.0",
   "author": "TencentCloudBase",
   "install_path": ".claude/skills/cloudbase-wechat-integration/SKILL.md",
   "source": {
@@ -16,11 +16,11 @@
     "url": "https://github.com/TencentCloudBase/CloudBase-AI-Toolkit/blob/main/config/source/skills/cloudbase-wechat-integration/SKILL.md",
     "path": "config/source/skills/cloudbase-wechat-integration/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-04T01:09:52.129Z",
-    "stars": 1091,
+    "discovered_at": "2026-09-04T15:24:38.619Z",
+    "stars": 1092,
     "language": "TypeScript",
-    "pushed_at": "2026-09-03T14:59:38Z",
+    "pushed_at": "2026-09-04T11:45:42Z",
     "license": "MIT"
   },
-  "summary_zh": "一套云开发接入微信生态的实践指南，适合开发、排查和扩展小程序、公众号及二维码支付与授权流程。"
+  "summary_zh": "面向 CloudBase 的微信支付与公众号能力集成指南，适合开发和排查小程序支付、虚拟支付、JSAPI、扫码支付、OAuth、openid 及支付回调等流程。"
 }

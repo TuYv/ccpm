@@ -1,15 +1,17 @@
 ---
 name: crit-story
 description: "Author a crit story only when the user explicitly invokes /crit-story or directly asks you to generate a crit story. Do not infer this skill from generic review, PR, or diff-review requests."
-allowed-tools: Bash(crit story:*), Read
-argument-hint: ""
 ---
 
 # Author a crit story with `crit story`
 
-This is a sibling skill to `/crit` — it does not run inside the normal review
-loop. Invoke it deliberately only when the user explicitly asks for story
-generation; do not infer it from generic review, PR, or diff-review requests.
+This is a sibling skill to the interactive Crit review loop — it does not run
+inside `/crit`. Invoke it deliberately only when the user explicitly asks for
+story generation; do not infer it from generic review, PR, or diff-review
+requests.
+
+Primary path: author in-session with `--guide` / `--prep` / `--story-file`
+(do **not** run bare `crit story`, which spends `agent_cmd` tokens).
 
 ## Step 1: Fetch the guide
 
@@ -64,4 +66,7 @@ printed to stdout as JSON on every attempt, success or failure. If rejected:
 - It does not call `crit comment`, `crit push`, or `crit share` — those are
   separate flows.
 - It does not produce review-level human comments.
-- It does not run as part of the generic `/crit` review loop.
+- It does not run as part of the generic Crit review loop.
+- It does not run bare `crit story` (LLM via `agent_cmd`) unless the user
+  explicitly asks for that path.
+

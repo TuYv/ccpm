@@ -1,14 +1,14 @@
 {
   "id": "tencentcloudbase-cloudbase-ai-toolkit-ai-model-nodejs",
   "name": "ai-model-nodejs",
-  "description": "Use this skill for Node.js backend AI via @cloudbase/node-sdk (>=3.16.0) — cloud functions, CloudRun, Express, Koa, NestJS, serverless APIs, scheduled jobs, LLM proxies. Only SDK supporting image generation (ai.createImageModel + generateImage). Text models via ai.createModel with groups cloudbase, hunyuan-exp, or custom-*. Model IDs (deepseek-v4-flash, deepseek-v3.2, hunyuan-2.0-instruct-20251111, glm-5, kimi-k2.6) go in the model field of generateText/streamText. MUST run two-step preflight be",
+  "description": "Use this skill for Node.js backend AI via @cloudbase/node-sdk (>=3.16.0) — cloud functions, CloudRun, Express/Koa/NestJS, serverless APIs, scheduled jobs, LLM proxies, agent orchestration. The only SDK supporting image generation (ai.createImageModel + generateImage). Text via ai.createModel with groups cloudbase, hunyuan-exp, or custom-*; model ids (e.g. deepseek-v4-flash, glm-5, kimi-k2.6) go in the `model` field of generateText/streamText. MUST run two-step preflight before code — see body. N",
   "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
     "codex",
     "gemini"
   ],
-  "version": "2.32.5",
+  "version": "2.33.0",
   "author": "TencentCloudBase",
   "install_path": ".claude/skills/ai-model-nodejs/SKILL.md",
   "source": {
@@ -16,11 +16,11 @@
     "url": "https://github.com/TencentCloudBase/CloudBase-AI-Toolkit/blob/main/config/source/skills/ai-model-nodejs/SKILL.md",
     "path": "config/source/skills/ai-model-nodejs/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-04T01:09:49.216Z",
-    "stars": 1091,
+    "discovered_at": "2026-09-04T15:24:36.181Z",
+    "stars": 1092,
     "language": "TypeScript",
-    "pushed_at": "2026-09-03T14:59:38Z",
+    "pushed_at": "2026-09-04T11:45:42Z",
     "license": "MIT"
   },
-  "summary_zh": "用于在 Node.js 后端接入文本大模型与图像生成，适合云函数、Serverless API、定时任务和模型代理等场景。"
+  "summary_zh": "面向 Node.js 后端的云端 AI 开发工具，适合在云函数、服务端框架和定时任务中调用大语言模型、生成图片及构建智能代理。"
 }
