@@ -1,0 +1,26 @@
+{
+  "id": "conorbronsdon-avoid-ai-writing-avoid-ai-writing-router",
+  "name": "avoid-ai-writing-router",
+  "description": "Use when a request combines AI-writing audit, rewrite, file editing, voice preservation, false-positive interpretation, verification, or when the user invokes Avoid AI Writing without naming a mode.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "conorbronsdon",
+  "install_path": ".claude/skills/avoid-ai-writing-router/SKILL.md",
+  "source": {
+    "repo": "conorbronsdon/avoid-ai-writing",
+    "url": "https://github.com/conorbronsdon/avoid-ai-writing/blob/main/skills/avoid-ai-writing-router/SKILL.md",
+    "path": "skills/avoid-ai-writing-router/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-04T00:19:35.610Z",
+    "stars": 4050,
+    "language": "JavaScript",
+    "pushed_at": "2026-09-03T21:45:52Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于审查和改写疑似 AI 生成的文字，支持文件编辑、保留原有语气、解读误判并验证结果，适合未指定模式时统一处理。"
+}

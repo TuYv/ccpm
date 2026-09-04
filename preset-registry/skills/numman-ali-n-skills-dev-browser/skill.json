@@ -1,7 +1,7 @@
 {
   "id": "numman-ali-n-skills-dev-browser",
   "name": "dev-browser",
-  "description": "Browser automation with persistent page state. Use when users ask to navigate websites, fill forms, take screenshots, extract web data, test web apps, or automate browser workflows. Trigger phrases include \"go to [url]\", \"click on\", \"fill out the form\", \"take a screenshot\", \"scrape\", \"automate\", \"test the website\", \"log into\", or any browser interaction request.",
+  "description": "Browser automation with persistent named pages via the dev-browser CLI. Use when users ask to navigate websites, fill forms, take screenshots, extract web data, test web apps, log into sites, or automate browser workflows. Trigger phrases include \"go to [url]\", \"click on\", \"fill out the form\", \"take a screenshot\", \"scrape\", \"automate\", \"test the website\", \"log into\", \"open the browser\", or any browser interaction request.",
   "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/numman-ali/n-skills/blob/main/skills/automation/dev-browser/skills/dev-browser/SKILL.md",
     "path": "skills/automation/dev-browser/skills/dev-browser/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-03T22:45:45.367Z",
+    "discovered_at": "2026-09-04T01:08:14.795Z",
     "stars": 1042,
     "language": "TypeScript",
-    "pushed_at": "2026-07-16T00:31:47Z",
+    "pushed_at": "2026-09-04T00:38:52Z",
     "license": "Apache-2.0"
   },
-  "summary_zh": "这是一个能保持页面状态的浏览器自动化工具，适合需要代劳网页操作的场景，帮你把繁琐的重复性交互全自动搞定，省去手动麻烦。"
+  "summary_zh": "通过 CLI 自动操控浏览器并持久化管理命名页面，适合网页导航、表单填写、截图取数、登录及 Web 应用测试等场景。"
 }

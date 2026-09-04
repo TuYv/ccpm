@@ -1,0 +1,26 @@
+{
+  "id": "conorbronsdon-avoid-ai-writing-voice-preserving-rewriter",
+  "name": "voice-preserving-rewriter",
+  "description": "Use when the user asks to rewrite, humanize, clean up, or remove AI-isms from text while preserving the writer's voice, facts, intent, structure, register, and protected material.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "conorbronsdon",
+  "install_path": ".claude/skills/voice-preserving-rewriter/SKILL.md",
+  "source": {
+    "repo": "conorbronsdon/avoid-ai-writing",
+    "url": "https://github.com/conorbronsdon/avoid-ai-writing/blob/main/skills/voice-preserving-rewriter/SKILL.md",
+    "path": "skills/voice-preserving-rewriter/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-04T00:19:36.414Z",
+    "stars": 4050,
+    "language": "JavaScript",
+    "pushed_at": "2026-09-03T21:45:52Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于在保留原作者语气、事实、意图和结构的前提下，润色或改写文本，去除生硬的 AI 腔，适合人性化表达且不改变受保护内容。"
+}

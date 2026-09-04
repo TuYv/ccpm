@@ -1,0 +1,26 @@
+{
+  "id": "conorbronsdon-avoid-ai-writing-file-edit-in-place",
+  "name": "file-edit-in-place",
+  "description": "Use when the user names a local file and explicitly asks to clean, rewrite, humanize, or remove AI-writing patterns in that file itself, with minimal targeted edits and post-edit verification.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "conorbronsdon",
+  "install_path": ".claude/skills/file-edit-in-place/SKILL.md",
+  "source": {
+    "repo": "conorbronsdon/avoid-ai-writing",
+    "url": "https://github.com/conorbronsdon/avoid-ai-writing/blob/main/skills/file-edit-in-place/SKILL.md",
+    "path": "skills/file-edit-in-place/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-04T00:19:36.100Z",
+    "stars": 4050,
+    "language": "JavaScript",
+    "pushed_at": "2026-09-03T21:45:52Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于直接清理和改写本地文件中的 AI 写作痕迹，适合用户指定文件并要求润色、去模板化且保持改动最小的场景。"
+}

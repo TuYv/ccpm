@@ -1,7 +1,7 @@
 {
   "id": "sawyerhood-dev-browser-dev-browser",
   "name": "dev-browser",
-  "description": "Browser automation with persistent page state. Use when users ask to navigate websites, fill forms, take screenshots, extract web data, test web apps, or automate browser workflows. Trigger phrases include \"go to [url]\", \"click on\", \"fill out the form\", \"take a screenshot\", \"scrape\", \"automate\", \"test the website\", \"log into\", or any browser interaction request.",
+  "description": "Browser automation with persistent named pages via the dev-browser CLI. Use when users ask to navigate websites, fill forms, take screenshots, extract web data, test web apps, log into sites, or automate browser workflows. Trigger phrases include \"go to [url]\", \"click on\", \"fill out the form\", \"take a screenshot\", \"scrape\", \"automate\", \"test the website\", \"log into\", \"open the browser\", or any browser interaction request.",
   "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/SawyerHood/dev-browser/blob/main/skills/dev-browser/SKILL.md",
     "path": "skills/dev-browser/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-03T22:42:36.343Z",
+    "discovered_at": "2026-09-04T01:05:08.392Z",
     "stars": 6586,
     "language": "TypeScript",
-    "pushed_at": "2026-07-15T01:30:01Z",
+    "pushed_at": "2026-09-04T01:02:26Z",
     "license": "MIT"
   },
-  "summary_zh": "一款能保持页面状态的浏览器自动化工具，专门解决重复繁琐的网页交互问题，适合数据抓取、表单填写、网站测试等自动化场景。"
+  "summary_zh": "通过 CLI 自动化浏览器并持久化管理命名页面，适合导航网站、填写表单、截图、提取数据、登录及测试 Web 应用。"
 }
