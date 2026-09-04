@@ -1,20 +1,58 @@
 ---
 name: implement-with-subagents
-description: Use when implementing or reviewing the orchestration of supplied tickets or plan tasks through separate implementation subagents, including queue atomicity, task-scoped commit acceptance, and repair ownership, with an installed implement skill.
+description: Use when implementing or reviewing the orchestration of supplied tickets or plan tasks through separate implementation subagents, including queue atomicity, task-scoped commit acceptance, and repair ownership.
+compatibility: "Review mode has no external skill dependency. Implementation mode requires Matt Pocock's separately installed `implement` workflow; its current contract also invokes `tdd` and `code-review`."
 disable-model-invocation: true
 ---
-I’m checking the repository state and the installed instructions first so I can separate controller work from any implementation work cleanly. After that I’ll build the task queue and see whether the required subagent path is actually available here.I’m gathering the branch, worktree, and skill files together so I can tell what’s safe to touch and what the environment can actually support.I’m starting with the repo and skill files; that will tell me whether I can proceed or have to stop on a missing dependency.我这边当前无法访问仓库工具，因此没法读取 `git` 状态、安装的 `implement` skill，或按要求启动/等待子代理。这个任务在现有环境里卡在最前面的执行前置条件上，所以我不能继续做实现，也不能假装已经完成了检查。
+# 使用子代理实现
 
-如果你把仓库工具接通，我可以按你给的流程继续：先读仓库指令和当前 worktree，再验证 `implement` skill，然后把任务拆成可独立接受的 work item，逐个交给实现子代理完成并验证。
+将编排与实现所有权分离：控制器负责调度，每个独立工作项由一个实现子代理负责完成。将无法验证的变更保留在同一个工作项中，在继续推进前接受其任务范围内的提交；如果验收失败，则将失败验收证据返回给同一个负责人处理，不要由控制器修复，也不要重新分配给其他负责人。
+
+## 检查前置条件
+
+评审模式没有外部技能依赖。实现模式要求使用 [Matt Pocock 的技能集](https://github.com/mattpocock/skills)中的 `implement` 技能，该技能未随本仓库一起提供。使用 `npx skills add mattpocock/skills` 安装，并根据当前上游契约按要求选择 `implement`、`tdd` 和 `code-review`。绝不要隐式安装。
+
+## 选择模式
+
+- 仅当用户要求评估所提供的编排而不运行它时，才使用 `review`。
+- 当用户要求执行所提供的工单或计划任务时，使用 `implement`。
+
+## 评审流程
+
+1. 仅检查用户允许检查的仓库和所提供的编排状态。不要启动子代理、编辑文件、创建提交或联系远程服务。
+2. 评估队列原子性、依赖顺序、实现所有权、任务范围内的验收、修复所有权以及控制器的变更边界。将已经验收的工作项视为已完成，不要再次分配。
+3. 报告下一步编排操作，或说明无需执行任何操作，同时提供证据和任何尚未解决的验收缺口。在进入实现流程前停止。
+
+## 实现流程
+
+1. 阅读仓库说明，检查当前分支和工作区。保留无关变更。当无法从当前状态安全地产生任务范围内的提交时，在委派前停止。
+2. 解析并阅读已安装的 `implement` 技能。将其视为必需依赖。如果技能不可用，在进行任何变更前停止。报告该技能来自 `mattpocock/skills`，提供 `npx skills add mattpocock/skills`，并说明用户必须选择 `implement`、`tdd` 和 `code-review`。绝不要隐式安装这些技能，也不要凭记忆复现其流程。
+3. 构建按依赖排序的队列。将一个未拆分的请求及其检查清单保留在同一个工作项中；只有当所提供的项目无法通过相互独立且保持行为的提交分别验证时，才将它们分组。
+4. 一次处理一个工作项。在每个工作项开始前记录 `HEAD` 和工作区的既有状态；在开始下一个工作项前，先验收前一个工作项。
+5. 选择可移植的 **Solver** 角色，并将其映射到运行时中具备实现能力的子代理类型。当环境提供相关信息时，记录可移植角色和实际运行时选择。启动一个负责人。控制器不得实现该工作项的任何部分。如果实现槽位暂时不可用，则等待容量。如果无法启动子代理，则停止并报告阻塞因素，不要退回到由控制器实现。
+6. 向负责人提供一个决策信息完整的数据包，其中包含：
+   - 确切的工单或计划任务及其验收标准；
+   - 相关规范和仓库说明；
+   - 该工作项的独占所有权，基于当前分支；
+   - 必须保留的既有工作区状态；
+   - 调用已安装的 `implement` 技能的指示；以及
+   - 返回提交、已安装的 `implement` 技能当前完成契约所要求的证据，以及任何尚未解决的阻塞因素的指示。
+7. 等待该负责人完成后，再开始另一个工作项。不要将其实现拆分给多个代理。如果结果不完整、工作区不干净、未提交，或未通过必需检查，则将证据返回给同一个负责人处理。如果它无法在所提供的契约内解决实质性阻塞因素，则停止。
+8. 在推进前独立验收该工作项；负责人的报告不能作为验收证据。验证：
+   - 验证 `HEAD` 至少前进了一个任务范围内的提交；
+   - 检查从记录的 `HEAD` 到当前 `HEAD` 的完整提交范围和差异，确认符合该工作项的验收标准和范围；
+   - 重新运行用户和仓库针对该工作项要求的验证；
+   - 确认返回的证据满足已安装的 `implement` 技能当前的完成契约；以及
+   - 验证相对于记录的既有状态，任务所有者负责的差异为空。
+9. 每次修复后重复步骤 8。最后一个工作项验收完成后，运行用户或仓库要求的所有最终验证。如果后续操作修改了文件，则将这些文件返回给其负责人进行验证和提交。
 
 ## 所有权边界
 
-- 保持远程变更由 controller 负责，除非用户明确授权
-  其他所有者，且仓库规则允许。
-- 复用负责 review 修复和后续检查的 owning subagent；不要为同一项再付一次上下文转移成本。
-- 只有当 owner 需要真正独立的发现时，才使用只读 helper。它们不会编辑、提交或替换实现 owner。
-- 不要把其他项的编辑或已有的用户更改吸收到当前 owner 的 commit 中。
+- 除非用户明确授予不同的所有者，并且仓库指令允许，否则将远程变更保留给控制器处理。
+- 对审查修复和后续检查复用所属子代理；不要为同一事项支付第二次上下文转移成本。
+- 仅当所有者确实需要独立发现时，才使用只读辅助器。它们不编辑、不提交，也不替代实现所有者。
+- 绝不要把另一个事项的编辑或预先存在的用户更改吸收到当前所有者的提交中。
 
-## 完成门槛
+## 完成门控
 
-在 `review` 中，只有在报告了非变更性的评估、其证据以及任何验收缺口，且没有开始实现之后，才算完成。在 `implement` 中，只有当每个排队项都具有一个任务范围内、已审查、已验证的 commit，最终 worktree 与记录的预先存在状态一致，并且没有 owner 报告的 blocker 时，才算完成。报告 item 到 commit 的映射以及最终验证结果。否则，以被阻塞状态结束，并说明第一个未完成的门槛。
+在 `review` 中，只有在报告了非变更性评估、其证据以及任何验收差距，且未开始实现之后，才算完成。在 `implement` 中，只有当每个排队事项都有一个限定于任务范围、已审查、已验证的提交，最终工作树与记录的预先存在状态一致，并且不存在所有者报告的阻塞项时，才算完成。报告事项到提交的映射以及最终验证结果。否则，以阻塞状态完成，并指出第一个未完成的门控。
