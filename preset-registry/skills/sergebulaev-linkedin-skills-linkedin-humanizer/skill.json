@@ -1,7 +1,7 @@
 {
   "id": "sergebulaev-linkedin-skills-linkedin-humanizer",
   "name": "linkedin-humanizer",
-  "description": "Scrub AI tells from any text draft OR audit a finished post against the 2026 algorithm heuristic checklist. Tier-based rewriter (forensic / strict / aesthetic / all) plus `--mode audit` for detection-only pass-fail review covering length, hook, CTA, format penalties, AI vocab. Also `--mode profile` builds a reusable Voice and Brand Profile from a few of the user''s real posts, so every writing skill drafts in their voice. Sub-tools: emoji-pattern detector, multi-detector spread tester (GPTZero, ",
+  "description": "Remove the AI tells human readers and LinkedIn''s AI-slop filter react to in a post or comment: 2026 vocabulary by paragraph density, reveal bridges, staccato fragments, stacked triads, performed sincerity. Tiered rewriter (forensic / strict / aesthetic / all) plus `--mode audit` pass-fail review and `--mode profile` voice profile builder. Not for beating AI detectors (no edit reliably does). Keywords: humanize, de-AI, reads like ChatGPT, AI slop, scrub AI tells, review this draft, audit before ",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/sergebulaev/linkedin-skills/blob/main/skills/linkedin-humanizer/SKILL.md",
     "path": "skills/linkedin-humanizer/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-05T18:28:24.314Z",
-    "stars": 1020,
+    "discovered_at": "2026-09-05T20:35:20.855Z",
+    "stars": 1045,
     "language": "Python",
-    "pushed_at": "2026-09-05T10:30:19Z",
+    "pushed_at": "2026-09-05T20:09:08Z",
     "license": "MIT"
-  },
-  "summary_zh": "帮助润色和审查 LinkedIn 帖子，去除 AI 痕迹、匹配个人语气，适合内容创作与发布前检查。"
+  }
 }
