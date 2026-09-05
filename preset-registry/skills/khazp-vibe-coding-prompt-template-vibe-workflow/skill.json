@@ -1,8 +1,8 @@
 {
   "id": "khazp-vibe-coding-prompt-template-vibe-workflow",
   "name": "vibe-workflow",
-  "description": "Complete 5-step workflow to build an MVP from idea to launch. Use when the user wants to start a new project from scratch, go through the full workflow, or says \"help me build an MVP\", \"start new project\", or \"vibe coding workflow\".",
-  "category": "设计创意",
+  "description": "Route new projects, existing projects, and broken projects to the appropriate planning, change, or debugging procedure.",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -13,14 +13,14 @@
   "install_path": ".claude/skills/vibe-workflow/SKILL.md",
   "source": {
     "repo": "KhazP/vibe-coding-prompt-template",
-    "url": "https://github.com/KhazP/vibe-coding-prompt-template/blob/main/templates/.claude/skills/vibe-workflow/SKILL.md",
-    "path": "templates/.claude/skills/vibe-workflow/SKILL.md",
+    "url": "https://github.com/KhazP/vibe-coding-prompt-template/blob/main/workflow/skills/vibe-workflow/SKILL.md",
+    "path": "workflow/skills/vibe-workflow/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-05T13:50:06.895Z",
+    "discovered_at": "2026-09-05T17:14:31.192Z",
     "stars": 3040,
     "language": "TypeScript",
-    "pushed_at": "2026-08-21T09:54:43Z",
+    "pushed_at": "2026-09-05T14:41:52Z",
     "license": "MIT"
   },
-  "summary_zh": "一套从创意到上线的五步MVP开发流程，适合从零启动项目并快速完成产品验证。"
+  "summary_zh": "根据项目状态将新项目、现有项目或故障项目分流到合适的规划、变更或调试流程，帮助团队快速选择正确的处理方式。"
 }

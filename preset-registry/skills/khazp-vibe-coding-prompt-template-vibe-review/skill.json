@@ -1,7 +1,7 @@
 {
   "id": "khazp-vibe-coding-prompt-template-vibe-review",
   "name": "vibe-review",
-  "description": "Review an AI-generated diff against AGENTS.md, agent_docs, and REVIEW-CHECKLIST.md.",
+  "description": "Review a proposed change against requirements, regressions, verification evidence, and relevant security risks.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -13,14 +13,13 @@
   "install_path": ".claude/skills/vibe-review/SKILL.md",
   "source": {
     "repo": "KhazP/vibe-coding-prompt-template",
-    "url": "https://github.com/KhazP/vibe-coding-prompt-template/blob/main/templates/.claude/skills/vibe-review/SKILL.md",
-    "path": "templates/.claude/skills/vibe-review/SKILL.md",
+    "url": "https://github.com/KhazP/vibe-coding-prompt-template/blob/main/workflow/skills/vibe-review/SKILL.md",
+    "path": "workflow/skills/vibe-review/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-05T13:50:06.576Z",
+    "discovered_at": "2026-09-05T17:14:30.604Z",
     "stars": 3040,
     "language": "TypeScript",
-    "pushed_at": "2026-08-21T09:54:43Z",
+    "pushed_at": "2026-09-05T14:41:52Z",
     "license": "MIT"
-  },
-  "summary_zh": "一款用于审查 AI 生成代码变更的工具，可依据项目文档和检查清单发现不合规问题。"
+  }
 }

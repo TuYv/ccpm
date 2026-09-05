@@ -1,18 +1,12 @@
 ---
 name: vibe-build
-description: Build an approved MVP task using AGENTS.md, agent_docs, tests, browser checks, AI evals, and evidence reporting.
+description: Implement an approved new-project slice and report actual checks. For changes to an existing app use vibe-change.
+allowed-tools: Read, Write, Edit, Glob, Grep, Bash, AskUserQuestion
 ---
-# 氛围式构建
+# Vibe 构建
 
-阅读 `AGENTS.md`、`agent_docs/project_brief.md`、`agent_docs/tech_stack.md`、`agent_docs/code_patterns.md`、`agent_docs/testing.md`，以及当前生效的任务/规范。
+阅读 AGENTS.md、MEMORY.md、manifest 的产品文档以及相关的 agent_docs。为一个可用切片建立验收标准，并在现有授权范围内实现。保留未提交的工作，并在进行高风险更改前记录实际的恢复检查点；绝不伪造提交或备份。
 
-工作流程：
-1. 总结当前阶段和验收标准。
-2. 提出最小且安全的实施计划。
-3. 每次构建一项功能。
-4. 运行文档中规定的检查。
-5. 对于 AI/MCP/工具变更，运行文档中规定的直接、间接、负向、需要授权、失败、轨迹、审批和数据边界检查。
-6. 在 `MEMORY.md` 中记录重大决策或已完成的阶段。
-7. 返回证据：已更改的文件、命令、结果、截图/浏览器备注（如适用）、AI 评估/工具调用证据（如适用）、未解决的风险，以及回滚说明。
+从一个可运行的屏幕或等效的可观察输出开始。只有在需求确有必要时，才添加身份验证、数据库、基础设施和 AI。查看命令后运行项目适用的检查；doctor 仅用于设置验证。使用 `../vibe-verify/SKILL.md` 执行实际操作流程。对于 AI 功能，还要在适用时检查失败行为、数据边界和权限拒绝。
 
-不要自动批准不受信任的 MCP 服务器、shell/写入/网络工具、生产环境操作、计费操作或破坏性变更。
+在 MEMORY.md 中更新当前进度和后续步骤；稳定规则保留在 AGENTS.md 中。报告 Changed、Checked（包含命令和结果）、Not checked、Next decision 和 Recovery。不要将构建通过视为行为正常运行的证明。

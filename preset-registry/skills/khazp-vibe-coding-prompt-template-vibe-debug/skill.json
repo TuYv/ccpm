@@ -1,0 +1,26 @@
+{
+  "id": "khazp-vibe-coding-prompt-template-vibe-debug",
+  "name": "vibe-debug",
+  "description": "Diagnose and fix a reproducible failure in an existing project. Use for crashes, broken behavior, or failing checks, not greenfield planning.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "KhazP",
+  "install_path": ".claude/skills/vibe-debug/SKILL.md",
+  "source": {
+    "repo": "KhazP/vibe-coding-prompt-template",
+    "url": "https://github.com/KhazP/vibe-coding-prompt-template/blob/main/workflow/skills/vibe-debug/SKILL.md",
+    "path": "workflow/skills/vibe-debug/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-05T17:14:29.809Z",
+    "stars": 3040,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-05T14:41:52Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于诊断并修复现有项目中可复现的崩溃、异常行为或检查失败问题，适合排查和解决已有代码故障。"
+}

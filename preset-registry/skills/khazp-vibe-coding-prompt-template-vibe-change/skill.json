@@ -1,0 +1,26 @@
+{
+  "id": "khazp-vibe-coding-prompt-template-vibe-change",
+  "name": "vibe-change",
+  "description": "Add one bounded feature to an existing app while preserving current behavior. Do not restart the full new-project workflow.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "KhazP",
+  "install_path": ".claude/skills/vibe-change/SKILL.md",
+  "source": {
+    "repo": "KhazP/vibe-coding-prompt-template",
+    "url": "https://github.com/KhazP/vibe-coding-prompt-template/blob/main/workflow/skills/vibe-change/SKILL.md",
+    "path": "workflow/skills/vibe-change/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-05T17:14:29.638Z",
+    "stars": 3040,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-05T14:41:52Z",
+    "license": "MIT"
+  },
+  "summary_zh": "为现有应用增加一个受控功能，同时保持原有行为不变，适合在不重启完整开发流程的情况下进行增量迭代。"
+}

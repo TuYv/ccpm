@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-09-05T14:42:12.829Z",
+  "updated_at": "2026-09-05T17:57:42.097Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -8548,9 +8548,9 @@
       "translated_at": "2026-05-19T23:01:39.758Z"
     },
     "skill:openai-openai-agents-python-pr-draft-summary": {
-      "hash": "c6a8c5b01877f6e5",
-      "summary_zh": "用于代码变更后自动生成 PR 摘要、分支名、标题和草稿描述，适合提交前统一整理改动信息。",
-      "translated_at": "2026-08-10T09:58:42.190Z"
+      "hash": "6864fc1efcc5375c",
+      "summary_zh": "用于在实现工作完成后生成本地 PR 所需的标题、描述和分支建议，适合规范提交代码变更。",
+      "translated_at": "2026-09-05T17:20:56.221Z"
     },
     "skill:openai-openai-agents-python-implementation-strategy": {
       "hash": "fad87f02a9df707e",
@@ -8578,9 +8578,9 @@
       "translated_at": "2026-05-19T23:02:41.809Z"
     },
     "skill:openai-openai-agents-python-runtime-behavior-probe": {
-      "hash": "0650477f74e93cc3",
-      "summary_zh": "一款经明确授权后对本地或线上集成进行运行时探测的工具，适合验证代码审查和常规测试无法确认的行为。",
-      "translated_at": "2026-08-21T07:04:01.576Z"
+      "hash": "3bebe93509252c88",
+      "summary_zh": "一款用于规划受控运行时探测的工具，仅在明确调用并获批准后执行，适合需要严格控制探测流程的调试与分析场景。",
+      "translated_at": "2026-09-05T17:21:01.659Z"
     },
     "skill:openshift-rosa-rosa-docs-and-structure-tests": {
       "hash": "65730fc4fbe43cd3",
@@ -23838,9 +23838,9 @@
       "translated_at": "2026-08-04T00:10:45.530Z"
     },
     "skill:levnikolaevich-claude-code-skills-ln-32-dependency-upgrader": {
-      "hash": "f0260133c8ec032d",
-      "summary_zh": "一个支持多种包管理器的依赖升级工具，会调研破坏性变更并安全验证回滚，适合日常依赖维护。",
-      "translated_at": "2026-08-04T00:10:46.554Z"
+      "hash": "7c6a7f7bb64131e2",
+      "summary_zh": "针对特定版本升级依赖，结合兼容性调研与可回滚验证，适合需要谨慎处理依赖变更、避免盲目现代化的项目。",
+      "translated_at": "2026-09-05T17:21:08.814Z"
     },
     "skill:levnikolaevich-claude-code-skills-ln-34-benchmark-comparator": {
       "hash": "a7cef041e5120725",
@@ -23873,9 +23873,9 @@
       "translated_at": "2026-08-04T00:10:53.853Z"
     },
     "skill:levnikolaevich-claude-code-skills-ln-41-test-strategy-planner": {
-      "hash": "5fe8684ca063ad9c",
-      "summary_zh": "一款基于风险规划测试组合和场景优先级的工具，适合需求阶段制定测试策略，不用于审计或编写测试。",
-      "translated_at": "2026-08-07T01:52:53.047Z"
+      "hash": "46c2be7885bbc52a",
+      "summary_zh": "基于风险规划测试组合并排序测试场景，适合在不执行或编写测试的情况下制定测试策略。",
+      "translated_at": "2026-09-05T17:20:24.324Z"
     },
     "skill:levnikolaevich-claude-code-skills-ln-404-test-executor": {
       "hash": "503bbd04c1f87e55",
@@ -28813,9 +28813,9 @@
       "translated_at": "2026-08-07T22:16:36.028Z"
     },
     "skill:openai-openai-agents-python-implementation-kickoff": {
-      "hash": "a8da5e0bcdbf9920",
-      "summary_zh": "用于在隔离工作区启动实现任务，完成同步主干、验证审查和生成可直接提交 PR 的本地交接。",
-      "translated_at": "2026-08-08T03:15:14.080Z"
+      "hash": "91e2ecac235a8e81",
+      "summary_zh": "用于在隔离工作树中完成实现并进行本地交接，适合需要明确隔离开发环境和交付流程的项目。",
+      "translated_at": "2026-09-05T17:20:55.553Z"
     },
     "skill:zhaoxuya520-reverse-skill-case-review": {
       "hash": "9a59010f16c88a96",
@@ -37716,8 +37716,8 @@
       "translated_at": "2026-09-05T14:13:08.492Z"
     },
     "content:earthtojake-text-to-cad-sendcutsend": {
-      "hash": "60a1243669bd200a",
-      "translated_at": "2026-08-15T13:30:21.918Z"
+      "hash": "131eefb9003c4d88",
+      "translated_at": "2026-09-05T17:38:53.885Z"
     },
     "content:earthtojake-text-to-cad-smui": {
       "hash": "9cb5af7aaa4e989b",
@@ -44096,8 +44096,8 @@
       "translated_at": "2026-08-19T16:29:29.986Z"
     },
     "content:k-dense-ai-scientific-agent-skills-dask": {
-      "hash": "bfac81cda498ba62",
-      "translated_at": "2026-08-19T16:30:40.824Z"
+      "hash": "8419784c1256c3fb",
+      "translated_at": "2026-09-05T17:47:32.338Z"
     },
     "content:k-dense-ai-scientific-agent-skills-datamol": {
       "hash": "39d11469c8997b0e",
@@ -44116,8 +44116,8 @@
       "translated_at": "2026-08-19T16:33:15.605Z"
     },
     "content:k-dense-ai-scientific-agent-skills-deeptools": {
-      "hash": "2724906bdf23e60f",
-      "translated_at": "2026-08-19T16:34:08.244Z"
+      "hash": "b8f6a7f39c5ed857",
+      "translated_at": "2026-09-05T17:48:04.903Z"
     },
     "content:k-dense-ai-scientific-agent-skills-depmap": {
       "hash": "39ed3b4766caf0cd",
@@ -44220,16 +44220,16 @@
       "translated_at": "2026-09-05T06:09:27.850Z"
     },
     "content:k-dense-ai-scientific-agent-skills-hypogenic": {
-      "hash": "0552dd52a0ce9df9",
-      "translated_at": "2026-08-19T18:22:52.622Z"
+      "hash": "dc3095345cb1b6cb",
+      "translated_at": "2026-09-05T17:50:14.481Z"
     },
     "content:k-dense-ai-scientific-agent-skills-hypothesis-generation": {
       "hash": "8153fdc33e0a4cd0",
       "translated_at": "2026-09-05T14:35:16.456Z"
     },
     "content:k-dense-ai-scientific-agent-skills-infographics": {
-      "hash": "e1d8a7601c1d9421",
-      "translated_at": "2026-08-19T18:24:26.498Z"
+      "hash": "370dc1cadbcf03cf",
+      "translated_at": "2026-09-05T17:51:06.230Z"
     },
     "content:k-dense-ai-scientific-agent-skills-iso-13485-certification": {
       "hash": "387bb35848a8bf6d",
@@ -44256,8 +44256,8 @@
       "translated_at": "2026-08-19T18:28:50.991Z"
     },
     "content:k-dense-ai-scientific-agent-skills-lamindb": {
-      "hash": "68822136d375fd36",
-      "translated_at": "2026-08-19T18:29:22.733Z"
+      "hash": "3f80e651f16d5068",
+      "translated_at": "2026-09-05T17:54:21.343Z"
     },
     "content:k-dense-ai-scientific-agent-skills-latex-posters": {
       "hash": "be45bd1045f825f4",
@@ -49483,9 +49483,9 @@
       "translated_at": "2026-08-24T09:14:40.080Z"
     },
     "skill:khazp-vibe-coding-prompt-template-vibe-agents": {
-      "hash": "4db3455702b5b059",
-      "summary_zh": "自动生成项目的 AGENTS.md 和 AI 配置文件，适合快速设置智能体指令或配置 AI 助手。",
-      "translated_at": "2026-08-24T09:14:45.291Z"
+      "hash": "431d77cdcce03569",
+      "summary_zh": "根据已确认的需求和技术决策生成项目代理指令，适合搭建项目规范，不用于普通的增量功能开发。",
+      "translated_at": "2026-09-05T17:20:07.084Z"
     },
     "skill:khazp-vibe-coding-prompt-template-vibe-prd": {
       "hash": "9cf654b7b66f5f70",
@@ -49493,9 +49493,9 @@
       "translated_at": "2026-08-24T09:14:48.678Z"
     },
     "skill:khazp-vibe-coding-prompt-template-vibe-build": {
-      "hash": "433428fb0b815a26",
-      "summary_zh": "一套面向 AI 编程代理的 MVP 开发流程，结合规范、测试、浏览器检查和评估，确保任务按要求完成并提供验证证据。",
-      "translated_at": "2026-08-24T09:14:49.156Z"
+      "hash": "9a55c2f924967f6b",
+      "summary_zh": "用于按批准方案实现新项目切片并报告实际检查结果；修改现有应用时应使用另一个对应工具。",
+      "translated_at": "2026-09-05T17:19:17.429Z"
     },
     "skill:khazp-vibe-coding-prompt-template-vibe-research": {
       "hash": "dffaca90642d7860",
@@ -49508,9 +49508,9 @@
       "translated_at": "2026-08-24T09:14:51.767Z"
     },
     "skill:khazp-vibe-coding-prompt-template-vibe-workflow": {
-      "hash": "acc6fc638290a777",
-      "summary_zh": "一套从创意到上线的五步MVP开发流程，适合从零启动项目并快速完成产品验证。",
-      "translated_at": "2026-08-24T09:14:52.683Z"
+      "hash": "f6e9b82e5bfba22c",
+      "summary_zh": "根据项目状态将新项目、现有项目或故障项目分流到合适的规划、变更或调试流程，帮助团队快速选择正确的处理方式。",
+      "translated_at": "2026-09-05T17:20:15.230Z"
     },
     "skill:khazp-vibe-coding-prompt-template-vibe-review": {
       "hash": "effda758cecee3a9",
@@ -49518,24 +49518,24 @@
       "translated_at": "2026-08-24T09:14:54.385Z"
     },
     "content:khazp-vibe-coding-prompt-template-vibe-agents": {
-      "hash": "37510c63568cd09c",
-      "translated_at": "2026-08-24T09:34:08.258Z"
+      "hash": "0da45e643b6228bb",
+      "translated_at": "2026-09-05T17:54:42.075Z"
     },
     "content:khazp-vibe-coding-prompt-template-vibe-build": {
-      "hash": "4253047cd76b6c19",
-      "translated_at": "2026-08-24T09:34:18.413Z"
+      "hash": "c13417d3d8fbbddf",
+      "translated_at": "2026-09-05T17:55:34.941Z"
     },
     "content:khazp-vibe-coding-prompt-template-vibe-prd": {
-      "hash": "bedd59d07352899e",
-      "translated_at": "2026-08-24T09:35:15.396Z"
+      "hash": "1e78910f8ef05581",
+      "translated_at": "2026-09-05T17:57:42.096Z"
     },
     "content:khazp-vibe-coding-prompt-template-vibe-review": {
-      "hash": "2ac80b33334f8f8b",
-      "translated_at": "2026-08-24T09:35:33.915Z"
+      "hash": "79eec86ee344e66a",
+      "translated_at": "2026-09-05T17:57:36.804Z"
     },
     "content:khazp-vibe-coding-prompt-template-vibe-research": {
-      "hash": "3de60d88db71a24e",
-      "translated_at": "2026-08-24T09:36:05.369Z"
+      "hash": "4cc0c236d996cc3a",
+      "translated_at": "2026-09-05T17:57:14.516Z"
     },
     "content:khazp-vibe-coding-prompt-template-vibe-techdesign": {
       "hash": "677deac35204e8a9",
@@ -54233,6 +54233,34 @@
     "content:kenryu42-claude-code-safety-net-verify-cc-safety-net": {
       "hash": "32bfc5f0dadfeffe",
       "translated_at": "2026-09-05T14:42:12.829Z"
+    },
+    "skill:khazp-vibe-coding-prompt-template-vibe-change": {
+      "hash": "45fcac0c2b57c38e",
+      "summary_zh": "为现有应用增加一个受控功能，同时保持原有行为不变，适合在不重启完整开发流程的情况下进行增量迭代。",
+      "translated_at": "2026-09-05T17:19:17.139Z"
+    },
+    "skill:khazp-vibe-coding-prompt-template-vibe-debug": {
+      "hash": "6e90266f478bedda",
+      "summary_zh": "用于诊断并修复现有项目中可复现的崩溃、异常行为或检查失败问题，适合排查和解决已有代码故障。",
+      "translated_at": "2026-09-05T17:19:27.013Z"
+    },
+    "skill:khazp-vibe-coding-prompt-template-vibe-handoff": {
+      "hash": "5d1ab69bcc1075d7",
+      "summary_zh": "为后续会话或编码工具准备精简、客观的项目上下文，避免复制聊天记录和敏感信息。",
+      "translated_at": "2026-09-05T17:19:27.168Z"
+    },
+    "skill:khazp-vibe-coding-prompt-template-vibe-verify": {
+      "hash": "fd1d8009be60fceb",
+      "summary_zh": "针对验收标准测试正在运行的产品，并记录证据与结果，适合发现仅靠构建成功无法暴露的行为问题。",
+      "translated_at": "2026-09-05T17:20:09.795Z"
+    },
+    "content:khazp-vibe-coding-prompt-template-vibe-change": {
+      "hash": "535058b7f6822174",
+      "translated_at": "2026-09-05T17:55:30.459Z"
+    },
+    "content:khazp-vibe-coding-prompt-template-vibe-handoff": {
+      "hash": "99ddf03299e6c139",
+      "translated_at": "2026-09-05T17:55:53.755Z"
     }
   }
 }

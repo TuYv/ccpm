@@ -1,0 +1,26 @@
+{
+  "id": "khazp-vibe-coding-prompt-template-vibe-handoff",
+  "name": "vibe-handoff",
+  "description": "Prepare compact factual project context for another session or coding tool without copying transcripts or secrets.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "KhazP",
+  "install_path": ".claude/skills/vibe-handoff/SKILL.md",
+  "source": {
+    "repo": "KhazP/vibe-coding-prompt-template",
+    "url": "https://github.com/KhazP/vibe-coding-prompt-template/blob/main/workflow/skills/vibe-handoff/SKILL.md",
+    "path": "workflow/skills/vibe-handoff/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-05T17:14:30.017Z",
+    "stars": 3040,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-05T14:41:52Z",
+    "license": "MIT"
+  },
+  "summary_zh": "为后续会话或编码工具准备精简、客观的项目上下文，避免复制聊天记录和敏感信息。"
+}

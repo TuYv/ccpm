@@ -1,8 +1,8 @@
 {
   "id": "khazp-vibe-coding-prompt-template-vibe-build",
   "name": "vibe-build",
-  "description": "Build an approved MVP task using AGENTS.md, agent_docs, tests, browser checks, AI evals, and evidence reporting.",
-  "category": "浏览器自动化",
+  "description": "Implement an approved new-project slice and report actual checks. For changes to an existing app use vibe-change.",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -13,14 +13,14 @@
   "install_path": ".claude/skills/vibe-build/SKILL.md",
   "source": {
     "repo": "KhazP/vibe-coding-prompt-template",
-    "url": "https://github.com/KhazP/vibe-coding-prompt-template/blob/main/templates/.claude/skills/vibe-build/SKILL.md",
-    "path": "templates/.claude/skills/vibe-build/SKILL.md",
+    "url": "https://github.com/KhazP/vibe-coding-prompt-template/blob/main/workflow/skills/vibe-build/SKILL.md",
+    "path": "workflow/skills/vibe-build/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-05T13:50:05.693Z",
+    "discovered_at": "2026-09-05T17:14:29.457Z",
     "stars": 3040,
     "language": "TypeScript",
-    "pushed_at": "2026-08-21T09:54:43Z",
+    "pushed_at": "2026-09-05T14:41:52Z",
     "license": "MIT"
   },
-  "summary_zh": "一套面向 AI 编程代理的 MVP 开发流程，结合规范、测试、浏览器检查和评估，确保任务按要求完成并提供验证证据。"
+  "summary_zh": "用于按批准方案实现新项目切片并报告实际检查结果；修改现有应用时应使用另一个对应工具。"
 }
