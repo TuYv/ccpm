@@ -1,7 +1,7 @@
 {
   "id": "sergebulaev-linkedin-skills-linkedin-humanizer",
   "name": "linkedin-humanizer",
-  "description": "Scrub AI tells from any text draft OR audit a finished post against the 2026 algorithm heuristic checklist. Tier-based rewriter (forensic / strict / aesthetic / all) plus `--mode audit` for detection-only pass-fail review covering length, hook, CTA, format penalties, AI vocab. Also `--mode profile` builds a reusable Voice and Brand Profile from a few of the user's real posts, so every writing skill drafts in their voice. Sub-tools: emoji-pattern detector, multi-detector spread tester (GPTZero, O",
+  "description": "Scrub AI tells from any text draft OR audit a finished post against the 2026 algorithm heuristic checklist. Tier-based rewriter (forensic / strict / aesthetic / all) plus `--mode audit` for detection-only pass-fail review covering length, hook, CTA, format penalties, AI vocab. Also `--mode profile` builds a reusable Voice and Brand Profile from a few of the user''s real posts, so every writing skill drafts in their voice. Sub-tools: emoji-pattern detector, multi-detector spread tester (GPTZero, ",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/sergebulaev/linkedin-skills/blob/main/skills/linkedin-humanizer/SKILL.md",
     "path": "skills/linkedin-humanizer/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-05T00:17:11.341Z",
-    "stars": 867,
+    "discovered_at": "2026-09-05T04:36:33.055Z",
+    "stars": 869,
     "language": "Python",
-    "pushed_at": "2026-09-03T09:59:58Z",
+    "pushed_at": "2026-09-05T02:32:37Z",
     "license": "MIT"
   },
-  "summary_zh": "一款面向领英内容的改写与审核工具，可淡化 AI 痕迹、复刻个人文风，并检查算法与格式风险。"
+  "summary_zh": "帮助润色和审查 LinkedIn 帖子，去除 AI 痕迹、匹配个人语气，适合内容创作与发布前检查。"
 }

@@ -1,7 +1,7 @@
 {
   "id": "sickn33-agentic-awesome-skills-agent-evaluation",
   "name": "agent-evaluation",
-  "description": "Testing and benchmarking LLM agents including behavioral testing, capability assessment, reliability metrics, and production monitoring—where even top agents achieve less than 50% on real-world benchmarks",
+  "description": "Evaluate agent behavior with versioned cases and explicit verifiers. Use when comparing agent or prompt changes, reproducing failures, or running agent regression tests.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/sickn33/agentic-awesome-skills/blob/main/plugins/agentic-awesome-skills-claude/skills/agent-evaluation/SKILL.md",
     "path": "plugins/agentic-awesome-skills-claude/skills/agent-evaluation/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-05T00:19:42.602Z",
-    "stars": 45982,
+    "discovered_at": "2026-09-05T04:38:53.478Z",
+    "stars": 45985,
     "language": "Python",
-    "pushed_at": "2026-09-05T00:16:46Z",
+    "pushed_at": "2026-09-05T03:01:52Z",
     "license": "MIT"
   },
-  "summary_zh": "用于测试和评估大模型智能体，覆盖行为、能力、可靠性与线上监控，适合发现真实场景中的性能短板。"
+  "summary_zh": "用于通过版本化测试案例和明确验证器评估智能体行为，适合比较智能体或提示词改动、复现失败问题及执行回归测试。"
 }

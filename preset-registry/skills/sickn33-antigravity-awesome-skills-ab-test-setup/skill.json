@@ -1,7 +1,7 @@
 {
   "id": "sickn33-antigravity-awesome-skills-ab-test-setup",
   "name": "ab-test-setup",
-  "description": "Structured guide for setting up A/B tests with mandatory gates for hypothesis, metrics, and execution readiness.",
+  "description": "Use when designing an A/B or split test: define the hypothesis, control and variants, estimate sample size, verify tracking, and predeclare metrics and stopping rules.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/sickn33/antigravity-awesome-skills/blob/main/plugins/agentic-awesome-skills-claude/skills/ab-test-setup/SKILL.md",
     "path": "plugins/agentic-awesome-skills-claude/skills/ab-test-setup/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-05T00:19:49.235Z",
-    "stars": 45982,
+    "discovered_at": "2026-09-05T04:38:59.445Z",
+    "stars": 45985,
     "language": "Python",
-    "pushed_at": "2026-09-05T00:16:46Z",
+    "pushed_at": "2026-09-05T03:01:52Z",
     "license": "MIT"
   },
-  "summary_zh": "这是一份A/B测试搭建指南，通过关卡式把控确保你在实验前想清楚验证逻辑和准备度，避免盲目试错，适合需要规范化开展实验的团队。"
+  "summary_zh": "用于设计 A/B 或分流实验，帮助明确假设、设置对照与变体、估算样本量，并预先约定指标和停止规则，确保测试可追踪、结论可靠。"
 }
