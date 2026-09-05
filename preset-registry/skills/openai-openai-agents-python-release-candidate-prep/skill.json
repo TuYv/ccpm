@@ -1,7 +1,7 @@
 {
   "id": "openai-openai-agents-python-release-candidate-prep",
   "name": "release-candidate-prep",
-  "description": "Preflight and prepare an OpenAI Agents Python release candidate in a dedicated worktree from exact origin/main, gate readiness before branch creation, freeze the released API contract, create or replace the local release branch with one release commit, enforce final release review as a checker, and produce release-specific PR text. Use only when explicitly invoked with a version. Never push, open a PR, or mutate GitHub.",
+  "description": "Prepare a local Python SDK release candidate in a dedicated worktree. Use only when explicitly invoked with a version.",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/openai/openai-agents-python/blob/main/.agents/skills/release-candidate-prep/SKILL.md",
     "path": ".agents/skills/release-candidate-prep/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-05T04:37:02.704Z",
-    "stars": 29198,
+    "discovered_at": "2026-09-05T09:15:24.175Z",
+    "stars": 29201,
     "language": "Python",
-    "pushed_at": "2026-09-05T03:42:03Z",
+    "pushed_at": "2026-09-05T09:13:18Z",
     "license": "MIT"
-  },
-  "summary_zh": "用于本地准备 Python 发布候选版的自动化流程，可校验发布条件、冻结 API、生成发布分支与评审文案，且不操作远程仓库。"
+  }
 }

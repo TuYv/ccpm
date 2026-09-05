@@ -1,7 +1,7 @@
 {
   "id": "openai-openai-agents-python-test-coverage-improver",
   "name": "test-coverage-improver",
-  "description": "Improve test coverage in the OpenAI Agents Python repository: run `make coverage`, inspect coverage artifacts, identify low-coverage files, propose high-impact tests, and confirm with the user before writing tests.",
+  "description": "Measure Python SDK coverage or address measured coverage gaps. Use for coverage audits and metric regressions, not routine test additions.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/openai/openai-agents-python/blob/main/.agents/skills/test-coverage-improver/SKILL.md",
     "path": ".agents/skills/test-coverage-improver/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-05T04:37:03.113Z",
-    "stars": 29198,
+    "discovered_at": "2026-09-05T09:15:24.548Z",
+    "stars": 29201,
     "language": "Python",
-    "pushed_at": "2026-09-05T03:42:03Z",
+    "pushed_at": "2026-09-05T09:13:18Z",
     "license": "MIT"
-  },
-  "summary_zh": "它能自动分析代码覆盖率报告，找出低覆盖文件并推荐高价值的测试，经确认后直接生成测试代码，适合需要快速补齐测试用例、提升项目代码质量的场景。"
+  }
 }

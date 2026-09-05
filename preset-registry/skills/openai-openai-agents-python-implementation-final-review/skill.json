@@ -1,8 +1,8 @@
 {
   "id": "openai-openai-agents-python-implementation-final-review",
   "name": "implementation-final-review",
-  "description": "Perform the repository's risk-tiered independent final review before implementation completion. Use only when explicitly invoked or when repository instructions require it after behavior-impacting implementation work; audit the complete task diff, supported contracts, lifecycle and security boundaries, complexity, and tests before final verification.",
-  "category": "测试调试",
+  "description": "Review completed implementation changes before final verification. Use when repository policy requires independent review or the user explicitly requests it.",
+  "category": "开发编程",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,10 @@
     "url": "https://github.com/openai/openai-agents-python/blob/main/.agents/skills/implementation-final-review/SKILL.md",
     "path": ".agents/skills/implementation-final-review/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-05T04:37:01.868Z",
-    "stars": 29198,
+    "discovered_at": "2026-09-05T09:15:23.418Z",
+    "stars": 29201,
     "language": "Python",
-    "pushed_at": "2026-09-05T03:42:03Z",
+    "pushed_at": "2026-09-05T09:13:18Z",
     "license": "MIT"
-  },
-  "summary_zh": "用于开发收尾前对完整变更进行分级独立审查，排查契约、安全、复杂度和测试风险，适合行为改动后的最终验收。"
+  }
 }

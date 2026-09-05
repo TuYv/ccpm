@@ -1,7 +1,7 @@
 {
   "id": "openai-openai-agents-python-final-release-review",
   "name": "final-release-review",
-  "description": "Perform pre-release planning or a final release-candidate review for openai-agents-python by comparing the target with the previous remote tag, determining the minimum compatible release type, auditing regressions and contract changes, reviewing open documentation PR coverage, drafting minor-release Key Changes, and calling the ship/block gate.",
+  "description": "Assess a Python SDK release candidate or release plan against the previous release and recommend ship or block.",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/openai/openai-agents-python/blob/main/.agents/skills/final-release-review/SKILL.md",
     "path": ".agents/skills/final-release-review/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-05T04:37:01.738Z",
-    "stars": 29198,
+    "discovered_at": "2026-09-05T09:15:23.298Z",
+    "stars": 29201,
     "language": "Python",
-    "pushed_at": "2026-09-05T03:42:03Z",
+    "pushed_at": "2026-09-05T09:13:18Z",
     "license": "MIT"
-  },
-  "summary_zh": "用于在发布前对比目标版本与上一远程标签，检查兼容性、回归和文档覆盖，判断是否满足发布条件。"
+  }
 }

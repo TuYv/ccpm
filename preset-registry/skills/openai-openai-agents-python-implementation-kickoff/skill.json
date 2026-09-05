@@ -1,8 +1,8 @@
 {
   "id": "openai-openai-agents-python-implementation-kickoff",
   "name": "implementation-kickoff",
-  "description": "Start and carry an explicitly invoked openai-agents-python implementation through a fresh isolated worktree and a local PR-ready handoff. Fetch the latest origin/main, keep task changes uncommitted, replay them onto the latest main before final review, run applicable verification and $implementation-final-review, use $pr-draft-summary to generate the complete PR draft and branch name, then create one clean local commit with takeover provenance when applicable. Use only when the user explicitly i",
-  "category": "测试调试",
+  "description": "Carry implementation through an isolated worktree and local handoff. Use only when this skill is explicitly invoked.",
+  "category": "开发编程",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,10 @@
     "url": "https://github.com/openai/openai-agents-python/blob/main/.agents/skills/implementation-kickoff/SKILL.md",
     "path": ".agents/skills/implementation-kickoff/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-05T04:37:02.007Z",
-    "stars": 29198,
+    "discovered_at": "2026-09-05T09:15:23.530Z",
+    "stars": 29201,
     "language": "Python",
-    "pushed_at": "2026-09-05T03:42:03Z",
+    "pushed_at": "2026-09-05T09:13:18Z",
     "license": "MIT"
-  },
-  "summary_zh": "用于在隔离工作区启动实现任务，完成同步主干、验证审查和生成可直接提交 PR 的本地交接。"
+  }
 }

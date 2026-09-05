@@ -1,8 +1,8 @@
 {
   "id": "openai-openai-agents-python-pr-draft-summary",
   "name": "pr-draft-summary",
-  "description": "Create the required PR-ready summary block, branch suggestion, title, and draft description for openai-agents-python. Use before the final response whenever the current task changed runtime code, tests, examples, build/test configuration, or docs with behavior impact, regardless of perceived change size and including local-only or uncommitted work. Skip only for trivial or conversation-only tasks, repo-meta/doc-only tasks without behavior impact, an explicitly invoked $release-candidate-prep han",
-  "category": "测试调试",
+  "description": "Prepare the required local PR title, description, and branch suggestion after eligible implementation work is complete.",
+  "category": "文档写作",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,10 @@
     "url": "https://github.com/openai/openai-agents-python/blob/main/.agents/skills/pr-draft-summary/SKILL.md",
     "path": ".agents/skills/pr-draft-summary/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-05T04:37:02.576Z",
-    "stars": 29198,
+    "discovered_at": "2026-09-05T09:15:24.051Z",
+    "stars": 29201,
     "language": "Python",
-    "pushed_at": "2026-09-05T03:42:03Z",
+    "pushed_at": "2026-09-05T09:13:18Z",
     "license": "MIT"
-  },
-  "summary_zh": "用于代码变更后自动生成 PR 摘要、分支名、标题和草稿描述，适合提交前统一整理改动信息。"
+  }
 }

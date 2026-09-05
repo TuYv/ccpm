@@ -1,7 +1,7 @@
 {
   "id": "openai-openai-agents-python-code-change-verification",
   "name": "code-change-verification",
-  "description": "Run the mandatory verification stack when changes affect runtime code, tests, or build/test behavior in the OpenAI Agents Python repository.",
+  "description": "Run the required final formatting, lint, type, and test checks after eligible SDK changes pass review.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/openai/openai-agents-python/blob/main/.agents/skills/code-change-verification/SKILL.md",
     "path": ".agents/skills/code-change-verification/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-05T04:37:01.291Z",
-    "stars": 29198,
+    "discovered_at": "2026-09-05T09:15:22.922Z",
+    "stars": 29201,
     "language": "Python",
-    "pushed_at": "2026-09-05T03:42:03Z",
+    "pushed_at": "2026-09-05T09:13:18Z",
     "license": "MIT"
-  },
-  "summary_zh": "这是针对OpenAI Agents Python项目的自动校验工具，只要代码、测试或构建逻辑有改动就自动触发强制检查，防止改出bug，适合代码提交与CI场景。"
+  }
 }

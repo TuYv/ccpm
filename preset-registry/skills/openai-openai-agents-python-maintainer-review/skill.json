@@ -1,7 +1,7 @@
 {
   "id": "openai-openai-agents-python-maintainer-review",
   "name": "maintainer-review",
-  "description": "Assess an openai-agents-python GitHub issue or pull request as a maintainer. Use to verify the claimed need and practical impact, compare supported alternatives or competing approaches, separate code quality from repository readiness, recommend the maintainer action, and draft a copy-ready comment when evidence, changes, or closure should be requested.",
+  "description": "Assess a GitHub issue or PR for demonstrated need, supported alternatives, correctness, and maintainer action. Desk review only.",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/openai/openai-agents-python/blob/main/.agents/skills/maintainer-review/SKILL.md",
     "path": ".agents/skills/maintainer-review/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-05T04:37:02.287Z",
-    "stars": 29198,
+    "discovered_at": "2026-09-05T09:15:23.779Z",
+    "stars": 29201,
     "language": "Python",
-    "pushed_at": "2026-09-05T03:42:03Z",
+    "pushed_at": "2026-09-05T09:13:18Z",
     "license": "MIT"
-  },
-  "summary_zh": "这是一个面向开源维护者的评审助手，用于核查 Issue 或 PR 的实际价值与仓库适配度，并给出处置建议和可直接发布的回复。"
+  }
 }

@@ -1,0 +1,25 @@
+{
+  "id": "kbwo-ccmanager-ccmanager-config",
+  "name": "ccmanager-config",
+  "description": "Set up, review, or repair a CCManager config — `.ccmanager.json` at a git repository root, or the global `~/.config/ccmanager/config.json`. Use when someone wants ccmanager to launch a different agent CLI (codex, gemini, cursor-agent, copilot…), add command presets, run a command on session state changes or worktree creation, auto-generate worktree directory paths, change merge/rebase arguments, rebind the return-to-menu key, turn on auto-approval — or when a ccmanager setting \"does not seem to ",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "kbwo",
+  "install_path": ".claude/skills/ccmanager-config/SKILL.md",
+  "source": {
+    "repo": "kbwo/ccmanager",
+    "url": "https://github.com/kbwo/ccmanager/blob/main/plugins/ccmanager-config/skills/ccmanager-config/SKILL.md",
+    "path": "plugins/ccmanager-config/skills/ccmanager-config/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-05T10:06:47.567Z",
+    "stars": 1234,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-05T05:04:09Z",
+    "license": "MIT"
+  }
+}
