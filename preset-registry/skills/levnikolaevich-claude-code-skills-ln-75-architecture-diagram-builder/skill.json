@@ -1,7 +1,7 @@
 {
   "id": "levnikolaevich-claude-code-skills-ln-75-architecture-diagram-builder",
   "name": "ln-75-architecture-diagram-builder",
-  "description": "Creates evidence-backed current or target architecture diagrams when the diagram is the primary deliverable. Not for UI design, architecture audit, or invented structure.",
+  "description": "Creates current or target architecture diagrams as the primary deliverable. Not for UI design, architecture audits, or invented structure.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/architecture-suite/skills/ln-75-architecture-diagram-builder/SKILL.md",
     "path": "plugins/architecture-suite/skills/ln-75-architecture-diagram-builder/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-09-05T10:05:54.334Z",
+    "discovered_at": "2026-09-05T13:45:46.654Z",
     "stars": 557,
     "language": "PowerShell",
-    "pushed_at": "2026-08-29T14:21:50Z",
+    "pushed_at": "2026-09-05T12:33:40Z",
     "license": "MIT"
   },
-  "summary_zh": "一款基于现有证据绘制当前或目标架构图的工具，适合以架构图为核心交付物的场景。"
+  "summary_zh": "用于绘制当前或目标架构图，适合明确系统结构和演进方向，不适用于界面设计、架构审计或凭空构建设计。"
 }

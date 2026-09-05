@@ -1,7 +1,7 @@
 {
   "id": "levnikolaevich-claude-code-skills-ln-22-codebase-auditor",
   "name": "ln-22-codebase-auditor",
-  "description": "Audits cross-cutting code health across security, delivery, maintainability, dependencies, diagnosability, concurrency, and lifecycle. Use when no specialist audit is primary.",
+  "description": "Audits cross-cutting code health, security, delivery, and maintainability when no specialist audit is primary. Not for a single delivery review.",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/codebase-audit-suite/skills/ln-22-codebase-auditor/SKILL.md",
     "path": "plugins/codebase-audit-suite/skills/ln-22-codebase-auditor/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-09-05T10:05:54.657Z",
+    "discovered_at": "2026-09-05T13:45:47.113Z",
     "stars": 557,
     "language": "PowerShell",
-    "pushed_at": "2026-08-29T14:21:50Z",
+    "pushed_at": "2026-09-05T12:33:40Z",
     "license": "MIT"
   },
-  "summary_zh": "一款通用代码库健康审计工具，适合全面排查安全、交付、维护、依赖、诊断、并发和生命周期问题。"
+  "summary_zh": "用于在没有专项审计时，全面检查代码库的健康度、安全性、交付能力与可维护性，适合跨领域代码质量评估。"
 }

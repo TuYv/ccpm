@@ -1,7 +1,7 @@
 {
   "id": "levnikolaevich-claude-code-skills-ln-62-repository-publisher",
   "name": "ln-62-repository-publisher",
-  "description": "Validates, commits, pushes, and remotely verifies approved repository changes. Use when publication is requested; not for releases, package publishing, or announcements.",
+  "description": "Commits, pushes, and remotely verifies authorized repository changes. Not for releases, package publication, or announcements.",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/maintainer-suite/skills/ln-62-repository-publisher/SKILL.md",
     "path": "plugins/maintainer-suite/skills/ln-62-repository-publisher/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-09-05T10:05:55.217Z",
+    "discovered_at": "2026-09-05T13:45:47.904Z",
     "stars": 557,
     "language": "PowerShell",
-    "pushed_at": "2026-08-29T14:21:50Z",
+    "pushed_at": "2026-09-05T12:33:40Z",
     "license": "MIT"
   },
-  "summary_zh": "用于校验、提交、推送并远程确认已批准的仓库变更，适合代码发布，不适用于版本发行、包发布或公告。"
+  "summary_zh": "用于提交、推送并远程验证已授权的代码仓库变更，适合自动化管理受控代码修改，不用于发布版本、软件包或公告。"
 }

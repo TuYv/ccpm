@@ -1,7 +1,7 @@
 {
   "id": "levnikolaevich-claude-code-skills-ln-71-system-design-baseline-builder",
   "name": "ln-71-system-design-baseline-builder",
-  "description": "Creates a project baseline of architecture drivers and constraints. Use before design or planning; not for target design, plan review, implementation, or architecture audit.",
+  "description": "Creates architecture-driving requirements and constraints before design. Not for target design, plan review, or implementation audits.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/architecture-suite/skills/ln-71-system-design-baseline-builder/SKILL.md",
     "path": "plugins/architecture-suite/skills/ln-71-system-design-baseline-builder/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-09-05T10:05:53.875Z",
+    "discovered_at": "2026-09-05T13:45:46.038Z",
     "stars": 557,
     "language": "PowerShell",
-    "pushed_at": "2026-08-29T14:21:50Z",
+    "pushed_at": "2026-09-05T12:33:40Z",
     "license": "MIT"
   },
-  "summary_zh": "用于梳理项目架构驱动因素与约束的基线工具，适合在设计或规划开始前统一认知。"
+  "summary_zh": "在设计开始前生成驱动架构的需求与约束，适合建立系统设计基线，不用于目标设计、方案评审或实现审计。"
 }

@@ -1,7 +1,7 @@
 {
   "id": "levnikolaevich-claude-code-skills-ln-35-surgical-change-implementer",
   "name": "ln-35-surgical-change-implementer",
-  "description": "Implements a bounded product-code change through the smallest complete root-cause solution. Use for scoped delivery; not for planning, review, audit, upgrades, modernization, or tuning.",
+  "description": "Implements a scoped product-code change with a minimal complete solution. Not for planning, review, audits, dependency upgrades, or tuning.",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/optimization-suite/skills/ln-35-surgical-change-implementer/SKILL.md",
     "path": "plugins/optimization-suite/skills/ln-35-surgical-change-implementer/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-09-05T10:05:55.990Z",
+    "discovered_at": "2026-09-05T13:45:48.930Z",
     "stars": 557,
     "language": "PowerShell",
-    "pushed_at": "2026-08-29T14:21:50Z",
+    "pushed_at": "2026-09-05T12:33:40Z",
     "license": "MIT"
   },
-  "summary_zh": "一款用最小完整根因方案实施有限代码变更的工具，适合范围明确的交付，不用于规划、审查或升级优化。"
+  "summary_zh": "用于按明确范围实施产品代码变更，以最小但完整的方案解决具体开发任务，适合直接编码落地，不用于规划、审查、审计、依赖升级或性能调优。"
 }

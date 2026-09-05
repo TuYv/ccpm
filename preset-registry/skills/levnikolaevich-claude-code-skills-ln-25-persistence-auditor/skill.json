@@ -1,8 +1,8 @@
 {
   "id": "levnikolaevich-claude-code-skills-ln-25-persistence-auditor",
   "name": "ln-25-persistence-auditor",
-  "description": "Audits queries, transactions, data-path performance, and persistence resource lifecycle. Use when data correctness or scalability is at risk; not for general performance tuning.",
-  "category": "数据分析",
+  "description": "Audits queries, transactions, data-path costs, and persistence resource lifetimes. Not for general performance tuning.",
+  "category": "开发编程",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,11 @@
     "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/codebase-audit-suite/skills/ln-25-persistence-auditor/SKILL.md",
     "path": "plugins/codebase-audit-suite/skills/ln-25-persistence-auditor/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-09-05T10:05:54.987Z",
+    "discovered_at": "2026-09-05T13:45:47.564Z",
     "stars": 557,
     "language": "PowerShell",
-    "pushed_at": "2026-08-29T14:21:50Z",
+    "pushed_at": "2026-09-05T12:33:40Z",
     "license": "MIT"
   },
-  "summary_zh": "面向持久化层的审计工具，用于检查查询、事务、数据路径性能和资源生命周期，适合排查数据正确性或扩展性风险。"
+  "summary_zh": "用于审计查询、事务、数据路径开销及持久化资源生命周期，适合定位持久化层问题，不用于通用性能调优。"
 }

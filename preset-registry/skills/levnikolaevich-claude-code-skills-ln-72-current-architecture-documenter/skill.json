@@ -1,7 +1,7 @@
 {
   "id": "levnikolaevich-claude-code-skills-ln-72-current-architecture-documenter",
   "name": "ln-72-current-architecture-documenter",
-  "description": "Documents implemented current-state architecture from repository evidence. Use for onboarding or migration baselines; not for target design, audit verdicts, or code changes.",
+  "description": "Documents implemented architecture from repository evidence for onboarding or migration baselines. Not for target design or audit verdicts.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/architecture-suite/skills/ln-72-current-architecture-documenter/SKILL.md",
     "path": "plugins/architecture-suite/skills/ln-72-current-architecture-documenter/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-09-05T10:05:53.990Z",
+    "discovered_at": "2026-09-05T13:45:46.195Z",
     "stars": 557,
     "language": "PowerShell",
-    "pushed_at": "2026-08-29T14:21:50Z",
+    "pushed_at": "2026-09-05T12:33:40Z",
     "license": "MIT"
   },
-  "summary_zh": "从代码仓库证据梳理并记录现有系统架构，适合新人上手或建立迁移基线，不用于目标设计、审计结论或代码修改。"
+  "summary_zh": "根据代码仓库证据整理已实现的系统架构，适合新人入职了解现状或为迁移建立基线，不用于目标设计或审计结论。"
 }

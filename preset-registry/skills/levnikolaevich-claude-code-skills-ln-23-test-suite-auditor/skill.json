@@ -1,7 +1,7 @@
 {
   "id": "levnikolaevich-claude-code-skills-ln-23-test-suite-auditor",
   "name": "ln-23-test-suite-auditor",
-  "description": "Audits whether an existing test suite proves important behavior as a sustainable portfolio. Use when test confidence or lifecycle control is uncertain; not to implement tests or review one delivery.",
+  "description": "Audits existing tests for meaningful coverage, trustworthy oracles, and maintenance value. Not for test implementation or a single delivery review.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/codebase-audit-suite/skills/ln-23-test-suite-auditor/SKILL.md",
     "path": "plugins/codebase-audit-suite/skills/ln-23-test-suite-auditor/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-09-05T10:05:54.761Z",
+    "discovered_at": "2026-09-05T13:45:47.256Z",
     "stars": 557,
     "language": "PowerShell",
-    "pushed_at": "2026-08-29T14:21:50Z",
+    "pushed_at": "2026-09-05T12:33:40Z",
     "license": "MIT"
   },
-  "summary_zh": "用于审计现有测试套件能否长期、可靠地验证关键行为，适合测试信心不足或生命周期管理不明确的场景。"
+  "summary_zh": "用于审查现有测试是否覆盖关键场景、断言是否可信且具备长期维护价值，适合系统性评估测试质量，不负责编写测试或单次交付验收。"
 }

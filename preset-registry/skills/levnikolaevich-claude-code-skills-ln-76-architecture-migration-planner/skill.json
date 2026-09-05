@@ -1,7 +1,7 @@
 {
   "id": "levnikolaevich-claude-code-skills-ln-76-architecture-migration-planner",
   "name": "ln-76-architecture-migration-planner",
-  "description": "Plans a reversible architecture migration with compatibility, data movement, rollout, and rollback. Use for current-to-target transitions; not execution, generic planning, or delivery review.",
+  "description": "Plans an architecture transition with compatibility, data movement, rollout, and rollback. Not for migration execution or generic task planning.",
   "category": "数据分析",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/architecture-suite/skills/ln-76-architecture-migration-planner/SKILL.md",
     "path": "plugins/architecture-suite/skills/ln-76-architecture-migration-planner/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-09-05T10:05:54.442Z",
+    "discovered_at": "2026-09-05T13:45:46.801Z",
     "stars": 557,
     "language": "PowerShell",
-    "pushed_at": "2026-08-29T14:21:50Z",
+    "pushed_at": "2026-09-05T12:33:40Z",
     "license": "MIT"
   },
-  "summary_zh": "用于规划可逆的架构迁移，覆盖兼容、数据搬迁、灰度发布和回滚，适合从现有架构过渡到目标架构。"
+  "summary_zh": "用于规划架构迁移方案，涵盖兼容性、数据迁移、发布与回滚，适合制定迁移路线，不负责实际执行。"
 }

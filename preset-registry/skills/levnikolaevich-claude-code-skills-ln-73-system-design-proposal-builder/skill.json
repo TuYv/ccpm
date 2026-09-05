@@ -1,7 +1,7 @@
 {
   "id": "levnikolaevich-claude-code-skills-ln-73-system-design-proposal-builder",
   "name": "ln-73-system-design-proposal-builder",
-  "description": "Creates a decision-complete target system design from requirements and constraints. Use before implementation planning; not for requirements baselines, reviews, audits, or code changes.",
+  "description": "Creates a target system design from requirements before implementation planning. Not for requirements baselines, audits, or code changes.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/architecture-suite/skills/ln-73-system-design-proposal-builder/SKILL.md",
     "path": "plugins/architecture-suite/skills/ln-73-system-design-proposal-builder/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-09-05T10:05:54.098Z",
+    "discovered_at": "2026-09-05T13:45:46.350Z",
     "stars": 557,
     "language": "PowerShell",
-    "pushed_at": "2026-08-29T14:21:50Z",
+    "pushed_at": "2026-09-05T12:33:40Z",
     "license": "MIT"
   },
-  "summary_zh": "根据需求和约束生成可直接决策的目标系统设计，适合在制定实施计划前明确技术方案。"
+  "summary_zh": "根据需求在制定实施计划前创建目标系统设计，适合明确架构方案，不用于需求基线、审计或代码修改。"
 }

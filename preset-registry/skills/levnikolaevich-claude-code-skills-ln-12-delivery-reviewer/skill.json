@@ -1,7 +1,7 @@
 {
   "id": "levnikolaevich-claude-code-skills-ln-12-delivery-reviewer",
   "name": "ln-12-delivery-reviewer",
-  "description": "Reviews a completed scoped change and its affected runtime and contract paths. Use to find change-caused defects and verify readiness; not for codebase audit, implementation, or repair.",
+  "description": "Reviews a completed change for regressions, unmet acceptance, and release risks. Not for whole-codebase audits or repairs.",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/review-suite/skills/ln-12-delivery-reviewer/SKILL.md",
     "path": "plugins/review-suite/skills/ln-12-delivery-reviewer/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-09-05T10:05:56.611Z",
+    "discovered_at": "2026-09-05T13:45:49.406Z",
     "stars": 557,
     "language": "PowerShell",
-    "pushed_at": "2026-08-29T14:21:50Z",
+    "pushed_at": "2026-09-05T12:33:40Z",
     "license": "MIT"
   },
-  "summary_zh": "用于审查已完成的限定范围变更，检查相关运行路径和接口契约，发现变更引入的缺陷并判断是否具备交付条件。"
+  "summary_zh": "用于检查已完成变更是否引入回归、遗漏验收要求或存在发布风险，适合交付前的针对性评审，不用于全库审计或修复。"
 }

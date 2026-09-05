@@ -1,7 +1,7 @@
 {
   "id": "levnikolaevich-claude-code-skills-ln-63-release-publisher",
   "name": "ln-63-release-publisher",
-  "description": "Prepares and publishes a tagged GitHub release from repository evidence. Use for an explicit release request; not for ordinary commits, packages, or community news.",
+  "description": "Prepares and publishes an explicitly requested tagged GitHub release. Not for ordinary commits, package publication, or announcements.",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/maintainer-suite/skills/ln-63-release-publisher/SKILL.md",
     "path": "plugins/maintainer-suite/skills/ln-63-release-publisher/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-09-05T10:05:55.327Z",
+    "discovered_at": "2026-09-05T13:45:48.048Z",
     "stars": 557,
     "language": "PowerShell",
-    "pushed_at": "2026-08-29T14:21:50Z",
+    "pushed_at": "2026-09-05T12:33:40Z",
     "license": "MIT"
   },
-  "summary_zh": "根据仓库内容准备并发布带标签的 GitHub Release，适合明确的版本发布请求，不用于日常提交、包发布或社区动态。"
+  "summary_zh": "用于准备并发布指定标签的 GitHub 正式版本，适合需要严格控制发布时机的版本交付流程。"
 }

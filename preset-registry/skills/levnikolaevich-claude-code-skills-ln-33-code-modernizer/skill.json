@@ -1,7 +1,7 @@
 {
   "id": "levnikolaevich-claude-code-skills-ln-33-code-modernizer",
   "name": "ln-33-code-modernizer",
-  "description": "Modernizes a bounded capability by removing obsolete custom mechanisms or reducing bundle and maintenance cost. Use for proven modernization value; not routine upgrades or tuning.",
+  "description": "Modernizes a bounded capability to reduce proven maintenance, workflow, or artifact cost. Not for routine upgrades or performance tuning.",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/optimization-suite/skills/ln-33-code-modernizer/SKILL.md",
     "path": "plugins/optimization-suite/skills/ln-33-code-modernizer/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-09-05T10:05:55.758Z",
+    "discovered_at": "2026-09-05T13:45:48.643Z",
     "stars": 557,
     "language": "PowerShell",
-    "pushed_at": "2026-08-29T14:21:50Z",
+    "pushed_at": "2026-09-05T12:33:40Z",
     "license": "MIT"
   },
-  "summary_zh": "面向特定功能的代码现代化工具，用于淘汰过时的自定义机制，降低包体积和维护成本，适合收益明确的改造场景。"
+  "summary_zh": "用于在明确边界内改造代码，降低已验证的维护、工作流或产物成本，适合处理非例行升级和性能调优之外的现代化需求。"
 }

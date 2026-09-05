@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-09-05T10:12:31.280Z",
+  "updated_at": "2026-09-05T14:42:12.829Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -8508,9 +8508,9 @@
       "translated_at": "2026-05-19T23:00:14.636Z"
     },
     "skill:openai-openai-agents-python-code-change-verification": {
-      "hash": "ed5b2ea93d6f9d63",
-      "summary_zh": "这是针对OpenAI Agents Python项目的自动校验工具，只要代码、测试或构建逻辑有改动就自动触发强制检查，防止改出bug，适合代码提交与CI场景。",
-      "translated_at": "2026-05-19T23:00:22.697Z"
+      "hash": "121b8162f8df0666",
+      "summary_zh": "用于 SDK 代码变更审核通过后的最终校验，自动执行格式化、代码检查、类型检查和测试，适合提交前确保改动质量。",
+      "translated_at": "2026-09-05T13:56:15.803Z"
     },
     "skill:openai-openai-agents-python-credit-note-fixer": {
       "hash": "aac5f4d0a9d014e5",
@@ -8528,19 +8528,19 @@
       "translated_at": "2026-05-19T23:00:48.177Z"
     },
     "skill:openai-openai-agents-python-docs-sync": {
-      "hash": "631ca2e03c67a6d9",
-      "summary_zh": "它能对比代码找出遗漏或过时的英文文档，适合审查文档覆盖率、让文档与代码保持同步或规划文档更新，修改前会先出报告让你确认。",
-      "translated_at": "2026-05-19T23:00:56.828Z"
+      "hash": "7d0e51436428a537",
+      "summary_zh": "用于根据实现范围审查或更新英文 SDK 文档，确保文档内容与实际功能保持一致。",
+      "translated_at": "2026-09-05T13:56:21.349Z"
     },
     "skill:openai-openai-agents-python-final-release-review": {
-      "hash": "8da96f3037f93e4d",
-      "summary_zh": "用于在发布前对比目标版本与上一远程标签，检查兼容性、回归和文档覆盖，判断是否满足发布条件。",
-      "translated_at": "2026-08-08T01:18:42.483Z"
+      "hash": "66ffeabecd1392e3",
+      "summary_zh": "用于对比 Python SDK 候选版本或发布计划与上一版本，识别发布风险并给出上线或拦截建议。",
+      "translated_at": "2026-09-05T13:56:25.410Z"
     },
     "skill:openai-openai-agents-python-openai-knowledge": {
-      "hash": "9cfb82d303771010",
-      "summary_zh": "它是 OpenAI 接口的权威知识库，能帮你解决开发时查不到最新官方参数、示例和限制说明的问题，适合需要准确对接 API 或排查接口异常的场景。",
-      "translated_at": "2026-05-19T23:01:17.316Z"
+      "hash": "394dcb8f589435e4",
+      "summary_zh": "用于检索权威的 OpenAI API 与平台文档，为集成开发或技术判断提供最新、可靠的外部依据。",
+      "translated_at": "2026-09-05T13:57:20.624Z"
     },
     "skill:openai-openai-agents-python-playwright": {
       "hash": "16634ee6badbfc2a",
@@ -8553,9 +8553,9 @@
       "translated_at": "2026-08-10T09:58:42.190Z"
     },
     "skill:openai-openai-agents-python-implementation-strategy": {
-      "hash": "c2b9b5f163aa4931",
-      "summary_zh": "一套运行时与 API 变更的兼容性决策方法，帮助开发者在实现和评审时判断该修补、重设计还是拒绝不支持的场景。",
-      "translated_at": "2026-08-04T04:03:11.143Z"
+      "hash": "fad87f02a9df707e",
+      "summary_zh": "用于明确 SDK 行为变更的支持范围与兼容性边界，并在反馈推动设计调整时及时重新评估。",
+      "translated_at": "2026-09-05T13:56:57.003Z"
     },
     "skill:openai-openai-agents-python-prior-auth-packet-builder": {
       "hash": "232a0cb5caab0c5b",
@@ -8563,9 +8563,9 @@
       "translated_at": "2026-05-19T23:02:03.907Z"
     },
     "skill:openai-openai-agents-python-test-coverage-improver": {
-      "hash": "cd9eafdec4fa3720",
-      "summary_zh": "它能自动分析代码覆盖率报告，找出低覆盖文件并推荐高价值的测试，经确认后直接生成测试代码，适合需要快速补齐测试用例、提升项目代码质量的场景。",
-      "translated_at": "2026-05-19T23:02:10.198Z"
+      "hash": "812fa76fa2fc3c3f",
+      "summary_zh": "用于审计 Python SDK 的测试覆盖率并修复已发现的覆盖缺口，适合处理覆盖率指标回退问题，不用于日常补充测试。",
+      "translated_at": "2026-09-05T13:57:52.644Z"
     },
     "skill:openshift-rosa-rosa-aws-context": {
       "hash": "195c7693784b4084",
@@ -9673,9 +9673,9 @@
       "translated_at": "2026-05-20T00:55:19.040Z"
     },
     "bundle:sickn33-antigravity-awesome-skills": {
-      "hash": "ecbeec05de1c117f",
-      "summary_zh": "这是一套面向 AI 开发与产品交付的综合技能库，覆盖需求分析、安全审计、实验增长、内容生成和 Web 构建，帮助团队从规划到上线高效完成复杂项目。",
-      "translated_at": "2026-09-05T05:32:50.867Z"
+      "hash": "bf7567a8b8a6cdf7",
+      "summary_zh": "这是一套覆盖需求分析、开发设计、安全测试与交付运营的 AI 技能合集，帮助团队把项目从想法高效推进到落地。",
+      "translated_at": "2026-09-05T13:53:52.493Z"
     },
     "bundle:getsentry-sentry": {
       "hash": "4a6fa27e6c4540a4",
@@ -9713,9 +9713,9 @@
       "translated_at": "2026-06-05T16:53:38.210Z"
     },
     "bundle:openai-openai-agents-python": {
-      "hash": "fc59c8ed8033a0ad",
-      "summary_zh": "面向 OpenAI Agents Python 的全流程研发合集，串联变更规划、实现验证、文档同步与发布审查，提升交付质量。",
-      "translated_at": "2026-08-21T07:03:52.034Z"
+      "hash": "a56edec1cb0747ff",
+      "summary_zh": "这套工具集覆盖 OpenAI Agents Python SDK 从需求分析、实现测试到文档同步和发布审核的完整研发流程。",
+      "translated_at": "2026-09-05T13:53:26.440Z"
     },
     "bundle:nomenak-superclaude": {
       "hash": "e0bd9eeeb70c896e",
@@ -17443,9 +17443,9 @@
       "translated_at": "2026-08-03T04:59:41.029Z"
     },
     "bundle:levnikolaevich-claude-code-skills": {
-      "hash": "0ed747c79ff0aec0",
-      "summary_zh": "面向 Claude Code 的全流程研发技能合集，将需求拆解、规划执行、交付评审和质量审计串成可复用的自动化工作流。",
-      "translated_at": "2026-08-07T01:50:33.006Z"
+      "hash": "6b015eab0f7d369b",
+      "summary_zh": "这套技能合集面向软件项目全流程管理，串联需求拆解、规划评审、开发执行、质量审计与交付复盘，让复杂工作可追踪、可验证、可持续迭代。",
+      "translated_at": "2026-09-05T13:53:27.169Z"
     },
     "bundle:tzachbon-smart-ralph": {
       "hash": "40a977397b2ab111",
@@ -23718,14 +23718,14 @@
       "translated_at": "2026-08-03T23:01:48.385Z"
     },
     "skill:levnikolaevich-claude-code-skills-ln-12-delivery-reviewer": {
-      "hash": "a50b5028626f93c4",
-      "summary_zh": "用于审查已完成的限定范围变更，检查相关运行路径和接口契约，发现变更引入的缺陷并判断是否具备交付条件。",
-      "translated_at": "2026-08-03T23:01:48.621Z"
+      "hash": "fe5b5c2bd6eca791",
+      "summary_zh": "用于检查已完成变更是否引入回归、遗漏验收要求或存在发布风险，适合交付前的针对性评审，不用于全库审计或修复。",
+      "translated_at": "2026-09-05T13:53:56.593Z"
     },
     "skill:levnikolaevich-claude-code-skills-ln-11-plan-reviewer": {
-      "hash": "2fe1b9398aa67ae1",
-      "summary_zh": "一款在执行前核查实施计划的工具，结合代码仓库证据和权威指南，提前发现遗漏与风险。",
-      "translated_at": "2026-08-03T23:01:50.342Z"
+      "hash": "590388fcfc2dbcc6",
+      "summary_zh": "在执行前根据仓库证据审查实现计划，发现遗漏的决策与风险，适合用于降低方案落地前的不确定性。",
+      "translated_at": "2026-09-05T13:54:06.953Z"
     },
     "skill:levnikolaevich-claude-code-skills-ln-201-opportunity-discoverer": {
       "hash": "1bad1f9667870c6e",
@@ -23738,14 +23738,14 @@
       "translated_at": "2026-08-03T23:01:55.243Z"
     },
     "skill:levnikolaevich-claude-code-skills-ln-21-documentation-auditor": {
-      "hash": "28ca451539370125",
-      "summary_zh": "用于审查文档和代码注释的结构、覆盖度、准确性与可维护性，适合评估文档可信度，不适用于代码、测试或架构审计。",
-      "translated_at": "2026-08-03T23:01:55.865Z"
+      "hash": "a05682a8b78e1be6",
+      "summary_zh": "用于审查文档和代码注释中的可信声明、内容覆盖度与可发现性，适合提升项目文档质量，不涉及代码、测试或架构审计。",
+      "translated_at": "2026-09-05T13:54:21.558Z"
     },
     "skill:levnikolaevich-claude-code-skills-ln-22-codebase-auditor": {
-      "hash": "eb13f085bde0cd5d",
-      "summary_zh": "一款通用代码库健康审计工具，适合全面排查安全、交付、维护、依赖、诊断、并发和生命周期问题。",
-      "translated_at": "2026-08-03T23:01:56.934Z"
+      "hash": "055b88754cf0a8e0",
+      "summary_zh": "用于在没有专项审计时，全面检查代码库的健康度、安全性、交付能力与可维护性，适合跨领域代码质量评估。",
+      "translated_at": "2026-09-05T13:54:26.348Z"
     },
     "skill:levnikolaevich-claude-code-skills-ln-221-story-creator": {
       "hash": "999021a1d20904c7",
@@ -23768,14 +23768,14 @@
       "translated_at": "2026-08-03T23:02:01.918Z"
     },
     "skill:levnikolaevich-claude-code-skills-ln-23-test-suite-auditor": {
-      "hash": "208d31530f13c190",
-      "summary_zh": "用于审计现有测试套件能否长期、可靠地验证关键行为，适合测试信心不足或生命周期管理不明确的场景。",
-      "translated_at": "2026-08-07T01:52:49.467Z"
+      "hash": "f3d9e0fbb28a4a4b",
+      "summary_zh": "用于审查现有测试是否覆盖关键场景、断言是否可信且具备长期维护价值，适合系统性评估测试质量，不负责编写测试或单次交付验收。",
+      "translated_at": "2026-09-05T13:54:10.652Z"
     },
     "skill:levnikolaevich-claude-code-skills-ln-24-architecture-auditor": {
-      "hash": "a15c93624fea0a6a",
-      "summary_zh": "一款面向已落地系统的架构审计工具，用于发现结构约束、依赖关系和配置归属问题，不适合文档、图表或方案评审。",
-      "translated_at": "2026-08-03T23:02:04.864Z"
+      "hash": "e1023d8c0122bb5d",
+      "summary_zh": "用于审查已实现系统的架构、边界、依赖关系和配置归属，适合发现代码落地后的结构问题，不用于记录现状或评审方案。",
+      "translated_at": "2026-09-05T13:54:24.684Z"
     },
     "skill:levnikolaevich-claude-code-skills-ln-300-task-coordinator": {
       "hash": "f1ff0316fa6afcee",
@@ -23783,9 +23783,9 @@
       "translated_at": "2026-08-03T23:02:05.452Z"
     },
     "skill:levnikolaevich-claude-code-skills-ln-25-persistence-auditor": {
-      "hash": "92f74749d2370520",
-      "summary_zh": "面向持久化层的审计工具，用于检查查询、事务、数据路径性能和资源生命周期，适合排查数据正确性或扩展性风险。",
-      "translated_at": "2026-08-03T23:02:05.638Z"
+      "hash": "8fd29299cc3c5c14",
+      "summary_zh": "用于审计查询、事务、数据路径开销及持久化资源生命周期，适合定位持久化层问题，不用于通用性能调优。",
+      "translated_at": "2026-09-05T13:54:48.518Z"
     },
     "skill:levnikolaevich-claude-code-skills-ln-301-task-creator": {
       "hash": "9d4f19de09707b03",
@@ -23798,9 +23798,9 @@
       "translated_at": "2026-08-03T23:02:09.160Z"
     },
     "skill:levnikolaevich-claude-code-skills-ln-31-performance-optimizer": {
-      "hash": "673196b77d3650bc",
-      "summary_zh": "一款基于性能剖析和取舍实验的优化工具，适合改善已知的延迟、吞吐量、内存、CPU或 I/O 瓶颈。",
-      "translated_at": "2026-08-03T23:02:11.762Z"
+      "hash": "770c2e41a9031680",
+      "summary_zh": "用于定位并优化经过测量的延迟、吞吐量、CPU、内存或 I/O 性能问题，适合有明确数据依据的性能改进场景。",
+      "translated_at": "2026-09-05T13:54:28.461Z"
     },
     "skill:levnikolaevich-claude-code-skills-ln-311-review-research-worker": {
       "hash": "6ef2ddb54463b93e",
@@ -23843,14 +23843,14 @@
       "translated_at": "2026-08-04T00:10:46.554Z"
     },
     "skill:levnikolaevich-claude-code-skills-ln-34-benchmark-comparator": {
-      "hash": "90612a4ef90e578a",
-      "summary_zh": "通过可复现的 A/B 负载、正确性校验和受控测量比较工具或实现，适合选型评估，不适用于优化已知瓶颈。",
-      "translated_at": "2026-08-04T00:10:48.681Z"
+      "hash": "a7cef041e5120725",
+      "summary_zh": "一个用于在受控工作负载下比较工具或实现的基准测试工具，并结合独立正确性证据，适合严谨评估性能与可靠性。",
+      "translated_at": "2026-09-05T13:54:59.629Z"
     },
     "skill:levnikolaevich-claude-code-skills-ln-33-code-modernizer": {
-      "hash": "284834ca951dcc03",
-      "summary_zh": "面向特定功能的代码现代化工具，用于淘汰过时的自定义机制，降低包体积和维护成本，适合收益明确的改造场景。",
-      "translated_at": "2026-08-04T00:10:50.726Z"
+      "hash": "bc3b8243a553bff2",
+      "summary_zh": "用于在明确边界内改造代码，降低已验证的维护、工作流或产物成本，适合处理非例行升级和性能调优之外的现代化需求。",
+      "translated_at": "2026-09-05T13:54:39.592Z"
     },
     "skill:levnikolaevich-claude-code-skills-ln-400-story-executor": {
       "hash": "b3c0f7073b0e445a",
@@ -23883,9 +23883,9 @@
       "translated_at": "2026-08-04T00:10:57.422Z"
     },
     "skill:levnikolaevich-claude-code-skills-ln-42-acceptance-test-builder": {
-      "hash": "cdd6c88c14e7a249",
-      "summary_zh": "一款用项目原生工具维护和运行限定范围验收测试的工具，适合需要调整可执行验收证据的场景，不用于审计或修复产品。",
-      "translated_at": "2026-08-07T01:52:54.896Z"
+      "hash": "c1697d66429ccf98",
+      "summary_zh": "用于构建、更新、整合或废弃范围明确的验收测试，并记录执行证据，适合管理测试生命周期和验证结果，不用于修改产品代码或审计。",
+      "translated_at": "2026-09-05T13:55:15.748Z"
     },
     "skill:levnikolaevich-claude-code-skills-ln-500-story-quality-gate": {
       "hash": "c5696d1033a2f4b2",
@@ -23893,9 +23893,9 @@
       "translated_at": "2026-08-04T00:10:59.528Z"
     },
     "skill:levnikolaevich-claude-code-skills-ln-51-opportunity-evaluator": {
-      "hash": "04fd79a1848ad056",
-      "summary_zh": "用于评估新产品方向的决策工具，综合需求、获客、竞争、经济性和验证证据，适合投入前判断机会，不用于排期或实施规划。",
-      "translated_at": "2026-08-04T00:11:00.030Z"
+      "hash": "476c9a8c70ffcb56",
+      "summary_zh": "用于评估新产品机会的分析工具，综合判断需求、渠道、竞争和经济性，适合立项前筛选，不用于已承诺需求或实施规划。",
+      "translated_at": "2026-09-05T13:55:58.435Z"
     },
     "skill:levnikolaevich-claude-code-skills-ln-511-code-quality-checker": {
       "hash": "bf4a530bf702d6ca",
@@ -23953,9 +23953,9 @@
       "translated_at": "2026-08-04T00:11:13.642Z"
     },
     "skill:levnikolaevich-claude-code-skills-ln-61-skill-reviewer": {
-      "hash": "005734bc76304597",
-      "summary_zh": "用于发布前审查独立技能及其分发渠道配置，判断是否达到上线条件，不适合评审产品代码或实施方案。",
-      "translated_at": "2026-08-04T00:11:14.782Z"
+      "hash": "4cd686a6a564819c",
+      "summary_zh": "用于审查技能的质量、触发边界和发布准备度，适合技能审计或上线前评审，不用于产品代码或实现方案评审。",
+      "translated_at": "2026-09-05T13:55:38.936Z"
     },
     "skill:levnikolaevich-claude-code-skills-ln-612-semantic-content-auditor": {
       "hash": "617d6836c0714b76",
@@ -23968,9 +23968,9 @@
       "translated_at": "2026-08-04T00:11:17.505Z"
     },
     "skill:levnikolaevich-claude-code-skills-ln-62-repository-publisher": {
-      "hash": "d21dd5b2181b28f5",
-      "summary_zh": "用于校验、提交、推送并远程确认已批准的仓库变更，适合代码发布，不适用于版本发行、包发布或公告。",
-      "translated_at": "2026-08-04T00:11:20.334Z"
+      "hash": "b917fc5da629bb5c",
+      "summary_zh": "用于提交、推送并远程验证已授权的代码仓库变更，适合自动化管理受控代码修改，不用于发布版本、软件包或公告。",
+      "translated_at": "2026-09-05T13:55:42.057Z"
     },
     "skill:levnikolaevich-claude-code-skills-ln-614-docs-fact-checker": {
       "hash": "c3c2eec55fda6831",
@@ -24028,9 +24028,9 @@
       "translated_at": "2026-08-04T00:11:33.902Z"
     },
     "skill:levnikolaevich-claude-code-skills-ln-63-release-publisher": {
-      "hash": "f30d729f2b55a2be",
-      "summary_zh": "根据仓库内容准备并发布带标签的 GitHub Release，适合明确的版本发布请求，不用于日常提交、包发布或社区动态。",
-      "translated_at": "2026-08-04T00:11:33.915Z"
+      "hash": "4443b087c3bae30b",
+      "summary_zh": "用于准备并发布指定标签的 GitHub 正式版本，适合需要严格控制发布时机的版本交付流程。",
+      "translated_at": "2026-09-05T13:55:44.121Z"
     },
     "skill:levnikolaevich-claude-code-skills-ln-630-test-auditor": {
       "hash": "0e8089ecfdaaf9eb",
@@ -24068,9 +24068,9 @@
       "translated_at": "2026-08-04T00:11:41.276Z"
     },
     "skill:levnikolaevich-claude-code-skills-ln-64-community-announcer": {
-      "hash": "ff19475988869a73",
-      "summary_zh": "一款用于起草并发布经事实核查的 GitHub Discussions 公告工具，适合发布版本动态、项目更新和新闻。",
-      "translated_at": "2026-08-04T00:11:43.918Z"
+      "hash": "e390044494f510a5",
+      "summary_zh": "用于起草或发布经过事实核查的 GitHub Discussions 项目更新公告，适合规范同步进展，不用于创建发布版本或回复 Issue。",
+      "translated_at": "2026-09-05T13:56:13.117Z"
     },
     "skill:levnikolaevich-claude-code-skills-ln-638-test-oracle-effectiveness-auditor": {
       "hash": "002521578cb0c280",
@@ -24098,34 +24098,34 @@
       "translated_at": "2026-08-04T00:11:49.125Z"
     },
     "skill:levnikolaevich-claude-code-skills-ln-73-system-design-proposal-builder": {
-      "hash": "537893195c6ec810",
-      "summary_zh": "根据需求和约束生成可直接决策的目标系统设计，适合在制定实施计划前明确技术方案。",
-      "translated_at": "2026-08-04T00:11:51.557Z"
+      "hash": "e1963820f1ee8691",
+      "summary_zh": "根据需求在制定实施计划前创建目标系统设计，适合明确架构方案，不用于需求基线、审计或代码修改。",
+      "translated_at": "2026-09-05T13:56:02.503Z"
     },
     "skill:levnikolaevich-claude-code-skills-ln-71-system-design-baseline-builder": {
-      "hash": "e0e7167979dacb34",
-      "summary_zh": "用于梳理项目架构驱动因素与约束的基线工具，适合在设计或规划开始前统一认知。",
-      "translated_at": "2026-08-04T00:11:51.646Z"
+      "hash": "bbfa1499aa28f405",
+      "summary_zh": "在设计开始前生成驱动架构的需求与约束，适合建立系统设计基线，不用于目标设计、方案评审或实现审计。",
+      "translated_at": "2026-09-05T13:55:57.247Z"
     },
     "skill:levnikolaevich-claude-code-skills-ln-74-architecture-decision-recorder": {
-      "hash": "897b3c15b6a71186",
-      "summary_zh": "用于记录单项重要架构决策及其背景、备选方案、权衡和影响，适合沉淀关键选择，不用于整体设计或实施。",
-      "translated_at": "2026-08-04T00:11:53.984Z"
+      "hash": "01b7bad248597c44",
+      "summary_zh": "记录单个重要架构决策、备选方案及其后果，适合沉淀关键技术取舍，不用于系统设计、审计或实现记录。",
+      "translated_at": "2026-09-05T13:56:10.787Z"
     },
     "skill:levnikolaevich-claude-code-skills-ln-75-architecture-diagram-builder": {
-      "hash": "db53554415daf4ca",
-      "summary_zh": "一款基于现有证据绘制当前或目标架构图的工具，适合以架构图为核心交付物的场景。",
-      "translated_at": "2026-08-04T00:11:57.841Z"
+      "hash": "4ec47a18de6f9881",
+      "summary_zh": "用于绘制当前或目标架构图，适合明确系统结构和演进方向，不适用于界面设计、架构审计或凭空构建设计。",
+      "translated_at": "2026-09-05T13:56:13.965Z"
     },
     "skill:levnikolaevich-claude-code-skills-ln-76-architecture-migration-planner": {
-      "hash": "451b24cb9d3d9b10",
-      "summary_zh": "用于规划可逆的架构迁移，覆盖兼容、数据搬迁、灰度发布和回滚，适合从现有架构过渡到目标架构。",
-      "translated_at": "2026-08-04T00:11:58.896Z"
+      "hash": "4e2d1aa4230d6e82",
+      "summary_zh": "用于规划架构迁移方案，涵盖兼容性、数据迁移、发布与回滚，适合制定迁移路线，不负责实际执行。",
+      "translated_at": "2026-09-05T13:56:28.635Z"
     },
     "skill:levnikolaevich-claude-code-skills-ln-72-current-architecture-documenter": {
-      "hash": "069423d2033f17a3",
-      "summary_zh": "从代码仓库证据梳理并记录现有系统架构，适合新人上手或建立迁移基线，不用于目标设计、审计结论或代码修改。",
-      "translated_at": "2026-08-04T00:11:59.662Z"
+      "hash": "9c8bad72adbfa898",
+      "summary_zh": "根据代码仓库证据整理已实现的系统架构，适合新人入职了解现状或为迁移建立基线，不用于目标设计或审计结论。",
+      "translated_at": "2026-09-05T13:56:12.842Z"
     },
     "skill:lum1104-understand-anything-understand-figma": {
       "hash": "bf273d20f7939985",
@@ -25488,9 +25488,9 @@
       "translated_at": "2026-08-04T04:03:08.262Z"
     },
     "skill:openai-openai-agents-python-implementation-final-review": {
-      "hash": "483967cbc2cb328a",
-      "summary_zh": "用于开发收尾前对完整变更进行分级独立审查，排查契约、安全、复杂度和测试风险，适合行为改动后的最终验收。",
-      "translated_at": "2026-08-21T07:03:58.271Z"
+      "hash": "7e76b259de7a5d32",
+      "summary_zh": "用于在最终验证前独立审查已完成的代码改动，适合仓库要求复核或用户明确提出检查需求的场景。",
+      "translated_at": "2026-09-05T13:56:41.390Z"
     },
     "skill:openai-openai-agents-python-integration-tests": {
       "hash": "75bcba0d8b2dc35c",
@@ -25498,14 +25498,14 @@
       "translated_at": "2026-08-04T04:03:11.888Z"
     },
     "skill:openai-openai-agents-python-maintainer-review": {
-      "hash": "427eb5bf0a406bcd",
-      "summary_zh": "这是一个面向开源维护者的评审助手，用于核查 Issue 或 PR 的实际价值与仓库适配度，并给出处置建议和可直接发布的回复。",
-      "translated_at": "2026-08-21T07:03:58.211Z"
+      "hash": "471ab2e3c24b449f",
+      "summary_zh": "用于桌面审查 GitHub Issue 或 PR，评估需求依据、替代方案、实现正确性及维护者应采取的行动。",
+      "translated_at": "2026-09-05T13:56:58.502Z"
     },
     "skill:openai-openai-agents-python-sensitive-logging-audit": {
-      "hash": "6b4d9cdd401013b8",
-      "summary_zh": "用于审计并修复 Python 运行日志中的敏感数据泄露，适合排查异常、警告、调用链等诊断信息是否残留用户数据。",
-      "translated_at": "2026-08-04T04:03:16.224Z"
+      "hash": "308827f6653346fa",
+      "summary_zh": "用于审计或修复 Python SDK 的诊断信息、异常、日志和遥测中的敏感数据泄露，适合提升数据安全与隐私合规性。",
+      "translated_at": "2026-09-05T13:57:46.469Z"
     },
     "skill:peterkrueck-claude-code-development-kit-context7-guidance": {
       "hash": "e218f257c1c9d259",
@@ -26458,9 +26458,9 @@
       "translated_at": "2026-08-04T10:23:00.012Z"
     },
     "skill:sickn33-antigravity-awesome-skills-ab-testing": {
-      "hash": "ae298dad37034813",
-      "summary_zh": "用于规划、设计和实施 A/B 测试及增长实验，适合验证产品改动、文案版本或营销假设。",
-      "translated_at": "2026-08-04T10:23:00.586Z"
+      "hash": "c728af4c5d79ab50",
+      "summary_zh": "用于规划、设计和实施 A/B 测试与增长实验，帮助团队建立系统化的实验机制，验证方案效果并支持产品增长。",
+      "translated_at": "2026-09-05T13:58:00.576Z"
     },
     "skill:sickn33-antigravity-awesome-skills-accint-commitments": {
       "hash": "37ae971b0eccb7fb",
@@ -28583,9 +28583,9 @@
       "translated_at": "2026-08-18T23:58:00.872Z"
     },
     "skill:levnikolaevich-claude-code-skills-ln-35-surgical-change-implementer": {
-      "hash": "596525184a12095e",
-      "summary_zh": "一款用最小完整根因方案实施有限代码变更的工具，适合范围明确的交付，不用于规划、审查或升级优化。",
-      "translated_at": "2026-08-07T01:52:53.428Z"
+      "hash": "2130539df6d75e38",
+      "summary_zh": "用于按明确范围实施产品代码变更，以最小但完整的方案解决具体开发任务，适合直接编码落地，不用于规划、审查、审计、依赖升级或性能调优。",
+      "translated_at": "2026-09-05T13:54:54.035Z"
     },
     "skill:microsoft-skills-for-fabric-activator-cli": {
       "hash": "2a735811093d4a7a",
@@ -28918,9 +28918,9 @@
       "translated_at": "2026-08-08T19:19:38.485Z"
     },
     "bundle:sickn33-agentic-awesome-skills": {
-      "hash": "ffe211280e6dd1d9",
-      "summary_zh": "这套合集面向从需求分析、方案设计到开发测试、安全审计和交付的完整工作流，通过多领域 AI 技能协作提升复杂项目的研发效率与质量。",
-      "translated_at": "2026-09-05T05:33:23.874Z"
+      "hash": "7e58ea34d4a144ba",
+      "summary_zh": "这套技能合集面向 AI 辅助的软件与产品全流程，覆盖需求分析、开发设计、安全测试和交付，帮助团队把想法高效落地。",
+      "translated_at": "2026-09-05T13:53:13.086Z"
     },
     "preset:michaelliv-claude-quest": {
       "hash": "2b96eb738a703d14",
@@ -29018,9 +29018,9 @@
       "translated_at": "2026-08-08T19:20:07.362Z"
     },
     "skill:sickn33-agentic-awesome-skills-ab-testing": {
-      "hash": "ae298dad37034813",
-      "summary_zh": "用于规划、设计和实施 A/B 测试及增长实验，适合验证产品改动、文案变体或业务假设。",
-      "translated_at": "2026-08-08T19:20:08.894Z"
+      "hash": "c728af4c5d79ab50",
+      "summary_zh": "用于规划、设计和实施 A/B 测试与增长实验，适合验证产品、营销或运营方案，持续优化业务效果。",
+      "translated_at": "2026-09-05T13:57:56.694Z"
     },
     "skill:sickn33-agentic-awesome-skills-acceptance-orchestrator": {
       "hash": "0cc050d159ab5ac7",
@@ -29388,9 +29388,9 @@
       "translated_at": "2026-08-10T09:58:41.601Z"
     },
     "skill:openai-openai-agents-python-release-candidate-prep": {
-      "hash": "a59ec712385e86ac",
-      "summary_zh": "用于本地准备 Python 发布候选版的自动化流程，可校验发布条件、冻结 API、生成发布分支与评审文案，且不操作远程仓库。",
-      "translated_at": "2026-08-10T23:52:10.069Z"
+      "hash": "a341feeabc9ae723",
+      "summary_zh": "用于在独立工作树中准备指定版本的本地 Python SDK 发布候选版本，适合发布前验证与整理。",
+      "translated_at": "2026-09-05T13:57:27.547Z"
     },
     "skill:ethereum-ethereum-org-website-new-page": {
       "hash": "76dad04d419e6d94",
@@ -37712,8 +37712,8 @@
       "translated_at": "2026-08-15T13:29:06.961Z"
     },
     "content:earthtojake-text-to-cad-sdf": {
-      "hash": "51f3c1b4de5a1783",
-      "translated_at": "2026-08-15T13:29:36.585Z"
+      "hash": "2ba9eaed38b3cbba",
+      "translated_at": "2026-09-05T14:13:08.492Z"
     },
     "content:earthtojake-text-to-cad-sendcutsend": {
       "hash": "60a1243669bd200a",
@@ -39110,8 +39110,8 @@
       "translated_at": "2026-08-16T07:23:29.182Z"
     },
     "content:ganyuanran-aegis-first-principles-review": {
-      "hash": "cbe9797d1562ab7f",
-      "translated_at": "2026-09-02T23:13:39.363Z"
+      "hash": "6ca49ee3e0bd44e9",
+      "translated_at": "2026-09-05T14:18:55.944Z"
     },
     "content:ganyuanran-aegis-receiving-code-review": {
       "hash": "7003bc2c29925aca",
@@ -41800,9 +41800,9 @@
       "translated_at": "2026-08-18T13:54:30.631Z"
     },
     "skill:openai-openai-agents-python-examples-run-analysis": {
-      "hash": "3ebb903be6d3daea",
-      "summary_zh": "用于分析手动示例运行产生的日志和源码，核验成功案例并归类失败、跳过及环境限制，适合排查示例测试结果但不执行示例。",
-      "translated_at": "2026-08-18T13:54:31.746Z"
+      "hash": "f109a64850133ed2",
+      "summary_zh": "用于分析已完成的手动示例运行日志和源码，帮助排查结果与行为，适合无需执行或控制示例的复盘场景。",
+      "translated_at": "2026-09-05T13:56:24.051Z"
     },
     "skill:tjboudreaux-cc-thinking-skills-thinking-circle-of-competence": {
       "hash": "1ca3bc3182080c52",
@@ -44056,8 +44056,8 @@
       "translated_at": "2026-08-19T16:23:27.026Z"
     },
     "content:k-dense-ai-scientific-agent-skills-biopython": {
-      "hash": "81eab1bd7db60563",
-      "translated_at": "2026-08-19T16:23:45.646Z"
+      "hash": "a2ea6794fb2f4890",
+      "translated_at": "2026-09-05T14:24:36.815Z"
     },
     "content:k-dense-ai-scientific-agent-skills-bioservices": {
       "hash": "0c8a6a562edf8d35",
@@ -44076,16 +44076,16 @@
       "translated_at": "2026-09-04T16:20:29.907Z"
     },
     "content:k-dense-ai-scientific-agent-skills-citation-management": {
-      "hash": "e52459a2c78f6b51",
-      "translated_at": "2026-08-19T16:27:12.697Z"
+      "hash": "24b73d1d84e34900",
+      "translated_at": "2026-09-05T14:27:45.839Z"
     },
     "content:k-dense-ai-scientific-agent-skills-clinical-decision-support": {
       "hash": "721d67393c734faa",
       "translated_at": "2026-09-04T20:03:07.977Z"
     },
     "content:k-dense-ai-scientific-agent-skills-clinical-reports": {
-      "hash": "f1da8ce1a00f77c9",
-      "translated_at": "2026-08-19T16:28:36.597Z"
+      "hash": "2b7819fd95e35d8b",
+      "translated_at": "2026-09-05T14:29:12.779Z"
     },
     "content:k-dense-ai-scientific-agent-skills-cobrapy": {
       "hash": "1035a644835dda96",
@@ -44224,8 +44224,8 @@
       "translated_at": "2026-08-19T18:22:52.622Z"
     },
     "content:k-dense-ai-scientific-agent-skills-hypothesis-generation": {
-      "hash": "03988141652207b3",
-      "translated_at": "2026-08-19T18:23:24.394Z"
+      "hash": "8153fdc33e0a4cd0",
+      "translated_at": "2026-09-05T14:35:16.456Z"
     },
     "content:k-dense-ai-scientific-agent-skills-infographics": {
       "hash": "e1d8a7601c1d9421",
@@ -44248,8 +44248,8 @@
       "translated_at": "2026-08-19T18:27:50.985Z"
     },
     "content:k-dense-ai-scientific-agent-skills-labarchive-integration": {
-      "hash": "bbad0eb5ed60fe67",
-      "translated_at": "2026-08-19T18:27:55.089Z"
+      "hash": "2dbe25bc14be5e6e",
+      "translated_at": "2026-09-05T14:38:42.788Z"
     },
     "content:k-dense-ai-scientific-agent-skills-latchbio-integration": {
       "hash": "ea302dff7ee20b82",
@@ -54220,6 +54220,19 @@
       "hash": "473c8915c28f6c59",
       "summary_zh": "安装 zvec-grep（zg）并接入 Qwen Code，方便在编码时进行高效代码搜索。",
       "translated_at": "2026-09-05T05:33:49.351Z"
+    },
+    "skill:kbwo-ccmanager-ccmanager-config": {
+      "hash": "1f5a8175507d8e1f",
+      "summary_zh": "用于配置、检查和修复 ccmanager，方便切换代理 CLI、预设命令并自定义工作树、合并及审批等行为。",
+      "translated_at": "2026-09-05T13:54:02.241Z"
+    },
+    "content:kbwo-ccmanager-ccmanager-config": {
+      "hash": "cc020c8dcc7fbf81",
+      "translated_at": "2026-09-05T14:39:31.931Z"
+    },
+    "content:kenryu42-claude-code-safety-net-verify-cc-safety-net": {
+      "hash": "32bfc5f0dadfeffe",
+      "translated_at": "2026-09-05T14:42:12.829Z"
     }
   }
 }

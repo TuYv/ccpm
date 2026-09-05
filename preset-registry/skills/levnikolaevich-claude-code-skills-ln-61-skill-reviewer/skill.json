@@ -1,7 +1,7 @@
 {
   "id": "levnikolaevich-claude-code-skills-ln-61-skill-reviewer",
   "name": "ln-61-skill-reviewer",
-  "description": "Reviews standalone skills and their configured distribution surfaces before publication. Use for skill release readiness; not for product code or implementation-plan review.",
+  "description": "Reviews skill quality, trigger boundaries, and distribution readiness. Use for skill audits or release review; not product-code or implementation-plan review.",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/maintainer-suite/skills/ln-61-skill-reviewer/SKILL.md",
     "path": "plugins/maintainer-suite/skills/ln-61-skill-reviewer/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-09-05T10:05:55.095Z",
+    "discovered_at": "2026-09-05T13:45:47.740Z",
     "stars": 557,
     "language": "PowerShell",
-    "pushed_at": "2026-08-29T14:21:50Z",
+    "pushed_at": "2026-09-05T12:33:40Z",
     "license": "MIT"
   },
-  "summary_zh": "用于发布前审查独立技能及其分发渠道配置，判断是否达到上线条件，不适合评审产品代码或实施方案。"
+  "summary_zh": "用于审查技能的质量、触发边界和发布准备度，适合技能审计或上线前评审，不用于产品代码或实现方案评审。"
 }
