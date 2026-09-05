@@ -1,7 +1,7 @@
 {
   "id": "earthtojake-text-to-cad-urdf",
   "name": "urdf",
-  "description": "URDF robot description authoring and validation. Use when creating, editing, inspecting, validating, or debugging `.urdf` files, robot links, joints, limits, inertials, visual/collision geometry, mesh references, frame conventions, or robot-description artifacts. Use the SRDF skill for MoveIt2 semantic groups and IK/path-planning semantics; use the cad-viewer skill for local MoveIt2 server controls; use the CAD skill for STEP/STL/3MF/DXF/GLB outputs.",
+  "description": "URDF robot description authoring and validation. Use when creating, editing, inspecting, validating, or debugging `.urdf` files, robot links, joints, limits, inertials, visual/collision geometry, mesh references, frame conventions, or robot-description artifacts. Use the SRDF skill for MoveIt2 semantic groups and IK/path-planning semantics; use the CAD skill for STEP/STL/3MF/DXF/GLB outputs.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/earthtojake/text-to-cad/blob/main/skills/urdf/SKILL.md",
     "path": "skills/urdf/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-04T22:27:11.210Z",
-    "stars": 14337,
+    "discovered_at": "2026-09-05T01:03:07.839Z",
+    "stars": 14344,
     "language": "Python",
-    "pushed_at": "2026-09-04T22:22:00Z",
+    "pushed_at": "2026-09-05T00:52:22Z",
     "license": "MIT"
   },
-  "summary_zh": "用于编写、检查和调试机器人 URDF 描述文件，适合处理连杆、关节、惯性参数、碰撞模型及坐标系等问题。"
+  "summary_zh": "用于编写、检查和验证URDF机器人描述文件，适合调试机器人连杆、关节、惯性、几何模型、网格引用及坐标系等问题。"
 }

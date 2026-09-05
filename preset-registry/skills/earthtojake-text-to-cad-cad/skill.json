@@ -1,7 +1,7 @@
 {
   "id": "earthtojake-text-to-cad-cad",
   "name": "cad",
-  "description": "Create, modify, inspect, and validate STEP-first parametric CAD parts and assemblies. Use for natural-language CAD specs, reference images, 2D technical drawings, STEP/STP generation or direct inspection, Python CAD source, source-level joints, selector references, geometry facts, measurements, mating deltas, snapshots, and secondary STL/3MF/native GLB outputs from CAD geometry.",
+  "description": "Create, modify, inspect, and validate parametric CAD parts and assemblies authored as cadgen model scripts. Use for natural-language CAD specs, reference images, 2D technical drawings, STEP/STP generation or direct inspection, Python CAD source, source-level joints, selector references, geometry facts, measurements, mating deltas, snapshots, and STL/3MF/native GLB outputs from CAD geometry. Also covers project structure for multi-part CAD work - src/ for model scripts and shared code, format fol",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/earthtojake/text-to-cad/blob/main/skills/cad/SKILL.md",
     "path": "skills/cad/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-04T22:27:09.775Z",
-    "stars": 14337,
+    "discovered_at": "2026-09-05T01:03:06.733Z",
+    "stars": 14344,
     "language": "Python",
-    "pushed_at": "2026-09-04T22:22:00Z",
+    "pushed_at": "2026-09-05T00:52:22Z",
     "license": "MIT"
   },
-  "summary_zh": "一款以 STEP 为核心的参数化 CAD 工具，适合根据自然语言、参考图或工程图创建、修改和检验零件与装配体。"
+  "summary_zh": "用脚本创建、修改、检查和验证参数化 CAD 零件与装配体，适合根据自然语言、参考图或技术图纸生成模型及 STEP、STL 等工程文件。"
 }

@@ -1,7 +1,7 @@
 {
   "id": "earthtojake-text-to-cad-srdf",
   "name": "srdf",
-  "description": "MoveIt2 SRDF authoring, validation, and planning-semantics workflow. Use when creating, editing, inspecting, or validating `.srdf` files, MoveIt planning groups, virtual joints, passive joints, end effectors, group states, disabled collisions, URDF-paired planning semantics, or SRDF handoff for live review. Use the URDF skill for robot structure, the SDF skill for simulator descriptions, and the cad-viewer skill for rendering, live review links, and optional MoveIt2 controls.",
+  "description": "MoveIt2 SRDF authoring, validation, and planning-semantics workflow. Use when creating, editing, inspecting, or validating `.srdf` files, MoveIt planning groups, virtual joints, passive joints, end effectors, group states, disabled collisions, URDF-paired planning semantics, or SRDF handoff for live review. Use the URDF skill for robot structure, the SDF skill for simulator descriptions, and the cad-viewer skill for rendering and live review links.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/earthtojake/text-to-cad/blob/main/skills/srdf/SKILL.md",
     "path": "skills/srdf/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-04T22:27:10.831Z",
-    "stars": 14337,
+    "discovered_at": "2026-09-05T01:03:07.556Z",
+    "stars": 14344,
     "language": "Python",
-    "pushed_at": "2026-09-04T22:22:00Z",
+    "pushed_at": "2026-09-05T00:52:22Z",
     "license": "MIT"
   },
-  "summary_zh": "一套面向 MoveIt2 的 SRDF 编写与校验工具，适合配置关节、规划组、末端执行器和碰撞规则，审查机器人规划语义。"
+  "summary_zh": "用于创建、编辑和校验 MoveIt2 的 SRDF 文件及规划语义，适合配置规划组、虚拟关节、末端执行器等机器人运动规划场景。"
 }

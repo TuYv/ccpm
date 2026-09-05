@@ -1,7 +1,7 @@
 {
   "id": "earthtojake-text-to-cad-cad-viewer",
   "name": "cad-viewer",
-  "description": "Start CAD Viewer and return review links for explicit CAD, implicit CAD, and robot-description files. Use when visually reviewing `.step`, `.stp`, `.implicit.js`, `.implicit.mjs`, `.glb`, `.stl`, `.3mf`, `.dxf`, `.urdf`, `.srdf`, or `.sdf` files, especially when handed off from CAD, implicit-cad, URDF, SRDF, or SDF generation skills.",
+  "description": "Start CAD Viewer and return review links for CAD and robot-description files. Use when visually reviewing `.step`, `.stp`, `.glb`, `.stl`, `.3mf`, `.dxf`, `.urdf`, `.srdf`, or `.sdf` files, especially when handed off from CAD, URDF, SRDF, or SDF generation skills.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/earthtojake/text-to-cad/blob/main/skills/cad-viewer/SKILL.md",
     "path": "skills/cad-viewer/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-04T22:27:09.521Z",
-    "stars": 14337,
+    "discovered_at": "2026-09-05T01:03:06.617Z",
+    "stars": 14344,
     "language": "Python",
-    "pushed_at": "2026-09-04T22:22:00Z",
+    "pushed_at": "2026-09-05T00:52:22Z",
     "license": "MIT"
   },
-  "summary_zh": "用于启动 CAD 查看器并生成审阅链接，适合在线检查多种 CAD 模型及机器人描述文件。"
+  "summary_zh": "用于启动 CAD 查看器并生成审阅链接，方便在线检查 STEP、STL、GLB、URDF 等 CAD 与机器人描述文件。"
 }

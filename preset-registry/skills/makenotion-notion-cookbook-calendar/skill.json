@@ -1,0 +1,26 @@
+{
+  "id": "makenotion-notion-cookbook-calendar",
+  "name": "calendar",
+  "description": "Use when building an Apps workflow that reads calendars, finds meeting times or rooms, manages events, or creates and manages scheduling links through a calendar connection.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "makenotion",
+  "install_path": ".claude/skills/calendar/SKILL.md",
+  "source": {
+    "repo": "makenotion/notion-cookbook",
+    "url": "https://github.com/makenotion/notion-cookbook/blob/main/apps/templates/apps-default/.agents/skills/calendar/SKILL.md",
+    "path": "apps/templates/apps-default/.agents/skills/calendar/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-05T01:09:00.819Z",
+    "stars": 204,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-04T22:22:16Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于构建连接日历的应用工作流，帮助读取日程、查找会议时间和会议室、管理活动，并创建或维护预约链接。"
+}
