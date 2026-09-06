@@ -358,5 +358,8 @@ source-code or content cause, and the specific revision. Read
   compliance workflow.
 - [qa-and-delivery.md](references/qa-and-delivery.md): structural checks,
   PPTX-PDF-PNG rendering, PNG review, and delivery gate.
+- [scientific-visual-baseline.md](references/scientific-visual-baseline.md):
+  reusable research-deck tokens, evidence ladder, page archetypes, density
+  rules, and baseline QA requirements.
 - [install-and-runtime.md](references/install-and-runtime.md): Python and
   rendering dependencies.
