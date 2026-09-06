@@ -1,0 +1,26 @@
+{
+  "id": "chrisbanes-skills-release-kotlin-library",
+  "name": "release-kotlin-library",
+  "description": "Use when preparing, publishing, or checking readiness for a new Kotlin library version in a repository using gradle-maven-publish-plugin, including release changelog reconciliation, API snapshots, and publication verification.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "chrisbanes",
+  "install_path": ".claude/skills/release-kotlin-library/SKILL.md",
+  "source": {
+    "repo": "chrisbanes/skills",
+    "url": "https://github.com/chrisbanes/skills/blob/main/skills/release-kotlin-library/SKILL.md",
+    "path": "skills/release-kotlin-library/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-06T20:12:57.550Z",
+    "stars": 1016,
+    "language": "Python",
+    "pushed_at": "2026-09-06T18:20:43Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "用于基于 Gradle Maven Publish 插件发布 Kotlin 库新版本，检查 API 变更、整理更新日志并验证发布是否就绪。"
+}
