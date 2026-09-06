@@ -1,14 +1,14 @@
 {
   "id": "garrytan-gstack-browse",
   "name": "browse",
-  "description": "Fast headless browser for QA testing and site dogfooding. (gstack)",
+  "description": "Drive a real browser through Aside: open a page, read it, click through a flow, take screenshots, check console errors. (gstack)",
   "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
     "codex",
     "gemini"
   ],
-  "version": "1.1.0",
+  "version": "2.0.0",
   "author": "garrytan",
   "install_path": ".claude/skills/browse/SKILL.md",
   "source": {
@@ -16,11 +16,10 @@
     "url": "https://github.com/garrytan/gstack/blob/main/browse/SKILL.md",
     "path": "browse/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-06T14:25:35.876Z",
-    "stars": 131673,
+    "discovered_at": "2026-09-06T17:18:04.473Z",
+    "stars": 131721,
     "language": "TypeScript",
-    "pushed_at": "2026-09-06T07:52:33Z",
+    "pushed_at": "2026-09-06T15:54:25Z",
     "license": "MIT"
-  },
-  "summary_zh": "一款用于质量测试和网站内部试用的高速无头浏览器，适合自动验证页面功能与体验。"
+  }
 }

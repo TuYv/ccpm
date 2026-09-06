@@ -1,7 +1,7 @@
 {
   "id": "garrytan-gstack-benchmark",
   "name": "benchmark",
-  "description": "Performance regression detection using the browse daemon. (gstack)",
+  "description": "Performance regression detection. (gstack)",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/garrytan/gstack/blob/main/benchmark/SKILL.md",
     "path": "benchmark/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-06T14:25:35.706Z",
-    "stars": 131673,
+    "discovered_at": "2026-09-06T17:18:04.280Z",
+    "stars": 131721,
     "language": "TypeScript",
-    "pushed_at": "2026-09-06T07:52:33Z",
+    "pushed_at": "2026-09-06T15:54:25Z",
     "license": "MIT"
-  },
-  "summary_zh": "借助 browse 守护进程自动检测性能回退，适合在持续集成中发现版本更新导致的性能下降。"
+  }
 }

@@ -1,14 +1,14 @@
 {
   "id": "garrytan-gstack-scrape",
   "name": "scrape",
-  "description": "Pull data from a web page. (gstack)",
+  "description": "Pull data from a web page through the Aside browser — your real, already signed-in sessions. (gstack)",
   "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
     "codex",
     "gemini"
   ],
-  "version": "1.0.0",
+  "version": "2.0.0",
   "author": "garrytan",
   "install_path": ".claude/skills/scrape/SKILL.md",
   "source": {
@@ -16,11 +16,10 @@
     "url": "https://github.com/garrytan/gstack/blob/main/scrape/SKILL.md",
     "path": "scrape/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-06T14:25:42.952Z",
-    "stars": 131673,
+    "discovered_at": "2026-09-06T17:18:12.793Z",
+    "stars": 131721,
     "language": "TypeScript",
-    "pushed_at": "2026-09-06T07:52:33Z",
+    "pushed_at": "2026-09-06T15:54:25Z",
     "license": "MIT"
-  },
-  "summary_zh": "一个从网页中提取数据的工具，适合快速采集和整理页面内容。"
+  }
 }
