@@ -1,0 +1,25 @@
+{
+  "id": "ericosiu-ai-marketing-skills-video-analysis",
+  "name": "video-analysis",
+  "description": "Analyze YouTube videos or local footage using transcripts first, with silent video checks for demonstrations, delivery, editing, and clip boundaries. Use for video summaries, research, repurposing, or timestamped critiques.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ericosiu",
+  "install_path": ".claude/skills/video-analysis/SKILL.md",
+  "source": {
+    "repo": "ericosiu/ai-marketing-skills",
+    "url": "https://github.com/ericosiu/ai-marketing-skills/blob/main/video-analysis/SKILL.md",
+    "path": "video-analysis/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-06T22:24:23.309Z",
+    "stars": 3488,
+    "language": "Python",
+    "pushed_at": "2026-09-06T21:24:39Z",
+    "license": "MIT"
+  }
+}
