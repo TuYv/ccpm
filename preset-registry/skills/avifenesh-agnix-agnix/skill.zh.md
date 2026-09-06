@@ -1,28 +1,28 @@
 ---
 name: agnix
-description: "Use when user asks to 'lint agent configs', 'validate skills', 'check CLAUDE.md', 'validate hooks', 'lint MCP'. Validates agent configuration files against 454 rules."
+description: "Use when user asks to 'lint agent configs', 'validate skills', 'check CLAUDE.md', 'validate hooks', 'lint MCP'. Validates agent configuration files against 455 rules."
 allowed-tools: Bash(agnix:*), Bash(cargo:*), Read, Glob, Grep
 ---
 # agnix
 
-在智能体配置导致工作流中断之前对其进行 lint。验证 Claude Code、Cursor、GitHub Copilot 和 Codex CLI 中的 Skills、Hooks、MCP、Memory、Plugins。
+在代理配置破坏你的工作流之前对其进行 lint 检查。验证 Claude Code、Cursor、GitHub Copilot 和 Codex CLI 中的 Skills、Hooks、MCP、Memory、Plugins。
 
-## 使用时机
+## 何时使用
 
-当用户要求执行以下操作时调用：
-- “对我的智能体配置执行 lint”
-- “验证我的技能”
+当用户要求以下操作时调用：
+- “Lint 我的代理配置”
+- “验证我的 skills”
 - “检查我的 CLAUDE.md”
 - “验证 hooks”
-- “对 MCP 配置执行 lint”
-- “修复智能体配置问题”
+- “Lint MCP 配置”
+- “修复代理配置问题”
 
 ## 支持的文件
 
 | 文件类型 | 示例 |
 |-----------|----------|
 | Skills | `SKILL.md` |
-| Memory | `CLAUDE.md`、`AGENTS.md` |
+| Memory | `CLAUDE.md`, `AGENTS.md` |
 | Hooks | `.claude/settings.json` |
 | MCP | `*.mcp.json` |
 | Cursor | `.cursor/rules/*.mdc` |
@@ -47,7 +47,7 @@ cargo install agnix-cli
 agnix .
 ```
 
-### 3. 如果发现问题且请求使用 --fix
+### 3. 如果发现问题且请求了 --fix
 
 ```bash
 agnix --fix .
@@ -83,14 +83,14 @@ skills/review/SKILL.md:3:1 error: Invalid name [fixable]
 Found 1 error, 1 warning (2 fixable)
 ```
 
-## 常见问题及修复方法
+## 常见问题和修复方法
 
 | 问题 | 解决方案 |
 |-------|----------|
-| 无效的 skill 名称 | 使用小写字母和连字符：`my-skill` |
+| 无效的 skill 名称 | 使用带连字符的小写字母：`my-skill` |
 | 通用指令 | 删除“be helpful”、“be accurate” |
 | 缺少触发短语 | 在描述中添加“Use when...” |
-| 目录/名称不匹配 | 重命名目录，使其与 `name:` 字段匹配 |
+| 目录与名称不匹配 | 重命名目录，使其与 `name:` 字段匹配 |
 
 ## 链接
 
