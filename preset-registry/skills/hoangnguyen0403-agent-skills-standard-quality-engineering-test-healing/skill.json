@@ -1,0 +1,25 @@
+{
+  "id": "hoangnguyen0403-agent-skills-standard-quality-engineering-test-healing",
+  "name": "quality-engineering-test-healing",
+  "description": "Failure taxonomy and allowed/forbidden repairs for a failing E2E test. Use when a Playwright/Maestro/Detox/XCUITest/Espresso/Appium test fails and you must decide whether to repair the test or route to a real bug.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "HoangNguyen0403",
+  "install_path": ".claude/skills/quality-engineering-test-healing/SKILL.md",
+  "source": {
+    "repo": "HoangNguyen0403/agent-skills-standard",
+    "url": "https://github.com/HoangNguyen0403/agent-skills-standard/blob/develop/.agents/skills/quality-engineering/quality-engineering-test-healing/SKILL.md",
+    "path": ".agents/skills/quality-engineering/quality-engineering-test-healing/SKILL.md",
+    "branch": "develop",
+    "discovered_at": "2026-09-06T15:13:42.126Z",
+    "stars": 562,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-06T14:37:30Z",
+    "license": "MIT"
+  }
+}

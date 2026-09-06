@@ -1,0 +1,26 @@
+{
+  "id": "hoangnguyen0403-agent-skills-standard-quality-engineering-selector-stability",
+  "name": "quality-engineering-selector-stability",
+  "description": "Cross-stack selector and test-id policy for web and mobile automation. Use when writing or reviewing E2E/UI test locators, or adding data-testid/accessibility identifiers to components.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "HoangNguyen0403",
+  "install_path": ".claude/skills/quality-engineering-selector-stability/SKILL.md",
+  "source": {
+    "repo": "HoangNguyen0403/agent-skills-standard",
+    "url": "https://github.com/HoangNguyen0403/agent-skills-standard/blob/develop/.agents/skills/quality-engineering/quality-engineering-selector-stability/SKILL.md",
+    "path": ".agents/skills/quality-engineering/quality-engineering-selector-stability/SKILL.md",
+    "branch": "develop",
+    "discovered_at": "2026-09-06T15:13:41.933Z",
+    "stars": 562,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-06T14:37:30Z",
+    "license": "MIT"
+  },
+  "summary_zh": "为 Web 和移动端自动化测试制定稳定的选择器与测试标识规范，适合编写、评审 E2E/UI 定位器及为组件补充可访问性标识。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "hoangnguyen0403-agent-skills-standard-quality-engineering-test-plan-authoring",
+  "name": "quality-engineering-test-plan-authoring",
+  "description": "Turn acceptance criteria into an executable test plan (scenarios, seed, selector gaps) before generating E2E code. Use when ACs exist but no runnable test plan does yet.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "HoangNguyen0403",
+  "install_path": ".claude/skills/quality-engineering-test-plan-authoring/SKILL.md",
+  "source": {
+    "repo": "HoangNguyen0403/agent-skills-standard",
+    "url": "https://github.com/HoangNguyen0403/agent-skills-standard/blob/develop/.agents/skills/quality-engineering/quality-engineering-test-plan-authoring/SKILL.md",
+    "path": ".agents/skills/quality-engineering/quality-engineering-test-plan-authoring/SKILL.md",
+    "branch": "develop",
+    "discovered_at": "2026-09-06T15:13:42.266Z",
+    "stars": 562,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-06T14:37:30Z",
+    "license": "MIT"
+  },
+  "summary_zh": "将验收标准转化为可执行的测试计划，补充测试场景、数据准备和选择器缺口，适合编写端到端测试代码前使用。"
+}
