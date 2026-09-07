@@ -3,7 +3,7 @@ name: keep-the-why
 description: Extract and preserve the reasoning code cannot explain - decisions, rejected alternatives, workarounds, incidents, constraints - plus project setup and maintainer interviews. Not for what changed (see Keep a Changelog) - only why.
 license: MIT
 metadata:
-  version: "0.13.2"
+  version: "0.13.3"
   repository: "https://github.com/oliver-zehentleitner/keep-the-why"
   author: "Oliver Zehentleitner"
 ---
@@ -138,7 +138,7 @@ Before the actual write, decide ask-versus-write from two facts — was recordin
 
 ### 6. Maintain
 
-Update existing topics rather than accumulating new ones, resolve contradictions, mark superseded information instead of deleting it, split files once they get large. The same confirmation settings (rule 8) apply — `automatic` never permits silently deleting or replacing already-confirmed information with weaker evidence.
+Update existing topics rather than accumulating new ones, resolve contradictions, mark superseded information instead of deleting it, split files once they get large. A contradiction the check itself turns up — an active entry whose concrete claim the tree no longer supports — is surfaced, not settled: `Status: needs-review`, a `Verification: contradicted` line naming what contradicts it, or a question. The entry becomes `superseded` when a person re-checks it or a replacement decision is recorded, not because the agent's reading of the code says so. The same confirmation settings (rule 8) apply — `automatic` never permits silently deleting or replacing already-confirmed information with weaker evidence.
 
 ## Example: expected output
 

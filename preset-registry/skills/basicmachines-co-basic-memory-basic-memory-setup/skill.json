@@ -1,0 +1,25 @@
+{
+  "id": "basicmachines-co-basic-memory-basic-memory-setup",
+  "name": "basic-memory-setup",
+  "description": "Guide Basic Memory setup in Tau. Use when a user wants to install or configure the Tau memory extension, choose a memory destination or capture policy, verify connectivity, or troubleshoot setup. Check compatibility and obtain approval before installation, configuration changes, or test writes.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "basicmachines-co",
+  "install_path": ".claude/skills/basic-memory-setup/SKILL.md",
+  "source": {
+    "repo": "basicmachines-co/basic-memory",
+    "url": "https://github.com/basicmachines-co/basic-memory/blob/main/integrations/tau/skills/basic-memory-setup/SKILL.md",
+    "path": "integrations/tau/skills/basic-memory-setup/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-07T20:10:32.216Z",
+    "stars": 3884,
+    "language": "Python",
+    "pushed_at": "2026-09-07T20:09:20Z",
+    "license": "AGPL-3.0"
+  }
+}
