@@ -1,0 +1,25 @@
+{
+  "id": "basicmachines-co-basic-memory-basic-memory-pi",
+  "name": "basic-memory-pi",
+  "description": "Use Basic Memory from Pi for durable continuity. Capture checkpoints with bm_capture, recall prior Pi checkpoints with bm_recall, and consult bundled Basic Memory skill references for note/task structure without assuming direct Basic Memory MCP tool names are available.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "basicmachines-co",
+  "install_path": ".claude/skills/basic-memory-pi/SKILL.md",
+  "source": {
+    "repo": "basicmachines-co/basic-memory",
+    "url": "https://github.com/basicmachines-co/basic-memory/blob/main/integrations/pi/skills/basic-memory-pi/SKILL.md",
+    "path": "integrations/pi/skills/basic-memory-pi/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-08T01:29:37.414Z",
+    "stars": 3884,
+    "language": "Python",
+    "pushed_at": "2026-09-08T01:06:34Z",
+    "license": "AGPL-3.0"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "basicmachines-co-basic-memory-basic-memory-pi-setup",
+  "name": "basic-memory-pi-setup",
+  "description": "Set up Basic Memory for a Pi workspace. Use when Basic Memory is not configured, /bm-status shows no project, recall returns setup guidance, or the user asks to enable durable memory, choose CLI vs MCP, or configure automatic continuity.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "basicmachines-co",
+  "install_path": ".claude/skills/basic-memory-pi-setup/SKILL.md",
+  "source": {
+    "repo": "basicmachines-co/basic-memory",
+    "url": "https://github.com/basicmachines-co/basic-memory/blob/main/integrations/pi/skills/basic-memory-pi-setup/SKILL.md",
+    "path": "integrations/pi/skills/basic-memory-pi-setup/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-08T01:29:37.219Z",
+    "stars": 3884,
+    "language": "Python",
+    "pushed_at": "2026-09-08T01:06:34Z",
+    "license": "AGPL-3.0"
+  },
+  "summary_zh": "用于在树莓派工作区配置持久化记忆，解决项目未初始化、无法召回信息等问题，适合需要长期上下文和自动连续性的场景。"
+}
