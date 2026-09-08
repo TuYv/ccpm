@@ -1,0 +1,26 @@
+{
+  "id": "aeonfun-aeon-compute-resell",
+  "name": "compute-resell",
+  "description": "Autonomous compute-reselling agent on Surplus Intelligence - resells free or low-cost provider compute across Bankr, AWS Bedrock, and Google Vertex (GCP) as one skill. Reads the live market + your cost + your usage, auto-lists your models per enabled provider, and reactively prices each offer to win routing within a cost floor, cap, and health guardrails.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "aeonfun",
+  "install_path": ".claude/skills/compute-resell/SKILL.md",
+  "source": {
+    "repo": "aeonfun/aeon",
+    "url": "https://github.com/aeonfun/aeon/blob/main/skills/compute-resell/SKILL.md",
+    "path": "skills/compute-resell/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-08T19:47:49.813Z",
+    "stars": 718,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-08T17:43:55Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一个自动化算力转售代理，适合将闲置或低成本的多云模型算力按成本、市场和健康状态动态挂牌定价。"
+}
