@@ -1,8 +1,15 @@
+---
+name: autonomous-testing
+description: AI-driven testing agent that auto-discovers, generates, executes, evaluates, and fixes tests for any project type
+when-to-use: When setting up automated test generation or running an autonomous test-fix loop across Python, TypeScript, API, or web projects
+user-invocable: false
+effort: high
+---
 # 自主测试代理
 
 ## 概述
 
-一种由 AI 驱动的测试代理，可自动发现、生成、执行、评估并修复适用于任何项目类型的测试。其灵感来源于 edubites 自主测试运行器模式，并针对 Claude Bootstrap + Maggy 进行了泛化。
+一个由 AI 驱动的测试代理，可针对任意项目类型自动发现、生成、执行、评估和修复测试。其灵感来自 edubites 自主测试运行器模式，并针对 Claude Bootstrap + Maggy 进行了泛化。
 
 ## 流程
 
@@ -61,7 +68,7 @@ npx playwright test
 # Parse results → structured TestRun { pass/fail, coverage, duration, failures[] }
 ```
 
-## 阶段 4：评估 — AI 驱动的评估
+## 阶段 4：评估 — 由 AI 驱动的分析
 
 ```
 For each test failure:

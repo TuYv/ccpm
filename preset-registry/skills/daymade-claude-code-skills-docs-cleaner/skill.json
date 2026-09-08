@@ -1,7 +1,7 @@
 {
   "id": "daymade-claude-code-skills-docs-cleaner",
   "name": "docs-cleaner",
-  "description": ">- Consolidates redundant documentation while preserving all valuable content; keeps a doc set truthful after things change. Two modes. (1) POST-CHANGE GOVERNANCE — when code, scripts, config, env vars, ports, paths, deployment, auth, tests, or a documented procedure changed; also \"which docs are now wrong\", \"check docs for inconsistencies\", \"过时的命令/路径\", \"文档同步\". Use it even when the user mentions only the change and never the docs — updating them is part of the change, not optional cleanup. (2) C",
+  "description": ">- Consolidates redundant documentation while preserving all valuable content; keeps a doc set truthful after things change. Modes: (1) POST-CHANGE GOVERNANCE — when code, scripts, config, env vars, ports, paths, deployment, auth, tests, or a documented procedure changed; also \"which docs are now wrong\", \"check docs for inconsistencies\", \"过时的命令/路径\", \"文档同步\". Use it even when the user mentions only the change and never the docs — updating them is part of the change, not optional cleanup. (2) CONSO",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-docs/docs-cleaner/SKILL.md",
     "path": "daymade-docs/docs-cleaner/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-08T02:14:44.410Z",
-    "stars": 1384,
+    "discovered_at": "2026-09-08T07:00:13.868Z",
+    "stars": 1385,
     "language": "Python",
-    "pushed_at": "2026-09-07T23:26:11Z",
+    "pushed_at": "2026-09-08T06:46:31Z",
     "license": "MIT"
   },
-  "summary_zh": "一款文档治理工具，可合并重复内容，并在代码、配置或流程变更后排查和修正文档中的过时与不一致。"
+  "summary_zh": "用于合并重复文档、清理过时内容，适合代码或配置变更后同步文档、排查不一致。"
 }

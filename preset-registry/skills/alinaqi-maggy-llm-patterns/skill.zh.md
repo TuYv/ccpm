@@ -5,8 +5,7 @@ when-to-use: When building apps where LLMs handle core logic - classification, e
 user-invocable: false
 effort: medium
 ---
-# LLM 模式 Skill
-
+# LLM 模式技能
 
 适用于由 LLM 处理逻辑操作的 AI 优先应用。
 
@@ -14,19 +13,19 @@ effort: medium
 
 ## 核心原则
 
-**LLM 负责逻辑，代码负责基础设施。**
+**用 LLM 处理逻辑，用代码处理基础设施。**
 
 将 LLM 用于：
 - 分类、提取、摘要
-- 使用自然语言推理进行决策
+- 依赖自然语言推理的决策
 - 内容生成与转换
-- 在代码中实现容易变得脆弱的复杂条件逻辑
+- 用代码实现会很脆弱的复杂条件逻辑
 
 将传统代码用于：
-- 数据验证（Zod/Pydantic）
+- 数据校验（Zod/Pydantic）
 - API 路由和 HTTP 处理
 - 数据库操作
-- 身份验证/授权
+- 认证/授权
 - 编排和错误处理
 
 ---
@@ -62,7 +61,7 @@ project/
 
 ## LLM 客户端模式
 
-### 类型化 LLM 包装器
+### 类型化 LLM 封装
 ```typescript
 // core/llm/client.ts
 import Anthropic from '@anthropic-ai/sdk';
@@ -80,7 +79,7 @@ interface LLMCallOptions<T> {
 export async function llmCall<T>({
   prompt,
   schema,
-  model = 'claude-sonnet-4-20250514',
+  model = 'claude-sonnet-4-6',
   maxTokens = 1024,
 }: LLMCallOptions<T>): Promise<T> {
   const response = await client.messages.create({
@@ -139,7 +138,7 @@ ${ticket}`;
 }
 ```
 
-### Prompt 版本控制
+### Prompt 版本管理
 ```typescript
 // core/prompts/index.ts
 export const PROMPTS = {
@@ -210,7 +209,7 @@ describe('Classification Response Parsing', () => {
 });
 ```
 
-### 3. 评估测试（运行速度较慢，每晚在 CI 中运行）
+### 3. 评估测试（较慢，在 CI nightly 运行）
 ```typescript
 // tests/llm/evals/classify.eval.test.ts
 import { classifyTicket } from '../../../src/core/services/ticket';
@@ -242,7 +241,7 @@ describe('Classification Accuracy (Eval)', () => {
 
 ---
 
-## 用于 LLM 测试的 GitHub Actions
+## GitHub Actions 中的 LLM 测试
 
 ```yaml
 # .github/workflows/quality.yml (add to existing)
@@ -316,12 +315,12 @@ export async function llmCallWithMetrics<T>(
 ## LLM 反模式
 
 - ❌ 在业务逻辑中硬编码提示词 - 使用提示词模板
-- ❌ 不对 LLM 响应进行架构验证 - 始终使用 Zod
-- ❌ 在 CI 中使用实时 LLM 调用进行测试 - 在单元测试中使用模拟
-- ❌ 不跟踪成本 - 监控令牌使用量
-- ❌ 忽略延迟 - LLM 调用速度较慢，应针对异步场景进行设计
-- ❌ 没有 LLM 失败时的回退方案 - 处理超时和错误
-- ❌ 提示词没有版本控制 - 跟踪提示词变更
-- ❌ 没有评估套件 - 持续衡量准确性
-- ❌ 使用 LLM 处理确定性逻辑 - 使用代码进行验证、身份验证和数学计算
+- ❌ 对 LLM 响应没有模式验证 - 始终使用 Zod
+- ❌ 在 CI 中用真实 LLM 调用进行测试 - 单元测试使用模拟
+- ❌ 没有成本跟踪 - 监控 token 使用量
+- ❌ 忽略延迟 - LLM 调用很慢，设计为异步
+- ❌ 没有针对 LLM 失败的回退 - 处理超时和错误
+- ❌ 没有版本控制的提示词 - 跟踪提示词变更
+- ❌ 没有评估套件 - 持续衡量准确率
+- ❌ 用 LLM 处理确定性逻辑 - 用代码做校验、认证、数学计算
 - ❌ 巨大的单体提示词 - 组合更小、更聚焦的提示词
