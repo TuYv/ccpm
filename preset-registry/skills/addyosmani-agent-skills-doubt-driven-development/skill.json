@@ -1,7 +1,7 @@
 {
   "id": "addyosmani-agent-skills-doubt-driven-development",
   "name": "doubt-driven-development",
-  "description": "Subjects every non-trivial decision to a fresh-context adversarial review before it stands. Use when correctness matters more than speed, when working in unfamiliar code, when stakes are high (production, security-sensitive logic, irreversible operations), or any time a confident output would be cheaper to verify now than to debug later.",
+  "description": "Subjects every non-trivial decision to a fresh-context adversarial review before it stands. Use when you want every assumption cross-examined before proceeding, when stress-testing a plan for hidden failure modes, when correctness matters more than speed, when working in unfamiliar code, when stakes are high (production auth, security-sensitive logic, a high-stakes migration, irreversible operations), or any time a confident output would be cheaper to verify now than to debug later.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/addyosmani/agent-skills/blob/main/skills/doubt-driven-development/SKILL.md",
     "path": "skills/doubt-driven-development/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-08T06:16:19.830Z",
-    "stars": 92877,
+    "discovered_at": "2026-09-08T15:27:51.991Z",
+    "stars": 92962,
     "language": "JavaScript",
-    "pushed_at": "2026-09-06T07:43:58Z",
+    "pushed_at": "2026-09-08T07:21:56Z",
     "license": "MIT"
   },
-  "summary_zh": "它在重要决策落地前引入独立视角的对抗审查，适合求稳不求快的高风险场景，如生产环境、安全逻辑或不可逆操作，帮你提前验错把关，避免事后高昂的调试成本。"
+  "summary_zh": "通过独立的新上下文对复杂决策进行对抗式审查，主动挖掘隐藏风险，适合高风险操作、陌生代码和重视正确性胜过速度的场景。"
 }

@@ -1,0 +1,26 @@
+{
+  "id": "alinaqi-maggy-context-shunt",
+  "name": "context-shunt",
+  "description": "Offload large / multi-file reads to a cheap worker model so raw files never enter Claude's context (token savings)",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alinaqi",
+  "install_path": ".claude/skills/context-shunt/SKILL.md",
+  "source": {
+    "repo": "alinaqi/maggy",
+    "url": "https://github.com/alinaqi/maggy/blob/main/skills/context-shunt/SKILL.md",
+    "path": "skills/context-shunt/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-08T16:16:30.569Z",
+    "stars": 705,
+    "language": "Python",
+    "pushed_at": "2026-09-08T13:24:25Z",
+    "license": "MIT"
+  },
+  "summary_zh": "把大文件或多文件读取交给便宜的工作模型处理，避免原始内容进 Claude 上下文，省 token。"
+}

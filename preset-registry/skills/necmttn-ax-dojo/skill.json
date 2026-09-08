@@ -1,7 +1,7 @@
 {
   "id": "necmttn-ax-dojo",
   "name": "dojo",
-  "description": "Surplus-quota training loop over the ax graph - the agent burns the remaining 5h/7d plan-quota window on self-improvement: locking pending verdicts, filling briefs, backtesting routing classes, minting proposals, running worktree experiments, and drafting upstream issue reports. Triggers when the user says \"/dojo\", \"enter the dojo\", \"dojo time\", \"train overnight\", \"burn my surplus quota\", \"dream mode\" (legacy name), or invokes /loop /dojo. Requires ax (axctl) on PATH and the local SurrealDB runn",
+  "description": "Surplus-quota training loop over the ax graph - the agent burns the remaining 5h/7d plan-quota window on self-improvement: locking pending verdicts, filling briefs, backtesting routing classes, minting proposals, running worktree experiments, and drafting upstream issue reports. Triggers when the user says \\\"/dojo\\\", \\\"enter the dojo\\\", \\\"dojo time\\\", \\\"train overnight\\\", \\\"burn my surplus quota\\\", \\\"dream mode\\\" (legacy name), or invokes /loop /dojo. Requires ax (axctl) on PATH. ax uses embedde",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/Necmttn/ax/blob/main/skills/dojo/SKILL.md",
     "path": "skills/dojo/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-08T07:08:53.252Z",
+    "discovered_at": "2026-09-08T16:18:51.855Z",
     "stars": 105,
     "language": "TypeScript",
-    "pushed_at": "2026-09-06T04:17:03Z",
+    "pushed_at": "2026-09-08T15:30:30Z",
     "license": "AGPL-3.0"
   },
-  "summary_zh": "利用剩余套餐额度让智能体持续自我训练的自动循环，适合夜间批量补全任务、回测路由并验证改进方案。"
+  "summary_zh": "基于 ax 图谱的智能体自我训练循环，利用剩余配额进行回溯测试、实验迭代和方案沉淀，适合夜间无人值守优化。"
 }

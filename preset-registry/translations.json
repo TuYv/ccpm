@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-09-08T13:15:35.004Z",
+  "updated_at": "2026-09-08T17:09:11.595Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -2498,14 +2498,14 @@
       "translated_at": "2026-05-19T19:45:28.991Z"
     },
     "skill:addyosmani-agent-skills-debugging-and-error-recovery": {
-      "hash": "cc688d56a6149b50",
-      "summary_zh": "一套系统化的调试指南。遇到测试失败、构建报错或各种意外状况时，帮你告别瞎猜，按部就班地找出并修复根本原因。",
-      "translated_at": "2026-05-19T19:45:31.435Z"
+      "hash": "1e8ea96b8a5eaec4",
+      "summary_zh": "一套系统化定位根因的调试方法，适用于测试失败、构建中断、功能异常及突发错误的排查修复。",
+      "translated_at": "2026-09-08T16:20:54.218Z"
     },
     "skill:addyosmani-agent-skills-documentation-and-adrs": {
-      "hash": "32d21ed37fd1b657",
-      "summary_zh": "专门记录架构决策和项目文档的工具。在改API、发新功能或做架构调整时，帮你留下上下文背景，方便未来的工程师和AI代理快速看懂代码库。",
-      "translated_at": "2026-05-19T19:45:46.434Z"
+      "hash": "5f5d1517da83494f",
+      "summary_zh": "用于记录架构决策、设计取舍和重要背景，适合变更公共 API、发布功能或为后续开发保留关键上下文。",
+      "translated_at": "2026-09-08T16:20:57.680Z"
     },
     "skill:addyosmani-agent-skills-deprecation-and-migration": {
       "hash": "cbe8bdbc0a8ad304",
@@ -2518,19 +2518,19 @@
       "translated_at": "2026-08-03T08:52:48.114Z"
     },
     "skill:addyosmani-agent-skills-git-workflow-and-versioning": {
-      "hash": "5d3051fa87fb7556",
-      "summary_zh": "一套规范 Git 协作与版本管理的实践指南，适合处理代码提交、分支协作、冲突、PR、并行开发及版本发布。",
-      "translated_at": "2026-08-28T01:00:58.124Z"
+      "hash": "36184513d5b3ca75",
+      "summary_zh": "用于规范代码改动到发布的 Git 流程，适合分支协作、原子提交、PR 审查、冲突处理、版本发布与变更日志维护。",
+      "translated_at": "2026-09-08T16:20:56.689Z"
     },
     "skill:addyosmani-agent-skills-doubt-driven-development": {
-      "hash": "5bc848636d33bfa2",
-      "summary_zh": "它在重要决策落地前引入独立视角的对抗审查，适合求稳不求快的高风险场景，如生产环境、安全逻辑或不可逆操作，帮你提前验错把关，避免事后高昂的调试成本。",
-      "translated_at": "2026-05-19T19:46:15.537Z"
+      "hash": "c7a94ca359028f65",
+      "summary_zh": "通过独立的新上下文对复杂决策进行对抗式审查，主动挖掘隐藏风险，适合高风险操作、陌生代码和重视正确性胜过速度的场景。",
+      "translated_at": "2026-09-08T16:20:55.028Z"
     },
     "skill:addyosmani-agent-skills-incremental-implementation": {
-      "hash": "fb4bf8a6662a55ac",
-      "summary_zh": "帮你把大改动拆成小块逐步推进，适合跨多文件的功能开发，或者任务太重、代码太多没法一步搞定的情况。",
-      "translated_at": "2026-05-19T19:46:28.371Z"
+      "hash": "e738df951f3045ef",
+      "summary_zh": "把大改动拆成可验证的小步逐步落地，适合跨文件实现、按计划接续任务或灰度上线。",
+      "translated_at": "2026-09-08T16:20:59.578Z"
     },
     "skill:addyosmani-agent-skills-idea-refine": {
       "hash": "5ff8cd537ba71a13",
@@ -2553,29 +2553,29 @@
       "translated_at": "2026-05-19T19:46:51.031Z"
     },
     "skill:addyosmani-agent-skills-security-and-hardening": {
-      "hash": "7f1cce1682082fca",
-      "summary_zh": "用于加固应用安全，适合处理用户输入、身份认证、数据存储、第三方集成、依赖漏洞、供应链风险及隐私合规等场景。",
-      "translated_at": "2026-09-03T15:47:17.651Z"
+      "hash": "76309fcebefe07ef",
+      "summary_zh": "用于发现和修复代码中的安全漏洞，适合处理不可信输入、登录认证、会话管理、数据存储、第三方集成及依赖供应链审计等场景。",
+      "translated_at": "2026-09-08T16:21:00.877Z"
     },
     "skill:addyosmani-agent-skills-source-driven-development": {
-      "hash": "2447c3e91a4e8d5e",
-      "summary_zh": "它让代码实现严格以官方文档为准绳，帮你写出有权威出处、告别过时写法的代码，特别适合对正确性要求极高的框架或库开发。",
-      "translated_at": "2026-05-19T19:47:10.774Z"
+      "hash": "47ca6527a8beb3bd",
+      "summary_zh": "一种把实现决策都对照官方文档的开发方式，适合框架集成和对正确性要求高的场景。",
+      "translated_at": "2026-09-08T16:21:05.440Z"
     },
     "skill:addyosmani-agent-skills-spec-driven-development": {
-      "hash": "d958399a6ed8bba8",
-      "summary_zh": "一个先写规格再编码的开发工具，适合需求模糊的新项目、功能或重大改动，并能把复杂需求拆成可独立验证的模块。",
-      "translated_at": "2026-08-14T21:04:31.741Z"
+      "hash": "cac279070e67deb9",
+      "summary_zh": "用于在开发前梳理目标、范围和模块能力，适合新项目、重大改动或需求模糊时先产出可执行的规格说明。",
+      "translated_at": "2026-09-08T16:21:04.942Z"
     },
     "skill:addyosmani-agent-skills-shipping-and-launch": {
-      "hash": "effd8477d9c37281",
-      "summary_zh": "这是一款生产发布筹备工具，帮你解决上线前准备不足或缺乏风险管控的问题，适合需要保障生产环境平稳部署、安全上线的各类发布场景。",
-      "translated_at": "2026-05-19T19:47:34.181Z"
+      "hash": "ec8ccd7451ad3b9a",
+      "summary_zh": "用于准备生产环境发布，帮助团队完善上线前检查、监控、分阶段发布和回滚方案，适合部署前评估与发布规划。",
+      "translated_at": "2026-09-08T16:21:02.739Z"
     },
     "skill:addyosmani-agent-skills-test-driven-development": {
-      "hash": "526503256f70dec8",
-      "summary_zh": "这是一种靠测试来驱动写代码的方法，无论写新逻辑、修Bug还是改老功能，都能帮你验证代码，确保一切按预期运行。",
-      "translated_at": "2026-05-19T19:47:37.196Z"
+      "hash": "1a82df094695084d",
+      "summary_zh": "一种以测试驱动开发为核心的方法论，通过“失败、通过、重构”循环验证代码，适合实现功能、修复缺陷或调整现有行为。",
+      "translated_at": "2026-09-08T16:21:06.941Z"
     },
     "skill:addyosmani-web-quality-skills-best-practices": {
       "hash": "58c4895b0ff4fa99",
@@ -2588,9 +2588,9 @@
       "translated_at": "2026-05-19T19:47:55.437Z"
     },
     "skill:addyosmani-agent-skills-using-agent-skills": {
-      "hash": "aa4ba332a2746653",
-      "summary_zh": "这是一个专门管理AI代理技能的元工具，负责发现和调用其他技能。当你开启新对话，或者不确定当前任务该用哪个技能时，它能帮你快速匹配并激活合适的能力。",
-      "translated_at": "2026-05-19T19:47:56.918Z"
+      "hash": "defc1cec2290b9a7",
+      "summary_zh": "用于在任务开始或需求不明确时发现并调用合适的智能体技能与工作流，帮助规范后续处理方式。",
+      "translated_at": "2026-09-08T16:21:07.135Z"
     },
     "skill:addyosmani-web-quality-skills-performance": {
       "hash": "2f26963d3e57f742",
@@ -9683,9 +9683,9 @@
       "translated_at": "2026-09-03T19:53:13.294Z"
     },
     "bundle:addyosmani-agent-skills": {
-      "hash": "f4bdab5c90ca917c",
-      "summary_zh": "面向软件全生命周期的智能开发规范合集，把设计、编码、测试、交付与维护串成统一的高质量协作流程。",
-      "translated_at": "2026-09-03T15:47:07.660Z"
+      "hash": "326fee877310ce70",
+      "summary_zh": "面向 AI 编程代理的工程技能合集，帮助把开发、测试、评审、文档和交付流程做得更稳。",
+      "translated_at": "2026-09-08T16:20:43.009Z"
     },
     "bundle:coreyhaines31-marketingskills": {
       "hash": "da0e7c2522d3af28",
@@ -9923,9 +9923,9 @@
       "translated_at": "2026-08-24T22:16:00.553Z"
     },
     "bundle:expo-skills": {
-      "hash": "0dd5c4dd139dea5b",
-      "summary_zh": "这套工具围绕 Expo 应用全生命周期，覆盖原生界面开发、构建发布、托管、更新与运行监控，帮助团队更高效地交付和维护跨平台应用。",
-      "translated_at": "2026-09-03T22:54:49.084Z"
+      "hash": "fba8da598707131d",
+      "summary_zh": "这套合集面向 Expo 应用开发，把界面、发布、更新、托管和监控这些常见环节串成一套能直接上手的工作流。",
+      "translated_at": "2026-09-08T16:20:49.949Z"
     },
     "bundle:softaworks-agent-toolkit": {
       "hash": "d6cc12c1edf650d1",
@@ -17413,9 +17413,9 @@
       "translated_at": "2026-09-07T05:50:48.912Z"
     },
     "bundle:tomasz-tomczyk-crit": {
-      "hash": "e6ed17bd4a60a8b7",
-      "summary_zh": "一套面向人机协作评审的工具集，可在代码、方案和页面上集中批注、自动回复并沉淀完整评审流程。",
-      "translated_at": "2026-08-08T21:18:09.088Z"
+      "hash": "8889221c05c3d67d",
+      "summary_zh": "这套合集把代码、方案和页面评审接入可交互的内联反馈流程，支持自动化处理评论，让团队更高效地发现问题并持续迭代。",
+      "translated_at": "2026-09-08T16:20:45.493Z"
     },
     "bundle:alirezarezvani-claude-code-skill-factory": {
       "hash": "0c20fcff5c88f0cc",
@@ -17483,9 +17483,9 @@
       "translated_at": "2026-08-03T05:00:16.637Z"
     },
     "bundle:necmttn-ax": {
-      "hash": "44fc0711816e969b",
-      "summary_zh": "面向 AI 智能体研发的经验管理与迭代工具集，把会话沉淀为可追溯知识，并串联复盘、训练、调度和发布流程。",
-      "translated_at": "2026-08-03T05:00:21.090Z"
+      "hash": "2b8ecac3abb8a0a4",
+      "summary_zh": "面向 AI 开发协作的体验管理工具集，把工作流沉淀、模型调度、复盘优化和发布协同串成可持续改进闭环。",
+      "translated_at": "2026-09-08T16:20:49.900Z"
     },
     "bundle:sneg55-agent-starter": {
       "hash": "914db0252743ad4e",
@@ -20823,9 +20823,9 @@
       "translated_at": "2026-08-03T16:27:47.980Z"
     },
     "skill:expo-skills-expo-native-ui": {
-      "hash": "9533e5b63d9936d1",
-      "summary_zh": "一个用于构建原生质感 Expo 界面的开源框架，适合快速打造符合苹果设计规范的精美响应式应用页面。",
-      "translated_at": "2026-08-03T16:27:48.955Z"
+      "hash": "2c518ecb0f1ad2d9",
+      "summary_zh": "面向 Expo 的原生界面框架，帮你快速搭建符合苹果设计规范、适配多尺寸的精致移动端页面。",
+      "translated_at": "2026-09-08T16:21:10.449Z"
     },
     "skill:expo-skills-expo-project-structure": {
       "hash": "faa85a463111931c",
@@ -24823,9 +24823,9 @@
       "translated_at": "2026-08-04T03:59:38.887Z"
     },
     "skill:necmttn-ax-dojo": {
-      "hash": "2557ca6f090f3a77",
-      "summary_zh": "利用剩余套餐额度让智能体持续自我训练的自动循环，适合夜间批量补全任务、回测路由并验证改进方案。",
-      "translated_at": "2026-08-04T03:59:40.609Z"
+      "hash": "42cdcf6946cbf01c",
+      "summary_zh": "基于 ax 图谱的智能体自我训练循环，利用剩余配额进行回溯测试、实验迭代和方案沉淀，适合夜间无人值守优化。",
+      "translated_at": "2026-09-08T16:21:15.595Z"
     },
     "skill:necmttn-ax-efficient-dispatch": {
       "hash": "1441a137373b8a01",
@@ -26828,9 +26828,9 @@
       "translated_at": "2026-08-04T10:24:50.476Z"
     },
     "skill:tomasz-tomczyk-crit-crit-story": {
-      "hash": "e688dc3bfddf9dec",
-      "summary_zh": "按需生成代码评审故事，仅在用户明确调用或直接提出需求时启用，避免普通评审场景误触发。",
-      "translated_at": "2026-08-04T10:24:53.714Z"
+      "hash": "83a5318b14c416d2",
+      "summary_zh": "仅在用户明确使用 `/crit-story` 或直接要求生成 crit story 时，创作并持续交互式评审；不会从常规代码、PR 或差异评审请求中自行推断。",
+      "translated_at": "2026-09-08T16:21:19.431Z"
     },
     "skill:tomgranot-hubspot-admin-skills-assign-unowned-contacts": {
       "hash": "ed4a1e65e2b4267e",
@@ -30605,8 +30605,8 @@
       "translated_at": "2026-08-12T18:10:47.555Z"
     },
     "content:addyosmani-agent-skills-documentation-and-adrs": {
-      "hash": "b867bb80fb681257",
-      "translated_at": "2026-08-12T18:11:41.113Z"
+      "hash": "87ae44a0c7bb3eef",
+      "translated_at": "2026-09-08T16:24:28.481Z"
     },
     "content:addyosmani-agent-skills-deprecation-and-migration": {
       "hash": "6a624f942e09c698",
@@ -30617,20 +30617,20 @@
       "translated_at": "2026-08-12T18:12:58.047Z"
     },
     "content:addyosmani-agent-skills-doubt-driven-development": {
-      "hash": "0a058297aa6bdf90",
-      "translated_at": "2026-08-12T18:13:24.415Z"
+      "hash": "6fa1fcd8420c28da",
+      "translated_at": "2026-09-08T16:25:51.675Z"
     },
     "content:addyosmani-agent-skills-idea-refine": {
       "hash": "79e773058963adc7",
       "translated_at": "2026-08-12T18:14:13.788Z"
     },
     "content:addyosmani-agent-skills-git-workflow-and-versioning": {
-      "hash": "39665e84d944fbb3",
-      "translated_at": "2026-08-28T01:03:12.134Z"
+      "hash": "b7465d187935c525",
+      "translated_at": "2026-09-08T16:26:24.404Z"
     },
     "content:addyosmani-agent-skills-incremental-implementation": {
-      "hash": "3a3581e7084a0dc8",
-      "translated_at": "2026-08-12T18:15:05.926Z"
+      "hash": "df66536610071727",
+      "translated_at": "2026-09-08T16:26:45.015Z"
     },
     "content:addyosmani-agent-skills-interview-me": {
       "hash": "1d94741d10d2c826",
@@ -30649,28 +30649,28 @@
       "translated_at": "2026-08-29T04:59:07.155Z"
     },
     "content:addyosmani-agent-skills-shipping-and-launch": {
-      "hash": "273a88481191b98f",
-      "translated_at": "2026-09-06T00:09:11.127Z"
+      "hash": "af610cf4892db7ea",
+      "translated_at": "2026-09-08T16:28:51.432Z"
     },
     "content:addyosmani-agent-skills-security-and-hardening": {
-      "hash": "287e2a2850f9d9fc",
-      "translated_at": "2026-09-06T20:26:15.613Z"
+      "hash": "4aa7a433a0a8042f",
+      "translated_at": "2026-09-08T16:30:33.745Z"
     },
     "content:addyosmani-agent-skills-source-driven-development": {
-      "hash": "719d4e54083c90de",
-      "translated_at": "2026-08-12T18:19:08.187Z"
+      "hash": "c59faf851377f0ee",
+      "translated_at": "2026-09-08T16:30:00.156Z"
     },
     "content:addyosmani-agent-skills-spec-driven-development": {
-      "hash": "615ff006266af06f",
-      "translated_at": "2026-08-14T21:07:34.086Z"
+      "hash": "89411b435fc9f45c",
+      "translated_at": "2026-09-08T16:31:20.929Z"
     },
     "content:addyosmani-agent-skills-using-agent-skills": {
-      "hash": "8bdbecb2f98cff2d",
-      "translated_at": "2026-08-29T05:00:10.292Z"
+      "hash": "30787ef2c77bf1a4",
+      "translated_at": "2026-09-08T16:32:49.156Z"
     },
     "content:addyosmani-agent-skills-test-driven-development": {
-      "hash": "440fb3c9b76f4f1b",
-      "translated_at": "2026-08-12T18:20:42.686Z"
+      "hash": "7c0c6ac057c19d7f",
+      "translated_at": "2026-09-08T16:32:11.770Z"
     },
     "content:addyosmani-web-quality-skills-accessibility": {
       "hash": "267fb2a0707d6142",
@@ -32066,8 +32066,8 @@
       "translated_at": "2026-09-06T23:06:55.077Z"
     },
     "content:garrytan-gstack-cso": {
-      "hash": "21e7f2ae33c5831f",
-      "translated_at": "2026-09-02T23:29:04.200Z"
+      "hash": "10e52c436b2cad02",
+      "translated_at": "2026-09-08T17:03:57.036Z"
     },
     "content:garrytan-gstack-devex-review": {
       "hash": "bfe670d2ed4cc9ac",
@@ -34844,8 +34844,8 @@
       "translated_at": "2026-08-14T01:26:09.611Z"
     },
     "content:basicmachines-co-basic-memory-bm-status": {
-      "hash": "16ddf25dbb4fcfb0",
-      "translated_at": "2026-08-29T05:04:47.040Z"
+      "hash": "f312aaa4fdaaa149",
+      "translated_at": "2026-09-08T16:42:13.689Z"
     },
     "content:basicmachines-co-basic-memory-bm-writing": {
       "hash": "f0a551d419304177",
@@ -36794,8 +36794,8 @@
       "translated_at": "2026-08-15T00:37:56.491Z"
     },
     "content:daymade-claude-code-skills-docs-cleaner": {
-      "hash": "ea731a4208ffb675",
-      "translated_at": "2026-08-15T00:38:25.600Z"
+      "hash": "446c79ab268799f1",
+      "translated_at": "2026-09-08T16:47:51.024Z"
     },
     "content:daymade-claude-code-skills-financial-data-collector": {
       "hash": "120d57d82e0d023a",
@@ -38133,8 +38133,8 @@
       "translated_at": "2026-08-15T18:34:37.919Z"
     },
     "content:daymade-claude-code-skills-transcript-fixer": {
-      "hash": "a54ab9bbfa806069",
-      "translated_at": "2026-09-08T00:17:25.074Z"
+      "hash": "e016d768baa7df13",
+      "translated_at": "2026-09-08T16:51:38.770Z"
     },
     "content:eronred-aso-skills-screenshot-optimization": {
       "hash": "3347d82c1781799d",
@@ -38273,16 +38273,16 @@
       "translated_at": "2026-08-15T20:30:52.376Z"
     },
     "content:expo-skills-expo-native-ui": {
-      "hash": "3af5c164a7f91336",
-      "translated_at": "2026-08-20T07:16:19.719Z"
+      "hash": "5168dce8dc77e3aa",
+      "translated_at": "2026-09-08T16:52:40.868Z"
     },
     "content:expo-skills-expo-project-structure": {
       "hash": "96fd0659067e6e44",
       "translated_at": "2026-08-15T20:31:32.629Z"
     },
     "content:expo-skills-expo-router": {
-      "hash": "eeffbf9cd5271e9c",
-      "translated_at": "2026-08-15T20:32:06.405Z"
+      "hash": "93ff75501eb74e49",
+      "translated_at": "2026-09-08T16:54:00.193Z"
     },
     "content:expo-skills-expo-skill-feedback": {
       "hash": "beb2cee5d8649ce1",
@@ -44378,8 +44378,8 @@
       "translated_at": "2026-08-20T07:10:27.722Z"
     },
     "content:expo-skills-expo-overview": {
-      "hash": "5898325e0a713404",
-      "translated_at": "2026-09-03T23:04:01.283Z"
+      "hash": "6b1da1cd009bb0d1",
+      "translated_at": "2026-09-08T16:53:28.287Z"
     },
     "content:kenn-io-roborev-roborev-snooze": {
       "hash": "3dfda67064e6621a",
@@ -45721,8 +45721,8 @@
       "translated_at": "2026-08-21T08:25:04.960Z"
     },
     "content:aeonfun-aeon-changelog": {
-      "hash": "963c9d733523db9f",
-      "translated_at": "2026-08-31T21:18:11.727Z"
+      "hash": "cb3cf34c2d9df22e",
+      "translated_at": "2026-09-08T16:34:35.083Z"
     },
     "content:aeonfun-aeon-competitor-monitor": {
       "hash": "ff2d1681a378aee7",
@@ -47722,8 +47722,8 @@
       "translated_at": "2026-08-22T22:13:14.219Z"
     },
     "content:backnotprop-plannotator-plannotator": {
-      "hash": "17e73ab42a4f2a8b",
-      "translated_at": "2026-09-02T23:07:41.768Z"
+      "hash": "c6c18ccc3451ca05",
+      "translated_at": "2026-09-08T16:41:44.353Z"
     },
     "content:obra-dotfiles-roborev-fix": {
       "hash": "8a7ae722bcd28581",
@@ -48429,9 +48429,9 @@
       "translated_at": "2026-09-06T00:05:40.748Z"
     },
     "bundle:tencentcloudbase-cloudbase-ai-toolkit": {
-      "hash": "f559552d43e82d5b",
-      "summary_zh": "面向 Web、后端和微信小程序的 CloudBase 全栈开发工具集，整合 AI、认证、函数与存储能力，帮助快速构建、部署和排障云应用。",
-      "translated_at": "2026-09-04T19:34:17.684Z"
+      "hash": "6c26a175538a2a08",
+      "summary_zh": "面向 CloudBase 的 AI 应用开发合集，覆盖前后端接入、认证、存储和云函数，让多端智能服务更快落地。",
+      "translated_at": "2026-09-08T16:20:45.411Z"
     },
     "skill:nowork-studio-notfair-plugin-audit": {
       "hash": "86ae82260cf5e93b",
@@ -51036,8 +51036,8 @@
       "translated_at": "2026-08-29T04:57:00.253Z"
     },
     "content:addyosmani-agent-skills-constraint-driven-development": {
-      "hash": "19d0aba70ced988c",
-      "translated_at": "2026-08-29T04:59:04.528Z"
+      "hash": "06479d4305f286d2",
+      "translated_at": "2026-09-08T16:23:31.409Z"
     },
     "content:google-skills-cloud-monitoring-promql-query": {
       "hash": "869f95646ea64efc",
@@ -51092,9 +51092,9 @@
       "translated_at": "2026-08-29T12:40:21.867Z"
     },
     "bundle:alinaqi-maggy": {
-      "hash": "9758054a21be9912",
-      "summary_zh": "面向 AI 辅助开发和自动化交付的一套技能合集，把选模型、写代码、测试和上云整合到一条工作流里。",
-      "translated_at": "2026-09-08T07:10:44.647Z"
+      "hash": "084f49c18634cfba",
+      "summary_zh": "覆盖 AI 应用、全栈开发、云数据库与自动化测试的一体化工程技能库，帮助团队按统一实践高效交付可靠产品。",
+      "translated_at": "2026-09-08T16:20:48.241Z"
     },
     "skill:alinaqi-maggy-agent-teams": {
       "hash": "4ae6348d382d9479",
@@ -51272,9 +51272,9 @@
       "translated_at": "2026-08-29T20:36:08.452Z"
     },
     "skill:alinaqi-maggy-model-routing": {
-      "hash": "d046341adae87cbe",
-      "summary_zh": "一个由 Claude Code 配置套件演进而来的自主 AI 工程指挥中心，适合统一调度并自动完成软件开发任务。",
-      "translated_at": "2026-08-29T20:36:08.482Z"
+      "hash": "cbec9dff45f5332f",
+      "summary_zh": "一个九级模型路由系统，通过级联分类器和结果自动评估，在不同任务场景下选择合适的模型并提升处理效率。",
+      "translated_at": "2026-09-08T16:21:09.853Z"
     },
     "skill:alinaqi-maggy-mnemos": {
       "hash": "d835a55934d87494",
@@ -51420,12 +51420,12 @@
       "translated_at": "2026-08-29T20:38:24.794Z"
     },
     "content:alinaqi-maggy-ai-models": {
-      "hash": "bc6c52008322599a",
-      "translated_at": "2026-08-29T20:40:12.243Z"
+      "hash": "e97caf2a2bbcba82",
+      "translated_at": "2026-09-08T16:36:31.573Z"
     },
     "content:alinaqi-maggy-agentic-development": {
-      "hash": "a2e10dd2aabb775c",
-      "translated_at": "2026-08-29T20:40:17.741Z"
+      "hash": "04c0b8b91c1201f2",
+      "translated_at": "2026-09-08T16:35:10.956Z"
     },
     "content:alinaqi-maggy-android-kotlin": {
       "hash": "45e723afefe01423",
@@ -51552,16 +51552,16 @@
       "translated_at": "2026-08-29T20:58:10.703Z"
     },
     "content:alinaqi-maggy-model-routing": {
-      "hash": "1634fa9281f1941f",
-      "translated_at": "2026-08-29T20:58:39.438Z"
+      "hash": "82f75f78cf31ba31",
+      "translated_at": "2026-09-08T16:36:04.970Z"
     },
     "content:alinaqi-maggy-nodejs-backend": {
       "hash": "a728c7fde5209e92",
       "translated_at": "2026-08-29T20:59:21.009Z"
     },
     "content:alinaqi-maggy-ms-teams-apps": {
-      "hash": "a1b0a082c0941a6d",
-      "translated_at": "2026-08-29T21:00:48.257Z"
+      "hash": "6199811086306b1d",
+      "translated_at": "2026-09-08T16:38:55.528Z"
     },
     "content:alinaqi-maggy-polyphony": {
       "hash": "4e4f31c43effe7ed",
@@ -54926,6 +54926,25 @@
     "content:slopus-happy-maintain": {
       "hash": "e90d683dbe5c414f",
       "translated_at": "2026-09-08T13:07:05.817Z"
+    },
+    "skill:tencentcloudbase-cloudbase-ai-toolkit-cloud-api-operations": {
+      "hash": "8ffd8edede3d3350",
+      "summary_zh": "用于通过云 API 或官方 SDK 管理腾讯云监控告警、负载均衡、权限、存储等控制面资源，适合缺少专用 MCP 工具时执行运维操作。",
+      "translated_at": "2026-09-08T16:21:13.587Z"
+    },
+    "skill:tencentcloudbase-cloudbase-ai-toolkit-cloudbase-declarative-deploy": {
+      "hash": "e58c8eb6718c136d",
+      "summary_zh": "通过配置文件声明云端资源期望状态，支持先预览再部署，适合数据库、函数、托管等多环境统一发布。",
+      "translated_at": "2026-09-08T16:21:17.297Z"
+    },
+    "skill:alinaqi-maggy-context-shunt": {
+      "hash": "5e2506687e3e6451",
+      "summary_zh": "把大文件或多文件读取交给便宜的工作模型处理，避免原始内容进 Claude 上下文，省 token。",
+      "translated_at": "2026-09-08T16:21:18.716Z"
+    },
+    "content:alinaqi-maggy-context-shunt": {
+      "hash": "e6ed6f09b6ec0e3e",
+      "translated_at": "2026-09-08T16:35:24.815Z"
     }
   }
 }

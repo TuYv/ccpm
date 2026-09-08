@@ -8,7 +8,7 @@ effort: medium
 # Microsoft Teams 应用 Skill
 
 
-**目的：** 为 Microsoft Teams 构建 AI 驱动的代理和应用。创建与 OpenAI 和 Claude 等 LLM 集成的会话式机器人、消息扩展和智能助手。
+**用途：** 构建适用于 Microsoft Teams 的 AI 驱动代理和应用。创建可与 OpenAI 和 Claude 等 LLM 集成的对话式机器人、消息扩展和智能助手。
 
 ---
 
@@ -144,7 +144,7 @@ my-agent/
 }
 ```
 
-### 带消息扩展的 Manifest
+### 带消息扩展的清单
 
 ```json
 {
@@ -183,9 +183,9 @@ my-agent/
 
 ---
 
-## AI Agent 开发
+## AI 智能体开发
 
-### 使用 Teams SDK v2 的基本 Bot
+### 使用 Teams SDK v2 的基础机器人
 
 ```typescript
 // src/app.ts
@@ -243,7 +243,7 @@ app.message('/help', async (context, state) => {
 app.start();
 ```
 
-### Prompt 配置
+### 提示词配置
 
 ```yaml
 # src/prompts/chat/config.json
@@ -275,7 +275,7 @@ Assistant:
 
 ## 集成 Claude/Anthropic
 
-### 由 Claude 驱动的 Teams Bot
+### 由 Claude 驱动的 Teams 机器人
 
 ```typescript
 // src/claude-bot.ts
@@ -312,7 +312,7 @@ app.on('message', async (context, state) => {
   try {
     // Call Claude API
     const response = await anthropic.messages.create({
-      model: 'claude-sonnet-4-20250514',
+      model: 'claude-sonnet-4-6',
       max_tokens: 1024,
       system: `You are an AI assistant integrated into Microsoft Teams.
         Help users with their questions and tasks.
@@ -358,7 +358,7 @@ app.message('/clear', async (context, state) => {
 app.start();
 ```
 
-### 使用工具/函数调用的 Claude
+### Claude 与工具/函数调用
 
 ```typescript
 // src/claude-agent.ts
@@ -438,7 +438,7 @@ async function runAgent(userMessage: string): Promise<string> {
 
   while (true) {
     const response = await anthropic.messages.create({
-      model: 'claude-sonnet-4-20250514',
+      model: 'claude-sonnet-4-6',
       max_tokens: 1024,
       system: 'You are a helpful Teams assistant. Use tools when needed to help users.',
       tools,
@@ -479,7 +479,7 @@ async function runAgent(userMessage: string): Promise<string> {
 
 ## 自适应卡片
 
-### 基本自适应卡片
+### 基础自适应卡片
 
 ```typescript
 // src/cards/welcome-card.ts
@@ -849,7 +849,7 @@ async function handleAuth(context, state) {
 
 ## RAG（检索增强生成）
 
-### 使用 Azure AI Search 进行向量搜索
+### 使用 Azure AI Search 的向量搜索
 
 ```typescript
 // src/rag/azure-search.ts
@@ -881,7 +881,7 @@ export async function searchKnowledgeBase(
 }
 ```
 
-### 经 RAG 增强的 Claude 响应
+### RAG 增强的 Claude 响应
 
 ```typescript
 // src/rag/claude-rag.ts
@@ -899,7 +899,7 @@ export async function getRAGResponse(userQuery: string): Promise<string> {
 
   // 3. Generate response with context
   const response = await anthropic.messages.create({
-    model: 'claude-sonnet-4-20250514',
+    model: 'claude-sonnet-4-6',
     max_tokens: 1024,
     system: `You are a helpful assistant for Teams. Answer questions based on the provided context.
 If the context doesn't contain relevant information, say so and provide a general response.
@@ -1125,22 +1125,22 @@ describe('Bot Tests', () => {
 ### 安全检查清单
 
 - [ ] 验证所有传入消息
-- [ ] 尽可能对 Graph API 使用 App-Only 身份验证
-- [ ] 切勿记录敏感的用户数据
+- [ ] 尽可能对 Graph API 使用仅应用身份验证
+- [ ] 切勿记录敏感用户数据
 - [ ] 实施速率限制
-- [ ] 在 Azure 中使用托管标识
-- [ ] 定期轮换机密
-- [ ] 启用审计日志
+- [ ] 在 Azure 中使用托管身份
+- [ ] 定期轮换密钥
+- [ ] 启用审计日志记录
 
-### 性能提示
+### 性能建议
 
-| 提示 | 描述 |
+| 建议 | 说明 |
 |-----|-------------|
 | 缓存 Graph 令牌 | 令牌刷新开销较大 |
 | 流式传输长响应 | 使用输入指示器 + 分块响应 |
-| 为知识库建立索引 | 为 RAG 预先嵌入文档 |
+| 为知识库建立索引 | 为 RAG 预嵌入文档 |
 | 使用连接池 | 重用 HTTP 连接 |
-| 压缩负载 | 使用 Gzip 压缩较大的卡片响应 |
+| 压缩有效负载 | 对大型卡片响应使用 Gzip |
 
 ---
 
@@ -1187,7 +1187,7 @@ app.on('message', async (context) => {
 
   // Get AI response
   const response = await anthropic.messages.create({
-    model: 'claude-sonnet-4-20250514',
+    model: 'claude-sonnet-4-6',
     max_tokens: 1024,
     system: 'You are a helpful Teams assistant.',
     messages: history
@@ -1233,11 +1233,11 @@ app.start();
 
 | 问题 | 原因 | 修复方法 |
 |-------|-------|-----|
-| Bot 无响应 | 端点无法访问 | 检查清单中的 ngrok/Azure URL |
+| 机器人未响应 | 终结点无法访问 | 检查清单中的 ngrok/Azure URL |
 | 身份验证失败 | 令牌已过期/无效 | 刷新 OAuth 连接 |
-| 卡片无法呈现 | 架构无效 | 在 adaptivecards.io/designer 中验证 |
-| Graph 返回 403 错误 | 缺少权限 | 检查应用注册的权限 |
-| 响应缓慢 | API 延迟 | 添加输入指示器，考虑使用流式传输 |
+| 卡片未渲染 | 架构无效 | 在 adaptivecards.io/designer 中验证 |
+| Graph 403 错误 | 缺少权限 | 检查应用注册权限 |
+| 响应缓慢 | API 延迟 | 添加输入指示器，并考虑使用流式传输 |
 
 ---
 
@@ -1247,5 +1247,5 @@ app.start();
 - [Teams 平台文档](https://learn.microsoft.com/en-us/microsoftteams/platform/)
 - [Adaptive Cards 设计器](https://adaptivecards.io/designer/)
 - [Microsoft Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer)
-- [Teams Toolkit](https://learn.microsoft.com/en-us/microsoftteams/platform/toolkit/teams-toolkit-fundamentals)
-- [Bot Framework Emulator](https://github.com/Microsoft/BotFramework-Emulator)
+- [Teams 工具包](https://learn.microsoft.com/en-us/microsoftteams/platform/toolkit/teams-toolkit-fundamentals)
+- [Bot Framework 模拟器](https://github.com/Microsoft/BotFramework-Emulator)

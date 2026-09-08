@@ -7,21 +7,20 @@ effort: high
 ---
 # Agentic Development Skill
 
+用于构建能够借助工具执行多步骤任务的自主 AI 代理。
 
-用于构建能够借助工具执行多步骤任务的自主 AI Agent。
-
-**来源：** [Claude Agent SDK](https://docs.anthropic.com/en/docs/agents-and-tools/claude-agent-sdk) | [Anthropic Claude Code 最佳实践](https://www.anthropic.com/engineering/claude-code-best-practices) | [Pydantic AI](https://ai.pydantic.dev/) | [Google Gemini Agent 开发](https://developers.googleblog.com/en/building-agents-google-gemini-open-source-frameworks/) | [OpenAI Agent 构建](https://developers.openai.com/tracks/building-agents/)
+**来源：** [Claude Agent SDK](https://docs.anthropic.com/en/docs/agents-and-tools/claude-agent-sdk) | [Anthropic Claude Code Best Practices](https://www.anthropic.com/engineering/claude-code-best-practices) | [Pydantic AI](https://ai.pydantic.dev/) | [Google Gemini Agent Development](https://developers.googleblog.com/en/building-agents-google-gemini-open-source-frameworks/) | [OpenAI Building Agents](https://developers.openai.com/tracks/building-agents/)
 
 ---
 
 ## 按语言选择框架
 
-| 语言/框架 | 默认框架 | 原因 |
+| Language/Framework | Default | Why |
 |-------------------|---------|-----|
-| **Python** | **Pydantic AI** | 类型安全、Pydantic 验证、支持多模型、适合生产环境 |
-| **Node.js / Next.js** | **Claude Agent SDK** | Anthropic 官方 SDK、支持工具、多 Agent、原生流式传输 |
+| **Python** | **Pydantic AI** | 类型安全、Pydantic 校验、多模型、适合生产环境 |
+| **Node.js / Next.js** | **Claude Agent SDK** | Anthropic 官方 SDK、工具、多代理、原生流式传输 |
 
-### Python：Pydantic AI（默认）
+### Python: Pydantic AI（默认）
 ```python
 from pydantic_ai import Agent
 from pydantic import BaseModel
@@ -32,7 +31,7 @@ class SearchResult(BaseModel):
     summary: str
 
 agent = Agent(
-    'claude-sonnet-4-20250514',
+    'claude-sonnet-4-6',
     result_type=list[SearchResult],
     system_prompt='You are a research assistant.',
 )
@@ -43,7 +42,7 @@ for item in result.data:
     print(f"{item.title}: {item.url}")
 ```
 
-### Node.js / Next.js：Claude Agent SDK（默认）
+### Node.js / Next.js: Claude Agent SDK（默认）
 ```typescript
 import Anthropic from "@anthropic-ai/sdk";
 
@@ -72,7 +71,7 @@ async function runAgent(prompt: string) {
 
   while (true) {
     const response = await client.messages.create({
-      model: "claude-sonnet-4-20250514",
+      model: "claude-sonnet-4-6",
       max_tokens: 4096,
       tools,
       messages,
@@ -102,13 +101,13 @@ async function runAgent(prompt: string) {
 
 ## 核心原则
 
-**先规划，逐步执行，始终验证。**
+**先规划，逐步行动，始终验证。**
 
-在执行前进行研究和规划的 Agent，其表现始终优于直接采取行动的 Agent。将复杂任务拆分为可验证的步骤，审慎使用工具，并在整个执行过程中保持清晰的状态。
+会先研究并规划再执行的代理，通常比直接动手的代理表现更好。将复杂任务拆分为可验证的步骤，审慎使用工具，并在执行过程中保持清晰的状态。
 
 ---
 
-## Agent 架构
+## 代理架构
 
 ### 三个组件（OpenAI）
 ```
@@ -160,7 +159,7 @@ project/
 
 ---
 
-## 工作流模式：探索-规划-执行-验证
+## 工作流程模式：探索-规划-执行-验证
 
 ### 1. 探索阶段
 ```typescript
@@ -329,7 +328,7 @@ const agent = createAgent({
 ## 多智能体模式
 
 ### 单智能体（默认）
-对于大多数任务，使用一个智能体。多个智能体会增加复杂性。
+大多数任务使用一个智能体即可。多个智能体会增加复杂性。
 
 ### 智能体即工具模式（OpenAI）
 ```typescript
@@ -355,7 +354,7 @@ const mainAgent = createAgent({
 });
 ```
 
-### 交接模式 (OpenAI)
+### 交接模式（OpenAI）
 ```typescript
 // One-way transfer between agents
 const customerServiceAgent = createAgent({
@@ -373,16 +372,16 @@ const customerServiceAgent = createAgent({
 ```
 
 ### 何时使用多个代理
-- 具有不重叠工具的不同任务领域
-- 需要不同的授权级别
-- 具有明确交接点的复杂工作流
-- 独立子任务的并行执行
+- 将任务域拆分为互不重叠的工具
+- 需要不同授权级别时
+- 具有清晰交接点的复杂工作流
+- 可并行执行的独立子任务
 
 ---
 
-## 记忆与状态
+## Memory & State
 
-### 对话记忆
+### Conversation Memory
 ```typescript
 // memory/conversation.ts
 interface ConversationMemory {
@@ -403,7 +402,7 @@ interface AgentState {
 }
 ```
 
-### 持久化记忆
+### Persistent Memory
 ```typescript
 // memory/persistent.ts
 interface PersistentMemory {
@@ -418,9 +417,9 @@ interface PersistentMemory {
 
 ---
 
-## 防护措施与安全性
+## Guardrails & Safety
 
-### 多层保护 (OpenAI)
+### Multi-Layer Protection (OpenAI)
 ```typescript
 // guards/index.ts
 interface GuardrailConfig {
@@ -469,7 +468,7 @@ async function executeWithGuardrails(
 }
 ```
 
-### 范围约束 (OpenAI)
+### 范围约束（OpenAI）
 ```typescript
 // Agent must stay within defined scope
 const agentInstructions = `
@@ -486,19 +485,17 @@ and request explicit approval before proceeding.
 `;
 ```
 
----
-
 ## 模型选择
 
-### 将模型与任务相匹配
-| 任务复杂度 | 推荐模型 | 备注 |
+### 让模型匹配任务
+| 任务复杂度 | 推荐模型 | 说明 |
 |-----------------|-------------------|-------|
 | 简单、快速 | gpt-5-mini, claude-haiku | 低延迟 |
 | 通用 | gpt-4.1, claude-sonnet | 平衡 |
-| 复杂推理 | o4-mini, claude-opus | 更高准确性 |
+| 复杂推理 | o4-mini, claude-opus | 更高准确率 |
 | 深度规划 | gpt-5 + reasoning, ultrathink | 最大能力 |
 
-### Gemini 特定说明
+### Gemini 特定
 ```typescript
 // Use thinking_level for reasoning depth
 const response = await gemini.generate({
@@ -514,7 +511,7 @@ const nextResponse = await gemini.generate({
 });
 ```
 
-### Claude 特定说明（思考模式）
+### Claude 特定（思考模式）
 ```typescript
 // Trigger extended thinking with keywords
 const thinkingLevels = {
@@ -580,8 +577,6 @@ describe('Agent Accuracy (Eval)', () => {
 });
 ```
 
----
-
 ## Pydantic AI 模式（Python 默认）
 
 ### 项目结构（Python）
@@ -608,7 +603,7 @@ project/
 └── pyproject.toml
 ```
 
-### 使用工具的 Agent
+### 带工具的 Agent
 ```python
 from pydantic_ai import Agent, RunContext
 from pydantic import BaseModel
@@ -624,7 +619,7 @@ class ResearchDeps(BaseModel):
     api_key: str
 
 research_agent = Agent(
-    'claude-sonnet-4-20250514',
+    'claude-sonnet-4-6',
     deps_type=ResearchDeps,
     result_type=list[SearchResult],
     system_prompt='You are a research assistant. Use tools to find information.',
@@ -671,7 +666,7 @@ class CodeReview(BaseModel):
     confidence: float = Field(ge=0, le=1, description="Confidence score")
 
 review_agent = Agent(
-    'claude-sonnet-4-20250514',
+    'claude-sonnet-4-6',
     result_type=CodeReview,
     system_prompt='Review code for quality, security, and best practices.',
 )
@@ -685,14 +680,14 @@ else:
         print(f"Issue: {issue}")
 ```
 
-### 多 Agent 协作
+### 多 Agent 协同
 ```python
 from pydantic_ai import Agent
 
 # Specialized agents
-planner = Agent('claude-sonnet-4-20250514', system_prompt='Create detailed plans.')
-executor = Agent('claude-sonnet-4-20250514', system_prompt='Execute tasks precisely.')
-reviewer = Agent('claude-sonnet-4-20250514', system_prompt='Review and verify work.')
+planner = Agent('claude-sonnet-4-6', system_prompt='Create detailed plans.')
+executor = Agent('claude-sonnet-4-6', system_prompt='Execute tasks precisely.')
+reviewer = Agent('claude-sonnet-4-6', system_prompt='Review and verify work.')
 
 async def orchestrate(task: str):
     # 1. Plan
@@ -716,7 +711,7 @@ async def orchestrate(task: str):
 ```python
 from pydantic_ai import Agent
 
-agent = Agent('claude-sonnet-4-20250514')
+agent = Agent('claude-sonnet-4-6')
 
 async def stream_response(prompt: str):
     async with agent.run_stream(prompt) as response:
@@ -757,17 +752,17 @@ async def test_with_mock_response():
 
 ---
 
-## 技能模式（Anthropic）
+## Skills 模式（Anthropic）
 
-### 技能结构
+### Skill 结构
 ```
 skills/
 └── code-review/
-    ├── instructions.md      # How to perform code reviews
+    ├── instructions.md      # 如何执行代码审查
     ├── scripts/
-    │   └── run-linters.sh   # Supporting scripts
+    │   └── run-linters.sh   # 支持脚本
     └── resources/
-        └── checklist.md     # Review checklist
+        └── checklist.md     # 审查清单
 ```
 
 ### instructions.md 示例
@@ -775,13 +770,13 @@ skills/
 # Code Review Skill
 
 ## When to Use
-Activate this skill when asked to review code, PRs, or diffs.
+当被要求审查代码、PR 或 diff 时，激活此 skill。
 
 ## Process
-1. Read the changed files completely
-2. Run linters: `./scripts/run-linters.sh`
-3. Check against resources/checklist.md
-4. Provide structured feedback
+1. 完整阅读已更改文件
+2. 运行 linters: `./scripts/run-linters.sh`
+3. 对照 resources/checklist.md 检查
+4. 提供结构化反馈
 
 ## Output Format
 - Summary (1-2 sentences)
@@ -790,7 +785,7 @@ Activate this skill when asked to review code, PRs, or diffs.
 - Approval recommendation
 ```
 
-### 动态加载技能
+### 动态加载 Skills
 ```typescript
 async function loadSkill(skillName: string): Promise<Skill> {
   const skillPath = `./skills/${skillName}`;
@@ -811,34 +806,34 @@ async function loadSkill(skillName: string): Promise<Skill> {
 
 ## 反模式
 
-- **执行前不做规划** - 直接开始行动的 Agent 更容易出错
-- **单体 Agent** - 一个拥有 50 个工具的 Agent 会陷入混乱
-- **不进行验证** - Agent 必须验证自己的工作
-- **硬编码工具调用顺序** - 让模型决定工具调用顺序
-- **缺少防护措施** - 所有 Agent 都需要安全边界
+- **执行前不做规划** - 直接行动的 agent 更容易出错
+- **单体 agent** - 一个拥有 50 个工具的 agent 会变得混乱
+- **不做验证** - Agent 必须验证自己的工作
+- **硬编码工具顺序** - 让模型决定工具顺序
+- **缺少护栏** - 所有 agent 都需要安全边界
 - **没有状态管理** - 在工具调用之间丢失上下文
-- **只测试成功路径** - 测试失败情况和边界情况
-- **忽略模型差异** - 推理模型需要不同的提示词
-- **不跟踪成本** - Agent 工作流可能成本高昂
-- **完全自动化且没有监督** - 对关键操作应采用人在回路中
+- **只测试理想路径** - 测试失败和边缘情况
+- **忽视模型差异** - 推理模型需要不同的提示词
+- **没有成本跟踪** - Agentic 工作流可能很昂贵
+- **完全自动化且无监督** - 对关键操作应保留人工介入
 
 ---
 
 ## 快速参考
 
-### Agent 开发检查清单
-- [ ] 明确定义 Agent 的范围和边界
-- [ ] 设计具有明确 schema 和风险等级的工具
-- [ ] 实现探索-规划-执行-验证工作流
+### Agent 开发清单
+- [ ] 定义清晰的 agent 作用范围和边界
+- [ ] 使用明确的 schema 和风险级别设计工具
+- [ ] 实现 explore-plan-execute-verify 工作流
 - [ ] 添加多层防护措施
-- [ ] 设置对话记忆和持久化记忆
-- [ ] 编写行为测试和评估测试
-- [ ] 根据任务复杂度配置适当的模型
-- [ ] 为高风险操作添加人在回路机制
+- [ ] 设置会话和持久化记忆
+- [ ] 编写行为和评估测试
+- [ ] 为任务复杂度配置合适的模型
+- [ ] 为高风险操作添加人工介入
 - [ ] 监控 token 使用量和成本
-- [ ] 记录 skills 和指令
+- [ ] 文档化 skills 和 instructions
 
-### 思考触发词（Claude）
+### 思考触发器（Claude）
 ```
 "think"        → Standard analysis
 "think hard"   → Deeper reasoning

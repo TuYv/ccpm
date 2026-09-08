@@ -1,7 +1,7 @@
 {
   "id": "tomasz-tomczyk-crit-crit-story",
   "name": "crit-story",
-  "description": "Author a crit story only when the user explicitly invokes /crit-story or directly asks you to generate a crit story. Do not infer this skill from generic review, PR, or diff-review requests.",
+  "description": "Author a crit story and continue the interactive review loop only when the user explicitly invokes /crit-story or directly asks you to generate a crit story. Do not infer this skill from generic review, PR, or diff-review requests.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/tomasz-tomczyk/crit/blob/main/integrations/windsurf/skills/crit-story/SKILL.md",
     "path": "integrations/windsurf/skills/crit-story/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-08T07:08:51.893Z",
-    "stars": 1014,
+    "discovered_at": "2026-09-08T16:18:50.669Z",
+    "stars": 1016,
     "language": "Go",
-    "pushed_at": "2026-09-07T12:43:57Z",
+    "pushed_at": "2026-09-08T11:56:22Z",
     "license": "MIT"
   },
-  "summary_zh": "按需生成代码评审故事，仅在用户明确调用或直接提出需求时启用，避免普通评审场景误触发。"
+  "summary_zh": "仅在用户明确使用 `/crit-story` 或直接要求生成 crit story 时，创作并持续交互式评审；不会从常规代码、PR 或差异评审请求中自行推断。"
 }

@@ -1,7 +1,7 @@
 {
   "id": "addyosmani-agent-skills-test-driven-development",
   "name": "test-driven-development",
-  "description": "Drives development with tests. Use when implementing any logic, fixing any bug, or changing any behavior. Use when you need to prove that code works, when a bug report arrives, or when you're about to modify existing functionality.",
+  "description": "Drives development with tests using the red-green-refactor loop. Use when implementing any logic, fixing any bug, or changing any behavior. Use when you need to prove that code works, when a bug report arrives, or when you're about to modify existing functionality.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/addyosmani/agent-skills/blob/main/skills/test-driven-development/SKILL.md",
     "path": "skills/test-driven-development/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-08T06:16:21.651Z",
-    "stars": 92877,
+    "discovered_at": "2026-09-08T15:27:54.313Z",
+    "stars": 92962,
     "language": "JavaScript",
-    "pushed_at": "2026-09-06T07:43:58Z",
+    "pushed_at": "2026-09-08T07:21:56Z",
     "license": "MIT"
   },
-  "summary_zh": "这是一种靠测试来驱动写代码的方法，无论写新逻辑、修Bug还是改老功能，都能帮你验证代码，确保一切按预期运行。"
+  "summary_zh": "一种以测试驱动开发为核心的方法论，通过“失败、通过、重构”循环验证代码，适合实现功能、修复缺陷或调整现有行为。"
 }

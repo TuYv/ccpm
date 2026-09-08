@@ -1,0 +1,26 @@
+{
+  "id": "tencentcloudbase-cloudbase-ai-toolkit-cloudbase-declarative-deploy",
+  "name": "cloudbase-declarative-deploy",
+  "description": "CloudBase declarative deployment from a cloudbaserc config (声明式部署, 配置式部署, cloudbaserc 部署) through the deployApply / deployPlan MCP tools. Use when deploying database, functions, app, hosting, or gateway resources described in cloudbaserc.json/yaml as a single desired-state config, when a user wants a dry-run plan before applying, or when handling multi-environment deploys via mode / envOverrides. Covers plan-then-apply flow (deployPlan dry-run → deployApply confirm=true), envId resolution priori",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "2.33.2",
+  "author": "TencentCloudBase",
+  "install_path": ".claude/skills/cloudbase-declarative-deploy/SKILL.md",
+  "source": {
+    "repo": "TencentCloudBase/CloudBase-AI-Toolkit",
+    "url": "https://github.com/TencentCloudBase/CloudBase-AI-Toolkit/blob/main/config/source/skills/cloudbase-declarative-deploy/SKILL.md",
+    "path": "config/source/skills/cloudbase-declarative-deploy/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-08T16:12:29.277Z",
+    "stars": 1096,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-08T12:43:47Z",
+    "license": "MIT"
+  },
+  "summary_zh": "通过配置文件声明云端资源期望状态，支持先预览再部署，适合数据库、函数、托管等多环境统一发布。"
+}

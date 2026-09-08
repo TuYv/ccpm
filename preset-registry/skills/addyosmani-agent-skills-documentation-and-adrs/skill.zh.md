@@ -1,50 +1,50 @@
 ---
 name: documentation-and-adrs
-description: Records decisions and documentation. Use when making architectural decisions, changing public APIs, shipping features, or when you need to record context that future engineers and agents will need to understand the codebase.
+description: Records decisions and documentation. Use when you need to document an architecture decision (ADR) or the reasoning behind a design choice, when changing public APIs, shipping features, or when you need to record context that future engineers and agents will need to understand the codebase.
 ---
 # 文档与 ADR
 
 ## 概述
 
-记录决策，而不仅仅是代码。最有价值的文档会捕捉决策背后的*原因*——促成某项决策的背景、约束和权衡。代码展示构建了*什么*；文档则解释*为什么要以这种方式构建*，以及*考虑过哪些替代方案*。对于未来在代码库中工作的人员和智能体而言，这些背景信息至关重要。
+记录决策，而不仅仅是代码。最有价值的文档会捕捉 *为什么* —— 促成某个决策的上下文、约束和权衡。代码展示的是 *做了什么*；文档解释的是 *为什么要这样做* 以及 *还考虑过哪些替代方案*。这些上下文对于以后在代码库中工作的人员和代理都至关重要。
 
 ## 何时使用
 
-- 做出重大架构决策时
-- 在相互竞争的方案之间进行选择时
-- 添加或更改公共 API 时
-- 发布会改变面向用户行为的功能时
-- 帮助新团队成员（或智能体）熟悉项目时
+- 做出重大的架构决策
+- 在竞争方案之间做选择
+- 添加或修改公共 API
+- 发布会改变用户可见行为的功能
+- 为项目引入新的团队成员（或代理）
 - 当你发现自己在反复解释同一件事时
 
-**不应使用的情况：**不要为显而易见的代码编写文档。不要添加只是复述代码内容的注释。不要为一次性原型编写文档。
+**不要在以下情况下使用：** 不要为显而易见的代码写文档。不要添加重复代码已有内容的注释。不要为一次性原型编写文档。
 
 ## 架构决策记录（ADR）
 
-ADR 用于记录重大技术决策背后的推理过程。它们是你所能编写的最有价值的文档。
+ADR 记录重大技术决策背后的理由。它们是你能写出的价值最高的文档。
 
 ### 何时编写 ADR
 
-- 选择框架、库或主要依赖项
+- 选择框架、库或主要依赖
 - 设计数据模型或数据库模式
-- 选择身份验证策略
-- 决定 API 架构（REST、GraphQL 或 tRPC）
-- 在构建工具、托管平台或基础设施之间进行选择
-- 任何撤销成本高昂的决策
+- 选择认证策略
+- 决定 API 架构（REST vs. GraphQL vs. tRPC）
+- 在构建工具、托管平台或基础设施之间做选择
+- 任何一项变更后会很难回退的决策
 
-### 首先遵循现有约定
+### 先匹配现有约定
 
-创建 ADR 之前，请检查可用的仓库上下文中是否存在既定约定——现有 ADR、项目说明，以及与 ADR 相关的配置或工具（例如 `.adr-dir` 文件）。既定约定优先于下方的默认设置。应匹配：
+在创建 ADR 之前，先检查可用的仓库上下文中是否已有既定约定——现有 ADR、项目说明以及与 ADR 相关的配置或工具（例如 `.adr-dir` 文件）。既定约定优先于下面的默认值。请匹配：
 
-- **位置和格式**——例如 `docs/adr/*.md`、`Documentation/Decisions/*.rst`、MADR 布局或 `adr-tools` 配置。匹配现有目录、文件扩展名和标记语言（Markdown 或 reStructuredText）。
-- **编号和命名**——延续现有的编号顺序和文件名模式（`ADR-004-Title.rst`、`0004-title.md`，……）；不要从 001 重新开始，也不要引入第二套方案。
-- **章节标题**——复用项目的标题集合，而不是强行套用此模板中的标题。
+- **位置和格式** —— 例如 `docs/adr/*.md`、`Documentation/Decisions/*.rst`、MADR 布局，或 `adr-tools` 方案。匹配现有目录、文件扩展名和标记格式（Markdown vs reStructuredText）。
+- **编号和命名** —— 延续现有序列和文件名模式（`ADR-004-Title.rst`、`0004-title.md`，等等）；不要从 001 重新开始，也不要引入第二套方案。
+- **章节标题** —— 重用项目已有的标题集合，而不是强行套用这个模板。
 
-如果现有证据相互冲突，应明确指出冲突，而不是悄然引入另一套方案。只有在无法确定任何约定时，才应用下方的默认设置。
+如果现有证据相互冲突，应当将冲突明确指出，而不是悄悄引入另一套方案。只有在无法建立任何约定时，才应用下面的默认方案。
 
 ### ADR 模板
 
-将 ADR 存储在 `docs/decisions/` 中并使用连续编号（除非项目已使用其他位置——见上文）：
+将 ADR 存放在 `docs/decisions/` 中，采用连续编号（除非项目已经使用了其他位置——见上文）：
 
 ```markdown
 # ADR-001: Use PostgreSQL for primary database
@@ -89,20 +89,20 @@ Use PostgreSQL with Prisma ORM.
 - Hosting on managed service (Supabase, Neon, or RDS)
 ```
 
-### ADR 生命周期
+## ADR 生命周期
 
 ```
 PROPOSED → ACCEPTED → (SUPERSEDED or DEPRECATED)
 ```
 
-- **不要删除旧的 ADR。** 它们记录了历史背景。
-- 当决策发生变化时，编写一个新的 ADR，并在其中引用和取代旧的 ADR。
+- **不要删除旧的 ADR。** 它们保留历史上下文。
+- 当决策发生变化时，编写一份新的 ADR，引用并取代旧的 ADR。
 
 ## 行内文档
 
-### 何时添加注释
+### 何时注释
 
-注释应说明*为什么*，而不是*做什么*：
+注释 *为什么*，而不是 *是什么*：
 
 ```typescript
 // BAD: Restates the code
@@ -118,7 +118,7 @@ if (now - windowStart > WINDOW_SIZE_MS) {
 }
 ```
 
-### 何时不应添加注释
+### 何时不要注释
 
 ```typescript
 // Don't comment self-explanatory code
@@ -133,7 +133,7 @@ function calculateTotal(items: CartItem[]): number {
 // const oldImplementation = () => { ... }  ← Delete it, git has history
 ```
 
-### 记录已知的注意事项
+### 记录已知陷阱
 
 ```typescript
 /**
@@ -152,7 +152,7 @@ export function initializeTheme(theme: Theme): void {
 
 对于公共 API（REST、GraphQL、库接口）：
 
-### 与类型一起内联编写（TypeScript 的首选方式）
+### 与类型内联（TypeScript 首选）
 
 ```typescript
 /**
@@ -172,7 +172,7 @@ export async function createTask(input: CreateTaskInput): Promise<Task> {
 }
 ```
 
-### REST API 使用 OpenAPI / Swagger
+### REST API 的 OpenAPI / Swagger
 
 ```yaml
 paths:
@@ -198,7 +198,7 @@ paths:
 
 ## README 结构
 
-每个项目都应包含一个涵盖以下内容的 README：
+每个项目都应该有一个 README，覆盖以下内容：
 
 ```markdown
 # Project Name
@@ -246,42 +246,42 @@ How to contribute, coding standards, PR process.
 - Task list now loads 50 items per page (was 20) for better UX (#126)
 ```
 
-## 面向智能体的文档
+## 面向 Agent 的文档
 
-针对 AI 智能体上下文的特别注意事项：
+针对 AI agent 上下文的特别考虑：
 
-- **CLAUDE.md / 规则文件** — 记录项目约定，以便智能体遵循
-- **规格文件** — 及时更新规格，确保智能体构建正确的功能
-- **ADR** — 帮助智能体理解过去做出决策的原因（避免重新决策）
-- **内联注意事项** — 防止智能体掉入已知陷阱
+- **CLAUDE.md / 规则文件** — 记录项目约定，以便 agent 遵循
+- **规格文件** — 保持规格更新，以便 agent 构建正确的内容
+- **ADR** — 帮助 agent 理解过去决策的原因（避免重复决策）
+- **内联注意事项** — 防止 agent 陷入已知陷阱
 
-## 常见的自我辩解
+## 常见的合理化说辞
 
-| 自我辩解 | 事实 |
+| 合理化说辞 | 现实 |
 |---|---|
-| “代码本身就是文档” | 代码展示的是做了什么，却不会说明为什么这样做、否决了哪些替代方案，或存在哪些约束。 |
-| “等 API 稳定后我们再写文档” | 编写文档能让 API 更快稳定下来。文档是对设计的第一次检验。 |
-| “没人看文档” | 智能体会看。未来的工程师会看。三个月后的你也会看。 |
-| “ADR 是额外负担” | 一份花 10 分钟编写的 ADR，可以避免六个月后针对同一决策进行一场耗时 2 小时的争论。 |
-| “注释会过时” | 关于*为什么*的注释是稳定的。关于*做了什么*的注释会过时——所以你只应编写前者。 |
+| “代码是自文档化的” | 代码展示做了什么。它不展示为什么、拒绝了哪些替代方案，或适用哪些约束。 |
+| “等 API 稳定后再写文档” | 在记录文档后，API 会更快稳定。文档是设计的第一次测试。 |
+| “没人看文档” | Agent 会看。未来的工程师会看。三个月后的你自己也会看。 |
+| “ADR 是额外负担” | 一份花 10 分钟写的 ADR，能避免六个月后围绕同一决策进行 2 小时的争论。 |
+| “注释会过时” | 关于*为什么*的注释很稳定。关于*做什么*的注释会过时——这就是你只写前者的原因。 |
 
 ## 危险信号
 
-- 架构决策没有书面理由
-- 公共 API 没有文档或类型
-- README 未说明如何运行项目
-- 使用注释掉的代码，而不是将其删除
-- TODO 注释已存在数周
-- 项目中存在重要的架构选择，却没有 ADR
-- 文档只是复述代码，而不是解释意图
+- 没有书面理由的架构决策
+- 没有文档或类型的公共 API
+- 未说明如何运行项目的 README
+- 用注释掉的代码代替删除
+- 已存在数周的 TODO 注释
+- 在有重大架构选择的项目中没有 ADR
+- 重述代码而非解释意图的文档
 
 ## 验证
 
 完成文档编写后：
 
-- [ ] 所有重要的架构决策都有对应的 ADR
-- [ ] README 涵盖快速入门、命令和架构概览
+- [ ] 所有重大架构决策都有 ADR
+- [ ] README 包含快速开始、命令和架构概览
 - [ ] API 函数具有参数和返回类型文档
-- [ ] 已知的注意事项已在相关位置以内联方式记录
-- [ ] 不再残留注释掉的代码
-- [ ] 规则文件（CLAUDE.md 等）是最新且准确的
+- [ ] 已知注意事项在相关位置以内联方式记录
+- [ ] 不再保留注释掉的代码
+- [ ] 规则文件（CLAUDE.md 等）保持最新且准确

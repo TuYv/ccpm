@@ -1,7 +1,7 @@
 {
   "id": "addyosmani-agent-skills-shipping-and-launch",
   "name": "shipping-and-launch",
-  "description": "Prepares production launches. Use when preparing to deploy to production. Use when you need a pre-launch checklist, when setting up monitoring, when planning a staged rollout, or when you need a rollback strategy.",
+  "description": "Prepares production launches. Use when preparing to deploy to production, or when asking what needs to be in place before shipping. Use when you need a pre-launch checklist, when setting up monitoring, when planning a staged rollout, or when you need a rollback strategy.",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/addyosmani/agent-skills/blob/main/skills/shipping-and-launch/SKILL.md",
     "path": "skills/shipping-and-launch/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-08T06:16:21.201Z",
-    "stars": 92877,
+    "discovered_at": "2026-09-08T15:27:53.767Z",
+    "stars": 92962,
     "language": "JavaScript",
-    "pushed_at": "2026-09-06T07:43:58Z",
+    "pushed_at": "2026-09-08T07:21:56Z",
     "license": "MIT"
   },
-  "summary_zh": "这是一款生产发布筹备工具，帮你解决上线前准备不足或缺乏风险管控的问题，适合需要保障生产环境平稳部署、安全上线的各类发布场景。"
+  "summary_zh": "用于准备生产环境发布，帮助团队完善上线前检查、监控、分阶段发布和回滚方案，适合部署前评估与发布规划。"
 }

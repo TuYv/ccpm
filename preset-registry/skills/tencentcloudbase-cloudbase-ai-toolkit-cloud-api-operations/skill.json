@@ -1,0 +1,26 @@
+{
+  "id": "tencentcloudbase-cloudbase-ai-toolkit-cloud-api-operations",
+  "name": "cloud-api-operations",
+  "description": "Operate Tencent Cloud control-plane resources (monitoring/alarms, CLB, CAM roles, COS, MySQL, SCF, etc.) via cloud APIs when no dedicated MCP tool exists. Covers API discovery via the api-reference index, calling via MCP callCloudApi or official SDKs, credential/permission models with CAM authorization escalation, and battle-tested workflow recipes. Use when the task requires Tencent Cloud control-plane operations beyond CloudBase's own tooling.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "2.33.2",
+  "author": "TencentCloudBase",
+  "install_path": ".claude/skills/cloud-api-operations/SKILL.md",
+  "source": {
+    "repo": "TencentCloudBase/CloudBase-AI-Toolkit",
+    "url": "https://github.com/TencentCloudBase/CloudBase-AI-Toolkit/blob/main/config/source/skills/cloud-api-operations/SKILL.md",
+    "path": "config/source/skills/cloud-api-operations/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-08T16:12:27.651Z",
+    "stars": 1096,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-08T12:43:47Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于通过云 API 或官方 SDK 管理腾讯云监控告警、负载均衡、权限、存储等控制面资源，适合缺少专用 MCP 工具时执行运维操作。"
+}

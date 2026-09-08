@@ -1,8 +1,8 @@
 {
   "id": "addyosmani-agent-skills-documentation-and-adrs",
   "name": "documentation-and-adrs",
-  "description": "Records decisions and documentation. Use when making architectural decisions, changing public APIs, shipping features, or when you need to record context that future engineers and agents will need to understand the codebase.",
-  "category": "开发编程",
+  "description": "Records decisions and documentation. Use when you need to document an architecture decision (ADR) or the reasoning behind a design choice, when changing public APIs, shipping features, or when you need to record context that future engineers and agents will need to understand the codebase.",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,11 @@
     "url": "https://github.com/addyosmani/agent-skills/blob/main/skills/documentation-and-adrs/SKILL.md",
     "path": "skills/documentation-and-adrs/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-08T06:16:19.709Z",
-    "stars": 92877,
+    "discovered_at": "2026-09-08T15:27:51.816Z",
+    "stars": 92962,
     "language": "JavaScript",
-    "pushed_at": "2026-09-06T07:43:58Z",
+    "pushed_at": "2026-09-08T07:21:56Z",
     "license": "MIT"
   },
-  "summary_zh": "专门记录架构决策和项目文档的工具。在改API、发新功能或做架构调整时，帮你留下上下文背景，方便未来的工程师和AI代理快速看懂代码库。"
+  "summary_zh": "用于记录架构决策、设计取舍和重要背景，适合变更公共 API、发布功能或为后续开发保留关键上下文。"
 }

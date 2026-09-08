@@ -1,7 +1,7 @@
 {
   "id": "addyosmani-agent-skills-source-driven-development",
   "name": "source-driven-development",
-  "description": "Grounds every implementation decision in official documentation. Use when you want authoritative, source-cited code free from outdated patterns. Use when building with any framework or library where correctness matters.",
+  "description": "Grounds every implementation decision in official documentation. Use when you want to verify an approach against the official docs before implementing it, or when you want authoritative, source-cited code free from outdated patterns. Use when building with any framework or library where correctness matters.",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/addyosmani/agent-skills/blob/main/skills/source-driven-development/SKILL.md",
     "path": "skills/source-driven-development/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-08T06:16:21.355Z",
-    "stars": 92877,
+    "discovered_at": "2026-09-08T15:27:53.960Z",
+    "stars": 92962,
     "language": "JavaScript",
-    "pushed_at": "2026-09-06T07:43:58Z",
+    "pushed_at": "2026-09-08T07:21:56Z",
     "license": "MIT"
   },
-  "summary_zh": "它让代码实现严格以官方文档为准绳，帮你写出有权威出处、告别过时写法的代码，特别适合对正确性要求极高的框架或库开发。"
+  "summary_zh": "一种把实现决策都对照官方文档的开发方式，适合框架集成和对正确性要求高的场景。"
 }

@@ -5,35 +5,35 @@ when-to-use: When choosing models, comparing capabilities, or referencing model 
 user-invocable: true
 effort: low
 ---
-# AI 模型参考技能
+# AI 模型参考 Skill
 
 
 **最后更新：2025 年 12 月**
 
 ## 理念
 
-**为任务选择合适的模型。** 更大并不总是更好——应根据任务要求匹配模型能力。考虑成本、延迟和准确性之间的权衡。
+**为任务选择合适的模型。** 更大不一定更好，应使模型能力与任务需求相匹配。请权衡成本、延迟和准确性。
 
 ## 模型选择矩阵
 
 | 任务 | 推荐模型 | 原因 |
 |------|-------------|-----|
-| 复杂推理 | Claude Opus 4.5、o3、Gemini 3 Pro | 最高准确度 |
-| 快速聊天/补全 | Claude Haiku、GPT-4.1 mini、Gemini Flash | 低延迟、低成本 |
-| 代码生成 | Claude Sonnet 4.5、Codestral、GPT-4.1 | 出色的编码能力 |
-| 视觉/图像 | Claude Sonnet、GPT-4o、Gemini 3 Pro | 多模态 |
-| 嵌入 | text-embedding-3-small、Voyage | 高性价比 |
-| 语音合成 | Eleven Labs v3、OpenAI TTS | 音质自然 |
-| 图像生成 | FLUX.2、DALL-E 3、SD 3.5 | 支持不同风格 |
+| 复杂推理 | Claude Opus 4.5, o3, Gemini 3 Pro | 准确性最高 |
+| 快速聊天/补全 | Claude Haiku, GPT-4.1 mini, Gemini Flash | 低延迟、成本低 |
+| 代码生成 | Claude Sonnet 4.5, Codestral, GPT-4.1 | 代码能力强 |
+| 视觉/图像 | Claude Sonnet, GPT-4o, Gemini 3 Pro | 多模态 |
+| 嵌入 | text-embedding-3-small, Voyage | 成本效益高 |
+| 语音合成 | Eleven Labs v3, OpenAI TTS | 听起来自然 |
+| 图像生成 | FLUX.2, DALL-E 3, SD 3.5 | 风格各异 |
 
 ---
 
-## Anthropic（Claude）
+## Anthropic (Claude)
 
 ### 文档
-- **API 文档**: https://docs.anthropic.com
-- **模型概览**: https://docs.anthropic.com/en/docs/about-claude/models/overview
-- **定价**: https://www.anthropic.com/pricing
+- **API 文档**：https://docs.anthropic.com
+- **模型概览**：https://docs.anthropic.com/en/docs/about-claude/models/overview
+- **定价**：https://www.anthropic.com/pricing
 
 ### 最新模型（2025 年 12 月）
 
@@ -46,11 +46,11 @@ const CLAUDE_MODELS = {
   sonnet: 'claude-sonnet-4-5-20250929',
 
   // Previous generation (still excellent)
-  opus4: 'claude-opus-4-20250514',
-  sonnet4: 'claude-sonnet-4-20250514',
+  opus4: 'claude-opus-4-6',
+  sonnet4: 'claude-sonnet-5',
 
   // Fast & cheap - high volume tasks
-  haiku: 'claude-haiku-3-5-20241022',
+  haiku: 'claude-haiku-4-5-20251001',
 } as const;
 ```
 
@@ -85,10 +85,10 @@ claude-sonnet-4-5-20250929 (Sonnet 4.5)
 ├── Cost: $3/$15 per 1M tokens
 └── Use when: Default choice for most applications
 
-claude-haiku-3-5-20241022 (Haiku 3.5)
+claude-haiku-4-5-20251001 (Haiku 4.5)
 ├── Best for: Classification, extraction, high-volume
 ├── Context: 200K tokens
-├── Cost: $0.25/$1.25 per 1M tokens
+├── Cost: $1/$5 per 1M tokens
 └── Use when: Speed and cost matter most
 ```
 
@@ -97,9 +97,9 @@ claude-haiku-3-5-20241022 (Haiku 3.5)
 ## OpenAI
 
 ### 文档
-- **API 文档**: https://platform.openai.com/docs
-- **模型**: https://platform.openai.com/docs/models
-- **定价**: https://openai.com/pricing
+- **API 文档**：https://platform.openai.com/docs
+- **模型**：https://platform.openai.com/docs/models
+- **定价**：https://openai.com/pricing
 
 ### 最新模型（2025 年 12 月）
 
@@ -138,7 +138,7 @@ const OPENAI_MODELS = {
 } as const;
 ```
 
-### 使用
+### 用法
 ```typescript
 import OpenAI from 'openai';
 
@@ -204,7 +204,7 @@ o4-mini
 
 ---
 
-## Google（Gemini）
+## Google (Gemini)
 
 ### 文档
 - **API 文档**: https://ai.google.dev/docs
@@ -234,7 +234,7 @@ const GEMINI_MODELS = {
 } as const;
 ```
 
-### 使用
+### 用法
 ```typescript
 import { GoogleGenerativeAI } from '@google/generative-ai';
 
@@ -287,9 +287,9 @@ gemini-2.5-flash-lite
 ## Eleven Labs（语音）
 
 ### 文档
-- **API 文档**: https://elevenlabs.io/docs
-- **模型**: https://elevenlabs.io/docs/models
-- **定价**: https://elevenlabs.io/pricing
+- **API 文档**：https://elevenlabs.io/docs
+- **模型**：https://elevenlabs.io/docs/models
+- **定价**：https://elevenlabs.io/pricing
 
 ### 最新模型（2025 年 12 月）
 
@@ -335,23 +335,23 @@ const audioStream = await elevenlabs.textToSpeech.convertAsStream('voice-id', {
 
 ### 模型选择
 ```
-eleven_v3 (Alpha)
-├── Best for: Highest quality, emotional range
-├── Latency: ~1s+ (not for real-time)
-├── Languages: 74
-└── Use when: Quality over speed, pre-rendered
+eleven_v3（Alpha）
+├── 最适合：最高质量、丰富的情感表现
+├── 延迟：约 1 秒以上（不适用于实时场景）
+├── 语言：74 种
+└── 使用场景：质量优先于速度、预渲染内容
 
 eleven_turbo_v2_5
-├── Best for: Balanced quality and speed
-├── Latency: ~250-300ms
-├── Languages: 32
-└── Use when: Good quality with reasonable latency
+├── 最适合：平衡质量与速度
+├── 延迟：约 250-300 毫秒
+├── 语言：32 种
+└── 使用场景：需要较好质量且延迟合理时
 
 eleven_flash_v2_5
-├── Best for: Real-time, conversational AI
-├── Latency: <75ms
-├── Languages: 32
-└── Use when: Live voice agents, chatbots
+├── 最适合：实时场景、对话式 AI
+├── 延迟：<75 毫秒
+├── 语言：32 种
+└── 使用场景：实时语音代理、聊天机器人
 ```
 
 ---
@@ -359,9 +359,9 @@ eleven_flash_v2_5
 ## Replicate
 
 ### 文档
-- **API 文档**: https://replicate.com/docs
-- **模型**: https://replicate.com/explore
-- **定价**: https://replicate.com/pricing
+- **API 文档**：https://replicate.com/docs
+- **模型**：https://replicate.com/explore
+- **定价**：https://replicate.com/pricing
 
 ### 热门模型（2025 年 12 月）
 
@@ -417,28 +417,28 @@ const edited = await replicate.run('black-forest-labs/flux-kontext', {
 ### 模型选择
 ```
 flux-2-pro
-├── Best for: Highest quality, up to 4MP
-├── Speed: ~6s
-├── Cost: $0.015 + per megapixel
-└── Use when: Professional quality needed
+├── 最适合：最高质量，最高支持 4MP
+├── 速度：约 6 秒
+├── 成本：$0.015 + 每百万像素费用
+└── 使用场景：需要专业级质量时
 
 flux-2-flex
-├── Best for: Fine details, typography
-├── Speed: ~22s
-├── Cost: $0.06 per megapixel
-└── Use when: Need precise control
+├── 最适合：精细细节、排版
+├── 速度：约 22 秒
+├── 成本：每百万像素 $0.06
+└── 使用场景：需要精确控制时
 
-flux-2-dev (Open source)
-├── Best for: Fast generation
-├── Speed: ~2.5s
-├── Cost: $0.012 per megapixel
-└── Use when: Speed over quality
+flux-2-dev（开源）
+├── 最适合：快速生成
+├── 速度：约 2.5 秒
+├── 成本：每百万像素 $0.012
+└── 使用场景：速度优先于质量时
 
 flux-kontext
-├── Best for: Image editing with text
-├── Speed: Variable
-├── Cost: Per run
-└── Use when: Edit existing images
+├── 最适合：基于文本的图像编辑
+├── 速度：可变
+├── 成本：按次运行计费
+└── 使用场景：编辑现有图像
 ```
 
 ---
@@ -591,7 +591,7 @@ const VOYAGE_MODELS = {
 } as const;
 ```
 
-### 用法
+### 使用方法
 ```typescript
 const response = await fetch('https://api.voyageai.com/v1/embeddings', {
   method: 'POST',
@@ -613,28 +613,28 @@ const embedding = data[0].embedding;
 
 ## 快速参考
 
-### 成本比较（每 1M tokens，约值）
+### 成本对比（每 1M tokens，约值）
 
-| 提供商 | 低价 | 中价 | 高端 |
+| Provider | 低价 | 中价 | 高端 |
 |----------|-------|-----|---------|
 | Anthropic | $0.25 (Haiku) | $3 (Sonnet 4.5) | $5 (Opus 4.5) |
 | OpenAI | $0.15 (4.1-nano) | $2 (4.1) | $15+ (o3) |
 | Google | $0.04 (Flash-lite) | $0.08 (Flash) | $1.25 (Pro) |
 | Mistral | $0.25 (Small) | $2.70 (Medium) | $8 (Large) |
 
-### 各类任务的最佳选择
+### 各任务最佳选择
 
 ```
-Reasoning/Analysis    → Claude Opus 4.5, o3, Gemini 3 Pro
-Code Generation       → Claude Sonnet 4.5, Codestral 2508, GPT-4.1
-Fast Responses        → Claude Haiku, GPT-4.1-mini, Gemini Flash
-Long Context          → Gemini 2.5 Pro (2M), GPT-4.1 (1M), Claude (200K)
-Vision                → GPT-4.1, Claude Sonnet, Gemini 3 Pro
-Embeddings            → Voyage code-3, text-embedding-3-small
-Voice Synthesis       → Eleven Labs v3/flash, OpenAI TTS
-Image Generation      → FLUX.2 Pro, DALL-E 3, SD 3.5
-Video Generation      → Stable Video 4D 2.0, Runway
-Image Editing         → FLUX Kontext, gpt-image-1
+推理/分析              → Claude Opus 4.5, o3, Gemini 3 Pro
+代码生成               → Claude Sonnet 4.5, Codestral 2508, GPT-4.1
+快速响应               → Claude Haiku, GPT-4.1-mini, Gemini Flash
+长上下文               → Gemini 2.5 Pro (2M), GPT-4.1 (1M), Claude (200K)
+视觉                   → GPT-4.1, Claude Sonnet, Gemini 3 Pro
+嵌入                   → Voyage code-3, text-embedding-3-small
+语音合成               → Eleven Labs v3/flash, OpenAI TTS
+图像生成               → FLUX.2 Pro, DALL-E 3, SD 3.5
+视频生成               → Stable Video 4D 2.0, Runway
+图像编辑               → FLUX Kontext, gpt-image-1
 ```
 
 ### 环境变量模板
@@ -658,13 +658,13 @@ VOYAGE_API_KEY=pa-...
 
 ### 模型更新检查清单
 ```
-When models update:
-□ Check official changelog/blog
-□ Update model ID strings
-□ Test with existing prompts
-□ Compare output quality
-□ Check pricing changes
-□ Update context limits if changed
+模型更新时：
+□ 查看官方更新日志/博客
+□ 更新模型 ID 字符串
+□ 使用现有提示词进行测试
+□ 比较输出质量
+□ 检查价格变化
+□ 如果上下文限制发生变化，则更新上下文限制
 ```
 
 ---
@@ -673,8 +673,8 @@ When models update:
 
 - [Anthropic 模型](https://docs.anthropic.com/en/docs/about-claude/models/overview)
 - [OpenAI 模型](https://platform.openai.com/docs/models)
-- [OpenAI o3 公告](https://openai.com/index/introducing-o3-and-o4-mini/)
-- [GPT-4.1 公告](https://openai.com/index/gpt-4-1/)
+- [OpenAI o3 发布公告](https://openai.com/index/introducing-o3-and-o4-mini/)
+- [GPT-4.1 发布公告](https://openai.com/index/gpt-4-1/)
 - [Google Gemini 模型](https://ai.google.dev/gemini-api/docs/models/gemini)
 - [Eleven Labs 模型](https://elevenlabs.io/docs/models)
 - [Replicate FLUX.2](https://replicate.com/blog/run-flux-2-on-replicate)
