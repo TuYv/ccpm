@@ -3,7 +3,7 @@ name: keep-the-why
 description: Extract and preserve the reasoning code cannot explain - decisions, rejected alternatives, workarounds, incidents, constraints - plus project setup and maintainer interviews. Not for what changed (see Keep a Changelog) - only why.
 license: MIT
 metadata:
-  version: "0.15.0"
+  version: "0.16.0"
   repository: "https://github.com/oliver-zehentleitner/keep-the-why"
   author: "Oliver Zehentleitner"
 ---
@@ -72,7 +72,7 @@ Runs at the start of every session the skill is loaded in, before the actual tas
 
 **First: check `.keep-the-why` for a pinned version.** If `pinned-version` differs from this skill's `metadata.version` (frontmatter above), the pin takes over — see "Pinned versions" in `references/setup.md`.
 
-Check for two independent config files: a project one (`.keep-the-why`, at the project root) and a personal one (`~/.keep-the-why/<id>.md`). See `references/setup.md` for format, detection logic, and exactly how `<id>` is derived. Each has its own wizard; when both are missing they run as two separate flows, project first — never one merged list. A wizard's default presentation is `batch`: one list with the defaults filled in, one answer.
+Check for two independent config files: a project one (`.keep-the-why`, at the project root) and a personal one (`~/.keep-the-why/<id>.md`). See `references/setup.md` for format, detection logic, and exactly how `<id>` is derived. Each has its own wizard; when both are missing they run as two separate flows, project first — never one merged list, and never both lists in one message: the project list ends the turn, and the personal list is the next message, after the project answer. That holds under `batch` as much as under `sequential`, and after a one-word "defaults" as much as after a changed value. A wizard's default presentation is `batch`: one list with the defaults filled in, one answer.
 
 **Project file missing:**
 - Check for a legacy config block in `AGENTS.md` → if found, this is a migration, done directly in this turn (state the project already opted into, not a new decision): see `references/migrations.md`.
