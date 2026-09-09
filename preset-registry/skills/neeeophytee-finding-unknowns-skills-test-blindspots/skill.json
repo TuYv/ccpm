@@ -1,0 +1,26 @@
+{
+  "id": "neeeophytee-finding-unknowns-skills-test-blindspots",
+  "name": "test-blindspots",
+  "description": "Find consequential behavior that a passing test suite does not establish, using focused exploratory checks. Use when the user asks what green tests miss or wants confidence in test coverage for a specific change. Not a general code review, routine test run, or debugging workflow for an already failing test.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Neeeophytee",
+  "install_path": ".claude/skills/test-blindspots/SKILL.md",
+  "source": {
+    "repo": "Neeeophytee/finding-unknowns-skills",
+    "url": "https://github.com/Neeeophytee/finding-unknowns-skills/blob/main/skills/test-blindspots/SKILL.md",
+    "path": "skills/test-blindspots/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-09T05:45:01.936Z",
+    "stars": 327,
+    "language": "Python",
+    "pushed_at": "2026-09-09T05:05:28Z",
+    "license": "MIT"
+  },
+  "summary_zh": "通过针对性探索检查，找出通过测试仍未验证的关键行为，适合评估特定改动的测试覆盖盲区。"
+}

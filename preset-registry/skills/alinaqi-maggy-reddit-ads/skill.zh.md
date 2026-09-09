@@ -8,7 +8,7 @@ effort: medium
 # Reddit Ads API 技能
 
 
-**目的：** 使用 Reddit Ads API 自动化 Reddit 广告活动。以编程方式创建、管理和优化广告活动、广告组和广告。
+**用途：** 使用 Reddit Ads API 自动化 Reddit 广告活动。以编程方式创建、管理和优化广告活动、广告组和广告。
 
 ---
 
@@ -38,14 +38,14 @@ effort: medium
 
 ## 身份验证
 
-### 步骤 1：创建 Reddit Developer App
+### 步骤 1：创建 Reddit 开发者应用
 
 1. 前往 https://www.reddit.com/prefs/apps/
-2. 点击“Create App”或“Create Another App”
+2. 点击 "Create App" 或 "Create Another App"
 3. 填写：
-   - **Name：** 你的应用名称
-   - **Type：** 选择 `script` 以进行服务器端自动化
-   - **Redirect URI：** 你的回调 URL（例如：`https://yourapp.com/callback`）
+   - **名称：** 你的应用名称
+   - **类型：** 选择 `script` 用于服务器端自动化
+   - **重定向 URI：** 你的回调 URL（例如：`https://yourapp.com/callback`）
 4. 记下你的 **Client ID**（位于应用名称下方）和 **Client Secret**
 
 ### 步骤 2：授权流程
@@ -180,12 +180,12 @@ def refresh_access_token(refresh_token: str) -> dict:
     return response.json()
 ```
 
-### 所需权限范围
+### 所需 Scopes
 
-| 权限范围 | 访问级别 |
+| Scope | 访问级别 |
 |-------|--------------|
-| `adsread` | 读取广告系列、广告组、广告、报告 |
-| `adsedit` | 创建/更新广告系列、广告组、广告 |
+| `adsread` | 读取广告系列、广告组、广告和报告 |
+| `adsedit` | 创建/更新广告系列、广告组和广告 |
 | `history` | 访问账户历史记录 |
 
 ---
@@ -416,22 +416,22 @@ class RedditAdsClient:
 | GET | `/accounts/{account_id}` | 获取账户详情 |
 | GET | `/accounts/{account_id}/funding` | 获取资金信息 |
 
-### 广告系列端点
+### 广告活动端点
 
 | 方法 | 端点 | 描述 |
 |--------|----------|-------------|
-| GET | `/accounts/{account_id}/campaigns` | 列出所有广告系列 |
-| GET | `/accounts/{account_id}/campaigns/{campaign_id}` | 根据 ID 获取广告系列 |
-| POST | `/accounts/{account_id}/campaigns` | 创建广告系列 |
-| PUT | `/accounts/{account_id}/campaigns/{campaign_id}` | 更新广告系列 |
-| DELETE | `/accounts/{account_id}/campaigns/{campaign_id}` | 删除广告系列 |
+| GET | `/accounts/{account_id}/campaigns` | 列出所有广告活动 |
+| GET | `/accounts/{account_id}/campaigns/{campaign_id}` | 通过 ID 获取广告活动 |
+| POST | `/accounts/{account_id}/campaigns` | 创建广告活动 |
+| PUT | `/accounts/{account_id}/campaigns/{campaign_id}` | 更新广告活动 |
+| DELETE | `/accounts/{account_id}/campaigns/{campaign_id}` | 删除广告活动 |
 
 ### 广告组端点
 
 | 方法 | 端点 | 描述 |
 |--------|----------|-------------|
 | GET | `/accounts/{account_id}/ad_groups` | 列出所有广告组 |
-| GET | `/accounts/{account_id}/ad_groups/{ad_group_id}` | 根据 ID 获取广告组 |
+| GET | `/accounts/{account_id}/ad_groups/{ad_group_id}` | 通过 ID 获取广告组 |
 | POST | `/accounts/{account_id}/ad_groups` | 创建广告组 |
 | PUT | `/accounts/{account_id}/ad_groups/{ad_group_id}` | 更新广告组 |
 | DELETE | `/accounts/{account_id}/ad_groups/{ad_group_id}` | 删除广告组 |
@@ -441,7 +441,7 @@ class RedditAdsClient:
 | 方法 | 端点 | 描述 |
 |--------|----------|-------------|
 | GET | `/accounts/{account_id}/ads` | 列出所有广告 |
-| GET | `/accounts/{account_id}/ads/{ad_id}` | 根据 ID 获取广告 |
+| GET | `/accounts/{account_id}/ads/{ad_id}` | 通过 ID 获取广告 |
 | POST | `/accounts/{account_id}/ads` | 创建广告 |
 | PUT | `/accounts/{account_id}/ads/{ad_id}` | 更新广告 |
 | DELETE | `/accounts/{account_id}/ads/{ad_id}` | 删除广告 |
@@ -455,35 +455,35 @@ class RedditAdsClient:
 | PUT | `/accounts/{account_id}/custom_audiences/{audience_id}` | 更新受众 |
 | DELETE | `/accounts/{account_id}/custom_audiences/{audience_id}` | 删除受众 |
 
-### 报告端点
+### 报表端点
 
 | 方法 | 端点 | 描述 |
 |--------|----------|-------------|
-| POST | `/accounts/{account_id}/reports` | 生成报告 |
+| POST | `/accounts/{account_id}/reports` | 生成报表 |
 
 ---
 
-## 广告系列创建
+## 广告活动创建
 
-### 广告系列目标
+### 广告活动目标
 
 | 目标 | 使用场景 |
 |-----------|----------|
-| `BRAND_AWARENESS` | 建立品牌认知度并扩大触达范围 |
-| `TRAFFIC` | 为网站/落地页带来点击 |
+| `BRAND_AWARENESS` | 建立品牌认知并扩大触达范围 |
+| `TRAFFIC` | 为网站/落地页带来点击量 |
 | `CONVERSIONS` | 跟踪并优化转化 |
 | `VIDEO_VIEWS` | 最大化视频观看互动 |
 | `APP_INSTALLS` | 推动移动应用安装 |
-| `CATALOG_SALES` | 推广产品目录中的商品 |
+| `CATALOG_SALES` | 推广商品目录中的商品 |
 
 ### 预算类型
 
 | 类型 | 描述 |
 |------|-------------|
-| `DAILY` | 平均每日支出（可能会有轻微变化） |
-| `LIFETIME` | 广告系列持续期间的总支出 |
+| `DAILY` | 平均每日支出（可能会略有浮动） |
+| `LIFETIME` | 广告活动周期内的总支出 |
 
-### 广告系列创建示例
+### 广告活动创建示例
 
 ```typescript
 interface CampaignCreate {
@@ -527,28 +527,28 @@ result = client.create_campaign(campaign)
 
 ---
 
-## 创建广告组
+## 广告组创建
 
 ### 出价策略
 
 | 策略 | 描述 | 使用场景 |
 |----------|-------------|----------|
-| `LOWEST_COST` | 在预算范围内最大化转化次数 | 适用于大多数广告系列 |
-| `COST_CAP` | 设置平均 CPC 上限 | 控制每次结果的成本 |
-| `MANUAL` | 设置严格的 CPC/CPM 出价 | 最大程度的控制 |
+| `LOWEST_COST` | 在预算内最大化转化 | 最适合大多数广告系列 |
+| `COST_CAP` | 设置平均 CPC 上限 | 控制每次结果成本 |
+| `MANUAL` | 设置严格的 CPC/CPM 出价 | 最大控制权 |
 
 ### 定向选项
 
 | 定向类型 | 描述 |
 |----------------|-------------|
-| `communities` | 定向到特定的 subreddit |
+| `communities` | 定向特定 subreddit |
 | `interests` | 按兴趣类别定向 |
-| `keywords` | 按关键词互动进行定向 |
+| `keywords` | 按关键词互动定向 |
 | `devices` | 按设备类型定向 |
 | `locations` | 按地理位置定向 |
-| `custom_audiences` | 定向到上传的客户名单 |
+| `custom_audiences` | 定向已上传的客户列表 |
 
-### 创建广告组示例
+### 广告组创建示例
 
 ```typescript
 interface AdGroupCreate {
@@ -630,32 +630,31 @@ result = client.create_ad_group(ad_group)
 
 ---
 
-## 创建广告
+## 广告创建
 
 ### 广告类型
 
 | 类型 | 描述 |
 |------|-------------|
-| `LINK` | 带有图片或视频的链接广告 |
-| `TEXT` | 仅包含文本的推广帖子 |
+| `LINK` | 带图片/视频的链接广告 |
+| `TEXT` | 纯文本推广帖子 |
 | `VIDEO` | 视频广告 |
-| `CAROUSEL` | 多张图片或卡片 |
+| `CAROUSEL` | 多张图片/卡片 |
 | `PRODUCT` | 产品目录广告 |
-|
 
 ### 行动号召选项
 
 | CTA | 使用场景 |
 |-----|----------|
 | `SHOP_NOW` | 电子商务 |
-| `SIGN_UP` | 潜在客户生成 |
-| `LEARN_MORE` | 信息获取 |
+| `SIGN_UP` | 潜在客户获取 |
+| `LEARN_MORE` | 信息 |
 | `DOWNLOAD` | 应用/内容下载 |
 | `INSTALL` | 应用安装 |
 | `GET_QUOTE` | 服务 |
 | `CONTACT_US` | B2B/服务 |
 | `APPLY_NOW` | 招聘/金融 |
-| `BOOK_NOW` | 旅行/服务 |
+| `BOOK_NOW` | 旅游/服务 |
 | `WATCH_NOW` | 视频内容 |
 | `SUBSCRIBE` | 新闻通讯/SaaS |
 | `GET_OFFER` | 促销 |
@@ -715,20 +714,20 @@ result = client.create_ad(ad)
 
 ---
 
-## 转化 API
+## Conversions API
 
 ### 事件类型
 
-| 事件类型 | 描述 |
+| Event Type | 描述 |
 |------------|-------------|
-| `PAGE_VISIT` | 页面浏览 |
-| `VIEW_CONTENT` | 产品/内容浏览 |
+| `PAGE_VISIT` | 页面访问 |
+| `VIEW_CONTENT` | 产品/内容查看 |
 | `SEARCH` | 搜索操作 |
 | `ADD_TO_CART` | 加入购物车 |
 | `ADD_TO_WISHLIST` | 加入愿望清单 |
 | `PURCHASE` | 已完成购买 |
-| `LEAD` | 提交潜在客户信息 |
-| `SIGN_UP` | 创建账户 |
+| `LEAD` | 潜在客户提交 |
+| `SIGN_UP` | 账户创建 |
 | `CUSTOM` | 自定义事件 |
 
 ### 转化事件结构
@@ -885,7 +884,7 @@ result = send_conversion_event(access_token, 'pixel_123', [purchase_event])
 
 ### 重要说明
 
-- 事件必须发生在**过去 7 天内**才能被处理
+- 事件必须发生在**过去 7 天内**，才能得到处理
 - 每个批量请求最多包含 **500 个事件**
 - 在可用时包含 `click_id`，以获得更好的归因效果
 - 使用 `test_mode: true` 进行测试，不会影响广告系列
@@ -898,11 +897,11 @@ result = send_conversion_event(access_token, 'pixel_123', [purchase_event])
 
 | 类型 | 描述 |
 |------|-------------|
-| `CUSTOMER_LIST` | 上传经过哈希处理的邮箱/电话号码/MAID |
+| `CUSTOMER_LIST` | 上传经过哈希处理的邮箱/手机号/MAID |
 | `WEBSITE_VISITORS` | 基于 Pixel 的再营销 |
 | `LOOKALIKE` | 与源受众相似的受众 |
 
-### 创建客户列表受众
+### 创建客户名单受众
 
 ```typescript
 interface CustomAudienceCreate {
@@ -930,7 +929,7 @@ const result = await client.createCustomAudience(audience);
 
 ### 受众规模下限
 
-- **至少需要 1,000 名匹配用户**才能用于定向
+- **至少需要 1,000 个匹配用户**才能用于定向
 - 出于隐私保护，匹配率以范围形式显示
 
 ---
@@ -977,15 +976,15 @@ const report = await client.getReport({
 |--------|-------------|
 | `impressions` | 展示总数 |
 | `clicks` | 点击总数 |
-| `spend` | 总支出（以账户货币计） |
+| `spend` | 总花费（以账户货币计） |
 | `ctr` | 点击率 |
-| `cpc` | 每次点击成本 |
-| `cpm` | 每千次展示成本 |
+| `cpc` | 单次点击费用 |
+| `cpm` | 每 1,000 次展示的费用 |
 | `conversions` | 转化总数 |
 | `conversion_rate` | 转化数 / 点击数 |
-| `cpa` | 每次获客成本 |
+| `cpa` | 单次获客成本 |
 | `video_views` | 视频观看次数 |
-| `video_completions` | 播放至结束的视频数量 |
+| `video_completions` | 完整观看的视频数量 |
 
 ---
 
@@ -1044,9 +1043,9 @@ Ad:        [Headline Type] - [Creative Version]
 
 ### 速率限制
 
-- **每秒 1 个请求**限制
+- **每秒 1 个请求**的限制
 - 为重试实现指数退避
-- 尽可能将操作进行批处理
+- 尽可能批量执行操作
 
 ```typescript
 async function rateLimitedRequest<T>(
@@ -1153,14 +1152,14 @@ const result = await createRedditAdCampaign(client, {
 ### 测试清单
 
 - [ ] OAuth 流程成功完成
-- [ ] 过期前的令牌刷新正常工作
-- [ ] Campaign 创建时使用了正确的预算
-- [ ] Ad group 定向正确应用
+- [ ] Token 在过期前成功刷新
+- [ ] Campaign 使用正确预算创建
+- [ ] Ad group targeting 正确应用
 - [ ] Ad creative 正常展示
-- [ ] Conversion events 已进行跟踪（使用 `test_mode`）
+- [ ] Conversion events 已跟踪（使用 test_mode）
 - [ ] Reports 返回预期指标
-- [ ] 正确处理速率限制
-- [ ] 正确处理错误响应
+- [ ] Rate limiting 得到优雅处理
+- [ ] Error responses 得到正确处理
 
 ### 用于开发的 Mock API
 
@@ -1199,19 +1198,19 @@ export const redditAdsMocks = [
 
 ## 故障排除
 
-| 错误 | 原因 | 修复方法 |
+| Error | Cause | Fix |
 |-------|-------|-----|
-| `401 Unauthorized` | 无效或已过期的令牌 | 刷新访问令牌 |
-| `403 Forbidden` | 账户未列入白名单 | 联系 Reddit Ads 支持团队 |
-| `429 Too Many Requests` | 超出速率限制 | 实现退避机制，降低请求速度 |
-| `400 Bad Request` | 有效载荷无效 | 检查必填字段和数据类型 |
-| `Audience too small` | 匹配的用户少于 1,000 名 | 向受众中添加更多用户 |
+| `401 Unauthorized` | Token 无效/已过期 | 刷新 access token |
+| `403 Forbidden` | Account 未列入白名单 | 联系 Reddit Ads 支持 |
+| `429 Too Many Requests` | 超出速率限制 | 实现 backoff，降低速度 |
+| `400 Bad Request` | Payload 无效 | 检查必填字段、数据类型 |
+| `Audience too small` | 匹配用户少于 1,000 | 向 audience 添加更多用户 |
 
 ---
 
 ---
 
-## Agentic Optimization Service
+## Agentic 优化服务
 
 ### 架构概览
 
@@ -1236,7 +1235,7 @@ export const redditAdsMocks = [
 └─────────────────────────────────────────────────────────────────┘
 ```
 
-### 后台服务（Node.js）
+### 后台服务 (Node.js)
 
 ```typescript
 // services/reddit-ads-optimizer.ts
@@ -1395,7 +1394,7 @@ Return a JSON array of recommendations:
 Be aggressive with pausing poor performers to protect budget. Be conservative with scaling (only clear winners).`;
 
     const response = await this.anthropic.messages.create({
-      model: 'claude-sonnet-4-20250514',
+      model: 'claude-sonnet-4-6',
       max_tokens: 4096,
       messages: [{ role: 'user', content: prompt }]
     });
@@ -1491,8 +1490,6 @@ interface OptimizationRecommendation {
 
 export default RedditAdsOptimizerService;
 ```
-
-### 后台服务（Python）
 
 ```python
 # services/reddit_ads_optimizer.py
@@ -1674,7 +1671,7 @@ Return a JSON array of recommendations:
 Be aggressive with pausing poor performers to protect budget. Be conservative with scaling (only clear winners)."""
 
         response = self.anthropic.messages.create(
-            model="claude-sonnet-4-20250514",
+            model="claude-sonnet-4-6",
             max_tokens=4096,
             messages=[{"role": "user", "content": prompt}]
         )
@@ -1856,7 +1853,7 @@ services:
 └─────────────────────────────────────────────────────────────────┘
 ```
 
-### 高级：多代理优化
+### 高级：多智能体优化
 
 ```typescript
 // services/multi-agent-optimizer.ts
@@ -1919,7 +1916,7 @@ class MultiAgentOptimizer {
     // Run agents in sequence, each building on previous output
     for (const agent of AGENTS) {
       const response = await this.anthropic.messages.create({
-        model: 'claude-sonnet-4-20250514',
+        model: 'claude-sonnet-4-6',
         max_tokens: 4096,
         system: agent.systemPrompt,
         messages: [{
@@ -1939,7 +1936,7 @@ class MultiAgentOptimizer {
 }
 ```
 
-### 监控面板数据
+### 监控仪表板数据
 
 ```typescript
 // api/optimization-stats.ts
