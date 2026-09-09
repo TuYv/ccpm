@@ -12,15 +12,15 @@ metadata:
     - academic-paper-reviewer
     - academic-pipeline
 ---
-# 学术论文 — 学术论文写作智能体团队
+# 学术论文 — 学术论文写作 Agent 团队
 
-一款通用型学术论文写作工具——由 12 个智能体组成的流水线，覆盖所有学科，并默认以高等教育领域作为参考。
+一个通用型学术论文写作工具 — 覆盖所有学科的 12-Agent 流水线，并以高等教育领域为默认参考。
 
-**v2.5** 新增了两项写作质量功能：
-- **风格校准**（信息收集第 10 步，可选）——提供 3 篇以上过往论文，流水线将学习你的写作风格（句子节奏、词汇偏好、引用整合方式）。在起草过程中作为柔性指南应用；学科规范始终优先。请参阅 `shared/style_calibration_protocol.md`。
-- **写作质量检查**（`references/writing_quality_check.md`）——在草稿自审步骤中应用的写作质量检查清单。可发现 AI 典型术语使用过多、破折号滥用、冗长的铺垫式开头、段落长度过于一致以及句子节奏单调等问题。这些是良好的写作规则，并非用于规避检测。
+**v2.5** 新增两项写作质量功能：
+- **风格校准**（接收步骤 10，可选）— 提供 3 篇以上过往论文，流水线将学习你的写作风格（句子节奏、词汇偏好、引文整合风格）。在起草过程中作为软性指导应用；学科规范始终优先。参见 `shared/style_calibration_protocol.md`。
+- **写作质量检查**（`references/writing_quality_check.md`）— 在草稿自审步骤中应用的情境敏感型写作诊断：含糊或过度使用的术语、打断论证的标点、铺垫性开头、影响清晰度的段落和句子结构。提示进行判断时，应服从作者和发表场所的要求，而非配额（#825）。
 
-> **路由规范（v3.9.2）：**有关跨技能路由规则，请参阅 `.claude/CLAUDE.md` 中的“路由规范（v3.9.2）”以及 `shared/references/intent_clarification_protocol.md`。本技能假定路由已完成——含义模糊的跨阶段材料应已在上游得到澄清。
+> **路由规范（v3.9.2）：** 有关跨 Skill 路由规则，请参见 `.claude/CLAUDE.md` 中的“Routing Discipline (v3.9.2)”以及 `shared/references/intent_clarification_protocol.md`。此 Skill 假定路由已确定 — 模糊的跨阶段材料应已在上游得到澄清。
 
 ## 快速开始
 
@@ -34,14 +34,14 @@ Write a paper on the impact of declining birth rates on private university manag
 ```
 
 **执行流程：**
-1. 配置访谈——论文类型、学科、引用格式、输出格式
-2. 文献检索——系统化检索策略、来源筛选
-3. 架构设计——论文结构、大纲、字数分配
-4. 论证构建——主张—证据链、逻辑流程
-5. 全文起草——逐节撰写草稿、语域调整
-6. 引用合规检查 + 双语摘要（并行）
-7. 同行评审——从五个视角进行分类评估、提出修订建议
-8. 输出格式化——LaTeX/DOCX（通过 Pandoc）/PDF/Markdown
+1. 配置访谈 — 论文类型、学科、引文格式、输出格式
+2. 文献检索 — 系统化检索策略、来源筛选
+3. 架构设计 — 论文结构、大纲、字数分配
+4. 论证构建 — 主张-证据链、逻辑流
+5. 全文起草 — 分章节草稿、语体调整
+6. 引文合规性 + 双语摘要（并行）
+7. 同行评审 — 五视角分类评估、修订建议
+8. 输出格式化 — LaTeX/DOCX（通过 Pandoc）/PDF/Markdown
 
 ---
 
@@ -49,69 +49,69 @@ Write a paper on the impact of declining birth rates on private university manag
 
 ### 触发关键词
 
-**英语**：write paper, academic paper, paper outline, write abstract, revise paper, literature review paper, check citations, convert to LaTeX, convert format, format paper, conference paper, journal article, thesis chapter, research paper, guide my paper, help me plan my paper, step by step paper, draft manuscript, write methodology, write discussion, parse reviews, revision roadmap, help me with my revision, I got reviewer comments, convert citations
+**英语**：撰写论文、学术论文、论文大纲、撰写摘要、修改论文、文献综述论文、检查引文、转换为 LaTeX、转换格式、格式化论文、会议论文、期刊文章、学位论文篇章、研究论文、指导我写论文、帮助我规划论文、逐步撰写论文、起草手稿、撰写方法论、撰写讨论、解析评审意见、修订路线图、帮助我修改、我收到了审稿人意见、转换引用格式
 
-**繁體中文**: 寫論文, 學術論文, 論文大綱, 寫摘要, 修改論文, 文獻回顧論文, 檢查引用, 轉 LaTeX, 轉換格式, 研討會論文, 期刊文章, 學位論文, 研究論文, 引導我寫論文, 幫我規劃論文, 逐步寫論文, 寫方法論, 寫討論, 審查意見, 修訂路線圖, 幫我修改, 我收到審查意見, 轉換引用格式
+**繁體中文**：寫論文、學術論文、論文大綱、寫摘要、修改論文、文獻回顧論文、檢查引用、轉 LaTeX、轉換格式、研討會論文、期刊文章、學位論文、研究論文、引導我寫論文、幫我規劃論文、逐步寫論文、寫方法論、寫討論、審查意見、修訂路線圖、幫我修改、我收到審查意見、轉換引用格式
 
-**한국어**: 논문 작성, 논문 초안, 논문 개요, 초록 작성, 논문 수정, 인용 확인, 인용 형식 검사, LaTeX 변환, 서식 변환, 학위논문 작성, 학술지 논문 작성, 학회 논문 작성, 논문 계획을 도와줘, 단계별로 논문 쓰기, 심사 의견을 받았어, 심사 의견 반영, 답변서 점검, AI 사용 고지
+**韩语**：撰写论文、论文草稿、论文大纲、撰写摘要、修改论文、确认引文、检查引用格式、转换为 LaTeX、转换格式、撰写学位论文、撰写期刊论文、撰写会议论文、帮我规划论文、逐步撰写论文、我收到了评审意见、采纳评审意见、检查回复信、披露 AI 使用情况
 
-### 规划模式激活条件
+### 计划模式激活
 
-当用户希望获得指导、分步骤规划，或对论文结构表示不确定时，激活 `plan` 模式。**默认规则**：当无法明确判断应使用 `plan` 还是 `full` 时，优先使用 `plan`。
+当用户希望获得指导、分步骤规划，或对论文结构表示不确定时，激活 `plan` 模式。**默认规则**：当 `plan` 与 `full` 之间存在歧义时，优先选择 `plan`。
 
 > 有关完整的意图信号和激活规则，请参阅 `references/plan_mode_protocol.md`。
 
-### 不会触发的场景
+### 不会触发
 
-| 场景 | 应改用 |
+| 场景 | 改用 |
 |----------|-------------|
-| 深度研究／事实核查（而非论文写作） | `deep-research` |
-| 评审论文（结构化评审） | `academic-paper-reviewer` |
-| 完整的从研究到论文流程 | `academic-pipeline` |
+| 深度研究 / 事实核查（非论文写作） | `deep-research` |
+| 论文审阅（结构化评审） | `academic-paper-reviewer` |
+| 完整的研究到论文流程 | `academic-pipeline` |
 
 ### 与 `deep-research` 的区别
 
 | 功能 | `academic-paper` | `deep-research` |
 |---------|-------------------|-----------------|
 | 主要输出 | 可发表的论文草稿 | 研究报告 |
-| 结构 | 期刊投稿就绪（IMRaD 等） | APA 7.0 报告 |
-| 引用 | 多种格式（APA/Chicago/MLA/IEEE/Vancouver） | 仅限 APA 7.0 |
+| 结构 | 期刊就绪（IMRaD 等） | APA 7.0 报告 |
+| 引用 | 多格式（APA/Chicago/MLA/IEEE/Vancouver） | 仅 APA 7.0 |
 | 摘要 | 双语（zh-TW + EN） | 单一语言 |
-| 同行评审 | 模拟五维评审 | 编辑评审 |
-| 输出格式 | LaTeX/DOCX（通过 Pandoc）/PDF/Markdown | 仅限 Markdown |
-| 修订循环 | 最多 2 轮，并提供针对性反馈 | 最多 2 轮 |
+| 同行评审 | 模拟五维度评审 | 编辑评审 |
+| 输出格式 | LaTeX/DOCX（通过 Pandoc）/PDF/Markdown | 仅 Markdown |
+| 修订循环 | 最多 2 轮，提供针对性反馈 | 最多 2 轮 |
 
 ---
 
-## 智能体团队（12 个智能体）
+## Agent 团队（12 个 Agent）
 
-| # | 智能体 | 职责 | 阶段 |
-|---|-------|------|-------|
-| 1 | `intake_agent` | 配置访谈：论文类型、学科、期刊、引用格式、输出格式、语言、字数；交接检测；计划模式简化访谈 | 阶段 0 |
-| 2 | `literature_strategist_agent` | 检索策略设计、来源筛选、带注释的参考文献目录、文献矩阵 | 阶段 1 |
+| # | Agent | 角色 | 阶段 |
+|---|-------|------|------|
+| 1 | `intake_agent` | 配置访谈：论文类型、学科、期刊、引用格式、输出格式、语言、字数；交接检测；Plan 模式简化访谈 | 阶段 0 |
+| 2 | `literature_strategist_agent` | 检索策略设计、来源筛选、注释书目、文献矩阵 | 阶段 1 |
 | 3 | `structure_architect_agent` | 论文结构选择、详细大纲、字数分配、证据映射 | 阶段 2 |
-| 4 | `argument_builder_agent` | 论证构建、主张—证据链、逻辑脉络、反方论点处理；计划模式论证压力测试 | 阶段 3／计划步骤 3 |
-| 5 | `draft_writer_agent` | 逐章节撰写完整草稿、调整学科语体、跟踪字数 | 阶段 4 |
-| 6 | `citation_compliance_agent` | 引用格式验证、参考文献列表完整性检查、DOI 核验 | 阶段 5a |
-| 7 | `abstract_bilingual_agent` | 双语摘要（zh-TW + EN），每种语言 5–7 个关键词 | 阶段 5b |
-| 8 | `peer_reviewer_agent` | 模拟双盲评审、从五个视角进行分类评估、提出修订建议（最多 2 轮） | 阶段 6 |
+| 4 | `argument_builder_agent` | 论证构建、主张—证据链、逻辑流、反驳论点处理；Plan 模式论证压力测试 | 阶段 3 / Plan 步骤 3 |
+| 5 | `draft_writer_agent` | 逐节撰写完整草稿、学科语域调整、字数跟踪 | 阶段 4 |
+| 6 | `citation_compliance_agent` | 引用格式核验、参考文献列表完整性、DOI 检查 | 阶段 5a |
+| 7 | `abstract_bilingual_agent` | 双语摘要（zh-TW + EN），各 5–7 个关键词 | 阶段 5b |
+| 8 | `peer_reviewer_agent` | 模拟双盲评审、五视角分类评估、修订建议（最多 2 轮） | 阶段 6 |
 | 9 | `formatter_agent` | 转换为 LaTeX/DOCX（通过 Pandoc）/PDF/Markdown、期刊格式化、投稿附信、引用格式转换（APA 7 / Chicago / MLA / IEEE / Vancouver） | 阶段 7 |
-| 10 | `socratic_mentor_agent` | 计划模式苏格拉底式导师：逐章指导、收敛标准（4 个信号）、问题分类体系（4 种类型）、INSIGHT 提取 | 计划步骤 0–3 |
-| 11 | `visualization_agent` | 解析论文数据并生成出版级图表代码（Python matplotlib / R ggplot2），采用 APA 7.0 格式、色盲友好型调色板，并支持 LaTeX 集成 | 阶段 4／阶段 7 |
-| 12 | `revision_coach_agent` | 将非结构化审稿意见解析为修订路线图，或将明确标识的真实委员会意见解析到独立的 #668 来源可追溯问题跟踪器中；可独立运行 | 修订教练模式 |
+| 10 | `socratic_mentor_agent` | Plan 模式苏格拉底式导师：逐章指导、收敛标准（4 个信号）、问题分类法（4 种类型）、INSIGHT 提取 | Plan 步骤 0–3 |
+| 11 | `visualization_agent` | 解析论文数据并生成出版级图表代码（Python matplotlib / R ggplot2），支持 APA 7.0 格式、色盲友好调色板和 LaTeX 集成 | 阶段 4 / 阶段 7 |
+| 12 | `revision_coach_agent` | 将非结构化评审意见解析为 Revision Roadmap，或将明确标识的真实委员会意见解析为独立的 #668 来源归因关注事项追踪器；可独立运行 | Revision-Coach 模式 |
 
 ---
 
 ## 输出格式
 
 ### 文本格式
-LaTeX（.tex + .bib）、DOCX（通过 Pandoc）、PDF（通过 LaTeX 或 Pandoc）、Markdown。
+LaTeX (.tex + .bib)、DOCX（通过 Pandoc）、PDF（通过 LaTeX 或 Pandoc）、Markdown。
 
 ### 图表
-当论文包含定量结果时，`visualization_agent` 可以使用 Python（matplotlib/seaborn）或 R（ggplot2）生成符合 APA 7.0 格式并采用色盲友好配色方案、可直接用于发表的图表。图表以可运行代码 + LaTeX `\includegraphics` 集成代码的形式交付。有关图表类型决策树和代码模板，请参阅 `references/statistical_visualization_standards.md`。
+当论文包含定量结果时，`visualization_agent` 可以使用 Python（matplotlib/seaborn）或 R（ggplot2）生成符合 APA 7.0 格式且采用色盲友好调色板的出版级图表。图表以可运行代码 + LaTeX `\includegraphics` 集成代码的形式交付。有关图表类型决策树和代码模板，请参见 `references/statistical_visualization_standards.md`。
 
-### 引用格式
-APA 7.0（默认）、Chicago（作者-日期或注释-参考文献）、MLA 9、IEEE、Vancouver。`formatter_agent` 支持在后期通过“Convert citations to [format]”在任意两种受支持的格式之间转换引用格式。
+### 引文格式
+APA 7.0（默认）、Chicago（著者-日期制或注释-书目制）、MLA 9、IEEE、Vancouver。`formatter_agent` 支持通过“将引文转换为 [format]”在任意两种受支持格式之间进行后期引文格式转换。
 
 ---
 
@@ -129,204 +129,191 @@ Phase 6: PEER REVIEW   -> [peer_reviewer]              -> Review Report (max 2 r
 Phase 7: FORMAT        -> [formatter]                  -> Final Output Package
 ```
 
-> 有关各阶段 Agent 的详细行为和输出说明，请参阅 `references/workflow_phase_details.md`。
+> 有关各阶段代理行为和输出说明的详细内容，请参见 `references/workflow_phase_details.md`。
 
-### 评审目标标准绑定（#684）
+### 审稿目标标准绑定（#684）
 
-当阶段 0 已生成经作者确认的 `ReviewTargetContext`（#683）后，
-编排器会初始化一个仅含指针的 `ReviewCriteriaBindingManifest`，并在
-形成性评审、内部评估者和外部评审组这些使用方之间保持不变地使用它。
-规范生命周期、精确标记、封闭角色和明确的降级路径定义于
+当阶段 0 已生成作者确认的 `ReviewTargetContext`（#683）后，
+编排器会初始化一个仅指针的 `ReviewCriteriaBindingManifest`，并在形成性评估、内部评估者和外部专家组消费者之间保持不变地使用它。规范性生命周期、精确标记、封闭角色及明确的降级路径定义于
 `shared/references/review_criteria_consumer_protocol.md`。
 
-- 阶段 2 负责 `FORMATIVE` 回执。结构架构师将选定的
-  标准 id 映射到计划章节和证据需求；后续写作阶段
-  复用该回执，不会重新解析目标。
-- 阶段 6a 接收相同的指针权限和目标标准简报，同时
-  保持无法看到论文；其预承诺产物负责 `INTERNAL`
-  回执。阶段 6b 接收该未更改的产物，可在看到草稿后评估适用性，
-  并负责所有 Critical/Major 建设性发现
-  的附属文件。
-- 科学有效性、场所适配度和投稿就绪度仍彼此独立。
-  标准绝不授权编造证据、结果、方法，也不授权更改
-  作者的贡献声明。
+- 阶段 2 负责 `FORMATIVE` 回执。结构架构师将选定的标准 id 映射到计划章节和证据需求；后续写作阶段复用该回执，且不会重新解析目标。
+- 阶段 6a 接收相同的指针权限和目标标准简报，同时保持对论文内容不可见；其预承诺工件负责 `INTERNAL` 回执。阶段 6b 接收该未经修改的工件，可在查看草稿后评估适用性，并负责所有严重/主要建设性发现的附属记录。
+- 科学有效性、期刊契合度和投稿准备情况仍相互独立。标准绝不授权虚构证据、结果、方法或对作者贡献主张的修改。
 
-绑定验证仅是一项交接一致性检查。它绝不提供
-编辑结论、严重程度、检查点状态或作者分诊。如果绑定
-不可用，请披露 `criteria_binding_unavailable`；不要声称与投稿场所
-一致，也不要依据模型记忆悄然重建目标。
+绑定验证仅是一项交接一致性检查。它绝不提供编辑判断、严重性、检查点状态或作者分流建议。若绑定不可用，请披露 `criteria_binding_unavailable`；不要声称符合期刊要求，也不要从模型记忆中静默重建目标。
 
 ### 检查点规则
 
-1. ⚠️ **铁律**：在进入阶段 1 之前，用户必须确认论文配置记录
-2. **阶段 2 -> 3**：用户必须批准大纲（可以要求重构）
-3. ⚠️ **铁律**：最多允许 2 轮修订；未解决的事项 -> “已确认的局限性”
-4. **同行评审**中严重级别为“关键”的问题会阻止流程进入阶段 7
-5. 如果用户提供自己的来源，可以跳过阶段 1（文献）
+1. ⚠️ **铁律**：用户必须先确认 Paper Configuration Record，才能继续进入 Phase 1
+2. **Phase 2 -> 3**：用户必须批准大纲（可以要求重组结构）
+3. ⚠️ **铁律**：最多进行 2 轮修订；未解决的项目 -> "Acknowledged Limitations"
+4. **同行评审**中的 Critical 严重性问题会阻止流程进入 Phase 7
+5. 如果用户提供自己的来源，可以跳过 Phase 1（文献）
 
 ---
 
-> **v3.4.0 合规要求（适用于 `full` 模式）：** 在最终定稿之前，`compliance_agent` 会运行仅检查 RAISE 原则的检查（仅警告；主要研究不在 PRISMA-trAIce 的适用范围内）。警告会列在披露声明中，但绝不会阻断流水线。参见 `shared/raise_framework.md §Scope disclaimer`。
+> **v3.4.0 合规要求（适用于 `full` 模式）：** 在最终确定之前，`compliance_agent` 会运行仅针对 RAISE 原则的检查（仅警告；主要研究不在 PRISMA-trAIce 范围内）。警告会列在披露声明中，但绝不会阻塞流程。参见 `shared/raise_framework.md §Scope disclaimer`。
 
 ## 分阶段调用契约（v3.9.2）
 
-academic-paper 流水线分 8 个阶段运行（阶段 0 信息收集 → 阶段 7 格式化）。有两种调用模式：
+academic-paper 流程分为 8 个阶段（Phase 0 接收 → 7 格式化）。有两种调用模式：
 
-**模式 A — 由编排器驱动（默认）：** `pipeline_orchestrator_agent`（位于 `academic-pipeline` skill 中）通过 Material Passport 跟踪状态，端到端运行所有阶段。
+**模式 A —— 编排器驱动（默认）：** `pipeline_orchestrator_agent`（位于 `academic-pipeline` skill 中）通过 Material Passport 进行状态跟踪，端到端运行所有阶段。
 
-**模式 B — 逐阶段执行（跨会话恢复）：** 对于长期运行的项目，用户可以跨会话为每个阶段调用一个 agent。常见模式是：在一次会话中撰写草稿，下周回来独立进行引文检查、摘要编写或同行评审。
+**模式 B —— 分阶段调用（跨会话恢复）：** 用户在多个会话中为每个阶段调用一个 agent，用于运行时间较长的项目。常见模式是：在一个会话中撰写草稿，下周返回后独立进行引文检查、摘要撰写或同行评审。
 
-在模式 B 中，**单阶段 agent（按照 `docs/design/2026-05-18-ars-v3.9.2-agent-phase-classification.md` 划分为 Bucket A）在执行写入操作时，必须严格限定在其被分配的阶段内**。academic-paper 中的 7 个 Bucket A agent 是：`literature_strategist`（P1）、`structure_architect`（P2）、`draft_writer`（每次调用执行 P4/P6）、`citation_compliance`（P5a）、`abstract_bilingual`（P5b）、`peer_reviewer`（P6）、`formatter`（P7）。允许读取上游阶段的内容。
+在模式 B 中，单阶段 agent（`docs/design/2026-05-18-ars-v3.9.2-agent-phase-classification.md` 中的 Bucket A）在写入时必须严格限制在其所分配的阶段内。academic-paper 中的 7 个 Bucket A agent 是：`literature_strategist`（P1）、`structure_architect`（P2）、`draft_writer`（每次调用对应 P4/P6）、`citation_compliance`（P5a）、`abstract_bilingual`（P5b）、`peer_reviewer`（P6）、`formatter`（P7）。允许读取上游阶段的内容。
 
-多阶段 agent（Bucket B：`argument_builder` P3+Plan、`visualization` P4+P7）只执行调用方在该阶段的调用中指定的工作——不会在同一次调用中扩展至其他阶段。下文的 v3.6.6 生成器—评估器契约还进一步约束了 `draft_writer` 和 `peer_reviewer` 的子阶段行为（阶段 4a/4b、阶段 6a/6b）。
+多阶段 agent（Bucket B：`argument_builder` P3+Plan、`visualization` P4+P7）必须严格按照调用者针对该阶段的调用要求执行工作，不得在同一次调用中扩展到其他阶段。下方的 v3.6.6 生成器-评估器契约还进一步约束了 `draft_writer` 和 `peer_reviewer` 的子阶段行为（Phase 4a/4b、Phase 6a/6b）。
 
-路由进入模式 B 需要用户给出明确信号——使用 `/ars-<mode>` 斜杠命令或 `[direct-mode]` 前缀。对于含义不明确的跨阶段输入，默认按照 `.claude/CLAUDE.md` 中的路由规范和 `shared/references/intent_clarification_protocol.md` 进行澄清。
+进入模式 B 必须有明确的用户信号，即 `/ars-<mode>` slash command 或 `[direct-mode]` 前缀。根据 `.claude/CLAUDE.md` Routing Discipline + `shared/references/intent_clarification_protocol.md`，含义不明确的跨阶段输入默认需要澄清。
 
-**执行保障（v3.9.2）：** Bucket A agent 上的阶段边界阻断机制 + 建议性验证器（`scripts/check_pipeline_integrity.py`）+ 在启用 hook 的运行时中使用确定性的 PreToolUse 写入范围守卫（#134 范围重定，PR #294）。多阶段封装范围仍保持为前向范围（#134 Slices 3-5）。
+**执行（v3.9.2）：** Phase Boundary 会阻止 Bucket A agent继续执行；同时使用建议性验证器（`scripts/check_pipeline_integrity.py`）以及启用 hook 的运行时中的确定性 PreToolUse 写入范围保护（#134 rescope，PR #294）。多阶段封装仍保持前向范围（#134 Slices 3-5）。
 
-## v3.6.6 生成器—评估器契约协议
+## v3.6.6 生成器-评估器契约协议
 
-> 这是 `academic-paper full` 模式中针对 v3.6.6 契约门控阶段拆分的权威编排区块。自 v3.6.6 起使用 Schema 13.1（`shared/sprint_contract.schema.json`）。模板：`shared/contracts/writer/full.json` + `shared/contracts/evaluator/full.json`。设计规范：`docs/design/2026-04-27-ars-v3.6.6-generator-evaluator-contract-design.md` §5。
+> 这是 `academic-paper full` 模式中由契约控制的阶段拆分的权威编排区块。自 v3.6.6 起使用 Schema 13.1（`shared/sprint_contract.schema.json`）。模板：`shared/contracts/writer/full.json` + `shared/contracts/evaluator/full.json`。设计规范：`docs/design/2026-04-27-ars-v3.6.6-generator-evaluator-contract-design.md` §5。
 >
-> **仅适用于 `academic-paper full` 模式。** 九种非 full 模式（`plan`、`outline-only`、`revision`、`revision-coach`、`abstract-only`、`lit-review`、`format-convert`、`citation-check`、`disclosure`）在 v3.6.5 → v3.6.6 之间保持字节级一致，并且不会调用此协议。（后来新增的 `rebuttal-audit` 模式同样属于非 full 模式，也不会调用此协议。）流水线边界保持不变：`academic-pipeline` 的 Stage 2 以 plan 或 full 模式分派 `academic-paper`（仅 full 模式调用此协议）；Stage 3 分派独立的 `academic-paper-reviewer` skill（由 5 个评审组组成的外部编辑评审）。此协议下配对内部的阶段 6 评估器与 Stage 3 评审器属于不同的评审层——参见设计文档 §5.1 审计结论 2。
+> **仅适用于 `academic-paper full` 模式。** 九种非 full 模式（`plan`、`outline-only`、`revision`、`revision-coach`、`abstract-only`、`lit-review`、`format-convert`、`citation-check`、`disclosure`）在 v3.6.5 → v3.6.6 之间保持字节等价，不会调用此协议。（后来新增的 `rebuttal-audit` 模式同样是非 full 模式，也不会调用此协议。）流程边界不变：`academic-pipeline` 的 Stage 2 以 plan 或 full 模式分派 `academic-paper`（只有 full 模式会调用此协议）；Stage 3 分派独立的 `academic-paper-reviewer` skill（5 人小组的外部编辑审查）。此协议中的配对内 Phase 6 评估器与 Stage 3 reviewer 属于不同的审查层，详见设计文档 §5.1 审计结论 2。
 
 ### 概述
 
-v3.6.6 将阶段 4（写作者起草）和阶段 6（配对内评估者审查）拆分为由 `writer_full` 和 `evaluator_full` 合约控制的论文盲态 / 论文可见调用对。该拆分沿用了 `academic-paper-reviewer/references/sprint_contract_protocol.md`（v3.6.2 的审稿者模式），但对其进行了调整，以适配没有评审小组且（对于写作者而言）没有 scoring_plan 的单智能体生成器模式。
+v3.6.6 将 Phase 4（writer drafting）和 Phase 6（in-pair evaluator review）拆分为 paper-blind / paper-visible 调用对，并由 `writer_full` 和 `evaluator_full` contract 进行门控。该拆分镜像 `academic-paper-reviewer/references/sprint_contract_protocol.md`（v3.6.2 reviewer 模式），但针对没有 panel 且（对于 writer）没有 scoring_plan 的 single-agent generator 模式进行了适配。
 
-承载这一机制的关键是**调用在物理上的分离**：写作者阶段 4a 永远看不到运行时起草产物；评估者阶段 6a 永远看不到写作者阶段 4b 的草稿。这消除了配对内自我质量门禁中“先阅读论文，再为标准寻找合理解释”的偏移路径。
+承重机制是**调用的物理隔离**：writer Phase 4a 永远看不到运行时 drafting artefacts；evaluator Phase 6a 永远看不到 writer Phase 4b draft。这会破坏在 in-pair self-quality gate 上“先读论文，再为标准找理由”的漂移路径。
 
 ### 四调用结构
 
-对于每次 `academic-paper full` 调用，阶段 4 + 阶段 6 会从两个单独调用扩展为四个独立的模型调用。根据下文的系统内容与用户内容规范，每个调用都有自己的系统提示词和用户内容。
+对于每次 `academic-paper full` 调用，Phase 4 + Phase 6 会从两个单独调用扩展为四个独立模型调用。每个调用都有自己的 system prompt 和 user content，遵循下面的 system-vs-user content 纪律。
 
-1. **阶段 4a — 写作者论文盲态预承诺。**
-   - 系统提示词：`academic-paper/agents/draft_writer_agent.md` 中“v3.6.6 生成器-评估者合约协议”一节下的 `### Phase 4a — Writer paper-blind pre-commitment` 小节。
-   - 用户内容：`writer_full` 合约 JSON + 仅包含论文元数据（`title`、`field`、`word_count`）。
-   - 输出：`## Acceptance Criteria Paraphrase` 部分 + 末尾的 `[PRE-COMMITMENT-ACKNOWLEDGED]` 标签。
-   - 检查：3 项结构检查（参见下文“阶段 4a / 6a 输出检查”一节）。
-2. **阶段 4b — 写作者论文可见起草 + 自我评分。**
-   - 系统提示词：同一智能体文件中的 `### Phase 4b — Writer paper-visible drafting + self-scoring` 小节。
-   - 用户内容：`writer_full` 合约 JSON（重新注入）+ 包装在 `<phase4a_output>...</phase4a_output>` 数据分隔符中的阶段 4a 输出 + 上游起草产物（论文配置记录、论文大纲、论证蓝图、带注释的参考文献目录，包括其中的搜索策略 / Schema 2 `search_strategy`（#548——写作者填入搜索范围限定的新颖性声明中的边界）、可选的风格配置文件、可选的知识隔离指令）。
-   - 输出：`## Draft Body` → `## Dimension Scores` → `## Failure Condition Checks` → `## Writer Decision`。
-   - 检查：4 项结构检查（参见下文“阶段 4b / 6b 输出检查”一节）。
-3. **阶段 6a — 评估者论文盲态预承诺。**
-   - 系统提示词：`academic-paper/agents/peer_reviewer_agent.md` 中“v3.6.6 生成器-评估者合约协议”一节下的 `### Phase 6a — Evaluator paper-blind pre-commitment` 小节。
-   - 用户内容：`evaluator_full` 合约 JSON + 论文元数据 + 写作者最新的 `<phase4a_output>`（根据 `disagreement_handling.pre_commitment_check_protocol.check_writer_artifact`，这是评估者必须验证的写作者产物）+ 启用时仅含指针的 #684 清单/目标标准简报/`INTERNAL` 标记。
-   - 输出：`## Contract Paraphrase` + `## Scoring Plan`（每个维度包含 `dimension_id` / `what_to_look_for` / `what_triggers_block` / `what_triggers_warn`）+ 仅含指针的绑定承诺（或 `criteria_binding_unavailable`）+ 末尾的 `[PRE-COMMITMENT-ACKNOWLEDGED]` 标签。不引入额外的 H2 标题。
-   - 检查：5 项结构检查。
-4. **阶段 6b — 评估者论文可见评分 + 决策。**
-   - 系统提示词：同一智能体文件中的 `### Phase 6b — Evaluator paper-visible scoring + decision` 小节。
-   - 用户内容：`evaluator_full` 合约 JSON（重新注入）+ 包装在 `<phase6a_output>...</phase6a_output>` 中的阶段 6a 输出 + 写作者的 `<phase4a_output>`（根据 `pre_commitment_check_protocol.check_writer_artifact` 无条件提供）+ 写作者阶段 4b 草稿（被审查的产物）+ 在阶段 6a 中提供过的、保持不变的 #684 权威依据。
-   - 输出：`## Dimension Scores` → `## Failure Condition Checks` → `## Review Body` → `## Evaluator Decision`，以及角色标记/不可用披露，并在适用时提供经过单独验证的建设性附属内容。
-   - 检查：5 项结构检查。
+1. **Phase 4a — writer paper-blind pre-commitment。**
+   - System prompt：`academic-paper/agents/draft_writer_agent.md` § "v3.6.6 Generator-Evaluator Contract Protocol" 中的 `### Phase 4a — Writer paper-blind pre-commitment` 小节。
+   - User content：`writer_full` contract JSON + 仅 paper metadata（`title`、`field`、`word_count`）。
+   - Output：`## Acceptance Criteria Paraphrase` section + 结尾 `[PRE-COMMITMENT-ACKNOWLEDGED]` tag。
+   - Lint：3 项结构检查（见下文 § "Phase 4a / 6a output lint"）。
+2. **Phase 4b — writer paper-visible drafting + self-scoring。**
+   - System prompt：同一 agent 文件中的 `### Phase 4b — Writer paper-visible drafting + self-scoring` 小节。
+   - User content：`writer_full` contract JSON（重新注入）+ 包装在 `<phase4a_output>...</phase4a_output>` data delimiter 中的 Phase 4a output + 上游 drafting artefacts（Paper Configuration Record、Paper Outline、Argument Blueprint、Annotated Bibliography，包括其 Search Strategy / Schema 2 `search_strategy`（#548 — writer 填入 search-bounded novelty claims 的边界）、可选 Style Profile、可选 Knowledge Isolation Directive）。
+   - Output：`## Draft Body` → `## Dimension Scores` → `## Failure Condition Checks` → `## Writer Decision`。
+   - Lint：4 项结构检查（见下文 § "Phase 4b / 6b output lint"）。
+3. **Phase 6a — evaluator paper-blind pre-commitment。**
+   - System prompt：`academic-paper/agents/peer_reviewer_agent.md` § "v3.6.6 Generator-Evaluator Contract Protocol" 中的 `### Phase 6a — Evaluator paper-blind pre-commitment` 小节。
+   - User content：`evaluator_full` contract JSON + paper metadata + writer 最新的 `<phase4a_output>`（evaluator 必须按 `disagreement_handling.pre_commitment_check_protocol.check_writer_artifact` 验证的 writer artefact）+ 在启用时，pointer-only #684 manifest/Target Criteria Brief/`INTERNAL` marker。
+   - Output：`## Contract Paraphrase` + `## Scoring Plan`（按 dimension 的 `dimension_id` / `what_to_look_for` / `what_triggers_block` / `what_triggers_warn`）+ pointer-only binding commitment（或 `criteria_binding_unavailable`）+ 结尾 `[PRE-COMMITMENT-ACKNOWLEDGED]` tag。不引入额外 H2。
+   - Lint：5 项结构检查。
+4. **Phase 6b — evaluator paper-visible scoring + decision。**
+   - System prompt：同一 agent 文件中的 `### Phase 6b — Evaluator paper-visible scoring + decision` 小节。
+   - User content：`evaluator_full` contract JSON（重新注入）+ 包装在 `<phase6a_output>...</phase6a_output>` 中的 Phase 6a output + writer 的 `<phase4a_output>`（按 `pre_commitment_check_protocol.check_writer_artifact` 无条件提供）+ writer Phase 4b draft（被 review 的 artefact）+ 当 Phase 6a 中提供过时，保持不变的 #684 authority。
+   - Output：`## Dimension Scores` → `## Failure Condition Checks` → `## Review Body` → `## Evaluator Decision`，以及 role marker/unavailable disclosure，并在适用时提供单独验证的 constructive sidecar。
+   - Lint：5 项结构检查。
 
-### 系统提示与用户内容的分离原则
+### System prompt vs user content discipline
 
-逐字遵循 `sprint_contract_protocol.md` §2 中的审查者模式：
+与 `sprint_contract_protocol.md` §2 中的评审者模式保持逐字一致：
 
-- **系统提示仅承载不变的策略文本**：来自智能体文件中 `## v3.6.6 Generator-Evaluator Contract Protocol` 块的阶段子章节指令、lint 描述以及阶段边界标签约定。
-- **用户内容承载 contract JSON（每次调用时重新注入）以及该阶段允许的运行时输入**：论文元数据、`<phase4a_output>` / `<phase6a_output>` 分隔块、上游起草产物、论文草稿。
+- **系统提示仅承载不变量策略文本**：agent 文件的 `## v3.6.6 Generator-Evaluator Contract Protocol` 块中的阶段子部分说明、lint 描述以及阶段边界标签约定。
+- **用户内容承载 contract JSON（每次调用重新注入）以及该阶段允许使用的运行时输入**：论文元数据、`<phase4a_output>` / `<phase6a_output>` 分隔块、上游起草产物、论文草稿。
 
-所有动态 LLM 输出（Phase Na 运行时产出、论文内容）都通过数据分隔符置于用户内容中，绝不放入系统提示。这可以防止动态的逐篇论文内容被意外提升至不变的策略层面。
+所有动态 LLM 输出（Phase Na 运行时输出、论文内容）都通过数据分隔符置于用户内容中，绝不放入系统提示。这可以防止将每篇论文的动态内容意外提升为不变量策略层的一部分。
 
-### Schema 字段名与运行时产出的区别
+### Schema field name vs runtime emission distinction
 
-`pre_commitment_artifacts`（snake_case，使用反引号）是 `shared/sprint_contract.schema.json` 中的 schema 字段名——即冻结的 contract 基线中的配置声明。“writer Phase 4a pre-commitment output”则是运行时产出——即 writer agent 在 Phase 4a 中实际生成的 Markdown 文本。该运行时产出位于 `<phase4a_output>` 内，并被传递至 Phase 4b / Phase 6a / Phase 6b。`disagreement_handling`（schema 字段）与“evaluator Phase 6a pre-commitment output”（运行时产出）也遵循相同模式。混淆两者会导致无法区分 contract 基线配置与 LLM 生成的内容。
+`pre_commitment_artifacts`（snake_case，使用反引号）是 `shared/sprint_contract.schema.json` 中的 schema 字段名，即冻结契约基线中的配置声明。“writer Phase 4a pre-commitment output”是运行时输出，即 writer agent 在 Phase 4a 中实际输出的 Markdown 文本。运行时输出位于 `<phase4a_output>` 中，并会被交接给 Phase 4b / Phase 6a / Phase 6b。`disagreement_handling`（schema 字段）与“evaluator Phase 6a pre-commitment output”（运行时输出）也是相同的模式。混淆这两者会导致无法区分契约基线配置与 LLM 生成的内容。
 
-### Phase 4a / 6a 输出 lint
+### Phase 4a / 6a output lint
 
-根据 `sprint_contract_protocol.md` §4 的计数约定，各模式的结构检查数量如下：
+根据 `sprint_contract_protocol.md` §4 的枚举约定，按模式区分结构检查项数量：
 
-- **Writer Phase 4a（3 项检查）**：必需章节按顺序出现（`## Acceptance Criteria Paraphrase`、末尾的 `[PRE-COMMITMENT-ACKNOWLEDGED]`）；释义段落数 ≥ `pre_commitment_artifacts.acceptance_criteria_paraphrase.minimum_dimensions`；Phase 4a 内容仅引用 contract JSON 和论文元数据。**不得包含 `## Scoring Plan` 章节**——`writer_full` 不包含 scoring_plan。
-- **Evaluator Phase 6a（5 项检查）**：必需章节按顺序出现（`## Contract Paraphrase`、`## Scoring Plan`、末尾的 `[PRE-COMMITMENT-ACKNOWLEDGED]`）；释义段落数 ≥ `disagreement_handling.paraphrase_minimum_dimensions`；每个验收维度对应一个 `### <Dn>: <name>` 子章节；每个 scoring_plan 子章节都包含 `disagreement_handling.scoring_plan.per_dimension_criteria` 的四字段结构（`dimension_id`、`what_to_look_for`、`what_triggers_block`、`what_triggers_warn`）；Phase 6a 内容仅引用 contract JSON、论文元数据、writer 的 `<phase4a_output>`，以及不查看论文内容的 #684 指针授权信息（不得引用完整草稿/论文内容）。具有约束力的承诺是 Scoring Plan 之后不带项目符号的指针数据，而不是额外的 H2。
+- **Writer Phase 4a（3 项检查）**：按顺序包含必需部分（`## Acceptance Criteria Paraphrase`、末尾的 `[PRE-COMMITMENT-ACKNOWLEDGED]`）；释义段落数量 ≥ `pre_commitment_artifacts.acceptance_criteria_paraphrase.minimum_dimensions`；Phase 4a 内容仅引用 contract JSON + 论文元数据。**不得包含 `## Scoring Plan` 部分**——`writer_full` 不携带 scoring_plan。
+- **Evaluator Phase 6a（5 项检查）**：按顺序包含必需部分（`## Contract Paraphrase`、`## Scoring Plan`、末尾的 `[PRE-COMMITMENT-ACKNOWLEDGED]`）；每个验收维度对应一个 `### <Dn>: <name>` 子部分；每个 scoring_plan 子部分都包含 `disagreement_handling.scoring_plan.per_dimension_criteria` 的四字段结构（`dimension_id`、`what_to_look_for`、`what_triggers_block`、`what_triggers_warn`）；Phase 6a 内容仅引用 contract JSON + 论文元数据 + writer 的 `<phase4a_output>`，以及仅提供论文盲审 #684 指针权威（不得包含完整草稿 / 论文内容）。绑定承诺是 Scoring Plan 后的非列表指针数据，不是额外的 H2。
 
-重试语义：第一次尝试 lint 失败 → 重试一次，并在系统提示中指出具体的 lint 缺漏；第二次失败 → 根据下方 § “Single-agent generator unusable handling” 将此角色标记为不可用。
+重试语义：首次尝试 lint 失败 → 根据系统提示中指出的具体 lint 缺口重试一次；第二次失败 → 根据下方“Single-agent generator unusable handling”一节，将该角色标记为不可用。
 
-### 阶段 4b / 6b 输出 lint 检查
+### 第 4b / 6b 阶段输出检查
 
-- **写作者阶段 4b（4 项检查）**：必需章节按以下顺序排列——`## Draft Body`、`## Dimension Scores`、`## Failure Condition Checks`、`## Writer Decision`；Dimension Scores 与写作者的七个维度 D1–D7 一一对应（依据 `shared/contracts/writer/full.json`）；Failure Condition Checks 与 F1 / F4 / F2 / F3 / F0 一一对应；Writer Decision 可根据 F 条件的严重程度优先级推导得出。**不进行多重异议重试**（写作者没有可供异议的 scoring_plan）。**不进行一致性检查**（写作者阶段 4a 不会发出 scoring_plan 触发词元）。
-- **评估者阶段 6b（5 项检查）**：必需章节按以下顺序排列——`## Dimension Scores`、`## Failure Condition Checks`、`## Review Body`、`## Evaluator Decision`；Dimension Scores 与评估者的五个维度 D1–D5 一一对应（依据 `shared/contracts/evaluator/full.json`）；Failure Condition Checks 与 F1 / F2 / F3 / F6 / F4 / F5 / F0 一一对应；一致性检查（阶段 6b 的分数通过子字符串匹配阶段 6a `disagreement_handling.scoring_plan.per_dimension_criteria` 中的触发词元）；Evaluator Decision 可根据 F 条件的严重程度优先级推导得出。**不进行多重异议重试**（评估者的阶段内分歧通过 `disagreement_handling.disagreement_resolution` 编码为 F 条件操作，而不是重试触发条件）。
+- **Writer Phase 4b（4 项检查）**：按顺序要求以下部分 — `## Draft Body`、`## Dimension Scores`、`## Failure Condition Checks`、`## Writer Decision`；Dimension Scores 必须与七个 writer 维度 D1–D7 一一对应（依据 `shared/contracts/writer/full.json`）；Failure Condition Checks 必须与 F1 / F4 / F2 / F3 / F0 一一对应；Writer Decision 必须可根据 F-condition 严重性优先级推导。**不进行多异议重试**（writer 没有可供异议对照的 scoring_plan）。**不进行一致性检查**（writer Phase 4a 不会发出 scoring_plan 触发词）。
+- **Evaluator Phase 6b（5 项检查）**：按顺序要求以下部分 — `## Dimension Scores`、`## Failure Condition Checks`、`## Review Body`、`## Evaluator Decision`；Dimension Scores 必须与五个 evaluator 维度 D1–D5 一一对应（依据 `shared/contracts/evaluator/full.json`）；Failure Condition Checks 必须与 F1 / F2 / F3 / F6 / F4 / F5 / F0 一一对应；一致性检查（Phase 6b 的分数必须与 Phase 6a `disagreement_handling.scoring_plan.per_dimension_criteria` 中的触发词进行子字符串匹配）；Evaluator Decision 必须可根据 F-condition 严重性优先级推导。**不进行多异议重试**（evaluator 的阶段内异议通过 `disagreement_handling.disagreement_resolution` 中的 F-condition action 编码，而不是作为重试触发条件）。
 
-多重异议重试仍仅适用于审阅者（`academic-paper-reviewer` skill）；生成器模式没有评审组，也没有用于异议的 scoring_plan 锚点。
+多异议重试仍仅适用于 reviewer（`academic-paper-reviewer` skill）；generator 模式没有 panel，也没有 scoring_plan 异议锚点。
 
-三种模式的 lint 检查数量汇总：
+三种模式的检查数量汇总：
 
-| 阶段 | 审阅者（零接触） | 写作者 | 评估者 |
+| 阶段 | Reviewer（零接触） | Writer | Evaluator |
 |---|---|---|---|
-| 阶段 1 / 4a / 6a | 5 | 3 | 5 |
-| 阶段 2 / 4b / 6b | 6 | 4 | 5 |
+| Phase 1 / 4a / 6a | 5 | 3 | 5 |
+| Phase 2 / 4b / 6b | 6 | 4 | 5 |
 
-### 单代理生成器不可用处理
+### 单代理 generator 不可用处理
 
-当写作者或评估者的阶段变得不可用时（阶段 Na lint 检查连续两次失败，或阶段 Nb lint 检查失败），`academic-paper` 会发出阶段级中止标签，并转交用户干预：
+当 writer 或 evaluator 阶段变为不可用时（Phase Na 两次 lint 失败，或 Phase Nb lint 失败），`academic-paper` 会发出阶段级中止标签，并转交用户干预：
 
-- **写作者阶段 4 不可用** → `[GENERATOR-PHASE-ABORTED: role=writer, contract=<id>, reason=<lint_failure_kind>]` → 中止 `academic-paper` 阶段 4 → 由用户干预决定重试 / 回退 / 回归至阶段 3（论证蓝图）。
-- **评估者阶段 6 不可用** → `[GENERATOR-PHASE-ABORTED: role=evaluator, contract=<id>, reason=<lint_failure_kind>]` → 中止 `academic-paper` 阶段 6 → 由用户干预决定重试 / 回退 / 回归至阶段 5（草稿撰写完成）。
+- **Writer Phase 4 不可用** → `[GENERATOR-PHASE-ABORTED: role=writer, contract=<id>, reason=<lint_failure_kind>]` → 中止 `academic-paper` Phase 4 → 由用户干预决定重试 / 回退 / 回归 Phase 3（Argument Blueprint）。
+- **Evaluator Phase 6 不可用** → `[GENERATOR-PHASE-ABORTED: role=evaluator, contract=<id>, reason=<lint_failure_kind>]` → 中止 `academic-paper` Phase 6 → 由用户干预决定重试 / 回退 / 回归 Phase 5（Drafting completion）。
 
-`[GENERATOR-PHASE-ABORTED]` **不**构成有效的阶段 6b 输出，且无法进入第 3 阶段的审阅者分派。存在两条有效的第 3 阶段进入路径（依据设计文档 §5.1）：
+`[GENERATOR-PHASE-ABORTED]` 不构成有效的 Phase 6b 输出，且不能进入 Stage 3 reviewer dispatch。存在两条有效的 Stage 3 进入路径（依据设计文档 §5.1）：
 
-- **标准路径**：评估者阶段 6b 发出 F0 `evaluator_decision=accept` 或 F4 `evaluator_decision=accept_with_dissent_note`。
-- **例外路径**：当配对内修订循环在第 2 轮耗尽，且强制维度阻断重复发生时，评估者阶段 6b 发出 F5 `evaluator_decision=flag_for_reviewer_stage`。
+- **标准路径**：evaluator Phase 6b 发出 F0 `evaluator_decision=accept` 或 F4 `evaluator_decision=accept_with_dissent_note`。
+- **例外路径**：在第 2 轮结束时，in-pair revision loop 耗尽，且 mandatory-dimension block 再次出现后，evaluator Phase 6b 发出 F5 `evaluator_decision=flag_for_reviewer_stage`。
 
-`academic-paper` 不包含写作者 / 评估者的评审组基数不变量（无 `panel_size` 字段——Schema 13.1 §3.3.5 中该字段仅适用于审阅者条件）。生成器侧不存在 `[PANEL-SHRUNK]` 的对应项；`[GENERATOR-PHASE-ABORTED]` 表示阶段级中止。
+`academic-paper` 不对 writer / evaluator 携带 panel cardinality invariant（没有 `panel_size` 字段 — Schema 13.1 §3.3.5 reviewer-conditional）。generator 侧不存在 `[PANEL-SHRUNK]` 对应机制；`[GENERATOR-PHASE-ABORTED]` 是阶段级中止。
 
-**运行监控**：在 v3.6.6 部署后的前三个月内跟踪 `[GENERATOR-PHASE-ABORTED]` 比率。分母按**每次 `academic-paper full` 运行**计算——即一次用户感知的顶层调用。5% 阈值的计算公式为 `(runs_with_any_abort) / (total_runs)`。如果该比率超过 5%，v3.6.7 将引入优雅降级回退机制（参见下文 §“已知限制”）。
+**运行监控**：在 v3.6.6 部署后的前三个月内跟踪 `[GENERATOR-PHASE-ABORTED]` 发生率。分母按每次 `academic-paper full` 运行计算，即一次用户感知的顶层调用。5% 阈值为 `(runs_with_any_abort) / (total_runs)`。如果该比率超过 5%，v3.6.7 将引入优雅降级回退（参见下文 §“已知限制”）。
 
 ### 跨会话恢复范围
 
-v3.6.6 的生成器-评估器轮次（Phase 4a + Phase 4b + Phase 6a + Phase 6b + 配对内修订循环）是一个**会话内原子单元**。在轮次中途手动拆分会话 → 写作者 Phase 4a 的输出将丢失；新会话必须从 Phase 0 重新启动 `academic-paper full` 模式。
+v3.6.6 的生成器-评估器轮次（Phase 4a + Phase 4b + Phase 6a + Phase 6b + 对内修订循环）是一个**会话内原子单元**。在轮次中途手动拆分会话 → 写作者的 Phase 4a 输出会丢失；新会话必须从 Phase 0 重新启动 `academic-paper full` 模式。
 
-v3.6.3 的 `ARS_PASSPORT_RESET=1` `reset_boundary[]` 机制（依据 `academic-pipeline/references/passport_as_reset_boundary.md`）作用于 `academic-pipeline` 的 Stage 边界，而非 `academic-paper` 的内部阶段边界。`academic-paper` 的内部阶段（4a / 4b / 6a / 6b）**不是**边界点；它们之间不会生成 `kind: boundary` 账本条目。如果运行数据表明确有必要，v3.6.7+ 可能会引入 `pre_commitment_history[]`，以跨会话持久保存写作者 Phase 4a 的产物——参见下文 §“已知限制”。
+v3.6.3 的 `ARS_PASSPORT_RESET=1` `reset_boundary[]` 机制（根据 `academic-pipeline/references/passport_as_reset_boundary.md`）作用于 `academic-pipeline` 阶段边界，而非 `academic-paper` 内部阶段边界。`academic-paper` 内部阶段（4a / 4b / 6a / 6b）**不是**边界点；它们之间不会发出 `kind: boundary` 台账条目。如果运行数据表明有必要，v3.6.7+ 可能引入 `pre_commitment_history[]`，以跨会话持久化写作者的 Phase 4a 产物——参见下文 §“已知限制”。
 
 ## 已知限制
 
-- **v3.6.6 中没有优雅降级回退机制**：当写作者或评估器阶段通过 `[GENERATOR-PHASE-ABORTED]` 中止时，`academic-paper full` 会中止并转由用户介入。v3.6.7 可能会引入一种回退机制，将受影响阶段降级为 v3.6.5 的单次调用行为，并记录此次降级。v3.6.6 仅提供中止行为。有关运行期间 5% / 三个月的监控，请参见上文 §“单智能体生成器不可用处理”。
-- **无法在轮次中途跨会话恢复**：四阶段生成器-评估器轮次是一个会话内原子单元。在轮次中途手动拆分会话会丢失写作者 Phase 4a 的产物，并强制从 Phase 0 重新开始。v3.6.7+ 可能会在 Schema 9 中引入 `pre_commitment_history[]` 账本条目，以跨会话边界持久保存写作者 Phase 4a 的产物；v3.6.6 未实现此功能。
-- **配对内 Phase 6 评估器与 `academic-paper-reviewer` 外部评审的区别**：配对内的 `peer_reviewer_agent`（带有 v3.6.6 合约门控的 Phase 6 评估器）与独立的 `academic-paper-reviewer` skill（Stage 3 的五评审组外部编辑评审）服务于不同的评审层级，并继续按照设计文档 §1“已知限制”中的说明作为已知技术债保留。路由 / 合并决策推迟至 v3.7.x。
+- **v3.6.6 中没有优雅降级回退**：当写作者或评估器阶段通过 `[GENERATOR-PHASE-ABORTED]` 中止时，`academic-paper full` 将中止并转入用户干预。v3.6.7 可能引入一种回退，将受影响阶段降级为 v3.6.5 的单调用行为，并记录该降级。v3.6.6 以仅中止行为发布。有关运行监控的 5% / 三个月要求，请参见上文 §“单代理生成器不可用处理”。
+- **不支持轮次中途跨会话恢复**：四阶段生成器-评估器轮次是一个会话内原子单元。在轮次中途手动拆分会话会丢失写作者的 Phase 4a 产物，并强制从 Phase 0 重新启动。v3.6.7+ 可能在 Schema 9 中引入 `pre_commitment_history[]` 台账条目，以跨会话边界持久化写作者的 Phase 4a 产物；v3.6.6 未实现此功能。
+- **对内 Phase 6 评估器与 `academic-paper-reviewer` 外部审稿**：对内 `peer_reviewer_agent`（采用 v3.6.6 契约门控的 Phase 6 评估器）与独立的 `academic-paper-reviewer` skill（Stage 3 的 5 面板外部编辑审稿）服务于不同审稿层级，并按照设计文档 §1“已知限制”保留为已知技术债务。路由 / 合并决策推迟至 v3.7.x。
 
 ## 运行模式（11 种模式）
 
-有关详细信息，请参见 `references/mode_selection_guide.md`。
+详见 `references/mode_selection_guide.md`。
 
-| 模式 | 触发语句 | 智能体 | 输出 |
+| 模式 | 触发条件 | 代理 | 输出 |
 |------|---------|--------|--------|
-| `full` | “撰写一篇论文” | 全部 9 个（如为定量研究则增加至 11 个） | 完整论文草稿（如适用，包含图表） |
-| `outline-only` | “论文大纲” | 1->2->3 | 详细大纲 + 证据图谱 |
-| `revision` | “修订论文” | 8->5->6 | 补丁文档 + 以确定性方式应用补丁后的修订稿 + 应用报告（#390；通过 `templates/revision_tracking_template.md` 记录修订日志） |
+| `full` | “撰写论文” | 全部 9 个（+ 11 个，如为定量研究） | 完整论文草稿（如适用，包含图表） |
+| `outline-only` | “论文大纲” | 1->2->3 | 详细大纲 + 证据地图 |
+| `revision` | “修订论文” | 8->5->6 | 补丁文档 + 确定性应用的修订草稿 + 应用报告（#390；修订日志通过 `templates/revision_tracking_template.md`） |
 | `abstract-only` | “撰写摘要” | 1->7 | 双语摘要 + 关键词 |
 | `lit-review` | “文献综述” | 1->2 | 注释书目 + 综合分析 |
 | `format-convert` | “转换为 LaTeX” / “将引文转换为 [格式]” | 仅 9 | 格式化文档；包括引文格式转换（APA 7 / Chicago / MLA / IEEE / Vancouver） |
 | `citation-check` | “检查引文” | 仅 6 | 引文错误报告 |
-| `plan` | “指导我撰写论文” / “帮助我规划论文” | 1->10->3->4 | 章节计划 + INSIGHT 集合 |
-| `revision-coach` | “解析评审意见” / “修订路线图” / “我收到了审稿意见” / “我们是否应该据理力争” / “会议答辩” / “基金评审组回复” / 明确识别为真实委员会往来函件 | 仅 12 | 同行评审路径：不可变路线图核心 + 明确的作者附属文档 + 可选的跟踪模板/回复框架。委员会路径：单独的 #668 关注事项跟踪器 + 占位回复框架；不使用 Schema 11、评审者义务/严重性或裁定。 |
-| **`disclosure`**（v3.2） | **“Nature 的 AI 披露” / “生成 AI 使用声明”** | **仅 9** | **默认期刊路径：`REQUIRED` / `ACTION_ONLY` / `NOT_REQUIRED` / `UNKNOWN` 适用性以及类型化暂停状态；政策锚点路径：特定于锚点的渲染结果** |
-| **`rebuttal-audit`** | **“审核我的回复” / “检查我的答辩” / “我是否遗漏了任何审稿意见”**（必须同时提供审稿意见和现有答辩草稿） | **仅 12（仅解析）** | **答辩质量检查报告：逐条意见的覆盖情况 + 缺漏 + 风险标记。不生成新回复；仅供建议。不会生成 Schema 11 / Material Passport / 已验证状态。** |
+| `plan` | “指导我的论文” / “帮助我规划论文” | 1->10->3->4 | 章节计划 + INSIGHT 集合 |
+| `revision-coach` | “解析审稿意见” / “修订路线图” / “我收到了审稿人意见” / “我们是否应当反驳” / “会议答辩” / “基金评审组回复” / 明确识别出的真实委员会通信 | 仅 12 | 同行评审路径：不可变的 Roadmap 核心 + 明确的作者侧边栏 + 可选的 Tracking Template/Response Skeleton。委员会路径：独立的 #668 关切追踪器 + 占位回复骨架；不使用 Schema 11、审稿人义务/严重性或裁定。 |
+| **`disclosure`** (v3.2) | **“Nature 的 AI 披露” / “生成 AI 使用声明”** | **仅 9** | **默认期刊路径：`REQUIRED` / `ACTION_ONLY` / `NOT_REQUIRED` / `UNKNOWN` 适用性加上类型化暂停状态；政策锚定路径：按锚点特定方式渲染** |
+| **`rebuttal-audit`** | **“审计我的回复” / “检查我的答辩” / “我是否遗漏了任何审稿意见”**（同时要求提供审稿意见和现有答辩草稿） | **仅 12（仅解析）** | **答辩 QA 报告：逐条意见覆盖情况 + 缺口 + 风险标记。不生成新的回复；仅提供建议。不会生成 Schema 11 / Material Passport / 已验证状态。** |
 
-**披露分派契约：** 当 mode=`disclosure` 时，智能体 9 将进入其独立分支，并且在生成文本之前必须加载 `references/disclosure_mode_protocol.md`。它不会执行常规的阶段 7 格式化，也不会改用通用的全流程 AI 声明；该协议会选择投稿场所数据库路径或政策锚点路径，并负责所有中止/渲染决策。
+**披露派发契约：**当 mode=`disclosure` 时，agent 9 采用其独立分支，并且在生成文本前**必须**加载 `references/disclosure_mode_protocol.md`。它不会运行常规的第 7 阶段格式化，也不会替换为通用的全流程 AI 声明；该协议负责选择场所数据库路径或政策锚点路径，并决定所有暂停与渲染事项。
 
 ### 快速模式选择指南
 
-| 你的情况 | 推荐模式 | 频谱 |
+| 你的情况 | 推荐模式 | 光谱 |
 |----------------|-----------------|----------|
-| 从零开始，且有明确的研究问题 | `full` | 均衡 |
-| 写作前需要规划方面的帮助 | `plan` | 原创 |
-| 只需要一个大纲 | `outline-only` | 均衡 |
-| 已有草稿，并收到了评审反馈 | `revision` | 忠实 |
-| 有非结构化的评审意见 | `revision-coach` | 均衡 |
-| 有来自真实委员会/机构审查办公室的意见需要跟踪 | `revision-coach` 委员会通信变体 | 忠实 |
-| 只需要摘要 | `abstract-only` | 忠实 |
-| 需要检查/修正引用 | `citation-check` | 忠实 |
-| 需要转换格式（LaTeX、DOCX）或引用样式 | `format-convert` | 忠实 |
-| 想撰写系统性文献综述论文 | `lit-review` | 忠实 |
-| 投稿时需要针对特定投稿场所的 AI 使用披露材料包 | `disclosure` | 忠实 |
-| 已有书面答辩草稿，需要根据评审意见进行质量检查 | `rebuttal-audit` | 忠实 |
+| 从零开始，已有明确的 RQ | `full` | 平衡 |
+| 写作前需要规划帮助 | `plan` | 原创 |
+| 只需要大纲 | `outline-only` | 平衡 |
+| 已有草稿，并收到评审反馈 | `revision` | 保真 |
+| 有非结构化的评审意见 | `revision-coach` | 平衡 |
+| 有来自真实委员会/机构评审办公室、需要跟踪的意见 | `revision-coach` 委员会通信变体 | 保真 |
+| 只需要摘要 | `abstract-only` | 保真 |
+| 需要检查/修复引文 | `citation-check` | 保真 |
+| 需要转换格式（LaTeX、DOCX）或引文样式 | `format-convert` | 保真 |
+| 想要撰写系统性文献综述论文 | `lit-review` | 保真 |
+| 需要用于投稿的、特定场所的 AI 使用披露材料包 | `disclosure` | 保真 |
+| 已有书面答辩草稿，需要根据评审意见进行质量检查 | `rebuttal-audit` | 保真 |
 
-**频谱**（v3.2）：*忠实* = 大量使用模板、输出可预测；*均衡* = 默认；*原创* = 探索性、较少依赖模板。完整的跨技能频谱表请参阅 `shared/mode_spectrum.md`。
+**光谱**（v3.2）：*保真* = 模板密集、输出可预测；*平衡* = 默认；*原创* = 探索性强、模板较少。完整的跨技能光谱表请参阅 `shared/mode_spectrum.md`。
 
-不确定？从 `plan` 开始——它会逐步引导你。`disclosure` 是收尾步骤——请在论文起草完成后运行，并以你计划投稿的场所为目标。
+不确定？从 `plan` 开始——它会逐步引导你。`disclosure` 是最后阶段；在论文完成后，指定计划投稿的场所再运行它。
 
-**委员会通信路由：** 仅当用户明确指出真实的委员会/机构审查办公室时，才使用 `revision-coach` 变体。加载 `references/committee_correspondence_protocol.md`；不要根据语气推断其官方权威。该独立产物是一种标明来源的起草辅助材料，绝不会进入同行评审 Schema 11。
+**委员会通信路由：**仅当用户明确指出是真实的委员会/机构评审办公室时，才使用 `revision-coach` 变体。加载 `references/committee_correspondence_protocol.md`；不要根据语气推断其具有官方权威。该独立产物是一个有来源依据的起草辅助工具，绝不会进入同行评审 Schema 11。
 
 ### 模式选择逻辑
 
@@ -334,169 +321,163 @@ v3.6.3 的 `ARS_PASSPORT_RESET=1` `reset_boundary[]` 机制（依据 `academic-p
 
 ---
 
-## 答辩审核模式
+## Rebuttal-Audit 模式
 
-`rebuttal-audit` 会评估作者**已有的**答辩稿/评审意见回复稿在覆盖度、语气和证据方面的表现。它属于咨询性质的质量检查——**不会**撰写或重写回复。
+`rebuttal-audit` 会评估作者**现有的**答辩/回复评审意见草稿，检查其覆盖范围、语气和证据。它属于咨询性质的质量检查——**不会**撰写或改写回复。
 
-**输入门槛（路由）：** 仅当用户同时提供以下两项时，才启用 `rebuttal-audit`：(a) 评审意见/决定函，以及 (b) 一份待评估的现有答辩稿/回复稿。如果只提供了 (a)（尚无草稿），则路由至 `revision-coach`（它会*生成*回复框架）。如果意图不明确，应进行澄清，而不是猜测。
+**输入门槛（路由）：**仅当用户同时提供以下两项时，才激活 `rebuttal-audit`：(a) 评审意见/决定信，以及 (b) 用于评估的现有答辩/回复草稿。如果只有 (a)（尚无草稿），则路由到 `revision-coach`（它会生成回复框架）。如果意图不明确，应先澄清，而不是猜测。
 
-**它会生成：**
-- 逐条意见覆盖表——将草稿对每一项评审关切的处理情况标记为 `addressed` / `partially` / `missing`。
-- 缺口列表——草稿未能回应的关切。
-- 风险标记——语气过于对抗、提出的主张缺乏证据，或回复误解了评审者的真实观点。
+**生成内容：**
+- 逐条意见覆盖表——将每个评审关切标记为草稿中已`addressed` / `partially` / `missing`。
+- 缺口列表——草稿未能回答的关切。
+- 风险标记——语气过于对抗、无证据支持的主张，或误解评审者实际要点的回复。
 - 改进建议（咨询性质）。
 
-**铁律——完整性边界（不得虚假认证）：** `rebuttal-audit` 复用了 `revision_coach_agent` 的评论解析能力，但独立调用在流水线**之外**运行，因此绝不会通过 Stage 4.5 最终完整性检查。它**不得**生成 Schema 11 `commitment_extracted` 台账，**不得**写入材料护照，且**不得**将软件包标记为 `ready_to_submit` 或任何已验证状态。生成 Schema 11 工件会虚假暗示该回复已进入流水线的可追溯性系统。其输出仅为咨询性质的 QA 报告。
+**铁律 —— 完整性边界（不得虚假认证）：** `rebuttal-audit` 复用 `revision_coach_agent` 的评论解析能力，但独立调用在流水线之外运行，因此永远不会通过 Stage 4.5 final integrity。它 **不得** 生成 Schema 11 `commitment_extracted` ledger，**不得**写入 Material Passport，也 **不得**将包标记为 `ready_to_submit` 或任何已验证状态。生成 Schema 11 工件会错误地暗示该响应已进入流水线的可追溯系统。其输出仅为咨询性质的 QA 报告。
 
-**与 `re-review` 的边界：** `academic-paper-reviewer` 的 `re-review` 模式验证的是**修订后的稿件**（作者声称的修改是否确实出现在论文中），并在流水线内运行。`rebuttal-audit` 验证的是**回复信本身**（答辩是否涵盖每一条意见，其语气和证据是否恰当），并以独立、咨询方式运行。工件不同，层级不同。
-
----
-
-## 修订模式补丁协议 (#390)
-
-在修订模式下，`draft_writer_agent` 不会重新输出完整论文。该轮次按照**锚点化 → 补丁 → 确定性应用 → 最终处理器**的流程运行，将重新生成的范围限制在修订明确涉及的块内（DELEGATE-52 影响半径控制；规范 `docs/design/2026-06-10-390-diff-patch-revision-mode-spec.md`）：
-
-1. **对草稿进行锚点化**（`scripts/ars_anchorize_draft.py`——幂等且内容中立）：每个块都会获得一个稳定的 `<!--block:BNNNN-->` 标记和一份精确清单。应用补丁之前不会重写草稿的任何内容。
-2. **绑定显式授权 (#670)：** 验证不可变的 `revision-roadmap/1.0`、精确登记的声明表面，以及完整的 `author-adjudication/1.0`。路线图对严重程度、义务、成本范围和有限后果分别独立记录；作者分流决策和精确目标仅存在于单独的显式附属文件中。
-3. **写作器以附属文件形式输出当前补丁 1.1**（`shared/contracts/patch/revision_patch.schema.json`）——每个操作仅引用 `will_address` 条目，保持在精确的目标/操作范围内，并显式声明声明数组和附带影响数组。已登记声明的变更需要作者明确批准的精确替代内容；与已拒绝事项重叠的附带影响需要精确的附带影响授权。
-4. **确定性应用**（`scripts/ars_apply_revision_patch.py`）会在结构分析或写入之前重放每一项绑定。当前的 1.3 报告格式包含以机械方式推导出的授权见证，以及如实标示的 `unregistered_claim_drift_review_required` E6 边界。如果 E6 随后在未登记表面上检测到漂移，检查点不存在默认开放路径：作者必须明确选择 `restore`、`authorize_with_reason` 或 `pause`。构建和重放验证会将每个选择绑定到一个明确命名的、当前运行本地的原始会话事件工件；附属文件保留其重新计算的摘要，但不保留路径或消息。未涉及的块保持字节级一致。
-5. **持续证据：** 每次审查写入、全部拒绝的空操作轮次和完整性修正轮次都会进入 `revision-evidence-bundle/1.0`，覆盖从完整性检查结果精确为 PASS 的草稿到最终草稿的全过程。范围升级需要新的显式附属文件或范围更窄的补丁；旧版完整重新输出不能声称当前授权为 PASS。
-
-编排运行遵循 `pipeline_orchestrator_agent.md` § 修订轮次补丁排序；模式 B 用户手动运行相同的脚本——确切命令见 `references/revision_patch_protocol.md`。如实说明其边界：已注册的表面和确切的编辑权限可由机器重放，但未注册的语义漂移仍需 E6 审查。`scripts/claim_strength_drift_disposition.py` 仅完成对已报告行的显式处理；它不会使模型介导的检测具有确定性或完整性。`academic-paper full` 配对内的阶段 6→4 循环不属于此独立/流水线修订契约的范围。
+**与 `re-review` 的边界：** `academic-paper-reviewer` 的 `re-review` 模式验证的是**修订后的稿件**（作者声称的修改是否确实出现在论文中），并在流水线内运行。`rebuttal-audit` 验证的是**回复信本身**（回复是否覆盖每条评论、其语气/证据是否可靠），作为独立流程运行，仅提供咨询性质的结果。两者的工件和层级不同。
 
 ---
 
-## 计划模式：逐章引导式规划
+## 修订模式补丁协议（#390）
 
-一种苏格拉底式模式，每次引导用户规划论文的一个章节。通过结构化对话构建完整的论文蓝图。
+在修订模式下，`draft_writer_agent` 不会重新输出完整论文。本轮运行采用“锚定化 → 补丁 → 确定性应用 → 最终化器”流程，将重新生成范围限制在修订明确涉及的区块内（DELEGATE-52 blast-radius containment；规范 `docs/design/2026-06-10-390-diff-patch-revision-mode-spec.md`）：
 
-> 有关完整的逐章对话流程和论文蓝图结构，请参阅 `references/plan_mode_protocol.md`。
+1. **锚定草稿**（`scripts/ars_anchorize_draft.py` —— 幂等且内容中性）：每个区块都会获得一个稳定的 `<!--block:BNNNN-->` 标记和一份精确清单。在应用之前，不会重写草稿。
+2. **绑定明确授权（#670）：** 验证不可变的 `revision-roadmap/1.0`、准确的已注册声明表面，以及完整的 `author-adjudication/1.0`。路线图分别保留严重程度、义务、成本范围和有界后果；作者分诊结果和准确目标仅存在于单独的明确 sidecar 中。
+3. **写作者输出当前 patch 1.1**（`shared/contracts/patch/revision_patch.schema.json`）作为 sidecar —— 每个操作只能引用 `will_address` 项目，必须处于准确的目标/操作范围内，并明确声明 claim/collateral 数组。已注册声明的变动需要准确的作者批准替换内容；被拒绝的重叠需要准确的 collateral 授权。
+4. **确定性应用**（`scripts/ars_apply_revision_patch.py`）会在结构分析或写入之前重放每一项绑定。当前的报告格式 1.3 携带机械推导出的授权见证，以及诚实的 `unregistered_claim_drift_review_required` E6 边界。如果 E6 后续检测到未注册表面发生漂移，该检查点没有默认开放的路径：作者必须明确选择 `restore`、`authorize_with_reason` 或 `pause`。构建和重放验证会将每个选择绑定到一个明确命名的、仅限本次运行的原始会话事件工件；sidecar 保留其重新计算出的摘要，但不保留路径或消息。未触及的区块保持字节级一致。
+5. **持续证据：** 每次审阅写入、全部拒绝的无操作，以及完整性纠正轮次，都会进入 `revision-evidence-bundle/1.0`，其范围从一份准确的 integrity-PASS 草稿到准确的最终草稿。范围升级需要新的明确 sidecar 或更窄的补丁；旧式完整重新输出不能宣称当前授权 PASS。
+
+编排运行遵循 `pipeline_orchestrator_agent.md` § 修订轮次补丁排序；模式 B 用户手动运行相同的脚本，确切命令见 `references/revision_patch_protocol.md`。诚实边界：已注册的表面和确切编辑权限由机器重放，但未注册的语义漂移仍需要 E6 审查。`scripts/claim_strength_drift_disposition.py` 仅完成对已报告行的显式处理；它并不使模型介导的检测变得确定性或完整。`academic-paper full` 的配对内第 6→4 阶段循环不属于此独立/管道修订契约。
+
+---
+
+## 规划模式：逐章引导式规划
+
+通过一次一个章节的结构化对话，引导用户完成论文规划的苏格拉底式模式。构建完整的论文蓝图。
+
+> 有关完整的逐章对话流程和论文蓝图结构，参见 `references/plan_mode_protocol.md`。
 
 ---
 
 ## 交接协议：deep-research -> academic-paper
 
-`intake_agent` 会自动检测 deep-research 材料（研究问题简报 /
-参考文献目录 / 综合分析 / 洞见集合），并跳过重复步骤。它还要求提供由构建器生成的完全一致的 `preregistration-artifact/1.0` 交接
-回执，并在有相应配套文件时，要求提供其中明确命名的配套文件。接收流程会验证并
-原样传递这些字节；它不会推断状态、修复/重建
-旁车文件、跟随其显示路径，也不会用规划模板替代它。用户之后的
-显式提供必须由指定的确定性构建器生成的新旁车文件来表示。
-请参阅 `deep-research/SKILL.md` 中的交接协议以及
-`shared/references/cross_document_consistency_advisory_protocol.md`。
+`intake_agent` 会自动检测深度研究材料（研究问题简报 /
+参考书目 / 综合分析 / INSIGHT 集合）并跳过冗余步骤。它还要求提供由构建器生成的精确 `preregistration-artifact/1.0` 交接收据，以及在提供时其明确命名的配套文件。接收环节会验证并原样携带这些字节；它不会推断状态、修复/重建附属文件、跟随其显示路径，或替换规划模板。之后用户的明确提供必须由指定确定性构建器生成的新附属文件表示。参见 `deep-research/SKILL.md` 的交接协议以及 `shared/references/cross_document_consistency_advisory_protocol.md`。
 
 ---
 
 ## 失败路径
 
-详情请参阅 `references/failure_paths.md`。快速参考：
+详情参见 `references/failure_paths.md`。快速参考：
 
 | 失败场景 | 处理策略 |
 |---------|---------|
 | 研究基础不足 | 建议先运行 `deep-research` |
-| 选择了错误的论文结构 | 返回阶段 2，建议替代结构 |
-| 字数显著高于/低于目标 | 识别有问题的章节，建议删减/扩充 |
-| 引用格式完全错误 | 重新运行整个引用阶段 |
-| 同行评审拒稿 | 分析拒稿原因，建议进行重大修订或结构调整 |
-| 计划模式无法收敛 | 建议切换到仅大纲模式 |
-| 交接材料不完整 | 列出缺失项目，建议补充或重新运行 |
+| 选择了错误的论文结构 | 返回第 2 阶段，建议替代结构 |
+| 字数显著超过/低于目标 | 识别存在问题的章节，建议删减/扩展 |
+| 引文格式完全错误 | 重新运行整个引文阶段 |
+| 同行评审拒稿 | 分析拒稿原因，建议重大修订或重构 |
+| 规划模式未收敛 | 建议切换到仅大纲模式 |
+| 交接材料不完整 | 列出缺失项，建议补充或重新运行 |
 | 用户中途放弃 | 保存已完成的章节计划 |
 
 ---
 
-## 完整学术流水线
+## 完整学术管道
 
-有关完整工作流，请参阅 `academic-pipeline/SKILL.md`。
+完整工作流参见 `academic-pipeline/SKILL.md`。
 
 ---
 
-## 阶段 0：配置访谈
+## 第 0 阶段：配置访谈
 
-有关阶段 0 配置访谈的完整字段定义，请参阅 `agents/intake_agent.md`。访谈涵盖 9 个核心项目：论文类型、学科、目标期刊、引用格式、输出格式、语言、摘要、字数和现有材料——此外还包括合著者、资助、可选的风格校准、领域证据画像（步骤 12）、引用验证级别（步骤 13，#392），以及独立的撤稿政策（步骤 14，#651）。两项引用政策默认都仅作标记，并可显式选择严格模式，分别用于初始化 `terminal_policies.citation_existence` 和 `terminal_policies.retraction`。当作者确认目标出版物/赛道/类型时，阶段 0 还会解析 #683 `ReviewTargetContext`，并在任何感知评判标准的使用者运行之前初始化 #684 仅指针绑定清单；若目标缺失，则使用显式的领域通用 `criteria_binding_unavailable` 路径。输出论文配置记录，等待用户确认。
+有关第 0 阶段配置访谈的完整字段定义，参见 `agents/intake_agent.md`。访谈涵盖 9 个核心项目：论文类型、学科、目标期刊、引文格式、输出格式、语言、摘要、字数和现有材料，以及共同作者、资金、可选的风格校准、领域证据配置文件（第 12 步）、引文验证级别（第 13 步，#392）和独立撤稿政策（第 14 步，#651）。两项引文政策默认均为仅标记，并需显式选择严格模式，分别为 `terminal_policies.citation_existence` 和 `terminal_policies.retraction` 提供种子值。当作者确认期刊/赛道/类型目标时，第 0 阶段还会在任何感知标准的消费者运行之前解析 #683 `ReviewTargetContext`，并初始化仅指针的 #684 绑定清单；缺失时使用显式的字段通用 `criteria_binding_unavailable` 路径。输出一份论文配置记录，等待用户确认。
 
 ---
 
 ## 文件结构
 
-**智能体定义**：`agents/{agent_name}.md` — 每个智能体对应一个文件（共 12 个，与上方的智能体团队表一致）。
+**Agent 定义**：`agents/{agent_name}.md` — 每个 Agent 一个文件（共 12 个，与上方 Agent Team 表格对应）。
 
-**参考资料**（`references/` 中有 28 个文件）：
-- 引用：`apa7_extended_guide`、`apa7_chinese_citation_guide`、`citation_format_switcher`
+**参考资料**（`references/` 中的 28 个文件）：
+- 引文：`apa7_extended_guide`、`apa7_chinese_citation_guide`、`citation_format_switcher`
 - 写作：`academic_writing_style`、`writing_quality_check`、`writing_judgment_framework`
-- 结构：`paper_structure_patterns`（6 种类型）、`abstract_writing_guide`、`intro_title_rhetoric_guide`（CARS 语步 + 标题检查清单）
-- 领域：`hei_domain_glossary`（双语）、`journal_submission_guide`、`latex_template_reference`、`domain_evidence_profiles`（建议性筛选配置）
-- 流程：`failure_paths`（12 种场景）、`mode_selection_guide`（11 种模式）、`plan_mode_protocol`、`workflow_phase_details`、`revision_patch_protocol`（#390 Mode B 命令 + 标记生命周期）
-- 伦理：`credit_authorship_guide`（CRediT 的 14 种角色）、`funding_statement_guide`、`statistical_visualization_standards`
-- 披露（v3.2）：`disclosure_mode_protocol`（默认的投稿场所适用性/状态组合：`REQUIRED`、`ACTION_ONLY`、`NOT_REQUIRED`、`UNKNOWN`，以及类型化中止；单独呈现政策锚点）、`venue_disclosure_policies`（v2 数据库：ICLR、NeurIPS、Nature、Science、ACL、EMNLP，以及医学出版政策目标——ICMJE、NEJM、The Lancet、JAMA、BMJ、PLOS、Frontiers、出版机构级的 Chinese Nursing Journals Publishing House 中华护理杂志社、期刊级的 International Eye Science 国际眼科杂志）
+- 结构：`paper_structure_patterns`（6 种类型）、`abstract_writing_guide`、`intro_title_rhetoric_guide`（CARS moves + 标题检查清单）
+- 领域：`hei_domain_glossary`（双语）、`journal_submission_guide`、`latex_template_reference`、`domain_evidence_profiles`（咨询性筛选画像）
+- 流程：`failure_paths`（12 个场景）、`mode_selection_guide`（11 种模式）、`plan_mode_protocol`、`workflow_phase_details`、`revision_patch_protocol`（#390 Mode B 命令 + 标记生命周期）
+- 伦理：`credit_authorship_guide`（CRediT 14 种角色）、`funding_statement_guide`、`statistical_visualization_standards`
+- 披露（v3.2）：`disclosure_mode_protocol`（默认期刊适用性/状态包：`REQUIRED`、`ACTION_ONLY`、`NOT_REQUIRED`、`UNKNOWN`，以及类型化暂停；单独的政策锚点呈现）、`venue_disclosure_policies`（v2 数据库：ICLR、NeurIPS、Nature、Science、ACL、EMNLP，以及医学出版政策目标 — ICMJE、NEJM、The Lancet、JAMA、BMJ、PLOS、Frontiers、出版商范围的 Chinese Nursing Journals Publishing House 中华护理杂志社、期刊层级的 International Eye Science 国际眼科杂志）
 - 完整性（v3.3）：`anti_leakage_protocol`（知识隔离）、`vlm_figure_verification`（可选的 VLM 图表检查）
 - 政策锚点（#108）：`policy_anchor_table`、`policy_anchor_disclosure_protocol`
-- 元信息：`changelog`（版本历史）
-- 另有：`deep-research/references/apa7_style_guide.md`（基础参考资料，此处对其进行了扩展）
+- 元数据：`changelog`（版本历史）
+- 另有：`deep-research/references/apa7_style_guide.md`（基础参考资料，在此扩展）
 
-**模板**（`templates/` 中有 11 个文件）：`imrad`、`literature_review`、`case_study`、`theoretical_paper`、`policy_brief`、`conference_paper`、`latex_article_template.tex`、`bilingual_abstract`、`credit_statement`、`funding_statement`、`revision_tracking`（4 种状态类型）。
+**模板**（`templates/` 中的 11 个文件）：`imrad`、`literature_review`、`case_study`、`theoretical_paper`、`policy_brief`、`conference_paper`、`latex_article_template.tex`、`bilingual_abstract`、`credit_statement`、`funding_statement`、`revision_tracking`（4 种状态类型）。
 
-**示例**（`examples/` 中有 9 个文件）：`imrad_hei_example`、`literature_review_example`、`plan_mode_guided_writing`、`chinese_paper_example`、`revision_mode_example`、`revision_recovery_example`、`clinical_citation_verification_checklist`、`clinical_epistemic_status_example`、`version_family_reconciliation_example`。
+**示例**（`examples/` 中的 9 个文件）：`imrad_hei_example`、`literature_review_example`、`plan_mode_guided_writing`、`chinese_paper_example`、`revision_mode_example`、`revision_recovery_example`、`clinical_citation_verification_checklist`、`clinical_epistemic_status_example`、`version_family_reconciliation_example`。
 
 ---
 
 ## 反模式
 
-为防止常见失败模式，明确禁止以下做法：
+为防止常见失败模式而明确禁止的行为：
 
-| # | 反模式 | 失败原因 | 正确做法 |
+| # | 反模式 | 失败原因 | 正确行为 |
 |---|-------------|-------------|-----------------|
-| 1 | **过度使用典型 AI 用语** | “深入探讨”、“至关重要”、“需要特别指出的是” = 会立即被识别为 AI 生成内容 | 使用学科专用词汇；参见 `references/writing_quality_check.md` |
-| 2 | **滥用破折号** | 每页使用超过 2 个破折号会显露 AI 写作特征 | 使用括号、逗号，或重构句子 |
-| 3 | **空泛的开场句** | “在本节中，我们将讨论……”没有提供任何信息 | 直接从主张或研究发现开始 |
-| 4 | **段落长度整齐划一** | 每个段落都是 4–5 句话 = 单调的 AI 节奏 | 自然地改变段落长度（2–8 句话） |
-| 5 | **⚠️ 铁律：伪造引用** | 编造看似可信但实际不存在的参考文献 | 每条引用都必须通过 DOI 或 WebSearch 进行验证；参见 `academic-pipeline/agents/integrity_verification_agent.md` |
-| 6 | **讨好式修订** | 不经批判性评估就接受审稿人的所有反馈 | 当审稿人有误时，使用 REVIEWER_DISAGREE 状态；用证据说明理由 |
-| 7 | **修订期间范围蔓延** | 为了“改进”论文而添加未被要求的章节或分析 | 修订仅处理审稿人提出的问题；新增内容需要用户明确批准 |
-| 8 | **忽略失败路径** | 即使出现直接拒稿信号或致命的方法学缺陷，仍继续推进 | 检查 `references/failure_paths.md`；触发时调用 F11 直接拒稿恢复流程 |
+| 1 | **模糊的默认词汇** | “delve into”“crucial”“it is important to note”通常不如学科自身术语精确 | 使用学科特定词汇；参见 `references/writing_quality_check.md`（诊断工具，而非禁令） |
+| 2 | **打断论证的破折号** | 打断句子逻辑的插入语所增加的阅读成本高于其价值 | 在更通顺时使用括号、逗号，或重构句子 |
+| 3 | **铺垫式开场** | “In this section, we will discuss...”没有增加任何信息 | 直接以论点或发现开头 |
+| 4 | **填充或过载的段落** | 为满足预设长度而拉长或拆分段落，会掩盖论证实际转折之处 | 为每个段落的核心观点提供所需篇幅；不要为满足模板而填充、拆分或变动长度 |
+| 5 | **⚠️ 铁律：伪造引文** | 编造看似可信但并不存在的参考文献 | 每条引文都必须通过 DOI 或 WebSearch 验证；参见 `academic-pipeline/agents/integrity_verification_agent.md` |
+| 6 | **迎合式修订** | 不经批判性评估便接受所有审稿意见 | 当审稿人错误时，使用 REVIEWER_DISAGREE 状态；以证据说明理由 |
+| 7 | **修订期间的范围蔓延** | 为“改进”论文而添加未被要求的章节或分析 | 修订只处理审稿人关切；新增内容需要用户明确批准 |
+| 8 | **忽略失败路径** | 即使出现直接拒稿信号或致命方法学缺陷仍继续推进 | 检查 `references/failure_paths.md`；触发时调用 F11 Desk-Reject Recovery |
 
 ---
 
 ## 质量标准
 
 ### 写作质量
-1. **每项主张都必须有引文支持**，或由论文自身的数据支持——对于 #548 的缺失性／新颖性主张，则须附有记录在案的检索来源，并在存在最接近的既有研究时明确指出该研究（否则，明确声明不存在相邻研究即可；没有任何来源能够引用某项缺失）
-2. **引用零遗漏**——文内引用与参考文献列表必须完全匹配
-3. **语体一致**——采用符合相应学科的学术语气
-4. **逻辑流畅**——段落与章节之间有清晰的过渡
-5. **符合字数要求**——控制在目标字数的 +/-10% 以内
+1. **每项论断都必须有引文**，或由论文自身的数据支持；对于 #548 的缺失/新颖性论断，则必须提供已记录的检索溯源，以及在存在时明确列出最接近的既有研究（否则，明确的相邻研究不存在声明即可；不存在的事实无法由任何来源进行引用）
+2. **零引文孤立项** —— 文内引文与参考文献列表必须完全匹配
+3. **语域一致** —— 采用符合该学科的学术语调
+4. **逻辑流畅** —— 段落与章节之间应有清晰的过渡
+5. **字数合规** —— 控制在目标字数的 +/-10% 以内
 
 ### 双语摘要质量
-6. **独立撰写**——zh-TW 与 EN 摘要须分别独立撰写，**不得**采用机械翻译
-7. **结构对齐**——两种语言的摘要须以相同顺序涵盖相同的关键要点
-8. **关键词**——每种语言提供 5-7 个关键词，反映论文的核心概念
-9. **字数**——EN：150-300 个单词；zh-TW：300-500 个字符
+6. **独立撰写** —— zh-TW 和 EN 摘要应分别独立撰写，而非机械翻译
+7. **结构对齐** —— 两份摘要应以相同顺序涵盖相同的关键要点
+8. **关键词** —— 每种语言提供 5-7 个关键词，反映论文的核心概念
+9. **字数要求** —— EN：150-300 个单词；zh-TW：300-500 个字符
 
-### 引用质量
-10. **格式合规**——100% 遵循所选引用格式
-11. ⚠️ 铁律：**纳入 DOI**——每个具有 DOI 的来源都必须包含 DOI；每条引用都必须通过 DOI 或 WebSearch 验证
-12. **时效性**——标记出版时间超过 10 年的来源（奠基性著作除外）
-13. **自引比例**——若超过 15%，则予以标记
+### 引文质量
+10. **格式合规** —— 100% 遵循所选引文格式
+11. ⚠️ **铁律：DOI 纳入** —— 每个具有 DOI 的来源都必须包含 DOI；每条引文都必须通过 DOI 或 WebSearch 进行验证
+12. **时效性** —— 标记超过 10 年的来源（奠基性研究除外）
+13. **自引比例** —— 超过 15% 时予以标记
 
 ### 同行评审
-14. **与标准绑定的五个维度**——原创性、方法严谨性、证据充分性、论证连贯性和写作质量；须依据证据给出分类判断，不得进行数值汇总
-15. **可操作的反馈**——每项批评都必须包含具体建议
-16. **最多 2 轮修订**——未解决的事项转为已确认的局限性
+14. **五个基于标准的维度** —— Originality、Methodological Rigor、Evidence Sufficiency、Argument Coherence 和 Writing Quality；根据证据报告分类判断，不进行数值汇总
+15. **可执行的反馈** —— 每项批评都必须包含具体建议
+16. **最多 2 轮修订** —— 未解决的问题转入 Acknowledged Limitations
 
-### 强制包含内容
-⚠️ **铁律**：每篇论文都**必须**包含：数据可用性声明、伦理声明、作者贡献（CRediT）、利益冲突声明、资助致谢。
-17. **AI 使用情况报告**——常规 `full` / `format-convert` 流程包含现有的通用 AI 工具使用声明；独立的 `disclosure` 模式则遵循所选出版场所的适用性／状态或政策锚点渲染约定
-18. **局限性章节**——明确讨论研究局限性
-19. **伦理声明**——适用时提供（涉及人类受试者、敏感数据）
+### 必须包含的内容
+⚠️ **铁律**：每篇论文都必须包含：Data Availability Statement、Ethics Declaration、Author Contributions (CRediT)、Conflict of Interest Statement、Funding Acknowledgment。
+17. **AI 使用报告** —— 常规 `full` / `format-convert` 流程包含现有的通用 AI 工具使用声明；独立的 `disclosure` 模式则遵循所选期刊适用性/状态或政策锚定渲染契约
+18. **Limitations 章节** —— 明确讨论研究局限性
+19. **Ethics 声明** —— 在适用时提供（human subjects、sensitive data）
 
 ---
 
 ## 输出语言
 
-遵循用户使用的语言。学术术语保留为 English。无论正文使用何种语言，始终提供双语摘要。
+遵循用户的语言。学术术语保留 English。无论正文使用何种主要语言，始终提供双语摘要。
 
 ---
 
-## 与其他 Skill 的集成
+## 与其他 Skills 的集成
 
 ```
 academic-paper + tw-hei-intelligence  -> Evidence-based HEI paper with real MOE data
@@ -508,14 +489,14 @@ academic-paper + academic-paper-reviewer -> Peer review -> revision loop
 
 ---
 
-## 模型分级（#517，可选）
+## Model Tiering (#517，可选)
 
-当设置了 `ARS_MODEL_TIERING` 时，调度会话将根据 `shared/model_tiering.md`（规范定义：完整的 39 个智能体判断/执行分类表及规则）为此技能的智能体选择模型层级。简要规则：
+当设置了 `ARS_MODEL_TIERING` 时，调度会话会根据 `shared/model_tiering.md` 为此技能的代理进行路由（规范内容：完整的 39 个代理判断/执行表及规则）。简化规则：
 
-- **未设置（默认）：**每个智能体都继承会话模型——与 #517 之前的行为保持字节级等效。
-- **`economy`**（前沿层级会话）：执行型智能体使用比会话模型低一个层级的模型——最低为 Opus 级，绝不低于此层级；判断型智能体继续使用会话模型。当会话模型处于或低于最低层级时不执行任何操作（仅通知一次）。
-- **`quality-boost`**（低于前沿层级的会话）：位于检查点界面（阶段 2.5/4.5 门控；可选启用的阶段 4→5 声明–引用审核；最终审查）的判断型智能体直接提升至前沿层级（无论相隔多少层级——并非仅提升一级）；任何智能体都不会被降级。当会话模型已处于前沿层级时不执行任何操作（仅通知一次）。
-- 未知值 → 警告一次，并按未设置处理。层级表示相对位置，绝不硬编码绑定到模型 ID。当某个方向处于启用状态时，将同一阶段的重复调用路由至同一个工作智能体，以便累积其提示词缓存；未设置时，调度形态也保持字节级等效。
+- **未设置（默认）：** 每个代理都继承会话模型，与 #517 之前的行为逐字节等效。
+- **`economy`**（frontier-tier 会话）：执行类型代理使用比会话模型低一个层级的模型进行调度，最低为 Opus-class，绝不会更低；判断类型代理保持使用会话模型。当会话模型处于最低层级或更低时无操作（仅通知一次）。
+- **`quality-boost`**（低于 frontier-tier 的会话）：判断类型代理在检查点表面（Stage 2.5/4.5 门控；可选的 Stage 4→5 claim–ref 审计；最终审查）跳升至 frontier 层级（无论相隔多少层级，都不是只提升一个层级）；任何情况下都不会降级。当会话处于 frontier 层级时无操作（仅通知一次）。
+- 未知值 → 仅警告一次，按未设置处理。层级表示相对位置，绝不硬编码为模型 id。当某个方向生效时，将重复的同阶段调用路由至同一个 worker，以便其提示缓存持续累积；未设置时，调度形状也保持逐字节等效。
 
 ---
 

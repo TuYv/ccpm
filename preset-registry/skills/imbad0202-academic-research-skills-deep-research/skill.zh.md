@@ -11,15 +11,15 @@ metadata:
     - academic-paper
     - academic-pipeline
 ---
-# 深度研究——通用学术研究智能体团队
+# 深度研究 —— 通用学术研究智能体团队
 
-通用深度研究工具——由 13 个智能体组成、适用于任何主题的领域无关型严谨学术研究团队。
+通用深度研究工具 —— 一个适用于任何主题、由 13 个智能体组成的严谨学术研究团队。
 
-**v2.4** 为报告编译器新增了写作质量改进功能：
-- **使用风格配置文件**（可选）——如果学术论文接收阶段提供了风格配置文件，报告编译器会将其作为执行摘要和综合分析章节的柔性指导。学科惯例和报告客观性优先。
-- **写作质量检查**——报告编译器在定稿前运行写作质量检查清单：标记 AI 典型的过度使用词语、检查句子和段落长度的变化，并删除铺垫式开场语。参见 `academic-paper/references/writing_quality_check.md`。
+**v2.4** 为报告编译器新增了写作质量改进：
+- **风格档案应用**（可选）——如果学术论文 intake 中提供了 Style Profile，报告编译器会将其作为 Executive Summary 和 Synthesis 部分的软性指导。学科惯例和报告客观性优先。
+- **写作质量检查**——报告编译器在最终定稿前使用 `academic-paper/references/writing_quality_check.md` 作为诊断指南（提示中的判断应服从作者和出版场所的要求，而非配额），并将引用来源不支持的主张标记为 `[MATERIAL GAP]`，而不是对其进行模棱两可的表述（#825）。
 
-> **路由规范（v3.9.2）：** 有关跨技能路由规则，请参见 `.claude/CLAUDE.md` 中的“Routing Discipline (v3.9.2)”以及 `shared/references/intent_clarification_protocol.md`。此技能假定路由已完成——存在歧义的跨阶段材料应已在上游得到澄清。
+> **路由规范（v3.9.2）：**参见 `.claude/CLAUDE.md` 中的“Routing Discipline (v3.9.2)”以及 `shared/references/intent_clarification_protocol.md`，了解跨技能路由规则。本技能假定路由已经确定——含义不明确的跨阶段材料应已在上游完成澄清。
 
 ## 快速开始
 
@@ -28,7 +28,7 @@ metadata:
 Research the impact of AI on higher education quality assurance
 ```
 
-**苏格拉底式模式：**
+**苏格拉底模式：**
 ```
 Guide my research on the impact of declining birth rates on private universities
 引導我的研究：少子化對私立大學的影響
@@ -36,12 +36,12 @@ Guide my research on the impact of declining birth rates on private universities
 ```
 
 **执行流程：**
-1. 范围界定——研究问题 + 方法论蓝图
-2. 调查——系统性文献检索 + 来源验证
-3. 分析——跨来源综合分析 + 偏差检查
-4. 撰写——完整的 APA 7.0 报告
-5. 审查——编辑审查 + 伦理审查 + 脆弱性扫描
-6. 修订——最终润色报告
+1. 范围界定 —— 研究问题 + 方法论蓝图
+2. 调查 —— 系统性文献检索 + 来源验证
+3. 分析 —— 跨来源综合 + 偏差检查
+4. 撰写 —— 完整 APA 7.0 报告
+5. 审查 —— 编辑 + 伦理 + 脆弱性扫描
+6. 修订 —— 最终润色后的报告
 
 ---
 
@@ -49,73 +49,73 @@ Guide my research on the impact of declining birth rates on private universities
 
 ### 触发关键词
 
-**英文**：research, deep research, literature review, systematic review, meta-analysis, PRISMA, evidence synthesis, fact-check, methodology, APA report, academic analysis, policy analysis, WHY HOW WHAT papers, 3W literature scan, guide my research, help me think through, monitor this topic, set up alerts
+**英语**: research, deep research, literature review, systematic review, meta-analysis, PRISMA, evidence synthesis, fact-check, methodology, APA report, academic analysis, policy analysis, WHY HOW WHAT papers, 3W literature scan, guide my research, help me think through, monitor this topic, set up alerts
 
-**繁体中文**：研究, 深度研究, 文獻回顧, 文獻探討, 系統性回顧, 後設分析, 證據綜整, 事實查核, 三段式文獻掃描, WHY HOW WHAT 論文比較, 研究方法, 學術分析, 政策分析, 引導我的研究, 幫我釐清, 監測這個主題, 設定追蹤
+**繁體中文**: 研究, 深度研究, 文獻回顧, 文獻探討, 系統性回顧, 後設分析, 證據綜整, 事實查核, 三段式文獻掃描, WHY HOW WHAT 論文比較, 研究方法, 學術分析, 政策分析, 引導我的研究, 幫我釐清, 監測這個主題, 設定追蹤
 
-**韩文**：심층 연구, 문헌 조사, 문헌 고찰, 체계적 문헌고찰, 메타분석, 근거 종합, 사실 확인, 팩트체크, 연구 방법 설계, 학술 분석, 연구 방향을 잡아줘, 연구 주제 정하는 것을 도와줘, 무엇을 연구할지 모르겠어, 이 주제 계속 모니터링해줘
+**한국어**: 심층 연구, 문헌 조사, 문헌 고찰, 체계적 문헌고찰, 메타분석, 근거 종합, 사실 확인, 팩트체크, 연구 방법 설계, 학술 분석, 정책 분석, 연구 방향을 잡아줘, 연구 주제 정하는 것을 도와줘, 무엇을 연구할지 모르겠어, 이 주제 계속 모니터링해줘
 
-### 苏格拉底式模式激活条件
+### 苏格拉底模式激活
 
-当用户的**意图**符合以下任一模式时，激活 `socratic` 模式，**无论用户使用何种语言**。应识别语义，而不是精确匹配关键词。
+当用户的**意图**符合以下任一模式时，激活 `socratic` 模式，**无论用户使用何种语言**。应识别含义，而非精确匹配关键词。
 
-**意图信号**（满足任意一项即可）：
-1. 用户没有明确的研究问题，并希望获得引导式思考
-2. 用户请求在研究过程中得到“带领”“引导”或“指导”
-3. 用户不确定要研究什么或从何处开始
-4. 用户希望进行头脑风暴、探索或明确研究方向
-5. 用户描述了一个宽泛的兴趣，但没有提出具体且可回答的问题
+**意图信号**（满足其中任意一项即可）：
+1. 用户没有明确的研究问题，希望获得引导式思考
+2. 用户请求在研究过程中得到“带领”、“指导”或“辅导”
+3. 用户表示不确定应该研究什么或从哪里开始
+4. 用户希望头脑风暴、探索或澄清研究方向
+5. 用户描述了一个模糊的兴趣点，但没有具体且可回答的问题
 
-**默认规则**：当意图在 `socratic` 和 `full` 之间存在歧义时，**优先选择 `socratic`**——先提供引导比生成用户不需要的报告更稳妥。用户之后随时可以切换到 `full`。
+**默认规则**：当 `socratic` 和 `full` 之间的意图存在歧义时，**优先选择 `socratic`**——先进行引导比直接生成用户可能并不需要的报告更稳妥。用户之后始终可以切换到 `full`。
 
-**触发示例**（仅作说明，并非穷举）：
-“指导我的研究”“帮助我理清思路”、 「引導我的研究」「幫我釐清」，或任何语言中的同等表达
+**示例触发词**（仅作说明，并非详尽无遗）：  
+"guide my research", "help me think through", 「引導我的研究」「幫我釐清」，或任何语言中的等价表达
 
-### 不触发
+### 不触发的情况
 
-| 场景 | 改用 |
+| 情况 | 改用 |
 |----------|-------------|
-| 撰写论文（而非开展研究） | `academic-paper` |
-| 评审论文（结构化评审） | `academic-paper-reviewer` |
-| 从研究到论文的完整流程 | `academic-pipeline` |
+| 撰写论文（不是进行研究） | `academic-paper` |
+| 审阅论文（结构化审阅） | `academic-paper-reviewer` |
+| 从完整研究到论文的流程 | `academic-pipeline` |
 
 ### 快速模式选择指南
 
-| 你的情况 你的狀況 | 推荐模式 | 倾向 |
+| 你的情况 Your Situation | 推荐模式 | 光谱 |
 |----------------|-----------------|----------|
-| 想法模糊，需要指导 / 有模糊想法，需要引導 | `socratic` | 原创性 |
-| 有明确的 RQ，需要全面研究 / 有明確 RQ，需要完整研究 | `full` | 平衡 |
-| 需要快速简报（30 分钟） / 需要快速摘要 | `quick` | 忠实性 |
-| 有一篇论文需要在引用前进行评估 / 有論文需要評估 | `review` | 平衡 |
-| 需要针对某个主题进行文献综述 / 需要文獻回顧 | `lit-review` | 忠实性 |
-| 需要快速扫描并比较多篇论文 / 需要快速比較多篇論文 | `three-way-scan` | 忠实性 |
-| 需要核实特定论断 / 需要查核特定事實 | `fact-check` | 忠实性 |
-| 需要系统综述 / 元分析 / 系統性回顧或後設分析 | `systematic-review` | 忠实性 |
+| 想法模糊，需要引导 / 有模糊想法，需要引導 | `socratic` | 原创性 |
+| RQ 明确，需要完整研究 / 有明確 RQ，需要完整研究 | `full` | 平衡 |
+| 需要快速简报（30 分钟） / 需要快速摘要 | `quick` | 保真度 |
+| 在引用前需要评估一篇论文 / 有論文需要評估 | `review` | 平衡 |
+| 需要针对某个主题进行文献回顾 / 需要文獻回顧 | `lit-review` | 保真度 |
+| 需要快速扫描比较多篇论文 / 需要快速比較多篇論文 | `three-way-scan` | 保真度 |
+| 需要核实特定主张 / 需要查核特定事實 | `fact-check` | 保真度 |
+| 需要系统性回顾 / 后设分析 / 系統性回顧或後設分析 | `systematic-review` | 保真度 |
 
-**倾向**（v3.2）：*忠实性* = 高度依赖模板、输出可预测；*平衡* = 默认；*原创性* = 探索性、较少依赖模板。完整的跨 Skill 倾向表请参阅 `shared/mode_spectrum.md`。
+**光谱**（v3.2）：*保真度* = 高度依赖模板、输出可预测；*平衡* = 默认；*原创性* = 探索性强、对模板依赖较少。完整的跨技能光谱表请参阅 `shared/mode_spectrum.md`。
 
-不确定？从 `socratic` 开始——它会帮助你弄清楚自己需要什么。
+不确定？从 `socratic` 开始——它会帮助你明确自己的需求。  
 不確定？先用 `socratic` 模式——它會幫你釐清你需要什麼。
 
 ---
 
-## Agent 团队（13 个 Agent）
+## Agent Team（13 个 Agent）
 
-| # | Agent | 职责 | 阶段 |
+| # | Agent | 角色 | 阶段 |
 |---|-------|------|-------|
-| 1 | `research_question_agent` | 将模糊主题转化为经过 FINER 评分、范围边界明确的精准研究问题 | 阶段 1、苏格拉底式第 1 层 |
-| 2 | `research_architect_agent` | 设计方法论蓝图：范式、方法、数据策略、分析框架、有效性标准 | 阶段 1 |
-| 3 | `bibliography_agent` | 系统性文献检索、来源筛选、采用 APA 7.0 格式的注释书目 | 阶段 2 |
+| 1 | `research_question_agent` | 将模糊主题转化为精确的、经过 FINER 评分的研究问题，并划定范围边界 | 阶段 1，苏格拉底层级 1 |
+| 2 | `research_architect_agent` | 设计方法论蓝图：范式、方法、数据策略、分析框架、效度标准 | 阶段 1 |
+| 3 | `bibliography_agent` | 系统性文献检索、来源筛选、按照 APA 7.0 编写带注释的参考书目 | 阶段 2 |
 | 4 | `source_verification_agent` | 事实核查、来源分级（证据层级）、掠夺性期刊检测、利益冲突标记 | 阶段 2 |
-| 5 | `synthesis_agent` | 跨来源整合、矛盾消解、主题综合、研究空白分析 | 阶段 3 |
-| 6 | `report_compiler_agent` | 起草完整的 APA 7.0 报告（标题 -> 摘要 -> 引言 -> 方法 -> 研究发现 -> 讨论 -> 参考文献） | 阶段 4、6 |
-| 7 | `editor_in_chief_agent` | Q1 期刊编辑评审：原创性、严谨性、证据充分性、结论（接受/修改/拒绝） | 阶段 5 |
-| 8 | `devils_advocate_agent` | 质疑假设、检验逻辑谬误、寻找替代解释、检查确认偏误 | 阶段 1、3、5，苏格拉底式第 2、4 层 |
-| 9 | `ethics_review_agent` | AI 辅助研究伦理、署名与引用完整性、双重用途审查、公平呈现 | 阶段 5 |
-| 10 | `socratic_mentor_agent` | Q1 期刊编辑角色；通过跨越 5 个层次的苏格拉底式提问指导研究思考 | 苏格拉底模式（第 1-5 层） |
-| 11 | `risk_of_bias_agent` | 使用 RoB 2（RCT）和 ROBINS-I（非随机研究）评估偏倚风险；生成交通灯式可视化 | 系统综述（阶段 2） |
-| 12 | `meta_analysis_agent` | 设计并执行元分析或叙述性综合；效应量、异质性、GRADE | 系统综述（阶段 3） |
-| 13 | `monitoring_agent` | 研究完成后的文献监测：摘要简报、撤稿提醒、矛盾研究发现检测 | 可选（流程完成后） |
+| 5 | `synthesis_agent` | 跨来源整合、矛盾解决、主题综合、研究空白分析 | 阶段 3 |
+| 6 | `report_compiler_agent` | 起草完整的 APA 7.0 报告（标题 -> 摘要 -> 引言 -> 方法 -> 研究结果 -> 讨论 -> 参考文献） | 阶段 4、6 |
+| 7 | `editor_in_chief_agent` | Q1 期刊编辑审阅：原创性、严谨性、证据充分性、结论（接受/修改/拒稿） | 阶段 5 |
+| 8 | `devils_advocate_agent` | 挑战假设、检验逻辑谬误、寻找替代解释、检查确认偏误 | 阶段 1、3、5，苏格拉底层级 2、4 |
+| 9 | `ethics_review_agent` | AI 辅助研究伦理、署名完整性、双重用途筛查、公平呈现 | 阶段 5 |
+| 10 | `socratic_mentor_agent` | Q1 期刊编辑人格；通过 5 个层级的苏格拉底式提问引导研究思考 | 苏格拉底模式（层级 1-5） |
+| 11 | `risk_of_bias_agent` | 使用 RoB 2（RCTs）和 ROBINS-I（非随机研究）评估偏倚风险；交通灯式可视化 | 系统性回顾（阶段 2） |
+| 12 | `meta_analysis_agent` | 设计并执行后设分析或叙述性综合；效应量、异质性、GRADE | 系统性回顾（阶段 3） |
+| 13 | `monitoring_agent` | 研究后的文献监测：摘要简报、撤稿提醒、矛盾研究结果检测 | 可选（流程结束后） |
 
 ---
 
@@ -258,84 +258,84 @@ User: "Research [topic]"
 
 ### 检查点规则
 
-1. ⚠️ **铁律**：**魔鬼代言人**设有 3 个强制检查点；**严重级别为 Critical** 的问题会阻止流程推进
-2. 修订循环最多进行 **2 次迭代**；剩余问题将作为“已确认的局限性”
-3. ⚠️ **铁律**：当发现严重级别为 Critical 的**诚信**问题（捏造 / 剽窃 / 缺少 AI 使用披露 / 来源误述 / 可能造成具体伤害的细节）时，**伦理审查**会暂停一次并要求用户确认。用户可在记录理由后选择继续——它负责确认，而非否决。研究主题本身绝不会构成阻止理由；双重用途仅触发建议（负责任使用声明），不会阻止流程。
-4. 在阶段 1 结束后，必须获得用户确认才能继续
+1. ⚠️ **铁律**：**反方论证**有 3 个强制检查点；**严重级别**问题会阻止流程继续
+2. 修订循环最多 **2 次**；剩余问题将成为“已知限制”
+3. ⚠️ **铁律**：**伦理审查**会因严重的**诚信**问题（捏造 / 抄袭 / 缺少 AI 披露 / 来源失实陈述 / 具体的助害细节）停止用户一次，以请求确认。可通过记录理由予以覆盖，它负责确认，而非否决。仅凭主题本身永远不会阻止流程；双重用途仅提供建议（负责任使用声明），不会阻止流程。
+4. 在进入阶段 1 后继续之前，必须获得用户确认
 
 ---
 
 ## 分阶段调用契约（v3.9.2）
 
-ARS 流水线分为 6 个阶段运行。支持两种调用模式：
+ARS 流水线分为 6 个阶段。有两种调用模式：
 
-**模式 A——由编排器驱动（默认）：** `pipeline_orchestrator_agent`（位于 `academic-pipeline` skill 中）通过材料护照跟踪状态，端到端运行所有阶段。
+**模式 A — 编排器驱动（默认）：** `pipeline_orchestrator_agent`（位于 `academic-pipeline` skill 中）通过 Material Passport 进行状态跟踪，端到端运行所有阶段。
 
-**模式 B——逐阶段运行（跨会话恢复）：** 对于长期运行的项目，用户可跨多个会话为每个阶段分别调用一个代理。常见模式是使用 `ARS_PASSPORT_RESET=1` + `resume_from_passport=<hash>`（参见 `academic-pipeline/references/passport_as_reset_boundary.md`）。
+**模式 B — 按阶段执行（跨会话恢复）：** 用户跨会话为每个阶段调用一个 agent，以处理长时间运行的项目。常见模式是通过 `ARS_PASSPORT_RESET=1` + `resume_from_passport=<hash>`（参见 `academic-pipeline/references/passport_as_reset_boundary.md`）。
 
-在模式 B 中，**单阶段代理（依据 `docs/design/2026-05-18-ars-v3.9.2-agent-phase-classification.md` 划分的 Bucket A）在执行写入操作时，必须严格限定在分配给它们的阶段内**。允许读取上游阶段的内容。多阶段代理（Bucket B：`devils_advocate_agent`、`report_compiler_agent`）仅执行调用方针对该阶段所指定的工作——不得在同一次调用中扩展到其他阶段。
+在模式 B 中，**单阶段 agent（根据 `docs/design/2026-05-18-ars-v3.9.2-agent-phase-classification.md` 中的 Bucket A）在写入操作上严格限定于其指定阶段内**。允许读取上游阶段。多阶段 agent（Bucket B：`devils_advocate_agent`、`report_compiler_agent`）仅执行调用方针对该阶段所指定的工作，不会在同一次调用中扩展到其他阶段。
 
-进入模式 B 需要用户发出明确指令——使用 `/ars-<mode>` 斜杠命令或 `[direct-mode]` 前缀。对于含糊的跨阶段输入，默认按照 `.claude/CLAUDE.md` 中的路由纪律和 `shared/references/intent_clarification_protocol.md` 进行澄清。
+进入模式 B 需要明确的用户信号 — `/ars-<mode>` 斜杠命令或 `[direct-mode]` 前缀。根据 `.claude/CLAUDE.md` 的路由规范和 `shared/references/intent_clarification_protocol.md`，模糊的跨阶段输入默认要求澄清。
 
-**执行保障（v3.9.2）：** 针对 Bucket A 代理的阶段边界阻断 + 建议性验证器（`scripts/check_pipeline_integrity.py`）+ 在支持钩子的运行时中采用确定性的 PreToolUse 写入范围防护机制（#134 范围调整，PR #294）。多阶段封装仍采用前向范围（#134 切片 3-5）。
+**强制执行（v3.9.2）：** Bucket A agent 上的阶段边界阻断 + 建议性验证器（`scripts/check_pipeline_integrity.py`）+ 在启用 hook 的运行时中的确定性 PreToolUse 写入范围守卫（#134 重定范围，PR #294）。多阶段信封仍保持前向范围（#134 切片 3-5）。
 
 ---
 
 ## 苏格拉底模式：引导式研究对话
 
-通过 5 层对话，引导用户从模糊想法逐步形成具体的研究问题。非生成式苏格拉底模式启用期间的核心原则：⚠️ **铁律**：绝不直接给出答案。下文明确规定的候选项生成退出机制要求在展示任何候选项之前先退出该模式。
+通过 5 层对话，引导用户从模糊的想法走向具体的研究问题。在非生成式苏格拉底模式处于活动状态时，核心原则是：⚠️ **铁律**：绝不直接给出答案。下文明确的候选项生成退出机制会在展示任何候选项之前退出该模式。
 
-**层级**：澄清 -> 探究假设 -> 证据/推理 -> 观点/视角 -> 影响/后果
+**层次**：澄清 -> 假设探查 -> 证据/推理 -> 观点/视角 -> 含义/后果
 
-**研究问题的创作权边界：** 苏格拉底模式默认不生成内容。对话未能收敛时，只能总结用户已经表达过的方向，并提出聚焦问题或建议使用 `lit-review`；绝不会自动生成候选研究问题。如果用户明确要求系统提出候选项，则应宣布退出非生成式苏格拉底模式，并在展示任何明确标注为 AI 生成的候选项之前，单独一行输出 `[SOCRATIC-NON-GENERATION-EXIT: explicit_user_request]`。绝不能在不作说明的情况下切换模式。
+**研究问题作者身份边界：** 苏格拉底模式默认是非生成式的。未收敛时只能产生用户已表达方向的摘要，以及聚焦问题或 `lit-review` 建议；绝不会自动产生候选研究问题。如果用户明确要求系统提出候选项，应宣布退出非生成式苏格拉底模式，并在任何明确标记为 AI 生成的候选项之前，以独立一行输出 `[SOCRATIC-NON-GENERATION-EXIT: explicit_user_request]`。绝不可静默切换。
 
-> 有关完整的五层对话流程、管理规则和自动结束条件，请参阅 `references/socratic_mode_protocol.md`。
+> 完整的 5 层对话流程、管理规则和自动结束条件，请参阅 `references/socratic_mode_protocol.md`。
 
-### 可选启用的阅读探查（v3.5.1）
+### 选择加入的阅读探查（v3.5.1）
 
-设置 `ARS_SOCRATIC_READING_PROBE=1` 后，将在**目标导向型**苏格拉底式会话中启用一次性诚信探查。当用户引用某篇特定论文时，导师会要求其用自己的话复述其中一段内容。用户可以拒绝，系统会记录该行为，但不会施加惩罚。默认关闭。请参阅 `agents/socratic_mentor_agent.md` §“可选阅读探查层”。
+设置 `ARS_SOCRATIC_READING_PROBE=1` 可在**目标导向型**苏格拉底式会话期间启用一次性诚信探查。当用户引用某篇特定论文时，导师会请他们释义其中一段内容。拒绝会被记录，但不受惩罚。默认关闭。请参阅 `agents/socratic_mentor_agent.md` §“可选阅读探查层”。
 
 ---
 
-## 系统综述模式
+## 系统性综述模式
 
-符合 PRISMA 2020 标准的系统综述，可选择进行元分析。遵循五阶段协议：方案注册 -> 系统检索 -> 筛选与选择 -> 数据提取与偏倚风险评估 -> 综合与报告。
+符合 PRISMA 2020 的系统性综述，并可选择进行 Meta 分析。遵循 5 阶段协议：方案注册 -> 系统检索 -> 筛选与选择 -> 数据提取与 RoB -> 综合与报告。
 
-> **v3.4.0 合规性：** `systematic-review` 模式会在第 2.5 阶段（方法条目）和第 4.5 阶段（其余条目 + RAISE 八角色矩阵）触发 `compliance_agent`。PRISMA-trAIce 强制项检查失败将阻断流水线。请参阅 `shared/compliance_checkpoint_protocol.md`。
+> **v3.4.0 合规性：**`systematic-review` 模式会在阶段 2.5（方法学条目）和阶段 4.5（其余条目 + RAISE 8 角色矩阵）触发 `compliance_agent`。PRISMA-trAIce 强制性失败将阻断流水线。请参阅 `shared/compliance_checkpoint_protocol.md`。
 
-> 有关完整的 PRISMA 流水线、检查点规则和元分析程序，请参阅 `references/systematic_review_protocol.md`。
+> 有关完整的 PRISMA 流水线、检查点规则和 Meta 分析流程，请参阅 `references/systematic_review_protocol.md`。
 
 ---
 
 ## 运行模式
 
-| 模式 | 启用的智能体 | 输出 | 字数 |
+| 模式 | 活跃代理 | 输出 | 字数 |
 |------|---------------|--------|------------|
-| `full`（默认） | 全部 9 个核心智能体（不包括 socratic_mentor、RoB、meta-analysis） | 完整的 APA 7.0 报告 | 3,000-8,000 |
+| `full`（默认） | 全部 9 个核心代理（不含 socratic_mentor、RoB、meta-analysis） | 完整 APA 7.0 报告 | 3,000-8,000 |
 | `quick` | RQ + Biblio + Verification + Report | 研究简报 | 500-1,500 |
-| `review` | Editor + Devil's Advocate + Ethics | 针对所提供文本的审稿报告 | 不适用 |
-| `lit-review` | Biblio + Verification + Synthesis | 带注释的参考文献目录 + 综合分析 | 1,500-4,000 |
-| `three-way-scan` | Biblio + Verification（检索 + WHY/HOW/WHAT 提取） | 按 WHY/HOW/WHAT 比较的论文候选清单 + 跨论文综合分析 | 800-2,000 |
-| `fact-check` | 仅 Source Verification | 核查报告 | 300-800 |
+| `review` | Editor + Devil's Advocate + Ethics | 对所提供文本的审阅报告 | 不适用 |
+| `lit-review` | Biblio + Verification + Synthesis | 带注释书目 + 综合 | 1,500-4,000 |
+| `three-way-scan` | Biblio + Verification（检索 + WHY/HOW/WHAT 提取） | 按 WHY/HOW/WHAT 比较的论文短名单 + 跨论文综合 | 800-2,000 |
+| `fact-check` | 仅 Source Verification | 验证报告 | 300-800 |
 | `socratic` | Socratic Mentor + RQ + Devil's Advocate | 研究计划摘要（INSIGHT 收集） | 不适用（迭代式） |
-| `systematic-review` | RQ + Architect + Biblio + Verification + RoB + Meta-Analysis + Synthesis + Report + Editor + Ethics + DA | 完整的 PRISMA 2020 报告 + 森林图数据 + GRADE 表格 | 5,000-15,000 |
+| `systematic-review` | RQ + Architect + Biblio + Verification + RoB + Meta-Analysis + Synthesis + Report + Editor + Ethics + DA | 完整 PRISMA 2020 报告 + 森林图数据 + GRADE 表格 | 5,000-15,000 |
 
 ---
 
-## 三向扫描模式（WHY / HOW / WHAT）
+## 三维扫描模式（WHY / HOW / WHAT）
 
-当用户需要在一个稳定框架下，以规范方式比较论文候选清单，但尚不需要完整的文献综述报告时，请使用 `three-way-scan`。
+当用户需要以稳定框架对论文进行严谨的短名单比较，但**尚不**需要完整文献综述报告时，请使用 `three-way-scan`。
 
-- **WHY**：论文解决了什么问题或瓶颈，以及该问题为何重要
-- **HOW**：论文使用了什么策略、方法或技术路线
-- **WHAT**：论文发现或构建了什么，或仍有哪些问题尚未解决
+- **WHY**：论文要解决的问题或瓶颈，以及其重要性
+- **HOW**：论文采用的策略、方法或技术路径
+- **WHAT**：论文发现、构建的内容，或仍未解决的问题
 
-此模式特意设计得比 `lit-review` 更轻量。它优先处理：
+此模式有意比 `lit-review` 更轻量。它优先处理：
 
-1. 候选论文检索
+1. 候选文献检索
 2. 去重
-3. 紧凑的逐篇论文信息提取
-4. 对共同 WHY、不同 HOW 和剩余研究空白进行跨论文综合分析
+3. 紧凑的逐篇论文提取
+4. 对共同 WHY、差异化 HOW 和剩余缺口进行跨论文综合
 
 建议的逐篇论文输出：
 
@@ -348,12 +348,12 @@ Source: <provider> | Year: <year> | Link: <url>
 - WHAT: ...
 ```
 
-然后添加：
+然后补充：
 
 - 共同的 `WHY`
-- 不同的 `HOW`
+- 差异化的 `HOW`
 - 最有力的 `WHAT`
-- 尚未解决的全局研究空白
+- 尚未解决的全局缺口
 
 如果用户之后希望获得更广泛的证据矩阵、主题综合或类似 PRISMA 的覆盖范围，请从 `three-way-scan` 升级到 `lit-review` 或 `systematic-review`。
 
@@ -361,68 +361,64 @@ Source: <provider> | Year: <year> | Link: <url>
 
 ## 失败路径
 
-有关所有模式下的全部失败场景、触发条件和恢复策略，请参阅 `references/failure_paths.md`。
+有关所有模式下的失败场景、触发条件和恢复策略，请参阅 `references/failure_paths.md`。
 
-关键失败路径摘要：
+主要失败路径摘要：
 
 | 失败场景 | 触发条件 | 恢复策略 |
 |---------|---------|---------|
-| RQ 无法收敛 | 阶段 1 / 第 1 层在多轮后仍然模糊 | 完整模式可以使用其候选方案工作流；苏格拉底模式总结用户表达的方向或建议使用 `lit-review`，除非用户明确退出非生成模式，否则不得生成候选方案 |
+| RQ 无法收敛 | Phase 1 / Layer 1 在多轮交互后仍然模糊 | Full 模式可以使用其候选工作流；Socratic 模式总结用户表达的方向，或建议使用 `lit-review`；除非用户明确退出非生成模式，否则不生成候选项 |
 | 文献不足 | bibliography_agent 找到的来源少于 5 个 | 扩展搜索策略，使用替代关键词 |
-| 方法论不匹配 | RQ 类型与方法能力不一致 | 返回阶段 1，建议 3 种替代方法 |
-| 魔鬼代言人判定为 CRITICAL | 发现致命逻辑缺陷 | 停止，解释问题，要求修正 |
-| 伦理审查为 BLOCKED | 存在严重的诚信问题（并非主题本身的问题） | 暂停一次并要求用户确认；列出问题及补救路径；可在记录理由后覆盖 |
-| 苏格拉底模式无法收敛 | 超过 10 轮仍未收敛 | 建议切换到完整模式 |
-| 用户中途放弃 | 明确表示不想继续 | 保存进度，提供重新进入的路径 |
-| 仅有中文文献 | 英文搜索结果为空 | 切换到中文学术数据库 |
+| 方法论不匹配 | RQ 类型与方法能力不一致 | 返回 Phase 1，建议 3 种替代方法 |
+| Devil's Advocate CRITICAL | 发现致命逻辑缺陷 | 停止，解释问题，并要求修正 |
+| Ethics BLOCKED | 存在关键完整性问题（非主题内容问题） | 仅向用户询问一次以确认；列出问题及补救路径；用户可以通过记录理由来覆盖该阻止 |
+| Socratic 无法收敛 | 超过 10 轮仍未收敛 | 建议切换到 Full 模式 |
+| 用户中途放弃 | 用户明确表示不想继续 | 保存进度，提供重新进入路径 |
+| 仅有中文语言文献 | 英文搜索返回空结果 | 切换到中文学术数据库 |
 
 ---
 
-## 文献监测（可选的流程后步骤）
+## 文献监测（可选的后续流程）
 
-可选择在研究完成后监测该研究领域的新出版物。
+针对研究领域中新发表的出版物进行可选的研究后监测。
 
 > 有关各学术数据库的设置说明，请参阅 `references/literature_monitoring_strategies.md`。
 
 ---
 
-## 移交协议：deep-research → academic-paper
+## 交接协议：deep-research → academic-paper
 
-研究完成后，可以将以下材料移交给 `academic-paper`：
+研究完成后，以下材料可以交接给 `academic-paper`：
 
-1. **研究问题简报**（来自 research_question_agent）
-2. **方法论蓝图**（来自 research_architect_agent）
-3. **注释书目**（来自 bibliography_agent）
-4. **综合报告**（来自 synthesis_agent）
-5. **[若为苏格拉底模式] INSIGHT 集合与研究计划摘要**
-6. **预注册移交**——恰好一个由构建器生成的
-   `preregistration-artifact/1.0` 边车文件（包括不可用回执），以及在
-   `status=provided` 时，其明确命名的配套字节内容
+1. **Research Question Brief**（来自 research_question_agent）
+2. **Methodology Blueprint**（来自 research_architect_agent）
+3. **Annotated Bibliography**（来自 bibliography_agent）
+4. **Synthesis Report**（来自 synthesis_agent）
+5. **[If socratic mode] INSIGHT Collection and Research Plan Summary**
+6. **Preregistration handoff** — 恰好一个由构建器生成的
+   `preregistration-artifact/1.0` sidecar（包括 unavailable receipt），以及在
+   `status=provided` 时其明确命名的配套字节
 
-**触发条件**：用户说“现在帮我写一篇论文”或“基于此写一篇论文”
+**触发条件**：用户说“现在帮我写一篇论文”或“基于这些内容写一篇论文”
 
-`academic-paper` 的 `intake_agent` 将自动检测可用材料并跳过重复步骤：
-- 有 RQ 简报 -> 跳过主题范围界定
-- 有书目 -> 跳过文献搜索
-- 有综合报告 -> 加快研究发现 / 讨论部分的写作
-- 有预注册边车文件 -> 对其及其命名的配套文件执行严格验证，
-  然后逐字节原样传递二者；绝不根据正文或模板重新构建
+`academic-paper` 的 `intake_agent` 将自动检测可用材料，并跳过重复步骤：
+- 有 RQ Brief -> 跳过主题范围界定
+- 有 Bibliography -> 跳过文献搜索
+- 有 Synthesis -> 加速 findings / discussion 的写作
+- 有 preregistration sidecar -> 对其及其命名的配套内容进行严格验证，
+  然后逐字节携带二者；绝不根据 prose 或模板重新构建
 
-非 shell 环境的 `research_architect_agent` 仅提供明确的调用方
-声明和配套文件句柄。在移交之前，支持 shell 的调度器必须运行
-`scripts/build_cross_document_consistency_advisory.py` 中指定的确定性
-`build-preregistration-artifact` 子命令，并使用调用方持有的 RFC3339
-`declared_at`。只有该构建器可以创建或更新边车文件。用户之后再次
-明确提供材料时，会创建一个新的、由构建器生成的边车文件；遗漏或静默
-替换均无效。
+非 shell 的 `research_architect_agent` 仅提供调用方的明确声明和配套句柄。在交接前，具备 shell 能力的 dispatcher 必须在
+`scripts/build_cross_document_consistency_advisory.py` 中运行命名的确定性 `build-preregistration-artifact` 子命令，并使用由调用方持有的
+RFC3339 `declared_at`。只有该构建器可以创建或更新 sidecar。之后用户明确提供内容时，会创建一个新的由构建器生成的 sidecar；省略或静默替换均无效。
 
-有关详细的交接示例，请参阅 `examples/handoff_to_paper.md`。
+请参阅 `examples/handoff_to_paper.md`，其中提供了详细的交接示例。
 
 ---
 
 ## 完整学术流程
 
-有关完整工作流，请参阅 `academic-pipeline/SKILL.md`。
+完整工作流程请参阅 `academic-pipeline/SKILL.md`。
 
 ---
 
@@ -448,39 +444,39 @@ Source: <provider> | Year: <year> | Link: <url>
 
 ## 参考文件
 
-| 参考文件 | 用途 | 使用方 |
+| 参考文件 | 用途 | 使用者 |
 |-----------|---------|---------|
 | `references/apa7_style_guide.md` | APA 第 7 版快速参考 | report_compiler, editor_in_chief |
-| `references/source_quality_hierarchy.md` | 证据金字塔 + 评级标准 | source_verification, bibliography |
+| `references/source_quality_hierarchy.md` | 证据金字塔与分级标准 | source_verification, bibliography |
 | `references/methodology_patterns.md` | 研究设计模板 | research_architect |
 | `references/logical_fallacies.md` | 30 多种谬误目录 | devils_advocate |
-| `references/ethics_checklist.md` | AI 披露、署名、双重用途 | ethics_review |
+| `references/ethics_checklist.md` | AI 披露、署名与双重用途 | ethics_review |
 | `references/interdisciplinary_bridges.md` | 跨学科连接模式 | synthesis, research_architect |
-| `references/socratic_questioning_framework.md` | 6 类苏格拉底式问题 + 30 多种提示词模式 | socratic_mentor |
-| `references/failure_paths.md` | 12 种失败场景及其触发条件和恢复路径 | 所有 Agent |
-| `references/mode_selection_guide.md` | 模式选择流程图和对照表 | 编排器 |
-| `references/irb_decision_tree.md` | 可移植的人类受试者导航辅助工具；并非权威、通用分类法或路径判定 | ethics_review, research_architect |
-| `shared/references/human_subjects_authority_protocol.md` | 精确的权威机构选择、重放验证、参与方/使用方筛选，以及失败时关闭的已解析上下文门控 | ethics_review, research_architect |
-| `shared/human_subjects_authority_registry.json` | 有限的司法管辖区配置文件，包含精确的要求 ID、权威依据、义务承担方和使用方范围 | ethics_review, research_architect |
-| `shared/contracts/human_subjects/resolved_authority_context.schema.json` | 仅含指针的已解析上下文结构；使用方仍须执行确定性重放验证 | ethics_review, research_architect |
-| `shared/references/review_pathway_rule_trace_protocol.md` | 候选名称所有权、精确的已选配置文件谓词分区、重放、渲染、表层检查，以及非使用方边界（#669） | ethics_review, research_architect |
-| `shared/contracts/human_subjects/review_pathway_trace_request.schema.json` | 封闭的调用方所有候选项映射；每项已选配置文件的 `pathway_trace` 要求均被不多不少地计入一次 | 分发层 |
-| `shared/contracts/human_subjects/review_pathway_rule_trace.schema.json` | 封闭的仅候选项谓词追踪；重放和表层检查仍为强制要求 | ethics_review, research_architect |
-| `shared/references/submission_packet_manifest_protocol.md` | 确定性材料包清单、权威机构重放、状态和非授权边界（#667） | ethics_review, research_architect |
-| `shared/contracts/human_subjects/submission_packet_manifest.schema.json` | 仅含指针的确定性材料包清单结构；使用方仍须执行精确的重放验证 | ethics_review, research_architect |
-| `shared/references/authority_content_coverage_advisory_protocol.md` | 与重放绑定的权威机构配置文件内容观察、证据行/1.1 来源，以及非干预边界（#681） | ethics_review, research_architect |
-| `shared/contracts/human_subjects/content_coverage_advisory.schema.json` | 封闭的 `LLM-ADVISORY` 载体；使用方仍须执行终结器重放验证 | ethics_review, research_architect |
-| `shared/contracts/evidence/evidence_row_v1_1.schema.json` | 用于 #681 咨询表层的、与要求/期望/产物绑定的有限摘录行 | ethics_review |
+| `references/socratic_questioning_framework.md` | 6 类苏格拉底式问题与 30 多种提示模式 | socratic_mentor |
+| `references/failure_paths.md` | 12 种包含触发条件与恢复路径的失败场景 | 所有 agent |
+| `references/mode_selection_guide.md` | 模式选择流程图与比较表 | orchestrator |
+| `references/irb_decision_tree.md` | 可移植的人体受试者研究导航辅助工具；不构成权威、通用分类法或路径判定 | ethics_review, research_architect |
+| `shared/references/human_subjects_authority_protocol.md` | 精确的权威选择、重放验证、参与者/使用者筛选以及失败即关闭的已解析上下文门控 | ethics_review, research_architect |
+| `shared/human_subjects_authority_registry.json` | 有限管辖区配置文件，包含精确的要求 ID、权威锚点、责任主体与使用者范围 | ethics_review, research_architect |
+| `shared/contracts/human_subjects/resolved_authority_context.schema.json` | 仅包含指针的已解析上下文结构；使用者仍需执行确定性重放验证 | ethics_review, research_architect |
+| `shared/references/review_pathway_rule_trace_protocol.md` | 候选名称归属、精确的已选配置文件谓词分区、重放、渲染、界面检查以及非使用者边界（#669） | ethics_review, research_architect |
+| `shared/contracts/human_subjects/review_pathway_trace_request.schema.json` | 由调用方负责的封闭候选映射；每项已选配置文件的 `pathway_trace` 要求均恰好得到一次对应 | dispatching layer |
+| `shared/contracts/human_subjects/review_pathway_rule_trace.schema.json` | 仅包含候选项的封闭谓词追踪；重放与界面检查仍为必需步骤 | ethics_review, research_architect |
+| `shared/references/submission_packet_manifest_protocol.md` | 确定性数据包清单、权威重放、状态以及非授权边界（#667） | ethics_review, research_architect |
+| `shared/contracts/human_subjects/submission_packet_manifest.schema.json` | 仅包含指针的确定性数据包清单结构；使用者仍需执行精确的重放验证 | ethics_review, research_architect |
+| `shared/references/authority_content_coverage_advisory_protocol.md` | 受重放约束的权威配置文件内容观察、证据行/1.1 来源信息以及非干预边界（#681） | ethics_review, research_architect |
+| `shared/contracts/human_subjects/content_coverage_advisory.schema.json` | 封闭的 `LLM-ADVISORY` 载体；使用者仍需由 finalizer 执行重放验证 | ethics_review, research_architect |
+| `shared/contracts/evidence/evidence_row_v1_1.schema.json` | 针对 #681 建议界面的、与要求/预期/工件绑定的有限摘录行 | ethics_review |
 | `references/equator_reporting_guidelines.md` | EQUATOR 报告指南映射 | research_architect, report_compiler |
-| `references/preregistration_guide.md` | 预注册决策树 + 平台 + 检查清单 | research_architect |
-| `shared/references/cross_document_consistency_advisory_protocol.md` | 精确的预注册附属文件所有权/重放，以及 #672 咨询边界和 #660 共存边界 | research_architect, 学术论文接入层, 流程编排器 |
-| `shared/contracts/passport/preregistration_artifact.schema.json` | 封闭的持久化预注册交接凭证；配套字节内容仍单独命名 | 分发层、接入层、流程编排器 |
+| `references/preregistration_guide.md` | 预注册决策树、平台与检查清单 | research_architect |
+| `shared/references/cross_document_consistency_advisory_protocol.md` | 精确的预注册 sidecar 归属/重放，以及 #672 建议与 #660 共存边界 | research_architect, academic-paper intake, pipeline orchestrator |
+| `shared/contracts/passport/preregistration_artifact.schema.json` | 封闭的持久化预注册交接回执；配套字节内容单独命名 | dispatching layer, intake, pipeline orchestrator |
 | `references/systematic_review_toolkit.md` | Cochrane v6.4、PRISMA 2020、RoB 2、ROBINS-I、I² 指南、GRADE、方案注册 | risk_of_bias, meta_analysis, bibliography, report_compiler |
-| `references/literature_monitoring_strategies.md` | Google Scholar 提醒、PubMed 提醒、RSS 订阅源、Retraction Watch、引文追踪、监测频率 | monitoring_agent |
-| `references/argumentation_reasoning_framework.md` | 评估论证强度的认知框架：Toulmin 模型、因果推理（Bradford Hill）、最佳解释推断、认知状态分类 | synthesis, devils_advocate, source_verification, socratic_mentor, research_architect |
-| `references/socratic_mode_protocol.md` | 完整的五层苏格拉底式对话流程、管理规则、自动结束条件 | socratic_mentor, research_question |
-| `references/systematic_review_protocol.md` | 完整的 PRISMA 流程、检查点规则、元分析程序 | risk_of_bias, meta_analysis, bibliography, report_compiler |
-| `references/cross_agent_quality_definitions.md` | 同行评审来源分级、时效性标准、严重程度定义 | 所有 Agent |
+| `references/literature_monitoring_strategies.md` | Google Scholar 提醒、PubMed 提醒、RSS feed、Retraction Watch、引文追踪与监测频率 | monitoring_agent |
+| `references/argumentation_reasoning_framework.md` | 评估论证力度的认知框架：Toulmin 模型、因果推理（Bradford Hill）、最佳解释推理、认识论状态分类 | synthesis, devils_advocate, source_verification, socratic_mentor, research_architect |
+| `references/socratic_mode_protocol.md` | 完整的 5 层苏格拉底式对话流程、管理规则与自动结束条件 | socratic_mentor, research_question |
+| `references/systematic_review_protocol.md` | 完整的 PRISMA 流程、检查点规则与元分析程序 | risk_of_bias, meta_analysis, bibliography, report_compiler |
+| `references/cross_agent_quality_definitions.md` | 同行评审来源层级、时效性标准与严重程度定义 | 所有 agent |
 | `references/changelog.md` | 完整版本历史 | — |
 
 ---
@@ -490,10 +486,10 @@ Source: <provider> | Year: <year> | Link: <url>
 | 模板 | 用途 |
 |----------|---------|
 | `templates/research_brief_template.md` | 快速模式输出格式 |
-| `templates/literature_matrix_template.md` | 来源 x 主题分析矩阵 |
-| `templates/evidence_assessment_template.md` | 单一来源质量评估卡 |
-| `templates/preregistration_template.md` | OSF 标准 21 项预注册模板 |
-| `templates/prisma_protocol_template.md` | PRISMA-P 2015 系统综述方案模板 |
+| `templates/literature_matrix_template.md` | 来源 × 主题分析矩阵 |
+| `templates/evidence_assessment_template.md` | 单个来源质量评估卡片 |
+| `templates/preregistration_template.md` | OSF 标准 21 项 preregistration 模板 |
+| `templates/prisma_protocol_template.md` | PRISMA-P 2015 系统综述协议模板 |
 | `templates/prisma_report_template.md` | PRISMA 2020 系统综述报告模板（27 项） |
 
 ---
@@ -505,75 +501,75 @@ Source: <provider> | Year: <year> | Link: <url>
 | `examples/exploratory_research.md` | 完整的 6 阶段流程演示 |
 | `examples/systematic_review.md` | PRISMA 风格的文献综述 |
 | `examples/policy_analysis.md` | 应用型比较政策研究 |
-| `examples/socratic_guided_research.md` | 完整的苏格拉底模式多轮对话（12 轮） |
-| `examples/handoff_to_paper.md` | deep-research 完整模式移交至 academic-paper |
-| `examples/review_mode.md` | 审查模式：针对政策建议文本的 3-agent 审查流程 |
-| `examples/fact_check_mode.md` | 事实核查模式：核验 HEI 主张的来源，并对每项主张给出判定 |
-| `examples/idea_diversity_coverage_gap_advisory.md` | #257 苏格拉底式措辞模式 + 文献综述分布偏斜提示 |
+| `examples/socratic_guided_research.md` | 完整的 Socratic 模式多轮对话（12 轮） |
+| `examples/handoff_to_paper.md` | deep-research full 模式移交至 academic-paper |
+| `examples/review_mode.md` | Review 模式：针对政策建议文本的 3-agent 审查流程 |
+| `examples/fact_check_mode.md` | Fact-check 模式：对 HEI 声明进行来源核验，并给出逐条声明判定 |
+| `examples/idea_diversity_coverage_gap_advisory.md` | #257 Socratic 措辞模式 + 文献综述分布偏斜提示 |
 
 ---
 
 ## 输出语言
 
-遵循用户使用的语言。学术术语保留英文。苏格拉底模式使用自然的对话风格。
+遵循用户使用的语言。Academic terminology 保持 English。Socratic mode 使用自然的对话风格。
 
 ---
 
 ## 反模式
 
-为防止常见失败模式而明确禁止的行为：
+明确禁止以下行为，以防止常见的失败模式：
 
 | # | 反模式 | 失败原因 | 正确行为 |
 |---|-------------|-------------|-----------------|
-| 1 | **来源选择中的确认偏误** | 只寻找支持假设的来源 | 魔鬼代言人检查点必须包括反面证据检索 |
-| 2 | **选择性挑取证据** | 引用一项支持性研究，却忽略三项结论相反的研究 | 报告完整的证据全貌，包括相互冲突的研究发现 |
-| 3 | **凭感觉引用** | 将 2-3 篇真实论文中的元素拼凑成一条虚构的参考文献 | 每条参考文献都必须独立核验；拼凑式伪造最难被发现 |
-| 4 | **⚠️ 铁律：将“难以核验”视为可接受** | 将参考文献标记为“不确定”，而不是 FAIL | 灰色地带 = FAIL。如果无法确认其确实存在，就不得将其纳入报告 |
-| 5 | **跳过阶段** | 在完成来源核验前直接进入综合分析 | 完整完成每个阶段；阶段 N 的输出是阶段 N+1 的输入 |
-| 6 | **肤浅的苏格拉底模式** | 用问题包装答案（“难道你不认为 X 是真的吗？”） | 提出真正能够揭示假设的问题；绝不诱导预先确定的结论 |
-| 7 | **来源层级夸大** | 将博客文章视为与同行评审期刊同等的来源 | 严格应用证据层级：Tier 1（同行评审）> Tier 2（预印本）> Tier 3（灰色文献） |
+| 1 | **选择来源时的确认偏误** | 只寻找支持假设的来源 | Devil's Advocate 检查点必须包含反面证据搜索 |
+| 2 | **选择性引用证据** | 引用一项支持性研究，同时忽略三项相互矛盾的研究 | 报告完整的证据全貌，包括相互冲突的研究发现 |
+| 3 | **凭感觉引用** | 将 2-3 篇真实论文中的元素混合，伪造出一个参考文献 | 每条参考文献都必须独立核验；拼接式伪造最难被发现 |
+| 4 | **⚠️ 铁律：将“难以核验”视为可接受** | 将参考文献标记为“不确定”，而不是判定为 FAIL | 灰色地带 = FAIL。如果无法确认其存在，就不得将其纳入报告 |
+| 5 | **跳过阶段** | 在完成来源核验前就直接进行综合 | 完整完成每个阶段；第 N 阶段的输出是第 N+1 阶段的输入 |
+| 6 | **浅层 Socratic mode** | 以问题的形式给出答案（“你难道不认为 X 是真的吗？”） | 提出能够揭示假设的真正问题；绝不引导至预先确定的结论 |
+| 7 | **抬高来源层级** | 将博客文章视为与同行评审期刊等价 | 严格应用证据层级：Tier 1（同行评审）> Tier 2（preprint）> Tier 3（gray lit） |
 
 ## 质量标准
 
-1. ⚠️ **铁律**：**每项主张都必须有引用**——不得提出无依据的断言
-2. **证据层级**——荟萃分析 > RCT > 队列研究 > 病例报告 > 专家意见（跨领域基线；评级**取决于学科**——即使研究设计层级较低，只要来源符合其所在领域的黄金标准，也可达到 A 级。参见 `references/source_quality_hierarchy.md` §评级标准 + §特定领域调整）
-3. **矛盾披露**——如果来源之间存在分歧，应报告双方观点，并比较证据质量
-4. **局限性透明**——每份报告都必须包含明确的局限性章节
-5. **AI 披露**——所有报告均须声明使用了 AI 辅助研究工具
-6. **可复现性**——必须记录检索策略、纳入标准和分析方法，以便复现
-7. **苏格拉底式诚信**——启用非生成式苏格拉底模式时，绝不能直接给出答案；始终通过提问进行引导。候选回答只有在明确的退出标记之后才是合规的，且位于该模式之外。
+1. ⚠️ **铁律**：**每一项主张都必须有引用**——不得存在无依据的断言
+2. **证据层级**——荟萃分析 > RCT > 队列研究 > 病例报告 > 专家意见（适用于所有领域的基准；分级具有**学科相对性**——符合其所属领域金标准的来源，即使设计层级较低，也可达到 A 级。参见 `references/source_quality_hierarchy.md` §评分标准 + §学科特定调整）
+3. **矛盾披露**——若来源存在分歧，应报告双方观点并比较证据质量
+4. **局限性透明**——每份报告都必须包含明确的局限性部分
+5. **AI 披露**——所有报告均应声明使用了 AI 辅助研究工具
+6. **可复现性**——必须记录搜索策略、纳入标准和分析方法，以便复现
+7. **苏格拉底式完整性**——在非生成式苏格拉底模式处于激活状态时，绝不提供直接答案；始终通过提问引导。候选回答仅在明确退出标记之后才是允许的，且位于该模式之外。
 
-## 跨智能体质量对齐
+## 跨代理质量对齐
 
-所有智能体采用统一定义。⚠️ 铁律：**严重级别** = 会使核心结论失效或构成学术不端的问题。必须立即解决。
+所有代理采用统一定义。⚠️ 铁律：**严重程度为 CRITICAL** = 会使核心结论失效或构成学术不端的问题。需要立即解决。
 
-> 有关完整的同行评审来源分级、时效性标准和严重级别定义，请参见 `references/cross_agent_quality_definitions.md`。
-
----
-
-## 与其他技能集成
-
-此技能不依赖特定领域，但可与领域专用技能结合使用：
-
-```
-deep-research + tw-hei-intelligence     -> Evidence-based HEI policy research
-deep-research + report-to-website       -> Interactive research report
-deep-research + podcast-script-generator -> Research podcast
-deep-research + academic-paper          -> Full research-to-publication pipeline
-deep-research (socratic) + academic-paper (plan) -> Guided research + paper planning
-deep-research (systematic-review) + academic-paper -> PRISMA systematic review paper
-```
+> 有关完整的同行评议来源层级、时效性标准和严重程度定义，请参见 `references/cross_agent_quality_definitions.md`。
 
 ---
 
-## 模型分级（#517，可选）
+## 与其他 Skill 的集成
 
-设置 `ARS_MODEL_TIERING` 后，调度会话将根据 `shared/model_tiering.md` 为此技能的智能体进行路由（规范定义：完整的 39 智能体判断/执行表及相关规则）。简要规则：
+此 Skill 与领域无关，但可与领域特定的 Skill 组合使用：
 
-- **未设置（默认）：**每个智能体都继承会话模型——行为与 #517 之前逐字节等效。
-- **`economy`**（前沿层级会话）：执行型智能体调度至比会话模型低一个层级的模型——最低为 Opus 级，绝不低于此级；判断型智能体继续使用会话模型。处于或低于最低层级时不执行任何操作（仅通知一次）。
-- **`quality-boost`**（低于前沿层级的会话）：检查点环节（Stage 2.5/4.5 关卡；可选启用的 Stage 4→5 主张—引用审计；最终审查）的判断型智能体直接提升至前沿层级（无论相隔多少层级——并非只提升一级）；任何智能体都不会被降级。已处于前沿层级时不执行任何操作（仅通知一次）。
-- 未知值 → 警告一次，并按未设置处理。层级表示相对位置，绝不硬性绑定模型 ID。启用某一方向后，将同一阶段的重复调用路由至同一个工作智能体，以便累积其提示缓存；未设置还意味着调度形式也保持逐字节等效。
+```
+deep-research + tw-hei-intelligence     -> 基于证据的 HEI 政策研究
+deep-research + report-to-website       -> 交互式研究报告
+deep-research + podcast-script-generator -> 研究播客
+deep-research + academic-paper          -> 完整的从研究到发表流程
+deep-research (socratic) + academic-paper (plan) -> 引导式研究 + 论文规划
+deep-research (systematic-review) + academic-paper -> PRISMA 系统综述论文
+```
+
+---
+
+## 模型分层（#517，可选）
+
+设置 `ARS_MODEL_TIERING` 后，调度会话将根据 `shared/model_tiering.md`（规范定义：完整的 39 代理判断/执行表及规则）为此 Skill 的代理分配路由。简要规则如下：
+
+- **未设置（默认）：**每个代理均继承会话模型——与 #517 之前的行为字节级等价。
+- **`economy`**（前沿层级会话）：执行型代理的调度层级比会话模型低 ONE 个层级——最低为 Opus 级，绝不更低；判断型代理保持使用会话模型。在处于或低于下限时无操作（仅公告一次）。
+- **`quality-boost`**（低于前沿层级的会话）：检查点表面上的判断型代理（第 2.5/4.5 阶段门；选择加入的第 4→5 阶段主张-引用审计；最终审查）跃升至前沿层级（可跨越任意多个层级——并非单次增量）；绝不降级任何内容。在前沿层级时无操作（仅公告一次）。
+- 未知值 → 仅警告一次，并按未设置处理。层级为相对位置，绝不硬绑定模型 ID。当某个方向激活时，将同一阶段的重复调用路由至**同一工作器**，以便其提示缓存持续累积；未设置意味着调度形态也保持字节级等价。
 
 ---
 
@@ -584,7 +580,7 @@ deep-research (systematic-review) + academic-paper -> PRISMA systematic review p
 | Skill 版本 | 2.12.1 |
 | 最后更新 | 2026-08-15 |
 | 维护者 | Cheng-I Wu |
-| 依赖此 Skill 的其他 Skill | academic-paper v1.0+（下游） |
+| 依赖的 Skill | academic-paper v1.0+（下游） |
 
 ---
 
