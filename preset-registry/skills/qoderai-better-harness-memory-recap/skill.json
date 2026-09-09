@@ -1,0 +1,26 @@
+{
+  "id": "qoderai-better-harness-memory-recap",
+  "name": "memory-recap",
+  "description": "Create evidence-linked work profiles, diagnose Coding Agent collaboration friction, and recommend concrete improvements from native memories or frozen exports. Use for memory recaps and agent-usage retrospectives, not memory maintenance or session-performance measurement.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "QoderAI",
+  "install_path": ".claude/skills/memory-recap/SKILL.md",
+  "source": {
+    "repo": "QoderAI/better-harness",
+    "url": "https://github.com/QoderAI/better-harness/blob/main/packages/harness-studio/skills/memory-recap/SKILL.md",
+    "path": "packages/harness-studio/skills/memory-recap/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-09T19:40:43.651Z",
+    "stars": 2198,
+    "language": "JavaScript",
+    "pushed_at": "2026-09-09T14:57:53Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一款基于原生记忆或导出数据生成可追溯工作画像的工具，帮助复盘编程代理协作过程、发现摩擦并提出具体改进建议。"
+}

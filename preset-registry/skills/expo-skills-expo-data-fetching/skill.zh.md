@@ -1,12 +1,12 @@
 ---
 name: expo-data-fetching
-description: Framework (OSS). Use when implementing or debugging ANY network request, API call, or data fetching. Covers fetch API, React Query, SWR, error handling, caching, offline support, and Expo Router data loaders (`useLoaderData`).
+description: Framework (OSS). Use when implementing or debugging ANY network request, API call, or data fetching. Covers fetch API, React Query, SWR, error handling, caching, offline support, loading/empty/error screen states, and Expo Router data loaders (`useLoaderData`).
 version: 1.0.0
 license: MIT
 ---
-# Expo 网络功能
+# Expo Networking
 
-**任何网络相关工作（包括 API 请求、数据获取、缓存或网络调试）都必须使用此技能。**
+**对于任何网络相关工作，包括 API 请求、数据获取、缓存或网络调试，你都必须使用此技能。**
 
 ## 参考资料
 
@@ -18,13 +18,13 @@ references/
   offline-and-cancellation.md   NetInfo network status, offline-first React Query, AbortController
 ```
 
-## 适用场景
+## 使用时机
 
 在以下情况下使用此技能：
 
 - 实现 API 请求
 - 设置数据获取（React Query、SWR）
-- 使用 Expo Router 数据加载器（`useLoaderData`，Web SDK 55+）
+- 使用 Expo Router 数据加载器（`useLoaderData`，web SDK 55+）
 - 调试网络故障
 - 实现缓存策略
 - 处理离线场景
@@ -34,6 +34,17 @@ references/
 ## 偏好
 
 - 避免使用 axios，优先使用 expo/fetch
+
+## 每个屏幕都有四种状态
+
+对于加载数据的屏幕，设计**加载中**、**错误**、**空状态**和**内容**这四种状态。这些状态可以重叠：刷新错误应与缓存内容共存。
+
+- **加载中 ≠ 空状态。** 空状态意味着*已完成请求但结果为零项*，而不是缺少数据。在检查列表长度之前，先处理初始加载、失败和 hydration。在 TanStack Query v5 中，`isLoading` 表示正在进行首次请求；处于禁用或离线暂停状态的 query 可能没有数据，但并不代表正在加载。此时应显示前置条件状态或离线状态。
+- **空状态是经过设计的状态，而不是空白列表。** 在 FlatList/FlashList 上使用 `ListEmptyComponent`：解释为什么为空，并提供相关的下一步操作。“暂时没有项目”可以提供创建操作；“没有结果”则应提供修改或清除搜索/筛选条件的操作。
+- **重新获取数据时保留过期内容。** 即使刷新失败，也要在显示非阻塞错误和重试操作的同时渲染缓存的 `data`。首次请求的加载旋转指示器使用 `isLoading`，后台活动使用 `isFetching`；对于已知布局的缓慢初始加载，优先使用骨架屏；对于用户主动发起的刷新，使用 `RefreshControl`。
+- **以 hydration 为前置条件。** 当初始 UI 或重定向依赖持久化状态（身份验证令牌、引导标记）时，根布局应在该状态加载完成之前不渲染任何内容，或显示启动画面。基于尚未 hydration 的状态做出决定，会在每次冷启动时短暂显示错误的屏幕，也会错误处理 hydration 之前到达的深层链接。
+
+**保存操作应保留用户的工作。** 当 mutation 处于等待状态时，禁用重复提交。失败时保留草稿，显示内联错误，并允许用户重试；只有在成功后才清除或关闭。如果采用乐观更新，失败时恢复之前的值，或将编辑标记为未同步。通过先执行失败的保存，再进行重试来验证。
 
 ## 常见问题与解决方案
 
@@ -53,7 +64,7 @@ const fetchUser = async (userId: string) => {
 };
 ```
 
-**包含请求体的 POST 请求**：
+**带请求体的 POST 请求**：
 
 ```tsx
 const createUser = async (userData: UserData) => {
@@ -77,7 +88,7 @@ const createUser = async (userData: UserData) => {
 
 ---
 
-### 2. React Query（TanStack Query）
+### 2. React Query (TanStack Query)
 
 **设置**：
 
@@ -109,19 +120,27 @@ export default function RootLayout() {
 import { useQuery } from "@tanstack/react-query";
 
 function UserProfile({ userId }: { userId: string }) {
-  const { data, isLoading, error, refetch } = useQuery({
+  const { data, fetchStatus, error, refetch } = useQuery({
     queryKey: ["user", userId],
     queryFn: () => fetchUser(userId),
   });
 
-  if (isLoading) return <Loading />;
-  if (error) return <Error message={error.message} />;
+  if (data === undefined) {
+    if (error) return <ErrorState message={error.message} onRetry={() => refetch()} />;
+    if (fetchStatus === "paused") return <OfflineState />;
+    return <Loading />;
+  }
 
-  return <Profile user={data} />;
+  return (
+    <>
+      {error && <InlineError message="Could not refresh. Showing saved data." onRetry={() => refetch()} />}
+      {data === null ? <EmptyState message="User not found" /> : <Profile user={data} />}
+    </>
+  );
 }
 ```
 
-**数据变更**：
+**变更**：
 
 ```tsx
 import { useMutation, useQueryClient } from "@tanstack/react-query";
@@ -138,10 +157,12 @@ function CreateUserForm() {
   });
 
   const handleSubmit = (data: UserData) => {
+    if (mutation.isPending) return;
     mutation.mutate(data);
   };
 
-  return <Form onSubmit={handleSubmit} isLoading={mutation.isPending} />;
+  // Form keeps its draft on error and disables Submit while isLoading.
+  return <Form onSubmit={handleSubmit} isLoading={mutation.isPending} error={mutation.error?.message} />;
 }
 ```
 
@@ -207,7 +228,7 @@ const fetchWithRetry = async (
 
 ### 4. 身份验证
 
-**令牌管理**：
+**Token 管理**：
 
 ```tsx
 import * as SecureStore from "expo-secure-store";
@@ -234,7 +255,7 @@ const authFetch = async (url: string, options: RequestInit = {}) => {
 };
 ```
 
-**令牌刷新**：
+**Token 刷新**：
 
 ```tsx
 let isRefreshing = false;
@@ -262,15 +283,15 @@ const getValidToken = async (): Promise<string> => {
 
 ### 5. 离线支持
 
-使用 NetInfo 检测网络状态以及离线优先的 React Query 配置：参见 [./references/offline-and-cancellation.md](./references/offline-and-cancellation.md)。
+使用 NetInfo 检测网络状态，以及配置离线优先的 React Query：请参阅 [./references/offline-and-cancellation.md](./references/offline-and-cancellation.md)。
 
 ---
 
 ### 6. 环境变量
 
-**使用环境变量进行 API 配置**：
+**使用环境变量配置 API**：
 
-Expo 支持带有 `EXPO_PUBLIC_` 前缀的环境变量。这些变量会在构建时内联，并可在 JavaScript 代码中使用。
+Expo 支持使用 `EXPO_PUBLIC_` 前缀的环境变量。这些变量会在构建时内联，并可在 JavaScript 代码中使用。
 
 ```tsx
 // .env
@@ -286,7 +307,7 @@ const fetchUsers = async () => {
 };
 ```
 
-**特定于环境的配置**：
+**特定环境的配置**：
 
 ```tsx
 // .env.development
@@ -327,13 +348,13 @@ export const apiClient = {
 
 **重要说明**：
 
-- 只有以 `EXPO_PUBLIC_` 为前缀的变量才会暴露给客户端 bundle
-- 切勿将密钥（具有写入权限的 API 密钥、数据库密码）放入 `EXPO_PUBLIC_` 变量中——它们在构建后的应用中可见
-- 环境变量在**构建时**内联，而不是在运行时
-- 更改 `.env` 文件后，请重启开发服务器
-- 对于 API 路由中的服务端密钥，请使用不带 `EXPO_PUBLIC_` 前缀的变量
+- 只有带有 `EXPO_PUBLIC_` 前缀的变量才会暴露给客户端 bundle
+- 切勿将机密信息（具有写入权限的 API 密钥、数据库密码）放入 `EXPO_PUBLIC_` 变量中——它们在构建的应用中可见
+- 环境变量会在**构建时**内联，而不是在运行时内联
+- 更改 `.env` 文件后重启开发服务器
+- 对于 API 路由中的服务端机密信息，请使用不带 `EXPO_PUBLIC_` 前缀的变量
 
-**TypeScript 支持**：
+**TypeScript 支持**:
 
 ```tsx
 // types/env.d.ts
@@ -353,7 +374,7 @@ export {};
 
 ### 7. 请求取消
 
-组件卸载时使用 AbortController（React Query 会自动取消）：请参阅 [./references/offline-and-cancellation.md](./references/offline-and-cancellation.md)。
+在卸载时使用 AbortController（React Query 会自动取消）：请参阅 [./references/offline-and-cancellation.md](./references/offline-and-cancellation.md)。
 
 ---
 
@@ -397,7 +418,7 @@ User asks about networking
 
 ## 常见错误
 
-**错误：没有错误处理**
+**错误：不进行错误处理**
 
 ```tsx
 const data = await fetch(url).then((r) => r.json());
@@ -417,42 +438,42 @@ const data = await response.json();
 await AsyncStorage.setItem("token", token); // Not secure!
 ```
 
-**正确：使用 SecureStore 存储敏感数据**
+**正确：对敏感数据使用 SecureStore**
 
 ```tsx
 await SecureStore.setItemAsync("token", token);
 ```
 
-## 调用示例
+## 示例调用
 
-用户：“如何在 React Native 中发起 API 调用？”
--> 使用 fetch，并添加错误处理
+用户：“如何在 React Native 中发起 API 调用？”  
+-> 使用 fetch，并加入错误处理
 
-用户：“我应该使用 React Query 还是 SWR？”
--> 复杂应用使用 React Query，需求较简单时使用 SWR
+用户：“我应该使用 React Query 还是 SWR？”  
+-> 复杂应用使用 React Query，简单需求使用 SWR
 
-用户：“我的应用需要支持离线工作”
--> 使用 NetInfo 获取网络状态，使用 React Query 持久化进行缓存
+用户：“我的应用需要支持离线运行”  
+-> 使用 NetInfo 检查状态，使用 React Query 持久化进行缓存
 
-用户：“如何处理身份验证令牌？”
--> 将其存储在 expo-secure-store 中，并实现刷新流程
+用户：“如何处理身份验证令牌？”  
+-> 将令牌存储在 expo-secure-store 中，实现刷新流程
 
-用户：“API 调用很慢”
--> 检查缓存策略，并使用 React Query 的 staleTime
+用户：“API 调用速度很慢”  
+-> 检查缓存策略，使用 React Query staleTime
 
-用户：“如何为开发环境和生产环境配置不同的 API URL？”
--> 使用 `EXPO_PUBLIC_` 环境变量以及 .env.development 和 .env.production 文件
+用户：“如何为开发环境和生产环境配置不同的 API URL？”  
+-> 使用 `EXPO_PUBLIC_` 环境变量，并配合 .env.development 和 .env.production 文件
 
-用户：“我的 API 密钥应该放在哪里？”
--> 客户端安全的密钥：在 .env 中使用 `EXPO_PUBLIC_`。秘密密钥：仅在 API 路由中使用不带前缀的环境变量
+用户：“应该将 API 密钥放在哪里？”  
+-> 客户端安全的密钥：放在 .env 中的 `EXPO_PUBLIC_` 变量里。秘密密钥：仅在 API 路由中使用不带前缀的环境变量
 
-用户：“如何在 Expo Router 中为页面加载数据？”
+用户：“如何在 Expo Router 中为页面加载数据？”  
 -> 有关路由级加载器（Web、SDK 55+），请参阅 references/expo-router-loaders.md。对于原生平台，请使用 React Query 或 fetch。
 
 ## 提交反馈
-如果你在此技能中遇到错误、误导性信息或过时信息，请报告，以便 Expo 进行改进：
+如果你在此 skill 中遇到错误、误导性信息或过时内容，请报告这些问题，以便 Expo 进行改进：
 ```bash
 npx --yes submit-expo-feedback@latest --category skills --subject "expo-data-fetching" "<actionable feedback>"
 ```
-仅当你有具体且可操作的问题需要报告时才提交。请提供尽可能多的相关上下文。
-如果 AI 代理反复失败，或者用户不得不接手 Expo 任务，请加载 expo-skill-feedback 技能并遵循其 eval-candidate 流程，而不是重复使用上述命令。
+只有在你有具体且可执行的反馈时才提交。请尽可能包含所有相关上下文。
+如果 AI 代理反复失败，或用户不得不接手 Expo 任务，请加载 expo-skill-feedback skill，并按照其 eval-candidate 流程操作，而不要重复使用上面的命令。
