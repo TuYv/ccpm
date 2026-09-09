@@ -1,7 +1,7 @@
 {
   "id": "kubb-labs-kubb-pr",
   "name": "pr",
-  "description": "Rules and checklist for preparing PRs, creating changesets, and releasing packages in the monorepo.",
+  "description": "Open or update a pull request in this monorepo. Covers the pre-push checks, the changeset decision, Conventional Commit titles, how to fill the PR template, and what to do once CI runs. Use when asked to open a PR, push a branch for review, fix a red PR, or judge whether a branch is ready to merge.",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/kubb-labs/kubb/blob/main/.agents/skills/pr/SKILL.md",
     "path": ".agents/skills/pr/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-09T09:57:34.501Z",
+    "discovered_at": "2026-09-09T14:53:06.344Z",
     "stars": 1795,
     "language": "TypeScript",
-    "pushed_at": "2026-09-08T21:40:07Z",
+    "pushed_at": "2026-09-09T14:49:38Z",
     "license": "MIT"
   },
-  "summary_zh": "这是一套单体仓库的开发规范与检查清单，帮你理清提PR、管理变更集和发版的流程，适合需要统一多包协作与版本发布标准的团队。"
+  "summary_zh": "用于在 monorepo 中创建或更新拉取请求，指导推送前检查、变更集判断、提交标题、PR 模板填写及 CI 失败处理，适合提交代码评审或确认分支是否可合并。"
 }

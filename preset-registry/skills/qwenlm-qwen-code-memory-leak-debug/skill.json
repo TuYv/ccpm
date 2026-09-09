@@ -2,7 +2,7 @@
   "id": "qwenlm-qwen-code-memory-leak-debug",
   "name": "memory-leak-debug",
   "description": "Diagnose memory leaks in the Qwen Code CLI using heap snapshots and the chrome-devtools CLI. Use when investigating high memory usage, unbounded growth, or suspected object retention issues.",
-  "category": "测试调试",
+  "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/QwenLM/qwen-code/blob/main/.qwen/skills/memory-leak-debug/SKILL.md",
     "path": ".qwen/skills/memory-leak-debug/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-09T10:48:03.273Z",
-    "stars": 27719,
+    "discovered_at": "2026-09-09T15:42:53.308Z",
+    "stars": 27723,
     "language": "TypeScript",
-    "pushed_at": "2026-09-09T10:47:05Z",
+    "pushed_at": "2026-09-09T15:37:21Z",
     "license": "Apache-2.0"
   },
   "summary_zh": "用于诊断 Qwen Code 命令行工具的内存泄漏，适合排查内存占用过高、持续增长或对象未释放等问题。"

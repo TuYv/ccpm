@@ -2,7 +2,7 @@
   "id": "qwenlm-qwen-code-loop",
   "name": "loop",
   "description": "Create a loop that runs a prompt now and follows up either on a fixed schedule or through self-paced wakeups. Usage - /loop check the build, /loop 5m check the build, /loop check the PR every 30m. /loop list to show jobs, /loop clear to cancel all.",
-  "category": "设计创意",
+  "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/QwenLM/qwen-code/blob/main/packages/core/src/skills/bundled/loop/SKILL.md",
     "path": "packages/core/src/skills/bundled/loop/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-09T10:48:05.553Z",
-    "stars": 27719,
+    "discovered_at": "2026-09-09T15:42:56.716Z",
+    "stars": 27723,
     "language": "TypeScript",
-    "pushed_at": "2026-09-09T10:47:05Z",
+    "pushed_at": "2026-09-09T15:37:21Z",
     "license": "Apache-2.0"
   },
   "summary_zh": "让提示词立即执行并按固定间隔或自主唤醒持续跟进，适合轮询构建状态、检查 PR 等重复任务。"

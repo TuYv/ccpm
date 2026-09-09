@@ -2,7 +2,7 @@
   "id": "qwenlm-qwen-code-batch",
   "name": "batch",
   "description": "Execute batch operations on multiple files in parallel. Automatically discovers files, splits into chunks, and processes with parallel worker agents. Use `/batch` followed by operation and file pattern.",
-  "category": "设计创意",
+  "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/QwenLM/qwen-code/blob/main/packages/core/src/skills/bundled/batch/SKILL.md",
     "path": "packages/core/src/skills/bundled/batch/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-09T10:48:04.729Z",
-    "stars": 27719,
+    "discovered_at": "2026-09-09T15:42:55.497Z",
+    "stars": 27723,
     "language": "TypeScript",
-    "pushed_at": "2026-09-09T10:47:05Z",
+    "pushed_at": "2026-09-09T15:37:21Z",
     "license": "Apache-2.0"
   },
   "summary_zh": "一个批量并行处理文件的工具，能自动发现并分组文件，适合高效执行大规模重复操作。"

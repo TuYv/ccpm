@@ -2,7 +2,7 @@
   "id": "qwenlm-qwen-code-agent-reproduce-align",
   "name": "agent-reproduce-align",
   "description": "Use after a Codex or Claude Code feature has been implemented in Qwen Code to run the selected reference agent and Qwen Code under the same scenario, capture HTTP and terminal traces, compare request bodies, tool/function schemas, outputs, and iterate until the reproduced behavior is close enough.",
-  "category": "设计创意",
+  "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/QwenLM/qwen-code/blob/main/.qwen/skills/agent-reproduce-align/SKILL.md",
     "path": ".qwen/skills/agent-reproduce-align/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-09T10:48:01.441Z",
-    "stars": 27719,
+    "discovered_at": "2026-09-09T15:42:50.820Z",
+    "stars": 27723,
     "language": "TypeScript",
-    "pushed_at": "2026-09-09T10:47:05Z",
+    "pushed_at": "2026-09-09T15:37:21Z",
     "license": "Apache-2.0"
   },
   "summary_zh": "用于对照运行参考智能体与 Qwen Code，比较请求、工具调用和输出轨迹，帮助校准复现功能的行为一致性。"

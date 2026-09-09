@@ -2,7 +2,7 @@
   "id": "qwenlm-qwen-code-stuck",
   "name": "stuck",
   "description": "Diagnose frozen, stuck, or slow Qwen Code sessions on this machine. Scans for problematic processes, high CPU/memory usage, hung subprocesses, and debug logs. Use /stuck or /stuck <PID> to focus on a specific process.",
-  "category": "测试调试",
+  "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/QwenLM/qwen-code/blob/main/packages/core/src/skills/bundled/stuck/SKILL.md",
     "path": "packages/core/src/skills/bundled/stuck/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-09T10:48:06.195Z",
-    "stars": 27719,
+    "discovered_at": "2026-09-09T15:42:57.737Z",
+    "stars": 27723,
     "language": "TypeScript",
-    "pushed_at": "2026-09-09T10:47:05Z",
+    "pushed_at": "2026-09-09T15:37:21Z",
     "license": "Apache-2.0"
   },
   "summary_zh": "用于诊断本机卡死或运行缓慢的 Qwen Code 会话，可排查异常进程、资源占用、挂起子进程和调试日志。"

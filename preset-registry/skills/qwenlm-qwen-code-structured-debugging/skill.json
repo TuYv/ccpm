@@ -2,7 +2,7 @@
   "id": "qwenlm-qwen-code-structured-debugging",
   "name": "structured-debugging",
   "description": "Hypothesis-driven debugging methodology for hard bugs. Use this skill whenever you're investigating non-trivial bugs, unexpected behavior, flaky tests, or tracing issues through complex systems. Activate proactively when debugging requires more than a quick glance — especially when the first attempt at a fix didn't work, when behavior seems \"impossible\", or when you're tempted to blame an external system (model, API, library) without evidence.",
-  "category": "测试调试",
+  "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/QwenLM/qwen-code/blob/main/.qwen/skills/structured-debugging/SKILL.md",
     "path": ".qwen/skills/structured-debugging/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-09T10:48:03.788Z",
-    "stars": 27719,
+    "discovered_at": "2026-09-09T15:42:54.093Z",
+    "stars": 27723,
     "language": "TypeScript",
-    "pushed_at": "2026-09-09T10:47:05Z",
+    "pushed_at": "2026-09-09T15:37:21Z",
     "license": "Apache-2.0"
   },
   "summary_zh": "一套假设驱动的调试方法，适合排查疑难故障、异常行为、偶发测试失败及复杂系统中的链路问题。"

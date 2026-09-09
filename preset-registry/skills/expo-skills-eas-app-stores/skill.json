@@ -1,14 +1,14 @@
 {
   "id": "expo-skills-eas-app-stores",
   "name": "eas-app-stores",
-  "description": "EAS service (paid). Deploy Expo apps to the app stores with EAS - build and submit to the iOS App Store, Google Play Store, and TestFlight, configure eas.json build and submit profiles, manage app versions and build numbers, and publish App Store metadata and ASO. Use whenever the user wants to deploy, release, or ship an app to production or the app stores, is preparing a production build, running eas build or eas submit, shipping to TestFlight, bumping version or build numbers, or setting up s",
+  "description": "EAS service (paid). Build and submit iOS and Android apps with EAS to TestFlight, the App Store, or Google Play. Supports Expo and other React Native projects, plus existing native apps. Use for eas.json setup, release pipelines, signing, app versions and build numbers, store submissions, and listing metadata. For Expo websites and API routes, use eas-hosting; for adding React Native screens to a native app, use expo-brownfield.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
     "gemini"
   ],
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "expo",
   "install_path": ".claude/skills/eas-app-stores/SKILL.md",
   "source": {
@@ -16,11 +16,11 @@
     "url": "https://github.com/expo/skills/blob/main/plugins/expo/skills/eas-app-stores/SKILL.md",
     "path": "plugins/expo/skills/eas-app-stores/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-09T09:56:02.438Z",
-    "stars": 2510,
+    "discovered_at": "2026-09-09T14:50:57.862Z",
+    "stars": 2511,
     "language": "Shell",
-    "pushed_at": "2026-09-08T10:32:40Z",
+    "pushed_at": "2026-09-09T14:43:07Z",
     "license": "MIT"
   },
-  "summary_zh": "一项付费的 Expo 应用发布服务，适合完成生产构建、版本管理并上架 iOS、Android 和 TestFlight。"
+  "summary_zh": "用于构建并提交 iOS、Android 应用到 TestFlight、App Store 和 Google Play，适合 Expo、React Native 及原生项目的发布、签名与版本管理。"
 }

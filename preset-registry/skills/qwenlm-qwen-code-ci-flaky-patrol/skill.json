@@ -2,7 +2,7 @@
   "id": "qwenlm-qwen-code-ci-flaky-patrol",
   "name": "ci-flaky-patrol",
   "description": "Classify a bounded batch of stale PR CI failures and choose the safest response.",
-  "category": "设计创意",
+  "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/QwenLM/qwen-code/blob/main/.qwen/skills/ci-flaky-patrol/SKILL.md",
     "path": ".qwen/skills/ci-flaky-patrol/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-09T10:48:01.976Z",
-    "stars": 27719,
+    "discovered_at": "2026-09-09T15:42:51.559Z",
+    "stars": 27723,
     "language": "TypeScript",
-    "pushed_at": "2026-09-09T10:47:05Z",
+    "pushed_at": "2026-09-09T15:37:21Z",
     "license": "Apache-2.0"
   },
   "summary_zh": "用于批量识别长期未更新 PR 的 CI 失败原因并选择最稳妥的处理方式，适合清理积压的合并请求。"

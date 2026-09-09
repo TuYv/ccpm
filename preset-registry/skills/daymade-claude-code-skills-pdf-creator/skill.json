@@ -1,7 +1,7 @@
 {
   "id": "daymade-claude-code-skills-pdf-creator",
   "name": "pdf-creator",
-  "description": "Convert markdown files to professional PDF documents with proper Chinese font support, theme system, and visual self-check. Use whenever the user asks to create PDFs, convert markdown to PDF, generate printable documents, or needs documents formatted for print or mobile reading. This skill MUST be used instead of manual pandoc/Chrome invocations — it handles CJK typography, Chrome header/footer suppression, and mandatory visual verification that manual approaches miss. **Scope — markdown → PDF o",
+  "description": "Convert markdown files to professional PDF documents with proper Chinese font support, theme system, and visual self-check. Use for Markdown → PDF, printable Markdown documents, and Markdown formatted for print or mobile reading. Prefer its CJK typography, header/footer suppression, and visual verification over manual pandoc/Chrome commands. Scope is Markdown → PDF only. Existing Word/WPS → PDF, including manuscript excerpts and layout repair, routes to daymade-docs:docx-creator; do not round-tr",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-docs/pdf-creator/SKILL.md",
     "path": "daymade-docs/pdf-creator/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-09T10:44:44.187Z",
+    "discovered_at": "2026-09-09T15:38:04.599Z",
     "stars": 1385,
     "language": "Python",
-    "pushed_at": "2026-09-09T10:27:59Z",
+    "pushed_at": "2026-09-09T12:33:29Z",
     "license": "MIT"
   },
-  "summary_zh": "一款将 Markdown 转为专业 PDF 的工具，适合制作支持中文排版、打印或移动阅读的文档。"
+  "summary_zh": "将 Markdown 转为适合打印或移动阅读的专业 PDF，支持中文字体、主题排版和视觉校验，适合制作规范的中文文档。"
 }

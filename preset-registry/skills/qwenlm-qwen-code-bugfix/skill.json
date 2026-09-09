@@ -2,7 +2,7 @@
   "id": "qwenlm-qwen-code-bugfix",
   "name": "bugfix",
   "description": "Fix a bug from a GitHub issue, following the reproduce-first workflow. Use when the user asks to fix a bug, investigate a GitHub issue, or debug a user-reported problem. Takes a GitHub issue URL or number as input.",
-  "category": "测试调试",
+  "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/QwenLM/qwen-code/blob/main/.qwen/skills/bugfix/SKILL.md",
     "path": ".qwen/skills/bugfix/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-09T10:48:01.847Z",
-    "stars": 27719,
+    "discovered_at": "2026-09-09T15:42:51.365Z",
+    "stars": 27723,
     "language": "TypeScript",
-    "pushed_at": "2026-09-09T10:47:05Z",
+    "pushed_at": "2026-09-09T15:37:21Z",
     "license": "Apache-2.0"
   },
   "summary_zh": "一款按“先复现、再修复”流程处理 GitHub Issue 的调试工具，适合排查并解决用户反馈的问题。"

@@ -2,7 +2,7 @@
   "id": "qwenlm-qwen-code-triage",
   "name": "triage",
   "description": "Gatekeep and review GitHub issues and pull requests for Qwen Code maintainers. Use for GitHub Action issue triage, PR admission checks, product-direction review, KISS-focused PR review, and staged bilingual GitHub comments.",
-  "category": "设计创意",
+  "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/QwenLM/qwen-code/blob/main/.qwen/skills/triage/SKILL.md",
     "path": ".qwen/skills/triage/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-09T10:48:04.212Z",
-    "stars": 27719,
+    "discovered_at": "2026-09-09T15:42:54.701Z",
+    "stars": 27723,
     "language": "TypeScript",
-    "pushed_at": "2026-09-09T10:47:05Z",
+    "pushed_at": "2026-09-09T15:37:21Z",
     "license": "Apache-2.0"
   },
   "summary_zh": "面向 Qwen Code 维护者的 GitHub 审核工具，用于筛选议题和 PR、把关产品方向并生成分阶段双语评论。"
