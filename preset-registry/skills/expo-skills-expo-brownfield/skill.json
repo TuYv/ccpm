@@ -1,7 +1,7 @@
 {
   "id": "expo-skills-expo-brownfield",
   "name": "expo-brownfield",
-  "description": "Framework (OSS). Integrate Expo and React Native into an existing native iOS or Android app. Use when the user mentions brownfield, embedding React Native in a native app, AAR/XCFramework, or adding Expo to an existing Kotlin/Swift project. Covers both the isolated approach and the integrated approach.",
+  "description": "Framework (OSS). Integrate Expo and React Native into an existing native iOS or Android app. Use for brownfield, embedding a React Native screen in SwiftUI/UIKit or Kotlin, or AAR/XCFramework packaging. Covers isolated and integrated approaches. For building or distributing a purely native app with EAS, use eas-app-stores.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/expo/skills/blob/main/plugins/expo/skills/expo-brownfield/SKILL.md",
     "path": "plugins/expo/skills/expo-brownfield/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-10T14:42:22.159Z",
+    "discovered_at": "2026-09-10T18:40:31.917Z",
     "stars": 2514,
     "language": "Shell",
-    "pushed_at": "2026-09-10T14:04:47Z",
+    "pushed_at": "2026-09-10T17:51:52Z",
     "license": "MIT"
   },
-  "summary_zh": "将 Expo 和 React Native 嵌入现有 iOS 或 Android 原生应用，适合在 Kotlin、Swift 项目中渐进引入跨平台功能。"
+  "summary_zh": "用于将 Expo 和 React Native 嵌入现有 iOS 或 Android 原生应用，适合混合开发、接入 React Native 页面及打包分发 AAR 或 XCFramework。"
 }

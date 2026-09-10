@@ -1,7 +1,7 @@
 {
   "id": "oliver-zehentleitner-keep-the-why-keep-the-why",
   "name": "keep-the-why",
-  "description": "Extract and preserve the reasoning code cannot explain - decisions, rejected alternatives, workarounds, incidents, constraints - plus project setup and maintainer interviews. Not for what changed (see Keep a Changelog) - only why.",
+  "description": "Extract and preserve the reasoning code cannot explain - decisions, rejected alternatives, workarounds, incidents, constraints - plus project setup and maintainer interviews. Not for what changed (see Keep a Changelog) - only why. Also the place for complaints, feedback and settings changes about this skill itself.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/oliver-zehentleitner/keep-the-why/blob/main/skills/keep-the-why/SKILL.md",
     "path": "skills/keep-the-why/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-10T15:36:24.865Z",
+    "discovered_at": "2026-09-10T19:34:56.950Z",
     "stars": 155,
     "language": "Python",
-    "pushed_at": "2026-09-10T14:15:52Z",
+    "pushed_at": "2026-09-10T19:11:28Z",
     "license": "MIT"
   },
-  "summary_zh": "帮团队沉淀代码背后的决策依据、取舍、约束和事故经验，避免项目维护时只看到改了什么却不知道为什么。"
+  "summary_zh": "用于保存代码无法表达的决策背景与项目上下文，帮助团队在维护、交接和复盘时理解当初为何如此设计。"
 }
