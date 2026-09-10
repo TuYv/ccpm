@@ -1,7 +1,7 @@
 {
   "id": "agricidaniel-claude-seo-seo-content",
   "name": "seo-content",
-  "description": "> Content quality and E-E-A-T analysis with AI citation readiness assessment. Use when user says \"content quality\", \"E-E-A-T\", \"content analysis\", \"readability check\", \"thin content\", or \"content audit\".",
+  "description": "> Content quality and E-E-A-T analysis with AI citation readiness assessment, plus last-mile draft cleanup (AI-typical phrasing and invisible Unicode watermark characters). Use when user says \"content quality\", \"E-E-A-T\", \"content analysis\", \"readability check\", \"thin content\", \"content audit\", \"humanize\", \"AI phrasing\", \"remove watermarks\", or \"invisible characters\".",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/AgriciDaniel/claude-seo/blob/main/skills/seo-content/SKILL.md",
     "path": "skills/seo-content/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-10T18:39:47.522Z",
-    "stars": 16703,
+    "discovered_at": "2026-09-10T21:51:43.773Z",
+    "stars": 16708,
     "language": "Python",
-    "pushed_at": "2026-09-10T18:36:04Z",
+    "pushed_at": "2026-09-10T19:48:41Z",
     "license": "MIT"
   },
-  "summary_zh": "帮你分析内容质量与E-E-A-T表现，并评估被AI引用的潜力，适合做内容审计、可读性检查或排查单薄内容，提升SEO效果。"
+  "summary_zh": "用于分析内容质量、E-E-A-T与AI引用适配度，并清理生硬的AI措辞和隐形水印字符，适合内容审核与发布前优化。"
 }

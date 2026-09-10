@@ -2,7 +2,7 @@
   "id": "google-skills-cloud-databases-onboarding",
   "name": "cloud-databases-onboarding",
   "description": ">- Guides users through discovering their database requirements, recommends a Google Cloud database based on a recommendation matrix, and assists in database creation. Use when a user asks 'What database service should I use?', 'Help me pick a database', or when a user wants to create a new database on Google Cloud. Don't use for general Google Cloud maintenance, managing existing databases, or database migrations.",
-  "category": "开发编程",
+  "category": "通用其他",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/google/skills/blob/main/skills/cloud/cloud-databases-onboarding/SKILL.md",
     "path": "skills/cloud/cloud-databases-onboarding/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-10T18:39:41.937Z",
-    "stars": 19734,
+    "discovered_at": "2026-09-10T21:51:37.612Z",
+    "stars": 19739,
     "language": "Python",
-    "pushed_at": "2026-09-10T16:26:58Z",
+    "pushed_at": "2026-09-10T20:07:45Z",
     "license": "Apache-2.0"
   },
   "summary_zh": "一款 Google Cloud 数据库选型与创建向导，适合梳理需求、推荐合适服务并协助新建数据库。"

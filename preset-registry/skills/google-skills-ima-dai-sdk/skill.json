@@ -2,7 +2,7 @@
   "id": "google-skills-ima-dai-sdk",
   "name": "ima-dai-sdk",
   "description": ">- Integrates the Google Interactive Media Ads (IMA) Dynamic Ad Insertion (DAI) SDK into websites, web apps, mobile apps, or TV apps. Use when: - A video player needs to load and play HLS or DASH streams in web apps, Android apps, iOS apps, tvOS apps, Cast (CAF) receivers, or Roku channels. - The app needs to make use of a Google DAI livestream event asset key, or content source CMS ID, video ID for video on demand. Don't use this skill to load and play a VAST or VMAP URL.",
-  "category": "开发编程",
+  "category": "通用其他",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/google/skills/blob/main/skills/ads/ima-dai-sdk/SKILL.md",
     "path": "skills/ads/ima-dai-sdk/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-10T18:39:37.997Z",
-    "stars": 19734,
+    "discovered_at": "2026-09-10T21:51:33.208Z",
+    "stars": 19739,
     "language": "Python",
-    "pushed_at": "2026-09-10T16:26:58Z",
+    "pushed_at": "2026-09-10T20:07:45Z",
     "license": "Apache-2.0"
   },
   "summary_zh": "用于在网页、移动端和电视应用中接入 Google 动态广告，适合播放带广告的 HLS/DASH 直播或点播流，不支持 VAST/VMAP。"

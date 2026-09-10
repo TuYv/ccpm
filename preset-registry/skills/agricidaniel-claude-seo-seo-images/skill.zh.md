@@ -12,17 +12,17 @@ argument-hint: "[url]"
 license: MIT
 metadata:
   author: AgriciDaniel
-  version: "2.2.6"
+  version: "2.3.1"
   category: seo
 ---
-# 图片优化分析
+# 图像优化分析
 
 ## 检查项
 
 ### Alt 文本
-- 所有 `<img>` 元素都存在（装饰性图片除外：`role="presentation"`）
-- 描述性：描述图片内容，而不是使用 `"image.jpg"` 或 `"photo"`
-- 自然地包含相关关键词，不堆砌关键词
+- 所有 `<img>` 元素均应提供（装饰性图片除外：`role="presentation"`）
+- 具有描述性：描述图像内容，而不是使用 "image.jpg" 或 "photo"
+- 在自然的情况下包含相关关键词，不要堆砌关键词
 - 长度：10-125 个字符
 
 **良好示例：**
@@ -33,34 +33,34 @@ metadata:
 **不良示例：**
 - "image.jpg"（文件名，而非描述）
 - "plumber plumbing plumber services"（关键词堆砌）
-- "Click here"（没有描述性）
+- "Click here"（不具描述性）
 
 ### 文件大小
 
-**按图片类别划分的分级阈值：**
+**按图像类别划分的分级阈值：**
 
-| 图片类别 | 目标 | 警告 | 严重 |
-|--------|--------|---------|----------|
+| 图像类别 | 目标 | 警告 | 严重 |
+|----------------|--------|---------|----------|
 | 缩略图 | < 50KB | > 100KB | > 200KB |
-| 内容图片 | < 100KB | > 200KB | > 500KB |
-| Hero/横幅图片 | < 200KB | > 300KB | > 700KB |
+| 内容图像 | < 100KB | > 200KB | > 500KB |
+| 首屏/横幅图像 | < 200KB | > 300KB | > 700KB |
 
-在不损失画质的前提下，尽可能建议将图片压缩至目标阈值。
+在不损失质量的前提下，尽可能建议压缩至目标阈值。
 
 ### 格式
-| 格式 | 浏览器支持率 | 使用场景 |
-|--------|--------|----------|
+| 格式 | 浏览器支持 | 使用场景 |
+|--------|-----------------|----------|
 | WebP | 97%+ | 默认推荐 |
-| AVIF | 92%+ | 压缩效果最佳，适用于较新的浏览器 |
-| JPEG | 100% | 照片的回退格式 |
-| PNG | 100% | 带透明效果的图形 |
+| AVIF | 92%+ | 最佳压缩率，较新 |
+| JPEG | 100% | 照片的后备格式 |
+| PNG | 100% | 带透明度的图形 |
 | SVG | 100% | 图标、徽标、插图 |
 
-建议优先使用 WebP/AVIF，而不是 JPEG/PNG。检查是否使用了带格式回退的 `<picture>` 元素。
+建议使用 WebP/AVIF 替代 JPEG/PNG。检查是否存在带格式后备的 `<picture>` 元素。
 
 #### 推荐的 `<picture>` 元素模式
 
-使用渐进增强，优先采用效率最高的格式：
+采用渐进增强方式，将效率最高的格式放在最前面：
 
 ```html
 <picture>
@@ -70,16 +70,16 @@ metadata:
 </picture>
 ```
 
-浏览器将使用第一个受支持的格式。当前浏览器支持率：AVIF 93.8%，WebP 95.3%。
+浏览器将使用其支持的第一个格式。当前浏览器支持情况：AVIF 93.8%，WebP 95.3%。
 
 #### JPEG XL：新兴格式
 
-第三方报告和 Wikipedia 描述称，基于 Rust 的 JPEG XL 解码器已随 Chrome 145 稳定版（2026-02-10）发布，但需要开启 `chrome://flags/#enable-jxl-image-format` 标志，默认未启用；fact pack 中未检索到 Google 官方确认。由于尚未确认默认支持，因此目前不适合用于生产环境中的 Web 交付。继续提供 AVIF/WebP 以及 JPEG 回退格式，并持续关注其进展。
+第三方报告和 Wikipedia 表示，基于 Rust 的 JPEG XL 解码器已在 Chrome 145 stable（2026-02-10）中发布，但位于 `chrome://flags/#enable-jxl-image-format` 标志之后，默认未启用；事实包中未获取到 Google 官方确认。由于默认支持尚未得到确认，它目前尚不适合用于生产环境的 Web 交付。请继续提供 AVIF/WebP 与 JPEG 后备，并持续关注。
 
-### 响应式图片
-- 使用 `srcset` 属性提供多种尺寸
-- 使用与布局断点匹配的 `sizes` 属性
-- 根据设备像素比提供适当的分辨率
+### 响应式图像
+- 使用 `srcset` 属性提供多个尺寸
+- `sizes` 属性应与布局断点匹配
+- 为设备像素比提供适当分辨率
 
 ```html
 <img
@@ -91,9 +91,9 @@ metadata:
 ```
 
 ### 延迟加载
-- 对首屏以下的图片使用 `loading="lazy"`
-- 不要对首屏或 Hero 图片使用延迟加载（会损害 LCP）
-- 检查使用的是原生延迟加载还是基于 JavaScript 的延迟加载
+- 对首屏以下图像使用 `loading="lazy"`
+- **不要**对首屏/主视觉图像使用延迟加载（会损害 LCP）
+- 检查原生延迟加载与基于 JavaScript 的延迟加载
 
 ```html
 <!-- Below fold - lazy load -->
@@ -103,20 +103,19 @@ metadata:
 <img src="hero.jpg" alt="Hero image">
 ```
 
-#### 检测到的延迟加载方法（`lazy_method` 字段）
+#### 检测到的延迟加载器方法（`lazy_method` 字段）
 
-`${CLAUDE_PLUGIN_ROOT}/scripts/claude-seo" run parse_html.py` 通过每个图像条目中的
-`lazy_method` 字段对图像的延迟加载机制进行分类。共有五个值：
+`${CLAUDE_PLUGIN_ROOT}/scripts/claude-seo` run parse_html.py 会通过每个图像条目中的 `lazy_method` 字段对图像的延迟加载机制进行分类。共有五个值：
 
 | `lazy_method` | 检测到的信号 | 常见技术栈 |
 |---|---|---|
 | `native` | `loading="lazy"` HTML 属性 | 现代浏览器、纯 HTML |
-| `perfmatters` | `data-perfmatters-src`/`-srcset` 或类名 `perfmatters-lazy` | WordPress + Perfmatters 插件 |
-| `ewww` | `data-ewww-src` / `data-eio` 或类名 `lazyload-eio` | WordPress + EWWW Image Optimizer |
-| `js-generic` | `data-src` / `data-lazy-src` / `data-original` / `data-srcset` 或类名 `lazyload`/`lazyloaded`/`lazy` | Lazysizes、vanilla-lazyload、jQuery 插件 |
-| `none` | 未检测到属性或类名信号 | 页面未对该图像启用延迟加载 |
+| `perfmatters` | `data-perfmatters-src`/`-srcset` 或类 `perfmatters-lazy` | WordPress + Perfmatters 插件 |
+| `ewww` | `data-ewww-src` / `data-eio` 或类 `lazyload-eio` | WordPress + EWWW Image Optimizer |
+| `js-generic` | `data-src` / `data-lazy-src` / `data-original` / `data-srcset` 或类 `lazyload`/`lazyloaded`/`lazy` | Lazysizes、vanilla-lazyload、jQuery 插件 |
+| `none` | 没有属性或类信号 | 页面未对该图像启用延迟加载 |
 
-审计图像 SEO 时，请同时报告 `lazy_method` 和 `loading`，以便用户了解其网站是否使用了由 JS 驱动的延迟加载器（这种情况下会有意省略原生的 `loading="lazy"` 属性，这不属于回归问题）。
+在审核图像 SEO 时，将 `lazy_method` 与 `loading` 一并报告，以便用户了解其网站是否使用了由 JS 驱动的延迟加载器（在这种情况下，原生 `loading="lazy"` 属性会被有意省略，这并不属于回归问题）。
 
 ### LCP 图像使用 `fetchpriority="high"`
 
@@ -126,11 +125,11 @@ metadata:
 <img src="hero.webp" fetchpriority="high" alt="Hero image description" width="1200" height="630">
 ```
 
-**关键：** 不要对首屏上方/LCP 图像进行延迟加载。在 LCP 图像上使用 `loading="lazy"` 会直接损害 LCP 分数。仅对首屏下方的图像使用 `loading="lazy"`。
+**关键：**不要对首屏/LCP 图像进行延迟加载。在 LCP 图像上使用 `loading="lazy"` 会直接损害 LCP 得分。仅对首屏以下的图像使用 `loading="lazy"`。
 
 ### 非 LCP 图像使用 `decoding="async"`
 
-为非 LCP 图像添加 `decoding="async"`，以避免图像解码阻塞主线程：
+为非 LCP 图像添加 `decoding="async"`，防止图像解码阻塞主线程：
 
 ```html
 <img src="photo.webp" alt="Description" width="600" height="400" loading="lazy" decoding="async">
@@ -153,18 +152,18 @@ metadata:
 ```
 
 ### 文件名
-- 使用描述性名称：`blue-running-shoes.webp`，而不是 `IMG_1234.jpg`
-- 使用连字符和小写字母，不要包含特殊字符
+- 描述性命名：使用 `blue-running-shoes.webp`，而不是 `IMG_1234.jpg`
+- 使用连字符和小写字母，不使用特殊字符
 - 包含相关关键词
 
 ### CDN 使用情况
-- 检查图像是否通过 CDN 提供（不同域名、CDN 响应头）
-- 对于图像密集型网站，建议使用 CDN
-- 检查边缘缓存响应头
+- 检查图像是否由 CDN 提供（不同域名、CDN 标头）
+- 对图像较多的网站推荐使用 CDN
+- 检查边缘缓存标头
 
 ## 输出
 
-### 图像审计摘要
+### 图像审核摘要
 
 | 指标 | 状态 | 数量 |
 |--------|--------|-------|
@@ -177,7 +176,7 @@ metadata:
 
 ### 按优先级排列的优化列表
 
-按文件大小影响排序（节省空间最多的排在前面）：
+按文件大小影响排序（节省空间最多的优先）：
 
 | 图像 | 当前大小 | 格式 | 问题 | 预计节省空间 |
 |-------|--------------|--------|--------------|--------------|
@@ -187,7 +186,7 @@ metadata:
 1. 将 X 个图像转换为 WebP 格式（预计节省 XX KB）
 2. 为 X 个图像添加 Alt 文本
 3. 为 X 个图像添加尺寸
-4. 为 X 个首屏下方图像启用延迟加载
+4. 为 X 个首屏以下图像启用延迟加载
 5. 压缩 X 个过大的图像
 
 ---
@@ -198,24 +197,24 @@ metadata:
 
 ### `/seo images serp <keyword>`
 
-将页面图片与 Google Images SERP 排名进行交叉对照。
+将页面上的图片与 Google 图片 SERP 排名进行交叉对比。
 
 **工作流程：**
-1. 通过 `serp_google_images_live_advanced` 获取 Google Images 结果（depth=100）
-2. 提取：排名靠前的域名、图片类型、alt 文本模式
+1. 通过 `serp_google_images_live_advanced` 获取 Google 图片结果（depth=100）
+2. 提取：排名靠前的域名、图片类型、替代文本模式
 3. 输出竞争对手图片 SERP 格局
 
 **输出：**
 
-| 排名 | 域名 | 标题/Alt | 图片 URL | 页面 URL |
+| 排名 | 域名 | 标题/替代文本 | 图片 URL | 页面 URL |
 |------|--------|-----------|-----------|----------|
 | 1 | example.com | "Blue running shoes..." | .../shoes.webp | /products/... |
 
 **分析包括：**
-- **域名占比**：哪些网站拥有最多的图片排名位置（按数量列出前 10 名）
-- **Alt 文本模式**：排名靠前的图片中常见的标题/alt 文本模式
-- **格式分布**：前几名结果中 WebP、JPEG 和 PNG 的分布
-- **机会评分**：拥有页面排名但没有图片曝光的关键词
+- **域名主导地位**：哪些网站占据最多的图片排名位置（按数量列出前 10 名）
+- **替代文本模式**：排名靠前的图片中常见的标题/替代文本模式
+- **格式分布**：排名靠前的结果中 WebP、JPEG 与 PNG 的分布
+- **机会评分**：页面已有排名但没有图片展现的关键词
 
 如果 DataForSEO MCP 不可用，请告知用户并建议安装扩展。
 
@@ -230,13 +229,13 @@ metadata:
 优化用于 Web 和 SEO 的图片文件。转换为 WebP/AVIF，注入 IPTC
 元数据，进行压缩，并生成响应式变体。
 
-**工具使用顺序：**
+**使用的工具（按优先顺序）：**
 - `exiftool` -- EXIF/IPTC/XMP 读取/写入（安装：`sudo apt install libimage-exiftool-perl`）
 - `cwebp` -- WebP 转换（安装：`sudo apt install webp`）
 - ImageMagick `convert` -- 格式转换、调整大小（大多数系统已预安装）
 - FFmpeg -- 格式转换备用工具（已预安装）
 
-**运行前：**使用 `which exiftool cwebp convert ffmpeg` 检查哪些工具可用。
+**运行前：** 使用 `which exiftool cwebp convert ffmpeg` 检查哪些工具可用。
 
 ### 格式转换
 
@@ -258,10 +257,10 @@ convert input.jpg -resize 800x -quality 82 image-800.webp
 convert input.jpg -resize 1200x -quality 82 image-1200.webp
 ```
 
-### 元数据注入（用于 Google Images 展示的 IPTC）
+### 元数据注入（用于 Google 图片展示的 IPTC）
 
-Google Images 会在搜索结果中展示 IPTC Creator、Credit Line 和 Copyright。
-这**不是排名因素**，但可以改善 Google Images 中的信息展示和品牌归属。
+Google 图片会在搜索结果中展示 IPTC Creator、Credit Line 和 Copyright。
+这**不是排名因素**，但可以改善 Google 图片展示效果和品牌归属信息。
 
 **使用 exiftool（首选）：**
 ```bash
@@ -306,7 +305,8 @@ convert input.jpg \
 ### AI 生成图像：`DigitalSourceType`（Merchant Center 要求）
 
 对于通过生成式 AI 生成的产品图像，**Google Merchant Center 要求**
-IPTC `DigitalSourceType: TrainedAlgorithmicMedia` 元数据。这是一项运营政策要求，而非排名因素：缺少此标签的 AI 生成图像可能导致信息流被拒批。
+提供 IPTC `DigitalSourceType: TrainedAlgorithmicMedia` 元数据。这是
+一项运营政策要求，而非排名因素：如果 AI 生成图像的 Feed 缺少此标签，可能会被拒批。
 
 主要来源（Merchant Center AI 生成内容政策）：
 https://support.google.com/merchants/answer/14743464
@@ -332,7 +332,7 @@ https://support.google.com/merchants/answer/14743464
 #   digitalCapture                   (fully captured photograph)
 ```
 
-**原始 exiftool 等效命令**（用于临时操作）：
+**原始 exiftool 等效命令**（用于临时使用）：
 
 ```bash
 # Inject manually
@@ -346,37 +346,45 @@ exiftool -if 'not $XMP-iptcExt:DigitalSourceType' \
 ```
 
 Google 会提取以下 IPTC `DigitalSourceType` 值：
-- `trainedAlgorithmicMedia`：完全由 AI 生成（扩散模型生成的产品图像应使用此值）
-- `compositeSynthetic`：混合了拍摄元素和 AI 生成元素
-- `algorithmicMedia`：完全由算法创建，**并非**基于采样训练数据
-- `compositeWithTrainedAlgorithmicMedia`：由经过训练的算法生成媒体与其他媒体合成（例如在真实照片上进行 AI 修复或扩图）
-- `digitalCapture`：完全拍摄的照片（注意：`digitalCapture` **不在** Google 提取值列表中，但它是有效的 IPTC 值）
+- `trainedAlgorithmicMedia`：完全由 AI 生成（扩散模型生成的产品图像使用此值）
+- `compositeSynthetic`：混合了捕获内容和 AI 生成元素
+- `algorithmicMedia`：完全由算法创建，**不**使用采样的训练数据
+- `compositeWithTrainedAlgorithmicMedia`：训练算法媒体与其他媒体的合成（例如在真实照片上进行 AI 修复或扩展）
+- `digitalCapture`：完全捕获的照片（注意：`digitalCapture` **不在**
+  Google 提取值列表中，但它是有效的 IPTC 值）
 
-> **溯源信号（面向消费者）：** **SynthID** 水印和 **C2PA**
-> Content Credentials 是用于识别 AI 媒体的新兴信号。除非已从当前 Google 官方来源核实，否则应将产品页面覆盖情况视为可能发生变化。
-> 这是检测/透明度机制，**并不是**除 IPTC DigitalSourceType 之外额外要求的 Merchant 信息流字段。
+> **来源信号（面向消费者）：** **SynthID** 水印和 **C2PA**
+> Content Credentials 正逐渐成为识别 AI 媒体的信号。除非已从当前的 Google 官方来源进行验证，否则应将
+> 产品界面的覆盖范围视为可能发生变化。
+> 这属于检测/透明度要求，**不是**除 IPTC DigitalSourceType 之外额外要求的 Merchant Feed 字段。
 
-> **可授权图片：**要获得 Licensable 徽章，请提供**结构化数据**（包含 `license` 属性和用于“获取此图片”链接的 `acquireLicensePage` 的 `ImageObject`）**或**嵌入式 IPTC 图片元数据（许可方 URL / Web Statement of Rights）。为 `ImageObject` 标记交叉关联 `seo-schema`。
->
-> **发现说明：**图片发现现在包含跨 Lens / AI Mode / Circle to Search 的**视觉搜索扩展**（Gemini 多模态场景/对象理解），因此图片会通过场景、对象和材质展现，而不仅仅依靠 alt 文本。暂时还没有新的已发布图片 SEO 手段；请继续使用描述性 alt 文本和整洁的结构化数据。
+> **可授权图片：**要获得“可授权”徽章，请提供以下任一项：结构化
+> 数据（包含 `license` 属性和用于“获取此图片”链接的
+> `acquireLicensePage` 的 `ImageObject`），或嵌入的 IPTC 图片元数据（许可方 URL / Web
+> 权利声明）。为 `ImageObject` 标记交叉引用 `seo-schema`。
+
+> **发现说明：**图片发现现在包含跨 Lens / AI Mode / Circle to Search 的**视觉搜索扩展**
+> （Gemini 多模态场景/对象理解），因此图片可以通过场景、对象和材质被发现，而不仅仅依靠 alt
+> 文本。目前还没有新的已发布图片 SEO 方法；请继续使用描述性 alt 文本 +
+> 简洁的结构化数据。
 
 运行 `/seo images optimize` 处理 AI 生成的资源时，请提示用户确认来源类型，并自动注入匹配的 IPTC 值。
 
-对于 **AI 生成的产品标题和描述**，Google Merchant Center 还要求在 feed 中单独指定并标记 AI 生成的文本。这项要求在 feed 层执行，而不是页面层执行，请在交叉引用 `seo-ecommerce` 时标记这一点。
+对于 **AI 生成的商品标题和描述**，Google Merchant Center 还要求在 feed 中单独指定并标记 AI 生成的文本。这项要求在 feed 层而非页面层执行，请在与 `seo-ecommerce` 的交叉引用中标记这一点。
 
 ### 元数据审计
 
 ```bash
-# Quick audit with exiftool
+# 使用 exiftool 快速审计
 exiftool -IPTC:all -XMP:all -EXIF:ImageDescription image.jpg
 
-# Batch audit - find images missing IPTC Creator
+# 批量审计 - 查找缺少 IPTC Creator 的图片
 exiftool -if 'not $IPTC:By-line' -filename *.jpg *.webp *.png
 ```
 
 ### 完整优化流程
 
-要实现最大程度的图片 SEO，请对每张图片运行以下流程：
+要实现最大化的图片 SEO，请对每张图片运行以下流程：
 
 1. **审计现有元数据**：`exiftool -IPTC:all -XMP:all image.jpg`
 2. **注入 IPTC/XMP 元数据**：Creator、Copyright、Description
@@ -385,7 +393,7 @@ exiftool -if 'not $IPTC:By-line' -filename *.jpg *.webp *.png
 5. **验证元数据是否保留**：`exiftool image.webp`
 6. **生成 `<picture>` HTML**：AVIF > WebP > JPEG 回退链
 
-### 对 Google 图片而言重要与不重要的因素
+### Google 图片重视与不重视的因素
 
 | 因素 | 影响 | 设置位置 |
 |--------|--------|--------------|
@@ -393,7 +401,7 @@ exiftool -if 'not $IPTC:By-line' -filename *.jpg *.webp *.png
 | 文件名 | **高**（排名） | 文件系统（描述性、使用连字符） |
 | 页面上下文 | **高**（排名） | 周围的 HTML 内容 |
 | 文件大小/速度 | **中等**（通过 CWV 间接影响） | 压缩 + 格式转换 |
-| IPTC Creator/Copyright | **低**（仅用于展示） | 图片文件元数据 |
+| IPTC Creator/Copyright | **低**（仅用于显示） | 图片文件元数据 |
 | EXIF 相机数据 | 无 | 与 SEO 无关 |
 | IPTC 关键词 | 无 | Google 会忽略这些 |
 
@@ -403,9 +411,9 @@ exiftool -if 'not $IPTC:By-line' -filename *.jpg *.webp *.png
 
 | 场景 | 操作 |
 |----------|--------|
-| URL 无法访问 | 报告包含状态码的连接错误。建议验证 URL，并检查网站是否需要身份验证。 |
-| 页面上未找到图片 | 报告未检测到任何 `<img>` 元素。建议检查图片是否通过 JavaScript 或 CSS background-image 加载。 |
-| 图片位于 CDN 后或需要身份验证 | 说明无法直接访问图片文件以分析大小。报告可用的元数据（来自标记的 alt 文本、尺寸、格式），并标记无法访问的资源。 |
-| 未安装 exiftool | 使用 ImageMagick 作为元数据处理的后备方案。建议：`sudo apt install libimage-exiftool-perl` |
-| 未安装 cwebp | 使用 ImageMagick 或 FFmpeg 作为 WebP 转换的后备方案。建议：`sudo apt install webp` |
-| DataForSEO MCP 不可用 | 跳过 Image SERP Analysis 部分。注明未安装该扩展。 |
+| URL 无法访问 | 报告包含状态代码的连接错误。建议验证 URL，并检查网站是否需要身份验证。 |
+| 页面上未找到图片 | 报告未检测到 `<img>` 元素。建议检查图片是否通过 JavaScript 或 CSS background-image 加载。 |
+| 图片位于 CDN 后或需要身份验证 | 说明无法直接访问图片文件来分析大小。报告可用的元数据（来自标记的 alt 文本、尺寸、格式），并标记无法访问的资源。 |
+| 未安装 exiftool | 使用 ImageMagick 作为元数据处理的回退方案。建议：`sudo apt install libimage-exiftool-perl` |
+| 未安装 cwebp | 使用 ImageMagick 或 FFmpeg 作为 WebP 转换的回退方案。建议：`sudo apt install webp` |
+| DataForSEO MCP 不可用 | 跳过 Image SERP Analysis 部分。说明未安装该扩展。 |

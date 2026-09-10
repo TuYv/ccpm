@@ -31,7 +31,7 @@ Choose the appropriate tool based on availability in your runtime environment:
 ### 1. Developer Knowledge MCP Tools (Preferred)
 When MCP tools are present in your active tool definitions:
 - **`answer_query(query="...")`**: Use for conceptual guides, architectural comparisons, product choice overviews, and multi-step workflows.
-- **`search_documents(query="...", page_size=5)`**: Use for granular CLI flags, exact syntax, parameter names, and IAM permissions (`service.resource.verb`). Use 2–5 focused keywords (e.g., `cloud run filestore nfs mount gcloud`) rather than full conversational sentences.
+- **`search_documents(query="...")`**: Use for granular CLI flags, exact syntax, parameter names, and IAM permissions (`service.resource.verb`). Use 2–5 focused keywords (e.g., `cloud run filestore nfs mount gcloud`) rather than full conversational sentences.
 - **`get_documents(names=["documents/{uri_without_scheme}"])`**: Fetch full documentation pages by resource name (e.g. `names: ["documents/docs.cloud.google.com/run/docs/overview/what-is-cloud-run"]`).
 
 ### 2. REST API Fallback

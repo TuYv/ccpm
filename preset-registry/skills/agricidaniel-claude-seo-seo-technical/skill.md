@@ -10,7 +10,7 @@ argument-hint: "[url]"
 license: MIT
 metadata:
   author: AgriciDaniel
-  version: "2.2.6"
+  version: "2.3.1"
   category: seo
 ---
 
@@ -43,17 +43,32 @@ As of 2025-2026, AI companies actively crawl the web to train models and power A
 
 | Crawler | Company | robots.txt token | Purpose |
 |---------|---------|-----------------|---------|
-| GPTBot | OpenAI | `GPTBot` | Model training |
-| ChatGPT-User | OpenAI | `ChatGPT-User` | Real-time browsing |
-| ClaudeBot | Anthropic | `ClaudeBot` | Model training |
+| GPTBot | OpenAI | `GPTBot` | Model training (NOT ChatGPT Search) |
+| OAI-SearchBot | OpenAI | `OAI-SearchBot` | ChatGPT Search citability |
+| ChatGPT-User | OpenAI | `ChatGPT-User` | Real-time browsing (user-triggered) |
+| ClaudeBot | Anthropic | `ClaudeBot` | Model training (NOT Claude search citability) |
+| Claude-SearchBot | Anthropic | `Claude-SearchBot` | Claude search-result citability |
 | PerplexityBot | Perplexity | `PerplexityBot` | Search index + training |
 | Bytespider | ByteDance | `Bytespider` | Model training |
 | Google-Extended | Google | `Google-Extended` | Gemini training (NOT search) |
+| Applebot-Extended | Apple | `Applebot-Extended` | Apple Intelligence training opt-out (NOT Siri/Spotlight/Safari) |
 | CCBot | Common Crawl | `CCBot` | Open dataset |
 
 **Key distinctions:**
 - Blocking `Google-Extended` prevents Gemini training use but does NOT affect Google Search indexing or AI Overviews (those use `Googlebot`)
-- Blocking `GPTBot` prevents OpenAI training but does NOT prevent ChatGPT from citing your content via browsing (`ChatGPT-User`)
+- Blocking `GPTBot` prevents OpenAI training but does NOT affect ChatGPT Search
+  citability, which is governed by `OAI-SearchBot`, nor user-triggered browsing
+  (`ChatGPT-User`). Check `OAI-SearchBot` for any citability claim; `GPTBot`
+  status is evidence about training use only
+- Blocking `ClaudeBot` prevents Anthropic model training but does NOT affect
+  citability in Claude's own search features, which is governed by
+  `Claude-SearchBot` (per Anthropic's crawler support article). Check
+  `Claude-SearchBot` for any Claude-search citability claim; `ClaudeBot` status
+  is evidence about training use only
+- Blocking `Applebot-Extended` opts out of Apple Intelligence / generative-model
+  training use but does NOT affect discoverability via Siri, Spotlight, or Safari,
+  which follows `Applebot` (per Apple's support article); `Applebot-Extended` does
+  not itself crawl
 - ~3-5% of websites now use AI-specific robots.txt rules
 
 **Example, selective AI crawler blocking:**
@@ -236,6 +251,30 @@ If DataForSEO MCP tools are available, use `on_page_instant_pages` for real page
 ## Google API Integration (Optional)
 
 If Google API credentials are configured, use `"${CLAUDE_PLUGIN_ROOT}/scripts/claude-seo" run pagespeed_check.py <url> --json` for real PSI + CrUX field data (replaces lab-only CWV estimates), `"${CLAUDE_PLUGIN_ROOT}/scripts/claude-seo" run crux_history.py <url> --json` for 25-week CWV trends, and `"${CLAUDE_PLUGIN_ROOT}/scripts/claude-seo" run gsc_inspect.py <url> --json` for real indexation status per URL.
+
+## Auditing a Local or Private Host
+
+`url_safety` refuses loopback and private addresses by default, so `http://localhost:3000` and a staging host on Tailscale fail with "Blocked hostname" or "Blocked IP literal". That default is deliberate: these scripts follow URLs found on the pages they crawl.
+
+To audit a pre-deployment host, the operator names it in `CLAUDE_SEO_LOCAL_TARGETS`, a comma-separated list of `host` or `host:port` entries:
+
+```bash
+CLAUDE_SEO_LOCAL_TARGETS="localhost:3000,127.0.0.1:8080,100.101.102.103" \
+  "${CLAUDE_PLUGIN_ROOT}/scripts/claude-seo" run fetch_page.py http://localhost:3000/
+```
+
+What it does and does not cover:
+
+| Behaviour | Allowlisted host |
+|-----------|------------------|
+| First, top-level URL over raw HTTP | Allowed |
+| Redirect target reached from that URL | Refused |
+| Subresource fetched by a rendered page | Refused |
+| Playwright renders (`--render`, screenshots) | Refused; use the raw-HTTP path |
+| A host not named in the variable | Refused |
+| Cloud metadata endpoints, even when listed | Refused |
+
+`host:port` matches that port only; a bare `host` matches any port. With the variable unset the policy is unchanged. Never suggest setting it for a host the user does not control. See SECURITY.md.
 
 ## Error Handling
 
