@@ -1,12 +1,14 @@
 ---
 name: vibe-build
-description: Implement an approved new-project slice and report actual checks. For changes to an existing app use vibe-change.
+description: "Implement a new-project slice through the relevant checks and working user journey."
 allowed-tools: Read, Write, Edit, Glob, Grep, Bash, AskUserQuestion
 ---
-# Vibe 构建
+# 构建新项目切片
 
-阅读 AGENTS.md、MEMORY.md、manifest 的产品文档以及相关的 agent_docs。为一个可用切片建立验收标准，并在现有授权范围内实现。保留未提交的工作，并在进行高风险更改前记录实际的恢复检查点；绝不伪造提交或备份。
+根据用户的简述和相关项目决策，明确所需成果和验收标准。阅读适用的仓库说明，以及完成此切片所需的文档。缺少或过时的 MEMORY.md 不要求重建整个规划流程。
 
-从一个可运行的屏幕或等效的可观察输出开始。只有在需求确有必要时，才添加身份验证、数据库、基础设施和 AI。查看命令后运行项目适用的检查；doctor 仅用于设置验证。使用 `../vibe-verify/SKILL.md` 执行实际操作流程。对于 AI 功能，还要在适用时检查失败行为、数据边界和权限拒绝。
+使用选定的技术栈实现预期行为。保留无关的现有工作，并在变更需要时创建恢复检查点。仅在需求有充分依据时添加账户、数据库、基础设施、付费服务和 AI。持续推进，直到所请求的切片能够正常工作，而不只是文件已经存在。
 
-在 MEMORY.md 中更新当前进度和后续步骤；稳定规则保留在 AGENTS.md 中。报告 Changed、Checked（包含命令和结果）、Not checked、Next decision 和 Recovery。不要将构建通过视为行为正常运行的证明。
+使用项目中受影响的检查项，并在运行环境允许时实际执行相关的用户流程。修复由此次变更导致的失败，区分预先存在的失败，并复用仍然有效的结果。仅有设置验证器通过或构建成功，不足以证明交互行为正常。
+
+当仓库维护项目进度时，更新项目进度。报告结果、实际执行的检查、未经验证的行为，以及任何具体的阻塞因素或恢复说明。外部发送、生产环境变更、商店提交和部署，仍需针对其具体影响和目标获得授权。

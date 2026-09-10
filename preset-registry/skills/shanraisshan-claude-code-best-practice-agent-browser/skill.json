@@ -1,0 +1,26 @@
+{
+  "id": "shanraisshan-claude-code-best-practice-agent-browser",
+  "name": "agent-browser",
+  "description": "Browser automation CLI for AI agents. Use when the user needs to interact with websites, including navigating pages, filling forms, clicking buttons, taking screenshots, extracting data, testing web apps, or automating any browser task. Triggers include requests to \"open a website\", \"fill out a form\", \"click a button\", \"take a screenshot\", \"scrape data from a page\", \"test this web app\", \"login to a site\", \"automate browser actions\", or any task requiring programmatic web interaction.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "shanraisshan",
+  "install_path": ".claude/skills/agent-browser/SKILL.md",
+  "source": {
+    "repo": "shanraisshan/claude-code-best-practice",
+    "url": "https://github.com/shanraisshan/claude-code-best-practice/blob/main/.claude/skills/agent-browser/SKILL.md",
+    "path": ".claude/skills/agent-browser/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-10T15:33:12.572Z",
+    "stars": 65825,
+    "language": "HTML",
+    "pushed_at": "2026-09-10T06:37:47Z",
+    "license": "MIT"
+  },
+  "summary_zh": "面向 AI 智能体的浏览器自动化命令行工具，适合打开网页、填写表单、点击操作、截图、提取数据及测试 Web 应用。"
+}

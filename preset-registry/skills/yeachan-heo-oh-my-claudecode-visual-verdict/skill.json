@@ -1,0 +1,26 @@
+{
+  "id": "yeachan-heo-oh-my-claudecode-visual-verdict",
+  "name": "visual-verdict",
+  "description": "Structured visual QA verdict for screenshot-to-reference comparisons",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Yeachan-Heo",
+  "install_path": ".claude/skills/visual-verdict/SKILL.md",
+  "source": {
+    "repo": "Yeachan-Heo/oh-my-claudecode",
+    "url": "https://github.com/Yeachan-Heo/oh-my-claudecode/blob/main/skills/visual-verdict/SKILL.md",
+    "path": "skills/visual-verdict/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-10T14:45:19.508Z",
+    "stars": 39085,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-09T21:16:35Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于对比截图与参考图并生成结构化视觉质检结论，适合自动化验收界面还原效果。"
+}

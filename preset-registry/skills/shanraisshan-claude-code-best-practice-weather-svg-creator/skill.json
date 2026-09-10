@@ -1,0 +1,26 @@
+{
+  "id": "shanraisshan-claude-code-best-practice-weather-svg-creator",
+  "name": "weather-svg-creator",
+  "description": "Creates an SVG weather card showing the current temperature for Dubai. Writes the SVG to orchestration-workflow/weather.svg and updates orchestration-workflow/output.md.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "shanraisshan",
+  "install_path": ".claude/skills/weather-svg-creator/SKILL.md",
+  "source": {
+    "repo": "shanraisshan/claude-code-best-practice",
+    "url": "https://github.com/shanraisshan/claude-code-best-practice/blob/main/.claude/skills/weather-svg-creator/SKILL.md",
+    "path": ".claude/skills/weather-svg-creator/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-10T15:33:13.723Z",
+    "stars": 65825,
+    "language": "HTML",
+    "pushed_at": "2026-09-10T06:37:47Z",
+    "license": "MIT"
+  },
+  "summary_zh": "生成迪拜当前气温天气卡片的 SVG 文件，并同步更新工作流中的输出说明，适合用于天气信息展示或自动化流程。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "shanraisshan-claude-code-best-practice-time-skill",
+  "name": "time-skill",
+  "description": "Display the current time in Pakistan Standard Time (PKT, UTC+5). Use when the user asks for the current time, Pakistan time, or PKT.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "shanraisshan",
+  "install_path": ".claude/skills/time-skill/SKILL.md",
+  "source": {
+    "repo": "shanraisshan/claude-code-best-practice",
+    "url": "https://github.com/shanraisshan/claude-code-best-practice/blob/main/.claude/skills/time-skill/SKILL.md",
+    "path": ".claude/skills/time-skill/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-10T15:33:13.273Z",
+    "stars": 65825,
+    "language": "HTML",
+    "pushed_at": "2026-09-10T06:37:47Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于显示巴基斯坦标准时间（PKT，UTC+5），适合查询当前的巴基斯坦时间。"
+}

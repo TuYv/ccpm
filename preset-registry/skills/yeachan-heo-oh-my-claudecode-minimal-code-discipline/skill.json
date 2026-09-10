@@ -1,0 +1,26 @@
+{
+  "id": "yeachan-heo-oh-my-claudecode-minimal-code-discipline",
+  "name": "minimal-code-discipline",
+  "description": "YAGNI-ladder coding discipline for writing changes — existence-first, reuse before writing, dependency ladder, shortest correct diff, with non-negotiables that must never be minimized away",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Yeachan-Heo",
+  "install_path": ".claude/skills/minimal-code-discipline/SKILL.md",
+  "source": {
+    "repo": "Yeachan-Heo/oh-my-claudecode",
+    "url": "https://github.com/Yeachan-Heo/oh-my-claudecode/blob/main/skills/minimal-code-discipline/SKILL.md",
+    "path": "skills/minimal-code-discipline/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-10T14:45:16.047Z",
+    "stars": 39085,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-09T21:16:35Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一套以 YAGNI 为核心的代码变更规范，帮助开发者用最小且可靠的修改解决问题，避免过度设计和无谓依赖。"
+}

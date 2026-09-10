@@ -1,0 +1,26 @@
+{
+  "id": "luongnv89-claude-howto-code-review-specialist",
+  "name": "code-review-specialist",
+  "description": "提供全面的代码审查能力，覆盖安全、性能和代码质量分析。适用于用户请求代码审查、代码质量评估、Pull Request 审查，或提到安全分析和性能优化时。",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "luongnv89",
+  "install_path": ".claude/skills/code-review-specialist/SKILL.md",
+  "source": {
+    "repo": "luongnv89/claude-howto",
+    "url": "https://github.com/luongnv89/claude-howto/blob/main/zh/03-skills/code-review-specialist/SKILL.md",
+    "path": "zh/03-skills/code-review-specialist/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-10T15:33:20.596Z",
+    "stars": 41425,
+    "language": "Python",
+    "pushed_at": "2026-09-06T09:04:15Z",
+    "license": "MIT"
+  },
+  "summary_zh": "专注于代码审查与质量评估，帮助发现安全隐患、性能瓶颈和代码问题，适合审查代码、Pull Request 及优化方案。"
+}

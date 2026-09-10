@@ -1,0 +1,26 @@
+{
+  "id": "yeachan-heo-oh-my-claudecode-graph",
+  "name": "graph",
+  "description": "Deterministic orchestration graph runtime - declarative DAG pipelines with journal-based crash recovery",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Yeachan-Heo",
+  "install_path": ".claude/skills/graph/SKILL.md",
+  "source": {
+    "repo": "Yeachan-Heo/oh-my-claudecode",
+    "url": "https://github.com/Yeachan-Heo/oh-my-claudecode/blob/main/skills/graph/SKILL.md",
+    "path": "skills/graph/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-10T14:45:15.245Z",
+    "stars": 39085,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-09T21:16:35Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一个确定性编排运行时，用于构建可声明的 DAG 流程，并通过日志恢复机制应对崩溃，适合可靠执行复杂任务。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "luongnv89-claude-howto-claude-md",
+  "name": "claude-md",
+  "description": "按最佳实践创建或更新 CLAUDE.md 文件，以便为 AI agent 提供最优的项目入门上下文",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "luongnv89",
+  "install_path": ".claude/skills/claude-md/SKILL.md",
+  "source": {
+    "repo": "luongnv89/claude-howto",
+    "url": "https://github.com/luongnv89/claude-howto/blob/main/zh/03-skills/claude-md/SKILL.md",
+    "path": "zh/03-skills/claude-md/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-10T15:33:20.416Z",
+    "stars": 41425,
+    "language": "Python",
+    "pushed_at": "2026-09-06T09:04:15Z",
+    "license": "MIT"
+  },
+  "summary_zh": "帮助按最佳实践创建或更新 CLAUDE.md，为 AI 编程代理提供清晰、完整的项目上下文，提升代码协作效率。"
+}

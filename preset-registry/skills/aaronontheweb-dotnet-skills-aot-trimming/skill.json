@@ -1,0 +1,26 @@
+{
+  "id": "aaronontheweb-dotnet-skills-aot-trimming",
+  "name": "aot-trimming",
+  "description": "Guidelines for making .NET libraries and applications trimming-safe and Native AOT compatible. Covers the trimming/AOT model, the MSBuild properties that enable analysis (IsTrimmable, IsAotCompatible, PublishTrimmed, PublishAot), the trimming attributes (RequiresUnreferencedCode, RequiresDynamicCode, DynamicallyAccessedMembers, UnconditionalSuppressMessage), IL2xxx/IL3xxx warning codes, and a pattern playbook: source generators and UnsafeAccessor, generated-interception diagnostic suppressors, i",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "Aaronontheweb",
+  "install_path": ".claude/skills/aot-trimming/SKILL.md",
+  "source": {
+    "repo": "Aaronontheweb/dotnet-skills",
+    "url": "https://github.com/Aaronontheweb/dotnet-skills/blob/master/skills/aot-trimming/SKILL.md",
+    "path": "skills/aot-trimming/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-09-10T15:29:09.700Z",
+    "stars": 1148,
+    "language": "Shell",
+    "pushed_at": "2026-09-10T14:08:20Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一份帮助 .NET 库和应用适配裁剪与 Native AOT 的指南，涵盖分析配置、警告处理、标注方式及源码生成等实用方案。"
+}

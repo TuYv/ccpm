@@ -1,0 +1,26 @@
+{
+  "id": "yeachan-heo-oh-my-claudecode-cancel",
+  "name": "cancel",
+  "description": "Cancel any active OMC mode (autopilot, ralph, ultragoal, swarm, ultrapilot, pipeline, team) and clean up retired legacy state",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Yeachan-Heo",
+  "install_path": ".claude/skills/cancel/SKILL.md",
+  "source": {
+    "repo": "Yeachan-Heo/oh-my-claudecode",
+    "url": "https://github.com/Yeachan-Heo/oh-my-claudecode/blob/main/skills/cancel/SKILL.md",
+    "path": "skills/cancel/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-10T14:45:13.536Z",
+    "stars": 39085,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-09T21:16:35Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于一键取消正在运行的自动化协作模式，并清理已废弃的旧状态，避免任务残留或模式冲突。"
+}

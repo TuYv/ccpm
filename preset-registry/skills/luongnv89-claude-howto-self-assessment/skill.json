@@ -1,0 +1,26 @@
+{
+  "id": "luongnv89-claude-howto-self-assessment",
+  "name": "self-assessment",
+  "description": "Comprehensive Claude Code self-assessment and learning path advisor. Runs a multi-category quiz covering 10 feature areas, produces a detailed skill profile with per-topic scores, identifies specific gaps, and generates a personalized learning path with prioritized next steps. Use when asked to \"assess my level\", \"take the quiz\", \"find my level\", \"where should I start\", \"what should I learn next\", \"check my skills\", \"skill check\", or \"level up\".",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "2.5.0",
+  "author": "luongnv89",
+  "install_path": ".claude/skills/self-assessment/SKILL.md",
+  "source": {
+    "repo": "luongnv89/claude-howto",
+    "url": "https://github.com/luongnv89/claude-howto/blob/main/.claude/skills/self-assessment/SKILL.md",
+    "path": ".claude/skills/self-assessment/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-10T15:33:15.105Z",
+    "stars": 41425,
+    "language": "Python",
+    "pushed_at": "2026-09-06T09:04:15Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于评估 Claude Code 使用水平的综合测评工具，通过多领域测验找出技能薄弱点，并生成个性化、按优先级排序的学习路径。"
+}

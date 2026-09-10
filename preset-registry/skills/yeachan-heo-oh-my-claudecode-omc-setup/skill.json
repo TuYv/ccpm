@@ -1,0 +1,26 @@
+{
+  "id": "yeachan-heo-oh-my-claudecode-omc-setup",
+  "name": "omc-setup",
+  "description": "Install or refresh oh-my-claudecode for plugin, npm, and local-dev setups from the canonical setup flow",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Yeachan-Heo",
+  "install_path": ".claude/skills/omc-setup/SKILL.md",
+  "source": {
+    "repo": "Yeachan-Heo/oh-my-claudecode",
+    "url": "https://github.com/Yeachan-Heo/oh-my-claudecode/blob/main/skills/omc-setup/SKILL.md",
+    "path": "skills/omc-setup/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-10T14:45:16.333Z",
+    "stars": 39085,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-09T21:16:35Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于按官方标准流程安装或更新 oh-my-claudecode，适合插件、npm 包及本地开发环境的快速配置。"
+}

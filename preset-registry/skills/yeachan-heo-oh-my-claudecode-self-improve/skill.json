@@ -1,0 +1,26 @@
+{
+  "id": "yeachan-heo-oh-my-claudecode-self-improve",
+  "name": "self-improve",
+  "description": "Autonomous evolutionary code improvement engine with tournament selection",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Yeachan-Heo",
+  "install_path": ".claude/skills/self-improve/SKILL.md",
+  "source": {
+    "repo": "Yeachan-Heo/oh-my-claudecode",
+    "url": "https://github.com/Yeachan-Heo/oh-my-claudecode/blob/main/skills/self-improve/SKILL.md",
+    "path": "skills/self-improve/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-10T14:45:18.173Z",
+    "stars": 39085,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-09T21:16:35Z",
+    "license": "MIT"
+  },
+  "summary_zh": "通过自动生成、评估并筛选代码改动，持续进化和优化程序，适合探索高效算法与自动改进代码。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "shanraisshan-claude-code-best-practice-time-svg-creator",
+  "name": "time-svg-creator",
+  "description": "Creates an SVG time card showing the current time for Dubai. Writes the SVG to agent-teams/output/dubai-time.svg and updates agent-teams/output/output.md.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "shanraisshan",
+  "install_path": ".claude/skills/time-svg-creator/SKILL.md",
+  "source": {
+    "repo": "shanraisshan/claude-code-best-practice",
+    "url": "https://github.com/shanraisshan/claude-code-best-practice/blob/main/agent-teams/.claude/skills/time-svg-creator/SKILL.md",
+    "path": "agent-teams/.claude/skills/time-svg-creator/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-10T15:33:14.069Z",
+    "stars": 65825,
+    "language": "HTML",
+    "pushed_at": "2026-09-10T06:37:47Z",
+    "license": "MIT"
+  },
+  "summary_zh": "生成迪拜当前时间的 SVG 时间卡，并同步写入指定输出文件，适合自动化任务中展示或记录实时当地时间。"
+}

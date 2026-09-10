@@ -1,0 +1,26 @@
+{
+  "id": "luongnv89-claude-howto-blog-draft",
+  "name": "blog-draft",
+  "description": "根据想法和资料撰写博客草稿。适用于用户想写博客、基于研究创建内容，或起草文章的场景。流程会引导你完成调研、头脑风暴、提纲编写和带版本控制的迭代撰写。",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "luongnv89",
+  "install_path": ".claude/skills/blog-draft/SKILL.md",
+  "source": {
+    "repo": "luongnv89/claude-howto",
+    "url": "https://github.com/luongnv89/claude-howto/blob/main/zh/03-skills/blog-draft/SKILL.md",
+    "path": "zh/03-skills/blog-draft/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-10T15:33:20.048Z",
+    "stars": 41425,
+    "language": "Python",
+    "pushed_at": "2026-09-06T09:04:15Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一套辅助撰写博客草稿的工作流程，适合从想法和资料出发，完成调研、构思、列提纲及版本化迭代写作。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "yeachan-heo-oh-my-claudecode-execute",
+  "name": "execute",
+  "description": "Carry an approved task through to working, verified code",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Yeachan-Heo",
+  "install_path": ".claude/skills/execute/SKILL.md",
+  "source": {
+    "repo": "Yeachan-Heo/oh-my-claudecode",
+    "url": "https://github.com/Yeachan-Heo/oh-my-claudecode/blob/main/skills/execute/SKILL.md",
+    "path": "skills/execute/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-10T14:45:14.821Z",
+    "stars": 39085,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-09T21:16:35Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于把已批准的任务落实为可运行、经过验证的代码，适合规范化执行开发任务。"
+}

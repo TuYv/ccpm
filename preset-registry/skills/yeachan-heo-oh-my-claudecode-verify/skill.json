@@ -1,0 +1,26 @@
+{
+  "id": "yeachan-heo-oh-my-claudecode-verify",
+  "name": "verify",
+  "description": "Verify that a change really works before you claim completion",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Yeachan-Heo",
+  "install_path": ".claude/skills/verify/SKILL.md",
+  "source": {
+    "repo": "Yeachan-Heo/oh-my-claudecode",
+    "url": "https://github.com/Yeachan-Heo/oh-my-claudecode/blob/main/skills/verify/SKILL.md",
+    "path": "skills/verify/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-10T14:45:19.312Z",
+    "stars": 39085,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-09T21:16:35Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于在声称任务完成前验证改动是否真正生效，适合软件开发中的测试、检查和结果确认。"
+}

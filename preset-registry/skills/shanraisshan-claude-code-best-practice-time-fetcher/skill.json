@@ -1,0 +1,26 @@
+{
+  "id": "shanraisshan-claude-code-best-practice-time-fetcher",
+  "name": "time-fetcher",
+  "description": "Instructions for fetching current Dubai time via bash command",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "shanraisshan",
+  "install_path": ".claude/skills/time-fetcher/SKILL.md",
+  "source": {
+    "repo": "shanraisshan/claude-code-best-practice",
+    "url": "https://github.com/shanraisshan/claude-code-best-practice/blob/main/agent-teams/.claude/skills/time-fetcher/SKILL.md",
+    "path": "agent-teams/.claude/skills/time-fetcher/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-10T15:33:13.915Z",
+    "stars": 65825,
+    "language": "HTML",
+    "pushed_at": "2026-09-10T06:37:47Z",
+    "license": "MIT"
+  },
+  "summary_zh": "提供通过 Bash 命令获取迪拜当前时间的操作指南，适合脚本和终端中快速查询当地时间。"
+}

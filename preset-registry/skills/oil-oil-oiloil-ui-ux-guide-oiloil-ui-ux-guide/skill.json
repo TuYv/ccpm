@@ -1,7 +1,7 @@
 {
   "id": "oil-oil-oiloil-ui-ux-guide-oiloil-ui-ux-guide",
   "name": "oiloil-ui-ux-guide",
-  "description": "Run a structured UI/UX consultation to either (a) co-design a project-specific design system and emit `design-spec.md`, (b) review an existing UI with prioritized fixes, or (c) emit compact do/don't rules for a surface. Triggers when the user wants to define / build / refine a design system or design tokens, asks for a design spec, asks for a full UI review of a screen / mockup / PR, or wants design rules for a surface type. Do NOT trigger for narrow one-off questions (\"is this color OK?\", \"shou",
+  "description": "梳理项目 UI/UX 设计规范并输出 design-spec.md，评审现有界面并给出按优先级排序的修复建议，或整理指定界面的设计规则。用户要求设计系统、设计规范或完整界面评审时使用；单个颜色、字号或按钮大小的简单问题直接回答。",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/oil-oil/oiloil-ui-ux-guide/blob/main/skills/oiloil-ui-ux-guide/SKILL.md",
     "path": "skills/oiloil-ui-ux-guide/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-10T10:52:00.952Z",
+    "discovered_at": "2026-09-10T15:36:57.677Z",
     "stars": 93,
     "language": "HTML",
-    "pushed_at": "2026-04-18T14:37:24Z",
+    "pushed_at": "2026-09-10T12:48:14Z",
     "license": "Apache-2.0"
-  },
-  "summary_zh": "这是一个结构化的界面设计咨询工具，能帮你从零搭建项目设计系统并输出规范，或全面审查现有界面给出优化建议。当你需要构建、完善设计系统，或对界面做全面审查时非常适用。"
+  }
 }

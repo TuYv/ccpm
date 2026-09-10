@@ -2,29 +2,28 @@
 name: talking-head-recut
 description: Package an existing talking-head / interview / podcast video with timed, designed GRAPHIC OVERLAY cards — kinetic titles, lower-thirds, data callouts, quotes, side panels, picture-in-picture — synced to the transcript, on a 16:9 / 9:16 / 4:5 canvas of your choice; the clip plays untouched underneath. Trigger on "graphic overlays", "on-screen graphics", "package / dress up my video". Not plain subtitles (/embedded-captions). Unclear → /hyperframes.
 ---
-> **首先，请确保此技能为最新版本——运行前先征得用户确认：** `npx hyperframes skills update talking-head-recut`。如果所有内容均为最新状态，该命令会快速执行而不做任何更改；否则，它会刷新此技能及其依赖的核心领域技能，之后你再使用它们。
+> **首先，保持此 skill 为最新状态 — 运行前请先向用户确认：** `npx hyperframes skills update talking-head-recut`。如果一切都是最新的，该命令会快速空操作；否则，它会在你依赖这些 skill 之前，同时刷新此 skill 及其依赖的核心领域 skill。
 
-# 口播视频再剪辑
+# Talking Head Recut
 
-口播视频再剪辑接收一个会**完整播放**的本地视频，并在其上叠加一系列经过定时和设计的**图形卡片**——标题、下三分之一字幕条、数据标注、引语、侧边栏、画中画——与所讲内容同步。智能体负责设计卡片（时间安排 + 内容），并**直接在对话中编写每张卡片的 HTML**，随后将它们组装成一个合成 HTML，并通过 `hyperframes` 渲染为 MP4。这里没有固定的原型列表，也没有规定的卡片结构——叠加内容根据转录文本实际表达的内容自然生成。
+Talking Head Recut 接收一个能够**完整播放**的本地视频，并在其上叠加一系列经过设计、带有时间控制的**图形卡片** — 标题、下三分之一字幕、数据标注、引语、侧边面板、画中画 — 与视频中正在讲述的内容同步。代理负责设计卡片（时间安排 + 内容），并**直接在对话中编写每张卡片的 HTML**，随后组装成单个组合 HTML，并通过 `hyperframes` 将其渲染为 MP4。这里没有固定的原型列表，也没有预设的卡片结构 — 叠加内容会根据转录文本的实际内容自然生成。
 
-> **统一入口是 `/hyperframes`。** 此技能使用**经过设计的图形卡片**（标题、下三分之一字幕条、数据标注、引语、侧边栏、画中画）来包装一个**现有的口播视频片段**，而不是添加普通字幕（将口述内容显示为文本）。**视频片段会原样播放。** 任何其他意图——普通字幕、独立图形、从零制作视频——或存在任何不确定性时 → 请先阅读 `/hyperframes`：意图层负责所有路由决策。
+> **入口是 `/hyperframes`。** 此 skill 将一个**现有的真人出镜视频片段**与**经过设计的图形卡片**（标题、下三分之一字幕、数据标注、引语、侧边面板、画中画）组合起来 — 不是普通字幕（将说出的话以文本形式呈现）。**视频片段会原样播放。** 任何其他意图 — 普通字幕、独立图形、从零开始制作视频 — 或任何不确定情况 → 首先阅读 `/hyperframes`：意图层负责所有路由决策。
 
-> **这是 `embedded-captions` 的图形包装同类技能。** 字幕将_口述内容_
-> 添加为可读字幕；本技能则在播放中的视频上叠加_经过设计的图形_。
-> 普通字幕 → `embedded-captions`。从零制作视频 → 使用创作
-> 工作流（`product-launch-video` / `faceless-explainer` / …）。
+> **`embedded-captions` 的图形包装同类 skill。** 字幕会将_说出的话_
+> 作为可读字幕添加；此 skill 则在播放中的视频上添加_经过设计的图形_。
+> 普通字幕 → `embedded-captions`。从零开始制作视频 → 创建工作流（`product-launch-video` / `faceless-explainer` / …）。
 
-通过 `/hyperframes` 路由时，意图层只确认输入（使用哪个视频片段），并**告知**用户渲染策略问题将延后询问——宽高比、布局、风格组和卡片数量会留到第 7 步，此时可依据已探查的视频素材和转录文本提出建议；意图层中有关运行形式的问题不适用。如果存在 `BRIEF.md`，其中会包含已确认的输入和所有用户备注——请先阅读它。
+通过 `/hyperframes` 路由时，意图层只确认输入内容（哪个视频片段），并将**渲染策略问题公告为延后询问** — 画面比例、布局、样式组和卡片数量保留到第 7 步，此时经过探测的素材和转录文本可以为推荐提供依据；该层的运行形态问题不适用。存在 `BRIEF.md` 时，其中包含已确认的输入和用户备注 — 请先阅读。
 
-工作目录中可检查的中间文件：
+工作目录中的可检查中间文件：
 
 - `metadata.json` — 时长 / 宽度 / 高度 / fps
 - `audio.mp3` — 提取出的音频
-- `transcript.json` — 一个扁平的**词数组** `[{ text, start, end }, …]`（Whisper；没有 `segments`，也没有 `words` 包装层）
-- `storyboard.json` — 轻量级卡片大纲（智能体的计划）
+- `transcript.json` — 扁平的**单词数组** `[{ text, start, end }, …]`（Whisper；没有 `segments`，也没有 `words` 包装层）
+- `storyboard.json` — 轻量级卡片大纲（代理的计划）
 - `public/cards/card-XX.html` — 每张卡片对应一个 HTML 片段
-- `public/index.html` — 最终组装完成的合成页面
+- `public/index.html` — 最终组装的组合内容
 - `output.mp4` — 渲染后的视频
 
 ## CLI 解析
@@ -34,11 +33,10 @@ description: Package an existing talking-head / interview / podcast video with t
 npx hyperframes --help
 ```
 
-此技能完全依赖 **hyperframes** CLI 以及系统中的 `ffmpeg` / `ffprobe` 运行。
-转录通过 `hyperframes transcribe` 使用本地 **Whisper** 完成——无需第三方
-服务、API 密钥或存在速率限制的代理。
+此 skill 完全基于 **hyperframes** CLI 以及系统中的 `ffmpeg` / `ffprobe` 运行。
+转录使用 `hyperframes transcribe` 调用本地 **Whisper** 完成 — 不需要第三方服务、API 密钥或受速率限制的代理。
 
-## 工作流程
+## 工作流
 
 ### 1. 检查环境
 
@@ -48,14 +46,14 @@ npx hyperframes doctor          # ffmpeg, headless browser, render deps
 ls "<SKILL_DIR>/assets/fonts" "<SKILL_DIR>/assets/vendor/gsap.min.js"
 ```
 
-必需：
+必需项：
 
-- `ffmpeg` / `ffprobe`（系统）
-- `<SKILL_DIR>/assets/fonts/*.woff2`、`<SKILL_DIR>/assets/vendor/gsap.min.js`（随此 Skill 捆绑提供，并在步骤 9 中暂存到工作目录）
+- `ffmpeg` / `ffprobe`（系统级）
+- `<SKILL_DIR>/assets/fonts/*.woff2`、`<SKILL_DIR>/assets/vendor/gsap.min.js`（此 skill 内置，在步骤 9 中暂存到工作目录）
 
-转录无需密钥——`hyperframes transcribe` 会在本地运行 Whisper（步骤 4）。
+转录无需密钥 — `hyperframes transcribe` 在本地运行 Whisper（步骤 4）。
 
-在 macOS 上使用 `hyperframes render` 时，强烈建议设置：
+在 macOS 上强烈建议为 `hyperframes render` 设置：
 
 ```bash
 export PRODUCER_BROWSER_GPU_MODE=hardware
@@ -63,7 +61,7 @@ export PRODUCER_BROWSER_GPU_MODE=hardware
 
 ### 2. 创建工作目录
 
-所有产物都存放在 `videos/<project-name>/` 下——与其他视频工作流（`product-launch-video` / `faceless-explainer` / `pr-to-video`）采用相同约定。将当前工作目录保持在工作区根目录；以下所有操作都会写入这一个子目录。
+所有产物都存放在 `videos/<project-name>/` 下 — 这与其他视频工作流（`product-launch-video` / `faceless-explainer` / `pr-to-video`）采用相同的约定。将 cwd 保持在工作区根目录；下面的所有操作都会写入这一个子目录。
 
 ```bash
 VIDEO_PATH="/absolute/path/input.mp4"
@@ -82,7 +80,7 @@ ffprobe -v error -select_streams v:0 \
 ffmpeg -y -i "$VIDEO_PATH" -vn -acodec libmp3lame -q:a 2 "$WORK_DIR/audio.mp3"
 ```
 
-输出：`metadata.json`（读取 `width`/`height`/`duration`；fps = 对 `r_frame_rate` 分数求值，例如 `30000/1001 → 29.97`）+ `audio.mp3`。
+输出：`metadata.json`（读取 `width` / `height` / `duration`；fps = 对 `r_frame_rate` 分数求值，例如 `30000/1001 → 29.97`）以及 `audio.mp3`。
 
 ### 4. 转录
 
@@ -90,21 +88,21 @@ ffmpeg -y -i "$VIDEO_PATH" -vn -acodec libmp3lame -q:a 2 "$WORK_DIR/audio.mp3"
 npx hyperframes transcribe "$WORK_DIR/audio.mp3" -d "$WORK_DIR" --json --model small.en
 ```
 
-本地运行 **Whisper**——无需 API 密钥、无需代理，也没有速率限制。它会在工作目录中写入词级别的 `transcript.json`（单词 `text` + `start` / `end` 时间戳）。读取该文件以获取步骤 6 中用于确定卡片时间的单词/句子时间信息；如果需要片段级内容块，请自行根据标点/停顿将单词组合成句子。
+本地 **Whisper** — 无需 API 密钥、代理或速率限制。它会将逐词级别的 `transcript.json` 写入工作目录（包含单词 `text` 以及 `start` / `end` 时间戳）。读取该文件，获取驱动步骤 6 中卡片时序的单词 / 句子时间；如果需要按片段分组，可自行根据标点 / 停顿将单词分组为句子。
 
-**限制在媒体时长范围内。** Whisper 返回的最后一个单词的 `end` 可能会略微超过实际片段长度——请将每张卡片的 `endSec` 和 `composition.durationSeconds` 限制在 `metadata.json` 中的时长范围内，否则渲染结果会在视频结束后出现一段黑屏。
+**将时间限制在媒体时长内。** Whisper 返回的最后一个单词的 `end` 可能会略微超出实际片段长度 — 将每张卡片的 `endSec` 和 `composition.durationSeconds` 都限制在 `metadata.json` 的时长以内，否则渲染结果会在视频末尾显示黑色尾帧。
 
 ### 5. 修正转录文本
 
-`transcript.json` 是一个**由单词对象组成的扁平数组**——`[{ "text": "...", "start": s, "end": s }, …]`（没有 `segments` 数组，也没有 `words` 包装对象；每个单词对应的键是 **`text`**）。读取该文件并修正明显的 ASR 错误：
+`transcript.json` 是一个**扁平的单词对象数组** — `[{ "text": "...", "start": s, "end": s }, …]`（没有 `segments` 数组，也没有 `words` 包装层；每个单词的键是 **`text`**）。读取并修正明显的 ASR 错误：
 
-- 同音词、产品名称、技术术语、标点
-- 直接修改单词的 `text`；**保留其 `start` / `end`** 时间戳
-- 不存在预先分组的 `segments` 数组——当需要用于确定卡片时间的片段级内容块时，**请自行将单词组合成句子**（在句末标点/停顿处分割）
+- 同音词、产品名称、技术术语、标点符号
+- 直接编辑单词的 `text`；**保留其 `start` / `end`** 时间戳
+- 不存在预先分组的 `segments` 数组 — 当你需要用于卡片时序的片段级内容时，**自行将单词分组为句子**（在终止标点 / 停顿处拆分）
 
-### 6. 起草轻量级故事板（在聊天中）
+### 6. 起草轻量级分镜（在聊天中）
 
-**不涉及 CLI。** 读取 `transcript.json` + `metadata.json` 并直接设计卡片。`storyboard.json` 是供智能体内部使用的规划产物——没有任何 CLI 命令会使用它；它的作用是让你在编写每张卡片的 HTML 之前，清晰地思考时间安排和内容。请保持与以下示例一致的结构，以便同一份大纲能够驱动你在步骤 9 中创作的合成内容：
+**不涉及 CLI。**读取 `transcript.json` + `metadata.json`，直接设计卡片。`storyboard.json` 是 agent 内部的规划产物 — 没有 CLI 命令会读取它；它的作用是帮助你在为每张卡片编写 HTML 之前理清思路。保持其结构与下面的示例一致，这样同一份大纲就能指导你在步骤 9 中编写的 composition：
 
 ```json
 {
@@ -143,62 +141,61 @@ npx hyperframes transcribe "$WORK_DIR/audio.mp3" -d "$WORK_DIR" --json --model s
 }
 ```
 
-**Card 必填字段：**
+**必填 Card 字段：**
 
 | field                   | type                                       | purpose                                                                                               |
 | ----------------------- | ------------------------------------------ | ----------------------------------------------------------------------------------------------------- |
-| `id`                    | string                                     | 用于卡片 HTML 和 GSAP 选择器的稳定 ID                                                                 |
-| `intent`                | string                                     | 自然语言描述；作为卡片合成的输入                                                                      |
-| `startSec` / `endSec`   | number                                     | 以秒为单位的时间（endSec > startSec）                                                                 |
-| `accentIndex`           | 0 \| 1 \| 2 \| 3 \| 4                      | 此卡片使用 5 种主题强调色中的哪一种                                                                   |
-| `zone`                  | enum（见下文）                             | 卡片位于画布上的哪个区域                                                                              |
-| `contentHints`          | object                                     | 自由形式的数据集合；智能体在此放置 kicker/title/detail/data/quote                                     |
-| `archetype`（可选）     | string                                     | 可附加的自由形式标签，用于记录卡片的模式；缺省表示自由形式，这也是默认值                              |
-| `transition`（可选）    | enum: `cut` \| `fade` \| `slide` \| `wipe` | 声明式的卡片间转场                                                                                     |
+| `id`                    | string                                     | 用于卡片 HTML 和 GSAP 选择器的稳定 id                                                                  |
+| `intent`                | string                                     | 自然语言描述；用于卡片合成                                                                           |
+| `startSec` / `endSec`   | number                                     | 以秒为单位的时间（endSec > startSec）                                                                  |
+| `accentIndex`           | 0 \| 1 \| 2 \| 3 \| 4                      | 指定该卡片使用 5 种主题强调色中的哪一种                                                               |
+| `zone`                  | enum (see below)                           | 卡片在画布上的位置                                                                                     |
+| `contentHints`          | object                                     | 自由格式的数据包；代理会将 kicker/title/detail/data/quote 放入其中                                     |
+| `archetype` (optional)  | string                                     | 可附加的自由格式标签，用于记住卡片的模式；缺省时表示自由格式，这是默认设置                           |
+| `transition` (optional) | enum: `cut` \| `fade` \| `slide` \| `wipe` | 声明卡片之间的过渡方式                                                                                 |
 
 **五种 `zone` 值：**
 
-| zone              | 解析后的边界                                   | 使用场景                                |
+| zone              | resolved bounds                                | when to use                             |
 | ----------------- | ---------------------------------------------- | --------------------------------------- |
-| `fullscreen`      | 覆盖整个画布                                   | 主视觉时刻、大数字、箴言                |
-| `whiteboard-area` | 向内缩进 40px 边距（或竖屏高度的 45%）        | 密集数据／带注释的内容                  |
-| `lower-third`     | 底部 30% 区域                                  | 在可见视频上叠加注释                    |
-| `side-panel`      | 右侧 42%（横屏）或底部 40%（竖屏）            | 一侧显示数据，另一侧显示视频            |
-| `video-overlay`   | 整个画布，要求卡片大部分透明                   | 在全出血视频上叠加注释                  |
+| `fullscreen`      | 覆盖整个画布                                     | 主视觉时刻、大数字、箴言                   |
+| `whiteboard-area` | 内缩 40px 的边距（或纵向画布高度的 45%）          | 密集数据 / 带注释的内容                    |
+| `lower-third`     | 底部 30% 的区域                                  | 在可见视频上叠加注释                       |
+| `side-panel`      | 右侧 42%（横向）或底部 40%（纵向）               | 数据侧、视频另一侧                         |
+| `video-overlay`   | 整个画布，要求卡片大部分透明                     | 在全出血视频上叠加注释                     |
 
-在步骤 9 中组装合成内容时，请按照上表将每张卡片的 `zone`
-解析为卡片宿主包装器上的像素边界。视频边界在合成层级设置**一次**
-（`videoTrack.bounds`）；若要让视频看起来像是在“卡片之间移动”，请在
-合成内容的 `<script>` 中为 `#video-wrap` 编写 GSAP 补间动画（参见步骤 9）。
+在第 9 步组装构图时，根据上表将每张卡片的 `zone`
+解析为卡片承载容器上的像素边界。
+视频边界在构图层级通过 `videoTrack.bounds` **设置一次**；
+若要让视频看起来像是在卡片之间“移动”，请在构图的 `<script>` 中针对
+`#video-wrap` 编写 GSAP 补间（参见第 9 步）。
 
-**不规定卡片角色，也不规定叙事弧线。** 卡片应根据视频的实际内容自然形成——
-可以全部是引语，也可以全部是数据；可以用一个数字开场，也可以从一个故事开始。
-让转录文本决定节奏。
+**不规定卡片角色，也不规定叙事弧线。** 卡片源自视频实际表达的内容——可以全部是引语，也可以全部是数据，
+可以用一个数字开场，也可以用一个故事开场。让文字稿决定节奏。
 
-**需要多少条要点？——根据时长 + 信息密度自动推断。** 不设固定
-上限。先根据视频时长选择一个**基础节奏**，然后根据
-**信息密度**进行调整。只有**下限是固定的：最少 5 张卡片**，这样
-即使是短视频也有节奏感。
+**需要多少个要点卡片？——根据时长 + 信息密度自动推断。** 没有固定的
+上限。先根据视频时长选择**基础节奏**，再根据**信息密度**进行调整。唯一固定的是
+**下限：至少 5 张卡片**，这样即使是短视频也能保持节奏感。
 
-**第 1 步——按时长确定基础节奏**（中等信息密度下自然的每张卡片秒数）：
+**步骤 1 —— 根据时长确定基础节奏**（中等密度下每张卡片的自然时长）：
 
-| 视频时长           | 基础节奏（每张卡片秒数） | 理由                                           |
-| ------------------ | ------------------------ | ---------------------------------------------- |
-| < 60s（短视频）    | **6–8s**                 | 观众期待短视频采用快速剪辑                     |
-| 60s – 3 min        | **8–12s**                | 常规社交媒体节奏                               |
-| 3 – 10 min         | **12–20s**               | 留出喘息空间；每张卡片承载更多内容             |
-| 10 – 30 min        | **20–35s**               | 长篇讲座 / 访谈的节奏                          |
-| > 30 min           | **30–60s**               | 分段式、接近章节感的节奏                       |
+| 视频时长             | 基础节奏（每张卡片的秒数） | 理由                                   |
+| ------------------ | ------------------------ | -------------------------------------- |
+| < 60s（短视频） | **6–8s**                 | 观众期待短内容中有更快的切换      |
+| 60s – 3 min        | **8–12s**                | 正常的社交媒体节奏                          |
+| 3 – 10 min         | **12–20s**               | 留出呼吸空间；每张卡片承载更多内容 |
+| 10 – 30 min        | **20–35s**               | 长篇讲座 / 访谈节奏        |
+| > 30 min           | **30–60s**               | 分集式、接近章节的感觉                 |
 
-**第 2 步——信息密度乘数**（与基础节奏相乘）：
+**步骤 2 —— 信息密度乘数**（与基础节奏相乘）：
 
-| 转录文本中的特征                                                                                                    | 乘数       | 效果                     |
-| ------------------------------------------------------------------------------------------------------------------- | ---------- | ------------------------ |
-| **高密度**——数字多、观点鲜明、节奏短促、采用列表式列举，每 1–2 句话就出现一个新想法                                  | **× 0.7**  | 切换更快、卡片更多       |
-| **中等密度**——兼有数据与叙事的混合表达                                                                              | **× 1.0**  | 采用基础节奏             |
-| **低密度**——一个完整的长故事、反复换角度表述、缓慢而沉思的节奏、围绕单一论点逐步展开                                | **× 1.5**  | 切换更慢、卡片更少       |
+| 转录文本中的信号                                                                                                    | 乘数 | 效果                   |
+| --------------------------------------------------------------------------------------------------------------------------- | ---------- | ------------------------ |
+| **高密度**——包含大量数字、明确的论点、短促的节奏、类似列表的枚举，每 1–2 句话就产生一个新观点 | **× 0.7**  | 更快切换，卡片更多  |
+| **中等密度**——数据与叙述交织                                                               | **× 1.0**  | 基础节奏                |
+| **低密度**——一个延展的故事、反复换角度阐释、缓慢的反思节奏、逐步展开的单一论点                 | **× 1.5**  | 更慢切换，卡片更少                   |
 
-**第 3 步——计算：**
+**步骤 3 —— 计算：**
 
 ```
 secPerCard = basePace × densityMultiplier
@@ -207,57 +204,57 @@ cardCount  = max(5, round(videoDurationSec / secPerCard))
 
 示例（注意——**没有上限约束**；长视频自然会产生更多卡片）：
 
-- **30s 短视频，只有一个笑点（低密度）** → 7 × 1.5 = 10.5s/卡片 → round(30/10.5)=3 → 提升至下限 **5** 张卡片
-- **60s 沉思式独白（低密度）** → 10 × 1.5 = 15s/卡片 → **4** → 提升至下限 **5** 张卡片
-- **121s 数据丰富的出镜讲解（高密度）** → 10 × 0.7 = 7s/卡片 → **17** 张卡片
+- **30s 短视频，单个核心笑点（低密度）** → 7 × 1.5 = 10.5s/卡片 → round(30/10.5)=3 → 取下限为 **5** 张卡片
+- **60s 反思式独白（低密度）** → 10 × 1.5 = 15s/卡片 → **4** → 取下限为 **5** 张卡片
+- **121s 信息丰富的出镜讲解（高密度）** → 10 × 0.7 = 7s/卡片 → **17** 张卡片
 - **5 min 访谈，混合密度** → 16 × 1.0 = 16s/卡片 → **19** 张卡片
 - **10 min 深度解析，高密度** → 16 × 0.7 = 11s/卡片 → **55** 张卡片
 - **30 min 讲座，中等密度** → 28 × 1.0 = 28s/卡片 → **64** 张卡片
 - **1 hr 播客，低密度** → 45 × 1.5 = 67.5s/卡片 → **53** 张卡片
 
-当一张卡片的停留时间超过约 15s 时，应规划内容更丰富的卡片（数据块、
-多步骤呈现、多个子要点通过交错动画逐步展开）——静态的一句话内容
-超过 8s 就会变得乏味。对于许多卡片时长超过 30s 的长篇内容，
-可以考虑**将时间线拆分成多个
-子合成**（每章一个 .html，通过
-`data-composition-src` 挂载），使每个文件中的 GSAP 时间线保持易于管理
+当一张卡片的持续时间超过约 15s 时，应规划更丰富的卡片（数据块、
+多步骤展示、通过交错动画逐步展开的多个子要点）——静态的一行文字超过 8s 后会变得
+乏味。对于包含许多超过 30s 的卡片的长内容，可以考虑将时间线拆分成
+子合成（每个章节一个 .html，通过
+`data-composition-src` 挂载），这样每个文件中的 GSAP 时间线更易于管理
 ——请参阅 `timeline_track_too_dense` HyperFrames lint 警告。
 
-`content` 可以是纯字符串（"Title: annualized 5.69%\nNotes: ..."），也可以是任何能够表示数据的 JSON 结构。智能体可为每张卡片自行决定结构。
+`content` 可以是普通字符串（"Title: annualized 5.69%\nNotes: ..."），也可以是能够表达这些数据的任意 JSON
+结构。代理会为每张卡片决定结构。
 
-**可选的片尾。** 此 Skill **不附带固定的品牌片尾**。如果用户希望添加结束卡片，请自行设计一个中性的片尾（文字标志 + 单行标语，约 1.5-2 秒，淡入 -> 短暂停留 -> 淡出），将其追加到 `cards[]`，并将 `composition.durationSeconds` 延长至其 `endSec`。否则，在最后一张内容卡片处结束。
+**可选片尾。** 此技能**不包含固定的品牌片尾**。如果用户需要结束卡片，请自行设计一个中性的片尾（文字标志 + 单行标语，约 1.5-2 秒，淡入 -> 短暂停留 -> 淡出），将其追加到 `cards[]`，并将 `composition.durationSeconds` 延长至其 `endSec`。否则在最后一张内容卡片结束。
 
-### 7. 确定渲染策略
+### 7. 决定渲染策略
 
-#### 与用户确认视觉方向（首先执行此操作）
+#### 先与用户确认视觉方向（首先执行此操作）
 
-在开始设计卡片或确定边界之前，**请用户选择输出比例、布局、风格和卡片密度预设**。帧会根据所选的布局 × 风格组合自动选择（请参阅下方的“自动选择帧”表格）。在发送问题之前，**预先计算以下两项**：
+在开始设计卡片或决定边界之前，**请用户选择输出比例、布局、样式和卡片密度预设**。帧会根据所选的布局 × 样式组合自动选择（参见下方的“自动选择帧”表）。发送问题之前，**预先计算以下两项**：
 
-1. 根据源视频的宽高比（`metadata.json` 的 width / height）计算 **`recommendedRatio`**：
+1. 根据源视频的宽高比（`metadata.json` 中的 width / height）计算 `recommendedRatio`：
    - `sourceAspect = width / height`
-   - `sourceAspect ≥ 1.5`（≥ 约 3:2 的宽屏）→ 推荐 **`16:9`**
-   - `sourceAspect ≤ 0.7`（≤ 约 9:13 的竖屏）→ 推荐 **`9:16`**
+   - `sourceAspect ≥ 1.5`（≥ 约 3:2 宽屏）→ 推荐 **`16:9`**
+   - `sourceAspect ≤ 0.7`（≤ 约 9:13 竖屏）→ 推荐 **`9:16`**
    - `0.7 < sourceAspect < 1.5`（接近正方形）→ 推荐 **`4:5`**
 
-   在推荐选项的标签后标注“（推荐 · 与源视频 X:Y 匹配）”，以便用户了解推荐原因。
+   在推荐选项的标签中添加“（推荐 · 与源视频 X:Y 匹配）”，
+   让用户了解推荐理由。
 
-2. 根据第 6 步计算 **`autoCount`**（`max(5, round(videoSec / (basePace ×
-densityMultiplier)))`），以便“自动”选项的标签可以显示具体数量。
+2. 根据步骤 6 计算 `autoCount`（`max(5, round(videoSec / (basePace ×
+   densityMultiplier)))`），这样“自动”选项的标签就可以显示具体数量。
 
-**环境兼容性——选择最佳的可用提问渠道。**
-并非每个运行时都提供相同的结构化提问工具。请按以下顺序处理：
+**环境兼容性：选择可用的最佳提问渠道。**
+并非每个运行时都提供相同的结构化提问工具。按以下顺序执行：
 
-1. **原生澄清工具**——使用下方包含 4 个问题的结构化调用。
-2. **其他原生澄清工具**（例如 `ask_question`、`request_user_input`、IDE 专用提示）——使用该工具并传入相同的 4 个问题文本和选项列表。保留推荐标记和预先计算的值。
-3. **无原生工具**（Codex CLI、仅支持纯文本的运行时）——**直接在普通对话中提问**。使用本节末尾的纯文本模板。将问题控制在**一条消息、4 个编号问题**内（全局限制为每轮 2–5 个问题；这里符合限制）。
+1. **原生澄清工具** —— 使用下方的结构化四问题调用。
+2. **其他原生澄清工具**（例如 `ask_question`、
+   `request_user_input`、特定 IDE 的提示工具）—— 使用该工具，并保留相同的四个问题文本和选项列表。保留推荐标记和预先计算的值。
+3. **没有原生工具**（Codex CLI、纯文本运行时）—— **直接在普通对话中提问**。使用本节末尾的纯文本模板。保持为**一条消息、4 个编号问题**（全局限制为每轮 2–5 个问题；这里符合要求）。
 
 适用于所有渠道的规则：
 
-- 每轮**最多询问 2–5 个问题**。这里的 4 个问题符合要求。
-- 即使缺失的信息不会阻止渲染，也应**询问一次，以确认会对最终输出产生实质影响的参数**（比例、布局、风格、cardCount）。
-- 如果用户已经预先同意使用默认值（“直接使用默认值”“不需要询问”“全部自动选择”）、要求不要提问，或本次运行包含持续自主执行信号（“给我惊喜”/“你来决定”——`../hyperframes-core/references/brief-contract.md` § 1），则**完全跳过提问**并使用：`recommendedRatio`、`layout="stack"`（跨比例最安全的默认值）、根据转录文本语气从最中性的分组（编辑/数据）中选择 `style`，以及 `autoCount`。用一句话告知用户你选择了什么，然后继续。
-
-**Channel A — native `AskUserQuestion`:**
+- 每轮**最多提出 2–5 个问题**。这里的 4 个问题符合要求。
+- 即使缺少的信息不会阻止渲染，也要**询问一次，以确认会实质影响最终输出的参数**（比例、布局、样式、cardCount）。
+- 如果用户已经预先批准默认值（“直接使用默认值”、“不需要询问”或“全部自动选择”）、要求你不要提问，或当前运行带有持续的自主执行信号（“给我惊喜”/“你来决定”——`../hyperframes-core/references/brief-contract.md` § 1）——**完全跳过提问**，并使用：`recommendedRatio`、`layout="stack"`（跨比例最安全的默认值）、根据对话语气从最中性的组别（编辑/数据）中选择的 `style`、`autoCount`。用一句话告知用户你选择的内容，然后继续。
 
 ```
 // Precompute before the call:
@@ -316,13 +313,11 @@ AskUserQuestion({
 })
 ```
 
-**关于“其他”** — `AskUserQuestion` 会自动在卡片数量问题中添加一个“其他”选项。用户可以直接输入一个数字（例如“8”“20”）作为 cardCount 目标值。将输入解析为整数：如果解析成功 → 使用该值（下限为 5）；如果解析失败 → 回退到“auto”。
+**关于“Other”** — `AskUserQuestion` 会自动在卡片数量问题中添加一个“Other”选项。用户可以直接输入一个数字（例如“8”“20”）作为 `cardCount` 目标值。将输入解析为整数：如果解析成功 → 使用该值（最低限制为 5）；如果解析失败 → 回退到“auto”。
 
-**渠道 B — 纯文本回退方案**（Codex CLI、没有原生提问工具的
-运行时）。将以下内容作为一条普通消息发送，然后等待
-回复。使用 1/2/3/4 项目符号样式可使回复易于解析：
+**通道 B — 纯文本回退**（Codex CLI、没有原生问题工具的运行时）。将以下内容作为一条普通消息发送，然后等待回复。使用 1/2/3/4 的项目样式可使回复更易解析：
 
-```
+```text
 I need to confirm four visual decisions with you before I start cutting cards:
 
 1) Output aspect ratio (canvas):
@@ -354,204 +349,167 @@ If you want all recommended defaults, reply "default" / "auto" / "use all recomm
 
 解析纯文本回复：
 
-- 接受宽松格式：`"1A 2C 3B 4A"`、`"A C B A"`、`"16:9 / pip /
-data / auto"`、完整句子或 `default`。
-- 如果任何回答存在歧义 → 仅重新询问有歧义的项（仍然
-  包含在 2–5 次的上限内）。
-- 如果用户说“default / auto / use all recommendations”→ 跳过，不要重新询问。
+- 接受宽松格式：`"1A 2C 3B 4A"`、`"A C B A"`、`"16:9 / pip / data / auto"`、完整句子或 `default`。
+- 如果任何答案含义不明确 → 仅重新询问含义不明确的选项（仍需保持在 2–5 个问题的上限内）。
+- 如果用户说“default / auto / use all recommendations” → 跳过，不再重新询问。
 
-用户回答后（通过任一渠道）：
+用户通过任一通道回答后：
 
-1. 根据比例回答**确定输出画布** — 以下是要写入的
-   确切 `storyboard.composition.width / height` 值：
+1. **根据比例答案解析输出画布** — 以下是要写入的确切 `storyboard.composition.width / height` 值：
 
    | 用户选择 | composition.width × height | storyboard.layout 字段                                       |
    | ----------- | -------------------------- | ------------------------------------------------------------- |
    | `16:9`      | **1920 × 1080**            | `"landscape"`                                                 |
    | `9:16`      | **1080 × 1920**            | `"portrait"`                                                  |
-   | `4:5`       | **1080 × 1350**            | `"portrait"`（schema 将 4:5 视为竖屏 — 高度 > 宽度） |
+   | `4:5`       | **1080 × 1350**            | `"portrait"`（架构将 4:5 视为纵向 — 高度 > 宽度） |
 
-   对于 **`references/layouts/*.html` 内的 4:5 边界** — 这些文件
-   只记录了横屏（1920×1080）和竖屏（1080×1920）。对于
-   4:5（1080×1350），通过**按比例缩放竖屏布局**推导边界：
-   保持水平值不变，将垂直值乘以
-   `1350/1920 ≈ 0.703`。示例：`overlay` 竖屏卡片 =
+   对于 `references/layouts/*.html` 中的 **4:5 边界** — 这些文件只记录横向（1920×1080）和纵向（1080×1920）。对于 4:5（1080×1350），通过**从纵向按比例缩放**来推导边界：保留水平值，将垂直值乘以 `1350/1920 ≈ 0.703`。示例：`overlay` 纵向卡片 =
    `{ x: 24, y: 1280, w: 1032, h: 564 }` → 4:5 卡片 =
    `{ x: 24, y: round(1280 × 0.703), w: 1032, h: round(564 × 0.703) }`
    = `{ x: 24, y: 900, w: 1032, h: 397 }`。
 
-2. **通过查看转写文本的语气，将风格组映射到具体风格**——选择最契合的一种，但不要超出用户选择的风格组。如果你无法在组内的两种具体风格之间做出判断，请再次发送 `AskUserQuestion`，提供 2–4 个具体风格选项。
+2. **根据转录文本的语气，将风格组映射到具体风格**——选择最符合的一种，但必须限定在用户选择的组内。如果无法在组内的两个具体风格之间做出判断，则再次发送 `AskUserQuestion`，提供这 2–4 个具体风格选项。
 
-3. **根据密度回答确定最终的 cardCount**：
+3. **根据密度回答确定最终的 `cardCount`**：
 
-   | 用户选择                | 最终 cardCount                            |
-   | ----------------------- | ----------------------------------------- |
-   | 自动（推荐）            | 你已经计算出的 `autoCount`                |
-   | 更少                    | `max(5, round(autoCount × 0.6))`          |
-   | 更多                    | `round(autoCount × 1.5)`（不设上限）      |
-   | 其他 = "<n>"（整数）    | `max(5, parseInt(n))`                     |
-   | 其他 = 任何其他内容     | 回退到 `autoCount`                        |
+   | 用户选择             | 最终 `cardCount`                           |
+   | -------------------- | ------------------------------------------ |
+   | Auto（推荐）         | 已计算出的 `autoCount`                     |
+   | Fewer                | `max(5, round(autoCount × 0.6))`            |
+   | More                 | `round(autoCount × 1.5)`（不设上限）       |
+   | Other = "<n>"（整数） | `max(5, parseInt(n))`                      |
+   | Other = 其他任何内容 | 回退到 `autoCount`                         |
 
-4. **根据此表自动选择视频边框**（不要就边框询问用户——它们由布局 × 风格决定）：
+4. **根据下表自动选择视频帧**（帧不询问用户——由布局 × 风格决定）：
 
-   | 布局      | 暖纸风格（academic / whiteboard / editorial / xhs） | 临床风格（audit / swiss / terminal / minimal） | 实验风格（geom / spotlight） |
-   | --------- | --------------------------------------------------- | ---------------------------------------------- | ---------------------------- |
-   | `split`   | `polaroid`                                          | `hairline`                                     | `clean`                      |
-   | `stack`   | `polaroid`                                          | `hairline`                                     | `clean`                      |
-   | `pip`     | `clean`（pip 胶囊本身已有装饰框架）                 | `clean`                                        | `clean`                      |
-   | `overlay` | `clean`（全出血布局禁止使用装饰边框）               | `clean`                                        | `clean`                      |
+   | 布局      | warm-paper styles（academic / whiteboard / editorial / xhs） | clinical styles（audit / swiss / terminal / minimal） | experimental styles（geom / spotlight） |
+   | --------- | ------------------------------------------------------------ | ----------------------------------------------------- | --------------------------------------- |
+   | `split`   | `polaroid`                                                   | `hairline`                                            | `clean`                                 |
+   | `stack`   | `polaroid`                                                   | `hairline`                                            | `clean`                                 |
+   | `pip`     | `clean`（pip pill 已经带有 chrome）                          | `clean`                                               | `clean`                                 |
+   | `overlay` | `clean`（全出血布局禁止装饰性帧）                             | `clean`                                               | `clean`                                 |
 
-5. **用一句话告诉用户你选择了什么**——比例（+ 画布尺寸）、布局、具体风格、边框以及最终的 cardCount——然后继续执行步骤 7 的其余部分（逐卡片布局、动效模式）。
-6. 在工作记忆中记录这五个值（ratio / layout / style / frame / cardCount）（无需 schema 字段）；在步骤 8 中编写每张卡片的 HTML，以及读取对应的 `references/<dim>/<key>.html` 以获取 token 和结构时，你将引用这些值。
+5. **用一句话告诉用户你的选择**——包括比例（+ 画布尺寸）、布局、具体风格、帧和最终的 `cardCount`——然后继续执行第 7 步的其余部分（逐卡布局、动态模式）。
+6. 将这五个值（ratio / layout / style / frame / cardCount）记录到工作记忆中（无需 schema 字段）；在第 8 步编写每张卡片的 HTML 时，以及读取匹配的 `references/<dim>/<key>.html` 获取 tokens 和结构时引用它们。
 
-如果用户通过“其他”选择了一个不在 10 种风格库中的自由文本风格名称，请将其视为自行设计全新卡片视觉效果的提示，但仍需以所选布局的边界为基准。
+如果用户通过“Other”选择了一个不在 10 种风格库中的自由文本风格名称，则将其视为自行设计全新卡片视觉效果的提示，但仍须以所选布局的边界为基础。
 
 #### 渲染策略输入
 
-在步骤 7.0 中锁定 ratio / layout / style / cardCount / frame 后，剩余的逐卡片决策如下：
+在第 7.0 步锁定 ratio / layout / style / cardCount / frame 后，其余逐卡决策如下：
 
-- **GSAP 目标内的源视频适配方式**：视频元素使用 `object-fit: cover`，并裁剪至 `#video-wrap` 的补间动画边界。如果你不希望出现任何裁剪（例如，横向画布上的纵向源视频不应被切掉顶部/底部），请将补间动画的目标设为与源视频宽高比匹配的矩形，并让周围的画布露出（或使用卡片/背景填充）。
-- **每张卡片的 `card.zone`**：根据你选择的构图布局推导（split → 侧边面板，stack → 下三分之一，pip → 全屏，overlay → 视频叠加层），或者为一次性变体选择不同的区域（英雄画面/引语使用全屏，密集数据使用白板区域）。
-- **每张卡片的 `accentIndex`**：每张卡片从 5 种主题强调色中选取一种。在不同卡片间变化以形成节奏；当两张卡片属于同一叙事节拍时，重复使用相同的索引。
-- **动效词汇**：从 `data-anim` 类型中选择 2–3 种可重复使用的模式（参见后面的表格），并始终使用这些模式，以使构图保持连贯。
+- **GSAP 目标内部的源视频适配方式**：视频元素使用 `object-fit: cover`，并裁剪到 `#video-wrap` 的 tween 边界内。如果希望完全不裁剪（例如横向画布中的纵向源视频不应被裁掉上下部分），应将 tween 的目标设为匹配源视频宽高比的矩形，并让周围画布透出（或使用卡片 / 背景填充）。
+- **每张卡片的 `card.zone`**：根据所选的构图布局确定（split → side-panel、stack → lower-third、pip → fullscreen、overlay → video-overlay），或者为单次变体选择不同的 zone（hero / quote 使用 fullscreen，密集数据使用 whiteboard-area）。
+- **每张卡片的 `accentIndex`**：每张卡片从 5 个主题强调色中取一个。跨卡片变化以形成节奏；当两张卡片属于同一个叙事节拍时，重复使用相同的 index。
+- **动态词汇**：从 `data-anim` 类型中选择 2–3 种可重复使用的模式（见后面的表格），并坚持使用它们，以保持构图的一致性。
 
-从这些 `themeId` 调色板中选择（在你的组合 `<style>` 块中将它们用作 `--accent-N` /
-`--bg` / `--text` CSS 变量）：
+从这些 `themeId` 调色板中选择（在组合 `<style>` 块中将它们用作 `--accent-N` / `--bg` / `--text` CSS 变量）：
 
-| themeId | 强调色调色板（5 种颜色）                      | 画板背景          | 文本      |
-| ------- | ----------------------------------------- | ----------------- | --------- |
+| themeId | accent 调色板（5 种颜色）                 | board 背景          | 文本      |
+| ------- | ----------------------------------------- | ------------------- | --------- |
 | classic | `#1971c2 #e03131 #2f9e44 #e8590c #9c36b5` | `#FFF9E3`（纸张） | `#1e1e1e` |
-| noir    | `#4cc9f0 #f72585 #4ade80 #fb923c #a78bfa` | `#1a1a1a`         | `#f1f1f1` |
-| mint    | `#0077b6 #d62828 #2d6a4f #e76f51 #7209b7` | `#e8faf0`         | `#1b4332` |
-| craft   | `#bf5700 #d62728 #6c757d #e9b54a #3d5a80` | `#f6efe1`         | `#2d2d2d` |
-| slate   | `#0ea5e9 #ef4444 #22c55e #f97316 #a855f7` | `#1e293b`         | `#f1f5f9` |
-| mono    | `#000 #555 #888 #aaa #ccc`                | `#fff`            | `#000`    |
+| noir    | `#4cc9f0 #f72585 #4ade80 #fb923c #a78bfa` | `#1a1a1a`          | `#f1f1f1` |
+| mint    | `#0077b6 #d62828 #2d6a4f #e76f51 #7209b7` | `#e8faf0`          | `#1b4332` |
+| craft   | `#bf5700 #d62728 #6c757d #e9b54a #3d5a80` | `#f6efe1`          | `#2d2d2d` |
+| slate   | `#0ea5e9 #ef4444 #22c55e #f97316 #a855f7` | `#1e293b`          | `#f1f5f9` |
+| mono    | `#000 #555 #888 #aaa #ccc`                | `#fff`             | `#000`    |
 
-可用字体（位于 `<SKILL_DIR>/assets/fonts/` 中的 woff2 文件，将在步骤 9 暂存到工作目录）：`Caveat`（手写体）、
-`LXGW WenKai TC`（中文手写体）、`Inter`（现代无衬线体）、`Virgil`
-（几何手写体）。可通过 `@font-face` 引用，也可直接通过 `font-family` 引用。
+可用字体（`<SKILL_DIR>/assets/fonts/` 中的 woff2，在步骤 9 中暂存到工作目录）：`Caveat`（手写体）、`LXGW WenKai TC`（中文手写体）、`Inter`（现代无衬线字体）、`Virgil`（几何手写体）。通过 `@font-face` 或直接使用 `font-family` 引用。
 
-如需获取视觉模式灵感，`<SKILL_DIR>/references/styles/`
-提供了 10 个自包含的参考卡片（学术 / 编辑 / 极简
-/ 聚光 / 几何 / 白板 / 审计 / 终端 / 瑞士 / 小红书），
-你可以复制它们作为起点——但**不要觉得必须受限于
-其中任何一种风格**。每张卡片都可以采用你自己的设计。
+如需获取视觉模式的灵感，`<SKILL_DIR>/references/styles/` 提供了 10 个独立的参考卡片（academic / editorial / minimal / spotlight / geom / whiteboard / audit / terminal / swiss / xhs），你可以复制它们作为起点，但**不必受限于匹配其中任何一种**。每张卡片都是独立的设计。
 
-#### 视觉设计库（`<SKILL_DIR>/references/`）
+#### 视觉设计库（<SKILL_DIR>/references/）
 
-除了组合级别的 `themeId` 外，该技能还在 `<SKILL_DIR>/references/` 中提供了一个更丰富的**参考
-库**，涵盖三个可以自由混搭的**正交**
-视觉维度：
+除了组合级别的 `themeId` 之外，该 skill 还在 `<SKILL_DIR>/references/` 中提供了更丰富的**参考库**，涵盖三个可以自由组合的**正交**视觉维度：
 
 ```
 Style  ×  Layout  ×  VideoFrame
  (10)      (4)         (3)
 ```
 
-| 维度        | 键                                                                                                | 决定的内容                                                               |
-| ---------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| **风格**   | `academic` `editorial` `minimal` `spotlight` `geom` `whiteboard` `audit` `terminal` `swiss` `xhs` | 卡片的视觉语言——字体、颜色、装饰、卡片内部布局                           |
-| **布局**   | `split` `stack` `pip` `overlay`                                                                   | 源视频与卡片如何共享画布                                                 |
-| **边框**   | `clean` `hairline` `polaroid`                                                                     | 视频元素周围的装饰性框架                                                 |
+| 维度       | key                                                                                               | 决定的内容                                                   |
+| ---------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
+| **style**  | `academic` `editorial` `minimal` `spotlight` `geom` `whiteboard` `audit` `terminal` `swiss` `xhs` | 卡片的视觉语言——字体、颜色、装饰以及卡片内布局                 |
+| **layout** | `split` `stack` `pip` `overlay`                                                                    | 源视频和卡片如何共享画布                                       |
+| **frame**  | `clean` `hairline` `polaroid`                                                                      | 视频元素周围的装饰性外框                                       |
 
 阅读 `<SKILL_DIR>/references/DESIGN_INDEX.md`
-以查看完整矩阵和宽泛的选择指南（访谈 / 产品发布 / 数据分析 /
-社交媒体短片 / 技术教程 / 情感故事……）。当你决定使用特定的
-风格 / 布局 / 边框时，请阅读对应文件：
+以了解完整矩阵和宽泛的选择指南（采访 / 产品发布 / 数据分析 /
+社交片段 / 技术教程 / 情感故事……）。当你决定使用特定的
+style / layout / frame 时，阅读对应的文件：
 
-- `references/styles/<key>.html`——自包含的卡片片段，包含该
-  风格的 CSS 令牌（颜色、字体、内边距、装饰）和占位要点。
-  复制 `.card[data-card-id="ref-<key>"]` 样式块，将
-  data-card-id 重命名为你的卡片 id，用实际要点替换占位内容，
-  即可完成。
-- `references/layouts/<key>.html`——横向和纵向画布的精确 `videoBounds` + `cardBounds`，
-  并附有可复制粘贴到
-  `storyboard.json` 每张卡片的 `layout` 字段中的 JSON 片段。
-- `references/frames/<key>.html`——作为
-  `#video-wrap` 同级元素添加的装饰性 HTML，以及用于组合 CSS 的放置说明。
+- `references/styles/<key>.html` — 包含该
+  style 的 CSS token（颜色、字体、内边距、装饰）以及占位 takeaway 的独立卡片片段。复制 `.card[data-card-id="ref-<key>"]` 样式块，将 data-card-id 重命名为你卡片的 id，再用真实 takeaway 替换占位内容即可。
+- `references/layouts/<key>.html` — 同时提供横屏和竖屏的精确 `videoBounds` + `cardBounds`，以及可复制粘贴到 `storyboard.json` 每张卡片 `layout` 字段中的 JSON 片段。
+- `references/frames/<key>.html` — 添加为 `#video-wrap` 的同级元素的装饰性 HTML，以及组合 CSS 中的放置说明。
 
-**每张卡片**分别选择 `style × layout × frame`——只要卡片之间的过渡流畅自然，你可以在不同卡片之间更改这三个选项。常见的节奏是：
-以 `editorial × overlay × clean` 开场，在数据卡片处切换为 `audit × split × hairline`，
+按卡片分别选择 `style × layout × frame`——只要过渡自然流畅，就可以在卡片之间同时切换这三项。常见的节奏是：
+以 `editorial × overlay × clean` 开场，为数据卡切换到 `audit × split × hairline`，
 最后以 `whiteboard × pip × polaroid` 收尾。
 
-这 10 种样式是 Skill 侧的设计令牌，**而非合成层级的主题**——
-无需在 `storyboard.composition` 中声明；它们存在于
-每张卡片的 HTML 中。`themeId` 字段仍可选择
-合成层级的调色板（见上表），用于控制页面主体背景
-和视频边框装饰。
+这 10 种样式是技能侧的设计令牌，**而不是构图级主题**——
+无需在 `storyboard.composition` 中声明；它们存在于每张卡片的 HTML 中。
+`themeId` 字段仍可选择构图级调色板（见上表），用于控制页面主体背景和视频边框装饰。
 
-#### 布局合成（卡片 + 视频）
+#### 布局构图（卡片 + 视频）
 
-每张卡片通过两个相互协调的决策来定义其如何与
-源视频共享画布：
+每张卡片需要协调做出两个决定，以确定它如何与源视频共享画布：
 
-- **`card.zone`**（在 `storyboard.json` 中声明）——5 个 schema
-  值之一；在步骤 9 中编写卡片宿主包装器的内联 `style` 时，
-  将其解析为像素边界（依据步骤 6 中的表格）。
-- **该卡片时间窗口内的 `#video-wrap` 边界**（以命令式方式
-  在合成的 GSAP 时间线中声明）——agent 会在每次布局过渡时，
-  将 `#video-wrap` 补间到目标矩形区域。
+- **`card.zone`**（在 `storyboard.json` 中声明）——5 个架构值之一；在第 9 步为卡片宿主包装器的内联 `style` 编写时，根据第 6 步的表格将其解析为像素边界。
+- **此卡片时间窗口内的 `#video-wrap` 边界**（在构图的 GSAP 时间线中以命令式方式声明）——代理会将 `#video-wrap` 补间到每次布局过渡的目标矩形区域。
 
-Schema **不会**存储每张卡片的视频边界。`videoTrack.bounds` 是
-合成层级的**一次性**设置（默认为完整画布）。视频在卡片之间的
-“移动”完全是在 `index.html` 中编写的 GSAP 动画。
-不存在 `card.layout` 字段——本文档的早期版本曾虚构过该字段；
-实际 schema 只有 `card.zone`。
+架构不会存储每张卡片的视频边界。`videoTrack.bounds` 在构图级别只设置一次（默认为完整画布）。卡片之间视频的“移动”完全由 `index.html` 中编写的 GSAP 动画实现。不存在 `card.layout` 字段——本文档的早期版本曾虚构过该字段；实际架构只有 `card.zone`。
 
-**4 种合成布局**（来自 `references/layouts/`）——每种布局都是
-将一个 `zone` 与一个 `#video-wrap` 补间目标配对的方案：
+**4 种构图布局**（来自 `references/layouts/`）——每种都是将 `zone` 与 `#video-wrap` 补间目标配对的方案：
 
-| 合成布局           | 推荐的 `card.zone`     | `#video-wrap` 的 GSAP 目标（横屏 1920×1080）                              | `#video-wrap` 的 GSAP 目标（竖屏 1080×1920）                       | 适用场景                                        |
+| 构图布局 | 推荐的 `card.zone` | GSAP 对 `#video-wrap` 的目标（横屏 1920×1080）                       | GSAP 对 `#video-wrap` 的目标（竖屏 1080×1920）                | 使用场景                                     |
 | ------------------ | ----------------------- | ------------------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------- |
-| `split`            | `side-panel`            | `{ left: 960, top: 0, width: 960, height: 1080 }`                         | `{ left: 0, top: 960, width: 1080, height: 960 }`（下半部分）     | 演讲者与数据并排 / 50:50 权重                   |
-| `stack`            | `lower-third`           | `{ left: 14, top: 14, width: 1892, height: 548 }`（顶部 52%）             | `{ left: 0, top: 0, width: 1080, height: 844 }`（顶部 44%）       | 演讲者在上 + 摘要卡片在下                       |
-| `pip`              | `fullscreen`            | `{ left: 1480, top: 760, width: 400, height: 300 }` + 添加 `.framed` 类   | `{ left: 690, top: 28, width: 360, height: 203 }` + 添加 `.framed` | 内容密集型卡片 + 角落画中画                     |
-| `overlay`          | `video-overlay`         | `{ left: 0, top: 0, width: 1920, height: 1080 }`（全出血）                | `{ left: 0, top: 0, width: 1080, height: 1920 }`                  | 电影感 / 戏剧性 / 全屏视频上的玻璃质感卡片      |
+| `split`            | `side-panel`            | `{ left: 960, top: 0, width: 960, height: 1080 }`                         | `{ left: 0, top: 960, width: 1080, height: 960 }`（下半部分）   | 演讲者 + 数据并排 / 50:50 权重      |
+| `stack`            | `lower-third`           | `{ left: 14, top: 14, width: 1892, height: 548 }`（顶部 52%）               | `{ left: 0, top: 0, width: 1080, height: 844 }`（顶部 44%）         | 演讲者在上 + 摘要卡片在下             |
+| `pip`              | `fullscreen`            | `{ left: 1480, top: 760, width: 400, height: 300 }` + 添加 `.framed` 类 | `{ left: 690, top: 28, width: 360, height: 203 }` + 添加 `.framed` | 内容为主的卡片 + 角落画中画                 |
+| `overlay`          | `video-overlay`         | `{ left: 0, top: 0, width: 1920, height: 1080 }`（全出血）             | `{ left: 0, top: 0, width: 1080, height: 1920 }`                  | 全视频上的电影感 / 戏剧感 / 玻璃卡片 |
 
-对于 4:5（1080×1350），将竖屏的 y/h 值乘以 `1350/1920 ≈ 0.703`
-（参见步骤 7.0 Channel A / Channel B 的 `recommendedRatio` 分辨率
+对于 4:5 (1080×1350)，将 portrait y/h 值按 `1350/1920 ≈ 0.703` 进行缩放
+（参见第 7.0 步 Channel A / Channel B 的 `recommendedRatio` 分辨率
 表）。
 
-**用于一次性变体的其他区域值**（仍使用 `card.zone`；不要使用虚假的
+**一次性变体的其他区域值**（仍使用 `card.zone`；不要使用虚假的
 "layout" 字段）：
 
-| `zone`            | 解析后的边界                                           | 常见用途                              |
+| `zone`            | resolved bounds                                        | common use                            |
 | ----------------- | ------------------------------------------------------ | ------------------------------------- |
-| `fullscreen`      | 覆盖整个画布                                           | 主视觉卡片、视频补间至隐藏/画中画状态 |
-| `whiteboard-area` | 横屏时内缩 40px 边距，竖屏时使用底部 45%              | 密集数据卡片、自由边距                 |
-| `lower-third`     | 底部 30% 区域                                          | 人物讲解标注                          |
-| `side-panel`      | 横屏时使用右侧 42%，竖屏时使用底部 40%                | 侧边栏 / “分屏”方案                    |
-| `video-overlay`   | 整个画布；卡片根元素应为透明                           | 全出血视频上的玻璃拟态叠加层           |
+| `fullscreen`      | 覆盖整个画布                                            | 主视觉卡片，视频渐变为隐藏状态/画中画 |
+| `whiteboard-area` | 内缩 40px 边距（横向）或底部 45%（纵向）                 | 密集数据卡片，保留空白边距             |
+| `lower-third`     | 底部 30% 区域                                           | 采访人物注释                           |
+| `side-panel`      | 右侧 42%（横向）或底部 40%（纵向）                       | 侧边栏 / “分屏”配方                    |
+| `video-overlay`   | 整个画布；预期卡片根元素为透明                          | 全出血视频上的玻璃叠加层                |
 
-你可以为每张卡片混用不同方案——根据当前时刻的需要选择 `card.zone`，
-然后编写 GSAP 补间，使 `#video-wrap` 在卡片之间切换。
+你可以为每张卡片混用不同配方——根据当前时刻的需要选择
+`card.zone`，然后在卡片之间为 `#video-wrap` 编写 GSAP 补间。
 
-#### 故事板渲染约定
+#### 分镜渲染契约
 
-`storyboard.json` 是供智能体内部使用的规划产物——没有任何 CLI
-命令会解析它。它的作用是在你编写每张卡片的 HTML 之前，明确记录时间安排和内容决策。
-请遵循下面的 v3 风格结构，以便在步骤 9 中组装合成内容时，
-仍由同一份大纲进行驱动。
+`storyboard.json` 是代理内部的规划产物——没有 CLI
+命令会解析它。它用于在你编写每张卡片的 HTML 之前，明确记录时序和内容决策。遵循下面的 v3 风格结构，以便同一份大纲驱动你在第 9 步中组装的构图。
 
-必需结构（完整示例见步骤 6）：
+必需结构（完整示例见第 6 步）：
 
 - `schemaVersion: 3`
-- `composition: { fps, width, height, durationSeconds, layout, themeId, seed }`——请注意，`durationSeconds`/`fps`/`themeId`/`layout` 位于 `composition` **内部**，而不是顶层
-- `videoTrack: { sourcePath, startSec, endSec, bounds? }`——视频边界默认为整个画布
+- `composition: { fps, width, height, durationSeconds, layout, themeId, seed }` — 注意 `durationSeconds`/`fps`/`themeId`/`layout` 位于 **`composition` 内部**，而不是顶层
+- `videoTrack: { sourcePath, startSec, endSec, bounds? }` — 视频边界默认为整个画布
 - `subtitles: { enabled, ... }`
-- `cards[]`——每张卡片都有 6 个必需字段：`id`、`intent`、`startSec`、`endSec`、`accentIndex`、`zone`、`contentHints`
+- `cards[]` — 每张卡片包含 6 个必需字段：`id`、`intent`、`startSec`、`endSec`、`accentIndex`、`zone`、`contentHints`
 
 规则：
 
-- 卡片时间必须位于 `composition.durationSeconds` 范围内，且除非有意为之，否则不应重叠（重叠时使用 `data-track-index` 控制 z 轴顺序）。
-- 视觉细节应写在卡片 HTML 片段中（步骤 8），**不要**写在 `contentHints` 中。`contentHints` 是你自己用于设计卡片的结构化提示；最终渲染外观由 HTML 决定。
-- 保持故事板结构稳定——即使没有任何程序解析它，你在编写步骤 8/9 时仍会回读它，而一致的结构可以使卡片 ID 和时间安排保持同步。
-- “I picked overlay × geom × clean” 之类的智能体端决策**不要**写入 `storyboard.json`——将其保留在工作记忆中，并在编写卡片 HTML 和 GSAP 补间时使用。
+- 卡片时间必须位于 `composition.durationSeconds` 范围内，除非有意重叠，否则不应重叠（发生重叠时，使用 `data-track-index` 控制 z 轴顺序）。
+- 视觉细节位于卡片 HTML 片段中（第 8 步），而不是 `contentHints` 中。`contentHints` 是你用于设计卡片的结构化提示；最终渲染效果由 HTML 决定。
+- 保持分镜结构稳定——尽管没有任何程序解析它，但你会在编写第 8/9 步时回读它；保持一致有助于让卡片 ID 和时序同步。
+- 代理侧的决策，例如“I picked overlay × geom × clean”，不属于 `storyboard.json`——将其保留在工作记忆中，并在编写卡片 HTML 和 GSAP 补间时使用。
 
-**与视频共享画布的卡片应使用透明背景。**
-当 GSAP 补间让视频在卡片的后方或旁边保持可见时（叠加方案、
-画中画方案，或任何 `card.zone = 'lower-third' | 'video-overlay'`
-的时刻），卡片的 `.root` **不得**绘制完全不透明的背景——
+**与视频共享画布的卡片必须使用透明背景。**
+当 GSAP 补间使视频在卡片后方/旁边保持可见时（叠加层配方、画中画配方，或任何
+`card.zone = 'lower-third' | 'video-overlay'` 时刻），卡片的 `.root` **不得**绘制全不透明背景——
 否则会遮挡视频。有两种模式：
 
 ```css
@@ -573,13 +531,13 @@ body {
 }
 ```
 
-对于 `side-panel` 区域的卡片（分屏方案），card-host 已经只占画布的一半，因此使用不透明的卡片背景没有问题——它只会覆盖其所在的半边。
+对于 `side-panel`-zone 卡片（split recipe），卡片宿主本身已经只占画布的一半，因此使用不透明的卡片背景没有问题——它只会覆盖自己所在的那一半。
 
 ### 8. 编写每张卡片的 HTML
 
-为每张卡片创建 `$WORK_DIR/public/cards/{card-id}.html`。每个文件都包含一个遵循以下约定的单根 HTML 片段：
+为每张卡片创建 `$WORK_DIR/public/cards/{card-id}.html`。每个文件都包含一个遵循以下契约的单根 HTML 片段：
 
-#### 卡片 HTML 约定
+#### 卡片 HTML 契约
 
 ```html
 <div class="card" data-card-id="{cardId}">
@@ -619,36 +577,42 @@ body {
 </div>
 ```
 
-**硬性规则**（`hyperframes` lint 会拒绝违规内容）：
+**硬性规则**（`hyperframes` lint 会拒绝违反这些规则的内容）：
 
-- 只能有一个根元素 `<div class="card" data-card-id="{cardId}">`
-- 内联 `<style>` 中的规则必须以上述作用域选择器作为前缀
-- **禁止使用 `<script>` 标签**
-- `src=` / `href=` 中**禁止使用外部 URL**（禁止 CDN、禁止远程字体）
-- **禁止使用内联事件处理器**（`onclick=` 等）
-- 所有资源均通过相对路径引用同一个 `public/` 目录中的文件
-- 颜色使用 `var(--accent-N)` 等变量，以便适配不同主题
+- 单个根 `<div class="card" data-card-id="{cardId}">`
+- 内联 `<style>` 规则必须以上述作用域选择器作为前缀
+- **不得包含 `<script>` 标签**
+- `src=` / `href=` 中**不得包含外部 URL**（不得使用 CDN 或远程字体）
+- **不得使用内联事件处理器**（如 `onclick=` 等）
+- 所有资源必须通过相对路径引用，并位于同一个 `public/` 目录中
+- 颜色必须使用 `var(--accent-N)` 等形式，以便在不同主题之间移植
 
-**动画应声明，而非编码实现。** 只能使用 `data-anim-*` 属性；绝不要编写 `<script>` 来实现动画。在第 9 步中，将每个 `data-anim-*` 声明编译到唯一的 GSAP 主时间线中。
+**动画通过声明定义，而不是编码实现。** 只能使用 `data-anim-*` 属性；绝不要编写 `<script>` 来实现动画。你会在第 9 步中将每个 `data-anim-*` 声明编译到单一的主 GSAP 时间轴中。
 
-#### 卡片尺寸——竖屏下移动端优先
+#### 卡片尺寸——肖像模式下优先适配移动端
 
-这 10 个 `references/styles/*.html` 的尺寸基于 **1920×1080 横屏**预览。当 `storyboard.layout = "portrait"` 时（1080×1920，这是社交媒体／移动端最常见的情况），**应放大所有视觉尺寸**——手机观看距离更近，而且相同的像素数在横屏电视式画布上看起来会更小。
+`references/styles/*.html` 中的 10 个样式文件按照**1920×1080 横向**预览进行尺寸设置。当 `storyboard.layout = "portrait"`（1080×1920，这是社交媒体 / 移动端的主要使用场景）时，**放大每个视觉元素的尺寸**——手机通常距离屏幕较近，相同的像素数量在横向电视风格的画布上看起来会更小。
 
-| token                     | 横屏基准 | **竖屏目标** | 缩放比例 |
+| token                     | landscape baseline | **portrait target** | scale         |
 | ------------------------- | ------------------ | ------------------- | ------------- |
-| 标题（h1/h2 主标题）        | 64–96px            | **88–132px**        | ×1.35         |
-| 详情／正文                  | 24–30px            | **30–40px**         | ×1.30         |
-| 引导语／标签文字             | 14–16px            | **18–22px**         | ×1.30         |
-| 时间码／元信息               | 12–14px            | **16–18px**         | ×1.30         |
-| 数据块主要数字               | 48–60px            | **64–88px**         | ×1.40         |
-| 行高倍数                    | 1.05–1.5           | 相同                 | （不要缩放）   |
+| title (h1/h2 hero)        | 64–96px            | **88–132px**        | ×1.35         |
+| detail / body             | 24–30px            | **30–40px**         | ×1.30         |
+| kicker / chip label       | 14–16px            | **18–22px**         | ×1.30         |
+| timecode / meta           | 12–14px            | **16–18px**         | ×1.30         |
+| data block primary number | 48–60px            | **64–88px**         | ×1.40         |
+| line-height multiplier    | 1.05–1.5           | same                | (don't scale) |
+|
 
-**经验法则：** `portraitPx = round(landscapePx × 1.3)`，然后向下取整到附近的 4px 倍数，以保持视觉节奏。主视觉标题最多可放大至 ×1.4；较小的元信息文本保持在 ×1.2，以避免拥挤。
+**经验法则：** `portraitPx = round(landscapePx × 1.3)`，然后向下取整
+到临近的 4px 倍数，以保持视觉节奏。主视觉标题最多可以使用
+×1.4；小号元信息文本保持在 ×1.2，以避免拥挤。
 
-竖屏布局中的内边距会**略微缩小**——卡片更窄，因此横屏布局中的大内边距（40–64px）会占用过多宽度。竖屏布局请使用 24–36px 的水平内边距。
+在竖屏布局中，内边距应当**略微缩小**——卡片更窄，因此较大的
+横屏内边距（40–64px）会占用过多宽度。在竖屏中使用 24–36px 的水平
+内边距。
 
-如果你要制作一张必须同时适用于**两种**布局的卡片，优先在卡片根元素上使用 `@container` 查询，而不是硬编码尺寸：
+如果你要制作一个必须同时适用于**两种**布局的单一卡片，
+优先在卡片根元素上使用 `@container` 查询，而不是硬编码尺寸：
 
 ```css
 .card[data-card-id="X"] .root {
@@ -662,31 +626,34 @@ body {
 }
 ```
 
-不过对于大多数卡片，选择单一布局即可——只需选用与故事板 `layout` 字段相匹配的尺寸表列。
+但对于大多数卡片，选择单一布局即可——只需选用与 storyboard 的
+`layout` 字段相匹配的尺寸表列。
 
 #### 可用的 `data-anim` 类型
 
-| 类型            | 用途                | 关键参数                                                                                      |
-| --------------- | ------------------- | ----------------------------------------------------------------------------------------------- |
-| `fade-in`       | 进入                | `at`、`duration`、`ease?`                                                                       |
-| `fade-out`      | 退出                | `at`、`duration`、`ease?`                                                                       |
-| `slide-in`      | 滑入                | `at`、`duration`、`from=left\|right\|top\|bottom`、`distance`                                   |
-| `kinetic-chars` | 逐字符弹出          | `at`、`duration`、`stagger`、`pattern=pop\|fade` — 元素需要包含 `<span class="char">` 子元素 |
-| `typewriter`    | 逐字符淡入          | 与 kinetic-chars 相同，但默认交错间隔更长                                                |
-| `count-up`      | 数字递增动画        | `at`、`duration`、`from`、`to`、`format=.0f\|.1f\|.2f\|,d`                                      |
-| `draw-path`     | SVG 路径显现        | `at`、`duration` — 元素应为 `<path>`                                                 |
-| `grow-y`        | 条形高度增长        | `at`、`duration`、`target-h`（px）— 元素初始状态为 `height:0`                                   |
-| `grow-x`        | 条形宽度增长        | `at`、`duration`、`target-w`（px）— 元素初始状态为 `width:0`                                    |
-| `scale-pop`     | 弹出式进入          | `at`、`duration`                                                                                |
-| `blur-in`       | 失焦 → 聚焦         | `at`、`duration`                                                                                |
-| `mask-reveal`   | 裁剪显现            | `at`、`duration`、`direction=left\|right\|top\|bottom`                                          |
-| `morph-to`      | 补间任意 CSS 属性   | `at`、`duration`、`props='{...JSON...}'`                                                        |
+此列表是封闭的，而且这是刻意设计的：卡片是一个 HTML 片段，该片段的运动效果会由此技能在第 9 步中编译到共享的叠加时间轴中（参见其中的 GSAP 映射表）。这也是此工作流不像组合工作流那样搜索 HyperFrames 组件注册表的原因——`npx hyperframes catalog` 返回的是自带时间轴的独立组合，而卡片没有可供挂载时间轴的位置。如果仅凭卡片作用域 `<style>` 中的纯 CSS 无法实现某种效果，请使用以下类型。
 
-`data-anim-at` 是**相对于卡片 `startSec` 的秒数**——在第 9 步中将每条声明编译到 GSAP 时间线时，加上卡片的 `startSec` 以获得绝对时间，并将其量化到 1/fps。
+| kind            | 用途             | key params                                                                                      |
+| --------------- | ---------------- | ----------------------------------------------------------------------------------------------- |
+| `fade-in`       | 进入             | `at`、`duration`、`ease?`                                                                       |
+| `fade-out`      | 退出             | `at`、`duration`、`ease?`                                                                       |
+| `slide-in`      | 滑入             | `at`、`duration`、`from=left\|right\|top\|bottom`、`distance`                                   |
+| `kinetic-chars` | 逐字符弹出       | `at`、`duration`、`stagger`、`pattern=pop\|fade` — 元素需要包含 `<span class="char">` 子元素 |
+| `typewriter`    | 逐字符淡入       | 与 kinetic-chars 相同，但默认 `stagger` 更慢                                                |
+| `count-up`      | 数字动画         | `at`、`duration`、`from`、`to`、`format=.0f\|.1f\|.2f\|,d`                                      |
+| `draw-path`     | SVG 路径显现     | `at`、`duration` — 元素应为 `<path>`                                                 |
+| `grow-y`        | 条形高度         | `at`、`duration`、`target-h`（px）— 元素从 `height:0` 开始                                   |
+| `grow-x`        | 条形宽度         | `at`、`duration`、`target-w`（px）— 元素从 `width:0` 开始                                    |
+| `scale-pop`     | 弹出式进入       | `at`、`duration`                                                                                |
+| `blur-in`       | 从未聚焦到聚焦   | `at`、`duration`                                                                                |
+| `mask-reveal`   | 裁剪显现         | `at`、`duration`、`direction=left\|right\|top\|bottom`                                          |
+| `morph-to`      | 补间任意 CSS     | `at`、`duration`、`props='{...JSON...}'`                                                        |
+
+`data-anim-at` 是**相对于卡片的 startSec 的秒数**——在第 9 步将每个声明编译到 GSAP 时间线时，加上卡片的 `startSec` 以获得绝对时间，并量化到 1/fps。
 
 ### 9. 组装 Composition HTML
 
-暂存资源并写入 `$WORK_DIR/public/index.html`：
+准备资源并编写 `$WORK_DIR/public/index.html`：
 
 ```bash
 # SKILL_DIR is injected by the host ("Base directory for this skill: …")
@@ -977,57 +944,49 @@ ffmpeg -y -i "$VIDEO_PATH" -c:v libx264 -crf 18 -g 30 -keyint_min 30 \
 #### GSAP 语句速查表
 
 将每个 `data-anim` 属性编译为一条 GSAP 语句。时间为
-**绝对秒数** = card.startSec + data-anim-at，并量化至 1/fps。
+**绝对秒数** = card.startSec + data-anim-at，并量化为 1/fps。
 选择器为 `.card[data-card-id="X"] #elementId`。
 
-| data-anim                       | GSAP 语句模板                                                                                                                                                                                                      |
-| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `fade-in`                       | `tl.fromTo(SEL, { opacity: 0 }, { opacity: 1, duration: D, ease: 'power2.out' }, T);`                                                                                                                              |
-| `fade-out`                      | `tl.to(SEL, { opacity: 0, duration: D, ease: 'power2.in' }, T);`                                                                                                                                                   |
-| `slide-in`（from=left，dist=80） | `tl.fromTo(SEL, { opacity: 0, x: -80 }, { opacity: 1, x: 0, duration: D, ease: 'power2.out' }, T);`                                                                                                                |
-| `kinetic-chars`（pop）           | `tl.from(SEL + ' .char', { opacity: 0, y: 8, scale: 0.8, duration: D, ease: 'power2.out', stagger: S }, T);`                                                                                                       |
-| `count-up`                      | `(function(){const o={v:FROM};tl.to(o,{v:TO,duration:D,ease:'power2.out',onUpdate:function(){const el=document.querySelector(SEL);if(el)el.textContent=__fmt(o.v,'FMT');}},T);})();`                               |
+| data-anim                       | GSAP 语句模板                                                                                                                                                                                            |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `fade-in`                       | `tl.fromTo(SEL, { opacity: 0 }, { opacity: 1, duration: D, ease: 'power2.out' }, T);`                                                                                                                  |
+| `fade-out`                      | `tl.to(SEL, { opacity: 0, duration: D, ease: 'power2.in' }, T);`                                                                                                                                         |
+| `slide-in` (from=left, dist=80) | `tl.fromTo(SEL, { opacity: 0, x: -80 }, { opacity: 1, x: 0, duration: D, ease: 'power2.out' }, T);`                                                                                                    |
+| `kinetic-chars` (pop)           | `tl.from(SEL + ' .char', { opacity: 0, y: 8, scale: 0.8, duration: D, ease: 'power2.out', stagger: S }, T);`                                                                                           |
+| `count-up`                      | `(function(){const o={v:FROM};tl.to(o,{v:TO,duration:D,ease:'power2.out',onUpdate:function(){const el=document.querySelector(SEL);if(el)el.textContent=__fmt(o.v,'FMT');}},T);})();`                 |
 | `draw-path`                     | `(function(){const el=document.querySelector(SEL);if(el){const L=el.getTotalLength();tl.set(SEL,{strokeDasharray:L,strokeDashoffset:L},T);tl.to(SEL,{strokeDashoffset:0,duration:D,ease:'power2.inOut'},T);}})();` |
-| `grow-x`（target-w=W）           | `tl.fromTo(SEL, { width: 0 }, { width: W, duration: D, ease: 'power2.out' }, T);`                                                                                                                                  |
-| `grow-y`（target-h=H）           | `tl.fromTo(SEL, { height: 0 }, { height: H, duration: D, ease: 'power2.out' }, T);`                                                                                                                                |
-| `scale-pop`                     | `tl.fromTo(SEL, { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: D, ease: 'back.out(1.6)' }, T);`                                                                                                     |
-| `mask-reveal`（direction=left）  | `tl.fromTo(SEL, { clipPath: 'inset(0 100% 0 0)' }, { clipPath: 'inset(0 0 0 0)', duration: D, ease: 'power2.inOut' }, T);`                                                                                         |
+| `grow-x` (target-w=W)           | `tl.fromTo(SEL, { width: 0 }, { width: W, duration: D, ease: 'power2.out' }, T);`                                                                                                                       |
+| `grow-y` (target-h=H)           | `tl.fromTo(SEL, { height: 0 }, { height: H, duration: D, ease: 'power2.out' }, T);`                                                                                                                     |
+| `scale-pop`                     | `tl.fromTo(SEL, { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: D, ease: 'back.out(1.6)' }, T);`                                                                                        |
+| `mask-reveal` (direction=left)  | `tl.fromTo(SEL, { clipPath: 'inset(0 100% 0 0)' }, { clipPath: 'inset(0 0 0 0)', duration: D, ease: 'power2.inOut' }, T);`                                                                            |
 
 量化：`T = Math.round(absSec * fps) / fps`。在 30fps 下，最小步长为
 `1/30 ≈ 0.0333s`；在 JS 字面量中四舍五入到 4 位小数（`.toFixed(4)`）即可。
 
-#### 视频画面布局参考（按 `layout` 值）
+#### 视频构图参考（按 `layout` 值）
 
-视频容器的选择器为 `#video-wrap`。使用
-`tl.to('#video-wrap', { ...bounds }, T)` 在卡片之间为其边界变化添加动画。
-初始边界应通过元素的内联样式进行设置，以匹配 card-01 的
-布局。选择 0.5–0.7s 的过渡时长，并使用 `ease: 'power2.inOut'`。
+视频容器的选择器为 `#video-wrap`。使用 `tl.to('#video-wrap', { ...bounds }, T)` 在卡片之间为其边界设置动画。
+初始边界应以内联方式设置在元素上，使其匹配 card-01 的布局。选择 0.5–0.7s 的过渡时长，并使用
+`ease: 'power2.inOut'`。
 
-**装饰边框**（`clean` / `hairline` / `polaroid`）应作为
-`#video-wrap` 的**同级元素**，并在布局过渡期间跟随它。
-有关每种边框的放置方式
-HTML、建议的 CSS 以及适配的布局，请参阅
-[`references/frames/`](references/frames/)。简要规则：
-`overlay` 布局会禁用装饰边框（全出血视频会与边框装饰冲突）；
-PiP 布局已经有自己的药丸式处理
-（圆角 + 白色描边 + 阴影），因此仅在
-`split` / `stack` 上叠加装饰边框。
+**装饰性边框**（`clean` / `hairline` / `polaroid`）作为 `#video-wrap` 的**同级元素**存在，并在布局过渡期间跟随它变化。
+参见
+[`references/frames/`](references/frames/)，其中包含每种边框的放置 HTML、建议 CSS，以及适用的布局。快速规则：
+`overlay` 布局会抑制装饰性边框（全出血视频会与边框产生冲突）；PiP 布局已经自带胶囊样式（圆角 + 白色环线 + 阴影），因此只有在 `split` / `stack` 上添加装饰性边框。
 
-以下是各合成布局中 `#video-wrap` 的 **GSAP 目标值查找表**
-（横屏 1920×1080——纵屏和 4:5 的值请参阅 `references/layouts/*.html`，
-其中列出了全部三种宽高比）：
+**GSAP 目标查找表**：每种构图布局下的 `#video-wrap`（横向 1920×1080 — 对于竖屏和 4:5，请参见
+`references/layouts/*.html`，其中列出了全部三种比例）：
 
-| 合成布局                             | 典型 card.zone     | `#video-wrap` GSAP 目标值                                                  | 额外 css 类                                 |
-| ------------------------------------ | ----------------- | ------------------------------------------------------------------------- | ------------------------------------------ |
-| `split`                              | `side-panel`      | `{ left: 960, top: 0, width: 960, height: 1080 }`                         | —                                          |
-| `stack`                              | `lower-third`     | `{ left: 14, top: 14, width: 1892, height: 548 }`（顶部 52%）              | —                                          |
-| `pip`（右下角）                       | `fullscreen`      | `{ left: 1480, top: 760, width: 400, height: 300 }`                       | `pip-pill`（圆角 + 描边 + 阴影）             |
-| `pip`（左上角）                       | `fullscreen`      | `{ left: 40, top: 40, width: 400, height: 300 }`                          | `pip-pill`                                 |
-| `overlay`（视频全出血）               | `video-overlay`   | `{ left: 0, top: 0, width: 1920, height: 1080 }`（与默认值相比无变化）      | —                                          |
-| **隐藏视频**（纯图形时刻）             | `fullscreen`      | `{ opacity: 0 }`（或移出画布）                                             | —                                          |
+| 构图布局                         | 典型 card.zone     | `#video-wrap` GSAP 目标                                                   | 额外 css 类                              |
+| -------------------------------- | ------------------ | ------------------------------------------------------------------------- | ---------------------------------------- |
+| `split`                          | `side-panel`       | `{ left: 960, top: 0, width: 960, height: 1080 }`                         | —                                        |
+| `stack`                          | `lower-third`      | `{ left: 14, top: 14, width: 1892, height: 548 }`（顶部 52%）             | —                                        |
+| `pip`（右下角）                  | `fullscreen`       | `{ left: 1480, top: 760, width: 400, height: 300 }`                       | `pip-pill`（圆角 + 环线 + 阴影）         |
+| `pip`（左上角）                  | `fullscreen`       | `{ left: 40, top: 40, width: 400, height: 300 }`                          | `pip-pill`                               |
+| `overlay`（视频全出血）          | `video-overlay`    | `{ left: 0, top: 0, width: 1920, height: 1080 }`（与默认值不变）           | —                                        |
+| **隐藏视频**（纯图形时刻）       | `fullscreen`       | `{ opacity: 0 }`（或移出画布）                                            | —                                        |
 
-在进入或离开 pip 时刻时，如需切换 pip-pill 装饰效果
-（圆角 + 白色描边 + 投影）：
+进入或离开 PiP 时，使用以下代码切换 pip-pill 样式（圆角 + 白色环线 + 投影）：
 
 ```js
 // Enter pip — add chrome
@@ -1047,24 +1006,23 @@ tl.to(
 );
 ```
 
-**Card-host 的边界与区域相匹配**。使用第 6 步顶部的表格将卡片的 `zone` 解析为像素边界，然后将这些值写入 card-host 的内联 `style="left:Xpx;top:Ypx;width:Wpx;
-height:Hpx;..."`。对于 `video-overlay` 区域（叠加层方案），card-host 会填满整个画布——由 `.card .root` 中的 CSS 决定实际可见卡片所在的位置。
+**卡片宿主边界与区域匹配**。使用第 6 步顶部的表格将卡片的 `zone` 解析为像素边界，然后将这些边界写入卡片宿主的内联 `style="left:Xpx;top:Ypx;width:Wpx;height:Hpx;..."`。对于 `video-overlay` 区域（overlay 配方），卡片宿主会填满整个画布，实际可见卡片的位置由 `.card .root` 内的 CSS 决定。
 
 #### HyperFrames 布局 / 动画 QA 规则
 
-- 首先构建每张卡片的静态主视觉帧：即卡片完全可见且可读的时刻。
-- 确认视频、卡片、字幕/说明文字和图表不会发生非预期重叠。
-- 确认视频的隐藏区域已被画框裁剪，不会显示在预期边界之外。
-- 将一个已暂停的主时间线注册为 `window.__timelines["talking-head-recut"]`。
-- 在页面加载时同步构建时间线；不要使用 `async`、`setTimeout`、Promises 或媒体 `play()` 调用。
+- 先构建每张卡片的静态 hero 帧：即卡片完全可见且清晰易读的时刻。
+- 确认视频、卡片、字幕/说明文字和图表不会意外重叠。
+- 确认隐藏的视频区域会被帧裁剪，不会显示在预期边界之外。
+- 将一个暂停状态的主时间线注册为 `window.__timelines["talking-head-recut"]`。
+- 在页面加载时同步构建时间线；不得使用 `async`、`setTimeout`、Promise 或媒体 `play()` 调用。
 - 不要在渲染路径中使用 `Math.random()` 或 `Date.now()`。
-- 不要使用 `repeat: -1`；应根据视频时长计算有限的重复次数。
-- 对于运动效果，优先使用 GSAP 变换和透明度属性（`x`、`y`、`scale`、`rotation`、`opacity`），而不是布局属性（`top`、`left`、`width`、`height`）。
-- 为 `#video-wrap` 等包装元素添加动画，不要直接对视频元素的尺寸添加动画。
-- 避免同时通过多个时间线对同一元素的同一属性添加动画。
+- 不要使用 `repeat: -1`；根据视频时长计算有限的重复次数。
+- 动画优先使用 GSAP 的变换和透明度（`x`、`y`、`scale`、`rotation`、`opacity`），而不是布局属性（`top`、`left`、`width`、`height`）。
+- 为 `#video-wrap` 等包装器设置动画，不要直接改变视频元素的尺寸。
+- 避免在同一时间由多个时间线对同一元素的同一属性设置动画。
 - 使用 `data-track-index`，不要使用 `data-layer`；使用 `data-duration`，不要使用 `data-end`。
-- 每个定时元素（`card-host`、子合成等）都应在其自身类之外包含 `class="clip"`——例如 `class="card-host clip"`。可见性本身由 `data-start` / `data-duration` 驱动：无论是否存在此类，运行时都会将每个 `[data-start]` 元素限制在其时间窗口内。`.clip` 是 Studio 和 GSAP 剪辑所有权规则用来识别剪辑的标记，因此遗漏它会使元素更难编辑和进行 lint 检查（lint：`timed_element_missing_clip_class`，警告）。
-- 对于 body / 全局 `font-family`，请列出**具体的字体名称**（`'Inter', 'Caveat', …`），不要使用 `var(--font-family)` 这样的 CSS 变量。HyperFrames 字体解析器在静态分析期间不会展开 CSS 变量（lint：`font_family_without_font_face`）。卡片内部仍可使用 `var(--font-family)`，因为其 `@font-face` 声明会被加载。
+- 每个定时元素（`card-host`、子合成等）都应在自身类名之外包含 `class="clip"`，例如 `class="card-host clip"`。可见性由 `data-start` / `data-duration` 驱动：运行时会将每个 `[data-start]` 元素限制在其时间窗口内，无论该类是否存在。`.clip` 是 Studio 和 GSAP clip 所有权规则用来识别剪辑的标记，缺少它会使元素更难编辑和进行 lint（lint: `timed_element_missing_clip_class`，警告）。
+- 对于 body / 全局 `font-family`，请列出**具体的字体名称**（`'Inter', 'Caveat', …`），不要使用 CSS 变量，例如 `var(--font-family)`。HyperFrames 字体解析器在静态分析期间不会展开 CSS 变量（lint: `font_family_without_font_face`）。卡片内部仍可使用 `var(--font-family)`，因为它们的 `@font-face` 声明会被加载。
 
 ### 10. 渲染为 MP4
 
@@ -1077,10 +1035,13 @@ PRODUCER_BROWSER_GPU_MODE=hardware npx hyperframes render public \
 ```
 
 `hyperframes render <dir>` 会读取 `<dir>/index.html` 并生成 MP4。
-规范合成会将可视 `<video>` 保持为静音状态，并将同一源挂载为根 `#source-audio` 轨道，因此渲染后的 MP4 会保留 talking-head 音频，无需手动重新封装。这里使用独立的音轨，而不是 `data-has-audio="true"`，从而可以在时间线上单独控制其音量和闪避效果。
-强烈建议在 macOS 上使用 `PRODUCER_BROWSER_GPU_MODE=hardware` 标志（或 `--browser-gpu`）——仅使用软件的 Chrome 渲染在大多数笔记本电脑上都会超时。
+规范合成会将可视视频 `<video>` 静音，并将相同的源挂载为根级别的
+`#source-audio` 音轨，因此渲染出的 MP4 会保留 talking-head 音频，无需手动重新混流。
+这会使用独立的音频轨道，而不是 `data-has-audio="true"`，因此其音量和闪避效果可以在时间线上独立控制。
+在 macOS 上强烈建议使用 `PRODUCER_BROWSER_GPU_MODE=hardware`（或 `--browser-gpu`）标志，因为仅使用软件渲染的 Chrome
+在大多数笔记本电脑上都会超时。
 
-为了在完整渲染前进行健全性检查，请在特定时间戳截取一帧：
+在完整渲染前进行健全性检查，捕获特定时间戳处的单帧：
 
 ```bash
 npx hyperframes snapshot public --at 5    # → public/snapshots/frame-00-at-5s.png (a single --at ignores --out)
@@ -1093,16 +1054,16 @@ npx hyperframes snapshot public --at 5    # → public/snapshots/frame-00-at-5s.
 - 工作目录路径
 - `storyboard.json`（你设计的卡片大纲）
 - `public/cards/*.html`（每张卡片对应一个 HTML 文件）
-- `public/index.html`（组装后的合成页面）
+- `public/index.html`（组装后的合成内容）
 - `output.mp4`（最终视频）
 - 使用的 ASR 提供商
-- 卡片数量以及选择这些卡片的方式（用一句话说明）
-- 任何缺失的密钥或质量注意事项
+- 卡片数量及选择方式（用 1 句话说明）
+- 缺少的键或质量方面的注意事项
 
-**可选的实时预览（仅在请求时提供）。** 剪辑会在 `public/index.html` 中保持不变地播放，并在其上方显示叠加层，因此可以进行忠实预览。**运行过程中不要打开它。** 当用户提出请求时，请在渲染完成**之后**启动一个长期运行的服务器，并报告其 URL：
+**可选的实时预览（仅在用户要求时）。**片段会在 `public/index.html` 中原样播放，并在其上叠加覆盖层，因此预览效果与实际内容一致。**运行期间不要打开它。**当用户提出请求时，在渲染完成后启动一个长时间运行的服务器，并报告 URL：
 
 ```bash
 (cd "$WORK_DIR/public" && npx hyperframes preview --background)   # or `npx hyperframes play` for a shareable link
 ```
 
-除非用户提出要求，否则不要删除工作目录。
+除非用户要求，否则不要删除工作目录。

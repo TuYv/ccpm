@@ -1,7 +1,7 @@
 {
   "id": "khazp-vibe-coding-prompt-template-vibe-workflow",
   "name": "vibe-workflow",
-  "description": "Route new projects, existing projects, and broken projects to the appropriate planning, change, or debugging procedure.",
+  "description": "Select the appropriate planning, implementation, or debugging workflow for an app project.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/KhazP/vibe-coding-prompt-template/blob/main/workflow/skills/vibe-workflow/SKILL.md",
     "path": "workflow/skills/vibe-workflow/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-10T10:51:25.198Z",
-    "stars": 3054,
+    "discovered_at": "2026-09-10T15:36:20.226Z",
+    "stars": 3057,
     "language": "TypeScript",
-    "pushed_at": "2026-09-05T14:41:52Z",
+    "pushed_at": "2026-09-10T12:19:12Z",
     "license": "MIT"
   },
-  "summary_zh": "根据项目状态将新项目、现有项目或故障项目分流到合适的规划、变更或调试流程，帮助团队快速选择正确的处理方式。"
+  "summary_zh": "根据项目需求为应用开发选择合适的规划、实现或调试工作流，帮助团队更高效地推进项目。"
 }

@@ -1,0 +1,26 @@
+{
+  "id": "luongnv89-claude-howto-lesson-quiz",
+  "name": "lesson-quiz",
+  "description": "Test a learner on a single Claude Code tutorial lesson (01-10) with 10 questions, scoring answers and flagging weak spots. Use before, during, or after a lesson. Don't use for whole-tutorial assessment or explaining a topic instead of testing it.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "luongnv89",
+  "install_path": ".claude/skills/lesson-quiz/SKILL.md",
+  "source": {
+    "repo": "luongnv89/claude-howto",
+    "url": "https://github.com/luongnv89/claude-howto/blob/main/.claude/skills/lesson-quiz/SKILL.md",
+    "path": ".claude/skills/lesson-quiz/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-10T15:33:14.915Z",
+    "stars": 41425,
+    "language": "Python",
+    "pushed_at": "2026-09-06T09:04:15Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于针对 Claude Code 单节教程进行 10 题测验并评分，找出薄弱环节，适合在学习前、中或后检查掌握情况。"
+}

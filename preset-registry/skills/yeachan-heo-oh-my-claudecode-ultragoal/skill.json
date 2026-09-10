@@ -1,0 +1,26 @@
+{
+  "id": "yeachan-heo-oh-my-claudecode-ultragoal",
+  "name": "ultragoal",
+  "description": "Durable multi-goal workflow that persists plan/ledger artifacts under .omc/ultragoal and prints Claude /goal handoff text for the active session",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Yeachan-Heo",
+  "install_path": ".claude/skills/ultragoal/SKILL.md",
+  "source": {
+    "repo": "Yeachan-Heo/oh-my-claudecode",
+    "url": "https://github.com/Yeachan-Heo/oh-my-claudecode/blob/main/skills/ultragoal/SKILL.md",
+    "path": "skills/ultragoal/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-10T14:45:19.117Z",
+    "stars": 39085,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-09T21:16:35Z",
+    "license": "MIT"
+  },
+  "summary_zh": "一种持久化多目标工作流，将计划和账本保存到 .omc/ultragoal，并为当前会话生成 Claude /goal 交接文本，适合管理复杂任务。"
+}

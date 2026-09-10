@@ -1,0 +1,25 @@
+{
+  "id": "yeachan-heo-oh-my-claudecode-ai-slop-cleaner",
+  "name": "ai-slop-cleaner",
+  "description": "Clean AI-generated code slop with a regression-safe, deletion-first workflow and optional reviewer-only mode",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Yeachan-Heo",
+  "install_path": ".claude/skills/ai-slop-cleaner/SKILL.md",
+  "source": {
+    "repo": "Yeachan-Heo/oh-my-claudecode",
+    "url": "https://github.com/Yeachan-Heo/oh-my-claudecode/blob/main/skills/ai-slop-cleaner/SKILL.md",
+    "path": "skills/ai-slop-cleaner/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-10T14:45:12.557Z",
+    "stars": 39085,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-09T21:16:35Z",
+    "license": "MIT"
+  }
+}
