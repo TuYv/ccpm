@@ -1,0 +1,26 @@
+{
+  "id": "k-dense-ai-scientific-agent-skills-folklore-variant-evidence",
+  "name": "folklore-variant-evidence",
+  "description": "Retrieve ClinGen gene-disease validity assertions for a public gene or disease, and review source-linked public evidence and literature for one supported GRCh38 germline nuclear SNV or simple indel through Folklore Clinical Variant Interpretation MCP. Use when a scientific agent must branch deterministically on resolved, ambiguous, not-found, invalid, unsupported, or unavailable variant outcomes; chain a resolved public variant into related literature or publication details; or preserve evidence",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "K-Dense-AI",
+  "install_path": ".claude/skills/folklore-variant-evidence/SKILL.md",
+  "source": {
+    "repo": "K-Dense-AI/scientific-agent-skills",
+    "url": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/skills/folklore-variant-evidence/SKILL.md",
+    "path": "skills/folklore-variant-evidence/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-11T18:43:29.330Z",
+    "stars": 44449,
+    "language": "Python",
+    "pushed_at": "2026-09-11T17:15:37Z",
+    "license": "MIT"
+  },
+  "summary_zh": "通过 Folklore 临床变异解读 MCP，检索 ClinGen 基因与疾病有效性证据，核查 GRCh38 生殖系 SNV 或简单插入缺失变异，适合科研代理进行确定性分支和文献追踪。"
+}

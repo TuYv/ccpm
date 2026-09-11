@@ -1,0 +1,26 @@
+{
+  "id": "scarletkc-agents-antigravity-cli",
+  "name": "antigravity-cli",
+  "description": "Delegate bounded investigation, review, or implementation tasks to Antigravity CLI from a supervising agent. Includes a background client for task progress, follow-up prompts, conversation recovery, cancellation, and visible failures.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "scarletkc",
+  "install_path": ".claude/skills/antigravity-cli/SKILL.md",
+  "source": {
+    "repo": "scarletkc/agents",
+    "url": "https://github.com/scarletkc/agents/blob/main/skills/antigravity-cli/SKILL.md",
+    "path": "skills/antigravity-cli/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-11T19:38:51.319Z",
+    "stars": 208,
+    "language": "Python",
+    "pushed_at": "2026-09-11T15:10:46Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "一款让主控智能体委派调研、审查和开发任务的命令行工具，适合后台跟踪进度并处理追问、恢复或取消。"
+}
