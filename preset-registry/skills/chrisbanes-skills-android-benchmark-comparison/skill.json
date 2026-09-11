@@ -1,0 +1,26 @@
+{
+  "id": "chrisbanes-skills-android-benchmark-comparison",
+  "name": "android-benchmark-comparison",
+  "description": "Use when comparing physical Android benchmark configurations, investigating inconsistent rankings, or selecting an Android default from measured results. Do not use for code-level Compose performance diagnosis without a configuration comparison.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "chrisbanes",
+  "install_path": ".claude/skills/android-benchmark-comparison/SKILL.md",
+  "source": {
+    "repo": "chrisbanes/skills",
+    "url": "https://github.com/chrisbanes/skills/blob/main/skills/android-benchmark-comparison/SKILL.md",
+    "path": "skills/android-benchmark-comparison/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-11T22:45:44.634Z",
+    "stars": 1032,
+    "language": "Python",
+    "pushed_at": "2026-09-11T18:55:03Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "用于对比实体 Android 设备的基准配置、排查排名波动，并根据实测结果选择合适的默认配置。"
+}
