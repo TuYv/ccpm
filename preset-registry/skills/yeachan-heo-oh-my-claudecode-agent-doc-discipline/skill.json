@@ -1,0 +1,26 @@
+{
+  "id": "yeachan-heo-oh-my-claudecode-agent-doc-discipline",
+  "name": "agent-doc-discipline",
+  "description": "Writing-time discipline for documents agents consume (the five surfaces, specs, tickets, .omc/skills/) — every rule checkable and carrying a why, steps before reference, one meaning in one home, no restating what the environment already says. Mandatory at drydock seed generation and the launch C5 sediment pass; opt-in for any other agent-facing doc edit. The companion of minimal-code-discipline: that one disciplines code, this one disciplines papers.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Yeachan-Heo",
+  "install_path": ".claude/skills/agent-doc-discipline/SKILL.md",
+  "source": {
+    "repo": "Yeachan-Heo/oh-my-claudecode",
+    "url": "https://github.com/Yeachan-Heo/oh-my-claudecode/blob/main/skills/agent-doc-discipline/SKILL.md",
+    "path": "skills/agent-doc-discipline/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-11T14:43:43.652Z",
+    "stars": 39100,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-11T12:29:16Z",
+    "license": "MIT"
+  },
+  "summary_zh": "面向智能体消费文档的写作规范，确保规则可检查且说明原因，减少重复和歧义，适合规范项目文档、工单及技能文件的编写与审查。"
+}

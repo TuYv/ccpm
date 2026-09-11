@@ -1,0 +1,26 @@
+{
+  "id": "yeachan-heo-oh-my-claudecode-harbor",
+  "name": "harbor",
+  "description": "Harbor intake for external work — the captain only handles unresolved decisions. Sweeps incoming issues and PRs, verifies every claim before disposition, reuses every decision already made, and hands the maintainer a docket whose pending items each carry one question with options, recommendation, impact and evidence. Agent-autonomous for facts and for actions covered by standing authorization; signed for every new judgment. Never merges.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Yeachan-Heo",
+  "install_path": ".claude/skills/harbor/SKILL.md",
+  "source": {
+    "repo": "Yeachan-Heo/oh-my-claudecode",
+    "url": "https://github.com/Yeachan-Heo/oh-my-claudecode/blob/main/skills/harbor/SKILL.md",
+    "path": "skills/harbor/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-11T14:43:46.227Z",
+    "stars": 39100,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-11T12:29:16Z",
+    "license": "MIT"
+  },
+  "summary_zh": "面向外部贡献的智能分流工具，自动核实 Issue 和 PR、复用既有决策，仅将待定事项整理成带选项、建议、影响和证据的决策清单交给维护者。"
+}
