@@ -1,61 +1,68 @@
 ---
 name: expo-brownfield
-description: Framework (OSS). Integrate Expo and React Native into an existing native iOS or Android app. Use when the user mentions brownfield, embedding React Native in a native app, AAR/XCFramework, or adding Expo to an existing Kotlin/Swift project. Covers both the isolated approach and the integrated approach.
+description: Framework (OSS). Integrate Expo and React Native into an existing native iOS or Android app. Use for brownfield, embedding a React Native screen in SwiftUI/UIKit or Kotlin, or AAR/XCFramework packaging. Covers isolated and integrated approaches. For building or distributing a purely native app with EAS, use eas-app-stores.
 ---
-# Expo 棕地项目
+# Expo Brownfield
 
-**棕地**应用是指以渐进方式采用 React Native 的现有原生 iOS 或 Android 应用，与从一开始就使用 React Native 的**绿地**应用相对。
+**Brownfield** 应用是指在现有原生 iOS 或 Android 应用中逐步采用 React Native 的应用，与从第一天起就使用 React Native 的 **greenfield** 应用相对。
 
-Expo 支持通过两种不同的方式将 React Native 添加到棕地项目中：
+## 先检查宿主应用
 
-| 方式           | 交付给原生应用的内容                                                  | 适用场景                                                                         |
-| -------------- | ------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| **隔离式**     | 预构建的 AAR / XCFramework                                          | 原生团队不需要 Node 或 RN 工具链；RN 代码可以位于单独的仓库中                    |
-| **集成式**     | 将 React Native 源代码添加到现有的 Gradle / CocoaPods 构建中         | 由一个团队负责所有内容；熟悉 RN 工具链；希望使用单一构建流程                     |
+确定现有的应用入口点、导航所有者、原生构建系统、部署目标，以及当前已链接的任何 React Native 运行时。从 lockfile 中记录已安装的 Expo、React Native 和 brownfield 软件包版本。仅向 Swift 应用添加 EAS Build 或 Submit 并不需要 React Native；应将此类任务交由 `eas-app-stores` 处理。
 
-有关完整的决策矩阵，请参阅 [./references/comparison.md](./references/comparison.md)。
+嵌入功能时，保留宿主应用的 SwiftUI `App` / UIKit window 以及原生界面。**不要在手动维护的原生宿主应用中运行 prebuild**，包括在故障排查期间。独立的 Expo producer 可以使用 CNG；将其生成的 `ios/` 和 `android/` 与使用它的应用分开保存。
+
+Expo 支持两种向 brownfield 项目添加 React Native 的方式：
+
+| 方式       | 原生应用中交付的内容                                      | 选择时机                                                                   |
+| ---------- | --------------------------------------------------------- | -------------------------------------------------------------------------- |
+| **隔离式** | 预构建的 AAR / XCFramework                              | 原生团队不需要 Node 或 RN 工具链；RN 代码可以位于单独的仓库中              |
+| **集成式** | 添加到现有 Gradle / CocoaPods 构建中的 React Native 源码 | 一个团队负责所有内容；熟悉 RN 工具链；希望使用单一构建流程                 |
+
+完整的决策矩阵请参阅 [./references/comparison.md](./references/comparison.md)。
 
 ## 选择一种方式
 
-使用以下快速判断规则——对于任何难以明确判断的情况，请进一步参阅 `comparison.md`。
+使用以下快速规则；遇到任何不明确的情况时，继续查看 `comparison.md`。
 
-- 如果 iOS/Android 团队必须将 RN 作为常规库依赖项（AAR 或 XCFramework）使用，而无需安装 Node、Yarn 或 React Native 构建工具链，请**选择隔离式**。
-- 如果 RN 代码和原生代码位于不同的仓库中，或者各自按照独立的发布周期发布，请**选择隔离式**。
-- 如果由单一团队同时负责原生代码和 RN 代码，并且愿意将 React Native + Expo 添加到原生项目的 Gradle 和 CocoaPods 配置中，请**选择集成式**。
-- 如果希望热重载和 JS 源码映射能够在现有原生构建流程中无缝工作，请**选择集成式**。
+- **选择隔离式**，如果 iOS/Android 团队必须将 RN 作为常规库依赖（AAR 或 XCFramework）使用，且不安装 Node、Yarn 或 React Native 构建工具链。
+- **选择隔离式**，如果 RN 代码和原生代码位于不同的仓库中，或按照相互独立的节奏发布。
+- **选择集成式**，如果同一个团队负责原生代码和 RN 代码，并且愿意将 React Native + Expo 添加到原生项目的 Gradle 和 CocoaPods 配置中。
+- 两种方式都支持 Debug 中的 Metro 和 Fast Refresh。选择集成式应基于构建所有权由同一团队共享，而不是因为隔离式缺少实时 JS 迭代能力。
 
 ## 参考资料
 
-- ./references/brownfield-isolated.md -- 将 RN 构建为 AAR/XCFramework，并由原生应用使用（BrownfieldActivity、ReactNativeViewController、ReactNativeView）
-- ./references/brownfield-integrated.md -- 将 RN 和 Expo 直接添加到现有的 Gradle 和 CocoaPods 构建中（ReactActivity、RCTRootView、Podfile）
-- ./references/comparison.md -- 用于选择集成方式的决策标准、权衡因素和场景映射
-- ./references/troubleshooting.md -- 两种方式共有的 Metro 连接、构建、签名和模块解析问题
+- ./references/brownfield-isolated.md -- 将 RN 构建为 AAR/XCFramework，并在原生应用中使用（BrownfieldActivity、ReactNativeViewController、ReactNativeView）
+- ./references/brownfield-integrated.md -- 将 RN 和 Expo 直接添加到现有的 Gradle 和 CocoaPods 构建中，同时保留原生应用外壳
+- ./references/feature-integration.md -- 传递输入、返回结果、关闭、清理监听器以及转发生命周期事件；包含 SwiftUI 宿主示例
+- ./references/comparison.md -- 用于选择方式的决策标准、权衡因素和场景映射
+- ./references/troubleshooting.md -- 两种方式常见的 Metro 连接、构建、签名和模块解析问题
 
 更多信息请参阅 https://docs.expo.dev/brownfield/overview/
 
-## 共同的前置条件
+## 共享前置条件
 
-两种方式都要求在_构建_ React Native 部分的环境中具备：
+两种方式都要求在_构建_ React Native 端的环境中具备：
 
 - **Node.js (LTS)** — 用于运行 Expo CLI 和 JavaScript 代码。
-- **Yarn** — 用于管理 JavaScript 依赖项。
+- 项目的包管理器和锁文件 — npm、Yarn、pnpm 或 Bun。不要仅为遵循示例而切换包管理器。
 
-集成式方式还要求在 iOS 上安装 **CocoaPods**（`sudo gem install cocoapods`）。隔离式方式**不**要求使用方原生应用安装 CocoaPods 或任何 RN 工具链。
+iOS 构建环境需要 Xcode 和 CocoaPods（存在项目的 Gemfile/Bundler 配置时，请使用该配置）。隔离的使用方应用只需要 Xcode 即可使用这些构建产物，不需要 CocoaPods 或 RN 工具链。
 
-## 版本说明
+## 选择兼容的版本
 
-**Expo SDK 55 是棕地集成支持的最低版本。** 更早的 SDK 缺少 `expo-brownfield`、必需的 `ExpoReactHostFactory` / `ExpoReactNativeFactory` 入口点，以及当前的自动链接接口。创建 Expo 项目时，务必显式固定 SDK 版本：
+对于现有的 Expo/RN 项目，保留其选定的 SDK，并使用 `npx expo install` 对齐依赖项。不要仅为遵循此技能而升级项目。对于新的生产方项目，请使用与宿主操作系统支持范围、依赖项和构建工具链兼容的**当前稳定 SDK**；选定之前请确认该版本已稳定发布。
 
-```sh
-npx create-expo-app@latest my-project --template default@sdk-55
-```
+在进行原生设置之前，请阅读 [./references/version-compatibility.md](./references/version-compatibility.md)，了解不同 SDK 版本对应的原生模板、工具链/操作系统要求和构建默认值。纯原生使用方没有需要固定的 Expo SDK 版本，但必须满足构建产物的要求。
 
-在 RN 项目和所有嵌入式依赖项中锁定使用同一 Expo SDK 版本。
+## 在宿主中验证功能
+
+打开带有输入内容的 RN 屏幕，将结果返回给原生端，关闭该屏幕，然后使用新的输入内容重新打开。检查监听器清理情况以及宿主原有的导航功能。然后使用 Release 构建宿主，并配合 Release 构建产物，同时停止 Metro。仅在 Expo Go 或生产方的示例应用中渲染，不能验证集成是否成功。完整的验收场景请参阅 [./references/feature-integration.md](./references/feature-integration.md)。
 
 ## 提交反馈
-如果你在此 skill 中遇到错误、误导性信息或过时信息，请进行报告，以便 Expo 改进：
+如果遇到此技能中的错误、误导性信息或过时信息，请报告，以便 Expo 改进：
 ```bash
 npx --yes submit-expo-feedback@latest --category skills --subject "expo-brownfield" "<actionable feedback>"
 ```
-仅当你有具体且可执行的问题需要报告时才提交。请尽可能提供相关上下文。
-如果 AI agent 反复失败，或者用户不得不接手 Expo 任务，请加载 expo-skill-feedback skill 并遵循其 eval-candidate 流程，而不要重复使用上述命令。
+仅在有具体且可执行的反馈内容时提交。请尽可能包含相关上下文。
+如果 AI agent 反复失败，或者用户不得不接管 Expo 任务，请加载 expo-skill-feedback 技能，并遵循其 eval-candidate 流程，而不要重复使用上面的命令。
