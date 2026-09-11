@@ -1,0 +1,26 @@
+{
+  "id": "k-dense-ai-claude-scientific-skills-datalad",
+  "name": "datalad",
+  "description": "Retrieve, version, and publish scientific datasets with DataLad and git-annex, and capture computational provenance with datalad run, rerun, and containers-run. Use when cloning or fetching data from OpenNeuro, DANDI, datasets.datalad.org, or any DataLad dataset; when a file in a dataset reads as a broken symlink or a small pointer instead of real data; when an analysis needs a machine-readable record of how each output was produced so it can be re-executed; or when publishing a dataset to sibli",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "K-Dense-AI",
+  "install_path": ".claude/skills/datalad/SKILL.md",
+  "source": {
+    "repo": "K-Dense-AI/claude-scientific-skills",
+    "url": "https://github.com/K-Dense-AI/claude-scientific-skills/blob/main/skills/datalad/SKILL.md",
+    "path": "skills/datalad/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-11T00:21:27.962Z",
+    "stars": 44297,
+    "language": "Python",
+    "pushed_at": "2026-09-10T22:54:38Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于获取、版本管理和发布科学数据集，并记录分析过程与可复现环境，适合处理大型数据、损坏链接及 OpenNeuro、DANDI 等数据源。"
+}

@@ -1,7 +1,7 @@
 {
   "id": "getsentry-sentry-generate-migration",
   "name": "generate-migration",
-  "description": "Generate Django database migrations for Sentry. Use when creating migrations, adding/removing columns or tables, adding indexes, or resolving migration conflicts.",
+  "description": "Generate or review Django database migrations for Sentry. Use when creating or reviewing migrations and data migrations, adding/removing columns or tables, adding indexes, or resolving migration conflicts.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/getsentry/sentry/blob/master/.agents/skills/generate-migration/SKILL.md",
     "path": ".agents/skills/generate-migration/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-09-10T21:54:46.201Z",
+    "discovered_at": "2026-09-11T00:26:26.954Z",
     "stars": 44757,
     "language": "Python",
-    "pushed_at": "2026-09-10T21:50:48Z",
+    "pushed_at": "2026-09-11T00:21:30Z",
     "license": null
   },
-  "summary_zh": "专为Sentry生成Django数据库迁移的工具，适合在调整数据库结构或解决迁移冲突时使用，帮你轻松搞定变更同步。"
+  "summary_zh": "用于生成和审查 Sentry 的 Django 数据库迁移，适合新增或删除字段、表和索引，以及编写数据迁移、解决迁移冲突。"
 }
