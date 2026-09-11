@@ -1,0 +1,26 @@
+{
+  "id": "qwenlm-qwen-code-workflow-authoring",
+  "name": "workflow-authoring",
+  "description": "Reference for writing a Workflow tool script (script API and gotchas, agent() options, pipeline() vs parallel(), verification and convergence patterns, resume, worked example). Load before authoring a script for a workflow the user already opted into; it does not itself authorize running one.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "QwenLM",
+  "install_path": ".claude/skills/workflow-authoring/SKILL.md",
+  "source": {
+    "repo": "QwenLM/qwen-code",
+    "url": "https://github.com/QwenLM/qwen-code/blob/main/packages/core/src/skills/bundled/workflow-authoring/SKILL.md",
+    "path": "packages/core/src/skills/bundled/workflow-authoring/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-11T10:46:37.458Z",
+    "stars": 27766,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-11T10:43:38Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "介绍 Workflow 工具脚本的编写方法，涵盖脚本 API、代理配置、并行与流水线、验证收敛及恢复机制，适合已获用户授权后设计工作流。"
+}

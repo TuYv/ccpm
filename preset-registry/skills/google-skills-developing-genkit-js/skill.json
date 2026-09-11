@@ -1,0 +1,26 @@
+{
+  "id": "google-skills-developing-genkit-js",
+  "name": "developing-genkit-js",
+  "description": "Develop AI-powered applications using Genkit in Node.js/TypeScript. Use when the user asks about Genkit, AI agents, flows, or tools in JavaScript/TypeScript, or when encountering Genkit errors, validation issues, type errors, or API problems.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/developing-genkit-js/SKILL.md",
+  "source": {
+    "repo": "google/skills",
+    "url": "https://github.com/google/skills/blob/main/skills/cloud/developing-genkit-js/SKILL.md",
+    "path": "skills/cloud/developing-genkit-js/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-11T09:53:11.134Z",
+    "stars": 19765,
+    "language": "Python",
+    "pushed_at": "2026-09-11T08:43:02Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "用于在 Node.js/TypeScript 中基于 Genkit 开发 AI 应用，适合构建智能代理、流程和工具，或排查相关错误、验证及 API 问题。"
+}

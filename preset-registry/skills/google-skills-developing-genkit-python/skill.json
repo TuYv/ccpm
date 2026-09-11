@@ -1,0 +1,26 @@
+{
+  "id": "google-skills-developing-genkit-python",
+  "name": "developing-genkit-python",
+  "description": "Develop AI-powered applications using Genkit in Python. Use when the user asks about Genkit, AI agents, flows, or tools in Python, or when encountering Genkit errors, import issues, or API problems.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/developing-genkit-python/SKILL.md",
+  "source": {
+    "repo": "google/skills",
+    "url": "https://github.com/google/skills/blob/main/skills/cloud/developing-genkit-python/SKILL.md",
+    "path": "skills/cloud/developing-genkit-python/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-11T09:53:11.322Z",
+    "stars": 19765,
+    "language": "Python",
+    "pushed_at": "2026-09-11T08:43:02Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "用于在 Python 中基于 Genkit 构建 AI 应用、智能代理和流程，并排查相关工具调用、导入及 API 问题。"
+}
