@@ -1,0 +1,26 @@
+{
+  "id": "levnikolaevich-claude-code-skills-ln-55-test-suite-auditor",
+  "name": "ln-55-test-suite-auditor",
+  "description": "Audits existing tests for risk coverage, reliable oracles and maintenance value; does not edit tests.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "levnikolaevich",
+  "install_path": ".claude/skills/ln-55-test-suite-auditor/SKILL.md",
+  "source": {
+    "repo": "levnikolaevich/claude-code-skills",
+    "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/quality-assurance-suite/skills/ln-55-test-suite-auditor/SKILL.md",
+    "path": "plugins/quality-assurance-suite/skills/ln-55-test-suite-auditor/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-09-12T10:21:41.101Z",
+    "stars": 559,
+    "language": "PowerShell",
+    "pushed_at": "2026-09-12T09:07:16Z",
+    "license": "MIT"
+  },
+  "summary_zh": "审计现有测试的风险覆盖、断言可靠性和维护价值，帮助识别测试盲区与低价值用例，但不会修改测试代码。"
+}

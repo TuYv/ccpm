@@ -1,0 +1,26 @@
+{
+  "id": "levnikolaevich-claude-code-skills-ln-31-delivery-plan-builder",
+  "name": "ln-31-delivery-plan-builder",
+  "description": "Builds dependency-ordered delivery plans from requirements and repository evidence; read-only.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "levnikolaevich",
+  "install_path": ".claude/skills/ln-31-delivery-plan-builder/SKILL.md",
+  "source": {
+    "repo": "levnikolaevich/claude-code-skills",
+    "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/delivery-planning-suite/skills/ln-31-delivery-plan-builder/SKILL.md",
+    "path": "plugins/delivery-planning-suite/skills/ln-31-delivery-plan-builder/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-09-12T10:21:38.577Z",
+    "stars": 559,
+    "language": "PowerShell",
+    "pushed_at": "2026-09-12T09:07:16Z",
+    "license": "MIT"
+  },
+  "summary_zh": "只读分析需求与仓库证据，按依赖关系生成有序交付计划，适合规划复杂项目的实施步骤。"
+}

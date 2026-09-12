@@ -1,0 +1,26 @@
+{
+  "id": "levnikolaevich-claude-code-skills-ln-23-system-design-proposal-builder",
+  "name": "ln-23-system-design-proposal-builder",
+  "description": "Designs target system boundaries, contracts and tradeoffs from requirements; does not plan tasks or implement.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "levnikolaevich",
+  "install_path": ".claude/skills/ln-23-system-design-proposal-builder/SKILL.md",
+  "source": {
+    "repo": "levnikolaevich/claude-code-skills",
+    "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/architecture-suite/skills/ln-23-system-design-proposal-builder/SKILL.md",
+    "path": "plugins/architecture-suite/skills/ln-23-system-design-proposal-builder/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-09-12T10:21:38.111Z",
+    "stars": 559,
+    "language": "PowerShell",
+    "pushed_at": "2026-09-12T09:07:16Z",
+    "license": "MIT"
+  },
+  "summary_zh": "根据需求设计目标系统边界、接口契约与技术权衡，适合在开发前明确架构方案，但不负责任务规划或具体实现。"
+}

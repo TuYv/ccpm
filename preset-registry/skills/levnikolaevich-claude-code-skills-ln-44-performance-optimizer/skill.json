@@ -1,0 +1,26 @@
+{
+  "id": "levnikolaevich-claude-code-skills-ln-44-performance-optimizer",
+  "name": "ln-44-performance-optimizer",
+  "description": "Profiles and improves a measured performance bottleneck; retains only verified improvements.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "levnikolaevich",
+  "install_path": ".claude/skills/ln-44-performance-optimizer/SKILL.md",
+  "source": {
+    "repo": "levnikolaevich/claude-code-skills",
+    "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/implementation-suite/skills/ln-44-performance-optimizer/SKILL.md",
+    "path": "plugins/implementation-suite/skills/ln-44-performance-optimizer/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-09-12T10:21:39.834Z",
+    "stars": 559,
+    "language": "PowerShell",
+    "pushed_at": "2026-09-12T09:07:16Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于定位和优化经过测量的性能瓶颈，仅保留经验证确实有效的改进，适合性能调优与回归验证场景。"
+}

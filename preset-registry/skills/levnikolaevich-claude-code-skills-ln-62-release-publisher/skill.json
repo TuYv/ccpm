@@ -1,0 +1,26 @@
+{
+  "id": "levnikolaevich-claude-code-skills-ln-62-release-publisher",
+  "name": "ln-62-release-publisher",
+  "description": "Prepares and publishes an explicitly requested tagged GitHub release; does not deploy applications.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "levnikolaevich",
+  "install_path": ".claude/skills/ln-62-release-publisher/SKILL.md",
+  "source": {
+    "repo": "levnikolaevich/claude-code-skills",
+    "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/delivery-suite/skills/ln-62-release-publisher/SKILL.md",
+    "path": "plugins/delivery-suite/skills/ln-62-release-publisher/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-09-12T10:21:39.083Z",
+    "stars": 559,
+    "language": "PowerShell",
+    "pushed_at": "2026-09-12T09:07:16Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于准备并发布用户明确指定标签的 GitHub Release，适合管理版本发布流程，但不负责部署应用。"
+}

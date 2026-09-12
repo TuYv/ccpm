@@ -1,0 +1,26 @@
+{
+  "id": "levnikolaevich-claude-code-skills-ln-25-architecture-diagram-builder",
+  "name": "ln-25-architecture-diagram-builder",
+  "description": "Creates evidence-backed current or target architecture diagrams; not UI design.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "levnikolaevich",
+  "install_path": ".claude/skills/ln-25-architecture-diagram-builder/SKILL.md",
+  "source": {
+    "repo": "levnikolaevich/claude-code-skills",
+    "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/architecture-suite/skills/ln-25-architecture-diagram-builder/SKILL.md",
+    "path": "plugins/architecture-suite/skills/ln-25-architecture-diagram-builder/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-09-12T10:21:38.338Z",
+    "stars": 559,
+    "language": "PowerShell",
+    "pushed_at": "2026-09-12T09:07:16Z",
+    "license": "MIT"
+  },
+  "summary_zh": "根据证据构建当前或目标架构图，适合梳理系统现状、规划技术方案和沟通架构变更。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "levnikolaevich-claude-code-skills-ln-52-delivery-reviewer",
+  "name": "ln-52-delivery-reviewer",
+  "description": "Reviews a completed change for acceptance, regressions and release risk; read-only, not a whole-codebase audit.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "levnikolaevich",
+  "install_path": ".claude/skills/ln-52-delivery-reviewer/SKILL.md",
+  "source": {
+    "repo": "levnikolaevich/claude-code-skills",
+    "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/quality-assurance-suite/skills/ln-52-delivery-reviewer/SKILL.md",
+    "path": "plugins/quality-assurance-suite/skills/ln-52-delivery-reviewer/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-09-12T10:21:40.755Z",
+    "stars": 559,
+    "language": "PowerShell",
+    "pushed_at": "2026-09-12T09:07:16Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于审查已完成的代码变更，识别验收问题、回归风险和发布隐患，适合在合并或上线前做针对性检查。"
+}

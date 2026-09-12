@@ -1,0 +1,26 @@
+{
+  "id": "levnikolaevich-claude-code-skills-ln-54-codebase-auditor",
+  "name": "ln-54-codebase-auditor",
+  "description": "Audits cross-cutting codebase health, security and maintainability; not a single-change review or specialist audit.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "levnikolaevich",
+  "install_path": ".claude/skills/ln-54-codebase-auditor/SKILL.md",
+  "source": {
+    "repo": "levnikolaevich/claude-code-skills",
+    "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/quality-assurance-suite/skills/ln-54-codebase-auditor/SKILL.md",
+    "path": "plugins/quality-assurance-suite/skills/ln-54-codebase-auditor/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-09-12T10:21:40.978Z",
+    "stars": 559,
+    "language": "PowerShell",
+    "pushed_at": "2026-09-12T09:07:16Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于全面审查代码库的健康状况、安全性与可维护性，适合发现跨模块、跨领域的系统性问题，而非单次改动或专项审计。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "levnikolaevich-claude-code-skills-ln-33-plan-reviewer",
+  "name": "ln-33-plan-reviewer",
+  "description": "Reviews a concrete implementation plan for missing decisions, feasibility and risk before execution; read-only.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "levnikolaevich",
+  "install_path": ".claude/skills/ln-33-plan-reviewer/SKILL.md",
+  "source": {
+    "repo": "levnikolaevich/claude-code-skills",
+    "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/delivery-planning-suite/skills/ln-33-plan-reviewer/SKILL.md",
+    "path": "plugins/delivery-planning-suite/skills/ln-33-plan-reviewer/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-09-12T10:21:38.818Z",
+    "stars": 559,
+    "language": "PowerShell",
+    "pushed_at": "2026-09-12T09:07:16Z",
+    "license": "MIT"
+  },
+  "summary_zh": "只读审查实施计划，提前发现遗漏决策、可行性问题与潜在风险，适合执行前评估方案。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "levnikolaevich-claude-code-skills-ln-71-operations-investigator",
+  "name": "ln-71-operations-investigator",
+  "description": "Diagnoses incidents from operational evidence and proposes recovery; does not change live systems.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "levnikolaevich",
+  "install_path": ".claude/skills/ln-71-operations-investigator/SKILL.md",
+  "source": {
+    "repo": "levnikolaevich/claude-code-skills",
+    "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/operations-suite/skills/ln-71-operations-investigator/SKILL.md",
+    "path": "plugins/operations-suite/skills/ln-71-operations-investigator/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-09-12T10:21:40.059Z",
+    "stars": 559,
+    "language": "PowerShell",
+    "pushed_at": "2026-09-12T09:07:16Z",
+    "license": "MIT"
+  },
+  "summary_zh": "从运维证据诊断事故并提出恢复方案，适合需要只分析、不直接修改线上系统的故障排查场景。"
+}

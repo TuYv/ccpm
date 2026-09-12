@@ -1,0 +1,26 @@
+{
+  "id": "levnikolaevich-claude-code-skills-ln-32-test-strategy-planner",
+  "name": "ln-32-test-strategy-planner",
+  "description": "Plans risk-based test portfolios and acceptance evidence; does not write or execute tests.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "levnikolaevich",
+  "install_path": ".claude/skills/ln-32-test-strategy-planner/SKILL.md",
+  "source": {
+    "repo": "levnikolaevich/claude-code-skills",
+    "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/delivery-planning-suite/skills/ln-32-test-strategy-planner/SKILL.md",
+    "path": "plugins/delivery-planning-suite/skills/ln-32-test-strategy-planner/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-09-12T10:21:38.690Z",
+    "stars": 559,
+    "language": "PowerShell",
+    "pushed_at": "2026-09-12T09:07:16Z",
+    "license": "MIT"
+  },
+  "summary_zh": "按风险规划测试组合与验收证据，适合在项目交付前明确测试重点、覆盖范围和验收依据，但不负责编写或执行测试。"
+}

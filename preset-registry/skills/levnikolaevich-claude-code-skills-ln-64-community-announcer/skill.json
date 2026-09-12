@@ -1,7 +1,7 @@
 {
   "id": "levnikolaevich-claude-code-skills-ln-64-community-announcer",
   "name": "ln-64-community-announcer",
-  "description": "Drafts or publishes fact-checked GitHub Discussions announcements for project updates. Not for release creation or issue responses.",
+  "description": "Drafts or publishes authorized, fact-checked GitHub Discussions announcements; does not create releases.",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -13,14 +13,14 @@
   "install_path": ".claude/skills/ln-64-community-announcer/SKILL.md",
   "source": {
     "repo": "levnikolaevich/claude-code-skills",
-    "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/maintainer-suite/skills/ln-64-community-announcer/SKILL.md",
-    "path": "plugins/maintainer-suite/skills/ln-64-community-announcer/SKILL.md",
+    "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/delivery-suite/skills/ln-64-community-announcer/SKILL.md",
+    "path": "plugins/delivery-suite/skills/ln-64-community-announcer/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-09-12T05:42:36.874Z",
+    "discovered_at": "2026-09-12T10:21:39.342Z",
     "stars": 559,
     "language": "PowerShell",
-    "pushed_at": "2026-09-05T12:33:40Z",
+    "pushed_at": "2026-09-12T09:07:16Z",
     "license": "MIT"
   },
-  "summary_zh": "用于起草或发布经过事实核查的 GitHub Discussions 项目更新公告，适合规范同步进展，不用于创建发布版本或回复 Issue。"
+  "summary_zh": "用于起草或发布经过授权和事实核查的 GitHub Discussions 公告，适合社区通知与信息发布，但不负责创建版本。"
 }

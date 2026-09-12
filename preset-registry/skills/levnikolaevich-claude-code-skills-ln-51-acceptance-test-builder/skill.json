@@ -1,0 +1,26 @@
+{
+  "id": "levnikolaevich-claude-code-skills-ln-51-acceptance-test-builder",
+  "name": "ln-51-acceptance-test-builder",
+  "description": "Builds, updates or retires scoped acceptance tests and verifies execution; does not repair product code.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "levnikolaevich",
+  "install_path": ".claude/skills/ln-51-acceptance-test-builder/SKILL.md",
+  "source": {
+    "repo": "levnikolaevich/claude-code-skills",
+    "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/quality-assurance-suite/skills/ln-51-acceptance-test-builder/SKILL.md",
+    "path": "plugins/quality-assurance-suite/skills/ln-51-acceptance-test-builder/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-09-12T10:21:40.632Z",
+    "stars": 559,
+    "language": "PowerShell",
+    "pushed_at": "2026-09-12T09:07:16Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于构建、更新或废弃范围明确的验收测试，并验证测试执行结果，适合只维护测试、不修改产品代码的场景。"
+}

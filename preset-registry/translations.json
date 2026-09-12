@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-09-12T06:15:15.666Z",
+  "updated_at": "2026-09-12T11:01:52.650Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -17443,9 +17443,9 @@
       "translated_at": "2026-08-03T04:59:41.029Z"
     },
     "bundle:levnikolaevich-claude-code-skills": {
-      "hash": "6b015eab0f7d369b",
-      "summary_zh": "这套技能合集面向软件项目全流程管理，串联需求拆解、规划评审、开发执行、质量审计与交付复盘，让复杂工作可追踪、可验证、可持续迭代。",
-      "translated_at": "2026-09-05T13:53:27.169Z"
+      "hash": "e7f60be93d54aee4",
+      "summary_zh": "覆盖从机会发现、需求设计到开发交付与质量复盘的完整产品研发流程，帮助团队用可验证、可协作的方式推进项目。",
+      "translated_at": "2026-09-12T10:27:56.901Z"
     },
     "bundle:tzachbon-smart-ralph": {
       "hash": "40a977397b2ab111",
@@ -24068,9 +24068,9 @@
       "translated_at": "2026-08-04T00:11:41.276Z"
     },
     "skill:levnikolaevich-claude-code-skills-ln-64-community-announcer": {
-      "hash": "e390044494f510a5",
-      "summary_zh": "用于起草或发布经过事实核查的 GitHub Discussions 项目更新公告，适合规范同步进展，不用于创建发布版本或回复 Issue。",
-      "translated_at": "2026-09-05T13:56:13.117Z"
+      "hash": "0e5a3e96b70d3206",
+      "summary_zh": "用于起草或发布经过授权和事实核查的 GitHub Discussions 公告，适合社区通知与信息发布，但不负责创建版本。",
+      "translated_at": "2026-09-12T10:29:33.337Z"
     },
     "skill:levnikolaevich-claude-code-skills-ln-638-test-oracle-effectiveness-auditor": {
       "hash": "002521578cb0c280",
@@ -55428,6 +55428,136 @@
     "content:chrisbanes-skills-android-benchmark-comparison": {
       "hash": "374906127d7f474e",
       "translated_at": "2026-09-12T01:31:44.678Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-23-system-design-proposal-builder": {
+      "hash": "453272f8a439f53f",
+      "summary_zh": "根据需求设计目标系统边界、接口契约与技术权衡，适合在开发前明确架构方案，但不负责任务规划或具体实现。",
+      "translated_at": "2026-09-12T10:29:00.207Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-22-current-architecture-documenter": {
+      "hash": "5c365d825928e0f7",
+      "summary_zh": "根据代码实现证据记录当前系统架构，不提出目标架构，也不评估其适用性。",
+      "translated_at": "2026-09-12T10:29:00.270Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-21-system-design-baseline-builder": {
+      "hash": "75deaded02d18464",
+      "summary_zh": "一种在系统设计前明确可衡量架构驱动因素与约束的工具，适合规范架构文档、减少设计偏差。",
+      "translated_at": "2026-09-12T10:29:01.777Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-24-architecture-decision-recorder": {
+      "hash": "49d5fda8b4d754ec",
+      "summary_zh": "用于记录单条架构决策及其备选方案、影响和状态，适合团队追踪设计取舍，但不负责设计完整系统。",
+      "translated_at": "2026-09-12T10:29:02.918Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-25-architecture-diagram-builder": {
+      "hash": "3b129eaa32cc841f",
+      "summary_zh": "根据证据构建当前或目标架构图，适合梳理系统现状、规划技术方案和沟通架构变更。",
+      "translated_at": "2026-09-12T10:29:04.212Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-26-architecture-migration-planner": {
+      "hash": "0866d203a77cf884",
+      "summary_zh": "用于规划架构迁移方案，评估兼容性与数据安全，设计发布及恢复步骤，适合迁移前制定计划但不直接执行。",
+      "translated_at": "2026-09-12T10:29:05.613Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-31-delivery-plan-builder": {
+      "hash": "5131984d32a9377a",
+      "summary_zh": "只读分析需求与仓库证据，按依赖关系生成有序交付计划，适合规划复杂项目的实施步骤。",
+      "translated_at": "2026-09-12T10:29:06.757Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-33-plan-reviewer": {
+      "hash": "8b4594e9ca55e111",
+      "summary_zh": "只读审查实施计划，提前发现遗漏决策、可行性问题与潜在风险，适合执行前评估方案。",
+      "translated_at": "2026-09-12T10:29:08.390Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-32-test-strategy-planner": {
+      "hash": "c7a465d11a02f198",
+      "summary_zh": "按风险规划测试组合与验收证据，适合在项目交付前明确测试重点、覆盖范围和验收依据，但不负责编写或执行测试。",
+      "translated_at": "2026-09-12T10:29:09.281Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-41-surgical-change-implementer": {
+      "hash": "c7e9115c73ccdd07",
+      "summary_zh": "针对单一范围明确的功能或问题实施最小完整修改，适合处理不涉及升级和性能调优的开发任务。",
+      "translated_at": "2026-09-12T10:29:11.279Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-43-code-modernizer": {
+      "hash": "c1afe2fa3ae9d503",
+      "summary_zh": "用于在明确范围内现代化既有能力，降低已验证的维护成本，适合处理非例行升级或性能调优的改造场景。",
+      "translated_at": "2026-09-12T10:29:13.011Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-44-performance-optimizer": {
+      "hash": "7fd31bcc65df69f8",
+      "summary_zh": "用于定位和优化经过测量的性能瓶颈，仅保留经验证确实有效的改进，适合性能调优与回归验证场景。",
+      "translated_at": "2026-09-12T10:29:15.017Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-45-benchmark-comparator": {
+      "hash": "5271dd1c515baead",
+      "summary_zh": "用于通过受控基准测试和独立正确性校验，对比不同工具或实现，适合评估性能与结果可靠性。",
+      "translated_at": "2026-09-12T10:29:15.392Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-42-dependency-upgrader": {
+      "hash": "eceb450e2bd6d08b",
+      "summary_zh": "按可逆批次升级依赖，结合版本兼容性检查与回归验证，适合需要稳妥维护和快速回滚的项目。",
+      "translated_at": "2026-09-12T10:29:16.366Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-51-acceptance-test-builder": {
+      "hash": "b6860583cc5d2f9b",
+      "summary_zh": "用于构建、更新或废弃范围明确的验收测试，并验证测试执行结果，适合只维护测试、不修改产品代码的场景。",
+      "translated_at": "2026-09-12T10:29:18.382Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-52-delivery-reviewer": {
+      "hash": "4bae7eb978cb92c0",
+      "summary_zh": "用于审查已完成的代码变更，识别验收问题、回归风险和发布隐患，适合在合并或上线前做针对性检查。",
+      "translated_at": "2026-09-12T10:29:18.546Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-55-test-suite-auditor": {
+      "hash": "bd6d0ed98f38dc18",
+      "summary_zh": "审计现有测试的风险覆盖、断言可靠性和维护价值，帮助识别测试盲区与低价值用例，但不会修改测试代码。",
+      "translated_at": "2026-09-12T10:29:21.005Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-53-documentation-auditor": {
+      "hash": "8989ee2f28fdd783",
+      "summary_zh": "只读审查项目文档和代码注释的可信度、覆盖度、一致性与时效性，帮助及时发现过时或缺失的信息。",
+      "translated_at": "2026-09-12T10:29:21.911Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-54-codebase-auditor": {
+      "hash": "20abb31642ea4a40",
+      "summary_zh": "用于全面审查代码库的健康状况、安全性与可维护性，适合发现跨模块、跨领域的系统性问题，而非单次改动或专项审计。",
+      "translated_at": "2026-09-12T10:29:22.379Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-57-persistence-auditor": {
+      "hash": "3214d73a33d78f64",
+      "summary_zh": "只读审计查询、事务、一致性及持久化资源的生命周期，适合排查资源未释放和持久性管理问题。",
+      "translated_at": "2026-09-12T10:29:24.933Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-56-architecture-auditor": {
+      "hash": "1393263bd0b227ea",
+      "summary_zh": "用于审查已实现系统的架构边界、依赖关系和代码归属，适合检查现有代码是否符合既定架构，而非评审设计方案或规划。",
+      "translated_at": "2026-09-12T10:29:27.073Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-63-deployment-engineer": {
+      "hash": "f110e94ef44f65d8",
+      "summary_zh": "用于准备 CI/CD 与基础设施，并执行经过授权的部署，适合需要自动完成发布、健康检查和故障恢复的团队。",
+      "translated_at": "2026-09-12T10:29:29.541Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-61-repository-publisher": {
+      "hash": "2c22bf80c83a1aa8",
+      "summary_zh": "提交、推送并远程验证已授权的代码仓库变更，适合自动发布仓库内容但不创建发行版。",
+      "translated_at": "2026-09-12T10:29:33.248Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-62-release-publisher": {
+      "hash": "c2cf13f38c486254",
+      "summary_zh": "用于准备并发布用户明确指定标签的 GitHub Release，适合管理版本发布流程，但不负责部署应用。",
+      "translated_at": "2026-09-12T10:29:34.312Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-72-product-outcome-evaluator": {
+      "hash": "544a1aadd09aaa5f",
+      "summary_zh": "用于将实际产品结果与既定假设进行评估对比，适合复盘假设是否成立，但不会执行实验或改变用户体验。",
+      "translated_at": "2026-09-12T10:29:52.010Z"
+    },
+    "skill:levnikolaevich-claude-code-skills-ln-71-operations-investigator": {
+      "hash": "c246e3d81751bce7",
+      "summary_zh": "从运维证据诊断事故并提出恢复方案，适合需要只分析、不直接修改线上系统的故障排查场景。",
+      "translated_at": "2026-09-12T10:30:23.911Z"
     }
   }
 }

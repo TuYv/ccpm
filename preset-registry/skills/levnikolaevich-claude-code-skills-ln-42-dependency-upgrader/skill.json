@@ -1,0 +1,26 @@
+{
+  "id": "levnikolaevich-claude-code-skills-ln-42-dependency-upgrader",
+  "name": "ln-42-dependency-upgrader",
+  "description": "Upgrades dependencies in reversible batches with version-specific compatibility and regression checks.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "levnikolaevich",
+  "install_path": ".claude/skills/ln-42-dependency-upgrader/SKILL.md",
+  "source": {
+    "repo": "levnikolaevich/claude-code-skills",
+    "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/implementation-suite/skills/ln-42-dependency-upgrader/SKILL.md",
+    "path": "plugins/implementation-suite/skills/ln-42-dependency-upgrader/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-09-12T10:21:39.608Z",
+    "stars": 559,
+    "language": "PowerShell",
+    "pushed_at": "2026-09-12T09:07:16Z",
+    "license": "MIT"
+  },
+  "summary_zh": "按可逆批次升级依赖，结合版本兼容性检查与回归验证，适合需要稳妥维护和快速回滚的项目。"
+}

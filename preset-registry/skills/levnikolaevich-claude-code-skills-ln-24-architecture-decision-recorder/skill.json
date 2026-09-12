@@ -1,0 +1,26 @@
+{
+  "id": "levnikolaevich-claude-code-skills-ln-24-architecture-decision-recorder",
+  "name": "ln-24-architecture-decision-recorder",
+  "description": "Records one architecture decision with alternatives, consequences and status; does not design the whole system.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "levnikolaevich",
+  "install_path": ".claude/skills/ln-24-architecture-decision-recorder/SKILL.md",
+  "source": {
+    "repo": "levnikolaevich/claude-code-skills",
+    "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/architecture-suite/skills/ln-24-architecture-decision-recorder/SKILL.md",
+    "path": "plugins/architecture-suite/skills/ln-24-architecture-decision-recorder/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-09-12T10:21:38.223Z",
+    "stars": 559,
+    "language": "PowerShell",
+    "pushed_at": "2026-09-12T09:07:16Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于记录单条架构决策及其备选方案、影响和状态，适合团队追踪设计取舍，但不负责设计完整系统。"
+}

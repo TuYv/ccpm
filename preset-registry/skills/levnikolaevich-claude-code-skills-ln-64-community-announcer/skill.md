@@ -1,6 +1,6 @@
 ---
 name: ln-64-community-announcer
-description: "Drafts or publishes fact-checked GitHub Discussions announcements for project updates. Not for release creation or issue responses."
+description: "Drafts or publishes authorized, fact-checked GitHub Discussions announcements; does not create releases."
 ---
 
 # Community Announcer
@@ -9,6 +9,10 @@ description: "Drafts or publishes fact-checked GitHub Discussions announcements 
 
 **Execution contract:** The ordered checkboxes are the Definition of Done. Track every item internally as `PENDING`, `PROVEN` with concrete evidence, `CLEARED` with evidence that its condition is absent, or `UNPROVEN` with a gap; reading, delegation, or tool failure is not proof. Reconcile items after each section. Before returning, resolve all `PENDING` and count only `PROVEN` and `CLEARED`; apply the skill's verdict and approval rules to every gap.
 Preserve user intent, scope, and existing authorization. Continue authorized work; ask only for consequential unresolved choices or required external approval. Scale depth to material risk without silently skipping checks. Preserve dependency and safety ordering; otherwise choose the verification method appropriate to each obligation.
+Treat equivalent user or repository evidence as valid input; another skill, named artifact, or complete lifecycle is not a prerequisite. Preserve source requirement and decision identifiers when available. Bind reused evidence to the relevant source version, dirty changes, configuration, and environment; invalidate only affected claims after a change.
+On continuation, reconcile the task, existing authorization, current state, and unresolved evidence before resuming. For long work, return a compact continuation record or update an already authorized task artifact; read-only skills do not persist it. Distinguish artifact readiness, verified behavior, and authority to perform an external action.
+Prepare authorized work before any required approval. If an instruction prevents progress, identify its exact source and explain the unresolved boundary; do not invent an approval gate from general caution.
+
 
 ## Tool Routing
 
@@ -88,6 +92,8 @@ Do not expose repository tokens, category node IDs, or other credentials in the 
 - `DRAFT READY` — fact-checked copy is complete; publication is either outside scope or awaiting exact-copy approval.
 - `PUBLISHED` — the approved discussion exists and was read back successfully.
 - `BLOCKED` — source evidence prevents a trustworthy draft, or a requested publication cannot proceed because its permissions, category, or verification is unavailable. Distinguish a completed draft from blocked publication.
+
+- [ ] Verify claims about availability and measured effects against the actual release, deployment, or outcome evidence; distinguish announced plans from available capabilities.
 
 ## Self-Check
 

@@ -1,0 +1,25 @@
+{
+  "id": "levnikolaevich-claude-code-skills-ln-81-skill-reviewer",
+  "name": "ln-81-skill-reviewer",
+  "description": "Reviews skill instructions, trigger boundaries and distribution contracts; not product code.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "levnikolaevich",
+  "install_path": ".claude/skills/ln-81-skill-reviewer/SKILL.md",
+  "source": {
+    "repo": "levnikolaevich/claude-code-skills",
+    "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/skill-maintenance-suite/skills/ln-81-skill-reviewer/SKILL.md",
+    "path": "plugins/skill-maintenance-suite/skills/ln-81-skill-reviewer/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-09-12T10:21:41.449Z",
+    "stars": 559,
+    "language": "PowerShell",
+    "pushed_at": "2026-09-12T09:07:16Z",
+    "license": "MIT"
+  }
+}

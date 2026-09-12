@@ -1,0 +1,26 @@
+{
+  "id": "levnikolaevich-claude-code-skills-ln-61-repository-publisher",
+  "name": "ln-61-repository-publisher",
+  "description": "Commits, pushes and remotely verifies authorized repository changes; does not create releases.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "levnikolaevich",
+  "install_path": ".claude/skills/ln-61-repository-publisher/SKILL.md",
+  "source": {
+    "repo": "levnikolaevich/claude-code-skills",
+    "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/delivery-suite/skills/ln-61-repository-publisher/SKILL.md",
+    "path": "plugins/delivery-suite/skills/ln-61-repository-publisher/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-09-12T10:21:38.948Z",
+    "stars": 559,
+    "language": "PowerShell",
+    "pushed_at": "2026-09-12T09:07:16Z",
+    "license": "MIT"
+  },
+  "summary_zh": "提交、推送并远程验证已授权的代码仓库变更，适合自动发布仓库内容但不创建发行版。"
+}

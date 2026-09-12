@@ -1,0 +1,26 @@
+{
+  "id": "levnikolaevich-claude-code-skills-ln-63-deployment-engineer",
+  "name": "ln-63-deployment-engineer",
+  "description": "Prepares CI/CD and infrastructure, then executes authorized deployments with health and recovery checks.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "levnikolaevich",
+  "install_path": ".claude/skills/ln-63-deployment-engineer/SKILL.md",
+  "source": {
+    "repo": "levnikolaevich/claude-code-skills",
+    "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/delivery-suite/skills/ln-63-deployment-engineer/SKILL.md",
+    "path": "plugins/delivery-suite/skills/ln-63-deployment-engineer/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-09-12T10:21:39.228Z",
+    "stars": 559,
+    "language": "PowerShell",
+    "pushed_at": "2026-09-12T09:07:16Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于准备 CI/CD 与基础设施，并执行经过授权的部署，适合需要自动完成发布、健康检查和故障恢复的团队。"
+}

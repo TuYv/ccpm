@@ -1,0 +1,26 @@
+{
+  "id": "levnikolaevich-claude-code-skills-ln-56-architecture-auditor",
+  "name": "ln-56-architecture-auditor",
+  "description": "Audits implemented architecture boundaries, dependencies and ownership; not target design or plan review.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "levnikolaevich",
+  "install_path": ".claude/skills/ln-56-architecture-auditor/SKILL.md",
+  "source": {
+    "repo": "levnikolaevich/claude-code-skills",
+    "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/quality-assurance-suite/skills/ln-56-architecture-auditor/SKILL.md",
+    "path": "plugins/quality-assurance-suite/skills/ln-56-architecture-auditor/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-09-12T10:21:41.206Z",
+    "stars": 559,
+    "language": "PowerShell",
+    "pushed_at": "2026-09-12T09:07:16Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于审查已实现系统的架构边界、依赖关系和代码归属，适合检查现有代码是否符合既定架构，而非评审设计方案或规划。"
+}

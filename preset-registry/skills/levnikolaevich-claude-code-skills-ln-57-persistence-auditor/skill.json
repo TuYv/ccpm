@@ -1,0 +1,26 @@
+{
+  "id": "levnikolaevich-claude-code-skills-ln-57-persistence-auditor",
+  "name": "ln-57-persistence-auditor",
+  "description": "Audits queries, transactions, consistency and persistence resource lifetimes; read-only.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "levnikolaevich",
+  "install_path": ".claude/skills/ln-57-persistence-auditor/SKILL.md",
+  "source": {
+    "repo": "levnikolaevich/claude-code-skills",
+    "url": "https://github.com/levnikolaevich/claude-code-skills/blob/master/plugins/quality-assurance-suite/skills/ln-57-persistence-auditor/SKILL.md",
+    "path": "plugins/quality-assurance-suite/skills/ln-57-persistence-auditor/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-09-12T10:21:41.317Z",
+    "stars": 559,
+    "language": "PowerShell",
+    "pushed_at": "2026-09-12T09:07:16Z",
+    "license": "MIT"
+  },
+  "summary_zh": "只读审计查询、事务、一致性及持久化资源的生命周期，适合排查资源未释放和持久性管理问题。"
+}
