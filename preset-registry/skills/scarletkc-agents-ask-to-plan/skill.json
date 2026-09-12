@@ -1,0 +1,26 @@
+{
+  "id": "scarletkc-agents-ask-to-plan",
+  "name": "ask-to-plan",
+  "description": "Guide a user from an unclear idea to an actionable plan through the agent harness's native ask tool and clickable choices. Use when the user wants a guided requirements interview, step-by-step questions, help deciding what to build, or a button-led path from goals to scope, solution, and technology choices. Do not turn an ordinary implementation request or a single clarification into an interview.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "scarletkc",
+  "install_path": ".claude/skills/ask-to-plan/SKILL.md",
+  "source": {
+    "repo": "scarletkc/agents",
+    "url": "https://github.com/scarletkc/agents/blob/main/skills/ask-to-plan/SKILL.md",
+    "path": "skills/ask-to-plan/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-12T20:28:21.814Z",
+    "stars": 212,
+    "language": "Python",
+    "pushed_at": "2026-09-12T20:22:39Z",
+    "license": "Apache-2.0"
+  },
+  "summary_zh": "通过交互式提问和可点击选项，把模糊想法梳理成目标、范围与技术方案明确的可执行计划。"
+}
