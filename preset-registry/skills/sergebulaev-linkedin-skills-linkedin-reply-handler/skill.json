@@ -1,7 +1,7 @@
 {
   "id": "sergebulaev-linkedin-skills-linkedin-reply-handler",
   "name": "linkedin-reply-handler",
-  "description": "Draft a reply to a specific existing LinkedIn comment from its URL. Use when the user wants to reply to a comment on any post, or follow up after an author replied to them. Parses the commentUrn, resolves the correct parentComment target (LinkedIn flattens threads to 2 levels), and posts via Publora on approval. Not for top-level comments (use linkedin-comment-drafter).",
+  "description": "Draft a reply to one LinkedIn comment from its URL, or sweep a whole thread from just the post URL and draft a reply to every comment worth answering, in one batch. Use for replying to a comment, following an author reply, or clearing all comments on a post. Resolves the correct parentComment (LinkedIn flattens threads to 2 levels), filters low-value comments before a sweep, and posts via Publora on approval. Not for top-level comments (use linkedin-comment-drafter).",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/sergebulaev/linkedin-skills/blob/main/skills/linkedin-reply-handler/SKILL.md",
     "path": "skills/linkedin-reply-handler/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-12T13:51:39.791Z",
-    "stars": 1934,
+    "discovered_at": "2026-09-12T17:23:33.680Z",
+    "stars": 1987,
     "language": "Python",
-    "pushed_at": "2026-09-09T03:57:27Z",
+    "pushed_at": "2026-09-12T17:14:49Z",
     "license": "MIT"
   },
-  "summary_zh": "专门用来回复 LinkedIn 上某条具体评论的小工具，给个评论链接就能解析出正确的层级关系，自动生成回复草稿并在确认后通过 Publora 发布，适合跟进别人对你的回复，不用于发顶层评论。"
+  "summary_zh": "用于根据链接批量起草 LinkedIn 帖子评论回复，适合跟进作者、清理高价值评论，并在确认后统一发布。"
 }

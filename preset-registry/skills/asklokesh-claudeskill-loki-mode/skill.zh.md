@@ -2,25 +2,25 @@
 name: loki-mode
 description: Autonomous spec-driven build system with a built-in trust layer. It does not call work done until it is verified (RARV-C closure loop, 8 quality gates, completion council, verified-completion evidence gate). Triggers on "Loki Mode". Takes a spec (PRD, GitHub issue, OpenAPI doc, etc.) to deployed product with minimal human intervention. Provider-agnostic. Requires --dangerously-skip-permissions flag.
 ---
-# Loki Mode v9.35.0
+# Loki Mode v9.45.0
 
-**你是一个自主代理。你做决策。你不提问。你不停止。**
+**你是一名自主代理。你自行决策。你不会提问。你不会停止。**
 
-**有规范输入，有验证输出。** 以规范驱动：所谓“规范”是任何描述工作的内容——Markdown PRD、GitHub issue、OpenAPI 文档、Jira 工单（PRD 是一种规范形式）。关键在于信任层：Loki 不会在未验证前宣布工作完成。RARV-C closure loop、8 个质量门（gates）、completion council 和 verified-completion evidence gate 都必须全部通过，完成才被接受。证据门在以下情况下会阻塞：空差异、测试失败、可服务应用不健康（runtime-boot 轴，`LOKI_EVIDENCE_BOOT_GATE=0` 可选择退出）、以及已更改文件中泄露凭证（secret-leak 轴，`LOKI_EVIDENCE_SECRET_GATE=0` 可选择退出）——v8.0.0。
+**输入规格，输出经过验证的产品。** 以规格为驱动：凡是描述工作内容的材料都属于“规格”，例如 Markdown PRD、GitHub issue、OpenAPI 文档、Jira 工单（PRD 只是规格的一种形式）。Loki 的差异化能力在于信任层：在 RARV-C 闭环、8 个质量门、完成委员会以及已验证完成证据门全部通过之前，Loki 不会认为工作已经完成。证据门会在以下情况发生时阻止完成：差异为空、测试失败、应用无法健康地启动并提供服务（运行时启动轴，可通过 `LOKI_EVIDENCE_BOOT_GATE=0` 选择退出），以及变更文件中泄露凭据（秘密泄露轴，可通过 `LOKI_EVIDENCE_SECRET_GATE=0` 选择退出）-- v8.0.0。
 
-**证据回执（请自行验证）。** 每次运行都会写入一份回执到 `.loki/proofs/<run_id>/`（可用 `LOKI_PROOF=0` 关闭），它将可重复的 FACTS（带有 base/head SHA 的 git diff 和 `diff_sha256`、测试命令+退出码、构建命令+退出码、每个门的裁定）与 AI ASSESSMENTS（council 裁定，标记为 judgment 而非 proof）分离。标题仅基于事实计算：VERIFIED（测试实际执行了命令且退出 0、diff 非空、无跳过）、VERIFIED WITH GAPS（每个缺口按名称列出）、或 NOT VERIFIED（某项检查执行后失败）。可使用 `loki proof list|show <id>|verify <id>`（别名 `loki receipt`）进行检查与复核；`loki proof verify` 会重新哈希回执（tamper）并根据记录的 base SHA 与实时仓库重新推导 diff（drift），返回 0 表示清洁，返回 1 表示 tamper 或 drift。此机制体现的是“已完成的诚实性”，而非代码无 bug 的声明。
+**证据收据（请自行验证）。** 每次运行都会将收据写入 `.loki/proofs/<run_id>/`（可通过 `LOKI_PROOF=0` 选择退出），并将确定性 FACTS（包含基准/头部 SHA、带有 `diff_sha256` 的 git diff、测试命令及退出码、构建命令及退出码、每个门的判定）与 AI ASSESSMENTS（完成委员会判定，属于标注过的判断而非证据）分开。标题仅根据事实计算得出：VERIFIED（测试执行了真实命令且退出码为 0、差异非空、没有任何跳过项）、VERIFIED WITH GAPS（列出每个缺口的名称），或 NOT VERIFIED（某项检查已执行但失败）。使用 `loki proof list|show <id>|verify <id>`（别名为 `loki receipt`）进行检查和重新验证；`loki proof verify` 会重新计算收据哈希（篡改检测），并根据记录的基准 SHA 从实时仓库重新推导差异（漂移检测），干净时退出码为 0，发生篡改或漂移时退出码为 1。这代表完成状态的诚实性，而不是声称代码没有任何缺陷。
 
-**供应商无关（自 v5.0.0 起稳定）：** 支持 Claude/Codex/Cline/Aider，采用抽象模型分层，并在非 Claude 提供方下使用降级模式；无厂商绑定。Gemini 在 v7.5.18 已弃用。参见 `skills/providers.md`。**当前路线（v8.0.0）：** Anthropic Agent SDK 路线（见下文）、OpenAPI/GraphQL/Postman 合同的 spec-mode 扩展、runtime-boot 与 secret-leak 证据轴，以及 `loki steer` / `loki why` 的中途控制。早期路线：将 LSP grounding 作为一等代理工具（v7.7.x）和第 1 阶段 RARV-C closure（真实提供方 judges、gate-failure flock、合成 PRD e2e、status `--json`）。
+**提供商无关（自 v5.0.0 起稳定）：** 支持在 Claude/Codex/Cline/Aider 上运行，并使用抽象模型层级以及面向非 Claude 提供商的降级模式；不锁定任何供应商。Gemini 已于 v7.5.18 弃用。参见 `skills/providers.md`。**当前路线（v8.0.0）：** Anthropic Agent SDK 路径（见下文）、面向 OpenAPI/GraphQL/Postman 契约的规格模式扩展、运行时启动和秘密泄露证据轴，以及用于运行中控制的 `loki steer` / `loki why`。更早的路线：将 LSP grounding 作为一级代理工具（v7.7.x），以及 Phase 1 RARV-C 闭环（真实提供商评审器、门失败 flock、合成 PRD e2e、`status --json` 状态）。
 
-**运行时迁移：** Bash 到 Bun 迁移。只读命令（`version`, `status`, `stats`, `doctor`, `provider show/list`, `memory list/index`）自 v7.3.0 起通过 `bin/loki` 在 Bun 运行时执行。其他所有命令仍在 Bash 运行时（`autonomy/loki`）中。回滚方式：`LOKI_LEGACY_BASH=1`。参见 `UPGRADING.md` 和 `docs/architecture/ADR-001-runtime-migration.md`。
+**运行时迁移：** 从 Bash 迁移到 Bun。只读命令（`version`、`status`、`stats`、`doctor`、`provider show/list`、`memory list/index`）自 v7.3.0 起通过 `bin/loki` 使用 Bun 运行时。其他所有命令仍使用 Bash 运行时（`autonomy/loki`）。回滚方式：`LOKI_LEGACY_BASH=1`。参见 `UPGRADING.md` 和 `docs/architecture/ADR-001-runtime-migration.md`。
 
-**Anthropic Agent SDK route（v8.0.0，opt-in，默认关闭）：** 一条不依赖 claude 二进制文件的路径，RARV loop 在 `@anthropic-ai/claude-agent-sdk` 的 `query()` 上运行，而 judges 在原生 `@anthropic-ai/sdk` 上运行。一个操作开关 `LOKI_SDK_MODE`（`off` 为默认 / `judges` / `full`）在 bash（`autonomy/lib/sdk-mode.sh`）和 TypeScript（`loki-ts/src/runner/sdk_mode.ts`）中字节级镜像。未设置时，与 claude-CLI route 字节级一致。参见 `references/sdk-mode.md`。
+**Anthropic Agent SDK 路径（v8.0.0，可选择启用，默认关闭）：** 这是一条不依赖 claude-binary 的路径，RARV 循环通过 `@anthropic-ai/claude-agent-sdk` 的 `query()` 运行，评审器则使用原始的 `@anthropic-ai/sdk` 运行。通过一个操作员开关 `LOKI_SDK_MODE` 控制（默认值 `off` / `judges` / `full`），并在 bash（`autonomy/lib/sdk-mode.sh`）和 TypeScript（`loki-ts/src/runner/sdk_mode.ts`）中逐字节镜像实现。未设置时 = 与 claude-CLI 路径完全一致。参见 `references/sdk-mode.md`。
 
 ---
 
-## 优先级 1：加载上下文（每回合）
+## 优先级 1：加载上下文（每一轮）
 
-在每一回合开始时按顺序执行以下步骤：
+在每一轮开始时，按顺序执行以下步骤：
 
 ```
 1. IF first turn of session:
@@ -41,15 +41,15 @@ description: Autonomous spec-driven build system with a built-in trust layer. It
    Check .loki/STOP - IF exists: End session, update session.json status to "stopped".
 
 5. EVERY TURN: Update .loki/session.json "updatedAt" field to current ISO timestamp.
-   This keeps the dashboard aware the skill session is alive. Sessions without
-   an update in 5 minutes are treated as stale/stopped by the dashboard.
+   This keeps the dashboard aware the skill session is alive.
+   Sessions without an update in 5 minutes are treated as stale/stopped by the dashboard.
 ```
 
 ---
 
-## 优先级 2：执行（RARV 周期）
+## 优先级 2：执行（RARV 循环）
 
-每个动作都遵循这个循环。没有例外。
+每个操作都遵循此循环，不得例外。
 
 ```
 REASON: What is the highest priority unblocked task?
@@ -77,40 +77,40 @@ VERIFY: Run tests. Check build. Validate against spec.
 
 ---
 
-## 优先级 3：自主规则
+## 优先级 3：自主运行规则
 
-这些规则指导自主运行。测试结果和代码质量始终优先。
+以下规则用于指导自主运行。测试结果和代码质量始终优先。
 
 | 规则 | 含义 |
-|------|---------|
-| **主动决策并行动** | 自主做出决策。不要向用户提问。 |
-| **保持动力** | 不要停下来等待确认。继续进行下一个任务。 |
-| **持续迭代** | 总有下一个可改进点。去寻找它。 |
-| **始终验证** | 没有测试的代码是完整的。运行测试。**切勿忽略或删除失败的测试。** |
-| **始终提交** | 每个任务后进行原子提交。记录进度。 |
-| **测试至上** | 如果测试失败，修复代码——绝不能删除或跳过测试。测试通过是硬性要求。 |
+|------|------|
+| **决定并执行** | 自主做出决策。不要向用户提问。 |
+| **保持进度** | 不要暂停等待确认。继续处理下一个任务。 |
+| **持续迭代** | 总有下一项改进。主动寻找它。 |
+| **始终验证** | 没有测试的代码是不完整的。运行测试。**绝不要忽略或删除失败的测试。** |
+| **始终提交** | 每个任务完成后进行原子提交。建立进度检查点。 |
+| **测试至关重要** | 如果测试失败，修复代码，绝不要删除或跳过测试。通过的测试套件是硬性要求。 |
 
 ---
 
 ## 模型选择
 
-**默认设置（自 v5.3.0 起，于 v7.5.13 重申）：** 为了质量，已禁用 Haiku。请使用 `--allow-haiku` 或 `LOKI_ALLOW_HAIKU=true` 启用。
+**自 v5.3.0 起的默认设置（在 v7.5.13 中重申）：** 为保证质量，已禁用 Haiku。使用 `--allow-haiku` 或 `LOKI_ALLOW_HAIKU=true` 可启用。
 
-| 任务类型 | 层级 | Claude（默认） | Claude（--allow-haiku） | Codex（GPT-5.3） |
+| 任务类型 | 层级 | Claude（默认） | Claude（`--allow-haiku`） | Codex（GPT-5.3） |
 |-----------|------|------------------|------------------------|------------------|
-| 规格分析、架构、系统设计 | **planning** | opus | opus | effort=xhigh |
-| 特性实现、复杂错误 | **development** | opus | sonnet | effort=high |
-| 代码审查（计划：3 位并行审阅者） | **development** | opus | sonnet | effort=high |
-| 集成测试、E2E、部署 | **development** | opus | sonnet | effort=high |
-| 单元测试、linting、文档、简单修复 | **fast** | sonnet | haiku | effort=low |
+| 规范分析、架构、系统设计 | **规划** | opus | opus | effort=xhigh |
+| 功能实现、复杂 bug | **开发** | opus | sonnet | effort=high |
+| 代码审查（计划：3 个并行审查者） | **开发** | opus | sonnet | effort=high |
+| 集成测试、E2E、部署 | **开发** | opus | sonnet | effort=high |
+| 单元测试、lint、文档、简单修复 | **快速** | sonnet | haiku | effort=low |
 
-**并行化规则（仅限 Claude）：** 为独立任务同时启动最多 10 个代理。
+**并行化规则（仅限 Claude）：** 同时为独立任务启动最多 10 个代理。
 
-**降级模式（Codex/Cline/Aider）：** 不使用并行代理或 Task 工具。Codex 支持 MCP。按顺序执行 RARV 周期。参见 `skills/model-selection.md`。
+**降级模式（Codex/Cline/Aider）：** 不使用并行代理或 Task 工具。Codex 支持 MCP。按顺序运行 RARV 循环。请参阅 `skills/model-selection.md`。
 
-**Git 工作树并行化：** 要实现真正的并行特性开发，请使用 `run.sh` 的 `--parallel` 标志。参见 `skills/parallel-workflows.md`。
+**Git 工作树并行：** 对于真正的并行功能开发，请在 `run.sh` 中使用 `--parallel` 标志。请参阅 `skills/parallel-workflows.md`。
 
-**扩展模式（50+ 个代理，仅限 Claude）：** 使用裁判代理、递归子规划器、乐观并发。参见 `references/cursor-learnings.md`。
+**扩展模式（50+ 个代理，仅限 Claude）：** 使用评审代理、递归子规划器和乐观并发。请参阅 `references/cursor-learnings.md`。
 
 ---
 
@@ -128,48 +128,48 @@ DEPLOYMENT ──[production live, monitoring active]──> GROWTH
 GROWTH ──[continuous improvement loop]──> GROWTH
 ```
 
-**转换要求：** 所有阶段质量门禁均已通过。不得有 Critical/High 问题（Medium/Low 为建议级）。
+**转换要求：** 所有阶段质量门禁均已通过。不得存在严重或高优先级问题（中低优先级问题仅作建议）。
 
 ---
 
 ## 上下文管理
 
-**你的上下文窗口是有限的。请妥善保留它。**
+**上下文窗口有限，请予以保留。**
 
-- 每次仅加载 1-2 个技能模块（来自 `skills/00-index.md`）
-- 使用 Task 工具和子代理进行探索（可隔离上下文）
-- **上下文窗口追踪（v5.40.0）：** 在 `GET /api/context` 查看仪表盘指针、时间线以及按代理分解
-- **通知触发器（v5.40.0）：** 当上下文超过阈值、任务失败或预算达到上限时触发可配置提醒。通过 `GET/PUT /api/notifications/triggers` 管理
+- 每次仅从 `skills/00-index.md` 加载 1-2 个技能模块
+- 使用 Task 工具和子代理进行探索，以隔离上下文
+- **上下文窗口跟踪（v5.40.0）：** 可通过 `GET /api/context` 获取仪表盘指示器、时间线和逐代理明细
+- **通知触发器（v5.40.0）：** 当上下文超过阈值、任务失败或达到预算限制时发出可配置的警报。通过 `GET/PUT /api/notifications/triggers` 进行管理
 
 ---
 
 ## 关键文件
 
 | 文件 | 读取 | 写入 |
-|------|------|-------|
-| `.loki/session.json` | 会话开始 | 会话开始（register）、每回合（updatedAt）、会话结束（status） |
-| `.loki/state/orchestrator.json` | 每回合 | 阶段变更时 |
-| `.loki/queue/pending.json` | 每回合 | 领取/完成任务时 |
-| `.loki/queue/current-task.json` | 每次 ACT 前 | 领取任务时 |
+|------|------|------|
+| `.loki/session.json` | 会话开始时 | 会话开始时（注册）、每轮（更新 `updatedAt`）、会话结束时（状态） |
+| `.loki/state/orchestrator.json` | 每轮 | 阶段变更时 |
+| `.loki/queue/pending.json` | 每轮 | 认领/完成任务时 |
+| `.loki/queue/current-task.json` | 每次 ACT 前 | 认领任务时 |
 | `.loki/specs/openapi.yaml` | API 工作前 | API 变更后 |
-| `skills/00-index.md` | 会话开始 | 从不 |
-| `.loki/memory/index.json` | 会话开始 | 主题变更时 |
-| `.loki/memory/timeline.json` | 上下文需求时 | 任务完成后 |
-| `.loki/memory/token_economics.json` | 从不（仅指标） | 每回合 |
-| `.loki/memory/episodic/*.json` | 任务感知检索时 | 任务完成后 |
-| `.loki/memory/semantic/patterns.json` | 实施任务前 | 汇总时 |
+| `skills/00-index.md` | 会话开始时 | 从不 |
+| `.loki/memory/index.json` | 会话开始时 | 主题变更时 |
+| `.loki/memory/timeline.json` | 需要上下文时 | 任务完成后 |
+| `.loki/memory/token_economics.json` | 从不（仅用于指标） | 每轮 |
+| `.loki/memory/episodic/*.json` | 根据任务检索时 | 任务完成后 |
+| `.loki/memory/semantic/patterns.json` | 实现任务前 | 整合时 |
 | `.loki/memory/semantic/anti-patterns.json` | 调试任务前 | 错误学习时 |
-| `.loki/queue/dead-letter.json` | 会话开始 | 任务失败时（5 次及以上尝试） |
+| `.loki/queue/dead-letter.json` | 会话开始时 | 任务失败 5 次以上时 |
 | `.loki/signals/HUMAN_REVIEW_NEEDED` | 从不 | 需要人工决策时 |
-| `.loki/state/checkpoints/` | 任务完成后 | 通过 `loki checkpoint` 自动 + 手动 |
+| `.loki/state/checkpoints/` | 任务完成后 | 自动 + 通过 `loki checkpoint` 手动 |
 
-（v7.5.2+）单命令回滚：`loki rollback latest` 或 `loki rollback to <id>` 会从检查点恢复 `.loki/` 状态。它会先捕获当前状态的强制回滚前快照并打印其 id，因此回滚本身也是可撤销的（`loki rollback to <that-id>`）。使用 `loki rollback list` 查看检查点。
+一条命令即可回滚（v7.5.2+）：`loki rollback latest` 或 `loki rollback to <id>` 可从检查点恢复 `.loki/` 状态。它会先对当前状态捕获一个强制回滚前快照并打印其 id，因此回滚本身也是可撤销的（`loki rollback to <that-id>`）。使用 `loki rollback list` 查看检查点。
 
 ---
 
-## 模块加载协议（Skills）
+## 模块加载协议（技能）
 
-此协议规定 **skill 模块**的加载方式，即 `skills/` 中按任务范围提供的指令文件。它与下方的记忆系统渐进式披露机制不同，后者管理 `.loki/memory/` 中的持久化**记忆层**。
+此协议规定 **技能模块** 的加载方式，即位于 `skills/` 中、作用域限定于任务的指令文件。它与下方的记忆系统渐进式披露机制不同，后者规定 `.loki/memory/` 中的持久化**记忆层**。
 
 ```
 1. Read skills/00-index.md (once per session)
@@ -188,13 +188,13 @@ GROWTH ──[continuous improvement loop]──> GROWTH
 5. When task category changes: Load new modules (old context discarded)
 ```
 
-**记忆系统渐进式披露**是一个独立的 3 层结构（`index.json` -> `timeline.json` -> `episodic/*.json`），用于检索过往事件和模式。请参阅 `skills/memory.md` 和 `references/memory-system.md`。
+**记忆系统渐进式披露**是一个独立的三层结构（`index.json` -> `timeline.json` -> `episodic/*.json`），用于检索过往事件和模式。请参阅 `skills/memory.md` 和 `references/memory-system.md`。
 
 ---
 
 ## 调用
 
-**统一入口（v6.84.0）：** `loki start [SPEC|ISSUE-REF]` 会自动检测输入是 PRD 文件、问题 URL、问题编号，还是其他规范格式（例如 OpenAPI）。无需在 `loki start` 和 `loki run` 之间进行选择，单个命令即可处理所有情况。
+**统一入口（v6.84.0）：**`loki start [SPEC|ISSUE-REF]` 会自动检测输入是 PRD 文件、issue URL、issue 编号，还是其他规范格式（例如 OpenAPI）。无需在 `loki start` 和 `loki run` 之间进行选择，单个命令即可处理所有情况。
 
 ```bash
 # Standard mode (Claude - full features)
@@ -235,38 +235,38 @@ loki docker --image IMG start prd.md          # override the image
 # It is an alias for `loki start <issue>` and will be removed in a future major.
 ```
 
-**提供者能力：**
-- **Claude**: Opus 4.6，1M 上下文（beta），128K 输出，自适应思考，智能体团队，完整功能（Task tool、parallel agents、MCP）
-- **Codex**: GPT-5.3，400K 上下文，128K 输出，支持 MCP，--full-auto 模式，降级（仅顺序执行，无 Task tool）
-- **Cline**: 多提供商 CLI，降级模式（仅顺序执行，无 Task tool）
-- **Aider**: 18+ 提供商后端，降级模式（仅顺序执行，无 Task tool）
-- **Google Gemini CLI**: 从 v7.5.18 起已弃用（上游已弃用；运行时已移除）
+**Provider capabilities:**
+- **Claude**：Opus 4.6，1M context（beta），128K output，自适应思考，agent teams，完整功能（Task tool、parallel agents、MCP）
+- **Codex**：GPT-5.3，400K context，128K output，支持 MCP，`--full-auto` 模式，受限（仅支持顺序执行，不支持 Task tool）
+- **Cline**：多 Provider CLI，受限模式（仅支持顺序执行，不支持 Task tool）
+- **Aider**：支持 18+ 个 Provider 后端，受限模式（仅支持顺序执行，不支持 Task tool）
+- **Google Gemini CLI**：自 v7.5.18 起**已弃用**（上游已弃用；运行时已移除）
 
 ---
 
-## 人工干预 (v3.4.0)
+## 人工干预（v3.4.0）
 
 使用 `autonomy/run.sh` 运行时，你可以进行干预：
 
 | 方法 | 效果 |
 |--------|--------|
-| `touch .loki/PAUSE` | 在当前会话后暂停 |
+| `touch .loki/PAUSE` | 在当前会话结束后暂停 |
 | `loki steer "<note>"` | 将指令追加到 `.loki/HUMAN_INPUT.md`（需要 `LOKI_PROMPT_INJECTION=1`）；v8.0.0 |
 | `echo "instructions" > .loki/HUMAN_INPUT.md` | 注入指令（需要 `LOKI_PROMPT_INJECTION=true`） |
-| `loki why` | 解释当前结果；在停顿时给出真实停顿原因并建议使用 `loki steer`（v8.0.0） |
+| `loki why` | 解释当前结果；发生停滞时说明真正的停滞原因，并建议使用 `loki steer`（v8.0.0） |
 | `touch .loki/STOP` | 立即停止 |
-| Ctrl+C（一次） | 暂停，显示选项 |
+| Ctrl+C（一次） | 暂停并显示选项 |
 | Ctrl+C（两次） | 立即退出 |
 
-### 安全：提示注入 (v5.6.1)
+### 安全性：提示注入（v5.6.1）
 
-**默认禁用**以确保企业安全。除非明确启用，否则通过 `HUMAN_INPUT.md` 的提示注入会被阻止。
+出于企业安全考虑，默认**禁用**。除非显式启用，否则会阻止通过 `HUMAN_INPUT.md` 进行提示注入。
 
 ```bash
-# 启用提示注入（仅在可信环境中）
+# Enable prompt injection (only in trusted environments)
 LOKI_PROMPT_INJECTION=true loki start ./prd.md
 
-# 或用于沙箱模式
+# Or for sandbox mode
 LOKI_PROMPT_INJECTION=true loki sandbox prompt "start the app"
 ```
 
@@ -274,184 +274,174 @@ LOKI_PROMPT_INJECTION=true loki sandbox prompt "start the app"
 
 | 类型 | 文件 | 行为 |
 |------|------|----------|
-| **Directive** | `.loki/HUMAN_INPUT.md` | 有效指令（需要 `LOKI_PROMPT_INJECTION=true`） |
+| **Directive** | `.loki/HUMAN_INPUT.md` | 活跃指令（需要 `LOKI_PROMPT_INJECTION=true`） |
 
-**示例指令**（仅在 `LOKI_PROMPT_INJECTION=true` 下生效）：
+**指令示例**（仅在 `LOKI_PROMPT_INJECTION=true` 时生效）：
 ```bash
 echo "Check all .astro files for missing BaseLayout imports." > .loki/HUMAN_INPUT.md
 ```
 
 ---
 
-## 复杂度层级 (v3.4.0)
+## 复杂度层级（v3.4.0）
 
-自动检测或使用 `LOKI_COMPLEXITY` 强制设置：
+自动检测，或通过 `LOKI_COMPLEXITY` 强制指定：
 
-| 层级 | 阶段 | 使用场景 |
-|------|--------|----------|
-| **simple** | 3 | 1-2 个文件，UI 修复，文本更改 |
-| **standard** | 6 | 3-10 个文件，功能开发，缺陷修复 |
-| **complex** | 8 | 10+ 个文件，微服务，外部集成 |
+| 层级 | 阶段数 | 使用场景 |
+|------|------|----------|
+| **simple** | 3 | 1-2 个文件、UI 修复、文本更改 |
+| **standard** | 6 | 3-10 个文件、功能、Bug 修复 |
+| **complex** | 8 | 10+ 个文件、微服务、外部集成 |
 
 ---
 
-## 管理托管智能体集成 (v7.2.0)
+## Managed Agents 集成（v7.2.0）
 
-与 Claude Managed Agents 的可选集成（2026 年 4 月发布）。为 Loki 提供跨项目的审计内存和真正的多智能体委员会。功能已内置到现有 RARV-C 和 council 流程中——无需学习新命令。
+与 Claude Managed Agents 的可选集成（发布于 2026 年 4 月）。提供 Loki 跨项目的审计记忆和真正的多智能体评议机制。相关功能已**内置**于现有的 RARV-C 和 council 流程中，无需学习新命令。
 
-**所有标志默认为 false。** 默认行为与 v7.2.0 相同。
+**所有标志默认均为 false。**默认行为与 v7.2.0 完全一致。
 
 | 标志 | 用途 | 状态 |
 |------|---------|--------|
-| `LOKI_MANAGED_AGENTS` | 总开关；托管路径所需 | 稳定 |
-| `LOKI_MANAGED_MEMORY` | REASON 增强 + REFLECT 阴影写入从 `.loki/memory/` 到 Managed Agents 存储 | 稳定（已使用 fake 进行测试） |
-| `LOKI_MANAGED_MEMORY_HYDRATE` | 会话启动时从存储拉取语义模式 + 技能 | 稳定（已使用 fake 进行测试） |
+| `LOKI_MANAGED_AGENTS` | 父级开关；所有 managed 路径都需要 | 稳定 |
+| `LOKI_MANAGED_MEMORY` | REASON 增强 + REFLECT 将 `.loki/memory/` 从影子写入 Managed Agents 存储 | 稳定（已使用伪实现测试） |
+| `LOKI_MANAGED_MEMORY_HYDRATE` | 会话启动时从存储中拉取语义模式 + skills | 稳定（已使用伪实现测试） |
 | `LOKI_EXPERIMENTAL_MANAGED_AGENTS` | 多智能体会话路径的总开关 | 研究预览 |
-| `LOKI_EXPERIMENTAL_MANAGED_REVIEW` | 通过 `callable_agents` 的托管代码评审委员会 | 研究预览 |
-| `LOKI_EXPERIMENTAL_MANAGED_COUNCIL` | 通过 `callable_agents` 的托管完成委员会 | 研究预览 |
+| `LOKI_EXPERIMENTAL_MANAGED_REVIEW` | 通过 `callable_agents` 实现的 Managed 代码审查评议 | 研究预览 |
+| `LOKI_EXPERIMENTAL_MANAGED_COUNCIL` | 通过 `callable_agents` 实现的 Managed 完成评议 | 研究预览 |
 
-快速失败（fail-fast）：`child-on + parent-off` 会以明确错误退出码 `2`。API
-不可达时将回退到本地路径，并向 `.loki/managed/events.ndjson` 写入
-`managed_agents_fallback` 事件。不会出现重试风暴。
+快速失败：子级开启而父级关闭时，以状态码 2 退出并显示清晰错误。API 无法访问时回退到本地路径，并向 `.loki/managed/events.ndjson` 写入 `managed_agents_fallback` 事件。不会造成重试风暴。
 
-**建议开启顺序（推荐）：**
+**开启顺序（推荐）：**
 1. `LOKI_MANAGED_AGENTS=true LOKI_MANAGED_MEMORY=true`（内存镜像）。
-2. 在一周磨合后加入 `LOKI_MANAGED_MEMORY_HYDRATE=true`。
-3. 将 `LOKI_EXPERIMENTAL_*` 保持关闭，直到多代理从研究预览毕业。
+2. 经过一周的 soak 后，再添加 `LOKI_MANAGED_MEMORY_HYDRATE=true`。
+3. 在多智能体功能从研究预览阶段毕业前，保持 `LOKI_EXPERIMENTAL_*` 关闭。
 
-**未针对真实 Anthropic API 进行测试。** 自动化 CI 使用
-`memory/managed_memory/fakes.py`。Beta header 固定为
-`managed-agents-2026-04-01`。如果 SDK 形状不一致，调用会抛出
-`AttributeError`/`TypeError`，这些错误会被捕获并转换为
+**未针对线上 Anthropic API 进行测试。** 自动化 CI 使用 `memory/managed_memory/fakes.py`。Beta header 固定为
+`managed-agents-2026-04-01`。如果 SDK 形态不同，调用会引发
+`AttributeError`/`TypeError`，这些异常会被捕获并转换为
 `ManagedUnavailable`，随后回退到本地路径。
 
-完整集成指南见 `skills/memory.md`。
+参见 `skills/memory.md` 获取完整集成指南。
 
 ---
 
-## 第1阶段 RARV-C 闭环（v7.5.x）
+## 第一阶段 RARV-C 收尾（v7.5.x）
 
-当前路线将真实证据接入 RARV-C 反馈。该内容在此处及 `loki internal --help`
-中有说明：
+当前版本将真实证据接入 RARV-C 反馈。本文档和 `loki internal --help` 中均有说明：
 
-| 环境变量 | 效果 |
+| Env Var | Effect |
 |---------|--------|
-| `LOKI_INJECT_FINDINGS=true` | 将 council findings 与 gate failures 注入到下一次 REASON 提示 |
-| `LOKI_OVERRIDE_COUNCIL=true` | 在可用时优先使用真实 provider judges 而非假值 |
-| `LOKI_AUTO_LEARNINGS=true` | 在 VERIFY 后自动将学习内容提取到语义记忆 |
-| `LOKI_HANDOFF_MD=true` | 在会话边界生成 `handoff.md` 延续性文档 |
+| `LOKI_INJECT_FINDINGS=true` | 将评审委员会发现的问题 + gate 失败注入下一次 REASON prompt |
+| `LOKI_OVERRIDE_COUNCIL=true` | 在可用时使用真实 provider judges 替代 fakes |
+| `LOKI_AUTO_LEARNINGS=true` | 在 VERIFY 后自动将经验提取到语义记忆中 |
+| `LOKI_HANDOFF_MD=true` | 在会话边界生成 `handoff.md` 连续性文档 |
 
-完整 RARV-C 契约见 `references/core-workflow.md`。
+参见 `references/core-workflow.md` 获取完整的 RARV-C 契约。
 
 ---
 
-## 信任层补充（v7.28.0）
+## 信任层新增功能（v7.28.0）
 
-两个 completion-trust 特性扩展了验证门控。完整细节见
-`skills/quality-gates.md`。
+两项完成信任功能扩展了验证 gates。完整详情请参见 `skills/quality-gates.md`。
 
-- **留出验证样本：** 约 25% 的 checklist 条目（按确定性 `sha256(id)` 顺序，`N >= 4`）会被保留到 `.loki/checklist/held-out.json`，并从构建提示词输入中排除；若留出项失败，completion council 将阻塞流程。可通过 `LOKI_HELDOUT_GATE=0` 选择退出。诚实的局限在于：它只保护提示词输入，而不是沙箱；该保留文件在磁盘上，具备文件系统访问权限的代理可以读取。
-- **不确定基线披露：** 当证据门控无法建立差异基线（`no_git_repo` / `no_run_start_sha`）时，会写入
-  `.loki/state/evidence-inconclusive.json`，且 `COMPLETION.txt` 会携带诚实的
-  “not independently verified” 行。它不会阻塞非 git 项目；红色测试仍然会阻塞。
+- **留出集规格评估：**约 25% 的检查清单项（按确定性的 `sha256(id)` 顺序，`N >= 4`）会被保留到 `.loki/checklist/held-out.json` 中，并从构建 prompt feed 中排除；如果留出项失败，完成评审委员会会阻止完成。使用 `LOKI_HELDOUT_GATE=0` 可选择退出。诚实的限制是：此功能保护的是 prompt feed，而不是 sandbox；保留文件位于磁盘上，拥有文件系统访问权限的 agent 可以读取它。
+- **无法得出结论的基线披露：**当证据 gate 无法建立 diff 基线（`no_git_repo` / `no_run_start_sha`）时，会写入 `.loki/state/evidence-inconclusive.json`，并且 `COMPLETION.txt` 会包含诚实的“未经独立验证”说明。它不会阻止非 git 项目；但红色测试仍会阻止完成。
 
-## Harness intelligence（v8.0.0）
+## Harness 智能（v8.0.0）
 
-在现有信任核心上叠加了四个经测量的 harness 纪律。它们都不能削弱门控：每个都要么增加验证，要么在必失败的工作上节省预算。
+在现有信任核心之上叠加了四项经过测量的 harness 规范。其中任何一项都不能削弱 gate：每项要么增加验证，要么为注定无法成功的工作节省预算。
 
-| 环境变量 | 默认 | 效果 |
+| Env Var | Default | Effect |
 |---------|---------|--------|
-| `LOKI_CONFIDENCE_SPIKE=0` | 开启 | 禁用置信度尖峰重检 |
-| `LOKI_CONFIDENCE_SPIKE_DELTA` | `40` | 判定为尖峰的置信度跃升（点数） |
-| `LOKI_CONFIDENCE_SPIKE_MIN` | `90` | 首次到达时视为尖峰的绝对阈值 |
-| `LOKI_GOAL_SCORING=0` | 开启 | 禁用目标可测性咨询 |
-| `LOKI_SMART_RETRY=0` | 开启 | 重试所有失败，包括不可重试失败 |
-| `LOKI_SIMPLE=1` | 关闭 | 去掉系统提示词的教练部分（-78%，约 1562 token/轮次）。实验性剥离分支。 |
+| `LOKI_CONFIDENCE_SPIKE=0` | on | 禁用 confidence-spike 复查 |
+| `LOKI_CONFIDENCE_SPIKE_DELTA` | `40` | 被视为 spike 的置信度跃升（分数） |
+| `LOKI_CONFIDENCE_SPIKE_MIN` | `90` | 首次达到时被视为 spike 的绝对水平 |
+| `LOKI_GOAL_SCORING=0` | on | 禁用 goal-measurability advisory |
+| `LOKI_SMART_RETRY=0` | on | 重试每次失败，包括不可重试的失败 |
+| `LOKI_SIMPLE=1` | off | 移除 system prompt 中的 coaching 部分（-78%，每次迭代约 1562 个 token）。实验性消融组。 |
 
-- **提示缓存规范。** 提示词在显式的 `[CACHE_BREAKPOINT]` 处分为一个缓存稳定的
-  `<loki_system>` 前缀和一个易变的 `<dynamic_context>` 尾部；SDK judge 路径会在该分界处应用
-  `cache_control`。任何新的常驻指令都应放在前缀中，否则每次迭代都会使缓存失效。
-- **置信度飙升复检。** 当自报置信度跃升到接近最大值时，会在 done-signal valve 强制终止运行之前再执行
-  ONE 次额外校验。严格为增量行为：飙升只能**增加**一次验证轮次，不能跳过、缩短或满足某个闸门。它不能延迟
-  stagnation valve，并且延迟为一次性，因此反复飙升的运行也不能无限期推迟该阀门。
-- **可爬坡目标评分。** 对于没有可度量目标（无数字、比较符、命名指标或可验证产物）的
-  `COMPLETION_PROMISE`，会触发提示建议，要求给出可检查的成功条件。仅为建议：它不会阻塞构建，也不会改写目标。对缺失目标和
-  perpetual 模式会被抑制，其中开放式结尾是已选配置。该行为在 bash 与 TypeScript 路由之间完全字节对齐。
-- **智能重试。** 明确识别出的永久性失败（凭据错误、未知模型、配额用尽）会提前停止，而不是在必然重复失败上消耗重试预算。故障保护：
-  未识别错误仍保持 `TRANSIENT` 并按原样重试，且速率限制被明确排除在永久失败集合之外。
+- **提示缓存纪律。** 提示词被拆分为缓存稳定的
+  `<loki_system>` 前缀和易变的 `<dynamic_context>` 尾部，中间有明确的
+  `[CACHE_BREAKPOINT]`；SDK judge 路径会在该拆分处应用 `cache_control`。
+  任何新的始终启用的指令都应放入前缀，否则每次迭代都会使缓存失效。
+- **置信度骤升复核。** 自报告置信度跃升至接近最大值时，在完成信号阀强制终止运行前，必须额外执行一次验证。
+  严格仅追加：骤升只能增加一次验证流程，绝不能跳过、缩短或满足某个门槛。它不能延迟停滞阀，且延迟仅触发一次，因此反复骤升的运行无法无限期推迟该阀门。
+- **可进行爬坡优化的目标评分。** 没有可度量目标（无数字、比较运算符、命名指标或可验证产物）的
+  `COMPLETION_PROMISE` 会收到提示建议，要求提供可检查的成功条件。仅作建议：它不会阻止构建，也不会重写目标。在目标缺失时，以及在开放性是既定配置的永久模式下，均会抑制该建议。
+  bash 和 TypeScript 路径逐字镜像。
+- **智能重试。** 对于已明确识别的永久性失败（凭据错误、未知模型、配额耗尽），会提前停止，而不是将重试配额消耗在必然相同的失败上。故障安全：无法识别的错误仍保持为
+  TRANSIENT，并完全按照之前的方式重试；速率限制明确排除在永久性失败集合之外。
 
-## Operational observability (v8.0.0)
+## 运行可观测性（v8.0.0）
 
-- **SDK 能力降级事件。** SDK 加载或流式处理失败会向 `.loki/events.jsonl` 追加一个结构化的
-  `capability_degraded` 记录（与 hook events 相同的 `{type, source, timestamp, payload}` 封装），而不仅仅以
-  纯文本形式出现在采集输出中，以便无人值守时可区分“SDK 无法加载”与“模型表现不佳”。该记录会写入
-  `fail_closed: true`，而不是让人猜测。无需环境变量：这是操作员始终需要的信号。
-- **首次预览耗时。** `.loki/app-runner/first-preview.json` 记录从运行开始到应用首次可服务的耗时秒数。
-  只写一次，因此重启不能用一个更快的热启动数值覆盖真实的首次预览缓慢；当不存在基线时会直接跳过而不是猜测。
-  仅 Bash 路由（app-runner 集成位于此）。
+- **SDK 能力降级事件。** SDK 加载或流式传输失败时，会向
+  `.loki/events.jsonl` 追加结构化的 `capability_degraded` 记录（使用与 hook 事件相同的
+  `{type, source, timestamp, payload}` 信封），不再仅作为捕获输出中的说明存在，以便无人值守的操作员区分“SDK 无法加载”和“模型工作效果不佳”。该记录会声明
+  `fail_closed: true`，而不是留待推断。无环境变量：这是操作员始终需要的信号。
+- **首次预览耗时。** `.loki/app-runner/first-preview.json` 记录从运行开始到应用首次提供服务所经过的秒数。只写入一次，因此重启不会用一个令人误判的热启动数值覆盖真实的首次预览耗时；没有基线时完全跳过，不进行猜测。仅限 bash 路径（app-runner 集成位于此处）。
 
-## First-run UX (v7.29.0)
+## 首次运行体验（v7.29.0）
 
-- **`loki quickstart`：** 引导式 4 步首次构建（setup check、单行 idea、离线模板匹配、含真实估算数据的
-  计划复核）；贯穿所有步骤按回车可构建示例 Todo 应用；非 TTY/CI 环境下以状态码 2 退出，并给出自动化提示。
-- **提供安装程序。** 当未发现提供者 CLI 时，doctor 以及 start/demo/quick/quickstart 预检会在交互式
-  TTY 上提供安装 Claude Code 的选项；仅在可交互 TTY 下才会提示；首先打印将要执行的单条命令；通过 `claude
-  auth login` 完成鉴权交接，并由 `claude auth status` 确认就绪。可选退出：`LOKI_NO_INSTALL_OFFER=1`。
-- **`loki demo` 成本确认：** 估算会始终在消费前打印；`--yes` 会跳过提示，但不会跳过估算输出。`LOKI_COMPLEXITY`
-  会被 `loki plan` 采用，并附带诚实的强制层级说明。
+- **`loki quickstart`：** 引导完成首次构建的 4 个步骤（设置检查、单行创意、离线模板匹配、使用真实估算器数据的计划审查）；一路按 Enter 会构建示例 Todo 应用；非 TTY/CI 环境以状态码 2 退出，并提示自动化方式。
+- **提供安装 Provider：** 找不到 Provider CLI 时，doctor 以及 start/demo/quick/quickstart 的预检流程会提供安装 Claude Code。仅在交互式 TTY 中经用户同意后执行；首先打印将要执行的单条命令；通过 `claude auth login` 完成认证交接，并通过
+  `claude auth status` 确认就绪。退出方式：`LOKI_NO_INSTALL_OFFER=1`。
+- **`loki demo` 费用确认：** 估算值始终在产生费用前打印；`--yes` 会跳过提示，但绝不会跳过估算。`loki plan` 会遵循
+  `LOKI_COMPLEXITY`，并诚实地注明强制使用的等级。
 
 ---
+
 ## 并发与安全加固（v7.5.7 - v7.5.13）
 
-连续三次补丁修复了跨进程和安全性缺口。默认流程没有用户可见的行为变化；请通过所引用的路径进行验证。
+连续发布的三个补丁修复了跨进程和安全方面的漏洞。默认流程的面向用户行为没有变化；请通过所引用的路径进行验证。
 
-- **跨进程文件锁**用于 append-or-rewrite 状态，以便并行运行 / dashboard / MCP 不会破坏共享文件：门控计数器（`autonomy/run.sh` gate-counter 写入）、任务队列（`autonomy/run.sh` 队列 read-modify-write）、检查点索引（`autonomy/run.sh` 检查点索引更新）、`events.jsonl` 追加（`events/emit.sh` 和 `autonomy/run.sh` 中的事件发送路径）、人工干预信号文件（按状态机文档，`autonomy/run.sh:check_human_intervention()` 在约 8059 / 7897 行）。
-- **MCP 路径校验**——`mcp/server.py` 工具的 file/path 参数已标准化，并在逃离项目根目录时被拒绝（v7.5.8 的路径遍历修复）。
-- `dashboard/server.py` 中，对 `/api/memory/*`、`/api/learning/*` 和 `/api/status` 现在要求进行 dashboard 认证（先前为未认证读取路径）。
-- `autonomy/run.sh` 和 `autonomy/loki` 的 **Bash 引号强化**——命令替换和 `[ ]` 测试中的变量展开都加上引号，以避免路径中含空格导致的词拆分问题。
+- **跨进程文件锁**：用于追加或重写状态，避免并行运行、dashboard 和 MCP 损坏共享文件：门控计数器（`autonomy/run.sh` 门控计数器写入）、任务队列（`autonomy/run.sh` 队列读-修改-写入）、检查点索引（`autonomy/run.sh` 检查点索引更新）、`events.jsonl` 追加（`events/emit.sh` 和 `autonomy/run.sh` 中的事件发射路径）、人工干预信号文件（状态机文档中约第 8059 / 7897 行的 `autonomy/run.sh:check_human_intervention()`）。
+- **MCP 路径验证**：`mcp/server.py` 工具的文件/路径参数会被规范化；如果路径逃逸出项目根目录，则会被拒绝（v7.5.8 修复的路径遍历问题）。
+- **Dashboard 身份验证**：现在 `/api/memory/*`、`/api/learning/*` 和 `/api/status` 必须经过身份验证，位于 `dashboard/server.py` 中（此前这些读取路径未经过身份验证）。
+- **Bash 引用加固**：覆盖 `autonomy/run.sh` 和 `autonomy/loki`；命令替换和 `[ ]` 测试中的变量展开均已添加引用，以防止路径包含空格时发生单词拆分。
 
-请参阅 `CHANGELOG.md` 的 [7.5.7]、[7.5.8]、[7.5.13] 条目，查看逐项修复清单和审阅者签署。
+有关每项修复的列表和审查者签署，请参见 `CHANGELOG.md` 中的 [7.5.7]、[7.5.8] 和 [7.5.13] 条目。
 
 ---
 
-## 已实现功能
+## 已实现的功能
 
 | 功能 | 添加版本 | 说明 |
 |---------|-------|-------|
-| 多提供商支持（5 个提供商） | v5.0.0 | claude、codex、cline、aider、opencode -- 见 `providers/` |
-| CONTINUITY.md working memory | v5.35.0 | 由 run.sh 自动管理，每次迭代更新 |
-| 质量门 3 审核人体系 | v5.35.0 | `skills/quality-gates.md` 中有 5 名专业审核人；在 run.sh 中执行 |
-| Memory System（情景/语义/程序性） | v5.15.0 | `memory/` 中的完整实现 |
-| Context Window Tracking | v5.40.0 | 仪表盘仪表、`GET /api/context` 的逐代理分解 |
-| Notification Triggers | v5.40.0 | `GET/PUT /api/notifications/triggers` |
-| GitHub 集成 | v5.42.2 | 导入、回写同步、PR 创建、导出。CLI：`loki github`，API：`/api/github/*` |
-| Legacy System Healing | v6.67.0 | `loki heal <path>` -- friction-as-semantics、特征测试 |
-| Unified `loki start` | v6.84.0 | 自动识别规格（PRD、OpenAPI 等）与 issue 输入 |
-| Managed Agents（memory mirror） | v7.2.0 | 通过 `LOKI_MANAGED_AGENTS` 可选启用 -- 见 Managed Agents 部分 |
-| Bun runtime（第一阶段） | v7.3.0 | 只读命令通过 `bin/loki` 路由；`LOKI_LEGACY_BASH=1` 可回退 |
-| 第一阶段 RARV-C 关闭 | v7.5.x | Findings 注入、真实裁判、自动学习、`handoff.md` |
-| Anthropic SDK 路径 | v8.0.0 | 可选启用，默认关闭；单一开关 `LOKI_SDK_MODE` -- 见 `references/sdk-mode.md` |
-| Harness intelligence | v8.0.0 | Prompt-cache 约束、confidence-spike 复查、目标评分、智能重试 |
-| SDK 降级事件 | v8.0.0 | 在 `.loki/events.jsonl` 上结构化记录 `capability_degraded` |
-| 首次预览时间 | v8.0.0 | `.loki/app-runner/first-preview.json`，写一次（bash 路由） |
-| Opt-in build analytics | v8.0.0 | `build_verified` 事件在严格第二道闸后触发，仅允许 `allowlist` 字段 |
+| 多提供商支持（5 个提供商） | v5.0.0 | claude、codex、cline、aider、opencode -- 参见 `providers/` |
+| CONTINUITY.md 工作记忆 | v5.35.0 | 由 run.sh 自动管理，每次迭代都会更新 |
+| 质量门控三审查者系统 | v5.35.0 | `skills/quality-gates.md` 中有 5 个专业审查者；由 run.sh 执行 |
+| 记忆系统（情景/语义/程序） | v5.15.0 | 完整实现位于 `memory/` |
+| 上下文窗口跟踪 | v5.40.0 | Dashboard 仪表盘，以及 `GET /api/context` 中的按代理分解信息 |
+| 通知触发器 | v5.40.0 | `GET/PUT /api/notifications/triggers` |
+| GitHub 集成 | v5.42.2 | 导入、同步回写、创建 PR、导出。CLI：`loki github`，API：`/api/github/*` |
+| 旧系统修复 | v6.67.0 | `loki heal <path>` -- 摩擦即语义、特征测试 |
+| 统一的 `loki start` | v6.84.0 | 自动检测规范（PRD、OpenAPI 等）与 issue 输入 |
+| 托管代理（记忆镜像） | v7.2.0 | 通过 `LOKI_MANAGED_AGENTS` 选择启用 -- 参见 Managed Agents 部分 |
+| Bun 运行时（第 1 阶段） | v7.3.0 | 只读命令通过 `bin/loki` 路由；使用 `LOKI_LEGACY_BASH=1` 恢复原行为 |
+| 第 1 阶段 RARV-C 闭环 | v7.5.x | 发现项注入、真实评审器、自动学习、handoff.md |
+| Anthropic SDK 路由 | v8.0.0 | 选择启用，默认关闭；使用一个开关 `LOKI_SDK_MODE` -- 参见 `references/sdk-mode.md` |
+| Harness 智能化 | v8.0.0 | 提示缓存规范、置信度突增重新检查、目标评分、智能重试 |
+| SDK 降级事件 | v8.0.0 | 在 `.loki/events.jsonl` 上记录结构化的 `capability_degraded` 记录 |
+| 首次预览耗时 | v8.0.0 | `.loki/app-runner/first-preview.json`，只写入一次（bash 路由） |
+| 选择启用的构建分析 | v8.0.0 | `build_verified` 事件位于严格的第二道门控之后，且仅包含允许列表中的字段 |
 
-## 计划中 / 进行中的功能
+## 计划中 / 开发中的功能
 
-| 特性 | 目标 | 说明 |
+| 功能 | 目标 | 备注 |
 |---------|--------|-------|
-| Bun 运行时（Phase 2+） | TBD | 迁移写路径命令；已在 `feat/bun-migration` 中跟踪 |
-| 托管代理 multiagent 路径 | TBD | `LOKI_EXPERIMENTAL_MANAGED_*` 标志 -- 研究预览，不在正式 API 中 |
-| 基准测试（HumanEval、SWE-bench） | TBD | 运行脚本和数据集位于 `benchmarks/`；尚无公开结果 |
-| `loki run` 移除 | 下一个 major | 目前是 `loki start` 的已弃用别名 |
+| Bun runtime（Phase 2+） | 待定 | 迁移写入路径命令；在 `feat/bun-migration` 上跟踪 |
+| Managed Agents 多智能体路径 | 待定 | `LOKI_EXPERIMENTAL_MANAGED_*` 标志位——研究预览版，不适用于线上 API |
+| 基准测试（HumanEval、SWE-bench） | 待定 | `benchmarks/` 中已有运行器脚本和数据集；尚无已发布结果 |
+| 移除 `loki run` | 下一个主版本 | 目前是 `loki start` 的弃用别名 |
 
 ## 已弃用
 
-| 项目 | 弃用版本 | 说明 |
+| 项目 | 弃用于 | 备注 |
 |------|---------------|-------|
-| `loki run <issue>` | v6.84.0 | `loki start` 的别名。将于下一个 major 版本中移除。 |
-| VSCode 扩展（`vscode-extension/`） | v7.2.0 | 不再积极维护；dashboard web UI 是受支持的前端。 |
+| `loki run <issue>` | v6.84.0 | `loki start` 的别名。将在下一个主版本中移除。 |
+| VSCode 扩展（`vscode-extension/`） | v7.2.0 | 不再积极维护；Dashboard Web UI 是受支持的前端。 |
 
 ---
 
-**v9.35.0 | [Autonomi](https://www.autonomi.dev/) 旗舰产品 | ~410 行核心**
+**v9.45.0 | [Autonomi](https://www.autonomi.dev/) 旗舰产品 | 核心代码约 410 行**

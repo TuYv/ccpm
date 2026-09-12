@@ -1,7 +1,7 @@
 {
   "id": "imbad0202-academic-research-skills-academic-paper",
   "name": "academic-paper",
-  "description": "12-agent academic paper writing pipeline. 11 modes (full/plan/outline/revision/revision-coach/abstract/lit-review/format-convert/citation-check/disclosure/rebuttal-audit). 6 paper types, 5 citation formats, bilingual abstracts, LaTeX/DOCX-via-Pandoc/PDF output. Style Calibration + Writing Quality Check + Anti-Patterns with IRON RULE markers. Triggers: write paper, academic paper, guide my paper, parse reviews, audit my rebuttal, check my response draft, AI disclosure, 寫論文, 學術論文, 引導我寫論文, 審查意見, 評估",
+  "description": "12-agent academic paper writing pipeline. 11 modes (full/plan/outline/revision/revision-coach/abstract/lit-review/format-convert/citation-check/disclosure/rebuttal-audit). 6 paper types, 5 citation formats, bilingual abstracts, LaTeX/DOCX-via-Pandoc/PDF output. Style Calibration + Writing Quality Check + Anti-Patterns with IRON RULE markers. Triggers: write paper, academic paper, guide my paper, parse reviews, I got reviewer comments, revision roadmap, should we push back, conference rebuttal, g",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/Imbad0202/academic-research-skills/blob/main/academic-paper/SKILL.md",
     "path": "academic-paper/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-12T14:36:00.076Z",
-    "stars": 47750,
+    "discovered_at": "2026-09-12T18:07:40.478Z",
+    "stars": 47765,
     "language": "Python",
-    "pushed_at": "2026-09-12T14:17:44Z",
+    "pushed_at": "2026-09-12T15:55:23Z",
     "license": null
   },
-  "summary_zh": "一套多智能体论文写作流水线，适合从选题规划、撰写修改到引文核查、审稿回复和多格式导出的全流程辅助。"
+  "summary_zh": "面向学术写作的多智能体流水线，适合从论文规划、文献综述、写作修改到格式转换、引用检查和审稿回复的完整流程。"
 }

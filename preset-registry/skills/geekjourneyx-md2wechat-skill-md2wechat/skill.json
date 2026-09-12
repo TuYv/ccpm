@@ -1,8 +1,8 @@
 {
   "id": "geekjourneyx-md2wechat-skill-md2wechat",
   "name": "md2wechat",
-  "description": "Convert Markdown to WeChat Official Account HTML. Use this whenever the user wants WeChat article formatting, article preview, WeChat draft upload, image generation for articles, cover or infographic generation, image-post creation, writer-style drafting, title suggestions, AI trace removal, or current discovery of supported providers, themes, prompts, and layout modules.",
-  "category": "测试调试",
+  "description": "Convert Markdown to WeChat Official Account HTML. Use this whenever the user wants WeChat article formatting, article preview, WeChat draft upload, image generation for articles, cover or infographic generation, image-post creation, writer-style drafting, title suggestions, AI trace removal, or current discovery of supported providers, themes, prompts, and layout modules. Also use for unpublished Zhihu, CSDN, or Toutiao drafts through a browser.",
+  "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,11 @@
     "url": "https://github.com/geekjourneyx/md2wechat-skill/blob/main/skills/md2wechat/SKILL.md",
     "path": "skills/md2wechat/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-12T14:47:04.964Z",
+    "discovered_at": "2026-09-12T18:19:11.220Z",
     "stars": 3643,
     "language": "Go",
-    "pushed_at": "2026-09-07T15:35:25Z",
+    "pushed_at": "2026-09-12T15:53:21Z",
     "license": null
   },
-  "summary_zh": "一款将 Markdown 转为微信公众号 HTML 的排版工具，适合文章预览、草稿上传、配图封面生成和内容润色。"
+  "summary_zh": "将 Markdown 转换为适合微信公众号发布的 HTML，适用于文章排版、预览、草稿上传及配图生成等内容创作场景。"
 }
