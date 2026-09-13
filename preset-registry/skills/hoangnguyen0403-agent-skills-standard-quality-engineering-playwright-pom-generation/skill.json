@@ -1,0 +1,26 @@
+{
+  "id": "hoangnguyen0403-agent-skills-standard-quality-engineering-playwright-pom-generation",
+  "name": "quality-engineering-playwright-pom-generation",
+  "description": "Generates Playwright page objects from an executable test plan, one class per screen with ladder-compliant locators and no assertions, wired into a shared fixture. Use when a web scenario needs a page object that does not exist yet, or when locators drift and the page object must be rebuilt.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "HoangNguyen0403",
+  "install_path": ".claude/skills/quality-engineering-playwright-pom-generation/SKILL.md",
+  "source": {
+    "repo": "HoangNguyen0403/agent-skills-standard",
+    "url": "https://github.com/HoangNguyen0403/agent-skills-standard/blob/develop/.agents/skills/quality-engineering/quality-engineering-playwright-pom-generation/SKILL.md",
+    "path": ".agents/skills/quality-engineering/quality-engineering-playwright-pom-generation/SKILL.md",
+    "branch": "develop",
+    "discovered_at": "2026-09-13T11:19:09.977Z",
+    "stars": 565,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-13T08:01:42Z",
+    "license": "MIT"
+  },
+  "summary_zh": "根据可执行测试计划生成 Playwright 页面对象，每个页面对应一个类，适合补充缺失的页面对象或修复定位器变更。"
+}

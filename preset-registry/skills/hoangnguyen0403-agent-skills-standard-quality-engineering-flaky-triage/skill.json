@@ -1,0 +1,26 @@
+{
+  "id": "hoangnguyen0403-agent-skills-standard-quality-engineering-flaky-triage",
+  "name": "quality-engineering-flaky-triage",
+  "description": "Quarantines an intermittently failing test behind a ticket with an owner and expiry, assigns a root-cause bucket from isolated reruns, and defines when the test leaves quarantine. Use when a test is a QUARANTINE_CANDIDATE or fails without a code change; not for deterministic failures.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "HoangNguyen0403",
+  "install_path": ".claude/skills/quality-engineering-flaky-triage/SKILL.md",
+  "source": {
+    "repo": "HoangNguyen0403/agent-skills-standard",
+    "url": "https://github.com/HoangNguyen0403/agent-skills-standard/blob/develop/.agents/skills/quality-engineering/quality-engineering-flaky-triage/SKILL.md",
+    "path": ".agents/skills/quality-engineering/quality-engineering-flaky-triage/SKILL.md",
+    "branch": "develop",
+    "discovered_at": "2026-09-13T11:19:09.449Z",
+    "stars": 565,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-13T08:01:42Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于管理间歇性失败测试的隔离流程，结合复跑结果归类根因、指定负责人和到期时间，适合处理非代码变更导致的疑似不稳定测试。"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "hoangnguyen0403-agent-skills-standard-quality-engineering-visual-baseline",
+  "name": "quality-engineering-visual-baseline",
+  "description": "Captures, masks, compares, and updates screenshot baselines for web and mobile suites, with per-region thresholds and a reviewed-diff rule for every baseline change. Use when a screenshot assertion fails, a baseline needs updating, or visual checks are being added; not for deciding what to verify.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "HoangNguyen0403",
+  "install_path": ".claude/skills/quality-engineering-visual-baseline/SKILL.md",
+  "source": {
+    "repo": "HoangNguyen0403/agent-skills-standard",
+    "url": "https://github.com/HoangNguyen0403/agent-skills-standard/blob/develop/.agents/skills/quality-engineering/quality-engineering-visual-baseline/SKILL.md",
+    "path": ".agents/skills/quality-engineering/quality-engineering-visual-baseline/SKILL.md",
+    "branch": "develop",
+    "discovered_at": "2026-09-13T11:19:10.736Z",
+    "stars": 565,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-13T08:01:42Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于管理 Web 与移动端测试的截图基线，支持区域阈值和差异审核，适合处理截图断言失败、更新基线及新增视觉检查。"
+}

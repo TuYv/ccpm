@@ -1,0 +1,26 @@
+{
+  "id": "hoangnguyen0403-agent-skills-standard-common-task-complexity-routing",
+  "name": "common-task-complexity-routing",
+  "description": "Scores a coding task on Spread, Novelty, and Centrality (SNC 0-6) and maps the tier to autonomy, verification depth, review mode, reviewers, model tier. Use when sizing a fix or feature before planning, choosing fast vs deep review, or deciding whether HARD STOP approval is required.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "HoangNguyen0403",
+  "install_path": ".claude/skills/common-task-complexity-routing/SKILL.md",
+  "source": {
+    "repo": "HoangNguyen0403/agent-skills-standard",
+    "url": "https://github.com/HoangNguyen0403/agent-skills-standard/blob/develop/.agents/skills/common/common-task-complexity-routing/SKILL.md",
+    "path": ".agents/skills/common/common-task-complexity-routing/SKILL.md",
+    "branch": "develop",
+    "discovered_at": "2026-09-13T11:19:07.633Z",
+    "stars": 565,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-13T08:01:42Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于按任务的影响范围、新颖度和复杂度分级，帮助制定修复或功能开发计划，匹配自主程度、验证深度和评审要求。"
+}

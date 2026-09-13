@@ -1,0 +1,26 @@
+{
+  "id": "hoangnguyen0403-agent-skills-standard-common-architecture-diagramming",
+  "name": "common-architecture-diagramming",
+  "description": "Draw architecture diagrams as editable draw.io files with a fixed house style, C4 levels, and evidence-tagged shapes. Use when producing a system context, container, deployment, data flow, sequence, or state diagram, or redrawing an ASCII or Mermaid one.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "HoangNguyen0403",
+  "install_path": ".claude/skills/common-architecture-diagramming/SKILL.md",
+  "source": {
+    "repo": "HoangNguyen0403/agent-skills-standard",
+    "url": "https://github.com/HoangNguyen0403/agent-skills-standard/blob/develop/.agents/skills/common/common-architecture-diagramming/SKILL.md",
+    "path": ".agents/skills/common/common-architecture-diagramming/SKILL.md",
+    "branch": "develop",
+    "discovered_at": "2026-09-13T11:19:03.732Z",
+    "stars": 565,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-13T08:01:42Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于按统一风格绘制可编辑的 draw.io 架构图，支持 C4、部署、数据流、时序和状态图，并为图形标注证据来源。"
+}
