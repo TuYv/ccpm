@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-09-13T16:12:32.231Z",
+  "updated_at": "2026-09-13T19:59:32.705Z",
   "entries": {
     "preset:audiusproject-apps": {
       "hash": "67ad5f278a9fa16d",
@@ -17248,14 +17248,14 @@
       "translated_at": "2026-08-31T21:14:06.961Z"
     },
     "bundle:k-dense-ai-scientific-agent-skills": {
-      "hash": "7375ab59769e955f",
-      "summary_zh": "面向科研全流程的智能技能合集，串联文献检索、实验设计、数据分析与流程自动化，帮助研究者高效完成跨学科任务。",
-      "translated_at": "2026-09-11T22:54:07.866Z"
+      "hash": "f1f42e9f777fb81d",
+      "summary_zh": "面向科研全流程的智能技能库，把数据分析、实验设计、领域建模与实验室系统集成串联起来，帮助科研代理完成从研究到执行的闭环。",
+      "translated_at": "2026-09-13T19:23:48.430Z"
     },
     "bundle:k-dense-ai-claude-scientific-skills": {
-      "hash": "a3a9f54d6d8519d2",
-      "summary_zh": "面向科研全流程的智能技能合集，串联文献检索、实验设计、数据分析与工具集成，帮助研究者更高效地完成跨学科工作。",
-      "translated_at": "2026-09-11T19:41:51.183Z"
+      "hash": "b712f2740dcb51da",
+      "summary_zh": "面向科研与生物医药工作的智能工具合集，覆盖数据分析、实验设计、文献研究和流程自动化，帮助 Claude 端到端完成科学任务。",
+      "translated_at": "2026-09-13T19:24:12.803Z"
     },
     "bundle:decolua-9router": {
       "hash": "ae9922a60d46b45d",
@@ -43734,8 +43734,8 @@
       "translated_at": "2026-09-03T23:38:48.180Z"
     },
     "content:k-dense-ai-claude-scientific-skills-database-lookup": {
-      "hash": "d207afb60308d9b9",
-      "translated_at": "2026-09-11T11:36:19.012Z"
+      "hash": "dda99c6b4fbde7f1",
+      "translated_at": "2026-09-13T19:47:48.978Z"
     },
     "content:k-dense-ai-claude-scientific-skills-deepchem": {
       "hash": "2314814f2f3ea42e",
@@ -44394,8 +44394,8 @@
       "translated_at": "2026-08-31T21:53:28.726Z"
     },
     "content:kenryu42-claude-code-safety-net-ccsn-find-simplifications": {
-      "hash": "478e33654adb00b8",
-      "translated_at": "2026-08-20T07:38:15.675Z"
+      "hash": "12ebb87a49b3796c",
+      "translated_at": "2026-09-13T19:51:35.879Z"
     },
     "content:kenryu42-claude-code-safety-net-set-custom-rules": {
       "hash": "1fe0c4032dfe94a4",
@@ -49542,8 +49542,8 @@
       "translated_at": "2026-09-13T16:04:27.386Z"
     },
     "content:khazp-vibe-coding-prompt-template-vibe-workflow": {
-      "hash": "7694bfb7e2b6266b",
-      "translated_at": "2026-09-06T00:34:06.892Z"
+      "hash": "d4ca9ad57463f5c1",
+      "translated_at": "2026-09-13T19:51:47.055Z"
     },
     "content:orchestra-research-ai-research-skills-bigcode-evaluation-harness": {
       "hash": "7c46e8eb3ca8d4f5",
@@ -50837,8 +50837,8 @@
       "translated_at": "2026-08-28T12:29:43.912Z"
     },
     "content:daymade-claude-code-skills-prior-work-retrieval": {
-      "hash": "a9a51c9b345a86db",
-      "translated_at": "2026-09-11T06:00:17.082Z"
+      "hash": "431bb5abb65a876d",
+      "translated_at": "2026-09-13T19:30:48.069Z"
     },
     "content:getsentry-sentry-remove-option-or-flag": {
       "hash": "4ebc6f034cfa94b9",
@@ -55659,6 +55659,31 @@
     "content:levnikolaevich-claude-code-skills-ln-12-product-requirements-builder": {
       "hash": "2cc9e70686ad0526",
       "translated_at": "2026-09-13T16:06:50.988Z"
+    },
+    "skill:k-dense-ai-claude-scientific-skills-alphagenome": {
+      "hash": "83609fc83ce2d6a8",
+      "summary_zh": "用于查询和预测人鼠基因组变异对多组学调控信号的影响，适合变异注释、功能评估与调控机制研究。",
+      "translated_at": "2026-09-13T19:24:40.480Z"
+    },
+    "content:levnikolaevich-claude-code-skills-ln-13-interaction-design-builder": {
+      "hash": "cbb3efbee1d6eee7",
+      "translated_at": "2026-09-13T19:55:01.229Z"
+    },
+    "content:levnikolaevich-claude-code-skills-ln-23-system-design-proposal-builder": {
+      "hash": "537ad6bde38f1e7c",
+      "translated_at": "2026-09-13T19:56:40.321Z"
+    },
+    "content:levnikolaevich-claude-code-skills-ln-24-architecture-decision-recorder": {
+      "hash": "eda3a011e286f9e5",
+      "translated_at": "2026-09-13T19:57:54.248Z"
+    },
+    "content:levnikolaevich-claude-code-skills-ln-26-architecture-migration-planner": {
+      "hash": "77465dfd6dcf75aa",
+      "translated_at": "2026-09-13T19:59:01.390Z"
+    },
+    "content:levnikolaevich-claude-code-skills-ln-31-delivery-plan-builder": {
+      "hash": "10547ce8175ec7ca",
+      "translated_at": "2026-09-13T19:59:32.705Z"
     }
   }
 }

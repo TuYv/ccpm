@@ -1,0 +1,26 @@
+{
+  "id": "k-dense-ai-claude-scientific-skills-alphagenome",
+  "name": "alphagenome",
+  "description": "Look up precomputed AlphaGenome Atlas effects for any GRCh38 single-nucleotide variant (AVI score with Phred and 18 SHAP feature attributions, plus raw and quantile scores for RNA-seq, DNase, ATAC, ChIP-TF, ChIP-histone, CAGE, PRO-cap, splicing, polyadenylation and contact-map tracks), score variants or scan windows on demand with the AlphaGenome model for human and mouse (variant scoring, in silico mutagenesis, REF-versus-ALT track prediction), and build Atlas website deep links. Use when the u",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "K-Dense-AI",
+  "install_path": ".claude/skills/alphagenome/SKILL.md",
+  "source": {
+    "repo": "K-Dense-AI/claude-scientific-skills",
+    "url": "https://github.com/K-Dense-AI/claude-scientific-skills/blob/main/skills/alphagenome/SKILL.md",
+    "path": "skills/alphagenome/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-13T18:22:55.966Z",
+    "stars": 44733,
+    "language": "Python",
+    "pushed_at": "2026-09-13T16:27:15Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于查询和预测人鼠基因组变异对多组学调控信号的影响，适合变异注释、功能评估与调控机制研究。"
+}
