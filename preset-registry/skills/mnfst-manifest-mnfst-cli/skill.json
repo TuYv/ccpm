@@ -1,0 +1,26 @@
+{
+  "id": "mnfst-manifest-mnfst-cli",
+  "name": "mnfst-cli",
+  "description": "Use when creating or operating AI agents that make LLM calls — provisioning model routing and keys, wiring an app or automation to an LLM endpoint, testing routes, rotating leaked keys, or investigating LLM request failures and costs on a Manifest install.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mnfst",
+  "install_path": ".claude/skills/mnfst-cli/SKILL.md",
+  "source": {
+    "repo": "mnfst/manifest",
+    "url": "https://github.com/mnfst/manifest/blob/main/.claude/skills/mnfst-cli/SKILL.md",
+    "path": ".claude/skills/mnfst-cli/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-13T15:30:26.844Z",
+    "stars": 7522,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-13T13:32:03Z",
+    "license": "MIT"
+  },
+  "summary_zh": "用于创建和运维调用大模型的 AI 代理，适合配置模型路由与密钥、接入 LLM 服务、测试请求、轮换泄露密钥，以及排查调用失败和成本问题。"
+}

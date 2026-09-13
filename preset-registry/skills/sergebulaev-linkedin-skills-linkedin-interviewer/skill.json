@@ -1,0 +1,26 @@
+{
+  "id": "sergebulaev-linkedin-skills-linkedin-interviewer",
+  "name": "linkedin-interviewer",
+  "description": "Interview the user for the raw material their posts are made of. Builds a lasting Story Bank of roles, numbers, turning points, scars and positions, or runs a focused interview that turns one topic into a post spine. Use when a draft has nothing concrete to draw on, or the user says interview me. Not for learning how they write (use linkedin-humanizer --mode profile).",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sergebulaev",
+  "install_path": ".claude/skills/linkedin-interviewer/SKILL.md",
+  "source": {
+    "repo": "sergebulaev/linkedin-skills",
+    "url": "https://github.com/sergebulaev/linkedin-skills/blob/main/skills/linkedin-interviewer/SKILL.md",
+    "path": "skills/linkedin-interviewer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-13T14:38:13.435Z",
+    "stars": 2166,
+    "language": "Python",
+    "pushed_at": "2026-09-13T12:50:21Z",
+    "license": "MIT"
+  },
+  "summary_zh": "通过采访挖掘用户经历、数据、转折与观点，建立可持续更新的故事库，或围绕单一主题整理出领英帖子的内容骨架。"
+}
