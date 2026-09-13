@@ -3,35 +3,35 @@ name: glycoengineering
 description: Analyze and engineer protein glycosylation. Scan sequences for N-glycosylation sequons (N-X-S/T), predict O-glycosylation hotspots, and access curated glycoengineering tools (NetOGlyc, GlycoShield, GlycoWorkbench). For glycoprotein engineering, therapeutic antibody optimization, and vaccine design.
 license: Unknown
 metadata:
-  version: "1.1"
+  version: "1.2"
   skill-author: Kuan-lin Huang
 ---
-# 糖工程
+# 糖基工程
 
 ## 概述
 
-糖基化是蛋白质最常见且最复杂的翻译后修饰（PTM），影响超过 50% 的人类蛋白质。糖链调控蛋白质折叠、稳定性、免疫识别、受体相互作用以及治疗性蛋白的药代动力学。糖工程涉及对糖基化模式进行理性修饰，以提高治疗效果、稳定性或免疫逃逸能力。
+糖基化是蛋白质中最常见且最复杂的翻译后修饰（PTM），影响超过 50% 的人类蛋白质。聚糖可调控蛋白质折叠、稳定性、免疫识别、受体相互作用以及治疗性蛋白质的药代动力学。糖基工程涉及对糖基化模式进行合理修饰，以提高治疗效力、稳定性或实现免疫逃逸。
 
 **两种主要的糖基化类型：**
-- **N-糖基化**：连接至序列基序 N-X-[S/T] 中的天冬酰胺（N），其中 X ≠ 脯氨酸；发生于内质网/高尔基体
-- **O-糖基化**：连接至丝氨酸（S）或苏氨酸（T）；没有严格的共识基序；主要由 GalNAc 起始
+- **N-糖基化**：连接于序列子 N-X-[S/T] 中的天冬酰胺（N），其中 X ≠ 脯氨酸；发生于内质网/高尔基体
+- **O-糖基化**：连接于丝氨酸（S）或苏氨酸（T）；无严格的共有基序；主要由 GalNAc 起始
 
-## 何时使用此 Skill
+## 何时使用此技能
 
-在以下情况下使用此 skill：
+在以下情况下使用此技能：
 
 - **抗体工程**：优化 Fc 糖基化，以增强 ADCC、CDC 或降低免疫原性
-- **治疗性蛋白设计**：识别影响半衰期、稳定性或免疫原性的糖基化位点
-- **疫苗抗原设计**：设计糖链屏蔽，使免疫反应聚焦于保守表位
-- **生物类似药表征**：比较参比药物与生物类似药之间的糖链模式
+- **治疗性蛋白质设计**：识别影响半衰期、稳定性或免疫原性的糖基化位点
+- **疫苗抗原设计**：设计糖基屏障，使免疫反应聚焦于保守表位
+- **生物类似药表征**：比较参比药与生物类似药之间的聚糖模式
 - **药物靶点分析**：糖基化是否会影响受体的靶标结合？
-- **蛋白质稳定性**：N-糖链通常能够稳定蛋白质；识别用于稳定化突变的位点
+- **蛋白质稳定性**：N-聚糖通常可稳定蛋白质；识别可用于稳定化突变的位点
 
-## N-糖基化序列基序分析
+## N-糖基化序列子分析
 
 ### 扫描 N-糖基化位点
 
-N-糖基化发生于序列基序 **N-X-[S/T]**，其中 X ≠ 脯氨酸。
+N-糖基化发生于序列子 **N-X-[S/T]**，其中 X ≠ 脯氨酸。
 
 ```python
 import re
@@ -139,7 +139,7 @@ def add_glycosite(sequence: str, position: int, flanking_context: str = "S") -> 
 
 ## O-糖基化分析
 
-### O-糖基化热点预测启发式方法
+### O-糖基化热点启发式预测
 
 ```python
 def predict_o_glycosylation_hotspots(
@@ -191,15 +191,15 @@ def predict_o_glycosylation_hotspots(
     return candidates
 ```
 
-## 外部糖工程工具
+## 外部糖基工程工具
 
 ### 1. NetOGlyc 4.0（O-糖基化预测）
 
-高精度 O-GalNAc 位点预测的 Web 服务：
-- **URL**: https://services.healthtech.dtu.dk/services/NetOGlyc-4.0/
-- **输入**: FASTA 蛋白质序列
-- **输出**: 每个残基的 O-糖基化概率评分
-- **方法**: 基于经实验验证的 O-GalNAc 位点训练的神经网络
+用于高精度 O-GalNAc 位点预测的 Web 服务：
+- **URL**：https://services.healthtech.dtu.dk/services/NetOGlyc-4.0/
+- **输入**：FASTA 蛋白质序列
+- **输出**：逐残基 O-糖基化概率分数
+- **方法**：使用经过实验验证的 O-GalNAc 位点训练的神经网络
 
 ```python
 import requests
@@ -221,36 +221,48 @@ def submit_netoglycv4(fasta_sequence: str) -> str:
 # URL: https://services.healthtech.dtu.dk/services/NetNGlyc-1.0/
 ```
 
-### 2. GlycoShield-MD（聚糖屏蔽分析）
+### 2. GlycoSHIELD（聚糖屏蔽分析）
 
-GlycoShield-MD 分析在 MD 模拟过程中聚糖如何屏蔽蛋白质表面：
-- **URL**: https://gitlab.mpcdf.mpg.de/dioscuri-biophysics/glycoshield-md/
-- **用途**: 在 MD 轨迹上绘制蛋白质表面的聚糖屏蔽情况
-- **输出**: 每个残基的屏蔽比例、可视化结果
+GlycoSHIELD 将预先模拟的聚糖构象库接枝到静态蛋白质结构上，并评估聚糖屏蔽的蛋白质表面积比例，而无需运行新的 MD
+（Tsai 等，*Cell* 2024，doi:10.1016/j.cell.2024.01.034）：
+- **URL**：https://gitlab.mpcdf.mpg.de/dioscuri-biophysics/glycoshield-md/（Web 应用：https://glycoshield.eu）
+- **用途**：对糖蛋白上的聚糖屏蔽进行建模，并绘制逐残基屏蔽图
+- **输出**：每个位点的糖基化 PDB/XTC 系综、逐残基屏蔽图，以及在 B-factor 列中记录屏蔽值的 PDB 文件
+
+GlycoSHIELD **不在 PyPI 上**——`uv pip install glycoshield` 会失败。它由三个脚本和一个小型
+`glycoshield` 包组成（需要 numpy、scipy、matplotlib、MDAnalysis；`GlycoSASA.py` 还需要
+`PATH` 中的 GROMACS `gmx`）。请从代码检出目录安装：
 
 ```bash
-# Installation
-uv pip install glycoshield
+# Installation (GPL-3.0). Glycan conformer libraries are downloaded separately —
+# see glycan_library_downloader.py and GLYCAN_LIBRARY/ in the repository.
+git clone https://gitlab.mpcdf.mpg.de/dioscuri-biophysics/glycoshield-md.git
+cd glycoshield-md
+uv pip install -e .
 
-# Basic usage: analyze glycan shielding from glycosylated protein MD trajectory
-glycoshield \
-    --topology glycoprotein.pdb \
-    --trajectory glycoprotein.xtc \
-    --glycan_resnames BGLCNA FUC \
-    --output shielding_analysis/
+# 1. Graft glycan conformers onto each sequon listed in the input file.
+#    One line per site: <chain> <res-1,res,res+1> <1,2,3> <glycan.pdb> <glycan.xtc> <out.pdb> <out.xtc>
+python GlycoSHIELD.py --protpdb protein.pdb --inputfile sequons_input \
+    --threshold 3.5 --mode CG --shuffle-sugar
+
+# 2. Per-residue shielding score across the grafted ensembles (probe radii in nm)
+python GlycoSASA.py --pdblist A_463.pdb,A_492.pdb --xtclist A_463.xtc,A_492.xtc \
+    --probelist 0.14,0.25 --plottrace
 ```
+
+示例说明：这些标志来自脚本的 argparse 定义和上游教程（使用 Man5 聚糖的 N-cadherin EC5）；此处未实际运行。`--mode CG` 仅针对 Cα 原子检查碰撞，并与 `--threshold 3.5` 搭配使用；`--mode All` 与 `--threshold 0.7` 则为全原子设置。
 
 ### 3. GlycoWorkbench（聚糖结构绘制/分析）
 
-- **URL**: https://www.eurocarbdb.org/project/glycoworkbench
-- **用途**: 绘制聚糖结构、计算质量、注释 MS 光谱
-- **格式**: GlycoCT、IUPAC 缩合聚糖表示法
+- **URL**：https://www.eurocarbdb.org/project/glycoworkbench
+- **用途**：绘制糖链结构、计算质量、注释 MS 光谱
+- **格式**：GlycoCT、IUPAC condensed glycan notation
 
-### 4. GlyConnect（聚糖-蛋白质数据库）
+### 4. GlyConnect（糖链-蛋白质数据库）
 
-- **URL**: https://glyconnect.expasy.org/
-- **用途**: 查找经实验验证的糖蛋白和糖基化位点
-- **查询方式**: 按蛋白质（UniProt ID）、聚糖结构或组织查询
+- **URL**：https://glyconnect.expasy.org/
+- **用途**：查找经过实验验证的糖蛋白和糖基化位点
+- **查询方式**：按蛋白质（UniProt ID）、糖链结构或组织查询
 
 ```python
 import requests
@@ -267,37 +279,37 @@ def query_glyconnect(uniprot_id: str) -> dict:
 egfr_glyco = query_glyconnect("P00533")
 ```
 
-### 5. UniCarbKB（聚糖结构数据库）
+### 5. UniCarbKB（糖链结构数据库）
 
-- **URL**: https://unicarbkb.org/
-- **用途**: 浏览聚糖结构，按质量或组成进行搜索
-- **格式**: GlycoCT 或 IUPAC 表示法
+- **URL**：https://unicarbkb.org/
+- **用途**：浏览糖链结构、按质量或组成搜索
+- **格式**：GlycoCT 或 IUPAC notation
 
 ## 关键糖基工程策略
 
 ### 针对治疗性抗体
 
-| 目标 | 策略 | 备注 |
-|------|----------|-------|
-| 增强 ADCC | 去除 Fc Asn297 处的岩藻糖 | 去岩藻糖化的 IgG1 与 FcγRIIIa 的结合能力提高约 50 倍 |
-| 降低免疫原性 | 去除非人源聚糖 | 消除 α-Gal、NGNA 表位 |
-| 改善 PK 半衰期 | 唾液酸化 | 唾液酸化聚糖可延长半衰期 |
-| 减少炎症 | 超唾液酸化 | IVIG 的抗炎机制 |
-| 创建聚糖屏蔽 | 在表面添加 N-糖基化位点 | 遮蔽易受攻击的表位（疫苗设计） |
+| 目标 | 策略 | 说明 |
+|------|------|-------|
+| 增强 ADCC | 去除 Fc Asn297 位点的岩藻糖 | 去岩藻糖化的 IgG1 与 FcγRIIIa 的结合能力提高约 50 倍 |
+| 降低免疫原性 | 去除非人源糖链 | 消除 α-Gal、NGNA 表位 |
+| 改善 PK 半衰期 | 唾液酸化 | 唾液酸化糖链可延长半衰期 |
+| 降低炎症 | 超唾液酸化 | IVIG 的抗炎机制 |
+| 创建糖链屏蔽 | 在表面添加 N-糖基化位点 | 遮蔽易受攻击的表位（疫苗设计） |
 
 ### 常用突变
 
 | 突变 | 作用 |
 |----------|--------|
-| N297A/Q (IgG1) | 去除 Fc 糖基化（无糖基） |
+| N297A/Q (IgG1) | 去除 Fc 糖基化（无糖基化） |
 | N297D (IgG1) | 去除 Fc 糖基化 |
 | S298A/E333A/K334A | 增强 FcγRIIIa 结合 |
-| F243L (IgG1) | 增加去岩藻糖基化 |
+| F243L (IgG1) | 提高去岩藻糖化程度 |
 | T299A | 去除 Fc 糖基化 |
 
 ## 糖链表示法
 
-### IUPAC 简写表示法（单糖缩写）
+### IUPAC Condensed Notation（单糖缩写）
 
 | 符号 | 全名 | 类型 |
 |--------|-----------|------|
@@ -321,10 +333,10 @@ Neu5Ac-Gal-GlcNAc-Man/
 
 ## 最佳实践
 
-- **首先使用 NetNGlyc/NetOGlyc** 进行计算预测，然后再进行实验验证
-- **使用质谱进行验证**：使用糖蛋白质组学（Byonic、Mascot）进行位点特异性糖链分析
-- **考虑位点上下文**：并非所有预测的 sequon 都会实际发生糖基化（取决于可及性、细胞类型和蛋白质构象）
-- **对于抗体**：Fc N297 糖链至关重要——应始终首先对该位点进行表征
+- **先使用 NetNGlyc/NetOGlyc** 进行计算预测，再开展实验验证
+- **通过质谱进行验证**：使用糖蛋白质组学（Byonic、Mascot）进行位点特异性糖链分析
+- **考虑位点背景**：并非所有预测的 sequon 都会实际发生糖基化（取决于可及性、细胞类型和蛋白质构象）
+- **针对抗体**：Fc N297 糖链至关重要，务必首先对该位点进行表征
 - **使用 GlyConnect** 检查目标蛋白是否具有经过实验验证的糖基化数据
 
 ## 其他资源
@@ -335,4 +347,4 @@ Neu5Ac-Gal-GlcNAc-Man/
 - **DTU Health Tech servers**（NetNGlyc、NetOGlyc）：https://services.healthtech.dtu.dk/
 - **GlycoWorkbench**：https://glycoworkbench.software.informer.com/
 - **综述**：Apweiler R 等（1999）Biochim Biophys Acta。PMID: 10564035
-- **治疗性糖链工程综述**：Jefferis R（2009）Nature Reviews Drug Discovery。PMID: 19448661
+- **治疗性糖工程综述**：Jefferis R（2009）Nature Reviews Drug Discovery。PMID: 19448661

@@ -1,7 +1,7 @@
 {
   "id": "hoangnguyen0403-agent-skills-standard-system-design-methodology",
   "name": "system-design-methodology",
-  "description": "Drives an interactive system design session: classifies depth, elicits scale/SLO/consistency inputs, computes capacity, then reveals components one at a time with a constraint justification each. Use when designing a system or running a design session; defer diagrams to the diagramming skill.",
+  "description": "Drives an interactive system design session: classifies depth, elicits scale/SLO/consistency inputs, computes capacity, then reveals components one by one, each justified by a constraint. Use when designing a system or running a design session; diagrams go through `common-architecture-diagramming`.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,11 @@
     "url": "https://github.com/HoangNguyen0403/agent-skills-standard/blob/develop/.agents/skills/system-design/system-design-methodology/SKILL.md",
     "path": ".agents/skills/system-design/system-design-methodology/SKILL.md",
     "branch": "develop",
-    "discovered_at": "2026-09-13T01:32:05.213Z",
+    "discovered_at": "2026-09-13T05:47:03.297Z",
     "stars": 565,
     "language": "TypeScript",
-    "pushed_at": "2026-09-13T01:29:18Z",
+    "pushed_at": "2026-09-13T05:34:34Z",
     "license": "MIT"
   },
-  "summary_zh": "用于交互式推进系统设计，逐步澄清规模、SLO 和一致性要求，估算容量并基于约束选择组件，适合方案设计与评审。"
+  "summary_zh": "用于交互式系统设计，通过收集规模、SLO 和一致性等约束计算容量，并逐步推导架构组件，适合系统设计和架构评审场景。"
 }
