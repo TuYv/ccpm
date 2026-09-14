@@ -1,14 +1,14 @@
 {
   "id": "garrytan-gstack-cso",
   "name": "cso",
-  "description": "Chief Security Officer mode. (gstack)",
+  "description": "Security audit: supported static findings; qualified profiles add reproduction and repair candidates. (gstack)",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
     "codex",
     "gemini"
   ],
-  "version": "2.0.0",
+  "version": "3.0.0",
   "author": "garrytan",
   "install_path": ".claude/skills/cso/SKILL.md",
   "source": {
@@ -16,11 +16,10 @@
     "url": "https://github.com/garrytan/gstack/blob/main/cso/SKILL.md",
     "path": "cso/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-14T18:57:33.585Z",
-    "stars": 133016,
+    "discovered_at": "2026-09-14T22:47:15.142Z",
+    "stars": 133052,
     "language": "TypeScript",
-    "pushed_at": "2026-09-11T19:40:16Z",
+    "pushed_at": "2026-09-14T22:14:58Z",
     "license": "MIT"
-  },
-  "summary_zh": "一种面向安全审查的 AI 工作模式，适合从首席安全官视角发现风险并提出改进建议。"
+  }
 }
