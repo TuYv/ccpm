@@ -1,0 +1,25 @@
+{
+  "id": "tencent-ai-infra-guard-web-exfiltration-detection",
+  "name": "web-exfiltration-detection",
+  "description": "Detect data exfiltration via URL path encoding and chained web_fetch navigation. Covers fake trusted UI injection, letter-level URL path exfiltration, and multi-hop navigation hijacking. Use when the agent has web/URL fetch capability and stores user memory or personal context.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Tencent",
+  "install_path": ".claude/skills/web-exfiltration-detection/SKILL.md",
+  "source": {
+    "repo": "Tencent/AI-Infra-Guard",
+    "url": "https://github.com/Tencent/AI-Infra-Guard/blob/main/agent-scan/agent_scan/prompt/skills/web-exfiltration-detection/SKILL.md",
+    "path": "agent-scan/agent_scan/prompt/skills/web-exfiltration-detection/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-14T13:58:51.242Z",
+    "stars": 6269,
+    "language": "Python",
+    "pushed_at": "2026-09-14T07:48:32Z",
+    "license": "Apache-2.0"
+  }
+}

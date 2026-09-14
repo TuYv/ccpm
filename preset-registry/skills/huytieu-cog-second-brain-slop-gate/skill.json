@@ -1,0 +1,25 @@
+{
+  "id": "huytieu-cog-second-brain-slop-gate",
+  "name": "slop-gate",
+  "description": "Deterministic pre-publish scan that refuses AI-slop tells in anything about to be written, published, or sent: files, artifacts, slide titles, table headers, diagram labels, chat messages, commit messages. Use before publishing or sending any deliverable, in CI, or wired as a Claude Code hook so the check runs without being remembered. The editorial counterpart is no-ai-slop, which rewrites; this one blocks.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "huytieu",
+  "install_path": ".claude/skills/slop-gate/SKILL.md",
+  "source": {
+    "repo": "huytieu/COG-second-brain",
+    "url": "https://github.com/huytieu/COG-second-brain/blob/main/.agents/skills/slop-gate/SKILL.md",
+    "path": ".agents/skills/slop-gate/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-14T13:52:19.489Z",
+    "stars": 1189,
+    "language": "HTML",
+    "pushed_at": "2026-09-14T08:14:01Z",
+    "license": "MIT"
+  }
+}

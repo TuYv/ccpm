@@ -1,0 +1,25 @@
+{
+  "id": "tencent-ai-infra-guard-direct-injection-detection",
+  "name": "direct-injection-detection",
+  "description": "Detect direct prompt injection or instruction override via user message (no external content). Focuses on system/role override attempts.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Tencent",
+  "install_path": ".claude/skills/direct-injection-detection/SKILL.md",
+  "source": {
+    "repo": "Tencent/AI-Infra-Guard",
+    "url": "https://github.com/Tencent/AI-Infra-Guard/blob/main/agent-scan/agent_scan/prompt/skills/direct-injection-detection/SKILL.md",
+    "path": "agent-scan/agent_scan/prompt/skills/direct-injection-detection/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-14T13:58:49.223Z",
+    "stars": 6269,
+    "language": "Python",
+    "pushed_at": "2026-09-14T07:48:32Z",
+    "license": "Apache-2.0"
+  }
+}

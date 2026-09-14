@@ -1,0 +1,25 @@
+{
+  "id": "tencent-ai-infra-guard-edgeone-clawscan",
+  "name": "edgeone-clawscan",
+  "description": "> The first security skill to install after setting up OpenClaw — powered by Tencent Zhuque Lab. Works like an antivirus for your AI environment: audits installed skills, scans skills before installation, and performs a full OpenClaw security health check to prevent data leaks and privacy risks. Backed by Tencent Zhuque Lab A.I.G (AI-Infra-Guard). Use when the user asks to start a security health check or security scan for the current OpenClaw environment, such as `开始安全体检`, `做一次安全体检`, `开始安全扫描`, ",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.15",
+  "author": "Tencent",
+  "install_path": ".claude/skills/edgeone-clawscan/SKILL.md",
+  "source": {
+    "repo": "Tencent/AI-Infra-Guard",
+    "url": "https://github.com/Tencent/AI-Infra-Guard/blob/main/skills/edgeone-clawscan/SKILL.md",
+    "path": "skills/edgeone-clawscan/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-14T13:58:51.776Z",
+    "stars": 6269,
+    "language": "Python",
+    "pushed_at": "2026-09-14T07:48:32Z",
+    "license": "Apache-2.0"
+  }
+}

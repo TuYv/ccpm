@@ -1,0 +1,25 @@
+{
+  "id": "tencent-ai-infra-guard-memory-poisoning-detection",
+  "name": "memory-poisoning-detection",
+  "description": "Detect persistent instruction injection or long-term memory poisoning. Focus on writing/retaining hostile instructions for future tasks, not data leakage.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Tencent",
+  "install_path": ".claude/skills/memory-poisoning-detection/SKILL.md",
+  "source": {
+    "repo": "Tencent/AI-Infra-Guard",
+    "url": "https://github.com/Tencent/AI-Infra-Guard/blob/main/agent-scan/agent_scan/prompt/skills/memory-poisoning-detection/SKILL.md",
+    "path": "agent-scan/agent_scan/prompt/skills/memory-poisoning-detection/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-14T13:58:50.489Z",
+    "stars": 6269,
+    "language": "Python",
+    "pushed_at": "2026-09-14T07:48:32Z",
+    "license": "Apache-2.0"
+  }
+}

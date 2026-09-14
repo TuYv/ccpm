@@ -1,0 +1,25 @@
+{
+  "id": "tencent-ai-infra-guard-tool-abuse-detection",
+  "name": "tool-abuse-detection",
+  "description": "Detect tool misuse and unexpected code execution via dialogue testing. Use when the agent exposes file, code-execution, or network tools.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Tencent",
+  "install_path": ".claude/skills/tool-abuse-detection/SKILL.md",
+  "source": {
+    "repo": "Tencent/AI-Infra-Guard",
+    "url": "https://github.com/Tencent/AI-Infra-Guard/blob/main/agent-scan/agent_scan/prompt/skills/tool-abuse-detection/SKILL.md",
+    "path": "agent-scan/agent_scan/prompt/skills/tool-abuse-detection/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-14T13:58:50.881Z",
+    "stars": 6269,
+    "language": "Python",
+    "pushed_at": "2026-09-14T07:48:32Z",
+    "license": "Apache-2.0"
+  }
+}

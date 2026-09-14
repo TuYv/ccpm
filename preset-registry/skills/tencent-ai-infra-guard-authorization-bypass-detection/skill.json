@@ -1,0 +1,25 @@
+{
+  "id": "tencent-ai-infra-guard-authorization-bypass-detection",
+  "name": "authorization-bypass-detection",
+  "description": "Detect privilege escalation and unauthorized access via dialogue. Use when the agent has roles, admin functions, or multi-user data.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Tencent",
+  "install_path": ".claude/skills/authorization-bypass-detection/SKILL.md",
+  "source": {
+    "repo": "Tencent/AI-Infra-Guard",
+    "url": "https://github.com/Tencent/AI-Infra-Guard/blob/main/agent-scan/agent_scan/prompt/skills/authorization-bypass-detection/SKILL.md",
+    "path": "agent-scan/agent_scan/prompt/skills/authorization-bypass-detection/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-14T13:58:48.659Z",
+    "stars": 6269,
+    "language": "Python",
+    "pushed_at": "2026-09-14T07:48:32Z",
+    "license": "Apache-2.0"
+  }
+}

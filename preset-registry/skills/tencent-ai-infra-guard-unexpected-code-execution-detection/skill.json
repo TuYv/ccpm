@@ -1,0 +1,25 @@
+{
+  "id": "tencent-ai-infra-guard-unexpected-code-execution-detection",
+  "name": "unexpected-code-execution-detection",
+  "description": "Detect command injection, eval/exec usage, remote execution, or arbitrary code loading.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Tencent",
+  "install_path": ".claude/skills/unexpected-code-execution-detection/SKILL.md",
+  "source": {
+    "repo": "Tencent/AI-Infra-Guard",
+    "url": "https://github.com/Tencent/AI-Infra-Guard/blob/main/agent-scan/agent_scan/prompt/skills/unexpected-code-execution-detection/SKILL.md",
+    "path": "agent-scan/agent_scan/prompt/skills/unexpected-code-execution-detection/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-14T13:58:51.076Z",
+    "stars": 6269,
+    "language": "Python",
+    "pushed_at": "2026-09-14T07:48:32Z",
+    "license": "Apache-2.0"
+  }
+}

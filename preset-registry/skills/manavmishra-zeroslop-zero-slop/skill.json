@@ -1,0 +1,25 @@
+{
+  "id": "manavmishra-zeroslop-zero-slop",
+  "name": "zero-slop",
+  "description": "Edit drafts into natural prose, inspect AI-sounding patterns, or review how a specified audience might respond passage by passage. Zero Slop runs inside the user's existing AI assistant with local tools that protect source details. Use for humanizing or de-slopping writing, polishing outward-facing prose, social drafts, final editorial checks, or an explicit simulated reader review. Preserve facts, voice and format; reader simulations are hypotheses, not human feedback.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "manavmishra",
+  "install_path": ".claude/skills/zero-slop/SKILL.md",
+  "source": {
+    "repo": "manavmishra/ZeroSlop",
+    "url": "https://github.com/manavmishra/ZeroSlop/blob/main/skills/zero-slop/SKILL.md",
+    "path": "skills/zero-slop/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-14T13:57:22.324Z",
+    "stars": 119,
+    "language": "Python",
+    "pushed_at": "2026-09-13T06:22:20Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "tencent-ai-infra-guard-aig-scanner",
+  "name": "aig-scanner",
+  "description": "> A.I.G Scanner — AI security scanning for infrastructure, AI tools / skills, AI Agents, and LLM jailbreak evaluation via Tencent Zhuque Lab AI-Infra-Guard. Uses built-in exec + Python script, no plugin required. Requires AIG_BASE_URL to be configured. Triggers on: scan AI service, AI vulnerability scan, scan AI infra, check CVE, audit AI service, scan MCP, scan skills, audit AI tools, scan agent, red-team LLM, jailbreak test, 扫描AI服务, 检查AI漏洞, 扫描AI工具, 检查MCP安全, 审计Agent, 越狱测试.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.3",
+  "author": "Tencent",
+  "install_path": ".claude/skills/aig-scanner/SKILL.md",
+  "source": {
+    "repo": "Tencent/AI-Infra-Guard",
+    "url": "https://github.com/Tencent/AI-Infra-Guard/blob/main/skills/aig-scanner/SKILL.md",
+    "path": "skills/aig-scanner/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-14T13:58:51.620Z",
+    "stars": 6269,
+    "language": "Python",
+    "pushed_at": "2026-09-14T07:48:32Z",
+    "license": "Apache-2.0"
+  }
+}

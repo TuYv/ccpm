@@ -1,0 +1,25 @@
+{
+  "id": "tencent-ai-infra-guard-owasp-asi",
+  "name": "owasp-asi",
+  "description": "OWASP Top 10 for Agentic Applications 2026 (ASI) classification framework. Use for mapping security findings to standardized risk categories.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Tencent",
+  "install_path": ".claude/skills/owasp-asi/SKILL.md",
+  "source": {
+    "repo": "Tencent/AI-Infra-Guard",
+    "url": "https://github.com/Tencent/AI-Infra-Guard/blob/main/agent-scan/agent_scan/prompt/skills/owasp-asi/SKILL.md",
+    "path": "agent-scan/agent_scan/prompt/skills/owasp-asi/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-14T13:58:50.689Z",
+    "stars": 6269,
+    "language": "Python",
+    "pushed_at": "2026-09-14T07:48:32Z",
+    "license": "Apache-2.0"
+  }
+}
