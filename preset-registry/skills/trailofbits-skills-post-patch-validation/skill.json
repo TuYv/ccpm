@@ -1,0 +1,25 @@
+{
+  "id": "trailofbits-skills-post-patch-validation",
+  "name": "post-patch-validation",
+  "description": "> Validates security patches with reproducible baseline-versus-patched evidence, including original exploits, root-cause variants, behavior preservation, regressions, and newly introduced security failures. Use after a patch exists and before accepting, merging, or reporting it as fixed; also use when an AI-generated patch, remediation commit, pull request, or proposed upstream fix needs adversarial post-patch validation across any language.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "trailofbits",
+  "install_path": ".claude/skills/post-patch-validation/SKILL.md",
+  "source": {
+    "repo": "trailofbits/skills",
+    "url": "https://github.com/trailofbits/skills/blob/main/plugins/post-patch-validation/skills/post-patch-validation/SKILL.md",
+    "path": "plugins/post-patch-validation/skills/post-patch-validation/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-14T06:27:10.347Z",
+    "stars": 7067,
+    "language": "Python",
+    "pushed_at": "2026-09-14T05:49:18Z",
+    "license": "CC-BY-SA-4.0"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "id": "rpamis-comet-comet-classic",
   "name": "comet-classic",
-  "description": "Comet Classic workflow (OpenSpec + Superpowers). Use when the user invokes /comet-classic, asks to start or resume it, or resume-probe returns an unambiguous active Classic change.",
+  "description": "Comet Classic workflow entry. Use when the user explicitly invokes /comet-classic, asks to start or resume Classic, or resume-probe returns auto_resume for one unambiguously recoverable active Classic change.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/rpamis/comet/blob/master/assets/skills/comet-classic/SKILL.md",
     "path": "assets/skills/comet-classic/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-09-14T02:09:22.157Z",
-    "stars": 3032,
+    "discovered_at": "2026-09-14T07:17:23.503Z",
+    "stars": 3035,
     "language": "JavaScript",
-    "pushed_at": "2026-09-13T19:46:27Z",
+    "pushed_at": "2026-09-14T07:08:30Z",
     "license": "MIT"
-  },
-  "summary_zh": "一套结合 OpenSpec 与 Superpowers 的开发工作流，适合按指令启动或恢复正在进行的变更任务。"
+  }
 }

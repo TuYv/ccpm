@@ -1,7 +1,7 @@
 {
   "id": "rpamis-comet-comet-review",
   "name": "comet-review",
-  "description": "Manually review the implementation diff for the current Comet change without advancing the workflow.",
+  "description": "Manually review the implementation diff for the current Comet change. Report correctness, security, and edge-case issues without advancing the workflow.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/rpamis/comet/blob/master/assets/skills/comet-review/SKILL.md",
     "path": "assets/skills/comet-review/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-09-14T02:09:23.166Z",
-    "stars": 3032,
+    "discovered_at": "2026-09-14T07:17:24.452Z",
+    "stars": 3035,
     "language": "JavaScript",
-    "pushed_at": "2026-09-13T19:46:27Z",
+    "pushed_at": "2026-09-14T07:08:30Z",
     "license": "MIT"
-  },
-  "summary_zh": "用于手动审查当前变更的实现差异，适合在不推进工作流的情况下检查代码改动。"
+  }
 }

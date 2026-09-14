@@ -1,7 +1,7 @@
 {
   "id": "hoangnguyen0403-agent-skills-standard-quality-engineering-appium-mcp",
   "name": "quality-engineering-appium-mcp",
-  "description": "Drives iOS/Android mobile devices via Appium MCP. Use for verifying mobile bugs, E2E tests, and navigating real device clouds (LambdaTest/BrowserStack).",
+  "description": "Drives iOS/Android mobile devices via Appium MCP. Runs a preflight, picks local emulator/simulator/USB or a device cloud, captures screenshots/page source into a named evidence dir. Use for verifying mobile bugs, E2E tests, and navigating real device clouds (LambdaTest/BrowserStack).",
   "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/HoangNguyen0403/agent-skills-standard/blob/develop/.agents/skills/quality-engineering/quality-engineering-appium-mcp/SKILL.md",
     "path": ".agents/skills/quality-engineering/quality-engineering-appium-mcp/SKILL.md",
     "branch": "develop",
-    "discovered_at": "2026-09-14T02:11:41.036Z",
+    "discovered_at": "2026-09-14T07:19:31.466Z",
     "stars": 565,
     "language": "TypeScript",
-    "pushed_at": "2026-09-14T02:00:49Z",
+    "pushed_at": "2026-09-14T06:15:05Z",
     "license": "MIT"
-  },
-  "summary_zh": "通过 Appium MCP 操控 iOS 和 Android 设备，适合复现移动端缺陷、执行端到端测试及使用云真机平台。"
+  }
 }

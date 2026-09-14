@@ -1,7 +1,7 @@
 {
   "id": "hoangnguyen0403-agent-skills-standard-quality-engineering-playwright-cli",
   "name": "quality-engineering-playwright-cli",
-  "description": "Standardizes token-efficient browser automation via playwright-cli. Use for web verification, navigation, and capturing snapshots/logs.",
+  "description": "Standardizes token-efficient browser automation via playwright-cli, with Playwright MCP as the fallback driver. Runs a preflight, picks the driver rung, captures aria snapshots/console/screenshots into a named evidence dir. Use for web verification, navigation, and capturing snapshots/logs.",
   "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/HoangNguyen0403/agent-skills-standard/blob/develop/.agents/skills/quality-engineering/quality-engineering-playwright-cli/SKILL.md",
     "path": ".agents/skills/quality-engineering/quality-engineering-playwright-cli/SKILL.md",
     "branch": "develop",
-    "discovered_at": "2026-09-14T02:11:41.811Z",
+    "discovered_at": "2026-09-14T07:19:32.124Z",
     "stars": 565,
     "language": "TypeScript",
-    "pushed_at": "2026-09-14T02:00:49Z",
+    "pushed_at": "2026-09-14T06:15:05Z",
     "license": "MIT"
-  },
-  "summary_zh": "一套基于 Playwright CLI 的低令牌浏览器自动化方案，适合网页验证、导航及抓取快照和日志。"
+  }
 }
