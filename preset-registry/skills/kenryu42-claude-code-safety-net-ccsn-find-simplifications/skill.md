@@ -18,7 +18,7 @@ Over-engineering is this repo's documented dominant failure mode (see Scope Disc
 
 ## Treat As Intentional By Default
 
-- The per-tool integrations in `src/hosts` (Claude Code, OpenCode, Codex, Copilot CLI, Cursor, Amp, Pi, Kimi Code, Gemini CLI, OpenClaw, Antigravity, Hermes, …). Each exists because a real host tool needs it; propose deleting one only if the user says the tool is dropped. Removing an unused hook or method *inside* one is still fair game.
+- Every per-tool integration directory under `src/hosts`. Each exists because a real host tool needs it; propose deleting one only if the user says the tool is dropped. Removing an unused hook or method *inside* one is still fair game.
 - The residual-risk registry pair (`docs/residual-risk-registry.json` + `docs/residual-risk.md`) and the strict/paranoid fail-closed fixtures that back its families.
 - The zero-runtime-dependency posture. Hand-rolled shell parsing is the product, not a hand-rolling smell — this is a security hook with a deliberately minimal supply chain. Do not propose swapping the parser or a guard for an npm package; a new dependency is a maintainer decision to propose separately, never a "low effort" cleanup.
 - Adversarial-looking strings in tests are analyzer input data, never executed. Do not propose removing them as dangerous or redundant without checking which contract or residual-risk family they pin.
@@ -56,7 +56,7 @@ Do not let the first good candidate stop the survey, and start with the largest 
 
 Classify consumers before writing anything up:
 
-- Production corpus: `src/`, `hooks/`, `scripts/` used at build/publish time, root plugin manifests (`kimi.plugin.json`, package.json `pi`/`bin`/peer-dependency wiring), and the tracked `skills/` directory. Ignore `dist/` (generated) and the untracked personal dirs (`report/`, `research/`, `artifacts/`, `droid-wiki/`, `TODO.md`, `REDESIGN.md`).
+- Production corpus: `src/`, `hooks/`, `scripts/` used at build/publish time, root plugin manifests (`kimi.plugin.json`, package.json `pi`/`bin`/peer-dependency wiring), and the tracked `skills/` directory. Ignore `dist/` (generated) and anything `git ls-files` does not list.
 - Non-production corpus: `tests/` and comments. README and other docs are non-runtime evidence, but count as contract consumers for public surfaces.
 - Ambiguous corpus: e2e and e2e-live tests that exercise real host-tool wiring — these often pin integration contracts; read them before classifying.
 

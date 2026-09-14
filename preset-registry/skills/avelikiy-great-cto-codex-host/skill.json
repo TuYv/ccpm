@@ -1,0 +1,25 @@
+{
+  "id": "avelikiy-great-cto-codex-host",
+  "name": "codex-host",
+  "description": "Run the great_cto controlled Codex lifecycle with controller-owned writes, verifier evidence, human gates and optional artifact release.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "avelikiy",
+  "install_path": ".claude/skills/codex-host/SKILL.md",
+  "source": {
+    "repo": "avelikiy/great_cto",
+    "url": "https://github.com/avelikiy/great_cto/blob/main/skills/codex-host/SKILL.md",
+    "path": "skills/codex-host/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-14T18:55:33.644Z",
+    "stars": 93,
+    "language": "JavaScript",
+    "pushed_at": "2026-09-14T17:10:21Z",
+    "license": "MIT"
+  }
+}

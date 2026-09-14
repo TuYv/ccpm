@@ -26,7 +26,7 @@ commands (`status`, `doctor`, `explain`, `logs`) and a local web GUI (`gui`).
 No build step: the CLI runs from source with bun. Set up one isolated run:
 
 ```bash
-REPO=/Users/kenryu/Developer/420024-lab/cc-safety-net   # or `git rev-parse --show-toplevel`
+REPO=$(git rev-parse --show-toplevel)
 RUN_ID=verify-$(date +%Y%m%d-%H%M%S)
 export CCSN_VERIFY_HOME=$REPO/artifacts/verify-homes/$RUN_ID   # disposable fake $HOME
 EVIDENCE=$REPO/artifacts/verify/$RUN_ID                        # proof artifacts (gitignored)
