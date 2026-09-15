@@ -1,0 +1,25 @@
+{
+  "id": "daymade-claude-code-skills-agent-web-search-setup",
+  "name": "agent-web-search-setup",
+  "description": ">- Sets up working web search on an agent whose model backend cannot run it. Resellers and relays that proxy Claude or Codex to another cloud (Vertex AI, Bedrock, or an OpenAI-compatible layer) do not execute the server-side web_search and web_fetch tools, so those return empty instead of failing and the model reports that recent things do not exist. Use this skill whenever searches come back with nothing, a model insists a shipped product was never released, web search appears to do nothing at ",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/agent-web-search-setup/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-claude-code/agent-web-search-setup/SKILL.md",
+    "path": "daymade-claude-code/agent-web-search-setup/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-15T02:29:11.451Z",
+    "stars": 1391,
+    "language": "Python",
+    "pushed_at": "2026-09-15T01:02:45Z",
+    "license": "MIT"
+  }
+}
