@@ -1,0 +1,25 @@
+{
+  "id": "23blocks-os-ai-maestro-agent-browser",
+  "name": "agent-browser",
+  "description": "Browser automation CLI for AI agents. Use when the user needs to interact with websites, including navigating pages, filling forms, clicking buttons, taking screenshots, extracting data, testing web apps, or automating any browser task. Triggers include requests to \"open a website\", \"fill out a form\", \"click a button\", \"take a screenshot\", \"scrape data from a page\", \"test this web app\", \"login to a site\", \"automate browser actions\", or any task requiring programmatic web interaction. Also use fo",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "23blocks-OS",
+  "install_path": ".claude/skills/agent-browser/SKILL.md",
+  "source": {
+    "repo": "23blocks-OS/ai-maestro",
+    "url": "https://github.com/23blocks-OS/ai-maestro/blob/main/.agents/skills/agent-browser/SKILL.md",
+    "path": ".agents/skills/agent-browser/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-15T08:01:37.219Z",
+    "stars": 782,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-15T07:40:46Z",
+    "license": "MIT"
+  }
+}
