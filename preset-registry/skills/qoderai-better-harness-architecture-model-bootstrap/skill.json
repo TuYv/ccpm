@@ -1,0 +1,25 @@
+{
+  "id": "qoderai-better-harness-architecture-model-bootstrap",
+  "name": "architecture-model-bootstrap",
+  "description": "Use to refine a generated Better Harness architecture model into a confirmed one for the Impact pane. Trigger when a project has no .better-harness/architecture/model.json, when the Impact pane shows an \"Auto-generated\" model, or when a reader asks to name, merge, split, re-kind, or describe the derived Container/Component structure and propose external systems before saving it as declared.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "QoderAI",
+  "install_path": ".claude/skills/architecture-model-bootstrap/SKILL.md",
+  "source": {
+    "repo": "QoderAI/better-harness",
+    "url": "https://github.com/QoderAI/better-harness/blob/main/.agents/skills/architecture-model-bootstrap/SKILL.md",
+    "path": ".agents/skills/architecture-model-bootstrap/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-15T14:36:26.599Z",
+    "stars": 2278,
+    "language": "JavaScript",
+    "pushed_at": "2026-09-15T12:14:21Z",
+    "license": "MIT"
+  }
+}
