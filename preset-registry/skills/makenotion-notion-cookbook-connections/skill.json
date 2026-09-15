@@ -1,0 +1,25 @@
+{
+  "id": "makenotion-notion-cookbook-connections",
+  "name": "connections",
+  "description": "Configure and use typed provider connections and connection-bound triggers in Notion App workflows.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "makenotion",
+  "install_path": ".claude/skills/connections/SKILL.md",
+  "source": {
+    "repo": "makenotion/notion-cookbook",
+    "url": "https://github.com/makenotion/notion-cookbook/blob/main/apps/templates/apps-default/.agents/skills/connections/SKILL.md",
+    "path": "apps/templates/apps-default/.agents/skills/connections/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-15T19:18:10.758Z",
+    "stars": 210,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-15T16:05:06Z",
+    "license": "MIT"
+  }
+}
