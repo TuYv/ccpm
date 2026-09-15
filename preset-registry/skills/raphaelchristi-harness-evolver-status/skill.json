@@ -1,0 +1,25 @@
+{
+  "id": "raphaelchristi-harness-evolver-status",
+  "name": "harness:status",
+  "description": "Use when the user asks about evolution progress, current scores, best version, how many iterations ran, or whether the loop is stagnating.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "raphaelchristi",
+  "install_path": ".claude/skills/status/SKILL.md",
+  "source": {
+    "repo": "raphaelchristi/harness-evolver",
+    "url": "https://github.com/raphaelchristi/harness-evolver/blob/main/skills/status/SKILL.md",
+    "path": "skills/status/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-15T22:29:27.463Z",
+    "stars": 50,
+    "language": "Python",
+    "pushed_at": "2026-04-18T14:01:20Z",
+    "license": "MIT"
+  }
+}

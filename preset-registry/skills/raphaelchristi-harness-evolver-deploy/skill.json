@@ -1,0 +1,25 @@
+{
+  "id": "raphaelchristi-harness-evolver-deploy",
+  "name": "harness:deploy",
+  "description": "Use when the user is done evolving and wants to finalize, clean up, tag the result, or push the optimized agent.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "raphaelchristi",
+  "install_path": ".claude/skills/deploy/SKILL.md",
+  "source": {
+    "repo": "raphaelchristi/harness-evolver",
+    "url": "https://github.com/raphaelchristi/harness-evolver/blob/main/skills/deploy/SKILL.md",
+    "path": "skills/deploy/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-15T22:29:26.788Z",
+    "stars": 50,
+    "language": "Python",
+    "pushed_at": "2026-04-18T14:01:20Z",
+    "license": "MIT"
+  }
+}

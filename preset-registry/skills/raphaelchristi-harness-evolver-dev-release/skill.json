@@ -1,0 +1,25 @@
+{
+  "id": "raphaelchristi-harness-evolver-dev-release",
+  "name": "dev:release",
+  "description": "Use when the user wants to release a new version, publish to npm, create a GitHub release, bump version, or tag a release. Also use when the user says 'release', 'publish', 'bump version', 'tag', or 'npm publish'.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "raphaelchristi",
+  "install_path": ".claude/skills/dev-release/SKILL.md",
+  "source": {
+    "repo": "raphaelchristi/harness-evolver",
+    "url": "https://github.com/raphaelchristi/harness-evolver/blob/main/.claude/skills/dev-release/SKILL.md",
+    "path": ".claude/skills/dev-release/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-15T22:29:26.220Z",
+    "stars": 50,
+    "language": "Python",
+    "pushed_at": "2026-04-18T14:01:20Z",
+    "license": "MIT"
+  }
+}

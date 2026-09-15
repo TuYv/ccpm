@@ -76,11 +76,20 @@ LinkedIn only nests replies two levels deep. Visually the thread looks like:
 
 ```
 Top comment by Alice (id: 111)
-└─ Reply by Bob (id: 222)          ← parentComment: urn:li:comment:(activity:POST, 111)
-   └─ Reply by Carol (id: 333)     ← parentComment: STILL urn:li:comment:(activity:POST, 111)
+└─ Reply by Bob (id: 222)          ← parentComment: urn:li:comment:(urn:li:activity:POST,111)
+   └─ Reply by Carol (id: 333)     ← parentComment: STILL urn:li:comment:(urn:li:activity:POST,111)
 ```
 
-Carol's reply doesn't nest under Bob's — it's pinned at level 2 to the same top comment. If you pass `urn:li:comment:(activity:POST, 222)` as parentComment, the API returns 400 on some paths or silently misplaces the reply.
+**Two URN forms exist, and only one is the API's.** LinkedIn's web permalinks and
+the Apify scraper both use the short form, `urn:li:comment:(activity:POST,111)`.
+The API uses the long one, `urn:li:comment:(urn:li:activity:POST,111)` — verified
+against a live `create_comment` response, which comes back in the long form.
+`lib.url_parser.parse_linkedin_url` normalises a pasted short-form URL into the
+long form, and `build_parent_comment_urn` emits the long form, so following this
+skill as written is correct. Do not "fix" a long-form URN into a short one
+because a LinkedIn URL looks different.
+
+Carol's reply doesn't nest under Bob's — it's pinned at level 2 to the same top comment. If you pass `urn:li:comment:(urn:li:activity:POST,222)` as parentComment, the API returns 400 on some paths or silently misplaces the reply.
 
 **Rule in this skill:** always use the TOP-level comment's URN as `parentComment`. In single-comment mode, if you're replying to a 2nd-level reply, walk up the tree to find the top comment. In whole-thread mode, carry `top_level_comment_id` through the queue from step 3 onward so every draft targeting Bob's or Carol's comment still uses Alice's URN.
 

@@ -1,0 +1,25 @@
+{
+  "id": "raphaelchristi-harness-evolver-health",
+  "name": "harness:health",
+  "description": "Use when the user wants to check dataset quality, diagnose eval issues, or before running evolve. Checks size, difficulty distribution, dead examples, coverage, and splits. Auto-corrects issues found.",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "raphaelchristi",
+  "install_path": ".claude/skills/health/SKILL.md",
+  "source": {
+    "repo": "raphaelchristi/harness-evolver",
+    "url": "https://github.com/raphaelchristi/harness-evolver/blob/main/skills/health/SKILL.md",
+    "path": "skills/health/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-15T22:29:27.140Z",
+    "stars": 50,
+    "language": "Python",
+    "pushed_at": "2026-04-18T14:01:20Z",
+    "license": "MIT"
+  }
+}
