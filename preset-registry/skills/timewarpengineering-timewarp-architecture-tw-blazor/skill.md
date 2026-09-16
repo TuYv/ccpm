@@ -33,3 +33,17 @@ generators and class-level analyzers must see (`[Page]`, `[Authorize]`, `[CrossS
   ")
 </style>
 ```
+
+# Actions, navigation, and forms
+
+Actions are `FluentButton` with a style-guide appearance (Primary / Outline / Subtle /
+Transparent; danger via `--twe-danger`). Navigation is `FluentAnchor` / `TimeWarpNavLink`.
+Persisting a model is `EditForm` + `FluentButton` submit (RoleForm). Never raw `<button>` or
+page-local button/link classes; reuse `components/elements` and existing feature components
+before writing markup.
+
+Reference appearances: `source/container-apps/web/projects/web-spa/features/style-guide/pages/StyleGuidePage.razor`
+(Primary, Outline, Subtle, Transparent, and Outline + `Class="twe-button-danger"`).
+
+Form submit reference: `source/container-apps/web/projects/web-spa/features/admin/roles/components/RoleForm.razor`
+(`EditForm` + `OnValidSubmit` + `FluentButton Type=ButtonType.Submit Appearance=ButtonAppearance.Primary data-qa="RoleSave"`).
