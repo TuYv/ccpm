@@ -1,16 +1,7 @@
 ---
 name: ship-pr-dev
-description: "Ship PR: credit-aware autonomous pull request readiness workflow.
-  Use when the user asks to ship work, prepare a branch for review, create or
-  update a PR, make CI green, clean up a branch before PR, or produce a PR a
-  human can confidently merge. This skill may edit code, run checks, commit,
-  push, create/update a PR, and iterate on CI, but it keeps Git ownership in the
-  coordinator, delegates bounded work to cheaper host-native workers, uses
-  review-code-dev as the only independent read-only review gate, waits for all
-  visible latest-SHA CI to be green, runs capture-learning-tools report-only,
-  and never merges."
-metadata: {}
-allowed-tools: Bash Read Edit Write Glob Grep Agent
+description: "Ship PR: credit-aware autonomous pull request readiness workflow. Use when the user asks to ship work, prepare a branch for review, create or update a PR, make CI green, clean up a branch before PR, or produce a PR a human can confidently merge. This skill may edit code, run checks, commit, push, create/update a PR, and iterate on CI, but it keeps Git ownership in the coordinator, delegates bounded work to cheaper host-native workers, uses review-code-dev as the only independent read-only review gate, waits for all visible latest-SHA CI to be green, runs capture-learning-tools report-only, and never merges."
+allowed-tools: "Bash, Read, Edit, Write, Glob, Grep, Agent"
 ---
 
 # Ship PR
@@ -35,7 +26,7 @@ Read only what the current phase needs:
 
 - `references/workflow.md` — detailed delivery loop and retry policy.
 - `references/agent-routing.md` — host-specific worker models, effort, context, budgets, telemetry, and fallbacks.
-- `references/readiness-gates.md` — hard blocks and required evidence.
+- `references/readiness-gates.md` — read when choosing the mode, reassessing a stalled loop, and before handoff; owns completion criteria, stop decisions, and required evidence.
 - `references/pr-template.md` — PR body and final handoff.
 
 Load the installed `review-code-dev` skill before the review gate and `capture-learning-tools` only for the final report-only learning pass. Resolve skills by canonical name; never guess an install path.
@@ -58,9 +49,9 @@ Infer the base from the PR target, `origin/HEAD`, `origin/main`, then local `mai
 ```bash
 SKILL_DIR="<directory containing this SKILL.md>"
 RUN_META="$(mktemp -t ship-pr-dev-run.XXXXXX.json)"
-python "$SKILL_DIR/scripts/prepare_ship_run.py" --cwd . > "$RUN_META"
-RUN_DIR="$(python -c 'import json,sys; print(json.load(open(sys.argv[1]))["run_dir"])' "$RUN_META")"
-python "$SKILL_DIR/scripts/collect_ship_context.py" --cwd . --output "$RUN_DIR/context.json"
+python3 "$SKILL_DIR/scripts/prepare_ship_run.py" --cwd . > "$RUN_META"
+RUN_DIR="$(python3 -c 'import json,sys; print(json.load(open(sys.argv[1]))["run_dir"])' "$RUN_META")"
+python3 "$SKILL_DIR/scripts/collect_ship_context.py" --cwd . --output "$RUN_DIR/context.json"
 ```
 
 Create `ship-state.json` with the goal, non-goals, base/branch, changed and unrelated files, impacted surfaces, checks, review status, CI inventory, PR status, retry counts, and blockers. Create `agent-budget.json` and `phase-timing.json` from `references/agent-routing.md` before the first delegation.
@@ -86,9 +77,9 @@ Freeze a work order before delegation: objective, owned files, allowed edits, no
 - Trivial: implement in the coordinator.
 - Standard/deep: use one write worker only when the change is separable and the work order is stable.
 - Review the worker diff before accepting it. The coordinator resolves architectural choices and integrates the result.
-- For follow-up fixes, resume the same worker/context when supported. After two failed attempts on the same root cause, the coordinator takes over or stops with evidence.
+- For follow-up fixes, resume the same worker/context when supported. After two failed attempts on the same root cause, the coordinator takes over diagnosis using the reassessment policy in `references/readiness-gates.md`.
 
-Keep implementation/fix cycles to three. Preserve unrelated user work.
+Continue until the selected mode's completion criteria pass or a concrete blocker remains. Preserve unrelated user work; use `references/readiness-gates.md` for reassessment rather than stopping at a retry count.
 
 ### 4. Verify Deterministically
 
@@ -106,7 +97,7 @@ Run `review-code-dev` once after the branch is coherent and local verification i
 
 Pass repository path, base, user goal, changed-file summary, impacted surfaces, and required lenses. For frontend work, require the `frontend` lens inside this same run. Do not run an earlier frontend mega-pass or a separate Ship PR board.
 
-Fix confirmed P0/P1/P2 findings in the coordinator or with the same bounded write worker. Rerun affected verification. Rerun only the targeted failed review lens when evidence changed; perform a second full review only if the fix materially changed scope or architecture. Cap full review runs at two.
+Fix confirmed P0/P1/P2 findings in the coordinator or with the same bounded write worker. Rerun affected verification. Rerun only the targeted failed review lens when evidence changed; repeat a full review only if the fix materially changed scope or architecture. Reassess repeated full runs under `references/readiness-gates.md`.
 
 ### 6. Commit, Push, PR, And CI
 
@@ -120,7 +111,7 @@ After local gates pass:
 6. Use deterministic provider/CLI waiting for queued work. Do not repeatedly ask an agent whether CI is done.
 7. For a failure, inspect logs and identify the first causal error. Use one read-only investigator only when the cause is not apparent. Fix, verify locally, commit, push, rebuild the inventory, and resume.
 
-Stop after three distinct corrections for one CI check or two repeated fixes for the same root cause. Never hand off success while a visible non-skipped item is not final and green.
+Reassess repeated failures under `references/readiness-gates.md`; continue when a safe, evidence-backed correction remains. Never hand off success while a visible non-skipped item is not final and green.
 
 ### 7. Learning Pass And Handoff
 

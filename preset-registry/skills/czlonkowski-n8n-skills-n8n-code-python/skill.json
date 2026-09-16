@@ -1,7 +1,7 @@
 {
   "id": "czlonkowski-n8n-skills-n8n-code-python",
   "name": "n8n-code-python",
-  "description": "Write Python code in n8n Code nodes. Use when writing Python in n8n, using _input/_json/_node syntax, working with standard library, or need to understand Python limitations in n8n Code nodes. Use this skill when the user specifically requests Python for an n8n Code node. Note — JavaScript is recommended for 95% of use cases — only use Python when the user explicitly prefers it or the task requires Python-specific standard library capabilities (regex, hashlib, statistics). EXCEPTION — for Python",
+  "description": "Write Python in n8n Code nodes (native Python, `language` pythonNative, n8n 2.x). Use when the user explicitly wants Python in a Code node, when migrating old Pyodide/\"Python (Beta)\" code that used _input/_json/_node/_now, or when a Python Code node fails with NameError, \"Security violations detected\", \"Import of standard library module … is disallowed\", \"__build_class__ not found\", \"A 'json' property isn't a dictionary\", or \"Python runner unavailable\". Covers the only two variables (_items/_ite",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/czlonkowski/n8n-skills/blob/main/skills/n8n-code-python/SKILL.md",
     "path": "skills/n8n-code-python/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-16T10:10:16.828Z",
+    "discovered_at": "2026-09-16T15:10:29.217Z",
     "stars": 6239,
     "language": "Shell",
-    "pushed_at": "2026-09-03T12:01:31Z",
+    "pushed_at": "2026-09-16T10:56:52Z",
     "license": "MIT"
-  },
-  "summary_zh": "用于在 n8n 代码节点中编写 Python，适合处理输入数据或完成正则、哈希、统计等任务。"
+  }
 }

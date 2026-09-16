@@ -1,7 +1,7 @@
 {
   "id": "czlonkowski-n8n-skills-n8n-self-hosting",
   "name": "n8n-self-hosting",
-  "description": "Deploy a production self-hosted n8n end-to-end to a fresh Linux VM over SSH, using Docker Compose behind a Caddy reverse proxy with automatic HTTPS. Use whenever the user wants to self-host, install, set up, provision, or deploy n8n on their own server/VPS/box (Hetzner, DigitalOcean, AWS EC2, bare metal, etc.) — in either single/regular mode or queue mode with workers — or to update, back up, restore, or harden such an instance. This is for SELF-HOSTED n8n (Docker), not n8n Cloud and not buildin",
+  "description": "Deploy a production self-hosted n8n end-to-end to a fresh Linux VM over SSH, using Docker Compose behind a Caddy reverse proxy with automatic HTTPS. Use whenever the user wants to self-host, install, provision, or deploy n8n on their own server/VPS (Hetzner, DigitalOcean, AWS EC2, bare metal) — single/regular mode or queue mode with workers — or to update, back up, restore, or harden such an instance, or make Python Code nodes run on it (task runners). For SELF-HOSTED n8n (Docker), not n8n Cloud",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/czlonkowski/n8n-skills/blob/main/skills/n8n-self-hosting/SKILL.md",
     "path": "skills/n8n-self-hosting/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-16T10:10:18.120Z",
+    "discovered_at": "2026-09-16T15:10:30.927Z",
     "stars": 6239,
     "language": "Shell",
-    "pushed_at": "2026-09-03T12:01:31Z",
+    "pushed_at": "2026-09-16T10:56:52Z",
     "license": "MIT"
-  },
-  "summary_zh": "一套通过 SSH 在 Linux 服务器上部署生产级自托管 n8n 的方案，适合安装、扩容、更新、备份恢复及安全加固。"
+  }
 }

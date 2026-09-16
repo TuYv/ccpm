@@ -57,9 +57,9 @@ Choose `uncommitted`, `base`, `commit`, or `custom` scope. Extra user focus narr
 ```bash
 SKILL_DIR="<directory containing this SKILL.md>"
 RUN_META="$(mktemp -t review-code-dev-run.XXXXXX.json)"
-python "$SKILL_DIR/scripts/prepare_review_run.py" --cwd . > "$RUN_META"
-RUN_DIR="$(python -c 'import json,sys; print(json.load(open(sys.argv[1]))["run_dir"])' "$RUN_META")"
-python "$SKILL_DIR/scripts/collect_review_context.py" --mode auto --output "$RUN_DIR/context.json"
+python3 "$SKILL_DIR/scripts/prepare_review_run.py" --cwd . > "$RUN_META"
+RUN_DIR="$(python3 -c 'import json,sys; print(json.load(open(sys.argv[1]))["run_dir"])' "$RUN_META")"
+python3 "$SKILL_DIR/scripts/collect_review_context.py" --mode auto --output "$RUN_DIR/context.json"
 ```
 
 Write `delegation-brief.md` containing only the user objective, factual work summary, repo/base/scope, `context.json`, changed-file list, effort, required lenses, output paths, and hard safety block. Write `agent-budget.json` and start `phase-timing.json` before dispatch.
@@ -92,7 +92,7 @@ Stop when all changed files have coverage, all candidates are classified, no ind
 Write `review.md`, `review.json`, `coverage.md`, `loop-state.json`, `artifact-validation.md`, `agent-budget.json`, `phase-timing.json`, and `subagents.md` when delegation or inline focused checks occurred. Put rejected candidates in `rejected-findings.md`, not the final report.
 
 ```bash
-python "$SKILL_DIR/scripts/parse_review_findings.py" "$RUN_DIR/review.md" --output "$RUN_DIR/review.json"
+python3 "$SKILL_DIR/scripts/parse_review_findings.py" "$RUN_DIR/review.md" --output "$RUN_DIR/review.json"
 ```
 
 Return findings ordered P0→P3. If there are more than five, show the top five and link the artifacts. If none, say exactly `No issues found.` and report coverage.

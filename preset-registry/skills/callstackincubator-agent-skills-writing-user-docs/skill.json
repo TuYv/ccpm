@@ -1,0 +1,25 @@
+{
+  "id": "callstackincubator-agent-skills-writing-user-docs",
+  "name": "writing-user-docs",
+  "description": "House style for user-facing documentation — voice, scope, structure, and what to leave out. Use this skill whenever writing, editing, or reviewing anything a user reads to learn how to use a tool — help center articles, getting-started guides, tutorials, feature docs, README usage sections, in-app help, release notes, or FAQ entries. Trigger it even when the request is phrased plainly — \"document this feature\", \"write docs for X\", \"explain this to users\", \"write a README for this library\", \"turn",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "callstackincubator",
+  "install_path": ".claude/skills/writing-user-docs/SKILL.md",
+  "source": {
+    "repo": "callstackincubator/agent-skills",
+    "url": "https://github.com/callstackincubator/agent-skills/blob/main/skills/writing-user-docs/SKILL.md",
+    "path": "skills/writing-user-docs/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-16T15:59:24.066Z",
+    "stars": 1646,
+    "language": "Shell",
+    "pushed_at": "2026-09-16T11:07:52Z",
+    "license": "MIT"
+  }
+}
