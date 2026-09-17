@@ -1,0 +1,25 @@
+{
+  "id": "microsoft-skills-for-fabric-powerbi-report-cli",
+  "name": "powerbi-report-cli",
+  "description": "Plan, design, author and publish Power BI reports: requirements, scope, page archetypes, layout and charts, local PBIR/PBIP page and visual edits, and report item publish and rebind. Model and DAX work is semantic-model-authoring; natural-language data questions are fabriciq. Triggers:plan Power BI report,gather report requirements,design Power BI report page,choose chart type,add PBIR report page,validate PBIR,publish PBIP,rebind report",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "microsoft",
+  "install_path": ".claude/skills/powerbi-report-cli/SKILL.md",
+  "source": {
+    "repo": "microsoft/skills-for-fabric",
+    "url": "https://github.com/microsoft/skills-for-fabric/blob/main/skills/powerbi-report-cli/SKILL.md",
+    "path": "skills/powerbi-report-cli/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-17T18:01:53.743Z",
+    "stars": 1166,
+    "language": "Python",
+    "pushed_at": "2026-09-17T14:46:16Z",
+    "license": "MIT"
+  }
+}
