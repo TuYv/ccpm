@@ -1,0 +1,25 @@
+{
+  "id": "getsentry-sentry-bump-sentry-dependency",
+  "name": "bump-sentry-dependency",
+  "description": "Bumps an existing Python dependency in getsentry/sentry through the repository's self-serve GitHub Actions workflow. Use when asked to update, upgrade, or bump a Python package version in Sentry. Does not apply to new dependencies, JavaScript packages, or informational questions about dependency management.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "getsentry",
+  "install_path": ".claude/skills/bump-sentry-dependency/SKILL.md",
+  "source": {
+    "repo": "getsentry/sentry",
+    "url": "https://github.com/getsentry/sentry/blob/master/.agents/skills/bump-sentry-dependency/SKILL.md",
+    "path": ".agents/skills/bump-sentry-dependency/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-09-17T20:37:12.132Z",
+    "stars": 44792,
+    "language": "Python",
+    "pushed_at": "2026-09-17T20:36:33Z",
+    "license": null
+  }
+}

@@ -11,8 +11,9 @@ A fractal is a tree of autonomous agent loops, each in its own git worktree. A
 node iterates toward a goal and can spawn child nodes that work subtasks in
 parallel.
 
-This skill configures a node with the user, then launches it in tmux; from there
-it runs autonomously — iterating, committing, and spawning children as needed.
+This skill configures a node with the user, then launches it in tmux or a
+detached headless process group; from there it runs autonomously — iterating,
+committing, and spawning children as needed.
 
 Your role does not end at launch. The user (root) node has no loop of its own —
 **you are it.** Once a node is running you are its *operator*: you watch the
@@ -25,7 +26,8 @@ tree, steer it, and relay between it and the user on their behalf. See
 do. Interpret it: distill the node's goal, and map anything the user pinned down
 (a name, a budget, a model, limits, ...) onto the parameters below, each of
 which becomes the matching `fractal node init` flag. The `/fractal` skill routes
-all the configuration to `fractal node init` and passes only
+all the configuration to `fractal node init` and passes only `--headless` (when
+tmux is unavailable or the directive asks for it) and
 `--continue`/`--clean`/`--drain` (when the directive asks to continue an
 existing node) to `fractal node start` — plus `--max-cost` when it accompanies a
 continue (a continue re-arms the cap at start, not init).
@@ -45,14 +47,30 @@ continue (a continue re-arms the cap at start, not init).
   config always inherits. A top-level spawn's parent is the user node, which
   carries no steps, scripts, or skills — the parameter is for configured nodes
   spawning children
-- **`steps`**: directory of `NN-` prefixed step files (`*.md`) to seed `steps/`
-  from instead of the package seed; mutually exclusive with `inherit=steps`
-- **`profile`**: named seed bundle under `.fractal/profiles/<name>/` — its
-  `steps/` seeds the step list and its `NODE.md` a deployment-ready charter
-  (fill-sheet validated at init); mutually exclusive with `steps` and
-  `inherit=steps`
+- **`template`**: template folder (`<path>[@<ref>]`) — any tracked folder
+  holding `config.json`, read from git at the child's fork commit (or at
+  `<ref>`) and recorded in the node's `_template.toml`. Its surfaces (`NODE.md`,
+  `steps/`, `scripts/`, `skills/`, `agents/`) seed the node — a surface it lacks
+  falls back to the inherit-or-package source, and `inherit` of a surface the
+  template carries is refused — and its `config.json` preset fills each unset
+  init parameter (an explicit parameter wins over the preset); a template
+  charter's fill-sheet is validated at init
+- **`include`** / **`exclude`**: template-relative paths to deploy or drop
+  (repeatable; mutually exclusive; a directory entry covers its subtree),
+  recorded in `_template.toml` so `node diff` and `node reseed` judge by the
+  same effective set; only deployment outputs are selectable, and Jinja includes
+  can still read excluded outputs and source-only `_partials/` fragments
+- **`values`** / **`set`**: literal inputs for seed-time Jinja — the template's
+  optional `_template.toml` holds `[values]` defaults, `values` names a TOML
+  file whose top-level keys override those defaults, and `set` takes repeatable
+  `KEY=<TOML literal>` pairs that win over the file. Use
+  `--set 'role="reviewer"'` for text or `--set enabled=false` for a boolean;
+  lists and tables replace whole input values. Supply required inputs before
+  init; an input used by the rendered output must have a value
 - **`pin`**: commission pin (a commit sha): must resolve, and every `pin:` line
-  in the profile charter must match it
+  in the template charter must match it; also fills `{{pin}}`, overriding a
+  template default but requiring agreement with an explicit values-file or set
+  input
 - **`agent`**: agent command; inherits the user node's default when omitted
 - **`provider`**: provider route for the agent (e.g. `openrouter`); inherits the
   user node's default when omitted
@@ -89,10 +107,27 @@ continue (a continue re-arms the cap at start, not init).
   messages until an operator or the parent unseals it with
   `config set sealed=false` (the sealed seat cannot lift its own seal)
 
+**Template authoring** — put prose and Jinja expressions in `NODE.md`, steps,
+and included fragments such as `_partials/foundations.md`. Includes read the
+same committed template bundle and cannot reach sibling templates. Values are
+data: strings containing `{{...}}` are never rendered again, and `$VAR` stays
+for runtime rendering. The template's `_template.toml` supplies defaults; the
+node's generated `_template.toml` records complete inputs and the source commit.
+Parent edits to the rendered charter are ordinary text edits. Editing recorded
+inputs is not a live update: `node diff` and bare `node reseed` replay them,
+while an explicit `reseed --ref` or `--template` adds defaults only for missing
+keys. Reseed preserves `NODE.md`, config, and memory, so charter drift can
+remain.
+
 **Start** — `fractal node start` just launches; all run parameters come from
 `config.json`. A `max_cost` in `config.json` must be positive if set; a missing
 `max_cost` launches uncapped with a loud warning. Its only arguments:
 
+- **`--headless`/`--tmux`**: run the loop in a detached process group instead of
+  a tmux session — output appends to `<node_dir>/headless.log`, one launch
+  banner per launch. An unflagged launch reuses the backend the node last
+  launched with; the flags and the seat-exported `FRACTAL_HEADLESS`
+  (`true`/`false`, the parent's backend) force and re-record it
 - **`--continue`**: continue a stopped/exited node — the launch restores the
   worktree, so uncommitted project files refuse without `--clean`
 - **`--clean`**: with `--continue`, discard uncommitted project files
@@ -410,11 +445,16 @@ seed files yourself: step frontmatter (`requires_approval:`, `agent:`,
 them.
 
 All run parameters were set at init (in `config.json`); `start` takes no config
-arguments — only `--continue` (plus `--clean` to discard uncommitted project
-files, `--drain` to run the new run as a drain, and `--max-cost` to re-arm the
-cap after a budget-ended run) when continuing a stopped/exited node. If the user
-wants to tweak a setting first, edit `<node_dir>/config.json`, then start. The
-node launches in a detached tmux session.
+arguments — only the runtime choice (`--headless`/`--tmux`) and `--continue`
+(plus `--clean` to discard uncommitted project files, `--drain` to run the new
+run as a drain, and `--max-cost` to re-arm the cap after a budget-ended run)
+when continuing a stopped/exited node. If the user wants to tweak a setting
+first, edit `<node_dir>/config.json`, then start. The node launches in a
+detached tmux session by default; when tmux is unavailable, use
+`start --headless` — child starts follow the parent's backend and append their
+output to `headless.log`. Without a flag, `--continue` reuses the backend the
+node last launched with and `--headless`/`--tmux` re-record it; `resume` always
+relaunches through the recorded backend.
 
 ### Step 4: Post-launch briefing
 
@@ -430,7 +470,9 @@ Once the node is running, briefly explain how to interact with it:
 - **Monitoring:** From the node's worktree (`cd <worktree>`), commands act on it
   directly — `fractal node status`, `fractal node cost spent`, and
   `fractal node attach` (watch live output — use this, not raw `tmux -t`, whose
-  prefix matching can attach the wrong session). `fractal node list` shows this
+  prefix matching can attach the wrong session; a headless node has no session,
+  so `attach` refuses and names its log — follow it with
+  `tail -f <node_dir>/headless.log` instead). `fractal node list` shows this
   node's subtree (from a leaf worktree, just its own descendants) — run it from
   the repo root to see the whole tree; it lists live nodes only (`--all`
   includes retired ones, `--retired` only those). Read `<node_dir>/memory/`
@@ -482,16 +524,35 @@ Once the node is running, briefly explain how to interact with it:
 
 - **Worktree:** The node runs in a git worktree at
   `<repo>/.worktrees/<branch>/`. The user's repo is untouched. When done, from
-  the repo root, merge with `fractal node merge <branch>`. A conflicted merge
-  restores the target worktree exactly as it was and leaves the resolution to
-  you: redo the squash there by hand (`git merge --squash <branch>`), resolve
-  and stage the conflicts, then finish with
+  the repo root, merge with `fractal node merge <branch>`. The merge judges the
+  squash's paths outside `.fractal/` by the node's scope roots and its project
+  wiki (the root `.gitattributes` passes only as init's own `merge=wiki` edit;
+  an unscoped repo-root node is unrestricted, an unscoped sub-project node is
+  bounded to its project directory) and refuses any outside them, naming them:
+  widen the scope
+  (`fractal node config set scope=<dirs> --path=<node worktree>`, then
+  `fractal commit "widen scope" --path=<node worktree>` — an uncommitted config
+  change makes the rerun skip the merge-base advance) or rerun with
+  `--ignore-scope` to land them. A conflicted merge restores the target worktree
+  exactly as it was and leaves the resolution to you (conflicts only under
+  `.fractal/` outside the node's scope roots resolve to the target's content on
+  their own): redo the squash there by hand (`git merge --squash <branch>`),
+  resolve and stage the conflicts, then finish with
   `fractal node merge <branch> --continue` rather than committing yourself — the
-  continue runs the rest of the merge (seed strip, wiki index refresh, commit,
-  merge-base advance) that a hand-rolled finish would miss, and names every file
-  where the resolution kept the target's content over the node's — the node
-  still carries its own version there, so land the resolution on the node (or
-  retire it) or a later re-merge silently re-stages it. Deleting afterward with
+  continue runs the rest of the merge (`.fractal/` restore and seed strip,
+  footprint check, wiki index refresh, commit, merge-base advance) that a
+  hand-rolled finish would miss, and the merge-base advance writes the target's
+  adjudicated tree into the node's worktree, so the resolution lands on the node
+  too. Where a repository requires an additional gate, pass
+  `--validate=scripts/check.sh` on both a fresh merge and `--continue`: bash
+  runs that destination-relative script after restoration and wiki refresh,
+  before committing. It must succeed without changing the staged tree or leaving
+  tracked unstaged changes; the merge does not stage its output. A footprint
+  refusal on the continue names its own remedies: `--continue --ignore-scope`,
+  or widen the scope and redo the squash
+  (`git -C <target worktree> reset --hard HEAD && git -C <target worktree> merge --squash <branch>`),
+  since the widening commit lands after the hand squash and a continue refuses a
+  node commit newer than its squash. Deleting afterward with
   `fractal node delete <branch>` is optional hygiene, never automatic — a merged
   branch keeps audit value (delete must run from outside the worktree). Pass
   `--delete` to `merge` to chain the two in one command: every delete refusal

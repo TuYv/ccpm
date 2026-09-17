@@ -1,0 +1,25 @@
+{
+  "id": "getsentry-sentry-scraps-review",
+  "name": "scraps-review",
+  "description": "Filter large Sentry Scraps design-system migration PRs for review by separating mechanical import-path changes, generated baseline updates, snapshot mocks, and pure renames from substantive destination-component and logic changes. Use when asked to review a large \"ref(scraps)\" PR, a \"move component into Scraps\" PR, or to filter Scraps migration noise. Do not use for general refactors or migrations outside getsentry/sentry.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "getsentry",
+  "install_path": ".claude/skills/scraps-review/SKILL.md",
+  "source": {
+    "repo": "getsentry/sentry",
+    "url": "https://github.com/getsentry/sentry/blob/master/.agents/skills/scraps-review/SKILL.md",
+    "path": ".agents/skills/scraps-review/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-09-17T20:37:16.213Z",
+    "stars": 44792,
+    "language": "Python",
+    "pushed_at": "2026-09-17T20:36:33Z",
+    "license": null
+  }
+}

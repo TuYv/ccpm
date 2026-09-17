@@ -60,7 +60,7 @@ rather than authoring or auditing page by page yourself:
   sub-agent, then run `wiki update` once to stitch the new pages into the
   indexes. Update adds and repairs index link rows and frontmatter only — it
   never linkifies mentions in page prose, so author `[[...]]` cross-links by
-  hand.
+  hand, root-relative inside the wiki.
 - **Drive sweeps with a dynamic workflow.** When auditing, relinking, or
   restructuring an existing wiki, pipeline its pages through a workflow so each
   is read, revised, and verified on its own — slow pages never block fast ones.
@@ -122,11 +122,60 @@ rather than authoring or auditing page by page yourself:
 - **Frontmatter order is tool-enforced.** `wiki update` keeps every block in
   canonical order — `name`, `title`, `desc`, `category`, `tags`, `sources`,
   `created`, `updated` — moving each field (with its block-scalar body) verbatim
-  into its slot. Custom keys are allowed: they keep their relative order below
-  the known fields, above the timestamps.
-- **Wikilinks stay inside the wiki.** A wikilink (`[[...]]`) must target another
-  page in the same wiki. Files outside the wiki (source files, configs, another
-  wiki's pages) can be referenced by name or in backticks, but never linked.
+  into its slot. Custom keys are allowed: one named like `com.example` (word
+  characters, dots, dashes) keeps its relative order below the known fields,
+  above the timestamps; a key spelled any other way (one with spaces) stays with
+  the field above it.
+- **Frontmatter reads as YAML.** Field values are read the way a strict YAML
+  reader reads them — a value continued on indented lines folds into one, a
+  quoted value decodes, a space followed by `#` starts a comment, and
+  `null # comment` unsets like `null`. `wiki lint` reports a block a strict
+  reader rejects (an unquoted `: ` inside a value, a duplicate key, a body that
+  is not `key: value` pairs) as an `invalid_yaml` issue; `wiki update` still
+  repairs such a block through its line grammar, except a body that is not
+  `key: value` pairs, a mapping whose keys are not column-0 `key:` lines, or a
+  block whose repair would leave a strict reader worse off (an accepted block
+  rejected, or authored lines folded into a quoted value), which it leaves
+  untouched.
+- **Wikilinks stay inside the wiki unless a folder is allowlisted.** A wikilink
+  (`[[...]]`) has two spellings, one rule each: a prefix-free target
+  (`[[core/design]]`) is relative to the wiki root and must name something
+  inside it; a target starting with `./` or `../` (or carrying a `.` or `..`
+  segment anywhere) is relative to the page's folder, as Obsidian and markdown
+  read it, and must leave the wiki — one `..` per folder of depth, so the same
+  external file is spelled differently from different pages
+  (`[[../math/lemmas]]` from a root-level page, `[[../../math/lemmas]]` from
+  `nodes/verify.md`). Such a link is live only under a folder the wiki
+  allowlists in `links.external` in `.wiki/settings.json`: a list of folder
+  paths relative to the wiki root (not the page), each climbing out of it with
+  leading `..`, e.g. `{"links": {"external": ["../src", "../math"]}}`. List the
+  narrowest folder holding the targets, and a folder, never a file. Under an
+  allowlisted folder the target is live when the file, its `.md` page, or the
+  folder exists; a target inside another wiki (a folder holding
+  `.wiki/settings.json`) follows that wiki's own settings, so a folder it
+  indexes fails lint exactly as at home
+  (`Link [[../math/g2]] targets a folder, not a page (use [[../math/g2/_index]])`).
+  Link a file or the `_index` page, never a bare folder — stricter link checkers
+  reject a bare folder link too. A prefixed link that lands inside the wiki
+  fails lint (`points inside the wiki through './' or '../'`), naming the
+  prefix-free spelling (of the page-relative reading when something exists
+  there, else of the same text read from the wiki root; the root itself is
+  `_index`), or the page-relative spelling of the outside file the same text
+  reaches when read from the wiki root
+  (`(use [[../../src/main.py]] for the path outside the wiki)`); a link to a
+  real file outside every allowlisted folder draws the note
+  `points outside the wiki (add '../docs' to links.external in .wiki/settings.json to allow it)`
+  (for a folder holding an `_index.md`, adding
+  `, and link [[../docs/_index]] if a wiki indexes the folder`). Link when the
+  reader should open the file; a passing mention, or anything outside every
+  allowlisted folder, goes in backticks. The allowlist is a lint rule alone:
+  `wiki read` never serves an external target (use `wiki read --path <its root>`
+  for another wiki, `cat` for a file), generated index rows never carry one, and
+  `wiki map` never shows an external folder. Obsidian cannot see outside the
+  vault, so an external link shows unresolved there — do not click it: Obsidian
+  creates the missing target at that path, as folders outside the vault.
+  `wiki match '\[\[\.\.?/' --lines` lists every link opening with `./` or `../`
+  (code samples included; the `wiki lint` findings are the authoritative list).
 - **Lint's output contract.** `wiki lint` prints issues to stdout and soft notes
   to stderr; exit 1 means exactly "issues found" (0 clean, 2 a command error) —
   notes never gate. A script must branch on the exit code or read
@@ -135,20 +184,37 @@ rather than authoring or auditing page by page yourself:
   fields beside the prose `text`), never classify findings by scraping the prose
   streams: a stderr note is not a blocking issue.
 - **Stale wikilinks are soft notes.** A `[[...]]` in index or page prose whose
-  target no longer exists draws a stderr note from `wiki lint` without failing
-  the run. Broken links in the generated index link block — the rows
-  `wiki update` maintains — are hard issues until the next update prunes them
-  (each removal announced, with the cause named when the target is merely
-  excluded rather than deleted), as is a prose wikilink naming a folder rather
-  than the folder's index page: link `[[folder/_index]]`, never `[[folder]]`.
+  target no longer exists — inside the wiki or under a `links.external` folder —
+  draws a stderr note from `wiki lint` without failing the run; when the same
+  text read from the wiki root names a real allowlisted file (a link written
+  root-relative or absolute), the note suggests its page-relative spelling, and
+  a target missing only by a trailing slash the same path without it. A prose
+  link to a real file outside every allowlisted folder is the
+  `points outside the wiki` note naming the entry to add; a `links.external`
+  entry naming no folder on this machine draws one note per run
+  (`links.external entry '../src' names no folder on this machine; links into it are not checked`)
+  and the links into it draw no notes — an environment condition, so leave them
+  alone. Broken links in the generated index link block — the rows `wiki update`
+  maintains — are hard issues until the next update prunes them (each removal
+  announced, with the cause named when the target is merely excluded rather than
+  deleted), as is a prose wikilink naming a folder rather than the folder's
+  index page — in this wiki or in another wiki a `links.external` folder admits:
+  link `[[folder/_index]]`, never `[[folder]]` — and a `./` or `../` prose link
+  that lands inside the wiki (`points inside the wiki through './' or '../'`),
+  which names the prefix-free spelling to write instead.
 - **Descriptions end in a period.** `wiki lint` fails a `desc` (or an authored
   link description) that lacks a trailing period; the seeded `...` placeholder
   only draws a soft note. Author the desc in the child page's frontmatter —
   `wiki update` copies it onto the parent index's link line. A desc containing
-  `: ` must be YAML-quoted; surrounding quotes are stripped when the value is
-  read. Never hand-wrap a desc mid-word or onto a list-marker start — let the
-  block scalar carry the breaks; lint fails the wrap artifacts (a hyphen dangle,
-  a phantom list item).
+  `: ` or ` #` must be YAML-quoted — a strict reader rejects the unquoted colon
+  on a one-line desc or on a continuation line of one (`wiki lint` reports it as
+  `invalid_yaml`; under a bare `desc:` key an indented `Key: value` line nests a
+  mapping instead, which no strict reader shows as text and lint does not
+  report) and reads ` #` as a comment (lint names it as the likely cause only
+  when the cut-short desc loses its period); surrounding quotes are stripped
+  when the value is read. Never hand-wrap a desc mid-word or onto a list-marker
+  start — let the block scalar carry the breaks; lint fails the wrap artifacts
+  (a hyphen dangle, a phantom list item).
 - **Fill in auto-created index descs.** `wiki update` creates a missing
   `_index.md` for every new directory with a `desc: ...` placeholder and
   announces the batch in its condensed summary
@@ -189,10 +255,13 @@ rather than authoring or auditing page by page yourself:
   prettier) exclude the wiki root instead (`wiki/` in `.prettierignore`).
 - **The git merge driver resolves only the generated region.** For `_index.md`
   files it normalizes the regenerated `name`/`updated` keys to *ours* (plus
-  `created` on an add/add merge, where both sides seeded it), resolves the link
-  block to the union of both sides' rows — ours' layout wins and rows present
-  only in theirs ride over with their desc continuations, appended above the
-  closing `***`, so a merge never drops one side's additions — and three-way
+  `created` whenever the base index carries no real stamp — an add/add merge, a
+  hand-written or imported index), resolves the link block to the union of both
+  sides' rows — ours' layout wins, rows present only in theirs ride over with
+  their desc continuations, appended above the closing `***`, and a row both
+  sides carry keeps ours' text unless only theirs changed it against the base,
+  so a merge never drops one side's additions, and an edit only one side made is
+  never lost (when both sides edit the same row, ours wins) — and three-way
   merges everything authored — the remaining frontmatter fields
   (`title`/`desc`/`created`/`category`/`tags`/`sources`) and the user content
   below `***` — which can still conflict for hand-resolution. A side missing its
