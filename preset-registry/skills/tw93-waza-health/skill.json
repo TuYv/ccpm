@@ -1,7 +1,7 @@
 {
   "id": "tw93-waza-health",
   "name": "health",
-  "description": "Runs a budget-aware agent-assisted engineering health audit for instruction/config drift, hooks/MCP, verifier surfaces, and AI maintainability. Use when users ask in any language to audit Claude, Codex, Pi, agent instructions, MCP or hooks, verifier coverage, or AI-maintainability drift. Not for debugging application code or reviewing PRs.",
+  "description": "Audits agent config, instruction drift, hooks or MCP, and AI maintainability. Use when Claude, Codex, or Pi setup looks wrong. Not for application bugs or PR review.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/tw93/Waza/blob/main/skills/health/SKILL.md",
     "path": "skills/health/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-17T01:30:10.627Z",
-    "stars": 7033,
+    "discovered_at": "2026-09-17T07:09:10.817Z",
+    "stars": 7043,
     "language": "Python",
-    "pushed_at": "2026-09-15T09:44:29Z",
+    "pushed_at": "2026-09-17T03:13:51Z",
     "license": "MIT"
-  },
-  "summary_zh": "一款可控制成本的智能体工程健康审计工具，适合排查指令配置漂移、MCP 与钩子风险、验证覆盖和 AI 可维护性问题。"
+  }
 }

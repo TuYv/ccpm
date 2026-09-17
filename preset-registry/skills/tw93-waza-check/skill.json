@@ -1,7 +1,7 @@
 {
   "id": "tw93-waza-check",
   "name": "check",
-  "description": "Reviews code diffs, PRs, issue queues, release readiness, commits, pushes, publishing, and project audits. Use when users ask in any language for code review, issue or PR triage, release gates, publishing follow-through, or project audits. Not for debugging root causes or prose review.",
+  "description": "Reviews diffs, PRs, release readiness, and publishing follow-through. Use when asked to review, triage issues or PRs, or ship. Not for debugging root causes or prose.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/tw93/Waza/blob/main/skills/check/SKILL.md",
     "path": "skills/check/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-17T01:30:10.468Z",
-    "stars": 7033,
+    "discovered_at": "2026-09-17T07:09:10.633Z",
+    "stars": 7043,
     "language": "Python",
-    "pushed_at": "2026-09-15T09:44:29Z",
+    "pushed_at": "2026-09-17T03:13:51Z",
     "license": "MIT"
-  },
-  "summary_zh": "用于审查代码变更、分流 PR 和问题、检查发布就绪度及项目健康状况，适合代码评审与发布把关。"
+  }
 }

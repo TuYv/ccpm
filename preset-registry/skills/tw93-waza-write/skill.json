@@ -1,7 +1,7 @@
 {
   "id": "tw93-waza-write",
   "name": "write",
-  "description": "Rewrites and polishes prose in Chinese or English, removes AI-like wording, and reviews product localization copy while preserving intent for drafts, docs, release notes, launch copy, and social posts. Use when users ask in any language to draft, rewrite, proofread, localize, polish release notes, remove AI-like wording, or prepare launch and social copy. Not for code comments, commit messages, or inline docs.",
+  "description": "Rewrites and polishes Chinese or English prose and product copy. Use when drafting, editing, localizing, or cutting AI tone. Not for code comments or commit messages.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/tw93/Waza/blob/main/skills/write/SKILL.md",
     "path": "skills/write/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-17T01:30:11.704Z",
-    "stars": 7033,
+    "discovered_at": "2026-09-17T07:09:11.873Z",
+    "stars": 7043,
     "language": "Python",
-    "pushed_at": "2026-09-15T09:44:29Z",
+    "pushed_at": "2026-09-17T03:13:51Z",
     "license": "MIT"
-  },
-  "summary_zh": "一款中英文文案润色工具，可去除 AI 味并校审本地化内容，适合文档、发布说明、宣传及社交文案。"
+  }
 }

@@ -2,7 +2,7 @@
   "id": "conorbronsdon-avoid-ai-writing-preservation-verifier",
   "name": "preservation-verifier",
   "description": "Use when the user provides an original and rewritten version, asks whether a rewrite preserved protected content, or wants a deterministic check for code, frontmatter, quotes, tables, links, paths, numbers, headings, and residual AI-pattern regressions.",
-  "category": "设计创意",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/conorbronsdon/avoid-ai-writing/blob/main/skills/preservation-verifier/SKILL.md",
     "path": "skills/preservation-verifier/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-17T00:44:31.233Z",
-    "stars": 4423,
+    "discovered_at": "2026-09-17T06:23:27.994Z",
+    "stars": 4428,
     "language": "JavaScript",
-    "pushed_at": "2026-09-16T22:51:34Z",
+    "pushed_at": "2026-09-17T01:27:19Z",
     "license": "MIT"
   },
   "summary_zh": "用于确定性比对原文与改写文本，检查代码、前言、引用、表格、链接、路径、数字和标题等受保护内容是否保留，并发现残留的 AI 写作模式。"
