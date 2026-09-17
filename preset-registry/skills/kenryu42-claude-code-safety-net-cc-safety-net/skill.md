@@ -4,8 +4,6 @@ description: "Operate CC Safety Net: explain why a command was blocked, triage f
 disable-model-invocation: true
 ---
 
-<!-- Keep the body below in sync with src/hosts/templates/cc-safety-net.ts. -->
-
 # CC Safety Net
 
 CC Safety Net hooks into coding agent CLIs (Claude Code, Codex, Cursor, Gemini CLI, and others)
