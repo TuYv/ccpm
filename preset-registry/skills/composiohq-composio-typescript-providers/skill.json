@@ -1,7 +1,7 @@
 {
   "id": "composiohq-composio-typescript-providers",
   "name": "typescript-providers",
-  "description": "Implement, modify, test, or document TypeScript provider packages under ts/packages/providers, including framework adapters for OpenAI, Anthropic, Google, LangChain, Mastra, Vercel, LlamaIndex, Cloudflare, and Claude Agent SDK. Use for provider-specific TS work; do not use for core-only changes.",
+  "description": "Implement, modify, test, or document TypeScript provider packages under ts/packages/providers, including framework adapters for OpenAI, Anthropic, Google, LangChain, Mastra, Vercel, LlamaIndex, Cloudflare, Claude Agent SDK, and TypeSafe. Use for provider-specific TS work; do not use for core-only changes.",
   "category": "自动化集成",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/ComposioHQ/composio/blob/next/.agents/skills/typescript-providers/SKILL.md",
     "path": ".agents/skills/typescript-providers/SKILL.md",
     "branch": "next",
-    "discovered_at": "2026-09-17T23:46:53.972Z",
-    "stars": 30220,
+    "discovered_at": "2026-09-18T04:54:35.902Z",
+    "stars": 30227,
     "language": "TypeScript",
-    "pushed_at": "2026-09-17T20:05:23Z",
+    "pushed_at": "2026-09-18T01:04:29Z",
     "license": "MIT"
-  },
-  "summary_zh": "用于开发、修改和测试 TypeScript 模型提供商适配包，适合对接主流 AI 框架及服务，处理特定平台的集成需求。"
+  }
 }
