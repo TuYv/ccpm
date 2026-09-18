@@ -1,0 +1,25 @@
+{
+  "id": "pingdotgg-t3code-vendored-assets",
+  "name": "vendored-assets",
+  "description": "Vendored assets. Use when importing or updating checked-in third-party or externally generated JavaScript, CSS, registries, schemas, snapshots, or Scalar, Swagger, and MIME artifacts.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "pingdotgg",
+  "install_path": ".claude/skills/vendored-assets/SKILL.md",
+  "source": {
+    "repo": "pingdotgg/t3code",
+    "url": "https://github.com/pingdotgg/t3code/blob/main/.repos/effect-smol/.agents/skills/vendored-assets/SKILL.md",
+    "path": ".repos/effect-smol/.agents/skills/vendored-assets/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-18T10:49:39.247Z",
+    "stars": 22992,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-18T08:57:31Z",
+    "license": "MIT"
+  }
+}

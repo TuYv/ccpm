@@ -1,0 +1,25 @@
+{
+  "id": "pingdotgg-t3code-test-development",
+  "name": "test-development",
+  "description": "Test development. Use when adding or changing runtime Vitest coverage or Tstyche contracts for behavior, inference, assignability, or displayed public types.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "pingdotgg",
+  "install_path": ".claude/skills/test-development/SKILL.md",
+  "source": {
+    "repo": "pingdotgg/t3code",
+    "url": "https://github.com/pingdotgg/t3code/blob/main/.repos/effect-smol/.agents/skills/test-development/SKILL.md",
+    "path": ".repos/effect-smol/.agents/skills/test-development/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-18T10:49:39.109Z",
+    "stars": 22992,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-18T08:57:31Z",
+    "license": "MIT"
+  }
+}

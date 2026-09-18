@@ -1,0 +1,25 @@
+{
+  "id": "pingdotgg-t3code-migration-guidance",
+  "name": "migration-guidance",
+  "description": "Use when changing how a v3 public API maps to v4, editing migration annotations, or regenerating migration/v3-to-v4.md.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "pingdotgg",
+  "install_path": ".claude/skills/migration-guidance/SKILL.md",
+  "source": {
+    "repo": "pingdotgg/t3code",
+    "url": "https://github.com/pingdotgg/t3code/blob/main/.repos/effect-smol/.agents/skills/migration-guidance/SKILL.md",
+    "path": ".repos/effect-smol/.agents/skills/migration-guidance/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-18T10:49:38.628Z",
+    "stars": 22992,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-18T08:57:31Z",
+    "license": "MIT"
+  }
+}

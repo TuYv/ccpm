@@ -1,0 +1,25 @@
+{
+  "id": "pingdotgg-t3code-dependency-maintenance",
+  "name": "dependency-maintenance",
+  "description": "Dependency maintenance. Use when adding, moving, or upgrading dependencies, changing pnpm or JavaScript runtimes, updating TypeScript or build/test tools, or changing native-build policy, patches, or test images.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "pingdotgg",
+  "install_path": ".claude/skills/dependency-maintenance/SKILL.md",
+  "source": {
+    "repo": "pingdotgg/t3code",
+    "url": "https://github.com/pingdotgg/t3code/blob/main/.repos/effect-smol/.agents/skills/dependency-maintenance/SKILL.md",
+    "path": ".repos/effect-smol/.agents/skills/dependency-maintenance/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-18T10:49:38.121Z",
+    "stars": 22992,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-18T08:57:31Z",
+    "license": "MIT"
+  }
+}

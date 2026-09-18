@@ -1,0 +1,25 @@
+{
+  "id": "pingdotgg-t3code-package-development",
+  "name": "package-development",
+  "description": "Package registration. Use when adding a workspace package, making a private package publishable, renaming a package, or moving its workspace path.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "pingdotgg",
+  "install_path": ".claude/skills/package-development/SKILL.md",
+  "source": {
+    "repo": "pingdotgg/t3code",
+    "url": "https://github.com/pingdotgg/t3code/blob/main/.repos/effect-smol/.agents/skills/package-development/SKILL.md",
+    "path": ".repos/effect-smol/.agents/skills/package-development/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-18T10:49:38.785Z",
+    "stars": 22992,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-18T08:57:31Z",
+    "license": "MIT"
+  }
+}

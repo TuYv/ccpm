@@ -1,0 +1,25 @@
+{
+  "id": "pingdotgg-t3code-performance-analysis",
+  "name": "performance-analysis",
+  "description": "Performance analysis. Use for runtime throughput or latency benchmarks, TypeScript compiler cost, performance regressions, comparison harnesses, or thresholds.",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "pingdotgg",
+  "install_path": ".claude/skills/performance-analysis/SKILL.md",
+  "source": {
+    "repo": "pingdotgg/t3code",
+    "url": "https://github.com/pingdotgg/t3code/blob/main/.repos/effect-smol/.agents/skills/performance-analysis/SKILL.md",
+    "path": ".repos/effect-smol/.agents/skills/performance-analysis/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-18T10:49:38.930Z",
+    "stars": 22992,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-18T08:57:31Z",
+    "license": "MIT"
+  }
+}
