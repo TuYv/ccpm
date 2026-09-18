@@ -1,7 +1,7 @@
 {
   "id": "virgiliojr94-book-to-skill",
   "name": "book-to-skill",
-  "description": "Converts books and documents (PDF, EPUB, DOCX, HTML, Markdown, plain text, RTF, MOBI/AZW with Calibre) into structured agent skills, extracting frameworks, mental models, principles, techniques, and anti-patterns. Use when the user wants to study a document through GitHub Copilot CLI, Amp, Claude Code, or Hermes Agent, apply an author's frameworks while working, or build a reusable knowledge base from a file.",
+  "description": "Converts books and documents (PDF, EPUB, DOCX, HTML, Markdown, plain text, RTF, MOBI/AZW with Calibre) into structured agent skills, extracting frameworks, mental models, principles, techniques, and anti-patterns. Use when the user wants to study a document through GitHub Copilot CLI, Amp, Claude Code, Hermes Agent, or OpenClaw, apply an author's frameworks while working, or build a reusable knowledge base from a file.",
   "category": "文档写作",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/virgiliojr94/book-to-skill/blob/master/SKILL.md",
     "path": "SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-09-18T10:44:30.494Z",
-    "stars": 31091,
+    "discovered_at": "2026-09-18T15:31:17.338Z",
+    "stars": 31109,
     "language": "Python",
-    "pushed_at": "2026-09-17T17:05:46Z",
+    "pushed_at": "2026-09-18T13:41:35Z",
     "license": "MIT"
-  },
-  "summary_zh": "把书籍和多种格式文档转成结构化智能体技能，适合提炼方法论、辅助实践并构建可复用知识库。"
+  }
 }

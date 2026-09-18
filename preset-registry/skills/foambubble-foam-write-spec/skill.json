@@ -1,0 +1,25 @@
+{
+  "id": "foambubble-foam-write-spec",
+  "name": "write-spec",
+  "description": "Write a spec — acceptance criteria for work before it is built. Use for a GitHub issue (including the agent:spec label in CI) or for an idea you are working out locally.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "foambubble",
+  "install_path": ".claude/skills/write-spec/SKILL.md",
+  "source": {
+    "repo": "foambubble/foam",
+    "url": "https://github.com/foambubble/foam/blob/main/.claude/skills/write-spec/SKILL.md",
+    "path": ".claude/skills/write-spec/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-18T14:48:51.761Z",
+    "stars": 17404,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-18T14:23:50Z",
+    "license": null
+  }
+}

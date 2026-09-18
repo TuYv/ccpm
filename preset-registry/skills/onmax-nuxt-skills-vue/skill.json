@@ -1,8 +1,8 @@
 {
   "id": "onmax-nuxt-skills-vue",
   "name": "vue",
-  "description": "Use when editing .vue files, creating Vue 3 components, writing composables, or testing Vue code - provides Composition API patterns, props/emits best practices, VueUse integration, and reactive destructuring guidance",
-  "category": "测试调试",
+  "description": "Vue 3 Composition API, script setup macros, reactivity system, and built-in components. Use when writing Vue SFCs, defineProps/defineEmits/defineModel, watchers, or using Transition/Teleport/Suspense/KeepAlive.",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,10 @@
     "url": "https://github.com/onmax/nuxt-skills/blob/main/skills/vue/SKILL.md",
     "path": "skills/vue/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-18T10:47:29.491Z",
+    "discovered_at": "2026-09-18T15:34:53.323Z",
     "stars": 711,
     "language": "TypeScript",
-    "pushed_at": "2026-09-18T10:37:23Z",
+    "pushed_at": "2026-09-18T12:26:05Z",
     "license": null
-  },
-  "summary_zh": "专为 Vue 3 打造的编码辅助工具，适合开发组件或测试代码时使用。它能指导你遵循组合式 API 等最佳实践，帮你写出规范、易维护的代码。"
+  }
 }

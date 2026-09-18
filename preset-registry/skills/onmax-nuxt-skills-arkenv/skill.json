@@ -1,0 +1,25 @@
+{
+  "id": "onmax-nuxt-skills-arkenv",
+  "name": "arkenv",
+  "description": "Answer questions about ArkEnv and help implement environment variable validation. Use when developers: (1) Ask about environment variable validation or typesafety, (2) Want to setup ArkEnv in a project, (3) Need to define or update schemas using ArkType or Standard Schema, (4) Are integrating with Vite, Bun, or other runtimes. Triggers on: 'ArkEnv', 'env validation', 'typesafe env', 'createEnv', 'env.ts', '@arkenv/cli'.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "onmax",
+  "install_path": ".claude/skills/arkenv/SKILL.md",
+  "source": {
+    "repo": "onmax/nuxt-skills",
+    "url": "https://github.com/onmax/nuxt-skills/blob/main/skills/arkenv/SKILL.md",
+    "path": "skills/arkenv/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-18T15:34:48.944Z",
+    "stars": 711,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-18T12:26:05Z",
+    "license": null
+  }
+}
