@@ -1,0 +1,25 @@
+{
+  "id": "foambubble-foam-implement",
+  "name": "implement",
+  "description": "Build what a spec describes, test first. Use when an @claude comment on a spec PR asks to implement it, with or without a plan.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "foambubble",
+  "install_path": ".claude/skills/implement/SKILL.md",
+  "source": {
+    "repo": "foambubble/foam",
+    "url": "https://github.com/foambubble/foam/blob/main/.claude/skills/implement/SKILL.md",
+    "path": ".claude/skills/implement/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-18T21:55:29.870Z",
+    "stars": 17406,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-18T21:19:31Z",
+    "license": null
+  }
+}

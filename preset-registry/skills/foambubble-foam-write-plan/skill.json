@@ -1,0 +1,25 @@
+{
+  "id": "foambubble-foam-write-plan",
+  "name": "write-plan",
+  "description": "Work out how to build what a spec describes, and write it to plan.md. Use when asked to plan a spec, or when an @claude comment on a spec PR asks for the plan.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "foambubble",
+  "install_path": ".claude/skills/write-plan/SKILL.md",
+  "source": {
+    "repo": "foambubble/foam",
+    "url": "https://github.com/foambubble/foam/blob/main/.claude/skills/write-plan/SKILL.md",
+    "path": ".claude/skills/write-plan/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-18T21:55:30.017Z",
+    "stars": 17406,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-18T21:19:31Z",
+    "license": null
+  }
+}
