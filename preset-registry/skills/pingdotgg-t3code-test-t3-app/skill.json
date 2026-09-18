@@ -1,7 +1,7 @@
 {
   "id": "pingdotgg-t3code-test-t3-app",
   "name": "test-t3-app",
-  "description": "Launch, retain, and test the T3 Code web app in isolated development environments, including first-try browser authentication with one-time pairing URLs, pairing-token recovery, worktree-safe state directories, cross-turn dev server lifecycle, and direct SQLite inspection or fixture seeding. Use when an agent needs to run T3 locally, iteratively test UI behavior with a human, recover from an expired or consumed pairing token, isolate dev state, or prepare test data in state.sqlite.",
+  "description": "Test T3 Code's web and desktop UI through its built-in Browser panel against isolated development state. Use for browser verification, browser pairing recovery, and test fixtures. Use test-t3-mobile for native mobile verification.",
   "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/pingdotgg/t3code/blob/main/.agents/skills/test-t3-app/SKILL.md",
     "path": ".agents/skills/test-t3-app/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-18T15:37:27.545Z",
-    "stars": 22995,
+    "discovered_at": "2026-09-18T19:33:43.804Z",
+    "stars": 23013,
     "language": "TypeScript",
-    "pushed_at": "2026-09-18T15:16:02Z",
+    "pushed_at": "2026-09-18T18:48:27Z",
     "license": "MIT"
-  },
-  "summary_zh": "用于在隔离环境中运行和测试 T3 Code 网页应用，适合界面联调、恢复登录配对及准备 SQLite 测试数据。"
+  }
 }

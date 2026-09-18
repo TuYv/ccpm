@@ -1,0 +1,25 @@
+{
+  "id": "aeonfun-aeon-create-prove",
+  "name": "create-prove",
+  "description": "Run a changed Aeon skill for real and attach SHA-bound behavioral evidence to its PR",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "aeonfun",
+  "install_path": ".claude/skills/create-prove/SKILL.md",
+  "source": {
+    "repo": "aeonfun/aeon",
+    "url": "https://github.com/aeonfun/aeon/blob/main/skills/create-prove/SKILL.md",
+    "path": "skills/create-prove/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-18T19:36:32.873Z",
+    "stars": 740,
+    "language": "Shell",
+    "pushed_at": "2026-09-18T16:42:42Z",
+    "license": "MIT"
+  }
+}

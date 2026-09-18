@@ -1,7 +1,7 @@
 {
   "id": "pingdotgg-t3code-test-t3-mobile",
   "name": "test-t3-mobile",
-  "description": "Launch and test T3 Code Mobile on an iOS Simulator or Android Emulator against disposable local T3 environments, including Metro and dev-client reuse, native rebuild decisions, per-client pairing, seeded projects, semantic UI control, screenshots, and iOS serve-sim streaming. Use after mobile UI or native changes, when reproducing phone or tablet behavior, pairing an emulator to isolated state, or verifying mobile behavior on macOS, Linux, or Windows.",
+  "description": "Test T3 Code's native iOS and Android app through its Device panel and returned AgentDevice command. Use for mobile verification, native-client builds, Metro launch, and mobile pairing against isolated development state.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/pingdotgg/t3code/blob/main/.agents/skills/test-t3-mobile/SKILL.md",
     "path": ".agents/skills/test-t3-mobile/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-18T15:37:27.731Z",
-    "stars": 22995,
+    "discovered_at": "2026-09-18T19:33:43.967Z",
+    "stars": 23013,
     "language": "TypeScript",
-    "pushed_at": "2026-09-18T15:16:02Z",
+    "pushed_at": "2026-09-18T18:48:27Z",
     "license": "MIT"
-  },
-  "summary_zh": "用于在 iOS 或 Android 模拟器中连接隔离的本地环境，快速复现并验证移动端 UI、原生改动及设备行为。"
+  }
 }
