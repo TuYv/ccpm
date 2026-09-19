@@ -1,0 +1,25 @@
+{
+  "id": "zubair-trabzada-geo-seo-claude-geo-report-pdf",
+  "name": "geo-report-pdf",
+  "description": "Generate a professional PDF report from a GEO audit using pandoc + Chrome headless. Converts GEO-AUDIT-REPORT.md into a styled, client-ready PDF with a cover page, color-coded score tables, severity-tagged findings, and a 90-day roadmap.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "2.0.0",
+  "author": "zubair-trabzada",
+  "install_path": ".claude/skills/geo-report-pdf/SKILL.md",
+  "source": {
+    "repo": "zubair-trabzada/geo-seo-claude",
+    "url": "https://github.com/zubair-trabzada/geo-seo-claude/blob/main/skills/geo-report-pdf/SKILL.md",
+    "path": "skills/geo-report-pdf/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-19T06:52:05.031Z",
+    "stars": 10702,
+    "language": "Python",
+    "pushed_at": "2026-09-19T06:37:16Z",
+    "license": "MIT"
+  }
+}

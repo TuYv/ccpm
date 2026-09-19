@@ -1,0 +1,25 @@
+{
+  "id": "zubair-trabzada-geo-seo-claude-geo-crawlers",
+  "name": "geo-crawlers",
+  "description": "AI crawler access analysis. Checks robots.txt, meta tags, and HTTP headers to determine which AI crawlers can access the site. Provides a complete access map and recommendations for maximizing AI visibility while maintaining appropriate control.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "zubair-trabzada",
+  "install_path": ".claude/skills/geo-crawlers/SKILL.md",
+  "source": {
+    "repo": "zubair-trabzada/geo-seo-claude",
+    "url": "https://github.com/zubair-trabzada/geo-seo-claude/blob/main/skills/geo-crawlers/SKILL.md",
+    "path": "skills/geo-crawlers/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-19T06:52:04.252Z",
+    "stars": 10702,
+    "language": "Python",
+    "pushed_at": "2026-09-19T06:37:16Z",
+    "license": "MIT"
+  }
+}

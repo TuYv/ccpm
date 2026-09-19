@@ -1,0 +1,25 @@
+{
+  "id": "zubair-trabzada-geo-seo-claude-geo-proposal",
+  "name": "geo-proposal",
+  "description": "> Auto-generate a professional, client-ready GEO service proposal from audit data. Creates a full proposal in markdown and PDF including executive summary, findings, recommended service packages (Basic/Standard/Premium), pricing, timeline, and terms. Use when user says \"proposal\", \"proposta\", \"offerta\", \"preventivo\", \"generate proposal\", or after completing a GEO audit for a prospect.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "zubair-trabzada",
+  "install_path": ".claude/skills/geo-proposal/SKILL.md",
+  "source": {
+    "repo": "zubair-trabzada/geo-seo-claude",
+    "url": "https://github.com/zubair-trabzada/geo-seo-claude/blob/main/skills/geo-proposal/SKILL.md",
+    "path": "skills/geo-proposal/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-19T06:52:04.723Z",
+    "stars": 10702,
+    "language": "Python",
+    "pushed_at": "2026-09-19T06:37:16Z",
+    "license": "MIT"
+  }
+}

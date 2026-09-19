@@ -1,0 +1,25 @@
+{
+  "id": "zubair-trabzada-geo-seo-claude-geo-citability",
+  "name": "geo-citability",
+  "description": "AI citability scoring and optimization. Analyzes web page content to determine how likely AI systems (ChatGPT, Claude, Perplexity, Gemini) are to cite or quote passages from the page. Provides a citability score (0-100) with specific rewrite suggestions.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "zubair-trabzada",
+  "install_path": ".claude/skills/geo-citability/SKILL.md",
+  "source": {
+    "repo": "zubair-trabzada/geo-seo-claude",
+    "url": "https://github.com/zubair-trabzada/geo-seo-claude/blob/main/skills/geo-citability/SKILL.md",
+    "path": "skills/geo-citability/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-19T06:52:03.734Z",
+    "stars": 10702,
+    "language": "Python",
+    "pushed_at": "2026-09-19T06:37:16Z",
+    "license": "MIT"
+  }
+}

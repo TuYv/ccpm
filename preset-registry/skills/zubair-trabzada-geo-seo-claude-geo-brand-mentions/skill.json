@@ -1,0 +1,25 @@
+{
+  "id": "zubair-trabzada-geo-seo-claude-geo-brand-mentions",
+  "name": "geo-brand-mentions",
+  "description": "Brand mention and authority scanner for AI visibility. Analyzes brand presence across platforms that AI models rely on for entity recognition and citation decisions. Produces a Brand Authority Score (0-100) with platform-specific recommendations.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "zubair-trabzada",
+  "install_path": ".claude/skills/geo-brand-mentions/SKILL.md",
+  "source": {
+    "repo": "zubair-trabzada/geo-seo-claude",
+    "url": "https://github.com/zubair-trabzada/geo-seo-claude/blob/main/skills/geo-brand-mentions/SKILL.md",
+    "path": "skills/geo-brand-mentions/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-19T06:52:03.566Z",
+    "stars": 10702,
+    "language": "Python",
+    "pushed_at": "2026-09-19T06:37:16Z",
+    "license": "MIT"
+  }
+}

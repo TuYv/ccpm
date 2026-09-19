@@ -1,0 +1,25 @@
+{
+  "id": "zubair-trabzada-geo-seo-claude-geo-compare",
+  "name": "geo-compare",
+  "description": "> Monthly delta tracking and progress reporting for GEO clients. Compares two GEO audits (baseline vs. current), calculates score improvements across all categories, tracks action item completion, and generates a \"here's your progress\" client report. Use when user says \"compare\", \"delta\", \"monthly report\", \"progress\", \"confronta\", \"progressi\", \"report mensile\", or when running a monthly client check-in.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "zubair-trabzada",
+  "install_path": ".claude/skills/geo-compare/SKILL.md",
+  "source": {
+    "repo": "zubair-trabzada/geo-seo-claude",
+    "url": "https://github.com/zubair-trabzada/geo-seo-claude/blob/main/skills/geo-compare/SKILL.md",
+    "path": "skills/geo-compare/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-19T06:52:03.925Z",
+    "stars": 10702,
+    "language": "Python",
+    "pushed_at": "2026-09-19T06:37:16Z",
+    "license": "MIT"
+  }
+}

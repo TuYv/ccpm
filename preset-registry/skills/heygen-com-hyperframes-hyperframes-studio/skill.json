@@ -1,0 +1,25 @@
+{
+  "id": "heygen-com-hyperframes-hyperframes-studio",
+  "name": "hyperframes-studio",
+  "description": "> Use when building or editing a HyperFrames project that people open in Studio: how the timeline should be laid out so it reads well (one caption track, one element kind per track, every scene a sub-composition) and where captions and key content may sit (safe zones). Don't use for how to perform an individual edit (split, trim, retime, volume, copy, swap): that is `creator-editing-recipes.md` in `/hyperframes-core`.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "heygen-com",
+  "install_path": ".claude/skills/hyperframes-studio/SKILL.md",
+  "source": {
+    "repo": "heygen-com/hyperframes",
+    "url": "https://github.com/heygen-com/hyperframes/blob/main/skills/hyperframes-studio/SKILL.md",
+    "path": "skills/hyperframes-studio/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-19T06:51:11.037Z",
+    "stars": 51467,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-19T06:49:56Z",
+    "license": "Apache-2.0"
+  }
+}
