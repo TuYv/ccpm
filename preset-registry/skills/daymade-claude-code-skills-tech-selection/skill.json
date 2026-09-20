@@ -1,0 +1,25 @@
+{
+  "id": "daymade-claude-code-skills-tech-selection",
+  "name": "tech-selection",
+  "description": ">- Gated checklist for choosing between technologies: library, framework, storage, data format, model, build-vs-buy, architecture. Runs before committing, not after. Candidates must clear a business-result anchor, prior-art inventory, an observed-behavior probe, and the maintenance, boring-tech, data-structure, operator-skill gates; READMEs are not evidence. Filters violators rather than ranking options: when two or more survive, STOP and return candidates plus trade-offs plus a recommendation, ",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/tech-selection/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-claude-code/tech-selection/SKILL.md",
+    "path": "daymade-claude-code/tech-selection/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T12:22:04.470Z",
+    "stars": 1410,
+    "language": "Python",
+    "pushed_at": "2026-09-20T11:11:31Z",
+    "license": "MIT"
+  }
+}

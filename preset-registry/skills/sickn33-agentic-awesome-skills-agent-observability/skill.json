@@ -1,0 +1,25 @@
+{
+  "id": "sickn33-agentic-awesome-skills-agent-observability",
+  "name": "agent-observability",
+  "description": "Instrument AI agents with tracing, token metrics, latency, and cost visibility. Use for reliability and debugging.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sickn33",
+  "install_path": ".claude/skills/agent-observability/SKILL.md",
+  "source": {
+    "repo": "sickn33/agentic-awesome-skills",
+    "url": "https://github.com/sickn33/agentic-awesome-skills/blob/main/plugins/agentic-awesome-skills-claude/skills/agent-observability/SKILL.md",
+    "path": "plugins/agentic-awesome-skills-claude/skills/agent-observability/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T11:36:01.899Z",
+    "stars": 46624,
+    "language": "Python",
+    "pushed_at": "2026-09-20T11:08:35Z",
+    "license": "MIT"
+  }
+}

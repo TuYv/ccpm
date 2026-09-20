@@ -1,0 +1,25 @@
+{
+  "id": "storybloq-storybloq-story",
+  "name": "story",
+  "description": "Track tickets, issues, and progress for your project. Load project context, manage sessions, guide setup.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Storybloq",
+  "install_path": ".claude/skills/story/SKILL.md",
+  "source": {
+    "repo": "Storybloq/storybloq",
+    "url": "https://github.com/Storybloq/storybloq/blob/main/plugins/storybloq/skills/story/SKILL.md",
+    "path": "plugins/storybloq/skills/story/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T12:24:53.573Z",
+    "stars": 753,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-20T08:54:09Z",
+    "license": null
+  }
+}
