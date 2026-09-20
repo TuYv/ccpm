@@ -1,0 +1,25 @@
+{
+  "id": "plugin87-ux-ui-agent-skills-token-build",
+  "name": "token-build",
+  "description": "Set up or run the token build pipeline — transform the DTCG tokens/*.json (source of truth) into platform artifacts (CSS variables, Tailwind @theme, JS/TS, iOS Asset Catalog, Android, Compose) with Style Dictionary / Tokens Studio / W3C DTCG export. Use when the user wants to generate platform theme files from tokens, wire token CI, or multi-platform token output.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "plugin87",
+  "install_path": ".claude/skills/token-build/SKILL.md",
+  "source": {
+    "repo": "plugin87/ux-ui-agent-skills",
+    "url": "https://github.com/plugin87/ux-ui-agent-skills/blob/main/.claude/skills/token-build/SKILL.md",
+    "path": ".claude/skills/token-build/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T19:49:39.044Z",
+    "stars": 1429,
+    "language": "JavaScript",
+    "pushed_at": "2026-09-16T02:33:41Z",
+    "license": "MIT"
+  }
+}

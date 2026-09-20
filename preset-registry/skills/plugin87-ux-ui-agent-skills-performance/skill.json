@@ -1,0 +1,25 @@
+{
+  "id": "plugin87-ux-ui-agent-skills-performance",
+  "name": "performance",
+  "description": "Optimize UI performance against Core Web Vitals — LCP, INP, CLS — with loading/code-split strategy, layout-shift prevention, and animation performance rules. Use when the user wants to improve speed, fix jank or layout shift, hit Web Vitals budgets, or make a UI feel fast on low-end devices.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "plugin87",
+  "install_path": ".claude/skills/performance/SKILL.md",
+  "source": {
+    "repo": "plugin87/ux-ui-agent-skills",
+    "url": "https://github.com/plugin87/ux-ui-agent-skills/blob/main/.claude/skills/performance/SKILL.md",
+    "path": ".claude/skills/performance/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T19:49:38.545Z",
+    "stars": 1429,
+    "language": "JavaScript",
+    "pushed_at": "2026-09-16T02:33:41Z",
+    "license": "MIT"
+  }
+}

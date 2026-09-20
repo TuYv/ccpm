@@ -1,0 +1,25 @@
+{
+  "id": "herdrdev-herdr-herdr-throwaway-repro",
+  "name": "herdr-throwaway-repro",
+  "description": "Create and control a disposable named Herdr session from inside an existing Herdr session. Use for isolated Herdr runtime, pane, terminal, process, API, persistence, or agent reproductions that should be driven through the CLI/API without touching the default session.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "herdrdev",
+  "install_path": ".claude/skills/herdr-throwaway-repro/SKILL.md",
+  "source": {
+    "repo": "herdrdev/herdr",
+    "url": "https://github.com/herdrdev/herdr/blob/master/.agents/skills/herdr-throwaway-repro/SKILL.md",
+    "path": ".agents/skills/herdr-throwaway-repro/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-09-20T19:02:41.204Z",
+    "stars": 39840,
+    "language": "Rust",
+    "pushed_at": "2026-09-20T18:01:59Z",
+    "license": "Apache-2.0"
+  }
+}

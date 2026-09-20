@@ -1,0 +1,25 @@
+{
+  "id": "getpaseo-paseo-paseo-handoff",
+  "name": "paseo-handoff",
+  "description": "Hand off the current task to another agent with full context. Use when the user says \"handoff\", \"hand off\", \"hand this to\", or wants to pass work to another agent.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "getpaseo",
+  "install_path": ".claude/skills/paseo-handoff/SKILL.md",
+  "source": {
+    "repo": "getpaseo/paseo",
+    "url": "https://github.com/getpaseo/paseo/blob/main/skills/paseo-handoff/SKILL.md",
+    "path": "skills/paseo-handoff/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T19:02:54.258Z",
+    "stars": 17866,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-18T09:49:39Z",
+    "license": null
+  }
+}

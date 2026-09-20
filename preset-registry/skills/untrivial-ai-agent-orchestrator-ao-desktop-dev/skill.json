@@ -1,0 +1,25 @@
+{
+  "id": "untrivial-ai-agent-orchestrator-ao-desktop-dev",
+  "name": "ao-desktop-dev",
+  "description": "Launch, restart, or troubleshoot the real AO Electron desktop app from this repository; run a checkout against isolated or real local AO data; combine PR branches for local UI review; and diagnose stale Electron processes, port conflicts, or preload bridge mismatches. Use whenever asked to run, open, show, or visually verify AO frontend changes in the actual desktop app rather than ao preview, dev:web, or mock data.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Untrivial-ai",
+  "install_path": ".claude/skills/ao-desktop-dev/SKILL.md",
+  "source": {
+    "repo": "Untrivial-ai/agent-orchestrator",
+    "url": "https://github.com/Untrivial-ai/agent-orchestrator/blob/main/.claude/skills/ao-desktop-dev/SKILL.md",
+    "path": ".claude/skills/ao-desktop-dev/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T19:02:56.103Z",
+    "stars": 12216,
+    "language": "Go",
+    "pushed_at": "2026-09-20T18:53:32Z",
+    "license": "Apache-2.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "everyinc-compound-engineering-plugin-default-skill",
+  "name": "default-skill",
+  "description": "Official Compound Engineering plugin for Claude Code, Codex, Cursor, and more",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "EveryInc",
+  "install_path": ".claude/skills/default-skill/SKILL.md",
+  "source": {
+    "repo": "EveryInc/compound-engineering-plugin",
+    "url": "https://github.com/EveryInc/compound-engineering-plugin/blob/main/tests/fixtures/custom-paths/skills/default-skill/SKILL.md",
+    "path": "tests/fixtures/custom-paths/skills/default-skill/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T19:52:29.072Z",
+    "stars": 25175,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-20T08:28:45Z",
+    "license": "MIT"
+  }
+}

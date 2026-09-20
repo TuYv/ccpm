@@ -1,0 +1,25 @@
+{
+  "id": "plugin87-ux-ui-agent-skills-governance",
+  "name": "governance",
+  "description": "Govern how the design system evolves — SemVer for tokens/components, the contribution workflow, deprecation policy, and change communication. Use when the user wants to add/promote/deprecate a component or token, decide a version bump, set up a contribution process, or keep the system from fragmenting.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "plugin87",
+  "install_path": ".claude/skills/governance/SKILL.md",
+  "source": {
+    "repo": "plugin87/ux-ui-agent-skills",
+    "url": "https://github.com/plugin87/ux-ui-agent-skills/blob/main/.claude/skills/governance/SKILL.md",
+    "path": ".claude/skills/governance/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T19:49:37.969Z",
+    "stars": 1429,
+    "language": "JavaScript",
+    "pushed_at": "2026-09-16T02:33:41Z",
+    "license": "MIT"
+  }
+}

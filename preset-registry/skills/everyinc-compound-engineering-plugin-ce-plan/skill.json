@@ -1,0 +1,25 @@
+{
+  "id": "everyinc-compound-engineering-plugin-ce-plan",
+  "name": "ce-plan",
+  "description": "Create structured plans for multi-step work, including software and non-software tasks. Use when asked to plan, break down implementation, plan from requirements, or deepen an existing plan; prefer ce-brainstorm for exploratory framing.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "EveryInc",
+  "install_path": ".claude/skills/ce-plan/SKILL.md",
+  "source": {
+    "repo": "EveryInc/compound-engineering-plugin",
+    "url": "https://github.com/EveryInc/compound-engineering-plugin/blob/main/skills/ce-plan/SKILL.md",
+    "path": "skills/ce-plan/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T19:52:24.738Z",
+    "stars": 25175,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-20T08:28:45Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "plugin87-ux-ui-agent-skills-figma-integration",
+  "name": "figma-integration",
+  "description": "Keep Figma and code in sync — map the 3-tier DTCG tokens to Figma Variables (collections + modes), sync in either direction, use the Figma MCP when connected, and verify component parity (variants/states). Use when the user wants to push tokens/components to Figma, pull a design into code, set up token↔Variable sync, or check design-code drift.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "plugin87",
+  "install_path": ".claude/skills/figma-integration/SKILL.md",
+  "source": {
+    "repo": "plugin87/ux-ui-agent-skills",
+    "url": "https://github.com/plugin87/ux-ui-agent-skills/blob/main/.claude/skills/figma-integration/SKILL.md",
+    "path": ".claude/skills/figma-integration/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T19:49:37.785Z",
+    "stars": 1429,
+    "language": "JavaScript",
+    "pushed_at": "2026-09-16T02:33:41Z",
+    "license": "MIT"
+  }
+}

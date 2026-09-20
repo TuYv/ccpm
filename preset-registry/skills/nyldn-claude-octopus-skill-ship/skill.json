@@ -1,0 +1,25 @@
+{
+  "id": "nyldn-claude-octopus-skill-ship",
+  "name": "skill-ship",
+  "description": "Package and finalize completed work for delivery — use when a feature is done and ready to ship",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "nyldn",
+  "install_path": ".claude/skills/skill-ship/SKILL.md",
+  "source": {
+    "repo": "nyldn/claude-octopus",
+    "url": "https://github.com/nyldn/claude-octopus/blob/main/.claude/skills/skill-ship/SKILL.md",
+    "path": ".claude/skills/skill-ship/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T19:52:39.449Z",
+    "stars": 4090,
+    "language": "Shell",
+    "pushed_at": "2026-09-20T10:00:37Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "herdrdev-herdr-triage",
+  "name": "triage",
+  "description": "Triage open herdr GitHub issues into a concise decision-first Markdown table. Use when the user says \"triage\", asks to triage open issues, asks which issues need attention, or wants issue priority/recommendation lights for herdr.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "herdrdev",
+  "install_path": ".claude/skills/triage/SKILL.md",
+  "source": {
+    "repo": "herdrdev/herdr",
+    "url": "https://github.com/herdrdev/herdr/blob/master/.agents/skills/triage/SKILL.md",
+    "path": ".agents/skills/triage/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-09-20T19:02:41.378Z",
+    "stars": 39840,
+    "language": "Rust",
+    "pushed_at": "2026-09-20T18:01:59Z",
+    "license": "Apache-2.0"
+  }
+}

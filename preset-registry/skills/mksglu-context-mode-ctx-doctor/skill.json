@@ -1,0 +1,25 @@
+{
+  "id": "mksglu-context-mode-ctx-doctor",
+  "name": "ctx-doctor",
+  "description": "| Run context-mode diagnostics. Checks runtimes, hooks, FTS5, plugin registration, npm and marketplace versions. Trigger: /context-mode:ctx-doctor",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mksglu",
+  "install_path": ".claude/skills/ctx-doctor/SKILL.md",
+  "source": {
+    "repo": "mksglu/context-mode",
+    "url": "https://github.com/mksglu/context-mode/blob/main/skills/ctx-doctor/SKILL.md",
+    "path": "skills/ctx-doctor/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T19:53:28.555Z",
+    "stars": 23761,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-20T12:05:59Z",
+    "license": null
+  }
+}

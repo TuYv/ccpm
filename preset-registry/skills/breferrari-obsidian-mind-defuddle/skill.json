@@ -1,0 +1,25 @@
+{
+  "id": "breferrari-obsidian-mind-defuddle",
+  "name": "defuddle",
+  "description": "Extract clean markdown content from web pages using Defuddle CLI, removing clutter and navigation to save tokens. Use instead of WebFetch when the user provides a URL to read or analyze, for online documentation, articles, blog posts, or any standard web page. Do NOT use for URLs ending in .md — those are already markdown, use WebFetch directly.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "breferrari",
+  "install_path": ".claude/skills/defuddle/SKILL.md",
+  "source": {
+    "repo": "breferrari/obsidian-mind",
+    "url": "https://github.com/breferrari/obsidian-mind/blob/main/.claude/skills/defuddle/SKILL.md",
+    "path": ".claude/skills/defuddle/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T19:53:39.439Z",
+    "stars": 4653,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-02T13:32:14Z",
+    "license": "MIT"
+  }
+}

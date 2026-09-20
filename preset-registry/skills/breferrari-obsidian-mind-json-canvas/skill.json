@@ -1,0 +1,25 @@
+{
+  "id": "breferrari-obsidian-mind-json-canvas",
+  "name": "json-canvas",
+  "description": "Create and edit JSON Canvas files (.canvas) with nodes, edges, groups, and connections. Use when working with .canvas files, creating visual canvases, mind maps, flowcharts, or when the user mentions Canvas files in Obsidian.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "breferrari",
+  "install_path": ".claude/skills/json-canvas/SKILL.md",
+  "source": {
+    "repo": "breferrari/obsidian-mind",
+    "url": "https://github.com/breferrari/obsidian-mind/blob/main/.claude/skills/json-canvas/SKILL.md",
+    "path": ".claude/skills/json-canvas/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T19:53:39.850Z",
+    "stars": 4653,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-02T13:32:14Z",
+    "license": "MIT"
+  }
+}

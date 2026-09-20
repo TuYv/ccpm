@@ -1,0 +1,25 @@
+{
+  "id": "plugin87-ux-ui-agent-skills-prototype",
+  "name": "prototype",
+  "description": "Move an idea up the fidelity ladder (content-first → wireframe → low-fi → high-fi → code) with a validation plan at each level, plus user-journey mapping and usability-testing scripts. Use when the user wants to prototype, wireframe, map a user flow, or plan/run usability testing.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "plugin87",
+  "install_path": ".claude/skills/prototype/SKILL.md",
+  "source": {
+    "repo": "plugin87/ux-ui-agent-skills",
+    "url": "https://github.com/plugin87/ux-ui-agent-skills/blob/main/.claude/skills/prototype/SKILL.md",
+    "path": ".claude/skills/prototype/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T19:49:38.712Z",
+    "stars": 1429,
+    "language": "JavaScript",
+    "pushed_at": "2026-09-16T02:33:41Z",
+    "license": "MIT"
+  }
+}

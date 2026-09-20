@@ -1,0 +1,25 @@
+{
+  "id": "nyldn-claude-octopus-skill-doc-delivery",
+  "name": "skill-doc-delivery",
+  "description": "Convert markdown to DOCX, PPTX, XLSX, PDF office documents — use when you need exportable deliverables",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "nyldn",
+  "install_path": ".claude/skills/skill-doc-delivery/SKILL.md",
+  "source": {
+    "repo": "nyldn/claude-octopus",
+    "url": "https://github.com/nyldn/claude-octopus/blob/main/.claude/skills/skill-doc-delivery/SKILL.md",
+    "path": ".claude/skills/skill-doc-delivery/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T19:52:34.986Z",
+    "stars": 4090,
+    "language": "Shell",
+    "pushed_at": "2026-09-20T10:00:37Z",
+    "license": "MIT"
+  }
+}

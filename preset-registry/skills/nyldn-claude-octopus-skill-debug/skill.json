@@ -1,0 +1,25 @@
+{
+  "id": "nyldn-claude-octopus-skill-debug",
+  "name": "skill-debug",
+  "description": "Debug a reproducible symptom with a bounded feedback loop and original-scenario verification",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "nyldn",
+  "install_path": ".claude/skills/skill-debug/SKILL.md",
+  "source": {
+    "repo": "nyldn/claude-octopus",
+    "url": "https://github.com/nyldn/claude-octopus/blob/main/.claude/skills/skill-debug/SKILL.md",
+    "path": ".claude/skills/skill-debug/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T19:52:34.011Z",
+    "stars": 4090,
+    "language": "Shell",
+    "pushed_at": "2026-09-20T10:00:37Z",
+    "license": "MIT"
+  }
+}

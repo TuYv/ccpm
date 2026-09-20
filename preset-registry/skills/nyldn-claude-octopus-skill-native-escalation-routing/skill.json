@@ -1,0 +1,25 @@
+{
+  "id": "nyldn-claude-octopus-skill-native-escalation-routing",
+  "name": "skill-native-escalation-routing",
+  "description": "Use when choosing native or multi-LLM handling for init, review, or security requests",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "nyldn",
+  "install_path": ".claude/skills/skill-native-escalation-routing/SKILL.md",
+  "source": {
+    "repo": "nyldn/claude-octopus",
+    "url": "https://github.com/nyldn/claude-octopus/blob/main/.claude/skills/skill-native-escalation-routing/SKILL.md",
+    "path": ".claude/skills/skill-native-escalation-routing/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T19:52:37.336Z",
+    "stars": 4090,
+    "language": "Shell",
+    "pushed_at": "2026-09-20T10:00:37Z",
+    "license": "MIT"
+  }
+}

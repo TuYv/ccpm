@@ -1,0 +1,25 @@
+{
+  "id": "nyldn-claude-octopus-skill-copilot-provider",
+  "name": "skill-copilot-provider",
+  "description": "GitHub Copilot CLI as optional zero-cost provider via copilot -p programmatic mode",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "2.0.0",
+  "author": "nyldn",
+  "install_path": ".claude/skills/skill-copilot-provider/SKILL.md",
+  "source": {
+    "repo": "nyldn/claude-octopus",
+    "url": "https://github.com/nyldn/claude-octopus/blob/main/.claude/skills/skill-copilot-provider/SKILL.md",
+    "path": ".claude/skills/skill-copilot-provider/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T19:52:33.293Z",
+    "stars": 4090,
+    "language": "Shell",
+    "pushed_at": "2026-09-20T10:00:37Z",
+    "license": "MIT"
+  }
+}

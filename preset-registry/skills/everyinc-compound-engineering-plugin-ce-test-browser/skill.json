@@ -1,0 +1,25 @@
+{
+  "id": "everyinc-compound-engineering-plugin-ce-test-browser",
+  "name": "ce-test-browser",
+  "description": "Run browser tests for pages affected by the current branch or PR. Use when asked to run or check browser tests for the current change.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "EveryInc",
+  "install_path": ".claude/skills/ce-test-browser/SKILL.md",
+  "source": {
+    "repo": "EveryInc/compound-engineering-plugin",
+    "url": "https://github.com/EveryInc/compound-engineering-plugin/blob/main/skills/ce-test-browser/SKILL.md",
+    "path": "skills/ce-test-browser/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T19:52:27.636Z",
+    "stars": 25175,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-20T08:28:45Z",
+    "license": "MIT"
+  }
+}

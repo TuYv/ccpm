@@ -1,0 +1,25 @@
+{
+  "id": "herdrdev-herdr-writing-commit-messages",
+  "name": "writing-commit-messages",
+  "description": ">- Writes Git commit messages. Activates when the user asks to write a commit message, draft a commit message, or similar.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "herdrdev",
+  "install_path": ".claude/skills/writing-commit-messages/SKILL.md",
+  "source": {
+    "repo": "herdrdev/herdr",
+    "url": "https://github.com/herdrdev/herdr/blob/master/vendor/libghostty-vt/.agents/skills/writing-commit-messages/SKILL.md",
+    "path": "vendor/libghostty-vt/.agents/skills/writing-commit-messages/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-09-20T19:02:41.730Z",
+    "stars": 39840,
+    "language": "Rust",
+    "pushed_at": "2026-09-20T18:01:59Z",
+    "license": "Apache-2.0"
+  }
+}

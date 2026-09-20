@@ -1,0 +1,25 @@
+{
+  "id": "nyldn-claude-octopus-skill-prd",
+  "name": "skill-prd",
+  "description": "Write an AI-optimized PRD using multi-AI orchestration — use when scoping a new feature or product",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "nyldn",
+  "install_path": ".claude/skills/skill-prd/SKILL.md",
+  "source": {
+    "repo": "nyldn/claude-octopus",
+    "url": "https://github.com/nyldn/claude-octopus/blob/main/.claude/skills/skill-prd/SKILL.md",
+    "path": ".claude/skills/skill-prd/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T19:52:37.682Z",
+    "stars": 4090,
+    "language": "Shell",
+    "pushed_at": "2026-09-20T10:00:37Z",
+    "license": "MIT"
+  }
+}

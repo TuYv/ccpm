@@ -1,0 +1,25 @@
+{
+  "id": "everyinc-compound-engineering-plugin-ce-promote",
+  "name": "ce-promote",
+  "description": "Draft launch or promotion copy for a shipped feature.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "EveryInc",
+  "install_path": ".claude/skills/ce-promote/SKILL.md",
+  "source": {
+    "repo": "EveryInc/compound-engineering-plugin",
+    "url": "https://github.com/EveryInc/compound-engineering-plugin/blob/main/skills/ce-promote/SKILL.md",
+    "path": "skills/ce-promote/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T19:52:25.777Z",
+    "stars": 25175,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-20T08:28:45Z",
+    "license": "MIT"
+  }
+}

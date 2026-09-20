@@ -1,0 +1,25 @@
+{
+  "id": "nyldn-claude-octopus-skill-iterative-loop",
+  "name": "skill-iterative-loop",
+  "description": "Run tasks in a loop until goals are met — use for iterative refinement, polling, or convergence",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "nyldn",
+  "install_path": ".claude/skills/skill-iterative-loop/SKILL.md",
+  "source": {
+    "repo": "nyldn/claude-octopus",
+    "url": "https://github.com/nyldn/claude-octopus/blob/main/.claude/skills/skill-iterative-loop/SKILL.md",
+    "path": ".claude/skills/skill-iterative-loop/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T19:52:36.700Z",
+    "stars": 4090,
+    "language": "Shell",
+    "pushed_at": "2026-09-20T10:00:37Z",
+    "license": "MIT"
+  }
+}

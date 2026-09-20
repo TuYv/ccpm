@@ -1,0 +1,25 @@
+{
+  "id": "getpaseo-paseo-paseo-committee",
+  "name": "paseo-committee",
+  "description": "Form a committee of two high-reasoning agents to step back, do root cause analysis, and produce a plan. Use when stuck, looping, tunnel-visioning, or facing a hard planning problem.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "getpaseo",
+  "install_path": ".claude/skills/paseo-committee/SKILL.md",
+  "source": {
+    "repo": "getpaseo/paseo",
+    "url": "https://github.com/getpaseo/paseo/blob/main/skills/paseo-committee/SKILL.md",
+    "path": "skills/paseo-committee/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T19:02:54.054Z",
+    "stars": 17866,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-18T09:49:39Z",
+    "license": null
+  }
+}

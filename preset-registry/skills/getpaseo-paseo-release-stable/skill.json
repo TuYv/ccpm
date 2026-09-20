@@ -1,0 +1,25 @@
+{
+  "id": "getpaseo-paseo-release-stable",
+  "name": "release-stable",
+  "description": "Cut a stable release of Paseo (fresh patch or minor, or promote from beta). Use when the user says \"release stable\", \"ship stable\", \"promote\", \"release:patch\", \"release:minor\", \"release:promote\", or \"/release-stable\".",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "getpaseo",
+  "install_path": ".claude/skills/release-stable/SKILL.md",
+  "source": {
+    "repo": "getpaseo/paseo",
+    "url": "https://github.com/getpaseo/paseo/blob/main/.agents/skills/release-stable/SKILL.md",
+    "path": ".agents/skills/release-stable/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T19:02:53.663Z",
+    "stars": 17866,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-18T09:49:39Z",
+    "license": null
+  }
+}

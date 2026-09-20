@@ -1,0 +1,25 @@
+{
+  "id": "nyldn-claude-octopus-skill-review-response",
+  "name": "skill-review-response",
+  "description": "Use when a reviewer, CI bot, or another AI leaves feedback to address",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "nyldn",
+  "install_path": ".claude/skills/skill-review-response/SKILL.md",
+  "source": {
+    "repo": "nyldn/claude-octopus",
+    "url": "https://github.com/nyldn/claude-octopus/blob/main/.claude/skills/skill-review-response/SKILL.md",
+    "path": ".claude/skills/skill-review-response/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T19:52:38.681Z",
+    "stars": 4090,
+    "language": "Shell",
+    "pushed_at": "2026-09-20T10:00:37Z",
+    "license": "MIT"
+  }
+}

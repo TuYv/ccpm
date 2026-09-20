@@ -1,0 +1,25 @@
+{
+  "id": "mksglu-context-mode-ctx-upgrade",
+  "name": "ctx-upgrade",
+  "description": "| Update context-mode from GitHub and fix hooks/settings. Pulls latest, builds, installs, updates npm global, configures hooks. Trigger: /context-mode:ctx-upgrade",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mksglu",
+  "install_path": ".claude/skills/ctx-upgrade/SKILL.md",
+  "source": {
+    "repo": "mksglu/context-mode",
+    "url": "https://github.com/mksglu/context-mode/blob/main/skills/ctx-upgrade/SKILL.md",
+    "path": "skills/ctx-upgrade/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T19:53:29.968Z",
+    "stars": 23761,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-20T12:05:59Z",
+    "license": null
+  }
+}

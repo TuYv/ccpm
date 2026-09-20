@@ -1,0 +1,25 @@
+{
+  "id": "everyinc-compound-engineering-plugin-ce-brainstorm",
+  "name": "ce-brainstorm",
+  "description": "Explore vague or ambitious ideas into a right-sized requirements-only unified plan. Use when the user wants to brainstorm or scope what to build. Not for executing already-specified work. Use ce-pov for a verdict on adopting a named external technology.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "EveryInc",
+  "install_path": ".claude/skills/ce-brainstorm/SKILL.md",
+  "source": {
+    "repo": "EveryInc/compound-engineering-plugin",
+    "url": "https://github.com/EveryInc/compound-engineering-plugin/blob/main/skills/ce-brainstorm/SKILL.md",
+    "path": "skills/ce-brainstorm/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T19:52:21.941Z",
+    "stars": 25175,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-20T08:28:45Z",
+    "license": "MIT"
+  }
+}

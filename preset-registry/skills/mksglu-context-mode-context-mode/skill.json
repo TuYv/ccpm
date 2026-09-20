@@ -1,0 +1,25 @@
+{
+  "id": "mksglu-context-mode-context-mode",
+  "name": "context-mode",
+  "description": "| Use context-mode tools (ctx_execute, ctx_execute_file) instead of Bash/cat when processing large outputs. Triggers: \"analyze logs\", \"summarize output\", \"process data\", \"parse JSON\", \"filter results\", \"extract errors\", \"check build output\", \"analyze dependencies\", \"process API response\", \"large file analysis\", \"page snapshot\", \"browser snapshot\", \"DOM structure\", \"inspect page\", \"accessibility tree\", \"Playwright snapshot\", \"run tests\", \"test output\", \"coverage report\", \"git log\", \"recent commit",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mksglu",
+  "install_path": ".claude/skills/context-mode/SKILL.md",
+  "source": {
+    "repo": "mksglu/context-mode",
+    "url": "https://github.com/mksglu/context-mode/blob/main/skills/context-mode/SKILL.md",
+    "path": "skills/context-mode/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T19:53:28.371Z",
+    "stars": 23761,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-20T12:05:59Z",
+    "license": null
+  }
+}

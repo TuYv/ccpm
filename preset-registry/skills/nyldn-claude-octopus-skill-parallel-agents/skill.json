@@ -1,0 +1,25 @@
+{
+  "id": "nyldn-claude-octopus-skill-parallel-agents",
+  "name": "skill-parallel-agents",
+  "description": "Decompose large tasks across parallel agents — use for migrations, multi-file refactors, or batch work",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "nyldn",
+  "install_path": ".claude/skills/skill-parallel-agents/SKILL.md",
+  "source": {
+    "repo": "nyldn/claude-octopus",
+    "url": "https://github.com/nyldn/claude-octopus/blob/main/.claude/skills/skill-parallel-agents/SKILL.md",
+    "path": ".claude/skills/skill-parallel-agents/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T19:52:37.519Z",
+    "stars": 4090,
+    "language": "Shell",
+    "pushed_at": "2026-09-20T10:00:37Z",
+    "license": "MIT"
+  }
+}

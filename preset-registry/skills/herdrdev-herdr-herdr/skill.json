@@ -1,0 +1,25 @@
+{
+  "id": "herdrdev-herdr-herdr",
+  "name": "herdr",
+  "description": "Control Herdr, a terminal multiplexer for coding agents. Use only when the user explicitly mentions Herdr or asks to use Herdr to inspect or control panes, tabs, workspaces, commands, or another agent. Do not use merely because a task could benefit from a background terminal, delegation, or parallel work. Requires HERDR_ENV=1.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "herdrdev",
+  "install_path": ".claude/skills/herdr/SKILL.md",
+  "source": {
+    "repo": "herdrdev/herdr",
+    "url": "https://github.com/herdrdev/herdr/blob/master/skills/herdr/SKILL.md",
+    "path": "skills/herdr/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-09-20T19:02:41.546Z",
+    "stars": 39840,
+    "language": "Rust",
+    "pushed_at": "2026-09-20T18:01:59Z",
+    "license": "Apache-2.0"
+  }
+}

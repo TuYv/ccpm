@@ -1,0 +1,25 @@
+{
+  "id": "everyinc-compound-engineering-plugin-ce-explain",
+  "name": "ce-explain",
+  "description": "Explain how and why something has its current shape, or what happened over a window of work, grounded in evidence. Use when the user asks for an explanation. Use ce-pov for a judgment or recommendation.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "EveryInc",
+  "install_path": ".claude/skills/ce-explain/SKILL.md",
+  "source": {
+    "repo": "EveryInc/compound-engineering-plugin",
+    "url": "https://github.com/EveryInc/compound-engineering-plugin/blob/main/skills/ce-explain/SKILL.md",
+    "path": "skills/ce-explain/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T19:52:23.842Z",
+    "stars": 25175,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-20T08:28:45Z",
+    "license": "MIT"
+  }
+}

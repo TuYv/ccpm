@@ -1,0 +1,25 @@
+{
+  "id": "nyldn-claude-octopus-skill-design-lineage",
+  "name": "skill-design-lineage",
+  "description": "Persist design documents with branch tracking, revision chains, and cross-session discovery",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "nyldn",
+  "install_path": ".claude/skills/skill-design-lineage/SKILL.md",
+  "source": {
+    "repo": "nyldn/claude-octopus",
+    "url": "https://github.com/nyldn/claude-octopus/blob/main/.claude/skills/skill-design-lineage/SKILL.md",
+    "path": ".claude/skills/skill-design-lineage/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T19:52:34.795Z",
+    "stars": 4090,
+    "language": "Shell",
+    "pushed_at": "2026-09-20T10:00:37Z",
+    "license": "MIT"
+  }
+}

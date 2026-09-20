@@ -1,0 +1,25 @@
+{
+  "id": "mksglu-context-mode-ctx-insight",
+  "name": "ctx-insight",
+  "description": "| Open the context-mode Insight dashboard in your default browser. Insight is the hosted analytics layer for AI-assisted engineering teams — per-engineer productive rate, retry waste, blocker detection, role-narrowed views. Trigger: /context-mode:ctx-insight",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mksglu",
+  "install_path": ".claude/skills/ctx-insight/SKILL.md",
+  "source": {
+    "repo": "mksglu/context-mode",
+    "url": "https://github.com/mksglu/context-mode/blob/main/skills/ctx-insight/SKILL.md",
+    "path": "skills/ctx-insight/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T19:53:28.919Z",
+    "stars": 23761,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-20T12:05:59Z",
+    "license": null
+  }
+}

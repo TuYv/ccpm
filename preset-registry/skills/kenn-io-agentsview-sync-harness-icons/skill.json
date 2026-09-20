@@ -1,0 +1,25 @@
+{
+  "id": "kenn-io-agentsview-sync-harness-icons",
+  "name": "sync-harness-icons",
+  "description": "Use when a person asks to audit or update the harness marks after new agent parsers were added, when the landing-page agent grid or the kit-ui HarnessIcon set is missing a newly supported agent, or when someone invokes /sync-harness-icons. Human-invoked only.",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "kenn-io",
+  "install_path": ".claude/skills/sync-harness-icons/SKILL.md",
+  "source": {
+    "repo": "kenn-io/agentsview",
+    "url": "https://github.com/kenn-io/agentsview/blob/main/.agents/skills/sync-harness-icons/SKILL.md",
+    "path": ".agents/skills/sync-harness-icons/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T19:54:29.754Z",
+    "stars": 5954,
+    "language": "Go",
+    "pushed_at": "2026-09-20T16:56:07Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "failproofai-failproofai-skill",
+  "name": "failproofai-sdk",
+  "description": "|- The way to make an AI agent report what it did to Failproof AI — planning what to record, writing the instrumentation, and proving the events land. Reach for it on vague phrasing too: \"add observability to my agent\", \"why isn't my agent showing up?\"",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "FailproofAI",
+  "install_path": ".claude/skills/skill/SKILL.md",
+  "source": {
+    "repo": "FailproofAI/failproofai",
+    "url": "https://github.com/FailproofAI/failproofai/blob/main/sdk/python/skill/SKILL.md",
+    "path": "sdk/python/skill/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T19:54:30.956Z",
+    "stars": 4633,
+    "language": "MDX",
+    "pushed_at": "2026-09-17T10:11:58Z",
+    "license": null
+  }
+}

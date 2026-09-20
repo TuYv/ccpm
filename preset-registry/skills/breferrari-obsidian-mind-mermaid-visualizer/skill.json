@@ -1,0 +1,25 @@
+{
+  "id": "breferrari-obsidian-mind-mermaid-visualizer",
+  "name": "mermaid-visualizer",
+  "description": "Transform text content into professional Mermaid diagrams for presentations and documentation. Use when users ask to visualize concepts, create flowcharts, or make diagrams from text. Supports process flows, system architectures, comparisons, mindmaps, and more with built-in syntax error prevention.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "breferrari",
+  "install_path": ".claude/skills/mermaid-visualizer/SKILL.md",
+  "source": {
+    "repo": "breferrari/obsidian-mind",
+    "url": "https://github.com/breferrari/obsidian-mind/blob/main/.claude/skills/mermaid-visualizer/SKILL.md",
+    "path": ".claude/skills/mermaid-visualizer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T19:53:40.112Z",
+    "stars": 4653,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-02T13:32:14Z",
+    "license": "MIT"
+  }
+}

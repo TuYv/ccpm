@@ -1,0 +1,25 @@
+{
+  "id": "nyldn-claude-octopus-flow-discover",
+  "name": "flow-discover",
+  "description": "Multi-AI research using available external providers (Double Diamond Discover phase) - Questions about best practices, patterns, or ecosystem research",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "nyldn",
+  "install_path": ".claude/skills/flow-discover/SKILL.md",
+  "source": {
+    "repo": "nyldn/claude-octopus",
+    "url": "https://github.com/nyldn/claude-octopus/blob/main/.claude/skills/flow-discover/SKILL.md",
+    "path": ".claude/skills/flow-discover/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T19:52:31.408Z",
+    "stars": 4090,
+    "language": "Shell",
+    "pushed_at": "2026-09-20T10:00:37Z",
+    "license": "MIT"
+  }
+}

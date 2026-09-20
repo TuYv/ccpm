@@ -1,0 +1,25 @@
+{
+  "id": "nyldn-claude-octopus-skill-authoring",
+  "name": "skill-authoring",
+  "description": "Principles for writing skills that behave the same way every run — use when adding, editing, or reviewing a skill in this plugin",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "nyldn",
+  "install_path": ".claude/skills/skill-authoring/SKILL.md",
+  "source": {
+    "repo": "nyldn/claude-octopus",
+    "url": "https://github.com/nyldn/claude-octopus/blob/main/.claude/skills/skill-authoring/SKILL.md",
+    "path": ".claude/skills/skill-authoring/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T19:52:32.567Z",
+    "stars": 4090,
+    "language": "Shell",
+    "pushed_at": "2026-09-20T10:00:37Z",
+    "license": "MIT"
+  }
+}

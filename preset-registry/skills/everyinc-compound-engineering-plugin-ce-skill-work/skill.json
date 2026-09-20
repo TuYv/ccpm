@@ -1,0 +1,25 @@
+{
+  "id": "everyinc-compound-engineering-plugin-ce-skill-work",
+  "name": "ce-skill-work",
+  "description": "Applies this repository's skill-authoring standard as a procedure. Use for any change to, or judgment about, a file under skills/** — a SKILL.md, a reference, a persona prompt, a bundled script's instructions: creating a skill, editing one, reviewing a skill change, or acting on review feedback (human or bot) about one. Not for src/, tests/, or scripts/ code.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "EveryInc",
+  "install_path": ".claude/skills/ce-skill-work/SKILL.md",
+  "source": {
+    "repo": "EveryInc/compound-engineering-plugin",
+    "url": "https://github.com/EveryInc/compound-engineering-plugin/blob/main/.agents/skills/ce-skill-work/SKILL.md",
+    "path": ".agents/skills/ce-skill-work/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T19:52:21.371Z",
+    "stars": 25175,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-20T08:28:45Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "mksglu-context-mode-ctx-index",
+  "name": "ctx-index",
+  "description": "| Index a local file or directory into context-mode's persistent FTS5 knowledge base so future ctx_search calls can retrieve focused snippets without rereading raw files. Trigger: /context-mode:ctx-index",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mksglu",
+  "install_path": ".claude/skills/ctx-index/SKILL.md",
+  "source": {
+    "repo": "mksglu/context-mode",
+    "url": "https://github.com/mksglu/context-mode/blob/main/skills/ctx-index/SKILL.md",
+    "path": "skills/ctx-index/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T19:53:28.737Z",
+    "stars": 23761,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-20T12:05:59Z",
+    "license": null
+  }
+}

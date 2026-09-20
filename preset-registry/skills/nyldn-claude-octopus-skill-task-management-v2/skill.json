@@ -1,0 +1,25 @@
+{
+  "id": "nyldn-claude-octopus-skill-task-management-v2",
+  "name": "skill-task-management",
+  "description": "Manage tasks with Claude Code native tools — use to track TODOs, delegate work, and monitor progress",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "nyldn",
+  "install_path": ".claude/skills/skill-task-management-v2/SKILL.md",
+  "source": {
+    "repo": "nyldn/claude-octopus",
+    "url": "https://github.com/nyldn/claude-octopus/blob/main/.claude/skills/skill-task-management-v2/SKILL.md",
+    "path": ".claude/skills/skill-task-management-v2/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T19:52:40.465Z",
+    "stars": 4090,
+    "language": "Shell",
+    "pushed_at": "2026-09-20T10:00:37Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "untrivial-ai-agent-orchestrator-bug-triage",
+  "name": "bug-triage",
+  "description": "Triage bugs reported in chat/issues, search for duplicates, file or update GitHub issues with full context, and push fix PRs.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Untrivial-ai",
+  "install_path": ".claude/skills/bug-triage/SKILL.md",
+  "source": {
+    "repo": "Untrivial-ai/agent-orchestrator",
+    "url": "https://github.com/Untrivial-ai/agent-orchestrator/blob/main/.claude/skills/bug-triage/SKILL.md",
+    "path": ".claude/skills/bug-triage/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T19:02:56.275Z",
+    "stars": 12216,
+    "language": "Go",
+    "pushed_at": "2026-09-20T18:53:32Z",
+    "license": "Apache-2.0"
+  }
+}

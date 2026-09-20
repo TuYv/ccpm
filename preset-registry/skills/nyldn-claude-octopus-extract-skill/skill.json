@@ -1,0 +1,25 @@
+{
+  "id": "nyldn-claude-octopus-extract-skill",
+  "name": "skill-extract",
+  "description": "Reverse-engineer design systems, tokens, and components from live products or screenshots",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "nyldn",
+  "install_path": ".claude/skills/extract-skill/SKILL.md",
+  "source": {
+    "repo": "nyldn/claude-octopus",
+    "url": "https://github.com/nyldn/claude-octopus/blob/main/.claude/skills/extract-skill/SKILL.md",
+    "path": ".claude/skills/extract-skill/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T19:52:30.604Z",
+    "stars": 4090,
+    "language": "Shell",
+    "pushed_at": "2026-09-20T10:00:37Z",
+    "license": "MIT"
+  }
+}

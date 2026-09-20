@@ -1,0 +1,25 @@
+{
+  "id": "nyldn-claude-octopus-skill-doc-sync",
+  "name": "skill-doc-sync",
+  "description": "Post-ship doc sync across project markdown. Use when: sync docs, update docs, document changes, release notes.",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "nyldn",
+  "install_path": ".claude/skills/skill-doc-sync/SKILL.md",
+  "source": {
+    "repo": "nyldn/claude-octopus",
+    "url": "https://github.com/nyldn/claude-octopus/blob/main/.claude/skills/skill-doc-sync/SKILL.md",
+    "path": ".claude/skills/skill-doc-sync/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T19:52:35.159Z",
+    "stars": 4090,
+    "language": "Shell",
+    "pushed_at": "2026-09-20T10:00:37Z",
+    "license": "MIT"
+  }
+}

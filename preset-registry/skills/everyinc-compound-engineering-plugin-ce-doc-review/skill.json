@@ -1,0 +1,25 @@
+{
+  "id": "everyinc-compound-engineering-plugin-ce-doc-review",
+  "name": "ce-doc-review",
+  "description": "Review requirements, plans, or specs with role-specific lenses. Use when the user wants to improve an existing planning document.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "EveryInc",
+  "install_path": ".claude/skills/ce-doc-review/SKILL.md",
+  "source": {
+    "repo": "EveryInc/compound-engineering-plugin",
+    "url": "https://github.com/EveryInc/compound-engineering-plugin/blob/main/skills/ce-doc-review/SKILL.md",
+    "path": "skills/ce-doc-review/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T19:52:23.438Z",
+    "stars": 25175,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-20T08:28:45Z",
+    "license": "MIT"
+  }
+}

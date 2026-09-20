@@ -1,0 +1,25 @@
+{
+  "id": "herdrdev-herdr-herdr-pre-release-audit",
+  "name": "herdr-pre-release-audit",
+  "description": "Audit herdr release readiness by comparing commits since the base release against next-release changelog and docs. Use when asked to run or apply the repo's pre-release audit, validate docs/next before release, inspect issue refs that release CI will close, or finalize release docs for herdr.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "herdrdev",
+  "install_path": ".claude/skills/herdr-pre-release-audit/SKILL.md",
+  "source": {
+    "repo": "herdrdev/herdr",
+    "url": "https://github.com/herdrdev/herdr/blob/master/.agents/skills/herdr-pre-release-audit/SKILL.md",
+    "path": ".agents/skills/herdr-pre-release-audit/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-09-20T19:02:40.970Z",
+    "stars": 39840,
+    "language": "Rust",
+    "pushed_at": "2026-09-20T18:01:59Z",
+    "license": "Apache-2.0"
+  }
+}

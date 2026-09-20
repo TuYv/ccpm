@@ -1,0 +1,25 @@
+{
+  "id": "breferrari-obsidian-mind-excalidraw-diagram",
+  "name": "excalidraw-diagram",
+  "description": "Generate Excalidraw diagrams from text content. Supports three output modes - Obsidian (.md), Standard (.excalidraw), and Animated (.excalidraw with animation order). Triggers on \"Excalidraw\", \"diagram\", \"standard excalidraw\", \"animate\".",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "breferrari",
+  "install_path": ".claude/skills/excalidraw-diagram/SKILL.md",
+  "source": {
+    "repo": "breferrari/obsidian-mind",
+    "url": "https://github.com/breferrari/obsidian-mind/blob/main/.claude/skills/excalidraw-diagram/SKILL.md",
+    "path": ".claude/skills/excalidraw-diagram/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T19:53:39.671Z",
+    "stars": 4653,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-02T13:32:14Z",
+    "license": "MIT"
+  }
+}

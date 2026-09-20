@@ -1,0 +1,25 @@
+{
+  "id": "builderz-labs-mission-control",
+  "name": "mission-control",
+  "description": "Interact with Mission Control — AI agent orchestration dashboard. Use when registering agents, managing tasks, syncing skills, or querying agent/task status via MC APIs.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "builderz-labs",
+  "install_path": ".claude/skills/./SKILL.md",
+  "source": {
+    "repo": "builderz-labs/mission-control",
+    "url": "https://github.com/builderz-labs/mission-control/blob/main/SKILL.md",
+    "path": "SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T19:03:02.480Z",
+    "stars": 6248,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-20T18:43:27Z",
+    "license": "MIT"
+  }
+}

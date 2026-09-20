@@ -1,0 +1,25 @@
+{
+  "id": "nyldn-claude-octopus-skill-intake",
+  "name": "skill-intake",
+  "description": "Move incoming issues and pull requests through triage states until each is actionable or closed — use when the queue has piled up or a report arrives unsorted",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "nyldn",
+  "install_path": ".claude/skills/skill-intake/SKILL.md",
+  "source": {
+    "repo": "nyldn/claude-octopus",
+    "url": "https://github.com/nyldn/claude-octopus/blob/main/.claude/skills/skill-intake/SKILL.md",
+    "path": ".claude/skills/skill-intake/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T19:52:36.038Z",
+    "stars": 4090,
+    "language": "Shell",
+    "pushed_at": "2026-09-20T10:00:37Z",
+    "license": "MIT"
+  }
+}

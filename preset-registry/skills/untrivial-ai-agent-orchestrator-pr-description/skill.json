@@ -1,0 +1,25 @@
+{
+  "id": "untrivial-ai-agent-orchestrator-pr-description",
+  "name": "pr-description",
+  "description": "Calculate and maintain the required change-count header when creating or updating pull requests in this repository.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Untrivial-ai",
+  "install_path": ".claude/skills/pr-description/SKILL.md",
+  "source": {
+    "repo": "Untrivial-ai/agent-orchestrator",
+    "url": "https://github.com/Untrivial-ai/agent-orchestrator/blob/main/.agents/skills/pr-description/SKILL.md",
+    "path": ".agents/skills/pr-description/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T19:02:55.898Z",
+    "stars": 12216,
+    "language": "Go",
+    "pushed_at": "2026-09-20T18:53:32Z",
+    "license": "Apache-2.0"
+  }
+}

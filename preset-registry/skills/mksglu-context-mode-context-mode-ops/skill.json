@@ -1,0 +1,25 @@
+{
+  "id": "mksglu-context-mode-context-mode-ops",
+  "name": "context-mode-ops",
+  "description": "Manage context-mode GitHub issues, PRs, releases, and marketing with parallel subagent army. Orchestrates 10-20 dynamic agents per task. Use when triaging issues, reviewing PRs, releasing versions, writing LinkedIn posts, announcing releases, fixing bugs, merging contributions, validating ENV vars, testing adapters, or syncing branches.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mksglu",
+  "install_path": ".claude/skills/context-mode-ops/SKILL.md",
+  "source": {
+    "repo": "mksglu/context-mode",
+    "url": "https://github.com/mksglu/context-mode/blob/main/.claude/skills/context-mode-ops/SKILL.md",
+    "path": ".claude/skills/context-mode-ops/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T19:53:27.705Z",
+    "stars": 23761,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-20T12:05:59Z",
+    "license": null
+  }
+}

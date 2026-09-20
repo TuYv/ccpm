@@ -1,0 +1,25 @@
+{
+  "id": "nyldn-claude-octopus-skill-pressure-test",
+  "name": "skill-pressure-test",
+  "description": "Interrogate a plan, decision, or design one question at a time until it holds — use to stress-test your own thinking before committing to it",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "nyldn",
+  "install_path": ".claude/skills/skill-pressure-test/SKILL.md",
+  "source": {
+    "repo": "nyldn/claude-octopus",
+    "url": "https://github.com/nyldn/claude-octopus/blob/main/.claude/skills/skill-pressure-test/SKILL.md",
+    "path": ".claude/skills/skill-pressure-test/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T19:52:37.853Z",
+    "stars": 4090,
+    "language": "Shell",
+    "pushed_at": "2026-09-20T10:00:37Z",
+    "license": "MIT"
+  }
+}

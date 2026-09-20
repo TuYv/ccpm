@@ -1,0 +1,25 @@
+{
+  "id": "getpaseo-paseo-paseo-help",
+  "name": "paseo-help",
+  "description": "Answer questions about the Paseo product and app, including setup, configuration, connectivity, providers, workspaces, updates, logs, and troubleshooting. Use when a user inside Paseo asks how Paseo works, how to configure it, or why something is broken; use the paseo skill instead to operate agents and workspaces through MCP or the CLI.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "getpaseo",
+  "install_path": ".claude/skills/paseo-help/SKILL.md",
+  "source": {
+    "repo": "getpaseo/paseo",
+    "url": "https://github.com/getpaseo/paseo/blob/main/skills/paseo-help/SKILL.md",
+    "path": "skills/paseo-help/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T19:02:54.449Z",
+    "stars": 17866,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-18T09:49:39Z",
+    "license": null
+  }
+}

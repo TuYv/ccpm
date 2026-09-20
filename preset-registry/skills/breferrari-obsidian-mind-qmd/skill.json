@@ -1,0 +1,25 @@
+{
+  "id": "breferrari-obsidian-mind-qmd",
+  "name": "qmd",
+  "description": "Search the vault using QMD semantic search. Use PROACTIVELY before reading files. Preference order: (1) MCP tools — mcp__qmd__query, mcp__qmd__get, mcp__qmd__multi_get, mcp__qmd__status — if they appear in your tool menu, use them first; (2) CLI `qmd --index <name> ...` as fallback; (3) Grep/Glob only when QMD is not installed. Trigger proactively for past decisions, incidents, people, meetings, architecture, patterns, or any vault content — and after creating/editing notes to check for duplicat",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "breferrari",
+  "install_path": ".claude/skills/qmd/SKILL.md",
+  "source": {
+    "repo": "breferrari/obsidian-mind",
+    "url": "https://github.com/breferrari/obsidian-mind/blob/main/.claude/skills/qmd/SKILL.md",
+    "path": ".claude/skills/qmd/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T19:53:40.825Z",
+    "stars": 4653,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-02T13:32:14Z",
+    "license": "MIT"
+  }
+}

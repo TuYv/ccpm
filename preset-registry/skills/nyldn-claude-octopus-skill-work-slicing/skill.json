@@ -1,0 +1,25 @@
+{
+  "id": "nyldn-claude-octopus-skill-work-slicing",
+  "name": "skill-work-slicing",
+  "description": "Break a plan or spec into vertical slices that each declare what blocks them — use when work is agreed but not yet cut into fileable pieces",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "nyldn",
+  "install_path": ".claude/skills/skill-work-slicing/SKILL.md",
+  "source": {
+    "repo": "nyldn/claude-octopus",
+    "url": "https://github.com/nyldn/claude-octopus/blob/main/.claude/skills/skill-work-slicing/SKILL.md",
+    "path": ".claude/skills/skill-work-slicing/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T19:52:41.702Z",
+    "stars": 4090,
+    "language": "Shell",
+    "pushed_at": "2026-09-20T10:00:37Z",
+    "license": "MIT"
+  }
+}
