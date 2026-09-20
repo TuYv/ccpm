@@ -1,0 +1,25 @@
+{
+  "id": "runkids-skillshare-skillshare-implement-feature",
+  "name": "skillshare-implement-feature",
+  "description": ">- Implement a feature from a spec file or description using TDD workflow. Use this skill whenever the user asks to: add a new CLI command, implement a feature from a spec, build new functionality, add a flag, create a new internal package, or write Go code for skillshare. This skill enforces test-first development, proper handler split conventions, oplog instrumentation, and dual-mode (global/project) patterns. If the request involves writing Go code and tests, use this skill — even if the user",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "runkids",
+  "install_path": ".claude/skills/skillshare-implement-feature/SKILL.md",
+  "source": {
+    "repo": "runkids/skillshare",
+    "url": "https://github.com/runkids/skillshare/blob/main/.skillshare/skills/skillshare-implement-feature/SKILL.md",
+    "path": ".skillshare/skills/skillshare-implement-feature/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T07:17:14.954Z",
+    "stars": 2681,
+    "language": "Go",
+    "pushed_at": "2026-09-20T03:21:36Z",
+    "license": "MIT"
+  }
+}

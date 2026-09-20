@@ -1,0 +1,25 @@
+{
+  "id": "runkids-skillshare-skillshare-update-docs",
+  "name": "skillshare-update-docs",
+  "description": ">- Update website docs to match recent code changes, cross-validating every flag against source. Use this skill whenever the user asks to: update documentation, sync docs with code, document a new flag or command, fix stale docs, or update the README. This skill covers all website/docs/ categories (commands, reference, understand, how-to, troubleshooting, getting-started) plus the built-in skill description and README. If you just implemented a feature and need to update docs, this is the skill ",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "runkids",
+  "install_path": ".claude/skills/skillshare-update-docs/SKILL.md",
+  "source": {
+    "repo": "runkids/skillshare",
+    "url": "https://github.com/runkids/skillshare/blob/main/.skillshare/skills/skillshare-update-docs/SKILL.md",
+    "path": ".skillshare/skills/skillshare-update-docs/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T07:17:15.280Z",
+    "stars": 2681,
+    "language": "Go",
+    "pushed_at": "2026-09-20T03:21:36Z",
+    "license": "MIT"
+  }
+}

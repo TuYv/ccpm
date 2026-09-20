@@ -1,0 +1,25 @@
+{
+  "id": "runkids-skillshare-skillshare-release",
+  "name": "skillshare-release",
+  "description": ">- End-to-end release workflow for skillshare. Runs tests, generates changelog (via /changelog), optionally writes local RELEASE_NOTES, updates version numbers, commits, and drafts announcements. Use when the user says \"release\", \"prepare release\", \"cut a release\", \"release v0.19\", or any request to publish a new version. For changelog-only tasks, use /changelog instead.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "runkids",
+  "install_path": ".claude/skills/skillshare-release/SKILL.md",
+  "source": {
+    "repo": "runkids/skillshare",
+    "url": "https://github.com/runkids/skillshare/blob/main/.skillshare/skills/skillshare-release/SKILL.md",
+    "path": ".skillshare/skills/skillshare-release/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T07:17:15.070Z",
+    "stars": 2681,
+    "language": "Go",
+    "pushed_at": "2026-09-20T03:21:36Z",
+    "license": "MIT"
+  }
+}

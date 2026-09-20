@@ -80,7 +80,8 @@ those only as part of a workflow below.
 3. If a custom rule fired, fix that rulebook: disable or reword it with an override, or edit the
    rule (see configure rules), then re-run `explain` to confirm the new verdict.
 4. If a built-in rule fired, no rule edit can relax it. Check the reason for a documented escape
-   hatch, such as `CC_SAFETY_NET_WORKTREE=1` for local git discards in linked worktrees, or
+   hatch, such as `CC_SAFETY_NET_WORKTREE=1` for local git discards in linked worktrees (git
+   discards in a temp-root repository outside the workspace are already allowed), or
    `rule wrapper add` when a trusted transparent wrapper hid the real command from the analyzer.
    Pass the wrapper name as a separate argv value, or shell-escape it as one argument. If the
    user explicitly wants that built-in rule off, read its id from the `ruleId` field of
@@ -173,7 +174,8 @@ error, so validate against it rather than guessing further fields):
 - `safety.level`: `standard`, `strict`, or `paranoid`. `safety.overrides`: booleans for
   `fail_closed`, `paranoid_rm`, and `paranoid_interpreters` that pin one capability apart from
   the level.
-- `workflow.worktree_mode`: boolean, allows local git discards in linked worktrees.
+- `workflow.worktree_mode`: boolean, allows local git discards in linked worktrees; discards in a
+  temp-root repository outside the workspace need no toggle.
 - `destructive_command_protection` and `secret_protection`: an `enabled` boolean, and per-rule
   `overrides` mapping a built-in rule id (`git.reset-hard`, `secret.basename.env`) to `"on"` or
   `"off"`. Get the id for a blocked command from the `ruleId` field of `explain --json`.

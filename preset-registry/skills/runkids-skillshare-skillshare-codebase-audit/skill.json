@@ -1,0 +1,25 @@
+{
+  "id": "runkids-skillshare-skillshare-codebase-audit",
+  "name": "skillshare-codebase-audit",
+  "description": ">- Cross-validate CLI flags, docs, tests, and targets for consistency across the codebase. Use this skill whenever the user asks to: audit the codebase, check for consistency issues, find undocumented flags, verify test coverage, validate targets.yaml, check handler split conventions, or verify oplog instrumentation. This is a read-only audit — it reports issues but never modifies files. Use after large refactors, before releases, or whenever you suspect docs/code/tests have drifted out of sync.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "runkids",
+  "install_path": ".claude/skills/skillshare-codebase-audit/SKILL.md",
+  "source": {
+    "repo": "runkids/skillshare",
+    "url": "https://github.com/runkids/skillshare/blob/main/.skillshare/skills/skillshare-codebase-audit/SKILL.md",
+    "path": ".skillshare/skills/skillshare-codebase-audit/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T07:17:14.734Z",
+    "stars": 2681,
+    "language": "Go",
+    "pushed_at": "2026-09-20T03:21:36Z",
+    "license": "MIT"
+  }
+}

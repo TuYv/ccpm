@@ -1,0 +1,25 @@
+{
+  "id": "runkids-skillshare-skillshare",
+  "name": "skillshare",
+  "description": "| Manage skills, agents, extras, plugins, and MCP connection settings with the Skillshare CLI. Use when the user asks to configure or run Skillshare, install or sync resources across AI tools, import MCP settings, manage targets, audit skills, recover backups, or troubleshoot Skillshare configuration and sync. Covers global and project modes, noninteractive automation, and guidance for the terminal UI.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "runkids",
+  "install_path": ".claude/skills/skillshare/SKILL.md",
+  "source": {
+    "repo": "runkids/skillshare",
+    "url": "https://github.com/runkids/skillshare/blob/main/skills/skillshare/SKILL.md",
+    "path": "skills/skillshare/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T07:17:15.399Z",
+    "stars": 2681,
+    "language": "Go",
+    "pushed_at": "2026-09-20T03:21:36Z",
+    "license": "MIT"
+  }
+}

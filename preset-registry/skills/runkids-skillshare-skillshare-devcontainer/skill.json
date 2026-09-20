@@ -1,0 +1,25 @@
+{
+  "id": "runkids-skillshare-skillshare-devcontainer",
+  "name": "skillshare-devcontainer",
+  "description": ">- Run CLI commands, tests, and debugging inside the skillshare devcontainer. Use this skill whenever you need to: execute skillshare CLI commands for verification, run Go tests (unit or integration), reproduce bugs, test new features, start the web UI, or perform any operation that requires a Linux environment. All CLI execution MUST happen inside the devcontainer — never run skillshare commands on the host. If you are about to use Bash to run `ss`, `skillshare`, `go test`, or `make test`, stop",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "runkids",
+  "install_path": ".claude/skills/skillshare-devcontainer/SKILL.md",
+  "source": {
+    "repo": "runkids/skillshare",
+    "url": "https://github.com/runkids/skillshare/blob/main/.skillshare/skills/skillshare-devcontainer/SKILL.md",
+    "path": ".skillshare/skills/skillshare-devcontainer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T07:17:14.837Z",
+    "stars": 2681,
+    "language": "Go",
+    "pushed_at": "2026-09-20T03:21:36Z",
+    "license": "MIT"
+  }
+}

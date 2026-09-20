@@ -1,0 +1,25 @@
+{
+  "id": "runkids-skillshare-skillshare-changelog",
+  "name": "skillshare-changelog",
+  "description": ">- Generate CHANGELOG.md entry from recent commits in conventional format. Also syncs the website changelog page. Use this skill whenever the user asks to: generate a changelog, document what changed between tags, or create a new CHANGELOG entry. If you see requests like \"write the changelog for v0.17\", \"what changed since last release\", this is the skill to use. Do NOT manually edit CHANGELOG.md without this skill — it ensures proper formatting, user-perspective writing, and website changelog s",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "runkids",
+  "install_path": ".claude/skills/skillshare-changelog/SKILL.md",
+  "source": {
+    "repo": "runkids/skillshare",
+    "url": "https://github.com/runkids/skillshare/blob/main/.skillshare/skills/skillshare-changelog/SKILL.md",
+    "path": ".skillshare/skills/skillshare-changelog/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T07:17:14.527Z",
+    "stars": 2681,
+    "language": "Go",
+    "pushed_at": "2026-09-20T03:21:36Z",
+    "license": "MIT"
+  }
+}

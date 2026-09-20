@@ -1,7 +1,7 @@
 {
   "id": "ganyuanran-aegis-dispatching-parallel-agents",
   "name": "dispatching-parallel-agents",
-  "description": "Use when facing 2+ independent tasks without a written plan, with no shared state or sequential dependencies, where parallel delegation beats inline cost; otherwise inline. Planned tasks use subagent-driven-development.",
+  "description": "Use when facing 2+ independent tasks without a written plan, with no conflicting shared mutable state or sequential dependencies, where parallel delegation beats inline cost; otherwise inline. Planned tasks use subagent-driven-development.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/GanyuanRan/Aegis/blob/main/skills/dispatching-parallel-agents/SKILL.md",
     "path": "skills/dispatching-parallel-agents/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-20T02:13:45.989Z",
-    "stars": 1215,
+    "discovered_at": "2026-09-20T07:19:18.049Z",
+    "stars": 1217,
     "language": "Python",
-    "pushed_at": "2026-09-16T04:31:41Z",
+    "pushed_at": "2026-09-20T05:36:32Z",
     "license": "MIT"
-  },
-  "summary_zh": "一种并行委派多个智能体处理独立任务的方法，适合无共享状态、无先后依赖且未制定计划的多任务场景。"
+  }
 }

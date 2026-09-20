@@ -1,0 +1,25 @@
+{
+  "id": "runkids-skillshare-skillshare-cli-e2e-test",
+  "name": "skillshare-cli-e2e-test",
+  "description": ">- Run isolated E2E tests in devcontainer from ai_docs/tests runbooks. Use this skill whenever the user asks to: run an E2E test, execute a test runbook, validate a feature end-to-end, create a new runbook, or test CLI behavior in isolation. If you need to run a multi-step CLI validation sequence (init → install → sync → verify), this is the skill — it handles ssenv isolation, flag verification, and structured reporting. Prefer this over ad-hoc docker exec sequences for any test that follows a r",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "runkids",
+  "install_path": ".claude/skills/skillshare-cli-e2e-test/SKILL.md",
+  "source": {
+    "repo": "runkids/skillshare",
+    "url": "https://github.com/runkids/skillshare/blob/main/.skillshare/skills/skillshare-cli-e2e-test/SKILL.md",
+    "path": ".skillshare/skills/skillshare-cli-e2e-test/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T07:17:14.636Z",
+    "stars": 2681,
+    "language": "Go",
+    "pushed_at": "2026-09-20T03:21:36Z",
+    "license": "MIT"
+  }
+}
