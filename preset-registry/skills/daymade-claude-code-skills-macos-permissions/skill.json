@@ -1,0 +1,25 @@
+{
+  "id": "daymade-claude-code-skills-macos-permissions",
+  "name": "macos-permissions",
+  "description": ">- Diagnose and fix macOS TCC permission dialogs and silent denials — Screen Recording, Microphone, Camera, Accessibility, Automation (Apple Events), Full Disk Access, Files & Folders, and the \"X would like to access data from other apps\" prompt. Use whenever an app or background job is blocked by a macOS privacy permission, a permission dialog reappears after clicking Allow, a LaunchAgent/`uv run` job keeps prompting, System Settings shows a bare version number or wrong name, a granted permissi",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/macos-permissions/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-macos/macos-permissions/SKILL.md",
+    "path": "daymade-macos/macos-permissions/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-20T02:08:43.097Z",
+    "stars": 1410,
+    "language": "Python",
+    "pushed_at": "2026-09-20T01:24:39Z",
+    "license": "MIT"
+  }
+}
