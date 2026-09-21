@@ -9,20 +9,20 @@ Native saves complete requirements, progress, and acceptance results in the proj
 
 ## Required rules
 
-- Treat `.comet/config.yaml`, the current change, `comet-state.yaml`, and formal artifacts on disk as authoritative; chat memory is supplementary. Among formal workflow files, the Agent edits only the brief, complete target Specs, and `children.yaml`. Runtime owns state, check results, reports, locks, and transactions.
+- Treat `.comet/config.yaml`, the current change, `comet-state.yaml`, and formal artifacts on disk as authoritative; chat memory is supplementary. Among formal workflow files, the Agent edits only the brief, complete target Specs, association `delta.yaml`, and `children.yaml`. Runtime owns state, check results, reports, locks, and transactions.
 - Advance through the public `comet native` CLI on PATH; do not ask the user to run commands manually. If the command is unavailable, report an incomplete installation and stop. Consult `comet native <command> --help` for arguments.
-- The Builder submits the current code and related files as a candidate implementation. Each iteration requires a new read-only Verifier to assess every acceptance item independently. Failed, blocked, unexecuted, and timed-out work cannot count as passed.
+- Create changes with the CLI; use returned paths and follow denial commands or targets before retrying. Custom and non-Comet writes stay neutral.
+- The Builder submits code as the candidate implementation. Each iteration requires a new read-only Verifier to assess every acceptance item independently. Assessing every item does not mean rerunning every command: reuse Runtime check records that still match the current candidate and add only missing or invalidated checks. Failed, blocked, unexecuted, and timed-out work cannot count as passed.
 - Run confirmation commands only after the user explicitly confirms the complete Shape, accepts the final result, or selects the relevant delivery option. Reuse confirmed scope and user choices saved by Runtime. Authorization for Archive, merge, push, PR creation, and workspace cleanup is not interchangeable.
 - This Skill and Runtime provide the Native workflow without an external Skill dependency. The Agent chooses implementation methods that preserve confirmed requirements and constraints.
 
 ## Start or resume
 
-1. If the name is known, run `comet native status <change-name> --json`; otherwise run `comet native status --json` to identify the target.
-2. When an active change exists, enter the returned `workspace.projectRoot` and run `select`. Let Runtime locate the workspace; ask the user only when multiple workspaces match equally well.
-3. If there is no matching active change, select isolation and create it using [workspace selection](reference/workspace.md#create-a-change), then enter `preparation.projectRoot`. If preparation fails, preserve any branches and directories already created and address the reported cause.
-4. After entering the workspace and obtaining `phase`, retrieve context once using [memory integration](reference/commands.md#memory-integration). Expand details only when needed, record actual use outcomes, and call `comet task --complete` at the end as specified there.
+1. If the name is known, run `comet native select <change-name> --json`. When an active change exists, enter the returned `workspace.projectRoot`; select returns the same discovery and state information as status, so a separate status call is not needed. Otherwise run `comet native status --json`. Let Runtime locate the workspace; ask the user only when multiple workspaces match equally well.
+2. If there is no matching active change, select isolation and create it using [workspace selection](reference/workspace.md#create-a-change), then enter `preparation.projectRoot`. If preparation fails, preserve any branches and directories already created and address the reported cause.
+3. After entering the workspace and obtaining `phase`, retrieve context once using [memory integration](reference/commands.md#memory-integration). Expand details only when needed, record actual use outcomes, and call `comet task --complete` at the end as specified there.
 
-Memory learning submits only reusable user information; never save task summaries, progress, command output, or test results as Personal Memory. Complete the learning check in the memory integration section before task completion and record `submitted`, `no-observation`, or `not-run`.
+Never save task summaries, progress, command output, or test results as Personal Memory; complete the learning check.
 
 ## Read only what the action needs
 
@@ -40,7 +40,9 @@ Read the section for the current action. Follow links within it only when their 
 
 Investigate facts that can be established without the user. Ask only about decisions that change user-visible outcomes and cannot be inferred reliably. For simple requests, list unresolved questions and dependencies; maintain a decision tree only when several decisions affect one another. Before asking under `native.clarification_mode`, save this round's unresolved questions in the brief. Immediately copy confirmed conclusions into Decisions, the brief, and complete target Specs. Keep unanswered parts `[blocking]`.
 
-Complete when requirements sources have been fully covered according to their purpose, all outcome-affecting decisions and assumptions are resolved, no `[blocking]` remains, the user explicitly confirms the outcome, scope, key decisions, all acceptance items, and non-goals, and Runtime has entered Build.
+Complete when requirements sources are fully processed within the coverage boundary and classified by purpose, all outcome-affecting decisions and assumptions are resolved, no `[blocking]` remains, the user explicitly confirms the outcome, scope, key decisions, all acceptance items, and non-goals, and Runtime has entered Build.
+
+At a new or reconfirmed Shape, Runtime checks all eight brief sections, a complete target Spec or an explicit no-product-behavior-change reason, and formal paths. Failures name the artifact and repair action; edit it and rerun continuation. Later-phase existing changes keep their progress until Shape.
 
 ## Build ↔ Verify Loop
 
@@ -51,6 +53,10 @@ After the Builder submits a candidate, Runtime runs required checks and a new re
 ## Build
 
 Before the first implementation, read the current brief, complete target Specs, and every acceptance item. Edit project code and tests within confirmed scope. During repair, prioritize the Verifier's failed or blocked items and failed checks, then recheck other confirmed behavior before submission. `previous_unresolved_ids` identifies the repair focus; the next formal verification still covers every acceptance item.
+
+Build, Verify, and Archive recheck bound documents. Drift or stale reports return a repair action and preserve work; Runtime still checks without a Hook. Ordinary Markdown is unaffected. Ordinary documentation writes (Markdown/text and LICENSE-style files at the repository root or under `docs/`, `doc/`, `documentation/`, `.github/`, outside the Native artifact root) are neutral during Shape, Verify, and Archive: they do not return the change to Build and do not invalidate the current candidate. Set `native.document_writes: revert` in `.comet/config.yaml` to restore the strict behavior.
+
+User Hook output can use `hook.allow_paths` in `.comet/config.yaml`; see [User Hook writes](reference/commands.md#user-hook-writes).
 
 Classify requirement changes before taking an action allowed by the current `continuation`:
 
@@ -66,9 +72,9 @@ Complete when the implementation and relevant checks are ready for verification,
 
 ## Verify
 
-Immediately launch an independent read-only Verifier under the Verify protocol. It checks that recorded results match the current candidate, workspace, and inputs, adds only missing or invalidated checks, and independently assesses every acceptance item. The Builder passes only the implementation location, acceptance IDs and references, check-record locations, known limitations, and relevant file locations. Read log bodies on demand.
+Immediately launch an independent read-only Verifier under the Verify protocol. The dispatch record only registers the attempt: until the platform tool accepts the launch and the Verifier reports `verifier-started`, do not treat "dispatched" as "running" or report it that way to the user; if the launch call itself fails or is rejected, handle it through the exception flow immediately. The Verifier checks that recorded results match the current candidate, workspace, and inputs, adds only missing or invalidated checks, and independently assesses every acceptance item. The Builder passes only the implementation location, acceptance IDs and references, check-record locations, known limitations, and relevant file locations. Read log bodies on demand.
 
-A wait-tool timeout means keep waiting for the same Verifier. Record an execution error only when the platform confirms execution failure, an execution timeout, a lost task, or completion without a usable result. Once Runtime accepts the complete result, follow the latest state. When user acceptance is required, run `--accept-result` only after explicit acceptance. Results with automated checks but no independent verification also require explicit acceptance.
+While awaiting the result, use `status` to distinguish "registered but not started" from "Verifier confirmed startup"; when startup is unconfirmed and the subagent is unresponsive, verify the dispatch actually succeeded before waiting on or failing the attempt. A wait-tool timeout means keep waiting for the same Verifier. Record an execution error only when the platform confirms execution failure, an execution timeout, a lost task, or completion without a usable result. Once Runtime accepts the complete result, follow the latest state. When user acceptance is required, run `--accept-result` only after explicit acceptance. Results with automated checks but no independent verification also require explicit acceptance.
 
 Complete when Runtime accepts each verdict and supplies the next action. Continue repairs on Build, or address the specified waiting or blocking condition. Ending a phase does not mean the task is finished.
 
@@ -87,6 +93,6 @@ Complete when state is `done`, authorized workspace finishing is `completed` or 
 - `blocked`: address listed blockers or recovery actions; pause only dependent work.
 - `done`: finish after checking the Archive completion criteria.
 
-After a successful response containing `agent`, continue using its phase, state version, `workspace.cwd`, and `continuation`. Read details only when fields are missing, a command is rejected, or the action needs additional artifact text. Query `status` again only on session recovery, a missing response, or signs of external changes. Do not redispatch an existing Verifier or child task because a wait tool timed out.
+After a successful response containing `agent`, reuse the shared workflow guard's lightweight ownership result and continue with the response's phase, state version, `workspace.cwd`, and `continuation`. Read details only when fields are missing, the command is rejected for version or ownership, or the action needs additional artifact text. Query `status` again only for a new session or compression recovery without response state, a repository/branch/change switch, or clear external changes. Do not redispatch an existing Verifier or child task because a wait tool timed out.
 
 Add `--details` only when the current action needs acceptance text, handoff summaries, or history. Follow `nextPageArgs` through every page covering `scopeIds`. Run `show` only when artifact bodies are needed. For CLI text, read `summary`, the single `NEXT:`, and any relay message first. Use `--json` for programmatic parsing and `--verbose` only to diagnose local execution.

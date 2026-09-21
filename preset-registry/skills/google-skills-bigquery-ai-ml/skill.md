@@ -1,6 +1,7 @@
 ---
 name: bigquery-ai-ml
 metadata:
+  version: "1.0.0"
   category: AiAndMachineLearning
 description: >-
   Leverages BigQuery's built-in machine learning and GenAI capabilities
