@@ -1,0 +1,25 @@
+{
+  "id": "aeonfun-aeon-arc-studio",
+  "name": "arc-studio",
+  "description": "Drive Circle Arc Studio from a headless runner. Start one Arc testnet turn, poll it on a later run, and notify when it finishes or needs an answer.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "aeonfun",
+  "install_path": ".claude/skills/arc-studio/SKILL.md",
+  "source": {
+    "repo": "aeonfun/aeon",
+    "url": "https://github.com/aeonfun/aeon/blob/main/skills/arc-studio/SKILL.md",
+    "path": "skills/arc-studio/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-21T22:10:26.569Z",
+    "stars": 749,
+    "language": "Shell",
+    "pushed_at": "2026-09-21T19:10:24Z",
+    "license": "MIT"
+  }
+}

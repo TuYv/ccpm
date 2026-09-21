@@ -57,13 +57,17 @@ implicitly.
    separate behavior-preserving commits.
 4. Process one item at a time. Record `HEAD` and the pre-existing worktree state
    before each item; accept the preceding item before starting the next.
-5. Select the portable **Solver** role and map it to the
-   runtime's implementation-capable subagent type. Record the portable role and
-   actual runtime selection when the environment exposes it. Spawn one owner.
-   Do not implement any part of the item in the controller. If an implementation
-   slot is temporarily unavailable, wait for capacity. If subagents cannot be
-   started, stop and report the blocker rather than falling back to controller
-   implementation.
+5. Select one implementation-capable subagent using the runtime mapping below.
+   Verify that it can edit, run validation, create the task-scoped commit, and
+   continue the same owner session for repairs. Honour applicable user and
+   repository agent selections and configured models. If the required capability
+   is unavailable, stop and report the missing capability; do not install an
+   extension or fall back to controller implementation. If capacity is only
+   temporarily unavailable, wait. Spawn one owner and retain its session handle.
+   Give it explicit ownership of the work item and affected files, tell it that
+   other agents may be editing the codebase, and require it to preserve and
+   accommodate unrelated changes. Do not implement any part of the item in the
+   controller.
 6. Give that owner a decision-complete packet containing:
    - the exact ticket or plan task and its acceptance criteria;
    - the relevant specification and repository instructions;
@@ -103,6 +107,18 @@ implicitly.
    After the last accepted item, run any final user- or repository-required
    verification. If a later action changes files, return them to their owner for
    validation and commit.
+
+## Runtime mapping
+
+Default implementation agents by runtime; apply the capability checks in step 5.
+
+| Runtime | Implementation owner |
+| --- | --- |
+| [Codex](https://learn.chatgpt.com/docs/agent-configuration/subagents) | `worker` |
+| [Claude Code](https://code.claude.com/docs/en/sub-agents) | `general-purpose` |
+| [OpenCode](https://opencode.ai/docs/agents) | `general` subagent; `build` is a primary agent |
+| [Pi](https://github.com/earendil-works/pi/tree/main/packages/coding-agent) | No built-in subagent role. Inspect the installed delegation extension or package and its agent definitions. The upstream [example extension](https://github.com/earendil-works/pi/tree/main/packages/coding-agent/examples/extensions/subagent) supplies a sample `worker`, not a core role; verify same-session continuation before using it. |
+| Other runtimes | An exposed implementation-capable subagent that satisfies step 5 |
 
 ## Ownership boundaries
 

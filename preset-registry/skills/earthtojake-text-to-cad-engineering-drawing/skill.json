@@ -1,0 +1,25 @@
+{
+  "id": "earthtojake-text-to-cad-engineering-drawing",
+  "name": "engineering-drawing",
+  "description": "Make an engineering drawing of a part as a PDF - orthographic views with hidden lines and centre marks, real dimensions, hole callouts, notes and a title block on ISO sheets, all projected from the part's geometry so the drawing follows the model. Use when the user asks for a drawing, a dimensioned sheet, shop or manufacturing drawings, a print, or \"2D views of this part\".",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "earthtojake",
+  "install_path": ".claude/skills/engineering-drawing/SKILL.md",
+  "source": {
+    "repo": "earthtojake/text-to-cad",
+    "url": "https://github.com/earthtojake/text-to-cad/blob/main/skills/engineering-drawing/SKILL.md",
+    "path": "skills/engineering-drawing/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-21T22:03:27.869Z",
+    "stars": 16230,
+    "language": "Python",
+    "pushed_at": "2026-09-21T21:33:34Z",
+    "license": "MIT"
+  }
+}

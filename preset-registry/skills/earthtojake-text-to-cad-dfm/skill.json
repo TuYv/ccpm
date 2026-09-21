@@ -1,0 +1,25 @@
+{
+  "id": "earthtojake-text-to-cad-dfm",
+  "name": "dfm",
+  "description": "Design-for-manufacturing review of a part for sheet metal, CNC machining, or injection molding - bends, reliefs and flat patterns; machining access, internal corners, deep features and setups; draft, undercuts and projected area. Use when the user asks whether a part can be bent, machined or molded, asks about manufacturability or tooling, or asks for a DFM review or redesign.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "earthtojake",
+  "install_path": ".claude/skills/dfm/SKILL.md",
+  "source": {
+    "repo": "earthtojake/text-to-cad",
+    "url": "https://github.com/earthtojake/text-to-cad/blob/main/skills/dfm/SKILL.md",
+    "path": "skills/dfm/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-21T22:03:27.645Z",
+    "stars": 16230,
+    "language": "Python",
+    "pushed_at": "2026-09-21T21:33:34Z",
+    "license": "MIT"
+  }
+}
