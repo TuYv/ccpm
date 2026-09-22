@@ -1,0 +1,25 @@
+{
+  "id": "yeachan-heo-oh-my-claudecode-architecture-survey",
+  "name": "architecture-survey",
+  "description": "Periodic architecture survey — walks the module graph and reports ranked deepening candidates (shallow modules, hypothetical seams, logic behind the wrong seam). Survey, not rescue: it finds candidates and hands them to the captain; it never refactors on its own.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Yeachan-Heo",
+  "install_path": ".claude/skills/architecture-survey/SKILL.md",
+  "source": {
+    "repo": "Yeachan-Heo/oh-my-claudecode",
+    "url": "https://github.com/Yeachan-Heo/oh-my-claudecode/blob/main/skills/architecture-survey/SKILL.md",
+    "path": "skills/architecture-survey/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-22T00:23:34.542Z",
+    "stars": 39290,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-21T23:57:49Z",
+    "license": "MIT"
+  }
+}

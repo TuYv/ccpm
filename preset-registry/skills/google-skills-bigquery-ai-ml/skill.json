@@ -1,7 +1,7 @@
 {
   "id": "google-skills-bigquery-ai-ml",
   "name": "bigquery-ai-ml",
-  "description": ">- Leverages BigQuery's built-in machine learning and GenAI capabilities for advanced data analytics. Use when you need to write SQL queries that perform time-series forecasting, predict values, detect outliers or anomalies, find key drivers, perform semantic search or vector search, classify text, calculate similarity, summarize content, translate language, evaluate models, filter by semantic conditions, or leverage generative AI capabilities in BigQuery. Do not use for general BigQuery dataset",
+  "description": ">- Leverages BigQuery's built-in machine learning and GenAI capabilities for advanced data analytics. Use when you need to write SQL queries that perform time-series forecasting, predict values, detect outliers or anomalies, find key drivers, perform semantic search or vector search, classify text, calculate similarity, summarize content, translate language, evaluate models, filter by semantic conditions, measure the causal effect of an intervention, compute correlations between columns, detect ",
   "category": "文档写作",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/google/skills/blob/main/skills/cloud/bigquery-ai-ml/SKILL.md",
     "path": "skills/cloud/bigquery-ai-ml/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-21T21:15:09.703Z",
-    "stars": 20242,
+    "discovered_at": "2026-09-22T00:20:14.059Z",
+    "stars": 20244,
     "language": "Python",
-    "pushed_at": "2026-09-21T20:06:06Z",
+    "pushed_at": "2026-09-21T23:40:39Z",
     "license": "Apache-2.0"
-  },
-  "summary_zh": "用 SQL 调用 BigQuery 内置机器学习与生成式 AI，适合预测、异常检测、语义检索和文本处理等高级分析场景。"
+  }
 }
