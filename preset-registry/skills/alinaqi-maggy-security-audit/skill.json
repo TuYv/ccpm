@@ -1,0 +1,25 @@
+{
+  "id": "alinaqi-maggy-security-audit",
+  "name": "security-audit",
+  "description": "Structured, adversarial, multi-phase security audit of a codebase — recon → coverage-led hunting → finder≠validator validation → machine-readable findings → target-neutral report",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alinaqi",
+  "install_path": ".claude/skills/security-audit/SKILL.md",
+  "source": {
+    "repo": "alinaqi/maggy",
+    "url": "https://github.com/alinaqi/maggy/blob/main/skills/security-audit/SKILL.md",
+    "path": "skills/security-audit/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-22T11:06:39.784Z",
+    "stars": 708,
+    "language": "Python",
+    "pushed_at": "2026-09-22T07:12:24Z",
+    "license": "MIT"
+  }
+}
