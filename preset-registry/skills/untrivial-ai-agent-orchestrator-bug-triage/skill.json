@@ -1,7 +1,7 @@
 {
   "id": "untrivial-ai-agent-orchestrator-bug-triage",
   "name": "bug-triage",
-  "description": "Triage bugs reported in chat/issues, search for duplicates, file or update GitHub issues with full context, and push fix PRs.",
+  "description": "Help clarify human bug reports, search for duplicates, and gather diagnostic evidence separately from a concise issue draft.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/Untrivial-ai/agent-orchestrator/blob/main/.claude/skills/bug-triage/SKILL.md",
     "path": ".claude/skills/bug-triage/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-22T10:15:02.334Z",
-    "stars": 12255,
+    "discovered_at": "2026-09-22T15:07:16.531Z",
+    "stars": 12261,
     "language": "Go",
-    "pushed_at": "2026-09-22T09:26:43Z",
+    "pushed_at": "2026-09-22T14:34:34Z",
     "license": "Apache-2.0"
   }
 }
