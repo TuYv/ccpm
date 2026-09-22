@@ -1,0 +1,25 @@
+{
+  "id": "takechanman1228-claude-ecom-ecom",
+  "name": "ecom",
+  "description": "> Ecommerce business review for D2C stores from order transaction CSVs. Runs the bundled Python engine (KPI trees, ~30 pass/watch/fail health checks, 30d/90d/365d windows), then interprets the results: either a full narrative business review written to REVIEW.md, or an inline answer to a focused question.",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "takechanman1228",
+  "install_path": ".claude/skills/ecom/SKILL.md",
+  "source": {
+    "repo": "takechanman1228/claude-ecom",
+    "url": "https://github.com/takechanman1228/claude-ecom/blob/main/skills/ecom/SKILL.md",
+    "path": "skills/ecom/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-22T22:20:38.670Z",
+    "stars": 50,
+    "language": "Python",
+    "pushed_at": "2026-06-11T18:50:46Z",
+    "license": "MIT"
+  }
+}
