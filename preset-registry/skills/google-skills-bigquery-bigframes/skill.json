@@ -1,8 +1,8 @@
 {
   "id": "google-skills-bigquery-bigframes",
   "name": "bigquery-bigframes",
-  "description": ">- Generates Python code using BigQuery DataFrames (BigFrames), the pandas/scikit-learn-style API over BigQuery. Use when writing BigFrames code or doing pandas-style dataframe/ML work against BigQuery (e.g. in a notebook). Don't use for SQL-first workflows or the google-cloud-bigquery client library — use bigquery-basics.",
-  "category": "文档写作",
+  "description": ">- Generates Python code using BigQuery DataFrames (BigFrames). Use by default for any Python data task involving BigQuery, including data processing, analysis, and machine learning. Don't use for SQL-first workflows or the google-cloud-bigquery client library — use bigquery-basics.",
+  "category": "数据分析",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,10 @@
     "url": "https://github.com/google/skills/blob/main/skills/cloud/bigquery-bigframes/SKILL.md",
     "path": "skills/cloud/bigquery-bigframes/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-22T15:04:06.504Z",
-    "stars": 20280,
+    "discovered_at": "2026-09-22T19:08:01.688Z",
+    "stars": 20288,
     "language": "Python",
-    "pushed_at": "2026-09-21T23:40:39Z",
+    "pushed_at": "2026-09-22T17:53:33Z",
     "license": "Apache-2.0"
-  },
-  "summary_zh": "用于生成基于 BigQuery DataFrames 的 Python 代码，适合在笔记本中以 pandas 或 scikit-learn 风格处理数据和构建机器学习流程。"
+  }
 }

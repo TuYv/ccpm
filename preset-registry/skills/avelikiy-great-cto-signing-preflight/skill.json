@@ -1,0 +1,25 @@
+{
+  "id": "avelikiy-great-cto-signing-preflight",
+  "name": "signing-preflight",
+  "description": "Before the first commit of a session, check that commit signing will work — the key is loaded and unlocked — and ask the operator to unlock it once, up front, instead of discovering it after a hundred unsigned commits. Never disables signing silently, never re-signs history without asking. Use at the start of implementation work in a repo that signs commits (\"коммиты не подписаны\", \"ssh-keygen висит\", \"gpg failed to sign\"). Loaded by senior-dev, devops.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "avelikiy",
+  "install_path": ".claude/skills/signing-preflight/SKILL.md",
+  "source": {
+    "repo": "avelikiy/great_cto",
+    "url": "https://github.com/avelikiy/great_cto/blob/main/skills/signing-preflight/SKILL.md",
+    "path": "skills/signing-preflight/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-22T19:10:01.159Z",
+    "stars": 95,
+    "language": "JavaScript",
+    "pushed_at": "2026-09-22T16:03:42Z",
+    "license": "MIT"
+  }
+}

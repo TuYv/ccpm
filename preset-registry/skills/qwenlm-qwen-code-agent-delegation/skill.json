@@ -1,0 +1,25 @@
+{
+  "id": "qwenlm-qwen-code-agent-delegation",
+  "name": "agent-delegation",
+  "description": "Reference for briefing a subagent or a fork — what to put in the prompt, what not to delegate, and a worked example. Load before writing a delegation prompt; the Agent tool's own description carries the launch rules and the background-agent rules.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "QwenLM",
+  "install_path": ".claude/skills/agent-delegation/SKILL.md",
+  "source": {
+    "repo": "QwenLM/qwen-code",
+    "url": "https://github.com/QwenLM/qwen-code/blob/main/packages/core/src/skills/bundled/agent-delegation/SKILL.md",
+    "path": "packages/core/src/skills/bundled/agent-delegation/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-22T20:01:26.956Z",
+    "stars": 28068,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-22T19:16:20Z",
+    "license": "Apache-2.0"
+  }
+}

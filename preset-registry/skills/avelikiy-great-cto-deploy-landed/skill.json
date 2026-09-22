@@ -1,0 +1,25 @@
+{
+  "id": "avelikiy-great-cto-deploy-landed",
+  "name": "deploy-landed",
+  "description": "Prove a deploy landed — the served revision is the commit you meant, its env is present, and the product does its job — instead of trusting the deploy command's exit code. Also catches server drift before a pull or deploy. Use after any deploy, rollout, restart or server-side fix (\"задеплой\", \"выкати\", \"проверь на проде\", \"почему не обновилось\"). Loaded by devops, l3-support, infra-provisioner.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "avelikiy",
+  "install_path": ".claude/skills/deploy-landed/SKILL.md",
+  "source": {
+    "repo": "avelikiy/great_cto",
+    "url": "https://github.com/avelikiy/great_cto/blob/main/skills/deploy-landed/SKILL.md",
+    "path": "skills/deploy-landed/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-22T19:09:58.383Z",
+    "stars": 95,
+    "language": "JavaScript",
+    "pushed_at": "2026-09-22T16:03:42Z",
+    "license": "MIT"
+  }
+}
