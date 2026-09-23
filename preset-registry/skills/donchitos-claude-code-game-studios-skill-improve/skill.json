@@ -1,7 +1,7 @@
 {
   "id": "donchitos-claude-code-game-studios-skill-improve",
   "name": "skill-improve",
-  "description": "Improve a skill using a test-fix-retest loop. Runs static checks, proposes targeted fixes, rewrites the skill, re-tests, and keeps or reverts based on score change.",
+  "description": "Improve a skill via a test-fix-retest loop — static checks, targeted fixes, keep or revert on score change.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/Donchitos/Claude-Code-Game-Studios/blob/main/.claude/skills/skill-improve/SKILL.md",
     "path": ".claude/skills/skill-improve/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-23T01:30:19.718Z",
-    "stars": 25364,
+    "discovered_at": "2026-09-23T06:57:48.950Z",
+    "stars": 25366,
     "language": "Shell",
-    "pushed_at": "2026-05-21T23:33:07Z",
+    "pushed_at": "2026-09-23T03:13:45Z",
     "license": "MIT"
-  },
-  "summary_zh": "通过测试-修复-重测循环来打磨技能：先做静态检查，再针对性提改进建议并重写，最后根据评分决定保留还是回滚，适合需要持续迭代优化技能质量的场景。"
+  }
 }

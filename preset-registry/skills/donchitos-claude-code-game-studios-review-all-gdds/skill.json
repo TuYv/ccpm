@@ -1,7 +1,7 @@
 {
   "id": "donchitos-claude-code-game-studios-review-all-gdds",
   "name": "review-all-gdds",
-  "description": "Holistic cross-GDD consistency and game design review. Reads all system GDDs simultaneously and checks for contradictions between them, stale references, ownership conflicts, formula incompatibilities, and game design theory violations (dominant strategies, economic imbalance, cognitive overload, pillar drift). Run after all MVP GDDs are written, before architecture begins.",
+  "description": "Holistic cross-GDD review — contradictions between systems, dominant strategies, economic imbalance, cognitive overload, pillar drift.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/Donchitos/Claude-Code-Game-Studios/blob/main/.claude/skills/review-all-gdds/SKILL.md",
     "path": ".claude/skills/review-all-gdds/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-23T01:30:19.138Z",
-    "stars": 25364,
+    "discovered_at": "2026-09-23T06:57:48.257Z",
+    "stars": 25366,
     "language": "Shell",
-    "pushed_at": "2026-05-21T23:33:07Z",
+    "pushed_at": "2026-09-23T03:13:45Z",
     "license": "MIT"
-  },
-  "summary_zh": "在多个系统GDD写完、进入架构设计前用一次，一次性读取所有文档，找出彼此之间的矛盾、过时引用、归属冲突、公式冲突，以及主导策略、经济失衡、认知超载等游戏设计层面的问题。"
+  }
 }

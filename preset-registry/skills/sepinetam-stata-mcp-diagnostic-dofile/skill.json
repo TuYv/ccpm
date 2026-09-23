@@ -1,0 +1,25 @@
+{
+  "id": "sepinetam-stata-mcp-diagnostic-dofile",
+  "name": "diagnostic-dofile",
+  "description": "| Use this skill when the user needs to inspect, audit, or diagnose the safety of a Stata do-file. Typical scenarios include: uncertainty about whether a .do file is safe; receiving a complete do-file from an unofficial source (not the Stata website, not a well-known academic institution or professor's official site); asking to check a batch of do-files; or requesting a read-only security/risk/portability diagnostic report. The skill does not modify the original file; it only emits a JSON report",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "SepineTam",
+  "install_path": ".claude/skills/diagnostic-dofile/SKILL.md",
+  "source": {
+    "repo": "SepineTam/stata-mcp",
+    "url": "https://github.com/SepineTam/stata-mcp/blob/master/plugins/stata-toolbox/skills/diagnostic-dofile/SKILL.md",
+    "path": "plugins/stata-toolbox/skills/diagnostic-dofile/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-09-23T06:13:47.764Z",
+    "stars": 260,
+    "language": "Python",
+    "pushed_at": "2026-09-23T03:18:26Z",
+    "license": "AGPL-3.0"
+  }
+}

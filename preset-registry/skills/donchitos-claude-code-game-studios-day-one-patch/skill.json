@@ -1,7 +1,7 @@
 {
   "id": "donchitos-claude-code-game-studios-day-one-patch",
   "name": "day-one-patch",
-  "description": "Prepare a day-one patch for a game launch. Scopes, prioritises, implements, and QA-gates a focused patch addressing known issues discovered after gold master but before or immediately after public launch. Treats the patch as a mini-sprint with its own QA gate and rollback plan.",
+  "description": "Day-one launch patch — focused fix for known issues found after gold master. Mini-sprint with QA gate and rollback.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/Donchitos/Claude-Code-Game-Studios/blob/main/.claude/skills/day-one-patch/SKILL.md",
     "path": ".claude/skills/day-one-patch/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-23T01:30:15.510Z",
-    "stars": 25364,
+    "discovered_at": "2026-09-23T06:57:44.721Z",
+    "stars": 25366,
     "language": "Shell",
-    "pushed_at": "2026-05-21T23:33:07Z",
+    "pushed_at": "2026-09-23T03:13:45Z",
     "license": "MIT"
-  },
-  "summary_zh": "为游戏首发当天的补丁打理全流程，从问题梳理、优先级排序到实现和质量把关，按小型冲刺方式推进，还配套回滚预案，适合金盘后到上线前后这段紧张窗口期使用。"
+  }
 }

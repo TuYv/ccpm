@@ -1,7 +1,7 @@
 {
   "id": "donchitos-claude-code-game-studios-consistency-check",
   "name": "consistency-check",
-  "description": "Scan all GDDs against the entity registry to detect cross-document inconsistencies: same entity with different stats, same item with different values, same formula with different variables. Grep-first approach — reads registry then targets only conflicting GDD sections rather than full document reads.",
+  "description": "Scan GDDs against the entity registry for cross-document conflicts. Grep-first approach targets conflicting sections, different stats.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/Donchitos/Claude-Code-Game-Studios/blob/main/.claude/skills/consistency-check/SKILL.md",
     "path": ".claude/skills/consistency-check/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-23T01:30:14.574Z",
-    "stars": 25364,
+    "discovered_at": "2026-09-23T06:57:43.913Z",
+    "stars": 25366,
     "language": "Shell",
-    "pushed_at": "2026-05-21T23:33:07Z",
+    "pushed_at": "2026-09-23T03:13:45Z",
     "license": "MIT"
-  },
-  "summary_zh": "用于扫描多份游戏设计文档，对照实体注册表找出跨文档的数据冲突，比如同一实体属性不一致、同一道具数值不同或同一公式变量有差异，采用先grep再精准定位的方式，避免全文通读，适合维护大型GDD体系时的一致性核查。"
+  }
 }

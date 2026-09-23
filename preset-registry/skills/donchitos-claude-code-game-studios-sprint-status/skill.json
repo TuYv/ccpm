@@ -1,7 +1,7 @@
 {
   "id": "donchitos-claude-code-game-studios-sprint-status",
   "name": "sprint-status",
-  "description": "Fast sprint status check. Reads the current sprint plan, scans story files for status, and produces a concise progress snapshot with burndown assessment and emerging risks. Run at any time during a sprint for quick situational awareness. Use when user asks 'how is the sprint going', 'sprint update', 'show sprint progress'.",
+  "description": "Fast, concise sprint snapshot — burndown and emerging risks for situational awareness. 'How is the sprint going?'",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/Donchitos/Claude-Code-Game-Studios/blob/main/.claude/skills/sprint-status/SKILL.md",
     "path": ".claude/skills/sprint-status/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-23T01:30:20.407Z",
-    "stars": 25364,
+    "discovered_at": "2026-09-23T06:57:49.608Z",
+    "stars": 25366,
     "language": "Shell",
-    "pushed_at": "2026-05-21T23:33:07Z",
+    "pushed_at": "2026-09-23T03:13:45Z",
     "license": "MIT"
-  },
-  "summary_zh": "快速查看当前冲刺进度的小工具，自动读取冲刺计划和故事文件状态，生成简明的进度快照、燃尽评估和潜在风险提示，方便随时了解团队推进情况。"
+  }
 }

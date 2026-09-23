@@ -1,7 +1,7 @@
 {
   "id": "donchitos-claude-code-game-studios-patch-notes",
   "name": "patch-notes",
-  "description": "Generate player-facing patch notes from git history, sprint data, and internal changelogs. Translates developer language into clear, engaging player communication.",
+  "description": "Player-facing patch notes from git history and changelogs. Translates developer language into player communication.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/Donchitos/Claude-Code-Game-Studios/blob/main/.claude/skills/patch-notes/SKILL.md",
     "path": ".claude/skills/patch-notes/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-23T01:30:17.378Z",
-    "stars": 25364,
+    "discovered_at": "2026-09-23T06:57:46.523Z",
+    "stars": 25366,
     "language": "Shell",
-    "pushed_at": "2026-05-21T23:33:07Z",
+    "pushed_at": "2026-09-23T03:13:45Z",
     "license": "MIT"
-  },
-  "summary_zh": "把 git 提交、迭代记录和内部变更日志自动转写成面向玩家的更新公告，让晦涩的开发术语变成清晰好读的版本说明，适合游戏团队发版时用。"
+  }
 }

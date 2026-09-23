@@ -1,7 +1,7 @@
 {
   "id": "donchitos-claude-code-game-studios-create-control-manifest",
   "name": "create-control-manifest",
-  "description": "After architecture is complete, produces a flat actionable rules sheet for programmers — what you must do, what you must never do, per system and per layer. Extracted from all Accepted ADRs, technical preferences, and engine reference docs. More immediately actionable than ADRs (which explain why).",
+  "description": "Flat must-do/never-do rules sheet per system and layer, extracted from Accepted ADRs. ADRs explain why; this is actionable.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/Donchitos/Claude-Code-Game-Studios/blob/main/.claude/skills/create-control-manifest/SKILL.md",
     "path": ".claude/skills/create-control-manifest/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-23T01:30:15.011Z",
-    "stars": 25364,
+    "discovered_at": "2026-09-23T06:57:44.294Z",
+    "stars": 25366,
     "language": "Shell",
-    "pushed_at": "2026-05-21T23:33:07Z",
+    "pushed_at": "2026-09-23T03:13:45Z",
     "license": "MIT"
-  },
-  "summary_zh": "在架构定稿后，把所有已通过的 ADR、技术偏好和引擎文档整理成一份扁平的开发规则清单，分系统、分层列出该做什么、不该做什么，比 ADR 更直接好用，方便程序员照着落地。"
+  }
 }

@@ -1,7 +1,7 @@
 {
   "id": "donchitos-claude-code-game-studios-dev-story",
   "name": "dev-story",
-  "description": "Read a story file and implement it. Loads the full context (story, GDD requirement, ADR guidelines, control manifest), routes to the right programmer agent for the system and engine, implements the code and test, and confirms each acceptance criterion. The core implementation skill — run after /story-readiness, before /code-review and /story-done.",
+  "description": "Implement a story: ADR guidelines, right programmer agent, code plus test. After /story-readiness, before /code-review and /story-done.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/Donchitos/Claude-Code-Game-Studios/blob/main/.claude/skills/dev-story/SKILL.md",
     "path": ".claude/skills/dev-story/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-23T01:30:15.955Z",
-    "stars": 25364,
+    "discovered_at": "2026-09-23T06:57:45.156Z",
+    "stars": 25366,
     "language": "Shell",
-    "pushed_at": "2026-05-21T23:33:07Z",
+    "pushed_at": "2026-09-23T03:13:45Z",
     "license": "MIT"
-  },
-  "summary_zh": "读取故事文件并自动落地实现，串联需求文档、架构指南和控制清单，把任务派给对应的程序员智能体来写代码和测试，并逐条核对验收标准，适合在故事就绪检查后、代码评审前的开发环节使用。"
+  }
 }

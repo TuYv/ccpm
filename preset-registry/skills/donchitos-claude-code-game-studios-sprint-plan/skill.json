@@ -1,7 +1,7 @@
 {
   "id": "donchitos-claude-code-game-studios-sprint-plan",
   "name": "sprint-plan",
-  "description": "Generates a new sprint plan or updates an existing one based on the current milestone, completed work, and available capacity. Pulls context from production documents and design backlogs.",
+  "description": "New or updated sprint plan from the current milestone, completed work, and available capacity.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/Donchitos/Claude-Code-Game-Studios/blob/main/.claude/skills/sprint-plan/SKILL.md",
     "path": ".claude/skills/sprint-plan/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-23T01:30:20.283Z",
-    "stars": 25364,
+    "discovered_at": "2026-09-23T06:57:49.476Z",
+    "stars": 25366,
     "language": "Shell",
-    "pushed_at": "2026-05-21T23:33:07Z",
+    "pushed_at": "2026-09-23T03:13:45Z",
     "license": "MIT"
-  },
-  "summary_zh": "根据当前里程碑、已完成工作和可用产能，自动生成或更新冲刺计划，并结合产品文档与设计待办，帮敏捷团队省去手动整理排期的麻烦。"
+  }
 }

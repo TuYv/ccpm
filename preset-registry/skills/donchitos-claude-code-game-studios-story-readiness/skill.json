@@ -1,7 +1,7 @@
 {
   "id": "donchitos-claude-code-game-studios-story-readiness",
   "name": "story-readiness",
-  "description": "Validate that a story file is implementation-ready. Checks for embedded GDD requirements, ADR references, engine notes, clear acceptance criteria, and no open design questions. Produces READY / NEEDS WORK / BLOCKED verdict with specific gaps. Use when user says 'is this story ready', 'can I start on this story', 'is story X ready to implement'.",
+  "description": "Is a story implementation-ready? Checks clear acceptance criteria, open questions, ADR refs. READY/NEEDS WORK/BLOCKED/NOT ASSESSED.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/Donchitos/Claude-Code-Game-Studios/blob/main/.claude/skills/story-readiness/SKILL.md",
     "path": ".claude/skills/story-readiness/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-23T01:30:20.857Z",
-    "stars": 25364,
+    "discovered_at": "2026-09-23T06:57:49.987Z",
+    "stars": 25366,
     "language": "Shell",
-    "pushed_at": "2026-05-21T23:33:07Z",
+    "pushed_at": "2026-09-23T03:13:45Z",
     "license": "MIT"
-  },
-  "summary_zh": "用来检查一份用户故事是否真的可以动工，自动核对需求文档、架构决策、引擎说明和验收标准是否齐全，给出「可做/待完善/受阻」的结论并指出缺漏，适合开发前的最后一道把关。"
+  }
 }

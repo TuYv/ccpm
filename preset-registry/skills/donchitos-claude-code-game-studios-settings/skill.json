@@ -1,0 +1,25 @@
+{
+  "id": "donchitos-claude-code-game-studios-settings",
+  "name": "settings",
+  "description": "View or change project config — effective merged values, or set locally in project.local.yaml.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Donchitos",
+  "install_path": ".claude/skills/settings/SKILL.md",
+  "source": {
+    "repo": "Donchitos/Claude-Code-Game-Studios",
+    "url": "https://github.com/Donchitos/Claude-Code-Game-Studios/blob/main/.claude/skills/settings/SKILL.md",
+    "path": ".claude/skills/settings/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-23T06:57:48.682Z",
+    "stars": 25366,
+    "language": "Shell",
+    "pushed_at": "2026-09-23T03:13:45Z",
+    "license": "MIT"
+  }
+}

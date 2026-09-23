@@ -1,7 +1,7 @@
 {
   "id": "donchitos-claude-code-game-studios-bug-triage",
   "name": "bug-triage",
-  "description": "Read all open bugs in production/qa/bugs/, re-evaluate priority vs. severity, assign to sprints, surface systemic trends, and produce a triage report. Run at sprint start or when the bug count grows enough to need re-prioritization.",
+  "description": "Re-evaluate open bugs — priority vs severity, assign to sprints, surface systemic trends. Run when the count grows.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/Donchitos/Claude-Code-Game-Studios/blob/main/.claude/skills/bug-triage/SKILL.md",
     "path": ".claude/skills/bug-triage/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-23T01:30:14.155Z",
-    "stars": 25364,
+    "discovered_at": "2026-09-23T06:57:43.501Z",
+    "stars": 25366,
     "language": "Shell",
-    "pushed_at": "2026-05-21T23:33:07Z",
+    "pushed_at": "2026-09-23T03:13:45Z",
     "license": "MIT"
-  },
-  "summary_zh": "自动梳理生产环境的未处理缺陷，重新评估优先级和严重程度，分配到迭代中并汇总成报告，适合在迭代启动或缺陷堆积时快速理清头绪。"
+  }
 }

@@ -1,7 +1,7 @@
 {
   "id": "donchitos-claude-code-game-studios-soak-test",
   "name": "soak-test",
-  "description": "Generate a soak test protocol for extended play sessions. Defines what to observe, measure, and log during long play sessions to surface slow leaks, fatigue effects, and edge cases that only appear after sustained play. Primarily used in Polish and Release phases.",
+  "description": "Soak test protocol for extended play — what to observe and log for slow leaks, fatigue, late-appearing edge cases.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/Donchitos/Claude-Code-Game-Studios/blob/main/.claude/skills/soak-test/SKILL.md",
     "path": ".claude/skills/soak-test/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-23T01:30:20.158Z",
-    "stars": 25364,
+    "discovered_at": "2026-09-23T06:57:49.350Z",
+    "stars": 25366,
     "language": "Shell",
-    "pushed_at": "2026-05-21T23:33:07Z",
+    "pushed_at": "2026-09-23T03:13:45Z",
     "license": "MIT"
-  },
-  "summary_zh": "用于制定长时间游戏测试方案，帮助开发者发现短时测试难以暴露的内存泄漏、性能衰减和长期运行下的边缘问题，适合打磨和发布阶段做稳定性验证。"
+  }
 }

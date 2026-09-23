@@ -1,7 +1,7 @@
 {
   "id": "donchitos-claude-code-game-studios-architecture-review",
   "name": "architecture-review",
-  "description": "Validates completeness and consistency of the project architecture against all GDDs. Builds a traceability matrix mapping every GDD technical requirement to ADRs, identifies coverage gaps, detects cross-ADR conflicts, verifies engine compatibility consistency across all decisions, and produces a PASS/CONCERNS/FAIL verdict. The architecture equivalent of /design-review.",
+  "description": "Traceability matrix mapping GDD requirements to ADRs. Finds gaps, cross-ADR conflicts, engine compatibility. PASS/CONCERNS/NOT ASSESSED/FAIL.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/Donchitos/Claude-Code-Game-Studios/blob/main/.claude/skills/architecture-review/SKILL.md",
     "path": ".claude/skills/architecture-review/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-23T01:30:13.185Z",
-    "stars": 25364,
+    "discovered_at": "2026-09-23T06:57:41.537Z",
+    "stars": 25366,
     "language": "Shell",
-    "pushed_at": "2026-05-21T23:33:07Z",
+    "pushed_at": "2026-09-23T03:13:45Z",
     "license": "MIT"
-  },
-  "summary_zh": "用于检查项目架构与所有 GDD 是否完整一致的工具，会建立技术需求到 ADR 的追溯矩阵，找出覆盖缺口、ADR 之间的冲突以及引擎兼容性问题，最后给出通过、有顾虑或不通过的结论，适合在架构评审阶段使用。"
+  }
 }

@@ -1,7 +1,7 @@
 {
   "id": "donchitos-claude-code-game-studios-story-done",
   "name": "story-done",
-  "description": "End-of-story completion review. Reads the story file, verifies each acceptance criterion against the implementation, checks for GDD/ADR deviations, prompts code review, updates story status to Complete, and surfaces the next ready story from the sprint.",
+  "description": "End-of-story completion review — verifies each acceptance criterion, checks GDD/ADR deviations, prompts code review, updates status.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/Donchitos/Claude-Code-Game-Studios/blob/main/.claude/skills/story-done/SKILL.md",
     "path": ".claude/skills/story-done/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-23T01:30:20.732Z",
-    "stars": 25364,
+    "discovered_at": "2026-09-23T06:57:49.859Z",
+    "stars": 25366,
     "language": "Shell",
-    "pushed_at": "2026-05-21T23:33:07Z",
+    "pushed_at": "2026-09-23T03:13:45Z",
     "license": "MIT"
-  },
-  "summary_zh": "一款故事完成度审查工具，自动核对验收标准与实现是否一致、检查架构偏差并提示代码评审，完成后更新状态并推送下一个待办故事，适合敏捷迭代收尾环节使用。"
+  }
 }

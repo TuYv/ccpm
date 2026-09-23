@@ -1,7 +1,7 @@
 {
   "id": "donchitos-claude-code-game-studios-estimate",
   "name": "estimate",
-  "description": "Estimates task effort by analyzing complexity, dependencies, historical velocity, and risk factors. Produces a structured estimate with confidence levels.",
+  "description": "Estimate task effort from complexity, dependencies, velocity, risk. Structured estimate with confidence levels.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/Donchitos/Claude-Code-Game-Studios/blob/main/.claude/skills/estimate/SKILL.md",
     "path": ".claude/skills/estimate/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-23T01:30:16.092Z",
-    "stars": 25364,
+    "discovered_at": "2026-09-23T06:57:45.277Z",
+    "stars": 25366,
     "language": "Shell",
-    "pushed_at": "2026-05-21T23:33:07Z",
+    "pushed_at": "2026-09-23T03:13:45Z",
     "license": "MIT"
-  },
-  "summary_zh": "通过分析复杂度、依赖关系、历史速度和风险因素，给任务估算工作量，并给出带置信度的结构化结果，适合项目排期和迭代规划时参考。"
+  }
 }

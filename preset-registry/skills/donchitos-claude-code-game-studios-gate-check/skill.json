@@ -1,7 +1,7 @@
 {
   "id": "donchitos-claude-code-game-studios-gate-check",
   "name": "gate-check",
-  "description": "Validate readiness to advance between development phases. Produces a PASS/CONCERNS/FAIL verdict with specific blockers and required artifacts. Use when user says 'are we ready to move to X', 'can we advance to production', 'check if we can start the next phase', 'pass the gate'.",
+  "description": "Ready to advance between development phases? PASS/CONCERNS/NOT ASSESSED/FAIL with blockers and required artifacts. 'Can we move to production?'",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/Donchitos/Claude-Code-Game-Studios/blob/main/.claude/skills/gate-check/SKILL.md",
     "path": ".claude/skills/gate-check/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-23T01:30:16.221Z",
-    "stars": 25364,
+    "discovered_at": "2026-09-23T06:57:45.419Z",
+    "stars": 25366,
     "language": "Shell",
-    "pushed_at": "2026-05-21T23:33:07Z",
+    "pushed_at": "2026-09-23T03:13:45Z",
     "license": "MIT"
-  },
-  "summary_zh": "用来判断项目是否具备进入下一开发阶段的条件，会给出通过、存疑或不通过的结论，并列出阻碍项和缺失的交付物，适合在准备上线或推进里程碑前做把关。"
+  }
 }

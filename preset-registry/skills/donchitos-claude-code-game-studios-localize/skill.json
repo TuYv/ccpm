@@ -1,8 +1,8 @@
 {
   "id": "donchitos-claude-code-game-studios-localize",
   "name": "localize",
-  "description": "Full localization pipeline: scan for hardcoded strings, extract and manage string tables, validate translations, generate translator briefings, run cultural/sensitivity review, manage VO localization, test RTL/platform requirements, enforce string freeze, and report coverage.",
-  "category": "测试调试",
+  "description": "Localization pipeline — find hardcoded strings, extract string tables, cultural review, VO, RTL, enforce string freeze.",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,10 @@
     "url": "https://github.com/Donchitos/Claude-Code-Game-Studios/blob/main/.claude/skills/localize/SKILL.md",
     "path": ".claude/skills/localize/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-23T01:30:16.789Z",
-    "stars": 25364,
+    "discovered_at": "2026-09-23T06:57:45.961Z",
+    "stars": 25366,
     "language": "Shell",
-    "pushed_at": "2026-05-21T23:33:07Z",
+    "pushed_at": "2026-09-23T03:13:45Z",
     "license": "MIT"
-  },
-  "summary_zh": "一套完整的本地化流程工具，能扫描代码里的硬编码文案、抽取并管理字符串表、校验译文质量、生成译员说明，还支持文化敏感审查、配音本地化、RTL 和多平台测试，适合需要规范多语言发布流程的团队。"
+  }
 }
