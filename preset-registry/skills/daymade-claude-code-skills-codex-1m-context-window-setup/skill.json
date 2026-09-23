@@ -1,7 +1,7 @@
 {
   "id": "daymade-claude-code-skills-codex-1m-context-window-setup",
   "name": "codex-1m-context-window-setup",
-  "description": ">- Configures and verifies an expanded, model-aware context window for OpenAI Codex CLI and Codex Desktop by safely updating the shared base config. Use whenever Codex shows about 258K context, the user asks for 500K or 1M context, auto-compaction happens too often, model_context_window or model_auto_compact_token_limit needs repair, or a workstation/classroom needs the same long-context setup across macOS and Windows. Detects the selected model's live maximum, requests up to 1M tokens, sets com",
+  "description": ">- Configures and verifies an expanded, model-aware context window for OpenAI Codex CLI and Desktop. Use when Codex shows ~258K context, you want 500K or 1M tokens, auto-compaction fires too often, or model_context_window/model_auto_compact_token_limit needs repair. Not for changing the selected model or other Codex settings.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-codex/codex-1m-context-window-setup/SKILL.md",
     "path": "daymade-codex/codex-1m-context-window-setup/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-23T17:58:47.196Z",
+    "discovered_at": "2026-09-23T21:23:12.979Z",
     "stars": 1425,
     "language": "Python",
-    "pushed_at": "2026-09-23T17:56:25Z",
+    "pushed_at": "2026-09-23T20:13:48Z",
     "license": "MIT"
-  },
-  "summary_zh": "这是一个为 OpenAI Codex CLI 和桌面端配置长上下文的工具，可修复上下文上限与频繁自动压缩问题，并统一 macOS、Windows 的 50 万至 100 万 token 设置。"
+  }
 }

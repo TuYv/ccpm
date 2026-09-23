@@ -1,7 +1,7 @@
 {
   "id": "daymade-claude-code-skills-cli-demo-generator",
   "name": "cli-demo-generator",
-  "description": "Generates professional animated CLI demos as GIFs using VHS terminal recordings. Handles tape file creation, self-bootstrapping demos with hidden setup, output noise filtering, post-processing speed-up, and frame-level verification. Use when users want to create terminal demos, record CLI workflows as GIFs, generate animated documentation, build demo tapes for README files, or need to showcase any command-line tool visually. Also triggers on \"record terminal\", \"VHS tape\", \"demo GIF\", \"animate my",
+  "description": ">- Generates professional animated CLI demos as GIFs using VHS terminal recordings. Use to create terminal demos, record CLI workflows as GIFs, generate animated documentation, build demo tapes for README files, or showcase any command-line tool visually: record terminal / VHS tape / demo GIF / animate my CLI.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/daymade/claude-code-skills/blob/main/cli-demo-generator/SKILL.md",
     "path": "cli-demo-generator/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-23T17:58:41.665Z",
+    "discovered_at": "2026-09-23T21:23:08.333Z",
     "stars": 1425,
     "language": "Python",
-    "pushed_at": "2026-09-23T17:56:25Z",
+    "pushed_at": "2026-09-23T20:13:48Z",
     "license": "MIT"
-  },
-  "summary_zh": "通过终端录制自动生成专业的 CLI 动画 GIF，适合制作 README 演示、命令行教程和可视化文档。"
+  }
 }

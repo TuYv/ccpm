@@ -1,7 +1,7 @@
 {
   "id": "daymade-claude-code-skills-continue-claude-code-work",
   "name": "continue-claude-code-work",
-  "description": ">- Continues interrupted Claude Code work only after local history has been read and reconciled. Use when the user provides a Claude Code Session ID, asks to pick up prior Claude work, says a Claude run was interrupted or compacted, or wants the current Agent to take over without `claude --resume`. Reconstructs the original business outcome, unfulfilled requests, user corrections, successful prior assets, current workspace truth, and the next action that directly advances the goal. For Codex ses",
+  "description": ">- Continues interrupted Claude Code work after local history is read and reconciled — reconstructs the original outcome, unfulfilled requests, and the next action. Use when given a Claude Code Session ID, asked to pick up prior Claude work, told a run was interrupted or compacted, or asked to take over without `claude --resume`. Not for Codex sessions (use continue-codex-work).",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-claude-code/continue-claude-code-work/SKILL.md",
     "path": "daymade-claude-code/continue-claude-code-work/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-23T17:58:44.844Z",
+    "discovered_at": "2026-09-23T21:23:11.086Z",
     "stars": 1425,
     "language": "Python",
-    "pushed_at": "2026-09-23T17:56:25Z",
+    "pushed_at": "2026-09-23T20:13:48Z",
     "license": "MIT"
-  },
-  "summary_zh": "用于读取并还原本地历史，接续被中断或压缩的 Claude Code 工作，适合跨会话交接和恢复任务上下文。"
+  }
 }

@@ -1,7 +1,7 @@
 {
   "id": "daymade-claude-code-skills-statusline-generator",
   "name": "statusline-generator",
-  "description": "> Installs, configures, customizes, or troubleshoots the Claude Code statusline (cwd, model, token counts). Use when the user wants to set up or change the statusline, switch minimal vs full layouts, show absolute token counts (e.g. ctx 108K / 1M) instead of a percentage, add cost via ccusage or git status, dump the stdin JSON Claude Code passes the script, or fix a statusline that is blank, silent, stuck, shows \"permission denied\", or stopped updating after a script edit (often a missing chmod ",
+  "description": ">- Installs, configures, customizes, or troubleshoots the Claude Code statusline (cwd, model, token counts). Use when the user wants to set up or change the statusline, switch minimal vs full layouts, show absolute token counts instead of a percentage, add cost via ccusage, or fix a statusline that is blank, silent, stuck, or stopped updating. Trigger phrases: 状态栏, 状态栏不显示, 状态栏空白, \"statusline blank\", \"statusline broken\".",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-claude-code/statusline-generator/SKILL.md",
     "path": "daymade-claude-code/statusline-generator/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-23T17:58:46.620Z",
+    "discovered_at": "2026-09-23T21:23:12.525Z",
     "stars": 1425,
     "language": "Python",
-    "pushed_at": "2026-09-23T17:56:25Z",
+    "pushed_at": "2026-09-23T20:13:48Z",
     "license": "MIT"
-  },
-  "summary_zh": "用于配置和排查 Claude Code 状态栏，适合展示目录、模型、Token、成本及 Git 信息，或修复空白、卡住和权限问题。"
+  }
 }

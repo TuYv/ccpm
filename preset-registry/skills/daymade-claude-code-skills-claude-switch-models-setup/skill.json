@@ -1,7 +1,7 @@
 {
   "id": "daymade-claude-code-skills-claude-switch-models-setup",
   "name": "claude-switch-models-setup",
-  "description": ">- Set up and maintain multiple isolated Claude Code CLI profiles so students and power users can run different LLM providers (Kimi K3, Kimi K2.7 highspeed, MiniMax M3, MiniMax M2.7, GLM, DeepSeek, StepFun, Anthropic) in separate terminal windows at the same time. Use this skill whenever the user asks about multi-provider Claude setup, multiple Claude Code windows, switching models or the csk/csd/csg aliases, CLAUDE_CONFIG_DIR, the ~/.claude-profiles directory, or running Kimi/MiniMax/GLM/DeepSe",
+  "description": ">- Sets up and maintains isolated Claude Code CLI profiles to run Kimi, MiniMax, DeepSeek, GLM, StepFun or Anthropic in separate terminal windows. Use for multi-provider setup, switching models, csk/csd/csg aliases, CLAUDE_CONFIG_DIR, or ~/.claude-profiles. Owns profile-drift troubleshooting (missing skills/hooks, symlink drift, settings drift) and context-window setup ([1m] marker vs CLAUDE_CODE_MAX_CONTEXT_TOKENS).",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-claude-code/claude-switch-models-setup/SKILL.md",
     "path": "daymade-claude-code/claude-switch-models-setup/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-23T17:58:44.460Z",
+    "discovered_at": "2026-09-23T21:23:10.792Z",
     "stars": 1425,
     "language": "Python",
-    "pushed_at": "2026-09-23T17:56:25Z",
+    "pushed_at": "2026-09-23T20:13:48Z",
     "license": "MIT"
-  },
-  "summary_zh": "用于配置和维护多个隔离的 Claude Code 环境，方便在不同终端同时切换并使用 Kimi、MiniMax、GLM 等模型。"
+  }
 }

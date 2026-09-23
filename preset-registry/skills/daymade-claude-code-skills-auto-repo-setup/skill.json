@@ -1,7 +1,7 @@
 {
   "id": "daymade-claude-code-skills-auto-repo-setup",
   "name": "auto-repo-setup",
-  "description": ">- Diagnose, repair, and standardize repository setup and safe Git workflows for Claude Code or Codex. Use when a repository will not run, a collaborator is onboarding, dependencies or credentials are missing, the user wants startup sync, SessionStart output is duplicated, project instructions or hooks need auditing, or commit/push/conflict/history-cleanup needs a guarded workflow. Route ordinary startup behavior through project instructions or a natural language request; use lifecycle hooks onl",
+  "description": ">- Diagnoses and repairs repository setup and guarded Git workflows for Claude Code or Codex — environment repair, startup sync, hook auditing, collaborator handoff. Use when a repo won't run, a teammate onboards, hook output duplicates, or commit/push/conflict needs guarding. Not for lost-commit recovery (use git-safety-net), GitHub ops (use github-ops), or history scrubbing (use github-sensitive-data-cleanup).",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/daymade/claude-code-skills/blob/main/auto-repo-setup/SKILL.md",
     "path": "auto-repo-setup/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-23T17:58:41.292Z",
+    "discovered_at": "2026-09-23T21:23:08.071Z",
     "stars": 1425,
     "language": "Python",
-    "pushed_at": "2026-09-23T17:56:25Z",
+    "pushed_at": "2026-09-23T20:13:48Z",
     "license": "MIT"
-  },
-  "summary_zh": "用于诊断、修复并规范代码仓库配置与 Git 流程，适合项目无法运行、协作接入或安全处理提交冲突等场景。"
+  }
 }

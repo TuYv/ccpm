@@ -1,7 +1,7 @@
 {
   "id": "daymade-claude-code-skills-macos-watchdog",
   "name": "macos-watchdog",
-  "description": ">- Design, deploy, and discipline macOS launchd watchdogs — LaunchAgents/LaunchDaemons that detect a recurring problem and auto-remediate it. Use whenever creating or editing a persistent background monitor / daemon / agent on macOS, writing a launchd plist, scheduling a self-healing script, or when a watchdog has become a disturbance itself: re-launching apps the user quit, firing repeated notifications, re-running its full repair ladder every few minutes on an unfixable network, or hammering t",
+  "description": ">- Designs and audits macOS launchd watchdogs. Use for LaunchAgent/LaunchDaemon setup, plist changes, scheduled self-healing, repeated notifications, apps reopening after quit, crash or repair loops hammering the Mac, or a watchdog alert shown as Script Editor. Covers stop/disable/restart, cooldown/backoff, notification throttling and alert decisions. 中文：launchd 守护进程、常驻任务、开机自启、后台监控、定时自愈、通知来源排查。",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-macos/macos-watchdog/SKILL.md",
     "path": "daymade-macos/macos-watchdog/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-23T17:58:51.912Z",
+    "discovered_at": "2026-09-23T21:23:17.241Z",
     "stars": 1425,
     "language": "Python",
-    "pushed_at": "2026-09-23T17:56:25Z",
+    "pushed_at": "2026-09-23T20:13:48Z",
     "license": "MIT"
-  },
-  "summary_zh": "用于设计、部署和约束 macOS 的 launchd 守护监控，在后台问题反复出现时自动修复，并避免监控自身反复拉起应用、刷通知或无休止重试。"
+  }
 }

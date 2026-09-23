@@ -1,7 +1,7 @@
 {
   "id": "daymade-claude-code-skills-local-codex",
   "name": "local-codex",
-  "description": "Launch and manage OpenAI Codex CLI (local agent) as a non-interactive coding sub-agent. Use when the user wants to delegate coding tasks to Codex, run code reviews, generate or refactor code, or use Codex GPT-5.5 agent capabilities through local CLI. Triggers on phrases like 'codex', 'run codex', 'codex exec', 'code review with codex', 'delegate to codex', 'use codex for coding', or any request to invoke the local Codex CLI agent. Uses ChatGPT Pro OAuth (flat-rate, no API charges) via ~/.codex/a",
+  "description": ">- Launches and manages the local OpenAI Codex CLI as a non-interactive coding sub-agent via ChatGPT Pro OAuth, never API keys. Use to delegate coding tasks to Codex, run codex exec, generate or refactor code, or get a Codex code review; phrases like 'codex', 'run codex', 'codex exec', 'delegate to codex'.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-codex/local-codex/SKILL.md",
     "path": "daymade-codex/local-codex/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-23T17:58:47.858Z",
+    "discovered_at": "2026-09-23T21:23:13.670Z",
     "stars": 1425,
     "language": "Python",
-    "pushed_at": "2026-09-23T17:56:25Z",
+    "pushed_at": "2026-09-23T20:13:48Z",
     "license": "MIT"
-  },
-  "summary_zh": "通过本地命令行启动和管理 Codex 编程代理，适合委派编码、代码审查、生成及重构任务。"
+  }
 }

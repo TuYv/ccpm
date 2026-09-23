@@ -1,7 +1,7 @@
 {
   "id": "daymade-claude-code-skills-developing-ios-apps",
   "name": "developing-ios-apps",
-  "description": "Develops iOS/macOS apps with XcodeGen, SwiftUI, and SPM, including Apple Developer signing, notarization, and CI/CD pipelines. Use when building iOS/macOS apps, fixing Xcode build failures, deploying to real devices, or configuring CI/CD signing. Triggers on XcodeGen project.yml, SPM dependency issues, code signing errors (Error -25294, keychain mismatch, adhoc fallback, EMFILE, notarization credential conflict), \"Library not loaded @rpath\", Electron @electron/osx-sign / @electron/notarize, nota",
+  "description": ">- Builds and ships iOS/macOS apps with XcodeGen, SwiftUI and SPM: Xcode build fixes, device deployment, Apple Developer signing/notarization, CI/CD pipelines. Use for XcodeGen project.yml setup, \"Library not loaded @rpath\" crashes, code-signing errors (Error -25294, adhoc fallback), or Electron notarization failures. Not for TCC permission dialogs (use macos-permissions) or disk cleanup (use macos-cleaner).",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-macos/developing-ios-apps/SKILL.md",
     "path": "daymade-macos/developing-ios-apps/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-23T17:58:51.397Z",
+    "discovered_at": "2026-09-23T21:23:16.812Z",
     "stars": 1425,
     "language": "Python",
-    "pushed_at": "2026-09-23T17:56:25Z",
+    "pushed_at": "2026-09-23T20:13:48Z",
     "license": "MIT"
-  },
-  "summary_zh": "用于开发和发布 iOS/macOS 应用，解决 Xcode 构建、依赖、签名、公证及 CI/CD 部署问题。"
+  }
 }

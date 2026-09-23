@@ -1,8 +1,8 @@
 {
   "id": "daymade-claude-code-skills-marketplace-dev",
   "name": "marketplace-dev",
-  "description": ">- Creates and maintains Claude Code plugin marketplaces, consolidates standalone skills into a new or existing suite, and moves skills between suites. Converts any Claude Code skills repository into an official plugin marketplace, generates spec-conforming .claude-plugin/marketplace.json, validates with `claude plugin validate`, tests real installation and cache boundaries, and PRs the upstream repo, encoding hard-won schema/version/description anti-patterns. Use when the user mentions marketpl",
-  "category": "测试调试",
+  "description": ">- Builds and maintains Claude Code plugin marketplaces: converts a skills repo to spec-valid marketplace.json, adds/updates plugin entries, and migrates skills into or between suites. Use for marketplace.json, plugin distribution, one-click install, or \"put these skills in a suite\". Not for repo health audits (use marketplace-health-check) or cache reconciliation (use skill-governance).",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,10 @@
     "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-claude-code/marketplace-dev/SKILL.md",
     "path": "daymade-claude-code/marketplace-dev/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-23T17:58:45.639Z",
+    "discovered_at": "2026-09-23T21:23:11.778Z",
     "stars": 1425,
     "language": "Python",
-    "pushed_at": "2026-09-23T17:56:25Z",
+    "pushed_at": "2026-09-23T20:13:48Z",
     "license": "MIT"
-  },
-  "summary_zh": "用于创建和维护 Claude Code 插件市场，整合或迁移技能套件，自动生成并校验配置、测试安装，适合将技能仓库规范化并提交上游。"
+  }
 }

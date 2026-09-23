@@ -1,7 +1,7 @@
 {
   "id": "daymade-claude-code-skills-read-claude-web-conversation",
   "name": "read-claude-web-conversation",
-  "description": ">- Read or export the COMPLETE transcript of a Claude.ai web conversation — both private claude.ai/chat/... and public claude.ai/share/... links — by calling Claude.ai's internal API from inside the user's logged-in Chrome, and download its FILES too (uploads, deliverables). Use whenever the user pastes a claude.ai conversation or share link and asks to read, summarize, export, archive, or extract it — \"read this Claude conversation\", \"导出这个网页版对话\", \"把这个对话拉到本地\". Every naive approach fails SILENTLY",
+  "description": ">- Reads or exports the COMPLETE transcript of a Claude.ai web conversation — private /chat/... and public /share/... links — via Claude.ai's internal API in the user's logged-in Chrome, plus its files. Use when the user pastes a claude.ai link and asks to read, summarize, export, archive, or extract it — \"读这个对话\", \"导出网页版对话\", \"拉到本地\". Local sessions: read-claude-code-history; exported files: claude-export-txt-better.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-claude-code/read-claude-web-conversation/SKILL.md",
     "path": "daymade-claude-code/read-claude-web-conversation/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-23T17:58:46.236Z",
+    "discovered_at": "2026-09-23T21:23:12.236Z",
     "stars": 1425,
     "language": "Python",
-    "pushed_at": "2026-09-23T17:56:25Z",
+    "pushed_at": "2026-09-23T20:13:48Z",
     "license": "MIT"
-  },
-  "summary_zh": "在已登录的 Chrome 中完整读取、导出并归档 Claude 网页对话及附件，适合处理私有聊天和公开分享链接。"
+  }
 }

@@ -1,7 +1,7 @@
 {
   "id": "daymade-claude-code-skills-bigdata-skill",
   "name": "bigdata-skill",
-  "description": ">- Pull Bigdata.com (RavenPack) financial and news data via the official `bigdata-client` SDK and `/v1/*` REST endpoints — structured financials, prices, analyst estimates, daily entity-sentiment series, annotated chunk search, screener — when the Bigdata MCP returns only pre-synthesized tearsheets but you need the machine-readable substrate. Use when the user mentions Bigdata.com, RavenPack, a `bd_v2_` key, the bigdata MCP, rp_entity_id, chunk/query_unit cost, or wants structured financials, fu",
+  "description": ">- Pulls Bigdata.com (RavenPack) financial and news data via the official bigdata-client SDK and /v1/* REST endpoints — structured financials, prices, analyst estimates, entity-sentiment series, annotated chunk search, screener. Use when the Bigdata MCP's tearsheets/search feel thin and you need the machine-readable substrate: mentions of Bigdata.com, RavenPack, a bd_v2_ key, rp_entity_id, or chunk/query_unit cost.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-financial/bigdata-skill/SKILL.md",
     "path": "daymade-financial/bigdata-skill/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-23T17:58:50.188Z",
+    "discovered_at": "2026-09-23T21:23:15.781Z",
     "stars": 1425,
     "language": "Python",
-    "pushed_at": "2026-09-23T17:56:25Z",
+    "pushed_at": "2026-09-23T20:13:48Z",
     "license": "MIT"
-  },
-  "summary_zh": "通过官方 SDK 和接口获取机器可读的金融与新闻数据，适合分析财报、行情、预期、市场情绪和检索结果。"
+  }
 }

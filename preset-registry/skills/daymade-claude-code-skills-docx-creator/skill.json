@@ -1,8 +1,8 @@
 {
   "id": "daymade-claude-code-skills-docx-creator",
   "name": "docx-creator",
-  "description": ">- Produce Word (.docx) and export existing Word/WPS manuscripts to PDF (Word 转 PDF / 试读版 / 排版修复), preserving revisions, tables and images. Especially for Chinese documents, drive minimax-skills:minimax-docx OpenXML correctly. Use whenever the deliverable is a .docx file: 生成 Word 文档 / 做一份 docx / 写合同 docx / 起草协议 / 正式文书 / 公文 / offer / 劳动合同 / 把 markdown 转成 Word / Word 排版 / 中文排版 / 签字栏 / 盖章版 / 甲方乙方, or any plain \"give me a Word file\" request. This skill adds the layer minimax-docx does not ship: a ve",
-  "category": "测试调试",
+  "description": ">- Produces Word (.docx) and exports existing Word/WPS manuscripts to PDF, preserving revisions, tables and images, especially Chinese formal documents via a verified OpenXML generator with mandatory visual verification. Use for 生成 Word 文档 / 写合同 docx / 把 markdown 转成 Word / 中文排版. Not for Markdown → PDF (use daymade-docs:pdf-creator).",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,10 @@
     "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-docs/docx-creator/SKILL.md",
     "path": "daymade-docs/docx-creator/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-23T17:58:48.458Z",
+    "discovered_at": "2026-09-23T21:23:14.240Z",
     "stars": 1425,
     "language": "Python",
-    "pushed_at": "2026-09-23T17:56:25Z",
+    "pushed_at": "2026-09-23T20:13:48Z",
     "license": "MIT"
-  },
-  "summary_zh": "用于生成和排版中文 Word 文档并导出 PDF，适合合同、公文、协议等正式文书，能保留修订、表格和图片。"
+  }
 }

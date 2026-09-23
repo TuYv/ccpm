@@ -1,7 +1,7 @@
 {
   "id": "daymade-claude-code-skills-stepfun-asr",
   "name": "stepfun-asr",
-  "description": "Transcribe audio with StepFun's stepaudio-3-asr-max — an SSE endpoint (NOT /v1/audio/transcriptions), single call handles long audio with no client-side chunking. Use when transcribing Chinese / English audio with StepFun, when long-form recordings (5-30 min) need to land in one request, when migrating from step-asr / step-asr-1.1 / stepaudio-2.5-asr, or when hitting the misleading `model stepaudio-3-asr-max not supported` error (which actually means wrong endpoint). Triggers on 阶跃 ASR, StepFun ",
+  "description": ">- Transcribes Chinese/English audio with StepFun's stepaudio-3-asr-max via its SSE endpoint (not /v1/audio/transcriptions) — one call handles long-form audio with no chunking. Use when migrating from step-asr/stepaudio-2.5-asr, or hitting the misleading \"model not supported\" error (actually wrong endpoint). Triggers on 阶跃 ASR, 语音识别. Not for TTS with the sibling model (use stepfun-tts).",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-audio/stepfun-asr/SKILL.md",
     "path": "daymade-audio/stepfun-asr/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-23T17:58:42.583Z",
+    "discovered_at": "2026-09-23T21:23:09.124Z",
     "stars": 1425,
     "language": "Python",
-    "pushed_at": "2026-09-23T17:56:25Z",
+    "pushed_at": "2026-09-23T20:13:48Z",
     "license": "MIT"
   }
 }

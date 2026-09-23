@@ -1,7 +1,7 @@
 {
   "id": "daymade-claude-code-skills-benchmark-due-diligence",
   "name": "benchmark-due-diligence",
-  "description": "> Runs adversarial due-diligence on a benchmark the user envies — a founder, KOL, company, or product whose claimed success looks inflated — splitting marketing bubble from real signal, then mapping the validated playbook onto the user's own resources. Use whenever the user wants to 尽调/对标/拆解 a competitor or role-model, 抄/偷师 someone's playbook, suspects 水分/泡沫 in their claims (#1 on Product Hunt, 0-to-1M users, funding, 估值几个亿), asks whether wins are 真本事 vs 运气/时机, or says someone is 太成功了/crushing i",
+  "description": ">- Runs adversarial due-diligence on a benchmark the user envies — a founder, KOL, company, or product whose success looks inflated — splitting marketing bubble from real signal, then mapping the validated playbook onto the user's own resources. Use for 尽调/对标/拆解 a competitor, 抄/偷师 their playbook, or suspecting 水分/泡沫 in claims. Prefer over deep-research when debunking inflated claims, not a neutral briefing.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-financial/benchmark-due-diligence/SKILL.md",
     "path": "daymade-financial/benchmark-due-diligence/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-23T17:58:50.012Z",
+    "discovered_at": "2026-09-23T21:23:15.615Z",
     "stars": 1425,
     "language": "Python",
-    "pushed_at": "2026-09-23T17:56:25Z",
+    "pushed_at": "2026-09-23T20:13:48Z",
     "license": "MIT"
-  },
-  "summary_zh": "一款用于对标尽调的分析工具，帮你拆穿竞品或榜样的营销水分，验证真实成功因素，并结合自身资源提炼可复用打法。"
+  }
 }
