@@ -1,7 +1,7 @@
 {
   "id": "alterlab-ieu-alterlab-academic-skills-alterlab-rnaseq-quant",
   "name": "alterlab-rnaseq-quant",
-  "description": "Quantifies bulk RNA-seq transcript abundance with salmon (v1.11.4 selective alignment) and kallisto (v0.52.0, kb-python workflow), builds a decoy-aware gentrome index, runs quant with --validateMappings --gcBias -l A, then imports estimates via tximport/tximeta with a tx2gene map and hands differential expression to alterlab-pydeseq2. Warns that salmon's index format changed to SSHash (rebuild pre-v1.11.2 indices) and that 'salmon alevin' was REMOVED (single-cell now uses piscem + alevin-fry). U",
+  "description": "Quantifies bulk RNA-seq transcript abundance with salmon 2.x (the Rust rewrite; selective alignment or --sketch) and kallisto (v0.52.0, kb-python workflow), builds a decoy-aware gentrome index, runs quant with --gcBias -l A, then imports estimates via tximport/tximeta with a tx2gene map and hands differential expression to alterlab-pydeseq2. Warns that salmon 2.0 cannot read C++/pufferfish indices (rebuild every index), that --validateMappings is now accepted-but-ignored, and that 'salmon alevin",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/AlterLab-IEU/AlterLab-Academic-Skills/blob/main/skills/bioinformatics/alterlab-rnaseq-quant/SKILL.md",
     "path": "skills/bioinformatics/alterlab-rnaseq-quant/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-23T07:09:03.619Z",
+    "discovered_at": "2026-09-23T12:43:48.362Z",
     "stars": 68,
     "language": "Python",
-    "pushed_at": "2026-09-04T13:48:46Z",
+    "pushed_at": "2026-09-23T12:42:56Z",
     "license": "MIT"
-  },
-  "summary_zh": "一套批量 RNA-seq 转录本定量流程，可生成可靠的基因表达量并衔接差异表达分析。"
+  }
 }

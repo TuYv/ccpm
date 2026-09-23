@@ -1,7 +1,7 @@
 {
   "id": "tencentcloudbase-cloudbase-ai-toolkit-cloudbase-platform",
   "name": "cloudbase-platform",
-  "description": "CloudBase platform overview and routing guide. This skill should be used when users need high-level capability selection, platform concepts, console navigation, or cross-platform best practices before choosing a more specific implementation skill.",
+  "description": "CloudBase platform overview and routing guide. This skill should be used when users need high-level capability selection, platform concepts, console navigation, realtime (broadcast / presence / live database changes), or cross-platform best practices before choosing a more specific implementation skill.",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/TencentCloudBase/CloudBase-AI-Toolkit/blob/main/config/source/skills/cloudbase-platform/SKILL.md",
     "path": "config/source/skills/cloudbase-platform/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-23T07:03:07.133Z",
-    "stars": 1122,
+    "discovered_at": "2026-09-23T12:37:27.423Z",
+    "stars": 1123,
     "language": "TypeScript",
-    "pushed_at": "2026-09-23T05:17:59Z",
+    "pushed_at": "2026-09-23T12:36:34Z",
     "license": "MIT"
-  },
-  "summary_zh": "面向云开发用户的平台概览与路由指南，帮助理解核心能力、选择合适方案并快速定位控制台功能。"
+  }
 }

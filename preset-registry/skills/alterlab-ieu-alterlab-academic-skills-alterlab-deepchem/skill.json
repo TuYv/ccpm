@@ -1,7 +1,7 @@
 {
   "id": "alterlab-ieu-alterlab-academic-skills-alterlab-deepchem",
   "name": "alterlab-deepchem",
-  "description": "Runs molecular machine learning with DeepChem — diverse featurizers, pre-built MoleculeNet benchmark datasets, and pre-trained models (ChemBERTa, GROVER) for property prediction (ADMET, toxicity, solubility) via traditional ML or graph neural networks. Use when running end-to-end molecular ML experiments that need MoleculeNet benchmarks, scaffold splitting, or ready-made models with minimal setup; for building custom PyTorch graph architectures prefer alterlab-torchdrug, and for standalone molec",
+  "description": "Runs molecular machine learning with DeepChem — diverse featurizers, pre-built MoleculeNet benchmark datasets, and pre-trained models (ChemBERTa, GROVER) for property prediction (ADMET, toxicity, solubility) via traditional ML or graph neural networks. Use when running end-to-end molecular ML experiments that need MoleculeNet benchmarks, scaffold splitting, or ready-made models with minimal setup; for building custom PyTorch graph architectures prefer alterlab-torch-geometric, and for standalone",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/AlterLab-IEU/AlterLab-Academic-Skills/blob/main/skills/cheminformatics/alterlab-deepchem/SKILL.md",
     "path": "skills/cheminformatics/alterlab-deepchem/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-23T07:09:05.024Z",
+    "discovered_at": "2026-09-23T12:43:49.823Z",
     "stars": 68,
     "language": "Python",
-    "pushed_at": "2026-09-04T13:48:46Z",
+    "pushed_at": "2026-09-23T12:42:56Z",
     "license": "MIT"
-  },
-  "summary_zh": "一个开箱即用的分子机器学习工具，适合快速完成ADMET、毒性、溶解度预测及MoleculeNet基准实验。"
+  }
 }

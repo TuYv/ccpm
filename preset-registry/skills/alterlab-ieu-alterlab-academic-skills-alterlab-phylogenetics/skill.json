@@ -1,7 +1,7 @@
 {
   "id": "alterlab-ieu-alterlab-academic-skills-alterlab-phylogenetics",
   "name": "alterlab-phylogenetics",
-  "description": "Build phylogenetic trees end-to-end from raw sequences — MAFFT multiple sequence alignment, optional TrimAl trimming, IQ-TREE 2 maximum-likelihood inference with model selection and bootstraps, FastTree for large datasets, then visualize with ETE3 or FigTree. Use when reconstructing trees from sequences (FASTA) for evolutionary analysis, microbial genomics, viral phylodynamics, protein-family studies, or molecular-clock dating. For manipulating/comparing an EXISTING Newick tree (prune, root, Rob",
+  "description": "Build phylogenetic trees end-to-end from raw sequences — MAFFT multiple sequence alignment, optional TrimAl trimming, IQ-TREE 3 maximum-likelihood inference with model selection and bootstraps, FastTree for large datasets, then visualize with ETE3 or FigTree. Use when reconstructing trees from sequences (FASTA) for evolutionary analysis, microbial genomics, viral phylodynamics, protein-family studies, or molecular-clock dating. For manipulating/comparing an EXISTING Newick tree (prune, root, Rob",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/AlterLab-IEU/AlterLab-Academic-Skills/blob/main/skills/bioinformatics/alterlab-phylogenetics/SKILL.md",
     "path": "skills/bioinformatics/alterlab-phylogenetics/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-23T07:09:02.481Z",
+    "discovered_at": "2026-09-23T12:43:47.192Z",
     "stars": 68,
     "language": "Python",
-    "pushed_at": "2026-09-04T13:48:46Z",
+    "pushed_at": "2026-09-23T12:42:56Z",
     "license": "MIT"
-  },
-  "summary_zh": "一套从原始序列自动完成比对、修剪、建树和可视化的流程，适合进化分析、微生物基因组及病毒传播研究。"
+  }
 }

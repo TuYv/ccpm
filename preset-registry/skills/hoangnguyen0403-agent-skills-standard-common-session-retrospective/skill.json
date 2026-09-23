@@ -1,7 +1,7 @@
 {
   "id": "hoangnguyen0403-agent-skills-standard-common-session-retrospective",
   "name": "common-session-retrospective",
-  "description": "Analyze conversation corrections to detect skill gaps and prepare targeted skill-library maintenance tasks. Use after any session with user corrections, rework, or retrospective requests. After finding correction loops, also load +common/common-learning-log to persist mistake entries to AGENTS_LEARNING.md.",
+  "description": "Review session corrections, trigger misses and recurring agent mistakes to propose targeted skill-library changes. Use for retrospective, rework or routing-gap analysis before registry edits; load +common/common-learning-log for redacted evidence.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/HoangNguyen0403/agent-skills-standard/blob/develop/.agents/skills/common/common-session-retrospective/SKILL.md",
     "path": ".agents/skills/common/common-session-retrospective/SKILL.md",
     "branch": "develop",
-    "discovered_at": "2026-09-23T07:02:16.643Z",
-    "stars": 571,
+    "discovered_at": "2026-09-23T12:36:30.898Z",
+    "stars": 570,
     "language": "TypeScript",
-    "pushed_at": "2026-09-23T06:26:06Z",
+    "pushed_at": "2026-09-23T10:53:40Z",
     "license": "MIT"
-  },
-  "summary_zh": "这是一个会话复盘工具，能从用户纠正和返工中识别能力缺口，生成技能库维护任务并沉淀错误记录。"
+  }
 }

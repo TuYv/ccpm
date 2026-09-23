@@ -1,7 +1,7 @@
 {
   "id": "alterlab-ieu-alterlab-academic-skills-alterlab-pyhealth",
   "name": "alterlab-pyhealth",
-  "description": "Develops, tests, and deploys clinical machine learning models with the PyHealth healthcare AI toolkit. Use when working with electronic health records (EHR), clinical prediction tasks (mortality, readmission, drug recommendation), medical coding systems (ICD, NDC, ATC), physiological signals (EEG, ECG), healthcare datasets (MIMIC-III/IV, eICU, OMOP), or implementing deep learning models for healthcare (RETAIN, SafeDrug, Transformer, GNN). Part of the AlterLab Academic Skills suite.",
+  "description": "Develops, tests, and validates clinical machine learning models with the PyHealth 2.x healthcare AI toolkit. Use when working with electronic health records (EHR), clinical prediction tasks (mortality, readmission, length of stay, drug recommendation), medical coding systems (ICD, NDC, ATC, CCS), physiological signals (EEG, ECG), healthcare datasets (MIMIC-III/IV, eICU, OMOP), or implementing deep learning models for healthcare (RETAIN, SafeDrug, GAMENet, Transformer, GAT/GCN). Part of the Alter",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/AlterLab-IEU/AlterLab-Academic-Skills/blob/main/skills/clinical-research/alterlab-pyhealth/SKILL.md",
     "path": "skills/clinical-research/alterlab-pyhealth/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-23T07:09:07.379Z",
+    "discovered_at": "2026-09-23T12:43:52.850Z",
     "stars": 68,
     "language": "Python",
-    "pushed_at": "2026-09-04T13:48:46Z",
+    "pushed_at": "2026-09-23T12:42:56Z",
     "license": "MIT"
-  },
-  "summary_zh": "基于医疗AI工具包开发、测试和部署临床机器学习模型，适合处理电子病历、临床预测、生理信号及医疗数据集。"
+  }
 }

@@ -1,7 +1,7 @@
 {
   "id": "alterlab-ieu-alterlab-academic-skills-alterlab-esm",
   "name": "alterlab-esm",
-  "description": "Run ESM protein language models — ESM3 for generative multimodal protein design across sequence, structure, and function, and ESM C for efficient embeddings and representations — locally or via the cloud Forge API. Use when working with protein sequences, structures, or function prediction, designing novel proteins, generating protein embeddings, performing inverse folding, or doing protein-engineering tasks. Part of the AlterLab Academic Skills suite.",
+  "description": "Run ESM protein language models — ESMC for embeddings and representations, ESMFold2 for structure prediction, and ESM3 for generative multimodal protein design across sequence, structure, and function — locally or through the hosted Biohub Platform API (formerly Forge). Use when working with protein sequences, structures, or function prediction, designing novel proteins, generating protein embeddings, performing inverse folding, or doing protein-engineering tasks. Part of the AlterLab Academic S",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/AlterLab-IEU/AlterLab-Academic-Skills/blob/main/skills/bioinformatics/alterlab-esm/SKILL.md",
     "path": "skills/bioinformatics/alterlab-esm/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-23T07:09:00.836Z",
+    "discovered_at": "2026-09-23T12:43:45.288Z",
     "stars": 68,
     "language": "Python",
-    "pushed_at": "2026-09-04T13:48:46Z",
+    "pushed_at": "2026-09-23T12:42:56Z",
     "license": "MIT"
-  },
-  "summary_zh": "用于本地或云端运行蛋白质语言模型，适合蛋白质设计、功能预测、嵌入生成、逆折叠及工程研究。"
+  }
 }

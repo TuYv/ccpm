@@ -1,7 +1,7 @@
 {
   "id": "alterlab-ieu-alterlab-academic-skills-alterlab-molfeat",
   "name": "alterlab-molfeat",
-  "description": "Featurizes molecules for machine learning with molfeat (100+ featurizers) — ECFP/MACCS/MAP4 fingerprints, RDKit and Mordred physicochemical descriptors, and pretrained embeddings (ChemBERTa, ChemGPT, GIN) exposed as scikit-learn transformers that convert SMILES into feature vectors. Use when turning molecules into ML-ready feature matrices for QSAR/QSPR or virtual screening, or benchmarking fingerprint against descriptor and embedding representations; for training models and MoleculeNet benchmar",
+  "description": "Featurizes molecules for machine learning with molfeat — ECFP/MACCS/MAP4 fingerprints, RDKit and Mordred physicochemical descriptors, pharmacophore and shape descriptors, and pretrained embeddings (ChemBERTa, ChemGPT, CheMeleon) exposed as scikit-learn transformers that convert SMILES into feature vectors. Use when turning molecules into ML-ready feature matrices for QSAR/QSPR or virtual screening, or benchmarking fingerprint against descriptor and embedding representations; for training models ",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/AlterLab-IEU/AlterLab-Academic-Skills/blob/main/skills/cheminformatics/alterlab-molfeat/SKILL.md",
     "path": "skills/cheminformatics/alterlab-molfeat/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-23T07:09:05.768Z",
+    "discovered_at": "2026-09-23T12:43:51.154Z",
     "stars": 68,
     "language": "Python",
-    "pushed_at": "2026-09-04T13:48:46Z",
+    "pushed_at": "2026-09-23T12:42:56Z",
     "license": "MIT"
-  },
-  "summary_zh": "将 SMILES 分子转换为机器学习特征向量的工具，适合 QSAR/QSPR、虚拟筛选及分子表征方案对比。"
+  }
 }

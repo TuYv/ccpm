@@ -8,135 +8,67 @@ disable-model-invocation: true
 # Implement with subagents
 
 Keep orchestration and implementation ownership separate: the controller
-schedules, and one implementation subagent owns each independent work item
-through completion. Keep changes that cannot validate apart in one item, accept
-its task-scoped commit before advancing, and return failed acceptance evidence
-to that same owner rather than repairing it in the controller or reassigning it.
+schedules, and one implementation subagent owns each work item through
+completion. Validate task dependencies before dispatch. Run only ready,
+independent tasks concurrently in isolated worktrees; integrate accepted commits
+in dependency order and recheck affected evidence at the integrated head. Use
+serial execution when safe isolation or capacity is unavailable. Return failed
+acceptance evidence to the same owner, never repair it in the controller.
 
-## Check The Prerequisite
+## Check the prerequisite
 
-Review mode has no external skill dependency. Implementation mode requires the
-`implement` skill from [Matt Pocock's skill set](https://github.com/mattpocock/skills),
-which is not bundled with this repository. Install it with
-`npx skills add mattpocock/skills`, selecting `implement`, `tdd`, and
-`code-review` as required by the current upstream contract. Never install it
-implicitly.
+Review mode has no external dependency. Implementation mode requires the
+`implement` skill from [Matt Pocock's skill set](https://github.com/mattpocock/skills).
+It is not bundled here. Never install it implicitly; report
+`npx skills add mattpocock/skills` and require the user to select `implement`,
+`tdd`, and `code-review` when it is absent.
 
 ## Select the mode
 
-- Use `review` only when the user asks to assess supplied orchestration without
-  running it.
-- Use `implement` when the user asks to execute the supplied tickets or plan
-  tasks.
+- Use `review` only to assess supplied orchestration without running it.
+- Use `implement` only to execute supplied tickets or plan tasks.
 
 ## Review procedure
 
-1. Inspect only the repository and supplied orchestration state that the user
-   permits. Do not start a subagent, edit files, create a commit, or contact a
-   remote service.
+1. Inspect only permitted repository and orchestration state. Do not start an
+   agent, edit, commit, or contact a remote service.
 2. Assess queue atomicity, dependency order, implementation ownership,
    task-scoped acceptance, repair ownership, and controller mutation boundaries.
-   Treat an already accepted item as complete rather than assigning it again.
-3. Report the next orchestration action, or that no action is needed, with the
-   evidence and any unresolved acceptance gap. Stop before the implementation
-   procedure.
+   Acceptance requires a task-scoped commit, independent inspection of its full
+   diff, and requested validation evidence before advancing. Return failed
+   acceptance to the same owner; reuse passing checks only when their inputs and
+   environment remain unchanged. An accepted item is complete, not assignable
+   again.
+3. Report the next action (or no action), evidence, and any acceptance gap. Stop
+   before implementation.
 
-## Implementation procedure
+## Implementation mode
 
-1. Read the repository instructions and inspect the current branch and worktree.
-   Preserve unrelated changes. Stop before delegation when a task-scoped commit
-   cannot be produced safely from the current state.
-2. Resolve and read the installed `implement` skill. Treat it as a required
-   dependency. If it is unavailable, stop before making changes. Report that it
-   comes from `mattpocock/skills`, provide
-   `npx skills add mattpocock/skills`, and state that the user must select
-   `implement`, `tdd`, and `code-review`. Never install them implicitly or
-   reproduce the procedure from memory.
-3. Build a dependency-ordered queue. Keep an unsplit request and its checklist
-   in one work item; group supplied items only when they cannot validate in
-   separate behavior-preserving commits.
-4. Process one item at a time. Record `HEAD` and the pre-existing worktree state
-   before each item; accept the preceding item before starting the next.
-5. Select one implementation-capable subagent using the runtime mapping below.
-   Verify that it can edit, run validation, create the task-scoped commit, and
-   continue the same owner session for repairs. Honour applicable user and
-   repository agent selections and configured models. If the required capability
-   is unavailable, stop and report the missing capability; do not install an
-   extension or fall back to controller implementation. If capacity is only
-   temporarily unavailable, wait. Spawn one owner and retain its session handle.
-   Give it explicit ownership of the work item and affected files, tell it that
-   other agents may be editing the codebase, and require it to preserve and
-   accommodate unrelated changes. Do not implement any part of the item in the
-   controller.
-6. Give that owner a decision-complete packet containing:
-   - the exact ticket or plan task and its acceptance criteria;
-   - the relevant specification and repository instructions;
-   - exclusive ownership of that work item on the current branch;
-   - the pre-existing worktree state that must be preserved;
-   - an instruction to invoke the installed `implement` skill; and
-   - an instruction to return the commit, the evidence required by the installed
-     `implement` skill's current finish contract, and any unresolved blocker.
-7. Wait for that owner before starting another. Do not split its implementation
-   across agents. If the result is incomplete, dirty, uncommitted, or fails a
-   required check, return the evidence to the same owner. Stop on a material
-   blocker it cannot resolve within the supplied contract.
-8. Independently accept the item before advancing; an owner's report is not
-   acceptance evidence. Verify:
-   - verify `HEAD` advanced by at least one task-scoped commit;
-   - inspect the complete commit range and diff from the recorded `HEAD` to the
-     current `HEAD` for the work item's acceptance criteria and scope;
-   - inspect the returned command, complete result, tested revision, and relevant
-     input and environment identity;
-   - reuse a requested check only when its complete evidence shows success,
-     the relevant environment remains unchanged, and neither the user nor
-     repository requires a fresh independent run. Also require either the tested
-     revision to equal current `HEAD`, or current `HEAD` to be a descendant of
-     the tested revision whose independently inspected diff leaves the check's
-     relevant inputs unchanged;
-   - repeat each affected check when its evidence is missing, failed, tied to an
-     unexplained older revision, affected by a changed relevant input, or subject
-     to an explicit freshness or independent-run requirement;
-   - confirm the returned evidence satisfies the installed `implement` skill's
-     current finish contract; and
-   - verify the task-owned diff is empty relative to the recorded pre-existing
-     state.
-9. After every repair, repeat the independent commit and diff inspection, then
-   reassess the evidence under step 8. Reuse only checks whose relevant inputs
-   and environment remain unchanged across the inspected descendant diff; repeat
-   affected checks. An unexplained older revision is stale evidence.
-   After the last accepted item, run any final user- or repository-required
-   verification. If a later action changes files, return them to their owner for
-   validation and commit.
+Before delegation, read
+[the implementation-mode procedure](references/implementation-mode.md)
+completely. It is mandatory for implementation mode and owns queue construction,
+runtime selection, owner packets, independent acceptance, integration, repairs,
+and final validation. Stop when its dependency, task-scoped commit, or
+capability gate cannot be satisfied; never implement an item in the controller.
 
 ## Runtime mapping
 
-Default implementation agents by runtime; apply the capability checks in step 5.
+Select an implementation-capable owner and apply the implementation procedure's
+capability checks:
 
 | Runtime | Implementation owner |
 | --- | --- |
 | [Codex](https://learn.chatgpt.com/docs/agent-configuration/subagents) | `worker` |
 | [Claude Code](https://code.claude.com/docs/en/sub-agents) | `general-purpose` |
-| [OpenCode](https://opencode.ai/docs/agents) | `general` subagent; `build` is a primary agent |
-| [Pi](https://github.com/earendil-works/pi/tree/main/packages/coding-agent) | No built-in subagent role. Inspect the installed delegation extension or package and its agent definitions. The upstream [example extension](https://github.com/earendil-works/pi/tree/main/packages/coding-agent/examples/extensions/subagent) supplies a sample `worker`, not a core role; verify same-session continuation before using it. |
-| Other runtimes | An exposed implementation-capable subagent that satisfies step 5 |
-
-## Ownership boundaries
-
-- Keep remote mutations with the controller unless the user explicitly grants
-  a different owner and repository instructions permit it.
-- Reuse the owning subagent for review repairs and follow-up checks; do not pay a
-  second context-transfer cost for the same item.
-- Use read-only helpers only when the owner needs genuinely independent
-  discovery. They do not edit, commit, or replace the implementation owner.
-- Never absorb another item's edits or pre-existing user changes into the
-  current owner's commit.
+| [OpenCode](https://opencode.ai/docs/agents) | `general` subagent; `build` is primary |
+| [Pi](https://github.com/earendil-works/pi/tree/main/packages/coding-agent) | No built-in role; inspect its delegation extension and agent definitions. A bare or non-resumable Pi cannot own an item: stop and report it. |
+| Other runtimes | An exposed implementation-capable subagent that passes the checks |
 
 ## Finish gate
 
-In `review`, finish only after reporting the non-mutating assessment, its
-evidence, and any acceptance gap without starting implementation. In
-`implement`, finish only when every queued item has a task-scoped, reviewed,
-verified commit, the final worktree matches the recorded pre-existing state,
-and no owner-reported blocker remains. Report the item-to-commit mapping and the
-final validation result. Otherwise finish blocked and name the first incomplete
-gate.
+In `review`, finish only with the non-mutating assessment, evidence, and any
+acceptance gap. In `implement`, finish only when every queued item has a
+task-scoped, reviewed, verified commit, the final worktree matches the recorded
+pre-existing state, and no owner-reported blocker remains. Report the
+item-to-commit mapping and final validation; otherwise finish blocked at the
+first incomplete gate.

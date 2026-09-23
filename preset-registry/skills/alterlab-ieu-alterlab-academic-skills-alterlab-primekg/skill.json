@@ -1,7 +1,7 @@
 {
   "id": "alterlab-ieu-alterlab-academic-skills-alterlab-primekg",
   "name": "alterlab-primekg",
-  "description": "Queries the Precision Medicine Knowledge Graph (PrimeKG) for multiscale biomedical relationships across genes, drugs, diseases, phenotypes, pathways, and biological processes. Use when exploring drug-disease or gene-disease links, building disease-centric knowledge subgraphs, or sourcing relations for drug repurposing and precision-medicine analyses. Part of the AlterLab Academic Skills suite.",
+  "description": "Queries the Precision Medicine Knowledge Graph (PrimeKG) for multiscale biomedical relationships across genes, drugs, diseases, phenotypes, pathways, and biological processes. Use when exploring drug-disease or gene-disease links, building disease-centric knowledge subgraphs, or sourcing relations for drug repurposing and precision-medicine analyses; also points to OptimusKG, the maintainers' successor graph, for new work. Part of the AlterLab Academic Skills suite.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/AlterLab-IEU/AlterLab-Academic-Skills/blob/main/skills/cheminformatics/alterlab-primekg/SKILL.md",
     "path": "skills/cheminformatics/alterlab-primekg/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-23T07:09:05.896Z",
+    "discovered_at": "2026-09-23T12:43:51.321Z",
     "stars": 68,
     "language": "Python",
-    "pushed_at": "2026-09-04T13:48:46Z",
+    "pushed_at": "2026-09-23T12:42:56Z",
     "license": "MIT"
-  },
-  "summary_zh": "用于查询精准医学知识图谱中的基因、药物与疾病等关联，适合构建疾病子图、探索潜在联系及开展药物重定位分析。"
+  }
 }
