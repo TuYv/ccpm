@@ -1,7 +1,7 @@
 {
   "id": "daymade-claude-code-skills-asr-transcribe-to-text",
   "name": "asr-transcribe-to-text",
-  "description": ">- Transcribe audio/video to speaker-labeled text — who-said-what by default, plain-text opt-out; MLX-local on Apple Silicon or remote; local files, media URLs. Use for transcribing recordings/podcasts/lectures/meetings, ASR, speech-to-text, 转录, 语音转文字, 录音转文字, speaker diarization/说话人分离/识别/谁在说话, timestamps 字幕/时间戳/音画对齐, CAM++ voiceprint ID. This skill ALSO owns audio PREPROCESSING for ASR as a first-class trigger, even without transcription: convert any audio/video into an ASR-ready file (转换成适合 ASR",
+  "description": ">- Transcribes audio or video to speaker-labeled, timestamped text, locally with MLX on Apple Silicon or remotely. Use for 转录 / 录音转文字 / 说话人分离 / 字幕, and also for preparing audio for ASR without transcribing: 转格式, 降采样到 16kHz, merging recorder segments, or compressing and speeding up audio before 飞书妙记 — even when it looks like a one-line ffmpeg job.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-audio/asr-transcribe-to-text/SKILL.md",
     "path": "daymade-audio/asr-transcribe-to-text/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-23T12:34:43.942Z",
-    "stars": 1422,
+    "discovered_at": "2026-09-23T17:58:42.246Z",
+    "stars": 1425,
     "language": "Python",
-    "pushed_at": "2026-09-23T10:48:46Z",
+    "pushed_at": "2026-09-23T17:56:25Z",
     "license": "MIT"
-  },
-  "summary_zh": "一款音视频转录工具，可识别说话人并生成带时间戳的文本，还能将媒体转换为适合语音识别的格式。"
+  }
 }
