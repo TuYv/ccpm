@@ -1,0 +1,25 @@
+{
+  "id": "garrytan-gstack-deslop-shared-libs",
+  "name": "deslop-shared-libs",
+  "description": "Find worthwhile shared-code extractions in recent work. (gstack)",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "garrytan",
+  "install_path": ".claude/skills/deslop-shared-libs/SKILL.md",
+  "source": {
+    "repo": "garrytan/gstack",
+    "url": "https://github.com/garrytan/gstack/blob/main/deslop-shared-libs/SKILL.md",
+    "path": "deslop-shared-libs/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-24T10:15:55.666Z",
+    "stars": 134060,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-24T10:15:36Z",
+    "license": "MIT"
+  }
+}
