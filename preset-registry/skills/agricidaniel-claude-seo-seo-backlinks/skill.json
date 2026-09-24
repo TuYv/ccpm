@@ -1,8 +1,8 @@
 {
   "id": "agricidaniel-claude-seo-seo-backlinks",
   "name": "seo-backlinks",
-  "description": "Backlink profile analysis: referring domains, anchor text distribution, toxic link detection, competitor gap analysis. Works with free APIs (Moz, Bing Webmaster, Common Crawl) and DataForSEO extension. Use when user says backlinks, link profile, referring domains, anchor text, toxic links, link gap, link building, disavow, or backlink audit.",
-  "category": "浏览器自动化",
+  "description": "Analyze a site's backlink profile, anchors, toxic signals, competitors, gaps, and disavow candidates. Use only when links or referring domains are the requested focus.",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,10 @@
     "url": "https://github.com/AgriciDaniel/claude-seo/blob/main/skills/seo-backlinks/SKILL.md",
     "path": "skills/seo-backlinks/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-23T20:34:20.746Z",
-    "stars": 17540,
+    "discovered_at": "2026-09-23T23:53:14.210Z",
+    "stars": 17547,
     "language": "Python",
-    "pushed_at": "2026-09-11T13:46:21Z",
+    "pushed_at": "2026-09-23T22:23:47Z",
     "license": "MIT"
-  },
-  "summary_zh": "这是一个SEO反链分析工具，能帮你全面审查外链情况、揪出垃圾链接，并找出与竞品的外链差距，适合做网站外链建设、排查与诊断时使用。"
+  }
 }

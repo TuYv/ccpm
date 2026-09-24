@@ -1,7 +1,7 @@
 {
   "id": "agricidaniel-claude-seo-seo-cluster",
   "name": "seo-cluster",
-  "description": "> SERP-based semantic topic clustering for content architecture planning. Groups keywords by actual Google SERP overlap (not text similarity), designs hub-and-spoke content clusters with internal link matrices, and generates interactive visualizations. Optionally executes content creation if claude-blog is installed. Use when user says \"topic cluster\", \"content cluster\", \"semantic clustering\", \"pillar page\", \"hub and spoke\", \"content architecture\", \"keyword grouping\", or \"cluster plan\".",
+  "description": "> Cluster keywords by SERP overlap and design hub-and-spoke content architecture with internal links. Use for planning only; use the blog-cluster command to execute article production.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/AgriciDaniel/claude-seo/blob/main/skills/seo-cluster/SKILL.md",
     "path": "skills/seo-cluster/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-23T20:34:20.882Z",
-    "stars": 17540,
+    "discovered_at": "2026-09-23T23:53:14.382Z",
+    "stars": 17547,
     "language": "Python",
-    "pushed_at": "2026-09-11T13:46:21Z",
+    "pushed_at": "2026-09-23T22:23:47Z",
     "license": "MIT"
-  },
-  "summary_zh": "它根据谷歌真实搜索结果的重合度来聚合关键词，帮你科学规划网站内容架构与内链，适合需要搭建SEO主题集群和支柱页面的场景。"
+  }
 }

@@ -1,7 +1,7 @@
 {
   "id": "agricidaniel-claude-seo-seo-sxo",
   "name": "seo-sxo",
-  "description": "> Search Experience Optimization: reads Google SERPs backwards to detect page-type mismatches, derives user stories from search intent signals, and scores pages from multiple persona perspectives. Identifies why well-optimized pages fail to rank by analyzing what Google rewards for each keyword. Use when user says \"SXO\", \"search experience\", \"page type mismatch\", \"SERP analysis\", \"user story\", \"persona scoring\", \"why isn't my page ranking\", \"intent mismatch\", or \"wireframe\".",
+  "description": "> Diagnose search-experience and intent mismatches using SERP page types, user stories, and persona scoring. Use when ranking problems appear intent- or layout-driven.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/AgriciDaniel/claude-seo/blob/main/skills/seo-sxo/SKILL.md",
     "path": "skills/seo-sxo/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-23T20:34:24.526Z",
-    "stars": 17540,
+    "discovered_at": "2026-09-23T23:53:17.122Z",
+    "stars": 17547,
     "language": "Python",
-    "pushed_at": "2026-09-11T13:46:21Z",
+    "pushed_at": "2026-09-23T22:23:47Z",
     "license": "MIT"
-  },
-  "summary_zh": "这是一款搜索体验优化工具，通过逆向分析谷歌搜索结果找出页面与搜索意图的错位，并从多用户视角打分。专门解决页面SEO合规却没排名的困惑，适合排查意图错位问题。"
+  }
 }

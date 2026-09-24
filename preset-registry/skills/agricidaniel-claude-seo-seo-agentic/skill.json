@@ -1,0 +1,25 @@
+{
+  "id": "agricidaniel-claude-seo-seo-agentic",
+  "name": "seo-agentic",
+  "description": "> Audit and fix agent readiness: the Lighthouse Agentic Browsing fraction, accessibility tree for agents, robots.txt and Content-Signal for AI agents, WAF treatment of agent traffic, llms.txt, Markdown delivery, ai-catalog.json, /.well-known discovery files, and WebMCP tools. Exclude AI citability and brand signals (seo-geo) and commerce protocol depth (seo-ecommerce).",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "AgriciDaniel",
+  "install_path": ".claude/skills/seo-agentic/SKILL.md",
+  "source": {
+    "repo": "AgriciDaniel/claude-seo",
+    "url": "https://github.com/AgriciDaniel/claude-seo/blob/main/skills/seo-agentic/SKILL.md",
+    "path": "skills/seo-agentic/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-23T23:53:13.936Z",
+    "stars": 17547,
+    "language": "Python",
+    "pushed_at": "2026-09-23T22:23:47Z",
+    "license": "MIT"
+  }
+}

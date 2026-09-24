@@ -1,8 +1,8 @@
 {
   "id": "agricidaniel-claude-seo-seo-audit",
   "name": "seo-audit",
-  "description": "Full website SEO audit with parallel subagent delegation. Crawls up to 500 pages, detects business type, delegates to up to 15 specialists (8 always + 7 conditional), generates health score. Use when user says audit, full SEO check, analyze my site, or website health check.",
-  "category": "浏览器自动化",
+  "description": "Run a full-site SEO audit and return a scored, prioritized report. Use only for site-wide checks; use seo-page for one URL or seo-technical for a technical-only review.",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,10 @@
     "url": "https://github.com/AgriciDaniel/claude-seo/blob/main/skills/seo-audit/SKILL.md",
     "path": "skills/seo-audit/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-23T20:34:20.601Z",
-    "stars": 17540,
+    "discovered_at": "2026-09-23T23:53:14.072Z",
+    "stars": 17547,
     "language": "Python",
-    "pushed_at": "2026-09-11T13:46:21Z",
+    "pushed_at": "2026-09-23T22:23:47Z",
     "license": "MIT"
-  },
-  "summary_zh": "这是一个全站SEO体检工具，能模拟多位专家协同分析网站并输出健康评分。适合需要全面排查网站SEO问题、了解整体优化状况或做健康评估的场景。"
+  }
 }

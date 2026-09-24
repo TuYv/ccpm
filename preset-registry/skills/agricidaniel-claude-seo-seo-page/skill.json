@@ -1,7 +1,7 @@
 {
   "id": "agricidaniel-claude-seo-seo-page",
   "name": "seo-page",
-  "description": "> Deep single-page SEO analysis covering on-page elements, content quality, technical meta tags, schema, images, and performance. Use when user says \"analyze this page\", \"check page SEO\", \"single URL\", \"check this page\", \"page analysis\", or provides a single URL for review.",
+  "description": "> Analyze one supplied URL across on-page, content, technical metadata, schema, images, and performance. Use only for a single-page review.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/AgriciDaniel/claude-seo/blob/main/skills/seo-page/SKILL.md",
     "path": "skills/seo-page/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-23T20:34:23.830Z",
-    "stars": 17540,
+    "discovered_at": "2026-09-23T23:53:16.458Z",
+    "stars": 17547,
     "language": "Python",
-    "pushed_at": "2026-09-11T13:46:21Z",
+    "pushed_at": "2026-09-23T22:23:47Z",
     "license": "MIT"
-  },
-  "summary_zh": "这是一款深度的单页SEO诊断工具，能全面评估网页的标签、内容和性能。当你提供单个网址想了解页面优化情况时，它能帮你快速找出SEO短板并给出详细分析。"
+  }
 }
