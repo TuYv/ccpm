@@ -1,7 +1,7 @@
 {
   "id": "microsoft-skills-for-fabric-synapse-migration",
   "name": "synapse-migration",
-  "description": "Ports Azure Synapse workloads to Microsoft Fabric: Spark pools/notebooks, Lake Databases, Linked Services, and Dedicated SQL Pool schema and stored procedure code to Lakehouse Spark SQL from live or offline DACPAC/SQL-project artifacts, without moving source rows. Use for 'Dedicated SQL Pool schema and code to Lakehouse' and Synapse-to-Fabric migration. For pipelines use pipeline-migration.",
+  "description": "Converts Azure Synapse workloads to Fabric: Dedicated SQL Pool schemas and procedures to Lakehouse Spark SQL artifacts or Warehouse targets, plus Spark, Lake Database, and Linked Service migration. Excludes standalone Fabric Warehouse administration, Databricks source code, and pipelines. Triggers: Dedicated SQL Pool to Lakehouse, Dedicated SQL Pool to Fabric Warehouse, convert Synapse stored procedure, offline Synapse artifacts.",
   "category": "数据分析",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/microsoft/skills-for-fabric/blob/main/skills/synapse-migration/SKILL.md",
     "path": "skills/synapse-migration/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-24T16:09:33.100Z",
+    "discovered_at": "2026-09-24T20:13:31.714Z",
     "stars": 1181,
     "language": "Python",
-    "pushed_at": "2026-09-17T14:46:16Z",
+    "pushed_at": "2026-09-24T18:29:48Z",
     "license": "MIT"
-  },
-  "summary_zh": "将 Azure Synapse 的 Spark、湖数据库及专用 SQL 池架构和代码迁移到 Microsoft Fabric，适合 Synapse 到 Fabric 的离线或在线迁移场景。"
+  }
 }

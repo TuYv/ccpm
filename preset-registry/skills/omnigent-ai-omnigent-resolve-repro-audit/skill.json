@@ -1,0 +1,25 @@
+{
+  "id": "omnigent-ai-omnigent-resolve-repro-audit",
+  "name": "resolve-repro-audit",
+  "description": "Audit a recovered repro patch, assertions, and behavioral baseline before authoring or reviewing.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "omnigent-ai",
+  "install_path": ".claude/skills/resolve-repro-audit/SKILL.md",
+  "source": {
+    "repo": "omnigent-ai/omnigent",
+    "url": "https://github.com/omnigent-ai/omnigent/blob/main/dev/resolve-agent/skills/resolve-repro-audit/SKILL.md",
+    "path": "dev/resolve-agent/skills/resolve-repro-audit/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-24T19:27:39.083Z",
+    "stars": 10209,
+    "language": "Python",
+    "pushed_at": "2026-09-24T19:26:32Z",
+    "license": "Apache-2.0"
+  }
+}

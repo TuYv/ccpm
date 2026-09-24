@@ -1,0 +1,25 @@
+{
+  "id": "omnigent-ai-omnigent-resolve-review-pr",
+  "name": "resolve-review-pr",
+  "description": "Review an existing fix PR using the audited repro and full diff, preserving branch and approval rules.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "omnigent-ai",
+  "install_path": ".claude/skills/resolve-review-pr/SKILL.md",
+  "source": {
+    "repo": "omnigent-ai/omnigent",
+    "url": "https://github.com/omnigent-ai/omnigent/blob/main/dev/resolve-agent/skills/resolve-review-pr/SKILL.md",
+    "path": "dev/resolve-agent/skills/resolve-review-pr/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-24T19:27:39.257Z",
+    "stars": 10209,
+    "language": "Python",
+    "pushed_at": "2026-09-24T19:26:32Z",
+    "license": "Apache-2.0"
+  }
+}

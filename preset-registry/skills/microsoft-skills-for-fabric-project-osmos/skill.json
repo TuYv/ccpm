@@ -1,0 +1,25 @@
+{
+  "id": "microsoft-skills-for-fabric-project-osmos",
+  "name": "project-osmos",
+  "description": "> Orchestrate Project Osmos for long-running Fabric and OneLake data-engineering outcomes, including task status, messages, follow-ups, cancellation, and deletion. Osmos tasks are remote service tasks, not local background agents. In Fabric portal Copilot, direct interaction is unsupported; point users to GitHub Copilot CLI. Use spark-cli for direct non-Osmos Spark work. Triggers: \"Project Osmos\", \"Project Osmos task status\", \"check my Osmos task\".",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "microsoft",
+  "install_path": ".claude/skills/project-osmos/SKILL.md",
+  "source": {
+    "repo": "microsoft/skills-for-fabric",
+    "url": "https://github.com/microsoft/skills-for-fabric/blob/main/skills/project-osmos/SKILL.md",
+    "path": "skills/project-osmos/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-24T20:13:30.632Z",
+    "stars": 1181,
+    "language": "Python",
+    "pushed_at": "2026-09-24T18:29:48Z",
+    "license": "MIT"
+  }
+}

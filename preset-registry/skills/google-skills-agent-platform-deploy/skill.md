@@ -1,6 +1,7 @@
 ---
 name: agent-platform-deploy
 metadata:
+  version: "1.0.1"
   category: AiAndMachineLearning
 description: >-
   Deploy open models or custom weights from Model Garden to Agent Platform
@@ -14,9 +15,8 @@ description: >-
   use for pure listing/discovery questions of the form "is X deployed?",
   "list my endpoints", or "which regions have models running?" — for those
   use `agent-platform-endpoint-management`. Don't use for public Vertex AI
-  deployments (use the `vertex-deploy`
-  skill) or for running model evaluations (use the `agent-platform-eval-flywheel`
-  skill).
+  deployments (use `vertex-deploy` skill) or for running model evaluations
+  (use `agent-platform-eval-flywheel` skill).
 ---
 
 # Agent Platform Model Garden Deploy Skill

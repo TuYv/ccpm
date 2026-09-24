@@ -1,7 +1,7 @@
 {
   "id": "microsoft-skills-for-fabric-sqldw-cli",
   "name": "sqldw-cli",
-  "description": "Manage Fabric Warehouse, Lakehouse SQL analytics endpoints, and Mirrored Databases: DDL/DML, COPY INTO, read-only T-SQL, Query Insights diagnostics, Capacity Metrics CU-spike correlation, custom SQL pool guidance, and Lakehouse health. Fabric SQL database (OLTP) belongs to sqldb-cli. Triggers: query warehouse, create warehouse table, failed or canceled query, CU spike, Capacity Metrics app, custom SQL pool, Lakehouse table health.",
+  "description": "Manage Fabric Warehouse, Lakehouse SQL endpoints, and Mirrored Databases: DDL/DML, COPY INTO, read-only T-SQL, Query Insights diagnostics, and Capacity Metrics CU-spike correlation. Synapse migration target SQL belongs to synapse-migration; Fabric SQL database belongs to sqldb-cli. Triggers: query warehouse, create warehouse table, failed or canceled query, CU spike, Capacity Metrics app, custom SQL pool, Lakehouse table health.",
   "category": "数据分析",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/microsoft/skills-for-fabric/blob/main/skills/sqldw-cli/SKILL.md",
     "path": "skills/sqldw-cli/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-24T16:09:32.932Z",
+    "discovered_at": "2026-09-24T20:13:31.534Z",
     "stars": 1181,
     "language": "Python",
-    "pushed_at": "2026-09-17T14:46:16Z",
+    "pushed_at": "2026-09-24T18:29:48Z",
     "license": "MIT"
-  },
-  "summary_zh": "用于管理 Microsoft Fabric 的 Warehouse、Lakehouse SQL 分析端点和镜像数据库，适合执行 SQL、排查查询故障、分析容量 CU 峰值及诊断 Lakehouse 健康状况。"
+  }
 }

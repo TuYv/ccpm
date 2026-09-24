@@ -1,0 +1,25 @@
+{
+  "id": "omnigent-ai-omnigent-resolve-inputs",
+  "name": "resolve-inputs",
+  "description": "Select the Resolve mode, recover its input, check the workspace, and discover existing fixes.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "omnigent-ai",
+  "install_path": ".claude/skills/resolve-inputs/SKILL.md",
+  "source": {
+    "repo": "omnigent-ai/omnigent",
+    "url": "https://github.com/omnigent-ai/omnigent/blob/main/dev/resolve-agent/skills/resolve-inputs/SKILL.md",
+    "path": "dev/resolve-agent/skills/resolve-inputs/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-24T19:27:38.734Z",
+    "stars": 10209,
+    "language": "Python",
+    "pushed_at": "2026-09-24T19:26:32Z",
+    "license": "Apache-2.0"
+  }
+}

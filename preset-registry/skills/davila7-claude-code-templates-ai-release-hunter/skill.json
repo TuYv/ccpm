@@ -1,0 +1,25 @@
+{
+  "id": "davila7-claude-code-templates-ai-release-hunter",
+  "name": "ai-release-hunter",
+  "description": "Daily digest of AI releases from Anthropic, Meta, Vercel Labs, OpenAI and Google GitHub repos, the Claude Cowork changelog, the claude.dev blog and Hacker News, deduplicated against a local state file and sent by email. Use when the user asks for a daily AI news digest, to scan AI labs for new releases, or to set up a scheduled release-hunter job.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "davila7",
+  "install_path": ".claude/skills/ai-release-hunter/SKILL.md",
+  "source": {
+    "repo": "davila7/claude-code-templates",
+    "url": "https://github.com/davila7/claude-code-templates/blob/main/cli-tool/components/skills/ai-research/ai-release-hunter/SKILL.md",
+    "path": "cli-tool/components/skills/ai-research/ai-release-hunter/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-24T20:15:19.969Z",
+    "stars": 31718,
+    "language": "Python",
+    "pushed_at": "2026-09-24T19:01:04Z",
+    "license": "MIT"
+  }
+}
