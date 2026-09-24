@@ -1,0 +1,25 @@
+{
+  "id": "sickn33-agentic-awesome-skills-agent-memory-discipline",
+  "name": "agent-memory-discipline",
+  "description": "Rules for when an agent should recall from long-term memory before acting and when it should save decisions, corrections and failures afterwards. Works with any memory backend.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sickn33",
+  "install_path": ".claude/skills/agent-memory-discipline/SKILL.md",
+  "source": {
+    "repo": "sickn33/agentic-awesome-skills",
+    "url": "https://github.com/sickn33/agentic-awesome-skills/blob/main/plugins/agentic-awesome-skills-claude/skills/agent-memory-discipline/SKILL.md",
+    "path": "plugins/agentic-awesome-skills-claude/skills/agent-memory-discipline/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-24T16:03:25.380Z",
+    "stars": 46864,
+    "language": "Python",
+    "pushed_at": "2026-09-24T11:35:16Z",
+    "license": "MIT"
+  }
+}

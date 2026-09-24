@@ -1,7 +1,7 @@
 {
   "id": "failproofai-failproofai-skill",
   "name": "failproofai-sdk",
-  "description": "|- The way to make an AI agent report what it did to Failproof AI — planning what to record, writing the instrumentation, and proving the events land. Reach for it on vague phrasing too: \"add observability to my agent\", \"why isn't my agent showing up?\"",
+  "description": "|- Make a custom AI agent — Python or TypeScript/JavaScript, on a framework or hand-built — report what it did to Failproof AI, and run your own evaluator worker (the \"eval pod\") that scores those runs. Reach for it on vague phrasing too: \"add observability to my agent\", \"why isn't my agent showing up?\", \"run an LLM judge on our own infra\".",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/FailproofAI/failproofai/blob/main/sdk/python/skill/SKILL.md",
     "path": "sdk/python/skill/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-24T11:06:50.501Z",
-    "stars": 5140,
-    "language": "MDX",
-    "pushed_at": "2026-09-24T07:21:00Z",
+    "discovered_at": "2026-09-24T16:12:48.796Z",
+    "stars": 5142,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-24T15:27:40Z",
     "license": null
   }
 }
