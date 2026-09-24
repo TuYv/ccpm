@@ -1,7 +1,7 @@
 {
   "id": "nowork-studio-toprank-hreflang-international",
   "name": "hreflang-international",
-  "description": "> International / multilingual SEO audit focused on hreflang correctness. Detects and diagnoses the most common (and ranking-damaging) hreflang mistakes: missing or broken return tags, wrong language/region codes, missing x-default, self-referencing errors, conflicts between hreflang and canonical, and inconsistent signals across HTML head / HTTP headers / XML sitemap. Also reviews the broader international setup — URL structure (ccTLD vs subdirectory vs subdomain), language targeting, and geo s",
+  "description": "> International / multilingual SEO audit focused on hreflang correctness: missing or broken return tags, wrong language/region codes, missing x-default, self-referencing errors, hreflang vs canonical conflicts, and inconsistent signals across HTML head, HTTP headers and XML sitemap. Also reviews URL structure (ccTLD vs subdirectory vs subdomain), language targeting and geo signals. Use whenever the user runs a multi-language or multi-region site and asks about hreflang, international or multilin",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/nowork-studio/toprank/blob/main/seo/hreflang-international/SKILL.md",
     "path": "seo/hreflang-international/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-23T23:53:44.214Z",
-    "stars": 3853,
+    "discovered_at": "2026-09-24T04:59:57.610Z",
+    "stars": 3852,
     "language": "TypeScript",
-    "pushed_at": "2026-09-22T18:08:44Z",
+    "pushed_at": "2026-09-24T00:15:50Z",
     "license": "MIT"
-  },
-  "summary_zh": "一款面向多语言网站的国际SEO审计工具，可排查语言标签、规范链接及站点地图配置错误，适合诊断跨地区搜索排名问题。"
+  }
 }

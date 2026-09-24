@@ -1,0 +1,25 @@
+{
+  "id": "hoangnguyen0403-agent-skills-standard-common-agent-guardrails",
+  "name": "common-agent-guardrails",
+  "description": "Define deterministic guardrails for agent tool calls — protected paths, test-file locks during bug fixes, post-edit formatters, production approval gates, secret deny rules. Use when writing or reviewing a hook policy, or moving an always-do-X rule out of prose into enforcement.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "HoangNguyen0403",
+  "install_path": ".claude/skills/common-agent-guardrails/SKILL.md",
+  "source": {
+    "repo": "HoangNguyen0403/agent-skills-standard",
+    "url": "https://github.com/HoangNguyen0403/agent-skills-standard/blob/develop/.agents/skills/common/common-agent-guardrails/SKILL.md",
+    "path": ".agents/skills/common/common-agent-guardrails/SKILL.md",
+    "branch": "develop",
+    "discovered_at": "2026-09-24T05:50:32.470Z",
+    "stars": 570,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-24T04:59:13Z",
+    "license": "MIT"
+  }
+}

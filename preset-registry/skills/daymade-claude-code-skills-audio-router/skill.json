@@ -1,0 +1,25 @@
+{
+  "id": "daymade-claude-code-skills-audio-router",
+  "name": "audio-router",
+  "description": ">- Routes audio: StepFun ASR/语音识别, StepFun TTS/配音, transcript/妙记→会议纪要, merge/review minutes. Reads one bundled specialist; generic ASR and correction stay direct.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/audio-router/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-audio/audio-router/SKILL.md",
+    "path": "daymade-audio/audio-router/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-24T05:48:58.345Z",
+    "stars": 1425,
+    "language": "Python",
+    "pushed_at": "2026-09-24T05:21:20Z",
+    "license": "MIT"
+  }
+}

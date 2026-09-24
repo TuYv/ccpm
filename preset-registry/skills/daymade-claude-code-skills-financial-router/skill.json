@@ -1,0 +1,25 @@
+{
+  "id": "daymade-claude-code-skills-financial-router",
+  "name": "financial-router",
+  "description": ">- Routes finance: Bigdata/RavenPack, US fundamentals/yfinance, A-share news/policy, sector Top N/公告, Gangtise/岗底斯 setup. Reads one bundled specialist. Pharma reporting and general argument review keep their own direct entries.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/financial-router/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-financial/financial-router/SKILL.md",
+    "path": "daymade-financial/financial-router/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-24T05:49:05.536Z",
+    "stars": 1425,
+    "language": "Python",
+    "pushed_at": "2026-09-24T05:21:20Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "hoangnguyen0403-agent-skills-standard-common-sdlc-metrics",
+  "name": "common-sdlc-metrics",
+  "description": "Define the delivery metrics contract for agent-assisted SDLC — DORA four plus per-stage indicators derived from artifact and git history, and the control bands that turn metric drift into a routed intake. Use when reporting cycle time, plan adherence, or defining response thresholds.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "HoangNguyen0403",
+  "install_path": ".claude/skills/common-sdlc-metrics/SKILL.md",
+  "source": {
+    "repo": "HoangNguyen0403/agent-skills-standard",
+    "url": "https://github.com/HoangNguyen0403/agent-skills-standard/blob/develop/.agents/skills/common/common-sdlc-metrics/SKILL.md",
+    "path": ".agents/skills/common/common-sdlc-metrics/SKILL.md",
+    "branch": "develop",
+    "discovered_at": "2026-09-24T05:50:35.625Z",
+    "stars": 570,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-24T04:59:13Z",
+    "license": "MIT"
+  }
+}
