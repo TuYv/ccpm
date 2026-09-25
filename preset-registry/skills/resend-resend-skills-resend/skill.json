@@ -1,7 +1,7 @@
 {
   "id": "resend-resend-skills-resend",
   "name": "resend",
-  "description": "Use when working with the Resend email API — sending transactional emails (single or batch), receiving inbound emails via webhooks, managing email templates, tracking delivery events, managing domains, contacts, broadcasts, webhooks, API keys, automations, events, viewing API request logs, or setting up the Resend SDK. Always use this skill when the user mentions Resend, even for simple tasks like \"send an email with Resend\" — the skill contains critical gotchas (idempotency keys, webhook verifi",
+  "description": "Use when working with the Resend email API — sending transactional emails (single or batch), receiving inbound emails via webhooks, managing email templates, tracking delivery events, managing domains, contacts, broadcasts, webhooks, API keys, automations, events, viewing API request logs, checking account usage and quotas, or setting up the Resend SDK. Always use this skill when the user mentions Resend, even for simple tasks like \"send an email with Resend\" — the skill contains critical gotcha",
   "category": "文档写作",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/resend/resend-skills/blob/main/skills/resend/SKILL.md",
     "path": "skills/resend/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-25T19:41:43.684Z",
+    "discovered_at": "2026-09-25T23:26:27.381Z",
     "stars": 184,
     "language": "JavaScript",
-    "pushed_at": "2026-09-25T19:04:54Z",
+    "pushed_at": "2026-09-25T19:53:29Z",
     "license": "MIT"
-  },
-  "summary_zh": "专为集成邮件API打造，帮你轻松搞定事务性邮件收发、模板管理及事件追踪，还提供了避坑指南，适合需要在应用中快速接入可靠邮件功能的开发场景。"
+  }
 }
