@@ -1,0 +1,25 @@
+{
+  "id": "sepinetam-stata-mcp-stata-discover",
+  "name": "stata-discover",
+  "description": "Use this skill when you need to find Stata on the user's machine or configure `stata-mcp` to use it. `stata-discover` provides the workflow for discovering Stata executables and the official way to configure `stata-mcp`. If the user's computer has multiple Stata executables available, this skill also provides the version the user most likely wants to use.",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "SepineTam",
+  "install_path": ".claude/skills/stata-discover/SKILL.md",
+  "source": {
+    "repo": "SepineTam/stata-mcp",
+    "url": "https://github.com/SepineTam/stata-mcp/blob/master/plugins/stata-toolbox/skills/stata-discover/SKILL.md",
+    "path": "plugins/stata-toolbox/skills/stata-discover/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-09-25T07:59:34.804Z",
+    "stars": 260,
+    "language": "Python",
+    "pushed_at": "2026-09-25T07:37:32Z",
+    "license": "AGPL-3.0"
+  }
+}
