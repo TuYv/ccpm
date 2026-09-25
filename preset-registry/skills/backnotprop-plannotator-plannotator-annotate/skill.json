@@ -1,7 +1,7 @@
 {
   "id": "backnotprop-plannotator-plannotator-annotate",
   "name": "plannotator-annotate",
-  "description": "Open Plannotator's annotation UI for a markdown file, plain-text config file (.yaml, .json, .toml, .ini, .csv, .log, …), HTML file, URL, or folder and then respond to the returned annotations.",
+  "description": "Open Plannotator's annotation UI for a file, folder, or URL, then address the returned annotations.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -13,14 +13,13 @@
   "install_path": ".claude/skills/plannotator-annotate/SKILL.md",
   "source": {
     "repo": "backnotprop/plannotator",
-    "url": "https://github.com/backnotprop/plannotator/blob/main/apps/skills/core/plannotator-annotate/SKILL.md",
-    "path": "apps/skills/core/plannotator-annotate/SKILL.md",
+    "url": "https://github.com/backnotprop/plannotator/blob/main/apps/vibe/skills/plannotator-annotate/SKILL.md",
+    "path": "apps/vibe/skills/plannotator-annotate/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-24T20:21:37.905Z",
-    "stars": 8909,
+    "discovered_at": "2026-09-24T23:32:00.210Z",
+    "stars": 8912,
     "language": "TypeScript",
-    "pushed_at": "2026-09-24T20:19:54Z",
+    "pushed_at": "2026-09-24T23:23:12Z",
     "license": "Apache-2.0"
-  },
-  "summary_zh": "一个可为 Markdown、配置文件、网页或目录打开可视化批注界面，并集中收集和处理反馈的工具。"
+  }
 }

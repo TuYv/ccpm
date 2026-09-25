@@ -1,7 +1,7 @@
 {
   "id": "backnotprop-plannotator-plannotator-review",
   "name": "plannotator-review",
-  "description": "Open Plannotator's browser-based code review UI for the current worktree or a pull request URL, then act on the feedback that comes back.",
+  "description": "Open Plannotator's browser-based code review UI and address the returned feedback.",
   "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
@@ -13,14 +13,13 @@
   "install_path": ".claude/skills/plannotator-review/SKILL.md",
   "source": {
     "repo": "backnotprop/plannotator",
-    "url": "https://github.com/backnotprop/plannotator/blob/main/apps/skills/core/plannotator-review/SKILL.md",
-    "path": "apps/skills/core/plannotator-review/SKILL.md",
+    "url": "https://github.com/backnotprop/plannotator/blob/main/apps/vibe/skills/plannotator-review/SKILL.md",
+    "path": "apps/vibe/skills/plannotator-review/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-24T20:21:38.279Z",
-    "stars": 8909,
+    "discovered_at": "2026-09-24T23:32:00.442Z",
+    "stars": 8912,
     "language": "TypeScript",
-    "pushed_at": "2026-09-24T20:19:54Z",
+    "pushed_at": "2026-09-24T23:23:12Z",
     "license": "Apache-2.0"
-  },
-  "summary_zh": "这是一个浏览器端的代码审查工具，方便你针对当前工作区或PR链接进行代码评审，并快速根据反馈跟进修改。"
+  }
 }

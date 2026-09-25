@@ -104,6 +104,9 @@ state rather than fragile pointer simulation.
 ## Keyboard and focus
 
 For keyboard, TV, and desktop UI, drive navigation with the same input model users use (keys/D-pad), not clicks alone. Assert focused semantics, not colors or scale; reserve screenshots for visual focus treatment.
+If the inspected composable exposes no input surface that can change the state,
+name the missing host or parent interaction seam before proposing a key-driven
+test; do not assume a selector or control exists in the supplied UI.
 
 Details—focus graph, `FocusRequester`, restoration, key handlers, and test patterns: [`compose-focus-navigation`](../compose-focus-navigation/SKILL.md).
 
@@ -132,8 +135,13 @@ Keep screenshot state deterministic:
 - Keep an explicit fixed value when that fixed resolution or geometry is the
   contract.
 - Verify recording separately from comparison: inspect the expected artifact
-  paths and intentional baseline diff. A passing comparison does not prove that
-  recording occurred. Keep tool-specific commands in the repository runbook.
+  paths and intentional baseline diff. Read the exact output path from the test,
+  confirm that artifact exists, and name that literal path in the verification
+  evidence. When a verification log reports a pass, state what passed and then
+  check recording independently; a passing comparison does not prove that
+  recording wrote the artifact. If the artifact or baseline diff is
+  unavailable, report that gap rather than claiming recording succeeded. Keep
+  tool-specific commands in the repository runbook.
 
 ## Fake images and platform services
 

@@ -1,10 +1,10 @@
 ---
 name: plannotator-last
-description: Open Plannotator on the latest rendered assistant message and use the returned annotations to revise that message or continue.
 disable-model-invocation: true
+description: Open Plannotator on the latest rendered assistant message and use the returned annotations to revise that message or continue.
 ---
 
-# Plannotator Last
+# Plannotator Last (Mistral Vibe)
 
 Use this skill when the user wants to annotate the latest assistant response in Plannotator.
 
@@ -15,12 +15,12 @@ thing being annotated.
 Run:
 
 ```bash
-plannotator last
+PLANNOTATOR_ORIGIN=mistral-vibe plannotator last
 ```
 
 Behavior:
 
-1. Launch the command with Bash.
+1. Run the command.
 2. Wait for the annotation session to finish.
 3. If feedback is returned, incorporate it into the follow-up response.
 4. If the session closes without feedback, mention that briefly and continue.
