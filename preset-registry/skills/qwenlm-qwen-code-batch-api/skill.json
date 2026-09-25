@@ -1,0 +1,25 @@
+{
+  "id": "qwenlm-qwen-code-batch-api",
+  "name": "batch-api",
+  "description": "Prepare a many-file, single-turn transform (translate, rewrite, extract) as a plan and submit it to the asynchronous, half-price DashScope Batch API; results are delivered as new files hours later. Invoke explicitly with /batch-api.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "QwenLM",
+  "install_path": ".claude/skills/batch-api/SKILL.md",
+  "source": {
+    "repo": "QwenLM/qwen-code",
+    "url": "https://github.com/QwenLM/qwen-code/blob/main/packages/core/src/skills/bundled/batch-api/SKILL.md",
+    "path": "packages/core/src/skills/bundled/batch-api/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-25T19:41:05.609Z",
+    "stars": 28135,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-25T19:27:48Z",
+    "license": "Apache-2.0"
+  }
+}

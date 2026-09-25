@@ -1,0 +1,25 @@
+{
+  "id": "timescale-pg-aiguide-schema-exploration",
+  "name": "schema-exploration",
+  "description": "| Explore an existing PostgreSQL database before answering questions about its data or writing SQL. Use this skill whenever a user asks for a query or a data-backed answer against an unfamiliar schema (counts, missing or failed records, recent changes), asks where a business concept lives, or asks how tables, joins, views, routines, triggers, RLS, or extensions work. Find the relevant objects with read-only pg_catalog queries, then request approval before inspecting data-derived statistics or ro",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "timescale",
+  "install_path": ".claude/skills/schema-exploration/SKILL.md",
+  "source": {
+    "repo": "timescale/pg-aiguide",
+    "url": "https://github.com/timescale/pg-aiguide/blob/main/skills/schema-exploration/SKILL.md",
+    "path": "skills/schema-exploration/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-25T19:39:35.266Z",
+    "stars": 1847,
+    "language": "Python",
+    "pushed_at": "2026-09-25T17:35:15Z",
+    "license": "Apache-2.0"
+  }
+}

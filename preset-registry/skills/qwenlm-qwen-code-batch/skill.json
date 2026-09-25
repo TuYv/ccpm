@@ -1,7 +1,7 @@
 {
   "id": "qwenlm-qwen-code-batch",
   "name": "batch",
-  "description": "Execute batch operations on multiple files in parallel. Automatically discovers files, splits into chunks, and processes with parallel worker agents. Use `/batch` followed by operation and file pattern.",
+  "description": "Execute batch operations on multiple files in parallel. Automatically discovers files, splits into chunks, and processes with parallel worker agents. Use `/batch` followed by operation and file pattern. For many independent single-turn transforms (translate/rewrite/extract each file into a new file) that can wait minutes to hours, you may suggest the user type `/batch-api` themselves for the half-price asynchronous Batch API — you cannot invoke it, and it is not suited to in-place edits or tasks",
   "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/QwenLM/qwen-code/blob/main/packages/core/src/skills/bundled/batch/SKILL.md",
     "path": "packages/core/src/skills/bundled/batch/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-25T14:52:26.282Z",
-    "stars": 28130,
+    "discovered_at": "2026-09-25T19:41:05.749Z",
+    "stars": 28135,
     "language": "TypeScript",
-    "pushed_at": "2026-09-25T14:26:57Z",
+    "pushed_at": "2026-09-25T19:27:48Z",
     "license": "Apache-2.0"
-  },
-  "summary_zh": "一个批量并行处理文件的工具，能自动发现并分组文件，适合高效执行大规模重复操作。"
+  }
 }
