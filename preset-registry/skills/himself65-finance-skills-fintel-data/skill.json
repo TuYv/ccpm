@@ -1,7 +1,7 @@
 {
   "id": "himself65-finance-skills-fintel-data",
   "name": "fintel-data",
-  "description": "> Query Fintel (fintel.io) institutional market intelligence via the REST API at https://api.fintel.io/v1 with FINTEL_API_KEY (X-API-KEY header), or the official MCP server at https://mcp.fintel.io/mcp. Read-only data: short interest, borrow rate/fee and shares available to borrow, daily short volume, fails-to-deliver (FTD), institutional ownership from SEC 13F filings, insider transactions from SEC Form 3/4/5, analyst price targets, ratings and forecasts, dividends and earnings history, earning",
+  "description": "> Query Fintel (fintel.io) institutional market data through its REST API or official MCP server. Use this skill whenever the user mentions Fintel or asks about short interest, short interest ratio or days to cover, short squeeze data, borrow rate or cost to borrow, shares available to borrow, daily short volume, fails-to-deliver (FTD), 13F institutional owners (\"who owns X\"), insider buying or selling from SEC Form 3/4/5, analyst price targets, ratings and forecasts, dividend or earnings histor",
   "category": "文档写作",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/himself65/finance-skills/blob/main/plugins/data-providers/skills/fintel-data/SKILL.md",
     "path": "plugins/data-providers/skills/fintel-data/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-25T08:46:10.254Z",
+    "discovered_at": "2026-09-25T14:45:48.217Z",
     "stars": 3347,
     "language": "JavaScript",
-    "pushed_at": "2026-09-25T03:45:00Z",
+    "pushed_at": "2026-09-25T14:45:18Z",
     "license": "MIT"
-  },
-  "summary_zh": "一个只读金融市场情报查询工具，可通过 API 或 MCP 获取做空、机构持仓、内幕交易、分析师评级及财报等数据，适合投研和量化分析。"
+  }
 }

@@ -1,7 +1,7 @@
 {
   "id": "himself65-finance-skills-twitter-reader",
   "name": "twitter-reader",
-  "description": "> Read Twitter/X for financial research using opencli (read-only). Use this skill whenever the user wants to read their Twitter feed, search for financial tweets, view bookmarks, look up user profiles, or gather market sentiment from Twitter/X. Triggers include: \"check my feed\", \"search Twitter for\", \"show my bookmarks\", \"who follows\", \"look up @user\", \"what's trending about\", \"market sentiment on Twitter\", \"what are people saying about AAPL\", \"recent tweets from @elonmusk\", \"show me @user's pos",
+  "description": "> Read Twitter/X for financial research through opencli: the user's home timeline, tweet search, trending topics, bookmarks, a user's recent tweets, threads, articles, profiles, followers and following, and notifications. Use this skill whenever the user wants to know what people are saying on Twitter/X or fintwit about a stock, topic, or market event, check their feed or bookmarks, see what's trending, or look up an @account and its posts. Read-only: it cannot post, like, retweet, reply, or fol",
   "category": "文档写作",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/himself65/finance-skills/blob/main/plugins/social-readers/skills/twitter-reader/SKILL.md",
     "path": "plugins/social-readers/skills/twitter-reader/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-25T08:46:14.081Z",
+    "discovered_at": "2026-09-25T14:45:52.486Z",
     "stars": 3347,
     "language": "JavaScript",
-    "pushed_at": "2026-09-25T03:45:00Z",
+    "pushed_at": "2026-09-25T14:45:18Z",
     "license": "MIT"
-  },
-  "summary_zh": "这是一个命令行推特只读工具，能让你在终端直接获取推特信息，特别适合金融研究场景，用来追踪大V动态、搜索金融资讯或收集市场情绪，省去频繁切屏的麻烦。"
+  }
 }

@@ -1,7 +1,7 @@
 {
   "id": "himself65-finance-skills-stock-liquidity",
   "name": "stock-liquidity",
-  "description": "> Analyze stock liquidity using bid-ask spreads, volume profiles, order book depth, market impact estimates, and turnover ratios via Yahoo Finance data. Use this skill whenever the user asks about liquidity, trading costs, bid-ask spread, market depth, volume analysis, slippage, market impact, turnover ratio, or how easy/hard it is to trade a stock without moving the price. Triggers: \"how liquid is AAPL\", \"bid-ask spread\", \"volume analysis\", \"order book depth\", \"market impact of a large order\", ",
+  "description": "> Analyze how liquid a stock is using Yahoo Finance data (yfinance): bid-ask spreads, volume and dollar volume (ADTV), top-of-book and options depth, square-root market impact and slippage estimates, turnover ratio, and Amihud illiquidity, rolled into a liquidity grade. Use this skill whenever the user asks about liquidity or trading costs — how easily a position can be entered or exited, what a large order would do to the price, spread or execution-cost estimates, order book depth, volume patte",
   "category": "文档写作",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/himself65/finance-skills/blob/main/plugins/market-analysis/skills/stock-liquidity/SKILL.md",
     "path": "plugins/market-analysis/skills/stock-liquidity/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-25T08:46:12.182Z",
+    "discovered_at": "2026-09-25T14:45:51.415Z",
     "stars": 3347,
     "language": "JavaScript",
-    "pushed_at": "2026-09-25T03:45:00Z",
+    "pushed_at": "2026-09-25T14:45:18Z",
     "license": "MIT"
-  },
-  "summary_zh": "基于雅虎财经数据的股票流动性分析工具，帮你评估买卖股票是否会推动价格及产生隐性成本，适合判断大单冲击或交易难度的场景。"
+  }
 }

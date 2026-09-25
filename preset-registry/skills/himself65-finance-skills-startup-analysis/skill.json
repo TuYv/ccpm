@@ -1,7 +1,7 @@
 {
   "id": "himself65-finance-skills-startup-analysis",
   "name": "startup-analysis",
-  "description": "> Analyze a startup from three perspectives: VC investor, job applicant, and CEO/founder. Use this skill whenever the user wants to evaluate a startup, assess whether to invest in or join a startup, do due diligence, evaluate a job offer from a startup, understand a startup's competitive position, or assess company health and trajectory. Triggers: \"analyze this startup\", \"should I join [company]\", \"is [company] a good investment\", \"evaluate [company]\", \"due diligence on [company]\", \"what do you ",
+  "description": "> Analyze a startup from three perspectives — VC investor, job applicant, and CEO/founder — covering market, traction, unit economics, team, defensibility, runway, equity value, culture, and competitive position, with a verdict for each. Use this skill whenever the user wants to evaluate a startup or private tech company: due diligence, whether to invest in it or join it, weighing a startup job offer, company health, outlook, or competitive position, or open-ended asks such as \"what do you think",
   "category": "文档写作",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/himself65/finance-skills/blob/main/plugins/startup-tools/skills/startup-analysis/SKILL.md",
     "path": "plugins/startup-tools/skills/startup-analysis/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-25T08:46:14.333Z",
+    "discovered_at": "2026-09-25T14:45:53.741Z",
     "stars": 3347,
     "language": "JavaScript",
-    "pushed_at": "2026-09-25T03:45:00Z",
+    "pushed_at": "2026-09-25T14:45:18Z",
     "license": "MIT"
-  },
-  "summary_zh": "它能从投资人、求职者和创始人三个视角帮你拆解初创公司。当你纠结该不该投资或加入某家公司，或者需要做尽职调查、摸清公司底细时，它能帮你做出判断。"
+  }
 }

@@ -1,7 +1,7 @@
 {
   "id": "himself65-finance-skills-saas-valuation-compression",
   "name": "saas-valuation-compression",
-  "description": "> Analyze SaaS company valuation compression between funding rounds. Use this skill whenever the user asks about: how much a SaaS company's valuation multiple changed between rounds, why the ARR multiple compressed or expanded, comparing a company's compression to macro benchmarks, or explaining what drove valuation changes for any VC-backed software company. Trigger on phrases like \"valuation compression\", \"ARR multiple\", \"round-to-round valuation\", \"multiple change\", or when the user asks to c",
+  "description": "> Analyze how a private SaaS company's ARR valuation multiple changed across funding rounds, and attribute the compression or expansion to rate cycles and macro selloffs, growth deceleration, narrative shifts (including an AI premium), competition, and investor demand, benchmarked against private-market medians and peers. Use this skill whenever the user asks about valuation compression, ARR multiples, round-to-round valuation or multiple changes, down rounds, or wants to compare a VC-backed sof",
   "category": "文档写作",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/himself65/finance-skills/blob/main/plugins/market-analysis/skills/saas-valuation-compression/SKILL.md",
     "path": "plugins/market-analysis/skills/saas-valuation-compression/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-25T08:46:11.795Z",
+    "discovered_at": "2026-09-25T14:45:50.990Z",
     "stars": 3347,
     "language": "JavaScript",
-    "pushed_at": "2026-09-25T03:45:00Z",
+    "pushed_at": "2026-09-25T14:45:18Z",
     "license": "MIT"
-  },
-  "summary_zh": "这是一个分析SaaS公司融资轮次间估值变化的工具，能帮你弄清ARR倍数为何压缩或扩张，并对比宏观趋势解释估值变动原因，适合投资人或创业者分析估值走势。"
+  }
 }

@@ -1,7 +1,7 @@
 {
   "id": "himself65-finance-skills-yfinance-data",
   "name": "yfinance-data",
-  "description": "> Fetch financial and market data using the yfinance Python library. Use this skill whenever the user asks for stock prices, historical data, financial statements, options chains, dividends, earnings, analyst recommendations, or any market data. Triggers include: any mention of stock price, ticker symbol (AAPL, MSFT, TSLA, etc.), \"get me the financials\", \"show earnings\", \"what's the price of\", \"download stock data\", \"options chain\", \"dividend history\", \"balance sheet\", \"income statement\", \"cash ",
+  "description": "> Fetch financial and market data with the yfinance Python library (Yahoo Finance). Use this skill whenever the user wants stock data: current quotes and price history, financial statements (income statement, balance sheet, cash flow), options chains, dividends and splits, earnings and analyst estimates, price targets and ratings, institutional and insider holdings, news, multi-ticker comparisons, stock screens, or sector and industry data. Use it even when the user gives only a ticker symbol (A",
   "category": "文档写作",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/himself65/finance-skills/blob/main/plugins/market-analysis/skills/yfinance-data/SKILL.md",
     "path": "plugins/market-analysis/skills/yfinance-data/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-25T08:46:13.258Z",
+    "discovered_at": "2026-09-25T14:45:51.540Z",
     "stars": 3347,
     "language": "JavaScript",
-    "pushed_at": "2026-09-25T03:45:00Z",
+    "pushed_at": "2026-09-25T14:45:18Z",
     "license": "MIT"
-  },
-  "summary_zh": "这是一个基于yfinance的金融数据获取工具，能帮你轻松拉取各类股票行情、财报及市场指标，适合需要快速查询或下载金融数据的场景。"
+  }
 }

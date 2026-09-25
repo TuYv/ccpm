@@ -1,7 +1,7 @@
 {
   "id": "himself65-finance-skills-telegram-reader",
   "name": "telegram-reader",
-  "description": "> Read Telegram channels and groups for financial news and market research using tdl (read-only). Use this skill whenever the user wants to read Telegram channels, export messages from financial Telegram groups, list their Telegram chats, search for news in Telegram channels, or gather market intelligence from Telegram. Triggers include: \"check my Telegram\", \"read Telegram channel\", \"Telegram news\", \"what's new in my Telegram channels\", \"export messages from\", \"list my Telegram chats\", \"financia",
+  "description": "> Read Telegram channels and groups for financial news and market research with the tdl CLI: list chats and channels, find a channel by name, and export recent messages or a date or ID range. Use this skill whenever the user wants to check their Telegram, see what's new in their channels, read or export messages from a news, crypto, or trading channel or group, or gather market news and signals posted on Telegram. Read-only: it cannot send messages or join or leave channels.",
   "category": "文档写作",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/himself65/finance-skills/blob/main/plugins/social-readers/skills/telegram-reader/SKILL.md",
     "path": "plugins/social-readers/skills/telegram-reader/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-25T08:46:13.969Z",
+    "discovered_at": "2026-09-25T14:45:52.347Z",
     "stars": 3347,
     "language": "JavaScript",
-    "pushed_at": "2026-09-25T03:45:00Z",
+    "pushed_at": "2026-09-25T14:45:18Z",
     "license": "MIT"
-  },
-  "summary_zh": "这是一款专用于提取Telegram群组消息的工具，帮你从海量聊天中快速搜集财经新闻与市场情报，非常适合做金融调研或追踪频道资讯的场景。"
+  }
 }

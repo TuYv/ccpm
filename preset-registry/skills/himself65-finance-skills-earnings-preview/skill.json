@@ -1,7 +1,7 @@
 {
   "id": "himself65-finance-skills-earnings-preview",
   "name": "earnings-preview",
-  "description": "> Generate a pre-earnings briefing for any stock using Yahoo Finance data. Use this skill whenever the user wants to prepare for an upcoming earnings report, understand what analysts expect, review a company's beat/miss track record, or get a quick overview before an earnings call. Triggers include: \"earnings preview for AAPL\", \"what to expect from TSLA earnings\", \"MSFT reports next week\", \"earnings preview\", \"pre-earnings analysis\", \"what are analysts expecting for NVDA\", \"earnings estimates fo",
+  "description": "> Build a pre-earnings briefing for a stock from Yahoo Finance data (yfinance): the upcoming report date and timing, consensus EPS and revenue estimates with their range, the beat/miss track record, analyst ratings and price targets, and what to watch in the print. Use this skill whenever the user is preparing for an upcoming earnings report or asks what the street expects — consensus or whisper numbers, EPS expectations, whether a company will beat, an earnings setup, or an earnings-season prev",
   "category": "文档写作",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/himself65/finance-skills/blob/main/plugins/market-analysis/skills/earnings-preview/SKILL.md",
     "path": "plugins/market-analysis/skills/earnings-preview/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-25T08:46:11.087Z",
+    "discovered_at": "2026-09-25T14:45:49.239Z",
     "stars": 3347,
     "language": "JavaScript",
-    "pushed_at": "2026-09-25T03:45:00Z",
+    "pushed_at": "2026-09-25T14:45:18Z",
     "license": "MIT"
-  },
-  "summary_zh": "这是一款基于雅虎财经数据生成股票财报简报的工具，帮你在业绩发布前快速摸清分析师预期和历史表现，适合做投资前的突击准备。"
+  }
 }

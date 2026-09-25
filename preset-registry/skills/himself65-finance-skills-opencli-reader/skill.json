@@ -1,7 +1,7 @@
 {
   "id": "himself65-finance-skills-opencli-reader",
   "name": "opencli-reader",
-  "description": "> Generic read-only fallback for any source opencli covers but this repo has no dedicated reader for — Yahoo Finance, Bloomberg, Reuters, Barchart, Eastmoney, Xueqiu, Sinafinance, Reddit, HackerNews, Substack, Medium, Weibo, Bilibili, Xiaohongshu, Zhihu, arXiv, Google Scholar, Apple Podcasts, Xiaoyuzhou, Spotify, YouTube, Weixin, Amazon, and more. Triggers: \"use opencli to read\", \"grab the frontpage from hackernews\", \"read reddit r/wallstreetbets\", \"fetch Eastmoney hot stocks\", \"pull Xueqiu feed",
+  "description": "> Generic read-only fallback for sources opencli supports but no dedicated skill covers: finance sites (Yahoo Finance, Bloomberg, Reuters, Barchart, Eastmoney, Xueqiu, Sinafinance), communities (Reddit, HackerNews, Weibo, Zhihu, Xiaohongshu, Bilibili), newsletters and blogs (Substack, Medium), research (arXiv, Google Scholar), podcasts and video (Apple Podcasts, Xiaoyuzhou, Spotify, YouTube), Weixin, Amazon, and more. Use it when the user asks to read or fetch from such a site — for example r/wa",
   "category": "文档写作",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/himself65/finance-skills/blob/main/plugins/social-readers/skills/opencli-reader/SKILL.md",
     "path": "plugins/social-readers/skills/opencli-reader/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-25T08:46:13.828Z",
+    "discovered_at": "2026-09-25T14:45:52.208Z",
     "stars": 3347,
     "language": "JavaScript",
-    "pushed_at": "2026-09-25T03:45:00Z",
+    "pushed_at": "2026-09-25T14:45:18Z",
     "license": "MIT"
-  },
-  "summary_zh": "这是一个通用的内容抓取工具，专门用来读取那些没有专属插件的网站。它能帮你快速拉取各大平台的资讯，适合需要跨平台聚合阅读或自动获取信息的场景。"
+  }
 }

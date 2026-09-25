@@ -1,7 +1,7 @@
 {
   "id": "himself65-finance-skills-hyperliquid-reader",
   "name": "hyperliquid-reader",
-  "description": "> Read Hyperliquid (app.hyperliquid.xyz) perp + spot market data via opencli (read-only, public info API). Use whenever the user wants Hyperliquid perpetual or spot markets, mark/oracle/mid prices, 24h change, funding rates (hourly or annualized APR), open interest, volume, the L2 order book, OHLCV candles, historical funding, or a cross-venue funding comparison (Hyperliquid vs Binance vs Bybit) for funding arbitrage. Triggers: \"Hyperliquid funding for BTC\", \"HL perp markets\", \"funding on BTC pe",
+  "description": "> Read Hyperliquid (app.hyperliquid.xyz) perp and spot market data through opencli and Hyperliquid's public info API: mark, oracle, and mid prices, 24h change, funding rates (hourly and annualized APR), open interest, volume, the L2 order book, OHLCV candles, funding history, and cross-venue funding comparisons (Hyperliquid vs Binance vs Bybit) for funding arbitrage. Use this skill whenever the user mentions Hyperliquid (HL, HL DEX, hyperliquid.xyz) or asks about its perps, spot pairs such as PU",
   "category": "文档写作",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/himself65/finance-skills/blob/main/plugins/data-providers/skills/hyperliquid-reader/SKILL.md",
     "path": "plugins/data-providers/skills/hyperliquid-reader/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-25T08:46:10.533Z",
+    "discovered_at": "2026-09-25T14:45:48.625Z",
     "stars": 3347,
     "language": "JavaScript",
-    "pushed_at": "2026-09-25T03:45:00Z",
+    "pushed_at": "2026-09-25T14:45:18Z",
     "license": "MIT"
-  },
-  "summary_zh": "通过命令行只读查询 Hyperliquid 交易所的永续和现货行情，涵盖标记价、资金费率、持仓量、订单簿、K线等数据，还能跨平台对比 Binance、Bybit 的费率，方便做资金费套利分析。"
+  }
 }
