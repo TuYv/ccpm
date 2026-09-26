@@ -1,7 +1,7 @@
 {
   "id": "addyosmani-agent-skills-code-review-and-quality",
   "name": "code-review-and-quality",
-  "description": "Conducts multi-axis code review. Use before merging any change. Use when reviewing code written by yourself, another agent, or a human. Use when you need to assess code quality across multiple dimensions before it enters the main branch.",
+  "description": "Conducts multi-axis code review. Use before merging any change. Use when reviewing code written by yourself, another agent, or a human. Use when you need to assess code quality across multiple dimensions before it enters the main branch. Use when asked to review a diff or a pull request, even when the diff is pasted inline.",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/addyosmani/agent-skills/blob/main/skills/code-review-and-quality/SKILL.md",
     "path": "skills/code-review-and-quality/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-26T02:31:02.432Z",
-    "stars": 99096,
+    "discovered_at": "2026-09-26T08:37:45.177Z",
+    "stars": 99155,
     "language": "JavaScript",
-    "pushed_at": "2026-09-23T04:05:38Z",
+    "pushed_at": "2026-09-26T04:19:38Z",
     "license": "MIT"
-  },
-  "summary_zh": "这是个多维度代码审查工具，专门在代码合入主分支前帮你把关。不管代码是你自己、AI还是别人写的，它都能全面评估质量，防止不合格代码混入。"
+  }
 }
