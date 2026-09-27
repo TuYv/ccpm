@@ -1,0 +1,25 @@
+{
+  "id": "neeeophytee-finding-unknowns-skills-regression-proof",
+  "name": "regression-proof",
+  "description": "Fix a reported bug with a regression test that demonstrably fails on the original behavior and passes after the fix. Use when implementing a bug fix or checking whether a proposed fix actually addresses a reported failure. Not a general coverage audit or new-feature workflow.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Neeeophytee",
+  "install_path": ".claude/skills/regression-proof/SKILL.md",
+  "source": {
+    "repo": "Neeeophytee/finding-unknowns-skills",
+    "url": "https://github.com/Neeeophytee/finding-unknowns-skills/blob/main/skills/regression-proof/SKILL.md",
+    "path": "skills/regression-proof/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-27T09:14:30.138Z",
+    "stars": 339,
+    "language": "Python",
+    "pushed_at": "2026-09-27T06:52:19Z",
+    "license": "MIT"
+  }
+}
