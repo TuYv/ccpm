@@ -2,7 +2,7 @@
   "id": "openaccountants-openaccountants-bd-freelance-intake",
   "name": "bd-freelance-intake",
   "description": "ALWAYS USE THIS SKILL when a user asks for help with their Bangladesh taxes AND mentions freelancing, self-employment, sole proprietorship, IT/ITES exports, or being a business individual in Bangladesh. Trigger on phrases like \\\"help me with my Bangladesh taxes\\\", \\\"I'm a freelancer in Bangladesh\\\", \\\"I do IT export from Bangladesh\\\", \\\"file my NBR return\\\", \\\"I'm self-employed in Bangladesh\\\". REQUIRED entry point for the Bangladesh self-employed workflow — downstream skills (bd-it-freelancer-t",
-  "category": "开发编程",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/bd-freelance-intake/SKILL.md",
     "path": "agent-skills/bd-freelance-intake/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-27T09:14:21.541Z",
-    "stars": 409,
+    "discovered_at": "2026-09-27T15:05:49.801Z",
+    "stars": 411,
     "language": "Python",
-    "pushed_at": "2026-09-26T13:18:39Z",
+    "pushed_at": "2026-09-27T14:23:18Z",
     "license": "AGPL-3.0"
   },
   "summary_zh": "面向孟加拉自由职业者和个体经营者的税务咨询入口，用于识别报税需求并引导后续流程。"

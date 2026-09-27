@@ -2,7 +2,7 @@
   "id": "openaccountants-openaccountants-algeria-vat",
   "name": "algeria-vat",
   "description": "Use this skill whenever asked to prepare, review, or classify transactions for an Algeria TVA (Taxe sur la Valeur Ajoutee) return (G50 declaration) for any client. Trigger on phrases like \\\"prepare TVA return\\\", \\\"Algeria VAT\\\", \\\"G50 declaration\\\", \\\"declaration TVA\\\", \\\"DGI return\\\", or any request involving Algeria VAT filing. Also trigger when classifying transactions for TVA purposes from bank statements, invoices, or other source data. This skill covers Algeria only and standard TVA-regist",
-  "category": "开发编程",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/algeria-vat/SKILL.md",
     "path": "agent-skills/algeria-vat/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-27T09:14:14.879Z",
-    "stars": 409,
+    "discovered_at": "2026-09-27T15:05:40.799Z",
+    "stars": 411,
     "language": "Python",
-    "pushed_at": "2026-09-26T13:18:39Z",
+    "pushed_at": "2026-09-27T14:23:18Z",
     "license": "AGPL-3.0"
   },
   "summary_zh": "用于处理阿尔及利亚增值税申报，可从发票、银行流水等资料分类交易，并协助编制和复核G50申报表。"

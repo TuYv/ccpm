@@ -2,7 +2,7 @@
   "id": "openaccountants-openaccountants-au-payg-instalments",
   "name": "au-payg-instalments",
   "description": "> Use this skill whenever asked about Australian PAYG Instalments for sole traders. Trigger on phrases like \\\"PAYG instalments\\\", \\\"BAS T1 T2 T7 T9\\\", \\\"instalment rate\\\", \\\"instalment amount\\\", \\\"ATO instalment\\\", \\\"GDP uplift\\\", \\\"GIC\\\", \\\"variation of instalments\\\", or any question about income tax prepayments through the Business Activity Statement. Covers entry/exit thresholds, instalment rate method (T1/T2), instalment amount method (T7), GDP uplift factor, voluntary variation, GIC exposur",
-  "category": "开发编程",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/au-payg-instalments/SKILL.md",
     "path": "agent-skills/au-payg-instalments/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-27T09:14:17.442Z",
-    "stars": 409,
+    "discovered_at": "2026-09-27T15:05:44.723Z",
+    "stars": 411,
     "language": "Python",
-    "pushed_at": "2026-09-26T13:18:39Z",
+    "pushed_at": "2026-09-27T14:23:18Z",
     "license": "AGPL-3.0"
   },
   "summary_zh": "面向澳大利亚个体经营者的税务指南，用于处理BAS中的所得税预缴、分期计算、调整及逾期利息风险。"

@@ -2,7 +2,7 @@
   "id": "openaccountants-openaccountants-azerbaijan-vat",
   "name": "azerbaijan-vat",
   "description": "Use this skill whenever asked to prepare, review, or classify transactions for an Azerbaijan VAT (EDV) return for any client. Trigger on phrases like \\\"Azerbaijan VAT\\\", \\\"EDV return\\\", \\\"Azerbaijani tax\\\", or any request involving Azerbaijan VAT filing. This skill covers standard EDV payers filing monthly returns. Simplified tax regime and micro-enterprise exemptions are in the refusal catalogue. MUST be loaded alongside vat-workflow-base v0.1 or later. ALWAYS read this skill before touching an",
-  "category": "开发编程",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/azerbaijan-vat/SKILL.md",
     "path": "agent-skills/azerbaijan-vat/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-27T09:14:19.602Z",
-    "stars": 409,
+    "discovered_at": "2026-09-27T15:05:47.456Z",
+    "stars": 411,
     "language": "Python",
-    "pushed_at": "2026-09-26T13:18:39Z",
+    "pushed_at": "2026-09-27T14:23:18Z",
     "license": "AGPL-3.0"
   },
   "summary_zh": "面向阿塞拜疆标准增值税纳税人的申报辅助工具，适合处理月度交易分类、复核与申报准备。"
