@@ -21,7 +21,7 @@ You know a problem exists in your field. You haven't validated whether anyone el
 1. **translate** — Turn your professional pain into a clear problem statement
 2. **validate** — Test whether other people have this pain and will pay to fix it
 
-**Time:** 1-2 weeks. **Cost:** $0-200.
+**Time:** 1-2 weeks. **Cost:** \$0-200.
 
 **Gate:** Do NOT move to Stage 2 until you have signal that real people want this. Signal = email signups, survey responses, or pre-payments. "My friends think it's cool" is not signal.
 
@@ -167,3 +167,22 @@ You have product-market fit. Revenue is growing. Now scale.
 | Understand my financials | **finances**, **accounting** |
 | Set pricing | **pricing** |
 | Make my text sound less AI-generated | **humanize** |
+
+---
+
+## Which Plugin Holds Each Skill
+
+Solo Founder Skills ships as separate plugins. A skill only works if its plugin is installed. When you recommend a skill the user does not have, give them the install command: `/plugin install <plugin>@solo-founder-skills-marketplace`.
+
+| Plugin | Skills |
+|--------|--------|
+| sf-core | about-me, journey, next, focus, prioritize, glossary |
+| sf-strategy | translate, validate, customer-research, market-research, niche-advantage, plan, domain-name |
+| sf-design | brand-identity-generator, ux-design, ui-patterns, beautify, motion-polish, design-review |
+| sf-build | build, database, integrations, ai-features, debug, dry, optimize |
+| sf-ship | test, secure, compliance, go-live, deploy, monitor, analytics |
+| sf-copy | copywriting, prose-writing, humanize, landing-page |
+| sf-seo | seo, seo-content, seo-audit, technical-seo |
+| sf-channels | launch, content, social-media, email, ads, community |
+| sf-customers | growth, conversion, retention, sales, support, feedback |
+| sf-business | pricing, payments, finances, accounting, legal, hiring |

@@ -1,0 +1,25 @@
+{
+  "id": "whawkinsiv-claude-code-skills-domain-name",
+  "name": "domain-name",
+  "description": "Use this skill when the user needs to name a product or company and find a domain for it. Also use when the user says 'name my product,' 'what should I call it,' 'help me pick a domain,' 'is this a good name,' 'find me a domain,' 'my domain is taken,' 'check if this name is available,' or pastes a list of candidate names for an opinion. Scores names against ten rules, then verifies domain availability with DNS and RDAP. Do NOT use for buying a domain or pointing DNS at your host once the name is",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "whawkinsiv",
+  "install_path": ".claude/skills/domain-name/SKILL.md",
+  "source": {
+    "repo": "whawkinsiv/claude-code-skills",
+    "url": "https://github.com/whawkinsiv/claude-code-skills/blob/main/plugins/sf-strategy/skills/domain-name/SKILL.md",
+    "path": "plugins/sf-strategy/skills/domain-name/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-27T23:12:45.015Z",
+    "stars": 249,
+    "language": "Python",
+    "pushed_at": "2026-09-27T21:10:09Z",
+    "license": "MIT"
+  }
+}

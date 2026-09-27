@@ -15,7 +15,7 @@ Autonomous skill improvement loop inspired by [karpathy/autoresearch](https://gi
 
 When the user says "improve [skill name]":
 
-1. **Locate the skill.** Read `skills/<name>/SKILL.md`. If it doesn't exist, ask the user which skill they mean.
+1. **Locate the skill.** Find it at `plugins/*/skills/<name>/SKILL.md`. Below, `skills/<name>/` means that directory. If it doesn't exist, ask the user which skill they mean.
 
 2. **Back up the original.** Copy the full `skills/<name>/` directory to `eval/experiments/<name>/`. Create `eval/experiments/` if it doesn't exist.
    ```

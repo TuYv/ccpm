@@ -113,13 +113,13 @@ Present 3-5 opportunities, ranked by impact/effort ratio.
 Based on: [stage summary] — [app name/type]
 
 1. **[Action]** — [Why this matters right now, referencing what you found in their project]
-   ~[time estimate] · Use `/[skill]`
+   ~[time estimate] · Use `/[plugin]:[skill]`
 
 2. **[Action]** — [Why this matters]
-   ~[time estimate] · Use `/[skill]`
+   ~[time estimate] · Use `/[plugin]:[skill]`
 
 3. **[Action]** — [Why this matters]
-   ~[time estimate] · Use `/[skill]`
+   ~[time estimate] · Use `/[plugin]:[skill]`
 ```
 
 ### Output Rules
@@ -166,6 +166,25 @@ Route each recommendation to the most relevant skill:
 | Customer research | **customer-research** |
 | Finances | **finances** |
 | Hiring | **hiring** |
+
+---
+
+## Which Plugin Holds Each Skill
+
+Solo Founder Skills ships as separate plugins. A skill only works if its plugin is installed. When you recommend a skill the user does not have, give them the install command: `/plugin install <plugin>@solo-founder-skills-marketplace`.
+
+| Plugin | Skills |
+|--------|--------|
+| sf-core | about-me, journey, next, focus, prioritize, glossary |
+| sf-strategy | translate, validate, customer-research, market-research, niche-advantage, plan, domain-name |
+| sf-design | brand-identity-generator, ux-design, ui-patterns, beautify, motion-polish, design-review |
+| sf-build | build, database, integrations, ai-features, debug, dry, optimize |
+| sf-ship | test, secure, compliance, go-live, deploy, monitor, analytics |
+| sf-copy | copywriting, prose-writing, humanize, landing-page |
+| sf-seo | seo, seo-content, seo-audit, technical-seo |
+| sf-channels | launch, content, social-media, email, ads, community |
+| sf-customers | growth, conversion, retention, sales, support, feedback |
+| sf-business | pricing, payments, finances, accounting, legal, hiring |
 
 ---
 

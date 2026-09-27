@@ -1,0 +1,25 @@
+{
+  "id": "whawkinsiv-claude-code-skills-skill-audit-loop",
+  "name": "skill-audit-loop",
+  "description": "Measure whether an existing Claude Code skill actually works, then fix it from evidence instead of by inspection. Use this whenever someone asks if a skill is working, wants to test, audit, benchmark, or evaluate a skill, says a skill is being ignored or fires when it shouldn't, wants an A/B comparison of results with and without a skill, wants to turn a real session where a skill misbehaved into a regression case, or wants to revise a SKILL.md and doesn't want to guess at the edit. Also use whe",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "whawkinsiv",
+  "install_path": ".claude/skills/skill-audit-loop/SKILL.md",
+  "source": {
+    "repo": "whawkinsiv/claude-code-skills",
+    "url": "https://github.com/whawkinsiv/claude-code-skills/blob/main/plugins/sf-dev/skills/skill-audit-loop/SKILL.md",
+    "path": "plugins/sf-dev/skills/skill-audit-loop/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-27T23:12:41.017Z",
+    "stars": 249,
+    "language": "Python",
+    "pushed_at": "2026-09-27T21:10:09Z",
+    "license": "MIT"
+  }
+}
