@@ -1,0 +1,25 @@
+{
+  "id": "tt-a1i-archify-archify-review",
+  "name": "archify-review",
+  "description": "Review Archify issues, PRs, or code through value, cost, and impact to support evidence-based maintenance decisions. Use for issue triage, change reviews, and code quality assessments.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tt-a1i",
+  "install_path": ".claude/skills/archify-review/SKILL.md",
+  "source": {
+    "repo": "tt-a1i/archify",
+    "url": "https://github.com/tt-a1i/archify/blob/main/.agents/skills/archify-review/SKILL.md",
+    "path": ".agents/skills/archify-review/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-28T15:40:06.844Z",
+    "stars": 73342,
+    "language": "JavaScript",
+    "pushed_at": "2026-09-28T15:35:04Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "aeonfun-aeon-feedback-builder",
+  "name": "feedback-builder",
+  "description": "Point Aeon at a service's /feedback endpoint - pull what agents reported (bugs, missing features), triage and cluster it, then build the best accepted request as a PR for a human to approve.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "aeonfun",
+  "install_path": ".claude/skills/feedback-builder/SKILL.md",
+  "source": {
+    "repo": "aeonfun/aeon",
+    "url": "https://github.com/aeonfun/aeon/blob/main/skills/feedback-builder/SKILL.md",
+    "path": "skills/feedback-builder/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-28T16:34:16.525Z",
+    "stars": 756,
+    "language": "Shell",
+    "pushed_at": "2026-09-28T15:53:59Z",
+    "license": "MIT"
+  }
+}

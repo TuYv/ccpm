@@ -1,0 +1,25 @@
+{
+  "id": "runkids-skillshare-skillshare-windows-utm",
+  "name": "skillshare-windows-utm",
+  "description": ">- Verify skillshare on a real Windows guest running in local UTM: build a pinned commit in the devcontainer, push it into the VM, and either run the Windows E2E runbook with full and basic-user tokens or hand the maintainer a one-line hands-on setup. Use this whenever a change touches Windows links, junctions, file symlinks, Developer Mode, copy fallback, Windows paths, or the dashboard on Windows, or when the user asks to test or accept something on Windows / UTM.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "runkids",
+  "install_path": ".claude/skills/skillshare-windows-utm/SKILL.md",
+  "source": {
+    "repo": "runkids/skillshare",
+    "url": "https://github.com/runkids/skillshare/blob/main/.skillshare/skills/skillshare-windows-utm/SKILL.md",
+    "path": ".skillshare/skills/skillshare-windows-utm/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-28T16:31:12.827Z",
+    "stars": 2704,
+    "language": "Go",
+    "pushed_at": "2026-09-28T15:09:30Z",
+    "license": "MIT"
+  }
+}

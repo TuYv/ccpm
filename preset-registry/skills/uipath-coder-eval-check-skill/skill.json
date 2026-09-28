@@ -1,0 +1,25 @@
+{
+  "id": "uipath-coder-eval-check-skill",
+  "name": "check-skill",
+  "description": "Generate and run a coder-eval activation suite for a Claude Code skill. Use when the user asks whether a skill triggers, wants to test skill activation, or worries a skill has silently stopped firing.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "UiPath",
+  "install_path": ".claude/skills/check-skill/SKILL.md",
+  "source": {
+    "repo": "UiPath/coder_eval",
+    "url": "https://github.com/UiPath/coder_eval/blob/main/plugins/coder-eval/skills/check-skill/SKILL.md",
+    "path": "plugins/coder-eval/skills/check-skill/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-28T16:34:32.290Z",
+    "stars": 141,
+    "language": "Python",
+    "pushed_at": "2026-09-26T20:10:04Z",
+    "license": "Apache-2.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "uipath-coder-eval-analyze",
+  "name": "analyze",
+  "description": "Analyze a finished coder-eval run and write analysis.md — cluster failures into systemic patterns and recommend fixes. Use when the user wants to know why a run failed, what regressed or got worse since a previous run, what to fix, or what a run says about their tasks.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "UiPath",
+  "install_path": ".claude/skills/analyze/SKILL.md",
+  "source": {
+    "repo": "UiPath/coder_eval",
+    "url": "https://github.com/UiPath/coder_eval/blob/main/plugins/coder-eval/skills/analyze/SKILL.md",
+    "path": "plugins/coder-eval/skills/analyze/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-28T16:34:32.106Z",
+    "stars": 141,
+    "language": "Python",
+    "pushed_at": "2026-09-26T20:10:04Z",
+    "license": "Apache-2.0"
+  }
+}

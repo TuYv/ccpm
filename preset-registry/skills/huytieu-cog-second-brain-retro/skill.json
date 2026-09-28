@@ -1,7 +1,7 @@
 {
   "id": "huytieu-cog-second-brain-retro",
   "name": "retro",
-  "description": "> CP-7 retrospective: audit checkpoints, evidence quality, action items, and harvest candidates. Closes the V-model cycle and feeds the next run. Use via /retro after ship, escalate, or significant session.",
+  "description": "CP-7 retrospective: audit checkpoints, evidence quality, action items, and harvest candidates. Closes the V-model cycle and feeds the next run. Use via /retro after ship, escalate, or significant session.",
   "category": "文档写作",
   "compatible_tools": [
     "claude",
@@ -13,14 +13,13 @@
   "install_path": ".claude/skills/retro/SKILL.md",
   "source": {
     "repo": "huytieu/COG-second-brain",
-    "url": "https://github.com/huytieu/COG-second-brain/blob/main/.claude/skills/retro/SKILL.md",
-    "path": ".claude/skills/retro/SKILL.md",
+    "url": "https://github.com/huytieu/COG-second-brain/blob/main/.agents/skills/retro/SKILL.md",
+    "path": ".agents/skills/retro/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-28T07:54:35.287Z",
-    "stars": 1233,
-    "language": "HTML",
-    "pushed_at": "2026-09-18T05:15:09Z",
+    "discovered_at": "2026-09-28T16:29:19.363Z",
+    "stars": 1237,
+    "language": "Python",
+    "pushed_at": "2026-09-28T08:52:07Z",
     "license": "MIT"
-  },
-  "summary_zh": "一套用于发布、问题升级或重要会话后的复盘流程，帮助审查证据、落实改进项，并沉淀经验供下一轮执行。"
+  }
 }
