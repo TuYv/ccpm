@@ -1,0 +1,25 @@
+{
+  "id": "kenryu42-claude-code-safety-net-ccsn-no-comments",
+  "name": "ccsn-no-comments",
+  "description": "Use in the cc-safety-net repo when `bun run lint:comments` or `bun run check` reports a comment, a stale comment-allowlist entry, or a file it cannot parse, and before writing a code comment there. Moves what each comment says into code, a test, or the PR description instead of deleting it and losing it.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "kenryu42",
+  "install_path": ".claude/skills/ccsn-no-comments/SKILL.md",
+  "source": {
+    "repo": "kenryu42/claude-code-safety-net",
+    "url": "https://github.com/kenryu42/claude-code-safety-net/blob/main/.agents/skills/ccsn-no-comments/SKILL.md",
+    "path": ".agents/skills/ccsn-no-comments/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-28T23:04:21.397Z",
+    "stars": 1563,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-28T21:52:16Z",
+    "license": "MIT"
+  }
+}
