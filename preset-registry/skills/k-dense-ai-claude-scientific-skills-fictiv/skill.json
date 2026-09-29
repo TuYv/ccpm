@@ -1,0 +1,25 @@
+{
+  "id": "k-dense-ai-claude-scientific-skills-fictiv",
+  "name": "fictiv",
+  "description": "Operate Fictiv (app.fictiv.com), the on-demand manufacturing platform, end to end in the user's browser. Covers uploading CAD parts, configuring process, material, finish, threads, tolerances and inspections, getting instant or manual quotes, reading and fixing DFM feedback, choosing lead time and region, checking out and paying (card or PO), tracking orders, reordering, and troubleshooting. Use this skill whenever the user mentions Fictiv, wants a part CNC machined, 3D printed, sheet-metal fabr",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "K-Dense-AI",
+  "install_path": ".claude/skills/fictiv/SKILL.md",
+  "source": {
+    "repo": "K-Dense-AI/claude-scientific-skills",
+    "url": "https://github.com/K-Dense-AI/claude-scientific-skills/blob/main/skills/fictiv/SKILL.md",
+    "path": "skills/fictiv/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-29T20:58:15.091Z",
+    "stars": 47127,
+    "language": "Python",
+    "pushed_at": "2026-09-29T20:14:57Z",
+    "license": "MIT"
+  }
+}

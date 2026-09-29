@@ -1,0 +1,25 @@
+{
+  "id": "massimodeluisa-recursive-decomposition-skill-recursive-decomposition",
+  "name": "recursive-decomposition",
+  "description": "Decompose dense codebase-wide, multi-document, PDF, and aggregation work even when the input fits the context window, following Recursive Language Models (Zhang, Kraska, Khattab, 2025). Use when the user asks to analyse all files, a whole repo, all docs, large PDFs, or to aggregate or multi-hop across scattered sources. Skip one file, one function, a single needle, or a one-page PDF conversion. Triggers: long context, context rot, large codebase, many files, all files, big document, multi-docume",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "massimodeluisa",
+  "install_path": ".claude/skills/recursive-decomposition/SKILL.md",
+  "source": {
+    "repo": "massimodeluisa/recursive-decomposition-skill",
+    "url": "https://github.com/massimodeluisa/recursive-decomposition-skill/blob/main/skills/recursive-decomposition/SKILL.md",
+    "path": "skills/recursive-decomposition/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-29T21:55:04.604Z",
+    "stars": 50,
+    "language": "HTML",
+    "pushed_at": "2026-09-11T08:37:44Z",
+    "license": "MIT"
+  }
+}

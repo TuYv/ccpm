@@ -1,0 +1,25 @@
+{
+  "id": "sickn33-agentic-awesome-skills-access-matrix",
+  "name": "access-matrix",
+  "description": "Access matrix of role-by-module permissions, with per-role scope, confidentiality level and SME tier, as CSV, SQL, JSON Schema or Notion on request. Use for access reviews.",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sickn33",
+  "install_path": ".claude/skills/access-matrix/SKILL.md",
+  "source": {
+    "repo": "sickn33/agentic-awesome-skills",
+    "url": "https://github.com/sickn33/agentic-awesome-skills/blob/main/plugins/agentic-awesome-skills-claude/skills/access-matrix/SKILL.md",
+    "path": "plugins/agentic-awesome-skills-claude/skills/access-matrix/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-29T21:44:58.177Z",
+    "stars": 47078,
+    "language": "Python",
+    "pushed_at": "2026-09-29T21:43:32Z",
+    "license": "MIT"
+  }
+}
