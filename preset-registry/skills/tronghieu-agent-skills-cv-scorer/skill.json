@@ -1,0 +1,25 @@
+{
+  "id": "tronghieu-agent-skills-cv-scorer",
+  "name": "cv-scorer",
+  "description": "Score candidate CVs on a 100-point scale against a Job Description. Use this skill when the user wants to evaluate, score, rank, or screen candidate CVs/resumes against a JD. Also trigger when the user mentions 'review CV', 'screen resume', 'rate candidates', 'shortlist', or any context involving matching resumes to job requirements.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tronghieu",
+  "install_path": ".claude/skills/cv-scorer/SKILL.md",
+  "source": {
+    "repo": "tronghieu/agent-skills",
+    "url": "https://github.com/tronghieu/agent-skills/blob/main/skills/cv-scorer/SKILL.md",
+    "path": "skills/cv-scorer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-29T16:57:53.194Z",
+    "stars": 71,
+    "language": "Python",
+    "pushed_at": "2026-09-22T06:50:49Z",
+    "license": "MIT"
+  }
+}

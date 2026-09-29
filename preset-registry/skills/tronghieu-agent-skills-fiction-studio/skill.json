@@ -1,0 +1,25 @@
+{
+  "id": "tronghieu-agent-skills-fiction-studio",
+  "name": "fiction-studio",
+  "description": "> A complete fiction-writing studio, run as a team of named specialist agents, that guides an author from a bare idea to a polished prose manuscript. Use this skill whenever the user wants to write, plan, or revise fiction — a novel, novella, short story, or series. Trigger on requests like \"help me write a novel\", \"I have an idea for a story\", \"develop my characters\", \"build a world for my fantasy\", \"outline my plot\", \"fix this scene\", \"my dialogue feels flat\", \"give me beta-reader feedback\", o",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tronghieu",
+  "install_path": ".claude/skills/fiction-studio/SKILL.md",
+  "source": {
+    "repo": "tronghieu/agent-skills",
+    "url": "https://github.com/tronghieu/agent-skills/blob/main/skills/fiction-studio/SKILL.md",
+    "path": "skills/fiction-studio/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-29T16:57:53.855Z",
+    "stars": 71,
+    "language": "Python",
+    "pushed_at": "2026-09-22T06:50:49Z",
+    "license": "MIT"
+  }
+}

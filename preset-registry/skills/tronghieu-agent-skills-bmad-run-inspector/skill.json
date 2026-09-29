@@ -1,0 +1,25 @@
+{
+  "id": "tronghieu-agent-skills-bmad-run-inspector",
+  "name": "bmad-run-inspector",
+  "description": ">- Inspect and explain bmad-loop run artifacts under `.bmad-loop/runs/`. Use for live health checks (\"is it stuck?\", \"is the loop alive?\", \"what is the agent doing?\") and post-run forensics (\"what happened?\", \"why did story X fail?\", \"where did the tokens go?\"). Also triggers on \"monitor/check/summarize the loop\", \"why did the run pause?\", Vietnamese \"theo dõi bmad loop\", \"phân tích run\", \"đọc log của run\", and equivalent requests in other languages. Use only for bmad-loop's own run artifacts, n",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tronghieu",
+  "install_path": ".claude/skills/bmad-run-inspector/SKILL.md",
+  "source": {
+    "repo": "tronghieu/agent-skills",
+    "url": "https://github.com/tronghieu/agent-skills/blob/main/skills/bmad-run-inspector/SKILL.md",
+    "path": "skills/bmad-run-inspector/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-29T16:57:52.800Z",
+    "stars": 71,
+    "language": "Python",
+    "pushed_at": "2026-09-22T06:50:49Z",
+    "license": "MIT"
+  }
+}

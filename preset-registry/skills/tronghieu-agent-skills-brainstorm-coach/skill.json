@@ -1,0 +1,25 @@
+{
+  "id": "tronghieu-agent-skills-brainstorm-coach",
+  "name": "brainstorm-coach",
+  "description": ">- Coach structured brainstorming sessions on any topic: diverge on ideas together, then converge on priorities and next steps in a session document. Use whenever the user wants ideas or wants to think out loud, in any language (\"brainstorm with me\", \"give me ideas for…\", \"help me come up with…\", \"let's explore options for…\", \"I'm stuck on the name / the features\"; Vietnamese \"brainstorm cùng tôi\", \"cho tôi ý tưởng\", \"nghĩ cùng tôi xem\"), even when they never say \"brainstorm\". Also use when the ",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tronghieu",
+  "install_path": ".claude/skills/brainstorm-coach/SKILL.md",
+  "source": {
+    "repo": "tronghieu/agent-skills",
+    "url": "https://github.com/tronghieu/agent-skills/blob/main/skills/brainstorm-coach/SKILL.md",
+    "path": "skills/brainstorm-coach/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-29T16:57:52.928Z",
+    "stars": 71,
+    "language": "Python",
+    "pushed_at": "2026-09-22T06:50:49Z",
+    "license": "MIT"
+  }
+}

@@ -1,8 +1,8 @@
 {
   "id": "garrytan-gstack-qa",
   "name": "qa",
-  "description": "Systematically QA test a web application and fix bugs found. (gstack)",
-  "category": "测试调试",
+  "description": "Fix browser/API/CLI/job/worker/webhook bugs. (gstack)",
+  "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,10 @@
     "url": "https://github.com/garrytan/gstack/blob/main/qa/SKILL.md",
     "path": "qa/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-29T08:45:30.233Z",
-    "stars": 134448,
+    "discovered_at": "2026-09-29T16:06:47.615Z",
+    "stars": 134473,
     "language": "TypeScript",
-    "pushed_at": "2026-09-29T07:55:58Z",
+    "pushed_at": "2026-09-29T16:00:29Z",
     "license": "MIT"
-  },
-  "summary_zh": "用于系统化测试 Web 应用并修复发现的缺陷，适合上线前全面排查和解决问题。"
+  }
 }

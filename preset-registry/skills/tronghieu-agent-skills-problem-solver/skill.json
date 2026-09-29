@@ -1,0 +1,25 @@
+{
+  "id": "tronghieu-agent-skills-problem-solver",
+  "name": "problem-solver",
+  "description": ">- Diagnose problems before solving them: turn \"X is broken and we don't know why\" into a precise problem statement, verified root causes, solutions traced to those causes, and a rollout plan. Use whenever the user reports something failing, breaking, slowing, or recurring without a known cause: \"sales dropped and we don't know why\", \"this keeps happening\", \"why does X keep failing\", \"find the root cause\", \"run a post-mortem\", \"5 whys\"; Vietnamese \"sao cứ bị vậy hoài\", \"tìm nguyên nhân gốc\", \"X ",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tronghieu",
+  "install_path": ".claude/skills/problem-solver/SKILL.md",
+  "source": {
+    "repo": "tronghieu/agent-skills",
+    "url": "https://github.com/tronghieu/agent-skills/blob/main/skills/problem-solver/SKILL.md",
+    "path": "skills/problem-solver/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-29T16:57:54.320Z",
+    "stars": 71,
+    "language": "Python",
+    "pushed_at": "2026-09-22T06:50:49Z",
+    "license": "MIT"
+  }
+}

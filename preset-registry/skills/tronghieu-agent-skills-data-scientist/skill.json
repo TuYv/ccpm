@@ -1,0 +1,25 @@
+{
+  "id": "tronghieu-agent-skills-data-scientist",
+  "name": "data-scientist",
+  "description": ">- Act as an end-to-end data scientist: turn business questions into defensible analysis, validated models, and decision-ready reports. Use whenever the user asks to analyze, explore, or profile a dataset or CSV/Parquet/Excel file; asks what drives a metric or why a number changed (\"why did churn go up?\"); wants to test whether a difference is real (A/B tests, experiments, \"is this significant?\", \"how many samples do I need?\"); wants a predictive model (churn, forecast, scoring, segmentation, cl",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tronghieu",
+  "install_path": ".claude/skills/data-scientist/SKILL.md",
+  "source": {
+    "repo": "tronghieu/agent-skills",
+    "url": "https://github.com/tronghieu/agent-skills/blob/main/skills/data-scientist/SKILL.md",
+    "path": "skills/data-scientist/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-29T16:57:53.315Z",
+    "stars": 71,
+    "language": "Python",
+    "pushed_at": "2026-09-22T06:50:49Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "tronghieu-agent-skills-project-manager",
+  "name": "project-manager",
+  "description": ">- Act as a project-management copilot (PM/PMO) for the delivery loop: charters, plans and schedules, estimates, risk registers, status reports, scope changes, stakeholder communication, meeting actions, lessons learned, and portfolio roll-ups, in a per-project `_project/` workspace. Use whenever the user wants to start, plan, track, rescue, or report on a project: \"kick off this project\", \"make a project plan / timeline / WBS\", \"what date can I commit to\", \"build a risk register\", \"run a pre-mo",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tronghieu",
+  "install_path": ".claude/skills/project-manager/SKILL.md",
+  "source": {
+    "repo": "tronghieu/agent-skills",
+    "url": "https://github.com/tronghieu/agent-skills/blob/main/skills/project-manager/SKILL.md",
+    "path": "skills/project-manager/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-29T16:57:54.633Z",
+    "stars": 71,
+    "language": "Python",
+    "pushed_at": "2026-09-22T06:50:49Z",
+    "license": "MIT"
+  }
+}

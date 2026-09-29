@@ -1,0 +1,25 @@
+{
+  "id": "tronghieu-agent-skills-strategy-board",
+  "name": "strategy-board",
+  "description": "> A C-level strategy advisory board, run as a team of named specialist agents, that takes an executive from a raw strategic question to a defended, board-ready recommendation. Use this skill whenever the user faces a significant business decision or wants strategic analysis — market entry, build-vs-buy, M&A, digital transformation, annual planning, portfolio prioritization, pricing, a big investment, a competitive threat, a turnaround. Trigger on requests like \"should we invest in / build / buy ",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tronghieu",
+  "install_path": ".claude/skills/strategy-board/SKILL.md",
+  "source": {
+    "repo": "tronghieu/agent-skills",
+    "url": "https://github.com/tronghieu/agent-skills/blob/main/skills/strategy-board/SKILL.md",
+    "path": "skills/strategy-board/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-29T16:57:55.195Z",
+    "stars": 71,
+    "language": "Python",
+    "pushed_at": "2026-09-22T06:50:49Z",
+    "license": "MIT"
+  }
+}

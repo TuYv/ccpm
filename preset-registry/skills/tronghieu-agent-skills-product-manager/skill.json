@@ -1,0 +1,25 @@
+{
+  "id": "tronghieu-agent-skills-product-manager",
+  "name": "product-manager",
+  "description": ">- Act as a product-manager copilot that turns evidence into product decisions and artifacts: backlogs and prioritization, PRDs and user stories, metrics and OKRs, experiments, launch plans, feedback triage, and pricing/packaging, kept in a per-product workspace. Use whenever the user wants to decide what to build, spec it, or ship it: \"write a PRD for…\", \"prioritize our backlog\", \"what should we build next\", \"plan OKRs\", \"define our north star metric\", \"design an A/B test\", \"plan the launch\", \"",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tronghieu",
+  "install_path": ".claude/skills/product-manager/SKILL.md",
+  "source": {
+    "repo": "tronghieu/agent-skills",
+    "url": "https://github.com/tronghieu/agent-skills/blob/main/skills/product-manager/SKILL.md",
+    "path": "skills/product-manager/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-29T16:57:54.464Z",
+    "stars": 71,
+    "language": "Python",
+    "pushed_at": "2026-09-22T06:50:49Z",
+    "license": "MIT"
+  }
+}

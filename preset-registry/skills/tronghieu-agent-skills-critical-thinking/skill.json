@@ -1,0 +1,25 @@
+{
+  "id": "tronghieu-agent-skills-critical-thinking",
+  "name": "critical-thinking",
+  "description": ">- Audit the reasoning of a document or argument (memo, proposal, investment analysis, board paper, article, the user's own draft): claims, evidence, unstated assumptions, logical gaps, fallacies, and what would falsify it, each anchored to quoted text. Use whenever the user wants reasoning examined, in any language (\"audit this argument\", \"is this analysis sound\", \"poke holes in this proposal\", \"review the logic of my draft\"; Vietnamese \"phản biện giúp tôi\", \"soi lập luận này\", \"tài liệu này có",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tronghieu",
+  "install_path": ".claude/skills/critical-thinking/SKILL.md",
+  "source": {
+    "repo": "tronghieu/agent-skills",
+    "url": "https://github.com/tronghieu/agent-skills/blob/main/skills/critical-thinking/SKILL.md",
+    "path": "skills/critical-thinking/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-29T16:57:53.066Z",
+    "stars": 71,
+    "language": "Python",
+    "pushed_at": "2026-09-22T06:50:49Z",
+    "license": "MIT"
+  }
+}
