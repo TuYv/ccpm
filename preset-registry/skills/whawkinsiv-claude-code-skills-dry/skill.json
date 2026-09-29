@@ -2,7 +2,7 @@
   "id": "whawkinsiv-claude-code-skills-dry",
   "name": "dry",
   "description": "Use this skill to find and eliminate duplication across your codebase — UI components, database schema, and workflow logic. Also use when the codebase feels bloated, features take longer to build, changes break in unexpected places, or after significant AI-assisted development. Covers code deduplication, component reuse, database normalization, and modular architecture.",
-  "category": "开发编程",
+  "category": "文档写作",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/whawkinsiv/claude-code-skills/blob/main/plugins/sf-build/skills/dry/SKILL.md",
     "path": "plugins/sf-build/skills/dry/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-28T23:03:31.288Z",
+    "discovered_at": "2026-09-29T02:59:39.008Z",
     "stars": 249,
     "language": "Python",
-    "pushed_at": "2026-09-28T18:18:51Z",
+    "pushed_at": "2026-09-29T00:00:34Z",
     "license": "MIT"
   },
   "summary_zh": "这是一款代码去重和架构优化工具，能帮你找出并清理项目里各处的重复代码。特别适合代码臃肿、开发变慢、改一处坏多处，或AI生成大量代码后需要重构的场景。"

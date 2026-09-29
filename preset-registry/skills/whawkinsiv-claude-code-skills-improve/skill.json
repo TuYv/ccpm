@@ -2,7 +2,7 @@
   "id": "whawkinsiv-claude-code-skills-improve",
   "name": "improve",
   "description": "Use this skill to autonomously improve any other skill in solo-founder-skills. Point it at a skill (e.g., 'improve the seo skill') and it runs an autoresearch-style loop: diagnoses weaknesses, experiments with improvements, evaluates each change via A/B comparison, keeps winners, discards regressions, and reports results. Originals are always preserved — nothing changes until you approve.",
-  "category": "开发编程",
+  "category": "文档写作",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/whawkinsiv/claude-code-skills/blob/main/plugins/sf-dev/skills/improve/SKILL.md",
     "path": "plugins/sf-dev/skills/improve/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-28T23:03:41.179Z",
+    "discovered_at": "2026-09-29T02:59:47.250Z",
     "stars": 249,
     "language": "Python",
-    "pushed_at": "2026-09-28T18:18:51Z",
+    "pushed_at": "2026-09-29T00:00:34Z",
     "license": "MIT"
   },
   "summary_zh": "用于自动诊断和优化其他技能，通过实验与对比筛选改进方案，适合在保留原版的前提下提升技能效果。"

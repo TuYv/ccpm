@@ -1,0 +1,25 @@
+{
+  "id": "kevin7qi-codex-collab-codex-skill",
+  "name": "claude-collab",
+  "description": "Use when the user asks to invoke, delegate to, or collaborate with Claude (Claude Code) on any task. Also use PROACTIVELY when handing part of the work to Claude, or an independent non-Codex perspective, would add value — implementation, review, second opinions on code, plans, architecture, or design decisions.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Kevin7Qi",
+  "install_path": ".claude/skills/codex-skill/SKILL.md",
+  "source": {
+    "repo": "Kevin7Qi/codex-collab",
+    "url": "https://github.com/Kevin7Qi/codex-collab/blob/main/codex-skill/SKILL.md",
+    "path": "codex-skill/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-29T03:03:30.369Z",
+    "stars": 98,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-29T01:44:50Z",
+    "license": "MIT"
+  }
+}

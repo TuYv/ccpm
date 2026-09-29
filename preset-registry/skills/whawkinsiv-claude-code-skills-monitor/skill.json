@@ -2,7 +2,7 @@
   "id": "whawkinsiv-claude-code-skills-monitor",
   "name": "monitor",
   "description": "Use this skill when the user needs to set up production monitoring, track app health, configure error alerts, or respond to incidents. Also use when the user says 'my app went down,' 'how do I know if something breaks,' 'set up alerts,' 'is my app healthy,' or 'I found out from a user that my site was down.' Covers error tracking, uptime monitoring, performance metrics, and incident response for SaaS applications.",
-  "category": "开发编程",
+  "category": "文档写作",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/whawkinsiv/claude-code-skills/blob/main/plugins/sf-ship/skills/monitor/SKILL.md",
     "path": "plugins/sf-ship/skills/monitor/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-28T23:03:43.747Z",
+    "discovered_at": "2026-09-29T02:59:49.558Z",
     "stars": 249,
     "language": "Python",
-    "pushed_at": "2026-09-28T18:18:51Z",
+    "pushed_at": "2026-09-29T00:00:34Z",
     "license": "MIT"
   },
   "summary_zh": "这是一个SaaS应用的生产环境监控工具，能帮你实时掌握应用健康状况，一旦出错或宕机就立刻告警，让你快速响应故障，再也不怕等用户投诉才发现网站挂了。"

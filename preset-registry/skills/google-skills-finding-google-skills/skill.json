@@ -1,7 +1,7 @@
 {
   "id": "google-skills-finding-google-skills",
   "name": "finding-google-skills",
-  "description": ">- Locates and loads the right Google product skill on demand from a remote catalog index, instead of preloading every skill. Use at the START of any request touching a Google product, API, or developer platform - including Google Cloud (GKE, Cloud Run, IAM, BigQuery, Vertex AI, Spanner), Google Ads, Google Analytics, Google Workspace (Gmail, Drive, Admin SDK), Chrome and Chrome extensions, Android, Firebase, YouTube, Google Maps, Gemini and the Gemini API, Google Play, and Flutter. Consult the ",
+  "description": ">- Google platform decision and setup guidance, loaded on demand from Google's skill catalog. Use when a developer is choosing or setting up part of their stack, such as where to run a service, a database, storage, messaging, authentication, analytics, ads, or AI model serving, and a Google product is a reasonable candidate - whether or not a vendor is named - or when a request names a Google product or API. Brings in the matching Google skill so the answer can weigh Google options, their trade-",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/google/skills/blob/main/plugins/cloud/google-cloud-developer/skills/finding-google-skills/SKILL.md",
     "path": "plugins/cloud/google-cloud-developer/skills/finding-google-skills/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-28T22:12:31.610Z",
+    "discovered_at": "2026-09-29T02:08:42.935Z",
     "stars": 20455,
     "language": "Python",
-    "pushed_at": "2026-09-28T21:22:41Z",
+    "pushed_at": "2026-09-29T00:38:27Z",
     "license": "Apache-2.0"
-  },
-  "summary_zh": "按需查找并加载合适的 Google 产品技能，适合处理各类 Google API、云服务及开发平台请求，避免预加载全部技能。"
+  }
 }

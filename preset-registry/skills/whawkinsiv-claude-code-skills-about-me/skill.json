@@ -2,7 +2,7 @@
   "id": "whawkinsiv-claude-code-skills-about-me",
   "name": "about-me",
   "description": "Use this skill when the user wants to create a founder profile, establish their personal voice for content, or set up context so other skills produce personalized output instead of generic AI copy. Also use when the user says 'set up my voice,' 'create my profile,' 'who am I,' 'about me,' 'my background,' 'make content sound like me,' or 'founder profile.' Creates ABOUT-ME.md in the project root — a reference file that other skills naturally use to personalize copy, strategy advice, and outreach",
-  "category": "开发编程",
+  "category": "文档写作",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/whawkinsiv/claude-code-skills/blob/main/plugins/sf-core/skills/about-me/SKILL.md",
     "path": "plugins/sf-core/skills/about-me/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-28T23:03:36.298Z",
+    "discovered_at": "2026-09-29T02:59:43.341Z",
     "stars": 249,
     "language": "Python",
-    "pushed_at": "2026-09-28T18:18:51Z",
+    "pushed_at": "2026-09-29T00:00:34Z",
     "license": "MIT"
   },
   "summary_zh": "这是个生成个人档案的工具，专治AI内容千篇一律的问题。适合打造创始人形象或确立个人文风的场景，让其他AI工具读取档案后，能为你生成个性化的专属文案和策略。"

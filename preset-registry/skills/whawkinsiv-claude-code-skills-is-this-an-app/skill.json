@@ -1,0 +1,25 @@
+{
+  "id": "whawkinsiv-claude-code-skills-is-this-an-app",
+  "name": "is-this-an-app",
+  "description": "Use this skill when a founder has a new product idea and is about to build it, to decide what form the idea should take: a web app, a mobile app, a browser extension, an automation, an agent skill, an API, or no build at all. Also use when the user says 'is this an app,' 'does this need to be a web app,' 'should this be a SaaS,' 'web app or Chrome extension,' 'could this just be a Zapier or a GPT,' 'mobile app or web app,' 'what should I build this as,' or describes an idea and says they are abo",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "whawkinsiv",
+  "install_path": ".claude/skills/is-this-an-app/SKILL.md",
+  "source": {
+    "repo": "whawkinsiv/claude-code-skills",
+    "url": "https://github.com/whawkinsiv/claude-code-skills/blob/main/plugins/sf-strategy/skills/is-this-an-app/SKILL.md",
+    "path": "plugins/sf-strategy/skills/is-this-an-app/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-29T02:59:50.705Z",
+    "stars": 249,
+    "language": "Python",
+    "pushed_at": "2026-09-29T00:00:34Z",
+    "license": "MIT"
+  }
+}

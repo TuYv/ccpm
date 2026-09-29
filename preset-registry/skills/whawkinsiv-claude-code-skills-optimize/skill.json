@@ -2,7 +2,7 @@
   "id": "whawkinsiv-claude-code-skills-optimize",
   "name": "optimize",
   "description": "Use this skill when the user's app feels slow, the codebase feels bloated, or after significant development work. Also use when the user says 'my app is slow,' 'clean up my code,' 'reduce bundle size,' 'my hosting bill is too high,' or 'everything feels sluggish.' Optimizes across four dimensions: Speed (page load, API response), Code (unused files, dead code), Database (orphaned data, schema hygiene), and Dependencies (package bloat, bundle size).",
-  "category": "开发编程",
+  "category": "文档写作",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/whawkinsiv/claude-code-skills/blob/main/plugins/sf-build/skills/optimize/SKILL.md",
     "path": "plugins/sf-build/skills/optimize/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-28T23:03:31.785Z",
+    "discovered_at": "2026-09-29T02:59:39.475Z",
     "stars": 249,
     "language": "Python",
-    "pushed_at": "2026-09-28T18:18:51Z",
+    "pushed_at": "2026-09-29T00:00:34Z",
     "license": "MIT"
   },
   "summary_zh": "这是一个全方位的应用瘦身提速工具，专门解决应用卡顿、代码臃肿或托管费太高的问题。它能帮你深度清理冗余和精简体积，让项目重新轻快运转。"

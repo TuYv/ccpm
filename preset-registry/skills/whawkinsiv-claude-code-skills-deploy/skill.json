@@ -2,7 +2,7 @@
   "id": "whawkinsiv-claude-code-skills-deploy",
   "name": "deploy",
   "description": "Use this skill when the user needs to deploy their app, choose a hosting provider, connect a custom domain, set up environment variables, manage a production database, configure DNS, or go from 'it works locally' to 'it's live on the internet.' Covers hosting selection, deployment workflows, domain setup, and production operations for non-technical founders.",
-  "category": "开发编程",
+  "category": "文档写作",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/whawkinsiv/claude-code-skills/blob/main/plugins/sf-ship/skills/deploy/SKILL.md",
     "path": "plugins/sf-ship/skills/deploy/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-28T23:03:43.257Z",
+    "discovered_at": "2026-09-29T02:59:49.108Z",
     "stars": 249,
     "language": "Python",
-    "pushed_at": "2026-09-28T18:18:51Z",
+    "pushed_at": "2026-09-29T00:00:34Z",
     "license": "MIT"
   },
   "summary_zh": "这是一个专为非技术人群打造的部署助手，帮你把本地跑通的应用顺利发布到网上，轻松搞定从选服务器到配域名的所有上线难题。"
