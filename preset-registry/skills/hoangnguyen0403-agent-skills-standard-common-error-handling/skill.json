@@ -1,0 +1,25 @@
+{
+  "id": "hoangnguyen0403-agent-skills-standard-common-error-handling",
+  "name": "common-error-handling",
+  "description": "Cross-cutting standards for error design, response shapes, error codes, and boundary placement across API, domain, and infrastructure layers. Use when defining error hierarchies, wrapping exceptions, building standardized error responses, or placing error boundaries in layered architectures.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "HoangNguyen0403",
+  "install_path": ".claude/skills/common-error-handling/SKILL.md",
+  "source": {
+    "repo": "HoangNguyen0403/agent-skills-standard",
+    "url": "https://github.com/HoangNguyen0403/agent-skills-standard/blob/develop/.agents/skills/common/common-error-handling/SKILL.md",
+    "path": ".agents/skills/common/common-error-handling/SKILL.md",
+    "branch": "develop",
+    "discovered_at": "2026-09-29T09:32:39.396Z",
+    "stars": 569,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-29T08:01:48Z",
+    "license": "MIT"
+  }
+}

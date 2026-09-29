@@ -1,0 +1,25 @@
+{
+  "id": "hoangnguyen0403-agent-skills-standard-cyber-scoped-validation",
+  "name": "cyber-scoped-validation",
+  "description": "Validates bounded cybersecurity exercise observations against approved scope, expected behavior, runtime controls, and redacted evidence. Use when performing safe offline validation or authorized runtime checks with explicit stop and status gates.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "HoangNguyen0403",
+  "install_path": ".claude/skills/cyber-scoped-validation/SKILL.md",
+  "source": {
+    "repo": "HoangNguyen0403/agent-skills-standard",
+    "url": "https://github.com/HoangNguyen0403/agent-skills-standard/blob/develop/.agents/skills/cybersecurity/cyber-scoped-validation/SKILL.md",
+    "path": ".agents/skills/cybersecurity/cyber-scoped-validation/SKILL.md",
+    "branch": "develop",
+    "discovered_at": "2026-09-29T09:32:47.023Z",
+    "stars": 569,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-29T08:01:48Z",
+    "license": "MIT"
+  }
+}

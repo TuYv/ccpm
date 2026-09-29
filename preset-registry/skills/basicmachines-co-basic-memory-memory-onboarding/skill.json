@@ -1,7 +1,7 @@
 {
   "id": "basicmachines-co-basic-memory-memory-onboarding",
   "name": "memory-onboarding",
-  "description": "Guide someone new to Basic Memory through designing and building a complete personal knowledge system — interview them about what they want to track, propose a structure, build it with schemas and instruction notes, teach them to use it, and set up their AI assistant to load it automatically. Use this skill whenever a user says they're new to Basic Memory, wants to 'get started', 'set up', or 'onboard' with Basic Memory, doesn't know what to use it for, asks how to organize their memory project ",
+  "description": "Guide someone new to Basic Memory through designing and building a personal knowledge system: interview them, propose a structure, build it with schemas and instruction notes, teach them to use it, and set up their assistant to load it every session. Use when a user is new to Basic Memory or wants help getting started, asks how to structure a project (folders, schemas, conventions), has an empty or messy project that needs structure, or wants their assistant to remember context between sessions.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/basicmachines-co/basic-memory/blob/main/skills/memory-onboarding/SKILL.md",
     "path": "skills/memory-onboarding/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-29T02:11:06.601Z",
-    "stars": 4058,
+    "discovered_at": "2026-09-29T08:44:48.700Z",
+    "stars": 4061,
     "language": "Python",
-    "pushed_at": "2026-09-28T23:31:30Z",
+    "pushed_at": "2026-09-29T06:03:42Z",
     "license": "AGPL-3.0"
-  },
-  "summary_zh": "帮助新手搭建完整的个人知识管理系统，适合快速规划信息结构、掌握使用方法并接入 AI 助手。"
+  }
 }

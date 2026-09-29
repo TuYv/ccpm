@@ -1,0 +1,25 @@
+{
+  "id": "hoangnguyen0403-agent-skills-standard-cyber-framework-mapping",
+  "name": "cyber-framework-mapping",
+  "description": "Maintains sparse, reviewable cybersecurity framework edges with versioned IDs, relation, rationale, source, and review status. Use when mapping exercise observations or procedures to NIST, ATT&CK, or another named framework.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "HoangNguyen0403",
+  "install_path": ".claude/skills/cyber-framework-mapping/SKILL.md",
+  "source": {
+    "repo": "HoangNguyen0403/agent-skills-standard",
+    "url": "https://github.com/HoangNguyen0403/agent-skills-standard/blob/develop/.agents/skills/cybersecurity/cyber-framework-mapping/SKILL.md",
+    "path": ".agents/skills/cybersecurity/cyber-framework-mapping/SKILL.md",
+    "branch": "develop",
+    "discovered_at": "2026-09-29T09:32:46.653Z",
+    "stars": 569,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-29T08:01:48Z",
+    "license": "MIT"
+  }
+}

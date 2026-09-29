@@ -1,0 +1,25 @@
+{
+  "id": "hoangnguyen0403-agent-skills-standard-cyber-detection-validation",
+  "name": "cyber-detection-validation",
+  "description": "Validates defensive controls with paired authorized action and observation evidence, distinguishing blocked, prevented, detected, responded, and telemetry-gap outcomes. Use for purple-team validation design or offline fixture review; not unsanctioned testing or production efficacy claims.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "HoangNguyen0403",
+  "install_path": ".claude/skills/cyber-detection-validation/SKILL.md",
+  "source": {
+    "repo": "HoangNguyen0403/agent-skills-standard",
+    "url": "https://github.com/HoangNguyen0403/agent-skills-standard/blob/develop/.agents/skills/cybersecurity/cyber-detection-validation/SKILL.md",
+    "path": ".agents/skills/cybersecurity/cyber-detection-validation/SKILL.md",
+    "branch": "develop",
+    "discovered_at": "2026-09-29T09:32:45.754Z",
+    "stars": 569,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-29T08:01:48Z",
+    "license": "MIT"
+  }
+}

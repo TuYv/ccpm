@@ -1,0 +1,25 @@
+{
+  "id": "hoangnguyen0403-agent-skills-standard-common-accessibility",
+  "name": "common-accessibility",
+  "description": "Enforce WCAG 2.2 AA compliance with semantic HTML, ARIA roles, keyboard navigation, and color contrast standards for web UIs. Use when building interactive components, adding form labels, fixing focus traps, or auditing a11y compliance.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "HoangNguyen0403",
+  "install_path": ".claude/skills/common-accessibility/SKILL.md",
+  "source": {
+    "repo": "HoangNguyen0403/agent-skills-standard",
+    "url": "https://github.com/HoangNguyen0403/agent-skills-standard/blob/develop/.agents/skills/common/common-accessibility/SKILL.md",
+    "path": ".agents/skills/common/common-accessibility/SKILL.md",
+    "branch": "develop",
+    "discovered_at": "2026-09-29T09:32:36.869Z",
+    "stars": 569,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-29T08:01:48Z",
+    "license": "MIT"
+  }
+}

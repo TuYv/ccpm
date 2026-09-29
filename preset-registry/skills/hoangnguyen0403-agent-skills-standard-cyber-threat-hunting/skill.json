@@ -1,0 +1,25 @@
+{
+  "id": "hoangnguyen0403-agent-skills-standard-cyber-threat-hunting",
+  "name": "cyber-threat-hunting",
+  "description": "Conducts hypothesis-driven, evidence-preserving threat hunts with bounded negative conclusions and telemetry-gap handling. Use for hunt hypotheses, scoped offline analysis, or analytic follow-up; not unscoped scanning, malware execution, or generic intelligence summaries.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "HoangNguyen0403",
+  "install_path": ".claude/skills/cyber-threat-hunting/SKILL.md",
+  "source": {
+    "repo": "HoangNguyen0403/agent-skills-standard",
+    "url": "https://github.com/HoangNguyen0403/agent-skills-standard/blob/develop/.agents/skills/cybersecurity/cyber-threat-hunting/SKILL.md",
+    "path": ".agents/skills/cybersecurity/cyber-threat-hunting/SKILL.md",
+    "branch": "develop",
+    "discovered_at": "2026-09-29T09:32:47.220Z",
+    "stars": 569,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-29T08:01:48Z",
+    "license": "MIT"
+  }
+}

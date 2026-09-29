@@ -1,0 +1,25 @@
+{
+  "id": "google-skills-bigquery-optimization",
+  "name": "bigquery-optimization",
+  "description": ">- Provides workflows to optimize BigQuery environments (capacity planning, editions), storage assets (partitioning, clustering, storage lifecycles, billing models), and SQL queries. Use when optimizing cost, modeling Edition migrations, rightsizing reservations, evaluating logical vs. physical storage, designing table partitioning/clustering, generating table DDL, migrating unpartitioned tables, managing partition expiration, or optimizing individual SQL queries.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/bigquery-optimization/SKILL.md",
+  "source": {
+    "repo": "google/skills",
+    "url": "https://github.com/google/skills/blob/main/skills/cloud/bigquery-optimization/SKILL.md",
+    "path": "skills/cloud/bigquery-optimization/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-29T08:41:51.618Z",
+    "stars": 20461,
+    "language": "Python",
+    "pushed_at": "2026-09-29T04:23:48Z",
+    "license": "Apache-2.0"
+  }
+}
