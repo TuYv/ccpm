@@ -1,0 +1,25 @@
+{
+  "id": "omnigent-ai-omnigent-verify-omnigent",
+  "name": "verify-omnigent",
+  "description": "Drive Omnigent the way a user does and prove a behavior with recorded evidence, using an isolated server, runner, and mock model plus a feature map of every user entry point. Load before reproducing a user-facing bug, before claiming a fix works, or when reviewing whether a change covered every surface (session vs. new-session composer, terminal strip vs. agent terminal, all twelve native harnesses). Covers the web UI, native harness terminals, and the CLI.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "omnigent-ai",
+  "install_path": ".claude/skills/verify-omnigent/SKILL.md",
+  "source": {
+    "repo": "omnigent-ai/omnigent",
+    "url": "https://github.com/omnigent-ai/omnigent/blob/main/feature-map/skills/verify-omnigent/SKILL.md",
+    "path": "feature-map/skills/verify-omnigent/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-30T14:02:04.495Z",
+    "stars": 10364,
+    "language": "Python",
+    "pushed_at": "2026-09-30T13:59:30Z",
+    "license": "Apache-2.0"
+  }
+}

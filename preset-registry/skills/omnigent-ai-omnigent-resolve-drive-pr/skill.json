@@ -1,7 +1,7 @@
 {
   "id": "omnigent-ai-omnigent-resolve-drive-pr",
   "name": "resolve-drive-pr",
-  "description": "Drive an open PR through current CI, independent Polly review, preview, and maintainer handoff.",
+  "description": "Drive an open PR through current CI, independent Polly and OCR reviews, preview, and maintainer handoff.",
   "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/omnigent-ai/omnigent/blob/main/dev/resolve-agent/skills/resolve-drive-pr/SKILL.md",
     "path": "dev/resolve-agent/skills/resolve-drive-pr/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-09-30T06:57:49.303Z",
-    "stars": 10359,
+    "discovered_at": "2026-09-30T14:02:00.885Z",
+    "stars": 10364,
     "language": "Python",
-    "pushed_at": "2026-09-30T06:57:39Z",
+    "pushed_at": "2026-09-30T13:59:30Z",
     "license": "Apache-2.0"
   }
 }
