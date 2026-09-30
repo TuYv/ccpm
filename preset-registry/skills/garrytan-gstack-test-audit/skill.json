@@ -1,0 +1,25 @@
+{
+  "id": "garrytan-gstack-test-audit",
+  "name": "test-audit",
+  "description": "Find low-value or duplicate tests and the test-only code they keep alive. (gstack)",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "garrytan",
+  "install_path": ".claude/skills/test-audit/SKILL.md",
+  "source": {
+    "repo": "garrytan/gstack",
+    "url": "https://github.com/garrytan/gstack/blob/main/test-audit/SKILL.md",
+    "path": "test-audit/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-30T00:40:58.241Z",
+    "stars": 134508,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-29T22:49:29Z",
+    "license": "MIT"
+  }
+}

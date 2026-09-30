@@ -1,0 +1,25 @@
+{
+  "id": "k-dense-ai-claude-scientific-skills-13c-metabolic-flux",
+  "name": "13c-metabolic-flux",
+  "description": "Estimates intracellular metabolic fluxes from steady-state carbon-13 isotope-tracing measurements using validated atom maps, mfapy isotope simulation, constrained multistart fitting, and flux-profile diagnostics. Use for 13C-MFA, carbon tracing, mass isotopomer distributions (MDVs/MIDs), positional isotopomers, parallel tracer experiments, and determining whether labeling data constrain a pathway flux. Distinguishes measured-label inference from COBRA flux balance analysis and flags experiments ",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "K-Dense-AI",
+  "install_path": ".claude/skills/13c-metabolic-flux/SKILL.md",
+  "source": {
+    "repo": "K-Dense-AI/claude-scientific-skills",
+    "url": "https://github.com/K-Dense-AI/claude-scientific-skills/blob/main/skills/13c-metabolic-flux/SKILL.md",
+    "path": "skills/13c-metabolic-flux/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-30T00:36:34.242Z",
+    "stars": 47133,
+    "language": "Python",
+    "pushed_at": "2026-09-29T23:34:26Z",
+    "license": "MIT"
+  }
+}

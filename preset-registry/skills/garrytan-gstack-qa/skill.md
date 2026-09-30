@@ -643,7 +643,18 @@ and unclear contracts never authorize repair.
 
 ### 8a.5. Regression test before repair
 
-Match 2-3 nearby tests' naming, imports, assertions and fixtures. Reproduce the failure
+**Test value bar.** Before writing the test (the reproduced bug answers what it protects and what makes it fail):
+
+3. Why does existing coverage not already catch that? Prefer adding a row to an existing table-driven test or shared fixture over a near-duplicate.
+4. Does it need a production seam (export, flag, wrapper, injection hook) that no production caller needs? If yes, test at the real boundary instead.
+
+Value card: `Value: protects=<...>; fails_when=<...>; why_new=<...>; seam=none` (seam: `none` or its name); each field at most 160 UTF-8 bytes here (clamp to 157 plus `...`; JSON keeps full values). Put it in the 8e.5 record (/qa) or under each proposed test (/qa-only). A missing upstream card never blocks: derive it; ignore unknown fields.
+
+Example: Value: protects=refundPayment rejects an empty reason; fails_when=the reason guard is removed or inverted; why_new=billing.test.ts covers processPayment only; seam=none
+Rejected (covered_elsewhere): "checkout renders"; checkout.e2e.ts:15 covers it, so extend that test.
+
+Extend an existing table or fixture when one covers the boundary; never add a production
+seam for the test. Match 2-3 nearby tests' naming, imports, assertions and fixtures. Reproduce the failure
 in a new native test. Run its detected command before repair; prove the defect caused its
 failure, not a bad fixture, import or service. Attribute it in the language's comment syntax:
 
@@ -697,7 +708,7 @@ repairs and valid red regressions/evidence uncommitted; tell the user what remai
 ### 8e.5. Regression Test record
 
 Record the test created before repair in 8a.5 and its re-test result from 8c:
-file, command, attribution, tested boundary and red/green evidence, or why it is deferred.
+file, command, attribution, tested boundary, value card and red/green evidence, or why it is deferred.
 This step records results; it does not create another test.
 Healthy-contract commits use `test(qa): regression test for {contract}`.
 **WTF-likelihood exclusion:** test-only commits do not count toward the heuristic.
