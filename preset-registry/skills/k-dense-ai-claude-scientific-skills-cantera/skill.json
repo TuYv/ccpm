@@ -1,0 +1,25 @@
+{
+  "id": "k-dense-ai-claude-scientific-skills-cantera",
+  "name": "cantera",
+  "description": "Runs Cantera homogeneous chemical reactors and evaluates ignition delay with mechanism provenance, conservation checks, and numerical refinement. Use for combustion kinetics, closed adiabatic ideal-gas constant-volume or constant-pressure ignition, temperature histories, or mechanism-specific ignition-delay comparisons.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "K-Dense-AI",
+  "install_path": ".claude/skills/cantera/SKILL.md",
+  "source": {
+    "repo": "K-Dense-AI/claude-scientific-skills",
+    "url": "https://github.com/K-Dense-AI/claude-scientific-skills/blob/main/skills/cantera/SKILL.md",
+    "path": "skills/cantera/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-30T23:15:20.093Z",
+    "stars": 47215,
+    "language": "Python",
+    "pushed_at": "2026-09-30T21:01:14Z",
+    "license": "MIT"
+  }
+}

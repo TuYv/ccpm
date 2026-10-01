@@ -1,0 +1,25 @@
+{
+  "id": "asklokesh-claudeskill-loki-mode-loki-seal",
+  "name": "loki-seal",
+  "description": "Use when finishing any coding task in a repo with tests. Loki Seal runs the repo's real test suite and refuses to let you declare done while tests newly fail, or while tests or CI config were deleted, skipped, xfailed or weakened. Runs locally with no model calls.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "asklokesh",
+  "install_path": ".claude/skills/loki-seal/SKILL.md",
+  "source": {
+    "repo": "asklokesh/claudeskill-loki-mode",
+    "url": "https://github.com/asklokesh/claudeskill-loki-mode/blob/main/packages/loki-seal/skills/loki-seal/SKILL.md",
+    "path": "packages/loki-seal/skills/loki-seal/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-01T00:13:33.574Z",
+    "stars": 1077,
+    "language": "Shell",
+    "pushed_at": "2026-10-01T00:10:18Z",
+    "license": null
+  }
+}

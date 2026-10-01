@@ -1,0 +1,25 @@
+{
+  "id": "pingdotgg-t3code-contribution-triage",
+  "name": "contribution-triage",
+  "description": "Enforce T3 Code's PR contribution policy by closing ineligible submissions and triggering Macroscope review for eligible work within authorized scope. Supports explicit dry runs. Use for contribution moderation, not installation diagnostics or a full code review.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "pingdotgg",
+  "install_path": ".claude/skills/contribution-triage/SKILL.md",
+  "source": {
+    "repo": "pingdotgg/t3code",
+    "url": "https://github.com/pingdotgg/t3code/blob/main/.agents/skills/contribution-triage/SKILL.md",
+    "path": ".agents/skills/contribution-triage/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-01T00:09:54.652Z",
+    "stars": 24016,
+    "language": "TypeScript",
+    "pushed_at": "2026-10-01T00:05:27Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "k-dense-ai-scientific-agent-skills-cellprofiler",
+  "name": "cellprofiler",
+  "description": "Runs reproducible CellProfiler microscopy pipelines for nuclear segmentation, cell counts, and per-object fluorescence measurements. Supports image/channel manifests, headless batch execution, segmentation overlays, and measurement QC for 2D fluorescence assays.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "K-Dense-AI",
+  "install_path": ".claude/skills/cellprofiler/SKILL.md",
+  "source": {
+    "repo": "K-Dense-AI/scientific-agent-skills",
+    "url": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/skills/cellprofiler/SKILL.md",
+    "path": "skills/cellprofiler/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-09-30T23:16:51.740Z",
+    "stars": 47215,
+    "language": "Python",
+    "pushed_at": "2026-09-30T21:01:14Z",
+    "license": "MIT"
+  }
+}
