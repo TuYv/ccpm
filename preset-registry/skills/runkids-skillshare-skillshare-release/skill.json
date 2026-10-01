@@ -1,8 +1,8 @@
 {
   "id": "runkids-skillshare-skillshare-release",
   "name": "skillshare-release",
-  "description": ">- End-to-end release workflow for skillshare. Runs tests, generates changelog (via /changelog), optionally writes local RELEASE_NOTES, updates version numbers, commits, and drafts announcements. Use when the user says \"release\", \"prepare release\", \"cut a release\", \"release v0.19\", or any request to publish a new version. For changelog-only tasks, use /changelog instead.",
-  "category": "测试调试",
+  "description": ">- Prepare and review skillshare releases using the Release Please PR, verify the proposed version and changelog, inspect draft assets, and publish through the manual Publish Release workflow when explicitly authorized. Use when the user says \"release\", \"prepare release\", \"cut a release\", or asks to publish a new version. For changelog-only tasks, use /changelog instead.",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/runkids/skillshare/blob/main/.skillshare/skills/skillshare-release/SKILL.md",
     "path": ".skillshare/skills/skillshare-release/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-01T17:32:03.037Z",
-    "stars": 2712,
+    "discovered_at": "2026-10-01T22:55:10.390Z",
+    "stars": 2713,
     "language": "Go",
-    "pushed_at": "2026-10-01T15:46:56Z",
+    "pushed_at": "2026-10-01T22:10:05Z",
     "license": "MIT"
   }
 }

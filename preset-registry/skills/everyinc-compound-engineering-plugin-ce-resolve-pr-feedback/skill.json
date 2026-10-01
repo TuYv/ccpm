@@ -1,7 +1,7 @@
 {
   "id": "everyinc-compound-engineering-plugin-ce-resolve-pr-feedback",
   "name": "ce-resolve-pr-feedback",
-  "description": "Resolve PR review feedback. Use when addressing feedback already left on a PR. Not for reviewing the code before feedback exists; that is ce-code-review.",
+  "description": "Judge PR feedback centrally, apply valid fixes, and complete review conversations with publication verified. Use when addressing feedback already left on a PR, preparing local fixes for a caller to publish, or completing a saved feedback batch. Use ce-code-review for reviewing code before feedback exists.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/EveryInc/compound-engineering-plugin/blob/main/skills/ce-resolve-pr-feedback/SKILL.md",
     "path": "skills/ce-resolve-pr-feedback/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-01T17:30:51.911Z",
-    "stars": 25360,
+    "discovered_at": "2026-10-01T22:54:04.923Z",
+    "stars": 25361,
     "language": "TypeScript",
-    "pushed_at": "2026-10-01T17:14:12Z",
+    "pushed_at": "2026-10-01T21:19:30Z",
     "license": "MIT"
   }
 }
