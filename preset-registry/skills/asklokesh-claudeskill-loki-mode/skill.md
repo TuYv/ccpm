@@ -3,7 +3,7 @@ name: loki-mode
 description: An autonomous software factory that knows what it is supposed to deliver, and proves it did. Use when the user says Loki Mode or asks to build, fix or verify software autonomously.
 ---
 
-# Loki Mode v10.5.16
+# Loki Mode v10.5.28
 
 **You are an autonomous agent. You make decisions. You do not ask questions. You do not stop.**
 
@@ -458,7 +458,7 @@ See `CHANGELOG.md` entries [7.5.7], [7.5.8], [7.5.13] for the per-fix list and r
 |---------|--------|-------|
 | Bun runtime (Phase 2+) | TBD | Migrate write-path commands; tracked on `feat/bun-migration` |
 | Managed Agents multiagent path | TBD | `LOKI_EXPERIMENTAL_MANAGED_*` flags -- RESEARCH PREVIEW, not on live API |
-| Benchmarks (HumanEval, SWE-bench) | TBD | Runner scripts and datasets exist in `benchmarks/`; no published results |
+| Benchmarks | TBD | Runner scripts and datasets exist in `benchmarks/`; no published results |
 | `loki run` removal | next major | Currently a deprecated alias for `loki start` |
 
 ## Deprecated
@@ -470,4 +470,4 @@ See `CHANGELOG.md` entries [7.5.7], [7.5.8], [7.5.13] for the per-fix list and r
 
 ---
 
-**v10.5.16 | [Autonomi](https://www.autonomi.dev/) flagship product | ~410 lines core**
+**v10.5.28 | [Autonomi](https://www.autonomi.dev/) flagship product | ~410 lines core**

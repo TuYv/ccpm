@@ -90,9 +90,10 @@ python src/bracket.py
   `.moved()` or `Location * shape` to preserve shared geometry. Use meaningful
   occurrence labels and source-defined placements. Rerun the parent assembly
   to incorporate a changed child.
-- Read vendor STEP inputs with `cadgen.read_step`; it records the file as a
-  build input. Declare other data inputs with `cadgen.declare_input`. Never
-  read a model's own output as its input. Geometry must not depend on untracked
+- Read vendor STEP inputs with `cadgen.read_step`. Every file a build opens is
+  an input on its own, whatever reads it (`json.load`, `np.load`,
+  `bd.import_step`, a project font): nothing is declared. Never read a model's own
+  output as its input. Geometry must not depend on untracked
   time, random values, environment variables or the working directory.
 - When named purchasable parts are needed, search `$step-parts` before making
   placeholders. Record an unsuccessful search and any placeholder assumptions.
@@ -179,11 +180,15 @@ The viewer lists files recursively beneath this directory, so choose it rather
 than an individual artifact’s output folder.
 
 ```bash
-cd /absolute/path/to/model-workspace && cadgen viewer --host 127.0.0.1 --json
+cd /absolute/path/to/model-workspace && cadgen viewer --host 127.0.0.1 --json --detach
 ```
 
-The launcher starts or reuses the correct instance. Read `url` from its final
-JSON line; never guess the port. Verify each artifact exists under the root,
+`--detach` returns once the server answers requests and leaves it running in the
+background. Always use it for agent launches; a foreground server does not exit,
+so piping its output through `tail` can hide the URL indefinitely.
+
+The launcher starts or reuses the correct instance. Read `url` from its single
+JSON stdout line; never guess the port. Verify each artifact exists under the root,
 then append `?file=<URL-encoded path relative to that root>` to return one link
 per file. For directory review, return the origin alone.
 

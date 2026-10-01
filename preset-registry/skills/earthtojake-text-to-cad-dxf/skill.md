@@ -121,10 +121,9 @@ Copy the full template for the applicable workflow from
    (`from bracket import THICKNESS`) are tracked by value the same way.
 
 3. **Flat pattern of an imported STEP** (a `.step`/`.stp` with no Python source):
-   read it with `cadgen.read_step`, not `build123d.import_step`. It records the
-   file's content hash as a build INPUT, so replacing the vendor STEP makes the
-   drawing stale on its own, with no `--force`; read it through build123d and the
-   drawing stays "current" against a file that changed underneath it.
+   read it with `cadgen.read_step` (warm from the store, the same geometry as
+   `build123d.import_step`). Like every file a build reads, it is an input:
+   replacing the vendor STEP makes the drawing stale on its own, with no `--force`.
 
    ```python
    from pathlib import Path
@@ -304,11 +303,15 @@ The viewer lists files recursively beneath this directory, so choose it rather
 than an individual artifact’s output folder.
 
 ```bash
-cd /absolute/path/to/model-workspace && cadgen viewer --host 127.0.0.1 --json
+cd /absolute/path/to/model-workspace && cadgen viewer --host 127.0.0.1 --json --detach
 ```
 
-The launcher starts or reuses the correct instance. Read `url` from its final
-JSON line; never guess the port. Verify each artifact exists under the root,
+`--detach` returns once the server answers requests and leaves it running in the
+background. Always use it for agent launches; a foreground server does not exit,
+so piping its output through `tail` can hide the URL indefinitely.
+
+The launcher starts or reuses the correct instance. Read `url` from its single
+JSON stdout line; never guess the port. Verify each artifact exists under the root,
 then append `?file=<URL-encoded path relative to that root>` to return one link
 per file. For directory review, return the origin alone.
 

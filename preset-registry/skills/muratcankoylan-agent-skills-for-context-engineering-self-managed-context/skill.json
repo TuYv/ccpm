@@ -1,0 +1,25 @@
+{
+  "id": "muratcankoylan-agent-skills-for-context-engineering-self-managed-context",
+  "name": "self-managed-context",
+  "description": "This skill should be used when a model gets read-write control over its own live context window instead of a harness-scheduled compaction policy: the context exposed as an editable file the model rewrites with code tools, model-driven eviction and in-place updates, the harness invariants that keep self-editing safe (pinned prefix, edit gate, edit receipts, budget readouts, rollback on overflow), the prefix-cache cost of mid-context edits, and steering or training the model's own context-editing ",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "muratcankoylan",
+  "install_path": ".claude/skills/self-managed-context/SKILL.md",
+  "source": {
+    "repo": "muratcankoylan/Agent-Skills-for-Context-Engineering",
+    "url": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering/blob/main/skills/self-managed-context/SKILL.md",
+    "path": "skills/self-managed-context/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-01T09:05:52.529Z",
+    "stars": 18052,
+    "language": "Python",
+    "pushed_at": "2026-10-01T05:58:33Z",
+    "license": "MIT"
+  }
+}
