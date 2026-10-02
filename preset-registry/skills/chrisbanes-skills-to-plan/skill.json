@@ -1,7 +1,7 @@
 {
   "id": "chrisbanes-skills-to-plan",
   "name": "to-plan",
-  "description": "Use when one ready GitHub issue or an in-chat task needs a repository-aware implementation plan for a later implementation workflow.",
+  "description": "Use when one ready GitHub issue or an in-chat task needs an implementation plan, or a retained approved GitHub plan needs a reviewed unchanged-scope integration amendment.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/chrisbanes/skills/blob/main/skills/to-plan/SKILL.md",
     "path": "skills/to-plan/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-02T09:33:11.332Z",
+    "discovered_at": "2026-10-02T16:50:09.566Z",
     "stars": 1078,
     "language": "Python",
-    "pushed_at": "2026-10-01T09:52:02Z",
+    "pushed_at": "2026-10-02T16:42:53Z",
     "license": "Apache-2.0"
-  },
-  "summary_zh": "用于结合代码仓库上下文，把 GitHub Issue 或聊天任务整理成可供后续开发执行的实施计划。"
+  }
 }

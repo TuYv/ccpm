@@ -1,0 +1,25 @@
+{
+  "id": "sickn33-antigravity-awesome-skills-aas-compose-stack",
+  "name": "aas-compose-stack",
+  "description": "Preserve the coding agent's explicit AAS skill selection as a validated stack and optional evidence.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sickn33",
+  "install_path": ".claude/skills/aas-compose-stack/SKILL.md",
+  "source": {
+    "repo": "sickn33/antigravity-awesome-skills",
+    "url": "https://github.com/sickn33/antigravity-awesome-skills/blob/main/plugins/agentic-awesome-skills-claude/skills/aas-compose-stack/SKILL.md",
+    "path": "plugins/agentic-awesome-skills-claude/skills/aas-compose-stack/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-02T16:04:49.358Z",
+    "stars": 47178,
+    "language": "Python",
+    "pushed_at": "2026-10-02T13:37:12Z",
+    "license": "MIT"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "id": "expo-skills-eas-update-insights",
   "name": "eas-update-insights",
-  "description": "EAS service (paid). Check the health of published EAS Update: crash rates, install/launch counts, unique users, payload size, and the split between embedded and OTA users per channel. Use when the user asks how an update is performing, whether a rollout is healthy, how many users are on the embedded build vs OTA, or wants to gate CI on update health.",
+  "description": "Check the health of published EAS Update: crash rates, install/launch counts, unique users, payload size, and the split between embedded and OTA users per channel. Use when the user asks how an update is performing, whether a rollout is healthy, how many users are on the embedded build vs OTA, or wants to gate CI on update health.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/expo/skills/blob/main/plugins/expo/skills/eas-update-insights/SKILL.md",
     "path": "plugins/expo/skills/eas-update-insights/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-02T08:43:50.531Z",
+    "discovered_at": "2026-10-02T16:00:44.713Z",
     "stars": 2649,
     "language": "Shell",
-    "pushed_at": "2026-10-02T02:16:17Z",
+    "pushed_at": "2026-10-02T10:45:29Z",
     "license": "MIT"
-  },
-  "summary_zh": "一项付费的应用更新健康监控服务，用于评估发布效果、用户分布与崩溃情况，并支持在 CI 中拦截异常更新。"
+  }
 }

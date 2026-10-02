@@ -1,7 +1,7 @@
 {
   "id": "expo-skills-expo-web-to-native",
   "name": "expo-web-to-native",
-  "description": "Framework (OSS). Migrate an existing web React app to a native iOS/Android app with Expo. Use when the user wants to turn a website into a mobile app, port a Next.js/Vite/CRA React codebase to React Native, reuse web code on native incrementally, or asks how web idioms (the DOM, CSS, React Router, localStorage, window) map to native. This is the end-to-end migration guide; use the `expo-dom` skill for the DOM-component mechanism itself.",
+  "description": "Migrate an existing web React app to a native iOS/Android app with Expo. Use when the user wants to turn a website into a mobile app, port a Next.js/Vite/CRA React codebase to React Native, reuse web code on native incrementally, or asks how web idioms (the DOM, CSS, React Router, localStorage, window) map to native. This is the end-to-end migration guide; use the `expo-dom` skill for the DOM-component mechanism itself.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/expo/skills/blob/main/plugins/expo/skills/expo-web-to-native/SKILL.md",
     "path": "plugins/expo/skills/expo-web-to-native/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-02T08:43:54.453Z",
+    "discovered_at": "2026-10-02T16:00:47.835Z",
     "stars": 2649,
     "language": "Shell",
-    "pushed_at": "2026-10-02T02:16:17Z",
+    "pushed_at": "2026-10-02T10:45:29Z",
     "license": "MIT"
-  },
-  "summary_zh": "一个将现有 React 网站逐步迁移为 Expo 原生 iOS/Android 应用的开源框架，适合复用网页代码并适配原生能力。"
+  }
 }

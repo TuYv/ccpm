@@ -1,7 +1,7 @@
 {
   "id": "huytieu-cog-second-brain-no-ai-slop",
   "name": "no-ai-slop",
-  "description": "Edit drafts into sharper, more human writing while preserving the writer's personal voice, or detect AI-slop patterns without rewriting. Use when the user wants a draft clearer, more direct, more opinionated, or less AI-sounding, or asks whether writing reads as AI.",
+  "description": "Edit drafts into sharper, more human writing while preserving the writer's personal voice, or detect AI-slop patterns without rewriting. Use when the user wants a draft clearer, more direct, more opinionated, or less AI-sounding, or asks whether writing reads as AI. Also the default writing standard for all agent output: 80% ASD-STE100 controlled language plus the format ladder (prose, diagram, HTML page, explainer video).",
   "category": "文档写作",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/huytieu/COG-second-brain/blob/main/.claude/skills/no-ai-slop/SKILL.md",
     "path": ".claude/skills/no-ai-slop/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-02T09:33:40.444Z",
-    "stars": 1248,
+    "discovered_at": "2026-10-02T16:50:35.889Z",
+    "stars": 1249,
     "language": "Python",
-    "pushed_at": "2026-09-28T08:52:07Z",
+    "pushed_at": "2026-10-02T14:09:34Z",
     "license": "MIT"
-  },
-  "summary_zh": "一款文本润色与检测工具，能保留个人表达风格，让草稿更清晰有力，也可判断文章是否带有明显的 AI 腔。"
+  }
 }
