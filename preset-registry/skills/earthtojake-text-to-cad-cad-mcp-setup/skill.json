@@ -1,0 +1,25 @@
+{
+  "id": "earthtojake-text-to-cad-cad-mcp-setup",
+  "name": "cad-mcp-setup",
+  "description": "Check that the CAD plugin can start after it is installed or updated - confirm uv is installed, point the user to uv's official installation guide when it is not, and tell them when to restart the app so CAD opens in the sidebar and in thread tabs. Use right after the CAD plugin is installed or updated, or when CAD's viewer did not start.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "earthtojake",
+  "install_path": ".claude/skills/cad-mcp-setup/SKILL.md",
+  "source": {
+    "repo": "earthtojake/text-to-cad",
+    "url": "https://github.com/earthtojake/text-to-cad/blob/main/skills/cad-mcp-setup/SKILL.md",
+    "path": "skills/cad-mcp-setup/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-02T02:41:26.972Z",
+    "stars": 16533,
+    "language": "Python",
+    "pushed_at": "2026-10-02T02:37:13Z",
+    "license": "MIT"
+  }
+}
