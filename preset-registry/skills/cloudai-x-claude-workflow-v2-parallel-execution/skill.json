@@ -1,7 +1,7 @@
 {
   "id": "cloudai-x-claude-workflow-v2-parallel-execution",
   "name": "parallel-execution",
-  "description": "Patterns for parallel subagent execution using Task tool with run_in_background. Use when coordinating multiple independent tasks, spawning dynamic subagents, or implementing features that can be parallelized.",
+  "description": "Patterns for parallel subagent execution using the Agent tool (formerly Task). Use when coordinating multiple independent tasks, spawning dynamic subagents, or implementing features that can be parallelized.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/CloudAI-X/claude-workflow-v2/blob/main/skills/parallel-execution/SKILL.md",
     "path": "skills/parallel-execution/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-02T02:46:49.611Z",
+    "discovered_at": "2026-10-02T09:34:52.078Z",
     "stars": 1416,
     "language": "Python",
-    "pushed_at": "2026-10-01T23:45:20Z",
+    "pushed_at": "2026-10-02T05:56:19Z",
     "license": "MIT"
-  },
-  "summary_zh": "这是一套子代理后台并行执行的方案，专门解决多个独立任务需要同时推进或动态派生代理的问题，非常适合需要提升处理效率的并行化场景。"
+  }
 }
