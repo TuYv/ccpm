@@ -2,7 +2,7 @@
   "id": "yvgude-lean-ctx-lean-ctx",
   "name": "lean-ctx",
   "description": "Pick the right lean-ctx tool for reading, searching, understanding and running code with fewer tokens and fewer round trips. Use when lean-ctx MCP tools (ctx_*) are available or when a command output, file read or search would be large.",
-  "category": "开发编程",
+  "category": "文档写作",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/yvgude/lean-ctx/blob/main/skills/lean-ctx/SKILL.md",
     "path": "skills/lean-ctx/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-03T07:35:20.521Z",
-    "stars": 3859,
+    "discovered_at": "2026-10-03T13:36:20.782Z",
+    "stars": 3860,
     "language": "Rust",
-    "pushed_at": "2026-10-03T07:21:52Z",
+    "pushed_at": "2026-10-03T12:21:57Z",
     "license": "Apache-2.0"
   }
 }
