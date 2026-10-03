@@ -3,7 +3,7 @@ name: loki-mode
 description: An autonomous software factory that knows what it is supposed to deliver, and proves it did. Use when the user says Loki Mode or asks to build, fix or verify software autonomously.
 ---
 
-# Loki Mode v10.7.0
+# Loki Mode v10.10.1
 
 **Current entry points (Loki 10 engine):** `loki "<task>"`, `loki owner/repo#N` and `loki quick "<task>"` run the Loki 10 engine and end with a signed receipt (`loki verify`). `loki backlog owner/repo --all` runs many issues in parallel. Guide: `docs/v10/GUIDE.md`. The skill instructions below, and `loki start`, describe the legacy engine, which still ships and is being removed (`loki start owner/repo#N` still routes to it; prefer `loki owner/repo#N`).
 
@@ -192,6 +192,16 @@ This protocol governs **skill module** loading -- task-scoped instruction files 
 ```
 
 **Memory System Progressive Disclosure** is a separate 3-layer structure (`index.json` -> `timeline.json` -> `episodic/*.json`) for retrieving past episodes/patterns. See `skills/memory.md` and `references/memory-system.md`.
+
+---
+
+## Command list
+
+<!-- generated:commands -->
+Commands (generated from `loki-ts/src/cli/registry.ts`; full reference in `docs/CLI-REFERENCE.md`):
+
+`version`, `status`, `doctor`, `provider`, `memory`, `rollback`, `proof`, `wiki`, `control`, `kpis`, `report`, `trust`, `crash`, `contract`, `start`, `slack`, `answer`, `engine10`, `help`, `quick`, `quickstart`, `init`, `template`, `verify`, `keys`, `review`, `dashboard`, `config`, `mcp`, `acp`, `stop`, `pause`, `resume`, `why`, `next`, `logs`, `ship`, `deploy`, `import`, `github`, `issue`, `ci`, `modernize`, `share`, `assets`, `export`, `notify`, `tour`, `welcome`, `onboard`, `setup-skill`, `self-update`, `remote`, `cockpit`, `code`, `context`, `secrets`, `api`, `sandbox`, `docker`, `web`, `preview`, `telemetry`, `syslog`, `explain`, `docs`, `test`, `bench`, `voice`, `own`, `secure`, `compliance`, `enterprise`, `projects`, `audit`, `cost`, `metrics`, `sentrux`, `magic`
+<!-- /generated -->
 
 ---
 
@@ -473,4 +483,4 @@ See `CHANGELOG.md` entries [7.5.7], [7.5.8], [7.5.13] for the per-fix list and r
 
 ---
 
-**v10.7.0 | [Autonomi](https://www.autonomi.dev/) flagship product | core skill**
+**v10.10.1 | [Autonomi](https://www.autonomi.dev/) flagship product | core skill**
