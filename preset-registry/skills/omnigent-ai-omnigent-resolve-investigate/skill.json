@@ -1,0 +1,25 @@
+{
+  "id": "omnigent-ai-omnigent-resolve-investigate",
+  "name": "resolve-investigate",
+  "description": "Verify the reported path, cause, and historical intent before choosing a fix.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "omnigent-ai",
+  "install_path": ".claude/skills/resolve-investigate/SKILL.md",
+  "source": {
+    "repo": "omnigent-ai/omnigent",
+    "url": "https://github.com/omnigent-ai/omnigent/blob/main/dev/resolve-agent/skills/resolve-investigate/SKILL.md",
+    "path": "dev/resolve-agent/skills/resolve-investigate/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-03T17:31:31.155Z",
+    "stars": 10433,
+    "language": "Python",
+    "pushed_at": "2026-10-03T17:05:18Z",
+    "license": "Apache-2.0"
+  }
+}
