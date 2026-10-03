@@ -1,8 +1,8 @@
 ---
 name: sms
-description: When the user wants to plan, build, or optimize SMS or MMS marketing — including welcome flows, abandoned cart texts, post-purchase, win-back, promotional sends, or transactional/auth SMS. Also use when the user mentions "SMS marketing," "text message campaigns," "SMS sequence," "SMS automation," "abandoned cart text," "post-purchase SMS," "Klaviyo SMS," "Postscript," "Attentive," "Twilio," "A2P 10DLC," "TCPA," "SMS compliance," "short code," "toll-free SMS," "MMS campaign," "should I do SMS," or "SMS vs email." For email sequences, see emails. For SMS copy framing, see copywriting. For opt-in popups that capture phone numbers, see popups.
+description: When the user wants to plan, build, or optimize SMS, MMS, or WhatsApp marketing — including welcome flows, abandoned cart texts, post-purchase, win-back, promotional sends, or transactional/auth SMS. Also use when the user mentions "SMS marketing," "text message campaigns," "SMS sequence," "SMS automation," "abandoned cart text," "post-purchase SMS," "Klaviyo SMS," "Postscript," "Attentive," "Twilio," "A2P 10DLC," "TCPA," "SMS compliance," "short code," "toll-free SMS," "MMS campaign," "should I do SMS," "SMS vs email," "WhatsApp marketing," "WhatsApp Business API," "WhatsApp templates," or "click-to-WhatsApp." For email sequences, see emails. For SMS copy framing, see copywriting. For opt-in popups that capture phone numbers, see popups.
 metadata:
-  version: 1.0.1
+  version: 1.1.0
 ---
 
 # SMS Marketing
@@ -55,6 +55,20 @@ SMS is not "another email." Use it where the channel's properties win:
 | Post-purchase upsell | **SMS** | High open rate, ride the purchase momentum |
 
 **General rule**: SMS earns the right to interrupt because of opt-in. Use it for messages that genuinely benefit from immediacy. If it could wait 24 hours, send it via email.
+
+---
+
+## WhatsApp
+
+If most customers are outside the US (LATAM, Europe, Africa, Middle East, India, Southeast Asia), WhatsApp often beats SMS for the same flows. It runs on different rules:
+
+- **24-hour window**: free-form messages only within 24 hours of the customer's last message. Outside it, send a Meta-approved template.
+- **Template categories**: marketing, utility, authentication. Cart reminders and anything promotional are marketing.
+- **Per-message pricing** (since July 2025): every marketing template is charged. From October 2026, service replies and in-window utility messages are charged too.
+- **Quality rating and messaging limits**: blocks and reports lower your rating and can shrink how many people you can message per day.
+- **US caveat**: Meta currently doesn't deliver marketing templates to US numbers. Keep SMS for US marketing.
+
+**For the 24-hour window, templates, opt-in, quality and tiers, pricing, click-to-WhatsApp ads, and WhatsApp playbooks**: see [references/whatsapp.md](references/whatsapp.md).
 
 ---
 

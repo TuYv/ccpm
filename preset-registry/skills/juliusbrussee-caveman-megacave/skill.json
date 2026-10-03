@@ -1,0 +1,25 @@
+{
+  "id": "juliusbrussee-caveman-megacave",
+  "name": "megacave",
+  "description": "> Caveman in Classical Chinese: 文言文 register, far fewer characters, technical terms verbatim. Invoke only with /megacave or /caveman wenyan. Stays on until \"stop caveman\" or \"normal mode\".",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "JuliusBrussee",
+  "install_path": ".claude/skills/megacave/SKILL.md",
+  "source": {
+    "repo": "JuliusBrussee/caveman",
+    "url": "https://github.com/JuliusBrussee/caveman/blob/main/skills/megacave/SKILL.md",
+    "path": "skills/megacave/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-03T06:44:52.949Z",
+    "stars": 109211,
+    "language": "Go",
+    "pushed_at": "2026-10-03T05:26:35Z",
+    "license": "Apache-2.0"
+  }
+}

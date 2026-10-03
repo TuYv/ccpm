@@ -1,0 +1,25 @@
+{
+  "id": "juliusbrussee-caveman-ultracave",
+  "name": "ultracave",
+  "description": "> Caveman at maximum compression: fragments, one word when one word is enough, each fact once. Invoke only with /ultracave or /caveman ultra. Stays on until \"stop caveman\" or \"normal mode\".",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "JuliusBrussee",
+  "install_path": ".claude/skills/ultracave/SKILL.md",
+  "source": {
+    "repo": "JuliusBrussee/caveman",
+    "url": "https://github.com/JuliusBrussee/caveman/blob/main/skills/ultracave/SKILL.md",
+    "path": "skills/ultracave/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-03T06:44:53.383Z",
+    "stars": 109211,
+    "language": "Go",
+    "pushed_at": "2026-10-03T05:26:35Z",
+    "license": "Apache-2.0"
+  }
+}
