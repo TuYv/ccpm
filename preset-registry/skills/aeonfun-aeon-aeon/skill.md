@@ -22,7 +22,7 @@ Pick the mode they're asking for:
 
 ## Preflight (every mode)
 
-1. Find the repo: current dir → `gh repo set-default` → ask. Clone it if it isn't local.
+1. Find the repo: current dir → `gh repo set-default` → ask. Clone it if it isn't local (an instance made with Aeon Connect lives at `github.com/<owner>/<repo>` like any other; no instance yet means Mode 1).
 2. **Confirm `gh` points at THEIR instance, before any command that writes.**
 
    ```bash
@@ -50,6 +50,8 @@ Anything it prints is on disk but unconfigured. **Orientation — what's install
 
 Goal: one real notification in their phone, fast. Do not configure a schedule first.
 
+> **Fastest start, no terminal: Aeon Connect.** If the user has no terminal, no Node or `gh`, or just wants the quickest path, send them to https://www.aeon.fun/connect. In the browser they sign in with GitHub, create their aeon (a public fork or a private copy), install the Aeon Connect GitHub App on that one repo, connect a model, and pick skills. Nothing else to do: the agent then runs on their own GitHub Actions. Use the terminal path below only if they want a local clone.
+
 1. **Run `./aeon init`.** Ask public or private first (public: Actions minutes are free; private: `--private`, minutes bill against the account quota, 2,000/mo on Free). Then, from a clone of the template:
 
    ```bash
@@ -57,7 +59,7 @@ Goal: one real notification in their phone, fast. Do not configure a schedule fi
    ./aeon init                 # add --private, --name <repo>, --harness <h> as needed
    ```
 
-   It is idempotent and prints a check or a fix per step: signs in to GitHub with the `workflow` scope, creates `<owner>/<name>` from the **template** (not a fork: forks start with Actions disabled), points this folder at it (`aeonfun/aeon` stays as the `upstream` remote), runs `gh repo set-default`, enables Actions and lets them open PRs (the default token permission is left as is), offers to store the gh token as `GH_GLOBAL` (only if it has `repo` + `workflow`), connects a model from the credential manifest, and links Telegram with a `/start` deep link. Re-run it any time; `bin/onboard` is the read-only check. `--dry-run` shows every step without changing anything.
+   It is idempotent and prints a check or a fix per step: signs in to GitHub with the `workflow` scope, creates `<owner>/<name>` from the template (a template copy starts with Actions on; Aeon Connect forks public instances and turns Actions on itself), points this folder at it (`aeonfun/aeon` stays as the `upstream` remote), runs `gh repo set-default`, enables Actions and lets them open PRs (the default token permission is left as is), offers to store the gh token as `GH_GLOBAL` (only if it has `repo` + `workflow`), connects a model from the credential manifest, and links Telegram with a `/start` deep link. Re-run it any time; `bin/onboard` is the read-only check. `--dry-run` shows every step without changing anything.
 
    **If they set things up by hand, pin the default repo before any other command.** With an `upstream` remote and no default pinned, **`gh` prefers `upstream` over `origin`**, so secrets and runs silently land on `aeonfun/aeon`. Fix and verify:
 

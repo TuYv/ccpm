@@ -2,7 +2,7 @@
   "id": "aeonfun-aeon-deploy-watcher",
   "name": "[REPLACE: SKILL_NAME]",
   "description": "Watch Vercel deploys for [REPLACE: VERCEL_PROJECT] — alert on [REPLACE: ALERT_ON] in the last [REPLACE: LOOKBACK_HOURS] hours",
-  "category": "设计创意",
+  "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/aeonfun/aeon/blob/main/docs/examples/skill-templates/deploy-watcher/SKILL.md",
     "path": "docs/examples/skill-templates/deploy-watcher/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-03T20:57:44.197Z",
-    "stars": 761,
+    "discovered_at": "2026-10-04T00:08:22.565Z",
+    "stars": 762,
     "language": "Shell",
-    "pushed_at": "2026-10-03T20:55:16Z",
+    "pushed_at": "2026-10-03T21:37:45Z",
     "license": "MIT"
   },
   "summary_zh": "用于监控指定 Vercel 项目的部署状态，并在最近指定时段出现目标情况时及时告警。"

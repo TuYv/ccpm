@@ -2,7 +2,7 @@
   "id": "aeonfun-aeon-fork-fleet",
   "name": "fork-fleet",
   "description": "Fork divergence monitor - tracks where the fleet's active forks diverge in CODE (unique commits, new/modified skills) and CONFIG (enable/var/model/schedule vs upstream), gated on real change.",
-  "category": "设计创意",
+  "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/aeonfun/aeon/blob/main/skills/fork-fleet/SKILL.md",
     "path": "skills/fork-fleet/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-03T20:57:50.112Z",
-    "stars": 761,
+    "discovered_at": "2026-10-04T00:08:29.326Z",
+    "stars": 762,
     "language": "Shell",
-    "pushed_at": "2026-10-03T20:55:16Z",
+    "pushed_at": "2026-10-03T21:37:45Z",
     "license": "MIT"
   },
   "summary_zh": "一款分叉差异监控工具，用于追踪活跃分叉相对上游的代码与配置变化，仅在真实变更时触发提醒。"

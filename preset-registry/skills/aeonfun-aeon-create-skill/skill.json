@@ -2,7 +2,7 @@
   "id": "aeonfun-aeon-create-skill",
   "name": "create-skill",
   "description": "Generate a complete new skill from a one-line prompt and ship it as a PR",
-  "category": "设计创意",
+  "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/aeonfun/aeon/blob/main/skills/create-skill/SKILL.md",
     "path": "skills/create-skill/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-03T20:57:48.660Z",
-    "stars": 761,
+    "discovered_at": "2026-10-04T00:08:26.966Z",
+    "stars": 762,
     "language": "Shell",
-    "pushed_at": "2026-10-03T20:55:16Z",
+    "pushed_at": "2026-10-03T21:37:45Z",
     "license": "MIT"
   },
   "summary_zh": "根据一句话需求自动生成完整技能，并以 PR 形式提交，适合快速扩展项目能力。"

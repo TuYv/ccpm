@@ -2,7 +2,7 @@
   "id": "aeonfun-aeon-heartbeat",
   "name": "heartbeat",
   "description": "Ambient fleet-health check that surfaces anything worth attention (default), or an on-demand priority brief - the 3 things to focus on, why now, and what moved (var=brief)",
-  "category": "设计创意",
+  "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/aeonfun/aeon/blob/main/skills/heartbeat/SKILL.md",
     "path": "skills/heartbeat/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-03T20:57:50.648Z",
-    "stars": 761,
+    "discovered_at": "2026-10-04T00:08:29.794Z",
+    "stars": 762,
     "language": "Shell",
-    "pushed_at": "2026-10-03T20:55:16Z",
+    "pushed_at": "2026-10-03T21:37:45Z",
     "license": "MIT"
   },
   "summary_zh": "持续监测设备集群健康状况，自动提示异常，也可按需生成聚焦重点、紧迫原因和最新变化的优先简报。"

@@ -2,7 +2,7 @@
   "id": "aeonfun-aeon-deploy-uni-hook",
   "name": "deploy-uni-hook",
   "description": "Generate, simulate, audit, and deploy a Uniswap v4 hook + test pool from a brief, on any Uniswap v4 chain (every testnet and mainnet) - pre-audited templates or a from-scratch freeform hook (flags auto-derived; static audit + dangerous-pattern scan + a behavioral forge test + fork sim gate the deploy). Dry-run by default; explicit arm: to broadcast; testnet default, mainnet behind a double opt-in; records the deploy to main. Every deployed hook inherits a mandatory 10 bps AeonFee protocol fee.",
-  "category": "测试调试",
+  "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/aeonfun/aeon/blob/main/skills/deploy-uni-hook/SKILL.md",
     "path": "skills/deploy-uni-hook/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-03T20:57:49.011Z",
-    "stars": 761,
+    "discovered_at": "2026-10-04T00:08:27.307Z",
+    "stars": 762,
     "language": "Shell",
-    "pushed_at": "2026-10-03T20:55:16Z",
+    "pushed_at": "2026-10-03T21:37:45Z",
     "license": "MIT"
   },
   "summary_zh": "将需求生成并审计为 Uniswap v4 Hook 与测试池，先在分叉环境模拟验证，再安全部署到测试网或主网。"

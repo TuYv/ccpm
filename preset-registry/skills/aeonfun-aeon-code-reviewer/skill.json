@@ -2,7 +2,7 @@
   "id": "aeonfun-aeon-code-reviewer",
   "name": "[REPLACE: SKILL_NAME]",
   "description": "First-touch review of newly opened PRs on [REPLACE: WATCHED_REPO] — verdict + welcoming comment + label",
-  "category": "设计创意",
+  "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/aeonfun/aeon/blob/main/docs/examples/skill-templates/code-reviewer/SKILL.md",
     "path": "docs/examples/skill-templates/code-reviewer/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-03T20:57:43.829Z",
-    "stars": 761,
+    "discovered_at": "2026-10-04T00:08:22.183Z",
+    "stars": 762,
     "language": "Shell",
-    "pushed_at": "2026-10-03T20:55:16Z",
+    "pushed_at": "2026-10-03T21:37:45Z",
     "license": "MIT"
   },
   "summary_zh": "自动初审指定仓库中新建的 PR，给出结论、发布欢迎评论并添加标签，适合维护者快速处理贡献。"

@@ -2,7 +2,7 @@
   "id": "aeonfun-aeon-aeon-doctor",
   "name": "aeon-doctor",
   "description": "Static config-correctness linter for this instance - catches the silent-failure class (unquoted schedules, duplicate keys, unconfigured skills, mode typos, broken requires/MCP refs) that no run-based health skill can see. Notifies only on problems.",
-  "category": "测试调试",
+  "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/aeonfun/aeon/blob/main/skills/aeon-doctor/SKILL.md",
     "path": "skills/aeon-doctor/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-03T20:57:46.846Z",
-    "stars": 761,
+    "discovered_at": "2026-10-04T00:08:25.234Z",
+    "stars": 762,
     "language": "Shell",
-    "pushed_at": "2026-10-03T20:55:16Z",
+    "pushed_at": "2026-10-03T21:37:45Z",
     "license": "MIT"
   },
   "summary_zh": "静态配置正确性检查工具，能发现运行时健康检查遗漏的静默配置错误，适合提前排查实例故障。"
