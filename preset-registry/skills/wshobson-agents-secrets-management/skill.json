@@ -2,7 +2,7 @@
   "id": "wshobson-agents-secrets-management",
   "name": "secrets-management",
   "description": "Implement secure secrets management for CI/CD pipelines using Vault, AWS Secrets Manager, or native platform solutions. Use when handling sensitive credentials, rotating secrets, or securing CI/CD environments.",
-  "category": "文档写作",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/wshobson/agents/blob/main/plugins/cicd-automation/skills/secrets-management/SKILL.md",
     "path": "plugins/cicd-automation/skills/secrets-management/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-04T09:59:36.380Z",
-    "stars": 40183,
+    "discovered_at": "2026-10-04T15:35:08.891Z",
+    "stars": 40188,
     "language": "Python",
-    "pushed_at": "2026-10-01T19:08:25Z",
+    "pushed_at": "2026-10-04T14:52:06Z",
     "license": "MIT"
   },
   "summary_zh": "这是一个专为CI/CD流水线打造的安全密钥管理方案，能帮你安全处理敏感凭证并自动轮换密钥，适合需要保障交付环境安全的场景。"

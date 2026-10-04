@@ -2,7 +2,7 @@
   "id": "wshobson-agents-istio-traffic-management",
   "name": "istio-traffic-management",
   "description": "Configure Istio traffic management including routing, load balancing, circuit breakers, and canary deployments. Use when implementing service mesh traffic policies, progressive delivery, or resilience patterns.",
-  "category": "文档写作",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/wshobson/agents/blob/main/plugins/cloud-infrastructure/skills/istio-traffic-management/SKILL.md",
     "path": "plugins/cloud-infrastructure/skills/istio-traffic-management/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-04T09:59:36.816Z",
-    "stars": 40183,
+    "discovered_at": "2026-10-04T15:35:09.225Z",
+    "stars": 40188,
     "language": "Python",
-    "pushed_at": "2026-10-01T19:08:25Z",
+    "pushed_at": "2026-10-04T14:52:06Z",
     "license": "MIT"
   },
   "summary_zh": "这是一个微服务流量管控工具，能帮你实现流量精准调度、平滑发布与故障容灾，特别适合做渐进式交付或保障系统稳定性的场景。"

@@ -2,7 +2,7 @@
   "id": "wshobson-agents-spark-environment-setup",
   "name": "spark-environment-setup",
   "description": "Set up a working ML training/inference environment on NVIDIA DGX Spark (GB10, aarch64, CUDA 13). Use when installing PyTorch/Unsloth/TRL/vLLM on DGX Spark, hitting libcudart or wheel-ABI errors on aarch64, or choosing between NGC containers and bare pip installs.",
-  "category": "设计创意",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/wshobson/agents/blob/main/plugins/dgx-spark-ops/skills/spark-environment-setup/SKILL.md",
     "path": "plugins/dgx-spark-ops/skills/spark-environment-setup/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-04T09:59:40.458Z",
-    "stars": 40183,
+    "discovered_at": "2026-10-04T15:35:12.283Z",
+    "stars": 40188,
     "language": "Python",
-    "pushed_at": "2026-10-01T19:08:25Z",
+    "pushed_at": "2026-10-04T14:52:06Z",
     "license": "MIT"
   },
   "summary_zh": "一套用于在 NVIDIA DGX Spark 上搭建机器学习训练与推理环境的指南，适合解决 ARM64 下 CUDA 依赖和安装兼容问题。"
