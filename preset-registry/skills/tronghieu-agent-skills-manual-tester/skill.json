@@ -1,0 +1,25 @@
+{
+  "id": "tronghieu-agent-skills-manual-tester",
+  "name": "manual-tester",
+  "description": ">- Plan and run manual tests of the project's running app. Runs a session in one of five modes: exploratory, verification, smoke, assessment (UX, localization, accessibility, improvement review), or AI probe. Also writes a manual test plan that holds only what automated tests cannot judge. Use whenever the user asks, in any language, for something to be tested by hand or for a manual test plan — \"manual test\", \"exploratory test\", \"bug hunt\", \"verify the bug fix\", \"smoke test\", \"QA this screen\", ",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tronghieu",
+  "install_path": ".claude/skills/manual-tester/SKILL.md",
+  "source": {
+    "repo": "tronghieu/agent-skills",
+    "url": "https://github.com/tronghieu/agent-skills/blob/main/skills/manual-tester/SKILL.md",
+    "path": "skills/manual-tester/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-04T20:44:40.136Z",
+    "stars": 72,
+    "language": "Python",
+    "pushed_at": "2026-10-04T17:11:04Z",
+    "license": "MIT"
+  }
+}
