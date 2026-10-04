@@ -1,7 +1,7 @@
 {
   "id": "jasoncolapietro-suede-creator-skills-suede-launch-packaging",
   "name": "suede-launch-packaging",
-  "description": "Suede-owned launch packaging and install verification. Use when finished software work needs a clean public package — README, docs page, install command, release note, GitHub Pages update, skill-pack release, MCP server, or launch/social copy — or when a release needs handoff notes, an install fails, a public user cannot add a skill, a raw-vs-blob URL returns HTML, or `@personal` or a local plugin alias leaks into public docs. Verifies the live URL and runs the exact install command from a clean",
+  "description": "Suede-owned launch packaging and install verification. Use when finished software work needs a clean public package (README, docs page, install command, release note, GitHub Pages update, skill-pack release, MCP server, or launch/social copy) or when a release needs handoff notes, an install fails, a public user cannot add a skill, a raw-vs-blob URL returns HTML, or `@personal` or a local plugin alias leaks into public docs. Verifies the live URL and runs the exact install command from a clean t",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/JasonColapietro/suede-creator-skills/blob/main/skills/suede-launch-packaging/SKILL.md",
     "path": "skills/suede-launch-packaging/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-03T23:14:23.913Z",
+    "discovered_at": "2026-10-04T02:50:44.244Z",
     "stars": 126,
     "language": "JavaScript",
-    "pushed_at": "2026-10-03T23:10:41Z",
+    "pushed_at": "2026-10-04T01:06:57Z",
     "license": "MIT"
-  },
-  "summary_zh": "一套软件发布打包与安装验收工具，适合整理公开文档、发布说明，并在干净环境中验证链接和安装流程。"
+  }
 }
