@@ -1,7 +1,7 @@
 {
   "id": "luongnv89-asm-skill-auto-improver",
   "name": "skill-auto-improver",
-  "description": "Improve an external, legacy, or drifted SKILL.md to the skill-creator standard — hard validation gates plus an advisory predictability audit. Don't use for authoring from scratch (skill-creator output is already standard), bulk eval, or prose edits.",
+  "description": "Audit and improve an existing skill's instructions, review outputs, and evaluation criteria. Use when fixing a skill or applying the skill-creator standard. Don't use for authoring from scratch, bulk evaluation, or standalone prose edits.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/luongnv89/asm/blob/main/skills/skill-auto-improver/SKILL.md",
     "path": "skills/skill-auto-improver/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-04T20:42:12.951Z",
+    "discovered_at": "2026-10-05T00:11:51.621Z",
     "stars": 949,
     "language": "TypeScript",
-    "pushed_at": "2026-10-01T07:25:14Z",
+    "pushed_at": "2026-10-04T22:08:47Z",
     "license": "MIT"
-  },
-  "summary_zh": "用于把外部、旧版或已偏离规范的 SKILL.md 校准到标准，并通过严格校验和可预测性审查发现问题。"
+  }
 }

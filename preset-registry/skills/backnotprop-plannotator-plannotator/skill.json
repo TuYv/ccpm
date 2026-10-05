@@ -1,7 +1,7 @@
 {
   "id": "backnotprop-plannotator-plannotator",
   "name": "plannotator",
-  "description": "Reference for using the Plannotator CLI: plan review, code review, annotating files, URLs, folders, and running local apps, annotating the last assistant message, browsing archived plan decisions, and exporting or sharing Guided Reviews. Invoke when asked to use Plannotator for anything not covered by a more specific plannotator-* skill.",
+  "description": "Reference for using Plannotator (its `plannotator` tool when you have one, otherwise the CLI): plan review, code review, annotating files, URLs, folders, and running local apps, annotating the last assistant message, browsing archived plan decisions, and exporting or sharing Guided Reviews. Invoke when asked to use Plannotator for anything not covered by a more specific plannotator-* skill.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/backnotprop/plannotator/blob/main/apps/skills/core/plannotator/SKILL.md",
     "path": "apps/skills/core/plannotator/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-04T20:47:19.726Z",
-    "stars": 9135,
+    "discovered_at": "2026-10-05T00:15:44.722Z",
+    "stars": 9136,
     "language": "TypeScript",
-    "pushed_at": "2026-10-04T20:47:07Z",
+    "pushed_at": "2026-10-04T23:56:56Z",
     "license": "Apache-2.0"
-  },
-  "summary_zh": "一款用于审阅方案和代码的命令行工具，适合批注各类内容、追溯决策，并导出或分享引导式审阅结果。"
+  }
 }
