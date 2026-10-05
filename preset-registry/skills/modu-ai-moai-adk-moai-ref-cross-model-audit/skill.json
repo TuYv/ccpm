@@ -1,7 +1,7 @@
 {
   "id": "modu-ai-moai-adk-moai-ref-cross-model-audit",
   "name": "moai-ref-cross-model-audit",
-  "description": "> Cross-model audit convergence reference for the plan-auditor and sync-auditor agents. Documents how to invoke the `audit_multi` MCP tool to fan a code review out across the codex and GLM (z.ai) backends in parallel, converge their verdicts with the in-session Claude verdict, and fold the resulting per-backend verdicts + disagreement flag into the audit output. The single skill both audit entry points load — no duplication.",
+  "description": "> Cross-model audit convergence reference for the plan-auditor and sync-auditor agents. Documents how to invoke the `audit_multi` MCP tool to fan a code review out across the Claude subscription, codex, and GLM (z.ai) backends, converge their independent verdicts, and fold the resulting per-backend verdicts + disagreement flag into the audit output. The single skill both audit entry points load — no duplication.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/modu-ai/moai-adk/blob/main/.claude/skills/moai-ref-cross-model-audit/SKILL.md",
     "path": ".claude/skills/moai-ref-cross-model-audit/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-05T10:03:18.418Z",
+    "discovered_at": "2026-10-05T19:27:36.266Z",
     "stars": 1229,
     "language": "Go",
-    "pushed_at": "2026-10-05T09:25:42Z",
+    "pushed_at": "2026-10-05T18:56:32Z",
     "license": "Apache-2.0"
-  },
-  "summary_zh": "这是一个跨模型代码审计参考规范，指导审计代理并行调用 Codex 与 GLM 复核、汇总分歧并纳入最终审计结果。"
+  }
 }

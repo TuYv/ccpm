@@ -1,7 +1,7 @@
 {
   "id": "luongnv89-asm-skill-creator",
   "name": "skill-creator",
-  "description": "Create, improve, evaluate, benchmark skills. Use when authoring a new skill, updating an existing one, running evals, or optimizing a skill's description for triggering. Don't use for invoking skills, writing prose, or scaffolding Python projects.",
+  "description": "Create a skill or bring an existing one up to the same standard (validate + asm eval fix loop); run evals, tune triggering. Use when authoring, fixing, or retrofitting a skill. Don't use for invoking skills, writing prose, or Python scaffolds.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/luongnv89/asm/blob/main/skills/skill-creator/SKILL.md",
     "path": "skills/skill-creator/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-05T10:06:28.529Z",
+    "discovered_at": "2026-10-05T19:30:13.631Z",
     "stars": 948,
     "language": "TypeScript",
-    "pushed_at": "2026-10-04T22:08:47Z",
+    "pushed_at": "2026-10-05T14:58:52Z",
     "license": "MIT"
-  },
-  "summary_zh": "用于创建、改进和评测技能，适合优化技能触发描述、运行测试并进行性能基准比较。"
+  }
 }

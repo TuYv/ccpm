@@ -1,7 +1,7 @@
 {
   "id": "luongnv89-asm-skill-index-updater",
   "name": "skill-index-updater",
-  "description": "Add GitHub skill repos to the ASM index: clone, audit, eval, regenerate index, rebuild catalog, open PR. Use when given GitHub URLs to onboard. Don't use for authoring (skill-creator), improving (skill-auto-improver), or install (asm install).",
+  "description": "Add GitHub skill repos to the ASM index: clone, audit, eval, regenerate index, rebuild catalog, open PR. Use when given GitHub URLs to onboard. Don't use for authoring or improving skills (skill-creator), or install (asm install).",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/luongnv89/asm/blob/main/skills/skill-index-updater/SKILL.md",
     "path": "skills/skill-index-updater/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-05T10:06:28.712Z",
+    "discovered_at": "2026-10-05T19:30:13.802Z",
     "stars": 948,
     "language": "TypeScript",
-    "pushed_at": "2026-10-04T22:08:47Z",
+    "pushed_at": "2026-10-05T14:58:52Z",
     "license": "MIT"
-  },
-  "summary_zh": "用于将 GitHub 技能仓库自动纳入 ASM 索引，适合批量审核、评估并生成目录后提交 PR 的入库场景。"
+  }
 }

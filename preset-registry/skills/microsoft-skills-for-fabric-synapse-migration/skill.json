@@ -1,7 +1,7 @@
 {
   "id": "microsoft-skills-for-fabric-synapse-migration",
   "name": "synapse-migration",
-  "description": "Converts Azure Synapse workloads to Fabric: Dedicated SQL Pool schemas and procedures to Lakehouse Spark SQL artifacts or Warehouse targets, plus Spark, Lake Database, and Linked Service migration. Excludes standalone Fabric Warehouse administration, Databricks source code, and pipelines. Triggers: Dedicated SQL Pool to Lakehouse, Dedicated SQL Pool to Fabric Warehouse, convert Synapse stored procedure, offline Synapse artifacts.",
+  "description": "Converts Synapse workspaces to Fabric: Spark items, Lake Databases, Linked Services, and Dedicated SQL Pool schema/procedures for Lakehouse or Warehouse. During Pool-to-Lakehouse migration only, can migrate approved dependent procedure callers after notebook readiness. Excludes standalone pipelines and Warehouse administration. Triggers: Synapse workspace to Fabric, Dedicated SQL Pool to Lakehouse, Dedicated SQL Pool to Fabric Warehouse.",
   "category": "数据分析",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/microsoft/skills-for-fabric/blob/main/skills/synapse-migration/SKILL.md",
     "path": "skills/synapse-migration/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-05T10:04:10.403Z",
-    "stars": 1217,
+    "discovered_at": "2026-10-05T19:28:17.032Z",
+    "stars": 1219,
     "language": "Python",
-    "pushed_at": "2026-10-01T20:23:30Z",
+    "pushed_at": "2026-10-05T11:17:15Z",
     "license": "MIT"
   }
 }

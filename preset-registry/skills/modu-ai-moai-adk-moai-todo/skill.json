@@ -1,0 +1,25 @@
+{
+  "id": "modu-ai-moai-adk-moai-todo",
+  "name": "moai-todo",
+  "description": "Compatibility alias for the canonical GTD task-management entry point",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "modu-ai",
+  "install_path": ".claude/skills/moai-todo/SKILL.md",
+  "source": {
+    "repo": "modu-ai/moai-adk",
+    "url": "https://github.com/modu-ai/moai-adk/blob/main/.agents/skills/moai-todo/SKILL.md",
+    "path": ".agents/skills/moai-todo/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-05T19:27:32.417Z",
+    "stars": 1229,
+    "language": "Go",
+    "pushed_at": "2026-10-05T18:56:32Z",
+    "license": "Apache-2.0"
+  }
+}

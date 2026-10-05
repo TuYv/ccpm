@@ -1,0 +1,25 @@
+{
+  "id": "modu-ai-moai-adk-moai-fix",
+  "name": "moai-fix",
+  "description": "Auto-detect and fix LSP errors, linting issues, and type errors",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "modu-ai",
+  "install_path": ".claude/skills/moai-fix/SKILL.md",
+  "source": {
+    "repo": "modu-ai/moai-adk",
+    "url": "https://github.com/modu-ai/moai-adk/blob/main/.agents/skills/moai-fix/SKILL.md",
+    "path": ".agents/skills/moai-fix/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-05T19:27:30.936Z",
+    "stars": 1229,
+    "language": "Go",
+    "pushed_at": "2026-10-05T18:56:32Z",
+    "license": "Apache-2.0"
+  }
+}

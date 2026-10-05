@@ -1,0 +1,25 @@
+{
+  "id": "modu-ai-moai-adk-moai-gate",
+  "name": "moai-gate",
+  "description": "Run lint+format+type-check+test in parallel (pre-commit quality gate)",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "modu-ai",
+  "install_path": ".claude/skills/moai-gate/SKILL.md",
+  "source": {
+    "repo": "modu-ai/moai-adk",
+    "url": "https://github.com/modu-ai/moai-adk/blob/main/.agents/skills/moai-gate/SKILL.md",
+    "path": ".agents/skills/moai-gate/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-05T19:27:31.070Z",
+    "stars": 1229,
+    "language": "Go",
+    "pushed_at": "2026-10-05T18:56:32Z",
+    "license": "Apache-2.0"
+  }
+}

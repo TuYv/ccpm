@@ -1,0 +1,25 @@
+{
+  "id": "modu-ai-moai-adk-moai-e2e",
+  "name": "moai-e2e",
+  "description": "Create and run E2E tests across web, mobile, and desktop with auto-detection and CLI-first toolchains",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "modu-ai",
+  "install_path": ".claude/skills/moai-e2e/SKILL.md",
+  "source": {
+    "repo": "modu-ai/moai-adk",
+    "url": "https://github.com/modu-ai/moai-adk/blob/main/.agents/skills/moai-e2e/SKILL.md",
+    "path": ".agents/skills/moai-e2e/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-05T19:27:30.679Z",
+    "stars": 1229,
+    "language": "Go",
+    "pushed_at": "2026-10-05T18:56:32Z",
+    "license": "Apache-2.0"
+  }
+}

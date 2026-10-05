@@ -1,0 +1,25 @@
+{
+  "id": "modu-ai-moai-adk-moai-ref-aside-browser",
+  "name": "moai-ref-aside-browser",
+  "description": "> Safe-use reference for the optional Aside browser agent (the `aside` command-line tool and its MCP server), which works inside the operator's own logged-in browser. Covers when the orchestrator may use it, how its permission modes work, and the rules that keep it read-only by default. Operated by the orchestrator alone. NOT for: public pages that a plain fetch can read, subagent work, or CI runs.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "modu-ai",
+  "install_path": ".claude/skills/moai-ref-aside-browser/SKILL.md",
+  "source": {
+    "repo": "modu-ai/moai-adk",
+    "url": "https://github.com/modu-ai/moai-adk/blob/main/.claude/skills/moai-ref-aside-browser/SKILL.md",
+    "path": ".claude/skills/moai-ref-aside-browser/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-05T19:27:36.129Z",
+    "stars": 1229,
+    "language": "Go",
+    "pushed_at": "2026-10-05T18:56:32Z",
+    "license": "Apache-2.0"
+  }
+}

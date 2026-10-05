@@ -1,0 +1,25 @@
+{
+  "id": "modu-ai-moai-adk-moai-jev-skill-suggestion",
+  "name": "moai-jev-skill-suggestion",
+  "description": "> Guidance for a display-only skill-suggestion capability: how a caller should suggest a skill to the operator, how the emitted answer is read, and what must never happen (selection, auto-loading, judgment). The capability gate ships off; this skill carries mechanism and contract ONLY — never the call path; where and how to reach the capability is the catalogue's concern.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "modu-ai",
+  "install_path": ".claude/skills/moai-jev-skill-suggestion/SKILL.md",
+  "source": {
+    "repo": "modu-ai/moai-adk",
+    "url": "https://github.com/modu-ai/moai-adk/blob/main/.claude/skills/moai-jev-skill-suggestion/SKILL.md",
+    "path": ".claude/skills/moai-jev-skill-suggestion/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-05T19:27:35.609Z",
+    "stars": 1229,
+    "language": "Go",
+    "pushed_at": "2026-10-05T18:56:32Z",
+    "license": "Apache-2.0"
+  }
+}

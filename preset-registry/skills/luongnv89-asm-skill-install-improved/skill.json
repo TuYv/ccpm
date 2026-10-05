@@ -1,7 +1,7 @@
 {
   "id": "luongnv89-asm-skill-install-improved",
   "name": "skill-install-improved",
-  "description": "Install an improved variant of one named skill: resolve it by local path, repo, or name, run skill-auto-improver on a throwaway copy, then install the improved result. Don't use for improving in place, upstream PRs, or plain asm install.",
+  "description": "Install an improved variant of one named skill: resolve it by local path, repo, or name, run skill-creator's retrofit on a throwaway copy, then install the improved result. Don't use for improving in place, upstream PRs, or plain asm install.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/luongnv89/asm/blob/main/skills/skill-install-improved/SKILL.md",
     "path": "skills/skill-install-improved/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-05T10:06:28.863Z",
+    "discovered_at": "2026-10-05T19:30:13.957Z",
     "stars": 948,
     "language": "TypeScript",
-    "pushed_at": "2026-10-04T22:08:47Z",
+    "pushed_at": "2026-10-05T14:58:52Z",
     "license": "MIT"
-  },
-  "summary_zh": "用于从本地路径、仓库或名称获取技能，先在临时副本中自动改进，再安装优化后的版本。"
+  }
 }

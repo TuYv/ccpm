@@ -1,0 +1,25 @@
+{
+  "id": "modu-ai-moai-adk-moai-codemaps",
+  "name": "moai-codemaps",
+  "description": "Scan codebase and generate architecture documentation in codemaps/",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "modu-ai",
+  "install_path": ".claude/skills/moai-codemaps/SKILL.md",
+  "source": {
+    "repo": "modu-ai/moai-adk",
+    "url": "https://github.com/modu-ai/moai-adk/blob/main/.agents/skills/moai-codemaps/SKILL.md",
+    "path": ".agents/skills/moai-codemaps/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-05T19:27:30.547Z",
+    "stars": 1229,
+    "language": "Go",
+    "pushed_at": "2026-10-05T18:56:32Z",
+    "license": "Apache-2.0"
+  }
+}

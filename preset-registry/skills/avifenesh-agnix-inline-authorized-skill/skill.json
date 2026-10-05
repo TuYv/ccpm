@@ -1,0 +1,25 @@
+{
+  "id": "avifenesh-agnix-inline-authorized-skill",
+  "name": "inline-authorized-skill",
+  "description": "Use when explicitly authorizing internal automation",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "avifenesh",
+  "install_path": ".claude/skills/inline-authorized-skill/SKILL.md",
+  "source": {
+    "repo": "avifenesh/agnix",
+    "url": "https://github.com/avifenesh/agnix/blob/main/tests/fixtures/valid/skills/inline-authorized-skill/SKILL.md",
+    "path": "tests/fixtures/valid/skills/inline-authorized-skill/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-05T19:33:50.234Z",
+    "stars": 440,
+    "language": "Rust",
+    "pushed_at": "2026-10-05T17:08:42Z",
+    "license": "Apache-2.0"
+  }
+}
