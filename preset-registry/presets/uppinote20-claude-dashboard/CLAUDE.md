@@ -28,6 +28,11 @@ claude-dashboard/
 │   ├── statusline-shim.mjs  # Version-agnostic entry point (copied to PLUGIN_DATA)
 │   ├── statusline.ts        # Main entry point (status line)
 │   ├── check-usage.ts       # CLI usage dashboard entry point
+│   ├── mod/
+│   │   ├── register.tsx     # Mod entry: /claude-dashboard-pane pane + /claude-dashboard-band band
+│   │   ├── stdin-builder.ts # Builds renderer stdin from mod API state
+│   │   ├── ansi.ts          # ANSI parser for mod rendering
+│   │   └── toggle.ts        # Shared on/off/toggle argument rule for mod commands
 │   ├── types.ts             # TypeScript interfaces
 │   ├── widgets/             # Widget system
 │   │   ├── base.ts          # Widget interface
@@ -76,13 +81,18 @@ claude-dashboard/
 │       ├── progress-bar.ts  # Progress bar rendering
 │       ├── session.ts       # Session duration tracking
 │       ├── budget.ts        # Budget tracking utilities
+│       ├── band-marker.ts   # Per-session band heartbeat marker (band-<sessionId>)
+│       ├── render-mode.ts   # Mod pane/band render mode detection
 │       └── transcript-parser.ts # Transcript JSONL parsing
+├── types/
+│   └── mod-state.d.ts       # Mod state type declarations
 ├── locales/
 │   ├── en.json              # English translations
 │   └── ko.json              # Korean translations
 ├── dist/
 │   ├── index.js             # Status line built output (committed)
-│   └── check-usage.js       # CLI usage dashboard built output (committed)
+│   ├── check-usage.js       # CLI usage dashboard built output (committed)
+│   └── mod.js               # Mod (/claude-dashboard-pane, /claude-dashboard-band) built output (committed)
 └── package.json
 ```
 
@@ -105,6 +115,7 @@ claude-dashboard/
 | 에러 핸들링 | 6 |
 | API 클라이언트 | 7 |
 | 테스트 | 8 |
+| Claude Code mod (pane/band) | 9 |
 
 | 패턴 | 참고 파일 |
 |------|----------|
@@ -121,6 +132,8 @@ claude-dashboard/
 | 응답 필드로 윈도우 라벨 결정 (위치 아님) | `scripts/utils/formatters.ts` (`formatWindowLabel`) |
 | 이모지 아이콘 (단일 출처) | `scripts/utils/emoji.ts` |
 | Registry invariant 테스트 | `scripts/__tests__/emoji.test.ts` |
+| mod (renderer 하위 프로세스 + ANSI 변환) | `scripts/mod/register.tsx`, `scripts/mod/ansi.ts` |
+| 세션 마커 (TTL heartbeat) | `scripts/utils/band-marker.ts` |
 
 ## Widget Architecture
 
@@ -353,6 +366,13 @@ Before committing:
 2. Check cache invalidation logic
 3. Test with expired cache (`rm -rf ~/.cache/claude-dashboard/`)
 
+### Changing the mod
+
+1. Edit `scripts/mod/register.tsx` (config keys `modPane` / `modBand` / `modBandDefault` live in `scripts/types.ts`)
+2. `npm run build && claude plugin validate .` (validate also reports a pre-existing reserved-name error for "claude-dashboard"; ignore it)
+3. Real-render check: `claude --plugin-dir .`, then `/claude-dashboard-pane` and `/claude-dashboard-band on` (both take `on` / `off` / nothing to toggle)
+4. Constraints: helpers that take `$` must be top-level function declarations; atom plugin/key and ui matchers must be string literals; `export function register`; no minify
+
 ## Cache Architecture
 
 ### Multi-Account Support
@@ -377,7 +397,7 @@ Before committing:
 
 - **Trigger**: Time-based (once per hour maximum)
 - **Target**: Files older than `CACHE_MAX_AGE_SECONDS` (1 hour)
-- **Pattern**: `cache-*.json` (Anthropic), `codex-usage-*.json`, `gemini-usage-*.json`, `antigravity-usage-*.json`, `antigravity-token-*.json`, `zai-usage-*.json` in cache directory
+- **Pattern**: `cache-*.json` (Anthropic), `codex-usage-*.json`, `gemini-usage-*.json`, `antigravity-usage-*.json`, `antigravity-token-*.json`, `zai-usage-*.json`, `band-*` (mod band markers) in cache directory
 
 ### Request Deduplication
 
