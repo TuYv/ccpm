@@ -1,0 +1,25 @@
+{
+  "id": "mohitagw15856-pm-claude-skills-agent-spec",
+  "name": "agent-spec",
+  "description": "Specify an autonomous or tool-using AI agent before building it. Use when asked to design an AI agent, define an agent's tools and guardrails, scope what an agent is allowed to do, or write an agent spec/PRD. Produces an agent spec — goal & scope, tools with permissions, the control loop, guardrails & approval gates, memory, escalation/handoff, evaluation, and failure handling.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mohitagw15856",
+  "install_path": ".claude/skills/agent-spec/SKILL.md",
+  "source": {
+    "repo": "mohitagw15856/pm-claude-skills",
+    "url": "https://github.com/mohitagw15856/pm-claude-skills/blob/main/exports/openclaw/agent-spec/SKILL.md",
+    "path": "exports/openclaw/agent-spec/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-06T15:24:29.486Z",
+    "stars": 1426,
+    "language": "HTML",
+    "pushed_at": "2026-10-06T12:03:15Z",
+    "license": "MIT"
+  }
+}

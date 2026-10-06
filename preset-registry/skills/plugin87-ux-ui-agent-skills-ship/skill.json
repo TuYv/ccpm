@@ -1,0 +1,25 @@
+{
+  "id": "plugin87-ux-ui-agent-skills-ship",
+  "name": "ship",
+  "description": "Pre-release gate — run the full gate, responsive + render checks, then produce the release checklist (README badge/current/changelog). Use before tagging a release.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "plugin87",
+  "install_path": ".claude/skills/ship/SKILL.md",
+  "source": {
+    "repo": "plugin87/ux-ui-agent-skills",
+    "url": "https://github.com/plugin87/ux-ui-agent-skills/blob/main/.claude/skills/ship/SKILL.md",
+    "path": ".claude/skills/ship/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-06T16:11:22.039Z",
+    "stars": 1539,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-06T14:57:24Z",
+    "license": "MIT"
+  }
+}

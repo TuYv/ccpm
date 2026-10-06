@@ -1,0 +1,25 @@
+{
+  "id": "plugin87-ux-ui-agent-skills-critique",
+  "name": "critique",
+  "description": "Adversarial design critique of the current work — render it, look at it, and argue for rejection. Run after the gates are green, never instead of them.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "plugin87",
+  "install_path": ".claude/skills/critique/SKILL.md",
+  "source": {
+    "repo": "plugin87/ux-ui-agent-skills",
+    "url": "https://github.com/plugin87/ux-ui-agent-skills/blob/main/.claude/skills/critique/SKILL.md",
+    "path": ".claude/skills/critique/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-06T16:11:19.152Z",
+    "stars": 1539,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-06T14:57:24Z",
+    "license": "MIT"
+  }
+}

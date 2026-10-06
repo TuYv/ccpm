@@ -1,7 +1,7 @@
 {
   "id": "luongnv89-asm-skill-index-updater",
   "name": "skill-index-updater",
-  "description": "Add GitHub skill repos to the ASM index: clone, audit, eval, regenerate index, rebuild catalog, open PR. Use when given GitHub URLs to onboard. Don't use for authoring or improving skills (skill-creator), or install (asm install).",
+  "description": "Add GitHub skill repos to the ASM index: clone, audit, eval, regenerate index, rebuild catalog, open PR. Use when given GitHub URLs to onboard. Don't use for refreshing indexed repos (refresh-index), improving skills (skill-creator), or install.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/luongnv89/asm/blob/main/skills/skill-index-updater/SKILL.md",
     "path": "skills/skill-index-updater/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-06T08:39:48.833Z",
-    "stars": 951,
+    "discovered_at": "2026-10-06T16:15:11.143Z",
+    "stars": 952,
     "language": "TypeScript",
-    "pushed_at": "2026-10-05T14:58:52Z",
+    "pushed_at": "2026-10-06T14:22:53Z",
     "license": "MIT"
   }
 }

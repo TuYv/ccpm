@@ -1,0 +1,25 @@
+{
+  "id": "plugin87-ux-ui-agent-skills-scaffold-project",
+  "name": "scaffold-project",
+  "description": "Scaffold a new design-product project that matches the recommended Claude Code layout (the reference structure). Use when starting a fresh product/app that will be built with this design system.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "plugin87",
+  "install_path": ".claude/skills/scaffold-project/SKILL.md",
+  "source": {
+    "repo": "plugin87/ux-ui-agent-skills",
+    "url": "https://github.com/plugin87/ux-ui-agent-skills/blob/main/.claude/skills/scaffold-project/SKILL.md",
+    "path": ".claude/skills/scaffold-project/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-06T16:11:21.862Z",
+    "stars": 1539,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-06T14:57:24Z",
+    "license": "MIT"
+  }
+}

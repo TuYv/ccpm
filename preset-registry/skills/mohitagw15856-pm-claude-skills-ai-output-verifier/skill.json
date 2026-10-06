@@ -1,0 +1,25 @@
+{
+  "id": "mohitagw15856-pm-claude-skills-ai-output-verifier",
+  "name": "ai-output-verifier",
+  "description": "Check AI output before you trust or use it — where it's likely wrong, what to verify, and how to catch confident-sounding errors. Use when asked can I trust this AI answer, how do I verify what AI told me, fact-check this AI output, or is this AI response reliable. Produces a risk read on the specific output (the claims most likely to be wrong or made up), the parts that need independent verification vs the parts that are low-risk, how to actually verify each, the tells of AI hallucination and o",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mohitagw15856",
+  "install_path": ".claude/skills/ai-output-verifier/SKILL.md",
+  "source": {
+    "repo": "mohitagw15856/pm-claude-skills",
+    "url": "https://github.com/mohitagw15856/pm-claude-skills/blob/main/exports/openclaw/ai-output-verifier/SKILL.md",
+    "path": "exports/openclaw/ai-output-verifier/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-06T15:24:31.853Z",
+    "stars": 1426,
+    "language": "HTML",
+    "pushed_at": "2026-10-06T12:03:15Z",
+    "license": "MIT"
+  }
+}

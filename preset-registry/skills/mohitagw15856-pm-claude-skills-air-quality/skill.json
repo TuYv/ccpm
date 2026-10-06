@@ -1,0 +1,25 @@
+{
+  "id": "mohitagw15856-pm-claude-skills-air-quality",
+  "name": "air-quality",
+  "description": "Check live air quality anywhere with zero API keys — Open-Meteo's air-quality API via curl, decoded from raw PM2.5 and AQI numbers into what they mean for going outside. Use when asked what's the air quality, is it safe to run outside, AQI in my city, or pollution levels right now. Produces the current AQI and pollutant levels, the plain-language health read with the standard bands, and the rerunnable command.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mohitagw15856",
+  "install_path": ".claude/skills/air-quality/SKILL.md",
+  "source": {
+    "repo": "mohitagw15856/pm-claude-skills",
+    "url": "https://github.com/mohitagw15856/pm-claude-skills/blob/main/exports/openclaw/air-quality/SKILL.md",
+    "path": "exports/openclaw/air-quality/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-06T15:24:32.674Z",
+    "stars": 1426,
+    "language": "HTML",
+    "pushed_at": "2026-10-06T12:03:15Z",
+    "license": "MIT"
+  }
+}

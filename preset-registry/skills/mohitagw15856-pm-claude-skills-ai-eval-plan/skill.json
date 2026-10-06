@@ -1,0 +1,25 @@
+{
+  "id": "mohitagw15856-pm-claude-skills-ai-eval-plan",
+  "name": "ai-eval-plan",
+  "description": "Design an evaluation plan for an LLM or AI feature before shipping it. Use when asked how to evaluate a prompt/model/agent, set up an eval harness, define quality metrics for an AI feature, or build a regression gate. Produces an eval plan — task definition, datasets, metrics & rubrics, baselines, automated + human evals, a pass bar, and a regression gate.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mohitagw15856",
+  "install_path": ".claude/skills/ai-eval-plan/SKILL.md",
+  "source": {
+    "repo": "mohitagw15856/pm-claude-skills",
+    "url": "https://github.com/mohitagw15856/pm-claude-skills/blob/main/exports/openclaw/ai-eval-plan/SKILL.md",
+    "path": "exports/openclaw/ai-eval-plan/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-06T15:24:31.568Z",
+    "stars": 1426,
+    "language": "HTML",
+    "pushed_at": "2026-10-06T12:03:15Z",
+    "license": "MIT"
+  }
+}

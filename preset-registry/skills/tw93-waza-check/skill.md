@@ -172,7 +172,7 @@ Every finding needs the exact file:line, the specific input or state that trigge
 After reviewing the diff, check whether it introduces invariants not yet captured in project docs:
 
 - New safety gate or path-guard rule goes to AGENTS.md
-- New UI constraint (layout rule, animation, overlay registration) goes to `.claude/rules/*.md`
+- New UI constraint (layout rule, animation, overlay registration) goes to the narrowest tracked project guidance reachable by the intended runtimes; use `.claude/rules/*.md` only when their entrypoints load it.
 - New deploy/release step or artifact goes to AGENTS.md or `docs/`
 - New cross-file sync requirement (enum and HTML anchors, Swift keys and xcstrings) goes to AGENTS.md
 - A review report, scorecard, or diagnostic snapshot in the diff is evidence, not a durable doc: re-read the surface it names, and extract the stable rule into AGENTS/CLAUDE/rules/references instead of committing the snapshot.

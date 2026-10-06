@@ -1,0 +1,25 @@
+{
+  "id": "mohitagw15856-pm-claude-skills-ai-code-review",
+  "name": "ai-code-review",
+  "description": "Review AI-authored code for its characteristic failure modes — plausible-but-wrong logic, hallucinated APIs, over-engineering, dead scaffolding, and silent security shortcuts. Use when reviewing an AI-generated or heavily AI-assisted PR, when AI-written code keeps shipping subtle bugs, or when setting review standards for a team using coding agents. Produces a focused review with AI-specific findings, verification steps per risk class, and a team checklist for AI-authored changes. For general PR",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mohitagw15856",
+  "install_path": ".claude/skills/ai-code-review/SKILL.md",
+  "source": {
+    "repo": "mohitagw15856/pm-claude-skills",
+    "url": "https://github.com/mohitagw15856/pm-claude-skills/blob/main/exports/openclaw/ai-code-review/SKILL.md",
+    "path": "exports/openclaw/ai-code-review/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-06T15:24:30.561Z",
+    "stars": 1426,
+    "language": "HTML",
+    "pushed_at": "2026-10-06T12:03:15Z",
+    "license": "MIT"
+  }
+}

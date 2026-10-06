@@ -1,0 +1,25 @@
+{
+  "id": "mohitagw15856-pm-claude-skills-ab-test-readout",
+  "name": "ab-test-readout",
+  "description": "Analyse a finished A/B test and write the readout — the result, whether it's statistically and practically significant, what it means, and the ship/no-ship call. Use when asked to analyse experiment results, write an A/B test readout, interpret test data, or decide whether to ship a variant. Produces a clear verdict with the lift and confidence, segment cuts, the risks (peeking, novelty, sample), and a recommendation. Distinct from planning a test — this reads results.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mohitagw15856",
+  "install_path": ".claude/skills/ab-test-readout/SKILL.md",
+  "source": {
+    "repo": "mohitagw15856/pm-claude-skills",
+    "url": "https://github.com/mohitagw15856/pm-claude-skills/blob/main/exports/openclaw/ab-test-readout/SKILL.md",
+    "path": "exports/openclaw/ab-test-readout/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-06T15:24:26.200Z",
+    "stars": 1426,
+    "language": "HTML",
+    "pushed_at": "2026-10-06T12:03:15Z",
+    "license": "MIT"
+  }
+}
