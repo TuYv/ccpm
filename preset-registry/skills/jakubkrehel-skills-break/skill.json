@@ -1,7 +1,7 @@
 {
   "id": "jakubkrehel-skills-break",
   "name": "break",
-  "description": "Renders a component you choose in every state and scenario on a temporary page and stress tests it.",
+  "description": "Renders a component you choose under every scenario that can reach it on a temporary page and stress tests it.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/jakubkrehel/skills/blob/main/skills/break/SKILL.md",
     "path": "skills/break/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-06T01:50:36.821Z",
-    "stars": 7481,
+    "discovered_at": "2026-10-06T08:36:50.930Z",
+    "stars": 7489,
     "language": "Markdown",
-    "pushed_at": "2026-10-05T16:47:29Z",
+    "pushed_at": "2026-10-06T03:22:07Z",
     "license": "MIT"
-  },
-  "summary_zh": "一个组件压力测试工具，可在临时页面模拟所选组件的各种状态和场景，方便发现异常与边界问题。"
+  }
 }

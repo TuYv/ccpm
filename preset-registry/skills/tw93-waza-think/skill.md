@@ -114,7 +114,7 @@ A finished plan must be executable by another engineer or agent without re-decid
 
 When the user asks to export a handoff, or when the environment prevents further execution, make the handoff execution-ready instead of explaining the limitation. Include file targets, key constants or selectors, exact commands, runtime or visual checklist, and risk boundaries. If the work depends on a screenshot or artifact, name the artifact and the pass/fail delta.
 
-When the user says "Implement the plan", "just do it", "可以干", "直接改", "直接做", "按你说的来", "不用确认", "整", or otherwise explicitly requests implementation, or the only open choice is already settled by the user or project rules, skip every approval gate in this skill (including Lightweight Mode's wait) and execute the direction without another approval round. State which plan is being executed and check for repo drift; stop only if specific drift makes it unsafe. Approval of the design alone does not authorize implementation or public actions.
+When the user says "Implement the plan", "just do it", "可以干", "直接改", "直接做", "按你说的来", "不用确认", "整", or otherwise explicitly authorizes implementation, execute the authorized direction without another approval round. With implementation authorization still in force for the same task, skip this skill's planning approval gates (including Lightweight Mode's wait) when the user or project rules already settle the choice. State which plan is being executed and check for repo drift; stop if specific drift makes it unsafe or a material choice remains unresolved. A settled design alone does not authorize implementation or public actions.
 
 ## Hard Rules
 
