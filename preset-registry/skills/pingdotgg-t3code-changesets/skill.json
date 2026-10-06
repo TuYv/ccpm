@@ -1,8 +1,8 @@
 {
   "id": "pingdotgg-t3code-changesets",
   "name": "changesets",
-  "description": "Changesets. Use after consumer-visible runtime, public API, entrypoint, lifecycle, or wire-format changes, when deciding whether a change is breaking, or when authoring changesets and consumer release notes.",
-  "category": "文档写作",
+  "description": "Concise PR finalization changesets. Use when implementation scope is complete and focused validation has finished to classify release impact, consolidate the PR's existing changeset, or write its consumer release note.",
+  "category": "开发编程",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/pingdotgg/t3code/blob/main/.repos/effect-smol/.agents/skills/changesets/SKILL.md",
     "path": ".repos/effect-smol/.agents/skills/changesets/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-05T19:30:29.353Z",
-    "stars": 25535,
+    "discovered_at": "2026-10-06T01:53:00.925Z",
+    "stars": 25634,
     "language": "TypeScript",
-    "pushed_at": "2026-10-05T19:28:26Z",
+    "pushed_at": "2026-10-06T01:49:49Z",
     "license": "MIT"
   }
 }

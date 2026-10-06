@@ -1,7 +1,7 @@
 {
   "id": "makenotion-notion-cookbook-research-documentation",
   "name": "notion-research-documentation",
-  "description": "Searches across your Notion workspace, synthesizes findings from multiple pages, and creates comprehensive research documentation saved as new Notion pages. Turns scattered information into structured reports with proper citations and actionable insights.",
+  "description": "Researches questions across Notion sources and synthesizes cited briefs, comparisons, or reports. Use when answering requires discovering and reconciling workspace information, optionally with external research, and returning or saving the findings.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -13,14 +13,13 @@
   "install_path": ".claude/skills/research-documentation/SKILL.md",
   "source": {
     "repo": "makenotion/notion-cookbook",
-    "url": "https://github.com/makenotion/notion-cookbook/blob/main/skills/claude/research-documentation/SKILL.md",
-    "path": "skills/claude/research-documentation/SKILL.md",
+    "url": "https://github.com/makenotion/notion-cookbook/blob/main/skills/mcp-clients/research-documentation/SKILL.md",
+    "path": "skills/mcp-clients/research-documentation/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-05T10:07:51.485Z",
-    "stars": 216,
+    "discovered_at": "2026-10-06T01:53:53.069Z",
+    "stars": 217,
     "language": "TypeScript",
-    "pushed_at": "2026-10-02T19:35:46Z",
+    "pushed_at": "2026-10-06T00:07:17Z",
     "license": "MIT"
-  },
-  "summary_zh": "一款 Notion 研究整理工具，可跨页面检索并整合零散信息，生成带引用和行动建议的结构化报告。"
+  }
 }

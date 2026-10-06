@@ -1,7 +1,7 @@
 {
   "id": "makenotion-notion-cookbook-meeting-intelligence",
   "name": "notion-meeting-intelligence",
-  "description": "Prepares meeting materials by gathering context from Notion, enriching with Claude research, and creating both an internal pre-read and external agenda saved to Notion. Helps you arrive prepared with comprehensive background and structured meeting docs.",
+  "description": "Prepares meeting agendas, internal pre-reads, and decision briefs using Notion context and relevant research. Use for meeting preparation, recurring meeting context, or updating meeting outcomes; use knowledge-capture for a standalone record of an existing discussion.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -13,14 +13,13 @@
   "install_path": ".claude/skills/meeting-intelligence/SKILL.md",
   "source": {
     "repo": "makenotion/notion-cookbook",
-    "url": "https://github.com/makenotion/notion-cookbook/blob/main/skills/claude/meeting-intelligence/SKILL.md",
-    "path": "skills/claude/meeting-intelligence/SKILL.md",
+    "url": "https://github.com/makenotion/notion-cookbook/blob/main/skills/mcp-clients/meeting-intelligence/SKILL.md",
+    "path": "skills/mcp-clients/meeting-intelligence/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-05T10:07:51.310Z",
-    "stars": 216,
+    "discovered_at": "2026-10-06T01:53:52.928Z",
+    "stars": 217,
     "language": "TypeScript",
-    "pushed_at": "2026-10-02T19:35:46Z",
+    "pushed_at": "2026-10-06T00:07:17Z",
     "license": "MIT"
-  },
-  "summary_zh": "自动整合 Notion 上下文并结合 AI 调研，生成会前简报和对外议程，适合快速准备资料充分、结构清晰的会议。"
+  }
 }

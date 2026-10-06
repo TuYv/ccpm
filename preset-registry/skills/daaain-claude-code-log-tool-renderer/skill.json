@@ -2,7 +2,7 @@
   "id": "daaain-claude-code-log-tool-renderer",
   "name": "tool-renderer",
   "description": "Implement specialized rendering for Claude Code tools. Use when adding a new tool type (WebSearch, WebFetch, etc.) to the transcript viewer, or when asked to implement tool rendering.",
-  "category": "浏览器自动化",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/daaain/claude-code-log/blob/main/.claude/skills/tool-renderer/SKILL.md",
     "path": ".claude/skills/tool-renderer/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-05T19:30:04.102Z",
+    "discovered_at": "2026-10-06T01:52:42.385Z",
     "stars": 1239,
     "language": "Python",
-    "pushed_at": "2026-10-05T17:56:54Z",
+    "pushed_at": "2026-10-05T22:08:00Z",
     "license": "MIT"
   },
   "summary_zh": "专门给Claude Code的工具做定制化渲染，适合在对话记录界面里加新工具类型，或需要开发工具展示效果的场景。"

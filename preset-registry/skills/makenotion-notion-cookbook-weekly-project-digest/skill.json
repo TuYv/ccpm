@@ -1,0 +1,25 @@
+{
+  "id": "makenotion-notion-cookbook-weekly-project-digest",
+  "name": "notion-weekly-project-digest",
+  "description": "Produces evidence-based weekly project or team updates by comparing reporting periods, tasks, decisions, and blockers in Notion. Use for recurring status digests; use spec-to-implementation for requirement-level implementation tracking.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "makenotion",
+  "install_path": ".claude/skills/weekly-project-digest/SKILL.md",
+  "source": {
+    "repo": "makenotion/notion-cookbook",
+    "url": "https://github.com/makenotion/notion-cookbook/blob/main/skills/mcp-clients/weekly-project-digest/SKILL.md",
+    "path": "skills/mcp-clients/weekly-project-digest/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-06T01:53:53.332Z",
+    "stars": 217,
+    "language": "TypeScript",
+    "pushed_at": "2026-10-06T00:07:17Z",
+    "license": "MIT"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "id": "makenotion-notion-cookbook-knowledge-capture",
   "name": "notion-knowledge-capture",
-  "description": "Transforms conversations and discussions into structured documentation pages in Notion. Captures insights, decisions, and knowledge from chat context, formats appropriately, and saves to wikis or databases with proper organization and linking for easy discovery.",
+  "description": "Captures conversations and supplied notes as Notion wiki pages, how-to guides, FAQs, decision records, or retrospectives. Use when saving or updating durable knowledge from existing context; use research-documentation when new source discovery and synthesis is the main task.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -13,14 +13,13 @@
   "install_path": ".claude/skills/knowledge-capture/SKILL.md",
   "source": {
     "repo": "makenotion/notion-cookbook",
-    "url": "https://github.com/makenotion/notion-cookbook/blob/main/skills/claude/knowledge-capture/SKILL.md",
-    "path": "skills/claude/knowledge-capture/SKILL.md",
+    "url": "https://github.com/makenotion/notion-cookbook/blob/main/skills/mcp-clients/knowledge-capture/SKILL.md",
+    "path": "skills/mcp-clients/knowledge-capture/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-05T10:07:51.165Z",
-    "stars": 216,
+    "discovered_at": "2026-10-06T01:53:52.784Z",
+    "stars": 217,
     "language": "TypeScript",
-    "pushed_at": "2026-10-02T19:35:46Z",
+    "pushed_at": "2026-10-06T00:07:17Z",
     "license": "MIT"
-  },
-  "summary_zh": "将聊天和讨论自动整理成结构化的 Notion 文档，沉淀观点、决策与知识，适合搭建易检索的团队知识库。"
+  }
 }
