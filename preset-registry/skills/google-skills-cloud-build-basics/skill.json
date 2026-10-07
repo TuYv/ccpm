@@ -1,7 +1,7 @@
 {
   "id": "google-skills-cloud-build-basics",
   "name": "cloud-build-basics",
-  "description": ">- Teaches the fundamentals of Google Cloud Build (GCB). Covers core concepts, API enablement, console navigation to the Build History page, and the end-to-end workflow for creating and manually running a basic build trigger. Do not use for managing private pools or complex pipeline architectures.",
+  "description": ">- Teaches the fundamentals of Cloud Build on Google Cloud. Covers core concepts, API enablement, console navigation to the Build History page, and the end-to-end workflow for creating and manually running a basic build trigger. Do not use for managing private pools or complex pipeline architectures.",
   "category": "自动化集成",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/google/skills/blob/main/skills/cloud/cloud-build-basics/SKILL.md",
     "path": "skills/cloud/cloud-build-basics/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-07T13:32:58.883Z",
-    "stars": 21011,
+    "discovered_at": "2026-10-07T19:37:24.556Z",
+    "stars": 21024,
     "language": "Python",
-    "pushed_at": "2026-10-06T23:16:02Z",
+    "pushed_at": "2026-10-07T17:32:57Z",
     "license": "Apache-2.0"
-  },
-  "summary_zh": "一份 Google Cloud Build 入门教程，适合学习基础概念、启用 API，并创建和手动运行简单的构建触发器。"
+  }
 }

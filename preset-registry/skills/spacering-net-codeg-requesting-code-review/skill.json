@@ -1,0 +1,25 @@
+{
+  "id": "spacering-net-codeg-requesting-code-review",
+  "name": "requesting-code-review",
+  "description": "Use when completing tasks, implementing major features, or before merging to verify work meets requirements",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "spacering-net",
+  "install_path": ".claude/skills/requesting-code-review/SKILL.md",
+  "source": {
+    "repo": "spacering-net/codeg",
+    "url": "https://github.com/spacering-net/codeg/blob/main/src-tauri/experts/skills/requesting-code-review/SKILL.md",
+    "path": "src-tauri/experts/skills/requesting-code-review/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-07T20:29:35.361Z",
+    "stars": 3843,
+    "language": "Rust",
+    "pushed_at": "2026-10-07T14:51:06Z",
+    "license": "Apache-2.0"
+  }
+}

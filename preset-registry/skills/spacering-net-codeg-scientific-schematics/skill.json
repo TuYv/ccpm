@@ -1,0 +1,25 @@
+{
+  "id": "spacering-net-codeg-scientific-schematics",
+  "name": "scientific-schematics",
+  "description": "Create publication-quality scientific diagrams using Nano Banana 2 AI with smart iterative refinement. Uses Gemini 3.1 Pro Preview for quality review. Only regenerates if quality is below threshold for your document type. Specialized in neural network architectures, system diagrams, flowcharts, biological pathways, and complex scientific visualizations.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "spacering-net",
+  "install_path": ".claude/skills/scientific-schematics/SKILL.md",
+  "source": {
+    "repo": "spacering-net/codeg",
+    "url": "https://github.com/spacering-net/codeg/blob/main/src-tauri/science/skills/scientific-schematics/SKILL.md",
+    "path": "src-tauri/science/skills/scientific-schematics/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-07T20:29:38.024Z",
+    "stars": 3843,
+    "language": "Rust",
+    "pushed_at": "2026-10-07T14:51:06Z",
+    "license": "Apache-2.0"
+  }
+}

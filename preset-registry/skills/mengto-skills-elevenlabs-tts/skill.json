@@ -1,0 +1,25 @@
+{
+  "id": "mengto-skills-elevenlabs-tts",
+  "name": "elevenlabs-tts",
+  "description": "Generate ElevenLabs text-to-speech audio from scripts or inline text using local voice profiles. Use when the user asks for ElevenLabs, text-to-speech, TTS, narration, voiceover, speech audio, or voice generation; load voice names, voice ids, emails, owners, and account-specific defaults only from local config outside the skill.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "MengTo",
+  "install_path": ".claude/skills/elevenlabs-tts/SKILL.md",
+  "source": {
+    "repo": "MengTo/Skills",
+    "url": "https://github.com/MengTo/Skills/blob/main/agent-skills/codex/elevenlabs-tts/SKILL.md",
+    "path": "agent-skills/codex/elevenlabs-tts/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-07T20:23:30.493Z",
+    "stars": 6656,
+    "language": "HTML",
+    "pushed_at": "2026-10-06T14:20:26Z",
+    "license": "MIT"
+  }
+}

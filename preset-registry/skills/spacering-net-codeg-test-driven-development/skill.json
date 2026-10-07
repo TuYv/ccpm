@@ -1,0 +1,25 @@
+{
+  "id": "spacering-net-codeg-test-driven-development",
+  "name": "test-driven-development",
+  "description": "Use when implementing any feature or bugfix, before writing implementation code",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "spacering-net",
+  "install_path": ".claude/skills/test-driven-development/SKILL.md",
+  "source": {
+    "repo": "spacering-net/codeg",
+    "url": "https://github.com/spacering-net/codeg/blob/main/src-tauri/experts/skills/test-driven-development/SKILL.md",
+    "path": "src-tauri/experts/skills/test-driven-development/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-07T20:29:35.791Z",
+    "stars": 3843,
+    "language": "Rust",
+    "pushed_at": "2026-10-07T14:51:06Z",
+    "license": "Apache-2.0"
+  }
+}

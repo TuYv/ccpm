@@ -1,0 +1,25 @@
+{
+  "id": "spacering-net-codeg-using-superpowers",
+  "name": "using-superpowers",
+  "description": "Use when starting any conversation - establishes how to find and use skills, requiring skill invocation before ANY response including clarifying questions",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "spacering-net",
+  "install_path": ".claude/skills/using-superpowers/SKILL.md",
+  "source": {
+    "repo": "spacering-net/codeg",
+    "url": "https://github.com/spacering-net/codeg/blob/main/src-tauri/experts/skills/using-superpowers/SKILL.md",
+    "path": "src-tauri/experts/skills/using-superpowers/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-07T20:29:36.078Z",
+    "stars": 3843,
+    "language": "Rust",
+    "pushed_at": "2026-10-07T14:51:06Z",
+    "license": "Apache-2.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "rehan-remade-universal-modder-publish-mod",
+  "name": "publish-mod",
+  "description": "Package and release a finished game mod. Covers the pre-release lint (no game files, decompiled code or leaked keys), README and install steps, credits and AI disclosure, versioning, where to upload (Nexus Mods, Steam Workshop, Thunderstore, mod.io, GitHub releases), and the post with a video. Use when the user wants to ship, share, upload, release or post a mod.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "rehan-remade",
+  "install_path": ".claude/skills/publish-mod/SKILL.md",
+  "source": {
+    "repo": "rehan-remade/universal-modder",
+    "url": "https://github.com/rehan-remade/universal-modder/blob/main/skills/publish-mod/SKILL.md",
+    "path": "skills/publish-mod/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-07T20:23:50.189Z",
+    "stars": 5116,
+    "language": "Python",
+    "pushed_at": "2026-10-07T13:17:54Z",
+    "license": "MIT"
+  }
+}

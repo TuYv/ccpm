@@ -1,0 +1,25 @@
+{
+  "id": "spacering-net-codeg-subagent-driven-development",
+  "name": "subagent-driven-development",
+  "description": "Use when executing implementation plans with independent tasks in the current session",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "spacering-net",
+  "install_path": ".claude/skills/subagent-driven-development/SKILL.md",
+  "source": {
+    "repo": "spacering-net/codeg",
+    "url": "https://github.com/spacering-net/codeg/blob/main/src-tauri/experts/skills/subagent-driven-development/SKILL.md",
+    "path": "src-tauri/experts/skills/subagent-driven-development/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-07T20:29:35.509Z",
+    "stars": 3843,
+    "language": "Rust",
+    "pushed_at": "2026-10-07T14:51:06Z",
+    "license": "Apache-2.0"
+  }
+}

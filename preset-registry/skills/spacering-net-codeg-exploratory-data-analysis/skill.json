@@ -1,0 +1,25 @@
+{
+  "id": "spacering-net-codeg-exploratory-data-analysis",
+  "name": "exploratory-data-analysis",
+  "description": "Perform comprehensive exploratory data analysis on scientific data files across 200+ file formats. This skill should be used when analyzing any scientific data file to understand its structure, content, quality, and characteristics. Automatically detects file type and generates detailed markdown reports with format-specific analysis, quality metrics, and downstream analysis recommendations. Covers chemistry, bioinformatics, microscopy, spectroscopy, proteomics, metabolomics, and general scientif",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "spacering-net",
+  "install_path": ".claude/skills/exploratory-data-analysis/SKILL.md",
+  "source": {
+    "repo": "spacering-net/codeg",
+    "url": "https://github.com/spacering-net/codeg/blob/main/src-tauri/science/skills/exploratory-data-analysis/SKILL.md",
+    "path": "src-tauri/science/skills/exploratory-data-analysis/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-07T20:29:36.964Z",
+    "stars": 3843,
+    "language": "Rust",
+    "pushed_at": "2026-10-07T14:51:06Z",
+    "license": "Apache-2.0"
+  }
+}

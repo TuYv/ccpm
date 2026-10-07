@@ -1,0 +1,25 @@
+{
+  "id": "rehan-remade-universal-modder-share-field-notes",
+  "name": "share-field-notes",
+  "description": "Search and contribute to the shared AI-modding knowledge base, where field notes record how specific games were modded, decompiled or reverse-engineered (exact versions, route, engine facts, verification, gotchas). Use before starting work on a game (\"has anyone modded X?\"), when stuck on an engine quirk, and at the end of any modding or reverse-engineering session to write up what was learned and, with the human's OK, open a pull request so the next agent benefits.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "rehan-remade",
+  "install_path": ".claude/skills/share-field-notes/SKILL.md",
+  "source": {
+    "repo": "rehan-remade/universal-modder",
+    "url": "https://github.com/rehan-remade/universal-modder/blob/main/skills/share-field-notes/SKILL.md",
+    "path": "skills/share-field-notes/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-07T20:23:50.559Z",
+    "stars": 5116,
+    "language": "Python",
+    "pushed_at": "2026-10-07T13:17:54Z",
+    "license": "MIT"
+  }
+}

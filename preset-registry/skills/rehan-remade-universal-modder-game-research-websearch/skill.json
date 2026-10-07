@@ -1,0 +1,25 @@
+{
+  "id": "rehan-remade-universal-modder-game-research-websearch",
+  "name": "game-research-websearch",
+  "description": "Research a game, engine or modding technique on the open web with archive-aware, rate-limit-safe searches — Wayback Machine/archive.today for dead forums (XeNTaX, Zenhax, old threads), GitHub code/repo search, Nexus/Steam Workshop/Thunderstore APIs, Reddit JSON, YouTube transcripts, plus archive snapshots as evidence. Use when starting work on a game (\"how did people mod X before?\"), when a documented tool/link is dead, when forum threads are login-gated (semi-auto handoff to the human), and bef",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "rehan-remade",
+  "install_path": ".claude/skills/game-research-websearch/SKILL.md",
+  "source": {
+    "repo": "rehan-remade/universal-modder",
+    "url": "https://github.com/rehan-remade/universal-modder/blob/main/skills/game-research-websearch/SKILL.md",
+    "path": "skills/game-research-websearch/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-07T20:23:49.695Z",
+    "stars": 5116,
+    "language": "Python",
+    "pushed_at": "2026-10-07T13:17:54Z",
+    "license": "MIT"
+  }
+}

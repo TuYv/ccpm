@@ -1,0 +1,25 @@
+{
+  "id": "rehan-remade-universal-modder-asset-pipeline",
+  "name": "asset-pipeline",
+  "description": "Turn generated or hand-made art into exactly what a game engine loads. Covers sprite cutout, trim and nearest-neighbour fitting to frame sizes, pixelation to a palette, sprite sheets and strips, player/team-colour masks, seamless textures, and rendering a 3D model into sprite frames from the game's own camera (isometric/RTS 8 or 16 headings, side view, top-down) with Blender. Use after generating assets, or when the user asks to make sprites, sprite sheets, animation frames, isometric unit sprit",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "rehan-remade",
+  "install_path": ".claude/skills/asset-pipeline/SKILL.md",
+  "source": {
+    "repo": "rehan-remade/universal-modder",
+    "url": "https://github.com/rehan-remade/universal-modder/blob/main/skills/asset-pipeline/SKILL.md",
+    "path": "skills/asset-pipeline/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-07T20:23:49.072Z",
+    "stars": 5116,
+    "language": "Python",
+    "pushed_at": "2026-10-07T13:17:54Z",
+    "license": "MIT"
+  }
+}

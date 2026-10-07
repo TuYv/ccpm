@@ -1,0 +1,25 @@
+{
+  "id": "mengto-skills-html-to-interaction-prompts",
+  "name": "html-to-interaction-prompts",
+  "description": "Convert a supplied HTML page or generated HTML reference into a screenshot-backed article containing multiple reusable interaction prompts. Use when the user provides an HTML file, exported page, generated-page.html, or local/live reference and asks to extract animation/interactions, create prompts, capture screenshots for each prompt, add them to an article, or commit the resulting article/assets.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "MengTo",
+  "install_path": ".claude/skills/html-to-interaction-prompts/SKILL.md",
+  "source": {
+    "repo": "MengTo/Skills",
+    "url": "https://github.com/MengTo/Skills/blob/main/agent-skills/codex/html-to-interaction-prompts/SKILL.md",
+    "path": "agent-skills/codex/html-to-interaction-prompts/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-07T20:23:30.796Z",
+    "stars": 6656,
+    "language": "HTML",
+    "pushed_at": "2026-10-06T14:20:26Z",
+    "license": "MIT"
+  }
+}

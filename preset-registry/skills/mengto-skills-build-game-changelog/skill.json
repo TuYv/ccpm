@@ -1,0 +1,25 @@
+{
+  "id": "mengto-skills-build-game-changelog",
+  "name": "build-game-changelog",
+  "description": "Design, implement, backfill, audit, and release in-game changelogs with contiguous versioning, deployment provenance, menu-state navigation, accessible toggle, close, and Escape behavior, and responsive release-ledger UI. Use when Codex needs to add or revise a changelog or version screen in a game, reconstruct release history from deployments and Git, define version-bump rules, keep displayed versions synchronized with live builds, or test changelog mechanics across desktop and mobile.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "MengTo",
+  "install_path": ".claude/skills/build-game-changelog/SKILL.md",
+  "source": {
+    "repo": "MengTo/Skills",
+    "url": "https://github.com/MengTo/Skills/blob/main/agent-skills/game-development/build-game-changelog/SKILL.md",
+    "path": "agent-skills/game-development/build-game-changelog/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-07T20:23:33.781Z",
+    "stars": 6656,
+    "language": "HTML",
+    "pushed_at": "2026-10-06T14:20:26Z",
+    "license": "MIT"
+  }
+}

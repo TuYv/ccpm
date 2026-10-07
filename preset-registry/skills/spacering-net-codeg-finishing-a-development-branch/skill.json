@@ -1,0 +1,25 @@
+{
+  "id": "spacering-net-codeg-finishing-a-development-branch",
+  "name": "finishing-a-development-branch",
+  "description": "Use when implementation is complete, all tests pass, and you need to decide how to integrate the work",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "spacering-net",
+  "install_path": ".claude/skills/finishing-a-development-branch/SKILL.md",
+  "source": {
+    "repo": "spacering-net/codeg",
+    "url": "https://github.com/spacering-net/codeg/blob/main/src-tauri/experts/skills/finishing-a-development-branch/SKILL.md",
+    "path": "src-tauri/experts/skills/finishing-a-development-branch/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-07T20:29:35.037Z",
+    "stars": 3843,
+    "language": "Rust",
+    "pushed_at": "2026-10-07T14:51:06Z",
+    "license": "Apache-2.0"
+  }
+}

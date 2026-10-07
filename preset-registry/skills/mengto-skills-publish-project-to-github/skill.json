@@ -1,0 +1,25 @@
+{
+  "id": "mengto-skills-publish-project-to-github",
+  "name": "publish-project-to-github",
+  "description": "Package a finished local project into an intentional GitHub repository, create a strong README and visual preview, push it safely, configure a public GitHub Pages URL when the project is compatible, and verify the deployed result. Use when a user asks to upload, publish, open-source, share, or turn a local HTML/CSS/JavaScript experiment or small web project into a documented GitHub repository with a live demo.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "MengTo",
+  "install_path": ".claude/skills/publish-project-to-github/SKILL.md",
+  "source": {
+    "repo": "MengTo/Skills",
+    "url": "https://github.com/MengTo/Skills/blob/main/agent-skills/codex/publish-project-to-github/SKILL.md",
+    "path": "agent-skills/codex/publish-project-to-github/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-07T20:23:31.523Z",
+    "stars": 6656,
+    "language": "HTML",
+    "pushed_at": "2026-10-06T14:20:26Z",
+    "license": "MIT"
+  }
+}

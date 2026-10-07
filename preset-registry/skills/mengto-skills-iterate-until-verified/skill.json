@@ -1,0 +1,25 @@
+{
+  "id": "mengto-skills-iterate-until-verified",
+  "name": "iterate-until-verified",
+  "description": "Apply a prompt-agnostic execution and verification loop to any substantial task while preserving the original request. Use when the user asks to fan out work, use subagents or independent reviewers, loop until done, benchmark against references, apply a harsh critic, compare candidates blind, improve an existing prompt with verification, or continue until explicit quality gates pass.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "MengTo",
+  "install_path": ".claude/skills/iterate-until-verified/SKILL.md",
+  "source": {
+    "repo": "MengTo/Skills",
+    "url": "https://github.com/MengTo/Skills/blob/main/agent-skills/codex/iterate-until-verified/SKILL.md",
+    "path": "agent-skills/codex/iterate-until-verified/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-07T20:23:31.061Z",
+    "stars": 6656,
+    "language": "HTML",
+    "pushed_at": "2026-10-06T14:20:26Z",
+    "license": "MIT"
+  }
+}

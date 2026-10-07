@@ -1,0 +1,25 @@
+{
+  "id": "spacering-net-codeg-using-git-worktrees",
+  "name": "using-git-worktrees",
+  "description": "Use when starting feature work that needs isolation from current workspace or before executing implementation plans - ensures an isolated workspace exists via native tools or git worktree fallback",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "spacering-net",
+  "install_path": ".claude/skills/using-git-worktrees/SKILL.md",
+  "source": {
+    "repo": "spacering-net/codeg",
+    "url": "https://github.com/spacering-net/codeg/blob/main/src-tauri/experts/skills/using-git-worktrees/SKILL.md",
+    "path": "src-tauri/experts/skills/using-git-worktrees/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-07T20:29:35.944Z",
+    "stars": 3843,
+    "language": "Rust",
+    "pushed_at": "2026-10-07T14:51:06Z",
+    "license": "Apache-2.0"
+  }
+}

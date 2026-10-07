@@ -1,0 +1,25 @@
+{
+  "id": "spacering-net-codeg-writing-skills",
+  "name": "writing-skills",
+  "description": "Use when creating new skills, editing existing skills, or verifying skills work before deployment",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "spacering-net",
+  "install_path": ".claude/skills/writing-skills/SKILL.md",
+  "source": {
+    "repo": "spacering-net/codeg",
+    "url": "https://github.com/spacering-net/codeg/blob/main/src-tauri/experts/skills/writing-skills/SKILL.md",
+    "path": "src-tauri/experts/skills/writing-skills/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-07T20:29:36.507Z",
+    "stars": 3843,
+    "language": "Rust",
+    "pushed_at": "2026-10-07T14:51:06Z",
+    "license": "Apache-2.0"
+  }
+}

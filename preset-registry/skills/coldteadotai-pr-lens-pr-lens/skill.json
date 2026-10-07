@@ -1,0 +1,25 @@
+{
+  "id": "coldteadotai-pr-lens-pr-lens",
+  "name": "pr-lens",
+  "description": "WHAT: Draws a code change or part of a codebase as an animated architecture or data-flow diagram, on its own or in a pull request. WHEN: asked to diagram, visualise or explain a change or a system, or when a pull request should carry a diagram. KEYWORDS: PR Lens, diagram, architecture, data flow, visualise, visualize, pull request",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "coldteadotai",
+  "install_path": ".claude/skills/pr-lens/SKILL.md",
+  "source": {
+    "repo": "coldteadotai/pr-lens",
+    "url": "https://github.com/coldteadotai/pr-lens/blob/main/skills/pr-lens/SKILL.md",
+    "path": "skills/pr-lens/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-07T20:29:04.289Z",
+    "stars": 1867,
+    "language": "TypeScript",
+    "pushed_at": "2026-10-04T14:00:35Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "spacering-net-codeg-scientific-brainstorming",
+  "name": "scientific-brainstorming",
+  "description": "Creative research ideation and exploration. Use for open-ended brainstorming sessions, exploring interdisciplinary connections, challenging assumptions, or identifying research gaps. Best for early-stage research planning when you do not have specific observations yet. For formulating testable hypotheses from data use hypothesis-generation.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "spacering-net",
+  "install_path": ".claude/skills/scientific-brainstorming/SKILL.md",
+  "source": {
+    "repo": "spacering-net/codeg",
+    "url": "https://github.com/spacering-net/codeg/blob/main/src-tauri/science/skills/scientific-brainstorming/SKILL.md",
+    "path": "src-tauri/science/skills/scientific-brainstorming/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-07T20:29:37.681Z",
+    "stars": 3843,
+    "language": "Rust",
+    "pushed_at": "2026-10-07T14:51:06Z",
+    "license": "Apache-2.0"
+  }
+}

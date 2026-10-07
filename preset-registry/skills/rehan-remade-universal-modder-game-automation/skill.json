@@ -1,0 +1,25 @@
+{
+  "id": "rehan-remade-universal-modder-game-automation",
+  "name": "game-automation",
+  "description": "Launch, see and drive a real game so an agent can test its own mods. Covers launching via Steam or the exe, windowed mode at a fixed size, screenshots of the game window (GPU-safe capture), clicking and typing into menus, holding keys, relative mouse, crash-reporter cleanup, killing by PID, reading logs, scripted test scenes, and an in-game JSON bridge that lets an agent observe and act. Windows-first (also from WSL), with notes for Linux and macOS. Use when a mod must be verified in game, when ",
+  "category": "自动化集成",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "rehan-remade",
+  "install_path": ".claude/skills/game-automation/SKILL.md",
+  "source": {
+    "repo": "rehan-remade/universal-modder",
+    "url": "https://github.com/rehan-remade/universal-modder/blob/main/skills/game-automation/SKILL.md",
+    "path": "skills/game-automation/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-07T20:23:49.399Z",
+    "stars": 5116,
+    "language": "Python",
+    "pushed_at": "2026-10-07T13:17:54Z",
+    "license": "MIT"
+  }
+}

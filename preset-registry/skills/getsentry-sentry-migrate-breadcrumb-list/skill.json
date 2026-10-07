@@ -1,7 +1,7 @@
 {
   "id": "getsentry-sentry-migrate-breadcrumb-list",
   "name": "migrate-breadcrumb-list",
-  "description": "Migrates page-navigation breadcrumbs from the legacy `sentry/components/breadcrumbs` component to `@sentry/scraps/breadcrumbList`, splitting one flat crumb array across the TopBar `breadcrumbs` and `title` slots. Use when a page still renders `<Breadcrumbs crumbs={...}/>`, when parent crumbs and the page title need separating into two TopBar slots, when `Layout.Title` double-renders the page name, when a migrated crumb needs to keep the project or date selection, or when working through the Brea",
+  "description": "Migrates legacy page-navigation breadcrumbs to @sentry/scraps/breadcrumbList and the required typed title on TopBar.Slot name=\"breadcrumbs\". Use for \"migrate breadcrumbs\", \"replace sentry/components/breadcrumbs\", \"BreadcrumbList.Title\", duplicate page titles, or preserving page filters during breadcrumb migration. Not for event breadcrumbs, issue-detail timeline entries, or a redesign of Settings route assembly.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/getsentry/sentry/blob/master/.agents/skills/migrate-breadcrumb-list/SKILL.md",
     "path": ".agents/skills/migrate-breadcrumb-list/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-10-07T13:36:38.955Z",
-    "stars": 45496,
+    "discovered_at": "2026-10-07T19:40:30.279Z",
+    "stars": 45501,
     "language": "Python",
-    "pushed_at": "2026-10-07T13:35:06Z",
+    "pushed_at": "2026-10-07T19:38:53Z",
     "license": null
-  },
-  "summary_zh": "这是一个迁移 Sentry 页面面包屑的工具，可将旧组件改为新导航结构，避免标题重复并保留项目、日期等上下文。"
+  }
 }

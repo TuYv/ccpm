@@ -1,0 +1,25 @@
+{
+  "id": "mengto-skills-x-bookmark-quote-posts",
+  "name": "x-bookmark-quote-posts",
+  "description": "Check a user's latest X/Twitter bookmarks and turn recent saved posts into source-backed quote-post drafts calibrated against the user's latest 100 authored posts. Use when asked to review X bookmarks, create quote posts from bookmarks, refresh a bookmark quote queue, run a bookmark quote automation, study a user's X voice, or write first-person quote posts from X sources.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "MengTo",
+  "install_path": ".claude/skills/x-bookmark-quote-posts/SKILL.md",
+  "source": {
+    "repo": "MengTo/Skills",
+    "url": "https://github.com/MengTo/Skills/blob/main/agent-skills/codex/x-bookmark-quote-posts/SKILL.md",
+    "path": "agent-skills/codex/x-bookmark-quote-posts/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-07T20:23:32.330Z",
+    "stars": 6656,
+    "language": "HTML",
+    "pushed_at": "2026-10-06T14:20:26Z",
+    "license": "MIT"
+  }
+}

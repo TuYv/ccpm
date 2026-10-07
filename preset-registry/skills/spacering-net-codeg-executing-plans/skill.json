@@ -1,0 +1,25 @@
+{
+  "id": "spacering-net-codeg-executing-plans",
+  "name": "executing-plans",
+  "description": "Use when you have a written implementation plan to execute in a separate session with review checkpoints",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "spacering-net",
+  "install_path": ".claude/skills/executing-plans/SKILL.md",
+  "source": {
+    "repo": "spacering-net/codeg",
+    "url": "https://github.com/spacering-net/codeg/blob/main/src-tauri/experts/skills/executing-plans/SKILL.md",
+    "path": "src-tauri/experts/skills/executing-plans/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-07T20:29:34.886Z",
+    "stars": 3843,
+    "language": "Rust",
+    "pushed_at": "2026-10-07T14:51:06Z",
+    "license": "Apache-2.0"
+  }
+}

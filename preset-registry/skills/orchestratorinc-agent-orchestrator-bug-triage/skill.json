@@ -1,0 +1,25 @@
+{
+  "id": "orchestratorinc-agent-orchestrator-bug-triage",
+  "name": "bug-triage",
+  "description": "Help clarify human bug reports, search for duplicates, and gather diagnostic evidence separately from a concise issue draft.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "OrchestratorInc",
+  "install_path": ".claude/skills/bug-triage/SKILL.md",
+  "source": {
+    "repo": "OrchestratorInc/agent-orchestrator",
+    "url": "https://github.com/OrchestratorInc/agent-orchestrator/blob/main/.claude/skills/bug-triage/SKILL.md",
+    "path": ".claude/skills/bug-triage/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-07T19:41:19.146Z",
+    "stars": 12870,
+    "language": "Go",
+    "pushed_at": "2026-10-07T19:39:43Z",
+    "license": "Apache-2.0"
+  }
+}

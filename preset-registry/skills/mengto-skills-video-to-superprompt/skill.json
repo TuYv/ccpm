@@ -1,0 +1,25 @@
+{
+  "id": "mengto-skills-video-to-superprompt",
+  "name": "video-to-superprompt",
+  "description": "Turn a reference video into a super detailed recreation or inspiration prompt. Use when the user provides, mentions, uploads, links, or points to a video and asks to analyze the design, UI, animations, transitions, scroll interactions, typography, colors, assets, WebGL/Three.js, storytelling, section-by-section behavior, or to create a prompt/article that recreates the page, app, interaction, or motion system.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "MengTo",
+  "install_path": ".claude/skills/video-to-superprompt/SKILL.md",
+  "source": {
+    "repo": "MengTo/Skills",
+    "url": "https://github.com/MengTo/Skills/blob/main/agent-skills/codex/video-to-superprompt/SKILL.md",
+    "path": "agent-skills/codex/video-to-superprompt/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-07T20:23:31.846Z",
+    "stars": 6656,
+    "language": "HTML",
+    "pushed_at": "2026-10-06T14:20:26Z",
+    "license": "MIT"
+  }
+}

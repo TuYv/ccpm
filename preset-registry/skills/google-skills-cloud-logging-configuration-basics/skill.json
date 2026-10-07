@@ -1,7 +1,7 @@
 {
   "id": "google-skills-cloud-logging-configuration-basics",
   "name": "cloud-logging-configuration-basics",
-  "description": ">- Configure single-project Google Cloud Logging: regional log buckets, log sinks, log views, restricting or hiding sensitive logs in the default view (_Default) filter, IAM permissions for views (Logs View Accessor, IAM conditions), logs-based metrics, log exclusions, and sampling. Don't use for cross-project logging or multi-project setups.",
+  "description": ">- Configure single-project Cloud Logging on Google Cloud: regional log buckets, log sinks, log views, restricting or hiding sensitive logs in the default view (_Default) filter, IAM permissions for views (Logs View Accessor, IAM conditions), logs-based metrics, log exclusions, and sampling. Don't use for cross-project logging or multi-project setups.",
   "category": "通用其他",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/google/skills/blob/main/skills/cloud/cloud-logging-configuration-basics/SKILL.md",
     "path": "skills/cloud/cloud-logging-configuration-basics/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-07T13:32:59.173Z",
-    "stars": 21011,
+    "discovered_at": "2026-10-07T19:37:24.880Z",
+    "stars": 21024,
     "language": "Python",
-    "pushed_at": "2026-10-06T23:16:02Z",
+    "pushed_at": "2026-10-07T17:32:57Z",
     "license": "Apache-2.0"
-  },
-  "summary_zh": "用于配置单项目 Google Cloud 日志，适合管控敏感日志访问、优化存储成本和监控指标，不适用于跨项目场景。"
+  }
 }

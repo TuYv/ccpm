@@ -1,0 +1,25 @@
+{
+  "id": "orchestratorinc-agent-orchestrator-using-ao",
+  "name": "using-ao",
+  "description": "Catalog of the AO Cloud `ao` CLI available inside a cloud sandbox: spawning worker sessions, listing them, messaging them, reporting to the orchestrator, killing them, and claiming pull requests. Use when orchestrating or coordinating AO cloud sessions with the ao CLI.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "OrchestratorInc",
+  "install_path": ".claude/skills/using-ao/SKILL.md",
+  "source": {
+    "repo": "OrchestratorInc/agent-orchestrator",
+    "url": "https://github.com/OrchestratorInc/agent-orchestrator/blob/main/cloud/internal/skillassets/using-ao/SKILL.md",
+    "path": "cloud/internal/skillassets/using-ao/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-07T19:41:19.550Z",
+    "stars": 12870,
+    "language": "Go",
+    "pushed_at": "2026-10-07T19:39:43Z",
+    "license": "Apache-2.0"
+  }
+}

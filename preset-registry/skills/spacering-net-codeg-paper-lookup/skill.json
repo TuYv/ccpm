@@ -1,0 +1,25 @@
+{
+  "id": "spacering-net-codeg-paper-lookup",
+  "name": "paper-lookup",
+  "description": "Search 10 academic literature APIs for papers, preprints, citations, and open-access full text, and return results with reproducible provenance. Covers PubMed, PMC (full text), bioRxiv, medRxiv, arXiv, OpenAlex, Crossref, Semantic Scholar, CORE, Unpaywall. Use when searching for papers, citations, DOI/PMID/arXiv lookups, abstracts, full text, open-access PDFs, preprints, citation graphs, author publications, or any scholarly literature query. Triggers on mentions of any supported database or req",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "spacering-net",
+  "install_path": ".claude/skills/paper-lookup/SKILL.md",
+  "source": {
+    "repo": "spacering-net/codeg",
+    "url": "https://github.com/spacering-net/codeg/blob/main/src-tauri/science/skills/paper-lookup/SKILL.md",
+    "path": "src-tauri/science/skills/paper-lookup/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-07T20:29:37.246Z",
+    "stars": 3843,
+    "language": "Rust",
+    "pushed_at": "2026-10-07T14:51:06Z",
+    "license": "Apache-2.0"
+  }
+}

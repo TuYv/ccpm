@@ -1,0 +1,25 @@
+{
+  "id": "spacering-net-codeg-writing-plans",
+  "name": "writing-plans",
+  "description": "Use when you have a spec or requirements for a multi-step task, before touching code",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "spacering-net",
+  "install_path": ".claude/skills/writing-plans/SKILL.md",
+  "source": {
+    "repo": "spacering-net/codeg",
+    "url": "https://github.com/spacering-net/codeg/blob/main/src-tauri/experts/skills/writing-plans/SKILL.md",
+    "path": "src-tauri/experts/skills/writing-plans/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-07T20:29:36.355Z",
+    "stars": 3843,
+    "language": "Rust",
+    "pushed_at": "2026-10-07T14:51:06Z",
+    "license": "Apache-2.0"
+  }
+}
