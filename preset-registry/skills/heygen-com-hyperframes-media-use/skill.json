@@ -1,7 +1,7 @@
 {
   "id": "heygen-com-hyperframes-media-use",
   "name": "media-use",
-  "description": "Agent Media OS, the single skill for every media need in a HyperFrames project. Resolve BGM, SFX, image, icon, brand logo, voice, color grade, or LUT into a frozen local file or paste-ready block + ledger record (one verb, `resolve`); generate via TTS / music / image models when the catalog misses; produce voiceover, transcription, captions, and background removal through one shared audio engine; operate on media (cut / reframe / transform); and reuse assets across projects. Also use for vague f",
+  "description": "Agent Media OS for a HyperFrames project. Resolve BGM, SFX, image, icon, brand logo, voice, color grade, or LUT into a frozen local file or paste-ready block + ledger record (one verb, `resolve`); generate via TTS / music / image models when the catalog misses; produce voiceover, transcription, captions, and background removal through one shared audio engine; operate on media (cut / reframe / transform); and reuse assets across projects. Also use for vague feedback that real footage looks dark, ",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/heygen-com/hyperframes/blob/main/skills/media-use/SKILL.md",
     "path": "skills/media-use/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-07T06:54:59.934Z",
-    "stars": 58093,
+    "discovered_at": "2026-10-07T14:17:40.020Z",
+    "stars": 58311,
     "language": "TypeScript",
-    "pushed_at": "2026-10-07T06:54:40Z",
+    "pushed_at": "2026-10-07T13:56:00Z",
     "license": "Apache-2.0"
-  },
-  "summary_zh": "面向 HyperFrames 项目的统一媒体处理工具，可检索、生成和编辑素材，并支持转写、字幕与跨项目复用。"
+  }
 }
