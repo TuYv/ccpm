@@ -57,7 +57,7 @@ For a hard problem, or one already tuned several times that still feels off, stu
 
 ## Propose Approaches
 
-Give one recommended approach with rationale. Include effort, risk, and what existing code it builds on. Mention one alternative only if the tradeoff is genuinely close (>40% chance the user would prefer it). Always include one minimal option.
+Give one recommended approach with rationale. Include effort, risk, and what existing code it builds on. Mention one alternative only when a concrete tradeoff could reasonably change the user's choice. Always include one minimal option.
 
 Anything that asks a person to install or configure something (hook, MCP server, editor plugin, config key, pricing tier, per-day limit) is a setup cost paid by every user. Default to the zero-setup form: a built-in command plus a skill, a fixed sensible default, a doc line. Offer the setup-requiring form only after naming why the zero-setup one cannot do the job.
 
@@ -86,7 +86,7 @@ Get approval before proceeding.
 - Every meaningful test path listed: happy path, errors, edge cases.
 - Can this be rolled back without touching data?
 - Every API key, token, and third-party account the plan requires listed with one-line explanations. No credential requests mid-implementation.
-- Every MCP server, external API, and third-party CLI the plan depends on verified as reachable before approval.
+- Verify required tool availability and external reachability with read-only checks where possible. Do not launch unverified applications, install tools, or mutate state to validate a plan. Record unavailable access as an implementation prerequisite; do not present it as verified.
 
 ## Simplicity Gate
 

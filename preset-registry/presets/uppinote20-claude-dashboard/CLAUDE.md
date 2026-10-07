@@ -32,6 +32,7 @@ claude-dashboard/
 │   │   ├── register.tsx     # Mod entry: /claude-dashboard-pane pane + /claude-dashboard-band band
 │   │   ├── stdin-builder.ts # Builds renderer stdin from mod API state
 │   │   ├── ansi.ts          # ANSI parser for mod rendering
+│   │   ├── node-path.ts     # Locate node when the host PATH lacks it (nvm/fnm/volta)
 │   │   └── toggle.ts        # Shared on/off/toggle argument rule for mod commands
 │   ├── types.ts             # TypeScript interfaces
 │   ├── widgets/             # Widget system
