@@ -2,7 +2,7 @@
   "id": "ruvnet-claude-flow-agent-base-template-generator",
   "name": "agent-base-template-generator",
   "description": "Agent skill for base-template-generator - invoke with $agent-base-template-generator",
-  "category": "设计创意",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/ruvnet/claude-flow/blob/main/.agents/skills/agent-base-template-generator/SKILL.md",
     "path": ".agents/skills/agent-base-template-generator/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-07T00:01:57.320Z",
-    "stars": 74005,
+    "discovered_at": "2026-10-07T06:08:15.909Z",
+    "stars": 74019,
     "language": "TypeScript",
-    "pushed_at": "2026-10-06T23:21:29Z",
+    "pushed_at": "2026-10-07T06:02:04Z",
     "license": "MIT"
   },
   "summary_zh": "这是一个AI代理技能插件，能帮你快速生成基础项目模板，省去重复搭建的麻烦，特别适合需要频繁初始化新项目的开发场景。"

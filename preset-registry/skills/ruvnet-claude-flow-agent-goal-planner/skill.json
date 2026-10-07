@@ -2,7 +2,7 @@
   "id": "ruvnet-claude-flow-agent-goal-planner",
   "name": "agent-goal-planner",
   "description": "Agent skill for goal-planner - invoke with $agent-goal-planner",
-  "category": "设计创意",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/ruvnet/claude-flow/blob/main/.agents/skills/agent-goal-planner/SKILL.md",
     "path": ".agents/skills/agent-goal-planner/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-07T00:02:02.051Z",
-    "stars": 74005,
+    "discovered_at": "2026-10-07T06:08:20.654Z",
+    "stars": 74019,
     "language": "TypeScript",
-    "pushed_at": "2026-10-06T23:21:29Z",
+    "pushed_at": "2026-10-07T06:02:04Z",
     "license": "MIT"
   },
   "summary_zh": "这是给AI智能体用的目标规划技能，能帮智能体把复杂大目标拆解成可执行步骤，适合需要AI自主规划和执行任务的场景。"

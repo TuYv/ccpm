@@ -1,0 +1,25 @@
+{
+  "id": "necmttn-ax-tune",
+  "name": "tune",
+  "description": "Retrospective on one coding session that proposes changes to the agent's environment (hooks, checks, steering files, tool access) and files each as an ax proposal. Reads the raw session log through a bundled ledger script, with ax as the second source and the ledger. Triggers when the user says \"environment retro\", \"env retro\", \"what should I change in my setup after this session\", \"retro this session's tooling\", or invokes /ax:tune. Use /ax:retro to triage the proposals it files.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Necmttn",
+  "install_path": ".claude/skills/tune/SKILL.md",
+  "source": {
+    "repo": "Necmttn/ax",
+    "url": "https://github.com/Necmttn/ax/blob/main/skills/tune/SKILL.md",
+    "path": "skills/tune/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-07T07:06:52.362Z",
+    "stars": 116,
+    "language": "TypeScript",
+    "pushed_at": "2026-10-07T03:58:59Z",
+    "license": "AGPL-3.0"
+  }
+}

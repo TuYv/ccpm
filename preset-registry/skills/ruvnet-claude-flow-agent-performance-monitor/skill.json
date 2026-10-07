@@ -2,7 +2,7 @@
   "id": "ruvnet-claude-flow-agent-performance-monitor",
   "name": "agent-performance-monitor",
   "description": "Agent skill for performance-monitor - invoke with $agent-performance-monitor",
-  "category": "设计创意",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/ruvnet/claude-flow/blob/main/.agents/skills/agent-performance-monitor/SKILL.md",
     "path": ".agents/skills/agent-performance-monitor/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-07T00:02:05.998Z",
-    "stars": 74005,
+    "discovered_at": "2026-10-07T06:08:25.287Z",
+    "stars": 74019,
     "language": "TypeScript",
-    "pushed_at": "2026-10-06T23:21:29Z",
+    "pushed_at": "2026-10-07T06:02:04Z",
     "license": "MIT"
   },
   "summary_zh": "这是一个专注性能监控的智能体技能，能帮你快速调用监控功能，随时掌握系统运行状况。"

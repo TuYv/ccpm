@@ -2,7 +2,7 @@
   "id": "slopus-happy-sessions",
   "name": "sessions",
   "description": "Search and ask questions about coding agent session history across Claude Code, Codex, and Cursor. Use when asking what was worked on, what was tried before, how a problem was investigated across sessions, what happened recently, or any question about past agent sessions. Also use when the user references prior sessions, previous attempts, or past investigations — even without saying 'sessions' explicitly.",
-  "category": "测试调试",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/slopus/happy/blob/main/.agents/skills/sessions/SKILL.md",
     "path": ".agents/skills/sessions/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-07T00:55:41.702Z",
-    "stars": 24037,
+    "discovered_at": "2026-10-07T07:02:13.372Z",
+    "stars": 24038,
     "language": "TypeScript",
-    "pushed_at": "2026-10-05T22:09:45Z",
+    "pushed_at": "2026-10-07T06:44:56Z",
     "license": "MIT"
   },
   "summary_zh": "用来检索和回顾 Claude Code、Codex、Cursor 等编码助手的历史会话，方便回忆之前做过什么、试过哪些方案、问题是怎么排查的，适合需要追溯过往工作或避免重复踩坑的场景。"

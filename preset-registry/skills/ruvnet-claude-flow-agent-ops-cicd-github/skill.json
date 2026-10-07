@@ -2,7 +2,7 @@
   "id": "ruvnet-claude-flow-agent-ops-cicd-github",
   "name": "agent-ops-cicd-github",
   "description": "Agent skill for ops-cicd-github - invoke with $agent-ops-cicd-github",
-  "category": "设计创意",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/ruvnet/claude-flow/blob/main/.agents/skills/agent-ops-cicd-github/SKILL.md",
     "path": ".agents/skills/agent-ops-cicd-github/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-07T00:02:04.578Z",
-    "stars": 74005,
+    "discovered_at": "2026-10-07T06:08:23.782Z",
+    "stars": 74019,
     "language": "TypeScript",
-    "pushed_at": "2026-10-06T23:21:29Z",
+    "pushed_at": "2026-10-07T06:02:04Z",
     "license": "MIT"
   },
   "summary_zh": "这是一个专攻 GitHub 运维部署的智能体技能，让你能在 AI 助手中直接调用，轻松搞定代码的自动化构建、测试与发布等任务。"

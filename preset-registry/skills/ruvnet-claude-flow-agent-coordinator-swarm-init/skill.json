@@ -2,7 +2,7 @@
   "id": "ruvnet-claude-flow-agent-coordinator-swarm-init",
   "name": "agent-coordinator-swarm-init",
   "description": "Agent skill for coordinator-swarm-init - invoke with $agent-coordinator-swarm-init",
-  "category": "设计创意",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/ruvnet/claude-flow/blob/main/.agents/skills/agent-coordinator-swarm-init/SKILL.md",
     "path": ".agents/skills/agent-coordinator-swarm-init/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-07T00:01:59.640Z",
-    "stars": 74005,
+    "discovered_at": "2026-10-07T06:08:18.820Z",
+    "stars": 74019,
     "language": "TypeScript",
-    "pushed_at": "2026-10-06T23:21:29Z",
+    "pushed_at": "2026-10-07T06:02:04Z",
     "license": "MIT"
   },
   "summary_zh": "这是一个用来初始化集群协调节点的智能体工具，适合在分布式系统或多智能体协作时，需要快速启动并配置主控节点的场景。"
