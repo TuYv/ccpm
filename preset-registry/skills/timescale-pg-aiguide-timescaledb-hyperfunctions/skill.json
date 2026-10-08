@@ -1,0 +1,25 @@
+{
+  "id": "timescale-pg-aiguide-timescaledb-hyperfunctions",
+  "name": "timescaledb-hyperfunctions",
+  "description": "| Use this skill when writing analytical SQL over time-series data with the TimescaleDB Toolkit (timescaledb_toolkit extension) hyperfunctions: approximate percentiles, statistical summaries, time-weighted averages, counter/gauge rates, uptime/heartbeat tracking, state durations, OHLC candlesticks, approximate distinct counts, top-N, and downsampling.",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "timescale",
+  "install_path": ".claude/skills/timescaledb-hyperfunctions/SKILL.md",
+  "source": {
+    "repo": "timescale/pg-aiguide",
+    "url": "https://github.com/timescale/pg-aiguide/blob/main/skills/timescaledb-hyperfunctions/SKILL.md",
+    "path": "skills/timescaledb-hyperfunctions/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-08T01:18:12.225Z",
+    "stars": 1859,
+    "language": "Python",
+    "pushed_at": "2026-10-07T20:18:02Z",
+    "license": "Apache-2.0"
+  }
+}

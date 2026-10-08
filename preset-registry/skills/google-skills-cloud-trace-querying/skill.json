@@ -1,0 +1,25 @@
+{
+  "id": "google-skills-cloud-trace-querying",
+  "name": "cloud-trace-querying",
+  "description": ">- Query Cloud Trace spans, filter by latency thresholds or error status, correlate distributed traces with Cloud Logging, and diagnose latency bottlenecks across Google Cloud services. Use when investigating slow requests, analyzing trace hierarchies, or resolving latency regressions. Do NOT use for querying non-GCP telemetry or database query optimization outside Cloud Trace.",
+  "category": "通用其他",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/cloud-trace-querying/SKILL.md",
+  "source": {
+    "repo": "google/skills",
+    "url": "https://github.com/google/skills/blob/main/skills/cloud/cloud-trace-querying/SKILL.md",
+    "path": "skills/cloud/cloud-trace-querying/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-08T00:26:42.015Z",
+    "stars": 21031,
+    "language": "Python",
+    "pushed_at": "2026-10-07T21:59:25Z",
+    "license": "Apache-2.0"
+  }
+}
