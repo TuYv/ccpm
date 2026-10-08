@@ -1,7 +1,7 @@
 {
   "id": "timewarpengineering-timewarp-architecture-tw-deploy",
   "name": "tw-deploy",
-  "description": "**TIMEWARP SKILL** — deploy a generated app from its Aspire AppHost: the target matrix (Docker Compose, Kubernetes/Helm, Azure: AKS or Azure Container Apps), `aspire publish` / `aspire deploy` per target, operator-run `dev deploy` / `dev deprovision` (never CI), a local kind recipe, production-safety rules, secrets and parameters, Postgres migrations per target, the ingress topology, and container-runtime neutrality. Invoke before deploying, before adding a publish target, or before touching pub",
+  "description": "**TIMEWARP SKILL** — deploy a generated app from its Aspire AppHost: the target matrix (Docker Compose, Kubernetes/Helm, Azure: AKS or Azure Container Apps), `aspire publish` / `aspire deploy` per target, operator-run `dev deploy` / `dev deprovision` / `dev open` / `dev deploy migrate` (never CI), a local kind recipe, production-safety rules, secrets and parameters, Postgres migrations per target, the ingress topology, and container-runtime neutrality. Invoke before deploying, before adding a pu",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/TimeWarpEngineering/timewarp-architecture/blob/master/skills/tw-deploy/SKILL.md",
     "path": "skills/tw-deploy/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-10-08T13:43:12.005Z",
+    "discovered_at": "2026-10-08T20:16:28.890Z",
     "stars": 54,
     "language": "C#",
-    "pushed_at": "2026-10-08T10:04:03Z",
+    "pushed_at": "2026-10-08T19:06:30Z",
     "license": "Unlicense"
   }
 }
