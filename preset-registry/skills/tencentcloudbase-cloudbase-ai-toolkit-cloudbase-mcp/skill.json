@@ -1,0 +1,25 @@
+{
+  "id": "tencentcloudbase-cloudbase-ai-toolkit-cloudbase-mcp",
+  "name": "cloudbase-mcp",
+  "description": "CloudBase MCP reference. Use when connecting local or remote MCP, calling tools from the shell with mcporter, reading tool schemas, choosing the domestic or international endpoint, setting site, region, cloud mode, or plugin flags, or contributing a fix to the open-source MCP server, skills, or CLI.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "2.35.1",
+  "author": "TencentCloudBase",
+  "install_path": ".claude/skills/cloudbase-mcp/SKILL.md",
+  "source": {
+    "repo": "TencentCloudBase/CloudBase-AI-Toolkit",
+    "url": "https://github.com/TencentCloudBase/CloudBase-AI-Toolkit/blob/main/config/source/skills/cloudbase-mcp/SKILL.md",
+    "path": "config/source/skills/cloudbase-mcp/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-09T16:21:15.138Z",
+    "stars": 1134,
+    "language": "TypeScript",
+    "pushed_at": "2026-10-09T12:03:32Z",
+    "license": "MIT"
+  }
+}

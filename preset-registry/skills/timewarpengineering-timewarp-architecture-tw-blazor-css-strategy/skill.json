@@ -1,7 +1,7 @@
 {
   "id": "timewarpengineering-timewarp-architecture-tw-blazor-css-strategy",
   "name": "tw-blazor-css-strategy",
-  "description": "How to style Blazor + FluentUI components in this repo without Tailwind. The \"isolation-first hybrid\" convention — CSS isolation by default, global design tokens, and two documented exceptions for FluentUI shadow-DOM and light-DOM children. Use when authoring or restyling any .razor component, choosing where CSS lives, or styling a FluentUI component.",
+  "description": "How to style Blazor + FluentUI components in this repo without Tailwind. CSS isolation for every component, global design tokens, a native-root anchor plus targeted ::deep for FluentUI light-DOM children, ::part() for shadow DOM, and a ban on <style> elements in components because prerender HTML-encodes them. Use when authoring or restyling any .razor component, choosing where CSS lives, styling a FluentUI component, or fixing a first-paint style flash.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/TimeWarpEngineering/timewarp-architecture/blob/master/skills/tw-blazor-css-strategy/SKILL.md",
     "path": "skills/tw-blazor-css-strategy/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-10-09T07:38:44.854Z",
+    "discovered_at": "2026-10-09T15:32:36.496Z",
     "stars": 54,
     "language": "C#",
-    "pushed_at": "2026-10-09T07:24:05Z",
+    "pushed_at": "2026-10-09T15:28:31Z",
     "license": "Unlicense"
-  },
-  "summary_zh": "一套面向 Blazor 与 FluentUI 的无 Tailwind 样式规范，适合编写或重构 Razor 组件时确定 CSS 归属并处理组件样式隔离。"
+  }
 }
