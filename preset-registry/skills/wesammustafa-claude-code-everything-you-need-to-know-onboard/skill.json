@@ -1,0 +1,25 @@
+{
+  "id": "wesammustafa-claude-code-everything-you-need-to-know-onboard",
+  "name": "onboard",
+  "description": "Explains this repository's shared Claude Code setup to a new teammate, covering what is committed and shared, what stays personal, and what the team-kit plugin adds. Use when someone asks how the team's Claude Code setup works or what they get by cloning the repository.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "wesammustafa",
+  "install_path": ".claude/skills/onboard/SKILL.md",
+  "source": {
+    "repo": "wesammustafa/Claude-Code-Everything-You-Need-to-Know",
+    "url": "https://github.com/wesammustafa/Claude-Code-Everything-You-Need-to-Know/blob/main/examples/advanced/06-share-your-setup/plugins/team-kit/skills/onboard/SKILL.md",
+    "path": "examples/advanced/06-share-your-setup/plugins/team-kit/skills/onboard/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-09T21:13:31.793Z",
+    "stars": 3141,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-09T18:01:39Z",
+    "license": "MIT"
+  }
+}

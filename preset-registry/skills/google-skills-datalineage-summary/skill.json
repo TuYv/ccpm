@@ -1,7 +1,7 @@
 {
   "id": "google-skills-datalineage-summary",
   "name": "datalineage-summary",
-  "description": ">- Summarizes Google Cloud Data Lineage graphs to help users debug data quality issues and understand data provenance for BQ/GCS. Use when summarizing upstream and downstream data flows, and presenting complex lineage data as an intuitive Markdown report. Don't use for generic BigQuery queries, editing lineage relationships, or downstream deprecation. Don't use for downstream blast-radius impact analysis (use datalineage-bigquery-asset-impact-analysis skill instead).",
+  "description": ">- Summarizes data lineage graphs on Google Cloud to help users debug data quality issues and understand data provenance for BigQuery and Cloud Storage. Use when summarizing upstream and downstream data flows, and presenting complex lineage data as an intuitive Markdown report. Don't use for generic BigQuery queries, editing lineage relationships, or downstream deprecation. Don't use for downstream blast-radius impact analysis (use datalineage-bigquery-asset-impact-analysis skill instead).",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/google/skills/blob/main/skills/cloud/datalineage-summary/SKILL.md",
     "path": "skills/cloud/datalineage-summary/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-09T15:30:31.314Z",
-    "stars": 21079,
+    "discovered_at": "2026-10-09T20:21:00.164Z",
+    "stars": 21082,
     "language": "Python",
-    "pushed_at": "2026-10-09T15:12:15Z",
+    "pushed_at": "2026-10-09T19:32:48Z",
     "license": "Apache-2.0"
-  },
-  "summary_zh": "将 BigQuery 和 GCS 的上下游数据血缘图整理成直观报告，便于追溯数据来源并排查质量问题。"
+  }
 }

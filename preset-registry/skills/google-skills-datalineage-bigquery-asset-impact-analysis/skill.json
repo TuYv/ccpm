@@ -1,7 +1,7 @@
 {
   "id": "google-skills-datalineage-bigquery-asset-impact-analysis",
   "name": "datalineage-bigquery-asset-impact-analysis",
-  "description": ">- Analyzes the downstream impact (blast radius) when a BigQuery table or view is broken, stale, or modified. Identifies all downstream tables, dashboards, and processes that will be affected. Use when: - Performing a blast radius or impact analysis for a BigQuery table or view. - Assessing the consequences of modifying, deleting, or pausing updates to a BigQuery asset. - Identifying downstream dependencies (tables, dashboards, processes) of a BigQuery asset. Don't use for: - General BigQuery qu",
+  "description": ">- Analyzes the downstream impact (blast radius) using data lineage on Google Cloud when a BigQuery table or view is broken, stale, or modified. Identifies all downstream tables, dashboards, and processes that will be affected. Use when: - Performing a blast radius or impact analysis for a BigQuery table or view. - Assessing the consequences of modifying, deleting, or pausing updates to a BigQuery asset. - Identifying downstream dependencies (tables, dashboards, processes) of a BigQuery asset. D",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/google/skills/blob/main/skills/cloud/datalineage-bigquery-asset-impact-analysis/SKILL.md",
     "path": "skills/cloud/datalineage-bigquery-asset-impact-analysis/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-09T15:30:31.126Z",
-    "stars": 21079,
+    "discovered_at": "2026-10-09T20:20:59.974Z",
+    "stars": 21082,
     "language": "Python",
-    "pushed_at": "2026-10-09T15:12:15Z",
+    "pushed_at": "2026-10-09T19:32:48Z",
     "license": "Apache-2.0"
-  },
-  "summary_zh": "用于分析 BigQuery 表或视图变更、故障或数据过期的影响范围，快速定位受波及的下游表、仪表盘和处理流程。"
+  }
 }
