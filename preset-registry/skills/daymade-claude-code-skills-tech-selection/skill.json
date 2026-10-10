@@ -1,7 +1,7 @@
 {
   "id": "daymade-claude-code-skills-tech-selection",
   "name": "tech-selection",
-  "description": ">- Gated checklist for choosing a technology (library, framework, storage, data format, model, build-vs-buy, architecture) or reviewing a proposed one. If favorites-search is installed, MUST run it before external research. Returns surviving candidates with trade-offs, not a single pick. Use for 用哪个 / 选什么框架 / 要不要自建 / A 还是 B / 这个方案行不行, and before the agent commits to one. Not for research reports (use deep-research).",
+  "description": ">- Gated checklist to choose or review a library, framework, storage, data format, model, build-vs-buy or architecture. Run favorites-search before external research when installed. Compare candidates and trade-offs; select within authorization or return user-owned choices. Use for 用哪个 / 选什么框架 / 要不要自建 / A 还是 B / 这个方案行不行 and before committing to one. Research reports → deep-research.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-claude-code/tech-selection/SKILL.md",
     "path": "daymade-claude-code/tech-selection/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-10T13:30:35.002Z",
-    "stars": 1449,
+    "discovered_at": "2026-10-10T18:54:00.397Z",
+    "stars": 1451,
     "language": "Python",
-    "pushed_at": "2026-10-10T11:48:54Z",
+    "pushed_at": "2026-10-10T18:25:55Z",
     "license": "MIT"
   }
 }
