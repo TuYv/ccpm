@@ -1,0 +1,25 @@
+{
+  "id": "spacering-net-codeg-json-render",
+  "name": "json-render",
+  "description": "Show results as interactive UI inside Codeg's chat (cards, tables, tabs, accordions, badges, progress bars, simple forms) by writing a json-render spec code block in your reply. Use when the user invokes this skill or asks to see something as a card, table, dashboard or other visual layout in Codeg.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "spacering-net",
+  "install_path": ".claude/skills/json-render/SKILL.md",
+  "source": {
+    "repo": "spacering-net/codeg",
+    "url": "https://github.com/spacering-net/codeg/blob/main/src-tauri/genui/json-render/SKILL.md",
+    "path": "src-tauri/genui/json-render/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-10T06:54:20.510Z",
+    "stars": 3874,
+    "language": "Rust",
+    "pushed_at": "2026-10-10T04:51:33Z",
+    "license": "Apache-2.0"
+  }
+}

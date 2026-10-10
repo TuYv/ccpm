@@ -1,0 +1,25 @@
+{
+  "id": "affaan-m-ecc-docs-governance",
+  "name": "docs-governance",
+  "description": "Route broad documentation-governance requests to existing ECC skills and run an opt-in, read-only audit of mapped documentation roles, links, ADR indexes, and evidence references. Use when a user asks for documentation governance, project-knowledge organization, documentation integrity, or a deterministic docs audit without naming a narrower skill.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "affaan-m",
+  "install_path": ".claude/skills/docs-governance/SKILL.md",
+  "source": {
+    "repo": "affaan-m/ECC",
+    "url": "https://github.com/affaan-m/ECC/blob/main/.agents/skills/docs-governance/SKILL.md",
+    "path": ".agents/skills/docs-governance/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-10T06:05:26.538Z",
+    "stars": 276083,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-10T01:41:12Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "aaronontheweb-dotnet-skills-sdk-container-publishing",
+  "name": "sdk-container-publishing",
+  "description": "Publish .NET services as container images with the built-in SDK tooling (dotnet publish /t:PublishContainer, Microsoft.NET.Build.Containers) - no Dockerfile required. Covers the MSBuild property surface, base-image inference, self-contained and AOT implications, and CI/CD publishing.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Aaronontheweb",
+  "install_path": ".claude/skills/sdk-container-publishing/SKILL.md",
+  "source": {
+    "repo": "Aaronontheweb/dotnet-skills",
+    "url": "https://github.com/Aaronontheweb/dotnet-skills/blob/master/skills/sdk-container-publishing/SKILL.md",
+    "path": "skills/sdk-container-publishing/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-10-10T06:51:23.635Z",
+    "stars": 1206,
+    "language": "Shell",
+    "pushed_at": "2026-10-10T01:52:37Z",
+    "license": "MIT"
+  }
+}
