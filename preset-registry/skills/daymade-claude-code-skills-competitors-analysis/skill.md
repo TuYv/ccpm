@@ -163,6 +163,12 @@ strongest set.
 
 ## Repository Fact Gathering
 
+Before making mechanism-level claims or our-product gap judgments, read
+[`references/mechanism_evidence.md`](references/mechanism_evidence.md). Follow its
+entry-path, lifecycle and evidence-depth checks while reading the bound source;
+apply its execution boundary before running competitor code. A standalone Profile
+continues without an our-product baseline.
+
 Read files in this order and capture exact sources:
 
 1. Project metadata: `package.json`, `pyproject.toml`, `Cargo.toml`, `go.mod`, or
@@ -185,6 +191,11 @@ its evidence → causal explanation → product choice → counterexample/falsif
 chain and its project-document continuation contract. A capability matrix or a
 list of features to borrow does not satisfy Landscape. A supported conclusion
 that no change is warranted is valid; do not manufacture a new direction.
+Before closing a project-backed comparison, follow its material-opportunity
+disposition contract. When checking an existing JSON decision projection, load
+[`references/opportunity_disposition.md`](references/opportunity_disposition.md)
+and use `scripts/reconcile_opportunities.py`; its structural result does not
+establish semantic coverage. Standalone source profiles need no adoption table.
 
 ## Report Structure
 
