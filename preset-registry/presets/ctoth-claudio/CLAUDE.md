@@ -190,7 +190,11 @@ rm -f claudio
    - Production env vars (full reference in `docs/configuration.md`): `CLAUDIO_VOLUME`,
      `CLAUDIO_ENABLED`, `CLAUDIO_SOUNDPACK`, `CLAUDIO_LOG_LEVEL`,
      `CLAUDIO_AUDIO_BACKEND`, `CLAUDIO_FILE_LOGGING`, `CLAUDIO_SOUND_TRACKING`,
-     `CLAUDIO_SOUND_TRACKING_DB`.
+     `CLAUDIO_SOUND_TRACKING_DB`, `CLAUDIO_FORWARD_URL`, `CLAUDIO_FORWARD_TOKEN`.
+   - `forward.url` makes the hook POST each event to that address, used as
+     given (`internal/cli/forward.go`), instead of playing it; that machine
+     then opens no audio device and no tracking database. What is at the
+     address (a `claudio listen`, a relay) is not claudio's business.
    - Test-only env vars (NEVER set in production): `CLAUDIO_DETACH_DISABLE`,
      `CLAUDIO_TEST_RECOGNIZE_GO_TEST`. Both weaken protections that exist for a
      reason; the CLI test suite is the only legitimate consumer.
@@ -286,6 +290,11 @@ Beyond the default stdin-mode hook executor, claudio ships these subcommands
   - `install` — copy a local pack into the XDG data dir
   - `use` — switch the active soundpack
   - `add` / `update` / `remove` / `status` — manage git-backed soundpacks
+- `claudio listen` — plays the sound for each `sounds.Event` it receives
+  (`internal/listen/`), so the machine that sees an event and the one that
+  plays it can differ. Events arrive as `POST /events` on its HTTP listener, or
+  one JSON event per line on stdin with `--stdin`. Token from `--token-file`
+  or `--token`; neither the token nor the address is in `config.json`
 
 ## Development Practices - CRITICAL
 
