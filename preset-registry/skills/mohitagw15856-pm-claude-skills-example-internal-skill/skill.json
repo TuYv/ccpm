@@ -1,0 +1,25 @@
+{
+  "id": "mohitagw15856-pm-claude-skills-example-internal-skill",
+  "name": "example-internal-skill",
+  "description": "An example private skill — replace me. Use when demonstrating that org-private skills load, override, and stay inside your network. Produces this description in /v1/skills with source:private.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mohitagw15856",
+  "install_path": ".claude/skills/example-internal-skill/SKILL.md",
+  "source": {
+    "repo": "mohitagw15856/pm-claude-skills",
+    "url": "https://github.com/mohitagw15856/pm-claude-skills/blob/main/org/private-skills/example-internal-skill/SKILL.md",
+    "path": "org/private-skills/example-internal-skill/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-11T14:13:58.755Z",
+    "stars": 1437,
+    "language": "HTML",
+    "pushed_at": "2026-10-11T12:46:38Z",
+    "license": "MIT"
+  }
+}

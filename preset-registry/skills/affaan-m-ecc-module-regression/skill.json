@@ -1,0 +1,25 @@
+{
+  "id": "affaan-m-ecc-module-regression",
+  "name": "module-regression",
+  "description": ">- Govern cross-module regression in large repositories with a REGRESSION.md ledger that records each module's downstream consumers and executable acceptance command. After a change, run the changed module and every affected downstream command, and use observed exit codes as regression evidence under the project's delivery policy. Use for module regression, regression ledgers, impact audits, downstream verification, and changes where modifying A may break B.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "affaan-m",
+  "install_path": ".claude/skills/module-regression/SKILL.md",
+  "source": {
+    "repo": "affaan-m/ECC",
+    "url": "https://github.com/affaan-m/ECC/blob/main/.agents/skills/module-regression/SKILL.md",
+    "path": ".agents/skills/module-regression/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-11T14:16:26.060Z",
+    "stars": 276894,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-11T13:57:29Z",
+    "license": "MIT"
+  }
+}

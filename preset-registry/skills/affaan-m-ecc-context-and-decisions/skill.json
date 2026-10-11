@@ -1,0 +1,25 @@
+{
+  "id": "affaan-m-ecc-context-and-decisions",
+  "name": "context-and-decisions",
+  "description": ">- Govern stable domain context with a narrowly scoped CONTEXT.md when needed, and route hard-to-reverse decisions to ECC's existing architecture-decision-records skill. Use when domain terms require repeated explanation, one term has multiple meanings, unclear language causes module-boundary mistakes, or domain semantics must remain separate from architecture decisions.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "affaan-m",
+  "install_path": ".claude/skills/context-and-decisions/SKILL.md",
+  "source": {
+    "repo": "affaan-m/ECC",
+    "url": "https://github.com/affaan-m/ECC/blob/main/.agents/skills/context-and-decisions/SKILL.md",
+    "path": ".agents/skills/context-and-decisions/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-11T14:16:24.020Z",
+    "stars": 276894,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-11T13:57:29Z",
+    "license": "MIT"
+  }
+}

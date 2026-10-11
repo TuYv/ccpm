@@ -1,67 +1,63 @@
 ---
+# machine-translated to es from skills/api-docs-writer/SKILL.md — review: pending. Native fixes welcome via PR.
 name: api-docs-writer
-description: "Write clear, developer-facing API documentation. Use when asked to document an API endpoint, write API reference docs, create a developer guide, or turn a raw spec/Postman collection into documentation. Produces endpoint documentation with descriptions, parameters, request/response examples, and error codes."
-homepage: https://mohitagw15856.github.io/pm-claude-skills/skill/api-docs-writer.html
-metadata:
-  {
-    "openclaw": { "emoji": "⚙️" }
-  }
+description: "Escribe documentación clara de API orientada a desarrolladores. Úsalo cuando necesites documentar un endpoint de API, escribir documentos de referencia de API, crear una guía para desarrolladores o convertir una especificación bruta o colección de Postman en documentación. Produce documentación de endpoints con descripciones, parámetros, ejemplos de solicitud/respuesta y códigos de error."
 ---
 
-# API Docs Writer Skill
+# Skill API Docs Writer
 
-This skill transforms raw API specs, endpoint descriptions, or Postman collections into clean, developer-facing documentation following OpenAPI-adjacent conventions. Output is ready for a developer portal, README, or Notion/Confluence page.
+Este skill transforma especificaciones de API brutas, descripciones de endpoints o colecciones de Postman en documentación limpia orientada a desarrolladores, siguiendo convenciones similares a OpenAPI. El resultado está listo para un portal de desarrolladores, README o página de Notion/Confluence.
 
-## Required Inputs
+## Entradas Requeridas
 
-Ask the user for these if not provided:
-- **API or endpoint details** (raw spec, Postman export, or verbal description)
-- **Auth method** (API key / Bearer token / OAuth 2.0 / None)
-- **Base URL**
-- **API version** (e.g. v1, v2.3, or "unversioned" — affects deprecation notes and versioning headers)
-- **Rate limits** (requests per second/minute per token or IP, if known — or "unknown")
-- **Audience** (internal developers / external partners / public)
-- **Output format** (Markdown for developer portals and READMEs / Plain prose for Confluence or Notion — note: OpenAPI YAML is not produced by this skill)
+Solicita al usuario estos datos si no están disponibles:
+- **Detalles de API o endpoint** (especificación bruta, exportación de Postman o descripción verbal)
+- **Método de autenticación** (clave de API / token Bearer / OAuth 2.0 / Ninguno)
+- **URL base**
+- **Versión de API** (p. ej. v1, v2.3, o "sin versión" — afecta notas de deprecación y headers de versionado)
+- **Límites de velocidad** (solicitudes por segundo/minuto por token o IP, si se conocen — o "desconocido")
+- **Audiencia** (desarrolladores internos / partners externos / público)
+- **Formato de salida** (Markdown para portales de desarrolladores y READMEs / Prosa simple para Confluence o Notion — nota: este skill no produce YAML de OpenAPI)
 
-## Output Format
+## Formato de Salida
 
-For each endpoint, produce the following:
+Para cada endpoint, produce lo siguiente:
 
 ---
 
-## `[METHOD] /path/to/endpoint`
+## `[MÉTODO] /ruta/al/endpoint`
 
-**Summary:** [One line — what this endpoint does]
+**Resumen:** [Una línea — qué hace este endpoint]
 
-**Description:** [2–4 sentences. When to use this endpoint. What it returns. Any important behaviour to know (pagination, rate limits, async processing, etc.)]
+**Descripción:** [2–4 oraciones. Cuándo usar este endpoint. Qué devuelve. Comportamiento importante a conocer (paginación, límites de velocidad, procesamiento asíncrono, etc.)]
 
-**Authentication:** [Required / Optional — method]
+**Autenticación:** [Requerida / Opcional — método]
 
 ---
 
-### Request
+### Solicitud
 
 **Headers:**
 
-| Header | Required | Description |
+| Header | Requerido | Descripción |
 |---|---|---|
-| `Authorization` | Yes | `Bearer <token>` |
-| `Content-Type` | Yes | `application/json` |
+| `Authorization` | Sí | `Bearer <token>` |
+| `Content-Type` | Sí | `application/json` |
 
-**Path Parameters:**
+**Parámetros de Ruta:**
 
-| Parameter | Type | Required | Description |
+| Parámetro | Tipo | Requerido | Descripción |
 |---|---|---|---|
-| `id` | string | Yes | Unique identifier for the resource |
+| `id` | string | Sí | Identificador único del recurso |
 
-**Query Parameters:**
+**Parámetros de Consulta:**
 
-| Parameter | Type | Required | Default | Description |
+| Parámetro | Tipo | Requerido | Predeterminado | Descripción |
 |---|---|---|---|---|
-| `limit` | integer | No | 20 | Max results per page (1–100) |
-| `cursor` | string | No | — | Pagination cursor from previous response |
+| `limit` | integer | No | 20 | Máximo de resultados por página (1–100) |
+| `cursor` | string | No | — | Cursor de paginación de respuesta anterior |
 
-**Request Body:**
+**Cuerpo de la Solicitud:**
 
 ```json
 {
@@ -70,16 +66,16 @@ For each endpoint, produce the following:
 }
 ```
 
-| Field | Type | Required | Description |
+| Campo | Tipo | Requerido | Descripción |
 |---|---|---|---|
-| `field_name` | string | Yes | [Plain description of what this field does] |
-| `another_field` | integer | No | [Description. Include valid range or enum values if applicable] |
+| `field_name` | string | Sí | [Descripción clara de qué hace este campo] |
+| `another_field` | integer | No | [Descripción. Incluye rango válido o valores enum si aplica] |
 
 ---
 
-### Response
+### Respuesta
 
-**Success Response: `200 OK`**
+**Respuesta de Éxito: `200 OK`**
 
 ```json
 {
@@ -89,29 +85,29 @@ For each endpoint, produce the following:
 }
 ```
 
-| Field | Type | Description |
+| Campo | Tipo | Descripción |
 |---|---|---|
-| `id` | string | Unique identifier for the created/retrieved resource |
-| `status` | string | Current status. Enum: `active`, `inactive`, `pending` |
-| `created_at` | ISO 8601 string | Timestamp of creation in UTC |
+| `id` | string | Identificador único del recurso creado/recuperado |
+| `status` | string | Estado actual. Enum: `active`, `inactive`, `pending` |
+| `created_at` | string ISO 8601 | Timestamp de creación en UTC |
 
 ---
 
-### Error Codes
+### Códigos de Error
 
-| Status Code | Error Code | Description | How to Resolve |
+| Código de Estado | Código de Error | Descripción | Cómo Resolver |
 |---|---|---|---|
-| `400` | `INVALID_REQUEST` | Request body is malformed or missing required fields | Check request body against schema above |
-| `401` | `UNAUTHORIZED` | Missing or invalid authentication token | Verify your API key or refresh your token |
-| `404` | `NOT_FOUND` | The requested resource does not exist | Check the ID in the path parameter |
-| `429` | `RATE_LIMITED` | Too many requests | Back off and retry after `Retry-After` header value |
-| `500` | `INTERNAL_ERROR` | Unexpected server error | Retry with exponential backoff; contact support if persists |
+| `400` | `INVALID_REQUEST` | El cuerpo de solicitud está malformado o falta campos requeridos | Verifica el cuerpo de solicitud contra el schema anterior |
+| `401` | `UNAUTHORIZED` | Token de autenticación faltante o inválido | Verifica tu clave de API o refresca tu token |
+| `404` | `NOT_FOUND` | El recurso solicitado no existe | Verifica el ID en el parámetro de ruta |
+| `429` | `RATE_LIMITED` | Demasiadas solicitudes | Retrocede e intenta de nuevo después del valor del header `Retry-After` |
+| `500` | `INTERNAL_ERROR` | Error inesperado del servidor | Reinténtalo con backoff exponencial; contacta soporte si persiste |
 
 ---
 
-### Code Examples
+### Ejemplos de Código
 
-Produce examples in at least 2 languages relevant to the audience (default: cURL + Python):
+Produce ejemplos en al menos 2 lenguajes relevantes para la audiencia (predeterminado: cURL + Python):
 
 **cURL:**
 ```bash
@@ -135,45 +131,27 @@ data = response.json()
 
 ---
 
-## Scoring Rubric (0–40)
+## Controles de Calidad
 
-Score any output of this skill before handing it over; 32+ is ship-quality.
+- [ ] Cada parámetro está documentado (tipo, requerido/opcional, descripción)
+- [ ] Los campos de respuesta están completamente documentados con tipos
+- [ ] Se listan todos los códigos de error relevantes con orientación de resolución
+- [ ] Los códigos de error cubren como mínimo: 400 (solicitud incorrecta), 401/403 (autenticación), 404 (no encontrado), 429 (límite de velocidad), 500 (error del servidor) — o indica explícitamente cuáles no aplican a este endpoint
+- [ ] Los ejemplos de código usan la URL base actual y un token placeholder realista — ningún ejemplo referencia variables indefinidas o "YOUR_ENDPOINT" fuera del snippet
+- [ ] El método de autenticación se indica claramente arriba
+- [ ] Los valores enum se listan donde aplica
+- [ ] Se documenta la paginación si el endpoint es un endpoint de lista
 
-| Dimension | 0 | 5 | 10 |
-|---|---|---|---|
-| **Parameter completeness** | Fields listed without types or required/optional flags | Tables complete, but descriptions say what a field *is*, not what it *does*; enums and ranges missing | Every field typed and constrained (enums, ranges, formats), described by behaviour and consequence |
-| **Error-path coverage** | Happy path only — no error table | Standard 400/401/404/429/500 rows present but with no resolution guidance | Full standard set plus endpoint-specific codes, each with what the developer should *do*, including unsafe-retry cases |
-| **Example runnability** | Pseudo-code, undefined variables, or "YOUR_ENDPOINT" placeholders | Examples exist but aren't copy-paste-runnable or use only one language | ≥2 languages, real base URL, obviously-fake placeholder credentials, runnable as pasted |
-| **Behavioural candour** | Async behaviour, pagination, idempotency, and legacy quirks omitted | Quirks mentioned in prose but absent from examples and error rows | Gotchas documented with the exact requests/responses they produce, including awkward legacy behaviour |
+## Anti-Patrones
 
-## Quality Checks
+- [ ] No documentes solo el camino feliz — cada endpoint debe tener códigos de error para al menos 400, 401/403, 404, 429 y 500
+- [ ] No uses valores placeholder como "YOUR_ENDPOINT" o "INSERT_TOKEN" en ejemplos de código — usa placeholders realistas anclados a la URL base actual
+- [ ] No omitas valores enum para campos con un conjunto fijo de valores aceptados — los enums no documentados causan bugs de integración
+- [ ] No omitas documentación de paginación en endpoints de lista — los desarrolladores que se la pierdan construirán integraciones que silenciosamente pierdan datos
+- [ ] No describa qué es un campo sin describir qué hace — "el ID" no es documentación; "el identificador único usado para recuperar o actualizar este recurso" lo es
 
-- [ ] Every parameter is documented (type, required/optional, description)
-- [ ] Response fields are fully documented with types
-- [ ] All relevant error codes are listed with resolution guidance
-- [ ] Error codes cover at minimum: 400 (bad request), 401/403 (auth), 404 (not found), 429 (rate limited), 500 (server error) — or explicitly note which don't apply to this endpoint
-- [ ] Code examples use the actual base URL and a realistic placeholder token — no examples reference undefined variables or "YOUR_ENDPOINT" outside the snippet
-- [ ] Auth method is clearly stated at the top
-- [ ] Enum values are listed where applicable
-- [ ] Pagination documented if the endpoint is a list endpoint
-
-## Anti-Patterns
-
-- [ ] Do not document only the happy path — every endpoint must have error codes for at least 400, 401/403, 404, 429, and 500
-- [ ] Do not use placeholder values like "YOUR_ENDPOINT" or "INSERT_TOKEN" in code examples — use realistic-looking placeholders anchored to the actual base URL
-- [ ] Do not skip enum values for fields with a fixed set of accepted values — undocumented enums cause integration bugs
-- [ ] Do not omit pagination documentation on list endpoints — developers who miss this will build integrations that silently miss data
-- [ ] Do not describe what a field "is" without describing what it "does" — "the ID" is not documentation; "the unique identifier used to retrieve or update this resource" is
-
-## Usage Examples
-- "Document this API endpoint: [paste spec or description]"
-- "Turn this Postman collection into developer docs"
-- "Write API reference docs for [endpoint]"
-- "Write a developer guide for our [product] API"
-
-## Example Trigger Phrases
-
-- "Document an API endpoint."
-- "Write API reference docs."
-- "Create a developer guide."
-- "Turn a raw spec/Postman collection into documentation."
+## Ejemplos de Uso
+- "Documenta este endpoint de API: [pega especificación o descripción]"
+- "Convierte esta colección de Postman en documentos para desarrolladores"
+- "Escribe documentación de referencia de API para [endpoint]"
+- "Escribe una guía para desarrolladores para nuestra API de [producto]"

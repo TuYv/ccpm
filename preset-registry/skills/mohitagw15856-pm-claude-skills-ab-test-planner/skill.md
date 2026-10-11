@@ -1,55 +1,51 @@
 ---
+# machine-translated to es from skills/ab-test-planner/SKILL.md — review: pending. Native fixes welcome via PR.
 name: ab-test-planner
-description: "Design statistically rigorous A/B tests for product features, UI changes, onboarding flows, and pricing experiments. Use when asked to set up an experiment, design an A/B test, calculate sample size, or interpret test results. Produces a complete test plan with hypothesis, variant definitions, sample size, duration estimate, guardrail metrics, and a results interpretation guide."
-homepage: https://mohitagw15856.github.io/pm-claude-skills/skill/ab-test-planner.html
-metadata:
-  {
-    "openclaw": { "emoji": "🚚" }
-  }
+description: "Diseña tests A/B estadísticamente rigurosos para features de producto, cambios de UI, flujos de onboarding y experimentos de precios. Úsalo cuando necesites configurar un experimento, diseñar un A/B test, calcular tamaño de muestra o interpretar resultados. Produce un plan de test completo con hipótesis, definición de variantes, tamaño de muestra, estimación de duración, métricas de guardrail y una guía de interpretación de resultados."
 ---
 
-# A/B Test Planner Skill
+# Skill A/B Test Planner
 
-Design experiments that produce trustworthy results — not just directional signals. Every test output includes hypothesis, success metrics, sample size, duration, and a results interpretation guide.
+Diseña experimentos que producen resultados confiables — no solo señales direccionales. Cada output del test incluye hipótesis, métricas de éxito, tamaño de muestra, duración y una guía de interpretación de resultados.
 
-## Required Inputs
+## Inputs Requeridos
 
-Ask the user for these if not provided:
-- **What is being tested** (feature, UI change, copy, pricing, onboarding step)
-- **Hypothesis** (or ask to help formulate one)
-- **Primary metric** (conversion rate, click-through, completion rate, etc.)
-- **Baseline rate** and **minimum detectable effect** (MDE)
-- **Daily eligible users** (to calculate duration)
+Pregunta al usuario por estos datos si no están proporcionados:
+- **Qué se está testando** (feature, cambio de UI, copy, precios, paso de onboarding)
+- **Hipótesis** (o ayuda a formularla)
+- **Métrica primaria** (conversion rate, click-through, completion rate, etc.)
+- **Baseline rate** y **efecto mínimo detectable (MDE)**
+- **Usuarios elegibles diarios** (para calcular duración)
 
-## Experiment Design Checklist
+## Checklist de Diseño de Experimento
 
-Before running any test, confirm:
-- [ ] Clear hypothesis with predicted direction
-- [ ] Single primary metric (plus up to 2 guardrail metrics)
-- [ ] Minimum detectable effect (MDE) defined
-- [ ] Sample size calculated
-- [ ] Test duration estimated
-- [ ] Segment isolated (no overlap with other running tests)
-- [ ] Rollback plan defined
+Antes de ejecutar cualquier test, confirma:
+- [ ] Hipótesis clara con dirección predicha
+- [ ] Métrica primaria única (más hasta 2 métricas guardrail)
+- [ ] Efecto mínimo detectable (MDE) definido
+- [ ] Tamaño de muestra calculado
+- [ ] Duración del test estimada
+- [ ] Segmento aislado (sin solapamiento con otros tests en ejecución)
+- [ ] Plan de rollback definido
 
-## Hypothesis Template
+## Plantilla de Hipótesis
 
-> "We believe that [change] will cause [primary metric] to [increase/decrease] by [X%] for [user segment], because [rationale based on data or insight]."
+> "Creemos que [cambio] causará que [métrica primaria] se [incremente/disminuya] en un [X%] para [segmento de usuarios], porque [razonamiento basado en datos o insight]."
 
-Never run a test without a directional hypothesis. "Let's just see what happens" is not a hypothesis.
+Nunca ejecutes un test sin una hipótesis direccional. "Veamos qué pasa" no es una hipótesis.
 
-## Sample Size Calculator Logic
+## Lógica del Calculador de Tamaño de Muestra
 
-Use this formula (provide the output, not the formula, to the user):
+Usa esta fórmula (proporciona el output, no la fórmula, al usuario):
 
-- **Baseline conversion rate:** Current rate of primary metric
-- **MDE:** Smallest change worth detecting (recommend 10–20% relative lift for most features)
-- **Statistical power:** 80% (standard)
+- **Baseline conversion rate:** Tasa actual de la métrica primaria
+- **MDE:** Cambio más pequeño que vale la pena detectar (recomendamos 10–20% de lift relativo para la mayoría de features)
+- **Statistical power:** 80% (estándar)
 - **Significance level:** 95% (p < 0.05)
 
-For common scenarios, provide pre-calculated estimates:
+Para escenarios comunes, proporciona estimaciones pre-calculadas:
 
-| Baseline Rate | MDE (Relative) | Required Sample per Variant |
+| Baseline Rate | MDE (Relativo) | Muestra Requerida por Variante |
 |---|---|---|
 | 5% | 20% | ~19,000 |
 | 10% | 15% | ~14,000 |
@@ -57,88 +53,70 @@ For common scenarios, provide pre-calculated estimates:
 | 40% | 10% | ~9,500 |
 | 60% | 5% | ~42,000 |
 
-Always warn: "These are estimates. Use a tool like Evan Miller's calculator or Statsig for precision."
+Siempre advierte: "Estas son estimaciones. Usa una herramienta como el calculador de Evan Miller o Statsig para precisión."
 
-## Test Duration Guidance
+## Orientación sobre Duración del Test
 
-Minimum: 2 full weeks (to capture weekly seasonality)
-Maximum: 4 weeks (novelty effect distorts results beyond this)
+Mínimo: 2 semanas completas (para capturar estacionalidad semanal)
+Máximo: 4 semanas (el efecto novedad distorsiona resultados más allá de esto)
 
-`Duration = Required sample ÷ (Daily traffic × % exposed)`
+`Duración = Muestra requerida ÷ (Tráfico diario × % expuesto)`
 
-Flag if traffic is too low to reach significance in under 8 weeks — recommend a different approach (e.g., holdout test, qualitative research).
+Alerta si el tráfico es muy bajo para llegar a significancia en menos de 8 semanas — recomienda un enfoque diferente (ej., holdout test, investigación cualitativa).
 
-## Output Format
+## Formato de Output
 
-### A/B Test Plan — [Test Name] — [Date]
+### Plan A/B Test — [Nombre del Test] — [Fecha]
 
-**Hypothesis:**
-> [Filled hypothesis template]
+**Hipótesis:**
+> [Plantilla de hipótesis completada]
 
-**Variants:**
-- Control (A): [Current experience]
-- Treatment (B): [Changed experience — be specific]
+**Variantes:**
+- Control (A): [Experiencia actual]
+- Tratamiento (B): [Experiencia modificada — sé específico]
 
-**Primary Metric:** [Metric name + how measured]
-**Guardrail Metrics:** [Metrics that must not degrade]
+**Métrica Primaria:** [Nombre de métrica + cómo se mide]
+**Métricas Guardrail:** [Métricas que no deben degradarse]
 
-**Target Segment:** [Who sees the test — % of traffic, user type]
-**Traffic Split:** [50/50 recommended unless ramp-up needed]
+**Segmento Objetivo:** [Quién ve el test — % de tráfico, tipo de usuario]
+**Split de Tráfico:** [50/50 recomendado a menos que se necesite ramp-up]
 
-**Sample Size Required:** ~[N] users per variant
-**Estimated Duration:** [X] weeks (based on [Y] daily eligible users)
-**Significance Threshold:** 95% confidence, 80% power
+**Tamaño de Muestra Requerido:** ~[N] usuarios por variante
+**Duración Estimada:** [X] semanas (basado en [Y] usuarios elegibles diarios)
+**Umbral de Significancia:** 95% de confianza, 80% de power
 
-**Exclusions:** [Any user segments to exclude and why]
+**Exclusiones:** [Segmentos de usuarios a excluir y por qué]
 
-**Rollback Trigger:** If [guardrail metric] degrades by [X%], stop the test immediately.
+**Trigger de Rollback:** Si [métrica guardrail] se degrada en [X%], detén el test inmediatamente.
 
-**Results Interpretation Guide:**
-- ✅ Ship if: Treatment shows [X%]+ lift on primary metric at 95% confidence AND guardrail metrics are stable
-- 🔄 Iterate if: Direction is positive but not significant — consider extending or redesigning
-- ❌ Reject if: No lift or negative direction at significance
-- ⚠️ Inconclusive: Do not ship. Do not call it a win.
+**Guía de Interpretación de Resultados:**
+- ✅ Deploy si: Tratamiento muestra [X%]+ de lift en métrica primaria con 95% de confianza Y métricas guardrail son estables
+- 🔄 Itera si: Dirección es positiva pero no significativa — considera extender o rediseñar
+- ❌ Rechaza si: Sin lift o dirección negativa con significancia
+- ⚠️ Inconcluyente: No hagas deploy. No lo llames una victoria.
 
 ---
 
-## Guidelines
+## Pautas
 
-- Always recommend against peeking at results before the test reaches planned sample size — explain p-hacking risk
-- If user wants to test multiple variants, explain the multiple comparisons problem and recommend a Bonferroni correction or a Bayesian approach
-- If traffic is very low (<1,000 users/day), recommend qualitative alternatives: moderated testing, 5-second tests, or user interviews
-- Never approve a test with no guardrail metrics — always protect revenue, retention, or core engagement
+- Siempre recomienda contra mirar resultados antes de que el test alcance el tamaño de muestra planeado — explica el riesgo de p-hacking
+- Si el usuario quiere testear múltiples variantes, explica el problema de comparaciones múltiples y recomienda una corrección de Bonferroni o un enfoque Bayesiano
+- Si el tráfico es muy bajo (<1,000 usuarios/día), recomienda alternativas cualitativas: testing moderado, tests de 5 segundos o entrevistas de usuario
+- Nunca apruebes un test sin métricas guardrail — siempre protege revenue, retention o engagement core
 
-## Anti-Patterns
+## Anti-Patrones
 
-- [ ] Do not run a test without a directional hypothesis — "let's see what happens" produces uninterpretable results
-- [ ] Do not declare a winner before reaching the pre-planned sample size — peeking at results inflates false positive rates
-- [ ] Do not test multiple independent changes in a single variant — you won't know which change caused the result
-- [ ] Do not use engagement metrics (clicks, time-on-page) as the primary metric when the goal is revenue or retention — proxy metrics mislead
-- [ ] Do not ignore guardrail metrics — a conversion lift that causes a support ticket spike is not a win
-
-## Scoring Rubric (0–40)
-
-Score any output of this skill before handing it over; 32+ is ship-quality.
-
-| Dimension | 0 | 5 | 10 |
-|---|---|---|---|
-| Statistical rigour | No sample size, or a number with no stated baseline/MDE behind it | Sample size present but MDE is guessed or copied from the lookup table without checking the actual baseline; power/significance unstated | Sample size derived from the stated baseline and MDE at 80% power / 95% confidence, duration checked against real daily traffic and the 2–4 week window, and the low-traffic escape hatch invoked if it doesn't fit |
-| Hypothesis discipline | "Let's see what happens" — no direction, no magnitude, or multiple changes bundled into one variant | Directional hypothesis but missing magnitude, segment, or the evidence-based *because*; variant purity not confirmed | Full template filled (change, metric, direction, magnitude, segment, rationale citing data), and the treatment isolates exactly one change with excluded ideas named as follow-up tests |
-| Guardrails & rollback | No guardrail metrics, or a rollback line with no threshold | Guardrails named but denominators/definitions ambiguous; rollback trigger vague ("if things look bad") | 1–2 guardrails protecting revenue or core engagement with pre-agreed definitions, concrete rollback thresholds, and the peeking-vs-harm-monitoring distinction handled explicitly |
-| Decision readiness | No interpretation guide; results will be argued about after the fact | Ship/iterate/reject listed but thresholds fuzzy; inconclusive outcome missing or treated as a soft win | All four outcomes (ship / iterate / reject / inconclusive) mapped to pre-committed thresholds, including what an inconclusive result costs and what each outcome changes next |
+- [ ] No ejecutes un test sin una hipótesis direccional — "veamos qué pasa" produce resultados no interpretables
+- [ ] No declares un ganador antes de alcanzar el tamaño de muestra pre-planeado — mirar resultados inflama las tasas de falso positivo
+- [ ] No testees múltiples cambios independientes en una sola variante — no sabrás cuál causó el resultado
+- [ ] No uses métricas de engagement (clicks, time-on-page) como métrica primaria cuando el objetivo es revenue o retention — las métricas proxy engañan
+- [ ] No ignores métricas guardrail — un lift de conversión que causa un spike de tickets de soporte no es una victoria
 
 ## Quality Checks
 
-- [ ] Hypothesis is directional (predicts a specific direction and magnitude, not "let's see")
-- [ ] Primary metric is singular (guardrail metrics are secondary)
-- [ ] Sample size is calculated from actual MDE and baseline (not guessed)
-- [ ] Test duration accounts for weekly seasonality (minimum 2 weeks)
-- [ ] Guardrail metrics are defined (at least one to protect revenue or core engagement)
-- [ ] Rollback trigger is specified with a concrete threshold
-
-## Example Trigger Phrases
-
-- "Set up an experiment."
-- "Design an A/B test."
-- "Calculate sample size."
-- "Interpret test results."
+- [ ] Hipótesis es direccional (predice una dirección y magnitud específicas, no "veamos")
+- [ ] Métrica primaria es singular (métricas guardrail son secundarias)
+- [ ] Tamaño de muestra se calcula a partir del MDE y baseline real (no adivinado)
+- [ ] Duración del test cuenta para estacionalidad semanal (mínimo 2 semanas)
+- [ ] Métricas guardrail están definidas (al menos una para proteger revenue o engagement core)
+- [ ] Trigger de rollback está especificado con un threshold concreto

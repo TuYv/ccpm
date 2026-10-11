@@ -1,7 +1,7 @@
 {
   "id": "affaan-m-ecc-backend-patterns",
   "name": "backend-patterns",
-  "description": "> Backend architecture patterns, API design, database optimization, and server-side best practices for Node.js, Express, and Next.js API routes.",
+  "description": "Backend architecture patterns, API design, database optimization, and server-side best practices for Node.js, Express, and Next.js API routes. Use when building or reviewing Node.js, Express, or Next.js API routes and their data access.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -13,14 +13,13 @@
   "install_path": ".claude/skills/backend-patterns/SKILL.md",
   "source": {
     "repo": "affaan-m/ECC",
-    "url": "https://github.com/affaan-m/ECC/blob/main/.kiro/skills/backend-patterns/SKILL.md",
-    "path": ".kiro/skills/backend-patterns/SKILL.md",
+    "url": "https://github.com/affaan-m/ECC/blob/main/.agents/skills/backend-patterns/SKILL.md",
+    "path": ".agents/skills/backend-patterns/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-11T07:27:31.907Z",
-    "stars": 276678,
+    "discovered_at": "2026-10-11T14:16:22.949Z",
+    "stars": 276894,
     "language": "JavaScript",
-    "pushed_at": "2026-10-11T07:17:29Z",
+    "pushed_at": "2026-10-11T13:57:29Z",
     "license": "MIT"
-  },
-  "summary_zh": "一套面向 Node.js、Express 和 Next.js API 路由的后端实践指南，帮助开发者优化架构、接口设计与数据库性能。"
+  }
 }

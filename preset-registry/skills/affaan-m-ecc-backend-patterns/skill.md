@@ -1,9 +1,7 @@
 ---
 name: backend-patterns
-description: >
-  Backend architecture patterns, API design, database optimization, and server-side best practices for Node.js, Express, and Next.js API routes.
-metadata:
-  origin: ECC
+description: Backend architecture patterns, API design, database optimization, and server-side best practices for Node.js, Express, and Next.js API routes. Use when building or reviewing Node.js, Express, or Next.js API routes and their data access.
+license: MIT
 ---
 
 # Backend Development Patterns
@@ -191,7 +189,7 @@ CREATE OR REPLACE FUNCTION create_market_with_position(
 )
 RETURNS jsonb
 LANGUAGE plpgsql
-AS $
+AS $$
 BEGIN
   -- Start transaction automatically
   INSERT INTO markets VALUES (market_data);
@@ -202,7 +200,7 @@ EXCEPTION
     -- Rollback happens automatically
     RETURN jsonb_build_object('success', false, 'error', SQLERRM);
 END;
-$;
+$$;
 ```
 
 ## Caching Strategies

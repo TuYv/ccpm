@@ -1,0 +1,25 @@
+{
+  "id": "affaan-m-ecc-test-collaboration",
+  "name": "test-collaboration",
+  "description": "Inventory and govern a project's test assets. Connect requirements, business rules, risks, bugs, and cross-boundary contracts to stable TEST-IDs and executable evidence in the repository's existing test registry or TESTS.md. Use for test inventory, test gap analysis, unit/integration/contract/E2E/smoke classification, bug-to-test regression protection, consumer/provider contract testing, test-necessity review, and pre-delivery evidence review.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "affaan-m",
+  "install_path": ".claude/skills/test-collaboration/SKILL.md",
+  "source": {
+    "repo": "affaan-m/ECC",
+    "url": "https://github.com/affaan-m/ECC/blob/main/.agents/skills/test-collaboration/SKILL.md",
+    "path": ".agents/skills/test-collaboration/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-11T14:16:26.912Z",
+    "stars": 276894,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-11T13:57:29Z",
+    "license": "MIT"
+  }
+}

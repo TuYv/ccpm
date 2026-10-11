@@ -1,0 +1,25 @@
+{
+  "id": "mohitagw15856-pm-claude-skills-skill-security-auditor",
+  "name": "skill-security-auditor",
+  "description": "Audita un SKILL.md de Claude/Agent (o cualquier skill de IA / instrucción del sistema) para verificar su seguridad antes de instalarlo o fusionarlo. Úsalo cuando te pidan revisar un skill por seguridad, verificar una inyección de prompt, validar un skill de la comunidad, o evaluar si un archivo de instrucciones es seguro ejecutar. Produce un informe de hallazgos con clasificación de riesgo (inyección de prompt, exfiltración de datos, ejecución de código, secretos, texto oculto) con severidad, ev",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mohitagw15856",
+  "install_path": ".claude/skills/skill-security-auditor/SKILL.md",
+  "source": {
+    "repo": "mohitagw15856/pm-claude-skills",
+    "url": "https://github.com/mohitagw15856/pm-claude-skills/blob/main/i18n/es/skills/skill-security-auditor/SKILL.md",
+    "path": "i18n/es/skills/skill-security-auditor/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-11T14:13:57.637Z",
+    "stars": 1437,
+    "language": "HTML",
+    "pushed_at": "2026-10-11T12:46:38Z",
+    "license": "MIT"
+  }
+}
