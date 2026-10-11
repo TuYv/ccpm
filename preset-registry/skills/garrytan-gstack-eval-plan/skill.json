@@ -1,0 +1,25 @@
+{
+  "id": "garrytan-gstack-eval-plan",
+  "name": "eval-plan",
+  "description": "| Preregister a paid eval (bars, arms, decoys, stop rules), dry-run it at zero cost, then run a three-item priced pilot whose spend table gates approval. (gstack)",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "garrytan",
+  "install_path": ".claude/skills/eval-plan/SKILL.md",
+  "source": {
+    "repo": "garrytan/gstack",
+    "url": "https://github.com/garrytan/gstack/blob/main/eval-plan/SKILL.md",
+    "path": "eval-plan/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-11T07:26:06.658Z",
+    "stars": 135876,
+    "language": "TypeScript",
+    "pushed_at": "2026-10-11T06:06:14Z",
+    "license": "MIT"
+  }
+}
