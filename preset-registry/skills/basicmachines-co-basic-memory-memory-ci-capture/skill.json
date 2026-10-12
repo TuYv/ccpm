@@ -1,7 +1,7 @@
 {
   "id": "basicmachines-co-basic-memory-memory-ci-capture",
   "name": "memory-ci-capture",
-  "description": "Synthesize GitHub delivery context into a concise Basic Memory project update. Use in CI after `bm ci collect` prepares a ProjectUpdateContext; return only structured AgentSynthesis JSON for `bm ci publish`.",
+  "description": "Internal CI skill: synthesize GitHub delivery context into a Basic Memory project update. Use after `bm ci collect`; return only AgentSynthesis JSON for `bm ci publish`.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/basicmachines-co/basic-memory/blob/main/skills/memory-ci-capture/SKILL.md",
     "path": "skills/memory-ci-capture/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-11T23:05:53.691Z",
-    "stars": 4142,
+    "discovered_at": "2026-10-12T02:38:46.392Z",
+    "stars": 4143,
     "language": "Python",
-    "pushed_at": "2026-10-11T23:03:49Z",
+    "pushed_at": "2026-10-12T00:40:43Z",
     "license": "AGPL-3.0"
-  },
-  "summary_zh": "在 CI 流程中将 GitHub 的提交、PR 等交付信息浓缩成结构化的项目进展更新，输出标准 JSON 供后续发布环节使用，适合需要自动汇总团队动态的场景。"
+  }
 }

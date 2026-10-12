@@ -1,7 +1,7 @@
 {
   "id": "basicmachines-co-basic-memory-memory-continue",
   "name": "memory-continue",
-  "description": "Resume prior work by rebuilding context from the Basic Memory knowledge graph — pick up where you left off using memory:// URLs, recent activity, and search. Use when starting a session or when the user says 'continue with...', 'back to...', or 'where were we?'",
+  "description": "Resume prior work by rebuilding context from the Basic Memory graph via memory:// URLs, recent activity, and search. Use at session start or on 'continue with...', 'back to...', 'where were we?'",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/basicmachines-co/basic-memory/blob/main/skills/memory-continue/SKILL.md",
     "path": "skills/memory-continue/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-11T23:05:53.920Z",
-    "stars": 4142,
+    "discovered_at": "2026-10-12T02:38:46.711Z",
+    "stars": 4143,
     "language": "Python",
-    "pushed_at": "2026-10-11T23:03:49Z",
+    "pushed_at": "2026-10-12T00:40:43Z",
     "license": "AGPL-3.0"
-  },
-  "summary_zh": "在新对话开始或用户说「接着上次」「回到刚才」时，自动从知识图谱里捞回相关笔记和最近动态，帮你无缝衔接之前的工作，不用重新交代背景。"
+  }
 }

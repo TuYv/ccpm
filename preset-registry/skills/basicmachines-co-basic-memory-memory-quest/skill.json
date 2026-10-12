@@ -1,0 +1,25 @@
+{
+  "id": "basicmachines-co-basic-memory-memory-quest",
+  "name": "memory-quest",
+  "description": "Finish Memory Quest Mission 8: confirm this assistant reaches Basic Memory Cloud and starts from Basic Memory, then, with approval, save a Memory Master note with the user's verification code.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "basicmachines-co",
+  "install_path": ".claude/skills/memory-quest/SKILL.md",
+  "source": {
+    "repo": "basicmachines-co/basic-memory",
+    "url": "https://github.com/basicmachines-co/basic-memory/blob/main/skills/memory-quest/SKILL.md",
+    "path": "skills/memory-quest/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-12T02:38:48.149Z",
+    "stars": 4143,
+    "language": "Python",
+    "pushed_at": "2026-10-12T00:40:43Z",
+    "license": "AGPL-3.0"
+  }
+}

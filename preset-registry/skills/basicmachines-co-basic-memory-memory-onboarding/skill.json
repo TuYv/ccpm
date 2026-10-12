@@ -1,7 +1,7 @@
 {
   "id": "basicmachines-co-basic-memory-memory-onboarding",
   "name": "memory-onboarding",
-  "description": "Guide someone new to Basic Memory through designing and building a personal knowledge system: interview them, propose a structure, build it with schemas and instruction notes, teach them to use it, and set up their assistant to load it every session. Use when a user is new to Basic Memory or wants help getting started, asks how to structure a project (folders, schemas, conventions), has an empty or messy project that needs structure, or wants their assistant to remember context between sessions.",
+  "description": "Help a new user design a Basic Memory knowledge system and set up their assistant to load it. Use when someone is getting started, has an empty or messy project, or wants context kept across sessions.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/basicmachines-co/basic-memory/blob/main/skills/memory-onboarding/SKILL.md",
     "path": "skills/memory-onboarding/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-11T23:05:54.920Z",
-    "stars": 4142,
+    "discovered_at": "2026-10-12T02:38:47.999Z",
+    "stars": 4143,
     "language": "Python",
-    "pushed_at": "2026-10-11T23:03:49Z",
+    "pushed_at": "2026-10-12T00:40:43Z",
     "license": "AGPL-3.0"
   }
 }

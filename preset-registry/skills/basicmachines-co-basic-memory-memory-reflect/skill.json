@@ -1,7 +1,7 @@
 {
   "id": "basicmachines-co-basic-memory-memory-reflect",
   "name": "memory-reflect",
-  "description": "Sleep-time memory reflection: review recent conversations and daily notes, extract insights, and consolidate into long-term memory. Use when triggered by cron, heartbeat, or explicit request to reflect on recent activity. Runs as background processing to improve memory quality over time.",
+  "description": "Sleep-time memory reflection: review recent conversations and daily notes, then consolidate insights into long-term memory. Use on a cron or heartbeat trigger, or when asked to reflect on recent work.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/basicmachines-co/basic-memory/blob/main/skills/memory-reflect/SKILL.md",
     "path": "skills/memory-reflect/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-11T23:05:55.029Z",
-    "stars": 4142,
+    "discovered_at": "2026-10-12T02:38:48.342Z",
+    "stars": 4143,
     "language": "Python",
-    "pushed_at": "2026-10-11T23:03:49Z",
+    "pushed_at": "2026-10-12T00:40:43Z",
     "license": "AGPL-3.0"
-  },
-  "summary_zh": "在空闲或定时触发时回顾最近的对话与日记，自动提炼要点并沉淀为长期记忆，让 AI 的记忆质量随时间不断变好，适合需要持续学习的智能体场景。"
+  }
 }

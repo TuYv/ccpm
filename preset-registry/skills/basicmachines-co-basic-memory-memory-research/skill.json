@@ -1,7 +1,7 @@
 {
   "id": "basicmachines-co-basic-memory-memory-research",
   "name": "memory-research",
-  "description": "Research an external subject using web search, synthesize findings into a structured Basic Memory entity. Use when asked to research a company, person, technology, or topic — or when a bare name or URL is provided that implies a research request.",
+  "description": "Research an external subject on the web and synthesize it into a structured Basic Memory note. Use when asked to research a company, person, technology, or topic, or given a bare name or URL.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/basicmachines-co/basic-memory/blob/main/skills/memory-research/SKILL.md",
     "path": "skills/memory-research/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-11T23:05:55.157Z",
-    "stars": 4142,
+    "discovered_at": "2026-10-12T02:38:48.507Z",
+    "stars": 4143,
     "language": "Python",
-    "pushed_at": "2026-10-11T23:03:49Z",
+    "pushed_at": "2026-10-12T00:40:43Z",
     "license": "AGPL-3.0"
-  },
-  "summary_zh": "通过网络搜索调研公司、人物、技术等外部话题，并把结果整理成结构化的知识条目，适合需要快速收集资料并沉淀成笔记的场景。"
+  }
 }

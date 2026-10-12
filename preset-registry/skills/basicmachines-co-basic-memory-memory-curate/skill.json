@@ -1,7 +1,7 @@
 {
   "id": "basicmachines-co-basic-memory-memory-curate",
   "name": "memory-curate",
-  "description": "Curate the Basic Memory knowledge graph: find orphan notes and suggest links, propose typed relations, merge duplicates, audit tags and folders, and build hub notes. Use to organize, connect, and improve a knowledge base as notes accumulate.",
+  "description": "Curate the Basic Memory graph: link orphan notes, propose typed relations, merge duplicates, audit tags and folders, build hub notes. Use to organize and connect a knowledge base as notes accumulate.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/basicmachines-co/basic-memory/blob/main/skills/memory-curate/SKILL.md",
     "path": "skills/memory-curate/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-11T23:05:54.042Z",
-    "stars": 4142,
+    "discovered_at": "2026-10-12T02:38:46.869Z",
+    "stars": 4143,
     "language": "Python",
-    "pushed_at": "2026-10-11T23:03:49Z",
+    "pushed_at": "2026-10-12T00:40:43Z",
     "license": "AGPL-3.0"
-  },
-  "summary_zh": "用来整理知识库的小工具，能找出孤立笔记、推荐关联和分类标签、合并重复内容、生成中枢索引页，适合笔记越积越多、结构开始混乱时拿来梳理脉络。"
+  }
 }

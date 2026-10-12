@@ -1,7 +1,7 @@
 {
   "id": "basicmachines-co-basic-memory-memory-lifecycle",
   "name": "memory-lifecycle",
-  "description": "Manage entity status transitions in Basic Memory: archive completed work, move notes between status folders, update frontmatter, and handle edge cases. Use when marking items complete, archiving old entities, or managing any folder-based status workflow.",
+  "description": "Manage note status transitions in Basic Memory: archive completed work, move notes between status folders, update frontmatter. Use when marking items complete or archiving entities.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/basicmachines-co/basic-memory/blob/main/skills/memory-lifecycle/SKILL.md",
     "path": "skills/memory-lifecycle/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-11T23:05:54.423Z",
-    "stars": 4142,
+    "discovered_at": "2026-10-12T02:38:47.336Z",
+    "stars": 4143,
     "language": "Python",
-    "pushed_at": "2026-10-11T23:03:49Z",
+    "pushed_at": "2026-10-12T00:40:43Z",
     "license": "AGPL-3.0"
-  },
-  "summary_zh": "用于在 Basic Memory 中管理笔记的状态流转，自动归档已完成内容、在状态文件夹间移动笔记并更新 frontmatter，适合需要按文件夹组织任务进度的场景。"
+  }
 }

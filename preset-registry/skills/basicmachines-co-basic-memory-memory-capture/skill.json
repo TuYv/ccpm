@@ -1,7 +1,7 @@
 {
   "id": "basicmachines-co-basic-memory-memory-capture",
   "name": "memory-capture",
-  "description": "Capture the current state of a working thread or conversation into a single coherent Basic Memory note — synthesize where it landed, don't append a log. On re-capture, rewrite the same note in place instead of duplicating. Use mid-thread or end-of-thread when decisions, insights, or context are worth preserving.",
+  "description": "Capture a working thread's current state into one coherent Basic Memory note; on re-capture, rewrite it in place. Use mid- or end-of-thread when decisions, insights, or context are worth keeping.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/basicmachines-co/basic-memory/blob/main/skills/memory-capture/SKILL.md",
     "path": "skills/memory-capture/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-11T23:05:53.588Z",
-    "stars": 4142,
+    "discovered_at": "2026-10-12T02:38:46.230Z",
+    "stars": 4143,
     "language": "Python",
-    "pushed_at": "2026-10-11T23:03:49Z",
+    "pushed_at": "2026-10-12T00:40:43Z",
     "license": "AGPL-3.0"
-  },
-  "summary_zh": "把当前对话或工作线程的核心进展浓缩成一篇连贯的笔记，而不是流水账式追加；再次记录时会原地覆盖更新，避免重复堆积，适合在讨论中或结束时沉淀关键决策和洞见。"
+  }
 }

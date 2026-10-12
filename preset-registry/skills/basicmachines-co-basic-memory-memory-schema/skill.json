@@ -1,7 +1,7 @@
 {
   "id": "basicmachines-co-basic-memory-memory-schema",
   "name": "memory-schema",
-  "description": "Schema lifecycle management for Basic Memory: discover unschemaed notes, infer schemas, create and edit schema definitions, validate notes, and detect drift. Use when working with structured note types (Task, Person, Meeting, etc.) to maintain consistency across the knowledge graph.",
+  "description": "Manage Basic Memory schemas: find unschemaed notes, infer and edit schemas, validate notes, detect drift. Use when structured note types (Task, Person, Meeting) need consistency across the graph.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/basicmachines-co/basic-memory/blob/main/skills/memory-schema/SKILL.md",
     "path": "skills/memory-schema/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-11T23:05:55.263Z",
-    "stars": 4142,
+    "discovered_at": "2026-10-12T02:38:48.685Z",
+    "stars": 4143,
     "language": "Python",
-    "pushed_at": "2026-10-11T23:03:49Z",
+    "pushed_at": "2026-10-12T00:40:43Z",
     "license": "AGPL-3.0"
-  },
-  "summary_zh": "为结构化笔记提供模式管理工具，能自动发现未定义模式的笔记、推断并生成模式、校验内容并检测偏移，适合用任务、人物、会议等类型维护知识图谱一致性的场景。"
+  }
 }
