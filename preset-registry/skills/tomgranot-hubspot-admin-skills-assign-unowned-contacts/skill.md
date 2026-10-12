@@ -19,18 +19,20 @@ Marketing contacts without an owner are a blind spot. They receive campaigns but
 ## Prerequisites
 
 - Phase 1 hygiene and earlier Phase 3 enrichment processes completed
-- A HubSpot private app access token (`HUBSPOT_ACCESS_TOKEN` in `.env`) with contact read/write and owners read scopes
+- A HubSpot service key (`HUBSPOT_ACCESS_TOKEN` in `.env`; an existing legacy private app token also works) with contact read/write and owners read scopes
 - Python 3.10+ with [`uv`](https://github.com/astral-sh/uv)
 - Access to Contacts with permission to bulk edit owner assignments
 - **Approval from team leads before bulk assignment.** This is a business decision, not just a technical one. Get sign-off on the assignment strategy before proceeding.
 
 ## Scripts
 
+Script paths are relative to this skill's directory. Run them from your project directory so `.env`, `data/`, and `reports/` resolve there: prefix each path with wherever this skill is installed (`skills/assign-unowned-contacts/` in a clone of the repo).
+
 | Stage | Script | Run with |
 |-------|--------|----------|
-| Before | [`scripts/before.py`](./scripts/before.py) | `uv run skills/assign-unowned-contacts/scripts/before.py` |
-| Execute | [`scripts/execute.py`](./scripts/execute.py) | `uv run skills/assign-unowned-contacts/scripts/execute.py` |
-| After | [`scripts/after.py`](./scripts/after.py) | `uv run skills/assign-unowned-contacts/scripts/after.py` |
+| Before | [`scripts/before.py`](./scripts/before.py) | `uv run scripts/before.py` |
+| Execute | [`scripts/execute.py`](./scripts/execute.py) | `uv run scripts/execute.py` |
+| After | [`scripts/after.py`](./scripts/after.py) | `uv run scripts/after.py` |
 
 `before.py` counts unowned marketing contacts and lists available owners. `execute.py` batch-assigns them to `HUBSPOT_TARGET_OWNER_ID` (set in `.env`; safety threshold 50,000 — high because owner assignment is fully reversible). `after.py` verifies the count dropped to zero.
 
@@ -67,7 +69,7 @@ Before executing, collect the following information from the user:
 
 ### Script Approach
 
-Run `uv run skills/assign-unowned-contacts/scripts/before.py`. The core query:
+Run `uv run scripts/before.py`. The core query:
 
 ```python
 resp = requests.post(f"{BASE}/crm/v3/objects/contacts/search", headers=HEADERS, json={
@@ -118,7 +120,7 @@ Choose one of these approaches (requires team lead approval):
 
 ### Bulk Assignment via API
 
-For the catch-all strategy, this is fully scripted: set `HUBSPOT_TARGET_OWNER_ID` in `.env` (run `before.py` to see available owner IDs) and run `uv run skills/assign-unowned-contacts/scripts/execute.py`.
+For the catch-all strategy, this is fully scripted: set `HUBSPOT_TARGET_OWNER_ID` in `.env` (run `before.py` to see available owner IDs) and run `uv run scripts/execute.py`.
 
 ```python
 # What execute.py does:
@@ -136,11 +138,11 @@ For the catch-all strategy, this is fully scripted: set `HUBSPOT_TARGET_OWNER_ID
 - Get owner IDs from the Owners API: `GET /crm/v3/owners?limit=100`
 - To find a specific owner by email: iterate through owners and match on `email`
 - Batch update accepts up to 100 records per call
-- Rate limit: 100 requests per 10 seconds
+- Rate limit: 100 requests per 10 seconds per app on Free/Starter, 190 on Professional/Enterprise. The Search API has its own cap of 5 requests per second.
 
 ## After
 
-Wait 5-10 minutes for HubSpot to finish processing, then verify: `uv run skills/assign-unowned-contacts/scripts/after.py` (re-runs the before-state query and compares against the baseline; the count should be 0).
+Wait 5-10 minutes for HubSpot to finish processing, then verify: `uv run scripts/after.py` (re-runs the before-state query and compares against the baseline; the count should be 0).
 
 **Verification checklist:**
 

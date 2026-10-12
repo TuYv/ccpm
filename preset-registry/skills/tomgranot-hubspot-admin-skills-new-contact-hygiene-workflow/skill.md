@@ -14,7 +14,9 @@ Build a workflow that automatically enriches every new contact at creation time.
 
 ## What Is and Isn't Scriptable
 
-The v4 Automation API (stable) creates workflows programmatically, including "is unknown" enrollment conditions via `LIST_BASED` filter criteria. Two pieces of this particular design still belong in the UI:
+**API status:** HubSpot documents the Workflows API as **beta** and subject to change. Its current reference is the date-based beta path `/automation/v4/2027-03-beta/flows`; this skill's scripts still call the unversioned `/automation/v4/flows` path, which v4's end of support on March 30, 2027 also covers. Creating workflows disabled and reviewing them in the UI is what makes a beta API acceptable here. If a script's create call starts failing, the manual UI build below is the fallback.
+
+The v4 Automation API creates workflows programmatically, including "is unknown" enrollment conditions via `LIST_BASED` filter criteria. Two pieces of this particular design still belong in the UI:
 
 1. **Copy from associated object** actions (copy company name/industry from the associated company) have no documented v4 action fields. Add them in the UI during review — or build the action once in the UI, `GET /automation/v4/flows/{flowId}`, and extend the script with the exact field shapes your portal returns.
 2. **The notification branch** (alert admin when a contact still has no company after the delay) depends on portal-specific recipients.
@@ -24,18 +26,20 @@ So the split is: the script creates the default-lifecycle-stage workflow via API
 ## Prerequisites
 
 - HubSpot Marketing Professional or Enterprise plan
-- A HubSpot private app access token (`HUBSPOT_ACCESS_TOKEN` in `.env`) with the `automation` scope (for the API path)
+- A HubSpot service key (`HUBSPOT_ACCESS_TOKEN` in `.env`; an existing legacy private app token also works) with the `automation` scope (for the API path)
 - Python 3.10+ with [`uv`](https://github.com/astral-sh/uv)
 - Workflow creation permissions in HubSpot
 - Company association enrichment completed (run `/enrich-company-name` and `/enrich-industry` first for existing contacts)
 
 ## Scripts
 
+Script paths are relative to this skill's directory. Run them from your project directory so `.env`, `data/`, and `reports/` resolve there: prefix each path with wherever this skill is installed (`skills/new-contact-hygiene-workflow/` in a clone of the repo).
+
 | Stage | Script | Run with |
 |-------|--------|----------|
-| Before | [`scripts/before.py`](./scripts/before.py) | `uv run skills/new-contact-hygiene-workflow/scripts/before.py` |
-| Execute | [`scripts/execute.py`](./scripts/execute.py) | `uv run skills/new-contact-hygiene-workflow/scripts/execute.py` |
-| After | [`scripts/after.py`](./scripts/after.py) | `uv run skills/new-contact-hygiene-workflow/scripts/after.py` |
+| Before | [`scripts/before.py`](./scripts/before.py) | `uv run scripts/before.py` |
+| Execute | [`scripts/execute.py`](./scripts/execute.py) | `uv run scripts/execute.py` |
+| After | [`scripts/after.py`](./scripts/after.py) | `uv run scripts/after.py` |
 
 `execute.py` creates one workflow — "HYGIENE: Default Lifecycle Stage for New Contacts" (enrollment: create date known AND lifecycle stage unknown; action: set stage to Lead; re-enrollment on) — **disabled, for review before enabling**. Extend it in the UI with the copy actions and notification branch per the design below.
 
@@ -101,11 +105,11 @@ TRIGGER: Contact create date is known
 ### Stage 2: Before
 
 1. Confirm company enrichment processes have run for existing data.
-2. Run `uv run skills/new-contact-hygiene-workflow/scripts/before.py` to inventory workflows and check name collisions.
+2. Run `uv run scripts/before.py` to inventory workflows and check name collisions.
 
 ### Stage 3: Execute
 
-**Option A:** run `uv run skills/new-contact-hygiene-workflow/scripts/execute.py`, then open the created workflow in the UI and continue from step 3 below (copy actions, delay, branch). **Option B:** open HubSpot > Automation > Workflows > Create workflow, select "Contact-based", start from scratch, and follow all steps.
+**Option A:** run `uv run scripts/execute.py`, then open the created workflow in the UI and continue from step 3 below (copy actions, delay, branch). **Option B:** open HubSpot > Automation > Workflows > Create workflow, select "Contact-based", start from scratch, and follow all steps.
 
 1. **Set enrollment trigger:**
    - Property: "Create date" > "is known"
@@ -141,7 +145,7 @@ TRIGGER: Contact create date is known
 
 ### Stage 4: After
 
-0. Run `uv run skills/new-contact-hygiene-workflow/scripts/after.py` (API path) to confirm the workflow exists and report enabled state.
+0. Run `uv run scripts/after.py` (API path) to confirm the workflow exists and report enabled state.
 1. Create a test contact manually. Confirm:
    - Lifecycle stage is set to "Lead"
    - Company name copied from associated company

@@ -14,7 +14,7 @@ A structured quarterly audit that catches data drift before it becomes a crisis.
 
 ## Prerequisites
 
-- A HubSpot private app access token (`HUBSPOT_ACCESS_TOKEN` in `.env`)
+- A HubSpot service key (`HUBSPOT_ACCESS_TOKEN` in `.env`; an existing legacy private app token also works)
 - Python 3.10+ with [`uv`](https://github.com/astral-sh/uv)
 - Previous quarter's report (for trend comparison) — optional on first run
 
@@ -55,7 +55,7 @@ A structured quarterly audit that catches data drift before it becomes a crisis.
 ### Stage 1: Before — Gather Baselines
 
 1. Locate the previous quarter's report (if it exists) in `reports/`.
-2. Run `/hubspot-audit` to get fresh numbers across all dimensions.
+2. Run `/hubspot-audit` to get fresh numbers across all dimensions (or `/hubspot-marketing-audit` / `/hubspot-sales-audit` if each team reviews its own side).
 
 ### Stage 2: Execute — Deep Review
 

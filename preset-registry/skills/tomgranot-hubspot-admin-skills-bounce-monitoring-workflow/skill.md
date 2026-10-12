@@ -23,24 +23,28 @@ Protect your email sender reputation with automated bounce detection and suppres
 ## Prerequisites
 
 - HubSpot Marketing Professional or Enterprise plan
-- A HubSpot private app access token (`HUBSPOT_ACCESS_TOKEN` in `.env`) with the `automation` scope (for the API path)
+- A HubSpot service key (`HUBSPOT_ACCESS_TOKEN` in `.env`; an existing legacy private app token also works) with the `automation` scope (for the API path)
 - Python 3.10+ with [`uv`](https://github.com/astral-sh/uv)
 - A custom contact property for review flagging (default: `email_health_flag` — the execute script creates it if missing)
 - Admin email or Slack channel for hard bounce alerts
 
 ## Scripts
 
+Script paths are relative to this skill's directory. Run them from your project directory so `.env`, `data/`, and `reports/` resolve there: prefix each path with wherever this skill is installed (`skills/bounce-monitoring-workflow/` in a clone of the repo).
+
 | Stage | Script | Run with |
 |-------|--------|----------|
-| Before | [`scripts/before.py`](./scripts/before.py) | `uv run skills/bounce-monitoring-workflow/scripts/before.py` |
-| Execute | [`scripts/execute.py`](./scripts/execute.py) | `uv run skills/bounce-monitoring-workflow/scripts/execute.py` |
-| After | [`scripts/after.py`](./scripts/after.py) | `uv run skills/bounce-monitoring-workflow/scripts/after.py` |
+| Before | [`scripts/before.py`](./scripts/before.py) | `uv run scripts/before.py` |
+| Execute | [`scripts/execute.py`](./scripts/execute.py) | `uv run scripts/execute.py` |
+| After | [`scripts/after.py`](./scripts/after.py) | `uv run scripts/after.py` |
 
 `before.py` inventories existing workflows and checks name collisions. `execute.py` creates the `email_health_flag` property (if missing) and three bounce workflows via `POST /automation/v4/flows` — **always disabled, for review before enabling**. `after.py` verifies and reports enabled state.
 
 ## Building the Workflow: Two Options
 
 ### Option A: Create via the v4 Automation API (primary)
+
+**API status:** HubSpot documents the Workflows API as **beta** and subject to change. Its current reference is the date-based beta path `/automation/v4/2027-03-beta/flows`; this skill's scripts still call the unversioned `/automation/v4/flows` path, which v4's end of support on March 30, 2027 also covers. Creating workflows disabled and reviewing them in the UI is what makes a beta API acceptable here. If a script's create call starts failing, the manual UI build below is the fallback.
 
 Instead of one workflow with three nested branches, the script decomposes the design into **three linear workflows** — the same coverage, cleanly expressible via the API and independently tunable:
 
@@ -51,8 +55,8 @@ Instead of one workflow with three nested branches, the script decomposes the de
 Configure `SUPPRESSION_THRESHOLD` and `REVIEW_THRESHOLD` in `execute.py`, then:
 
 ```bash
-uv run skills/bounce-monitoring-workflow/scripts/before.py
-uv run skills/bounce-monitoring-workflow/scripts/execute.py
+uv run scripts/before.py
+uv run scripts/execute.py
 ```
 
 **Safety model:** all three workflows are created with `isEnabled: false`. During UI review: add the internal-notification actions (hard bounce alert, review alert — notification recipients are portal-specific), add "Set marketing contact status" manually if the script reported it had to omit it, then turn the workflows on.
@@ -72,13 +76,13 @@ Follow the step-by-step instructions in Stage 3 below — the original single-wo
 
 ### Stage 2: Before
 
-1. Run `uv run skills/bounce-monitoring-workflow/scripts/before.py` to inventory workflows and check name collisions.
+1. Run `uv run scripts/before.py` to inventory workflows and check name collisions.
 2. Identify your current bounce baseline — run a quick search for contacts where `hs_email_bounce` > 0 to understand the starting volume.
 3. If building manually, create your bounce review property (checkbox or dropdown) — the API path creates it automatically.
 
 ### Stage 3: Execute
 
-**Option A:** run `uv run skills/bounce-monitoring-workflow/scripts/execute.py`, then complete the UI review steps listed above.
+**Option A:** run `uv run scripts/execute.py`, then complete the UI review steps listed above.
 
 **Option B — manual UI build:** build a single contact-based workflow with branching logic.
 
@@ -113,7 +117,7 @@ Follow the step-by-step instructions in Stage 3 below — the original single-wo
 
 ### Stage 4: After
 
-1. Run `uv run skills/bounce-monitoring-workflow/scripts/after.py` (API path) to confirm the workflows exist and report enabled state.
+1. Run `uv run scripts/after.py` (API path) to confirm the workflows exist and report enabled state.
 2. Check workflow history after the first week of email sends.
 3. Review the flagged contacts list weekly — decide for each contact:
    - **Delete** if the email is clearly invalid (typo domain, defunct company)

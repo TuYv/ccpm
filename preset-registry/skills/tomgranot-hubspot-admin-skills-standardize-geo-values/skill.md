@@ -19,7 +19,7 @@ Inconsistent geo values break geographic segmentation. A list filtering for "Uni
 ## Prerequisites
 
 - Phase 1 hygiene processes completed (invalid/deleted contacts removed first)
-- A HubSpot private app access token (`HUBSPOT_ACCESS_TOKEN` in `.env`) with contact and company read/write scopes
+- A HubSpot service key (`HUBSPOT_ACCESS_TOKEN` in `.env`; an existing legacy private app token also works) with contact and company read/write scopes
 - Python 3.10+ with [`uv`](https://github.com/astral-sh/uv)
 - Access to Contacts and Companies views with bulk edit permissions
 - **Key constraint:** If your CRM integrates with another system (e.g., Salesforce, marketing automation), agree on the standard format (full names vs. ISO codes) with that system's admin BEFORE standardizing. Mismatched formats between synced systems will cause ongoing data conflicts.
@@ -42,11 +42,13 @@ Before executing, collect the following information from the user:
 
 ## Scripts
 
+Script paths are relative to this skill's directory. Run them from your project directory so `.env`, `data/`, and `reports/` resolve there: prefix each path with wherever this skill is installed (`skills/standardize-geo-values/` in a clone of the repo).
+
 | Stage | Script | Run with |
 |-------|--------|----------|
-| Before | [`scripts/before.py`](./scripts/before.py) | `uv run skills/standardize-geo-values/scripts/before.py` |
-| Execute | [`scripts/execute.py`](./scripts/execute.py) | `uv run skills/standardize-geo-values/scripts/execute.py` |
-| After | [`scripts/after.py`](./scripts/after.py) | `uv run skills/standardize-geo-values/scripts/after.py` |
+| Before | [`scripts/before.py`](./scripts/before.py) | `uv run scripts/before.py` |
+| Execute | [`scripts/execute.py`](./scripts/execute.py) | `uv run scripts/execute.py` |
+| After | [`scripts/after.py`](./scripts/after.py) | `uv run scripts/after.py` |
 
 `before.py` counts contacts and companies per variant value. `execute.py` applies the variant-to-standard mapping via batch update (review and extend its `COUNTRY_MAPPING`/`STATE_MAPPING` tables first). `after.py` verifies all variants return zero.
 
@@ -62,7 +64,7 @@ Before executing, collect the following information from the user:
 
 ### API Audit Script
 
-Run `uv run skills/standardize-geo-values/scripts/before.py`. The core query pattern:
+Run `uv run scripts/before.py`. The core query pattern:
 
 ```python
 variants = ["US", "USA", "U.S.", "U.S.A.", "America"]
@@ -93,7 +95,7 @@ Record all variant counts as your baseline.
 
 ### Method 1: API Batch Update (Recommended for Large Volumes)
 
-This is scripted: `uv run skills/standardize-geo-values/scripts/execute.py`. The mapping tables it applies:
+This is scripted: `uv run scripts/execute.py`. The mapping tables it applies:
 
 ```python
 COUNTRY_MAPPING = {
@@ -145,7 +147,7 @@ STATE_MAPPING = {
 **API notes:**
 - Search API caps at 10,000 results per query. Unlikely to hit this for geo variants, but segment if needed.
 - Batch update accepts up to 100 records per call.
-- Rate limit: 100 requests per 10 seconds.
+- Rate limit: 100 requests per 10 seconds per app on Free/Starter, 190 on Professional/Enterprise. The Search API has its own cap of 5 requests per second.
 
 ### Method 2: Manual Bulk Edit in HubSpot UI
 
@@ -175,7 +177,7 @@ After standardizing existing data:
 
 ## After
 
-Re-run the variant checks: `uv run skills/standardize-geo-values/scripts/after.py`. Every variant should return 0 for both contacts and companies.
+Re-run the variant checks: `uv run scripts/after.py`. Every variant should return 0 for both contacts and companies.
 
 **Verification checklist:**
 

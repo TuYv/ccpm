@@ -23,18 +23,20 @@ This preserves deliverability scores while maximizing the recoverable audience.
 ## Prerequisites
 
 - HubSpot Marketing Professional or Enterprise plan
-- A HubSpot private app access token (`HUBSPOT_ACCESS_TOKEN` in `.env`) with the `automation` scope (for the API path)
+- A HubSpot service key (`HUBSPOT_ACCESS_TOKEN` in `.env`; an existing legacy private app token also works) with the `automation` scope (for the API path)
 - Python 3.10+ with [`uv`](https://github.com/astral-sh/uv)
 - A re-engagement email campaign or sequence ready to send
 - A custom dropdown property to track suppression status (default: `engagement_flag` — the execute script creates it if missing)
 
 ## Scripts
 
+Script paths are relative to this skill's directory. Run them from your project directory so `.env`, `data/`, and `reports/` resolve there: prefix each path with wherever this skill is installed (`skills/engagement-suppression-workflow/` in a clone of the repo).
+
 | Stage | Script | Run with |
 |-------|--------|----------|
-| Before | [`scripts/before.py`](./scripts/before.py) | `uv run skills/engagement-suppression-workflow/scripts/before.py` |
-| Execute | [`scripts/execute.py`](./scripts/execute.py) | `uv run skills/engagement-suppression-workflow/scripts/execute.py` |
-| After | [`scripts/after.py`](./scripts/after.py) | `uv run skills/engagement-suppression-workflow/scripts/after.py` |
+| Before | [`scripts/before.py`](./scripts/before.py) | `uv run scripts/before.py` |
+| Execute | [`scripts/execute.py`](./scripts/execute.py) | `uv run scripts/execute.py` |
+| After | [`scripts/after.py`](./scripts/after.py) | `uv run scripts/after.py` |
 
 `before.py` inventories existing workflows and checks for name collisions. `execute.py` creates the `engagement_flag` property (if missing) and both sunset workflows via `POST /automation/v4/flows` — **always disabled, for review in the UI before enabling**. `after.py` verifies they exist and reports enabled state.
 
@@ -84,7 +86,9 @@ TRIGGER: Last engagement date > [sunset window] ago
 
 ### Option A: Create via the v4 Automation API (primary)
 
-The stable v4 Automation API supports creating workflows programmatically. Instead of one workflow with an if/then branch, the script decomposes the design into **two linear workflows** — which the API expresses cleanly and which are easier to reason about:
+**API status:** HubSpot documents the Workflows API as **beta** and subject to change. Its current reference is the date-based beta path `/automation/v4/2027-03-beta/flows`; this skill's scripts still call the unversioned `/automation/v4/flows` path, which v4's end of support on March 30, 2027 also covers. Creating workflows disabled and reviewing them in the UI is what makes a beta API acceptable here. If a script's create call starts failing, the manual UI build below is the fallback.
+
+The v4 Automation API supports creating workflows programmatically. Instead of one workflow with an if/then branch, the script decomposes the design into **two linear workflows** — which the API expresses cleanly and which are easier to reason about:
 
 1. **Tier 1 — Flag for Re-engagement**: enrollment = last open older than the sunset window (or never) AND email known AND not globally unsubscribed AND flag unknown. Action: set `engagement_flag` = "re-engagement sent".
 2. **Tier 2 — Suppress Non-responders**: enrollment = flag = "re-engagement sent" AND still no open/click after sunset + re-engagement windows. Actions: set flag = "suppressed", set marketing contact status to non-marketing.
@@ -92,8 +96,8 @@ The stable v4 Automation API supports creating workflows programmatically. Inste
 Run the scripts (configure `SUNSET_DAYS`, `REENGAGE_DAYS`, `FLAG_PROPERTY` in `execute.py` first):
 
 ```bash
-uv run skills/engagement-suppression-workflow/scripts/before.py
-uv run skills/engagement-suppression-workflow/scripts/execute.py
+uv run scripts/before.py
+uv run scripts/execute.py
 ```
 
 **Safety model:** both workflows are created with `isEnabled: false`. Review them in Automation > Workflows, then:
@@ -119,13 +123,13 @@ Follow the step-by-step instructions in Stage 3 below. This builds the original 
 
 ### Stage 2: Before
 
-Run `uv run skills/engagement-suppression-workflow/scripts/before.py` — it inventories all workflows, flags name collisions with the two planned SUNSET workflows, and writes the inventory CSV baseline.
+Run `uv run scripts/before.py` — it inventories all workflows, flags name collisions with the two planned SUNSET workflows, and writes the inventory CSV baseline.
 
 If building manually, also create your suppression status property (dropdown: "re-engagement sent", "suppressed") if it does not exist — the API path creates it automatically.
 
 ### Stage 3: Execute
 
-**Option A:** run `uv run skills/engagement-suppression-workflow/scripts/execute.py`, then complete the UI review steps listed above.
+**Option A:** run `uv run scripts/execute.py`, then complete the UI review steps listed above.
 
 **Option B — manual UI build:**
 
@@ -155,7 +159,7 @@ If building manually, also create your suppression status property (dropdown: "r
 
 ### Stage 4: After
 
-1. Run `uv run skills/engagement-suppression-workflow/scripts/after.py` (API path) to confirm both workflows exist and report their enabled state.
+1. Run `uv run scripts/after.py` (API path) to confirm both workflows exist and report their enabled state.
 2. Spot-check 10-20 contacts that entered the workflow. Confirm:
    - Re-engagement email was sent
    - After the re-engagement window, disengaged contacts were suppressed

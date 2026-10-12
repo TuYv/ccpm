@@ -1,0 +1,25 @@
+{
+  "id": "tomgranot-hubspot-admin-skills-hubspot-sales-audit",
+  "name": "hubspot-sales-audit",
+  "description": "Audit the sales side of a HubSpot portal: pipeline configuration, deal data quality, stale and past-due deals, ownership and handoff gaps, and overdue follow-up. Read-only. Use when the forecast is not trusted, before a pipeline redesign or a new sales leader's first review, or when reps and reports disagree about what is in the pipeline.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "TomGranot",
+  "install_path": ".claude/skills/hubspot-sales-audit/SKILL.md",
+  "source": {
+    "repo": "TomGranot/hubspot-admin-skills",
+    "url": "https://github.com/TomGranot/hubspot-admin-skills/blob/main/skills/hubspot-sales-audit/SKILL.md",
+    "path": "skills/hubspot-sales-audit/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-12T21:28:02.162Z",
+    "stars": 75,
+    "language": "Python",
+    "pushed_at": "2026-10-12T18:17:52Z",
+    "license": "MIT"
+  }
+}

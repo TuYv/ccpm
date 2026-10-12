@@ -19,17 +19,19 @@ Contacts missing a company name cannot be matched to ICP-classified companies, b
 ## Prerequisites
 
 - HubSpot Marketing Hub Professional or Sales Hub Professional (for Workflows)
-- A HubSpot private app access token (`HUBSPOT_ACCESS_TOKEN` in `.env`) with contact read/write scopes (for the scripted stages)
+- A HubSpot service key (`HUBSPOT_ACCESS_TOKEN` in `.env`; an existing legacy private app token also works) with contact read/write scopes (for the scripted stages)
 - Python 3.10+ with [`uv`](https://github.com/astral-sh/uv)
 - Phase 1 hygiene processes completed (invalid/deleted contacts removed first)
 - **HubSpot auto-association enabled:** Settings > Objects > Companies > "Create and associate companies with contacts" toggle must be ON. This lets HubSpot automatically create company records from email domains and associate them.
 
 ## Scripts
 
+Script paths are relative to this skill's directory. Run them from your project directory so `.env`, `data/`, and `reports/` resolve there: prefix each path with wherever this skill is installed (`skills/enrich-company-name/` in a clone of the repo).
+
 | Stage | Script | Run with |
 |-------|--------|----------|
-| Before | [`scripts/before.py`](./scripts/before.py) | `uv run skills/enrich-company-name/scripts/before.py` |
-| After | [`scripts/after.py`](./scripts/after.py) | `uv run skills/enrich-company-name/scripts/after.py` |
+| Before | [`scripts/before.py`](./scripts/before.py) | `uv run scripts/before.py` |
+| After | [`scripts/after.py`](./scripts/after.py) | `uv run scripts/after.py` |
 
 There is no execute script: the enrichment itself runs as a HubSpot workflow (see Execute below), which handles both the backlog and future contacts.
 
@@ -43,7 +45,7 @@ There is no execute script: the enrichment itself runs as a HubSpot workflow (se
 
 ## Before
 
-Run the before-state audit to capture the baseline: `uv run skills/enrich-company-name/scripts/before.py`
+Run the before-state audit to capture the baseline: `uv run scripts/before.py`
 
 The core query it runs:
 
@@ -107,7 +109,7 @@ Use this if you need the data populated immediately rather than waiting for work
 - Search API caps at 10,000 results. Segment by `createdate` ranges if needed.
 - Use Associations API v4 to get contact-to-company associations
 - Batch update contacts via `POST /crm/v3/objects/contacts/batch/update` (100 per call)
-- Respect rate limits: 100 requests per 10 seconds
+- Respect rate limits: 100 requests per 10 seconds per app on Free/Starter, 190 on Professional/Enterprise; the Search API has its own cap of 5 requests per second
 
 ### Why Do Both?
 
@@ -117,7 +119,7 @@ Use this if you need the data populated immediately rather than waiting for work
 
 ## After
 
-Wait 1-2 hours after activating the workflow (longer for very large databases), then verify: `uv run skills/enrich-company-name/scripts/after.py` (re-runs the before-state query and compares against the baseline).
+Wait 1-2 hours after activating the workflow (longer for very large databases), then verify: `uv run scripts/after.py` (re-runs the before-state query and compares against the baseline).
 
 **Verification checklist:**
 

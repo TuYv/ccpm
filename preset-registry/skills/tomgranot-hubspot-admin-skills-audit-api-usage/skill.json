@@ -1,7 +1,7 @@
 {
   "id": "tomgranot-hubspot-admin-skills-audit-api-usage",
   "name": "audit-api-usage",
-  "description": "Inventory the integrations, private apps, and internal tooling that call HubSpot APIs, and flag anything on legacy v1-v4 endpoints ahead of HubSpot's March 30, 2027 end of support. Produces a migration checklist to date-based API versions.",
+  "description": "Inventory the integrations, service keys, legacy private apps, and internal tooling that call HubSpot APIs, and flag anything on legacy v1-v4 endpoints or legacy app architecture ahead of HubSpot's 2027 cutoffs. Produces a migration checklist to date-based API versions and service keys.",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/TomGranot/hubspot-admin-skills/blob/main/skills/audit-api-usage/SKILL.md",
     "path": "skills/audit-api-usage/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-12T11:55:26.988Z",
+    "discovered_at": "2026-10-12T21:27:58.507Z",
     "stars": 75,
     "language": "Python",
-    "pushed_at": "2026-07-12T21:44:59Z",
+    "pushed_at": "2026-10-12T18:17:52Z",
     "license": "MIT"
-  },
-  "summary_zh": "用于盘点调用 HubSpot API 的集成和内部工具，识别即将停用的旧接口并生成版本迁移清单。"
+  }
 }

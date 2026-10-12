@@ -16,17 +16,19 @@ Ghost contacts have received marketing emails but have never opened a single one
 
 ## Prerequisites
 
-- A HubSpot private app access token with `crm.objects.contacts.read` and `crm.lists.read`/`crm.lists.write` scopes
+- A HubSpot service key (`HUBSPOT_ACCESS_TOKEN` in `.env`; an existing legacy private app token also works) with `crm.objects.contacts.read` and `crm.lists.read`/`crm.lists.write` scopes
 - Python 3.10+ with `uv` for package management
 - A `.env` file containing `HUBSPOT_ACCESS_TOKEN`
 - Super Admin or Marketing Hub Admin permissions for the manual UI suppression step
 
 ## Scripts
 
+Script paths are relative to this skill's directory. Run them from your project directory so `.env`, `data/`, and `reports/` resolve there: prefix each path with wherever this skill is installed (`skills/suppress-ghost-contacts/` in a clone of the repo).
+
 | Stage | Script | Run with |
 |-------|--------|----------|
-| Before | [`scripts/before.py`](./scripts/before.py) | `uv run skills/suppress-ghost-contacts/scripts/before.py` |
-| After | [`scripts/after.py`](./scripts/after.py) | `uv run skills/suppress-ghost-contacts/scripts/after.py` |
+| Before | [`scripts/before.py`](./scripts/before.py) | `uv run scripts/before.py` |
+| After | [`scripts/after.py`](./scripts/after.py) | `uv run scripts/after.py` |
 
 There is no execute script: the marketing-status change itself must happen via a HubSpot workflow or the UI (see Key Constraint and Stage 3).
 
@@ -457,5 +459,5 @@ HUBSPOT_ACCESS_TOKEN=pat-na1-xxxxxxxx
 No package install is needed — scripts carry PEP 723 inline metadata and run with [`uv`](https://github.com/astral-sh/uv), which resolves dependencies automatically:
 
 ```bash
-uv run skills/suppress-ghost-contacts/scripts/before.py
+uv run scripts/before.py
 ```

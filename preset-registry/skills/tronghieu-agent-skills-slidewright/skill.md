@@ -24,7 +24,7 @@ design language.
 
 There is **one operator** (the presenter) on **one machine**. Slides go on a big screen;
 the audience only **looks** — they never click, type, or interact. Everything below
-follows from this. Three failure modes to avoid:
+follows from this. Four failure modes to avoid:
 
 - **Text too small.** Slides are read from across a room, not on a laptop. Never use
   web-reading sizes (`text-sm`, `16px`) or fixed Tailwind text classes (`text-4xl`).
@@ -39,6 +39,9 @@ follows from this. Three failure modes to avoid:
 - **Building an app.** No input fields, no "Submit", no login, no data collection — there
   is no backend and nowhere for data to go. Interaction is only the presenter clicking to
   reveal/advance content. If a component asks "where does this data go?", it's wrong.
+- **Wrong voice for the audience.** A board report is not a lesson and a pitch is not a
+  status update. The deck type sets the structure and the voice. Decide it first — see
+  `references/deck-types.md`.
 
 The presenter may hold a **phone remote** (scan a QR code from the terminal, then tap
 Next/Prev). It is the same single operator on a second device, not audience interaction.
@@ -51,6 +54,7 @@ you design or restyle slide content.
 
 1. **Understand and clarify the talk.**
    - **Content:** If the presentation content is vague or unclear, ask questions to clarify the topic, audience, speaker (name/role), and key message before building. For Vietnamese content, the default voice is plain, honest, direct — no marketing hype.
+   - **Deck type:** Decide what the deck is for before writing: report upward, decision request, pitch, training, talk, or internal update. Infer it from the request and tell the user your choice in one line; ask only when two types fit equally. Then read `references/deck-types.md` and follow that type's arc, voice, and prohibitions.
    - **Style:** Ask the user for their preferred visual style and suggest these 5 modern options:
      1. *Minimalist Bauhaus*: High contrast, geometric typography, generous whitespace.
      2. *Dark Mode Cinematic*: Deep slate/black backgrounds, dramatic contrast, glowing accents.
@@ -60,7 +64,8 @@ you design or restyle slide content.
 2. **Pick a track** (below). If unsure, ask once; otherwise default to plain HTML for
    small/quick decks and React for substantial, maintained talks.
 3. **Scaffold** with the matching script — don't hand-assemble the boilerplate.
-4. **Build slides** following `references/design-system.md`: one idea per slide, few
+4. **Build slides** in the arc and voice of the deck type, following
+   `references/design-system.md`: one idea per slide, few
    words, real visuals, projection-legible type, presenter-only interaction, and the
    two-layer padding contract for both viewport and content containers. Respect the
    density limits — never exceed 5 bullets, ~60 words, or 5×4 table cells per slide.
@@ -132,6 +137,8 @@ to add/reorder them, then build the content.
 
 - `references/design-system.md` — projection rules, typography floor, layout recipes,
   motion, palette. The core; consult for any content/design work.
+- `references/deck-types.md` — the six deck types and each one's arc, voice, and
+  prohibitions. Read it before writing slide content.
 - `references/html-track.md` — plain-HTML deck structure, template internals, adding slides.
 - `references/react-track.md` — Vite+React architecture, slide ordering, Tailwind wiring.
 - `references/export-pdf.md` — PDF export options and speaker-notes convention.

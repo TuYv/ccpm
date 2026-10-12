@@ -19,17 +19,19 @@ Without industry on contact records, you cannot segment email campaigns by verti
 ## Prerequisites
 
 - HubSpot Marketing Hub Professional or Sales Hub Professional (for Workflows)
-- A HubSpot private app access token (`HUBSPOT_ACCESS_TOKEN` in `.env`) for the scripted stages
+- A HubSpot service key (`HUBSPOT_ACCESS_TOKEN` in `.env`; an existing legacy private app token also works) for the scripted stages
 - Python 3.10+ with [`uv`](https://github.com/astral-sh/uv)
 - Company name enrichment (enrich-company-name skill) should be completed first, as it may trigger new company associations
 - Access to Settings > Properties to verify/create the contact Industry property
 
 ## Scripts
 
+Script paths are relative to this skill's directory. Run them from your project directory so `.env`, `data/`, and `reports/` resolve there: prefix each path with wherever this skill is installed (`skills/enrich-industry/` in a clone of the repo).
+
 | Stage | Script | Run with |
 |-------|--------|----------|
-| Before | [`scripts/before.py`](./scripts/before.py) | `uv run skills/enrich-industry/scripts/before.py` |
-| After | [`scripts/after.py`](./scripts/after.py) | `uv run skills/enrich-industry/scripts/after.py` |
+| Before | [`scripts/before.py`](./scripts/before.py) | `uv run scripts/before.py` |
+| After | [`scripts/after.py`](./scripts/after.py) | `uv run scripts/after.py` |
 
 There is no execute script: the enrichment itself runs as a HubSpot workflow (see Execute below).
 
@@ -63,7 +65,7 @@ This is the most important pre-step. Contacts may have TWO industry properties: 
 
 ### Audit Enrichment Opportunity
 
-Run `uv run skills/enrich-industry/scripts/before.py`. The core query:
+Run `uv run scripts/before.py`. The core query:
 
 ```python
 resp = requests.post(f"{BASE}/crm/v3/objects/contacts/search", headers=HEADERS, json={
@@ -109,7 +111,7 @@ This workflow is nearly identical to the company name enrichment workflow. If yo
 
 ## After
 
-Wait 1-2 hours for the workflow to process, then verify: `uv run skills/enrich-industry/scripts/after.py` (re-runs the before-state query and compares against the baseline).
+Wait 1-2 hours for the workflow to process, then verify: `uv run scripts/after.py` (re-runs the before-state query and compares against the baseline).
 
 **Verification checklist:**
 

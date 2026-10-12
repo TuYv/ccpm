@@ -16,16 +16,18 @@ Duplicate company records fragment contacts, deals, and engagement history acros
 
 ## Prerequisites
 
-- A HubSpot private app access token with `crm.objects.companies.read` scope
+- A HubSpot service key (`HUBSPOT_ACCESS_TOKEN` in `.env`; an existing legacy private app token also works) with `crm.objects.companies.read` scope
 - Python 3.10+ with `uv` for package management
 - A `.env` file containing `HUBSPOT_ACCESS_TOKEN`
 - Super Admin permissions for merging in the HubSpot UI
 
 ## Scripts
 
+Script paths are relative to this skill's directory. Run them from your project directory so `.env`, `data/`, and `reports/` resolve there: prefix each path with wherever this skill is installed (`skills/merge-duplicate-companies/` in a clone of the repo).
+
 | Stage | Script | Run with |
 |-------|--------|----------|
-| Before | [`scripts/before.py`](./scripts/before.py) | `uv run skills/merge-duplicate-companies/scripts/before.py` |
+| Before | [`scripts/before.py`](./scripts/before.py) | `uv run scripts/before.py` |
 
 Only the detection stage is scripted: `before.py` inventories companies and flags duplicate candidates by domain and normalized name. Merging itself happens one pair at a time in the UI (see Key Constraint).
 
@@ -331,5 +333,5 @@ HUBSPOT_ACCESS_TOKEN=pat-na1-xxxxxxxx
 No package install is needed — scripts carry PEP 723 inline metadata and run with [`uv`](https://github.com/astral-sh/uv), which resolves dependencies automatically:
 
 ```bash
-uv run skills/merge-duplicate-companies/scripts/before.py
+uv run scripts/before.py
 ```

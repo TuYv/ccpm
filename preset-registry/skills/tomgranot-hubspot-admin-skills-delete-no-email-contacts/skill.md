@@ -16,17 +16,19 @@ Contacts without an email address serve no functional purpose in a HubSpot Marke
 
 ## Prerequisites
 
-- A HubSpot private app access token with `crm.objects.contacts.read` and `crm.objects.contacts.write` scopes
+- A HubSpot service key (`HUBSPOT_ACCESS_TOKEN` in `.env`; an existing legacy private app token also works) with `crm.objects.contacts.read` and `crm.objects.contacts.write` scopes
 - Python 3.10+ with `uv` for package management
 - A `.env` file containing `HUBSPOT_ACCESS_TOKEN`
 
 ## Scripts
 
+Script paths are relative to this skill's directory. Run them from your project directory so `.env`, `data/`, and `reports/` resolve there: prefix each path with wherever this skill is installed (`skills/delete-no-email-contacts/` in a clone of the repo).
+
 | Stage | Script | Run with |
 |-------|--------|----------|
-| Before | [`scripts/before.py`](./scripts/before.py) | `uv run skills/delete-no-email-contacts/scripts/before.py` |
-| Execute | [`scripts/execute.py`](./scripts/execute.py) | `uv run skills/delete-no-email-contacts/scripts/execute.py` |
-| After | [`scripts/after.py`](./scripts/after.py) | `uv run skills/delete-no-email-contacts/scripts/after.py` |
+| Before | [`scripts/before.py`](./scripts/before.py) | `uv run scripts/before.py` |
+| Execute | [`scripts/execute.py`](./scripts/execute.py) | `uv run scripts/execute.py` |
+| After | [`scripts/after.py`](./scripts/after.py) | `uv run scripts/after.py` |
 
 `before.py` counts contacts with no email and exports the CSV baseline. `execute.py` collects IDs, exports the audit CSV, and batch-archives (typed confirmation + safety threshold). `after.py` verifies zero remain.
 
@@ -265,7 +267,7 @@ else:
 
 2. **Search API pagination limit**: The HubSpot CRM Search API has a hard cap of 10,000 results per query. For this use case (typically a few hundred contacts), this is not an issue. If you encounter it, use segmented queries (e.g., filter by create date ranges).
 
-3. **Rate limiting**: The search API allows ~4 requests/second for a private app. The batch archive API is more restrictive. Use `time.sleep(0.5)` between batch archive calls.
+3. **Rate limiting**: The Search API allows 5 requests per second per token, separate from the general burst limit. The batch archive API is more restrictive. Use `time.sleep(0.5)` between batch archive calls.
 
 4. **Batch archive returns 204**: A successful batch archive returns HTTP 204 with an empty body, not 200. Check for `status_code == 204`.
 
@@ -287,5 +289,5 @@ HUBSPOT_ACCESS_TOKEN=pat-na1-xxxxxxxx
 No package install is needed — scripts carry PEP 723 inline metadata and run with [`uv`](https://github.com/astral-sh/uv), which resolves dependencies automatically:
 
 ```bash
-uv run skills/delete-no-email-contacts/scripts/before.py
+uv run scripts/before.py
 ```

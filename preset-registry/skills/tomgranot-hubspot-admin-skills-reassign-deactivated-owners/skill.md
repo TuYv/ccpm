@@ -16,18 +16,20 @@ When team members leave an organization, their HubSpot-owned contacts and compan
 
 ## Prerequisites
 
-- A HubSpot private app access token with `crm.objects.contacts.read`, `crm.objects.contacts.write`, `crm.objects.companies.read`, `crm.objects.companies.write`, and `crm.objects.owners.read` scopes
+- A HubSpot service key (`HUBSPOT_ACCESS_TOKEN` in `.env`; an existing legacy private app token also works) with `crm.objects.contacts.read`, `crm.objects.contacts.write`, `crm.objects.companies.read`, `crm.objects.companies.write`, and `crm.objects.owners.read` scopes
 - Python 3.10+ with `uv` for package management
 - A `.env` file containing `HUBSPOT_ACCESS_TOKEN`
 - A decision from team leadership on the reassignment strategy (see Plan stage)
 
 ## Scripts
 
+Script paths are relative to this skill's directory. Run them from your project directory so `.env`, `data/`, and `reports/` resolve there: prefix each path with wherever this skill is installed (`skills/reassign-deactivated-owners/` in a clone of the repo).
+
 | Stage | Script | Run with |
 |-------|--------|----------|
-| Before | [`scripts/before.py`](./scripts/before.py) | `uv run skills/reassign-deactivated-owners/scripts/before.py` |
-| Execute | [`scripts/execute.py`](./scripts/execute.py) | `uv run skills/reassign-deactivated-owners/scripts/execute.py` |
-| After | [`scripts/after.py`](./scripts/after.py) | `uv run skills/reassign-deactivated-owners/scripts/after.py` |
+| Before | [`scripts/before.py`](./scripts/before.py) | `uv run scripts/before.py` |
+| Execute | [`scripts/execute.py`](./scripts/execute.py) | `uv run scripts/execute.py` |
+| After | [`scripts/after.py`](./scripts/after.py) | `uv run scripts/after.py` |
 
 `before.py` lists deactivated owners and counts their records, exporting the CSV baseline. `execute.py` batch-reassigns to the configured target owner. `after.py` verifies zero records remain with deactivated owners.
 
@@ -490,7 +492,7 @@ for o in deactivated_owners:
 
 5. **Deactivated users may not appear in UI filter dropdowns.** Some HubSpot UI versions hide deactivated users from the Contact Owner filter. Use the API approach instead.
 
-6. **Rate limiting**: Use `time.sleep(0.5)` between batch update calls and `time.sleep(0.2)` between search pagination calls. The private app rate limit is approximately 100 requests per 10 seconds.
+6. **Rate limiting**: Use `time.sleep(0.5)` between batch update calls and `time.sleep(0.2)` between search pagination calls. The burst limit is 100 requests per 10 seconds per app on Free/Starter and 190 on Professional/Enterprise; the Search API has its own cap of 5 requests per second.
 
 7. **Handle unassigned contacts separately.** Contacts with no owner at all (`hubspot_owner_id NOT_HAS_PROPERTY`) are a separate population from deactivated-owner contacts. They require a different strategic decision.
 
@@ -512,5 +514,5 @@ HUBSPOT_ACCESS_TOKEN=pat-na1-xxxxxxxx
 No package install is needed — scripts carry PEP 723 inline metadata and run with [`uv`](https://github.com/astral-sh/uv), which resolves dependencies automatically:
 
 ```bash
-uv run skills/reassign-deactivated-owners/scripts/before.py
+uv run scripts/before.py
 ```
