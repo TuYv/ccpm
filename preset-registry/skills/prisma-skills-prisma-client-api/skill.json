@@ -1,0 +1,25 @@
+{
+  "id": "prisma-skills-prisma-client-api",
+  "name": "prisma-client-api",
+  "description": "Prisma Client API reference covering model queries, filters, operators, and client methods. Use when writing database queries, using CRUD operations, filtering data, or configuring Prisma Client. Triggers on \"prisma query\", \"findMany\", \"create\", \"update\", \"delete\", \"$transaction\".",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "prisma",
+  "install_path": ".claude/skills/prisma-client-api/SKILL.md",
+  "source": {
+    "repo": "prisma/skills",
+    "url": "https://github.com/prisma/skills/blob/main/prisma-client-api/SKILL.md",
+    "path": "prisma-client-api/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-12T11:53:22.010Z",
+    "stars": 68,
+    "language": null,
+    "pushed_at": "2026-10-12T08:45:21Z",
+    "license": "MIT"
+  }
+}

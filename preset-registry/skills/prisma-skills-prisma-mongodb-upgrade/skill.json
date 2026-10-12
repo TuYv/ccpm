@@ -1,0 +1,25 @@
+{
+  "id": "prisma-skills-prisma-mongodb-upgrade",
+  "name": "prisma-mongodb-upgrade",
+  "description": "Decision and migration guide for Prisma ORM MongoDB projects on v6, which have no upgrade path to v7. Use when a MongoDB project asks about upgrading Prisma, when \"upgrade to prisma 7\" comes up in a project with provider = \"mongodb\", or when evaluating a move to Prisma 8. Triggers on \"upgrade prisma mongodb\", \"prisma 7 mongodb\", \"mongodb prisma migration\", \"prisma 8 mongodb\".",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "prisma",
+  "install_path": ".claude/skills/prisma-mongodb-upgrade/SKILL.md",
+  "source": {
+    "repo": "prisma/skills",
+    "url": "https://github.com/prisma/skills/blob/main/prisma-mongodb-upgrade/SKILL.md",
+    "path": "prisma-mongodb-upgrade/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-12T11:53:22.841Z",
+    "stars": 68,
+    "language": null,
+    "pushed_at": "2026-10-12T08:45:21Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "prisma-skills-prisma-driver-adapter-implementation",
+  "name": "prisma-driver-adapter-implementation",
+  "description": "Required reference for Prisma ORM 7 SQL driver adapter work. Use when implementing or modifying adapters, adding database drivers, or touching SqlDriverAdapter, Transaction, savepoint, result mapping, or DriverAdapterError behavior. Covers current transaction lifecycle, optional savepoint hooks, original database-error preservation, and verification.",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "prisma",
+  "install_path": ".claude/skills/prisma-driver-adapter-implementation/SKILL.md",
+  "source": {
+    "repo": "prisma/skills",
+    "url": "https://github.com/prisma/skills/blob/main/prisma-driver-adapter-implementation/SKILL.md",
+    "path": "prisma-driver-adapter-implementation/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-12T11:53:22.653Z",
+    "stars": 68,
+    "language": null,
+    "pushed_at": "2026-10-12T08:45:21Z",
+    "license": "MIT"
+  }
+}

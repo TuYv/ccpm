@@ -1,0 +1,25 @@
+{
+  "id": "thedotmack-claude-mem-screenpipe",
+  "name": "screenpipe",
+  "description": "Search screen and audio history recorded by Screenpipe and optionally save selected context into claude-mem. Use when the user asks to recall desktop activity, a meeting, or something seen in another app through Screenpipe.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "thedotmack",
+  "install_path": ".claude/skills/screenpipe/SKILL.md",
+  "source": {
+    "repo": "thedotmack/claude-mem",
+    "url": "https://github.com/thedotmack/claude-mem/blob/main/plugin/skills/screenpipe/SKILL.md",
+    "path": "plugin/skills/screenpipe/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-12T10:59:39.606Z",
+    "stars": 99914,
+    "language": "TypeScript",
+    "pushed_at": "2026-10-12T07:06:28Z",
+    "license": "Apache-2.0"
+  }
+}

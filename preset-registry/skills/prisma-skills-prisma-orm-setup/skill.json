@@ -1,0 +1,25 @@
+{
+  "id": "prisma-skills-prisma-orm-setup",
+  "name": "prisma-orm-setup",
+  "description": "Set up Prisma ORM in an application, connect its database, or troubleshoot the connection of an existing Prisma 6, 7, or 8 app. Defaults new applications to Prisma ORM 8 and loads the package-owned prisma-8 skill; keeps existing Prisma 6/7 apps on their version with provider references for PostgreSQL, MySQL, SQLite, SQL Server, CockroachDB, MongoDB, and Prisma Postgres.",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "prisma",
+  "install_path": ".claude/skills/prisma-orm-setup/SKILL.md",
+  "source": {
+    "repo": "prisma/skills",
+    "url": "https://github.com/prisma/skills/blob/main/prisma-orm-setup/SKILL.md",
+    "path": "prisma-orm-setup/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-12T11:53:22.981Z",
+    "stars": 68,
+    "language": null,
+    "pushed_at": "2026-10-12T08:45:21Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "prisma-skills-prisma-cli",
+  "name": "prisma-cli",
+  "description": "Prisma ORM 7 CLI reference for existing Prisma 7 applications or explicitly selected Prisma 7 workflows. Covers prisma init, generate, migrate, db, dev, studio, and mcp. For setup, connection repair, or Prisma 8, use prisma-orm-setup; not the Prisma Platform CLI.",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "prisma",
+  "install_path": ".claude/skills/prisma-cli/SKILL.md",
+  "source": {
+    "repo": "prisma/skills",
+    "url": "https://github.com/prisma/skills/blob/main/prisma-cli/SKILL.md",
+    "path": "prisma-cli/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-12T11:53:21.812Z",
+    "stars": 68,
+    "language": null,
+    "pushed_at": "2026-10-12T08:45:21Z",
+    "license": "MIT"
+  }
+}

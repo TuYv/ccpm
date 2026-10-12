@@ -1,0 +1,25 @@
+{
+  "id": "prisma-skills-prisma-postgres",
+  "name": "prisma-postgres",
+  "description": "Deprecated compatibility name for prisma-postgres-setup. Use only when a user or existing integration explicitly invokes prisma-postgres; otherwise select prisma-postgres-setup.",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "prisma",
+  "install_path": ".claude/skills/prisma-postgres/SKILL.md",
+  "source": {
+    "repo": "prisma/skills",
+    "url": "https://github.com/prisma/skills/blob/main/prisma-postgres/SKILL.md",
+    "path": "prisma-postgres/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-12T11:53:23.455Z",
+    "stars": 68,
+    "language": null,
+    "pushed_at": "2026-10-12T08:45:21Z",
+    "license": "MIT"
+  }
+}

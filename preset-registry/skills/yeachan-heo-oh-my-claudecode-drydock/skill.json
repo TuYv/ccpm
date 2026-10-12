@@ -1,7 +1,7 @@
 {
   "id": "yeachan-heo-oh-my-claudecode-drydock",
   "name": "drydock",
-  "description": "Lay the keel of the shipyard harness in any repo — the 4-pillar shared environment (Context, Rules, Tools, Standards) across 5 surfaces (CLAUDE.md, skills, design-system, mcp/cli, shared context) so that every human and agent inherits the same design language and anyone can ship. Run once per repo; re-run with --check to audit drift.",
+  "description": "Lay the keel of the shipyard harness in any repo — the 4-pillar shared environment (Context, Rules, Tools, Standards), seeded as two faces on day one (CLAUDE.md + GLOSSARY.md) with every other surface appearing on first use, so that every human and agent inherits the same design language and anyone can ship. Run once per repo; re-run with --check to audit drift.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/Yeachan-Heo/oh-my-claudecode/blob/main/skills/drydock/SKILL.md",
     "path": "skills/drydock/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-12T02:39:29.807Z",
-    "stars": 39798,
+    "discovered_at": "2026-10-12T11:01:23.990Z",
+    "stars": 39816,
     "language": "TypeScript",
-    "pushed_at": "2026-10-12T02:19:01Z",
+    "pushed_at": "2026-10-12T04:20:00Z",
     "license": "MIT"
-  },
-  "summary_zh": "为任意代码仓库搭建统一的 AI 协作环境，让人类与代理遵循同一套设计规范，并可检查配置漂移，适合团队协同开发。"
+  }
 }
