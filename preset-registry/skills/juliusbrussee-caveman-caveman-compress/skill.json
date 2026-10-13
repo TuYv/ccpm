@@ -1,7 +1,7 @@
 {
   "id": "juliusbrussee-caveman-caveman-compress",
   "name": "caveman-compress",
-  "description": "> Compress a memory file such as CLAUDE.md or a todo list into caveman format to save input tokens, keeping a readable backup. Trigger: /caveman-compress.",
+  "description": "> Compress a memory file such as CLAUDE.md or a todo list into caveman format to save input tokens, keeping a readable backup. Sends the file's text to the configured model provider. Trigger: /caveman-compress.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/JuliusBrussee/caveman/blob/main/skills/caveman-compress/SKILL.md",
     "path": "skills/caveman-compress/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-13T17:56:58.584Z",
-    "stars": 111421,
+    "discovered_at": "2026-10-13T23:01:01.998Z",
+    "stars": 111470,
     "language": "Go",
-    "pushed_at": "2026-10-13T17:53:26Z",
+    "pushed_at": "2026-10-13T18:34:03Z",
     "license": "Apache-2.0"
-  },
-  "summary_zh": "将记忆文件或待办清单压缩成简短易懂的原始人式文本，在保留可读备份的同时节省输入令牌。"
+  }
 }

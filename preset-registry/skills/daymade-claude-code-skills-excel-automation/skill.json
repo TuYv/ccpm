@@ -1,7 +1,7 @@
 {
   "id": "daymade-claude-code-skills-excel-automation",
   "name": "excel-automation",
-  "description": "Create, parse, and control Excel files on macOS. Professional formatting with openpyxl, complex xlsm parsing with stdlib zipfile+xml for investment bank financial models, and Excel window control via AppleScript. Use when creating formatted Excel reports, parsing financial models that openpyxl cannot handle, or automating Excel on macOS.",
+  "description": ">- Creates formatted Excel reports with openpyxl, parses complex xlsm financial models with stdlib zipfile+xml when openpyxl fails, and controls Excel windows on macOS via AppleScript. Reconstructs images or scans of paper forms as editable XLSX files with printable layouts.",
   "category": "自动化集成",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-docs/excel-automation/SKILL.md",
     "path": "daymade-docs/excel-automation/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-13T18:39:13.368Z",
-    "stars": 1457,
+    "discovered_at": "2026-10-13T23:44:32.575Z",
+    "stars": 1458,
     "language": "Python",
-    "pushed_at": "2026-10-13T17:43:47Z",
+    "pushed_at": "2026-10-13T22:00:16Z",
     "license": "MIT"
-  },
-  "summary_zh": "一款 macOS Excel 自动化工具，适合制作专业报表、解析复杂金融模型及控制 Excel 窗口。"
+  }
 }

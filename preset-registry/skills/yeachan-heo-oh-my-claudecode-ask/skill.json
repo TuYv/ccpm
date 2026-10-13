@@ -1,7 +1,7 @@
 {
   "id": "yeachan-heo-oh-my-claudecode-ask",
   "name": "ask",
-  "description": "Process-first advisor routing for Claude, Codex, Gemini, Antigravity, Grok, or Cursor via `omc ask`, with artifact capture and no raw CLI assembly",
+  "description": "Process-first advisor routing for Claude, Codex, Gemini, Antigravity, Grok, Cursor, or Muse via `omc ask`, with artifact capture and no raw CLI assembly",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/Yeachan-Heo/oh-my-claudecode/blob/main/skills/ask/SKILL.md",
     "path": "skills/ask/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-13T17:55:10.707Z",
-    "stars": 39868,
+    "discovered_at": "2026-10-13T22:59:27.089Z",
+    "stars": 39876,
     "language": "TypeScript",
-    "pushed_at": "2026-10-13T17:54:10Z",
+    "pushed_at": "2026-10-13T21:16:40Z",
     "license": "MIT"
-  },
-  "summary_zh": "通过统一命令按流程把问题路由给 Claude、Codex、Gemini 等 AI 顾问，并自动保存产物，适合需要多模型协作且不想手动拼接命令的场景。"
+  }
 }
