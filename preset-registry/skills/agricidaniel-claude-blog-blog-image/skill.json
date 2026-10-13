@@ -1,7 +1,7 @@
 {
   "id": "agricidaniel-claude-blog-blog-image",
   "name": "blog-image",
-  "description": "> AI image generation and editing for blog content powered by Gemini via MCP. Generates hero images, inline illustrations, social preview cards, and OG images, and edits existing ones. Supports 6 domain modes (Editorial, Product, Landscape, UI/Web, Infographic, Abstract). Works standalone or internally from blog-write and blog-rewrite; falls back gracefully when MCP is unavailable. Use when user says \"blog image\", \"generate hero image\", \"blog illustration\", \"edit blog image\", \"OG image\".",
+  "description": "> Paid Gemini image generation for blog heroes, inline illustrations, and OG cards (direct API by default, optional MCP for edits). Asks for explicit consent before the first paid call. Runs only on an explicit request: /blog image, \"generate a blog hero image\", \"blog illustration\", \"edit this blog image\", \"OG image\", or when blog-write or blog-rewrite needs a hero. Not for charts (blog-chart) or stock-photo search.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/AgriciDaniel/claude-blog/blob/main/skills/blog-image/SKILL.md",
     "path": "skills/blog-image/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-13T10:11:43.988Z",
-    "stars": 2374,
+    "discovered_at": "2026-10-13T18:39:37.585Z",
+    "stars": 2379,
     "language": "Python",
-    "pushed_at": "2026-10-09T04:25:17Z",
+    "pushed_at": "2026-10-13T18:39:20Z",
     "license": "MIT"
-  },
-  "summary_zh": "基于 Gemini 的博客配图生成与编辑工具，适合制作头图、正文插画、社交预览图和 OG 图片。"
+  }
 }

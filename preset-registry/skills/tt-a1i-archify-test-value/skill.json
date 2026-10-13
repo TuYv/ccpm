@@ -1,0 +1,25 @@
+{
+  "id": "tt-a1i-archify-test-value",
+  "name": "test-value",
+  "description": "Improve test value and feedback cost when auditing slow, flaky, redundant or brittle tests; choosing tests during implementation; or reviewing test changes before a commit or PR. Keep ordinary implementation and pre-commit use scoped to the affected behavior, not a repository-wide audit.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tt-a1i",
+  "install_path": ".claude/skills/test-value/SKILL.md",
+  "source": {
+    "repo": "tt-a1i/archify",
+    "url": "https://github.com/tt-a1i/archify/blob/main/.agents/skills/test-value/SKILL.md",
+    "path": ".agents/skills/test-value/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-13T17:52:51.932Z",
+    "stars": 82970,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-13T17:29:38Z",
+    "license": "MIT"
+  }
+}

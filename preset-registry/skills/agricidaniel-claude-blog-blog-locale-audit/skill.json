@@ -1,8 +1,8 @@
 {
   "id": "agricidaniel-claude-blog-blog-locale-audit",
   "name": "blog-locale-audit",
-  "description": "> Audit a directory of multilingual blog content for completeness, consistency, hreflang correctness, meta-tag parity, and freshness. Builds a translation coverage matrix, flags stale translations, validates hreflang and schema, and emits a prioritized report with runnable fix commands. Use when user says \"locale audit\", \"blog locale-audit\", \"check translations\", \"multilingual audit\", \"translation check\", \"hreflang check\", \"Uebersetzungen pruefen\".",
-  "category": "设计创意",
+  "description": "> Read-only audit of a folder of existing multilingual blog posts: translation coverage, parity, hreflang and canonical consistency, meta-tag parity, and stale translations, with a prioritized report. Use when the user says \"locale audit\", \"check translations\", \"multilingual audit\", \"hreflang check\", \"Uebersetzungen pruefen\" about posts that already exist. Not for creating or fixing translations (blog-translate, blog-localize, blog-multilingual) or for a site-wide technical hreflang crawl (claud",
+  "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,10 @@
     "url": "https://github.com/AgriciDaniel/claude-blog/blob/main/skills/blog-locale-audit/SKILL.md",
     "path": "skills/blog-locale-audit/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-13T10:11:44.197Z",
-    "stars": 2374,
+    "discovered_at": "2026-10-13T18:39:37.743Z",
+    "stars": 2379,
     "language": "Python",
-    "pushed_at": "2026-10-09T04:25:17Z",
+    "pushed_at": "2026-10-13T18:39:20Z",
     "license": "MIT"
-  },
-  "summary_zh": "一款多语言博客内容审计工具，用于检查翻译完整性、时效性和页面配置，并生成可执行的修复报告。"
+  }
 }

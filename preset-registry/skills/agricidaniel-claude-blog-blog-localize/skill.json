@@ -1,7 +1,7 @@
 {
   "id": "agricidaniel-claude-blog-blog-localize",
   "name": "blog-localize",
-  "description": "> Deep cultural adaptation of translated blog posts. Run after blog-translate completes. Goes beyond translation to swap brand examples, adapt CTAs, substitute legal references, localize statistic sources where possible, and adjust formality (Sie/du, tu/vous, formal/informal). Built-in profiles for DACH, Francophone, Hispanic, and Japanese markets. Use when user says \"localize blog\", \"blog localize\", \"cultural adaptation\", \"adapt for Germany\", \"lokalisieren\", \"localiser\", \"adaptar\".",
+  "description": "> Deep cultural adaptation of an already translated blog post for one target market: local examples, CTAs, legal references, statistic sources, and formality (Sie/du, tu/vous). Built-in profiles for DACH, Francophone, Hispanic, and Japanese markets. Use when the user says \"localize blog\", \"cultural adaptation\", \"adapt for Germany\", \"lokalisieren\", \"localiser\", \"adaptar\" and a translation already exists. Not for translating (use blog-translate), auditing a folder of translations (use blog-locale-",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/AgriciDaniel/claude-blog/blob/main/skills/blog-localize/SKILL.md",
     "path": "skills/blog-localize/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-13T10:11:44.345Z",
-    "stars": 2374,
+    "discovered_at": "2026-10-13T18:39:37.941Z",
+    "stars": 2379,
     "language": "Python",
-    "pushed_at": "2026-10-09T04:25:17Z",
+    "pushed_at": "2026-10-13T18:39:20Z",
     "license": "MIT"
-  },
-  "summary_zh": "用于在博客翻译后做深度本地化，适配品牌案例、行动号召、法律引用、数据来源和语气，适合德语区、法语区、西语区及日本市场。"
+  }
 }

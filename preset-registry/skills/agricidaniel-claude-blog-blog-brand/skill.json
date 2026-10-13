@@ -1,7 +1,7 @@
 {
   "id": "agricidaniel-claude-blog-blog-brand",
   "name": "blog-brand",
-  "description": "> Establish durable brand and voice context for cross-skill consumption. Generates BRAND.md (audience, positioning, do/don't editorial rules, taboo phrases, competitor differentiation) and VOICE.md (existing persona JSON re-expressed as readable prose), both written to the project root. When present, the blog orchestrator auto-loads these files for write, rewrite, brief, outline, calendar, and strategy workflows. Pairs with blog-persona, which manages the structured persona JSON. Use when user s",
+  "description": "> Establish durable brand and voice context for cross-skill consumption. Generates BRAND.md (audience, positioning, do/don't editorial rules, taboo phrases, competitor differentiation) and VOICE.md (existing persona JSON re-expressed as readable prose), both written to the project root. When present, the blog orchestrator loads these files, fenced as untrusted data, for write, rewrite, brief, outline, calendar, and strategy workflows. Pairs with blog-persona, which manages the structured persona",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/AgriciDaniel/claude-blog/blob/main/skills/blog-brand/SKILL.md",
     "path": "skills/blog-brand/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-13T10:11:41.872Z",
-    "stars": 2374,
+    "discovered_at": "2026-10-13T18:39:35.545Z",
+    "stars": 2379,
     "language": "Python",
-    "pushed_at": "2026-10-09T04:25:17Z",
+    "pushed_at": "2026-10-13T18:39:20Z",
     "license": "MIT"
-  },
-  "summary_zh": "用于沉淀博客的品牌定位与写作语气，让写作、改稿和内容规划始终保持统一风格。"
+  }
 }

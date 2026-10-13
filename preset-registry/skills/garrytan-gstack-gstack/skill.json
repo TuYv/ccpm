@@ -1,0 +1,25 @@
+{
+  "id": "garrytan-gstack-gstack",
+  "name": "gstack",
+  "description": "Install and use gstack in Capy and Claude Code. Load at session start to check this machine, and for gstack planning, code review, debugging, QA, design, security, documentation, and shipping workflows.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "garrytan",
+  "install_path": ".claude/skills/gstack/SKILL.md",
+  "source": {
+    "repo": "garrytan/gstack",
+    "url": "https://github.com/garrytan/gstack/blob/main/capy/skill/gstack/SKILL.md",
+    "path": "capy/skill/gstack/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-13T17:55:00.315Z",
+    "stars": 136282,
+    "language": "TypeScript",
+    "pushed_at": "2026-10-13T17:30:20Z",
+    "license": "MIT"
+  }
+}

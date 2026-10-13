@@ -1,7 +1,7 @@
 {
   "id": "agricidaniel-claude-blog-blog-flow",
   "name": "blog-flow",
-  "description": "> FLOW framework integration for bloggers. Evidence-led content workflow using the Find, Optimize, Win loop with stage-specific AI prompts from the FLOW knowledge base (30 blog-applicable prompts, CC BY 4.0). Use when user says \"FLOW\", \"FLOW framework\", \"blog flow\", \"evidence-led blogging\", \"find optimize win\", or wants stage-specific blog prompts.",
+  "description": "> FLOW framework integration for bloggers. Evidence-led content workflow using the Find, Optimize, Win loop with stage-specific AI prompts from the FLOW knowledge base (30 blog-applicable prompts, adapted from FLOW under CC BY 4.0). Use when user says \"FLOW framework\", \"blog flow\", \"/blog flow\", \"evidence-led blogging\", or \"find optimize win\", or asks for stage-specific blog prompts. Not for generic prompt writing.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/AgriciDaniel/claude-blog/blob/main/skills/blog-flow/SKILL.md",
     "path": "skills/blog-flow/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-13T10:11:43.444Z",
-    "stars": 2374,
+    "discovered_at": "2026-10-13T18:39:36.990Z",
+    "stars": 2379,
     "language": "Python",
-    "pushed_at": "2026-10-09T04:25:17Z",
+    "pushed_at": "2026-10-13T18:39:20Z",
     "license": "MIT"
-  },
-  "summary_zh": "一套面向博主的循证内容工作流，通过“发现、优化、取胜”循环和分阶段 AI 提示辅助选题、创作与提升效果。"
+  }
 }

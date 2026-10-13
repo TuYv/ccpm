@@ -1,7 +1,7 @@
 {
   "id": "agricidaniel-claude-blog-blog-google",
   "name": "blog-google",
-  "description": "> Google API integration for blog performance: PageSpeed Insights, CrUX Core Web Vitals with 25-week history, Search Console performance, URL Inspection, Indexing API, GA4 organic traffic, NLP entity analysis for E-E-A-T, YouTube video search for embedding, and Google Ads Keyword Planner. Progressive feature availability based on credential tier (API key, OAuth/service account, GA4, Ads). Shares config with claude-seo at ~/.config/claude-seo/google-api.json. Use when user says \"google data\", \"pa",
+  "description": "> Credentialed Google API calls for a blog: PageSpeed Insights, CrUX history, Search Console performance and URL Inspection, GA4 organic traffic, Cloud NLP entities, YouTube video search, Google Ads Keyword Planner, and the Indexing API (job and livestream pages only). Uses the user's Google credentials, quotas, and sometimes billing, and asks for consent before the first call. Runs only on an explicit request: /blog google, \"run PageSpeed on this blog URL\", \"pull my Search Console data\", \"inspe",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/AgriciDaniel/claude-blog/blob/main/skills/blog-google/SKILL.md",
     "path": "skills/blog-google/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-13T10:11:43.822Z",
-    "stars": 2374,
+    "discovered_at": "2026-10-13T18:39:37.370Z",
+    "stars": 2379,
     "language": "Python",
-    "pushed_at": "2026-10-09T04:25:17Z",
+    "pushed_at": "2026-10-13T18:39:20Z",
     "license": "MIT"
-  },
-  "summary_zh": "集成多种 Google 数据服务，帮助博客分析性能、搜索收录、自然流量和关键词，适合 SEO 优化与内容规划。"
+  }
 }

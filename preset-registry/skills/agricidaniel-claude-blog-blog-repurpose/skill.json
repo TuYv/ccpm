@@ -1,7 +1,7 @@
 {
   "id": "agricidaniel-claude-blog-blog-repurpose",
   "name": "blog-repurpose",
-  "description": "> Repurpose blog posts for social media, email, video, podcast, and community channels. Generates Twitter/X threads, LinkedIn posts and articles, Threads, Bluesky, TikTok, Instagram, YouTube Shorts and long-form scripts, Reddit, newsletter, podcast, Discord, and Slack variants. Adapts tone for each platform. Use when user says \"repurpose\", \"blog repurpose\", \"share blog\", \"social media\", \"twitter thread\", \"linkedin post\", \"youtube script\", \"reddit post\".",
+  "description": "> Turn an existing blog post into draft text for other channels: X threads, LinkedIn posts, Threads/Bluesky, short-video scripts, YouTube scripts, Reddit posts, newsletter excerpts, podcast scripts. Saves drafts to files; it never posts anywhere. Never invents personal stories or results: first-hand framing appears only when the user supplies it. Use when the user says \"repurpose\", \"turn this post into a thread\", \"linkedin post from blog\", \"youtube script from post\". Not for writing the blog pos",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/AgriciDaniel/claude-blog/blob/main/skills/blog-repurpose/SKILL.md",
     "path": "skills/blog-repurpose/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-13T10:11:45.125Z",
-    "stars": 2374,
+    "discovered_at": "2026-10-13T18:39:38.795Z",
+    "stars": 2379,
     "language": "Python",
-    "pushed_at": "2026-10-09T04:25:17Z",
+    "pushed_at": "2026-10-13T18:39:20Z",
     "license": "MIT"
-  },
-  "summary_zh": "将博客内容改编成适合社交媒体、邮件、视频、播客和社区发布的版本，省去多平台重复创作的时间。"
+  }
 }

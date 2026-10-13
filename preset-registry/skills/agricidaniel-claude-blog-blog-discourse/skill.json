@@ -1,7 +1,7 @@
 {
   "id": "agricidaniel-claude-blog-blog-discourse",
   "name": "blog-discourse",
-  "description": "> Research what people are actually saying about a topic in the last 30 days across Reddit, X / Twitter, YouTube, Hacker News, dev.to, Medium, and other public discourse platforms. API-free; uses WebSearch with platform-targeted site operators plus recency filters. Produces DISCOURSE.md (a structured brief) and JSON output the writer can consume. Complements blog-researcher (which focuses on authority sources) with a recency-and-engagement lens. Use when user says \"blog discourse\", \"discourse re",
+  "description": "> Research what people are actually saying about a topic in the last 30 days across Reddit, X / Twitter, YouTube, Hacker News, dev.to, Medium, and other public discourse platforms. API-free; uses WebSearch with platform-targeted site operators plus recency filters. Produces DISCOURSE.md (a structured brief) and JSON output the writer can consume. Complements blog-researcher (which focuses on authority sources) with a recency-and-engagement lens. Not for verifying statistics (blog-factcheck) or g",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/AgriciDaniel/claude-blog/blob/main/skills/blog-discourse/SKILL.md",
     "path": "skills/blog-discourse/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-13T10:11:43.115Z",
-    "stars": 2374,
+    "discovered_at": "2026-10-13T18:39:36.666Z",
+    "stars": 2379,
     "language": "Python",
-    "pushed_at": "2026-10-09T04:25:17Z",
+    "pushed_at": "2026-10-13T18:39:20Z",
     "license": "MIT"
-  },
-  "summary_zh": "无需 API 的舆情调研工具，可汇总近 30 天各大公开平台的真实讨论，适合写作前洞察热点与用户观点。"
+  }
 }

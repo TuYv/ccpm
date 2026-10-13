@@ -1,7 +1,7 @@
 {
   "id": "agricidaniel-claude-blog-blog-brief",
   "name": "blog-brief",
-  "description": "> Generate detailed content briefs for blog posts with target keywords, content outlines, competitive analysis, recommended statistics, image and chart suggestions, word count targets, internal linking architecture, template recommendations (12 types), TL;DR drafts, evidence-backed section planning, information gain prompts, and multi-channel distribution plans. Briefs are optimized for Google rankings and AI citation visibility as part of SEO. Use when user says \"content brief\", \"blog brief\", \"",
+  "description": "> Create a content brief for ONE planned post: target and secondary keywords, search intent, template choice, competitor gaps from the live SERP, sourced statistics to include, section plan, internal-link targets, and distribution ideas. Use when the user says \"content brief\", \"blog brief\", \"SEO brief\", \"article brief\". Not a skeleton only (blog-outline), a multi-post plan (blog-strategy, blog-calendar, blog-cluster), or the article itself (blog-write).",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/AgriciDaniel/claude-blog/blob/main/skills/blog-brief/SKILL.md",
     "path": "skills/blog-brief/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-13T10:11:42.028Z",
-    "stars": 2374,
+    "discovered_at": "2026-10-13T18:39:35.708Z",
+    "stars": 2379,
     "language": "Python",
-    "pushed_at": "2026-10-09T04:25:17Z",
+    "pushed_at": "2026-10-13T18:39:20Z",
     "license": "MIT"
-  },
-  "summary_zh": "一款博客内容策划工具，可生成关键词、文章结构、竞品分析和分发方案，适合提升搜索排名与 AI 引用率。"
+  }
 }

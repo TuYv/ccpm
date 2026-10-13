@@ -1,8 +1,8 @@
 {
   "id": "sickn33-agentic-awesome-skills-advanced-evaluation",
   "name": "advanced-evaluation",
-  "description": "This skill should be used when the user asks to \"implement LLM-as-judge\", \"compare model outputs\", \"create evaluation rubrics\", \"mitigate evaluation bias\", or mentions direct scoring, pairwise comparison, position bias, evaluation pipelines, or automated quality assessment.",
-  "category": "开发编程",
+  "description": "Design LLM-as-judge rubrics, direct scores and pairwise comparisons. Use for judge models, evals, position bias and calibration against human labels.",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,10 @@
     "url": "https://github.com/sickn33/agentic-awesome-skills/blob/main/plugins/agentic-awesome-skills-claude/skills/advanced-evaluation/SKILL.md",
     "path": "plugins/agentic-awesome-skills-claude/skills/advanced-evaluation/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-13T09:43:36.589Z",
-    "stars": 47530,
+    "discovered_at": "2026-10-13T17:57:19.344Z",
+    "stars": 47543,
     "language": "Python",
-    "pushed_at": "2026-10-12T20:25:47Z",
+    "pushed_at": "2026-10-13T17:56:37Z",
     "license": "MIT"
-  },
-  "summary_zh": "一套用大模型自动评估内容质量的工具，适合比较模型输出、设计评分标准并减少位置偏差等评测误差。"
+  }
 }

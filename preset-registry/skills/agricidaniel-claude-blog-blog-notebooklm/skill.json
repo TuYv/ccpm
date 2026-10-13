@@ -1,8 +1,8 @@
 {
   "id": "agricidaniel-claude-blog-blog-notebooklm",
   "name": "blog-notebooklm",
-  "description": "> Query Google NotebookLM notebooks for source-grounded, citation-backed answers from user-uploaded documents. Manages notebook library, handles Google authentication, and supports smart discovery. Works standalone via /blog notebooklm or internally from blog-write and blog-researcher for source-grounded research context. Falls back gracefully when not configured. Use when user says \"notebooklm\", \"notebook\", \"query notebook\", \"ask notebook\", \"notebook research\", \"source grounded research\", \"docu",
-  "category": "设计创意",
+  "description": "> Query a user's Gemini Notebook (formerly NotebookLM) for source-grounded answers through a logged-in browser session on their Google account. Uses the account's usage limits and writes browser state. Runs only on an explicit request: /blog notebooklm, \"ask my Gemini Notebook\", \"ask my NotebookLM notebook\", or \"query my notebook library\". Also used by blog-write when the user named a notebook for research. Not for generic research or note-taking.",
+  "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,10 @@
     "url": "https://github.com/AgriciDaniel/claude-blog/blob/main/skills/blog-notebooklm/SKILL.md",
     "path": "skills/blog-notebooklm/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-13T10:11:44.645Z",
-    "stars": 2374,
+    "discovered_at": "2026-10-13T18:39:38.273Z",
+    "stars": 2379,
     "language": "Python",
-    "pushed_at": "2026-10-09T04:25:17Z",
+    "pushed_at": "2026-10-13T18:39:20Z",
     "license": "MIT"
-  },
-  "summary_zh": "一个可查询 Google NotebookLM 笔记库的工具，适合从上传文档中获取带引用、可溯源的研究答案。"
+  }
 }

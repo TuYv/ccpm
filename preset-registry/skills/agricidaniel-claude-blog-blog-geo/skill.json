@@ -1,7 +1,7 @@
 {
   "id": "agricidaniel-claude-blog-blog-geo",
   "name": "blog-geo",
-  "description": "> AI citation readiness audit as part of SEO, covering classic Google search and AI search surfaces together. Use whenever the user wants their content to rank or be cited in ChatGPT, Perplexity, Claude, Gemini, Copilot, You.com, Google AI Overviews, or Google AI Mode. AI citation optimization audit scoring blog posts for major answer surfaces. Evaluates evidence-backed citability, purpose clarity, entity clarity, structured data, and AI crawler accessibility. Suggests evidence-backed explanatio",
+  "description": "> Audit one blog post file for AI-citation readiness (self-contained, sourced passages, entity clarity, structure, crawler access) and score it with an internal 0-100 heuristic plus per-surface notes for AI Overviews, AI Mode, ChatGPT, Perplexity, Claude, Gemini, and Copilot. Use when the user says \"geo\", \"aeo\", \"ai citation\", \"citation audit\", \"chatgpt citation\". Not for a site-wide audit, live AI-visibility tracking, or schema generation (use claude-seo seo-geo, blog-audit, blog-schema), and n",
   "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/AgriciDaniel/claude-blog/blob/main/skills/blog-geo/SKILL.md",
     "path": "skills/blog-geo/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-13T10:11:43.638Z",
-    "stars": 2374,
+    "discovered_at": "2026-10-13T18:39:37.160Z",
+    "stars": 2379,
     "language": "Python",
-    "pushed_at": "2026-10-09T04:25:17Z",
+    "pushed_at": "2026-10-13T18:39:20Z",
     "license": "MIT"
-  },
-  "summary_zh": "一款面向博客的搜索与AI引用优化审计工具，帮助内容提升谷歌排名及在主流AI问答中的引用机会。"
+  }
 }

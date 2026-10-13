@@ -1,0 +1,25 @@
+{
+  "id": "runkids-skillshare-skillshare-code-review",
+  "name": "skillshare-code-review",
+  "description": ">- Review a skillshare change before it becomes a pull request, or review an open pull request. Use this skill whenever the user asks to: review a diff, branch, commit range or PR, check a change before opening a PR, run a pre-Codex review, or find what a change missed. It checks correctness, the repository's documented rules, the originating issue or spec, every consumer of a changed concept, and cleanup (reuse, simplification, efficiency, depth of fix), then verifies each finding against the c",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "runkids",
+  "install_path": ".claude/skills/skillshare-code-review/SKILL.md",
+  "source": {
+    "repo": "runkids/skillshare",
+    "url": "https://github.com/runkids/skillshare/blob/main/.skillshare/skills/skillshare-code-review/SKILL.md",
+    "path": ".skillshare/skills/skillshare-code-review/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-13T18:42:54.044Z",
+    "stars": 2779,
+    "language": "Go",
+    "pushed_at": "2026-10-13T18:06:25Z",
+    "license": "MIT"
+  }
+}

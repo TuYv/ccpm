@@ -1,7 +1,7 @@
 {
   "id": "agricidaniel-claude-blog-blog-cannibalization",
   "name": "blog-cannibalization",
-  "description": "> Detect keyword cannibalization across blog posts by extracting primary keywords from titles and headings, clustering semantically similar targets, and flagging posts competing for the same search intent. Supports local-only mode (grep-based) and DataForSEO API mode (Page Intersection endpoint at ~$0.01/call). Outputs severity-scored report with merge or differentiate recommendations. Use when user says \"cannibalization\", \"keyword overlap\", \"competing pages\", \"duplicate keywords\", \"cannibalize\"",
+  "description": "> Detect keyword cannibalization across blog posts by extracting primary keywords from titles and headings, clustering semantically similar targets, and flagging posts competing for the same search intent. Supports a free local mode (file analysis) and a paid DataForSEO API mode that runs only after the user approves the call count. Outputs a severity-scored report with merge or differentiate recommendations. Use when the user says \"cannibalization\", \"keyword overlap\", \"competing pages\". Not a s",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/AgriciDaniel/claude-blog/blob/main/skills/blog-cannibalization/SKILL.md",
     "path": "skills/blog-cannibalization/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-13T10:11:42.391Z",
-    "stars": 2374,
+    "discovered_at": "2026-10-13T18:39:36.022Z",
+    "stars": 2379,
     "language": "Python",
-    "pushed_at": "2026-10-09T04:25:17Z",
+    "pushed_at": "2026-10-13T18:39:20Z",
     "license": "MIT"
-  },
-  "summary_zh": "用于检测博客文章间的关键词内耗和搜索意图冲突，并按严重程度给出合并或差异化优化建议。"
+  }
 }

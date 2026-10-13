@@ -1,7 +1,7 @@
 {
   "id": "agricidaniel-claude-blog-blog-audio",
   "name": "blog-audio",
-  "description": "> Generate audio narration of blog posts using Google Gemini TTS. Supports summary narration, full article read-aloud, and two-speaker podcast/dialogue mode with 30 voice options. Outputs MP3 with HTML5 audio embed code. Works standalone via /blog audio or internally from blog-write. Falls back gracefully when API key is not configured. Use when user says \"blog audio\", \"narrate blog\", \"audio version\", \"text to speech\", \"tts\", \"podcast mode\", \"read aloud\", \"audio narration\", \"voice\", \"narration\",",
+  "description": "> Paid Gemini TTS audio for a finished blog post: summary, full read-aloud, or two-speaker dialogue, with an MP3 and an HTML5 embed. Asks for explicit consent before the first paid call. Runs only on an explicit request: /blog audio, \"generate audio for this blog post\", \"narrate this blog post\", \"audio version of this post\", or \"podcast version of this post\". Not for general speech or dictation questions.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/AgriciDaniel/claude-blog/blob/main/skills/blog-audio/SKILL.md",
     "path": "skills/blog-audio/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-13T10:11:41.579Z",
-    "stars": 2374,
+    "discovered_at": "2026-10-13T18:39:35.227Z",
+    "stars": 2379,
     "language": "Python",
-    "pushed_at": "2026-10-09T04:25:17Z",
+    "pushed_at": "2026-10-13T18:39:20Z",
     "license": "MIT"
-  },
-  "summary_zh": "利用 Google Gemini TTS 将博客转成 MP3 语音，适合生成摘要朗读、全文有声版或双人播客对话。"
+  }
 }

@@ -1,7 +1,7 @@
 {
   "id": "agricidaniel-claude-blog-blog-schema",
   "name": "blog-schema",
-  "description": "> Generate complete JSON-LD schema markup for blog posts with Article/BlogPosting, Person, Organization, BreadcrumbList, ImageObject, and optional FAQPage. Validates against Google requirements and warns about deprecated types. Use when user says \"schema\", \"blog schema\", \"json-ld\", \"structured data\", \"schema markup\", \"generate schema\".",
+  "description": "> Generate JSON-LD for ONE blog post (BlogPosting with Person, Organization, BreadcrumbList, ImageObject, VideoObject; FAQPage only as optional entity markup) in a single @graph, and check it against Google's current structured data support. Use when the user says \"generate schema\", \"json-ld for this post\", \"blog schema\". Not for auditing schema across a whole site or other schema types (claude-seo seo-schema), not for product pages, and not a promise of rich results: FAQ rich results ended 2026",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/AgriciDaniel/claude-blog/blob/main/skills/blog-schema/SKILL.md",
     "path": "skills/blog-schema/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-13T10:11:45.441Z",
-    "stars": 2374,
+    "discovered_at": "2026-10-13T18:39:39.138Z",
+    "stars": 2379,
     "language": "Python",
-    "pushed_at": "2026-10-09T04:25:17Z",
+    "pushed_at": "2026-10-13T18:39:20Z",
     "license": "MIT"
-  },
-  "summary_zh": "用于为博客文章生成符合 Google 要求的完整 JSON-LD 结构化数据，适合提升搜索引擎识别与展示效果。"
+  }
 }

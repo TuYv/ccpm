@@ -1,0 +1,25 @@
+{
+  "id": "tt-a1i-archify-archify-tuning",
+  "name": "archify-tuning",
+  "description": "Improve Archify diagram accuracy, visual quality and complete authoring speed with fewer repairs. Use for generation experiments or evaluating changes to layout, routing, diagnostics, authoring instructions and acceptance rules against actual diagrams and agent traces.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tt-a1i",
+  "install_path": ".claude/skills/archify-tuning/SKILL.md",
+  "source": {
+    "repo": "tt-a1i/archify",
+    "url": "https://github.com/tt-a1i/archify/blob/main/.agents/skills/archify-tuning/SKILL.md",
+    "path": ".agents/skills/archify-tuning/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-13T17:52:51.613Z",
+    "stars": 82970,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-13T17:29:38Z",
+    "license": "MIT"
+  }
+}

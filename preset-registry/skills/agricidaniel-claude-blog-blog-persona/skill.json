@@ -1,7 +1,7 @@
 {
   "id": "agricidaniel-claude-blog-blog-persona",
   "name": "blog-persona",
-  "description": "> Create and manage writing personas with NNGroup 4-dimension tone framework (Funny-Serious, Formal-Casual, Respectful-Irreverent, Enthusiastic-Matter-of-fact). Personas define readability targets, sentence length distribution, vocabulary tier, contraction frequency, and summary box label. Used by blog-write and blog-rewrite to enforce consistent voice. Use when user says \"persona\", \"voice\", \"tone\", \"writing style\", \"brand voice\", \"create persona\", \"use persona\".",
+  "description": "> Create and manage writing personas with NNGroup 4-dimension tone framework (Funny-Serious, Formal-Casual, Respectful-Irreverent, Enthusiastic-Matter-of-fact). Personas define readability targets, sentence length distribution, vocabulary tier, contraction frequency, and summary box label. Used by blog-write and blog-rewrite to enforce consistent voice. Use when the user says \"create persona\", \"use persona\", \"list personas\", or wants tone sliders and writing rules saved as structured JSON. Not f",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/AgriciDaniel/claude-blog/blob/main/skills/blog-persona/SKILL.md",
     "path": "skills/blog-persona/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-13T10:11:44.975Z",
-    "stars": 2374,
+    "discovered_at": "2026-10-13T18:39:38.619Z",
+    "stars": 2379,
     "language": "Python",
-    "pushed_at": "2026-10-09T04:25:17Z",
+    "pushed_at": "2026-10-13T18:39:20Z",
     "license": "MIT"
-  },
-  "summary_zh": "一款基于四维语气框架管理写作人设的工具，用于统一博客创作与改写风格，保持品牌声音一致。"
+  }
 }

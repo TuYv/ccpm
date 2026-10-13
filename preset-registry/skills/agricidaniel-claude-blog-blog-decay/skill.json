@@ -1,7 +1,7 @@
 {
   "id": "agricidaniel-claude-blog-blog-decay",
   "name": "blog-decay",
-  "description": "Detect content decay from Google Search Console exports by comparing current and previous page performance, flagging quarter-over-quarter traffic drops, dropped pages, and refresh, consolidate, prune, or query-shift actions. Use when the user says \"/blog decay\", \"content decay\", \"traffic drop\", \"QoQ decline\", \"GSC decay\", or \"refresh declining posts\".",
+  "description": "Compare two Google Search Console page exports (current vs previous period) to flag pages whose clicks or impressions fell by a chosen threshold, with a triage hint (refresh, query shift, consolidate, prune). The 20% default is a screening heuristic, not proof of decay. Use for \"/blog decay\", \"content decay\", \"QoQ decline\", \"refresh declining posts\". Needs two GSC exports; not for diagnosing a single traffic drop live (blog-google) or rewriting posts (blog-rewrite).",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/AgriciDaniel/claude-blog/blob/main/skills/blog-decay/SKILL.md",
     "path": "skills/blog-decay/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-13T10:11:42.949Z",
-    "stars": 2374,
+    "discovered_at": "2026-10-13T18:39:36.514Z",
+    "stars": 2379,
     "language": "Python",
-    "pushed_at": "2026-10-09T04:25:17Z",
+    "pushed_at": "2026-10-13T18:39:20Z",
     "license": "MIT"
-  },
-  "summary_zh": "通过对比 Google Search Console 前后期数据识别内容衰退，适合定位流量下滑页面并制定更新、合并或删减策略。"
+  }
 }
