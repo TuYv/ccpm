@@ -1,7 +1,7 @@
 {
   "id": "tomgranot-hubspot-admin-skills-cleanup-deals",
   "name": "cleanup-deals",
-  "description": "Standardize deal pipelines, remove test deals, and address deals with missing amounts or close dates. Coordinates with Salesforce sync if applicable.",
+  "description": "Find past-due, stale, incomplete, unexplained-loss, and likely test deals, then route each owner's flagged deals to them as one review task. Never bulk-closes deals; deletes only test deals a person marked in a reviewed CSV. Skips Salesforce-synced deals.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/TomGranot/hubspot-admin-skills/blob/main/skills/cleanup-deals/SKILL.md",
     "path": "skills/cleanup-deals/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-13T03:13:27.538Z",
+    "discovered_at": "2026-10-13T10:20:45.454Z",
     "stars": 75,
     "language": "Python",
-    "pushed_at": "2026-10-12T18:17:52Z",
+    "pushed_at": "2026-10-13T07:01:49Z",
     "license": "MIT"
-  },
-  "summary_zh": "用于规范销售商机流程，清理测试数据，并补全缺失金额或成交日期，适合与 Salesforce 同步的数据治理场景。"
+  }
 }
