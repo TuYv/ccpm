@@ -1,0 +1,25 @@
+{
+  "id": "omnigent-ai-omnigent-draft-release-notes",
+  "name": "draft-release-notes",
+  "description": "Draft or refresh Omnigent package release notes for the next version using the existing GitHub Actions preview, merged PR material, and release-note composer. Use when preparing release highlights before a tag exists or reviewing a release-note draft; does not cut or publish a release.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "omnigent-ai",
+  "install_path": ".claude/skills/draft-release-notes/SKILL.md",
+  "source": {
+    "repo": "omnigent-ai/omnigent",
+    "url": "https://github.com/omnigent-ai/omnigent/blob/main/.claude/skills/draft-release-notes/SKILL.md",
+    "path": ".claude/skills/draft-release-notes/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-14T02:09:12.613Z",
+    "stars": 10788,
+    "language": "Python",
+    "pushed_at": "2026-10-14T01:58:55Z",
+    "license": "Apache-2.0"
+  }
+}
