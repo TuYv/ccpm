@@ -1,0 +1,25 @@
+{
+  "id": "tencent-ai-infra-guard-memory-rag-poisoning-detection",
+  "name": "memory-rag-poisoning-detection",
+  "description": "Detect persistent-memory poisoning and RAG/knowledge-base contamination via dialogue testing. Use when the agent has long-term memory, a user/preference store, or writes to a retrievable knowledge base.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Tencent",
+  "install_path": ".claude/skills/memory-rag-poisoning-detection/SKILL.md",
+  "source": {
+    "repo": "Tencent/AI-Infra-Guard",
+    "url": "https://github.com/Tencent/AI-Infra-Guard/blob/main/agent-scan/agent_scan/prompt/skills/memory-rag-poisoning-detection/SKILL.md",
+    "path": "agent-scan/agent_scan/prompt/skills/memory-rag-poisoning-detection/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-14T08:46:16.891Z",
+    "stars": 6860,
+    "language": "Python",
+    "pushed_at": "2026-10-14T03:13:13Z",
+    "license": "Apache-2.0"
+  }
+}
