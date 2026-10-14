@@ -15,12 +15,19 @@ compatibility: Designed for Claude Code or similar AI coding agents working on G
 allowed-tools: Read Edit Write Glob Grep Bash(go:*) Bash(gofmt:*) Bash(benchstat:*)
 metadata:
   author: eduardo-sl
-  version: "1.2.1"
+  version: "1.2.3"
 ---
 
 # Go Performance Review
 
 Profile first, optimize second. Never optimize without a benchmark proving the problem.
+
+Detailed reference material, loaded on demand:
+
+- `references/logging.md` — slog vs zap/zerolog decision table, slog with a
+  zap backend, logging anti-patterns in hot paths.
+
+Read a reference file only when the summary below is not enough.
 
 ## 1. Allocation Reduction
 
@@ -72,7 +79,7 @@ var users []User // starts at 0, grows via doubling
 
 ```go
 var bufPool = sync.Pool{
-    New: func() interface{} {
+    New: func() any {
         return new(bytes.Buffer)
     },
 }
@@ -145,23 +152,23 @@ ALWAYS write benchmarks before and after optimization:
 
 ```go
 func BenchmarkFoo(b *testing.B) {
-    // Setup outside the loop
-    input := generateInput()
-
-    b.ResetTimer()
-    for i := 0; i < b.N; i++ {
-        result = Foo(input) // assign to package-level var to prevent elision
+    input := generateInput() // setup runs once, outside the timed loop
+    b.ReportAllocs()
+    for b.Loop() {           // Go 1.24+: no ResetTimer, no sink variable
+        Foo(input)
     }
 }
-
-// Package-level var prevents compiler from eliminating the call
-var result string
 ```
+
+`b.Loop()` times only the loop body and keeps arguments and results alive,
+so the compiler cannot eliminate the call. Below Go 1.24, use
+`for range b.N` with `b.ResetTimer()` after setup and assign results to a
+package-level sink.
 
 Run benchmarks with memory profiling:
 
 ```bash
-go test -bench=BenchmarkFoo -benchmem -count=5 ./...
+go test -bench=BenchmarkFoo -benchmem -count=10 ./...
 ```
 
 Compare before/after with `benchstat`:
@@ -208,75 +215,11 @@ its own loopback or internal-network listener.
 
 ## 6. High-Throughput Logging
 
-`log/slog` is the right default for most services. But when benchmarks show
-logging is a bottleneck (high-frequency hot paths, >100k log lines/sec),
-consider zero-allocation loggers.
-
-### When slog is not enough:
-
-```go
-// slog allocates per log call — fine for most services
-slog.Info("request handled",
-    slog.String("method", method),
-    slog.Int("status", status),
-)
-
-// In hot paths where benchmarks prove logging is a bottleneck,
-// use zap's zero-allocation core:
-logger, _ := zap.NewProduction()
-logger.Info("request handled",
-    zap.String("method", method),
-    zap.Int("status", status),
-)
-// zap avoids allocations by using a field pool and typed fields
-```
-
-### Decision tree:
-
-| Scenario | Logger |
-|---|---|
-| General service logging | `log/slog` (stdlib, zero dependencies) |
-| High-frequency hot path (>100k lines/sec) | `go.uber.org/zap` (zero-alloc) |
-| Extreme throughput with JSON | `github.com/rs/zerolog` (zero-alloc JSON) |
-
-### Best of both worlds — use zap as slog backend:
-
-```go
-// Use slog API everywhere, backed by zap's performance
-zapLogger, _ := zap.NewProduction()
-slogHandler := zapslog.NewHandler(zapLogger.Core(), nil)
-logger := slog.New(slogHandler)
-
-// Code uses standard slog API — can swap backend without changing callers
-logger.Info("request handled",
-    slog.String("method", method),
-    slog.Int("status", status),
-)
-```
-
-### Logging anti-patterns in hot paths:
-
-```go
-// ❌ Bad — logging inside tight loop
-for _, item := range millions {
-    slog.Info("processing item", slog.String("id", item.ID))
-    process(item)
-}
-
-// ✅ Good — sample or batch log
-for i, item := range millions {
-    process(item)
-    if i%10000 == 0 {
-        slog.Info("progress", slog.Int("processed", i), slog.Int("total", len(millions)))
-    }
-}
-
-// ✅ Good — log summary after loop
-slog.Info("batch complete", slog.Int("count", len(millions)))
-```
-
-NEVER switch loggers without a benchmark proving the need.
-`slog` is fast enough for the vast majority of Go services.
+`log/slog` is the default. Switch only when a benchmark shows logging in
+the profile, and then keep the slog API with a faster backend (zap's
+`zapslog` handler) so callers never change. In hot loops, log progress
+every N items or a summary after the loop — never once per item.
+Decision table and examples: `references/logging.md`.
 
 ## 7. Common Anti-Patterns
 
@@ -287,7 +230,7 @@ NEVER switch loggers without a benchmark proving the need.
 | Slice without preallocation | `make([]T, 0, n)` |
 | Map without capacity hint | `make(map[K]V, n)` |
 | `regexp.Compile` inside function | Compile once at package level |
-| `json.Marshal` in hot path | Use code-gen (`easyjson`, `sonic`) |
+| `json.Marshal` in hot path | Profile first: since Go 1.27 `encoding/json` runs on the faster v2 engine; code-gen (`easyjson`) only if JSON still dominates |
 | Logging in tight loop | Batch or sample |
 | `defer` in very tight inner loop | Manual cleanup (rare, benchmark first) |
 
