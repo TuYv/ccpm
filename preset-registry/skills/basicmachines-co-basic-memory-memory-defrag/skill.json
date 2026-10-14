@@ -1,7 +1,7 @@
 {
   "id": "basicmachines-co-basic-memory-memory-defrag",
   "name": "memory-defrag",
-  "description": "Defragment agent memory files: split bloated files, merge duplicates, remove stale info, restructure the hierarchy. Use when memory files grow unwieldy or redundant; run weekly or on demand.",
+  "description": "Defragment a Basic Memory project: split bloated notes, consolidate scattered facts, resolve contradictions, retire stale content. Plans first; deletes only when told. Run weekly or on demand.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/basicmachines-co/basic-memory/blob/main/skills/memory-defrag/SKILL.md",
     "path": "skills/memory-defrag/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-14T14:01:24.952Z",
-    "stars": 4171,
+    "discovered_at": "2026-10-14T18:53:40.404Z",
+    "stars": 4174,
     "language": "Python",
-    "pushed_at": "2026-10-12T23:28:18Z",
+    "pushed_at": "2026-10-14T18:25:42Z",
     "license": "AGPL-3.0"
   }
 }

@@ -7,7 +7,7 @@ description: "Curate the Basic Memory graph: link orphan notes, propose typed re
 
 Maintain a healthy, well-connected knowledge graph. As notes accumulate, it pays to periodically organize, link, and curate the knowledge base so isolated notes become a connected graph.
 
-This skill curates the **knowledge graph** — the notes, relations, and tags that make up the knowledge base. (For hygiene on an agent's own memory *files* — splitting bloated files, pruning stale entries — see **memory-defrag**.)
+This skill curates the **knowledge graph** — the notes, relations, and tags that make up the knowledge base. (For the notes' content — splitting bloated notes, consolidating scattered facts, retiring stale entries — see **memory-defrag**.)
 
 ## When to Use
 
@@ -26,10 +26,14 @@ Orphans have no relations to other notes — they're islands in the graph.
 
 ```python
 # List notes, then read each to inspect its Relations section
-search_notes(query="*", page_size=50)
+search_notes(query="*", search_type="text", page_size=50)
 read_note(identifier="note-to-check")
 # Orphans have an empty (or missing) Relations section
 ```
+
+`query="*"` lists everything only with `search_type="text"`. A note whose body
+links to other notes, with wikilinks or ordinary Markdown links, is not an
+orphan even without a Relations section.
 
 If the `bm` CLI is available, `bm orphans` lists notes with no relations in one call.
 
@@ -74,6 +78,17 @@ edit_note(
 )
 ```
 
+`insert_after_section` needs the heading to exist, and orphans often have no
+`## Relations`. Then append the section instead:
+
+```python
+edit_note(
+    identifier="API Design Decisions",
+    operation="append",
+    content="\n## Relations\n- depends_on [[Rate Limiter]]",
+)
+```
+
 ### 3. Identify Similar / Duplicate Notes
 
 Find notes that may cover the same ground.
@@ -85,7 +100,8 @@ search_notes(query="topic keywords")
 ```
 
 **Actions for duplicates:**
-- **Merge** into a single comprehensive note, then redirect the loser with a relation
+- **Merge** into a single comprehensive note, then redirect the loser with a relation. If you delete the loser instead, links to it from other
+  notes stay as unresolved links; repoint them first
 - Link with `supersedes` / `updates` when one revises the other
 - **Differentiate** by adding context that clarifies each note's distinct focus
 
@@ -120,7 +136,7 @@ move_note(
 ### 5. Tag Consistency
 
 ```python
-search_notes(query="*", page_size=100)
+search_notes(query="*", search_type="text", page_size=100)
 # Inspect tag patterns across results
 ```
 

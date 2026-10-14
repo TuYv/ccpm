@@ -1,0 +1,25 @@
+{
+  "id": "basicmachines-co-basic-memory-memory-okf",
+  "name": "memory-okf",
+  "description": "Make a Basic Memory project ready for OKF v0.2 export by finding and fixing what blocks it. Use when preparing a project for OKF export, publishing, or handoff, or checking an OKF bundle.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "basicmachines-co",
+  "install_path": ".claude/skills/memory-okf/SKILL.md",
+  "source": {
+    "repo": "basicmachines-co/basic-memory",
+    "url": "https://github.com/basicmachines-co/basic-memory/blob/main/skills/memory-okf/SKILL.md",
+    "path": "skills/memory-okf/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-14T18:53:41.330Z",
+    "stars": 4174,
+    "language": "Python",
+    "pushed_at": "2026-10-14T18:25:42Z",
+    "license": "AGPL-3.0"
+  }
+}

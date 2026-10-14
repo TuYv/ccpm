@@ -23,18 +23,9 @@ Choose semantic records for facts/preferences, episodic records for events, and 
 Read [the detailed guide](references/detailed-guide.md) before executing this skill. It retains the complete procedure and reference material. Treat its safety, prerequisites, and validation requirements as mandatory. For focused work, load the relevant sections; for end-to-end work, read the guide completely.
 
 ## When to Use
-- User mentions or implies: agent memory
-- User mentions or implies: long-term memory
-- User mentions or implies: memory systems
-- User mentions or implies: remember across sessions
-- User mentions or implies: memory retrieval
-- User mentions or implies: episodic memory
-- User mentions or implies: semantic memory
-- User mentions or implies: vector store
-- User mentions or implies: rag
-- User mentions or implies: langmem
-- User mentions or implies: memgpt
-- User mentions or implies: conversation history
+- Design memory namespaces and retention for an agent serving distinct tenants or users.
+- Diagnose retrieval of stale, conflicting or unauthorized conversation records.
+- Plan an embedding/store migration while preserving source records and verifying isolation.
 
 ## Example
 
