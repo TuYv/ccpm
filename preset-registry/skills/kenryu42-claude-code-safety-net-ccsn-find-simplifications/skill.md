@@ -82,7 +82,7 @@ This repo has no notes system and a solo maintainer. The deliverable is a report
 - **What we give up**: the strongest counterargument, stated honestly — including any behavior change and why it stays within the mode contract.
 - **Blast radius**: tests, docs, fixtures, contract rows, and snapshots that would change with it.
 
-Do not create new docs, directories, dependencies, or process files to hold findings — placement of new repo structure is the maintainer's call. Do not implement removals during a survey unless the user asked for fixes; when they do, implement the smallest change per candidate, keep `tests/` mirroring `src/`, and follow the Red–Green rule for any behavior change: the failing expectation (a contract row or stated assertion) lands first, and re-recording a snapshot or editing the verdict table is never the first step.
+Do not create new docs, directories, dependencies, or process files to hold findings — placement of new repo structure is the maintainer's call. Do not implement removals during a survey unless the user asked for fixes; when they do, implement the smallest change per candidate, keep `tests/` mirroring `src/`. A candidate that changes a verdict or output lands its failing contract row or assertion first; a pure removal adds no test and is proven by the unchanged behavior suites plus a before/after `explain` diff.
 
 ## Validation
 

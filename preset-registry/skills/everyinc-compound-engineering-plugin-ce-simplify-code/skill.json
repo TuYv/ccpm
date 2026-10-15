@@ -1,7 +1,7 @@
 {
   "id": "everyinc-compound-engineering-plugin-ce-simplify-code",
   "name": "ce-simplify-code",
-  "description": "Simplify settled, recently changed code for clarity, reuse, quality, and efficiency while preserving behavior. Use after implementation and before review; use ce-debug for bugs.",
+  "description": "Simplify code for clarity, reuse, quality, and efficiency while preserving behavior, and prune tests and comments that carry no value. Use after implementation and before review, or to audit tests or comments in any part of a repo; use ce-debug for bugs.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/EveryInc/compound-engineering-plugin/blob/main/skills/ce-simplify-code/SKILL.md",
     "path": "skills/ce-simplify-code/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-15T01:37:39.990Z",
-    "stars": 25529,
+    "discovered_at": "2026-10-15T06:58:43.029Z",
+    "stars": 25530,
     "language": "TypeScript",
-    "pushed_at": "2026-10-15T01:28:11Z",
+    "pushed_at": "2026-10-15T06:08:38Z",
     "license": "MIT"
   }
 }
