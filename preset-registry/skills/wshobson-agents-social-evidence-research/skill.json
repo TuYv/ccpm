@@ -1,0 +1,25 @@
+{
+  "id": "wshobson-agents-social-evidence-research",
+  "name": "social-evidence-research",
+  "description": "Research public discussion on social platforms and keep every report claim tied to the source material that supports it. Use when researching or comparing how a product, event, or topic is discussed across social platforms or supplied social exports, when turning search results into a cited report, or when auditing a social research report for discovery-only evidence, double-counted reposts, misattributed comments, claims that go beyond the sample, or hidden access gaps.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "wshobson",
+  "install_path": ".claude/skills/social-evidence-research/SKILL.md",
+  "source": {
+    "repo": "wshobson/agents",
+    "url": "https://github.com/wshobson/agents/blob/main/plugins/content-marketing/skills/social-evidence-research/SKILL.md",
+    "path": "plugins/content-marketing/skills/social-evidence-research/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-15T17:16:30.677Z",
+    "stars": 40844,
+    "language": "Python",
+    "pushed_at": "2026-10-15T15:11:55Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "robinebers-openusage-build-and-run-macos-app",
+  "name": "build-and-run-macos-app",
+  "description": "Slash command that creates or updates the project-local macOS `script/build_and_run.sh` and uses it as the default build/run entrypoint. Invoke explicitly with /build-and-run-macos-app — this skill never self-triggers.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "robinebers",
+  "install_path": ".claude/skills/build-and-run-macos-app/SKILL.md",
+  "source": {
+    "repo": "robinebers/openusage",
+    "url": "https://github.com/robinebers/openusage/blob/main/.agents/skills/build-and-run-macos-app/SKILL.md",
+    "path": ".agents/skills/build-and-run-macos-app/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-15T18:06:04.801Z",
+    "stars": 4362,
+    "language": "Swift",
+    "pushed_at": "2026-10-15T04:53:58Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "robinebers-openusage-signing-entitlements",
+  "name": "signing-entitlements",
+  "description": "Inspect signing, entitlements, hardened runtime, and Gatekeeper issues for macOS apps. Use when asked to diagnose code signing failures, missing entitlements, sandbox problems, notarization prerequisites, or trust-policy launch errors.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "robinebers",
+  "install_path": ".claude/skills/signing-entitlements/SKILL.md",
+  "source": {
+    "repo": "robinebers/openusage",
+    "url": "https://github.com/robinebers/openusage/blob/main/.agents/skills/signing-entitlements/SKILL.md",
+    "path": ".agents/skills/signing-entitlements/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-15T18:06:07.819Z",
+    "stars": 4362,
+    "language": "Swift",
+    "pushed_at": "2026-10-15T04:53:58Z",
+    "license": "MIT"
+  }
+}

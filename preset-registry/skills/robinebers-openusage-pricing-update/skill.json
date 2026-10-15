@@ -1,0 +1,25 @@
+{
+  "id": "robinebers-openusage-pricing-update",
+  "name": "pricing-update",
+  "description": "Sync OpenUsage's pricing supplement with Cursor's published model pricing. Pulls https://cursor.com/docs/models-and-pricing.md, diffs it against pricing_supplement.json, updates entries/aliases/multipliers, validates, and opens a PR. Use when Cursor adds or re-prices models, a spend tile shows a warning triangle for an unpriced model, or a periodic pricing check is due.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "robinebers",
+  "install_path": ".claude/skills/pricing-update/SKILL.md",
+  "source": {
+    "repo": "robinebers/openusage",
+    "url": "https://github.com/robinebers/openusage/blob/main/.agents/skills/pricing-update/SKILL.md",
+    "path": ".agents/skills/pricing-update/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-15T18:06:07.474Z",
+    "stars": 4362,
+    "language": "Swift",
+    "pushed_at": "2026-10-15T04:53:58Z",
+    "license": "MIT"
+  }
+}

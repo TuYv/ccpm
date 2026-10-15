@@ -1,0 +1,25 @@
+{
+  "id": "ollygarden-opentelemetry-agent-skills-otel-profiles",
+  "name": "otel-profiles",
+  "description": "OpenTelemetry profiles signal and the eBPF profiler (otelcol-ebpf-profiler, `profiling` receiver). Use when setting up continuous profiling with OpenTelemetry, deploying the eBPF profiler on Linux hosts, Docker, or Kubernetes (DaemonSet, kind, k3d), building a profiles pipeline, sending OTLP profiles to Pyroscope, Grafana Cloud Profiles, or another backend, getting flame graphs from OTel, enabling off-CPU profiling, or debugging profiler errors about tracefs, PID namespaces, missing pods, or the",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ollygarden",
+  "install_path": ".claude/skills/otel-profiles/SKILL.md",
+  "source": {
+    "repo": "ollygarden/opentelemetry-agent-skills",
+    "url": "https://github.com/ollygarden/opentelemetry-agent-skills/blob/main/skills/otel-profiles/SKILL.md",
+    "path": "skills/otel-profiles/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-15T18:09:27.944Z",
+    "stars": 110,
+    "language": "Go",
+    "pushed_at": "2026-10-15T12:50:10Z",
+    "license": "Apache-2.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "ollygarden-opentelemetry-agent-skills-otel-span-events-to-logs-migration",
+  "name": "otel-span-events-to-logs-migration",
+  "description": "Migrate OpenTelemetry Span Events (AddEvent, RecordException, and language equivalents) to the Logs API following the accepted OTEP 4430 migration plan. Use when migrating instrumentation from span events to log-based events, reviewing code that still uses AddEvent or RecordException, or planning a codebase migration while preserving trace correlation.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ollygarden",
+  "install_path": ".claude/skills/otel-span-events-to-logs-migration/SKILL.md",
+  "source": {
+    "repo": "ollygarden/opentelemetry-agent-skills",
+    "url": "https://github.com/ollygarden/opentelemetry-agent-skills/blob/main/skills/otel-span-events-to-logs-migration/SKILL.md",
+    "path": "skills/otel-span-events-to-logs-migration/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-15T18:09:28.789Z",
+    "stars": 110,
+    "language": "Go",
+    "pushed_at": "2026-10-15T12:50:10Z",
+    "license": "Apache-2.0"
+  }
+}

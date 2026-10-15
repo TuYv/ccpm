@@ -1,0 +1,25 @@
+{
+  "id": "ollygarden-opentelemetry-agent-skills-otel-dotnet",
+  "name": "otel-dotnet",
+  "description": "OpenTelemetry in .NET — DI/builder SDK setup (OpenTelemetry.Extensions.Hosting, AddOpenTelemetry, UseOtlpExporter, OpenTelemetrySdk.Create), native .NET instrumentation APIs (ActivitySource, System.Diagnostics.Metrics Meter) plus logging abstractions (ILogger), zero-code CLR-profiler agent, contrib instrumentation packages, performance tuning, and breaking-change audits. Use when adding, reviewing, or configuring OpenTelemetry in a .NET or ASP.NET Core service. Triggers on \"setup otel in dotnet\"",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ollygarden",
+  "install_path": ".claude/skills/otel-dotnet/SKILL.md",
+  "source": {
+    "repo": "ollygarden/opentelemetry-agent-skills",
+    "url": "https://github.com/ollygarden/opentelemetry-agent-skills/blob/main/skills/otel-dotnet/SKILL.md",
+    "path": "skills/otel-dotnet/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-15T18:09:27.032Z",
+    "stars": 110,
+    "language": "Go",
+    "pushed_at": "2026-10-15T12:50:10Z",
+    "license": "Apache-2.0"
+  }
+}

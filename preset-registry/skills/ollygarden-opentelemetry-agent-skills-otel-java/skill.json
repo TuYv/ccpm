@@ -1,0 +1,25 @@
+{
+  "id": "ollygarden-opentelemetry-agent-skills-otel-java",
+  "name": "otel-java",
+  "description": "OpenTelemetry in Java — Javaagent zero-code instrumentation, Spring Boot Starter, manual autoconfigure SDK, declarative YAML configuration, BOM dependency management, sensitive-data capture and redaction (url.query, headers, request parameters, SQL sanitization). Use when adding, reviewing, or configuring OpenTelemetry in a Java service. Triggers on \"setup otel in java\", \"java telemetry\", \"javaagent\", \"Spring Boot otel\", \"GlobalOpenTelemetry\", \"AutoConfiguredOpenTelemetrySdk\", \"TracerProvider ja",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ollygarden",
+  "install_path": ".claude/skills/otel-java/SKILL.md",
+  "source": {
+    "repo": "ollygarden/opentelemetry-agent-skills",
+    "url": "https://github.com/ollygarden/opentelemetry-agent-skills/blob/main/skills/otel-java/SKILL.md",
+    "path": "skills/otel-java/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-15T18:09:27.375Z",
+    "stars": 110,
+    "language": "Go",
+    "pushed_at": "2026-10-15T12:50:10Z",
+    "license": "Apache-2.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "robinebers-openusage-appkit-interop",
+  "name": "appkit-interop",
+  "description": "Decide when and how to bridge a macOS app from SwiftUI into AppKit. Use when implementing NSViewRepresentable or NSViewControllerRepresentable, accessing NSWindow or the responder chain, presenting panels, customizing menus, or handling desktop behaviors that SwiftUI does not model cleanly.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "robinebers",
+  "install_path": ".claude/skills/appkit-interop/SKILL.md",
+  "source": {
+    "repo": "robinebers/openusage",
+    "url": "https://github.com/robinebers/openusage/blob/main/.agents/skills/appkit-interop/SKILL.md",
+    "path": ".agents/skills/appkit-interop/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-15T18:06:04.638Z",
+    "stars": 4362,
+    "language": "Swift",
+    "pushed_at": "2026-10-15T04:53:58Z",
+    "license": "MIT"
+  }
+}

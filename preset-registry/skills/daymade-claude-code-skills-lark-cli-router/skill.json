@@ -1,7 +1,7 @@
 {
   "id": "daymade-claude-code-skills-lark-cli-router",
   "name": "lark-cli-router",
-  "description": ">- Routes any Feishu/Lark/Doubao operation through the version-matched lark-cli domain guide embedded in the installed CLI, then executes and verifies the task. Use for 飞书/Lark/Doubao docs, drive, sheets, Base, wiki, minutes, meetings, calendar, IM, mail, tasks, approval, apps, auth/scope, resource URLs or tokens, and lark-cli troubleshooting. This is the single Lark entry point; use ima-copilot instead for Tencent IMA.",
+  "description": ">- Routes any Feishu/Lark/Doubao operation, including recording lookup by date (按日期找会议录音), through the version-matched lark-cli domain guide embedded in the installed CLI, then executes and verifies the task. Use for 飞书/Lark/Doubao docs, drive, sheets, Base, wiki, minutes, meetings, calendar, IM, mail, tasks, approval, apps, auth/scope, resource URLs or tokens, and lark-cli troubleshooting. This is the single Lark entry point; use ima-copilot instead for Tencent IMA.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-claude-code/lark-cli-router/SKILL.md",
     "path": "daymade-claude-code/lark-cli-router/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-15T12:27:15.813Z",
-    "stars": 1464,
+    "discovered_at": "2026-10-15T18:01:12.015Z",
+    "stars": 1463,
     "language": "Python",
-    "pushed_at": "2026-10-15T10:45:59Z",
+    "pushed_at": "2026-10-15T17:05:15Z",
     "license": "MIT"
   }
 }

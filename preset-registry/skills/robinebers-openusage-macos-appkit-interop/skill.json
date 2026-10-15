@@ -1,0 +1,25 @@
+{
+  "id": "robinebers-openusage-macos-appkit-interop",
+  "name": "macos-appkit-interop",
+  "description": "Bridge macOS SwiftUI into AppKit narrowly. Use when implementing representables, reaching NSWindow or panels, handling menus, or using the responder chain.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "robinebers",
+  "install_path": ".claude/skills/macos-appkit-interop/SKILL.md",
+  "source": {
+    "repo": "robinebers/openusage",
+    "url": "https://github.com/robinebers/openusage/blob/main/.agents/skills/macos-appkit-interop/SKILL.md",
+    "path": ".agents/skills/macos-appkit-interop/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-15T18:06:05.471Z",
+    "stars": 4362,
+    "language": "Swift",
+    "pushed_at": "2026-10-15T04:53:58Z",
+    "license": "MIT"
+  }
+}

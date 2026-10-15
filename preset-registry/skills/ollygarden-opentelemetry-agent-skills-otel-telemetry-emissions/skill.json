@@ -1,0 +1,25 @@
+{
+  "id": "ollygarden-opentelemetry-agent-skills-otel-telemetry-emissions",
+  "name": "otel-telemetry-emissions",
+  "description": "Version-pinned inventory of the telemetry (spans, metrics, logs, attributes) emitted by OpenTelemetry collector components and SDK instrumentation packages. Use when working with a covered component — what it emits at a given version, or how emission changed across versions — and when upgrading a component or SDK version, to see the telemetry after the change.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ollygarden",
+  "install_path": ".claude/skills/otel-telemetry-emissions/SKILL.md",
+  "source": {
+    "repo": "ollygarden/opentelemetry-agent-skills",
+    "url": "https://github.com/ollygarden/opentelemetry-agent-skills/blob/main/skills/otel-telemetry-emissions/SKILL.md",
+    "path": "skills/otel-telemetry-emissions/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-15T18:09:28.949Z",
+    "stars": 110,
+    "language": "Go",
+    "pushed_at": "2026-10-15T12:50:10Z",
+    "license": "Apache-2.0"
+  }
+}

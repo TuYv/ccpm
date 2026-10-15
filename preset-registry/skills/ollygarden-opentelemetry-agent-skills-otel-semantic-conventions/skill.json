@@ -1,0 +1,25 @@
+{
+  "id": "ollygarden-opentelemetry-agent-skills-otel-semantic-conventions",
+  "name": "otel-semantic-conventions",
+  "description": "OpenTelemetry semantic convention lookup and naming guidance. Use when selecting released semantic convention groups, attributes, or span naming rules, when checking semantic convention compliance, or checking which semantic-conventions version a language SDK's semconv package exposes.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ollygarden",
+  "install_path": ".claude/skills/otel-semantic-conventions/SKILL.md",
+  "source": {
+    "repo": "ollygarden/opentelemetry-agent-skills",
+    "url": "https://github.com/ollygarden/opentelemetry-agent-skills/blob/main/skills/otel-semantic-conventions/SKILL.md",
+    "path": "skills/otel-semantic-conventions/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-15T18:09:28.608Z",
+    "stars": 110,
+    "language": "Go",
+    "pushed_at": "2026-10-15T12:50:10Z",
+    "license": "Apache-2.0"
+  }
+}

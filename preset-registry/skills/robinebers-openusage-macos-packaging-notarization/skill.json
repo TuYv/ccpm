@@ -1,0 +1,25 @@
+{
+  "id": "robinebers-openusage-macos-packaging-notarization",
+  "name": "macos-packaging-notarization",
+  "description": "Prepare macOS packaging and notarization workflows. Use when archiving apps, validating bundles, or explaining distribution-only failures.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "robinebers",
+  "install_path": ".claude/skills/macos-packaging-notarization/SKILL.md",
+  "source": {
+    "repo": "robinebers/openusage",
+    "url": "https://github.com/robinebers/openusage/blob/main/.agents/skills/macos-packaging-notarization/SKILL.md",
+    "path": ".agents/skills/macos-packaging-notarization/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-15T18:06:05.925Z",
+    "stars": 4362,
+    "language": "Swift",
+    "pushed_at": "2026-10-15T04:53:58Z",
+    "license": "MIT"
+  }
+}

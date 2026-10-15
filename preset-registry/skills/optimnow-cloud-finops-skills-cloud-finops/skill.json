@@ -1,0 +1,25 @@
+{
+  "id": "optimnow-cloud-finops-skills-cloud-finops",
+  "name": "cloud-finops",
+  "description": "> Expert FinOps guidance for cloud, AI, and SaaS technology spend. Covers AI cost management, agentic FinOps, GenAI capacity planning, self-hosted vs managed inference, Anthropic billing, open-weight vendor APIs (DeepSeek, Qwen, Kimi, GLM), AWS (EC2, Bedrock, SageMaker, Savings Plans, CUR), Azure (reservations, AHB, OpenAI PTUs), GCP (Vertex AI, BigQuery), OCI, Kubernetes cost allocation, data platforms (Databricks, Fabric F-SKUs, Snowflake), tagging governance, SaaS management (SAM, shadow IT),",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "OptimNow",
+  "install_path": ".claude/skills/cloud-finops/SKILL.md",
+  "source": {
+    "repo": "OptimNow/cloud-finops-skills",
+    "url": "https://github.com/OptimNow/cloud-finops-skills/blob/main/plugins/cloud-finops/skills/cloud-finops/SKILL.md",
+    "path": "plugins/cloud-finops/skills/cloud-finops/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-15T18:10:04.361Z",
+    "stars": 63,
+    "language": "Python",
+    "pushed_at": "2026-10-15T16:06:10Z",
+    "license": null
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "robinebers-openusage-build-run-debug",
+  "name": "build-run-debug",
+  "description": "Build, run, and debug local macOS apps and desktop executables using shell-first Xcode and Swift workflows. Use when asked to build a Mac app, launch it, diagnose compiler or linker failures, inspect startup problems, or debug desktop-only runtime issues.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "robinebers",
+  "install_path": ".claude/skills/build-run-debug/SKILL.md",
+  "source": {
+    "repo": "robinebers/openusage",
+    "url": "https://github.com/robinebers/openusage/blob/main/.agents/skills/build-run-debug/SKILL.md",
+    "path": ".agents/skills/build-run-debug/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-15T18:06:04.983Z",
+    "stars": 4362,
+    "language": "Swift",
+    "pushed_at": "2026-10-15T04:53:58Z",
+    "license": "MIT"
+  }
+}

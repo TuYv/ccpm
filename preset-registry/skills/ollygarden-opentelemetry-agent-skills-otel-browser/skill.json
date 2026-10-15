@@ -1,0 +1,25 @@
+{
+  "id": "ollygarden-opentelemetry-agent-skills-otel-browser",
+  "name": "otel-browser",
+  "description": "OpenTelemetry browser/RUM mechanics for SPAs and MPAs. Use for “browser OTel,” “frontend observability,” “Web Vitals,” `sdk-trace-web`, `WebTracerProvider`, `browser-sdk`, browser instrumentations, page-load or route tracing, sessions, clicks, console capture, JavaScript errors, or frontend-to-backend trace correlation. Browser telemetry is privacy- and volume-sensitive, and experimental packages move quickly. Not for Node.js service instrumentation or Collector-only configuration.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ollygarden",
+  "install_path": ".claude/skills/otel-browser/SKILL.md",
+  "source": {
+    "repo": "ollygarden/opentelemetry-agent-skills",
+    "url": "https://github.com/ollygarden/opentelemetry-agent-skills/blob/main/skills/otel-browser/SKILL.md",
+    "path": "skills/otel-browser/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-15T18:09:26.325Z",
+    "stars": 110,
+    "language": "Go",
+    "pushed_at": "2026-10-15T12:50:10Z",
+    "license": "Apache-2.0"
+  }
+}

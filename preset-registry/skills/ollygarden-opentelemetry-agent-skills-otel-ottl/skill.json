@@ -1,0 +1,25 @@
+{
+  "id": "ollygarden-opentelemetry-agent-skills-otel-ottl",
+  "name": "otel-ottl",
+  "description": "OpenTelemetry Transformation Language (OTTL) expert for writing and debugging telemetry transformations in the OpenTelemetry Collector. Use when authoring or reviewing `transform`, `filter`, `tail_sampling` processor configs or `routing` connector configs, debugging OTTL syntax or semantics, transforming traces, metrics, logs, or profiles, or converting data-processing requirements into OTTL statements.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ollygarden",
+  "install_path": ".claude/skills/otel-ottl/SKILL.md",
+  "source": {
+    "repo": "ollygarden/opentelemetry-agent-skills",
+    "url": "https://github.com/ollygarden/opentelemetry-agent-skills/blob/main/skills/otel-ottl/SKILL.md",
+    "path": "skills/otel-ottl/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-15T18:09:27.778Z",
+    "stars": 110,
+    "language": "Go",
+    "pushed_at": "2026-10-15T12:50:10Z",
+    "license": "Apache-2.0"
+  }
+}

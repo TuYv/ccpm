@@ -1,0 +1,25 @@
+{
+  "id": "nateherkai-herk-edit-kit-edit-video",
+  "name": "edit-video",
+  "description": "Edit a raw talking-head video through transcription, silence trimming, mistake review, visual storytelling, motion graphics, and verified HyperFrames rendering. Use for a complete edit; route a single requested operation directly to its specialist skill.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "nateherkai",
+  "install_path": ".claude/skills/edit-video/SKILL.md",
+  "source": {
+    "repo": "nateherkai/herk-edit-kit",
+    "url": "https://github.com/nateherkai/herk-edit-kit/blob/main/.claude/skills/edit-video/SKILL.md",
+    "path": ".claude/skills/edit-video/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-15T18:00:08.860Z",
+    "stars": 1536,
+    "language": "HTML",
+    "pushed_at": "2026-10-14T12:51:12Z",
+    "license": null
+  }
+}

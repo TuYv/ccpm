@@ -1,0 +1,25 @@
+{
+  "id": "eduardo-sl-go-agent-skills-go-build-release",
+  "name": "go-build-release",
+  "description": "> Build and release Go binaries that are reproducible and verifiable: version stamping, -trimpath builds, cross-compilation, GoReleaser, checksums, SBOMs, cosign signing, build provenance attestations, and container images with ko or a multi-stage Dockerfile. Use when: \"release a Go binary\", \"set up GoReleaser\", \"cross-compile\", \"reproducible build\", \"sign the release\", \"generate an SBOM\", \"build provenance\", \"publish a container image\", \"version command shows (devel)\". Not for: test and lint pi",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "eduardo-sl",
+  "install_path": ".claude/skills/go-build-release/SKILL.md",
+  "source": {
+    "repo": "eduardo-sl/go-agent-skills",
+    "url": "https://github.com/eduardo-sl/go-agent-skills/blob/main/skills/(workflow)/go-build-release/SKILL.md",
+    "path": "skills/(workflow)/go-build-release/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-15T17:14:42.341Z",
+    "stars": 76,
+    "language": "Shell",
+    "pushed_at": "2026-10-15T14:29:12Z",
+    "license": "MIT"
+  }
+}

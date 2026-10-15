@@ -1,7 +1,7 @@
 {
   "id": "omnigent-ai-omnigent-otto-pr-review-loop",
   "name": "otto-pr-review-loop",
-  "description": "Iterate Polly and Open Code Review on an open PR until every finding is fixed or answered with evidence.",
+  "description": "Run Polly and OCR on a PR until all findings settle.",
   "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/omnigent-ai/omnigent/blob/main/dev/agent-skills/otto-pr-review-loop/SKILL.md",
     "path": "dev/agent-skills/otto-pr-review-loop/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-15T11:43:00.839Z",
-    "stars": 10823,
+    "discovered_at": "2026-10-15T17:16:54.212Z",
+    "stars": 10829,
     "language": "Python",
-    "pushed_at": "2026-10-15T11:42:32Z",
+    "pushed_at": "2026-10-15T17:09:44Z",
     "license": "Apache-2.0"
   }
 }

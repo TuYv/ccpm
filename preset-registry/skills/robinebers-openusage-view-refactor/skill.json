@@ -1,0 +1,25 @@
+{
+  "id": "robinebers-openusage-view-refactor",
+  "name": "view-refactor",
+  "description": "Refactor macOS SwiftUI views and scenes with strong defaults for small dedicated subviews, stable sidebar and selection structure, explicit command and toolbar ownership, scene-aware state, and narrow AppKit escape hatches. Use when cleaning up a macOS view file, splitting oversized scene roots, removing iOS-centric patterns, or tightening mixed SwiftUI/AppKit architecture.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "robinebers",
+  "install_path": ".claude/skills/view-refactor/SKILL.md",
+  "source": {
+    "repo": "robinebers/openusage",
+    "url": "https://github.com/robinebers/openusage/blob/main/.agents/skills/view-refactor/SKILL.md",
+    "path": ".agents/skills/view-refactor/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-15T18:06:08.821Z",
+    "stars": 4362,
+    "language": "Swift",
+    "pushed_at": "2026-10-15T04:53:58Z",
+    "license": "MIT"
+  }
+}

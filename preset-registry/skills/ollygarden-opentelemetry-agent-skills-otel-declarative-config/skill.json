@@ -1,0 +1,25 @@
+{
+  "id": "ollygarden-opentelemetry-agent-skills-otel-declarative-config",
+  "name": "otel-declarative-config",
+  "description": "OpenTelemetry declarative YAML configuration for SDK setup. Use when configuring OpenTelemetry SDK providers (tracer, meter, logger), setting up OTLP exporters, defining sampling strategies, or writing otel config files. Triggers on \"otel config\", \"OpenTelemetry YAML\", \"declarative configuration\", \"otelconf\", \"OTEL_CONFIG_FILE\", \"file_format\", \"configure tracing/metrics/logs export\", or when the user is setting up telemetry pipelines via config files rather than code.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ollygarden",
+  "install_path": ".claude/skills/otel-declarative-config/SKILL.md",
+  "source": {
+    "repo": "ollygarden/opentelemetry-agent-skills",
+    "url": "https://github.com/ollygarden/opentelemetry-agent-skills/blob/main/skills/otel-declarative-config/SKILL.md",
+    "path": "skills/otel-declarative-config/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-15T18:09:26.840Z",
+    "stars": 110,
+    "language": "Go",
+    "pushed_at": "2026-10-15T12:50:10Z",
+    "license": "Apache-2.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "robinebers-openusage-window-management",
+  "name": "window-management",
+  "description": "Customize macOS 15+ SwiftUI windows and scene behavior using Window, WindowGroup, and macOS window modifiers. Use when styling or hiding window toolbars and titles, extending drag regions with WindowDragGesture, replacing window backgrounds with materials, disabling minimize or restoration for utility windows, setting default or ideal window placement from content/display size, creating borderless windows, or tuning default launch behavior.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "robinebers",
+  "install_path": ".claude/skills/window-management/SKILL.md",
+  "source": {
+    "repo": "robinebers/openusage",
+    "url": "https://github.com/robinebers/openusage/blob/main/.agents/skills/window-management/SKILL.md",
+    "path": ".agents/skills/window-management/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-15T18:06:09.023Z",
+    "stars": 4362,
+    "language": "Swift",
+    "pushed_at": "2026-10-15T04:53:58Z",
+    "license": "MIT"
+  }
+}

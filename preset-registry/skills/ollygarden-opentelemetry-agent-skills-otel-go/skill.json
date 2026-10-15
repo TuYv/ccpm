@@ -1,0 +1,25 @@
+{
+  "id": "ollygarden-opentelemetry-agent-skills-otel-go",
+  "name": "otel-go",
+  "description": "OpenTelemetry in Go — SDK setup, API surface, breaking changes, contrib instrumentation libraries (otelhttp, otelgrpc, otelmongo), compile-time zero-code instrumentation (otelc), and performance tuning. Use when adding, reviewing, or configuring OpenTelemetry in a Go service. Triggers on \"setup otel in go\", \"go telemetry\", \"go tracing\", \"otelconf go\", \"otelhttp\", \"otelgrpc\", \"TracerProvider go\", \"MeterProvider go\", \"otelc\", \"compile-time instrumentation go\", \"zero-code go instrumentation\", \"go b",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ollygarden",
+  "install_path": ".claude/skills/otel-go/SKILL.md",
+  "source": {
+    "repo": "ollygarden/opentelemetry-agent-skills",
+    "url": "https://github.com/ollygarden/opentelemetry-agent-skills/blob/main/skills/otel-go/SKILL.md",
+    "path": "skills/otel-go/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-15T18:09:27.187Z",
+    "stars": 110,
+    "language": "Go",
+    "pushed_at": "2026-10-15T12:50:10Z",
+    "license": "Apache-2.0"
+  }
+}

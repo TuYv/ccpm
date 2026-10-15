@@ -1,0 +1,25 @@
+{
+  "id": "eduardo-sl-go-agent-skills-go-naming",
+  "name": "go-naming",
+  "description": "> Go naming conventions for packages, files, types, functions, methods, receivers, variables, constants, errors, acronyms and tests, grounded in Effective Go and Go Code Review Comments. Use when: \"what should I name this\", \"name this package\", \"naming review\", \"is this name idiomatic\", \"stuttering names\", \"Get prefix\", \"acronym casing\", \"error variable name\", \"receiver name\". Not for: formatting, imports and declarations (go-coding-standards), carrying out a rename across the codebase (go-seman",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "eduardo-sl",
+  "install_path": ".claude/skills/go-naming/SKILL.md",
+  "source": {
+    "repo": "eduardo-sl/go-agent-skills",
+    "url": "https://github.com/eduardo-sl/go-agent-skills/blob/main/skills/(code-quality)/go-naming/SKILL.md",
+    "path": "skills/(code-quality)/go-naming/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-15T17:14:40.412Z",
+    "stars": 76,
+    "language": "Shell",
+    "pushed_at": "2026-10-15T14:29:12Z",
+    "license": "MIT"
+  }
+}

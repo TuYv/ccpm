@@ -1,0 +1,25 @@
+{
+  "id": "ollygarden-opentelemetry-agent-skills-otel-sdk-versions",
+  "name": "otel-sdk-versions",
+  "description": "OpenTelemetry release version lookup for SDKs across languages and for the Collector (core, contrib, distributions, builder/OCB), the declarative configuration schema, semantic conventions, and Weaver. Use when choosing the latest compatible released OpenTelemetry SDK, package, or component version, when asked what the latest release of one of these is, and when locating setup docs or examples. Not for Collector build manifests or upgrade-risk assessment.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ollygarden",
+  "install_path": ".claude/skills/otel-sdk-versions/SKILL.md",
+  "source": {
+    "repo": "ollygarden/opentelemetry-agent-skills",
+    "url": "https://github.com/ollygarden/opentelemetry-agent-skills/blob/main/skills/otel-sdk-versions/SKILL.md",
+    "path": "skills/otel-sdk-versions/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-15T18:09:28.451Z",
+    "stars": 110,
+    "language": "Go",
+    "pushed_at": "2026-10-15T12:50:10Z",
+    "license": "Apache-2.0"
+  }
+}

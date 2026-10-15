@@ -1,7 +1,7 @@
 {
   "id": "eduardo-sl-go-agent-skills-go-coding-standards",
   "name": "go-coding-standards",
-  "description": "> Go coding standards and style conventions grounded in Effective Go, Go Code Review Comments, and production-proven idioms. Use when writing or reviewing Go code, enforcing naming conventions, import ordering, variable declarations, struct initialization, or formatting rules. Trigger examples: \"check Go style\", \"fix formatting\", \"review naming\", \"Go conventions\". Not for: architecture (go-architecture-review), concurrency (go-concurrency-review), performance tuning (go-performance-review).",
+  "description": "> Go coding standards and style conventions grounded in Effective Go, Go Code Review Comments, and production-proven idioms. Use when writing or reviewing Go code for import ordering, variable declarations, struct initialization, nesting, receivers, struct tags, or formatting rules. Trigger examples: \"check Go style\", \"fix formatting\", \"Go conventions\", \"struct initialization\". Not for: naming (go-naming), architecture (go-architecture-review), concurrency (go-concurrency-review), performance tu",
   "category": "文档写作",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/eduardo-sl/go-agent-skills/blob/main/skills/(code-quality)/go-coding-standards/SKILL.md",
     "path": "skills/(code-quality)/go-coding-standards/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-15T11:40:57.514Z",
+    "discovered_at": "2026-10-15T17:14:39.342Z",
     "stars": 76,
     "language": "Shell",
-    "pushed_at": "2026-10-14T18:11:18Z",
+    "pushed_at": "2026-10-15T14:29:12Z",
     "license": "MIT"
-  },
-  "summary_zh": "一套基于 Go 社区实践的编码规范，适合编写或审查 Go 代码，统一风格并减少格式与命名问题。"
+  }
 }

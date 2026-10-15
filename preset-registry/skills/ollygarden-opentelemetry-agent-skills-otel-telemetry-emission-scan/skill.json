@@ -1,0 +1,25 @@
+{
+  "id": "ollygarden-opentelemetry-agent-skills-otel-telemetry-emission-scan",
+  "name": "otel-component-telemetry",
+  "description": "Scan one OpenTelemetry component at pinned upstream versions and record the telemetry it emits (spans, metrics, logs) as change-point files under skills/otel-telemetry-emissions/. Invoked headless by scripts/scan.sh, one agent per component from config.json. Authoring-time only — not shipped.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ollygarden",
+  "install_path": ".claude/skills/otel-telemetry-emission-scan/SKILL.md",
+  "source": {
+    "repo": "ollygarden/opentelemetry-agent-skills",
+    "url": "https://github.com/ollygarden/opentelemetry-agent-skills/blob/main/tools/otel-telemetry-emission-scan/SKILL.md",
+    "path": "tools/otel-telemetry-emission-scan/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-15T18:09:29.784Z",
+    "stars": 110,
+    "language": "Go",
+    "pushed_at": "2026-10-15T12:50:10Z",
+    "license": "Apache-2.0"
+  }
+}

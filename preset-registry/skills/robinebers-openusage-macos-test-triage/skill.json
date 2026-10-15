@@ -1,0 +1,25 @@
+{
+  "id": "robinebers-openusage-macos-test-triage",
+  "name": "macos-test-triage",
+  "description": "Triage macOS tests across Xcode and SwiftPM. Use when narrowing failures, explaining assertions or crashes, or separating setup from regressions.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "robinebers",
+  "install_path": ".claude/skills/macos-test-triage/SKILL.md",
+  "source": {
+    "repo": "robinebers/openusage",
+    "url": "https://github.com/robinebers/openusage/blob/main/.agents/skills/macos-test-triage/SKILL.md",
+    "path": ".agents/skills/macos-test-triage/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-15T18:06:06.788Z",
+    "stars": 4362,
+    "language": "Swift",
+    "pushed_at": "2026-10-15T04:53:58Z",
+    "license": "MIT"
+  }
+}

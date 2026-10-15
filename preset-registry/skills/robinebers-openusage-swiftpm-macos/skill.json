@@ -1,0 +1,25 @@
+{
+  "id": "robinebers-openusage-swiftpm-macos",
+  "name": "swiftpm-macos",
+  "description": "Build, run, and test pure SwiftPM-based macOS packages and executables. Use when the repo is package-first, when there is no Xcode project, or when Swift package workflows are the fastest path to diagnosis.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "robinebers",
+  "install_path": ".claude/skills/swiftpm-macos/SKILL.md",
+  "source": {
+    "repo": "robinebers/openusage",
+    "url": "https://github.com/robinebers/openusage/blob/main/.agents/skills/swiftpm-macos/SKILL.md",
+    "path": ".agents/skills/swiftpm-macos/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-15T18:06:07.985Z",
+    "stars": 4362,
+    "language": "Swift",
+    "pushed_at": "2026-10-15T04:53:58Z",
+    "license": "MIT"
+  }
+}
