@@ -13,13 +13,13 @@
   "install_path": ".claude/skills/too-many-injections/SKILL.md",
   "source": {
     "repo": "avifenesh/agnix",
-    "url": "https://github.com/avifenesh/agnix/blob/main/tests/fixtures/invalid/skills/too-many-injections/SKILL.md",
+    "url": "https://github.com/avifenesh/agnix/blob/automation/agnix-pr1501-followup/tests/fixtures/invalid/skills/too-many-injections/SKILL.md",
     "path": "tests/fixtures/invalid/skills/too-many-injections/SKILL.md",
-    "branch": "main",
-    "discovered_at": "2026-10-15T07:04:53.819Z",
-    "stars": 450,
+    "branch": "automation/agnix-pr1501-followup",
+    "discovered_at": "2026-10-15T12:36:35.883Z",
+    "stars": 451,
     "language": "Rust",
-    "pushed_at": "2026-10-12T06:14:51Z",
+    "pushed_at": "2026-10-15T07:26:33Z",
     "license": "Apache-2.0"
   },
   "summary_zh": "这是一个测试注入上限的工具，专门帮你验证系统在面临过量注入时，能否正确触发限制与校验。"

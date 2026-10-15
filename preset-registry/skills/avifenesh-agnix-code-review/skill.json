@@ -2,7 +2,7 @@
   "id": "avifenesh-agnix-code-review",
   "name": "code-review",
   "description": "Use when user asks to review code for quality and security issues.",
-  "category": "开发编程",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -13,13 +13,13 @@
   "install_path": ".claude/skills/code-review/SKILL.md",
   "source": {
     "repo": "avifenesh/agnix",
-    "url": "https://github.com/avifenesh/agnix/blob/main/tests/fixtures/valid/skills/code-review/SKILL.md",
+    "url": "https://github.com/avifenesh/agnix/blob/automation/agnix-pr1501-followup/tests/fixtures/valid/skills/code-review/SKILL.md",
     "path": "tests/fixtures/valid/skills/code-review/SKILL.md",
-    "branch": "main",
-    "discovered_at": "2026-10-15T07:05:00.095Z",
-    "stars": 450,
+    "branch": "automation/agnix-pr1501-followup",
+    "discovered_at": "2026-10-15T12:36:40.813Z",
+    "stars": 451,
     "language": "Rust",
-    "pushed_at": "2026-10-12T06:14:51Z",
+    "pushed_at": "2026-10-15T07:26:33Z",
     "license": "Apache-2.0"
   },
   "summary_zh": "这是个帮你把关代码的工具，适合在需要检查代码质量或排查安全隐患时使用。"

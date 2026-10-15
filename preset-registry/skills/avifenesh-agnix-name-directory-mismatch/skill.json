@@ -2,7 +2,7 @@
   "id": "avifenesh-agnix-name-directory-mismatch",
   "name": "directory-helper",
   "description": "Use when validating name-directory matching",
-  "category": "通用其他",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -13,13 +13,13 @@
   "install_path": ".claude/skills/name-directory-mismatch/SKILL.md",
   "source": {
     "repo": "avifenesh/agnix",
-    "url": "https://github.com/avifenesh/agnix/blob/main/tests/fixtures/invalid/skills/name-directory-mismatch/SKILL.md",
+    "url": "https://github.com/avifenesh/agnix/blob/automation/agnix-pr1501-followup/tests/fixtures/invalid/skills/name-directory-mismatch/SKILL.md",
     "path": "tests/fixtures/invalid/skills/name-directory-mismatch/SKILL.md",
-    "branch": "main",
-    "discovered_at": "2026-10-15T07:04:52.989Z",
-    "stars": 450,
+    "branch": "automation/agnix-pr1501-followup",
+    "discovered_at": "2026-10-15T12:36:34.876Z",
+    "stars": 451,
     "language": "Rust",
-    "pushed_at": "2026-10-12T06:14:51Z",
+    "pushed_at": "2026-10-15T07:26:33Z",
     "license": "Apache-2.0"
   },
   "summary_zh": "校验名称与目录是否匹配的工具，适合需要核对文件命名与实际存放路径是否一致的场景，避免文件放错位置。"

@@ -1,7 +1,7 @@
 {
   "id": "tencentcloudbase-cloudbase-ai-toolkit-ops-inspector",
   "name": "ops-inspector",
-  "description": "AIOps-style CloudBase inspection skill (v3). Use when users need health checks, log diagnosis, alarm interpretation (CPU alert normal?, peak QPS), metrics via queryEnv(action=metrics), or fault playbooks for 429 / function 404 / ACCESS_TOKEN_INVALID / zero invocations. Triggers on 巡检, 诊断, 告警, 峰值 QPS, 限频, 调用量为 0, troubleshooting.",
+  "description": "AIOps-style CloudBase inspection skill (v3). Use when users need health checks, log diagnosis, alarm interpretation (CPU alert normal?, peak QPS), metrics via queryEnv(action=metrics), or fault playbooks for 429 / AI model 429 / function timeout / function 404 / ACCESS_TOKEN_INVALID / zero invocations. Triggers on 巡检, 诊断, 告警, 峰值 QPS, 限频, 调用量为 0, troubleshooting.",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/TencentCloudBase/CloudBase-AI-Toolkit/blob/main/config/.claude/skills/ops-inspector/SKILL.md",
     "path": "config/.claude/skills/ops-inspector/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-15T06:59:04.268Z",
-    "stars": 1136,
+    "discovered_at": "2026-10-15T12:29:59.145Z",
+    "stars": 1137,
     "language": "TypeScript",
-    "pushed_at": "2026-10-14T12:28:08Z",
+    "pushed_at": "2026-10-15T12:26:16Z",
     "license": "MIT"
-  },
-  "summary_zh": "面向 CloudBase 的智能巡检与诊断工具，适合排查健康状态、日志告警、流量指标及常见调用故障。"
+  }
 }

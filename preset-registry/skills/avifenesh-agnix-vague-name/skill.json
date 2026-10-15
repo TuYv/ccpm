@@ -2,7 +2,7 @@
   "id": "avifenesh-agnix-vague-name",
   "name": "helper",
   "description": "Use when validating vague skill names",
-  "category": "通用其他",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -13,13 +13,13 @@
   "install_path": ".claude/skills/vague-name/SKILL.md",
   "source": {
     "repo": "avifenesh/agnix",
-    "url": "https://github.com/avifenesh/agnix/blob/main/tests/fixtures/invalid/skills/vague-name/SKILL.md",
+    "url": "https://github.com/avifenesh/agnix/blob/automation/agnix-pr1501-followup/tests/fixtures/invalid/skills/vague-name/SKILL.md",
     "path": "tests/fixtures/invalid/skills/vague-name/SKILL.md",
-    "branch": "main",
-    "discovered_at": "2026-10-15T07:04:54.692Z",
-    "stars": 450,
+    "branch": "automation/agnix-pr1501-followup",
+    "discovered_at": "2026-10-15T12:36:37.164Z",
+    "stars": 451,
     "language": "Rust",
-    "pushed_at": "2026-10-12T06:14:51Z",
+    "pushed_at": "2026-10-15T07:26:33Z",
     "license": "Apache-2.0"
   },
   "summary_zh": "这是一个技能名称校验工具，能解决技能描述含糊不清的问题，适合在需要确认或标准化模糊技能标签的场景下使用。"

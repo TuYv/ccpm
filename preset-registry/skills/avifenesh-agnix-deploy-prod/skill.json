@@ -2,7 +2,7 @@
   "id": "avifenesh-agnix-deploy-prod",
   "name": "deploy-prod",
   "description": "Use when deploying to production environment",
-  "category": "开发编程",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -13,13 +13,13 @@
   "install_path": ".claude/skills/deploy-prod/SKILL.md",
   "source": {
     "repo": "avifenesh/agnix",
-    "url": "https://github.com/avifenesh/agnix/blob/main/tests/fixtures/valid/skills/deploy-prod/SKILL.md",
+    "url": "https://github.com/avifenesh/agnix/blob/automation/agnix-pr1501-followup/tests/fixtures/valid/skills/deploy-prod/SKILL.md",
     "path": "tests/fixtures/valid/skills/deploy-prod/SKILL.md",
-    "branch": "main",
-    "discovered_at": "2026-10-15T07:05:00.371Z",
-    "stars": 450,
+    "branch": "automation/agnix-pr1501-followup",
+    "discovered_at": "2026-10-15T12:36:41.095Z",
+    "stars": 451,
     "language": "Rust",
-    "pushed_at": "2026-10-12T06:14:51Z",
+    "pushed_at": "2026-10-15T07:26:33Z",
     "license": "Apache-2.0"
   },
   "summary_zh": "这是一款辅助项目发布上线的工具，专门用于将代码安全部署到生产环境。"
