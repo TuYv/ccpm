@@ -1,8 +1,8 @@
 {
   "id": "htdt-godogen-asset-gen",
   "name": "asset-gen",
-  "description": "| Generate visual assets from text prompts: PNG images (Gemini / xAI Grok, or local Qwen-Image when installed), GLB 3D models (Tripo CLI), rigged characters, retargeted animations, and frame-by-frame animated sprites, plus background removal. Use whenever a game needs generated art.",
-  "category": "开发编程",
+  "description": "| Generate game assets, locally and free by default with godogen_assets: images and transparent PNGs (Qwen-Image), textured GLB models (TRELLIS.2), rigged humanoids with generated moves and lip-synced speech, sound effects and voice lines. Paid APIs cover what the local tools can't make — Gemini / xAI Grok images, animated sprites from video, Tripo 3D, Gemini TTS voice acting, Lyria music. Use whenever a game needs generated art or audio.",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/htdt/godogen/blob/master/asset-gen/SKILL.md",
     "path": "asset-gen/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-10-16T10:46:58.378Z",
-    "stars": 7140,
+    "discovered_at": "2026-10-16T15:50:27.176Z",
+    "stars": 7141,
     "language": "Python",
-    "pushed_at": "2026-10-01T18:40:42Z",
+    "pushed_at": "2026-10-16T14:56:03Z",
     "license": "MIT"
   }
 }

@@ -1,7 +1,7 @@
 {
   "id": "prisma-skills-prisma-postgres-setup",
   "name": "prisma-postgres-setup",
-  "description": "Obtain or reuse a Prisma Postgres database and connect an application. Use for \"set up Prisma Postgres\", \"connect my app to Prisma Postgres\", or Prisma Postgres setup in v0 and Vercel Marketplace. Hands Prisma ORM configuration to prisma-orm-setup; honors an explicit driver, alternative ORM, or database-only choice.",
+  "description": "Obtain or reuse a Prisma Postgres database and connect an application. Use when the user needs a database and has none configured (\"I need a database\", \"add a Postgres database\", \"set up a database for this app\"), runs or mentions `create-db` or `npx create-db`, or asks to set up or connect Prisma Postgres, including in v0 and the Vercel Marketplace. Hands Prisma ORM configuration to prisma-orm-setup; reuses an existing connection first and honors an explicit provider, driver, alternative ORM, o",
   "category": "文档写作",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/prisma/skills/blob/main/prisma-postgres-setup/SKILL.md",
     "path": "prisma-postgres-setup/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-16T10:55:58.900Z",
+    "discovered_at": "2026-10-16T15:59:39.375Z",
     "stars": 70,
     "language": null,
-    "pushed_at": "2026-10-13T13:29:23Z",
+    "pushed_at": "2026-10-16T11:32:29Z",
     "license": "MIT"
   }
 }
