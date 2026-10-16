@@ -2,7 +2,7 @@
   "id": "google-skills-agent-platform-model-registry",
   "name": "agent-platform-model-registry",
   "description": ">- Agent Platform Model Registry Management. Use when you need to upload, list, describe, update, or delete machine learning models (and their versions) in the Agent Platform Model Registry. Don't use for model training, model deployment to endpoints, or managing non-Agent Platform models.",
-  "category": "开发编程",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/google/skills/blob/main/skills/cloud/agent-platform-model-registry/SKILL.md",
     "path": "skills/cloud/agent-platform-model-registry/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-16T19:02:44.479Z",
-    "stars": 21362,
+    "discovered_at": "2026-10-16T22:17:31.666Z",
+    "stars": 21363,
     "language": "Python",
-    "pushed_at": "2026-10-15T21:55:49Z",
+    "pushed_at": "2026-10-16T20:05:04Z",
     "license": "Apache-2.0"
   },
   "summary_zh": "用于管理智能体平台模型注册表，可上传、查看、更新或删除机器学习模型及其版本，不适用于训练和部署。"

@@ -1,7 +1,7 @@
 {
   "id": "agricidaniel-claude-ads-ads-microsoft",
   "name": "ads-microsoft",
-  "description": "Audit Microsoft Advertising measurement, UET, search and audience campaigns, Google imports, syndication, keywords, creative, bidding, budgets, Copilot inventory, and policy. Use for Microsoft Ads, Bing Ads, UET, Microsoft Audience Network, Google Ads import, or Microsoft campaign optimization.",
+  "description": "Audit Microsoft Advertising measurement, UET, search and audience campaigns, Google imports, syndication, keywords, creative, bidding, budgets, Copilot inventory, and policy. Use for Microsoft Ads, Bing Ads, UET, Microsoft Audience Network, or Google Ads import. Read-only; use ads-optimize to change campaigns.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/AgriciDaniel/claude-ads/blob/main/skills/ads-microsoft/SKILL.md",
     "path": "skills/ads-microsoft/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-16T19:48:30.087Z",
-    "stars": 10037,
+    "discovered_at": "2026-10-16T23:05:11.092Z",
+    "stars": 10044,
     "language": "Python",
-    "pushed_at": "2026-10-16T18:40:16Z",
+    "pushed_at": "2026-10-16T22:56:13Z",
     "license": "MIT"
-  },
-  "summary_zh": "一款微软广告审计与优化工具，适合检查UET追踪、广告投放、预算出价、素材及政策合规问题。"
+  }
 }

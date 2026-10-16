@@ -2,7 +2,7 @@
   "id": "google-skills-cloud-run-alert-configuration",
   "name": "cloud-run-alert-configuration",
   "description": ">- Configures best-practice, high-signal alerting policies for Cloud Run resources on Google Cloud (services, jobs, and worker pools) based on seasoned SRE practices. Use when analyzing, recommending, writing, or deploying Terraform PromQL alerting policies to monitor Cloud Run error rates (4xx/5xx), request latency, container instance saturation (warning/critical), container CPU/memory utilization and allocation, billable instance time, job execution status, and worker pool queue backlog. Don't",
-  "category": "文档写作",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/google/skills/blob/main/skills/cloud/cloud-run-alert-configuration/SKILL.md",
     "path": "skills/cloud/cloud-run-alert-configuration/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-16T19:02:49.607Z",
-    "stars": 21362,
+    "discovered_at": "2026-10-16T22:17:35.785Z",
+    "stars": 21363,
     "language": "Python",
-    "pushed_at": "2026-10-15T21:55:49Z",
+    "pushed_at": "2026-10-16T20:05:04Z",
     "license": "Apache-2.0"
   }
 }

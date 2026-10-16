@@ -2,7 +2,7 @@
   "id": "google-skills-data-manager-api-event-ingestion",
   "name": "data-manager-api-event-ingestion",
   "description": ">- Guides developers through implementing event and conversion ingestion to Google products using the Data Manager API /v1/events/ingest endpoint and its associated client libraries. Use this skill when the user wants to upload offline conversions, enhanced conversions for leads, click conversions, Google Analytics web or app events, or any other event ingestion use case supported by the Data Manager API. Don't use for uploading audience members (use the data-manager-api-audience-ingestion skill",
-  "category": "数据分析",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/google/skills/blob/main/skills/ads/data-manager-api-event-ingestion/SKILL.md",
     "path": "skills/ads/data-manager-api-event-ingestion/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-16T19:02:40.777Z",
-    "stars": 21362,
+    "discovered_at": "2026-10-16T22:17:28.666Z",
+    "stars": 21363,
     "language": "Python",
-    "pushed_at": "2026-10-15T21:55:49Z",
+    "pushed_at": "2026-10-16T20:05:04Z",
     "license": "Apache-2.0"
   },
   "summary_zh": "指导开发者通过 Data Manager API 上传离线转化、潜在客户增强型转化及网站或应用事件，适合各类事件归因与分析场景。"

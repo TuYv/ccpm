@@ -2,7 +2,7 @@
   "id": "google-skills-cloud-monitoring-notification-channels-configuration",
   "name": "cloud-monitoring-notification-channels-configuration",
   "description": ">- Generates Terraform HCL configurations for Cloud Monitoring notification channels (`google_monitoring_notification_channel`) and adds notification channels to alerting policies (`google_monitoring_alert_policy`) in Google Cloud projects. Use when creating or configuring email, SMS, Slack, PagerDuty, Pub/Sub, or webhook notification channels, verifying Pub/Sub topic compatibility (including cross-project topics, message storage policies, and in-transit enforcement) and publishing permissions f",
-  "category": "文档写作",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/google/skills/blob/main/skills/cloud/cloud-monitoring-notification-channels-configuration/SKILL.md",
     "path": "skills/cloud/cloud-monitoring-notification-channels-configuration/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-16T19:02:49.274Z",
-    "stars": 21362,
+    "discovered_at": "2026-10-16T22:17:35.526Z",
+    "stars": 21363,
     "language": "Python",
-    "pushed_at": "2026-10-15T21:55:49Z",
+    "pushed_at": "2026-10-16T20:05:04Z",
     "license": "Apache-2.0"
   }
 }

@@ -1,0 +1,25 @@
+{
+  "id": "openaccountants-openaccountants-ab-corporate-tax",
+  "name": "ab-corporate-tax",
+  "description": "Use this skill for Alberta provincial corporate income tax. Triggers \\\"Alberta CIT\\\", \\\"AT1 Alberta\\\", \\\"Alberta small business deduction\\\", \\\"Job Creation Tax Cut Alberta\\\", \\\"Alberta corporate tax 8%\\\". ALWAYS read alongside federal T2.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openaccountants",
+  "install_path": ".claude/skills/ab-corporate-tax/SKILL.md",
+  "source": {
+    "repo": "openaccountants/openaccountants",
+    "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/ab-corporate-tax/SKILL.md",
+    "path": "agent-skills/ab-corporate-tax/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-16T23:11:44.908Z",
+    "stars": 446,
+    "language": "Python",
+    "pushed_at": "2026-10-16T20:17:11Z",
+    "license": "AGPL-3.0"
+  }
+}

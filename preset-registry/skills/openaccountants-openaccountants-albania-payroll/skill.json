@@ -1,0 +1,25 @@
+{
+  "id": "openaccountants-openaccountants-albania-payroll",
+  "name": "albania-payroll",
+  "description": "Use this skill whenever asked about Albania payroll processing for employed persons. Trigger on phrases like \\\"Albania payroll\\\", \\\"Albanian payroll\\\", \\\"lista e pagave\\\", \\\"payroll list Albania\\\", \\\"PAYE Albania\\\", \\\"withholding tax Albania\\\", \\\"tatimi mbi te ardhurat Albania\\\", \\\"social insurance Albania\\\", \\\"sigurime shoqerore\\\", \\\"sigurime shendetesore\\\", \\\"health insurance contribution Albania\\\", \\\"ISSH contribution\\\", \\\"net salary Albania\\\", \\\"neto pagese\\\", \\\"gross to net Albania\\\", \\\"emp",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openaccountants",
+  "install_path": ".claude/skills/albania-payroll/SKILL.md",
+  "source": {
+    "repo": "openaccountants/openaccountants",
+    "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/albania-payroll/SKILL.md",
+    "path": "agent-skills/albania-payroll/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-16T23:11:49.226Z",
+    "stars": 446,
+    "language": "Python",
+    "pushed_at": "2026-10-16T20:17:11Z",
+    "license": "AGPL-3.0"
+  }
+}

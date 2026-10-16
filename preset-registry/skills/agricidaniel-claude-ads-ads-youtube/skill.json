@@ -1,7 +1,7 @@
 {
   "id": "agricidaniel-claude-ads-ads-youtube",
   "name": "ads-youtube",
-  "description": "Audit YouTube Ads campaign setup, video and Demand Gen inventory, Shorts, in-stream, CTV, creative, audiences, brand safety, bidding, and measurement. Use for YouTube Ads, video ads, pre-roll, bumper ads, skippable in-stream, Shorts ads, Demand Gen, VAC migration, CTV, or YouTube campaign optimization.",
+  "description": "Audit YouTube Ads campaign setup, video inventory, Shorts, in-stream, CTV, creative, audiences, brand safety, bidding, and measurement. Use for YouTube Ads, video ads, pre-roll, bumper ads, skippable in-stream, Shorts ads, VAC migration, or CTV. Read-only; use ads-google for Google-managed campaign types and ads-optimize to change campaigns.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/AgriciDaniel/claude-ads/blob/main/skills/ads-youtube/SKILL.md",
     "path": "skills/ads-youtube/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-16T19:48:32.688Z",
-    "stars": 10037,
+    "discovered_at": "2026-10-16T23:05:13.209Z",
+    "stars": 10044,
     "language": "Python",
-    "pushed_at": "2026-10-16T18:40:16Z",
+    "pushed_at": "2026-10-16T22:56:13Z",
     "license": "MIT"
-  },
-  "summary_zh": "一款用于审查和优化 YouTube 广告投放的工具，适合排查广告设置、素材、受众、品牌安全、竞价及效果衡量问题。"
+  }
 }

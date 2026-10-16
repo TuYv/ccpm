@@ -2,7 +2,7 @@
   "id": "google-skills-api-gateway-mcp-server",
   "name": "api-gateway-mcp-server",
   "description": ">- Configures Google Cloud API Gateway to act as a remote Model Context Protocol (MCP) server (Public Preview) that exposes REST APIs as agent tools over HTTP (POST /mcp). Use when migrating OpenAPI 2.0 specs to OpenAPI 3.x for MCP, annotating specs with x-google-api-management.mcp and x-google-mcp-tool, securing tools/list with JWTs or API keys, connecting Google ADK (McpToolset) or Apigee API hub and Agent Registry, or troubleshooting MCP JSON-RPC errors (-32601, -32602, -32000). Do not use fo",
-  "category": "通用其他",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/google/skills/blob/main/skills/cloud/api-gateway-mcp-server/SKILL.md",
     "path": "skills/cloud/api-gateway-mcp-server/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-16T19:02:46.345Z",
-    "stars": 21362,
+    "discovered_at": "2026-10-16T22:17:32.904Z",
+    "stars": 21363,
     "language": "Python",
-    "pushed_at": "2026-10-15T21:55:49Z",
+    "pushed_at": "2026-10-16T20:05:04Z",
     "license": "Apache-2.0"
   }
 }

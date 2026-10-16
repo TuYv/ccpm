@@ -1,0 +1,25 @@
+{
+  "id": "openaccountants-openaccountants-algeria-payroll",
+  "name": "algeria-payroll",
+  "description": "Use this skill whenever asked about Algeria payroll processing for employed persons. Trigger on phrases like \\\"Algeria payroll\\\", \\\"IRG Traitements et Salaires\\\", \\\"IRG withholding Algeria\\\", \\\"retenue à la source Algérie\\\", \\\"CNAS deduction\\\", \\\"cotisation sociale Algérie\\\", \\\"G50 declaration\\\", \\\"DAS CNAS\\\", \\\"bordereau CNAS\\\", \\\"salaire net Algérie\\\", \\\"PAYE Algeria\\\", \\\"net salary Algeria\\\", \\\"SNMG\\\", \\\"salaire minimum Algérie\\\", \\\"abattement 40% salaire\\\", \\\"employer social security Algeria",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openaccountants",
+  "install_path": ".claude/skills/algeria-payroll/SKILL.md",
+  "source": {
+    "repo": "openaccountants/openaccountants",
+    "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/algeria-payroll/SKILL.md",
+    "path": "agent-skills/algeria-payroll/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-16T23:11:49.999Z",
+    "stars": 446,
+    "language": "Python",
+    "pushed_at": "2026-10-16T20:17:11Z",
+    "license": "AGPL-3.0"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "id": "agricidaniel-claude-ads-ads-budget",
   "name": "ads-budget",
-  "description": "Plan and review paid-media budgets, bidding, pacing, marginal return, forecasts, CPA, ROAS, MER, LTV:CAC, constraints, and allocation across supported platforms. Use for ad budget allocation, media budget, bidding strategy, scaling, spend pacing, budget forecast, ROAS target, or investment tradeoffs.",
+  "description": "Plan and review paid-media budgets, bidding, pacing, marginal return, targets, constraints, and allocation across supported platforms. Use for ad budget allocation, media budget, bidding strategy, scaling, spend pacing, ROAS target, or investment tradeoffs. Use ads-math for calculations and forecasts.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/AgriciDaniel/claude-ads/blob/main/skills/ads-budget/SKILL.md",
     "path": "skills/ads-budget/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-16T19:48:28.242Z",
-    "stars": 10037,
+    "discovered_at": "2026-10-16T23:05:09.463Z",
+    "stars": 10044,
     "language": "Python",
-    "pushed_at": "2026-10-16T18:40:16Z",
+    "pushed_at": "2026-10-16T22:56:13Z",
     "license": "MIT"
-  },
-  "summary_zh": "一款付费广告预算规划与复盘工具，适合优化跨平台投放、出价节奏、回报预测及预算分配。"
+  }
 }

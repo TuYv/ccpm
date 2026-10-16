@@ -1,7 +1,7 @@
 {
   "id": "agricidaniel-claude-ads-ads-validate",
   "name": "ads-validate",
-  "description": "Validate Claude Ads contracts, scoring inputs, run bundles, capabilities, source freshness, safety, installation, uninstall, or release readiness. Use for ads validate, ads status, ads next, stale claims with missing tool access, maturity checks, ownership-manifest uninstall, preserving unrelated ads-* skills, checksum verification, preflight, QA, or release audits. Missing access must demote stale evidence for the run and block dependent release-current claims before recovery guidance.",
+  "description": "Validate Claude Ads contracts, scoring inputs, run bundles, capabilities, source freshness, safety, installation, uninstall, or release readiness. Use for ads validate, ads status, ads next, maturity checks, ownership-manifest uninstall, preserving unrelated ads-* skills, checksum verification, preflight, QA, or release audits.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/AgriciDaniel/claude-ads/blob/main/skills/ads-validate/SKILL.md",
     "path": "skills/ads-validate/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-16T19:48:32.308Z",
-    "stars": 10037,
+    "discovered_at": "2026-10-16T23:05:12.945Z",
+    "stars": 10044,
     "language": "Python",
-    "pushed_at": "2026-10-16T18:40:16Z",
+    "pushed_at": "2026-10-16T22:56:13Z",
     "license": "MIT"
-  },
-  "summary_zh": "一款面向 Claude Ads 的验证与发布审计工具，用于检查配置、证据时效、安全性和安装状态，避免依据过期或缺失信息错误发布。"
+  }
 }

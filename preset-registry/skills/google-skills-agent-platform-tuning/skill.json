@@ -2,7 +2,7 @@
   "id": "google-skills-agent-platform-tuning",
   "name": "agent-platform-tuning",
   "description": ">- Agent Platform Model Tuning. Use when you need to fine-tune open models or Gemini models using Agent Platform infrastructure. Don't use for model training outside Agent Platform, model deployment to endpoints (use `agent-platform-deploy`), or managing serving endpoints (use `agent-platform-endpoint-management`).",
-  "category": "开发编程",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/google/skills/blob/main/skills/cloud/agent-platform-tuning/SKILL.md",
     "path": "skills/cloud/agent-platform-tuning/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-16T19:02:45.778Z",
-    "stars": 21362,
+    "discovered_at": "2026-10-16T22:17:32.538Z",
+    "stars": 21363,
     "language": "Python",
-    "pushed_at": "2026-10-15T21:55:49Z",
+    "pushed_at": "2026-10-16T20:05:04Z",
     "license": "Apache-2.0"
   },
   "summary_zh": "用于在 Agent Platform 基础设施上微调开源模型或 Gemini 模型，适合平台内的模型定制场景。"

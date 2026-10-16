@@ -2,7 +2,7 @@
   "id": "google-skills-google-analytics-data-api-basics",
   "name": "google-analytics-data-api-basics",
   "description": ">- Manages Google Analytics reporting data, enables the Analytics Data API via the Cloud CLI, and creates reports using the Google Analytics Data API (v1beta). Use when you need to interact with Google Analytics properties, run customized analytics reports, query metrics (like activeUsers, screenPageViews) and dimensions (like city, date), check metrics and dimensions compatibility, or verify API enablement. Don't use for Google Analytics Admin API operations (e.g., creating properties, managing",
-  "category": "数据分析",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/google/skills/blob/main/skills/analytics/google-analytics-data-api-basics/SKILL.md",
     "path": "skills/analytics/google-analytics-data-api-basics/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-16T19:02:43.157Z",
-    "stars": 21362,
+    "discovered_at": "2026-10-16T22:17:30.611Z",
+    "stars": 21363,
     "language": "Python",
-    "pushed_at": "2026-10-15T21:55:49Z",
+    "pushed_at": "2026-10-16T20:05:04Z",
     "license": "Apache-2.0"
   },
   "summary_zh": "用于启用和调用 Google Analytics 数据 API，可查询指标与维度、生成自定义分析报告并检查字段兼容性。"

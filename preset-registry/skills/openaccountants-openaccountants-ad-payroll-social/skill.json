@@ -1,0 +1,25 @@
+{
+  "id": "openaccountants-openaccountants-ad-payroll-social",
+  "name": "ad-payroll-social",
+  "description": "Use this skill whenever asked about Andorra payroll processing for employed persons. Trigger on phrases like \\\"Andorra payroll\\\", \\\"CASS contributions\\\", \\\"IRPF withholding Andorra\\\", \\\"employee CASS\\\", \\\"employer CASS\\\", \\\"retencions Andorra\\\", \\\"CASS-0031\\\", \\\"salari Andorra\\\", \\\"net salary Andorra\\\", \\\"gross to net Andorra\\\", \\\"withholding tax Andorra\\\", \\\"Andorra social security\\\", \\\"retenidor Andorra\\\", \\\"DTF withholding\\\", \\\"IRNR Andorra\\\", \\\"non-resident tax Andorra\\\", \\\"minimum wage Ando",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openaccountants",
+  "install_path": ".claude/skills/ad-payroll-social/SKILL.md",
+  "source": {
+    "repo": "openaccountants/openaccountants",
+    "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/ad-payroll-social/SKILL.md",
+    "path": "agent-skills/ad-payroll-social/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-16T23:11:45.572Z",
+    "stars": 446,
+    "language": "Python",
+    "pushed_at": "2026-10-16T20:17:11Z",
+    "license": "AGPL-3.0"
+  }
+}

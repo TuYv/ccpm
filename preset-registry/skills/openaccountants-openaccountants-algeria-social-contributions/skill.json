@@ -1,0 +1,25 @@
+{
+  "id": "openaccountants-openaccountants-algeria-social-contributions",
+  "name": "algeria-social-contributions",
+  "description": "Use this skill whenever asked about Algeria social security / social insurance contributions (CNAS for salaried employees, CASNOS for self-employed/non-salaried) and the interaction with Algerian personal income tax (IRG). Trigger on phrases like \\\"how much CNAS do I pay\\\", \\\"Algeria payroll contributions\\\", \\\"employer social security Algeria\\\", \\\"CNAS employee deduction\\\", \\\"CASNOS self-employed contribution\\\", \\\"G50 declaration\\\", \\\"DAS annual salary declaration\\\", \\\"IRG on salary\\\", \\\"Algeria",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openaccountants",
+  "install_path": ".claude/skills/algeria-social-contributions/SKILL.md",
+  "source": {
+    "repo": "openaccountants/openaccountants",
+    "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/algeria-social-contributions/SKILL.md",
+    "path": "agent-skills/algeria-social-contributions/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-16T23:11:50.112Z",
+    "stars": 446,
+    "language": "Python",
+    "pushed_at": "2026-10-16T20:17:11Z",
+    "license": "AGPL-3.0"
+  }
+}

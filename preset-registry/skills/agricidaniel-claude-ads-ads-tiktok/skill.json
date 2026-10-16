@@ -1,7 +1,7 @@
 {
   "id": "agricidaniel-claude-ads-ads-tiktok",
   "name": "ads-tiktok",
-  "description": "Audit TikTok Ads measurement, Pixel and Events API, mobile-first creative, audiences, Smart+, Shop and commerce campaigns, bidding, budgets, pacing, attribution, and policy. Use for TikTok Ads, TikTok Pixel, Events API, Smart+, TikTok Shop Ads, GMV Max, Spark Ads, or TikTok campaign optimization.",
+  "description": "Audit TikTok Ads measurement, Pixel, mobile-first creative, audiences, Smart+, Shop and commerce campaigns, bidding, budgets, pacing, attribution, and policy. Use for TikTok Ads, TikTok Pixel, Smart+, TikTok Shop Ads, GMV Max, or Spark Ads. Read-only; use ads-server-side-tracking for server-side events and ads-optimize to change campaigns.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/AgriciDaniel/claude-ads/blob/main/skills/ads-tiktok/SKILL.md",
     "path": "skills/ads-tiktok/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-16T19:48:32.158Z",
-    "stars": 10037,
+    "discovered_at": "2026-10-16T23:05:12.824Z",
+    "stars": 10044,
     "language": "Python",
-    "pushed_at": "2026-10-16T18:40:16Z",
+    "pushed_at": "2026-10-16T22:56:13Z",
     "license": "MIT"
-  },
-  "summary_zh": "用于审计和优化 TikTok 广告投放，覆盖数据追踪、素材、受众、预算、归因及电商活动等场景。"
+  }
 }

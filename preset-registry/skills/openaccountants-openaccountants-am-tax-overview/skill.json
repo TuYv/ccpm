@@ -1,0 +1,25 @@
+{
+  "id": "openaccountants-openaccountants-am-tax-overview",
+  "name": "am-tax-overview",
+  "description": "Source-cited draft: tax overview for Armenia (tax year 2025) — rates, thresholds and rules with primary-source citations. Unverified; pending local-accountant review.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openaccountants",
+  "install_path": ".claude/skills/am-tax-overview/SKILL.md",
+  "source": {
+    "repo": "openaccountants/openaccountants",
+    "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/am-tax-overview/SKILL.md",
+    "path": "agent-skills/am-tax-overview/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-16T23:11:50.633Z",
+    "stars": 446,
+    "language": "Python",
+    "pushed_at": "2026-10-16T20:17:11Z",
+    "license": "AGPL-3.0"
+  }
+}

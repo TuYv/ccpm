@@ -2,7 +2,7 @@
   "id": "google-skills-bigquery-observability",
   "name": "bigquery-observability",
   "description": ">- Provides data-retrieval best practices, tool selection guidance, and performant SQL query syntax for BigQuery telemetry across INFORMATION_SCHEMA, Cloud Monitoring, and the REST API. Use when the telemetry to fetch is already known, selecting telemetry tools, writing performant INFORMATION_SCHEMA queries, retrieving telemetry for diagnosing single-job performance bottlenecks, investigating slot contention, job concurrency and queue latency, analyzing reservation capacity, utilization and auto",
-  "category": "文档写作",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/google/skills/blob/main/skills/cloud/bigquery-observability/SKILL.md",
     "path": "skills/cloud/bigquery-observability/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-16T19:02:47.292Z",
-    "stars": 21362,
+    "discovered_at": "2026-10-16T22:17:33.784Z",
+    "stars": 21363,
     "language": "Python",
-    "pushed_at": "2026-10-15T21:55:49Z",
+    "pushed_at": "2026-10-16T20:05:04Z",
     "license": "Apache-2.0"
   }
 }

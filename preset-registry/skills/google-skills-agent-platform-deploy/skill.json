@@ -2,7 +2,7 @@
   "id": "google-skills-agent-platform-deploy",
   "name": "agent-platform-deploy",
   "description": ">- Deploy open models or custom weights from Model Garden to Agent Platform endpoints, check the status of an in-progress deployment operation, or clean up resources by undeploying models and deleting endpoints. Use when asked to actively deploy a model, list the Model Garden CATALOG of available models, check if a specific model is deployable (`gcloud ai model-garden models list-deployment-config`), query deployment cost, troubleshoot deployment errors (like quota limits), or undeploy/clean up ",
-  "category": "开发编程",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/google/skills/blob/main/skills/cloud/agent-platform-deploy/SKILL.md",
     "path": "skills/cloud/agent-platform-deploy/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-16T19:02:43.534Z",
-    "stars": 21362,
+    "discovered_at": "2026-10-16T22:17:30.904Z",
+    "stars": 21363,
     "language": "Python",
-    "pushed_at": "2026-10-15T21:55:49Z",
+    "pushed_at": "2026-10-16T20:05:04Z",
     "license": "Apache-2.0"
   },
   "summary_zh": "用于在 Agent Platform 部署开放或自定义模型，并查询可部署模型、成本与进度，排查错误及清理资源。"

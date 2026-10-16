@@ -2,7 +2,7 @@
   "id": "google-skills-cloud-monitoring-promql-query",
   "name": "cloud-monitoring-promql-query",
   "description": ">- Generates valid PromQL queries from Cloud Monitoring metric descriptors and resource parameters. Use when asked to create, generate, write, or format PromQL queries, PromQL strings, or PromQL aggregations for Cloud Monitoring metrics and resources. Don't use for raw metric discovery or metric selection.",
-  "category": "文档写作",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/google/skills/blob/main/skills/cloud/cloud-monitoring-promql-query/SKILL.md",
     "path": "skills/cloud/cloud-monitoring-promql-query/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-16T19:02:49.429Z",
-    "stars": 21362,
+    "discovered_at": "2026-10-16T22:17:35.664Z",
+    "stars": 21363,
     "language": "Python",
-    "pushed_at": "2026-10-15T21:55:49Z",
+    "pushed_at": "2026-10-16T20:05:04Z",
     "license": "Apache-2.0"
   },
   "summary_zh": "一个根据云监控指标描述和资源参数生成有效 PromQL 查询的工具，适合编写、格式化指标查询与聚合表达式。"

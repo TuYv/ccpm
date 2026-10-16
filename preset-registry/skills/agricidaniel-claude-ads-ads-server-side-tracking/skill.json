@@ -1,7 +1,7 @@
 {
   "id": "agricidaniel-claude-ads-ads-server-side-tracking",
   "name": "ads-server-side-tracking",
-  "description": "Audit server-side paid-media measurement including server-side tag management, platform conversion APIs, event taxonomy, browser/server deduplication, consent, hashing, data quality, observability, and privacy. Use for server-side tracking, sGTM, server-side tagging, CAPI, Events API, event_id, pixel debugging, first-party measurement, or conversion data loss.",
+  "description": "Audit server-side paid-media measurement including server-side tag management, platform conversion APIs, event taxonomy, browser/server deduplication, consent, hashing, data quality, observability, and privacy. Use for server-side tracking, sGTM, server-side tagging, Meta CAPI, TikTok Events API, event_id, deduplication, pixel debugging, first-party measurement, or conversion data loss.",
   "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/AgriciDaniel/claude-ads/blob/main/skills/ads-server-side-tracking/SKILL.md",
     "path": "skills/ads-server-side-tracking/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-16T19:48:31.525Z",
-    "stars": 10037,
+    "discovered_at": "2026-10-16T23:05:12.264Z",
+    "stars": 10044,
     "language": "Python",
-    "pushed_at": "2026-10-16T18:40:16Z",
+    "pushed_at": "2026-10-16T22:56:13Z",
     "license": "MIT"
-  },
-  "summary_zh": "用于审计服务端广告转化追踪体系，帮助排查数据丢失、重复上报和隐私合规问题，适合优化付费媒体归因。"
+  }
 }

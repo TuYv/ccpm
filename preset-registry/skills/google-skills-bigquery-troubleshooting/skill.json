@@ -2,7 +2,7 @@
   "id": "google-skills-bigquery-troubleshooting",
   "name": "bigquery-troubleshooting",
   "description": ">- Provides diagnostic workflows and step-by-step root-cause analysis procedures for actively broken, failing, or slow BigQuery jobs, execution graph and query plan stage bottlenecks, system performance issues, or unexpectedly expensive workloads. Use when interpreting symptoms, isolating bottlenecks, diagnosing cost spikes (on-demand query spend, capacity slot autoscaling, storage growth), execution graph stages or substep variables, identifying root causes, and determining remediation steps. D",
-  "category": "设计创意",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/google/skills/blob/main/skills/cloud/bigquery-troubleshooting/SKILL.md",
     "path": "skills/cloud/bigquery-troubleshooting/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-16T19:02:47.643Z",
-    "stars": 21362,
+    "discovered_at": "2026-10-16T22:17:34.053Z",
+    "stars": 21363,
     "language": "Python",
-    "pushed_at": "2026-10-15T21:55:49Z",
+    "pushed_at": "2026-10-16T20:05:04Z",
     "license": "Apache-2.0"
   }
 }

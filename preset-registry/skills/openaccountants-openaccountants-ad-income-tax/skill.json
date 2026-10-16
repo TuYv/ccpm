@@ -1,0 +1,25 @@
+{
+  "id": "openaccountants-openaccountants-ad-income-tax",
+  "name": "ad-income-tax",
+  "description": "Use this skill whenever asked about Andorra personal income tax (IRPF — Impost sobre la Renda de les Persones Físiques) for residents or self-employed individuals. Trigger on phrases like \\\"how much tax do I pay in Andorra\\\", \\\"IRPF Andorra\\\", \\\"income tax return Andorra\\\", \\\"declaració IRPF\\\", \\\"self-employed Andorra\\\", \\\"autònom Andorra\\\", \\\"compte propi\\\", \\\"CASS contributions\\\", \\\"social security Andorra\\\", \\\"move to Andorra taxes\\\", \\\"Andorra tax residency\\\", \\\"183 days Andorra\\\", or any qu",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openaccountants",
+  "install_path": ".claude/skills/ad-income-tax/SKILL.md",
+  "source": {
+    "repo": "openaccountants/openaccountants",
+    "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/ad-income-tax/SKILL.md",
+    "path": "agent-skills/ad-income-tax/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-16T23:11:45.456Z",
+    "stars": 446,
+    "language": "Python",
+    "pushed_at": "2026-10-16T20:17:11Z",
+    "license": "AGPL-3.0"
+  }
+}

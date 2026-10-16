@@ -1,0 +1,25 @@
+{
+  "id": "openaccountants-openaccountants-ae-company-formation",
+  "name": "ae-company-formation",
+  "description": "Source-cited draft: company formation & entity choice for United Arab Emirates (tax year 2025) — rates, thresholds and rules with primary-source citations. Unverified; pending local-accountant review.",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openaccountants",
+  "install_path": ".claude/skills/ae-company-formation/SKILL.md",
+  "source": {
+    "repo": "openaccountants/openaccountants",
+    "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/ae-company-formation/SKILL.md",
+    "path": "agent-skills/ae-company-formation/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-16T23:11:46.349Z",
+    "stars": 446,
+    "language": "Python",
+    "pushed_at": "2026-10-16T20:17:11Z",
+    "license": "AGPL-3.0"
+  }
+}

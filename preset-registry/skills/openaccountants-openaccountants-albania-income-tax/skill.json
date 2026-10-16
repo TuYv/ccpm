@@ -1,0 +1,25 @@
+{
+  "id": "openaccountants-openaccountants-albania-income-tax",
+  "name": "albania-income-tax",
+  "description": "Use this skill whenever asked about Albania personal income tax for self-employed individuals and employees. Trigger on phrases like \\\"how much tax do I pay in Albania\\\", \\\"Albanian income tax\\\", \\\"DIVA\\\", \\\"D1 annual return\\\", \\\"tatime.gov.al\\\", \\\"self-employed Albania\\\", \\\"ALL tax brackets\\\", \\\"0% small business tax\\\", \\\"social and health contributions Albania\\\", \\\"PAYE Albania\\\", \\\"13% 23% income tax\\\", \\\"dividend tax Albania\\\", \\\"disguised employment\\\", or any question about filing or comput",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openaccountants",
+  "install_path": ".claude/skills/albania-income-tax/SKILL.md",
+  "source": {
+    "repo": "openaccountants/openaccountants",
+    "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/albania-income-tax/SKILL.md",
+    "path": "agent-skills/albania-income-tax/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-16T23:11:49.104Z",
+    "stars": 446,
+    "language": "Python",
+    "pushed_at": "2026-10-16T20:17:11Z",
+    "license": "AGPL-3.0"
+  }
+}

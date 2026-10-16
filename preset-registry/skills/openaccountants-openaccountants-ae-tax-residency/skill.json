@@ -1,0 +1,25 @@
+{
+  "id": "openaccountants-openaccountants-ae-tax-residency",
+  "name": "ae-tax-residency",
+  "description": "Use this skill for any question about UAE tax residency. Trigger on: \\\"UAE tax resident\\\", \\\"Dubai tax residency\\\", \\\"UAE residency certificate\\\", \\\"183 days UAE\\\", \\\"move to Dubai taxes\\\", \\\"UAE domicile\\\", \\\"tax residency certificate UAE\\\", \\\"centre of vital interests UAE\\\", \\\"leave UAE tax implications\\\", \\\"Emirates ID tax\\\". Covers how to establish UAE tax residency, the conditions, and what it means for tax purposes.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openaccountants",
+  "install_path": ".claude/skills/ae-tax-residency/SKILL.md",
+  "source": {
+    "repo": "openaccountants/openaccountants",
+    "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/ae-tax-residency/SKILL.md",
+    "path": "agent-skills/ae-tax-residency/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-16T23:11:47.181Z",
+    "stars": 446,
+    "language": "Python",
+    "pushed_at": "2026-10-16T20:17:11Z",
+    "license": "AGPL-3.0"
+  }
+}
