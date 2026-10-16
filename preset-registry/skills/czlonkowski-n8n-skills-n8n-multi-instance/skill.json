@@ -1,7 +1,7 @@
 {
   "id": "czlonkowski-n8n-skills-n8n-multi-instance",
   "name": "n8n-multi-instance",
-  "description": "Use when an n8n-mcp account targets more than one n8n instance — i.e. the `n8n_instances` tool is available, the user mentions multiple n8n instances or environments (prod vs staging, several teams or clients), a workflow / datatable / credential / execution call returns an unexpected NOT_FOUND or reads data you don't recognize, or a credential create/update/delete is refused with an `INSTANCE_AMBIGUOUS` error. Covers choosing and switching which instance this MCP session targets, verifying the ",
+  "description": "Use when an n8n-mcp account targets more than one n8n instance — i.e. the `n8n_instances` tool is available, the user mentions multiple n8n instances or environments (prod vs staging, several teams or clients), several agents or chats work on one account in parallel, a workflow / datatable / credential / execution call returns an unexpected NOT_FOUND or reads data you don't recognize, or a call is refused with `INSTANCE_AMBIGUOUS` or `INSTANCE_NOT_FOUND`. Covers naming the target instance on eac",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/czlonkowski/n8n-skills/blob/main/skills/n8n-multi-instance/SKILL.md",
     "path": "skills/n8n-multi-instance/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-15T20:34:04.727Z",
-    "stars": 6441,
+    "discovered_at": "2026-10-15T23:54:02.236Z",
+    "stars": 6439,
     "language": "Shell",
-    "pushed_at": "2026-10-09T08:26:44Z",
+    "pushed_at": "2026-10-15T21:35:32Z",
     "license": "MIT"
-  },
-  "summary_zh": "用于在多个 n8n 实例或环境间选择并切换目标，避免误读数据、资源找不到或凭证操作冲突。"
+  }
 }
