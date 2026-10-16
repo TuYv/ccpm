@@ -1,0 +1,25 @@
+{
+  "id": "omnigent-ai-omnigent-feature-publish",
+  "name": "feature-publish",
+  "description": "Commit the feature, write the PR body, publish in the selected mode, and drive the PR.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "omnigent-ai",
+  "install_path": ".claude/skills/feature-publish/SKILL.md",
+  "source": {
+    "repo": "omnigent-ai/omnigent",
+    "url": "https://github.com/omnigent-ai/omnigent/blob/main/dev/feature-agent/skills/feature-publish/SKILL.md",
+    "path": "dev/feature-agent/skills/feature-publish/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-16T10:04:35.123Z",
+    "stars": 10841,
+    "language": "Python",
+    "pushed_at": "2026-10-16T10:00:46Z",
+    "license": "Apache-2.0"
+  }
+}

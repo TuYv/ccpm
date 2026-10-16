@@ -1,0 +1,25 @@
+{
+  "id": "omnigent-ai-omnigent-feature-implement",
+  "name": "feature-implement",
+  "description": "Implement the design with focused tests mapped to each covered CUJ.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "omnigent-ai",
+  "install_path": ".claude/skills/feature-implement/SKILL.md",
+  "source": {
+    "repo": "omnigent-ai/omnigent",
+    "url": "https://github.com/omnigent-ai/omnigent/blob/main/dev/feature-agent/skills/feature-implement/SKILL.md",
+    "path": "dev/feature-agent/skills/feature-implement/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-16T10:04:34.792Z",
+    "stars": 10841,
+    "language": "Python",
+    "pushed_at": "2026-10-16T10:00:46Z",
+    "license": "Apache-2.0"
+  }
+}

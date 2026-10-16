@@ -1,0 +1,25 @@
+{
+  "id": "omnigent-ai-omnigent-feature-demo",
+  "name": "feature-demo",
+  "description": "Record at least one captioned demo for every covered CUJ through its real entry point.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "omnigent-ai",
+  "install_path": ".claude/skills/feature-demo/SKILL.md",
+  "source": {
+    "repo": "omnigent-ai/omnigent",
+    "url": "https://github.com/omnigent-ai/omnigent/blob/main/dev/feature-agent/skills/feature-demo/SKILL.md",
+    "path": "dev/feature-agent/skills/feature-demo/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-16T10:04:34.263Z",
+    "stars": 10841,
+    "language": "Python",
+    "pushed_at": "2026-10-16T10:00:46Z",
+    "license": "Apache-2.0"
+  }
+}
