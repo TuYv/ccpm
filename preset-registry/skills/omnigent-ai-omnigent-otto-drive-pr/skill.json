@@ -1,0 +1,25 @@
+{
+  "id": "omnigent-ai-omnigent-otto-drive-pr",
+  "name": "otto-drive-pr",
+  "description": "PR mergeability, CI, and live preview.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "omnigent-ai",
+  "install_path": ".claude/skills/otto-drive-pr/SKILL.md",
+  "source": {
+    "repo": "omnigent-ai/omnigent",
+    "url": "https://github.com/omnigent-ai/omnigent/blob/main/dev/agent-skills/otto-drive-pr/SKILL.md",
+    "path": "dev/agent-skills/otto-drive-pr/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-16T04:47:02.693Z",
+    "stars": 10835,
+    "language": "Python",
+    "pushed_at": "2026-10-16T04:43:44Z",
+    "license": "Apache-2.0"
+  }
+}
