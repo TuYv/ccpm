@@ -1,36 +1,36 @@
 ---
 name: asia-pacific-corridors
-description: "OpenAccountants tax and accounting reference for INTL: asia pacific corridors. Use for cross-border questions in INTL (tax year )."
-license: AGPL-3.0-or-later (code) / OpenAccountants Guide License v1.0 (content)
+description: "Use when asked about Asia Pacific Corridors. Quick Reference"
+license: "AGPL-3.0-or-later (code) / OpenAccountants Guide License v1.0 (content)"
 metadata:
   source: openaccountants
-  jurisdiction: INTL
-  category: cross-border
-  quality: source-cited draft
-  openaccountants_url: "https://openaccountants.com/skills/asia-pacific-corridors"
-  obligation: OTHER
+  openaccountants_url: "https://www.openaccountants.com/skills/asia-pacific-corridors"
+  jurisdiction: "GLOBAL"
+  tax_year: "2025"
+  last_updated: "2026-07-13"
+  review_status: "pending_review"
 ---
 
-# Asia-Pacific Treaty Corridors — Withholding Tax Rates
-
-> **General reference only.** This skill is general tax/accounting reference material for AI-assisted workflows. It has not been reviewed for any specific person's facts, documents, elections, deadlines, residency, filing status, or local procedures. Do not rely on it to file, pay, amend, or take a tax position without review by a qualified professional in the relevant jurisdiction.
+# Asia Pacific Corridors
 
 ## Quick Reference
 
+**Quick Reference**
+
 | Field | Value |
-|-------|-------|
+| --- | --- |
 | Jurisdiction | Asia-Pacific region |
 | Corridors Covered | SG-AU, SG-IN, SG-JP, SG-HK, JP-AU, JP-IN, AU-NZ, IN-UAE, KR-JP, HK-UK, MY-SG |
 | Number of Corridors | 11 |
 | Last Verified | May 2026 |
 | Key Note | Singapore and Hong Kong do not levy WHT on dividends. Hong Kong has no WHT on interest or royalties (except royalties to closely connected non-residents at 4.95%). India has WHT on all passive income categories including FTS. |
 
----
-
 ## Singapore → Australia
 
+**Singapore → Australia treaty rates**  _(Singapore-Australia DTA (ratified, modified by MLI 19 July 2021). IRAS treaty table.)_
+
 | Income Type | Treaty Rate | Treaty Article | Notes |
-|-------------|------------|----------------|-------|
+| --- | --- | --- | --- |
 | Dividends | 15% | Art 8(1) | SG does not impose dividend WHT domestically |
 | Interest | 10% | Art 9 | SG domestic WHT on interest: 15% |
 | Royalties | 10% | Art 10 | SG domestic WHT on royalties: 10% |
@@ -40,12 +40,12 @@ metadata:
 **Special provisions:** Older treaty (original 1969). Australia applies 30% domestic WHT on dividends, reduced by treaty. Singapore has no domestic dividend WHT — treaty rate relevant only from Australian side. Modified by MLI with PPT.
 **Last verified:** May 2026
 
----
-
 ## Singapore → India
 
+**Singapore → India treaty rates**  _(Singapore-India DTAA. PwC Singapore and India WHT tables.)_
+
 | Income Type | Treaty Rate | Treaty Article | Notes |
-|-------------|------------|----------------|-------|
+| --- | --- | --- | --- |
 | Dividends — substantial (≥25% capital) | 10% | Art 10 | Lower rate |
 | Dividends — portfolio | 15% | Art 10 | Standard rate |
 | Interest — banks/FIs | 10% | Art 11 | SG bank receiving Indian interest |
@@ -57,12 +57,12 @@ metadata:
 **Special provisions:** India-Singapore is a high-volume corridor (SG is India's largest FDI source). FTS clause added by protocol. India requires Form 10F (Form 41 from 2026) + TRC. India domestic WHT: 20% on dividends, 20% on interest, 10% on royalties/FTS. LOB article exists.
 **Last verified:** May 2026
 
----
-
 ## Singapore → Japan
 
+**Singapore → Japan treaty rates**  _(Singapore-Japan DTA. PwC Singapore and Japan WHT tables.)_
+
 | Income Type | Treaty Rate | Treaty Article | Notes |
-|-------------|------------|----------------|-------|
+| --- | --- | --- | --- |
 | Dividends — substantial (≥25% shares, 6 months) | 5% | Art 10 | Lower rate |
 | Dividends — portfolio | 15% | Art 10 | Standard rate |
 | Interest | 10% | Art 11 | Japan domestic WHT 15-20% |
@@ -73,12 +73,12 @@ metadata:
 **Special provisions:** Japan domestic WHT on dividends is 15-20%. Treaty reduces substantially. 25% threshold for reduced dividend rate is higher than modern standard (usually 10%). 6-month holding period required.
 **Last verified:** May 2026
 
----
-
 ## Singapore → Hong Kong
 
+**Singapore → Hong Kong treaty rates**  _(Singapore-Hong Kong DTA (CDTA). PwC Singapore WHT table. IRAS.)_
+
 | Income Type | Treaty Rate | Treaty Article | Notes |
-|-------------|------------|----------------|-------|
+| --- | --- | --- | --- |
 | Dividends | 0%/5%/10% | Art 10 | See below |
 | Interest | 0%/15% | Art 11 | SG domestic: 15%; HK: 0% |
 | Royalties | 5%/10% | Art 12 | Split by type |
@@ -93,12 +93,12 @@ metadata:
 **Special provisions:** Neither jurisdiction levies WHT on dividends domestically. HK has no general WHT on interest. HK's only royalty WHT (4.95%) applies to closely connected non-residents — treaty may reduce further. Key corridor for Asian holding structures.
 **Last verified:** May 2026
 
----
-
 ## Japan → Australia
 
+**Japan → Australia treaty rates**  _(Japan-Australia Convention (2008, revised). PwC Japan WHT table.)_
+
 | Income Type | Treaty Rate | Treaty Article | Notes |
-|-------------|------------|----------------|-------|
+| --- | --- | --- | --- |
 | Dividends — portfolio | 10% | Art 10 | JP domestic WHT 15-20% |
 | Dividends — substantial (≥10% voting, 6 months) | 0%/5% | Art 10 | 0% for ≥80%; 5% for ≥10% |
 | Interest | 10% | Art 11 | Government interest exempt |
@@ -109,12 +109,12 @@ metadata:
 **Special provisions:** Modern treaty with 0% rate for ≥80% parent-subsidiary dividends. 5% rate for ≥10% holdings. Australia's franking credit system affects effective dividend taxation. Royalties at 5% reflect favourable treatment.
 **Last verified:** May 2026
 
----
-
 ## Japan → India
 
+**Japan → India treaty rates**  _(Japan-India DTAA. PwC Japan and India WHT tables. ClearTax India.)_
+
 | Income Type | Treaty Rate | Treaty Article | Notes |
-|-------------|------------|----------------|-------|
+| --- | --- | --- | --- |
 | Dividends | 10% | Art 10 | Both portfolio and substantial |
 | Interest | 10% | Art 11 | Standard rate |
 | Royalties | 10% | Art 12 | Standard rate |
@@ -124,12 +124,12 @@ metadata:
 **Special provisions:** Flat 10% across all categories is unusual — no split between portfolio and substantial dividends. India FTS provision applies. India domestic WHT: 20% on most categories — treaty provides significant reduction. Bilateral investment flows are substantial (Japan is major FDI source for India).
 **Last verified:** May 2026
 
----
-
 ## Australia → New Zealand
 
+**Australia → New Zealand treaty rates**  _(Australia-New Zealand Convention signed 26 June 2009 (Paris). In force 2010.)_
+
 | Income Type | Treaty Rate | Treaty Article | Notes |
-|-------------|------------|----------------|-------|
+| --- | --- | --- | --- |
 | Dividends — portfolio | 15% | Art 10(2)(b) | NZ domestic WHT 30% |
 | Dividends — substantial (≥10% voting) | 5% | Art 10(2)(a) | Direct investment |
 | Interest | 10% | Art 11(2) | Government/FI interest may be exempt |
@@ -140,12 +140,12 @@ metadata:
 **Special provisions:** Trans-Tasman corridor — one of the closest economic relationships globally. CER (Closer Economic Relations) framework. Australia's franking credits affect dividend treatment. Both countries are OECD members. Modified by MLI.
 **Last verified:** May 2026
 
----
-
 ## India → UAE
 
+**India → UAE treaty rates**  _(India-UAE DTAA signed 1992, amended by 2007 Protocol. India IT Act vis-a-vis treaty.)_
+
 | Income Type | Treaty Rate | Treaty Article | Notes |
-|-------------|------------|----------------|-------|
+| --- | --- | --- | --- |
 | Dividends | 10% | Art 10(2) | Flat rate (2007 Protocol amendment) |
 | Interest — banks/FIs | 5% | Art 11(2)(a) | Bona fide banking business |
 | Interest — general | 12.5% | Art 11(2)(b) | All other interest |
@@ -157,12 +157,12 @@ metadata:
 **Special provisions:** UAE introduced 9% corporate tax in 2023 but maintains extensive exemptions. Treaty originally had 5%/15% dividend split — 2007 Protocol changed to flat 10%. No FTS article — fees for technical services taxed under domestic law (10% under IT Act) or business profits (Art 7). UAE does not withhold on outbound payments. Major corridor for NRI investment structures.
 **Last verified:** May 2026
 
----
-
 ## South Korea → Japan
 
+**South Korea → Japan treaty rates**  _(South Korea-Japan Convention. PwC Japan WHT table.)_
+
 | Income Type | Treaty Rate | Treaty Article | Notes |
-|-------------|------------|----------------|-------|
+| --- | --- | --- | --- |
 | Dividends — portfolio | 15% | Art 10 | Standard rate |
 | Dividends — substantial (≥25% shares) | 5% | Art 10 | Higher threshold |
 | Interest | 10% | Art 11 | Government interest exempt |
@@ -173,12 +173,12 @@ metadata:
 **Special provisions:** 25% threshold for reduced dividend rate reflects older treaty practice. Korea domestic WHT on dividends: 20%. Japan-Korea relations affect treaty administration. Both countries are major trading partners.
 **Last verified:** May 2026
 
----
-
 ## Hong Kong → UK
 
+**Hong Kong → UK treaty rates**  _(UK-Hong Kong DTA. HMRC treaty summary.)_
+
 | Income Type | Treaty Rate | Treaty Article | Notes |
-|-------------|------------|----------------|-------|
+| --- | --- | --- | --- |
 | Dividends | 0%/15% | Art 10 | 0% general; 15% UK REIT |
 | Interest | 0% | Art 11 | HK has no domestic interest WHT |
 | Royalties | 3% | Art 12 | Very low rate |
@@ -188,12 +188,12 @@ metadata:
 **Special provisions:** HK does not levy WHT on dividends or interest domestically. Royalty rate of 3% is one of the lowest globally. UK domestic WHT on interest/royalties is 20% — treaty reduces to 0%/3%. Key corridor for financial services. Modified by MLI.
 **Last verified:** May 2026
 
----
-
 ## Malaysia → Singapore
 
+**Malaysia → Singapore treaty rates**  _(Malaysia-Singapore DTA. PwC Singapore WHT table. IRAS.)_
+
 | Income Type | Treaty Rate | Treaty Article | Notes |
-|-------------|------------|----------------|-------|
+| --- | --- | --- | --- |
 | Dividends | 0% | Art 10 | Neither country levies dividend WHT |
 | Interest | 10% | Art 11 | MY domestic WHT 15% |
 | Royalties | 8%/10% | Art 12 | Split by type |
@@ -203,12 +203,12 @@ metadata:
 **Special provisions:** Historical ASEAN partners with deep economic integration. Malaysia abolished dividend WHT (single-tier system). Singapore has no dividend WHT. Interest reduced from MY domestic 15%. Royalties: 8% for copyright/literary/artistic; 10% for industrial/commercial.
 **Last verified:** May 2026
 
----
-
 ## Summary: Key Asia-Pacific Treaty Rate Comparison
 
+**Summary: Key Asia-Pacific Treaty Rate Comparison**
+
 | Corridor | Dividends (substantial) | Interest | Royalties | FTS |
-|----------|------------------------|----------|-----------|-----|
+| --- | --- | --- | --- | --- |
 | SG → AU | 15% (no split) | 10% | 10% | N/A |
 | SG → IN | 10% (≥25%) | 10%/15% | 10% | 10% |
 | SG → JP | 5% (≥25%) | 10% | 10% | N/A |
@@ -221,12 +221,12 @@ metadata:
 | HK → UK | 0% | 0% | 3% | N/A |
 | MY → SG | 0% | 10% | 8%/10% | N/A |
 
----
-
 ## PE Threshold Notes — Asia-Pacific
 
+**PE Threshold Notes — Asia-Pacific**
+
 | Corridor | Construction PE Threshold | Service PE | Notes |
-|----------|--------------------------|------------|-------|
+| --- | --- | --- | --- |
 | SG → AU | 12 months | None | Standard OECD |
 | SG → IN | 90 days in any 12-month period | 90 days | India's short PE threshold |
 | SG → JP | 12 months | None | Standard OECD |
@@ -241,14 +241,12 @@ metadata:
 
 **India's 90-day PE threshold** is a critical planning factor for all India-related corridors. Service providers should carefully track days spent in India.
 
----
-
 ## Domestic WHT Rate Comparison
 
-For context, here are the domestic (non-treaty) WHT rates in each jurisdiction:
+**Domestic WHT Rate Comparison**
 
 | Jurisdiction | Dividends | Interest | Royalties | Notes |
-|-------------|-----------|----------|-----------|-------|
+| --- | --- | --- | --- | --- |
 | Singapore | 0% | 15% | 10% | No dividend WHT |
 | Hong Kong | 0% | 0% | 4.95% | Minimal WHT regime |
 | Japan | 15-20% | 15-20% | 20% | High domestic rates |
@@ -259,14 +257,32 @@ For context, here are the domestic (non-treaty) WHT rates in each jurisdiction:
 | Malaysia | 0% | 15% | 10% | Single-tier dividend system |
 | UAE | 0% | 0% | 0% | No WHT (9% CIT introduced 2023) |
 
-Treaty rates should always be compared against these domestic rates — the lower of treaty or domestic applies.
+For context, here are the domestic (non-treaty) WHT rates in each jurisdiction:
 
----
+Treaty rates should always be compared against these domestic rates — the lower of treaty or domestic applies.
 
 ## Disclaimer
 
 This skill and its outputs are provided for informational and computational purposes only and do not constitute tax, legal, or financial advice. Treaty rates are subject to change through protocol amendments and renegotiations. Always verify current treaty text before relying on any rate. All outputs must be reviewed by a qualified professional before filing or acting upon.
 
+<!-- openaccountants-cta-block -->
+
 ---
 
-_Source: [OpenAccountants](https://openaccountants.com/skills/asia-pacific-corridors) — open tax Guides for AI, reviewed by named CPAs/CAs/EAs. Quality: **source-cited draft**. For always-current figures and named-accountant backing, connect the OpenAccountants MCP server (`openaccountants-mcp`)._
+## Talk to a verified accountant
+
+This guide is maintained by the OpenAccountants network — accountants who put
+their name behind the tax answers AI gives people. The live, always-current
+version (and the professional behind it) is at
+[openaccountants.com](https://www.openaccountants.com).
+
+- Use it in your AI: https://www.openaccountants.com/connect
+- Meet the accountants: https://www.openaccountants.com/network
+
+> **General reference only.** This document does not constitute tax, legal, or
+> financial advice. Verify figures against the cited primary sources or with a
+> licensed professional before relying on them.
+
+## Today's figures and who stands behind this skill
+
+This file is an AI skill (tax rules your AI follows) from OpenAccountants, copied on 2026-07-13. Rates, thresholds and deadlines change. For the current version of this skill, its official sources and the named accountant (if any) who stands behind it, call `get_skill` with slug `asia-pacific-corridors` on the OpenAccountants connector (https://www.openaccountants.com/connect), or read https://www.openaccountants.com/skills/asia-pacific-corridors. If neither is available, confirm every figure against the official source pages cited above before relying on it.

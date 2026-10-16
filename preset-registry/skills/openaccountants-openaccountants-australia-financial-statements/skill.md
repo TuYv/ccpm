@@ -1,26 +1,28 @@
 ---
 name: australia-financial-statements
-description: "> Use this skill when preparing, reviewing, or advising on annual financial statements for an Australian company. Trigger on phrases like \"ASIC financial report\", \"AASB\", \"Australian Accounting Standards\", \"general purpose financial statements\", \"special purpose financial statements\", \"large proprietary company\", \"small proprietary company\", \"directors' report Australia\", \"audit Australia\", \"Form 388\", \"Corporations Act 2001 reporting\", or any question about preparing and filing statutory accounts under the Corporations Act 2001. Covers AASB frameworks, size thresholds (large/small proprietary), required statements, formats, notes, lodgement deadlines, and audit requirements."
-license: AGPL-3.0-or-later (code) / OpenAccountants Guide License v1.0 (content)
+description: "Use this skill when preparing, reviewing, or advising on annual financial statements for an Australian company. Trigger on phrases like \"ASIC financial report\", \"AASB\", \"Australian Accounting Standards\", \"general purpose financial statements\", \"special purpose financial statements\", \"large proprietary company\", \"small proprietary company\", \"directors' report Australia\", \"audit Australia\", \"Form 388\", \"Corporations Act 2001 reporting\", or any question about preparing and filing statutory accounts under the Corporations Act 2001. Covers AASB frameworks, size thresholds (large/small proprietary), required statements, formats, notes, lodgement deadlines, and audit requirements."
+license: "AGPL-3.0-or-later (code) / OpenAccountants Guide License v1.0 (content)"
 metadata:
   source: openaccountants
-  jurisdiction: AU
-  category: financial-statements
-  quality: source-cited draft
-  openaccountants_url: "https://openaccountants.com/skills/australia-financial-statements"
-  obligation: FS
+  openaccountants_url: "https://www.openaccountants.com/skills/australia-financial-statements"
+  jurisdiction: "AU"
+  tax_year: "2025"
+  last_updated: "2026-09-27"
+  review_status: "pending_review"
 ---
 
-# Australia Financial Statements Skill v1.0
+# Australia Financial Statements
 
-> **General reference only.** This skill is general tax/accounting reference material for AI-assisted workflows. It has not been reviewed for any specific person's facts, documents, elections, deadlines, residency, filing status, or local procedures. Do not rely on it to file, pay, amend, or take a tax position without review by a qualified professional in the relevant jurisdiction.
+## Australia Financial Statements
 
----
+## Australia Financial Statements Skill v1.2
 
 ## Section 1 -- Quick Reference
 
+**Quick Reference**
+
 | Field | Value |
-|---|---|
+| --- | --- |
 | Country | Australia (Commonwealth of Australia) |
 | Currency | AUD |
 | Filing authority | Australian Securities and Investments Commission (ASIC) |
@@ -32,12 +34,12 @@ metadata:
 | Late lodgement penalty | Civil penalty; ASIC may impose up to AUD 1,110 per day |
 | Digital filing | ASIC Regulatory Portal (online Form 388 lodgement) |
 
----
-
 ## Section 2 -- Reporting Framework
 
+**Reporting Framework by entity type**
+
 | Entity type | Applicable standard |
-|---|---|
+| --- | --- |
 | Listed entities / disclosing entities | Full AASB (Tier 1 — IFRS equivalent) |
 | Large proprietary companies | AASB (Tier 1 or Tier 2 — Simplified Disclosures) |
 | Small proprietary companies (reporting) | AASB (usually Tier 2 — Simplified Disclosures) |
@@ -47,29 +49,34 @@ metadata:
 
 ### AASB Tier system
 
-- **Tier 1**: Full IFRS recognition, measurement, and disclosure (AASB 101–AASB 17)
-- **Tier 2 — Simplified Disclosures**: Same recognition and measurement as Tier 1, reduced disclosures (AASB 1060)
-
----
+- **Tier 1** — Full IFRS recognition, measurement, and disclosure (AASB 101–AASB 17)  _(AASB 101–AASB 17)_
+- **Tier 2 — Simplified Disclosures** — Same recognition and measurement as Tier 1, reduced disclosures (AASB 1060)  _(AASB 1060)_
+- **Which tier applies** — Whether general purpose financial statements are required, and whether Tier 2 is available, turns on public accountability and the applicable legislation, not company size alone. Calling accounts special purpose does not avoid the standards where general purpose statements are required.  _([AASB 1060](https://standards.aasb.gov.au/aasb-1060-aug-2025))_
+- **AASB 18 from 1 January 2027** — AASB 18 replaces AASB 101 for relevant for-profit Tier 1 entities for annual periods beginning on or after 1 January 2027, with earlier application permitted; the test is the start of the reporting period, not the signing date. ED 341 proposes aligning AASB 1060 with AASB 18 and is an exposure draft, not an operative standard, so do not impose the Tier 1 timetable on Tier 2 accounts.  _([AASB, AASB 18 issued](https://www.aasb.gov.au/news/new-standard-aasb-18-issued/); [AASB, ED 341](https://www.aasb.gov.au/news/open-for-comment-ed-341-updating-aasb-1060-to-align-with-aasb-18-classification-and-presentation-requirements/))_
 
 ## Section 3 -- Size Thresholds
 
 ### Large proprietary company (s.45A Corporations Act)
 
-A proprietary company is **large** for a financial year if it satisfies at least **2 of 3**:
+- **Large company test** — A proprietary company is large for a financial year if it satisfies at least 2 of 3 criteria.  _(s.45A Corporations Act)_
+
+**Large proprietary company thresholds**  _(s.45A Corporations Act)_
 
 | Criterion | Threshold (from 1 July 2019) |
-|---|---|
+| --- | --- |
 | Consolidated revenue | ≥ AUD 50,000,000 |
 | Consolidated gross assets (year-end) | ≥ AUD 25,000,000 |
 | Employees (year-end) | ≥ 100 |
 
-If fewer than 2 criteria are met → **small** proprietary company.
+- **Small company fallback** — If fewer than 2 criteria are met → small proprietary company.  _(s.45A Corporations Act)_
+- **Measure on the statutory basis** — Apply the consolidated thresholds at the statutory measurement dates with the controlled-entity rules, and record the company type, ownership and control, reporting period, fundraising history and any regulator or member direction, because each can create a reporting duty independently of size.  _([ASIC, Company financial reports](https://www.asic.gov.au/for-business-and-companies/companies/company-financial-reports))_
 
 ### Reporting obligations by entity type
 
+**Reporting obligations by entity type**
+
 | Entity | Must prepare financial report? | Must lodge with ASIC? | Must audit? |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | Large proprietary | Yes | Yes (Form 388) | Yes |
 | Small proprietary (general) | No (unless directed) | No | No |
 | Small proprietary (foreign-controlled) | Yes | Yes | Yes |
@@ -77,14 +84,15 @@ If fewer than 2 criteria are met → **small** proprietary company.
 | Public company | Yes | Yes | Yes |
 | Disclosing entity | Yes | Yes | Yes |
 
----
-
 ## Section 4 -- Required Financial Statements
 
-Under s.295 and s.296 Corporations Act + AASB standards:
+- **Statutory basis** — Under s.295 and s.296 Corporations Act + AASB standards  _(s.295, s.296 Corporations Act)_
+- **Presentation choices** — Include comparatives, check permitted exceptions such as the AASB 1060 option for a combined statement of income and retained earnings, and analyse functional and presentation currency under AASB 121; Australian dollar presentation is not compulsory in every case. Public companies also check the consolidated entity disclosure statement requirements.  _([ASIC, Company financial reports](https://www.asic.gov.au/for-business-and-companies/companies/company-financial-reports))_
+
+**Required Financial Statements**  _(s.295, s.296, s.298–300, s.295(4) Corporations Act)_
 
 | Document | Tier 1 (Full AASB) | Tier 2 (Simplified) |
-|---|---|---|
+| --- | --- | --- |
 | Statement of Financial Position (Balance sheet) | Required | Required |
 | Statement of Profit or Loss and Other Comprehensive Income | Required | Required |
 | Statement of Changes in Equity | Required | Required |
@@ -94,12 +102,12 @@ Under s.295 and s.296 Corporations Act + AASB standards:
 | Directors' Declaration (s.295(4)) | Required | Required |
 | Auditor's Report | Required | Required |
 
----
-
 ## Section 5 -- Year-End Adjustments Checklist
 
+**Year-End Adjustments Checklist**
+
 | # | Adjustment | Australia-specific notes |
-|---|---|---|
+| --- | --- | --- |
 | 1 | Depreciation | AASB 116; systematic allocation; annual review of useful life and residual value |
 | 2 | Provisions | AASB 137; present obligation, probable outflow, reliable estimate |
 | 3 | Employee benefits | AASB 119; annual leave, long service leave (probability-weighted for LSL < 7 years) |
@@ -113,7 +121,7 @@ Under s.295 and s.296 Corporations Act + AASB standards:
 | 11 | Foreign currency | AASB 121; monetary items at closing rate |
 | 12 | Government grants | AASB 120; recognised when reasonable assurance of compliance |
 
----
+- **Reconcile and support each adjustment** — Reconcile the trial balance to ledgers and external evidence, and review revenue cut-off, inventories, receivables, leases, asset values, provisions, employee benefits, tax, related parties, subsequent events and going concern against the relevant standard rather than copying tax depreciation or deductibility into the accounts. For each adjustment retain the calculation, evidence, accounting conclusion and disclosure effect, and reconcile opening balances to the approved prior report and closing cash to the cash flow statement.
 
 ## Section 6 -- Statement of Profit or Loss Format
 
@@ -142,8 +150,6 @@ Other comprehensive income:
   Items that may be reclassified to profit or loss
   ─── Total comprehensive income for the year ───
 ```
-
----
 
 ## Section 7 -- Statement of Financial Position Format
 
@@ -203,12 +209,12 @@ EQUITY
 Total equity
 ```
 
----
-
 ## Section 8 -- Notes to Financial Statements
 
+**Notes to Financial Statements**
+
 | # | Disclosure | Tier 1 (Full) | Tier 2 (Simplified) |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | 1 | Basis of preparation and accounting policies | Required (AASB 101) | Required (AASB 1060) |
 | 2 | Revenue disaggregation | Required (AASB 15) | Simplified |
 | 3 | Employee benefits | Required (AASB 119) | Simplified |
@@ -222,12 +228,12 @@ Total equity
 | 11 | Key management personnel compensation | Required (AASB 124) | Required |
 | 12 | Segment information | Required (AASB 8) — listed only | Not required |
 
----
-
 ## Section 9 -- Filing (Lodgement) Requirements
 
+**Filing (Lodgement) Requirements**  _(s.340)_
+
 | Item | Detail |
-|---|---|
+| --- | --- |
 | Filing authority | ASIC |
 | Filing form | Form 388 (Copy of Financial Statements and Reports) |
 | Lodgement method | ASIC Regulatory Portal (online) |
@@ -239,19 +245,23 @@ Total equity
 | Annual review fee | Separate from lodgement (AUD 310 for proprietary companies, 2024) |
 | Extension | Possible by application to ASIC under s.340 |
 
+- **Half-year and sustainability reports** — Disclosing entities also lodge half-year reports, generally within 75 days of the half-year end. Screen separately for mandatory climate-related sustainability reporting under Chapter 2M, which commences in phases and is a separate statutory report.  _([ASIC, Users of financial reports](https://www.asic.gov.au/regulatory-resources/financial-reporting-and-audit/users-of-financial-reports); [ASIC Regulatory Guide 280](https://download.asic.gov.au/media/j4rhwyiz/rg280-published-31-march-2025.pdf))_
+
 ### Small proprietary companies — exceptions requiring lodgement
 
-- Foreign-controlled (s.292(2)(b))
-- ASIC direction (s.294)
-- Shareholder direction (≥5% vote, s.293)
-- CSF shareholders (s.292(2)(c))
-
----
+- **Foreign-controlled** — Foreign-controlled (s.292(2)(b))  _(s.292(2)(b))_
+- **ASIC direction** — ASIC direction (s.294)  _(s.294; s.294))_
+- **Shareholder direction** — Shareholder direction (≥5% vote, s.293)  _(s.293; s.293))_
+- **CSF shareholders** — CSF shareholders (s.292(2)(c))  _(s.292(2)(c))_
+- **CSF audit threshold** — A proprietary company with CSF shareholders prepares annual financial and directors' reports; the audit requirement applies once it has raised $3 million or more through CSF offers, and a review is not a general substitute for that audit.  _([ASIC, Crowd-sourced funding](https://www.asic.gov.au/crowd-sourced-funding))_
+- **Companies limited by guarantee and charities** — Public companies limited by guarantee and ACNC-registered charities follow their own reporting rules, and foreign-controlled company relief has conditions and procedural requirements. Retain the legal basis and evidence for any exemption relied on.  _([ASIC, Company financial reports](https://www.asic.gov.au/for-business-and-companies/companies/company-financial-reports))_
 
 ## Section 10 -- Audit Requirements
 
+**Audit Requirements**  _(s.292)_
+
 | Category | Requirement |
-|---|---|
+| --- | --- |
 | Large proprietary company | Mandatory audit |
 | Small proprietary (general) | No audit required |
 | Small proprietary (foreign-controlled) | Audit required (unless ASIC relief) |
@@ -262,19 +272,38 @@ Total equity
 
 ### ASIC relief instruments
 
-- **ASIC Corporations (Audit Relief) Instrument 2016/784**: Allows certain large proprietary companies controlled by a foreign parent to obtain audit relief if consolidated accounts of the foreign parent are lodged
-- **ASIC Corporations (Foreign-Controlled Company Reports) Instrument 2017/204**: Relief for certain small foreign-controlled proprietary companies
+- **ASIC Corporations (Audit Relief) Instrument 2016/784** — Allows certain large proprietary companies controlled by a foreign parent to obtain audit relief if consolidated accounts of the foreign parent are lodged  _(ASIC Corporations (Audit Relief) Instrument 2016/784)_
+- **ASIC Corporations (Foreign-Controlled Company Reports) Instrument 2017/204** — Relief for certain small foreign-controlled proprietary companies  _(ASIC Corporations (Foreign-Controlled Company Reports) Instrument 2017/204)_
 
 ### Auditor qualification
 
-Registered company auditor under Part 9.2 of the Corporations Act (registered with ASIC). For audit of disclosing entities, the auditor must meet additional independence requirements under Part 2M.4 Division 3.
-
----
+- **Registered company auditor** — Registered company auditor under Part 9.2 of the Corporations Act (registered with ASIC). For audit of disclosing entities, the auditor must meet additional independence requirements under Part 2M.4 Division 3.  _(Part 9.2 Corporations Act; Part 2M.4 Division 3 Corporations Act; s.292))_
+- **Appointment and sign-off sequence** — Confirm the auditor's appointment and engagement early, resolve audit adjustments before the directors approve the report, and retain the signed report, directors' approval, audit report, member delivery evidence and lodgement receipt. Do not describe an unaudited draft as audited, and confirm that the lodged document is the approved version.
 
 ## Disclaimer
 
 This skill and its outputs are provided for informational and computational purposes only and do not constitute tax, legal, or financial advice. Open Accountants and its contributors accept no liability for any errors, omissions, or outcomes arising from the use of this skill. All outputs must be reviewed and signed off by a qualified professional before filing or acting upon.
 
+> Contributed by Ryan Duguid.
+
+<!-- openaccountants-cta-block -->
+
 ---
 
-_Source: [OpenAccountants](https://openaccountants.com/skills/australia-financial-statements) — open tax Guides for AI, reviewed by named CPAs/CAs/EAs. Quality: **source-cited draft**. For always-current figures and named-accountant backing, connect the OpenAccountants MCP server (`openaccountants-mcp`)._
+## Talk to a verified accountant
+
+This guide is maintained by the OpenAccountants network — accountants who put
+their name behind the tax answers AI gives people. The live, always-current
+version (and the professional behind it) is at
+[openaccountants.com](https://www.openaccountants.com).
+
+- Use it in your AI: https://www.openaccountants.com/connect
+- Meet the accountants: https://www.openaccountants.com/network
+
+> **General reference only.** This document does not constitute tax, legal, or
+> financial advice. Verify figures against the cited primary sources or with a
+> licensed professional before relying on them.
+
+## Today's figures and who stands behind this skill
+
+This file is an AI skill (tax rules your AI follows) from OpenAccountants, copied on 2026-09-27. Rates, thresholds and deadlines change. For the current version of this skill, its official sources and the named accountant (if any) who stands behind it, call `get_skill` with slug `australia-financial-statements` on the OpenAccountants connector (https://www.openaccountants.com/connect), or read https://www.openaccountants.com/skills/australia-financial-statements. If neither is available, confirm every figure against the official source pages cited above before relying on it.

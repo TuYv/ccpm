@@ -1,15 +1,13 @@
 ---
 name: bd-einvoice
-description: "> Use this skill whenever asked about electronic invoicing, fiscal devices, and digital VAT compliance in Bangladesh. Trigger on phrases like \"Bangladesh e-invoicing\", \"EFD SDC NBR\", \"electronic fiscal device Bangladesh\", \"Mushak invoice\", \"VAT software Bangladesh\". Covers the NBR's electronic fiscal devices (EFD/SDC) for VAT, the Mushak invoice/return forms, and what small/non-VAT businesses must issue. ALWAYS read before any Bangladesh e-invoicing work."
-license: AGPL-3.0-or-later (code) / OpenAccountants Guide License v1.0 (content)
+description: "Use this skill whenever asked about electronic invoicing, fiscal devices, and digital VAT compliance in Bangladesh. Trigger on phrases like \"Bangladesh e-invoicing\", \"EFD SDC NBR\", \"electronic fiscal device Bangladesh\", \"Mushak invoice\", \"VAT software Bangladesh\". Covers the NBR's electronic fiscal devices (EFD/SDC) for VAT, the Mushak invoice/return forms, and what small/non-VAT businesses must issue. ALWAYS read before any Bangladesh e-invoicing work."
+license: "AGPL-3.0-or-later (code) / OpenAccountants Guide License v1.0 (content)"
 metadata:
   source: openaccountants
-  jurisdiction: BD
-  category: international
-  quality: source-cited draft
-  openaccountants_url: "https://openaccountants.com/skills/bd-einvoice"
-  tax_year: 2026
-  obligation: EINV
+  openaccountants_url: "https://www.openaccountants.com/skills/bd-einvoice"
+  jurisdiction: "BD"
+  tax_year: "2026"
+  last_updated: "2026-06-12"
 ---
 
 # Bangladesh E-Invoicing & Fiscal Compliance — Skill v1.0
@@ -43,8 +41,8 @@ A VAT-registered IT services firm: issues Mushak-6.3 invoices, files Mushak-9.1 
 - NEVER state EFD scope/SRO dates without verifying current NBR notifications.
 
 ## Disclaimer
-Informational only; not advice. Verify EFD/Mushak scope and dates with the NBR. All outputs must be reviewed and signed off by a qualified Bangladeshi practitioner. Maintained at [openaccountants.com](https://openaccountants.com).
+Informational only; not advice. Verify EFD/Mushak scope and dates with the NBR. All outputs must be reviewed and signed off by a qualified Bangladeshi practitioner. Maintained at [openaccountants.com](https://www.openaccountants.com).
 
----
+## Today's figures and who stands behind this skill
 
-_Source: [OpenAccountants](https://openaccountants.com/skills/bd-einvoice) — open tax Guides for AI, reviewed by named CPAs/CAs/EAs. Quality: **source-cited draft**. For always-current figures and named-accountant backing, connect the OpenAccountants MCP server (`openaccountants-mcp`)._
+This file is an AI skill (tax rules your AI follows) from OpenAccountants, copied on 2026-06-12. Rates, thresholds and deadlines change. For the current version of this skill, its official sources and the named accountant (if any) who stands behind it, call `get_skill` with slug `bd-einvoice` on the OpenAccountants connector (https://www.openaccountants.com/connect), or read https://www.openaccountants.com/skills/bd-einvoice. If neither is available, confirm every figure against the official source pages cited above before relying on it.

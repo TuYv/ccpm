@@ -1,24 +1,27 @@
 ---
 name: ar-social-contributions
 description: "Use this skill whenever asked about Argentine self-employed social contributions (aportes autónomos). Trigger on phrases like \"aportes autónomos\", \"categoría autónomos\", \"jubilación autónomos\", \"PAMI autónomos\", \"cuánto pago de autónomo\", \"contribuciones SIPA\", or any question about Argentine social security obligations for self-employed individuals. Covers Categories I-V, retirement (SIPA), PAMI (INSSJP), and obra social contributions, monthly fixed amounts, VEP payment, and edge cases. ALWAYS read this skill before touching any Argentine social contribution work."
-license: AGPL-3.0-or-later (code) / OpenAccountants Guide License v1.0 (content)
+license: "AGPL-3.0-or-later (code) / OpenAccountants Guide License v1.0 (content)"
 metadata:
   source: openaccountants
-  jurisdiction: INTL
-  category: tax
-  quality: source-cited draft
-  openaccountants_url: "https://openaccountants.com/skills/ar-social-contributions"
-  obligation: SSC
+  openaccountants_url: "https://www.openaccountants.com/skills/ar-social-contributions"
+  jurisdiction: "AR"
+  tax_year: "2025"
+  last_updated: "2026-07-13"
+  reviewed_by: "Maria Valeria Benvenuti"
+  review_status: "current"
 ---
 
-# Argentina Social Contributions (Aportes Autónomos) -- Self-Employed Skill v2.0
+# AR Social Contributions
 
-> **General reference only.** This skill is general tax/accounting reference material for AI-assisted workflows. It has not been reviewed for any specific person's facts, documents, elections, deadlines, residency, filing status, or local procedures. Do not rely on it to file, pay, amend, or take a tax position without review by a qualified professional in the relevant jurisdiction.
+## Argentina Social Contributions (Aportes Autónomos) -- Self-Employed Skill v2.0
 
 ## Section 1 -- Quick reference
 
+**Quick reference table**
+
 | Field | Value |
-|---|---|
+| --- | --- |
 | Country | Argentina |
 | Authority | ARCA (formerly AFIP) |
 | Primary legislation | Ley 24.241 (SIPA), Ley 19.032 (INSSJP/PAMI) |
@@ -36,11 +39,7 @@ metadata:
 | Validated by | Pending -- requires validation by Argentine contador |
 | Validation date | Pending |
 
-**CRITICAL: Amounts change EVERY MONTH due to movilidad previsional. Always verify current amounts on ARCA website.**
-
----
-
-## Section 2 -- Required inputs and refusal catalogue
+CRITICAL: Amounts change EVERY MONTH due to movilidad previsional. Always verify current amounts on ARCA website.
 
 ### Required inputs
 
@@ -57,47 +56,33 @@ Before computing, you MUST obtain:
 
 ### Refusal catalogue
 
-**R-AR-SOC-1 -- Moratoria (debt regularization).** Trigger: client has years of unpaid contributions. Message: "Moratoria terms are set by specific ARCA resolutions. Escalate to qualified contador."
-
-**R-AR-SOC-2 -- Differential regime.** Trigger: hazardous/arduous activity. Message: "Primed categories (I'-V') apply. Verify activity qualification with ARCA. Flag for reviewer."
+- **R-AR-SOC-1 -- Moratoria (debt regularization)** — Trigger: client has years of unpaid contributions. Message: "Moratoria terms are set by specific ARCA resolutions. Escalate to qualified contador."
+- **R-AR-SOC-2 -- Differential regime** — Trigger: hazardous/arduous activity. Message: "Primed categories (I'-V') apply. Verify activity qualification with ARCA. Flag for reviewer."
 
 ### Prohibitions
 
-- NEVER use amounts from a prior month without verifying current movilidad-adjusted values
-- NEVER assign Category I to a professional with university degree
-- NEVER tell a registered autónomo they owe nothing because of zero income -- amounts are fixed
-- NEVER confuse Monotributo with Autónomo -- entirely separate regimes
-- NEVER advise on moratoria without escalating
-- NEVER present amounts as definitive beyond the current month
-- NEVER assume dual-status clients are exempt from autónomo contributions
-- NEVER assign an employer below their employee-count floor
-
----
+- **Prohibitions list** — NEVER use amounts from a prior month without verifying current movilidad-adjusted values; NEVER assign Category I to a professional with university degree; NEVER tell a registered autónomo they owe nothing because of zero income -- amounts are fixed; NEVER confuse Monotributo with Autónomo -- entirely separate regimes; NEVER advise on moratoria without escalating; NEVER present amounts as definitive beyond the current month; NEVER assume dual-status clients are exempt from autónomo contributions; NEVER assign an employer below their employee-count floor
 
 ## Section 3 -- Category determination
 
-**Legislation:** Ley 24.241
+**Category determination table**  _(Ley 24.241)_
 
 | Category | Who |
-|---|---|
+| --- | --- |
 | I | Lowest income, no employees, no university degree |
 | II | Mid-range or professionals (university degree) without employees |
 | III | Professionals with up to 3 employees or higher income |
 | IV | Employers with 4-6 employees or high income |
 | V | Employers with 7+ employees or highest income |
 
-Key rules:
-- Professionals with university degree: minimum Category II
-- Employers: Category III (1-3), IV (4-6), V (7+) as floor
-
----
-
-## Section 4 -- Monthly amounts and components
+- **Key rules** — Professionals with university degree: minimum Category II. Employers: Category III (1-3), IV (4-6), V (7+) as floor.  _(Ley 24.241)_
 
 ### Reference amounts (September 2025)
 
+**Reference amounts (September 2025)**
+
 | Category | Monthly total (ARS) |
-|---|---|
+| --- | --- |
 | I | ~57,530 |
 | II | ~80,541 |
 | III | ~115,059 |
@@ -106,19 +91,17 @@ Key rules:
 
 ### Components
 
+**Components table**
+
 | Component | Destination |
-|---|---|
+| --- | --- |
 | Aporte jubilatorio | SIPA (retirement pension) |
 | Aporte PAMI | INSSJP (retiree health) |
 | Aporte obra social | Obra Social (current health) |
 
 ### Movilidad (indexation)
 
-Amounts adjusted monthly per Ley 27.609 movilidad formula (CPI + RIPTE). ARCA publishes updated tables each month.
-
----
-
-## Section 5 -- Payment and registration
+- **Movilidad adjustment rule** — Amounts adjusted monthly per Ley 27.609 movilidad formula (CPI + RIPTE). ARCA publishes updated tables each month.  _(Ley 27.609)_
 
 ### VEP generation
 
@@ -129,70 +112,65 @@ Amounts adjusted monthly per Ley 27.609 movilidad formula (CPI + RIPTE). ARCA pu
 
 ### Registration
 
-Register within 30 days via Formulario 885. Must have CUIT. Cannot be both Monotributista and Autónomo for same activity.
-
----
-
-## Section 6 -- Tax deductibility and penalties
+- **Registration requirements** — Registration must be completed in the same month in which the event that places the person within the régimen occurs (Formulario 885). At most, and not preferably, it may be completed retroactively up to the following month’s due date, since the régimen is paid in arrears, so the payment is still made on time. Must have CUIT. Cannot be both Monotributista and Autónomo for the same activity.
 
 ### Tax deductibility
 
+**Tax deductibility table**
+
 | Question | Answer |
-|---|---|
+| --- | --- |
 | Are aportes deductible? | YES -- for income tax (Ganancias) |
 | Where reported? | Annual return deductions |
 | Which year? | Year of payment |
 
 ### Penalties
 
+**Penalties table**
+
 | Penalty | Detail |
-|---|---|
+| --- | --- |
 | Late payment | Daily interest (tasa resolutoria) |
 | Non-registration | Fines + retroactive contributions |
 | Non-payment | Periods do not count for retirement |
 | ARCA can pursue | Ejecución fiscal (judicial collection) |
 
----
-
-## Section 7 -- Voluntary higher category and dual status
-
 ### Voluntary higher category
 
-Client may opt for a higher category than minimum. Increases future retirement benefits. File recategorización through ARCA.
+- **Voluntary higher category rule** — Client may opt for a higher category than minimum. Increases future retirement benefits. File recategorización through ARCA.
 
 ### Dual status (employed + self-employed)
 
-Must pay BOTH employee contributions (withheld) AND autónomo contributions. No exemption. Obra social may be unified.
+- **Dual status rule** — Must pay BOTH employee contributions (withheld) AND autónomo contributions. No exemption. Obra social may be unified.
 
 ### Jubilado continuing to work
 
-Must still pay autónomo contributions. PAMI component may differ. Flag for reviewer.
-
----
-
-## Section 8 -- Edge case registry
+- **Jubilado continuing to work rule** — Must still pay autónomo contributions. PAMI component may differ. Flag for reviewer.
 
 ### EC1 -- Professional choosing Category I
-**Situation:** Lawyer tries to register Category I.
-**Resolution:** REJECT. Minimum Category II for university-degree professionals.
+
+Situation: Lawyer tries to register Category I.
+Resolution: REJECT. Minimum Category II for university-degree professionals.
 
 ### EC2 -- Zero income month
-**Situation:** No revenue, still registered.
-**Resolution:** Full monthly contribution due. Fixed amounts regardless of income.
+
+Situation: No revenue, still registered.
+Resolution: Full monthly contribution due. Fixed amounts regardless of income.
 
 ### EC3 -- Monotributo confusion
-**Situation:** Client asks about aportes but is Monotributista.
-**Resolution:** This skill does not apply. Direct to Monotributo skill.
+
+Situation: Client asks about aportes but is Monotributista.
+Resolution: This skill does not apply. Direct to Monotributo skill.
 
 ### EC4 -- Employer drops below threshold
-**Situation:** Category IV (5 employees) terminates 2, now has 3.
-**Resolution:** May request recategorización to Category III. Not automatic. Flag for reviewer.
+
+Situation: Category IV (5 employees) terminates 2, now has 3.
+Resolution: May request recategorización to Category III. Not automatic. Flag for reviewer.
 
 ### EC5 -- Switch from Monotributo mid-year
-**Situation:** Monotributista until June, Autónomo from July.
-**Resolution:** Autónomo contributions start July. Category based on projected income. Flag for reviewer.
 
----
+Situation: Monotributista until June, Autónomo from July.
+Resolution: Autónomo contributions start July. Category based on projected income. Flag for reviewer.
 
 ## Section 9 -- Reviewer escalation protocol
 
@@ -220,35 +198,35 @@ Issue: [outside skill scope]
 Action Required: Do not advise. Refer to qualified contador. Document gap.
 ```
 
----
-
-## Section 10 -- Test suite
-
 ### Test 1 -- Standard Category I
-**Input:** Freelance designer, no degree, no employees, Sep 2025.
-**Expected output:** Category I. ~ARS 57,530. VEP by end of October.
+
+Input: Freelance designer, no degree, no employees, Sep 2025.
+Expected output: Category I. ~ARS 57,530. VEP by end of October.
 
 ### Test 2 -- Professional minimum
-**Input:** Self-employed accountant, no employees, Sep 2025.
-**Expected output:** Category II. ~ARS 80,541.
+
+Input: Self-employed accountant, no employees, Sep 2025.
+Expected output: Category II. ~ARS 80,541.
 
 ### Test 3 -- Employer with 5 employees
-**Input:** Small business, 5 employees, Sep 2025.
-**Expected output:** Category IV. ~ARS 184,094.
+
+Input: Small business, 5 employees, Sep 2025.
+Expected output: Category IV. ~ARS 184,094.
 
 ### Test 4 -- Dual status
-**Input:** Employed full-time AND freelance.
-**Expected output:** Must pay autónomo separately.
+
+Input: Employed full-time AND freelance.
+Expected output: Must pay autónomo separately.
 
 ### Test 5 -- Zero income month
-**Input:** Category I, zero revenue August 2025.
-**Expected output:** Full contribution due.
+
+Input: Category I, zero revenue August 2025.
+Expected output: Full contribution due.
 
 ### Test 6 -- Professional attempting Category I
-**Input:** Lawyer tries Category I.
-**Expected output:** REJECT. Minimum Category II.
 
----
+Input: Lawyer tries Category I.
+Expected output: REJECT. Minimum Category II.
 
 ## Disclaimer
 
@@ -256,6 +234,24 @@ This skill and its outputs are provided for informational and computational purp
 
 The most up-to-date, verified version of this skill is maintained at [openaccountants.com](https://openaccountants.com). Log in to access the latest version, request a professional review from a licensed accountant, and track updates as tax law changes.
 
+<!-- openaccountants-cta-block -->
+
 ---
 
-_Source: [OpenAccountants](https://openaccountants.com/skills/ar-social-contributions) — open tax Guides for AI, reviewed by named CPAs/CAs/EAs. Quality: **source-cited draft**. For always-current figures and named-accountant backing, connect the OpenAccountants MCP server (`openaccountants-mcp`)._
+## Talk to a verified accountant
+
+This guide is maintained by the OpenAccountants network — accountants who put
+their name behind the tax answers AI gives people. The live, always-current
+version (and the professional behind it) is at
+[openaccountants.com](https://www.openaccountants.com).
+
+- Use it in your AI: https://www.openaccountants.com/connect
+- Meet the accountants: https://www.openaccountants.com/network
+
+> **General reference only.** This document does not constitute tax, legal, or
+> financial advice. Verify figures against the cited primary sources or with a
+> licensed professional before relying on them.
+
+## Today's figures and who stands behind this skill
+
+This file is an AI skill (tax rules your AI follows) from OpenAccountants, copied on 2026-07-13. Rates, thresholds and deadlines change. For the current version of this skill, its official sources and the named accountant (if any) who stands behind it, call `get_skill` with slug `ar-social-contributions` on the OpenAccountants connector (https://www.openaccountants.com/connect), or read https://www.openaccountants.com/skills/ar-social-contributions. If neither is available, confirm every figure against the official source pages cited above before relying on it.

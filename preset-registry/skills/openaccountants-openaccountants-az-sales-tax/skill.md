@@ -1,24 +1,24 @@
 ---
 name: az-sales-tax
 description: "Use this skill whenever asked about Arizona sales tax, Arizona Transaction Privilege Tax (TPT), Arizona use tax, Arizona tax nexus, or any request involving Arizona state-level consumption taxes. Trigger on phrases like \"Arizona sales tax\", \"AZ sales tax\", \"TPT\", \"Transaction Privilege Tax\", \"Arizona DOR\", or any request involving Arizona TPT compliance. CRITICAL -- Arizona has a Transaction Privilege Tax on the SELLER, not a traditional sales tax. ALWAYS load us-sales-tax first."
-license: AGPL-3.0-or-later (code) / OpenAccountants Guide License v1.0 (content)
+license: "AGPL-3.0-or-later (code) / OpenAccountants Guide License v1.0 (content)"
 metadata:
   source: openaccountants
-  jurisdiction: US-AZ
-  category: tax
-  quality: source-cited draft
-  openaccountants_url: "https://openaccountants.com/skills/az-sales-tax"
-  obligation: CT
+  openaccountants_url: "https://www.openaccountants.com/skills/az-sales-tax"
+  jurisdiction: "US-AZ"
+  tax_year: "2025"
+  last_updated: "2026-07-13"
+  review_status: "pending_review"
 ---
 
-# Arizona Transaction Privilege Tax (TPT) Skill v2.0
-
-> **General reference only.** This skill is general tax/accounting reference material for AI-assisted workflows. It has not been reviewed for any specific person's facts, documents, elections, deadlines, residency, filing status, or local procedures. Do not rely on it to file, pay, amend, or take a tax position without review by a qualified professional in the relevant jurisdiction.
+# AZ Sales Tax
 
 ## Section 1 -- Quick reference
 
+**Quick reference table**
+
 | Field | Value |
-|---|---|
+| --- | --- |
 | Jurisdiction | Arizona, United States |
 | Jurisdiction code | US-AZ |
 | Tax type | Transaction Privilege Tax (TPT) -- NOT a traditional sales tax; tax is on the SELLER |
@@ -36,14 +36,12 @@ metadata:
 
 **CRITICAL: Arizona TPT is a tax on the privilege of doing business in Arizona, imposed on the SELLER. It is NOT a sales tax on the buyer, though sellers typically pass it through.**
 
----
-
-## Section 2 -- Required inputs and refusal catalogue
-
 ### Required inputs
 
+**Required inputs table**
+
 | # | Question | Why it matters |
-|---|----------|----------------|
+| --- | --- | --- |
 | 1 | Arizona TPT license number? | Required for filing |
 | 2 | Filing frequency? | Monthly, quarterly, annual |
 | 3 | Nexus type? | $100K threshold |
@@ -53,34 +51,36 @@ metadata:
 
 ### Refusal catalogue
 
-**R-AZ-1 -- Prime contracting classification.** 65/35 split between real property and materials is complex. Escalate.
-
----
-
-## Section 3 -- Transaction pattern library
+- **R-AZ-1 -- Prime contracting classification** — 65/35 split between real property and materials is complex. Escalate.
 
 ### 3.1 Retail classification (5.6% state)
 
+**Retail classification (5.6% state) table**
+
 | Pattern | Taxable? | Notes |
-|---|---|---|
+| --- | --- | --- |
 | General TPP | TAXABLE | Retail classification |
 | Clothing | TAXABLE | No exemption |
 | Grocery food (unprepared) | EXEMPT | A.R.S. §42-5061(A)(1) |
-| Prepared food | TAXABLE | |
+| Prepared food | TAXABLE |  |
 
 ### 3.2 SaaS and digital goods
 
+**SaaS and digital goods table**
+
 | Pattern | Taxable? | Notes |
-|---|---|---|
+| --- | --- | --- |
 | Canned software (physical or download) | TAXABLE | TPP |
 | SaaS (cloud-hosted) | TAXABLE | Arizona treats SaaS as taxable |
-| Digital goods | TAXABLE | |
+| Digital goods | TAXABLE |  |
 
 ### 3.3 Services
 
+**Services table**
+
 | Pattern | Taxable? | Notes |
-|---|---|---|
-| Professional services | NOT TAXABLE | |
+| --- | --- | --- |
+| Professional services | NOT TAXABLE |  |
 | Job printing | TAXABLE | Separate classification |
 | Restaurants/bars | TAXABLE | Restaurant classification |
 | Transient lodging | TAXABLE | Transient lodging classification |
@@ -89,22 +89,22 @@ metadata:
 
 ### 3.4 Exemptions
 
+**Exemptions table**
+
 | Pattern | Status |
-|---|---|
+| --- | --- |
 | Grocery food | EXEMPT |
 | Prescription drugs | EXEMPT |
 | Manufacturing machinery (directly in manufacturing) | EXEMPT |
 | Resale | EXEMPT |
 | Interstate commerce | EXEMPT |
 
----
-
-## Section 4 -- Rate lookup
-
 ### 4.1 TPT classifications and state rates
 
+**TPT classifications and state rates table**
+
 | Classification | State rate |
-|---|---|
+| --- | --- |
 | Retail | 5.6% |
 | Mining | 3.125% |
 | Utilities | 5.6% |
@@ -114,48 +114,36 @@ metadata:
 | Contracting (prime) | 5.6% |
 | Rental of TPP | 5.6% |
 
----
-
-## Section 5 -- Classification rules
-
 ### 5.1 TPT is on the seller
 
-TPT is a privilege tax on the seller for conducting business. The buyer is NOT legally liable. Most sellers pass the amount through to buyers.
+- **TPT liability** — TPT is a privilege tax on the seller for conducting business. The buyer is NOT legally liable. Most sellers pass the amount through to buyers.
 
 ### 5.2 Model City Tax Code
 
-Arizona cities adopt the Model City Tax Code with local modifications. City rates and exemptions can vary significantly.
-
----
+- **Model City Tax Code** — Arizona cities adopt the Model City Tax Code with local modifications. City rates and exemptions can vary significantly.
 
 ## Section 6 -- Return form and filing
 
 Filed via AZTaxes.gov. Single return covers state + county + city TPT.
 
----
-
-## Section 7 -- Thresholds, penalties, and deadlines
-
 ### 7.1 Economic nexus
 
+- **Threshold** — $100,000 in gross proceeds or gross income
+- **Transaction count** — None
+- **Effective date** — October 1, 2019
+
+**Economic nexus table**
+
 | Parameter | Value |
-|---|---|
+| --- | --- |
 | Threshold | $100,000 in gross proceeds or gross income |
 | Transaction count | None |
 | Effective date | October 1, 2019 |
-
----
-
-## Section 8 -- Edge cases
 
 ### EC1 -- Prime contracting
 
 **Situation:** Contractor builds a house.
 **Resolution:** Prime contracting classification. 65% of contract price treated as real property improvement (not taxable); 35% treated as materials (taxable at TPT rate). Complex -- escalate.
-
----
-
-## Section 9 -- Test suite
 
 ### Test 1 -- Retail sale in Phoenix
 
@@ -167,8 +155,6 @@ Filed via AZTaxes.gov. Single return covers state + county + city TPT.
 **Input:** $200 groceries.
 **Expected:** Tax = $0. Grocery food exempt in AZ.
 
----
-
 ## Section 10 -- Prohibitions
 
 - NEVER call Arizona's tax a "sales tax" without noting it is a Transaction Privilege Tax on the SELLER.
@@ -177,13 +163,9 @@ Filed via AZTaxes.gov. Single return covers state + county + city TPT.
 - NEVER treat grocery food as taxable -- it is exempt in Arizona.
 - NEVER compute any number -- all arithmetic is handled by the deterministic engine, not Claude.
 
----
-
 ## Disclaimer
 
 This skill is provided for informational and computational purposes only and does not constitute tax, legal, or financial advice. All outputs must be reviewed by a qualified professional before filing.
-
----
 
 ## Disclaimer
 
@@ -191,6 +173,24 @@ This skill and its outputs are provided for informational and computational purp
 
 The most up-to-date, verified version of this skill is maintained at [openaccountants.com](https://openaccountants.com). Log in to access the latest version, request a professional review from a licensed accountant, and track updates as tax law changes.
 
+<!-- openaccountants-cta-block -->
+
 ---
 
-_Source: [OpenAccountants](https://openaccountants.com/skills/az-sales-tax) — open tax Guides for AI, reviewed by named CPAs/CAs/EAs. Quality: **source-cited draft**. For always-current figures and named-accountant backing, connect the OpenAccountants MCP server (`openaccountants-mcp`)._
+## Talk to a verified accountant
+
+This guide is maintained by the OpenAccountants network — accountants who put
+their name behind the tax answers AI gives people. The live, always-current
+version (and the professional behind it) is at
+[openaccountants.com](https://www.openaccountants.com).
+
+- Use it in your AI: https://www.openaccountants.com/connect
+- Meet the accountants: https://www.openaccountants.com/network
+
+> **General reference only.** This document does not constitute tax, legal, or
+> financial advice. Verify figures against the cited primary sources or with a
+> licensed professional before relying on them.
+
+## Today's figures and who stands behind this skill
+
+This file is an AI skill (tax rules your AI follows) from OpenAccountants, copied on 2026-07-13. Rates, thresholds and deadlines change. For the current version of this skill, its official sources and the named accountant (if any) who stands behind it, call `get_skill` with slug `az-sales-tax` on the OpenAccountants connector (https://www.openaccountants.com/connect), or read https://www.openaccountants.com/skills/az-sales-tax. If neither is available, confirm every figure against the official source pages cited above before relying on it.

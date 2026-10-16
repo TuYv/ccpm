@@ -1,15 +1,13 @@
 ---
 name: bd-social-contributions
-description: "> Use this skill whenever asked about social security, pension, or retirement contributions for workers and the self-employed in Bangladesh. Trigger on phrases like \"Bangladesh pension\", \"Universal Pension Scheme\", \"Sarbojanin Pension\", \"Surokkha scheme\", \"provident fund Bangladesh\", \"do freelancers pay social security Bangladesh\". Covers the voluntary Universal Pension Scheme (incl. the self-employed Surokkha scheme), employee provident fund/gratuity, and the (limited) mandatory position. ALWAYS read before any Bangladesh social-contribution work."
-license: AGPL-3.0-or-later (code) / OpenAccountants Guide License v1.0 (content)
+description: "Use this skill whenever asked about social security, pension, or retirement contributions for workers and the self-employed in Bangladesh. Trigger on phrases like \"Bangladesh pension\", \"Universal Pension Scheme\", \"Sarbojanin Pension\", \"Surokkha scheme\", \"provident fund Bangladesh\", \"do freelancers pay social security Bangladesh\". Covers the voluntary Universal Pension Scheme (incl. the self-employed Surokkha scheme), employee provident fund/gratuity, and the (limited) mandatory position. ALWAYS read before any Bangladesh social-contribution work."
+license: "AGPL-3.0-or-later (code) / OpenAccountants Guide License v1.0 (content)"
 metadata:
   source: openaccountants
-  jurisdiction: BD
-  category: international
-  quality: source-cited draft
-  openaccountants_url: "https://openaccountants.com/skills/bd-social-contributions"
-  tax_year: 2026
-  obligation: SSC
+  openaccountants_url: "https://www.openaccountants.com/skills/bd-social-contributions"
+  jurisdiction: "BD"
+  tax_year: "2026"
+  last_updated: "2026-06-12"
 ---
 
 # Bangladesh Social Security & Pension — Skill v1.0
@@ -47,8 +45,8 @@ A solo freelancer: **no** mandatory social contribution; income tax only. Option
 - NEVER state pension contribution tiers / government match without verifying current NPA rules.
 
 ## Disclaimer
-Informational only; not advice. Verify Universal Pension Scheme tiers and PF/gratuity rules with the National Pension Authority / employer. All outputs must be reviewed and signed off by a qualified Bangladeshi practitioner. Maintained at [openaccountants.com](https://openaccountants.com).
+Informational only; not advice. Verify Universal Pension Scheme tiers and PF/gratuity rules with the National Pension Authority / employer. All outputs must be reviewed and signed off by a qualified Bangladeshi practitioner. Maintained at [openaccountants.com](https://www.openaccountants.com).
 
----
+## Today's figures and who stands behind this skill
 
-_Source: [OpenAccountants](https://openaccountants.com/skills/bd-social-contributions) — open tax Guides for AI, reviewed by named CPAs/CAs/EAs. Quality: **source-cited draft**. For always-current figures and named-accountant backing, connect the OpenAccountants MCP server (`openaccountants-mcp`)._
+This file is an AI skill (tax rules your AI follows) from OpenAccountants, copied on 2026-06-12. Rates, thresholds and deadlines change. For the current version of this skill, its official sources and the named accountant (if any) who stands behind it, call `get_skill` with slug `bd-social-contributions` on the OpenAccountants connector (https://www.openaccountants.com/connect), or read https://www.openaccountants.com/skills/bd-social-contributions. If neither is available, confirm every figure against the official source pages cited above before relying on it.

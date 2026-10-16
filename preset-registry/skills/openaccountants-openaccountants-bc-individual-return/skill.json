@@ -1,8 +1,8 @@
 {
   "id": "openaccountants-openaccountants-bc-individual-return",
   "name": "bc-individual-return",
-  "description": "> Use this skill whenever asked about British Columbia provincial income tax for a self-employed sole proprietor. Trigger on phrases like \\\"BC tax\\\", \\\"BC428\\\", \\\"British Columbia income tax\\\", \\\"BC tax brackets\\\", \\\"BC tax reduction\\\", \\\"BC climate action tax credit\\\", \\\"provincial tax BC\\\", or any question about computing BC provincial tax for a self-employed individual. Covers BC tax brackets, personal credits, BC tax reduction, climate action tax credit, and BC-specific rules. ALWAYS read th",
-  "category": "设计创意",
+  "description": "Use this skill whenever asked about British Columbia provincial income tax for a self-employed sole proprietor. Trigger on phrases like \\\"BC tax\\\", \\\"BC428\\\", \\\"British Columbia income tax\\\", \\\"BC tax brackets\\\", \\\"BC tax reduction\\\", \\\"BC climate action tax credit\\\", \\\"provincial tax BC\\\", or any question about computing BC provincial tax for a self-employed individual. Covers BC tax brackets, personal credits, BC tax reduction, climate action tax credit, and BC-specific rules. ALWAYS read this",
+  "category": "开发编程",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,10 @@
     "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/bc-individual-return/SKILL.md",
     "path": "agent-skills/bc-individual-return/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-16T15:58:25.903Z",
+    "discovered_at": "2026-10-16T19:56:27.396Z",
     "stars": 445,
     "language": "Python",
-    "pushed_at": "2026-10-16T08:34:54Z",
+    "pushed_at": "2026-10-16T19:56:01Z",
     "license": "AGPL-3.0"
-  },
-  "summary_zh": "面向加拿大卑诗省个体经营者的报税助手，可查询省税税率、抵免与减免规则并估算个人所得税。"
+  }
 }

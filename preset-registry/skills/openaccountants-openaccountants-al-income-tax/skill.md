@@ -1,14 +1,12 @@
 ---
 name: al-income-tax
 description: "Use this skill whenever asked about Alabama individual income tax for self-employed individuals or sole proprietors — filing Form 40, AL estimated tax (Form 40-ES), Alabama tax brackets, Alabama deductions, federal income tax deduction on AL return, or any query involving Alabama state income tax compliance. Trigger on phrases like \"Alabama income tax\", \"AL income tax\", \"Form 40\", \"Alabama estimated tax\", \"Alabama self-employed tax\", \"ADOR income tax\", or \"Code of Ala. §40-18\"."
-license: AGPL-3.0-or-later (code) / OpenAccountants Guide License v1.0 (content)
+license: "AGPL-3.0-or-later (code) / OpenAccountants Guide License v1.0 (content)"
 metadata:
   source: openaccountants
-  jurisdiction: US-AL
-  category: tax
-  quality: source-cited draft
-  openaccountants_url: "https://openaccountants.com/skills/al-income-tax"
-  obligation: IT
+  openaccountants_url: "https://www.openaccountants.com/skills/al-income-tax"
+  jurisdiction: "US-AL"
+  last_updated: "2026-06-12"
 ---
 
 # Alabama Individual Income Tax Skill — Self-Employed / Sole Proprietor
@@ -190,8 +188,8 @@ This skill must refuse and recommend professional review when:
 ## Disclaimer
 This skill and its outputs are provided for informational and computational purposes only and do not constitute tax, legal, or financial advice. Open Accountants and its contributors accept no liability for any errors, omissions, or outcomes arising from the use of this skill. All outputs must be reviewed and signed off by a qualified professional (such as a CPA, EA, tax attorney, or equivalent licensed practitioner in your jurisdiction) before filing or acting upon.
 
-The most up-to-date, verified version of this skill is maintained at [openaccountants.com](https://openaccountants.com). Log in to access the latest version, request a professional review from a licensed accountant, and track updates as tax law changes.
+The most up-to-date, verified version of this skill is maintained at [openaccountants.com](https://www.openaccountants.com). Log in to access the latest version, request a professional review from a licensed accountant, and track updates as tax law changes.
 
----
+## Today's figures and who stands behind this skill
 
-_Source: [OpenAccountants](https://openaccountants.com/skills/al-income-tax) — open tax Guides for AI, reviewed by named CPAs/CAs/EAs. Quality: **source-cited draft**. For always-current figures and named-accountant backing, connect the OpenAccountants MCP server (`openaccountants-mcp`)._
+This file is an AI skill (tax rules your AI follows) from OpenAccountants, copied on 2026-06-12. Rates, thresholds and deadlines change. For the current version of this skill, its official sources and the named accountant (if any) who stands behind it, call `get_skill` with slug `al-income-tax` on the OpenAccountants connector (https://www.openaccountants.com/connect), or read https://www.openaccountants.com/skills/al-income-tax. If neither is available, confirm every figure against the official source pages cited above before relying on it.

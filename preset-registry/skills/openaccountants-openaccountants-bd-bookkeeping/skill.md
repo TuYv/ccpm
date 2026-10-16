@@ -1,15 +1,13 @@
 ---
 name: bd-bookkeeping
-description: "> Use this skill whenever asked about record-keeping and bookkeeping for self-employed people and small businesses in Bangladesh. Trigger on phrases like \"Bangladesh bookkeeping\", \"records for NBR\", \"invoice requirements Bangladesh\", \"freelancer records Bangladesh\", \"what records to keep NBR\". Covers the records a business individual must keep, foreign-remittance evidence for IT exporters, invoicing, and retention. ALWAYS read before any Bangladesh bookkeeping work."
-license: AGPL-3.0-or-later (code) / OpenAccountants Guide License v1.0 (content)
+description: "Use this skill whenever asked about record-keeping and bookkeeping for self-employed people and small businesses in Bangladesh. Trigger on phrases like \"Bangladesh bookkeeping\", \"records for NBR\", \"invoice requirements Bangladesh\", \"freelancer records Bangladesh\", \"what records to keep NBR\". Covers the records a business individual must keep, foreign-remittance evidence for IT exporters, invoicing, and retention. ALWAYS read before any Bangladesh bookkeeping work."
+license: "AGPL-3.0-or-later (code) / OpenAccountants Guide License v1.0 (content)"
 metadata:
   source: openaccountants
-  jurisdiction: BD
-  category: international
-  quality: source-cited draft
-  openaccountants_url: "https://openaccountants.com/skills/bd-bookkeeping"
-  tax_year: 2026
-  obligation: BT
+  openaccountants_url: "https://www.openaccountants.com/skills/bd-bookkeeping"
+  jurisdiction: "BD"
+  tax_year: "2026"
+  last_updated: "2026-06-12"
 ---
 
 # Bangladesh Bookkeeping & Records — Skill v1.0
@@ -47,8 +45,8 @@ A freelancer keeps: monthly platform statements, the bank encashment certificate
 - NEVER state the retention period without verifying the current rule.
 
 ## Disclaimer
-Informational only; not advice. Verify record/retention requirements with the NBR. All outputs must be reviewed and signed off by a qualified Bangladeshi practitioner. Maintained at [openaccountants.com](https://openaccountants.com).
+Informational only; not advice. Verify record/retention requirements with the NBR. All outputs must be reviewed and signed off by a qualified Bangladeshi practitioner. Maintained at [openaccountants.com](https://www.openaccountants.com).
 
----
+## Today's figures and who stands behind this skill
 
-_Source: [OpenAccountants](https://openaccountants.com/skills/bd-bookkeeping) — open tax Guides for AI, reviewed by named CPAs/CAs/EAs. Quality: **source-cited draft**. For always-current figures and named-accountant backing, connect the OpenAccountants MCP server (`openaccountants-mcp`)._
+This file is an AI skill (tax rules your AI follows) from OpenAccountants, copied on 2026-06-12. Rates, thresholds and deadlines change. For the current version of this skill, its official sources and the named accountant (if any) who stands behind it, call `get_skill` with slug `bd-bookkeeping` on the OpenAccountants connector (https://www.openaccountants.com/connect), or read https://www.openaccountants.com/skills/bd-bookkeeping. If neither is available, confirm every figure against the official source pages cited above before relying on it.

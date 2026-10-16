@@ -1,8 +1,8 @@
 {
   "id": "openaccountants-openaccountants-au-sole-trader-schedule",
   "name": "au-sole-trader-schedule",
-  "description": "> Australian sole trader business schedule (Business and Professional Items Schedule for Individuals). Covers assessable business income, allowable deductions, home office (fixed rate 67c/hour or actual), motor vehicle (logbook or cents per km at 85c/km), depreciation (instant asset write-off, simplified pooling, general pooling), prepaid expenses, and trading stock.",
-  "category": "设计创意",
+  "description": "Australian sole trader business schedule (Business and Professional Items Schedule for Individuals). Covers assessable business income, allowable deductions, home office (fixed rate 70c/hour or actual), motor vehicle (logbook or cents per km at 88c/km), depreciation (instant asset write-off, simplified pooling, general pooling), prepaid expenses, and trading stock.",
+  "category": "开发编程",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,10 @@
     "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/au-sole-trader-schedule/SKILL.md",
     "path": "agent-skills/au-sole-trader-schedule/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-16T15:58:22.374Z",
+    "discovered_at": "2026-10-16T19:56:23.759Z",
     "stars": 445,
     "language": "Python",
-    "pushed_at": "2026-10-16T08:34:54Z",
+    "pushed_at": "2026-10-16T19:56:01Z",
     "license": "AGPL-3.0"
-  },
-  "summary_zh": "面向澳大利亚个体经营者的报税日程工具，用于整理营业收入、可扣除费用、折旧及车辆和居家办公支出。"
+  }
 }

@@ -1,15 +1,13 @@
 ---
 name: bd-it-freelancer-tax
-description: "> Use this skill whenever asked how Bangladeshi freelancers and IT/ITES exporters are taxed on income from foreign clients. Trigger on phrases like \"Bangladesh freelancer tax\", \"IT export tax Bangladesh\", \"ITES tax exemption Bangladesh\", \"Upwork Fiverr tax Bangladesh\", \"freelancing income tax NBR\", \"software export Bangladesh tax\". Explains that the long-standing IT/ITES tax exemption EXPIRED on 30 June 2024 and how freelance/IT-export income is taxed now, including the remittance/cash-incentive angle. ALWAYS read this before any Bangladesh IT-freelancer work."
-license: AGPL-3.0-or-later (code) / OpenAccountants Guide License v1.0 (content)
+description: "Use this skill whenever asked how Bangladeshi freelancers and IT/ITES exporters are taxed on income from foreign clients. Trigger on phrases like \"Bangladesh freelancer tax\", \"IT export tax Bangladesh\", \"ITES tax exemption Bangladesh\", \"Upwork Fiverr tax Bangladesh\", \"freelancing income tax NBR\", \"software export Bangladesh tax\". Explains that the long-standing IT/ITES tax exemption EXPIRED on 30 June 2024 and how freelance/IT-export income is taxed now, including the remittance/cash-incentive angle. ALWAYS read this before any Bangladesh IT-freelancer work."
+license: "AGPL-3.0-or-later (code) / OpenAccountants Guide License v1.0 (content)"
 metadata:
   source: openaccountants
-  jurisdiction: BD
-  category: international
-  quality: source-cited draft
-  openaccountants_url: "https://openaccountants.com/skills/bd-it-freelancer-tax"
-  tax_year: 2026
-  obligation: IT
+  openaccountants_url: "https://www.openaccountants.com/skills/bd-it-freelancer-tax"
+  jurisdiction: "BD"
+  tax_year: "2026"
+  last_updated: "2026-06-12"
 ---
 
 # Bangladesh IT & Freelance Export Tax — Skill v1.0
@@ -54,8 +52,8 @@ Freelancer earns USD 25,000 from foreign clients (≈ ৳2,950,000), remitted vi
 - NEVER state a rate/incentive without verifying the current Finance Act / Bangladesh Bank circular.
 
 ## Disclaimer
-Informational only; not advice. Bangladesh's IT/ITES tax treatment changed in 2024 and shifts with each Finance Act — verify the current position with the NBR and Bangladesh Bank. All outputs must be reviewed and signed off by a qualified Bangladeshi tax practitioner before filing. Maintained at [openaccountants.com](https://openaccountants.com).
+Informational only; not advice. Bangladesh's IT/ITES tax treatment changed in 2024 and shifts with each Finance Act — verify the current position with the NBR and Bangladesh Bank. All outputs must be reviewed and signed off by a qualified Bangladeshi tax practitioner before filing. Maintained at [openaccountants.com](https://www.openaccountants.com).
 
----
+## Today's figures and who stands behind this skill
 
-_Source: [OpenAccountants](https://openaccountants.com/skills/bd-it-freelancer-tax) — open tax Guides for AI, reviewed by named CPAs/CAs/EAs. Quality: **source-cited draft**. For always-current figures and named-accountant backing, connect the OpenAccountants MCP server (`openaccountants-mcp`)._
+This file is an AI skill (tax rules your AI follows) from OpenAccountants, copied on 2026-06-12. Rates, thresholds and deadlines change. For the current version of this skill, its official sources and the named accountant (if any) who stands behind it, call `get_skill` with slug `bd-it-freelancer-tax` on the OpenAccountants connector (https://www.openaccountants.com/connect), or read https://www.openaccountants.com/skills/bd-it-freelancer-tax. If neither is available, confirm every figure against the official source pages cited above before relying on it.

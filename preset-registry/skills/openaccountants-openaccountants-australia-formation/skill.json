@@ -1,8 +1,8 @@
 {
   "id": "openaccountants-openaccountants-australia-formation",
   "name": "australia-formation",
-  "description": "> Use this skill whenever asked about forming, incorporating, or registering a company in Australia. Trigger on phrases like \\\"set up a company in Australia\\\", \\\"Pty Ltd\\\", \\\"ASIC registration\\\", \\\"Australian company formation\\\", \\\"register a business Australia\\\", \\\"ABN\\\", \\\"ACN\\\", \\\"proprietary limited\\\", \\\"sole trader Australia\\\", \\\"partnership Australia\\\", or any question about starting a business entity in Australia. Covers entity types (Pty Ltd, Ltd, sole trader, partnership, trust), regist",
-  "category": "设计创意",
+  "description": "Use this skill whenever asked about forming, incorporating, or registering a company in Australia. Trigger on phrases like \\\"set up a company in Australia\\\", \\\"Pty Ltd\\\", \\\"ASIC registration\\\", \\\"Australian company formation\\\", \\\"register a business Australia\\\", \\\"ABN\\\", \\\"ACN\\\", \\\"proprietary limited\\\", \\\"sole trader Australia\\\", \\\"partnership Australia\\\", or any question about starting a business entity in Australia. Covers entity types (Pty Ltd, Ltd, sole trader, partnership, trust), registra",
+  "category": "文档写作",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,10 @@
     "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/australia-formation/SKILL.md",
     "path": "agent-skills/australia-formation/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-16T15:58:23.045Z",
+    "discovered_at": "2026-10-16T19:56:24.561Z",
     "stars": 445,
     "language": "Python",
-    "pushed_at": "2026-10-16T08:34:54Z",
+    "pushed_at": "2026-10-16T19:56:01Z",
     "license": "AGPL-3.0"
-  },
-  "summary_zh": "用于指导在澳大利亚注册公司或设立经营实体，适合查询实体类型、ASIC 注册及 ABN、ACN 等流程。"
+  }
 }

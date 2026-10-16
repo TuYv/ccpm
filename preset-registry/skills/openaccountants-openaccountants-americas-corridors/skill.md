@@ -1,36 +1,36 @@
 ---
 name: americas-corridors
-description: "OpenAccountants tax and accounting reference for INTL: americas corridors. Use for cross-border questions in INTL (tax year )."
-license: AGPL-3.0-or-later (code) / OpenAccountants Guide License v1.0 (content)
+description: "Use when asked about Americas Corridors. Quick Reference"
+license: "AGPL-3.0-or-later (code) / OpenAccountants Guide License v1.0 (content)"
 metadata:
   source: openaccountants
-  jurisdiction: INTL
-  category: cross-border
-  quality: source-cited draft
-  openaccountants_url: "https://openaccountants.com/skills/americas-corridors"
-  obligation: OTHER
+  openaccountants_url: "https://www.openaccountants.com/skills/americas-corridors"
+  jurisdiction: "GLOBAL"
+  tax_year: "2025"
+  last_updated: "2026-07-13"
+  review_status: "pending_review"
 ---
 
-# Americas Treaty Corridors — Withholding Tax Rates
-
-> **General reference only.** This skill is general tax/accounting reference material for AI-assisted workflows. It has not been reviewed for any specific person's facts, documents, elections, deadlines, residency, filing status, or local procedures. Do not rely on it to file, pay, amend, or take a tax position without review by a qualified professional in the relevant jurisdiction.
+# Americas Corridors
 
 ## Quick Reference
 
+**Quick Reference**
+
 | Field | Value |
-|-------|-------|
+| --- | --- |
 | Jurisdiction | Americas (North, Central, South) |
 | Corridors Covered | US-CA, US-MX, US-BR, BR-AR, CA-UK, MX-ES, BR-PT, CL-ES, CO-ES |
 | Number of Corridors | 9 |
 | Last Verified | May 2026 |
 | Key Note | US has NO treaty with Brazil. Brazil has limited treaty network. Latin American countries generally impose higher WHT rates than OECD average. |
 
----
-
 ## US → Canada
 
+**US → Canada Withholding Tax Rates**  _(US-Canada Convention signed 26 September 1980, five Protocols (latest 2007). IRS Table 1.)_
+
 | Income Type | Treaty Rate | Treaty Article | Notes |
-|-------------|------------|----------------|-------|
+| --- | --- | --- | --- |
 | Dividends — portfolio | 15% | Art X(2)(b) | CA domestic WHT 25% |
 | Dividends — substantial (≥10% voting) | 5% | Art X(2)(a) | Direct corporate investment |
 | Interest — arm's length | 0% | Art XI(1) | 2007 Fifth Protocol eliminated |
@@ -43,12 +43,12 @@ metadata:
 **Special provisions:** Fifth Protocol (2007) was transformative — eliminated arm's length interest WHT and merged independent personal services into business profits. Split royalty treatment is typical of Canadian treaty practice. Canada domestic WHT is 25% across the board. Comprehensive LOB. Cross-border pension rules (RRSP/RRIF recognition). This is the highest-volume bilateral tax treaty corridor in the world.
 **Last verified:** May 2026
 
----
-
 ## US → Mexico
 
+**US → Mexico Withholding Tax Rates**  _(US-Mexico Convention signed 18 September 1992. IRS Table 1.)_
+
 | Income Type | Treaty Rate | Treaty Article | Notes |
-|-------------|------------|----------------|-------|
+| --- | --- | --- | --- |
 | Dividends — portfolio | 10% | Art 10(2)(b) | MX domestic WHT 10% |
 | Dividends — substantial (≥10% voting) | 5% | Art 10(2)(a) | Direct corporate investment |
 | Interest — general | 15% | Art 11(2) | Standard rate |
@@ -61,14 +61,14 @@ metadata:
 **Special provisions:** Three-tier interest rate structure is unique. Mexico domestic WHT varies: dividends 10%, interest 4.9-35%, royalties 25-35%. Portfolio dividend treaty rate (10%) matches Mexico's domestic rate. NAFTA/USMCA investment provisions interact with treaty. LOB article.
 **Last verified:** May 2026
 
----
-
 ## US → Brazil
 
 **No comprehensive income tax treaty exists between the US and Brazil.**
 
+**US → Brazil Domestic Rates (No Treaty)**
+
 | Income Type | Rate | Notes |
-|-------------|------|-------|
+| --- | --- | --- |
 | Dividends | 0% (BR domestic) | Brazil does not withhold on dividends (unique globally) |
 | Interest | 15% (BR domestic) | IRRF; 25% if paid to tax haven |
 | Royalties | 15% (BR domestic) | IRRF; 25% if paid to tax haven |
@@ -77,12 +77,12 @@ metadata:
 **Note:** The US and Brazil have never concluded a comprehensive income tax treaty. Negotiations have been discussed for decades but no convention has been finalised as of May 2026. Brazil is not on the IRS A-to-Z list of US income tax treaties. US-source FDAP payments to Brazilian residents face default 30% US WHT with no treaty relief. Brazilian IRRF (15% general, 25% for tax haven recipients) applies to outbound payments with no treaty reduction to the US. However, Brazil uniquely does NOT withhold on dividend distributions.
 **Last verified:** May 2026
 
----
-
 ## Brazil → Argentina
 
+**Brazil → Argentina Withholding Tax Rates**  _(Brazil-Argentina DTA. PwC Argentina WHT table.)_
+
 | Income Type | Treaty Rate | Treaty Article | Notes |
-|-------------|------------|----------------|-------|
+| --- | --- | --- | --- |
 | Dividends | 15% | Art 10 | BR does not impose domestic dividend WHT |
 | Interest | 15% | Art 11 | AR domestic WHT 15.05-35% |
 | Royalties — general | 10%/15% | Art 12 | Split by type |
@@ -92,12 +92,12 @@ metadata:
 **Special provisions:** Brazil uniquely does not withhold on dividends — treaty rate relevant only from Argentine side. Argentina domestic WHT on interest is 15.05-35%, reduced by treaty. Royalties split: 10% for certain categories, 15% for others. Both countries have limited treaty networks. MERCOSUR economic integration provides trade benefits but does not affect treaty rates.
 **Last verified:** May 2026
 
----
-
 ## Canada → UK
 
+**Canada → UK Withholding Tax Rates**  _(Canada-UK Convention 1978, consolidated 2014. Modified by MLI (effective January 2020).)_
+
 | Income Type | Treaty Rate | Treaty Article | Notes |
-|-------------|------------|----------------|-------|
+| --- | --- | --- | --- |
 | Dividends — portfolio | 15% | Art 10 | CA domestic WHT 25% |
 | Dividends — substantial (≥10% voting) | 5% | Art 10 | Direct investment |
 | Interest | 10% | Art 11(2) | Government interest exempt |
@@ -109,12 +109,12 @@ metadata:
 **Special provisions:** Mirror of UK→Canada rates. Split royalty rates are characteristic of Canadian treaty practice. Copyright, patent, and software royalties at 0% — critical for tech/media cross-border flows. MLI PPT applies since January 2020. Canada domestic WHT is uniformly 25%.
 **Last verified:** May 2026
 
----
-
 ## Mexico → Spain
 
+**Mexico → Spain Withholding Tax Rates**  _(Mexico-Spain Convention. PwC Mexico/Spain WHT tables.)_
+
 | Income Type | Treaty Rate | Treaty Article | Notes |
-|-------------|------------|----------------|-------|
+| --- | --- | --- | --- |
 | Dividends — portfolio | 10% | Art 10 | MX domestic WHT 10% |
 | Dividends — substantial (≥25% capital) | 5% | Art 10 | Higher threshold (25%) |
 | Interest — general | 10% | Art 11 | Standard rate |
@@ -126,12 +126,12 @@ metadata:
 **Special provisions:** Spanish multinational investments in Mexico are substantial. 25% capital threshold for reduced dividends reflects older treaty practice. Mexico's 4.9% bank interest rate appears in multiple Mexican treaties. Spain domestic WHT: 19% on dividends to non-residents.
 **Last verified:** May 2026
 
----
-
 ## Brazil → Portugal
 
+**Brazil → Portugal Withholding Tax Rates**  _(Brazil-Portugal Convention. PwC Brazil WHT guidance.)_
+
 | Income Type | Treaty Rate | Treaty Article | Notes |
-|-------------|------------|----------------|-------|
+| --- | --- | --- | --- |
 | Dividends | 10%/15% | Art 10 | 10% if ≥25% capital; 15% otherwise |
 | Interest | 15% | Art 11 | Standard rate |
 | Royalties | 15% | Art 12 | Standard rate |
@@ -141,12 +141,12 @@ metadata:
 **Special provisions:** Historic Lusophone corridor. Brazil does not impose domestic dividend WHT — treaty rate relevant only from Portuguese side. Portugal domestic WHT: 25% across categories. Both countries are in the CPLP (Community of Portuguese Language Countries). One of Brazil's oldest treaty relationships.
 **Last verified:** May 2026
 
----
-
 ## Chile → Spain
 
+**Chile → Spain Withholding Tax Rates**  _(Chile-Spain Convention. PwC Chile WHT table.)_
+
 | Income Type | Treaty Rate | Treaty Article | Notes |
-|-------------|------------|----------------|-------|
+| --- | --- | --- | --- |
 | Dividends — portfolio | 10% | Art 10 | CL domestic WHT 35% (credit system) |
 | Dividends — substantial (≥20% capital) | 5% | Art 10 | Lower rate |
 | Interest — general | 15% | Art 11 | Standard rate |
@@ -159,12 +159,12 @@ metadata:
 **Special provisions:** Spain is a major investor in Chile. Chile's integrated tax system uses a credit mechanism for dividends. Split royalty rates (5%/10%). Two-tier interest (5%/15%). Chile domestic WHT on royalties is 30% — treaty provides significant reduction.
 **Last verified:** May 2026
 
----
-
 ## Colombia → Spain
 
+**Colombia → Spain Withholding Tax Rates**  _(Colombia-Spain Convention. PwC Colombia WHT guidance.)_
+
 | Income Type | Treaty Rate | Treaty Article | Notes |
-|-------------|------------|----------------|-------|
+| --- | --- | --- | --- |
 | Dividends — portfolio | 10% | Art 10 | CO domestic WHT 20% |
 | Dividends — substantial (≥20% capital) | 5% | Art 10 | Lower rate |
 | Interest | 10% | Art 11 | CO domestic WHT 15-20% |
@@ -175,12 +175,12 @@ metadata:
 **Special provisions:** Spain is a major FDI source for Colombia. Colombia domestic WHT: 20% on royalties, 15-20% on interest, 20% on dividends. Treaty provides meaningful reduction across all categories. Colombia is part of the Pacific Alliance and OECD.
 **Last verified:** May 2026
 
----
-
 ## Summary: Americas Treaty Rate Comparison
 
+**Summary: Americas Treaty Rate Comparison**
+
 | Corridor | Dividends (substantial) | Interest | Royalties | Key Feature |
-|----------|------------------------|----------|-----------|-------------|
+| --- | --- | --- | --- | --- |
 | US → CA | 5% | 0% (arm's length) | 0%/10% | Zero interest since 2007 |
 | US → MX | 5% | 4.9%/10%/15% | 10% | Three-tier interest |
 | US → BR | No treaty | 15% (domestic) | 15% (domestic) | No treaty exists |
@@ -191,12 +191,12 @@ metadata:
 | CL → ES | 5% | 5%/15% | 5%/10% | Split royalties |
 | CO → ES | 5% | 10% | 10% | OECD member |
 
----
-
 ## PE Threshold Notes — Americas
 
+**PE Threshold Notes — Americas**
+
 | Corridor | Construction PE Threshold | Service PE | Notes |
-|----------|--------------------------|------------|-------|
+| --- | --- | --- | --- |
 | US → CA | 12 months | None (Art XIV merged) | Fifth Protocol merged services into Art VII |
 | US → MX | 6 months | 183 days in any 12-month period | Shorter than standard — monitor near-shoring |
 | US → BR | No treaty | No treaty | Brazil domestic PE rules apply |
@@ -208,14 +208,14 @@ metadata:
 
 **Mexico and Chile** use 6-month construction PE thresholds — significantly shorter than the OECD 12-month standard. This is critical for infrastructure and energy projects.
 
----
-
 ## Brazil's Treaty Network — Key Limitation
 
 Brazil has one of the most limited treaty networks among major economies:
 
+**Brazil Treaty Partner Rates**
+
 | Brazil Treaty Partner | Dividends | Interest | Royalties | Notes |
-|----------------------|-----------|----------|-----------|-------|
+| --- | --- | --- | --- | --- |
 | Argentina | 15% | 15% | 10%/15% | MERCOSUR partner |
 | Chile | 10%/15% | 10%/15% | 10%/15% | 2026 Protocol cuts rates |
 | Portugal | 10%/15% | 15% | 15% | Historic Lusophone tie |
@@ -225,8 +225,6 @@ Brazil has one of the most limited treaty networks among major economies:
 | Spain | 10%/15% | 10%/15% | 10%/15% | Key EU partner |
 
 **Notable absences from Brazil's treaty network:** US, UK, Germany, Australia, Canada, Singapore, Netherlands. For these jurisdictions, Brazilian domestic IRRF rates apply with no treaty relief.
-
----
 
 ## Key Observations
 
@@ -244,12 +242,12 @@ Brazil has one of the most limited treaty networks among major economies:
 
 7. **India-Brazil 2022 Protocol:** Notified by India on 3 March 2026, effective from 1 April 2026. Reduces dividend WHT to 10%/15% (from 15%/25%), interest to 10%/15%, and royalties to 10%/15%. Introduces separate FTS article at 10%.
 
----
-
 ## Key Procedural Requirements
 
+**Key Procedural Requirements**
+
 | Country | Form Required for Treaty Benefits | Notes |
-|---------|----------------------------------|-------|
+| --- | --- | --- |
 | US | W-8BEN / W-8BEN-E | LOB certification required |
 | Canada | NR301 (individuals) / NR302 (entities) | Declaration of eligibility |
 | Mexico | No standard form; CoR required | Mexican tax authority format |
@@ -258,12 +256,28 @@ Brazil has one of the most limited treaty networks among major economies:
 | Chile | CoR from home country | DTA claim at source |
 | Colombia | CoR from home country | Treaty benefit claim via payer |
 
----
-
 ## Disclaimer
 
 This skill and its outputs are provided for informational and computational purposes only and do not constitute tax, legal, or financial advice. Treaty rates are subject to change through protocol amendments and renegotiations. Always verify current treaty text before relying on any rate. All outputs must be reviewed by a qualified professional before filing or acting upon.
 
+<!-- openaccountants-cta-block -->
+
 ---
 
-_Source: [OpenAccountants](https://openaccountants.com/skills/americas-corridors) — open tax Guides for AI, reviewed by named CPAs/CAs/EAs. Quality: **source-cited draft**. For always-current figures and named-accountant backing, connect the OpenAccountants MCP server (`openaccountants-mcp`)._
+## Talk to a verified accountant
+
+This guide is maintained by the OpenAccountants network — accountants who put
+their name behind the tax answers AI gives people. The live, always-current
+version (and the professional behind it) is at
+[openaccountants.com](https://www.openaccountants.com).
+
+- Use it in your AI: https://www.openaccountants.com/connect
+- Meet the accountants: https://www.openaccountants.com/network
+
+> **General reference only.** This document does not constitute tax, legal, or
+> financial advice. Verify figures against the cited primary sources or with a
+> licensed professional before relying on them.
+
+## Today's figures and who stands behind this skill
+
+This file is an AI skill (tax rules your AI follows) from OpenAccountants, copied on 2026-07-13. Rates, thresholds and deadlines change. For the current version of this skill, its official sources and the named accountant (if any) who stands behind it, call `get_skill` with slug `americas-corridors` on the OpenAccountants connector (https://www.openaccountants.com/connect), or read https://www.openaccountants.com/skills/americas-corridors. If neither is available, confirm every figure against the official source pages cited above before relying on it.

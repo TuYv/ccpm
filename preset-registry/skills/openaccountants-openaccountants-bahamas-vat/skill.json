@@ -2,7 +2,7 @@
   "id": "openaccountants-openaccountants-bahamas-vat",
   "name": "bahamas-vat",
   "description": "Use this skill whenever asked to prepare, review, or classify transactions for a Bahamas VAT return for any client. Trigger on phrases like \\\"Bahamas VAT\\\", \\\"DIR Bahamas\\\", \\\"Department of Inland Revenue Bahamas\\\", or any request involving Bahamas VAT. The Bahamas has NO income tax — VAT is the primary tax. MUST be loaded alongside vat-workflow-base v0.1 or later. ALWAYS read this skill before touching any Bahamas VAT work.",
-  "category": "设计创意",
+  "category": "开发编程",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/bahamas-vat/SKILL.md",
     "path": "agent-skills/bahamas-vat/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-16T15:58:24.680Z",
+    "discovered_at": "2026-10-16T19:56:26.296Z",
     "stars": 445,
     "language": "Python",
-    "pushed_at": "2026-10-16T08:34:54Z",
+    "pushed_at": "2026-10-16T19:56:01Z",
     "license": "AGPL-3.0"
   },
   "summary_zh": "用于处理巴哈马增值税申报，可辅助整理、审核并分类交易，适合当地税务合规场景。"

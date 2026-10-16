@@ -1,15 +1,13 @@
 ---
 name: bd-formation
-description: "> Use this skill whenever asked how to register or start a business in Bangladesh as a freelancer or small business. Trigger on phrases like \"register TIN Bangladesh\", \"trade licence Bangladesh\", \"how to start freelancing Bangladesh legally\", \"sole proprietorship Bangladesh\", \"RJSC company\", \"BIN VAT registration\". Covers TIN and trade-licence registration, the sole proprietor / partnership / company choice, VAT (BIN) registration, and the e-commerce DBID. ALWAYS read before any Bangladesh formation."
-license: AGPL-3.0-or-later (code) / OpenAccountants Guide License v1.0 (content)
+description: "Use this skill whenever asked how to register or start a business in Bangladesh as a freelancer or small business. Trigger on phrases like \"register TIN Bangladesh\", \"trade licence Bangladesh\", \"how to start freelancing Bangladesh legally\", \"sole proprietorship Bangladesh\", \"RJSC company\", \"BIN VAT registration\". Covers TIN and trade-licence registration, the sole proprietor / partnership / company choice, VAT (BIN) registration, and the e-commerce DBID. ALWAYS read before any Bangladesh formation."
+license: "AGPL-3.0-or-later (code) / OpenAccountants Guide License v1.0 (content)"
 metadata:
   source: openaccountants
-  jurisdiction: BD
-  category: international
-  quality: source-cited draft
-  openaccountants_url: "https://openaccountants.com/skills/bd-formation"
-  tax_year: 2026
-  obligation: FORM
+  openaccountants_url: "https://www.openaccountants.com/skills/bd-formation"
+  jurisdiction: "BD"
+  tax_year: "2026"
+  last_updated: "2026-06-12"
 ---
 
 # Bangladesh Business Formation — Skill v1.0
@@ -58,8 +56,8 @@ metadata:
 - NEVER state thresholds without verifying current NBR/local rules.
 
 ## Disclaimer
-Informational only; not advice. Verify registration steps and thresholds with the NBR, RJSC, and local authority. All outputs must be reviewed and signed off by a qualified Bangladeshi practitioner. Maintained at [openaccountants.com](https://openaccountants.com).
+Informational only; not advice. Verify registration steps and thresholds with the NBR, RJSC, and local authority. All outputs must be reviewed and signed off by a qualified Bangladeshi practitioner. Maintained at [openaccountants.com](https://www.openaccountants.com).
 
----
+## Today's figures and who stands behind this skill
 
-_Source: [OpenAccountants](https://openaccountants.com/skills/bd-formation) — open tax Guides for AI, reviewed by named CPAs/CAs/EAs. Quality: **source-cited draft**. For always-current figures and named-accountant backing, connect the OpenAccountants MCP server (`openaccountants-mcp`)._
+This file is an AI skill (tax rules your AI follows) from OpenAccountants, copied on 2026-06-12. Rates, thresholds and deadlines change. For the current version of this skill, its official sources and the named accountant (if any) who stands behind it, call `get_skill` with slug `bd-formation` on the OpenAccountants connector (https://www.openaccountants.com/connect), or read https://www.openaccountants.com/skills/bd-formation. If neither is available, confirm every figure against the official source pages cited above before relying on it.

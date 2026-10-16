@@ -2,7 +2,7 @@
   "id": "openaccountants-openaccountants-bahrain-vat",
   "name": "bahrain-vat",
   "description": "Use this skill whenever asked to prepare, review, or classify transactions for a Bahrain VAT return for any client. Trigger on phrases like \\\"prepare VAT return\\\", \\\"Bahrain VAT\\\", \\\"NBR return\\\", \\\"file VAT Bahrain\\\", or any request involving Bahrain VAT filing. Also trigger when classifying transactions for VAT purposes from bank statements, invoices, or other source data. This skill contains the complete Bahrain VAT classification rules, return box mappings, deductibility rules, reverse charg",
-  "category": "设计创意",
+  "category": "开发编程",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/bahrain-vat/SKILL.md",
     "path": "agent-skills/bahrain-vat/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-16T15:58:24.850Z",
+    "discovered_at": "2026-10-16T19:56:26.454Z",
     "stars": 445,
     "language": "Python",
-    "pushed_at": "2026-10-16T08:34:54Z",
+    "pushed_at": "2026-10-16T19:56:01Z",
     "license": "AGPL-3.0"
   },
   "summary_zh": "用于准备和审核巴林增值税申报，能从银行流水、发票等资料中分类交易并判断抵扣与反向征税。"

@@ -1,25 +1,23 @@
 ---
 name: banking-sector
-description: "> Use this skill whenever a bank, neobank, payment institution, e-money institution, or regulated financial holding company asks about accounting, regulatory capital, or tax issues specific to financial institutions. Trigger on phrases like \"bank tax\", \"bank levy\", \"IRB approach\", \"standardised approach\", \"IFRS 9 ECL\", \"FRTB\", \"Basel III\", \"Basel IV\", \"CRR/CRD\", \"Prudential regulation\", \"PRA\", \"ECB SSM\", \"FED CCAR\", \"OSFI\", \"expected credit loss\", \"ICAAP\", \"ILAAP\", \"stress testing\", \"interchange fee\", \"MREL\", \"TLAC\", \"resolution planning\", \"deposit guarantee scheme contribution\", or any question about bank accounting / tax / regulation. Covers IFRS 9 ECL, capital adequacy interactions with tax (DTA recognition), bank levies (UK, EU), specific tax rules for banks (FTT, securitisation, hedge accounting). Does NOT cover: detailed banking regulation (CRR/CRD specifics, FRTB calibration); audit of banks (see statutory-audit-workflow-base); routine corporate tax (see corporate-income-tax-workflow-base)."
-license: AGPL-3.0-or-later (code) / OpenAccountants Guide License v1.0 (content)
+description: "Use this skill whenever a bank, neobank, payment institution, e-money institution, or regulated financial holding company asks about accounting, regulatory capital, or tax issues specific to financial institutions. Trigger on phrases like \"bank tax\", \"bank levy\", \"IRB approach\", \"standardised approach\", \"IFRS 9 ECL\", \"FRTB\", \"Basel III\", \"Basel IV\", \"CRR/CRD\", \"Prudential regulation\", \"PRA\", \"ECB SSM\", \"FED CCAR\", \"OSFI\", \"expected credit loss\", \"ICAAP\", \"ILAAP\", \"stress testing\", \"interchange fee\", \"MREL\", \"TLAC\", \"resolution planning\", \"deposit guarantee scheme contribution\", or any question about bank accounting / tax / regulation. Covers IFRS 9 ECL, capital adequacy interactions with tax (DTA recognition), bank levies (UK, EU), specific tax rules for banks (FTT, securitisation, hedge accounting). Does NOT cover: detailed banking regulation (CRR/CRD specifics, FRTB calibration); audit of banks (see statutory-audit-workflow-base); routine corporate tax (see corporate-income-tax-workf"
+license: "AGPL-3.0-or-later (code) / OpenAccountants Guide License v1.0 (content)"
 metadata:
   source: openaccountants
-  jurisdiction: GLOBAL
-  category: vertical
-  quality: source-cited draft
-  openaccountants_url: "https://openaccountants.com/skills/banking-sector"
-  obligation: VERT
+  openaccountants_url: "https://www.openaccountants.com/skills/banking-sector"
+  jurisdiction: "GLOBAL"
+  tax_year: "2025"
+  last_updated: "2026-07-13"
+  review_status: "pending_review"
 ---
 
-# Banking Sector Tax & Accounting v0.1
+# Banking Sector
 
-> **General reference only.** This skill is general tax/accounting reference material for AI-assisted workflows. It has not been reviewed for any specific person's facts, documents, elections, deadlines, residency, filing status, or local procedures. Do not rely on it to file, pay, amend, or take a tax position without review by a qualified professional in the relevant jurisdiction.
+## Banking Sector Tax & Accounting v0.1
 
 ## What this file is
 
 A sector overlay for banks, neobanks, payment institutions, e-money institutions, and regulated financial holding companies. Loads alongside the country corporate income tax skill and addresses bank-specific items.
-
----
 
 ## Section 1 — Scope
 
@@ -50,7 +48,8 @@ This skill does NOT cover:
 - **Anti-money-laundering operational compliance**
 - **CRD/CRR/PRA specific reporting**
 
----
+- **UK Bank Levy rate reference** — 0.10% of taxable bank balance sheet equity and liabilities  _(UK Bank Levy (Finance Act 2011 Sch 19))_
+- **UK Bank Corporation Tax Surcharge reference** — 3% additional CT on bank profits above GBP 100m (reduced to 3% from 8% in April 2023)  _(UK Bank Corporation Tax Surcharge)_
 
 ## Section 2 — Key sector accounting differences (IFRS 9 vs ASC 326)
 
@@ -58,22 +57,24 @@ This skill does NOT cover:
 
 For banking specifically:
 
+**IFRS 9 vs ASC 326 (CECL) comparison**  _([T1])_
+
 | Item | IFRS 9 | ASC 326 (CECL) |
-|---|---|---|
+| --- | --- | --- |
 | Loss model | 3-stage Expected Credit Loss | Current Expected Credit Loss — lifetime ECL from inception |
 | Day-1 allowance | 12-month ECL only | Lifetime ECL (typically higher) |
 | Significant increase in credit risk (SICR) | Threshold (typically 30-day past due rebuttable presumption + qualitative) | n/a in CECL but used for monitoring |
 | Originated credit-impaired (POCI) | Effective interest rate based on lifetime expected cash flows; subsequent ECL changes through P&L | ASU 2022-02 conformed POCI treatment |
 | Off-balance-sheet (loan commitments, financial guarantees) | Stage-based ECL | CECL |
 
----
-
 ## Section 3 — Tax treatment of loan loss provisions
 
 **[T1] By jurisdiction (sample):**
 
+**Tax treatment of loan loss provisions by jurisdiction**  _([T1])_
+
 | Country | Treatment |
-|---|---|
+| --- | --- |
 | **US** | Loan loss reserve deductible only for small banks (assets ≤ USD 500m) under §585; non-thrift banks use specific charge-off method (§166). ASC 326 CECL accounting does not flow through 1:1 to tax. |
 | **UK** | General provisions not deductible; specific provisions deductible if linked to identifiable loss event and meets HMRC commercial test. IFRS 9 Stage 3 generally deductible; Stages 1/2 generally not |
 | **Germany** | Allgemeine Risikovorsorge limited; spezifische Wertberichtigungen deductible when "objectively required" — pre-tax overlay |
@@ -83,33 +84,30 @@ For banking specifically:
 | **Canada** | Specific allowance deductible; general allowance non-deductible |
 | **India** | Specific provisions allowed only to extent prescribed by RBI; bad-debt write-offs deductible |
 
-**[T1]** Material book-tax difference creates substantial deferred tax assets (DTAs) for banks. Recoverability assessment under IAS 12 / ASC 740 critical — Pillar Two interacts as DTAs may recapture under the 5-year rule.
-
----
+- **DTA / Pillar Two note on book-tax difference** — Material book-tax difference creates substantial deferred tax assets (DTAs) for banks. Recoverability assessment under IAS 12 / ASC 740 critical — Pillar Two interacts as DTAs may recapture under the 5-year rule.  _([T1])_
 
 ## Section 4 — Bank levies and surcharges
 
 ### 4.1 UK Bank Levy + Bank Surcharge
 
-**[T1] UK Bank Levy** (Finance Act 2011 Schedule 19):
-- Rate: **0.10%** of taxable balance sheet equity and liabilities (reduced to 0.10% from 0.21% in stages, FA 2017)
-- Half rate (0.05%) on long-term funding
-- De minimis: GBP 20bn balance sheet
-- Filing: HMRC bank levy return, due 9 months 1 day after period end
-
-**[T1] UK Bank Corporation Tax Surcharge** (FA 2015 s.17 amended FA 2022):
-- Rate: **3%** on bank profits above GBP 100m (reduced from 8% effective 1 April 2023)
-- Applies in addition to standard 25% CT
-- Effective rate on banking profits above threshold: 28%
+- **UK Bank Levy rate** — 0.10% percent of taxable balance sheet equity and liabilities (reduced to 0.10% from 0.21% in stages, FA 2017)  _(UK Bank Levy (Finance Act 2011 Schedule 19) [T1])_
+- **UK Bank Levy half rate on long-term funding** — 0.05% percent  _(UK Bank Levy (Finance Act 2011 Schedule 19) [T1])_
+- **UK Bank Levy de minimis** — GBP 20bn balance sheet size  _(UK Bank Levy (Finance Act 2011 Schedule 19) [T1])_
+- **UK Bank Levy filing** — HMRC bank levy return, due 9 months 1 day after period end  _(UK Bank Levy (Finance Act 2011 Schedule 19) [T1])_
+- **UK Bank Corporation Tax Surcharge rate** — 3% percent on bank profits above GBP 100m (reduced from 8% effective 1 April 2023)  _(UK Bank Corporation Tax Surcharge (FA 2015 s.17 amended FA 2022) [T1])_
+- **Surcharge applies in addition to standard CT** — Applies in addition to standard 25% CT  _(UK Bank Corporation Tax Surcharge (FA 2015 s.17 amended FA 2022) [T1])_
+- **Effective rate on banking profits above threshold** — 28% percent  _(UK Bank Corporation Tax Surcharge (FA 2015 s.17 amended FA 2022) [T1])_
 
 ### 4.2 EU Single Resolution Fund (SRF) contribution
 
-**[T1]** Ex-ante annual contributions under Regulation (EU) 806/2014 to fund bank resolution; calculated by the Single Resolution Board based on liabilities. Target level: 1% of covered deposits at SRF maturity (2024). Distinct from country deposit guarantee scheme (DGS) contributions.
+- **SRF contribution mechanism** — Ex-ante annual contributions under Regulation (EU) 806/2014 to fund bank resolution; calculated by the Single Resolution Board based on liabilities. Target level: 1% of covered deposits at SRF maturity (2024). Distinct from country deposit guarantee scheme (DGS) contributions.  _(Regulation (EU) 806/2014 [T1])_
 
 ### 4.3 EU Member State bank levies
 
+**EU Member State bank levies**
+
 | Country | Rate | Base |
-|---|---|---|
+| --- | --- | --- |
 | **Germany** | EUR 410-1.6bn annually distributed across banks | Risk-weighted liabilities — Bankenabgabe |
 | **France** | Contribution sur les établissements de crédit reformed; merged into SRF + national supplement | Risk-weighted exposures |
 | **Italy** | Imposta straordinaria 2023 (40% on certain net interest gains) — converted to optional reserve contribution following ECB pushback | Net interest income excess |
@@ -122,9 +120,7 @@ For banking specifically:
 
 ### 4.4 Deposit Guarantee Scheme (DGS) contributions
 
-**[T1]** EU Directive 2014/49/EU. Country DGS funds ex-ante and ex-post contributions from member banks.
-
----
+- **DGS contributions basis** — EU Directive 2014/49/EU. Country DGS funds ex-ante and ex-post contributions from member banks.  _(EU Directive 2014/49/EU [T1])_
 
 ## Section 5 — DTAs and Pillar Two interaction
 
@@ -135,42 +131,22 @@ For banking specifically:
 - Operating loss carryforwards
 - Securitisation losses
 
-**[T1] Basel III prudential filter** under Article 36(1)(c) CRR:
-- DTAs that rely on future profitability must be deducted from CET1 above a 10% threshold (combined with other deductions)
-- DTAs from temporary differences taxed at deferred 15%+ generally less restrictive
-
-**[T2] Pillar Two interaction:**
-- DTAs / DTLs revalued to lower of statutory rate or 15% (per `pillar-two-globe-minimum-tax.md`)
-- 5-year DTL recapture rule may add back loan loss DTL recoveries
-- ETR may fall below 15% for banks with material loss carryforwards in low-rate jurisdictions
-
----
+- **Basel III prudential filter CET1 deduction threshold** — 10% percent (combined with other deductions) (DTAs that rely on future profitability must be deducted from CET1 above this threshold; DTAs from temporary differences taxed at deferred 15%+ generally less restrictive)  _(Article 36(1)(c) CRR [T1])_
+- **Pillar Two interaction** — DTAs / DTLs revalued to lower of statutory rate or 15% (per `pillar-two-globe-minimum-tax.md`); 5-year DTL recapture rule may add back loan loss DTL recoveries; ETR may fall below 15% for banks with material loss carryforwards in low-rate jurisdictions.  _(pillar-two-globe-minimum-tax.md [T2])_
 
 ## Section 6 — Sector-specific issues
 
 ### 6.1 Trading book vs banking book
 
-**[T1]** Trading book positions:
-- IFRS 9: typically FVPL (held for trading)
-- Tax: most jurisdictions tax mark-to-market gains on banking trading books (UK FA 2002 Sch 26; US §475 mark-to-market election for dealers)
-
-Banking book positions:
-- IFRS 9: amortised cost or FVOCI
-- Tax: realised basis typically
+- **Trading book positions** — **[T1]** Trading book positions: - IFRS 9: typically FVPL (held for trading) - Tax: most jurisdictions tax mark-to-market gains on banking trading books (UK FA 2002 Sch 26; US §475 mark-to-market election for dealers) Banking book positions: - IFRS 9: amortised cost or FVOCI - Tax: realised basis typically  _(UK FA 2002 Sch 26; US §475 [T1])_
 
 ### 6.2 Hedge accounting and tax
 
-**[T1]** IFRS 9 / ASC 815 hedge accounting reduces P&L volatility but creates timing differences for tax:
-- Cash flow hedges: deferred in OCI, recycled to P&L on hedged item recognition — tax follows P&L timing
-- Fair value hedges: P&L immediate offset — tax generally follows
+- **Hedge accounting timing differences** — **[T1]** IFRS 9 / ASC 815 hedge accounting reduces P&L volatility but creates timing differences for tax: - Cash flow hedges: deferred in OCI, recycled to P&L on hedged item recognition — tax follows P&L timing - Fair value hedges: P&L immediate offset — tax generally follows  _(IFRS 9 / ASC 815 [T1])_
 
 ### 6.3 Securitisation
 
-**[T1]** Tax treatment depends on consolidation and risk transfer:
-- True sale + non-consolidated SPV: gain/loss on sale, no further bank tax on SPV income
-- Synthetic / retained risk: continued bank tax on underlying loans
-- IFRS 10 / ASC 810 may differ from regulatory consolidation
-- §163(j) US interest deduction limitation interactions
+- **Securitisation tax treatment** — **[T1]** Tax treatment depends on consolidation and risk transfer: - True sale + non-consolidated SPV: gain/loss on sale, no further bank tax on SPV income - Synthetic / retained risk: continued bank tax on underlying loans - IFRS 10 / ASC 810 may differ from regulatory consolidation - §163(j) US interest deduction limitation interactions  _(IFRS 10 / ASC 810; §163(j) [T1])_
 
 ### 6.4 Interchange and merchant services
 
@@ -179,8 +155,6 @@ Card interchange revenue is service revenue subject to standard CIT. Merchant di
 ### 6.5 Credit valuation adjustment (CVA)
 
 Tax treatment varies — some jurisdictions allow deduction of CVA P&L volatility; others require add-back of fair value losses on counterparty risk.
-
----
 
 ## Section 7 — Self-checks
 
@@ -195,14 +169,30 @@ Tax treatment varies — some jurisdictions allow deduction of CVA P&L volatilit
 - [ ] DGS / SRF contributions deductibility per jurisdiction
 - [ ] Output flags every [T2]/[T3] item for reviewer judgement
 
----
-
 ## Section 8 — Disclaimer
 
 This skill produces working papers for review by credentialed banking-sector practitioners. Bank accounting, regulation, and tax are highly specialised. Every output must be reviewed and signed off by a credentialed practitioner (typically Big 4 banking sector specialist, in-house Head of Tax, or audit partner) before any filing or capital reporting.
 
 The most up-to-date, verified version of this skill is maintained at [openaccountants.com](https://openaccountants.com).
 
+<!-- openaccountants-cta-block -->
+
 ---
 
-_Source: [OpenAccountants](https://openaccountants.com/skills/banking-sector) — open tax Guides for AI, reviewed by named CPAs/CAs/EAs. Quality: **source-cited draft**. For always-current figures and named-accountant backing, connect the OpenAccountants MCP server (`openaccountants-mcp`)._
+## Talk to a verified accountant
+
+This guide is maintained by the OpenAccountants network — accountants who put
+their name behind the tax answers AI gives people. The live, always-current
+version (and the professional behind it) is at
+[openaccountants.com](https://www.openaccountants.com).
+
+- Use it in your AI: https://www.openaccountants.com/connect
+- Meet the accountants: https://www.openaccountants.com/network
+
+> **General reference only.** This document does not constitute tax, legal, or
+> financial advice. Verify figures against the cited primary sources or with a
+> licensed professional before relying on them.
+
+## Today's figures and who stands behind this skill
+
+This file is an AI skill (tax rules your AI follows) from OpenAccountants, copied on 2026-07-13. Rates, thresholds and deadlines change. For the current version of this skill, its official sources and the named accountant (if any) who stands behind it, call `get_skill` with slug `banking-sector` on the OpenAccountants connector (https://www.openaccountants.com/connect), or read https://www.openaccountants.com/skills/banking-sector. If neither is available, confirm every figure against the official source pages cited above before relying on it.

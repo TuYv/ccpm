@@ -1,15 +1,13 @@
 ---
 name: bd-payroll
-description: "> Use this skill whenever asked about Bangladesh payroll and salary-tax withholding for employers. Trigger on phrases like \"Bangladesh payroll\", \"salary TDS Bangladesh\", \"deduct tax from salary NBR\", \"provident fund gratuity Bangladesh\", \"payroll Bangladesh freelancer hiring staff\". Covers salary income-tax withholding under the slabs, provident fund/gratuity, the (limited) social-security position, and monthly TDS deposit/returns. ALWAYS read before any Bangladesh payroll work."
-license: AGPL-3.0-or-later (code) / OpenAccountants Guide License v1.0 (content)
+description: "Use this skill whenever asked about Bangladesh payroll and salary-tax withholding for employers. Trigger on phrases like \"Bangladesh payroll\", \"salary TDS Bangladesh\", \"deduct tax from salary NBR\", \"provident fund gratuity Bangladesh\", \"payroll Bangladesh freelancer hiring staff\". Covers salary income-tax withholding under the slabs, provident fund/gratuity, the (limited) social-security position, and monthly TDS deposit/returns. ALWAYS read before any Bangladesh payroll work."
+license: "AGPL-3.0-or-later (code) / OpenAccountants Guide License v1.0 (content)"
 metadata:
   source: openaccountants
-  jurisdiction: BD
-  category: international
-  quality: source-cited draft
-  openaccountants_url: "https://openaccountants.com/skills/bd-payroll"
-  tax_year: 2026
-  obligation: PAY
+  openaccountants_url: "https://www.openaccountants.com/skills/bd-payroll"
+  jurisdiction: "BD"
+  tax_year: "2026"
+  last_updated: "2026-06-12"
 ---
 
 # Bangladesh Payroll & Salary Withholding — Skill v1.0
@@ -42,8 +40,8 @@ A studio pays an employee ৳600,000/year: compute tax on the slabs (first ~৳3
 - NEVER state slab/rebate figures without verifying the current Finance Act.
 
 ## Disclaimer
-Informational only; not advice. Verify withholding slabs, PF/gratuity, and pension rules with the NBR and relevant authority. All outputs must be reviewed and signed off by a qualified Bangladeshi practitioner. Maintained at [openaccountants.com](https://openaccountants.com).
+Informational only; not advice. Verify withholding slabs, PF/gratuity, and pension rules with the NBR and relevant authority. All outputs must be reviewed and signed off by a qualified Bangladeshi practitioner. Maintained at [openaccountants.com](https://www.openaccountants.com).
 
----
+## Today's figures and who stands behind this skill
 
-_Source: [OpenAccountants](https://openaccountants.com/skills/bd-payroll) — open tax Guides for AI, reviewed by named CPAs/CAs/EAs. Quality: **source-cited draft**. For always-current figures and named-accountant backing, connect the OpenAccountants MCP server (`openaccountants-mcp`)._
+This file is an AI skill (tax rules your AI follows) from OpenAccountants, copied on 2026-06-12. Rates, thresholds and deadlines change. For the current version of this skill, its official sources and the named accountant (if any) who stands behind it, call `get_skill` with slug `bd-payroll` on the OpenAccountants connector (https://www.openaccountants.com/connect), or read https://www.openaccountants.com/skills/bd-payroll. If neither is available, confirm every figure against the official source pages cited above before relying on it.

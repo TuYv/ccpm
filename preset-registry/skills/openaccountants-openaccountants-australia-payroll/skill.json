@@ -1,8 +1,8 @@
 {
   "id": "openaccountants-openaccountants-australia-payroll",
   "name": "australia-payroll",
-  "description": "> Use this skill whenever asked about Australian payroll, PAYG withholding, superannuation guarantee, Single Touch Payroll, or employer obligations in Australia. Trigger on phrases like \\\"PAYG\\\", \\\"pay as you go withholding\\\", \\\"superannuation\\\", \\\"super guarantee\\\", \\\"STP\\\", \\\"Single Touch Payroll\\\", \\\"STP Phase 2\\\", \\\"Medicare levy\\\", \\\"tax file number\\\", \\\"TFN declaration\\\", \\\"HECS-HELP\\\", \\\"STSL\\\", \\\"Fair Work\\\", \\\"NES\\\", \\\"national employment standards\\\", \\\"modern award\\\", \\\"payslip Austral",
-  "category": "设计创意",
+  "description": "Use this skill whenever asked about Australian payroll, PAYG withholding, superannuation guarantee, Single Touch Payroll, or employer obligations in Australia. Trigger on phrases like \\\"PAYG\\\", \\\"pay as you go withholding\\\", \\\"superannuation\\\", \\\"super guarantee\\\", \\\"STP\\\", \\\"Single Touch Payroll\\\", \\\"STP Phase 2\\\", \\\"Medicare levy\\\", \\\"tax file number\\\", \\\"TFN declaration\\\", \\\"HECS-HELP\\\", \\\"STSL\\\", \\\"Fair Work\\\", \\\"NES\\\", \\\"national employment standards\\\", \\\"modern award\\\", \\\"payslip Australia",
+  "category": "开发编程",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,10 @@
     "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/australia-payroll/SKILL.md",
     "path": "agent-skills/australia-payroll/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-16T15:58:23.346Z",
+    "discovered_at": "2026-10-16T19:56:24.968Z",
     "stars": 445,
     "language": "Python",
-    "pushed_at": "2026-10-16T08:34:54Z",
+    "pushed_at": "2026-10-16T19:56:01Z",
     "license": "AGPL-3.0"
-  },
-  "summary_zh": "面向澳大利亚雇主的薪资合规助手，适合处理工资代扣、养老金、税务申报及雇佣义务问题。"
+  }
 }

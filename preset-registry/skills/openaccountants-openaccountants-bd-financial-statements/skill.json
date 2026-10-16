@@ -1,8 +1,8 @@
 {
   "id": "openaccountants-openaccountants-bd-financial-statements",
   "name": "bd-financial-statements",
-  "description": "> Use this skill whenever asked about financial statements and accounting reporting in Bangladesh. Trigger on phrases like \\\"Bangladesh financial statements\\\", \\\"do I file accounts as sole proprietor Bangladesh\\\", \\\"RJSC financial statements\\\", \\\"IFRS Bangladesh\\\", \\\"BFRS\\\", \\\"audit requirement Bangladesh\\\". Explains that sole proprietors file accounts with the tax return rather than statutory statements, and what companies must prepare under BFRS/IFRS and file with RJSC. ALWAYS read before any ",
-  "category": "设计创意",
+  "description": "Use this skill whenever asked about financial statements and accounting reporting in Bangladesh. Trigger on phrases like \\\"Bangladesh financial statements\\\", \\\"do I file accounts as sole proprietor Bangladesh\\\", \\\"RJSC financial statements\\\", \\\"IFRS Bangladesh\\\", \\\"BFRS\\\", \\\"audit requirement Bangladesh\\\". Explains that sole proprietors file accounts with the tax return rather than statutory statements, and what companies must prepare under BFRS/IFRS and file with RJSC. ALWAYS read before any Ba",
+  "category": "开发编程",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,10 @@
     "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/bd-financial-statements/SKILL.md",
     "path": "agent-skills/bd-financial-statements/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-16T15:58:26.527Z",
+    "discovered_at": "2026-10-16T19:56:28.115Z",
     "stars": 445,
     "language": "Python",
-    "pushed_at": "2026-10-16T08:34:54Z",
+    "pushed_at": "2026-10-16T19:56:01Z",
     "license": "AGPL-3.0"
-  },
-  "summary_zh": "面向孟加拉国财务报表与会计申报的指南，适合查询个体户、公司报表、审计及RJSC申报要求。"
+  }
 }

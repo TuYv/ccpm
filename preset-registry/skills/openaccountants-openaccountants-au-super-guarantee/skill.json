@@ -1,8 +1,8 @@
 {
   "id": "openaccountants-openaccountants-au-super-guarantee",
   "name": "au-super-guarantee",
-  "description": "> Use this skill whenever asked about Australian Superannuation Guarantee (SG) obligations, voluntary super contributions, concessional and non-concessional caps, Division 293 tax, government co-contribution, spouse contribution tax offset, carry-forward rules, or any question about super for sole traders or employers. Trigger on phrases like \\\"how much super do I pay\\\", \\\"SG rate\\\", \\\"super guarantee\\\", \\\"concessional cap\\\", \\\"Division 293\\\", \\\"salary sacrifice super\\\", \\\"personal super contrib",
-  "category": "设计创意",
+  "description": "Use this skill whenever asked about Australian Superannuation Guarantee (SG) obligations, payday super deadlines, voluntary super contributions, concessional and non-concessional caps, Division 293 tax, Division 296 large-balance tax, government co-contribution, spouse contribution tax offset, carry-forward rules, or any question about super for sole traders or employers. Trigger on phrases like \\\"how much super do I pay\\\", \\\"SG rate\\\", \\\"super guarantee\\\", \\\"payday super\\\", \\\"7 business days su",
+  "category": "开发编程",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,10 @@
     "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/au-super-guarantee/SKILL.md",
     "path": "agent-skills/au-super-guarantee/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-16T15:58:22.533Z",
+    "discovered_at": "2026-10-16T19:56:23.934Z",
     "stars": 445,
     "language": "Python",
-    "pushed_at": "2026-10-16T08:34:54Z",
+    "pushed_at": "2026-10-16T19:56:01Z",
     "license": "AGPL-3.0"
-  },
-  "summary_zh": "一款澳大利亚养老金缴费咨询工具，帮助雇主和个体经营者快速弄清缴费义务、额度上限、税费及优惠规则。"
+  }
 }

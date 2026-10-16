@@ -1,14 +1,12 @@
 ---
 name: ar-income-tax
-description: "> Use this skill whenever asked about Argentine income tax (Impuesto a las Ganancias) for self-employed individuals (autónomos / profesionales independientes). Trigger on phrases like \"Ganancias\", \"impuesto a las ganancias\", \"autónomo Argentina\", \"monotributo vs responsable inscripto\", \"cuarta categoría\", \"deducciones personales\", \"ganancia no imponible\", \"bienes personales\", \"DDJJ Ganancias\", \"ARCA\", \"AFIP\", \"CUIT\", \"income tax Argentina\", \"anticipos ganancias\", or any question about filing or computing income tax for a self-employed client in Argentina. This skill covers progressive rates (5-35%), personal deductions (ganancia no imponible, cargas de familia, deducción especial), Bienes Personales interaction, advance payments (anticipos), percepciones as credits, and ARCA filing. ALWAYS read this skill before touching any Argentine income tax work."
-license: AGPL-3.0-or-later (code) / OpenAccountants Guide License v1.0 (content)
+description: "Use this skill whenever asked about Argentine income tax (Impuesto a las Ganancias) for self-employed individuals (autónomos / profesionales independientes). Trigger on phrases like \"Ganancias\", \"impuesto a las ganancias\", \"autónomo Argentina\", \"monotributo vs responsable inscripto\", \"cuarta categoría\", \"deducciones personales\", \"ganancia no imponible\", \"bienes personales\", \"DDJJ Ganancias\", \"ARCA\", \"AFIP\", \"CUIT\", \"income tax Argentina\", \"anticipos ganancias\", or any question about filing or computing income tax for a self-employed client in Argentina. This skill covers progressive rates (5-35%), personal deductions (ganancia no imponible, cargas de familia, deducción especial), Bienes Personales interaction, advance payments (anticipos), percepciones as credits, and ARCA filing. ALWAYS read this skill before touching any Argentine income tax work."
+license: "AGPL-3.0-or-later (code) / OpenAccountants Guide License v1.0 (content)"
 metadata:
   source: openaccountants
-  jurisdiction: INTL
-  category: tax
-  quality: source-cited draft
-  openaccountants_url: "https://openaccountants.com/skills/ar-income-tax"
-  obligation: IT
+  openaccountants_url: "https://www.openaccountants.com/skills/ar-income-tax"
+  jurisdiction: "AR"
+  last_updated: "2026-06-12"
 ---
 
 # Argentine Income Tax — Autónomo / Profesional Independiente (Ganancias) v2.0
@@ -539,8 +537,8 @@ SECTION I — REVIEWER FLAGS
 
 This skill and its outputs are provided for informational and computational purposes only and do not constitute tax, legal, or financial advice. Open Accountants and its contributors accept no liability for any errors, omissions, or outcomes arising from the use of this skill. All outputs must be reviewed and signed off by a qualified professional (such as a CPA, EA, tax attorney, or equivalent licensed practitioner in your jurisdiction) before filing or acting upon.
 
-The most up-to-date, verified version of this skill is maintained at [openaccountants.com](https://openaccountants.com). Log in to access the latest version, request a professional review from a licensed accountant, and track updates as tax law changes.
+The most up-to-date, verified version of this skill is maintained at [openaccountants.com](https://www.openaccountants.com). Log in to access the latest version, request a professional review from a licensed accountant, and track updates as tax law changes.
 
----
+## Today's figures and who stands behind this skill
 
-_Source: [OpenAccountants](https://openaccountants.com/skills/ar-income-tax) — open tax Guides for AI, reviewed by named CPAs/CAs/EAs. Quality: **source-cited draft**. For always-current figures and named-accountant backing, connect the OpenAccountants MCP server (`openaccountants-mcp`)._
+This file is an AI skill (tax rules your AI follows) from OpenAccountants, copied on 2026-06-12. Rates, thresholds and deadlines change. For the current version of this skill, its official sources and the named accountant (if any) who stands behind it, call `get_skill` with slug `ar-income-tax` on the OpenAccountants connector (https://www.openaccountants.com/connect), or read https://www.openaccountants.com/skills/ar-income-tax. If neither is available, confirm every figure against the official source pages cited above before relying on it.
