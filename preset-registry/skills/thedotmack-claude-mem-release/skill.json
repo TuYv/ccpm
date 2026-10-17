@@ -1,0 +1,25 @@
+{
+  "id": "thedotmack-claude-mem-release",
+  "name": "release",
+  "description": "Fully automate a release with version-bump and childhood.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "thedotmack",
+  "install_path": ".claude/skills/release/SKILL.md",
+  "source": {
+    "repo": "thedotmack/claude-mem",
+    "url": "https://github.com/thedotmack/claude-mem/blob/main/plugin/skills/release/SKILL.md",
+    "path": "plugin/skills/release/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-17T05:50:53.761Z",
+    "stars": 101261,
+    "language": "TypeScript",
+    "pushed_at": "2026-10-17T03:16:17Z",
+    "license": "Apache-2.0"
+  }
+}

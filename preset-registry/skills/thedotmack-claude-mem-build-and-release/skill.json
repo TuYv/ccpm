@@ -1,0 +1,25 @@
+{
+  "id": "thedotmack-claude-mem-build-and-release",
+  "name": "build-and-release",
+  "description": "Fully automate building and releasing a coding task.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "thedotmack",
+  "install_path": ".claude/skills/build-and-release/SKILL.md",
+  "source": {
+    "repo": "thedotmack/claude-mem",
+    "url": "https://github.com/thedotmack/claude-mem/blob/main/plugin/skills/build-and-release/SKILL.md",
+    "path": "plugin/skills/build-and-release/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-17T05:50:51.118Z",
+    "stars": 101261,
+    "language": "TypeScript",
+    "pushed_at": "2026-10-17T03:16:17Z",
+    "license": "Apache-2.0"
+  }
+}

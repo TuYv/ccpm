@@ -1,7 +1,7 @@
 {
   "id": "rehan-remade-universal-modder-game-recon",
   "name": "game-recon",
-  "description": "Figure out how a specific installed game can be modded, before writing any mod code. Covers where it's installed, the engine and version, managed vs native code, anti-cheat, loaders already present, save and config folders, and the community's modding route. Use when the user asks \"can I mod <game>?\", \"what engine is <game>\", \"how do people mod <game>\", or at the start of any modding task. Produces MODDING_PLAN.md.",
+  "description": "Figure out how a specific installed game can be modded, before writing any mod code. Covers where it's installed, the engine and version, managed vs native code, anti-cheat, loaders already present, save and config folders, and the community's modding route. Also whether this machine can run it (a Windows game on macOS or Linux, x64 on ARM). Use when the user asks \"can I mod <game>?\", \"what engine is <game>\", \"how do people mod <game>\", or at the start of any modding task. Produces MODDING_PLAN.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/rehan-remade/universal-modder/blob/main/skills/game-recon/SKILL.md",
     "path": "skills/game-recon/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-17T01:27:26.634Z",
-    "stars": 8089,
+    "discovered_at": "2026-10-17T06:35:41.008Z",
+    "stars": 8110,
     "language": "Python",
-    "pushed_at": "2026-10-16T21:04:32Z",
+    "pushed_at": "2026-10-17T04:21:28Z",
     "license": "MIT"
   }
 }

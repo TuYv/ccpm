@@ -1,0 +1,25 @@
+{
+  "id": "avifenesh-agnix-home-path-skill",
+  "name": "home-path-skill",
+  "description": "Use when building the project with the bundled script",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "avifenesh",
+  "install_path": ".claude/skills/home-path-skill/SKILL.md",
+  "source": {
+    "repo": "avifenesh/agnix",
+    "url": "https://github.com/avifenesh/agnix/blob/main/tests/fixtures/per_client_skills/.agents/skills/home-path-skill/SKILL.md",
+    "path": "tests/fixtures/per_client_skills/.agents/skills/home-path-skill/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-17T06:46:08.076Z",
+    "stars": 453,
+    "language": "Rust",
+    "pushed_at": "2026-10-17T01:49:13Z",
+    "license": "Apache-2.0"
+  }
+}
