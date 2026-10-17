@@ -1,0 +1,25 @@
+{
+  "id": "loopx-project-loopx-loopx-manager",
+  "name": "loopx-manager",
+  "description": "Inspect authorized LoopX Goals, Todos and deliveries to explain progress, identify owner decisions and delegate intent to the right worker.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "loopx-project",
+  "install_path": ".claude/skills/loopx-manager/SKILL.md",
+  "source": {
+    "repo": "loopx-project/loopx",
+    "url": "https://github.com/loopx-project/loopx/blob/main/loopx/capabilities/manager_context/skills/loopx-manager/SKILL.md",
+    "path": "loopx/capabilities/manager_context/skills/loopx-manager/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-17T14:30:30.741Z",
+    "stars": 6349,
+    "language": "Python",
+    "pushed_at": "2026-10-17T14:08:35Z",
+    "license": "Apache-2.0"
+  }
+}

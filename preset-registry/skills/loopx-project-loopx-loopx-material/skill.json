@@ -1,0 +1,25 @@
+{
+  "id": "loopx-project-loopx-loopx-material",
+  "name": "loopx-material",
+  "description": "Operate an explicitly activated LoopX Material Lifecycle for a connected project. Use for material-store inventory, lossless migration, candidate/archive transitions, exact-read-backed ranking, ranked-entry rebuilds, bounded Explore intake, owner-gated apply, rollback, and audit. Do not use for ordinary one-off reading or research when the project has not activated Material Lifecycle.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "loopx-project",
+  "install_path": ".claude/skills/loopx-material/SKILL.md",
+  "source": {
+    "repo": "loopx-project/loopx",
+    "url": "https://github.com/loopx-project/loopx/blob/main/skills/loopx-material/SKILL.md",
+    "path": "skills/loopx-material/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-17T14:30:31.484Z",
+    "stars": 6349,
+    "language": "Python",
+    "pushed_at": "2026-10-17T14:08:35Z",
+    "license": "Apache-2.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "loopx-project-loopx-loopx-pr-program",
+  "name": "loopx-pr-program",
+  "description": "Use when LoopX must manage a multi-PR or multi-MR delivery program across one or more repositories: inventory current change requests, reconcile new/merged/closed or retargeted work, preserve requirement and dependency priorities, maintain a roadmap document, or monitor material lifecycle/check/review changes over time. Use provider-neutral snapshots and one grouped continuous monitor; do not use for deep per-PR code review, approval, commenting, or merge actions.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "loopx-project",
+  "install_path": ".claude/skills/loopx-pr-program/SKILL.md",
+  "source": {
+    "repo": "loopx-project/loopx",
+    "url": "https://github.com/loopx-project/loopx/blob/main/skills/loopx-pr-program/SKILL.md",
+    "path": "skills/loopx-pr-program/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-17T14:30:32.005Z",
+    "stars": 6349,
+    "language": "Python",
+    "pushed_at": "2026-10-17T14:08:35Z",
+    "license": "Apache-2.0"
+  }
+}

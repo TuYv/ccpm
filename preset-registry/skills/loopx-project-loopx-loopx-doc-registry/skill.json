@@ -1,0 +1,25 @@
+{
+  "id": "loopx-project-loopx-loopx-doc-registry",
+  "name": "loopx-doc-registry",
+  "description": "Use when a connected LoopX project is asked to read, remember, record, index, register, or use a durable project material such as a Lark/wiki/design doc, research note, SOP, owner packet, migration report, benchmark paper, or external material source. Use even when the user does not mention LoopX or doc registry.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "loopx-project",
+  "install_path": ".claude/skills/loopx-doc-registry/SKILL.md",
+  "source": {
+    "repo": "loopx-project/loopx",
+    "url": "https://github.com/loopx-project/loopx/blob/main/skills/loopx-doc-registry/SKILL.md",
+    "path": "skills/loopx-doc-registry/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-17T14:30:31.310Z",
+    "stars": 6349,
+    "language": "Python",
+    "pushed_at": "2026-10-17T14:08:35Z",
+    "license": "Apache-2.0"
+  }
+}

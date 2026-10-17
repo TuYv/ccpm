@@ -1,0 +1,25 @@
+{
+  "id": "loopx-project-loopx-public",
+  "name": "loopx",
+  "description": "Adopt and operate LoopX for durable goals, long-running agent work, scoped collaboration, evidence-backed progress, and recovery across sessions. Use when the user asks to set up LoopX, start or resume LoopX work, inspect progress, or select a LoopX workflow.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "loopx-project",
+  "install_path": ".claude/skills/public/SKILL.md",
+  "source": {
+    "repo": "loopx-project/loopx",
+    "url": "https://github.com/loopx-project/loopx/blob/main/apps/presentation/site/public/skill.md",
+    "path": "apps/presentation/site/public/skill.md",
+    "branch": "main",
+    "discovered_at": "2026-10-17T14:30:30.007Z",
+    "stars": 6349,
+    "language": "Python",
+    "pushed_at": "2026-10-17T14:08:35Z",
+    "license": "Apache-2.0"
+  }
+}

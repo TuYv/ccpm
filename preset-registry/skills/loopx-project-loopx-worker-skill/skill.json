@@ -1,0 +1,25 @@
+{
+  "id": "loopx-project-loopx-worker-skill",
+  "name": "loopx-auto-research",
+  "description": "Use when a LoopX worker is operating an auto-research lane, demo pane, frontier item, evidence packet, promotion/retirement decision, or visible tmux/Codex auto-research rehearsal. Identity must come from the LoopX role profile and quota/frontier packet; this skill only provides role-specific execution checklists, artifact contracts, and stop conditions.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "loopx-project",
+  "install_path": ".claude/skills/worker_skill/SKILL.md",
+  "source": {
+    "repo": "loopx-project/loopx",
+    "url": "https://github.com/loopx-project/loopx/blob/main/demo/auto_research/worker_skill/SKILL.md",
+    "path": "demo/auto_research/worker_skill/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-17T14:30:30.527Z",
+    "stars": 6349,
+    "language": "Python",
+    "pushed_at": "2026-10-17T14:08:35Z",
+    "license": "Apache-2.0"
+  }
+}
