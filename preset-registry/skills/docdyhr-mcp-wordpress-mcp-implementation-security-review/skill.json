@@ -1,0 +1,25 @@
+{
+  "id": "docdyhr-mcp-wordpress-mcp-implementation-security-review",
+  "name": "mcp-implementation-security-review",
+  "description": "| Review the implementation source code of MCP (Model Context Protocol) servers, clients, and tool handlers against a security baseline — authentication, sessions, rate limiting, input-schema validation, official-SDK usage, RCE vectors, and the OWASP MCP Top 10 — producing a report with file/line evidence. Use this skill when: - Reviewing an MCP server implementation for security before release - Checking a server against the baseline controls (MCP-01 to MCP-05) and the OWASP MCP Top 10 - Auditi",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "docdyhr",
+  "install_path": ".claude/skills/mcp-implementation-security-review/SKILL.md",
+  "source": {
+    "repo": "docdyhr/mcp-wordpress",
+    "url": "https://github.com/docdyhr/mcp-wordpress/blob/main/.claude/skills/mcp-implementation-security-review/SKILL.md",
+    "path": ".claude/skills/mcp-implementation-security-review/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-17T22:30:01.404Z",
+    "stars": 111,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-17T21:25:59Z",
+    "license": "MIT"
+  }
+}

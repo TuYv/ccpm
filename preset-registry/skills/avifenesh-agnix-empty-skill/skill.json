@@ -1,0 +1,25 @@
+{
+  "id": "avifenesh-agnix-empty-skill",
+  "name": "empty-skill",
+  "description": "Formats changelogs. Use when editing CHANGELOG.md.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "avifenesh",
+  "install_path": ".claude/skills/empty-skill/SKILL.md",
+  "source": {
+    "repo": "avifenesh/agnix",
+    "url": "https://github.com/avifenesh/agnix/blob/main/tests/fixtures/cline-invalid/survey/.cline/skills/empty-skill/SKILL.md",
+    "path": "tests/fixtures/cline-invalid/survey/.cline/skills/empty-skill/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-17T23:24:24.878Z",
+    "stars": 453,
+    "language": "Rust",
+    "pushed_at": "2026-10-17T20:02:14Z",
+    "license": "Apache-2.0"
+  }
+}

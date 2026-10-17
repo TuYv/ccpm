@@ -1,7 +1,7 @@
 {
   "id": "chrisbanes-skills-gradle-run",
   "name": "gradle-run",
-  "description": "Use when planning to execute Gradle through `gradle`, `./gradlew`, or a custom `gradlew*` wrapper script, or diagnosing a Gradle build, compact workflow ledger, repeated failure fingerprint, check, test, lint, warning, or failure even when no new Gradle run is appropriate.",
+  "description": "Use when planning to execute Gradle through `gradle`, `./gradlew`, or a custom `gradlew*` wrapper script, or diagnosing a Gradle build, recovering a workflow's status, compact workflow ledger, repeated failure fingerprint, check, test, lint, warning, or failure even when no new Gradle run is appropriate.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/chrisbanes/skills/blob/main/skills/gradle-run/SKILL.md",
     "path": "skills/gradle-run/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-17T20:25:14.983Z",
-    "stars": 1106,
+    "discovered_at": "2026-10-17T23:19:19.455Z",
+    "stars": 1107,
     "language": "Python",
-    "pushed_at": "2026-10-17T20:20:25Z",
+    "pushed_at": "2026-10-17T22:02:15Z",
     "license": "Apache-2.0"
-  },
-  "summary_zh": "用于规划执行或诊断 Gradle 构建，适合追踪检查、测试、警告及重复失败，即使无需重新运行构建。"
+  }
 }

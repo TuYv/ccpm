@@ -1,0 +1,25 @@
+{
+  "id": "docdyhr-mcp-wordpress-test-gap-audit",
+  "name": "test-gap-audit",
+  "description": "Run a read-only audit for missing, weak, stale, or mis-scoped test coverage. If the user does not name a scope, audit the full repository and identify important code paths, routes, features, services, workflows, and contracts that lack proper tests. If the user names a feature, PR, branch, route, workflow, service, bug fix, API, security-sensitive path, or risky code change, focus only on that specific scope. Use when the user asks what tests are missing, whether coverage is enough, what regress",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "docdyhr",
+  "install_path": ".claude/skills/test-gap-audit/SKILL.md",
+  "source": {
+    "repo": "docdyhr/mcp-wordpress",
+    "url": "https://github.com/docdyhr/mcp-wordpress/blob/main/.claude/skills/test-gap-audit/SKILL.md",
+    "path": ".claude/skills/test-gap-audit/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-17T22:30:01.799Z",
+    "stars": 111,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-17T21:25:59Z",
+    "license": "MIT"
+  }
+}

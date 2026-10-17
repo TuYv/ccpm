@@ -1,0 +1,25 @@
+{
+  "id": "avifenesh-agnix-release",
+  "name": "release",
+  "description": "Prepare release notes and version bumps (shadowed copy, OC-SK-002)",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "avifenesh",
+  "install_path": ".claude/skills/release/SKILL.md",
+  "source": {
+    "repo": "avifenesh/agnix",
+    "url": "https://github.com/avifenesh/agnix/blob/main/tests/fixtures/opencode-invalid/.claude/skills/release/SKILL.md",
+    "path": "tests/fixtures/opencode-invalid/.claude/skills/release/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-17T23:24:31.150Z",
+    "stars": 453,
+    "language": "Rust",
+    "pushed_at": "2026-10-17T20:02:14Z",
+    "license": "Apache-2.0"
+  }
+}

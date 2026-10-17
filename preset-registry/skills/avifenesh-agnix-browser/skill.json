@@ -1,0 +1,25 @@
+{
+  "id": "avifenesh-agnix-browser",
+  "name": "browser",
+  "description": "Browses web pages. Use when the user asks to read a web page.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "avifenesh",
+  "install_path": ".claude/skills/browser/SKILL.md",
+  "source": {
+    "repo": "avifenesh/agnix",
+    "url": "https://github.com/avifenesh/agnix/blob/main/tests/fixtures/mcp-clients/.agents/skills/browser/SKILL.md",
+    "path": "tests/fixtures/mcp-clients/.agents/skills/browser/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-17T23:24:30.745Z",
+    "stars": 453,
+    "language": "Rust",
+    "pushed_at": "2026-10-17T20:02:14Z",
+    "license": "Apache-2.0"
+  }
+}

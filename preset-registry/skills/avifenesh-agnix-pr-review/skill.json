@@ -1,0 +1,25 @@
+{
+  "id": "avifenesh-agnix-pr-review",
+  "name": "pr-review",
+  "description": "Helps with code review",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "avifenesh",
+  "install_path": ".claude/skills/pr-review/SKILL.md",
+  "source": {
+    "repo": "avifenesh/agnix",
+    "url": "https://github.com/avifenesh/agnix/blob/main/tests/fixtures/kiro-reach/kr-sk-002/.kiro/skills/pr-review/SKILL.md",
+    "path": "tests/fixtures/kiro-reach/kr-sk-002/.kiro/skills/pr-review/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-17T23:24:30.544Z",
+    "stars": 453,
+    "language": "Rust",
+    "pushed_at": "2026-10-17T20:02:14Z",
+    "license": "Apache-2.0"
+  }
+}

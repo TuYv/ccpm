@@ -1,0 +1,25 @@
+{
+  "id": "avifenesh-agnix-review-docs",
+  "name": "review-docs",
+  "description": "Review documentation changes. Use when a pull request edits docs.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "avifenesh",
+  "install_path": ".claude/skills/review-docs/SKILL.md",
+  "source": {
+    "repo": "avifenesh/agnix",
+    "url": "https://github.com/avifenesh/agnix/blob/main/tests/fixtures/amp-skills/invalid/.claude/skills/review-docs/SKILL.md",
+    "path": "tests/fixtures/amp-skills/invalid/.claude/skills/review-docs/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-17T23:24:20.473Z",
+    "stars": 453,
+    "language": "Rust",
+    "pushed_at": "2026-10-17T20:02:14Z",
+    "license": "Apache-2.0"
+  }
+}

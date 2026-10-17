@@ -1,0 +1,25 @@
+{
+  "id": "avifenesh-agnix-run",
+  "name": "run",
+  "description": "Runs the bundled tool. Use when asked to run the fixture tool.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "avifenesh",
+  "install_path": ".claude/skills/run/SKILL.md",
+  "source": {
+    "repo": "avifenesh/agnix",
+    "url": "https://github.com/avifenesh/agnix/blob/main/tests/fixtures/claude-ext/plugin/skills/run/SKILL.md",
+    "path": "tests/fixtures/claude-ext/plugin/skills/run/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-17T23:24:22.149Z",
+    "stars": 453,
+    "language": "Rust",
+    "pushed_at": "2026-10-17T20:02:14Z",
+    "license": "Apache-2.0"
+  }
+}

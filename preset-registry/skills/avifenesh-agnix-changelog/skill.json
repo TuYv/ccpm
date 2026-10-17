@@ -1,0 +1,25 @@
+{
+  "id": "avifenesh-agnix-changelog",
+  "name": "changelog",
+  "description": "Formats changelog entries. Use when editing CHANGELOG.md.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "avifenesh",
+  "install_path": ".claude/skills/changelog/SKILL.md",
+  "source": {
+    "repo": "avifenesh/agnix",
+    "url": "https://github.com/avifenesh/agnix/blob/main/tests/fixtures/cline/.cline/skills/changelog/SKILL.md",
+    "path": "tests/fixtures/cline/.cline/skills/changelog/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-17T23:24:25.121Z",
+    "stars": 453,
+    "language": "Rust",
+    "pushed_at": "2026-10-17T20:02:14Z",
+    "license": "Apache-2.0"
+  }
+}

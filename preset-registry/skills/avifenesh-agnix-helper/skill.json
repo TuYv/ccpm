@@ -1,0 +1,25 @@
+{
+  "id": "avifenesh-agnix-helper",
+  "name": "helper",
+  "description": "I can help you process Excel files",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "avifenesh",
+  "install_path": ".claude/skills/helper/SKILL.md",
+  "source": {
+    "repo": "avifenesh/agnix",
+    "url": "https://github.com/avifenesh/agnix/blob/main/tests/fixtures/claude-ext/skills/.claude/skills/helper/SKILL.md",
+    "path": "tests/fixtures/claude-ext/skills/.claude/skills/helper/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-17T23:24:24.265Z",
+    "stars": 453,
+    "language": "Rust",
+    "pushed_at": "2026-10-17T20:02:14Z",
+    "license": "Apache-2.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "avifenesh-agnix-deep",
+  "name": "deep",
+  "description": "Shows a nested skill directory. Use when testing skill discovery depth.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "avifenesh",
+  "install_path": ".claude/skills/deep/SKILL.md",
+  "source": {
+    "repo": "avifenesh/agnix",
+    "url": "https://github.com/avifenesh/agnix/blob/main/tests/fixtures/amp-skills/valid/.agents/skills/something/deep/SKILL.md",
+    "path": "tests/fixtures/amp-skills/valid/.agents/skills/something/deep/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-17T23:24:21.141Z",
+    "stars": 453,
+    "language": "Rust",
+    "pushed_at": "2026-10-17T20:02:14Z",
+    "license": "Apache-2.0"
+  }
+}

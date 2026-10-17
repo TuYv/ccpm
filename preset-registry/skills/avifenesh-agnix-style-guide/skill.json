@@ -1,0 +1,25 @@
+{
+  "id": "avifenesh-agnix-style-guide",
+  "name": "style-guide",
+  "description": "Apply the project writing style. Use when editing user-facing text.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "avifenesh",
+  "install_path": ".claude/skills/style-guide/SKILL.md",
+  "source": {
+    "repo": "avifenesh/agnix",
+    "url": "https://github.com/avifenesh/agnix/blob/main/tests/fixtures/amp-skills/valid/.claude/skills/style-guide/SKILL.md",
+    "path": "tests/fixtures/amp-skills/valid/.claude/skills/style-guide/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-17T23:24:21.770Z",
+    "stars": 453,
+    "language": "Rust",
+    "pushed_at": "2026-10-17T20:02:14Z",
+    "license": "Apache-2.0"
+  }
+}

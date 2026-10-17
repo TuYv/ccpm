@@ -1,0 +1,25 @@
+{
+  "id": "avifenesh-agnix-deploy-to-production",
+  "name": "deploy-to-production",
+  "description": "Guides the deployment process to production with safety checks. Use when deploying a release.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "avifenesh",
+  "install_path": ".claude/skills/deploy-to-production/SKILL.md",
+  "source": {
+    "repo": "avifenesh/agnix",
+    "url": "https://github.com/avifenesh/agnix/blob/main/tests/fixtures/devin/valid/.devin/skills/deploy-to-production/SKILL.md",
+    "path": "tests/fixtures/devin/valid/.devin/skills/deploy-to-production/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-17T23:24:25.966Z",
+    "stars": 453,
+    "language": "Rust",
+    "pushed_at": "2026-10-17T20:02:14Z",
+    "license": "Apache-2.0"
+  }
+}

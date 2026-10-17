@@ -1,0 +1,25 @@
+{
+  "id": "avifenesh-agnix-twice",
+  "name": "twice",
+  "description": "Defines MCP servers twice. Use when testing AMP-005.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "avifenesh",
+  "install_path": ".claude/skills/twice/SKILL.md",
+  "source": {
+    "repo": "avifenesh/agnix",
+    "url": "https://github.com/avifenesh/agnix/blob/main/tests/fixtures/amp-skills/invalid/.agents/skills/twice/SKILL.md",
+    "path": "tests/fixtures/amp-skills/invalid/.agents/skills/twice/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-17T23:24:20.259Z",
+    "stars": 453,
+    "language": "Rust",
+    "pushed_at": "2026-10-17T20:02:14Z",
+    "license": "Apache-2.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "docdyhr-mcp-wordpress-mcp-security-audit",
+  "name": "mcp-security-audit",
+  "description": "| Audit MCP (Model Context Protocol) server configurations for security issues. Use this skill when: - Reviewing .mcp.json files for security risks - Checking MCP server args for hardcoded secrets or shell injection patterns - Validating that MCP package-runner dependencies use exact reviewed versions, not bare names, @latest, or ranges - Detecting mutable npm/npx, bunx, pnpm dlx, yarn dlx, and npm exec references in MCP configurations - Auditing which MCP servers a project registers and whether",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "docdyhr",
+  "install_path": ".claude/skills/mcp-security-audit/SKILL.md",
+  "source": {
+    "repo": "docdyhr/mcp-wordpress",
+    "url": "https://github.com/docdyhr/mcp-wordpress/blob/main/.claude/skills/mcp-security-audit/SKILL.md",
+    "path": ".claude/skills/mcp-security-audit/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-17T22:30:01.647Z",
+    "stars": 111,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-17T21:25:59Z",
+    "license": "MIT"
+  }
+}

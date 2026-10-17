@@ -1,0 +1,25 @@
+{
+  "id": "avifenesh-agnix-setup-db",
+  "name": "Setup_DB",
+  "description": "Create the Supabase database schema and seed data",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "avifenesh",
+  "install_path": ".claude/skills/Setup_DB/SKILL.md",
+  "source": {
+    "repo": "avifenesh/agnix",
+    "url": "https://github.com/avifenesh/agnix/blob/main/tests/fixtures/kiro-reach/kr-pw-014/.kiro/powers/installed/supabase/skills/Setup_DB/SKILL.md",
+    "path": "tests/fixtures/kiro-reach/kr-pw-014/.kiro/powers/installed/supabase/skills/Setup_DB/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-17T23:24:30.093Z",
+    "stars": 453,
+    "language": "Rust",
+    "pushed_at": "2026-10-17T20:02:14Z",
+    "license": "Apache-2.0"
+  }
+}
