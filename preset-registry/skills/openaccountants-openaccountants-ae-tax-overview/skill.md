@@ -7,7 +7,7 @@ metadata:
   openaccountants_url: "https://www.openaccountants.com/skills/ae-tax-overview"
   jurisdiction: "AE"
   tax_year: "2026"
-  last_updated: "2026-09-27"
+  last_updated: "2026-10-16"
   authored_by: "Michael Cutajar and the OpenAccountants team"
   trust_label: "Built by Michael Cutajar and the OpenAccountants team"
   review_status: "pending_review"
@@ -15,26 +15,26 @@ metadata:
 
 # UAE tax system overview for 2026: Corporate Tax, VAT, excise tax, top-up tax, no personal income tax, tax residency and registration
 
-Tax year 2026. This Guide gives the whole picture of federal tax in the United Arab Emirates for 2026 and sends each detailed question to the Guide that answers it. For Corporate Tax, "2026" means tax periods (financial years) running in 2026, for most businesses 1 January to 31 December 2026. For VAT and excise tax, it means the monthly or quarterly tax periods that fall in 2026. The rules are the law as published on tax.gov.ae and mof.gov.ae on 25 September 2026. A short dated section covers returns for 2025 that are being filed now.
+Tax year 2026. This skill gives the whole picture of federal tax in the United Arab Emirates for 2026 and sends each detailed question to the skill that answers it. For Corporate Tax, "2026" means tax periods (financial years) running in 2026, for most businesses 1 January to 31 December 2026. For VAT and excise tax, it means the monthly or quarterly tax periods that fall in 2026. The rules are the law as published on tax.gov.ae and mof.gov.ae on 25 September 2026. A short dated section covers returns for 2025 that are being filed now.
 
 ## Scope and who this is for ([Ministry of Finance: Tax](https://mof.gov.ae/en/public-finance/tax/); [Ministry of Finance: Corporate Tax](https://mof.gov.ae/en/public-finance/tax/corporate-tax/))
 
-This Guide is for anyone who needs to know which UAE taxes apply to a person or a business, and roughly how: a founder, a freelancer, an employee moving to the UAE, a foreign group with a UAE subsidiary, or an accountant triaging a new client. It gives the key rule, the key figure and the official source for each tax, then routes the detailed work.
+This skill is for anyone who needs to know which UAE taxes apply to a person or a business, and roughly how: a founder, a freelancer, an employee moving to the UAE, a foreign group with a UAE subsidiary, or an accountant triaging a new client. It gives the key rule, the key figure and the official source for each tax, then routes the detailed work.
 
-The currency is the UAE dirham (AED). Federal taxes are administered by the Federal Tax Authority (FTA) through its online portal, EmaraTax. The Ministry of Finance writes the tax policy and legislation. The Ministry says "The official sources of information on Federal Taxes in the UAE are the Ministry of Finance and the Federal Tax Authority", so this Guide cites only those two.
+The currency is the UAE dirham (AED). Federal taxes are administered by the Federal Tax Authority (FTA) through its online portal, EmaraTax. The Ministry of Finance writes the tax policy and legislation. The Ministry says "The official sources of information on Federal Taxes in the UAE are the Ministry of Finance and the Federal Tax Authority", so this skill cites only those two.
 
 | Tax | Who it hits | Headline rule for 2026 | Detailed Guide |
 | --- | --- | --- | --- |
 | Corporate Tax | Companies and other juridical persons (including free zone companies); individuals whose business turnover is more than AED 1,000,000 in a calendar year; non-residents with a UAE permanent establishment or nexus | 0% on taxable income up to AED 375,000, 9% above; Small Business Relief; 0% on qualifying income of a Qualifying Free Zone Person | ae-corporate-tax |
 | Domestic Minimum Top-up Tax | UAE entities of multinational groups with revenue of EUR 750 million or more | Tops the UAE effective rate up to 15% | ae-corporate-tax (summary; refer out) |
 | VAT | Businesses whose taxable supplies and imports pass the registration threshold; consumers bear it in the price | Standard rate 5%; mandatory registration above AED 375,000 | uae-vat and ae-vat-return |
-| Excise tax | Importers, producers and stockpilers of excise goods, and anyone releasing them from a Designated Zone | 100% on tobacco, energy drinks and e-smoking products; sweetened drinks taxed per litre by sugar content | This Guide (summary; refer out) |
+| Excise tax | Importers, producers and stockpilers of excise goods, and anyone releasing them from a Designated Zone | 100% on tobacco, energy drinks and e-smoking products; sweetened drinks taxed per litre by sugar content | This skill (summary; refer out) |
 | Personal income tax | Nobody | None. Wages and personal investment income are not taxed | ae-income-tax |
 | Payroll taxes | Nobody for tax | No income tax to withhold from wages; pension and social contributions sit outside the FTA's taxes | ae-payroll-social |
 
 Setting up a business, choosing a free zone or the mainland, and the order of registrations are covered in **ae-company-formation**.
 
-This Guide does not cover Emirate-level fees and charges, customs duty, the detailed top-up tax computation, the detailed excise computation, or any other country's tax on a UAE resident.
+This skill does not cover Emirate-level fees and charges, customs duty, the detailed top-up tax computation, the detailed excise computation, or any other country's tax on a UAE resident.
 
 ## Ask the client first
 
@@ -108,7 +108,7 @@ Corporate Tax (Federal Decree-Law No. 47 of 2022) applies to financial years beg
 - **From when:** fiscal years beginning on or after 1 January 2025.
 - **What:** a top-up tax so that the group's effective tax rate in the UAE reaches 15%, following the OECD global minimum tax (Pillar Two) rules.
 - **Registration:** within 7 months after the end of the first fiscal year in scope (FTA Decision No. 12 of 2026, Article 2).
-- **Returns:** the top-up tax return is due 15 months after the end of the fiscal year, or 18 months for the first transition year. The ae-corporate-tax Guide gives the detail.
+- **Returns:** the top-up tax return is due 15 months after the end of the fiscal year, or 18 months for the first transition year. The ae-corporate-tax skill gives the detail.
 - This is specialist work. Refer it out.
 
 ### VAT ([VAT Law, consolidated](https://tax.gov.ae/Datafolder/Files/Legislation/2025/Federal%20Decree-Law%20No.%208%20of%202017%20and%20amendments%20-%20publishing%2028%2011%202025.pdf); [VAT Executive Regulation, consolidated 09-2026](https://tax.gov.ae/Datafolder/Files/Legislation/2026/Law-No-8-of-2017-and-its-amendments--09-2026.pdf); [Ministry of Finance: VAT](https://mof.gov.ae/en/public-finance/tax/vat/))
@@ -175,7 +175,7 @@ The UAE has no federal personal income tax. An individual pays UAE income tax on
 | Foreign income unrelated to a UAE business | None |
 
 - The Ministry of Finance lists VAT, Corporate Tax and the top-up tax as its federal taxes ([Ministry of Finance: Tax](https://mof.gov.ae/en/public-finance/tax/)); excise tax is administered by the FTA. None of these is a tax on an individual's wealth, inheritance or gifts, and no such federal tax appears on the Ministry's or the FTA's legislation pages. Check Emirate-level fees and any foreign country's tax separately.
-- Pension and social contributions for employees (relevant mainly to UAE and GCC nationals) are not taxes administered by the FTA and are outside this Guide. See ae-payroll-social.
+- Pension and social contributions for employees (relevant mainly to UAE and GCC nationals) are not taxes administered by the FTA and are outside this skill. See ae-payroll-social.
 - The individual may still owe tax to another country, for example because of citizenship or because they have not broken residence there. The UAE rules do not settle that.
 
 ### Tax residency and residency certificates ([Cabinet Decision No. 85 of 2022](https://tax.gov.ae/Datafolder/Files/Legislation/Corporate%20Tax/Cabinet%20Decision%2085%20of%202022%20-%20For%20publishing.pdf); [Tax Resident and TRC Guide](https://tax.gov.ae/Datafolder/Files/Guides/VAT/VAT%20Guides/Tax-Resident-and-TRC--18-10-2024.pdf); [FTA services fees, Cabinet Decision No. 65 of 2020 and amendments](https://tax.gov.ae/Datafolder/Files/Legislation/2025/Cabinet%20Decision%20No.%2065%20of%202020%20on%20FTA%20Services%20Fees%20and%20its%20amendments%20-%20for%20publishing%20%2003%2012%202025.docx.pdf))
@@ -252,7 +252,7 @@ The amounts are illustrations. Each case uses the calendar year 2026 unless stat
 - **Excise classification, Designated Zones, stock declarations and refunds**: refer to an excise specialist.
 - **Tax groups, transfer pricing, restructuring relief, exempt persons, and non-resident permanent establishment questions**: refer, via ae-corporate-tax.
 - **Dual residence or treaty tie-breakers**: the UAE tests do not settle a conflict with another country. Refer to an adviser who knows both countries.
-- **Another country's tax on a UAE resident** (for example, citizenship-based tax): outside this Guide.
+- **Another country's tax on a UAE resident** (for example, citizenship-based tax): outside this skill.
 - **Emirate-level fees, customs duty, and pension or labour questions**: not federal taxes administered by the FTA. Refer to the relevant authority.
 - **Unfiled past periods, voluntary disclosures, audits and penalties disputes**: refer to an FTA-registered tax agent.
 
@@ -313,4 +313,4 @@ version (and the professional behind it) is at
 
 ## Today's figures and who stands behind this skill
 
-This file is an AI skill (tax rules your AI follows) from OpenAccountants, copied on 2026-09-27. Rates, thresholds and deadlines change. For the current version of this skill, its official sources and the named accountant (if any) who stands behind it, call `get_skill` with slug `ae-tax-overview` on the OpenAccountants connector (https://www.openaccountants.com/connect), or read https://www.openaccountants.com/skills/ae-tax-overview. If neither is available, confirm every figure against the official source pages cited above before relying on it.
+This file is an AI skill (tax rules your AI follows) from OpenAccountants, copied on 2026-10-16. Rates, thresholds and deadlines change. For the current version of this skill, its official sources and the named accountant (if any) who stands behind it, call `get_skill` with slug `ae-tax-overview` on the OpenAccountants connector (https://www.openaccountants.com/connect), or read https://www.openaccountants.com/skills/ae-tax-overview. If neither is available, confirm every figure against the official source pages cited above before relying on it.

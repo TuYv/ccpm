@@ -1,7 +1,7 @@
 {
   "id": "timewarpengineering-timewarp-architecture-aspire-monitoring",
   "name": "aspire-monitoring",
-  "description": ">- **ANALYSIS SKILL** - Observe Aspire apps: logs, traces, metrics, resource state, telemetry export, browser telemetry, and the standalone dashboard. Routes between local Aspire CLI, AKS workload diagnostics, and deployed Azure resource health. USE FOR: aspire logs, aspire otel logs, aspire otel traces, aspire otel spans, aspire describe, aspire ps, aspire export, aspire dashboard run, --include-hidden, browser logs in dashboard, WithBrowserLogs, App Insights query, AKS pod logs, container app ",
+  "description": ">- **ANALYSIS SKILL** - Observe Aspire apps: logs, traces, metrics, resource state, telemetry export, browser telemetry, and the standalone dashboard. Routes between local Aspire CLI, AKS workload diagnostics, and deployed Azure resource health. USE FOR: aspire logs, aspire otel logs, aspire otel traces, aspire otel spans, aspire describe, aspire ps, aspire export, aspire dashboard run, describe --include-hidden, browser logs in dashboard, terminal view, DevTunnel URLs, WithBrowserLogs, App Insi",
   "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/TimeWarpEngineering/timewarp-architecture/blob/master/.claude/skills/aspire-monitoring/SKILL.md",
     "path": ".claude/skills/aspire-monitoring/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-10-17T05:52:16.994Z",
+    "discovered_at": "2026-10-17T10:53:45.510Z",
     "stars": 55,
     "language": "C#",
-    "pushed_at": "2026-10-17T03:23:16Z",
+    "pushed_at": "2026-10-17T10:53:41Z",
     "license": "Unlicense"
-  },
-  "summary_zh": "统一监控和诊断 Aspire 应用，查看日志、链路、指标及资源状态，适合本地、AKS 和 Azure 部署排障。"
+  }
 }

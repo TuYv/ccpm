@@ -1,14 +1,14 @@
 {
   "id": "conorluddy-ios-simulator-skill-ios-simulator-skill",
   "name": "ios-simulator-skill",
-  "description": "29 production-ready scripts for iOS app testing, building, and automation. Provides semantic UI navigation, build automation, accessibility testing, and simulator lifecycle management. Optimized for AI agents with minimal token output.",
+  "description": "Build, test, and drive iOS apps in the Simulator with 29 token-efficient scripts. Use when asked to build or test an Xcode project, launch an app on a simulator, tap/type/swipe through its UI by accessibility label, take screenshots or visual diffs, audit accessibility, read logs or diagnose hangs, or manage simulators (boot, erase, permissions, location, push, appearance). macOS only; needs Xcode, Python 3.12+ and idb.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
     "gemini"
   ],
-  "version": "1.5.0",
+  "version": "1.6.0",
   "author": "conorluddy",
   "install_path": ".claude/skills/ios-simulator-skill/SKILL.md",
   "source": {
@@ -16,11 +16,10 @@
     "url": "https://github.com/conorluddy/ios-simulator-skill/blob/main/ios-simulator-skill/skills/ios-simulator-skill/SKILL.md",
     "path": "ios-simulator-skill/skills/ios-simulator-skill/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-17T05:48:09.796Z",
+    "discovered_at": "2026-10-17T10:50:31.041Z",
     "stars": 1282,
     "language": "Python",
-    "pushed_at": "2026-10-16T21:59:34Z",
+    "pushed_at": "2026-10-17T08:20:22Z",
     "license": "MIT"
-  },
-  "summary_zh": "29个生产级脚本，用于iOS应用的测试、构建和自动化，支持语义UI导航和模拟器管理，特别适合AI代理高效使用。"
+  }
 }

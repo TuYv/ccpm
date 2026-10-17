@@ -7,7 +7,7 @@ metadata:
   openaccountants_url: "https://www.openaccountants.com/skills/ae-payroll-social"
   jurisdiction: "AE"
   tax_year: "2026"
-  last_updated: "2026-09-27"
+  last_updated: "2026-10-16"
   authored_by: "Michael Cutajar and the OpenAccountants team"
   trust_label: "Built by Michael Cutajar and the OpenAccountants team"
   review_status: "pending_review"
@@ -17,7 +17,7 @@ metadata:
 
 ## Scope and who this is for ([Cabinet Decision No. 49 of 2023](https://tax.gov.ae/DataFolder/Files/Legislation/05-06-2023/3/Cabinet%20Decision%20No.%2049%20of%202023%20-%20for%20publishing.pdf); [CTGTNP1: Taxation of natural persons](https://tax.gov.ae/Datafolder/Files/Guides/CT/Taxation%20of%20natural%20persons%20-%2025%2011%202023.pdf))
 
-This Guide is for anyone running or advising on a UAE payroll in calendar year 2026: an employer, a payroll provider, or an accountant answering "what do I deduct from this salary, and what does the company owe?". Figures are for tax year 2026, the calendar year, and the law as published on 25 September 2026.
+This skill is for anyone running or advising on a UAE payroll in calendar year 2026: an employer, a payroll provider, or an accountant answering "what do I deduct from this salary, and what does the company owe?". Figures are for tax year 2026, the calendar year, and the law as published on 25 September 2026.
 
 What it covers:
 
@@ -26,9 +26,9 @@ What it covers:
 - How the employer's VAT return treats goods and services given to staff, including the rule that changes on 1 October 2026.
 - The social side of payroll: the state pension scheme for UAE nationals (and GCC nationals), the end-of-service gratuity for expatriates, the Wage Protection System and the unemployment insurance scheme.
 
-**Read this before relying on the social side.** The pension, labour and unemployment-insurance rules are made and published by the General Pension and Social Security Authority (GPSSA), the Abu Dhabi Pension Fund (for UAE nationals employed in Abu Dhabi), the Ministry of Human Resources and Emiratisation (MOHRE) and the federal legislation portal. This Guide only cites the Federal Tax Authority and the Ministry of Finance. So it tells you **which** social rules apply and **what to confirm**, but it does not state pension rates, salary caps, payment days, gratuity day-counts or insurance premiums. Where you see "check", confirm the point with the body named before you run the payroll.
+**Read this before relying on the social side.** The pension, labour and unemployment-insurance rules are made and published by the General Pension and Social Security Authority (GPSSA), the Abu Dhabi Pension Fund (for UAE nationals employed in Abu Dhabi), the Ministry of Human Resources and Emiratisation (MOHRE) and the federal legislation portal. This skill only cites the Federal Tax Authority and the Ministry of Finance. So it tells you **which** social rules apply and **what to confirm**, but it does not state pension rates, salary caps, payment days, gratuity day-counts or insurance premiums. Where you see "check", confirm the point with the body named before you run the payroll.
 
-Companion Guides: Corporate Tax for the employer is in `ae-corporate-tax`; the individual's own position (including when a self-employed person must register) is in `ae-income-tax`; VAT registration and returns are in `uae-vat`.
+Companion Skills: Corporate Tax for the employer is in `ae-corporate-tax`; the individual's own position (including when a self-employed person must register) is in `ae-income-tax`; VAT registration and returns are in `uae-vat`.
 
 ## What UAE payroll does and does not involve ([Cabinet Decision No. 49 of 2023, Articles 1 and 2](https://tax.gov.ae/DataFolder/Files/Legislation/05-06-2023/3/Cabinet%20Decision%20No.%2049%20of%202023%20-%20for%20publishing.pdf); [CTGTNP1, section 3.8.1](https://tax.gov.ae/Datafolder/Files/Guides/CT/Taxation%20of%20natural%20persons%20-%2025%2011%202023.pdf); [CTGDTI1: Determination of Taxable Income](https://tax.gov.ae/DataFolder/Files/Pdf/2024/Determination%20of%20Taxable%20Income%20-%2031%2007%202024.pdf))
 
@@ -44,7 +44,7 @@ Companion Guides: Corporate Tax for the employer is in `ae-corporate-tax`; the i
 
 **What payroll does involve:**
 
-| Obligation | Who it applies to | Who runs it | Status in this Guide |
+| Obligation | Who it applies to | Who runs it | Status in this skill |
 |---|---|---|---|
 | Income tax withholding | Nobody | None | Not applicable; no tax on wages |
 | State pension contributions | UAE national employees; GCC nationals under arrangements for their home scheme | GPSSA, or the Abu Dhabi Pension Fund for UAE nationals employed in Abu Dhabi | Check coverage, rates, salary cap and due date with the right fund |
@@ -90,7 +90,7 @@ Companion Guides: Corporate Tax for the employer is in `ae-corporate-tax`; the i
 
 ### Social figures to confirm, not stated here
 
-These are real and current obligations, but their figures are published by bodies this Guide cannot cite. Confirm each one before the first 2026 payroll run and whenever the authority announces a change.
+These are real and current obligations, but their figures are published by bodies this skill cannot cite. Confirm each one before the first 2026 payroll run and whenever the authority announces a change.
 
 - **GPSSA pension (UAE nationals):** employer share, employee share and any government share; what pay counts as the contribution salary; the monthly cap; the monthly payment deadline; and the late-payment consequence. Check with GPSSA, or the Abu Dhabi Pension Fund for UAE nationals employed in Abu Dhabi. The governing federal laws are Federal Decree-Law No. 57 of 2023 and the earlier Federal Law No. 7 of 1999; read them, not a summary. The rules can differ depending on when the employee was first insured, so confirm which regime each employee is in.
 - **GCC nationals working in the UAE:** check with GPSSA whether and how contributions to the employee's home-country scheme are collected, and at what rates.
@@ -122,7 +122,7 @@ Exceptions (3) and (4) are not changed.
 
 What this means in practice:
 
-- **Staff accommodation.** From 1 October 2026 the labour-law exception no longer covers accommodation unless a MOHRE decision or directive makes it mandatory. Whether a contract or policy can still bring accommodation within exception (2) depends on the "cases and conditions" the FTA specifies. As of 25 September 2026 this Guide has not seen those conditions on the FTA site; treat recovery on accommodation supplied from 1 October 2026 as unsettled and check the FTA's published guidance before claiming it. The block only matters where the accommodation carries VAT, such as a hotel stay or a hotel or serviced apartment, which are not "residential buildings" (Executive Regulation, Article 37(2)). A lease of a residential building is exempt "where the lease is more than 6 six months or the tenant of the property is a holder of an ID card issued by Federal Authority for Identity and Citizenship" (Article 43(1)), so an ordinary long staff flat lease has no input tax to block.
+- **Staff accommodation.** From 1 October 2026 the labour-law exception no longer covers accommodation unless a MOHRE decision or directive makes it mandatory. Whether a contract or policy can still bring accommodation within exception (2) depends on the "cases and conditions" the FTA specifies. As of 25 September 2026 this skill has not seen those conditions on the FTA site; treat recovery on accommodation supplied from 1 October 2026 as unsettled and check the FTA's published guidance before claiming it. The block only matters where the accommodation carries VAT, such as a hotel stay or a hotel or serviced apartment, which are not "residential buildings" (Executive Regulation, Article 37(2)). A lease of a residential building is exempt "where the lease is more than 6 six months or the tenant of the property is a holder of an ID card issued by Federal Authority for Identity and Citizenship" (Article 43(1)), so an ordinary long staff flat lease has no input tax to block.
 - **Contract or policy benefits generally.** The old test (needed for the role, and normal business practice) is replaced by the FTA's own cases and conditions. Check them before claiming.
 - **Health insurance.** Recovery continues for the employee, one spouse and up to three children under 18. Input tax on cover for a fourth child, or a child aged 18 or over, falls outside exception (3) and is blocked unless another exception applies.
 - **Entertainment of non-staff.** Input tax on entertainment for customers, potential customers, officials, shareholders or investors stays blocked for non-government employers.
@@ -155,11 +155,11 @@ Timing: the new texts apply from 1 October 2026; where a cost straddles that dat
 
 **Case 1: expatriate employee on the mainland.** A Dubai mainland company employs an expatriate on a monthly salary with housing and transport allowances. Payroll result: gross pay is paid in full with no tax deduction, because the whole package is a Wage. No GPSSA pension deduction, because the employee is not a UAE or GCC national. The company accrues the Labour Law end-of-service gratuity each month (check the day-count and basis with MOHRE), pays through the Wage Protection System if it applies (check), and confirms the employee holds unemployment insurance (check). The salary and allowances are deductible in the company's Corporate Tax return if not excessive.
 
-**Case 2: UAE national employee.** Same company, a UAE national employee. No tax is withheld. Before the first run, the company confirms with GPSSA the employer and employee shares, the contribution salary, the cap and the payment deadline for this employee's regime, deducts the employee share from pay and pays both shares to GPSSA by the deadline. This Guide gives no rate because it cannot cite GPSSA. Had the employee been employed in Abu Dhabi, the same steps would run through the Abu Dhabi Pension Fund instead (check).
+**Case 2: UAE national employee.** Same company, a UAE national employee. No tax is withheld. Before the first run, the company confirms with GPSSA the employer and employee shares, the contribution salary, the cap and the payment deadline for this employee's regime, deducts the employee share from pay and pays both shares to GPSSA by the deadline. This skill gives no rate because it cannot cite GPSSA. Had the employee been employed in Abu Dhabi, the same steps would run through the Abu Dhabi Pension Fund instead (check).
 
 **Case 3: private pension fund contributions over the cap.** In its 2026 Tax Period a company pays AED 120,000 into a private pension fund for one employee who is a Pension Plan Member. The employee's total deductible remuneration for the period is AED 600,000. The cap is 15% of AED 600,000 = AED 90,000. The company deducts AED 90,000 and adds back AED 30,000 (AED 120,000 less AED 90,000). Had any of the AED 120,000 been accrued but not paid in the period, that part would also be added back for this period.
 
-**Case 4: consultant paid by invoice.** A company engages a self-employed consultant who invoices AED 1,200,000 in calendar year 2026 and has no employment contract. The payments are not a Wage. The company withholds nothing. The consultant's business turnover exceeds AED 1,000,000, so the consultant must register for and pay Corporate Tax on their own account (route the consultant to the `ae-income-tax` Guide). The company deducts the fees as a business expense, at Market Value if the consultant is a related party.
+**Case 4: consultant paid by invoice.** A company engages a self-employed consultant who invoices AED 1,200,000 in calendar year 2026 and has no employment contract. The payments are not a Wage. The company withholds nothing. The consultant's business turnover exceeds AED 1,000,000, so the consultant must register for and pay Corporate Tax on their own account (route the consultant to the `ae-income-tax` skill). The company deducts the fees as a business expense, at Market Value if the consultant is a related party.
 
 **Case 5: health insurance and accommodation, VAT-registered employer.** An employer buys family health cover for an employee with a spouse and four children (ages 4, 9, 14 and 19) and, from October 2026, pays for a serviced apartment for the employee. Input tax on the cover for the employee, spouse and the three children under 18 is recoverable under exception (3). The cover for the 19-year-old is outside exception (3), so its input tax is blocked unless another exception applies. A serviced apartment is not a "residential building" for VAT, so its charge carries VAT. Input tax on the October 2026 serviced-apartment charge is blocked unless a MOHRE decision or directive makes that accommodation mandatory, or the case falls within the contract-or-policy cases the FTA specifies; until those cases are published, do not claim it without checking. Had the employer instead leased an ordinary residential flat for more than six months (or to a tenant holding an Emirates ID card), the lease would be exempt: there would be no input tax on the rent, and the Article 53 change would not arise.
 
@@ -171,8 +171,8 @@ Timing: the new texts apply from 1 October 2026; where a cost straddles that dat
 - Refer gratuity calculations for a leaving employee, especially with unpaid leave, part-time service, a change of contract type or a dispute, to MOHRE's rules or a UAE employment adviser.
 - Refer free zone employers (including the financial free zones) whose employment rules differ from the federal Labour Law to the free zone authority's rules.
 - Refer VAT recovery on staff accommodation that carries VAT (hotel, hotel or serviced apartment) supplied from 1 October 2026 until the FTA's cases and conditions under the new exception (2) are published; if a claim is material, consider asking the FTA for a clarification.
-- Refer any employee who also has UAE business income, or a contractor near the AED 1,000,000 turnover line, to the `ae-income-tax` Guide ([Cabinet Decision No. 49 of 2023, Article 2](https://tax.gov.ae/DataFolder/Files/Legislation/05-06-2023/3/Cabinet%20Decision%20No.%2049%20of%202023%20-%20for%20publishing.pdf)).
-- Refuse to present the employer's pension, gratuity or insurance figures as confirmed by this Guide. It does not contain them.
+- Refer any employee who also has UAE business income, or a contractor near the AED 1,000,000 turnover line, to the `ae-income-tax` skill ([Cabinet Decision No. 49 of 2023, Article 2](https://tax.gov.ae/DataFolder/Files/Legislation/05-06-2023/3/Cabinet%20Decision%20No.%2049%20of%202023%20-%20for%20publishing.pdf)).
+- Refuse to present the employer's pension, gratuity or insurance figures as confirmed by this skill. It does not contain them.
 - Refer tax obligations of the employee in their home country (for example, citizens of countries that tax worldwide income) to that country's rules; UAE payroll does not handle them.
 
 ## Filing and payment ([Corporate Tax Law, Articles 48 and 53](https://mof.gov.ae/wp-content/uploads/2026/01/Federal-Decree-Law-No.-47-of-2022-and-its-amendments-en-v13.1.26.pdf); [Cabinet Decision No. 149 of 2026](https://mof.gov.ae/wp-content/uploads/2026/09/Cabinet-Decision-No.-149-of-2026-Amending-Certain-Provisions-of-The-Executive-Regulation-of-VAT-EN.pdf))
@@ -220,4 +220,4 @@ version (and the professional behind it) is at
 
 ## Today's figures and who stands behind this skill
 
-This file is an AI skill (tax rules your AI follows) from OpenAccountants, copied on 2026-09-27. Rates, thresholds and deadlines change. For the current version of this skill, its official sources and the named accountant (if any) who stands behind it, call `get_skill` with slug `ae-payroll-social` on the OpenAccountants connector (https://www.openaccountants.com/connect), or read https://www.openaccountants.com/skills/ae-payroll-social. If neither is available, confirm every figure against the official source pages cited above before relying on it.
+This file is an AI skill (tax rules your AI follows) from OpenAccountants, copied on 2026-10-16. Rates, thresholds and deadlines change. For the current version of this skill, its official sources and the named accountant (if any) who stands behind it, call `get_skill` with slug `ae-payroll-social` on the OpenAccountants connector (https://www.openaccountants.com/connect), or read https://www.openaccountants.com/skills/ae-payroll-social. If neither is available, confirm every figure against the official source pages cited above before relying on it.

@@ -1,0 +1,25 @@
+{
+  "id": "timewarpengineering-timewarp-architecture-aspire-project-v2-migration",
+  "name": "aspire-project-v2-migration",
+  "description": ">- **WORKFLOW SKILL** - Safely migrates eligible Aspire 13.6+ AppHosts from legacy ProjectResource APIs to experimental DotnetProjectResource APIs after a per-resource assessment and explicit approval of exact edits. USE FOR: assess or migrate existing AddProject, addProject, AddCSharpApp, addCSharpApp, or AddBlazorGateway resources to Project v2; migrate ProjectResource to DotnetProjectResource; clean up the resulting obsolete AppHost ProjectReference edges. DO NOT USE FOR: upgrading Aspire ver",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "TimeWarpEngineering",
+  "install_path": ".claude/skills/aspire-project-v2-migration/SKILL.md",
+  "source": {
+    "repo": "TimeWarpEngineering/timewarp-architecture",
+    "url": "https://github.com/TimeWarpEngineering/timewarp-architecture/blob/master/.claude/skills/aspire-project-v2-migration/SKILL.md",
+    "path": ".claude/skills/aspire-project-v2-migration/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-10-17T10:53:45.784Z",
+    "stars": 55,
+    "language": "C#",
+    "pushed_at": "2026-10-17T10:53:41Z",
+    "license": "Unlicense"
+  }
+}

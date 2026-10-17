@@ -1,0 +1,25 @@
+{
+  "id": "timewarpengineering-timewarp-architecture-aspireify",
+  "name": "aspireify",
+  "description": ">- **WORKFLOW SKILL** - Wire Aspire AppHosts or repair TypeScript AppHost toolchains. Scans the repo, proposes a resource graph, edits C#, file-based C#, or TypeScript AppHosts, wires ServiceDefaults + OTel, validates with `aspire start`, then stops. USE FOR: wire/scaffold AppHost, add Postgres/Redis/Rabbit/Mongo, connect frontend to API, after `aspire init`, AddNextJsApp, AddViteApp, WithBrowserLogs, WithTerminal, Interaction Service, command arguments, apphost.cs, apphost.mts, unified withEnvi",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "TimeWarpEngineering",
+  "install_path": ".claude/skills/aspireify/SKILL.md",
+  "source": {
+    "repo": "TimeWarpEngineering/timewarp-architecture",
+    "url": "https://github.com/TimeWarpEngineering/timewarp-architecture/blob/master/.claude/skills/aspireify/SKILL.md",
+    "path": ".claude/skills/aspireify/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-10-17T10:53:46.089Z",
+    "stars": 55,
+    "language": "C#",
+    "pushed_at": "2026-10-17T10:53:41Z",
+    "license": "Unlicense"
+  }
+}

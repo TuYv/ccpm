@@ -7,7 +7,7 @@ metadata:
   openaccountants_url: "https://www.openaccountants.com/skills/ae-company-formation"
   jurisdiction: "AE"
   tax_year: "2026"
-  last_updated: "2026-09-27"
+  last_updated: "2026-10-16"
   authored_by: "Michael Cutajar and the OpenAccountants team"
   trust_label: "Built by Michael Cutajar and the OpenAccountants team"
   review_status: "pending_review"
@@ -17,7 +17,7 @@ metadata:
 
 ## Scope and who this is for ([Corporate Tax Law, consolidated](https://mof.gov.ae/wp-content/uploads/2026/01/Federal-Decree-Law-No.-47-of-2022-and-its-amendments-en-v13.1.26.pdf); [FTA Decision No. 3 of 2024](https://tax.gov.ae/Datafolder/Files/Legislation/RE%20FTA%20Decision%20No.%203%20of%202024%20on%20Registration%20Timeline%20for%20Corporate%20Tax%20%20-%20For%20publishing.pdf))
 
-This Guide is the entry point for someone setting up a business in the United Arab Emirates who wants to know what the choice of vehicle means for tax, and which tax registrations to make, by when. It covers tax periods and registrations in 2026, with a short section on returns being filed now for 2025.
+This skill is the entry point for someone setting up a business in the United Arab Emirates who wants to know what the choice of vehicle means for tax, and which tax registrations to make, by when. It covers tax periods and registrations in 2026, with a short section on returns being filed now for 2025.
 
 It covers:
 
@@ -31,7 +31,7 @@ It covers:
 
 It does **not** cover licensing. The trade licence, legal form, share capital, office lease, visas and fees are set by the Emirate's economic department or the free zone authority, not by the Federal Tax Authority (FTA). Each of those points is marked **check** below and carries no figure: confirm them with the licensing authority before advising.
 
-Once the company exists, use the companion Guides for the detail:
+Once the company exists, use the companion skills for the detail:
 
 - **ae-corporate-tax**: rates, deductions, losses, transfer pricing, QFZP income tests, returns and penalties.
 - **uae-vat** and **ae-vat-return**: VAT rules, invoicing, e-invoicing and the VAT201 return.
@@ -54,14 +54,14 @@ Once the company exists, use the companion Guides for the detail:
 ## The method, step by step
 
 1. **Choose the vehicle with tax in mind** (the table in "Mainland or free zone" below). A company, whether mainland or free zone, is a Resident Person for Corporate Tax from incorporation. A natural person trading in their own name is taxable only once business turnover exceeds AED 1,000,000 in a calendar year ([Cabinet Decision No. 49 of 2023](https://tax.gov.ae/DataFolder/Files/Legislation/05-06-2023/3/Cabinet%20Decision%20No.%2049%20of%202023%20-%20for%20publishing.pdf)).
-2. **Get the licence and incorporate** with the Emirate authority or free zone authority. **Check** the legal form, capital, lease and fees with that authority; this Guide gives no figures for them.
+2. **Get the licence and incorporate** with the Emirate authority or free zone authority. **Check** the legal form, capital, lease and fees with that authority; this skill gives no figures for them.
 3. **Fix the financial year.** For Corporate Tax the financial year is the Gregorian calendar year, or the 12-month period for which the company prepares financial statements ([Corporate Tax Law, Article 57](https://mof.gov.ae/wp-content/uploads/2026/01/Federal-Decree-Law-No.-47-of-2022-and-its-amendments-en-v13.1.26.pdf)). A change needs an FTA application (Article 58). How long a first period may run is set by FTA practice: **check** on EmaraTax before choosing a long or short first year.
 4. **Register for Corporate Tax on EmaraTax within 3 months of incorporation**, and obtain a Corporate Tax TRN. This applies to every UAE company incorporated on or after 1 March 2024, **including a free zone company** and a company that expects to claim Small Business Relief ([FTA Decision No. 3 of 2024, Article 3](https://tax.gov.ae/Datafolder/Files/Legislation/RE%20FTA%20Decision%20No.%203%20of%202024%20on%20Registration%20Timeline%20for%20Corporate%20Tax%20%20-%20For%20publishing.pdf)).
 5. **Test VAT registration from day one**, month by month: mandatory when taxable supplies in the previous 12 months **exceeded** AED 375,000, or are expected to exceed it in the next 30 days; voluntary when supplies or taxable expenses exceeded AED 187,500 ([VAT Executive Regulation, Articles 7 and 8](https://tax.gov.ae/Datafolder/Files/Legislation/2026/Law-No-8-of-2017-and-its-amendments--09-2026.pdf)). VAT registration is a separate application; it does not register the company for Corporate Tax, and the reverse is also true.
 6. **For a free zone company, build the QFZP file before the first period starts:** substance in the free zone, a record of which income will be Qualifying Income, transfer pricing documentation, and an auditor ([Corporate Tax Law, Article 18](https://mof.gov.ae/wp-content/uploads/2026/01/Federal-Decree-Law-No.-47-of-2022-and-its-amendments-en-v13.1.26.pdf); [Ministerial Decision No. 84 of 2025](https://tax.gov.ae/Datafolder/Files/Pdf/2025/MD-No-84-of-2025.pdf)).
 7. **For a small mainland company, diarise the Small Business Relief election.** It is made in the return for each period, is not automatic, and is not available to a QFZP or to a member of a multinational group ([Ministerial Decision No. 73 of 2023, Article 3](https://tax.gov.ae/Datafolder/Files/Legislation/Corporate%20Tax/Ministerial%20Decision%20No.%2073%20of%202023%20-%20for%20publishing.pdf)).
 8. **Set up the books** so that standalone financial statements can be prepared under the accounting standards accepted in the UAE, and keep records for 7 years after the end of each tax period ([Corporate Tax Law, Articles 20 and 56](https://mof.gov.ae/wp-content/uploads/2026/01/Federal-Decree-Law-No.-47-of-2022-and-its-amendments-en-v13.1.26.pdf)).
-9. **Deal with UBO and other licensing-side filings** with the licensing authority (**check**; outside this Guide). ESR notifications and reports are no longer required for financial years ending after 31 December 2022 ([Ministry of Finance announcement](https://mof.gov.ae/en/news/ministry-of-finance-announces-amendment-to-cabinet-decision-on-economic-substance-requirements/)).
+9. **Deal with UBO and other licensing-side filings** with the licensing authority (**check**; outside this skill). ESR notifications and reports are no longer required for financial years ending after 31 December 2022 ([Ministry of Finance announcement](https://mof.gov.ae/en/news/ministry-of-finance-announces-amendment-to-cabinet-decision-on-economic-substance-requirements/)).
 10. **Keep the tax record current.** A registrant quotes its TRN in all dealings with the FTA and others, and tells the FTA of any change to its registered details within 20 Business Days ([Tax Procedures Law, Article 6](https://tax.gov.ae/Datafolder/Files/Legislation/2025/Federal%20Decree-Law%20No.%2028%20of%202022%20-%20publishing%2003%2012%202025.pdf)).
 11. **Diarise the first returns:** Corporate Tax return and payment 9 months after the end of the first tax period; VAT returns for the tax periods the FTA assigns.
 
@@ -158,8 +158,8 @@ A QFZP that distributes goods in or from a Designated Zone also needs an agreed-
 
 - **Economic Substance Regulations (ESR):** the Ministry of Finance announced the cancellation of economic substance reporting requirements "for financial years ending after 31 December 2022", following Cabinet Decision No. 98 of 2024. A company formed now therefore has no ESR notification or report to file. ESR filings for financial years ending on or before 31 December 2022 (and any penalties for them) are a legacy matter: refer.
 - **Substance still matters for tax.** For a free zone company, adequate substance is a QFZP condition (above), and a foreign company run from the UAE can become UAE resident through effective management and control.
-- **UBO (Ultimate Beneficial Owner) register:** UBO filings are made with the licensing authority, not the FTA, under rules this Guide's official sources do not cover. Mark as **check**: confirm the form, timing and update rules with the Emirate or free zone registrar.
-- **Anti-money-laundering registration** for regulated professions and dealers is also outside this Guide (**check** with the relevant supervisor).
+- **UBO (Ultimate Beneficial Owner) register:** UBO filings are made with the licensing authority, not the FTA, under rules this skill's official sources do not cover. Mark as **check**: confirm the form, timing and update rules with the Emirate or free zone registrar.
+- **Anti-money-laundering registration** for regulated professions and dealers is also outside this skill (**check** with the relevant supervisor).
 
 ## Boundaries and exceptions ([FTA Decision No. 3 of 2024](https://tax.gov.ae/Datafolder/Files/Legislation/RE%20FTA%20Decision%20No.%203%20of%202024%20on%20Registration%20Timeline%20for%20Corporate%20Tax%20%20-%20For%20publishing.pdf); [Cabinet Decision No. 49 of 2023](https://tax.gov.ae/DataFolder/Files/Legislation/05-06-2023/3/Cabinet%20Decision%20No.%2049%20of%202023%20-%20for%20publishing.pdf); [VAT Executive Regulation, Article 7](https://tax.gov.ae/Datafolder/Files/Legislation/2026/Law-No-8-of-2017-and-its-amendments--09-2026.pdf))
 
@@ -175,7 +175,7 @@ A QFZP that distributes goods in or from a Designated Zone also needs an agreed-
 | Owner holds two licences or runs several businesses through one company | One Taxable Person, one AED 375,000 band | The band applies per Taxable Person |
 | Foreign company with a UAE branch in a free zone | The branch is a Free Zone Person; the foreign parent is treated as having a foreign permanent establishment | FTA Free Zone Persons bulletin |
 | Free zone company fails the de minimis test in its second year | Standard rates from the start of that year and the next 4 years | Ministerial Decision No. 229 of 2025 |
-| Licence renewal, capital, lease, visa or fee questions | **Check** with the licensing authority | Outside the FTA's rules and this Guide |
+| Licence renewal, capital, lease, visa or fee questions | **Check** with the licensing authority | Outside the FTA's rules and this skill |
 
 ## Worked cases ([FTA Decision No. 3 of 2024](https://tax.gov.ae/Datafolder/Files/Legislation/RE%20FTA%20Decision%20No.%203%20of%202024%20on%20Registration%20Timeline%20for%20Corporate%20Tax%20%20-%20For%20publishing.pdf); [Cabinet Decision No. 116 of 2022](https://tax.gov.ae/Datafolder/Files/Legislation/Corporate%20Tax/Cabinet%20Decision%20No.%20116%20of%202022%20-%20for%20publishing.pdf); [Ministerial Decision No. 229 of 2025](https://tax.gov.ae/Datafolder/Files/Pdf/2025/MD-No-229.pdf))
 
@@ -219,8 +219,8 @@ A QFZP that distributes goods in or from a Designated Zone also needs an agreed-
 - **Branches** of UAE companies in free zones, and mixed mainland and free zone operations.
 - **Restructurings**: transferring an existing business into a new company, business restructuring relief, or moving from sole establishment to company.
 - **Legacy ESR** filings or penalties for financial years ending on or before 31 December 2022.
-- **Licensing, capital, UBO, visa, labour and AML questions**: outside this Guide; send the client to the licensing authority or the relevant regulator.
-- **Excise tax** (tobacco, energy and sweetened drinks and similar goods): outside this Guide.
+- **Licensing, capital, UBO, visa, labour and AML questions**: outside this skill; send the client to the licensing authority or the relevant regulator.
+- **Excise tax** (tobacco, energy and sweetened drinks and similar goods): outside this skill.
 - **Refuse** to recommend a structure that splits one business across several licences or entities to multiply the AED 375,000 band or stay under the Small Business Relief threshold. The FTA can treat artificial separation as an avoidance arrangement ([Cabinet Decision No. 116 of 2022](https://tax.gov.ae/Datafolder/Files/Legislation/Corporate%20Tax/Cabinet%20Decision%20No.%20116%20of%202022%20-%20for%20publishing.pdf); [Ministerial Decision No. 73 of 2023](https://tax.gov.ae/Datafolder/Files/Legislation/Corporate%20Tax/Ministerial%20Decision%20No.%2073%20of%202023%20-%20for%20publishing.pdf)).
 
 ## Filing and payment
@@ -295,4 +295,4 @@ version (and the professional behind it) is at
 
 ## Today's figures and who stands behind this skill
 
-This file is an AI skill (tax rules your AI follows) from OpenAccountants, copied on 2026-09-27. Rates, thresholds and deadlines change. For the current version of this skill, its official sources and the named accountant (if any) who stands behind it, call `get_skill` with slug `ae-company-formation` on the OpenAccountants connector (https://www.openaccountants.com/connect), or read https://www.openaccountants.com/skills/ae-company-formation. If neither is available, confirm every figure against the official source pages cited above before relying on it.
+This file is an AI skill (tax rules your AI follows) from OpenAccountants, copied on 2026-10-16. Rates, thresholds and deadlines change. For the current version of this skill, its official sources and the named accountant (if any) who stands behind it, call `get_skill` with slug `ae-company-formation` on the OpenAccountants connector (https://www.openaccountants.com/connect), or read https://www.openaccountants.com/skills/ae-company-formation. If neither is available, confirm every figure against the official source pages cited above before relying on it.
