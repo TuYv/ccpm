@@ -1,7 +1,7 @@
 {
   "id": "mohitagw15856-pm-claude-skills-context-bankruptcy",
   "name": "context-bankruptcy",
-  "description": "Summarise what Context Bankruptcy does in one line. Use when asked to [trigger phrases the user would say]. Produces [the concrete artifact].",
+  "description": "Declare bankruptcy on a long-lived AI agent's accumulated memory — audit what it currently believes, separate ground truth from stale and wrong, purge deliberately, restate the truths that survive, and log what was lost. Use when an agent keeps acting on outdated facts, contradicts itself across sessions, 'remembers' things wrong, or after a reorg/pivot makes its worldview obsolete. Produces a belief audit, a keep/correct/purge ledger, a restated ground-truth file, and the bankruptcy record.",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/mohitagw15856/pm-claude-skills/blob/main/plugins/pm-2027/skills/context-bankruptcy/SKILL.md",
     "path": "plugins/pm-2027/skills/context-bankruptcy/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-18T17:37:00.381Z",
-    "stars": 1468,
+    "discovered_at": "2026-10-18T20:53:08.273Z",
+    "stars": 1469,
     "language": "HTML",
-    "pushed_at": "2026-10-18T14:42:36Z",
+    "pushed_at": "2026-10-18T19:36:50Z",
     "license": "MIT"
   }
 }
