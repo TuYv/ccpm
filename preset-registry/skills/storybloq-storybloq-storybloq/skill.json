@@ -1,0 +1,25 @@
+{
+  "id": "storybloq-storybloq-storybloq",
+  "name": "storybloq",
+  "description": "Open the current local project's Storybloq board, read its context and handovers, or offer local project setup.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Storybloq",
+  "install_path": ".claude/skills/storybloq/SKILL.md",
+  "source": {
+    "repo": "Storybloq/storybloq",
+    "url": "https://github.com/Storybloq/storybloq/blob/main/skills/storybloq/SKILL.md",
+    "path": "skills/storybloq/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-18T05:33:12.363Z",
+    "stars": 773,
+    "language": "TypeScript",
+    "pushed_at": "2026-10-18T05:24:49Z",
+    "license": null
+  }
+}
