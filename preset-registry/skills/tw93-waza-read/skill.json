@@ -1,7 +1,7 @@
 {
   "id": "tw93-waza-read",
   "name": "read",
-  "description": "Fetches URLs and PDFs, then summarizes or returns clean Markdown. Use when asked to read, fetch, quote, cite, convert, or save a URL or PDF. Not for local text files already in the repo.",
+  "description": "Fetches URLs and PDFs, then summarizes or returns clean Markdown; can also search the web through DeepSeek when built-in search is thin. Use when asked to read, fetch, quote, cite, convert, or save a URL or PDF. Not for local text files already in the repo.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/tw93/Waza/blob/main/skills/read/SKILL.md",
     "path": "skills/read/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-18T05:28:07.128Z",
-    "stars": 7317,
+    "discovered_at": "2026-10-18T10:34:35.419Z",
+    "stars": 7319,
     "language": "Python",
-    "pushed_at": "2026-10-15T12:55:00Z",
+    "pushed_at": "2026-10-18T08:14:09Z",
     "license": "MIT"
   }
 }

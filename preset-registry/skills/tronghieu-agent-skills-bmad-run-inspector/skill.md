@@ -14,7 +14,7 @@ allowed-tools: Read Glob Grep Bash(python3 *) Bash(bmad-loop *) Bash(git *) Bash
 
 # BMAD Run Inspector
 
-Verified against [bmad-loop 0.11.1](https://github.com/bmad-code-org/bmad-loop/releases/tag/v0.11.1).
+Verified against [bmad-loop 0.13.2](https://github.com/bmad-code-org/bmad-loop/releases/tag/v0.13.2).
 The bundled scripts run on Python 3.9+. `bmad-loop` itself needs 3.11+, but it often lives in
 an isolated environment while the host's `python3` is still stock macOS 3.9.
 
@@ -89,7 +89,7 @@ about the adapter. Report it. Do not quietly override either one.
 ## Check the CLI before reading the disk
 
 `bmad-loop` answers some questions faster and more reliably than parsing artifacts. `list`,
-`status`, `diagnose`, `validate`, `adapters` and bare `mux` are safe on a live run. Try them
+`status`, `diagnose`, plain `validate`, `adapters` and bare `mux` are safe on a live run. Try them
 first.
 
 | Command | What it gives you |
@@ -104,6 +104,9 @@ first.
 - `confirm` and `decisions` act on their target unless called with `--list`.
 - `attach` joins a live session. Any keystroke sent to it acts.
 - `probe-adapter --probe` launches a real CLI turn.
+- `validate --probes` runs the project's `[environment] probes` shell. `validate --render-probe` runs
+  each dev skill's render command and needs network.
+- `resolve` (any flag) and `resume` change the run. `resolve --reverify` re-runs verify and commits.
 - `run`, `sweep`, `clean` and `cleanup` act unless given `--dry-run`.
 - `tui` is not confirmed inert in every view. Treat it as not scriptable.
 
@@ -245,12 +248,14 @@ Anomalies fall into three tiers. `references/anomaly-triage.md` has the full tab
 key behind each threshold, and the remedy.
 
 - **Tier 1, needs a human now.** `crashed` or `crash_error` set. `paused_reason` or
-  `paused_stage` set. Engine pid dead while the run is unfinished. A new or unresolved
+  `paused_stage` set. A `parked:` reason means a CLI prompt is waiting on a human. It is not a
+  hang. Engine pid dead while the run is unfinished. A new or unresolved
   `ATTENTION` notice. The run concluding. An ATTENTION file's existence alone is not enough,
   because the file is append-only. An escalation needs the extra step above before you explain
   the pause.
 - **Tier 2, about to fail.** `attempt` at the policy max. `review_cycle` not converging.
-  `stall_armed` set or nudges sent. Stale heartbeat. Session budget nearly gone while still in
+  `stall_armed` set on a live session while `transcript_idle_s` is also high, or nudges sent.
+  Stale heartbeat. Session budget nearly gone while still in
   dev.
 - **Tier 3, silent rot.** The ones nothing else catches. Log growing while the progress counter
   is frozen. Identical tool calls repeating across checks. Deferred-work ledger swelling while
