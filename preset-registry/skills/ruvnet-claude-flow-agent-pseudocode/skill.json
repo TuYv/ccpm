@@ -2,7 +2,7 @@
   "id": "ruvnet-claude-flow-agent-pseudocode",
   "name": "agent-pseudocode",
   "description": "Agent skill for pseudocode - invoke with $agent-pseudocode",
-  "category": "测试调试",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/ruvnet/claude-flow/blob/main/.agents/skills/agent-pseudocode/SKILL.md",
     "path": ".agents/skills/agent-pseudocode/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-17T22:28:09.471Z",
-    "stars": 76023,
+    "discovered_at": "2026-10-18T00:30:58.304Z",
+    "stars": 76061,
     "language": "TypeScript",
-    "pushed_at": "2026-10-17T22:17:11Z",
+    "pushed_at": "2026-10-18T00:29:11Z",
     "license": "MIT"
   },
   "summary_zh": "这是一个专写伪代码的智能体技能，能帮你把模糊的算法思路快速转成结构化伪代码，适合算法设计和逻辑梳理时使用。"

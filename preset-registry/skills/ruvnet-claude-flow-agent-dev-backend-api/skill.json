@@ -2,7 +2,7 @@
   "id": "ruvnet-claude-flow-agent-dev-backend-api",
   "name": "agent-dev-backend-api",
   "description": "Agent skill for dev-backend-api - invoke with $agent-dev-backend-api",
-  "category": "测试调试",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/ruvnet/claude-flow/blob/main/.agents/skills/agent-dev-backend-api/SKILL.md",
     "path": ".agents/skills/agent-dev-backend-api/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-17T22:28:03.837Z",
-    "stars": 76023,
+    "discovered_at": "2026-10-18T00:30:49.971Z",
+    "stars": 76061,
     "language": "TypeScript",
-    "pushed_at": "2026-10-17T22:17:11Z",
+    "pushed_at": "2026-10-18T00:29:11Z",
     "license": "MIT"
   },
   "summary_zh": "这是一个让AI智能体能调用后端接口的技能插件，适合在AI编程或自动化开发场景下，通过指令直接让智能体帮你操作后端服务。"

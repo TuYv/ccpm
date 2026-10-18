@@ -2,7 +2,7 @@
   "id": "ruvnet-claude-flow-agent-quorum-manager",
   "name": "agent-quorum-manager",
   "description": "Agent skill for quorum-manager - invoke with $agent-quorum-manager",
-  "category": "测试调试",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/ruvnet/claude-flow/blob/main/.agents/skills/agent-quorum-manager/SKILL.md",
     "path": ".agents/skills/agent-quorum-manager/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-17T22:28:09.900Z",
-    "stars": 76023,
+    "discovered_at": "2026-10-18T00:30:59.011Z",
+    "stars": 76061,
     "language": "TypeScript",
-    "pushed_at": "2026-10-17T22:17:11Z",
+    "pushed_at": "2026-10-18T00:29:11Z",
     "license": "MIT"
   },
   "summary_zh": "这是一个用于调用共识管理器的智能体技能，适合在分布式系统或多节点协作中需要快速达成投票与共识决策的场景。"

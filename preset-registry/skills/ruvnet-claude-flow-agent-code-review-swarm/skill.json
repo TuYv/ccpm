@@ -2,7 +2,7 @@
   "id": "ruvnet-claude-flow-agent-code-review-swarm",
   "name": "agent-code-review-swarm",
   "description": "Agent skill for code-review-swarm - invoke with $agent-code-review-swarm",
-  "category": "测试调试",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/ruvnet/claude-flow/blob/main/.agents/skills/agent-code-review-swarm/SKILL.md",
     "path": ".agents/skills/agent-code-review-swarm/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-17T22:28:02.253Z",
-    "stars": 76023,
+    "discovered_at": "2026-10-18T00:30:47.633Z",
+    "stars": 76061,
     "language": "TypeScript",
-    "pushed_at": "2026-10-17T22:17:11Z",
+    "pushed_at": "2026-10-18T00:29:11Z",
     "license": "MIT"
   },
   "summary_zh": "这是一个多智能体代码审查系统的技能插件，适合在团队协作开发时直接调用，让AI自动帮你完成代码审查。"

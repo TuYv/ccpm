@@ -2,7 +2,7 @@
   "id": "ruvnet-claude-flow-agent-coordination",
   "name": "agent-coordination",
   "description": "> Agent spawning, lifecycle management, and coordination patterns. Manages 60+ agent types with specialized capabilities. Use when: spawning agents, coordinating multi-agent tasks, managing agent pools. Skip when: single-agent work, no coordination needed.",
-  "category": "测试调试",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/ruvnet/claude-flow/blob/main/.agents/skills/agent-coordination/SKILL.md",
     "path": ".agents/skills/agent-coordination/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-17T22:28:03.046Z",
-    "stars": 76023,
+    "discovered_at": "2026-10-18T00:30:48.862Z",
+    "stars": 76061,
     "language": "TypeScript",
-    "pushed_at": "2026-10-17T22:17:11Z",
+    "pushed_at": "2026-10-18T00:29:11Z",
     "license": "MIT"
   },
   "summary_zh": "这是个多智能体管理调度工具，负责智能体的创建、生命周期与协作。适合需要批量管理智能体池、让它们协同完成复杂任务的场景，单打独斗的活儿用不上。"

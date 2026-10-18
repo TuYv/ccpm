@@ -2,7 +2,7 @@
   "id": "ruvnet-claude-flow-agent-planner",
   "name": "agent-planner",
   "description": "Agent skill for planner - invoke with $agent-planner",
-  "category": "测试调试",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/ruvnet/claude-flow/blob/main/.agents/skills/agent-planner/SKILL.md",
     "path": ".agents/skills/agent-planner/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-17T22:28:08.649Z",
-    "stars": 76023,
+    "discovered_at": "2026-10-18T00:30:57.152Z",
+    "stars": 76061,
     "language": "TypeScript",
-    "pushed_at": "2026-10-17T22:17:11Z",
+    "pushed_at": "2026-10-18T00:29:11Z",
     "license": "MIT"
   },
   "summary_zh": "这是一个专给AI智能体用的任务规划插件，能帮智能体把复杂任务拆解成具体步骤，特别适合需要多步推理或搭建自动化工作流的场景。"

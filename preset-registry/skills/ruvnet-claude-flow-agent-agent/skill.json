@@ -2,7 +2,7 @@
   "id": "ruvnet-claude-flow-agent-agent",
   "name": "agent-agent",
   "description": "Agent skill for agent - invoke with $agent-agent",
-  "category": "测试调试",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/ruvnet/claude-flow/blob/main/.agents/skills/agent-agent/SKILL.md",
     "path": ".agents/skills/agent-agent/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-17T22:27:59.102Z",
-    "stars": 76023,
+    "discovered_at": "2026-10-18T00:30:43.537Z",
+    "stars": 76061,
     "language": "TypeScript",
-    "pushed_at": "2026-10-17T22:17:11Z",
+    "pushed_at": "2026-10-18T00:29:11Z",
     "license": "MIT"
   },
   "summary_zh": "这是一个让AI智能体互相调用的技能插件，能打破单个智能体的能力局限，适合需要多智能体分工协作或任务委派的场景。"

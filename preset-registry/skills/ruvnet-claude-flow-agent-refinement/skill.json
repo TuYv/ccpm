@@ -2,7 +2,7 @@
   "id": "ruvnet-claude-flow-agent-refinement",
   "name": "agent-refinement",
   "description": "Agent skill for refinement - invoke with $agent-refinement",
-  "category": "测试调试",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/ruvnet/claude-flow/blob/main/.agents/skills/agent-refinement/SKILL.md",
     "path": ".agents/skills/agent-refinement/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-17T22:28:10.311Z",
-    "stars": 76023,
+    "discovered_at": "2026-10-18T00:30:59.630Z",
+    "stars": 76061,
     "language": "TypeScript",
-    "pushed_at": "2026-10-17T22:17:11Z",
+    "pushed_at": "2026-10-18T00:29:11Z",
     "license": "MIT"
   },
   "summary_zh": "这是一个用于打磨和优化内容的智能体技能，能解决生成结果粗糙的问题，适合需要对文本或代码进行反复润色与迭代改进的场景。"

@@ -2,7 +2,7 @@
   "id": "ruvnet-claude-flow-agent-issue-tracker",
   "name": "agent-issue-tracker",
   "description": "Agent skill for issue-tracker - invoke with $agent-issue-tracker",
-  "category": "测试调试",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/ruvnet/claude-flow/blob/main/.agents/skills/agent-issue-tracker/SKILL.md",
     "path": ".agents/skills/agent-issue-tracker/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-17T22:28:05.424Z",
-    "stars": 76023,
+    "discovered_at": "2026-10-18T00:30:52.462Z",
+    "stars": 76061,
     "language": "TypeScript",
-    "pushed_at": "2026-10-17T22:17:11Z",
+    "pushed_at": "2026-10-18T00:29:11Z",
     "license": "MIT"
   },
   "summary_zh": "这是一个让智能体对接问题追踪系统的技能插件，适合需要在对话或自动化工作流中直接管理工单的场景。"

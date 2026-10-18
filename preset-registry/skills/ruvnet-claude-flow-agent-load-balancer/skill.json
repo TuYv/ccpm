@@ -2,7 +2,7 @@
   "id": "ruvnet-claude-flow-agent-load-balancer",
   "name": "agent-load-balancer",
   "description": "Agent skill for load-balancer - invoke with $agent-load-balancer",
-  "category": "测试调试",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/ruvnet/claude-flow/blob/main/.agents/skills/agent-load-balancer/SKILL.md",
     "path": ".agents/skills/agent-load-balancer/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-17T22:28:05.604Z",
-    "stars": 76023,
+    "discovered_at": "2026-10-18T00:30:52.724Z",
+    "stars": 76061,
     "language": "TypeScript",
-    "pushed_at": "2026-10-17T22:17:11Z",
+    "pushed_at": "2026-10-18T00:29:11Z",
     "license": "MIT"
   },
   "summary_zh": "这是一个专为智能体设计的负载均衡插件，能帮AI自动将请求分发到多个节点以避免过载，适合需要智能调度任务和分配流量的场景。"

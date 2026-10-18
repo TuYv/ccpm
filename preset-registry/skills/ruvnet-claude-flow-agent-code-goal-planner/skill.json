@@ -2,7 +2,7 @@
   "id": "ruvnet-claude-flow-agent-code-goal-planner",
   "name": "agent-code-goal-planner",
   "description": "Agent skill for code-goal-planner - invoke with $agent-code-goal-planner",
-  "category": "测试调试",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/ruvnet/claude-flow/blob/main/.agents/skills/agent-code-goal-planner/SKILL.md",
     "path": ".agents/skills/agent-code-goal-planner/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-17T22:28:02.050Z",
-    "stars": 76023,
+    "discovered_at": "2026-10-18T00:30:47.342Z",
+    "stars": 76061,
     "language": "TypeScript",
-    "pushed_at": "2026-10-17T22:17:11Z",
+    "pushed_at": "2026-10-18T00:29:11Z",
     "license": "MIT"
   },
   "summary_zh": "这是一个专供AI代理调用的规划插件，能把复杂的编程目标拆解成清晰的执行步骤，解决AI写代码时缺乏条理或容易跑偏的问题。"

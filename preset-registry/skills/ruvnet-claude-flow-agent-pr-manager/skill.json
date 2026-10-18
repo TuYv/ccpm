@@ -2,7 +2,7 @@
   "id": "ruvnet-claude-flow-agent-pr-manager",
   "name": "agent-pr-manager",
   "description": "Agent skill for pr-manager - invoke with $agent-pr-manager",
-  "category": "测试调试",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/ruvnet/claude-flow/blob/main/.agents/skills/agent-pr-manager/SKILL.md",
     "path": ".agents/skills/agent-pr-manager/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-17T22:28:08.860Z",
-    "stars": 76023,
+    "discovered_at": "2026-10-18T00:30:57.442Z",
+    "stars": 76061,
     "language": "TypeScript",
-    "pushed_at": "2026-10-17T22:17:11Z",
+    "pushed_at": "2026-10-18T00:29:11Z",
     "license": "MIT"
   },
   "summary_zh": "这是一个管理代码合并请求的智能体技能，适合开发者接入AI工作流来自动处理PR，提升代码审查与合并效率。"

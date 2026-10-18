@@ -2,7 +2,7 @@
   "id": "ruvnet-claude-flow-agent-queen-coordinator",
   "name": "agent-queen-coordinator",
   "description": "Agent skill for queen-coordinator - invoke with $agent-queen-coordinator",
-  "category": "测试调试",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/ruvnet/claude-flow/blob/main/.agents/skills/agent-queen-coordinator/SKILL.md",
     "path": ".agents/skills/agent-queen-coordinator/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-17T22:28:09.657Z",
-    "stars": 76023,
+    "discovered_at": "2026-10-18T00:30:58.584Z",
+    "stars": 76061,
     "language": "TypeScript",
-    "pushed_at": "2026-10-17T22:17:11Z",
+    "pushed_at": "2026-10-18T00:29:11Z",
     "license": "MIT"
   },
   "summary_zh": "这是一个AI代理调度插件，能让主代理统筹协调其他子代理，适合需要多个AI助手分工协作的复杂任务场景。"

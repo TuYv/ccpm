@@ -2,7 +2,7 @@
   "id": "ruvnet-claude-flow-agent-github-modes",
   "name": "agent-github-modes",
   "description": "Agent skill for github-modes - invoke with $agent-github-modes",
-  "category": "测试调试",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/ruvnet/claude-flow/blob/main/.agents/skills/agent-github-modes/SKILL.md",
     "path": ".agents/skills/agent-github-modes/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-17T22:28:04.208Z",
-    "stars": 76023,
+    "discovered_at": "2026-10-18T00:30:50.581Z",
+    "stars": 76061,
     "language": "TypeScript",
-    "pushed_at": "2026-10-17T22:17:11Z",
+    "pushed_at": "2026-10-18T00:29:11Z",
     "license": "MIT"
   },
   "summary_zh": "这是一个为 github-modes 提供支持的代理技能，能让你通过命令直接调用相关功能，适合需要自动化处理或快捷操作 GitHub 的开发场景。"

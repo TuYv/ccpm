@@ -36,11 +36,11 @@ The scan can't see everything, so check these by hand:
 
 ## 1b. Can this machine run it?
 Skip this when the game is native to the host: a Windows game on Windows or from WSL, a macOS or Linux build
-on its own OS (`um scan` prints the `host:` and each exe's CPU). Otherwise (a Windows-only game on macOS or
-Linux, an x64 game on an ARM CPU), or when a game that should run here won't start, search the notes by
-situation and exact error text first (`um kb search "windows game on mac"`, `um kb search "proton"`,
-`um kb search "<error text>"`), then follow `references/compatibility.md`: host checks, per-game reports,
-the layers, anti-cheat, probes.
+on its own OS (`um scan` prints the `host:` and each exe's CPU, and warns when a Windows build meets another
+OS). Otherwise (a Windows-only game on macOS or Linux, an x64 game on an ARM CPU), or when a game that should
+run here won't start, search the notes by situation and exact error text first
+(`um kb search "windows game on mac"`, `um kb search "proton"`, `um kb search "<error text>"`), then follow
+`references/compatibility.md`: host checks, per-game reports, the layers, anti-cheat, probes.
 
 ## 2. Research the living community (always; versions move)
 Search, in order:

@@ -2,7 +2,7 @@
   "id": "ruvnet-claude-flow-agent-performance-benchmarker",
   "name": "agent-performance-benchmarker",
   "description": "Agent skill for performance-benchmarker - invoke with $agent-performance-benchmarker",
-  "category": "测试调试",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/ruvnet/claude-flow/blob/main/.agents/skills/agent-performance-benchmarker/SKILL.md",
     "path": ".agents/skills/agent-performance-benchmarker/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-17T22:28:08.058Z",
-    "stars": 76023,
+    "discovered_at": "2026-10-18T00:30:56.287Z",
+    "stars": 76061,
     "language": "TypeScript",
-    "pushed_at": "2026-10-17T22:17:11Z",
+    "pushed_at": "2026-10-18T00:29:11Z",
     "license": "MIT"
   },
   "summary_zh": "这是一个让智能体自动执行性能基准测试的技能，能帮你省去手动压测和跑分的麻烦，适合需要自动化评估系统性能的场景。"
