@@ -1,7 +1,7 @@
 {
   "id": "donchitos-claude-code-game-studios-story-done",
   "name": "story-done",
-  "description": "End-of-story completion review — verifies each acceptance criterion, checks GDD/ADR deviations, prompts code review, updates status.",
+  "description": "Closes a finished story: verifies each acceptance criterion, checks for design or ADR deviations and updates its status. Use when the user says a story is done, finished or ready to close.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/Donchitos/Claude-Code-Game-Studios/blob/main/.claude/skills/story-done/SKILL.md",
     "path": ".claude/skills/story-done/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-19T02:13:26.950Z",
-    "stars": 26827,
+    "discovered_at": "2026-10-19T07:11:10.509Z",
+    "stars": 26844,
     "language": "Shell",
-    "pushed_at": "2026-10-08T08:21:47Z",
+    "pushed_at": "2026-10-19T02:43:42Z",
     "license": "MIT"
   }
 }

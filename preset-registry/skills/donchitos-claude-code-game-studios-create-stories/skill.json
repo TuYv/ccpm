@@ -1,7 +1,7 @@
 {
   "id": "donchitos-claude-code-game-studios-create-stories",
   "name": "create-stories",
-  "description": "Break one epic into implementable stories embedding TR-ID, ADR guidance, acceptance criteria. Reads the control manifest. After /create-epics.",
+  "description": "Breaks one epic into implementable stories with acceptance criteria. Use when the user wants stories for an epic or the next batch of work to build. Not for turning the whole design into epics.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/Donchitos/Claude-Code-Game-Studios/blob/main/.claude/skills/create-stories/SKILL.md",
     "path": ".claude/skills/create-stories/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-19T02:13:21.447Z",
-    "stars": 26827,
+    "discovered_at": "2026-10-19T07:11:04.419Z",
+    "stars": 26844,
     "language": "Shell",
-    "pushed_at": "2026-10-08T08:21:47Z",
+    "pushed_at": "2026-10-19T02:43:42Z",
     "license": "MIT"
   }
 }

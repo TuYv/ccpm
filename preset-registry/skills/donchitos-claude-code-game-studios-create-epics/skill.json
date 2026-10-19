@@ -1,7 +1,7 @@
 {
   "id": "donchitos-claude-code-game-studios-create-epics",
   "name": "create-epics",
-  "description": "Turn GDDs plus architecture into epics — one per architectural module, with untraced requirements. Then /create-stories [epic-slug].",
+  "description": "Turns the GDDs and architecture into epics, one per architectural module. Use when the user wants to break the game into epics or plan the work before writing stories. Not for splitting one epic into stories.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/Donchitos/Claude-Code-Game-Studios/blob/main/.claude/skills/create-epics/SKILL.md",
     "path": ".claude/skills/create-epics/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-19T02:13:21.299Z",
-    "stars": 26827,
+    "discovered_at": "2026-10-19T07:11:04.262Z",
+    "stars": 26844,
     "language": "Shell",
-    "pushed_at": "2026-10-08T08:21:47Z",
+    "pushed_at": "2026-10-19T02:43:42Z",
     "license": "MIT"
   }
 }

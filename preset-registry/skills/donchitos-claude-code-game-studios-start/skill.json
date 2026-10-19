@@ -1,7 +1,7 @@
 {
   "id": "donchitos-claude-code-game-studios-start",
   "name": "start",
-  "description": "First-time onboarding — asks where you are, then guides you to the right workflow.",
+  "description": "Guides a first-time user through onboarding and picks the right workflow. Use when the user is new, just cloned or installed the studio, has no idea or engine yet, asks where to begin, or wants to bring in an existing game.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/Donchitos/Claude-Code-Game-Studios/blob/main/.claude/skills/start/SKILL.md",
     "path": ".claude/skills/start/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-19T02:13:26.824Z",
-    "stars": 26827,
+    "discovered_at": "2026-10-19T07:11:10.352Z",
+    "stars": 26844,
     "language": "Shell",
-    "pushed_at": "2026-10-08T08:21:47Z",
+    "pushed_at": "2026-10-19T02:43:42Z",
     "license": "MIT"
   }
 }

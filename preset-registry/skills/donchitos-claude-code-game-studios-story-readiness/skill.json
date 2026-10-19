@@ -1,7 +1,7 @@
 {
   "id": "donchitos-claude-code-game-studios-story-readiness",
   "name": "story-readiness",
-  "description": "Is a story implementation-ready? Checks clear acceptance criteria, open questions, ADR refs. READY/NEEDS WORK/BLOCKED/NOT ASSESSED.",
+  "description": "Checks whether a story is ready to implement: clear acceptance criteria, no open questions, valid ADR and dependencies. Use when the user asks if a story, or the sprint's stories, are ready to start or build.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/Donchitos/Claude-Code-Game-Studios/blob/main/.claude/skills/story-readiness/SKILL.md",
     "path": ".claude/skills/story-readiness/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-19T02:13:27.092Z",
-    "stars": 26827,
+    "discovered_at": "2026-10-19T07:11:10.654Z",
+    "stars": 26844,
     "language": "Shell",
-    "pushed_at": "2026-10-08T08:21:47Z",
+    "pushed_at": "2026-10-19T02:43:42Z",
     "license": "MIT"
   }
 }
