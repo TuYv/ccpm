@@ -1,0 +1,25 @@
+{
+  "id": "scarletkc-agents-devin-cli",
+  "name": "devin-cli",
+  "description": "Delegate bounded coding tasks to the local Devin CLI over ACP from a supervising agent such as Claude Code or Codex. Use when the user asks to hand work to Devin, when an independent implementation, port, review, or investigation can run in parallel with your own work, or when an earlier Devin session needs a follow-up. Includes a blocking run helper with single-use permission answers, a deny policy, progress summaries, and session resume.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "scarletkc",
+  "install_path": ".claude/skills/devin-cli/SKILL.md",
+  "source": {
+    "repo": "scarletkc/agents",
+    "url": "https://github.com/scarletkc/agents/blob/main/skills/devin-cli/SKILL.md",
+    "path": "skills/devin-cli/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-19T00:16:45.198Z",
+    "stars": 225,
+    "language": "Python",
+    "pushed_at": "2026-10-18T22:20:49Z",
+    "license": "Apache-2.0"
+  }
+}
