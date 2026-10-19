@@ -1,7 +1,7 @@
 {
   "id": "tradermonty-claude-trading-skills-market-top-detector",
   "name": "market-top-detector",
-  "description": "Detects market top probability using O'Neil Distribution Days, Minervini Leading Stock Deterioration, and Monty Defensive Sector Rotation. Generates a 0-100 composite score with risk zone classification. Use when user asks about market top risk, distribution days, defensive rotation, leadership breakdown, or whether to reduce equity exposure. Focuses on 2-8 week tactical timing signals for 10-20% corrections.",
+  "description": "Assesses heuristic market top risk using O'Neil Distribution Days, Minervini Leading Stock Deterioration, and Monty Defensive Sector Rotation. Generates a 0-100 composite score with risk zone classification. Use when user asks about market top risk, distribution days, defensive rotation, leadership breakdown, or whether to reduce equity exposure. Focuses on 2-8 week tactical timing signals for 10-20% corrections.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/tradermonty/claude-trading-skills/blob/main/skills/market-top-detector/SKILL.md",
     "path": "skills/market-top-detector/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-19T14:09:02.960Z",
-    "stars": 3053,
+    "discovered_at": "2026-10-19T20:21:36.017Z",
+    "stars": 3055,
     "language": "Python",
-    "pushed_at": "2026-10-19T09:02:21Z",
+    "pushed_at": "2026-10-19T18:10:30Z",
     "license": "MIT"
-  },
-  "summary_zh": "用于评估市场见顶风险的量化工具，综合抛售、领涨股走弱和防御板块轮动信号，辅助判断未来2至8周是否应降低股票仓位。"
+  }
 }

@@ -1,0 +1,25 @@
+{
+  "id": "google-skills-assuredworkloads-frameworks-navigator",
+  "name": "assuredworkloads-frameworks-navigator",
+  "description": ">- Acts as a Data Boundary Compliance Analyst that maps user compliance queries against Data Boundary Frameworks and cloud controls, validates matched resources, and recommends appropriate Frameworks or cloud controls. Use when mapping direct natural language workload requirements to Assured Workloads / Data Boundary Frameworks and cloud controls, browsing built-in Data Boundary frameworks, or identifying major requirement gaps. Don't use for non-Data-Boundary Compliance Manager posture assessme",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/assuredworkloads-frameworks-navigator/SKILL.md",
+  "source": {
+    "repo": "google/skills",
+    "url": "https://github.com/google/skills/blob/main/skills/cloud/assuredworkloads-frameworks-navigator/SKILL.md",
+    "path": "skills/cloud/assuredworkloads-frameworks-navigator/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-19T19:34:22.036Z",
+    "stars": 21422,
+    "language": "Python",
+    "pushed_at": "2026-10-19T18:44:23Z",
+    "license": "Apache-2.0"
+  }
+}

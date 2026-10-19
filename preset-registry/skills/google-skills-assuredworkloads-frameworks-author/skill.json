@@ -1,0 +1,25 @@
+{
+  "id": "google-skills-assuredworkloads-frameworks-author",
+  "name": "assuredworkloads-frameworks-author",
+  "description": ">- Authors custom cloud controls and customized frameworks for Assured Workloads when built-in resources cannot satisfy core requirements. Use when creating or synthesizing custom data boundary resources. Don't use for browsing or mapping existing built-in frameworks (use assuredworkloads-frameworks-navigator instead).",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/assuredworkloads-frameworks-author/SKILL.md",
+  "source": {
+    "repo": "google/skills",
+    "url": "https://github.com/google/skills/blob/main/skills/cloud/assuredworkloads-frameworks-author/SKILL.md",
+    "path": "skills/cloud/assuredworkloads-frameworks-author/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-19T19:34:21.863Z",
+    "stars": 21422,
+    "language": "Python",
+    "pushed_at": "2026-10-19T18:44:23Z",
+    "license": "Apache-2.0"
+  }
+}
