@@ -1,0 +1,25 @@
+{
+  "id": "trailofbits-skills-report-regressions",
+  "name": "report-regressions",
+  "description": "Use when assembling or refreshing an evidence-linked regression report from saved campaign decisions.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "trailofbits",
+  "install_path": ".claude/skills/report-regressions/SKILL.md",
+  "source": {
+    "repo": "trailofbits/skills",
+    "url": "https://github.com/trailofbits/skills/blob/main/plugins/regression-hunt/skills/report-regressions/SKILL.md",
+    "path": "plugins/regression-hunt/skills/report-regressions/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-20T22:30:34.576Z",
+    "stars": 7663,
+    "language": "Python",
+    "pushed_at": "2026-10-20T20:20:17Z",
+    "license": "CC-BY-SA-4.0"
+  }
+}

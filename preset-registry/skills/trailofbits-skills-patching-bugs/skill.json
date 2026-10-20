@@ -1,0 +1,25 @@
+{
+  "id": "trailofbits-skills-patching-bugs",
+  "name": "patching-bugs",
+  "description": "Use when a known bug or falsifiable bug hypothesis in a local codebase needs a patch commit and reviewable proof report.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "trailofbits",
+  "install_path": ".claude/skills/patching-bugs/SKILL.md",
+  "source": {
+    "repo": "trailofbits/skills",
+    "url": "https://github.com/trailofbits/skills/blob/main/plugins/patching-bugs/skills/patching-bugs/SKILL.md",
+    "path": "plugins/patching-bugs/skills/patching-bugs/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-20T22:30:32.910Z",
+    "stars": 7663,
+    "language": "Python",
+    "pushed_at": "2026-10-20T20:20:17Z",
+    "license": "CC-BY-SA-4.0"
+  }
+}

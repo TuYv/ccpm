@@ -1,0 +1,25 @@
+{
+  "id": "aeonfun-aeon-get-started",
+  "name": "get-started",
+  "description": "First-run setup for the Aeon plugin. Checks the connection to the user's Aeon agent, shows what it can do, and runs one skill so the user sees it work. Use right after the plugin is installed, or when the user asks how to get started with Aeon.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "aeonfun",
+  "install_path": ".claude/skills/get-started/SKILL.md",
+  "source": {
+    "repo": "aeonfun/aeon",
+    "url": "https://github.com/aeonfun/aeon/blob/main/plugin/skills/get-started/SKILL.md",
+    "path": "plugin/skills/get-started/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-20T23:25:57.014Z",
+    "stars": 778,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-20T22:46:15Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "trailofbits-skills-validate-bug",
+  "name": "validate-bug",
+  "description": "Use when a bug PoC package needs an independent rerun and judgment before patching.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "trailofbits",
+  "install_path": ".claude/skills/validate-bug/SKILL.md",
+  "source": {
+    "repo": "trailofbits/skills",
+    "url": "https://github.com/trailofbits/skills/blob/main/plugins/patching-bugs/skills/validate-bug/SKILL.md",
+    "path": "plugins/patching-bugs/skills/validate-bug/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-20T22:30:33.359Z",
+    "stars": 7663,
+    "language": "Python",
+    "pushed_at": "2026-10-20T20:20:17Z",
+    "license": "CC-BY-SA-4.0"
+  }
+}

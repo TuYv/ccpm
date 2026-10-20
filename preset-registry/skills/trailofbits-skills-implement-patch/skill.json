@@ -1,0 +1,25 @@
+{
+  "id": "trailofbits-skills-implement-patch",
+  "name": "implement-patch",
+  "description": "Use when a confirmed local bug needs an invariant-level fix, variant search, tests, and one local commit.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "trailofbits",
+  "install_path": ".claude/skills/implement-patch/SKILL.md",
+  "source": {
+    "repo": "trailofbits/skills",
+    "url": "https://github.com/trailofbits/skills/blob/main/plugins/patching-bugs/skills/implement-patch/SKILL.md",
+    "path": "plugins/patching-bugs/skills/implement-patch/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-20T22:30:32.755Z",
+    "stars": 7663,
+    "language": "Python",
+    "pushed_at": "2026-10-20T20:20:17Z",
+    "license": "CC-BY-SA-4.0"
+  }
+}
