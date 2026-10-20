@@ -8,6 +8,7 @@ metadata:
   jurisdiction: "US-AR"
   tax_year: "2025"
   last_updated: "2026-07-13"
+  trust_label: "Built by Michael Cutajar and the OpenAccountants team"
   review_status: "pending_review"
 ---
 

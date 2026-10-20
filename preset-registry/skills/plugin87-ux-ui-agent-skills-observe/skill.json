@@ -1,0 +1,25 @@
+{
+  "id": "plugin87-ux-ui-agent-skills-observe",
+  "name": "observe",
+  "description": "Show whether the agent followed the kit''s rules in recent sessions: pages edited and measured, Stop hook blocks, findings left open. Reads local hook events only.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "plugin87",
+  "install_path": ".claude/skills/observe/SKILL.md",
+  "source": {
+    "repo": "plugin87/ux-ui-agent-skills",
+    "url": "https://github.com/plugin87/ux-ui-agent-skills/blob/main/.claude/skills/observe/SKILL.md",
+    "path": ".claude/skills/observe/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-20T11:04:13.868Z",
+    "stars": 2438,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-20T08:41:06Z",
+    "license": "MIT"
+  }
+}

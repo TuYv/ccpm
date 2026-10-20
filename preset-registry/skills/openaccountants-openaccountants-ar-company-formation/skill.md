@@ -8,8 +8,8 @@ metadata:
   jurisdiction: "AR"
   tax_year: "2025"
   last_updated: "2026-07-13"
-  reviewed_by: "Maria Valeria Benvenuti"
-  review_status: "current"
+  trust_label: "Built by Michael Cutajar and the OpenAccountants team"
+  review_status: "pending_review"
 ---
 
 # Argentina Company Formation & Entity Choice

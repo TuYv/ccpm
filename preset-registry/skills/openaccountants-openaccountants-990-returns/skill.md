@@ -8,6 +8,8 @@ metadata:
   jurisdiction: "US"
   tax_year: "2025"
   last_updated: "2026-08-10"
+  authored_by: "Anthony Bandura"
+  trust_label: "Accountant-authored"
   review_status: "pending_review"
 ---
 
