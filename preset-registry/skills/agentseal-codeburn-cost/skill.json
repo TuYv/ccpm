@@ -1,0 +1,25 @@
+{
+  "id": "agentseal-codeburn-cost",
+  "name": "cost",
+  "description": "Show what AI coding tools cost today, from CodeBurn. Use when the user asks about today's AI spend or token use, or which model or project cost the most.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "AgentSeal",
+  "install_path": ".claude/skills/cost/SKILL.md",
+  "source": {
+    "repo": "AgentSeal/codeburn",
+    "url": "https://github.com/AgentSeal/codeburn/blob/main/plugins/codeburn/skills/cost/SKILL.md",
+    "path": "plugins/codeburn/skills/cost/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-20T20:19:22.739Z",
+    "stars": 11532,
+    "language": "TypeScript",
+    "pushed_at": "2026-10-20T19:32:50Z",
+    "license": "MIT"
+  }
+}

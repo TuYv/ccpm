@@ -1,0 +1,25 @@
+{
+  "id": "pacifio-atlas-plugin-creator",
+  "name": "plugin-creator",
+  "description": "Source control for agents. Use multiple coding agents, track their changes and query them in one place",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "pacifio",
+  "install_path": ".claude/skills/plugin-creator/SKILL.md",
+  "source": {
+    "repo": "pacifio/atlas",
+    "url": "https://github.com/pacifio/atlas/blob/main/vendor/atlas-engine/skills/src/assets/samples/plugin-creator/SKILL.md",
+    "path": "vendor/atlas-engine/skills/src/assets/samples/plugin-creator/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-20T20:19:09.493Z",
+    "stars": 9626,
+    "language": "Rust",
+    "pushed_at": "2026-10-20T17:05:41Z",
+    "license": "Apache-2.0"
+  }
+}

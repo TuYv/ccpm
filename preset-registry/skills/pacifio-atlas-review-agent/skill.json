@@ -1,0 +1,25 @@
+{
+  "id": "pacifio-atlas-review-agent",
+  "name": "review-agent",
+  "description": "Perform a read-only, defect-first review of a specified code change and return every actionable finding. Use when another agent delegates review of uncommitted changes, a base-branch diff, a commit, or custom review instructions.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "pacifio",
+  "install_path": ".claude/skills/review-agent/SKILL.md",
+  "source": {
+    "repo": "pacifio/atlas",
+    "url": "https://github.com/pacifio/atlas/blob/main/vendor/atlas-engine/skills/src/assets/samples/review-agent/SKILL.md",
+    "path": "vendor/atlas-engine/skills/src/assets/samples/review-agent/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-20T20:19:09.625Z",
+    "stars": 9626,
+    "language": "Rust",
+    "pushed_at": "2026-10-20T17:05:41Z",
+    "license": "Apache-2.0"
+  }
+}

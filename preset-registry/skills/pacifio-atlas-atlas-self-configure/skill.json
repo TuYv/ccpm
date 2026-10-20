@@ -1,0 +1,25 @@
+{
+  "id": "pacifio-atlas-atlas-self-configure",
+  "name": "atlas-self-configure",
+  "description": "Inspect and safely update Atlas user preferences through Atlas's config.toml.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "pacifio",
+  "install_path": ".claude/skills/atlas-self-configure/SKILL.md",
+  "source": {
+    "repo": "pacifio/atlas",
+    "url": "https://github.com/pacifio/atlas/blob/main/src-tauri/resources/skills/atlas-self-configure/SKILL.md",
+    "path": "src-tauri/resources/skills/atlas-self-configure/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-20T20:19:09.221Z",
+    "stars": 9626,
+    "language": "Rust",
+    "pushed_at": "2026-10-20T17:05:41Z",
+    "license": "Apache-2.0"
+  }
+}
