@@ -1,0 +1,25 @@
+{
+  "id": "makenotion-notion-cookbook-sketch",
+  "name": "sketch",
+  "description": "Sketch an App workflow as a reviewable flow diagram when planning or iterating on its design with the user.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "makenotion",
+  "install_path": ".claude/skills/sketch/SKILL.md",
+  "source": {
+    "repo": "makenotion/notion-cookbook",
+    "url": "https://github.com/makenotion/notion-cookbook/blob/main/apps/templates/statsig-rollout/.agents/skills/sketch/SKILL.md",
+    "path": "apps/templates/statsig-rollout/.agents/skills/sketch/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-20T00:44:39.241Z",
+    "stars": 218,
+    "language": "TypeScript",
+    "pushed_at": "2026-10-19T19:51:06Z",
+    "license": "MIT"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "id": "manavarya09-design-extract-extract-design",
   "name": "extract-design",
-  "description": "Extract the full design language from any website URL. Produces 8 output files including AI-optimized markdown, visual HTML preview, Tailwind config, React theme, shadcn/ui theme, Figma variables, W3C design tokens, and CSS variables. Also runs WCAG accessibility scoring. Use when user says 'extract design', 'get design system', 'design language', 'design tokens', 'what colors/fonts does this site use', or '/extract-design'.",
+  "description": "Extract the full design language from any website URL. Produces 8 output files including AI-optimized markdown, visual HTML preview, Tailwind config, React theme, shadcn/ui theme, Figma variables, W3C design tokens, and CSS variables. Also runs WCAG accessibility scoring. Use when user says 'extract design', 'get design system', 'design language', 'design tokens', 'what colors/fonts does this site use', 'turn this URL into design tokens', 'make a Tailwind theme from this site', or '/extract-desi",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/Manavarya09/design-extract/blob/main/skills/extract-design/SKILL.md",
     "path": "skills/extract-design/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-19T20:20:17.055Z",
+    "discovered_at": "2026-10-20T00:37:59.231Z",
     "stars": 4268,
     "language": "HTML",
-    "pushed_at": "2026-10-08T17:11:10Z",
+    "pushed_at": "2026-10-19T20:45:34Z",
     "license": "MIT"
-  },
-  "summary_zh": "可从任意网站提取完整设计语言，生成多格式设计令牌与主题文件，并评估无障碍表现，适合复刻或分析站点视觉规范。"
+  }
 }
