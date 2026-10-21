@@ -1,0 +1,25 @@
+{
+  "id": "kenryu42-claude-code-safety-net-verify-project-tighten-only",
+  "name": "verify-project-tighten-only",
+  "description": "Use in the cc-safety-net repo before finishing any change to how a project policy merges with the user policy or how a merged policy turns into protections: src/core/policy/merge.ts, safety-level.ts, env.ts (levels, capabilities, sessionSafetyLevel), effective-rules.ts, the merge call and normalizePolicyConfig in store.ts, resolveSecretDisabledRules, rule metadata flags (catastrophic, activationCapability, secret defaultOff), or a new field in GuiPolicy / ProjectPolicyProjection. Runs an exhaust",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "kenryu42",
+  "install_path": ".claude/skills/verify-project-tighten-only/SKILL.md",
+  "source": {
+    "repo": "kenryu42/claude-code-safety-net",
+    "url": "https://github.com/kenryu42/claude-code-safety-net/blob/main/.agents/skills/verify-project-tighten-only/SKILL.md",
+    "path": ".agents/skills/verify-project-tighten-only/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-21T18:15:31.390Z",
+    "stars": 1728,
+    "language": "TypeScript",
+    "pushed_at": "2026-10-21T15:17:14Z",
+    "license": "MIT"
+  }
+}

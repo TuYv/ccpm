@@ -1,0 +1,25 @@
+{
+  "id": "alirezarezvani-claude-skills-agent-regression-evals",
+  "name": "agent-regression-evals",
+  "description": "Use when an agent, prompt, model or tool change needs proof it did not make the agent worse — setting up a regression eval suite, deciding whether a pass-rate drop is real or noise, grading tool-call trajectories, finding flaky eval cases, or wiring an eval gate into CI that blocks the merge. Runs repeated trials, reports pass@k and pass^k, compares candidate to baseline with paired statistics, and refuses to pass a dropped case, a critical-case regression, or a forbidden tool call.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alirezarezvani",
+  "install_path": ".claude/skills/agent-regression-evals/SKILL.md",
+  "source": {
+    "repo": "alirezarezvani/claude-skills",
+    "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/agent-regression-evals/SKILL.md",
+    "path": ".gemini/skills/agent-regression-evals/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-21T18:08:51.733Z",
+    "stars": 28496,
+    "language": "Python",
+    "pushed_at": "2026-10-21T13:16:04Z",
+    "license": "MIT"
+  }
+}
