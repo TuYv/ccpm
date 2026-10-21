@@ -1,7 +1,7 @@
 {
   "id": "alirezarezvani-claude-skills-brief",
   "name": "brief",
-  "description": "/cs:brief <topic> — Generate a one-page strategy brief from an office-hours intake. First step in the strategic sprint pipeline. Use when a strategic question needs to be framed before boardroom deliberation — e.g. locking options, assumptions, and success criteria for a pricing change or a market-entry decision.",
+  "description": "/c-level-agents:brief [topic] — Generate a one-page strategy brief from an office-hours intake. First step in the strategic sprint pipeline. Use when a strategic question needs to be framed before boardroom deliberation — e.g. locking options, assumptions, and success criteria for a pricing change or a market-entry decision.",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/brief/SKILL.md",
     "path": ".gemini/skills/brief/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-21T07:00:33.015Z",
-    "stars": 28463,
+    "discovered_at": "2026-10-21T12:03:40.982Z",
+    "stars": 28477,
     "language": "Python",
-    "pushed_at": "2026-08-30T09:46:16Z",
+    "pushed_at": "2026-10-21T11:20:27Z",
     "license": "MIT"
-  },
-  "summary_zh": "把咨询中的战略问题整理成一页简报，明确选项、假设和成功标准，适合定价调整或市场进入等决策前讨论。"
+  }
 }

@@ -1,7 +1,7 @@
 {
   "id": "alirezarezvani-claude-skills-ai-act-readiness",
   "name": "ai-act-readiness",
-  "description": "/cs:ai-act-readiness <system> — EU AI Act 6-question forcing interrogation. Use during AI-system intake, before EU deployment, or during annual compliance refresh as Article 113 obligations phase in (2025-02-02 / 2025-08-02 / 2026-08-02 / 2027-08-02).",
+  "description": "/compliance-os:ai-act-readiness [system] — EU AI Act 6-question forcing interrogation. Use during AI-system intake, before EU deployment, or during annual compliance refresh as Article 113 obligations phase in (2025-02-02 / 2025-08-02 / 2026-08-02 / 2027-08-02).",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/ai-act-readiness/SKILL.md",
     "path": ".gemini/skills/ai-act-readiness/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-21T07:00:28.426Z",
-    "stars": 28463,
+    "discovered_at": "2026-10-21T12:03:36.778Z",
+    "stars": 28477,
     "language": "Python",
-    "pushed_at": "2026-08-30T09:46:16Z",
+    "pushed_at": "2026-10-21T11:20:27Z",
     "license": "MIT"
-  },
-  "summary_zh": "通过六个关键问题快速排查 AI 系统是否符合欧盟 AI 法案要求，适合在系统立项、上线欧盟市场前或年度合规复审时使用，帮你提前对齐 2025 到 2027 年陆续生效的义务。"
+  }
 }

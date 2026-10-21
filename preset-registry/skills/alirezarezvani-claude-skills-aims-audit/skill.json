@@ -1,7 +1,7 @@
 {
   "id": "alirezarezvani-claude-skills-aims-audit",
   "name": "aims-audit",
-  "description": "/cs:aims-audit <scope> — ISO/IEC 42001 AIMS internal-audit 6-question forcing interrogation. Use before certification stage 1, before annual internal audit cycles, or when onboarding a new AI system into an existing AIMS.",
+  "description": "/compliance-os:aims-audit [scope] — ISO/IEC 42001 AIMS internal-audit 6-question forcing interrogation. Use before certification stage 1, before annual internal audit cycles, or when onboarding a new AI system into an existing AIMS.",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/aims-audit/SKILL.md",
     "path": ".gemini/skills/aims-audit/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-21T07:00:29.145Z",
-    "stars": 28463,
+    "discovered_at": "2026-10-21T12:03:37.246Z",
+    "stars": 28477,
     "language": "Python",
-    "pushed_at": "2026-08-30T09:46:16Z",
+    "pushed_at": "2026-10-21T11:20:27Z",
     "license": "MIT"
-  },
-  "summary_zh": "一套针对 ISO/IEC 42001 AI 管理体系的六问式内部审计工具，适合认证一阶段评审前、年度内审周期开始时，或将新 AI 系统纳入现有体系时用来查漏补缺。"
+  }
 }
