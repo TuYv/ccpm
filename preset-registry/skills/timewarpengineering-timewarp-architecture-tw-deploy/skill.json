@@ -1,8 +1,8 @@
 {
   "id": "timewarpengineering-timewarp-architecture-tw-deploy",
   "name": "tw-deploy",
-  "description": "**TIMEWARP SKILL** — deploy a generated app from its Aspire AppHost. The first deploy is one command, `dev deploy --target <t>`: publish, deploy, migrate when the app has a database, smoke the ingress, and print the URL. Targets: Docker Compose, Kubernetes/Helm, Azure (AKS or Azure Container Apps), and Azure Container Apps + Neon. `dev publish`, `dev deploy migrate`, `dev open`, and `dev deprovision` are one-step operator verbs (never CI). Also: kind, production safety, secrets and parameters, t",
-  "category": "设计创意",
+  "description": "**TIMEWARP SKILL** — deploy a generated app from its Aspire AppHost. The first deploy is one command, `dev deploy --target <t>`: publish, deploy, migrate when the app has a database, smoke the ingress, and open the app (`--no-browser` prints the URL). Targets: Docker Compose, Kubernetes/Helm, Azure (AKS or Azure Container Apps), and Azure Container Apps + Neon. `dev publish`, `dev deploy migrate`, `dev open`, and `dev deprovision` are one-step operator verbs (never CI). Also: kind, production sa",
+  "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/TimeWarpEngineering/timewarp-architecture/blob/master/skills/tw-deploy/SKILL.md",
     "path": "skills/tw-deploy/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-10-21T17:28:32.302Z",
+    "discovered_at": "2026-10-21T20:53:10.472Z",
     "stars": 55,
     "language": "C#",
-    "pushed_at": "2026-10-21T17:19:55Z",
+    "pushed_at": "2026-10-21T20:44:59Z",
     "license": "Unlicense"
   }
 }

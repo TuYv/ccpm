@@ -1,7 +1,7 @@
 {
   "id": "heygen-com-hyperframes-figma",
   "name": "figma",
-  "description": "Import Figma content into a HyperFrames composition — rendered assets, brand tokens, components, storyboard sections → reconstructed motion (frames read as states, not slides) (REST/CLI), connector-assisted motion when available, and shaders from a connector or native export. Use when the user pastes a figma.com link or asks to bring a Figma design, frame, logo, brand, or animation into a video/composition.",
+  "description": "Bring Figma into a HyperFrames video - rendered assets, brand tokens, components, storyboard frames as reconstructed motion (frames read as states, not slides), shaders and connector-assisted motion. Use when the person pastes a figma.com link or asks to use a Figma design, frame, logo or brand.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/heygen-com/hyperframes/blob/main/skills/figma/SKILL.md",
     "path": "skills/figma/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-21T18:08:28.395Z",
-    "stars": 69056,
+    "discovered_at": "2026-10-21T21:36:53.182Z",
+    "stars": 69147,
     "language": "TypeScript",
-    "pushed_at": "2026-10-21T18:07:25Z",
+    "pushed_at": "2026-10-21T21:23:56Z",
     "license": "Apache-2.0"
-  },
-  "summary_zh": "把设计稿、品牌素材和组件导入视频合成，并将画面状态还原为动效，适合快速制作动画或品牌视频。"
+  }
 }
