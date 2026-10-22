@@ -1,0 +1,25 @@
+{
+  "id": "jeremylongshore-claude-code-plugins-plus-skills-beads",
+  "name": "beads",
+  "description": "Use when working in a repository that uses bd or Beads for durable project task tracking, issue dependencies, blocker management, multi-session handoff, or shared work memory. Trigger when the user asks to find ready work, claim or close tasks, create follow-up work, inspect blockers, recover project context, or choose between local planning and persistent project tracking.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "jeremylongshore",
+  "install_path": ".claude/skills/beads/SKILL.md",
+  "source": {
+    "repo": "jeremylongshore/claude-code-plugins-plus-skills",
+    "url": "https://github.com/jeremylongshore/claude-code-plugins-plus-skills/blob/main/.agents/skills/beads/SKILL.md",
+    "path": ".agents/skills/beads/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-22T11:10:34.047Z",
+    "stars": 2858,
+    "language": "Python",
+    "pushed_at": "2026-10-22T11:08:24Z",
+    "license": "MIT"
+  }
+}
