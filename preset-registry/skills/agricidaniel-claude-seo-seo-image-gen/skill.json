@@ -1,8 +1,8 @@
 {
   "id": "agricidaniel-claude-seo-seo-image-gen",
   "name": "seo-image-gen",
-  "description": "AI image generation for SEO assets: OG/social preview images, blog hero images, schema images, product photography, infographics. Powered by Gemini via nanobanana-mcp. Requires banana extension installed. Use when user says \\\"generate image\\\", \\\"OG image\\\", \\\"social preview\\\", \\\"hero image\\\", \\\"blog image\\\", \\\"product photo\\\", \\\"infographic\\\", \\\"seo image\\\", \\\"create visual\\\", \\\"image-gen\\\", \\\"favicon\\\", \\\"schema image\\\", \\\"pinterest pin\\\", \\\"generate visual\\\", \\\"banner\\\", or \\\"thumbnail\\\".",
-  "category": "测试调试",
+  "description": "AI image generation for SEO assets: OG/social preview images, blog hero images, schema images, product photography, infographics. Powered by Gemini via nanobanana-mcp. Requires banana extension installed. Use when the user wants an SEO asset and says \\\"OG image\\\", \\\"social preview\\\", \\\"hero image\\\", \\\"blog image\\\", \\\"product photo\\\", \\\"infographic\\\", \\\"seo image\\\", \\\"image-gen\\\", \\\"favicon\\\", \\\"schema image\\\", or \\\"pinterest pin\\\". Not for general artwork, banners, or thumbnails unrelated to SEO",
+  "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,10 @@
     "url": "https://github.com/AgriciDaniel/claude-seo/blob/main/skills/seo-image-gen/SKILL.md",
     "path": "skills/seo-image-gen/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-22T15:30:09.896Z",
-    "stars": 19668,
+    "discovered_at": "2026-10-22T19:28:50.552Z",
+    "stars": 19706,
     "language": "Python",
-    "pushed_at": "2026-10-22T15:14:49Z",
+    "pushed_at": "2026-10-22T16:47:40Z",
     "license": "MIT"
-  },
-  "summary_zh": "这是一款AI图片生成工具，专门帮你快速制作社交预览图、博客头图等SEO视觉素材，告别手动做图的繁琐，轻松搞定网站引流和社媒分享的配图需求。"
+  }
 }

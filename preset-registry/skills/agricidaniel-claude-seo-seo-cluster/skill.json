@@ -1,8 +1,8 @@
 {
   "id": "agricidaniel-claude-seo-seo-cluster",
   "name": "seo-cluster",
-  "description": "> Cluster keywords by SERP overlap and design hub-and-spoke content architecture with internal links. Use for planning only; use the blog-cluster command to execute article production.",
-  "category": "测试调试",
+  "description": "> Cluster keywords by SERP overlap and design hub-and-spoke content architecture with internal links. Use for planning; `/seo cluster execute` then writes the posts with claude-blog's blog-write skill when it is installed, or content briefs when it is not.",
+  "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/AgriciDaniel/claude-seo/blob/main/skills/seo-cluster/SKILL.md",
     "path": "skills/seo-cluster/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-22T15:30:07.950Z",
-    "stars": 19668,
+    "discovered_at": "2026-10-22T19:28:49.133Z",
+    "stars": 19706,
     "language": "Python",
-    "pushed_at": "2026-10-22T15:14:49Z",
+    "pushed_at": "2026-10-22T16:47:40Z",
     "license": "MIT"
   }
 }
