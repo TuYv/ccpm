@@ -1,0 +1,25 @@
+{
+  "id": "digitalsamba-claude-code-video-toolkit-synthetic-ui-demo",
+  "name": "synthetic-ui-demo",
+  "description": "Product demo and release-notes videos with no screen recording. Rebuild the app's screens as static React from its source code, then drive them in Remotion with a scripted cursor and camera (lib/components Stage + Cursor). Use when making a product walkthrough, feature demo, release-notes or changelog video for an app whose source you can read, or when a Playwright recording would be flaky, need test data, or go stale. Triggers include synthetic demo, rebuild the UI, release video, feature walkt",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "digitalsamba",
+  "install_path": ".claude/skills/synthetic-ui-demo/SKILL.md",
+  "source": {
+    "repo": "digitalsamba/claude-code-video-toolkit",
+    "url": "https://github.com/digitalsamba/claude-code-video-toolkit/blob/main/.claude/skills/synthetic-ui-demo/SKILL.md",
+    "path": ".claude/skills/synthetic-ui-demo/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-22T01:11:20.247Z",
+    "stars": 2306,
+    "language": "Python",
+    "pushed_at": "2026-10-21T23:00:50Z",
+    "license": "MIT"
+  }
+}
