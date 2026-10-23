@@ -1,0 +1,25 @@
+{
+  "id": "rpamis-comet-to-tickets",
+  "name": "to-tickets",
+  "description": "Break a plan, spec, or the current conversation into a set of tracer-bullet tickets, each declaring its blocking edges, published to the configured tracker — edges as text in one file per ticket locally, or native blocking links on a real tracker.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "rpamis",
+  "install_path": ".claude/skills/to-tickets/SKILL.md",
+  "source": {
+    "repo": "rpamis/comet",
+    "url": "https://github.com/rpamis/comet/blob/master/eval/archives/grill-test-20261013/application/skills/to-tickets/SKILL.md",
+    "path": "eval/archives/grill-test-20261013/application/skills/to-tickets/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-10-23T02:31:31.995Z",
+    "stars": 3215,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-23T02:10:26Z",
+    "license": "MIT"
+  }
+}

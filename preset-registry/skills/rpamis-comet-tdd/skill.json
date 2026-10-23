@@ -1,0 +1,25 @@
+{
+  "id": "rpamis-comet-tdd",
+  "name": "tdd",
+  "description": "Test-driven development. Use when the user wants to build features or fix bugs test-first, mentions \"red-green-refactor\", or wants integration tests.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "rpamis",
+  "install_path": ".claude/skills/tdd/SKILL.md",
+  "source": {
+    "repo": "rpamis/comet",
+    "url": "https://github.com/rpamis/comet/blob/master/eval/archives/grill-test-20261013/application/skills/tdd/SKILL.md",
+    "path": "eval/archives/grill-test-20261013/application/skills/tdd/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-10-23T02:31:31.653Z",
+    "stars": 3215,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-23T02:10:26Z",
+    "license": "MIT"
+  }
+}

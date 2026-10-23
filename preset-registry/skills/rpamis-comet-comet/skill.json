@@ -1,7 +1,7 @@
 {
   "id": "rpamis-comet-comet",
   "name": "comet",
-  "description": "Use when 用户要启动或恢复 Comet 工作流，需要根据 active change、.comet.yaml、hotfix/tweak 意图路由到对应阶段 Skill。",
+  "description": "Comet workflow entry. Use when the user invokes /comet or asks to use Comet without choosing Native or Classic; load Native or Classic from project configuration.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -13,14 +13,13 @@
   "install_path": ".claude/skills/comet/SKILL.md",
   "source": {
     "repo": "rpamis/comet",
-    "url": "https://github.com/rpamis/comet/blob/master/eval/local/skills/benchmarks/040-beta/comet/SKILL.md",
-    "path": "eval/local/skills/benchmarks/040-beta/comet/SKILL.md",
+    "url": "https://github.com/rpamis/comet/blob/master/assets/skills/comet/SKILL.md",
+    "path": "assets/skills/comet/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-10-22T23:21:29.248Z",
+    "discovered_at": "2026-10-23T02:31:30.415Z",
     "stars": 3215,
     "language": "JavaScript",
-    "pushed_at": "2026-10-22T14:40:42Z",
+    "pushed_at": "2026-10-23T02:10:26Z",
     "license": "MIT"
-  },
-  "summary_zh": "用于启动或恢复开发工作流，可根据当前变更、配置及修复意图自动进入合适的处理阶段。"
+  }
 }

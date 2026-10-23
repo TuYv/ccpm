@@ -1,0 +1,25 @@
+{
+  "id": "rpamis-comet-application",
+  "name": "grill-test",
+  "description": "依次执行原始 grill、to-spec、to-tickets、implement Skill，通过真实会话、审批和实际测试完成代码任务。",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "rpamis",
+  "install_path": ".claude/skills/application/SKILL.md",
+  "source": {
+    "repo": "rpamis/comet",
+    "url": "https://github.com/rpamis/comet/blob/master/eval/archives/grill-test-20261013/application/SKILL.md",
+    "path": "eval/archives/grill-test-20261013/application/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-10-23T02:31:30.588Z",
+    "stars": 3215,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-23T02:10:26Z",
+    "license": "MIT"
+  }
+}

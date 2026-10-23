@@ -1,0 +1,25 @@
+{
+  "id": "rpamis-comet-grilling",
+  "name": "grilling",
+  "description": "Grill the user relentlessly about a plan, decision, or idea. Use when the user wants to stress-test their thinking, or uses any 'grill' trigger phrases.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "rpamis",
+  "install_path": ".claude/skills/grilling/SKILL.md",
+  "source": {
+    "repo": "rpamis/comet",
+    "url": "https://github.com/rpamis/comet/blob/master/eval/archives/grill-test-20261013/application/skills/grilling/SKILL.md",
+    "path": "eval/archives/grill-test-20261013/application/skills/grilling/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-10-23T02:31:31.129Z",
+    "stars": 3215,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-23T02:10:26Z",
+    "license": "MIT"
+  }
+}

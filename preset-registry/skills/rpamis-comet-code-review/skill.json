@@ -1,0 +1,25 @@
+{
+  "id": "rpamis-comet-code-review",
+  "name": "code-review",
+  "description": "Review the changes since a fixed point (commit, branch, tag, or merge-base) along two axes — Standards (does the code follow this repo's documented coding standards?) and Spec (does the code match what the originating issue/spec asked for?). Runs both reviews in parallel sub-agents and reports them side by side. Use when the user wants to review a branch, a PR, work-in-progress changes, or asks to \"review since X\".",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "rpamis",
+  "install_path": ".claude/skills/code-review/SKILL.md",
+  "source": {
+    "repo": "rpamis/comet",
+    "url": "https://github.com/rpamis/comet/blob/master/eval/archives/grill-test-20261013/application/skills/code-review/SKILL.md",
+    "path": "eval/archives/grill-test-20261013/application/skills/code-review/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-10-23T02:31:30.768Z",
+    "stars": 3215,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-23T02:10:26Z",
+    "license": "MIT"
+  }
+}
