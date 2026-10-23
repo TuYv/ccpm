@@ -1,0 +1,25 @@
+{
+  "id": "huytieu-cog-second-brain-release-comms",
+  "name": "release-comms",
+  "description": "Turn a deployment runsheet and a GitHub milestone into a customer release note with real media, docs updates, and a Slack announcement draft",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "huytieu",
+  "install_path": ".claude/skills/release-comms/SKILL.md",
+  "source": {
+    "repo": "huytieu/COG-second-brain",
+    "url": "https://github.com/huytieu/COG-second-brain/blob/main/.agents/skills/release-comms/SKILL.md",
+    "path": ".agents/skills/release-comms/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-23T08:33:07.597Z",
+    "stars": 1312,
+    "language": "Python",
+    "pushed_at": "2026-10-23T02:52:56Z",
+    "license": "MIT"
+  }
+}

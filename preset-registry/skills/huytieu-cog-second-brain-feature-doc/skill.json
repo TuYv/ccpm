@@ -1,0 +1,25 @@
+{
+  "id": "huytieu-cog-second-brain-feature-doc",
+  "name": "feature-doc",
+  "description": "> Closed-loop feature documentation for your product. Give it a feature (issue numbers or an id) and it reads the source, drives your live app to capture real screenshots and a screen recording, writes a docs article (Docusaurus or any markdown docs site) with both how-to steps and use-case content, then verifies the article with a fresh-context read-only verifier before reporting. Use when you say \"write the doc for <feature>\", \"document issue #123\", or \"/feature-doc\".",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "huytieu",
+  "install_path": ".claude/skills/feature-doc/SKILL.md",
+  "source": {
+    "repo": "huytieu/COG-second-brain",
+    "url": "https://github.com/huytieu/COG-second-brain/blob/main/.claude/skills/feature-doc/SKILL.md",
+    "path": ".claude/skills/feature-doc/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-23T08:33:13.485Z",
+    "stars": 1312,
+    "language": "Python",
+    "pushed_at": "2026-10-23T02:52:56Z",
+    "license": "MIT"
+  }
+}

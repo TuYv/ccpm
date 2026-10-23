@@ -1,0 +1,25 @@
+{
+  "id": "huytieu-cog-second-brain-terminal-replica",
+  "name": "terminal-replica",
+  "description": "Reproduce your real terminal and CLI agents (Claude Code, Codex, Gemini CLI) faithfully in graphics and video frames",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "huytieu",
+  "install_path": ".claude/skills/terminal-replica/SKILL.md",
+  "source": {
+    "repo": "huytieu/COG-second-brain",
+    "url": "https://github.com/huytieu/COG-second-brain/blob/main/.agents/skills/terminal-replica/SKILL.md",
+    "path": ".agents/skills/terminal-replica/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-23T08:33:09.287Z",
+    "stars": 1312,
+    "language": "Python",
+    "pushed_at": "2026-10-23T02:52:56Z",
+    "license": "MIT"
+  }
+}
