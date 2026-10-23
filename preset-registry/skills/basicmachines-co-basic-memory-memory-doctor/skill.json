@@ -1,0 +1,25 @@
+{
+  "id": "basicmachines-co-basic-memory-memory-doctor",
+  "name": "memory-doctor",
+  "description": "Check local Basic Memory projects with bm doctor, explain the findings, and run the suggested fixes once the user agrees. Use when search misses or repeats notes, or a save looks lost.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "basicmachines-co",
+  "install_path": ".claude/skills/memory-doctor/SKILL.md",
+  "source": {
+    "repo": "basicmachines-co/basic-memory",
+    "url": "https://github.com/basicmachines-co/basic-memory/blob/main/skills/memory-doctor/SKILL.md",
+    "path": "skills/memory-doctor/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-23T22:24:19.231Z",
+    "stars": 4333,
+    "language": "Python",
+    "pushed_at": "2026-10-23T22:04:20Z",
+    "license": "AGPL-3.0"
+  }
+}

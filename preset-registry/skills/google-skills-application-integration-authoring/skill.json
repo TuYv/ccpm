@@ -1,0 +1,25 @@
+{
+  "id": "google-skills-application-integration-authoring",
+  "name": "application-integration-authoring",
+  "description": ">- Builds, versions, publishes, tests, and executes Google Cloud Application Integration workflows through the REST API and Python discovery client, and promotes versions across environments. Use when listing integrations, downloading or uploading integration versions as JSON, configuring API triggers or config variables, publishing drafts, invoking integrations, or automating CI/CD promotion. Do not use for initial region provisioning and IAM setup (use application-integration-basics) or diagno",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/application-integration-authoring/SKILL.md",
+  "source": {
+    "repo": "google/skills",
+    "url": "https://github.com/google/skills/blob/main/skills/cloud/application-integration-authoring/SKILL.md",
+    "path": "skills/cloud/application-integration-authoring/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-23T22:22:33.426Z",
+    "stars": 21523,
+    "language": "Python",
+    "pushed_at": "2026-10-23T20:04:26Z",
+    "license": "Apache-2.0"
+  }
+}
