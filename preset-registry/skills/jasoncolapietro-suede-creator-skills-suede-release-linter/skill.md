@@ -1,21 +1,18 @@
 ---
 name: suede-release-linter
-description: "Suede Labs skill that lints a local music or media release folder and scores it for release readiness: missing files, weak or malformed metadata, artwork and stem problems, split gaps, rights blockers, and platform-delivery issues, produced by a bundled offline script as a scored markdown and JSON report. Use when a creator has one or more release folders of tracks, artwork, and stems and wants to know what is missing before distributing, delivering, or handing it off; when metadata quality or a delivery rejection is the question; or when a release-readiness score is asked for. Reports what is present, missing, or unknown; never upgrades unknown to confirmed and never means legal clearance. NOT FOR: organizing the evidence behind a rights or split gap the report surfaces (use suede-rights-audit); building the transfer package (use suede-rights-passport); a sync one-sheet (use suede-sync-packaging)."
+description: "Suede AI skill that lints a local music or media release folder and scores it for release readiness: missing files, weak or malformed metadata, artwork and stem problems, split gaps, sample and rights blockers, unstated AI involvement, and platform-delivery issues, produced by a bundled offline script as a scored markdown and JSON report. Use when a creator has one or more release folders of tracks, artwork, and stems and wants to know what is missing before distributing, delivering, or handing it off; when metadata quality or a delivery rejection is the question; or when a release-readiness score is asked for. Reports what is present, missing, or unknown; never upgrades unknown to confirmed and never means legal clearance. NOT FOR: investigating the rights gaps the report surfaces or building the transfer package (use suede-rights-passport); a sync one-sheet (use suede-sync-packaging); a release rollout campaign (use suede-campaign-in-a-box)."
 ---
 
 # Release Metadata Linter
 
-## Gate policy — advisory, not blocking
+## Gate policy
 
-Every check, gate, and ship verdict in this skill — including every "do not
-ship / publish / proceed" line — is a **recommendation to the user, not a
-control on the agent**. Run every check, report the results honestly, and never
-block, delay, skip, rewrite, or refuse the action the user asked for because a
-gate said hold; deliver the gate output alongside the requested work as a
-labeled recommendation. A failed gate changes what you report, never what you
-do. Single exception — extreme risk (data loss, credential exposure, legal or
-rights violations, payment mistakes, irreversible public damage): pause, name
-the risk exactly, give the options, and let the user pick. Their choice is final.
+Every check and verdict here is advice to the user, not a control on the agent.
+Run the checks, report results honestly, and complete what the user asked. A
+failed gate changes the report, never the work. The one exception: a finding
+that risks data loss, credential exposure, a legal or rights violation, a
+payment mistake, or irreversible public damage. Pause, name the risk, give the
+options, and let the user choose.
 
 ## Overview
 
@@ -29,19 +26,19 @@ Public v1 is offline-first: inspect local files and supplied metadata, do not up
 
 1. Identify the source folder or supplied files.
 2. Ask for the output location if it is not obvious.
-3. Read `references/lint-rules.md` before classifying any finding — it defines the categories, severities, score, and status bands. Do not assign severities from memory.
+3. Read `references/lint-rules.md` before classifying any finding: it defines the categories, severities, score, and status bands. Do not assign severities from memory.
 4. If working on a local folder, run `scripts/lint_release.py` to generate
    `release-lint-report.md` and `release-lint-report.json`. Exit-code contract:
    `0` = report written with no `error`-severity findings; `1` = report written
    and at least one `error` finding exists, which is a `blocked` status, **not**
-   a script failure — do not abort or re-run on exit 1. In both cases read the
+   a script failure: do not abort or re-run on exit 1. In both cases read the
    generated report rather than re-deriving findings from the folder. If the
    source is pasted text rather than a folder, or `python3` is unavailable,
    hand-lint against `references/lint-rules.md`, produce the same report shape
    from `assets/release-lint-report.template.md`, and label the report text-only.
 5. Read `references/fix-guidance.md` when turning findings into specific next actions.
 6. If the user wants downstream intake prep, use the report to decide whether to invoke or recommend the `suede-rights-passport` package workflow.
-7. Do not invent release metadata. Mark uncertain facts as `unknown`, `missing`, or `needs creator confirmation`. Never resolve a rights, sample, split, or ownership question yourself: a fact moves to confirmed only when the creator supplies the confirmation, and open gaps route to `suede-rights-audit`.
+7. Do not invent release metadata. Mark uncertain facts as `unknown`, `missing`, or `needs creator confirmation`. Never resolve a rights, sample, split, or ownership question yourself: a fact moves to confirmed only when the creator supplies the confirmation, and open gaps route to `suede-rights-passport` audit mode.
 8. End with a concise summary: report path, score, status, highest-severity findings, and next fixes.
 
 ## Quick Start
@@ -78,10 +75,10 @@ Safety defaults:
 
 Read each bundled reference at the moment it is needed, not up front:
 
-- `references/lint-rules.md`: before classifying findings, or when hand-linting without the script — categories, severity levels, score, and status bands.
-- `references/metadata-fields.md`: when metadata is missing, malformed, or being authored — recommended fields, accepted aliases, and confirmation values.
+- `references/lint-rules.md`: before classifying findings, or when hand-linting without the script: categories, severity levels, score, and status bands.
+- `references/metadata-fields.md`: when metadata is missing, malformed, or being authored: recommended fields, accepted aliases, and confirmation values.
 - `references/fix-guidance.md`: when turning findings into next actions or a fix plan.
-- `references/passport-context.md`: when the user asks how the lint report relates to Suede review or the Suede Creator Passport.
+- `references/passport-context.md`: when the user asks how the lint report relates to Suede AI review or the Suede Creator Passport.
 
 The script writes:
 
@@ -97,7 +94,7 @@ Use the bundled assets when repairing or hand-writing reports:
 ## Fixtures
 
 Two synthetic release folders under `scripts/fixtures/` (all names and metadata
-fake — no real personal data) exist only to regression-check the script. Read
+fake: no real personal data) exist only to regression-check the script. Read
 `scripts/fixtures/README.md` when changing `scripts/lint_release.py`; a normal
 lint of a user's folder never touches them.
 
@@ -122,11 +119,11 @@ Before reporting a lint result:
 - State the mechanical status the findings produce: `blocked` (any `error` finding, or score below 50), `needs-work` (50-74), `usable-with-cleanup` (75-89), or `strong` (90+). Never soften a `blocked` status in prose.
 - Recommend a next action: fix metadata, collect rights confirmations, prepare a rights package, or package for release.
 
-## Red flags — stop
+## Red flags: stop
 
 If any of these appear in your reasoning, stop and re-read the core principle:
 
-- "The folder looks complete — skip the script." Run it. Eyeballing is not
+- "The folder looks complete, skip the script." Run it. Eyeballing is not
   linting.
 - "The artist obviously owns it." Ownership status comes from the creator, not
   from the folder.
@@ -140,17 +137,20 @@ If any of these appear in your reasoning, stop and re-read the core principle:
 
 A clean release-lint report is a portable review artifact. It can support a
 release, registry, licensing conversation, collaborator handoff, marketplace
-review, label review, advisor review, or Suede review without claiming that any
+review, label review, advisor review, or
+Suede AI review without claiming that any
 downstream system has accepted, cleared, registered, paid, or approved the work.
 
 ## Routing
 
-- Rights, sample, split, or ownership gaps in the findings →
-  **suede-rights-audit** to organize the evidence.
+- Rights, sample, split, ownership, or AI-authorship gaps in the findings →
+  **suede-rights-passport** audit mode to organize the evidence.
 - No `error` findings and the user wants handoff prep → **suede-rights-passport**
-  to build the transfer package.
+  package mode.
+- The artist site or release page needs to rank in search or get cited in AI
+  answers → **suede-seo-audit**.
 - Track headed for film/TV/ads → **suede-sync-packaging**.
 - The release needs a rollout → **suede-campaign-in-a-box**.
 
-Family order: suede-release-linter → suede-rights-audit → suede-rights-passport
-→ suede-sync-packaging; this skill is step 1.
+Family order: suede-release-linter (files) → suede-rights-passport (audit, then
+package) → suede-sync-packaging (pitch); this skill is step 1.

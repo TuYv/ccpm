@@ -1,7 +1,7 @@
 {
   "id": "jasoncolapietro-suede-creator-skills-suede-ops-architecture",
   "name": "suede-ops-architecture",
-  "description": "Suede-owned operations-architecture discipline that fixes the shape of a system before anyone builds it: entity schema first, exactly one write path per entity, every unit of work routed to a deterministic automation, an AI agent, or a human decision, every existing tool marked absorb, keep, or kill, and the build sequenced into phases whose completion is proved by a command. Use when scoping an automation or agent build, deciding whether a workflow needs a model at all, consolidating a sprawlin",
+  "description": "Suede AI operations-architecture discipline that fixes the shape of a system before anyone builds it: entity schema first, exactly one write path per entity, every unit of work routed to a deterministic automation, an AI agent, or a human decision, every existing tool marked absorb, keep, or kill, and the build sequenced into phases whose completion is proved by a command. Use when scoping an automation or agent build, deciding whether a workflow needs a model at all, consolidating a sprawling t",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/JasonColapietro/suede-creator-skills/blob/main/skills/suede-ops-architecture/SKILL.md",
     "path": "skills/suede-ops-architecture/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-23T13:40:58.648Z",
+    "discovered_at": "2026-10-23T18:36:43.138Z",
     "stars": 125,
     "language": "JavaScript",
-    "pushed_at": "2026-10-23T05:48:03Z",
+    "pushed_at": "2026-10-23T18:18:47Z",
     "license": "MIT"
-  },
-  "summary_zh": "一套在开发前定型系统的运营架构方法，适合规划自动化或智能体、梳理工作流并整合冗杂工具。"
+  }
 }

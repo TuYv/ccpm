@@ -1,13 +1,13 @@
 ---
 name: suede-revops
-description: "Suede-owned revenue-operations discipline. Use when defining lead scoring and routing, MQL or SQL criteria, pipeline stages, CRM hygiene, automation, deal-desk rules, or marketing-to-sales handoffs. NOT FOR: writing outreach (use suede-cold-email), lifecycle campaigns (use suede-emails), pricing strategy (use suede-pricing), or mutating production CRM records without approval."
+description: "Suede AI revenue operations: lifecycle stage definitions, fit and engagement lead scoring, MQL and SQL criteria, routing rules and speed-to-lead SLAs, pipeline stages and hygiene, CRM automation build lists for HubSpot, Salesforce, and Zapier, deal-desk approval tiers, enrichment and dedup, and a metrics dashboard spec, including where AI agents can safely run enrichment, routing, and follow-up steps. Returns implementation-ready documents the user can build from. Use when defining lead scoring and routing, MQL or SQL criteria, pipeline stages, CRM hygiene, automation, deal-desk rules, or marketing-to-sales handoffs. NOT FOR: writing outreach (use suede-cold-email), building prospect lists (use suede-prospecting), lifecycle campaigns (use suede-emails), pricing strategy (use suede-pricing), or mutating production CRM records without approval."
 metadata:
   version: 2.0.0
 ---
 
 # Suede Revenue Operations
 
-Suede RevOps maps the lifecycle rules, data contracts, scoring, routing, and
+Suede AI RevOps maps the lifecycle rules, data contracts, scoring, routing, and
 handoffs that connect acquisition, sales, and customer success. It produces
 implementation-ready operating logic while keeping production CRM mutation
 behind live-schema review and approval.
@@ -19,14 +19,14 @@ If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or 
 
 Gather this context (ask if not provided):
 
-1. **GTM motion** — Product-led (PLG), sales-led, or hybrid?
-2. **ACV range** — What's the average contract value?
-3. **Sales cycle length** — Days from first touch to closed-won?
-4. **Current stack** — CRM, marketing automation, scheduling, enrichment tools?
-5. **Current state** — How are leads managed today? What's working and what's not?
-6. **Goals** — Increase conversion? Reduce speed-to-lead? Fix handoff leaks? Build from scratch?
+1. **GTM motion**: Product-led (PLG), sales-led, or hybrid?
+2. **ACV range**: What's the average contract value?
+3. **Sales cycle length**: Days from first touch to closed-won?
+4. **Current stack**: CRM, marketing automation, scheduling, enrichment tools?
+5. **Current state**: How are leads managed today? What's working and what's not?
+6. **Goals**: Increase conversion? Reduce speed-to-lead? Fix handoff leaks? Build from scratch?
 
-Work with whatever the user gives you. If they have a clear problem area, start there. Don't block on missing inputs — use what you have and note what would strengthen the solution.
+Work with whatever the user gives you. If they have a clear problem area, start there. Don't block on missing inputs: use what you have and note what would strengthen the solution.
 
 ---
 
@@ -39,7 +39,7 @@ One system of record for every lead and account. If data lives in multiple place
 Get stage definitions, scoring criteria, and routing rules right on paper before building workflows. Automating a broken process just creates broken results faster.
 
 ### Measure Every Handoff
-Every handoff between teams is a potential leak. Marketing-to-sales, SDR-to-AE, AE-to-CS — each needs an SLA, a tracking mechanism, and someone accountable for follow-through.
+Every handoff between teams is a potential leak. Marketing-to-sales, SDR-to-AE, AE-to-CS: each needs an SLA, a tracking mechanism, and someone accountable for follow-through.
 
 ### Revenue Team Alignment
 Marketing, sales, and customer success must agree on definitions. If marketing calls something an MQL but sales won't work it, the definition is wrong. Alignment meetings aren't optional.
@@ -64,8 +64,8 @@ Marketing, sales, and customer success must agree on definitions. If marketing c
 
 An MQL requires both **fit** and **engagement**:
 
-- **Fit score** — Does this person match your ICP? (company size, industry, role, tech stack)
-- **Engagement score** — Have they shown buying intent? (pricing page, demo request, multiple visits)
+- **Fit score**: Does this person match your ICP? (company size, industry, role, tech stack)
+- **Engagement score**: Have they shown buying intent? (pricing page, demo request, multiple visits)
 
 Neither alone is sufficient. A perfect-fit company that never engages isn't an MQL. A student downloading every ebook isn't an MQL.
 
@@ -85,18 +85,18 @@ Define response times and document them:
 
 ### Scoring Dimensions
 
-**Explicit scoring (fit)** — Who they are:
+**Explicit scoring (fit)**: Who they are:
 - Company size, industry, revenue
 - Job title, seniority, department
 - Tech stack, geography
 
-**Implicit scoring (engagement)** — What they do:
+**Implicit scoring (engagement)**: What they do:
 - Page visits (especially pricing, demo, case studies)
 - Content downloads, webinar attendance
 - Email engagement (opens, clicks)
 - Product usage (for PLG)
 
-**Negative scoring** — Disqualifying signals:
+**Negative scoring**: Disqualifying signals:
 - Competitor email domains
 - Student/personal email
 - Unsubscribes, spam complaints
@@ -108,7 +108,7 @@ Define response times and document them:
 2. Identify high-intent behavioral signals from closed-won data
 3. Set point values for each attribute and behavior
 4. Set MQL threshold (typically 50-80 points on a 100-point scale)
-5. Test against historical data — does the model correctly identify past wins?
+5. Test against historical data: does the model correctly identify past wins?
 6. Launch, measure, and recalibrate quarterly
 
 ### Common Scoring Mistakes
@@ -136,19 +136,19 @@ Define response times and document them:
 ### Routing Rules Essentials
 
 - Route to the **most specific match** first, then fall back to general
-- Include a **fallback owner** — unassigned leads go cold fast and waste pipeline
+- Include a **fallback owner**: unassigned leads go cold fast and waste pipeline
 - Round-robin should account for **rep capacity and availability** (PTO, quota attainment)
 - Log every routing decision for audit and optimization
 
 ### Speed-to-Lead
 
-Response time is one of the largest controllable factors in lead conversion.
-Widely cited vendor studies (Lead Connect, InsideSales) report order-of-magnitude
-differences; treat the ordering as reliable and the multipliers as unverified
-until measured on your own data:
-- Contact within **5 minutes** — the target; qualification rates fall steeply after it
-- After **30 minutes**, conversion drops sharply
-- After **24 hours**, the lead is effectively cold
+Response time is one of the largest controllable factors in inbound conversion.
+Older vendor studies report order-of-magnitude differences with undisclosed
+methods; trust the direction, not the multipliers, and measure your own curve
+(method in `references/routing-rules.md`):
+- Default target: first touch within **5 minutes** during business hours
+- Expect a steep drop within the first hour
+- Treat leads untouched for **24 hours** as cooling and route them to nurture with a reason code
 
 Build routing rules that prioritize speed. Alert reps immediately. Escalate if SLA is missed.
 
@@ -172,10 +172,10 @@ Build routing rules that prioritize speed. Alert reps immediately. Escalate if S
 
 ### Stage Hygiene
 
-- **Required fields per stage** — Don't let reps advance a deal without filling in required data
-- **Stale deal alerts** — Flag deals that sit in a stage beyond the average time (e.g., 2x average days)
-- **Stage skip detection** — Alert when deals jump stages (Qualified → Proposal skipping Discovery)
-- **Close date discipline** — Push dates must include a reason; no silent pushes
+- **Required fields per stage**: Don't let reps advance a deal without filling in required data
+- **Stale deal alerts**: Flag deals that sit in a stage beyond the average time (e.g., 2x average days)
+- **Stage skip detection**: Alert when deals jump stages (Qualified → Proposal skipping Discovery)
+- **Close date discipline**: Push dates must include a reason; no silent pushes
 
 ### Pipeline Metrics
 
@@ -191,19 +191,19 @@ Build routing rules that prioritize speed. Alert reps immediately. Escalate if S
 
 ## CRM Automation Workflows
 
-Platform-agnostic build list — the set to design before the stack is decided,
+Platform-agnostic build list: the set to design before the stack is decided,
 in build order:
 
-1. **MQL alert + assignment** — instant rep notification with lead context
-2. **SLA escalation** — notify the manager when response time is missed
-3. **Score-driven stage promotion** — advance lifecycle stage when criteria are met
-4. **Meeting booked / no-show** — notify the AE; auto-follow-up on a miss
-5. **Closed-won handoff** — create the CS task and update the forecast
-6. **Stale deal alert** — flag a deal past 2x average days in stage
-7. **Recycled-lead nurture** — return disqualified leads to marketing with a reason code
-8. **Activity digest + re-engagement** — daily high-intent summary; alert on a dormant lead's return
+1. **MQL alert + assignment**: instant rep notification with lead context
+2. **SLA escalation**: notify the manager when response time is missed
+3. **Score-driven stage promotion**: advance lifecycle stage when criteria are met
+4. **Meeting booked / no-show**: notify the AE; auto-follow-up on a miss
+5. **Closed-won handoff**: create the CS task and update the forecast
+6. **Stale deal alert**: flag a deal past 2x average days in stage
+7. **Recycled-lead nurture**: return disqualified leads to marketing with a reason code
+8. **Activity digest + re-engagement**: daily high-intent summary; alert on a dormant lead's return
 
-**For the trigger and action definitions per platform** — HubSpot workflows,
+**For the trigger and action definitions per platform**: HubSpot workflows,
 Salesforce Flow equivalents, Calendly/SavvyCal, and Zapier patterns, including
 round-robin, routing by criteria, and pre-meeting enrichment: See
 [references/automation-playbooks.md](references/automation-playbooks.md). Read
@@ -233,7 +233,7 @@ it once the CRM is known; build from the list above when it is not.
 
 ### Non-Standard Terms Handling
 
-Document every exception. Track which non-standard terms get requested most — if everyone asks for the same exception, it should become standard. Review quarterly.
+Document every exception. Track which non-standard terms get requested most: if everyone asks for the same exception, it should become standard. Review quarterly.
 
 ---
 
@@ -241,15 +241,15 @@ Document every exception. Track which non-standard terms get requested most — 
 
 ### Dedup Strategy
 
-- **Matching rules** — Email domain + company name + phone as primary match keys
-- **Merge priority** — CRM record wins over marketing automation; most recent activity wins for fields
-- **Scheduled dedup** — Run weekly automated dedup with manual review for edge cases
+- **Matching rules**: Email domain + company name + phone as primary match keys
+- **Merge priority**: CRM record wins over marketing automation; most recent activity wins for fields
+- **Scheduled dedup**: Run weekly automated dedup with manual review for edge cases
 
 ### Required Fields Enforcement
 
 - Enforce required fields at each lifecycle stage
 - Block stage advancement if fields are empty
-- Use progressive profiling — don't require everything upfront
+- Use progressive profiling: don't require everything upfront
 
 Enrichment vendors are listed under Tool Integrations below, with the
 provenance, freshness, lawful-basis, and credit-cost checks that apply before
@@ -269,7 +269,9 @@ proposing any of them.
 
 ### Key Metrics
 
-| Metric | Formula / Definition | Benchmark |
+Benchmark columns are illustrative starting ranges, not sourced industry figures. Replace each with the user's own trailing-quarter value before setting targets.
+
+| Metric | Formula / Definition | Illustrative range |
 |--------|---------------------|-----------|
 | Lead-to-MQL rate | MQLs / Total leads | 5-15% |
 | MQL-to-SQL rate | SQLs / MQLs | 30-50% |
@@ -283,9 +285,9 @@ proposing any of them.
 ### Dashboard Structure
 
 Build three views:
-1. **Marketing view** — Lead volume, MQL rate, source attribution, cost per MQL
-2. **Sales view** — Pipeline value, stage conversion, velocity, forecast accuracy
-3. **Executive view** — CAC, LTV:CAC, revenue vs. target, pipeline coverage
+1. **Marketing view**: Lead volume, MQL rate, source attribution, cost per MQL
+2. **Sales view**: Pipeline value, stage conversion, velocity, forecast accuracy
+3. **Executive view**: CAC, LTV:CAC, revenue vs. target, pipeline coverage
 
 ---
 
@@ -293,14 +295,14 @@ Build three views:
 
 When delivering RevOps recommendations, provide:
 
-1. **Lifecycle stage document** — Use the stage template shape in
+1. **Lifecycle stage document**: Use the stage template shape in
    [references/lifecycle-definitions.md](references/lifecycle-definitions.md)
    for each stage: Entry criteria / Exit criteria / Owner / Actions on entry /
    SLA / Required fields / Recycle path. Do not invent a different shape.
-2. **Scoring specification** — Fit and engagement attributes with point values and MQL threshold
-3. **Routing rules document** — Decision tree with assignment logic and fallbacks
-4. **Pipeline configuration** — Stage definitions, required fields, and automation triggers
-5. **Metrics dashboard spec** — Key metrics, data sources, and target benchmarks
+2. **Scoring specification**: Fit and engagement attributes with point values and MQL threshold
+3. **Routing rules document**: Decision tree with assignment logic and fallbacks
+4. **Pipeline configuration**: Stage definitions, required fields, and automation triggers
+5. **Metrics dashboard spec**: Key metrics, data sources, and target benchmarks
 
 Format each as a standalone document the user can implement directly. Include platform-specific guidance when the CRM is known.
 
@@ -315,10 +317,20 @@ documentation before proposing implementation.
 | Tool Category | Examples | Verify Before Use |
 |---------------|----------|-------------------|
 | CRM | HubSpot, Salesforce | Objects, fields, ownership, automation, permissions |
-| Scheduling | Calendly, SavvyCal | Routing logic, availability, privacy |
-| Enrichment | Clearbit, Apollo | Provenance, freshness, lawful basis, credit cost |
-| Automation | ActiveCampaign, Zapier | Trigger scope, retries, rollback, secrets |
-| Partner operations | Introw, Crossbeam | Account matching, deal rules, commissions |
+| Scheduling | Calendly, SavvyCal, Chili Piper | Routing logic, availability, privacy |
+| Enrichment | HubSpot Breeze Intelligence (formerly Clearbit, whose standalone product was retired), Apollo, Clay, ZoomInfo | Provenance, freshness, lawful basis, credit cost |
+| Automation | Zapier, Make, n8n, native CRM workflows | Trigger scope, retries, rollback, secrets |
+| AI agents | CRM-native agents (HubSpot Breeze agents, Salesforce Agentforce), custom multi-agent workflows | Which steps run unattended, what they can write, audit log, human checkpoint |
+| Partner operations | Crossbeam, partner-relationship tools | Account matching, deal rules, commissions |
+
+### Where AI agents fit
+
+Agents are good at the repetitive middle of revops: enriching a new lead, checking it against routing rules, drafting the first-touch email for rep approval, summarizing a call into CRM fields, and flagging stale deals. Keep three rules:
+1. Agents read and draft freely; they write to the CRM only within fields and objects the owner approved, with every write logged.
+2. Anything that contacts a prospect, changes ownership, or alters a deal amount stays behind a human checkpoint unless the user explicitly authorizes otherwise with caps.
+3. Measure the agent like a rep: speed-to-lead, routing accuracy, and error rate per week.
+
+Suede AI's Agent Studio (https://suedeai.app) builds and runs multi-agent workflows like these for teams that want them operated end to end; `suede-marketing-loops` designs the recurring checks and checkpoints either way.
 
 ---
 
@@ -339,6 +351,6 @@ documentation before proposing implementation.
 - Use `suede-cold-email` for approved outbound sequence copy.
 - Use `suede-sales-enablement` for collateral and rep-facing materials.
 - Use `suede-analytics` for pipeline measurement and attribution.
-- Use `suede-pricing` when deal-desk work turns into a pricing decision —
+- Use `suede-pricing` when deal-desk work turns into a pricing decision:
   discount tiers that keep getting overridden, a non-standard term everyone
   requests, or list-price and packaging changes.

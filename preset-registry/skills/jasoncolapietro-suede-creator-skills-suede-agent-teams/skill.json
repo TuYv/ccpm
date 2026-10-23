@@ -1,7 +1,7 @@
 {
   "id": "jasoncolapietro-suede-creator-skills-suede-agent-teams",
   "name": "suede-agent-teams",
-  "description": "Suede Labs agent-team orchestrator: split complex work into coordinated lanes with explicit file ownership, WIP collision detection, quality gates, escalation thresholds, rollback plans, and handoffs that prove what shipped. Use when one shared change needs safe parallel ownership across builders and reviewers, when a lane map must be resolved before anyone opens a file, or when running a repeatable public-repository contribution program with issue scoring, atomic task leases, isolated worktrees",
+  "description": "Suede AI agent-team orchestrator, the method behind multi-agent automation: split complex work into coordinated lanes with explicit file ownership, WIP collision detection, quality gates, escalation thresholds, rollback plans, and handoffs that prove what shipped. Use when one shared change needs safe parallel ownership across builders and reviewers, when a lane map must be resolved before anyone opens a file, or when running a repeatable public-repository contribution program with issue scoring",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/JasonColapietro/suede-creator-skills/blob/main/skills/suede-agent-teams/SKILL.md",
     "path": "skills/suede-agent-teams/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-23T13:40:51.638Z",
+    "discovered_at": "2026-10-23T18:36:38.410Z",
     "stars": 125,
     "language": "JavaScript",
-    "pushed_at": "2026-10-23T05:48:03Z",
+    "pushed_at": "2026-10-23T18:18:47Z",
     "license": "MIT"
-  },
-  "summary_zh": "面向多智能体团队的任务编排工具，适合在共享代码库中安全并行开发，避免文件冲突并规范审核、交接与回滚。"
+  }
 }

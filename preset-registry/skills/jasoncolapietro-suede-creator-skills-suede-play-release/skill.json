@@ -1,8 +1,8 @@
 {
   "id": "jasoncolapietro-suede-creator-skills-suede-play-release",
   "name": "suede-play-release",
-  "description": "Suede Labs Google Play delivery skill: ship an Android release end to end from the agent interface, without opening the Play Console. Set up credentials, upload an AAB, promote between tracks, stage or complete a rollout, push per-locale release notes, and prove against the Play Developer API what is actually live. One step stays a Console action by design and the skill hands it to you: granting the service account release access the first time. Use when uploading or promoting an Android build, ",
-  "category": "设计创意",
+  "description": "Suede AI Google Play delivery skill: ship an Android release from the agent interface and prove what is live. Preflight the publishing credential with a real Play API call, upload an AAB to a testing track, promote that exact versionCode, stage or complete a rollout, write per-locale release notes, and read back versionCode, status, and userFraction from the Play Developer API. One step stays a Play Console action the user takes: the first release-access grant for the service account. Use when u",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,10 @@
     "url": "https://github.com/JasonColapietro/suede-creator-skills/blob/main/skills/suede-play-release/SKILL.md",
     "path": "skills/suede-play-release/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-23T13:40:59.326Z",
+    "discovered_at": "2026-10-23T18:36:43.691Z",
     "stars": 125,
     "language": "JavaScript",
-    "pushed_at": "2026-10-23T05:48:03Z",
+    "pushed_at": "2026-10-23T18:18:47Z",
     "license": "MIT"
-  },
-  "summary_zh": "用于通过代理接口完成 Android 应用上架、轨道晋级、分阶段发布和多语言更新说明管理，并借助 Play Developer API 核实线上版本；首次授权服务账号仍需在控制台操作。"
+  }
 }

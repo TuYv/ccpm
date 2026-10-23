@@ -1,13 +1,13 @@
 ---
 name: suede-sales-enablement
-description: "Suede-owned sales-enablement discipline. Use when creating pitch decks, one-pagers, objection guides, demo scripts, talk tracks, battle cards, proposal structures, buyer cards, or deal-level ROI framing. NOT FOR: setting price or terms (use suede-pricing), building the offer (use suede-offers), sending outreach (use suede-cold-email), or publishing unsupported proof."
+description: "Suede AI sales enablement: builds rep-ready pitch decks (10-12 slide narrative), one-pagers, objection libraries, demo scripts and talk tracks, competitive battle cards kept consistent with public comparison pages, proposal structures, buyer cards, and deal-level ROI calculators that separate sourced claims from modeled value. Returns draft assets with a claim-source table, held for approval. Use when creating or refreshing sales collateral, preparing for a competitive deal, or arming reps for objections and demos. NOT FOR: setting price or terms (use suede-pricing), building the offer (use suede-offers), public comparison pages (use suede-competitors), sending outreach (use suede-cold-email), or publishing unsupported proof."
 metadata:
-  version: 2.0.1
+  version: 2.1.0
 ---
 
 # Suede Sales Enablement
 
-Suede Sales Enablement turns verified positioning, proof, and deal context into
+Suede AI Sales Enablement turns verified positioning, proof, and deal context into
 rep-usable decks, one-pagers, objection guides, demos, and playbooks. Every
 asset separates sourced claims from modeled value and remains a draft until its
 audience and version are approved.
@@ -61,23 +61,23 @@ Every claim connects to revenue, efficiency, or risk reduction. Features mean no
 
 ### 10-12 Slide Framework
 
-1. **Current World Problem** — The pain your buyer lives with today
-2. **Cost of the Problem** — What inaction costs (time, money, risk)
-3. **The Shift Happening** — Market or technology change creating urgency
-4. **Your Approach** — How you solve it differently
-5. **Product Walkthrough** — 3-4 key workflows, not a feature tour
-6. **Proof Points** — Metrics, logos, analyst recognition
-7. **Case Study** — One customer story told well
-8. **Implementation / Timeline** — How they get from here to live
-9. **ROI / Value** — Expected return and payback period
-10. **Pricing Overview** — Transparent, tiered if applicable
-11. **Next Steps / CTA** — Clear action with timeline
+1. **Current World Problem**: The pain your buyer lives with today
+2. **Cost of the Problem**: What inaction costs (time, money, risk)
+3. **The Shift Happening**: Market or technology change creating urgency
+4. **Your Approach**: How you solve it differently
+5. **Product Walkthrough**: 3-4 key workflows, not a feature tour
+6. **Proof Points**: Metrics, logos, analyst recognition
+7. **Case Study**: One customer story told well
+8. **Implementation / Timeline**: How they get from here to live
+9. **ROI / Value**: Expected return and payback period
+10. **Pricing Overview**: Transparent, tiered if applicable
+11. **Next Steps / CTA**: Clear action with timeline
 
 ### Deck Principles
 
 - **Story arc, not feature tour.** Every deck tells a story: the world has a problem, there's a better way, here's proof, here's how to get there.
 - **One idea per slide.** If you need two points, use two slides.
-- **Design for presenting, not reading.** Slides support the conversation — they don't replace it. Minimal text, strong visuals.
+- **Design for presenting, not reading.** Slides support the conversation: they don't replace it. Minimal text, strong visuals.
 
 ### Customization by Buyer Type
 
@@ -95,24 +95,24 @@ Every claim connects to revenue, efficiency, or risk reduction. Features mean no
 
 ### When to Use
 
-- **Post-meeting recap** — Reinforce what you discussed, keep momentum
-- **Champion internal selling** — Arm your champion to sell for you
-- **Trade show handout** — Quick intro that drives follow-up
+- **Post-meeting recap**: Reinforce what you discussed, keep momentum
+- **Champion internal selling**: Arm your champion to sell for you
+- **Trade show handout**: Quick intro that drives follow-up
 
 ### Structure
 
-1. **Problem statement** — The pain in one sentence
-2. **Your solution** — What you do and how
-3. **3 differentiators** — Why you vs. alternatives
-4. **Proof point** — One strong metric or customer quote
-5. **CTA** — Clear next step with contact info
+1. **Problem statement**: The pain in one sentence
+2. **Your solution**: What you do and how
+3. **3 differentiators**: Why you vs. alternatives
+4. **Proof point**: One strong metric or customer quote
+5. **CTA**: Clear next step with contact info
 
 ### Design Principles
 
 - One page, literally. Front only, or front and back maximum.
 - Scannable in 30 seconds. Bold headers, short bullets, whitespace.
 - Include your logo, website, and a specific contact (not info@).
-- Match your brand but keep it clean — this is a sales tool, not a brand piece.
+- Match your brand but keep it clean: this is a sales tool, not a brand piece.
 
 **For templates by use case**: See [references/one-pager-templates.md](references/one-pager-templates.md)
 
@@ -135,16 +135,16 @@ Every claim connects to revenue, efficiency, or risk reduction. Features mean no
 
 For each objection, document:
 
-1. **Objection statement** — Exactly how reps hear it
-2. **Why they say it** — The real concern behind the words
-3. **Response approach** — How to acknowledge and redirect
-4. **Proof point** — Specific evidence that addresses the concern
-5. **Follow-up question** — Keep the conversation moving forward
+1. **Objection statement**: Exactly how reps hear it
+2. **Why they say it**: The real concern behind the words
+3. **Response approach**: How to acknowledge and redirect
+4. **Proof point**: Specific evidence that addresses the concern
+5. **Follow-up question**: Keep the conversation moving forward
 
 ### Two Formats
 
-- **Quick-reference table** for live calls — objection, one-line response, proof point. Fits on one screen.
-- **Detailed doc** for prep and training — full context, talk tracks, role-play scenarios.
+- **Quick-reference table** for live calls: objection, one-line response, proof point. Fits on one screen.
+- **Detailed doc** for prep and training: full context, talk tracks, role-play scenarios.
 
 **For the full objection library**: See [references/objection-library.md](references/objection-library.md)
 
@@ -181,7 +181,7 @@ For each objection, document:
 
 ### Implementation Options
 
-Default to **slide-based** — the ROI story lives in the deck the rep already
+Default to **slide-based**: the ROI story lives in the deck the rep already
 presents. Escape to a **spreadsheet** when the prospect supplies and wants to
 change their own inputs; build a **web tool** only when deal volume justifies it.
 
@@ -191,11 +191,11 @@ change their own inputs; build a **web tool** only when deal volume justifies it
 
 ### Script Structure
 
-1. **Opening** (2 min) — Context setting, agenda, confirm goals for the call
-2. **Discovery recap** (3 min) — Summarize what you learned, confirm priorities
-3. **Solution walkthrough** (15-20 min) — 3-4 key workflows mapped to their pain
-4. **Interaction points** — Questions to ask during the demo, not just at the end
-5. **Close** (5 min) — Summarize value, propose next steps with timeline
+1. **Opening** (2 min): Context setting, agenda, confirm goals for the call
+2. **Discovery recap** (3 min): Summarize what you learned, confirm priorities
+3. **Solution walkthrough** (15-20 min): 3-4 key workflows mapped to their pain
+4. **Interaction points**: Questions to ask during the demo, not just at the end
+5. **Close** (5 min): Summarize value, propose next steps with timeline
 
 ### Talk Track Types
 
@@ -224,19 +224,19 @@ Marketing case studies tell a story. Sales case studies arm reps with fast-acces
 
 ### Structure
 
-1. **Customer profile** — Industry, company size, buyer role
-2. **Challenge** — What they were struggling with (2-3 sentences)
-3. **Solution** — What they implemented (1-2 sentences)
-4. **Results** — 3 specific metrics (before/after)
-5. **Pull quote** — One sentence from the customer
-6. **Tags** — Industry, use case, company size, persona
+1. **Customer profile**: Industry, company size, buyer role
+2. **Challenge**: What they were struggling with (2-3 sentences)
+3. **Solution**: What they implemented (1-2 sentences)
+4. **Results**: 3 specific metrics (before/after)
+5. **Pull quote**: One sentence from the customer
+6. **Tags**: Industry, use case, company size, persona
 
 ### Organization
 
 Organize case studies so reps can find the right one instantly:
-- **By industry** — "Show me a case study for healthcare"
-- **By use case** — "Show me someone who used us for X"
-- **By company size** — "Show me an enterprise example"
+- **By industry**: "Show me a case study for healthcare"
+- **By use case**: "Show me someone who used us for X"
+- **By company size**: "Show me an enterprise example"
 
 ---
 
@@ -244,11 +244,11 @@ Organize case studies so reps can find the right one instantly:
 
 ### Structure
 
-1. **Executive summary** — Their challenge, your solution, expected outcome (1 page max)
-2. **Proposed solution** — What you'll deliver, mapped to their requirements
-3. **Implementation plan** — Timeline, milestones, responsibilities
-4. **Investment** — Pricing, payment terms, what's included
-5. **Next steps** — How to move forward, decision timeline
+1. **Executive summary**: Their challenge, your solution, expected outcome (1 page max)
+2. **Proposed solution**: What you'll deliver, mapped to their requirements
+3. **Implementation plan**: Timeline, milestones, responsibilities
+4. **Investment**: Pricing, payment terms, what's included
+5. **Next steps**: How to move forward, decision timeline
 
 ### Customization Guidance
 
@@ -259,9 +259,9 @@ Organize case studies so reps can find the right one instantly:
 
 ### Common Mistakes
 
-- **Too long** — If it's over 10 pages, it won't get read. Aim for 5-7.
-- **Too generic** — Templated proposals signal low effort. Customize the exec summary at minimum.
-- **Burying the price** — Don't make them hunt for it. Be transparent and confident.
+- **Too long**: If it's over 10 pages, it won't get read. Aim for 5-7.
+- **Too generic**: Templated proposals signal low effort. Customize the exec summary at minimum.
+- **Burying the price**: Don't make them hunt for it. Be transparent and confident.
 
 ---
 
@@ -269,23 +269,41 @@ Organize case studies so reps can find the right one instantly:
 
 ### What Goes in a Playbook
 
-- **Buyer profile** — Who you're selling to, their goals and pains
-- **Qualification criteria** — BANT, MEDDIC, or your framework
-- **Discovery questions** — Organized by topic, not a script
-- **Objection handling** — Top 10 objections with responses
-- **Competitive positioning** — How you win against each competitor
-- **Demo flow** — Recommended sequence for each persona
-- **Email templates** — Follow-up, proposal, check-in, breakup
+- **Buyer profile**: Who you're selling to, their goals and pains
+- **Qualification criteria**: BANT, MEDDIC, or your framework
+- **Discovery questions**: Organized by topic, not a script
+- **Objection handling**: Top 10 objections with responses
+- **Competitive positioning**: How you win against each competitor
+- **Demo flow**: Recommended sequence for each persona
+- **Email templates**: Follow-up, proposal, check-in, breakup
 
 ### When to Build
 
-- **New product launch** — Reps need a single source of truth
-- **New market segment** — Different buyers need different approaches
-- **New hire ramp** — Playbooks cut ramp time significantly
+- **New product launch**: Reps need a single source of truth
+- **New market segment**: Different buyers need different approaches
+- **New hire ramp**: Playbooks cut ramp time significantly
 
 ### Keeping It Living
 
 Review quarterly, get input from top reps, remove anything outdated, and assign a named owner.
+
+---
+
+## Competitive Battle Cards
+
+One card per competitor, one page, scannable in a live call.
+
+| Field | Content |
+|-------|---------|
+| When you meet them | Segments, deal sizes, and triggers where they show up |
+| Their pitch | How they describe themselves, quoted from their current site with date |
+| Where we win | 3 differentiators, each with a sourced proof point |
+| Where they push back | Their strongest claims against us, and our honest response |
+| Landmines | Discovery questions that surface our strengths |
+| Pricing context | Public prices with source and date; never guessed |
+| Proof | Win stories and logos the user has approved for this use |
+
+Keep cards and public comparison pages consistent. Buyers now check claims against "vs" pages, review sites, and AI-assistant answers before the call; a rep claim that contradicts the public page loses credibility. Refresh both when a competitor changes pricing or packaging. Evidence gathering and public pages: `suede-competitors` and `suede-competitor-profiling`.
 
 ---
 
@@ -305,11 +323,11 @@ Review quarterly, get input from top reps, remove anything outdated, and assign 
 
 ### Persona Types
 
-- **Economic buyer** — Signs the check. Cares about ROI and risk.
-- **Technical buyer** — Evaluates the product. Cares about capabilities and integration.
-- **End user** — Uses it daily. Cares about ease and workflow fit.
-- **Champion** — Advocates internally. Needs ammunition to sell for you.
-- **Blocker** — Opposes the purchase. Understand their concern to neutralize it.
+- **Economic buyer**: Signs the check. Cares about ROI and risk.
+- **Technical buyer**: Evaluates the product. Cares about capabilities and integration.
+- **End user**: Uses it daily. Cares about ease and workflow fit.
+- **Champion**: Advocates internally. Needs ammunition to sell for you.
+- **Blocker**: Opposes the purchase. Understand their concern to neutralize it.
 
 ---
 
@@ -326,27 +344,30 @@ Deliver the right format for each asset type:
 | ROI calculator | Input fields, formulas, output display with sample data |
 | Playbook | Structured document with table of contents and sections |
 | Persona card | One-page card format per persona |
+| Battle card | One page per competitor in the field table above |
 | Proposal | Section-by-section copy with customization notes |
 
-Every proof point and every ROI figure in a delivered asset carries an inline tag: `[source: named customer / study / internal report + date]` or `[modeled — assumptions: the inputs used]`. An untagged number is a delivery blocker — tag it or cut it before the asset goes out. The sales deck deliverable uses this unit, repeated for each of the 11 slides above:
+Close every delivery with a **claim-source table**: each number, customer name, and capability claim in the asset, its source and date or its modeled assumptions, and whether the user has approved it for external use.
+
+Every proof point and every ROI figure in a delivered asset carries an inline tag: `[source: named customer / study / internal report + date]` or `[modeled, assumptions: the inputs used]`. An untagged number is a delivery blocker: tag it or cut it before the asset goes out. The sales deck deliverable uses this unit, repeated for each of the 11 slides above:
 
 ```markdown
-### Slide N — [slide name]
+### Slide N: [slide name]
 **Headline:** [the single idea, written as a sentence]
 **Body copy:** [on-slide text, minimal]
 **Speaker notes:** [what the rep says out loud, not a re-read of the slide]
 **Visual:** [chart / screenshot / logo wall / none]
-**Proof:** [source: …] or [modeled — assumptions: …] for every number above
+**Proof:** [source: …] or [modeled, assumptions: …] for every number above
 ```
 
 ---
 
 ## Tool Integrations
 
-Partner platforms such as Introw can support engagement tracking, deal
-registration, and mutual action plans. Treat that as an evaluation lead, not a
-guaranteed integration: verify current vendor documentation, authenticated
-access, pricing, permissions, and data-export behavior before use.
+Partner-relationship and digital-sales-room platforms can support engagement
+tracking, deal registration, and mutual action plans. Treat any named vendor as
+an evaluation lead, not a guaranteed integration: verify current documentation,
+authenticated access, pricing, permissions, and data-export behavior before use.
 
 ---
 

@@ -1,7 +1,7 @@
 {
   "id": "jasoncolapietro-suede-creator-skills-suede-rights-passport",
   "name": "suede-rights-passport",
-  "description": "Suede Labs skill that turns messy creator materials into a local, offline rights-and-provenance transfer package: inventoried and hashed assets, a normalized suede-intake.json manifest, credits and splits, license notes, provenance, and a missing-information report, validated by a bundled stdlib script. Use when a creator needs to hand a song, release, or project to a collaborator, advisor, registry, marketplace, or label; when someone asks for a rights package, intake package, or handoff folder",
+  "description": "Suede AI rights skill for creator projects, in two modes. Audit mode finds the rights gaps in a song, release, or catalog (ownership, contributors, splits, samples, licenses, provenance, AI involvement, licensing and royalty-routing readiness) and marks each confirmed or unknown in an evidence table. Package mode turns messy materials into a local, offline transfer package for handoff: hashed assets, a normalized suede-intake.json manifest, credits and splits, license notes, provenance, and a mi",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/JasonColapietro/suede-creator-skills/blob/main/skills/suede-rights-passport/SKILL.md",
     "path": "skills/suede-rights-passport/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-08-29T03:59:13.402Z",
-    "stars": 133,
+    "discovered_at": "2026-10-23T18:36:44.916Z",
+    "stars": 125,
     "language": "JavaScript",
-    "pushed_at": "2026-08-28T04:55:36Z",
+    "pushed_at": "2026-10-23T18:18:47Z",
     "license": "MIT"
-  },
-  "summary_zh": "一款本地离线整理工具，可将零散创作资料生成规范的版权与来源交接包，适合歌曲或项目对外合作、登记和发行。"
+  }
 }

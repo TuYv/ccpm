@@ -1,7 +1,7 @@
 {
   "id": "jasoncolapietro-suede-creator-skills-suede-analytics",
   "name": "suede-analytics",
-  "description": "Suede-owned measurement discipline for tracking plans, event and conversion instrumentation, UTM and campaign-parameter hygiene, and verification of what actually fires. Use when setting up, auditing, or repairing analytics across web, product, paid, and lifecycle surfaces. NOT FOR: experiment design or significance decisions (use suede-ab-testing), campaign optimization (use suede-ads), attribution models, model comparison, or cross-tool reconciliation (use suede-attribution), or revenue-proces",
+  "description": "Suede AI measurement discipline: tracking plans, event and key-event instrumentation in GA4 and GTM, consent mode v2, UTM hygiene, AI assistant and organic search channel grouping, and readback proof of what actually fires. Use when setting up, auditing, or repairing analytics across web, product, paid, and lifecycle surfaces. NOT FOR: experiment design or significance (use suede-ab-testing), campaign optimization (use suede-ads), attribution models, model comparison, or cross-tool reconciliatio",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/JasonColapietro/suede-creator-skills/blob/main/skills/suede-analytics/SKILL.md",
     "path": "skills/suede-analytics/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-23T13:40:52.295Z",
+    "discovered_at": "2026-10-23T18:36:38.839Z",
     "stars": 125,
     "language": "JavaScript",
-    "pushed_at": "2026-10-23T05:48:03Z",
+    "pushed_at": "2026-10-23T18:18:47Z",
     "license": "MIT"
-  },
-  "summary_zh": "一套分析埋点与测量规范，用于搭建、审计或修复网站、产品、广告及用户生命周期中的事件、转化和活动参数追踪。"
+  }
 }
