@@ -1,0 +1,25 @@
+{
+  "id": "alirezarezvani-claude-skills-cs-frontend-engineer",
+  "name": "cs-frontend-engineer",
+  "description": "Frontend-engineering orchestrator. Walks the 7 Matt Pocock forcing questions (device, LCP target, rendering, bundle budget, SEO vs auth, design system, WCAG), picks the framework/rendering profile, forks into specialists (a11y-audit, apple-hig-expert, epic-design, performance-profiler, playwright-pro — listed alphabetically; workflow order is dependency-driven) rather than reimplementing their scope. Forks own context. Invoke via /cs-frontend-review or Agent({subagent_type:\"cs-frontend-engineer\"",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alirezarezvani",
+  "install_path": ".claude/skills/cs-frontend-engineer/SKILL.md",
+  "source": {
+    "repo": "alirezarezvani/claude-skills",
+    "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/cs-frontend-engineer/SKILL.md",
+    "path": ".gemini/skills/cs-frontend-engineer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-23T14:22:56.410Z",
+    "stars": 28587,
+    "language": "Python",
+    "pushed_at": "2026-10-23T11:30:28Z",
+    "license": "MIT"
+  }
+}

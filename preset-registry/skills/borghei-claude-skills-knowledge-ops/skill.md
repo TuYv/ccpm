@@ -45,14 +45,14 @@ knowledge bases need 30% fewer pages, not more pages.
 
 ## Clarify First
 
-Before generating, confirm these inputs. If any is unknown or vague, ASK — do not assume:
+Before generating, settle the inputs below. When one is missing or vague and would change the result, ask about it; when it wouldn't, use a sensible default and say which one you used.
 
-- [ ] **Which docs are load-bearing vs archival** — a stale onboarding runbook is an incident; a stale 2019 retro is fine, and treating them identically produces a backlog nobody works
-- [ ] **Whether pages can be deleted or only archived** — deletion authority roughly halves the remediation effort, so the plan differs structurally
-- [ ] **Who can be assigned as an owner** — ownership assigned to a team alias rather than a person is the same as no owner, and the audit will keep reporting it
-- [ ] **The as-of date for the audit** — staleness is relative, and an undated audit cannot be compared against the next one
+- **Which docs are load-bearing vs archival:** a stale onboarding runbook is an incident; a stale 2019 retro is fine, and treating them identically produces a backlog nobody works.
+- **Whether pages can be deleted or only archived:** deletion authority roughly halves the remediation effort, so the plan differs structurally.
+- **Who can be assigned as an owner:** ownership assigned to a team alias rather than a person is the same as no owner, and the audit will keep reporting it.
+- **The as-of date for the audit:** staleness is relative, and an undated audit cannot be compared against the next one.
 
-Stop rule: ask only the 2-3 that most change the output. If the user says "just draft it," proceed and list your assumptions at the top of the artifact.
+Ask about the two or three inputs that matter most for this request, not the whole list. If the user wants a result straight away, produce it and state your assumptions at the top.
 
 ## Workflows
 
@@ -209,3 +209,22 @@ gets ignored by the people who fund the remediation.
 | `assets/kb-audit-report-template.md` | Report template for presenting audit findings and a remediation plan |
 | `assets/doc-ownership-charter.md` | Charter defining what a doc owner is accountable for |
 | `assets/sample_kb.json` | Runnable inventory used by all three scripts |
+
+## Scope & Limitations
+
+**In Scope:**
+- KB health scoring with `scripts/kb_health_auditor.py`: staleness against tiered freshness SLAs, missing owners, duplicate titles and thin pages, from a JSON inventory or a directory of markdown with frontmatter
+- Link-graph analysis with `scripts/orphan_detector.py`: orphans, dead links, hub pages and traffic-weighted triage
+- A ranked documentation-debt backlog with `scripts/doc_debt_ranker.py`, sorted into do-now, schedule, batch and drop by value and effort
+- Frameworks for freshness SLA tiers, orphan triage, duplicate resolution and health score bands, plus an audit report template and ownership charter
+
+**Out of Scope:**
+- Writing or rewriting the documentation itself
+- Reading pages from Confluence, Notion or another wiki; for platform administration see `project-management/confluence-expert/` and `project-management/notion-pm/`
+- Choosing, configuring or tuning a search engine
+- Mapping the business processes the docs describe (see `business-operations/process-mapper/`)
+
+**Important Caveats:**
+- The scripts work on an inventory you export or build. Traffic, owners and links are only as complete as that export, and the orphan detector needs a JSON inventory with `links_to`; it cannot scan a directory.
+- Duplicate detection matches identical titles only. Pages that cover the same topic under different titles need a human review.
+- Docs with no tier default to the Reference tier, and the SLA days and score bands are defaults. The health score is most useful as a trend across runs with an explicit `--as-of` date.

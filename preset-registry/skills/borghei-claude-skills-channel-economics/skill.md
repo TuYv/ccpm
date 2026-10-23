@@ -11,7 +11,7 @@ metadata:
   category: commercial
   domain: business-growth
   updated: 2026-05-27
-  tags: [channel-economics, channel-strategy, partner-program, margin-analysis, gtm, reseller, distributor, marketplace, msp]
+  tags: [channel-economics, channel-strategy, partner-program, margin-analysis, gtm, reseller, distributor, marketplace]
 ---
 
 # Channel Economics
@@ -209,14 +209,14 @@ See [references/channel-conflict-resolution.md](references/channel-conflict-reso
 
 ## Clarify First
 
-Before modeling the channel economics, confirm these inputs. If any is unknown or vague, ASK — do not assume:
+Before modeling the channel economics, settle the inputs below. When one is missing or vague and would change the result, ask about it; when it wouldn't, use a sensible default and say which one you used.
 
-- [ ] **Channel model(s) in scope** — direct, reseller/VAR, distributor, marketplace, OEM, or MSP (sets which decision-tree branch and TCO comparison to run)
-- [ ] **Target ACV / price point** — sub-$10k vs mid-market vs enterprise (selects the viable channel branch and sizes per-deal margin)
-- [ ] **Fully-loaded cost lines** — COGS %, allocated sales/marketing/ops/support costs (drives the TCO contribution-margin model, not just the headline discount)
-- [ ] **Partner contribution + tier intent** — what the partner does (lead, sell, implement) and whether you're designing tiers/rebates (drives tier economics + rebate/SPIFF mix)
+- **Channel model(s) in scope:** direct, reseller/VAR, distributor, marketplace, OEM, or MSP (sets which decision-tree branch and TCO comparison to run).
+- **Target ACV / price point:** sub-$10k vs mid-market vs enterprise (selects the viable channel branch and sizes per-deal margin).
+- **Fully-loaded cost lines:** COGS %, allocated sales/marketing/ops/support costs (drives the TCO contribution-margin model, not just the headline discount).
+- **Partner contribution + tier intent:** what the partner does (lead, sell, implement) and whether you're designing tiers/rebates (drives tier economics + rebate/SPIFF mix).
 
-Stop rule: ask only the 2-3 that most change the output. If the user says "just draft it," proceed and list your assumptions at the top of the model.
+Ask about the two or three inputs that matter most for this request, not the whole list. If the user wants a result straight away, produce it and state your assumptions at the top.
 
 ## End-to-end workflows
 
@@ -279,6 +279,29 @@ Stop rule: ask only the 2-3 that most change the output. If the user says "just 
 | `scripts/channel_mix_optimizer.py` | Revenue CSV (by channel + quarter) | Per-channel revenue contribution, per-channel margin contribution, recommended rebalancing |
 
 All scripts: stdlib only, argparse CLI, JSON or markdown output.
+
+---
+
+## Scope & Limitations
+
+**In Scope:**
+- Channel model selection with the decision tree across self-serve, direct, reseller/VAR, distributor, marketplace, OEM/embedded and MSP
+- Per-deal net contribution margin and TCO comparison by channel with `scripts/channel_margin_calculator.py`, including an all-channel comparison
+- Partner tier economics (margin to vendor and partner, partner break-even, graduation incentive) with `scripts/partner_tier_economics.py`
+- Channel mix analysis and rebalancing recommendations from a revenue and cost CSV with `scripts/channel_mix_optimizer.py`
+- Front-end discount, back-end rebate and MDF/SPIFF mix design, and channel conflict resolution patterns
+
+**Out of Scope:**
+- Strategic partnership design and partner evaluation (see `business-growth/partnerships-architect/`)
+- Approval of individual non-standard partner deals (see `business-growth/deal-desk/`)
+- Drafting partner agreements (see `business-growth/contract-and-proposal-writer/`)
+- Setting list pricing (see `business-growth/pricing-strategy/`)
+- Running channel operations such as deal registration, MDF approval and certification tracking (see `sales-success/sales-operations/`)
+
+**Important Caveats:**
+- The scripts read deal, tier and revenue data from YAML and CSV files you prepare. They do not connect to a CRM, partner portal or marketplace account, and their built-in YAML parser handles simple maps and lists only.
+- Margin splits, marketplace fees, tier thresholds, rebate mixes and the ACV bands in the decision tree are illustrative. Replace them with your own contract terms and cost data.
+- Results depend on how sales, marketing, enablement, ops and support costs are allocated to each channel. A different allocation can change which channel looks best.
 
 ---
 

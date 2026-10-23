@@ -1,0 +1,25 @@
+{
+  "id": "alirezarezvani-claude-skills-seo-auditor",
+  "name": "seo-auditor",
+  "description": "| Scan and optimize documentation files for SEO. Audits README.md files and docs/ pages for meta tags, headings, keywords, readability, duplicate content, and broken links. Applies fixes, updates sitemap.xml, and generates a report. Usage: /seo-auditor [path]",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alirezarezvani",
+  "install_path": ".claude/skills/seo-auditor/SKILL.md",
+  "source": {
+    "repo": "alirezarezvani/claude-skills",
+    "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/seo-auditor/SKILL.md",
+    "path": ".gemini/skills/seo-auditor/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-23T14:23:02.626Z",
+    "stars": 28587,
+    "language": "Python",
+    "pushed_at": "2026-10-23T11:30:28Z",
+    "license": "MIT"
+  }
+}

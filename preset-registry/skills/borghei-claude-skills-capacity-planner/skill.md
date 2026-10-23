@@ -43,14 +43,14 @@ publishes the cut line.
 
 ## Clarify First
 
-Before generating, confirm these inputs. If any is unknown or vague, ASK — do not assume:
+Before generating, settle the inputs below. When one is missing or vague and would change the result, ask about it; when it wouldn't, use a sensible default and say which one you used.
 
-- [ ] **Is this a supply question or a demand question?** — sizing a hiring ask and testing a roadmap use different scripts and produce different artifacts
-- [ ] **Who counts as delivery capacity?** — including managers, tech leads, or unfilled reqs at full FTE changes the answer by 10-40%
-- [ ] **Are the estimates already risk-adjusted?** — applying the confidence inflation twice overstates demand by 40%+; applying it zero times understates it by the same
-- [ ] **Is the buffer set from history or from intent?** — the unplanned-work reserve is the single largest lever on the cut line
+- **Is this a supply question or a demand question?:** sizing a hiring ask and testing a roadmap use different scripts and produce different artifacts.
+- **Who counts as delivery capacity?:** including managers, tech leads, or unfilled reqs at full FTE changes the answer by 10-40%.
+- **Are the estimates already risk-adjusted?:** applying the confidence inflation twice overstates demand by 40%+; applying it zero times understates it by the same.
+- **Is the buffer set from history or from intent?:** the unplanned-work reserve is the single largest lever on the cut line.
 
-Stop rule: ask only the 2-3 that most change the output. If the user says "just draft it," proceed and list your assumptions at the top of the artifact.
+Ask about the two or three inputs that matter most for this request, not the whole list. If the user wants a result straight away, produce it and state your assumptions at the top.
 
 ## Workflows
 
@@ -202,3 +202,22 @@ delivery even when every estimate is correct.
 | `assets/sample_team.json` | Seven-person roster covering ramping hires, part-time, and multiple disciplines |
 | `assets/sample_commitments.json` | Nine commitments against the capacity produced by `capacity_model.py` on the sample roster |
 | `assets/sample_scenarios.json` | Four-quarter demand curve with hire, contract, and defer scenarios |
+
+## Scope & Limitations
+
+**In Scope:**
+- Effective capacity from a team roster with `scripts/capacity_model.py`: booked PTO, on-call, meeting and overhead load, and new-hire ramp by seniority, reported per person and per discipline
+- The cut line with `scripts/commitment_gap.py`: estimates inflated by confidence band, filled in priority order against capacity minus an unplanned-work buffer, with committed items above the line flagged
+- Hire, contract and defer scenario comparison over a multi-quarter horizon with `scripts/scenario_compare.py`, including cost per delivered hour
+- Decision frameworks for gross-to-effective conversion, gap-closing levers, estimation inflation and utilisation bands, plus a quarterly capacity plan template
+
+**Out of Scope:**
+- Sprint-level planning and story selection (see `project-management/execution/sprint-plan/`)
+- Recruiting, sourcing and running the hiring process (see `hr-operations/talent-acquisition/`)
+- Budgeting and financial forecasting beyond the cost of staffing scenarios (see `finance/financial-analyst/`)
+- Deciding which roadmap items matter most; the skill takes priorities as input (see `project-management/execution/prioritization-frameworks/`)
+
+**Important Caveats:**
+- All inputs are JSON files you prepare. The scripts do not read calendars, HR systems or issue trackers, so PTO, meeting load and estimates are only as good as what you enter.
+- Ramp curves, confidence multipliers, the 20% default buffer and the effective-hours benchmarks are planning defaults. Recalibrate them against your own actuals after two quarters, as the skill recommends.
+- Scenario costs depend on the salary and contractor rates you supply. The output is a planning comparison, not a budget or an offer.

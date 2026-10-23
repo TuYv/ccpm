@@ -1,0 +1,25 @@
+{
+  "id": "alirezarezvani-claude-skills-cs-engineering-lead",
+  "name": "cs-engineering-lead",
+  "description": "Engineering Team Lead agent for coordinating QA, security, data engineering, ML, and frontend/backend teams. Orchestrates engineering-team skills for team-level technical decisions. Spawn when users need team coordination, tech stack evaluation, incident response, or cross-functional engineering work.",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alirezarezvani",
+  "install_path": ".claude/skills/cs-engineering-lead/SKILL.md",
+  "source": {
+    "repo": "alirezarezvani/claude-skills",
+    "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/cs-engineering-lead/SKILL.md",
+    "path": ".gemini/skills/cs-engineering-lead/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-23T14:22:56.060Z",
+    "stars": 28587,
+    "language": "Python",
+    "pushed_at": "2026-10-23T11:30:28Z",
+    "license": "MIT"
+  }
+}

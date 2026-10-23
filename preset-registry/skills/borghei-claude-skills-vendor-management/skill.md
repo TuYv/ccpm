@@ -41,14 +41,14 @@ around preventing both.
 
 ## Clarify First
 
-Before generating, confirm these inputs. If any is unknown or vague, ASK — do not assume:
+Before generating, settle the inputs below. When one is missing or vague and would change the result, ask about it; when it wouldn't, use a sensible default and say which one you used.
 
-- [ ] **Is the notice deadline known, or only the renewal date?** — the notice deadline is what constrains action, and missing it removes all leverage for a full term
-- [ ] **Were the scoring weights set before any vendor was scored?** — weights chosen after seeing candidates produce a justification, not a decision
-- [ ] **What does this vendor actually hold or touch?** — data sensitivity and criticality drive the risk tier; spend does not
-- [ ] **Which must-haves are genuinely pass/fail?** — every entry on that list eliminates a candidate, so preferences belong in the weighted criteria
+- **Is the notice deadline known, or only the renewal date?:** the notice deadline is what constrains action, and missing it removes all leverage for a full term.
+- **Were the scoring weights set before any vendor was scored?:** weights chosen after seeing candidates produce a justification, not a decision.
+- **What does this vendor actually hold or touch?:** data sensitivity and criticality drive the risk tier; spend does not.
+- **Which must-haves are genuinely pass/fail?:** every entry on that list eliminates a candidate, so preferences belong in the weighted criteria.
 
-Stop rule: ask only the 2-3 that most change the output. If the user says "just draft it," proceed and list your assumptions at the top of the artifact.
+Ask about the two or three inputs that matter most for this request, not the whole list. If the user wants a result straight away, produce it and state your assumptions at the top.
 
 ## Workflows
 
@@ -200,3 +200,23 @@ contract lets you add seats mid-term and forbids reducing them.
 | `assets/sample_vendor_candidates.json` | Four candidates including one disqualified on a must-have and a near-tie between the top two |
 | `assets/sample_portfolio.json` | Ten-vendor portfolio with a locked auto-renewal, an unowned contract, and a consolidation candidate |
 | `assets/sample_sla.json` | Five metrics in both directions with credit tiers, a capped credit total, and a degrading trend |
+
+## Scope & Limitations
+
+**In Scope:**
+- Vendor selection scorecards with must-have gating, weighted scoring, a cost-value ratio and a weight-sensitivity check (`vendor_scorecard.py`).
+- Portfolio review covering renewal and notice-deadline tracking, derived risk tiers, HHI spend concentration, unowned contracts and consolidation candidates (`portfolio_analyzer.py`).
+- SLA compliance with error-budget severity, credit tiers against the contractual cap, and multi-period trend (`sla_report.py`).
+- Risk tiering by data sensitivity and business criticality, a renewal calendar, ranked leverage sources and terms worth more than price, with selection and business-review templates.
+
+**Out of Scope:**
+- Seat utilisation and redundant-tool analysis on SaaS spend (see `business-operations/procurement-optimizer/`).
+- Contract drafting, legal review and redlining (see `legal/contract-review/` and `legal/tech-contract-negotiation/`).
+- Detailed security and compliance due diligence on a vendor (see `legal/vendor-due-diligence/`).
+- Regulatory third-party risk programmes such as DORA ICT third-party requirements (see `ra-qm-team/dora-compliance-expert/`).
+
+**Important Caveats:**
+- All input is manual JSON. The tools do not read contracts, procurement systems or monitoring data, so notice periods and SLA actuals are copied in by hand.
+- Scores and risk tiers reflect the weights, scores and risk inputs entered. The tier model is a heuristic and does not replace a security review.
+- Notice deadlines are derived from the renewal date and notice days entered. They need checking against the signed contract, and the output is not legal advice.
+- Results depend on the `as_of` date and go stale as dates pass.

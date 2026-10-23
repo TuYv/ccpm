@@ -1,0 +1,25 @@
+{
+  "id": "alirezarezvani-claude-skills-cs-backend-review",
+  "name": "cs-backend-review",
+  "description": "Backend engineering review — walks the 7 Matt Pocock forcing questions (read/write ratio + QPS, tenancy, sync vs async, data sensitivity, pattern, RPO/RTO, SLO), picks the language + pattern profile, forks into specialists (api-design-reviewer, database-designer, migration-architect, slo-architect). Invokes the cs-backend-engineer agent with context fork.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alirezarezvani",
+  "install_path": ".claude/skills/cs-backend-review/SKILL.md",
+  "source": {
+    "repo": "alirezarezvani/claude-skills",
+    "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/cs-backend-review/SKILL.md",
+    "path": ".gemini/skills/cs-backend-review/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-23T14:22:55.091Z",
+    "stars": 28587,
+    "language": "Python",
+    "pushed_at": "2026-10-23T11:30:28Z",
+    "license": "MIT"
+  }
+}

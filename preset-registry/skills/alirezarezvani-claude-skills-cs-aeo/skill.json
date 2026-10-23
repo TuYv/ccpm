@@ -1,0 +1,25 @@
+{
+  "id": "alirezarezvani-claude-skills-cs-aeo",
+  "name": "cs-aeo",
+  "description": "Answer Engine Optimization (AEO) specialist agent. Use when content needs to be optimized for citation by AI language models (ChatGPT, Perplexity, Claude, Gemini, Mistral) rather than for traditional search rankings. Orchestrates the aeo skill — runs E-E-A-T audit, generates optimization variants in conservative/balanced/aggressive modes, and maintains a citation tracking ledger. Industry-aware (8 industries with calibrated thresholds). Distinguishes AEO from SEO and refuses to optimize for one ",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alirezarezvani",
+  "install_path": ".claude/skills/cs-aeo/SKILL.md",
+  "source": {
+    "repo": "alirezarezvani/claude-skills",
+    "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/cs-aeo/SKILL.md",
+    "path": ".gemini/skills/cs-aeo/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-23T14:22:54.631Z",
+    "stars": 28587,
+    "language": "Python",
+    "pushed_at": "2026-10-23T11:30:28Z",
+    "license": "MIT"
+  }
+}

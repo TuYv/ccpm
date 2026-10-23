@@ -40,6 +40,16 @@ realities of post-sale teams.
 - VoC instruments in place (NPS, CSAT, CES, in-app surveys, win/loss, churn interviews)
 - Top frictions: from CEO, GTM partner (CRO), product, support, customers
 
+## Clarify First
+
+CX advice depends most on the segment mix, the retention numbers, and what the CCO actually owns. Settle the inputs below before advising. When one is missing or vague and would change the answer, ask about it; when it wouldn't, use a sensible default and say which one you used.
+
+- **Segment mix and motion:** Enterprise, Mid-Market, SMB and PLG customers get different CSM coverage (from 10-25 accounts per CSM to 1000+), engagement cadences and health-score sensitivity. Advice that ignores the mix will be wrong for most of the book.
+- **Trailing NRR, GRR and churn by segment:** these show whether the problem is retention or expansion, and where it sits. The churn intervention plan, the NRR thesis and the board section all start from them.
+- **Scope of the CCO role:** whether renewals, expansion, support and customer marketing sit with the CCO or with the CRO and CMO changes who acts on the advice. Most scope disputes come from leaving this unstated.
+
+If `~/.claude/company-context.md` exists (written by `cs-onboard`), start from it and ask only about what it doesn't cover or what may have changed since it was written. Ask about the two or three inputs that matter most for this request, not the whole list. If the user wants an answer straight away, give it and state your assumptions at the top.
+
 ## Workflows
 
 ### Workflow 1 — Score CX maturity
@@ -175,6 +185,26 @@ Things often credited for NRR that don't move the needle:
 - **Renewals as a finance task.** Renewals are a strategic moment; insist on a 90/60/30 motion.
 - **Expansion as cross-sell-only.** Usage-driven expansion is durable; cross-sell is volatile.
 
+## Scope & Limitations
+
+**In Scope:**
+- CX strategy, CCO scope definition and the Sales, CS, Support and Services operating model
+- CX maturity scoring (0-100) across strategy, segmentation, journey, voice, operations and talent with `cx_maturity_scorer.py`
+- Prioritized churn interventions for at-risk accounts, with owner and SLA, from `churn_intervention_planner.py`
+- VoC program scoring, target architecture and a 12-month rollout from `voc_program_designer.py`
+- NRR thesis, CSM coverage ratios and the customer section of a board deck
+
+**Out of Scope:**
+- Day-to-day CSM playbooks and account management (see `business-growth/customer-success-manager/`)
+- Running save campaigns and cancel flows (see `business-growth/churn-prevention/`)
+- Renewal and expansion forecasting owned by the revenue org (see `c-level-advisor/cro-advisor/`)
+- Fielding surveys, running interviews or pulling data from a CRM or support tool
+
+**Important Caveats:**
+- The tools read JSON you prepare by hand. They do not connect to a CRM, CS platform or survey tool, so results are only as current as the export behind them.
+- Priority scores and intervention choices come from a fixed catalog keyed by risk driver and segment. They are heuristics, not a churn prediction model.
+- CSM coverage ratios and NRR benchmarks are rough guides that vary by company. Treat them as a starting point, not a target.
+
 ## References
 
 - `references/customer-experience-strategy.md` — CX strategy framing, segmentation, scorecards
@@ -188,4 +218,4 @@ Things often credited for NRR that don't move the needle:
 - `c-level-advisor/cmo-advisor` — customer marketing alignment
 - `c-level-advisor/cro-advisor` — renewals + expansion boundary
 - `c-level-advisor/cpo-advisor` — feedback loop to product
-- `product-team/user-research` — interview frameworks for churn / expansion
+- `product-team/ux-researcher-designer` — interview frameworks for churn / expansion

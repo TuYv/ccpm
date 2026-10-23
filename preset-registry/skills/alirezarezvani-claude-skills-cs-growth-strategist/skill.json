@@ -1,0 +1,25 @@
+{
+  "id": "alirezarezvani-claude-skills-cs-growth-strategist",
+  "name": "cs-growth-strategist",
+  "description": "Growth Strategist agent for revenue operations, sales engineering, customer success, and business development. Orchestrates business-growth skills. Spawn when users need pipeline analysis, churn prevention, expansion scoring, sales demos, or proposal writing.",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alirezarezvani",
+  "install_path": ".claude/skills/cs-growth-strategist/SKILL.md",
+  "source": {
+    "repo": "alirezarezvani/claude-skills",
+    "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/cs-growth-strategist/SKILL.md",
+    "path": ".gemini/skills/cs-growth-strategist/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-23T14:22:57.004Z",
+    "stars": 28587,
+    "language": "Python",
+    "pushed_at": "2026-10-23T11:30:28Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "career-ops-hq-career-ops-notion",
+  "name": "career-ops-plugin-notion",
+  "description": "How to mirror the career-ops tracker to a Notion database and read records back as job leads.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "career-ops-hq",
+  "install_path": ".claude/skills/notion/SKILL.md",
+  "source": {
+    "repo": "career-ops-hq/career-ops",
+    "url": "https://github.com/career-ops-hq/career-ops/blob/main/plugins/notion/skill.md",
+    "path": "plugins/notion/skill.md",
+    "branch": "main",
+    "discovered_at": "2026-10-23T14:33:00.512Z",
+    "stars": 76754,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-23T13:40:20Z",
+    "license": "MIT"
+  }
+}

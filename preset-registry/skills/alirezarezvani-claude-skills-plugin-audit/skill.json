@@ -1,0 +1,25 @@
+{
+  "id": "alirezarezvani-claude-skills-plugin-audit",
+  "name": "plugin-audit",
+  "description": "| Comprehensive audit pipeline for skills, plugins, agents, and commands. Validates structure, quality, security, marketplace compliance, cross-platform compatibility, and ecosystem integration. Runs all built-in validation tools, invokes domain-appropriate agents for code review, and produces a pass/fail gate report. Usage: /plugin-audit <skill-path>",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alirezarezvani",
+  "install_path": ".claude/skills/plugin-audit/SKILL.md",
+  "source": {
+    "repo": "alirezarezvani/claude-skills",
+    "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/plugin-audit/SKILL.md",
+    "path": ".gemini/skills/plugin-audit/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-23T14:23:01.332Z",
+    "stars": 28587,
+    "language": "Python",
+    "pushed_at": "2026-10-23T11:30:28Z",
+    "license": "MIT"
+  }
+}

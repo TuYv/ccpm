@@ -1,7 +1,7 @@
 ---
 name: gcloud
 metadata:
-  version: "1.0.1"
+  version: "1.0.2"
   category: CloudInfrastructureAndServices
 description: >-
   Provides safety-critical validation, guardrails, and data reduction for gcloud
@@ -205,6 +205,15 @@ human-in-the-loop authorization:
 *   **No Proactive API Enabling**: Assume necessary APIs are enabled. To prevent
     unexpected resource provisioning or billing charges, do not proactively try
     to enable APIs. User approval is required to enable any API.
+*   **No Proactive `gcloud` CLI Installation** (Host Modification): Never
+    autonomously install the Google Cloud CLI (`gcloud` CLI) or additional
+    `gcloud` CLI components (`gcloud components install`, `gcloud components
+    update`, or system package manager installs of the `gcloud` CLI). If the
+    `gcloud` binary or a required CLI component is missing, you **must** inform
+    the user, ask for explicit user confirmation (e.g., *"I am ready to install
+    the Google Cloud CLI (`gcloud`). Do you want me to proceed?"*), and
+    **strictly stop** to wait for the user's positive affirmation before
+    executing any installation commands.
 *   **`gcloud * delete`** (Destructive): Irreversible resource destruction
     (e.g., project deletion) or data wiping.
 *   **`gcloud billing *`** (Financial): Risk of service disruption or unbounded

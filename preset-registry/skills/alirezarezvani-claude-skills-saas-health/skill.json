@@ -1,0 +1,25 @@
+{
+  "id": "alirezarezvani-claude-skills-saas-health",
+  "name": "saas-health",
+  "description": "Calculate SaaS health metrics (ARR, MRR, churn, CAC, LTV, NRR) and benchmark against industry standards. Usage: /saas-health <metrics|quick-ratio|simulate> [options]",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alirezarezvani",
+  "install_path": ".claude/skills/saas-health/SKILL.md",
+  "source": {
+    "repo": "alirezarezvani/claude-skills",
+    "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/saas-health/SKILL.md",
+    "path": ".gemini/skills/saas-health/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-23T14:23:02.458Z",
+    "stars": 28587,
+    "language": "Python",
+    "pushed_at": "2026-10-23T11:30:28Z",
+    "license": "MIT"
+  }
+}

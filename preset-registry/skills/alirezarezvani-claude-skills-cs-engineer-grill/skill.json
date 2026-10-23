@@ -1,0 +1,25 @@
+{
+  "id": "alirezarezvani-claude-skills-cs-engineer-grill",
+  "name": "cs-engineer-grill",
+  "description": "Cross-role engineering grill — Matt Pocock 7 questions per role × 3 roles (fullstack / frontend / backend) = up to 21 forcing questions, one per turn, with canon citations and kill criteria. Default: ask which lane first; `--all` runs all 21.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alirezarezvani",
+  "install_path": ".claude/skills/cs-engineer-grill/SKILL.md",
+  "source": {
+    "repo": "alirezarezvani/claude-skills",
+    "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/cs-engineer-grill/SKILL.md",
+    "path": ".gemini/skills/cs-engineer-grill/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-23T14:22:55.917Z",
+    "stars": 28587,
+    "language": "Python",
+    "pushed_at": "2026-10-23T11:30:28Z",
+    "license": "MIT"
+  }
+}

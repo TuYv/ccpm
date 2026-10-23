@@ -48,6 +48,16 @@ DPIA, breach response, contract review), see the `legal/` domain.
 - M&A posture: history, pipeline, integration backlog
 - Top business stakeholders + frictions (CEO, CFO, CRO, CTO, CISO, CHRO)
 
+## Clarify First
+
+What most shapes general counsel advice is where the company operates, what legal matter is live right now, and the legal resources it already has. Settle the inputs below before advising. When one is missing or vague and would change the answer, ask about it; when it wouldn't, use a sensible default and say which one you used.
+
+- **Jurisdictions and sector:** the regulatory calendar and much of the risk register depend on which regimes apply (GDPR, sector rules, export controls, sanctions). Every point of view also carries a jurisdiction caveat, so it should name the right one.
+- **The matter in front of you:** active litigation, an acquisition, a board section and the in-house versus outside counsel question follow different engagements. A live lawsuit changes the order of everything: outside counsel, privilege and a litigation hold come first.
+- **Stage and current legal setup:** in-house headcount, the outside counsel panel and annual outside spend drive the operating model advice. The in-house GC case breaks even around $1.5M+ of annual outside spend, legal tech purchases have their own thresholds (500 contracts a year, $2M spend, 50 active matters), and hub-and-spoke is the default only from about Series C.
+
+If `~/.claude/company-context.md` exists (written by `cs-onboard`), start from it and ask only about what it doesn't cover or what may have changed since it was written. Ask about the two or three inputs that matter most for this request, not the whole list. If the user wants an answer straight away, give it and state your assumptions at the top.
+
 ## Workflows
 
 ### Workflow 1 — Score legal risk across 7 categories
@@ -155,6 +165,27 @@ specialist firms for litigation, IP, employment escalations, M&A, securities.
 - **Risk register that never gets reviewed.** Quarterly review with named owners.
 - **Privacy / security treated as wholly separate.** GC should sit on the AI council, the DPO's office, and CISO program reviews.
 
+## Scope & Limitations
+
+**In Scope:**
+- Legal strategy, the in-house versus outside counsel mix and the legal operating model (central, embedded, hub-and-spoke, product-aligned)
+- A prioritized legal risk register (exposure as severity times likelihood, adjusted for mitigation) with owners and review cadence from `legal_risk_register.py`
+- Contract portfolio analysis of concentration, liability exposure, deviation rate and upcoming renewals with `contract_portfolio_analyzer.py`
+- A date-ordered regulatory calendar with owner, action and urgency from `regulatory_calendar_generator.py`
+- Legal tech build-vs-buy thresholds and the legal section of a board deck
+
+**Out of Scope:**
+- Clause-level review of a specific contract (see `legal/contract-review/`)
+- Running a data breach response (see `legal/data-breach-response/`)
+- Writing a DPIA (see `legal/dpia-assessment/`)
+- Deep GDPR or EU AI Act implementation (see `ra-qm-team/gdpr-dsgvo-expert/` and `ra-qm-team/eu-ai-act-specialist/`)
+- Representing the company, giving a legal opinion or deciding litigation strategy on a live matter
+
+**Important Caveats:**
+- This skill is strategic. It is not legal advice on a specific matter, and any point of view depends on the jurisdiction, so a licensed lawyer should confirm it before you act.
+- The tools only process the JSON you supply. The regulatory calendar does not know any regime, deadline or rule change you leave out, so it is only as current as its inputs.
+- Severity, likelihood and mitigation ratings are your judgments. Spend and volume thresholds in this skill are rules of thumb, not market data.
+
 ## References
 
 - `references/legal-strategy-and-risk.md` — legal strategy framing, risk taxonomy, operating model
@@ -170,8 +201,8 @@ specialist firms for litigation, IP, employment escalations, M&A, securities.
 - `c-level-advisor/chief-ai-officer-advisor` — AI governance + EU AI Act
 - `c-level-advisor/chief-data-officer-advisor` — data governance and privacy
 - `legal/contract-review` — execution-level contract review
-- `legal/breach-response` — execution-level breach handling
-- `legal/dpia-builder` — execution-level DPIA
+- `legal/data-breach-response` — execution-level breach handling
+- `legal/dpia-assessment` — execution-level DPIA
 - `ra-qm-team/gdpr-dsgvo-expert` — deep privacy implementation
 - `ra-qm-team/eu-ai-act-specialist` — high-risk AI conformity
 

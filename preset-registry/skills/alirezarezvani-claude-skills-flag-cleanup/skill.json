@@ -1,0 +1,25 @@
+{
+  "id": "alirezarezvani-claude-skills-flag-cleanup",
+  "name": "flag-cleanup",
+  "description": "Run the quarterly feature-flag cleanup workflow on the current repo",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alirezarezvani",
+  "install_path": ".claude/skills/flag-cleanup/SKILL.md",
+  "source": {
+    "repo": "alirezarezvani/claude-skills",
+    "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/flag-cleanup/SKILL.md",
+    "path": ".gemini/skills/flag-cleanup/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-23T14:23:00.075Z",
+    "stars": 28587,
+    "language": "Python",
+    "pushed_at": "2026-10-23T11:30:28Z",
+    "license": "MIT"
+  }
+}

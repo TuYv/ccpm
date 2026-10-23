@@ -43,6 +43,17 @@ When invoking this skill, you should provide some combination of:
 - Spend posture: total AI spend (people + infra + tooling), trailing year + plan
 - Top stakeholders and current frictions (CEO, CTO, CISO, CFO, GC, business leaders)
 
+## Clarify First
+
+AI advice depends most on regulatory exposure, what is already in production, and the size of the engineering org. Settle the inputs below before advising. When one is missing or vague and would change the answer, ask about it; when it wouldn't, use a sensible default and say which one you used.
+
+- **Sector and regulatory exposure:** this decides whether systems may fall into the EU AI Act high-risk categories (employment screening, credit scoring, critical infrastructure) and pushes the operating model toward centralized. A bank or a hospital gets a different governance program from a low-risk SaaS company.
+- **Current AI portfolio:** what is in production, in pilot or already killed is the starting point for the maturity score, the risk register and the investment plan. A strategy written without it tends to repeat failed bets.
+- **Engineering org size and AI team:** the centralize-vs-federate table leans centralized under 500 engineers and federated above 1000, and the hiring sequence is staged by engineering headcount. Who is on the team today decides what to hire next.
+- **Budget and the business outcome it serves:** the investment planner allocates against a fixed budget, and an AI strategy with no P&L outcome turns into a research project.
+
+If `~/.claude/company-context.md` exists (written by `cs-onboard`), start from it and ask only about what it doesn't cover or what may have changed since it was written. Ask about the two or three inputs that matter most for this request, not the whole list. If the user wants an answer straight away, give it and state your assumptions at the top.
+
 ## Workflows
 
 ### Workflow 1 — Assess AI maturity (0-100, 5 dimensions)
@@ -147,6 +158,27 @@ playbook from `references/ai-risk-and-governance.md`.
 - **Treating AI risk as someone else's problem.** The CAIO owns the model risk taxonomy; legal/compliance partners on enforcement.
 - **Buying eight LLM platforms.** Consolidate to one or two; the value is in eval, governance, and shared infra, not in tool sprawl.
 - **Forgetting that 70% of "AI" cost is data + people.** Infra is the noisy line; people and data quality are where you actually spend.
+
+## Scope & Limitations
+
+**In Scope:**
+- AI strategy, operating-model design (centralized, federated, hub-and-spoke) and build-vs-buy-vs-partner guidance
+- AI maturity scoring (0-100) across strategy, data, MLOps, governance and people with `ai_maturity_assessor.py`
+- AI budget allocation across initiatives on a strategic-fit, value, confidence and risk model with `ai_investment_planner.py`
+- A seeded AI risk register mapped to NIST AI RMF, ISO 42001 or the EU AI Act with `ai_risk_register_generator.py`
+- AI org design, hiring sequence and the AI section of a board update
+
+**Out of Scope:**
+- Full ISO 42001 AIMS implementation (see `ra-qm-team/iso42001-ai-management/`)
+- EU AI Act conformity assessment for high-risk systems (see `ra-qm-team/eu-ai-act-specialist/` and `ra-qm-team/audit-prep/ai-act-readiness/`)
+- AI security controls such as prompt-injection or model-theft defenses (see `c-level-advisor/ciso-advisor/`)
+- Building, training or deploying models (see `engineering/senior-ml-engineer/`)
+
+**Important Caveats:**
+- All three tools score only the JSON you supply. Missing keys score 0 for that dimension, and the Annex III category is an input the tool does not determine for you.
+- The scores, weights and risk catalog are fixed heuristics. They structure a discussion; they are not a benchmark against peer companies.
+- A seeded risk register is a starting point. Owners, likelihood and treatment still need review by your governance committee and legal or compliance partners.
+- The output is not legal advice. EU AI Act obligations and guidance change over time, so check current texts before relying on a classification.
 
 ## References
 

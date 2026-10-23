@@ -1,0 +1,25 @@
+{
+  "id": "alirezarezvani-claude-skills-cs-cto-advisor",
+  "name": "cs-cto-advisor",
+  "description": "Technical leadership advisor for CTOs covering technology strategy, team scaling, architecture decisions, and engineering excellence. Use when a CTO or technical founder needs company-level technology judgment — e.g., deciding build-vs-buy for a core platform component, or planning how to scale the engineering org from 5 to 30 engineers without losing delivery velocity.",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alirezarezvani",
+  "install_path": ".claude/skills/cs-cto-advisor/SKILL.md",
+  "source": {
+    "repo": "alirezarezvani/claude-skills",
+    "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/cs-cto-advisor/SKILL.md",
+    "path": ".gemini/skills/cs-cto-advisor/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-23T14:22:55.576Z",
+    "stars": 28587,
+    "language": "Python",
+    "pushed_at": "2026-10-23T11:30:28Z",
+    "license": "MIT"
+  }
+}

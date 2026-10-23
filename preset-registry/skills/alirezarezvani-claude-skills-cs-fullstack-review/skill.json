@@ -1,0 +1,25 @@
+{
+  "id": "alirezarezvani-claude-skills-cs-fullstack-review",
+  "name": "cs-fullstack-review",
+  "description": "Fullstack engineering review — walks the 7 Matt Pocock forcing questions, picks the profile, forks into POWERFUL specialists (api-design-reviewer, database-designer, slo-architect). Invokes the cs-fullstack-engineer agent with context fork.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alirezarezvani",
+  "install_path": ".claude/skills/cs-fullstack-review/SKILL.md",
+  "source": {
+    "repo": "alirezarezvani/claude-skills",
+    "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/cs-fullstack-review/SKILL.md",
+    "path": ".gemini/skills/cs-fullstack-review/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-23T14:22:56.858Z",
+    "stars": 28587,
+    "language": "Python",
+    "pushed_at": "2026-10-23T11:30:28Z",
+    "license": "MIT"
+  }
+}

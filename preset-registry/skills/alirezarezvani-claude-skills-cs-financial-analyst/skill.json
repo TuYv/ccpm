@@ -1,0 +1,25 @@
+{
+  "id": "alirezarezvani-claude-skills-cs-financial-analyst",
+  "name": "cs-financial-analyst",
+  "description": "Financial Analyst agent for DCF valuation, financial modeling, budgeting, forecasting, and SaaS metrics (ARR, MRR, churn, CAC, LTV, NRR). Orchestrates finance skills. Spawn when users need financial analysis, valuation models, budget planning, ratio analysis, SaaS health checks, or unit economics projections.",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alirezarezvani",
+  "install_path": ".claude/skills/cs-financial-analyst/SKILL.md",
+  "source": {
+    "repo": "alirezarezvani/claude-skills",
+    "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/cs-financial-analyst/SKILL.md",
+    "path": ".gemini/skills/cs-financial-analyst/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-23T14:22:56.236Z",
+    "stars": 28587,
+    "language": "Python",
+    "pushed_at": "2026-10-23T11:30:28Z",
+    "license": "MIT"
+  }
+}

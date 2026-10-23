@@ -1,0 +1,25 @@
+{
+  "id": "alirezarezvani-claude-skills-cs-wiki-linter",
+  "name": "cs-wiki-linter",
+  "description": "Dispatched sub-agent that runs a periodic health check on an LLM Wiki vault. Runs mechanical checks via scripts (orphans, broken links, stale pages, missing frontmatter, duplicate titles, log gaps), does semantic checks (contradictions, stale claims, cross-reference gaps, concepts missing their own page), and produces a markdown report with suggested actions. Spawn weekly, after batch ingests, or when the user says \"check the wiki\" / \"lint my wiki\" / \"audit the vault\".",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alirezarezvani",
+  "install_path": ".claude/skills/cs-wiki-linter/SKILL.md",
+  "source": {
+    "repo": "alirezarezvani/claude-skills",
+    "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/cs-wiki-linter/SKILL.md",
+    "path": ".gemini/skills/cs-wiki-linter/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-23T14:22:59.192Z",
+    "stars": 28587,
+    "language": "Python",
+    "pushed_at": "2026-10-23T11:30:28Z",
+    "license": "MIT"
+  }
+}

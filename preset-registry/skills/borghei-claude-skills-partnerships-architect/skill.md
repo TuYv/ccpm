@@ -247,14 +247,14 @@ Use `scripts/partnership_roi_modeler.py --partnership partnership.yaml` for the 
 
 ## Clarify First
 
-Before designing the partnership, confirm these inputs. If any is unknown or vague, ASK — do not assume:
+Before designing the partnership, settle the inputs below. When one is missing or vague and would change the result, ask about it; when it wouldn't, use a sensible default and say which one you used.
 
-- [ ] **Partnership goal + type** — distribution, embed (OEM/ISV), better-together (tech/integration), market presence, or strategic (selects the decision-tree branch and deal structure)
-- [ ] **Single deal vs scaled program** — structuring one partnership vs designing tiers/portfolio (determines deal-structure vs program-design output)
-- [ ] **Partner specifics for evaluation** — their pipeline expectation, commitment, and credibility (feeds the 6-dimension scorer and green/yellow/red call)
-- [ ] **ROI inputs** — expected revenue and the real costs (headcount, integration, MDF) (drives the 3-year P&L payback)
+- **Partnership goal + type:** distribution, embed (OEM/ISV), better-together (tech/integration), market presence, or strategic (selects the decision-tree branch and deal structure).
+- **Single deal vs scaled program:** structuring one partnership vs designing tiers/portfolio (determines deal-structure vs program-design output).
+- **Partner specifics for evaluation:** their pipeline expectation, commitment, and credibility (feeds the 6-dimension scorer and green/yellow/red call).
+- **ROI inputs:** expected revenue and the real costs (headcount, integration, MDF) (drives the 3-year P&L payback).
 
-Stop rule: ask only the 2-3 that most change the output. If the user says "just draft it," proceed and list your assumptions at the top of the deliverable.
+Ask about the two or three inputs that matter most for this request, not the whole list. If the user wants a result straight away, produce it and state your assumptions at the top.
 
 ## End-to-end workflows
 
@@ -327,6 +327,30 @@ Stop rule: ask only the 2-3 that most change the output. If the user says "just 
 | `scripts/partner_program_designer.py` | Org spec YAML | Recommended program structure: tiers, benefits, requirements, headcount needed |
 
 All scripts: stdlib only, argparse CLI, JSON or markdown output.
+
+---
+
+## Scope & Limitations
+
+**In Scope:**
+- Partnership type selection with the decision tree: distribution, embed, better-together, market presence and strategic goals
+- Six-dimension partner evaluation (strategic fit, economic potential, credibility, mutual commitment, operational fit, exit-ability) with green, yellow and red bands via `scripts/partner_evaluation_scorer.py`
+- Partner program design with tiers, benefits, requirements, channel manager headcount and enablement plan via `scripts/partner_program_designer.py`
+- 3-year partnership ROI with P&L, payback period and sensitivity analysis via `scripts/partnership_roi_modeler.py`
+- Deal structures per partnership type and a partner portfolio audit workflow
+
+**Out of Scope:**
+- Per-deal partner margin and channel TCO (see `business-growth/channel-economics/`)
+- Per-deal approval of partner-mediated deals (see `business-growth/deal-desk/`)
+- Writing partner, OEM or reseller agreements (see `business-growth/contract-and-proposal-writer/`)
+- Customer referral and affiliate program mechanics such as viral loops and incentives (see `business-growth/referral-program/`)
+- Finding or researching candidate partners; the skill evaluates partners you already have data on
+
+**Important Caveats:**
+- The scorer applies fixed rules to yes/no and numeric fields in the partner YAML. Some operational-fit fields count as met when they are left out, so a sparse spec can score higher than it should.
+- ROI output is a model built on your revenue and cost estimates, not a forecast. The sensitivity analysis shows how much it moves when those estimates change.
+- The score bands (25 and above, 18 to 24, below 18) structure the decision; they do not make it.
+- Deal structures and terms such as exclusivity or source-code escrow are business guidance, not legal advice. The partner contract needs legal review.
 
 ---
 

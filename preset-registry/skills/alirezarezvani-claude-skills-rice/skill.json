@@ -1,0 +1,25 @@
+{
+  "id": "alirezarezvani-claude-skills-rice",
+  "name": "rice",
+  "description": "RICE feature prioritization with scoring and capacity planning. Usage: /rice prioritize <features.csv> [options]",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alirezarezvani",
+  "install_path": ".claude/skills/rice/SKILL.md",
+  "source": {
+    "repo": "alirezarezvani/claude-skills",
+    "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/rice/SKILL.md",
+    "path": ".gemini/skills/rice/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-23T14:23:02.244Z",
+    "stars": 28587,
+    "language": "Python",
+    "pushed_at": "2026-10-23T11:30:28Z",
+    "license": "MIT"
+  }
+}

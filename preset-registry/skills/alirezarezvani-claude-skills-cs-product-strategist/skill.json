@@ -1,0 +1,25 @@
+{
+  "id": "alirezarezvani-claude-skills-cs-product-strategist",
+  "name": "cs-product-strategist",
+  "description": "Product strategy agent for quarterly OKR planning, competitive landscape analysis, product vision development, and strategy pivot evaluation. Use when the question is direction rather than delivery — e.g., cascading company OKRs into product-team objectives for next quarter, or running a competitive teardown to decide whether to enter an adjacent market.",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alirezarezvani",
+  "install_path": ".claude/skills/cs-product-strategist/SKILL.md",
+  "source": {
+    "repo": "alirezarezvani/claude-skills",
+    "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/cs-product-strategist/SKILL.md",
+    "path": ".gemini/skills/cs-product-strategist/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-23T14:22:57.690Z",
+    "stars": 28587,
+    "language": "Python",
+    "pushed_at": "2026-10-23T11:30:28Z",
+    "license": "MIT"
+  }
+}

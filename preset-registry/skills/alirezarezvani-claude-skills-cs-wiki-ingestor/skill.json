@@ -1,0 +1,25 @@
+{
+  "id": "alirezarezvani-claude-skills-cs-wiki-ingestor",
+  "name": "cs-wiki-ingestor",
+  "description": "Dispatched sub-agent that ingests a new source into an LLM Wiki vault. Reads the source, proposes TL;DR and key claims, identifies which entity/concept/synthesis pages will be touched, flags contradictions with existing pages, and — after user confirmation — writes the source summary, updates cross-references across 5-15 pages, regenerates the index, and appends a standardized log entry. Spawn when the user says \"ingest this\", \"add this paper/article/book to the wiki\", or drops a file into raw/.",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alirezarezvani",
+  "install_path": ".claude/skills/cs-wiki-ingestor/SKILL.md",
+  "source": {
+    "repo": "alirezarezvani/claude-skills",
+    "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/cs-wiki-ingestor/SKILL.md",
+    "path": ".gemini/skills/cs-wiki-ingestor/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-23T14:22:58.852Z",
+    "stars": 28587,
+    "language": "Python",
+    "pushed_at": "2026-10-23T11:30:28Z",
+    "license": "MIT"
+  }
+}

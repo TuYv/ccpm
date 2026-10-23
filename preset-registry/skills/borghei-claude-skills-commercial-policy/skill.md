@@ -277,14 +277,14 @@ See [references/contract-and-commercial-guardrails.md](references/contract-and-c
 
 ## Clarify First
 
-Before generating the policy, confirm these inputs. If any is unknown or vague, ASK — do not assume:
+Before generating the policy, settle the inputs below. When one is missing or vague and would change the result, ask about it; when it wouldn't, use a sensible default and say which one you used.
 
-- [ ] **Company stage + ARR scale** — drives whether a full charter is warranted and how tight thresholds should be
-- [ ] **Approver structure** — who owns the policy and sits in the chain (CRO/CFO/GC, VP Sales, Director) (populates Owners/Approvers and every approval line)
-- [ ] **Region / jurisdiction** — US / EU / APAC (changes payment norms, governing law, and triggers a regional overlay)
-- [ ] **Max discount + liability risk appetite** — the discount ceiling and liability-cap tolerance (drives the Pricing and Legal policy sections)
+- **Company stage + ARR scale:** drives whether a full charter is warranted and how tight thresholds should be.
+- **Approver structure:** who owns the policy and sits in the chain (CRO/CFO/GC, VP Sales, Director) (populates Owners/Approvers and every approval line).
+- **Region / jurisdiction:** US / EU / APAC (changes payment norms, governing law, and triggers a regional overlay).
+- **Max discount + liability risk appetite:** the discount ceiling and liability-cap tolerance (drives the Pricing and Legal policy sections).
 
-Stop rule: ask only the 2-3 that most change the output. If the user says "just draft it," proceed and list your assumptions at the top of the policy.
+Ask about the two or three inputs that matter most for this request, not the whole list. If the user wants a result straight away, produce it and state your assumptions at the top.
 
 ## End-to-end workflows
 
@@ -327,7 +327,7 @@ Stop rule: ask only the 2-3 that most change the output. If the user says "just 
 ### Workflow: Generate region-specific policy
 
 1. **Identify region-specific requirements** — currency, jurisdiction, payment norms, regulatory
-2. **Run** `scripts/commercial_policy_generator.py --base policy.yaml --region <region>` to get base + regional overlay
+2. **Run** `scripts/commercial_policy_generator.py --org-spec org.yaml --region <region>` to get base + regional overlay
 3. **Tailor** further with local team (regional VP Sales, regional GC, regional CFO)
 4. **Approve** through standard governance
 5. **Communicate** to regional sales
@@ -358,6 +358,30 @@ Stop rule: ask only the 2-3 that most change the output. If the user says "just 
 | `scripts/commercial_policy_generator.py` | Base policy YAML + optional region overlay | Generated policy document (markdown), tailored to company stage, ICP, region |
 
 All scripts: stdlib only, argparse CLI, JSON or markdown output.
+
+---
+
+## Scope & Limitations
+
+**In Scope:**
+- A commercial policy charter covering pricing, contract, legal, operational, customer commitment, channel and special-terms rules, with owners, approvers and an annual review
+- Policy generation from an org spec YAML, with an optional US, EU, UK or APAC overlay, via `scripts/commercial_policy_generator.py`
+- Deal compliance audits against a policy YAML via `scripts/policy_compliance_checker.py`
+- Terms-deviation pattern analysis from a deal CSV via `scripts/terms_deviation_analyzer.py`
+- Workflows for authoring, annual refresh, compliance audit and region-specific policy
+
+**Out of Scope:**
+- Setting prices and day-to-day pricing decisions (see `business-growth/pricing-strategy/`)
+- Per-deal approval and routing (see `business-growth/deal-desk/`)
+- Drafting individual contracts (see `business-growth/contract-and-proposal-writer/`)
+- Sales targets, quota and compensation policy
+- Customer success and churn-prevention tactics (see `business-growth/churn-prevention/`)
+
+**Important Caveats:**
+- The generated policy is a draft for the CRO, CFO and General Counsel to review and approve. It is not legal advice and does not check whether a term is enforceable in a given jurisdiction.
+- Regional overlays are general. Local law, tax and revenue-recognition questions need input from regional legal and finance.
+- The compliance checker only tests the rules in the policy YAML, and falls back to a built-in default policy when none is given. Deal data comes from a CSV export you supply; there is no CRM connection.
+- Thresholds in the templates, such as discount ceilings and payment terms, are starting points to calibrate to your stage and market.
 
 ---
 

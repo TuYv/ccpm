@@ -1,0 +1,25 @@
+{
+  "id": "alirezarezvani-claude-skills-operator-audit",
+  "name": "operator-audit",
+  "description": "Run the full Kubernetes Operator audit (CRD + reconcile + capability) on the current repo",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alirezarezvani",
+  "install_path": ".claude/skills/operator-audit/SKILL.md",
+  "source": {
+    "repo": "alirezarezvani/claude-skills",
+    "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/operator-audit/SKILL.md",
+    "path": ".gemini/skills/operator-audit/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-23T14:23:00.867Z",
+    "stars": 28587,
+    "language": "Python",
+    "pushed_at": "2026-10-23T11:30:28Z",
+    "license": "MIT"
+  }
+}

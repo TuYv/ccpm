@@ -1,0 +1,25 @@
+{
+  "id": "alirezarezvani-claude-skills-cs-karpathy-reviewer",
+  "name": "cs-karpathy-reviewer",
+  "description": "Reviews staged git changes against Karpathy's 4 coding principles. Runs complexity_checker on changed files, diff_surgeon on the diff, and produces a verdict with specific fix recommendations. Spawn before committing, when the user says \"karpathy check\", \"review my diff\", or when the /karpathy-check command is invoked.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alirezarezvani",
+  "install_path": ".claude/skills/cs-karpathy-reviewer/SKILL.md",
+  "source": {
+    "repo": "alirezarezvani/claude-skills",
+    "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/cs-karpathy-reviewer/SKILL.md",
+    "path": ".gemini/skills/cs-karpathy-reviewer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-23T14:22:57.164Z",
+    "stars": 28587,
+    "language": "Python",
+    "pushed_at": "2026-10-23T11:30:28Z",
+    "license": "MIT"
+  }
+}

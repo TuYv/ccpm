@@ -42,6 +42,17 @@ governance regimes).
 - Spend posture: total data spend (people + platform + tooling), trailing year + plan
 - Top frictions: stakeholders, breached SLAs, incidents, audit findings
 
+## Clarify First
+
+Data advice depends most on regulatory exposure, the use cases the data must serve, and the size and maturity of the org. Settle the inputs below before advising. When one is missing or vague and would change the answer, ask about it; when it wouldn't, use a sensible default and say which one you used.
+
+- **Sector and regulatory exposure:** GDPR, HIPAA or a sector regime raises the bar for classification, residency, lineage and audit evidence, and favors a centralized model early.
+- **Primary use cases:** if most value is BI on structured data, start warehouse-first; if it is ML training and cheap retention, start lake-first. Platform and build-vs-buy advice is guesswork without this.
+- **Org size and current platform:** data mesh is rarely right before about 500 engineers, and hub-and-spoke is the default from Series C. The existing stack and team set what any migration costs.
+- **What prompted the request:** a failed audit, a breached SLA, a cost problem and a new board mandate each point to a different workflow, so knowing the trigger keeps the work on the real problem.
+
+If `~/.claude/company-context.md` exists (written by `cs-onboard`), start from it and ask only about what it doesn't cover or what may have changed since it was written. Ask about the two or three inputs that matter most for this request, not the whole list. If the user wants an answer straight away, give it and state your assumptions at the top.
+
 ## Workflows
 
 ### Workflow 1 — Score data maturity
@@ -152,6 +163,26 @@ Per capability, not company-wide.
 - **The 4-year data lake.** If you can't ship value in 6 months, you've over-scoped.
 - **Hiring a CDO with no platform partner.** Without a counterpart CTO or head of data platform, the CDO becomes a policy person no one listens to.
 - **Mistaking dashboards for data products.** A dashboard with no SLA and no owner is not a product.
+
+## Scope & Limitations
+
+**In Scope:**
+- Data strategy, operating-model choice (centralized, federated, data mesh, hub-and-spoke) and per-capability build-vs-buy defaults
+- Data maturity scoring (0-100) across strategy, governance, quality, platform and people with `data_maturity_assessor.py`
+- A governance audit of about 25 DAMA-DMBOK-aligned controls in 6 areas, with a remediation plan, from `data_governance_audit.py`
+- Weighted comparison of data platform options (TCO, time-to-value, openness, governance fit, AI readiness, vendor risk, ecosystem) with `data_platform_evaluator.py`
+- Data org design, the CDO role question and the data section of a board deck
+
+**Out of Scope:**
+- Implementing data quality checks and tests (see `engineering/data-quality-auditor/`)
+- Building pipelines, ingestion or transformation code (see `engineering/senior-data-engineer/`)
+- GDPR compliance work on personal data (see `ra-qm-team/gdpr-dsgvo-expert/`)
+- Security controls for data classification and access (see `c-level-advisor/ciso-advisor/`)
+
+**Important Caveats:**
+- The tools score self-reported JSON. They do not inspect a warehouse, catalog or pipeline, and missing keys score 0 in the maturity assessor.
+- Platform scores of 1-5 per criterion are your own judgments. The evaluator weights and ranks them; it does not test vendors or price them.
+- A passing governance audit score is not a regulator's or external auditor's opinion. Vendor names and tooling defaults can go out of date.
 
 ## References
 

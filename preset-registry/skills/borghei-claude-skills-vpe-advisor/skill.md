@@ -11,7 +11,7 @@ metadata:
   category: executive-leadership
   domain: c-level-advisor
   updated: 2026-05-27
-  tags: [engineering, vpe, leadership, productivity, dora, space, capacity, hiring, retention]
+  tags: [vpe, engineering-leadership, developer-productivity, dora, space, capacity, hiring, retention]
 ---
 
 # VP of Engineering Advisor
@@ -45,6 +45,17 @@ teams.
 - Talent metrics (open req count, time-to-hire, regrettable attrition)
 - Spend posture (eng comp budget, tooling, cloud)
 - Top frictions (CEO, CPO, CTO, customers)
+
+## Clarify First
+
+What most shapes VP of Engineering advice is the size of the engineering org, the specific symptom or decision driving the request, and how much delivery and talent data exists. Settle the inputs below before advising. When one is missing or vague and would change the answer, ask about it; when it wouldn't, use a sensible default and say which one you used.
+
+- **Engineering headcount and stage:** org shape defaults change with size (functional below about 30 engineers, platform plus product squads from about 50), and a platform team only starts to pay off around 30 engineers.
+- **The symptom or decision:** slowing delivery, next year's hiring plan, losing top engineers and the board section are different engagements with different data. Naming the one that matters keeps the advice from turning into a generic org review.
+- **Available metrics:** team-level DORA numbers, regrettable attrition and a DevEx survey decide whether the advice can be specific. "Engineering is slow" usually means two or three teams, which only shows up in per-team data.
+- **Whether there is a CTO, and where the line sits:** the CTO/VPE split decides which calls are the VPE's to make. When one person covers both, or the founder plays one role implicitly, the split should be made explicit before advising on org or hiring.
+
+If `~/.claude/company-context.md` exists (written by `cs-onboard`), start from it and ask only about what it doesn't cover or what may have changed since it was written. Ask about the two or three inputs that matter most for this request, not the whole list. If the user wants an answer straight away, give it and state your assumptions at the top.
 
 ## Workflows
 
@@ -180,6 +191,27 @@ engineering at scale.
 - **Org redesign every 6 months.** Stability wins; resist the urge.
 - **Squad-of-three model at scale.** Below 4 engineers, bus risk + on-call burden are unsustainable.
 - **Engineering culture defined by perks.** Real culture is in promotion criteria, hiring bar, incident response, code review norms.
+
+## Scope & Limitations
+
+**In Scope:**
+- Engineering org health scoring (0-100) across structure, delivery, quality, productivity, culture and talent with `eng_org_health_scorer.py`
+- Per-team DORA and DevEx classification into bands, with focus areas and an org rollup, from `eng_productivity_dashboard.py`
+- Quarter-by-quarter capacity projection with attrition, hiring ramp and overhead, and bottleneck teams, from `eng_capacity_planner.py`
+- Org shape, CTO and VPE split, delivery model choice, platform team timing, hiring and attrition engagements
+- The engineering section of a board deck
+
+**Out of Scope:**
+- Architecture, tech stack and build-vs-buy decisions (see `c-level-advisor/cto-advisor/` and `engineering/senior-architect/`)
+- SLO and error budget design (see `engineering/observability-designer/`)
+- Running incident response (see `engineering/incident-commander/`)
+- Compensation bands and HR policy (see `c-level-advisor/chro-advisor/`)
+- Collecting metrics from CI/CD, source control or survey tools
+
+**Important Caveats:**
+- The tools read JSON you assemble yourself. They do not pull DORA or DevEx data from any system, so the output is only as good as the numbers you enter.
+- Band thresholds, org-size defaults and the platform-team sizing are heuristics. Team-level context can justify a different call.
+- DORA and DevEx results describe teams and systems. They are not a measure of individual performance and should not be used as one.
 
 ## References
 

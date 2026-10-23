@@ -46,14 +46,14 @@ congratulate themselves on a 10% discount against 40% more seats than they need.
 
 ## Clarify First
 
-Before generating, confirm these inputs. If any is unknown or vague, ASK — do not assume:
+Before generating, settle the inputs below. When one is missing or vague and would change the result, ask about it; when it wouldn't, use a sensible default and say which one you used.
 
-- [ ] **Whether seat data is assigned or active** — this is the single most consequential input. Assigned seats overstate usage by 30-60%, and an analysis built on them finds almost nothing
-- [ ] **Notice periods and auto-renew flags** — a contract inside its notice window is committed for another full term, so its "savings" are not available this cycle and must not be counted toward a target
-- [ ] **Whether the goal is in-year cash or run-rate reduction** — seat cuts at renewal reduce run-rate but may deliver nothing this fiscal year, which is the wrong answer to an in-year cash problem
-- [ ] **Which tools are politically untouchable** — if the CRM is the CRO's and cannot be cut, that changes which opportunities are worth analysing at all
+- **Whether seat data is assigned or active:** this is the single most consequential input. Assigned seats overstate usage by 30-60%, and an analysis built on them finds almost nothing.
+- **Notice periods and auto-renew flags:** a contract inside its notice window is committed for another full term, so its "savings" are not available this cycle and must not be counted toward a target.
+- **Whether the goal is in-year cash or run-rate reduction:** seat cuts at renewal reduce run-rate but may deliver nothing this fiscal year, which is the wrong answer to an in-year cash problem.
+- **Which tools are politically untouchable:** if the CRM is the CRO's and cannot be cut, that changes which opportunities are worth analysing at all.
 
-Stop rule: ask only the 2-3 that most change the output. If the user says "just draft it," proceed and list your assumptions at the top of the artifact.
+Ask about the two or three inputs that matter most for this request, not the whole list. If the user wants a result straight away, produce it and state your assumptions at the top.
 
 ## Workflows
 
@@ -211,3 +211,24 @@ is a miss you can see coming from the day you commit.
 | `assets/spend-audit-report-template.md` | Report template for presenting findings and a committed savings number |
 | `assets/renewal-negotiation-brief.md` | Pre-call brief template: position, targets, walk-away, concession ladder |
 | `assets/sample_spend.json` | Runnable inventory used by all three scripts |
+
+## Scope & Limitations
+
+**In Scope:**
+- Seat utilisation against per-category benchmarks, separating over-licensed tools from adoption failures and sizing reclaimable spend with a 12% buffer (`license_utilization_analyzer.py`).
+- Overlap detection by category, with a consolidation survivor chosen by displacement cost, umbrella-label warnings, and recovery net of an assumed 20% migration cost (`tool_overlap_detector.py`).
+- Opportunities ranked by ROI per day and discounted by renewal-window leverage, with a renewal calendar and a `locked_this_cycle` figure (`savings_opportunity_ranker.py`).
+- Negotiation levers, renewal timing windows and contract terms from `references/`, plus a spend-audit report template and a renewal negotiation brief.
+
+**Out of Scope:**
+- Vendor selection scorecards, risk tiering and SLA credit tracking (see `business-operations/vendor-management/`).
+- Legal review or redlining of software contracts (see `legal/contract-review/` and `legal/tech-contract-negotiation/`).
+- Security and compliance due diligence on a vendor (see `legal/vendor-due-diligence/`).
+- Budgeting, forecasting and variance analysis beyond software spend (see `finance/financial-analyst/`).
+- Usage-based cloud and infrastructure spend. The inventory schema models seat-licensed tools.
+
+**Important Caveats:**
+- The tools read a JSON inventory assembled by hand. They have no access to SSO, admin consoles, billing systems or contracts.
+- The analysis depends on 30-day active seat counts. Run on assigned counts only, it understates waste and finds little.
+- Category benchmarks, the 12% buffer and the 20% migration cost are fixed heuristics, not vendor-specific facts. Discount ranges in the references can go stale as the market moves.
+- The output is not legal advice on notice clauses or contract terms. The signed contract is the authority before notice is served.

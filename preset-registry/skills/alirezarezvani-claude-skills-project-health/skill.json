@@ -1,0 +1,25 @@
+{
+  "id": "alirezarezvani-claude-skills-project-health",
+  "name": "project-health",
+  "description": "Portfolio health dashboard and risk matrix analysis. Usage: /project-health <dashboard|risk> [options]",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alirezarezvani",
+  "install_path": ".claude/skills/project-health/SKILL.md",
+  "source": {
+    "repo": "alirezarezvani/claude-skills",
+    "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/project-health/SKILL.md",
+    "path": ".gemini/skills/project-health/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-23T14:23:01.872Z",
+    "stars": 28587,
+    "language": "Python",
+    "pushed_at": "2026-10-23T11:30:28Z",
+    "license": "MIT"
+  }
+}

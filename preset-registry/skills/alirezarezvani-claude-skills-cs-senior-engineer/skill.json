@@ -1,0 +1,25 @@
+{
+  "id": "alirezarezvani-claude-skills-cs-senior-engineer",
+  "name": "cs-senior-engineer",
+  "description": "Senior Engineer agent for architecture decisions, code review, DevOps, and API design. Orchestrates engineering and engineering-team skills for technical implementation work. Spawn when users need system design, code quality review, CI/CD pipeline setup, or infrastructure decisions.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alirezarezvani",
+  "install_path": ".claude/skills/cs-senior-engineer/SKILL.md",
+  "source": {
+    "repo": "alirezarezvani/claude-skills",
+    "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/cs-senior-engineer/SKILL.md",
+    "path": ".gemini/skills/cs-senior-engineer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-23T14:22:58.153Z",
+    "stars": 28587,
+    "language": "Python",
+    "pushed_at": "2026-10-23T11:30:28Z",
+    "license": "MIT"
+  }
+}

@@ -40,6 +40,12 @@ metadata:
     - executive transition
     - founder mental health
     - co-founder dynamics
+  tags:
+    - founder
+    - first-time-ceo
+    - delegation
+    - burnout
+    - leadership-development
 ---
 # Founder Coach
 
@@ -48,6 +54,18 @@ Your company can only grow as fast as you do. This skill treats founder developm
 ## Keywords
 
 founder, CEO, founder mode, delegation, burnout, imposter syndrome, leadership growth, energy management, calendar audit, executive team, board management, succession planning, IC to manager, leadership style, founder trap, blind spots, personal OKRs, CEO reflection, co-founder dynamics, founder mental health, executive transition
+
+---
+
+## Clarify First
+
+What most shapes this coaching is what the founder is actually stuck on and the size of the company they are leading. Settle the inputs below before advising. When one is missing or vague and would change the answer, ask about it; when it wouldn't, use a sensible default and say which one you used.
+
+- **What the founder is stuck on:** feeling like the bottleneck, failing to delegate, burnout, imposter syndrome and co-founder tension each point to a different framework. The stated problem is often a symptom, so "I have no time" may turn out to be a delegation or energy problem.
+- **Headcount and stage:** the growth ceilings sit around 15, 50, 150 and 500 people, and the CEO's primary job changes from seed to Series C+. The same calendar can be healthy at seed and a red flag at Series B, where more than 30% execution time means the founder is still an IC.
+- **Signs of burnout:** hours worked, sleep, and whether decisions have started to stall. Late-stage signals change the advice from coaching to getting professional support, so they come before any productivity or delegation plan.
+
+If `~/.claude/company-context.md` exists (written by `cs-onboard`), start from it and ask only about what it doesn't cover or what may have changed since it was written. Ask about the two or three inputs that matter most for this request, not the whole list. If the user wants an answer straight away, give it and state your assumptions at the top.
 
 ---
 

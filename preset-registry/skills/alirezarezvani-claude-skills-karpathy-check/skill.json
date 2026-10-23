@@ -1,0 +1,25 @@
+{
+  "id": "alirezarezvani-claude-skills-karpathy-check",
+  "name": "karpathy-check",
+  "description": "Run Karpathy's 4-principle review on staged changes or the last commit. Checks complexity, diff noise, hidden assumptions, and goal verification. Usage /karpathy-check [--last-commit]",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alirezarezvani",
+  "install_path": ".claude/skills/karpathy-check/SKILL.md",
+  "source": {
+    "repo": "alirezarezvani/claude-skills",
+    "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/karpathy-check/SKILL.md",
+    "path": ".gemini/skills/karpathy-check/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-23T14:23:00.546Z",
+    "stars": 28587,
+    "language": "Python",
+    "pushed_at": "2026-10-23T11:30:28Z",
+    "license": "MIT"
+  }
+}

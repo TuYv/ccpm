@@ -1,0 +1,25 @@
+{
+  "id": "alirezarezvani-claude-skills-cs-project-manager",
+  "name": "cs-project-manager",
+  "description": "Project Manager agent for sprint planning, Jira/Confluence workflows, Scrum ceremonies, and stakeholder reporting. Orchestrates project-management skills. Use when running delivery operations — e.g., planning a sprint with capacity and carry-over math in Jira, or assembling a portfolio health report for stakeholders from ticket and velocity data.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alirezarezvani",
+  "install_path": ".claude/skills/cs-project-manager/SKILL.md",
+  "source": {
+    "repo": "alirezarezvani/claude-skills",
+    "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/cs-project-manager/SKILL.md",
+    "path": ".gemini/skills/cs-project-manager/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-23T14:22:57.847Z",
+    "stars": 28587,
+    "language": "Python",
+    "pushed_at": "2026-10-23T11:30:28Z",
+    "license": "MIT"
+  }
+}

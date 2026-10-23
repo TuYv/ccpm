@@ -44,14 +44,14 @@ The three levers are **who hears it in what order**, **what the message must con
 
 ## Clarify First
 
-Before generating, confirm these inputs. If any is unknown or vague, ASK — do not assume:
+Before generating, settle the inputs below. When one is missing or vague and would change the result, ask about it; when it wouldn't, use a sensible default and say which one you used.
 
-- [ ] **Blast radius — who is materially affected vs merely informed** — this decides whether you need a cascade (manager-first) or a single broadcast, and cascades cost 3-5 days
-- [ ] **Reversibility of the decision** — reversible changes can be announced as proposals with a feedback window; irreversible ones must never be, because inviting input you will ignore is the fastest way to lose trust
-- [ ] **Effective date and the required user action** — sets every T-offset in the plan and determines whether the message is informational or instructional
-- [ ] **Whether anything is legally or market-sensitive** — embargo constraints override the ideal sequence and force simultaneous rather than cascaded delivery
+- **Blast radius — who is materially affected vs merely informed:** this decides whether you need a cascade (manager-first) or a single broadcast, and cascades cost 3-5 days.
+- **Reversibility of the decision:** reversible changes can be announced as proposals with a feedback window; irreversible ones must never be, because inviting input you will ignore is the fastest way to lose trust.
+- **Effective date and the required user action:** sets every T-offset in the plan and determines whether the message is informational or instructional.
+- **Whether anything is legally or market-sensitive:** embargo constraints override the ideal sequence and force simultaneous rather than cascaded delivery.
 
-Stop rule: ask only the 2-3 that most change the output. If the user says "just draft it," proceed and list your assumptions at the top of the artifact.
+Ask about the two or three inputs that matter most for this request, not the whole list. If the user wants a result straight away, produce it and state your assumptions at the top.
 
 ## Workflows
 
@@ -204,3 +204,23 @@ and hallway conversations become the version of the message people remember.
 | `assets/sample_announcement.json` | Runnable input for `announcement_auditor.py` |
 | `assets/sample_change.json` | Runnable input for `comms_sequencer.py` |
 | `assets/sample_message_profile.json` | Runnable input for `channel_fit_scorer.py` |
+
+## Scope & Limitations
+
+**In Scope:**
+- Draft audits with `scripts/announcement_auditor.py`: the five required elements (what changed, why, who is affected, what to do, where to ask), reading grade, jargon density, hedging and structure, scored against a pass threshold
+- Sequencing with `scripts/comms_sequencer.py`: blast radius, audience order by impact then influence, T-offsets relative to broadcast, and manager-enablement steps
+- Channel ranking with `scripts/channel_fit_scorer.py` against a six-dimension message profile, including disqualified channels
+- Frameworks for blast radius, message type and structure, and multi-week change cadence, plus announcement and comms-plan templates
+
+**Out of Scope:**
+- Sending, scheduling or tracking messages; the scripts do not connect to email, chat or intranet tools
+- Board and investor communications (see `personal-productivity/investor-update-generator/` and `c-level-advisor/board-meeting/`)
+- Designing the change programme itself, beyond how it is communicated (see `c-level-advisor/change-management/`)
+- Team-level project updates and status reports (see `project-management/team-communications/` and `project-management/execution/status-update-generator/`)
+- Legal review of layoff, regulatory or market-sensitive disclosures; the skill only flags that such constraints change the sequence
+
+**Important Caveats:**
+- The auditor detects required elements from cue phrases and estimates reading grade with an approximate Flesch-Kincaid formula. A pass means the parts are present, not that the message is accurate, fair or well judged.
+- The jargon check uses a fixed word list, so domain terms your audience knows may be flagged and new buzzwords may be missed.
+- Blast-radius bands, lead times and cadence are defaults. Audience impact levels and headcounts come from your input, and a legal embargo overrides the suggested sequence.

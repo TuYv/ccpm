@@ -1,0 +1,25 @@
+{
+  "id": "alirezarezvani-claude-skills-sprint-health",
+  "name": "sprint-health",
+  "description": "Sprint health scoring and velocity analysis for agile teams. Usage: /sprint-health <analyze|velocity> [options]",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alirezarezvani",
+  "install_path": ".claude/skills/sprint-health/SKILL.md",
+  "source": {
+    "repo": "alirezarezvani/claude-skills",
+    "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/sprint-health/SKILL.md",
+    "path": ".gemini/skills/sprint-health/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-23T14:23:03.250Z",
+    "stars": 28587,
+    "language": "Python",
+    "pushed_at": "2026-10-23T11:30:28Z",
+    "license": "MIT"
+  }
+}

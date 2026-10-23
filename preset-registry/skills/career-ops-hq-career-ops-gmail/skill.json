@@ -1,0 +1,25 @@
+{
+  "id": "career-ops-hq-career-ops-gmail",
+  "name": "career-ops-plugin-gmail",
+  "description": "How to pull job leads from a Gmail label into the career-ops pipeline.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "career-ops-hq",
+  "install_path": ".claude/skills/gmail/SKILL.md",
+  "source": {
+    "repo": "career-ops-hq/career-ops",
+    "url": "https://github.com/career-ops-hq/career-ops/blob/main/plugins/gmail/skill.md",
+    "path": "plugins/gmail/skill.md",
+    "branch": "main",
+    "discovered_at": "2026-10-23T14:33:00.186Z",
+    "stars": 76754,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-23T13:40:20Z",
+    "license": "MIT"
+  }
+}

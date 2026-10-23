@@ -1,7 +1,7 @@
 {
   "id": "qwenlm-qwen-code-verify-pr",
   "name": "verify-pr",
-  "description": "This skill should be used to run a sandboxed deep verification of a qwen-code PR — \"/verify-pr <n>\", \"深度验证这个 PR\", A/B load-bearing proof against the base build, mock-free harnesses with wire oracles, and targeted gates — producing tmp/pr<n>-verify-<ts>/report.md plus a machine-readable verdict. Designed for the token-free CI verify job; also usable locally.",
+  "description": "This skill should be used to run a sandboxed deep verification of a qwen-code PR — \"/verify-pr <n>\", \"/verify-pr <n> --publish\" (local round that also posts the report comment), \"深度验证这个 PR\", \"验证这个 PR 并把报告发到评论\", A/B load-bearing proof against the base build, mock-free harnesses with wire oracles, and targeted gates — producing tmp/pr<n>-verify-<ts>/report.md plus a machine-readable verdict. Designed for the token-free CI verify job; also usable locally.",
   "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/QwenLM/qwen-code/blob/main/.qwen/skills/verify-pr/SKILL.md",
     "path": ".qwen/skills/verify-pr/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-23T08:36:29.833Z",
-    "stars": 28664,
+    "discovered_at": "2026-10-23T14:31:19.398Z",
+    "stars": 28667,
     "language": "TypeScript",
-    "pushed_at": "2026-10-23T08:34:30Z",
+    "pushed_at": "2026-10-23T14:24:48Z",
     "license": "Apache-2.0"
-  },
-  "summary_zh": "在沙箱中深度验证代码 PR，通过基线对比和真实测试生成报告与机器判定，适合 CI 或本地审查。"
+  }
 }

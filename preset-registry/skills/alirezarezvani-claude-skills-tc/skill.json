@@ -1,0 +1,25 @@
+{
+  "id": "alirezarezvani-claude-skills-tc",
+  "name": "tc",
+  "description": "Track technical changes with structured records, a state machine, and session handoff. Usage: /tc <init|create|update|status|resume|close|export|dashboard> [args]",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alirezarezvani",
+  "install_path": ".claude/skills/tc/SKILL.md",
+  "source": {
+    "repo": "alirezarezvani/claude-skills",
+    "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/tc/SKILL.md",
+    "path": ".gemini/skills/tc/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-23T14:23:03.763Z",
+    "stars": 28587,
+    "language": "Python",
+    "pushed_at": "2026-10-23T11:30:28Z",
+    "license": "MIT"
+  }
+}

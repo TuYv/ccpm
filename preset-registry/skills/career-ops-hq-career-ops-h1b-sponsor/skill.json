@@ -1,0 +1,25 @@
+{
+  "id": "career-ops-hq-career-ops-h1b-sponsor",
+  "name": "h1b-sponsor",
+  "description": "Open-source AI job search agent and job finder: scan job boards, score each job 1-5 against your CV before you apply, tailor an ATS-friendly resume and cover letter, get interview prep and a job application tracker. It helps you fill in each application; you press Submit. Runs locally in your AI coding CLI (Claude Code, Codex, OpenCode and more).",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "career-ops-hq",
+  "install_path": ".claude/skills/h1b-sponsor/SKILL.md",
+  "source": {
+    "repo": "career-ops-hq/career-ops",
+    "url": "https://github.com/career-ops-hq/career-ops/blob/main/plugins/h1b-sponsor/skill.md",
+    "path": "plugins/h1b-sponsor/skill.md",
+    "branch": "main",
+    "discovered_at": "2026-10-23T14:33:00.359Z",
+    "stars": 76754,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-23T13:40:20Z",
+    "license": "MIT"
+  }
+}

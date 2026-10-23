@@ -1,0 +1,25 @@
+{
+  "id": "career-ops-hq-career-ops-template",
+  "name": "career-ops-plugin-{{NAME}}",
+  "description": "How to use the {{NAME}} plugin and the data it produces.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "career-ops-hq",
+  "install_path": ".claude/skills/_template/SKILL.md",
+  "source": {
+    "repo": "career-ops-hq/career-ops",
+    "url": "https://github.com/career-ops-hq/career-ops/blob/main/plugins/_template/skill.md",
+    "path": "plugins/_template/skill.md",
+    "branch": "main",
+    "discovered_at": "2026-10-23T14:32:59.860Z",
+    "stars": 76754,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-23T13:40:20Z",
+    "license": "MIT"
+  }
+}

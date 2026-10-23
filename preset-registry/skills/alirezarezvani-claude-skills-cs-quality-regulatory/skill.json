@@ -1,0 +1,25 @@
+{
+  "id": "alirezarezvani-claude-skills-cs-quality-regulatory",
+  "name": "cs-quality-regulatory",
+  "description": "Quality & Regulatory agent for ISO 13485 QMS, MDR compliance, FDA submissions, GDPR/DSGVO, and ISMS audits. Orchestrates ra-qm-team skills. Spawn when users need regulatory strategy, audit preparation, CAPA management, risk management, or compliance documentation.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alirezarezvani",
+  "install_path": ".claude/skills/cs-quality-regulatory/SKILL.md",
+  "source": {
+    "repo": "alirezarezvani/claude-skills",
+    "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/cs-quality-regulatory/SKILL.md",
+    "path": ".gemini/skills/cs-quality-regulatory/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-23T14:22:57.999Z",
+    "stars": 28587,
+    "language": "Python",
+    "pushed_at": "2026-10-23T11:30:28Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "alirezarezvani-claude-skills-cs-product-analyst",
+  "name": "cs-product-analyst",
+  "description": "Product analytics agent for KPI definition, dashboard setup, experiment design, and test result interpretation. Use when a product question needs numbers — e.g., defining activation/retention KPIs and a dashboard spec for a new feature, or sizing an A/B test and judging whether the result is significant enough to ship.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "alirezarezvani",
+  "install_path": ".claude/skills/cs-product-analyst/SKILL.md",
+  "source": {
+    "repo": "alirezarezvani/claude-skills",
+    "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/cs-product-analyst/SKILL.md",
+    "path": ".gemini/skills/cs-product-analyst/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-23T14:22:57.336Z",
+    "stars": 28587,
+    "language": "Python",
+    "pushed_at": "2026-10-23T11:30:28Z",
+    "license": "MIT"
+  }
+}
