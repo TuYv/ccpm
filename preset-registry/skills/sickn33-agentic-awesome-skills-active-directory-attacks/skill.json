@@ -1,8 +1,8 @@
 {
   "id": "sickn33-agentic-awesome-skills-active-directory-attacks",
   "name": "active-directory-attacks",
-  "description": "Provide comprehensive techniques for attacking Microsoft Active Directory environments. Covers reconnaissance, credential harvesting, Kerberos attacks, lateral movement, privilege escalation, and domain dominance for red team operations and penetration testing.",
-  "category": "测试调试",
+  "description": "Assess Active Directory attack paths using scoped configuration review and controlled synthetic lab validation; identify prerequisites, evidence and mitigations.",
+  "category": "开发编程",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,10 @@
     "url": "https://github.com/sickn33/agentic-awesome-skills/blob/main/plugins/agentic-awesome-skills-claude/skills/active-directory-attacks/SKILL.md",
     "path": "plugins/agentic-awesome-skills-claude/skills/active-directory-attacks/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-24T06:08:47.463Z",
-    "stars": 48422,
+    "discovered_at": "2026-10-24T11:10:26.298Z",
+    "stars": 48427,
     "language": "Python",
-    "pushed_at": "2026-10-24T05:54:52Z",
+    "pushed_at": "2026-10-24T09:04:00Z",
     "license": "MIT"
-  },
-  "summary_zh": "一套面向红队与渗透测试的 Active Directory 攻防技术指南，用于评估企业域环境的安全风险。"
+  }
 }

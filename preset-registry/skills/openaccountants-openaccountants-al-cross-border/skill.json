@@ -1,0 +1,25 @@
+{
+  "id": "openaccountants-openaccountants-al-cross-border",
+  "name": "al-cross-border",
+  "description": "Albanian cross-border tax for tax year 2026 under Law No. 29/2023 'Për tatimin mbi të ardhurat' (as amended to Law No. 81/2025) and Law No. 9920/2008 on tax procedures. Covers tax residence of individuals (home, 183 days, centre of vital interests, the 24-month rule for foreign artists) and of companies (incorporation or management and control); what Albania taxes non-residents on (Albanian-source income, art. 4); permanent establishment; final withholding at 8% on dividends and 15% on interest,",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openaccountants",
+  "install_path": ".claude/skills/al-cross-border/SKILL.md",
+  "source": {
+    "repo": "openaccountants/openaccountants",
+    "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/al-cross-border/SKILL.md",
+    "path": "agent-skills/al-cross-border/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-24T12:00:58.420Z",
+    "stars": 459,
+    "language": "Python",
+    "pushed_at": "2026-10-24T12:00:28Z",
+    "license": "AGPL-3.0"
+  }
+}

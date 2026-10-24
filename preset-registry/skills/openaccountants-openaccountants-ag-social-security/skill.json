@@ -1,0 +1,25 @@
+{
+  "id": "openaccountants-openaccountants-ag-social-security",
+  "name": "ag-social-security",
+  "description": "Calculate ordinary employee and employer social-security contributions using the statutory rate schedule, earnings ceiling and monthly remittance rule.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openaccountants",
+  "install_path": ".claude/skills/ag-social-security/SKILL.md",
+  "source": {
+    "repo": "openaccountants/openaccountants",
+    "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/ag-social-security/SKILL.md",
+    "path": "agent-skills/ag-social-security/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-24T12:00:58.012Z",
+    "stars": 459,
+    "language": "Python",
+    "pushed_at": "2026-10-24T12:00:28Z",
+    "license": "AGPL-3.0"
+  }
+}

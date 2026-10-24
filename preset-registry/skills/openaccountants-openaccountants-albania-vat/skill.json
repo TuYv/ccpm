@@ -1,7 +1,7 @@
 {
   "id": "openaccountants-openaccountants-albania-vat",
   "name": "albania-vat",
-  "description": "Use this skill whenever asked to prepare, review, or classify transactions for an Albanian VAT (TVSH) return for any client. Trigger on phrases like \\\"Albania VAT\\\", \\\"Albanian TVSH\\\", \\\"TVSH return\\\", \\\"DPT filing\\\", \\\"Albanian tax\\\", or any request involving Albanian VAT filing. Also trigger when classifying transactions for VAT purposes from bank statements, invoices, or other source data. This skill covers Albania only — standard TVSH payers filing monthly returns. Small business exemptions,",
+  "description": "Albanian VAT (TVSH, tatimi mbi vlerën e shtuar) for tax year 2026 under Law No. 92/2014 as amended to Law No. 80/2025, Council of Ministers Decision No. 953/2014 and Law No. 87/2019 on invoices and fiscalisation. Covers the 20% standard rate, the 6% and 10% reduced rates and what each covers, 0% exports and international transport, exempt supplies, the ALL 10,000,000 registration threshold, voluntary registration above ALL 5,000,000, notaries and bailiffs at zero threshold, monthly returns due 1",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/albania-vat/SKILL.md",
     "path": "agent-skills/albania-vat/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-24T06:57:57.789Z",
+    "discovered_at": "2026-10-24T12:00:59.843Z",
     "stars": 459,
     "language": "Python",
-    "pushed_at": "2026-10-23T18:35:31Z",
+    "pushed_at": "2026-10-24T12:00:28Z",
     "license": "AGPL-3.0"
-  },
-  "summary_zh": "用于阿尔巴尼亚标准增值税纳税人整理、审核并分类发票和银行流水，辅助完成月度TVSH申报。"
+  }
 }

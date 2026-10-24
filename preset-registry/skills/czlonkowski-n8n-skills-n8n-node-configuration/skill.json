@@ -1,7 +1,7 @@
 {
   "id": "czlonkowski-n8n-skills-n8n-node-configuration",
   "name": "n8n-node-configuration",
-  "description": "Operation-aware node configuration guidance. Use when configuring nodes, understanding property dependencies, determining required fields, choosing between get_node detail levels, or learning common configuration patterns by node type. Always use this skill when setting up node parameters — it explains which fields are required for each operation, how displayOptions control field visibility, and when to use patchNodeField for surgical edits vs full node updates.",
+  "description": "Operation-aware node configuration guidance. Use when configuring nodes, understanding property dependencies, determining required fields, choosing between get_node detail levels, or learning common configuration patterns by node type — including the native nodes that replace Code (Summarize, Aggregate, Split Out, Merge, Compare Datasets, Remove Duplicates, Sort, Limit, Date & Time, HTTP Request pagination, Crypto). Always use this skill when setting up node parameters — it explains which fields",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/czlonkowski/n8n-skills/blob/main/skills/n8n-node-configuration/SKILL.md",
     "path": "skills/n8n-node-configuration/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-24T06:04:23.955Z",
-    "stars": 6513,
+    "discovered_at": "2026-10-24T11:07:10.290Z",
+    "stars": 6514,
     "language": "Shell",
-    "pushed_at": "2026-10-15T21:35:32Z",
+    "pushed_at": "2026-10-24T10:54:43Z",
     "license": "MIT"
-  },
-  "summary_zh": "这是一个n8n节点配置向导。当你搞不清节点该填哪些必填项、字段间怎么关联，或不知道该局部修改还是全量更新时，它能帮你快速理清逻辑，顺利设好参数。"
+  }
 }

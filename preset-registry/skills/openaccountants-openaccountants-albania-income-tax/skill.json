@@ -1,7 +1,7 @@
 {
   "id": "openaccountants-openaccountants-albania-income-tax",
   "name": "albania-income-tax",
-  "description": "Use this skill whenever asked about Albania personal income tax for self-employed individuals and employees. Trigger on phrases like \\\"how much tax do I pay in Albania\\\", \\\"Albanian income tax\\\", \\\"DIVA\\\", \\\"D1 annual return\\\", \\\"tatime.gov.al\\\", \\\"self-employed Albania\\\", \\\"ALL tax brackets\\\", \\\"0% small business tax\\\", \\\"social and health contributions Albania\\\", \\\"PAYE Albania\\\", \\\"13% 23% income tax\\\", \\\"dividend tax Albania\\\", \\\"disguised employment\\\", or any question about filing or comput",
+  "description": "Albanian personal income tax (tatimi mbi të ardhurat personale) for tax year 2026 under Law No. 29/2023 as amended to Law No. 81/2025. Covers employees (13% and 23% scale, monthly payroll, the ALL 600,000 / 420,000 / 360,000 personal deductions), the self-employed and individual traders (15% and 23% scale, the 0% rate to 2029 for gross income up to ALL 14 million, presumed expenses, instalments), the disguised-employment rule in art. 12(1)(ç) and its two exceptions, investment income (dividends ",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/albania-income-tax/SKILL.md",
     "path": "agent-skills/albania-income-tax/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-24T06:57:57.074Z",
+    "discovered_at": "2026-10-24T12:00:59.307Z",
     "stars": 459,
     "language": "Python",
-    "pushed_at": "2026-10-23T18:35:31Z",
+    "pushed_at": "2026-10-24T12:00:28Z",
     "license": "AGPL-3.0"
   }
 }

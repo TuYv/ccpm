@@ -1,7 +1,7 @@
 {
   "id": "openaccountants-openaccountants-albania-payroll",
   "name": "albania-payroll",
-  "description": "Use this skill whenever asked about Albania payroll processing for employed persons. Trigger on phrases like \\\"Albania payroll\\\", \\\"Albanian payroll\\\", \\\"lista e pagave\\\", \\\"payroll list Albania\\\", \\\"PAYE Albania\\\", \\\"withholding tax Albania\\\", \\\"tatimi mbi te ardhurat Albania\\\", \\\"social insurance Albania\\\", \\\"sigurime shoqerore\\\", \\\"sigurime shendetesore\\\", \\\"health insurance contribution Albania\\\", \\\"ISSH contribution\\\", \\\"net salary Albania\\\", \\\"neto pagese\\\", \\\"gross to net Albania\\\", \\\"emp",
+  "description": "Albanian monthly payroll for tax year 2026: how an employer computes and pays employment income tax (TAP) at 13% and 23% with the art. 22 monthly deductions, employee and employer social and health contributions within the ALL 50,000 floor and ALL 186,416 social ceiling, net pay and total employer cost, and files the monthly listëpagesa (E-SIG 025/a) with payment by the 20th. Covers the personal status declaration, second employers, part-time staff, new-hire notice (E-SIG 027/a), the annual posi",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/albania-payroll/SKILL.md",
     "path": "agent-skills/albania-payroll/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-24T06:57:57.247Z",
+    "discovered_at": "2026-10-24T12:00:59.433Z",
     "stars": 459,
     "language": "Python",
-    "pushed_at": "2026-10-23T18:35:31Z",
+    "pushed_at": "2026-10-24T12:00:28Z",
     "license": "AGPL-3.0"
   }
 }

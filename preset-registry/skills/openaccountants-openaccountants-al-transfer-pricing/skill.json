@@ -1,0 +1,25 @@
+{
+  "id": "openaccountants-openaccountants-al-transfer-pricing",
+  "name": "al-transfer-pricing",
+  "description": "Albanian transfer pricing for tax year 2026 under Law No. 29/2023 'Për tatimin mbi të ardhurat' (arts. 3(13), 32 to 39, 44) and Instruction No. 29 of 16.11.2023 on transfer pricing and advance pricing agreements. Covers who is a related person (the 50% tests, relatives, de facto control), which transactions are controlled, the five methods, the arm's length range and adjustment to the median, documentation produced within 45 days, the annual controlled transactions notice above ALL 50 million du",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openaccountants",
+  "install_path": ".claude/skills/al-transfer-pricing/SKILL.md",
+  "source": {
+    "repo": "openaccountants/openaccountants",
+    "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/al-transfer-pricing/SKILL.md",
+    "path": "agent-skills/al-transfer-pricing/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-24T12:00:58.877Z",
+    "stars": 459,
+    "language": "Python",
+    "pushed_at": "2026-10-24T12:00:28Z",
+    "license": "AGPL-3.0"
+  }
+}
