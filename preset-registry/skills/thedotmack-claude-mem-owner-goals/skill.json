@@ -1,0 +1,25 @@
+{
+  "id": "thedotmack-claude-mem-owner-goals",
+  "name": "owner-goals",
+  "description": "Map what the owner wants from the prompts they typed themselves (prompts an agent wrote are left out), then put their top priorities and open asks, each with dated quotes, in the Goals panel at the top of My Work. Use when asked for \"owner goals\", \"my goals\", \"what do I want\", \"what am I asking for\", \"map my prompts\", or to refresh Goals in My Work.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "thedotmack",
+  "install_path": ".claude/skills/owner-goals/SKILL.md",
+  "source": {
+    "repo": "thedotmack/claude-mem",
+    "url": "https://github.com/thedotmack/claude-mem/blob/main/plugin/skills/owner-goals/SKILL.md",
+    "path": "plugin/skills/owner-goals/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-24T06:05:08.634Z",
+    "stars": 102623,
+    "language": "TypeScript",
+    "pushed_at": "2026-10-24T05:26:47Z",
+    "license": "Apache-2.0"
+  }
+}

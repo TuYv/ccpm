@@ -8,7 +8,7 @@
     "codex",
     "gemini"
   ],
-  "version": "1.0.0",
+  "version": "",
   "author": "davila7",
   "install_path": ".claude/skills/inference-serving-tensorrt-llm/SKILL.md",
   "source": {
@@ -16,10 +16,10 @@
     "url": "https://github.com/davila7/claude-code-templates/blob/main/cli-tool/components/skills/ai-research/inference-serving-tensorrt-llm/SKILL.md",
     "path": "cli-tool/components/skills/ai-research/inference-serving-tensorrt-llm/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-24T01:45:08.576Z",
-    "stars": 32859,
+    "discovered_at": "2026-10-24T06:54:51.424Z",
+    "stars": 32862,
     "language": "Python",
-    "pushed_at": "2026-10-23T20:12:08Z",
+    "pushed_at": "2026-10-24T03:18:01Z",
     "license": "MIT"
   },
   "summary_zh": "这是一款基于英伟达TensorRT的大模型推理加速工具，能大幅提升吞吐并降低延迟，适合在GPU上追求比PyTorch快数十倍的生产部署，或需要多卡扩展与量化推理的场景。"
