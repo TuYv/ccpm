@@ -16,10 +16,10 @@
     "url": "https://github.com/blackwell-systems/agent-lsp/blob/main/skills/lsp-rename/SKILL.md",
     "path": "skills/lsp-rename/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-24T12:03:14.287Z",
+    "discovered_at": "2026-10-24T15:42:37.260Z",
     "stars": 164,
     "language": "Go",
-    "pushed_at": "2026-10-24T06:28:48Z",
+    "pushed_at": "2026-10-24T15:33:34Z",
     "license": "MIT"
   },
   "summary_zh": "基于 LSP 的跨工作区重命名工具，分两步执行：先列出所有受影响的位置供确认，再原子化批量替换，避免重命名函数、变量等符号时漏改或误改。"

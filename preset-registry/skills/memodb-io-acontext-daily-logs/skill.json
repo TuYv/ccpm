@@ -2,7 +2,7 @@
   "id": "memodb-io-acontext-daily-logs",
   "name": "daily-logs",
   "description": "Track daily activity logs and summaries for the user. TRIGGER BY: read/edit user memory",
-  "category": "测试调试",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/memodb-io/Acontext/blob/main/src/server/api/go/configs/skill_templates/daily-logs/SKILL.md",
     "path": "src/server/api/go/configs/skill_templates/daily-logs/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-24T11:54:51.330Z",
+    "discovered_at": "2026-10-24T15:31:14.030Z",
     "stars": 3696,
     "language": "JavaScript",
-    "pushed_at": "2026-07-14T18:35:09Z",
+    "pushed_at": "2026-10-24T15:23:36Z",
     "license": "Apache-2.0"
   },
   "summary_zh": "用于记录用户每日活动并生成摘要，适合在读取或编辑用户记忆时自动追踪和整理变更。"
