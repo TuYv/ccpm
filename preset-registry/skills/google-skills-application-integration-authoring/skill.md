@@ -1,7 +1,7 @@
 ---
 name: application-integration-authoring
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
   category: ApplicationDevelopment
 description: >-
   Builds, versions, publishes, tests, and executes Google Cloud Application Integration
@@ -24,13 +24,13 @@ For initial project setup, region provisioning, and IAM role definitions, use th
 
 - **Read-only operations run freely**: `integrations.list`, `integrations:search`, `versions.list`, `versions.get`, `versions:download`, `authConfigs.list`, and `executions.list`.
 - **Confirm before any state change or execution**: Before creating, uploading, patching, publishing, unpublishing, testing, executing, scheduling, or deleting an integration or version, or modifying IAM or auth configs, show the exact command and payload to the user and get explicit confirmation.
-- Ask the user before installing packages (`pip install`) or changing global gcloud settings such as `gcloud config set auth/impersonate_service_account`; show the exact command first.
+- **Host changes require approval.** Before installing packages (`pip install`) or changing global gcloud or credential state (`gcloud config set ...` such as `auth/impersonate_service_account`, `gcloud auth application-default login` / `set-quota-project`), show the exact command and wait for the user's approval.
 - **Never store secrets in config variables**: Config variables (`CONFIG_*`) are stored and exported in plain text. Always use authentication profiles (`projects.locations.authConfigs`) or the Secret Manager access task for credentials.
 
 ## Prerequisites Checklist
 
 1. **Install Google Cloud SDK**: Follow [Install the gcloud CLI](https://docs.cloud.google.com/sdk/docs/install-sdk.md.txt) if `gcloud` is not installed.
-2. **Billing and project**: Ensure the Google Cloud project has an active billing account attached (required even when usage stays within the free tier), then set the target project:
+2. **Billing and project**: Ensure the Google Cloud project has an active billing account attached (required even when usage stays within the free tier), then set the target project (changes global gcloud state; get the user's approval first):
    ```bash
    gcloud config set project PROJECT_ID
    ```
@@ -40,9 +40,9 @@ For initial project setup, region provisioning, and IAM role definitions, use th
    ```
 4. **Provision the region**: Application Integration is regional: confirm the target region is supported on [Application Integration locations](https://docs.cloud.google.com/application-integration/docs/locations.md.txt) and use `us-central1` as a well-supported default when the user has no preference. The region is the `LOCATION` in every REST path; no `gcloud` default-region setting applies to Application Integration. The target `LOCATION` must be provisioned via the Cloud console or `POST .../clients:provision` before authoring integrations (see `application-integration-basics`).
 5. **Authenticate**:
-   - For `curl`: run `gcloud auth login` and pass `-H "Authorization: Bearer $(gcloud auth print-access-token)"`.
-   - For the Python client (install with `pip install "google-api-python-client>=2.100.0,<3" "google-auth>=2.20.0,<3"`): run `gcloud auth application-default login` (or set `GOOGLE_APPLICATION_CREDENTIALS` for a service account).
-   - For service account impersonation: run `gcloud config set auth/impersonate_service_account SA_EMAIL` (requires `roles/iam.serviceAccountTokenCreator`).
+   - For `curl`: run `gcloud auth login` (changes host or credential state; get the user's approval first) and pass `-H "Authorization: Bearer $(gcloud auth print-access-token)"`.
+   - For the Python client (install with `pip install "google-api-python-client>=2.100.0,<3" "google-auth>=2.20.0,<3"`): run `gcloud auth application-default login` and `gcloud auth application-default set-quota-project PROJECT_ID` (or set `GOOGLE_APPLICATION_CREDENTIALS` for a service account) (changes host or credential state; get the user's approval first).
+   - For service account impersonation: run `gcloud config set auth/impersonate_service_account SA_EMAIL` (requires `roles/iam.serviceAccountTokenCreator`) (changes host or credential state; get the user's approval first).
 6. **Verify IAM roles**:
    - Create, upload, or edit drafts: `roles/integrations.integrationEditor` (covers `versions:upload`, which needs `integrations.integrationVersions.create`, and `versions:publish`)
    - Publish or unpublish: `roles/integrations.integrationDeployer` or `roles/integrations.integrationEditor` (`roles/integrations.integrationDeployer` alone can publish an existing version but cannot upload via `versions:upload`), plus `roles/integrations.serviceAgent` granted to the Application Integration service agent (`service-PROJECT_NUMBER@gcp-sa-integrations.iam.gserviceaccount.com`)
@@ -265,7 +265,7 @@ curl -sS --fail-with-body -X POST \
 
 ### Example 2: Python Discovery Client Workflow (Built from the API Reference)
 
-No official Python sample is published on `docs.cloud.google.com`; the following workflow is built from the v1 API discovery document (`google-api-python-client`). The caller must hold `roles/iam.serviceAccountUser` on `RUN_AS_SA` (projects with governance require a run-as service account to publish). Because `EmailTask` sends real email, confirm `RECIPIENT_EMAIL` and each state-changing call (`upload`, `publish`, `execute`) with the user before running. Install dependencies first with `pip install "google-api-python-client>=2.100.0,<3" "google-auth>=2.20.0,<3"`.
+No official Python sample is published on `docs.cloud.google.com`; the following workflow is built from the v1 API discovery document (`google-api-python-client`). The caller must hold `roles/iam.serviceAccountUser` on `RUN_AS_SA` (projects with governance require a run-as service account to publish). Because `EmailTask` sends real email, confirm `RECIPIENT_EMAIL` and each state-changing call (`upload`, `publish`, `execute`) with the user before running. Install dependencies first with `pip install "google-api-python-client>=2.100.0,<3" "google-auth>=2.20.0,<3"` (changes host or credential state; get the user's approval first).
 
 ```python
 import json

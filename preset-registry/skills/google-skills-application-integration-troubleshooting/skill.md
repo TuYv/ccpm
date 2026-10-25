@@ -1,7 +1,7 @@
 ---
 name: application-integration-troubleshooting
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
   category: ApplicationDevelopment
 description: >-
   Diagnoses failed, stuck, or silent Google Cloud Application Integration runs and
@@ -18,9 +18,9 @@ Diagnose and recover Google Cloud Application Integration executions that fail, 
 
 ## Tooling and Scope Boundaries
 
-- **REST is the interface.** There is no `gcloud integrations` command group and no Google-managed MCP server for Application Integration. Use `curl` with `gcloud auth print-access-token`, or the discovery-based Python client (`googleapiclient.discovery.build("integrations", "v1")` and `build("connectors", "v1")`; install with `pip install "google-api-python-client>=2.100.0,<3" "google-auth>=2.20.0,<3"`).
+- **REST is the interface.** There is no `gcloud integrations` command group and no Google-managed MCP server for Application Integration. Use `curl` with `gcloud auth print-access-token`, or the discovery-based Python client (`googleapiclient.discovery.build("integrations", "v1")` and `build("connectors", "v1")`; install with `pip install "google-api-python-client>=2.100.0,<3" "google-auth>=2.20.0,<3"`) (changes host or credential state; get the user's approval first).
 - **Generic `gcloud` commands apply** for authentication (`gcloud auth`), enabling APIs (`gcloud services`), IAM checks (`gcloud projects get-iam-policy`, `gcloud iam service-accounts get-iam-policy`), and log queries (`gcloud logging read`).
-- **Regional scope.** Integrations, executions, connections, and execution logs live in a single Google Cloud region (`LOCATION`, for example `us-central1`). Querying the wrong region returns empty results.
+- **Regional scope.** Integrations, executions, connections, and execution logs live in a single Google Cloud region (`LOCATION`), which is the `LOCATION` in every REST path; no `gcloud` default-region setting applies. Ask the user which region the integration is deployed in. If they don't know, start with `us-central1` and, if `executions.list` is empty there, check the other [Application Integration locations](https://docs.cloud.google.com/application-integration/docs/locations.md.txt) before concluding nothing ran (Step 2).
 - **Sibling skills:**
   - Use `application-integration-basics` for product concepts, enabling APIs, provisioning a region, initial IAM roles, and service limits.
   - Use `application-integration-authoring` for creating drafts, editing tasks and triggers, config variables, publishing, `:execute` and `:schedule` payloads, and CI/CD export/import.
@@ -29,6 +29,7 @@ Diagnose and recover Google Cloud Application Integration executions that fail, 
 
 - **Read-only checks run freely:** `executions.list`, `suspensions.list`, `connections.get`, `connectionSchemaMetadata` get calls, runtime v2 `actions.list` / `entityTypes.list`, `gcloud logging read`, and `v2` `executions:troubleshoot`.
 - **State-changing actions require explicit user confirmation.** Before canceling or replaying an execution, lifting or resolving a suspension, refreshing connector schema metadata, repairing connector eventing, publishing or unpublishing a version, or changing IAM bindings, show the exact command and wait for user approval.
+- **Host changes require approval.** Before installing packages (`pip install`) or changing global gcloud or credential state (`gcloud config set ...` such as `auth/impersonate_service_account`, `gcloud auth application-default login` / `set-quota-project`), show the exact command and wait for the user's approval.
 - **Never bundle destructive scripts** or delete integrations, versions, connections, or auth profiles during troubleshooting unless the user specifically asks.
 
 ## Prerequisites and Setup Check
@@ -47,7 +48,7 @@ gcloud services list --enabled --project="PROJECT_ID" \
 
 - If an API is missing, ask the user before running `gcloud services enable integrations.googleapis.com connectors.googleapis.com secretmanager.googleapis.com --project="PROJECT_ID"`.
 - Ensure an active billing account is attached to `PROJECT_ID` (required even when usage stays within the monthly free tier; see the [Application Integration pricing page](https://cloud.google.com/application-integration/pricing)).
-- For Python discovery clients (install with `pip install "google-api-python-client>=2.100.0,<3" "google-auth>=2.20.0,<3"`) or ADK (`ApplicationIntegrationToolset`), authenticate with `gcloud auth application-default login` and `gcloud auth application-default set-quota-project PROJECT_ID`.
+- For Python discovery clients (install with `pip install "google-api-python-client>=2.100.0,<3" "google-auth>=2.20.0,<3"`) or ADK (`ApplicationIntegrationToolset`), authenticate with `gcloud auth application-default login` and `gcloud auth application-default set-quota-project PROJECT_ID` (changes host or credential state; get the user's approval first).
 
 ## Diagnostic Decision Flow
 

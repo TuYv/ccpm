@@ -1,7 +1,7 @@
 ---
 name: application-integration-basics
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
   category: ApplicationDevelopment
 description: >-
   Explains Google Cloud Application Integration concepts, region provisioning, IAM roles,
@@ -35,7 +35,7 @@ Application Integration is Google Cloud's serverless, auto-scaling Integration-P
   - Modifying IAM policies (`gcloud projects add-iam-policy-binding` or `gcloud iam service-accounts add-iam-policy-binding`).
   - Creating, uploading, publishing, unpublishing, executing, testing, or deleting any integration, version, auth profile, or connection.
 - **Never bundle destructive scripts** that delete integrations, versions, auth profiles, or connections unattended.
-- Ask the user before installing packages (`pip install`) or changing global gcloud settings such as `gcloud config set auth/impersonate_service_account`; show the exact command first.
+- **Host changes require approval.** Before installing packages (`pip install`) or changing global gcloud or credential state (`gcloud config set ...` such as `auth/impersonate_service_account`, `gcloud auth application-default login` / `set-quota-project`), show the exact command and wait for the user's approval.
 
 ## Choosing the Interface
 
@@ -44,9 +44,9 @@ Application Integration has **no `gcloud integrations` command group** (and no `
 | Interface | What it covers | Authentication |
 | :--- | :--- | :--- |
 | **REST API (`curl`)** | Full v1 surface: region provisioning, integrations, versions, download/upload, publish, execute, schedule, executions, suspensions, authConfigs, templates. | `Authorization: Bearer $(gcloud auth print-access-token)` |
-| **Python discovery client** | Full v1 surface via `googleapiclient.discovery.build("integrations", "v1")` (and v2 via `build("integrations", "v2")`; no dedicated Cloud Client Library exists). Install with `pip install "google-api-python-client>=2.100.0,<3" "google-auth>=2.20.0,<3"`. | Application Default Credentials (`gcloud auth application-default login`) |
+| **Python discovery client** | Full v1 surface via `googleapiclient.discovery.build("integrations", "v1")` (and v2 via `build("integrations", "v2")`; no dedicated Cloud Client Library exists). Install with `pip install "google-api-python-client>=2.100.0,<3" "google-auth>=2.20.0,<3"` (changes host or credential state; get the user's approval first). | Application Default Credentials (`gcloud auth application-default login`) (changes host or credential state; get the user's approval first) |
 | **Terraform (`hashicorp/google`)** | Infrastructure only: `google_integrations_client` (region setup), `google_integrations_auth_config`, and `google_integration_connectors_*`. Does **not** manage integration workflow versions. | ADC or Terraform provider credentials |
-| **ADK (`ApplicationIntegrationToolset`)** | Exposes published API-trigger integrations or Integration Connectors actions/entities as tools for ADK agents (Python v0.1.0+, Java v0.3.0+). | ADC (`gcloud auth application-default login`) or service account JSON |
+| **ADK (`ApplicationIntegrationToolset`)** | Exposes published API-trigger integrations or Integration Connectors actions/entities as tools for ADK agents (Python v0.1.0+, Java v0.3.0+). | ADC (`gcloud auth application-default login`) (changes host or credential state; get the user's approval first) or service account JSON |
 | **Cloud console** | Visual drag-and-drop editor, Quick/Advanced region setup, Approval task resolution, OAuth 2.0 authorization code consent flow. | Browser Google Cloud sign-in |
 
 - Use `gcloud` only for generic Google Cloud tasks: enabling APIs (`gcloud services enable`), printing access tokens (`gcloud auth print-access-token`), managing IAM, and reading Cloud Logging (`gcloud logging read`).

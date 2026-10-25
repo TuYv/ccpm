@@ -1,0 +1,25 @@
+{
+  "id": "chrisryugj-kordoc-kordoc",
+  "name": "kordoc",
+  "description": "Use this skill whenever the user wants to read, create, fill, edit, compare, validate, or preview Korean Hangul/official documents — .hwp (HWP 3.x/5.x), .hwpx, .hml (HWPML) — or convert Korean-office PDF/DOCX/XLS/XLSX to Markdown. Triggers include any mention of 'hwp', 'hwpx', 'hml', '한글 문서', '아래한글', '한컴', '공문서', '기안문', '보고서를 hwpx로', '서식 채우기', '양식 자동 작성', '신청서 채워줘', '신구대조표', '문서 비교', or uploading/attaching .hwp/.hwpx/.hml files. Also use when generating official Korean documents from Markdown (기",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "chrisryugj",
+  "install_path": ".claude/skills/kordoc/SKILL.md",
+  "source": {
+    "repo": "chrisryugj/kordoc",
+    "url": "https://github.com/chrisryugj/kordoc/blob/main/plugins/kordoc/skills/kordoc/SKILL.md",
+    "path": "plugins/kordoc/skills/kordoc/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-25T17:22:29.284Z",
+    "stars": 2750,
+    "language": "TypeScript",
+    "pushed_at": "2026-10-25T14:13:55Z",
+    "license": "MIT"
+  }
+}
