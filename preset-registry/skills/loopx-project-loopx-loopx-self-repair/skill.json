@@ -2,7 +2,7 @@
   "id": "loopx-project-loopx-loopx-self-repair",
   "name": "loopx-self-repair",
   "description": "Diagnose and repair LoopX control-plane drift or agent behavior drift. Use when a LoopX task makes unexpectedly small progress, follows a stale or contradictory recommended_action, ignores a higher-priority blocked item while doing fallback work, reports vague owner/user gates, loses todo projection, misaligns benchmark treatment with the real product path, mixes temporary artifacts into commits, or when the user asks for root-cause analysis, self-repair, or why the harness/agent behaved unexpec",
-  "category": "测试调试",
+  "category": "文档写作",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/loopx-project/loopx/blob/main/skills/loopx-self-repair/SKILL.md",
     "path": "skills/loopx-self-repair/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-25T01:26:56.433Z",
-    "stars": 6416,
+    "discovered_at": "2026-10-25T06:22:13.407Z",
+    "stars": 6418,
     "language": "Python",
-    "pushed_at": "2026-10-24T21:25:24Z",
+    "pushed_at": "2026-10-25T06:21:47Z",
     "license": "Apache-2.0"
   }
 }

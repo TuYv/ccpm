@@ -2,7 +2,7 @@
   "id": "loopx-project-loopx-loopx-change-quality",
   "name": "loopx-change-quality",
   "description": "Qualify the exact final diff for a LoopX-managed goal. Use when goal policy enables change_quality_qualification, before a non-trivial delivery or merge, and when producing or repairing an exact-scope quality receipt. The workflow is language-neutral, permits at most one policy-authorized safe-fix pass, and never grants merge or repository authority.",
-  "category": "测试调试",
+  "category": "文档写作",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/loopx-project/loopx/blob/main/skills/loopx-change-quality/SKILL.md",
     "path": "skills/loopx-change-quality/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-25T01:26:55.242Z",
-    "stars": 6416,
+    "discovered_at": "2026-10-25T06:22:12.112Z",
+    "stars": 6418,
     "language": "Python",
-    "pushed_at": "2026-10-24T21:25:24Z",
+    "pushed_at": "2026-10-25T06:21:47Z",
     "license": "Apache-2.0"
   }
 }
