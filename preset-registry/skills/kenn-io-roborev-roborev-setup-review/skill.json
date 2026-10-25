@@ -1,0 +1,25 @@
+{
+  "id": "kenn-io-roborev-roborev-setup-review",
+  "name": "roborev-setup-review",
+  "description": "Use only when the user explicitly invokes /roborev-setup-review",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "kenn-io",
+  "install_path": ".claude/skills/roborev-setup-review/SKILL.md",
+  "source": {
+    "repo": "kenn-io/roborev",
+    "url": "https://github.com/kenn-io/roborev/blob/main/internal/skills/grok/roborev-setup-review/SKILL.md",
+    "path": "internal/skills/grok/roborev-setup-review/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-25T22:02:53.840Z",
+    "stars": 1776,
+    "language": "Go",
+    "pushed_at": "2026-10-25T21:51:37Z",
+    "license": "MIT"
+  }
+}
