@@ -1,6 +1,6 @@
 {
   "id": "davila7-claude-code-templates-distributed-training-megatron-core",
-  "name": "training-llms-megatron",
+  "name": "distributed-training-megatron-core",
   "description": "Trains large language models (2B-462B parameters) using NVIDIA Megatron-Core with advanced parallelism strategies. Use when training models >1B parameters, need maximum GPU efficiency (47% MFU on H100), or require tensor/pipeline/sequence/context/expert parallelism. Production-ready framework used for Nemotron, LLaMA, DeepSeek.",
   "category": "设计创意",
   "compatible_tools": [
@@ -16,10 +16,10 @@
     "url": "https://github.com/davila7/claude-code-templates/blob/main/cli-tool/components/skills/ai-research/distributed-training-megatron-core/SKILL.md",
     "path": "cli-tool/components/skills/ai-research/distributed-training-megatron-core/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-26T01:23:59.112Z",
-    "stars": 32895,
+    "discovered_at": "2026-10-26T07:15:38.640Z",
+    "stars": 32905,
     "language": "Python",
-    "pushed_at": "2026-10-25T03:15:38Z",
+    "pushed_at": "2026-10-26T04:26:37Z",
     "license": "MIT"
   },
   "summary_zh": "基于Megatron-Core的生产级大模型训练框架，专治超十亿参数模型训练时的算力瓶颈与复杂并行难题，帮你榨干GPU效率，适合需要高效训练超大模型的场景。"

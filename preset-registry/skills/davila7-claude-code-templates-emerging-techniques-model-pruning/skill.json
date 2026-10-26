@@ -1,6 +1,6 @@
 {
   "id": "davila7-claude-code-templates-emerging-techniques-model-pruning",
-  "name": "model-pruning",
+  "name": "emerging-techniques-model-pruning",
   "description": "Reduce LLM size and accelerate inference using pruning techniques like Wanda and SparseGPT. Use when compressing models without retraining, achieving 50% sparsity with minimal accuracy loss, or enabling faster inference on hardware accelerators. Covers unstructured pruning, structured pruning, N:M sparsity, magnitude pruning, and one-shot methods.",
   "category": "设计创意",
   "compatible_tools": [
@@ -16,10 +16,10 @@
     "url": "https://github.com/davila7/claude-code-templates/blob/main/cli-tool/components/skills/ai-research/emerging-techniques-model-pruning/SKILL.md",
     "path": "cli-tool/components/skills/ai-research/emerging-techniques-model-pruning/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-26T01:23:59.963Z",
-    "stars": 32895,
+    "discovered_at": "2026-10-26T07:15:40.005Z",
+    "stars": 32905,
     "language": "Python",
-    "pushed_at": "2026-10-25T03:15:38Z",
+    "pushed_at": "2026-10-26T04:26:37Z",
     "license": "MIT"
   },
   "summary_zh": "这是一款大模型剪枝工具，帮你无需重训就能给模型瘦身并加速推理，即使砍掉一半参数也几乎不掉精度，特别适合在资源有限的硬件上高效部署大模型。"

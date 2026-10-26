@@ -1,0 +1,25 @@
+{
+  "id": "daymade-claude-code-skills-cookie-copy",
+  "name": "cookie-copy",
+  "description": ">- Copies selected-site cookies between local profiles of the same macOS Chrome. Use for cookie copy, 复制 Cookie, 搬登录态 or reusing an existing ChatGPT session in an isolated profile. Supports Google and ChatGPT/OpenAI site selections, destination backups and restore, and expected-account verification for ChatGPT.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/cookie-copy/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/cookie-copy/SKILL.md",
+    "path": "cookie-copy/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-26T07:12:46.739Z",
+    "stars": 1496,
+    "language": "Python",
+    "pushed_at": "2026-10-26T01:16:18Z",
+    "license": "MIT"
+  }
+}

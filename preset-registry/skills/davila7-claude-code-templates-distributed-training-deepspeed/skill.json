@@ -1,6 +1,6 @@
 {
   "id": "davila7-claude-code-templates-distributed-training-deepspeed",
-  "name": "deepspeed",
+  "name": "distributed-training-deepspeed",
   "description": "Expert guidance for distributed training with DeepSpeed - ZeRO optimization stages, pipeline parallelism, FP16/BF16/FP8, 1-bit Adam, sparse attention",
   "category": "设计创意",
   "compatible_tools": [
@@ -16,10 +16,10 @@
     "url": "https://github.com/davila7/claude-code-templates/blob/main/cli-tool/components/skills/ai-research/distributed-training-deepspeed/SKILL.md",
     "path": "cli-tool/components/skills/ai-research/distributed-training-deepspeed/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-26T01:23:58.987Z",
-    "stars": 32895,
+    "discovered_at": "2026-10-26T07:15:38.469Z",
+    "stars": 32905,
     "language": "Python",
-    "pushed_at": "2026-10-25T03:15:38Z",
+    "pushed_at": "2026-10-26T04:26:37Z",
     "license": "MIT"
   },
   "summary_zh": "这是一款深度学习分布式训练加速与显存优化框架，专治大模型训练时显存爆满和速度慢的痛点，适合需要多卡多机训练大模型的场景。"
