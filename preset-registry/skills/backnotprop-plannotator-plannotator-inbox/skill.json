@@ -1,0 +1,25 @@
+{
+  "id": "backnotprop-plannotator-plannotator-inbox",
+  "name": "plannotator-inbox",
+  "description": "Open the Plannotator Inbox in the browser (starting it if needed) and tell the person its address.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "backnotprop",
+  "install_path": ".claude/skills/plannotator-inbox/SKILL.md",
+  "source": {
+    "repo": "backnotprop/plannotator",
+    "url": "https://github.com/backnotprop/plannotator/blob/main/apps/skills/core/plannotator-inbox/SKILL.md",
+    "path": "apps/skills/core/plannotator-inbox/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-26T20:28:27.487Z",
+    "stars": 9675,
+    "language": "TypeScript",
+    "pushed_at": "2026-10-26T20:27:25Z",
+    "license": "Apache-2.0"
+  }
+}

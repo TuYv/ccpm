@@ -2,7 +2,7 @@
   "id": "garrytan-gstack-ios-clean",
   "name": "ios-clean",
   "description": "Remove the DebugBridge SPM package and all #if DEBUG wiring from an iOS app. (gstack)",
-  "category": "测试调试",
+  "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/garrytan/gstack/blob/main/ios-clean/SKILL.md",
     "path": "ios-clean/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-26T13:14:34.667Z",
-    "stars": 137783,
+    "discovered_at": "2026-10-26T19:34:09.907Z",
+    "stars": 137814,
     "language": "TypeScript",
-    "pushed_at": "2026-10-26T13:04:00Z",
+    "pushed_at": "2026-10-26T19:30:37Z",
     "license": "MIT"
   },
   "summary_zh": "用于清理 iOS 项目中的 DebugBridge 依赖及相关调试条件代码，适合移除临时调试配置。"

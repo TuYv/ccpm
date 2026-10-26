@@ -1,0 +1,25 @@
+{
+  "id": "hoangnguyen0403-agent-skills-standard-cyber-lab-validation",
+  "name": "cyber-lab-validation",
+  "description": "Governs bounded cybersecurity validation in isolated disposable lab environments with explicit per-action gates, synthetic-data boundaries, paired evidence, and teardown verification. Use when validating authorized security claims in disposable labs; not for operational attacks or production testing.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "HoangNguyen0403",
+  "install_path": ".claude/skills/cyber-lab-validation/SKILL.md",
+  "source": {
+    "repo": "HoangNguyen0403/agent-skills-standard",
+    "url": "https://github.com/HoangNguyen0403/agent-skills-standard/blob/develop/.agents/skills/cybersecurity/cyber-lab-validation/SKILL.md",
+    "path": ".agents/skills/cybersecurity/cyber-lab-validation/SKILL.md",
+    "branch": "develop",
+    "discovered_at": "2026-10-26T20:20:59.330Z",
+    "stars": 583,
+    "language": "TypeScript",
+    "pushed_at": "2026-10-26T14:45:31Z",
+    "license": "MIT"
+  }
+}

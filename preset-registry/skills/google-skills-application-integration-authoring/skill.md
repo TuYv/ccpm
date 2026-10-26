@@ -1,7 +1,7 @@
 ---
 name: application-integration-authoring
 metadata:
-  version: "1.0.1"
+  version: "1.0.2"
   category: ApplicationDevelopment
 description: >-
   Builds, versions, publishes, tests, and executes Google Cloud Application Integration
@@ -19,6 +19,17 @@ Google Cloud Application Integration workflows are authored, versioned, publishe
 There is no `gcloud integrations` command group, no Google-managed MCP server for Application Integration, and no documented Terraform resource for integrations or versions. Use `gcloud` only for authentication, enabling APIs, and IAM bindings. Use Terraform only for region provisioning (`google_integrations_client`), authentication profiles (`google_integrations_auth_config`), and Integration Connectors (`google_integration_connectors_connection`).
 
 For initial project setup, region provisioning, and IAM role definitions, use the `application-integration-basics` skill. For diagnosing failed or stuck runs, execution logs, and quota errors, use the `application-integration-troubleshooting` skill.
+
+## Attribution
+
+**MUST READ**: Before executing any `gcloud` command, REST API call, or Python
+discovery-client call, you MUST read
+[Usage Attribution](references/attribution.md). For commands executed directly
+in the terminal (never in generated scripts, Terraform, ADK agents, or user
+code), prefix `gcloud` with
+`CLOUDSDK_METRICS_REQUEST_ATTRIBUTION="agent-skills/1.0 (skill:application-integration-authoring)"`
+and add `agent-skills/1.0 (skill:application-integration-authoring)` to the
+`User-Agent` header of `curl` requests.
 
 ## Safety and Confirmation Rules
 
@@ -374,6 +385,7 @@ See [references/cicd-promotion.md](references/cicd-promotion.md) for the complet
 
 ## Reference Guides
 
+- [Usage Attribution](references/attribution.md): Usage attribution for `gcloud` CLI commands, direct `curl` REST calls, and Python discovery-client snippets run in the terminal.
 - [REST API Cheatsheet](references/rest-api-cheatsheet.md): v1 and v2 endpoints, parameters, filters, and IAM permissions.
 - [IntegrationVersion JSON Reference](references/integration-version-json.md): Schema for `triggerConfigs`, `taskConfigs`, `integrationParameters`, `ValueType`, and config variables.
 - [Triggers and Execution Reference](references/triggers-and-execution.md): Trigger types, `triggerId` formats, `:execute` vs `:schedule`, OpenAPI generation, and lifting or resolving suspensions.

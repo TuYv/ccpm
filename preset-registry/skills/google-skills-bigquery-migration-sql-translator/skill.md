@@ -1,7 +1,7 @@
 ---
 name: bigquery-migration-sql-translator
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
   category: BigDataAndAnalytics
   publisher: google
 description: >-
@@ -20,6 +20,12 @@ description: >-
 The BigQuery Migration Service (BQMS) translates legacy database SQL scripts,
 queries, and schemas into GoogleSQL. This skill coordinates translation
 workflows, Cloud Storage staging, compiler error triage, and YAML configuration.
+
+## Usage Attribution
+
+**MUST READ**: Before executing any `gcloud`, REST API, or MCP command, you
+MUST read and follow the instructions in
+[Usage Attribution](references/attribution.md).
 
 ## Before you begin
 

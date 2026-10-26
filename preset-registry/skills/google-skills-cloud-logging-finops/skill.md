@@ -1,7 +1,7 @@
 ---
 name: cloud-logging-finops
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
   category: CloudObservabilityAndMonitoring
 description: >-
   Audits Cloud Logging costs for a Google Cloud project: the charges for log entries written to log buckets, the services, log streams and severities that drive them, and the log sinks that route them. Reconciles Cloud Billing export costs with Cloud Monitoring volume metrics, and generates a FinOps report with charts and copy-paste exclusion filters. Use when auditing Cloud Logging spend, finding logging waste, identifying top logging contributors, generating log cost reduction reports, or creating log sink exclusion filters. Don't use for querying log entries (use cloud-logging-query-generation), configuring Cloud Monitoring alerts, or querying metrics/traces.
@@ -15,6 +15,12 @@ active gcloud project; use `--billing-mode=search`; cover all five report topics
 (Step 2.5); and never enable an API or upgrade a log bucket. Put anything that
 needed a user (a disabled API, a missing role, the upgrade advisory) in the
 report instead.
+
+## Usage Attribution
+
+**MUST READ**: Before executing any `gcloud`, REST API, or MCP command, you
+MUST read and follow the instructions in
+[Usage Attribution](references/attribution.md).
 
 ## Step 0: Locate the Cloud Billing Export
 
@@ -95,13 +101,8 @@ Role                                                                 | Needed fo
 [ -f /tmp/finops_venv/bin/python ] || (uv venv /tmp/finops_venv && uv pip install -r scripts/requirements.txt --python /tmp/finops_venv/bin/python)
 ```
 
-The bundled scripts tag their Google Cloud API requests. Tag commands you run
-yourself, inline on each command:
-
-*   gcloud: `CLOUDSDK_METRICS_ENVIRONMENT="google-skills google-skills/1.0
-    (skill:cloud-logging-finops)" gcloud ...`
-*   HTTP: `curl -H "User-Agent: google-skills/1.0 (skill:cloud-logging-finops)"
-    ...`
+The bundled scripts tag their Google Cloud API requests. For commands you run
+yourself, follow [Usage Attribution](references/attribution.md).
 
 ## Step 2: Data Collection
 

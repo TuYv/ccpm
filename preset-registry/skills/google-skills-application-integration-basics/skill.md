@@ -1,7 +1,7 @@
 ---
 name: application-integration-basics
 metadata:
-  version: "1.0.1"
+  version: "1.0.2"
   category: ApplicationDevelopment
 description: >-
   Explains Google Cloud Application Integration concepts, region provisioning, IAM roles,
@@ -15,6 +15,17 @@ description: >-
 # Application Integration Basics
 
 Application Integration is Google Cloud's serverless, auto-scaling Integration-Platform-as-a-Service (iPaaS) for connecting Google Cloud services and third-party SaaS applications. It runs event-driven workflows made of triggers, tasks, data mappings, and Integration Connectors connections without requiring you to manage servers. Use this skill to decide whether Application Integration fits a workload, set up a project and region, configure IAM and run-as service accounts, choose the right API or tool interface, and design around platform limits.
+
+## Attribution
+
+**MUST READ**: Before executing any `gcloud` command, REST API call, or Python
+discovery-client call, you MUST read
+[Usage Attribution](references/attribution.md). For commands executed directly
+in the terminal (never in generated scripts, Terraform, ADK agents, or user
+code), prefix `gcloud` with
+`CLOUDSDK_METRICS_REQUEST_ATTRIBUTION="agent-skills/1.0 (skill:application-integration-basics)"`
+and add `agent-skills/1.0 (skill:application-integration-basics)` to the
+`User-Agent` header of `curl` requests.
 
 ## When to Use Application Integration vs. Custom Glue Code
 
@@ -175,6 +186,7 @@ See [references/limits.md](references/limits.md) for all task-specific payload c
 
 ## Reference Files
 
+- [references/attribution.md](references/attribution.md): Usage attribution for `gcloud` CLI commands, direct `curl` REST calls, and Python discovery-client snippets run in the terminal.
 - [references/core-concepts.md](references/core-concepts.md): Triggers, execution modes, task types, version lifecycle, edit locks, variables, suspensions, and authentication profiles.
 - [references/iam-and-service-accounts.md](references/iam-and-service-accounts.md): Predefined IAM roles for Application Integration and Integration Connectors, service agents, run-as service account rules, and IAM commands.
 - [references/provisioning-and-terraform.md](references/provisioning-and-terraform.md): Per-region provisioning via REST `clients:provision`, Cloud console Quick/Advanced setup, CMEK caveats, and Terraform `google_integrations_*` / `google_integration_connectors_*` resources.

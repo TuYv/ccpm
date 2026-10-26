@@ -1,7 +1,7 @@
 ---
 name: application-integration-troubleshooting
 metadata:
-  version: "1.0.1"
+  version: "1.0.2"
   category: ApplicationDevelopment
 description: >-
   Diagnoses failed, stuck, or silent Google Cloud Application Integration runs and
@@ -15,6 +15,17 @@ description: >-
 # Application Integration Troubleshooting
 
 Diagnose and recover Google Cloud Application Integration executions that fail, stall, or appear to do nothing. This skill walks through execution state verification, per-task failure inspection, Cloud Logging and Cloud Monitoring checks, Integration Connectors health probes, suspension resolution, and IAM or quota checks.
+
+## Attribution
+
+**MUST READ**: Before executing any `gcloud` command, REST API call, or Python
+discovery-client call, you MUST read
+[Usage Attribution](references/attribution.md). For commands executed directly
+in the terminal (never in generated scripts, Terraform, ADK agents, or user
+code), prefix `gcloud` with
+`CLOUDSDK_METRICS_REQUEST_ATTRIBUTION="agent-skills/1.0 (skill:application-integration-troubleshooting)"`
+and add `agent-skills/1.0 (skill:application-integration-troubleshooting)` to
+the `User-Agent` header of `curl` requests.
 
 ## Tooling and Scope Boundaries
 
@@ -186,6 +197,7 @@ curl -X POST \
 
 Load the matching reference file when you need deeper details, exact field names, or edge-case checks:
 
+- [Usage Attribution](references/attribution.md): Usage attribution for `gcloud` CLI commands, direct `curl` REST calls, and Python discovery-client snippets run in the terminal.
 - [Execution States](references/execution-states.md): `ExecutionDetails.state` and `TaskExecutionDetails.taskExecutionState` enums, `executions.list` filter operators, large-log workarounds (> 300 MB), and `:cancel` / `:replay` constraints.
 - [Logging and Monitoring](references/logging-and-monitoring.md): Local logging vs Cloud Logging interactions, enabling Cloud Logging on a draft version, Logs Explorer queries, `integrations.googleapis.com/*` and `connectors.googleapis.com/*` metric schemas, and alerting setup.
 - [Common Errors](references/common-errors.md): HTTP/gRPC error codes, the two-sided 403 checklist, the October 15, 2026 run-as service account requirement, task-level limits and gotchas, and ADK `ApplicationIntegrationToolset` errors.
