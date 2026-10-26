@@ -1,8 +1,8 @@
 {
   "id": "plugin87-ux-ui-agent-skills-brandkit",
   "name": "brandkit",
-  "description": "Generate a complete, accessible brand design system from a brief — primitive → semantic → component DTCG tokens (color, type, spacing, radius, shadow, motion), light + dark, plus a single theme.css — verified for WCAG. Use when the user wants a from-scratch brand/design foundation, a new palette + type system, or a themeable token kit for a product.",
-  "category": "设计创意",
+  "description": "Generate a complete, accessible brand design system from a brief, as primitive → semantic → component DTCG tokens (color, type, spacing, radius, shadow, motion), light + dark, plus a single theme.css, verified for WCAG. Use when the user wants a from-scratch brand/design foundation, a new palette + type system, or a themeable token kit for a product.",
+  "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/plugin87/ux-ui-agent-skills/blob/main/.claude/skills/brandkit/SKILL.md",
     "path": ".claude/skills/brandkit/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-25T22:48:08.525Z",
-    "stars": 3003,
+    "discovered_at": "2026-10-26T01:21:48.476Z",
+    "stars": 3006,
     "language": "JavaScript",
-    "pushed_at": "2026-10-20T08:41:06Z",
+    "pushed_at": "2026-10-26T00:42:36Z",
     "license": "MIT"
   }
 }

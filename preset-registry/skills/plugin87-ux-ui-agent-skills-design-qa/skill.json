@@ -1,8 +1,8 @@
 {
   "id": "plugin87-ux-ui-agent-skills-design-qa",
   "name": "design-qa",
-  "description": "Set up or run design QA gates — token + hardcoded-value lint, automated a11y (axe), contrast, visual regression across variants/states/themes/RTL, and the manual a11y checklist. Use when the user wants CI quality gates, to prevent design regressions, or to QA a component/screen before shipping.",
-  "category": "测试调试",
+  "description": "Set up or run design QA gates for token + hardcoded-value lint, automated a11y (axe), contrast, visual regression across variants/states/themes/RTL, and the manual a11y checklist. Use when the user wants CI quality gates, to prevent design regressions, or to QA a component/screen before shipping.",
+  "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/plugin87/ux-ui-agent-skills/blob/main/.claude/skills/design-qa/SKILL.md",
     "path": ".claude/skills/design-qa/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-25T22:48:09.400Z",
-    "stars": 3003,
+    "discovered_at": "2026-10-26T01:21:49.235Z",
+    "stars": 3006,
     "language": "JavaScript",
-    "pushed_at": "2026-10-20T08:41:06Z",
+    "pushed_at": "2026-10-26T00:42:36Z",
     "license": "MIT"
   }
 }
