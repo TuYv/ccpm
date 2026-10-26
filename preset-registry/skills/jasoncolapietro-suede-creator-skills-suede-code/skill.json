@@ -1,7 +1,7 @@
 {
   "id": "jasoncolapietro-suede-creator-skills-suede-code",
   "name": "suede-code",
-  "description": "Suede AI code review and A-F ship grade for a diff, PR, branch, or commit range: findings ranked P0-P3 with file:line evidence and a fix path, an A-F grade across seven lanes with Instant-F security triggers and surface grade caps, OWASP 2025 checks, a deploy-safety gate, a commit-dirt scan, and fix briefs. Three modes: full review and grade in one pass (default), findings only with no grade, and grade only with no findings list. Use when asked to review this, grade this, find the bugs before me",
+  "description": "Use when explicitly asked \\\"review this PR\\\" or to grade a diff, branch, or commit range. Suede AI returns evidence-backed P0-P3 findings, fix paths and an A-F ship grade; supports findings-only, grade-only and fix modes, seven review lanes, security checks, deploy safety and commit dirt. NOT FOR: automatic CI enforcement (use suede-ci-gate), agent evaluations (use suede-ai-eval), implementation-plan search (use suede-graph-flo-xr), or parallel fix coordination (use suede-agent-teams).",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/JasonColapietro/suede-creator-skills/blob/main/skills/suede-code/SKILL.md",
     "path": "skills/suede-code/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-26T06:26:39.478Z",
+    "discovered_at": "2026-10-26T13:13:22.729Z",
     "stars": 125,
     "language": "JavaScript",
-    "pushed_at": "2026-10-26T05:23:35Z",
+    "pushed_at": "2026-10-26T09:58:44Z",
     "license": "MIT"
   }
 }

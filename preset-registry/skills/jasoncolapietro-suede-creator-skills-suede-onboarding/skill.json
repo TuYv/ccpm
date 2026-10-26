@@ -1,8 +1,8 @@
 {
   "id": "jasoncolapietro-suede-creator-skills-suede-onboarding",
   "name": "suede-onboarding",
-  "description": "Suede AI activation path from signup conversion to first value: audits account creation, registration, and trial start (field friction, progressive profiling, passkeys and social sign-in, NIST-aligned password rules, verification, mobile), then designs first-run sequencing, empty states, setup checklists, activation milestones, time to value, and retention-linked measurement. Returns a ranked signup audit or an onboarding flow spec with metrics and up to 3 test hypotheses. Use when visitors star",
-  "category": "测试调试",
+  "description": "Suede AI Onboarding Skills: time to value, ranked friction audits, first-value flows, empty states, checklists, and measurement. Use when asked \\\"users sign up but never activate\\\" or to improve registration and first-run setup. NOT FOR: non-account forms (suede-site-alchemy), lifecycle email copy (suede-emails), paywalls (suede-paywalls), cancellation (suede-churn-prevention), or unreviewed auth deployment.",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/JasonColapietro/suede-creator-skills/blob/main/skills/suede-onboarding/SKILL.md",
     "path": "skills/suede-onboarding/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-26T06:26:46.091Z",
+    "discovered_at": "2026-10-26T13:13:27.061Z",
     "stars": 125,
     "language": "JavaScript",
-    "pushed_at": "2026-10-26T05:23:35Z",
+    "pushed_at": "2026-10-26T09:58:44Z",
     "license": "MIT"
   }
 }

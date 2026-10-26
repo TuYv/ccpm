@@ -1,0 +1,25 @@
+{
+  "id": "thedotmack-claude-mem-backup-setup",
+  "name": "backup-setup",
+  "description": "Set up, check, or restore local claude-mem database snapshots. Use when the user says \"set up backups\", \"back up my memories\", \"backup status\", or \"restore my database\".",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "thedotmack",
+  "install_path": ".claude/skills/backup-setup/SKILL.md",
+  "source": {
+    "repo": "thedotmack/claude-mem",
+    "url": "https://github.com/thedotmack/claude-mem/blob/main/plugin/skills/backup-setup/SKILL.md",
+    "path": "plugin/skills/backup-setup/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-26T13:12:55.669Z",
+    "stars": 103271,
+    "language": "TypeScript",
+    "pushed_at": "2026-10-26T11:34:44Z",
+    "license": "Apache-2.0"
+  }
+}

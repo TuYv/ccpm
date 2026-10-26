@@ -1,7 +1,7 @@
 {
   "id": "jasoncolapietro-suede-creator-skills-suede-agent-teams",
   "name": "suede-agent-teams",
-  "description": "Suede AI agent-team orchestrator, the method behind multi-agent automation: split complex work into coordinated lanes with explicit file ownership, WIP collision detection, quality gates, escalation thresholds, rollback plans, and handoffs that prove what shipped. Use when one shared change needs safe parallel ownership across builders and reviewers, when a lane map must be resolved before anyone opens a file, or when running a repeatable public-repository contribution program with issue scoring",
+  "description": "Suede AI Agent Teams Skills. Use when asked to \\\"split this work across agents\\\" or run coordinated shared changes in lanes with exclusive file ownership, collision checks, worktrees, rollback plans and evidence handoffs; also supports bounded contribution programs. NOT FOR: one bundled code DAG (suede-graph-flo-xr), diff review (suede-code), CI wiring (suede-ci-gate), or choosing one skill (suede-workflow-skills).",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/JasonColapietro/suede-creator-skills/blob/main/skills/suede-agent-teams/SKILL.md",
     "path": "skills/suede-agent-teams/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-26T06:26:37.415Z",
+    "discovered_at": "2026-10-26T13:13:20.761Z",
     "stars": 125,
     "language": "JavaScript",
-    "pushed_at": "2026-10-26T05:23:35Z",
+    "pushed_at": "2026-10-26T09:58:44Z",
     "license": "MIT"
   }
 }

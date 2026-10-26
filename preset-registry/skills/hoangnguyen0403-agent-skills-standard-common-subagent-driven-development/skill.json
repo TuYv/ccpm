@@ -1,7 +1,7 @@
 {
   "id": "hoangnguyen0403-agent-skills-standard-common-subagent-driven-development",
   "name": "common-subagent-driven-development",
-  "description": "Execute multi-task implementation plans by dispatching a fresh implementer subagent per task with independent review gates. Use when implementing plans, executing multi-task PRs, or transitioning from planning to implementation.",
+  "description": "Execute multi-task implementation plans by dispatching one bounded implementer per task with independent review gates. Use when implementing plans, executing multi-task PRs, or transitioning from planning to implementation.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/HoangNguyen0403/agent-skills-standard/blob/develop/.agents/skills/common/common-subagent-driven-development/SKILL.md",
     "path": ".agents/skills/common/common-subagent-driven-development/SKILL.md",
     "branch": "develop",
-    "discovered_at": "2026-10-26T07:14:31.070Z",
+    "discovered_at": "2026-10-26T14:00:43.133Z",
     "stars": 583,
     "language": "TypeScript",
-    "pushed_at": "2026-10-26T07:09:30Z",
+    "pushed_at": "2026-10-26T13:50:38Z",
     "license": "MIT"
   }
 }

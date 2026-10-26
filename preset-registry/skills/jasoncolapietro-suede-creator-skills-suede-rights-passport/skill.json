@@ -1,7 +1,7 @@
 {
   "id": "jasoncolapietro-suede-creator-skills-suede-rights-passport",
   "name": "suede-rights-passport",
-  "description": "Suede AI rights skill for creator projects, in two modes. Audit mode finds the rights gaps in a song, release, or catalog (ownership, contributors, splits, samples, licenses, provenance, AI involvement, licensing and royalty-routing readiness) and marks each confirmed or unknown in an evidence table. Package mode turns messy materials into a local, offline transfer package for handoff: hashed assets, a normalized suede-intake.json manifest, credits and splits, license notes, provenance, and a mi",
+  "description": "Audit rights gaps in ownership, contributors, splits, samples, licenses, provenance, and AI involvement, or assemble a hashed offline handoff package with a validated manifest. Use when asked to \\\"prepare a rights handoff\\\" or assess release, licensing, or royalty-routing evidence. Keeps confirmed facts separate from open questions; grants no clearance. NOT FOR: release file linting (use suede-release-linter), sync pitching (use suede-sync-packaging), or rollout campaigns (use suede-campaign-in-",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/JasonColapietro/suede-creator-skills/blob/main/skills/suede-rights-passport/SKILL.md",
     "path": "skills/suede-rights-passport/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-26T06:26:48.739Z",
+    "discovered_at": "2026-10-26T13:13:29.993Z",
     "stars": 125,
     "language": "JavaScript",
-    "pushed_at": "2026-10-26T05:23:35Z",
+    "pushed_at": "2026-10-26T09:58:44Z",
     "license": "MIT"
   }
 }

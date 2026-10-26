@@ -1,8 +1,8 @@
 {
   "id": "jasoncolapietro-suede-creator-skills-site-to-ios-app",
   "name": "site-to-ios-app",
-  "description": "Suede AI workflow for turning a live website, PWA, dashboard, or marketplace into an iOS app. Use when the user has a site or web app and asks to put it on the App Store, wrap it in an app, ship an iOS version, or convert a PWA to native. Produces SITE_TO_IOS_AUDIT.md and SITE_TO_IOS_PLAN.md: URL audit, shell-vs-native strategy, App Store Guideline 4.2 wrapper risk and the native value that mitigates it, current SDK, privacy manifest, age rating, login and payment checks, kids-app rules, QA matr",
-  "category": "测试调试",
+  "description": "Suede AI Site to iOS App Skills. Use when asked to \\\"turn this site into an iOS app\\\" or convert a PWA: inspect the URL, choose shell or native strategy, then deliver an audit, build plan and release evidence. NOT FOR: Android builds (android-app-factory), Play rollout (suede-play-release), store listing strategy (suede-aso), or a native iOS app with no website.",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/JasonColapietro/suede-creator-skills/blob/main/skills/site-to-ios-app/SKILL.md",
     "path": "skills/site-to-ios-app/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-26T06:26:36.731Z",
+    "discovered_at": "2026-10-26T13:13:19.995Z",
     "stars": 125,
     "language": "JavaScript",
-    "pushed_at": "2026-10-26T05:23:35Z",
+    "pushed_at": "2026-10-26T09:58:44Z",
     "license": "MIT"
   }
 }

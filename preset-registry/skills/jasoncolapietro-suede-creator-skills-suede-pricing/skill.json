@@ -1,7 +1,7 @@
 {
   "id": "jasoncolapietro-suede-creator-skills-suede-pricing",
   "name": "suede-pricing",
-  "description": "Suede AI pricing and packaging: chooses the value metric (seats, usage, credits, outcomes), structures tiers, compares free trial, freemium, and reverse trial, plans willingness to pay research and price increases with grandfathering, and tears down a pricing page for buyer clarity and for search and AI-assistant readability (text prices, matching schema, quotable FAQ). Returns a Pricing Decision Brief or a scored teardown. Use when deciding what to charge, restructuring tiers, pricing AI featur",
+  "description": "Suede AI Pricing Skills: value metric selection, tiers, willingness-to-pay research, AI unit economics, migration, and pricing-page clarity. Use when asked \\\"restructure our pricing tiers\\\" or to decide prices, raise them, or diagnose buyer confusion. NOT FOR: in-product prompts (suede-paywalls), offer bonuses and guarantees (suede-offers), or executing billing changes.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/JasonColapietro/suede-creator-skills/blob/main/skills/suede-pricing/SKILL.md",
     "path": "skills/suede-pricing/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-26T06:26:47.196Z",
+    "discovered_at": "2026-10-26T13:13:28.308Z",
     "stars": 125,
     "language": "JavaScript",
-    "pushed_at": "2026-10-26T05:23:35Z",
+    "pushed_at": "2026-10-26T09:58:44Z",
     "license": "MIT"
   }
 }

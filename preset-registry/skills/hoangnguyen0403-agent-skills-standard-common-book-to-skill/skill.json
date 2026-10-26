@@ -1,0 +1,25 @@
+{
+  "id": "hoangnguyen0403-agent-skills-standard-common-book-to-skill",
+  "name": "common-book-to-skill",
+  "description": "Turns authorized books into portable skill references with rights scoping, source mapping, synthesis, fidelity checks, and handoff. Use when asked to book to skill, book-to-skill, or convert a book to a skill.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "HoangNguyen0403",
+  "install_path": ".claude/skills/common-book-to-skill/SKILL.md",
+  "source": {
+    "repo": "HoangNguyen0403/agent-skills-standard",
+    "url": "https://github.com/HoangNguyen0403/agent-skills-standard/blob/develop/.agents/skills/common/common-book-to-skill/SKILL.md",
+    "path": ".agents/skills/common/common-book-to-skill/SKILL.md",
+    "branch": "develop",
+    "discovered_at": "2026-10-26T14:00:36.779Z",
+    "stars": 583,
+    "language": "TypeScript",
+    "pushed_at": "2026-10-26T13:50:38Z",
+    "license": "MIT"
+  }
+}

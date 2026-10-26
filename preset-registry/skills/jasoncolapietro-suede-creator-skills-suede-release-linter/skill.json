@@ -1,7 +1,7 @@
 {
   "id": "jasoncolapietro-suede-creator-skills-suede-release-linter",
   "name": "suede-release-linter",
-  "description": "Suede AI skill that lints a local music or media release folder and scores it for release readiness: missing files, weak or malformed metadata, artwork and stem problems, split gaps, sample and rights blockers, unstated AI involvement, and platform-delivery issues, produced by a bundled offline script as a scored markdown and JSON report. Use when a creator has one or more release folders of tracks, artwork, and stems and wants to know what is missing before distributing, delivering, or handing ",
+  "description": "Find missing files, malformed metadata, artwork and stem issues, split gaps, AI involvement, and delivery blockers in local music or media release folders. Use when asked to \\\"check this release folder\\\" or explain a delivery rejection. Writes scored Markdown and JSON reports; unknown facts remain unknown. NOT FOR: resolving rights or building a transfer package (use suede-rights-passport), sync one-sheets (use suede-sync-packaging), or rollout campaigns (use suede-campaign-in-a-box).",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/JasonColapietro/suede-creator-skills/blob/main/skills/suede-release-linter/SKILL.md",
     "path": "skills/suede-release-linter/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-26T06:26:48.375Z",
+    "discovered_at": "2026-10-26T13:13:29.545Z",
     "stars": 125,
     "language": "JavaScript",
-    "pushed_at": "2026-10-26T05:23:35Z",
+    "pushed_at": "2026-10-26T09:58:44Z",
     "license": "MIT"
   }
 }

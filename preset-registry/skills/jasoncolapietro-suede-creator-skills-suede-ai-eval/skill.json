@@ -1,8 +1,8 @@
 {
   "id": "jasoncolapietro-suede-creator-skills-suede-ai-eval",
   "name": "suede-ai-eval",
-  "description": "Suede AI eval design and coverage audit: AI-SPEC, failure-mode rubric with severity scoring, concrete pass/fail eval cases, coverage and infrastructure scores, and mechanical acceptance gates. Use when a change ships LLM, RAG, agent, classifier, prompt, or generated-media behavior, or when asked to write evals for an AI feature, design test cases for a model surface, audit existing eval coverage, or judge whether AI behavior is safe to ship. No AI-SPEC means no eval plan, and no eval plan holds ",
-  "category": "测试调试",
+  "description": "Suede AI Eval Skills. Use when asked to \\\"write evals for this AI feature\\\" or assess LLM, RAG, agent, classifier or generated-media behavior: AI-SPEC, failure rubric, executable cases, coverage and acceptance evidence. NOT FOR: implementation review (suede-code), wiring existing evals into CI (suede-ci-gate), or coordinating builder lanes (suede-agent-teams).",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/JasonColapietro/suede-creator-skills/blob/main/skills/suede-ai-eval/SKILL.md",
     "path": "skills/suede-ai-eval/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-26T06:26:37.586Z",
+    "discovered_at": "2026-10-26T13:13:20.980Z",
     "stars": 125,
     "language": "JavaScript",
-    "pushed_at": "2026-10-26T05:23:35Z",
+    "pushed_at": "2026-10-26T09:58:44Z",
     "license": "MIT"
   }
 }
