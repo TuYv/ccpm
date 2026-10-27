@@ -1,0 +1,25 @@
+{
+  "id": "makenotion-notion-cookbook-notion-meeting-intelligence",
+  "name": "notion-meeting-intelligence",
+  "description": "Prepares meeting agendas, internal pre-reads, and decision briefs using Notion context and relevant research. Use for meeting preparation, recurring meeting context, or updating meeting outcomes; use knowledge-capture for a standalone record of an existing discussion.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "makenotion",
+  "install_path": ".claude/skills/notion-meeting-intelligence/SKILL.md",
+  "source": {
+    "repo": "makenotion/notion-cookbook",
+    "url": "https://github.com/makenotion/notion-cookbook/blob/main/plugins/antigravity/skills/notion-meeting-intelligence/SKILL.md",
+    "path": "plugins/antigravity/skills/notion-meeting-intelligence/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-27T21:12:24.978Z",
+    "stars": 222,
+    "language": "TypeScript",
+    "pushed_at": "2026-10-27T20:27:36Z",
+    "license": "MIT"
+  }
+}

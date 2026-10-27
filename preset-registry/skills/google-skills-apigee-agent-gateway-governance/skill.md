@@ -1,7 +1,7 @@
 ---
 name: apigee-agent-gateway-governance
 metadata:
-  version: "1.0.1"
+  version: "1.0.2"
   category: AiAndMachineLearning
 description: >-
   Stands up an Apigee API proxy that a Google Cloud Agent Gateway calls as an

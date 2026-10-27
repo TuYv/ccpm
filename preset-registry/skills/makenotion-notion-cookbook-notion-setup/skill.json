@@ -1,0 +1,25 @@
+{
+  "id": "makenotion-notion-cookbook-notion-setup",
+  "name": "notion-setup",
+  "description": "A guided setup flow to get the most out of Notion that is recommended for all users who install the Notion MCP.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "makenotion",
+  "install_path": ".claude/skills/notion-setup/SKILL.md",
+  "source": {
+    "repo": "makenotion/notion-cookbook",
+    "url": "https://github.com/makenotion/notion-cookbook/blob/main/plugins/antigravity/skills/notion-setup/SKILL.md",
+    "path": "plugins/antigravity/skills/notion-setup/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-27T21:12:25.316Z",
+    "stars": 222,
+    "language": "TypeScript",
+    "pushed_at": "2026-10-27T20:27:36Z",
+    "license": "MIT"
+  }
+}

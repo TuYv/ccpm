@@ -1,0 +1,25 @@
+{
+  "id": "orchestratorinc-agent-orchestrator-ao-answer",
+  "name": "ao-answer",
+  "description": ">- Find AO sessions that wait on the user, show each question or approval as tap-to-answer options, and send the answer back to that session, following ao-rules \"Decisions\" (default, away mode, standing approvals). Use for \"what's waiting on me\", \"answer <session>\", \"approve it\", the AO waiting check routine, and away mode.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "OrchestratorInc",
+  "install_path": ".claude/skills/ao-answer/SKILL.md",
+  "source": {
+    "repo": "OrchestratorInc/agent-orchestrator",
+    "url": "https://github.com/OrchestratorInc/agent-orchestrator/blob/main/integrations/grok-bot/skills/ao-answer/SKILL.md",
+    "path": "integrations/grok-bot/skills/ao-answer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-27T20:23:43.532Z",
+    "stars": 13775,
+    "language": "Go",
+    "pushed_at": "2026-10-27T20:19:12Z",
+    "license": "Apache-2.0"
+  }
+}

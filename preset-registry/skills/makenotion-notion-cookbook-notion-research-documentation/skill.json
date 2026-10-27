@@ -1,0 +1,25 @@
+{
+  "id": "makenotion-notion-cookbook-notion-research-documentation",
+  "name": "notion-research-documentation",
+  "description": "Researches questions across Notion sources and synthesizes cited briefs, comparisons, or reports. Use when answering requires discovering and reconciling workspace information, optionally with external research, and returning or saving the findings.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "makenotion",
+  "install_path": ".claude/skills/notion-research-documentation/SKILL.md",
+  "source": {
+    "repo": "makenotion/notion-cookbook",
+    "url": "https://github.com/makenotion/notion-cookbook/blob/main/plugins/antigravity/skills/notion-research-documentation/SKILL.md",
+    "path": "plugins/antigravity/skills/notion-research-documentation/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-27T21:12:25.154Z",
+    "stars": 222,
+    "language": "TypeScript",
+    "pushed_at": "2026-10-27T20:27:36Z",
+    "license": "MIT"
+  }
+}

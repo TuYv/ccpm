@@ -1,0 +1,25 @@
+{
+  "id": "orchestratorinc-agent-orchestrator-ao-setup",
+  "name": "ao-setup",
+  "description": ">- First run of Orchestrator Bot: find every computer that runs AO, save them as AO hosts, add a remote AO host that has no Grok Bot desktop app, and turn on optional routines. On a computer without Orchestrator.inc it helps install it and get it ready: a coding agent, a first project and the first orchestrator. Use on the first chat, when memory has no \"AO hosts\" note, or when the user says \"set up AO\", \"add a host\", \"add remote host\", \"check my AO setup\" or \"install Orchestrator\".",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "OrchestratorInc",
+  "install_path": ".claude/skills/ao-setup/SKILL.md",
+  "source": {
+    "repo": "OrchestratorInc/agent-orchestrator",
+    "url": "https://github.com/OrchestratorInc/agent-orchestrator/blob/main/integrations/grok-bot/skills/ao-setup/SKILL.md",
+    "path": "integrations/grok-bot/skills/ao-setup/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-27T20:23:43.988Z",
+    "stars": 13775,
+    "language": "Go",
+    "pushed_at": "2026-10-27T20:19:12Z",
+    "license": "Apache-2.0"
+  }
+}

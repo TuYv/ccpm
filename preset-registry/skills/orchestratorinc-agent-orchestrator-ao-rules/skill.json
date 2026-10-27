@@ -1,0 +1,25 @@
+{
+  "id": "orchestratorinc-agent-orchestrator-ao-rules",
+  "name": "ao-rules",
+  "description": ">- Shared rules and the connection helper for every ao-* skill (run Orchestrator from chat). Read before running any ao-* skill.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "OrchestratorInc",
+  "install_path": ".claude/skills/ao-rules/SKILL.md",
+  "source": {
+    "repo": "OrchestratorInc/agent-orchestrator",
+    "url": "https://github.com/OrchestratorInc/agent-orchestrator/blob/main/integrations/grok-bot/skills/ao-rules/SKILL.md",
+    "path": "integrations/grok-bot/skills/ao-rules/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-27T20:23:43.846Z",
+    "stars": 13775,
+    "language": "Go",
+    "pushed_at": "2026-10-27T20:19:12Z",
+    "license": "Apache-2.0"
+  }
+}

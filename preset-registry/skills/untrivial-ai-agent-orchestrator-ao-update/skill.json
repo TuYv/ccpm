@@ -1,0 +1,25 @@
+{
+  "id": "untrivial-ai-agent-orchestrator-ao-update",
+  "name": "ao-update",
+  "description": ">- Update this bot's ao-* skills to the latest published version: check what changed, show it, and after the user's yes download each changed skill, verify its sha256 against the published manifest, and rewrite it. Use for \"update Orchestrator Bot\", \"update the AO bot\", \"update my AO skills\", \"what's new in Orchestrator Bot\".",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Untrivial-ai",
+  "install_path": ".claude/skills/ao-update/SKILL.md",
+  "source": {
+    "repo": "Untrivial-ai/agent-orchestrator",
+    "url": "https://github.com/Untrivial-ai/agent-orchestrator/blob/main/integrations/grok-bot/skills/ao-update/SKILL.md",
+    "path": "integrations/grok-bot/skills/ao-update/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-27T20:23:48.933Z",
+    "stars": 13775,
+    "language": "Go",
+    "pushed_at": "2026-10-27T20:19:12Z",
+    "license": "Apache-2.0"
+  }
+}

@@ -1,14 +1,14 @@
 {
   "id": "higgsfield-ai-skills-higgsfield-video-explainer",
   "name": "higgsfield-video-explainer",
-  "description": "| Build a complete non-photoreal narrated explainer or story video from ordered 10-second blocks: one narrator, one universal style key, one Seed Audio take and one Gemini Omni clip per block, then server-side assembly with explainer_video. Use when: \"make an explainer video\", \"explain this in a video\", \"turn this topic or document into a narrated video\", \"tell this story as an animated video\", \"make a faceless narrated video\", or \"show me explainer styles\". Supports live CMS presets, custom sty",
+  "description": "| Compatibility entry for the former video explainer skill. Use when: the user explicitly invokes higgsfield-video-explainer or continues its existing workflow. NOT for: new generic explainer requests, ads, single clips, or unrelated video edits.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
     "gemini"
   ],
-  "version": "0.13.0",
+  "version": "0.14.0",
   "author": "higgsfield-ai",
   "install_path": ".claude/skills/higgsfield-video-explainer/SKILL.md",
   "source": {
@@ -16,11 +16,10 @@
     "url": "https://github.com/higgsfield-ai/skills/blob/main/higgsfield-video-explainer/SKILL.md",
     "path": "higgsfield-video-explainer/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-27T15:32:46.894Z",
-    "stars": 1730,
+    "discovered_at": "2026-10-27T21:08:49.900Z",
+    "stars": 1742,
     "language": "Python",
-    "pushed_at": "2026-10-26T22:22:58Z",
+    "pushed_at": "2026-10-27T17:54:03Z",
     "license": "MIT"
-  },
-  "summary_zh": "一款把主题或文档自动制成统一画风、带旁白的非写实动画视频工具，适合科普讲解、故事叙述和无真人出镜内容。"
+  }
 }

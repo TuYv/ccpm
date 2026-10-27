@@ -1,0 +1,25 @@
+{
+  "id": "untrivial-ai-agent-orchestrator-ao-status",
+  "name": "ao-status",
+  "description": ">- What AO is doing on every host: which sessions are running, waiting on the user, idle or exited, which PRs are ready to merge or got a review, and a daily digest. Read-only. Use for \"status\", \"what's running\", \"what's waiting on me\", \"what's ready to merge\", \"anything stuck\", and the AO daily digest routine.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Untrivial-ai",
+  "install_path": ".claude/skills/ao-status/SKILL.md",
+  "source": {
+    "repo": "Untrivial-ai/agent-orchestrator",
+    "url": "https://github.com/Untrivial-ai/agent-orchestrator/blob/main/integrations/grok-bot/skills/ao-status/SKILL.md",
+    "path": "integrations/grok-bot/skills/ao-status/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-27T20:23:48.639Z",
+    "stars": 13775,
+    "language": "Go",
+    "pushed_at": "2026-10-27T20:19:12Z",
+    "license": "Apache-2.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "google-skills-cloud-armor-crs-rule-upgrader",
+  "name": "cloud-armor-crs-rule-upgrader",
+  "description": ">- Upgrades Google Cloud Armor security policies from OWASP CRS 3.0 and 3.3 to OWASP CRS 4.22. Preserves signature opt-in and opt-out lists, translates evaluatePreconfiguredExpr to native evaluatePreconfiguredWaf dictionary parameters, remaps signature IDs to v042200, drops retired signature IDs, and updates structured preconfiguredWafConfig fine-tuning exclusions. Evaluates operational risk (High Breaking Change, Medium Attention Required, Low Clean Upgrade) including Method Enforcement breakin",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/cloud-armor-crs-rule-upgrader/SKILL.md",
+  "source": {
+    "repo": "google/skills",
+    "url": "https://github.com/google/skills/blob/main/skills/cloud/cloud-armor-crs-rule-upgrader/SKILL.md",
+    "path": "skills/cloud/cloud-armor-crs-rule-upgrader/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-27T20:20:34.338Z",
+    "stars": 21617,
+    "language": "Python",
+    "pushed_at": "2026-10-27T18:48:44Z",
+    "license": "Apache-2.0"
+  }
+}

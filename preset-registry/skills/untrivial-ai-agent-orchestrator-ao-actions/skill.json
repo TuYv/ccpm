@@ -1,0 +1,25 @@
+{
+  "id": "untrivial-ai-agent-orchestrator-ao-actions",
+  "name": "ao-actions",
+  "description": ">- Direct actions on one AO session or PR: stop or interrupt, resume, merge a PR, start a review, screenshot a session's browser, send a session's files, keep a host awake, and recurring AO automations. Use for \"stop <session>\", \"merge <PR>\", \"review <session>'s PR\", \"show me what <session> built\", \"keep the Mac awake tonight\", \"every night, ...\".",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Untrivial-ai",
+  "install_path": ".claude/skills/ao-actions/SKILL.md",
+  "source": {
+    "repo": "Untrivial-ai/agent-orchestrator",
+    "url": "https://github.com/Untrivial-ai/agent-orchestrator/blob/main/integrations/grok-bot/skills/ao-actions/SKILL.md",
+    "path": "integrations/grok-bot/skills/ao-actions/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-27T20:23:47.305Z",
+    "stars": 13775,
+    "language": "Go",
+    "pushed_at": "2026-10-27T20:19:12Z",
+    "license": "Apache-2.0"
+  }
+}

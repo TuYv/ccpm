@@ -1,0 +1,25 @@
+{
+  "id": "untrivial-ai-agent-orchestrator-ao-orchestrator",
+  "name": "ao-orchestrator",
+  "description": ">- Talk to a project's AO orchestrator: pass the user's request to it, wait for its reply and relay it. The default route for starting or changing work, \"catch me up\", \"why\", \"what next\" and plans. Use for \"in <project>: <ask>\", \"tell the orchestrator ...\", \"catch me up on <project>\", \"start work on ...\".",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Untrivial-ai",
+  "install_path": ".claude/skills/ao-orchestrator/SKILL.md",
+  "source": {
+    "repo": "Untrivial-ai/agent-orchestrator",
+    "url": "https://github.com/Untrivial-ai/agent-orchestrator/blob/main/integrations/grok-bot/skills/ao-orchestrator/SKILL.md",
+    "path": "integrations/grok-bot/skills/ao-orchestrator/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-27T20:23:47.864Z",
+    "stars": 13775,
+    "language": "Go",
+    "pushed_at": "2026-10-27T20:19:12Z",
+    "license": "Apache-2.0"
+  }
+}
