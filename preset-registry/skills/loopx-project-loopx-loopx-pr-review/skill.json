@@ -1,7 +1,7 @@
 {
   "id": "loopx-project-loopx-loopx-pr-review",
   "name": "loopx-pr-review",
-  "description": "Use for `/loopx-pr-review` or evidence-backed PR queue review. Run `loopx pr-review` first, execute the capability-owned review plan for each selected exact head, then publish full bilingual PR reviews (complete Chinese five-block review plus one concise English verdict) that match the verified findings. Use `loopx-pr-merge` for approval or merge actions.",
+  "description": "Use for `/loopx-pr-review` or evidence-backed PR queue review. Run `loopx pr-review` first, execute the capability-owned review plan for each selected exact head, then publish complete reviews primarily in Chinese, with accurate English technical terms and a concise English verdict matching the verified findings. Use `loopx-pr-merge` for approval or merge actions.",
   "category": "文档写作",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/loopx-project/loopx/blob/main/skills/loopx-pr-review/SKILL.md",
     "path": "skills/loopx-pr-review/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-27T02:19:46.821Z",
-    "stars": 6440,
+    "discovered_at": "2026-10-27T08:04:25.892Z",
+    "stars": 6443,
     "language": "Python",
-    "pushed_at": "2026-10-27T01:47:38Z",
+    "pushed_at": "2026-10-27T08:03:19Z",
     "license": "Apache-2.0"
   }
 }

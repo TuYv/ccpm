@@ -1,7 +1,7 @@
 {
   "id": "tencentcloudbase-cloudbase-ai-toolkit-ai-model-web",
   "name": "ai-model-web",
-  "description": "Use this skill when a browser/Web app (React, Vue, Next, Nuxt, static sites, SPAs, dashboards, AI chat UI, 页面, 前端, 网页) needs AI models via @cloudbase/js-sdk. Default routing for Web/frontend AI — call directly from the browser, do NOT propose a Node.js proxy. Covers generateText and streamText; models via ai.createModel with groups cloudbase, hunyuan-exp, or custom-*, model id in the `model` field. MUST run two-step preflight before code — see body. NOT for Node.js backend (use ai-model-nodejs),",
+  "description": "Use this skill when a browser/Web app (React, Vue, Next, Nuxt, static sites, SPAs, dashboards, AI chat UI, 页面, 前端, 网页) needs AI models via @cloudbase/js-sdk. Default routing for Web/frontend AI — call directly from the browser, do NOT propose a Node.js proxy. Covers generateText and streamText; models via ai.createModel with groups cloudbase, the legacy hunyuan-v3 / hunyuan-exp, or custom-*, model id in the `model` field. MUST run two-step preflight before code — see body. NOT for Node.js backen",
   "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/TencentCloudBase/CloudBase-AI-Toolkit/blob/main/config/source/skills/ai-model-web/SKILL.md",
     "path": "config/source/skills/ai-model-web/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-27T03:10:12.794Z",
+    "discovered_at": "2026-10-27T08:52:13.870Z",
     "stars": 1150,
     "language": "TypeScript",
-    "pushed_at": "2026-10-26T12:00:57Z",
+    "pushed_at": "2026-10-27T08:15:43Z",
     "license": "MIT"
-  },
-  "summary_zh": "面向网页和前端应用的 AI 模型调用方案，可通过 CloudBase SDK 在浏览器中直接实现文本生成与流式对话。"
+  }
 }

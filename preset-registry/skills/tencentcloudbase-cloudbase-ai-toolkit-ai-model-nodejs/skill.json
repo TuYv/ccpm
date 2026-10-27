@@ -1,7 +1,7 @@
 {
   "id": "tencentcloudbase-cloudbase-ai-toolkit-ai-model-nodejs",
   "name": "ai-model-nodejs",
-  "description": "Use this skill for Node.js backend AI via @cloudbase/node-sdk (>=3.16.0) — cloud functions, CloudRun, Express/Koa/NestJS, serverless APIs, scheduled jobs, LLM proxies, agent orchestration. The only SDK supporting image generation (ai.createImageModel + generateImage). Text via ai.createModel with groups cloudbase, hunyuan-exp, or custom-*; model ids (e.g. deepseek-v4-flash, glm-5, kimi-k2.6) go in the `model` field of generateText/streamText. MUST run two-step preflight before code — see body. N",
+  "description": "Use this skill for Node.js backend AI via @cloudbase/node-sdk (>=3.16.0) — cloud functions, CloudRun, Express/Koa/NestJS, serverless APIs, scheduled jobs, LLM proxies, agent orchestration. The only SDK supporting image generation (ai.createImageModel + generateImage). Text via ai.createModel with groups cloudbase, the legacy hunyuan-v3 / hunyuan-exp, or custom-*; model ids (e.g. deepseek-v4-flash, glm-5, kimi-k2.6) go in the `model` field of generateText/streamText. MUST run two-step preflight b",
   "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/TencentCloudBase/CloudBase-AI-Toolkit/blob/main/config/source/skills/ai-model-nodejs/SKILL.md",
     "path": "config/source/skills/ai-model-nodejs/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-27T03:10:12.654Z",
+    "discovered_at": "2026-10-27T08:52:13.729Z",
     "stars": 1150,
     "language": "TypeScript",
-    "pushed_at": "2026-10-26T12:00:57Z",
+    "pushed_at": "2026-10-27T08:15:43Z",
     "license": "MIT"
-  },
-  "summary_zh": "面向 Node.js 后端的云端 AI 开发工具，适合在云函数、服务端框架和定时任务中调用大语言模型、生成图片及构建智能代理。"
+  }
 }

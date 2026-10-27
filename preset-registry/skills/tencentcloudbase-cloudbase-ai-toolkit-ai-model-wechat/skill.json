@@ -1,7 +1,7 @@
 {
   "id": "tencentcloudbase-cloudbase-ai-toolkit-ai-model-wechat",
   "name": "ai-model-wechat",
-  "description": "Use this skill for WeChat Mini Program AI via wx.cloud.extend.AI (小程序, wx.cloud apps). Covers generateText and streamText with callbacks (onText, onEvent, onFinish); streamText needs a data wrapper, generateText returns the raw response. Models via wx.cloud.extend.AI.createModel with groups hunyuan-exp (小程序成长计划), cloudbase (main managed), or custom-*; model id goes in the data wrapper `model` field. MUST run two-step preflight before code — see body. NOT for browser/Web (use ai-model-web), Node.",
+  "description": "Use this skill for WeChat Mini Program AI via wx.cloud.extend.AI (小程序, wx.cloud apps). Covers generateText and streamText with callbacks (onText, onEvent, onFinish); streamText needs a data wrapper, generateText returns the raw response. Models via wx.cloud.extend.AI.createModel with groups cloudbase (main managed, also 小程序成长计划 with `hy3`), the legacy hunyuan-v3 / hunyuan-exp, or custom-*; model id goes in the data wrapper `model` field. MUST run two-step preflight before code — see body. NOT fo",
   "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/TencentCloudBase/CloudBase-AI-Toolkit/blob/main/config/source/skills/ai-model-wechat/SKILL.md",
     "path": "config/source/skills/ai-model-wechat/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-27T03:10:12.926Z",
+    "discovered_at": "2026-10-27T08:52:14.003Z",
     "stars": 1150,
     "language": "TypeScript",
-    "pushed_at": "2026-10-26T12:00:57Z",
+    "pushed_at": "2026-10-27T08:15:43Z",
     "license": "MIT"
-  },
-  "summary_zh": "用于在微信小程序中调用云开发 AI 模型生成或流式输出文本，适合构建小程序内的智能问答、内容生成等功能。"
+  }
 }

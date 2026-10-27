@@ -1,7 +1,7 @@
 {
   "id": "tencentcloudbase-cloudbase-ai-toolkit-relational-database-web-cloudbase",
   "name": "relational-database-web-cloudbase",
-  "description": "[Deprecated] Use when building frontend Web apps that talk to CloudBase Relational Database via @cloudbase/js-sdk – provides the canonical init pattern so you can then use Supabase-style queries from the browser. New environments should use PostgreSQL with app.rdb() — see postgresql-development skill instead.",
+  "description": "[Deprecated] Existing CloudBase MySQL Web SDK only. Do not recommend MySQL for new relational apps — use postgresql-development and app.rdb(). Read this only when a browser app must keep using @cloudbase/js-sdk against an environment that already has MySQL.",
   "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/TencentCloudBase/CloudBase-AI-Toolkit/blob/main/config/.claude/skills/relational-database-web-cloudbase/SKILL.md",
     "path": "config/.claude/skills/relational-database-web-cloudbase/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-27T03:10:11.953Z",
+    "discovered_at": "2026-10-27T08:52:12.944Z",
     "stars": 1150,
     "language": "TypeScript",
-    "pushed_at": "2026-10-26T12:00:57Z",
+    "pushed_at": "2026-10-27T08:15:43Z",
     "license": "MIT"
-  },
-  "summary_zh": "已弃用的 Web 前端数据库接入方案，可在浏览器中执行 Supabase 风格查询，新项目应改用 PostgreSQL 的 app.rdb()。"
+  }
 }

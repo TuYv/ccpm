@@ -1,7 +1,7 @@
 {
   "id": "tencentcloudbase-cloudbase-ai-toolkit-cloudbase",
   "name": "cloudbase",
-  "description": "Use this skill when you develop, design, build, deploy, debug, migrate, or troubleshoot CloudBase (腾讯云开发, 云开发, TCB, 微信云开发) projects — Web, 微信小程序, 小程序, uni-app, mobile (iOS, Android, Flutter, React Native). Covers UI (页面, 界面, 表单, dashboard, prototype, 原型); auth (登录, 注册, OAuth, publishable key); databases (NoSQL 文档数据库, MySQL 关系型数据库, PostgreSQL/CloudBase PG, app.rdb(), queryPgDatabase/managePgDatabase, CRUD, security rules); 云函数/cloud functions (serverless, scf_bootstrap); CloudRun (云托管, Dockerfile",
+  "description": "Use this skill when you develop, design, build, deploy, debug, migrate, or troubleshoot CloudBase (腾讯云开发, 云开发, TCB, 微信云开发) projects — Web, 微信小程序, 小程序, uni-app, mobile (iOS, Android, Flutter, React Native). Covers UI (页面, 界面, 表单, dashboard, prototype, 原型); auth (登录, 注册, OAuth, publishable key); databases (NoSQL 文档数据库, PostgreSQL/CloudBase PG, 已有 MySQL, app.rdb(), queryPgDatabase/managePgDatabase, CRUD, security rules); 云函数/cloud functions (serverless, scf_bootstrap); CloudRun (云托管, Dockerfile); 云",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/TencentCloudBase/CloudBase-AI-Toolkit/blob/main/config/source/guideline/cloudbase/SKILL.md",
     "path": "config/source/guideline/cloudbase/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-27T03:10:12.511Z",
+    "discovered_at": "2026-10-27T08:52:13.530Z",
     "stars": 1150,
     "language": "TypeScript",
-    "pushed_at": "2026-10-26T12:00:57Z",
+    "pushed_at": "2026-10-27T08:15:43Z",
     "license": "MIT"
-  },
-  "summary_zh": "用于开发和运维腾讯云 CloudBase 项目，覆盖小程序、Web、移动端及云函数、数据库、云托管等场景。"
+  }
 }

@@ -28,9 +28,9 @@ npx -y kordoc@4.24.12 <command> ...
 
 첫 호출만 패키지 다운로드로 느리고 이후는 캐시. 상시 사용 환경이면 MCP 서버로 붙일 수도 있다
 (사용자가 터미널에서 직접 `npx -y kordoc@4.24.12 setup` 을 실행한다. 설치된 모든 편집기에 등록하는 대화형 마법사라 에이전트가 대신 실행하지 않는다).
-MCP 도구 18종: `parse_document`, `parse_table`, `parse_pages`, `parse_metadata`, `parse_chunks`, `parse_form`,
+MCP 도구 20종: `parse_document`, `parse_table`, `parse_pages`, `parse_metadata`, `parse_chunks`, `parse_form`,
 `fill_form`, `place_seal`, `patch_document`, `generate_document`, `lint_document`, `compare_documents`, `detect_format`,
-`render_document`, `crop_regions`, `extract_tables`, `extract_profile`, `redact_document`.
+`render_document`, `crop_regions`, `extract_tables`, `extract_profile`, `redact_document`, `build_agency_pack`, `agency_pack_info`.
 
 ## 명령 요약
 
@@ -45,6 +45,8 @@ MCP 도구 18종: `parse_document`, `parse_table`, `parse_pages`, `parse_metadat
 | 공문서 생성 | `npx -y kordoc@4.24.12 generate 초안.md -o 결과.hwpx --preset 보고서` |
 | 편집 왕복 패치 | `npx -y kordoc@4.24.12 patch 원본.hwpx 편집.md -o 결과.hwpx` |
 | 서식 베끼기 (견본 서식으로 새 문서) | 견본을 `--keep-layout-tables` 로 읽어 내용만 새로 쓴 뒤 `patch 견본.hwpx 새문서.md -o 새문서.hwpx` (아래 4-1) |
+| 기관팩 만들기 (우리 기관 문서 여러 건) | `npx -y kordoc@4.24.12 pack build 보고서1.hwpx 보고서2.hwpx 보고서3.hwpx --name 광양시 -o 광양시.kpack` (아래 4-2) |
+| 기관팩으로 새 문서 | `npx -y kordoc@4.24.12 pack info 광양시.kpack --guide` → 요령대로 원고 → `generate 원고.md --pack 광양시.kpack -o 결과.hwpx` |
 | HWPX 구조 검증 | `npx -y kordoc@4.24.12 validate 결과.hwpx` |
 | 조판 SVG 렌더 | `npx -y kordoc@4.24.12 render 문서.hwpx -o 미리보기.svg` |
 | 도장/서명 배치 | `npx -y kordoc@4.24.12 seal 문서.hwpx --image 도장.png --anchor "(인)" -o 결과.hwpx` |
@@ -160,8 +162,9 @@ npx -y kordoc@4.24.12 patch 원본.hwpx 편집.md -o 수정본.hwpx   # ③ 서�
 ### 4-1) 서식 베끼기 — 견본 분위기 그대로 새 문서
 
 "이 문서 서식대로 ○○ 써줘", "똑같은 양식으로", "이거 참고해서 만들어줘"처럼 **견본 HWPX/HWP 를 주고 새 내용을 쓰라는
-요청**은 `generate` 가 아니라 견본을 고쳐 쓰는 `patch` 경로다. `generate` 는 kordoc 기본 서식으로 다시 짜서 견본의 로고·결재란·
-제목 상자·글꼴·간격이 사라진다.
+요청**은 `generate --preset` 이 아니라 견본을 고쳐 쓰는 `patch` 경로다. `--preset` 은 kordoc 기본 서식으로 다시 짜서 견본의 로고·결재란·
+제목 상자·글꼴·간격이 사라진다. 견본과 표·항목 구조가 많이 다른 새 문서면 `generate --template 견본.hwpx`(견본 역할 서식으로 새로 짬),
+같은 기관 서식으로 계속 쓸 거면 4-2 기관팩.
 
 ```bash
 npx -y kordoc@4.24.12 견본.hwpx --keep-layout-tables -o 견본.md     # ① 견본 읽기 (MCP: parse_document keep_layout_tables: true)
@@ -179,6 +182,28 @@ npx -y kordoc@4.24.12 render 새문서.hwpx --format png -d ./미리보기   # �
 - 사람 이름·문서번호·날짜는 지어내지 말고 `○○○` 로 둔다. 가림 처리된 `****` 줄은 지우거나 새 내용으로 바꾼다.
 - 결과의 "미적용" 항목을 확인하고, 렌더해서 견본과 나란히 비교한 뒤 전달한다.
 - HWP(5.x) 견본은 문단 추가·삭제가 안 된다. 줄 수를 견본에 맞추거나, 한컴에서 HWPX 로 저장한 견본을 쓴다.
+
+### 4-2) 기관팩 — 우리 기관 서식으로 계속 쓰기
+
+kordoc 에 없는 기관(지자체·공공기관) 서식으로 **앞으로 계속** 문서를 써야 하면, 그 기관 문서 여러 건으로 기관팩(.kpack)을 만든다.
+견본 한 건으로 한 문서만 쓰는 일은 4-1(patch) 또는 `generate --template` 이다.
+
+```bash
+npx -y kordoc@4.24.12 pack build 보고서1.hwpx 보고서2.hwpx 보고서3.hwpx --name 광양시 -o 광양시.kpack   # ① 같은 종류 3~10건 (MCP: build_agency_pack)
+npx -y kordoc@4.24.12 pack info 광양시.kpack --guide                                          # ② 작성 요령 읽기 (MCP: agency_pack_info)
+npx -y kordoc@4.24.12 generate 새보고서.md --pack 광양시.kpack -o 새보고서.hwpx                 # ③ 요령의 원고 예 꼴로 쓴 원고 (MCP: generate_document pack_path)
+npx -y kordoc@4.24.12 render 새보고서.hwpx --format png -d ./미리보기                           # ④ 눈으로 확인
+```
+
+지킬 것:
+- 견본은 **같은 종류끼리**(보고서끼리, 보도자료끼리). 다른 종류는 `--kind press --into 광양시.kpack` 으로 따로 더한다. HWP 는 한글에서 HWPX 로 저장해 달라고 한다.
+- 만들기 결과의 경고(다른 서식으로 보이는 견본·비운 견본이 다르게 읽힘·남은 글·그림)를 **사용자에게 그대로 전한다**.
+- 원고는 `pack info --guide` 의 **원고 예** 꼴대로(팩마다 다르다 — 보고서 팩은 제목 → 담당 줄 → `>` 요약 → `##` 장 …, 공고문 팩은 제목 → 도입 → 날짜 → 발신 명의 → `##` 장 …). 그림·각주는 들어가지 않는다.
+- `--pack` 은 `--preset`·글꼴·쪽 옵션과 함께 못 쓴다(서식은 팩이 정한다).
+- 표 하나짜리 신청서·서식은 팩이 아니라 `fill`(fill_form)이다.
+- 팩에는 원문 글·작성자·결재선 이름·전화가 들지 않지만 로고·머리말은 든다 — 남에게 줄 때 확인하라고 알린다.
+- 공고문 머리 상자(제목·도입·날짜·발신 명의를 한 칸에) 팩이면 `pack info` 에 "공고문 머리 상자: 있음" 이 뜬다 — `# 제목` 다음 줄에 도입 문장, `2026\. 5. 20.`, 발신 명의를 차례로 쓴다.
+- ④ 렌더는 견본 본문 첫 쪽(표지·점검표 다음)과 나란히 보고 제목 크기·색, 머리 상자, 장 띠 번호, 부호, 표 머리, 엉뚱한 형광펜을 확인한다(`validate`·다시 읽기는 글만 본다). 팩 결과가 이상하면 같은 원고를 `--template 견본.hwpx` 로도 만들어 비교한다.
 
 ### 5) 도장/서명 배치 (seal)
 
