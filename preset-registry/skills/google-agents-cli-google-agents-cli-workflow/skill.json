@@ -1,0 +1,25 @@
+{
+  "id": "google-agents-cli-google-agents-cli-workflow",
+  "name": "google-agents-cli-workflow",
+  "description": "> This skill should be used when the user wants to \"develop an agent\", \"build an agent using ADK\", \"run the agent locally\", \"debug agent code\", \"test an agent\", \"deploy an agent\", \"publish an agent\", \"monitor an agent\", or needs the ADK (Agent Development Kit) development lifecycle and coding guidelines. Entrypoint for building ADK agents. Always active — provides the full workflow (scaffold, build, evaluate, deploy, publish, observe), code preservation rules, model selection guidance, and troub",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/google-agents-cli-workflow/SKILL.md",
+  "source": {
+    "repo": "google/agents-cli",
+    "url": "https://github.com/google/agents-cli/blob/main/src/google/agents/cli/skills/data/google-agents-cli-workflow/SKILL.md",
+    "path": "src/google/agents/cli/skills/data/google-agents-cli-workflow/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-27T15:28:38.969Z",
+    "stars": 6187,
+    "language": "Python",
+    "pushed_at": "2026-10-27T10:30:55Z",
+    "license": "Apache-2.0"
+  }
+}

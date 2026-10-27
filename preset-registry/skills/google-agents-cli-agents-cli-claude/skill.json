@@ -1,0 +1,25 @@
+{
+  "id": "google-agents-cli-agents-cli-claude",
+  "name": "agents-cli-claude",
+  "description": "> Use when working in this project — adding tools, editing the agent, running, evaluating, serving or deploying it — or when guidance mentions ADK, LlmAgent, google.adk, adk web, or an ADK runner. This project is a Claude Agent SDK agent scaffolded by agents-cli, so ADK-specific instructions do not apply.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/agents-cli-claude/SKILL.md",
+  "source": {
+    "repo": "google/agents-cli",
+    "url": "https://github.com/google/agents-cli/blob/main/extensions/claude/template/.agents/skills/agents-cli-claude/SKILL.md",
+    "path": "extensions/claude/template/.agents/skills/agents-cli-claude/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-27T15:28:36.090Z",
+    "stars": 6187,
+    "language": "Python",
+    "pushed_at": "2026-10-27T10:30:55Z",
+    "license": "Apache-2.0"
+  }
+}

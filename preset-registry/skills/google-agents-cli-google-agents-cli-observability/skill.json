@@ -1,0 +1,25 @@
+{
+  "id": "google-agents-cli-google-agents-cli-observability",
+  "name": "google-agents-cli-observability",
+  "description": "> This skill should be used when the user wants to \"set up tracing\", \"monitor my agent\", \"configure logging\", \"add observability\", \"debug production traffic\", or needs guidance on monitoring deployed agents, including ADK (Agent Development Kit) agents. Covers Cloud Trace, prompt-response logging, BigQuery Agent Analytics, third-party integrations (AgentOps, Phoenix, MLflow, etc.), and troubleshooting. Part of the agents-cli skills suite. Do NOT use for deployment setup (use google-agents-cli-de",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/google-agents-cli-observability/SKILL.md",
+  "source": {
+    "repo": "google/agents-cli",
+    "url": "https://github.com/google/agents-cli/blob/main/src/google/agents/cli/skills/data/google-agents-cli-observability/SKILL.md",
+    "path": "src/google/agents/cli/skills/data/google-agents-cli-observability/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-27T15:28:38.278Z",
+    "stars": 6187,
+    "language": "Python",
+    "pushed_at": "2026-10-27T10:30:55Z",
+    "license": "Apache-2.0"
+  }
+}

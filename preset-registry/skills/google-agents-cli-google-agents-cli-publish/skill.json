@@ -1,0 +1,25 @@
+{
+  "id": "google-agents-cli-google-agents-cli-publish",
+  "name": "google-agents-cli-publish",
+  "description": "> This skill should be used when the user wants to \"publish an agent\", \"publish my ADK agent\", \"register an agent with Gemini\", \"publish to Gemini\" (formerly Gemini Enterprise), or needs guidance on the agents-cli publish gemini command. Also use when the user wants to \"manage agents in Agent Registry\", \"list/update/delete registered agents\", or \"register an MCP server\". Covers ADK vs A2A registration modes, programmatic and interactive usage, flag reference, auto-detection from deployment metad",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/google-agents-cli-publish/SKILL.md",
+  "source": {
+    "repo": "google/agents-cli",
+    "url": "https://github.com/google/agents-cli/blob/main/src/google/agents/cli/skills/data/google-agents-cli-publish/SKILL.md",
+    "path": "src/google/agents/cli/skills/data/google-agents-cli-publish/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-27T15:28:38.441Z",
+    "stars": 6187,
+    "language": "Python",
+    "pushed_at": "2026-10-27T10:30:55Z",
+    "license": "Apache-2.0"
+  }
+}

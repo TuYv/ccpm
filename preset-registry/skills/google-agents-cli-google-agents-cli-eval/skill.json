@@ -1,0 +1,25 @@
+{
+  "id": "google-agents-cli-google-agents-cli-eval",
+  "name": "google-agents-cli-eval",
+  "description": "> This skill should be used when the user wants to \"run an evaluation\", \"evaluate my agent\", \"evaluate my ADK agent\", \"write an eval dataset\", \"analyze eval failures\", \"compare eval results\", \"optimize agent\", or needs guidance on the Gemini platform eval methodology and the Quality Flywheel. Covers eval metrics, dataset schema, LLM-as-judge scoring, and common failure causes. Applies to any agents-cli project, whatever framework the agent is written in. Do NOT use for agent API code patterns (A",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/google-agents-cli-eval/SKILL.md",
+  "source": {
+    "repo": "google/agents-cli",
+    "url": "https://github.com/google/agents-cli/blob/main/src/google/agents/cli/skills/data/google-agents-cli-eval/SKILL.md",
+    "path": "src/google/agents/cli/skills/data/google-agents-cli-eval/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-27T15:28:38.104Z",
+    "stars": 6187,
+    "language": "Python",
+    "pushed_at": "2026-10-27T10:30:55Z",
+    "license": "Apache-2.0"
+  }
+}
