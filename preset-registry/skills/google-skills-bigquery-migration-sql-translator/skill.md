@@ -1,7 +1,7 @@
 ---
 name: bigquery-migration-sql-translator
 metadata:
-  version: "1.0.1"
+  version: "1.0.2"
   category: BigDataAndAnalytics
   publisher: google
 description: >-

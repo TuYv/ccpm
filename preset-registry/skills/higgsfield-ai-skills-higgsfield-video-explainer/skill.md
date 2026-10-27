@@ -31,7 +31,7 @@ Never use the monolithic `video_explainer` job in this skill.
 | `generate_image` / `nano_banana_pro` | `higgsfield generate create nano_banana_2 ...` |
 | `list_voices` | `higgsfield voices list --json` |
 | `generate_audio` / `seed_audio` | `higgsfield generate create seed_audio ...` |
-| `generate_video` / `gemini_omni` | `higgsfield generate create gemini_omni ...` |
+| `generate_video` / `gemini_omni_flash_1_1` | `higgsfield generate create gemini_omni_flash_1_1 ...` |
 | `job_status` | `--wait --json` or `higgsfield generate wait <job_id> --json` |
 | `explainer_video` | `higgsfield generate create explainer_video ...` |
 
@@ -51,7 +51,7 @@ Never use the monolithic `video_explainer` job in this skill.
    ```bash
    higgsfield model get nano_banana_2
    higgsfield model get seed_audio
-   higgsfield model get gemini_omni
+   higgsfield model get gemini_omni_flash_1_1
    higgsfield model get explainer_video
    ```
 
@@ -113,7 +113,7 @@ For local style donors, pass each path with a repeated `--image`. For a web imag
 | 2 Narration | N labeled narration lines | reasoning |
 | 3 Block prompts | N labeled video prompts | reasoning |
 | 4 Voice | user selects one voice; generate N takes | `voices list` + `seed_audio` |
-| 5 Clips | generate N 10-second clips | `gemini_omni` |
+| 5 Clips | generate N 10-second clips | `gemini_omni_flash_1_1` |
 | 6 Assemble | one final MP4 | `explainer_video` |
 
 Read `references/prompts.md` before Phases 1–3.
@@ -213,12 +213,13 @@ Record every audio job UUID in block order. Regenerate only a failed or excessiv
 
 ## Phase 5 — generate every clip second
 
-Generate one completed 10-second `gemini_omni` clip per block. Attach the same style key to every call:
+Generate one completed 10-second `gemini_omni_flash_1_1` clip per block. Attach the same style key to every call:
 
 ```bash
-higgsfield generate create gemini_omni \
+higgsfield generate create gemini_omni_flash_1_1 \
+  --mode reference-to-video \
   --prompt "<Block N video prompt>" \
-  --image "<STYLE_KEY_ID>" \
+  --image-references "<STYLE_KEY_ID>" \
   --duration 10 \
   --resolution 720p \
   --aspect_ratio 16:9 \
@@ -226,7 +227,7 @@ higgsfield generate create gemini_omni \
   --json
 ```
 
-Use `9:16` when selected. Record every video job UUID in block order. Independent jobs may run concurrently inside this phase, but the audio-phase barrier is strict. Re-submit only failed blocks. Never silently replace `gemini_omni`; inspect the live video catalog if the model is unavailable.
+Use `9:16` when selected. Record every video job UUID in block order. Independent jobs may run concurrently inside this phase, but the audio-phase barrier is strict. Re-submit only failed blocks. Never silently replace `gemini_omni_flash_1_1`; inspect the live video catalog if the model is unavailable.
 
 ## Phase 6 — assemble immediately
 

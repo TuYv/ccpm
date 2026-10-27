@@ -1,14 +1,14 @@
 {
   "id": "expo-skills-eas-observe",
   "name": "eas-observe",
-  "description": "Use for anything related to EAS Observe - adding `expo-observe` to an Expo project (AppMetricsRoot/ObserveRoot HOC, markInteractive and ObserveInteractiveMarker, the useObserve hook, the Expo Router / React Navigation integrations for per-route metrics, user-defined events via `Observe.logEvent`, error reporting via ObserveErrorBoundary and `Observe.reportError`, native crash reporting, source map upload for symbolicated stack traces, and runtime config such as sampleRate and dispatchInDebug), q",
+  "description": "Use for anything related to EAS Observe - adding `expo-observe` to an Expo project (AppMetricsRoot/ObserveRoot HOC, markInteractive and ObserveInteractiveMarker, the useObserve hook, the Expo Router / React Navigation integrations for per-route metrics, the expo-image and Reanimated integrations, user-defined events via `Observe.logEvent`, error reporting via ObserveErrorBoundary and `Observe.reportError`, native crash reporting, source map upload for symbolicated stack traces, and runtime confi",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
     "gemini"
   ],
-  "version": "1.2.1",
+  "version": "1.4.0",
   "author": "expo",
   "install_path": ".claude/skills/eas-observe/SKILL.md",
   "source": {
@@ -16,10 +16,10 @@
     "url": "https://github.com/expo/skills/blob/main/plugins/expo/skills/eas-observe/SKILL.md",
     "path": "plugins/expo/skills/eas-observe/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-26T19:31:50.034Z",
-    "stars": 3057,
+    "discovered_at": "2026-10-26T23:23:46.450Z",
+    "stars": 3127,
     "language": "Shell",
-    "pushed_at": "2026-10-26T17:45:03Z",
+    "pushed_at": "2026-10-26T19:59:04Z",
     "license": "MIT"
   }
 }

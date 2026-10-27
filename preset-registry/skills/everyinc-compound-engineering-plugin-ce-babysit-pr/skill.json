@@ -1,7 +1,7 @@
 {
   "id": "everyinc-compound-engineering-plugin-ce-babysit-pr",
   "name": "ce-babysit-pr",
-  "description": "Babysits an open GitHub PR until merge-ready. Use when asked to watch a PR over time — not for one-shot comment resolution or one CI failure. GitHub (incl. Enterprise) only.",
+  "description": "Babysits an open GitHub PR until merge-ready, first judging whether an old PR still belongs. Use when asked to watch a PR over time or update an old one — not for one-shot comment resolution or one CI failure. GitHub (incl. Enterprise) only.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/EveryInc/compound-engineering-plugin/blob/main/skills/ce-babysit-pr/SKILL.md",
     "path": "skills/ce-babysit-pr/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-26T20:21:07.805Z",
-    "stars": 25725,
+    "discovered_at": "2026-10-27T00:12:50.249Z",
+    "stars": 25727,
     "language": "TypeScript",
-    "pushed_at": "2026-10-26T20:14:11Z",
+    "pushed_at": "2026-10-26T21:09:26Z",
     "license": "MIT"
   }
 }
