@@ -1,0 +1,25 @@
+{
+  "id": "rlaope-oh-my-hermes-omh-data-share-review",
+  "name": "omh-data-share-review",
+  "description": "[omh] Before data leaves the team -- a dataset, log, ticket export or transcript excerpt bound for a vendor, a public issue, a model provider or a training corpus: classify every field, minimize first, pseudonymize with the mapping kept local, and call it redacted only after an observed residual scan. Use when the user says: data-share-review, data share review, pii redaction, redact pii, pseudonymize, de-identify, anonymize the dataset, residual pii.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "rlaope",
+  "install_path": ".claude/skills/omh-data-share-review/SKILL.md",
+  "source": {
+    "repo": "rlaope/oh-my-hermes",
+    "url": "https://github.com/rlaope/oh-my-hermes/blob/main/agent-skills/omh-data-share-review/SKILL.md",
+    "path": "agent-skills/omh-data-share-review/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-28T20:03:18.293Z",
+    "stars": 4639,
+    "language": "Python",
+    "pushed_at": "2026-10-28T17:52:03Z",
+    "license": "MIT"
+  }
+}

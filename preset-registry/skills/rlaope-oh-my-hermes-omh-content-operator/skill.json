@@ -1,0 +1,25 @@
+{
+  "id": "rlaope-oh-my-hermes-omh-content-operator",
+  "name": "omh-content-operator",
+  "description": "[omh] Product or company copy to publish or rewrite: scope publish-ready writing, rewriting, summarization, translation, release-note, newsletter, customer-copy, social-copy, README-copy, and email-draft work with audience, tone, style, source, review, and hallucination gates. Use when the user says: content-operator, content operator, content workflow, writing workflow, publish-ready writing, publish ready writing, release notes, release note draft.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "rlaope",
+  "install_path": ".claude/skills/omh-content-operator/SKILL.md",
+  "source": {
+    "repo": "rlaope/oh-my-hermes",
+    "url": "https://github.com/rlaope/oh-my-hermes/blob/main/agent-skills/omh-content-operator/SKILL.md",
+    "path": "agent-skills/omh-content-operator/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-28T20:03:17.186Z",
+    "stars": 4639,
+    "language": "Python",
+    "pushed_at": "2026-10-28T17:52:03Z",
+    "license": "MIT"
+  }
+}

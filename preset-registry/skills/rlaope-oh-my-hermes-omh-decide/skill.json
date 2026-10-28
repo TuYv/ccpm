@@ -1,0 +1,25 @@
+{
+  "id": "rlaope-oh-my-hermes-omh-decide",
+  "name": "omh-decide",
+  "description": "[omh] Team or business decision between options: tradeoffs, a recommendation, and a decision note you can act on. Use when the user says: strategy-brief, strategy brief, strategy memo, product strategy, strategic options, decision note, leadership strategy, next strategy.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "rlaope",
+  "install_path": ".claude/skills/omh-decide/SKILL.md",
+  "source": {
+    "repo": "rlaope/oh-my-hermes",
+    "url": "https://github.com/rlaope/oh-my-hermes/blob/main/agent-skills/omh-decide/SKILL.md",
+    "path": "agent-skills/omh-decide/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-28T20:03:18.463Z",
+    "stars": 4639,
+    "language": "Python",
+    "pushed_at": "2026-10-28T17:52:03Z",
+    "license": "MIT"
+  }
+}

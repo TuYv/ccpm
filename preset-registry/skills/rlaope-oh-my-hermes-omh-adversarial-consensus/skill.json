@@ -1,0 +1,25 @@
+{
+  "id": "rlaope-oh-my-hermes-omh-adversarial-consensus",
+  "name": "omh-adversarial-consensus",
+  "description": "[omh] Technical proposal facing adversarial scrutiny: independent perspectives attack a proposal, then distill into a bundle a separate planner consumes. Use when the user says: adversarial-consensus, adversarial planning, adversarial plan review, red team this plan, red-team this plan, red team the proposal, multi-perspective review, multiple perspectives.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "rlaope",
+  "install_path": ".claude/skills/omh-adversarial-consensus/SKILL.md",
+  "source": {
+    "repo": "rlaope/oh-my-hermes",
+    "url": "https://github.com/rlaope/oh-my-hermes/blob/main/agent-skills/omh-adversarial-consensus/SKILL.md",
+    "path": "agent-skills/omh-adversarial-consensus/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-28T20:03:13.460Z",
+    "stars": 4639,
+    "language": "Python",
+    "pushed_at": "2026-10-28T17:52:03Z",
+    "license": "MIT"
+  }
+}

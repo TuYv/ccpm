@@ -1,0 +1,25 @@
+{
+  "id": "kklimuk-docx-cli-security-review",
+  "name": "security-review",
+  "description": "Review code for security vulnerabilities. Use when the user says 'security review', 'security audit', 'check for vulnerabilities', 'pentest the code', 'OWASP check', or any variation of wanting a security assessment.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "kklimuk",
+  "install_path": ".claude/skills/security-review/SKILL.md",
+  "source": {
+    "repo": "kklimuk/docx-cli",
+    "url": "https://github.com/kklimuk/docx-cli/blob/main/.claude/skills/security-review/SKILL.md",
+    "path": ".claude/skills/security-review/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-28T20:02:02.098Z",
+    "stars": 235,
+    "language": "TypeScript",
+    "pushed_at": "2026-10-27T23:53:59Z",
+    "license": "MIT"
+  }
+}

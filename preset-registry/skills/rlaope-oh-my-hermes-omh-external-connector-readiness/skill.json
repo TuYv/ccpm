@@ -1,0 +1,25 @@
+{
+  "id": "rlaope-oh-my-hermes-omh-external-connector-readiness",
+  "name": "omh-external-connector-readiness",
+  "description": "[omh] Evaluating a plugin, connector, or API for adoption: external connector readiness - assess whether a named plugin, connector, API, data provider, or multimodal route is safe, affordable, fresh, and observable; use toolbelt-readiness for missing capability inventory. Use when the user says: external-connector-readiness, external connector readiness, connector readiness matrix, plugin readiness matrix, provider readiness, api readiness, connector adoption, external plugin adoption.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "rlaope",
+  "install_path": ".claude/skills/omh-external-connector-readiness/SKILL.md",
+  "source": {
+    "repo": "rlaope/oh-my-hermes",
+    "url": "https://github.com/rlaope/oh-my-hermes/blob/main/agent-skills/omh-external-connector-readiness/SKILL.md",
+    "path": "agent-skills/omh-external-connector-readiness/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-28T20:03:19.853Z",
+    "stars": 4639,
+    "language": "Python",
+    "pushed_at": "2026-10-28T17:52:03Z",
+    "license": "MIT"
+  }
+}

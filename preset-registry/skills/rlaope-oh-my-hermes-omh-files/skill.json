@@ -1,0 +1,25 @@
+{
+  "id": "rlaope-oh-my-hermes-omh-files",
+  "name": "omh-files",
+  "description": "[omh] Folder cleanup, renames, or deletions: policy overlay for local file tasks - add path scoping and destructive-action gates after preferring native file tools for ordinary list, search, organize, copy, move, and rename actions. Use when the user says: workspace-file-operator, workspace file operator, file operator, file operation, file operations, filesystem task, filesystem operation, file system task.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "rlaope",
+  "install_path": ".claude/skills/omh-files/SKILL.md",
+  "source": {
+    "repo": "rlaope/oh-my-hermes",
+    "url": "https://github.com/rlaope/oh-my-hermes/blob/main/agent-skills/omh-files/SKILL.md",
+    "path": "agent-skills/omh-files/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-28T20:03:20.413Z",
+    "stars": 4639,
+    "language": "Python",
+    "pushed_at": "2026-10-28T17:52:03Z",
+    "license": "MIT"
+  }
+}

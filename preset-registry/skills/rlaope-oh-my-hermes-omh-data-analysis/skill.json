@@ -1,0 +1,25 @@
+{
+  "id": "rlaope-oh-my-hermes-omh-data-analysis",
+  "name": "omh-data-analysis",
+  "description": "[omh] Dataset or table to analyze: scope supplied data with provenance, causal-claim, and hallucination guards. Use when the user says: data-analysis, data analysis, dataset analysis, csv analysis, json analysis, log analysis, table analysis, analyze csv.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "rlaope",
+  "install_path": ".claude/skills/omh-data-analysis/SKILL.md",
+  "source": {
+    "repo": "rlaope/oh-my-hermes",
+    "url": "https://github.com/rlaope/oh-my-hermes/blob/main/agent-skills/omh-data-analysis/SKILL.md",
+    "path": "agent-skills/omh-data-analysis/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-28T20:03:17.989Z",
+    "stars": 4639,
+    "language": "Python",
+    "pushed_at": "2026-10-28T17:52:03Z",
+    "license": "MIT"
+  }
+}

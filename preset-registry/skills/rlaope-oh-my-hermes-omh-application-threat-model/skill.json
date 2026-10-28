@@ -1,0 +1,25 @@
+{
+  "id": "rlaope-oh-my-hermes-omh-application-threat-model",
+  "name": "omh-application-threat-model",
+  "description": "[omh] Attack paths into an operated system: turn a system's components and data flows into assets, trust boundaries, attack scenarios, controls, and the security test that proves each control holds. Use when the user says: application-threat-model, application threat model, threat model, threat modeling, threat modelling, threat modeling session, threat modeling workshop, security threat model.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "rlaope",
+  "install_path": ".claude/skills/omh-application-threat-model/SKILL.md",
+  "source": {
+    "repo": "rlaope/oh-my-hermes",
+    "url": "https://github.com/rlaope/oh-my-hermes/blob/main/agent-skills/omh-application-threat-model/SKILL.md",
+    "path": "agent-skills/omh-application-threat-model/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-28T20:03:14.836Z",
+    "stars": 4639,
+    "language": "Python",
+    "pushed_at": "2026-10-28T17:52:03Z",
+    "license": "MIT"
+  }
+}

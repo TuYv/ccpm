@@ -1,0 +1,25 @@
+{
+  "id": "first-fluke-oh-my-agent-oma-explanation",
+  "name": "oma-explanation",
+  "description": "Create an offline HTML explanation of a code change (diff, PR, branch) or of a topic, system, or question. Use when a visual walkthrough document is requested.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "first-fluke",
+  "install_path": ".claude/skills/oma-explanation/SKILL.md",
+  "source": {
+    "repo": "first-fluke/oh-my-agent",
+    "url": "https://github.com/first-fluke/oh-my-agent/blob/main/.agents/skills/oma-explanation/SKILL.md",
+    "path": ".agents/skills/oma-explanation/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-28T20:03:25.780Z",
+    "stars": 1354,
+    "language": "TypeScript",
+    "pushed_at": "2026-10-28T05:30:47Z",
+    "license": "MIT"
+  }
+}

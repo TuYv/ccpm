@@ -1,0 +1,25 @@
+{
+  "id": "wiltodelta-remove-ai-watermarks-signal-discovery",
+  "name": "signal-discovery",
+  "description": "Discover missing AI provenance and watermark coverage in the remove-ai-watermarks library from fresh or historical corpora, then validate detection and removal parity. Use for corpus gap mining, periodic signal audits, new-provider discovery, or deciding whether old retained data must be replayed. Do not use for ordinary per-file identification or removal.",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "wiltodelta",
+  "install_path": ".claude/skills/signal-discovery/SKILL.md",
+  "source": {
+    "repo": "wiltodelta/remove-ai-watermarks",
+    "url": "https://github.com/wiltodelta/remove-ai-watermarks/blob/main/.claude/skills/signal-discovery/SKILL.md",
+    "path": ".claude/skills/signal-discovery/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-28T20:04:13.494Z",
+    "stars": 6168,
+    "language": "Python",
+    "pushed_at": "2026-10-28T18:32:51Z",
+    "license": "Apache-2.0"
+  }
+}

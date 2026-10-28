@@ -1,0 +1,25 @@
+{
+  "id": "wiltodelta-remove-ai-watermarks-provider-oracles",
+  "name": "provider-oracles",
+  "description": "Run hash-bound Google, OpenAI, Microsoft, or Meta watermark-oracle checks for this repository. Use for provider verification, multi-account Gemini checks, SynthID Detector checks at synthid.com, isolated Playwright checks, or recording oracle evidence. Walk the existing plan automatically when a task needs a provider verdict.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "wiltodelta",
+  "install_path": ".claude/skills/provider-oracles/SKILL.md",
+  "source": {
+    "repo": "wiltodelta/remove-ai-watermarks",
+    "url": "https://github.com/wiltodelta/remove-ai-watermarks/blob/main/.claude/skills/provider-oracles/SKILL.md",
+    "path": ".claude/skills/provider-oracles/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-28T20:04:13.294Z",
+    "stars": 6168,
+    "language": "Python",
+    "pushed_at": "2026-10-28T18:32:51Z",
+    "license": "Apache-2.0"
+  }
+}

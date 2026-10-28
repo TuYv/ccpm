@@ -1,0 +1,25 @@
+{
+  "id": "rlaope-oh-my-hermes-omh-ai-slop-cleaner",
+  "name": "omh-ai-slop-cleaner",
+  "description": "[omh] Messy or AI-generated code to clean up: delete AI-generated slop, dead code, and duplication while observable behavior stays identical. Use when the user says: ai-slop-cleaner, cleanup, deslop, refactor, risky, behavior-preserving refactor, risk analysis, refactor workflow.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "rlaope",
+  "install_path": ".claude/skills/omh-ai-slop-cleaner/SKILL.md",
+  "source": {
+    "repo": "rlaope/oh-my-hermes",
+    "url": "https://github.com/rlaope/oh-my-hermes/blob/main/agent-skills/omh-ai-slop-cleaner/SKILL.md",
+    "path": "agent-skills/omh-ai-slop-cleaner/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-28T20:03:14.336Z",
+    "stars": 4639,
+    "language": "Python",
+    "pushed_at": "2026-10-28T17:52:03Z",
+    "license": "MIT"
+  }
+}

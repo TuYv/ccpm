@@ -1,0 +1,25 @@
+{
+  "id": "first-fluke-oh-my-agent-oma-recap",
+  "name": "oma-recap",
+  "description": "Summarize AI conversation histories for a specified date or period. Use for daily work recaps and cross-tool activity summaries.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "first-fluke",
+  "install_path": ".claude/skills/oma-recap/SKILL.md",
+  "source": {
+    "repo": "first-fluke/oh-my-agent",
+    "url": "https://github.com/first-fluke/oh-my-agent/blob/main/.agents/skills/oma-recap/SKILL.md",
+    "path": ".agents/skills/oma-recap/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-28T20:03:28.045Z",
+    "stars": 1354,
+    "language": "TypeScript",
+    "pushed_at": "2026-10-28T05:30:47Z",
+    "license": "MIT"
+  }
+}

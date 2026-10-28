@@ -1,0 +1,25 @@
+{
+  "id": "first-fluke-oh-my-agent-oma-video",
+  "name": "oma-video",
+  "description": "Create videos through the OMA video CLI, or analyze and edit existing clips with media tools. Use for frame extraction, visual analysis, silence cuts, dubbing assembly, scripts, and composition; audio-only work uses oma-voice.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "first-fluke",
+  "install_path": ".claude/skills/oma-video/SKILL.md",
+  "source": {
+    "repo": "first-fluke/oh-my-agent",
+    "url": "https://github.com/first-fluke/oh-my-agent/blob/main/.agents/skills/oma-video/SKILL.md",
+    "path": ".agents/skills/oma-video/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-28T20:03:30.062Z",
+    "stars": 1354,
+    "language": "TypeScript",
+    "pushed_at": "2026-10-28T05:30:47Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "rlaope-oh-my-hermes-omh-ask",
+  "name": "omh-ask",
+  "description": "[omh] Outside AI critique wanted: consulting an external advisor when configured. Use when the user says: ask, external advisor, ask claude, ask gemini, consult claude, consult gemini, opinion from claude, opinion from gemini.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "rlaope",
+  "install_path": ".claude/skills/omh-ask/SKILL.md",
+  "source": {
+    "repo": "rlaope/oh-my-hermes",
+    "url": "https://github.com/rlaope/oh-my-hermes/blob/main/agent-skills/omh-ask/SKILL.md",
+    "path": "agent-skills/omh-ask/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-28T20:03:15.207Z",
+    "stars": 4639,
+    "language": "Python",
+    "pushed_at": "2026-10-28T17:52:03Z",
+    "license": "MIT"
+  }
+}

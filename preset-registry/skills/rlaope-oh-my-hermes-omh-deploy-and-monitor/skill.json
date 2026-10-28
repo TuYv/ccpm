@@ -1,0 +1,25 @@
+{
+  "id": "rlaope-oh-my-hermes-omh-deploy-and-monitor",
+  "name": "omh-deploy-and-monitor",
+  "description": "[omh] Release rollout needing health signals: release checklist, deploy decision, health signals, rollback gate, and post-deploy status. Use when the user says: deploy-and-monitor, deploy and monitor, deploy monitor, deployment monitoring, release monitor, post deploy, post-deploy, rollback.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "rlaope",
+  "install_path": ".claude/skills/omh-deploy-and-monitor/SKILL.md",
+  "source": {
+    "repo": "rlaope/oh-my-hermes",
+    "url": "https://github.com/rlaope/oh-my-hermes/blob/main/agent-skills/omh-deploy-and-monitor/SKILL.md",
+    "path": "agent-skills/omh-deploy-and-monitor/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-28T20:03:19.164Z",
+    "stars": 4639,
+    "language": "Python",
+    "pushed_at": "2026-10-28T17:52:03Z",
+    "license": "MIT"
+  }
+}

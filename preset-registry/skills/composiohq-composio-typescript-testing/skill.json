@@ -1,7 +1,7 @@
 {
   "id": "composiohq-composio-typescript-testing",
   "name": "typescript-testing",
-  "description": "Select and run TypeScript SDK verification for packages, examples, type checks, linting, builds, Vitest suites, Effect v4 CLI tests, and runtime E2E tests. Use when adding tests, diagnosing TypeScript CI, choosing a focused test command, validating TypeScript package changes, or writing/porting CLI tests against effect@4.0.3 and @effect/vitest. Do not use for Python-only checks.",
+  "description": "Select and run TypeScript SDK verification for packages, examples, type checks, linting, builds, Vitest suites, Effect v4 CLI tests, and runtime E2E tests. Use when adding tests, diagnosing TypeScript CI, choosing a focused test command, validating TypeScript package changes, or writing/porting CLI tests against effect@4.0.5 and @effect/vitest. Do not use for Python-only checks.",
   "category": "自动化集成",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/ComposioHQ/composio/blob/next/.agents/skills/typescript-testing/SKILL.md",
     "path": ".agents/skills/typescript-testing/SKILL.md",
     "branch": "next",
-    "discovered_at": "2026-10-28T13:04:28.573Z",
-    "stars": 30783,
+    "discovered_at": "2026-10-28T19:10:58.893Z",
+    "stars": 30791,
     "language": "TypeScript",
-    "pushed_at": "2026-10-28T12:29:07Z",
+    "pushed_at": "2026-10-28T18:59:36Z",
     "license": "MIT"
   }
 }

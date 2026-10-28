@@ -1,0 +1,25 @@
+{
+  "id": "first-fluke-oh-my-agent-oma-scm",
+  "name": "oma-scm",
+  "description": "Manage Git branches, merges, conflicts, commits, and release baselines. Use for repository history and change-management operations.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "first-fluke",
+  "install_path": ".claude/skills/oma-scm/SKILL.md",
+  "source": {
+    "repo": "first-fluke/oh-my-agent",
+    "url": "https://github.com/first-fluke/oh-my-agent/blob/main/.claude-plugin/domains/security/skills/oma-scm/SKILL.md",
+    "path": ".claude-plugin/domains/security/skills/oma-scm/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-28T20:03:34.243Z",
+    "stars": 1354,
+    "language": "TypeScript",
+    "pushed_at": "2026-10-28T05:30:47Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "rlaope-oh-my-hermes-omh-failure-signal-audit",
+  "name": "omh-failure-signal-audit",
+  "description": "[omh] Hidden or swallowed errors suspected: find swallowed errors, unsafe fallbacks, hidden UI/runtime failures, and missing propagation before they become false green status. Use when the user says: failure-signal-audit, failure signal audit, silent failure, silent failures, silent failure hunter, swallowed error, swallowed errors, empty catch.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "rlaope",
+  "install_path": ".claude/skills/omh-failure-signal-audit/SKILL.md",
+  "source": {
+    "repo": "rlaope/oh-my-hermes",
+    "url": "https://github.com/rlaope/oh-my-hermes/blob/main/agent-skills/omh-failure-signal-audit/SKILL.md",
+    "path": "agent-skills/omh-failure-signal-audit/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-28T20:03:20.013Z",
+    "stars": 4639,
+    "language": "Python",
+    "pushed_at": "2026-10-28T17:52:03Z",
+    "license": "MIT"
+  }
+}

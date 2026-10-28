@@ -1,0 +1,25 @@
+{
+  "id": "first-fluke-oh-my-agent-oma-design",
+  "name": "oma-design",
+  "description": "Define or review a visual system, DESIGN.md, or redesign direction. Use for typography, layout, color, motion, and interaction design decisions.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "first-fluke",
+  "install_path": ".claude/skills/oma-design/SKILL.md",
+  "source": {
+    "repo": "first-fluke/oh-my-agent",
+    "url": "https://github.com/first-fluke/oh-my-agent/blob/main/.claude-plugin/domains/frontend/skills/oma-design/SKILL.md",
+    "path": ".claude-plugin/domains/frontend/skills/oma-design/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-28T20:03:31.010Z",
+    "stars": 1354,
+    "language": "TypeScript",
+    "pushed_at": "2026-10-28T05:30:47Z",
+    "license": "MIT"
+  }
+}

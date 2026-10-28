@@ -1,0 +1,25 @@
+{
+  "id": "rlaope-oh-my-hermes-omh-docs",
+  "name": "omh-docs",
+  "description": "[omh] Explaining OMH itself: current-source-first documentation for OMH itself: product identity, public capability catalog, model routing, local state, and long-term memory. Use when the user says: product-docs, OMH documentation, oh-my-hermes documentation, what is OMH, what is oh-my-hermes, how does OMH work, OMH capability catalog, OMH skill catalog.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "rlaope",
+  "install_path": ".claude/skills/omh-docs/SKILL.md",
+  "source": {
+    "repo": "rlaope/oh-my-hermes",
+    "url": "https://github.com/rlaope/oh-my-hermes/blob/main/agent-skills/omh-docs/SKILL.md",
+    "path": "agent-skills/omh-docs/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-28T20:03:19.700Z",
+    "stars": 4639,
+    "language": "Python",
+    "pushed_at": "2026-10-28T17:52:03Z",
+    "license": "MIT"
+  }
+}

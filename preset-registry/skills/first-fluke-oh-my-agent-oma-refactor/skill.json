@@ -1,0 +1,25 @@
+{
+  "id": "first-fluke-oh-my-agent-oma-refactor",
+  "name": "oma-refactor",
+  "description": "Restructure existing code while preserving observable behavior. Use for targeted technical debt or hotspot work with characterization tests.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "first-fluke",
+  "install_path": ".claude/skills/oma-refactor/SKILL.md",
+  "source": {
+    "repo": "first-fluke/oh-my-agent",
+    "url": "https://github.com/first-fluke/oh-my-agent/blob/main/.claude-plugin/domains/security/skills/oma-refactor/SKILL.md",
+    "path": ".claude-plugin/domains/security/skills/oma-refactor/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-28T20:03:34.047Z",
+    "stars": 1354,
+    "language": "TypeScript",
+    "pushed_at": "2026-10-28T05:30:47Z",
+    "license": "MIT"
+  }
+}

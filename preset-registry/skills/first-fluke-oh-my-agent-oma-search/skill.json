@@ -1,0 +1,25 @@
+{
+  "id": "first-fluke-oh-my-agent-oma-search",
+  "name": "oma-search",
+  "description": "Find external documentation, web sources, or remote code with citations. Local code navigation uses the configured code tools.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "first-fluke",
+  "install_path": ".claude/skills/oma-search/SKILL.md",
+  "source": {
+    "repo": "first-fluke/oh-my-agent",
+    "url": "https://github.com/first-fluke/oh-my-agent/blob/main/.claude-plugin/domains/research/skills/oma-search/SKILL.md",
+    "path": ".claude-plugin/domains/research/skills/oma-search/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-28T20:03:33.111Z",
+    "stars": 1354,
+    "language": "TypeScript",
+    "pushed_at": "2026-10-28T05:30:47Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "kklimuk-docx-cli-commit",
+  "name": "commit",
+  "description": "Create well-structured git commits from the current working tree. Use when the user says 'commit', 'save my work', 'let's commit this', 'make a commit', or any variation of wanting to commit code to git.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "kklimuk",
+  "install_path": ".claude/skills/commit/SKILL.md",
+  "source": {
+    "repo": "kklimuk/docx-cli",
+    "url": "https://github.com/kklimuk/docx-cli/blob/main/.claude/skills/commit/SKILL.md",
+    "path": ".claude/skills/commit/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-28T20:02:01.880Z",
+    "stars": 235,
+    "language": "TypeScript",
+    "pushed_at": "2026-10-27T23:53:59Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "first-fluke-oh-my-agent-oma-db",
+  "name": "oma-db",
+  "description": "Design schemas and migrations, tune queries, or plan vector retrieval and database operations. Application API implementation uses oma-backend.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "first-fluke",
+  "install_path": ".claude/skills/oma-db/SKILL.md",
+  "source": {
+    "repo": "first-fluke/oh-my-agent",
+    "url": "https://github.com/first-fluke/oh-my-agent/blob/main/.agents/skills/oma-db/SKILL.md",
+    "path": ".agents/skills/oma-db/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-28T20:03:24.879Z",
+    "stars": 1354,
+    "language": "TypeScript",
+    "pushed_at": "2026-10-28T05:30:47Z",
+    "license": "MIT"
+  }
+}

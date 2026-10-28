@@ -1,0 +1,25 @@
+{
+  "id": "first-fluke-oh-my-agent-oma-security",
+  "name": "oma-security",
+  "description": "Scan application source, agent skills, and MCP components; run penetration tests against scoped web test deployments, validate findings, and configure scan gates. Use oma-qa for broad quality reviews and domain skills for remediation.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "first-fluke",
+  "install_path": ".claude/skills/oma-security/SKILL.md",
+  "source": {
+    "repo": "first-fluke/oh-my-agent",
+    "url": "https://github.com/first-fluke/oh-my-agent/blob/main/.claude-plugin/domains/security/skills/oma-security/SKILL.md",
+    "path": ".claude-plugin/domains/security/skills/oma-security/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-28T20:03:35.353Z",
+    "stars": 1354,
+    "language": "TypeScript",
+    "pushed_at": "2026-10-28T05:30:47Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "first-fluke-oh-my-agent-oma-qa",
+  "name": "oma-qa",
+  "description": "Review changes for correctness, security, accessibility, and performance. Use for scoped quality reviews or verification plans; bug fixes use oma-debug.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "first-fluke",
+  "install_path": ".claude/skills/oma-qa/SKILL.md",
+  "source": {
+    "repo": "first-fluke/oh-my-agent",
+    "url": "https://github.com/first-fluke/oh-my-agent/blob/main/.claude-plugin/domains/security/skills/oma-qa/SKILL.md",
+    "path": ".claude-plugin/domains/security/skills/oma-qa/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-28T20:03:33.861Z",
+    "stars": 1354,
+    "language": "TypeScript",
+    "pushed_at": "2026-10-28T05:30:47Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "first-fluke-oh-my-agent-oma-image",
+  "name": "oma-image",
+  "description": "Generate raster images or reference-guided variations through the OMA image CLI. Use for image assets or explicit vendor comparisons; pixel editing uses an editor.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "first-fluke",
+  "install_path": ".claude/skills/oma-image/SKILL.md",
+  "source": {
+    "repo": "first-fluke/oh-my-agent",
+    "url": "https://github.com/first-fluke/oh-my-agent/blob/main/.agents/skills/oma-image/SKILL.md",
+    "path": ".agents/skills/oma-image/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-28T20:03:26.370Z",
+    "stars": 1354,
+    "language": "TypeScript",
+    "pushed_at": "2026-10-28T05:30:47Z",
+    "license": "MIT"
+  }
+}

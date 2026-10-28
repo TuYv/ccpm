@@ -1,0 +1,25 @@
+{
+  "id": "hyperb1iss-unifly-unifly",
+  "name": "unifly",
+  "description": ">- Inspect and manage UniFi Network infrastructure with the unifly CLI: devices, clients, VLANs, WiFi, firewall, VPN, switch ports, site settings, and cloud fleets. Use for UniFi network configuration, monitoring, and troubleshooting, not UniFi Protect camera or recording management.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "hyperb1iss",
+  "install_path": ".claude/skills/unifly/SKILL.md",
+  "source": {
+    "repo": "hyperb1iss/unifly",
+    "url": "https://github.com/hyperb1iss/unifly/blob/main/skills/unifly/SKILL.md",
+    "path": "skills/unifly/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-28T20:04:14.432Z",
+    "stars": 272,
+    "language": "Rust",
+    "pushed_at": "2026-10-25T17:53:20Z",
+    "license": "Apache-2.0"
+  }
+}

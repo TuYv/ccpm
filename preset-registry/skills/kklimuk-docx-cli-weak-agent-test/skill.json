@@ -1,0 +1,25 @@
+{
+  "id": "kklimuk-docx-cli-weak-agent-test",
+  "name": "weak-agent-test",
+  "description": "Run the weak-agent adversarial test harness against docx-cli. Spawns weak exercise agents (Haiku by default, Sonnet to probe, or a local agent harness's pre-produced runs) to perform real document tasks over six scenarios — five editing (MNDA form-fill + font fidelity, invoice table-edit/restructure + logo replace, résumé styling, contract redlining + commenting, contract finalize via accept/reject + comment reply/resolve) and one authoring (T. S. Eliot poetry journal: multi-column, verse, footn",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "kklimuk",
+  "install_path": ".claude/skills/weak-agent-test/SKILL.md",
+  "source": {
+    "repo": "kklimuk/docx-cli",
+    "url": "https://github.com/kklimuk/docx-cli/blob/main/.claude/skills/weak-agent-test/SKILL.md",
+    "path": ".claude/skills/weak-agent-test/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-28T20:02:02.330Z",
+    "stars": 235,
+    "language": "TypeScript",
+    "pushed_at": "2026-10-27T23:53:59Z",
+    "license": "MIT"
+  }
+}

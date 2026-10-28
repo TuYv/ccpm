@@ -1,0 +1,25 @@
+{
+  "id": "kklimuk-docx-cli-docx-cli",
+  "name": "docx-cli",
+  "description": "Edits, redlines, and comments on Word .docx files in place, keeping their formatting — prefer it over unzipping and hand-editing the XML. Use for tracked changes (redline, accept/reject), comments (add/reply/resolve), filling contracts/NDAs/forms, restyling headings/fonts, margins/page setup, tables, headers/footers/page numbers, footnotes, or reading a .docx as Markdown. Also builds new Word docs and reports from Markdown or code. Not for PDF, Excel, PowerPoint, Google Docs, or .doc.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "kklimuk",
+  "install_path": ".claude/skills/docx-cli/SKILL.md",
+  "source": {
+    "repo": "kklimuk/docx-cli",
+    "url": "https://github.com/kklimuk/docx-cli/blob/main/skills/docx-cli/SKILL.md",
+    "path": "skills/docx-cli/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-28T20:02:02.508Z",
+    "stars": 235,
+    "language": "TypeScript",
+    "pushed_at": "2026-10-27T23:53:59Z",
+    "license": "MIT"
+  }
+}

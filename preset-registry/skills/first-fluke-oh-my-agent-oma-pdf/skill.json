@@ -1,0 +1,25 @@
+{
+  "id": "first-fluke-oh-my-agent-oma-pdf",
+  "name": "oma-pdf",
+  "description": "Extract PDF text, headings, tables, and images into Markdown using opendataloader-pdf. Use for PDF parsing, not PDF layout creation.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "first-fluke",
+  "install_path": ".claude/skills/oma-pdf/SKILL.md",
+  "source": {
+    "repo": "first-fluke/oh-my-agent",
+    "url": "https://github.com/first-fluke/oh-my-agent/blob/main/.claude-plugin/domains/research/skills/oma-pdf/SKILL.md",
+    "path": ".claude-plugin/domains/research/skills/oma-pdf/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-28T20:03:32.536Z",
+    "stars": 1354,
+    "language": "TypeScript",
+    "pushed_at": "2026-10-28T05:30:47Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "first-fluke-oh-my-agent-oma-skill-creation",
+  "name": "oma-skill-creation",
+  "description": "Create or revise OMA skills and their references. Use for skill routing, execution contracts, conditional loading, and authoring validation.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "first-fluke",
+  "install_path": ".claude/skills/oma-skill-creation/SKILL.md",
+  "source": {
+    "repo": "first-fluke/oh-my-agent",
+    "url": "https://github.com/first-fluke/oh-my-agent/blob/main/.agents/skills/oma-skill-creation/SKILL.md",
+    "path": ".agents/skills/oma-skill-creation/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-28T20:03:29.206Z",
+    "stars": 1354,
+    "language": "TypeScript",
+    "pushed_at": "2026-10-28T05:30:47Z",
+    "license": "MIT"
+  }
+}
