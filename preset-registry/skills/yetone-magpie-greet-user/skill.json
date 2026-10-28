@@ -1,0 +1,25 @@
+{
+  "id": "yetone-magpie-greet-user",
+  "name": "greet-user",
+  "description": "Use when the user asks to be greeted in the house style.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "yetone",
+  "install_path": ".claude/skills/greet-user/SKILL.md",
+  "source": {
+    "repo": "yetone/magpie",
+    "url": "https://github.com/yetone/magpie/blob/main/internal/sessions/testdata/grok-tools/skills/greet-user/SKILL.md",
+    "path": "internal/sessions/testdata/grok-tools/skills/greet-user/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-28T13:54:12.585Z",
+    "stars": 24422,
+    "language": "Go",
+    "pushed_at": "2026-10-28T13:40:23Z",
+    "license": "MIT"
+  }
+}

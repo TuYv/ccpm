@@ -1,0 +1,25 @@
+{
+  "id": "robinebers-openusage-sol-loop",
+  "name": "sol-loop",
+  "description": "Review a change in rounds with GPT 6.1 Sol as a separate reviewer until it approves or the budget runs out. Use when the user says \"sol loop\" or asks for a Sol review loop before shipping.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "robinebers",
+  "install_path": ".claude/skills/sol-loop/SKILL.md",
+  "source": {
+    "repo": "robinebers/openusage",
+    "url": "https://github.com/robinebers/openusage/blob/main/.agents/skills/sol-loop/SKILL.md",
+    "path": ".agents/skills/sol-loop/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-28T13:54:20.961Z",
+    "stars": 4468,
+    "language": "Swift",
+    "pushed_at": "2026-10-28T12:35:04Z",
+    "license": "MIT"
+  }
+}
