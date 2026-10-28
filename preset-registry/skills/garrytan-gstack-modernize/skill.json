@@ -1,0 +1,25 @@
+{
+  "id": "garrytan-gstack-modernize",
+  "name": "modernize",
+  "description": "Bring an aging pull request onto its current base and decide whether it should still exist: MODERNIZE, REWORK or CLOSE, with range-diff proof before any push. (gstack)",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "0.1.0",
+  "author": "garrytan",
+  "install_path": ".claude/skills/modernize/SKILL.md",
+  "source": {
+    "repo": "garrytan/gstack",
+    "url": "https://github.com/garrytan/gstack/blob/main/modernize/SKILL.md",
+    "path": "modernize/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-28T00:01:11.082Z",
+    "stars": 137937,
+    "language": "TypeScript",
+    "pushed_at": "2026-10-27T23:58:59Z",
+    "license": "MIT"
+  }
+}
