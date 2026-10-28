@@ -1,0 +1,25 @@
+{
+  "id": "spacering-net-codeg-diagnosing-superpowers",
+  "name": "diagnosing-superpowers",
+  "description": "Use when a superpowers session went wrong and your human partner wants to know why — repeated work, ignored plans, stumbles, poor results, a skill that didn't fire, \"it took too long\", \"why is it so expensive\", \"what is it doing\" — or wants to build a bug report for the superpowers maintainers, for the current session or a past one identified by id or path, on any harness.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "spacering-net",
+  "install_path": ".claude/skills/diagnosing-superpowers/SKILL.md",
+  "source": {
+    "repo": "spacering-net/codeg",
+    "url": "https://github.com/spacering-net/codeg/blob/main/src-tauri/experts/skills/diagnosing-superpowers/SKILL.md",
+    "path": "src-tauri/experts/skills/diagnosing-superpowers/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-28T06:42:06.073Z",
+    "stars": 4172,
+    "language": "Rust",
+    "pushed_at": "2026-10-28T06:15:42Z",
+    "license": "Apache-2.0"
+  }
+}

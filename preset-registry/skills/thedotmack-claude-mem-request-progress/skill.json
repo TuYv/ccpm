@@ -1,7 +1,7 @@
 {
   "id": "thedotmack-claude-mem-request-progress",
   "name": "request-progress",
-  "description": "Group recent conversations into overall requests, review each one's progress from memory, link each to the owner goals it serves, and write the build story, so My Work shows progress meters, shipping velocity and learned working preferences. Use when asked to \"group requests\", \"group by overall request\", \"review request progress\", \"refresh progress\", \"build story\", \"shipping velocity\", or \"how do I like to work with agents\".",
+  "description": "Group recent conversations into overall requests, review each one's progress from memory, sort each into one of the owner's focus areas, and write the build story, so My Work shows progress meters, shipping velocity and learned working preferences. Use when asked to \"group requests\", \"group by overall request\", \"review request progress\", \"refresh progress\", \"build story\", \"shipping velocity\", or \"how do I like to work with agents\".",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/thedotmack/claude-mem/blob/main/plugin/skills/request-progress/SKILL.md",
     "path": "plugin/skills/request-progress/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-27T23:59:47.833Z",
-    "stars": 103723,
+    "discovered_at": "2026-10-28T05:50:53.058Z",
+    "stars": 103792,
     "language": "TypeScript",
-    "pushed_at": "2026-10-27T20:58:16Z",
+    "pushed_at": "2026-10-28T05:41:16Z",
     "license": "Apache-2.0"
   }
 }

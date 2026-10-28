@@ -1,7 +1,7 @@
 {
   "id": "spacering-net-codeg-executing-plans",
   "name": "executing-plans",
-  "description": "Use when you have a written implementation plan to execute in a separate session with review checkpoints",
+  "description": "Use when executing an implementation plan in the current session as the implementer yourself — your human partner chose inline execution, or no subagent tool is available",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/spacering-net/codeg/blob/main/src-tauri/experts/skills/executing-plans/SKILL.md",
     "path": "src-tauri/experts/skills/executing-plans/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-28T00:51:05.456Z",
-    "stars": 4152,
+    "discovered_at": "2026-10-28T06:42:06.345Z",
+    "stars": 4172,
     "language": "Rust",
-    "pushed_at": "2026-10-27T12:07:47Z",
+    "pushed_at": "2026-10-28T06:15:42Z",
     "license": "Apache-2.0"
   }
 }
