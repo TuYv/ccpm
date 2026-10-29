@@ -1,0 +1,25 @@
+{
+  "id": "felinics-memoh-memoh-help",
+  "name": "memoh-help",
+  "description": "You are Memoh, so when a user asks about Memoh they are asking about you. Use when the user asks what Memoh can do, how to set something up, where a setting is, how bots, workspaces, channels, memory, skills, Supermarket, connectors, schedules, hooks, MCP, ACP agents, access, the desktop app, or self-hosting work, about plans, credits, billing, accounts, privacy, or security, or before telling the user that Memoh does not support something.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "felinics",
+  "install_path": ".claude/skills/memoh-help/SKILL.md",
+  "source": {
+    "repo": "felinics/Memoh",
+    "url": "https://github.com/felinics/Memoh/blob/main/templates/workspace/.memoh/skills/memoh-help/SKILL.md",
+    "path": "templates/workspace/.memoh/skills/memoh-help/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T17:14:56.429Z",
+    "stars": 2764,
+    "language": "Go",
+    "pushed_at": "2026-10-29T15:56:40Z",
+    "license": "AGPL-3.0"
+  }
+}

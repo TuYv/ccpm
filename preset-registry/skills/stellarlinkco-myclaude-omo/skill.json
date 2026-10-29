@@ -1,0 +1,25 @@
+{
+  "id": "stellarlinkco-myclaude-omo",
+  "name": "omo",
+  "description": "Use this skill when you see `/omo`. Multi-agent orchestration for \"code analysis / bug investigation / fix planning / implementation\". Choose the minimal agent set and order based on task type + risk; recipes below show common patterns.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "stellarlinkco",
+  "install_path": ".claude/skills/omo/SKILL.md",
+  "source": {
+    "repo": "stellarlinkco/myclaude",
+    "url": "https://github.com/stellarlinkco/myclaude/blob/master/skills/omo/SKILL.md",
+    "path": "skills/omo/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-10-29T17:14:54.275Z",
+    "stars": 2748,
+    "language": "Go",
+    "pushed_at": "2026-05-04T04:25:57Z",
+    "license": "AGPL-3.0"
+  }
+}

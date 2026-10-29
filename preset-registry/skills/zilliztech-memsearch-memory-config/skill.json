@@ -1,0 +1,25 @@
+{
+  "id": "zilliztech-memsearch-memory-config",
+  "name": "memory-config",
+  "description": "Diagnose and configure MemSearch memory behavior. Use when the user asks about MemSearch configuration, plugin summarization, PROJECT.md/USER.md maintenance, memory directories, index health, provider routing, prompt files, or migration/compatibility questions.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "zilliztech",
+  "install_path": ".claude/skills/memory-config/SKILL.md",
+  "source": {
+    "repo": "zilliztech/memsearch",
+    "url": "https://github.com/zilliztech/memsearch/blob/main/plugins/opencode/skills/memory-config/SKILL.md",
+    "path": "plugins/opencode/skills/memory-config/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T18:00:32.111Z",
+    "stars": 2805,
+    "language": "Python",
+    "pushed_at": "2026-10-27T03:33:37Z",
+    "license": "MIT"
+  }
+}

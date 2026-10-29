@@ -1,0 +1,25 @@
+{
+  "id": "google-elephant-goldfish-model-egm-brainstorm",
+  "name": "egm-brainstorm",
+  "description": ">- Interactive ideation and brainstorming skill for the Elephant & Goldfish Model (EGM). Helps turn half-baked concepts into structured hypotheses via clarifying questions, review, and iterative refinement. Produces an RFC summary for human review or more detailed design with /egm-draft.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/egm-brainstorm/SKILL.md",
+  "source": {
+    "repo": "google/elephant-goldfish-model",
+    "url": "https://github.com/google/elephant-goldfish-model/blob/main/skills/egm-brainstorm/SKILL.md",
+    "path": "skills/egm-brainstorm/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T18:00:17.861Z",
+    "stars": 5654,
+    "language": "Python",
+    "pushed_at": "2026-10-29T10:23:12Z",
+    "license": "Apache-2.0"
+  }
+}

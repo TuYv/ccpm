@@ -1,0 +1,25 @@
+{
+  "id": "google-elephant-goldfish-model-egm-review-loop",
+  "name": "egm-review-loop",
+  "description": ">- Executes the Antagonistic-Review process from the Elephant-Goldfish Model (EGM) via an automated multi-agent review loop to audit documents against qualitative standards and structural templates, and automatically apply approved fixes. Use when reviewing design docs, READMEs, feature specifications, implementation plans, or verifying document completeness and tone.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/egm-review-loop/SKILL.md",
+  "source": {
+    "repo": "google/elephant-goldfish-model",
+    "url": "https://github.com/google/elephant-goldfish-model/blob/main/skills/egm-review-loop/SKILL.md",
+    "path": "skills/egm-review-loop/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T18:00:18.587Z",
+    "stars": 5654,
+    "language": "Python",
+    "pushed_at": "2026-10-29T10:23:12Z",
+    "license": "Apache-2.0"
+  }
+}

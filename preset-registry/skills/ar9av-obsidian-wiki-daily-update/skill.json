@@ -1,0 +1,25 @@
+{
+  "id": "ar9av-obsidian-wiki-daily-update",
+  "name": "daily-update",
+  "description": "> Run or configure the daily wiki maintenance cycle: check source freshness, refresh the index and hot.md, and manage its scheduled 9 AM launchd/systemd/cron reminder. Use for daily or morning wiki refresh or scheduler setup and verification.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Ar9av",
+  "install_path": ".claude/skills/daily-update/SKILL.md",
+  "source": {
+    "repo": "Ar9av/obsidian-wiki",
+    "url": "https://github.com/Ar9av/obsidian-wiki/blob/main/.skills/daily-update/SKILL.md",
+    "path": ".skills/daily-update/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T17:56:15.055Z",
+    "stars": 3636,
+    "language": "Python",
+    "pushed_at": "2026-10-27T07:26:53Z",
+    "license": "MIT"
+  }
+}

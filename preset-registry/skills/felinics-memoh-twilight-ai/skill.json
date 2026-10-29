@@ -1,0 +1,25 @@
+{
+  "id": "felinics-memoh-twilight-ai",
+  "name": "twilight-ai",
+  "description": "Assist with development in the Twilight AI Go SDK. Use when working in this repository, adding or updating providers, embeddings, tool calling, streaming, examples, or docs for Twilight AI.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "felinics",
+  "install_path": ".claude/skills/twilight-ai/SKILL.md",
+  "source": {
+    "repo": "felinics/Memoh",
+    "url": "https://github.com/felinics/Memoh/blob/main/.agents/skills/twilight-ai/SKILL.md",
+    "path": ".agents/skills/twilight-ai/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T17:14:56.147Z",
+    "stars": 2764,
+    "language": "Go",
+    "pushed_at": "2026-10-29T15:56:40Z",
+    "license": "AGPL-3.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "stellarlinkco-myclaude-harness",
+  "name": "harness",
+  "description": "This skill should be used for multi-session autonomous agent work requiring progress checkpointing, failure recovery, and task dependency management. Triggers on '/harness' command, or when a task involves many subtasks needing progress persistence, sleep/resume cycles across context windows, recovery from mid-task failures with partial state, or distributed work across multiple agent sessions. Synthesized from Anthropic and OpenAI engineering practices for long-running agents.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "stellarlinkco",
+  "install_path": ".claude/skills/harness/SKILL.md",
+  "source": {
+    "repo": "stellarlinkco/myclaude",
+    "url": "https://github.com/stellarlinkco/myclaude/blob/master/skills/harness/SKILL.md",
+    "path": "skills/harness/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-10-29T17:14:54.113Z",
+    "stars": 2748,
+    "language": "Go",
+    "pushed_at": "2026-05-04T04:25:57Z",
+    "license": "AGPL-3.0"
+  }
+}

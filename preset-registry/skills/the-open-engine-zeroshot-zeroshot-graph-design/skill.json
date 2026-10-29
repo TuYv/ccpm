@@ -1,0 +1,25 @@
+{
+  "id": "the-open-engine-zeroshot-zeroshot-graph-design",
+  "name": "zeroshot-graph-design",
+  "description": "Design or revise a Zeroshot graph through a guided interview grounded in the invoking repository. Review an ASCII diagram and exact node instructions, select runtimes, then confirm the profile name and local or platform storage scope before saving.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "the-open-engine",
+  "install_path": ".claude/skills/zeroshot-graph-design/SKILL.md",
+  "source": {
+    "repo": "the-open-engine/zeroshot",
+    "url": "https://github.com/the-open-engine/zeroshot/blob/main/npm/zeroshot/skills/zeroshot-graph-design/SKILL.md",
+    "path": "npm/zeroshot/skills/zeroshot-graph-design/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T17:14:57.291Z",
+    "stars": 2064,
+    "language": "Rust",
+    "pushed_at": "2026-10-29T15:40:08Z",
+    "license": "MIT"
+  }
+}

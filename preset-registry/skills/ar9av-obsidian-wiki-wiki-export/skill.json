@@ -1,0 +1,25 @@
+{
+  "id": "ar9av-obsidian-wiki-wiki-export",
+  "name": "wiki-export",
+  "description": "> Export the Obsidian wiki graph to JSON, GraphML, Neo4j Cypher, Postgres/SQL, HTML, or OKF bundles. Use when transferring or visualizing wiki data in external tools; wiki-import handles the reverse direction.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Ar9av",
+  "install_path": ".claude/skills/wiki-export/SKILL.md",
+  "source": {
+    "repo": "Ar9av/obsidian-wiki",
+    "url": "https://github.com/Ar9av/obsidian-wiki/blob/main/.skills/wiki-export/SKILL.md",
+    "path": ".skills/wiki-export/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T17:56:18.004Z",
+    "stars": 3636,
+    "language": "Python",
+    "pushed_at": "2026-10-27T07:26:53Z",
+    "license": "MIT"
+  }
+}

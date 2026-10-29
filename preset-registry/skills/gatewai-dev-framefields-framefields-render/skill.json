@@ -1,0 +1,25 @@
+{
+  "id": "gatewai-dev-framefields-framefields-render",
+  "name": "framefields-render",
+  "description": "Render, inspect, test, and export high-performance WebGPU video and frame grids with the framefields headless engine. Use when verifying compositions, diagnosing blank frames, profiling GPU pipelines, running visual frame grids, or exporting final MP4 video in framefields.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "gatewai-dev",
+  "install_path": ".claude/skills/framefields-render/SKILL.md",
+  "source": {
+    "repo": "gatewai-dev/framefields",
+    "url": "https://github.com/gatewai-dev/framefields/blob/main/plugins/framefields/skills/framefields-render/SKILL.md",
+    "path": "plugins/framefields/skills/framefields-render/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T18:02:37.607Z",
+    "stars": 499,
+    "language": "TypeScript",
+    "pushed_at": "2026-10-29T12:33:01Z",
+    "license": "Apache-2.0"
+  }
+}

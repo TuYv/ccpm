@@ -1,0 +1,25 @@
+{
+  "id": "stellarlinkco-myclaude-product-requirements",
+  "name": "product-requirements",
+  "description": "Interactive Product Owner skill for requirements gathering, analysis, and PRD generation. Triggers when users request product requirements, feature specification, PRD creation, or need help understanding and documenting project requirements. Uses quality scoring and iterative dialogue to ensure comprehensive requirements before generating professional PRD documents.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "stellarlinkco",
+  "install_path": ".claude/skills/product-requirements/SKILL.md",
+  "source": {
+    "repo": "stellarlinkco/myclaude",
+    "url": "https://github.com/stellarlinkco/myclaude/blob/master/skills/product-requirements/SKILL.md",
+    "path": "skills/product-requirements/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-10-29T17:14:54.419Z",
+    "stars": 2748,
+    "language": "Go",
+    "pushed_at": "2026-05-04T04:25:57Z",
+    "license": "AGPL-3.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "google-elephant-goldfish-model-egm-resolve",
+  "name": "egm-resolve",
+  "description": ">- The Elephant resolution skill. Ingests flat deficiency reports from concurrent Goldfish reviewers, applies automated fixes for PROPOSE FIX items via UI multiple-choice gates, and presents interactive negotiation/re-sync checkpoints.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/egm-resolve/SKILL.md",
+  "source": {
+    "repo": "google/elephant-goldfish-model",
+    "url": "https://github.com/google/elephant-goldfish-model/blob/main/skills/egm-resolve/SKILL.md",
+    "path": "skills/egm-resolve/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T18:00:18.406Z",
+    "stars": 5654,
+    "language": "Python",
+    "pushed_at": "2026-10-29T10:23:12Z",
+    "license": "Apache-2.0"
+  }
+}

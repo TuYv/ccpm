@@ -1,0 +1,25 @@
+{
+  "id": "the-open-engine-zeroshot-zeroshot",
+  "name": "zeroshot",
+  "description": "Use Zeroshot to prepare, run, observe, or troubleshoot explicit multi-agent software work locally or on Zeroshot Platform. Apply when the user names Zeroshot, including 'zeroshot this' or 'zeroshot it' (this orchestrator, not one-shot prompting), or asks about its CLI; do not route ordinary local work into Zeroshot without that intent.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "the-open-engine",
+  "install_path": ".claude/skills/zeroshot/SKILL.md",
+  "source": {
+    "repo": "the-open-engine/zeroshot",
+    "url": "https://github.com/the-open-engine/zeroshot/blob/main/npm/zeroshot/skills/zeroshot/SKILL.md",
+    "path": "npm/zeroshot/skills/zeroshot/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T17:14:57.778Z",
+    "stars": 2064,
+    "language": "Rust",
+    "pushed_at": "2026-10-29T15:40:08Z",
+    "license": "MIT"
+  }
+}

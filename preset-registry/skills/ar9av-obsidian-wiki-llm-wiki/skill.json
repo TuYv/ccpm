@@ -1,0 +1,25 @@
+{
+  "id": "ar9av-obsidian-wiki-llm-wiki",
+  "name": "llm-wiki",
+  "description": "> Explain and apply the foundational LLM Wiki architecture and knowledge-management strategy. Use for setup, architecture, schema, or organization decisions; operational ingest/query/lint work uses dedicated skills.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Ar9av",
+  "install_path": ".claude/skills/llm-wiki/SKILL.md",
+  "source": {
+    "repo": "Ar9av/obsidian-wiki",
+    "url": "https://github.com/Ar9av/obsidian-wiki/blob/main/.skills/llm-wiki/SKILL.md",
+    "path": ".skills/llm-wiki/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T17:56:15.642Z",
+    "stars": 3636,
+    "language": "Python",
+    "pushed_at": "2026-10-27T07:26:53Z",
+    "license": "MIT"
+  }
+}

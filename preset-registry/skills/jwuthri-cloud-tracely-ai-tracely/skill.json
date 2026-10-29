@@ -1,0 +1,25 @@
+{
+  "id": "jwuthri-cloud-tracely-ai-tracely",
+  "name": "tracely",
+  "description": "Instrument AI agents with Tracely and turn their production traces into CI gates. Use when the user mentions Tracely, tracelyai-sdk, tracely_sdk, the `tracely` CLI, or asks to trace/observe an AI agent, add LLM evaluators or LLM-as-a-judge columns, debug why a trace or conversation isn't showing up, wire agent regression tests into a PR check, run scenario or red-team suites against an agent endpoint, or replay recorded agent failures in CI. Covers both zero-span-code automatic instrumentation a",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "jwuthri-cloud",
+  "install_path": ".claude/skills/tracely/SKILL.md",
+  "source": {
+    "repo": "jwuthri-cloud/Tracely-ai",
+    "url": "https://github.com/jwuthri-cloud/Tracely-ai/blob/main/skills/tracely/SKILL.md",
+    "path": "skills/tracely/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T18:02:34.538Z",
+    "stars": 1209,
+    "language": "Python",
+    "pushed_at": "2026-10-26T18:09:41Z",
+    "license": "MIT"
+  }
+}

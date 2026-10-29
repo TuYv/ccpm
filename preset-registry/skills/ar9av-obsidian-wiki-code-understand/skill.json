@@ -1,0 +1,25 @@
+{
+  "id": "ar9av-obsidian-wiki-code-understand",
+  "name": "code-understand",
+  "description": "> Map the load-bearing files, symbols, callers, and dependencies of an unfamiliar codebase before making changes. Use for architecture orientation, impact analysis, what-would-break questions, or finding callers. Uses CodeGraph when available and a dependency-free builtin fallback.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Ar9av",
+  "install_path": ".claude/skills/code-understand/SKILL.md",
+  "source": {
+    "repo": "Ar9av/obsidian-wiki",
+    "url": "https://github.com/Ar9av/obsidian-wiki/blob/main/.skills/code-understand/SKILL.md",
+    "path": ".skills/code-understand/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T17:56:14.463Z",
+    "stars": 3636,
+    "language": "Python",
+    "pushed_at": "2026-10-27T07:26:53Z",
+    "license": "MIT"
+  }
+}

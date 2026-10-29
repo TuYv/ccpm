@@ -1,0 +1,25 @@
+{
+  "id": "nateherkai-roast-room-newroaster",
+  "name": "newroaster",
+  "description": "Use when someone wants to add a new advisor to the Roast Room, says \"/newroaster\", \"add a roaster\", \"add a seat\", \"add [name] to the council\", \"build a seat for [name]\", \"I want [name] on my board\", or wants their own advisor (themselves, a mentor, or any public figure) built from public work. Builds the seat the same way the original seven were built. It finds and fetches the person's public sources, extracts their frameworks, rules, positions, stories, and voice with parallel sub-agents, write",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "nateherkai",
+  "install_path": ".claude/skills/newroaster/SKILL.md",
+  "source": {
+    "repo": "nateherkai/roast-room",
+    "url": "https://github.com/nateherkai/roast-room/blob/main/.claude/skills/newroaster/SKILL.md",
+    "path": ".claude/skills/newroaster/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T17:15:17.527Z",
+    "stars": 1361,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-22T02:00:35Z",
+    "license": null
+  }
+}

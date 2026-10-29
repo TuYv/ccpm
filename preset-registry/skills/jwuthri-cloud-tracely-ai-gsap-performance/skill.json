@@ -1,0 +1,25 @@
+{
+  "id": "jwuthri-cloud-tracely-ai-gsap-performance",
+  "name": "gsap-performance",
+  "description": "Official GSAP skill for performance — prefer transforms, avoid layout thrashing, will-change, batching. Use when optimizing GSAP animations, reducing jank, or when the user asks about animation performance, FPS, or smooth 60fps.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "jwuthri-cloud",
+  "install_path": ".claude/skills/gsap-performance/SKILL.md",
+  "source": {
+    "repo": "jwuthri-cloud/Tracely-ai",
+    "url": "https://github.com/jwuthri-cloud/Tracely-ai/blob/main/.agents/skills/gsap-performance/SKILL.md",
+    "path": ".agents/skills/gsap-performance/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T18:02:28.917Z",
+    "stars": 1209,
+    "language": "Python",
+    "pushed_at": "2026-10-26T18:09:41Z",
+    "license": "MIT"
+  }
+}

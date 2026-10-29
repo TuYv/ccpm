@@ -1,0 +1,25 @@
+{
+  "id": "jwuthri-cloud-tracely-ai-design-audit",
+  "name": "design-audit",
+  "description": "Design audit checklist - motion gaps, accessibility, color consistency, responsive, performance.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "jwuthri-cloud",
+  "install_path": ".claude/skills/design-audit/SKILL.md",
+  "source": {
+    "repo": "jwuthri-cloud/Tracely-ai",
+    "url": "https://github.com/jwuthri-cloud/Tracely-ai/blob/main/.agents/skills/design-audit/SKILL.md",
+    "path": ".agents/skills/design-audit/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T18:02:28.087Z",
+    "stars": 1209,
+    "language": "Python",
+    "pushed_at": "2026-10-26T18:09:41Z",
+    "license": "MIT"
+  }
+}

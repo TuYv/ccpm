@@ -1,0 +1,25 @@
+{
+  "id": "ar9av-obsidian-wiki-wiki-setup",
+  "name": "wiki-setup",
+  "description": "> Initialize or repair an Obsidian wiki vault's required structure and configuration. Use for new-vault setup, .env/config creation, reconfiguration, or broken setup recovery.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Ar9av",
+  "install_path": ".claude/skills/wiki-setup/SKILL.md",
+  "source": {
+    "repo": "Ar9av/obsidian-wiki",
+    "url": "https://github.com/Ar9av/obsidian-wiki/blob/main/.skills/wiki-setup/SKILL.md",
+    "path": ".skills/wiki-setup/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T17:56:19.399Z",
+    "stars": 3636,
+    "language": "Python",
+    "pushed_at": "2026-10-27T07:26:53Z",
+    "license": "MIT"
+  }
+}

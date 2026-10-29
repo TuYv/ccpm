@@ -1,0 +1,25 @@
+{
+  "id": "stellarlinkco-myclaude-browser",
+  "name": "browser",
+  "description": "This skill should be used for browser automation tasks using Chrome DevTools Protocol (CDP). Triggers when users need to launch Chrome with remote debugging, navigate pages, execute JavaScript in browser context, capture screenshots, or interactively select DOM elements. No MCP server required.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "stellarlinkco",
+  "install_path": ".claude/skills/browser/SKILL.md",
+  "source": {
+    "repo": "stellarlinkco/myclaude",
+    "url": "https://github.com/stellarlinkco/myclaude/blob/master/skills/browser/SKILL.md",
+    "path": "skills/browser/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-10-29T17:14:53.518Z",
+    "stars": 2748,
+    "language": "Go",
+    "pushed_at": "2026-05-04T04:25:57Z",
+    "license": "AGPL-3.0"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "id": "phuryn-pm-skills-shipping-artifacts",
   "name": "shipping-artifacts",
-  "description": "The durable documentation set that makes an AI-built (vibe-coded) app reviewable before shipping. A small core every app needs — architecture, user/permission flows, permissions, variables/secrets, and a test-coverage map — plus conditional docs added only when they apply: emails, scheduled work, SEO, and embedded agents/automation. Defines what each doc must capture and how a reviewer or auditor uses it. Use when documenting a codebase for handoff, mapping user journeys and trust-boundary cross",
+  "description": "Moved to phuryn/product-engineering, where it is maintained in the ai-shipping plugin; this copy says where it went and how to install it. Use when asked to document an AI-built app so it can be reviewed before it ships.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/phuryn/pm-skills/blob/main/pm-ai-shipping/skills/shipping-artifacts/SKILL.md",
     "path": "pm-ai-shipping/skills/shipping-artifacts/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-29T10:39:17.613Z",
-    "stars": 27500,
+    "discovered_at": "2026-10-29T18:03:15.708Z",
+    "stars": 27514,
     "language": null,
-    "pushed_at": "2026-10-16T12:28:37Z",
+    "pushed_at": "2026-10-29T11:56:37Z",
     "license": "MIT"
-  },
-  "summary_zh": "一套面向 AI 生成应用的交付文档规范，涵盖架构、权限、密钥、测试覆盖等核心内容，并按需补充邮件、定时任务、SEO 等模块，方便上线前评审、交接或审计时快速看懂代码库。"
+  }
 }

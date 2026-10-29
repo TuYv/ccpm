@@ -1,0 +1,25 @@
+{
+  "id": "stellarlinkco-myclaude-dev",
+  "name": "dev",
+  "description": "Extreme lightweight end-to-end development workflow with requirements clarification, intelligent backend selection, parallel codeagent execution, and mandatory 90% test coverage",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "stellarlinkco",
+  "install_path": ".claude/skills/dev/SKILL.md",
+  "source": {
+    "repo": "stellarlinkco/myclaude",
+    "url": "https://github.com/stellarlinkco/myclaude/blob/master/skills/dev/SKILL.md",
+    "path": "skills/dev/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-10-29T17:14:53.797Z",
+    "stars": 2748,
+    "language": "Go",
+    "pushed_at": "2026-05-04T04:25:57Z",
+    "license": "AGPL-3.0"
+  }
+}

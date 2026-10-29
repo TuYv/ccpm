@@ -1,0 +1,25 @@
+{
+  "id": "zilliztech-memsearch-memory-to-skill",
+  "name": "memory-to-skill",
+  "description": "Turn workflows from your MemSearch memory into reusable skills. Use when the user asks to make/create/extract/distill a skill from what they just did or from past work, review skill candidates, install a distilled skill, or 'turn this into a skill'. Manages MemSearch procedural-memory candidates under .memsearch/skill-candidates/, not the host agent's own skills system.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "zilliztech",
+  "install_path": ".claude/skills/memory-to-skill/SKILL.md",
+  "source": {
+    "repo": "zilliztech/memsearch",
+    "url": "https://github.com/zilliztech/memsearch/blob/main/plugins/opencode/skills/memory-to-skill/SKILL.md",
+    "path": "plugins/opencode/skills/memory-to-skill/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T18:00:32.462Z",
+    "stars": 2805,
+    "language": "Python",
+    "pushed_at": "2026-10-27T03:33:37Z",
+    "license": "MIT"
+  }
+}

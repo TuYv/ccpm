@@ -1,0 +1,25 @@
+{
+  "id": "jwuthri-cloud-tracely-ai-paint",
+  "name": "paint",
+  "description": "Paint a complete visual universe with genjutsu - art direction brainstorm, design system, implementation, audit. Anti-AI-slop design pipeline. Adapts to Web, Android (Compose), Apple (SwiftUI).",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "jwuthri-cloud",
+  "install_path": ".claude/skills/paint/SKILL.md",
+  "source": {
+    "repo": "jwuthri-cloud/Tracely-ai",
+    "url": "https://github.com/jwuthri-cloud/Tracely-ai/blob/main/.agents/skills/paint/SKILL.md",
+    "path": ".agents/skills/paint/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T18:02:31.002Z",
+    "stars": 1209,
+    "language": "Python",
+    "pushed_at": "2026-10-26T18:09:41Z",
+    "license": "MIT"
+  }
+}

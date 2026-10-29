@@ -1,0 +1,25 @@
+{
+  "id": "stellarlinkco-myclaude-skill-install",
+  "name": "skill-install",
+  "description": "Install Claude skills from GitHub repositories with automated security scanning. Triggers when users want to install skills from a GitHub URL, need to browse available skills in a repository, or want to safely add new skills to their Claude environment.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "stellarlinkco",
+  "install_path": ".claude/skills/skill-install/SKILL.md",
+  "source": {
+    "repo": "stellarlinkco/myclaude",
+    "url": "https://github.com/stellarlinkco/myclaude/blob/master/skills/skill-install/SKILL.md",
+    "path": "skills/skill-install/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-10-29T17:14:54.687Z",
+    "stars": 2748,
+    "language": "Go",
+    "pushed_at": "2026-05-04T04:25:57Z",
+    "license": "AGPL-3.0"
+  }
+}

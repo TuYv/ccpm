@@ -1,0 +1,25 @@
+{
+  "id": "tigerless-labs-agent-memory-agent-memory",
+  "name": "agent-memory",
+  "description": "Read and write the shared long-term memory store. Use before starting a task that might already have been solved, and at the end of a task that produced anything durable.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tigerless-labs",
+  "install_path": ".claude/skills/agent-memory/SKILL.md",
+  "source": {
+    "repo": "tigerless-labs/agent-memory",
+    "url": "https://github.com/tigerless-labs/agent-memory/blob/main/skills/agent-memory/SKILL.md",
+    "path": "skills/agent-memory/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T18:01:23.600Z",
+    "stars": 4374,
+    "language": "Python",
+    "pushed_at": "2026-10-29T15:24:38Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "gatewai-dev-framefields-node-compositor",
+  "name": "Compositor",
+  "description": "Code-first video & image, rendered natively on WebGPU.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "gatewai-dev",
+  "install_path": ".claude/skills/node-compositor/SKILL.md",
+  "source": {
+    "repo": "gatewai-dev/framefields",
+    "url": "https://github.com/gatewai-dev/framefields/blob/main/nodes/node-compositor/SKILL.md",
+    "path": "nodes/node-compositor/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T18:02:37.078Z",
+    "stars": 499,
+    "language": "TypeScript",
+    "pushed_at": "2026-10-29T12:33:01Z",
+    "license": "Apache-2.0"
+  }
+}

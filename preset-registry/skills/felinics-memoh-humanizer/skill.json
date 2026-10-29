@@ -1,0 +1,25 @@
+{
+  "id": "felinics-memoh-humanizer",
+  "name": "humanizer",
+  "description": "| Remove signs of AI-generated writing from text. Use when editing or reviewing text to make it sound more natural and human-written. Based on Wikipedia's comprehensive \"Signs of AI writing\" guide. Detects and fixes patterns including: inflated symbolism, promotional language, superficial -ing analyses, vague attributions, em dash overuse, rule of three, AI vocabulary words, passive voice, negative parallelisms, and filler phrases.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "2.5.1",
+  "author": "felinics",
+  "install_path": ".claude/skills/humanizer/SKILL.md",
+  "source": {
+    "repo": "felinics/Memoh",
+    "url": "https://github.com/felinics/Memoh/blob/main/.agents/skills/humanizer/SKILL.md",
+    "path": ".agents/skills/humanizer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T17:14:55.767Z",
+    "stars": 2764,
+    "language": "Go",
+    "pushed_at": "2026-10-29T15:56:40Z",
+    "license": "AGPL-3.0"
+  }
+}

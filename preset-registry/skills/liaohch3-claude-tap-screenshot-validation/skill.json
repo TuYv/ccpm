@@ -1,0 +1,25 @@
+{
+  "id": "liaohch3-claude-tap-screenshot-validation",
+  "name": "screenshot-validation",
+  "description": "Validate screenshot and viewer HTML quality for PR evidence. Run this after adding or modifying images under .agents/evidence/pr/ or .agents/recordings/, or after generating a new viewer HTML file. Combines image quality checks (resolution, blankness, file size) with Playwright-based viewer rendering verification.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "liaohch3",
+  "install_path": ".claude/skills/screenshot-validation/SKILL.md",
+  "source": {
+    "repo": "liaohch3/claude-tap",
+    "url": "https://github.com/liaohch3/claude-tap/blob/main/.agents/skills/screenshot-validation/SKILL.md",
+    "path": ".agents/skills/screenshot-validation/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T18:02:26.272Z",
+    "stars": 3313,
+    "language": "Python",
+    "pushed_at": "2026-10-28T23:03:50Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "felinics-memoh-hooks-setup",
+  "name": "hooks-setup",
+  "description": "Configure Memoh hooks in /data/.memoh/hooks.json, including events, matchers, command/tool actions, decisions, on_error behavior, append_context, and validation. Use when the user asks to inspect, create, update, debug, or explain workspace hooks.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "felinics",
+  "install_path": ".claude/skills/hooks-setup/SKILL.md",
+  "source": {
+    "repo": "felinics/Memoh",
+    "url": "https://github.com/felinics/Memoh/blob/main/templates/workspace/.memoh/skills/hooks-setup/SKILL.md",
+    "path": "templates/workspace/.memoh/skills/hooks-setup/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T17:14:56.292Z",
+    "stars": 2764,
+    "language": "Go",
+    "pushed_at": "2026-10-29T15:56:40Z",
+    "license": "AGPL-3.0"
+  }
+}

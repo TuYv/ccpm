@@ -1,0 +1,25 @@
+{
+  "id": "felinics-memoh-memoh-error-handling",
+  "name": "memoh-error-handling",
+  "description": "| Memoh 统一错误处理架构（apperror + Problem Details + SSE envelope + 前端稳定 code 解析）。 新增任何面向用户的后端错误、或前端需要根据错误做业务分支时，必须先读本 skill。 核心约束：业务判断只依赖稳定 code，用户文案由前端按语言本地化，私有诊断永不进入响应。",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "felinics",
+  "install_path": ".claude/skills/memoh-error-handling/SKILL.md",
+  "source": {
+    "repo": "felinics/Memoh",
+    "url": "https://github.com/felinics/Memoh/blob/main/.agents/skills/memoh-error-handling/SKILL.md",
+    "path": ".agents/skills/memoh-error-handling/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T17:14:55.989Z",
+    "stars": 2764,
+    "language": "Go",
+    "pushed_at": "2026-10-29T15:56:40Z",
+    "license": "AGPL-3.0"
+  }
+}

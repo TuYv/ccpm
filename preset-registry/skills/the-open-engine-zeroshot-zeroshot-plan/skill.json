@@ -1,0 +1,25 @@
+{
+  "id": "the-open-engine-zeroshot-zeroshot-plan",
+  "name": "zeroshot-plan",
+  "description": "Plan software work with Zeroshot before it is built, turning a request, issue or idea into an implementation-ready plan with checkable acceptance criteria that a Zeroshot run can build and verify. Use when the user asks to plan work with Zeroshot (\"plan this with zeroshot\", \"zeroshot plan ...\", /zeroshot-plan) or accepts the zeroshot skill's suggestion to plan first. Do not use for ordinary planning requests that do not name Zeroshot, the host's own plan mode, running Zeroshot (use the zeroshot ",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "the-open-engine",
+  "install_path": ".claude/skills/zeroshot-plan/SKILL.md",
+  "source": {
+    "repo": "the-open-engine/zeroshot",
+    "url": "https://github.com/the-open-engine/zeroshot/blob/main/npm/zeroshot/skills/zeroshot-plan/SKILL.md",
+    "path": "npm/zeroshot/skills/zeroshot-plan/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T17:14:57.609Z",
+    "stars": 2064,
+    "language": "Rust",
+    "pushed_at": "2026-10-29T15:40:08Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "openaccountants-openaccountants-ad-transfer-pricing",
+  "name": "ad-transfer-pricing",
+  "description": "Andorra transfer pricing for resident companies, related individuals, group entities and permanent establishments in tax year 2026. Identifies the distinct ownership, family, director and control tests; builds a market-value working paper from actual transactions, comparables, functions, risks and evidence; reconciles services and related financing to the tax base. Covers financing deduction proof, advance-pricing applications, approval effects and annual agreement reporting, plus country-by-cou",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openaccountants",
+  "install_path": ".claude/skills/ad-transfer-pricing/SKILL.md",
+  "source": {
+    "repo": "openaccountants/openaccountants",
+    "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/ad-transfer-pricing/SKILL.md",
+    "path": "agent-skills/ad-transfer-pricing/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T18:04:05.609Z",
+    "stars": 463,
+    "language": "Python",
+    "pushed_at": "2026-10-29T17:33:59Z",
+    "license": "AGPL-3.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "jwuthri-cloud-tracely-ai-maintain-greptile-rules",
+  "name": "maintain-greptile-rules",
+  "description": "Evaluate verified findings from merge-ready, Greptile, pull-request, CI, security, billing, and other code reviews, then promote durable review gaps into the version-controlled .greptile configuration. Use when a review uncovers a recurring or high-risk repository invariant that Greptile does not capture, when Greptile repeatedly produces a false positive, or when asked to audit or update OpenSEO's Greptile rules and context.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "jwuthri-cloud",
+  "install_path": ".claude/skills/maintain-greptile-rules/SKILL.md",
+  "source": {
+    "repo": "jwuthri-cloud/Tracely-ai",
+    "url": "https://github.com/jwuthri-cloud/Tracely-ai/blob/main/.claude/skills/maintain-greptile-rules/SKILL.md",
+    "path": ".claude/skills/maintain-greptile-rules/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T18:02:33.184Z",
+    "stars": 1209,
+    "language": "Python",
+    "pushed_at": "2026-10-26T18:09:41Z",
+    "license": "MIT"
+  }
+}

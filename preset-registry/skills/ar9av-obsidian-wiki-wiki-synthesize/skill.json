@@ -1,0 +1,25 @@
+{
+  "id": "ar9av-obsidian-wiki-wiki-synthesize",
+  "name": "wiki-synthesize",
+  "description": "> Find recurring concept combinations across the wiki that lack an explicit synthesis page, then create cross-cutting synthesis pages. Use for knowledge synthesis after the vault has accumulated enough material.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Ar9av",
+  "install_path": ".claude/skills/wiki-synthesize/SKILL.md",
+  "source": {
+    "repo": "Ar9av/obsidian-wiki",
+    "url": "https://github.com/Ar9av/obsidian-wiki/blob/main/.skills/wiki-synthesize/SKILL.md",
+    "path": ".skills/wiki-synthesize/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T17:56:19.923Z",
+    "stars": 3636,
+    "language": "Python",
+    "pushed_at": "2026-10-27T07:26:53Z",
+    "license": "MIT"
+  }
+}

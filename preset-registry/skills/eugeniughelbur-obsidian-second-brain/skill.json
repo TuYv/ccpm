@@ -1,0 +1,25 @@
+{
+  "id": "eugeniughelbur-obsidian-second-brain",
+  "name": "obsidian-second-brain",
+  "description": "> Operate any Obsidian vault as a living, self-rewriting second brain (an evolution of Karpathy's LLM Wiki pattern: sources rewrite existing pages, contradictions reconcile automatically, scheduled agents maintain the vault while you sleep). Use this skill whenever the user asks Claude to read, write, update, search, or manage their Obsidian vault - including saving notes from conversation, creating daily entries, updating kanban boards, logging dev work, managing people notes, capturing decisio",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "eugeniughelbur",
+  "install_path": ".claude/skills/./SKILL.md",
+  "source": {
+    "repo": "eugeniughelbur/obsidian-second-brain",
+    "url": "https://github.com/eugeniughelbur/obsidian-second-brain/blob/main/SKILL.md",
+    "path": "SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T17:56:09.699Z",
+    "stars": 5036,
+    "language": "Python",
+    "pushed_at": "2026-10-28T22:44:30Z",
+    "license": "MIT"
+  }
+}

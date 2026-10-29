@@ -1,0 +1,25 @@
+{
+  "id": "jwuthri-cloud-tracely-ai-simple-issue-description",
+  "name": "simple-issue-description",
+  "description": "Turn a rough bug report, feature request, support note, or pull request into a short, plain-language issue focused on the problem and desired behavior. Use when a contributor asks to simplify an issue, explain what a PR is for, create the corresponding issue for a PR, remove implementation detail from a report, or invokes /simple-issue-description.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "jwuthri-cloud",
+  "install_path": ".claude/skills/simple-issue-description/SKILL.md",
+  "source": {
+    "repo": "jwuthri-cloud/Tracely-ai",
+    "url": "https://github.com/jwuthri-cloud/Tracely-ai/blob/main/.claude/skills/simple-issue-description/SKILL.md",
+    "path": ".claude/skills/simple-issue-description/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T18:02:34.364Z",
+    "stars": 1209,
+    "language": "Python",
+    "pushed_at": "2026-10-26T18:09:41Z",
+    "license": "MIT"
+  }
+}

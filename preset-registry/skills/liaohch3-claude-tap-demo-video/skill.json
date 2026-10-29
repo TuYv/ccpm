@@ -1,0 +1,25 @@
+{
+  "id": "liaohch3-claude-tap-demo-video",
+  "name": "demo-video",
+  "description": "Generate demo assets (GIF/MP4) from real tmux E2E runs and viewer screenshots using asciinema and Playwright",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "liaohch3",
+  "install_path": ".claude/skills/demo-video/SKILL.md",
+  "source": {
+    "repo": "liaohch3/claude-tap",
+    "url": "https://github.com/liaohch3/claude-tap/blob/main/.agents/skills/demo-video/SKILL.md",
+    "path": ".agents/skills/demo-video/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T18:02:24.778Z",
+    "stars": 3313,
+    "language": "Python",
+    "pushed_at": "2026-10-28T23:03:50Z",
+    "license": "MIT"
+  }
+}

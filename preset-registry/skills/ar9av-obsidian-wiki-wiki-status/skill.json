@@ -1,0 +1,25 @@
+{
+  "id": "ar9av-obsidian-wiki-wiki-status",
+  "name": "wiki-status",
+  "description": "> Report wiki ingestion/completeness state, pending source delta, structural insights, or maintenance equilibrium. Use for remaining-work/status questions, hubs and bridges, or whether maintenance skills still have pending changes. wiki-digest summarizes learned knowledge instead.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Ar9av",
+  "install_path": ".claude/skills/wiki-status/SKILL.md",
+  "source": {
+    "repo": "Ar9av/obsidian-wiki",
+    "url": "https://github.com/Ar9av/obsidian-wiki/blob/main/.skills/wiki-status/SKILL.md",
+    "path": ".skills/wiki-status/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T17:56:19.653Z",
+    "stars": 3636,
+    "language": "Python",
+    "pushed_at": "2026-10-27T07:26:53Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "ar9av-obsidian-wiki-wiki-switch",
+  "name": "wiki-switch",
+  "description": "> List, create, or switch named Obsidian wiki vault profiles under the global config directory. Use when changing the active vault, checking which vault is active, or managing multi-vault profiles.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Ar9av",
+  "install_path": ".claude/skills/wiki-switch/SKILL.md",
+  "source": {
+    "repo": "Ar9av/obsidian-wiki",
+    "url": "https://github.com/Ar9av/obsidian-wiki/blob/main/.skills/wiki-switch/SKILL.md",
+    "path": ".skills/wiki-switch/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T17:56:19.771Z",
+    "stars": 3636,
+    "language": "Python",
+    "pushed_at": "2026-10-27T07:26:53Z",
+    "license": "MIT"
+  }
+}

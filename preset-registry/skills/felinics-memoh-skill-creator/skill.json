@@ -1,0 +1,25 @@
+{
+  "id": "felinics-memoh-skill-creator",
+  "name": "skill-creator",
+  "description": "Create or update Memoh workspace skills under /data/skills, including SKILL.md, scripts, references, assets, and validation. Use when the user asks to create, scaffold, revise, audit, or explain a workspace skill.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "felinics",
+  "install_path": ".claude/skills/skill-creator/SKILL.md",
+  "source": {
+    "repo": "felinics/Memoh",
+    "url": "https://github.com/felinics/Memoh/blob/main/templates/workspace/.memoh/skills/skill-creator/SKILL.md",
+    "path": "templates/workspace/.memoh/skills/skill-creator/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T17:14:56.572Z",
+    "stars": 2764,
+    "language": "Go",
+    "pushed_at": "2026-10-29T15:56:40Z",
+    "license": "AGPL-3.0"
+  }
+}

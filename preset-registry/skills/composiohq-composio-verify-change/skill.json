@@ -1,0 +1,25 @@
+{
+  "id": "composiohq-composio-verify-change",
+  "name": "verify-change",
+  "description": "Maintain resumable task records, select repository verification profiles, inspect revision-bound receipts, and carry work between coding agents. Use for substantial SDK or CLI work spanning sessions, evidence review, or carrying work between coding agents; use package-specific skills for implementation and ordinary small edits.",
+  "category": "自动化集成",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ComposioHQ",
+  "install_path": ".claude/skills/verify-change/SKILL.md",
+  "source": {
+    "repo": "ComposioHQ/composio",
+    "url": "https://github.com/ComposioHQ/composio/blob/next/.agents/skills/verify-change/SKILL.md",
+    "path": ".agents/skills/verify-change/SKILL.md",
+    "branch": "next",
+    "discovered_at": "2026-10-29T17:13:41.736Z",
+    "stars": 30811,
+    "language": "TypeScript",
+    "pushed_at": "2026-10-29T16:18:47Z",
+    "license": "MIT"
+  }
+}

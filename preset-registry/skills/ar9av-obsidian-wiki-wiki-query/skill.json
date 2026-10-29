@@ -1,0 +1,25 @@
+{
+  "id": "ar9av-obsidian-wiki-wiki-query",
+  "name": "wiki-query",
+  "description": "> Search and synthesize answers from the compiled Obsidian wiki, including cited and multi-hop answers. Use for questions about existing wiki knowledge or fast index-only lookups, and for challenge requests (\"challenge this\", \"argue against X\", \"poke holes in my plan\") that look for the vault's own evidence against a plan. Supports named-vault routing such as wiki-query @work; not for ingesting new sources.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Ar9av",
+  "install_path": ".claude/skills/wiki-query/SKILL.md",
+  "source": {
+    "repo": "Ar9av/obsidian-wiki",
+    "url": "https://github.com/Ar9av/obsidian-wiki/blob/main/.skills/wiki-query/SKILL.md",
+    "path": ".skills/wiki-query/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T17:56:18.994Z",
+    "stars": 3636,
+    "language": "Python",
+    "pushed_at": "2026-10-27T07:26:53Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "zilliztech-memsearch-memory-recall",
+  "name": "memory-recall",
+  "description": "Search and recall relevant memories from past sessions via MemSearch. Use for past decisions, debugging notes, previous conversations, and project knowledge, especially when the context includes a MemSearch memory hint. Skip purely current-code questions or when the user asks to ignore memory.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "zilliztech",
+  "install_path": ".claude/skills/memory-recall/SKILL.md",
+  "source": {
+    "repo": "zilliztech/memsearch",
+    "url": "https://github.com/zilliztech/memsearch/blob/main/plugins/opencode/skills/memory-recall/SKILL.md",
+    "path": "plugins/opencode/skills/memory-recall/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T18:00:32.295Z",
+    "stars": 2805,
+    "language": "Python",
+    "pushed_at": "2026-10-27T03:33:37Z",
+    "license": "MIT"
+  }
+}

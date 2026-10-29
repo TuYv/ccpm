@@ -1,0 +1,25 @@
+{
+  "id": "openaccountants-openaccountants-ad-non-resident-income-tax",
+  "name": "ad-non-resident-income-tax",
+  "description": "Andorra non-resident income tax and cross-border working papers for individuals, companies and permanent establishments in tax year 2026. Covers residence and source tests, services, royalties, employment, rental and capital income, domestic exemptions, gross withholding, property gains and buyer retention. Includes ordinary PE accounting adjustments, restricted head-office charges, losses and credits, advances, final cessation valuation, company migration and individual pending-income attributi",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openaccountants",
+  "install_path": ".claude/skills/ad-non-resident-income-tax/SKILL.md",
+  "source": {
+    "repo": "openaccountants/openaccountants",
+    "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/ad-non-resident-income-tax/SKILL.md",
+    "path": "agent-skills/ad-non-resident-income-tax/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T18:04:05.160Z",
+    "stars": 463,
+    "language": "Python",
+    "pushed_at": "2026-10-29T17:33:59Z",
+    "license": "AGPL-3.0"
+  }
+}

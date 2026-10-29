@@ -1,0 +1,25 @@
+{
+  "id": "stellarlinkco-myclaude-sparv",
+  "name": "sparv",
+  "description": "Minimal SPARV workflow (Specify→Plan→Act→Review→Vault) with 10-point spec gate, unified journal, 2-action saves, 3-failure protocol, and EHRB risk detection.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "stellarlinkco",
+  "install_path": ".claude/skills/sparv/SKILL.md",
+  "source": {
+    "repo": "stellarlinkco/myclaude",
+    "url": "https://github.com/stellarlinkco/myclaude/blob/master/skills/sparv/SKILL.md",
+    "path": "skills/sparv/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-10-29T17:14:54.836Z",
+    "stars": 2748,
+    "language": "Go",
+    "pushed_at": "2026-05-04T04:25:57Z",
+    "license": "AGPL-3.0"
+  }
+}

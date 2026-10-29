@@ -1,0 +1,25 @@
+{
+  "id": "arjun988-blender-skills-export-pipeline",
+  "name": "export-pipeline",
+  "description": "Production export from Blender to FBX, GLTF, OBJ, USD, and Alembic with scale, pivot, rotation, normals, materials, animation, and collision verification via MCP.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "arjun988",
+  "install_path": ".claude/skills/export-pipeline/SKILL.md",
+  "source": {
+    "repo": "arjun988/blender-skills",
+    "url": "https://github.com/arjun988/blender-skills/blob/main/.claude/skills/export-pipeline/SKILL.md",
+    "path": ".claude/skills/export-pipeline/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T17:58:00.856Z",
+    "stars": 1498,
+    "language": "TypeScript",
+    "pushed_at": "2026-07-10T17:55:21Z",
+    "license": "MIT"
+  }
+}

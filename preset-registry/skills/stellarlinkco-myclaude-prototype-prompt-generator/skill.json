@@ -1,0 +1,25 @@
+{
+  "id": "stellarlinkco-myclaude-prototype-prompt-generator",
+  "name": "prototype-prompt-generator",
+  "description": "This skill should be used when users need to generate detailed, structured prompts for creating UI/UX prototypes. Trigger when users request help with \"create a prototype prompt\", \"design a mobile app\", \"generate UI specifications\", or need comprehensive design documentation for web/mobile applications. Works with multiple design systems including WeChat Work, iOS Native, Material Design, and Ant Design Mobile.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "stellarlinkco",
+  "install_path": ".claude/skills/prototype-prompt-generator/SKILL.md",
+  "source": {
+    "repo": "stellarlinkco/myclaude",
+    "url": "https://github.com/stellarlinkco/myclaude/blob/master/skills/prototype-prompt-generator/SKILL.md",
+    "path": "skills/prototype-prompt-generator/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-10-29T17:14:54.558Z",
+    "stars": 2748,
+    "language": "Go",
+    "pushed_at": "2026-05-04T04:25:57Z",
+    "license": "AGPL-3.0"
+  }
+}

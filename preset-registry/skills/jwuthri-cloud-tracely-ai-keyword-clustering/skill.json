@@ -1,0 +1,25 @@
+{
+  "id": "jwuthri-cloud-tracely-ai-keyword-clustering",
+  "name": "keyword-clustering",
+  "description": "Cluster keywords by intent and map them to existing or proposed pages.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "jwuthri-cloud",
+  "install_path": ".claude/skills/keyword-clustering/SKILL.md",
+  "source": {
+    "repo": "jwuthri-cloud/Tracely-ai",
+    "url": "https://github.com/jwuthri-cloud/Tracely-ai/blob/main/.claude/skills/keyword-clustering/SKILL.md",
+    "path": ".claude/skills/keyword-clustering/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T18:02:32.735Z",
+    "stars": 1209,
+    "language": "Python",
+    "pushed_at": "2026-10-26T18:09:41Z",
+    "license": "MIT"
+  }
+}

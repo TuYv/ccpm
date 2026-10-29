@@ -1,7 +1,7 @@
 {
   "id": "phuryn-pm-skills-intended-vs-implemented",
   "name": "intended-vs-implemented",
-  "description": "The method for finding the gap between what a system is supposed to do and what the code actually does — the class of bug generic scanners miss because they have no model of intent. Defines what counts as documented intent, what counts as implementation evidence, which mismatches matter, and how to avoid hand-wavy findings. Use when auditing AI-built code, reviewing access control against documented permissions, or checking whether a codebase matches its own documentation.",
+  "description": "Moved to phuryn/product-engineering, where it is maintained in the ai-shipping plugin; this copy says where it went and how to install it. Use when asked to find where the code does something other than its docs say.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/phuryn/pm-skills/blob/main/pm-ai-shipping/skills/intended-vs-implemented/SKILL.md",
     "path": "pm-ai-shipping/skills/intended-vs-implemented/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-29T10:39:17.429Z",
-    "stars": 27500,
+    "discovered_at": "2026-10-29T18:03:15.583Z",
+    "stars": 27514,
     "language": null,
-    "pushed_at": "2026-10-16T12:28:37Z",
+    "pushed_at": "2026-10-29T11:56:37Z",
     "license": "MIT"
-  },
-  "summary_zh": "一套用于比对「文档里说的」和「代码里做的」是否一致的审计方法，专门发现通用扫描器查不出的意图偏差，适合审查 AI 生成代码、核对权限设计或验证实现是否符合文档约定。"
+  }
 }

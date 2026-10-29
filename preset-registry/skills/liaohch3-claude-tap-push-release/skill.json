@@ -1,0 +1,25 @@
+{
+  "id": "liaohch3-claude-tap-push-release",
+  "name": "push-release",
+  "description": "Push to GitHub and optionally bump version to trigger PyPI release",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "liaohch3",
+  "install_path": ".claude/skills/push-release/SKILL.md",
+  "source": {
+    "repo": "liaohch3/claude-tap",
+    "url": "https://github.com/liaohch3/claude-tap/blob/main/.agents/skills/push-release/SKILL.md",
+    "path": ".agents/skills/push-release/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T18:02:25.744Z",
+    "stars": 3313,
+    "language": "Python",
+    "pushed_at": "2026-10-28T23:03:50Z",
+    "license": "MIT"
+  }
+}

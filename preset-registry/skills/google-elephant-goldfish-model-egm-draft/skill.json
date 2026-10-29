@@ -1,0 +1,25 @@
+{
+  "id": "google-elephant-goldfish-model-egm-draft",
+  "name": "egm-draft",
+  "description": ">- Drafts a design document section-by-section using the concepts brief from egm-brainstorm (or user notes). This is the second step in the Elephant-Goldfish (EGM) feature flow. Use when you are ready to write a design doc after aligning on requirements + solution.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/egm-draft/SKILL.md",
+  "source": {
+    "repo": "google/elephant-goldfish-model",
+    "url": "https://github.com/google/elephant-goldfish-model/blob/main/skills/egm-draft/SKILL.md",
+    "path": "skills/egm-draft/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T18:00:18.026Z",
+    "stars": 5654,
+    "language": "Python",
+    "pushed_at": "2026-10-29T10:23:12Z",
+    "license": "Apache-2.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "google-elephant-goldfish-model-egm-drift-report",
+  "name": "egm-drift-report",
+  "description": ">- Runs drift detection on all design documents to check for document and code consistency. Produces an actionable report with differences. Use when the user asks to detect drift or check for consistency across all design documents or READMEs in a directory.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/egm-drift-report/SKILL.md",
+  "source": {
+    "repo": "google/elephant-goldfish-model",
+    "url": "https://github.com/google/elephant-goldfish-model/blob/main/skills/egm-drift-report/SKILL.md",
+    "path": "skills/egm-drift-report/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T18:00:18.179Z",
+    "stars": 5654,
+    "language": "Python",
+    "pushed_at": "2026-10-29T10:23:12Z",
+    "license": "Apache-2.0"
+  }
+}

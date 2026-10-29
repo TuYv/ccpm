@@ -1,0 +1,25 @@
+{
+  "id": "liaohch3-claude-tap-pr-preflight",
+  "name": "pr-preflight",
+  "description": "Full pre-PR merge-readiness check. Run this before opening or merging a pull request — it validates local gates (lint, format, tests), CI status, screenshot evidence, and PR metadata in one pass. Also useful for reviewing an existing PR's readiness.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "liaohch3",
+  "install_path": ".claude/skills/pr-preflight/SKILL.md",
+  "source": {
+    "repo": "liaohch3/claude-tap",
+    "url": "https://github.com/liaohch3/claude-tap/blob/main/.agents/skills/pr-preflight/SKILL.md",
+    "path": ".agents/skills/pr-preflight/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T18:02:25.588Z",
+    "stars": 3313,
+    "language": "Python",
+    "pushed_at": "2026-10-28T23:03:50Z",
+    "license": "MIT"
+  }
+}
