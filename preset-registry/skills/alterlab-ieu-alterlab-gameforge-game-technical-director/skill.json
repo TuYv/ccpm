@@ -1,0 +1,25 @@
+{
+  "id": "alterlab-ieu-alterlab-gameforge-game-technical-director",
+  "name": "game-technical-director",
+  "description": "> Invoke when the user asks about game architecture, engine selection, performance budgets, technical debt, build pipeline, cross-platform, rendering pipeline, or CI/CD for games. Triggers on: \"architecture\", \"engine selection\", \"performance budget\", \"tech debt\", \"build pipeline\", \"cross-platform\", \"rendering\", \"CI/CD\". Do NOT invoke for creative vision (use game-creative-director) or engine-specific code (use engine specialists). Part of the AlterLab GameForge collection.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.3.0",
+  "author": "AlterLab-IEU",
+  "install_path": ".claude/skills/game-technical-director/SKILL.md",
+  "source": {
+    "repo": "AlterLab-IEU/AlterLab_GameForge",
+    "url": "https://github.com/AlterLab-IEU/AlterLab_GameForge/blob/main/skills/agents/game-technical-director/SKILL.md",
+    "path": "skills/agents/game-technical-director/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T00:26:46.744Z",
+    "stars": 50,
+    "language": "Shell",
+    "pushed_at": "2026-03-30T13:32:11Z",
+    "license": "MIT"
+  }
+}

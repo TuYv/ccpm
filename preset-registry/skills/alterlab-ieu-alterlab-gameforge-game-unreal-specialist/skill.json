@@ -1,0 +1,25 @@
+{
+  "id": "alterlab-ieu-alterlab-gameforge-game-unreal-specialist",
+  "name": "game-unreal-specialist",
+  "description": "> Invoke when the user works with Unreal Engine 5 or asks about C++/Blueprints, GAS, replication, Nanite, Lumen, CommonUI, Enhanced Input, or World Partition. Triggers on: \"Unreal\", \"UE5\", \"Blueprint\", \"GAS\", \"Nanite\", \"Lumen\", \"CommonUI\", \"Enhanced Input\", \"World Partition\", \".uproject\". Do NOT invoke for engine-agnostic architecture (use game-technical-director) or Godot/Unity questions. Part of the AlterLab GameForge collection.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "2.0.0",
+  "author": "AlterLab-IEU",
+  "install_path": ".claude/skills/game-unreal-specialist/SKILL.md",
+  "source": {
+    "repo": "AlterLab-IEU/AlterLab_GameForge",
+    "url": "https://github.com/AlterLab-IEU/AlterLab_GameForge/blob/main/skills/engine-specialists/game-unreal-specialist/SKILL.md",
+    "path": "skills/engine-specialists/game-unreal-specialist/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T00:26:47.472Z",
+    "stars": 50,
+    "language": "Shell",
+    "pushed_at": "2026-03-30T13:32:11Z",
+    "license": "MIT"
+  }
+}

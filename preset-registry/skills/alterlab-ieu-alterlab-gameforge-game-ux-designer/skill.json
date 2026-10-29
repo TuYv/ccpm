@@ -1,0 +1,25 @@
+{
+  "id": "alterlab-ieu-alterlab-gameforge-game-ux-designer",
+  "name": "game-ux-designer",
+  "description": "> Invoke when the user asks about game UI, onboarding, HUD design, controller navigation, player feedback, usability testing, colorblind modes, or game-specific UX patterns. Triggers on: \"UI\", \"UX\", \"onboarding\", \"HUD\", \"controller nav\", \"usability\", \"colorblind\", \"player feedback\", \"menu design\". Do NOT invoke for deep accessibility audits (use game-accessibility-specialist) or art style (use game-art-director). Part of the AlterLab GameForge collection.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.3.0",
+  "author": "AlterLab-IEU",
+  "install_path": ".claude/skills/game-ux-designer/SKILL.md",
+  "source": {
+    "repo": "AlterLab-IEU/AlterLab_GameForge",
+    "url": "https://github.com/AlterLab-IEU/AlterLab_GameForge/blob/main/skills/agents/game-ux-designer/SKILL.md",
+    "path": "skills/agents/game-ux-designer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T00:26:46.918Z",
+    "stars": 50,
+    "language": "Shell",
+    "pushed_at": "2026-03-30T13:32:11Z",
+    "license": "MIT"
+  }
+}

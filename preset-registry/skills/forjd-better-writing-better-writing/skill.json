@@ -1,0 +1,25 @@
+{
+  "id": "forjd-better-writing-better-writing",
+  "name": "better-writing",
+  "description": "Rewrite, draft, and review prose so it is clear, specific, human, and fits its context. Use when improving emails, reports, documentation, marketing copy, UI text, or posts that sound generic, AI-written, verbose, salesy, or formulaic, and when the user asks to humanise/humanize, de-AI, fix text that sounds like ChatGPT, light edit, copy edit, proofread, or keep my voice. Covers voice calibration, anti-slop audits, and preflight checks.",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "forjd",
+  "install_path": ".claude/skills/better-writing/SKILL.md",
+  "source": {
+    "repo": "forjd/better-writing",
+    "url": "https://github.com/forjd/better-writing/blob/main/skills/better-writing/SKILL.md",
+    "path": "skills/better-writing/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T00:22:18.944Z",
+    "stars": 50,
+    "language": "Python",
+    "pushed_at": "2026-10-07T08:00:55Z",
+    "license": "MIT"
+  }
+}

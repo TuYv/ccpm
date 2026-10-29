@@ -1,0 +1,25 @@
+{
+  "id": "alterlab-ieu-alterlab-gameforge-game-playtest",
+  "name": "game-playtest",
+  "description": "> Invoke when the user wants to plan, execute, or analyze a structured playtest session with behavioral observation. Covers protocol design, observer guides, and data synthesis. Triggers on: \"playtest\", \"player feedback\", \"usability test\", \"observation session\", \"playtest analysis\". Do NOT invoke for QA bug testing (use game-qa-lead) or balance tuning (use game-balance-check). Part of the AlterLab GameForge collection.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.3.0",
+  "author": "AlterLab-IEU",
+  "install_path": ".claude/skills/game-playtest/SKILL.md",
+  "source": {
+    "repo": "AlterLab-IEU/AlterLab_GameForge",
+    "url": "https://github.com/AlterLab-IEU/AlterLab_GameForge/blob/main/skills/workflows/game-playtest/SKILL.md",
+    "path": "skills/workflows/game-playtest/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T00:26:49.634Z",
+    "stars": 50,
+    "language": "Shell",
+    "pushed_at": "2026-03-30T13:32:11Z",
+    "license": "MIT"
+  }
+}

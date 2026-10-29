@@ -1,0 +1,25 @@
+{
+  "id": "alterlab-ieu-alterlab-gameforge-game-godot-specialist",
+  "name": "game-godot-specialist",
+  "description": "> Invoke when the user works with Godot Engine or asks about GDScript, scene composition, signals, resources, shaders, GDExtension, physics, or Godot UI. Triggers on: \"Godot\", \"GDScript\", \"scene tree\", \"signals\", \".tscn\", \".tres\", \"GDExtension\", \"project.godot\". Do NOT invoke for engine-agnostic architecture (use game-technical-director) or Unity/Unreal questions (use the appropriate engine specialist). Part of the AlterLab GameForge collection.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "2.0.0",
+  "author": "AlterLab-IEU",
+  "install_path": ".claude/skills/game-godot-specialist/SKILL.md",
+  "source": {
+    "repo": "AlterLab-IEU/AlterLab_GameForge",
+    "url": "https://github.com/AlterLab-IEU/AlterLab_GameForge/blob/main/skills/engine-specialists/game-godot-specialist/SKILL.md",
+    "path": "skills/engine-specialists/game-godot-specialist/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T00:26:47.092Z",
+    "stars": 50,
+    "language": "Shell",
+    "pushed_at": "2026-03-30T13:32:11Z",
+    "license": "MIT"
+  }
+}

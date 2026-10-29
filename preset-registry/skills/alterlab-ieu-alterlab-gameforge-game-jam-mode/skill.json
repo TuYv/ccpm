@@ -1,0 +1,25 @@
+{
+  "id": "alterlab-ieu-alterlab-gameforge-game-jam-mode",
+  "name": "game-jam-mode",
+  "description": "> Invoke for game jam participation -- 48-72 hour compressed development workflow. Triggers on: \"game jam\", \"jam mode\", \"Ludum Dare\", \"GMTK Jam\", \"Global Game Jam\", \"Brackeys Jam\", \"48 hours\", \"jam submission\". Do NOT invoke for normal development timelines (use game-start). Part of the AlterLab GameForge collection.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "2.0.0",
+  "author": "AlterLab-IEU",
+  "install_path": ".claude/skills/game-jam-mode/SKILL.md",
+  "source": {
+    "repo": "AlterLab-IEU/AlterLab_GameForge",
+    "url": "https://github.com/AlterLab-IEU/AlterLab_GameForge/blob/main/skills/workflows/game-jam-mode/SKILL.md",
+    "path": "skills/workflows/game-jam-mode/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T00:26:48.981Z",
+    "stars": 50,
+    "language": "Shell",
+    "pushed_at": "2026-03-30T13:32:11Z",
+    "license": "MIT"
+  }
+}

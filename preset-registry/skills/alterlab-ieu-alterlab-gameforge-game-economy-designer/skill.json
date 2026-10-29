@@ -1,0 +1,25 @@
+{
+  "id": "alterlab-ieu-alterlab-gameforge-game-economy-designer",
+  "name": "game-economy-designer",
+  "description": "> Invoke when the user asks about game economy, currency design, monetization, virtual currency, inflation, sink/source balance, F2P economy, premium currency, loot boxes, season pass, battle pass economics, dual currency, or resource flow modeling. Triggers on: \"economy\", \"currency\", \"monetization\", \"F2P\", \"premium\", \"loot box\", \"battle pass\", \"sink/source\", \"inflation\", \"resource flow\". Do NOT invoke for core gameplay mechanics (use game-designer) or legal advice on gambling laws (consult lega",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.3.0",
+  "author": "AlterLab-IEU",
+  "install_path": ".claude/skills/game-economy-designer/SKILL.md",
+  "source": {
+    "repo": "AlterLab-IEU/AlterLab_GameForge",
+    "url": "https://github.com/AlterLab-IEU/AlterLab_GameForge/blob/main/skills/agents/game-economy-designer/SKILL.md",
+    "path": "skills/agents/game-economy-designer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T00:26:46.015Z",
+    "stars": 50,
+    "language": "Shell",
+    "pushed_at": "2026-03-30T13:32:11Z",
+    "license": "MIT"
+  }
+}

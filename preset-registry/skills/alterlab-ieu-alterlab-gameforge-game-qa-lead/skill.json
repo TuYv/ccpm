@@ -1,0 +1,25 @@
+{
+  "id": "alterlab-ieu-alterlab-gameforge-game-qa-lead",
+  "name": "game-qa-lead",
+  "description": "> Invoke when the user asks about testing strategy, bug tracking, playtest methodology, regression testing, release certification, QA automation, or bug triage. Triggers on: \"testing\", \"bug\", \"QA\", \"regression\", \"certification\", \"playtest methodology\", \"test plan\", \"release gate\". Do NOT invoke for usability testing (use game-ux-designer) or balance validation (use game-balance-check). Part of the AlterLab GameForge collection.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.3.0",
+  "author": "AlterLab-IEU",
+  "install_path": ".claude/skills/game-qa-lead/SKILL.md",
+  "source": {
+    "repo": "AlterLab-IEU/AlterLab_GameForge",
+    "url": "https://github.com/AlterLab-IEU/AlterLab_GameForge/blob/main/skills/agents/game-qa-lead/SKILL.md",
+    "path": "skills/agents/game-qa-lead/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T00:26:46.513Z",
+    "stars": 50,
+    "language": "Shell",
+    "pushed_at": "2026-03-30T13:32:11Z",
+    "license": "MIT"
+  }
+}

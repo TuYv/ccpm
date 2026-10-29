@@ -1,0 +1,25 @@
+{
+  "id": "alterlab-ieu-alterlab-gameforge-game-launch",
+  "name": "game-launch",
+  "description": "> Invoke when the user is preparing for game release, needs a launch checklist, store submission guidance, go/no-go decision framework, or day-one patch planning. Covers Steam, itch.io, Epic, and console submission pipelines. Triggers on: \"launch\", \"release\", \"store submission\", \"go/no-go\", \"day-one patch\", \"launch readiness\". Do NOT invoke for sprint planning (use game-sprint-plan) or code review (use game-code-review). Part of the AlterLab GameForge collection.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.3.0",
+  "author": "AlterLab-IEU",
+  "install_path": ".claude/skills/game-launch/SKILL.md",
+  "source": {
+    "repo": "AlterLab-IEU/AlterLab_GameForge",
+    "url": "https://github.com/AlterLab-IEU/AlterLab_GameForge/blob/main/skills/workflows/game-launch/SKILL.md",
+    "path": "skills/workflows/game-launch/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T00:26:49.154Z",
+    "stars": 50,
+    "language": "Shell",
+    "pushed_at": "2026-03-30T13:32:11Z",
+    "license": "MIT"
+  }
+}

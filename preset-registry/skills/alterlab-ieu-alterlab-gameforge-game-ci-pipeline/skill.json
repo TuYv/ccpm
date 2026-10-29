@@ -1,0 +1,25 @@
+{
+  "id": "alterlab-ieu-alterlab-gameforge-game-ci-pipeline",
+  "name": "game-ci-pipeline",
+  "description": "> Invoke to set up CI/CD pipelines for game builds -- automated testing, build pipelines, and deployment to Steam, itch.io, or Epic. Triggers on: \"CI\", \"CD\", \"pipeline\", \"automated build\", \"deploy\", \"Steam deploy\", \"itch.io butler\", \"GitHub Actions game\", \"build automation\". Do NOT invoke for general code review (use game-code-review) or manual testing guidance (use game-qa-lead). Part of the AlterLab GameForge collection.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "2.0.0",
+  "author": "AlterLab-IEU",
+  "install_path": ".claude/skills/game-ci-pipeline/SKILL.md",
+  "source": {
+    "repo": "AlterLab-IEU/AlterLab_GameForge",
+    "url": "https://github.com/AlterLab-IEU/AlterLab_GameForge/blob/main/skills/workflows/game-ci-pipeline/SKILL.md",
+    "path": "skills/workflows/game-ci-pipeline/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T00:26:48.177Z",
+    "stars": 50,
+    "language": "Shell",
+    "pushed_at": "2026-03-30T13:32:11Z",
+    "license": "MIT"
+  }
+}

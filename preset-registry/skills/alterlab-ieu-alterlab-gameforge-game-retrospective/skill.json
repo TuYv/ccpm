@@ -1,0 +1,25 @@
+{
+  "id": "alterlab-ieu-alterlab-gameforge-game-retrospective",
+  "name": "game-retrospective",
+  "description": "> Run a game development post-mortem rooted in the GDC tradition. Triggers on: \"retrospective\", \"retro\", \"post-mortem\", \"lessons learned\", \"what went right\", \"what went wrong\", \"kill list review\". Do NOT invoke for design document review (use game-design-review) or playtesting (use game-playtest). Part of the AlterLab GameForge collection.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.3.0",
+  "author": "AlterLab-IEU",
+  "install_path": ".claude/skills/game-retrospective/SKILL.md",
+  "source": {
+    "repo": "AlterLab-IEU/AlterLab_GameForge",
+    "url": "https://github.com/AlterLab-IEU/AlterLab_GameForge/blob/main/skills/workflows/game-retrospective/SKILL.md",
+    "path": "skills/workflows/game-retrospective/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T00:26:50.312Z",
+    "stars": 50,
+    "language": "Shell",
+    "pushed_at": "2026-03-30T13:32:11Z",
+    "license": "MIT"
+  }
+}

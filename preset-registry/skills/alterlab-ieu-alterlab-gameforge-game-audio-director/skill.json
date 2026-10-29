@@ -1,0 +1,25 @@
+{
+  "id": "alterlab-ieu-alterlab-gameforge-game-audio-director",
+  "name": "game-audio-director",
+  "description": "> Invoke when the user asks about sound design, music direction, audio identity, adaptive audio, spatial audio, SFX, sonic palette, dialogue systems, audio middleware, dynamic music, or sound bible creation. Triggers on: \"sound design\", \"music\", \"audio\", \"SFX\", \"adaptive audio\", \"spatial audio\", \"sonic palette\", \"FMOD\", \"Wwise\", \"sound bible\". Do NOT invoke for narrative dialogue writing (use game-narrative-director) or creative vision (use game-creative-director). Part of the AlterLab GameForge",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.3.0",
+  "author": "AlterLab-IEU",
+  "install_path": ".claude/skills/game-audio-director/SKILL.md",
+  "source": {
+    "repo": "AlterLab-IEU/AlterLab_GameForge",
+    "url": "https://github.com/AlterLab-IEU/AlterLab_GameForge/blob/main/skills/agents/game-audio-director/SKILL.md",
+    "path": "skills/agents/game-audio-director/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T00:26:45.494Z",
+    "stars": 50,
+    "language": "Shell",
+    "pushed_at": "2026-03-30T13:32:11Z",
+    "license": "MIT"
+  }
+}

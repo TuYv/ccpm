@@ -1,0 +1,25 @@
+{
+  "id": "alterlab-ieu-alterlab-gameforge-game-creative-director",
+  "name": "game-creative-director",
+  "description": "> Invoke when the user asks about creative vision, game pillars, core fantasy, design direction, art style decisions, scope arbitration, or creative conflicts. Triggers on: \"vision\", \"pillars\", \"creative direction\", \"core fantasy\", \"tone\", \"aesthetic\", \"creative conflict\". Do NOT invoke for mechanics design (use game-designer) or technical architecture (use game-technical-director). Part of the AlterLab GameForge collection.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.3.0",
+  "author": "AlterLab-IEU",
+  "install_path": ".claude/skills/game-creative-director/SKILL.md",
+  "source": {
+    "repo": "AlterLab-IEU/AlterLab_GameForge",
+    "url": "https://github.com/AlterLab-IEU/AlterLab_GameForge/blob/main/skills/agents/game-creative-director/SKILL.md",
+    "path": "skills/agents/game-creative-director/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T00:26:45.656Z",
+    "stars": 50,
+    "language": "Shell",
+    "pushed_at": "2026-03-30T13:32:11Z",
+    "license": "MIT"
+  }
+}

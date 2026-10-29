@@ -1,8 +1,8 @@
 {
   "id": "orchestratorinc-agent-orchestrator-using-ao",
   "name": "using-ao",
-  "description": "Catalog of the AO Cloud `ao` CLI available inside a cloud sandbox: spawning worker sessions, listing them, messaging them, reporting to the orchestrator, killing them, claiming pull requests, and starting AO reviews. Use when orchestrating or coordinating AO cloud sessions with the ao CLI.",
-  "category": "测试调试",
+  "description": "Catalog of the AO (Agent Orchestrator) `ao` CLI: spawning workers, managing sessions and projects, creating reusable Cues, sending messages, controlling the shared browser, previewing pages, and daemon control. Use when using the ao CLI, creating Cues, spawning workers, or managing AO sessions in an AO workspace.",
+  "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
     "codex",
@@ -13,13 +13,13 @@
   "install_path": ".claude/skills/using-ao/SKILL.md",
   "source": {
     "repo": "OrchestratorInc/agent-orchestrator",
-    "url": "https://github.com/OrchestratorInc/agent-orchestrator/blob/main/cloud/internal/skillassets/using-ao/SKILL.md",
-    "path": "cloud/internal/skillassets/using-ao/SKILL.md",
+    "url": "https://github.com/OrchestratorInc/agent-orchestrator/blob/main/backend/internal/skillassets/using-ao/SKILL.md",
+    "path": "backend/internal/skillassets/using-ao/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-28T19:12:03.775Z",
-    "stars": 13833,
+    "discovered_at": "2026-10-28T23:31:15.120Z",
+    "stars": 13838,
     "language": "Go",
-    "pushed_at": "2026-10-28T18:35:40Z",
+    "pushed_at": "2026-10-28T22:45:46Z",
     "license": "Apache-2.0"
   }
 }
