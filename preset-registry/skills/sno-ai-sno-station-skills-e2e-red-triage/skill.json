@@ -1,0 +1,25 @@
+{
+  "id": "sno-ai-sno-station-skills-e2e-red-triage",
+  "name": "e2e-red-triage",
+  "description": "Classify one unexpected end-to-end test failure as a product defect or an environment fault needing a new preflight check. MANUAL-ONLY: load when the suite runner names a specific failure. NEVER auto-load from context.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sno-ai",
+  "install_path": ".claude/skills/e2e-red-triage/SKILL.md",
+  "source": {
+    "repo": "sno-ai/sno-station-skills",
+    "url": "https://github.com/sno-ai/sno-station-skills/blob/main/skills/J-peer-review-and-audit/e2e/skills/e2e-red-triage/SKILL.md",
+    "path": "skills/J-peer-review-and-audit/e2e/skills/e2e-red-triage/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:41:45.376Z",
+    "stars": 884,
+    "language": "Shell",
+    "pushed_at": "2026-10-29T02:09:36Z",
+    "license": "Apache-2.0"
+  }
+}

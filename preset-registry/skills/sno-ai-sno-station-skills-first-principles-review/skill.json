@@ -1,0 +1,25 @@
+{
+  "id": "sno-ai-sno-station-skills-first-principles-review",
+  "name": "first-principles-review",
+  "description": "MANUAL-ONLY: challenge a product idea, design, PRD, or architecture from first principles. Use only when the user names this skill. Research first, then write a local review and PRD handoff.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sno-ai",
+  "install_path": ".claude/skills/first-principles-review/SKILL.md",
+  "source": {
+    "repo": "sno-ai/sno-station-skills",
+    "url": "https://github.com/sno-ai/sno-station-skills/blob/main/plugins/sno-station-standalone/skills/first-principles-review/SKILL.md",
+    "path": "plugins/sno-station-standalone/skills/first-principles-review/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:41:43.273Z",
+    "stars": 884,
+    "language": "Shell",
+    "pushed_at": "2026-10-29T02:09:36Z",
+    "license": "Apache-2.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "cap-go-capgo-skills-cocoapods-to-spm",
+  "name": "cocoapods-to-spm",
+  "description": "Migrates an existing Capacitor iOS app from CocoaPods to Swift Package Manager (SPM) before CocoaPods Trunk goes read-only (expected December 2, 2026). Use when the app still has ios/App/Podfile, Pods/, Podfile.lock or App.xcworkspace and the user wants CapApp-SPM, runs or recovers from `npx cap spm-migration-assistant`, needs debug.xcconfig / CAPACITOR_DEBUG wired up, sees \"Some installed Capacitor plugins are not compatible with SPM\" or \"<plugin> does not have a Package.swift\", or plans the Ca",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Cap-go",
+  "install_path": ".claude/skills/cocoapods-to-spm/SKILL.md",
+  "source": {
+    "repo": "Cap-go/capgo-skills",
+    "url": "https://github.com/Cap-go/capgo-skills/blob/main/plugins/capacitor-app-migrations/skills/cocoapods-to-spm/SKILL.md",
+    "path": "plugins/capacitor-app-migrations/skills/cocoapods-to-spm/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:42:14.768Z",
+    "stars": 73,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-17T14:27:54Z",
+    "license": "MIT"
+  }
+}

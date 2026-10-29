@@ -1,0 +1,25 @@
+{
+  "id": "kalarislabs-research-agent-skills-biopython",
+  "name": "biopython",
+  "description": "Provides Biopython (Bio.Seq, Bio.SeqIO, Bio.Align, Bio.Entrez, Bio.Blast, Bio.PDB, Bio.Phylo, Bio.motifs, Bio.SeqUtils, Bio.Restriction) for sequence handling, file parsing, NCBI access, BLAST, structures, and phylogenetic trees in Python. Reads, writes, and converts FASTA, GenBank, FASTQ, PDB, mmCIF, Newick, and NEXUS files. Use when manipulating or translating DNA, RNA, or protein sequences, converting sequence file formats, fetching records from NCBI via Entrez, running or parsing BLAST searc",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "KalarisLabs",
+  "install_path": ".claude/skills/biopython/SKILL.md",
+  "source": {
+    "repo": "KalarisLabs/research-agent-skills",
+    "url": "https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/biopython/SKILL.md",
+    "path": "skills/biopython/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:43:04.763Z",
+    "stars": 75,
+    "language": "Python",
+    "pushed_at": "2026-10-25T16:48:14Z",
+    "license": null
+  }
+}

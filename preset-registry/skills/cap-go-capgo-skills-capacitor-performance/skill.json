@@ -1,0 +1,25 @@
+{
+  "id": "cap-go-capgo-skills-capacitor-performance",
+  "name": "capacitor-performance",
+  "description": "Diagnoses and fixes performance problems specific to Capacitor apps - slow cold start or long splash, white screen after camera/backgrounding (WKWebView \"WebView process terminated\" reload, Android onRenderProcessGone), large base64 payloads over the native bridge (Camera, Filesystem.readFile, CapacitorHttp), jank in the WebView, memory growth from unremoved plugin listeners, oversized Preferences storage, slow Android WebView versions, and debug logging left on in release. Covers profiling with",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Cap-go",
+  "install_path": ".claude/skills/capacitor-performance/SKILL.md",
+  "source": {
+    "repo": "Cap-go/capgo-skills",
+    "url": "https://github.com/Cap-go/capgo-skills/blob/main/plugins/capacitor-quality/skills/capacitor-performance/SKILL.md",
+    "path": "plugins/capacitor-quality/skills/capacitor-performance/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:42:20.989Z",
+    "stars": 73,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-17T14:27:54Z",
+    "license": "MIT"
+  }
+}

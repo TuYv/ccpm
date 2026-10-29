@@ -1,0 +1,25 @@
+{
+  "id": "cap-go-capgo-skills-capacitor-plugin-upgrade-v4-to-v5",
+  "name": "capacitor-plugin-upgrade-v4-to-v5",
+  "description": "Upgrades a Capacitor plugin library from v4 to v5 using `npx @capacitor/plugin-migration-v4-to-v5@latest`, then the manual checklist - `@capacitor/*` dev deps to `latest-5`, compile/target SDK 33 defaults, AGP 8.0.0, Gradle 8.0.2, `namespace` in build.gradle instead of manifest `package`, Java 17, Jetifier removal, Kotlin 1.8.20 with `kotlin-stdlib`, plus code changes - `CAPBridgedPlugin` requirements moved to instance level (`pluginId` -> `identifier`, `pluginMethods` typed `[CAPPluginMethod]`)",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Cap-go",
+  "install_path": ".claude/skills/capacitor-plugin-upgrade-v4-to-v5/SKILL.md",
+  "source": {
+    "repo": "Cap-go/capgo-skills",
+    "url": "https://github.com/Cap-go/capgo-skills/blob/main/plugins/capacitor-plugin-dev/skills/capacitor-plugin-upgrade-v4-to-v5/SKILL.md",
+    "path": "plugins/capacitor-plugin-dev/skills/capacitor-plugin-upgrade-v4-to-v5/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:42:19.446Z",
+    "stars": 73,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-17T14:27:54Z",
+    "license": "MIT"
+  }
+}

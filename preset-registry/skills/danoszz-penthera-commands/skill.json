@@ -1,0 +1,25 @@
+{
+  "id": "danoszz-penthera-commands",
+  "name": "commands",
+  "description": "Penthera ships as an Agent Skill, the open format used by Cursor, Claude Code, Claude.ai, and 40+ agent tools.",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "danoszz",
+  "install_path": ".claude/skills/commands/SKILL.md",
+  "source": {
+    "repo": "danoszz/penthera",
+    "url": "https://github.com/danoszz/penthera/blob/main/docs/commands/skill.md",
+    "path": "docs/commands/skill.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:43:11.811Z",
+    "stars": 75,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-29T10:29:34Z",
+    "license": "MIT"
+  }
+}

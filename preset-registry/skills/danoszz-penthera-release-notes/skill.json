@@ -1,0 +1,25 @@
+{
+  "id": "danoszz-penthera-release-notes",
+  "name": "release-notes",
+  "description": "Draft release notes from the git log.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "danoszz",
+  "install_path": ".claude/skills/release-notes/SKILL.md",
+  "source": {
+    "repo": "danoszz/penthera",
+    "url": "https://github.com/danoszz/penthera/blob/main/tests/fixtures/agents/clean/skills/release-notes/SKILL.md",
+    "path": "tests/fixtures/agents/clean/skills/release-notes/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:43:12.309Z",
+    "stars": 75,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-29T10:29:34Z",
+    "license": "MIT"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "id": "openaccountants-openaccountants-ad-payroll-social",
   "name": "ad-payroll-social",
-  "description": "Use this skill whenever asked about Andorra payroll processing for employed persons. Trigger on phrases like \\\"Andorra payroll\\\", \\\"CASS contributions\\\", \\\"IRPF withholding Andorra\\\", \\\"employee CASS\\\", \\\"employer CASS\\\", \\\"retencions Andorra\\\", \\\"CASS-0031\\\", \\\"salari Andorra\\\", \\\"net salary Andorra\\\", \\\"gross to net Andorra\\\", \\\"withholding tax Andorra\\\", \\\"Andorra social security\\\", \\\"retenidor Andorra\\\", \\\"DTF withholding\\\", \\\"IRNR Andorra\\\", \\\"non-resident tax Andorra\\\", \\\"minimum wage Ando",
+  "description": "Andorra payroll and CASS social security for tax year 2026. Covers resident employee IRPF withholding, non-resident employment and the elected frontier or seasonal method, ordinary employee and employer contributions, working pension recipients, self-employed income and turnover tiers, director classification, startup reductions, the separate young-worker regime and health complements. Distinguishes the January and July minimum wages and the 2026 average-salary reference. Includes gross-to-net r",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/ad-payroll-social/SKILL.md",
     "path": "agent-skills/ad-payroll-social/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-29T03:36:08.682Z",
+    "discovered_at": "2026-10-29T10:40:13.392Z",
     "stars": 463,
     "language": "Python",
-    "pushed_at": "2026-10-29T02:03:56Z",
+    "pushed_at": "2026-10-29T10:11:16Z",
     "license": "AGPL-3.0"
   }
 }

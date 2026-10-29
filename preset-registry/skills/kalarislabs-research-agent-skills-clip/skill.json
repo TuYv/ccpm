@@ -1,0 +1,25 @@
+{
+  "id": "kalarislabs-research-agent-skills-clip",
+  "name": "clip",
+  "description": "OpenAI's model connecting vision and language. Enables zero-shot image classification, image-text matching, and cross-modal retrieval. Trained on 400M image-text pairs. Use for image search, content moderation, or vision-language tasks without fine-tuning. Best for general-purpose image understanding.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "KalarisLabs",
+  "install_path": ".claude/skills/clip/SKILL.md",
+  "source": {
+    "repo": "KalarisLabs/research-agent-skills",
+    "url": "https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/clip/SKILL.md",
+    "path": "skills/clip/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:43:06.949Z",
+    "stars": 75,
+    "language": "Python",
+    "pushed_at": "2026-10-25T16:48:14Z",
+    "license": null
+  }
+}

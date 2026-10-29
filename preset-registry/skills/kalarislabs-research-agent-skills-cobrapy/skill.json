@@ -1,0 +1,25 @@
+{
+  "id": "kalarislabs-research-agent-skills-cobrapy",
+  "name": "cobrapy",
+  "description": "Runs constraint-based metabolic modeling with COBRApy (Python, import cobra) on genome-scale models in SBML, JSON, YAML, or MATLAB format. Covers FBA, pFBA, geometric FBA, FVA, flux sampling, gene and reaction knockouts, production envelopes, growth media, gapfilling, and building models. Use when loading or exporting a genome-scale metabolic model. Use when predicting growth or flux distributions with FBA or FVA. Use when screening gene or reaction knockouts. Use when tuning growth media or exc",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "KalarisLabs",
+  "install_path": ".claude/skills/cobrapy/SKILL.md",
+  "source": {
+    "repo": "KalarisLabs/research-agent-skills",
+    "url": "https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/cobrapy/SKILL.md",
+    "path": "skills/cobrapy/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:43:07.109Z",
+    "stars": 75,
+    "language": "Python",
+    "pushed_at": "2026-10-25T16:48:14Z",
+    "license": null
+  }
+}

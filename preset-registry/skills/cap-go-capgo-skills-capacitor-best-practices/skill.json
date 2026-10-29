@@ -1,0 +1,25 @@
+{
+  "id": "cap-go-capgo-skills-capacitor-best-practices",
+  "name": "capacitor-best-practices",
+  "description": "Review and set up Capacitor apps against current best practices (Capacitor 8.5 stable, 9 alpha via `@next`). Use for a Capacitor codebase review, `capacitor.config.ts` audit, new project setup, aligning `@capacitor/core`/`cli`/`ios`/`android` and plugin majors, plugin patterns (availability checks, `checkPermissions`/`requestPermissions`, error `code` handling, web fallbacks), or release prep; or on `\"<Plugin>\" plugin is not implemented on ios`, `Could not find the web assets directory`, `platfo",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Cap-go",
+  "install_path": ".claude/skills/capacitor-best-practices/SKILL.md",
+  "source": {
+    "repo": "Cap-go/capgo-skills",
+    "url": "https://github.com/Cap-go/capgo-skills/blob/main/plugins/capacitor-core/skills/capacitor-best-practices/SKILL.md",
+    "path": "plugins/capacitor-core/skills/capacitor-best-practices/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:42:17.261Z",
+    "stars": 73,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-17T14:27:54Z",
+    "license": "MIT"
+  }
+}

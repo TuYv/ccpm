@@ -1,0 +1,25 @@
+{
+  "id": "cap-go-capgo-skills-sqlite-to-fast-sql",
+  "name": "sqlite-to-fast-sql",
+  "description": "Migrates SQLite and SQL-style Capacitor storage (@capacitor-community/sqlite, cordova-sqlite-storage, @ionic/storage with a SQLite driver, TypeORM/Drizzle/Kysely capacitor drivers, and other bridge-based SQL plugins) to @capgo/capacitor-fast-sql. Use when replacing createConnection/open/query/run/executeSet calls, slow large result sets over the Capacitor bridge, adding SQLCipher encryption, keeping transactions and BLOBs, moving key-value data to KeyValueStore, preserving existing database file",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Cap-go",
+  "install_path": ".claude/skills/sqlite-to-fast-sql/SKILL.md",
+  "source": {
+    "repo": "Cap-go/capgo-skills",
+    "url": "https://github.com/Cap-go/capgo-skills/blob/main/plugins/capacitor-app-migrations/skills/sqlite-to-fast-sql/SKILL.md",
+    "path": "plugins/capacitor-app-migrations/skills/sqlite-to-fast-sql/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:42:15.643Z",
+    "stars": 73,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-17T14:27:54Z",
+    "license": "MIT"
+  }
+}

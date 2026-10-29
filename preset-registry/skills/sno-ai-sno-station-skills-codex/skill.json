@@ -1,0 +1,25 @@
+{
+  "id": "sno-ai-sno-station-skills-codex",
+  "name": "codex-coder",
+  "description": "Route production coding tasks to the user-level Shell, TypeScript, Python, or Rust Codex workflow. Use for \"codex-coder\", \"Codex write\", \"generate with Codex\", language migrations, or mixed Shell/TypeScript/Python/Rust implementation when Codex should choose the correct language specialist automatically.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sno-ai",
+  "install_path": ".claude/skills/codex/SKILL.md",
+  "source": {
+    "repo": "sno-ai/sno-station-skills",
+    "url": "https://github.com/sno-ai/sno-station-skills/blob/main/skills/M-build-and-rollout/codex-coder/overlay/codex/SKILL.md",
+    "path": "skills/M-build-and-rollout/codex-coder/overlay/codex/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:41:46.759Z",
+    "stars": 884,
+    "language": "Shell",
+    "pushed_at": "2026-10-29T02:09:36Z",
+    "license": "Apache-2.0"
+  }
+}

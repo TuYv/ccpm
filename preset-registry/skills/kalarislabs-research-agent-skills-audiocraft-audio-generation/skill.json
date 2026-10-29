@@ -1,0 +1,25 @@
+{
+  "id": "kalarislabs-research-agent-skills-audiocraft-audio-generation",
+  "name": "audiocraft-audio-generation",
+  "description": "PyTorch library for audio generation including text-to-music (MusicGen) and text-to-sound (AudioGen). Use when you need to generate music from text descriptions, create sound effects, or perform melody-conditioned music generation.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "KalarisLabs",
+  "install_path": ".claude/skills/audiocraft-audio-generation/SKILL.md",
+  "source": {
+    "repo": "KalarisLabs/research-agent-skills",
+    "url": "https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/audiocraft-audio-generation/SKILL.md",
+    "path": "skills/audiocraft-audio-generation/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:43:02.953Z",
+    "stars": 75,
+    "language": "Python",
+    "pushed_at": "2026-10-25T16:48:14Z",
+    "license": null
+  }
+}

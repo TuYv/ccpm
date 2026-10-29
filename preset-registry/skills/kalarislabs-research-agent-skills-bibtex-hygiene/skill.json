@@ -1,0 +1,25 @@
+{
+  "id": "kalarislabs-research-agent-skills-bibtex-hygiene",
+  "name": "bibtex-hygiene",
+  "description": "Clean, deduplicate and validate BibTeX/BibLaTeX bibliographies before submission. Use when a .bib file has duplicate keys or works, missing fields, broken DOIs, lost acronym capitalization (e.g. \"bert\" instead of \"BERT\"), inconsistent page dashes, arXiv preprints that now have published versions, or when LaTeX/biber emits bibliography warnings. Includes a zero-dependency linter and normalizer.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "KalarisLabs",
+  "install_path": ".claude/skills/bibtex-hygiene/SKILL.md",
+  "source": {
+    "repo": "KalarisLabs/research-agent-skills",
+    "url": "https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/bibtex-hygiene/SKILL.md",
+    "path": "skills/bibtex-hygiene/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:43:04.436Z",
+    "stars": 75,
+    "language": "Python",
+    "pushed_at": "2026-10-25T16:48:14Z",
+    "license": null
+  }
+}

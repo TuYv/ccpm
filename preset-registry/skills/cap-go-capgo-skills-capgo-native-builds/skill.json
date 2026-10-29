@@ -1,0 +1,25 @@
+{
+  "id": "cap-go-capgo-skills-capgo-native-builds",
+  "name": "capgo-native-builds",
+  "description": ">- Use for Capgo Cloud Build (Capgo Build) native iOS and Android workflows, including CLI login and API-key precedence, `build init` onboarding, signing credential save/update/export, `build request` with TestFlight, App Store, or Play upload, temporary IPA/APK/AAB download links (`--output-upload`), prescan failures, `build needed` OTA-vs-native gating, and CI secrets. Use when errors mention \"No credentials found for this app and platform\", \"Legacy provisioning profile format detected\", \"Miss",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Cap-go",
+  "install_path": ".claude/skills/capgo-native-builds/SKILL.md",
+  "source": {
+    "repo": "Cap-go/capgo-skills",
+    "url": "https://github.com/Cap-go/capgo-skills/blob/main/plugins/capgo-cloud/skills/capgo-native-builds/SKILL.md",
+    "path": "plugins/capgo-cloud/skills/capgo-native-builds/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:42:23.205Z",
+    "stars": 73,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-17T14:27:54Z",
+    "license": "MIT"
+  }
+}

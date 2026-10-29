@@ -1,0 +1,25 @@
+{
+  "id": "danoszz-penthera-triage",
+  "name": "triage",
+  "description": "Triage incoming support tickets by urgency.",
+  "category": "通用其他",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "danoszz",
+  "install_path": ".claude/skills/triage/SKILL.md",
+  "source": {
+    "repo": "danoszz/penthera",
+    "url": "https://github.com/danoszz/penthera/blob/main/tests/fixtures/aibom/app/.claude/skills/triage/SKILL.md",
+    "path": "tests/fixtures/aibom/app/.claude/skills/triage/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:43:12.681Z",
+    "stars": 75,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-29T10:29:34Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "cap-go-capgo-skills-skill-creator",
+  "name": "skill-creator",
+  "description": "Guides authoring, reviewing, and validating agent skills (SKILL.md + metadata.json + references/ + scripts/) in this Capgo skills repository and similar ones. Covers trigger and negative-trigger design, lean SKILL.md with a when-to-load reference index, traps over basics, verification and error-handling sections, version tagging of facts, subagent-oriented skills (main-agent vs subagent split), optional when_to_use frontmatter, inline snapshots with allowed-tools, skillgrade evals, and this repo",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Cap-go",
+  "install_path": ".claude/skills/skill-creator/SKILL.md",
+  "source": {
+    "repo": "Cap-go/capgo-skills",
+    "url": "https://github.com/Cap-go/capgo-skills/blob/main/plugins/skill-authoring/skills/skill-creator/SKILL.md",
+    "path": "plugins/skill-authoring/skills/skill-creator/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:42:24.053Z",
+    "stars": 73,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-17T14:27:54Z",
+    "license": "MIT"
+  }
+}

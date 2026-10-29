@@ -1,0 +1,25 @@
+{
+  "id": "cap-go-capgo-skills-ionic-appflow-migration",
+  "name": "ionic-appflow-migration",
+  "description": "Migrates an Ionic or Capacitor project off Ionic Appflow (access ends Dec 31, 2027). Use when the repo contains @capacitor/live-updates, cordova-plugin-ionic, a plugins.LiveUpdates block (appId, channel, autoUpdateMethod, maxVersions), LiveUpdates.sync()/reload() calls, ionic deploy or appflow CLI commands, .io-config.json, or Appflow build/store-deploy workflows, and the user wants Capgo live updates, Capgo Cloud Build or repo-owned CI builds, and repo-owned store publishing. Maps Appflow chann",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Cap-go",
+  "install_path": ".claude/skills/ionic-appflow-migration/SKILL.md",
+  "source": {
+    "repo": "Cap-go/capgo-skills",
+    "url": "https://github.com/Cap-go/capgo-skills/blob/main/plugins/capacitor-app-migrations/skills/ionic-appflow-migration/SKILL.md",
+    "path": "plugins/capacitor-app-migrations/skills/ionic-appflow-migration/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:42:15.301Z",
+    "stars": 73,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-17T14:27:54Z",
+    "license": "MIT"
+  }
+}

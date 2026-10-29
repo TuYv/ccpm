@@ -1,0 +1,25 @@
+{
+  "id": "cap-go-capgo-skills-framework-to-capacitor",
+  "name": "framework-to-capacitor",
+  "description": "Configures a web framework build so Capacitor can ship it as an iOS/Android app. Use for Next.js static export (output 'export', out/), Nuxt 4 (ssr false, nuxt generate, .output/public), Angular (dist/<project>/browser), SvelteKit adapter-static (SvelteKit 2 svelte.config.js or SvelteKit 3 vite.config), React/Vue/Svelte/Solid on Vite, and React Router framework SPA mode. Covers webDir mismatch, blank white screen after cap sync, missing index.html, SSR/API routes/middleware/server actions that c",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Cap-go",
+  "install_path": ".claude/skills/framework-to-capacitor/SKILL.md",
+  "source": {
+    "repo": "Cap-go/capgo-skills",
+    "url": "https://github.com/Cap-go/capgo-skills/blob/main/plugins/capacitor-app-migrations/skills/framework-to-capacitor/SKILL.md",
+    "path": "plugins/capacitor-app-migrations/skills/framework-to-capacitor/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:42:15.117Z",
+    "stars": 73,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-17T14:27:54Z",
+    "license": "MIT"
+  }
+}

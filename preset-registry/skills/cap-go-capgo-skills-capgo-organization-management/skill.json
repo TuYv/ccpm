@@ -1,0 +1,25 @@
+{
+  "id": "cap-go-capgo-skills-capgo-organization-management",
+  "name": "capgo-organization-management",
+  "description": ">- Guides Capgo account lookup and organization administration with the CLI, including `account whoami`, `organization list/add/members/set/delete`, 2FA enforcement, password policy, API-key expiration and hashed-key policy, and apps per organization. Use when listing or creating Capgo organizations, auditing members' 2FA before enforcing it, tightening org security settings, or resolving \"Access Denied: Two-Factor Authentication Required\" or \"Insufficient permissions\". Do not use for OTA bundle",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Cap-go",
+  "install_path": ".claude/skills/capgo-organization-management/SKILL.md",
+  "source": {
+    "repo": "Cap-go/capgo-skills",
+    "url": "https://github.com/Cap-go/capgo-skills/blob/main/plugins/capgo-cloud/skills/capgo-organization-management/SKILL.md",
+    "path": "plugins/capgo-cloud/skills/capgo-organization-management/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:42:23.386Z",
+    "stars": 73,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-17T14:27:54Z",
+    "license": "MIT"
+  }
+}

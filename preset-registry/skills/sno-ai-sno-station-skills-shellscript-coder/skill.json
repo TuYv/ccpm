@@ -1,0 +1,25 @@
+{
+  "id": "sno-ai-sno-station-skills-shellscript-coder",
+  "name": "shellscript-coder",
+  "description": "Implement and refactor production shell scripts, command-line tools, automation, process wrappers, and Git or infrastructure helpers with reliable failures, useful logs, and machine-readable output.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sno-ai",
+  "install_path": ".claude/skills/shellscript-coder/SKILL.md",
+  "source": {
+    "repo": "sno-ai/sno-station-skills",
+    "url": "https://github.com/sno-ai/sno-station-skills/blob/main/plugins/sno-station-standalone/skills/shellscript-coder/SKILL.md",
+    "path": "plugins/sno-station-standalone/skills/shellscript-coder/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:41:44.072Z",
+    "stars": 884,
+    "language": "Shell",
+    "pushed_at": "2026-10-29T02:09:36Z",
+    "license": "Apache-2.0"
+  }
+}

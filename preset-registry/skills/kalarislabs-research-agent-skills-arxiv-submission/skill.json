@@ -1,0 +1,25 @@
+{
+  "id": "kalarislabs-research-agent-skills-arxiv-submission",
+  "name": "arxiv-submission",
+  "description": "Prepare and post preprints to arXiv without processing failures or leaks, covering TeX source packaging (.bbl, figures, case-sensitive paths), stripping private comments, choosing categories and license, endorsement, metadata (title, abstract, comments field), versioning and replacements, and linking the journal DOI later. Use when posting a paper to arXiv, when arXiv's TeX compilation fails, before uploading source, or when updating a preprint after acceptance. Includes a zero-dependency prefli",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "KalarisLabs",
+  "install_path": ".claude/skills/arxiv-submission/SKILL.md",
+  "source": {
+    "repo": "KalarisLabs/research-agent-skills",
+    "url": "https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/arxiv-submission/SKILL.md",
+    "path": "skills/arxiv-submission/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:43:02.530Z",
+    "stars": 75,
+    "language": "Python",
+    "pushed_at": "2026-10-25T16:48:14Z",
+    "license": null
+  }
+}

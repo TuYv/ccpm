@@ -1,0 +1,25 @@
+{
+  "id": "kalarislabs-research-agent-skills-cell-press",
+  "name": "cell-press",
+  "description": "Prepare manuscripts for Cell Press journals (Cell, Molecular Cell, Neuron, Immunity, Cell Reports, Cell Systems, iScience, Cell Metabolism, Current Biology and others), covering Summary, Highlights, eTOC blurb and graphical abstract, STAR Methods with the Key Resources Table, resource availability (lead contact, materials, data and code), figure and statistics requirements, and Cell Press formatting at submission vs revision. Use when targeting a Cell Press journal, writing highlights or a graph",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "KalarisLabs",
+  "install_path": ".claude/skills/cell-press/SKILL.md",
+  "source": {
+    "repo": "KalarisLabs/research-agent-skills",
+    "url": "https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/cell-press/SKILL.md",
+    "path": "skills/cell-press/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:43:05.610Z",
+    "stars": 75,
+    "language": "Python",
+    "pushed_at": "2026-10-25T16:48:14Z",
+    "license": null
+  }
+}

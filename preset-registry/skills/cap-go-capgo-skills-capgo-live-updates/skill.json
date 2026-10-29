@@ -1,0 +1,25 @@
+{
+  "id": "cap-go-capgo-skills-capgo-live-updates",
+  "name": "capgo-live-updates",
+  "description": "Sets up and debugs Capgo live (OTA) updates in a Capacitor app with @capgo/capacitor-updater. Use when the user wants to ship web-layer fixes without app store review, install or configure the updater plugin, choose an autoUpdate mode, call notifyAppReady, wire manual download/next/set flows, set channels from the app, or debug updates that never apply, roll back, or report codes such as no_new_version_available, disable_auto_update_to_major, cannot_update_via_private_channel, or on_premise_app.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Cap-go",
+  "install_path": ".claude/skills/capgo-live-updates/SKILL.md",
+  "source": {
+    "repo": "Cap-go/capgo-skills",
+    "url": "https://github.com/Cap-go/capgo-skills/blob/main/plugins/capgo-cloud/skills/capgo-live-updates/SKILL.md",
+    "path": "plugins/capgo-cloud/skills/capgo-live-updates/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:42:23.029Z",
+    "stars": 73,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-17T14:27:54Z",
+    "license": "MIT"
+  }
+}

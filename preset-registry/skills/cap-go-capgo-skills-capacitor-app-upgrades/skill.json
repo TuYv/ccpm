@@ -1,0 +1,25 @@
+{
+  "id": "cap-go-capgo-skills-capacitor-app-upgrades",
+  "name": "capacitor-app-upgrades",
+  "description": "Routes and drives a Capacitor app upgrade across one or more major versions (4 to 9), including the required 8.4 to 8.5 iOS UIScene step before Capacitor 9 and Xcode 27. Detects the current version, plans the hop order (e.g. 6 to 7 to 8 to 8.5 to 9), runs `npx cap migrate` per hop, delegates each hop to its version skill, and verifies native builds between hops. Use for \"upgrade Capacitor\", \"update to the latest Capacitor\", \"cap migrate\", multi-version jumps, or when the target version is unclea",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Cap-go",
+  "install_path": ".claude/skills/capacitor-app-upgrades/SKILL.md",
+  "source": {
+    "repo": "Cap-go/capgo-skills",
+    "url": "https://github.com/Cap-go/capgo-skills/blob/main/plugins/capacitor-app-upgrades/skills/capacitor-app-upgrades/SKILL.md",
+    "path": "plugins/capacitor-app-upgrades/skills/capacitor-app-upgrades/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:42:16.923Z",
+    "stars": 73,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-17T14:27:54Z",
+    "license": "MIT"
+  }
+}

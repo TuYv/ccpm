@@ -1,0 +1,25 @@
+{
+  "id": "cap-go-capgo-skills-capacitor-app-upgrade-v5-to-v6",
+  "name": "capacitor-app-upgrade-v5-to-v6",
+  "description": "Upgrades a Capacitor app from v5 to v6 using `npx cap migrate` from `@capacitor/cli@latest-6`, then the manual checklist - Node 18+, Xcode 15+, Android Studio Hedgehog, AGP 8.2.1, Gradle 8.2.1, compile/target SDK 34, `compileSdkVersion` to `compileSdk`, the `androidScheme` default flipping to `https` (data loss risk), iOS local plugins no longer auto-registered, iOS zoom disabled by default, and official plugin breaking changes (`addListener` returns only a Promise, Camera Photo Picker, Filesyst",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Cap-go",
+  "install_path": ".claude/skills/capacitor-app-upgrade-v5-to-v6/SKILL.md",
+  "source": {
+    "repo": "Cap-go/capgo-skills",
+    "url": "https://github.com/Cap-go/capgo-skills/blob/main/plugins/capacitor-app-upgrades/skills/capacitor-app-upgrade-v5-to-v6/SKILL.md",
+    "path": "plugins/capacitor-app-upgrades/skills/capacitor-app-upgrade-v5-to-v6/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:42:16.200Z",
+    "stars": 73,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-17T14:27:54Z",
+    "license": "MIT"
+  }
+}

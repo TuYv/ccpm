@@ -1,0 +1,25 @@
+{
+  "id": "cap-go-capgo-skills-capacitor-security",
+  "name": "capacitor-security",
+  "description": "App-level security audit and hardening for Capacitor apps. Use when the user wants a security review, OWASP MASVS check, or pentest fixes; runs the Capgo scanner (`npx @capgo/capgo-sec scan`, `capsec`, rule IDs like SEC001, NET003, CAP004); finds API keys or `.env` values in the web bundle; stores tokens in `@capacitor/preferences` or `localStorage`; needs Keychain/Keystore storage, certificate pinning, CSP, or root/jailbreak detection; or sees `server.cleartext`, `allowNavigation`, `webContents",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Cap-go",
+  "install_path": ".claude/skills/capacitor-security/SKILL.md",
+  "source": {
+    "repo": "Cap-go/capgo-skills",
+    "url": "https://github.com/Cap-go/capgo-skills/blob/main/plugins/capacitor-quality/skills/capacitor-security/SKILL.md",
+    "path": "plugins/capacitor-quality/skills/capacitor-security/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:42:21.167Z",
+    "stars": 73,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-17T14:27:54Z",
+    "license": "MIT"
+  }
+}

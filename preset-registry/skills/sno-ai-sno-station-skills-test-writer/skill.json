@@ -1,0 +1,25 @@
+{
+  "id": "sno-ai-sno-station-skills-test-writer",
+  "name": "test-writer",
+  "description": "Write and improve test-owned code: tests, test scripts, fixtures, evals, and test-only helpers. Use whenever Codex is asked to create or change test code. Its only job is to produce the strongest practical tests in the repository's existing harness, run them, and fix defects in the test code.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sno-ai",
+  "install_path": ".claude/skills/test-writer/SKILL.md",
+  "source": {
+    "repo": "sno-ai/sno-station-skills",
+    "url": "https://github.com/sno-ai/sno-station-skills/blob/main/plugins/sno-station-standalone/skills/test-writer/SKILL.md",
+    "path": "plugins/sno-station-standalone/skills/test-writer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:41:44.249Z",
+    "stars": 884,
+    "language": "Shell",
+    "pushed_at": "2026-10-29T02:09:36Z",
+    "license": "Apache-2.0"
+  }
+}

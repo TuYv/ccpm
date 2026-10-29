@@ -1,0 +1,25 @@
+{
+  "id": "cap-go-capgo-skills-capacitor-app-upgrade-v6-to-v7",
+  "name": "capacitor-app-upgrade-v6-to-v7",
+  "description": "Upgrades a Capacitor app from v6 to v7 using `npx cap migrate` from `@capacitor/cli@latest-7`, then the manual checklist - Node 20+, Xcode 16+, iOS deployment target 14.0 (Xcode project and Podfile), Android Studio Ladybug with JDK 21, AGP 8.7.2, Gradle 8.11.1, minSdk 23, compile/target SDK 35, removed `bundledWebRuntime` and `cordova.staticPlugins` config, `navigation` in configChanges, and official plugin breaking changes (removed deprecated types like `AppUrlOpen`, `HapticsImpactStyle`, `Devi",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Cap-go",
+  "install_path": ".claude/skills/capacitor-app-upgrade-v6-to-v7/SKILL.md",
+  "source": {
+    "repo": "Cap-go/capgo-skills",
+    "url": "https://github.com/Cap-go/capgo-skills/blob/main/plugins/capacitor-app-upgrades/skills/capacitor-app-upgrade-v6-to-v7/SKILL.md",
+    "path": "plugins/capacitor-app-upgrades/skills/capacitor-app-upgrade-v6-to-v7/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:42:16.401Z",
+    "stars": 73,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-17T14:27:54Z",
+    "license": "MIT"
+  }
+}

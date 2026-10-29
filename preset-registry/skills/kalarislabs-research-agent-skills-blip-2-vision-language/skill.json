@@ -1,0 +1,25 @@
+{
+  "id": "kalarislabs-research-agent-skills-blip-2-vision-language",
+  "name": "blip-2-vision-language",
+  "description": "Explains how to use Salesforce BLIP-2 (Q-Former bridging a frozen image encoder and an LLM such as OPT or FlanT5) through HuggingFace Transformers and LAVIS for image captioning, visual question answering, image-text matching, and feature extraction. Use when generating captions for images, building a VQA system, doing zero-shot image-text understanding without task-specific training, matching or retrieving images against text, or fitting a BLIP-2 model into limited GPU memory with INT8/INT4 qua",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "KalarisLabs",
+  "install_path": ".claude/skills/blip-2-vision-language/SKILL.md",
+  "source": {
+    "repo": "KalarisLabs/research-agent-skills",
+    "url": "https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/blip-2-vision-language/SKILL.md",
+    "path": "skills/blip-2-vision-language/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:43:05.142Z",
+    "stars": 75,
+    "language": "Python",
+    "pushed_at": "2026-10-25T16:48:14Z",
+    "license": null
+  }
+}

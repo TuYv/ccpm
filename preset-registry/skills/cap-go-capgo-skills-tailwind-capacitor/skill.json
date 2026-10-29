@@ -1,0 +1,25 @@
+{
+  "id": "cap-go-capgo-skills-tailwind-capacitor",
+  "name": "tailwind-capacitor",
+  "description": "Sets up and uses Tailwind CSS v4 in Capacitor apps - CSS-first config (`@import \"tailwindcss\"`, `@theme`, `@utility`, `@custom-variant`, `@source`, `@plugin`), `@tailwindcss/vite` / `@tailwindcss/postcss`, upgrading from v3 `tailwind.config.js` with `npx @tailwindcss/upgrade`, WebView browser floor (Safari 16.4+ / Chrome 111+ vs Capacitor iOS 15/16 targets), safe-area utilities built on `env(safe-area-inset-*)`, platform variants (`ios:`/`android:` via a root class), class-based dark mode, `poin",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Cap-go",
+  "install_path": ".claude/skills/tailwind-capacitor/SKILL.md",
+  "source": {
+    "repo": "Cap-go/capgo-skills",
+    "url": "https://github.com/Cap-go/capgo-skills/blob/main/plugins/capacitor-ui/skills/tailwind-capacitor/SKILL.md",
+    "path": "plugins/capacitor-ui/skills/tailwind-capacitor/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:42:22.516Z",
+    "stars": 73,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-17T14:27:54Z",
+    "license": "MIT"
+  }
+}

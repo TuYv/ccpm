@@ -1,0 +1,25 @@
+{
+  "id": "sno-ai-sno-station-skills-pl-analyze",
+  "name": "pl-analyze",
+  "description": "PL (Project Lead) role sub-skill for incident analysis and process evaluation. Loaded through the pl core routing table, or when the owner explicitly asks for a retrospective or root-cause write-up; NEVER auto-load from ambient context.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sno-ai",
+  "install_path": ".claude/skills/pl-analyze/SKILL.md",
+  "source": {
+    "repo": "sno-ai/sno-station-skills",
+    "url": "https://github.com/sno-ai/sno-station-skills/blob/main/skills/T-delegation-and-work-orders/pl/skills/pl-analyze/SKILL.md",
+    "path": "skills/T-delegation-and-work-orders/pl/skills/pl-analyze/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:41:50.392Z",
+    "stars": 884,
+    "language": "Shell",
+    "pushed_at": "2026-10-29T02:09:36Z",
+    "license": "Apache-2.0"
+  }
+}

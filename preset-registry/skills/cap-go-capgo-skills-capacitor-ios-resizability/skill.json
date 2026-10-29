@@ -1,0 +1,25 @@
+{
+  "id": "cap-go-capgo-skills-capacitor-ios-resizability",
+  "name": "capacitor-ios-resizability",
+  "description": "Makes a Capacitor iOS app work in windows that resize while running (iPad Split View, Slide Over, Stage Manager, windowed apps, the foldable iPhone). Audits the web layer (viewport, `100vh`, device sniffing, `screen.width`, `window.orientation`, cached safe-area insets) and native code in the app and node_modules plugins (`UIScreen.main`, `interfaceOrientation`, `userInterfaceIdiom`, `keyWindow`, AppDelegate lifecycle, hard-coded bar heights), then applies trait-, window- and scene-based replace",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Cap-go",
+  "install_path": ".claude/skills/capacitor-ios-resizability/SKILL.md",
+  "source": {
+    "repo": "Cap-go/capgo-skills",
+    "url": "https://github.com/Cap-go/capgo-skills/blob/main/plugins/capacitor-ui/skills/capacitor-ios-resizability/SKILL.md",
+    "path": "plugins/capacitor-ui/skills/capacitor-ios-resizability/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:42:21.824Z",
+    "stars": 73,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-17T14:27:54Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "kalarislabs-research-agent-skills-deepspeed",
+  "name": "deepspeed",
+  "description": "Covers DeepSpeed for distributed deep learning training and I/O: ZeRO optimization stages, pipeline parallelism, FP16/BF16/FP8 training, 1-bit Adam, sparse attention, and DeepNVMe (aio_handle, gds_handle, async_io and gds operators, ds_nvme_tune, ds_report) for fast transfers between NVMe storage and host or GPU tensors. Use when configuring ZeRO stages for large-model training, enabling mixed precision or 1-bit Adam, offloading parameters or optimizer state to NVMe with ZeRO-Infinity, writing o",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "KalarisLabs",
+  "install_path": ".claude/skills/deepspeed/SKILL.md",
+  "source": {
+    "repo": "KalarisLabs/research-agent-skills",
+    "url": "https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/deepspeed/SKILL.md",
+    "path": "skills/deepspeed/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:43:09.891Z",
+    "stars": 75,
+    "language": "Python",
+    "pushed_at": "2026-10-25T16:48:14Z",
+    "license": null
+  }
+}

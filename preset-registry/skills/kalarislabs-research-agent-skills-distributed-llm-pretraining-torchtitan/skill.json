@@ -1,0 +1,25 @@
+{
+  "id": "kalarislabs-research-agent-skills-distributed-llm-pretraining-torchtitan",
+  "name": "distributed-llm-pretraining-torchtitan",
+  "description": "Provides PyTorch-native distributed LLM pretraining using torchtitan with 4D parallelism (FSDP2, TP, PP, CP). Use when pretraining Llama 3.1, DeepSeek V3, or custom models at scale from 8 to 512+ GPUs with Float8, torch.compile, and distributed checkpointing.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "KalarisLabs",
+  "install_path": ".claude/skills/distributed-llm-pretraining-torchtitan/SKILL.md",
+  "source": {
+    "repo": "KalarisLabs/research-agent-skills",
+    "url": "https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/distributed-llm-pretraining-torchtitan/SKILL.md",
+    "path": "skills/distributed-llm-pretraining-torchtitan/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:43:10.688Z",
+    "stars": 75,
+    "language": "Python",
+    "pushed_at": "2026-10-25T16:48:14Z",
+    "license": null
+  }
+}

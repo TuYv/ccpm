@@ -1,0 +1,25 @@
+{
+  "id": "cap-go-capgo-skills-capacitor-uiscene-migration",
+  "name": "capacitor-uiscene-migration",
+  "description": "Migrates a Capacitor iOS app or plugin from the AppDelegate lifecycle to the UIScene lifecycle introduced in Capacitor 8.5 and required by Xcode 27. Audits first (custom AppDelegate URL/lifecycle code, CAPBridgeViewController subclasses, existing SceneDelegate.swift, Info.plist UIApplicationSceneManifest, project.pbxproj registration, plugin lifecycle observers, tmpWindow/TmpViewController), reports, then merges surgically or hands template-shaped projects to `npx cap migrate`. Use for \"Capacito",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Cap-go",
+  "install_path": ".claude/skills/capacitor-uiscene-migration/SKILL.md",
+  "source": {
+    "repo": "Cap-go/capgo-skills",
+    "url": "https://github.com/Cap-go/capgo-skills/blob/main/plugins/capacitor-plugin-dev/skills/capacitor-uiscene-migration/SKILL.md",
+    "path": "plugins/capacitor-plugin-dev/skills/capacitor-uiscene-migration/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:42:20.462Z",
+    "stars": 73,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-17T14:27:54Z",
+    "license": "MIT"
+  }
+}

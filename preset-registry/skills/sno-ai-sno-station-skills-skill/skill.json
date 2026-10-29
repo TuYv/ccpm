@@ -1,0 +1,25 @@
+{
+  "id": "sno-ai-sno-station-skills-skill",
+  "name": "deliver",
+  "description": "Carry out a released charter to a proven result: plan only as much as the work needs, do the work through the project's own workers, prove every success check with a recorded real run, get one independent review, and close honestly. Invoke explicitly as `$deliver <charter>` (Codex) or `/deliver <charter>` (Claude, Cursor), or the way your agent invokes a skill, or when a dispatch names you the executor of a charter.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sno-ai",
+  "install_path": ".claude/skills/skill/SKILL.md",
+  "source": {
+    "repo": "sno-ai/sno-station-skills",
+    "url": "https://github.com/sno-ai/sno-station-skills/blob/main/skills/T-delegation-and-work-orders/deliver/skill/SKILL.md",
+    "path": "skills/T-delegation-and-work-orders/deliver/skill/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:41:50.218Z",
+    "stars": 884,
+    "language": "Shell",
+    "pushed_at": "2026-10-29T02:09:36Z",
+    "license": "Apache-2.0"
+  }
+}

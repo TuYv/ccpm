@@ -1,0 +1,25 @@
+{
+  "id": "cap-go-capgo-skills-capacitor-splash-screen",
+  "name": "capacitor-splash-screen",
+  "description": "Configures and debugs launch splash screens in Capacitor apps with @capacitor/splash-screen and @capacitor/assets - `launchAutoHide`, `SplashScreen.hide()`, `launchFadeOutDuration` (Android default changed 200 -> 0 in Capacitor 9), Android 12+ SplashScreen API theme (`Theme.SplashScreen`, `windowSplashScreenAnimatedIcon`), iOS `LaunchScreen.storyboard` + `Splash.imageset`, and Capacitor 8.5 UIScene/SceneDelegate effects (window created in code, Main.storyboard no longer supplies the root view co",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Cap-go",
+  "install_path": ".claude/skills/capacitor-splash-screen/SKILL.md",
+  "source": {
+    "repo": "Cap-go/capgo-skills",
+    "url": "https://github.com/Cap-go/capgo-skills/blob/main/plugins/capacitor-features/skills/capacitor-splash-screen/SKILL.md",
+    "path": "plugins/capacitor-features/skills/capacitor-splash-screen/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:42:19.127Z",
+    "stars": 73,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-17T14:27:54Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "cap-go-capgo-skills-capacitor-app-intents",
+  "name": "capacitor-app-intents",
+  "description": "Exposes Capacitor app features to Siri, Shortcuts, Spotlight, the Action button, Apple Intelligence, widgets and controls with native App Intents in ios/App/App, bridged to the web layer. Covers open-app intents routed through Universal Links / `OpenURLIntent` and @capacitor/app `appUrlOpen`, or a local plugin with a pending-route store; headless background intents; App Group / Preferences data sharing; AppShortcutsProvider phrases, AppEntity queries; iOS 26/27 APIs (`supportedModes` replacing `",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Cap-go",
+  "install_path": ".claude/skills/capacitor-app-intents/SKILL.md",
+  "source": {
+    "repo": "Cap-go/capgo-skills",
+    "url": "https://github.com/Cap-go/capgo-skills/blob/main/skills/capacitor-app-intents/SKILL.md",
+    "path": "skills/capacitor-app-intents/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:42:24.444Z",
+    "stars": 73,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-17T14:27:54Z",
+    "license": "MIT"
+  }
+}

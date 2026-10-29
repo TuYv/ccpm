@@ -1,0 +1,25 @@
+{
+  "id": "sno-ai-sno-station-skills-python-coder",
+  "name": "python-coder",
+  "description": "Implement and refactor production Python, FastAPI, Pydantic, async, and migrations.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sno-ai",
+  "install_path": ".claude/skills/python-coder/SKILL.md",
+  "source": {
+    "repo": "sno-ai/sno-station-skills",
+    "url": "https://github.com/sno-ai/sno-station-skills/blob/main/plugins/sno-station-standalone/skills/python-coder/SKILL.md",
+    "path": "plugins/sno-station-standalone/skills/python-coder/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:41:43.743Z",
+    "stars": 884,
+    "language": "Shell",
+    "pushed_at": "2026-10-29T02:09:36Z",
+    "license": "Apache-2.0"
+  }
+}

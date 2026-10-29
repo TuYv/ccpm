@@ -1,0 +1,25 @@
+{
+  "id": "jimliu-baoyu-design-claude-slides",
+  "name": "claude-slides",
+  "description": ">- Make and revise slide decks in the Slides artifact format (project/deck.json plus one HTML file per slide) as local files, then open them in a local slide editor where the user can present, retype, drag, and export PDF, HTML or PowerPoint. Use when the user asks for an editable slide deck or presentation in this format, names claude-slides or the Slides type, or wants to revise a folder that holds project/deck.json. A one-off single-file HTML deck or prototype is baoyu-design's.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "JimLiu",
+  "install_path": ".claude/skills/claude-slides/SKILL.md",
+  "source": {
+    "repo": "JimLiu/baoyu-design",
+    "url": "https://github.com/JimLiu/baoyu-design/blob/main/skills/claude-slides/SKILL.md",
+    "path": "skills/claude-slides/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:35:11.272Z",
+    "stars": 4873,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-29T07:08:37Z",
+    "license": "MIT"
+  }
+}

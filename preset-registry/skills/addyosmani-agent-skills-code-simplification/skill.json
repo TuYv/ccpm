@@ -1,7 +1,7 @@
 {
   "id": "addyosmani-agent-skills-code-simplification",
   "name": "code-simplification",
-  "description": "Simplifies code for clarity. Use when refactoring code for clarity without changing behavior. Use when code works but is harder to read, maintain, or extend than it should be. Use when reviewing code that has accumulated unnecessary complexity.",
+  "description": "Simplifies code for clarity. Use when refactoring code for clarity without changing behavior. Use when code works but is harder to read, maintain, or extend than it should be. Use when reviewing code that has accumulated unnecessary complexity. Use when asked to simplify, clean up, or reduce the nesting of a function or module that already works, even when the code is pasted inline and nothing else needs to change.",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/addyosmani/agent-skills/blob/main/skills/code-simplification/SKILL.md",
     "path": "skills/code-simplification/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-29T02:46:15.833Z",
-    "stars": 111489,
+    "discovered_at": "2026-10-29T10:14:51.910Z",
+    "stars": 111577,
     "language": "JavaScript",
-    "pushed_at": "2026-10-13T20:24:07Z",
+    "pushed_at": "2026-10-29T05:06:58Z",
     "license": "MIT"
-  },
-  "summary_zh": "这是一个代码精简工具，能在不改变功能的前提下，把难读难维护的代码重构得清晰易懂，适合用来清理那些臃肿复杂的老代码。"
+  }
 }

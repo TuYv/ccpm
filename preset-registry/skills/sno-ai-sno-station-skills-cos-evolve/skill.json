@@ -1,0 +1,25 @@
+{
+  "id": "sno-ai-sno-station-skills-cos-evolve",
+  "name": "cos-evolve",
+  "description": "Turn repeated management failures into enforced COS or PL rules. Load ONLY after the owner has explicitly activated the cos role for this session and the COS core routes here. Never invoke directly.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sno-ai",
+  "install_path": ".claude/skills/cos-evolve/SKILL.md",
+  "source": {
+    "repo": "sno-ai/sno-station-skills",
+    "url": "https://github.com/sno-ai/sno-station-skills/blob/main/skills/T-delegation-and-work-orders/cos/skills/cos-evolve/SKILL.md",
+    "path": "skills/T-delegation-and-work-orders/cos/skills/cos-evolve/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:41:49.464Z",
+    "stars": 884,
+    "language": "Shell",
+    "pushed_at": "2026-10-29T02:09:36Z",
+    "license": "Apache-2.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "cap-go-capgo-skills-capacitor-plugin-upgrades",
+  "name": "capacitor-plugin-upgrades",
+  "description": "Routes and drives a Capacitor plugin library upgrade across one or more major versions (4 to 9), including the iOS UIScene lifecycle audit that Capacitor 8.5 and 9 require. Detects the supported Capacitor range, plans hops (e.g. 7 to 8 to 9), runs each official plugin migrator, delegates to the per-version skill, and verifies TypeScript, Android, iOS (podspec and Package.swift) and the example app. Use for \"upgrade my plugin to the latest Capacitor\", \"support Capacitor 9 in my plugin\", bumping p",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Cap-go",
+  "install_path": ".claude/skills/capacitor-plugin-upgrades/SKILL.md",
+  "source": {
+    "repo": "Cap-go/capgo-skills",
+    "url": "https://github.com/Cap-go/capgo-skills/blob/main/plugins/capacitor-plugin-dev/skills/capacitor-plugin-upgrades/SKILL.md",
+    "path": "plugins/capacitor-plugin-dev/skills/capacitor-plugin-upgrades/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:42:20.310Z",
+    "stars": 73,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-17T14:27:54Z",
+    "license": "MIT"
+  }
+}

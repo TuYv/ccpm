@@ -1,0 +1,25 @@
+{
+  "id": "cap-go-capgo-skills-debugging-capacitor",
+  "name": "debugging-capacitor",
+  "description": "Diagnoses and fixes runtime bugs in Capacitor iOS/Android apps - white/blank screen on launch, startup crashes, `\"X\" plugin is not implemented on ios/android`, `net::ERR_CLEARTEXT_NOT_PERMITTED`, App Transport Security blocks, CORS on capacitor://localhost, permission denials, live reload not connecting, and Capacitor 8.5+ UIScene regressions (appUrlOpen, universal links, pause/resume silent because AppDelegate callbacks stopped). Covers Safari Web Inspector, chrome://inspect, Xcode/LLDB, Androi",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Cap-go",
+  "install_path": ".claude/skills/debugging-capacitor/SKILL.md",
+  "source": {
+    "repo": "Cap-go/capgo-skills",
+    "url": "https://github.com/Cap-go/capgo-skills/blob/main/plugins/capacitor-quality/skills/debugging-capacitor/SKILL.md",
+    "path": "plugins/capacitor-quality/skills/debugging-capacitor/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:42:21.500Z",
+    "stars": 73,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-17T14:27:54Z",
+    "license": "MIT"
+  }
+}

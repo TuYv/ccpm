@@ -1,0 +1,25 @@
+{
+  "id": "kalarislabs-research-agent-skills-database-lookup",
+  "name": "database-lookup",
+  "description": "Query documented public database APIs with explicit endpoints, filters, pagination, and provenance. Use when a scientific, regulatory, financial, or other database-backed fact must be retrieved reproducibly from a named source rather than inferred from general knowledge.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "KalarisLabs",
+  "install_path": ".claude/skills/database-lookup/SKILL.md",
+  "source": {
+    "repo": "KalarisLabs/research-agent-skills",
+    "url": "https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/database-lookup/SKILL.md",
+    "path": "skills/database-lookup/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:43:09.066Z",
+    "stars": 75,
+    "language": "Python",
+    "pushed_at": "2026-10-25T16:48:14Z",
+    "license": null
+  }
+}

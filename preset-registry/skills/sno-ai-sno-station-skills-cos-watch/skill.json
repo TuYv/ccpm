@@ -1,0 +1,25 @@
+{
+  "id": "sno-ai-sno-station-skills-cos-watch",
+  "name": "cos-watch",
+  "description": "Supervise active PLs, including wake cadence, liveness, recovery, large-run launches, and cross-journey order. Loaded ONLY by the cos core via its routing table; NEVER auto-load from context or invoke directly.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sno-ai",
+  "install_path": ".claude/skills/cos-watch/SKILL.md",
+  "source": {
+    "repo": "sno-ai/sno-station-skills",
+    "url": "https://github.com/sno-ai/sno-station-skills/blob/main/skills/T-delegation-and-work-orders/cos/skills/cos-watch/SKILL.md",
+    "path": "skills/T-delegation-and-work-orders/cos/skills/cos-watch/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:41:49.845Z",
+    "stars": 884,
+    "language": "Shell",
+    "pushed_at": "2026-10-29T02:09:36Z",
+    "license": "Apache-2.0"
+  }
+}

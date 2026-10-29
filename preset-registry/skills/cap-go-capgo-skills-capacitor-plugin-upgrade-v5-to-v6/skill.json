@@ -1,0 +1,25 @@
+{
+  "id": "cap-go-capgo-skills-capacitor-plugin-upgrade-v5-to-v6",
+  "name": "capacitor-plugin-upgrade-v5-to-v6",
+  "description": "Upgrades a Capacitor plugin library from v5 to v6 using `npx @capacitor/plugin-migration-v5-to-v6@latest`, then the manual checklist - `@capacitor/*` dev deps to `latest-6`, `compileSdkVersion` replaced by `compileSdk`, compile/target SDK 34 defaults, AGP 8.2.1, Gradle 8.2.1, Kotlin 1.9.10, plus code changes - `addListener` in `definitions.ts` returns only `Promise<PluginListenerHandle>` (drop `& PluginListenerHandle`), remove `CAP_PLUGIN_METHOD(removeAllListeners, ...)` from the `.m` file, and ",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Cap-go",
+  "install_path": ".claude/skills/capacitor-plugin-upgrade-v5-to-v6/SKILL.md",
+  "source": {
+    "repo": "Cap-go/capgo-skills",
+    "url": "https://github.com/Cap-go/capgo-skills/blob/main/plugins/capacitor-plugin-dev/skills/capacitor-plugin-upgrade-v5-to-v6/SKILL.md",
+    "path": "plugins/capacitor-plugin-dev/skills/capacitor-plugin-upgrade-v5-to-v6/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:42:19.615Z",
+    "stars": 73,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-17T14:27:54Z",
+    "license": "MIT"
+  }
+}

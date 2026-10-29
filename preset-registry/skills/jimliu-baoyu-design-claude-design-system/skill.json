@@ -1,0 +1,25 @@
+{
+  "id": "jimliu-baoyu-design-claude-design-system",
+  "name": "claude-design-system",
+  "description": ">- Create and revise design systems in the Design System artifact format (project/design-system.json, tokens.json, a README brand book, component previews, fonts and asset groups) as local files, then open them in a local design-system page where the user can browse and edit tokens, type, components and assets. Use when the user asks for a design system or brand kit in this format, built from a code repository, a design tool or scratch, names claude-design-system or the Design System type, or wa",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "JimLiu",
+  "install_path": ".claude/skills/claude-design-system/SKILL.md",
+  "source": {
+    "repo": "JimLiu/baoyu-design",
+    "url": "https://github.com/JimLiu/baoyu-design/blob/main/skills/claude-design-system/SKILL.md",
+    "path": "skills/claude-design-system/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:35:10.927Z",
+    "stars": 4873,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-29T07:08:37Z",
+    "license": "MIT"
+  }
+}

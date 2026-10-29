@@ -1,0 +1,25 @@
+{
+  "id": "sno-ai-sno-station-skills-owner-intent-audit",
+  "name": "owner-intent-audit",
+  "description": "Check agent-produced plans, tests, or code against the owner's actual intent. Find missing meaning, unrequested work, stale truth, unreachable decisions, unsupported completion claims, and implementation debt. Use before approval or merge.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sno-ai",
+  "install_path": ".claude/skills/owner-intent-audit/SKILL.md",
+  "source": {
+    "repo": "sno-ai/sno-station-skills",
+    "url": "https://github.com/sno-ai/sno-station-skills/blob/main/plugins/sno-station-standalone/skills/owner-intent-audit/SKILL.md",
+    "path": "plugins/sno-station-standalone/skills/owner-intent-audit/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:41:43.571Z",
+    "stars": 884,
+    "language": "Shell",
+    "pushed_at": "2026-10-29T02:09:36Z",
+    "license": "Apache-2.0"
+  }
+}

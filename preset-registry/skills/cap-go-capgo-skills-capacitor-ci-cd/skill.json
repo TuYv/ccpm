@@ -1,0 +1,25 @@
+{
+  "id": "cap-go-capgo-skills-capacitor-ci-cd",
+  "name": "capacitor-ci-cd",
+  "description": "Designs and fixes CI/CD pipelines for Capacitor apps - GitHub Actions, GitLab CI, Fastlane, or Capgo Cloud Build (npx @capgo/cli@latest build request) - covering web build and tests, cap sync, iOS archive/export/upload with App Store Connect API keys, Android AAB signing and Play upload, Capgo live-update uploads, secrets, caching, and build-number bumping. Use when choosing runner images and toolchains (Node 22/24, macos-26 vs xcode-27 runners, JDK 21, Gradle 9 / AGP 9 for Capacitor 9), or when",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Cap-go",
+  "install_path": ".claude/skills/capacitor-ci-cd/SKILL.md",
+  "source": {
+    "repo": "Cap-go/capgo-skills",
+    "url": "https://github.com/Cap-go/capgo-skills/blob/main/plugins/capacitor-deployment/skills/capacitor-ci-cd/SKILL.md",
+    "path": "plugins/capacitor-deployment/skills/capacitor-ci-cd/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:42:18.118Z",
+    "stars": 73,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-17T14:27:54Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "sno-ai-sno-station-skills-agentic-walkthrough",
+  "name": "agentic-walkthrough",
+  "description": "Prove that a reported run caused its intended real effect. Walk the executor path from entry to effect, capture one observable per hop, and report a result a no-op could not produce.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sno-ai",
+  "install_path": ".claude/skills/agentic-walkthrough/SKILL.md",
+  "source": {
+    "repo": "sno-ai/sno-station-skills",
+    "url": "https://github.com/sno-ai/sno-station-skills/blob/main/plugins/sno-station-standalone/skills/agentic-walkthrough/SKILL.md",
+    "path": "plugins/sno-station-standalone/skills/agentic-walkthrough/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:41:42.596Z",
+    "stars": 884,
+    "language": "Shell",
+    "pushed_at": "2026-10-29T02:09:36Z",
+    "license": "Apache-2.0"
+  }
+}

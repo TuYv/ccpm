@@ -1,0 +1,25 @@
+{
+  "id": "cap-go-capgo-skills-capacitor-ios-security-hardening",
+  "name": "capacitor-ios-security-hardening",
+  "description": "Audits and progressively hardens Xcode security build settings for a Capacitor iOS app (ios/App/App.xcodeproj, scheme App) and native plugin code (Swift/ObjC/C, Package.swift, podspec). Covers `xcodebuild -showBuildSettings -json`, security compiler warnings, static analyzer checkers (`xcodebuild analyze`), Xcode Enhanced Security (ENABLE_ENHANCED_SECURITY, com.apple.security.hardened-process entitlements, pointer authentication / arm64e, memory tagging soft mode), what is safe for a WKWebView h",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Cap-go",
+  "install_path": ".claude/skills/capacitor-ios-security-hardening/SKILL.md",
+  "source": {
+    "repo": "Cap-go/capgo-skills",
+    "url": "https://github.com/Cap-go/capgo-skills/blob/main/plugins/capacitor-quality/skills/capacitor-ios-security-hardening/SKILL.md",
+    "path": "plugins/capacitor-quality/skills/capacitor-ios-security-hardening/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:42:20.828Z",
+    "stars": 73,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-17T14:27:54Z",
+    "license": "MIT"
+  }
+}

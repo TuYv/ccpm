@@ -1,0 +1,25 @@
+{
+  "id": "sno-ai-sno-station-skills-less-is-more",
+  "name": "less-is-more",
+  "description": "Write the least code that works, and cut what an AI agent over-built. Use on any coding task: write, fix, refactor, or review a diff. Also when the user says 'less', 'simplify', 'too complex', 'over-engineered', or 'what can we delete'. Not for prose, research, or non-code questions.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sno-ai",
+  "install_path": ".claude/skills/less-is-more/SKILL.md",
+  "source": {
+    "repo": "sno-ai/sno-station-skills",
+    "url": "https://github.com/sno-ai/sno-station-skills/blob/main/plugins/sno-station-standalone/skills/less-is-more/SKILL.md",
+    "path": "plugins/sno-station-standalone/skills/less-is-more/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:41:43.423Z",
+    "stars": 884,
+    "language": "Shell",
+    "pushed_at": "2026-10-29T02:09:36Z",
+    "license": "Apache-2.0"
+  }
+}

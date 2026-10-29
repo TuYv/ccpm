@@ -1,0 +1,25 @@
+{
+  "id": "cap-go-capgo-skills-capacitor-deep-linking",
+  "name": "capacitor-deep-linking",
+  "description": "Implements and debugs deep links in Capacitor apps - custom URL schemes, iOS Universal Links (apple-app-site-association, Associated Domains entitlement), Android App Links (assetlinks.json, autoVerify), and routing via @capacitor/app `appUrlOpen` + `App.getLaunchUrl()`. Covers the Capacitor 8.5+ UIScene change where AppDelegate `application(_:open:options:)` and `continue userActivity` stop being called and custom handling must move to SceneDelegate, plus cold vs warm launch testing. Use when l",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Cap-go",
+  "install_path": ".claude/skills/capacitor-deep-linking/SKILL.md",
+  "source": {
+    "repo": "Cap-go/capgo-skills",
+    "url": "https://github.com/Cap-go/capgo-skills/blob/main/plugins/capacitor-features/skills/capacitor-deep-linking/SKILL.md",
+    "path": "plugins/capacitor-features/skills/capacitor-deep-linking/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:42:18.459Z",
+    "stars": 73,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-17T14:27:54Z",
+    "license": "MIT"
+  }
+}

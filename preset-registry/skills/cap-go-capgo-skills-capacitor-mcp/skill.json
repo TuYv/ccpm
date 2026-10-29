@@ -1,0 +1,25 @@
+{
+  "id": "cap-go-capgo-skills-capacitor-mcp",
+  "name": "capacitor-mcp",
+  "description": "Connect AI agents (Claude Code, Claude Desktop, Cursor, VS Code, Cline, Codex) to Capacitor and Ionic tooling over Model Context Protocol. Covers the awesome-ionic-mcp server (Ionic component APIs, Capacitor plugin docs, Ionic/Capacitor CLI tools), the Capgo hosted MCP at https://api.capgo.app/mcp, the local Capgo CLI MCP (npx @capgo/cli@latest mcp), and Xcode's MCP bridge (xcrun mcpbridge) for building the iOS app from an agent. Use when the user wants to add, configure, verify, or troubleshoot",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Cap-go",
+  "install_path": ".claude/skills/capacitor-mcp/SKILL.md",
+  "source": {
+    "repo": "Cap-go/capgo-skills",
+    "url": "https://github.com/Cap-go/capgo-skills/blob/main/plugins/capacitor-core/skills/capacitor-mcp/SKILL.md",
+    "path": "plugins/capacitor-core/skills/capacitor-mcp/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:42:17.414Z",
+    "stars": 73,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-17T14:27:54Z",
+    "license": "MIT"
+  }
+}

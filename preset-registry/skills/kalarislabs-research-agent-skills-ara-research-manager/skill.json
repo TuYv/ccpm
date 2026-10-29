@@ -1,0 +1,25 @@
+{
+  "id": "kalarislabs-research-agent-skills-ara-research-manager",
+  "name": "ara-research-manager",
+  "description": "Records research provenance at the end of a coding or research session by scanning the conversation and writing decisions, experiments, dead ends, pivots, claims, and heuristics into the ara/ directory (exploration_tree.yaml, claims.md, heuristics.md, observations.yaml, session records), each tagged user, ai-suggested, ai-executed, or user-revised. Use when a task is finished and you want a session epilogue. Use when you need an auditable trace of how a project evolved. Use when decisions and de",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "KalarisLabs",
+  "install_path": ".claude/skills/ara-research-manager/SKILL.md",
+  "source": {
+    "repo": "KalarisLabs/research-agent-skills",
+    "url": "https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/ara-research-manager/SKILL.md",
+    "path": "skills/ara-research-manager/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:43:01.795Z",
+    "stars": 75,
+    "language": "Python",
+    "pushed_at": "2026-10-25T16:48:14Z",
+    "license": null
+  }
+}

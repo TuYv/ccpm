@@ -1,7 +1,7 @@
 {
   "id": "qwenlm-qwen-code-generated-ui",
   "name": "generated-ui",
-  "description": "Create a bounded local HTML, CSS and JavaScript interface for exploring parameters, simulations or weighted option comparisons through an MCP App.",
+  "description": "Show an interactive calculator, simulator or comparison directly in the conversation when the user wants to adjust inputs and see results, such as splitting a bill, comparing plans or exploring parameters. Prefer it to writing an HTML file unless the user asks for a file, page or project code.",
   "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/QwenLM/qwen-code/blob/main/integrations/generated-ui/skills/generated-ui/SKILL.md",
     "path": "integrations/generated-ui/skills/generated-ui/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-29T03:34:42.103Z",
-    "stars": 28780,
+    "discovered_at": "2026-10-29T10:38:52.133Z",
+    "stars": 28791,
     "language": "TypeScript",
-    "pushed_at": "2026-10-29T03:31:25Z",
+    "pushed_at": "2026-10-29T10:30:00Z",
     "license": "Apache-2.0"
   }
 }

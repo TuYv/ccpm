@@ -1,0 +1,25 @@
+{
+  "id": "cap-go-capgo-skills-capacitor-keyboard",
+  "name": "capacitor-keyboard",
+  "description": "Fixes on-screen keyboard behavior in Capacitor apps with @capacitor/keyboard - iOS `resize` modes (`native` default, `body`, `ionic`, `none`), `keyboardWillShow`/`keyboardDidShow` heights, `setAccessoryBarVisible`, `setScroll`, `style` (`DARK`/`LIGHT`/`DEFAULT`), `autoBackdropColor` (8.0.4+), Android edge-to-edge/SystemBars interaction (drop legacy `resizeOnFullScreen` on Capacitor 8), iOS 26 fixes, and iOS input auto-zoom. Use when inputs are hidden behind the keyboard, the WebView jumps or lea",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Cap-go",
+  "install_path": ".claude/skills/capacitor-keyboard/SKILL.md",
+  "source": {
+    "repo": "Cap-go/capgo-skills",
+    "url": "https://github.com/Cap-go/capgo-skills/blob/main/plugins/capacitor-features/skills/capacitor-keyboard/SKILL.md",
+    "path": "plugins/capacitor-features/skills/capacitor-keyboard/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:42:18.608Z",
+    "stars": 73,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-17T14:27:54Z",
+    "license": "MIT"
+  }
+}

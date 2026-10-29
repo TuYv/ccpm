@@ -1,0 +1,25 @@
+{
+  "id": "kalarislabs-research-agent-skills-axolotl",
+  "name": "axolotl",
+  "description": "Provides guidance for fine-tuning large language models with Axolotl, covering YAML training configs, LoRA and QLoRA, preference training with DPO, KTO, ORPO and GRPO, multimodal models, FSDP and multi-GPU setups, sequence (context) parallelism, NCCL bandwidth tests, dataset formats, compressed model saving for vLLM and llmcompressor, and custom integrations. Use when writing or debugging an Axolotl YAML config, choosing a dataset format for a fine-tuning run, setting up FSDP or context_parallel",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "KalarisLabs",
+  "install_path": ".claude/skills/axolotl/SKILL.md",
+  "source": {
+    "repo": "KalarisLabs/research-agent-skills",
+    "url": "https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/axolotl/SKILL.md",
+    "path": "skills/axolotl/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:43:03.932Z",
+    "stars": 75,
+    "language": "Python",
+    "pushed_at": "2026-10-25T16:48:14Z",
+    "license": null
+  }
+}

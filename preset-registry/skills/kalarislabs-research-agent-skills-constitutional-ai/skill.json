@@ -1,0 +1,25 @@
+{
+  "id": "kalarislabs-research-agent-skills-constitutional-ai",
+  "name": "constitutional-ai",
+  "description": "Anthropic's method for training harmless AI through self-improvement. Two-phase approach - supervised learning with self-critique/revision, then RLAIF (RL from AI Feedback). Use for safety alignment, reducing harmful outputs without human labels. Powers Claude's safety system.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "KalarisLabs",
+  "install_path": ".claude/skills/constitutional-ai/SKILL.md",
+  "source": {
+    "repo": "KalarisLabs/research-agent-skills",
+    "url": "https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/constitutional-ai/SKILL.md",
+    "path": "skills/constitutional-ai/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:43:07.487Z",
+    "stars": 75,
+    "language": "Python",
+    "pushed_at": "2026-10-25T16:48:14Z",
+    "license": null
+  }
+}

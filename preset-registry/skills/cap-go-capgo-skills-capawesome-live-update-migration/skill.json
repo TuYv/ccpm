@@ -1,0 +1,25 @@
+{
+  "id": "cap-go-capgo-skills-capawesome-live-update-migration",
+  "name": "capawesome-live-update-migration",
+  "description": "Migrates a Capacitor app from Capawesome Cloud live updates (@capawesome/capacitor-live-update, LiveUpdate.ready/sync/setNextBundle/reload, plugins.LiveUpdate config with appId, autoUpdateStrategy, defaultChannel, readyTimeout, publicKey, and @capawesome/cli bundle upload commands) to Capgo Updater (@capgo/capacitor-updater). Covers the package swap, config and API mapping, the notifyAppReady startup hook, deleting custom update glue, replacing CI upload commands, overlap with devices still on o",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Cap-go",
+  "install_path": ".claude/skills/capawesome-live-update-migration/SKILL.md",
+  "source": {
+    "repo": "Cap-go/capgo-skills",
+    "url": "https://github.com/Cap-go/capgo-skills/blob/main/plugins/capacitor-app-migrations/skills/capawesome-live-update-migration/SKILL.md",
+    "path": "plugins/capacitor-app-migrations/skills/capawesome-live-update-migration/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:42:14.590Z",
+    "stars": 73,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-17T14:27:54Z",
+    "license": "MIT"
+  }
+}

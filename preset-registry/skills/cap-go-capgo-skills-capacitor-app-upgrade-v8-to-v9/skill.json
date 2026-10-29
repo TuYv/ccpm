@@ -1,0 +1,25 @@
+{
+  "id": "cap-go-capgo-skills-capacitor-app-upgrade-v8-to-v9",
+  "name": "capacitor-app-upgrade-v8-to-v9",
+  "description": "Upgrades a Capacitor app from v8 to v9 (prerelease, installed with @next until GA). Covers preflight (Node 24, Xcode 27, Android Studio 2026.1.1, UIScene adoption from 8.5), `npx cap migrate`, and the manual checklist - iOS 16 target, @UIApplicationMain to @main, removed CAPBridge APIs, AGP 9.2.1, Gradle 9.5.1, SDK 37/minSdk 26, gradle.properties cleanup, built-in Kotlin, jcenter removal, core-ktx, proguard-android.txt rename, optional Cordova runtime, `cap run --url`, push `alert` removal, spla",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Cap-go",
+  "install_path": ".claude/skills/capacitor-app-upgrade-v8-to-v9/SKILL.md",
+  "source": {
+    "repo": "Cap-go/capgo-skills",
+    "url": "https://github.com/Cap-go/capgo-skills/blob/main/plugins/capacitor-app-upgrades/skills/capacitor-app-upgrade-v8-to-v9/SKILL.md",
+    "path": "plugins/capacitor-app-upgrades/skills/capacitor-app-upgrade-v8-to-v9/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:42:16.750Z",
+    "stars": 73,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-17T14:27:54Z",
+    "license": "MIT"
+  }
+}

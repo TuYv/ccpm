@@ -1,0 +1,25 @@
+{
+  "id": "cap-go-capgo-skills-capacitor-app-upgrade-v4-to-v5",
+  "name": "capacitor-app-upgrade-v4-to-v5",
+  "description": "Upgrades a Capacitor app from v4 to v5 using `npx cap migrate` from `@capacitor/cli@latest-5`, then the manual checklist - Node 16+, Xcode 14.1+, Android Studio Flamingo with JDK 17, AGP 8.0.0, Gradle 8.0.2, compile/target SDK 33, `package` moved from AndroidManifest.xml to `namespace` in build.gradle, Jetifier removal, pinning `androidScheme` to `http`, and official plugin breaking changes (Device `uuid` to `identifier`, Android 13 notification permissions, READ_MEDIA_IMAGES). Use when `@capaci",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Cap-go",
+  "install_path": ".claude/skills/capacitor-app-upgrade-v4-to-v5/SKILL.md",
+  "source": {
+    "repo": "Cap-go/capgo-skills",
+    "url": "https://github.com/Cap-go/capgo-skills/blob/main/plugins/capacitor-app-upgrades/skills/capacitor-app-upgrade-v4-to-v5/SKILL.md",
+    "path": "plugins/capacitor-app-upgrades/skills/capacitor-app-upgrade-v4-to-v5/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:42:16.055Z",
+    "stars": 73,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-17T14:27:54Z",
+    "license": "MIT"
+  }
+}

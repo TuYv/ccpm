@@ -1,0 +1,25 @@
+{
+  "id": "cap-go-capgo-skills-capacitor-offline-first",
+  "name": "capacitor-offline-first",
+  "description": "Designs and implements offline-first data in Capacitor apps - local SQLite source of truth with @capgo/capacitor-fast-sql (`FastSQL.connect`, `KeyValueStore`), an outbox/sync queue, delta pulls, conflict resolution, @capacitor/network `networkStatusChange`, background sync with @capgo/capacitor-background-task, and why localStorage/IndexedDB get evicted and service workers break plugin injection in native WebViews. Use when the app must work without internet, data disappears after iOS storage pr",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Cap-go",
+  "install_path": ".claude/skills/capacitor-offline-first/SKILL.md",
+  "source": {
+    "repo": "Cap-go/capgo-skills",
+    "url": "https://github.com/Cap-go/capgo-skills/blob/main/plugins/capacitor-features/skills/capacitor-offline-first/SKILL.md",
+    "path": "plugins/capacitor-features/skills/capacitor-offline-first/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:42:18.763Z",
+    "stars": 73,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-17T14:27:54Z",
+    "license": "MIT"
+  }
+}

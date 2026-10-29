@@ -1,0 +1,25 @@
+{
+  "id": "cap-go-capgo-skills-capacitor-plugin-spm-support",
+  "name": "capacitor-plugin-spm-support",
+  "description": "Adds Swift Package Manager support to an existing Capacitor plugin repository so apps using CapApp-SPM can consume it after CocoaPods Trunk goes read-only (expected December 2, 2026). Covers root Package.swift naming rules the Capacitor CLI depends on, CAPBridgedPlugin conversion (identifier, jsName, pluginMethods), removing the ObjC CAP_PLUGIN bridge (.m/.h), Sources/Tests layout, podspec and package.json files updates, third-party pod to SPM dependency mapping, resources/PrivacyInfo.xcprivacy,",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Cap-go",
+  "install_path": ".claude/skills/capacitor-plugin-spm-support/SKILL.md",
+  "source": {
+    "repo": "Cap-go/capgo-skills",
+    "url": "https://github.com/Cap-go/capgo-skills/blob/main/plugins/capacitor-plugin-dev/skills/capacitor-plugin-spm-support/SKILL.md",
+    "path": "plugins/capacitor-plugin-dev/skills/capacitor-plugin-spm-support/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:42:19.283Z",
+    "stars": 73,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-17T14:27:54Z",
+    "license": "MIT"
+  }
+}

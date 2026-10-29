@@ -1,0 +1,25 @@
+{
+  "id": "cap-go-capgo-skills-capgo-release-management",
+  "name": "capgo-release-management",
+  "description": "Runs Capgo OTA release operations with the CLI, including `bundle upload` (channels, delta, rollout, encryption, version bumps), `bundle compatibility` and `releaseType` checks, `channel add/set/promote/currentBundle/delete`, progressive rollouts and rollback, `bundle cleanup`, preview QR codes, and `key create/save` encryption setup. Use when the user ships, promotes, rolls back, or cleans up Capgo bundles, or hits upload errors such as \"Version X already exists\", \"Bundle NOT compatible with <c",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Cap-go",
+  "install_path": ".claude/skills/capgo-release-management/SKILL.md",
+  "source": {
+    "repo": "Cap-go/capgo-skills",
+    "url": "https://github.com/Cap-go/capgo-skills/blob/main/plugins/capgo-cloud/skills/capgo-release-management/SKILL.md",
+    "path": "plugins/capgo-cloud/skills/capgo-release-management/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:42:23.535Z",
+    "stars": 73,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-17T14:27:54Z",
+    "license": "MIT"
+  }
+}

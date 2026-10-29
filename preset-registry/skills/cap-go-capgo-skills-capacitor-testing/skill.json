@@ -1,0 +1,25 @@
+{
+  "id": "cap-go-capgo-skills-capacitor-testing",
+  "name": "capacitor-testing",
+  "description": "Testing guide for Capacitor apps and plugins. Covers web-layer unit and component tests with Vitest and mocked Capacitor plugins (`vi.mock('@capacitor/core')`, `registerPlugin`), Playwright for the web build, Appium E2E with NATIVE_APP / WEBVIEW context switching, native plugin unit tests with Swift Testing vs XCTest (what can migrate, `CAPPluginCall` patterns, `xcodebuild test` on a simulator) and Android JUnit, plus an agent-driven verification loop on simulators and devices (build, install, l",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Cap-go",
+  "install_path": ".claude/skills/capacitor-testing/SKILL.md",
+  "source": {
+    "repo": "Cap-go/capgo-skills",
+    "url": "https://github.com/Cap-go/capgo-skills/blob/main/plugins/capacitor-quality/skills/capacitor-testing/SKILL.md",
+    "path": "plugins/capacitor-quality/skills/capacitor-testing/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:42:21.320Z",
+    "stars": 73,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-17T14:27:54Z",
+    "license": "MIT"
+  }
+}

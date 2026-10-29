@@ -1,0 +1,25 @@
+{
+  "id": "cap-go-capgo-skills-capacitor-accessibility",
+  "name": "capacitor-accessibility",
+  "description": "Makes Capacitor apps work with VoiceOver, TalkBack, Dynamic Type / Android font scale, Switch Control, hardware keyboards, Reduce Motion and Increase Contrast. Covers Capacitor-specific gaps - WKWebView not following iOS Dynamic Type, Android WebView text zoom breaking layouts, zoomEnabled/user-scalable, SPA route changes not announced, native views under the WebView (maps, camera preview) being unreachable, @capacitor/screen-reader (isEnabled, speak, stateChange) and @capacitor/text-zoom (getPr",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Cap-go",
+  "install_path": ".claude/skills/capacitor-accessibility/SKILL.md",
+  "source": {
+    "repo": "Cap-go/capgo-skills",
+    "url": "https://github.com/Cap-go/capgo-skills/blob/main/skills/capacitor-accessibility/SKILL.md",
+    "path": "skills/capacitor-accessibility/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:42:24.249Z",
+    "stars": 73,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-17T14:27:54Z",
+    "license": "MIT"
+  }
+}

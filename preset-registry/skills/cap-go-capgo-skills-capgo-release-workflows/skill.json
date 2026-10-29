@@ -1,0 +1,25 @@
+{
+  "id": "cap-go-capgo-skills-capgo-release-workflows",
+  "name": "capgo-release-workflows",
+  "description": "Designs repository-owned release pipelines for Capacitor apps that combine Capgo live updates, native builds (Capgo Build or the team's own CI runners), and App Store / Play publishing, with an automatic OTA-vs-native gate (`bundle releaseType`, `build needed`), staged channels, and rollback. Use when the user wants one release system covering OTA, builds, and store publishing, is replacing a hosted release service with CI they own, or asks how CI should decide between a live update and a store ",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Cap-go",
+  "install_path": ".claude/skills/capgo-release-workflows/SKILL.md",
+  "source": {
+    "repo": "Cap-go/capgo-skills",
+    "url": "https://github.com/Cap-go/capgo-skills/blob/main/plugins/capgo-cloud/skills/capgo-release-workflows/SKILL.md",
+    "path": "plugins/capgo-cloud/skills/capgo-release-workflows/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:42:23.765Z",
+    "stars": 73,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-17T14:27:54Z",
+    "license": "MIT"
+  }
+}

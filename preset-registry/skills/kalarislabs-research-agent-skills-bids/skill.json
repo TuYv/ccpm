@@ -1,0 +1,25 @@
+{
+  "id": "kalarislabs-research-agent-skills-bids",
+  "name": "bids",
+  "description": "Organizes, queries, validates, and converts neuroscience and biomedical datasets using the Brain Imaging Data Structure (BIDS) standard, covering MRI, PET, EEG, MEG, iEEG, EMG, NIRS, microscopy, motion capture, and behavioral data. Covers PyBIDS (BIDSLayout), the bids-validator, HeuDiConv, dcm2bids, BIDScoin, JSON sidecars, dataset_description.json, events.tsv, participants.tsv, .bidsignore, and derivatives. Use when arranging raw data into BIDS directories and filenames. Use when converting DIC",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "KalarisLabs",
+  "install_path": ".claude/skills/bids/SKILL.md",
+  "source": {
+    "repo": "KalarisLabs/research-agent-skills",
+    "url": "https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/bids/SKILL.md",
+    "path": "skills/bids/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:43:04.585Z",
+    "stars": 75,
+    "language": "Python",
+    "pushed_at": "2026-10-25T16:48:14Z",
+    "license": null
+  }
+}

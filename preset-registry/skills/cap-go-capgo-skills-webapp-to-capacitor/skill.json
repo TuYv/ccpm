@@ -1,0 +1,25 @@
+{
+  "id": "cap-go-capgo-skills-webapp-to-capacitor",
+  "name": "webapp-to-capacitor",
+  "description": "Plans and executes turning an existing web app, PWA, or SPA into a store-ready Capacitor iOS and Android app. Use when the user wants to wrap a website or PWA as a mobile app, worries about Apple guideline 4.2 minimum functionality or thin-WebView rejection, needs a phased migration plan (static build, Capacitor shell, native UX, plugins, permissions, offline, account deletion, in-app purchase vs web billing, demo account, Play closed testing), or asks what still breaks after the first successfu",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Cap-go",
+  "install_path": ".claude/skills/webapp-to-capacitor/SKILL.md",
+  "source": {
+    "repo": "Cap-go/capgo-skills",
+    "url": "https://github.com/Cap-go/capgo-skills/blob/main/plugins/capacitor-app-migrations/skills/webapp-to-capacitor/SKILL.md",
+    "path": "plugins/capacitor-app-migrations/skills/webapp-to-capacitor/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:42:15.894Z",
+    "stars": 73,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-17T14:27:54Z",
+    "license": "MIT"
+  }
+}

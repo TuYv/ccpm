@@ -1,0 +1,25 @@
+{
+  "id": "cap-go-capgo-skills-capacitor-push-notifications",
+  "name": "capacitor-push-notifications",
+  "description": "Sets up and debugs remote push in Capacitor apps with @capacitor/push-notifications (FCM on Android, APNs on iOS), or Capgo alternatives @capgo/capacitor-firebase-messaging and @capgo/capacitor-notifications. Covers APNs keys, Push Notifications capability, AppDelegate `didRegisterForRemoteNotificationsWithDeviceToken` forwarding (stays in AppDelegate under the Capacitor 8.5 UIScene lifecycle), Android 13+ POST_NOTIFICATIONS permission, notification channels and icons, `firebaseMessagingVersion`",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Cap-go",
+  "install_path": ".claude/skills/capacitor-push-notifications/SKILL.md",
+  "source": {
+    "repo": "Cap-go/capgo-skills",
+    "url": "https://github.com/Cap-go/capgo-skills/blob/main/plugins/capacitor-features/skills/capacitor-push-notifications/SKILL.md",
+    "path": "plugins/capacitor-features/skills/capacitor-push-notifications/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:42:18.954Z",
+    "stars": 73,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-17T14:27:54Z",
+    "license": "MIT"
+  }
+}

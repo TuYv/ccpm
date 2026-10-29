@@ -1,0 +1,25 @@
+{
+  "id": "cap-go-capgo-skills-cordova-to-capacitor",
+  "name": "cordova-to-capacitor",
+  "description": "Migrates an Apache Cordova, PhoneGap, or Ionic-Cordova app to Capacitor. Use when the project has config.xml, a platforms/ or plugins/ folder, cordova-* or phonegap-* dependencies, @awesome-cordova-plugins or @ionic-native wrappers, deviceready listeners, or cordova.plugins.* calls, and the user wants Capacitor native projects, Capacitor/Capgo plugin replacements, config.xml preference migration, and preserved localStorage/IndexedDB data (iosScheme/androidScheme). Covers keeping Cordova plugins ",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Cap-go",
+  "install_path": ".claude/skills/cordova-to-capacitor/SKILL.md",
+  "source": {
+    "repo": "Cap-go/capgo-skills",
+    "url": "https://github.com/Cap-go/capgo-skills/blob/main/plugins/capacitor-app-migrations/skills/cordova-to-capacitor/SKILL.md",
+    "path": "plugins/capacitor-app-migrations/skills/cordova-to-capacitor/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:42:14.951Z",
+    "stars": 73,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-17T14:27:54Z",
+    "license": "MIT"
+  }
+}

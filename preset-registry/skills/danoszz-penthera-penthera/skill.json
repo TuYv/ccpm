@@ -1,0 +1,25 @@
+{
+  "id": "danoszz-penthera-penthera",
+  "name": "penthera",
+  "description": "> Offline cyber security agent for the user's own apps and AI coding tools, run locally with the Penthera CLI; open R&D, measured in public. Sets it up in one command (\"set up penthera in this repo\"). Scans the user's own live URL and repo (TLS, headers, auth, OpenAPI, secrets incl. AI keys, opt-in injection); checks npm and Python dependencies offline (\"is this dependency safe?\", \"what changed in my deps?\", \"install X safely\", \"any AGPL in our deps?\"); blocks secrets and risky agent config befo",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "danoszz",
+  "install_path": ".claude/skills/penthera/SKILL.md",
+  "source": {
+    "repo": "danoszz/penthera",
+    "url": "https://github.com/danoszz/penthera/blob/main/skills/penthera/SKILL.md",
+    "path": "skills/penthera/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:43:12.150Z",
+    "stars": 75,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-29T10:29:34Z",
+    "license": "MIT"
+  }
+}

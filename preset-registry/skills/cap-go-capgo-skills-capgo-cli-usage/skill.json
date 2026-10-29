@@ -1,0 +1,25 @@
+{
+  "id": "cap-go-capgo-skills-capgo-cli-usage",
+  "name": "capgo-cli-usage",
+  "description": "Entry point for the Capgo CLI (`npx @capgo/cli@latest`). Maps the full command surface (init, login, doctor, probe, app, bundle, channel, key, account, organization, build, observe, get-qr, notifications, run device, mcp), explains API-key precedence (--apikey, CAPGO_TOKEN, ~/.capgo, ./.capgo), connects agents to Capgo through the hosted MCP (https://api.capgo.app/mcp) or the local CLI MCP, and routes to the narrower Capgo skill. Use when the user asks generally how to use the Capgo CLI, which c",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Cap-go",
+  "install_path": ".claude/skills/capgo-cli-usage/SKILL.md",
+  "source": {
+    "repo": "Cap-go/capgo-skills",
+    "url": "https://github.com/Cap-go/capgo-skills/blob/main/plugins/capgo-cloud/skills/capgo-cli-usage/SKILL.md",
+    "path": "plugins/capgo-cloud/skills/capgo-cli-usage/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:42:22.686Z",
+    "stars": 73,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-17T14:27:54Z",
+    "license": "MIT"
+  }
+}

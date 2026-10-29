@@ -1,0 +1,25 @@
+{
+  "id": "cap-go-capgo-skills-capacitor-plugins",
+  "name": "capacitor-plugins",
+  "description": "Pick, install, and wire up Capacitor plugins for native features (camera, filesystem, geolocation, biometrics, in-app purchases, social login, SQLite, calendar, contacts, health, BLE, NFC, etc.). Covers official @capacitor/* packages (Capacitor 8.5 stable, 9 alpha on next) plus the 145-package @capgo/* index, native permission keys (Info.plist, AndroidManifest, variables.gradle minSdk), npx cap sync / cap ls verification, and errors like '\"Camera\" plugin is not implemented on ios', 'unable to fi",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Cap-go",
+  "install_path": ".claude/skills/capacitor-plugins/SKILL.md",
+  "source": {
+    "repo": "Cap-go/capgo-skills",
+    "url": "https://github.com/Cap-go/capgo-skills/blob/main/plugins/capacitor-core/skills/capacitor-plugins/SKILL.md",
+    "path": "plugins/capacitor-core/skills/capacitor-plugins/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:42:17.591Z",
+    "stars": 73,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-17T14:27:54Z",
+    "license": "MIT"
+  }
+}

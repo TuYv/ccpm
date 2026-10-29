@@ -1,0 +1,25 @@
+{
+  "id": "cap-go-capgo-skills-capgo-cloud",
+  "name": "capgo-cloud",
+  "description": "Umbrella skill for multi-product Capgo Cloud work in Capacitor apps, combining Capgo Build native binaries, Capgo live updates (OTA), store submission, organization setup, and agent access via the hosted Capgo MCP. Use when the user asks for a Capgo equivalent of a hosted mobile cloud (builds, live updates, and publishing together), wants to plan which Capgo products to use, or needs the order of operations across them. Do not use once the request narrows to one area. Switch to capgo-native-buil",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Cap-go",
+  "install_path": ".claude/skills/capgo-cloud/SKILL.md",
+  "source": {
+    "repo": "Cap-go/capgo-skills",
+    "url": "https://github.com/Cap-go/capgo-skills/blob/main/plugins/capgo-cloud/skills/capgo-cloud/SKILL.md",
+    "path": "plugins/capgo-cloud/skills/capgo-cloud/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:42:22.853Z",
+    "stars": 73,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-17T14:27:54Z",
+    "license": "MIT"
+  }
+}

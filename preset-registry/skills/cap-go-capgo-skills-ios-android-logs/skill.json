@@ -1,0 +1,25 @@
+{
+  "id": "cap-go-capgo-skills-ios-android-logs",
+  "name": "ios-android-logs",
+  "description": "Gets, filters, streams, and saves logs and crash reports from Capacitor apps on iOS Simulator, iPhone, Android emulator and devices. Explains where Capacitor output goes (iOS bridge and mirrored JS console lines are stdout-only, so missing from Console.app and `log stream`; Android tags `Capacitor` and `Capacitor/Console`). Covers `xcrun simctl spawn booted log stream --predicate`, `simctl launch --console-pty`, `xcrun devicectl device process launch --console`, `log collect --device-udid`, Cons",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Cap-go",
+  "install_path": ".claude/skills/ios-android-logs/SKILL.md",
+  "source": {
+    "repo": "Cap-go/capgo-skills",
+    "url": "https://github.com/Cap-go/capgo-skills/blob/main/plugins/capacitor-quality/skills/ios-android-logs/SKILL.md",
+    "path": "plugins/capacitor-quality/skills/ios-android-logs/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-29T10:42:21.659Z",
+    "stars": 73,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-17T14:27:54Z",
+    "license": "MIT"
+  }
+}
