@@ -1,6 +1,7 @@
 ---
 name: oma-recap
-description: "Summarize AI conversation histories for a specified date or period. Use for daily work recaps and cross-tool activity summaries."
+description: Summarize AI conversation histories for a specified date or period.
+  Use for daily work recaps and cross-tool activity summaries.
 ---
 
 # AI Tool Conversation History Summary

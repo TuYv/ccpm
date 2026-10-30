@@ -1,0 +1,25 @@
+{
+  "id": "yetone-magpie-wave-hand",
+  "name": "wave-hand",
+  "description": "Waves a hand at the user. Use when the user asks for a wave.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "yetone",
+  "install_path": ".claude/skills/wave-hand/SKILL.md",
+  "source": {
+    "repo": "yetone/magpie",
+    "url": "https://github.com/yetone/magpie/blob/main/internal/sessions/testdata/droid-skills/skills/wave-hand/SKILL.md",
+    "path": "internal/sessions/testdata/droid-skills/skills/wave-hand/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-30T09:22:52.127Z",
+    "stars": 25856,
+    "language": "Go",
+    "pushed_at": "2026-10-30T09:11:08Z",
+    "license": "MIT"
+  }
+}

@@ -1,8 +1,8 @@
 {
   "id": "first-fluke-oh-my-agent-oma-coordination",
   "name": "oma-coordination",
-  "description": "Guide for coordinating PM, Frontend, Backend, Mobile, and QA agents on complex projects via CLI. Use for manual step-by-step coordination and workflow guidance.",
-  "category": "测试调试",
+  "description": "Coordinate assigned specialist tasks and handoffs manually. Use when supervising a multi-agent project step by step.",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -13,13 +13,13 @@
   "install_path": ".claude/skills/oma-coordination/SKILL.md",
   "source": {
     "repo": "first-fluke/oh-my-agent",
-    "url": "https://github.com/first-fluke/oh-my-agent/blob/main/benchmarks/runs/oma/.agents/skills/oma-coordination/SKILL.md",
-    "path": "benchmarks/runs/oma/.agents/skills/oma-coordination/SKILL.md",
+    "url": "https://github.com/first-fluke/oh-my-agent/blob/main/.claude-plugin/directory/skills/oma-coordination/SKILL.md",
+    "path": ".claude-plugin/directory/skills/oma-coordination/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-30T03:14:34.320Z",
+    "discovered_at": "2026-10-30T09:26:36.132Z",
     "stars": 1355,
     "language": "TypeScript",
-    "pushed_at": "2026-10-29T03:58:04Z",
+    "pushed_at": "2026-10-30T07:38:51Z",
     "license": "MIT"
   }
 }

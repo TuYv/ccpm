@@ -1,6 +1,7 @@
 ---
 name: oma-dev-workflow
-description: "Configure development tasks, git hooks, CI/CD, or release automation. Use when creating or fixing a repository development workflow."
+description: Configure development tasks, git hooks, CI/CD, or release
+  automation. Use when creating or fixing a repository development workflow.
 ---
 
 # Dev Workflow - Monorepo Task Automation Specialist

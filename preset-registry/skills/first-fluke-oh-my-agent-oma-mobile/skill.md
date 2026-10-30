@@ -1,6 +1,8 @@
 ---
 name: oma-mobile
-description: "Implement Flutter, React Native, native Swift, or native Kotlin Android apps. Use for mobile screens, widgets, platform integrations, and application data flows."
+description: Implement Flutter, React Native, native Swift, or native Kotlin
+  Android apps. Use for mobile screens, widgets, platform integrations, and
+  application data flows.
 ---
 
 # Mobile Agent - Cross-Platform Mobile Specialist

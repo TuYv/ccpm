@@ -1,6 +1,7 @@
 ---
 name: oma-observability
-description: "Design or troubleshoot telemetry, SLOs, and incident diagnostics. Route to the relevant signal, system boundary, or vendor guide."
+description: Design or troubleshoot telemetry, SLOs, and incident diagnostics.
+  Route to the relevant signal, system boundary, or vendor guide.
 ---
 
 # Observability Agent - Intent-based Router

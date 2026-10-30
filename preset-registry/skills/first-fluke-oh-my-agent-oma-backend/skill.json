@@ -1,7 +1,7 @@
 {
   "id": "first-fluke-oh-my-agent-oma-backend",
   "name": "oma-backend",
-  "description": "Backend specialist for APIs, databases, authentication with clean architecture (Repository/Service/Router pattern). Use for API, endpoint, REST, database, server, migration, and auth work.",
+  "description": "Implement server APIs, authentication, and application data access. Schema modeling and query tuning use oma-db.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -13,13 +13,13 @@
   "install_path": ".claude/skills/oma-backend/SKILL.md",
   "source": {
     "repo": "first-fluke/oh-my-agent",
-    "url": "https://github.com/first-fluke/oh-my-agent/blob/main/benchmarks/runs/oma/.agents/skills/oma-backend/SKILL.md",
-    "path": "benchmarks/runs/oma/.agents/skills/oma-backend/SKILL.md",
+    "url": "https://github.com/first-fluke/oh-my-agent/blob/main/.claude-plugin/directory/skills/oma-backend/SKILL.md",
+    "path": ".claude-plugin/directory/skills/oma-backend/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-30T03:14:34.010Z",
+    "discovered_at": "2026-10-30T09:26:35.806Z",
     "stars": 1355,
     "language": "TypeScript",
-    "pushed_at": "2026-10-29T03:58:04Z",
+    "pushed_at": "2026-10-30T07:38:51Z",
     "license": "MIT"
   }
 }

@@ -1,6 +1,8 @@
 ---
 name: oma-db
-description: "Design schemas and migrations, tune queries, or plan vector retrieval and database operations. Application API implementation uses oma-backend."
+description: Design schemas and migrations, tune queries, or plan vector
+  retrieval and database operations. Application API implementation uses
+  oma-backend.
 ---
 
 # DB Agent - Data Modeling & Database Architecture Specialist

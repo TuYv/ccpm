@@ -1,0 +1,25 @@
+{
+  "id": "jimliu-baoyu-design-dataviz",
+  "name": "dataviz",
+  "description": "Use this skill whenever you are about to create ANY chart, graph, plot, dashboard, or data visualization, in ANY output medium (HTML/React artifact, inline SVG, matplotlib/plotly/d3/Recharts, PNG). Read it BEFORE writing the first line of chart code, choosing chart colors, building a stat tile / KPI row, or laying out a dashboard. Teaches a design-system-agnostic method - form heuristic, color formula with a runnable validator, mark specs, interaction rules. Default palette in references/palette",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "JimLiu",
+  "install_path": ".claude/skills/dataviz/SKILL.md",
+  "source": {
+    "repo": "JimLiu/baoyu-design",
+    "url": "https://github.com/JimLiu/baoyu-design/blob/main/skills/dataviz/SKILL.md",
+    "path": "skills/dataviz/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-30T09:19:41.360Z",
+    "stars": 5324,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-30T06:48:22Z",
+    "license": "MIT"
+  }
+}

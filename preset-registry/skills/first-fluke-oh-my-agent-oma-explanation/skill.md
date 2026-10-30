@@ -1,6 +1,8 @@
 ---
 name: oma-explanation
-description: "Create an offline HTML explanation of a code change (diff, PR, branch) or of a topic, system, or question. Use when a visual walkthrough document is requested."
+description: Create an offline HTML explanation of a code change (diff, PR,
+  branch) or of a topic, system, or question. Use when a visual walkthrough
+  document is requested.
 ---
 
 # oma-explanation — Interactive HTML Explainer

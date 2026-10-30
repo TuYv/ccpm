@@ -1,6 +1,7 @@
 ---
 name: oma-orchestration
-description: "Dispatch and supervise parallel specialist agents with durable task state. Use when automated multi-agent execution is requested."
+description: Dispatch and supervise parallel specialist agents with durable task
+  state. Use when automated multi-agent execution is requested.
 ---
 
 # Orchestration - Automated Multi-Agent Coordination

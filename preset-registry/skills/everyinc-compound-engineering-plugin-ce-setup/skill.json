@@ -1,7 +1,7 @@
 {
   "id": "everyinc-compound-engineering-plugin-ce-setup",
   "name": "ce-setup",
-  "description": "Check Compound Engineering health and repo-local config, or scaffold a Compound Pack with `pack:<id>`.",
+  "description": "Check Compound Engineering health and repo-local config, scaffold a Compound Pack with `pack:<id>`, or draft coding standards and review docs with `standards`.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/EveryInc/compound-engineering-plugin/blob/main/skills/ce-setup/SKILL.md",
     "path": "skills/ce-setup/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-30T03:08:06.629Z",
-    "stars": 25778,
+    "discovered_at": "2026-10-30T09:20:50.100Z",
+    "stars": 25783,
     "language": "TypeScript",
-    "pushed_at": "2026-10-30T02:59:50Z",
+    "pushed_at": "2026-10-30T04:49:43Z",
     "license": "MIT"
   }
 }

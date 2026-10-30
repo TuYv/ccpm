@@ -1,6 +1,7 @@
 ---
 name: oma-docs
-description: "Check documentation references, sync docs to code changes, and detect translation drift. Use for documentation maintenance in a repository."
+description: Check documentation references, sync docs to code changes, and
+  detect translation drift. Use for documentation maintenance in a repository.
 ---
 
 # Documentation Maintenance

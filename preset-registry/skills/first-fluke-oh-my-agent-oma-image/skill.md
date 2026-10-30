@@ -1,6 +1,8 @@
 ---
 name: oma-image
-description: "Generate raster images or reference-guided variations through the OMA image CLI. Use for image assets or explicit vendor comparisons; pixel editing uses an editor."
+description: Generate raster images or reference-guided variations through the
+  OMA image CLI. Use for image assets or explicit vendor comparisons; pixel
+  editing uses an editor.
 ---
 
 # Image Agent - Multi-Vendor Image Router
