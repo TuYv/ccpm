@@ -1,7 +1,7 @@
 {
   "id": "daymade-claude-code-skills-codex-1m-context-window-setup",
   "name": "codex-1m-context-window-setup",
-  "description": ">- Configures and verifies an expanded, model-aware context window for OpenAI Codex CLI and Desktop. Use when Codex shows ~258K context, you want 500K or 1M tokens, auto-compaction fires too often, or model_context_window/model_auto_compact_token_limit needs repair. Not for changing the selected model or other Codex settings.",
+  "description": ">- Configures and verifies an expanded, model-aware context window for OpenAI Codex CLI and Desktop. Use to inspect local context settings, lower or set the auto-compaction threshold, expand ~258K context to 500K or 1M, or repair model_context_window/model_auto_compact_token_limit. Not for changing the selected model or other Codex settings.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-codex/codex-1m-context-window-setup/SKILL.md",
     "path": "daymade-codex/codex-1m-context-window-setup/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-29T17:58:35.809Z",
+    "discovered_at": "2026-10-29T22:51:53.515Z",
     "stars": 1503,
     "language": "Python",
-    "pushed_at": "2026-10-29T17:51:49Z",
+    "pushed_at": "2026-10-29T22:50:20Z",
     "license": "MIT"
   }
 }
