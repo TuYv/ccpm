@@ -1,0 +1,25 @@
+{
+  "id": "aeonfun-aeon-github-filing-registry",
+  "name": "github-filing-registry",
+  "description": "Track every issue and PR filed across upstream repositories — status, evidence, next_action, and history. Replaces standalone Python scripts with a pure shell + gh CLI interface.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "aeonfun",
+  "install_path": ".claude/skills/github-filing-registry/SKILL.md",
+  "source": {
+    "repo": "aeonfun/aeon",
+    "url": "https://github.com/aeonfun/aeon/blob/main/skills/github-filing-registry/SKILL.md",
+    "path": "skills/github-filing-registry/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-30T03:13:37.061Z",
+    "stars": 785,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-29T23:30:40Z",
+    "license": "MIT"
+  }
+}
