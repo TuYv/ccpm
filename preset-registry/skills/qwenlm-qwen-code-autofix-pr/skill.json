@@ -1,7 +1,7 @@
 {
   "id": "qwenlm-qwen-code-autofix-pr",
   "name": "autofix-pr",
-  "description": "Watch a pull request and fix it from a worktree of its own - CI failures, review feedback from trusted authors and merge conflicts are fixed, pushed to the PR branch and answered on the PR under the user's git and gh identity. Usage - /autofix-pr [<pr>|<pr-url>] [--once] [--every <minutes>] [--no-reply] [--yes] [instructions], /autofix-pr status [<pr>], /autofix-pr resume [<pr>], /autofix-pr stop [<pr>].",
+  "description": "Watch a pull request and fix it from a worktree of its own (or, with --in-place, the user's own checkout) - CI failures, review feedback from trusted authors and merge conflicts are fixed, pushed to the PR branch and answered on the PR under the user's git and gh identity. Usage - /autofix-pr [<pr>|<pr-url>] [--once] [--in-place] [--every <minutes>] [--no-reply] [--yes] [instructions], /autofix-pr status [<pr>], /autofix-pr resume [<pr>], /autofix-pr stop [<pr>].",
   "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/QwenLM/qwen-code/blob/main/packages/core/src/skills/bundled/autofix-pr/SKILL.md",
     "path": "packages/core/src/skills/bundled/autofix-pr/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-30T21:54:05.593Z",
-    "stars": 28839,
+    "discovered_at": "2026-10-31T01:52:09.227Z",
+    "stars": 28840,
     "language": "TypeScript",
-    "pushed_at": "2026-10-30T20:45:21Z",
+    "pushed_at": "2026-10-31T01:41:41Z",
     "license": "Apache-2.0"
   }
 }

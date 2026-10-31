@@ -1,0 +1,25 @@
+{
+  "id": "gatewai-dev-framefields-framefields-vision",
+  "name": "framefields-vision",
+  "description": "On-device computer vision in framefields — object detection and tracking, instance segmentation, pose, person mattes and cutouts (RTMDet-Ins, RTMO, Selfie Segmenter), and prompted video tracking of a specific object or several people with SAM 2.1 Tiny or Small (point/box prompts) and SAM 3 (text prompts such as \"man in white shirt\", multiple objects at once). Covers which API to use (withVision, comp.vision, analyzeVisionSequence), every pinned ONNX model with sizes and licenses, GPU/CUDA/CPU ba",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "gatewai-dev",
+  "install_path": ".claude/skills/framefields-vision/SKILL.md",
+  "source": {
+    "repo": "gatewai-dev/framefields",
+    "url": "https://github.com/gatewai-dev/framefields/blob/main/plugins/framefields/skills/framefields-vision/SKILL.md",
+    "path": "plugins/framefields/skills/framefields-vision/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-31T01:51:55.078Z",
+    "stars": 501,
+    "language": "TypeScript",
+    "pushed_at": "2026-10-30T22:31:35Z",
+    "license": "Apache-2.0"
+  }
+}

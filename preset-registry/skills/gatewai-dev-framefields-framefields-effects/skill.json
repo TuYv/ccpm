@@ -1,7 +1,7 @@
 {
   "id": "gatewai-dev-framefields-framefields-effects",
   "name": "framefields-effects",
-  "description": "Apply, configure, and modulate WebGPU post-processing shaders, stylized looks (pixel art, ASCII, VHS, comic, watercolor, risograph, holographic — and which look fits which request), cinematic color grading, tone mapping, procedural VFX, and on-device vision (object tracking, instance segmentation, pose, person mattes) in framefields. Use when adding blur, grain, LUTs, relighting, curves, greenscreen color keying, subject cutouts, or tracking-driven effects in framefields compositions.",
+  "description": "Apply, configure, and modulate WebGPU post-processing shaders, stylized looks (pixel art, ASCII, VHS, comic, watercolor, risograph, holographic — and which look fits which request), cinematic color grading, tone mapping, and procedural VFX in framefields. Use when adding blur, grain, LUTs, relighting, curves, greenscreen color keying, or effects driven by vision signals in framefields compositions; detection, cutouts, pose and SAM tracking themselves are in framefields-vision.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/gatewai-dev/framefields/blob/main/plugins/framefields/skills/framefields-effects/SKILL.md",
     "path": "plugins/framefields/skills/framefields-effects/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-30T21:53:49.158Z",
+    "discovered_at": "2026-10-31T01:51:54.732Z",
     "stars": 501,
     "language": "TypeScript",
-    "pushed_at": "2026-10-30T21:46:53Z",
+    "pushed_at": "2026-10-30T22:31:35Z",
     "license": "Apache-2.0"
   }
 }
