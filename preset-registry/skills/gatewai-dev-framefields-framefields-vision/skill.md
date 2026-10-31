@@ -6,7 +6,7 @@ description: On-device computer vision in framefields — object detection and t
 # framefields-vision
 
 ## Setup
-Import from [`framefields`](https://www.npmjs.com/package/framefields). If the project has no framefields setup yet, follow the `framefields` skill first. Prompted tracking (SAM) also needs `@framefields/vision-sam` (see [SAM](#prompted-tracking-with-sam)). Effects that consume vision (blur, grading, outlines) are in `framefields-effects`; rendering and frame checks in `framefields-render`.
+Import from [`framefields`](https://www.npmjs.com/package/framefields). If the project has no framefields setup yet, follow the `framefields` skill first. Effects that consume vision (blur, grading, outlines) are in `framefields-effects`; rendering and frame checks in `framefields-render`.
 
 Vision runs ONNX models locally. Nothing is sent anywhere. Models download on first use from pinned Hugging Face revisions, are checked against their exact size and SHA-256, and are cached in `$FRAMEFIELDS_MODELS_DIR` (default `~/.cache/framefields/models`).
 
@@ -54,7 +54,7 @@ Video tracking at 1008², plus text ("concept") selection. Only the image encode
 
 That is about 1.75 GB on a GPU and 1.2 GB on the CPU. The text graphs load only for text prompts.
 
-Why fp16 on the GPU, measured for one 1008² frame on an M1 Pro: WebGPU fp16 took 3.65 s, q4f16 4.43 s, q4 6.63 s, and int8 140 s (its ops fall back to the CPU). fp16 is also the closest to full precision. On WebGPU, 4-bit weights are dequantized before every matmul, so they save disk and memory, not time. The backend-to-precision table is `SAM3_ENCODER` in `@framefields/vision-sam`; `sam3.precision: "fp16" | "q4f16" | "q4"` overrides it.
+Why fp16 on the GPU, measured for one 1008² frame on an M1 Pro: WebGPU fp16 took 3.65 s, q4f16 4.43 s, q4 6.63 s, and int8 140 s (its ops fall back to the CPU). fp16 is also the closest to full precision. On WebGPU, 4-bit weights are dequantized before every matmul, so they save disk and memory, not time. The backend-to-precision table is `SAM3_ENCODER` in `framefields/sam`; `sam3.precision: "fp16" | "q4f16" | "q4"` overrides it.
 
 ## Backends
 
@@ -93,7 +93,7 @@ const vision = comp.withVision({ enableSegmentation: true, enablePose: true });
 Layer.video("assets/dancer.mp4").withVision({ mode: "matte", enableSegmentation: true });
 ```
 
-Node modes: `passthrough`, `mask`, `matte`, `crop`, `skeleton`, `boxes`, `tracking`. For `mask` / `matte` / `crop`, `matteSource: "instance"` (default; any COCO class, overlapping parts such as a dress merged into the subject) or `"selfie"` (people only, fastest). `confidence` (default 0.3) and `classes: ["person", …]` filter detections.
+Node modes: `passthrough`, `mask`, `matte`, `crop`, `skeleton`, `boxes`, `tracking`. `skeleton` draws only the pose on transparency: the first person detected, or, for a layer of a `comp.vision` clip, the pose that clip matched to its selection. For `mask` / `matte` / `crop`, `matteSource: "instance"` (default; any COCO class, overlapping parts such as a dress merged into the subject) or `"selfie"` (people only, fastest). `confidence` (default 0.3) and `classes: ["person", …]` filter detections.
 
 Measured per 1280–2048 px frame on CPU (`onnxruntime-node`); the GPU is faster:
 
@@ -151,13 +151,9 @@ Detection picks "the largest person". Use SAM when the subject is **a specific**
 - **SAM 3:** the subject has to be found from a description, or several people or objects must be tracked at once. It is the most expensive, so trim to the stretch you need.
 - Unsure between Tiny and Small: prototype with Tiny on a short trimmed stretch, inspect the masks, and switch to Small if edges, small parts or identity fail.
 
-### Install and license
+### License
 
-```bash
-pnpm add @framefields/vision-sam
-```
-
-`@framefields/vision-sam` is an optional peer of `framefields`, Apache-2.0 like the rest of framefields. It is loaded only when a clip uses `sam2` or `sam3`; without it, those clips fail with an install message. SAM 2.1's weights are Apache-2.0 and need no acceptance. SAM 3's weights are under Meta's SAM License, so `sam3` needs explicit acceptance before anything downloads: `acceptSamLicense: true` on the clip (or `acceptLicense: true` inside `sam3`), or `FRAMEFIELDS_ACCEPT_SAM_LICENSE=1`. Ask the user before accepting it on their behalf. Import `Sam2Tracker` / `Sam3Tracker` from `@framefields/vision-sam` when you drive SAM directly.
+The SAM code ships in `framefields`, Apache-2.0 like the rest of it, and loads only when a clip uses `sam2` or `sam3`; nothing extra to install. SAM 2.1's weights are Apache-2.0 and need no acceptance. SAM 3's weights are under Meta's SAM License, so `sam3` needs explicit acceptance before anything downloads: `acceptSamLicense: true` on the clip (or `acceptLicense: true` inside `sam3`), or `FRAMEFIELDS_ACCEPT_SAM_LICENSE=1`. Ask the user before accepting it on their behalf. Import `Sam2Tracker` / `Sam3Tracker` from `framefields/sam` when you drive SAM directly.
 
 ### Prompts
 
@@ -223,10 +219,11 @@ Layer.box({
 - **Text prompts are concepts.** Name what sets the target apart in that shot. In a crowd where everyone shows a white collar, "man in white shirt" picks a student. In the same film's wide shot, where only he has no blazer, it picks him. Check the first frame of every prompt.
 - **Several objects** (`maxObjects`): one encoder pass per frame serves every track, and each track keeps its own memory. Where tracks overlap, the more confident one keeps the pixel. `signals.objects.get(k)` and `signals.masks` carry tracks `1…N`; the clip's matte and subject are all tracks merged. A later text prompt re-selects every track (IDs renumber); a points prompt with `object: k` seeds or corrects track `k` only (the next unused ID adds one).
 - **One entity for a whole group** (`merge: true`): every instance the text matches (up to `maxObjects`, default all) becomes one seed mask, tracked as one object with one memory. Use it when you need the group's mask or matte (cut out a crowd, grade everyone but the hero), not each member's box; it costs the same as one track however many match (4.1 s per frame for a whole crowd of students on an M1 Pro). Use `maxObjects` without `merge` when each member needs its own track, at about 0.7 s per member per frame.
+- **People who appear later** (`redetect: N`): a text selection is made once, on the prompt frame; anyone missed there, uncovered later, or lost by the tracker never joins on their own. `redetect: N` runs the text again every N frames and adds what no track covers: into the one object with `merge`, as new track IDs up to `maxObjects` otherwise. On a 4 s close-up where the man in front bends away, a merged "students in black blazers" group kept 46–61% of the frame through the end instead of falling to 22–33%. Each pass costs about as much as the prompt frame's selection (about 50 s on an M1 Pro), so pick N for how fast people enter the shot (10–25 frames), not 1.
 - Two text-prompted clips of one shot can claim the same person (a "student" track on the hero). Prefer prompts that exclude each other.
 - **Corrections and cuts.** A prompt on a later frame resets that object's memory. Re-prompt after hard cuts or long occlusions; appearance tracking cannot guarantee re-identification.
 - An explicit selection never falls back to another detected person. If its mask cannot align with a matte layer (a different aspect ratio), the render fails. Matte at the source aspect ratio and crop afterwards.
-- SAM gives masks, not skeletons: `pose: true` matches an RTMO pose to the selection. Default smoothing is 0, and an absent object stays empty.
+- SAM gives masks, not skeletons: `pose: true` (opt-in for SAM clips) matches an RTMO pose to the selection, the person whose keypoints fall most inside its mask. A `withVision({ mode: "skeleton" })` layer of the same clip draws that matched pose for the frame on screen; without `pose: true` on a SAM clip it fails instead of drawing whoever is detected first. Default smoothing is 0, and an absent object stays empty.
 - `clip.release()` frees the SAM sessions. Analysed frames stay readable.
 
 ### Singular or plural: one selection per group
@@ -249,7 +246,7 @@ Read the request's number before writing any vision code.
 - Every SAM 3 clip in a process shares one image encoder and reuses its result per frame. Tracking the hero and the crowd of one source costs one encoder pass, not two.
 - Setup (loading the models, then text selection on the prompt frame) takes about 2 minutes on an M1 Pro. Measured there: a 20-frame stretch with 6 tracks (hero + 5 others) renders in about 5 minutes; a 15 s clip at 25 fps is estimated at about 55 minutes. A CUDA GPU should be much faster; the CPU image encoder is about 9× slower than WebGPU.
 - Results persist like other clip vision, and the cache key includes every prompt, the model revisions and the encoder precision. Re-rendering after changing layout, colours or effects skips SAM entirely, so prototype prompts on a short trimmed stretch first.
-- Offline or CI: download the weights on a connected machine once, then copy `~/.cache/framefields/models`, or point `FRAMEFIELDS_MODELS_BASE_URL` at a mirror. `SAM_MODELS` (`@framefields/vision-sam`) lists every file with its URL, size and SHA-256.
+- Offline or CI: download the weights on a connected machine once, then copy `~/.cache/framefields/models`, or point `FRAMEFIELDS_MODELS_BASE_URL` at a mirror. `SAM_MODELS` (`framefields/sam`) lists every file with its URL, size and SHA-256.
 
 ## Recipes
 
@@ -309,7 +306,6 @@ report.tracks; // [{ trackId, category, frames: [start, end], centerPath, … }]
 | SAM 3 text picks the wrong one | Name what is unique in **that** shot; or use a box prompt (`points` with labels 2/3) |
 | Part of a fast-moving garment drops out | `variant: "m"`, or `keyBackground: true` |
 | Faint halo on dark backgrounds | Lower `featherRadius`, or raise `maskThreshold` (e.g. `0.6`) |
-| "Prompted sam2/sam3 tracking needs the optional @framefields/vision-sam package" | `pnpm add @framefields/vision-sam` |
 | "Meta SAM License agreement required" (SAM 3) | `acceptSamLicense: true` or `FRAMEFIELDS_ACCEPT_SAM_LICENSE=1`, once the user accepts the license |
 | "A prompted clip matte requires the source aspect ratio" | Matte at the source aspect, crop afterwards |
 | Log says `Inference on the CPU` on a GPU machine | The log's `reason` says why; on Linux NVIDIA check the CUDA 12 / cuDNN 9 libraries, or force `FRAMEFIELDS_VISION_PROVIDER` to see the error |
