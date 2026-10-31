@@ -1,0 +1,25 @@
+{
+  "id": "coder-claudecode-nvim-verify-diff-lifecycle",
+  "name": "verify-diff-lifecycle",
+  "description": "Model-check the claudecode.nvim openDiff answer lifecycle (TLA+/TLC) against guards read from the current Lua code. Use after a change to how diffs are resolved, replaced, closed, or answered, or to how openDiff is called (lua/claudecode/diff.lua, diff_inline.lua, server/init.lua, tools/init.lua, tools/open_diff.lua, the :ClaudeCodeCloseAllDiffs command in init.lua), and before trusting such a change.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "coder",
+  "install_path": ".claude/skills/verify-diff-lifecycle/SKILL.md",
+  "source": {
+    "repo": "coder/claudecode.nvim",
+    "url": "https://github.com/coder/claudecode.nvim/blob/main/.agents/skills/verify-diff-lifecycle/SKILL.md",
+    "path": ".agents/skills/verify-diff-lifecycle/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-31T19:39:53.194Z",
+    "stars": 3146,
+    "language": "Lua",
+    "pushed_at": "2026-10-31T19:38:51Z",
+    "license": "MIT"
+  }
+}
