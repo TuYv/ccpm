@@ -1,0 +1,25 @@
+{
+  "id": "jasoncolapietro-suede-creator-skills-suede-component-lab",
+  "name": "suede-component-lab",
+  "description": "Use when asked \\\"stress test this component\\\", for a component workbench with reachable product states, or for stress fixtures and live variants of an existing UI component. Covers loading, empty, error, success, focus, disabled and permission scenarios. NOT FOR: whole-flow or UI diff review (use suede-design), mechanism explanations (use suede-interface-explain), funnel architecture (use suede-site-alchemy), or general correctness and payment review (use suede-code).",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "JasonColapietro",
+  "install_path": ".claude/skills/suede-component-lab/SKILL.md",
+  "source": {
+    "repo": "JasonColapietro/suede-creator-skills",
+    "url": "https://github.com/JasonColapietro/suede-creator-skills/blob/main/skills/suede-component-lab/SKILL.md",
+    "path": "skills/suede-component-lab/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-10-31T07:14:52.613Z",
+    "stars": 126,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-31T06:42:03Z",
+    "license": "MIT"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "id": "addyosmani-agent-skills-git-workflow-and-versioning",
   "name": "git-workflow-and-versioning",
-  "description": "Structures git workflow practices. Use when making any code change. Use when committing, branching, resolving conflicts, splitting uncommitted work in a messy working tree into clean atomic commits, opening or reviewing a pull request (PR), pushing to a remote, or when you need to organize work across multiple parallel streams. Use when cutting a release, choosing a semantic version bump, tagging, or writing a changelog.",
+  "description": "Structures git workflow practices. Use when making any code change. Use when committing, branching, resolving conflicts, splitting uncommitted work in a messy working tree into clean atomic commits, opening or reviewing a pull request (PR), pushing to a remote, or when you need to organize work across multiple parallel streams. Use when cutting a release, choosing a semantic version bump, tagging, or writing a changelog. Use when asked to write a commit message or a changelog entry for a change,",
   "category": "文档写作",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/addyosmani/agent-skills/blob/main/skills/git-workflow-and-versioning/SKILL.md",
     "path": "skills/git-workflow-and-versioning/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-31T01:44:35.104Z",
-    "stars": 112011,
+    "discovered_at": "2026-10-31T07:58:04.504Z",
+    "stars": 112056,
     "language": "JavaScript",
-    "pushed_at": "2026-10-29T05:06:58Z",
+    "pushed_at": "2026-10-31T06:40:29Z",
     "license": "MIT"
-  },
-  "summary_zh": "用于规范代码改动到发布的 Git 流程，适合分支协作、原子提交、PR 审查、冲突处理、版本发布与变更日志维护。"
+  }
 }

@@ -1,7 +1,7 @@
 {
   "id": "addyosmani-agent-skills-security-and-hardening",
   "name": "security-and-hardening",
-  "description": "Hardens code against vulnerabilities. Use when auditing an input handler for vulnerabilities, when handling user input, authentication, data storage, or external integrations, or when checking a login flow is safe against the OWASP Top Ten. Use when building any feature that accepts untrusted data, manages user sessions, or interacts with third-party services. Use when auditing dependencies for known vulnerabilities, triaging package-manager audit findings, or assessing supply-chain risk in a ne",
+  "description": "Hardens code against vulnerabilities. Use when auditing an input handler for vulnerabilities, when handling user input, authentication, data storage, or external integrations, or when checking a login flow is safe against the OWASP Top Ten. Use when building any feature that accepts untrusted data, manages user sessions or session cookies, or interacts with third-party services. Use when auditing dependencies for known vulnerabilities, triaging package-manager audit findings, or assessing supply",
   "category": "数据分析",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/addyosmani/agent-skills/blob/main/skills/security-and-hardening/SKILL.md",
     "path": "skills/security-and-hardening/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-31T01:44:35.915Z",
-    "stars": 112011,
+    "discovered_at": "2026-10-31T07:58:05.523Z",
+    "stars": 112056,
     "language": "JavaScript",
-    "pushed_at": "2026-10-29T05:06:58Z",
+    "pushed_at": "2026-10-31T06:40:29Z",
     "license": "MIT"
-  },
-  "summary_zh": "用于发现和修复代码中的安全漏洞，适合处理不可信输入、登录认证、会话管理、数据存储、第三方集成及依赖供应链审计等场景。"
+  }
 }
