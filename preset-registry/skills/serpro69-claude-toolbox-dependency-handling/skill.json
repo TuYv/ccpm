@@ -1,0 +1,25 @@
+{
+  "id": "serpro69-claude-toolbox-dependency-handling",
+  "name": "dependency-handling",
+  "description": "| TRIGGER when: adding or upgrading any dependency — library, SDK, framework, API, IaC API version (K8s/Terraform/Helm), CRD, or container image. Use BEFORE writing the call. Forces context7/capy lookup instead of guessing.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "serpro69",
+  "install_path": ".claude/skills/dependency-handling/SKILL.md",
+  "source": {
+    "repo": "serpro69/claude-toolbox",
+    "url": "https://github.com/serpro69/claude-toolbox/blob/master/kodex-plugin/skills/dependency-handling/SKILL.md",
+    "path": "kodex-plugin/skills/dependency-handling/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-11-01T18:02:39.510Z",
+    "stars": 154,
+    "language": "Shell",
+    "pushed_at": "2026-10-31T12:44:43Z",
+    "license": null
+  }
+}

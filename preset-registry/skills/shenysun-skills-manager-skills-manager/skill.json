@@ -1,0 +1,25 @@
+{
+  "id": "shenysun-skills-manager-skills-manager",
+  "name": "skills-manager",
+  "description": "Operate the skills-manager CLI — manage a local skill hub (install, import, distribute to agents/projects, update) and backfill provenance for source-less skills (adopt lockfile evidence, search the ecosystem for candidates, verify, get the user's approval, write sources). Use this skill whenever the user mentions skills-manager, the skill home / hub (~/.skills-manager), importing skills from agent runtime directories, distributing or undistributing skills, updating skills from their sources, ta",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "shenysun",
+  "install_path": ".claude/skills/skills-manager/SKILL.md",
+  "source": {
+    "repo": "shenysun/skills-manager",
+    "url": "https://github.com/shenysun/skills-manager/blob/main/skills/skills-manager/SKILL.md",
+    "path": "skills/skills-manager/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-01T18:01:11.780Z",
+    "stars": 180,
+    "language": "TypeScript",
+    "pushed_at": "2026-10-27T03:20:27Z",
+    "license": "MIT"
+  }
+}

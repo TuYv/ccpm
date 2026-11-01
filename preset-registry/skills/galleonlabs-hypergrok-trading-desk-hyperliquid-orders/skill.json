@@ -1,0 +1,25 @@
+{
+  "id": "galleonlabs-hypergrok-trading-desk-hyperliquid-orders",
+  "name": "hyperliquid-orders",
+  "description": "Place, cancel and modify Hyperliquid orders correctly from the desk computer - limit and IOC (market-style) orders, take-profit and stop-loss trigger orders with grouping, client order ids, reduce-only, batch actions, price and size rounding, and how to read every response status. Write path - Execution Trader only, on an approved ticket. Use for any order action and for reconciling by cloid.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "galleonlabs",
+  "install_path": ".claude/skills/hyperliquid-orders/SKILL.md",
+  "source": {
+    "repo": "galleonlabs/hypergrok-trading-desk",
+    "url": "https://github.com/galleonlabs/hypergrok-trading-desk/blob/main/skills/hyperliquid-orders/SKILL.md",
+    "path": "skills/hyperliquid-orders/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-01T18:00:16.065Z",
+    "stars": 258,
+    "language": "Python",
+    "pushed_at": "2026-11-01T09:49:57Z",
+    "license": "MIT"
+  }
+}

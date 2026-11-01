@@ -1,0 +1,25 @@
+{
+  "id": "ajnart-self-host-release-visual",
+  "name": "release-visual",
+  "description": "Generate the self-host release announcement visual when preparing a release or announcing newly added Apps. Discover added Apps between refs and render the approved Logo hub with pulses, rather than inventing a new layout.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ajnart",
+  "install_path": ".claude/skills/release-visual/SKILL.md",
+  "source": {
+    "repo": "ajnart/self-host",
+    "url": "https://github.com/ajnart/self-host/blob/main/.claude/skills/release-visual/SKILL.md",
+    "path": ".claude/skills/release-visual/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-01T18:01:10.540Z",
+    "stars": 1475,
+    "language": "Go",
+    "pushed_at": "2026-10-31T14:43:15Z",
+    "license": "Apache-2.0"
+  }
+}

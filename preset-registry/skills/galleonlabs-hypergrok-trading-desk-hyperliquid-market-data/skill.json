@@ -1,0 +1,25 @@
+{
+  "id": "galleonlabs-hypergrok-trading-desk-hyperliquid-market-data",
+  "name": "hyperliquid-market-data",
+  "description": "Read live Hyperliquid market data from the desk computer with curl or the Python SDK - mid, mark and oracle prices, order book depth, funding (current, predicted, historical), open interest, volume, candles, perp and spot metadata, margin tiers, and how to save datasets for the strategy lab. Read-only, no key. Use for any market brief, depth read, funding question or data pull.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "galleonlabs",
+  "install_path": ".claude/skills/hyperliquid-market-data/SKILL.md",
+  "source": {
+    "repo": "galleonlabs/hypergrok-trading-desk",
+    "url": "https://github.com/galleonlabs/hypergrok-trading-desk/blob/main/skills/hyperliquid-market-data/SKILL.md",
+    "path": "skills/hyperliquid-market-data/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-01T18:00:15.854Z",
+    "stars": 258,
+    "language": "Python",
+    "pushed_at": "2026-11-01T09:49:57Z",
+    "license": "MIT"
+  }
+}

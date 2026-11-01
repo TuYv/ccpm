@@ -1,0 +1,25 @@
+{
+  "id": "screenpipe-screenpipe-screenpipe-meeting-follow-up",
+  "name": "screenpipe-meeting-follow-up",
+  "description": "Capture decisions and commitments after a meeting and draft a concise follow-up.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "screenpipe",
+  "install_path": ".claude/skills/screenpipe-meeting-follow-up/SKILL.md",
+  "source": {
+    "repo": "screenpipe/screenpipe",
+    "url": "https://github.com/screenpipe/screenpipe/blob/main/crates/screenpipe-core/assets/skills/screenpipe-meeting-follow-up/SKILL.md",
+    "path": "crates/screenpipe-core/assets/skills/screenpipe-meeting-follow-up/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-01T18:01:07.109Z",
+    "stars": 22200,
+    "language": "Rust",
+    "pushed_at": "2026-11-01T00:08:59Z",
+    "license": null
+  }
+}

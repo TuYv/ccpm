@@ -1,0 +1,25 @@
+{
+  "id": "serpro69-claude-toolbox-after",
+  "name": "example-skill",
+  "description": "An example skill for testing diff-skill evaluation.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "serpro69",
+  "install_path": ".claude/skills/after/SKILL.md",
+  "source": {
+    "repo": "serpro69/claude-toolbox",
+    "url": "https://github.com/serpro69/claude-toolbox/blob/master/kodex-plugin/skills/diff-skill/evals/known-degradation/test-files/after/SKILL.md",
+    "path": "kodex-plugin/skills/diff-skill/evals/known-degradation/test-files/after/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-11-01T18:02:40.187Z",
+    "stars": 154,
+    "language": "Shell",
+    "pushed_at": "2026-10-31T12:44:43Z",
+    "license": null
+  }
+}

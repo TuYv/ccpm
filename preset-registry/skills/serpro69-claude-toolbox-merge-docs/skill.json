@@ -1,0 +1,25 @@
+{
+  "id": "serpro69-claude-toolbox-merge-docs",
+  "name": "merge-docs",
+  "description": "| Compare and merge two design docs for the same feature into a single source of truth. Use when you have competing or complementary design/implementation docs (e.g. from separate design runs) that need reconciling into one unified document.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "serpro69",
+  "install_path": ".claude/skills/merge-docs/SKILL.md",
+  "source": {
+    "repo": "serpro69/claude-toolbox",
+    "url": "https://github.com/serpro69/claude-toolbox/blob/master/kodex-plugin/skills/merge-docs/SKILL.md",
+    "path": "kodex-plugin/skills/merge-docs/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-11-01T18:02:41.346Z",
+    "stars": 154,
+    "language": "Shell",
+    "pushed_at": "2026-10-31T12:44:43Z",
+    "license": null
+  }
+}

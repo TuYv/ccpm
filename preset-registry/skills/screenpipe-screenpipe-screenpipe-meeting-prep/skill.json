@@ -1,0 +1,25 @@
+{
+  "id": "screenpipe-screenpipe-screenpipe-meeting-prep",
+  "name": "screenpipe-meeting-prep",
+  "description": "Prepare for a specific upcoming meeting using verified identity and prior context.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "screenpipe",
+  "install_path": ".claude/skills/screenpipe-meeting-prep/SKILL.md",
+  "source": {
+    "repo": "screenpipe/screenpipe",
+    "url": "https://github.com/screenpipe/screenpipe/blob/main/crates/screenpipe-core/assets/skills/screenpipe-meeting-prep/SKILL.md",
+    "path": "crates/screenpipe-core/assets/skills/screenpipe-meeting-prep/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-01T18:01:07.272Z",
+    "stars": 22200,
+    "language": "Rust",
+    "pushed_at": "2026-11-01T00:08:59Z",
+    "license": null
+  }
+}

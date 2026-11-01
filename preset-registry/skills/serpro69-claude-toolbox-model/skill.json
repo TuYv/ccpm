@@ -1,0 +1,25 @@
+{
+  "id": "serpro69-claude-toolbox-model",
+  "name": "model",
+  "description": "| Produce or update a domain-reference kit — the durable glossary + divergences/traps pages for a bounded context. Use for domain modelling, information architecture, building a domain glossary or domain model, mapping domain concepts to code (bindings), or surfacing the decidable questions stakeholders must close before design. Runs upstream of feature $kk:design as the first producer of the architecture flow, and emits artifacts $kk:review-architecture verifies. Triggers: \"model the domain\", \"",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "serpro69",
+  "install_path": ".claude/skills/model/SKILL.md",
+  "source": {
+    "repo": "serpro69/claude-toolbox",
+    "url": "https://github.com/serpro69/claude-toolbox/blob/master/kodex-plugin/skills/model/SKILL.md",
+    "path": "kodex-plugin/skills/model/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-11-01T18:02:41.513Z",
+    "stars": 154,
+    "language": "Shell",
+    "pushed_at": "2026-10-31T12:44:43Z",
+    "license": null
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "serpro69-claude-toolbox-handoff",
+  "name": "handoff",
+  "description": "| Explicitly invoke $kk:handoff to publish active-task context and a fresh-session starter prompt to a new secret GitHub gist. For restarting a conversation or switching providers or machines; requires the GitHub CLI. Not a local save.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "serpro69",
+  "install_path": ".claude/skills/handoff/SKILL.md",
+  "source": {
+    "repo": "serpro69/claude-toolbox",
+    "url": "https://github.com/serpro69/claude-toolbox/blob/master/kodex-plugin/skills/handoff/SKILL.md",
+    "path": "kodex-plugin/skills/handoff/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-11-01T18:02:40.874Z",
+    "stars": 154,
+    "language": "Shell",
+    "pushed_at": "2026-10-31T12:44:43Z",
+    "license": null
+  }
+}

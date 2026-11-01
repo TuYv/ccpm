@@ -1,0 +1,25 @@
+{
+  "id": "serpro69-claude-toolbox-greet",
+  "name": "greet",
+  "description": "Greet the user by name in their preferred language. Use when the user asks for a greeting or a one-line introduction message.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "serpro69",
+  "install_path": ".claude/skills/greet/SKILL.md",
+  "source": {
+    "repo": "serpro69/claude-toolbox",
+    "url": "https://github.com/serpro69/claude-toolbox/blob/master/kodex-plugin/skills/implement/evals/trivial-task-runs-pre-write-steps/test-files/skills/greet/SKILL.md",
+    "path": "kodex-plugin/skills/implement/evals/trivial-task-runs-pre-write-steps/test-files/skills/greet/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-11-01T18:02:41.033Z",
+    "stars": 154,
+    "language": "Shell",
+    "pushed_at": "2026-10-31T12:44:43Z",
+    "license": null
+  }
+}

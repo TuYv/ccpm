@@ -1,0 +1,25 @@
+{
+  "id": "sonilo-ai-skills-video-to-music",
+  "name": "video-to-music",
+  "description": "Score a video with original music using Sonilo — the model watches the cut and matches pacing, motion, and emotion, returning either the audio or a new video with the score muxed in. Use when the user has a finished video that needs a soundtrack. Every track is licensed and cleared for commercial use. For music with no video, use the text-to-music skill.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sonilo-ai",
+  "install_path": ".claude/skills/video-to-music/SKILL.md",
+  "source": {
+    "repo": "sonilo-ai/skills",
+    "url": "https://github.com/sonilo-ai/skills/blob/main/video-to-music/SKILL.md",
+    "path": "video-to-music/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-01T18:00:32.229Z",
+    "stars": 117,
+    "language": "Python",
+    "pushed_at": "2026-10-27T12:08:49Z",
+    "license": "MIT"
+  }
+}

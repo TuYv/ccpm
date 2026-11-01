@@ -1,0 +1,25 @@
+{
+  "id": "sonilo-ai-skills-text-to-music",
+  "name": "text-to-music",
+  "description": "Generate music from a text prompt using Sonilo — instrumental tracks, background beds, jingles, loops — when there is no video to score. Use when the user describes the music they want in words, with or without a length. Every track is licensed and cleared for commercial use. For scoring an existing video, use the video-to-music skill instead.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sonilo-ai",
+  "install_path": ".claude/skills/text-to-music/SKILL.md",
+  "source": {
+    "repo": "sonilo-ai/skills",
+    "url": "https://github.com/sonilo-ai/skills/blob/main/text-to-music/SKILL.md",
+    "path": "text-to-music/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-01T18:00:31.649Z",
+    "stars": 117,
+    "language": "Python",
+    "pushed_at": "2026-10-27T12:08:49Z",
+    "license": "MIT"
+  }
+}

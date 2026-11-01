@@ -1,0 +1,25 @@
+{
+  "id": "serpro69-claude-toolbox-chain-of-verification",
+  "name": "chain-of-verification",
+  "description": "| Apply Chain-of-Verification (CoVe) prompting to improve response accuracy through self-verification. Use when complex questions require fact-checking, technical accuracy, or multi-step reasoning.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "serpro69",
+  "install_path": ".claude/skills/chain-of-verification/SKILL.md",
+  "source": {
+    "repo": "serpro69/claude-toolbox",
+    "url": "https://github.com/serpro69/claude-toolbox/blob/master/kodex-plugin/skills/chain-of-verification/SKILL.md",
+    "path": "kodex-plugin/skills/chain-of-verification/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-11-01T18:02:38.945Z",
+    "stars": 154,
+    "language": "Shell",
+    "pushed_at": "2026-10-31T12:44:43Z",
+    "license": null
+  }
+}

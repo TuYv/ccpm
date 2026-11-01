@@ -1,0 +1,25 @@
+{
+  "id": "uizze-uizze-anti-ui-slop",
+  "name": "anti-ui-slop",
+  "description": "Stop coding agents from shipping generic UI. Use UIZZE's 800,000+ real web and iOS screens to build product-specific interfaces, define a design contract, cover required states, and run a hard finish gate. Use when designing, implementing, redesigning, critiquing, or pre-ship reviewing a web or iOS interface in Codex, Claude Code, Cursor, Copilot, or another coding agent. Trigger with \"anti-ui-slop\", \"stop UI slop\", \"ground this UI in real screens\", or \"run the UI finish gate\".",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "uizze",
+  "install_path": ".claude/skills/anti-ui-slop/SKILL.md",
+  "source": {
+    "repo": "uizze/uizze",
+    "url": "https://github.com/uizze/uizze/blob/main/skills/anti-ui-slop/SKILL.md",
+    "path": "skills/anti-ui-slop/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-01T18:00:10.281Z",
+    "stars": 78,
+    "language": "JavaScript",
+    "pushed_at": "2026-11-01T14:51:45Z",
+    "license": "MIT"
+  }
+}

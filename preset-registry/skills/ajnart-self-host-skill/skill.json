@@ -1,0 +1,25 @@
+{
+  "id": "ajnart-self-host-skill",
+  "name": "self-host",
+  "description": "Load when the person wants to run or own apps on their own machine, replace a subscription (Netflix, Google Photos, Dropbox, a password manager), or asks about anything already set up with self-host, such as \"where is my movie app?\".",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ajnart",
+  "install_path": ".claude/skills/skill/SKILL.md",
+  "source": {
+    "repo": "ajnart/self-host",
+    "url": "https://github.com/ajnart/self-host/blob/main/internal/skill/SKILL.md",
+    "path": "internal/skill/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-01T18:01:10.717Z",
+    "stars": 1475,
+    "language": "Go",
+    "pushed_at": "2026-10-31T14:43:15Z",
+    "license": "Apache-2.0"
+  }
+}

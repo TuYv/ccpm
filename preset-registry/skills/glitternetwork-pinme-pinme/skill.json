@@ -1,0 +1,25 @@
+{
+  "id": "glitternetwork-pinme-pinme",
+  "name": "pinme",
+  "description": "Use this skill when the user mentions \"pinme\", or needs to upload files, store to IPFS, create/publish/deploy websites or full-stack services (including frontend pages, backend APIs, database storage, email sending, etc.), or any feature requiring backend database/server support.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "glitternetwork",
+  "install_path": ".claude/skills/pinme/SKILL.md",
+  "source": {
+    "repo": "glitternetwork/pinme",
+    "url": "https://github.com/glitternetwork/pinme/blob/main/skills/pinme/SKILL.md",
+    "path": "skills/pinme/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-01T18:00:55.602Z",
+    "stars": 3752,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-12T05:23:49Z",
+    "license": "MIT"
+  }
+}

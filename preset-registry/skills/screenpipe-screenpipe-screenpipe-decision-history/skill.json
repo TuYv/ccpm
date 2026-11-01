@@ -1,0 +1,25 @@
+{
+  "id": "screenpipe-screenpipe-screenpipe-decision-history",
+  "name": "screenpipe-decision-history",
+  "description": "Trace why a decision was made, which alternatives were considered, and what changed later.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "screenpipe",
+  "install_path": ".claude/skills/screenpipe-decision-history/SKILL.md",
+  "source": {
+    "repo": "screenpipe/screenpipe",
+    "url": "https://github.com/screenpipe/screenpipe/blob/main/crates/screenpipe-core/assets/skills/screenpipe-decision-history/SKILL.md",
+    "path": "crates/screenpipe-core/assets/skills/screenpipe-decision-history/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-01T18:01:06.249Z",
+    "stars": 22200,
+    "language": "Rust",
+    "pushed_at": "2026-11-01T00:08:59Z",
+    "license": null
+  }
+}

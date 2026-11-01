@@ -1,0 +1,25 @@
+{
+  "id": "galleonlabs-hypergrok-trading-desk-hyperliquid-setup",
+  "name": "hyperliquid-setup",
+  "description": "Prepare the desk computer to work with Hyperliquid - install the SDKs, pick testnet or mainnet, verify connectivity, and (only when the user asks) provision a trade-only API wallet through the secure secret store and verify it is approved. Use during desk setup, when moving between research, testnet and mainnet levels, when a key is rotated, or when any Hyperliquid call fails with an environment problem.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "galleonlabs",
+  "install_path": ".claude/skills/hyperliquid-setup/SKILL.md",
+  "source": {
+    "repo": "galleonlabs/hypergrok-trading-desk",
+    "url": "https://github.com/galleonlabs/hypergrok-trading-desk/blob/main/skills/hyperliquid-setup/SKILL.md",
+    "path": "skills/hyperliquid-setup/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-01T18:00:16.511Z",
+    "stars": 258,
+    "language": "Python",
+    "pushed_at": "2026-11-01T09:49:57Z",
+    "license": "MIT"
+  }
+}

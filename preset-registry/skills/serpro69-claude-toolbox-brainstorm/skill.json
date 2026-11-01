@@ -1,0 +1,25 @@
+{
+  "id": "serpro69-claude-toolbox-brainstorm",
+  "name": "brainstorm",
+  "description": "| TRIGGER when: asked to brainstorm, think through, explore, or pressure-test a technical idea or decision through conversation. Interviews adaptively, asks one question at a time, and closes with a chat recap. For technical products, architecture, infrastructure, tools, operations, and engineering workflows. Written design/specification and task-list requests belong to $kk:design; durable domain glossary/reference kits to $kk:model; implementation and fixes to $kk:implement. Not for nontechnica",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "serpro69",
+  "install_path": ".claude/skills/brainstorm/SKILL.md",
+  "source": {
+    "repo": "serpro69/claude-toolbox",
+    "url": "https://github.com/serpro69/claude-toolbox/blob/master/kodex-plugin/skills/brainstorm/SKILL.md",
+    "path": "kodex-plugin/skills/brainstorm/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-11-01T18:02:38.770Z",
+    "stars": 154,
+    "language": "Shell",
+    "pushed_at": "2026-10-31T12:44:43Z",
+    "license": null
+  }
+}

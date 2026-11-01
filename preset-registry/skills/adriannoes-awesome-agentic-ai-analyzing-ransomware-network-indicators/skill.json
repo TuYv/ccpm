@@ -1,0 +1,25 @@
+{
+  "id": "adriannoes-awesome-agentic-ai-analyzing-ransomware-network-indicators",
+  "name": "analyzing-ransomware-network-indicators",
+  "description": "Identify ransomware network indicators including C2 beaconing patterns, TOR exit node connections, data exfiltration flows, and encryption key exchange via Zeek conn.log and NetFlow analysis",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0",
+  "author": "adriannoes",
+  "install_path": ".claude/skills/analyzing-ransomware-network-indicators/SKILL.md",
+  "source": {
+    "repo": "adriannoes/awesome-agentic-ai",
+    "url": "https://github.com/adriannoes/awesome-agentic-ai/blob/main/cursor-claude-codex/skills/anthropic-cybersecurity-skills/skills/analyzing-ransomware-network-indicators/SKILL.md",
+    "path": "cursor-claude-codex/skills/anthropic-cybersecurity-skills/skills/analyzing-ransomware-network-indicators/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-01T18:02:27.448Z",
+    "stars": 93,
+    "language": "Jupyter Notebook",
+    "pushed_at": "2026-10-24T05:01:34Z",
+    "license": "MIT"
+  }
+}

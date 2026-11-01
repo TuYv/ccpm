@@ -1,0 +1,25 @@
+{
+  "id": "screenpipe-screenpipe-screenpipe-project-status",
+  "name": "screenpipe-project-status",
+  "description": "Summarize one project against its stated milestones using recent work and verified outcomes.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "screenpipe",
+  "install_path": ".claude/skills/screenpipe-project-status/SKILL.md",
+  "source": {
+    "repo": "screenpipe/screenpipe",
+    "url": "https://github.com/screenpipe/screenpipe/blob/main/crates/screenpipe-core/assets/skills/screenpipe-project-status/SKILL.md",
+    "path": "crates/screenpipe-core/assets/skills/screenpipe-project-status/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-01T18:01:07.784Z",
+    "stars": 22200,
+    "language": "Rust",
+    "pushed_at": "2026-11-01T00:08:59Z",
+    "license": null
+  }
+}

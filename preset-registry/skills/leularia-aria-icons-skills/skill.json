@@ -1,0 +1,25 @@
+{
+  "id": "leularia-aria-icons-skills",
+  "name": "aria-icons",
+  "description": "Use when working with icons in any project. Search 1.4M icons, add them as source files (no giant dependency), migrate existing icon libraries, and run as an MCP server. Commands: `aria-icons search`, `aria-icons add`, `aria-icons get`, `aria-icons migrate`, `aria-icons doctor`.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "LeulAria",
+  "install_path": ".claude/skills/skills/SKILL.md",
+  "source": {
+    "repo": "LeulAria/Aria-Icons",
+    "url": "https://github.com/LeulAria/Aria-Icons/blob/main/skills/SKILL.md",
+    "path": "skills/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-01T18:00:11.879Z",
+    "stars": 103,
+    "language": "TypeScript",
+    "pushed_at": "2026-10-17T09:20:06Z",
+    "license": "MIT"
+  }
+}

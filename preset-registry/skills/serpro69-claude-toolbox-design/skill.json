@@ -1,0 +1,25 @@
+{
+  "id": "serpro69-claude-toolbox-design",
+  "name": "design",
+  "description": "| TRIGGER when: asked to write or refine a technical design, PRD, specification, implementation plan, or task list, or resume an existing docs/feat/wip feature. Turns ideas and requirements into written design documents, implementation plans, and tasks in docs/feat/wip/ before coding. For conversational exploration without written planning, use $kk:brainstorm.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "serpro69",
+  "install_path": ".claude/skills/design/SKILL.md",
+  "source": {
+    "repo": "serpro69/claude-toolbox",
+    "url": "https://github.com/serpro69/claude-toolbox/blob/master/kodex-plugin/skills/design/SKILL.md",
+    "path": "kodex-plugin/skills/design/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-11-01T18:02:39.674Z",
+    "stars": 154,
+    "language": "Shell",
+    "pushed_at": "2026-10-31T12:44:43Z",
+    "license": null
+  }
+}

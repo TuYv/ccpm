@@ -1,0 +1,25 @@
+{
+  "id": "screenpipe-screenpipe-screenpipe-bug-report",
+  "name": "screenpipe-bug-report",
+  "description": "Turn a recorded software failure into a reproducible bug report with timestamps and observed behavior.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "screenpipe",
+  "install_path": ".claude/skills/screenpipe-bug-report/SKILL.md",
+  "source": {
+    "repo": "screenpipe/screenpipe",
+    "url": "https://github.com/screenpipe/screenpipe/blob/main/crates/screenpipe-core/assets/skills/screenpipe-bug-report/SKILL.md",
+    "path": "crates/screenpipe-core/assets/skills/screenpipe-bug-report/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-01T18:01:05.417Z",
+    "stars": 22200,
+    "language": "Rust",
+    "pushed_at": "2026-11-01T00:08:59Z",
+    "license": null
+  }
+}

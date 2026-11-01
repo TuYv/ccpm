@@ -1,0 +1,25 @@
+{
+  "id": "glitternetwork-pinme-pinme-share",
+  "name": "pinme-share",
+  "description": "Use this skill when the user wants to share, publish, or upload a static result through PinMe, especially by generating a static HTML share page for a PinMe project link, deployed full-stack app, Codex conversation summary, report, file, demo, or any 分享/发布/上传分享页 request that should end with `pinme upload`.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "glitternetwork",
+  "install_path": ".claude/skills/pinme-share/SKILL.md",
+  "source": {
+    "repo": "glitternetwork/pinme",
+    "url": "https://github.com/glitternetwork/pinme/blob/main/skills/pinme-share/SKILL.md",
+    "path": "skills/pinme-share/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-01T18:00:55.124Z",
+    "stars": 3752,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-12T05:23:49Z",
+    "license": "MIT"
+  }
+}

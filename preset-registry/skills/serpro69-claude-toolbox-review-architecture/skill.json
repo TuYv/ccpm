@@ -1,0 +1,25 @@
+{
+  "id": "serpro69-claude-toolbox-review-architecture",
+  "name": "review-architecture",
+  "description": "| Review a written architecture artifact — an ADR (docs/adr/), a broader architecture doc, the architecture section of a design doc, or a domain-reference kit (glossary + traps pages, reviewed as one composite artifact) — against the system it claims to describe. Verifies the EXISTENCE and TOPOLOGY of declared mechanisms (structural boundaries, data ownership, NFR mechanisms, failure isolation, state consistency, evolution/versioning, domain binding) plus decision soundness, reversibility, and p",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "serpro69",
+  "install_path": ".claude/skills/review-architecture/SKILL.md",
+  "source": {
+    "repo": "serpro69/claude-toolbox",
+    "url": "https://github.com/serpro69/claude-toolbox/blob/master/kodex-plugin/skills/review-architecture/SKILL.md",
+    "path": "kodex-plugin/skills/review-architecture/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-11-01T18:02:41.675Z",
+    "stars": 154,
+    "language": "Shell",
+    "pushed_at": "2026-10-31T12:44:43Z",
+    "license": null
+  }
+}

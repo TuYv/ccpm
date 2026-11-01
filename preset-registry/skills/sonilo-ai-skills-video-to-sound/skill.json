@@ -1,0 +1,25 @@
+{
+  "id": "sonilo-ai-skills-video-to-sound",
+  "name": "video-to-sound",
+  "description": "Generate music AND sound effects for a video in a single balanced, single-charge call using Sonilo. Use instead of calling the music and sound-effects skills separately for the same video — the two layers are mixed and ducked against each other by the backend. Returns a mixed audio track, or a new video with it muxed in.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sonilo-ai",
+  "install_path": ".claude/skills/video-to-sound/SKILL.md",
+  "source": {
+    "repo": "sonilo-ai/skills",
+    "url": "https://github.com/sonilo-ai/skills/blob/main/video-to-sound/SKILL.md",
+    "path": "video-to-sound/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-01T18:00:32.608Z",
+    "stars": 117,
+    "language": "Python",
+    "pushed_at": "2026-10-27T12:08:49Z",
+    "license": "MIT"
+  }
+}

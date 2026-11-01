@@ -1,0 +1,25 @@
+{
+  "id": "adriannoes-awesome-agentic-ai-detecting-email-account-compromise",
+  "name": "detecting-email-account-compromise",
+  "description": "Detect compromised O365 and Google Workspace email accounts by analyzing inbox rule creation, suspicious sign-in locations, mail forwarding rules, and unusual API access patterns via Microsoft Graph and audit logs.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0",
+  "author": "adriannoes",
+  "install_path": ".claude/skills/detecting-email-account-compromise/SKILL.md",
+  "source": {
+    "repo": "adriannoes/awesome-agentic-ai",
+    "url": "https://github.com/adriannoes/awesome-agentic-ai/blob/main/cursor-claude-codex/skills/anthropic-cybersecurity-skills/skills/detecting-email-account-compromise/SKILL.md",
+    "path": "cursor-claude-codex/skills/anthropic-cybersecurity-skills/skills/detecting-email-account-compromise/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-01T18:02:32.068Z",
+    "stars": 93,
+    "language": "Jupyter Notebook",
+    "pushed_at": "2026-10-24T05:01:34Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "jangtrinh-design-os-3d-blender-blender-image-to-3d",
+  "name": "blender-image-to-3d",
+  "description": "Reconstruct assets in Blender from reference images using only native Blender geometry, local skills, and project workflows; includes fidelity contracts, staged passes, and visual verification.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "jangtrinh",
+  "install_path": ".claude/skills/blender-image-to-3d/SKILL.md",
+  "source": {
+    "repo": "jangtrinh/design-os-3d-blender",
+    "url": "https://github.com/jangtrinh/design-os-3d-blender/blob/main/.claude/skills/blender-image-to-3d/SKILL.md",
+    "path": ".claude/skills/blender-image-to-3d/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-01T18:00:34.242Z",
+    "stars": 107,
+    "language": "Python",
+    "pushed_at": "2026-11-01T00:39:38Z",
+    "license": null
+  }
+}

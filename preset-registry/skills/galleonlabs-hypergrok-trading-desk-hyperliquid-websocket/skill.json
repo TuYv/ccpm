@@ -1,0 +1,25 @@
+{
+  "id": "galleonlabs-hypergrok-trading-desk-hyperliquid-websocket",
+  "name": "hyperliquid-websocket",
+  "description": "Subscribe to live Hyperliquid data over WebSocket from the desk computer - mids, order book, trades, candles, best bid/offer, and per-account fills, order updates and events - with raw JSON, Python SDK and TypeScript examples, plus how to run a supervised watch that logs to a file and alerts. Read-only. Use for monitoring, fill notifications and any watch that polling would make expensive.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "galleonlabs",
+  "install_path": ".claude/skills/hyperliquid-websocket/SKILL.md",
+  "source": {
+    "repo": "galleonlabs/hypergrok-trading-desk",
+    "url": "https://github.com/galleonlabs/hypergrok-trading-desk/blob/main/skills/hyperliquid-websocket/SKILL.md",
+    "path": "skills/hyperliquid-websocket/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-01T18:00:16.678Z",
+    "stars": 258,
+    "language": "Python",
+    "pushed_at": "2026-11-01T09:49:57Z",
+    "license": "MIT"
+  }
+}

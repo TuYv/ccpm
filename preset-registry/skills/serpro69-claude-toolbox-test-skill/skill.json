@@ -1,0 +1,25 @@
+{
+  "id": "serpro69-claude-toolbox-test-skill",
+  "name": "test-skill",
+  "description": "A test skill",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "serpro69",
+  "install_path": ".claude/skills/test-skill/SKILL.md",
+  "source": {
+    "repo": "serpro69/claude-toolbox",
+    "url": "https://github.com/serpro69/claude-toolbox/blob/master/cmd/generate-kodex/testdata/source-plugin/skills/test-skill/SKILL.md",
+    "path": "cmd/generate-kodex/testdata/source-plugin/skills/test-skill/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-11-01T18:02:34.130Z",
+    "stars": 154,
+    "language": "Shell",
+    "pushed_at": "2026-10-31T12:44:43Z",
+    "license": null
+  }
+}

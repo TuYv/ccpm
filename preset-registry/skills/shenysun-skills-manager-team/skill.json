@@ -1,0 +1,25 @@
+{
+  "id": "shenysun-skills-manager-team",
+  "name": "team",
+  "description": "Run the four-role Herdr team (pm, po, dev, qa panes) that ships one feature of this repo. In the main session the user runs /team as the orchestrator (up, status, go, down); in a role pane the orchestrator prompts /team role: pm|po|dev|qa. Requires HERDR_ENV=1.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "shenysun",
+  "install_path": ".claude/skills/team/SKILL.md",
+  "source": {
+    "repo": "shenysun/skills-manager",
+    "url": "https://github.com/shenysun/skills-manager/blob/main/.claude/skills/team/SKILL.md",
+    "path": ".claude/skills/team/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-01T18:01:11.583Z",
+    "stars": 180,
+    "language": "TypeScript",
+    "pushed_at": "2026-10-27T03:20:27Z",
+    "license": "MIT"
+  }
+}

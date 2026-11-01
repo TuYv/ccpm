@@ -1,0 +1,25 @@
+{
+  "id": "danjdewhurst-story-skills-story-maintenance",
+  "name": "story-maintenance",
+  "description": "This skill should be used when the user asks to \"validate\", \"reindex\", \"repair registries\", \"check links\", \"run the continuity, pacing, clue, voice, or name checks\", \"count words\", \"summarize a story project\", \"import an existing manuscript\", \"export a manuscript\", \"run a build\", \"generate a diagram\", \"record revision-pass status with `story passes`\", \"run the story CLI\", or wants deterministic maintenance on a Story Skills markdown project. It runs the CLI and reads its output; NOT for judging ",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "danjdewhurst",
+  "install_path": ".claude/skills/story-maintenance/SKILL.md",
+  "source": {
+    "repo": "danjdewhurst/story-skills",
+    "url": "https://github.com/danjdewhurst/story-skills/blob/main/skills/story-maintenance/SKILL.md",
+    "path": "skills/story-maintenance/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-01T18:00:23.513Z",
+    "stars": 373,
+    "language": "JavaScript",
+    "pushed_at": "2026-11-01T15:27:51Z",
+    "license": "MIT"
+  }
+}

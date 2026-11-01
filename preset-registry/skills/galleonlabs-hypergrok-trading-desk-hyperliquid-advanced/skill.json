@@ -1,0 +1,25 @@
+{
+  "id": "galleonlabs-hypergrok-trading-desk-hyperliquid-advanced",
+  "name": "hyperliquid-advanced",
+  "description": "Less common Hyperliquid actions and their rules - dead-man's switch (scheduleCancel), TWAP orders, spot orders, expiresAfter and nonces, API wallet approval from code, sub-account and vault addressing, HIP-3 dexs, and what the desk deliberately does not do (transfers, withdrawals, builder fees, staking). Write actions are Execution Trader only, on an approved ticket. Use when a ticket asks for one of these or when a user asks whether the desk can.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "galleonlabs",
+  "install_path": ".claude/skills/hyperliquid-advanced/SKILL.md",
+  "source": {
+    "repo": "galleonlabs/hypergrok-trading-desk",
+    "url": "https://github.com/galleonlabs/hypergrok-trading-desk/blob/main/skills/hyperliquid-advanced/SKILL.md",
+    "path": "skills/hyperliquid-advanced/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-01T18:00:15.491Z",
+    "stars": 258,
+    "language": "Python",
+    "pushed_at": "2026-11-01T09:49:57Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "screenpipe-screenpipe-screenpipe-team",
+  "name": "screenpipe-team",
+  "description": "Use the native Screenpipe CLI to query Enterprise team activity or safely preview, deploy, and schedule managed team Pipes. Injected only by the Enterprise app for active admins.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "screenpipe",
+  "install_path": ".claude/skills/screenpipe-team/SKILL.md",
+  "source": {
+    "repo": "screenpipe/screenpipe",
+    "url": "https://github.com/screenpipe/screenpipe/blob/main/crates/screenpipe-core/assets/skills/screenpipe-team/SKILL.md",
+    "path": "crates/screenpipe-core/assets/skills/screenpipe-team/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-01T18:01:08.742Z",
+    "stars": 22200,
+    "language": "Rust",
+    "pushed_at": "2026-11-01T00:08:59Z",
+    "license": null
+  }
+}

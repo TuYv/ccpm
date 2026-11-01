@@ -1,0 +1,25 @@
+{
+  "id": "adriannoes-awesome-agentic-ai-building-incident-response-playbook",
+  "name": "building-incident-response-playbook",
+  "description": "'Designs and documents structured incident response playbooks that define step-by-step procedures for specific incident types aligned with NIST SP 800-61r3 and SANS PICERL frameworks. Covers playbook structure, decision trees, escalation criteria, RACI matrices, and integration with SOAR platforms. Activates for requests involving IR playbook creation, incident response procedure documentation, response runbook development, or SOAR playbook design.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "adriannoes",
+  "install_path": ".claude/skills/building-incident-response-playbook/SKILL.md",
+  "source": {
+    "repo": "adriannoes/awesome-agentic-ai",
+    "url": "https://github.com/adriannoes/awesome-agentic-ai/blob/main/cursor-claude-codex/skills/anthropic-cybersecurity-skills/skills/building-incident-response-playbook/SKILL.md",
+    "path": "cursor-claude-codex/skills/anthropic-cybersecurity-skills/skills/building-incident-response-playbook/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-01T18:02:28.975Z",
+    "stars": 93,
+    "language": "Jupyter Notebook",
+    "pushed_at": "2026-10-24T05:01:34Z",
+    "license": "MIT"
+  }
+}

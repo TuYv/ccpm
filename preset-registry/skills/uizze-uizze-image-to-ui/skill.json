@@ -1,0 +1,25 @@
+{
+  "id": "uizze-uizze-image-to-ui",
+  "name": "image-to-ui",
+  "description": "Recreate an image, screenshot, or mockup as a 1:1 UI implementation. Match the reference rather than redesigning it, then render and compare the result to correct visible differences.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "uizze",
+  "install_path": ".claude/skills/image-to-ui/SKILL.md",
+  "source": {
+    "repo": "uizze/uizze",
+    "url": "https://github.com/uizze/uizze/blob/main/skills/image-to-ui/SKILL.md",
+    "path": "skills/image-to-ui/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-01T18:00:10.466Z",
+    "stars": 78,
+    "language": "JavaScript",
+    "pushed_at": "2026-11-01T14:51:45Z",
+    "license": "MIT"
+  }
+}

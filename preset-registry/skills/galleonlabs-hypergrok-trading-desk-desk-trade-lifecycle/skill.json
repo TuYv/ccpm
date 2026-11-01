@@ -1,0 +1,25 @@
+{
+  "id": "galleonlabs-hypergrok-trading-desk-desk-trade-lifecycle",
+  "name": "desk-trade-lifecycle",
+  "description": "The end-to-end procedure for one trade on the HyperGrok desk - from an idea to a reviewed, journaled result - with the ticket format, who owns each stage, and what \"done\" looks like. Use whenever the user wants to open, adjust or close a position, or whenever any Bot is about to touch the exchange write path.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "galleonlabs",
+  "install_path": ".claude/skills/desk-trade-lifecycle/SKILL.md",
+  "source": {
+    "repo": "galleonlabs/hypergrok-trading-desk",
+    "url": "https://github.com/galleonlabs/hypergrok-trading-desk/blob/main/skills/desk-trade-lifecycle/SKILL.md",
+    "path": "skills/desk-trade-lifecycle/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-01T18:00:14.833Z",
+    "stars": 258,
+    "language": "Python",
+    "pushed_at": "2026-11-01T09:49:57Z",
+    "license": "MIT"
+  }
+}

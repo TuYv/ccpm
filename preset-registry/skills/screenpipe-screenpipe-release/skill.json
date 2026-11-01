@@ -1,0 +1,25 @@
+{
+  "id": "screenpipe-screenpipe-release",
+  "name": "release",
+  "description": "Release the screenpipe monorepo. Bumps versions, triggers GitHub Actions for app, CLI, MCP, and JS packages.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "screenpipe",
+  "install_path": ".claude/skills/release/SKILL.md",
+  "source": {
+    "repo": "screenpipe/screenpipe",
+    "url": "https://github.com/screenpipe/screenpipe/blob/main/.claude/skills/release/SKILL.md",
+    "path": ".claude/skills/release/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-01T18:01:03.855Z",
+    "stars": 22200,
+    "language": "Rust",
+    "pushed_at": "2026-11-01T00:08:59Z",
+    "license": null
+  }
+}

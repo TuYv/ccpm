@@ -1,0 +1,25 @@
+{
+  "id": "serpro69-claude-toolbox-document",
+  "name": "document",
+  "description": "| After implementing a new feature or fixing a bug, make sure to document the changes. Use when writing documentation, after finishing the implementation phase for a feature or a bug-fix.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "serpro69",
+  "install_path": ".claude/skills/document/SKILL.md",
+  "source": {
+    "repo": "serpro69/claude-toolbox",
+    "url": "https://github.com/serpro69/claude-toolbox/blob/master/kodex-plugin/skills/document/SKILL.md",
+    "path": "kodex-plugin/skills/document/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-11-01T18:02:40.691Z",
+    "stars": 154,
+    "language": "Shell",
+    "pushed_at": "2026-10-31T12:44:43Z",
+    "license": null
+  }
+}

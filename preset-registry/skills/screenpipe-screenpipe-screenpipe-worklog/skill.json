@@ -1,0 +1,25 @@
+{
+  "id": "screenpipe-screenpipe-screenpipe-worklog",
+  "name": "screenpipe-worklog",
+  "description": "Reconstruct a daily or weekly worklog from observed activity and outcomes.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "screenpipe",
+  "install_path": ".claude/skills/screenpipe-worklog/SKILL.md",
+  "source": {
+    "repo": "screenpipe/screenpipe",
+    "url": "https://github.com/screenpipe/screenpipe/blob/main/crates/screenpipe-core/assets/skills/screenpipe-worklog/SKILL.md",
+    "path": "crates/screenpipe-core/assets/skills/screenpipe-worklog/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-01T18:01:09.275Z",
+    "stars": 22200,
+    "language": "Rust",
+    "pushed_at": "2026-11-01T00:08:59Z",
+    "license": null
+  }
+}

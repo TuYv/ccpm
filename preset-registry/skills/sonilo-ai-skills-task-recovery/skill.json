@@ -1,0 +1,25 @@
+{
+  "id": "sonilo-ai-skills-task-recovery",
+  "name": "task-recovery",
+  "description": "Recover the result of a timed-out Sonilo generation call using its task_id. Use whenever text_to_sfx, video_to_sfx, video_to_video_music, video_to_video_sfx, video_to_sound, video_to_video_sound, audio_ducking, dubbing, proofread, analyze_video, or video_to_music(preserve_speech=true) times out or its call was interrupted — the generation already ran (and was already charged) and its result is still retrievable.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sonilo-ai",
+  "install_path": ".claude/skills/task-recovery/SKILL.md",
+  "source": {
+    "repo": "sonilo-ai/skills",
+    "url": "https://github.com/sonilo-ai/skills/blob/main/task-recovery/SKILL.md",
+    "path": "task-recovery/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-01T18:00:31.493Z",
+    "stars": 117,
+    "language": "Python",
+    "pushed_at": "2026-10-27T12:08:49Z",
+    "license": "MIT"
+  }
+}

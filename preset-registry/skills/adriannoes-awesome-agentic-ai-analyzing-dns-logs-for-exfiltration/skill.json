@@ -1,0 +1,25 @@
+{
+  "id": "adriannoes-awesome-agentic-ai-analyzing-dns-logs-for-exfiltration",
+  "name": "analyzing-dns-logs-for-exfiltration",
+  "description": "'Analyzes DNS query logs to detect data exfiltration via DNS tunneling, DGA domain communication, and covert C2 channels using entropy analysis, query volume anomalies, and subdomain length detection in SIEM platforms. Use when SOC teams need to identify DNS-based threats that bypass traditional network security controls.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0",
+  "author": "adriannoes",
+  "install_path": ".claude/skills/analyzing-dns-logs-for-exfiltration/SKILL.md",
+  "source": {
+    "repo": "adriannoes/awesome-agentic-ai",
+    "url": "https://github.com/adriannoes/awesome-agentic-ai/blob/main/cursor-claude-codex/skills/anthropic-cybersecurity-skills/skills/analyzing-dns-logs-for-exfiltration/SKILL.md",
+    "path": "cursor-claude-codex/skills/anthropic-cybersecurity-skills/skills/analyzing-dns-logs-for-exfiltration/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-01T18:02:26.827Z",
+    "stars": 93,
+    "language": "Jupyter Notebook",
+    "pushed_at": "2026-10-24T05:01:34Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "screenpipe-screenpipe-video-sop",
+  "name": "video-sop",
+  "description": "Edit the attached Screenpipe video project, inspecting its real screenshots and preserving the source instructions.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "screenpipe",
+  "install_path": ".claude/skills/video-sop/SKILL.md",
+  "source": {
+    "repo": "screenpipe/screenpipe",
+    "url": "https://github.com/screenpipe/screenpipe/blob/main/packages/workflows-ui/skills/video-sop/SKILL.md",
+    "path": "packages/workflows-ui/skills/video-sop/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-01T18:01:09.598Z",
+    "stars": 22200,
+    "language": "Rust",
+    "pushed_at": "2026-11-01T00:08:59Z",
+    "license": null
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "danjdewhurst-story-skills-chapter-writing",
+  "name": "chapter-writing",
+  "description": "This skill should be used when the user asks to \"write a chapter\", \"next chapter\", \"chapter outline\", \"draft chapter\", \"continue the story\", \"write a scene\", \"outline a chapter\", or wants to write prose for a story project. NOT for planning a scene's structure, subtext, or outcome (use scene-craft), drafting without an outline (use discovery-drafting), or revising existing chapters (use revision-continuity).",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "danjdewhurst",
+  "install_path": ".claude/skills/chapter-writing/SKILL.md",
+  "source": {
+    "repo": "danjdewhurst/story-skills",
+    "url": "https://github.com/danjdewhurst/story-skills/blob/main/skills/chapter-writing/SKILL.md",
+    "path": "skills/chapter-writing/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-01T18:00:20.711Z",
+    "stars": 373,
+    "language": "JavaScript",
+    "pushed_at": "2026-11-01T15:27:51Z",
+    "license": "MIT"
+  }
+}

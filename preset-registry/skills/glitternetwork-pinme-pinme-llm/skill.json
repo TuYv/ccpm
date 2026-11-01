@@ -1,0 +1,25 @@
+{
+  "id": "glitternetwork-pinme-pinme-llm",
+  "name": "pinme-llm",
+  "description": "Use this skill when a PinMe project (Worker TypeScript) needs to call OpenRouter-backed LLM APIs, including models, chat/completions, streaming, or OpenRouter web search. Guides AI to generate correct Worker TS code.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "glitternetwork",
+  "install_path": ".claude/skills/pinme-llm/SKILL.md",
+  "source": {
+    "repo": "glitternetwork/pinme",
+    "url": "https://github.com/glitternetwork/pinme/blob/main/skills/pinme-llm/SKILL.md",
+    "path": "skills/pinme-llm/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-01T18:00:54.730Z",
+    "stars": 3752,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-12T05:23:49Z",
+    "license": "MIT"
+  }
+}

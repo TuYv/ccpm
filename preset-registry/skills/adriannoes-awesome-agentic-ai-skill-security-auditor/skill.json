@@ -1,0 +1,25 @@
+{
+  "id": "adriannoes-awesome-agentic-ai-skill-security-auditor",
+  "name": "skill-security-auditor",
+  "description": "> Security audit and vulnerability scanner for AI agent skills before installation. Use when: (1) evaluating a skill from an untrusted source, (2) auditing a skill directory or git repo URL for malicious code, (3) pre-install security gate for Claude Code plugins, OpenClaw skills, or Codex skills, (4) scanning Python scripts for dangerous patterns like os.system, eval, subprocess, network exfiltration, (5) detecting prompt injection in SKILL.md files, (6) checking dependency supply chain risks, ",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "adriannoes",
+  "install_path": ".claude/skills/skill-security-auditor/SKILL.md",
+  "source": {
+    "repo": "adriannoes/awesome-agentic-ai",
+    "url": "https://github.com/adriannoes/awesome-agentic-ai/blob/main/cursor-claude-codex/skills/alirezarezvani-skills/skill-security-auditor/SKILL.md",
+    "path": "cursor-claude-codex/skills/alirezarezvani-skills/skill-security-auditor/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-01T18:02:25.439Z",
+    "stars": 93,
+    "language": "Jupyter Notebook",
+    "pushed_at": "2026-10-24T05:01:34Z",
+    "license": "MIT"
+  }
+}

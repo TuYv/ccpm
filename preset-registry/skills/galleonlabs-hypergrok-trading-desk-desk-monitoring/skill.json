@@ -1,0 +1,25 @@
+{
+  "id": "galleonlabs-hypergrok-trading-desk-desk-monitoring",
+  "name": "desk-monitoring",
+  "description": "How the desk watches markets and the account between trades using Grok Bot routines and WebSocket or polling watches - the desk brief, book checks, funding and price watches, alert conditions and what a watch may and may not do. Use when the user asks for briefings, alerts, \"watch X\" or scheduled checks.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "galleonlabs",
+  "install_path": ".claude/skills/desk-monitoring/SKILL.md",
+  "source": {
+    "repo": "galleonlabs/hypergrok-trading-desk",
+    "url": "https://github.com/galleonlabs/hypergrok-trading-desk/blob/main/skills/desk-monitoring/SKILL.md",
+    "path": "skills/desk-monitoring/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-01T18:00:13.909Z",
+    "stars": 258,
+    "language": "Python",
+    "pushed_at": "2026-11-01T09:49:57Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "screenpipe-screenpipe-screenpipe-logs",
+  "name": "screenpipe-logs",
+  "description": "Retrieve and analyze Screenpipe CLI backend logs and desktop app logs for debugging",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "screenpipe",
+  "install_path": ".claude/skills/screenpipe-logs/SKILL.md",
+  "source": {
+    "repo": "screenpipe/screenpipe",
+    "url": "https://github.com/screenpipe/screenpipe/blob/main/.claude/skills/screenpipe-logs/SKILL.md",
+    "path": ".claude/skills/screenpipe-logs/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-01T18:01:04.551Z",
+    "stars": 22200,
+    "language": "Rust",
+    "pushed_at": "2026-11-01T00:08:59Z",
+    "license": null
+  }
+}

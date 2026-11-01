@@ -25,9 +25,12 @@ Claude calls `openDiff` and blocks until the plugin answers. If the plugin never
 .agents/skills/verify-diff-lifecycle/check.sh --keep     # same, keeps the TLC configs and output, prints the dir
 .agents/skills/verify-diff-lifecycle/check.sh --mutants  # about 14 min, after you edit the model or a fact
 .agents/skills/verify-diff-lifecycle/check.sh --record   # rewrite covered.lock, only after "Update after an intended change" (refused together with --mutants, and refused when covered.lock is a symlink)
+.agents/skills/verify-diff-lifecycle/check.sh --hash-only  # under 1 s, no TLC: only compares covered.lock with the code (exit 0 or 3)
 ```
 
-Needs bash 4 or newer, Java 11 or newer (`JAVA=/path/to/java` overrides), `sha256sum` or `shasum`, and curl for the first run. The first run downloads TLC 1.7.4 to `~/.cache/claudecode-nvim-tla/` and refuses a jar whose sha256 differs. Run one copy at a time on a shared host. TLC is CPU heavy.
+CI runs `check.sh`, the model included, in the `covered-lock` job on every pull request. The runner's Java runs TLC. `Required` does not need that job: a PR that breaks a rule, or changes `lua/` or `plugin/` without a re-recorded `covered.lock`, shows the job red but can still merge.
+
+Needs bash 4 or newer (macOS ships bash 3.2: `brew install bash`, else `check.sh` exits 2 and says so), Java 11 or newer (`JAVA=/path/to/java` overrides), `sha256sum` or `shasum`, and curl for the first run (`--hash-only` and `--record` need only bash 4, git and `sha256sum` or `shasum`, and download nothing). The first run downloads TLC 1.7.4 to `~/.cache/claudecode-nvim-tla/` and refuses a jar whose sha256 differs. Run one copy at a time on a shared host. TLC is CPU heavy.
 
 Exit codes:
 
@@ -41,6 +44,13 @@ Exit codes:
 Run the check. `covered.lock` records a hash of every Lua and Vimscript file under `lua/` and `plugin/`, so any change to the plugin's runtime code reads `STALE` (exit 3) until someone confirms that the model still describes the code. The model was written against the whole lifecycle: diff state, the tool and server layers, the transport that reports disconnects, and the user commands. Its facts cannot tell which other edits matter, so the record does not try to.
 
 To show where to look, the record also hashes each block the model describes and lists every non-comment line that resolves, closes, registers or answers a diff, names the diff table (`active_diffs`, `_get_active_diffs`), or assigns a `.status`, with its enclosing top-level statement. The STALE output prints a `was:`/`now:` pair per changed file, block or call site. A new one prints only `now:`, and a removed one only `was:`. Control bytes in those lines print as `?`, so a source line cannot rewrite the terminal.
+
+The record has one group of lines per file: a `== <file>` header, the file's hash, the hashes of the covered blocks in that file, and its call sites. Only adding or removing the file changes its header, so two branches that edit different files and each re-record merge `covered.lock` without a conflict, and the merged record matches the merged code. Two branches that edit the same file, or that add or remove files whose groups sit next to each other, conflict there once one of them merges. The same-file conflict is wanted: no line merge can produce the merged file's hash. A `merge=union` attribute or a custom merge driver would hide it, and `main` would read STALE after both branches merge. Adding or removing a Lua file is rare, so the record stays one file rather than one lock file per source file. To resolve the conflict:
+
+1. Merge `origin/main` into the branch (`git fetch origin && git merge origin/main`) and resolve any conflicts in the code.
+2. If the merged code can reach diff state, an openDiff answer, a disconnect or a diff command, follow "Update after an intended change" on the merged result first.
+3. Run `check.sh --record`. It writes the whole record, so it needs no hand edit of the conflict markers.
+4. `git add .agents/skills/verify-diff-lifecycle/covered.lock`, then commit the merge.
 
 Covered blocks:
 
@@ -70,6 +80,7 @@ A changed file with no changed block or call site still needs a look. A wrapper 
 | `DisconnectRejects`                        | `on_disconnect` schedules `close_diffs_for_client`                                                                                                                                                                                  |
 | `UserCloseAllPendingOnly`                  | `:ClaudeCodeCloseAllDiffs` calls `close_pending_diffs`, never `close_all_diffs`                                                                                                                                                     |
 | `UserCloseKeepsAcceptedText`               | `:ClaudeCodeCloseAllDiffs` calls `close_saved_diffs`, whose filter closes a `saved` diff only when `file_holds_accepted_text` reads the accepted text from its file or `buffer_holds_accepted_text` reads it from the file's buffer |
+| `UserCloseTakesRejected`                   | `:ClaudeCodeCloseAllDiffs` calls `close_rejected_diffs`, whose filter is `status == "rejected"`                                                                                                                                     |
 | `ClientTagged`                             | `handle_invoke` passes `client` to the tool, the openDiff handler passes `client.id` on, and both layouts store it as `client_id` when they register the diff                                                                       |
 | `SetupAnswerReturned`                      | before `open_diff_blocking` yields, the resolution callback keeps its result instead of resuming the coroutine, and `open_diff_blocking` returns that result as the immediate reply (issue #325)                                    |
 | `OpenedEventInSetup`                       | `fire_diff_event` runs `nvim_exec_autocmds` directly, and `ClaudeCodeDiffOpened` fires inside setup, before the yield. Not a guard: `TRUE` lets a user handler resolve the diff during setup                                        |
@@ -104,7 +115,7 @@ Then decide which kind of failure it is:
 2. If the behavior changed, change the action in `model/DiffLifecycle.tla` that cites that code. If a guard moved, change its fact regex in `check.sh`. If a new caller resolves or closes diffs, model it as an action or add a fact for its guard.
 3. Run `check.sh --mutants`. Every fact must be caught by its rule, and every rule must break at least once.
 4. Run `check.sh` and read the result.
-5. Run `check.sh --record` only once you have confirmed that the model describes the code at this commit. It records the merge base with `origin/main` when `lua/` and `plugin/` match it (so the record survives a squash merge), else `HEAD`. Commit `covered.lock` with the change.
+5. Run `check.sh --record` only once you have confirmed that the model describes the code at this commit. Commit `covered.lock` with the change.
 
 ## Scope and bounds
 
@@ -116,7 +127,7 @@ Then decide which kind of failure it is:
 - Every run assumes that the user has a `ClaudeCodeDiffClosed` handler (`ClosedHandlerResolvesOther`). Each time a bulk close closes a diff, the handler can accept or deny one other open diff, in any order of the snapshot. After a single close (`close_tab`, a replacing openDiff) the handler can touch only other diffs, the same as a later user action, so only the bulk-close loop models it. `SavedDiffKept` checks that the loop keeps a diff the handler accepted, and `NoRejectedLeftover` checks that it closes one the handler denied.
 - These are not modeled:
   - a `ClaudeCodeDiffClosed` handler that starts another bulk close
-  - a `ClaudeCodeDiffClosed` handler that opens a diff under a listed `tab_name` (the code closes a rejected entry only when it is the listed one, which the unit tests check)
+  - a `ClaudeCodeDiffClosed` handler that opens or replaces a diff while a bulk close runs. A handler can do that only by running the event loop (for example `vim.wait`), so that a queued openDiff from Claude runs inside the loop. The loop reads each entry again and reruns its filter, so a new entry under a listed `tab_name` closes only when it matches the filter, and a rejected entry closes only when it is the listed one (`tests/unit/diff_bulk_close_reentrancy_spec.lua` checks a replaced entry). A new `tab_name` is not in the list and stays open. Modeling this needs the per-call `reqTab` and `reqClient` inside the record that the bulk-close operators pass along, which changes every action
   - window and tab layout
   - the `keep_empty` new-file cleanup inside `_resolve_diff_as_rejected` (it runs after the answer)
   - setup errors, which answer at once

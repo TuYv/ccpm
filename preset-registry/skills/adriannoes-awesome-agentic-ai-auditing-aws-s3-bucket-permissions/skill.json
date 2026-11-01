@@ -1,0 +1,25 @@
+{
+  "id": "adriannoes-awesome-agentic-ai-auditing-aws-s3-bucket-permissions",
+  "name": "auditing-aws-s3-bucket-permissions",
+  "description": "'Systematically audit AWS S3 bucket permissions to identify publicly accessible buckets, overly permissive ACLs, misconfigured bucket policies, and missing encryption settings using AWS CLI, S3audit, and Prowler to enforce least-privilege data access controls.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0",
+  "author": "adriannoes",
+  "install_path": ".claude/skills/auditing-aws-s3-bucket-permissions/SKILL.md",
+  "source": {
+    "repo": "adriannoes/awesome-agentic-ai",
+    "url": "https://github.com/adriannoes/awesome-agentic-ai/blob/main/cursor-claude-codex/skills/anthropic-cybersecurity-skills/skills/auditing-aws-s3-bucket-permissions/SKILL.md",
+    "path": "cursor-claude-codex/skills/anthropic-cybersecurity-skills/skills/auditing-aws-s3-bucket-permissions/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-01T18:02:27.898Z",
+    "stars": 93,
+    "language": "Jupyter Notebook",
+    "pushed_at": "2026-10-24T05:01:34Z",
+    "license": "MIT"
+  }
+}

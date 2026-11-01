@@ -1,0 +1,25 @@
+{
+  "id": "sonilo-ai-skills-auto-dubbing",
+  "name": "auto-dubbing",
+  "description": "Dub a video into one or more other languages using Sonilo, translating and re-voicing the speech into a new video per language. Optionally supply your own target-language script per language, so the dub speaks those lines verbatim instead of the pipeline's own translation, and get a re-timed SRT back per language. Use when a user needs a video localized into another language, not just subtitled. Billed per language; a self-serve account's first single-language call is a free 15-second preview — ",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sonilo-ai",
+  "install_path": ".claude/skills/auto-dubbing/SKILL.md",
+  "source": {
+    "repo": "sonilo-ai/skills",
+    "url": "https://github.com/sonilo-ai/skills/blob/main/auto-dubbing/SKILL.md",
+    "path": "auto-dubbing/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-01T18:00:30.960Z",
+    "stars": 117,
+    "language": "Python",
+    "pushed_at": "2026-10-27T12:08:49Z",
+    "license": "MIT"
+  }
+}

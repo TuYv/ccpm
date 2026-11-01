@@ -1,0 +1,25 @@
+{
+  "id": "screenpipe-screenpipe-workflows",
+  "name": "workflows",
+  "description": "YC (S26) | Open Computer History | Continuously record your company computer work, map your workflows, help you find work worth automating, and power your agents' context",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "screenpipe",
+  "install_path": ".claude/skills/workflows/SKILL.md",
+  "source": {
+    "repo": "screenpipe/screenpipe",
+    "url": "https://github.com/screenpipe/screenpipe/blob/main/apps/screenpipe-app-tauri/src-tauri/src/workflows/skill.md",
+    "path": "apps/screenpipe-app-tauri/src-tauri/src/workflows/skill.md",
+    "branch": "main",
+    "discovered_at": "2026-11-01T18:01:04.884Z",
+    "stars": 22200,
+    "language": "Rust",
+    "pushed_at": "2026-11-01T00:08:59Z",
+    "license": null
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "serpro69-claude-toolbox-review-code",
+  "name": "review-code",
+  "description": "| Code review of current git changes with an expert senior-engineer lens. Detects SOLID violations, security risks, and proposes actionable improvements. Use when performing code reviews.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "serpro69",
+  "install_path": ".claude/skills/review-code/SKILL.md",
+  "source": {
+    "repo": "serpro69/claude-toolbox",
+    "url": "https://github.com/serpro69/claude-toolbox/blob/master/kodex-plugin/skills/review-code/SKILL.md",
+    "path": "kodex-plugin/skills/review-code/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-11-01T18:02:41.850Z",
+    "stars": 154,
+    "language": "Shell",
+    "pushed_at": "2026-10-31T12:44:43Z",
+    "license": null
+  }
+}

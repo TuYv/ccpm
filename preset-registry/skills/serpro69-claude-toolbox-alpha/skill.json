@@ -1,0 +1,25 @@
+{
+  "id": "serpro69-claude-toolbox-alpha",
+  "name": "alpha",
+  "description": "Minimal by design, explicitly multi-lang, production-ready and battle-tested collection of configs and plugins for your Claude Code agentic development workflows: mcp, configs, skills, agents and more.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "serpro69",
+  "install_path": ".claude/skills/alpha/SKILL.md",
+  "source": {
+    "repo": "serpro69/claude-toolbox",
+    "url": "https://github.com/serpro69/claude-toolbox/blob/master/cmd/plugin-graph/testdata/minimal-plugin/skills/alpha/SKILL.md",
+    "path": "cmd/plugin-graph/testdata/minimal-plugin/skills/alpha/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-11-01T18:02:34.296Z",
+    "stars": 154,
+    "language": "Shell",
+    "pushed_at": "2026-10-31T12:44:43Z",
+    "license": null
+  }
+}

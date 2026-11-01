@@ -1,0 +1,25 @@
+{
+  "id": "jangtrinh-design-os-3d-blender-blender-agent-core",
+  "name": "blender-agent-core",
+  "description": "Core discipline for ANY Blender/bpy work — contract-first, purpose-first (render-only / print / both), knowledge routing, execute-verify-refine loop with the AGENT_OK/AGENT_FAIL sentinel contract, numeric-first verification, Form gate before delivery media, production gate before delivery. Activate for every task that touches Blender, before any domain skill.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "jangtrinh",
+  "install_path": ".claude/skills/blender-agent-core/SKILL.md",
+  "source": {
+    "repo": "jangtrinh/design-os-3d-blender",
+    "url": "https://github.com/jangtrinh/design-os-3d-blender/blob/main/.claude/skills/blender-agent-core/SKILL.md",
+    "path": ".claude/skills/blender-agent-core/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-01T18:00:34.064Z",
+    "stars": 107,
+    "language": "Python",
+    "pushed_at": "2026-11-01T00:39:38Z",
+    "license": null
+  }
+}

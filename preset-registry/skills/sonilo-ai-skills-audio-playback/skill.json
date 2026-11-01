@@ -1,0 +1,25 @@
+{
+  "id": "sonilo-ai-skills-audio-playback",
+  "name": "audio-playback",
+  "description": "Play a local audio file through the system's default speakers using Sonilo's MCP server. Use after generating a track with Sonilo (or for any local WAV/MP3/M4A/AAC/OGG/FLAC file) when the user wants to hear it immediately instead of just getting the saved path.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sonilo-ai",
+  "install_path": ".claude/skills/audio-playback/SKILL.md",
+  "source": {
+    "repo": "sonilo-ai/skills",
+    "url": "https://github.com/sonilo-ai/skills/blob/main/audio-playback/SKILL.md",
+    "path": "audio-playback/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-01T18:00:30.790Z",
+    "stars": 117,
+    "language": "Python",
+    "pushed_at": "2026-10-27T12:08:49Z",
+    "license": "MIT"
+  }
+}

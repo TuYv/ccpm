@@ -1,0 +1,25 @@
+{
+  "id": "screenpipe-screenpipe-screenpipe-customer-context",
+  "name": "screenpipe-customer-context",
+  "description": "Reconstruct a customer relationship from recorded interactions before answering or drafting a response.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "screenpipe",
+  "install_path": ".claude/skills/screenpipe-customer-context/SKILL.md",
+  "source": {
+    "repo": "screenpipe/screenpipe",
+    "url": "https://github.com/screenpipe/screenpipe/blob/main/crates/screenpipe-core/assets/skills/screenpipe-customer-context/SKILL.md",
+    "path": "crates/screenpipe-core/assets/skills/screenpipe-customer-context/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-01T18:01:06.080Z",
+    "stars": 22200,
+    "language": "Rust",
+    "pushed_at": "2026-11-01T00:08:59Z",
+    "license": null
+  }
+}

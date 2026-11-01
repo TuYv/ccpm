@@ -1,0 +1,25 @@
+{
+  "id": "screenpipe-screenpipe-render-html-report",
+  "name": "render-html-report",
+  "description": "Produce a human-facing visual report — a chart, dashboard, scorecard, or styled summary — that renders as a live page in the screenpipe viewer instead of plain text. Use when the task asks for a visual/graphical output rather than a plain note; do NOT use for plain text or raw data (prefer a markdown note for those).",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "screenpipe",
+  "install_path": ".claude/skills/render-html-report/SKILL.md",
+  "source": {
+    "repo": "screenpipe/screenpipe",
+    "url": "https://github.com/screenpipe/screenpipe/blob/main/crates/screenpipe-core/assets/skills/render-html-report/SKILL.md",
+    "path": "crates/screenpipe-core/assets/skills/render-html-report/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-01T18:01:05.053Z",
+    "stars": 22200,
+    "language": "Rust",
+    "pushed_at": "2026-11-01T00:08:59Z",
+    "license": null
+  }
+}

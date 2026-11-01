@@ -1,0 +1,25 @@
+{
+  "id": "galleonlabs-hypergrok-trading-desk-desk-operating-model",
+  "name": "desk-operating-model",
+  "description": "How the HyperGrok trading desk works as a team of Grok Bots - roles, seats, shared workspace, evidence standard, approval model and handoff format. Use when setting up the desk, when a Bot is unsure who owns something, or when a request does not fit the normal trade lifecycle.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "galleonlabs",
+  "install_path": ".claude/skills/desk-operating-model/SKILL.md",
+  "source": {
+    "repo": "galleonlabs/hypergrok-trading-desk",
+    "url": "https://github.com/galleonlabs/hypergrok-trading-desk/blob/main/skills/desk-operating-model/SKILL.md",
+    "path": "skills/desk-operating-model/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-01T18:00:14.154Z",
+    "stars": 258,
+    "language": "Python",
+    "pushed_at": "2026-11-01T09:49:57Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "screenpipe-screenpipe-screenpipe-chats",
+  "name": "screenpipe-chats",
+  "description": "Search what was said in existing screenpipe, Codex, Claude, Cursor, and Gemini CLI chats, then continue or steer one exact chat when the user explicitly asks. Use for requests about finding another agent conversation, recalling what an agent said, or sending work to one.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "screenpipe",
+  "install_path": ".claude/skills/screenpipe-chats/SKILL.md",
+  "source": {
+    "repo": "screenpipe/screenpipe",
+    "url": "https://github.com/screenpipe/screenpipe/blob/main/crates/screenpipe-core/assets/skills/screenpipe-chats/SKILL.md",
+    "path": "crates/screenpipe-core/assets/skills/screenpipe-chats/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-01T18:01:05.583Z",
+    "stars": 22200,
+    "language": "Rust",
+    "pushed_at": "2026-11-01T00:08:59Z",
+    "license": null
+  }
+}

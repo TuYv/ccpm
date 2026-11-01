@@ -1,0 +1,25 @@
+{
+  "id": "screenpipe-screenpipe-screenpipe-project-handoff",
+  "name": "screenpipe-project-handoff",
+  "description": "Prepare an evidence-backed handoff with current state, relevant artifacts, blockers, and next actions.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "screenpipe",
+  "install_path": ".claude/skills/screenpipe-project-handoff/SKILL.md",
+  "source": {
+    "repo": "screenpipe/screenpipe",
+    "url": "https://github.com/screenpipe/screenpipe/blob/main/crates/screenpipe-core/assets/skills/screenpipe-project-handoff/SKILL.md",
+    "path": "crates/screenpipe-core/assets/skills/screenpipe-project-handoff/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-01T18:01:07.627Z",
+    "stars": 22200,
+    "language": "Rust",
+    "pushed_at": "2026-11-01T00:08:59Z",
+    "license": null
+  }
+}

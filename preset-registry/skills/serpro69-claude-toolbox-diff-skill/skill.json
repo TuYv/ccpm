@@ -1,0 +1,25 @@
+{
+  "id": "serpro69-claude-toolbox-diff-skill",
+  "name": "diff-skill",
+  "description": "| Compare two versions of a skill's instructions to detect degradations and complexity increases. TRIGGER when: user asks to diff, compare, or review changes to a skill's markdown instructions. Asymmetric check — only regressions count. Additions, clarifications, and strengthenings are not degradations. Compares HEAD → working tree by default. Walks the full reachable file set from SKILL.md via markdown links. Produces a report file under docs/reviews/diff-skill/ and an inline summary.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "serpro69",
+  "install_path": ".claude/skills/diff-skill/SKILL.md",
+  "source": {
+    "repo": "serpro69/claude-toolbox",
+    "url": "https://github.com/serpro69/claude-toolbox/blob/master/kodex-plugin/skills/diff-skill/SKILL.md",
+    "path": "kodex-plugin/skills/diff-skill/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-11-01T18:02:40.550Z",
+    "stars": 154,
+    "language": "Shell",
+    "pushed_at": "2026-10-31T12:44:43Z",
+    "license": null
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "glitternetwork-pinme-pinme-email",
+  "name": "pinme-email",
+  "description": "Use this skill when a PinMe project (Worker TypeScript) needs to integrate email sending (send_email). Guides AI to generate correct Worker TS code.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "glitternetwork",
+  "install_path": ".claude/skills/pinme-email/SKILL.md",
+  "source": {
+    "repo": "glitternetwork/pinme",
+    "url": "https://github.com/glitternetwork/pinme/blob/main/skills/pinme-email/SKILL.md",
+    "path": "skills/pinme-email/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-01T18:00:54.578Z",
+    "stars": 3752,
+    "language": "TypeScript",
+    "pushed_at": "2026-09-12T05:23:49Z",
+    "license": "MIT"
+  }
+}

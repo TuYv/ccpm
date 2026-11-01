@@ -1,0 +1,25 @@
+{
+  "id": "adriannoes-awesome-agentic-ai-detecting-insider-data-exfiltration-via-dlp",
+  "name": "detecting-insider-data-exfiltration-via-dlp",
+  "description": "'Detects insider data exfiltration by analyzing DLP policy violations, file access patterns, upload volume anomalies, and off-hours activity in endpoint and cloud logs. Uses pandas for behavioral analytics and statistical baselines. Use when investigating insider threats or building user behavior analytics for data loss prevention.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0",
+  "author": "adriannoes",
+  "install_path": ".claude/skills/detecting-insider-data-exfiltration-via-dlp/SKILL.md",
+  "source": {
+    "repo": "adriannoes/awesome-agentic-ai",
+    "url": "https://github.com/adriannoes/awesome-agentic-ai/blob/main/cursor-claude-codex/skills/anthropic-cybersecurity-skills/skills/detecting-insider-data-exfiltration-via-dlp/SKILL.md",
+    "path": "cursor-claude-codex/skills/anthropic-cybersecurity-skills/skills/detecting-insider-data-exfiltration-via-dlp/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-01T18:02:33.053Z",
+    "stars": 93,
+    "language": "Jupyter Notebook",
+    "pushed_at": "2026-10-24T05:01:34Z",
+    "license": "MIT"
+  }
+}

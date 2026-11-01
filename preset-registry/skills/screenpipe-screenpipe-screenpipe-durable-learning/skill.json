@@ -1,0 +1,25 @@
+{
+  "id": "screenpipe-screenpipe-screenpipe-durable-learning",
+  "name": "screenpipe-durable-learning",
+  "description": "Turn a verified correction or repeated workflow into a reusable local learning.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "screenpipe",
+  "install_path": ".claude/skills/screenpipe-durable-learning/SKILL.md",
+  "source": {
+    "repo": "screenpipe/screenpipe",
+    "url": "https://github.com/screenpipe/screenpipe/blob/main/crates/screenpipe-core/assets/skills/screenpipe-durable-learning/SKILL.md",
+    "path": "crates/screenpipe-core/assets/skills/screenpipe-durable-learning/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-01T18:01:06.415Z",
+    "stars": 22200,
+    "language": "Rust",
+    "pushed_at": "2026-11-01T00:08:59Z",
+    "license": null
+  }
+}

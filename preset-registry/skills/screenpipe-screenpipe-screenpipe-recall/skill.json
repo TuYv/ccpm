@@ -1,0 +1,25 @@
+{
+  "id": "screenpipe-screenpipe-screenpipe-recall",
+  "name": "screenpipe-recall",
+  "description": "Find a past decision, document, or conversation in Screenpipe with source links.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "screenpipe",
+  "install_path": ".claude/skills/screenpipe-recall/SKILL.md",
+  "source": {
+    "repo": "screenpipe/screenpipe",
+    "url": "https://github.com/screenpipe/screenpipe/blob/main/crates/screenpipe-core/assets/skills/screenpipe-recall/SKILL.md",
+    "path": "crates/screenpipe-core/assets/skills/screenpipe-recall/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-01T18:01:07.960Z",
+    "stars": 22200,
+    "language": "Rust",
+    "pushed_at": "2026-11-01T00:08:59Z",
+    "license": null
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "danjdewhurst-story-skills-feedback-triage",
+  "name": "feedback-triage",
+  "description": "This skill should be used when the user asks to \"process beta reader feedback\", \"alpha reader feedback\", \"feedback round\", \"synthesize reader feedback\", \"reader notes\", \"beta feedback\", \"reader readiness check\", \"review copy\", \"send the draft to readers\", \"share with readers who don't use GitHub\", \"triage the reader panel\", or wants to collect, reconcile, and act on external reader feedback for a story project. NOT for running the simulated reader panel itself (use reader-panel), rounds with a p",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "danjdewhurst",
+  "install_path": ".claude/skills/feedback-triage/SKILL.md",
+  "source": {
+    "repo": "danjdewhurst/story-skills",
+    "url": "https://github.com/danjdewhurst/story-skills/blob/main/skills/feedback-triage/SKILL.md",
+    "path": "skills/feedback-triage/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-01T18:00:21.395Z",
+    "stars": 373,
+    "language": "JavaScript",
+    "pushed_at": "2026-11-01T15:27:51Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "serpro69-claude-toolbox-golang-testing",
+  "name": "golang-testing",
+  "description": "Go testing best practices",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "serpro69",
+  "install_path": ".claude/skills/golang-testing/SKILL.md",
+  "source": {
+    "repo": "serpro69/claude-toolbox",
+    "url": "https://github.com/serpro69/claude-toolbox/blob/master/cmd/vendor-profiles/testdata/skills/golang-testing/SKILL.md",
+    "path": "cmd/vendor-profiles/testdata/skills/golang-testing/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-11-01T18:02:34.851Z",
+    "stars": 154,
+    "language": "Shell",
+    "pushed_at": "2026-10-31T12:44:43Z",
+    "license": null
+  }
+}

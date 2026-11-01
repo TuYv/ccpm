@@ -1,0 +1,25 @@
+{
+  "id": "screenpipe-screenpipe-screenpipe-writing-context",
+  "name": "screenpipe-writing-context",
+  "description": "Recover facts and relevant examples from work history to support a requested piece of writing.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "screenpipe",
+  "install_path": ".claude/skills/screenpipe-writing-context/SKILL.md",
+  "source": {
+    "repo": "screenpipe/screenpipe",
+    "url": "https://github.com/screenpipe/screenpipe/blob/main/crates/screenpipe-core/assets/skills/screenpipe-writing-context/SKILL.md",
+    "path": "crates/screenpipe-core/assets/skills/screenpipe-writing-context/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-01T18:01:09.435Z",
+    "stars": 22200,
+    "language": "Rust",
+    "pushed_at": "2026-11-01T00:08:59Z",
+    "license": null
+  }
+}

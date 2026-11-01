@@ -1,0 +1,25 @@
+{
+  "id": "galleonlabs-hypergrok-trading-desk-desk-execution-protocol",
+  "name": "desk-execution-protocol",
+  "description": "The Execution Trader's procedure for turning an approved ticket into one Hyperliquid action and reconciling it - the pre-send checklist, order construction rules, single-send discipline, unknown-result handling and the execution report. Use before and after every send, cancel, modify, leverage change or close.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "galleonlabs",
+  "install_path": ".claude/skills/desk-execution-protocol/SKILL.md",
+  "source": {
+    "repo": "galleonlabs/hypergrok-trading-desk",
+    "url": "https://github.com/galleonlabs/hypergrok-trading-desk/blob/main/skills/desk-execution-protocol/SKILL.md",
+    "path": "skills/desk-execution-protocol/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-01T18:00:13.392Z",
+    "stars": 258,
+    "language": "Python",
+    "pushed_at": "2026-11-01T09:49:57Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "sonilo-ai-skills-video-to-sfx",
+  "name": "video-to-sfx",
+  "description": "Generate sound effects matched to a video using Sonilo — footsteps, impacts, ambience, foley — optionally scripted to specific timed segments, returning either the audio or a new video with the SFX muxed in. Use when the user has footage that needs sound design. For SFX from a text description alone, use the text-to-sfx skill; for music, use video-to-music.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sonilo-ai",
+  "install_path": ".claude/skills/video-to-sfx/SKILL.md",
+  "source": {
+    "repo": "sonilo-ai/skills",
+    "url": "https://github.com/sonilo-ai/skills/blob/main/video-to-sfx/SKILL.md",
+    "path": "video-to-sfx/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-01T18:00:32.435Z",
+    "stars": 117,
+    "language": "Python",
+    "pushed_at": "2026-10-27T12:08:49Z",
+    "license": "MIT"
+  }
+}

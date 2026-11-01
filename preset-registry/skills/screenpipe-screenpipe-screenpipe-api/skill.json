@@ -1,0 +1,25 @@
+{
+  "id": "screenpipe-screenpipe-screenpipe-api",
+  "name": "screenpipe-api",
+  "description": "Query the user's local and synced-device data via the screenpipe REST API at localhost:3030 — recordings, audio, UI, meetings, connected services, and memory. Use for starred work, screen activity, other-device or cross-device history, productivity, media export, connections, durable memory, or discovering and automating saved workflows.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "screenpipe",
+  "install_path": ".claude/skills/screenpipe-api/SKILL.md",
+  "source": {
+    "repo": "screenpipe/screenpipe",
+    "url": "https://github.com/screenpipe/screenpipe/blob/main/crates/screenpipe-core/assets/skills/screenpipe-api/SKILL.md",
+    "path": "crates/screenpipe-core/assets/skills/screenpipe-api/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-01T18:01:05.214Z",
+    "stars": 22200,
+    "language": "Rust",
+    "pushed_at": "2026-11-01T00:08:59Z",
+    "license": null
+  }
+}

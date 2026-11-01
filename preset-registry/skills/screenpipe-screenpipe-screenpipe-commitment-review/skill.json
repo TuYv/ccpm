@@ -1,0 +1,25 @@
+{
+  "id": "screenpipe-screenpipe-screenpipe-commitment-review",
+  "name": "screenpipe-commitment-review",
+  "description": "Find explicit promises and deadlines in selected work history and reconcile their latest status.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "screenpipe",
+  "install_path": ".claude/skills/screenpipe-commitment-review/SKILL.md",
+  "source": {
+    "repo": "screenpipe/screenpipe",
+    "url": "https://github.com/screenpipe/screenpipe/blob/main/crates/screenpipe-core/assets/skills/screenpipe-commitment-review/SKILL.md",
+    "path": "crates/screenpipe-core/assets/skills/screenpipe-commitment-review/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-01T18:01:05.917Z",
+    "stars": 22200,
+    "language": "Rust",
+    "pushed_at": "2026-11-01T00:08:59Z",
+    "license": null
+  }
+}
