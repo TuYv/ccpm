@@ -1,7 +1,7 @@
 {
   "id": "garrytan-gstack-ship",
   "name": "ship",
-  "description": "Ship workflow: detect + merge base branch, run tests, review diff, bump VERSION, update CHANGELOG, commit, push, create PR. (gstack)",
+  "description": "Ship it: merge the base, run tests, review the diff, bump VERSION and CHANGELOG, push and create a PR. (gstack)",
   "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/garrytan/gstack/blob/main/ship/SKILL.md",
     "path": "ship/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-31T22:45:28.899Z",
-    "stars": 138472,
+    "discovered_at": "2026-11-01T02:30:50.672Z",
+    "stars": 138488,
     "language": "TypeScript",
-    "pushed_at": "2026-10-31T22:44:31Z",
+    "pushed_at": "2026-11-01T02:25:10Z",
     "license": "MIT"
-  },
-  "summary_zh": "一款自动化发版工作流工具，可合并基准分支、测试并审查变更，更新版本与日志后提交代码并创建 PR。"
+  }
 }

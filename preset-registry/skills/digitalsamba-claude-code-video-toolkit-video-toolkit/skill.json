@@ -1,0 +1,25 @@
+{
+  "id": "digitalsamba-claude-code-video-toolkit-video-toolkit",
+  "name": "video_toolkit",
+  "description": "Make short explainer videos from a brief with claude-code-video-toolkit — submit a scene spec, poll a job, get a QC-checked MP4. Also covers the individual tools (AI voiceover, images, clips, music, talking heads) for custom work.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "digitalsamba",
+  "install_path": ".claude/skills/video-toolkit/SKILL.md",
+  "source": {
+    "repo": "digitalsamba/claude-code-video-toolkit",
+    "url": "https://github.com/digitalsamba/claude-code-video-toolkit/blob/main/skills/video-toolkit/SKILL.md",
+    "path": "skills/video-toolkit/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-01T04:11:11.764Z",
+    "stars": 2401,
+    "language": "Python",
+    "pushed_at": "2026-11-01T03:30:10Z",
+    "license": "MIT"
+  }
+}
