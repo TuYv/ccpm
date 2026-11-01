@@ -377,6 +377,18 @@ Layer.video("assets/surf.mp4", { position: "absolute", x: 0, y: 0, width: W, hei
   .withMatte(Layer.text("OCEAN", { position: "absolute", x: 0, y: 340, width: W, fontSize: 380, align: "center", fill: "#fff" }));
 ```
 
+### Relief: footage as a 3D surface
+
+`node.withRelief(heightLayer, { amount })` turns a 3D layer into a surface: the brightness of `heightLayer` (laid out and timed like a matte, drawn flat over the node's box) pushes it up to `amount` px toward the camera. It moves along the **default camera's** rays, so from that lens the surface is pixel for pixel the flat layer; move the camera and the footage has real parallax, takes the scene's lights, and hides 3D objects that pass behind its raised parts. With a video's own depth it puts the footage in the 3D scene:
+
+```typescript
+const plate = { position: "absolute", x: 0, y: 0, width: W, height: H, fit: "cover", muted: true } as const;
+Layer.video("assets/table.mp4", { ...plate, is3D: true })
+  .withRelief(Layer.video("assets/table.mp4", plate).withVision({ mode: "depth" }), { amount: 300 });
+```
+
+Where depth jumps (an object's outline) the surface stretches across with the edge pixels: footage never saw those sides. Keep camera moves within about 15° of the original lens, or hide the outlines.
+
 ---
 
 ## Scenes & Transitions
@@ -556,3 +568,4 @@ Layer.vfx({ effectType: "Aurora", width: W, height: H, colorStart: "#2bff88", co
 9. **Lint before rendering:** `comp.lint()` lists colors/gradients that would draw transparent, low-contrast text, off-canvas layers, shadow settings that do nothing and `roughness`/`metallic` without an environment. `renderVideo({ qa: true })` includes these findings.
 10. **Lottie vs. Image Layers:** Use `Layer.lottie("file.json" | "file.lottie", { width, height, fit })` for Lottie vector animations. Never pass `.json` or `.lottie` to `Layer.image()`, which only decodes raster formats and throws/warns if given a vector animation.
 11. **AI-generated media are assets, not build steps:** Images, clips, music or voice made with `ai` (from `framefields`) are generated once by a separate script into `assets/generated/` and loaded like any other file. Never call `ai` from `buildFilm()` or a scene function: it would spend money and change the film on every render, preview and test. The `framefields` skill (section 6) covers the key, the script and the model catalog.
+12. **Zooming into flat layers stays sharp:** text, shapes, images and SVGs rasterize at their scale on the canvas (up to 4×), so a camera push or a parent at `scale: 2` keeps glyphs and edges crisp. A leaf keeps its layout-size raster, and softens when magnified, if it is 3D or deflickered, is media with `effects`/`crop`, or carries an effect other than `LayerStyle` or a Gaussian/box `Blur`.
