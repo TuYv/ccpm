@@ -1,14 +1,14 @@
 {
   "id": "jimliu-baoyu-skills-baoyu-diagram",
   "name": "baoyu-diagram",
-  "description": "Create professional, dark-themed SVG diagrams of any type — architecture diagrams, flowcharts, sequence diagrams, structural diagrams, mind maps, timelines, illustrative/conceptual diagrams, and more. Use this skill whenever the user asks for any kind of technical or conceptual diagram, visualization of a system, process flow, data flow, component relationship, network topology, decision tree, org chart, state machine, or any visual representation of structure/logic/process. Also trigger when th",
+  "description": "Create professional diagrams with configurable dark/light theme via CSS custom properties. Use this skill whenever the user asks for any kind of technical or conceptual diagram, visualization of a system, process flow, data flow, component relationship, network topology, decision tree, org chart, state machine, or any visual representation of structure/logic/process. Also trigger when the user says \"画个图\" \"画一个架构图\" \"diagram\" \"flowchart\" \"sequence diagram\" \"draw me a ...\" or uploads content and ask",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
     "gemini"
   ],
-  "version": "1.117.3",
+  "version": "1.118.0",
   "author": "JimLiu",
   "install_path": ".claude/skills/baoyu-diagram/SKILL.md",
   "source": {
@@ -16,11 +16,10 @@
     "url": "https://github.com/JimLiu/baoyu-skills/blob/main/skills/baoyu-diagram/SKILL.md",
     "path": "skills/baoyu-diagram/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-01T17:00:55.135Z",
-    "stars": 27157,
+    "discovered_at": "2026-11-01T21:29:35.077Z",
+    "stars": 27159,
     "language": "TypeScript",
-    "pushed_at": "2026-11-01T07:35:52Z",
+    "pushed_at": "2026-11-01T20:13:12Z",
     "license": "MIT"
-  },
-  "summary_zh": "这是一款生成专业深色系SVG图表的工具，适合需要把复杂的系统架构、业务流程或抽象逻辑转化为直观视觉图像的场景，帮你轻松搞定各类技术与概念图。"
+  }
 }

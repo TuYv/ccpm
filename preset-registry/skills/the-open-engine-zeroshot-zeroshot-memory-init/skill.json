@@ -2,7 +2,7 @@
   "id": "the-open-engine-zeroshot-zeroshot-memory-init",
   "name": "zeroshot-memory-init",
   "description": "Initialize or backfill Zeroshot Active Memory from local run history using isolated discovery subagents and final graph/repository maintenance against recorded current checkouts. Use when the user requests memory initialization, not ordinary graph execution or company knowledge search.",
-  "category": "开发编程",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/the-open-engine/zeroshot/blob/main/npm/zeroshot/skills/zeroshot-memory-init/SKILL.md",
     "path": "npm/zeroshot/skills/zeroshot-memory-init/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-01T16:20:47.509Z",
-    "stars": 2082,
+    "discovered_at": "2026-11-01T20:46:23.566Z",
+    "stars": 2083,
     "language": "Rust",
-    "pushed_at": "2026-11-01T12:48:31Z",
+    "pushed_at": "2026-11-01T19:41:17Z",
     "license": "MIT"
   }
 }
