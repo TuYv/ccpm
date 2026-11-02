@@ -1,0 +1,25 @@
+{
+  "id": "sametbrr-llm-wiki-manager-llm-wiki-manager",
+  "name": "llm-wiki-manager",
+  "description": "Build, maintain, and query a personal LLM-managed wiki — a markdown knowledge base where the LLM owns all writing, cross-referencing, and bookkeeping while the user curates sources. Use this skill when the user wants to (1) bootstrap a new wiki, second brain, or research notebook; (2) ingest a new source (article, PDF, paper, transcript) and update relevant entity/concept pages, the index, and log; (3) query an existing wiki and synthesize an answer with citations, filing it back if useful; (4) ",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sametbrr",
+  "install_path": ".claude/skills/llm-wiki-manager/SKILL.md",
+  "source": {
+    "repo": "sametbrr/llm-wiki-manager",
+    "url": "https://github.com/sametbrr/llm-wiki-manager/blob/main/skills/llm-wiki-manager/SKILL.md",
+    "path": "skills/llm-wiki-manager/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-02T19:29:19.026Z",
+    "stars": 72,
+    "language": "Python",
+    "pushed_at": "2026-11-02T19:29:11Z",
+    "license": "MIT"
+  }
+}

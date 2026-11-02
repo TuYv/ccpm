@@ -1,8 +1,8 @@
 {
   "id": "everyinc-compound-engineering-plugin-ce-compound-refresh",
   "name": "ce-compound-refresh",
-  "description": "Refresh the repo's captured learnings against the current codebase. Use when auditing stale, overlapping, superseded, or drifted learnings; avoid general refactor, debugging, or code review unless the learnings store is explicit.",
-  "category": "测试调试",
+  "description": "Old name for refreshing learnings, which now lives in `ce-compound`. Use only when a prompt or standing instruction names `ce-compound-refresh`; use `ce-compound` for every other learnings audit.",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/EveryInc/compound-engineering-plugin/blob/main/skills/ce-compound-refresh/SKILL.md",
     "path": "skills/ce-compound-refresh/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-02T08:50:17.419Z",
-    "stars": 25846,
+    "discovered_at": "2026-11-02T19:23:22.655Z",
+    "stars": 25866,
     "language": "TypeScript",
-    "pushed_at": "2026-11-02T08:43:40Z",
+    "pushed_at": "2026-11-02T19:13:51Z",
     "license": "MIT"
   }
 }

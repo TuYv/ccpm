@@ -1,0 +1,25 @@
+{
+  "id": "aeonfun-aeon-flovia",
+  "name": "flovia",
+  "description": "Live lookups through the Flovia MCP - Nansen smart money and token flows, CoinGecko markets, direct chain reads, Zerion wallets, Exa web search and Firecrawl page reads - on a free shared allowance. OAuth Connect or an flv_ key in the dashboard MCP panel.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "aeonfun",
+  "install_path": ".claude/skills/flovia/SKILL.md",
+  "source": {
+    "repo": "aeonfun/aeon",
+    "url": "https://github.com/aeonfun/aeon/blob/main/skills/flovia/SKILL.md",
+    "path": "skills/flovia/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-02T19:28:32.858Z",
+    "stars": 786,
+    "language": "JavaScript",
+    "pushed_at": "2026-11-02T16:28:52Z",
+    "license": "MIT"
+  }
+}

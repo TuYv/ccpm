@@ -1,0 +1,25 @@
+{
+  "id": "0xs4n4tg-kinetograph-kinetograph-migrate",
+  "name": "kinetograph-migrate",
+  "description": "Move an existing Remotion project onto Kinetograph so it renders without a browser. Use when the user has a Remotion project (remotion or @remotion/* imports, `remotion render` scripts, @remotion/three, @remotion/player) and wants it to run, preview or render with Kinetograph, or asks what in a Remotion project will not work there.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "0xS4N4TG",
+  "install_path": ".claude/skills/kinetograph-migrate/SKILL.md",
+  "source": {
+    "repo": "0xS4N4TG/kinetograph",
+    "url": "https://github.com/0xS4N4TG/kinetograph/blob/main/packages/cli/skills/kinetograph-migrate/SKILL.md",
+    "path": "packages/cli/skills/kinetograph-migrate/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-02T20:18:01.320Z",
+    "stars": 441,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-02T20:10:17Z",
+    "license": null
+  }
+}

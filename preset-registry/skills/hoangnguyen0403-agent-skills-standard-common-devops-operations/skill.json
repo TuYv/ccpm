@@ -1,0 +1,25 @@
+{
+  "id": "hoangnguyen0403-agent-skills-standard-common-devops-operations",
+  "name": "common-devops-operations",
+  "description": "Execute provider-neutral DevOps operations across AWS, GCP, Cloudflare, and Vercel. Standardizes MCP preflight, identity and authorization, effect-based release gating, and outward verification for setup, deploy, verify, monitor, diagnose, and recover. Use when managing cloud infrastructure, deploying releases, or diagnosing operational issues. (triggers: devops operations, cloud deployment, hosting verification, deployment diagnosis, cloud monitoring, deployment recovery)",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "HoangNguyen0403",
+  "install_path": ".claude/skills/common-devops-operations/SKILL.md",
+  "source": {
+    "repo": "HoangNguyen0403/agent-skills-standard",
+    "url": "https://github.com/HoangNguyen0403/agent-skills-standard/blob/develop/.agents/skills/common/common-devops-operations/SKILL.md",
+    "path": ".agents/skills/common/common-devops-operations/SKILL.md",
+    "branch": "develop",
+    "discovered_at": "2026-11-02T19:23:07.749Z",
+    "stars": 582,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-02T14:54:19Z",
+    "license": "MIT"
+  }
+}
