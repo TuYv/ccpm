@@ -1,0 +1,25 @@
+{
+  "id": "salemalem-npmscan-mcp-plugin-ci-pr-gate",
+  "name": "ci-pr-gate",
+  "description": "Turn a dependency change — a before/after package.json/lockfile snapshot, or one or more named \"bump X from A to B\" upgrades — into one deterministic PASS/WARN/FAIL verdict formatted for a CI check or PR-comment bot, not a conversational report. Use when the user explicitly wants a mergeable/blocking verdict, a \"CI gate,\" a PR status comment, or asks \"should this PR be blocked,\" \"is this safe to merge,\" \"gate this dependency bump.\" Not for a plain explanation of what changed in a diff (dependenc",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "salemalem",
+  "install_path": ".claude/skills/ci-pr-gate/SKILL.md",
+  "source": {
+    "repo": "salemalem/npmscan-mcp-plugin",
+    "url": "https://github.com/salemalem/npmscan-mcp-plugin/blob/main/skills/ci-pr-gate/SKILL.md",
+    "path": "skills/ci-pr-gate/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-02T08:54:38.688Z",
+    "stars": 509,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-02T08:11:12Z",
+    "license": "MIT"
+  }
+}

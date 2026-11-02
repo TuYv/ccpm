@@ -1,0 +1,25 @@
+{
+  "id": "salemalem-npmscan-mcp-plugin-incident-response",
+  "name": "incident-response",
+  "description": "Turn a flagged npm supply-chain finding — or just a vague, non-technical description of one (\"this package looks sketchy,\" \"someone said we got hacked,\" \"npm install did something weird\") — into concrete remediation steps. Use whenever the user wants to know what to actually do about a suspicious/compromised/flagged package, however precisely or vaguely they describe it — not for the initial trust/vulnerability investigation itself (see package-trust-check/dependency-audit for that).",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "salemalem",
+  "install_path": ".claude/skills/incident-response/SKILL.md",
+  "source": {
+    "repo": "salemalem/npmscan-mcp-plugin",
+    "url": "https://github.com/salemalem/npmscan-mcp-plugin/blob/main/skills/incident-response/SKILL.md",
+    "path": "skills/incident-response/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-02T08:54:38.989Z",
+    "stars": 509,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-02T08:11:12Z",
+    "license": "MIT"
+  }
+}

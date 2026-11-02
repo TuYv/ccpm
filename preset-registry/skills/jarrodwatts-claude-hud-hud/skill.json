@@ -1,0 +1,25 @@
+{
+  "id": "jarrodwatts-claude-hud-hud",
+  "name": "hud",
+  "description": "Set up, check, change, preview, or report a problem with the claude-hud status line. Use when the user mentions the HUD or status line, wants something shown or hidden below the input, says it is blank, broken or wrong, or sees \"Type /hud to fix it\".",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "jarrodwatts",
+  "install_path": ".claude/skills/hud/SKILL.md",
+  "source": {
+    "repo": "jarrodwatts/claude-hud",
+    "url": "https://github.com/jarrodwatts/claude-hud/blob/main/skills/hud/SKILL.md",
+    "path": "skills/hud/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-02T08:50:52.765Z",
+    "stars": 29080,
+    "language": "JavaScript",
+    "pushed_at": "2026-11-02T06:53:35Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "salemalem-npmscan-mcp-plugin-new-dependency-evaluation",
+  "name": "new-dependency-evaluation",
+  "description": "Help decide what to add as a NEW npm dependency — comparing 2-5 named candidates for the same job, evaluating one named candidate against its real peers, or shortlisting candidates from a described need, before anything is installed. Use for \"which should we use for X,\" \"axios vs got vs node-fetch,\" \"is X a good pick for Y,\" \"what should we use to do Z,\" \"should we add X or is there something better.\" Not for auditing packages already in the project (see dependency-audit), not for a deep single-",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "salemalem",
+  "install_path": ".claude/skills/new-dependency-evaluation/SKILL.md",
+  "source": {
+    "repo": "salemalem/npmscan-mcp-plugin",
+    "url": "https://github.com/salemalem/npmscan-mcp-plugin/blob/main/skills/new-dependency-evaluation/SKILL.md",
+    "path": "skills/new-dependency-evaluation/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-02T08:54:39.166Z",
+    "stars": 509,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-02T08:11:12Z",
+    "license": "MIT"
+  }
+}

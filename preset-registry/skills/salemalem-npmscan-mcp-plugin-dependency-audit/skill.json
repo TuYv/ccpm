@@ -1,0 +1,25 @@
+{
+  "id": "salemalem-npmscan-mcp-plugin-dependency-audit",
+  "name": "dependency-audit",
+  "description": "Audit a project's npm dependencies for known vulnerabilities and risky install scripts before installing, upgrading, or shipping. Use when the user pastes or attaches a package.json/lockfile, lists dependencies, or asks to check/audit/scan their packages for security issues — including comparing two snapshots (a PR diff) or checking license compliance.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "salemalem",
+  "install_path": ".claude/skills/dependency-audit/SKILL.md",
+  "source": {
+    "repo": "salemalem/npmscan-mcp-plugin",
+    "url": "https://github.com/salemalem/npmscan-mcp-plugin/blob/main/skills/dependency-audit/SKILL.md",
+    "path": "skills/dependency-audit/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-02T08:54:38.841Z",
+    "stars": 509,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-02T08:11:12Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "everyinc-compound-engineering-plugin-ce-help",
+  "name": "ce-help",
+  "description": "Help and orientation for Compound Engineering: place the user's work on the compounding loop and recommend the next command, without running it. Use when the user invokes ce-help to ask which skill fits, what comes next, how setup, configuration, cost, or upgrades work, or why a skill misbehaved.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "EveryInc",
+  "install_path": ".claude/skills/ce-help/SKILL.md",
+  "source": {
+    "repo": "EveryInc/compound-engineering-plugin",
+    "url": "https://github.com/EveryInc/compound-engineering-plugin/blob/main/skills/ce-help/SKILL.md",
+    "path": "skills/ce-help/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-02T08:50:18.643Z",
+    "stars": 25846,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-02T08:43:40Z",
+    "license": "MIT"
+  }
+}
