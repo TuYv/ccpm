@@ -1,0 +1,25 @@
+{
+  "id": "felinics-memoh-memoh-frontend-rules",
+  "name": "memoh-frontend-rules",
+  "description": ">- Memoh 前端对用户和维护者的承诺：红线、冲突处理顺序，以及每条承诺在本仓库中的 实现方式。在 apps/web 或 Desktop 渲染层编写、修改或审查代码时使用：页面、 组件、composable、store、服务端数据、路由、i18n、流式传输。不用于 @felinic/ui 的 token 和视觉（使用 packages/ui 的 skill）、后端代码，或只修改 文档的工作。",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "felinics",
+  "install_path": ".claude/skills/memoh-frontend-rules/SKILL.md",
+  "source": {
+    "repo": "felinics/Memoh",
+    "url": "https://github.com/felinics/Memoh/blob/main/.agents/skills/memoh-frontend-rules/SKILL.md",
+    "path": ".agents/skills/memoh-frontend-rules/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-03T16:35:04.663Z",
+    "stars": 2777,
+    "language": "Go",
+    "pushed_at": "2026-11-03T15:05:57Z",
+    "license": "AGPL-3.0"
+  }
+}

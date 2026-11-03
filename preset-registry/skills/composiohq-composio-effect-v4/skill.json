@@ -1,7 +1,7 @@
 {
   "id": "composiohq-composio-effect-v4",
   "name": "effect-v4",
-  "description": "Write, review, or upgrade Effect v4 code in the Composio CLI, cli-keyring, and json-schema-to-effect-schema packages, all pinned exactly to effect@4.0.5 — Context.Service and explicit layers, Schema.TaggedError and typed recovery, the effect/cli command surface, and the vendored effect source oracle. Use when writing or reviewing Effect v4 code, answering a v4 API question, working in effect/cli, defining a Context.Service service, modeling an error with Schema.TaggedError, bumping the Effect pi",
+  "description": "Write, review, or upgrade Effect v4 code in the Composio CLI, cli-keyring, and json-schema-to-effect-schema packages, all using the matching range effect@^4.1.0 — Context.Service and explicit layers, Schema.TaggedError and typed recovery, the effect/cli command surface, and the vendored effect source oracle. Use when writing or reviewing Effect v4 code, answering a v4 API question, working in effect/cli, defining a Context.Service service, modeling an error with Schema.TaggedError, bumping the E",
   "category": "自动化集成",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/ComposioHQ/composio/blob/next/.agents/skills/effect-v4/SKILL.md",
     "path": ".agents/skills/effect-v4/SKILL.md",
     "branch": "next",
-    "discovered_at": "2026-11-03T08:15:45.253Z",
-    "stars": 30894,
+    "discovered_at": "2026-11-03T16:33:43.908Z",
+    "stars": 30900,
     "language": "TypeScript",
-    "pushed_at": "2026-11-03T06:27:54Z",
+    "pushed_at": "2026-11-03T16:33:34Z",
     "license": "MIT"
   }
 }

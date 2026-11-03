@@ -1,0 +1,25 @@
+{
+  "id": "google-skills-agent-platform-architecture",
+  "name": "agent-platform-architecture",
+  "description": ">- Designs, engineers, and validates enterprise Gemini platform architectures. Use when designing multi-project hierarchies (Host, Central Governance Hub, Runtime Spoke, Tool/MCP Spoke), configuring Agent Gateway, authoring Agent Connectivity Templates (ALL_TRAFFIC vs PRIVATE_RANGES_ONLY), deploying Secure Web Proxy (SWP) with Policy-Based Routing (PBR) or Cross-Cloud mTLS Egress Hubs, configuring Private CA TrustConfig with Internal ALB + Serverless NEG, implementing Unified Access Policies (UA",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/agent-platform-architecture/SKILL.md",
+  "source": {
+    "repo": "google/skills",
+    "url": "https://github.com/google/skills/blob/main/skills/cloud/agent-platform-architecture/SKILL.md",
+    "path": "skills/cloud/agent-platform-architecture/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-03T16:31:00.637Z",
+    "stars": 21824,
+    "language": "Python",
+    "pushed_at": "2026-11-03T16:04:32Z",
+    "license": "Apache-2.0"
+  }
+}

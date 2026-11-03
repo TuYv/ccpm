@@ -1,7 +1,7 @@
 {
   "id": "garrytan-gstack-investigate",
   "name": "investigate",
-  "description": "Systematic debugging with root cause investigation. (gstack)",
+  "description": "Use when a test fails, code errors or output is wrong: find the root cause, then fix it. (gstack)",
   "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/garrytan/gstack/blob/main/investigate/SKILL.md",
     "path": "investigate/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-03T08:16:19.135Z",
-    "stars": 138736,
+    "discovered_at": "2026-11-03T16:34:14.240Z",
+    "stars": 138797,
     "language": "TypeScript",
-    "pushed_at": "2026-11-03T08:13:58Z",
+    "pushed_at": "2026-11-03T16:33:29Z",
     "license": "MIT"
-  },
-  "summary_zh": "一款系统化调试工具，帮助开发者梳理故障线索并定位根因，适合排查复杂软件问题。"
+  }
 }

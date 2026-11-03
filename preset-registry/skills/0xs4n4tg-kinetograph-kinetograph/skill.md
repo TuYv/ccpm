@@ -2,7 +2,7 @@
 name: kinetograph
 description: Make videos and motion graphics with Kinetograph. Write Remotion-shaped TSX (useCurrentFrame, interpolate, spring, Sequence, native elements) and Web Audio code, or an HTML page with GSAP (HyperFrames projects render as they are), look at frames with `kinetograph still` and `strip`, check them with `inspect` and `lint`, then `render` to MP4. Use when asked to build, edit, preview or render a video, animation, title card or sound design with Kinetograph.
 metadata:
-  version: "0.2.5"
+  version: "0.3.0"
 ---
 
 # Working with Kinetograph
@@ -27,6 +27,11 @@ html/index.html   an HTML or HyperFrames page (with --html)
 public/           assets for staticFile(): images/, fonts/, audio/, video/
 out/              everything generated: renders/, stills/, sheets/
 ```
+
+To use a catalog component, template or taste, run `npx kinetograph add <name>` (`add --list` shows what exists) instead of rewriting it.
+It writes `src/components/<name>/`, `src/templates/<name>/` or `src/tastes/<name>/`, puts assets in `public/<kind>/<name>/`, and
+never overwrites a file you changed (`--overwrite` does). Add `--yes` to let it install the npm packages the item needs; without it the
+command is printed and not run. Read what it prints under `next:` for the import line.
 
 Load assets as `staticFile('images/logo.png')`. Never write outputs next to the code or at the project root: `still`,
 `strip`, `onion` and `render` write to `out/` when you leave out `-o`, and print the path. An existing project keeps its own layout.
