@@ -1,0 +1,25 @@
+{
+  "id": "unbrowse-ai-unbrowse-unbrowse-contribute",
+  "name": "unbrowse-contribute",
+  "description": "Use whenever Unbrowse itself misbehaves - the unbrowse CLI, SDK, stdio MCP proxy or an agent plugin crashes, prints \"looks like an Unbrowse bug\", exits with the wrong code, ignores a documented flag, or its docs and skill describe something that does not happen; or the hosted service answers 5xx or returns a wrong or empty result for a site it lists. Reproduces it, checks for an existing issue or PR, and opens a fix PR to github.com/unbrowse-ai/unbrowse (or an issue for the hosted side), with th",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "unbrowse-ai",
+  "install_path": ".claude/skills/unbrowse-contribute/SKILL.md",
+  "source": {
+    "repo": "unbrowse-ai/unbrowse",
+    "url": "https://github.com/unbrowse-ai/unbrowse/blob/main/skills/unbrowse-contribute/SKILL.md",
+    "path": "skills/unbrowse-contribute/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-03T08:14:43.727Z",
+    "stars": 867,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-03T07:09:34Z",
+    "license": "MIT"
+  }
+}
