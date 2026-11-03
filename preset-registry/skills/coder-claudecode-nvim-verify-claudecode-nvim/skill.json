@@ -1,7 +1,7 @@
 {
   "id": "coder-claudecode-nvim-verify-claudecode-nvim",
   "name": "verify-claudecode-nvim",
-  "description": "Drive the real claudecode.nvim plugin in a real Neovim (an agent-tty terminal) while a scripted WebSocket client (scripts/ws-client.mjs) plays the Claude Code CLI over the plugin's WebSocket MCP server, and capture screen text, PNG screenshots, WebM video, JSON-RPC traffic, and file state as evidence. Use to prove a claudecode.nvim feature works end to end (openDiff accept/reject, openFile, selection tracking, :ClaudeCodeSend at-mentions, closing diffs) without the claude CLI or network.",
+  "description": "Drive the real claudecode.nvim plugin in a real Neovim (an agent-tty terminal) while a scripted WebSocket client (scripts/ws-client.mjs) plays the Claude Code CLI over the plugin's WebSocket MCP server, and capture screen text, PNG screenshots, WebM video, JSON-RPC traffic, and file state as evidence. Use to prove a claudecode.nvim feature works end to end (openDiff accept/reject, openFile, selection tracking, :ClaudeCodeSend at-mentions, closing diffs) without the claude CLI or network. Also us",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/coder/claudecode.nvim/blob/main/.agents/skills/verify-claudecode-nvim/SKILL.md",
     "path": ".agents/skills/verify-claudecode-nvim/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-02T19:25:05.632Z",
+    "discovered_at": "2026-11-03T02:08:24.443Z",
     "stars": 3146,
     "language": "Lua",
-    "pushed_at": "2026-11-02T19:23:32Z",
+    "pushed_at": "2026-11-02T19:52:09Z",
     "license": "MIT"
   }
 }

@@ -1,8 +1,8 @@
 {
   "id": "agricidaniel-claude-blog-blog",
   "name": "blog",
-  "description": "> Full-lifecycle blog engine with 31 sub-skills, 12 content templates, 5-category 100-point scoring, and 5 specialized agents. Routes user requests to the right sub-skill: writing, rewriting, analysis, outlines, audits, schema, charts, images, repurposing, AI citation SEO, FLOW framework prompts, topic-cluster execution, and multilingual publishing. Optimized for Google rankings around the May 2026 Core Update, E-E-A-T, and AI citations as one SEO discipline. Supports any platform (WordPress, Ne",
-  "category": "设计创意",
+  "description": "> Full-lifecycle blog engine with 31 sub-skills, 12 templates, 100-point scoring, and 5 agents. Routes requests to the right sub-skill: writing, rewriting, analysis, outlines, audits, schema, charts, images, repurposing, AI citation SEO, FLOW prompts, topic clusters, and multilingual publishing. Optimized for Google rankings, E-E-A-T, and AI citations. Supports any platform. Use when the user asks to create, revise, analyze, plan, translate, localize, audit, or repurpose blog content, or invokes",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -13,14 +13,13 @@
   "install_path": ".claude/skills/blog/SKILL.md",
   "source": {
     "repo": "AgriciDaniel/claude-blog",
-    "url": "https://github.com/AgriciDaniel/claude-blog/blob/main/brain/.raw/sources/claude-blog-skill/skills/blog/SKILL.md",
-    "path": "brain/.raw/sources/claude-blog-skill/skills/blog/SKILL.md",
+    "url": "https://github.com/AgriciDaniel/claude-blog/blob/main/skills/blog/SKILL.md",
+    "path": "skills/blog/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-02T19:22:04.017Z",
-    "stars": 2616,
+    "discovered_at": "2026-11-03T02:05:29.226Z",
+    "stars": 2618,
     "language": "Python",
-    "pushed_at": "2026-10-30T02:56:32Z",
+    "pushed_at": "2026-11-03T00:20:12Z",
     "license": "MIT"
-  },
-  "summary_zh": "一套覆盖写作、优化、审校与多语发布的全流程博客引擎，适合批量生产兼顾搜索排名和 AI 引用的内容。"
+  }
 }

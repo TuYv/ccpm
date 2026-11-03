@@ -1,7 +1,7 @@
 {
   "id": "agricidaniel-claude-blog-blog-write",
   "name": "blog-write",
-  "description": "> Write new blog articles from scratch optimized for Google rankings and AI citations. Generates full articles with template selection, answer-first formatting, Key Takeaways summary box, information gain markers, citation capsules, sourced statistics, Pixabay/Unsplash images, built-in SVG chart generation, optional FAQ sections, internal linking zones, and proper heading hierarchy. Supports MDX, markdown, and HTML output. Use when user says \"write blog\", \"new blog post\", \"create article\", \"writ",
+  "description": "> Write a new blog article from scratch for Google rankings and AI citations, then take it through the delivery gates. Generates the full article with template selection, answer-first formatting, Key Takeaways box, sourced statistics, licensed images, built-in SVG charts, optional FAQ and internal linking, in MDX, markdown or HTML. Use when the user asks to write a new blog post or article from a topic or brief (\"write a blog post\", \"draft a new article\", \"/blog write\"). Not for editing an exist",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -13,14 +13,13 @@
   "install_path": ".claude/skills/blog-write/SKILL.md",
   "source": {
     "repo": "AgriciDaniel/claude-blog",
-    "url": "https://github.com/AgriciDaniel/claude-blog/blob/main/brain/.raw/sources/claude-blog-skill/skills/blog-write/SKILL.md",
-    "path": "brain/.raw/sources/claude-blog-skill/skills/blog-write/SKILL.md",
+    "url": "https://github.com/AgriciDaniel/claude-blog/blob/main/skills/blog-write/SKILL.md",
+    "path": "skills/blog-write/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-02T19:22:03.882Z",
-    "stars": 2616,
+    "discovered_at": "2026-11-03T02:05:29.095Z",
+    "stars": 2618,
     "language": "Python",
-    "pushed_at": "2026-10-30T02:56:32Z",
+    "pushed_at": "2026-11-03T00:20:12Z",
     "license": "MIT"
-  },
-  "summary_zh": "一款自动生成完整博客文章的写作工具，适合快速产出兼顾谷歌排名和 AI 引用的内容。"
+  }
 }

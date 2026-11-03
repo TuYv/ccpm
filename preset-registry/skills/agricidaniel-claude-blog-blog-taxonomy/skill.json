@@ -1,7 +1,7 @@
 {
   "id": "agricidaniel-claude-blog-blog-taxonomy",
   "name": "blog-taxonomy",
-  "description": "> Extract, suggest, and sync tags and categories for blog posts across all major CMS platforms. Supports WordPress REST API, Shopify GraphQL, Ghost Content API, Strapi REST/GraphQL, and Sanity GROQ. Generates tag suggestions from content analysis (keyword frequency, heading extraction, semantic grouping), enforces minimum post-count thresholds to prevent thin tag archives, and syncs taxonomy via authenticated API calls. Use when user says \"tags\", \"categories\", \"taxonomy\", \"tag suggestions\", \"syn",
+  "description": "> Suggest tags and categories for a blog post from its content, audit a site's tag and category health, and, only after the user approves a shown plan, sync tags and categories to WordPress, Shopify, Ghost, Strapi, or Sanity. suggest and audit are read-only; sync is dry-run by default and never deletes, merges, or edits post content. Use when the user says \"tag suggestions\", \"taxonomy audit\", \"sync tags\", \"WordPress tags\", \"Shopify tags\". Not for keyword research (blog-brief) or schema markup (b",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -13,14 +13,13 @@
   "install_path": ".claude/skills/blog-taxonomy/SKILL.md",
   "source": {
     "repo": "AgriciDaniel/claude-blog",
-    "url": "https://github.com/AgriciDaniel/claude-blog/blob/main/brain/.raw/sources/claude-blog-skill/skills/blog-taxonomy/SKILL.md",
-    "path": "brain/.raw/sources/claude-blog-skill/skills/blog-taxonomy/SKILL.md",
+    "url": "https://github.com/AgriciDaniel/claude-blog/blob/main/skills/blog-taxonomy/SKILL.md",
+    "path": "skills/blog-taxonomy/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-02T19:22:03.625Z",
-    "stars": 2616,
+    "discovered_at": "2026-11-03T02:05:28.833Z",
+    "stars": 2618,
     "language": "Python",
-    "pushed_at": "2026-10-30T02:56:32Z",
+    "pushed_at": "2026-11-03T00:20:12Z",
     "license": "MIT"
-  },
-  "summary_zh": "一款博客标签与分类管理工具，可分析内容智能推荐并同步分类体系，适合跨主流 CMS 整理文章、避免低质量标签页。"
+  }
 }

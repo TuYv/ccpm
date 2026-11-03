@@ -1,7 +1,7 @@
 {
   "id": "scarletkc-agents-ux-writing",
   "name": "ux-writing",
-  "description": "Judgment rules for user-facing text and docs: CLI and diagnostic output, error and help text, README and docs structure, code comments, titles, and generated reports, decks, or exports. Use when writing or changing any user-visible string, when adding or restructuring docs or deciding which page owns a fact, when a page is about to record a version, a deployment state, or a value the code already owns, when a comment, title, or artifact could carry the reasoning or an abandoned option behind the",
+  "description": "Judgment for text read by someone who wasn't there when it was written: user-facing output, error and help text, docs, comments, and generated deliverables. Use when that text is the substance of the work or under review.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/scarletkc/agents/blob/main/skills/ux-writing/SKILL.md",
     "path": "skills/ux-writing/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-02T19:28:44.885Z",
+    "discovered_at": "2026-11-03T02:11:44.581Z",
     "stars": 227,
     "language": "Python",
-    "pushed_at": "2026-10-28T06:52:06Z",
+    "pushed_at": "2026-11-02T19:36:35Z",
     "license": "Apache-2.0"
-  },
-  "summary_zh": "一套规范用户可见文案与文档的判断规则，适合编写命令行提示、错误信息、README、注释及报告，避免信息重复或归属混乱。"
+  }
 }

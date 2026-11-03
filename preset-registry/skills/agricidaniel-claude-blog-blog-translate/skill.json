@@ -1,7 +1,7 @@
 {
   "id": "agricidaniel-claude-blog-blog-translate",
   "name": "blog-translate",
-  "description": "> Translate existing blog posts into one or more target languages with SEO-optimized localization. Produces native-quality translations that preserve markdown structure, frontmatter, schema JSON-LD, image and chart embeds, and citation capsules. Localizes keywords, meta tags, numbers, dates, currencies, and quote styles per locale. Flags machine-translation artifacts for review. Run BEFORE blog-localize: this handles language conversion; localize handles cultural adaptation after translation com",
+  "description": "> Translate existing blog posts into one or more target languages with SEO-optimized localization. Produces native-quality translations that preserve markdown structure, frontmatter, schema JSON-LD, image and chart embeds, and evidence-backed explanations. Localizes keywords, meta tags, numbers, dates, currencies, and quote styles per locale. Flags machine-translation artifacts for review. Run BEFORE blog-localize: this handles language conversion; localize handles cultural adaptation after tran",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -13,14 +13,13 @@
   "install_path": ".claude/skills/blog-translate/SKILL.md",
   "source": {
     "repo": "AgriciDaniel/claude-blog",
-    "url": "https://github.com/AgriciDaniel/claude-blog/blob/main/brain/.raw/sources/claude-blog-skill/skills/blog-translate/SKILL.md",
-    "path": "brain/.raw/sources/claude-blog-skill/skills/blog-translate/SKILL.md",
+    "url": "https://github.com/AgriciDaniel/claude-blog/blob/main/skills/blog-translate/SKILL.md",
+    "path": "skills/blog-translate/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-02T19:22:03.755Z",
-    "stars": 2616,
+    "discovered_at": "2026-11-03T02:05:28.969Z",
+    "stars": 2618,
     "language": "Python",
-    "pushed_at": "2026-10-30T02:56:32Z",
+    "pushed_at": "2026-11-03T00:20:12Z",
     "license": "MIT"
-  },
-  "summary_zh": "将现有博客翻译成多种语言并优化本地化 SEO，保留 Markdown、元数据和嵌入内容，适合内容出海与多语言发布。"
+  }
 }

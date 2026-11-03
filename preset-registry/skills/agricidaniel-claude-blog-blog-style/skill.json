@@ -1,7 +1,7 @@
 {
   "id": "agricidaniel-claude-blog-blog-style",
   "name": "blog-style",
-  "description": "Learn author writing style from 5 to 10 existing blog posts and generate a voice profile for /blog style learn, VOICE.md, blog-persona, and blog-write when users ask to infer tone, analyze author voice, learn style, or build a writing baseline.",
+  "description": "Measure writing-style statistics (sentence length, vocabulary, transitions, phrasing) from 5 to 10 posts you or your client wrote, and produce a voice profile for VOICE.md, blog-persona, and blog-write. Use for \"learn my style\", \"build a writing baseline\". It describes style; it does not detect or attribute authorship, and it is not for scoring a post (blog-analyze) or writing brand rules (blog-brand).",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -13,14 +13,13 @@
   "install_path": ".claude/skills/blog-style/SKILL.md",
   "source": {
     "repo": "AgriciDaniel/claude-blog",
-    "url": "https://github.com/AgriciDaniel/claude-blog/blob/main/brain/.raw/sources/claude-blog-skill/skills/blog-style/SKILL.md",
-    "path": "brain/.raw/sources/claude-blog-skill/skills/blog-style/SKILL.md",
+    "url": "https://github.com/AgriciDaniel/claude-blog/blob/main/skills/blog-style/SKILL.md",
+    "path": "skills/blog-style/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-02T19:22:03.471Z",
-    "stars": 2616,
+    "discovered_at": "2026-11-03T02:05:28.693Z",
+    "stars": 2618,
     "language": "Python",
-    "pushed_at": "2026-10-30T02:56:32Z",
+    "pushed_at": "2026-11-03T00:20:12Z",
     "license": "MIT"
-  },
-  "summary_zh": "从 5～10 篇博客中提炼作者语气与写作风格，生成声音档案，适合建立写作基准并持续产出风格一致的文章。"
+  }
 }

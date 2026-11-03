@@ -159,7 +159,9 @@ This mapping is for you, not the user. Use only what the conversation needs.
 | The whole branch each time | `post_commit_review = "branch"` |
 | Reviews on request | `[review] default_panel`, or `--type` and `--panel` |
 | Reviews on pull requests | `[ci] panel`; see <https://roborev.io/docs/advanced/subagent-review-panels/#ci-panels> |
+| Verify CI findings before posting | `[ci] check = true`, off by default; Codex checks findings in a sandbox and keeps the original review if checking fails. Global `[ci] check_model` and `check_reasoning` select its model and effort. |
 | PR reviews only after a draft is marked ready | Ask whether draft PRs should be skipped. For the daemon poller, global `[ci] skip_drafts = true` in `~/.roborev/config.toml` (default `false`; no repo override). Ready PRs become eligible next poll without a push, under normal throttle, quiet-hours, and dedup rules. Active reviews are not canceled. |
+| Rewrite checked CI findings | `[ci] rewrite = true` requires `check = true`. Two additional Codex calls use stored findings and escaped PR context, without checker output, in a fresh read-only clone; failure keeps the checked text. |
 | Only serious findings fail | `review_min_severity`, plus severity guidance in each rubric |
 | Passing reviews close themselves | `auto_close_passing_reviews = true` |
 | Reviewers that see the task a commit is for, from Kata | `[kata_context]` with `mode = "current"`; commits name their issue, such as `Closes: kata#abc4` |
@@ -358,6 +360,7 @@ Before proposing, tell the user where the material can go:
 
 - the provider behind each reviewer and synthesis agent, and the account or
     endpoint each agent CLI is signed in to; roborev does not choose it;
+- Codex when `[ci] check = true`, regardless of the review panel's agents;
 - any other agent a review can reach: the repository or machine default agent
     for reviews outside the panel, and configured backup agents;
 - every agent priced in `budget.agent_costs`, when `budget.enabled` is true;
