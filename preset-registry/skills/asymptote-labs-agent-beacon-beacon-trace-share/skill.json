@@ -1,0 +1,25 @@
+{
+  "id": "asymptote-labs-agent-beacon-beacon-trace-share",
+  "name": "beacon-trace-share",
+  "description": "Share the current agent session (or another local one) as a trace on beacon.sh with the Beacon CLI, and give the user the link. Use when the user asks to \"share this session\", \"share to beacon\", \"publish this trace\", \"upload this session\", wants a link to show a teammate what the agent did, or wants an already shared session updated with its latest steps.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Asymptote-Labs",
+  "install_path": ".claude/skills/beacon-trace-share/SKILL.md",
+  "source": {
+    "repo": "Asymptote-Labs/agent-beacon",
+    "url": "https://github.com/Asymptote-Labs/agent-beacon/blob/main/cli/beacon/internal/agentskills/skills/beacon-trace-share/SKILL.md",
+    "path": "cli/beacon/internal/agentskills/skills/beacon-trace-share/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-04T19:07:48.764Z",
+    "stars": 3274,
+    "language": "Go",
+    "pushed_at": "2026-11-04T18:29:21Z",
+    "license": "MIT"
+  }
+}

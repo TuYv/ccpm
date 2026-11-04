@@ -1,0 +1,25 @@
+{
+  "id": "asymptote-labs-agent-beacon-beacon-memory-recall",
+  "name": "beacon-memory-recall",
+  "description": "Retrieve reviewed project memory that Beacon distilled from earlier agent sessions in any harness (Claude Code, Cursor, Codex, OpenCode, and others) before starting work. Use at the start of a non-trivial task in a repository, when the user asks \"have we seen this before\", \"what did we learn last time\", or \"how did we fix this in Cursor/Codex\", or when a build, test, or deploy step fails in a way that may have a known fix.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Asymptote-Labs",
+  "install_path": ".claude/skills/beacon-memory-recall/SKILL.md",
+  "source": {
+    "repo": "Asymptote-Labs/agent-beacon",
+    "url": "https://github.com/Asymptote-Labs/agent-beacon/blob/main/cli/beacon/internal/agentskills/skills/beacon-memory-recall/SKILL.md",
+    "path": "cli/beacon/internal/agentskills/skills/beacon-memory-recall/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-04T19:07:48.400Z",
+    "stars": 3274,
+    "language": "Go",
+    "pushed_at": "2026-11-04T18:29:21Z",
+    "license": "MIT"
+  }
+}

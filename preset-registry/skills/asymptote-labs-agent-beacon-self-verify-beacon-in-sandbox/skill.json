@@ -1,0 +1,25 @@
+{
+  "id": "asymptote-labs-agent-beacon-self-verify-beacon-in-sandbox",
+  "name": "self-verify-beacon-in-sandbox",
+  "description": "Verify a Beacon change end to end by running a real Claude Code session inside a disposable Linux cloud sandbox and checking that Beacon captured what the agent actually did. Use when asked to verify, validate, test, or prove that a Beacon change works for real rather than just compiling; when asked whether telemetry, event capture, commands, file paths, prompts, tokens, or approvals are still recorded correctly; when investigating a suspected capture gap; or when preparing a Beacon pull request",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Asymptote-Labs",
+  "install_path": ".claude/skills/self-verify-beacon-in-sandbox/SKILL.md",
+  "source": {
+    "repo": "Asymptote-Labs/agent-beacon",
+    "url": "https://github.com/Asymptote-Labs/agent-beacon/blob/main/.claude/skills/self-verify-beacon-in-sandbox/SKILL.md",
+    "path": ".claude/skills/self-verify-beacon-in-sandbox/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-04T19:07:46.033Z",
+    "stars": 3274,
+    "language": "Go",
+    "pushed_at": "2026-11-04T18:29:21Z",
+    "license": "MIT"
+  }
+}

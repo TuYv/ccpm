@@ -1,0 +1,25 @@
+{
+  "id": "asymptote-labs-agent-beacon-beacon-session-handoff",
+  "name": "beacon-session-handoff",
+  "description": "Continue the user's current or selected local agent session in another supported runtime using Beacon. Use when the user asks to hand off, transfer, continue, or reopen work in Claude Code, Codex, Copilot CLI, Cursor, or another Beacon-supported harness.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Asymptote-Labs",
+  "install_path": ".claude/skills/beacon-session-handoff/SKILL.md",
+  "source": {
+    "repo": "Asymptote-Labs/agent-beacon",
+    "url": "https://github.com/Asymptote-Labs/agent-beacon/blob/main/cli/beacon/internal/agentskills/skills/beacon-session-handoff/SKILL.md",
+    "path": "cli/beacon/internal/agentskills/skills/beacon-session-handoff/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-04T19:07:48.568Z",
+    "stars": 3274,
+    "language": "Go",
+    "pushed_at": "2026-11-04T18:29:21Z",
+    "license": "MIT"
+  }
+}

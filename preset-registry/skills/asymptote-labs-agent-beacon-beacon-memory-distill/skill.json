@@ -1,0 +1,25 @@
+{
+  "id": "asymptote-labs-agent-beacon-beacon-memory-distill",
+  "name": "beacon-memory-distill",
+  "description": "Turn recorded agent sessions (Beacon traces from Claude Code, Cursor, Codex, OpenCode, and other harnesses) into reviewed, reusable project memory. Scores selected traces, reads the source trace behind each high-signal candidate, drafts a grounded lesson, and approves it only after the user confirms. Use when the user asks to \"learn from\", \"remember\", \"save the lesson from\", or \"turn into memory\" a recent session, fix, or debugging effort, or asks to review Beacon memory candidates.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Asymptote-Labs",
+  "install_path": ".claude/skills/beacon-memory-distill/SKILL.md",
+  "source": {
+    "repo": "Asymptote-Labs/agent-beacon",
+    "url": "https://github.com/Asymptote-Labs/agent-beacon/blob/main/cli/beacon/internal/agentskills/skills/beacon-memory-distill/SKILL.md",
+    "path": "cli/beacon/internal/agentskills/skills/beacon-memory-distill/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-04T19:07:48.034Z",
+    "stars": 3274,
+    "language": "Go",
+    "pushed_at": "2026-11-04T18:29:21Z",
+    "license": "MIT"
+  }
+}

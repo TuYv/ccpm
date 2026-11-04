@@ -1,7 +1,7 @@
 {
   "id": "ajnart-self-host-edit-catalog",
   "name": "edit-catalog",
-  "description": "Catalog edits in Go. Use for any task that adds an App, changes an App's image, port, Compose, env, notes or StandaloneGuide (even a one-line image bump), changes a Recipe, or hides or unhides an App. Each of these changes generated site and DCM data and hand-kept App counts. DCM-only Containers go to add-container; Homarr wiring goes to docs/agents/homarr-integrations.md.",
+  "description": "Catalog edits in YAML or Go. Use for any task that adds an App, changes an App's image, port, Compose, env, notes or StandaloneGuide (even a one-line image bump), changes a Recipe, or hides or unhides an App. Each of these changes generated site and DCM data and the generated e2e inventory. DCM-only Containers go to add-container; Homarr wiring goes to docs/agents/homarr-integrations.md.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/ajnart/self-host/blob/main/.claude/skills/edit-catalog/SKILL.md",
     "path": ".claude/skills/edit-catalog/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-04T11:22:03.390Z",
-    "stars": 1499,
+    "discovered_at": "2026-11-04T20:00:33.840Z",
+    "stars": 1500,
     "language": "Go",
-    "pushed_at": "2026-11-04T11:18:56Z",
+    "pushed_at": "2026-11-04T15:24:49Z",
     "license": "Apache-2.0"
   }
 }

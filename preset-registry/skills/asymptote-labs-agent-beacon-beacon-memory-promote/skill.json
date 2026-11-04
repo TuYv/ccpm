@@ -1,0 +1,25 @@
+{
+  "id": "asymptote-labs-agent-beacon-beacon-memory-promote",
+  "name": "beacon-memory-promote",
+  "description": "Install approved Beacon project memory as an Agent Skill in the repository (.agents/skills/<slug>/SKILL.md), so every skill-capable harness loads the lesson automatically without a memory lookup. Use when the user asks to \"make this a skill\", \"promote\", \"install\", or \"share\" an approved Beacon memory, or wants the team's agents to always follow a learned workflow or convention.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Asymptote-Labs",
+  "install_path": ".claude/skills/beacon-memory-promote/SKILL.md",
+  "source": {
+    "repo": "Asymptote-Labs/agent-beacon",
+    "url": "https://github.com/Asymptote-Labs/agent-beacon/blob/main/cli/beacon/internal/agentskills/skills/beacon-memory-promote/SKILL.md",
+    "path": "cli/beacon/internal/agentskills/skills/beacon-memory-promote/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-04T19:07:48.222Z",
+    "stars": 3274,
+    "language": "Go",
+    "pushed_at": "2026-11-04T18:29:21Z",
+    "license": "MIT"
+  }
+}

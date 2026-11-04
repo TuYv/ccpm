@@ -1,0 +1,25 @@
+{
+  "id": "asymptote-labs-agent-beacon-beacon-lens-create",
+  "name": "beacon-lens-create",
+  "description": "Create, revise, debug or validate a Beacon lens, a single HTML file that renders one agent trace as a purpose-built view (a per-file review, a cost breakdown, a timeline of risky commands, a map of tool use) in a sandboxed tab of the local Beacon dashboard, fed once through window.beacon.getTrace(). Use when the user asks to \"make a lens\", \"build a view of my traces\", \"visualize this session\", wants a custom tab next to the full session in the Beacon dashboard, or when a lens fails to load, rend",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Asymptote-Labs",
+  "install_path": ".claude/skills/beacon-lens-create/SKILL.md",
+  "source": {
+    "repo": "Asymptote-Labs/agent-beacon",
+    "url": "https://github.com/Asymptote-Labs/agent-beacon/blob/main/cli/beacon/internal/agentskills/skills/beacon-lens-create/SKILL.md",
+    "path": "cli/beacon/internal/agentskills/skills/beacon-lens-create/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-04T19:07:47.731Z",
+    "stars": 3274,
+    "language": "Go",
+    "pushed_at": "2026-11-04T18:29:21Z",
+    "license": "MIT"
+  }
+}
