@@ -1,7 +1,7 @@
 {
   "id": "alterlab-ieu-alterlab-academic-skills-alterlab-citation-verifier",
   "name": "alterlab-citation-verifier",
-  "description": "Verifies that every bibliography entry actually exists by cross-checking Crossref, OpenAlex, Semantic Scholar, and arXiv (no API key required) plus doi.org DOI registration, fuzzy-matching title and authors (difflib ratio >= 0.70), flagging retractions recorded by Crossref (including Retraction Watch data) or OpenAlex, and emitting per-entry JSON verdicts in the AlterLab citation-hallucination taxonomy (TF/PAC/IH/PH/SH); a companion script scores whether a cited abstract supports a claim (SH). A",
+  "description": "Verifies that every bibliography entry actually exists by cross-checking Crossref, Semantic Scholar, Europe PMC, and arXiv, with Open Library for books (no API key required), plus doi.org DOI registration, fuzzy-matching title and authors (difflib ratio >= 0.70), flagging retractions recorded by Crossref (including Retraction Watch data), and emitting per-entry JSON verdicts in the AlterLab citation-hallucination taxonomy (TF/PAC/IH/PH/SH); a companion script scores whether a cited abstract supp",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/AlterLab-IEU/AlterLab-Academic-Skills/blob/main/skills/core/alterlab-citation-verifier/SKILL.md",
     "path": "skills/core/alterlab-citation-verifier/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-04T04:19:57.169Z",
+    "discovered_at": "2026-11-04T11:22:23.273Z",
     "stars": 84,
     "language": "Python",
-    "pushed_at": "2026-11-02T14:48:09Z",
+    "pushed_at": "2026-11-04T09:35:11Z",
     "license": "MIT"
   }
 }

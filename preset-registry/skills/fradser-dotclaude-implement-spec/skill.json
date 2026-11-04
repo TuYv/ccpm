@@ -1,7 +1,7 @@
 {
   "id": "fradser-dotclaude-implement-spec",
   "name": "implement-spec",
-  "description": "Implement a specification in code.",
+  "description": "Implement a specification in code. Use when the user wants to implement the result of /mattpocock:to-spec and /mattpocock:to-tickets, or asks to work a whole spec on one integration branch.",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -13,13 +13,13 @@
   "install_path": ".claude/skills/implement-spec/SKILL.md",
   "source": {
     "repo": "FradSer/dotclaude",
-    "url": "https://github.com/FradSer/dotclaude/blob/main/mattpocock/skills/in-progress/implement-spec/SKILL.md",
-    "path": "mattpocock/skills/in-progress/implement-spec/SKILL.md",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/mattpocock/skills/engineering/implement-spec/SKILL.md",
+    "path": "mattpocock/skills/engineering/implement-spec/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-04T03:18:00.497Z",
+    "discovered_at": "2026-11-04T10:20:46.477Z",
     "stars": 596,
     "language": "JavaScript",
-    "pushed_at": "2026-10-09T11:04:42Z",
+    "pushed_at": "2026-11-04T09:11:29Z",
     "license": "MIT"
   }
 }

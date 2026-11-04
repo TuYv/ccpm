@@ -1,0 +1,25 @@
+{
+  "id": "garrytan-gstack-runaway-stopper",
+  "name": "runaway-stopper",
+  "description": "Find runaway Capy threads and subagents, stop or rotate them safely, and prevent repeats. (gstack)",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "0.1.0",
+  "author": "garrytan",
+  "install_path": ".claude/skills/runaway-stopper/SKILL.md",
+  "source": {
+    "repo": "garrytan/gstack",
+    "url": "https://github.com/garrytan/gstack/blob/main/runaway-stopper/SKILL.md",
+    "path": "runaway-stopper/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-04T09:41:06.922Z",
+    "stars": 138994,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-04T09:20:22Z",
+    "license": "MIT"
+  }
+}

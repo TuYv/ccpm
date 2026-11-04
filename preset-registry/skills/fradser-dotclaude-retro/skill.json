@@ -1,7 +1,7 @@
 {
   "id": "fradser-dotclaude-retro",
   "name": "retro",
-  "description": "Conduct a retrospective on a coding session.",
+  "description": "Suggest improvements to the coding agent environment after a session. Use when the user asks for a retrospective, a retro, or wants to improve agent steering files and automated checks.",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -13,13 +13,13 @@
   "install_path": ".claude/skills/retro/SKILL.md",
   "source": {
     "repo": "FradSer/dotclaude",
-    "url": "https://github.com/FradSer/dotclaude/blob/main/mattpocock/skills/in-progress/retro/SKILL.md",
-    "path": "mattpocock/skills/in-progress/retro/SKILL.md",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/mattpocock/skills/engineering/retro/SKILL.md",
+    "path": "mattpocock/skills/engineering/retro/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-04T03:18:01.105Z",
+    "discovered_at": "2026-11-04T10:20:47.425Z",
     "stars": 596,
     "language": "JavaScript",
-    "pushed_at": "2026-10-09T11:04:42Z",
+    "pushed_at": "2026-11-04T09:11:29Z",
     "license": "MIT"
   }
 }

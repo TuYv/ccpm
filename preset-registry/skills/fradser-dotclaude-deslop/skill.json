@@ -1,0 +1,25 @@
+{
+  "id": "fradser-dotclaude-deslop",
+  "name": "deslop",
+  "description": "Remove AI slop (fabricated casts, evidence widening, defensive clutter, mock patching, vacuous names) from recent changes while keeping tests green. Use when the user asks to de-slop, clean up AI-generated code, or remove defensive clutter from a diff.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "FradSer",
+  "install_path": ".claude/skills/deslop/SKILL.md",
+  "source": {
+    "repo": "FradSer/dotclaude",
+    "url": "https://github.com/FradSer/dotclaude/blob/main/mattpocock/skills/engineering/deslop/SKILL.md",
+    "path": "mattpocock/skills/engineering/deslop/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-04T10:20:45.901Z",
+    "stars": 596,
+    "language": "JavaScript",
+    "pushed_at": "2026-11-04T09:11:29Z",
+    "license": "MIT"
+  }
+}
