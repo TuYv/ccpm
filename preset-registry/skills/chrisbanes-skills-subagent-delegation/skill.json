@@ -1,0 +1,25 @@
+{
+  "id": "chrisbanes-skills-subagent-delegation",
+  "name": "subagent-delegation",
+  "description": "Use when the user invokes the subagent delegation playbook, or the user's instructions direct its use when delegating work or deciding whether to delegate.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "chrisbanes",
+  "install_path": ".claude/skills/subagent-delegation/SKILL.md",
+  "source": {
+    "repo": "chrisbanes/skills",
+    "url": "https://github.com/chrisbanes/skills/blob/main/skills/subagent-delegation/SKILL.md",
+    "path": "skills/subagent-delegation/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-03T22:51:41.053Z",
+    "stars": 1138,
+    "language": "Python",
+    "pushed_at": "2026-11-03T20:07:42Z",
+    "license": "Apache-2.0"
+  }
+}
