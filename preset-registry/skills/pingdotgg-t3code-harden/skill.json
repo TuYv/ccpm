@@ -1,0 +1,25 @@
+{
+  "id": "pingdotgg-t3code-harden",
+  "name": "harden",
+  "description": "Harden one or more providers' live test suites until they are stable — repeat full suite runs with a leak census after each, root-cause every failure and leak (provider bug first, then distilled patch, then test, timeouts last), make every name and stage deterministic and isolated per user and worktree, and stop only when consecutive runs are green and clean. Use for \"harden cloudflare\", \"harden the aws provider\", \"/harden gcp neon\", \"make the X suite stable\", \"do a few more runs to see how stab",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "pingdotgg",
+  "install_path": ".claude/skills/harden/SKILL.md",
+  "source": {
+    "repo": "pingdotgg/t3code",
+    "url": "https://github.com/pingdotgg/t3code/blob/main/.repos/alchemy-effect/.claude/skills/harden/SKILL.md",
+    "path": ".repos/alchemy-effect/.claude/skills/harden/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-04T03:27:38.795Z",
+    "stars": 44649,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-04T03:26:56Z",
+    "license": "MIT"
+  }
+}

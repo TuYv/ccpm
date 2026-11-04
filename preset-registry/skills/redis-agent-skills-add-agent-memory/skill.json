@@ -1,0 +1,25 @@
+{
+  "id": "redis-agent-skills-add-agent-memory",
+  "name": "add-agent-memory",
+  "description": "Wire Redis Agent Memory into an existing agent with redis-iris so it remembers users across sessions. Asks five questions (what to remember, what to share, what never to keep, how long to keep it, whether users can be forgotten), writes the answers to service.yaml, provisions the service from the terminal with `iris agent-memory service create`, then wires recall and write-back into the agent's turn in any framework. Use when the agent forgets users, uses InMemoryStore or a checkpointer only, ke",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "redis",
+  "install_path": ".claude/skills/add-agent-memory/SKILL.md",
+  "source": {
+    "repo": "redis/agent-skills",
+    "url": "https://github.com/redis/agent-skills/blob/main/skills/add-agent-memory/SKILL.md",
+    "path": "skills/add-agent-memory/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-04T03:29:33.122Z",
+    "stars": 173,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-04T01:04:43Z",
+    "license": "MIT"
+  }
+}

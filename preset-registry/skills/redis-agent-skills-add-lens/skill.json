@@ -1,0 +1,25 @@
+{
+  "id": "redis-agent-skills-add-lens",
+  "name": "add-lens",
+  "description": "Add Redis Iris Lens tracing to an existing AI agent through redis-iris, so every agent turn is one trace in the Lens UI with its LLM calls, tokens, tool calls, memory and document retrievals, and which of them entered the prompt. Detects how the agent runs (LangGraph or ADK attach, workflows.turn, another framework, or a plain loop), installs redis-iris[llm-tracing], calls lens.init(agent_id=...), opens one lens.turn() per turn where Iris does not open it already, and covers coexistence with an ",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "redis",
+  "install_path": ".claude/skills/add-lens/SKILL.md",
+  "source": {
+    "repo": "redis/agent-skills",
+    "url": "https://github.com/redis/agent-skills/blob/main/skills/add-lens/SKILL.md",
+    "path": "skills/add-lens/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-04T03:29:33.899Z",
+    "stars": 173,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-04T01:04:43Z",
+    "license": "MIT"
+  }
+}

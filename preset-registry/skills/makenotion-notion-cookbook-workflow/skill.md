@@ -1,26 +1,17 @@
 ---
 name: workflow
-description: Scaffold a Notion Worker Workflow with typed triggers and replay-safe durable steps.
+description: Build or review Notion App workflows for typed triggers, durable replay-safe steps, and idempotent effects.
 user-invocable: true
 disable-model-invocation: true
 ---
 
-# Workflow
+# App workflows
 
-Use this skill to add a Workflow to this template.
+Before creating, modifying, or troubleshooting workflow code, read
+`node_modules/@notionhq/apps/skills/workflow/SKILL.md`.
+Resolve this path relative to the App project root.
+Follow the instructions in that file.
 
-1. Read `AGENTS.md` and the existing files in `src/workflows/`.
-2. Inspect the installed Workflow and trigger declarations.
-3. Choose the trigger, outcome, step boundaries, and required configuration.
-4. Create one camelCase file directly in `src/workflows/`.
-5. Default-export `createWorkflow(...)` and use typed trigger creators.
-6. Put all non-deterministic work in awaited `context.step(...)` calls.
-7. Give each step a stable display name. For repeated steps, keep the name
-   constant and pass a stable, unique composite `key`, such as
-   `{ key: ["process-page", page.id] }`.
-8. Return JSON-safe values needed by later steps.
-9. Use the step `id` as an idempotency key when supported.
-10. Run `npm run check` and `npm run build`.
-
-Do not write credentials. Add only environment variable names and safe
-placeholders to `.env.example` when configuration is required.
+If the file is missing, install the project dependencies.
+If it remains missing, update `@notionhq/apps` to a release that includes the skill.
+Do not continue with workflow changes until you can read the SDK skill.

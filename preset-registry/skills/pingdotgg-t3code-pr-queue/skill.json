@@ -1,0 +1,25 @@
+{
+  "id": "pingdotgg-t3code-pr-queue",
+  "name": "pr-queue",
+  "description": "Run a pull-request (or issue) queue for an area of alchemy — search GitHub for open PRs/issues matching a criteria (e.g. \"cloudflare\", \"docker\", \"aws/rds\", an author, a label), shortlist the top 10 ordered by ease of fixing, then launch each one as its own detached top-level T3 thread (`t3_thread_launch`, `workspaceStrategy: \"worktree\"`): each thread checks out, merges main, resolves conflicts, audits tests and JSDoc, runs the suites, rewrites the PR description as DX snippets, and asks the user",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "pingdotgg",
+  "install_path": ".claude/skills/pr-queue/SKILL.md",
+  "source": {
+    "repo": "pingdotgg/t3code",
+    "url": "https://github.com/pingdotgg/t3code/blob/main/.repos/alchemy-effect/.claude/skills/pr-queue/SKILL.md",
+    "path": ".repos/alchemy-effect/.claude/skills/pr-queue/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-04T03:27:38.979Z",
+    "stars": 44649,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-04T03:26:56Z",
+    "license": "MIT"
+  }
+}

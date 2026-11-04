@@ -1,0 +1,25 @@
+{
+  "id": "pingdotgg-t3code-prepare-release",
+  "name": "prepare-release",
+  "description": "Prepare an alchemy release by converging the live test suite — nuke + clear:state the testing account, run every test through a tag-driven `--plan` (unit → per-provider live in parallel → local), triage failures as they stream in, fan out one fix agent per failing/leaking service, census leaks, and loop until two consecutive rounds are green and clean. Fixes land as one alchemy PR plus at most one distilled PR and one floci PR. Use for \"prepare a release\", \"/prepare-release\", \"release hardening ",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "pingdotgg",
+  "install_path": ".claude/skills/prepare-release/SKILL.md",
+  "source": {
+    "repo": "pingdotgg/t3code",
+    "url": "https://github.com/pingdotgg/t3code/blob/main/.repos/alchemy-effect/.claude/skills/prepare-release/SKILL.md",
+    "path": ".repos/alchemy-effect/.claude/skills/prepare-release/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-04T03:27:39.146Z",
+    "stars": 44649,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-04T03:26:56Z",
+    "license": "MIT"
+  }
+}

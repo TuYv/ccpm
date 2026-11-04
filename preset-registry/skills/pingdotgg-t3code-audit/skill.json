@@ -1,0 +1,25 @@
+{
+  "id": "pingdotgg-t3code-audit",
+  "name": "audit",
+  "description": "Audit one or more specific pull requests the user names — PR numbers, `#N`, or GitHub URLs (e.g. \"/audit 2101\", \"/audit #2101 #2093\", \"/audit https://github.com/alchemy-run/alchemy/pull/2101\"). Works through them one at a time: check out, merge main, resolve conflicts, audit tests and JSDoc, run the suites, rewrite the PR description as DX snippets, and stop with a merge-or-close recommendation. Use when the user hands you the PRs rather than a search criteria (for that, use pr-queue); also for ",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "pingdotgg",
+  "install_path": ".claude/skills/audit/SKILL.md",
+  "source": {
+    "repo": "pingdotgg/t3code",
+    "url": "https://github.com/pingdotgg/t3code/blob/main/.repos/alchemy-effect/.claude/skills/audit/SKILL.md",
+    "path": ".repos/alchemy-effect/.claude/skills/audit/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-04T03:27:38.615Z",
+    "stars": 44649,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-04T03:26:56Z",
+    "license": "MIT"
+  }
+}

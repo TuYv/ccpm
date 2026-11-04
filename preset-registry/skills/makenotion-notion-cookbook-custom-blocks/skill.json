@@ -1,8 +1,8 @@
 {
   "id": "makenotion-notion-cookbook-custom-blocks",
   "name": "custom-blocks",
-  "description": "Create, modify, and troubleshoot custom blocks in Notion Workers. Use when the user wants to build interactive UI inside Notion connected to Notion data. Covers the author workflow from project setup to local preview and deployment.",
-  "category": "设计创意",
+  "description": "Build interactive browser custom blocks declared by a Notion App.",
+  "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
     "codex",
@@ -13,13 +13,13 @@
   "install_path": ".claude/skills/custom-blocks/SKILL.md",
   "source": {
     "repo": "makenotion/notion-cookbook",
-    "url": "https://github.com/makenotion/notion-cookbook/blob/main/workers/agents/skills/custom-blocks/SKILL.md",
-    "path": "workers/agents/skills/custom-blocks/SKILL.md",
+    "url": "https://github.com/makenotion/notion-cookbook/blob/main/apps/templates/statsig-rollout/.agents/skills/custom-blocks/SKILL.md",
+    "path": "apps/templates/statsig-rollout/.agents/skills/custom-blocks/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-03T22:56:08.873Z",
+    "discovered_at": "2026-11-04T03:29:22.612Z",
     "stars": 223,
     "language": "TypeScript",
-    "pushed_at": "2026-11-03T22:26:09Z",
+    "pushed_at": "2026-11-04T01:27:41Z",
     "license": "MIT"
   }
 }

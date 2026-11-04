@@ -1,0 +1,25 @@
+{
+  "id": "makenotion-notion-cookbook-create-my-team-handbook",
+  "name": "notion-create-my-team-handbook",
+  "description": "Create a team handbook in Notion from scattered processes, team documents, requests, and chat context. Make procedures easy to find, show who maintains them, and track related requests.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "makenotion",
+  "install_path": ".claude/skills/create-my-team-handbook/SKILL.md",
+  "source": {
+    "repo": "makenotion/notion-cookbook",
+    "url": "https://github.com/makenotion/notion-cookbook/blob/main/skills/mcp-clients/create-my-team-handbook/SKILL.md",
+    "path": "skills/mcp-clients/create-my-team-handbook/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-04T03:29:26.005Z",
+    "stars": 223,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-04T01:27:41Z",
+    "license": "MIT"
+  }
+}

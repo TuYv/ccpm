@@ -1,0 +1,25 @@
+{
+  "id": "redis-agent-skills-add-agent-playbooks",
+  "name": "add-agent-playbooks",
+  "description": "Add Redis Iris Agent Playbooks to an existing agent. Use when approved answers or repeatable procedures live in prompts, document retrieval, or a semantic response cache. Connect or provision a Playbook, publish FAQs and Skills, and verify the first application turn with optional review proposals.",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "redis",
+  "install_path": ".claude/skills/add-agent-playbooks/SKILL.md",
+  "source": {
+    "repo": "redis/agent-skills",
+    "url": "https://github.com/redis/agent-skills/blob/main/skills/add-agent-playbooks/SKILL.md",
+    "path": "skills/add-agent-playbooks/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-04T03:29:33.313Z",
+    "stars": 173,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-04T01:04:43Z",
+    "license": "MIT"
+  }
+}

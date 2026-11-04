@@ -1,0 +1,25 @@
+{
+  "id": "redis-agent-skills-add-context-gateway",
+  "name": "add-context-gateway",
+  "description": "Put the MCP servers an existing agent uses behind one Redis Iris Context Gateway with redis-iris, so the agent connects to one MCP endpoint with one agent key instead of configuring each server and its secret. Asks whether the Gateway is in Redis Cloud or self-managed, then five questions (which MCP servers and secrets the agent has today, how many tools it sees, which read-only tools may be cached, which tools return large results, whether the framework speaks MCP itself). Self-managed, it prov",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "redis",
+  "install_path": ".claude/skills/add-context-gateway/SKILL.md",
+  "source": {
+    "repo": "redis/agent-skills",
+    "url": "https://github.com/redis/agent-skills/blob/main/skills/add-context-gateway/SKILL.md",
+    "path": "skills/add-context-gateway/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-04T03:29:33.500Z",
+    "stars": 173,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-04T01:04:43Z",
+    "license": "MIT"
+  }
+}

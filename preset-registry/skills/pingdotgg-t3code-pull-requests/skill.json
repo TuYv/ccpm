@@ -1,0 +1,25 @@
+{
+  "id": "pingdotgg-t3code-pull-requests",
+  "name": "pull-requests",
+  "description": "Pull request finalization. Use when a change works and is about to be opened as a pull request, or when updating or continuing an existing one.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "pingdotgg",
+  "install_path": ".claude/skills/pull-requests/SKILL.md",
+  "source": {
+    "repo": "pingdotgg/t3code",
+    "url": "https://github.com/pingdotgg/t3code/blob/main/.repos/effect/.agents/skills/pull-requests/SKILL.md",
+    "path": ".repos/effect/.agents/skills/pull-requests/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-04T03:27:42.069Z",
+    "stars": 44649,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-04T03:26:56Z",
+    "license": "MIT"
+  }
+}

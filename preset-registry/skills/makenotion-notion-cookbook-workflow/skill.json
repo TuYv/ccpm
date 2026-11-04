@@ -1,7 +1,7 @@
 {
   "id": "makenotion-notion-cookbook-workflow",
   "name": "workflow",
-  "description": "Scaffold a Notion Worker Workflow with typed triggers and replay-safe durable steps.",
+  "description": "Build or review Notion App workflows for typed triggers, durable replay-safe steps, and idempotent effects.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -13,14 +13,13 @@
   "install_path": ".claude/skills/workflow/SKILL.md",
   "source": {
     "repo": "makenotion/notion-cookbook",
-    "url": "https://github.com/makenotion/notion-cookbook/blob/main/workers/agents/skills/workflow/SKILL.md",
-    "path": "workers/agents/skills/workflow/SKILL.md",
+    "url": "https://github.com/makenotion/notion-cookbook/blob/main/apps/templates/statsig-rollout/.agents/skills/workflow/SKILL.md",
+    "path": "apps/templates/statsig-rollout/.agents/skills/workflow/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-03T22:56:10.056Z",
+    "discovered_at": "2026-11-04T03:29:23.340Z",
     "stars": 223,
     "language": "TypeScript",
-    "pushed_at": "2026-11-03T22:26:09Z",
+    "pushed_at": "2026-11-04T01:27:41Z",
     "license": "MIT"
-  },
-  "summary_zh": "用于快速搭建 Notion Worker 工作流，通过类型安全的触发器和可重放的持久化步骤，提升任务编排与故障恢复能力。"
+  }
 }

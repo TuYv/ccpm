@@ -1,0 +1,25 @@
+{
+  "id": "pingdotgg-t3code-release-overnight",
+  "name": "release-overnight",
+  "description": "Prepare an alchemy release unattended overnight, in series — after one go-ahead, nuke the testing account, then walk every provider's live suite one at a time (Cloudflare → core unit → core integration → small providers → Fly → GCP → AWS), fixing each until its whole suite passes in one run AND the account census is clean, then run `pnpm test:examples`, and finish with one alchemy PR plus at most one distilled PR and one floci PR, all linked, that merge into a release passing every test. Use for",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "pingdotgg",
+  "install_path": ".claude/skills/release-overnight/SKILL.md",
+  "source": {
+    "repo": "pingdotgg/t3code",
+    "url": "https://github.com/pingdotgg/t3code/blob/main/.repos/alchemy-effect/.claude/skills/release-overnight/SKILL.md",
+    "path": ".repos/alchemy-effect/.claude/skills/release-overnight/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-04T03:27:39.504Z",
+    "stars": 44649,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-04T03:26:56Z",
+    "license": "MIT"
+  }
+}
