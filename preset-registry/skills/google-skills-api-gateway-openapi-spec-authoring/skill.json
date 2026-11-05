@@ -1,0 +1,25 @@
+{
+  "id": "google-skills-api-gateway-openapi-spec-authoring",
+  "name": "api-gateway-openapi-spec-authoring",
+  "description": ">- Writes, migrates, and fixes OpenAPI specs for Google Cloud API Gateway. Use when converting an OpenAPI 2.0 (Swagger) spec to OpenAPI 3.x, writing a new OpenAPI 3.x spec, or fixing a failed \"gcloud api-gateway api-configs create\", such as \"extension is only supported in OpenAPI 2.x\". Also use when quotas set with x-google-quota are never enforced, or when a backend receives path parameters as query parameters. Don't use for adding or debugging MCP tools (use api-gateway-mcp-server), backend lo",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/api-gateway-openapi-spec-authoring/SKILL.md",
+  "source": {
+    "repo": "google/skills",
+    "url": "https://github.com/google/skills/blob/main/skills/cloud/api-gateway-openapi-spec-authoring/SKILL.md",
+    "path": "skills/cloud/api-gateway-openapi-spec-authoring/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-04T23:54:35.359Z",
+    "stars": 21972,
+    "language": "Python",
+    "pushed_at": "2026-11-04T21:46:25Z",
+    "license": "Apache-2.0"
+  }
+}

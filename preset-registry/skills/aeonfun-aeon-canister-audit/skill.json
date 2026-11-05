@@ -1,0 +1,25 @@
+{
+  "id": "aeonfun-aeon-canister-audit",
+  "name": "canister-audit",
+  "description": "Deep security audit of an Internet Computer Rust canister repo - detect an ic-cdk canister, model its invariants and trust boundaries first, run a Semgrep IC ruleset plus cargo-audit/osv (best-effort), then a bounded agentic pass that hunts a path breaking each invariant against the 12 canister-security pitfalls, triage, adversarially refute, prove a confirmed HIGH/CRITICAL with a PocketIC reproduction through the shared PoC gate, and route each finding through the shared responsible-disclosure ",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "aeonfun",
+  "install_path": ".claude/skills/canister-audit/SKILL.md",
+  "source": {
+    "repo": "aeonfun/aeon",
+    "url": "https://github.com/aeonfun/aeon/blob/main/skills/canister-audit/SKILL.md",
+    "path": "skills/canister-audit/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-05T00:48:18.583Z",
+    "stars": 788,
+    "language": "JavaScript",
+    "pushed_at": "2026-11-04T22:37:58Z",
+    "license": "MIT"
+  }
+}
