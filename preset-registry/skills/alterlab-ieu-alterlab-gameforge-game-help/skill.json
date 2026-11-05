@@ -1,0 +1,25 @@
+{
+  "id": "alterlab-ieu-alterlab-gameforge-game-help",
+  "name": "game-help",
+  "description": "> Start-here guide to GameForge: maps the user's goal, project phase and engine to the right skill or skill chain, and explains the studio agents, hooks and project config. Use for \"what can GameForge do\", \"which skill should I use\", or when unsure how to approach a game-dev task. Not for setting up a project (use game-start).",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "AlterLab-IEU",
+  "install_path": ".claude/skills/game-help/SKILL.md",
+  "source": {
+    "repo": "AlterLab-IEU/AlterLab_GameForge",
+    "url": "https://github.com/AlterLab-IEU/AlterLab_GameForge/blob/main/skills/workflows/game-help/SKILL.md",
+    "path": "skills/workflows/game-help/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-05T17:28:41.490Z",
+    "stars": 52,
+    "language": "Shell",
+    "pushed_at": "2026-11-05T08:39:24Z",
+    "license": "MIT"
+  }
+}

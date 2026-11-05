@@ -509,7 +509,7 @@ rewrites are exactly what this replaces.
 flag and the previous takeaways carry across unchanged. Use `--takeaways -` to
 pipe multi-line prose in on stdin.
 
-See `.skills/llm-wiki/references/MEMORY.md` for the full procedure.
+See `skills/llm-wiki/references/MEMORY.md` for the full procedure.
 
 ### Step 8: Refresh QMD Wiki Index (optional — requires `QMD_WIKI_COLLECTION`)
 

@@ -1,0 +1,25 @@
+{
+  "id": "alterlab-ieu-alterlab-gameforge-game-threejs-specialist",
+  "name": "game-threejs-specialist",
+  "description": "> Builds 3D browser games with Three.js or React Three Fiber on WebGL 2 and WebGPU: stack choice (vanilla, R3F, Babylon.js, PlayCanvas), Rapier physics, glTF/KTX2 pipelines, mobile budgets, Playwright checks, and fixes for outdated agent-written Three.js. Use for \"three.js\", \"R3F\", \"WebGPU\", \"GLB\", \"3D web game\". Not for 2D browser games (use game-web2d-specialist).",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "AlterLab-IEU",
+  "install_path": ".claude/skills/game-threejs-specialist/SKILL.md",
+  "source": {
+    "repo": "AlterLab-IEU/AlterLab_GameForge",
+    "url": "https://github.com/AlterLab-IEU/AlterLab_GameForge/blob/main/skills/engine-specialists/game-threejs-specialist/SKILL.md",
+    "path": "skills/engine-specialists/game-threejs-specialist/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-05T17:28:39.174Z",
+    "stars": 52,
+    "language": "Shell",
+    "pushed_at": "2026-11-05T08:39:24Z",
+    "license": "MIT"
+  }
+}

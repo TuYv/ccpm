@@ -1,0 +1,25 @@
+{
+  "id": "alterlab-ieu-alterlab-gameforge-game-vibe-code",
+  "name": "game-vibe-code",
+  "description": "> Runs an AI-agent build loop from idea to a playable, verified, shippable game: one-page spec, playable in the first hour, one feature per iteration with a pass/fail check, Playwright screenshots, commits and a progress.md handoff. Use for \"vibe code a game\", \"build a game with Claude\", \"make a browser game fast\". Not for throwaway mechanic tests (use game-prototype).",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "AlterLab-IEU",
+  "install_path": ".claude/skills/game-vibe-code/SKILL.md",
+  "source": {
+    "repo": "AlterLab-IEU/AlterLab_GameForge",
+    "url": "https://github.com/AlterLab-IEU/AlterLab_GameForge/blob/main/skills/workflows/game-vibe-code/SKILL.md",
+    "path": "skills/workflows/game-vibe-code/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-05T17:28:44.264Z",
+    "stars": 52,
+    "language": "Shell",
+    "pushed_at": "2026-11-05T08:39:24Z",
+    "license": "MIT"
+  }
+}

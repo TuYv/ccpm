@@ -77,7 +77,7 @@ If the user asks for an example registry, offer this file at `$VAULT/references/
 
 ```yaml
 # Optional CLI backends for wiki-research. Delete rows you don't need.
-# Skill docs: .skills/wiki-research/SKILL.md — Research Backends section
+# Skill docs: skills/wiki-research/SKILL.md — Research Backends section
 backends:
   # --- free / local ---
   - name: defuddle-fetch
@@ -273,7 +273,7 @@ Do **not** list every page you created in a log field — `memory sync` reconcil
 
 Never hand-edit `index.md`, `log.md`, or `hot.md` — the command takes the lock that keeps a parallel writer from dropping your update.
 
-See `.skills/llm-wiki/references/MEMORY.md` for the full procedure.
+See `skills/llm-wiki/references/MEMORY.md` for the full procedure.
 
 ## Quality Checklist
 

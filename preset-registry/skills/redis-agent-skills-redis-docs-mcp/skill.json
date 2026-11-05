@@ -1,0 +1,25 @@
+{
+  "id": "redis-agent-skills-redis-docs-mcp",
+  "name": "redis-docs-mcp",
+  "description": ">- Working with the redis-docs MCP server (search / fetch / ask at redis.io/mcp) — how its index is shaped and how to read what it returns. Use when those tools are available and you are about to look something up in the Redis documentation, or when a result is confusing — fetch returned one short section instead of a page, several hits share one url, ids look like #sec:w1, metadata.version reads 1.0.0, a search came back empty, or ask was rate-limited or said the docs do not cover it. Also cove",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "redis",
+  "install_path": ".claude/skills/redis-docs-mcp/SKILL.md",
+  "source": {
+    "repo": "redis/agent-skills",
+    "url": "https://github.com/redis/agent-skills/blob/main/skills/redis-docs-mcp/SKILL.md",
+    "path": "skills/redis-docs-mcp/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-05T16:38:34.582Z",
+    "stars": 174,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-05T15:01:14Z",
+    "license": "MIT"
+  }
+}

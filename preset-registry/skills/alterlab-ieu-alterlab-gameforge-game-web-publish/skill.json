@@ -1,0 +1,25 @@
+{
+  "id": "alterlab-ieu-alterlab-gameforge-game-web-publish",
+  "name": "game-web-publish",
+  "description": "> Ships a browser game: hardens the build (size budgets, compression, COOP/COEP headers) and publishes to itch.io, Poki, CrazyGames, YouTube Playables, Discord Activities, PWA or desktop wrappers, with per-platform AI disclosure. Use for \"publish my web game\", \"upload to itch\", \"Poki SDK\", \"build too big\". Not for Steam, console or app-store launches (use game-launch).",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "AlterLab-IEU",
+  "install_path": ".claude/skills/game-web-publish/SKILL.md",
+  "source": {
+    "repo": "AlterLab-IEU/AlterLab_GameForge",
+    "url": "https://github.com/AlterLab-IEU/AlterLab_GameForge/blob/main/skills/workflows/game-web-publish/SKILL.md",
+    "path": "skills/workflows/game-web-publish/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-05T17:28:44.435Z",
+    "stars": 52,
+    "language": "Shell",
+    "pushed_at": "2026-11-05T08:39:24Z",
+    "license": "MIT"
+  }
+}

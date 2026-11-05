@@ -1,0 +1,25 @@
+{
+  "id": "alterlab-ieu-alterlab-gameforge-game-ai-assets",
+  "name": "game-ai-assets",
+  "description": "> Runs an AI-assisted asset pipeline for models, sprites, textures, audio and voice: generate vs make vs buy, license-first tool choice, style lock, engine post-processing, and a per-asset provenance log for Steam, itch.io and EU AI Act disclosures. Use for \"generate a sprite with AI\", \"ElevenLabs\", \"can I ship this AI asset\". Not for defining art style (use game-art-director).",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "AlterLab-IEU",
+  "install_path": ".claude/skills/game-ai-assets/SKILL.md",
+  "source": {
+    "repo": "AlterLab-IEU/AlterLab_GameForge",
+    "url": "https://github.com/AlterLab-IEU/AlterLab_GameForge/blob/main/skills/workflows/game-ai-assets/SKILL.md",
+    "path": "skills/workflows/game-ai-assets/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-05T17:28:39.950Z",
+    "stars": 52,
+    "language": "Shell",
+    "pushed_at": "2026-11-05T08:39:24Z",
+    "license": "MIT"
+  }
+}

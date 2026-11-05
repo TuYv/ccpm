@@ -2,7 +2,7 @@
   "id": "wshobson-agents-parallel-feature-development",
   "name": "parallel-feature-development",
   "description": "Coordinate parallel feature development with file ownership strategies, conflict avoidance rules, and integration patterns for multi-agent implementation. Use this skill when decomposing a large feature into independent work streams, when two or more agents need to implement different layers of the same system simultaneously, when establishing file ownership to prevent merge conflicts in a shared codebase, when designing interface contracts so parallel implementers can build against each other's",
-  "category": "测试调试",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/wshobson/agents/blob/main/plugins/agent-teams/skills/parallel-feature-development/SKILL.md",
     "path": "plugins/agent-teams/skills/parallel-feature-development/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-05T07:00:12.290Z",
-    "stars": 42221,
+    "discovered_at": "2026-11-05T15:50:59.966Z",
+    "stars": 42230,
     "language": "Python",
-    "pushed_at": "2026-11-02T01:08:47Z",
+    "pushed_at": "2026-11-05T15:45:05Z",
     "license": "MIT"
   },
   "summary_zh": "这是一套并行开发协调方案，通过划分文件归属和约定接口，让多个开发者或AI智能体能同时开发同一系统的不同模块，有效避免代码冲突。"

@@ -1,0 +1,25 @@
+{
+  "id": "antvis-ava-ava",
+  "name": "ava",
+  "description": ">- Use the AVA CLI for data access, exploration, querying, analysis, and visualization with CSV, Excel, JSON, and Parquet files, databases, and Feishu Bitable. Supports inspecting schemas and data quality, SQL/Python/JavaScript queries, transformation and aggregation, clarifying and reusing business definitions, metric and trend analysis, chart recommendations, and interactive HTML charts.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "antvis",
+  "install_path": ".claude/skills/ava/SKILL.md",
+  "source": {
+    "repo": "antvis/AVA",
+    "url": "https://github.com/antvis/AVA/blob/ai/skills/ava/SKILL.md",
+    "path": "skills/ava/SKILL.md",
+    "branch": "ai",
+    "discovered_at": "2026-11-05T16:41:54.693Z",
+    "stars": 1607,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-05T06:33:23Z",
+    "license": "MIT"
+  }
+}

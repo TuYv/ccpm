@@ -233,7 +233,7 @@ it up:
 obsidian-wiki memory todo add "<the open thread>" --origin projects/<project-name>.md
 ```
 
-See `.skills/llm-wiki/references/MEMORY.md` for the full procedure.
+See `skills/llm-wiki/references/MEMORY.md` for the full procedure.
 
 ## Step 7: Refresh QMD Wiki Index (optional — requires `QMD_WIKI_COLLECTION`)
 

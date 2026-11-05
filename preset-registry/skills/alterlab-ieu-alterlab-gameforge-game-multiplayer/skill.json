@@ -1,0 +1,25 @@
+{
+  "id": "alterlab-ieu-alterlab-gameforge-game-multiplayer",
+  "name": "game-multiplayer",
+  "description": "> Designs netcode: whether to go online at all, topology (P2P with relay, listen or dedicated server), sync model (prediction, rollback, lockstep), stacks for Godot, Unity, Unreal and web, lobbies, anti-cheat, network testing and hosting cost. Use for \"add multiplayer\", \"online co-op\", \"netcode\", \"lag\", \"rollback\". Not for engine choice (use game-technical-director).",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "AlterLab-IEU",
+  "install_path": ".claude/skills/game-multiplayer/SKILL.md",
+  "source": {
+    "repo": "AlterLab-IEU/AlterLab_GameForge",
+    "url": "https://github.com/AlterLab-IEU/AlterLab_GameForge/blob/main/skills/workflows/game-multiplayer/SKILL.md",
+    "path": "skills/workflows/game-multiplayer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-05T17:28:42.393Z",
+    "stars": 52,
+    "language": "Shell",
+    "pushed_at": "2026-11-05T08:39:24Z",
+    "license": "MIT"
+  }
+}

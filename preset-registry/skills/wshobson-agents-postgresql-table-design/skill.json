@@ -2,7 +2,7 @@
   "id": "wshobson-agents-postgresql-table-design",
   "name": "postgresql-table-design",
   "description": "Use this skill when designing or reviewing a PostgreSQL-specific schema. Covers best-practices, data types, indexing, constraints, performance patterns, and advanced features",
-  "category": "测试调试",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/wshobson/agents/blob/main/plugins/database-design/skills/postgresql-table-design/SKILL.md",
     "path": "plugins/database-design/skills/postgresql-table-design/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-05T07:00:19.436Z",
-    "stars": 42221,
+    "discovered_at": "2026-11-05T15:51:08.504Z",
+    "stars": 42230,
     "language": "Python",
-    "pushed_at": "2026-11-02T01:08:47Z",
+    "pushed_at": "2026-11-05T15:45:05Z",
     "license": "MIT"
   },
   "summary_zh": "用于设计和审查 PostgreSQL 数据库表结构，帮助合理选择数据类型、索引和约束，优化性能并运用高级特性。"
