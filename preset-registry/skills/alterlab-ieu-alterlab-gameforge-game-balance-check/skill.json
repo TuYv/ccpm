@@ -1,14 +1,14 @@
 {
   "id": "alterlab-ieu-alterlab-gameforge-game-balance-check",
   "name": "game-balance-check",
-  "description": "> Invoke when the user needs to validate game balance, tune economy systems, analyze progression curves, evaluate difficulty scaling, or check reward pacing. Includes Monte Carlo simulation and statistical validation. Triggers on: \"balance\", \"economy tuning\", \"progression curve\", \"difficulty scaling\", \"reward pacing\", \"Monte Carlo\", \"fairness check\". Do NOT invoke for economy/monetization design (use game-economy-designer) or code review (use game-code-review). Part of the AlterLab GameForge col",
+  "description": "> Validates and tunes game balance: economy faucets and sinks, progression and difficulty curves, reward pacing, win rates and dominant strategies, using agent-runnable simulations (Monte Carlo, AI-vs-AI) and telemetry. Use for \"balance\", \"tuning\", \"difficulty spike\", \"Monte Carlo\", \"win rate\". Not for designing currencies or monetization (use game-economy-designer).",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
     "gemini"
   ],
-  "version": "1.3.0",
+  "version": "",
   "author": "AlterLab-IEU",
   "install_path": ".claude/skills/game-balance-check/SKILL.md",
   "source": {
@@ -16,10 +16,10 @@
     "url": "https://github.com/AlterLab-IEU/AlterLab_GameForge/blob/main/skills/workflows/game-balance-check/SKILL.md",
     "path": "skills/workflows/game-balance-check/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-05T01:39:41.665Z",
+    "discovered_at": "2026-11-05T08:42:02.048Z",
     "stars": 52,
     "language": "Shell",
-    "pushed_at": "2026-03-30T13:32:11Z",
+    "pushed_at": "2026-11-05T08:39:24Z",
     "license": "MIT"
   }
 }

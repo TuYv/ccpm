@@ -2,7 +2,7 @@
   "id": "alirezarezvani-claude-skills-financial-health",
   "name": "financial-health",
   "description": "Run financial ratio analysis, DCF valuation, budget variance analysis, and rolling forecasts. Usage: /financial-health <ratios|dcf|budget|forecast> <data.json>",
-  "category": "数据分析",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/financial-health/SKILL.md",
     "path": ".gemini/skills/financial-health/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-05T00:39:17.883Z",
-    "stars": 29298,
+    "discovered_at": "2026-11-05T07:41:27.134Z",
+    "stars": 29315,
     "language": "Python",
-    "pushed_at": "2026-11-04T18:51:34Z",
+    "pushed_at": "2026-11-05T06:58:08Z",
     "license": "MIT"
   }
 }

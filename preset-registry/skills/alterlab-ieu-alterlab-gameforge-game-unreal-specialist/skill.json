@@ -1,14 +1,14 @@
 {
   "id": "alterlab-ieu-alterlab-gameforge-game-unreal-specialist",
   "name": "game-unreal-specialist",
-  "description": "> Invoke when the user works with Unreal Engine 5 or asks about C++/Blueprints, GAS, replication, Nanite, Lumen, CommonUI, Enhanced Input, or World Partition. Triggers on: \"Unreal\", \"UE5\", \"Blueprint\", \"GAS\", \"Nanite\", \"Lumen\", \"CommonUI\", \"Enhanced Input\", \"World Partition\", \".uproject\". Do NOT invoke for engine-agnostic architecture (use game-technical-director) or Godot/Unity questions. Part of the AlterLab GameForge collection.",
-  "category": "设计创意",
+  "description": "> Writes and reviews Unreal Engine 5.8 C++ and Blueprints: GAS, Enhanced Input, World Partition, Nanite and Lumen budgets, Mass and StateTree, RunUAT builds, automation tests, packaging, Unreal Insights and Unreal MCP agent workflows. Use when the project has a .uproject or the user mentions Unreal, UE5, Blueprints, GAS or Nanite. Not for netcode design (use game-multiplayer).",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
     "gemini"
   ],
-  "version": "2.0.0",
+  "version": "",
   "author": "AlterLab-IEU",
   "install_path": ".claude/skills/game-unreal-specialist/SKILL.md",
   "source": {
@@ -16,10 +16,10 @@
     "url": "https://github.com/AlterLab-IEU/AlterLab_GameForge/blob/main/skills/engine-specialists/game-unreal-specialist/SKILL.md",
     "path": "skills/engine-specialists/game-unreal-specialist/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-05T01:39:41.445Z",
+    "discovered_at": "2026-11-05T08:42:01.687Z",
     "stars": 52,
     "language": "Shell",
-    "pushed_at": "2026-03-30T13:32:11Z",
+    "pushed_at": "2026-11-05T08:39:24Z",
     "license": "MIT"
   }
 }

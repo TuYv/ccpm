@@ -1,14 +1,14 @@
 {
   "id": "alterlab-ieu-alterlab-gameforge-game-producer",
   "name": "game-producer",
-  "description": "> Invoke when the user asks about sprint planning, milestone tracking, scope management, risk assessment, scheduling, resource allocation, team velocity, or needs production coordination across the development team. Triggers on: \"sprint\", \"milestone\", \"scope\", \"risk\", \"schedule\", \"resource\", \"velocity\", \"deadline\", \"crunch\", \"cut list\". Do NOT invoke for creative vision (use game-creative-director) or architecture decisions (use game-technical-director). Part of the AlterLab GameForge collection",
+  "description": "> Producer (Nadia Volkov). Owns schedule, scope, milestones, risk registers and cut lists, turns engine support windows, store review lead times and regulatory dates into milestones, and plans for AI-assisted teams. Use for \"schedule\", \"milestone\", \"risk register\", \"cut list\", \"deadline\", \"crunch\". Not for a quick scope-vs-capacity audit (use game-scope-check).",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
     "gemini"
   ],
-  "version": "1.3.0",
+  "version": "",
   "author": "AlterLab-IEU",
   "install_path": ".claude/skills/game-producer/SKILL.md",
   "source": {
@@ -16,10 +16,10 @@
     "url": "https://github.com/AlterLab-IEU/AlterLab_GameForge/blob/main/skills/agents/game-producer/SKILL.md",
     "path": "skills/agents/game-producer/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-05T01:39:40.558Z",
+    "discovered_at": "2026-11-05T08:42:00.664Z",
     "stars": 52,
     "language": "Shell",
-    "pushed_at": "2026-03-30T13:32:11Z",
+    "pushed_at": "2026-11-05T08:39:24Z",
     "license": "MIT"
   }
 }

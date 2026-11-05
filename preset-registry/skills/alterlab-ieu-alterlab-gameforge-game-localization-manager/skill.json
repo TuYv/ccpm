@@ -1,14 +1,14 @@
 {
   "id": "alterlab-ieu-alterlab-gameforge-game-localization-manager",
   "name": "game-localization-manager",
-  "description": "> Invoke when the user asks about localization, translation, i18n, internationalization, string extraction, cultural adaptation, RTL support, CJK text, or EFIGS preparation. Triggers on: \"localization\", \"translation\", \"i18n\", \"internationalization\", \"string extraction\", \"cultural adaptation\", \"RTL\", \"CJK\", \"EFIGS\". Do NOT invoke for narrative writing (use game-narrative-director) or accessibility (use game-accessibility-specialist). Part of the AlterLab GameForge collection.",
+  "description": "> Plans and runs game localization: i18n architecture, string extraction per engine, a machine translation + LLM + human review pipeline, pseudo-localization in CI, fonts, RTL and CJK, LQA, and Steam AI disclosure for translated text. Use for \"localization\", \"translation\", \"i18n\", \"RTL\", \"CJK\", \"pseudo-localization\". Not for writing dialogue (use game-narrative-director).",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
     "gemini"
   ],
-  "version": "1.3.0",
+  "version": "",
   "author": "AlterLab-IEU",
   "install_path": ".claude/skills/game-localization-manager/SKILL.md",
   "source": {
@@ -16,10 +16,10 @@
     "url": "https://github.com/AlterLab-IEU/AlterLab_GameForge/blob/main/skills/workflows/game-localization-manager/SKILL.md",
     "path": "skills/workflows/game-localization-manager/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-05T01:39:42.698Z",
+    "discovered_at": "2026-11-05T08:42:03.704Z",
     "stars": 52,
     "language": "Shell",
-    "pushed_at": "2026-03-30T13:32:11Z",
+    "pushed_at": "2026-11-05T08:39:24Z",
     "license": "MIT"
   }
 }

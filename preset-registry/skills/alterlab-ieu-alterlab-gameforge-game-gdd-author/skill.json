@@ -1,14 +1,14 @@
 {
   "id": "alterlab-ieu-alterlab-gameforge-game-gdd-author",
   "name": "game-gdd-author",
-  "description": "> Invoke for guided game design document authoring -- section-by-section GDD creation with validation, pillar alignment, and scope tier marking. Triggers on: \"write GDD\", \"create GDD\", \"game design document\", \"document my game\", \"GDD authoring\", \"fill in GDD\". Do NOT invoke for reviewing an existing GDD (use game-design-review) or designing specific game systems (use game-designer). Part of the AlterLab GameForge collection.",
+  "description": "> Guides section-by-section writing of a game design document that doubles as an agent-verifiable spec: pillars, core loop, MDA-tagged systems with pass/fail acceptance criteria and tuning knobs, scope tiers and an AI-use policy. Use for \"write my GDD\", \"create a game design document\", \"turn my concept into a spec\". Not for critiquing an existing GDD (use game-design-review).",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
     "gemini"
   ],
-  "version": "2.0.0",
+  "version": "",
   "author": "AlterLab-IEU",
   "install_path": ".claude/skills/game-gdd-author/SKILL.md",
   "source": {
@@ -16,10 +16,10 @@
     "url": "https://github.com/AlterLab-IEU/AlterLab_GameForge/blob/main/skills/workflows/game-gdd-author/SKILL.md",
     "path": "skills/workflows/game-gdd-author/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-05T01:39:42.293Z",
+    "discovered_at": "2026-11-05T08:42:03.200Z",
     "stars": 52,
     "language": "Shell",
-    "pushed_at": "2026-03-30T13:32:11Z",
+    "pushed_at": "2026-11-05T08:39:24Z",
     "license": "MIT"
   }
 }

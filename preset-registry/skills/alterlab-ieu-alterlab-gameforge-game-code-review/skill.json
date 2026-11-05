@@ -1,14 +1,14 @@
 {
   "id": "alterlab-ieu-alterlab-gameforge-game-code-review",
   "name": "game-code-review",
-  "description": "> Invoke when the user wants a game-specific code review, architecture check, or technical analysis of game code. Covers frame independence, hot path performance, state machine integrity, and resource lifecycle. Triggers on: \"code review\", \"review my code\", \"check architecture\", \"game code quality\". Do NOT invoke for design document review (use game-design-review) or general sprint planning (use game-sprint-plan). Part of the AlterLab GameForge collection.",
+  "description": "> Reviews game code and AI-agent changes as a forked reviewer and writes a severity-ranked report: frame-rate independence, hot-path allocations, state and resource lifecycle, hallucinated engine APIs and leaked secrets, for Godot, Unity, Unreal and web. Use for \"review my code\", \"review this PR\", \"check what the agent wrote\". Not for design documents (use game-design-review).",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
     "gemini"
   ],
-  "version": "1.3.0",
+  "version": "",
   "author": "AlterLab-IEU",
   "install_path": ".claude/skills/game-code-review/SKILL.md",
   "source": {
@@ -16,10 +16,10 @@
     "url": "https://github.com/AlterLab-IEU/AlterLab_GameForge/blob/main/skills/workflows/game-code-review/SKILL.md",
     "path": "skills/workflows/game-code-review/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-05T01:39:42.025Z",
+    "discovered_at": "2026-11-05T08:42:02.593Z",
     "stars": 52,
     "language": "Shell",
-    "pushed_at": "2026-03-30T13:32:11Z",
+    "pushed_at": "2026-11-05T08:39:24Z",
     "license": "MIT"
   }
 }

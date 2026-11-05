@@ -1,14 +1,14 @@
 {
   "id": "alterlab-ieu-alterlab-gameforge-game-jam-mode",
   "name": "game-jam-mode",
-  "description": "> Invoke for game jam participation -- 48-72 hour compressed development workflow. Triggers on: \"game jam\", \"jam mode\", \"Ludum Dare\", \"GMTK Jam\", \"Global Game Jam\", \"Brackeys Jam\", \"48 hours\", \"jam submission\". Do NOT invoke for normal development timelines (use game-start). Part of the AlterLab GameForge collection.",
-  "category": "设计创意",
+  "description": "> Coaches a game jam entry from rules to submission: reads the ruleset and AI policy, interprets the theme, locks scope, runs an hour-by-hour plan with agent-assisted building, and submits a browser build with accurate AI disclosure. Use for \"game jam\", \"Ludum Dare\", \"GMTK\", \"Vibe Jam\", \"js13k\", \"48 hours\". Not for a build with no jam deadline (use game-vibe-code).",
+  "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
     "codex",
     "gemini"
   ],
-  "version": "2.0.0",
+  "version": "",
   "author": "AlterLab-IEU",
   "install_path": ".claude/skills/game-jam-mode/SKILL.md",
   "source": {
@@ -16,10 +16,10 @@
     "url": "https://github.com/AlterLab-IEU/AlterLab_GameForge/blob/main/skills/workflows/game-jam-mode/SKILL.md",
     "path": "skills/workflows/game-jam-mode/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-05T01:39:42.442Z",
+    "discovered_at": "2026-11-05T08:42:03.364Z",
     "stars": 52,
     "language": "Shell",
-    "pushed_at": "2026-03-30T13:32:11Z",
+    "pushed_at": "2026-11-05T08:39:24Z",
     "license": "MIT"
   }
 }

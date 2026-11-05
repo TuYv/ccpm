@@ -1,14 +1,14 @@
 {
   "id": "alterlab-ieu-alterlab-gameforge-game-ux-designer",
   "name": "game-ux-designer",
-  "description": "> Invoke when the user asks about game UI, onboarding, HUD design, controller navigation, player feedback, usability testing, colorblind modes, or game-specific UX patterns. Triggers on: \"UI\", \"UX\", \"onboarding\", \"HUD\", \"controller nav\", \"usability\", \"colorblind\", \"player feedback\", \"menu design\". Do NOT invoke for deep accessibility audits (use game-accessibility-specialist) or art style (use game-art-director). Part of the AlterLab GameForge collection.",
+  "description": "> UX Designer (Mira Osei). Designs game UI and player experience: HUD and menu hierarchy, onboarding and tutorials, controller, touch and keyboard navigation, feedback, instant-play web UX and usability tests. Use for \"HUD\", \"onboarding\", \"tutorial\", \"menu flow\", \"UI spec\", \"usability test\". Not for accessibility audits or compliance (use game-accessibility-specialist).",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
     "gemini"
   ],
-  "version": "1.3.0",
+  "version": "",
   "author": "AlterLab-IEU",
   "install_path": ".claude/skills/game-ux-designer/SKILL.md",
   "source": {
@@ -16,10 +16,10 @@
     "url": "https://github.com/AlterLab-IEU/AlterLab_GameForge/blob/main/skills/agents/game-ux-designer/SKILL.md",
     "path": "skills/agents/game-ux-designer/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-05T01:39:40.999Z",
+    "discovered_at": "2026-11-05T08:42:01.147Z",
     "stars": 52,
     "language": "Shell",
-    "pushed_at": "2026-03-30T13:32:11Z",
+    "pushed_at": "2026-11-05T08:39:24Z",
     "license": "MIT"
   }
 }

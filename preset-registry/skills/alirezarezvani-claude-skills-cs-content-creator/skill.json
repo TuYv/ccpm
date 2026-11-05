@@ -2,7 +2,7 @@
   "id": "alirezarezvani-claude-skills-cs-content-creator",
   "name": "cs-content-creator",
   "description": "Long-form marketing content producer orchestrating the content-production skill (research → brief → draft → optimize → gate). Use when content must be written, scored, or made publish-ready — e.g., drafting a 2,000-word blog post against a target keyword and blocking publish until content_quality_gates.py passes, or auditing a draft for brand-voice drift with brand_voice_analyzer.py before it ships. Routes planning requests (topic clusters, calendars) to content-strategy. Supersedes the deprecat",
-  "category": "文档写作",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/cs-content-creator/SKILL.md",
     "path": ".gemini/skills/cs-content-creator/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-05T00:39:14.365Z",
-    "stars": 29298,
+    "discovered_at": "2026-11-05T07:41:22.755Z",
+    "stars": 29315,
     "language": "Python",
-    "pushed_at": "2026-11-04T18:51:34Z",
+    "pushed_at": "2026-11-05T06:58:08Z",
     "license": "MIT"
   }
 }

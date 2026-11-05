@@ -1,14 +1,14 @@
 {
   "id": "alterlab-ieu-alterlab-gameforge-game-scope-check",
   "name": "game-scope-check",
-  "description": "> Evaluate project scope against timeline and resources. Triggers on: \"scope creep\", \"feature list\", \"can we fit this in\", \"timeline pressure\", \"resource constraints\", \"cut list\", \"scope evaluation\". Do NOT invoke for sprint planning (use game-sprint-plan) or general project status (use game-producer). Part of the AlterLab GameForge collection.",
+  "description": "> Checks scope against time and capacity: feature inventory, MoSCoW with effort caps, impact and risk scores, buffer math, scope-creep signals and a cut list, with velocity calibrated for AI-agent work and vibe debt counted as risk. Use for \"scope creep\", \"can we fit this\", \"what should we cut\", \"are we on track\". Not for sprint task planning (use game-sprint-plan).",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
     "gemini"
   ],
-  "version": "1.3.0",
+  "version": "",
   "author": "AlterLab-IEU",
   "install_path": ".claude/skills/game-scope-check/SKILL.md",
   "source": {
@@ -16,10 +16,10 @@
     "url": "https://github.com/AlterLab-IEU/AlterLab_GameForge/blob/main/skills/workflows/game-scope-check/SKILL.md",
     "path": "skills/workflows/game-scope-check/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-05T01:39:43.544Z",
+    "discovered_at": "2026-11-05T08:42:04.814Z",
     "stars": 52,
     "language": "Shell",
-    "pushed_at": "2026-03-30T13:32:11Z",
+    "pushed_at": "2026-11-05T08:39:24Z",
     "license": "MIT"
   }
 }

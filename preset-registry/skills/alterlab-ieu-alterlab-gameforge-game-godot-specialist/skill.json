@@ -1,14 +1,14 @@
 {
   "id": "alterlab-ieu-alterlab-gameforge-game-godot-specialist",
   "name": "game-godot-specialist",
-  "description": "> Invoke when the user works with Godot Engine or asks about GDScript, scene composition, signals, resources, shaders, GDExtension, physics, or Godot UI. Triggers on: \"Godot\", \"GDScript\", \"scene tree\", \"signals\", \".tscn\", \".tres\", \"GDExtension\", \"project.godot\". Do NOT invoke for engine-agnostic architecture (use game-technical-director) or Unity/Unreal questions (use the appropriate engine specialist). Part of the AlterLab GameForge collection.",
-  "category": "设计创意",
+  "description": "> Writes and reviews Godot 4 code (4.7 stable, 4.8 beta) in GDScript and C#: scenes and nodes, signals, Resources, autoloads, Jolt physics, shaders, profiling, export, GUT/gdUnit4 tests and headless CLI checks. Use when the project has project.godot, .gd or .tscn files, or the user mentions Godot or GDScript. Not for engine-agnostic architecture (use game-technical-director).",
+  "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
     "codex",
     "gemini"
   ],
-  "version": "2.0.0",
+  "version": "",
   "author": "AlterLab-IEU",
   "install_path": ".claude/skills/game-godot-specialist/SKILL.md",
   "source": {
@@ -16,10 +16,10 @@
     "url": "https://github.com/AlterLab-IEU/AlterLab_GameForge/blob/main/skills/engine-specialists/game-godot-specialist/SKILL.md",
     "path": "skills/engine-specialists/game-godot-specialist/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-05T01:39:41.152Z",
+    "discovered_at": "2026-11-05T08:42:01.333Z",
     "stars": 52,
     "language": "Shell",
-    "pushed_at": "2026-03-30T13:32:11Z",
+    "pushed_at": "2026-11-05T08:39:24Z",
     "license": "MIT"
   }
 }

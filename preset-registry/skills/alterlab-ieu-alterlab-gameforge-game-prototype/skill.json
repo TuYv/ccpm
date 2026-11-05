@@ -1,14 +1,14 @@
 {
   "id": "alterlab-ieu-alterlab-gameforge-game-prototype",
   "name": "game-prototype",
-  "description": "> Invoke when the user wants to rapidly prototype a mechanic, test a proof of concept, run hypothesis-driven development, or validate a game idea before full production. Triggers on: \"prototype\", \"proof of concept\", \"test this mechanic\", \"validate idea\", \"rapid prototype\", \"bake-off\". Do NOT invoke for starting a full project (use game-start) or brainstorming concepts (use game-brainstorm). Part of the AlterLab GameForge collection.",
+  "description": "> Runs hypothesis-driven prototyping: one question per prototype, a falsifiable hypothesis, the cheapest fidelity that answers it (paper, simulation, agent-built throwaway), a time box, observed playtests and a kill-or-promote call. Use for \"prototype\", \"proof of concept\", \"test this mechanic\", \"is this fun\". Not for building a small shippable game (use game-vibe-code).",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
     "gemini"
   ],
-  "version": "1.3.0",
+  "version": "",
   "author": "AlterLab-IEU",
   "install_path": ".claude/skills/game-prototype/SKILL.md",
   "source": {
@@ -16,10 +16,10 @@
     "url": "https://github.com/AlterLab-IEU/AlterLab_GameForge/blob/main/skills/workflows/game-prototype/SKILL.md",
     "path": "skills/workflows/game-prototype/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-05T01:39:43.143Z",
+    "discovered_at": "2026-11-05T08:42:04.297Z",
     "stars": 52,
     "language": "Shell",
-    "pushed_at": "2026-03-30T13:32:11Z",
+    "pushed_at": "2026-11-05T08:39:24Z",
     "license": "MIT"
   }
 }

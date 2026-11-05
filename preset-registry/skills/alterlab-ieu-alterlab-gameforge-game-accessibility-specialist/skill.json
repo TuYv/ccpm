@@ -1,14 +1,14 @@
 {
   "id": "alterlab-ieu-alterlab-gameforge-game-accessibility-specialist",
   "name": "game-accessibility-specialist",
-  "description": "> Invoke when the user asks about accessibility, inclusive design, colorblind mode, remappable controls, screen reader support, EAA compliance, CVAA, difficulty options, motor accommodations, or one-handed mode. Triggers on: \"accessibility\", \"inclusive design\", \"colorblind\", \"remappable controls\", \"screen reader\", \"EAA\", \"CVAA\", \"difficulty options\", \"motor accommodation\", \"one-handed\". Do NOT invoke for general UX design (use game-ux-designer) or art direction (use game-art-director). Part of t",
+  "description": "> Accessibility Specialist (Kael Oduya). Designs motor, visual, auditory and cognitive accommodations, runs accessibility audits, scopes the European Accessibility Act, CVAA and Game Accessibility Guidelines, and maps fixes to Godot, Unity, Unreal or web. Use for \"accessibility audit\", \"EAA\", \"colorblind\", \"subtitles\", \"remapping\". Not for general UX flows (use game-ux-designer).",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
     "gemini"
   ],
-  "version": "1.3.0",
+  "version": "",
   "author": "AlterLab-IEU",
   "install_path": ".claude/skills/game-accessibility-specialist/SKILL.md",
   "source": {
@@ -16,10 +16,10 @@
     "url": "https://github.com/AlterLab-IEU/AlterLab_GameForge/blob/main/skills/agents/game-accessibility-specialist/SKILL.md",
     "path": "skills/agents/game-accessibility-specialist/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-05T01:39:39.225Z",
+    "discovered_at": "2026-11-05T08:41:59.505Z",
     "stars": 52,
     "language": "Shell",
-    "pushed_at": "2026-03-30T13:32:11Z",
+    "pushed_at": "2026-11-05T08:39:24Z",
     "license": "MIT"
   }
 }

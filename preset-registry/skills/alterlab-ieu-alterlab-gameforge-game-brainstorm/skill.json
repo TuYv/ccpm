@@ -1,14 +1,14 @@
 {
   "id": "alterlab-ieu-alterlab-gameforge-game-brainstorm",
   "name": "game-brainstorm",
-  "description": "> Invoke when the user wants to brainstorm game ideas, explore concepts, run structured ideation, or develop a new game concept from scratch. Triggers on: \"game idea\", \"brainstorm\", \"concept\", \"ideation\", \"what if\", \"game concept\", \"pitch\". Do NOT invoke for reviewing existing designs (use game-design-review) or market analysis (use game-market-research). Part of the AlterLab GameForge collection.",
+  "description": "> Runs designer-led ideation that turns a mood, theme, genre or \"something like X\" into three original concepts and one chosen Game Concept Document with core loop, pillars, player fit and scope, plus 5-10 minute web or jam hooks. Use for \"game idea\", \"brainstorm\", \"pitch\", \"what should I make\", \"a game like X\". Not for market sizing (use game-market-research).",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
     "gemini"
   ],
-  "version": "1.3.0",
+  "version": "",
   "author": "AlterLab-IEU",
   "install_path": ".claude/skills/game-brainstorm/SKILL.md",
   "source": {
@@ -16,10 +16,10 @@
     "url": "https://github.com/AlterLab-IEU/AlterLab_GameForge/blob/main/skills/workflows/game-brainstorm/SKILL.md",
     "path": "skills/workflows/game-brainstorm/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-05T01:39:41.790Z",
+    "discovered_at": "2026-11-05T08:42:02.263Z",
     "stars": 52,
     "language": "Shell",
-    "pushed_at": "2026-03-30T13:32:11Z",
+    "pushed_at": "2026-11-05T08:39:24Z",
     "license": "MIT"
   }
 }

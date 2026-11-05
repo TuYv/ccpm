@@ -1,14 +1,14 @@
 {
   "id": "alterlab-ieu-alterlab-gameforge-game-unity-specialist",
   "name": "game-unity-specialist",
-  "description": "> Invoke when the user works with Unity or asks about C#, MonoBehaviour, DOTS/ECS, Shader Graph, Addressables, UI Toolkit, URP/HDRP, or ScriptableObjects. Triggers on: \"Unity\", \"MonoBehaviour\", \"DOTS\", \"ECS\", \"Shader Graph\", \"Addressables\", \"UI Toolkit\", \"URP\", \"HDRP\", \"ScriptableObject\", \".unity\", \".cs\". Do NOT invoke for engine-agnostic architecture (use game-technical-director) or Godot/Unreal questions. Part of the AlterLab GameForge collection.",
-  "category": "设计创意",
+  "description": "> Writes and reviews Unity 6 C# (6.3 LTS, 6.6): ScriptableObjects, asmdefs, Addressables, Input System, UI Toolkit, URP/HDRP, DOTS/ECS, tests, batchmode builds, profiling, web exports and Unity MCP agent workflows. Use when the project has ProjectSettings/ or .unity scenes, or the user mentions Unity, URP, HDRP or DOTS. Not for netcode design (use game-multiplayer).",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
     "gemini"
   ],
-  "version": "2.0.0",
+  "version": "",
   "author": "AlterLab-IEU",
   "install_path": ".claude/skills/game-unity-specialist/SKILL.md",
   "source": {
@@ -16,10 +16,10 @@
     "url": "https://github.com/AlterLab-IEU/AlterLab_GameForge/blob/main/skills/engine-specialists/game-unity-specialist/SKILL.md",
     "path": "skills/engine-specialists/game-unity-specialist/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-05T01:39:41.279Z",
+    "discovered_at": "2026-11-05T08:42:01.521Z",
     "stars": 52,
     "language": "Shell",
-    "pushed_at": "2026-03-30T13:32:11Z",
+    "pushed_at": "2026-11-05T08:39:24Z",
     "license": "MIT"
   }
 }

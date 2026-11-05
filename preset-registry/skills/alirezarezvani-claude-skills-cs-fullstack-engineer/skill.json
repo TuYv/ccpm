@@ -2,7 +2,7 @@
   "id": "alirezarezvani-claude-skills-cs-fullstack-engineer",
   "name": "cs-fullstack-engineer",
   "description": "Fullstack-engineering orchestrator. Walks the Matt Pocock 7-question forcing-question grill, runs the deterministic profile picker, then forks into the POWERFUL-tier specialists (api-design-reviewer, ci-cd-pipeline-builder, database-designer, performance-profiler, slo-architect — listed alphabetically; workflow order is dependency-driven) rather than reimplementing their scope. Forks own context so heavy ingestion does not pollute parent thread. Invoke via /cs-fullstack-review or Agent({subagent",
-  "category": "设计创意",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/cs-fullstack-engineer/SKILL.md",
     "path": ".gemini/skills/cs-fullstack-engineer/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-05T00:39:15.267Z",
-    "stars": 29298,
+    "discovered_at": "2026-11-05T07:41:24.040Z",
+    "stars": 29315,
     "language": "Python",
-    "pushed_at": "2026-11-04T18:51:34Z",
+    "pushed_at": "2026-11-05T06:58:08Z",
     "license": "MIT"
   }
 }

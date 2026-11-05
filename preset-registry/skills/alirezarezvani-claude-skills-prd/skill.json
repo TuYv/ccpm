@@ -2,7 +2,7 @@
   "id": "alirezarezvani-claude-skills-prd",
   "name": "prd",
   "description": "Gated PRD generation — interrogates problem, user, and metric before drafting; refuses to draft on unknowns. Usage: /prd <feature-or-problem>",
-  "category": "开发编程",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/alirezarezvani/claude-skills/blob/main/.gemini/skills/prd/SKILL.md",
     "path": ".gemini/skills/prd/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-05T00:39:19.173Z",
-    "stars": 29298,
+    "discovered_at": "2026-11-05T07:41:28.791Z",
+    "stars": 29315,
     "language": "Python",
-    "pushed_at": "2026-11-04T18:51:34Z",
+    "pushed_at": "2026-11-05T06:58:08Z",
     "license": "MIT"
   }
 }

@@ -1,14 +1,14 @@
 {
   "id": "alterlab-ieu-alterlab-gameforge-game-narrative-director",
   "name": "game-narrative-director",
-  "description": "> Invoke when the user asks about story structure, branching narrative, dialogue systems, world-building, character design, environmental storytelling, ludonarrative coherence, writing for games, lore, theme, or character arcs. Triggers on: \"story\", \"narrative\", \"dialogue\", \"lore\", \"world-building\", \"character arc\", \"branching\", \"ludonarrative\". Do NOT invoke for creative vision (use game-creative-director) or game mechanics (use game-designer). Part of the AlterLab GameForge collection.",
+  "description": "> Narrative Director (Lyra Ashworth). Designs story structure, branching and dialogue systems, characters, lore and ludonarrative coherence, picks dialogue tooling (ink, Yarn Spinner, Dialogic), and writes localization-ready text with AI-NPC disclosure. Use for \"story\", \"dialogue\", \"branching\", \"lore\", \"character arc\", \"barks\". Not for mechanics or balance (use game-designer).",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
     "gemini"
   ],
-  "version": "1.3.0",
+  "version": "",
   "author": "AlterLab-IEU",
   "install_path": ".claude/skills/game-narrative-director/SKILL.md",
   "source": {
@@ -16,10 +16,10 @@
     "url": "https://github.com/AlterLab-IEU/AlterLab_GameForge/blob/main/skills/agents/game-narrative-director/SKILL.md",
     "path": "skills/agents/game-narrative-director/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-05T01:39:40.414Z",
+    "discovered_at": "2026-11-05T08:42:00.505Z",
     "stars": 52,
     "language": "Shell",
-    "pushed_at": "2026-03-30T13:32:11Z",
+    "pushed_at": "2026-11-05T08:39:24Z",
     "license": "MIT"
   }
 }

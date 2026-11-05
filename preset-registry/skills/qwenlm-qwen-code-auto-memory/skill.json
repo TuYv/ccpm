@@ -1,0 +1,25 @@
+{
+  "id": "qwenlm-qwen-code-auto-memory",
+  "name": "auto-memory",
+  "description": "Auto-memory guidance — each memory type with examples, the metadata rules and team memory. Load once you decide to save a memory.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "QwenLM",
+  "install_path": ".claude/skills/auto-memory/SKILL.md",
+  "source": {
+    "repo": "QwenLM/qwen-code",
+    "url": "https://github.com/QwenLM/qwen-code/blob/main/packages/core/src/skills/bundled/auto-memory/SKILL.md",
+    "path": "packages/core/src/skills/bundled/auto-memory/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-05T07:49:46.133Z",
+    "stars": 29015,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-05T07:47:45Z",
+    "license": "Apache-2.0"
+  }
+}

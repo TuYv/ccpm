@@ -1,14 +1,14 @@
 {
   "id": "alterlab-ieu-alterlab-gameforge-game-technical-director",
   "name": "game-technical-director",
-  "description": "> Invoke when the user asks about game architecture, engine selection, performance budgets, technical debt, build pipeline, cross-platform, rendering pipeline, or CI/CD for games. Triggers on: \"architecture\", \"engine selection\", \"performance budget\", \"tech debt\", \"build pipeline\", \"cross-platform\", \"rendering\", \"CI/CD\". Do NOT invoke for creative vision (use game-creative-director) or engine-specific code (use engine specialists). Part of the AlterLab GameForge collection.",
+  "description": "> Technical Director (Kira Tanaka). Owns engine and stack choice (Godot, Unity, Unreal, Three.js, Phaser), architecture and ADRs, performance and build-size budgets, tech debt, MCP tooling and platform-shift risk. Use for \"which engine\", \"architecture\", \"performance budget\", \"tech debt\". Not for engine-specific code (use the engine specialist, e.g. game-godot-specialist).",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
     "gemini"
   ],
-  "version": "1.3.0",
+  "version": "",
   "author": "AlterLab-IEU",
   "install_path": ".claude/skills/game-technical-director/SKILL.md",
   "source": {
@@ -16,10 +16,10 @@
     "url": "https://github.com/AlterLab-IEU/AlterLab_GameForge/blob/main/skills/agents/game-technical-director/SKILL.md",
     "path": "skills/agents/game-technical-director/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-05T01:39:40.850Z",
+    "discovered_at": "2026-11-05T08:42:01.002Z",
     "stars": 52,
     "language": "Shell",
-    "pushed_at": "2026-03-30T13:32:11Z",
+    "pushed_at": "2026-11-05T08:39:24Z",
     "license": "MIT"
   }
 }
