@@ -1,0 +1,25 @@
+{
+  "id": "microsoft-skills-for-fabric-ontology-cli",
+  "name": "ontology-cli",
+  "description": "Manages Microsoft Fabric Ontology items: authors legacy V1 entity/relationship definitions and answers questions for new-experience (V2) Ontologies through ask_ontology. Use for Ontology item operations or grounded questions; V2 authoring/upgrades and V1 queries are unsupported. Power BI data questions use fabriciq, report authoring powerbi-report-cli, and model/DAX changes semantic-model-authoring.",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "microsoft",
+  "install_path": ".claude/skills/ontology-cli/SKILL.md",
+  "source": {
+    "repo": "microsoft/skills-for-fabric",
+    "url": "https://github.com/microsoft/skills-for-fabric/blob/main/skills/ontology-cli/SKILL.md",
+    "path": "skills/ontology-cli/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-05T23:04:45.110Z",
+    "stars": 1321,
+    "language": "Python",
+    "pushed_at": "2026-11-05T19:33:28Z",
+    "license": "MIT"
+  }
+}

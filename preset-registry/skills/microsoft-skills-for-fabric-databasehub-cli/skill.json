@@ -1,0 +1,25 @@
+{
+  "id": "microsoft-skills-for-fabric-databasehub-cli",
+  "name": "databasehub-cli",
+  "description": "Analyzes Database Hub inventory, health, and security posture through Entra-authenticated Fabric APIs. Use for estate counts; SQL/PostgreSQL CPU, storage, and memory; Cosmos DB availability/RU; authentication/auditing/CMK warnings; and Fabric SQL inventory. Fabric SQL tuning routes to sqldb-cli; Warehouse/Lakehouse/Mirrored Database SQL to sqldw-cli. Triggers: data estate performance, database estate health, database security posture.",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "microsoft",
+  "install_path": ".claude/skills/databasehub-cli/SKILL.md",
+  "source": {
+    "repo": "microsoft/skills-for-fabric",
+    "url": "https://github.com/microsoft/skills-for-fabric/blob/main/skills/databasehub-cli/SKILL.md",
+    "path": "skills/databasehub-cli/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-05T23:04:42.521Z",
+    "stars": 1321,
+    "language": "Python",
+    "pushed_at": "2026-11-05T19:33:28Z",
+    "license": "MIT"
+  }
+}

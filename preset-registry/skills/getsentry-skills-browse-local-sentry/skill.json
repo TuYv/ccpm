@@ -1,0 +1,25 @@
+{
+  "id": "getsentry-skills-browse-local-sentry",
+  "name": "browse-local-sentry",
+  "description": "Connects an agent's browser to a local Sentry dev server (dev-ui on *.dev.getsentry.net or the full devserver).",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "getsentry",
+  "install_path": ".claude/skills/browse-local-sentry/SKILL.md",
+  "source": {
+    "repo": "getsentry/skills",
+    "url": "https://github.com/getsentry/skills/blob/main/skills/browse-local-sentry/SKILL.md",
+    "path": "skills/browse-local-sentry/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-05T23:04:22.697Z",
+    "stars": 1126,
+    "language": "Python",
+    "pushed_at": "2026-11-05T22:43:13Z",
+    "license": "Apache-2.0"
+  }
+}
