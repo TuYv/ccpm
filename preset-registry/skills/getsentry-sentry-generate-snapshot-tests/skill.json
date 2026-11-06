@@ -1,7 +1,7 @@
 {
   "id": "getsentry-sentry-generate-snapshot-tests",
   "name": "generate-snapshot-tests",
-  "description": "Generate snapshot test files for Sentry frontend React components. Use when asked to \"generate snapshot tests\", \"add snapshot tests\", \"create visual snapshots\", \"write snapshot tests\", \"add visual regression tests\", or \"snapshot this component\". Accepts an optional component path or name via $ARGUMENTS.",
+  "description": "Generate visual snapshot test files for Sentry frontend React components. Use for testing appearance changes such as colors, spacing, typography, CSS min/max sizing, responsive layout, and visual variants, or when asked to \"generate snapshot tests\", \"create visual snapshots\", \"add visual regression tests\", or \"snapshot this component\". Accepts an optional component path or name via $ARGUMENTS.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/getsentry/sentry/blob/master/.agents/skills/generate-snapshot-tests/SKILL.md",
     "path": ".agents/skills/generate-snapshot-tests/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-11-06T11:10:39.270Z",
-    "stars": 45724,
+    "discovered_at": "2026-11-06T18:17:21.998Z",
+    "stars": 45723,
     "language": "Python",
-    "pushed_at": "2026-11-06T11:02:23Z",
+    "pushed_at": "2026-11-06T18:14:51Z",
     "license": null
-  },
-  "summary_zh": "专为Sentry前端React组件自动生成快照与视觉回归测试文件，适合在需要快速为指定组件补充测试用例时使用，省去手动编写的繁琐。"
+  }
 }

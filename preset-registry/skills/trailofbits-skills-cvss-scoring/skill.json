@@ -1,0 +1,25 @@
+{
+  "id": "trailofbits-skills-cvss-scoring",
+  "name": "cvss-scoring",
+  "description": "Produces CVSS v4.0 vector strings from plain-text vulnerability descriptions by systematically evaluating base metrics. Use when scoring a vulnerability, generating a CVSS vector, or estimating severity.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "trailofbits",
+  "install_path": ".claude/skills/cvss-scoring/SKILL.md",
+  "source": {
+    "repo": "trailofbits/skills",
+    "url": "https://github.com/trailofbits/skills/blob/main/plugins/cvss-scoring/skills/cvss-scoring/SKILL.md",
+    "path": "plugins/cvss-scoring/skills/cvss-scoring/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-06T18:13:36.657Z",
+    "stars": 8044,
+    "language": "Python",
+    "pushed_at": "2026-11-06T15:20:09Z",
+    "license": "CC-BY-SA-4.0"
+  }
+}
