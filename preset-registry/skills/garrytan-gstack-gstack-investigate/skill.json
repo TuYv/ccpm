@@ -1,0 +1,25 @@
+{
+  "id": "garrytan-gstack-gstack-investigate",
+  "name": "gstack-investigate",
+  "description": "Use when a test fails, code errors or output is wrong: find and prove the root cause before any fix, then fix it with a regression test. (gstack)",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "garrytan",
+  "install_path": ".claude/skills/gstack-investigate/SKILL.md",
+  "source": {
+    "repo": "garrytan/gstack",
+    "url": "https://github.com/garrytan/gstack/blob/main/qm/sandbox/skills/gstack-investigate/SKILL.md",
+    "path": "qm/sandbox/skills/gstack-investigate/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-06T02:42:51.629Z",
+    "stars": 140006,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-06T02:08:26Z",
+    "license": "MIT"
+  }
+}

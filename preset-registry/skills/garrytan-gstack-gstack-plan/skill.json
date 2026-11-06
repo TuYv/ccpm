@@ -1,0 +1,25 @@
+{
+  "id": "garrytan-gstack-gstack-plan",
+  "name": "gstack-plan",
+  "description": "Use before building a feature: challenge the scope, then review architecture, code quality, tests and performance, and end with a plan to build. (gstack)",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "garrytan",
+  "install_path": ".claude/skills/gstack-plan/SKILL.md",
+  "source": {
+    "repo": "garrytan/gstack",
+    "url": "https://github.com/garrytan/gstack/blob/main/qm/sandbox/skills/gstack-plan/SKILL.md",
+    "path": "qm/sandbox/skills/gstack-plan/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-06T02:42:51.750Z",
+    "stars": 140006,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-06T02:08:26Z",
+    "license": "MIT"
+  }
+}

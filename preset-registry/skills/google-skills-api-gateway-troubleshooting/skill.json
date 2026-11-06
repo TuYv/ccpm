@@ -1,0 +1,25 @@
+{
+  "id": "google-skills-api-gateway-troubleshooting",
+  "name": "api-gateway-troubleshooting",
+  "description": ">- Diagnoses failing requests and deployment errors on Google Cloud API Gateway. Use when calls through a gateway return 4xx or 5xx errors, including 429 and other quota errors, time out, or fail a CORS preflight; when `api-configs create` fails with a service account, concurrency, or limit error, or `gateways create` or `gateways update` fails; when a custom domain, load balancer, or TLS finding involves a gateway; or when the user asks if Google is at fault. Don't use for Apigee, Cloud Endpoin",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/api-gateway-troubleshooting/SKILL.md",
+  "source": {
+    "repo": "google/skills",
+    "url": "https://github.com/google/skills/blob/main/skills/cloud/api-gateway-troubleshooting/SKILL.md",
+    "path": "skills/cloud/api-gateway-troubleshooting/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-06T02:40:02.022Z",
+    "stars": 22416,
+    "language": "Python",
+    "pushed_at": "2026-11-05T22:00:15Z",
+    "license": "Apache-2.0"
+  }
+}

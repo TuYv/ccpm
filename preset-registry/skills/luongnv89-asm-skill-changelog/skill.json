@@ -1,0 +1,25 @@
+{
+  "id": "luongnv89-asm-skill-changelog",
+  "name": "skill-changelog",
+  "description": "Write or backfill a skill's own CHANGELOG.md from its git history when metadata.version is bumped. Use after any skill version bump or on /skill-changelog. Don't use for project release notes, commit messages, or upstream update summaries.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "luongnv89",
+  "install_path": ".claude/skills/skill-changelog/SKILL.md",
+  "source": {
+    "repo": "luongnv89/asm",
+    "url": "https://github.com/luongnv89/asm/blob/main/skills/skill-changelog/SKILL.md",
+    "path": "skills/skill-changelog/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-06T03:31:02.887Z",
+    "stars": 966,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-06T03:28:33Z",
+    "license": "MIT"
+  }
+}

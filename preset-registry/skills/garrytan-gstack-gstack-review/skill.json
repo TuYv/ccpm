@@ -1,0 +1,25 @@
+{
+  "id": "garrytan-gstack-gstack-review",
+  "name": "gstack-review",
+  "description": "Use before merging a branch or PR: review the diff for bugs that pass CI but break production, fix the obvious ones and ask about the rest. (gstack)",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "garrytan",
+  "install_path": ".claude/skills/gstack-review/SKILL.md",
+  "source": {
+    "repo": "garrytan/gstack",
+    "url": "https://github.com/garrytan/gstack/blob/main/qm/sandbox/skills/gstack-review/SKILL.md",
+    "path": "qm/sandbox/skills/gstack-review/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-06T02:42:51.878Z",
+    "stars": 140006,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-06T02:08:26Z",
+    "license": "MIT"
+  }
+}
