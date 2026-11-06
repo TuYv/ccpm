@@ -1,0 +1,25 @@
+{
+  "id": "sepinetam-stata-mcp-release",
+  "name": "release",
+  "description": "Prepare or publish a Stata-MCP version from master, including lint, version metadata, and GitHub Release notes. Use for release preparation, patch releases, or publishing an approved version.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "SepineTam",
+  "install_path": ".claude/skills/release/SKILL.md",
+  "source": {
+    "repo": "SepineTam/stata-mcp",
+    "url": "https://github.com/SepineTam/stata-mcp/blob/master/.codex/skills/release/SKILL.md",
+    "path": ".codex/skills/release/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-11-06T11:10:34.918Z",
+    "stars": 274,
+    "language": "Python",
+    "pushed_at": "2026-11-06T10:48:44Z",
+    "license": "AGPL-3.0"
+  }
+}
