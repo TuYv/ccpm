@@ -1,7 +1,7 @@
 {
   "id": "garrytan-gstack-autoplan",
   "name": "autoplan",
-  "description": "Auto-review pipeline — reads the full CEO, design, eng, and DX review skills from disk and runs them sequentially with auto-decisions using 6 decision principles. (gstack)",
+  "description": "Auto-review pipeline — runs the CEO, design, eng (architecture, edge cases, failure modes, tests) and DX reviews in order, auto-deciding by 6 principles. (gstack)",
   "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/garrytan/gstack/blob/main/autoplan/SKILL.md",
     "path": "autoplan/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-07T03:04:27.417Z",
-    "stars": 140479,
+    "discovered_at": "2026-11-07T10:19:30.361Z",
+    "stars": 140548,
     "language": "TypeScript",
-    "pushed_at": "2026-11-07T02:55:26Z",
+    "pushed_at": "2026-11-07T09:53:46Z",
     "license": "MIT"
-  },
-  "summary_zh": "自动串联业务、设计、工程和开发体验评审，并依据统一原则自动决策，适合标准化项目审查流程。"
+  }
 }
