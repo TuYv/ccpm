@@ -1,0 +1,25 @@
+{
+  "id": "thedotmack-claude-mem-community-sweep",
+  "name": "community-sweep",
+  "description": "Land community pull requests as the contributor and answer community issues on thedotmack/claude-mem. Takes stock of every open PR (the owner's own included, except the ones the owner marked experimental) and community issue, triages each against the owner's merge philosophy and the cmem.ai hosted-service boundary, finishes somewhat-aligned PRs on the contributor's own branch, squash-merges so the contributor stays the commit author on main, thanks them by name, closes fixed issues with credit t",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "thedotmack",
+  "install_path": ".claude/skills/community-sweep/SKILL.md",
+  "source": {
+    "repo": "thedotmack/claude-mem",
+    "url": "https://github.com/thedotmack/claude-mem/blob/main/.claude/skills/community-sweep/SKILL.md",
+    "path": ".claude/skills/community-sweep/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-07T16:44:50.158Z",
+    "stars": 114328,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-07T16:38:14Z",
+    "license": "Apache-2.0"
+  }
+}

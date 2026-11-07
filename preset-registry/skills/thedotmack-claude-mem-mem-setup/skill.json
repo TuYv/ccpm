@@ -1,7 +1,7 @@
 {
   "id": "thedotmack-claude-mem-mem-setup",
   "name": "mem-setup",
-  "description": "> This skill should be used when the user asks to \"set up claude-mem\", \"pair claude-mem\", \"connect cmem\", \"add my cmem key\", \"set up cloud sync in Cowork\", or provides cmem.ai Connect values (sync token, user id, SyncHub URL) for this plugin. Configures the claude-mem-cowork plugin credentials.",
+  "description": "> This skill should be used when the user asks to \"set up claude-mem\", \"pair claude-mem\", \"connect cmem\", \"add my cmem key\", \"set up cloud sync in Cowork\" or in the Claude app, or provides cmem.ai Connect values (sync token, user id, SyncHub URL) for this plugin. Configures the CMEM Pro plugin credentials.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/thedotmack/claude-mem/blob/main/cowork/skills/mem-setup/SKILL.md",
     "path": "cowork/skills/mem-setup/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-07T10:17:38.114Z",
-    "stars": 114189,
+    "discovered_at": "2026-11-07T16:44:51.631Z",
+    "stars": 114328,
     "language": "TypeScript",
-    "pushed_at": "2026-11-07T09:52:09Z",
+    "pushed_at": "2026-11-07T16:38:14Z",
     "license": "Apache-2.0"
-  },
-  "summary_zh": "用于配置 claude-mem 在 Cowork 中的连接凭据，适合首次接入云端同步或绑定 cmem.ai 账号时使用。"
+  }
 }

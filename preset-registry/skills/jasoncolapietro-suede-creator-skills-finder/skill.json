@@ -1,0 +1,25 @@
+{
+  "id": "jasoncolapietro-suede-creator-skills-finder",
+  "name": "suede-directory",
+  "description": "Find and compare graded agent skills for Claude Code, Codex and Cursor using the Suede AI Skills Directory. Use when someone asks to find a skill for a task, compare skill quality, or inspect a skill's score, license and install route. Not for executing or installing a discovered skill without the user's instruction.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "JasonColapietro",
+  "install_path": ".claude/skills/finder/SKILL.md",
+  "source": {
+    "repo": "JasonColapietro/suede-creator-skills",
+    "url": "https://github.com/JasonColapietro/suede-creator-skills/blob/main/docs/directory/finder/SKILL.md",
+    "path": "docs/directory/finder/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-07T16:45:19.875Z",
+    "stars": 121,
+    "language": "JavaScript",
+    "pushed_at": "2026-11-07T10:58:59Z",
+    "license": "MIT"
+  }
+}
