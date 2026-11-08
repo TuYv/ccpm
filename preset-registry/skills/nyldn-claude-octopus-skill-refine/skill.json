@@ -1,0 +1,25 @@
+{
+  "id": "nyldn-claude-octopus-skill-refine",
+  "name": "skill-refine",
+  "description": "Score and improve an artifact with a frozen rubric, independent models, implemented edits, and bounded rescoring",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "nyldn",
+  "install_path": ".claude/skills/skill-refine/SKILL.md",
+  "source": {
+    "repo": "nyldn/claude-octopus",
+    "url": "https://github.com/nyldn/claude-octopus/blob/main/.claude/skills/skill-refine/SKILL.md",
+    "path": ".claude/skills/skill-refine/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-08T01:40:11.101Z",
+    "stars": 4408,
+    "language": "Shell",
+    "pushed_at": "2026-11-08T01:33:54Z",
+    "license": "MIT"
+  }
+}
