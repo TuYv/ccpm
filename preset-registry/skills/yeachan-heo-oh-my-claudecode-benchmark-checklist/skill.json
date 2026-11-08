@@ -1,0 +1,25 @@
+{
+  "id": "yeachan-heo-oh-my-claudecode-benchmark-checklist",
+  "name": "benchmark-checklist",
+  "description": "Vet a measured number before reporting or acting on it: name the limiter, measure the claimed work, repeat with variance, rule out the observer, label every claim. For any speedup, regression, or score you are about to report.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Yeachan-Heo",
+  "install_path": ".claude/skills/benchmark-checklist/SKILL.md",
+  "source": {
+    "repo": "Yeachan-Heo/oh-my-claudecode",
+    "url": "https://github.com/Yeachan-Heo/oh-my-claudecode/blob/main/skills/benchmark-checklist/SKILL.md",
+    "path": "skills/benchmark-checklist/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-08T07:36:05.493Z",
+    "stars": 40682,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-08T07:15:57Z",
+    "license": "MIT"
+  }
+}

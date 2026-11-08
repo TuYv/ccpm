@@ -1,0 +1,25 @@
+{
+  "id": "yeachan-heo-oh-my-claudecode-fix-ci",
+  "name": "fix-ci",
+  "description": "Find the failing checks on the current PR, read their logs, classify the failure (real / flaky / environmental), fix the real ones with focused changes, and rerun to green with evidence. Use when CI is red and the failure is yours to fix.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Yeachan-Heo",
+  "install_path": ".claude/skills/fix-ci/SKILL.md",
+  "source": {
+    "repo": "Yeachan-Heo/oh-my-claudecode",
+    "url": "https://github.com/Yeachan-Heo/oh-my-claudecode/blob/main/skills/fix-ci/SKILL.md",
+    "path": "skills/fix-ci/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-08T07:36:07.707Z",
+    "stars": 40682,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-08T07:15:57Z",
+    "license": "MIT"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "id": "garrytan-gstack-design-review",
   "name": "design-review",
-  "description": "Designer's eye QA: finds visual inconsistency, spacing issues, hierarchy problems, AI slop patterns, and slow interactions — then fixes them. (gstack)",
+  "description": "Designer's eye QA: finds visual inconsistency, spacing issues, hierarchy problems, AI slop patterns, and slow interactions — then fixes them; --build checks UI while you build it. (gstack)",
   "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/garrytan/gstack/blob/main/design-review/SKILL.md",
     "path": "design-review/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-08T00:53:29.891Z",
-    "stars": 140666,
+    "discovered_at": "2026-11-08T07:35:57.280Z",
+    "stars": 140694,
     "language": "TypeScript",
-    "pushed_at": "2026-11-08T00:50:45Z",
+    "pushed_at": "2026-11-08T07:09:24Z",
     "license": "MIT"
-  },
-  "summary_zh": "一款界面视觉质检与修复工具，可发现并纠正风格、间距、层级、AI生成痕迹及交互迟缓等问题。"
+  }
 }

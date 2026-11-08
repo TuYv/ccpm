@@ -1,0 +1,25 @@
+{
+  "id": "yeachan-heo-oh-my-claudecode-arena",
+  "name": "arena",
+  "description": "Run N parallel candidates at one brief and synthesize: rubric-first framing, isolated fan-out, a cross-judge on a different model, criterion-by-criterion pick, hand grafting. When one attempt would lock in the wrong shape.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Yeachan-Heo",
+  "install_path": ".claude/skills/arena/SKILL.md",
+  "source": {
+    "repo": "Yeachan-Heo/oh-my-claudecode",
+    "url": "https://github.com/Yeachan-Heo/oh-my-claudecode/blob/main/skills/arena/SKILL.md",
+    "path": "skills/arena/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-08T07:36:04.034Z",
+    "stars": 40682,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-08T07:15:57Z",
+    "license": "MIT"
+  }
+}

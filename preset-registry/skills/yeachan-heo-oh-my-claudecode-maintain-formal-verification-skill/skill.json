@@ -1,0 +1,25 @@
+{
+  "id": "yeachan-heo-oh-my-claudecode-maintain-formal-verification-skill",
+  "name": "maintain-formal-verification-skill",
+  "description": "Re-sync an existing formal verification skill after the covered code changed: re-check every assumption, update cited lines, rerun the tool; formally-verified only after a green rerun.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Yeachan-Heo",
+  "install_path": ".claude/skills/maintain-formal-verification-skill/SKILL.md",
+  "source": {
+    "repo": "Yeachan-Heo/oh-my-claudecode",
+    "url": "https://github.com/Yeachan-Heo/oh-my-claudecode/blob/main/skills/maintain-formal-verification-skill/SKILL.md",
+    "path": "skills/maintain-formal-verification-skill/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-08T07:36:09.815Z",
+    "stars": 40682,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-08T07:15:57Z",
+    "license": "MIT"
+  }
+}

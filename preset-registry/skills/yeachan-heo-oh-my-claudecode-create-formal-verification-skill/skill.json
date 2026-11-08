@@ -1,0 +1,25 @@
+{
+  "id": "yeachan-heo-oh-my-claudecode-create-formal-verification-skill",
+  "name": "create-formal-verification-skill",
+  "description": "Verify the project's riskiest invariant with TLA+, Lean, or Kani — chosen by property shape — and leave a project-local skill the next agent reruns; assumptions are part of the deliverable. For properties tests cannot reach.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Yeachan-Heo",
+  "install_path": ".claude/skills/create-formal-verification-skill/SKILL.md",
+  "source": {
+    "repo": "Yeachan-Heo/oh-my-claudecode",
+    "url": "https://github.com/Yeachan-Heo/oh-my-claudecode/blob/main/skills/create-formal-verification-skill/SKILL.md",
+    "path": "skills/create-formal-verification-skill/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-08T07:36:06.335Z",
+    "stars": 40682,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-08T07:15:57Z",
+    "license": "MIT"
+  }
+}
