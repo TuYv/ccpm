@@ -1,63 +1,63 @@
 ---
-# machine-translated to es from skills/api-docs-writer/SKILL.md — review: pending. Native fixes welcome via PR.
+# machine-translated to hi from skills/api-docs-writer/SKILL.md — review: pending. Native fixes welcome via PR.
 name: api-docs-writer
-description: "Escribe documentación clara y orientada a desarrolladores. Úsalo cuando se te pida documentar un endpoint de API, escribir docs de referencia de API, crear una guía de desarrollador, o convertir una especificación cruda o colección Postman en documentación. Produce documentación de endpoint con descripciones, parámetros, ejemplos de request/response y códigos de error."
+description: "डेवलपर्स के लिए स्पष्ट API दस्तावेज़ लिखें। जब कोई API एंडपॉइंट दस्तावेज़ित करने, API रेफ़रेंस डॉक्स लिखने, डेवलपर गाइड बनाने या कच्चे स्पेक/Postman कलेक्शन को दस्तावेज़ में बदलने को कहे, तब इसका उपयोग करें। विवरण, पैरामीटर, रिक्वेस्ट/रिस्पॉन्स उदाहरण और एरर कोड के साथ एंडपॉइंट दस्तावेज़ तैयार करता है।"
 ---
 
-# API Docs Writer Skill
+# API डॉक्स राइटर स्किल
 
-Esta skill transforma especificaciones de API crudas, descripciones de endpoint o colecciones Postman en documentación limpia y orientada a desarrolladores, siguiendo convenciones adyacentes a OpenAPI. El resultado está listo para un portal de desarrolladores, README o página en Notion/Confluence.
+यह स्किल कच्चे API स्पेक, एंडपॉइंट विवरण या Postman कलेक्शन को OpenAPI से मिलती-जुलती परंपराओं के अनुसार साफ़, डेवलपर-केंद्रित दस्तावेज़ में बदलती है। आउटपुट डेवलपर पोर्टल, README या Notion/Confluence पेज के लिए तैयार होता है।
 
-## Inputs Requeridos
+## आवश्यक इनपुट
 
-Trabaja con lo que se proporciona. Si falta alguno de estos, aun así produce el output completo: llena cada brecha con una suposición razonable marcada como *(assumed, confirm)* y lista esas suposiciones al final. Haz una pregunta solo cuando el tema central en sí falte (no hay nada sobre qué escribir).
-- **Detalles de API o endpoint** (especificación cruda, export de Postman o descripción verbal)
-- **Método de autenticación** (API key / Bearer token / OAuth 2.0 / Ninguno)
-- **URL base**
-- **Versión de API** (p. ej. v1, v2.3, o "sin versionar" — afecta notas de deprecación y headers de versionado)
-- **Rate limits** (requests por segundo/minuto por token o IP, si se conoce — o "desconocido")
-- **Audiencia** (desarrolladores internos / partners externos / público)
-- **Formato de output** (Markdown para portales de desarrolladores y READMEs / Prosa plana para Confluence o Notion — nota: OpenAPI YAML no es producido por esta skill)
+जो दिया गया है उसी से काम करें। इनमें से कुछ न हो तो भी पूरा आउटपुट बनाएँ: हर खाली जगह को *(माना गया, पुष्टि करें)* चिह्नित एक उचित धारणा से भरें और अंत में उन धारणाओं की सूची दें। सवाल पहले सिर्फ़ तब पूछें जब मुख्य विषय ही न हो (लिखने के लिए कुछ हो ही नहीं)।
+- **API या एंडपॉइंट का विवरण** (कच्चा स्पेक, Postman एक्सपोर्ट, या मौखिक विवरण)
+- **प्रमाणीकरण विधि** (API key / Bearer token / OAuth 2.0 / कोई नहीं)
+- **बेस URL**
+- **API संस्करण** (जैसे v1, v2.3, या "unversioned" — डेप्रिकेशन नोट और वर्ज़निंग हेडर पर असर डालता है)
+- **रेट लिमिट** (प्रति टोकन या IP प्रति सेकंड/मिनट अनुरोध, अगर ज्ञात हो — या "अज्ञात")
+- **श्रोता** (आंतरिक डेवलपर / बाहरी पार्टनर / सार्वजनिक)
+- **आउटपुट फ़ॉर्मैट** (डेवलपर पोर्टल और README के लिए Markdown / Confluence या Notion के लिए सादा गद्य — ध्यान दें: यह स्किल OpenAPI YAML नहीं बनाती)
 
-## Formato de Output
+## आउटपुट फ़ॉर्मैट
 
-Para cada endpoint, produce lo siguiente:
+हर एंडपॉइंट के लिए निम्न तैयार करें:
 
 ---
 
 ## `[METHOD] /path/to/endpoint`
 
-**Summary:** [Una línea — qué hace este endpoint]
+**सारांश:** [एक पंक्ति — यह एंडपॉइंट क्या करता है]
 
-**Description:** [2–4 oraciones. Cuándo usar este endpoint. Qué devuelve. Cualquier comportamiento importante a conocer (paginación, rate limits, procesamiento asincrónico, etc.)]
+**विवरण:** [2–4 वाक्य। इस एंडपॉइंट का उपयोग कब करें। यह क्या लौटाता है। जानने लायक कोई महत्वपूर्ण व्यवहार (पेजिनेशन, रेट लिमिट, async प्रोसेसिंग आदि)]
 
-**Authentication:** [Requerida / Opcional — método]
+**प्रमाणीकरण:** [आवश्यक / वैकल्पिक — विधि]
 
 ---
 
-### Request
+### रिक्वेस्ट
 
-**Headers:**
+**हेडर:**
 
-| Header | Requerido | Descripción |
+| हेडर | आवश्यक | विवरण |
 |---|---|---|
-| `Authorization` | Sí | `Bearer <token>` |
-| `Content-Type` | Sí | `application/json` |
+| `Authorization` | हाँ | `Bearer <token>` |
+| `Content-Type` | हाँ | `application/json` |
 
-**Path Parameters:**
+**पाथ पैरामीटर:**
 
-| Parámetro | Tipo | Requerido | Descripción |
+| पैरामीटर | प्रकार | आवश्यक | विवरण |
 |---|---|---|---|
-| `id` | string | Sí | Identificador único para el recurso |
+| `id` | string | हाँ | संसाधन का अद्वितीय पहचानकर्ता |
 
-**Query Parameters:**
+**क्वेरी पैरामीटर:**
 
-| Parámetro | Tipo | Requerido | Default | Descripción |
+| पैरामीटर | प्रकार | आवश्यक | डिफ़ॉल्ट | विवरण |
 |---|---|---|---|---|
-| `limit` | integer | No | 20 | Máximo de resultados por página (1–100) |
-| `cursor` | string | No | — | Cursor de paginación de response anterior |
+| `limit` | integer | नहीं | 20 | प्रति पेज अधिकतम परिणाम (1–100) |
+| `cursor` | string | नहीं | — | पिछले रिस्पॉन्स से पेजिनेशन कर्सर |
 
-**Request Body:**
+**रिक्वेस्ट बॉडी:**
 
 ```json
 {
@@ -66,16 +66,16 @@ Para cada endpoint, produce lo siguiente:
 }
 ```
 
-| Campo | Tipo | Requerido | Descripción |
+| फ़ील्ड | प्रकार | आवश्यक | विवरण |
 |---|---|---|---|
-| `field_name` | string | Sí | [Descripción clara de qué hace este campo] |
-| `another_field` | integer | No | [Descripción. Incluye rango válido o valores enum si aplica] |
+| `field_name` | string | हाँ | [सादा विवरण कि यह फ़ील्ड क्या करता है] |
+| `another_field` | integer | नहीं | [विवरण। लागू हो तो मान्य सीमा या enum मान शामिल करें] |
 
 ---
 
-### Response
+### रिस्पॉन्स
 
-**Success Response: `200 OK`**
+**सफल रिस्पॉन्स: `200 OK`**
 
 ```json
 {
@@ -85,29 +85,29 @@ Para cada endpoint, produce lo siguiente:
 }
 ```
 
-| Campo | Tipo | Descripción |
+| फ़ील्ड | प्रकार | विवरण |
 |---|---|---|
-| `id` | string | Identificador único para el recurso creado/recuperado |
-| `status` | string | Estado actual. Enum: `active`, `inactive`, `pending` |
-| `created_at` | ISO 8601 string | Timestamp de creación en UTC |
+| `id` | string | बनाए/प्राप्त किए गए संसाधन का अद्वितीय पहचानकर्ता |
+| `status` | string | वर्तमान स्थिति। Enum: `active`, `inactive`, `pending` |
+| `created_at` | ISO 8601 string | UTC में निर्माण का टाइमस्टैम्प |
 
 ---
 
-### Error Codes
+### एरर कोड
 
-| Status Code | Error Code | Descripción | Cómo Resolver |
+| स्टेटस कोड | एरर कोड | विवरण | कैसे हल करें |
 |---|---|---|---|
-| `400` | `INVALID_REQUEST` | El request body está mal formado o faltan campos requeridos | Verifica el request body contra el schema arriba |
-| `401` | `UNAUTHORIZED` | Token de autenticación faltante o inválido | Verifica tu API key o refresca tu token |
-| `404` | `NOT_FOUND` | El recurso solicitado no existe | Verifica el ID en el parámetro de path |
-| `429` | `RATE_LIMITED` | Demasiadas requests | Espera y reintentas después del valor del header `Retry-After` |
-| `500` | `INTERNAL_ERROR` | Error inesperado del servidor | Reintentas con exponential backoff; contacta soporte si persiste |
+| `400` | `INVALID_REQUEST` | रिक्वेस्ट बॉडी विकृत है या आवश्यक फ़ील्ड गायब हैं | ऊपर दिए स्कीमा से रिक्वेस्ट बॉडी जाँचें |
+| `401` | `UNAUTHORIZED` | प्रमाणीकरण टोकन गायब या अमान्य | अपनी API key जाँचें या टोकन रिफ़्रेश करें |
+| `404` | `NOT_FOUND` | अनुरोधित संसाधन मौजूद नहीं है | पाथ पैरामीटर में ID जाँचें |
+| `429` | `RATE_LIMITED` | बहुत अधिक अनुरोध | रुकें और `Retry-After` हेडर के मान के बाद दोबारा कोशिश करें |
+| `500` | `INTERNAL_ERROR` | अप्रत्याशित सर्वर त्रुटि | exponential backoff के साथ दोबारा कोशिश करें; बनी रहे तो सपोर्ट से संपर्क करें |
 
 ---
 
-### Code Examples
+### कोड उदाहरण
 
-Produce ejemplos en al menos 2 lenguajes relevantes para la audiencia (default: cURL + Python):
+श्रोताओं के लिए प्रासंगिक कम से कम 2 भाषाओं में उदाहरण दें (डिफ़ॉल्ट: cURL + Python):
 
 **cURL:**
 ```bash
@@ -131,52 +131,54 @@ data = response.json()
 
 ---
 
-## Materiales Más Profundos
+## गहरी सामग्री
 
-Esta skill incluye archivos de soporte — úsalos cuando estén disponibles:
+यह स्किल सहायक फ़ाइलों के साथ आती है — उपलब्ध हों तो उनका उपयोग करें:
 
-- **`references/example-first-docs.md`** — Example-First API Docs: las Reglas Que Hacen la Documentación Usable. Aplícalas mientras produces el output; contiene la calibración y decisiones de juicio que el resumen de método arriba comprime.
-- **`templates/endpoint-entry.md`** — una versión para rellenar del entregable con los quality gates inline. Ofrécela cuando el usuario quiera trabajar el documento por sí mismo en lugar de tenerlo generado.
+- **`references/example-first-docs.md`** — उदाहरण-प्रथम API डॉक्स: वे नियम जो दस्तावेज़ को उपयोगी बनाते हैं। आउटपुट बनाते समय इसे लागू करें; इसमें वह कैलिब्रेशन और निर्णय-विवेक है जिसे ऊपर का संक्षिप्त तरीका संकुचित कर देता है।
+- **`templates/endpoint-entry.md`** — डिलिवरेबल का भरने योग्य संस्करण, गुणवत्ता-जाँच इनलाइन सहित। जब उपयोगकर्ता दस्तावेज़ खुद बनाना चाहे, उसे जनरेट करवाने के बजाय, तब यह पेश करें।
 
-## Scoring Rubric (0–40)
+## स्कोरिंग रूब्रिक (0–40)
 
-Puntúa cualquier output de esta skill antes de entregarlo; 32+ es de calidad para producción.
+इस स्किल का कोई भी आउटपुट सौंपने से पहले स्कोर करें; 32+ शिप-गुणवत्ता है।
 
-| Dimensión | 0 | 5 | 10 |
+| आयाम | 0 | 5 | 10 |
 |---|---|---|---|
-| **Completitud de parámetros** | Campos listados sin tipos o flags requerido/opcional | Tablas completas, pero descripciones dicen qué es un campo, no qué hace; faltan enums y rangos | Cada campo tipado y restringido (enums, rangos, formatos), descrito por comportamiento y consecuencia |
-| **Cobertura de error-path** | Solo happy path — sin tabla de errores | Rows estándar 400/401/404/429/500 presentes pero sin guía de resolución | Conjunto estándar completo más códigos específicos del endpoint, cada uno con qué *debe* hacer el desarrollador, incluyendo casos no-seguros para retry |
-| **Runnability de ejemplos** | Pseudo-código, variables indefinidas, o placeholders "YOUR_ENDPOINT" | Los ejemplos existen pero no son copy-paste-runnable o usan solo un lenguaje | ≥2 lenguajes, URL base real, credenciales placeholder obviamente falsas, runnable tal como está pegado |
-| **Candor conductual** | Comportamiento asincrónico, paginación, idempotencia, y quirks heredados omitidos | Quirks mencionados en prosa pero ausentes de ejemplos y rows de error | Gotchas documentadas con los exact requests/responses que producen, incluyendo comportamiento heredado incómodo |
+| **पैरामीटर की पूर्णता** | फ़ील्ड बिना प्रकार या आवश्यक/वैकल्पिक चिह्न के सूचीबद्ध | तालिकाएँ पूरी, पर विवरण बताते हैं कि फ़ील्ड *क्या है*, न कि *क्या करता है*; enum और सीमाएँ गायब | हर फ़ील्ड टाइप्ड और सीमित (enum, सीमाएँ, फ़ॉर्मैट), व्यवहार और परिणाम के आधार पर वर्णित |
+| **एरर-पथ कवरेज** | सिर्फ़ सुखद पथ — कोई एरर तालिका नहीं | मानक 400/401/404/429/500 पंक्तियाँ हैं पर समाधान का मार्गदर्शन नहीं | पूरा मानक सेट और एंडपॉइंट-विशिष्ट कोड, हर एक के साथ डेवलपर को *क्या करना* चाहिए, असुरक्षित-रीट्राई के मामले सहित |
+| **उदाहरणों की चलने-योग्यता** | छद्म-कोड, अपरिभाषित वेरिएबल, या "YOUR_ENDPOINT" प्लेसहोल्डर | उदाहरण हैं पर कॉपी-पेस्ट करके चलने योग्य नहीं या सिर्फ़ एक भाषा में | ≥2 भाषाएँ, वास्तविक बेस URL, स्पष्ट रूप से नकली प्लेसहोल्डर क्रेडेंशियल, पेस्ट करते ही चलने योग्य |
+| **व्यवहार की स्पष्टवादिता** | async व्यवहार, पेजिनेशन, idempotency और पुराने quirks छोड़े गए | quirks गद्य में बताए पर उदाहरणों और एरर पंक्तियों से गायब | हर पेच उन्हीं रिक्वेस्ट/रिस्पॉन्स के साथ दस्तावेज़ित जो वह पैदा करता है, असुविधाजनक पुराने व्यवहार सहित |
 
-## Quality Checks
+## गुणवत्ता जाँच
 
-- [ ] Cada parámetro está documentado (tipo, requerido/opcional, descripción)
-- [ ] Los campos de response están totalmente documentados con tipos
-- [ ] Todos los códigos de error relevantes están listados con guía de resolución
-- [ ] Los códigos de error cubren como mínimo: 400 (bad request), 401/403 (auth), 404 (not found), 429 (rate limited), 500 (server error) — o explícitamente anota cuáles no aplican a este endpoint
-- [ ] Los ejemplos de código usan la URL base actual y un token placeholder realista — no hay ejemplos que referencien variables indefinidas o "YOUR_ENDPOINT" fuera del snippet
-- [ ] El método de auth está claramente declarado al inicio
-- [ ] Los valores enum están listados donde aplica
-- [ ] La paginación está documentada si el endpoint es un endpoint de lista
+- [ ] हर पैरामीटर दस्तावेज़ित है (प्रकार, आवश्यक/वैकल्पिक, विवरण)
+- [ ] रिस्पॉन्स फ़ील्ड प्रकार सहित पूरी तरह दस्तावेज़ित हैं
+- [ ] सभी प्रासंगिक एरर कोड समाधान मार्गदर्शन के साथ सूचीबद्ध हैं
+- [ ] एरर कोड कम से कम कवर करते हैं: 400 (bad request), 401/403 (auth), 404 (not found), 429 (rate limited), 500 (server error) — या स्पष्ट रूप से बताया गया है कि इस एंडपॉइंट पर कौन से लागू नहीं होते
+- [ ] कोड उदाहरण वास्तविक बेस URL और यथार्थवादी प्लेसहोल्डर टोकन का उपयोग करते हैं — कोई उदाहरण स्निपेट के बाहर अपरिभाषित वेरिएबल या "YOUR_ENDPOINT" का संदर्भ नहीं देता
+- [ ] प्रमाणीकरण विधि ऊपर स्पष्ट रूप से बताई गई है
+- [ ] जहाँ लागू हो, enum मान सूचीबद्ध हैं
+- [ ] अगर एंडपॉइंट सूची लौटाता है, तो पेजिनेशन दस्तावेज़ित है
 
-## Anti-Patterns
+## एंटी-पैटर्न
 
-- [ ] No documentes solo el happy path — cada endpoint debe tener códigos de error para al menos 400, 401/403, 404, 429, y 500
-- [ ] No uses valores placeholder como "YOUR_ENDPOINT" o "INSERT_TOKEN" en ejemplos de código — usa placeholders realistas anclados a la URL base actual
-- [ ] No omitas valores enum para campos con un conjunto fijo de valores aceptados — enums no documentados causan bugs de integración
-- [ ] No omitas documentación de paginación en endpoints de lista — desarrolladores que se la pierdan construirán integraciones que silenciosamente pierdan datos
-- [ ] No describas qué "es" un campo sin describir qué "hace" — "el ID" no es documentación; "el identificador único usado para recuperar o actualizar este recurso" es
+- [ ] सिर्फ़ सुखद पथ दस्तावेज़ित न करें — हर एंडपॉइंट में कम से कम 400, 401/403, 404, 429 और 500 के एरर कोड होने चाहिए
+- [ ] कोड उदाहरणों में "YOUR_ENDPOINT" या "INSERT_TOKEN" जैसे प्लेसहोल्डर मान न लिखें — वास्तविक बेस URL से जुड़े यथार्थवादी प्लेसहोल्डर उपयोग करें
+- [ ] जिन फ़ील्ड के स्वीकार्य मानों का सेट तय है, उनके enum मान न छोड़ें — अदस्तावेज़ित enum इंटीग्रेशन बग पैदा करते हैं
+- [ ] सूची एंडपॉइंट पर पेजिनेशन का दस्तावेज़ न छोड़ें — जो डेवलपर इसे चूकेंगे, वे ऐसे इंटीग्रेशन बनाएँगे जो चुपचाप डेटा खो देंगे
+- [ ] फ़ील्ड "क्या है" बताकर "क्या करता है" बताना न छोड़ें — "ID" दस्तावेज़ नहीं है; "इस संसाधन को प्राप्त या अपडेट करने में प्रयुक्त अद्वितीय पहचानकर्ता" है
 
-## Usage Examples
-- "Documenta este endpoint de API: [pega spec o descripción]"
-- "Convierte esta colección Postman en docs para desarrolladores"
-- "Escribe docs de referencia de API para [endpoint]"
-- "Escribe una guía de desarrollador para nuestra API [product]"
+## उपयोग के उदाहरण
+- "इस API एंडपॉइंट को दस्तावेज़ित करो: [स्पेक या विवरण पेस्ट करें]"
+- "इस Postman कलेक्शन को डेवलपर डॉक्स में बदलो"
+- "[एंडपॉइंट] के लिए API रेफ़रेंस डॉक्स लिखो"
+- "हमारे [प्रोडक्ट] API के लिए डेवलपर गाइड लिखो"
 
-## Example Trigger Phrases
+## उदाहरण ट्रिगर वाक्य
 
-- "Documenta un endpoint de API."
-- "Escribe docs de referencia de API."
-- "Crea una guía de desarrollador."
-- "Convierte una especificación cruda/colección Postman en documentación."
+- "एक API एंडपॉइंट दस्तावेज़ित करो।"
+- "API रेफ़रेंस डॉक्स लिखो।"
+- "एक डेवलपर गाइड बनाओ।"
+- "कच्चे स्पेक/Postman कलेक्शन को दस्तावेज़ में बदलो।"
+
+इस स्किल को अपने ब्राउज़र में चलाएँ: https://mohitagw15856.github.io/pm-claude-skills/skill/api-docs-writer.html

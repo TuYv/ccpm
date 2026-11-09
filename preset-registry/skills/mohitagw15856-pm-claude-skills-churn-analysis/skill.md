@@ -1,219 +1,221 @@
 ---
-# machine-translated to es from skills/churn-analysis/SKILL.md — review: pending. Native fixes welcome via PR.
+# machine-translated to hi from skills/churn-analysis/SKILL.md — review: pending. Native fixes welcome via PR.
 name: churn-analysis
-description: "Produce un análisis de churn estructurado que separe el churn evitable del inevitable. Úsalo cuando investigues por qué se van los clientes, identifiques segmentos en riesgo, calcules net revenue retention o construyas un plan de intervención de retención. Produce un informe de churn con cálculos de tasa, razones categorizadas por evitabilidad, desglose por segmento, análisis de timing, señales de alerta temprana e intervenciones priorizadas según impacto estimado."
+description: "एक संरचित चर्न विश्लेषण तैयार करें जो टालने योग्य चर्न को अटल चर्न से अलग करे। ग्राहक क्यों जा रहे हैं इसकी जाँच करते समय, जोखिम में पड़े खंड पहचानते समय, नेट रेवेन्यू रिटेंशन निकालते समय या रिटेंशन हस्तक्षेप योजना बनाते समय इसका उपयोग करें। दर की गणना, टालने-योग्यता के अनुसार वर्गीकृत कारणों, खंड विभाजन, समय विश्लेषण, शुरुआती चेतावनी संकेतों और अनुमानित प्रभाव से रैंक किए प्राथमिकता-क्रम हस्तक्षेपों के साथ चर्न रिपोर्ट तैयार करता है।"
 ---
 
-# Skill de Análisis de Churn
+# चर्न विश्लेषण स्किल
 
-Produce un análisis de churn estructurado que vaya más allá de la tasa titular — identificando por qué se van los clientes, cuáles son los segmentos más en riesgo, y qué intervenciones tendrán el mayor impacto en la retención.
+एक संरचित चर्न विश्लेषण तैयार करें जो मुख्य दर से आगे जाए — यह पहचानते हुए कि ग्राहक क्यों जाते हैं, कौन से खंड सबसे ज़्यादा जोखिम में हैं, और किन हस्तक्षेपों का रिटेंशन पर सबसे ज़्यादा असर होगा।
 
-## Lee de / Escribe en el Brain
+## Brain से पढ़ता है / Brain में लिखता है
 
-Si existe un [`professional-brain`](../professional-brain/SKILL.md) (`brain/`), toma como base en lugar de volver a preguntar por lo que ya sabes:
+अगर कोई [`professional-brain`](../professional-brain/SKILL.md) (`brain/`) मौजूद है, तो जो आप पहले से जानते हैं उसे दोबारा पूछने के बजाय उसी में आधार रखें:
 
-- **Lee primero:** `context.md` (definiciones de métricas — qué significa "churn" aquí), `knowledge/` y `entities/` de segmentos relacionados. Ejecuta `python3 ../professional-brain/scripts/brain_query.py ./brain "churn"` y mantén la etiqueta de procedencia de cada hecho.
-- **📥 Propón al Brain:** después de producir, propón registrar el hallazgo titular de retención a `knowledge/` (`[data]`), cualquier decisión de retención a `decisions/` y los drivers en riesgo como `hypotheses/`. Muéstralos, obtén confirmación, luego escribe con `../professional-brain/scripts/brain_write.py … --commit` (append-only, dry-run por defecto).
+- **पहले पढ़ें:** `context.md` (मेट्रिक परिभाषाएँ — यहाँ "चर्न" का क्या मतलब है), `knowledge/`, और संबंधित खंड `entities/`। `python3 ../professional-brain/scripts/brain_query.py ./brain "churn"` चलाएँ और हर तथ्य का स्रोत टैग साथ रखें।
+- **📥 Brain को प्रस्ताव दें:** तैयार करने के बाद, मुख्य रिटेंशन निष्कर्ष को `knowledge/` (`[data]`) में, किसी रिटेंशन निर्णय को `decisions/` में, और जोखिम कारकों को `hypotheses/` के रूप में दर्ज करने का प्रस्ताव दें। उन्हें दिखाएँ, हाँ लें, फिर `../professional-brain/scripts/brain_write.py … --commit` से लिखें (सिर्फ़-जोड़ने वाला, डिफ़ॉल्ट रूप से dry-run)।
 
-## Inputs Requeridos
+## आवश्यक इनपुट
 
-Pregunta por estos si no están ya disponibles:
-- **Período de tiempo** siendo analizado (p. ej. Q1, últimos 12 meses)
-- **Total de clientes al inicio del período** y **clientes que hicieron churn**
-- **ARR o ingresos perdidos** por churn
-- **Datos de razones de churn** — resultados de encuestas de salida, notas de CSM, datos de soporte o razones de pérdida de ventas
-- **Segmentos de clientes** — por tier, industria, cohorte o línea de producto
-- **Tasa de retención actual** si se conoce
-- **Cualquier cambio reciente** — precios, producto, modelo de soporte — que haya podido afectar al churn
+पहले से न दिए गए हों तो ये माँगें:
+- विश्लेषित **समय अवधि** (जैसे Q1, पिछले 12 महीने)
+- **अवधि की शुरुआत में कुल ग्राहक** और **छोड़ चुके ग्राहक**
+- चर्न से **खोया ARR या राजस्व**
+- **चर्न कारण डेटा** — एग्ज़िट सर्वे परिणाम, CSM नोट, सपोर्ट डेटा, या सेल्स हार के कारण
+- **ग्राहक खंड** — टियर, उद्योग, कोहोर्ट या प्रोडक्ट लाइन के अनुसार
+- **वर्तमान रिटेंशन दर** ज्ञात हो तो
+- **कोई हाल के बदलाव** — प्राइसिंग, प्रोडक्ट, सपोर्ट मॉडल — जिन्होंने चर्न को प्रभावित किया हो
 
-## Categorías de Churn
+## चर्न श्रेणियाँ
 
-Siempre clasifica el churn antes de analizarlo:
+विश्लेषण से पहले चर्न को हमेशा वर्गीकृत करें:
 
-| Categoría | Definición |
+| श्रेणी | परिभाषा |
 |---|---|
-| **Voluntario — evitable** | El cliente se fue debido a un problema que habríamos podido solucionar (gaps de producto, onboarding pobre, fallos relacionales) |
-| **Voluntario — inevitable** | El cliente se fue por razones fuera de nuestro control (cortes de presupuesto, adquisición, cierre de empresa) |
-| **Involuntario** | Fallo de pago, no renovación de contrato por error, error administrativo |
+| **स्वैच्छिक — टालने योग्य** | ग्राहक ऐसी समस्या के कारण गया जिसे हम संबोधित कर सकते थे (प्रोडक्ट कमियाँ, ख़राब ऑनबोर्डिंग, संबंध विफलताएँ) |
+| **स्वैच्छिक — अटल** | ग्राहक हमारे नियंत्रण से बाहर के कारणों से गया (बजट कटौती, अधिग्रहण, कंपनी बंद) |
+| **अनैच्छिक** | भुगतान विफलता, ग़लती से अनुबंध नवीनीकरण न होना, एडमिन त्रुटि |
 
-Las intervenciones para cada categoría son diferentes. Mezclarlas lleva a conclusiones equivocadas.
+हर श्रेणी के हस्तक्षेप अलग हैं। इन्हें मिलाने से ग़लत निष्कर्ष निकलते हैं।
 
-## Formato de Output
-
----
-
-# Análisis de Churn: [Producto / Segmento / Empresa]
-**Período:** [Fecha inicio] — [Fecha fin]
-**Preparado por:** [Nombre] | **Fecha:** [Fecha]
+## आउटपुट फ़ॉर्मैट
 
 ---
 
-## Números Titulares
+# चर्न विश्लेषण: [प्रोडक्ट / खंड / कंपनी]
+**अवधि:** [प्रारंभ तिथि] — [अंत तिथि]
+**तैयार किया:** [नाम] | **तारीख़:** [तारीख़]
 
-| Métrica | Valor |
+---
+
+## मुख्य संख्याएँ
+
+| मेट्रिक | मान |
 |---|---|
-| Clientes al inicio del período | [N] |
-| Clientes que hicieron churn | [N] |
-| **Tasa de churn de clientes** | **[X]%** |
-| ARR al inicio del período | £/$/€[X] |
-| ARR perdido por churn | £/$/€[X] |
-| **Tasa de churn de ingresos (bruto)** | **[X]%** |
-| ARR de expansiones (mismo período) | £/$/€[X] |
-| **Net revenue retention (NRR)** | **[X]%** |
+| अवधि की शुरुआत में ग्राहक | [N] |
+| छोड़ चुके ग्राहक | [N] |
+| **ग्राहक चर्न दर** | **[X]%** |
+| अवधि की शुरुआत में ARR | £/$/€[X] |
+| चर्न से खोया ARR | £/$/€[X] |
+| **राजस्व चर्न दर (सकल)** | **[X]%** |
+| विस्तार से ARR (उसी अवधि) | £/$/€[X] |
+| **नेट रेवेन्यू रिटेंशन (NRR)** | **[X]%** |
 
-**Contexto de benchmark:**
-- Tasa de churn de clientes: [X]% vs. benchmark de industria [Y]% — [arriba / abajo / en línea]
-- NRR: [X]% — [Lo que significa: arriba del 100% = la expansión compensa el churn; abajo del 100% = base encogida]
+**बेंचमार्क संदर्भ:**
+- ग्राहक चर्न दर: [X]% बनाम उद्योग बेंचमार्क [Y]% — [ऊपर / नीचे / बराबर]
+- NRR: [X]% — [इसका क्या मतलब है: 100% से ऊपर = विस्तार चर्न की भरपाई करता है; 100% से नीचे = सिकुड़ता आधार]
 
 ---
 
-## Desglose de Churn por Categoría
+## श्रेणी के अनुसार चर्न विभाजन
 
-| Categoría | Clientes | % del churn | ARR perdido |
+| श्रेणी | ग्राहक | चर्न का % | खोया ARR |
 |---|---|---|---|
-| Voluntario — evitable | [N] | [X]% | £/$/€[X] |
-| Voluntario — inevitable | [N] | [X]% | £/$/€[X] |
-| Involuntario | [N] | [X]% | £/$/€[X] |
-| **Total** | **[N]** | **100%** | **£/$/€[X]** |
+| स्वैच्छिक — टालने योग्य | [N] | [X]% | £/$/€[X] |
+| स्वैच्छिक — अटल | [N] | [X]% | £/$/€[X] |
+| अनैच्छिक | [N] | [X]% | £/$/€[X] |
+| **कुल** | **[N]** | **100%** | **£/$/€[X]** |
 
-**Churn evitable como % del churn total:** [X]% — este es el número que realmente podemos influir.
+**कुल चर्न में टालने योग्य चर्न का %:** [X]% — यही वह संख्या है जिसे हम वास्तव में प्रभावित कर सकते हैं।
 
 ---
 
-## Razones de Churn — Solo Churn Evitable
+## चर्न के कारण — सिर्फ़ टालने योग्य चर्न
 
-Ordena por frecuencia. Incluye peso de ARR donde los datos lo permitan.
+आवृत्ति से रैंक करें। डेटा हो तो ARR भार शामिल करें।
 
-| Razón | Cantidad | % del churn evitable | ARR perdido | Cita representativa |
+| कारण | गिनती | टालने योग्य चर्न का % | खोया ARR | प्रतिनिधि उद्धरण |
 |---|---|---|---|---|
-| [Razón 1 — p. ej. "Producto carece de característica clave"] | [N] | [X]% | £/$/€[X] | "[Cita]" |
-| [Razón 2] | [N] | [X]% | £/$/€[X] | "[Cita]" |
-| [Razón 3] | [N] | [X]% | £/$/€[X] | "[Cita]" |
-| [Razón 4] | [N] | [X]% | £/$/€[X] | "[Cita]" |
-| Otros | [N] | [X]% | £/$/€[X] | — |
+| [कारण 1 — जैसे "प्रोडक्ट में मुख्य फ़ीचर नहीं"] | [N] | [X]% | £/$/€[X] | "[उद्धरण]" |
+| [कारण 2] | [N] | [X]% | £/$/€[X] | "[उद्धरण]" |
+| [कारण 3] | [N] | [X]% | £/$/€[X] | "[उद्धरण]" |
+| [कारण 4] | [N] | [X]% | £/$/€[X] | "[उद्धरण]" |
+| अन्य | [N] | [X]% | £/$/€[X] | — |
 
-**Síntesis temática:** [2–3 oraciones agrupando las razones principales en 2–3 temas. P. ej. "Las tres razones principales se agrupan en dos temas: gaps de producto en [área] (afectando X% del churn evitable) y fallos de onboarding donde los clientes nunca lograron valor (Y%)."]
+**थीम संश्लेषण:** [शीर्ष कारणों को 2–3 थीम में समूहित करते 2–3 वाक्य। जैसे "शीर्ष तीन कारण दो थीम में सिमटते हैं: [क्षेत्र] में प्रोडक्ट कमियाँ (टालने योग्य चर्न के X% को प्रभावित) और ऑनबोर्डिंग विफलताएँ जहाँ ग्राहकों को कभी मूल्य नहीं मिला (Y%)।"]
 
 ---
 
-## Churn por Segmento
+## खंड के अनुसार चर्न
 
-Identifica qué segmentos sobre- o sub-indexan para churn.
+पहचानें कि कौन से खंड चर्न में ऊपर या नीचे हैं।
 
-### Por Tier
+### टियर के अनुसार
 
-| Tier | Tasa de churn | vs. General | Notas |
+| टियर | चर्न दर | बनाम समग्र | नोट |
 |---|---|---|---|
-| Enterprise | [X]% | +/-[X]pp | |
-| Mid-Market | [X]% | +/-[X]pp | |
+| एंटरप्राइज़ | [X]% | +/-[X]pp | |
+| मिड-मार्केट | [X]% | +/-[X]pp | |
 | SMB | [X]% | +/-[X]pp | |
 
-### Por Cohorte (Año de Adquisición)
+### कोहोर्ट के अनुसार (अधिग्रहण वर्ष)
 
-| Cohorte | Tasa de churn | Notas |
+| कोहोर्ट | चर्न दर | नोट |
 |---|---|---|
-| [Año 1] | [X]% | |
-| [Año 2] | [X]% | |
-| [Año 3] | [X]% | |
+| [वर्ष 1] | [X]% | |
+| [वर्ष 2] | [X]% | |
+| [वर्ष 3] | [X]% | |
 
-### Por Industria / Caso de Uso (si los datos están disponibles)
+### उद्योग / उपयोग-मामले के अनुसार (डेटा उपलब्ध हो तो)
 
-| Segmento | Tasa de churn | Notas |
+| खंड | चर्न दर | नोट |
 |---|---|---|
-| [Segmento 1] | [X]% | |
-| [Segmento 2] | [X]% | |
+| [खंड 1] | [X]% | |
+| [खंड 2] | [X]% | |
 
-**Patrón clave:** [Qué segmento tiene la tasa de churn más alta y qué probablemente lo explica]
+**मुख्य पैटर्न:** [किस खंड की चर्न दर सबसे ऊँची है और इसकी संभावित व्याख्या क्या है]
 
 ---
 
-## Análisis de Timing
+## समय विश्लेषण
 
-- **Duración promedio del contrato antes del churn:** [X meses]
-- **Momento de mayor riesgo:** [p. ej. "Mes 3 — cuando el valor del trial se ha agotado pero la adopción completa no ha sucedido"]
-- **Distribución de timing del churn:**
+- **चर्न से पहले औसत अनुबंध अवधि:** [X महीने]
+- **सबसे ऊँचे जोखिम का क्षण:** [जैसे "माह 3 — जब ट्रायल का मूल्य घिस चुका है पर पूर्ण अपनाना नहीं हुआ"]
+- **चर्न समय वितरण:**
 
-| Cuándo ocurrió el churn | % de cuentas en churn |
+| चर्न कब हुआ | छोड़ चुके खातों का % |
 |---|---|
-| 0–3 meses | [X]% |
-| 3–6 meses | [X]% |
-| 6–12 meses | [X]% |
-| 12+ meses | [X]% |
+| 0–3 महीने | [X]% |
+| 3–6 महीने | [X]% |
+| 6–12 महीने | [X]% |
+| 12+ महीने | [X]% |
 
 ---
 
-## Señales de Alerta Temprana
+## शुरुआती चेतावनी संकेत
 
-Basándote en las cuentas que hicieron churn, identifica las señales que precedieron al churn (y que hubieran podido disparar una intervención más temprana):
+छोड़ चुके खातों के आधार पर वे संकेत पहचानें जो चर्न से पहले आए (और जल्दी हस्तक्षेप ट्रिगर कर सकते थे):
 
-| Señal | Tiempo de adelanto antes del churn | Cómo detectarla |
+| संकेत | चर्न से पहले लीड टाइम | कैसे पहचानें |
 |---|---|---|
-| [Señal 1 — p. ej. "DAU/MAU cayó por debajo del 15%"] | [~X semanas] | [Dashboard de uso / alerta] |
-| [Señal 2 — p. ej. "Sin QBR en 90+ días"] | [~X semanas] | [Flag de CRM] |
-| [Señal 3 — p. ej. "El champion dejó la cuenta"] | [~X semanas] | [Alerta de LinkedIn / tracking de CSM] |
-| [Señal 4] | [~X semanas] | [Método de detección] |
+| [संकेत 1 — जैसे "DAU/MAU 15% से नीचे गिरा"] | [~X सप्ताह] | [उपयोग डैशबोर्ड / अलर्ट] |
+| [संकेत 2 — जैसे "90+ दिनों में कोई QBR नहीं"] | [~X सप्ताह] | [CRM फ़्लैग] |
+| [संकेत 3 — जैसे "चैंपियन ने खाता छोड़ा"] | [~X सप्ताह] | [LinkedIn अलर्ट / CSM ट्रैकिंग] |
+| [संकेत 4] | [~X सप्ताह] | [पहचान विधि] |
 
 ---
 
-## Recomendaciones de Intervención
+## हस्तक्षेप सिफ़ारिशें
 
-Ordenadas por impacto estimado × viabilidad.
+अनुमानित प्रभाव × व्यवहार्यता से रैंक।
 
-| Intervención | Aborda | Reducción de churn estimada | Esfuerzo | Propietario |
+| हस्तक्षेप | संबोधित करता है | अनुमानित चर्न कमी | प्रयास | स्वामी |
 |---|---|---|---|---|
-| [Intervención 1 — p. ej. "Mejorar onboarding para [segmento] con check-in dedicado de 30 días"] | [Razón 1] | [X cuentas / £X ARR] | Bajo / Medio / Alto | [Team] |
-| [Intervención 2] | [Razón 2] | [X cuentas / £X ARR] | Bajo / Medio / Alto | [Team] |
-| [Intervención 3] | [Razón 3] | [X cuentas / £X ARR] | Bajo / Medio / Alto | [Team] |
+| [हस्तक्षेप 1 — जैसे "[खंड] के लिए समर्पित 30-दिन चेक-इन के साथ ऑनबोर्डिंग सुधारें"] | [कारण 1] | [X खाते / £X ARR] | कम / मध्यम / अधिक | [टीम] |
+| [हस्तक्षेप 2] | [कारण 2] | [X खाते / £X ARR] | कम / मध्यम / अधिक | [टीम] |
+| [हस्तक्षेप 3] | [कारण 3] | [X खाते / £X ARR] | कम / मध्यम / अधिक | [टीम] |
 
-**Decisión de prioridad:** [Cuál es una intervención, si se implementa este trimestre, tendría el mayor impacto y por qué]
-
----
-
-## Lo Que No Sabemos (Gaps de Datos)
-
-- [Gap de datos 1 — p. ej. "La tasa de respuesta de encuesta de salida es solo del 30% — los datos de razones pueden no ser representativos"]
-- [Gap de datos 2 — p. ej. "Sin datos de uso de producto para tier SMB — no se puede confirmar correlación de señal de uso"]
-- [Gap de datos 3]
+**प्राथमिकता निर्णय:** [कौन सा एक हस्तक्षेप इस तिमाही लागू होने पर सबसे बड़ा असर करेगा और क्यों]
 
 ---
 
-## Anti-Patrones
+## जो हम नहीं जानते (डेटा कमियाँ)
 
-- [ ] No mezcles churn evitable e inevitable en planes de intervención — recomendar fixes de producto para clientes que hicieron churn por cierre de empresa desperdicia recursos
-- [ ] No calcules la tasa de churn usando el recuento de clientes de fin de período como denominador — esto subestima el churn; siempre divide clientes en churn por la cohorte inicial
-- [ ] No confíes únicamente en datos de encuesta de salida para razones de churn — las tasas de respuesta son típicamente bajas y el sesgo de auto-selección sesgará la muestra hacia clientes lo suficientemente comprometidos para completar una encuesta
-- [ ] No recomiendes intervenciones sin vincularlas a una razón de churn específica — intervenciones desconectadas de causas raíz no moverán la retención
-- [ ] No reportes solo churn de ingresos bruto — sin net revenue retention (NRR), un número de retención saludable puede ocultar una base de ingresos encogida
+- [डेटा कमी 1 — जैसे "एग्ज़िट सर्वे प्रतिक्रिया दर सिर्फ़ 30% है — कारण डेटा प्रतिनिधि न हो सकता है"]
+- [डेटा कमी 2 — जैसे "SMB टियर के लिए कोई प्रोडक्ट उपयोग डेटा नहीं — उपयोग संकेत सहसंबंध की पुष्टि नहीं कर सकते"]
+- [डेटा कमी 3]
 
-## Materiales Más Profundos
+---
 
-Este skill viene con archivos de soporte — úsalos cuando estén disponibles:
+## एंटी-पैटर्न
 
-- **`references/avoidability-calls.md`** — ¿Evitable o No? Los Judgment Calls en Clasificación de Churn. Aplícalo mientras produces el output; lleva la calibración y los judgment calls que el resumen del método anterior comprime.
-- **`templates/churn-report.md`** — una versión rellenable del deliverable con los quality gates en línea. Ofrécela cuando el usuario quiera trabajar el documento ellos mismos en lugar de tenerlo generado.
+- [ ] हस्तक्षेप योजनाओं में टालने योग्य और अटल चर्न को न मिलाएँ — कंपनी बंद होने से छोड़े ग्राहकों के लिए प्रोडक्ट फ़िक्स सुझाना संसाधन बर्बाद करता है
+- [ ] अवधि के अंत की ग्राहक संख्या को हर मानकर चर्न दर न निकालें — यह चर्न को कम दिखाता है; छोड़े ग्राहकों को हमेशा शुरुआती कोहोर्ट से भाग दें
+- [ ] चर्न कारणों के लिए सिर्फ़ एग्ज़िट सर्वे डेटा पर निर्भर न रहें — प्रतिक्रिया दर आमतौर पर कम होती है और स्व-चयन सैंपल को उन ग्राहकों की ओर झुकाता है जो सर्वे पूरा करने लायक जुड़े हैं
+- [ ] किसी विशिष्ट चर्न कारण से जोड़े बिना हस्तक्षेप न सुझाएँ — मूल कारणों से कटे हस्तक्षेप रिटेंशन नहीं हिलाएँगे
+- [ ] सिर्फ़ सकल राजस्व चर्न रिपोर्ट न करें — नेट रेवेन्यू रिटेंशन (NRR) के बिना स्वस्थ दिखती रिटेंशन संख्या सिकुड़ता राजस्व आधार छिपा सकती है
 
-## Rúbrica de Scoring (0–40)
+## गहरी सामग्री
 
-Puntúa cualquier output de este skill antes de entregarlo; 32+ es de calidad ship.
+यह स्किल सहायक फ़ाइलों के साथ आती है — उपलब्ध हों तो उनका उपयोग करें:
 
-| Dimensión | 0 | 5 | 10 |
+- **`references/avoidability-calls.md`** — टालने योग्य या नहीं? चर्न वर्गीकरण के निर्णय-विवेक। आउटपुट बनाते समय इसे लागू करें; इसमें वह कैलिब्रेशन और निर्णय-विवेक है जिसे ऊपर का संक्षिप्त तरीका संकुचित कर देता है।
+- **`templates/churn-report.md`** — डिलिवरेबल का भरने योग्य संस्करण, गुणवत्ता-जाँच इनलाइन सहित। जब उपयोगकर्ता दस्तावेज़ खुद बनाना चाहे, उसे जनरेट करवाने के बजाय, तब यह पेश करें।
+
+## स्कोरिंग रूब्रिक (0–40)
+
+इस स्किल का कोई भी आउटपुट सौंपने से पहले स्कोर करें; 32+ शिप-गुणवत्ता है।
+
+| आयाम | 0 | 5 | 10 |
 |---|---|---|---|
-| Integridad de matemática de tasa | Churn computado en recuento de fin de período; sin NRR | Denominador correcto pero solo churn bruto | Denominador correcto, churn bruto y neto lado a lado, contexto de benchmark que interpreta en lugar de decorar |
-| Separación de evitabilidad | Todo churn tratado como un pool | Categorías tabuladas pero las intervenciones aún abordan el pool completo | División evitable/inevitable/involuntaria llevada a través de cada sección downstream; intervenciones tocan solo la parte evitable |
-| Insight de segmento & timing | Solo promedios | Tabla de segmento presente pero sin lectura de sobre-índice | Nombra la celda de sobre-índice específica (tier × cohorte) y el momento de mayor riesgo, con el "por qué" |
-| Linkage de intervención | Las recomendaciones flotan libres de causas | Cada intervención nombra una razón pero el impacto no está dimensionado | Cada intervención mapea a una razón ordenada con cuentas/ARR estimados recuperados, y la llamada de prioridad justifica su secuenciación |
+| दर गणित की अखंडता | चर्न अवधि-अंत की संख्या पर निकाला; कोई NRR नहीं | सही हर पर सिर्फ़ सकल चर्न | सही हर, सकल और नेट अगल-बगल, बेंचमार्क संदर्भ जो सजावट नहीं, व्याख्या करता है |
+| टालने-योग्यता का पृथक्करण | सारा चर्न एक पूल माना गया | श्रेणियाँ तालिका में पर हस्तक्षेप अब भी पूरे पूल को संबोधित करते हैं | टालने योग्य/अटल/अनैच्छिक विभाजन हर आगे के खंड में बना रहता है; हस्तक्षेप सिर्फ़ टालने योग्य हिस्से को छूते हैं |
+| खंड और समय की अंतर्दृष्टि | सिर्फ़ औसत | खंड तालिका मौजूद पर ऊपर-नीचे की कोई पढ़ाई नहीं | विशिष्ट ऊपर-जाने वाली सेल (टियर × कोहोर्ट) और सबसे ऊँचे जोखिम का क्षण नामित, "क्यों" के साथ |
+| हस्तक्षेप का जुड़ाव | सिफ़ारिशें कारणों से कटी तैरती हैं | हर हस्तक्षेप कारण नामित करता है पर प्रभाव का आकार नहीं | हर हस्तक्षेप रैंक किए कारण से जुड़ा, अनुमानित बचाए खाते/ARR के साथ, और प्राथमिकता निर्णय अपने क्रम को उचित ठहराता है |
 
-## Quality Checks
+## गुणवत्ता जाँच
 
-- [ ] La tasa de churn se calcula correctamente (churn ÷ cohorte inicial, no total de fin de período)
-- [ ] El churn evitable e inevitable están separados — las intervenciones solo tocan el churn evitable
-- [ ] Las razones de churn son reportadas por clientes, no asumidas internamente
-- [ ] El análisis de segmento identifica qué segmentos sobre-indexan — no solo promedios
-- [ ] Las señales de alerta temprana son específicas y detectables, no genéricas ("bajo engagement")
-- [ ] Las intervenciones se vinculan directamente a las razones principales de churn — ninguna recomendación sin un match de causa raíz
+- [ ] चर्न दर सही निकाली गई है (छोड़े ÷ शुरुआती कोहोर्ट, अवधि-अंत का कुल नहीं)
+- [ ] टालने योग्य और अटल चर्न अलग हैं — हस्तक्षेप सिर्फ़ टालने योग्य चर्न को लक्षित करते हैं
+- [ ] चर्न कारण ग्राहक द्वारा बताए गए हैं, आंतरिक रूप से माने गए नहीं
+- [ ] खंड विश्लेषण पहचानता है कौन से खंड ऊपर जाते हैं — सिर्फ़ औसत नहीं
+- [ ] शुरुआती चेतावनी संकेत विशिष्ट और पहचानने योग्य हैं, सामान्य नहीं ("कम एंगेजमेंट")
+- [ ] हस्तक्षेप सीधे शीर्ष चर्न कारणों से जुड़ते हैं — बिना मूल कारण मेल के कोई सिफ़ारिश नहीं
 
-## Frases de Trigger de Ejemplo
+## उदाहरण ट्रिगर वाक्य
 
-- "Investigar por qué se van los clientes."
-- "Calcular net revenue retention."
-- "Construir un plan de intervención de retención."
+- "जाँच करो कि ग्राहक क्यों जा रहे हैं।"
+- "नेट रेवेन्यू रिटेंशन निकालो।"
+- "रिटेंशन हस्तक्षेप योजना बनाओ।"
+
+इस स्किल को अपने ब्राउज़र में चलाएँ: https://mohitagw15856.github.io/pm-claude-skills/skill/churn-analysis.html

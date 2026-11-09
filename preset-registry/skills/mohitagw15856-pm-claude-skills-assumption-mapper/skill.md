@@ -1,102 +1,120 @@
 ---
-# machine-translated to es from skills/assumption-mapper/SKILL.md — review: pending. Native fixes welcome via PR.
+# machine-translated to hi from skills/assumption-mapper/SKILL.md — review: pending. Native fixes welcome via PR.
 name: assumption-mapper
-description: "Extrae y clasifica por riesgo las suposiciones ocultas en un brief de producto o PRD. Úsalo cuando se te pida revisar un brief de producto en busca de suposiciones, auditar un PRD por riesgos, encontrar suposiciones ocultas, validar planes de producto, o ejecutar un análisis de suposiciones. Produce un mapa de suposiciones priorizado con puntuaciones de confianza e impacto, métodos de validación recomendados, y banderas de suposición crítica."
+description: "किसी प्रोडक्ट ब्रीफ़ या PRD में छिपी धारणाओं को निकालें और उनके जोखिम का आकलन करें। जब कोई प्रोडक्ट ब्रीफ़ की धारणाओं की समीक्षा करने, PRD के जोखिमों का ऑडिट करने, छिपी धारणाएँ खोजने, प्रोडक्ट योजनाओं को सत्यापित करने या धारणा विश्लेषण चलाने को कहे, तब इसका उपयोग करें। विश्वास और प्रभाव स्कोर, सुझाई गई सत्यापन विधियों और महत्वपूर्ण धारणाओं के चिह्नों के साथ एक प्राथमिकता-क्रम वाला धारणा मानचित्र तैयार करता है।"
 ---
 
-# Skill Assumption Mapper
+# असम्प्शन मैपर स्किल
 
-Identifica y prioriza las suposiciones no comprobadas incrustadas en cualquier plan de producto antes de que comience el desarrollo.
+विकास शुरू होने से पहले किसी भी प्रोडक्ट योजना में अंतर्निहित अपरीक्षित धारणाओं को सामने लाएँ और प्राथमिकता दें।
 
-## Inputs Requeridos
+## आवश्यक इनपुट
 
-Trabaja a partir de lo que se proporciona. Si alguno de estos falta, produce igual la salida completa: rellena cada brecha con una suposición razonable marcada *(asumido, confirmar)* e incluye esas suposiciones al final. Haz una pregunta solo cuando el tema central en sí mismo falte (no hay nada sobre lo que escribir).
-- **Brief de producto, PRD, o descripción de concepto** (incluso notas ásperas funcionan)
-- **Etapa** (concepto / descubrimiento / pre-construcción / post-lanzamiento — afecta qué suposiciones importan más)
+जो दिया गया है उसी से काम करें। इनमें से कुछ न हो तो भी पूरा आउटपुट बनाएँ: हर खाली जगह को *(माना गया, पुष्टि करें)* चिह्नित एक उचित धारणा से भरें और अंत में उन धारणाओं की सूची दें। सवाल पहले सिर्फ़ तब पूछें जब मुख्य विषय ही न हो (लिखने के लिए कुछ हो ही नहीं)।
+- **प्रोडक्ट ब्रीफ़, PRD या कॉन्सेप्ट विवरण** (कच्चे नोट भी चलेंगे)
+- **चरण** (कॉन्सेप्ट / डिस्कवरी / निर्माण-पूर्व / लॉन्च-पश्चात — तय करता है कि कौन सी धारणाएँ सबसे ज़्यादा मायने रखती हैं)
 
-## Dónde se sitúa esto — el punto de entrada de la columna vertebral
+## यह कहाँ बैठता है — रीढ़ का प्रवेश बिंदु
 
-Este es el frente de la columna vertebral de decisiones de producto: **`assumption-mapper` → `/prd-template`
-→ `/rice-prioritisation` → `/roadmap-narrative`**. Toma una idea o brief en bruto y
-pasa a la siguiente skill una cosa: **la suposición más riesgosa, y si sobrevivió una prueba barata.** Los términos compartidos (suposición, de carga, confianza, procedencia) se
-definen una vez en [`docs/craft/product-decisions.md`](../../docs/craft/product-decisions.md) —
-consúltalo en lugar de redefinirlos. Escribir un PRD sobre una suposición de carga no comprobada es el fracaso que esta skill existe para prevenir, así que ejecútalo *antes de*
-`/prd-template`, no después.
+यह प्रोडक्ट-निर्णय रीढ़ का अगला सिरा है: **`assumption-mapper` → `/prd-template`
+→ `/rice-prioritisation` → `/roadmap-narrative`**। यह एक कच्चा विचार या ब्रीफ़ लेता है और
+अगली स्किल को एक चीज़ सौंपता है: **सबसे जोखिम भरी धारणा, और क्या वह एक
+सस्ते परीक्षण से बच पाई।** साझा शब्द (धारणा, भार-वाहक, विश्वास, स्रोत) एक ही बार
+[`docs/craft/product-decisions.md`](../../docs/craft/product-decisions.md) में परिभाषित हैं —
+उन्हें दोबारा गढ़ने के बजाय वहीं देखें। एक अपरीक्षित भार-वाहक धारणा के ऊपर PRD लिखना
+वही विफलता है जिसे रोकने के लिए यह स्किल है, इसलिए इसे `/prd-template` से *पहले*
+चलाएँ, बाद में नहीं।
 
-## El bucle
+## चक्र
 
-Cuatro fases. La fase 3 es la skill; el resto la alimentan. Cada una termina en un criterio de completitud
-— no avances hasta que se cumpla.
+चार चरण। चरण 3 ही स्किल है; बाकी उसे पोषित करते हैं। हर चरण एक पूर्णता
+मानदंड पर समाप्त होता है — उसके पूरे हुए बिना आगे न बढ़ें।
 
-1. **Identifica en los cuatro lentes.** Extrae suposiciones en *Deseabilidad* (¿quieren los usuarios esto?), *Viabilidad técnica* (¿podemos construirlo?), *Viabilidad comercial* (¿el negocio lo sostendrá?), *Usabilidad* (¿pueden los usuarios realmente usarlo?). Las suposiciones peligrosas son las que son tan obvias que nadie las escribió.
-   **Listo cuando:** al menos una suposición por lente, y releer el brief en busca de el lente más vacío no saca nada nuevo.
-2. **Califica solo en los dos ejes.** Para cada una: *de carga* (1–5, ¿colapsa el plan si es falsa?) y *confianza* (1–5, ¿qué tan seguro estamos de que es verdadera?). Prioridad = de carga − confianza. Etiqueta la procedencia de cada hecho ([datos]/[intuición]).
-   **Listo cuando:** cada suposición tiene ambas puntuaciones y una etiqueta de procedencia, y la de mayor prioridad es genuinamente la más aterradora — no la más fácil de probar.
-3. **Encuentra y presiona la más riesgosa.** La suposición de máxima prioridad (de carga alta × confianza baja) es la que puede hundir todo el plan. Nombra la *prueba más barata* que podría refutarla antes de que se escriba una línea de código (consulta la referencia divulgada de [cheap-tests](references/cheap-tests.md) para el menú).
-   **Listo cuando:** la suposición más riesgosa se nombra, con una prueba que podría ejecutarse esta semana y un "cómo se ve un fracaso" claro.
-4. **Traspasa.** Produce el mapa clasificado, y declara explícitamente qué suposición `/prd-template` debe tratar como validada-o-abierta. Una suposición más riesgosa sin resolver se convierte en una Pregunta Abierta en el PRD, no en una apuesta silenciosa.
-   **Listo cuando:** la skill descendente podría comenzar a partir de esta salida sin volver a preguntar cuál es la apuesta arriesgada.
+1. **चारों लेंस से सामने लाएँ।** *वांछनीयता* (क्या उपयोगकर्ता इसे चाहते हैं?), *व्यवहार्यता*
+   (क्या हम इसे बना सकते हैं?), *लाभप्रदता* (क्या व्यवसाय इसे टिका पाएगा?), *उपयोगिता*
+   (क्या उपयोगकर्ता वास्तव में इसका उपयोग कर पाएँगे?) में धारणाएँ निकालें। ख़तरनाक धारणाएँ
+   वे हैं जो इतनी स्पष्ट हैं कि किसी ने उन्हें लिखा ही नहीं।
+   **पूरा तब जब:** हर लेंस में कम से कम एक धारणा हो, और सबसे खाली लेंस के लिए ब्रीफ़ को
+   दोबारा पढ़ने पर कुछ नया न निकले।
+2. **सिर्फ़ दो अक्षों पर आँकें।** हर एक के लिए: *भार-वाहक* (1–5, अगर यह झूठी निकले तो क्या योजना
+   ढह जाती है?) और *विश्वास* (1–5, हम कितने निश्चित हैं कि यह सच है?)। प्राथमिकता =
+   भार-वाहक − विश्वास। हर तथ्य के स्रोत को टैग करें ([data]/[hunch])।
+   **पूरा तब जब:** हर धारणा के दोनों स्कोर और स्रोत टैग हों, और सबसे ऊँची प्राथमिकता वाली
+   वास्तव में सबसे डरावनी हो — सबसे आसानी से परखने योग्य नहीं।
+3. **सबसे जोखिम भरी को खोजें और दबाव डालें।** शीर्ष-प्राथमिकता धारणा (उच्च भार-वाहक ×
+   निम्न विश्वास) वह है जो पूरी योजना डुबो सकती है। कोड की एक पंक्ति लिखे जाने से पहले उसे
+   ग़लत साबित कर सकने वाले *सबसे सस्ते परीक्षण* का नाम लें (मेन्यू के लिए
+   [cheap-tests](references/cheap-tests.md) संदर्भ देखें)।
+   **पूरा तब जब:** एकमात्र सबसे जोखिम भरी धारणा नामित हो, एक ऐसे परीक्षण के साथ जो इसी
+   सप्ताह चल सके और एक स्पष्ट "असफलता कैसी दिखेगी" के साथ।
+4. **सौंपें।** क्रमबद्ध मानचित्र दें, और स्पष्ट रूप से बताएँ कि `/prd-template` को किस धारणा को
+   सत्यापित-या-खुला मानना चाहिए। अनसुलझी सबसे जोखिम भरी धारणा PRD में एक खुला प्रश्न
+   बनती है, मौन दाँव नहीं।
+   **पूरा तब जब:** अगली स्किल यह दोबारा पूछे बिना कि जोखिम भरा दाँव क्या है, इस आउटपुट से
+   शुरू कर सके।
 
-## Estructura de Salida
+## आउटपुट संरचना
 
-### Mapa de Suposiciones: [Nombre de Característica/Producto]
+### धारणा मानचित्र: [फ़ीचर/प्रोडक्ट का नाम]
 
-| Suposición | Categoría | Confianza | Impacto | Prioridad | Método de Validación |
-|------------|-----------|-----------|---------|-----------|----------------------|
-| [suposición] | [tipo] | [1-5] | [1-5] | [puntuación] | [método] |
+| धारणा | श्रेणी | विश्वास | प्रभाव | प्राथमिकता | सत्यापन विधि |
+|------------|----------|------------|--------|----------|-------------------|
+| [धारणा] | [प्रकार] | [1-5] | [1-5] | [स्कोर] | [विधि] |
 
-#### Suposiciones Críticas (Impacto 4+ y Confianza 2 o inferior)
-[Elementos marcados con recomendaciones de validación detalladas]
+#### महत्वपूर्ण धारणाएँ (प्रभाव 4+ और विश्वास 2 या कम)
+[विस्तृत सत्यापन सिफ़ारिशों के साथ चिह्नित आइटम]
 
-#### Top 3 Suposiciones para Validar Primero
-[Recomendaciones detalladas incluyendo método de investigación específico, esfuerzo estimado, y qué cambiaría el resultado]
+#### सबसे पहले सत्यापित करने योग्य शीर्ष 3 धारणाएँ
+[विस्तृत सिफ़ारिशें, जिनमें विशिष्ट रिसर्च विधि, अनुमानित प्रयास, और नतीजा क्या बदलेगा, शामिल हों]
 
-## Ejemplo (Parcial)
+## उदाहरण (आंशिक)
 
-Input: *"Estamos construyendo un flujo de onboarding de autoservicio para reducir el tiempo para valor en clientes SMB."*
+इनपुट: *"हम SMB ग्राहकों के लिए time-to-value घटाने हेतु एक सेल्फ़-सर्व ऑनबोर्डिंग फ़्लो बना रहे हैं।"*
 
-| Suposición | Categoría | Confianza | Impacto | Prioridad | Método de Validación |
-|------------|-----------|-----------|---------|-----------|----------------------|
-| Los usuarios SMB pueden completar onboarding sin ayuda humana | Usabilidad | 2 | 5 | 3 | Prueba de usabilidad no moderada (n=8) |
-| El onboarding más rápido se correlaciona con retención más alta | Viabilidad comercial | 3 | 4 | 1 | Análisis de cohorte de tiempos de onboarding actuales vs. retención a 90 días |
-| El onboarding actual es la razón principal del tiempo lento para valor | Deseabilidad | 2 | 4 | 2 | Entrevistas con usuarios de cuentas SMB que se fueron recientemente |
+| धारणा | श्रेणी | विश्वास | प्रभाव | प्राथमिकता | सत्यापन विधि |
+|------------|----------|------------|--------|----------|-------------------|
+| SMB उपयोगकर्ता बिना मानवीय मदद के ऑनबोर्डिंग पूरी कर सकते हैं | उपयोगिता | 2 | 5 | 3 | अनमॉडरेटेड उपयोगिता परीक्षण (n=8) |
+| तेज़ ऑनबोर्डिंग का उच्च रिटेंशन से संबंध है | लाभप्रदता | 3 | 4 | 1 | मौजूदा ऑनबोर्डिंग समय बनाम 90-दिन रिटेंशन का कोहोर्ट विश्लेषण |
+| मौजूदा ऑनबोर्डिंग ही धीमे time-to-value का मुख्य कारण है | वांछनीयता | 2 | 4 | 2 | हाल में छोड़ चुके SMB खातों के साथ उपयोगकर्ता साक्षात्कार |
 
-## Anti-Patrones
+## एंटी-पैटर्न
 
-- [ ] No solo identifiques suposiciones de deseabilidad — las suposiciones de viabilidad técnica y viabilidad comercial son igualmente propensas a matar un producto y a menudo se pasan por alto
-- [ ] No asignes alta confianza a una suposición solo porque no ha sido cuestionada — la ausencia de evidencia no es evidencia
-- [ ] No recomiendes "entrevistas con usuarios" como el método de validación para cada suposición — algunas suposiciones requieren datos cuantitativos, análisis competitivo, o pruebas técnicas
-- [ ] No listes suposiciones que no puedan ser probadas — cada suposición en el mapa debe tener un método de validación plausible, o debe ser marcada como incognoscible y tratada como riesgo
+- [ ] सिर्फ़ वांछनीयता की धारणाएँ सामने न लाएँ — व्यवहार्यता और लाभप्रदता की धारणाएँ भी उतनी ही आसानी से प्रोडक्ट को मार सकती हैं और अक्सर अनदेखी रह जाती हैं
+- [ ] किसी धारणा को सिर्फ़ इसलिए उच्च विश्वास न दें कि उसे अभी तक चुनौती नहीं दी गई — साक्ष्य का अभाव साक्ष्य नहीं है
+- [ ] हर धारणा के लिए सत्यापन विधि के रूप में "उपयोगकर्ता साक्षात्कार" न सुझाएँ — कुछ धारणाओं को मात्रात्मक डेटा, प्रतिस्पर्धी विश्लेषण या तकनीकी स्पाइक की ज़रूरत होती है
+- [ ] ऐसी धारणाएँ सूचीबद्ध न करें जिन्हें परखा नहीं जा सकता — मानचित्र की हर धारणा की एक विश्वसनीय सत्यापन विधि होनी चाहिए, या उसे अज्ञेय चिह्नित करके जोखिम की तरह लिया जाना चाहिए
 
-## Materiales Más Profundos
+## गहरी सामग्री
 
-Esta skill viene con archivos de soporte — úsalos cuando estén disponibles:
+यह स्किल सहायक फ़ाइलों के साथ आती है — उपलब्ध हों तो उनका उपयोग करें:
 
-- **`references/cheap-tests.md`** — El Catálogo de Pruebas Baratas: Calibrando el Tamaño Correcto de la Validación. Aplícalo mientras produces la salida; lleva los ajustes de calibración y las llamadas de juicio que el resumen del método anterior comprime.
-- **`templates/assumption-board.md`** — una versión para rellenar del entregable con los gates de calidad incluidos. Ofrécelo cuando el usuario quiera trabajar el documento ellos mismos en lugar de tenerlo generado.
+- **`references/cheap-tests.md`** — सस्ते-परीक्षण कैटलॉग: सत्यापन को सही आकार देना। आउटपुट बनाते समय इसे लागू करें; इसमें वह कैलिब्रेशन और निर्णय-विवेक है जिसे ऊपर का संक्षिप्त तरीका संकुचित कर देता है।
+- **`templates/assumption-board.md`** — डिलिवरेबल का भरने योग्य संस्करण, गुणवत्ता-जाँच इनलाइन सहित। जब उपयोगकर्ता दस्तावेज़ खुद बनाना चाहे, उसे जनरेट करवाने के बजाय, तब यह पेश करें।
 
-## Rúbrica de Puntuación (0–40)
+## स्कोरिंग रूब्रिक (0–40)
 
-Puntúa cualquier salida de esta skill antes de entregarla; 32+ es calidad lista.
+इस स्किल का कोई भी आउटपुट सौंपने से पहले स्कोर करें; 32+ शिप-गुणवत्ता है।
 
-| Dimensión | 0 | 5 | 10 |
+| आयाम | 0 | 5 | 10 |
 |---|---|---|---|
-| Cobertura de categorías | Solo deseabilidad — faltan las suposiciones de viabilidad técnica y comercial más propensas a matar el plan | Tres categorías pobladas, pero la vacía no fue re-explorada desde el brief; la cobertura es simbólica (una fila genérica) | Las cuatro categorías pobladas con filas sustanciales, con excavación visible en cualquier categoría que el brief mismo descuidó |
-| Disciplina de puntuación | Números de confianza/impacto arbitrarios o faltantes; aritmética de prioridad inconsistente; sin banderas críticas | Puntuaciones presentes y Prioridad = Impacto − Confianza se sostiene, pero la confianza está inflada para suposiciones sin cuestionar y banderas críticas aplicadas selectivamente | Puntuaciones defendibles (sin cuestionar ≠ confianza alta), aritmética consistente incluyendo prioridades negativas dejadas visibles, y la bandera CRÍTICA aplicada mecánicamente en Impacto 4+ / Confianza ≤2 — incluso a suposiciones que al equipo le gustan |
-| Ajuste del método de validación | "Entrevistas con usuarios" (o "investiga") pegado en cada fila | Los métodos varían pero varios no coinciden con el tipo de suposición, les falta tamaño de muestra, o no tienen precio | Cada método coincide con la suposición (auditoría de datos, backtesting, fake door, desk check, spike…) con tamaño de muestra y esfuerzo; suposiciones no comprobables marcadas incognoscibles y convertidas a riesgos asumidos, no dadas pruebas falsas |
-| Palanca de decisión | Lista Top 3 ausente, o pruebas cuyo resultado no cambiaría nada | Top 3 nombradas con esfuerzo, pero "qué cambia el resultado" es vago o las pruebas validan suposiciones cómodas sobre las peligrosas | Top 3 son las suposiciones comprobables de máxima prioridad, cada una con esfuerzo, un umbral pre-comprometido cuando sea relevante, y una decisión concreta que el resultado cambiaría |
+| श्रेणी कवरेज | सिर्फ़ वांछनीयता — योजना को मारने की सबसे अधिक संभावना वाली व्यवहार्यता और लाभप्रदता धारणाएँ अनुपस्थित | तीन श्रेणियाँ भरी हैं, पर खाली वाली के लिए ब्रीफ़ को दोबारा नहीं खंगाला गया; कवरेज नाममात्र (एक दिखावटी पंक्ति) | चारों श्रेणियाँ ठोस पंक्तियों से भरी हैं, और जिस श्रेणी को ब्रीफ़ ने खुद नज़रअंदाज़ किया उसमें स्पष्ट खुदाई दिखती है |
+| स्कोरिंग अनुशासन | विश्वास/प्रभाव अंक मनमाने या गायब; प्राथमिकता का गणित असंगत; कोई महत्वपूर्ण चिह्न नहीं | स्कोर हैं और प्राथमिकता = प्रभाव − विश्वास सही है, पर अचुनौती धारणाओं का विश्वास बढ़ाकर दिखाया और महत्वपूर्ण चिह्न चुनिंदा लगाए | स्कोर तर्कसंगत (अचुनौती ≠ उच्च विश्वास), गणित संगत जिसमें ऋणात्मक प्राथमिकताएँ भी दिखती हैं, और CRITICAL चिह्न प्रभाव 4+ / विश्वास ≤2 पर यांत्रिक रूप से लगा — उन धारणाओं पर भी जो टीम को पसंद हैं |
+| सत्यापन विधि की उपयुक्तता | हर पंक्ति में "उपयोगकर्ता साक्षात्कार" (या "रिसर्च करें") चिपका दिया गया | विधियाँ अलग-अलग हैं पर कई धारणा के प्रकार से बेमेल, बिना सैंपल साइज़ या बिना लागत | हर विधि धारणा से मेल खाती है (डेटा ऑडिट, बैकटेस्ट, फ़ेक डोर, डेस्क चेक, स्पाइक…) सैंपल साइज़ और प्रयास के साथ; अपरीक्ष्य धारणाएँ अज्ञेय चिह्नित और ज़िम्मेदार जोखिम में बदली गईं, नकली परीक्षण नहीं दिए गए |
+| निर्णय पर प्रभाव | शीर्ष-3 सूची गायब, या ऐसे परीक्षण जिनका नतीजा कुछ नहीं बदलेगा | शीर्ष 3 प्रयास सहित नामित, पर "नतीजा क्या बदलता है" अस्पष्ट या परीक्षण ख़तरनाक धारणाओं के बजाय आरामदायक धारणाओं को सत्यापित करते हैं | शीर्ष 3 सबसे ऊँची प्राथमिकता वाली परखने योग्य धारणाएँ हैं, हर एक प्रयास, जहाँ प्रासंगिक हो पहले से तय सीमा, और उस ठोस निर्णय के साथ जिसे नतीजा बदलेगा |
 
-## Quality Checks
+## गुणवत्ता जाँच
 
-- [ ] Al menos una suposición por categoría (Deseabilidad, Viabilidad técnica, Viabilidad comercial, Usabilidad)
-- [ ] Todas las suposiciones de Impacto 4+ / Confianza 2− marcadas como CRÍTICAS
-- [ ] Cada método de validación es específico (no solo "investiga" — nombra el método y tamaño de muestra)
-- [ ] Las puntuaciones de prioridad son consistentes (Impacto − Confianza, mayor = más urgente)
+- [ ] हर श्रेणी (वांछनीयता, व्यवहार्यता, लाभप्रदता, उपयोगिता) में कम से कम एक धारणा
+- [ ] प्रभाव 4+ / विश्वास 2− वाली सभी धारणाएँ CRITICAL चिह्नित
+- [ ] हर सत्यापन विधि विशिष्ट है (सिर्फ़ "रिसर्च करें" नहीं — विधि और सैंपल साइज़ का नाम लें)
+- [ ] प्राथमिकता स्कोर संगत हैं (प्रभाव − विश्वास, जितना ऊँचा उतना अधिक अत्यावश्यक)
 
-## Frases Gatillo de Ejemplo
+## उदाहरण ट्रिगर वाक्य
 
-- "Revisa un brief de producto en busca de suposiciones."
-- "Audita un PRD por riesgos."
-- "Encuentra suposiciones ocultas."
-- "Valida planes de producto."
-- "Ejecuta un análisis de suposiciones."
+- "इस प्रोडक्ट ब्रीफ़ की धारणाओं की समीक्षा करो।"
+- "PRD के जोखिमों का ऑडिट करो।"
+- "छिपी धारणाएँ खोजो।"
+- "प्रोडक्ट योजनाओं को सत्यापित करो।"
+- "धारणा विश्लेषण चलाओ।"
+
+इस स्किल को अपने ब्राउज़र में चलाएँ: https://mohitagw15856.github.io/pm-claude-skills/skill/assumption-mapper.html

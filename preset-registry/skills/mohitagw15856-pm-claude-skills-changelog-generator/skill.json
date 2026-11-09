@@ -1,7 +1,7 @@
 {
   "id": "mohitagw15856-pm-claude-skills-changelog-generator",
   "name": "changelog-generator",
-  "description": "Convierte un git log, lista de commits o notas de lanzamiento en un changelog pulido orientado al usuario. Usa cuando estés escribiendo notas de versión, generando una entrada en CHANGELOG.md o documentando qué cambió en una versión. Produce una sección de changelog estructurada con encabezado de versión, cambios categorizados y notas de migración. Para una lista de cambios ya curada usa changelog-writer en su lugar.",
+  "description": "git log, कमिट सूची या रिलीज़ नोट्स को एक सुगठित, उपयोगकर्ता-केंद्रित changelog में बदलें। रिलीज़ नोट्स लिखते समय, CHANGELOG.md प्रविष्टि बनाते समय, या किसी संस्करण में क्या बदला यह दस्तावेज़ित करते समय इसका उपयोग करें। संस्करण शीर्षक, वर्गीकृत बदलावों और माइग्रेशन नोट्स के साथ एक संरचित changelog खंड तैयार करता है। पहले से तैयार बदलावों की सूची के लिए इसके बजाय changelog-writer का उपयोग करें।",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -13,13 +13,13 @@
   "install_path": ".claude/skills/changelog-generator/SKILL.md",
   "source": {
     "repo": "mohitagw15856/pm-claude-skills",
-    "url": "https://github.com/mohitagw15856/pm-claude-skills/blob/main/i18n/es/skills/changelog-generator/SKILL.md",
-    "path": "i18n/es/skills/changelog-generator/SKILL.md",
+    "url": "https://github.com/mohitagw15856/pm-claude-skills/blob/main/i18n/hi/skills/changelog-generator/SKILL.md",
+    "path": "i18n/hi/skills/changelog-generator/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-08T19:55:37.292Z",
+    "discovered_at": "2026-11-08T23:56:39.244Z",
     "stars": 1532,
     "language": "JavaScript",
-    "pushed_at": "2026-11-08T11:55:59Z",
+    "pushed_at": "2026-11-08T21:44:16Z",
     "license": "MIT"
   }
 }

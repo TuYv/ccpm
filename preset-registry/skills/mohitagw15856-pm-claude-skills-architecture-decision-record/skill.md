@@ -1,153 +1,155 @@
 ---
-# machine-translated to es from skills/architecture-decision-record/SKILL.md — review: pending. Native fixes welcome via PR.
+# machine-translated to hi from skills/architecture-decision-record/SKILL.md — review: pending. Native fixes welcome via PR.
 name: architecture-decision-record
-description: "Crea un Registro de Decisión de Arquitectura (ADR) para cualquier decisión técnica. Úsalo cuando necesites documentar una decisión técnica, escribir un ADR, registrar una elección arquitectónica o capturar por qué se seleccionó una tecnología o enfoque. Produce un ADR estructurado con contexto, decisión, consecuencias e intercambios."
+description: "किसी भी तकनीकी निर्णय के लिए आर्किटेक्चर डिसीज़न रिकॉर्ड (ADR) बनाएँ। जब कोई तकनीकी निर्णय दस्तावेज़ित करने, ADR लिखने, आर्किटेक्चर का चुनाव दर्ज करने या यह दर्ज करने को कहे कि कोई तकनीक या तरीका क्यों चुना गया, तब इसका उपयोग करें। संदर्भ, निर्णय, परिणाम और समझौतों के साथ एक संरचित ADR तैयार करता है।"
 ---
 
-# Habilidad de Registro de Decisión de Arquitectura (ADR)
+# आर्किटेक्चर डिसीज़न रिकॉर्ड (ADR) स्किल
 
-Esta habilidad produce un Registro de Decisión de Arquitectura (ADR) completo siguiendo el formato Nygard — el estándar más ampliamente adoptado. Los ADRs documentan el razonamiento detrás de decisiones técnicas significativas para que los futuros miembros del equipo entiendan no solo *qué* se decidió, sino *por qué*.
+यह स्किल Nygard प्रारूप — सबसे व्यापक रूप से अपनाया गया मानक — के अनुसार एक पूरा आर्किटेक्चर डिसीज़न रिकॉर्ड (ADR) तैयार करती है। ADR महत्वपूर्ण तकनीकी निर्णयों के पीछे के तर्क को दर्ज करते हैं ताकि भविष्य के टीम सदस्य सिर्फ़ यह नहीं कि *क्या* तय हुआ, बल्कि *क्यों* तय हुआ, यह भी समझ सकें।
 
-## Inputs Requeridos
+## आवश्यक इनपुट
 
-Trabaja con lo que se proporciona. Si falta algo de esto, aun así produce el resultado completo: rellena cada vacío con una suposición razonable marcada como *(asumido, confirmar)* y lista esas suposiciones al final. Solo haz una pregunta cuando falta el tema central en sí (no hay nada sobre lo que escribir).
-- **Número de ADR** (número secuencial en tu registro de ADR — p. ej. 012; o "siguiente disponible" si es desconocido)
-- **Título de la decisión** (breve, p. ej. "Usar PostgreSQL como almacén de datos principal")
-- **Contexto** (¿qué situación llevó a que esta decisión fuera necesaria?)
-- **Opciones consideradas** (al menos 2; si solo se da 1, solicita alternativas que fueron consideradas o descartadas)
-- **Decisión tomada** (qué opción fue elegida)
-- **Razón de la elección**
-- **Estado** (Propuesto / Aceptado / Deprecado / Reemplazado)
-- **Autor y fecha**
-- **Contexto del equipo** (opcional — tamaño del equipo, experiencia relevante, restricciones organizacionales; ayuda a calibrar la formalidad y profundidad de la sección de Contexto)
+जो दिया गया है उसी से काम करें। इनमें से कुछ न हो तो भी पूरा आउटपुट बनाएँ: हर खाली जगह को *(माना गया, पुष्टि करें)* चिह्नित एक उचित धारणा से भरें और अंत में उन धारणाओं की सूची दें। सवाल पहले सिर्फ़ तब पूछें जब मुख्य विषय ही न हो (लिखने के लिए कुछ हो ही नहीं)।
+- **ADR संख्या** (आपकी ADR रजिस्ट्री में क्रमिक संख्या — जैसे 012; या अज्ञात हो तो "अगली उपलब्ध")
+- **निर्णय का शीर्षक** (संक्षिप्त, जैसे "प्राथमिक डेटास्टोर के रूप में PostgreSQL का उपयोग करें")
+- **संदर्भ** (किस स्थिति ने इस निर्णय की ज़रूरत पैदा की?)
+- **विचार किए गए विकल्प** (कम से कम 2; अगर सिर्फ़ 1 दिया गया है, तो उन विकल्पों के बारे में पूछें जिन पर विचार हुआ या जिन्हें खारिज किया गया)
+- **लिया गया निर्णय** (कौन सा विकल्प चुना गया)
+- **चुनाव का कारण**
+- **स्थिति** (प्रस्तावित / स्वीकृत / डेप्रिकेटेड / अधिक्रमित)
+- **लेखक और तारीख़**
+- **टीम का संदर्भ** (वैकल्पिक — टीम का आकार, प्रासंगिक अनुभव, संगठनात्मक बाधाएँ; संदर्भ खंड की औपचारिकता और गहराई तय करने में मदद करता है)
 
-## Formato de Salida
-
----
-
-# ADR-[NNN]: [Título de la Decisión]
-
-**Fecha:** [YYYY-MM-DD]
-**Estado:** [Propuesto / Aceptado / Deprecado / Reemplazado por ADR-NNN]
-**Autor(es):** [Nombre(s)]
-**Responsables de la decisión:** [Quién tuvo la palabra final — individuo o equipo]
+## आउटपुट फ़ॉर्मैट
 
 ---
 
-## Contexto
+# ADR-[NNN]: [निर्णय का शीर्षक]
 
-[3–6 oraciones. Describe la situación, restricciones y fuerzas en juego que hicieron necesaria esta decisión. Incluye: el problema a resolver, estado relevante del sistema, restricciones del equipo, presiones de cronograma o requisitos innegociables. Escribe como si explicaras a alguien que se une al equipo 18 meses después sin contexto previo.]
-
-**Restricciones clave:**
-- [Restricción 1: p. ej. "Debe ser desplegable on-premise para clientes empresariales"]
-- [Restricción 2: p. ej. "El equipo no tiene experiencia previa con Go"]
-- [Añade todas las que sean relevantes]
+**तारीख़:** [YYYY-MM-DD]
+**स्थिति:** [प्रस्तावित / स्वीकृत / डेप्रिकेटेड / ADR-NNN द्वारा अधिक्रमित]
+**लेखक:** [नाम]
+**निर्णायक:** [अंतिम फ़ैसला किसका था — व्यक्ति या टीम]
 
 ---
 
-## Opciones Consideradas
+## संदर्भ
 
-Para cada opción, produce:
+[3–6 वाक्य। वह स्थिति, बाधाएँ और दबाव बताएँ जिनकी वजह से यह निर्णय ज़रूरी हुआ। शामिल करें: हल की जा रही समस्या, सिस्टम की प्रासंगिक स्थिति, टीम की बाधाएँ, समयसीमा का दबाव, या अनिवार्य आवश्यकताएँ। ऐसे लिखें मानो 18 महीने बाद टीम में शामिल होने वाले किसी ऐसे व्यक्ति को समझा रहे हों जिसके पास कोई पूर्व संदर्भ नहीं है।]
 
-### Opción [N]: [Nombre]
-
-**Descripción:** [Qué es esta opción — 1–3 oraciones]
-
-**Ventajas:**
-- [Ventaja 1]
-- [Ventaja 2]
-
-**Desventajas:**
-- [Desventaja 1]
-- [Desventaja 2]
-
-**Por qué fue descartada (si no fue elegida):** [Razón honesta]
+**मुख्य बाधाएँ:**
+- [बाधा 1: जैसे "एंटरप्राइज़ ग्राहकों के लिए on-premise तैनाती योग्य होना चाहिए"]
+- [बाधा 2: जैसे "टीम को Go का कोई पूर्व अनुभव नहीं"]
+- [जितनी प्रासंगिक हों, जोड़ें]
 
 ---
 
-## Decisión
+## विचार किए गए विकल्प
 
-**Usaremos [opción elegida].**
+हर विकल्प के लिए तैयार करें:
 
-[2–4 oraciones explicando la decisión en lenguaje plano. Debería ser legible de forma aislada — alguien debería entender la decisión solo con este párrafo sin leer el documento completo.]
+### विकल्प [N]: [नाम]
 
----
+**विवरण:** [यह विकल्प क्या है — 1–3 वाक्य]
 
-## Consecuencias
+**पक्ष:**
+- [पक्ष 1]
+- [पक्ष 2]
 
-### Consecuencias Positivas
-- [Qué esta decisión permite o mejora]
-- [Qué riesgo mitiga]
+**विपक्ष:**
+- [विपक्ष 1]
+- [विपक्ष 2]
 
-### Consecuencias Negativas / Intercambios Aceptados
-- [Qué estamos abandonando o asumiendo como resultado de esta decisión]
-- [Deuda técnica o limitaciones introducidas]
-- [Qué debe ser verdadero para que esta decisión siga siendo válida]
-
-### Riesgos
-- [Qué podría hacer que esta decisión fuera incorrecta en retrospectiva]
-- [Qué nos haría reconsiderar esta decisión]
+**इसे क्यों खारिज किया गया (अगर नहीं चुना गया):** [ईमानदार कारण]
 
 ---
 
-## Notas de Implementación
+## निर्णय
 
-[Incluye si la decisión tiene gotchas de implementación no obvios, o si hay tickets/RFCs relacionados que los implementadores necesitarán. Omite solo si la decisión es puramente selección de herramientas sin ambigüedad de implementación.]
+**हम [चुना गया विकल्प] करेंगे।**
 
----
-
-## Fecha de Revisión
-
-[Incluye a menos que la decisión sea permanente o evidentemente final. Establece una condición de disparo específica — p. ej. "Revisar si el equipo crece más allá de 20 ingenieros o el tráfico supera 10M requests/día" — no solo "debería revisarse periódicamente".]
+[2–4 वाक्यों में निर्णय को सादी भाषा में समझाएँ। यह अकेले पढ़ने योग्य होना चाहिए — किसी को पूरा दस्तावेज़ पढ़े बिना सिर्फ़ इस अनुच्छेद से निर्णय समझ में आ जाना चाहिए।]
 
 ---
 
-## Materiales Más Profundos
+## परिणाम
 
-Esta habilidad se entrega con archivos de apoyo — úsalos cuando estén disponibles:
+### सकारात्मक परिणाम
+- [यह निर्णय क्या सक्षम या बेहतर करता है]
+- [यह किस जोखिम को कम करता है]
 
-- **`references/decision-scoping.md`** — Qué Merece un ADR (y Qué Debe Contener el "Contexto"). Aplícalo mientras produces el resultado; contiene los juicios y decisiones de calibración que el resumen del método anterior comprime.
-- **`templates/adr.md`** — una versión para rellenar del entregable con los gates de calidad inline. Ofrécela cuando el usuario quiera trabajar el documento él mismo en lugar de tenerlo generado.
+### नकारात्मक परिणाम / स्वीकृत समझौते
+- [इस निर्णय के फलस्वरूप हम क्या छोड़ रहे हैं या क्या ज़िम्मेदारी ले रहे हैं]
+- [पेश किया गया तकनीकी ऋण या सीमाएँ]
+- [इस निर्णय के वैध बने रहने के लिए अब क्या सच होना चाहिए]
 
-## Rúbrica de Puntuación (0–40)
+### जोखिम
+- [क्या इस निर्णय को पीछे मुड़कर देखने पर गलत साबित कर सकता है]
+- [क्या हमें इस निर्णय पर फिर से विचार करने के लिए प्रेरित करेगा]
 
-Puntúa cualquier salida de esta habilidad antes de entregarla; 32+ es de calidad para producción.
+---
 
-| Dimensión | 0 | 5 | 10 |
+## कार्यान्वयन नोट
+
+[अगर निर्णय में स्पष्ट न दिखने वाले कार्यान्वयन के पेच हैं, या संबंधित टिकट/RFC हैं जिनकी कार्यान्वयन करने वालों को ज़रूरत होगी, तो शामिल करें। सिर्फ़ तब छोड़ें जब निर्णय विशुद्ध टूलिंग चुनाव हो और कार्यान्वयन में कोई अस्पष्टता न हो।]
+
+---
+
+## समीक्षा तिथि
+
+[तब तक शामिल करें जब तक निर्णय स्थायी या स्वतः स्पष्ट रूप से अंतिम न हो। एक ठोस ट्रिगर स्थिति बताएँ — जैसे "अगर टीम 20 इंजीनियरों से बड़ी हो जाए या ट्रैफ़िक 10M अनुरोध/दिन से ऊपर जाए तो समीक्षा करें" — सिर्फ़ "समय-समय पर समीक्षा होनी चाहिए" नहीं।]
+
+---
+
+## गहरी सामग्री
+
+यह स्किल सहायक फ़ाइलों के साथ आती है — उपलब्ध हों तो उनका उपयोग करें:
+
+- **`references/decision-scoping.md`** — किसे ADR चाहिए (और "संदर्भ" में क्या होना चाहिए)। आउटपुट बनाते समय इसे लागू करें; इसमें वह कैलिब्रेशन और निर्णय-विवेक है जिसे ऊपर का संक्षिप्त तरीका संकुचित कर देता है।
+- **`templates/adr.md`** — डिलिवरेबल का भरने योग्य संस्करण, गुणवत्ता-जाँच इनलाइन सहित। जब उपयोगकर्ता दस्तावेज़ खुद बनाना चाहे, उसे जनरेट करवाने के बजाय, तब यह पेश करें।
+
+## स्कोरिंग रूब्रिक (0–40)
+
+इस स्किल का कोई भी आउटपुट सौंपने से पहले स्कोर करें; 32+ शिप-गुणवत्ता है।
+
+| आयाम | 0 | 5 | 10 |
 |---|---|---|---|
-| **Reconstrucción del contexto** | Asume que el lector ya conoce el problema y las presiones | Problema enunciado, pero faltan las fuerzas (restricciones del equipo, escala, plazo, evento que fuerza) | Un lector dos años después podría adivinar la decisión solo desde la sección de Contexto |
-| **Honestidad de opciones** | Solo la opción elegida, u opciones rechazadas escritas como espantapájaros | ≥2 opciones, pero las razones de rechazo son circulares ("no cumplieron los requisitos") | Cada opción rechazada tiene fortalezas genuinas y una restricción perdedora específica vinculada a una presión del contexto |
-| **Balance de consecuencias** | Todas las consecuencias son positivas | Negativas simbólicas sin especificidades operacionales | Los negativos nombran deudas reales, nuevas cargas operacionales y qué debe mantenerse verdadero para que la decisión se sostenga |
-| **Disparadores de revisión** | No se indican riesgos o condiciones de revisión | "Revisar periódicamente" — sin condición medible | Condiciones de disparo específicas y medibles que invalidarían la decisión, con un responsable |
+| **संदर्भ का पुनर्निर्माण** | मान लेता है कि पाठक समस्या और दबाव पहले से जानता है | समस्या बताई गई, पर दबाव (टीम की बाधाएँ, पैमाना, समयसीमा, प्रेरक घटना) गायब | दो साल बाद का पाठक सिर्फ़ संदर्भ खंड से निर्णय का अनुमान लगा सके |
+| **विकल्पों की ईमानदारी** | सिर्फ़ चुना गया विकल्प, या खारिज विकल्प कमज़ोर करके लिखे गए | ≥2 विकल्प, पर खारिज करने के कारण गोलमोल ("आवश्यकताएँ पूरी नहीं कीं") | हर खारिज विकल्प की वास्तविक ख़ूबियाँ और संदर्भ के किसी दबाव से जुड़ी एक ठोस हारने वाली बाधा |
+| **परिणामों का संतुलन** | सभी परिणाम सकारात्मक | नाममात्र के नकारात्मक, बिना परिचालन विवरण के | नकारात्मक वास्तविक ऋण, नए परिचालन बोझ और वह बताते हैं जो निर्णय के टिके रहने के लिए सच रहना चाहिए |
+| **पुनर्विचार ट्रिगर** | कोई जोखिम या समीक्षा शर्त नहीं | "समय-समय पर समीक्षा" — कोई मापने योग्य शर्त नहीं | ठोस, मापने योग्य ट्रिगर शर्तें जो निर्णय को अमान्य करेंगी, एक ज़िम्मेदार व्यक्ति के साथ |
 
-## Verificaciones de Calidad
+## गुणवत्ता जाँच
 
-- [ ] El Contexto explica el *por qué* — no solo el *qué*
-- [ ] Al menos 2 opciones están documentadas (incluyendo las rechazadas)
-- [ ] Las opciones rechazadas incluyen razones honestas de rechazo
-- [ ] Las Consecuencias incluyen consecuencias *negativas* — ninguna decisión está libre de consecuencias
-- [ ] La Decisión está enunciada en lenguaje plano en la sección de Decisión
-- [ ] La sección de Riesgos identifica qué invalidaría esta decisión
-- [ ] La sección de Contexto enuncia el problema explícitamente en sus primeras 1–2 oraciones (no asume que el lector sepa qué problema estaba resolviendo el equipo)
-- [ ] La explicación "Por qué fue descartada" de cada opción rechazada nombra una restricción o intercambio específico (no una declaración circular como "no cumplió nuestros requisitos")
+- [ ] संदर्भ *क्यों* समझाता है — सिर्फ़ *क्या* नहीं
+- [ ] कम से कम 2 विकल्प दस्तावेज़ित हैं (खारिज किए गए सहित)
+- [ ] खारिज विकल्पों में खारिज करने के ईमानदार कारण हैं
+- [ ] परिणामों में *नकारात्मक* परिणाम शामिल हैं — कोई निर्णय परिणाम-मुक्त नहीं होता
+- [ ] निर्णय खंड में निर्णय सादी भाषा में लिखा है
+- [ ] जोखिम खंड बताता है कि क्या इस निर्णय को अमान्य करेगा
+- [ ] संदर्भ खंड अपने पहले 1–2 वाक्यों में समस्या स्पष्ट रूप से बताता है (यह नहीं मानता कि पाठक जानता है टीम कौन सी समस्या हल कर रही थी)
+- [ ] हर खारिज विकल्प का "क्यों खारिज" स्पष्टीकरण कोई ठोस बाधा या समझौता बताता है (न कि "हमारी आवश्यकताएँ पूरी नहीं कीं" जैसा गोलमोल कथन)
 
-## Anti-Patrones
+## एंटी-पैटर्न
 
-- [ ] No escribas un ADR después de que la decisión ya haya sido completamente implementada y el equipo haya avanzado — los ADRs escritos retrospectivamente a menudo omiten las razones reales y alternativas
-- [ ] No listes solo la opción elegida — las opciones rechazadas con razones honestas son la parte más valiosa de un ADR para lectores futuros
-- [ ] No escribas consecuencias que sean todas positivas — cada decisión arquitectónica implica intercambios; un ADR sin consecuencias negativas no fue escrutinizado honestamente
-- [ ] No dejes el estado como "Propuesto" indefinidamente — un ADR que nadie ha aprobado no está guiando las decisiones de nadie
-- [ ] No escribas contexto que asuma que el lector ya sabe qué problema se estaba resolviendo — la sección de contexto existe precisamente para lectores sin ese antecedente
+- [ ] निर्णय पूरी तरह लागू हो जाने और टीम के आगे बढ़ जाने के बाद ADR न लिखें — पीछे मुड़कर लिखे ADR अक्सर असली कारण और विकल्प छोड़ देते हैं
+- [ ] सिर्फ़ चुना गया विकल्प सूचीबद्ध न करें — ईमानदार कारणों के साथ खारिज विकल्प भविष्य के पाठकों के लिए ADR का सबसे मूल्यवान हिस्सा हैं
+- [ ] सिर्फ़ सकारात्मक परिणाम न लिखें — हर आर्किटेक्चर निर्णय में समझौते होते हैं; बिना नकारात्मक परिणाम वाले ADR की ईमानदारी से जाँच नहीं हुई
+- [ ] स्थिति को अनिश्चित काल तक "प्रस्तावित" न छोड़ें — जिस ADR को किसी ने मंज़ूर नहीं किया, वह किसी के निर्णय का मार्गदर्शन नहीं कर रहा
+- [ ] ऐसा संदर्भ न लिखें जो मान ले कि पाठक जानता है कौन सी समस्या हल हो रही थी — संदर्भ खंड ठीक उन्हीं पाठकों के लिए है जिनके पास वह पृष्ठभूमि नहीं है
 
-## Ejemplos de Uso
-- "Escribe un ADR para usar [tecnología]"
-- "Documenta nuestra decisión de [elección arquitectónica]"
-- "Crea un registro de decisión de arquitectura para [tema]"
-- "Ayúdame a redactar por qué elegimos [opción] sobre [alternativa]"
+## उपयोग के उदाहरण
+- "[तकनीक] के उपयोग के लिए ADR लिखो"
+- "[आर्किटेक्चर विकल्प] के हमारे निर्णय को दस्तावेज़ित करो"
+- "[विषय] के लिए आर्किटेक्चर डिसीज़न रिकॉर्ड बनाओ"
+- "यह लिखने में मदद करो कि हमने [विकल्प] के बजाय [विकल्प] क्यों चुना"
 
-## Frases de Disparo de Ejemplo
+## उदाहरण ट्रिगर वाक्य
 
-- "Documenta una decisión técnica."
-- "Escribe un ADR."
-- "Registra una elección arquitectónica."
-- "Captura por qué una tecnología."
+- "एक तकनीकी निर्णय दस्तावेज़ित करो।"
+- "एक ADR लिखो।"
+- "आर्किटेक्चर का चुनाव दर्ज करो।"
+- "दर्ज करो कि कोई तकनीक क्यों चुनी गई।"
+
+इस स्किल को अपने ब्राउज़र में चलाएँ: https://mohitagw15856.github.io/pm-claude-skills/skill/architecture-decision-record.html

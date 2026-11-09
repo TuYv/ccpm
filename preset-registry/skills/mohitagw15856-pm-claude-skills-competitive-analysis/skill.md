@@ -1,135 +1,137 @@
 ---
-# machine-translated to es from skills/competitive-analysis/SKILL.md — review: pending. Native fixes welcome via PR.
+# machine-translated to hi from skills/competitive-analysis/SKILL.md — review: pending. Native fixes welcome via PR.
 name: competitive-analysis
-description: "Analiza competidores y crea documentación de panorama competitivo con matrices de características, mapas de posicionamiento y recomendaciones estratégicas. Usa cuando se te pida analizar competidores, crear un análisis competitivo, comparar características con competidores, construir un panorama competitivo, rastrear posicionamiento competitivo o preparar insumos para sales battlecard. Produce perfiles de competidores estructurados, matriz de comparación de características, análisis de ganancias/pérdidas y recomendaciones estratégicas priorizadas. Para un desglose puntual de un rival único usa competitor-teardown; para un informe de mercado recurrente usa competitive-intelligence-monitor."
+description: "प्रतिस्पर्धियों का विश्लेषण करें और फ़ीचर मैट्रिक्स, पोज़िशनिंग मैप और रणनीतिक सिफ़ारिशों के साथ प्रतिस्पर्धी परिदृश्य का दस्तावेज़ बनाएँ। जब कोई प्रतिस्पर्धियों का विश्लेषण करने, प्रतिस्पर्धी विश्लेषण बनाने, प्रतिस्पर्धियों से फ़ीचर की तुलना करने, प्रतिस्पर्धी परिदृश्य बनाने, प्रतिस्पर्धी पोज़िशनिंग ट्रैक करने या सेल्स बैटलकार्ड के इनपुट तैयार करने को कहे, तब इसका उपयोग करें। संरचित प्रतिस्पर्धी प्रोफ़ाइल, फ़ीचर तुलना मैट्रिक्स, जीत/हार विश्लेषण और प्राथमिकता-क्रम वाली रणनीतिक सिफ़ारिशें तैयार करता है। किसी एक प्रतिद्वंद्वी के एकबारगी टियरडाउन के लिए competitor-teardown और आवर्ती बाज़ार ब्रीफ़िंग के लिए competitive-intelligence-monitor का उपयोग करें।"
 version: 1.0.0
 ---
 
-# Skill de Análisis Competitivo
+# प्रतिस्पर्धी विश्लेषण स्किल
 
-Crea análisis competitivos estructurados para la toma de decisiones de producto.
+प्रोडक्ट निर्णय लेने के लिए संरचित प्रतिस्पर्धी विश्लेषण बनाएँ।
 
-## Lee desde / Escribe en el Brain
+## Brain से पढ़ता है / Brain में लिखता है
 
-Si existe un [`professional-brain`](../professional-brain/SKILL.md) (`brain/`), fundamenta en él en lugar de volver a preguntar lo que ya sabes:
+अगर कोई [`professional-brain`](../professional-brain/SKILL.md) (`brain/`) मौजूद है, तो जो आप पहले से जानते हैं उसे दोबारा पूछने के बजाय उसी में आधार रखें:
 
-- **Lee primero:** `knowledge/` (mercado + posicionamiento) y `entities/` de competidores. Ejecuta `python3 ../professional-brain/scripts/brain_query.py ./brain "<competidor o mercado>"` y lleva etiqueta de procedencia a través de cada hecho — un argumento de competidor de un comunicado de prensa es `[external]`, no `[data]`.
-- **📥 Propón al Brain:** después de producir, propón registrar nuevos hechos de competidores en `knowledge/` (`[external]`) y crear/actualizar `entities/` de competidores. Muéstralos, obtén un sí, luego escribe con `../professional-brain/scripts/brain_write.py … --commit` (solo-agregar, dry-run por defecto).
+- **पहले पढ़ें:** `knowledge/` (बाज़ार + पोज़िशनिंग) और प्रतिस्पर्धी `entities/`। `python3 ../professional-brain/scripts/brain_query.py ./brain "<competitor or market>"` चलाएँ और हर तथ्य का स्रोत टैग साथ रखें — प्रेस विज्ञप्ति से आया प्रतिस्पर्धी दावा `[external]` है, `[data]` नहीं।
+- **📥 Brain को प्रस्ताव दें:** तैयार करने के बाद, `knowledge/` में नए प्रतिस्पर्धी तथ्य (`[external]`) दर्ज करने और प्रतिस्पर्धी `entities/` बनाने/अपडेट करने का प्रस्ताव दें। उन्हें दिखाएँ, हाँ लें, फिर `../professional-brain/scripts/brain_write.py … --commit` से लिखें (सिर्फ़-जोड़ने वाला, डिफ़ॉल्ट रूप से dry-run)।
 
-## Insumos Requeridos
+## आवश्यक इनपुट
 
-Trabaja con lo que se te proporciona. Si falta alguno de estos, aun así produce el resultado completo: completa cada brecha con una suposición razonable marcada *(asumido, confirma)* y lista esas suposiciones al final. Haz una pregunta solo cuando el tema central mismo sea el que falta (no hay nada sobre qué escribir).
-- **Tu producto o empresa** (contra qué estás comparando)
-- **Competidores a analizar** (o pregunta para identificar los 3-5 principales)
-- **Enfoque del análisis** (panorama completo / comparación de características / precios / posicionamiento / ganancias-pérdidas)
-- **Audiencia** (equipo de producto / liderazgo / ventas / junta)
+जो दिया गया है उसी से काम करें। इनमें से कुछ न हो तो भी पूरा आउटपुट बनाएँ: हर खाली जगह को *(माना गया, पुष्टि करें)* चिह्नित एक उचित धारणा से भरें और अंत में उन धारणाओं की सूची दें। सवाल पहले सिर्फ़ तब पूछें जब मुख्य विषय ही न हो (लिखने के लिए कुछ हो ही नहीं)।
+- **आपका प्रोडक्ट या कंपनी** (जिसकी तुलना कर रहे हैं)
+- **विश्लेषण के लिए प्रतिस्पर्धी** (या शीर्ष 3-5 पहचानने को कहें)
+- **विश्लेषण का फ़ोकस** (पूरा परिदृश्य / फ़ीचर तुलना / प्राइसिंग / पोज़िशनिंग / जीत-हार)
+- **श्रोता** (प्रोडक्ट टीम / नेतृत्व / सेल्स / बोर्ड)
 
-## Proceso
+## प्रक्रिया
 
-1. Reúne información de competidores a partir de insumos proporcionados y contexto disponible
-2. Construye perfiles para cada competidor
-3. Crea matriz de comparación de características en dimensiones que importan a los clientes del usuario
-4. Analiza precios y posicionamiento
-5. Identifica patrones de ganancias/pérdidas e implicaciones estratégicas
-6. **Valida** — Confirma que todos los argumentos referencien una fuente específica o estén marcados como suposiciones. Verifica que las comparaciones de características noten diferencias de calidad, no solo presencia/ausencia.
+1. दिए गए इनपुट और उपलब्ध संदर्भ से प्रतिस्पर्धी जानकारी इकट्ठा करें
+2. हर प्रतिस्पर्धी की प्रोफ़ाइल बनाएँ
+3. उन आयामों पर फ़ीचर तुलना मैट्रिक्स बनाएँ जो उपयोगकर्ता के ग्राहकों के लिए मायने रखते हैं
+4. प्राइसिंग और पोज़िशनिंग का विश्लेषण करें
+5. जीत/हार के पैटर्न और रणनीतिक निहितार्थ पहचानें
+6. **सत्यापित करें** — पुष्टि करें कि सभी दावे किसी विशिष्ट स्रोत का संदर्भ देते हैं या धारणा के रूप में चिह्नित हैं। जाँचें कि फ़ीचर तुलनाएँ सिर्फ़ होने/न होने नहीं, गुणवत्ता के अंतर भी बताती हैं।
 
-## Estructura de Salida
+## आउटपुट संरचना
 
-### 1. Resumen Ejecutivo
-- **Posición en el Mercado**: Dónde estamos parados relativos a competidores
-- **Hallazgos Clave**: Top 3-5 insights
-- **Implicaciones Estratégicas**: Qué significa esto para la roadmap
+### 1. कार्यकारी सारांश
+- **बाज़ार स्थिति**: प्रतिस्पर्धियों के सापेक्ष हम कहाँ खड़े हैं
+- **मुख्य निष्कर्ष**: शीर्ष 3-5 अंतर्दृष्टियाँ
+- **रणनीतिक निहितार्थ**: रोडमैप के लिए इसका क्या मतलब है
 
-### 2. Perfiles de Competidores
+### 2. प्रतिस्पर्धी प्रोफ़ाइल
 
-Para cada competidor:
-- **Descripción General de la Empresa**: Tamaño, financiación, posición de mercado
-- **Cliente Objetivo**: A quién sirven
-- **Propuesta de Valor**: Posicionamiento central
-- **Fortalezas / Debilidades**: Qué hacen bien y dónde se quedan cortos
-- **Actividad Reciente**: Actualizaciones principales, financiación, anuncios
+हर प्रतिस्पर्धी के लिए:
+- **कंपनी अवलोकन**: आकार, फ़ंडिंग, बाज़ार स्थिति
+- **लक्षित ग्राहक**: वे किसे सेवा देते हैं
+- **मूल्य प्रस्ताव**: मुख्य पोज़िशनिंग
+- **ताक़तें / कमज़ोरियाँ**: वे क्या अच्छा करते हैं और कहाँ कम पड़ते हैं
+- **हाल की गतिविधि**: बड़े अपडेट, फ़ंडिंग, घोषणाएँ
 
-### 3. Matriz de Comparación de Características
+### 3. फ़ीचर तुलना मैट्रिक्स
 
-| Característica | Nosotros | Competidor A | Competidor B | Competidor C |
-|---|---|---|---|---|
-| [Característica] | ✅ Completo | ⚠️ Limitado | ❌ Ninguno | ✅ Completo |
+| फ़ीचर | हम | प्रतिस्पर्धी A | प्रतिस्पर्धी B | प्रतिस्पर्धी C |
+|---------|-----|--------------|--------------|--------------|
+| [फ़ीचर] | ✅ पूर्ण | ⚠️ सीमित | ❌ नहीं | ✅ पूर्ण |
 
-Leyenda: ✅ Completo (listo para producción) · ⚠️ Limitado/Beta · ❌ Ninguno
+लीजेंड: ✅ पूर्ण (प्रोडक्शन-रेडी) · ⚠️ सीमित/बीटा · ❌ नहीं
 
-Incluye notas sobre diferencias de calidad e implementación donde sean significativas.
+जहाँ महत्वपूर्ण हो, गुणवत्ता और कार्यान्वयन के अंतर पर नोट शामिल करें।
 
-### 4. Comparación de Precios
+### 4. प्राइसिंग तुलना
 
-| Plan | Nosotros | Competidor A | Competidor B |
+| प्लान | हम | प्रतिस्पर्धी A | प्रतिस्पर्धी B |
+|------|-----|--------------|--------------|
+| फ़्री/ट्रायल | [कीमत] | [कीमत] | [कीमत] |
+| प्रो | [कीमत] | [कीमत] | [कीमत] |
+| एंटरप्राइज़ | [कीमत] | [कीमत] | [कीमत] |
+
+### 5. बाज़ार पोज़िशनिंग मैप
+
+बाज़ार से प्रासंगिक दो मुख्य आयामों पर प्रतिस्पर्धियों को रखें:
+- Y-अक्ष: [जैसे एंटरप्राइज़ बनाम SMB]
+- X-अक्ष: [जैसे सरल बनाम व्यापक]
+
+**ख़ाली जगह के अवसर**: [कम सेवा पाने वाले खंड]
+
+### 6. जीत/हार विश्लेषण
+
+**हम क्यों जीतते हैं:**
+- इनमें बेहतर: [विशिष्ट क्षमताएँ]
+- वे ग्राहक जो महत्व देते हैं: [उनके लिए क्या मायने रखता है]
+
+**हम क्यों हारते हैं:**
+- जब ग्राहकों को चाहिए: [विशिष्ट आवश्यकताएँ]
+- उनका फ़ायदा: [क्या पलड़ा झुकाता है]
+
+### 7. रणनीतिक सिफ़ारिशें
+
+**तत्काल कार्रवाई (0-3 महीने):**
+1. [कार्रवाई] — [तर्क]
+
+**मध्यम अवधि (3-12 महीने):**
+1. [कार्रवाई] — [तर्क]
+
+## एंटी-पैटर्न
+
+- [ ] प्रतिस्पर्धी फ़ीचर दावों को बिना स्रोत बताए या धारणा चिह्नित किए तथ्य की तरह पेश न करें — पुराना या ग़लत फ़ीचर डेटा सेल्स और प्रोडक्ट निर्णयों को भटकाता है
+- [ ] सिर्फ़ फ़ीचर कवर करने वाला प्रतिस्पर्धी विश्लेषण न बनाएँ — प्राइसिंग, मैसेजिंग, गो-टू-मार्केट गति और वे किसे भर्ती करते हैं, ये भी उतने ही रणनीतिक संकेत हैं
+- [ ] सभी ख़रीदारों को एक जैसा न मानें — एक ही प्रोडक्ट एंटरप्राइज़ खंड में प्रतिस्पर्धी A से जीत सकता है और SMB में हार सकता है; खंड-विशिष्ट जीत/हार मायने रखती है
+- [ ] आंतरिक असहजता से बचने के लिए SWOT में कमज़ोरियों और ख़तरों को नरम न करें — ईमानदार SWOT तभी उपयोगी है जब नकारात्मक बातें असली हों
+
+## गहरी सामग्री
+
+यह स्किल सहायक फ़ाइलों के साथ आती है — उपलब्ध हों तो उनका उपयोग करें:
+
+- **`references/feature-matrix-honesty.md`** — ऐसे फ़ीचर मैट्रिक्स जो झूठ नहीं बोलते। आउटपुट बनाते समय इसे लागू करें; इसमें वह कैलिब्रेशन और निर्णय-विवेक है जिसे ऊपर का संक्षिप्त तरीका संकुचित कर देता है।
+- **`templates/landscape-doc.md`** — डिलिवरेबल का भरने योग्य संस्करण, गुणवत्ता-जाँच इनलाइन सहित। जब उपयोगकर्ता दस्तावेज़ खुद बनाना चाहे, उसे जनरेट करवाने के बजाय, तब यह पेश करें।
+
+## स्कोरिंग रूब्रिक (0–40)
+
+इस स्किल का कोई भी आउटपुट सौंपने से पहले स्कोर करें; 32+ शिप-गुणवत्ता है।
+
+| आयाम | 0 | 5 | 10 |
 |---|---|---|---|
-| Gratuito/Prueba | [precio] | [precio] | [precio] |
-| Pro | [precio] | [precio] | [precio] |
-| Enterprise | [precio] | [precio] | [precio] |
+| स्रोत स्वच्छता | प्रतिस्पर्धी दावे बिना स्रोत के तथ्य की तरह; पुराना डेटा वर्तमान की तरह पेश | बड़े दावों के स्रोत हैं, पर धारणाएँ बिना चिह्न के सत्यापित तथ्यों में मिली हुई | हर दावे पर स्रोत टैग या स्पष्ट धारणा चिह्न; एक धारणा रजिस्टर पाठक को बताता है कि क्या दोबारा सत्यापित करना है |
+| फ़ीचर चेकलिस्ट से आगे की गहराई | एक फ़ीचर मैट्रिक्स और कुछ नहीं | फ़ीचर और प्राइसिंग, पर पोज़िशनिंग, GTM गति या हाल की चालों का विश्लेषण नहीं | फ़ीचर, प्राइसिंग, पोज़िशनिंग मैप और जीत/हार सब मौजूद — जहाँ टिक-बराबरी भ्रमित करे वहाँ गुणवत्ता-अंतर के नोट के साथ |
+| खंड-सजग जीत/हार | सभी ख़रीदारों पर औसत की गई एक सामान्य ताक़त/कमज़ोरी सूची | जीत/हार मौजूद पर खंड के अनुसार अविभाजित या ग्राहक साक्ष्य नहीं, आंतरिक राय पर आधारित | जीत/हार खंड के अनुसार विभाजित, ग्राहकों के अपने कारणों और डील संख्या के साथ; विरोधाभासी खंड (SMB में जीत, एंटरप्राइज़ में हार) अगल-बगल दिखाए गए |
+| सिफ़ारिशों की क्रियाशीलता | सामान्य सलाह ("प्रतिस्पर्धियों पर नज़र रखें", "भेद बढ़ाएँ") | दिशा में उपयोगी कार्रवाइयाँ पर निष्कर्षों से कटी हुई या समयसीमा के बिना | समयसीमा और तर्क के साथ विशिष्ट कार्रवाइयाँ, हर एक किसी क्रमांकित निष्कर्ष तक ट्रेस करने योग्य — स्पष्ट गैर-कार्रवाइयों सहित |
 
-### 5. Mapa de Posicionamiento de Mercado
+## गुणवत्ता जाँच
 
-Posiciona competidores en dos dimensiones clave relevantes al mercado:
-- Eje Y: [p. ej., Enterprise vs. SMB]
-- Eje X: [p. ej., Simple vs. Integral]
+- [ ] सभी प्रतिस्पर्धी दावे स्रोत का हवाला देते हैं या धारणा चिह्नित हैं
+- [ ] फ़ीचर तुलना सिर्फ़ फ़ीचर की मौजूदगी नहीं, गुणवत्ता के अंतर बताती है
+- [ ] रणनीतिक सिफ़ारिशें विशिष्ट कार्रवाइयाँ हैं, सामान्य सलाह नहीं
+- [ ] जीत/हार विश्लेषण ग्राहक के नज़रिए को दर्शाता है, आंतरिक धारणाओं को नहीं
+- [ ] अलग-अलग ग्राहक खंडों पर विचार हुआ है (सभी ख़रीदार एक ही चीज़ों को महत्व नहीं देते)
 
-**Oportunidades de Espacio en Blanco**: [Segmentos desatendidos]
+## उदाहरण ट्रिगर वाक्य
 
-### 6. Análisis de Ganancias/Pérdidas
+- "प्रतिस्पर्धियों का विश्लेषण करो।"
+- "प्रतिस्पर्धी विश्लेषण बनाओ।"
+- "प्रतिस्पर्धियों से फ़ीचर की तुलना करो।"
+- "प्रतिस्पर्धी परिदृश्य बनाओ।"
+- "प्रतिस्पर्धी पोज़िशनिंग ट्रैक करो।"
 
-**Por Qué Ganamos:**
-- Mejor en: [capacidades específicas]
-- Clientes que valoran: [qué les importa]
-
-**Por Qué Perdemos:**
-- Cuando los clientes necesitan: [requisitos específicos]
-- Su ventaja: [qué inclina la decisión]
-
-### 7. Recomendaciones Estratégicas
-
-**Acciones Inmediatas (0-3 meses):**
-1. [Acción] — [Justificación]
-
-**Mediano Plazo (3-12 meses):**
-1. [Acción] — [Justificación]
-
-## Anti-Patrones
-
-- [ ] No presentes argumentos de características de competidores como hechos sin citar una fuente o marcarlos como suposiciones — datos de características desactualizados o incorrectos mislead a ventas y decisiones de producto
-- [ ] No construyas un análisis competitivo que solo cubra características — precios, mensajería, motion de go-to-market y quién contratan son señales igualmente estratégicas
-- [ ] No trates a todos los compradores como idénticos — el mismo producto puede ganar contra Competidor A en el segmento enterprise y perder en SMB; importa win/loss específica por segmento
-- [ ] No suavices debilidades y amenazas en el FODA para evitar incomodidad interna — un FODA honesto solo es útil si los negativos son reales
-
-## Materiales Más Profundos
-
-Este skill viene con archivos de soporte — úsalos cuando estén disponibles:
-
-- **`references/feature-matrix-honesty.md`** — Matrices de Características Que No Mienten. Aplícalo mientras produces la salida; lleva la calibración y juicios que el resumen del método anterior comprime.
-- **`templates/landscape-doc.md`** — una versión rellenable del entregable con las compuertas de calidad en línea. Ofrécelo cuando el usuario quiera trabajar el documento ellos mismos en lugar de tenerlo generado.
-
-## Rubric de Puntuación (0–40)
-
-Puntúa cualquier salida de este skill antes de entregarla; 32+ es calidad para lanzar.
-
-| Dimensión | 0 | 5 | 10 |
-|---|---|---|---|
-| Higiene de fuentes | Argumentos de competidores establecidos como hecho sin procedencia; datos obsoletos presentados como actuales | Argumentos principales originados, pero suposiciones sin marcar y mezcladas con hechos verificados | Cada argumento lleva una etiqueta de fuente o marca de suposición explícita; un registro de suposiciones le dice al lector qué re-verificar |
-| Profundidad más allá del checklist de características | Una matriz de características y nada más | Características más precios, pero sin posicionamiento, motion de GTM o análisis de movimientos recientes | Características, precios, mapa de posicionamiento y ganancias/pérdidas todos presentes — con notas de diferencia de calidad donde paridad de checkmark misleadiría |
-| Win/loss consciente de segmento | Una lista genérica de fortalezas/debilidades promediada en todos los compradores | Win/loss presente pero indiferenciada por segmento o basada en opinión interna, no evidencia de cliente | Win/loss dividida por segmento con razones articuladas por clientes y conteos de deals; segmentos contradictores (gana SMB, pierde enterprise) mostrados lado a lado |
-| Accionabilidad de recomendaciones | Consejo genérico ("monitorea competidores", "mejora diferenciación") | Acciones direccionalmente útiles pero desatadas de los hallazgos o sin timeframes | Acciones específicas con timeframe y justificación, cada una trazable a un hallazgo numerado — incluyendo no-acciones explícitas |
-
-## Comprobaciones de Calidad
-
-- [ ] Todos los argumentos de competidores citan una fuente o están marcados como suposiciones
-- [ ] La comparación de características nota diferencias de calidad, no solo presencia de características
-- [ ] Las recomendaciones estratégicas son acciones específicas, no consejo genérico
-- [ ] El análisis de ganancias/pérdidas refleja perspectiva del cliente, no suposiciones internas
-- [ ] Se consideran diferentes segmentos de clientes (no todos los compradores valoran lo mismo)
-
-## Frases de Disparo de Ejemplo
-
-- "Analiza competidores."
-- "Crea un análisis competitivo."
-- "Compara características con competidores."
-- "Construye un panorama competitivo."
-- "Rastrea posicionamiento competitivo."
+इस स्किल को अपने ब्राउज़र में चलाएँ: https://mohitagw15856.github.io/pm-claude-skills/skill/competitive-analysis.html

@@ -1,207 +1,207 @@
 ---
-# machine-translated to es from skills/cohort-analysis/SKILL.md — review: pending. Native fixes welcome via PR.
+# machine-translated to hi from skills/cohort-analysis/SKILL.md — review: pending. Native fixes welcome via PR.
 name: cohort-analysis
-description: "Estructura un análisis de cohortes para retención, LTV o patrones de comportamiento. Úsalo cuando se te pida ejecutar un análisis de cohortes, analizar retención por cohorte, segmentar usuarios por comportamiento en el tiempo, o calcular valor de vida útil por período de adquisición. Produce un marco completo de análisis de cohortes con metodología, definiciones de cohortes, curvas de retención e intervenciones priorizadas."
+description: "रिटेंशन, LTV या व्यवहार पैटर्न के लिए कोहोर्ट विश्लेषण की संरचना बनाएँ। जब कोई कोहोर्ट विश्लेषण चलाने, कोहोर्ट के अनुसार रिटेंशन का विश्लेषण करने, समय के साथ व्यवहार के आधार पर उपयोगकर्ताओं को विभाजित करने या अधिग्रहण अवधि के अनुसार लाइफ़टाइम वैल्यू निकालने को कहे, तब इसका उपयोग करें। कार्यप्रणाली, कोहोर्ट परिभाषाओं, रिटेंशन वक्रों और प्राथमिकता-क्रम वाले हस्तक्षेपों के साथ एक पूरा कोहोर्ट विश्लेषण ढाँचा तैयार करता है।"
 ---
 
-# Skill de Análisis de Cohortes
+# कोहोर्ट विश्लेषण स्किल
 
-Produce un análisis de cohortes estructurado que cubre curvas de retención, estimación de LTV, segmentación comportamental, indicadores principales de churn y intervenciones priorizadas. El resultado está listo para presentar a liderazgo de producto o compartir con equipos de growth y datos.
+रिटेंशन वक्र, LTV अनुमान, व्यवहार विभाजन, चर्न के अग्रणी संकेतक और प्राथमिकता-क्रम वाले हस्तक्षेपों को कवर करने वाला एक संरचित कोहोर्ट विश्लेषण तैयार करता है। आउटपुट प्रोडक्ट नेतृत्व के सामने रखने या ग्रोथ और डेटा टीमों के साथ साझा करने के लिए तैयार होता है।
 
 ---
 
-## Entradas Requeridas
+## आवश्यक इनपुट
 
-**Solicita cualquiera de estas que falte antes de empezar. No inventes números, benchmarks ni detalles de esquema.**
+**शुरू करने से पहले इनमें से जो भी गायब हो, उसे माँगें। संख्याएँ, बेंचमार्क या स्कीमा विवरण न गढ़ें।**
 
-| Entrada | Qué preguntar si falta |
+| इनपुट | गायब हो तो क्या पूछें |
 |---|---|
-| **Objetivo del análisis** | Mejora de retención / modelado de LTV / segmentación comportamental / predicción de churn — elige un objetivo principal |
-| **Producto o feature** | ¿Qué se está analizando? |
-| **Definición de cohorte** | ¿Qué agrupa a los usuarios en una cohorte? (mes de adquisición, canal de registro, tier de plan, fecha de adopción de feature) |
-| **Ventana de observación** | ¿Cuántos períodos seguir? (p. ej. 12 meses, 8 semanas) |
-| **Métrica clave** | ¿Qué se mide por cohorte? (tasa de retención, ingresos, puntuación de engagement, uso de features) |
-| **Datos disponibles** | Pega esquema, nombres de tablas, o describe qué métricas existen — no asumas |
-| **Baseline o meta** | ¿Hay benchmarks de retención existentes o metas para comparar? |
+| **विश्लेषण का लक्ष्य** | रिटेंशन सुधार / LTV मॉडलिंग / व्यवहार विभाजन / चर्न पूर्वानुमान — एक प्राथमिक लक्ष्य चुनें |
+| **प्रोडक्ट या फ़ीचर** | किसका विश्लेषण हो रहा है? |
+| **कोहोर्ट परिभाषा** | उपयोगकर्ताओं को कोहोर्ट में क्या समूहित करता है? (अधिग्रहण माह, साइनअप चैनल, प्लान टियर, फ़ीचर अपनाने की तारीख़) |
+| **अवलोकन अवधि** | कितनी अवधियाँ ट्रैक करनी हैं? (जैसे 12 महीने, 8 सप्ताह) |
+| **मुख्य मेट्रिक** | प्रति कोहोर्ट क्या मापा जाता है? (रिटेंशन दर, राजस्व, एंगेजमेंट स्कोर, फ़ीचर उपयोग) |
+| **उपलब्ध डेटा** | स्कीमा, टेबल नाम पेस्ट करें, या बताएँ कि कौन से मेट्रिक मौजूद हैं — मान न लें |
+| **बेसलाइन या लक्ष्य** | तुलना के लिए कोई मौजूदा रिटेंशन बेंचमार्क या लक्ष्य? |
 
-Si el usuario no puede suministrar datos reales, produce el marco con placeholders claramente marcados (`[X%]`, `[£X]`, `[N usuarios]`) y nota qué secciones requieren datos reales para completarse.
-
----
-
-## Proceso
-
-Sigue estos pasos en orden:
-
-1. **Confirma entradas** — surfacea cualquier ambigüedad antes de producir output (p. ej. definiciones de cohorte conflictivas, ventana de observación faltante).
-2. **Define cohortes** — establece evento de entrada, criterios de salida y exclusiones para que las cohortes sean mutuamente excluyentes.
-3. **Construye tabla de retención** — completa o templatea la matriz período a período; identifica el período de meseta.
-4. **Proyecta LTV** — usa solo datos de retención observados; marca si los datos son insuficientes.
-5. **Segmenta por comportamiento** — crea segmentos comportamentales mutuamente excluyentes; identifica el threshold de activación.
-6. **Surface indicadores principales de churn** — lista señales observables con tiempo de anticipación y mapeo de intervención.
-7. **Compara cohortes en el tiempo** — evalúa si los cambios de producto se muestran en cohortes más nuevas.
-8. **Prioriza recomendaciones** — vincula cada recomendación a un hallazgo de cohorte o segmento específico.
-9. **Proporciona referencia SQL** — adapta la query template al esquema real del usuario si se suministra.
-10. **Ejecuta quality checks** — verifica todos los ítems del checklist antes de entregar output.
+अगर उपयोगकर्ता वास्तविक डेटा न दे सके, तो स्पष्ट रूप से चिह्नित प्लेसहोल्डर (`[X%]`, `[£X]`, `[N उपयोगकर्ता]`) के साथ ढाँचा बनाएँ और बताएँ कि किन खंडों को पूरा करने के लिए वास्तविक डेटा चाहिए।
 
 ---
 
-## Output Template
+## प्रक्रिया
 
-Produce las siguientes secciones en orden. Omite una sección solo si explícitamente está fuera de alcance; nota la omisión.
+इन चरणों का क्रम से पालन करें:
+
+1. **इनपुट की पुष्टि करें** — आउटपुट बनाने से पहले किसी भी अस्पष्टता को सामने लाएँ (जैसे परस्पर विरोधी कोहोर्ट परिभाषाएँ, गायब अवलोकन अवधि)।
+2. **कोहोर्ट परिभाषित करें** — प्रवेश घटना, निकास मानदंड और बहिष्करण तय करें ताकि कोहोर्ट परस्पर अनन्य हों।
+3. **रिटेंशन तालिका बनाएँ** — अवधि-दर-अवधि मैट्रिक्स भरें या उसका टेम्पलेट बनाएँ; पठार अवधि पहचानें।
+4. **LTV प्रक्षेपित करें** — सिर्फ़ देखे गए रिटेंशन डेटा का उपयोग करें; डेटा अपर्याप्त हो तो चिह्नित करें।
+5. **व्यवहार के अनुसार विभाजित करें** — परस्पर अनन्य व्यवहार खंड बनाएँ; सक्रियण सीमा पहचानें।
+6. **चर्न के अग्रणी संकेत सामने लाएँ** — लीड टाइम और हस्तक्षेप मैपिंग के साथ अवलोकन योग्य संकेत सूचीबद्ध करें।
+7. **समय के साथ कोहोर्ट की तुलना करें** — आकलन करें कि प्रोडक्ट बदलाव नई कोहोर्ट में दिख रहे हैं या नहीं।
+8. **सिफ़ारिशों को प्राथमिकता दें** — हर सिफ़ारिश को किसी विशिष्ट कोहोर्ट या खंड के निष्कर्ष से जोड़ें।
+9. **SQL संदर्भ दें** — दिया गया हो तो टेम्पलेट क्वेरी को उपयोगकर्ता के वास्तविक स्कीमा के अनुसार ढालें।
+10. **गुणवत्ता जाँच चलाएँ** — आउटपुट सौंपने से पहले चेकलिस्ट के सभी बिंदु सत्यापित करें।
 
 ---
 
-# Análisis de Cohortes: [Producto / Feature]
+## आउटपुट टेम्पलेट
 
-**Objetivo del análisis:** [Retención / LTV / Segmentación comportamental / Predicción de churn]
-**Definición de cohorte:** [p. ej. Mes de adquisición — usuarios agrupados por mes de calendario de primer registro]
-**Ventana de observación:** [X meses / semanas]
-**Métrica primaria:** [Nombre de métrica y definición]
-**Fuente de datos:** [Tablas o métricas usadas — no inventes si no se suministraron]
-**Fecha preparada:** [Fecha]
+निम्न खंड क्रम से तैयार करें। कोई खंड सिर्फ़ तब छोड़ें जब वह स्पष्ट रूप से दायरे से बाहर हो; छोड़ने का उल्लेख करें।
 
 ---
 
-## 1. Definiciones de Cohortes
+# कोहोर्ट विश्लेषण: [प्रोडक्ट / फ़ीचर]
 
-| Cohorte | Período | Tamaño | Descripción |
+**विश्लेषण का लक्ष्य:** [रिटेंशन / LTV / व्यवहार विभाजन / चर्न पूर्वानुमान]
+**कोहोर्ट परिभाषा:** [जैसे अधिग्रहण माह — पहले साइनअप के कैलेंडर माह के अनुसार समूहित उपयोगकर्ता]
+**अवलोकन अवधि:** [X महीने / सप्ताह]
+**प्राथमिक मेट्रिक:** [मेट्रिक का नाम और परिभाषा]
+**डेटा स्रोत:** [उपयोग की गई टेबल या मेट्रिक — न दिए गए हों तो गढ़ें नहीं]
+**तैयारी की तारीख़:** [तारीख़]
+
+---
+
+## 1. कोहोर्ट परिभाषाएँ
+
+| कोहोर्ट | अवधि | आकार | विवरण |
 |---|---|---|---|
-| [Cohorte 1] | [Ene 2025] | [N usuarios] | [p. ej. Usuarios que se registraron en ene 2025 vía búsqueda orgánica] |
-| [Cohorte 2] | [Feb 2025] | [N usuarios] | [Descripción] |
+| [कोहोर्ट 1] | [जन 2025] | [N उपयोगकर्ता] | [जैसे जनवरी 2025 में ऑर्गेनिक सर्च से साइनअप करने वाले उपयोगकर्ता] |
+| [कोहोर्ट 2] | [फ़र 2025] | [N उपयोगकर्ता] | [विवरण] |
 
-**Lógica de cohortes:**
-- **Evento de entrada:** [p. ej. Primer registro / Primera compra / Activación de feature]
-- **Definición de salida / churn:** [p. ej. Sin actividad que coincida con evento de retención clave durante 30 días]
-- **Exclusiones:** [p. ej. Cuentas internas de prueba, usuarios de trial con < 3 días de datos, cohortes con < [N] usuarios — ver anti-patterns]
+**कोहोर्ट तर्क:**
+- **प्रवेश घटना:** [जैसे पहला साइनअप / पहली खरीद / फ़ीचर सक्रियण]
+- **निकास / चर्न परिभाषा:** [जैसे 30 दिनों तक मुख्य रिटेंशन घटना से मेल खाती कोई गतिविधि नहीं]
+- **बहिष्करण:** [जैसे आंतरिक टेस्ट खाते, 3 दिन से कम डेटा वाले ट्रायल उपयोगकर्ता, [N] से कम उपयोगकर्ताओं वाली कोहोर्ट — एंटी-पैटर्न देखें]
 
-> **Nota:** Si alguna cohorte cae por debajo del threshold de tamaño mínimo para confiabilidad estadística, marca explícitamente y exclúyela de conclusiones de tendencias.
+> **नोट:** अगर कोई कोहोर्ट सांख्यिकीय विश्वसनीयता की न्यूनतम आकार सीमा से नीचे है, तो उसे स्पष्ट रूप से चिह्नित करें और रुझान के निष्कर्षों से बाहर रखें।
 
 ---
 
-## 2. Curva de Retención
+## 2. रिटेंशन वक्र
 
-**Cómo leer:** Cada celda muestra el porcentaje de la cohorte que realizó el evento de retención clave en período N. Período 0 = 100% por definición.
+**कैसे पढ़ें:** हर सेल कोहोर्ट का वह प्रतिशत दिखाता है जिसने अवधि N में मुख्य रिटेंशन घटना की। अवधि 0 = परिभाषा से 100%।
 
-| Cohorte | P0 | P1 | P2 | P3 | P6 | P12 |
+| कोहोर्ट | P0 | P1 | P2 | P3 | P6 | P12 |
 |---|---|---|---|---|---|---|
-| [Ene 2025] | 100% | [X%] | [X%] | [X%] | [X%] | [X%] |
-| [Feb 2025] | 100% | [X%] | [X%] | [X%] | [X%] | [X%] |
-| [Tendencia vs cohorte anterior] | — | [↑/↓ X pp] | [↑/↓ X pp] | [↑/↓ X pp] | [↑/↓ X pp] | [↑/↓ X pp] |
+| [जन 2025] | 100% | [X%] | [X%] | [X%] | [X%] | [X%] |
+| [फ़र 2025] | 100% | [X%] | [X%] | [X%] | [X%] | [X%] |
+| [पिछली कोहोर्ट से रुझान] | — | [↑/↓ X pp] | [↑/↓ X pp] | [↑/↓ X pp] | [↑/↓ X pp] | [↑/↓ X pp] |
 
-**Meseta de retención:** [¿En qué período se aplana la curva? ¿En qué % se aplana? Si la ventana de observación es demasiado corta para mostrar una meseta, decláralo explícitamente.]
+**रिटेंशन पठार:** [किस अवधि पर वक्र समतल होता है? किस % पर समतल होता है? अगर अवलोकन अवधि पठार दिखाने के लिए बहुत छोटी है, तो यह स्पष्ट रूप से बताएँ।]
 
-**Observaciones clave:**
-- [p. ej. La caída más grande de período único es P1 → P2, promediando X pp — este es el momento de churn principal a abordar]
-- [p. ej. Las cohortes adquiridas vía [canal] muestran X pp mayor retención en P6 vs el promedio general]
-- [p. ej. La retención en P3 ha pasado de X% (cohorte más antigua) a Y% (cohorte más nueva) — un cambio de Z pp]
+**मुख्य अवलोकन:**
+- [जैसे सबसे बड़ी एकल-अवधि गिरावट P1 → P2 है, औसतन X pp — यही संबोधित करने लायक प्राथमिक चर्न क्षण है]
+- [जैसे [चैनल] से अधिग्रहीत कोहोर्ट P6 पर कुल औसत से X pp अधिक रिटेंशन दिखाती हैं]
+- [जैसे P3 पर रिटेंशन X% (सबसे पुरानी कोहोर्ट) से Y% (सबसे नई कोहोर्ट) हुआ — Z pp का बदलाव]
 
-**Gráfico de retención** — renderiza una línea por cohorte, período en eje x:
+**रिटेंशन चार्ट** — प्रति कोहोर्ट एक रेखा, x-अक्ष पर अवधि:
 
 ```chart
 {
   "type": "line",
-  "title": "Retención por cohorte (%)",
+  "title": "Retention by cohort (%)",
   "labels": ["P0", "P1", "P2", "P3", "P6", "P12"],
   "series": [
-    { "name": "[Cohorte 1]", "data": [100, "[X]", "[X]", "[X]", "[X]", "[X]"] },
-    { "name": "[Cohorte 2]", "data": [100, "[X]", "[X]", "[X]", "[X]", "[X]"] }
+    { "name": "[Cohort 1]", "data": [100, "[X]", "[X]", "[X]", "[X]", "[X]"] },
+    { "name": "[Cohort 2]", "data": [100, "[X]", "[X]", "[X]", "[X]", "[X]"] }
   ]
 }
 ```
 
 ---
 
-## 3. Proyección de LTV
+## 3. LTV प्रक्षेपण
 
-> Omite esta sección si los datos de ingresos no están disponibles. No estimes ARPU sin una fuente de datos — nota la brecha y solicítala.
+> राजस्व डेटा उपलब्ध न हो तो यह खंड छोड़ दें। बिना डेटा स्रोत के ARPU का अनुमान न लगाएँ — कमी नोट करें और माँगें।
 
-**ARPU por período:** [Moneda y cantidad por usuario activo por período — sourced from: X]
-**Curva de retención usada:** [Qué cohorte o promedio combinado, y por qué]
+**प्रति अवधि ARPU:** [मुद्रा और प्रति सक्रिय उपयोगकर्ता प्रति अवधि राशि — स्रोत: X]
+**उपयोग किया गया रिटेंशन वक्र:** [कौन सी कोहोर्ट या मिश्रित औसत, और क्यों]
 
-| Período | Retenido % | Ingresos por usuario retenido | LTV Acumulativo |
+| अवधि | बनाए रखे गए % | प्रति बनाए रखे उपयोगकर्ता राजस्व | संचयी LTV |
 |---|---|---|---|
-| Mes 1 | [X%] | [£X] | [£X] |
-| Mes 3 | [X%] | [£X] | [£X] |
-| Mes 6 | [X%] | [£X] | [£X] |
-| Mes 12 | [X%] | [£X] | [£X] |
+| माह 1 | [X%] | [£X] | [£X] |
+| माह 3 | [X%] | [£X] | [£X] |
+| माह 6 | [X%] | [£X] | [£X] |
+| माह 12 | [X%] | [£X] | [£X] |
 
-**LTV combinado en 12M:** [£X — especifica qué cohortes y método de ponderación]
+**12M पर मिश्रित LTV:** [£X — कौन सी कोहोर्ट और भारांक विधि, बताएँ]
 
-**LTV por segmento:**
+**खंड के अनुसार LTV:**
 
-| Segmento | LTV (12M) | vs baseline combinado | Driver clave de diferencia |
+| खंड | LTV (12M) | बनाम मिश्रित बेसलाइन | अंतर का मुख्य कारण |
 |---|---|---|---|
-| [Orgánico] | [£X] | [+X%] | [p. ej. Retención en P6 más alta] |
-| [Pago] | [£X] | [-X%] | [p. ej. Tasa de activación más baja] |
-| [Enterprise] | [£X] | [+X%] | [p. ej. ARPU más alto por período] |
+| [ऑर्गेनिक] | [£X] | [+X%] | [जैसे उच्च P6 रिटेंशन] |
+| [पेड] | [£X] | [-X%] | [जैसे कम सक्रियण दर] |
+| [एंटरप्राइज़] | [£X] | [+X%] | [जैसे प्रति अवधि उच्च ARPU] |
 
 ---
 
-## 4. Segmentación Comportamental
+## 4. व्यवहार विभाजन
 
-Los segmentos se definen por lo que hicieron los usuarios, no cuándo llegaron. Los segmentos deben ser mutuamente excluyentes y colectivamente exhaustivos dentro de la población analizada.
+खंड इस आधार पर परिभाषित होते हैं कि उपयोगकर्ताओं ने क्या किया, न कि वे कब आए। खंड विश्लेषित आबादी के भीतर परस्पर अनन्य और सामूहिक रूप से संपूर्ण होने चाहिए।
 
-| Segmento | Definición | % de cohorte | Retención (P6) | LTV (12M) |
+| खंड | परिभाषा | कोहोर्ट का % | रिटेंशन (P6) | LTV (12M) |
 |---|---|---|---|---|
-| **Power users** | [p. ej. Completó acción principal ≥ 3×/semana en primeros 30 días] | [X%] | [X%] | [£X] |
-| **Casual users** | [p. ej. Completó acción principal 1–2×/semana en primeros 30 días] | [X%] | [X%] | [£X] |
-| **Dormant** | [p. ej. Inició sesión pero nunca completó acción principal] | [X%] | [X%] | [£X] |
-| **Never activated** | [p. ej. Se registró pero nunca completó paso 1 de onboarding] | [X%] | [X%] | [£X] |
+| **पावर उपयोगकर्ता** | [जैसे पहले 30 दिनों में मुख्य क्रिया ≥ 3×/सप्ताह पूरी की] | [X%] | [X%] | [£X] |
+| **कैज़ुअल उपयोगकर्ता** | [जैसे पहले 30 दिनों में मुख्य क्रिया 1–2×/सप्ताह पूरी की] | [X%] | [X%] | [£X] |
+| **निष्क्रिय** | [जैसे लॉगिन किया पर कभी मुख्य क्रिया पूरी नहीं की] | [X%] | [X%] | [£X] |
+| **कभी सक्रिय नहीं हुए** | [जैसे साइनअप किया पर ऑनबोर्डिंग का चरण 1 कभी पूरा नहीं किया] | [X%] | [X%] | [£X] |
 
-**Threshold de activación (el "aha moment"):** [¿Qué acción específica, realizada dentro de los primeros X días, predice mejor retención a largo plazo? Sourcea esto de los datos — no asumas una respuesta genérica.]
+**सक्रियण सीमा ("ajá" क्षण):** [पहले X दिनों में की गई कौन सी विशिष्ट क्रिया दीर्घकालिक रिटेंशन की सबसे मज़बूत भविष्यवाणी करती है? इसे डेटा से निकालें — सामान्य उत्तर न मानें।]
 
 ---
 
-## 5. Indicadores Principales de Churn
+## 5. चर्न के अग्रणी संकेतक
 
-Señales que aparecen **antes** de que los usuarios hagan churn, habilitando intervención pre-emptiva. Todas las señales listadas deben ser observables en datos de producción — marca cualquiera que sea teórica solamente.
+ऐसे संकेत जो उपयोगकर्ताओं के चर्न करने से **पहले** दिखते हैं और पूर्व-निवारक हस्तक्षेप संभव बनाते हैं। सूचीबद्ध सभी संकेत प्रोडक्शन डेटा में अवलोकन योग्य होने चाहिए — जो सिर्फ़ सैद्धांतिक हों उन्हें चिह्नित करें।
 
-| Señal | Tiempo de anticipación antes de churn | Fortaleza de correlación | Intervención recomendada |
+| संकेत | चर्न से पहले लीड टाइम | सहसंबंध की मज़बूती | अनुशंसित हस्तक्षेप |
 |---|---|---|---|
-| [p. ej. Sin login durante 7 días consecutivos] | [7 días] | [Fuerte / Moderada / Débil] | [p. ej. Email de re-engagement automático en día 7] |
-| [p. ej. Ticket de soporte con escalada sin resolver] | [~14 días] | [Moderada] | [p. ej. Outreach de CSM dentro de 48 horas de escalada] |
-| [p. ej. Uso de feature principal bajó >50% semana-a-semana] | [~10 días] | [Fuerte] | [p. ej. Prompt in-app vinculando a tutorial de caso de uso] |
+| [जैसे लगातार 7 दिनों तक कोई लॉगिन नहीं] | [7 दिन] | [मज़बूत / मध्यम / कमज़ोर] | [जैसे 7वें दिन स्वचालित पुनः-जुड़ाव ईमेल] |
+| [जैसे अनसुलझे एस्केलेशन वाला सपोर्ट टिकट] | [~14 दिन] | [मध्यम] | [जैसे एस्केलेशन के 48 घंटों के भीतर CSM संपर्क] |
+| [जैसे मुख्य फ़ीचर उपयोग सप्ताह-दर-सप्ताह >50% गिरा] | [~10 दिन] | [मज़बूत] | [जैसे उपयोग-मामले के ट्यूटोरियल से जोड़ने वाला इन-ऐप प्रॉम्प्ट] |
 
-> **Requerimiento de datos:** La fortaleza de correlación debe venir de datos observados. Si no está disponible, marca como [Hipótesis — no validada aún] y recomienda un A/B test o análisis de supervivencia para confirmar.
+> **डेटा आवश्यकता:** सहसंबंध की मज़बूती देखे गए डेटा से आनी चाहिए। उपलब्ध न हो तो [परिकल्पना — अभी सत्यापित नहीं] चिह्नित करें और पुष्टि के लिए A/B टेस्ट या सर्वाइवल विश्लेषण सुझाएँ।
 
 ---
 
-## 6. Comparación de Cohortes: Tendencia en el Tiempo
+## 6. कोहोर्ट तुलना: समय के साथ रुझान
 
-Evalúa si los cambios de producto son visibles en resultados de retención para cohortes más nuevas.
+आकलन करें कि प्रोडक्ट बदलाव नई कोहोर्ट के रिटेंशन नतीजों में दिखते हैं या नहीं।
 
-| Métrica | [Cohorte más antigua] | [Cohorte más nueva] | Cambio | Notas |
+| मेट्रिक | [सबसे पुरानी कोहोर्ट] | [सबसे नई कोहोर्ट] | बदलाव | नोट |
 |---|---|---|---|---|
-| Retención P1 | [X%] | [X%] | [↑/↓ X pp] | |
-| Retención P3 | [X%] | [X%] | [↑/↓ X pp] | |
-| Tasa de activación | [X%] | [X%] | [↑/↓ X pp] | |
-| Sesiones promedio, primeros 30 días | [X] | [X] | [↑/↓] | |
+| P1 रिटेंशन | [X%] | [X%] | [↑/↓ X pp] | |
+| P3 रिटेंशन | [X%] | [X%] | [↑/↓ X pp] | |
+| सक्रियण दर | [X%] | [X%] | [↑/↓ X pp] | |
+| औसत सत्र, पहले 30 दिन | [X] | [X] | [↑/↓] | |
 
-**Veredicto:** [¿Están las cohortes más recientes desempeñándose mejor o peor? ¿Qué se deployó durante este período que podría explicar el cambio? Si no hay explicación causal disponible, decláralo — no inventes una.]
+**निर्णय:** [क्या हाल की कोहोर्ट बेहतर कर रही हैं या बदतर? इस अवधि में क्या शिप हुआ जो बदलाव समझा सके? अगर कोई कारणात्मक व्याख्या उपलब्ध नहीं, तो यही कहें — गढ़ें नहीं।]
 
 ---
 
-## 7. Recomendaciones
+## 7. सिफ़ारिशें
 
-Cada recomendación debe referenciar una cohorte, segmento o señal específica de las secciones anteriores. El consejo genérico que podría aplicar a cualquier producto debe ser cortado.
+हर सिफ़ारिश को ऊपर के खंडों की किसी विशिष्ट कोहोर्ट, खंड या संकेत का संदर्भ देना चाहिए। ऐसी सामान्य सलाह जो किसी भी प्रोडक्ट पर लागू हो सके, हटा दें।
 
-| # | Recomendación | Anclada a hallazgo | Segmento objetivo | Impacto esperado | Esfuerzo | Prioridad |
+| # | सिफ़ारिश | किस निष्कर्ष से जुड़ी | लक्षित खंड | अपेक्षित प्रभाव | प्रयास | प्राथमिकता |
 |---|---|---|---|---|---|---|
-| 1 | [Acción específica] | [Sección X, hallazgo Y] | [Segmento] | [p. ej. +X pp retención P1 — base para estimar] | [Bajo / Med / Alto] | P1 |
-| 2 | [Acción específica] | [Sección X, hallazgo Y] | [Segmento] | [p. ej. +X pp retención P3] | [Bajo / Med / Alto] | P1 |
-| 3 | [Acción específica] | [Sección X, hallazgo Y] | [Segmento] | [p. ej. +£X LTV en 12M] | [Bajo / Med / Alto] | P2 |
+| 1 | [विशिष्ट कार्रवाई] | [खंड X, निष्कर्ष Y] | [खंड] | [जैसे +X pp P1 रिटेंशन — अनुमान का आधार] | [कम / मध्यम / अधिक] | P1 |
+| 2 | [विशिष्ट कार्रवाई] | [खंड X, निष्कर्ष Y] | [खंड] | [जैसे +X pp P3 रिटेंशन] | [कम / मध्यम / अधिक] | P1 |
+| 3 | [विशिष्ट कार्रवाई] | [खंड X, निष्कर्ष Y] | [खंड] | [जैसे 12M पर +£X LTV] | [कम / मध्यम / अधिक] | P2 |
 
-> Si el impacto esperado no puede estimarse a partir de datos disponibles, decláralo — no fabrique un porcentaje de lift.
+> अगर उपलब्ध डेटा से अपेक्षित प्रभाव का अनुमान नहीं लगाया जा सकता, तो यही कहें — प्रतिशत बढ़त न गढ़ें।
 
 ---
 
-## 8. Referencia SQL
+## 8. SQL संदर्भ
 
-Adapta este template al esquema real del usuario si se suministra. Reemplaza nombres de tablas y columnas placeholder — no ships una query que el usuario no pueda ejecutar.
+दिया गया हो तो इस टेम्पलेट को उपयोगकर्ता के वास्तविक स्कीमा के अनुसार ढालें। प्लेसहोल्डर टेबल और कॉलम नाम बदलें — ऐसी क्वेरी न दें जो उपयोगकर्ता चला न सके।
 
 ```sql
--- Query de cohorte de retención
--- Reemplaza: users, events, created_at, event_date, user_id, event_type, [start_date], [key_retention_event]
+-- Retention cohort query
+-- Replace: users, events, created_at, event_date, user_id, event_type, [start_date], [key_retention_event]
 SELECT
   DATE_TRUNC('month', u.created_at)    AS cohort_month,
   DATE_TRUNC('month', e.event_date)    AS activity_month,
@@ -226,62 +226,64 @@ GROUP BY 1, 2, 3
 ORDER BY 1, 3;
 ```
 
-**Adapta para tu stack:** BigQuery usa `DATE_DIFF`; Redshift usa `DATEDIFF`; Snowflake usa `DATEDIFF` o `TIMESTAMPDIFF`. Confirma dialect antes de ejecutar.
+**अपने स्टैक के लिए ढालें:** BigQuery `DATE_DIFF` उपयोग करता है; Redshift `DATEDIFF`; Snowflake `DATEDIFF` या `TIMESTAMPDIFF`। चलाने से पहले डायलेक्ट की पुष्टि करें।
 
 ---
 
-## Rubric de Scoring (0–40)
+## स्कोरिंग रूब्रिक (0–40)
 
-Puntúa cualquier output de esta skill antes de entregarlo; 32+ es ship-quality.
+इस स्किल का कोई भी आउटपुट सौंपने से पहले स्कोर करें; 32+ शिप-गुणवत्ता है।
 
-| Dimensión | 0 | 5 | 10 |
+| आयाम | 0 | 5 | 10 |
 |---|---|---|---|
-| Rigor de definición de cohorte | Límites ambiguos; un usuario podría estar en dos cohortes | Mutuamente excluyentes pero evento de entrada débilmente justificado | Evento de entrada unambiguo y límites de fecha, con tradeoffs de la definición declarados |
-| Honestidad de meseta y ventana | Retención leída de una ventana demasiado corta para apoyarla | Meseta reclamada sin mostrar dónde | Meseta visible y ubicada, o ventana explícitamente declarada demasiado corta para confirmar una |
-| Grounding de LTV | LTV de retención asumida o ARPU asumido | Datos observados usados pero método de proyección inestadado | LTV construido de retención observada × ARPU observado con el método de proyección y supuesto de decay mostrados |
-| Payoff de tendencia e indicador principal | Cohortes descritas, nada comparado | Tendencia cohorte-a-cohorte mostrada sin indicadores | Tendencia entre períodos de adquisición leída correctamente, más indicadores comportamentales principales de churn vinculados a detección |
+| कोहोर्ट परिभाषा की कठोरता | सीमाएँ अस्पष्ट; एक उपयोगकर्ता दो कोहोर्ट में हो सकता है | परस्पर अनन्य पर प्रवेश घटना कमज़ोर रूप से उचित | असंदिग्ध प्रवेश घटना और तारीख़ सीमाएँ, परिभाषा के समझौते बताए गए |
+| पठार और अवधि की ईमानदारी | रिटेंशन इतनी छोटी अवधि से पढ़ा गया जो उसे सँभाल नहीं सकती | पठार का दावा पर कहाँ है यह नहीं दिखाया | पठार दिखता और स्थित है, या अवधि स्पष्ट रूप से उसकी पुष्टि के लिए बहुत छोटी घोषित |
+| LTV का आधार | LTV मानी गई रिटेंशन या मानी गई ARPU से | देखा गया डेटा उपयोग हुआ पर प्रक्षेपण विधि नहीं बताई | LTV देखे गए रिटेंशन × देखे गए ARPU से बनी, प्रक्षेपण विधि और क्षय धारणा दिखाई गई |
+| रुझान और अग्रणी-संकेतक का लाभ | कोहोर्ट का वर्णन, कोई तुलना नहीं | कोहोर्ट-दर-कोहोर्ट रुझान दिखाया पर संकेतक नहीं | अधिग्रहण अवधियों में रुझान सही पढ़ा गया, साथ में पहचान से जुड़े चर्न के व्यवहारिक अग्रणी संकेतक |
 
-## Quality Checks
+## गुणवत्ता जाँच
 
-Ejecuta todos los checks antes de entregar output. No marques un check como pasado a menos que sea verificablemente verdadero dado los datos suministrados.
+आउटपुट सौंपने से पहले सभी जाँचें चलाएँ। दिए गए डेटा के आधार पर सत्यापन योग्य रूप से सच न हो तो किसी जाँच को पास न मानें।
 
-- [ ] **Exclusividad mutua:** Ningún usuario puede aparecer en dos cohortes — evento de entrada y límites de fecha son unambiguos
-- [ ] **Meseta de retención:** La curva muestra una meseta visible, o el análisis explícitamente declara la ventana demasiado corta para confirmar una
-- [ ] **Grounding de LTV:** Las proyecciones de LTV usan retención observada y ARPU observado — no figuras asumidas
-- [ ] **Segmentos comportamentales:** Mutuamente excluyentes y colectivamente exhaustivos — cada usuario en alcance cae en exactamente un segmento
-- [ ] **Tamaño mínimo de cohorte:** Cualquier cohorte por debajo del threshold de confiabilidad está marcada y excluida de conclusiones de tendencias
-- [ ] **Señales de churn:** Todos los indicadores principales listados son observables en datos de producción, o explícitamente marcados como hipótesis
-- [ ] **Recomendaciones ancladas:** Cada recomendación referencia un hallazgo específico — no consejos de growth flotantes
-- [ ] **SQL adaptado:** La query usa los nombres de tabla/columna reales del usuario si esquema fue proporcionado
+- [ ] **परस्पर अनन्यता:** कोई उपयोगकर्ता दो कोहोर्ट में नहीं आ सकता — प्रवेश घटना और तारीख़ सीमाएँ असंदिग्ध हैं
+- [ ] **रिटेंशन पठार:** वक्र में स्पष्ट पठार दिखता है, या विश्लेषण स्पष्ट रूप से कहता है कि अवधि उसकी पुष्टि के लिए बहुत छोटी है
+- [ ] **LTV का आधार:** LTV प्रक्षेपण देखे गए रिटेंशन और देखे गए ARPU का उपयोग करते हैं — मानी गई संख्याओं का नहीं
+- [ ] **व्यवहार खंड:** परस्पर अनन्य और सामूहिक रूप से संपूर्ण — दायरे का हर उपयोगकर्ता ठीक एक खंड में आता है
+- [ ] **न्यूनतम कोहोर्ट आकार:** विश्वसनीयता सीमा से नीचे की हर कोहोर्ट चिह्नित और रुझान निष्कर्षों से बाहर
+- [ ] **चर्न संकेत:** सूचीबद्ध सभी अग्रणी संकेतक प्रोडक्शन डेटा में अवलोकन योग्य हैं, या स्पष्ट रूप से परिकल्पना चिह्नित
+- [ ] **सिफ़ारिशें जुड़ी हैं:** हर सिफ़ारिश किसी विशिष्ट निष्कर्ष का संदर्भ देती है — कोई हवा में तैरती ग्रोथ सलाह नहीं
+- [ ] **SQL ढाला गया:** स्कीमा दिया गया हो तो क्वेरी उपयोगकर्ता के वास्तविक टेबल/कॉलम नाम उपयोग करती है
 
 ---
 
-## Anti-Patterns
+## एंटी-पैटर्न
 
-Evita estos failure modes — producen análisis que parecen rigurosos pero no pueden ser confiados o actados.
+इन विफलता तरीकों से बचें — ये ऐसा विश्लेषण पैदा करते हैं जो कठोर दिखता है पर जिस पर भरोसा या कार्रवाई नहीं की जा सकती।
 
-| Anti-pattern | Por qué falla | Approach correcto |
+| एंटी-पैटर्न | क्यों विफल होता है | सही तरीका |
 |---|---|---|
-| Membresía de cohorte superpuesta | Los números de retención entre cohortes no pueden compararse | Define un único evento de entrada unambiguo; un usuario, una cohorte |
-| ARPU asumido en proyecciones de LTV | Oculta diferencias de segmento; produce un número que suena preciso pero no lo es | Usa ingresos observados por usuario retenido por período, desglosado por segmento |
-| Sacando conclusiones de cohortes undersized | La variación aleatoria se disfraza de signal | Marca tamaño mínimo de cohorte; excluye o caveata cohortes bajo threshold |
-| Conflating login con retención | Un usuario que inicia sesión pero no completa el evento clave no está retenido por definición | Retención = completación del evento de retención clave definido, no una sesión |
-| Fabricando estimados de lift | Números de impacto proyectado sin base de datos mislead decisiones de priorización | Si el impacto no puede estimarse de datos, decláralo y recomienda un test |
-| Recomendaciones genéricas | Consejos que podrían aplicar a cualquier producto SaaS no añade valor analítico | Cada recomendación debe referenciar un hallazgo específico de cohorte, segmento o señal |
+| ओवरलैपिंग कोहोर्ट सदस्यता | कोहोर्ट के बीच रिटेंशन संख्याओं की तुलना नहीं हो सकती | एक एकल, असंदिग्ध प्रवेश घटना परिभाषित करें; एक उपयोगकर्ता, एक कोहोर्ट |
+| LTV प्रक्षेपण में मानी गई ARPU | खंडों के अंतर छिपाती है; ऐसी संख्या देती है जो सटीक लगती है पर है नहीं | प्रति बनाए रखे उपयोगकर्ता प्रति अवधि देखा गया राजस्व उपयोग करें, खंड के अनुसार विभाजित |
+| कम आकार की कोहोर्ट से निष्कर्ष निकालना | यादृच्छिक भिन्नता संकेत का भेस धर लेती है | न्यूनतम कोहोर्ट आकार चिह्नित करें; सीमा से नीचे की कोहोर्ट बाहर रखें या चेतावनी दें |
+| लॉगिन को रिटेंशन मानना | जो उपयोगकर्ता लॉगिन करे पर मुख्य घटना पूरी न करे वह परिभाषा से बनाए रखा गया नहीं है | रिटेंशन = परिभाषित मुख्य रिटेंशन घटना का पूरा होना, सत्र नहीं |
+| बढ़त अनुमान गढ़ना | बिना डेटा आधार की प्रक्षेपित प्रभाव संख्याएँ प्राथमिकता निर्णयों को भटकाती हैं | अगर डेटा से प्रभाव का अनुमान नहीं लग सकता, तो यही कहें और एक टेस्ट सुझाएँ |
+| सामान्य सिफ़ारिशें | किसी भी SaaS प्रोडक्ट पर लागू हो सकने वाली सलाह कोई विश्लेषणात्मक मूल्य नहीं जोड़ती | हर सिफ़ारिश किसी विशिष्ट कोहोर्ट, खंड या संकेत निष्कर्ष का संदर्भ दे |
 
 ---
 
-## Frases Trigger
+## ट्रिगर वाक्य
 
-Esta skill se activa en frases incluyendo:
+यह स्किल इन जैसे वाक्यों पर सक्रिय होती है:
 
-- "Ejecuta un análisis de cohortes para [producto]"
-- "Analiza retención por mes de adquisición"
-- "¿Cuál es el LTV de usuarios de [canal] vs [canal]?"
-- "Construye un modelo de retención de cohortes desde"
+- "[प्रोडक्ट] के लिए कोहोर्ट विश्लेषण चलाओ"
+- "अधिग्रहण माह के अनुसार रिटेंशन का विश्लेषण करो"
+- "[चैनल] बनाम [चैनल] के उपयोगकर्ताओं का LTV क्या है?"
+- "इससे एक कोहोर्ट रिटेंशन मॉडल बनाओ
 
-## Ejemplos de Frases Trigger
+## उदाहरण ट्रिगर वाक्य
 
-- "Ejecuta un análisis de cohortes."
-- "Analiza retención por cohorte."
-- "Calcula valor de vida útil por período de adquisición."
+- "कोहोर्ट विश्लेषण चलाओ।"
+- "कोहोर्ट के अनुसार रिटेंशन का विश्लेषण करो।"
+- "अधिग्रहण अवधि के अनुसार लाइफ़टाइम वैल्यू निकालो।"
+
+इस स्किल को अपने ब्राउज़र में चलाएँ: https://mohitagw15856.github.io/pm-claude-skills/skill/cohort-analysis.html

@@ -1,51 +1,51 @@
 ---
-# machine-translated to es from skills/ab-test-planner/SKILL.md — review: pending. Native fixes welcome via PR.
+# machine-translated to hi from skills/ab-test-planner/SKILL.md — review: pending. Native fixes welcome via PR.
 name: ab-test-planner
-description: "Diseña pruebas A/B estadísticamente rigurosas para características de producto, cambios de UI, flujos de onboarding y experimentos de precios. Úsalo cuando te pidan configurar un experimento, diseñar una prueba A/B, calcular tamaño de muestra o interpretar resultados de pruebas. Produce un plan de prueba completo con hipótesis, definición de variantes, tamaño de muestra, estimación de duración, métricas de seguridad y una guía de interpretación de resultados."
+description: "प्रोडक्ट फ़ीचर, UI बदलाव, ऑनबोर्डिंग फ़्लो और प्राइसिंग प्रयोगों के लिए सांख्यिकीय रूप से कठोर A/B टेस्ट डिज़ाइन करें। जब कोई प्रयोग सेट करने, A/B टेस्ट डिज़ाइन करने, सैंपल साइज़ निकालने या टेस्ट के नतीजे समझाने को कहे, तब इसका उपयोग करें। परिकल्पना, वेरिएंट की परिभाषा, सैंपल साइज़, अवधि का अनुमान, गार्डरेल मेट्रिक और नतीजों की व्याख्या की गाइड के साथ एक पूरा टेस्ट प्लान तैयार करता है।"
 ---
 
-# Skill de Planificador de Pruebas A/B
+# A/B टेस्ट प्लानर स्किल
 
-Diseña experimentos que produzcan resultados confiables — no solo señales direccionales. Cada prueba incluye hipótesis, métricas de éxito, tamaño de muestra, duración e interpretación de resultados.
+ऐसे प्रयोग डिज़ाइन करें जिनके नतीजों पर भरोसा किया जा सके, सिर्फ़ दिशा का संकेत देने वाले नहीं। हर टेस्ट आउटपुट में परिकल्पना, सफलता के मेट्रिक, सैंपल साइज़, अवधि और नतीजों की व्याख्या की गाइड शामिल होती है।
 
-## Entradas Requeridas
+## आवश्यक इनपुट
 
-Trabaja con lo que se proporciona. Si falta algo de esto, produce igualmente el resultado completo: rellena cada vacío con un supuesto razonable marcado *(asumido, confirma)* y lista esos supuestos al final. Haz una pregunta solo cuando el tema central en sí esté ausente (no hay nada sobre lo que escribir).
-- **Qué se está probando** (característica, cambio de UI, copia, precios, paso de onboarding)
-- **Hipótesis** (o ayuda a formular una)
-- **Métrica primaria** (tasa de conversión, click-through, tasa de finalización, etc.)
-- **Tasa base** y **efecto mínimo detectable** (MDE)
-- **Usuarios elegibles diarios** (para calcular duración)
+जो दिया गया है उसी से काम करें। इनमें से कुछ न हो तो भी पूरा आउटपुट बनाएँ: हर खाली जगह को *(माना गया, पुष्टि करें)* चिह्नित एक उचित धारणा से भरें और अंत में उन धारणाओं की सूची दें। सवाल पहले सिर्फ़ तब पूछें जब मुख्य विषय ही न हो (लिखने के लिए कुछ हो ही नहीं)।
+- **क्या टेस्ट हो रहा है** (फ़ीचर, UI बदलाव, कॉपी, प्राइसिंग, ऑनबोर्डिंग का चरण)
+- **परिकल्पना** (या उसे बनाने में मदद माँगें)
+- **प्राथमिक मेट्रिक** (कन्वर्ज़न रेट, क्लिक-थ्रू, पूर्णता दर आदि)
+- **बेसलाइन दर** और **न्यूनतम पता लगाने योग्य प्रभाव** (MDE)
+- **प्रतिदिन योग्य उपयोगकर्ता** (अवधि निकालने के लिए)
 
-## Lista de Verificación de Diseño de Experimento
+## प्रयोग डिज़ाइन चेकलिस्ट
 
-Antes de ejecutar cualquier prueba, confirma:
-- [ ] Hipótesis clara con dirección predicha
-- [ ] Métrica primaria única (más hasta 2 métricas de seguridad)
-- [ ] Efecto mínimo detectable (MDE) definido
-- [ ] Tamaño de muestra calculado
-- [ ] Duración de prueba estimada
-- [ ] Segmento aislado (sin superposición con otras pruebas en ejecución)
-- [ ] Plan de reversión definido
+कोई भी टेस्ट चलाने से पहले पुष्टि करें:
+- [ ] अनुमानित दिशा के साथ स्पष्ट परिकल्पना
+- [ ] एक ही प्राथमिक मेट्रिक (साथ में अधिकतम 2 गार्डरेल मेट्रिक)
+- [ ] न्यूनतम पता लगाने योग्य प्रभाव (MDE) तय
+- [ ] सैंपल साइज़ की गणना हो चुकी
+- [ ] टेस्ट की अवधि का अनुमान
+- [ ] सेगमेंट अलग किया गया (चल रहे दूसरे टेस्ट से कोई ओवरलैप नहीं)
+- [ ] रोलबैक प्लान तय
 
-## Plantilla de Hipótesis
+## परिकल्पना टेम्पलेट
 
-> "Creemos que [cambio] causará que [métrica primaria] [aumente/disminuya] en [X%] para [segmento de usuario], porque [justificación basada en datos o perspectiva]."
+> "हम मानते हैं कि [बदलाव] से [उपयोगकर्ता सेगमेंट] के लिए [प्राथमिक मेट्रिक] [X%] [बढ़ेगा/घटेगा], क्योंकि [डेटा या इनसाइट पर आधारित तर्क]।"
 
-Nunca ejecutes una prueba sin una hipótesis direccional. "Veamos qué pasa" no es una hipótesis.
+बिना दिशा वाली परिकल्पना के कभी टेस्ट न चलाएँ। "देखते हैं क्या होता है" कोई परिकल्पना नहीं है।
 
-## Lógica de Calculadora de Tamaño de Muestra
+## सैंपल साइज़ कैलकुलेटर का तर्क
 
-Usa esta fórmula (proporciona el resultado, no la fórmula, al usuario):
+यह सूत्र उपयोग करें (उपयोगकर्ता को सूत्र नहीं, नतीजा दें):
 
-- **Tasa de conversión base:** Tasa actual de la métrica primaria
-- **MDE:** Cambio más pequeño que vale la pena detectar (recomendado incremento relativo de 10–20% para la mayoría de características)
-- **Poder estadístico:** 80% (estándar)
-- **Nivel de significancia:** 95% (p < 0.05)
+- **बेसलाइन कन्वर्ज़न रेट:** प्राथमिक मेट्रिक की मौजूदा दर
+- **MDE:** सबसे छोटा बदलाव जिसे पकड़ना सार्थक हो (ज़्यादातर फ़ीचर के लिए 10–20% सापेक्ष बढ़त की सिफ़ारिश)
+- **सांख्यिकीय शक्ति:** 80% (मानक)
+- **सार्थकता स्तर:** 95% (p < 0.05)
 
-Para escenarios comunes, proporciona estimaciones precalculadas:
+आम स्थितियों के लिए पहले से निकाले गए अनुमान दें:
 
-| Tasa Base | MDE (Relativo) | Muestra Requerida por Variante |
+| बेसलाइन दर | MDE (सापेक्ष) | प्रति वेरिएंट आवश्यक सैंपल |
 |---|---|---|
 | 5% | 20% | ~19,000 |
 | 10% | 15% | ~14,000 |
@@ -53,95 +53,97 @@ Para escenarios comunes, proporciona estimaciones precalculadas:
 | 40% | 10% | ~9,500 |
 | 60% | 5% | ~42,000 |
 
-Siempre advierte: "Estas son estimaciones. Usa una herramienta como la calculadora de Evan Miller o Statsig para precisión."
+हमेशा चेतावनी दें: "ये अनुमान हैं। सटीकता के लिए Evan Miller के कैलकुलेटर या Statsig जैसे टूल का उपयोग करें।"
 
-## Guía de Duración de Prueba
+## टेस्ट अवधि का मार्गदर्शन
 
-Mínimo: 2 semanas completas (para capturar estacionalidad semanal)
-Máximo: 4 semanas (el efecto de novedad distorsiona resultados más allá de esto)
+न्यूनतम: पूरे 2 सप्ताह (साप्ताहिक मौसमीपन पकड़ने के लिए)
+अधिकतम: 4 सप्ताह (इसके बाद नवीनता का प्रभाव नतीजे बिगाड़ देता है)
 
-`Duración = Muestra requerida ÷ (Tráfico diario × % expuesto)`
+`अवधि = आवश्यक सैंपल ÷ (दैनिक ट्रैफ़िक × % एक्सपोज़्ड)`
 
-Marca si el tráfico es demasiado bajo para alcanzar significancia en menos de 8 semanas — recomienda un enfoque diferente (p. ej., prueba de retención, investigación cualitativa).
+अगर ट्रैफ़िक इतना कम है कि 8 सप्ताह से कम में सार्थकता तक नहीं पहुँच सकता, तो इसे चिह्नित करें और दूसरा तरीका सुझाएँ (जैसे होल्डआउट टेस्ट, गुणात्मक रिसर्च)।
 
-## Formato de Resultado
+## आउटपुट फ़ॉर्मैट
 
-### Plan de Prueba A/B — [Nombre de Prueba] — [Fecha]
+### A/B टेस्ट प्लान — [टेस्ट का नाम] — [तारीख़]
 
-**Hipótesis:**
-> [Plantilla de hipótesis rellenada]
+**परिकल्पना:**
+> [भरा हुआ परिकल्पना टेम्पलेट]
 
-**Variantes:**
-- Control (A): [Experiencia actual]
-- Tratamiento (B): [Experiencia modificada — sé específico]
+**वेरिएंट:**
+- कंट्रोल (A): [मौजूदा अनुभव]
+- ट्रीटमेंट (B): [बदला हुआ अनुभव — ठोस रूप से बताएँ]
 
-**Métrica Primaria:** [Nombre de métrica + cómo se mide]
-**Métricas de Seguridad:** [Métricas que no deben degradarse]
+**प्राथमिक मेट्रिक:** [मेट्रिक का नाम + कैसे मापा जाता है]
+**गार्डरेल मेट्रिक:** [ऐसे मेट्रिक जो बिगड़ने नहीं चाहिए]
 
-**Segmento Objetivo:** [Quién ve la prueba — % de tráfico, tipo de usuario]
-**División de Tráfico:** [50/50 recomendado a menos que sea necesario escalar]
+**लक्षित सेगमेंट:** [टेस्ट किसे दिखेगा — ट्रैफ़िक का %, उपयोगकर्ता प्रकार]
+**ट्रैफ़िक विभाजन:** [50/50 की सिफ़ारिश, जब तक रैंप-अप की ज़रूरत न हो]
 
-**Tamaño de Muestra Requerido:** ~[N] usuarios por variante
-**Duración Estimada:** [X] semanas (basado en [Y] usuarios elegibles diarios)
-**Umbral de Significancia:** 95% de confianza, 80% de poder
+**आवश्यक सैंपल साइज़:** प्रति वेरिएंट ~[N] उपयोगकर्ता
+**अनुमानित अवधि:** [X] सप्ताह ([Y] प्रतिदिन योग्य उपयोगकर्ताओं के आधार पर)
+**सार्थकता सीमा:** 95% विश्वास, 80% शक्ति
 
-**Exclusiones:** [Cualquier segmento de usuario a excluir y por qué]
+**बहिष्करण:** [कौन से उपयोगकर्ता सेगमेंट बाहर रखे जाएँ और क्यों]
 
-**Disparador de Reversión:** Si [métrica de seguridad] se degrada en [X%], detén la prueba inmediatamente.
+**रोलबैक ट्रिगर:** अगर [गार्डरेल मेट्रिक] [X%] बिगड़े, तो टेस्ट तुरंत रोक दें।
 
-**Guía de Interpretación de Resultados:**
-- ✅ Desplegar si: Tratamiento muestra incremento de [X%]+ en métrica primaria al 95% de confianza Y las métricas de seguridad son estables
-- 🔄 Iterar si: La dirección es positiva pero no significativa — considera extender o rediseñar
-- ❌ Rechazar si: Sin incremento o dirección negativa a significancia
-- ⚠️ No concluyente: No despliegues. No lo llames una victoria.
+**नतीजों की व्याख्या गाइड:**
+- ✅ शिप करें अगर: ट्रीटमेंट 95% विश्वास पर प्राथमिक मेट्रिक में [X%]+ बढ़त दिखाए और गार्डरेल मेट्रिक स्थिर रहें
+- 🔄 दोहराएँ अगर: दिशा सकारात्मक है पर सार्थक नहीं — अवधि बढ़ाने या फिर से डिज़ाइन करने पर विचार करें
+- ❌ अस्वीकार करें अगर: सार्थकता पर कोई बढ़त नहीं या दिशा नकारात्मक
+- ⚠️ अनिर्णायक: शिप न करें। इसे जीत न कहें।
 
 ---
 
-## Directrices
+## दिशानिर्देश
 
-- Siempre recomienda en contra de revisar resultados antes de que la prueba alcance el tamaño de muestra planeado — explica el riesgo de p-hacking
-- Si el usuario quiere probar múltiples variantes, explica el problema de comparaciones múltiples y recomienda una corrección de Bonferroni o un enfoque Bayesiano
-- Si el tráfico es muy bajo (<1,000 usuarios/día), recomienda alternativas cualitativas: pruebas moderadas, pruebas de 5 segundos o entrevistas de usuarios
-- Nunca apruebes una prueba sin métricas de seguridad — siempre protege ingresos, retención o engagement central
+- नियोजित सैंपल साइज़ तक पहुँचने से पहले नतीजे झाँकने के विरुद्ध हमेशा सलाह दें — p-hacking का जोखिम समझाएँ
+- अगर उपयोगकर्ता कई वेरिएंट टेस्ट करना चाहे, तो multiple comparisons की समस्या समझाएँ और Bonferroni सुधार या Bayesian तरीका सुझाएँ
+- अगर ट्रैफ़िक बहुत कम है (<1,000 उपयोगकर्ता/दिन), तो गुणात्मक विकल्प सुझाएँ: मॉडरेटेड टेस्टिंग, 5-सेकंड टेस्ट, या उपयोगकर्ता साक्षात्कार
+- बिना गार्डरेल मेट्रिक वाले टेस्ट को कभी मंज़ूरी न दें — राजस्व, रिटेंशन या मुख्य एंगेजमेंट की हमेशा रक्षा करें
 
-## Anti-patrones
+## एंटी-पैटर्न
 
-- [ ] No ejecutes una prueba sin una hipótesis direccional — "veamos qué pasa" produce resultados no interpretables
-- [ ] No declares un ganador antes de alcanzar el tamaño de muestra preplaneado — revisar resultados inflala tasa de falsos positivos
-- [ ] No pruebes múltiples cambios independientes en una sola variante — no sabrás qué cambio causó el resultado
-- [ ] No uses métricas de engagement (clicks, tiempo en página) como métrica primaria cuando el objetivo es ingresos o retención — las métricas proxy engañan
-- [ ] No ignores las métricas de seguridad — un incremento de conversión que causa un pico de tickets de soporte no es una victoria
+- [ ] बिना दिशा वाली परिकल्पना के टेस्ट न चलाएँ — "देखते हैं क्या होता है" से ऐसे नतीजे मिलते हैं जिनकी व्याख्या नहीं हो सकती
+- [ ] पहले से तय सैंपल साइज़ तक पहुँचने से पहले विजेता घोषित न करें — नतीजे झाँकने से झूठे सकारात्मक बढ़ जाते हैं
+- [ ] एक ही वेरिएंट में कई स्वतंत्र बदलाव टेस्ट न करें — पता नहीं चलेगा कि नतीजा किस बदलाव से आया
+- [ ] जब लक्ष्य राजस्व या रिटेंशन हो, तब एंगेजमेंट मेट्रिक (क्लिक, पेज पर समय) को प्राथमिक मेट्रिक न बनाएँ — प्रॉक्सी मेट्रिक भटकाते हैं
+- [ ] गार्डरेल मेट्रिक की अनदेखी न करें — जिस कन्वर्ज़न बढ़त से सपोर्ट टिकट उछल जाएँ, वह जीत नहीं है
 
-## Materiales Más Profundos
+## गहरी सामग्री
 
-Este skill incluye archivos de soporte — úsalos cuando estén disponibles:
+यह स्किल सहायक फ़ाइलों के साथ आती है — उपलब्ध हों तो उनका उपयोग करें:
 
-- **`references/test-validity-traps.md`** — Las Trampas de Validez Que Silenciosamente Invalidan Pruebas A/B. Aplícalo mientras produces el resultado; contiene la calibración y los juicios que el resumen del método anterior comprime.
-- **`templates/test-plan.md`** — una versión para rellenar del entregable con los controles de calidad integrados. Ofrécelo cuando el usuario quiera trabajar el documento por sí mismo en lugar de tenerlo generado.
+- **`references/test-validity-traps.md`** — वे वैधता-जाल जो चुपचाप A/B टेस्ट को अमान्य कर देते हैं। आउटपुट बनाते समय इसे लागू करें; इसमें वह कैलिब्रेशन और निर्णय-विवेक है जिसे ऊपर का संक्षिप्त तरीका संकुचित कर देता है।
+- **`templates/test-plan.md`** — डिलिवरेबल का भरने योग्य संस्करण, गुणवत्ता-जाँच इनलाइन सहित। जब उपयोगकर्ता दस्तावेज़ खुद बनाना चाहे, उसे जनरेट करवाने के बजाय, तब यह पेश करें।
 
-## Rúbrica de Puntuación (0–40)
+## स्कोरिंग रूब्रिक (0–40)
 
-Puntúa cualquier resultado de este skill antes de entregarlo; 32+ es calidad para desplegar.
+इस स्किल का कोई भी आउटपुट सौंपने से पहले स्कोर करें; 32+ शिप-गुणवत्ता है।
 
-| Dimensión | 0 | 5 | 10 |
+| आयाम | 0 | 5 | 10 |
 |---|---|---|---|
-| Rigor estadístico | Sin tamaño de muestra, o un número sin baseline/MDE declarado detrás | Tamaño de muestra presente pero MDE es adivinado o copiado de la tabla de búsqueda sin verificar el baseline actual; poder/significancia no declarados | Tamaño de muestra derivado del baseline y MDE declarados al 80% de poder / 95% de confianza, duración verificada contra tráfico diario real y la ventana 2–4 semanas, y la salida de tráfico bajo invocada si no encaja |
-| Disciplina de hipótesis | "Veamos qué pasa" — sin dirección, sin magnitud, o múltiples cambios agrupados en una variante | Hipótesis direccional pero falta magnitud, segmento, o el *porque* basado en evidencia; pureza de variante no confirmada | Plantilla completa rellenada (cambio, métrica, dirección, magnitud, segmento, justificación citando datos), y el tratamiento aísla exactamente un cambio con ideas excluidas nombradas como pruebas de seguimiento |
-| Seguridad y reversión | Sin métricas de seguridad, o una línea de reversión sin umbral | Seguridades nombradas pero denominadores/definiciones ambiguas; disparador de reversión vago ("si las cosas se ven mal") | 1–2 seguridades protegiendo ingresos o engagement central con definiciones preacordadas, umbrales de reversión concretos, y la distinción peeking-vs-monitoreo-de-daños manejada explícitamente |
-| Preparación para decisión | Sin guía de interpretación; los resultados serán discutidos después del hecho | Desplegar/iterar/rechazar listados pero umbrales borrosos; resultado no concluyente faltante o tratado como victoria suave | Los cuatro resultados (desplegar / iterar / rechazar / no concluyente) mapeados a umbrales precomprometidos, incluyendo qué cuesta un resultado no concluyente y qué cada resultado cambia después |
+| सांख्यिकीय कठोरता | कोई सैंपल साइज़ नहीं, या ऐसा अंक जिसके पीछे कोई बेसलाइन/MDE नहीं बताया गया | सैंपल साइज़ है पर MDE अनुमान से लिया या वास्तविक बेसलाइन जाँचे बिना तालिका से उतारा गया; शक्ति/सार्थकता नहीं बताई | सैंपल साइज़ बताई गई बेसलाइन और MDE से 80% शक्ति / 95% विश्वास पर निकाला गया, अवधि वास्तविक दैनिक ट्रैफ़िक और 2–4 सप्ताह की खिड़की से जाँची गई, और फ़िट न बैठे तो कम-ट्रैफ़िक का निकास रास्ता अपनाया गया |
+| परिकल्पना अनुशासन | "देखते हैं क्या होता है" — न दिशा, न परिमाण, या एक वेरिएंट में कई बदलाव बंडल | दिशात्मक परिकल्पना पर परिमाण, सेगमेंट या साक्ष्य-आधारित *क्योंकि* गायब; वेरिएंट की शुद्धता की पुष्टि नहीं | पूरा टेम्पलेट भरा (बदलाव, मेट्रिक, दिशा, परिमाण, सेगमेंट, डेटा-आधारित तर्क), और ट्रीटमेंट ठीक एक बदलाव को अलग करता है, छोड़े गए विचार फ़ॉलो-अप टेस्ट के रूप में नामित |
+| गार्डरेल और रोलबैक | कोई गार्डरेल मेट्रिक नहीं, या बिना सीमा वाली रोलबैक लाइन | गार्डरेल नामित पर हर/परिभाषाएँ अस्पष्ट; रोलबैक ट्रिगर धुँधला ("अगर चीज़ें बुरी दिखें") | राजस्व या मुख्य एंगेजमेंट की रक्षा करने वाले 1–2 गार्डरेल, पहले से तय परिभाषाओं के साथ, ठोस रोलबैक सीमाएँ, और झाँकने बनाम नुक़सान-निगरानी का भेद स्पष्ट रूप से सँभाला गया |
+| निर्णय की तैयारी | कोई व्याख्या गाइड नहीं; नतीजों पर बाद में बहस होगी | शिप/दोहराएँ/अस्वीकार सूचीबद्ध पर सीमाएँ धुँधली; अनिर्णायक नतीजा गायब या हल्की जीत माना गया | चारों नतीजे (शिप / दोहराएँ / अस्वीकार / अनिर्णायक) पहले से तय सीमाओं से जुड़े, जिसमें अनिर्णायक नतीजे की लागत और हर नतीजे से आगे क्या बदलता है, शामिल |
 
-## Verificaciones de Calidad
+## गुणवत्ता जाँच
 
-- [ ] La hipótesis es direccional (predice una dirección y magnitud específicas, no "veamos")
-- [ ] La métrica primaria es singular (las métricas de seguridad son secundarias)
-- [ ] El tamaño de muestra se calcula del MDE y baseline reales (no adivinado)
-- [ ] La duración de prueba cuenta para estacionalidad semanal (mínimo 2 semanas)
-- [ ] Las métricas de seguridad están definidas (al menos una para proteger ingresos o engagement central)
-- [ ] El disparador de reversión se especifica con un umbral concreto
+- [ ] परिकल्पना दिशात्मक है (कोई खास दिशा और परिमाण बताती है, "देखते हैं" नहीं)
+- [ ] प्राथमिक मेट्रिक एक ही है (गार्डरेल मेट्रिक गौण हैं)
+- [ ] सैंपल साइज़ वास्तविक MDE और बेसलाइन से निकाला गया है (अनुमान नहीं)
+- [ ] टेस्ट अवधि में साप्ताहिक मौसमीपन का ध्यान है (न्यूनतम 2 सप्ताह)
+- [ ] गार्डरेल मेट्रिक परिभाषित हैं (राजस्व या मुख्य एंगेजमेंट की रक्षा के लिए कम से कम एक)
+- [ ] रोलबैक ट्रिगर एक ठोस सीमा के साथ बताया गया है
 
-## Frases Desencadenantes de Ejemplo
+## उदाहरण ट्रिगर वाक्य
 
-- "Configura un experimento."
-- "Diseña una prueba A/B."
-- "Calcula tamaño de muestra."
-- "Interpreta resultados de pruebas."
+- "एक प्रयोग सेट करो।"
+- "A/B टेस्ट डिज़ाइन करो।"
+- "सैंपल साइज़ निकालो।"
+- "टेस्ट के नतीजे समझाओ।"
+
+इस स्किल को अपने ब्राउज़र में चलाएँ: https://mohitagw15856.github.io/pm-claude-skills/skill/ab-test-planner.html

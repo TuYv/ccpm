@@ -1,150 +1,152 @@
 ---
-# machine-translated to es from skills/code-review-checklist/SKILL.md — review: pending. Native fixes welcome via PR.
+# machine-translated to hi from skills/code-review-checklist/SKILL.md — review: pending. Native fixes welcome via PR.
 name: code-review-checklist
-description: "Genera un checklist de revisión de código personalizado para cualquier pull request basado en el lenguaje, tipo de cambio y nivel de riesgo. Úsalo cuando te pidan revisar código, verificar un PR, revisar un pull request o generar un checklist de revisión de código. Produce un checklist enfocado con verificaciones específicas del lenguaje, profundidad apropiada al nivel de riesgo y una recomendación clara de aprobar o solicitar cambios."
+description: "किसी भी पुल रिक्वेस्ट के लिए भाषा, बदलाव के प्रकार और जोखिम स्तर के आधार पर एक अनुकूलित कोड रिव्यू चेकलिस्ट बनाएँ। जब कोई कोड की समीक्षा करने, PR जाँचने, पुल रिक्वेस्ट रिव्यू करने या कोड रिव्यू चेकलिस्ट बनाने को कहे, तब इसका उपयोग करें। भाषा-विशिष्ट जाँचों, जोखिम स्तर के अनुरूप गहराई और स्पष्ट approve/request-changes सिफ़ारिश के साथ एक केंद्रित चेकलिस्ट तैयार करता है।"
 ---
 
-# Habilidad de Checklist de Revisión de Código
+# कोड रिव्यू चेकलिस्ट स्किल
 
-Produce un checklist de revisión de código personalizado para un pull request específico — escalado al lenguaje, tipo de cambio y nivel de riesgo. No es una plantilla genérica.
+किसी विशिष्ट पुल रिक्वेस्ट के लिए अनुकूलित कोड रिव्यू चेकलिस्ट तैयार करता है — भाषा, बदलाव के प्रकार और जोखिम स्तर के अनुसार। कोई सामान्य टेम्पलेट नहीं।
 
-> **¿No es exactamente esto?** Usa `code-review-guide` cuando quieras realizar la revisión en sí con criterio senior, no solo un checklist.
+> **बिल्कुल यही नहीं चाहिए?** जब आप सिर्फ़ चेकलिस्ट नहीं, बल्कि वरिष्ठ विवेक के साथ रिव्यू खुद करना चाहें, तो `code-review-guide` का उपयोग करें।
 
-## Entradas Requeridas
+## आवश्यक इनपुट
 
-Trabaja con lo que se proporciona. Si falta alguna de estas, aún así produce el resultado completo: completa cada vacío con una suposición razonable marcada *(supuesto, confirma)* y lista esas suposiciones al final. Haz una pregunta solo cuando el tema central mismo falte (no hay nada sobre qué escribir).
-- **Lenguaje y framework** (p. ej. TypeScript + React / Python + FastAPI / Go)
-- **Tipo de cambio** (feature / bug fix / refactor / dependency upgrade / security patch / performance)
-- **Nivel de riesgo** (bajo / medio / alto / crítico)
-- **Descripción del PR** (pega la descripción o enlaza al PR)
-- **Código o diff** (opcional — pega archivos clave modificados o un `git diff`; mejora significativamente la especificidad del checklist)
-- **Contexto del autor** (nuevo en el equipo / experimentado / colaborador externo)
+जो दिया गया है उसी से काम करें। इनमें से कुछ न हो तो भी पूरा आउटपुट बनाएँ: हर खाली जगह को *(माना गया, पुष्टि करें)* चिह्नित एक उचित धारणा से भरें और अंत में उन धारणाओं की सूची दें। सवाल पहले सिर्फ़ तब पूछें जब मुख्य विषय ही न हो (लिखने के लिए कुछ हो ही नहीं)।
+- **भाषा और फ़्रेमवर्क** (जैसे TypeScript + React / Python + FastAPI / Go)
+- **बदलाव का प्रकार** (फ़ीचर / बग फ़िक्स / रीफ़ैक्टर / डिपेंडेंसी अपग्रेड / सुरक्षा पैच / प्रदर्शन)
+- **जोखिम स्तर** (निम्न / मध्यम / उच्च / गंभीर)
+- **PR विवरण** (विवरण पेस्ट करें या PR का लिंक दें)
+- **कोड या diff** (वैकल्पिक — मुख्य बदली हुई फ़ाइलें या `git diff` पेस्ट करें; चेकलिस्ट की विशिष्टता काफ़ी बढ़ जाती है)
+- **लेखक का संदर्भ** (नया सदस्य / अनुभवी / बाहरी योगदानकर्ता)
 
-## Formato de Salida
-
----
-
-# Revisión de Código: [Título o Referencia del PR]
-
-### 1. Descripción General del PR
-**Evaluación del alcance:** [Pequeño / Medio / Grande / Demasiado grande — debería dividirse]
-**Profundidad de revisión recomendada:** [Rápida / Estándar / Análisis profundo]
-**Tiempo estimado de revisión:** [p. ej. 20–30 min — usa aproximadamente 5 min por cada 50 líneas de diff como guía]
-
-### 2. Verificaciones de Corrección
-
-Verificaciones de corrección específicas del lenguaje — elige basándote en el lenguaje indicado:
-
-**Para TypeScript/JavaScript:**
-- Las definiciones de tipo coinciden con el uso real
-- Sin `any` implícito en código que no sea de prueba
-- Async/await utilizado consistentemente; sin promesas sin manejar
-- Manejo explícito de null/undefined
-
-**Para Python:**
-- Type hints presentes en funciones públicas
-- Manejo de excepciones específico (sin except desnudo)
-- Los recursos se cierran (context managers, bloques with)
-
-**Para Go:**
-- Los errores se manejan o se ignoran explícitamente con un comentario
-- La propagación de contexto es correcta
-- Los tiempos de vida de las goroutines están acotados
-
-[Incluye solo la sección que coincida con el lenguaje indicado]
-
-### 3. Verificaciones Específicas del Tipo de Cambio
-
-**Para corrección de bugs:**
-- Existe una prueba que habría detectado este bug
-- La corrección aborda la causa raíz, no el síntoma
-- Se verificaron rutas de código relacionadas para el mismo problema
-
-**Para features:**
-- Se cumplen los criterios de aceptación
-- Se manejan casos extremos (vacío, grande, concurrente)
-- Las rutas de error se prueban, no solo el caso de éxito
-- Se agregó telemetría/logging para debugging
-
-**Para refactors:**
-- El comportamiento no cambia (las pruebas aún pasan)
-- Sin scope creep — solo refactor
-- La complejidad se reduce, no solo se mueve
-
-**Para actualizaciones de dependencias:**
-- Se revisaron los cambios de ruptura
-- Se verificaron los avisos de seguridad
-- Se verificó la compatibilidad de licencias
-
-[Incluye solo la sección que coincida con el tipo de cambio indicado]
-
-### 4. Verificaciones Apropiadas al Nivel de Riesgo
-
-**Riesgo bajo:** corrección básica, convenciones de estilo, cobertura de pruebas
-**Riesgo medio:** arriba + plan de reversión, actualizaciones de monitoreo, consideraciones de rendimiento
-**Riesgo alto:** arriba + implicaciones de seguridad, seguridad de migración de datos, feature flag/despliegue gradual
-**Riesgo crítico:** arriba + plan de validación en staging, plan de respuesta ante incidentes, checklist de verificación posterior al despliegue
-
-### 5. Adecuación de Pruebas
-- Las pruebas unitarias cubren la lógica nueva
-- Las pruebas de integración cubren los cambios de contrato
-- Se prueban casos extremos
-- Se prueban modos de fallo
-- Pruebas de rendimiento si es sensible al rendimiento
-
-### 6. Marco de Decisión de Revisión
-
-**Aprobar si:** [2-3 condiciones específicas basadas en este PR]
-**Solicitar cambios si:** [Bloqueadores específicos]
-**Comentar (no bloqueante) si:** [Elementos dignos de discusión pero no bloqueantes para merge]
-
-### 7. Trampas Comunes para Este Tipo de Cambio
-Basándote en el tipo de cambio y lenguaje, señala 2-3 cosas que los revisores típicamente pasan por alto para esta combinación.
+## आउटपुट फ़ॉर्मैट
 
 ---
 
-## Materiales Más Profundos
+# कोड रिव्यू: [PR शीर्षक या संदर्भ]
 
-Esta habilidad viene con archivos de apoyo — úsalos cuando estén disponibles:
+### 1. PR अवलोकन
+**दायरे का आकलन:** [छोटा / मध्यम / बड़ा / बहुत बड़ा — बाँटना चाहिए]
+**अनुशंसित रिव्यू गहराई:** [सरसरी / मानक / गहन]
+**अनुमानित रिव्यू समय:** [जैसे 20–30 मिनट — मोटे अनुमान के लिए diff की हर 50 पंक्तियों पर 5 मिनट]
 
-- **`references/review-depth-calibration.md`** — Calibrando la Profundidad de Revisión: No Todos los PR Merecen los Mismos Ojos. Aplícalo mientras produces el resultado; contiene la calibración y decisiones de criterio que el resumen del método anterior comprime.
-- **`templates/review-record.md`** — una versión para rellenar del resultado con los gates de calidad en línea. Ofrécela cuando el usuario quiera trabajar el documento por sí mismo en lugar de tenerlo generado.
+### 2. शुद्धता जाँच
 
-## Rúbrica de Puntuación (0–40)
+भाषा-विशिष्ट शुद्धता जाँच — बताई गई भाषा के आधार पर चुनें:
 
-Puntúa cualquier resultado de esta habilidad antes de entregarlo; 32+ es calidad de envío.
+**TypeScript/JavaScript के लिए:**
+- टाइप परिभाषाएँ वास्तविक उपयोग से मेल खाती हैं
+- गैर-टेस्ट कोड में कोई अंतर्निहित `any` नहीं
+- Async/await का उपयोग सुसंगत; कोई अनहैंडल्ड प्रॉमिस नहीं
+- Null/undefined का संचालन स्पष्ट
 
-| Dimensión | 0 | 5 | 10 |
+**Python के लिए:**
+- सार्वजनिक फ़ंक्शन पर टाइप हिंट मौजूद
+- अपवाद संचालन विशिष्ट (कोई नंगा except नहीं)
+- संसाधन बंद किए जाते हैं (context manager, with ब्लॉक)
+
+**Go के लिए:**
+- त्रुटियाँ सँभाली गईं या टिप्पणी के साथ स्पष्ट रूप से अनदेखी की गईं
+- Context का प्रसार सही
+- Goroutine की आयु सीमित
+
+[सिर्फ़ बताई गई भाषा से मेल खाने वाला खंड शामिल करें]
+
+### 3. बदलाव-प्रकार-विशिष्ट जाँच
+
+**बग फ़िक्स के लिए:**
+- ऐसा टेस्ट मौजूद है जो इस बग को पकड़ लेता
+- फ़िक्स लक्षण नहीं, मूल कारण को संबोधित करता है
+- संबंधित कोड पथों में वही समस्या जाँची गई
+
+**फ़ीचर के लिए:**
+- स्वीकृति मानदंड पूरे
+- किनारे के मामले सँभाले गए (खाली, बड़ा, समवर्ती)
+- सिर्फ़ सुखद पथ नहीं, त्रुटि पथ भी टेस्ट किए गए
+- डीबगिंग के लिए टेलीमेट्री/लॉगिंग जोड़ी गई
+
+**रीफ़ैक्टर के लिए:**
+- व्यवहार अपरिवर्तित (टेस्ट अब भी पास)
+- कोई स्कोप क्रीप नहीं — सिर्फ़ रीफ़ैक्टर
+- जटिलता घटी, सिर्फ़ इधर-उधर नहीं हुई
+
+**डिपेंडेंसी अपग्रेड के लिए:**
+- Breaking changes की समीक्षा
+- सुरक्षा सलाहें जाँची गईं
+- लाइसेंस संगतता सत्यापित
+
+[सिर्फ़ बताए गए बदलाव-प्रकार से मेल खाने वाला खंड शामिल करें]
+
+### 4. जोखिम-अनुरूप जाँच
+
+**निम्न जोखिम:** बुनियादी शुद्धता, शैली परंपराएँ, टेस्ट कवरेज
+**मध्यम जोखिम:** ऊपर के + रोलबैक प्लान, मॉनिटरिंग अपडेट, प्रदर्शन संबंधी विचार
+**उच्च जोखिम:** ऊपर के + सुरक्षा निहितार्थ, डेटा माइग्रेशन की सुरक्षा, फ़ीचर फ़्लैग/क्रमिक रोलआउट
+**गंभीर जोखिम:** ऊपर के + स्टेजिंग सत्यापन योजना, इंसिडेंट रिस्पॉन्स योजना, तैनाती-पश्चात सत्यापन चेकलिस्ट
+
+### 5. टेस्टिंग की पर्याप्तता
+- यूनिट टेस्ट नए तर्क को कवर करते हैं
+- इंटीग्रेशन टेस्ट कॉन्ट्रैक्ट बदलावों को कवर करते हैं
+- किनारे के मामले टेस्ट किए गए
+- विफलता के तरीके टेस्ट किए गए
+- प्रदर्शन-संवेदनशील हो तो प्रदर्शन टेस्ट
+
+### 6. रिव्यू निर्णय ढाँचा
+
+**Approve करें अगर:** [इस PR पर आधारित 2-3 विशिष्ट शर्तें]
+**बदलाव माँगें अगर:** [विशिष्ट बाधाएँ]
+**टिप्पणी (गैर-अवरोधक) करें अगर:** [चर्चा योग्य पर मर्ज न रोकने वाले बिंदु]
+
+### 7. इस बदलाव-प्रकार के आम जाल
+बदलाव के प्रकार और भाषा के आधार पर 2-3 ऐसी चीज़ें चिह्नित करें जो समीक्षक इस संयोजन में आमतौर पर चूक जाते हैं।
+
+---
+
+## गहरी सामग्री
+
+यह स्किल सहायक फ़ाइलों के साथ आती है — उपलब्ध हों तो उनका उपयोग करें:
+
+- **`references/review-depth-calibration.md`** — रिव्यू की गहराई का कैलिब्रेशन: हर PR एक जैसी नज़र का हक़दार नहीं। आउटपुट बनाते समय इसे लागू करें; इसमें वह कैलिब्रेशन और निर्णय-विवेक है जिसे ऊपर का संक्षिप्त तरीका संकुचित कर देता है।
+- **`templates/review-record.md`** — डिलिवरेबल का भरने योग्य संस्करण, गुणवत्ता-जाँच इनलाइन सहित। जब उपयोगकर्ता दस्तावेज़ खुद बनाना चाहे, उसे जनरेट करवाने के बजाय, तब यह पेश करें।
+
+## स्कोरिंग रूब्रिक (0–40)
+
+इस स्किल का कोई भी आउटपुट सौंपने से पहले स्कोर करें; 32+ शिप-गुणवत्ता है।
+
+| आयाम | 0 | 5 | 10 |
 |---|---|---|---|
-| **Especificidad del lenguaje** | Las verificaciones podrían aplicarse a cualquier lenguaje — intercambiar un nombre de lenguaje no cambiaría nada | Se elige el bloque de lenguaje correcto, pero las verificaciones repiten la plantilla en lugar de los constructos de este PR | Cada verificación de corrección nombra un constructo que realmente está en el diff (goroutines, cadenas de promesas, context managers) |
-| **Calibración de profundidad-riesgo** | Misma profundidad independientemente del nivel de riesgo indicado | La profundidad se escala aproximadamente, pero los extras de alto riesgo (plan de reversión, despliegue por fases, monitoreo) faltan o son tokenistas | La profundidad coincide exactamente con el riesgo indicado y la estimación de tiempo de revisión sigue la guía de tamaño de diff |
-| **Nitidez del marco de decisión** | "Aprobar si se ve bien" — sin condiciones nombradas | Se enumeran bloqueadores pero no son verificables; un revisor no puede decir cuándo están satisfechos | Cada condición de aprobación/bloqueo/comentario es verificable contra una prueba, bandera, métrica o artefacto específico |
-| **Especificidad de trampa** | Trampas ausentes o genéricas ("cuidado con los bugs") | Las trampas coinciden con el lenguaje *o* el tipo de cambio, pero no con la combinación | 2–3 trampas que solo tienen sentido para esta combinación exacta de lenguaje + tipo de cambio |
+| **भाषा विशिष्टता** | जाँचें किसी भी भाषा पर लागू हो सकती हैं — भाषा का नाम बदल देने से कुछ नहीं बदलेगा | सही भाषा ब्लॉक चुना, पर जाँचें इस PR के निर्माणों के बजाय टेम्पलेट दोहराती हैं | हर शुद्धता जाँच diff में वास्तव में मौजूद किसी निर्माण का नाम लेती है (goroutine, promise chain, context manager) |
+| **जोखिम-गहराई कैलिब्रेशन** | बताए गए जोखिम स्तर की परवाह किए बिना एक ही गहराई | गहराई मोटे तौर पर बढ़ती है, पर उच्च-जोखिम के अतिरिक्त (रोलबैक प्लान, चरणबद्ध रोलआउट, मॉनिटरिंग) गायब या नाममात्र | गहराई बताए गए जोखिम से ठीक मेल खाती है और रिव्यू-समय का अनुमान diff आकार की गाइड का पालन करता है |
+| **निर्णय ढाँचे की धार** | "ठीक लगे तो approve करें" — कोई नामित शर्त नहीं | बाधाएँ सूचीबद्ध पर अपरीक्ष्य; समीक्षक नहीं बता सकता कि वे कब पूरी हुईं | हर approve/block/comment शर्त किसी विशिष्ट टेस्ट, फ़्लैग, मेट्रिक या आर्टिफ़ैक्ट से जाँची जा सकती है |
+| **जालों की विशिष्टता** | जाल अनुपस्थित या सामान्य ("बग से सावधान रहें") | जाल भाषा *या* बदलाव-प्रकार से मेल खाते हैं, संयोजन से नहीं | 2–3 जाल जो सिर्फ़ इसी भाषा + बदलाव-प्रकार के संयोजन के लिए अर्थ रखते हैं |
 
-## Verificaciones de Calidad
-- [ ] El checklist está personalizado al lenguaje indicado (no genérico)
-- [ ] Se incluye la sección específica del tipo de cambio
-- [ ] La profundidad apropiada al riesgo coincide con el nivel de riesgo indicado
-- [ ] El marco de decisión incluye al menos una condición de bloqueo nombrada y una condición de comentario no bloqueante nombrada
-- [ ] Las trampas comunes son específicas de la combinación lenguaje + tipo de cambio indicada (no consejos genéricos como "cuidado con los bugs")
+## गुणवत्ता जाँच
+- [ ] चेकलिस्ट बताई गई भाषा के अनुरूप है (सामान्य नहीं)
+- [ ] बदलाव-प्रकार-विशिष्ट खंड शामिल है
+- [ ] जोखिम-अनुरूप गहराई बताए गए जोखिम स्तर से मेल खाती है
+- [ ] निर्णय ढाँचे में कम से कम एक नामित अवरोधक शर्त और एक नामित गैर-अवरोधक टिप्पणी शर्त है
+- [ ] आम जाल बताई गई भाषा + बदलाव-प्रकार के संयोजन के लिए विशिष्ट हैं ("बग से सावधान रहें" जैसी सामान्य सलाह नहीं)
 
-## Antipatrones
+## एंटी-पैटर्न
 
-- [ ] No generes un checklist genérico que ignore el lenguaje indicado — un checklist de Python y uno de Go tienen preocupaciones de corrección fundamentalmente diferentes
-- [ ] No trates "se ve bien" como un resultado válido de revisión — el checklist existe para surfacear preocupaciones específicas, no para validar una lectura superficial
-- [ ] No delimites una revisión de "riesgo alto" igual que una de "riesgo bajo" — la profundidad debe escalar con el nivel de riesgo indicado
-- [ ] No señales cada preferencia estilística como un problema de bloqueo — distingue entre problemas de corrección bloqueantes y comentarios no bloqueantes
-- [ ] No omitas la sección "trampas comunes" para la combinación de lenguaje y tipo de cambio indicada — aquí es donde vive el conocimiento más valioso
+- [ ] बताई गई भाषा की अनदेखी करने वाली सामान्य चेकलिस्ट न बनाएँ — Python और Go की चेकलिस्ट की शुद्धता चिंताएँ मूलतः अलग होती हैं
+- [ ] "ठीक लग रहा है" को मान्य रिव्यू नतीजा न मानें — चेकलिस्ट विशिष्ट चिंताओं को सामने लाने के लिए है, सतही पढ़ाई को सही ठहराने के लिए नहीं
+- [ ] "उच्च जोखिम" रिव्यू का दायरा "निम्न जोखिम" जैसा न रखें — गहराई बताए गए जोखिम स्तर के साथ बढ़नी चाहिए
+- [ ] हर शैलीगत पसंद को अवरोधक मुद्दा न बनाएँ — अवरोधक शुद्धता मुद्दों और गैर-अवरोधक टिप्पणियों में भेद करें
+- [ ] बताई गई भाषा और बदलाव-प्रकार के संयोजन का "आम जाल" खंड न छोड़ें — सबसे मूल्यवान ज्ञान यहीं रहता है
 
-## Ejemplos de Uso
-- "Genera un checklist de revisión de código para [descripción del PR]"
-- "¿Qué debo verificar en este pull request?"
-- "Dame un checklist de revisión de código para un [lenguaje] [tipo de cambio]"
-- "Checklist de revisión para un PR de riesgo alto en [lenguaje]"
+## उपयोग के उदाहरण
+- "[PR विवरण] के लिए कोड रिव्यू चेकलिस्ट बनाओ"
+- "इस पुल रिक्वेस्ट में मुझे क्या जाँचना चाहिए?"
+- "[भाषा] [बदलाव-प्रकार] के लिए कोड रिव्यू चेकलिस्ट दो"
+- "[भाषा] में उच्च-जोखिम PR के लिए रिव्यू चेकलिस्ट"
 
-## Frases Desencadenantes de Ejemplo
+## उदाहरण ट्रिगर वाक्य
 
-- "Revisa código."
-- "Verifica un PR."
-- "Revisa un pull request."
-- "Genera un checklist de revisión de código."
+- "कोड रिव्यू करो।"
+- "एक PR जाँचो।"
+- "एक पुल रिक्वेस्ट रिव्यू करो।"
+- "कोड रिव्यू चेकलिस्ट बनाओ।"
+
+इस स्किल को अपने ब्राउज़र में चलाएँ: https://mohitagw15856.github.io/pm-claude-skills/skill/code-review-checklist.html
