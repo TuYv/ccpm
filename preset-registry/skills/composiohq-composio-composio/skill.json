@@ -1,7 +1,7 @@
 {
   "id": "composiohq-composio-composio",
   "name": "composio",
-  "description": "Route and complete Composio work across Composio For You and Composio Platform. Use when the user mentions Composio; wants an agent to use apps such as Gmail, Slack, GitHub, Notion, Calendar, or Linear; needs first-time setup, an SDK or MCP integration, CLI operation, migration guidance, current documentation, or help diagnosing a connection or tool call.",
+  "description": "Route and complete Composio work across Composio For You and Composio Platform. Use when the user mentions Composio; wants an agent to use apps such as Gmail, Slack, GitHub, Notion, Calendar, or Linear; needs first-time setup, an SDK or MCP integration, CLI operation, tool approvals, Firewall hooks, a custom MCP server, migration guidance, current documentation, or help diagnosing a connection or tool call.",
   "category": "自动化集成",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/ComposioHQ/composio/blob/next/skills/composio/SKILL.md",
     "path": "skills/composio/SKILL.md",
     "branch": "next",
-    "discovered_at": "2026-11-09T06:40:03.451Z",
-    "stars": 30988,
+    "discovered_at": "2026-11-09T17:50:37.503Z",
+    "stars": 31000,
     "language": "TypeScript",
-    "pushed_at": "2026-11-09T06:35:10Z",
+    "pushed_at": "2026-11-09T17:39:47Z",
     "license": "MIT"
-  },
-  "summary_zh": "面向 AI 智能体的应用集成平台，可连接 Gmail、Slack、GitHub 等服务，适合配置工具调用、接入 SDK/MCP 及排查连接问题。"
+  }
 }

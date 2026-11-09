@@ -1,8 +1,8 @@
 {
   "id": "donchitos-claude-code-game-studios-changelog",
   "name": "changelog",
-  "description": "Auto-generate a changelog from git commits and sprint data. Internal and player-facing versions.",
-  "category": "设计创意",
+  "description": "Old name of /write-changelog. Prints one line, then runs /write-changelog.",
+  "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/Donchitos/Claude-Code-Game-Studios/blob/main/.claude/skills/changelog/SKILL.md",
     "path": ".claude/skills/changelog/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-09T07:20:20.916Z",
-    "stars": 37147,
+    "discovered_at": "2026-11-09T18:28:48.223Z",
+    "stars": 37450,
     "language": "Shell",
-    "pushed_at": "2026-10-19T02:43:42Z",
+    "pushed_at": "2026-11-09T15:23:49Z",
     "license": "MIT"
   }
 }

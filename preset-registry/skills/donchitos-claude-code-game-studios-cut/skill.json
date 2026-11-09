@@ -1,0 +1,25 @@
+{
+  "id": "donchitos-claude-code-game-studios-cut",
+  "name": "cut",
+  "description": "Proposes cuts and a polish list to finish the game from its brief and what is built; the person picks each cut. A game to sell also gets a release date and a feature freeze. Use when asked what to cut, how to finish or ship it, or for a polish list.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Donchitos",
+  "install_path": ".claude/skills/cut/SKILL.md",
+  "source": {
+    "repo": "Donchitos/Claude-Code-Game-Studios",
+    "url": "https://github.com/Donchitos/Claude-Code-Game-Studios/blob/main/.claude/skills/cut/SKILL.md",
+    "path": ".claude/skills/cut/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-09T18:28:49.574Z",
+    "stars": 37450,
+    "language": "Shell",
+    "pushed_at": "2026-11-09T15:23:49Z",
+    "license": "MIT"
+  }
+}

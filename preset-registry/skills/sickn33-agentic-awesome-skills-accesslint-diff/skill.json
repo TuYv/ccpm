@@ -1,7 +1,7 @@
 {
   "id": "sickn33-agentic-awesome-skills-accesslint-diff",
   "name": "accesslint-diff",
-  "description": "Diff a live page's accessibility violations against a baseline — by default compares uncommitted changes (stash-based), or pass --branch [<name>] to diff against a branch. Reports only new violations introduced, violations fixed, and pre-existing count. Use `scan` for a full audit with no diffing.",
+  "description": "Diff a live page's accessibility violations against a baseline — by default compares uncommitted changes (stash-based), or pass --branch [name] to diff against a branch. Reports only new violations introduced, violations fixed, and pre-existing count. Use `scan` for a full audit with no diffing.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/sickn33/agentic-awesome-skills/blob/main/plugins/agentic-awesome-skills-claude/skills/accesslint-diff/SKILL.md",
     "path": "plugins/agentic-awesome-skills-claude/skills/accesslint-diff/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-09T07:19:47.059Z",
-    "stars": 49387,
+    "discovered_at": "2026-11-09T18:28:13.278Z",
+    "stars": 49410,
     "language": "Python",
-    "pushed_at": "2026-11-08T14:10:48Z",
+    "pushed_at": "2026-11-09T18:27:13Z",
     "license": "MIT"
-  },
-  "summary_zh": "用于对比网页改动前后的无障碍问题，只报告新增和已修复项，适合在提交或分支合并前做增量检查。"
+  }
 }

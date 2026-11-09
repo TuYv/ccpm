@@ -1,7 +1,7 @@
 {
   "id": "orchestratorinc-agent-orchestrator-ao-orchestrator",
   "name": "ao-orchestrator",
-  "description": ">- Talk to a project's AO orchestrator: pass the user's request to it, wait for its reply and relay it. The default route for starting or changing work, \"catch me up\", \"why\", \"what next\" and plans. Use for \"in <project>: <ask>\", \"tell the orchestrator ...\", \"catch me up on <project>\", \"start work on ...\".",
+  "description": ">- Talk to a project's Orchestrator orchestrator: pass the user's request to it, wait for its reply and relay it. The default route for starting or changing work, \"catch me up\", \"why\", \"what next\" and plans. Use for \"in <project>: <ask>\", \"tell the orchestrator ...\", \"catch me up on <project>\", \"start work on ...\".",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/OrchestratorInc/agent-orchestrator/blob/main/integrations/grok-bot/skills/ao-orchestrator/SKILL.md",
     "path": "integrations/grok-bot/skills/ao-orchestrator/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-09T06:41:21.128Z",
-    "stars": 14305,
+    "discovered_at": "2026-11-09T17:51:49.077Z",
+    "stars": 14351,
     "language": "TypeScript",
-    "pushed_at": "2026-11-09T06:37:29Z",
+    "pushed_at": "2026-11-09T17:49:43Z",
     "license": "Apache-2.0"
   }
 }

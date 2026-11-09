@@ -1,8 +1,8 @@
 {
   "id": "donchitos-claude-code-game-studios-setup-engine",
   "name": "setup-engine",
-  "description": "Configure engine and version. Pins it in CLAUDE.md; WebSearch fills reference docs when the version is beyond LLM training data.",
-  "category": "设计创意",
+  "description": "Sets up and pins the engine version: web for a new project unless Godot, Unity or Unreal is named. Use to choose or upgrade it.",
+  "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/Donchitos/Claude-Code-Game-Studios/blob/main/.claude/skills/setup-engine/SKILL.md",
     "path": ".claude/skills/setup-engine/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-09T07:20:26.308Z",
-    "stars": 37147,
+    "discovered_at": "2026-11-09T18:28:55.193Z",
+    "stars": 37450,
     "language": "Shell",
-    "pushed_at": "2026-10-19T02:43:42Z",
+    "pushed_at": "2026-11-09T15:23:49Z",
     "license": "MIT"
   }
 }

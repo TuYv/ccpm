@@ -1,0 +1,25 @@
+{
+  "id": "optimnow-cloud-finops-skills-overlay-template",
+  "name": "{org}-commitments-advisory",
+  "description": "Use together with the cloud-finops skill when sizing, renewing or reviewing compute commitments for {Org}. Adds {Org}'s coverage targets, the terms it negotiated and the decisions its committee already took, on top of the public reference finops-aws-commitments. Not for distribution. Triggers on Savings Plan renewal, RI expiry, coverage target, commitment review, {Org} commitment policy.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "OptimNow",
+  "install_path": ".claude/skills/overlay-template/SKILL.md",
+  "source": {
+    "repo": "OptimNow/cloud-finops-skills",
+    "url": "https://github.com/OptimNow/cloud-finops-skills/blob/main/docs/overlay-template/SKILL.md",
+    "path": "docs/overlay-template/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-09T18:43:49.554Z",
+    "stars": 66,
+    "language": "Python",
+    "pushed_at": "2026-11-09T17:26:29Z",
+    "license": "CC-BY-SA-4.0"
+  }
+}
