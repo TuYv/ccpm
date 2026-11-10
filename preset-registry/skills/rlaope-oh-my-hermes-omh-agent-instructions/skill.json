@@ -2,7 +2,7 @@
   "id": "rlaope-oh-my-hermes-omh-agent-instructions",
   "name": "omh-agent-instructions",
   "description": "[omh] Agent instruction file for a repo -- AGENTS.md, CLAUDE.md, a Cursor rule: write or update what an agent cannot derive from the code, inside a marked region, with every command verified or marked unverified and no counts that drift. Use when the user says: agent-instructions, agents.md, claude.md, gemini.md, copilot-instructions.md, .cursorrules, cursor rules, cursor rule.",
-  "category": "设计创意",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/rlaope/oh-my-hermes/blob/main/agent-skills/omh-agent-instructions/SKILL.md",
     "path": "agent-skills/omh-agent-instructions/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-09T18:42:46.532Z",
-    "stars": 5295,
+    "discovered_at": "2026-11-10T02:40:50.834Z",
+    "stars": 5311,
     "language": "Python",
-    "pushed_at": "2026-11-09T18:30:14Z",
+    "pushed_at": "2026-11-10T02:39:26Z",
     "license": "MIT"
   }
 }

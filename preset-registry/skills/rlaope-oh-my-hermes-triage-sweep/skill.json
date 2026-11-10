@@ -2,7 +2,7 @@
   "id": "rlaope-oh-my-hermes-triage-sweep",
   "name": "triage-sweep",
   "description": ">- Backfill labels across oh-my-hermes issues and pull requests. Run manually to sweep everything currently unlabeled, or pass a number to triage one item. Use when issues and PRs have accumulated without labels, after adding a new label to .github/labels.yml, or before a release when the backlog needs to be readable by area.",
-  "category": "设计创意",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/rlaope/oh-my-hermes/blob/main/.claude/skills/triage-sweep/SKILL.md",
     "path": ".claude/skills/triage-sweep/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-09T18:42:45.325Z",
-    "stars": 5295,
+    "discovered_at": "2026-11-10T02:40:50.275Z",
+    "stars": 5311,
     "language": "Python",
-    "pushed_at": "2026-11-09T18:30:14Z",
+    "pushed_at": "2026-11-10T02:39:26Z",
     "license": "MIT"
   }
 }

@@ -2,7 +2,7 @@
   "id": "rlaope-oh-my-hermes-review-sweep",
   "name": "review-sweep",
   "description": ">- Review oh-my-hermes pull requests that have not been reviewed at their current head commit. Run manually to sweep the open backlog, or pass a number to review one PR. Applies the repository's REVIEW.md policy and posts findings as a GitHub review with inline comments.",
-  "category": "设计创意",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/rlaope/oh-my-hermes/blob/main/.claude/skills/review-sweep/SKILL.md",
     "path": ".claude/skills/review-sweep/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-09T18:42:45.145Z",
-    "stars": 5295,
+    "discovered_at": "2026-11-10T02:40:50.155Z",
+    "stars": 5311,
     "language": "Python",
-    "pushed_at": "2026-11-09T18:30:14Z",
+    "pushed_at": "2026-11-10T02:39:26Z",
     "license": "MIT"
   }
 }

@@ -2,7 +2,7 @@
   "id": "rlaope-oh-my-hermes-omh-iac-change",
   "name": "omh-iac-change",
   "description": "[omh] Infrastructure-as-code change -- Terraform, OpenTofu, Pulumi, a Kubernetes manifest, a Helm chart: read the drift, the blast radius and the cost delta from the saved plan, then stage the apply behind a health gate with a rollback per stage. Use when the user says: iac-change, iac change, infrastructure as code, infrastructure-as-code, terraform plan, terraform apply, terraform state, terraform drift.",
-  "category": "设计创意",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/rlaope/oh-my-hermes/blob/main/agent-skills/omh-iac-change/SKILL.md",
     "path": "agent-skills/omh-iac-change/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-09T18:42:57.595Z",
-    "stars": 5295,
+    "discovered_at": "2026-11-10T02:40:58.038Z",
+    "stars": 5311,
     "language": "Python",
-    "pushed_at": "2026-11-09T18:30:14Z",
+    "pushed_at": "2026-11-10T02:39:26Z",
     "license": "MIT"
   }
 }
