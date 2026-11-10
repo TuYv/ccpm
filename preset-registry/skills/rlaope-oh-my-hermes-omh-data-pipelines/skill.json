@@ -2,7 +2,7 @@
   "id": "rlaope-oh-my-hermes-omh-data-pipelines",
   "name": "omh-data-pipelines",
   "description": "[omh] Data pipeline work -- an ETL or streaming job, a backfill or replay, duplicate events, a schema change downstream, a lineage question, a data-quality regression: make every rerun idempotent, bound every replay, and gate each load on observed checks. Use when the user says: data-pipelines, data pipeline, data pipelines, etl, elt, etl pipeline, etl job, etl backfill.",
-  "category": "测试调试",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/rlaope/oh-my-hermes/blob/main/agent-skills/omh-data-pipelines/SKILL.md",
     "path": "agent-skills/omh-data-pipelines/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-10T02:40:54.407Z",
-    "stars": 5311,
+    "discovered_at": "2026-11-10T10:58:08.528Z",
+    "stars": 5329,
     "language": "Python",
-    "pushed_at": "2026-11-10T02:39:26Z",
+    "pushed_at": "2026-11-10T10:49:06Z",
     "license": "MIT"
   }
 }

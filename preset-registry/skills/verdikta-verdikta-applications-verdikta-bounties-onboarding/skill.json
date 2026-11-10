@@ -1,0 +1,25 @@
+{
+  "id": "verdikta-verdikta-applications-verdikta-bounties-onboarding",
+  "name": "verdikta-bounties-onboarding",
+  "description": "Verdikta Bounties hot-wallet operator for Base. Can create/import Ethereum keys into an encrypted keystore (its password is never stored; it comes from VERDIKTA_WALLET_PASSWORD via a secret store or a prompt), keep an API key, upload public bounty/work data, call the reviewed Verdikta API and Base RPC, and sign irreversible mainnet/testnet transactions within an owner spend policy. Use fresh low-balance wallets only. Commissions a verdikta-discover work-order draft when the owner approves it in ",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "verdikta",
+  "install_path": ".claude/skills/verdikta-bounties-onboarding/SKILL.md",
+  "source": {
+    "repo": "verdikta/verdikta-applications",
+    "url": "https://github.com/verdikta/verdikta-applications/blob/main/skills/verdikta-bounties-onboarding/SKILL.md",
+    "path": "skills/verdikta-bounties-onboarding/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T10:59:00.367Z",
+    "stars": 50,
+    "language": "JavaScript",
+    "pushed_at": "2026-11-06T05:23:29Z",
+    "license": "MIT"
+  }
+}

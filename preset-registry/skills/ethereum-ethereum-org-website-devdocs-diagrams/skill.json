@@ -1,0 +1,25 @@
+{
+  "id": "ethereum-ethereum-org-website-devdocs-diagrams",
+  "name": "devdocs-diagrams",
+  "description": "Use when converting a developer-docs schematic PNG (gas.png, evm.png, tx.png, accounts.png, nodes.png, attestation_schematic.png, ...) into an interactive React diagram, or when editing src/components/Diagrams/ (InteractiveDiagram, the anatomy primitives, GasTx, GasEvm, TxApply, EvmZones, or any diagram folder), or reviewing a diagram's content for accuracy. One PR per diagram, or per page when diagrams share one.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ethereum",
+  "install_path": ".claude/skills/devdocs-diagrams/SKILL.md",
+  "source": {
+    "repo": "ethereum/ethereum-org-website",
+    "url": "https://github.com/ethereum/ethereum-org-website/blob/dev/.claude/skills/devdocs-diagrams/SKILL.md",
+    "path": ".claude/skills/devdocs-diagrams/SKILL.md",
+    "branch": "dev",
+    "discovered_at": "2026-11-10T10:06:45.136Z",
+    "stars": 5998,
+    "language": "Markdown",
+    "pushed_at": "2026-11-10T09:48:26Z",
+    "license": "MIT"
+  }
+}
