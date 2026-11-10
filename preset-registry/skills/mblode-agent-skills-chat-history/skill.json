@@ -1,0 +1,25 @@
+{
+  "id": "mblode-agent-skills-chat-history",
+  "name": "chat-history",
+  "description": "Recovers decisions, previous fixes, research, and what followed a prompt from past AI conversations, with source evidence. Use when asked to \"search past chats\", \"we fixed this before\", \"what followed this prompt\", or \"why did the plan change\". Reads local Claude Code, Codex, Grok, and Cursor history plus explicit ChatGPT or Claude exports.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mblode",
+  "install_path": ".claude/skills/chat-history/SKILL.md",
+  "source": {
+    "repo": "mblode/agent-skills",
+    "url": "https://github.com/mblode/agent-skills/blob/main/skills/chat-history/SKILL.md",
+    "path": "skills/chat-history/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T19:46:57.909Z",
+    "stars": 193,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-10T12:33:32Z",
+    "license": "MIT"
+  }
+}

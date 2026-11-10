@@ -1,0 +1,25 @@
+{
+  "id": "mblode-agent-skills-app-verification",
+  "name": "app-verification",
+  "description": "Builds and maintains a repo's own verification harness (verify CLI, doctor, worktree isolation, feature map, seed data) and a reproduce-first bug handoff. Use when asked to \"build a verification harness\", \"add a doctor command\", \"prove every feature still works\", or \"reproduce this bug report\".",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mblode",
+  "install_path": ".claude/skills/app-verification/SKILL.md",
+  "source": {
+    "repo": "mblode/agent-skills",
+    "url": "https://github.com/mblode/agent-skills/blob/main/skills/app-verification/SKILL.md",
+    "path": "skills/app-verification/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T19:46:57.378Z",
+    "stars": 193,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-10T12:33:32Z",
+    "license": "MIT"
+  }
+}

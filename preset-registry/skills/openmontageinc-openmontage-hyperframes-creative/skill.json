@@ -1,0 +1,25 @@
+{
+  "id": "openmontageinc-openmontage-hyperframes-creative",
+  "name": "hyperframes-creative",
+  "description": "Non-animation creative direction for HyperFrames videos. Use for design spec (frame.md / design.md) handling, palettes, typography, narration, beat planning, audio-reactive visuals, composition patterns, and brand / style decisions. For atomic motion patterns and scene blueprints, use `hyperframes-animation`.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "OpenMontageInc",
+  "install_path": ".claude/skills/hyperframes-creative/SKILL.md",
+  "source": {
+    "repo": "OpenMontageInc/OpenMontage",
+    "url": "https://github.com/OpenMontageInc/OpenMontage/blob/main/.agents/skills/hyperframes-creative/SKILL.md",
+    "path": ".agents/skills/hyperframes-creative/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:57:14.913Z",
+    "stars": 79381,
+    "language": "Python",
+    "pushed_at": "2026-11-09T06:23:55Z",
+    "license": "AGPL-3.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "scenario-labs-skills-scenario-zbrush-hard-surface",
+  "name": "scenario-zbrush-hard-surface",
+  "description": "Use when modeling hard surface in ZBrush 2026 (sci-fi helmet, weapon, prop, armor plates, mechanical parts, kitbash, vents, panel lines, bolts, concept to game asset), when using ZModeler, Dynamic Subdivision and creasing, Live Boolean, Knife, Clip, Slice or Trim curves, IMM, ArrayMesh, NanoMesh or Panel Loops, or when edges look razor sharp, a Make Boolean Mesh fails or leaves holes, planes look wobbly, Mirror And Weld erased an edit, or ZRemesher ruins a hard-surface part.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "scenario-labs",
+  "install_path": ".claude/skills/scenario-zbrush-hard-surface/SKILL.md",
+  "source": {
+    "repo": "scenario-labs/skills",
+    "url": "https://github.com/scenario-labs/skills/blob/main/skills/dcc/zbrush/scenario-zbrush-hard-surface/SKILL.md",
+    "path": "skills/dcc/zbrush/scenario-zbrush-hard-surface/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:50:25.560Z",
+    "stars": 3655,
+    "language": "Python",
+    "pushed_at": "2026-11-09T15:39:12Z",
+    "license": "MIT"
+  }
+}

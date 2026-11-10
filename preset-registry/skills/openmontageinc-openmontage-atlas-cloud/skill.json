@@ -1,0 +1,25 @@
+{
+  "id": "openmontageinc-openmontage-atlas-cloud",
+  "name": "atlas-cloud",
+  "description": "Generate or edit images and videos through the Atlas Cloud gateway. Use for Atlas-hosted Seedance 2.5/2.0, Gemini Omni Flash, MiniMax H3, Seedream 5.0, GPT Image 2, Nano Banana 2, or when one ATLASCLOUD_API_KEY should access multiple media model families.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "OpenMontageInc",
+  "install_path": ".claude/skills/atlas-cloud/SKILL.md",
+  "source": {
+    "repo": "OpenMontageInc/OpenMontage",
+    "url": "https://github.com/OpenMontageInc/OpenMontage/blob/main/.agents/skills/atlas-cloud/SKILL.md",
+    "path": ".agents/skills/atlas-cloud/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:57:07.898Z",
+    "stars": 79381,
+    "language": "Python",
+    "pushed_at": "2026-11-09T06:23:55Z",
+    "license": "AGPL-3.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "daveebbelaar-bama-layout-grid",
+  "name": "layout-grid",
+  "description": "Grid and alignment rules for a macOS SwiftUI app, with three checks that catch misalignment (a lint for off-grid numbers, a layout probe that measures real frames in snapshot mode, and a grid overlay). Use when building or reviewing a custom page, card, row, form, or sheet, after every build that touched layout, or when the user says something looks misaligned, crooked, cramped, or unevenly spaced.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daveebbelaar",
+  "install_path": ".claude/skills/layout-grid/SKILL.md",
+  "source": {
+    "repo": "daveebbelaar/bama",
+    "url": "https://github.com/daveebbelaar/bama/blob/main/skills/design/layout-grid/SKILL.md",
+    "path": "skills/design/layout-grid/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:52:20.227Z",
+    "stars": 1744,
+    "language": "Swift",
+    "pushed_at": "2026-11-05T13:09:56Z",
+    "license": "MIT"
+  }
+}

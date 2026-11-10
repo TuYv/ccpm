@@ -1,0 +1,25 @@
+{
+  "id": "mblode-agent-skills-release-tagging",
+  "name": "release-tagging",
+  "description": "Tags a Thistle Commons release and writes its notes. Use when asked to \"tag a release\", \"cut a release\", or \"what version should this be\".",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mblode",
+  "install_path": ".claude/skills/release-tagging/SKILL.md",
+  "source": {
+    "repo": "mblode/agent-skills",
+    "url": "https://github.com/mblode/agent-skills/blob/main/skills/agent-skills-creator/evals/fixtures/frontier-model-refresh/base/skills/release-tagging/SKILL.md",
+    "path": "skills/agent-skills-creator/evals/fixtures/frontier-model-refresh/base/skills/release-tagging/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T19:46:54.040Z",
+    "stars": 193,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-10T12:33:32Z",
+    "license": "MIT"
+  }
+}

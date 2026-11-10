@@ -1,0 +1,25 @@
+{
+  "id": "mblode-agent-skills-dx-audit",
+  "name": "dx-audit",
+  "description": "Audits libraries, CLIs, and SDKs using 38 rules for public contracts, package exports, piped output, errors, and configuration. Use when asked to \"audit my CLI\", \"review my SDK\", or diagnose package type resolution.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mblode",
+  "install_path": ".claude/skills/dx-audit/SKILL.md",
+  "source": {
+    "repo": "mblode/agent-skills",
+    "url": "https://github.com/mblode/agent-skills/blob/main/skills/dx-audit/SKILL.md",
+    "path": "skills/dx-audit/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T19:46:58.506Z",
+    "stars": 193,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-10T12:33:32Z",
+    "license": "MIT"
+  }
+}

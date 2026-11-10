@@ -1,0 +1,25 @@
+{
+  "id": "scenario-labs-skills-scenario-godot-multiplayer",
+  "name": "scenario-godot-multiplayer",
+  "description": "Use when a Godot 4 game goes online or co-op: host and join with ENet, WebSocket for a web build, RPCs (@rpc, rpc_id, any_peer), MultiplayerSpawner and MultiplayerSynchronizer, player authority, lobbies and login, a dedicated or headless server export, lag, rubber-banding, prediction or netfox, cheating, bandwidth, Steam, Nakama or WebRTC. Symptoms: players do not appear on the client, 'rpc node checksum failed', 'node not found' on an RPC, desync, the server build is huge, a client never connec",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "scenario-labs",
+  "install_path": ".claude/skills/scenario-godot-multiplayer/SKILL.md",
+  "source": {
+    "repo": "scenario-labs/skills",
+    "url": "https://github.com/scenario-labs/skills/blob/main/skills/game-engines/godot/scenario-godot-multiplayer/SKILL.md",
+    "path": "skills/game-engines/godot/scenario-godot-multiplayer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:50:28.470Z",
+    "stars": 3655,
+    "language": "Python",
+    "pushed_at": "2026-11-09T15:39:12Z",
+    "license": "MIT"
+  }
+}

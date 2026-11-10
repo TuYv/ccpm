@@ -1,0 +1,25 @@
+{
+  "id": "scenario-labs-skills-scenario-zbrush-sculpting",
+  "name": "scenario-zbrush-sculpting",
+  "description": "Use when an agent sculpts organic forms in ZBrush 2026 (sculpt a head, bust or creature in ZBrush from a sphere, ZSpheres or primitives); when blocking primary and secondary forms, choosing DynaMesh, Sculptris Pro or subdivision levels, or setting ClayBuildup, Dam_Standard, Move or TrimDynamic; when using masks, polygroups, Morph Targets or layers; or when scripted strokes miss, do nothing, come out too strong or leave marks, or a re-DynaMesh does nothing or loses polygroups.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "scenario-labs",
+  "install_path": ".claude/skills/scenario-zbrush-sculpting/SKILL.md",
+  "source": {
+    "repo": "scenario-labs/skills",
+    "url": "https://github.com/scenario-labs/skills/blob/main/skills/dcc/zbrush/scenario-zbrush-sculpting/SKILL.md",
+    "path": "skills/dcc/zbrush/scenario-zbrush-sculpting/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:50:26.436Z",
+    "stars": 3655,
+    "language": "Python",
+    "pushed_at": "2026-11-09T15:39:12Z",
+    "license": "MIT"
+  }
+}

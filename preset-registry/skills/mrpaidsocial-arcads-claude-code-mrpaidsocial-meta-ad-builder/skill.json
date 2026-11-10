@@ -1,0 +1,25 @@
+{
+  "id": "mrpaidsocial-arcads-claude-code-mrpaidsocial-meta-ad-builder",
+  "name": "meta-ad-builder",
+  "description": ">- Publish finished creatives as live Meta (Facebook/Instagram) ads via the Meta Marketing API, plus research and ad-copy support. Uploads an image or video, builds a multi-variant TEXT_LIQUIDITY creative, and creates a PAUSED ad in an existing ad set. Also pulls top-performing ads (ranked by ROAS) and competitor ads from the Ad Library to inform copy. Use when the user asks to deploy / publish / launch a creative as a Meta or Facebook ad, build a Meta ad, push a video or image into an ad set, p",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mrpaidsocial",
+  "install_path": ".claude/skills/meta-ad-builder/SKILL.md",
+  "source": {
+    "repo": "mrpaidsocial/arcads-claude-code-mrpaidsocial",
+    "url": "https://github.com/mrpaidsocial/arcads-claude-code-mrpaidsocial/blob/main/shared/skills/meta-ad-builder/SKILL.md",
+    "path": "shared/skills/meta-ad-builder/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:52:23.356Z",
+    "stars": 1674,
+    "language": "Python",
+    "pushed_at": "2026-10-19T19:46:15Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "mblode-agent-skills-ui-animation",
+  "name": "ui-animation",
+  "description": "Builds, reviews, and measures UI motion, including springs, gestures, scroll effects, curve fitting from recordings, and sparse interface sound. Use when asked to \"add animation\", \"match this easing\", \"reverse engineer this motion\", \"add a click sound\", or find animation opportunities.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mblode",
+  "install_path": ".claude/skills/ui-animation/SKILL.md",
+  "source": {
+    "repo": "mblode/agent-skills",
+    "url": "https://github.com/mblode/agent-skills/blob/main/skills/ui-animation/SKILL.md",
+    "path": "skills/ui-animation/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T19:47:01.700Z",
+    "stars": 193,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-10T12:33:32Z",
+    "license": "MIT"
+  }
+}

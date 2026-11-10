@@ -1,0 +1,25 @@
+{
+  "id": "daveebbelaar-bama-agent-cli",
+  "name": "agent-cli",
+  "description": "Optional command line and MCP server for a macOS app, so Claude Code, Codex, and scripts can drive it (list, add, change, search, act) through the running app. Use when the user wants agents to work with their app or its data, asks for a CLI, an MCP server, or automation for the app, or says \"Claude should be able to use my app\".",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daveebbelaar",
+  "install_path": ".claude/skills/agent-cli/SKILL.md",
+  "source": {
+    "repo": "daveebbelaar/bama",
+    "url": "https://github.com/daveebbelaar/bama/blob/main/skills/code/agent-cli/SKILL.md",
+    "path": "skills/code/agent-cli/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:52:18.374Z",
+    "stars": 1744,
+    "language": "Swift",
+    "pushed_at": "2026-11-05T13:09:56Z",
+    "license": "MIT"
+  }
+}

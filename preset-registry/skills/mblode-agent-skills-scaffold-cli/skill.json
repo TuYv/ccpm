@@ -1,0 +1,25 @@
+{
+  "id": "mblode-agent-skills-scaffold-cli",
+  "name": "scaffold-cli",
+  "description": "Scaffolds a TypeScript CLI and npm package with the house toolchain, dual tsdown outputs, CLI contracts, changesets, and publishing templates. Use when asked to \"scaffold a CLI\" or \"start an npm package\".",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mblode",
+  "install_path": ".claude/skills/scaffold-cli/SKILL.md",
+  "source": {
+    "repo": "mblode/agent-skills",
+    "url": "https://github.com/mblode/agent-skills/blob/main/skills/scaffold-cli/SKILL.md",
+    "path": "skills/scaffold-cli/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T19:47:00.527Z",
+    "stars": 193,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-10T12:33:32Z",
+    "license": "MIT"
+  }
+}

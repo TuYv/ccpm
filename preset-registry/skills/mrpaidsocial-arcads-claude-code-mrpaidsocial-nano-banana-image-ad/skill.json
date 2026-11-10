@@ -1,0 +1,25 @@
+{
+  "id": "mrpaidsocial-arcads-claude-code-mrpaidsocial-nano-banana-image-ad",
+  "name": "nano-banana-image-ad",
+  "description": ">- Generate one or more standalone Meta image-ad creatives via Nano Banana 2 / Nano Banana Pro (Gemini Flash Image family) through the Arcads external API. Locks the model family, auto-strips platform chrome, enforces edge-safe layouts. Use when the user asks for a \"Nano Banana ad\", \"Gemini image ad\", \"nano-banana-2 ad creative\", \"make a static image ad with Gemini\", or anchors on a need for photoreal / lifestyle / multi-reference / handheld-object / clay-texture ad creatives (sticky-note flatla",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mrpaidsocial",
+  "install_path": ".claude/skills/nano-banana-image-ad/SKILL.md",
+  "source": {
+    "repo": "mrpaidsocial/arcads-claude-code-mrpaidsocial",
+    "url": "https://github.com/mrpaidsocial/arcads-claude-code-mrpaidsocial/blob/main/skills/nano-banana-image-ad/SKILL.md",
+    "path": "skills/nano-banana-image-ad/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:52:24.997Z",
+    "stars": 1674,
+    "language": "Python",
+    "pushed_at": "2026-10-19T19:46:15Z",
+    "license": "MIT"
+  }
+}

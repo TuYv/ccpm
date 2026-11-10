@@ -1,0 +1,25 @@
+{
+  "id": "mblode-agent-skills-triage-errors",
+  "name": "triage-errors",
+  "description": "Triages the top production error for Copper Kettle and fixes its cause. Use when asked to \"triage errors\", \"what is breaking in prod\", or \"fix the top error\".",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mblode",
+  "install_path": ".claude/skills/triage-errors/SKILL.md",
+  "source": {
+    "repo": "mblode/agent-skills",
+    "url": "https://github.com/mblode/agent-skills/blob/main/skills/agents-md/evals/fixtures/shared-triage-skill/base/skills/triage-errors/SKILL.md",
+    "path": "skills/agents-md/evals/fixtures/shared-triage-skill/base/skills/triage-errors/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T19:46:56.955Z",
+    "stars": 193,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-10T12:33:32Z",
+    "license": "MIT"
+  }
+}

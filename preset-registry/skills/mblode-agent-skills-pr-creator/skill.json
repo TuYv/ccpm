@@ -1,0 +1,25 @@
+{
+  "id": "mblode-agent-skills-pr-creator",
+  "name": "pr-creator",
+  "description": "Creates or updates GitHub PRs with house-style titles and bodies, issue linking, repository templates, and draft state. Use when asked to \"create a PR\", \"open a PR\", \"rewrite the PR description\", or \"polish this PR\".",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mblode",
+  "install_path": ".claude/skills/pr-creator/SKILL.md",
+  "source": {
+    "repo": "mblode/agent-skills",
+    "url": "https://github.com/mblode/agent-skills/blob/main/skills/pr-creator/SKILL.md",
+    "path": "skills/pr-creator/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T19:46:59.725Z",
+    "stars": 193,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-10T12:33:32Z",
+    "license": "MIT"
+  }
+}

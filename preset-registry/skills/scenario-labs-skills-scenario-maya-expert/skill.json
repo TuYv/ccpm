@@ -1,0 +1,25 @@
+{
+  "id": "scenario-labs-skills-scenario-maya-expert",
+  "name": "scenario-maya-expert",
+  "description": "Use when doing any Autodesk Maya task through Python or a bridge, headless or live: maya.cmds or OpenMaya 2.0 scripts, mayapy or maya.standalone batch jobs, a commandPort or MCP connection into a running Maya, \"Maya 2027\", validating or exporting scenes, or a maya.cmds script that fails after the 2025 to 2027 changes (PySide6, OpenPBR, renamed math nodes, removed flags). Also when a Maya model, rig, shot or render must be judged like a professional before it is called done, or a brief must be ro",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "scenario-labs",
+  "install_path": ".claude/skills/scenario-maya-expert/SKILL.md",
+  "source": {
+    "repo": "scenario-labs/skills",
+    "url": "https://github.com/scenario-labs/skills/blob/main/skills/dcc/maya/scenario-maya-expert/SKILL.md",
+    "path": "skills/dcc/maya/scenario-maya-expert/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:50:22.759Z",
+    "stars": 3655,
+    "language": "Python",
+    "pushed_at": "2026-11-09T15:39:12Z",
+    "license": "MIT"
+  }
+}

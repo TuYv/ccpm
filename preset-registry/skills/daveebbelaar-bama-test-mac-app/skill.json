@@ -1,0 +1,25 @@
+{
+  "id": "daveebbelaar-bama-test-mac-app",
+  "name": "test-mac-app",
+  "description": "Test a macOS app at three levels, from Swift Testing unit tests and an in-app self-test to a debug bridge that lets an agent drive the running app and read its state, plus computer use for real clicks. Use when adding logic, fixing a bug, before a release, or when the user asks for tests, end-to-end checks, or \"make sure it works\".",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daveebbelaar",
+  "install_path": ".claude/skills/test-mac-app/SKILL.md",
+  "source": {
+    "repo": "daveebbelaar/bama",
+    "url": "https://github.com/daveebbelaar/bama/blob/main/skills/ship/test-mac-app/SKILL.md",
+    "path": "skills/ship/test-mac-app/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:52:22.002Z",
+    "stars": 1744,
+    "language": "Swift",
+    "pushed_at": "2026-11-05T13:09:56Z",
+    "license": "MIT"
+  }
+}

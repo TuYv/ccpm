@@ -1,0 +1,25 @@
+{
+  "id": "mblode-agent-skills-tidy-comments",
+  "name": "tidy-comments",
+  "description": "Improves code comments so they are clear, accurate, and useful. Use when asked to \"clean up the comments\", \"improve the comments\", or \"document this function\".",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mblode",
+  "install_path": ".claude/skills/tidy-comments/SKILL.md",
+  "source": {
+    "repo": "mblode/agent-skills",
+    "url": "https://github.com/mblode/agent-skills/blob/main/skills/agent-skills-creator/evals/fixtures/frontier-model-refresh/base/skills/tidy-comments/SKILL.md",
+    "path": "skills/agent-skills-creator/evals/fixtures/frontier-model-refresh/base/skills/tidy-comments/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T19:46:54.458Z",
+    "stars": 193,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-10T12:33:32Z",
+    "license": "MIT"
+  }
+}

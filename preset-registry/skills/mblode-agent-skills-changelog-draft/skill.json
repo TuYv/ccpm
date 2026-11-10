@@ -1,0 +1,25 @@
+{
+  "id": "mblode-agent-skills-changelog-draft",
+  "name": "changelog-draft",
+  "description": "Drafts the Fennel Desk release entry from the commits since the last tag. Use when asked to \"draft the changelog\", \"write the release entry\", or \"what changed since the last release\".",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mblode",
+  "install_path": ".claude/skills/changelog-draft/SKILL.md",
+  "source": {
+    "repo": "mblode/agent-skills",
+    "url": "https://github.com/mblode/agent-skills/blob/main/skills/agent-skills-creator/evals/fixtures/claude-only-frontmatter/base/skills/changelog-draft/SKILL.md",
+    "path": "skills/agent-skills-creator/evals/fixtures/claude-only-frontmatter/base/skills/changelog-draft/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T19:46:50.855Z",
+    "stars": 193,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-10T12:33:32Z",
+    "license": "MIT"
+  }
+}

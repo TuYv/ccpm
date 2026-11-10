@@ -1,0 +1,25 @@
+{
+  "id": "mblode-agent-skills-presentation-creator",
+  "name": "presentation-creator",
+  "description": "Builds decks with a story spine, house visual system, setting-specific density, and speaker notes. Use when asked to \"create a presentation\", \"write a pitch deck\", or \"turn this doc into slides\". Defaults to Marp; use an available presentation tool for editable PowerPoint.",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mblode",
+  "install_path": ".claude/skills/presentation-creator/SKILL.md",
+  "source": {
+    "repo": "mblode/agent-skills",
+    "url": "https://github.com/mblode/agent-skills/blob/main/skills/presentation-creator/SKILL.md",
+    "path": "skills/presentation-creator/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T19:46:59.926Z",
+    "stars": 193,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-10T12:33:32Z",
+    "license": "MIT"
+  }
+}

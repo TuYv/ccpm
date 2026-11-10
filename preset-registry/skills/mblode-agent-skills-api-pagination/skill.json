@@ -1,0 +1,25 @@
+{
+  "id": "mblode-agent-skills-api-pagination",
+  "name": "api-pagination",
+  "description": "Adds or fixes pagination on a Thistle Commons list endpoint. Use when asked to \"paginate this endpoint\", \"add a cursor\", or \"the list is truncated\".",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mblode",
+  "install_path": ".claude/skills/api-pagination/SKILL.md",
+  "source": {
+    "repo": "mblode/agent-skills",
+    "url": "https://github.com/mblode/agent-skills/blob/main/skills/agent-skills-creator/evals/fixtures/frontier-model-refresh/base/skills/api-pagination/SKILL.md",
+    "path": "skills/agent-skills-creator/evals/fixtures/frontier-model-refresh/base/skills/api-pagination/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T19:46:53.846Z",
+    "stars": 193,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-10T12:33:32Z",
+    "license": "MIT"
+  }
+}

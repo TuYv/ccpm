@@ -1,0 +1,25 @@
+{
+  "id": "avelikiy-great-cto-web-release",
+  "name": "web-release",
+  "description": "Release a web frontend (Vercel, Cloudflare Pages / Workers static assets, S3/CDN, Netlify) so that production serves exactly the build that was tested, and rolling back is one named command. Covers clean-tree builds, immutable preview deployments, E2E on the preview URL, promote by alias or route switch, build-id proof, cache purge, source maps, and rollback by re-aliasing the previous deployment. Use for any frontend ship step (\"выкати фронт\", \"промоутни в прод\", \"откати сайт\", \"почему на проде",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "avelikiy",
+  "install_path": ".claude/skills/web-release/SKILL.md",
+  "source": {
+    "repo": "avelikiy/great_cto",
+    "url": "https://github.com/avelikiy/great_cto/blob/main/skills/web-release/SKILL.md",
+    "path": "skills/web-release/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:10:25.478Z",
+    "stars": 115,
+    "language": "JavaScript",
+    "pushed_at": "2026-11-10T15:11:40Z",
+    "license": "MIT"
+  }
+}

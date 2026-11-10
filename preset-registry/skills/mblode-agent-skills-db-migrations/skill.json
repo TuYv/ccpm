@@ -1,0 +1,25 @@
+{
+  "id": "mblode-agent-skills-db-migrations",
+  "name": "db-migrations",
+  "description": "Writes and applies Postgres schema migrations for Saltmarsh Booking. Use when asked to \"add a column\", \"write a migration\", \"add an index\", or \"drop a column\".",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mblode",
+  "install_path": ".claude/skills/db-migrations/SKILL.md",
+  "source": {
+    "repo": "mblode/agent-skills",
+    "url": "https://github.com/mblode/agent-skills/blob/main/skills/agents-md/evals/fixtures/instruction-creep/base/.claude/skills/db-migrations/SKILL.md",
+    "path": "skills/agents-md/evals/fixtures/instruction-creep/base/.claude/skills/db-migrations/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T19:46:55.838Z",
+    "stars": 193,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-10T12:33:32Z",
+    "license": "MIT"
+  }
+}

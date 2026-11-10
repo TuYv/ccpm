@@ -1,0 +1,25 @@
+{
+  "id": "mblode-agent-skills-database",
+  "name": "database",
+  "description": "Comprehensive guidance for all database work in the Mossback platform. Covers models, schemas, tables, columns, indexes, constraints, relations, entities, data models, model definitions, model fields, migrations, seeds, queries, joins, transactions, connection pooling, query performance, the ORM, repositories, and data access patterns in general. Also covers Postgres configuration, extensions, backups, restores, replication, and local database setup. Helps with designing a new model, changing an",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mblode",
+  "install_path": ".claude/skills/database/SKILL.md",
+  "source": {
+    "repo": "mblode/agent-skills",
+    "url": "https://github.com/mblode/agent-skills/blob/main/skills/agent-skills-creator/evals/fixtures/crowded-skill-listing/base/.agents/skills/database/SKILL.md",
+    "path": "skills/agent-skills-creator/evals/fixtures/crowded-skill-listing/base/.agents/skills/database/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T19:46:52.063Z",
+    "stars": 193,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-10T12:33:32Z",
+    "license": "MIT"
+  }
+}

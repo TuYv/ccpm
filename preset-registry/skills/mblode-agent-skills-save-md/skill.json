@@ -1,0 +1,25 @@
+{
+  "id": "mblode-agent-skills-save-md",
+  "name": "save-md",
+  "description": "Saves a named source to Markdown with provenance and faithful extraction through direct export endpoints. Use when asked to \"save this article\", \"get the markdown\", \"transcribe this\", or \"keep this source\". A URL supplied as task context alone does not trigger conversion; a chat summary stays in chat.",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mblode",
+  "install_path": ".claude/skills/save-md/SKILL.md",
+  "source": {
+    "repo": "mblode/agent-skills",
+    "url": "https://github.com/mblode/agent-skills/blob/main/skills/save-md/SKILL.md",
+    "path": "skills/save-md/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T19:47:00.360Z",
+    "stars": 193,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-10T12:33:32Z",
+    "license": "MIT"
+  }
+}

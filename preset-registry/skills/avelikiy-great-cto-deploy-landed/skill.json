@@ -1,7 +1,7 @@
 {
   "id": "avelikiy-great-cto-deploy-landed",
   "name": "deploy-landed",
-  "description": "Prove a deploy landed — the served revision is the commit you meant, its env is present, and the product does its job — instead of trusting the deploy command's exit code. Also catches server drift before a pull or deploy. Use after any deploy, rollout, restart or server-side fix (\"задеплой\", \"выкати\", \"проверь на проде\", \"почему не обновилось\"). Loaded by devops, l3-support, infra-provisioner.",
+  "description": "Prove a deploy landed — the served revision is the commit you meant, its env is present, and the product does its job — instead of trusting the deploy command's exit code. Also catches server drift before a pull or deploy. Use after any deploy, rollout, restart or server-side fix (\"задеплой\", \"выкати\", \"проверь на проде\", \"почему не обновилось\"). Loaded by devops, release-manager, l3-support, infra-provisioner.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/avelikiy/great_cto/blob/main/skills/deploy-landed/SKILL.md",
     "path": "skills/deploy-landed/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-10T10:04:49.686Z",
-    "stars": 113,
+    "discovered_at": "2026-11-10T18:10:20.811Z",
+    "stars": 115,
     "language": "JavaScript",
-    "pushed_at": "2026-11-10T09:43:30Z",
+    "pushed_at": "2026-11-10T15:11:40Z",
     "license": "MIT"
   }
 }

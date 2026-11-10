@@ -1,0 +1,25 @@
+{
+  "id": "openmontageinc-openmontage-minimax-h3",
+  "name": "minimax-h3",
+  "description": "| Generate MiniMax H3 (Hailuo 3.0) video through the official MiniMax v2 API, fal.ai, Runway, ComfyUI Partner Nodes, or local open weights in ComfyUI. Use for 4-15 second 2K clips, first/last-frame animation, and image/video/audio reference-conditioned video.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "OpenMontageInc",
+  "install_path": ".claude/skills/minimax-h3/SKILL.md",
+  "source": {
+    "repo": "OpenMontageInc/OpenMontage",
+    "url": "https://github.com/OpenMontageInc/OpenMontage/blob/main/.agents/skills/minimax-h3/SKILL.md",
+    "path": ".agents/skills/minimax-h3/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:57:17.270Z",
+    "stars": 79381,
+    "language": "Python",
+    "pushed_at": "2026-11-09T06:23:55Z",
+    "license": "AGPL-3.0"
+  }
+}

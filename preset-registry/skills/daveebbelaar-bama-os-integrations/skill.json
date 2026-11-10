@@ -1,0 +1,25 @@
+{
+  "id": "daveebbelaar-bama-os-integrations",
+  "name": "os-integrations",
+  "description": "Deep macOS integrations for a native app, such as global hotkeys, menu bar items, floating panels, window control with Accessibility, screen capture and recording, clipboard, Shortcuts and Spotlight, URL schemes, login items, a CLI, and the permissions each one needs. Use when an app must reach outside its own window or control other apps.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daveebbelaar",
+  "install_path": ".claude/skills/os-integrations/SKILL.md",
+  "source": {
+    "repo": "daveebbelaar/bama",
+    "url": "https://github.com/daveebbelaar/bama/blob/main/skills/code/os-integrations/SKILL.md",
+    "path": "skills/code/os-integrations/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:52:18.785Z",
+    "stars": 1744,
+    "language": "Swift",
+    "pushed_at": "2026-11-05T13:09:56Z",
+    "license": "MIT"
+  }
+}

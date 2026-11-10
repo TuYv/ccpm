@@ -1,0 +1,25 @@
+{
+  "id": "mblode-agent-skills-blog-drafts",
+  "name": "blog-drafts",
+  "description": "Drafts a Heron Press blog post from an outline or a set of notes, in the house voice. Use when asked to \"draft the blog post\", \"turn these notes into a post\", or \"write up the launch for the blog\".",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mblode",
+  "install_path": ".claude/skills/blog-drafts/SKILL.md",
+  "source": {
+    "repo": "mblode/agent-skills",
+    "url": "https://github.com/mblode/agent-skills/blob/main/skills/agent-skills-creator/evals/fixtures/duplicated-tells-list/base/skills/blog-drafts/SKILL.md",
+    "path": "skills/agent-skills-creator/evals/fixtures/duplicated-tells-list/base/skills/blog-drafts/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T19:46:53.042Z",
+    "stars": 193,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-10T12:33:32Z",
+    "license": "MIT"
+  }
+}

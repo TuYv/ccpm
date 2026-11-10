@@ -1,0 +1,25 @@
+{
+  "id": "scenario-labs-skills-scenario-blender-geometry-nodes",
+  "name": "scenario-blender-geometry-nodes",
+  "description": "Use when building or debugging Geometry Nodes, headless or live: procedural modeling, scattering objects on a surface, arrays along a curve, repeat or for-each loops, simulation zones, 5.2 physics (cloth, colliders, forces, effectors), closures, bundles, matrices, node-group assets with gizmos. Also when a GN script links nothing, shows red links, ignores modifier inputs, loses instances in a bounding box, or a simulation resets or jumps.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "scenario-labs",
+  "install_path": ".claude/skills/scenario-blender-geometry-nodes/SKILL.md",
+  "source": {
+    "repo": "scenario-labs/skills",
+    "url": "https://github.com/scenario-labs/skills/blob/main/skills/dcc/blender/scenario-blender-geometry-nodes/SKILL.md",
+    "path": "skills/dcc/blender/scenario-blender-geometry-nodes/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:50:19.827Z",
+    "stars": 3655,
+    "language": "Python",
+    "pushed_at": "2026-11-09T15:39:12Z",
+    "license": "MIT"
+  }
+}

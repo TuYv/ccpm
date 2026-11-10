@@ -1,0 +1,25 @@
+{
+  "id": "mblode-agent-skills-ticket-reply",
+  "name": "ticket-reply",
+  "description": "Drafts a reply to a Fennel Desk customer ticket in the support team's voice. Use when asked to \"draft a reply\", \"answer this ticket\", or \"how should we respond to this customer\".",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mblode",
+  "install_path": ".claude/skills/ticket-reply/SKILL.md",
+  "source": {
+    "repo": "mblode/agent-skills",
+    "url": "https://github.com/mblode/agent-skills/blob/main/skills/agent-skills-creator/evals/fixtures/claude-only-frontmatter/base/skills/ticket-reply/SKILL.md",
+    "path": "skills/agent-skills-creator/evals/fixtures/claude-only-frontmatter/base/skills/ticket-reply/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T19:46:51.046Z",
+    "stars": 193,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-10T12:33:32Z",
+    "license": "MIT"
+  }
+}

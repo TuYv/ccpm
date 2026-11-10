@@ -1,0 +1,25 @@
+{
+  "id": "openmontageinc-openmontage-kling-official",
+  "name": "kling-official",
+  "description": "Official Kling direct API guidance for OpenMontage providers. Use before calling `kling_official_video`, `kling_official_image`, `kling_tts`, `kling_avatar`, or `kling_lip_sync`.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "OpenMontageInc",
+  "install_path": ".claude/skills/kling-official/SKILL.md",
+  "source": {
+    "repo": "OpenMontageInc/OpenMontage",
+    "url": "https://github.com/OpenMontageInc/OpenMontage/blob/main/.agents/skills/kling-official/SKILL.md",
+    "path": ".agents/skills/kling-official/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:57:15.671Z",
+    "stars": 79381,
+    "language": "Python",
+    "pushed_at": "2026-11-09T06:23:55Z",
+    "license": "AGPL-3.0"
+  }
+}

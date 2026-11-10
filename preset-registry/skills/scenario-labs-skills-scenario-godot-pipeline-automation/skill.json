@@ -1,0 +1,25 @@
+{
+  "id": "scenario-labs-skills-scenario-godot-pipeline-automation",
+  "name": "scenario-godot-pipeline-automation",
+  "description": "Use when Godot 4.7 work must run without a mouse or at scale: batch import of hundreds of GLB props or an AI image-to-3D art drop, naming rules, import presets and post-import scripts, editor plugins, EditorScript and @tool, EditorImportPlugin, GUT or gdUnit4 tests in CI, a GitHub Actions export workflow, GDExtension basics, or a Godot MCP server; also when --import is slow, textures stay uncompressed, tests pass locally but CI fails, or an export ships test folders.",
+  "category": "自动化集成",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "scenario-labs",
+  "install_path": ".claude/skills/scenario-godot-pipeline-automation/SKILL.md",
+  "source": {
+    "repo": "scenario-labs/skills",
+    "url": "https://github.com/scenario-labs/skills/blob/main/skills/game-engines/godot/scenario-godot-pipeline-automation/SKILL.md",
+    "path": "skills/game-engines/godot/scenario-godot-pipeline-automation/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:50:28.948Z",
+    "stars": 3655,
+    "language": "Python",
+    "pushed_at": "2026-11-09T15:39:12Z",
+    "license": "MIT"
+  }
+}

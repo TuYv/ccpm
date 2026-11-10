@@ -1,0 +1,25 @@
+{
+  "id": "scenario-labs-skills-skill-development",
+  "name": "Skill Development",
+  "description": "This skill should be used when the user wants to \"create a skill\", \"add a skill to plugin\", \"write a new skill\", \"improve skill description\", \"organize skill content\", or needs guidance on skill structure, progressive disclosure, or skill development best practices for Claude Code plugins.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "0.1.0",
+  "author": "scenario-labs",
+  "install_path": ".claude/skills/skill-development/SKILL.md",
+  "source": {
+    "repo": "scenario-labs/skills",
+    "url": "https://github.com/scenario-labs/skills/blob/main/.agents/skills/skill-development/SKILL.md",
+    "path": ".agents/skills/skill-development/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:50:18.235Z",
+    "stars": 3655,
+    "language": "Python",
+    "pushed_at": "2026-11-09T15:39:12Z",
+    "license": "MIT"
+  }
+}

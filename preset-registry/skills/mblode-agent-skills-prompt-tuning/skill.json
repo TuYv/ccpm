@@ -1,0 +1,25 @@
+{
+  "id": "mblode-agent-skills-prompt-tuning",
+  "name": "prompt-tuning",
+  "description": "Guidance for working on the language model prompts that power the Mossback support assistant and the document summariser. Covers system prompts, prompt templates, few-shot examples, model selection, model parameters, temperature, token limits, context windows, tool definitions, structured output, response parsing, and prompt versioning. Also covers how prompts are stored, how a prompt change is rolled out behind a flag, how to compare two prompt versions on the saved transcript set, and how to r",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mblode",
+  "install_path": ".claude/skills/prompt-tuning/SKILL.md",
+  "source": {
+    "repo": "mblode/agent-skills",
+    "url": "https://github.com/mblode/agent-skills/blob/main/skills/agent-skills-creator/evals/fixtures/crowded-skill-listing/base/.agents/skills/prompt-tuning/SKILL.md",
+    "path": "skills/agent-skills-creator/evals/fixtures/crowded-skill-listing/base/.agents/skills/prompt-tuning/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T19:46:52.853Z",
+    "stars": 193,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-10T12:33:32Z",
+    "license": "MIT"
+  }
+}

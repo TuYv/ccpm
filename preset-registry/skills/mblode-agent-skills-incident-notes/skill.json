@@ -1,0 +1,25 @@
+{
+  "id": "mblode-agent-skills-incident-notes",
+  "name": "incident-notes",
+  "description": "Writes the incident note for an Orchard storefront outage or rollback from the release thread and the deploy log. Use when asked to \"write the incident note\", \"write up the rollback\", or \"do the post-incident summary\".",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mblode",
+  "install_path": ".claude/skills/incident-notes/SKILL.md",
+  "source": {
+    "repo": "mblode/agent-skills",
+    "url": "https://github.com/mblode/agent-skills/blob/main/skills/agent-skills-creator/evals/fixtures/long-deploy-checklist/base/skills/incident-notes/SKILL.md",
+    "path": "skills/agent-skills-creator/evals/fixtures/long-deploy-checklist/base/skills/incident-notes/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T19:46:54.837Z",
+    "stars": 193,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-10T12:33:32Z",
+    "license": "MIT"
+  }
+}

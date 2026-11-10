@@ -1,0 +1,25 @@
+{
+  "id": "mblode-agent-skills-typography-audit",
+  "name": "typography-audit",
+  "description": "Audits font loading, type scales, measure, spacing, OpenType, and rendered punctuation with 78 scoped rules. Use when asked to \"audit typography\", \"fix the fonts\", or \"review my type system\". For a new visual direction use ui-design Direction; for general UI defects use ui-design Audit.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mblode",
+  "install_path": ".claude/skills/typography-audit/SKILL.md",
+  "source": {
+    "repo": "mblode/agent-skills",
+    "url": "https://github.com/mblode/agent-skills/blob/main/skills/typography-audit/SKILL.md",
+    "path": "skills/typography-audit/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T19:47:01.450Z",
+    "stars": 193,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-10T12:33:32Z",
+    "license": "MIT"
+  }
+}

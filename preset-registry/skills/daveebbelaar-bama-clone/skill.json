@@ -1,0 +1,25 @@
+{
+  "id": "daveebbelaar-bama-clone",
+  "name": "clone",
+  "description": "Walk through any existing app (native Mac app with computer use, web app with a browser), screenshot every screen, menu, and dialog, write a screen index, and turn it into user stories. Use when the user wants to clone, rebuild, replace, or copy the design of an app, or says \"screenshot every screen\".",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daveebbelaar",
+  "install_path": ".claude/skills/clone/SKILL.md",
+  "source": {
+    "repo": "daveebbelaar/bama",
+    "url": "https://github.com/daveebbelaar/bama/blob/main/skills/plan/clone/SKILL.md",
+    "path": "skills/plan/clone/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:52:20.866Z",
+    "stars": 1744,
+    "language": "Swift",
+    "pushed_at": "2026-11-05T13:09:56Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "mblode-agent-skills-release-checklist",
+  "name": "release-checklist",
+  "description": "Prepares a Saltmarsh Booking production release for a person to start. Use when asked to \"prepare the release\", \"is main ready to ship\", or \"what is going out\".",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mblode",
+  "install_path": ".claude/skills/release-checklist/SKILL.md",
+  "source": {
+    "repo": "mblode/agent-skills",
+    "url": "https://github.com/mblode/agent-skills/blob/main/skills/agents-md/evals/fixtures/instruction-creep/base/.claude/skills/release-checklist/SKILL.md",
+    "path": "skills/agents-md/evals/fixtures/instruction-creep/base/.claude/skills/release-checklist/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T19:46:56.371Z",
+    "stars": 193,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-10T12:33:32Z",
+    "license": "MIT"
+  }
+}

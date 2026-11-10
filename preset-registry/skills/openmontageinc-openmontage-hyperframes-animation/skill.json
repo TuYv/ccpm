@@ -1,0 +1,25 @@
+{
+  "id": "openmontageinc-openmontage-hyperframes-animation",
+  "name": "hyperframes-animation",
+  "description": "All animation knowledge for HyperFrames — atomic motion rules, multi-phase scene blueprints, scene transitions, broader motion-design techniques, AND the seven runtime adapters (GSAP default, plus Lottie, Three.js, Anime.js, CSS keyframes, Web Animations API, TypeGPU). Use for any motion or animation task: pick 2-4 rules and compose, or load a blueprint, or look up runtime-specific API (e.g. GSAP eases / Lottie player / Three.js mixer). HyperFrames-native: single paused timeline, seek-safe, dete",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "OpenMontageInc",
+  "install_path": ".claude/skills/hyperframes-animation/SKILL.md",
+  "source": {
+    "repo": "OpenMontageInc/OpenMontage",
+    "url": "https://github.com/OpenMontageInc/OpenMontage/blob/main/.agents/skills/hyperframes-animation/SKILL.md",
+    "path": ".agents/skills/hyperframes-animation/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:57:14.322Z",
+    "stars": 79381,
+    "language": "Python",
+    "pushed_at": "2026-11-09T06:23:55Z",
+    "license": "AGPL-3.0"
+  }
+}

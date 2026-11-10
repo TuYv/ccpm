@@ -1,0 +1,25 @@
+{
+  "id": "mrpaidsocial-arcads-claude-code-mrpaidsocial-analyze-video",
+  "name": "analyze-video",
+  "description": "> Analyze a reference video and reverse-engineer its style into a reusable Seedance 2.0 prompting template. The output is a new skill/formula (like seedance-2-ugc.md) that captures the video's structure, pacing, camera work, edit style, and tone so it can be recreated with any product, any person, in any setting. Use this whenever someone provides a video they want to use as a style reference, says \"I want to make videos like this\", \"deconstruct this video\", \"turn this into a template\", \"analyze",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mrpaidsocial",
+  "install_path": ".claude/skills/analyze-video/SKILL.md",
+  "source": {
+    "repo": "mrpaidsocial/arcads-claude-code-mrpaidsocial",
+    "url": "https://github.com/mrpaidsocial/arcads-claude-code-mrpaidsocial/blob/main/skills/arcads-external-api/prompting/analyze-video/SKILL.md",
+    "path": "skills/arcads-external-api/prompting/analyze-video/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:52:23.585Z",
+    "stars": 1674,
+    "language": "Python",
+    "pushed_at": "2026-10-19T19:46:15Z",
+    "license": "MIT"
+  }
+}

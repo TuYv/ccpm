@@ -1,0 +1,25 @@
+{
+  "id": "expo-exact-llp-maintain",
+  "name": "llp-maintain",
+  "description": "Keep an LLP corpus in sync with its code. Detects code/doc drift, validates @ref annotations interactively, checks provenance tags, and proposes reconciliations, ref repairs, status changes, and overlay changes. Modes — pre-pr, audit, reconcile, retire-proposal, curate (the promote → archive → realign pass). Proposes; never applies.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "expo",
+  "install_path": ".claude/skills/llp-maintain/SKILL.md",
+  "source": {
+    "repo": "expo/exact",
+    "url": "https://github.com/expo/exact/blob/main/.claude/skills/llp-maintain/SKILL.md",
+    "path": ".claude/skills/llp-maintain/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:59:34.139Z",
+    "stars": 1922,
+    "language": "Rust",
+    "pushed_at": "2026-11-10T17:13:51Z",
+    "license": "MIT"
+  }
+}

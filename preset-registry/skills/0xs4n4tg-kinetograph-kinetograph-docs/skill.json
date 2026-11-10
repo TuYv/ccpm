@@ -1,0 +1,25 @@
+{
+  "id": "0xs4n4tg-kinetograph-kinetograph-docs",
+  "name": "kinetograph-docs",
+  "description": "Search the Kinetograph docs at kinetograph.dev and read a page as Markdown. Use when you need a fact about Kinetograph that the other skills do not give: a CLI flag, a guide, a plugin, the compatibility list, terminology or the changelog.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "0xS4N4TG",
+  "install_path": ".claude/skills/kinetograph-docs/SKILL.md",
+  "source": {
+    "repo": "0xS4N4TG/kinetograph",
+    "url": "https://github.com/0xS4N4TG/kinetograph/blob/main/packages/cli/skills/kinetograph-docs/SKILL.md",
+    "path": "packages/cli/skills/kinetograph-docs/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T19:49:05.934Z",
+    "stars": 490,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-10T19:25:47Z",
+    "license": "Apache-2.0"
+  }
+}

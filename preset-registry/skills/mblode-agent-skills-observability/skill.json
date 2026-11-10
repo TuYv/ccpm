@@ -1,0 +1,25 @@
+{
+  "id": "mblode-agent-skills-observability",
+  "name": "observability",
+  "description": "Comprehensive guidance for logging, metrics, tracing, and alerting in the Mossback platform. Covers structured logs, log levels, log fields, request ids, correlation ids, counters, gauges, histograms, metric names, metric labels, spans, trace context, sampling, dashboards, alerts, alert thresholds, on-call routing, and service level objectives. Also covers how logs and metrics are emitted from request handlers and jobs, how to add a dashboard panel, how to add or tune an alert, and how to trace ",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mblode",
+  "install_path": ".claude/skills/observability/SKILL.md",
+  "source": {
+    "repo": "mblode/agent-skills",
+    "url": "https://github.com/mblode/agent-skills/blob/main/skills/agent-skills-creator/evals/fixtures/crowded-skill-listing/base/.agents/skills/observability/SKILL.md",
+    "path": "skills/agent-skills-creator/evals/fixtures/crowded-skill-listing/base/.agents/skills/observability/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T19:46:52.667Z",
+    "stars": 193,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-10T12:33:32Z",
+    "license": "MIT"
+  }
+}

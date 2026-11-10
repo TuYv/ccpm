@@ -1,0 +1,25 @@
+{
+  "id": "daveebbelaar-bama-improve-loop",
+  "name": "improve-loop",
+  "description": "Autonomous loop that works through docs/STORIES.md one story at a time for a macOS app, building, snapshotting, comparing against reference screenshots, fixing, and committing, until a milestone is done. Use when the user says \"keep going\", \"work through the backlog\", \"make it match the reference\", or wants an unattended improvement loop.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daveebbelaar",
+  "install_path": ".claude/skills/improve-loop/SKILL.md",
+  "source": {
+    "repo": "daveebbelaar/bama",
+    "url": "https://github.com/daveebbelaar/bama/blob/main/skills/ship/improve-loop/SKILL.md",
+    "path": "skills/ship/improve-loop/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:52:21.781Z",
+    "stars": 1744,
+    "language": "Swift",
+    "pushed_at": "2026-11-05T13:09:56Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "scenario-labs-skills-scenario-roblox-assets",
+  "name": "scenario-roblox-assets",
+  "description": "Use when bringing 3D assets into Roblox Studio or preparing avatar items: import from Blender, GLB, FBX or OBJ files, AI-generated or image-to-3D meshes (Scenario or other tools), wrong scale or size in studs, mesh faces the wrong way, too many triangles, mesh fails validation, holes or non-watertight meshes, textures too big or blurry, SurfaceAppearance and PBR maps, metalness or normal maps look wrong, rigid accessories and hats, UGC items, Accessory Fitting Tool, out of bounds, AvatarCreation",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "scenario-labs",
+  "install_path": ".claude/skills/scenario-roblox-assets/SKILL.md",
+  "source": {
+    "repo": "scenario-labs/skills",
+    "url": "https://github.com/scenario-labs/skills/blob/main/skills/game-engines/roblox/scenario-roblox-assets/SKILL.md",
+    "path": "skills/game-engines/roblox/scenario-roblox-assets/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:50:30.521Z",
+    "stars": 3655,
+    "language": "Python",
+    "pushed_at": "2026-11-09T15:39:12Z",
+    "license": "MIT"
+  }
+}

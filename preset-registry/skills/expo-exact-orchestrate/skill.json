@@ -1,0 +1,25 @@
+{
+  "id": "expo-exact-orchestrate",
+  "name": "orchestrate",
+  "description": "Run a multi-lane program to completion across the machine fleet — route coding to codex, reviews to two blind model families, supervise on a 20-minute judgment tick, and report milestone/percent/ETA with a program total. Use when the user hands over a body of work and wants it driven rather than discussed.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "expo",
+  "install_path": ".claude/skills/orchestrate/SKILL.md",
+  "source": {
+    "repo": "expo/exact",
+    "url": "https://github.com/expo/exact/blob/main/skills/orchestrate/SKILL.md",
+    "path": "skills/orchestrate/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:59:34.900Z",
+    "stars": 1922,
+    "language": "Rust",
+    "pushed_at": "2026-11-10T17:13:51Z",
+    "license": "MIT"
+  }
+}

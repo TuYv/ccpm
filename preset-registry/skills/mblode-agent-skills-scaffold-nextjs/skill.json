@@ -1,0 +1,25 @@
+{
+  "id": "mblode-agent-skills-scaffold-nextjs",
+  "name": "scaffold-nextjs",
+  "description": "Scaffolds a Next.js turborepo with Blode UI, icons, Ultracite (oxlint/shadcn), workspace hooks, and GitHub/Vercel setup. Use when asked to \\\"create a Next.js project\\\", \\\"bootstrap a turborepo\\\", or \\\"start a new web app\\\".",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mblode",
+  "install_path": ".claude/skills/scaffold-nextjs/SKILL.md",
+  "source": {
+    "repo": "mblode/agent-skills",
+    "url": "https://github.com/mblode/agent-skills/blob/main/skills/scaffold-nextjs/SKILL.md",
+    "path": "skills/scaffold-nextjs/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T19:47:00.738Z",
+    "stars": 193,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-10T12:33:32Z",
+    "license": "MIT"
+  }
+}

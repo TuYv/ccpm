@@ -1,0 +1,25 @@
+{
+  "id": "mrpaidsocial-arcads-claude-code-mrpaidsocial-chatgpt-image-ad",
+  "name": "chatgpt-image-ad",
+  "description": ">- Generate one or more standalone Meta image-ad creatives via ChatGPT Image 2 (gpt-image-2) through the Arcads external API. Locks the model, auto-strips platform chrome, enforces edge-safe layouts and glyph-safety inside body text. Use when the user asks for a \"gpt-image-2 ad\", \"ChatGPT Image ad\", \"Image 2 ad creative\", \"make a static image ad with GPT\", or anchors on a need for typography-heavy / dense-text / UI-mimicry ad creatives (chat threads, comparison tables, fake search results, iOS d",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mrpaidsocial",
+  "install_path": ".claude/skills/chatgpt-image-ad/SKILL.md",
+  "source": {
+    "repo": "mrpaidsocial/arcads-claude-code-mrpaidsocial",
+    "url": "https://github.com/mrpaidsocial/arcads-claude-code-mrpaidsocial/blob/main/skills/chatgpt-image-ad/SKILL.md",
+    "path": "skills/chatgpt-image-ad/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:52:24.186Z",
+    "stars": 1674,
+    "language": "Python",
+    "pushed_at": "2026-10-19T19:46:15Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "scenario-labs-skills-scenario-blender-grease-pencil",
+  "name": "scenario-blender-grease-pencil",
+  "description": "Use when drawing or animating with Grease Pencil in Blender 5.x from Python: 2D or 2.5D illustration, frame-by-frame animation, a cutout or part-based 2D character, strokes with pressure, filled shapes with holes, in-betweens and interpolation, onion skin, Line Art outlines, strokes on 3D meshes, NPR or hybrid motion graphics. Also when GP code fails (GPENCIL, frame.strokes, grease_pencil_modifiers), fills do not show, colors render dark, or draw brushes will not run from a script.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "scenario-labs",
+  "install_path": ".claude/skills/scenario-blender-grease-pencil/SKILL.md",
+  "source": {
+    "repo": "scenario-labs/skills",
+    "url": "https://github.com/scenario-labs/skills/blob/main/skills/dcc/blender/scenario-blender-grease-pencil/SKILL.md",
+    "path": "skills/dcc/blender/scenario-blender-grease-pencil/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:50:20.040Z",
+    "stars": 3655,
+    "language": "Python",
+    "pushed_at": "2026-11-09T15:39:12Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "openmontageinc-openmontage-character-animation-qa",
+  "name": "character-animation-qa",
+  "description": "Review local character animation with schema checks, Playwright browser previews, frame sampling, and FFmpeg/ffprobe final output checks.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "OpenMontageInc",
+  "install_path": ".claude/skills/character-animation-qa/SKILL.md",
+  "source": {
+    "repo": "OpenMontageInc/OpenMontage",
+    "url": "https://github.com/OpenMontageInc/OpenMontage/blob/main/.agents/skills/character-animation-qa/SKILL.md",
+    "path": ".agents/skills/character-animation-qa/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:57:09.388Z",
+    "stars": 79381,
+    "language": "Python",
+    "pushed_at": "2026-11-09T06:23:55Z",
+    "license": "AGPL-3.0"
+  }
+}

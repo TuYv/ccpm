@@ -1,0 +1,25 @@
+{
+  "id": "scenario-labs-skills-pr-handle-comments",
+  "name": "pr-handle-comments",
+  "description": "Handle review comments received on GitHub for the current branch's PR or a given PR number or URL, by triaging each unresolved thread, fixing what is warranted, pushing, and replying in each thread, when asked to address, fix or answer PR comments. Works in any Scenario repository.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "scenario-labs",
+  "install_path": ".claude/skills/pr-handle-comments/SKILL.md",
+  "source": {
+    "repo": "scenario-labs/skills",
+    "url": "https://github.com/scenario-labs/skills/blob/main/.agents/skills/pr-handle-comments/SKILL.md",
+    "path": ".agents/skills/pr-handle-comments/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:50:17.375Z",
+    "stars": 3655,
+    "language": "Python",
+    "pushed_at": "2026-11-09T15:39:12Z",
+    "license": "MIT"
+  }
+}

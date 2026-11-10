@@ -1,0 +1,25 @@
+{
+  "id": "mblode-agent-skills-release-notes",
+  "name": "release-notes",
+  "description": "Drafts customer-facing release notes for Copper Kettle from merged pull requests. Use when asked to \"write the release notes\", \"draft the changelog\", or \"what shipped this week\".",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mblode",
+  "install_path": ".claude/skills/release-notes/SKILL.md",
+  "source": {
+    "repo": "mblode/agent-skills",
+    "url": "https://github.com/mblode/agent-skills/blob/main/skills/agents-md/evals/fixtures/shared-triage-skill/base/skills/release-notes/SKILL.md",
+    "path": "skills/agents-md/evals/fixtures/shared-triage-skill/base/skills/release-notes/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T19:46:56.774Z",
+    "stars": 193,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-10T12:33:32Z",
+    "license": "MIT"
+  }
+}

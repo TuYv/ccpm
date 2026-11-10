@@ -1,0 +1,25 @@
+{
+  "id": "daveebbelaar-bama-performance",
+  "name": "performance",
+  "description": "Make a macOS app fast by measuring hangs, stutter, CPU, memory, and energy, then moving work off the main thread and onto the GPU. Use when the app freezes, a shortcut feels slow, dragging stutters, the fan spins, memory grows, or the user asks to optimize or profile.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daveebbelaar",
+  "install_path": ".claude/skills/performance/SKILL.md",
+  "source": {
+    "repo": "daveebbelaar/bama",
+    "url": "https://github.com/daveebbelaar/bama/blob/main/skills/code/performance/SKILL.md",
+    "path": "skills/code/performance/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:52:18.993Z",
+    "stars": 1744,
+    "language": "Swift",
+    "pushed_at": "2026-11-05T13:09:56Z",
+    "license": "MIT"
+  }
+}

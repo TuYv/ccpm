@@ -1,0 +1,25 @@
+{
+  "id": "scenario-labs-skills-scenario-maya-pipeline-scripting",
+  "name": "scenario-maya-pipeline-scripting",
+  "description": "Use when writing or fixing Maya pipeline code in Python: mayapy batch jobs over many scenes, validating and auto-fixing scenes, FBX export for Unreal or Unity (static, skeletal, animation clips, Game Exporter), Alembic or GPU caches, USD export, stages and layers, references and namespaces, PySide6 tool windows, OpenMaya 2.0 plug-ins, or slow playback. Also when an FBX lands with wrong scale, normals, tangents or extra takes, a USD export has one frame or smoothed meshes, or one bad file kills a",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "scenario-labs",
+  "install_path": ".claude/skills/scenario-maya-pipeline-scripting/SKILL.md",
+  "source": {
+    "repo": "scenario-labs/skills",
+    "url": "https://github.com/scenario-labs/skills/blob/main/skills/dcc/maya/scenario-maya-pipeline-scripting/SKILL.md",
+    "path": "skills/dcc/maya/scenario-maya-pipeline-scripting/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:50:24.174Z",
+    "stars": 3655,
+    "language": "Python",
+    "pushed_at": "2026-11-09T15:39:12Z",
+    "license": "MIT"
+  }
+}

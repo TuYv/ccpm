@@ -1,0 +1,25 @@
+{
+  "id": "mblode-agent-skills-billing",
+  "name": "billing",
+  "description": "Comprehensive guidance for billing, invoicing, and payments in the Mossback platform. Covers plans, pricing, subscriptions, usage metering, invoices, invoice lines, credits, refunds, proration, tax, currencies, payment methods, payment attempts, dunning, the payment provider integration, provider webhooks, and reconciliation. Also covers how usage is recorded per shipment, how an invoice is assembled at the end of a billing period, how a plan change takes effect, and how a failed payment is retr",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mblode",
+  "install_path": ".claude/skills/billing/SKILL.md",
+  "source": {
+    "repo": "mblode/agent-skills",
+    "url": "https://github.com/mblode/agent-skills/blob/main/skills/agent-skills-creator/evals/fixtures/crowded-skill-listing/base/.agents/skills/billing/SKILL.md",
+    "path": "skills/agent-skills-creator/evals/fixtures/crowded-skill-listing/base/.agents/skills/billing/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T19:46:51.848Z",
+    "stars": 193,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-10T12:33:32Z",
+    "license": "MIT"
+  }
+}

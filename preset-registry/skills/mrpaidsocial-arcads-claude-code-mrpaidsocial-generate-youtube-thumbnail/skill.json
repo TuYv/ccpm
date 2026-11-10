@@ -1,0 +1,25 @@
+{
+  "id": "mrpaidsocial-arcads-claude-code-mrpaidsocial-generate-youtube-thumbnail",
+  "name": "generate-youtube-thumbnail",
+  "description": ">- Generate high-CTR YouTube thumbnails using Nano Banana 2 via the Arcads external API. Handles reference image upload, character likeness alignment, proven CTR-tested prompt formulas, and parallel batch generation. Use when the user asks to create a YouTube thumbnail, video thumbnail, A/B test thumbnail variations, or refers to thumbnail design with their face, brand assets, or product photos.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mrpaidsocial",
+  "install_path": ".claude/skills/generate-youtube-thumbnail/SKILL.md",
+  "source": {
+    "repo": "mrpaidsocial/arcads-claude-code-mrpaidsocial",
+    "url": "https://github.com/mrpaidsocial/arcads-claude-code-mrpaidsocial/blob/main/skills/generate-youtube-thumbnail/SKILL.md",
+    "path": "skills/generate-youtube-thumbnail/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:52:24.611Z",
+    "stars": 1674,
+    "language": "Python",
+    "pushed_at": "2026-10-19T19:46:15Z",
+    "license": "MIT"
+  }
+}

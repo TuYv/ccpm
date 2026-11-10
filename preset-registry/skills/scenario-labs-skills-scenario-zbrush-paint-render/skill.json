@@ -1,0 +1,25 @@
+{
+  "id": "scenario-labs-skills-scenario-zbrush-paint-render",
+  "name": "scenario-zbrush-paint-render",
+  "description": "Use when polypainting in ZBrush (skin color zones, fills, cavity or AO passes, Spotlight), baking polypaint to a texture or vertex color, rendering a ZBrush model with BPR or Redshift, making render passes, a turntable or portfolio shots, or when paint looks like uniform beige or clown makeup, is blurry, is hidden under a texture or in Redshift, or a render is noisy, clipped, orthographic or bruised.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "scenario-labs",
+  "install_path": ".claude/skills/scenario-zbrush-paint-render/SKILL.md",
+  "source": {
+    "repo": "scenario-labs/skills",
+    "url": "https://github.com/scenario-labs/skills/blob/main/skills/dcc/zbrush/scenario-zbrush-paint-render/SKILL.md",
+    "path": "skills/dcc/zbrush/scenario-zbrush-paint-render/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:50:25.780Z",
+    "stars": 3655,
+    "language": "Python",
+    "pushed_at": "2026-11-09T15:39:12Z",
+    "license": "MIT"
+  }
+}

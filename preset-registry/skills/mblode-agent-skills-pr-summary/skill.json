@@ -1,0 +1,25 @@
+{
+  "id": "mblode-agent-skills-pr-summary",
+  "name": "pr-summary",
+  "description": "Writes the pull request description for a Pebble Works change in the house format. Use when asked to \"write the PR description\", \"summarise this branch\", or \"fill in the PR template\".",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mblode",
+  "install_path": ".claude/skills/pr-summary/SKILL.md",
+  "source": {
+    "repo": "mblode/agent-skills",
+    "url": "https://github.com/mblode/agent-skills/blob/main/skills/agent-skills-creator/evals/fixtures/checkout-screenshot-skill/base/skills/pr-summary/SKILL.md",
+    "path": "skills/agent-skills-creator/evals/fixtures/checkout-screenshot-skill/base/skills/pr-summary/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T19:46:50.471Z",
+    "stars": 193,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-10T12:33:32Z",
+    "license": "MIT"
+  }
+}

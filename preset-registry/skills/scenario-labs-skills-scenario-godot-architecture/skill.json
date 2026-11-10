@@ -1,0 +1,25 @@
+{
+  "id": "scenario-labs-skills-scenario-godot-architecture",
+  "name": "scenario-godot-architecture",
+  "description": "Use when structuring Godot 4.7 game code: folders, scenes and nodes, signals or an event bus autoload, custom Resources for item data, components (health, hitbox, hurtbox), an inventory, save and load, InputMap and key rebinding for keyboard, mouse and gamepad, GDScript static typing and style, or GDScript vs C#; or when code is spaghetti, a folder scan breaks in the export, a save loads wrong, the gamepad does nothing, or @onready is null.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "scenario-labs",
+  "install_path": ".claude/skills/scenario-godot-architecture/SKILL.md",
+  "source": {
+    "repo": "scenario-labs/skills",
+    "url": "https://github.com/scenario-labs/skills/blob/main/skills/game-engines/godot/scenario-godot-architecture/SKILL.md",
+    "path": "skills/game-engines/godot/scenario-godot-architecture/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:50:27.547Z",
+    "stars": 3655,
+    "language": "Python",
+    "pushed_at": "2026-11-09T15:39:12Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "mblode-agent-skills-pr-babysitter",
+  "name": "pr-babysitter",
+  "description": "Monitors or repairs an open GitHub PR: CI failures, conflicts, review threads, and merge readiness, reporting state changes. Use when asked to \\\"watch this PR\\\", \\\"fix CI\\\", \\\"resolve conflicts\\\", or \\\"address review comments\\\".",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mblode",
+  "install_path": ".claude/skills/pr-babysitter/SKILL.md",
+  "source": {
+    "repo": "mblode/agent-skills",
+    "url": "https://github.com/mblode/agent-skills/blob/main/skills/pr-babysitter/SKILL.md",
+    "path": "skills/pr-babysitter/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T19:46:59.503Z",
+    "stars": 193,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-10T12:33:32Z",
+    "license": "MIT"
+  }
+}

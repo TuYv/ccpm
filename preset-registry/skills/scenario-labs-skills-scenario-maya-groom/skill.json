@@ -1,0 +1,25 @@
+{
+  "id": "scenario-labs-skills-scenario-maya-groom",
+  "name": "scenario-maya-groom",
+  "description": "Use when grooming hair or fur in Maya with XGen (Interactive Groom splines or legacy descriptions): scalp hair, eyebrows, eyelashes, fur, guides, clumps, noise, parting, density maps, a fill layer, aiStandardHair shading, noisy or flickering hair renders, hair that must move (Linear Wire, nHair, Alembic caches), or a groom for Unreal (groom Alembic, cards). Also when XGen hair looks CG, clumps look uniform, the scalp shows through, or an XGen script fails.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "scenario-labs",
+  "install_path": ".claude/skills/scenario-maya-groom/SKILL.md",
+  "source": {
+    "repo": "scenario-labs/skills",
+    "url": "https://github.com/scenario-labs/skills/blob/main/skills/dcc/maya/scenario-maya-groom/SKILL.md",
+    "path": "skills/dcc/maya/scenario-maya-groom/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:50:23.226Z",
+    "stars": 3655,
+    "language": "Python",
+    "pushed_at": "2026-11-09T15:39:12Z",
+    "license": "MIT"
+  }
+}

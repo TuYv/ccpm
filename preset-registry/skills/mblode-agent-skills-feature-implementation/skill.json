@@ -1,0 +1,25 @@
+{
+  "id": "mblode-agent-skills-feature-implementation",
+  "name": "feature-implementation",
+  "description": "Implements a Larch Tasks feature from a ticket, from reading the ticket through to a branch that is ready for review. Use when asked to \"implement this ticket\", \"build this feature\", or \"pick up LAR-123\".",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mblode",
+  "install_path": ".claude/skills/feature-implementation/SKILL.md",
+  "source": {
+    "repo": "mblode/agent-skills",
+    "url": "https://github.com/mblode/agent-skills/blob/main/skills/agent-skills-creator/evals/fixtures/stops-for-review/base/skills/feature-implementation/SKILL.md",
+    "path": "skills/agent-skills-creator/evals/fixtures/stops-for-review/base/skills/feature-implementation/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T19:46:55.242Z",
+    "stars": 193,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-10T12:33:32Z",
+    "license": "MIT"
+  }
+}

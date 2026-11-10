@@ -1,0 +1,25 @@
+{
+  "id": "mblode-agent-skills-eli5",
+  "name": "eli5",
+  "description": "Picks the form that explains best and applies the house explanation style: plain prose, controlled English modelled on ASD-STE100, a diagram, an interactive HTML page, or a narrated explainer video. Use when asked for \\\"ELI5\\\", \\\"plain English\\\", \\\"re-pitch that\\\", \\\"stop using jargon\\\", \\\"explain it in STE100\\\", \\\"draw me a diagram of how this works\\\", \\\"make an interactive explainer\\\", or \\\"make a 3b1b style video on X\\\".",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mblode",
+  "install_path": ".claude/skills/eli5/SKILL.md",
+  "source": {
+    "repo": "mblode/agent-skills",
+    "url": "https://github.com/mblode/agent-skills/blob/main/skills/eli5/SKILL.md",
+    "path": "skills/eli5/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T19:46:58.683Z",
+    "stars": 193,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-10T12:33:32Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "avelikiy-great-cto-mobile-release",
+  "name": "mobile-release",
+  "description": "Ship an iOS or Android build to testers and stores without reusing a build number or shipping an OTA bundle that crashes on launch. Covers version and build-number policy, code signing done by the project's own tooling, TestFlight / Play internal / Firebase uploads, Maestro on the uploaded build, phased rollout and halt, OTA runtime compatibility, and the store hand-off. Use for any mobile release step (\"собери сборку для тестировщиков\", \"выложи во внутренний трек\", \"подними номер сборки\", \"обно",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "avelikiy",
+  "install_path": ".claude/skills/mobile-release/SKILL.md",
+  "source": {
+    "repo": "avelikiy/great_cto",
+    "url": "https://github.com/avelikiy/great_cto/blob/main/skills/mobile-release/SKILL.md",
+    "path": "skills/mobile-release/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:10:22.070Z",
+    "stars": 115,
+    "language": "JavaScript",
+    "pushed_at": "2026-11-10T15:11:40Z",
+    "license": "MIT"
+  }
+}

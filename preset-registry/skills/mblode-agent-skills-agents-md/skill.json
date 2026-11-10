@@ -1,0 +1,25 @@
+{
+  "id": "mblode-agent-skills-agents-md",
+  "name": "agents-md",
+  "description": "Audits and edits agent instruction files, verifies repository commands, and migrates repositories to AGENTS.md as the single shared source. Use when asked to \"improve my AGENTS.md\", \"migrate CLAUDE.md to AGENTS.md\", or make instructions work across agents.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mblode",
+  "install_path": ".claude/skills/agents-md/SKILL.md",
+  "source": {
+    "repo": "mblode/agent-skills",
+    "url": "https://github.com/mblode/agent-skills/blob/main/skills/agents-md/SKILL.md",
+    "path": "skills/agents-md/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T19:46:57.184Z",
+    "stars": 193,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-10T12:33:32Z",
+    "license": "MIT"
+  }
+}

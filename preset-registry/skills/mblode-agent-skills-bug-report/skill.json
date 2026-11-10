@@ -1,0 +1,25 @@
+{
+  "id": "mblode-agent-skills-bug-report",
+  "name": "bug-report",
+  "description": "Turns a Larch Tasks user complaint into a reproducible bug ticket. Use when asked to \"file a bug\", \"write this up as a ticket\", or \"can you reproduce this\".",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mblode",
+  "install_path": ".claude/skills/bug-report/SKILL.md",
+  "source": {
+    "repo": "mblode/agent-skills",
+    "url": "https://github.com/mblode/agent-skills/blob/main/skills/agent-skills-creator/evals/fixtures/stops-for-review/base/skills/bug-report/SKILL.md",
+    "path": "skills/agent-skills-creator/evals/fixtures/stops-for-review/base/skills/bug-report/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T19:46:55.060Z",
+    "stars": 193,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-10T12:33:32Z",
+    "license": "MIT"
+  }
+}

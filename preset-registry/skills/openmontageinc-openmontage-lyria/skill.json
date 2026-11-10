@@ -1,0 +1,25 @@
+{
+  "id": "openmontageinc-openmontage-lyria",
+  "name": "lyria",
+  "description": "Generate and validate music with Google Lyria through the Gemini Interactions API. Use before calling OpenMontage `google_music`, designing Lyria 3.5 or Clip prompts, using image-to-music or custom lyrics, choosing between single-turn Lyria and Lyria RealTime, diagnosing Google music-generation failures, or preparing exact-duration music for a video.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "OpenMontageInc",
+  "install_path": ".claude/skills/lyria/SKILL.md",
+  "source": {
+    "repo": "OpenMontageInc/OpenMontage",
+    "url": "https://github.com/OpenMontageInc/OpenMontage/blob/main/.agents/skills/lyria/SKILL.md",
+    "path": ".agents/skills/lyria/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:57:16.220Z",
+    "stars": 79381,
+    "language": "Python",
+    "pushed_at": "2026-11-09T06:23:55Z",
+    "license": "AGPL-3.0"
+  }
+}

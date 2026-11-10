@@ -1,0 +1,25 @@
+{
+  "id": "scenario-labs-skills-scenario-blender-uv-baking",
+  "name": "scenario-blender-uv-baking",
+  "description": "Use when UV unwrapping, placing seams, straightening or packing UVs, setting texel density, laying out UDIMs or mirrored UVs, or baking normal, AO, curvature, ID or displacement maps from a sculpt or high poly onto a low poly or retopo in Blender, including Multires bakes. Also when a bake has black or inverted patches, flat areas, cracks, seams, wavy lines or AO ghosts, bpy.ops.object.bake returns CANCELED, or uv.unwrap silently fails.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "scenario-labs",
+  "install_path": ".claude/skills/scenario-blender-uv-baking/SKILL.md",
+  "source": {
+    "repo": "scenario-labs/skills",
+    "url": "https://github.com/scenario-labs/skills/blob/main/skills/dcc/blender/scenario-blender-uv-baking/SKILL.md",
+    "path": "skills/dcc/blender/scenario-blender-uv-baking/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:50:22.071Z",
+    "stars": 3655,
+    "language": "Python",
+    "pushed_at": "2026-11-09T15:39:12Z",
+    "license": "MIT"
+  }
+}

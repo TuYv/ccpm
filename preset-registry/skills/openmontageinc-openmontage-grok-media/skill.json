@@ -1,0 +1,25 @@
+{
+  "id": "openmontageinc-openmontage-grok-media",
+  "name": "grok-media",
+  "description": "xAI Grok image and video generation guide covering authentication, endpoints, prompt structure, image editing, reference-image video, and async polling.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "OpenMontageInc",
+  "install_path": ".claude/skills/grok-media/SKILL.md",
+  "source": {
+    "repo": "OpenMontageInc/OpenMontage",
+    "url": "https://github.com/OpenMontageInc/OpenMontage/blob/main/.agents/skills/grok-media/SKILL.md",
+    "path": ".agents/skills/grok-media/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:57:12.188Z",
+    "stars": 79381,
+    "language": "Python",
+    "pushed_at": "2026-11-09T06:23:55Z",
+    "license": "AGPL-3.0"
+  }
+}

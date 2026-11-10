@@ -1,0 +1,25 @@
+{
+  "id": "mblode-agent-skills-tidy",
+  "name": "tidy",
+  "description": "Reviews a local diff, branch diff, or PR with file:line findings in confirmed and plausible tiers, gates any test the diff adds or changes, and in apply mode lands the fixes and diff-scoped simplifications. Use when asked to \"review my changes\", \"code review\", \"tidy this\", \"simplify my diff\", \"deslop this\", \"structural review\", \"security audit\", or \"audit these tests in my PR\". For the PR itself use pr-creator; for CI and review threads use pr-babysitter; for UI defects use ui-design; for repo a",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mblode",
+  "install_path": ".claude/skills/tidy/SKILL.md",
+  "source": {
+    "repo": "mblode/agent-skills",
+    "url": "https://github.com/mblode/agent-skills/blob/main/skills/tidy/SKILL.md",
+    "path": "skills/tidy/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T19:47:01.282Z",
+    "stars": 193,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-10T12:33:32Z",
+    "license": "MIT"
+  }
+}

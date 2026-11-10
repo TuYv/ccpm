@@ -1,0 +1,25 @@
+{
+  "id": "mblode-agent-skills-ax-audit",
+  "name": "ax-audit",
+  "description": "Audits agentic products for tool parity, authority, approval payloads, recovery, and trust using 24 rules and a ship verdict. Use when asked for an \"AX audit\", to review an agent approval flow, or whether an agent can operate the product.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mblode",
+  "install_path": ".claude/skills/ax-audit/SKILL.md",
+  "source": {
+    "repo": "mblode/agent-skills",
+    "url": "https://github.com/mblode/agent-skills/blob/main/skills/ax-audit/SKILL.md",
+    "path": "skills/ax-audit/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T19:46:57.721Z",
+    "stars": 193,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-10T12:33:32Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "mblode-agent-skills-ci-speedup",
+  "name": "ci-speedup",
+  "description": "Speeds up CI and the merge path: finds where changes wait between push and deploy, then fixes the critical path, check placement, merge queue or post-merge checks with auto-revert, flaky tests, and deploy rate. Use when \"CI is slow\", \"speed up CI\", \"do we need a merge queue\", \"main keeps going red\", \"flaky tests block merges\", agents open PRs faster than they merge, or building a self-healing merge loop.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mblode",
+  "install_path": ".claude/skills/ci-speedup/SKILL.md",
+  "source": {
+    "repo": "mblode/agent-skills",
+    "url": "https://github.com/mblode/agent-skills/blob/main/skills/ci-speedup/SKILL.md",
+    "path": "skills/ci-speedup/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T19:46:58.106Z",
+    "stars": 193,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-10T12:33:32Z",
+    "license": "MIT"
+  }
+}

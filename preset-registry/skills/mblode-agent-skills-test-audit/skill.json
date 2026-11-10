@@ -1,0 +1,25 @@
+{
+  "id": "mblode-agent-skills-test-audit",
+  "name": "test-audit",
+  "description": "Prunes low-value tests across a whole suite to a measured target while holding coverage. Use when asked to \"remove useless tests\", \"prune the test suite\", \"we have too many tests\", \"agents keep writing pointless tests\", or \"cut 20% of tests without losing coverage\".",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mblode",
+  "install_path": ".claude/skills/test-audit/SKILL.md",
+  "source": {
+    "repo": "mblode/agent-skills",
+    "url": "https://github.com/mblode/agent-skills/blob/main/skills/test-audit/SKILL.md",
+    "path": "skills/test-audit/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T19:47:01.104Z",
+    "stars": 193,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-10T12:33:32Z",
+    "license": "MIT"
+  }
+}

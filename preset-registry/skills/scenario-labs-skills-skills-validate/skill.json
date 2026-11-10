@@ -1,0 +1,25 @@
+{
+  "id": "scenario-labs-skills-skills-validate",
+  "name": "skills-validate",
+  "description": "Use when explicitly asked to run a live or plan-only application test for a published Scenario skill.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "scenario-labs",
+  "install_path": ".claude/skills/skills-validate/SKILL.md",
+  "source": {
+    "repo": "scenario-labs/skills",
+    "url": "https://github.com/scenario-labs/skills/blob/main/.agents/skills/skills-validate/SKILL.md",
+    "path": ".agents/skills/skills-validate/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:50:18.671Z",
+    "stars": 3655,
+    "language": "Python",
+    "pushed_at": "2026-11-09T15:39:12Z",
+    "license": "MIT"
+  }
+}

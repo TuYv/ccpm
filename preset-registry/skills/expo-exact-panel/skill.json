@@ -1,0 +1,25 @@
+{
+  "id": "expo-exact-panel",
+  "name": "panel",
+  "description": "Take a hard directional decision, or an RFC/LLP that needs refining, to the panel — four frontier models from different families, mutually blind, one pass (two at most), asked only about fundamental and directional issues. Use instead of llp-super-refine in almost every case. Use when the user says \"take it to the panel,\" \"ask the panel,\" or when a fork in direction is too consequential to decide alone.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "expo",
+  "install_path": ".claude/skills/panel/SKILL.md",
+  "source": {
+    "repo": "expo/exact",
+    "url": "https://github.com/expo/exact/blob/main/skills/panel/SKILL.md",
+    "path": "skills/panel/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:59:35.090Z",
+    "stars": 1922,
+    "language": "Rust",
+    "pushed_at": "2026-11-10T17:13:51Z",
+    "license": "MIT"
+  }
+}

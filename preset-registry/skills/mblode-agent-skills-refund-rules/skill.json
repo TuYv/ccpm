@@ -1,0 +1,25 @@
+{
+  "id": "mblode-agent-skills-refund-rules",
+  "name": "refund-rules",
+  "description": "Explains and changes how Saltmarsh Booking computes refunds for cancelled stays. Use when asked to \"change the refund window\", \"why was this guest refunded this amount\", or \"add a cancellation rule\".",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mblode",
+  "install_path": ".claude/skills/refund-rules/SKILL.md",
+  "source": {
+    "repo": "mblode/agent-skills",
+    "url": "https://github.com/mblode/agent-skills/blob/main/skills/agents-md/evals/fixtures/instruction-creep/base/.claude/skills/refund-rules/SKILL.md",
+    "path": "skills/agents-md/evals/fixtures/instruction-creep/base/.claude/skills/refund-rules/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T19:46:56.185Z",
+    "stars": 193,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-10T12:33:32Z",
+    "license": "MIT"
+  }
+}

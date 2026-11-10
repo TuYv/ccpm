@@ -1,0 +1,25 @@
+{
+  "id": "mrpaidsocial-arcads-claude-code-mrpaidsocial-clone-ad",
+  "name": "clone-ad",
+  "description": "> Clone an existing video ad for a different product or offer. Analyzes the source video's style, pacing, camera work, dialogue, and tone, then adapts and generates a new Seedance 2.0 video customized for the user's product. End-to-end workflow: input video → analysis → adapted prompt → generation → delivery. Use when someone says \"clone this ad\", \"make this ad but for my product\", \"recreate this video for my brand\", or provides a video ad and a product image asking for a similar video.",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mrpaidsocial",
+  "install_path": ".claude/skills/clone-ad/SKILL.md",
+  "source": {
+    "repo": "mrpaidsocial/arcads-claude-code-mrpaidsocial",
+    "url": "https://github.com/mrpaidsocial/arcads-claude-code-mrpaidsocial/blob/main/skills/arcads-external-api/prompting/clone-ad/SKILL.md",
+    "path": "skills/arcads-external-api/prompting/clone-ad/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:52:23.789Z",
+    "stars": 1674,
+    "language": "Python",
+    "pushed_at": "2026-10-19T19:46:15Z",
+    "license": "MIT"
+  }
+}

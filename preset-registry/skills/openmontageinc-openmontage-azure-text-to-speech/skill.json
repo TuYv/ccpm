@@ -1,0 +1,25 @@
+{
+  "id": "openmontageinc-openmontage-azure-text-to-speech",
+  "name": "azure-text-to-speech",
+  "description": "Generate neural narration audio using Azure AI Speech (REST text-to-speech). Use when synthesizing voiceovers or narration in OpenMontage. Optional cloud TTS provider — preferred when AZURE_SPEECH_KEY is configured; the local piper_tts remains the default offline path. Shares one Speech resource with azure_stt.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "OpenMontageInc",
+  "install_path": ".claude/skills/azure-text-to-speech/SKILL.md",
+  "source": {
+    "repo": "OpenMontageInc/OpenMontage",
+    "url": "https://github.com/OpenMontageInc/OpenMontage/blob/main/.agents/skills/azure-text-to-speech/SKILL.md",
+    "path": ".agents/skills/azure-text-to-speech/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:57:08.547Z",
+    "stars": 79381,
+    "language": "Python",
+    "pushed_at": "2026-11-09T06:23:55Z",
+    "license": "AGPL-3.0"
+  }
+}

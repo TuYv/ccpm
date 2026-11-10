@@ -1,0 +1,25 @@
+{
+  "id": "openmontageinc-openmontage-gsap-performance",
+  "name": "gsap-performance",
+  "description": "Official GSAP skill for performance — prefer transforms, avoid layout thrashing, will-change, batching. Use when optimizing GSAP animations, reducing jank, or when the user asks about animation performance, FPS, or smooth 60fps.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "OpenMontageInc",
+  "install_path": ".claude/skills/gsap-performance/SKILL.md",
+  "source": {
+    "repo": "OpenMontageInc/OpenMontage",
+    "url": "https://github.com/OpenMontageInc/OpenMontage/blob/main/.agents/skills/gsap-performance/SKILL.md",
+    "path": ".agents/skills/gsap-performance/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:57:12.832Z",
+    "stars": 79381,
+    "language": "Python",
+    "pushed_at": "2026-11-09T06:23:55Z",
+    "license": "AGPL-3.0"
+  }
+}

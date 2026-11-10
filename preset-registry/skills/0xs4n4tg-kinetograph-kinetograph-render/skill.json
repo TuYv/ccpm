@@ -1,0 +1,25 @@
+{
+  "id": "0xs4n4tg-kinetograph-kinetograph-render",
+  "name": "kinetograph-render",
+  "description": "Look at, check and export a Kinetograph composition. Use to see frames (`still`, `strip`, `onion`), check a project without pixels (`inspect`, `lint`, `check`, `doctor`, `snapshot`, `audio analyze`), render to MP4, MOV, WebM, GIF or an image sequence, choose codecs, ProRes profiles, alpha and size, or confirm a render came out right.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "0xS4N4TG",
+  "install_path": ".claude/skills/kinetograph-render/SKILL.md",
+  "source": {
+    "repo": "0xS4N4TG/kinetograph",
+    "url": "https://github.com/0xS4N4TG/kinetograph/blob/main/packages/cli/skills/kinetograph-render/SKILL.md",
+    "path": "packages/cli/skills/kinetograph-render/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T19:49:06.547Z",
+    "stars": 490,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-10T19:25:47Z",
+    "license": "Apache-2.0"
+  }
+}

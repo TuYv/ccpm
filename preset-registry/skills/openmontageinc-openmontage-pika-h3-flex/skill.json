@@ -1,0 +1,25 @@
+{
+  "id": "openmontageinc-openmontage-pika-h3-flex",
+  "name": "pika-h3-flex",
+  "description": "| Generate 3-15 second video with native synchronized audio using Pika H3 Flex through the Pika API (`pika_video`). Use for text-to-video, first/last-frame conditioning, and reference-guided generation from up to 9 images, 3 videos and 3 audio clips, with 480p/768p native output and 1080p/2k/4k upscale. Covers the prompt structure the model responds to, when to turn prompt rewriting off, reference rules, pricing and billing behavior, and resume after a polling timeout.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "OpenMontageInc",
+  "install_path": ".claude/skills/pika-h3-flex/SKILL.md",
+  "source": {
+    "repo": "OpenMontageInc/OpenMontage",
+    "url": "https://github.com/OpenMontageInc/OpenMontage/blob/main/.agents/skills/pika-h3-flex/SKILL.md",
+    "path": ".agents/skills/pika-h3-flex/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:57:18.057Z",
+    "stars": 79381,
+    "language": "Python",
+    "pushed_at": "2026-11-09T06:23:55Z",
+    "license": "AGPL-3.0"
+  }
+}

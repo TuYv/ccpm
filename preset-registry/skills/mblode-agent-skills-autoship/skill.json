@@ -1,0 +1,25 @@
+{
+  "id": "mblode-agent-skills-autoship",
+  "name": "autoship",
+  "description": "Runs a changesets npm release through the version PR, CI publish, and registry verification. Use when asked to \"release this package\", \"autoship\", \"merge Version Packages\", or diagnose a release that did not publish.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mblode",
+  "install_path": ".claude/skills/autoship/SKILL.md",
+  "source": {
+    "repo": "mblode/agent-skills",
+    "url": "https://github.com/mblode/agent-skills/blob/main/skills/autoship/SKILL.md",
+    "path": "skills/autoship/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T19:46:57.543Z",
+    "stars": 193,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-10T12:33:32Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "mblode-agent-skills-multi-tenant-architecture",
+  "name": "multi-tenant-architecture",
+  "description": "Designs tenant isolation, hostname routing, custom-domain lifecycle, and plan limits on Cloudflare or Vercel. Use when asked to \"isolate tenant data\", \"support custom domains\", \"build a white-label platform\", or assess PSL registration. For general module structure use codebase-architecture; for SEO content use seo.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mblode",
+  "install_path": ".claude/skills/multi-tenant-architecture/SKILL.md",
+  "source": {
+    "repo": "mblode/agent-skills",
+    "url": "https://github.com/mblode/agent-skills/blob/main/skills/multi-tenant-architecture/SKILL.md",
+    "path": "skills/multi-tenant-architecture/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T19:46:59.106Z",
+    "stars": 193,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-10T12:33:32Z",
+    "license": "MIT"
+  }
+}

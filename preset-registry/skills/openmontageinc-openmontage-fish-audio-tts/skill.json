@@ -1,0 +1,25 @@
+{
+  "id": "openmontageinc-openmontage-fish-audio-tts",
+  "name": "fish-audio-tts",
+  "description": "Generate expressive, multilingual narration with fish.audio (S1 / S2-generation models) and reuse cloned voices via reference_id. Use when the user prefers fish.audio/Fish Audio TTS, wants a specific playground voice model, or needs high-emotion voice-clone narration.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "OpenMontageInc",
+  "install_path": ".claude/skills/fish-audio-tts/SKILL.md",
+  "source": {
+    "repo": "OpenMontageInc/OpenMontage",
+    "url": "https://github.com/OpenMontageInc/OpenMontage/blob/main/.agents/skills/fish-audio-tts/SKILL.md",
+    "path": ".agents/skills/fish-audio-tts/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:57:11.375Z",
+    "stars": 79381,
+    "language": "Python",
+    "pushed_at": "2026-11-09T06:23:55Z",
+    "license": "AGPL-3.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "scenario-labs-skills-scenario-roblox-data",
+  "name": "scenario-roblox-data",
+  "description": "Use when a Roblox game saves or loads player data, or when players report data not saving, lost progress, rollbacks, duplicated items or a purchase granted twice. Triggers: DataStoreService, UpdateAsync, SetAsync, BindToClose, ProfileStore, ProfileService, DataStore2, session locking, data schema or migration, Developer Product ProcessReceipt, player trading, OrderedDataStore leaderboards, MemoryStore, MessagingService, TeleportService and reserved servers, DataStore budgets and throttling (erro",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "scenario-labs",
+  "install_path": ".claude/skills/scenario-roblox-data/SKILL.md",
+  "source": {
+    "repo": "scenario-labs/skills",
+    "url": "https://github.com/scenario-labs/skills/blob/main/skills/game-engines/roblox/scenario-roblox-data/SKILL.md",
+    "path": "skills/game-engines/roblox/scenario-roblox-data/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:50:30.749Z",
+    "stars": 3655,
+    "language": "Python",
+    "pushed_at": "2026-11-09T15:39:12Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "avelikiy-great-cto-artifact-retention",
+  "name": "artifact-retention",
+  "description": "After a build is delivered, delete its intermediate copies and old versions — keep exactly the version that runs and one previous for rollback — and report the space freed as measured by `df`, never `du`. Covers local build output, mobile build caches, container images, release dirs and stale browser-session copies, with a never-delete list (volumes, databases, installed SDKs, simulator runtimes, the rollback version). Use after any release or image build, before heavy builds when free disk is l",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "avelikiy",
+  "install_path": ".claude/skills/artifact-retention/SKILL.md",
+  "source": {
+    "repo": "avelikiy/great_cto",
+    "url": "https://github.com/avelikiy/great_cto/blob/main/skills/artifact-retention/SKILL.md",
+    "path": "skills/artifact-retention/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:10:18.894Z",
+    "stars": 115,
+    "language": "JavaScript",
+    "pushed_at": "2026-11-10T15:11:40Z",
+    "license": "MIT"
+  }
+}

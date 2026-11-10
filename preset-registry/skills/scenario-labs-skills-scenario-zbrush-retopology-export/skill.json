@@ -1,0 +1,25 @@
+{
+  "id": "scenario-labs-skills-scenario-zbrush-retopology-export",
+  "name": "scenario-zbrush-retopology-export",
+  "description": "Use when a ZBrush sculpt, scan or AI-generated mesh must become production topology and files (ZRemesher and guides, the 2026 Retopo brush, reprojecting detail with Project All, rebuilding subdivision levels, UV Master or native unwrap, normal and displacement maps with Multi Map Exporter, GoZ, OBJ or FBX export, scale and axes, Decimation Master, \"clean up an AI mesh in ZBrush\"), or when detail is lost after ZRemesher, a map is upside down or an export arrives at the wrong size.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "scenario-labs",
+  "install_path": ".claude/skills/scenario-zbrush-retopology-export/SKILL.md",
+  "source": {
+    "repo": "scenario-labs/skills",
+    "url": "https://github.com/scenario-labs/skills/blob/main/skills/dcc/zbrush/scenario-zbrush-retopology-export/SKILL.md",
+    "path": "skills/dcc/zbrush/scenario-zbrush-retopology-export/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:50:26.222Z",
+    "stars": 3655,
+    "language": "Python",
+    "pushed_at": "2026-11-09T15:39:12Z",
+    "license": "MIT"
+  }
+}

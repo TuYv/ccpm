@@ -1,0 +1,25 @@
+{
+  "id": "scenario-labs-skills-scenario-zbrush-pose-print",
+  "name": "scenario-zbrush-pose-print",
+  "description": "Use when posing a sculpt or preparing it for 3D printing in ZBrush: \"pose this character\", Transpose Master, TPoseMesh, Gizmo posing with masks, ZSphere rig, Proxy Pose, weapon in the hand, stretching after posing, \"3D print this\", 1/6 scale statue, miniature, resin or FDM, hollowing, wall thickness, drain holes, keys and pins, cutting into parts, 3D Print Hub, Scale Master, Decimation Master, STL or 3MF, size in millimeters.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "scenario-labs",
+  "install_path": ".claude/skills/scenario-zbrush-pose-print/SKILL.md",
+  "source": {
+    "repo": "scenario-labs/skills",
+    "url": "https://github.com/scenario-labs/skills/blob/main/skills/dcc/zbrush/scenario-zbrush-pose-print/SKILL.md",
+    "path": "skills/dcc/zbrush/scenario-zbrush-pose-print/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:50:26.009Z",
+    "stars": 3655,
+    "language": "Python",
+    "pushed_at": "2026-11-09T15:39:12Z",
+    "license": "MIT"
+  }
+}

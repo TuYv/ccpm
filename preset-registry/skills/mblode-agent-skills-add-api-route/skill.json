@@ -1,0 +1,25 @@
+{
+  "id": "mblode-agent-skills-add-api-route",
+  "name": "add-api-route",
+  "description": "Adds a Fastify route to the Saltmarsh Booking API with its schema, auth level, repository call, and registration. Use when asked to \"add an endpoint\", \"add a route\", or \"expose this over the API\".",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mblode",
+  "install_path": ".claude/skills/add-api-route/SKILL.md",
+  "source": {
+    "repo": "mblode/agent-skills",
+    "url": "https://github.com/mblode/agent-skills/blob/main/skills/agents-md/evals/fixtures/instruction-creep/base/.claude/skills/add-api-route/SKILL.md",
+    "path": "skills/agents-md/evals/fixtures/instruction-creep/base/.claude/skills/add-api-route/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T19:46:55.650Z",
+    "stars": 193,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-10T12:33:32Z",
+    "license": "MIT"
+  }
+}

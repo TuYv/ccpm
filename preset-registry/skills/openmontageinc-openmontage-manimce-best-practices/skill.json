@@ -1,0 +1,25 @@
+{
+  "id": "openmontageinc-openmontage-manimce-best-practices",
+  "name": "manimce-best-practices",
+  "description": "| Trigger when: (1) User mentions \"manim\" or \"Manim Community\" or \"ManimCE\", (2) Code contains `from manim import *`, (3) User runs `manim` CLI commands, (4) Working with Scene, MathTex, Create(), or ManimCE-specific classes.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "OpenMontageInc",
+  "install_path": ".claude/skills/manimce-best-practices/SKILL.md",
+  "source": {
+    "repo": "OpenMontageInc/OpenMontage",
+    "url": "https://github.com/OpenMontageInc/OpenMontage/blob/main/.agents/skills/manimce-best-practices/SKILL.md",
+    "path": ".agents/skills/manimce-best-practices/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:57:16.619Z",
+    "stars": 79381,
+    "language": "Python",
+    "pushed_at": "2026-11-09T06:23:55Z",
+    "license": "AGPL-3.0"
+  }
+}

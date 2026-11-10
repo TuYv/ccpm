@@ -1,0 +1,25 @@
+{
+  "id": "scenario-labs-skills-scenario-blender-lighting-rendering",
+  "name": "scenario-blender-lighting-rendering",
+  "description": "Use when lighting, rendering or compositing in Blender: light a character, product or hero shot, interior at dusk or night, three-point or motivated lighting, sun and sky, HDRI, EEVEE vs Cycles settings, light leaks or noise, flat or muddy renders, subject not standing out, AgX/ACES color management, render passes, EXR, light groups, bloom and vignette in the 5.x compositor, rule of thirds and value checks, toon/NPR looks, or judging a render like a lighter.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "scenario-labs",
+  "install_path": ".claude/skills/scenario-blender-lighting-rendering/SKILL.md",
+  "source": {
+    "repo": "scenario-labs/skills",
+    "url": "https://github.com/scenario-labs/skills/blob/main/skills/dcc/blender/scenario-blender-lighting-rendering/SKILL.md",
+    "path": "skills/dcc/blender/scenario-blender-lighting-rendering/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:50:20.657Z",
+    "stars": 3655,
+    "language": "Python",
+    "pushed_at": "2026-11-09T15:39:12Z",
+    "license": "MIT"
+  }
+}

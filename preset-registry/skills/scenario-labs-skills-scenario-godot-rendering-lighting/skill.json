@@ -1,0 +1,25 @@
+{
+  "id": "scenario-labs-skills-scenario-godot-rendering-lighting",
+  "name": "scenario-godot-rendering-lighting",
+  "description": "Use when lighting or rendering a Godot 4.7 3D scene: pick a renderer (Forward+, Mobile, Compatibility), choose GI (SDFGI, VoxelGI, LightmapGI, reflection probes), bake lightmaps without a mouse, tune WorldEnvironment, tonemapper (AgX, ACES, Filmic), glow, fog, volumetric fog and god rays, shadows and shadow acne, quality presets for PC and phones, Compositor post effects, or when 'my scene looks flat', 'too dark indoors', 'light leaks', 'lightmap is black', 'looks different on mobile'.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "scenario-labs",
+  "install_path": ".claude/skills/scenario-godot-rendering-lighting/SKILL.md",
+  "source": {
+    "repo": "scenario-labs/skills",
+    "url": "https://github.com/scenario-labs/skills/blob/main/skills/game-engines/godot/scenario-godot-rendering-lighting/SKILL.md",
+    "path": "skills/game-engines/godot/scenario-godot-rendering-lighting/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:50:29.162Z",
+    "stars": 3655,
+    "language": "Python",
+    "pushed_at": "2026-11-09T15:39:12Z",
+    "license": "MIT"
+  }
+}

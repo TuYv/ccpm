@@ -1,0 +1,25 @@
+{
+  "id": "scenario-labs-skills-skills-pr-handle",
+  "name": "skills-pr-handle",
+  "description": "Use when explicitly asked to handle a pull request in the Scenario skills repository, including review comments, script tests and dependency pins, and skill validation.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "scenario-labs",
+  "install_path": ".claude/skills/skills-pr-handle/SKILL.md",
+  "source": {
+    "repo": "scenario-labs/skills",
+    "url": "https://github.com/scenario-labs/skills/blob/main/.agents/skills/skills-pr-handle/SKILL.md",
+    "path": ".agents/skills/skills-pr-handle/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:50:18.471Z",
+    "stars": 3655,
+    "language": "Python",
+    "pushed_at": "2026-11-09T15:39:12Z",
+    "license": "MIT"
+  }
+}

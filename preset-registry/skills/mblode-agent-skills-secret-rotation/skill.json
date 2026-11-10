@@ -1,0 +1,25 @@
+{
+  "id": "mblode-agent-skills-secret-rotation",
+  "name": "secret-rotation",
+  "description": "Rotates a Thistle Commons service secret without downtime. Use when asked to \"rotate the signing key\", \"rotate a secret\", or \"this credential leaked\".",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mblode",
+  "install_path": ".claude/skills/secret-rotation/SKILL.md",
+  "source": {
+    "repo": "mblode/agent-skills",
+    "url": "https://github.com/mblode/agent-skills/blob/main/skills/agent-skills-creator/evals/fixtures/frontier-model-refresh/base/skills/secret-rotation/SKILL.md",
+    "path": "skills/agent-skills-creator/evals/fixtures/frontier-model-refresh/base/skills/secret-rotation/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T19:46:54.251Z",
+    "stars": 193,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-10T12:33:32Z",
+    "license": "MIT"
+  }
+}

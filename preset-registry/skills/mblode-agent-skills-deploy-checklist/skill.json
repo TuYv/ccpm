@@ -1,0 +1,25 @@
+{
+  "id": "mblode-agent-skills-deploy-checklist",
+  "name": "deploy-checklist",
+  "description": "Walks through deploying the Orchard storefront to staging and production, including pre-deploy checks, the canary, monitoring, and rollback. Use when asked to \"deploy\", \"ship to prod\", \"run the release\", \"roll back\", or \"is it safe to deploy\".",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mblode",
+  "install_path": ".claude/skills/deploy-checklist/SKILL.md",
+  "source": {
+    "repo": "mblode/agent-skills",
+    "url": "https://github.com/mblode/agent-skills/blob/main/skills/agent-skills-creator/evals/fixtures/long-deploy-checklist/base/skills/deploy-checklist/SKILL.md",
+    "path": "skills/agent-skills-creator/evals/fixtures/long-deploy-checklist/base/skills/deploy-checklist/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T19:46:54.646Z",
+    "stars": 193,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-10T12:33:32Z",
+    "license": "MIT"
+  }
+}

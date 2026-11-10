@@ -1,0 +1,25 @@
+{
+  "id": "scenario-labs-skills-scenario-blender-previs-storyboard",
+  "name": "scenario-blender-previs-storyboard",
+  "description": "Use when turning a script or story into previs, layout, storyboards or an animatic in Blender: beats to shot list, camera and lens per shot, staging, camera height, 180-degree rule, screen direction, shot sizes, when to cut, camera moves, timing stills in the Video Sequencer, markers bound to cameras, Story Tools, Grease Pencil or 2D/3D hybrid boards. Also when an animatic shows the wrong frame, blocking keys are not stepped, Rigify operators are missing, or viewport render fails headless.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "scenario-labs",
+  "install_path": ".claude/skills/scenario-blender-previs-storyboard/SKILL.md",
+  "source": {
+    "repo": "scenario-labs/skills",
+    "url": "https://github.com/scenario-labs/skills/blob/main/skills/dcc/blender/scenario-blender-previs-storyboard/SKILL.md",
+    "path": "skills/dcc/blender/scenario-blender-previs-storyboard/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:50:20.854Z",
+    "stars": 3655,
+    "language": "Python",
+    "pushed_at": "2026-11-09T15:39:12Z",
+    "license": "MIT"
+  }
+}

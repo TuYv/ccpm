@@ -1,0 +1,25 @@
+{
+  "id": "mblode-agent-skills-agent-skills-creator",
+  "name": "agent-skills-creator",
+  "description": "Creates and improves portable Agent Skills with a validator, routing scenarios, and evidence-based keep, cut, merge, or retire decisions. Use when asked to \"write a skill\", \"update all skills\", \"audit my SKILL.md\", \"remove redundant instructions\", or fix skill triggering.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mblode",
+  "install_path": ".claude/skills/agent-skills-creator/SKILL.md",
+  "source": {
+    "repo": "mblode/agent-skills",
+    "url": "https://github.com/mblode/agent-skills/blob/main/skills/agent-skills-creator/SKILL.md",
+    "path": "skills/agent-skills-creator/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T19:46:55.428Z",
+    "stars": 193,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-10T12:33:32Z",
+    "license": "MIT"
+  }
+}

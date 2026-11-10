@@ -1,0 +1,25 @@
+{
+  "id": "mblode-agent-skills-seo",
+  "name": "seo",
+  "description": "Audits and fixes technical SEO, researches search demand, creates content briefs, and measures SEO, AEO and GEO performance. Use when asked to \"audit SEO\", \"fix indexing\", \"improve AI visibility\", \"do AEO or GEO\", \"check keyword volume\", \"write an SEO brief\", or \"why did organic traffic drop\". For Mintlify Agent Score, AFDocs, or Is Agentic reports use agent-ready. For writing the article use ghostwriter; for visual redesign use ui-design.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mblode",
+  "install_path": ".claude/skills/seo/SKILL.md",
+  "source": {
+    "repo": "mblode/agent-skills",
+    "url": "https://github.com/mblode/agent-skills/blob/main/skills/seo/SKILL.md",
+    "path": "skills/seo/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T19:47:00.935Z",
+    "stars": 193,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-10T12:33:32Z",
+    "license": "MIT"
+  }
+}

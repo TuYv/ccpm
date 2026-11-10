@@ -1,0 +1,25 @@
+{
+  "id": "mblode-agent-skills-ui-design",
+  "name": "ui-design",
+  "description": "Designs and builds React/Next/Tailwind UI, audits visual and interaction defects, and stress-tests components with worst-case data. Use when asked to \"build a landing page\", \"extract our design system\", \"add dark mode\", \"make this responsive\", \"remove UI slop\", \"audit this component\", \"stress-test this component\", \"break this UI\", or \"show me the worst case\".",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mblode",
+  "install_path": ".claude/skills/ui-design/SKILL.md",
+  "source": {
+    "repo": "mblode/agent-skills",
+    "url": "https://github.com/mblode/agent-skills/blob/main/skills/ui-design/SKILL.md",
+    "path": "skills/ui-design/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T19:47:01.900Z",
+    "stars": 193,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-10T12:33:32Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "expo-exact-llp-review",
+  "name": "llp-review",
+  "description": "Run the LLP 0005 review loop for an LLP document — orchestrate reviews from other model families, write one provenance-tracked artifact per review actually received under llp/reviews/, and never fabricate a review or accept on the author's behalf. Review intensity scales with stakes; the author decides when it's enough.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "expo",
+  "install_path": ".claude/skills/llp-review/SKILL.md",
+  "source": {
+    "repo": "expo/exact",
+    "url": "https://github.com/expo/exact/blob/main/.claude/skills/llp-review/SKILL.md",
+    "path": ".claude/skills/llp-review/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:59:34.499Z",
+    "stars": 1922,
+    "language": "Rust",
+    "pushed_at": "2026-11-10T17:13:51Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "mblode-agent-skills-product-design",
+  "name": "product-design",
+  "description": "Specifies interaction choices, action scope, reversibility, recovery, and reachable states. Use when asked to \"design the flow\", \"should delete be undoable\", \"choose the control\", or \"review this product decision\".",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mblode",
+  "install_path": ".claude/skills/product-design/SKILL.md",
+  "source": {
+    "repo": "mblode/agent-skills",
+    "url": "https://github.com/mblode/agent-skills/blob/main/skills/product-design/SKILL.md",
+    "path": "skills/product-design/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T19:47:00.156Z",
+    "stars": 193,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-10T12:33:32Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "mblode-agent-skills-incident-comms",
+  "name": "incident-comms",
+  "description": "Writes the public status page updates for a Heron Press incident. Use when asked to \"post a status update\", \"write the incident update\", or \"what do we tell customers about the outage\".",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mblode",
+  "install_path": ".claude/skills/incident-comms/SKILL.md",
+  "source": {
+    "repo": "mblode/agent-skills",
+    "url": "https://github.com/mblode/agent-skills/blob/main/skills/agent-skills-creator/evals/fixtures/duplicated-tells-list/base/skills/incident-comms/SKILL.md",
+    "path": "skills/agent-skills-creator/evals/fixtures/duplicated-tells-list/base/skills/incident-comms/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T19:46:53.243Z",
+    "stars": 193,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-10T12:33:32Z",
+    "license": "MIT"
+  }
+}

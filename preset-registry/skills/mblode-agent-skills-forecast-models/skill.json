@@ -1,0 +1,25 @@
+{
+  "id": "mblode-agent-skills-forecast-models",
+  "name": "forecast-models",
+  "description": "Guidance for the demand forecasting models that predict parcel volume per depot for the Mossback capacity planner. Covers model training, model features, feature engineering, training data, holdout windows, model accuracy, error metrics, model retraining, model versions, model registry entries, model rollout, and model rollback. Also covers the nightly training job, the weekly accuracy report, how forecasts are written to the planner tables, and how a depot manager's manual override interacts wi",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mblode",
+  "install_path": ".claude/skills/forecast-models/SKILL.md",
+  "source": {
+    "repo": "mblode/agent-skills",
+    "url": "https://github.com/mblode/agent-skills/blob/main/skills/agent-skills-creator/evals/fixtures/crowded-skill-listing/base/.agents/skills/forecast-models/SKILL.md",
+    "path": "skills/agent-skills-creator/evals/fixtures/crowded-skill-listing/base/.agents/skills/forecast-models/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T19:46:52.272Z",
+    "stars": 193,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-10T12:33:32Z",
+    "license": "MIT"
+  }
+}

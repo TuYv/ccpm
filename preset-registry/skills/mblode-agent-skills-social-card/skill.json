@@ -1,0 +1,25 @@
+{
+  "id": "mblode-agent-skills-social-card",
+  "name": "social-card",
+  "description": "Generates the 1200x630 social share image for a Pebble Works blog post from its title and hero colour. Use when asked to \"make the social card\", \"generate the og image\", or \"the share image is missing\".",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mblode",
+  "install_path": ".claude/skills/social-card/SKILL.md",
+  "source": {
+    "repo": "mblode/agent-skills",
+    "url": "https://github.com/mblode/agent-skills/blob/main/skills/agent-skills-creator/evals/fixtures/checkout-screenshot-skill/base/skills/social-card/SKILL.md",
+    "path": "skills/agent-skills-creator/evals/fixtures/checkout-screenshot-skill/base/skills/social-card/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T19:46:50.657Z",
+    "stars": 193,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-10T12:33:32Z",
+    "license": "MIT"
+  }
+}

@@ -1,8 +1,8 @@
 {
   "id": "0xs4n4tg-kinetograph-kinetograph",
   "name": "kinetograph",
-  "description": "Make videos and motion graphics with Kinetograph. Write Remotion-shaped TSX (useCurrentFrame, interpolate, spring, Sequence, native elements) and Web Audio code, or an HTML page with GSAP (HyperFrames projects render as they are), look at frames with `kinetograph still` and `strip`, check them with `inspect` and `lint`, then `render` to MP4. Use when asked to build, edit, preview or render a video, animation, title card or sound design with Kinetograph.",
-  "category": "测试调试",
+  "description": "Entry point for making videos and motion graphics with Kinetograph, a video engine with no browser in it. Use first when asked to build, edit, preview or render a video, animation, title card or sound design with Kinetograph, or to run any `kinetograph` command; it says which kinetograph-* skill to load next.",
+  "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/0xS4N4TG/kinetograph/blob/main/packages/cli/skills/kinetograph/SKILL.md",
     "path": "packages/cli/skills/kinetograph/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-10T11:45:28.876Z",
-    "stars": 487,
+    "discovered_at": "2026-11-10T19:49:07.152Z",
+    "stars": 490,
     "language": "TypeScript",
-    "pushed_at": "2026-11-09T13:35:45Z",
-    "license": null
+    "pushed_at": "2026-11-10T19:25:47Z",
+    "license": "Apache-2.0"
   }
 }

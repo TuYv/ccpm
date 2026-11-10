@@ -1,0 +1,25 @@
+{
+  "id": "scenario-labs-skills-scenario-blender-hair",
+  "name": "scenario-blender-hair",
+  "description": "Use when grooming hair or fur in Blender with hair curves, such as a character hairstyle, animal fur, procedural fur in geometry nodes, or hair cards and mesh hair for games. Also covers the Essentials hair node assets (Interpolate, Clump, Curl, Frizz, Noise, Trim), density masks, bald spots, parting lines, strand shading in Cycles or EEVEE, and slow grooms. Use it too when a hair script misbehaves headless, for example stale modifier inputs or curve sculpt brushes that do nothing.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "scenario-labs",
+  "install_path": ".claude/skills/scenario-blender-hair/SKILL.md",
+  "source": {
+    "repo": "scenario-labs/skills",
+    "url": "https://github.com/scenario-labs/skills/blob/main/skills/dcc/blender/scenario-blender-hair/SKILL.md",
+    "path": "skills/dcc/blender/scenario-blender-hair/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:50:20.255Z",
+    "stars": 3655,
+    "language": "Python",
+    "pushed_at": "2026-11-09T15:39:12Z",
+    "license": "MIT"
+  }
+}

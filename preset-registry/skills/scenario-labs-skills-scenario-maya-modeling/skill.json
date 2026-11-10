@@ -1,0 +1,25 @@
+{
+  "id": "scenario-labs-skills-scenario-maya-modeling",
+  "name": "scenario-maya-modeling",
+  "description": "Use when modeling in Autodesk Maya, such as hard-surface props, weapons, vehicles, a sci-fi crate, a game-ready or SubD film model, or a character or creature base mesh, or when asked to \"clean up this model\" or a scene before rigging or UVs. Also for support loops vs bevels vs creases, Smart Bevel, weighted normals, hard edges, pinching or wobbly highlights, a faceted cage, flipped faces, a triangle budget, n-gons, non-manifold geometry, mirroring a half, a low poly from a high poly, or deforma",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "scenario-labs",
+  "install_path": ".claude/skills/scenario-maya-modeling/SKILL.md",
+  "source": {
+    "repo": "scenario-labs/skills",
+    "url": "https://github.com/scenario-labs/skills/blob/main/skills/dcc/maya/scenario-maya-modeling/SKILL.md",
+    "path": "skills/dcc/maya/scenario-maya-modeling/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:50:23.923Z",
+    "stars": 3655,
+    "language": "Python",
+    "pushed_at": "2026-11-09T15:39:12Z",
+    "license": "MIT"
+  }
+}

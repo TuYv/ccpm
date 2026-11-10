@@ -1,0 +1,25 @@
+{
+  "id": "mrpaidsocial-arcads-claude-code-mrpaidsocial-image-ad-clone",
+  "name": "image-ad-clone",
+  "description": "Use when the user wants to reverse-engineer an existing image ad into a reusable prompt template. Validates via Arcads — picks gpt-image-2 or Nano Banana at Phase 1. Triggers on \"clone this ad as a template\", \"reverse engineer this ad\", \"turn this ad into a prompt\", \"extract a template\", \"make this ad reusable\", \"add to my prompt library\", \"study this ad and make a template\". Input is an EXISTING ad image; does NOT trigger for fresh generation (use chatgpt-image-ad or nano-banana-image-ad).",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mrpaidsocial",
+  "install_path": ".claude/skills/image-ad-clone/SKILL.md",
+  "source": {
+    "repo": "mrpaidsocial/arcads-claude-code-mrpaidsocial",
+    "url": "https://github.com/mrpaidsocial/arcads-claude-code-mrpaidsocial/blob/main/skills/image-ad-clone/SKILL.md",
+    "path": "skills/image-ad-clone/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:52:24.798Z",
+    "stars": 1674,
+    "language": "Python",
+    "pushed_at": "2026-10-19T19:46:15Z",
+    "license": "MIT"
+  }
+}

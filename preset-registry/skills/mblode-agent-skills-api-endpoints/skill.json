@@ -1,0 +1,25 @@
+{
+  "id": "mblode-agent-skills-api-endpoints",
+  "name": "api-endpoints",
+  "description": "Comprehensive guidance for building and changing HTTP API endpoints in the Mossback platform. Covers routes, handlers, controllers, request validation, response shapes, serializers, status codes, error responses, pagination, filtering, sorting, versioning, authentication middleware, rate limiting, idempotency keys, webhooks, and the OpenAPI document. Also covers how endpoints are registered, how request and response schemas are shared with the web client, and how a breaking change is introduced ",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mblode",
+  "install_path": ".claude/skills/api-endpoints/SKILL.md",
+  "source": {
+    "repo": "mblode/agent-skills",
+    "url": "https://github.com/mblode/agent-skills/blob/main/skills/agent-skills-creator/evals/fixtures/crowded-skill-listing/base/.agents/skills/api-endpoints/SKILL.md",
+    "path": "skills/agent-skills-creator/evals/fixtures/crowded-skill-listing/base/.agents/skills/api-endpoints/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T19:46:51.436Z",
+    "stars": 193,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-10T12:33:32Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "scenario-labs-skills-scenario-roblox-architecture",
+  "name": "scenario-roblox-architecture",
+  "description": "Use when structuring Roblox game code: where scripts go (ServerScriptService, ReplicatedStorage, StarterPlayerScripts), Script vs LocalScript and RunContext, a module loader or framework (Knit or none), services and controllers, how systems talk (signals, BindableEvents, attributes), CollectionService tags, cleanup with Trove or Janitor, Rojo project layout, or a round-based game core. Also when code is spaghetti, a script runs twice, require errors with 'required recursively', a module is nil o",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "scenario-labs",
+  "install_path": ".claude/skills/scenario-roblox-architecture/SKILL.md",
+  "source": {
+    "repo": "scenario-labs/skills",
+    "url": "https://github.com/scenario-labs/skills/blob/main/skills/game-engines/roblox/scenario-roblox-architecture/SKILL.md",
+    "path": "skills/game-engines/roblox/scenario-roblox-architecture/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:50:30.276Z",
+    "stars": 3655,
+    "language": "Python",
+    "pushed_at": "2026-11-09T15:39:12Z",
+    "license": "MIT"
+  }
+}

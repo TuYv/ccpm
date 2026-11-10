@@ -1,0 +1,25 @@
+{
+  "id": "openmontageinc-openmontage-flux-best-practices",
+  "name": "flux-best-practices",
+  "description": "Comprehensive guide for BFL FLUX image generation models. Covers prompting, T2I, I2I, structured JSON, hex colors, typography, multi-reference editing, and model-specific best practices for FLUX.2 and FLUX.1 families.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "OpenMontageInc",
+  "install_path": ".claude/skills/flux-best-practices/SKILL.md",
+  "source": {
+    "repo": "OpenMontageInc/OpenMontage",
+    "url": "https://github.com/OpenMontageInc/OpenMontage/blob/main/.agents/skills/flux-best-practices/SKILL.md",
+    "path": ".agents/skills/flux-best-practices/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:57:11.600Z",
+    "stars": 79381,
+    "language": "Python",
+    "pushed_at": "2026-11-09T06:23:55Z",
+    "license": "AGPL-3.0"
+  }
+}

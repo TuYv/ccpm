@@ -1,0 +1,25 @@
+{
+  "id": "mblode-agent-skills-support-replies",
+  "name": "support-replies",
+  "description": "Drafts a reply to a Heron Press support conversation. Use when asked to \"draft a support reply\", \"answer this customer\", or \"how should we respond to this ticket\".",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mblode",
+  "install_path": ".claude/skills/support-replies/SKILL.md",
+  "source": {
+    "repo": "mblode/agent-skills",
+    "url": "https://github.com/mblode/agent-skills/blob/main/skills/agent-skills-creator/evals/fixtures/duplicated-tells-list/base/skills/support-replies/SKILL.md",
+    "path": "skills/agent-skills-creator/evals/fixtures/duplicated-tells-list/base/skills/support-replies/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T19:46:53.646Z",
+    "stars": 193,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-10T12:33:32Z",
+    "license": "MIT"
+  }
+}

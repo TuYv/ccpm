@@ -1,0 +1,25 @@
+{
+  "id": "scenario-labs-skills-scenario-blender-retopology",
+  "name": "scenario-blender-retopology",
+  "description": "Use when turning a dense sculpt, scan or AI-generated mesh into clean topology in Blender, for animation, subdivision or a game low poly with a triangle budget. Also when choosing between QuadriFlow or voxel remesh and manual retopo, placing loops around eyes, mouth and joints, deciding pole placement, setting up a Shrinkwrap cage, fixing volume loss after subdivision, preparing a low poly for baking, or auditing topology for spirals, 6-poles and triangles. Keywords: retopo, retopology, quad rem",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "scenario-labs",
+  "install_path": ".claude/skills/scenario-blender-retopology/SKILL.md",
+  "source": {
+    "repo": "scenario-labs/skills",
+    "url": "https://github.com/scenario-labs/skills/blob/main/skills/dcc/blender/scenario-blender-retopology/SKILL.md",
+    "path": "skills/dcc/blender/scenario-blender-retopology/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-10T18:50:21.071Z",
+    "stars": 3655,
+    "language": "Python",
+    "pushed_at": "2026-11-09T15:39:12Z",
+    "license": "MIT"
+  }
+}
