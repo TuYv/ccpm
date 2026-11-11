@@ -1,0 +1,25 @@
+{
+  "id": "basicmachines-co-basic-memory-memory-start",
+  "name": "memory-start",
+  "description": "Help a new user's first Basic Memory session: save one short note, show it, and explain how to get it back. Use when getting started, or when a project is new, empty, or holds only starter notes.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "basicmachines-co",
+  "install_path": ".claude/skills/memory-start/SKILL.md",
+  "source": {
+    "repo": "basicmachines-co/basic-memory",
+    "url": "https://github.com/basicmachines-co/basic-memory/blob/main/skills/memory-start/SKILL.md",
+    "path": "skills/memory-start/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-11T03:07:57.481Z",
+    "stars": 4549,
+    "language": "Python",
+    "pushed_at": "2026-11-11T02:39:27Z",
+    "license": "AGPL-3.0"
+  }
+}

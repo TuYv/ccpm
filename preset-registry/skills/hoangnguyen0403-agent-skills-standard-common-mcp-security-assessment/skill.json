@@ -1,0 +1,25 @@
+{
+  "id": "hoangnguyen0403-agent-skills-standard-common-mcp-security-assessment",
+  "name": "common-mcp-security-assessment",
+  "description": "Assesses explicitly supplied MCP configurations, manifests, policies, and sanitized scanner/runtime artifacts against the pinned OWASP MCP Top 10 (MCP01–MCP10) into an evidence-qualified Markdown report. Use when conducting MCP security reviews, OWASP MCP mapping, tool poisoning triage, or shadow MCP audits. (triggers: mcp security, mcp assessment, owasp mcp, mcp top 10, mcp security report, tool poisoning, shadow mcp, mcp audit, mcp posture, mcp config review)",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "HoangNguyen0403",
+  "install_path": ".claude/skills/common-mcp-security-assessment/SKILL.md",
+  "source": {
+    "repo": "HoangNguyen0403/agent-skills-standard",
+    "url": "https://github.com/HoangNguyen0403/agent-skills-standard/blob/develop/.agents/skills/common/common-mcp-security-assessment/SKILL.md",
+    "path": ".agents/skills/common/common-mcp-security-assessment/SKILL.md",
+    "branch": "develop",
+    "discovered_at": "2026-11-11T03:54:49.766Z",
+    "stars": 584,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-11T02:58:04Z",
+    "license": "MIT"
+  }
+}
