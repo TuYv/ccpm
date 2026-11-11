@@ -1,0 +1,25 @@
+{
+  "id": "ericosiu-ai-marketing-skills-commenter-talent-scan",
+  "name": "commenter-talent-scan",
+  "description": "Turn the commenters on a public social media hiring post into a ranked, outreach-ready talent list. Pulls every comment, resolves and enriches each commenter's profile, downloads their profile image, and scores every person with an eval-gated Jev text+images sieve (role depth, hire target vs peer vs brand, role level, primary specialty). Use when asked to: \"scan the commenters\", \"find hires in the comments\", \"who in these comments is worth hiring\", \"talent scan this post\", \"rank the applicants i",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ericosiu",
+  "install_path": ".claude/skills/commenter-talent-scan/SKILL.md",
+  "source": {
+    "repo": "ericosiu/ai-marketing-skills",
+    "url": "https://github.com/ericosiu/ai-marketing-skills/blob/main/commenter-talent-scan/SKILL.md",
+    "path": "commenter-talent-scan/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-11T19:44:15.447Z",
+    "stars": 3806,
+    "language": "Python",
+    "pushed_at": "2026-11-11T17:38:45Z",
+    "license": "MIT"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "id": "wiltodelta-remove-ai-watermarks-remove-ai-watermarks",
   "name": "remove-ai-watermarks",
-  "description": "Removes and identifies AI watermarks and provenance marks in images and video the user generated or edited. Covers Gemini sparkles, SynthID, Microsoft InvisMark, Meta Content Seal, C2PA, EXIF/XMP/IPTC metadata, and Sora/Veo/Seedance/Doubao/Dola/Hailuo/Vidu/Kling and Wan labels. Use when the user wants to strip or clean AI watermarks and generation labels, or asks whether a file was AI-generated or carries AI provenance, even if they do not name remove-ai-watermarks. Do not use for stock-agency, ",
+  "description": "Removes and identifies AI watermarks and provenance marks in images, video, and text the user generated or edited. Covers Gemini sparkles, SynthID, Microsoft InvisMark, Meta Content Seal, C2PA, EXIF/XMP/IPTC metadata, and Sora/Veo/Seedance/Doubao/Dola/Hailuo/Vidu/Kling and Wan labels. Use when the user wants to strip or clean AI watermarks and generation labels, or asks whether a file was AI-generated or carries AI provenance, even if they do not name remove-ai-watermarks. Do not use for stock-a",
   "category": "文档写作",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/wiltodelta/remove-ai-watermarks/blob/main/skills/remove-ai-watermarks/SKILL.md",
     "path": "skills/remove-ai-watermarks/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-11T12:50:57.901Z",
-    "stars": 6347,
+    "discovered_at": "2026-11-11T20:40:38.037Z",
+    "stars": 6352,
     "language": "Python",
-    "pushed_at": "2026-11-11T08:50:05Z",
+    "pushed_at": "2026-11-11T18:46:35Z",
     "license": "Apache-2.0"
   }
 }
