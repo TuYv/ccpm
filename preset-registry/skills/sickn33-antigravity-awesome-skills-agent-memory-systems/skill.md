@@ -1,9 +1,10 @@
 ---
 name: agent-memory-systems
-description: "Design tenant-scoped memory, retrieval and retention for agents. Use when planning RAG, conversation history, vector stores or remembering across sessions."
-risk: safe
-source: vibeship-spawner-skills (Apache 2.0)
-date_added: 2026-02-27
+description: Design tenant-scoped memory, retrieval and retention for agents. Use when planning RAG, conversation history, vector stores or remembering across sessions.
+metadata:
+  aas-risk: safe
+  aas-source: vibeship-spawner-skills (Apache 2.0)
+  aas-date-added: '2026-02-27'
 ---
 
 # Agent Memory Systems

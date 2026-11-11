@@ -1,0 +1,25 @@
+{
+  "id": "sickn33-agentic-awesome-skills-prompt-engineering",
+  "name": "prompt-engineering",
+  "description": "Expert guide on prompt engineering patterns, best practices, and optimization techniques. Use when user wants to improve prompts, learn prompting strategies, or debug agent behavior.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sickn33",
+  "install_path": ".claude/skills/prompt-engineering/SKILL.md",
+  "source": {
+    "repo": "sickn33/agentic-awesome-skills",
+    "url": "https://github.com/sickn33/agentic-awesome-skills/blob/main/plugins/aasb-aas-agent-mcp-builder/skills/prompt-engineering/SKILL.md",
+    "path": "plugins/aasb-aas-agent-mcp-builder/skills/prompt-engineering/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-11T11:52:07.284Z",
+    "stars": 49523,
+    "language": "Python",
+    "pushed_at": "2026-11-11T07:12:14Z",
+    "license": "MIT"
+  }
+}

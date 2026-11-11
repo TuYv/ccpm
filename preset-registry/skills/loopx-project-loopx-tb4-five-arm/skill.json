@@ -2,7 +2,7 @@
   "id": "loopx-project-loopx-tb4-five-arm",
   "name": "tb4-five-arm",
   "description": "在 Terminal-Bench 4.0 上做 codex harness 五臂对照（裸 codex / 原生 /goal / LoopX 三模式）。复用 SWE-Marathon 那套驱动，靠 WEN_BENCH 切换。重点是 TB4 相对 SWE-Marathon 的四处结构性差异——每一处踩错都**退出码 0、有轨迹、有分数**，只是分数不对。",
-  "category": "文档写作",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/loopx-project/loopx/blob/main/benchmark/swe-marathon/skills/tb4-five-arm/SKILL.md",
     "path": "benchmark/swe-marathon/skills/tb4-five-arm/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-11T03:09:17.730Z",
-    "stars": 6574,
+    "discovered_at": "2026-11-11T11:16:24.168Z",
+    "stars": 6573,
     "language": "Python",
-    "pushed_at": "2026-11-11T03:02:32Z",
+    "pushed_at": "2026-11-11T11:10:39Z",
     "license": "Apache-2.0"
   }
 }

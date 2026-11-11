@@ -1,14 +1,15 @@
 ---
 name: agent-harness-fault-injection
-description: "Use when an agent workflow needs deterministic recovery evidence for sandbox, MCP/tool, worker, checkpoint, memory, or orchestration failures."
-category: development
-risk: safe
-source: self
-source_type: self
-date_added: "2026-08-19"
-author: Whxuan0701
-tags: [agent-harness, fault-injection, recovery, state-machine, mcp, multi-agent]
-tools: [claude, cursor, gemini, codex-cli]
+description: Use when an agent workflow needs deterministic recovery evidence for sandbox, MCP/tool, worker, checkpoint, memory, or orchestration failures.
+metadata:
+  aas-category: development
+  aas-risk: safe
+  aas-source: self
+  aas-source-type: self
+  aas-date-added: '2026-08-19'
+  aas-author: Whxuan0701
+  aas-tags: '["agent-harness","fault-injection","recovery","state-machine","mcp","multi-agent"]'
+  aas-tools: '["claude","cursor","gemini","codex-cli"]'
 ---
 
 # Agent Harness Fault Injection

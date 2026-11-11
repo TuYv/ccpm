@@ -1,14 +1,15 @@
 ---
 name: agent-evaluation-reporting
-description: "Use when summarizing agent evaluations where autonomous, assisted, failed, timed-out, or invalid outcomes must remain distinct and comparable."
-category: agent-evaluation
-risk: none
-source: self
-source_type: self
-date_added: "2026-08-18"
-author: Whxuan0701
-tags: [agent-evaluation, metrics, reporting, reliability, benchmarking]
-tools: [claude, cursor, gemini, codex]
+description: Use when summarizing agent evaluations where autonomous, assisted, failed, timed-out, or invalid outcomes must remain distinct and comparable.
+metadata:
+  aas-category: agent-evaluation
+  aas-risk: none
+  aas-source: self
+  aas-source-type: self
+  aas-date-added: '2026-08-18'
+  aas-author: Whxuan0701
+  aas-tags: '["agent-evaluation","metrics","reporting","reliability","benchmarking"]'
+  aas-tools: '["claude","cursor","gemini","codex"]'
 ---
 
 # Agent Evaluation Reporting

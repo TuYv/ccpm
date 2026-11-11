@@ -1,9 +1,10 @@
 ---
 name: advanced-evaluation
-description: "Design LLM-as-judge rubrics, direct scores and pairwise comparisons. Use for judge models, evals, position bias and calibration against human labels."
-risk: safe
-source: community
-date_added: 2026-03-18
+description: Design LLM-as-judge rubrics, direct scores and pairwise comparisons. Use for judge models, evals, position bias and calibration against human labels.
+metadata:
+  aas-risk: safe
+  aas-source: community
+  aas-date-added: '2026-03-18'
 ---
 
 # Advanced Evaluation

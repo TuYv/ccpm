@@ -1,0 +1,25 @@
+{
+  "id": "thedotmack-claude-mem-eve-chat-template-eve",
+  "name": "eve-chat-template-eve",
+  "description": "Work safely on Eve-specific internals in the Eve chat template. Use when changing the Eve agent, withEve routes, eveChannel auth, useEveAgent, ClientSession/SessionState, persisted event logs, stream/resume behavior, connection authorization, Vercel Connect MCP connections, local Eve tools, or upstream Eve API assumptions.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "thedotmack",
+  "install_path": ".claude/skills/eve-chat-template-eve/SKILL.md",
+  "source": {
+    "repo": "thedotmack/claude-mem",
+    "url": "https://github.com/thedotmack/claude-mem/blob/main/integrations/eve/template/.agents/skills/eve-chat-template-eve/SKILL.md",
+    "path": "integrations/eve/template/.agents/skills/eve-chat-template-eve/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-11T11:12:50.186Z",
+    "stars": 116027,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-11T07:15:32Z",
+    "license": "Apache-2.0"
+  }
+}
