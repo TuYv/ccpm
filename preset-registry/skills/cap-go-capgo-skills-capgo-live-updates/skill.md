@@ -7,7 +7,7 @@ description: Sets up and debugs Capgo live (OTA) updates in a Capacitor app with
 
 Wire `@capgo/capacitor-updater` into a Capacitor app, ship the first bundle, and keep rollback safe.
 
-Facts below were checked against `@capgo/capacitor-updater` 8.52 and `@capgo/cli` 8.77 (October 2026).
+Facts below were checked against `@capgo/capacitor-updater` 8.54.2 and `@capgo/cli` 8.104 (November 2026).
 
 ## When to Use
 
@@ -53,6 +53,8 @@ The updater major version follows the Capacitor major version.
 Capacitor 9 trap: Capacitor 9 is still prerelease (`@capacitor/core@next`). As of October 2026 there is no updater line for Capacitor 9. The 8.x line declares `peerDependencies: @capacitor/core ^8.0.0`. The `@capgo/capacitor-updater@9.0.0` on npm is an old Capacitor 5 release from 2023 and is marked deprecated, so never install it for Capacitor 9. Before you advise on a Capacitor 9 project, check the current tags with `npm view @capgo/capacitor-updater dist-tags`. If no Capacitor 9 line is listed, tell the user that.
 
 ## Secrets and Confirmation
+
+Use existing authentication only for the user-requested app and operation. A successful login does not authorize uploads, releases, builds, credential export, or deletion. Confirm the target and effect when they are not already specified by the user.
 
 - Never ask the user to paste a Capgo API key, signing password, `.p8` key, keystore, or service-account JSON into the chat. Ask them to run `npx @capgo/cli@latest login` themselves (it opens the browser or asks for the key in a masked prompt), or to set `CAPGO_TOKEN` in their shell or CI secret store.
 - Do not put secrets in command arguments: they end up in shell history and process lists. Use environment variables, the saved login, or the CLI's interactive prompts.
@@ -107,7 +109,7 @@ CapacitorUpdater.notifyAppReady();
 
 - Call it at the very top of the entry file, before any network call or async init. If it is not called within `appReadyTimeout` (default 10000 ms), the bundle is marked failed and the previous one is restored.
 - Crashes or API errors after this call do **not** trigger a rollback.
-- `bundle upload` checks for this call and fails with `notifyAppReady() is missing in the build folder (...)`. Fix the source. Only use `--ignore-notify-app-ready` / `--no-code-check` when the user accepts the rollback risk.
+- `bundle upload` checks for this call and fails with `notifyAppReady() is missing in the build folder (...)`. Fix the source. Do not bypass the readiness check to make an upload succeed; fix initialization and verify rollback on a test channel.
 
 ### 5. Ship a bundle
 

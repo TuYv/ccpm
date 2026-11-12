@@ -1,0 +1,25 @@
+{
+  "id": "everyinc-compound-engineering-plugin-ce-retro",
+  "name": "ce-retro",
+  "description": "Look back over an agent session in this repo, the current one by default or any scope the user names across harnesses, and find what in the repo's environment keeps costing agents effort or leading them into mistakes, keeping only fixes the evidence shows are worth it. Lands the approved environment fixes and hands the rest to their owners. Use for a retro, postmortem, or papercut sweep of how agents worked in this repo. Use ce-compound to keep the lesson of one solved problem, and ce-debug for ",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "EveryInc",
+  "install_path": ".claude/skills/ce-retro/SKILL.md",
+  "source": {
+    "repo": "EveryInc/compound-engineering-plugin",
+    "url": "https://github.com/EveryInc/compound-engineering-plugin/blob/main/skills/ce-retro/SKILL.md",
+    "path": "skills/ce-retro/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-12T02:38:32.988Z",
+    "stars": 26029,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-11T22:06:51Z",
+    "license": "MIT"
+  }
+}
