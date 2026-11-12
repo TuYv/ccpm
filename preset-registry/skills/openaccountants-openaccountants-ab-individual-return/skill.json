@@ -1,7 +1,7 @@
 {
   "id": "openaccountants-openaccountants-ab-individual-return",
   "name": "ab-individual-return",
-  "description": "Use this skill whenever asked about Alberta provincial individual income tax. Trigger on phrases like \\\"Alberta tax\\\", \\\"Alberta T1\\\", \\\"AB provincial tax\\\", \\\"Alberta flat tax\\\", \\\"Alberta credits\\\", \\\"Alberta personal amount\\\", \\\"no PST Alberta\\\", or any question about computing Alberta provincial tax for an individual return. This skill covers Alberta's 10% flat personal income tax rate, provincial credits, interaction with federal T1, and Alberta-specific deductions. ALWAYS read this skill b",
+  "description": "Alberta provincial personal income tax for an individual resident in Alberta on 31 December, worked through Form AB428 (Alberta Tax and Credits) on the T1 return. Primary tax year 2026, with a dated section carrying the full 2025 figures. Covers the six brackets (8%, 10%, 12%, 13%, 14%, 15%) including the 8% bracket added from 2025, the Alberta basic personal amount and the main non-refundable credits, the 8% credit rate, the Alberta supplemental tax credit, donations, medical expenses, the divi",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/ab-individual-return/SKILL.md",
     "path": "agent-skills/ab-individual-return/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-12T02:43:08.540Z",
-    "stars": 485,
+    "discovered_at": "2026-11-12T11:01:03.278Z",
+    "stars": 486,
     "language": "HTML",
-    "pushed_at": "2026-11-11T19:21:03Z",
+    "pushed_at": "2026-11-12T10:43:38Z",
     "license": "AGPL-3.0"
   }
 }

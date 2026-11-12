@@ -1,0 +1,25 @@
+{
+  "id": "coder-claudecode-nvim-verify-mention-queue",
+  "name": "verify-mention-queue",
+  "description": "Model-check the claudecode.nvim @ mention queue and the WebSocket clients it sends to (TLA+/TLC) against guards read from the current Lua code. Use after a change to how @ mentions are queued, flushed, timed out, or dropped, to when a client counts as connected or ready, to how a broadcast reports its writes, or to what a stop does to the queue (lua/claudecode/init.lua send_at_mention, _broadcast_at_mention, queue_mention, schedule_mention_flush, flush_mention_queue, expire_mentions, ms_until_a_",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "coder",
+  "install_path": ".claude/skills/verify-mention-queue/SKILL.md",
+  "source": {
+    "repo": "coder/claudecode.nvim",
+    "url": "https://github.com/coder/claudecode.nvim/blob/main/.agents/skills/verify-mention-queue/SKILL.md",
+    "path": ".agents/skills/verify-mention-queue/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-12T10:57:52.933Z",
+    "stars": 3158,
+    "language": "Lua",
+    "pushed_at": "2026-11-12T10:53:46Z",
+    "license": "MIT"
+  }
+}

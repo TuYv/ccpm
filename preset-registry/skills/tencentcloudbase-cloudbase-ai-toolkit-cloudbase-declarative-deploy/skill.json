@@ -1,7 +1,7 @@
 {
   "id": "tencentcloudbase-cloudbase-ai-toolkit-cloudbase-declarative-deploy",
   "name": "cloudbase-declarative-deploy",
-  "description": "CloudBase declarative deployment from a cloudbaserc config (声明式部署, 配置式部署, cloudbaserc 部署) through the deployBuild / deployPlan / deployApply MCP tools. Use when deploying database, functions, app, hosting, or gateway resources described in cloudbaserc.json/yaml as a single desired-state config, when a user wants to build static hosting artifacts locally first (deployBuild), or wants a dry-run plan before applying (deployPlan), or when handling multi-environment deploys via mode / envOverrides. C",
+  "description": "CloudBase declarative deployment from a cloudbaserc config (声明式部署, 配置式部署, cloudbaserc 部署) through the deployBuild / deployPlan / deployApply MCP tools. Use when deploying database, functions, app, hosting, or gateway resources described in cloudbaserc.json/yaml as a single desired-state config, when a user wants to build static hosting artifacts locally first (deployBuild), or wants a dry-run plan before applying (deployPlan), or for multi-environment deploys via mode / envOverrides. Covers the ",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/TencentCloudBase/CloudBase-AI-Toolkit/blob/main/config/source/skills/cloudbase-declarative-deploy/SKILL.md",
     "path": "config/source/skills/cloudbase-declarative-deploy/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-12T02:39:03.829Z",
+    "discovered_at": "2026-11-12T10:55:57.674Z",
     "stars": 1165,
     "language": "TypeScript",
-    "pushed_at": "2026-11-12T02:27:17Z",
+    "pushed_at": "2026-11-12T10:05:37Z",
     "license": "MIT"
-  },
-  "summary_zh": "基于 cloudbaserc 配置声明式部署 CloudBase 数据库、函数、应用、托管和网关资源，支持本地构建、变更预览及多环境发布。"
+  }
 }

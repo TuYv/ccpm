@@ -1,0 +1,25 @@
+{
+  "id": "coder-claudecode-nvim-verify-terminal-lifecycle",
+  "name": "verify-terminal-lifecycle",
+  "description": "Model-check the claudecode.nvim Claude terminal lifecycle (TLA+/TLC) against guards read from the current Lua code - the native and snacks providers, the code that finds a Claude after a plugin reload, and the provider choice (lua/claudecode/terminal.lua, terminal/native.lua, terminal/snacks.lua, terminal/owned.lua, and the terminal commands and send_at_mention in init.lua). Use after a change to how the Claude terminal is started, shown, hidden, closed, adopted, or cleaned up after Claude exits",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "coder",
+  "install_path": ".claude/skills/verify-terminal-lifecycle/SKILL.md",
+  "source": {
+    "repo": "coder/claudecode.nvim",
+    "url": "https://github.com/coder/claudecode.nvim/blob/main/.agents/skills/verify-terminal-lifecycle/SKILL.md",
+    "path": ".agents/skills/verify-terminal-lifecycle/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-12T10:57:53.304Z",
+    "stars": 3158,
+    "language": "Lua",
+    "pushed_at": "2026-11-12T10:53:46Z",
+    "license": "MIT"
+  }
+}

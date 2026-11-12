@@ -1,0 +1,25 @@
+{
+  "id": "coder-claudecode-nvim-verify-selection-tracking",
+  "name": "verify-selection-tracking",
+  "description": "Model-check what Claude sees as the user's current selection in claudecode.nvim (TLA+/TLC) against guards read from the current Lua code, and replay paths on headless Neovim. Use after a change to selection tracking (lua/claudecode/selection.lua, its enable/disable calls in lua/claudecode/init.lua, server.broadcast or on_connect in lua/claudecode/server/init.lua, or the getCurrentSelection and getLatestSelection tools), to the debounce or demotion timers, the visual-exit flush, or held-selection",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "coder",
+  "install_path": ".claude/skills/verify-selection-tracking/SKILL.md",
+  "source": {
+    "repo": "coder/claudecode.nvim",
+    "url": "https://github.com/coder/claudecode.nvim/blob/main/.agents/skills/verify-selection-tracking/SKILL.md",
+    "path": ".agents/skills/verify-selection-tracking/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-12T10:57:53.112Z",
+    "stars": 3158,
+    "language": "Lua",
+    "pushed_at": "2026-11-12T10:53:46Z",
+    "license": "MIT"
+  }
+}
