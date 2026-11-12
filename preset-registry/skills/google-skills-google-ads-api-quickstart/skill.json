@@ -1,7 +1,7 @@
 {
   "id": "google-skills-google-ads-api-quickstart",
   "name": "google-ads-api-quickstart",
-  "description": "| Guides developers through Google Ads API quickstart: credential setup, choosing from 6 client libraries/REST, configuring environments, and running a \"retrieve campaigns\" script. Troubleshoots common setup errors: USER_PERMISSION_DENIED, login_customer_id issues, and DEVELOPER_TOKEN_NOT_APPROVED.",
+  "description": "| Guides developers through Google Ads API quickstart: credential setup, choosing from 6 client libraries/REST, configuring environments, and running a \"retrieve campaigns\" script. Troubleshoots common setup errors: USER_PERMISSION_DENIED, login_customer_id issues, and CLOUD_PROJECT_NOT_APPROVED_FOR_PRODUCTION (a Google Cloud project with Test access calling a production account).",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/google/skills/blob/main/skills/ads/google-ads-api-quickstart/SKILL.md",
     "path": "skills/ads/google-ads-api-quickstart/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-12T10:07:30.806Z",
-    "stars": 23991,
+    "discovered_at": "2026-11-12T18:38:36.076Z",
+    "stars": 24042,
     "language": "Python",
-    "pushed_at": "2026-11-11T22:59:18Z",
+    "pushed_at": "2026-11-12T18:29:57Z",
     "license": "Apache-2.0"
-  },
-  "summary_zh": "一套 Google Ads API 快速入门指南，帮助开发者完成认证、客户端配置和示例运行，并排查常见权限与令牌问题。"
+  }
 }

@@ -2,7 +2,7 @@
   "id": "pingdotgg-t3code-release-blog",
   "name": "release-blog",
   "description": "Write the next alchemy release blog post — find the last `chore(release)` commit on origin/main, read the description of every PR merged since, plan the headline sections (Effect upgrades, new providers, new features, major bug fixes, breaking changes) with DX-first code snippets, fold the rest into \"Also in this release\", credit contributors, check every link and diff block, and (when asked) draft one tweet per category with a screenshot of its section. Use for \"write the release blog\", \"prepar",
-  "category": "文档写作",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/pingdotgg/t3code/blob/main/.repos/alchemy-effect/.claude/skills/release-blog/SKILL.md",
     "path": ".repos/alchemy-effect/.claude/skills/release-blog/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-12T10:58:01.220Z",
-    "stars": 57647,
+    "discovered_at": "2026-11-12T19:27:48.421Z",
+    "stars": 58146,
     "language": "TypeScript",
-    "pushed_at": "2026-11-12T10:57:54Z",
+    "pushed_at": "2026-11-12T19:27:16Z",
     "license": "MIT"
   }
 }

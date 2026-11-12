@@ -1,0 +1,25 @@
+{
+  "id": "digitalsamba-claude-code-video-toolkit-blender",
+  "name": "blender",
+  "description": "3D scenes, character acting and product shots from a shot spec, rendered in Blender, as a finished film, as clips for any other build (moviepy, a video job, an editor), or as elements of a Remotion video (transparent characters over a scene, a Remotion render on a 3D laptop, phone or floating card that the camera pulls back from, an imported 3D model on a studio stage). A rigged cartoon cast described in JSON (build, face, hair, clothes, a seed), sets, shots by type, acting beats in seconds or o",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "digitalsamba",
+  "install_path": ".claude/skills/blender/SKILL.md",
+  "source": {
+    "repo": "digitalsamba/claude-code-video-toolkit",
+    "url": "https://github.com/digitalsamba/claude-code-video-toolkit/blob/main/.claude/skills/blender/SKILL.md",
+    "path": ".claude/skills/blender/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-12T20:17:55.004Z",
+    "stars": 2534,
+    "language": "Python",
+    "pushed_at": "2026-11-12T18:32:50Z",
+    "license": "MIT"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "id": "expo-skills-eas-simulator",
   "name": "eas-simulator",
-  "description": "Run and control a user's app on a remote iOS/Android simulator hosted on EAS cloud. Read before running any `eas simulator:*` commands - it has the current syntax for this experimental API. Use whenever the user needs a simulator they can't run locally - 'run my app on a cloud simulator', 'use eas simulator to run/install/screenshot my app', 'I'm on Linux/Cursor and need an iOS device', 'no sim on this box / headless CI', 'let an agent click through my app and screenshot it', 'test my dev build ",
+  "description": "Run and control a user's app on a remote iOS/Android simulator with Expo Simulators (also called EAS Simulator). Read before running any `eas simulator:*` commands - it has the current syntax and workflow. Use whenever the user needs a simulator they can't run locally - 'run my app on a cloud simulator', 'use eas simulator to run/install/screenshot my app', 'I'm on Linux/Cursor and need an iOS device', 'no sim on this box / headless CI', 'let an agent click through my app and screenshot it', 'te",
   "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/expo/skills/blob/main/plugins/expo/skills/eas-simulator/SKILL.md",
     "path": "plugins/expo/skills/eas-simulator/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-12T10:07:54.897Z",
-    "stars": 4117,
+    "discovered_at": "2026-11-12T18:39:01.697Z",
+    "stars": 4123,
     "language": "Shell",
-    "pushed_at": "2026-11-11T23:12:06Z",
+    "pushed_at": "2026-11-12T14:00:00Z",
     "license": "MIT"
   }
 }
