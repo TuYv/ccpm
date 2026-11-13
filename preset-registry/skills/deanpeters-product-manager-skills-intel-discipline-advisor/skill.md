@@ -113,12 +113,12 @@ protocol.
 | Situation | Discipline mix | Executing skill |
 |---|---|---|
 | Suspected move | Corroborate the seen signal: TECHINT + HUMINT + SIGINT + FININT, fused | [`intelligence-collection-disciplines`](../intelligence-collection-disciplines/SKILL.md) fusion template, then [`competitive-intel-watch`](../competitive-intel-watch/SKILL.md) |
-| Battle card | SIGINT + OSINT + HUMINT | [`battle-card-builder`](../battle-card-builder/SKILL.md), kept fresh by the watch |
+| Battle card | SIGINT + OSINT + HUMINT | [`battle-card-builder`](https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/battle-card-builder/SKILL.md), kept fresh by the watch |
 | TAM/SAM/SOM | GEOINT/DEMOINT + FININT capture rates | [`tam-sam-som-calculator`](../tam-sam-som-calculator/SKILL.md) Mode 3 |
-| Positioning / ICP | OSINT + GEOINT/DEMOINT (+ VoC) | [`voice-of-customer-miner`](../voice-of-customer-miner/SKILL.md) → [`positioning-statement`](../positioning-statement/SKILL.md) |
+| Positioning / ICP | OSINT + GEOINT/DEMOINT (+ VoC) | [`voice-of-customer-miner`](../voice-of-customer-miner/SKILL.md) → [`positioning-statement`](https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/positioning-statement/SKILL.md) |
 | Industry structure | FININT + OSINT | [`porters-five-forces`](../porters-five-forces/SKILL.md) |
 | One company's position | OSINT + FININT + HUMINT | [`swot-analysis`](../swot-analysis/SKILL.md) or [`company-intel`](../company-intel/SKILL.md) |
-| Pricing question | SIGINT + FININT | [`pricing-packaging-tracker`](../pricing-packaging-tracker/SKILL.md) |
+| Pricing question | SIGINT + FININT | [`pricing-packaging-tracker`](https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/pricing-packaging-tracker/SKILL.md) |
 | Macro exposure | GEOINT/DEMOINT + regulatory FININT | [`pestel-delta-monitor`](../pestel-delta-monitor/SKILL.md) |
 | Standing watch | SIGINT weekly, OSINT+HUMINT monthly, FININT+TECHINT quarterly — scaled to stated capacity | [`competitive-intel-watch`](../competitive-intel-watch/SKILL.md) |
 | The full picture | All of the above, sequenced | [`competitive-analysis-process`](../competitive-analysis-process/SKILL.md) |
@@ -152,7 +152,7 @@ session — the route, its "because," and a review date, as a handoff artifact.
 
 **The off-ramp in action:** user picks "artifact: ICP refresh," but Q2 reveals the real question is
 "why did our last three enterprise deals stall?" The honest recommendation leads with win/loss
-interviews (HUMINT's ground-truth layer) and [`discovery-interview-prep`](../discovery-interview-prep/SKILL.md)
+interviews (HUMINT's ground-truth layer) and [`discovery-interview-prep`](https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/discovery-interview-prep/SKILL.md)
 — "no public-web sweep answers a question your own churned prospects can answer better."
 
 See [`examples/conversation-flow.md`](examples/conversation-flow.md) for a full end-to-end session:
@@ -181,6 +181,6 @@ routing shift for a physical-world signal — permits and customs data instead o
 - [`intelligence-collection-disciplines`](../intelligence-collection-disciplines/SKILL.md) (Component) — the compendium this advisor routes into; the pedagogic pair
 - [`workshop-facilitation`](../workshop-facilitation/SKILL.md) (Interactive) — facilitation protocol
 - [`autonomous-investigation`](../autonomous-investigation/SKILL.md) (Workflow) — confidence stacking and evidence labels the recommendations lean on
-- Executing skills: [`competitive-intel-watch`](../competitive-intel-watch/SKILL.md), [`battle-card-builder`](../battle-card-builder/SKILL.md), [`tam-sam-som-calculator`](../tam-sam-som-calculator/SKILL.md), [`porters-five-forces`](../porters-five-forces/SKILL.md), [`swot-analysis`](../swot-analysis/SKILL.md), [`voice-of-customer-miner`](../voice-of-customer-miner/SKILL.md), [`pricing-packaging-tracker`](../pricing-packaging-tracker/SKILL.md), [`pestel-delta-monitor`](../pestel-delta-monitor/SKILL.md), [`competitive-analysis-process`](../competitive-analysis-process/SKILL.md)
-- [`discovery-interview-prep`](../discovery-interview-prep/SKILL.md) (Interactive) — the off-ramp when the question belongs to discovery
+- Executing skills: [`competitive-intel-watch`](../competitive-intel-watch/SKILL.md), [`battle-card-builder`](https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/battle-card-builder/SKILL.md), [`tam-sam-som-calculator`](../tam-sam-som-calculator/SKILL.md), [`porters-five-forces`](../porters-five-forces/SKILL.md), [`swot-analysis`](../swot-analysis/SKILL.md), [`voice-of-customer-miner`](../voice-of-customer-miner/SKILL.md), [`pricing-packaging-tracker`](https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/pricing-packaging-tracker/SKILL.md), [`pestel-delta-monitor`](../pestel-delta-monitor/SKILL.md), [`competitive-analysis-process`](../competitive-analysis-process/SKILL.md)
+- [`discovery-interview-prep`](https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/discovery-interview-prep/SKILL.md) (Interactive) — the off-ramp when the question belongs to discovery
 - The Interactive companion to [`intelligence-collection-disciplines`](../intelligence-collection-disciplines/SKILL.md).

@@ -463,8 +463,8 @@ saying "Level 2" and pasting what you have.
 - [`eol-internal-enablement`](../eol-internal-enablement/SKILL.md) — Phase 4
 - [`eol-message`](../eol-message/SKILL.md) — Phase 5
 - [`workshop-facilitation`](../workshop-facilitation/SKILL.md) — interaction protocol throughout
-- [`positioning-statement`](../positioning-statement/SKILL.md) — for the Phase 5 transition solution
-- [`stakeholder-map`](../stakeholder-map/SKILL.md) — general mapping, if Phase 2 needs breadth first
+- [`positioning-statement`](https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/positioning-statement/SKILL.md) — for the Phase 5 transition solution
+- [`stakeholder-mapping`](https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/stakeholder-mapping/SKILL.md) — general mapping, if Phase 2 needs breadth first
 
 ### External Frameworks
 - Product Life Cycle (PLC) — EOL lives in the decline stage

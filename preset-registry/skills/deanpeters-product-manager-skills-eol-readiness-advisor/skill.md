@@ -448,10 +448,10 @@ a prerequisite for any of them. If you did run this assessment, carry your inten
 simply saying "Level 2" when you start; there's no handoff format to preserve.
 
 - [`eol-message`](../eol-message/SKILL.md) — the customer-facing announcement
-- [`incoming-request-advisor`](../incoming-request-advisor/SKILL.md) — when the EOL request arrived
+- [`incoming-request-advisor`](https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/incoming-request-advisor/SKILL.md) — when the EOL request arrived
   as a message you need to decode first
-- [`stakeholder-map`](../stakeholder-map/SKILL.md) — general stakeholder mapping
-- [`business-health-diagnostic`](../business-health-diagnostic/SKILL.md) — when the trigger is
+- [`stakeholder-mapping`](https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/stakeholder-mapping/SKILL.md) — general stakeholder mapping
+- [`business-health-diagnostic`](https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/business-health-diagnostic/SKILL.md) — when the trigger is
   financial and you want the numbers examined properly
 - [`workshop-facilitation`](../workshop-facilitation/SKILL.md) — the interaction protocol
 

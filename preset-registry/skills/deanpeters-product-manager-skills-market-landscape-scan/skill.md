@@ -129,7 +129,7 @@ A copy/paste fill-in version of this schema, with quality checks, lives in [`tem
 
 1. Run [`competitive-research-snapshot`](../competitive-research-snapshot/SKILL.md) on the deep-dive players
 2. Run [`tam-sam-som-calculator`](../tam-sam-som-calculator/SKILL.md) sizing on the most promising segment
-3. Draft a positioning hypothesis against this landscape ([`positioning-statement`](../positioning-statement/SKILL.md))
+3. Draft a positioning hypothesis against this landscape ([`positioning-statement`](https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/positioning-statement/SKILL.md))
 4. Schedule-ready version: what should a quarterly re-scan watch?
 
 Accept `1`, `2`, `3`, `4`, `1 and 2`, `Verbose Mode`, or a custom path.
@@ -180,6 +180,6 @@ completely.
 - [`intelligence-collection-disciplines`](../intelligence-collection-disciplines/SKILL.md) (Component) — discipline sources and signal chains
 - [`competitive-research-snapshot`](../competitive-research-snapshot/SKILL.md) (Workflow) — deep-dive on the players this scan surfaces
 - [`tam-sam-som-calculator`](../tam-sam-som-calculator/SKILL.md) (Component) — sizes the segments this scan maps
-- [`positioning-statement`](../positioning-statement/SKILL.md) (Component) — positions against this landscape
+- [`positioning-statement`](https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/positioning-statement/SKILL.md) (Component) — positions against this landscape
 - Adapted from `market-intelligence/market-landscape-scan-prompt.md` in the
   `https://github.com/deanpeters/product-manager-prompts` repo.

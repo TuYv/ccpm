@@ -490,9 +490,9 @@ If executives need a demo, build it *after* you've validated the hypothesis with
 
 ### Related Skills
 - **[pol-probe](../pol-probe/SKILL.md)** (Component) — Template for documenting PoL probes
-- **[problem-statement](../problem-statement/SKILL.md)** (Component) — Frame problem before choosing validation method
-- **[problem-framing-canvas](../problem-framing-canvas/SKILL.md)** (Interactive) — MITRE Problem Framing before validation
-- **[discovery-process](../discovery-process/SKILL.md)** (Workflow) — Use PoL probes in validation phase
+- **[problem-statement](https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/problem-statement/SKILL.md)** (Component) — Frame problem before choosing validation method
+- **[problem-framing-canvas](https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/problem-framing-canvas/SKILL.md)** (Interactive) — MITRE Problem Framing before validation
+- **[discovery-process](https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/discovery-process/SKILL.md)** (Workflow) — Use PoL probes in validation phase
 - **[epic-hypothesis](../epic-hypothesis/SKILL.md)** (Component) — Turn epics into testable hypotheses
 
 ### External Frameworks

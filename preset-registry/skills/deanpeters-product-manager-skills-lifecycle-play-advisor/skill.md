@@ -233,7 +233,7 @@ Then offer numbered next steps:
    for the go/no-go, or [`eol-process`](../eol-process/SKILL.md) for the whole thing
 2. **Build the replacement risk register** — see
    [`product-lifecycle-plays`](../product-lifecycle-plays/SKILL.md), especially the seven hazards
-3. **Plan the extension** — [`organic-growth-advisor`](../organic-growth-advisor/SKILL.md) for which
+3. **Plan the extension** — [`organic-growth-advisor`](https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/organic-growth-advisor/SKILL.md) for which
    growth path the variant serves
 4. **Run this across the whole line** — the portfolio worksheet in
    [`product-lifecycle-plays`](../product-lifecycle-plays/SKILL.md)
@@ -397,9 +397,9 @@ prerequisite for them.
   triage: the strategy grid, the seven hazards, the risk register, the portfolio worksheet
 - [`eol-readiness-advisor`](../eol-readiness-advisor/SKILL.md) — the retirement play's go/no-go
 - [`eol-process`](../eol-process/SKILL.md) — running a retirement end to end
-- [`organic-growth-advisor`](../organic-growth-advisor/SKILL.md) — which growth path an extension
+- [`organic-growth-advisor`](https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/organic-growth-advisor/SKILL.md) — which growth path an extension
   serves
-- [`ansoff-matrix`](../ansoff-matrix/SKILL.md) — where the next tranche of growth comes from
+- [`ansoff-matrix`](https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/ansoff-matrix/SKILL.md) — where the next tranche of growth comes from
 - [`workshop-facilitation`](../workshop-facilitation/SKILL.md) — the interaction protocol
 
 ### External Frameworks

@@ -282,7 +282,7 @@ message.
 ### Step 6: Present the transition solution
 
 **Replacement or Migration path** — use positioning statement format (see
-[`positioning-statement`](../positioning-statement/SKILL.md)):
+[`positioning-statement`](https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/positioning-statement/SKILL.md)):
 
 ```markdown
 **For** [affected customer]
@@ -447,9 +447,9 @@ mention it ("Level 2") and this skill will size the message accordingly.
 
 - [`eol-readiness-advisor`](../eol-readiness-advisor/SKILL.md) — the go/no-go decision and
   intensity dial, if the retirement itself still needs a case
-- [`positioning-statement`](../positioning-statement/SKILL.md) — informs the transition solution
-- [`problem-statement`](../problem-statement/SKILL.md) — helps frame the customer impact section
-- [`proto-persona`](../proto-persona/SKILL.md) — defines the affected customers for segmented
+- [`positioning-statement`](https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/positioning-statement/SKILL.md) — informs the transition solution
+- [`problem-statement`](https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/problem-statement/SKILL.md) — helps frame the customer impact section
+- [`proto-persona`](https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/proto-persona/SKILL.md) — defines the affected customers for segmented
   variants
 
 ### External Frameworks

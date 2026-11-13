@@ -2,7 +2,7 @@
   "id": "deanpeters-product-manager-skills-eol-internal-enablement",
   "name": "eol-internal-enablement",
   "description": "Build the support FAQ, sales talking points, and objection handling teams need before an EOL announcement. Use when customer-facing teams must be ready before customers hear.",
-  "category": "开发编程",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -13,13 +13,13 @@
   "install_path": ".claude/skills/eol-internal-enablement/SKILL.md",
   "source": {
     "repo": "deanpeters/Product-Manager-Skills",
-    "url": "https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/eol-internal-enablement/SKILL.md",
-    "path": "skills/eol-internal-enablement/SKILL.md",
+    "url": "https://github.com/deanpeters/Product-Manager-Skills/blob/main/plugins/pm-deliver/skills/eol-internal-enablement/SKILL.md",
+    "path": "plugins/pm-deliver/skills/eol-internal-enablement/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-13T06:53:29.674Z",
-    "stars": 8002,
-    "language": "Shell",
-    "pushed_at": "2026-11-12T14:18:51Z",
+    "discovered_at": "2026-11-13T15:40:19.765Z",
+    "stars": 8010,
+    "language": "Python",
+    "pushed_at": "2026-11-13T15:19:58Z",
     "license": null
   },
   "summary_zh": "一套面向产品停服公告的内部准备工具，帮助客服和销售提前统一常见问答、沟通话术及异议应对。"

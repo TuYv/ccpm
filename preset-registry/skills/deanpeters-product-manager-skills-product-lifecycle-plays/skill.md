@@ -266,7 +266,7 @@ pressure source, and its recommended play. Then check the interactions:
    if you'd rather be walked through the questions (Recommended)
 2. **Run the retirement** — see [`eol-process`](../eol-process/SKILL.md) or
    [`eol-readiness-advisor`](../eol-readiness-advisor/SKILL.md)
-3. **Plan the extension** — see [`organic-growth-advisor`](../organic-growth-advisor/SKILL.md) for
+3. **Plan the extension** — see [`organic-growth-advisor`](https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/organic-growth-advisor/SKILL.md) for
    which growth path the variant serves
 4. **Build the risk register** for a replacement play in depth
 
@@ -349,10 +349,10 @@ prerequisite for them.
   diagnosis
 - [`eol-readiness-advisor`](../eol-readiness-advisor/SKILL.md) — the retirement play's go/no-go
 - [`eol-process`](../eol-process/SKILL.md) — running a retirement end to end
-- [`organic-growth-advisor`](../organic-growth-advisor/SKILL.md) — which growth path an extension
+- [`organic-growth-advisor`](https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/organic-growth-advisor/SKILL.md) — which growth path an extension
   serves
-- [`ansoff-matrix`](../ansoff-matrix/SKILL.md) — where the next tranche of growth comes from
-- [`roadmap-planning`](../roadmap-planning/SKILL.md) — sequencing the play once it's chosen
+- [`ansoff-matrix`](https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/ansoff-matrix/SKILL.md) — where the next tranche of growth comes from
+- [`roadmap-planning`](https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/roadmap-planning/SKILL.md) — sequencing the play once it's chosen
 
 ### External Frameworks
 - Product Life Cycle (PLC) — the five-stage economic model

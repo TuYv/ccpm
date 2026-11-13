@@ -1,0 +1,25 @@
+{
+  "id": "openaccountants-openaccountants-alabama-transfer-pricing",
+  "name": "alabama-transfer-pricing",
+  "description": "Use this skill whenever asked about Alabama transfer pricing and related-party arrangements for tax year 2026: how intercompany charges move income in and out of the Alabama single-sales-factor base, the Alabama consolidated return (Form 20C-C), and how a federal transfer-pricing adjustment flows through the federal income tax deduction. Trigger on \\\"Alabama transfer pricing\\\", \\\"Alabama consolidated return\\\", \\\"Alabama intercompany\\\", \\\"Alabama related party\\\", \\\"Alabama addback\\\".",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openaccountants",
+  "install_path": ".claude/skills/alabama-transfer-pricing/SKILL.md",
+  "source": {
+    "repo": "openaccountants/openaccountants",
+    "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/alabama-transfer-pricing/SKILL.md",
+    "path": "agent-skills/alabama-transfer-pricing/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-13T16:34:30.701Z",
+    "stars": 489,
+    "language": "HTML",
+    "pushed_at": "2026-11-13T15:45:25Z",
+    "license": "AGPL-3.0"
+  }
+}

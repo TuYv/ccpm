@@ -169,7 +169,7 @@ crossings are distinguished from broken assumptions.
   diffs against; the pair turns PESTEL into an operating radar
 - [`autonomous-investigation`](../autonomous-investigation/SKILL.md) (Workflow) — the governing protocol
 - [`intelligence-collection-disciplines`](../intelligence-collection-disciplines/SKILL.md) (Component) — GEOINT/DEMOINT statistical sources; regulatory registries
-- [`derisk-measurement-advisor`](../derisk-measurement-advisor/SKILL.md) (Interactive) — consumes broken assumptions as risk inputs
+- [`derisk-measurement-advisor`](https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/derisk-measurement-advisor/SKILL.md) (Interactive) — consumes broken assumptions as risk inputs
 - [`competitive-intel-watch`](../competitive-intel-watch/SKILL.md) (Workflow) — the competitor-level sibling of this macro-level watch
 - Adapted from `market-intelligence/pestel-delta-monitor-prompt.md` in the
   `https://github.com/deanpeters/product-manager-prompts` repo.

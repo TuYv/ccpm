@@ -123,7 +123,7 @@ A copy/paste fill-in version of this schema, with quality checks, lives in [`tem
 
 ### Final Step (offer exactly 4 options)
 
-1. Competitive battle card ([`battle-card-builder`](../battle-card-builder/SKILL.md))
+1. Competitive battle card ([`battle-card-builder`](https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/battle-card-builder/SKILL.md))
 2. Executive comparison matrix
 3. Product risks/opportunities for the next 2 quarters
 4. Discovery questions to validate the assumptions
@@ -171,7 +171,7 @@ absence-of-evidence.
 - [`intelligence-collection-disciplines`](../intelligence-collection-disciplines/SKILL.md) (Component) — discipline sources and signal chains
 - [`market-landscape-scan`](../market-landscape-scan/SKILL.md) (Workflow) — upstream: surfaces which players deserve this snapshot
 - [`competitive-intel-watch`](../competitive-intel-watch/SKILL.md) (Workflow) — downstream: diffs future runs against this baseline
-- [`battle-card-builder`](../battle-card-builder/SKILL.md) (Workflow) — downstream: turns the snapshot into a field-action card
+- [`battle-card-builder`](https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/battle-card-builder/SKILL.md) (Workflow) — downstream: turns the snapshot into a field-action card
 - [`company-research`](../company-research/SKILL.md), [`company-intel`](../company-intel/SKILL.md) — single-company deep dives
 - Adapted from `market-intelligence/competitive-research-snapshot-prompt.md` in the
   `https://github.com/deanpeters/product-manager-prompts` repo.

@@ -2,7 +2,7 @@
   "id": "deanpeters-product-manager-skills-eol-message",
   "name": "eol-message",
   "description": "Write a right-sized EOL announcement — brief notice through full phased comms — with rationale, customer impact, and next steps. Use when retiring a product, feature, or plan.",
-  "category": "开发编程",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -13,13 +13,13 @@
   "install_path": ".claude/skills/eol-message/SKILL.md",
   "source": {
     "repo": "deanpeters/Product-Manager-Skills",
-    "url": "https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/eol-message/SKILL.md",
-    "path": "skills/eol-message/SKILL.md",
+    "url": "https://github.com/deanpeters/Product-Manager-Skills/blob/main/plugins/pm-deliver/skills/eol-message/SKILL.md",
+    "path": "plugins/pm-deliver/skills/eol-message/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-13T06:53:29.813Z",
-    "stars": 8002,
-    "language": "Shell",
-    "pushed_at": "2026-11-12T14:18:51Z",
+    "discovered_at": "2026-11-13T15:40:19.904Z",
+    "stars": 8010,
+    "language": "Python",
+    "pushed_at": "2026-11-13T15:19:58Z",
     "license": null
   },
   "summary_zh": "用于撰写产品、功能或套餐下线通知，可按需生成简短公告或分阶段沟通方案，并说明原因、用户影响及后续安排。"

@@ -128,7 +128,7 @@ A copy/paste fill-in version of this schema, with quality checks, lives in [`tem
 
 ### Final Step (offer exactly 4 options)
 
-1. Update the battle card sections flagged above ([`battle-card-builder`](../battle-card-builder/SKILL.md))
+1. Update the battle card sections flagged above ([`battle-card-builder`](https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/battle-card-builder/SKILL.md))
 2. Deep-dive the most significant change
 3. Produce the refreshed full snapshot (new baseline)
 4. Adjust the materiality bar or competitor list for next run
@@ -181,7 +181,7 @@ reported as material.
 - [`autonomous-investigation`](../autonomous-investigation/SKILL.md) (Workflow) — the governing protocol
 - [`intelligence-collection-disciplines`](../intelligence-collection-disciplines/SKILL.md) (Component) — the fusion cadence this watch runs on
 - [`competitive-research-snapshot`](../competitive-research-snapshot/SKILL.md) (Workflow) — produces the baseline this skill diffs against
-- [`battle-card-builder`](../battle-card-builder/SKILL.md) (Workflow) — consumes the update flags
+- [`battle-card-builder`](https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/battle-card-builder/SKILL.md) (Workflow) — consumes the update flags
 - [`pestel-analysis`](../pestel-analysis/SKILL.md) (Component) — the macro-environment sibling of this competitor-level watch
 - Adapted from `market-intelligence/competitive-intel-watch-prompt.md` in the
   `https://github.com/deanpeters/product-manager-prompts` repo.

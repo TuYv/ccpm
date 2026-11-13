@@ -2,7 +2,7 @@
   "id": "deanpeters-product-manager-skills-pm-skill-creator",
   "name": "pm-skill-creator",
   "description": "Design a new PM skill through guided conversation. Use when you have raw content or an idea and want to shape it into a compliant skill.",
-  "category": "设计创意",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -13,13 +13,13 @@
   "install_path": ".claude/skills/pm-skill-creator/SKILL.md",
   "source": {
     "repo": "deanpeters/Product-Manager-Skills",
-    "url": "https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/pm-skill-creator/SKILL.md",
-    "path": "skills/pm-skill-creator/SKILL.md",
+    "url": "https://github.com/deanpeters/Product-Manager-Skills/blob/main/plugins/pm-determine/skills/pm-skill-creator/SKILL.md",
+    "path": "plugins/pm-determine/skills/pm-skill-creator/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-13T06:53:33.095Z",
-    "stars": 8002,
-    "language": "Shell",
-    "pushed_at": "2026-11-12T14:18:51Z",
+    "discovered_at": "2026-11-13T15:40:25.109Z",
+    "stars": 8010,
+    "language": "Python",
+    "pushed_at": "2026-11-13T15:19:58Z",
     "license": null
   },
   "summary_zh": "它通过引导式对话帮你设计PM技能，适合把零散素材或初步想法打磨成符合规范的技能。"

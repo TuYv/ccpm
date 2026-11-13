@@ -1,0 +1,25 @@
+{
+  "id": "openaccountants-openaccountants-al-unemployment-contributions",
+  "name": "al-unemployment-contributions",
+  "description": "Use this skill whenever asked about Alabama employer unemployment compensation (UC) tax for tax year 2026: the $8,000 taxable wage base, the 2.70% new-employer rate, the 0.20% to 6.80% experience-rated range, the quarterly Contribution and Wage Report and its due dates, and the late-report penalty, administered by the Alabama Department of Labor (adol.alabama.gov). Trigger on \\\"Alabama UI rate\\\", \\\"Alabama SUTA\\\", \\\"Alabama unemployment wage base\\\", \\\"Alabama UC tax\\\", \\\"Alabama employer taxes\\\"",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openaccountants",
+  "install_path": ".claude/skills/al-unemployment-contributions/SKILL.md",
+  "source": {
+    "repo": "openaccountants/openaccountants",
+    "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/al-unemployment-contributions/SKILL.md",
+    "path": "agent-skills/al-unemployment-contributions/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-13T16:34:30.029Z",
+    "stars": 489,
+    "language": "HTML",
+    "pushed_at": "2026-11-13T15:45:25Z",
+    "license": "AGPL-3.0"
+  }
+}

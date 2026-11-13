@@ -34,8 +34,8 @@ inference; this skill exists because of what it costs a rep when one of those tu
 **Works best with:** your product and its primary differentiation, and **the one competitor** this
 card targets.
 **Also useful:** the deal context (segment, buyer, common objections or the loss reason that triggered
-this card), and any [`competitive-research-snapshot`](../competitive-research-snapshot/SKILL.md) or
-[`competitive-intel-watch`](../competitive-intel-watch/SKILL.md) output in session — the skill uses
+this card), and any [`competitive-research-snapshot`](https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/competitive-research-snapshot/SKILL.md) or
+[`competitive-intel-watch`](https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/competitive-intel-watch/SKILL.md) output in session — the skill uses
 existing evidence and searches only for gaps and anything older than one quarter.
 
 Input supplied inline with the invocation — text after the skill name, a pasted context dump, or an
@@ -56,7 +56,7 @@ buyers — triggered by three straight losses on "their integrations are deeper.
   Mode, stable schema, 4-option Final Step.
 - **Discipline mix:** SIGINT (pricing pages, site diffs — the freshest layer, what keeps cards from
   going stale) + OSINT (review mining for objection handling) + HUMINT (win/loss ground truth when
-  you have it) — see [`intelligence-collection-disciplines`](../intelligence-collection-disciplines/SKILL.md).
+  you have it) — see [`intelligence-collection-disciplines`](https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/intelligence-collection-disciplines/SKILL.md).
 - **Field-action criterion.** Every element earns its place by being usable mid-conversation. Depth
   goes in the appendix; the card fits a rep's thirty seconds.
 - **Trap questions are evidence work.** A trap question is only safe to ask when you *know the
@@ -130,7 +130,7 @@ A copy/paste fill-in version of this schema, with quality checks, lives in [`tem
 
 1. Pressure-test the card: role-play the competitor's rep against it
 2. Build the card for a second competitor
-3. Set up [`competitive-intel-watch`](../competitive-intel-watch/SKILL.md) to keep this card current
+3. Set up [`competitive-intel-watch`](https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/competitive-intel-watch/SKILL.md) to keep this card current
 4. Compress to a one-screen mobile version for the field
 
 Accept `1`, `2`, `3`, `4`, `1 and 3`, `Verbose Mode`, or a custom path.
@@ -177,9 +177,9 @@ industrial version, where the channel partner is a card audience and pricing is 
 ## References
 
 - [`autonomous-investigation`](../autonomous-investigation/SKILL.md) (Workflow) — the governing protocol
-- [`intelligence-collection-disciplines`](../intelligence-collection-disciplines/SKILL.md) (Component) — discipline sources; SIGINT keeps this card fresh
-- [`competitive-research-snapshot`](../competitive-research-snapshot/SKILL.md) (Workflow) — upstream evidence base
-- [`competitive-intel-watch`](../competitive-intel-watch/SKILL.md) (Workflow) — flags when this card's sections go stale
+- [`intelligence-collection-disciplines`](https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/intelligence-collection-disciplines/SKILL.md) (Component) — discipline sources; SIGINT keeps this card fresh
+- [`competitive-research-snapshot`](https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/competitive-research-snapshot/SKILL.md) (Workflow) — upstream evidence base
+- [`competitive-intel-watch`](https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/competitive-intel-watch/SKILL.md) (Workflow) — flags when this card's sections go stale
 - [`positioning-statement`](../positioning-statement/SKILL.md) (Component) — the strategic layer the card's talking points should agree with
 - Adapted from `market-intelligence/battle-card-builder-prompt.md` in the
   `https://github.com/deanpeters/product-manager-prompts` repo.

@@ -473,11 +473,11 @@ Start tracking (5 items):
 ## References
 
 ### Related Skills
-- **[pestel-analysis](../pestel-analysis/SKILL.md)** (Component) — Deep-dive PESTEL template with data-driven analysis across all 6 categories; use after this skill surfaces external risks worth investigating further
+- **[pestel-analysis](https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/pestel-analysis/SKILL.md)** (Component) — Deep-dive PESTEL template with data-driven analysis across all 6 categories; use after this skill surfaces external risks worth investigating further
 - **[pol-probe-advisor](../pol-probe-advisor/SKILL.md)** (Interactive) — Choose the cheapest validation method for your highest-priority act-now risk
 - **[pol-probe](../pol-probe/SKILL.md)** (Component) — Document a Proof of Life probe for a specific risk
 - **[recommendation-canvas](../recommendation-canvas/SKILL.md)** (Component) — Structure a go/no-go recommendation using risk register findings
-- **[problem-framing-canvas](../problem-framing-canvas/SKILL.md)** (Interactive) — Frame the problem before scanning for risks
+- **[problem-framing-canvas](https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/problem-framing-canvas/SKILL.md)** (Interactive) — Frame the problem before scanning for risks
 
 ### External Frameworks
 - **Marty Cagan** — *Inspired* (2018): The four product risks (Value, Usability, Feasibility, Viability) as the foundation for product discovery

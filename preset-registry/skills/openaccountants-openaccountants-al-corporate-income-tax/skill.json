@@ -1,0 +1,25 @@
+{
+  "id": "openaccountants-openaccountants-al-corporate-income-tax",
+  "name": "al-corporate-income-tax",
+  "description": "Use this skill whenever asked about Alabama corporate income tax for tax year 2026: the flat 6.5% rate with the deduction for federal income tax paid or accrued, single sales factor apportionment for tax years beginning on or after 2021, the Form 20C due date, and the business privilege tax rate range. Trigger on \\\"Alabama corporate tax\\\", \\\"Alabama 6.5 percent\\\", \\\"Alabama Form 20C\\\", \\\"Alabama single sales factor\\\", \\\"Alabama business privilege tax\\\", \\\"Ala Code 40-18\\\".",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openaccountants",
+  "install_path": ".claude/skills/al-corporate-income-tax/SKILL.md",
+  "source": {
+    "repo": "openaccountants/openaccountants",
+    "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/al-corporate-income-tax/SKILL.md",
+    "path": "agent-skills/al-corporate-income-tax/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-13T16:34:28.590Z",
+    "stars": 489,
+    "language": "HTML",
+    "pushed_at": "2026-11-13T15:45:25Z",
+    "license": "AGPL-3.0"
+  }
+}

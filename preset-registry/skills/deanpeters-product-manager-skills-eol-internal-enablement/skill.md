@@ -278,7 +278,7 @@ to it.
   what belongs in this pack
 - [`eol-checklist`](../eol-checklist/SKILL.md) — where the enablement-complete date lives
 - [`eol-readiness-advisor`](../eol-readiness-advisor/SKILL.md) — if the decision still needs a case
-- [`incoming-request-advisor`](../incoming-request-advisor/SKILL.md) — for decoding the escalations
+- [`incoming-request-advisor`](https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/incoming-request-advisor/SKILL.md) — for decoding the escalations
   this pack will generate
 
 ### External Frameworks

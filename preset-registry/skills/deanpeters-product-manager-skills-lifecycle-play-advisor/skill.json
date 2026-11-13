@@ -2,7 +2,7 @@
   "id": "deanpeters-product-manager-skills-lifecycle-play-advisor",
   "name": "lifecycle-play-advisor",
   "description": "Diagnose where a product sits in its lifecycle and which play fits — extend, replace, or retire. Use when a product is fading and you need the call, not just the worry.",
-  "category": "开发编程",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -13,13 +13,13 @@
   "install_path": ".claude/skills/lifecycle-play-advisor/SKILL.md",
   "source": {
     "repo": "deanpeters/Product-Manager-Skills",
-    "url": "https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/lifecycle-play-advisor/SKILL.md",
-    "path": "skills/lifecycle-play-advisor/SKILL.md",
+    "url": "https://github.com/deanpeters/Product-Manager-Skills/blob/main/plugins/pm-deliver/skills/lifecycle-play-advisor/SKILL.md",
+    "path": "plugins/pm-deliver/skills/lifecycle-play-advisor/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-13T06:53:32.122Z",
-    "stars": 8002,
-    "language": "Shell",
-    "pushed_at": "2026-11-12T14:18:51Z",
+    "discovered_at": "2026-11-13T15:40:20.881Z",
+    "stars": 8010,
+    "language": "Python",
+    "pushed_at": "2026-11-13T15:19:58Z",
     "license": null
   },
   "summary_zh": "一款产品生命周期诊断工具，帮助判断产品应延续、替换还是退役，适合产品走弱时辅助决策。"

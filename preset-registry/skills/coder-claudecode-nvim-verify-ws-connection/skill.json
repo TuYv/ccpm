@@ -1,0 +1,25 @@
+{
+  "id": "coder-claudecode-nvim-verify-ws-connection",
+  "name": "verify-ws-connection",
+  "description": "Model-check the claudecode.nvim WebSocket connection lifecycle (TLA+/TLC) against guards read from the current Lua code, from the TCP accept through the handshake, requests, Close frames, keepalive pings and server stop. Use after a change to lua/claudecode/server/client.lua, server/tcp.lua, server/handshake.lua, the start/stop or callback wiring in server/init.lua, or M.start/M.stop in init.lua, and before trusting such a change.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "coder",
+  "install_path": ".claude/skills/verify-ws-connection/SKILL.md",
+  "source": {
+    "repo": "coder/claudecode.nvim",
+    "url": "https://github.com/coder/claudecode.nvim/blob/main/.agents/skills/verify-ws-connection/SKILL.md",
+    "path": ".agents/skills/verify-ws-connection/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-13T16:31:44.927Z",
+    "stars": 3158,
+    "language": "Lua",
+    "pushed_at": "2026-11-13T15:46:23Z",
+    "license": "MIT"
+  }
+}

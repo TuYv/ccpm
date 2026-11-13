@@ -124,7 +124,7 @@ Offer the six steps as a numbered menu; recommend a subset when the decision doe
 - **Frameworks:** Ries & Trout positioning theory (the battle is for the buyer's mind); perceptual
   mapping (price vs. value-perception plots; find the uncontested space); Blue Ocean strategy canvas.
 - **Run:** contrast their *stated* positioning (Step 2 snapshots) against *customer language* (Step 3
-  review mining); draft or revise with [`positioning-statement`](../positioning-statement/SKILL.md).
+  review mining); draft or revise with [`positioning-statement`](https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/positioning-statement/SKILL.md).
 - **Watch for:** the promise-delivery gap — where a competitor's marketing writes checks their reviews
   say they don't cash. That gap is a positioning counter-move waiting to be claimed.
 
@@ -147,7 +147,7 @@ Offer the six steps as a numbered menu; recommend a subset when the decision doe
 
 Close by building what the audience consumes — offer as a numbered menu:
 
-1. **Battle cards** for the field — [`battle-card-builder`](../battle-card-builder/SKILL.md)
+1. **Battle cards** for the field — [`battle-card-builder`](https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/battle-card-builder/SKILL.md)
 2. **Executive comparison matrix** — from Step 2's snapshot
 3. **Positioning counter-moves** — from Step 5's gap analysis
 4. **Threat assessment brief** — Step 6's fused signals, with confidence levels and recommended responses
@@ -200,9 +200,9 @@ steps merged, one run out of order, cadence slowed — with each call's reasonin
 - [`competitive-research-snapshot`](../competitive-research-snapshot/SKILL.md) (Workflow) — Step 2
 - [`voice-of-customer-miner`](../voice-of-customer-miner/SKILL.md) (Workflow) — Step 3
 - [`company-intel`](../company-intel/SKILL.md) (Workflow) — Step 4
-- [`positioning-statement`](../positioning-statement/SKILL.md) (Component) — Step 5
+- [`positioning-statement`](https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/positioning-statement/SKILL.md) (Component) — Step 5
 - [`competitive-intel-watch`](../competitive-intel-watch/SKILL.md) (Workflow) — Step 6 cadence + maintenance
-- [`battle-card-builder`](../battle-card-builder/SKILL.md) (Workflow) — Step 7 output
+- [`battle-card-builder`](https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/battle-card-builder/SKILL.md) (Workflow) — Step 7 output
 - [`intelligence-collection-disciplines`](../intelligence-collection-disciplines/SKILL.md) (Component) — signal channels throughout
 - [`autonomous-investigation`](../autonomous-investigation/SKILL.md) (Workflow) — evidence discipline throughout
 - External frameworks: Porter, *How Competitive Forces Shape Strategy* (HBR, 1979); Kano, attractive

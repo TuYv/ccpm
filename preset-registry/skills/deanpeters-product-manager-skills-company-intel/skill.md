@@ -507,11 +507,11 @@ When handing off to a downstream skill, pass the relevant sections explicitly:
 - **[intelligence-collection-disciplines](../intelligence-collection-disciplines/SKILL.md)** (Component) — OSINT/FININT/HUMINT source tables and signal chains behind Lenses 1, 6, and 7
 - **[competitive-intel-watch](../competitive-intel-watch/SKILL.md)** (Workflow) — Breadth sibling: monitors the whole competitor set on a cadence while this skill goes deep on one entity
 - **[pestel-analysis](../pestel-analysis/SKILL.md)** (Component) — Deep PESTEL template; consumes Sections 6 and 8 from company-intel
-- **[derisk-measurement-advisor](../derisk-measurement-advisor/SKILL.md)** (Interactive) — Risk scan that benefits from Sections 6 and 8 as context input
+- **[derisk-measurement-advisor](https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/derisk-measurement-advisor/SKILL.md)** (Interactive) — Risk scan that benefits from Sections 6 and 8 as context input
 - **[tam-sam-som-calculator](../tam-sam-som-calculator/SKILL.md)** (Component) — Market sizing; consumes Sections 2, 3, 5
 - **[business-health-diagnostic](../business-health-diagnostic/SKILL.md)** (Interactive) — SaaS health diagnosis; consumes Section 2
-- **[positioning-statement](../positioning-statement/SKILL.md)** (Component) — Positioning; consumes Sections 3, 4, 7
-- **[acquisition-channel-advisor](../acquisition-channel-advisor/SKILL.md)** (Interactive) — Go-to-market analysis; consumes Sections 2, 3, 7
+- **[positioning-statement](https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/positioning-statement/SKILL.md)** (Component) — Positioning; consumes Sections 3, 4, 7
+- **[acquisition-channel-advisor](https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/acquisition-channel-advisor/SKILL.md)** (Interactive) — Go-to-market analysis; consumes Sections 2, 3, 7
 - **[proto-persona](../proto-persona/SKILL.md)** (Component) — Persona creation; consumes Section 3
 
 ### Research Sources

@@ -130,7 +130,7 @@ A copy/paste fill-in version of this schema, with quality checks, lives in [`tem
 1. Size the top move with TAM/SAM/SOM ([`tam-sam-som-calculator`](../tam-sam-som-calculator/SKILL.md)) (Recommended)
 2. Pressure-test the sequence with a premortem
 3. Deep-dive the diversification quadrant's evidence
-4. Convert the first move into an opportunity solution tree ([`opportunity-solution-tree`](../opportunity-solution-tree/SKILL.md))
+4. Convert the first move into an opportunity solution tree ([`opportunity-solution-tree`](https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/opportunity-solution-tree/SKILL.md))
 
 Accept `1`, `2`, `3`, `4`, `1 and 2`, `Verbose Mode`, or a custom path.
 
@@ -184,7 +184,7 @@ populated diversification quadrant whose entry fails the evidence bar in writing
 - [`porters-five-forces`](../porters-five-forces/SKILL.md) (Workflow) — the profit-pool read that feeds this analysis
 - [`tam-sam-som-calculator`](../tam-sam-som-calculator/SKILL.md) (Component) — sizes the moves
 - [`voice-of-customer-miner`](../voice-of-customer-miner/SKILL.md) (Workflow) — expressed-demand signals for product development
-- [`opportunity-solution-tree`](../opportunity-solution-tree/SKILL.md) (Interactive) — structures the first move's execution
+- [`opportunity-solution-tree`](https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/opportunity-solution-tree/SKILL.md) (Interactive) — structures the first move's execution
 - H. Igor Ansoff, "Strategies for Diversification" (Harvard Business Review, 1957)
 - Adapted from `market-intelligence/ansoff-matrix-prompt.md` in the
   `https://github.com/deanpeters/product-manager-prompts` repo.

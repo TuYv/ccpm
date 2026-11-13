@@ -51,7 +51,7 @@ capture from April pasted below.`
 - **Governing protocol:** honors the [`autonomous-investigation`](../autonomous-investigation/SKILL.md)
   contract — question budget of 2, Fact/Inference/Assumption labels, Just Enough Mode, stable schema,
   4-option Final Step. Discipline: SIGINT (pricing pages, site diffs) with FININT corroboration — see
-  [`intelligence-collection-disciplines`](../intelligence-collection-disciplines/SKILL.md).
+  [`intelligence-collection-disciplines`](https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/intelligence-collection-disciplines/SKILL.md).
 - **Time series, not screenshot.** A single capture is trivia; the sequence is intelligence. The
   schema never drifts between runs, because diffability is the entire value.
 - **Structure over numbers.** Record tiers, billing units, feature gates, usage limits, free-tier
@@ -63,7 +63,7 @@ capture from April pasted below.`
 - **When NOT to use:** you need pricing *strategy* advice →
   [`finance-based-pricing-advisor`](../finance-based-pricing-advisor/SKILL.md) (this tracks the
   market; it doesn't set your price); pricing is fully opaque across the whole set → expect thin
-  results, and consider [`voice-of-customer-miner`](../voice-of-customer-miner/SKILL.md) or win/loss
+  results, and consider [`voice-of-customer-miner`](https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/voice-of-customer-miner/SKILL.md) or win/loss
   evidence instead.
 
 ## Application
@@ -116,7 +116,7 @@ A copy/paste fill-in version of this schema, with quality checks, lives in [`tem
 
 ### Final Step (offer exactly 4 options)
 
-1. Update battle card pricing sections from these changes ([`battle-card-builder`](../battle-card-builder/SKILL.md))
+1. Update battle card pricing sections from these changes ([`battle-card-builder`](https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/battle-card-builder/SKILL.md))
 2. Deep-dive one competitor's packaging logic
 3. Compare your pricing against this capture
 4. Set the cadence and watchlist for the next run
@@ -162,9 +162,9 @@ shows the fully opaque case: zero published prices, and structure as the only pu
 ## References
 
 - [`autonomous-investigation`](../autonomous-investigation/SKILL.md) (Workflow) — the governing protocol
-- [`intelligence-collection-disciplines`](../intelligence-collection-disciplines/SKILL.md) (Component) — SIGINT sources: Wayback diffs, pricing-page monitoring
-- [`competitive-intel-watch`](../competitive-intel-watch/SKILL.md) (Workflow) — the broader watch this tracker feeds
-- [`battle-card-builder`](../battle-card-builder/SKILL.md) (Workflow) — consumes the pricing snapshot sections
+- [`intelligence-collection-disciplines`](https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/intelligence-collection-disciplines/SKILL.md) (Component) — SIGINT sources: Wayback diffs, pricing-page monitoring
+- [`competitive-intel-watch`](https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/competitive-intel-watch/SKILL.md) (Workflow) — the broader watch this tracker feeds
+- [`battle-card-builder`](https://github.com/deanpeters/Product-Manager-Skills/blob/main/skills/battle-card-builder/SKILL.md) (Workflow) — consumes the pricing snapshot sections
 - [`finance-based-pricing-advisor`](../finance-based-pricing-advisor/SKILL.md) (Interactive) — sets *your* price; this skill informs it with market evidence
 - Adapted from `market-intelligence/pricing-packaging-tracker-prompt.md` in the
   `https://github.com/deanpeters/product-manager-prompts` repo.
