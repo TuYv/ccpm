@@ -1,7 +1,7 @@
 {
   "id": "spacering-net-codeg-scholar-evaluation",
   "name": "scholar-evaluation",
-  "description": "Systematically evaluate scholarly work using the ScholarEval framework, providing structured assessment across research quality dimensions including problem formulation, methodology, analysis, and writing with quantitative scoring and actionable feedback.",
+  "description": "Provides qualitative-first, evidence-traceable developmental review of scholarly works and audit low-stakes research-assessment rubrics with optional local quality controls. Never use for ranking people or consequential decisions.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/spacering-net/codeg/blob/main/src-tauri/science/skills/scholar-evaluation/SKILL.md",
     "path": "src-tauri/science/skills/scholar-evaluation/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-12T19:28:03.301Z",
+    "discovered_at": "2026-11-13T00:49:09.114Z",
     "stars": 4449,
     "language": "Rust",
-    "pushed_at": "2026-11-12T14:45:28Z",
+    "pushed_at": "2026-11-13T00:42:07Z",
     "license": "Apache-2.0"
   }
 }

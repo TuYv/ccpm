@@ -1,7 +1,7 @@
 {
   "id": "rlaope-oh-my-hermes-omh-geospatial-analysis",
   "name": "omh-geospatial-analysis",
-  "description": "[omh] Spatial layers to intersect: execute CRS-safe polygon overlay with measured areas, validated geometry and reproducible GeoJSON outputs. Use when the user says: geospatial-analysis, geospatial overlay, spatial intersection, intersect geojson layers, compute overlap area.",
+  "description": "[omh] Spatial layers to intersect: execute CRS-safe polygon overlay with measured areas, validated geometry and reproducible GeoJSON outputs.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -13,13 +13,13 @@
   "install_path": ".claude/skills/omh-geospatial-analysis/SKILL.md",
   "source": {
     "repo": "rlaope/oh-my-hermes",
-    "url": "https://github.com/rlaope/oh-my-hermes/blob/main/agent-skills/omh-geospatial-analysis/SKILL.md",
-    "path": "agent-skills/omh-geospatial-analysis/SKILL.md",
+    "url": "https://github.com/rlaope/oh-my-hermes/blob/main/.claude/agent-skills/omh-geospatial-analysis/SKILL.md",
+    "path": ".claude/agent-skills/omh-geospatial-analysis/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-12T19:32:56.008Z",
-    "stars": 5553,
+    "discovered_at": "2026-11-13T00:53:02.837Z",
+    "stars": 5560,
     "language": "Python",
-    "pushed_at": "2026-11-12T19:18:35Z",
+    "pushed_at": "2026-11-13T00:00:14Z",
     "license": "MIT"
   }
 }

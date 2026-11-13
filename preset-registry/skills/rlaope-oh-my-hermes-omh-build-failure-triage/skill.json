@@ -1,7 +1,7 @@
 {
   "id": "rlaope-oh-my-hermes-omh-build-failure-triage",
   "name": "omh-build-failure-triage",
-  "description": "[omh] Build or CI failure to triage: classify build, typecheck, lint, test, CI, and DCO failures into minimal safe fix handoffs. Use when the user says: build-failure-triage, build failure triage, build failure, build-failure, build fix, build failed, build failing, compile error.",
+  "description": "[omh] Build or CI failure to triage: classify build, typecheck, lint, test, CI, and DCO failures into minimal safe fix handoffs.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -13,13 +13,13 @@
   "install_path": ".claude/skills/omh-build-failure-triage/SKILL.md",
   "source": {
     "repo": "rlaope/oh-my-hermes",
-    "url": "https://github.com/rlaope/oh-my-hermes/blob/main/agent-skills/omh-build-failure-triage/SKILL.md",
-    "path": "agent-skills/omh-build-failure-triage/SKILL.md",
+    "url": "https://github.com/rlaope/oh-my-hermes/blob/main/.claude/agent-skills/omh-build-failure-triage/SKILL.md",
+    "path": ".claude/agent-skills/omh-build-failure-triage/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-12T19:32:49.378Z",
-    "stars": 5553,
+    "discovered_at": "2026-11-13T00:52:58.267Z",
+    "stars": 5560,
     "language": "Python",
-    "pushed_at": "2026-11-12T19:18:35Z",
+    "pushed_at": "2026-11-13T00:00:14Z",
     "license": "MIT"
   }
 }

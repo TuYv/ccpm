@@ -1,7 +1,7 @@
 {
   "id": "rlaope-oh-my-hermes-omh-agent-debug",
   "name": "omh-agent-debug",
-  "description": "[omh] Agent is stuck, looping, or drifting: capture a stuck, looping, drifting, or repeatedly failing agent run, diagnose the likely failure pattern, and prepare the smallest safe recovery action. Use when the user says: agent-debug, agent debug, agent debugging, agent introspection, agent self-debug, self-debug, self debugging, looping agent.",
+  "description": "[omh] Agent is stuck, looping, or drifting: capture a stuck, looping, drifting, or repeatedly failing agent run, diagnose the likely failure pattern…",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -13,13 +13,13 @@
   "install_path": ".claude/skills/omh-agent-debug/SKILL.md",
   "source": {
     "repo": "rlaope/oh-my-hermes",
-    "url": "https://github.com/rlaope/oh-my-hermes/blob/main/agent-skills/omh-agent-debug/SKILL.md",
-    "path": "agent-skills/omh-agent-debug/SKILL.md",
+    "url": "https://github.com/rlaope/oh-my-hermes/blob/main/.claude/agent-skills/omh-agent-debug/SKILL.md",
+    "path": ".claude/agent-skills/omh-agent-debug/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-12T19:32:46.930Z",
-    "stars": 5553,
+    "discovered_at": "2026-11-13T00:52:56.064Z",
+    "stars": 5560,
     "language": "Python",
-    "pushed_at": "2026-11-12T19:18:35Z",
+    "pushed_at": "2026-11-13T00:00:14Z",
     "license": "MIT"
   }
 }

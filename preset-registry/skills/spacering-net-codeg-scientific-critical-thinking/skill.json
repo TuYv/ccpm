@@ -1,7 +1,7 @@
 {
   "id": "spacering-net-codeg-scientific-critical-thinking",
   "name": "scientific-critical-thinking",
-  "description": "Evaluate scientific claims and evidence quality. Use for assessing experimental design validity, identifying biases and confounders, applying evidence grading frameworks (GRADE, Cochrane Risk of Bias), or teaching critical analysis. Best for understanding evidence quality, identifying flaws. For formal peer review writing use peer-review.",
+  "description": "Evaluates scientific claims and evidence quality. Applies to experimental design validity, biases and confounders, statistical interpretation, evidence grading frameworks (GRADE, Cochrane Risk of Bias), and teaching critical analysis. Supports evidence appraisal and identifying flaws; formal peer review writing belongs to peer-review.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/spacering-net/codeg/blob/main/src-tauri/science/skills/scientific-critical-thinking/SKILL.md",
     "path": "src-tauri/science/skills/scientific-critical-thinking/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-12T19:28:03.750Z",
+    "discovered_at": "2026-11-13T00:49:09.443Z",
     "stars": 4449,
     "language": "Rust",
-    "pushed_at": "2026-11-12T14:45:28Z",
+    "pushed_at": "2026-11-13T00:42:07Z",
     "license": "Apache-2.0"
   }
 }

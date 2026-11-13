@@ -1,7 +1,7 @@
 {
   "id": "spacering-net-codeg-hypothesis-generation",
   "name": "hypothesis-generation",
-  "description": "Structured hypothesis formulation from observations. Use when you have experimental observations or data and need to formulate testable hypotheses with predictions, propose mechanisms, and design experiments to test them. Follows scientific method framework. For open-ended ideation use scientific-brainstorming; for automated LLM-driven hypothesis testing on datasets use hypogenic.",
+  "description": "Formulates evidence-bounded scientific questions, candidate hypotheses, rival explanations, causal or associational claims, discriminating predictions, measurements, and preregistration-ready analysis plans. Used when turning observations or preliminary findings into transparent, testable research plans without treating hypotheses as facts.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/spacering-net/codeg/blob/main/src-tauri/science/skills/hypothesis-generation/SKILL.md",
     "path": "src-tauri/science/skills/hypothesis-generation/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-12T19:28:02.543Z",
+    "discovered_at": "2026-11-13T00:49:08.596Z",
     "stars": 4449,
     "language": "Rust",
-    "pushed_at": "2026-11-12T14:45:28Z",
+    "pushed_at": "2026-11-13T00:42:07Z",
     "license": "Apache-2.0"
   }
 }

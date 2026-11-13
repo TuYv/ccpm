@@ -1,7 +1,7 @@
 {
   "id": "rlaope-oh-my-hermes-omh-harness-session-inventory",
   "name": "omh-harness-session-inventory",
-  "description": "[omh] Lost track of agent sessions and worktrees: normalize Codex, Claude Code, Hermes, OpenCode, Cursor, MCP host, worktree, and wrapper session metadata into one drift-aware inventory. Use when the user says: harness-session-inventory, harness session inventory, session inventory, session adapter, session adapters, harness sessions, mcp inventory, mcp config inventory.",
+  "description": "[omh] Lost track of agent sessions and worktrees: normalize Codex, Claude Code, Hermes, OpenCode, Cursor, MCP host, worktree…",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -13,13 +13,13 @@
   "install_path": ".claude/skills/omh-harness-session-inventory/SKILL.md",
   "source": {
     "repo": "rlaope/oh-my-hermes",
-    "url": "https://github.com/rlaope/oh-my-hermes/blob/main/agent-skills/omh-harness-session-inventory/SKILL.md",
-    "path": "agent-skills/omh-harness-session-inventory/SKILL.md",
+    "url": "https://github.com/rlaope/oh-my-hermes/blob/main/.claude/agent-skills/omh-harness-session-inventory/SKILL.md",
+    "path": ".claude/agent-skills/omh-harness-session-inventory/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-12T19:32:56.805Z",
-    "stars": 5553,
+    "discovered_at": "2026-11-13T00:53:03.607Z",
+    "stars": 5560,
     "language": "Python",
-    "pushed_at": "2026-11-12T19:18:35Z",
+    "pushed_at": "2026-11-13T00:00:14Z",
     "license": "MIT"
   }
 }

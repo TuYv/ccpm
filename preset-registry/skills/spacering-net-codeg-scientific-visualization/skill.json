@@ -1,7 +1,7 @@
 {
   "id": "spacering-net-codeg-scientific-visualization",
   "name": "scientific-visualization",
-  "description": "Meta-skill for publication-ready figures. Use when creating journal submission figures requiring multi-panel layouts, significance annotations, error bars, colorblind-safe palettes, and specific journal formatting (Nature, Science, Cell). Orchestrates matplotlib/seaborn/plotly with publication styles. For quick exploration use seaborn or plotly directly.",
+  "description": "Creates and audits truthful, accessible, publication-ready scientific figures with Matplotlib, Seaborn, or Plotly. Use it for figure design, multi-panel layouts, uncertainty and missing-data displays, color/contrast review, image metadata validation, and journal export planning.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/spacering-net/codeg/blob/main/src-tauri/science/skills/scientific-visualization/SKILL.md",
     "path": "src-tauri/science/skills/scientific-visualization/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-12T19:28:04.122Z",
+    "discovered_at": "2026-11-13T00:49:09.790Z",
     "stars": 4449,
     "language": "Rust",
-    "pushed_at": "2026-11-12T14:45:28Z",
+    "pushed_at": "2026-11-13T00:42:07Z",
     "license": "Apache-2.0"
   }
 }

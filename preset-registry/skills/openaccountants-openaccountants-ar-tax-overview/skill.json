@@ -1,8 +1,8 @@
 {
   "id": "openaccountants-openaccountants-ar-tax-overview",
   "name": "ar-tax-overview",
-  "description": "Source-cited draft: tax overview for Argentina (tax year 2025) — rates, thresholds and rules with primary-source citations. Unverified; pending local-accountant review.",
-  "category": "开发编程",
+  "description": "Route an Argentina tax question for fiscal year 2026 to the correct Guide. Use for Ganancias, IVA, Monotributo, payroll, autonomos, corporate tax, residence, foreign payments, transfer pricing, company formation and Bienes Personales screening. Establish taxpayer, residence, activity, period and province before selecting a computation. This overview carries no independent rates or filing-calendar table: load the owning Guide and its dated official sources. Provincial/municipal taxes and personal",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/ar-tax-overview/SKILL.md",
     "path": "agent-skills/ar-tax-overview/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-10-24T06:58:01.937Z",
-    "stars": 459,
-    "language": "Python",
-    "pushed_at": "2026-10-23T18:35:31Z",
+    "discovered_at": "2026-11-13T00:51:26.428Z",
+    "stars": 486,
+    "language": "HTML",
+    "pushed_at": "2026-11-12T23:25:17Z",
     "license": "AGPL-3.0"
   }
 }

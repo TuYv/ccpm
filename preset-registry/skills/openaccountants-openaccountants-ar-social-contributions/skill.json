@@ -1,7 +1,7 @@
 {
   "id": "openaccountants-openaccountants-ar-social-contributions",
   "name": "ar-social-contributions",
-  "description": "Use this skill whenever asked about Argentine self-employed social contributions (aportes autónomos). Trigger on phrases like \\\"aportes autónomos\\\", \\\"categoría autónomos\\\", \\\"jubilación autónomos\\\", \\\"PAMI autónomos\\\", \\\"cuánto pago de autónomo\\\", \\\"contribuciones SIPA\\\", or any question about Argentine social security obligations for self-employed individuals. Covers Categories I-V, retirement (SIPA), PAMI (INSSJP), and obra social contributions, monthly fixed amounts, VEP payment, and edge ca",
+  "description": "Compute ordinary Argentina social contributions in 2026: aportes autonomos, categorias I a V, SIPA, PAMI, obra social, employer contributions, F.931, Libro de Sueldos Digital, Declaracion en linea and Fondo de Asistencia Laboral. Covers activity/income categorisation, dated autonomous tables, employee and employer bases, caps and detractions, registration, May recategorisation, payment reconciliation and the December 2026 FAL change. Establish the accrued period, pension status, activity and pay",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/ar-social-contributions/SKILL.md",
     "path": "agent-skills/ar-social-contributions/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-12T19:30:56.155Z",
+    "discovered_at": "2026-11-13T00:51:26.273Z",
     "stars": 486,
     "language": "HTML",
-    "pushed_at": "2026-11-12T17:24:11Z",
+    "pushed_at": "2026-11-12T23:25:17Z",
     "license": "AGPL-3.0"
-  },
-  "summary_zh": "用于解答阿根廷个体经营者社保缴费问题，涵盖类别、养老医保费用计算及VEP缴纳指引。"
+  }
 }

@@ -1,7 +1,7 @@
 {
   "id": "rlaope-oh-my-hermes-omh-ai-slop-cleaner",
   "name": "omh-ai-slop-cleaner",
-  "description": "[omh] Messy or AI-generated code to clean up: delete AI-generated slop, dead code, and duplication while observable behavior stays identical. Use when the user says: ai-slop-cleaner, cleanup, deslop, refactor, risky, behavior-preserving refactor, refactor workflow, legacy refactor.",
+  "description": "[omh] Messy or AI-generated code to clean up: delete AI-generated slop, dead code, and duplication while observable behavior stays identical.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -13,13 +13,13 @@
   "install_path": ".claude/skills/omh-ai-slop-cleaner/SKILL.md",
   "source": {
     "repo": "rlaope/oh-my-hermes",
-    "url": "https://github.com/rlaope/oh-my-hermes/blob/main/agent-skills/omh-ai-slop-cleaner/SKILL.md",
-    "path": "agent-skills/omh-ai-slop-cleaner/SKILL.md",
+    "url": "https://github.com/rlaope/oh-my-hermes/blob/main/.claude/agent-skills/omh-ai-slop-cleaner/SKILL.md",
+    "path": ".claude/agent-skills/omh-ai-slop-cleaner/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-12T19:32:47.663Z",
-    "stars": 5553,
+    "discovered_at": "2026-11-13T00:52:56.813Z",
+    "stars": 5560,
     "language": "Python",
-    "pushed_at": "2026-11-12T19:18:35Z",
+    "pushed_at": "2026-11-13T00:00:14Z",
     "license": "MIT"
   }
 }

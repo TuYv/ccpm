@@ -1,7 +1,7 @@
 {
   "id": "rlaope-oh-my-hermes-omh-inference-serving",
   "name": "omh-inference-serving",
-  "description": "[omh] Self-hosted LLM serving on GPUs: choose the serving engine and quantization from decision tables, prepare deployment as an idempotent runbook with observed-only verification, and measure the endpoint with the standard TTFT/TPOT/goodput protocol. Use when the user says: inference-serving, inference serving, serve this model, serve the model, model serving, serving endpoint, vllm, llama.cpp.",
+  "description": "[omh] Self-hosted LLM serving on GPUs: choose the serving engine and quantization from decision tables…",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -13,13 +13,13 @@
   "install_path": ".claude/skills/omh-inference-serving/SKILL.md",
   "source": {
     "repo": "rlaope/oh-my-hermes",
-    "url": "https://github.com/rlaope/oh-my-hermes/blob/main/agent-skills/omh-inference-serving/SKILL.md",
-    "path": "agent-skills/omh-inference-serving/SKILL.md",
+    "url": "https://github.com/rlaope/oh-my-hermes/blob/main/.claude/agent-skills/omh-inference-serving/SKILL.md",
+    "path": ".claude/agent-skills/omh-inference-serving/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-12T19:32:57.626Z",
-    "stars": 5553,
+    "discovered_at": "2026-11-13T00:53:04.213Z",
+    "stars": 5560,
     "language": "Python",
-    "pushed_at": "2026-11-12T19:18:35Z",
+    "pushed_at": "2026-11-13T00:00:14Z",
     "license": "MIT"
   }
 }

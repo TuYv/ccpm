@@ -1,7 +1,7 @@
 {
   "id": "spacering-net-codeg-paper-lookup",
   "name": "paper-lookup",
-  "description": "Search 10 academic literature APIs for papers, preprints, citations, and open-access full text, and return results with reproducible provenance. Covers PubMed, PMC (full text), bioRxiv, medRxiv, arXiv, OpenAlex, Crossref, Semantic Scholar, CORE, Unpaywall. Use when searching for papers, citations, DOI/PMID/arXiv lookups, abstracts, full text, open-access PDFs, preprints, citation graphs, author publications, or any scholarly literature query. Triggers on mentions of any supported database or req",
+  "description": "Searches 18 scholarly APIs for papers, preprints, citations, open-access full text, repository records, and journal OA status, and returns results with reproducible provenance. Covers PubMed, PMC, Europe PMC, bioRxiv, medRxiv, arXiv, OpenAlex, Crossref, Semantic Scholar, CORE, Unpaywall, OpenCitations, PubTator3, Zenodo, Figshare, ROR, BioStudies, and DOAJ. Use when searching for papers, citations, DOI/PMID/arXiv lookups, abstracts, full text, open-access PDFs, preprints, citation graphs, author",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/spacering-net/codeg/blob/main/src-tauri/science/skills/paper-lookup/SKILL.md",
     "path": "src-tauri/science/skills/paper-lookup/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-12T19:28:02.740Z",
+    "discovered_at": "2026-11-13T00:49:08.775Z",
     "stars": 4449,
     "language": "Rust",
-    "pushed_at": "2026-11-12T14:45:28Z",
+    "pushed_at": "2026-11-13T00:42:07Z",
     "license": "Apache-2.0"
   }
 }

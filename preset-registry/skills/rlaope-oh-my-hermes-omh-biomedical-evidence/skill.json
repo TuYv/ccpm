@@ -1,7 +1,7 @@
 {
   "id": "rlaope-oh-my-hermes-omh-biomedical-evidence",
   "name": "omh-biomedical-evidence",
-  "description": "[omh] Public variant claims to cross-check: retrieve and reconcile source-labelled biomedical evidence with identity, conflict and freshness checks. Use when the user says: biomedical-evidence, biomedical evidence reconciliation, ClinVar cross-check, variant evidence matrix, BioMCP capture reconciliation.",
+  "description": "[omh] Public variant claims to cross-check: retrieve and reconcile source-labelled biomedical evidence with identity, conflict and freshness checks.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -13,13 +13,13 @@
   "install_path": ".claude/skills/omh-biomedical-evidence/SKILL.md",
   "source": {
     "repo": "rlaope/oh-my-hermes",
-    "url": "https://github.com/rlaope/oh-my-hermes/blob/main/agent-skills/omh-biomedical-evidence/SKILL.md",
-    "path": "agent-skills/omh-biomedical-evidence/SKILL.md",
+    "url": "https://github.com/rlaope/oh-my-hermes/blob/main/.claude/agent-skills/omh-biomedical-evidence/SKILL.md",
+    "path": ".claude/agent-skills/omh-biomedical-evidence/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-12T19:32:49.206Z",
-    "stars": 5553,
+    "discovered_at": "2026-11-13T00:52:58.115Z",
+    "stars": 5560,
     "language": "Python",
-    "pushed_at": "2026-11-12T19:18:35Z",
+    "pushed_at": "2026-11-13T00:00:14Z",
     "license": "MIT"
   }
 }

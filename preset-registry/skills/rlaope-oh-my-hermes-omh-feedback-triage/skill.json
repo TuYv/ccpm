@@ -1,7 +1,7 @@
 {
   "id": "rlaope-oh-my-hermes-omh-feedback-triage",
   "name": "omh-feedback-triage",
-  "description": "[omh] Unsorted customer feedback and bug reports: cluster customer signals and choose the next workflow. Use when the user says: feedback-triage, customer-feedback-triage, feedback triage, customer feedback, feedback cluster, bug or feature, feature request triage, payment failure feedback.",
+  "description": "[omh] Unsorted customer feedback and bug reports: cluster customer signals and choose the next workflow.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -13,13 +13,13 @@
   "install_path": ".claude/skills/omh-feedback-triage/SKILL.md",
   "source": {
     "repo": "rlaope/oh-my-hermes",
-    "url": "https://github.com/rlaope/oh-my-hermes/blob/main/agent-skills/omh-feedback-triage/SKILL.md",
-    "path": "agent-skills/omh-feedback-triage/SKILL.md",
+    "url": "https://github.com/rlaope/oh-my-hermes/blob/main/.claude/agent-skills/omh-feedback-triage/SKILL.md",
+    "path": ".claude/agent-skills/omh-feedback-triage/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-12T19:32:54.046Z",
-    "stars": 5553,
+    "discovered_at": "2026-11-13T00:53:02.064Z",
+    "stars": 5560,
     "language": "Python",
-    "pushed_at": "2026-11-12T19:18:35Z",
+    "pushed_at": "2026-11-13T00:00:14Z",
     "license": "MIT"
   }
 }

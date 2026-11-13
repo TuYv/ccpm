@@ -1,7 +1,7 @@
 {
   "id": "rlaope-oh-my-hermes-omh-code-review",
   "name": "omh-code-review",
-  "description": "[omh] Pull request or changes to vet: bug-first review with evidence. Use when the user says: code-review, review, audit, find bugs, claim audit, evidence audit, README claim, what actually happened.",
+  "description": "[omh] Pull request or changes to vet: bug-first review with evidence.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -13,13 +13,13 @@
   "install_path": ".claude/skills/omh-code-review/SKILL.md",
   "source": {
     "repo": "rlaope/oh-my-hermes",
-    "url": "https://github.com/rlaope/oh-my-hermes/blob/main/agent-skills/omh-code-review/SKILL.md",
-    "path": "agent-skills/omh-code-review/SKILL.md",
+    "url": "https://github.com/rlaope/oh-my-hermes/blob/main/.claude/agent-skills/omh-code-review/SKILL.md",
+    "path": ".claude/agent-skills/omh-code-review/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-12T19:32:49.724Z",
-    "stars": 5553,
+    "discovered_at": "2026-11-13T00:52:58.577Z",
+    "stars": 5560,
     "language": "Python",
-    "pushed_at": "2026-11-12T19:18:35Z",
+    "pushed_at": "2026-11-13T00:00:14Z",
     "license": "MIT"
   }
 }

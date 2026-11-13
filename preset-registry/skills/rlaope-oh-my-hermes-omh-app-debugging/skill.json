@@ -1,7 +1,7 @@
 {
   "id": "rlaope-oh-my-hermes-omh-app-debugging",
   "name": "omh-app-debugging",
-  "description": "[omh] Application code misbehaves -- a wrong value, a flaky test, a lost update: reproduce it first, form competing hypotheses, discriminate them with the cheapest observation, and only then fix the demonstrated root cause. Use when the user says: app-debugging, app debugging, application debugging, root cause, root-cause, find the root cause, root cause analysis, flaky test.",
+  "description": "[omh] Application code misbehaves -- a wrong value, a flaky test, a lost update: reproduce it first, form competing hypotheses…",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -13,13 +13,13 @@
   "install_path": ".claude/skills/omh-app-debugging/SKILL.md",
   "source": {
     "repo": "rlaope/oh-my-hermes",
-    "url": "https://github.com/rlaope/oh-my-hermes/blob/main/agent-skills/omh-app-debugging/SKILL.md",
-    "path": "agent-skills/omh-app-debugging/SKILL.md",
+    "url": "https://github.com/rlaope/oh-my-hermes/blob/main/.claude/agent-skills/omh-app-debugging/SKILL.md",
+    "path": ".claude/agent-skills/omh-app-debugging/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-12T19:32:47.880Z",
-    "stars": 5553,
+    "discovered_at": "2026-11-13T00:52:56.960Z",
+    "stars": 5560,
     "language": "Python",
-    "pushed_at": "2026-11-12T19:18:35Z",
+    "pushed_at": "2026-11-13T00:00:14Z",
     "license": "MIT"
   }
 }

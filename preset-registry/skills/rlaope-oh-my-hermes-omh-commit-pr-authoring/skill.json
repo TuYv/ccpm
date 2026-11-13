@@ -1,8 +1,8 @@
 {
   "id": "rlaope-oh-my-hermes-omh-commit-pr-authoring",
   "name": "omh-commit-pr-authoring",
-  "description": "[omh] Commit message or pull-request body to write for a change: draft it in the repository's own convention, with `Tested:` listing only commands observed to run and everything prepared but not run under `Not-tested:`. Use when the user says: commit-pr-authoring, commit message, commit messages, write the commit message, draft the commit message, commit body, squash message, pr body.",
-  "category": "测试调试",
+  "description": "[omh] Commit message or pull-request body to write for a change: draft it in the repository's own convention…",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -13,13 +13,13 @@
   "install_path": ".claude/skills/omh-commit-pr-authoring/SKILL.md",
   "source": {
     "repo": "rlaope/oh-my-hermes",
-    "url": "https://github.com/rlaope/oh-my-hermes/blob/main/agent-skills/omh-commit-pr-authoring/SKILL.md",
-    "path": "agent-skills/omh-commit-pr-authoring/SKILL.md",
+    "url": "https://github.com/rlaope/oh-my-hermes/blob/main/.claude/agent-skills/omh-commit-pr-authoring/SKILL.md",
+    "path": ".claude/agent-skills/omh-commit-pr-authoring/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-12T19:32:50.535Z",
-    "stars": 5553,
+    "discovered_at": "2026-11-13T00:52:59.215Z",
+    "stars": 5560,
     "language": "Python",
-    "pushed_at": "2026-11-12T19:18:35Z",
+    "pushed_at": "2026-11-13T00:00:14Z",
     "license": "MIT"
   }
 }

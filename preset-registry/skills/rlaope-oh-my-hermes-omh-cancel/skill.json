@@ -1,7 +1,7 @@
 {
   "id": "rlaope-oh-my-hermes-omh-cancel",
   "name": "omh-cancel",
-  "description": "[omh] Aborting an active workflow: ending active workflow state cleanly. Use when the user says: cancel, stop the workflow, abort the run, cancel the loop.",
+  "description": "[omh] Aborting an active workflow: ending active workflow state cleanly.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -13,13 +13,13 @@
   "install_path": ".claude/skills/omh-cancel/SKILL.md",
   "source": {
     "repo": "rlaope/oh-my-hermes",
-    "url": "https://github.com/rlaope/oh-my-hermes/blob/main/agent-skills/omh-cancel/SKILL.md",
-    "path": "agent-skills/omh-cancel/SKILL.md",
+    "url": "https://github.com/rlaope/oh-my-hermes/blob/main/.claude/agent-skills/omh-cancel/SKILL.md",
+    "path": ".claude/agent-skills/omh-cancel/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-12T19:32:49.554Z",
-    "stars": 5553,
+    "discovered_at": "2026-11-13T00:52:58.411Z",
+    "stars": 5560,
     "language": "Python",
-    "pushed_at": "2026-11-12T19:18:35Z",
+    "pushed_at": "2026-11-13T00:00:14Z",
     "license": "MIT"
   }
 }

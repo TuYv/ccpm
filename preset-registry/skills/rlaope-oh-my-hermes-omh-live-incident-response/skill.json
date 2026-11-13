@@ -1,0 +1,25 @@
+{
+  "id": "rlaope-oh-my-hermes-omh-live-incident-response",
+  "name": "omh-live-incident-response",
+  "description": "[omh] Production is down or an incident is open: command an incident that is still open -- severity as declared live state, commander and roles…",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "rlaope",
+  "install_path": ".claude/skills/omh-live-incident-response/SKILL.md",
+  "source": {
+    "repo": "rlaope/oh-my-hermes",
+    "url": "https://github.com/rlaope/oh-my-hermes/blob/main/.claude/agent-skills/omh-live-incident-response/SKILL.md",
+    "path": ".claude/agent-skills/omh-live-incident-response/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-13T00:53:05.832Z",
+    "stars": 5560,
+    "language": "Python",
+    "pushed_at": "2026-11-13T00:00:14Z",
+    "license": "MIT"
+  }
+}
