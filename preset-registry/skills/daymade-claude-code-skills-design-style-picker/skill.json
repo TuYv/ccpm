@@ -1,7 +1,7 @@
 {
   "id": "daymade-claude-code-skills-design-style-picker",
   "name": "design-style-picker",
-  "description": "Batch-generate and compare visual design directions so a user can choose the style they actually want. Use when the user says they cannot describe an abstract visual style, asks for many style options, wants to choose from generated UI/design-system images, rejects outputs as too colorful/too dead/too generic, or needs an existing UI/design system evolved without discarding current assets.",
+  "description": ">- Batch-generate and compare visual design directions so a user can choose the style they actually want. Use when the user says they cannot describe an abstract visual style, asks for many style options, wants to choose from generated UI/design-system images, rejects outputs as too colorful/too dead/too generic, or needs an existing UI/design system evolved without discarding current assets.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-codex/design-style-picker/SKILL.md",
     "path": "daymade-codex/design-style-picker/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-13T00:45:08.990Z",
-    "stars": 1527,
+    "discovered_at": "2026-11-13T07:42:47.227Z",
+    "stars": 1528,
     "language": "Python",
-    "pushed_at": "2026-11-12T21:32:36Z",
+    "pushed_at": "2026-11-13T06:25:07Z",
     "license": "MIT"
-  },
-  "summary_zh": "批量生成并对比多种视觉设计方案，适合难以描述风格偏好或想基于现有界面探索改版方向的场景。"
+  }
 }

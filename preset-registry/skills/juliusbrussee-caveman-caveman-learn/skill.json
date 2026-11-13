@@ -2,7 +2,7 @@
   "id": "juliusbrussee-caveman-caveman-learn",
   "name": "caveman-learn",
   "description": "Act on a Caveman learn report - review the ranked token sinks, apply cost-lowering fixes with per-edit consent, and report what those fixes returned. Use when asked to lower an agent's token cost, what caveman has saved, to trim a heavy CLAUDE.md, or to offload re-pasted context into cavemem.",
-  "category": "设计创意",
+  "category": "开发编程",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/JuliusBrussee/caveman/blob/main/skills/caveman-learn/SKILL.md",
     "path": "skills/caveman-learn/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-13T00:40:05.203Z",
-    "stars": 119429,
+    "discovered_at": "2026-11-13T07:37:48.367Z",
+    "stars": 119517,
     "language": "Go",
-    "pushed_at": "2026-11-12T22:37:29Z",
+    "pushed_at": "2026-11-13T01:48:58Z",
     "license": "Apache-2.0"
   },
   "summary_zh": "根据分析报告定位高耗 Token 内容，经逐项确认后优化并统计节省量，适合精简 CLAUDE.md 或迁移重复上下文。"
