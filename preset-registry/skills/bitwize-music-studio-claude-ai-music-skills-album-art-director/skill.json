@@ -1,7 +1,7 @@
 {
   "id": "bitwize-music-studio-claude-ai-music-skills-album-art-director",
   "name": "album-art-director",
-  "description": "Creates visual concepts for album artwork and generates AI art prompts. Use during planning for concept discussion, or after all tracks are Final for actual artwork generation.",
+  "description": "Creates visual concepts for album artwork and generates AI art prompts. Use during planning for concept discussion, or after all tracks are Final for actual artwork generation. With artwork.generator set to codex in config, it also has the user's Codex CLI make the image.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/bitwize-music-studio/claude-ai-music-skills/blob/main/skills/album-art-director/SKILL.md",
     "path": "skills/album-art-director/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-14T17:22:12.083Z",
-    "stars": 666,
+    "discovered_at": "2026-11-14T21:48:30.770Z",
+    "stars": 667,
     "language": "Python",
-    "pushed_at": "2026-11-12T13:49:59Z",
+    "pushed_at": "2026-11-14T20:34:19Z",
     "license": "CC0-1.0"
-  },
-  "summary_zh": "帮你构思专辑封面的视觉方向并生成AI绘画提示词，适合在策划期碰撞灵感，或在曲目敲定后直接出图。"
+  }
 }

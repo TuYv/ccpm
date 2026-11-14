@@ -1,0 +1,25 @@
+{
+  "id": "openaccountants-openaccountants-ai-gst",
+  "name": "ai-gst",
+  "description": "Anguilla General Services Tax (GST) for ordinary domestic taxable services in 2026, under the General Services Tax Act, 2025 (in force 1 August 2025). Covers the registration tests (XCD 300,000 actual or expected), the 13% rate, tax-exclusive and tax-inclusive invoice arithmetic (13/113), supported input credits and the s 25 apportionment, monthly returns due on the 20th, payment, records, and the IRD return lines. Use for Anguilla GST, service invoices, taxable turnover, GST registration or inp",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openaccountants",
+  "install_path": ".claude/skills/ai-gst/SKILL.md",
+  "source": {
+    "repo": "openaccountants/openaccountants",
+    "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/ai-gst/SKILL.md",
+    "path": "agent-skills/ai-gst/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-14T22:39:58.885Z",
+    "stars": 492,
+    "language": "HTML",
+    "pushed_at": "2026-11-14T21:48:31Z",
+    "license": "AGPL-3.0"
+  }
+}

@@ -1,8 +1,8 @@
 {
   "id": "openaccountants-openaccountants-ak-sales-tax",
   "name": "ak-sales-tax",
-  "description": "Use this skill whenever asked about Alaska sales and use tax. Trigger on phrases like \\\"Alaska sales tax\\\", \\\"AK sales tax\\\", \\\"Alaska local sales tax\\\", \\\"ARSSTC\\\", \\\"Alaska Remote Seller Sales Tax Commission\\\", \\\"Alaska economic nexus\\\", \\\"do I charge sales tax in Alaska\\\". ALWAYS load us-sales-tax first.",
-  "category": "设计创意",
+  "description": "Use this skill whenever asked about Alaska sales and use tax for 2026. Alaska has no statewide sales tax, but boroughs and cities levy their own, and the Alaska Remote Seller Sales Tax Commission (ARSSTC) collects for its member communities from remote sellers and marketplace facilitators. Covers the 100,000 dollar statewide economic nexus test, destination sourcing, local rates and caps from the ARSSTC rate sheet, monthly filing, penalties and physical-presence sellers who file with the municip",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,10 @@
     "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/ak-sales-tax/SKILL.md",
     "path": "agent-skills/ak-sales-tax/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-14T18:14:04.153Z",
+    "discovered_at": "2026-11-14T22:39:59.622Z",
     "stars": 492,
     "language": "HTML",
-    "pushed_at": "2026-11-14T18:04:58Z",
+    "pushed_at": "2026-11-14T21:48:31Z",
     "license": "AGPL-3.0"
-  },
-  "summary_zh": "用于解答阿拉斯加州销售税与使用税问题，适合查询地方税、经济关联及远程卖家征税义务。"
+  }
 }

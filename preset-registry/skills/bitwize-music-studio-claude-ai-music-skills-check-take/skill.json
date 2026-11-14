@@ -1,0 +1,25 @@
+{
+  "id": "bitwize-music-studio-claude-ai-music-skills-check-take",
+  "name": "check-take",
+  "description": "Checks a track's Suno takes against the track file by asking Suno's listening agent - which lyric lines are not sung or are changed, tempo, voice, excluded instruments, mix problems. Free and advisory; it never picks a take. Use after generating, or when the user asks \"did it sing everything\", \"check the takes\" or \"is the tempo right\".",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "bitwize-music-studio",
+  "install_path": ".claude/skills/check-take/SKILL.md",
+  "source": {
+    "repo": "bitwize-music-studio/claude-ai-music-skills",
+    "url": "https://github.com/bitwize-music-studio/claude-ai-music-skills/blob/main/skills/check-take/SKILL.md",
+    "path": "skills/check-take/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-14T21:48:31.621Z",
+    "stars": 667,
+    "language": "Python",
+    "pushed_at": "2026-11-14T20:34:19Z",
+    "license": "CC0-1.0"
+  }
+}

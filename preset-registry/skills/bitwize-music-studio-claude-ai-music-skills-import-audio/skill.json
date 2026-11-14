@@ -1,7 +1,7 @@
 {
   "id": "bitwize-music-studio-claude-ai-music-skills-import-audio",
   "name": "import-audio",
-  "description": "Moves audio files to the correct album location with proper path structure. Use when the user has downloaded WAV files from Suno or other sources that need to be organized.",
+  "description": "Moves audio files to the correct album location with proper path structure, or pulls an approved take's WAV and stems straight from Suno. Use when the user has downloaded WAV files from Suno or other sources that need to be organized, or wants to import the keeper, or its instrumental version, after approving a take.",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/bitwize-music-studio/claude-ai-music-skills/blob/main/skills/import-audio/SKILL.md",
     "path": "skills/import-audio/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-14T17:22:14.337Z",
-    "stars": 666,
+    "discovered_at": "2026-11-14T21:48:33.984Z",
+    "stars": 667,
     "language": "Python",
-    "pushed_at": "2026-11-12T13:49:59Z",
+    "pushed_at": "2026-11-14T20:34:19Z",
     "license": "CC0-1.0"
-  },
-  "summary_zh": "这是一款音频归档工具，能自动将散落的音频文件按专辑和规范路径整理存放，特别适合整理从Suno等平台下载的WAV文件。"
+  }
 }

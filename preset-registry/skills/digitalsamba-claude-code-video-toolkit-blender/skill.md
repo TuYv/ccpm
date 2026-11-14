@@ -72,6 +72,12 @@ installed, don't propose it unless the user asks for 3D; then say what it needs 
    ("swung +24 deg: nominal had view blocked by dev_hood"). Exit 1 on a failure, 2 on a spec error.
 3. **Look at `contact_sheet.png`** (read the PNG). Geometry can't judge everything: a hand over the key text, an
    expression that reads wrong, a beat landing in the wrong shot. Green bar = passed checks, red = failed.
+   You wrote the spec, so you will see what you meant: for a film with a brief or a storyboard, also start a
+   subagent with only a path to the stills in `out/stills/` copied to numbered names (no brief, board, spec or
+   shot names; not the sheet, which prints each shot's name), have it retell what happens in time order and
+   where the camera is, and mark each storyboard row seen, partly seen or not seen against that retelling. A
+   row it did not name is a fault or a question. Do it again on the finished film, tiled with
+   `contact_sheet.py --count`. `docs/blender.md`, "A second reader who has not seen the brief".
 4. **Fix in the spec, not in Blender**: change a shot's `type`, `az`, `dist`, `dur`, or a beat's `at`. If the
    solver had to move a camera, consider writing its fix into the spec (`"az": ...`) so the intent is explicit.
 5. Repeat 2–4 until it passes and reads right, then **`render`**. Check the result with
@@ -175,6 +181,9 @@ is put at the cuff, and the desk, the keys and how far apart the hands lie come 
 runs on characters of different builds (run a spec on two to find a number tuned on one; `docs/blender.md` has the
 method). Head shots aim at a fitted character's own head, whatever its
 proportions. A worked example with an invented character is `tests/fixtures/blender-fitted`. The steps and their costs are in `docs/blender.md`.
+For a character of a real person, the reference photos come from `uv run tools/reference_capture.py --out <folder>`:
+a local page that talks the sitter through eight poses at a webcam. It needs the person at a browser, so ask
+them to run it; never commit their photos.
 
 ### Shots
 

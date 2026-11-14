@@ -1,0 +1,25 @@
+{
+  "id": "openaccountants-openaccountants-ak-payroll",
+  "name": "ak-payroll",
+  "description": "Compute Alaska 2026 unemployment insurance with employee withholding, the 54,200 dollar wage base, assigned employer rates, coverage exceptions and TQ01 quarterly reporting. Trigger on Alaska payroll, Alaska withholding, Alaska SUI, Employment Security Tax, UI employee deductions and myAlaska.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "openaccountants",
+  "install_path": ".claude/skills/ak-payroll/SKILL.md",
+  "source": {
+    "repo": "openaccountants/openaccountants",
+    "url": "https://github.com/openaccountants/openaccountants/blob/main/agent-skills/ak-payroll/SKILL.md",
+    "path": "agent-skills/ak-payroll/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-14T22:39:59.420Z",
+    "stars": 492,
+    "language": "HTML",
+    "pushed_at": "2026-11-14T21:48:31Z",
+    "license": "AGPL-3.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "bitwize-music-studio-claude-ai-music-skills-extend-take",
+  "name": "extend-take",
+  "description": "Carries a Suno take on from a point in its audio - more of a song that stopped early, or a new second half for a take that went wrong late - and joins the result into whole songs. Shows the cost and waits for a go-ahead. Use when the user says a take \"ends too soon\", \"cut off the last chorus\", \"extend it\", \"add the bridge to this take\" or \"keep the first half and redo the rest\".",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "bitwize-music-studio",
+  "install_path": ".claude/skills/extend-take/SKILL.md",
+  "source": {
+    "repo": "bitwize-music-studio/claude-ai-music-skills",
+    "url": "https://github.com/bitwize-music-studio/claude-ai-music-skills/blob/main/skills/extend-take/SKILL.md",
+    "path": "skills/extend-take/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-14T21:48:32.840Z",
+    "stars": 667,
+    "language": "Python",
+    "pushed_at": "2026-11-14T20:34:19Z",
+    "license": "CC0-1.0"
+  }
+}
