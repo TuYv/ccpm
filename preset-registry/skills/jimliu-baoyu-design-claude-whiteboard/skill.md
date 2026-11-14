@@ -1,7 +1,7 @@
 ---
 name: claude-whiteboard
 description: "Use this for a local Whiteboard: a shared space for laying out thinking in whatever form it needs (a diagram, a flow, a map of ideas, a plan, a comparison, a drawn explanation, a small working embed) that opens in the bundled board editor, where people move, draw, comment and send comments to the agent. Its content lives in the board's own store, written with this skill's script, never in files you edit by hand. Read it before you create a board or change one. Not for a slide deck, a document, a film or a static HTML page."
-license: "Mixed. The skill text, references and editor adapted from Anthropic's claude.ai Artifact types stay Anthropic's and are not MIT-licensed; the local tooling is MIT. Complete terms in NOTICE.md: https://github.com/JimLiu/baoyu-design/blob/main/NOTICE.md"
+license: "Mixed. The skill text, references and editor adapted from Anthropic's claude.ai Artifact types stay Anthropic's and are not MIT-licensed; the local tooling is MIT. Complete terms in NOTICE.md: https://github.com/JimLiu/open-artifacts/blob/main/NOTICE.md"
 ---
 
 # Whiteboard
