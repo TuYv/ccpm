@@ -1,7 +1,7 @@
 {
   "id": "first-fluke-oh-my-agent-oma-security",
   "name": "oma-security",
-  "description": "Scan application source, agent skills, and MCP components; run penetration tests against scoped web test deployments, validate findings, and configure scan gates. Use oma-qa for broad quality reviews and domain skills for remediation.",
+  "description": "Scan application source, agent skills, and MCP components, validate findings, and configure scan gates. Penetration tests of a scoped web test deployment run only on a user-supplied, reviewed runtime platform. Use oma-qa for broad quality reviews and domain skills for remediation.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/first-fluke/oh-my-agent/blob/main/.claude-plugin/directory/skills/oma-security/SKILL.md",
     "path": ".claude-plugin/directory/skills/oma-security/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-14T04:23:30.725Z",
-    "stars": 1460,
+    "discovered_at": "2026-11-14T12:17:44.825Z",
+    "stars": 1462,
     "language": "TypeScript",
-    "pushed_at": "2026-11-13T04:41:36Z",
+    "pushed_at": "2026-11-14T10:59:42Z",
     "license": "MIT"
   }
 }

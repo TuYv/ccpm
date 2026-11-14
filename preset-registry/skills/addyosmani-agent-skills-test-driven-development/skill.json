@@ -1,7 +1,7 @@
 {
   "id": "addyosmani-agent-skills-test-driven-development",
   "name": "test-driven-development",
-  "description": "Drives development with tests using the red-green-refactor loop. Use when implementing any logic, fixing any bug, or changing any behavior. Use when you need to prove that code works, when a bug report arrives, or when you're about to modify existing functionality. Use when asked to add tests to a function, fix a bug in it or change its behavior, even when the code is pasted inline and the request does not mention tests.",
+  "description": "Drives development with tests using the red-green-refactor loop. Use when implementing any logic, fixing any bug, or changing any behavior. Use when you need to prove that code works, when a bug report arrives, or when you're about to modify existing functionality. Use when asked to add tests to a function, fix a bug in it or change its behavior, even when the code is pasted inline, the request does not mention tests and the answer looks obvious from reading it. The skill writes the failing test",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/addyosmani/agent-skills/blob/main/skills/test-driven-development/SKILL.md",
     "path": "skills/test-driven-development/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-14T03:24:31.091Z",
-    "stars": 117187,
+    "discovered_at": "2026-11-14T11:18:47.475Z",
+    "stars": 117329,
     "language": "JavaScript",
-    "pushed_at": "2026-11-01T19:24:49Z",
+    "pushed_at": "2026-11-14T04:33:56Z",
     "license": "MIT"
   }
 }

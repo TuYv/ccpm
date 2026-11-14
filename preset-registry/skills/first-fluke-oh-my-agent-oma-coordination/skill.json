@@ -1,8 +1,8 @@
 {
   "id": "first-fluke-oh-my-agent-oma-coordination",
   "name": "oma-coordination",
-  "description": "Coordinate assigned specialist tasks and handoffs manually. Use when supervising a multi-agent project step by step.",
-  "category": "设计创意",
+  "description": "\"Shared coordination rules for multi-agent work: plan reuse, contract alignment, workspace ownership, and QA handoff. Loaded by the /work, /orchestrate, and /ultrawork workflows; also use for manual step-by-step coordination.\"",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/first-fluke/oh-my-agent/blob/main/.claude-plugin/directory/skills/oma-coordination/SKILL.md",
     "path": ".claude-plugin/directory/skills/oma-coordination/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-14T03:35:16.639Z",
-    "stars": 1460,
+    "discovered_at": "2026-11-14T11:29:32.561Z",
+    "stars": 1462,
     "language": "TypeScript",
-    "pushed_at": "2026-11-13T04:41:36Z",
+    "pushed_at": "2026-11-14T10:59:42Z",
     "license": "MIT"
   }
 }

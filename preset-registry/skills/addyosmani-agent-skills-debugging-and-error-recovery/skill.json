@@ -1,7 +1,7 @@
 {
   "id": "addyosmani-agent-skills-debugging-and-error-recovery",
   "name": "debugging-and-error-recovery",
-  "description": "Guides systematic root-cause debugging. Use when tests fail, builds break, something that worked yesterday broke, behavior doesn't match expectations, or you encounter any unexpected error. Use when you need to figure out what broke and why — a systematic approach to finding and fixing the root cause rather than guessing.",
+  "description": "Guides systematic root-cause debugging. Use when tests fail, builds break, something that worked yesterday broke, behavior doesn't match expectations, or you encounter any unexpected error. Use when you need to figure out what broke and why — a systematic approach to finding and fixing the root cause rather than guessing. Use when asked what broke, why a test started failing, or why code throws, even when the diff, the function, or the stack trace is pasted inline and the cause looks obvious fro",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/addyosmani/agent-skills/blob/main/skills/debugging-and-error-recovery/SKILL.md",
     "path": "skills/debugging-and-error-recovery/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-14T03:24:29.213Z",
-    "stars": 117187,
+    "discovered_at": "2026-11-14T11:18:45.437Z",
+    "stars": 117329,
     "language": "JavaScript",
-    "pushed_at": "2026-11-01T19:24:49Z",
+    "pushed_at": "2026-11-14T04:33:56Z",
     "license": "MIT"
-  },
-  "summary_zh": "一套系统化定位根因的调试方法，适用于测试失败、构建中断、功能异常及突发错误的排查修复。"
+  }
 }
