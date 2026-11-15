@@ -1,0 +1,25 @@
+{
+  "id": "avelikiy-great-cto-reference-lock",
+  "name": "reference-lock",
+  "description": "Turn design references into a written lock and a decision ledger before any UI is built, then check the build against the lock. Names where references come from (free sources first), what to keep from the one dominant reference, what to borrow, what to reject, and which choice traces to which source. Use when a design draws on references — a URL, screenshots, a named product, a reference MCP — so the result neither averages them into the safe centre nor drifts from them during implementation.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "avelikiy",
+  "install_path": ".claude/skills/reference-lock/SKILL.md",
+  "source": {
+    "repo": "avelikiy/great_cto",
+    "url": "https://github.com/avelikiy/great_cto/blob/main/skills/reference-lock/SKILL.md",
+    "path": "skills/reference-lock/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-15T02:11:05.861Z",
+    "stars": 115,
+    "language": "JavaScript",
+    "pushed_at": "2026-11-14T21:53:07Z",
+    "license": "MIT"
+  }
+}
