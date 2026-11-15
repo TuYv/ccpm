@@ -1,0 +1,25 @@
+{
+  "id": "agricidaniel-claude-seo-seo-shopify",
+  "name": "seo-shopify",
+  "description": "Uncapped, sitemap-complete crawl of a Shopify storefront using the merchant's Crawler Access signature from a project-local .shopify-env, feeding the standard seo-audit pipeline. Use when the user says 'Shopify audit', 'crawl the whole store', 'Crawler access', 'signature-agent', 'web-bot-auth', 'rate limited while crawling', or audits a host listed in .shopify-env.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "AgriciDaniel",
+  "install_path": ".claude/skills/seo-shopify/SKILL.md",
+  "source": {
+    "repo": "AgriciDaniel/claude-seo",
+    "url": "https://github.com/AgriciDaniel/claude-seo/blob/main/skills/seo-shopify/SKILL.md",
+    "path": "skills/seo-shopify/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-15T17:21:35.055Z",
+    "stars": 29601,
+    "language": "Python",
+    "pushed_at": "2026-11-15T10:10:39Z",
+    "license": "MIT"
+  }
+}

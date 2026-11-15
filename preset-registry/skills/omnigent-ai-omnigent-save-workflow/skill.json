@@ -1,0 +1,25 @@
+{
+  "id": "omnigent-ai-omnigent-save-workflow",
+  "name": "save-workflow",
+  "description": "Save this session's plan, or a workflow the user describes, as one of their reusable workflows, so they can run it again from Run a workflow or by asking for it by name.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "omnigent-ai",
+  "install_path": ".claude/skills/save-workflow/SKILL.md",
+  "source": {
+    "repo": "omnigent-ai/omnigent",
+    "url": "https://github.com/omnigent-ai/omnigent/blob/main/omnigent/resources/skills/save-workflow/SKILL.md",
+    "path": "omnigent/resources/skills/save-workflow/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-15T18:05:06.327Z",
+    "stars": 11386,
+    "language": "Python",
+    "pushed_at": "2026-11-15T17:27:23Z",
+    "license": "Apache-2.0"
+  }
+}
