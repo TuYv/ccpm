@@ -289,27 +289,36 @@ Before finalizing, let's capture what we learned from this project.
 If user provides lessons (not "skip"):
 
 ```bash
-# Generate timestamp
-TIMESTAMP=$(date '+%Y-%m-%d')
+# Open both path components without following links. Keep the directory open
+# through the append so a replaced .octo path cannot redirect the write.
+python3 -I - "$USER_WHAT_WENT_WELL" "$USER_WHAT_COULD_IMPROVE" "$USER_KEY_LEARNINGS" <<'PY_LESSONS'
+from datetime import date
+import os
+import stat
+import sys
 
-# Ensure LESSONS.md exists
-touch .octo/LESSONS.md
-
-# Append lessons
-cat >> .octo/LESSONS.md << EOF
-
-## ${TIMESTAMP} - Project Delivery
-
-### What Went Well
-- ${USER_WHAT_WENT_WELL}
-
-### What Could Improve
-- ${USER_WHAT_COULD_IMPROVE}
-
-### Key Learnings
-- ${USER_KEY_LEARNINGS}
-
-EOF
+try:
+    directory = os.open('.octo', os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW)
+    try:
+        descriptor = os.open('LESSONS.md', os.O_WRONLY | os.O_APPEND | os.O_CREAT |
+                             os.O_NOFOLLOW | os.O_NONBLOCK, 0o600, dir_fd=directory)
+        with os.fdopen(descriptor, 'w') as output:
+            status = os.fstat(output.fileno())
+            if not stat.S_ISREG(status.st_mode) or status.st_nlink != 1:
+                sys.exit('Cannot append lessons: LESSONS.md must be a regular file with one link.')
+            output.write(f"\n## {date.today().isoformat()} - Project Delivery\n"
+                         f"\n### What Went Well\n- {sys.argv[1]}\n"
+                         f"\n### What Could Improve\n- {sys.argv[2]}\n"
+                         f"\n### Key Learnings\n- {sys.argv[3]}\n\n")
+    finally:
+        os.close(directory)
+except OSError as error:
+    sys.exit(f'Cannot append delivery lessons safely: {error}')
+PY_LESSONS
+if [[ $? -ne 0 ]]; then
+  echo "Lessons were not captured; stop delivery and inspect the state paths." >&2
+  exit 1
+fi
 ```
 
 **Count total lessons:**
@@ -322,51 +331,61 @@ echo "Total lessons captured: $LESSON_COUNT"
 
 ### Phase 4: Archive Project State
 
-#### Step 1: Create Archive Directory
+#### Step 1: Create and verify a private archive
+
+Run this entire block in one shell. Reject linked state paths and nonregular
+files before reading them. A failed copy stops delivery. Retain the exact
+printed `ARCHIVE_DIR` and `ARCHIVE_TIMESTAMP` in the host context and restate
+them in every later shell that uses them. Never infer another run's archive.
 
 ```bash
-# Generate timestamp for archive
-ARCHIVE_TIMESTAMP=$(date +%Y%m%d-%H%M%S)
-ARCHIVE_DIR=".octo/archive/${ARCHIVE_TIMESTAMP}"
+ARCHIVE_DIR=$(python3 -I - <<'PY_ARCHIVE'
+from contextlib import ExitStack
+from datetime import datetime, timezone
+import os, secrets, shutil, stat, sys
 
-# Create archive directory
-mkdir -p "$ARCHIVE_DIR"
+try:
+    with ExitStack() as stack:
+        flags = os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW
+        state = os.open('.octo', flags)
+        stack.callback(os.close, state)
+        try:
+            os.mkdir('archive', 0o700, dir_fd=state)
+        except FileExistsError:
+            pass
+        archives = os.open('archive', flags, dir_fd=state)
+        stack.callback(os.close, archives)
+        name = datetime.now(timezone.utc).strftime('%Y%m%d-%H%M%S-') + secrets.token_hex(8)
+        os.mkdir(name, 0o700, dir_fd=archives)
+        destination = os.open(name, flags, dir_fd=archives)
+        stack.callback(os.close, destination)
+        for filename in ('STATE.md', 'PROJECT.md', 'ROADMAP.md', 'ISSUES.md'):
+            try:
+                source = os.open(filename, os.O_RDONLY | os.O_NOFOLLOW | os.O_NONBLOCK, dir_fd=state)
+            except FileNotFoundError:
+                if filename == 'STATE.md':
+                    raise
+                continue
+            with os.fdopen(source, 'rb') as incoming:
+                metadata = os.fstat(incoming.fileno())
+                if not stat.S_ISREG(metadata.st_mode) or metadata.st_nlink != 1:
+                    raise OSError('Archive input must be a regular, unlinked state file: ' + filename)
+                target = os.open(filename, os.O_WRONLY | os.O_CREAT | os.O_EXCL | os.O_NOFOLLOW,
+                                 0o600, dir_fd=destination)
+                with os.fdopen(target, 'wb') as outgoing:
+                    shutil.copyfileobj(incoming, outgoing)
+        print('.octo/archive/' + name)
+except OSError as error:
+    sys.exit(f'Archive incomplete; stop delivery and inspect the private archive: {error}')
+PY_ARCHIVE
+) || exit 1
+ARCHIVE_TIMESTAMP=${ARCHIVE_DIR##*/}
+printf 'ARCHIVE_DIR=%s\nARCHIVE_TIMESTAMP=%s\n' "$ARCHIVE_DIR" "$ARCHIVE_TIMESTAMP"
 ```
 
-#### Step 2: Copy State Files to Archive
-
-```bash
-# Archive STATE.md if exists
-if [[ -f ".octo/STATE.md" ]]; then
-    cp .octo/STATE.md "$ARCHIVE_DIR/"
-fi
-
-# Archive PROJECT.md if exists
-if [[ -f ".octo/PROJECT.md" ]]; then
-    cp .octo/PROJECT.md "$ARCHIVE_DIR/"
-fi
-
-# Archive ROADMAP.md if exists
-if [[ -f ".octo/ROADMAP.md" ]]; then
-    cp .octo/ROADMAP.md "$ARCHIVE_DIR/"
-fi
-
-# Archive ISSUES.md if exists
-if [[ -f ".octo/ISSUES.md" ]]; then
-    cp .octo/ISSUES.md "$ARCHIVE_DIR/"
-fi
-
-echo "Archived to: $ARCHIVE_DIR"
-```
-
-**IMPORTANT: NEVER archive LESSONS.md** - lessons are preserved across projects.
-
-#### Step 3: Verify Archive
-
-```bash
-# List archived files
-ls -la "$ARCHIVE_DIR"
-```
+Only a successful exit verifies the archive. Failed attempts may leave a private
+partial directory for inspection; never use it as a completed archive.
+`LESSONS.md` stays in place and is never archived.
 
 ---
 

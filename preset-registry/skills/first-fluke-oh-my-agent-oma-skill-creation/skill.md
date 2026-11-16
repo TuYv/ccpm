@@ -1,6 +1,7 @@
 ---
 name: oma-skill-creation
-description: "Create or revise OMA skills and their references. Use for skill routing, execution contracts, conditional loading, and authoring validation."
+description: Create or revise OMA skills and their references. Use for skill
+  routing, execution contracts, conditional loading, and authoring validation.
 ---
 
 # OMA Skill Authoring

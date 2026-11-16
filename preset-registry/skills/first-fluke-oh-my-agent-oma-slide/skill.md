@@ -1,6 +1,8 @@
 ---
 name: oma-slide
-description: "Create, import, revise, or export presentation decks through the OMA slide CLI or the ppt-master route. Use for HTML slides, editable PPTX, and PDF, PNG, or PPTX deck delivery."
+description: Create, import, revise, or export presentation decks through the
+  OMA slide CLI or the ppt-master route. Use for HTML slides, editable PPTX, and
+  PDF, PNG, or PPTX deck delivery.
 ---
 
 # Slide Agent — Animation-Rich HTML Deck Generator

@@ -1,7 +1,7 @@
 {
   "id": "first-fluke-oh-my-agent-oma-orchestration",
   "name": "oma-orchestration",
-  "description": "Dispatch and supervise parallel specialist agents with durable task state. Use when automated multi-agent execution is requested.",
+  "description": "Dispatch and supervise parallel specialist agents with durable task state. Use for automated multi-agent execution, to coordinate agents step by step, or to hand a task to a named vendor or model.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/first-fluke/oh-my-agent/blob/main/.claude-plugin/directory/skills/oma-orchestration/SKILL.md",
     "path": ".claude-plugin/directory/skills/oma-orchestration/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-16T03:14:12.082Z",
+    "discovered_at": "2026-11-16T10:51:30.195Z",
     "stars": 1466,
     "language": "TypeScript",
-    "pushed_at": "2026-11-15T22:41:31Z",
+    "pushed_at": "2026-11-16T06:58:19Z",
     "license": "MIT"
   }
 }

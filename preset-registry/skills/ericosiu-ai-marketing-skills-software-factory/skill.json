@@ -1,0 +1,25 @@
+{
+  "id": "ericosiu-ai-marketing-skills-software-factory",
+  "name": "software-factory",
+  "description": ">- Use when a change is larger than a quick question and should go through a coding agent with an acceptance test, two review passes, a pinned-SHA merge, a live port-back, and a timed rollback watch. Use to set up or run that loop. Do not use for a question that needs no code change.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ericosiu",
+  "install_path": ".claude/skills/software-factory/SKILL.md",
+  "source": {
+    "repo": "ericosiu/ai-marketing-skills",
+    "url": "https://github.com/ericosiu/ai-marketing-skills/blob/main/software-factory/SKILL.md",
+    "path": "software-factory/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-16T10:39:14.657Z",
+    "stars": 3832,
+    "language": "Python",
+    "pushed_at": "2026-11-16T06:55:39Z",
+    "license": "MIT"
+  }
+}
