@@ -1,7 +1,7 @@
 {
   "id": "affaan-m-ecc-security-review",
   "name": "security-review",
-  "description": "Use this skill when adding authentication, handling user input, working with secrets, creating API endpoints, or implementing payment/sensitive features. Provides comprehensive security checklist and patterns.",
+  "description": "Security review checklist and patterns for adding authentication, handling user input, managing secrets, creating API endpoints, or implementing payment and sensitive features.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/affaan-m/ECC/blob/main/.agents/skills/security-review/SKILL.md",
     "path": ".agents/skills/security-review/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-16T10:36:10.478Z",
-    "stars": 304090,
+    "discovered_at": "2026-11-16T21:26:38.703Z",
+    "stars": 304537,
     "language": "JavaScript",
-    "pushed_at": "2026-11-16T04:55:46Z",
+    "pushed_at": "2026-11-16T21:16:59Z",
     "license": "MIT"
-  },
-  "summary_zh": "一套面向开发者的安全审查指南，适合在实现认证、接口、支付及敏感数据处理时排查风险并规范开发。"
+  }
 }

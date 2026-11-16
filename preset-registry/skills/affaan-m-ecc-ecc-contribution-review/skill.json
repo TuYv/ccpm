@@ -1,0 +1,25 @@
+{
+  "id": "affaan-m-ecc-ecc-contribution-review",
+  "name": "ecc-contribution-review",
+  "description": "Prepare an ECC skill contribution for review by organizing repository, install-surface, cross-harness, validation, security, and commit observations into a local proposal. Use when preparing a skill contribution for review.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "affaan-m",
+  "install_path": ".claude/skills/ecc-contribution-review/SKILL.md",
+  "source": {
+    "repo": "affaan-m/ECC",
+    "url": "https://github.com/affaan-m/ECC/blob/main/.cursor/skills/ecc-contribution-review/SKILL.md",
+    "path": ".cursor/skills/ecc-contribution-review/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-16T21:26:41.255Z",
+    "stars": 304537,
+    "language": "JavaScript",
+    "pushed_at": "2026-11-16T21:16:59Z",
+    "license": "MIT"
+  }
+}
