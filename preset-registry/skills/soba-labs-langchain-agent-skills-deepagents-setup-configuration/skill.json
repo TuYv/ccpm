@@ -1,0 +1,25 @@
+{
+  "id": "soba-labs-langchain-agent-skills-deepagents-setup-configuration",
+  "name": "deepagents-setup-configuration",
+  "description": "Initialize, validate, and troubleshoot Deep Agents projects in Python or JavaScript using the `deepagents` package. Use when users need to create agents with built-in planning/filesystem/subagents, configure middleware/backends/checkpointing/HITL, migrate from `create_react_agent` or `create_agent`, scaffold projects with repo scripts, validate agent config files, and confirm compatibility with current LangChain/LangGraph/LangSmith docs.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "soba-labs",
+  "install_path": ".claude/skills/deepagents-setup-configuration/SKILL.md",
+  "source": {
+    "repo": "soba-labs/langchain-agent-skills",
+    "url": "https://github.com/soba-labs/langchain-agent-skills/blob/main/skills/deepagents-setup-configuration/SKILL.md",
+    "path": "skills/deepagents-setup-configuration/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-15T22:58:40.116Z",
+    "stars": 106,
+    "language": "Python",
+    "pushed_at": "2026-11-11T10:15:05Z",
+    "license": "MIT"
+  }
+}

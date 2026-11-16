@@ -1,0 +1,25 @@
+{
+  "id": "everyinfra-everyinfra-agent-plugins-everyinfra-taobao",
+  "name": "everyinfra-taobao",
+  "description": "用 EveryInfra 查询淘宝公开数据：商品搜索、商品详情、评价。用户提到淘宝、天猫、商品、价格、评价等需求时使用。",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "everyinfra",
+  "install_path": ".claude/skills/everyinfra-taobao/SKILL.md",
+  "source": {
+    "repo": "everyinfra/everyinfra-agent-plugins",
+    "url": "https://github.com/everyinfra/everyinfra-agent-plugins/blob/main/workbuddy/connectors/everyinfra/skills/everyinfra-taobao/SKILL.md",
+    "path": "workbuddy/connectors/everyinfra/skills/everyinfra-taobao/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-15T23:45:46.082Z",
+    "stars": 526,
+    "language": "Python",
+    "pushed_at": "2026-11-15T11:08:03Z",
+    "license": "Apache-2.0"
+  }
+}

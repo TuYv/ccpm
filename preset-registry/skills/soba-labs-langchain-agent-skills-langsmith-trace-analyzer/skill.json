@@ -1,0 +1,25 @@
+{
+  "id": "soba-labs-langchain-agent-skills-langsmith-trace-analyzer",
+  "name": "langsmith-trace-analyzer",
+  "description": "Fetch, organize, and analyze LangSmith traces for debugging and evaluation. Use when you need to: query traces/runs by project, metadata, status, or time window; download traces to JSON; organize outcomes into passed/failed/error buckets; analyze token/message/tool-call patterns; compare passed vs failed behavior; or investigate benchmark and production failures.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "soba-labs",
+  "install_path": ".claude/skills/langsmith-trace-analyzer/SKILL.md",
+  "source": {
+    "repo": "soba-labs/langchain-agent-skills",
+    "url": "https://github.com/soba-labs/langchain-agent-skills/blob/main/skills/langsmith-trace-analyzer/SKILL.md",
+    "path": "skills/langsmith-trace-analyzer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-15T22:58:41.408Z",
+    "stars": 106,
+    "language": "Python",
+    "pushed_at": "2026-11-11T10:15:05Z",
+    "license": "MIT"
+  }
+}

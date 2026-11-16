@@ -1,0 +1,25 @@
+{
+  "id": "everyinfra-everyinfra-agent-plugins-everyinfra-search",
+  "name": "everyinfra-search",
+  "description": "用 EveryInfra 做最新的网页、新闻、学术、论坛、商品和地点检索，读取指定网页正文，列出或爬取站点页面。用户要查最新信息、找出处、读某个链接、了解某个网站的内容，或需要多种检索方式时使用。",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "everyinfra",
+  "install_path": ".claude/skills/everyinfra-search/SKILL.md",
+  "source": {
+    "repo": "everyinfra/everyinfra-agent-plugins",
+    "url": "https://github.com/everyinfra/everyinfra-agent-plugins/blob/main/workbuddy/connectors/everyinfra/skills/everyinfra-search/SKILL.md",
+    "path": "workbuddy/connectors/everyinfra/skills/everyinfra-search/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-15T23:45:45.944Z",
+    "stars": 526,
+    "language": "Python",
+    "pushed_at": "2026-11-15T11:08:03Z",
+    "license": "Apache-2.0"
+  }
+}

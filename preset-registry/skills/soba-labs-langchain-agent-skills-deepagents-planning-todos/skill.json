@@ -1,0 +1,25 @@
+{
+  "id": "soba-labs-langchain-agent-skills-deepagents-planning-todos",
+  "name": "deepagents-planning-todos",
+  "description": "Use the write_todos tool effectively for task planning and decomposition in Deep Agents. Use when users want to (1) implement task planning with write_todos, (2) break down complex tasks into subtasks, (3) track agent progress through todos, (4) debug why todos aren't completing, (5) design todo structures for different task types (research, coding, analysis), (6) understand todo status lifecycle and best practices, or (7) visualize todo progression from LangSmith traces.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "soba-labs",
+  "install_path": ".claude/skills/deepagents-planning-todos/SKILL.md",
+  "source": {
+    "repo": "soba-labs/langchain-agent-skills",
+    "url": "https://github.com/soba-labs/langchain-agent-skills/blob/main/skills/deepagents-planning-todos/SKILL.md",
+    "path": "skills/deepagents-planning-todos/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-15T22:58:39.972Z",
+    "stars": 106,
+    "language": "Python",
+    "pushed_at": "2026-11-11T10:15:05Z",
+    "license": "MIT"
+  }
+}

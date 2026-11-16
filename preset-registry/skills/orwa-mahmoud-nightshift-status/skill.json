@@ -1,0 +1,25 @@
+{
+  "id": "orwa-mahmoud-nightshift-status",
+  "name": "status",
+  "description": "Read-only shift status covering items, parked decisions, snags, the deadline and STOP or stall state; starts no work.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "orwa-mahmoud",
+  "install_path": ".claude/skills/status/SKILL.md",
+  "source": {
+    "repo": "orwa-mahmoud/nightshift",
+    "url": "https://github.com/orwa-mahmoud/nightshift/blob/main/plugins/nightshift/skills/status/SKILL.md",
+    "path": "plugins/nightshift/skills/status/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-15T22:58:44.284Z",
+    "stars": 453,
+    "language": "Shell",
+    "pushed_at": "2026-11-14T01:10:57Z",
+    "license": "MIT"
+  }
+}

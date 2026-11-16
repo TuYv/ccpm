@@ -1,0 +1,25 @@
+{
+  "id": "everyinfra-everyinfra-agent-plugins-everyai",
+  "name": "everyai",
+  "description": "Use EveryInfra's OpenAI-compatible AI API through the everyinfra_chat MCP tool. Use for cleaning or labeling collected data, summarization, translation, classification, extraction, rewriting, and multi-turn text generation when the user asks to run the work through EveryInfra.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "everyinfra",
+  "install_path": ".claude/skills/everyai/SKILL.md",
+  "source": {
+    "repo": "everyinfra/everyinfra-agent-plugins",
+    "url": "https://github.com/everyinfra/everyinfra-agent-plugins/blob/main/plugins/everyinfra/skills/everyai/SKILL.md",
+    "path": "plugins/everyinfra/skills/everyai/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-15T23:45:41.814Z",
+    "stars": 526,
+    "language": "Python",
+    "pushed_at": "2026-11-15T11:08:03Z",
+    "license": "Apache-2.0"
+  }
+}

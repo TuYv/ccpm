@@ -1,0 +1,25 @@
+{
+  "id": "orwa-mahmoud-nightshift-quality",
+  "name": "quality",
+  "description": "Compose a shift that works the project's quality debt across tests, code, accessibility, contracts, docs, dependencies and security.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "orwa-mahmoud",
+  "install_path": ".claude/skills/quality/SKILL.md",
+  "source": {
+    "repo": "orwa-mahmoud/nightshift",
+    "url": "https://github.com/orwa-mahmoud/nightshift/blob/main/plugins/nightshift/skills/quality/SKILL.md",
+    "path": "plugins/nightshift/skills/quality/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-15T22:58:43.536Z",
+    "stars": 453,
+    "language": "Shell",
+    "pushed_at": "2026-11-14T01:10:57Z",
+    "license": "MIT"
+  }
+}

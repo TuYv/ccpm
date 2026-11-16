@@ -1,0 +1,25 @@
+{
+  "id": "orwa-mahmoud-nightshift-archive",
+  "name": "archive",
+  "description": "File a finished shift into its own archive folder, laid out like the live site, so the live files keep only open work.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "orwa-mahmoud",
+  "install_path": ".claude/skills/archive/SKILL.md",
+  "source": {
+    "repo": "orwa-mahmoud/nightshift",
+    "url": "https://github.com/orwa-mahmoud/nightshift/blob/main/plugins/nightshift/skills/archive/SKILL.md",
+    "path": "plugins/nightshift/skills/archive/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-15T22:58:42.116Z",
+    "stars": 453,
+    "language": "Shell",
+    "pushed_at": "2026-11-14T01:10:57Z",
+    "license": "MIT"
+  }
+}

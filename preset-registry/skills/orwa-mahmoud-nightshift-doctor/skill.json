@@ -1,0 +1,25 @@
+{
+  "id": "orwa-mahmoud-nightshift-doctor",
+  "name": "doctor",
+  "description": "Read-only diagnosis of the workspace, rules, markers, lease, watchman and deadline, with classified next actions; never repairs anything.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "orwa-mahmoud",
+  "install_path": ".claude/skills/doctor/SKILL.md",
+  "source": {
+    "repo": "orwa-mahmoud/nightshift",
+    "url": "https://github.com/orwa-mahmoud/nightshift/blob/main/plugins/nightshift/skills/doctor/SKILL.md",
+    "path": "plugins/nightshift/skills/doctor/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-15T22:58:42.456Z",
+    "stars": 453,
+    "language": "Shell",
+    "pushed_at": "2026-11-14T01:10:57Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "orwa-mahmoud-nightshift-purge",
+  "name": "purge",
+  "description": "Permanently delete this project's Nightshift state, including punch lists, rules, receipts and archives; does not uninstall the plugin.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "orwa-mahmoud",
+  "install_path": ".claude/skills/purge/SKILL.md",
+  "source": {
+    "repo": "orwa-mahmoud/nightshift",
+    "url": "https://github.com/orwa-mahmoud/nightshift/blob/main/plugins/nightshift/skills/purge/SKILL.md",
+    "path": "plugins/nightshift/skills/purge/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-15T22:58:43.375Z",
+    "stars": 453,
+    "language": "Shell",
+    "pushed_at": "2026-11-14T01:10:57Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "orwa-mahmoud-nightshift-install-nightshift",
+  "name": "install-nightshift",
+  "description": "Install the full Nightshift plugin, with its hooks and runtime, into Claude Code, Codex or Cursor.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "orwa-mahmoud",
+  "install_path": ".claude/skills/install-nightshift/SKILL.md",
+  "source": {
+    "repo": "orwa-mahmoud/nightshift",
+    "url": "https://github.com/orwa-mahmoud/nightshift/blob/main/skills/install-nightshift/SKILL.md",
+    "path": "skills/install-nightshift/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-15T22:58:44.562Z",
+    "stars": 453,
+    "language": "Shell",
+    "pushed_at": "2026-11-14T01:10:57Z",
+    "license": "MIT"
+  }
+}

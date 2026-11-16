@@ -1,0 +1,25 @@
+{
+  "id": "everyinfra-everyinfra-agent-plugins-everyinfra-alibaba1688",
+  "name": "everyinfra-alibaba1688",
+  "description": "用 EveryInfra 查询1688公开数据：货源搜索、商品详情、平台内以图搜同款。用户提到1688、阿里巴巴批发、货源、供应商、拿货、图搜同款等需求时使用。",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "everyinfra",
+  "install_path": ".claude/skills/everyinfra-alibaba1688/SKILL.md",
+  "source": {
+    "repo": "everyinfra/everyinfra-agent-plugins",
+    "url": "https://github.com/everyinfra/everyinfra-agent-plugins/blob/main/workbuddy/connectors/everyinfra/skills/everyinfra-alibaba1688/SKILL.md",
+    "path": "workbuddy/connectors/everyinfra/skills/everyinfra-alibaba1688/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-15T23:45:44.401Z",
+    "stars": 526,
+    "language": "Python",
+    "pushed_at": "2026-11-15T11:08:03Z",
+    "license": "Apache-2.0"
+  }
+}

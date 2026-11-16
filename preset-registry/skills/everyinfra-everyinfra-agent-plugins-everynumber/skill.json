@@ -1,0 +1,25 @@
+{
+  "id": "everyinfra-everyinfra-agent-plugins-everynumber",
+  "name": "everynumber",
+  "description": "Use EveryNumber activation and rental phone-number REST APIs with the shared EveryInfra key. Use when the user needs an authorized verification number, wants to poll a received code, cancel an unused activation, inspect order history, or rent a number for a supported term.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "everyinfra",
+  "install_path": ".claude/skills/everynumber/SKILL.md",
+  "source": {
+    "repo": "everyinfra/everyinfra-agent-plugins",
+    "url": "https://github.com/everyinfra/everyinfra-agent-plugins/blob/main/plugins/everyinfra/skills/everynumber/SKILL.md",
+    "path": "plugins/everyinfra/skills/everynumber/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-15T23:45:42.853Z",
+    "stars": 526,
+    "language": "Python",
+    "pushed_at": "2026-11-15T11:08:03Z",
+    "license": "Apache-2.0"
+  }
+}

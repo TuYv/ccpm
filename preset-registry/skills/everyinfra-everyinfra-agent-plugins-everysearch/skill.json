@@ -1,0 +1,25 @@
+{
+  "id": "everyinfra-everyinfra-agent-plugins-everysearch",
+  "name": "everysearch",
+  "description": "Use EverySearch for current web, semantic, academic, forum, page-reading, crawling, and cross-check retrieval. Use when a task needs up-to-date sources, multiple retrieval mechanisms, cited factual verification, or content from a specific public URL or site.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "everyinfra",
+  "install_path": ".claude/skills/everysearch/SKILL.md",
+  "source": {
+    "repo": "everyinfra/everyinfra-agent-plugins",
+    "url": "https://github.com/everyinfra/everyinfra-agent-plugins/blob/main/plugins/everyinfra/skills/everysearch/SKILL.md",
+    "path": "plugins/everyinfra/skills/everysearch/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-15T23:45:43.131Z",
+    "stars": 526,
+    "language": "Python",
+    "pushed_at": "2026-11-15T11:08:03Z",
+    "license": "Apache-2.0"
+  }
+}

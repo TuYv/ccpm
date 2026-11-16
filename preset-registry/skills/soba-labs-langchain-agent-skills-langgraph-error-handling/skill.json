@@ -1,0 +1,25 @@
+{
+  "id": "soba-labs-langchain-agent-skills-langgraph-error-handling",
+  "name": "langgraph-error-handling",
+  "description": "Implement LangGraph error handling with current v1 patterns. Use when users need to classify failures, add RetryPolicy for transient issues, build LLM recovery loops with Command routing, add human-in-the-loop with interrupt()/resume, handle ToolNode errors, or choose a safe strategy between retry, recovery, and escalation.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "soba-labs",
+  "install_path": ".claude/skills/langgraph-error-handling/SKILL.md",
+  "source": {
+    "repo": "soba-labs/langchain-agent-skills",
+    "url": "https://github.com/soba-labs/langchain-agent-skills/blob/main/skills/langgraph-error-handling/SKILL.md",
+    "path": "skills/langgraph-error-handling/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-15T22:58:40.532Z",
+    "stars": 106,
+    "language": "Python",
+    "pushed_at": "2026-11-11T10:15:05Z",
+    "license": "MIT"
+  }
+}

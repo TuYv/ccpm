@@ -1,0 +1,247 @@
+---
+name: plan
+description: Open the plan room to explore the code and design the work with the owner, building nothing until the owner leaves.
+license: MIT
+metadata:
+  internal: true
+---
+
+Plan with the owner in the plan room. Here the conversation explores, weighs options and draws the
+plan; nothing gets implemented until the owner leaves the room on purpose. While the room binds this
+conversation, each owner message carries a reminder that it is planning, the edit tools write only
+the plan's own files, and the commands and tools on the owner's `planRoom` lists in `rules.json` are
+blocked (by default `git commit`, `git push` and `git tag`). Everything else runs, so research is
+free: read, search, the web, `gh`, the browser, helper agents and questions.
+
+Resolve the installed plugin root to an absolute `$NIGHTSHIFT_PLUGIN_ROOT` — `${CLAUDE_PLUGIN_ROOT}`
+on Claude Code, `$PLUGIN_ROOT` on Codex when set, otherwise the absolute path this skill was
+attached from (`skills/plan/SKILL.md`). Run every command below through
+`"$NIGHTSHIFT_PLUGIN_ROOT/runtime/ns"` — native Windows: `& "$NIGHTSHIFT_PLUGIN_ROOT\runtime\windows\ns.ps1"`
+in the PowerShell tool, same verbs — which resolves the host and the workspace; `ns help` lists the
+verbs, and `ns bind` prints the six resolved facts (`TASK_ROOT`, `NIGHTSHIFT_WORKSPACE`, `NS`,
+`NIGHTSHIFT_PLUGIN_ROOT`, `HOST`, `SOURCE`); `$NS` below is that `NS`. Never a bare relative path: the working
+directory persists between calls. Each `$NS/...` path below is where the current layout keeps that file;
+`ns path <key>` prints where this workspace keeps it, and `ns path --list` names every key.
+
+## 1. Enter the room
+
+Pass the host you are running on (`claude`, `codex` or `cursor`):
+
+```bash
+"$NIGHTSHIFT_PLUGIN_ROOT/runtime/ns" plan-enter --host claude
+```
+
+Native Windows: `& "$NIGHTSHIFT_PLUGIN_ROOT\runtime\windows\ns.ps1" plan-enter --host claude`.
+
+The room opens unbound. **The very next tool call is the probe that binds it to this
+conversation** — nothing in between, not even a read:
+
+```bash
+: nightshift-plan-probe
+```
+
+```powershell
+$null = 'nightshift-plan-probe'
+```
+
+- The probe runs cleanly: the room is bound to this conversation. Tell the owner in one line that the
+  plan room is open, that nothing is implemented here, and how they leave it (section 7).
+- The probe is denied because the room is bound to another conversation: tell the owner, and stop.
+  They plan in that conversation, or leave the room first.
+- The probe is denied because this conversation is working the shift: no room was opened. Tell the
+  owner; they plan in another conversation, or stop the shift first.
+- `plan-enter` reports no `.nightshift/`: the project has no Nightshift workspace. Tell the owner to run
+  Setup, and stop.
+
+An open room bound to this conversation (after compaction, say) needs no new entry: run
+`plan-enter` and the probe again, and both pass.
+
+**Resume before anything else.** `plan-enter` also prints `plan record <path>` and one
+`open plan: <entry>` line for each plan the record still holds open (`open plan: none` when there is
+none). With an open plan, read the record first and pick up exactly where its `Where we are` line
+left off: say in a sentence or two what was decided and what comes next, so the owner never repeats
+themselves. With more than one open plan, ask which one this conversation continues.
+
+## 2. Review what the last shift left
+
+`plan-enter` ends with `review` lines: what waits for the owner's word. `review none` means there is
+nothing, and the room is plain planning. Otherwise, before new planning, offer to walk the owner
+through them, one at a time, in this order:
+
+- `review morning` and `review receipts` — the morning page (under `ns path receipts`) and the
+  receipts index (`ns path receipts-index`). Read them first and give the owner the outcome in a few
+  lines: what shipped, what did not, what needs a decision.
+- `review parked` — each open decision in the parking lot (`ns path parking-lot`). Show the default
+  the shift chose and why, and ask whether it stands. Record the answer by appending
+  ` · answered: <the owner's decision>` to that entry.
+- `review snag` — each snag with no disposition in the snag log (`ns path snag-log`). Ask what to do:
+  the owner's decision becomes its disposition (` · rejected-because: <why>` or
+  ` · accepted-tradeoff: <why>`), and a snag to fix becomes an item drafted for the next shift (section
+  6), its disposition written once the fix lands.
+- `review open` and `review stopped` — the items still open, and those closed at their hard budget,
+  in the punch list (`ns path punch-list`). Ask for each: keep it for the next shift as it is, rework
+  it (draft the new version, section 6), or drop it. The punch list is the owner's to edit: a box to
+  reopen, reword or remove is theirs to change, and the room cannot write it.
+
+Nothing is written without the owner's answer to that entry. The parking lot, the snag log, the
+drafting table, the plan files and the plan record are the only files the room writes; an archived shift reads the
+same way, from what Archive left live.
+
+## 3. Choose the plan, and how deep — once
+
+Each plan is its own file: a complete punch list with its own contract, gates and items, waiting
+its turn. `plan-enter` prints one `plan file: <key> · <name> · <n> open` line per plan, or
+`plan file: none`. Before the discussion starts, ask one question that covers: continue one of
+those plans or start a new one, and for a new one, its name; what the owner wants to plan; how they
+want to brainstorm it (an edge-case pass, a pre-mortem, an ordering and risk check, research); and
+whether to suggest evidence lines for each item, and if so whether a missing evidence file is
+hard-checked (`block`), only reported (`report`) or not checked (`off`). The default is none of them. For a new plan, create its file:
+
+```bash
+"$NIGHTSHIFT_PLUGIN_ROOT/runtime/ns" plan-new --name "<the owner's name for it>"
+```
+
+It copies the punch list's contract and gates into `$NS/staging/plans/<key>.md` under
+`# Punch List — <name>`, and keeps a plan that already has that key. Everything this plan writes
+goes into that one file, so plans never mix. When `plan-new` says the workspace keeps plans in its
+drafting table, write the plan there under a `## Plan: <title>` heading instead.
+
+Take one answer and do not follow up. Record it in the plan record as
+`Decided: planning depth — none` or one `Decided:` line per option picked. Skip the question when
+resuming an open plan whose record already holds that line.
+
+With none, never raise these options again for that plan; the owner may still ask for any of them
+at any time. With some picked, read
+`$NIGHTSHIFT_PLUGIN_ROOT/skills/nightshift/references/plan/menu.md` and apply only those, as the work
+takes shape: evidence and edge-case lines on each item as it is drafted, research when an open
+question needs it, the ordering and risk check once there are several items, and the pre-mortem when
+the item list is nearly complete. The owner keeps, edits or drops every line they propose. Evidence
+shows the work. check off leaves the tick alone, report names a missing file, and block keeps the
+stop open.
+
+## 4. Think with the owner
+
+This is a conversation, not a procedure. Follow the owner's direction and pace; do not impose phases,
+templates or a checklist while discussing.
+
+- **Read before you ask or propose.** Open the files, tests and history the question touches
+  (`git log`, `git show`, `git blame` and every read-only tool are free here). Name paths and lines.
+  A question the code already answers is not one to ask the owner.
+- **Lay out real options.** For a decision that matters, give two or three options with what each
+  costs and buys, then say which one you would pick and why. A survey with no recommendation hands
+  the work back.
+- **Draw it.** An ASCII diagram of a flow, a state machine or a component boundary often settles what
+  a paragraph cannot. Use one when it helps, not by default.
+- **Ask freely.** Questions are the point of this room. Ask one at a time when the answer changes what
+  comes next.
+- **Keep what was decided visible.** When the discussion moves on, restate the decision in one line
+  so it is not reopened by accident.
+
+When the owner says "just do it" or "implement it": the room still holds. Say plainly that nothing
+can be built in this conversation while the plan room is open, and give the exits (section 6). Build
+nothing through any tool, the shell included: no code written into the staging folder to copy out
+later, no scripts that change the project, and no asking another conversation to make the change.
+
+## 5. Keep the plan record current
+
+The plan record (`ns path plan-record`) is the room's notebook. Write it as the discussion moves —
+it needs no permission, and it is what lets compaction, a closed tab or a new day lose nothing. Keep
+one entry per plan, below the record's rule, in the shape its header shows:
+
+```text
+- **<topic>** · open since <YYYY-MM-DD HH:MM (UTC±HH:MM)>
+  - Where we are: <the exact point the conversation reached, and the next question>
+  - Decided: <decision> — <why>
+  - Rejected: <option> — <the reason>
+  - Open: <a question still waiting for an answer>
+```
+
+- Start an entry when a new plan starts, in the device's local time with its offset.
+- Add a `Decided:`, `Rejected:` or `Open:` line the moment one is settled or raised, and rewrite
+  `Where we are` at every natural pause. Answered `Open:` lines become `Decided:` lines.
+- **A rejected option stays rejected.** Never propose it again unless there is new evidence, and then
+  name the evidence and the earlier reason together.
+- When the owner sets a plan aside, append ` · dropped: <why>` to the entry's first line.
+
+## 6. Draft as you go — each write on the owner's yes
+
+Planning is continuous. Draft an item as soon as the discussion settles it, and keep going to the
+next. When the owner agrees with an item, write it under `## Items` in the plan's file and say what
+was written. When the discussion changes an item already
+written, edit it in place and say what changed. Agreement with the item itself is the yes; agreement
+with an idea is not. Nothing reaches the plan that the owner has not agreed to.
+
+Keep the plan's notes in a `## Plan` section just above `## Items`, written with its first item and
+kept current as the plan grows. Leave the contract and gates above it as `plan-new` copied them,
+unless the owner changes them, and never touch another plan's file:
+
+```text
+## Plan
+
+Why: <the problem, and why now>
+Scope: <what this plan covers>
+Non-goals: <what it deliberately leaves out>
+Design notes: <the decisions taken, and the options rejected with the reason>
+Record: `staging/plan-record.md` — <topic>
+Estimate: <the shift-estimate figures for these items, or "no history yet">
+
+- [ ] **1. <title>.**
+  - <what to build, plainly>
+  - Budget: <only on an item at real risk of getting stuck, and only when the owner takes it: soft 30m / 1.5M tokens, hard 1h / 3M tokens>
+  - Verify:
+    - WHEN <situation> THEN <observable result>
+    - WHEN <edge or failure case> THEN <observable result>
+    - <the commands that check them>
+  - Evidence: <only when the owner takes evidence lines: what shows the work at a glance>
+  - Commit: `<type: message>`
+```
+
+- **Commits follow the owner's contract.** Under the shipped contract each item is one commit, so an
+  item that would need two is two items. Order is dependency order: nothing is built twice.
+- **Verify is acceptance, not activity.** Each WHEN/THEN states behaviour someone could observe and a
+  test could fail on. "Tests pass" or "it works" is not a scenario. Add the commands that check the
+  scenarios.
+- **The item shape is a punch list's**: one top-level checkbox per item, everything else plain
+  indented bullets, never a nested checkbox — a nested box counts as an open item once the item is
+  promoted.
+- In artifact mode, an item names its receipt instead of a `Commit:` line.
+- **Size it from the owner's history.** Once the list is nearly complete, or when the owner asks, run
+  `"$NIGHTSHIFT_PLUGIN_ROOT/runtime/ns" shift-estimate --items <N>` for the N items drafted. It reads
+  the Time and Tokens totals of past ticked receipts and prints per-item figures, a total and a
+  suggested deadline. Show them as an estimate from the owner's own receipts, never a limit, and
+  keep a missing reading missing. Set a deadline only if the owner takes it. When it reports too few
+  readings, say there is no history to estimate from yet.
+- **Offer a budget only where an item could get stuck.** Most items need none, and a limit on every
+  item is a burden for the owner. Offer a `Budget:` line only for an item with a high chance of
+  getting stuck: open-ended investigation, a flaky or unreproduced failure, an unfamiliar dependency,
+  or an approach the plan could not settle. Say why that item is at risk, propose limits from the
+  estimate, and write the line only if the owner takes it.
+
+When the owner says the plan is complete, close the record's entry by appending
+` · captured: <the plan's file>` to its first line; Archive files it with the shift. The `Record:`
+line names the record by its path inside `.nightshift/`, so it stays right when Start moves the
+plan into place as the punch list.
+
+Before naming the way to build it, run
+`"$NIGHTSHIFT_PLUGIN_ROOT/runtime/ns" check-items --file <the plan's file>`. It names, per item, a missing or empty `Verify:`, a `Verify:` that names nothing
+checkable (a question, since a plain sentence can be checkable), a missing `Commit:`, an
+`Evidence:` that names nothing, a `Budget:` that does not parse, a nested checkbox, and any
+checkbox no item owns. Show the owner every finding.
+Correct one only with their yes. The check refuses nothing: whether to start the plan is the
+owner's call.
+
+Then name the way to build it: leave the plan room by typing `/nightshift:start`, the same in
+Claude Code, Codex, and Cursor. With an empty
+punch list, Start offers the waiting plans by name. With open items already in the punch list,
+Start works those, and the plan waits its turn.
+
+## 7. Leaving is the owner's
+
+Only the owner closes the room. On Claude Code and Cursor they type `/nightshift:plan-exit`, or
+`/nightshift:start` to leave and start the shift in one step. On Codex they type
+`$nightshift:plan-exit` or `$nightshift:start`. In any terminal they run
+`"$NIGHTSHIFT_PLUGIN_ROOT/runtime/ns" plan-exit`.
+
+Never run `plan-exit`, never touch the room's marker, and never invoke the Start or plan-exit skill
+yourself to get out: the hooks refuse the first two, Start refuses while the room is open, and none
+of it closes the room. If the owner asks you to leave it for them, give them the exit to type.

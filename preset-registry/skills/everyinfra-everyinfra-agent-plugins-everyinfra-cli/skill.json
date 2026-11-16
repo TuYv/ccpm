@@ -1,0 +1,25 @@
+{
+  "id": "everyinfra-everyinfra-agent-plugins-everyinfra-cli",
+  "name": "everyinfra-cli",
+  "description": "Fetch public data from 100+ platforms (TikTok, Amazon, Instagram, Xiaohongshu, Google Maps and more), run web searches, solve CAPTCHAs and call an OpenAI-compatible AI API with the `everyinfra` command-line tool and one EveryInfra API key. Use it when a task needs platform data, search results or a CAPTCHA solution and a terminal is available.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "everyinfra",
+  "install_path": ".claude/skills/everyinfra-cli/SKILL.md",
+  "source": {
+    "repo": "everyinfra/everyinfra-agent-plugins",
+    "url": "https://github.com/everyinfra/everyinfra-agent-plugins/blob/main/plugins/everyinfra/skills/everyinfra-cli/SKILL.md",
+    "path": "plugins/everyinfra/skills/everyinfra-cli/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-15T23:45:42.293Z",
+    "stars": 526,
+    "language": "Python",
+    "pushed_at": "2026-11-15T11:08:03Z",
+    "license": "Apache-2.0"
+  }
+}

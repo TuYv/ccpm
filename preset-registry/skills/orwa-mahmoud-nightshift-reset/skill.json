@@ -1,0 +1,25 @@
+{
+  "id": "orwa-mahmoud-nightshift-reset",
+  "name": "reset",
+  "description": "Drop the runtime markers and deadline after damaged or confusing runtime state, without deleting the owner's work or evidence.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "orwa-mahmoud",
+  "install_path": ".claude/skills/reset/SKILL.md",
+  "source": {
+    "repo": "orwa-mahmoud/nightshift",
+    "url": "https://github.com/orwa-mahmoud/nightshift/blob/main/plugins/nightshift/skills/reset/SKILL.md",
+    "path": "plugins/nightshift/skills/reset/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-15T22:58:43.684Z",
+    "stars": 453,
+    "language": "Shell",
+    "pushed_at": "2026-11-14T01:10:57Z",
+    "license": "MIT"
+  }
+}

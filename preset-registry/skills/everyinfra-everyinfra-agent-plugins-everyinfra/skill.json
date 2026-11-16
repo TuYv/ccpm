@@ -1,0 +1,25 @@
+{
+  "id": "everyinfra-everyinfra-agent-plugins-everyinfra",
+  "name": "everyinfra",
+  "description": "Route a task to the correct EveryInfra product and use its MCP or REST contract safely. Use when the user mentions EveryInfra generally, wants to combine multiple EveryInfra products, or is unsure whether a task belongs to EveryData, EverySearch, EveryAI, EverySolve, EveryNumber, EveryMail, or EveryProxy.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "everyinfra",
+  "install_path": ".claude/skills/everyinfra/SKILL.md",
+  "source": {
+    "repo": "everyinfra/everyinfra-agent-plugins",
+    "url": "https://github.com/everyinfra/everyinfra-agent-plugins/blob/main/plugins/everyinfra/skills/everyinfra/SKILL.md",
+    "path": "plugins/everyinfra/skills/everyinfra/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-15T23:45:42.577Z",
+    "stars": 526,
+    "language": "Python",
+    "pushed_at": "2026-11-15T11:08:03Z",
+    "license": "Apache-2.0"
+  }
+}

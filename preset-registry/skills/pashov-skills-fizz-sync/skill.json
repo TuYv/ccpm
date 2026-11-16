@@ -1,0 +1,25 @@
+{
+  "id": "pashov-skills-fizz-sync",
+  "name": "fizz-sync",
+  "description": "Reconcile an existing Fizz harness with a changed source tree. Detects added/removed/changed contract functions, quarantines stale properties, regenerates drifted handler stubs, and refreshes the snapshot. Trigger on \"fizz-sync\", \"resync fuzzing\", \"sync fuzz harness\", \"refresh fuzzing properties\", \"fuzzing drift check\".",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "pashov",
+  "install_path": ".claude/skills/fizz-sync/SKILL.md",
+  "source": {
+    "repo": "pashov/skills",
+    "url": "https://github.com/pashov/skills/blob/main/fizz/skills/fizz-sync/SKILL.md",
+    "path": "fizz/skills/fizz-sync/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-15T23:45:37.683Z",
+    "stars": 1312,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-21T09:22:05Z",
+    "license": "MIT"
+  }
+}

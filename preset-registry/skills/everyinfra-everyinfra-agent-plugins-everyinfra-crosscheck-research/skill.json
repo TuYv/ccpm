@@ -1,0 +1,25 @@
+{
+  "id": "everyinfra-everyinfra-agent-plugins-everyinfra-crosscheck-research",
+  "name": "everyinfra-crosscheck-research",
+  "description": "用 EveryInfra 的 crosscheck 检索核实一个具体事实，或产出带出处的研究结论。用户要求核实、求证、查证某个说法，需要可靠出处，或要比较多个来源是否一致时使用。",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "everyinfra",
+  "install_path": ".claude/skills/everyinfra-crosscheck-research/SKILL.md",
+  "source": {
+    "repo": "everyinfra/everyinfra-agent-plugins",
+    "url": "https://github.com/everyinfra/everyinfra-agent-plugins/blob/main/workbuddy/connectors/everyinfra/skills/everyinfra-crosscheck-research/SKILL.md",
+    "path": "workbuddy/connectors/everyinfra/skills/everyinfra-crosscheck-research/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-15T23:45:45.154Z",
+    "stars": 526,
+    "language": "Python",
+    "pushed_at": "2026-11-15T11:08:03Z",
+    "license": "Apache-2.0"
+  }
+}

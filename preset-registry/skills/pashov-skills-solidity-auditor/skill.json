@@ -1,0 +1,25 @@
+{
+  "id": "pashov-skills-solidity-auditor",
+  "name": "solidity-auditor",
+  "description": "Security audit of Solidity code while you develop. Trigger on \"audit\", \"check this contract\", \"review for security\", \"loop mode\", \"run the auditor in loop mode\", \"run 3 passes\". Modes - default (full repo) or a specific filename. Loop mode runs several passes in one scan, each pass told what the earlier ones found, and ends in one combined report; it remembers findings between scans in a ledger.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "pashov",
+  "install_path": ".claude/skills/solidity-auditor/SKILL.md",
+  "source": {
+    "repo": "pashov/skills",
+    "url": "https://github.com/pashov/skills/blob/main/solidity-auditor/SKILL.md",
+    "path": "solidity-auditor/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-15T23:45:37.829Z",
+    "stars": 1312,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-21T09:22:05Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "pashov-skills-x-ray",
+  "name": "x-ray",
+  "description": "Generates an x-ray.md pre-audit report covering overview, enhanced threat model (protocol-type profiling, git-weighted attack surfaces, temporal risk analysis, composability dependency mapping), invariants, integrations, docs quality, test analysis, and developer/git history. Triggers on 'x-ray', 'audit readiness', 'readiness report', 'pre-audit report', 'prep this protocol', 'protocol prep', 'summarize this protocol'.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "pashov",
+  "install_path": ".claude/skills/x-ray/SKILL.md",
+  "source": {
+    "repo": "pashov/skills",
+    "url": "https://github.com/pashov/skills/blob/main/x-ray/SKILL.md",
+    "path": "x-ray/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-15T23:45:38.032Z",
+    "stars": 1312,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-21T09:22:05Z",
+    "license": "MIT"
+  }
+}

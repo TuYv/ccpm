@@ -1,0 +1,25 @@
+{
+  "id": "everyinfra-everyinfra-agent-plugins-everyinfra-xiaohongshu",
+  "name": "everyinfra-xiaohongshu",
+  "description": "用 EveryInfra 查询小红书公开数据：关键词搜索笔记、笔记详情、评论与回复、用户搜索、用户主页与作品、话题、热榜。用户提到小红书、RedNote、红书、笔记、种草等需求时使用。",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "everyinfra",
+  "install_path": ".claude/skills/everyinfra-xiaohongshu/SKILL.md",
+  "source": {
+    "repo": "everyinfra/everyinfra-agent-plugins",
+    "url": "https://github.com/everyinfra/everyinfra-agent-plugins/blob/main/workbuddy/connectors/everyinfra/skills/everyinfra-xiaohongshu/SKILL.md",
+    "path": "workbuddy/connectors/everyinfra/skills/everyinfra-xiaohongshu/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-15T23:45:46.671Z",
+    "stars": 526,
+    "language": "Python",
+    "pushed_at": "2026-11-15T11:08:03Z",
+    "license": "Apache-2.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "soba-labs-langchain-agent-skills-langgraph-agent-patterns",
+  "name": "langgraph-agent-patterns",
+  "description": "Implement multi-agent coordination patterns (supervisor-subagent, router, orchestrator-worker, handoffs) for LangGraph applications. Use when users want to (1) implement multi-agent systems, (2) coordinate multiple specialized agents, (3) choose between coordination patterns, (4) set up supervisor-subagent workflows, (5) implement router-based agent selection, (6) create parallel orchestrator-worker patterns, (7) implement agent handoffs, (8) design state schemas for multi-agent systems, or (9) ",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "soba-labs",
+  "install_path": ".claude/skills/langgraph-agent-patterns/SKILL.md",
+  "source": {
+    "repo": "soba-labs/langchain-agent-skills",
+    "url": "https://github.com/soba-labs/langchain-agent-skills/blob/main/skills/langgraph-agent-patterns/SKILL.md",
+    "path": "skills/langgraph-agent-patterns/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-15T22:58:40.339Z",
+    "stars": 106,
+    "language": "Python",
+    "pushed_at": "2026-11-11T10:15:05Z",
+    "license": "MIT"
+  }
+}

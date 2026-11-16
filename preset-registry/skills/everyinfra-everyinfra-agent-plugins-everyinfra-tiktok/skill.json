@@ -1,0 +1,25 @@
+{
+  "id": "everyinfra-everyinfra-agent-plugins-everyinfra-tiktok",
+  "name": "everyinfra-tiktok",
+  "description": "用 EveryInfra 查询TikTok公开数据：视频搜索、视频详情与文稿、评论、用户主页与作品、话题、粉丝数、电商商品与带货达人。用户提到TikTok、海外短视频、跨境达人、TikTok Shop等需求时使用。",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "everyinfra",
+  "install_path": ".claude/skills/everyinfra-tiktok/SKILL.md",
+  "source": {
+    "repo": "everyinfra/everyinfra-agent-plugins",
+    "url": "https://github.com/everyinfra/everyinfra-agent-plugins/blob/main/workbuddy/connectors/everyinfra/skills/everyinfra-tiktok/SKILL.md",
+    "path": "workbuddy/connectors/everyinfra/skills/everyinfra-tiktok/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-15T23:45:46.228Z",
+    "stars": 526,
+    "language": "Python",
+    "pushed_at": "2026-11-15T11:08:03Z",
+    "license": "Apache-2.0"
+  }
+}

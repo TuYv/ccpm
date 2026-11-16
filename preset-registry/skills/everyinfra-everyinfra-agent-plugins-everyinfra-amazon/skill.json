@@ -1,0 +1,25 @@
+{
+  "id": "everyinfra-everyinfra-agent-plugins-everyinfra-amazon",
+  "name": "everyinfra-amazon",
+  "description": "用 EveryInfra 查询亚马逊公开数据：商品搜索、商品详情、评价、畅销榜、卖家搜索。用户提到亚马逊、Amazon、跨境电商、BSR、畅销榜等需求时使用。",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "everyinfra",
+  "install_path": ".claude/skills/everyinfra-amazon/SKILL.md",
+  "source": {
+    "repo": "everyinfra/everyinfra-agent-plugins",
+    "url": "https://github.com/everyinfra/everyinfra-agent-plugins/blob/main/workbuddy/connectors/everyinfra/skills/everyinfra-amazon/SKILL.md",
+    "path": "workbuddy/connectors/everyinfra/skills/everyinfra-amazon/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-15T23:45:44.572Z",
+    "stars": 526,
+    "language": "Python",
+    "pushed_at": "2026-11-15T11:08:03Z",
+    "license": "Apache-2.0"
+  }
+}

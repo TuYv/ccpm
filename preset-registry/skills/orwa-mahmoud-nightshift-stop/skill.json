@@ -1,0 +1,25 @@
+{
+  "id": "orwa-mahmoud-nightshift-stop",
+  "name": "stop",
+  "description": "Issue a stop-work order that pauses the shift now and leaves unfinished items open.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "orwa-mahmoud",
+  "install_path": ".claude/skills/stop/SKILL.md",
+  "source": {
+    "repo": "orwa-mahmoud/nightshift",
+    "url": "https://github.com/orwa-mahmoud/nightshift/blob/main/plugins/nightshift/skills/stop/SKILL.md",
+    "path": "plugins/nightshift/skills/stop/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-15T22:58:44.431Z",
+    "stars": 453,
+    "language": "Shell",
+    "pushed_at": "2026-11-14T01:10:57Z",
+    "license": "MIT"
+  }
+}

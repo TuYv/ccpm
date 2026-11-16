@@ -1,0 +1,25 @@
+{
+  "id": "everyinfra-everyinfra-agent-plugins-everyinfra-bilibili",
+  "name": "everyinfra-bilibili",
+  "description": "用 EveryInfra 查询哔哩哔哩公开数据：视频搜索、视频详情、评论、弹幕、字幕、UP 主主页与作品。用户提到B站、哔哩哔哩、bilibili、弹幕、UP主等需求时使用。",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "everyinfra",
+  "install_path": ".claude/skills/everyinfra-bilibili/SKILL.md",
+  "source": {
+    "repo": "everyinfra/everyinfra-agent-plugins",
+    "url": "https://github.com/everyinfra/everyinfra-agent-plugins/blob/main/workbuddy/connectors/everyinfra/skills/everyinfra-bilibili/SKILL.md",
+    "path": "workbuddy/connectors/everyinfra/skills/everyinfra-bilibili/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-15T23:45:44.719Z",
+    "stars": 526,
+    "language": "Python",
+    "pushed_at": "2026-11-15T11:08:03Z",
+    "license": "Apache-2.0"
+  }
+}

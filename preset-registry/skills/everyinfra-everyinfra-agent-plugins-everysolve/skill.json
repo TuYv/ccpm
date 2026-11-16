@@ -1,0 +1,25 @@
+{
+  "id": "everyinfra-everyinfra-agent-plugins-everysolve",
+  "name": "everysolve",
+  "description": "Discover and solve captchas or anti-bot challenges with EverySolve for targets the user is authorized to access. Use when a legitimate browser, testing, registration, or automation flow is blocked by Turnstile, reCAPTCHA, hCaptcha, image challenges, coordinate challenges, or another advertised challenge type.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "everyinfra",
+  "install_path": ".claude/skills/everysolve/SKILL.md",
+  "source": {
+    "repo": "everyinfra/everyinfra-agent-plugins",
+    "url": "https://github.com/everyinfra/everyinfra-agent-plugins/blob/main/plugins/everyinfra/skills/everysolve/SKILL.md",
+    "path": "plugins/everyinfra/skills/everysolve/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-15T23:45:43.268Z",
+    "stars": 526,
+    "language": "Python",
+    "pushed_at": "2026-11-15T11:08:03Z",
+    "license": "Apache-2.0"
+  }
+}

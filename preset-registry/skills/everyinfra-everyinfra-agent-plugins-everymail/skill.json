@@ -1,0 +1,25 @@
+{
+  "id": "everyinfra-everyinfra-agent-plugins-everymail",
+  "name": "everymail",
+  "description": "Use EveryMail transactional-email REST APIs with the shared EveryInfra key. Use when the user asks to inspect email capabilities or quota, send or schedule a transactional email, submit a batch, cancel a scheduled message, inspect delivery events, or configure an authorized sending domain or webhook.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "everyinfra",
+  "install_path": ".claude/skills/everymail/SKILL.md",
+  "source": {
+    "repo": "everyinfra/everyinfra-agent-plugins",
+    "url": "https://github.com/everyinfra/everyinfra-agent-plugins/blob/main/plugins/everyinfra/skills/everymail/SKILL.md",
+    "path": "plugins/everyinfra/skills/everymail/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-15T23:45:42.717Z",
+    "stars": 526,
+    "language": "Python",
+    "pushed_at": "2026-11-15T11:08:03Z",
+    "license": "Apache-2.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "everyinfra-everyinfra-agent-plugins-everyinfra-bulk-data-export",
+  "name": "everyinfra-bulk-data-export",
+  "description": "通过 EveryInfra 批量取得某个平台的公开数据并导出为 CSV 或 JSON，包含能力确认、费用预估、翻页、去重和文件校验。用户要很多条记录、所有页、一个数据集，或要求导出成表格、CSV、JSON 文件时使用。",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "everyinfra",
+  "install_path": ".claude/skills/everyinfra-bulk-data-export/SKILL.md",
+  "source": {
+    "repo": "everyinfra/everyinfra-agent-plugins",
+    "url": "https://github.com/everyinfra/everyinfra-agent-plugins/blob/main/workbuddy/connectors/everyinfra/skills/everyinfra-bulk-data-export/SKILL.md",
+    "path": "workbuddy/connectors/everyinfra/skills/everyinfra-bulk-data-export/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-15T23:45:45.011Z",
+    "stars": 526,
+    "language": "Python",
+    "pushed_at": "2026-11-15T11:08:03Z",
+    "license": "Apache-2.0"
+  }
+}

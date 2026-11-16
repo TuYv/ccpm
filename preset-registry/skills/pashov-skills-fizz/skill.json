@@ -1,0 +1,25 @@
+{
+  "id": "pashov-skills-fizz",
+  "name": "fizz",
+  "description": "Generate Echidna/Medusa-compatible Solidity fuzz suites from Foundry or Hardhat projects. Trigger on \"fizz\", \"generate fuzz suite\", \"build fuzz harness\", \"stateful fuzzing\", \"fuzzing harness\", \"property testing\", and \"invariant suite\".",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "pashov",
+  "install_path": ".claude/skills/fizz/SKILL.md",
+  "source": {
+    "repo": "pashov/skills",
+    "url": "https://github.com/pashov/skills/blob/main/fizz/SKILL.md",
+    "path": "fizz/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-15T23:45:37.391Z",
+    "stars": 1312,
+    "language": "JavaScript",
+    "pushed_at": "2026-10-21T09:22:05Z",
+    "license": "MIT"
+  }
+}

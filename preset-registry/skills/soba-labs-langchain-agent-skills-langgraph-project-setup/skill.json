@@ -1,0 +1,25 @@
+{
+  "id": "soba-labs-langchain-agent-skills-langgraph-project-setup",
+  "name": "langgraph-project-setup",
+  "description": "Initialize and configure LangGraph projects with proper structure, langgraph.json configuration, environment variables, and dependency management. Use when users want to (1) create a new LangGraph project, (2) set up langgraph.json for deployment, (3) configure environment variables for LLM providers, (4) initialize project structure for agents, (5) set up local development with LangGraph Studio, (6) configure dependencies (pyproject.toml, requirements.txt, package.json), or (7) troubleshoot pro",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "soba-labs",
+  "install_path": ".claude/skills/langgraph-project-setup/SKILL.md",
+  "source": {
+    "repo": "soba-labs/langchain-agent-skills",
+    "url": "https://github.com/soba-labs/langchain-agent-skills/blob/main/skills/langgraph-project-setup/SKILL.md",
+    "path": "skills/langgraph-project-setup/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-15T22:58:40.686Z",
+    "stars": 106,
+    "language": "Python",
+    "pushed_at": "2026-11-11T10:15:05Z",
+    "license": "MIT"
+  }
+}

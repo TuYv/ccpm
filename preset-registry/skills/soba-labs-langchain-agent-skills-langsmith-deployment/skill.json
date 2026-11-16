@@ -1,0 +1,25 @@
+{
+  "id": "soba-labs-langchain-agent-skills-langsmith-deployment",
+  "name": "langsmith-deployment",
+  "description": "Deploy and operate production agent servers with LangSmith Deployment. Use when work involves choosing Cloud vs Hybrid/Self-hosted-with-control-plane vs Standalone, preparing/validating langgraph.json, creating deployments or revisions, rolling back revisions, wiring CI/CD to control-plane APIs, configuring environment variables and secrets, setting monitoring/alerts/webhooks, or troubleshooting deployment/runtime/scaling issues for LangChain/LangGraph applications.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "soba-labs",
+  "install_path": ".claude/skills/langsmith-deployment/SKILL.md",
+  "source": {
+    "repo": "soba-labs/langchain-agent-skills",
+    "url": "https://github.com/soba-labs/langchain-agent-skills/blob/main/skills/langsmith-deployment/SKILL.md",
+    "path": "skills/langsmith-deployment/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-15T22:58:41.234Z",
+    "stars": 106,
+    "language": "Python",
+    "pushed_at": "2026-11-11T10:15:05Z",
+    "license": "MIT"
+  }
+}

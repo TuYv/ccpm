@@ -1,0 +1,25 @@
+{
+  "id": "soba-labs-langchain-agent-skills-langgraph-testing-evaluation",
+  "name": "langgraph-testing-evaluation",
+  "description": "Use this skill when you need to test or evaluate LangGraph/LangChain agents: writing unit or integration tests, generating test scaffolds, mocking LLM/tool behavior, running trajectory evaluation (match or LLM-as-judge), running LangSmith dataset evaluations, and comparing two agent versions with A/B-style offline analysis. Use it for Python and JavaScript/TypeScript workflows, evaluator design, experiment setup, regression gates, and debugging flaky/incorrect evaluation results.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "soba-labs",
+  "install_path": ".claude/skills/langgraph-testing-evaluation/SKILL.md",
+  "source": {
+    "repo": "soba-labs/langchain-agent-skills",
+    "url": "https://github.com/soba-labs/langchain-agent-skills/blob/main/skills/langgraph-testing-evaluation/SKILL.md",
+    "path": "skills/langgraph-testing-evaluation/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-15T22:58:41.083Z",
+    "stars": 106,
+    "language": "Python",
+    "pushed_at": "2026-11-11T10:15:05Z",
+    "license": "MIT"
+  }
+}
