@@ -1,7 +1,7 @@
 {
   "id": "omnigent-ai-omnigent-workflow",
   "name": "workflow",
-  "description": "Plan and run a multi-step workflow from a description or one of the user's saved workflows. Keeps the plan and every step's status in the session's journal, so people can follow along in the Tasks tab and the work resumes cleanly.",
+  "description": "Run a multi-step workflow from a description or one of the user's saved workflows. Keeps the plan and every step's status in the session's journal, so people can follow along in the Tasks tab and the work resumes cleanly.",
   "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/omnigent-ai/omnigent/blob/main/omnigent/resources/skills/workflow/SKILL.md",
     "path": "omnigent/resources/skills/workflow/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-15T22:45:34.879Z",
+    "discovered_at": "2026-11-16T03:00:35.441Z",
     "stars": 11387,
     "language": "Python",
-    "pushed_at": "2026-11-15T21:57:11Z",
+    "pushed_at": "2026-11-16T02:57:37Z",
     "license": "Apache-2.0"
   }
 }

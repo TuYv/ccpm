@@ -1,0 +1,25 @@
+{
+  "id": "ar9av-obsidian-wiki-wiki-playbook-review",
+  "name": "wiki-playbook-review",
+  "description": "> Weekly playbook review: rewrite the vault's how-to pages (skills/ playbooks, runbooks) from the week's evidence (meetings, journals, postmortems, new pages) and stage every revision for the owner to approve as a diff. Use for \"review my playbooks\", \"/wiki-playbook-review\", \"update the playbooks from this week\", \"friday playbook rewrite\", \"what should we stop doing\". Not for a summary of what was learned (wiki-digest) or for creating a new agent skill (skill-creator).",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Ar9av",
+  "install_path": ".claude/skills/wiki-playbook-review/SKILL.md",
+  "source": {
+    "repo": "Ar9av/obsidian-wiki",
+    "url": "https://github.com/Ar9av/obsidian-wiki/blob/main/skills/wiki-playbook-review/SKILL.md",
+    "path": "skills/wiki-playbook-review/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-16T03:03:30.253Z",
+    "stars": 3745,
+    "language": "Python",
+    "pushed_at": "2026-11-15T21:57:42Z",
+    "license": "MIT"
+  }
+}
