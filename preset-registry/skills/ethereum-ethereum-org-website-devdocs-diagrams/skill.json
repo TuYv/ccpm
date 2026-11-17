@@ -1,7 +1,7 @@
 {
   "id": "ethereum-ethereum-org-website-devdocs-diagrams",
   "name": "devdocs-diagrams",
-  "description": "Use when converting a developer-docs schematic PNG (gas.png, evm.png, tx.png, accounts.png, nodes.png, mev.png, source-code-verification.png, attestation_schematic.png, ...) into an interactive React diagram, or when editing src/components/Diagrams/ (InteractiveDiagram, the anatomy primitives, GasTx, GasEvm, TxApply, EvmZones, Accounts, BlockState, NodeClients, Attestations, MevBoost, SourceVerify, PortalHistory, or any diagram folder), or reviewing a diagram's content for accuracy. One PR per d",
+  "description": "Use when converting a developer-docs schematic PNG (gas.png, evm.png, tx.png, accounts.png, nodes.png, mev.png, source-code-verification.png, attestation_schematic.png, ...) into an interactive React diagram, or when editing src/components/Diagrams/ (InteractiveDiagram, the anatomy primitives, GasTx, GasEvm, TxApply, EvmZones, Accounts, BlockState, NodeClients, Attestations, MevBoost, SourceVerify, PortalHistory, TokenVault, or any diagram folder), or reviewing a diagram's content for accuracy. ",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/ethereum/ethereum-org-website/blob/dev/.claude/skills/devdocs-diagrams/SKILL.md",
     "path": ".claude/skills/devdocs-diagrams/SKILL.md",
     "branch": "dev",
-    "discovered_at": "2026-11-16T20:47:35.321Z",
-    "stars": 6003,
+    "discovered_at": "2026-11-17T04:10:51.485Z",
+    "stars": 6004,
     "language": "Markdown",
-    "pushed_at": "2026-11-16T20:47:27Z",
+    "pushed_at": "2026-11-17T03:31:17Z",
     "license": "MIT"
   }
 }
